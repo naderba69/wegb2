@@ -1,0 +1,388 @@
+{
+  "karten": [
+    {
+      "id": "mm01",
+      "teil": 2,
+      "titel_de": "Ein überfüllter Strand im August",
+      "titel_ar": "شاطئ مزدحم في أغسطس",
+      "auftrag_de": "Beschreiben Sie das Bild: Was ist oben, unten, im Vordergrund zu sehen? Spekulieren Sie, wer diese Menschen sind, und schließen Sie mit Ihrer eigenen Meinung zum Massentourismus.",
+      "stuetzen": [
+        "Im Vordergrund fällt sofort auf, dass …",
+        "Vermutlich handelt es sich um …",
+        "Auffällig ist für mich besonders, dass …",
+        "Meiner Erfahrung nach …"
+      ],
+      "kriterien": [
+        {
+          "ar": "وصف الطبقات (أمام/خلف) لا سرد حكاية",
+          "de": "Bildebenen beschrieben"
+        },
+        {
+          "ar": "تخمين مبرَّر بأدوات الاحتمال",
+          "de": "Vermutungen mit vermutlich/dürfte"
+        },
+        {
+          "ar": "ربط الجمل بدعامات (während/im Gegensatz dazu)",
+          "de": "Konnektoren genutzt"
+        },
+        {
+          "ar": "ختم برأي مُعلَّل في نهاية الوقت",
+          "de": "eigene Meinung begründet"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm02",
+      "teil": 2,
+      "titel_de": "Ein Klassenraum ohne Tafel",
+      "titel_ar": "قسم بلا سبورة",
+      "auftrag_de": "Beschreiben Sie den Raum: Was ersetzt die Tafel, wie sitzen die Schüler, was fällt an den Wänden auf? Erörtern Sie am Ende, ob digitale Schulen wirklich besser lernen lassen.",
+      "stuetzen": [
+        "Links ist zu erkennen, wie …",
+        "Es wirkt so, als ob …",
+        "Im Hintergrund sind … zu sehen",
+        "Ob das ein Vorteil ist, wage ich zu bezweifeln, denn …"
+      ],
+      "kriterien": [
+        {
+          "ar": "تسمية الموقع (links/rechts/hinten) بدقة",
+          "de": "Lageangaben präzise"
+        },
+        {
+          "ar": "وصف الجو العام بافتراض مهذَّب",
+          "de": "als ob + Konjunktiv II"
+        },
+        {
+          "ar": "ملاحظة تفصيل واحد غير متوقَّع",
+          "de": "ungewöhnliches Detail"
+        },
+        {
+          "ar": "موقف نهائي مسبَّب من الرقمنة",
+          "de": "begründete Position"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm03",
+      "teil": 2,
+      "titel_de": "Volle Bahn — alle starren auf Bildschirme",
+      "titel_ar": "قطار مزدحم والكل يحدّق في شاشاته",
+      "auftrag_de": "Beschreiben Sie die Szene im Abteil: Wer sitzt, wer steht, was tun die meisten? Sprechen Sie darüber, ob wir noch miteinander reden können oder wollen.",
+      "stuetzen": [
+        "Das Erste, was ins Auge springt, ist …",
+        "Kein einziger Fahrgast …, stattdessen …",
+        "Man könnte meinen, dass …",
+        "Ich selbst gehöre zu denen, die …"
+      ],
+      "kriterien": [
+        {
+          "ar": "مفارقة واضحة (keiner …, stattdessen …)",
+          "de": "Kontrast betont"
+        },
+        {
+          "ar": "قراءة تعبيرات الوجوه كتخمين لا حكم",
+          "de": "Vermutung statt Urteil"
+        },
+        {
+          "ar": "تضمين تجربة شخصية قصيرة",
+          "de": "Bezug zur eigenen Erfahrung"
+        },
+        {
+          "ar": "سؤال مفتوح في الختام",
+          "de": "offene Schlussfrage"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm04",
+      "teil": 2,
+      "titel_de": "Wochenmarkt um acht Uhr morgens",
+      "titel_ar": "سوق أسبوعي في الثامنة صباحاً",
+      "auftrag_de": "Beschreiben Sie Markt, Gerüche, Farben und Kundschaft. Sagen Sie am Ende, ob Wochenmärkte in Zeiten der Online-Lieferung noch eine Zukunft haben.",
+      "stuetzen": [
+        "Oben links steht …, daneben …",
+        "Die Atmosphäre lässt sich etwa so beschreiben: …",
+        "Sowohl … als auch … fällt auf",
+        "Ich kann mir gut vorstellen, dass …"
+      ],
+      "kriterien": [
+        {
+          "ar": "سرد الحواس (رؤية+روائح+أصوات)",
+          "de": "mehrere Sinne"
+        },
+        {
+          "ar": "تنويع تراكبات المكان (daneben/darunter/gegenüber)",
+          "de": " Lokalangaben variiert"
+        },
+        {
+          "ar": "موازنة بين ثمين وفضيلة السوق",
+          "de": "sowohl … als auch"
+        },
+        {
+          "ar": "تنبؤ مُسوّق لمستقبل السوق",
+          "de": "Zukunftsthese"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm05",
+      "teil": 2,
+      "titel_de": "Verlassene Innenstadt, volles Einkaufszentrum",
+      "titel_ar": "بلدة قديمة مهجورة ومركز تسوق مزدحم",
+      "auftrag_de": "Vergleichen Sie die beiden Bilder: Was ist jeweils zu sehen, wer kauft wo ein? Begründen Sie, was Städten wie der linken helfen könnte, wiederzuleben.",
+      "stuetzen": [
+        "Während rechts …, wirkt links …",
+        "Im Gegensatz zu …",
+        "Das liegt vermutlich daran, dass …",
+        "Ein erster Schritt wäre, … zu …"
+      ],
+      "kriterien": [
+        {
+          "ar": "مقارنة صريحة بأداة (während/im Gegensatz)",
+          "de": "echter Vergleich"
+        },
+        {
+          "ar": "تشخيص سبب لا وصف عرض فقط",
+          "de": "Ursache benannt"
+        },
+        {
+          "ar": "اقتراح واقعي واحد قابل للتنفيذ",
+          "de": "konkreter Vorschlag"
+        },
+        {
+          "ar": "إغلاق دائرة الحجة برأي ثابت",
+          "de": "roter Faden"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm06",
+      "teil": 2,
+      "titel_de": "Familienessen — vier Teller, vier Telefone",
+      "titel_ar": "غداء عائلي: أربعة أطباق وأربعة هواتف",
+      "auftrag_de": "Beschreiben Sie das Foto beim Essen: Wer schaut wohin, was verbindet und trennt die Personen? Diskutieren Sie zum Schluss, wer hier eigentlich Regeln brauchen würde.",
+      "stuetzen": [
+        "Auffällig ist, dass alle …, obwohl …",
+        "Es sieht fast so aus, als würde …",
+        "Was mich stutzt, ist …",
+        "Verboten werden sollte das nicht, aber …"
+      ],
+      "kriterien": [
+        {
+          "ar": "تناقض (obwohl) يخدم الصورة",
+          "de": "obwohl-Kontrast"
+        },
+        {
+          "ar": "نبرة نقد مؤدَّب لا وعظ",
+          "de": "sachliche Kritik"
+        },
+        {
+          "ar": "تمييز طبقي بين جيلين في المشهد",
+          "de": "Generationen verglichen"
+        },
+        {
+          "ar": "حل وسط مدروس في الختام",
+          "de": "differenziertes Fazit"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm07",
+      "teil": 3,
+      "titel_de": "Homeoffice für alle — ja oder nein?",
+      "titel_ar": "العمل من البيت للجميع — نعم أم لا؟",
+      "auftrag_de": "Ihr Gesprächspartner ist dagegen. Sagen Sie Ihre Meinung, begründen Sie sie mit eigenen Erfahrungen, nennen Sie beide Seiten und einigen Sie sich am Ende auf einen Kompromiss.",
+      "stuetzen": [
+        "Ich bin davon überzeugt, dass …",
+        "Einerseits …, andererseits …",
+        "Da stimme ich dir zu, trotzdem …",
+        "Könnten wir uns nicht darauf einigen, dass …?"
+      ],
+      "kriterien": [
+        {
+          "ar": "موقف صريح في أول 15 ثانية",
+          "de": "klare Position am Anfang"
+        },
+        {
+          "ar": "حجج من الطرفين لا من طرف واحد",
+          "de": "Pro und Contra"
+        },
+        {
+          "ar": "الرد على حجة الشريك لا ترديد الحفظ",
+          "de": "auf Argument reagiert"
+        },
+        {
+          "ar": "صياغة تسوية في النهاية",
+          "de": "Kompromiss formuliert"
+        }
+      ],
+      "zeit_s": 300
+    },
+    {
+      "id": "mm08",
+      "teil": 3,
+      "titel_de": "Handyverbot an Schulen",
+      "titel_ar": "حظر الهاتف في المدرسة",
+      "auftrag_de": "Diskutieren Sie: Bringt das Verbot Ruhe oder nur Frust? Berücksichtigen Sie Lehrkräfte, Eltern und Schüler, und finden Sie gemeinsam eine Regel, die beide Seiten akzeptieren können.",
+      "stuetzen": [
+        "Aus der Sicht von … stellt sich das so dar: …",
+        "Was du sagst, spricht dafür, dass …",
+        "Ein dritter Weg wäre …",
+        "Lass uns doch festhalten, dass …"
+      ],
+      "kriterien": [
+        {
+          "ar": "تقمّص ثلاث وجهات نظر",
+          "de": "drei Perspektiven"
+        },
+        {
+          "ar": "أداة استطراد مهذَّبة (was du sagst …)",
+          "de": "Gesprächssteuerung"
+        },
+        {
+          "ar": "اقتراح بديل ثالث غير الثنائيات",
+          "de": "dritte Option"
+        },
+        {
+          "ar": "تلخيص الاتفاق بصيغة معلن عنها",
+          "de": "Ergebnis zusammengefasst"
+        }
+      ],
+      "zeit_s": 300
+    },
+    {
+      "id": "mm09",
+      "teil": 3,
+      "titel_de": "Kostenloser Nahverkehr — Traum oder Unsinn?",
+      "titel_ar": "نقل عام مجاني — حلم أم تهوّر؟",
+      "auftrag_de": "Verteidigen Sie Ihre Haltung zum kostenlosen Nahverkehr: Umwelt, Haushalt, Gerechtigkeit — was wiegt schwerer? Stellen Sie Ihrem Partner auch eine echte Rückfrage.",
+      "stuetzen": [
+        "Gewichtet man … und …, dann …",
+        "Zuzugeben ist allerdings, dass …",
+        "Wie siehst du eigentlich …?",
+        "Unter dem Strich bleibe ich dabei: …"
+      ],
+      "kriterien": [
+        {
+          "ar": "ترجيح صريح بين المصالح (gewichtet)",
+          "de": "Abwägung benannt"
+        },
+        {
+          "ar": "الاعتراف بحجة خصمك بصدق",
+          "de": "Zugeständnis"
+        },
+        {
+          "ar": "سؤال حقيقي للشريك وانتظار الرد",
+          "de": "echte Rückfrage"
+        },
+        {
+          "ar": "إعلان التمسك أو التراجع في الختام",
+          "de": "klarer Abschluss"
+        }
+      ],
+      "zeit_s": 300
+    },
+    {
+      "id": "mm10",
+      "teil": 3,
+      "titel_de": "Mülltrennung: Pflicht oder Freiwilligkeit?",
+      "titel_ar": "فرز القمامة: إلزام أم اختيار؟",
+      "auftrag_de": "Streiten Sie sachlich: Soll der Staat das Trennen erzwingen? Nutzen Sie ein konkretes Beispiel aus Ihrem Leben, und prüfen Sie gemeinsam, welche Regel zuhause wirklich funktioniert hätte.",
+      "stuetzen": [
+        "Ein Beispiel aus meinem Alltag: …",
+        "Erzwungenes Verhalten hält selten lange — oder?",
+        "Falls …, dann wäre … realistisch",
+        "Fassen wir zusammen: Wir sind uns einig über …, uneins bei …"
+      ],
+      "kriterien": [
+        {
+          "ar": "مثال شخصي ملموس لا عام",
+          "de": "konkretes Beispiel"
+        },
+        {
+          "ar": "شكّ مهذَّب بصيغة سؤال",
+          "de": "höfliches Bezweifeln"
+        },
+        {
+          "ar": "شرط واقعي (falls … dann …)",
+          "de": "Bedingung sinnvoll"
+        },
+        {
+          "ar": "إعلان مناطق الاتفاق والاختلاف",
+          "de": "Einigkeit/Streit notiert"
+        }
+      ],
+      "zeit_s": 300
+    },
+    {
+      "id": "mm11",
+      "teil": 3,
+      "titel_de": "Hausaufgaben: abschaffen oder reduzieren?",
+      "titel_ar": "الواجبات المنزلية: تُلغى أم تُخفَّف؟",
+      "auftrag_de": "Sie sind für Abschaffung, Ihr Partner nur für Reduktion. Ringen Sie fair: Was beweisen Zahlen, was fühlen Familien? Einigen Sie sich auf einen Versuch mit Rückmeldefrist.",
+      "stuetzen": [
+        "Belege dafür sind dünn, aber …",
+        "Wenn wir schon messen wollen, dann …",
+        "Machbar wäre ein Modellversuch bis …",
+        "Halte ich fest: Reduktion jetzt, Prüfung im Juni."
+      ],
+      "kriterien": [
+        {
+          "ar": "طلب الأدلة بدل الادعاءات",
+          "de": "Belege eingefordert"
+        },
+        {
+          "ar": "تحويل الخلاف إلى تجربة قابلة للقياس",
+          "de": "Modellversuch-Idee"
+        },
+        {
+          "ar": "موعد ومدة محددان للتسوية",
+          "de": "Frist benannt"
+        },
+        {
+          "ar": "توثيق ختامي بصيغة مقرر",
+          "de": "Beschlussformel"
+        }
+      ],
+      "zeit_s": 300
+    },
+    {
+      "id": "mm12",
+      "teil": 3,
+      "titel_de": "Fremdsprachen ab Klasse 1 — früher ist besser?",
+      "titel_ar": "لغات أجنبية من الصف الأول — أبكر أفضل؟",
+      "auftrag_de": "Diskutieren Sie den Frühbeginn: Gehirn-Forschung gegen Lehrermangel. Hören Sie erst die Gegenposition vollständig, bevor Sie antworten — und benennen Sie, was Sie überzeugt hat.",
+      "stuetzen": [
+        "Wenn ich dich richtig verstehe, meinst du …",
+        "Dagegen spricht die Forschung, wonach …",
+        "Was mich tatsächlich nachdenklich macht, ist …",
+        "Also bleiben wir dabei, dass …, nur … ändern wir."
+      ],
+      "kriterien": [
+        {
+          "ar": "استماع مُثبت (إعادة صياغة كلام الشريك)",
+          "de": "nachgefragt/paraphrasiert"
+        },
+        {
+          "ar": "حجة بحثية واحدة على الأقل",
+          "de": "Forschungsargument"
+        },
+        {
+          "ar": "الاعتراف الصريح بما اقتنع به المتحاور",
+          "de": "Überzeugtheit benannt"
+        },
+        {
+          "ar": "حكم نهائي معدَّل لا مُكرَّر",
+          "de": "angepasstes Urteil"
+        }
+      ],
+      "zeit_s": 300
+    }
+  ]
+}

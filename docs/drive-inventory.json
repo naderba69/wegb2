@@ -1,0 +1,222 @@
+{
+  "drive_root": "https://drive.google.com/drive/folders/1cSfFhHT_pxd_vvq9zDPtaAsLAEGnFV2W",
+  "analyzed_at": "2026-09-25",
+  "tree": {
+    "Menschen Bücher A1, A2, B2": {
+      "id": "16gNjPmrlrHHLAZK5hfHa1-OTwKOBEPJf",
+      "note": "Name says B2 but content is A1.1/A1.2/A2.1/A2.2/B1.1/B1.2 — NO B2",
+      "levels": {
+        "A1": [
+          "A1.1",
+          "A1.2"
+        ],
+        "A2": [
+          "A2.1",
+          "A2.2"
+        ],
+        "B1": [
+          "B1.1",
+          "B1.2"
+        ]
+      },
+      "unit_assets": [
+        "Menschen X.Y Arbeitsbuch.pdf",
+        "Arbeitsbuch - Lösungen X.Y.pdf",
+        "Audio Kursbuch/",
+        "Audio Arbeitsbuch/"
+      ],
+      "unit_ids": {
+        "A1.1": "1HU7DdfKHxsmarvaS8O7vN6uL0Vr8EppJ",
+        "A1.2": "1-zXfwzywCSTE_zUzRL4ue47hQIp7HOO4",
+        "A2": "1s6xMVhyA4gQ8ag0t64FZ8zTr6ggCwjoC",
+        "B1": "1FuErYD-09sxTZDNt1oXm6U71shBqkx1J"
+      }
+    },
+    "B1 (Zertifikat B1 neu)": {
+      "id": "1q87RcgkA3XPTu49eX66YanUGMRP_N8kP",
+      "files": [
+        "zertifikat_B1_neu_15_Uebungspruefungen.pdf",
+        "zertifikat_B1_neu_Audio_1/",
+        "zertifikat_B1_neu_Audio_2/"
+      ],
+      "level": "B1 exam prep"
+    },
+    "Grammatik": {
+      "id": "1N26x9Y4qBgUfIV4KBo8zo9Kho6EcM24O",
+      "children": {
+        "Deutsch": [
+          "Adjektive.docx",
+          "Nomen.docx",
+          "Verben.docx"
+        ],
+        "Deutsche Grammatik für Araber": [
+          "Deutsche Grammatik für Araber صفحتين ف الوش.pdf",
+          "Deutsche Grammatik für Araber صفحه بالكامل.pdf"
+        ],
+        "Die Verben": [
+          "Verben.pdf",
+          "ملف فيه 204 فعل شاذ مع تصريفاتهم في المضارع والماضي والماضي التام والمعنى بالعربي.docx"
+        ],
+        "Noun Gender in German": [
+          "Noun Gender in German.pdf",
+          "FB_IMG_1510064247449.jpg",
+          "sketch-1512862480947.jpg",
+          "ScreenRecord_2017-11-29-20-07-13.mp4",
+          "ScreenRecord_2017-12-10-00-00-30.mp4"
+        ]
+      }
+    },
+    "Glossar A1 A2 B1": {
+      "id": "1vZdqkp8OatSxamhOp1t4vCrTfmLTC4Be",
+      "children": {
+        "Doc": [
+          "Adjektive.docx",
+          "Nomen.docx",
+          "Verben.docx"
+        ],
+        "Glossar": [
+          "Glossar A2.pdf",
+          "Glossar B1.pdf"
+        ],
+        "Langenscheidt": [
+          "Langenscheidt, Taschenwörterbuch Arabisch Arabisch-Deutsch, Deutsch-Aabisch.pdf",
+          "German4Free - تعلم الألمانية مجاناً/"
+        ],
+        "Muzzy": [
+          "Muzzy German Vocab Builder.avi",
+          "Muzzy.Muzzy comes back.German.avi"
+        ]
+      }
+    },
+    "المعجم المصور والألف جملة": {
+      "id": "146qNVTA2p_AT8JBMzAnct9acXLmLqkQk",
+      "files": [
+        "ALLREFUGEE.COM تعلم اللغه الالمانيه بسهوله.pdf",
+        "arabisch-deutsch-visuelles-wörterbuch-.pdf",
+        "الألف جمله الأكثر استخداما فى اللغة.pdf"
+      ]
+    },
+    "Hoeren Sie mal": {
+      "id": "1mK3P6tAwMTwIk9aqNBXE3KiPhxKuCN9X",
+      "content": "Audio/ with 100+ mp3 named {book}Lektion{n}_{part}.mp3",
+      "level": "A1-A2"
+    },
+    "Clips A2": {
+      "id": "1D7rYP_sRLldonICTAz4cBmamHMStgJBu",
+      "content": "8 video clips (with/without Untertitel) + 0 Transkriptionen A2 Lehrer-DVD.pdf",
+      "level": "A2"
+    },
+    "Planet Deutsch": {
+      "id": "1_EBCp85Wyi6WI8XsWtG7HvMIaRcOqZOu",
+      "children": {
+        "Planet Uebungen pdf": [
+          "01 planet-schule-didakt.pdf",
+          "02 planet-hobby-didakt.pdf",
+          "03 planet-sport-didakt.pdf",
+          "04 planet-tag-didakt.pdf",
+          "05 planet-wohnen-didakt.pdf",
+          "06 planet-einkaufen-didakt.pdf",
+          "planet-dvd-allg-didakt.pdf",
+          "planet-dvd-poster-wortigel.pdf"
+        ],
+        "transkription pdf": [
+          "planet-dvd-begruessung.pdf",
+          "planet-dvd-einkaufen.pdf",
+          "planet-dvd-hobbys.pdf",
+          "planet-dvd-schule.pdf",
+          "planet-dvd-sport.pdf",
+          "planet-dvd-tag.pdf",
+          "planet-dvd-wohnen.pdf"
+        ],
+        "video avi": [
+          "01 Schule.avi",
+          "02 Hobbys.avi",
+          "03 Sport.avi",
+          "04 Mein Tag.avi",
+          "05 Wohnen.avi",
+          "06 Einkaufen.avi",
+          "Begruessung.avi"
+        ]
+      },
+      "level": "A1-A2"
+    },
+    "DW - Jojo sucht das Glück": {
+      "id": "1l68QYlEHGxH5sStmoTl1tAwwiufbQmGR",
+      "children": [
+        "DW - Jojo sucht das Glück 1",
+        "DW - Jojo sucht das Glück 2",
+        "DW - Jojo sucht das Glück 3"
+      ],
+      "level": "B1-B2",
+      "note": "Each season has 11+ episode folders"
+    },
+    "BBC Talk German (10 day course)": {
+      "id": "1bWuPaZ-G3AY8M3VX-Zk-o6gD4o9HriLi",
+      "content": "~50 wma chapter tracks",
+      "level": "A0-A1"
+    },
+    "Colloquial German": {
+      "id": "1aQXx2ACGFie61pogikQNKecjCCmLTfby",
+      "children": {
+        "cGer1": "~30 mp3",
+        "cGer2": "~30 mp3"
+      },
+      "level": "A1-A2"
+    },
+    "Pimsleur German 1-5": {
+      "id": "1dyh36_9mzI0TgtzWV49L5FPhSduJb056",
+      "children": [
+        "Pimsleur German 1",
+        "Pimsleur German 2",
+        "Pimsleur German 3",
+        "Pimsleur German 4",
+        "Pimsleur German 5",
+        "Pimsleur German Plus"
+      ],
+      "level": "A0-B1"
+    },
+    "Pimsleur German IV": {
+      "id": "1Yp-dF5bvkQ7l3-UOBF0LUY2nMwXQtDzf",
+      "content": "100+ flac units",
+      "level": "B1"
+    },
+    "Pimsleur German (I-II-III-plus+readings)": {
+      "id": "1A7xrCOVZ9LKy1m3UqAXMVjzTG0BQ2Yyg",
+      "level": "A0-A2"
+    },
+    "Earworms_Rapid_German": {
+      "id": "1kKN1lFmLPvpq1-FDd5scMN347-MjUKZb",
+      "children": {
+        "Rapid German Vol.1": "10 mp3",
+        "Rapid German Vol.2": "10 mp3"
+      },
+      "level": "A1"
+    },
+    "In-Flight German": {
+      "id": "1LVTXciq2gpKOctOMoo6llQ97MjXDzfX3",
+      "content": "19 mp3 travel topics",
+      "level": "A1"
+    },
+    "Deutsch Lernen im Schlaf": {
+      "id": "1ia9MBucKWTFBoL2Qy8DtXJpkSdRsRSA5",
+      "content": "10 day folders (MP4 + sbv captions)",
+      "level": "A1-A2 passive"
+    }
+  },
+  "critical_gaps": [
+    "NO B2 course material (folder name misleading)",
+    "No Kursbuch PDFs (Arbeitsbuch only)",
+    "No writing (Schreiben) practice",
+    "No auto-graded interactive exercises",
+    "No spaced-repetition or progress tracking",
+    "Legacy formats: WMA, AVI, FLAC need conversion"
+  ],
+  "free_sources_for_b2_gap": [
+    "DW Langsam gesprochene Nachrichten",
+    "Nachrichtenleicht.de",
+    "DW Deutsch B2 / Kompakt courses",
+    "Goethe-Zertifikat B2 Modellsatz (free sample)",
+    "Goethe B2 self-assessment writing criteria",
+    "Jojo sucht das Glück S3 (already in library)"
+  ]
+}

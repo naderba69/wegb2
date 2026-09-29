@@ -1,0 +1,3843 @@
+[
+ {
+  "inf": "sein",
+  "aux": "sein",
+  "part": "gewesen",
+  "präs": [
+   "bin",
+   "bist",
+   "ist",
+   "sind",
+   "seid",
+   "sind"
+  ],
+  "prt": [
+   "war",
+   "warst",
+   "war",
+   "waren",
+   "wart",
+   "waren"
+  ],
+  "konj": [
+   "wäre",
+   "wärest",
+   "wäre"
+  ]
+ },
+ {
+  "inf": "haben",
+  "aux": "haben",
+  "part": "gehabt",
+  "präs": [
+   "habe",
+   "hast",
+   "hat",
+   "haben",
+   "habt",
+   "haben"
+  ],
+  "prt": [
+   "hatte",
+   "hattest",
+   "hatte",
+   "hatten",
+   "hattet",
+   "hatten"
+  ],
+  "konj": [
+   "hätte",
+   "hättest",
+   "hätte"
+  ]
+ },
+ {
+  "inf": "werden",
+  "aux": "sein",
+  "part": "geworden",
+  "präs": [
+   "werde",
+   "wirst",
+   "wird",
+   "werden",
+   "werdet",
+   "werden"
+  ],
+  "prt": [
+   "wurde",
+   "wurdest",
+   "wurde",
+   "wurden",
+   "wurdet",
+   "wurden"
+  ],
+  "konj": [
+   "würde",
+   "würdest",
+   "würde"
+  ]
+ },
+ {
+  "inf": "gehen",
+  "aux": "sein",
+  "part": "gegangen",
+  "präs": [
+   "gehe",
+   "gehst",
+   "geht",
+   "gehen",
+   "geht",
+   "gehen"
+  ],
+  "prt": [
+   "ging",
+   "gingst",
+   "ging",
+   "gingen",
+   "gingt",
+   "gingen"
+  ],
+  "konj": [
+   "ginge",
+   "gingest",
+   "ginge"
+  ]
+ },
+ {
+  "inf": "kommen",
+  "aux": "sein",
+  "part": "gekommen",
+  "präs": [
+   "komme",
+   "kommst",
+   "kommt",
+   "kommen",
+   "kommt",
+   "kommen"
+  ],
+  "prt": [
+   "kam",
+   "kamst",
+   "kam",
+   "kamen",
+   "kamt",
+   "kamen"
+  ],
+  "konj": [
+   "käme",
+   "kämest",
+   "käme"
+  ]
+ },
+ {
+  "inf": "machen",
+  "aux": "haben",
+  "part": "gemacht",
+  "präs": [
+   "mache",
+   "machst",
+   "macht",
+   "machen",
+   "macht",
+   "machen"
+  ],
+  "prt": [
+   "machte",
+   "machtest",
+   "machte",
+   "machten",
+   "machtet",
+   "machten"
+  ],
+  "konj": [
+   "würde machen",
+   "würdest machen",
+   "würde machen"
+  ]
+ },
+ {
+  "inf": "geben",
+  "aux": "haben",
+  "part": "gegeben",
+  "präs": [
+   "gebe",
+   "gibst",
+   "gibt",
+   "geben",
+   "gebt",
+   "geben"
+  ],
+  "prt": [
+   "gab",
+   "gabst",
+   "gab",
+   "gaben",
+   "gabt",
+   "gaben"
+  ],
+  "konj": [
+   "gäbe",
+   "gäbest",
+   "gäbe"
+  ]
+ },
+ {
+  "inf": "nehmen",
+  "aux": "haben",
+  "part": "genommen",
+  "präs": [
+   "nehme",
+   "nimmst",
+   "nimmt",
+   "nehmen",
+   "nehmt",
+   "nehmen"
+  ],
+  "prt": [
+   "nahm",
+   "nahmst",
+   "nahm",
+   "nahmen",
+   "nahmt",
+   "nahmen"
+  ],
+  "konj": [
+   "nähme",
+   "nähmest",
+   "nähme"
+  ]
+ },
+ {
+  "inf": "sehen",
+  "aux": "haben",
+  "part": "gesehen",
+  "präs": [
+   "sehe",
+   "siehst",
+   "sieht",
+   "sehen",
+   "seht",
+   "sehen"
+  ],
+  "prt": [
+   "sah",
+   "sahst",
+   "sah",
+   "sahen",
+   "saht",
+   "sahen"
+  ],
+  "konj": [
+   "sähe",
+   "sähest",
+   "sähe"
+  ]
+ },
+ {
+  "inf": "sagen",
+  "aux": "haben",
+  "part": "gesagt",
+  "präs": [
+   "sage",
+   "sagst",
+   "sagt",
+   "sagen",
+   "sagt",
+   "sagen"
+  ],
+  "prt": [
+   "sagte",
+   "sagtest",
+   "sagte",
+   "sagten",
+   "sagtet",
+   "sagten"
+  ],
+  "konj": [
+   "würde sagen",
+   "würdest sagen",
+   "würde sagen"
+  ]
+ },
+ {
+  "inf": "müssen",
+  "aux": "haben",
+  "part": "gemusst",
+  "präs": [
+   "muss",
+   "musst",
+   "muss",
+   "müssen",
+   "müsst",
+   "müssen"
+  ],
+  "prt": [
+   "musste",
+   "musstest",
+   "musste",
+   "mussten",
+   "musstet",
+   "mussten"
+  ],
+  "konj": [
+   "müsste",
+   "müsstest",
+   "müsste"
+  ]
+ },
+ {
+  "inf": "können",
+  "aux": "haben",
+  "part": "gekonnt",
+  "präs": [
+   "kann",
+   "kannst",
+   "kann",
+   "können",
+   "könnt",
+   "können"
+  ],
+  "prt": [
+   "konnte",
+   "konntest",
+   "konnte",
+   "konnten",
+   "kontet",
+   "konnten"
+  ],
+  "konj": [
+   "könnte",
+   "könntest",
+   "könnte"
+  ]
+ },
+ {
+  "inf": "wollen",
+  "aux": "haben",
+  "part": "gewollt",
+  "präs": [
+   "will",
+   "willst",
+   "will",
+   "wollen",
+   "wollt",
+   "wollen"
+  ],
+  "prt": [
+   "wollte",
+   "wolltest",
+   "wollte",
+   "wollten",
+   "wolltet",
+   "wollten"
+  ],
+  "konj": [
+   "wollte",
+   "wolltest",
+   "wollte"
+  ]
+ },
+ {
+  "inf": "sollen",
+  "aux": "haben",
+  "part": "gesollt",
+  "präs": [
+   "soll",
+   "sollst",
+   "soll",
+   "sollen",
+   "sollt",
+   "sollen"
+  ],
+  "prt": [
+   "sollte",
+   "solltest",
+   "sollte",
+   "sollten",
+   "solltet",
+   "sollten"
+  ],
+  "konj": [
+   "sollte",
+   "solltest",
+   "sollte"
+  ]
+ },
+ {
+  "inf": "dürfen",
+  "aux": "haben",
+  "part": "gedurft",
+  "präs": [
+   "darf",
+   "darfst",
+   "darf",
+   "dürfen",
+   "dürft",
+   "dürfen"
+  ],
+  "prt": [
+   "durfte",
+   "durftest",
+   "durfte",
+   "durften",
+   "durftet",
+   "durften"
+  ],
+  "konj": [
+   "dürfte",
+   "dürftest",
+   "dürfte"
+  ]
+ },
+ {
+  "inf": "wissen",
+  "aux": "haben",
+  "part": "gewusst",
+  "präs": [
+   "weiß",
+   "weißt",
+   "weiß",
+   "wissen",
+   "wisst",
+   "wissen"
+  ],
+  "prt": [
+   "wusste",
+   "wusstest",
+   "wusste",
+   "wussten",
+   "wusstet",
+   "wussten"
+  ],
+  "konj": [
+   "wüsste",
+   "wüsstest",
+   "wüsste"
+  ]
+ },
+ {
+  "inf": "denken",
+  "aux": "haben",
+  "part": "gedacht",
+  "präs": [
+   "denke",
+   "denkst",
+   "denkt",
+   "denken",
+   "denkt",
+   "denken"
+  ],
+  "prt": [
+   "dachte",
+   "dachtest",
+   "dachte",
+   "dachten",
+   "dachtet",
+   "dachten"
+  ],
+  "konj": [
+   "würde denken",
+   "würdest denken",
+   "würde denken"
+  ]
+ },
+ {
+  "inf": "finden",
+  "aux": "haben",
+  "part": "gefunden",
+  "präs": [
+   "finde",
+   "findest",
+   "findet",
+   "finden",
+   "findet",
+   "finden"
+  ],
+  "prt": [
+   "fand",
+   "fandst",
+   "fand",
+   "fanden",
+   "fandt",
+   "fanden"
+  ],
+  "konj": [
+   "fände",
+   "fändest",
+   "fände"
+  ]
+ },
+ {
+  "inf": "bleiben",
+  "aux": "sein",
+  "part": "geblieben",
+  "präs": [
+   "bleibe",
+   "bleibst",
+   "bleibt",
+   "bleiben",
+   "bleibt",
+   "bleiben"
+  ],
+  "prt": [
+   "blieb",
+   "bliebst",
+   "blieb",
+   "blieben",
+   "bliebt",
+   "blieben"
+  ],
+  "konj": [
+   "bliebe",
+   "bliebest",
+   "bliebe"
+  ]
+ },
+ {
+  "inf": "heißen",
+  "aux": "haben",
+  "part": "geheißen",
+  "präs": [
+   "heiße",
+   "heißt",
+   "heißt",
+   "heißen",
+   "heißt",
+   "heißen"
+  ],
+  "prt": [
+   "hieß",
+   "hießest",
+   "hieß",
+   "hießen",
+   "hießt",
+   "hießen"
+  ],
+  "konj": [
+   "hieße",
+   "hießest",
+   "hieße"
+  ]
+ },
+ {
+  "inf": "fahren",
+  "aux": "sein",
+  "part": "gefahren",
+  "präs": [
+   "fahre",
+   "fährst",
+   "fährt",
+   "fahren",
+   "fahrt",
+   "fahren"
+  ],
+  "prt": [
+   "fuhr",
+   "fuhrst",
+   "fuhr",
+   "fuhren",
+   "fuhrt",
+   "fuhren"
+  ],
+  "konj": [
+   "führe",
+   "führest",
+   "führe"
+  ]
+ },
+ {
+  "inf": "lesen",
+  "aux": "haben",
+  "part": "gelesen",
+  "präs": [
+   "lese",
+   "liest",
+   "liest",
+   "lesen",
+   "lest",
+   "lesen"
+  ],
+  "prt": [
+   "las",
+   "lasest",
+   "las",
+   "lasen",
+   "last",
+   "lasen"
+  ],
+  "konj": [
+   "läse",
+   "läsest",
+   "läse"
+  ]
+ },
+ {
+  "inf": "sprechen",
+  "aux": "haben",
+  "part": "gesprochen",
+  "präs": [
+   "spreche",
+   "sprichst",
+   "spricht",
+   "sprechen",
+   "sprecht",
+   "sprechen"
+  ],
+  "prt": [
+   "sprach",
+   "sprachst",
+   "sprach",
+   "sprachen",
+   "spracht",
+   "sprachen"
+  ],
+  "konj": [
+   "spräche",
+   "sprächest",
+   "spräche"
+  ]
+ },
+ {
+  "inf": "essen",
+  "aux": "haben",
+  "part": "gegessen",
+  "präs": [
+   "esse",
+   "isst",
+   "isst",
+   "essen",
+   "esst",
+   "essen"
+  ],
+  "prt": [
+   "aß",
+   "aßest",
+   "aß",
+   "aßen",
+   "aßt",
+   "aßen"
+  ],
+  "konj": [
+   "äße",
+   "äßest",
+   "äße"
+  ]
+ },
+ {
+  "inf": "schlafen",
+  "aux": "haben",
+  "part": "geschlafen",
+  "präs": [
+   "schlafe",
+   "schläfst",
+   "schläft",
+   "schlafen",
+   "schlaft",
+   "schlafen"
+  ],
+  "prt": [
+   "schlief",
+   "schliefst",
+   "schlief",
+   "schliefen",
+   "schlieft",
+   "schliefen"
+  ],
+  "konj": [
+   "schliefe",
+   "schliefest",
+   "schliefe"
+  ]
+ },
+ {
+  "inf": "helfen",
+  "aux": "haben",
+  "part": "geholfen",
+  "präs": [
+   "helfe",
+   "hilfst",
+   "hilft",
+   "helfen",
+   "helft",
+   "helfen"
+  ],
+  "prt": [
+   "half",
+   "halfst",
+   "half",
+   "halfen",
+   "halft",
+   "halfen"
+  ],
+  "konj": [
+   "hälfe",
+   "hälfest",
+   "hälfe"
+  ]
+ },
+ {
+  "inf": "backen",
+  "aux": "haben",
+  "part": "gebacken",
+  "präs": [
+   "backe",
+   "bäckst",
+   "bäckt",
+   "backen",
+   "backt",
+   "backen"
+  ],
+  "prt": [
+   "backte",
+   "backtest",
+   "backte",
+   "backten",
+   "backtet",
+   "backten"
+  ],
+  "konj": [
+   "würde backen",
+   "würdest backen",
+   "würde backen"
+  ],
+  "ar": "يخبز",
+  "bei": {
+   "de": "Der Kuchen duftet – er ist frisch gebacken.",
+   "ar": "الكعكةُ تفوح — إنها طازجةُ الخبز."
+  }
+ },
+ {
+  "inf": "empfehlen",
+  "aux": "haben",
+  "part": "empfohlen",
+  "präs": [
+   "empfehle",
+   "empfiehlst",
+   "empfiehlt",
+   "empfehlen",
+   "empfehlt",
+   "empfehlen"
+  ],
+  "prt": [
+   "empfahl",
+   "empfahlst",
+   "empfahl",
+   "empfahlen",
+   "empfahlt",
+   "empfahlen"
+  ],
+  "konj": [
+   "würde empfehlen",
+   "würdest empfehlen",
+   "würde empfehlen"
+  ],
+  "ar": "يُوصي بـ",
+  "bei": {
+   "de": "Ich kann dir den Kurs wärmstens empfehlen.",
+   "ar": "أُوصيك بحرارةٍ بهذه الدورة."
+  }
+ },
+ {
+  "inf": "beginnen",
+  "aux": "haben",
+  "part": "begonnen",
+  "präs": [
+   "beginne",
+   "beginnst",
+   "beginnt",
+   "beginnen",
+   "beginnt",
+   "beginnen"
+  ],
+  "prt": [
+   "begann",
+   "begannst",
+   "begann",
+   "begannen",
+   "begannt",
+   "begannen"
+  ],
+  "konj": [
+   "würde beginnen",
+   "würdest beginnen",
+   "würde beginnen"
+  ],
+  "ar": "يبدأ",
+  "bei": {
+   "de": "Der Unterricht beginnt pünktlich um acht.",
+   "ar": "تبدأ الحصةُ في الثامنةِ بلا تسويف."
+  }
+ },
+ {
+  "inf": "beißen",
+  "aux": "haben",
+  "part": "gebissen",
+  "präs": [
+   "beiße",
+   "beißt",
+   "beißt",
+   "beißen",
+   "beißt",
+   "beißen"
+  ],
+  "prt": [
+   "biss",
+   "bissest",
+   "biss",
+   "bissen",
+   "bisset",
+   "bissen"
+  ],
+  "konj": [
+   "würde beißen",
+   "würdest beißen",
+   "würde beißen"
+  ],
+  "ar": "يَعَضّ",
+  "bei": {
+   "de": "Der Hund hat niemanden gebissen.",
+   "ar": "لم يَعَضَّ الكلبُ أحداً."
+  }
+ },
+ {
+  "inf": "bieten",
+  "aux": "haben",
+  "part": "geboten",
+  "präs": [
+   "biete",
+   "bietest",
+   "bietet",
+   "bieten",
+   "bietet",
+   "bieten"
+  ],
+  "prt": [
+   "bot",
+   "botest",
+   "bot",
+   "boten",
+   "botet",
+   "boten"
+  ],
+  "konj": [
+   "würde bieten",
+   "würdest bieten",
+   "würde bieten"
+  ],
+  "ar": "يَعرض",
+  "bei": {
+   "de": "Die Firma bietet flexible Arbeitszeiten an.",
+   "ar": "تُوفِّر الشركةُ أوقاتَ عملٍ مرنة."
+  }
+ },
+ {
+  "inf": "braten",
+  "aux": "haben",
+  "part": "gebraten",
+  "präs": [
+   "brate",
+   "brätst",
+   "brät",
+   "braten",
+   "bratet",
+   "braten"
+  ],
+  "prt": [
+   "briet",
+   "brietest",
+   "briet",
+   "brieten",
+   "brietet",
+   "brieten"
+  ],
+  "konj": [
+   "würde braten",
+   "würdest braten",
+   "würde braten"
+  ],
+  "ar": "يَشوي في المقلاة",
+  "bei": {
+   "de": "Die Kartoffeln wurden goldbraun gebraten.",
+   "ar": "شُوِيَت البطاطسُ حتى ذهَبَت."
+  }
+ },
+ {
+  "inf": "fallen",
+  "aux": "sein",
+  "part": "gefallen",
+  "präs": [
+   "falle",
+   "fallst",
+   "fallt",
+   "fallen",
+   "fallt",
+   "fallen"
+  ],
+  "prt": [
+   "fiel",
+   "fielst",
+   "fiel",
+   "fielen",
+   "fielt",
+   "fielen"
+  ],
+  "konj": [
+   "würde fallen",
+   "würdest fallen",
+   "würde fallen"
+  ],
+  "ar": "يسقُط",
+  "bei": {
+   "de": "Das Blatt ist ins Wasser gefallen.",
+   "ar": "سقطت الورقةُ في الماء."
+  }
+ },
+ {
+  "inf": "fangen",
+  "aux": "haben",
+  "part": "gefangen",
+  "präs": [
+   "fange",
+   "fängst",
+   "fängt",
+   "fangen",
+   "fangt",
+   "fangen"
+  ],
+  "prt": [
+   "fing",
+   "fingst",
+   "fing",
+   "fingen",
+   "fingt",
+   "fingen"
+  ],
+  "konj": [
+   "würde fangen",
+   "würdest fangen",
+   "würde fangen"
+  ],
+  "ar": "يَمسِك بـ",
+  "bei": {
+   "de": "Der Ball wurde vom Torwart gefangen.",
+   "ar": "أمسك حارسُ المرمى بالكرة."
+  }
+ },
+ {
+  "inf": "fliegen",
+  "aux": "sein",
+  "part": "geflogen",
+  "präs": [
+   "fliege",
+   "fliegst",
+   "fliegt",
+   "fliegen",
+   "fliegt",
+   "fliegen"
+  ],
+  "prt": [
+   "flog",
+   "flogst",
+   "flog",
+   "flogen",
+   "flogt",
+   "flogen"
+  ],
+  "konj": [
+   "würde fliegen",
+   "würdest fliegen",
+   "würde fliegen"
+  ],
+  "ar": "يطير/يسافر جوّاً",
+  "bei": {
+   "de": "Wir sind nach Tunis geflogen.",
+   "ar": "سافرنا إلى تونس جوّاً."
+  }
+ },
+ {
+  "inf": "fließen",
+  "aux": "sein",
+  "part": "geflossen",
+  "präs": [
+   "fließe",
+   "fließt",
+   "fließt",
+   "fließen",
+   "fließt",
+   "fließen"
+  ],
+  "prt": [
+   "floss",
+   "flossest",
+   "floss",
+   "flossen",
+   "flosset",
+   "flossen"
+  ],
+  "konj": [
+   "würde fließen",
+   "würdest fließen",
+   "würde fließen"
+  ],
+  "ar": "يجري ماءً",
+  "bei": {
+   "de": "Der Fluss ist durch die ganze Stadt geflossen.",
+   "ar": "مرَّ النهرُ جارياً وسط المدينة كلها."
+  }
+ },
+ {
+  "inf": "kennen",
+  "aux": "haben",
+  "part": "gekannt",
+  "präs": [
+   "kenne",
+   "kennst",
+   "kennt",
+   "kennen",
+   "kennt",
+   "kennen"
+  ],
+  "prt": [
+   "kannte",
+   "kanntest",
+   "kannte",
+   "kannten",
+   "kanntet",
+   "kannten"
+  ],
+  "konj": [
+   "würde kennen",
+   "würdest kennen",
+   "würde kennen"
+  ],
+  "ar": "يعرِف",
+  "bei": {
+   "de": "Ich kenne die Stadt seit meiner Kindheit.",
+   "ar": "أعرفُ المدينةَ منذ صباي."
+  }
+ },
+ {
+  "inf": "klingen",
+  "aux": "haben",
+  "part": "geklungen",
+  "präs": [
+   "klinge",
+   "klingst",
+   "klingt",
+   "klingen",
+   "klingt",
+   "klingen"
+  ],
+  "prt": [
+   "klang",
+   "klangst",
+   "klang",
+   "klangen",
+   "klangt",
+   "klangen"
+  ],
+  "konj": [
+   "würde klingen",
+   "würdest klingen",
+   "würde klingen"
+  ],
+  "ar": "يبدو/يُصدِر صوتاً",
+  "bei": {
+   "de": "Dein Vorschlag klingt vernünftig.",
+   "ar": "اقتراحُك يبدو عاقلاً."
+  }
+ },
+ {
+  "inf": "laden",
+  "aux": "haben",
+  "part": "geladen",
+  "präs": [
+   "lade",
+   "lädst",
+   "lädt",
+   "laden",
+   "ladet",
+   "laden"
+  ],
+  "prt": [
+   "lud",
+   "ludest",
+   "lud",
+   "luden",
+   "ludet",
+   "luden"
+  ],
+  "konj": [
+   "würde laden",
+   "würdest laden",
+   "würde laden"
+  ],
+  "ar": "يدعو/يُحمِّل",
+  "bei": {
+   "de": "Ich habe dich zum Essen geladen.",
+   "ar": "دعوتُك إلى الطعام — فلا تعتذر بجوعٍ قديم."
+  }
+ },
+ {
+  "inf": "lassen",
+  "aux": "haben",
+  "part": "gelassen",
+  "präs": [
+   "lasse",
+   "lässt",
+   "lässt",
+   "lassen",
+   "lasst",
+   "lassen"
+  ],
+  "prt": [
+   "ließ",
+   "ließest",
+   "ließ",
+   "ließen",
+   "ließet",
+   "ließen"
+  ],
+  "konj": [
+   "würde lassen",
+   "würdest lassen",
+   "würde lassen"
+  ],
+  "ar": "يَترُك/يَكِلُ لغيره",
+  "bei": {
+   "de": "Ich habe das Auto stehen lassen.",
+   "ar": "تركتُ السيارةَ واقفةً حيث هي."
+  }
+ },
+ {
+  "inf": "laufen",
+  "aux": "sein",
+  "part": "gelaufen",
+  "präs": [
+   "laufe",
+   "laufst",
+   "lauft",
+   "laufen",
+   "lauft",
+   "laufen"
+  ],
+  "prt": [
+   "lief",
+   "liefst",
+   "lief",
+   "liefen",
+   "lieft",
+   "liefen"
+  ],
+  "konj": [
+   "würde laufen",
+   "würdest laufen",
+   "würde laufen"
+  ],
+  "ar": "يركض/يعمل",
+  "bei": {
+   "de": "Der Drucker läuft wieder.",
+   "ar": "عادت الطابعةُ إلى العمل."
+  }
+ },
+ {
+  "inf": "leiden",
+  "aux": "haben",
+  "part": "gelitten",
+  "präs": [
+   "leide",
+   "leidest",
+   "leidet",
+   "leiden",
+   "leidet",
+   "leiden"
+  ],
+  "prt": [
+   "litt",
+   "littest",
+   "litt",
+   "litten",
+   "littet",
+   "litten"
+  ],
+  "konj": [
+   "würde leiden",
+   "würdest leiden",
+   "würde leiden"
+  ],
+  "ar": "يَعاني من",
+  "praep": "an +Dat",
+  "bei": {
+   "de": "Er leidet an Schlaflosigkeit.",
+   "ar": "يَعاني أرقاً مزمناً."
+  }
+ },
+ {
+  "inf": "lügen",
+  "aux": "haben",
+  "part": "gelogen",
+  "präs": [
+   "lüge",
+   "lügst",
+   "lügt",
+   "lügen",
+   "lügt",
+   "lügen"
+  ],
+  "prt": [
+   "log",
+   "logst",
+   "log",
+   "logen",
+   "logt",
+   "logen"
+  ],
+  "konj": [
+   "würde lügen",
+   "würdest lügen",
+   "würde lügen"
+  ],
+  "ar": "يكذِب",
+  "bei": {
+   "de": "Er hat dich nie angelogen.",
+   "ar": "لم يكذبْ عليك قطّ."
+  }
+ },
+ {
+  "inf": "messen",
+  "aux": "haben",
+  "part": "gemessen",
+  "präs": [
+   "messe",
+   "misst",
+   "misst",
+   "messen",
+   "messt",
+   "messen"
+  ],
+  "prt": [
+   "maß",
+   "maßest",
+   "maß",
+   "maßen",
+   "maßet",
+   "maßen"
+  ],
+  "konj": [
+   "würde messen",
+   "würdest messen",
+   "würde messen"
+  ],
+  "ar": "يقيس",
+  "bei": {
+   "de": "Das Fieber wurde sorgfältig gemessen.",
+   "ar": "قِيست الحرارةُ بعناية."
+  }
+ },
+ {
+  "inf": "rennen",
+  "aux": "sein",
+  "part": "gerannt",
+  "präs": [
+   "renne",
+   "rennst",
+   "rennt",
+   "rennen",
+   "rennt",
+   "rennen"
+  ],
+  "prt": [
+   "rannte",
+   "ranntest",
+   "rannte",
+   "rannten",
+   "ranntet",
+   "rannten"
+  ],
+  "konj": [
+   "würde rennen",
+   "würdest rennen",
+   "würde rennen"
+  ],
+  "ar": "يعدو",
+  "bei": {
+   "de": "Wir sind zur Bahn gerannt.",
+   "ar": "ركضنا إلى القطارِ ووصلنا قبلَ إغلاقِ الباب."
+  }
+ },
+ {
+  "inf": "schließen",
+  "aux": "haben",
+  "part": "geschlossen",
+  "präs": [
+   "schließe",
+   "schließt",
+   "schließt",
+   "schließen",
+   "schließt",
+   "schließen"
+  ],
+  "prt": [
+   "schloss",
+   "schlossest",
+   "schloss",
+   "schlossen",
+   "schlosset",
+   "schlossen"
+  ],
+  "konj": [
+   "würde schließen",
+   "würdest schließen",
+   "würde schließen"
+  ],
+  "ar": "يُغلِق/يُنهي",
+  "bei": {
+   "de": "Die Tür ist fest geschlossen.",
+   "ar": "البابُ مُغلَقٌ بإحكام."
+  }
+ },
+ {
+  "inf": "singen",
+  "aux": "haben",
+  "part": "gesungen",
+  "präs": [
+   "singe",
+   "singst",
+   "singt",
+   "singen",
+   "singt",
+   "singen"
+  ],
+  "prt": [
+   "sang",
+   "sangst",
+   "sang",
+   "sangen",
+   "sangt",
+   "sangen"
+  ],
+  "konj": [
+   "würde singen",
+   "würdest singen",
+   "würde singen"
+  ],
+  "ar": "يُغنِّي",
+  "bei": {
+   "de": "Der Chor hat das alte Lied gesungen.",
+   "ar": "غَنَّى الكورالُ الأغنيةَ القديمة."
+  }
+ },
+ {
+  "inf": "sinken",
+  "aux": "sein",
+  "part": "gesunken",
+  "präs": [
+   "sinke",
+   "sinkst",
+   "sinkt",
+   "sinken",
+   "sinkt",
+   "sinken"
+  ],
+  "prt": [
+   "sank",
+   "sankst",
+   "sank",
+   "sanken",
+   "sankt",
+   "sanken"
+  ],
+  "konj": [
+   "würde sinken",
+   "würdest sinken",
+   "würde sinken"
+  ],
+  "ar": "يهوِي/ينخفِض",
+  "bei": {
+   "de": "Die Preise sind langsam gesunken.",
+   "ar": "انخفضت الأسعارُ انخفاضاً بطيئاً."
+  }
+ },
+ {
+  "inf": "springen",
+  "aux": "sein",
+  "part": "gesprungen",
+  "präs": [
+   "springe",
+   "springst",
+   "springt",
+   "springen",
+   "springt",
+   "springen"
+  ],
+  "prt": [
+   "sprang",
+   "sprangst",
+   "sprang",
+   "sprangen",
+   "sprangt",
+   "sprangen"
+  ],
+  "konj": [
+   "würde springen",
+   "würdest springen",
+   "würde springen"
+  ],
+  "ar": "يقفِز",
+  "bei": {
+   "de": "Er ist ins Wasser gesprungen.",
+   "ar": "قفز في الماءِ قبل أن يُفكِّر."
+  }
+ },
+ {
+  "inf": "stehlen",
+  "aux": "haben",
+  "part": "gestohlen",
+  "präs": [
+   "stehle",
+   "stiehlst",
+   "stiehlt",
+   "stehlen",
+   "stehlt",
+   "stehlen"
+  ],
+  "prt": [
+   "stahl",
+   "stahlst",
+   "stahl",
+   "stahlen",
+   "stahlt",
+   "stahlen"
+  ],
+  "konj": [
+   "würde stehlen",
+   "würdest stehlen",
+   "würde stehlen"
+  ],
+  "ar": "يسرِق",
+  "bei": {
+   "de": "Der Mantel wurde nicht gestohlen, nur vergessen.",
+   "ar": "لم يُسرَق المعطف — بل تُرِك على الكرسي."
+  }
+ },
+ {
+  "inf": "stehen",
+  "aux": "haben",
+  "part": "gestanden",
+  "präs": [
+   "stehe",
+   "stehst",
+   "steht",
+   "stehen",
+   "steht",
+   "stehen"
+  ],
+  "prt": [
+   "stand",
+   "standest",
+   "stand",
+   "standen",
+   "standet",
+   "standen"
+  ],
+  "konj": [
+   "würde stehen",
+   "würdest stehen",
+   "würde stehen"
+  ],
+  "ar": "يقف/يثبُت",
+  "bei": {
+   "de": "Ich habe eine Stunde am Schalter gestanden.",
+   "ar": "وقفتُ ساعةً كاملةً عند الشباك."
+  }
+ },
+ {
+  "inf": "streiten",
+  "aux": "haben",
+  "part": "gestritten",
+  "präs": [
+   "streite",
+   "streitest",
+   "streitet",
+   "streiten",
+   "streitet",
+   "streiten"
+  ],
+  "prt": [
+   "stritt",
+   "strittest",
+   "stritt",
+   "stritten",
+   "strittet",
+   "stritten"
+  ],
+  "konj": [
+   "würde streiten",
+   "würdest streiten",
+   "würde streiten"
+  ],
+  "ar": "يتشاجر",
+  "praep": "mit +Dat / um +Akk",
+  "bei": {
+   "de": "Wir haben nur über Kleinigkeiten gestritten.",
+   "ar": "اختلفنا على صغائرَ لم تستحقْ ليلةً بيضاء."
+  }
+ },
+ {
+  "inf": "tragen",
+  "aux": "haben",
+  "part": "getragen",
+  "präs": [
+   "trage",
+   "trägst",
+   "trägt",
+   "tragen",
+   "tragt",
+   "tragen"
+  ],
+  "prt": [
+   "trug",
+   "trugst",
+   "trug",
+   "trugen",
+   "trugt",
+   "trugen"
+  ],
+  "konj": [
+   "würde tragen",
+   "würdest tragen",
+   "würde tragen"
+  ],
+  "ar": "يحمل",
+  "bei": {
+   "de": "Ich habe die Koffer allein getragen.",
+   "ar": "حملتُ الحقائبَ وحدي — وافتخرُ بذلك."
+  }
+ },
+ {
+  "inf": "treffen",
+  "aux": "haben",
+  "part": "getroffen",
+  "präs": [
+   "treffe",
+   "triffst",
+   "trifft",
+   "treffen",
+   "trefft",
+   "treffen"
+  ],
+  "prt": [
+   "traf",
+   "trafst",
+   "traf",
+   "trafen",
+   "traft",
+   "trafen"
+  ],
+  "konj": [
+   "würde treffen",
+   "würdest treffen",
+   "würde treffen"
+  ],
+  "ar": "يلتقي/يُصيب",
+  "bei": {
+   "de": "Wir haben uns im Kurs getroffen.",
+   "ar": "تعرفنا على بعضنا في الدورة."
+  }
+ },
+ {
+  "inf": "trinken",
+  "aux": "haben",
+  "part": "getrunken",
+  "präs": [
+   "trinke",
+   "trinkst",
+   "trinkt",
+   "trinken",
+   "trinkt",
+   "trinken"
+  ],
+  "prt": [
+   "trank",
+   "trankst",
+   "trank",
+   "tranken",
+   "trankt",
+   "tranken"
+  ],
+  "konj": [
+   "würde trinken",
+   "würdest trinken",
+   "würde trinken"
+  ],
+  "ar": "يشرَب",
+  "bei": {
+   "de": "Wir haben nur Wasser getrunken.",
+   "ar": "لم نشربْ إلا الماء — ودام السمرُ أطول."
+  }
+ },
+ {
+  "inf": "verbieten",
+  "aux": "haben",
+  "part": "verboten",
+  "präs": [
+   "verbiete",
+   "verbietest",
+   "verbietet",
+   "verbieten",
+   "verbietet",
+   "verbieten"
+  ],
+  "prt": [
+   "verbot",
+   "verbotest",
+   "verbot",
+   "verboten",
+   "verbotet",
+   "verboten"
+  ],
+  "konj": [
+   "würde verbieten",
+   "würdest verbieten",
+   "würde verbieten"
+  ],
+  "ar": "يمنَع",
+  "bei": {
+   "de": "Das Rauchen ist hier verboten.",
+   "ar": "التدخينُ ممنوعٌ هنا — ولا أحدَ يقرأ اللافتة."
+  }
+ },
+ {
+  "inf": "vergessen",
+  "aux": "haben",
+  "part": "vergessen",
+  "präs": [
+   "vergesse",
+   "vergisst",
+   "vergisst",
+   "vergessen",
+   "vergesset",
+   "vergessen"
+  ],
+  "prt": [
+   "vergaß",
+   "vergaßest",
+   "vergaß",
+   "vergaßen",
+   "vergaßet",
+   "vergaßen"
+  ],
+  "konj": [
+   "würde vergessen",
+   "würdest vergessen",
+   "würde vergessen"
+  ],
+  "ar": "ينسى",
+  "bei": {
+   "de": "Ich habe den Termin nicht vergessen.",
+   "ar": "لم أنسَ الموعدَ — لكنني دوَّنتُه مرتين."
+  }
+ },
+ {
+  "inf": "verlieren",
+  "aux": "haben",
+  "part": "verloren",
+  "präs": [
+   "verliere",
+   "verlierst",
+   "verliert",
+   "verlieren",
+   "verliert",
+   "verlieren"
+  ],
+  "prt": [
+   "verlor",
+   "verlorst",
+   "verlor",
+   "verloren",
+   "verlort",
+   "verloren"
+  ],
+  "konj": [
+   "würde verlieren",
+   "würdest verlieren",
+   "würde verlieren"
+  ],
+  "ar": "يفقِد/يَخسَر",
+  "bei": {
+   "de": "Das Team hat knapp verloren.",
+   "ar": "خسر الفريقُ بفارقٍ ضئيل."
+  }
+ },
+ {
+  "inf": "versprechen",
+  "aux": "haben",
+  "part": "versprochen",
+  "präs": [
+   "verspreche",
+   "versprichst",
+   "verspricht",
+   "versprechen",
+   "versprecht",
+   "versprechen"
+  ],
+  "prt": [
+   "versprach",
+   "versprachst",
+   "versprach",
+   "versprachen",
+   "verspracht",
+   "versprachen"
+  ],
+  "konj": [
+   "würde versprechen",
+   "würdest versprechen",
+   "würde versprechen"
+  ],
+  "ar": "يَعد",
+  "bei": {
+   "de": "Er hat eine Antwort bis Freitag versprochen.",
+   "ar": "وعدَ بردٍّ قبلَ الجمعة — والجمعةُ أتت."
+  }
+ },
+ {
+  "inf": "waschen",
+  "aux": "haben",
+  "part": "gewaschen",
+  "präs": [
+   "wasche",
+   "wäschst",
+   "wäscht",
+   "waschen",
+   "wascht",
+   "waschen"
+  ],
+  "prt": [
+   "wusch",
+   "wuschst",
+   "wusch",
+   "wuschen",
+   "wuscht",
+   "wuschen"
+  ],
+  "konj": [
+   "würde waschen",
+   "würdest waschen",
+   "würde waschen"
+  ],
+  "ar": "يَغسِل",
+  "bei": {
+   "de": "Ich habe die Hände gewaschen.",
+   "ar": "غسلتُ يديَّ قبلَ الطعامِ وبعدَ النقاش."
+  }
+ },
+ {
+  "inf": "werfen",
+  "aux": "haben",
+  "part": "geworfen",
+  "präs": [
+   "werfe",
+   "wirfst",
+   "wirft",
+   "werfen",
+   "werft",
+   "werfen"
+  ],
+  "prt": [
+   "warf",
+   "warfst",
+   "warf",
+   "warfen",
+   "warft",
+   "warfen"
+  ],
+  "konj": [
+   "würde werfen",
+   "würdest werfen",
+   "würde werfen"
+  ],
+  "ar": "يرمي",
+  "bei": {
+   "de": "Sie hat den Ball weit geworfen.",
+   "ar": "رمت الكرةَ أبعدَ مما ظنَّ الجميع."
+  }
+ },
+ {
+  "inf": "gewinnen",
+  "aux": "haben",
+  "part": "gewonnen",
+  "präs": [
+   "gewinne",
+   "gewinnst",
+   "gewinnt",
+   "gewinnen",
+   "gewinnt",
+   "gewinnen"
+  ],
+  "prt": [
+   "gewann",
+   "gewannst",
+   "gewann",
+   "gewannen",
+   "gewannt",
+   "gewannen"
+  ],
+  "konj": [
+   "würde gewinnen",
+   "würdest gewinnen",
+   "würde gewinnen"
+  ],
+  "ar": "يربَح",
+  "bei": {
+   "de": "Wir haben den Wettbewerb gewonnen.",
+   "ar": "فُزنا بالمسابقةِ عنِ استحقاقٍ وجدارة."
+  }
+ },
+ {
+  "inf": "widersprechen",
+  "aux": "haben",
+  "part": "widersprochen",
+  "präs": [
+   "widerspreche",
+   "widersprichst",
+   "widerspricht",
+   "widersprechen",
+   "widersprecht",
+   "widersprechen"
+  ],
+  "prt": [
+   "widersprach",
+   "widersprachst",
+   "widersprach",
+   "widersprachen",
+   "widerspracht",
+   "widersprachen"
+  ],
+  "konj": [
+   "würde widersprechen",
+   "würdest widersprechen",
+   "würde widersprechen"
+  ],
+  "ar": "يُعارضُ بالكلام",
+  "praep": "+Dat",
+  "bei": {
+   "de": "Darf ich Ihnen höflich widersprechen?",
+   "ar": "أأسمحُ لنفسي بمعارضتِكَ بأدب؟"
+  }
+ },
+ {
+  "inf": "unterschreiben",
+  "aux": "haben",
+  "part": "unterschrieben",
+  "präs": [
+   "unterschreibe",
+   "unterschreibst",
+   "unterschreibt",
+   "unterschreiben",
+   "unterschreibt",
+   "unterschreiben"
+  ],
+  "prt": [
+   "unterschrieb",
+   "unterschriebst",
+   "unterschrieb",
+   "unterschrieben",
+   "unterschriebt",
+   "unterschrieben"
+  ],
+  "konj": [
+   "würde unterschreiben",
+   "würdest unterschreiben",
+   "würde unterschreiben"
+  ],
+  "ar": "يُوَقِّع",
+  "bei": {
+   "de": "Unterschreiben Sie hier, bitte.",
+   "ar": "وقِّع هنا من فضلك."
+  }
+ },
+ {
+  "inf": "bezahlen",
+  "aux": "haben",
+  "part": "bezahlt",
+  "präs": [
+   "bezahle",
+   "bezahlst",
+   "bezahlt",
+   "bezahlen",
+   "bezahlt",
+   "bezahlen"
+  ],
+  "prt": [
+   "bezahlte",
+   "bezahltest",
+   "bezahlte",
+   "bezahlten",
+   "bezahltet",
+   "bezahlten"
+  ],
+  "konj": [
+   "würde bezahlen",
+   "würdest bezahlen",
+   "würde bezahlen"
+  ],
+  "ar": "يَدفَع ثمنَ",
+  "bei": {
+   "de": "Die Rechnung habe ich im Netz bezahlt.",
+   "ar": "سددتُ الفاتورةَ عبرَ الشبكة — بعد ثلاثِ محاولاتٍ وفيق."
+  }
+ },
+ {
+  "inf": "anfangen",
+  "aux": "haben",
+  "part": "angefangen",
+  "präs": [
+   "fange an",
+   "fängst an",
+   "fängt an",
+   "fangen an",
+   "fangt an",
+   "fangen an"
+  ],
+  "prt": [
+   "ging an",
+   "gingst an",
+   "ging an",
+   "gingen an",
+   "gingt an",
+   "gingen an"
+  ],
+  "konj": [
+   "würde anfangen",
+   "würdest anfangen",
+   "würde anfangen"
+  ],
+  "ar": "يبدأ",
+  "trenn": "an",
+  "bei": {
+   "de": "Der Film ist spät angefangen.",
+   "ar": "بدأ الفيلمُ متأخراً."
+  }
+ },
+ {
+  "inf": "anrufen",
+  "aux": "haben",
+  "part": "angerufen",
+  "präs": [
+   "rufe an",
+   "rufst an",
+   "ruft an",
+   "rufen an",
+   "ruft an",
+   "rufen an"
+  ],
+  "prt": [
+   "rief an",
+   "riefst an",
+   "rief an",
+   "riefen an",
+   "rieft an",
+   "riefen an"
+  ],
+  "konj": [
+   "würde anrufen",
+   "würdest anrufen",
+   "würde anrufen"
+  ],
+  "ar": "يتَّصِل هاتفيّاً",
+  "trenn": "an",
+  "bei": {
+   "de": "Ich habe meine Mutter angerufen.",
+   "ar": "اتصلتُ بأمي هاتفاً."
+  }
+ },
+ {
+  "inf": "fernsehen",
+  "aux": "haben",
+  "part": "ferngesehen",
+  "präs": [
+   "sehe fern",
+   "siehst fern",
+   "sieht fern",
+   "sehen fern",
+   "seht fern",
+   "sehen fern"
+  ],
+  "prt": [
+   "sah fern",
+   "sahst fern",
+   "sah fern",
+   "sahen fern",
+   "saht fern",
+   "sahen fern"
+  ],
+  "konj": [
+   "würde fernsehen",
+   "würdest fernsehen",
+   "würde fernsehen"
+  ],
+  "ar": "يُشاهِد التلفزة",
+  "trenn": "fern",
+  "bei": {
+   "de": "Wir haben abends ferngesehen.",
+   "ar": "شاهدنا برنامجَ المساءِ معاً."
+  }
+ },
+ {
+  "inf": "einsteigen",
+  "aux": "sein",
+  "part": "eingestiegen",
+  "präs": [
+   "steige ein",
+   "steigst ein",
+   "steigt ein",
+   "steigen ein",
+   "steigt ein",
+   "steigen ein"
+  ],
+  "prt": [
+   "stieg ein",
+   "stiegst ein",
+   "stieg ein",
+   "stiegen ein",
+   "stiegt ein",
+   "stiegen ein"
+  ],
+  "konj": [
+   "würde einsteigen",
+   "würdest einsteigen",
+   "würde einsteigen"
+  ],
+  "ar": "يركب/يَعتلي",
+  "trenn": "ein",
+  "praep": "in +Akk",
+  "bei": {
+   "de": "Wir sind in den falschen Zug eingestiegen.",
+   "ar": "استقللنا القطارَ الخطأ — ووصلنا المدينةَ الصحيحة."
+  }
+ },
+ {
+  "inf": "abfahren",
+  "aux": "sein",
+  "part": "abgefahren",
+  "präs": [
+   "fahre ab",
+   "fahrst ab",
+   "fahrt ab",
+   "fahren ab",
+   "fahrt ab",
+   "fahren ab"
+  ],
+  "prt": [
+   "fuhr ab",
+   "fuhrst ab",
+   "fuhr ab",
+   "fuhren ab",
+   "fuhrt ab",
+   "fuhren ab"
+  ],
+  "konj": [
+   "würde abfahren",
+   "würdest abfahren",
+   "würde abfahren"
+  ],
+  "ar": "ينطلِق (وسيلةً)",
+  "trenn": "ab",
+  "bei": {
+   "de": "Der Zug ist pünktlich abgefahren.",
+   "ar": "انطلق القطارُ في موعده."
+  }
+ },
+ {
+  "inf": "umziehen",
+  "aux": "sein",
+  "part": "umgezogen",
+  "präs": [
+   "ziehe um",
+   "ziehst um",
+   "zieht um",
+   "ziehen um",
+   "zieht um",
+   "ziehen um"
+  ],
+  "prt": [
+   "zog um",
+   "zogst um",
+   "zog um",
+   "zogen um",
+   "zogt um",
+   "zogen um"
+  ],
+  "konj": [
+   "würde umziehen",
+   "würdest umziehen",
+   "würde umziehen"
+  ],
+  "ar": "ينقُل مقرَّه",
+  "trenn": "um",
+  "bei": {
+   "de": "Wir sind in eine kleinere Wohnung umgezogen.",
+   "ar": "انتقلنا إلى شقةٍ أصغرَ وأهدأ."
+  }
+ },
+ {
+  "inf": "eintreten",
+  "aux": "sein",
+  "part": "eingetreten",
+  "präs": [
+   "trete ein",
+   "tretest ein",
+   "tretet ein",
+   "treten ein",
+   "tretet ein",
+   "treten ein"
+  ],
+  "prt": [
+   "trat ein",
+   "tratest ein",
+   "trat ein",
+   "traten ein",
+   "tratet ein",
+   "traten ein"
+  ],
+  "konj": [
+   "würde eintreten",
+   "würdest eintreten",
+   "würde eintreten"
+  ],
+  "ar": "يدخُلُ/ينضَمّ/يَسرِي",
+  "trenn": "ein",
+  "praep": "für +Akk",
+  "bei": {
+   "de": "Die Regelung ist sofort in Kraft getreten.",
+   "ar": "دخلَ التنظيمُ حيّزَ التنفيذِ فوراً."
+  }
+ },
+ {
+  "inf": "losgehen",
+  "aux": "sein",
+  "part": "losgegangen",
+  "präs": [
+   "gehe los",
+   "gehst los",
+   "geht los",
+   "gehen los",
+   "geht los",
+   "gehen los"
+  ],
+  "prt": [
+   "ging los",
+   "gingst los",
+   "ging los",
+   "gingen los",
+   "gingt los",
+   "gingen los"
+  ],
+  "konj": [
+   "würde losgehen",
+   "würdest losgehen",
+   "würde losgehen"
+  ],
+  "ar": "ينطلِق/يبدأ فجأة",
+  "trenn": "los",
+  "bei": {
+   "de": "Der Streit ist beim Essen losgegangen.",
+   "ar": "اندلعَ الشجارُ على مائدةِ العشاء."
+  }
+ },
+ {
+  "inf": "zurückkommen",
+  "aux": "sein",
+  "part": "zurückgekommen",
+  "präs": [
+   "komme zurück",
+   "kommst zurück",
+   "kommt zurück",
+   "kommen zurück",
+   "kommt zurück",
+   "kommen zurück"
+  ],
+  "prt": [
+   "kam zurück",
+   "kamst zurück",
+   "kam zurück",
+   "kamen zurück",
+   "kamt zurück",
+   "kamen zurück"
+  ],
+  "konj": [
+   "würde zurückkommen",
+   "würdest zurückkommen",
+   "würde zurückkommen"
+  ],
+  "ar": "يعود",
+  "trenn": "zurück",
+  "bei": {
+   "de": "Er ist aus dem Urlaub zurückgekommen.",
+   "ar": "عاد من عطلتِه."
+  }
+ },
+ {
+  "inf": "zulassen",
+  "aux": "haben",
+  "part": "zugelassen",
+  "präs": [
+   "lasse zu",
+   "lasst zu",
+   "lasst zu",
+   "lassen zu",
+   "lasst zu",
+   "lassen zu"
+  ],
+  "prt": [
+   "ließ zu",
+   "ließest zu",
+   "ließ zu",
+   "ließen zu",
+   "ließet zu",
+   "ließen zu"
+  ],
+  "konj": [
+   "würde zulassen",
+   "würdest zulassen",
+   "würde zulassen"
+  ],
+  "ar": "يسمَح بـ/يُجيز",
+  "trenn": "zu",
+  "bei": {
+   "de": "Das Gerät ist für den Bahnhof zugelassen.",
+   "ar": "الجهازُ مُجازٌ لاستعمالِ المحطة."
+  }
+ },
+ {
+  "inf": "hinweisen",
+  "aux": "haben",
+  "part": "hingewiesen",
+  "präs": [
+   "weise hin",
+   "weist hin",
+   "weist hin",
+   "weisen hin",
+   "weist hin",
+   "weisen hin"
+  ],
+  "prt": [
+   "wies hin",
+   "wiesest hin",
+   "wies hin",
+   "wiesen hin",
+   "wieset hin",
+   "wiesen hin"
+  ],
+  "konj": [
+   "würde hinweisen",
+   "würdest hinweisen",
+   "würde hinweisen"
+  ],
+  "ar": "يُشير إلى/يلفت النظر",
+  "trenn": "hin",
+  "praep": "auf +Akk",
+  "bei": {
+   "de": "Die Wandzeitung weist auf die Sprechzeit hin.",
+   "ar": "تنوِّهُ لوحةُ الحائط بموعدِ الاستقبال."
+  }
+ },
+ {
+  "inf": "teilnehmen",
+  "aux": "haben",
+  "part": "teilgenommen",
+  "präs": [
+   "nehme teil",
+   "nehmst teil",
+   "nehmt teil",
+   "nehmen teil",
+   "nehmt teil",
+   "nehmen teil"
+  ],
+  "prt": [
+   "nahm teil",
+   "nahmst teil",
+   "nahm teil",
+   "nahmen teil",
+   "nahmt teil",
+   "nahmen teil"
+  ],
+  "konj": [
+   "würde teilnehmen",
+   "würdest teilnehmen",
+   "würde teilnehmen"
+  ],
+  "ar": "يُشارِك في",
+  "trenn": "teil",
+  "praep": "an +Dat",
+  "bei": {
+   "de": "Sie nimmt seit März am Kurs teil.",
+   "ar": "تُشارك في الدورةِ منذ مارس — بلا انقطاعٍ واحد."
+  }
+ },
+ {
+  "inf": "einladen",
+  "aux": "haben",
+  "part": "eingeladen",
+  "präs": [
+   "lade ein",
+   "lädst ein",
+   "lädt ein",
+   "laden ein",
+   "ladet ein",
+   "laden ein"
+  ],
+  "prt": [
+   "lud ein",
+   "ludest ein",
+   "lud ein",
+   "luden ein",
+   "ludet ein",
+   "luden ein"
+  ],
+  "konj": [
+   "würde einladen",
+   "würdest einladen",
+   "würde einladen"
+  ],
+  "ar": "يدعو إلى",
+  "trenn": "ein",
+  "praep": "zu +Dat",
+  "bei": {
+   "de": "Wir sind zur Feier eingeladen.",
+   "ar": "دُعينا إلى الاحتفال."
+  }
+ },
+ {
+  "inf": "abschließen",
+  "aux": "haben",
+  "part": "abgeschlossen",
+  "präs": [
+   "schließe ab",
+   "schließt ab",
+   "schließt ab",
+   "schließen ab",
+   "schließt ab",
+   "schließen ab"
+  ],
+  "prt": [
+   "schloss ab",
+   "schlossest ab",
+   "schloss ab",
+   "schlossen ab",
+   "schlosset ab",
+   "schlossen ab"
+  ],
+  "konj": [
+   "würde abschließen",
+   "würdest abschließen",
+   "würde abschließen"
+  ],
+  "ar": "يُنهي (دراسةً/عقداً)",
+  "trenn": "ab",
+  "bei": {
+   "de": "Sie hat ihr Studium abgeschlossen.",
+   "ar": "أنهتْ دراستَها الجامعية — بشهادةٍ وثلاثِ خطاباتٍ رسمية."
+  }
+ },
+ {
+  "inf": "anbieten",
+  "aux": "haben",
+  "part": "angeboten",
+  "präs": [
+   "biete an",
+   "bietest an",
+   "bietet an",
+   "bieten an",
+   "bietet an",
+   "bieten an"
+  ],
+  "prt": [
+   "bot an",
+   "botest an",
+   "bot an",
+   "boten an",
+   "botet an",
+   "boten an"
+  ],
+  "konj": [
+   "würde anbieten",
+   "würdest anbieten",
+   "würde anbieten"
+  ],
+  "ar": "يَعرضُ على الشخص",
+  "trenn": "an",
+  "bei": {
+   "de": "Die Stadt bietet kostenlose Kurse an.",
+   "ar": "تُوفِّرُ المدينةُ دوراتٍ مجانية."
+  }
+ },
+ {
+  "inf": "anhalten",
+  "aux": "haben",
+  "part": "angehalten",
+  "präs": [
+   "halte an",
+   "hältst an",
+   "hält an",
+   "anhalten",
+   "haltet an",
+   "halten an"
+  ],
+  "prt": [
+   "hielt an",
+   "hieltest an",
+   "hielt an",
+   "hielten an",
+   "hieltet an",
+   "hielten an"
+  ],
+  "konj": [
+   "würde anhalten",
+   "würdest anhalten",
+   "würde anhalten"
+  ],
+  "ar": "يتوقَّف/يستمرّ ثابتاً",
+  "trenn": "an",
+  "bei": {
+   "de": "Der Bus hält an der Haltestelle an.",
+   "ar": "يتوقَّفُ الحافلةُ عند المحطة — ثم لا يأتي الثانيةُ إلا بعدَ نصفِ ساعة."
+  }
+ },
+ {
+  "inf": "aufstehen",
+  "aux": "sein",
+  "part": "aufgestanden",
+  "präs": [
+   "stehe auf",
+   "stehst auf",
+   "steht auf",
+   "stehen auf",
+   "steht auf",
+   "stehen auf"
+  ],
+  "prt": [
+   "stand auf",
+   "standest auf",
+   "stand auf",
+   "standen auf",
+   "standet auf",
+   "standen auf"
+  ],
+  "konj": [
+   "würde aufstehen",
+   "würdest aufstehen",
+   "würde aufstehen"
+  ],
+  "ar": "ينهضُ من فراشِه",
+  "trenn": "auf",
+  "bei": {
+   "de": "Ich stehe um sechs auf.",
+   "ar": "أهبُّ من فراشي في السادسة."
+  }
+ },
+ {
+  "inf": "übertreiben",
+  "aux": "haben",
+  "part": "übertrieben",
+  "präs": [
+   "übertreibe",
+   "übertreibst",
+   "übertreibt",
+   "übertreiben",
+   "übertreibt",
+   "übertreiben"
+  ],
+  "prt": [
+   "übertrieb",
+   "übertriebst",
+   "übertrieb",
+   "übertrieben",
+   "übertriebt",
+   "übertrieben"
+  ],
+  "konj": [
+   "würde übertreiben",
+   "würdest übertreiben",
+   "würde übertreiben"
+  ],
+  "ar": "يُبالِغ",
+  "bei": {
+   "de": "Du übertreibst ein wenig!",
+   "ar": "أنتَ تبالغُ قليلاً — كالعادةِ حين تُحدِّثُ عن شتائكم."
+  }
+ },
+ {
+  "inf": "vorhaben",
+  "aux": "haben",
+  "part": "vorgehabt",
+  "präs": [
+   "habe vor",
+   "hast vor",
+   "hat vor",
+   "haben vor",
+   "habt vor",
+   "haben vor"
+  ],
+  "prt": [
+   "hatte vor",
+   "hattest vor",
+   "hatte vor",
+   "hatten vor",
+   "hattet vor",
+   "hatten vor"
+  ],
+  "konj": [
+   "würde vorhaben",
+   "würdest vorhaben",
+   "würde vorhaben"
+  ],
+  "ar": "ينوي شيئاً",
+  "trenn": "vor",
+  "bei": {
+   "de": "Was hast du am Wochenende vor?",
+   "ar": "ماذا تُخطِّطُ لعطلةِ الأسبوع؟"
+  }
+ },
+ {
+  "inf": "mitbringen",
+  "aux": "haben",
+  "part": "mitgebracht",
+  "präs": [
+   "bringe mit",
+   "bringst mit",
+   "bringt mit",
+   "bringen mit",
+   "bringt mit",
+   "bringen mit"
+  ],
+  "prt": [
+   "brachte mit",
+   "brachtest mit",
+   "brachte mit",
+   "brachten mit",
+   "brachtet mit",
+   "brachten mit"
+  ],
+  "konj": [
+   "würde mitbringen",
+   "würdest mitbringen",
+   "würde mitbringen"
+  ],
+  "ar": "يُحضِرُه معه",
+  "trenn": "mit",
+  "bei": {
+   "de": "Sie hat Kuchen mitgebracht.",
+   "ar": "أحضرت معنا كعكةً."
+  }
+ },
+ {
+  "inf": "nachdenken",
+  "aux": "haben",
+  "part": "nachgedacht",
+  "präs": [
+   "denke nach",
+   "denkst nach",
+   "denkt nach",
+   "denken nach",
+   "denkt nach",
+   "denken nach"
+  ],
+  "prt": [
+   "dachte nach",
+   "dachtest nach",
+   "dachte nach",
+   "dachten nach",
+   "dachtet nach",
+   "dachten nach"
+  ],
+  "konj": [
+   "würde nachdenken",
+   "würdest nachdenken",
+   "würde nachdenken"
+  ],
+  "ar": "يُفكِّر متأمِّلاً",
+  "trenn": "nach",
+  "praep": "über +Akk",
+  "bei": {
+   "de": "Ich muss über dein Angebot nachdenken.",
+   "ar": "عليَّ أن أتأمَّلَ عرضَك."
+  }
+ },
+ {
+  "inf": "zuhören",
+  "aux": "haben",
+  "part": "zugehört",
+  "präs": [
+   "höre zu",
+   "hörst zu",
+   "hört zu",
+   "hören zu",
+   "hört zu",
+   "hören zu"
+  ],
+  "prt": [
+   "hörte zu",
+   "hörtest zu",
+   "hörte zu",
+   "hörten zu",
+   "hörtet zu",
+   "hörten zu"
+  ],
+  "konj": [
+   "würde zuhören",
+   "würdest zuhören",
+   "würde zuhören"
+  ],
+  "ar": "يُنصِت إلى",
+  "trenn": "zu",
+  "praep": "+Dat",
+  "bei": {
+   "de": "Danke, dass du mir zugehört hast.",
+   "ar": "شكراً لأنك أنصتَّ إليَّ حتى النهاية."
+  }
+ },
+ {
+  "inf": "mitteilen",
+  "aux": "haben",
+  "part": "mitgeteilt",
+  "präs": [
+   "teile mit",
+   "teilst mit",
+   "teilt mit",
+   "teilen mit",
+   "teilt mit",
+   "teilen mit"
+  ],
+  "prt": [
+   "teilte mit",
+   "teiltest mit",
+   "teilte mit",
+   "teilten mit",
+   "teiltet mit",
+   "teilten mit"
+  ],
+  "konj": [
+   "würde mitteilen",
+   "würdest mitteilen",
+   "würde mitteilen"
+  ],
+  "ar": "يُبلِّغ",
+  "trenn": "mit",
+  "bei": {
+   "de": "Die Verschiebung wurde per Mail mitgeteilt.",
+   "ar": "أُعلِنَ التأجيلُ بالبريد."
+  }
+ },
+ {
+  "inf": "vorbereiten",
+  "aux": "haben",
+  "part": "vorbereitet",
+  "präs": [
+   "bereite vor",
+   "bereitest vor",
+   "bereitet vor",
+   "bereiten vor",
+   "bereitet vor",
+   "bereiten vor"
+  ],
+  "prt": [
+   "bereitete vor",
+   "bereitetest vor",
+   "bereitete vor",
+   "bereiteten vor",
+   "bereitetet vor",
+   "bereiteten vor"
+  ],
+  "konj": [
+   "würde vorbereiten",
+   "würdest vorbereiten",
+   "würde vorbereiten"
+  ],
+  "ar": "يُحضِّر لـ",
+  "trenn": "vor",
+  "praep": "auf +Akk",
+  "bei": {
+   "de": "Ich habe mich auf die Prüfung vorbereitet.",
+   "ar": "استعددتُ للامتحان — ولم أكتفِ بالحفظ."
+  }
+ },
+ {
+  "inf": "einkaufen",
+  "aux": "haben",
+  "part": "eingekauft",
+  "präs": [
+   "kaufe ein",
+   "kaufst ein",
+   "kauft ein",
+   "kaufen ein",
+   "kauft ein",
+   "kaufen ein"
+  ],
+  "prt": [
+   "kaufte ein",
+   "kauftest ein",
+   "kaufte ein",
+   "kauften ein",
+   "kauftet ein",
+   "kauften ein"
+  ],
+  "konj": [
+   "würde einkaufen",
+   "würdest einkaufen",
+   "würde einkaufen"
+  ],
+  "ar": "يتسوَّق",
+  "trenn": "ein",
+  "bei": {
+   "de": "Wir haben für die Woche eingekauft.",
+   "ar": "تسوَّقنا ما يكفي أسبوعَنا."
+  }
+ },
+ {
+  "inf": "aufhören",
+  "aux": "haben",
+  "part": "aufgehört",
+  "präs": [
+   "höre auf",
+   "hörst auf",
+   "hört auf",
+   "hören auf",
+   "hört auf",
+   "hören auf"
+  ],
+  "prt": [
+   "hörte auf",
+   "hörtest auf",
+   "hörte auf",
+   "hörten auf",
+   "hörtet auf",
+   "hörten auf"
+  ],
+  "konj": [
+   "würde aufhören",
+   "würdest aufhören",
+   "würde aufhören"
+  ],
+  "ar": "يتوقَّف عن",
+  "trenn": "auf",
+  "praep": "mit +Dat",
+  "bei": {
+   "de": "Er hat mit dem Rauchen aufgehört.",
+   "ar": "أقلعَ عن التدخين — لا عن العناد."
+  }
+ },
+ {
+  "inf": "abgeben",
+  "aux": "haben",
+  "part": "abgegeben",
+  "präs": [
+   "gebe ab",
+   "gebst ab",
+   "gebt ab",
+   "geben ab",
+   "gebt ab",
+   "geben ab"
+  ],
+  "prt": [
+   "gab ab",
+   "gabst ab",
+   "gab ab",
+   "gaben ab",
+   "gabt ab",
+   "gaben ab"
+  ],
+  "konj": [
+   "würde abgeben",
+   "würdest abgeben",
+   "würde abgeben"
+  ],
+  "ar": "يُسلِّم",
+  "trenn": "ab",
+  "bei": {
+   "de": "Gib die Übung bis Montag ab!",
+   "ar": "سلِّمِ التمرينَ قبلَ الاثنين!"
+  }
+ },
+ {
+  "inf": "einstellen",
+  "aux": "haben",
+  "part": "eingestellt",
+  "präs": [
+   "stelle ein",
+   "stellst ein",
+   "stellt ein",
+   "stellen ein",
+   "stellt ein",
+   "stellen ein"
+  ],
+  "prt": [
+   "stellte ein",
+   "stelltest ein",
+   "stellte ein",
+   "stellten ein",
+   "stelltet ein",
+   "stellten ein"
+  ],
+  "konj": [
+   "würde einstellen",
+   "würdest einstellen",
+   "würde einstellen"
+  ],
+  "ar": "يوظِّف/يضبط",
+  "trenn": "ein",
+  "bei": {
+   "de": "Ich wurde als Technikerin eingestellt.",
+   "ar": "وظفوني تقنيةً — بعد أربعِ رسائلَ واثقة."
+  }
+ },
+ {
+  "inf": "nachfragen",
+  "aux": "haben",
+  "part": "nachgefragt",
+  "präs": [
+   "frage nach",
+   "fragst nach",
+   "fragt nach",
+   "fragen nach",
+   "fragt nach",
+   "fragen nach"
+  ],
+  "prt": [
+   "fragte nach",
+   "fragtest nach",
+   "fragte nach",
+   "fragten nach",
+   "fragtet nach",
+   "fragten nach"
+  ],
+  "konj": [
+   "würde nachfragen",
+   "würdest nachfragen",
+   "würde nachfragen"
+  ],
+  "ar": "يَستَوضِح",
+  "trenn": "nach",
+  "praep": "bei +Dat / nach +Dat",
+  "bei": {
+   "de": "Ich habe beim Sachbearbeiter nachgefragt.",
+   "ar": "استوضحتُ من الموظفِ المختصّ."
+  }
+ },
+ {
+  "inf": "danken",
+  "aux": "haben",
+  "part": "gedankt",
+  "präs": [
+   "danke",
+   "dankst",
+   "dankt",
+   "danken",
+   "dankt",
+   "danken"
+  ],
+  "prt": [
+   "dankte",
+   "danktest",
+   "dankte",
+   "dankten",
+   "danktet",
+   "dankten"
+  ],
+  "konj": [
+   "würde danken",
+   "würdest danken",
+   "würde danken"
+  ],
+  "ar": "يَشكُر",
+  "praep": "+Dat",
+  "bei": {
+   "de": "Ich danke Ihnen für die Geduld.",
+   "ar": "أشكركم على صبرِكم عند الشباك."
+  }
+ },
+ {
+  "inf": "achten",
+  "aux": "haben",
+  "part": "geachtet",
+  "präs": [
+   "achte",
+   "achtest",
+   "achtet",
+   "achten",
+   "achtet",
+   "achten"
+  ],
+  "prt": [
+   "achtete",
+   "achtetest",
+   "achtete",
+   "achteten",
+   "achtetet",
+   "achteten"
+  ],
+  "konj": [
+   "würde achten",
+   "würdest achten",
+   "würde achten"
+  ],
+  "ar": "يَعتَني بـ",
+  "praep": "auf +Akk",
+  "bei": {
+   "de": "Achten Sie auf die Rechtschreibung!",
+   "ar": "انتبهوا للإملاءِ في الورقةِ الرسمية!"
+  }
+ },
+ {
+  "inf": "gehören",
+  "aux": "haben",
+  "part": "gehört",
+  "präs": [
+   "gehöre",
+   "gehörst",
+   "gehört",
+   "gehören",
+   "gehört",
+   "gehören"
+  ],
+  "prt": [
+   "gehörte",
+   "gehörtest",
+   "gehörte",
+   "gehörten",
+   "gehörtet",
+   "gehörten"
+  ],
+  "konj": [
+   "würde gehören",
+   "würdest gehören",
+   "würde gehören"
+  ],
+  "ar": "يَكونُ تابعاً لـ",
+  "praep": "zu +Dat",
+  "bei": {
+   "de": "Das gehört nicht zu meinen Aufgaben.",
+   "ar": "ليس هذا من مهامي — لكنني أنجزتُه."
+  }
+ },
+ {
+  "inf": "hoffen",
+  "aux": "haben",
+  "part": "gehofft",
+  "präs": [
+   "hoffe",
+   "hoffst",
+   "hofft",
+   "hoffen",
+   "hofft",
+   "hoffen"
+  ],
+  "prt": [
+   "hoffte",
+   "hofftest",
+   "hoffte",
+   "hofften",
+   "hofftet",
+   "hofften"
+  ],
+  "konj": [
+   "würde hoffen",
+   "würdest hoffen",
+   "würde hoffen"
+  ],
+  "ar": "يَرجُو",
+  "praep": "auf +Akk",
+  "bei": {
+   "de": "Wir hoffen auf eine Antwort bis Freitag.",
+   "ar": "نرجو ردّاً قبلَ الجمعة."
+  }
+ },
+ {
+  "inf": "informieren",
+  "aux": "haben",
+  "part": "informiert",
+  "präs": [
+   "informiere",
+   "informierst",
+   "informiert",
+   "informieren",
+   "informiert",
+   "informieren"
+  ],
+  "prt": [
+   "informierte",
+   "informiertest",
+   "informierte",
+   "informierten",
+   "informiertet",
+   "informierten"
+  ],
+  "konj": [
+   "würde informieren",
+   "würdest informieren",
+   "würde informieren"
+  ],
+  "ar": "يُبلِغُ بـ",
+  "praep": "über +Akk",
+  "bei": {
+   "de": "Die Behörde hat uns spät informiert.",
+   "ar": "أبلغتنا الإدارةُ متأخرةً — كالعادة."
+  }
+ },
+ {
+  "inf": "warten",
+  "aux": "haben",
+  "part": "gewartet",
+  "präs": [
+   "warte",
+   "wartest",
+   "wartet",
+   "warten",
+   "wartet",
+   "warten"
+  ],
+  "prt": [
+   "wartete",
+   "wartetest",
+   "wartete",
+   "warteten",
+   "wartetet",
+   "warteten"
+  ],
+  "konj": [
+   "würde warten",
+   "würdest warten",
+   "würde warten"
+  ],
+  "ar": "ينتظر",
+  "praep": "auf +Akk",
+  "bei": {
+   "de": "Wir haben eine Stunde gewartet.",
+   "ar": "انتظرنا ساعةً — والنظامُ يقول «عشرون دقيقة»."
+  }
+ },
+ {
+  "inf": "zweifeln",
+  "aux": "haben",
+  "part": "gezweifelt",
+  "präs": [
+   "zweifele",
+   "zweifelst",
+   "zweifelt",
+   "zweifeln",
+   "zweifelt",
+   "zweifeln"
+  ],
+  "prt": [
+   "zweifelte",
+   "zweifeltest",
+   "zweifelte",
+   "zweifelten",
+   "zweifeltet",
+   "zweifelten"
+  ],
+  "konj": [
+   "würde zweifeln",
+   "würdest zweifeln",
+   "würde zweifeln"
+  ],
+  "ar": "يَرتابُ في",
+  "praep": "an +Dat",
+  "bei": {
+   "de": "Ich zweifle nicht an dem Termin.",
+   "ar": "لا أرتابُ في الموعد — بل في الشبكةِ عند الطلب."
+  }
+ },
+ {
+  "inf": "verzichten",
+  "aux": "haben",
+  "part": "verzichtet",
+  "präs": [
+   "verzichte",
+   "verzichtest",
+   "verzichtet",
+   "verzichten",
+   "verzichtet",
+   "verzichten"
+  ],
+  "prt": [
+   "verzichtete",
+   "verzichtetest",
+   "verzichtete",
+   "verzichteten",
+   "verzichtetet",
+   "verzichteten"
+  ],
+  "konj": [
+   "würde verzichten",
+   "würdest verzichten",
+   "würde verzichten"
+  ],
+  "ar": "يَستغنِي عن",
+  "praep": "auf +Akk",
+  "bei": {
+   "de": "Er hat auf das Auto verzichtet.",
+   "ar": "استغنى عن السيارةِ فصارَ أقربَ إلى مدينتِه."
+  }
+ },
+ {
+  "inf": "protestieren",
+  "aux": "haben",
+  "part": "protestiert",
+  "präs": [
+   "protestiere",
+   "protestierst",
+   "protestiert",
+   "protestieren",
+   "protestiert",
+   "protestieren"
+  ],
+  "prt": [
+   "protestierte",
+   "protestiertest",
+   "protestierte",
+   "protestierten",
+   "protestiertet",
+   "protestierten"
+  ],
+  "konj": [
+   "würde protestieren",
+   "würdest protestieren",
+   "würde protestieren"
+  ],
+  "ar": "يَعتَرِضُ على",
+  "praep": "gegen +Akk",
+  "bei": {
+   "de": "Die Mieter haben gegen die Erhöhung protestiert.",
+   "ar": "احتجَّ المستأجرون على الزيادة."
+  }
+ },
+ {
+  "inf": "vereinbaren",
+  "aux": "haben",
+  "part": "vereinbart",
+  "präs": [
+   "vereinbare",
+   "vereinbarst",
+   "vereinbart",
+   "vereinbaren",
+   "vereinbart",
+   "vereinbaren"
+  ],
+  "prt": [
+   "vereinbarte",
+   "vereinbartest",
+   "vereinbarte",
+   "vereinbarten",
+   "vereinbartet",
+   "vereinbarten"
+  ],
+  "konj": [
+   "würde vereinbaren",
+   "würdest vereinbaren",
+   "würde vereinbaren"
+  ],
+  "ar": "يُنسِّقُ موعداً/اتفاقاً",
+  "bei": {
+   "de": "Wir haben einen Termin für Mittwoch vereinbart.",
+   "ar": "اتفقنا على موعدٍ الأربعاءَ العاشرةَ صباحاً."
+  }
+ },
+ {
+  "inf": "beantragen",
+  "aux": "haben",
+  "part": "beantragt",
+  "präs": [
+   "beantrage",
+   "beantragst",
+   "beantragt",
+   "beantragen",
+   "beantragt",
+   "beantragen"
+  ],
+  "prt": [
+   "beantragte",
+   "beantragtest",
+   "beantragte",
+   "beantragten",
+   "beantragtet",
+   "beantragten"
+  ],
+  "konj": [
+   "würde beantragen",
+   "würdest beantragen",
+   "würde beantragen"
+  ],
+  "ar": "يَطلُبُ رسميّاً",
+  "bei": {
+   "de": "Die Verlängerung wurde rechtzeitig beantragt.",
+   "ar": "طُولِبَ بالتمديدِ في وقتِه — ثلاثُ نسخٍ وختمٌ واحد."
+  }
+ },
+ {
+  "inf": "erledigen",
+  "aux": "haben",
+  "part": "erledigt",
+  "präs": [
+   "erledige",
+   "erledigst",
+   "erledigt",
+   "erledigen",
+   "erledigt",
+   "erledigen"
+  ],
+  "prt": [
+   "erledigte",
+   "erledigtest",
+   "erledigte",
+   "erledigten",
+   "erledigtet",
+   "erledigten"
+  ],
+  "konj": [
+   "würde erledigen",
+   "würdest erledigen",
+   "würde erledigen"
+  ],
+  "ar": "يُنهي أمراً رسميّاً",
+  "bei": {
+   "de": "Ich habe das Formular erledigt.",
+   "ar": "أنجزتُ الورقة — والختمُ الثالثُ انتظرَ أسبوعاً."
+  }
+ },
+ {
+  "inf": "kündigen",
+  "aux": "haben",
+  "part": "gekündigt",
+  "präs": [
+   "kündige",
+   "kündigst",
+   "kündigt",
+   "kündigen",
+   "kündigt",
+   "kündigen"
+  ],
+  "prt": [
+   "kündigte",
+   "kündigtest",
+   "kündigte",
+   "kündigten",
+   "kündigtet",
+   "kündigten"
+  ],
+  "konj": [
+   "würde kündigen",
+   "würdest kündigen",
+   "würde kündigen"
+  ],
+  "ar": "يُنهي عقدَ عملِه",
+  "bei": {
+   "de": "Sie hat zum Monatsende gekündigt.",
+   "ar": "أنهت عقدَها مع نهايةِ الشهر — بشجاعةٍ وحساب."
+  }
+ },
+ {
+  "inf": "vertrauen",
+  "aux": "haben",
+  "part": "vertraut",
+  "präs": [
+   "vertraue",
+   "vertraust",
+   "vertraut",
+   "vertrauen",
+   "vertraut",
+   "vertrauen"
+  ],
+  "prt": [
+   "vertraute",
+   "vertrautest",
+   "vertraute",
+   "vertrauten",
+   "vertrautet",
+   "vertrauten"
+  ],
+  "konj": [
+   "würde vertrauen",
+   "würdest vertrauen",
+   "würde vertrauen"
+  ],
+  "ar": "يثقُ بـ",
+  "praep": "+Dat",
+  "bei": {
+   "de": "Man muss dem eigenen Können vertrauen.",
+   "ar": "لا بدَّ أن تثقَ بمهارتِك لا بشهادةِ الطابع."
+  }
+ },
+ {
+  "inf": "ergänzen",
+  "aux": "haben",
+  "part": "ergänzt",
+  "präs": [
+   "ergänze",
+   "ergänzt",
+   "ergänzt",
+   "ergänzen",
+   "ergänzt",
+   "ergänzen"
+  ],
+  "prt": [
+   "ergänzte",
+   "ergänztest",
+   "ergänzte",
+   "ergänzten",
+   "ergänztet",
+   "ergänzten"
+  ],
+  "konj": [
+   "würde ergänzen",
+   "würdest ergänzen",
+   "würde ergänzen"
+  ],
+  "ar": "يُتِمُّ الناقص",
+  "bei": {
+   "de": "Folgendes Feld bitte ergänzen.",
+   "ar": "يُرجى إكمالُ هذا الحقلِ بما ينقُصُه."
+  }
+ },
+ {
+  "inf": "bemerken",
+  "aux": "haben",
+  "part": "bemerkt",
+  "präs": [
+   "bemerke",
+   "bemerkst",
+   "bemerkt",
+   "bemerken",
+   "bemerkt",
+   "bemerken"
+  ],
+  "prt": [
+   "bemerkte",
+   "bemerktest",
+   "bemerkte",
+   "bemerkten",
+   "bemerktet",
+   "bemerkten"
+  ],
+  "konj": [
+   "würde bemerken",
+   "würdest bemerken",
+   "würde bemerken"
+  ],
+  "ar": "يُلحِظ",
+  "bei": {
+   "de": "Das Detail hat niemand bemerkt.",
+   "ar": "لم يُلحِظِ التفصيلَ أحد — ولا المدقِّق."
+  }
+ },
+ {
+  "inf": "gründen",
+  "aux": "haben",
+  "part": "gegründet",
+  "präs": [
+   "gründe",
+   "gründest",
+   "gründet",
+   "gründen",
+   "gründet",
+   "gründen"
+  ],
+  "prt": [
+   "gründete",
+   "gründetest",
+   "gründete",
+   "gründeten",
+   "gründetet",
+   "gründeten"
+  ],
+  "konj": [
+   "würde gründen",
+   "würdest gründen",
+   "würde gründen"
+  ],
+  "ar": "يؤسِّس/يُؤسِّسُ الحجةَ على",
+  "praep": "auf +Akk",
+  "bei": {
+   "de": "Die Initiative wurde letztes Jahr gegründet.",
+   "ar": "تأسَّستِ المبادرةُ السنةَ الماضية — بأربعةِ متطوعين."
+  }
+ },
+ {
+  "inf": "sammeln",
+  "aux": "haben",
+  "part": "gesammelt",
+  "präs": [
+   "sammele",
+   "sammelst",
+   "sammelt",
+   "sammeln",
+   "sammelt",
+   "sammeln"
+  ],
+  "prt": [
+   "sammelte",
+   "sammeltest",
+   "sammelte",
+   "sammelten",
+   "sammeltet",
+   "sammelten"
+  ],
+  "konj": [
+   "würde sammeln",
+   "würdest sammeln",
+   "würde sammeln"
+  ],
+  "ar": "يَجمَع",
+  "bei": {
+   "de": "Wir haben Briefmarken gesammelt.",
+   "ar": "جمعنا الطوابعَ البريديةَ في الطفولة، وجمعُنا الوثائقَ اليومَ أصعب."
+  }
+ },
+ {
+  "inf": "verlangen",
+  "aux": "haben",
+  "part": "verlangt",
+  "präs": [
+   "verlange",
+   "verlangst",
+   "verlangt",
+   "verlangen",
+   "verlangt",
+   "verlangen"
+  ],
+  "prt": [
+   "verlangte",
+   "verlangtest",
+   "verlangte",
+   "verlangten",
+   "verlangtet",
+   "verlangten"
+  ],
+  "konj": [
+   "würde verlangen",
+   "würdest verlangen",
+   "würde verlangen"
+  ],
+  "ar": "يَطلُبُ بإلحاح",
+  "praep": "von +Dat / nach +Dat",
+  "bei": {
+   "de": "Sie hat eine schriftliche Bestätigung verlangt.",
+   "ar": "طلبتْ تأكيداً مكتوباً — ولم ترضَ بالوعدِ الشفهي."
+  }
+ },
+ {
+  "inf": "verschieben",
+  "aux": "haben",
+  "part": "verschoben",
+  "präs": [
+   "verschiebe",
+   "verschiebst",
+   "verschiebt",
+   "verschieben",
+   "verschiebt",
+   "verschieben"
+  ],
+  "prt": [
+   "verschiebte",
+   "verschiebtest",
+   "verschiebte",
+   "verschiebten",
+   "verschiebtet",
+   "verschiebten"
+  ],
+  "konj": [
+   "würde verschieben",
+   "würdest verschieben",
+   "würde verschieben"
+  ],
+  "ar": "يُؤجِّل",
+  "bei": {
+   "de": "Der Termin musste zweimal verschoben werden.",
+   "ar": "أُجِّلَ الموعدُ مرتين — فالحذرَ الحذرَ من الثالث."
+  }
+ },
+ {
+  "inf": "sich entschuldigen",
+  "aux": "haben",
+  "part": "entschuldigt",
+  "präs": [
+   "entschuldige mich",
+   "entschuldigst dich",
+   "entschuldigt sich",
+   "entschuldigen uns",
+   "entschuldigt euch",
+   "entschuldigen sich"
+  ],
+  "prt": [
+   "entschuldigte mich",
+   "entschuldigtest dich",
+   "entschuldigte sich",
+   "entschuldigten uns",
+   "entschuldigtet euch",
+   "entschuldigten sich"
+  ],
+  "konj": [
+   "würde mich entschuldigen",
+   "würdest dich entschuldigen",
+   "würde sich entschuldigen"
+  ],
+  "ar": "يَعتَذِرُ عن/لدى",
+  "praep": "für +Akk / bei +Dat",
+  "bei": {
+   "de": "Er hat sich bei der Chefin entschuldigt.",
+   "ar": "اعتذرَ من الرئيسةِ عن تأخيرِ التقرير."
+  }
+ },
+ {
+  "inf": "sich erinnern",
+  "aux": "haben",
+  "part": "erinnert",
+  "präs": [
+   "erinnere mich",
+   "erinnerst dich",
+   "erinnert sich",
+   "erinnern uns",
+   "erinnert euch",
+   "erinnern sich"
+  ],
+  "prt": [
+   "erinnerte mich",
+   "erinnertest dich",
+   "erinnerte sich",
+   "erinnerten uns",
+   "erinnertet euch",
+   "erinnerten sich"
+  ],
+  "konj": [
+   "würde mich erinnern",
+   "würdest dich erinnern",
+   "würde sich erinnern"
+  ],
+  "ar": "يتذكَّر",
+  "praep": "an +Akk",
+  "bei": {
+   "de": "Ich erinnere mich an den ersten Tag.",
+   "ar": "أذكرُ يومي الأولَ في القسمِ كأنه بالأمس."
+  }
+ },
+ {
+  "inf": "sich freuen",
+  "aux": "haben",
+  "part": "gefreut",
+  "präs": [
+   "freue mich",
+   "freust dich",
+   "freut sich",
+   "freuen uns",
+   "freut euch",
+   "freuen sich"
+  ],
+  "prt": [
+   "freute mich",
+   "freutest dich",
+   "freute sich",
+   "freuten uns",
+   "freutet euch",
+   "freuten sich"
+  ],
+  "konj": [
+   "würde mich freuen",
+   "würdest dich freuen",
+   "würde sich freuen"
+  ],
+  "ar": "يفرَحُ لـ",
+  "praep": "auf +Akk / über +Akk",
+  "bei": {
+   "de": "Wir freuen uns auf den Sommer.",
+   "ar": "نتطلَّعُ إلى الصيفِ شوقاً."
+  }
+ },
+ {
+  "inf": "sich vorstellen",
+  "aux": "haben",
+  "part": "vorgestellt",
+  "präs": [
+   "stelle mich vor",
+   "stellst dich vor",
+   "stellt sich vor",
+   "stellen uns vor",
+   "stellt euch vor",
+   "stellen sich vor"
+  ],
+  "prt": [
+   "stellte mich vor",
+   "stelltest dich vor",
+   "stellte sich vor",
+   "stellten uns vor",
+   "stelltet euch vor",
+   "stellten sich vor"
+  ],
+  "konj": [
+   "würde mich vorstellen",
+   "würdest dich vorstellen",
+   "würde sich vorstellen"
+  ],
+  "ar": "يُعرِّفُ بنفسَه/يتخيَّل",
+  "trenn": "vor",
+  "bei": {
+   "de": "Darf ich mich kurz vorstellen?",
+   "ar": "أأسمحُ لنفسي بتعريفٍ موجز؟"
+  }
+ },
+ {
+  "inf": "sich kümmern",
+  "aux": "haben",
+  "part": "gekümmert",
+  "präs": [
+   "kümmere mich",
+   "kümmerst dich",
+   "kümmert sich",
+   "kümmern uns",
+   "kümmert euch",
+   "kümmern sich"
+  ],
+  "prt": [
+   "kümmerte mich",
+   "kümmertest dich",
+   "kümmerte sich",
+   "kümmerten uns",
+   "kümmertet euch",
+   "kümmerten sich"
+  ],
+  "konj": [
+   "würde mich kümmern",
+   "würdest dich kümmern",
+   "würde sich kümmern"
+  ],
+  "ar": "يتولَّى شأنَ",
+  "praep": "um +Akk",
+  "bei": {
+   "de": "Die Agentur kümmert sich um den Rest.",
+   "ar": "تتكفَّلُ الوكالةُ بما تبقَّى — نظرياً."
+  }
+ },
+ {
+  "inf": "sich konzentrieren",
+  "aux": "haben",
+  "part": "konzentriert",
+  "präs": [
+   "konzentriere mich",
+   "konzentrierst dich",
+   "konzentriert sich",
+   "konzentrieren uns",
+   "konzentriert euch",
+   "konzentrieren sich"
+  ],
+  "prt": [
+   "konzentrierte mich",
+   "konzentriertest dich",
+   "konzentrierte sich",
+   "konzentrierten uns",
+   "konzentriertet euch",
+   "konzentrierten sich"
+  ],
+  "konj": [
+   "würde mich konzentrieren",
+   "würdest dich konzentrieren",
+   "würde sich konzentrieren"
+  ],
+  "ar": "يُركِّزُ على",
+  "praep": "auf +Akk",
+  "bei": {
+   "de": "Konzentrier dich auf die Aussprache!",
+   "ar": "ركِّز على نطقِك لا على ترجمةِ كلِّ كلمة."
+  }
+ },
+ {
+  "inf": "sich verabreden",
+  "aux": "haben",
+  "part": "verabredet",
+  "präs": [
+   "verabrede mich",
+   "verabredest dich",
+   "verabredet sich",
+   "verabreden uns",
+   "verabredet euch",
+   "verabreden sich"
+  ],
+  "prt": [
+   "verabredete mich",
+   "verabredetest dich",
+   "verabredete sich",
+   "verabredeten uns",
+   "verabredetet euch",
+   "verabredeten sich"
+  ],
+  "konj": [
+   "würde mich verabreden",
+   "würdest dich verabreden",
+   "würde sich verabreden"
+  ],
+  "ar": "يواعِدُ صديقاً",
+  "praep": "mit +Dat",
+  "bei": {
+   "de": "Wir haben uns zum Deutschkurs verabredet.",
+   "ar": "اتفقنا على موعدٍ في دورةِ الألمانية."
+  }
+ },
+ {
+  "inf": "sich verabschieden",
+  "aux": "haben",
+  "part": "verabschiedet",
+  "präs": [
+   "verabschiede mich",
+   "verabschiedest dich",
+   "verabschiedet sich",
+   "verabschieden uns",
+   "verabschiedet euch",
+   "verabschieden sich"
+  ],
+  "prt": [
+   "verabschiedete mich",
+   "verabschiedetest dich",
+   "verabschiedete sich",
+   "verabschiedeten uns",
+   "verabschiedetet euch",
+   "verabschiedeten sich"
+  ],
+  "konj": [
+   "würde mich verabschieden",
+   "würdest dich verabschieden",
+   "würde sich verabschieden"
+  ],
+  "ar": "يُودِّع",
+  "praep": "von +Dat",
+  "bei": {
+   "de": "Wir haben uns von den Kollegen verabschiedet.",
+   "ar": "ودَّعنا الزملاءَ بعد خمسِ سنواتٍ في المكتبِ نفسِه."
+  }
+ },
+ {
+  "inf": "sich weigern",
+  "aux": "haben",
+  "part": "geweigert",
+  "präs": [
+   "weigere mich",
+   "weigerst dich",
+   "weigert sich",
+   "weigern uns",
+   "weigert euch",
+   "weigern sich"
+  ],
+  "prt": [
+   "weigerte mich",
+   "weigertest dich",
+   "weigerte sich",
+   "weigerten uns",
+   "weigertet euch",
+   "weigerten sich"
+  ],
+  "konj": [
+   "würde mich weigern",
+   "würdest dich weigern",
+   "würde sich weigern"
+  ],
+  "ar": "يَأبَى أن يفعل",
+  "bei": {
+   "de": "Er weigerte sich, das Formular zu unterschreiben.",
+   "ar": "أبى أن يوقِّعَ الاستمارةَ حتى فُهِمَ شرطُها."
+  }
+ },
+ {
+  "inf": "sich beeilen",
+  "aux": "haben",
+  "part": "beeilt",
+  "präs": [
+   "beeile mich",
+   "beeilst dich",
+   "beeilt sich",
+   "beeilen uns",
+   "beeilt euch",
+   "beeilen sich"
+  ],
+  "prt": [
+   "beeilte mich",
+   "beeiltest dich",
+   "beeilte sich",
+   "beeilten uns",
+   "beeiltet euch",
+   "beeilten sich"
+  ],
+  "konj": [
+   "würde mich beeilen",
+   "würdest dich beeilen",
+   "würde sich beeilen"
+  ],
+  "ar": "يستعجل",
+  "bei": {
+   "de": "Beeil dich, der Zug wartet nicht!",
+   "ar": "أسرعْ — فالقطارُ لا ينتظرُ أحداً."
+  }
+ },
+ {
+  "inf": "sich anmelden",
+  "aux": "haben",
+  "part": "angemeldet",
+  "präs": [
+   "melde mich an",
+   "meldst dich an",
+   "meldet sich an",
+   "melden uns an",
+   "meldet euch an",
+   "melden sich an"
+  ],
+  "prt": [
+   "meldete mich an",
+   "meldetest dich an",
+   "meldete sich an",
+   "meldeten uns an",
+   "meldetet euch an",
+   "meldeten sich an"
+  ],
+  "konj": [
+   "würde mich anmelden",
+   "würdest dich anmelden",
+   "würde sich anmelden"
+  ],
+  "ar": "يُسجِّلُ اسمَه لدى",
+  "trenn": "an",
+  "praep": "bei +Dat / für +Akk",
+  "bei": {
+   "de": "Ich habe mich beim Amt angemeldet.",
+   "ar": "سجَّلتُ اسمي لدى الإدارة — في الطابورِ الثاني."
+  }
+ },
+ {
+  "inf": "sich auskennen",
+  "aux": "haben",
+  "part": "ausgekannt",
+  "präs": [
+   "kenne mich aus",
+   "kennst dich aus",
+   "kennt sich aus",
+   "kennen uns aus",
+   "kennt euch aus",
+   "kennen sich aus"
+  ],
+  "prt": [
+   "kannte mich aus",
+   "kanntest dich aus",
+   "kannte sich aus",
+   "kannten uns aus",
+   "kanntet euch aus",
+   "kannten sich aus"
+  ],
+  "konj": [
+   "würde mich auskennen",
+   "würdest dich auskennen",
+   "würde sich auskennen"
+  ],
+  "ar": "يَعرِفُ الدروبَ في مكان",
+  "trenn": "aus",
+  "praep": "in +Dat",
+  "bei": {
+   "de": "Hier kennt er sich gut aus.",
+   "ar": "يعرفُ دروبَ مدينتِه كظهرِ كفِّه."
+  }
+ }
+]

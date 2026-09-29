@@ -1,0 +1,30 @@
+{
+  "name": "weg-nach-b2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "طريقي إلى B2 — المدرّس الافتراضي الوحيد لتعلّم الألمانية A0→B2",
+  "scripts": {
+    "dev": "next dev",
+    "interaktiv": "esbuild scripts/interaktiv_test.tsx --bundle --platform=node --format=cjs --external:jsdom --jsx=automatic --outfile=node_modules/.cache/interaktiv.cjs --log-level=error && node node_modules/.cache/interaktiv.cjs",
+    "smoke": "esbuild scripts/engine_smoke.ts --bundle --platform=node --format=cjs --jsx=transform --tsconfig=tsconfig.json --outfile=.cache/smoke.cjs --log-level=warning && node .cache/smoke.cjs",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}

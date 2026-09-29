@@ -1,0 +1,879 @@
+"use client";
+import { useEffect, useMemo, useState } from "react";
+import type { DayTask, Exercise, SrsState, UiLang, VocabCard, Schreibaufgabe, GrammarTopic, Eselsbruecke } from "@/lib/types";
+import { eselsbruecken, getBrueckenFor, getGrammar, sprichwortSrc, getDeck, getText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap } from "@/lib/content";
+import { newCard, reviewCard, isDue } from "@/lib/srs";
+import { addFehlerNow } from "@/lib/store";
+import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
+import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
+import { buildBrueckeItems } from "@/lib/bruecken";
+import ExerciseSet from "./exercises";
+import { FehlerFinden, RollenDialog, SchreibBerater, Pruefung } from "./lehrer";
+import { FehlerFallen, Fehlerheft } from "./fehler-ui";
+import { De } from "./De";
+
+interface TaskProps {
+  task: DayTask;
+  lang: UiLang;
+  day: number;
+  srs: Record<string, SrsState>;
+  onSrs: (cardId: string, state: SrsState) => void;
+  onPoints: (points: number, max: number) => void;
+  voiceName?: string;
+  rate?: number;
+}
+
+/** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
+export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate }: TaskProps) {
+  // تسميع الإملاء: مستمع عام يعمل في كل المهام
+  useEffect(() => {
+    const onSpeak = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      const text = Array.isArray(detail) ? String(detail[0]) : String(detail);
+      speakDe(text, { voiceName, rate });
+    };
+    window.addEventListener("weg-speak-dictation", onSpeak);
+    return () => window.removeEventListener("weg-speak-dictation", onSpeak);
+  }, [voiceName, rate]);
+
+  switch (task.kind) {
+    case "grammatik":
+      return <GrammarTask task={task} onPoints={onPoints} />;
+    case "wortschatz":
+      return <VocabTask task={task} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} />;
+    case "hoeren":
+      return <HoerenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} />;
+    case "lesen":
+      return <LesenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} />;
+    case "schreiben":
+      return <SchreibenTask task={task} onPoints={onPoints} />;
+    case "sprechen":
+      return <SprechenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} />;
+    case "wiederholen":
+      return task.fehlerKeys?.length ? (
+        <Fehlerheft fehlerKeys={task.fehlerKeys} onPoints={onPoints} voiceName={voiceName} rate={rate} />
+      ) : task.fehlerItems?.length ? (
+        <FehlerFallen items={task.fehlerItems} onPoints={onPoints} />
+      ) : (
+        <WiederholenTask task={task} day={day} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} />
+      );
+    case "check":
+      return task.exam ? (
+        <Pruefung task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} />
+      ) : (
+        <CheckTask task={task} onPoints={onPoints} />
+      );
+    default:
+      return <CheckTask task={task} onPoints={onPoints} />;
+  }
+}
+
+
+
+
+type SrsState2 = Record<string, SrsState>;
+
+// ── 🔁 مراجعةُ الشفرات بفواصلَ متباعدة: التركةُ بطاقةٌ في دورةِ SM-2 كالمفردة ──
+function BrueckenSRS({ srs, onSrs, onPoints }: { srs: SrsState2; onSrs: (id: string, s: SrsState) => void; onPoints: (p: number, m: number) => void }) {
+  const [i, setI] = useState(0);
+  const [offen, setOffen] = useState(false);
+  const schlange = useMemo(() => {
+    const key = (b: Eselsbruecke) => `bru:${b.id}`;
+    const frisch = eselsbruecken.filter((b) => !srs[key(b)]);
+    const faellig = eselsbruecken.filter((b) => srs[key(b)] && isDue(srs[key(b)]));
+    return [...faellig, ...frisch].slice(0, 5);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  if (!schlange.length) return null;
+  const b = schlange[i];
+  if (!b)
+    return (
+      <div className="card" style={{ padding: "0.7rem 1rem", background: "var(--color-gold-soft)", marginTop: "0.6rem" }}>
+        <strong>✅ انتهت شفراتُ اليوم — عادَت إلى الجدولِ بفواصلَ أطول.</strong>
+      </div>
+    );
+
+  const bewerten = (q: 0 | 2 | 4) => {
+    onSrs(`bru:${b.id}`, reviewCard(srs[`bru:${b.id}`] ?? newCard(), q));
+    onPoints(q === 4 ? 3 : q === 2 ? 2 : 1, 3);
+    if (q === 0) {
+      addFehlerNow({
+        falsch: `نسيتُ شفرة: ${b.titleAr}`,
+        richtig: b.zeilen.map((z) => z.de).slice(0, 3).join(" · "),
+        art: "konstruktion",
+        ar: `${b.storyAr.slice(0, 120)}…`,
+        quelle: "Eselsbrücke-SRS",
+      });
+    }
+    setOffen(false);
+    setI((x) => x + 1);
+  };
+
+  return (
+    <div className="card" style={{ padding: "0.8rem 1rem", marginTop: "0.7rem", borderInlineStart: "4px solid var(--color-gold)" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "0.4rem" }}>
+        <strong>🔁 شفراتُ الحفظِ المستحقّة</strong>
+        <span className="chip rtl-num">{i + 1}/{schlange.length}</span>
+      </div>
+      <div style={{ fontSize: "0.83rem", color: "var(--color-ink2)", margin: "0.3rem 0 0.5rem" }}>
+        استرجعِ الشفرةَ من ذاكرتِك أولاً — ثمَّ اكشفْ وقيِّمْ نفسَك بصدق.
+      </div>
+      <div style={{ fontWeight: 900, fontSize: "1.03rem" }}>{b.emoji} {b.titleAr}</div>
+      {!offen ? (
+        <button className="btn btn-gold" style={{ marginTop: "0.6rem" }} onClick={() => setOffen(true)}>👁 اكشفِ الشفرة</button>
+      ) : (
+        <>
+          <div style={{ fontSize: "0.86rem", lineHeight: 1.9, margin: "0.4rem 0" }}>{b.storyAr}</div>
+          <div style={{ display: "grid", gap: "0.25rem" }}>
+            {b.zeilen.slice(0, 4).map((z: { code: string; de: string; ar: string }, k: number) => (
+              <div key={k} style={{ fontSize: "0.85rem" }}>
+                <span className="chip" style={{ fontWeight: 800 }}>{z.code}</span> <De>{z.de}</De>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: "flex", gap: "0.4rem", marginTop: "0.6rem", flexWrap: "wrap" }}>
+            <button className="btn btn-ghost" style={{ flex: 1 }} onClick={() => bewerten(0)}>😵 نسيتُها</button>
+            <button className="btn btn-ghost" style={{ flex: 1 }} onClick={() => bewerten(2)}>🤔 بصعوبة</button>
+            <button className="btn btn-primary" style={{ flex: 1 }} onClick={() => bewerten(4)}>😎 حاضرةٌ فوراً</button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+// ── 🎯 امتحانُ الشفرات: التركةُ تُمتَحَنُ لا تُقرَأُ فقط ──
+function BrueckenQuiz({ gramId, bruecken }: { gramId: string; bruecken: Eselsbruecke[] }) {
+  const items = useMemo(() => buildBrueckeItems(bruecken, gramId.length * 31 + bruecken.length, 6, eselsbruecken), [bruecken, gramId]);
+  const [i, setI] = useState(0);
+  const [wahl, setWahl] = useState<string | null>(null);
+  const [score, setScore] = useState({ s: 0, t: 0 });
+  const [fertig, setFertig] = useState(false);
+  if (!items.length) return null;
+  const it = items[i];
+
+  const antworte = (o: string) => {
+    if (wahl) return;
+    setWahl(o);
+    const ok = o === it.antwort;
+    setScore((x) => ({ s: x.s + (ok ? 1 : 0), t: x.t + 1 }));
+    if (!ok) {
+      addFehlerNow({
+        falsch: `${it.frageDe} → ${o}`,
+        richtig: it.art === "artikel" ? `${it.antwort} ${it.frageDe.replace("___ ", "")}` : it.antwort,
+        art: it.kat,
+        ar: `شفرةُ الحفظ — ${it.erklaerungAr}`,
+        quelle: "Eselsbrücke",
+      });
+    }
+  };
+  const weiter = () => {
+    setWahl(null);
+    if (i + 1 >= items.length) setFertig(true);
+    else setI(i + 1);
+  };
+
+  if (fertig)
+    return (
+      <div className="card" style={{ padding: "0.75rem 1rem", background: "var(--color-gold-soft)", marginTop: "0.5rem" }}>
+        <strong>🎯 انتهى امتحانُ الشفرات — <span className="rtl-num">{score.s}/{score.t}</span></strong>
+        <div style={{ fontSize: "0.83rem", color: "var(--color-ink2)", marginTop: "0.25rem", lineHeight: 1.8 }}>
+          ما أخطأتَ فيه دُفِنَ في دفترِ الأخطاءِ بفئتِه، وسيعودُ إليك في المراجعةِ لا في النسيان.
+        </div>
+        <button className="btn btn-ghost" style={{ marginTop: "0.5rem" }} onClick={() => { setI(0); setWahl(null); setScore({ s: 0, t: 0 }); setFertig(false); }}>
+          🔁 أعِدْ من أوّلِها
+        </button>
+      </div>
+    );
+
+  return (
+    <div className="card" style={{ padding: "0.8rem 1rem", marginTop: "0.5rem", borderInlineStart: "4px solid var(--color-cola)" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "0.4rem" }}>
+        <strong style={{ fontSize: "0.95rem" }}>🎯 امتحانُ الشفرات</strong>
+        <span className="chip rtl-num">{i + 1}/{items.length} · {score.s} ✓</span>
+      </div>
+      <div style={{ fontSize: "0.84rem", color: "var(--color-ink2)", margin: "0.3rem 0" }}>{it.frageAr}</div>
+      <De style={{ fontWeight: 800, fontSize: "1.05rem", display: "block", margin: "0.2rem 0 0.5rem" }}>{it.frageDe}</De>
+      <div style={{ display: "grid", gap: "0.35rem" }}>
+        {it.optionen.map((o) => {
+          const gewaehlt = wahl === o;
+          const richtig = wahl && o === it.antwort;
+          const falsch = gewaehlt && o !== it.antwort;
+          return (
+            <button
+              key={o}
+              className="btn"
+              style={{
+                justifyContent: "flex-start",
+                minHeight: "44px",
+                border: "1px solid var(--color-line)",
+                background: richtig ? "var(--color-gold-soft)" : falsch ? "var(--color-cola-soft)" : "white",
+              }}
+              disabled={!!wahl}
+              onClick={() => antworte(o)}
+            >
+              {richtig ? "✅ " : falsch ? "❌ " : ""}{o}
+            </button>
+          );
+        })}
+      </div>
+      {wahl && (
+        <>
+          <div style={{ fontSize: "0.84rem", marginTop: "0.5rem", lineHeight: 1.9, background: "var(--color-paper2)", padding: "0.45rem 0.65rem", borderRadius: "0.5rem" }}>
+            🧠 {it.erklaerungAr}
+          </div>
+          <button className="btn btn-primary" style={{ marginTop: "0.5rem" }} onClick={weiter}>
+            {i + 1 >= items.length ? "أنهِ الامتحان ✓" : "التالي ←"}
+          </button>
+        </>
+      )}
+    </div>
+  );
+}
+
+// ── 🧠 تركاتُ الحفظ: الشفراتُ والقصصُ والأمثالُ الملتصقةُ بهذا الدرسِ بعينه ──
+function BrueckenBlock({ gramId }: { gramId: string }) {
+  const bruecken = getBrueckenFor(gramId);
+  const [offen, setOffen] = useState<Record<string, boolean>>({});
+  if (!bruecken.length) return null;
+  return (
+    <div style={{ display: "grid", gap: "0.5rem", margin: "0.9rem 0" }}>
+      <div style={{ fontWeight: 900, fontSize: "0.95rem", color: "var(--color-cola)" }}>
+        🧠 تركاتُ الحفظ لهذا الدرس <span className="rtl-num" style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>({bruecken.length})</span>
+      </div>
+      <BrueckenQuiz gramId={gramId} bruecken={bruecken} />
+      {bruecken.map((b) => {
+        const auf = !!offen[b.id];
+        return (
+          <div key={b.id} className="card" style={{ padding: "0.7rem 0.95rem", background: "var(--color-paper2)", borderInlineStart: "4px solid var(--color-gold)" }}>
+            <button
+              onClick={() => setOffen((o) => ({ ...o, [b.id]: !o[b.id] }))}
+              style={{ background: "none", border: 0, cursor: "pointer", width: "100%", minHeight: "44px", display: "flex", gap: "0.5rem", alignItems: "center", justifyContent: "space-between", textAlign: "start", font: "inherit", color: "inherit" }}
+            >
+              <span style={{ fontWeight: 800 }}>{b.emoji} {b.titleAr}</span>
+              <span className="chip">{auf ? "إخفاء ▲" : "افتح ▼"}</span>
+            </button>
+            {auf && (
+              <>
+                <div style={{ fontSize: "0.86rem", lineHeight: 1.95, margin: "0.4rem 0 0.55rem" }}>{b.storyAr}</div>
+                <div style={{ display: "grid", gap: "0.3rem" }}>
+                  {b.zeilen.map((z: { code: string; de: string; ar: string }, i: number) => (
+                    <div key={i} style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "baseline", background: "var(--color-paper)", padding: "0.4rem 0.6rem", borderRadius: "0.5rem" }}>
+                      <span className="chip" style={{ fontWeight: 800 }}>{z.code}</span>
+                      <De style={{ fontWeight: 700, flex: 1, minWidth: "11rem" }}>{z.de}</De>
+                      <button className="chip" style={{ cursor: "pointer", minHeight: "44px" }} onClick={() => speakAny(z.de)}>🔊</button>
+                      <div style={{ fontSize: "0.83rem", color: "var(--color-ink2)", flexBasis: "100%" }}>{z.ar}</div>
+                    </div>
+                  ))}
+                </div>
+                {sprichwortSrc(b.id) && (
+                  <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap", marginTop: "0.5rem" }}>
+                    <audio controls preload="none" src={sprichwortSrc(b.id) ?? undefined} style={{ height: "44px", maxWidth: "100%" }} />
+                    <span className="chip">🔊 نُطقٌ أصيلٌ — ملفٌّ من الدار</span>
+                  </div>
+                )}
+                {b.warnung && (
+                  <div style={{ fontSize: "0.82rem", marginTop: "0.5rem", padding: "0.45rem 0.65rem", borderRadius: "0.5rem", background: "var(--color-cola-soft)", lineHeight: 1.85 }}>
+                    ⚠️ {b.warnung}
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+// ── شرح القواعد + تمارينه ───────────────────────────────────────────────
+function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void }) {
+  const topic = getGrammar(task.topicId ?? "");
+  if (!topic) return <Empty title="قاعدة غير موجودة" />;
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon="📘" de={topic.titleDe} ar={topic.titleAr} />
+      <p style={{ lineHeight: 1.9 }}>{topic.summaryAr}</p>
+
+      <BrueckenBlock gramId={topic.id} />
+
+      <ul style={{ margin: "1rem 0", display: "grid", gap: "0.4rem", listStyle: "none", padding: 0 }}>
+        {topic.rules.map((r) => (
+          <li key={r.de} style={{ background: "var(--color-paper2)", padding: "0.6rem 0.8rem", borderRadius: "0.6rem" }}>
+            <De style={{ fontWeight: 700 }}>{r.de}</De>
+            <div style={{ fontSize: "0.88rem", color: "var(--color-ink2)" }}>{r.ar}</div>
+          </li>
+        ))}
+      </ul>
+
+      {topic.tables?.map((tb, i) => (
+        <div key={i} style={{ overflowX: "auto", margin: "0.8rem 0" }}>
+          {tb.captionAr && <div style={{ fontWeight: 700, marginBottom: "0.3rem" }}>{tb.captionAr}</div>}
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.92rem", direction: "ltr", textAlign: "left" }}>
+            <thead>
+              <tr>
+                {tb.headers.map((h) => (
+                  <th key={h} style={{ borderBottom: "2px solid var(--color-line)", padding: "0.4rem 0.6rem" }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {tb.rows.map((row, ri) => (
+                <tr key={ri}>
+                  {row.map((c, ci) => (
+                    <td key={ci} style={{ borderBottom: "1px solid var(--color-line)", padding: "0.4rem 0.6rem" }}>{c}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      ))}
+
+      <div style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
+        {topic.examples.map((ex) => (
+          <div key={ex.de} style={{ borderInlineStart: "3px solid var(--color-gold)", paddingInlineStart: "0.7rem" }}>
+            <div style={{ display: "flex", gap: "0.4rem", alignItems: "center", flexWrap: "wrap" }}>
+              <De>{ex.de}</De>
+              <button
+                className="chip"
+                style={{ cursor: "pointer" }}
+                onClick={() => speakAny(ex.de)}
+              >
+                🔊
+              </button>
+            </div>
+            <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>{ex.ar}</div>
+          </div>
+        ))}
+      </div>
+
+      {topic.pitfalls && (
+        <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.7rem", padding: "0.7rem 0.9rem", margin: "0.8rem 0" }}>
+          <strong style={{ color: "var(--color-cola)" }}>⚠️ أخطاء شائعة عند العرب</strong>
+          {topic.pitfalls.map((p) => (
+            <div key={p.de} style={{ marginTop: "0.4rem" }}>
+              <De>{p.de}</De>
+              <div style={{ fontSize: "0.85rem" }}>{p.ar}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {topic.pitfalls && topic.pitfalls.length > 0 && (
+        <FehlerFinden pitfalls={topic.pitfalls} onPoints={onPoints} />
+      )}
+
+      <h4 style={{ fontWeight: 800, margin: "1rem 0 0.6rem" }}>تثبيت فوري</h4>
+      <ExerciseSet items={topic.exercises} onPoints={onPoints} />
+    </section>
+  );
+}
+
+// ── مفردات + بنك جمل ────────────────────────────────────────────────────
+function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day">) {
+  const deck = getDeck(task.deckId ?? "");
+  const [queue, setQueue] = useState<VocabCard[]>([]);
+  const [flipped, setFlipped] = useState(false);
+  const [doneCount, setDoneCount] = useState(0);
+
+  useEffect(() => {
+    let pool: VocabCard[];
+    if (deck) {
+      const fresh = deck.cards.filter((c) => !srs[c.id]);
+      const due = deck.cards.filter((c) => srs[c.id] && isDue(srs[c.id]));
+      const rest = deck.cards.filter((c) => srs[c.id] && !isDue(srs[c.id]));
+      pool = [...fresh, ...due, ...rest].slice(0, 10);
+    } else {
+      const all: VocabCard[] = Object.values(vocabMap).flatMap((d) => d.cards);
+      pool = all.filter((c) => srs[c.id] && isDue(srs[c.id])).slice(0, 10);
+    }
+    setQueue(pool);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [task.id]);
+
+  const card = queue[0];
+  const satzItems = useMemo(() => {
+    return (task.sentenceIds ?? [])
+      .map((sid, i) => {
+        const s = getSatz(sid);
+        return s ? clozeFromSatz(s, i, rng(seedFrom(task.id) + i * 97)) : null;
+      })
+      .filter(Boolean) as Exercise[];
+  }, [task.sentenceIds, task.id]);
+
+  if (!deck && task.deckId) return <Empty title="حزمة غير موجودة" />;
+
+  const rateCard = (q: 0 | 2 | 4) => {
+    if (!card) return;
+    const prev = srs[card.id] ?? newCard();
+    onSrs(card.id, reviewCard(prev, q));
+    if (q === 0) {
+      addFehlerNow({
+        falsch: card.article ? `${card.article} ${card.de}` : card.de,
+        richtig: card.ar,
+        art: "wortschatz",
+        ar: card.exampleDe ? `${card.ar} — مثال: ${card.exampleDe}` : card.ar,
+        level: card.level,
+        quelle: deck?.titleAr ?? "مفردات",
+      });
+    }
+    setQueue((qs) => qs.slice(1));
+    setDoneCount((d) => d + 1);
+    setFlipped(false);
+  };
+
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head
+        icon="🃏"
+        de={deck?.titleDe ?? "Wiederholungskarten"}
+        ar={`${deck?.titleAr ?? "بطاقات المراجعة المتباعدة"} — بطاقات جديدة ومستحقة`}
+      />
+      {card ? (
+        <div className="card" style={{ padding: "1.4rem", textAlign: "center", background: "var(--color-paper2)", cursor: "pointer" }} onClick={() => setFlipped(true)}>
+          <div className="chip" style={{ marginBottom: "0.6rem" }}>
+            <span className="rtl-num">{doneCount + 1}</span> / <span className="rtl-num">{doneCount + queue.length}</span>
+          </div>
+          {card.img && (
+            <img
+              src={card.img}
+              alt={card.de}
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.display = "none";
+              }}
+              style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "#fff" }}
+            />
+          )}
+          <div style={{ fontSize: "1.7rem", fontWeight: 900 }}>
+            {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
+            <De>{card.de}</De>
+          </div>
+          <button
+            className="btn btn-ghost"
+            style={{ margin: "0.5rem" }}
+            onClick={(e) => {
+              e.stopPropagation();
+              speakDe(card.de, { voiceName, rate });
+            }}
+          >
+            🔊 اسمع النطق
+          </button>
+          {!flipped ? (
+            <div>
+              <button className="btn btn-primary" onClick={(e) => { e.stopPropagation(); setFlipped(true); }}>اكشف المعنى</button>
+            </div>
+          ) : (
+            <div className="fadein">
+              <div style={{ fontSize: "1.15rem", color: "var(--color-cola)" }}>{card.ar}</div>
+              {getMnemonik(card.de) && (
+                <div style={{ marginTop: "0.4rem", fontSize: "0.85rem", background: "var(--color-gold-soft)", borderRadius: "0.5rem", padding: "0.35rem 0.6rem" }}>
+                  💡 {getMnemonik(card.de)!.tipp}
+                </div>
+              )}
+              {card.exampleDe && (
+                <div style={{ marginTop: "0.6rem" }}>
+                  <De>{card.exampleDe}</De>
+                  <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>{card.exampleAr}</div>
+                </div>
+              )}
+              <div style={{ display: "flex", gap: "0.4rem", justifyContent: "center", marginTop: "0.9rem", flexWrap: "wrap" }}>
+                <button className="btn btn-ghost" onClick={() => rateCard(0)}>لم أعرف (0)</button>
+                <button className="btn btn-gold" onClick={() => rateCard(2)}>بجهد (2)</button>
+                <button className="btn btn-primary" onClick={() => rateCard(4)}>سهّل! (4)</button>
+              </div>
+            </div>
+          )}
+        </div>
+      ) : (
+        <p style={{ textAlign: "center", padding: "0.8rem" }}>✨ أنهيت البطاقات — ستُجدول للمراجعة تلقائياً.</p>
+      )}
+      {satzItems.length > 0 && (
+        <>
+          <h4 style={{ fontWeight: 800, margin: "1rem 0 0.6rem" }}>تثبيت من بنك الجمل</h4>
+          <ExerciseSet items={satzItems} onPoints={onPoints} />
+        </>
+      )}
+    </section>
+  );
+}
+
+// ── استماع/تسميع (TTS) ─────────────────────────────────────────────────
+function HoerenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
+  const dlg = getDialogue(task.dialogueId ?? "");
+  const [playing, setPlaying] = useState(false);
+  const [showText, setShowText] = useState(false);
+  const [lineIdx, setLineIdx] = useState(-1);
+  const [voReady, setVoReady] = useState(false);
+
+  useEffect(() => {
+    warmVoices(() => setVoReady(true));
+  }, []);
+
+  if (!dlg) return <Empty title="حوار غير موجود" />;
+
+  const playAll = () => {
+    if (playing) {
+      stopSpeech();
+      setPlaying(false);
+      setLineIdx(-1);
+      return;
+    }
+    setPlaying(true);
+    let i = 0;
+    const next = () => {
+      if (i >= dlg.lines.length) {
+        setPlaying(false);
+        setLineIdx(-1);
+        return;
+      }
+      setLineIdx(i);
+      speakLine(dlg.lines[i].de, () => {
+        i += 1;
+        setTimeout(next, 350);
+      }, { voiceName, rate });
+    };
+    next();
+  };
+
+  const dictationEx: Exercise[] = dlg.dictation.map((s, i) => ({
+    id: `${dlg.id}-di${i}`,
+    type: "dictation",
+    promptDe: "اسمع واكتب",
+    promptAr: "اضغط 🔊 ثم اكتب ما سمعته بالألمانية",
+    answer: [s],
+    explanationDe: s,
+  }));
+
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon="🎧" de={dlg.titleDe} ar={`${dlg.titleAr} — تسميع بالنطق الداخلي للمتصفح`} />
+      {!speechAvailable() && (
+        <p style={{ color: "var(--color-cola)" }}>
+          ⚠️ متصفحك لا يدعم النطق المدمج — اقرأ النص بصوت عالٍ (يبقى التمرين نصياً كاملاً).
+        </p>
+      )}
+      <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", margin: "0.6rem 0" }}>
+        <button className="btn btn-primary" onClick={playAll}>
+          {playing ? "⏹ أوقف" : "▶️ شغّل الحوار كاملاً"}
+        </button>
+        <button className="btn btn-ghost" onClick={() => setShowText((s) => !s)}>
+          {showText ? "🙈 أخفِ النص (أول استماع)" : "👁 أظهر النص"}
+        </button>
+      </div>
+
+      <div style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
+        {dlg.lines.map((l, i) => (
+          <div
+            key={i}
+            className="card"
+            style={{
+              padding: "0.55rem 0.8rem",
+              background: lineIdx === i ? "var(--color-gold-soft)" : "white",
+              display: "flex",
+              gap: "0.6rem",
+              alignItems: "flex-start",
+            }}
+          >
+            <button
+              className="chip"
+              style={{ cursor: "pointer" }}
+              onClick={() => speakLine(l.de, undefined, { voiceName, rate })}
+              title="اسمع السطر"
+            >
+              🔊
+            </button>
+            <div style={{ flex: 1 }}>
+              <strong>{l.who}:</strong>{" "}
+              {showText ? <De>{l.de}</De> : <span style={{ color: "var(--color-ink2)" }}>•••••• (استمع أولاً)</span>}
+              {showText && <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{l.ar}</div>}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h4 style={{ fontWeight: 800, margin: "0.8rem 0 0.5rem" }}>فهم المسموع</h4>
+      <ExerciseSet items={dlg.questions} onPoints={onPoints} />
+
+      <h4 style={{ fontWeight: 800, margin: "1rem 0 0.5rem" }}>إملاء (Dictation)</h4>
+      <ExerciseSet items={dictationEx} onPoints={onPoints} />
+
+      <RollenDialog dlg={dlg} onPoints={onPoints} voiceName={voiceName} rate={rate} />
+    </section>
+  );
+}
+
+// ── قراءة ───────────────────────────────────────────────────────────────
+function LesenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
+  const text = getText(task.textId ?? "");
+  const [showTr, setShowTr] = useState(false);
+  if (!text) return <Empty title="نص غير موجود" />;
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon="📖" de={text.titleDe} ar={text.titleAr} />
+      <article className="de" style={{ display: "block", width: "100%", lineHeight: 1.95, background: "var(--color-paper2)", padding: "1rem", borderRadius: "0.8rem" }}>
+        {text.de}
+      </article>
+      <div style={{ display: "flex", gap: "0.5rem", margin: "0.6rem 0", flexWrap: "wrap" }}>
+        <button className="btn btn-ghost" onClick={() => speakDe(text.de, { voiceName, rate: (rate ?? 0.9) * 0.9 })}>
+          🔊 استمع للنص (ببطء)
+        </button>
+        <button className="btn btn-ghost" onClick={() => setShowTr((s) => !s)}>
+          {showTr ? "أخفِ الترجمة" : "الترجمة (بعد القراءة)"}
+        </button>
+      </div>
+      {showTr && <p style={{ color: "var(--color-ink2)", lineHeight: 1.9, marginBottom: "0.8rem" }}>{text.ar}</p>}
+      <ExerciseSet items={text.questions} onPoints={onPoints} />
+    </section>
+  );
+}
+
+// ── كتابة بتقييم ذاتي ───────────────────────────────────────────────────
+function SchreibenTask({ task, onPoints }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs" | "voiceName" | "rate">) {
+  const w = getWriting(task.writeId ?? "");
+  const [text, setText] = useState("");
+  const [checks, setChecks] = useState<Record<number, boolean>>({});
+  const [submitted, setSubmitted] = useState(false);
+  if (!w) return <Empty title="مهمة كتابة غير موجودة" />;
+  const selfScore = w.criteria.filter((_, i) => checks[i]).length;
+
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon="✍️" de={w.titleDe} ar={w.titleAr} />
+      <div className="card" style={{ padding: "0.8rem 1rem", marginBottom: "0.8rem", background: "var(--color-gold-soft)" }}>
+        <De>{w.taskDe}</De>
+        <div style={{ marginTop: "0.3rem", fontSize: "0.9rem" }}>{w.taskAr}</div>
+      </div>
+      <textarea className="field" rows={8} dir="ltr" style={{ lineHeight: 1.8 }} placeholder="Schreibe hier …" value={text} onChange={(e) => setText(e.target.value)} />
+      <div style={{ margin: "0.8rem 0", fontWeight: 700 }}>معايير التقييم الذاتي (مستمدة من معايير Goethe):</div>
+      <ul style={{ display: "grid", gap: "0.35rem", listStyle: "none", padding: 0 }}>
+        {w.criteria.map((c, i) => (
+          <li key={c}>
+            <label style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", cursor: "pointer" }}>
+              <input type="checkbox" checked={!!checks[i]} onChange={() => setChecks((ch) => ({ ...ch, [i]: !ch[i] }))} style={{ marginTop: "0.25rem" }} />
+              <span>{c}</span>
+            </label>
+          </li>
+        ))}
+      </ul>
+      {!submitted ? (
+        <button
+          className="btn btn-primary"
+          style={{ marginTop: "0.8rem" }}
+          disabled={text.trim().length < 30}
+          onClick={() => {
+            setSubmitted(true);
+            onPoints(selfScore, w.criteria.length);
+          }}
+        >
+          سلّمت النص (التقييم الذاتي)
+        </button>
+      ) : (
+        <div className="fadein" style={{ marginTop: "0.8rem" }}>
+          <strong>
+            ✅ التقييم الذاتي: <span className="rtl-num">{selfScore}</span> / <span className="rtl-num">{w.criteria.length}</span> معايير
+          </strong>
+          <details style={{ marginTop: "0.6rem" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 700 }}>نموذج إجابة للمقارنة</summary>
+            <article className="de" style={{ display: "block", width: "100%", background: "var(--color-paper2)", padding: "0.8rem", borderRadius: "0.6rem", marginTop: "0.5rem", lineHeight: 1.85 }}>
+              {w.sample}
+            </article>
+          </details>
+          <SchreibBerater text={text} taskDe={w.taskDe} />
+        </div>
+      )}
+    </section>
+  );
+}
+
+// ── تحدّث (Shadowing + تسميع) ───────────────────────────────────────────
+function SprechenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
+  const [done, setDone] = useState<Record<number, boolean>>({});
+  const items = (task.sentenceIds ?? []).map((sid) => getSatz(sid)).filter(Boolean);
+  const doneCount = items.filter((_, i) => done[i]).length;
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon="🗣️" de="Sprechtraining (Shadowing)" ar={`${task.titleAr} — استمع، كرّر، سجّل نفسك`} />
+      <div style={{ display: "grid", gap: "0.5rem" }}>
+        {items.map((s, i) => (
+          <div key={s!.id} className="card" style={{ padding: "0.7rem 0.9rem" }}>
+            <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+              <button className="chip" style={{ cursor: "pointer" }} onClick={() => speakDe(s!.de, { voiceName, rate })}>
+                🔊 استمع
+              </button>
+              <div style={{ flex: 1, minWidth: "14rem" }}>
+                <De>{s!.de}</De>
+                <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{s!.ar}</div>
+              </div>
+              <label style={{ display: "flex", gap: "0.35rem", alignItems: "center", fontSize: "0.85rem", cursor: "pointer" }}>
+                <input type="checkbox" checked={!!done[i]} onChange={() => setDone((d) => ({ ...d, [i]: !d[i] }))} />
+                كرّرت بصوت عالٍ
+              </label>
+            </div>
+          </div>
+        ))}
+      </div>
+      <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", margin: "0.7rem 0" }}>
+        💡 قاعدة الظل اللغوي: استمع للجملة ← انسخ نغمة المتحدث بحذف اللامام ← سجّل صوتك بالهاتف واستمع كل 3 أيام لتلاحظ تقدّمك.
+      </p>
+      <button
+        className="btn btn-primary"
+        disabled={doneCount < items.length}
+        onClick={() => onPoints(1, 1)}
+      >
+        أنجزت التدريب الشفهي ({doneCount}/{items.length})
+      </button>
+    </section>
+  );
+}
+
+// ── استرجاع يومي/أسبوعي + قائمة «أستطيع» ────────────────────────────────
+function WiederholenTask({
+  task,
+  day,
+  srs,
+  onSrs,
+  onPoints,
+  voiceName,
+  rate,
+}: Omit<TaskProps, "lang">) {
+  const level = levelOf(Math.max(day - 1, 1));
+  const isPhaseEnd = day >= 70 && day % 70 === 0; // أيام نهاية المرحلة: تقرير كامل
+
+  // بطاقة استرجاع سريعة: نعرض الجمل المطلوبة + فحص
+  const satzItems: Exercise[] = (task.sentenceIds ?? [])
+    .map((sid) => getSatz(sid))
+    .filter(Boolean)
+    .map((s, i) => ({
+      id: `${s!.id}-tr${i}`,
+      type: "translate",
+      promptDe: "Übersetze ins Deutsche:",
+      promptAr: s!.ar,
+      answer: [s!.de],
+      keywords: s!.de
+        .toLowerCase()
+        .split(/\s+/)
+        .map((w) => w.replace(/[.,!?;:„“"']/g, ""))
+        .filter((w) => w.length > 3)
+        .slice(0, 4),
+      explanationDe: s!.de,
+    }));
+
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon="🔁" de={task.titleDe} ar={task.titleAr} />
+      {task.mandatory && (
+        <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.6rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontWeight: 700, color: "var(--color-cola)" }}>
+          ⚠️ تعويض إلزامي من اليوم {task.from} — أنجزه قبل محتوى اليوم الجديد.
+        </div>
+      )}
+      {satzItems.length > 0 && (
+        <>
+          <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>ترجم واسترجع</h4>
+          <ExerciseSet items={satzItems} onPoints={onPoints} />
+        </>
+      )}
+      {task.quiz && task.quiz.length > 0 && (
+        <>
+          <h4 style={{ fontWeight: 800, margin: "1rem 0 0.5rem" }}>استرجاع سريع من أيام سابقة</h4>
+          <ExerciseSet items={task.quiz} onPoints={onPoints} />
+        </>
+      )}
+      {(task.sentenceIds ?? []).length === 0 && !task.quiz?.length && (
+        <>
+          <p>لا استرجاع نصي اليوم — راجع بطاقاتك المستحقة (SM-2):</p>
+          <VocabTask
+            task={{ ...task, kind: "wortschatz", deckId: undefined, sentenceIds: undefined }}
+            srs={srs}
+            onSrs={onSrs}
+            onPoints={onPoints}
+            voiceName={voiceName}
+            rate={rate}
+          />
+        </>
+      )}
+      <BrueckenSRS srs={srs} onSrs={onSrs} onPoints={onPoints} />
+      <CanDoList level={level} full={isPhaseEnd} />
+    </section>
+  );
+}
+
+function seedFrom(id: string): number {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+  return Math.abs(h) + 1;
+}
+
+function CanDoList({ level, full }: { level: "A1" | "A2" | "B1" | "B2"; full?: boolean }) {
+  const { toggleCanDo } = useProgressMini();
+  const items = candoMap[level] ?? [];
+  return (
+    <div style={{ marginTop: "1.2rem" }}>
+      <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>
+        ✅ أستطيع أن… {full ? "— تقرير نهاية المرحلة (القائمة الكاملة)" : "(علّم ما أتقنته)"}
+      </h4>
+      <div style={{ display: "grid", gap: "0.35rem" }}>
+        {(full ? items : items.slice(0, 4)).map((c) => (
+          <label key={c.id} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", cursor: "pointer", border: "1px solid var(--color-line)", borderRadius: "0.6rem", padding: "0.5rem 0.7rem" }}>
+            <input type="checkbox" onChange={() => toggleCanDo(c.id)} style={{ marginTop: "0.25rem" }} />
+            <span>
+              <De>{c.de}</De>
+              <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{c.ar}</div>
+            </span>
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// mini hook للتوافق مع تذييل «أستطيع» (يقرأ ويكتب في نفس المخزن)
+import { useProgress } from "@/lib/store";
+function useProgressMini() {
+  const { toggleCanDo } = useProgress();
+  return { toggleCanDo };
+}
+
+// ── فحص ختامي ──────────────────────────────────────────────────────────
+function CheckTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void }) {
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon="✅" de={task.titleDe} ar={task.titleAr} />
+      {task.mandatory && (
+        <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.6rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontWeight: 700, color: "var(--color-cola)" }}>
+          ⚠️ تعويض إلزامي من اليوم {task.from}
+        </div>
+      )}
+      <p style={{ color: "var(--color-ink2)", marginBottom: "0.7rem" }}>عتبة النجاح 80% — الفاشل يُعاد ويُرحَّل إن لزم.</p>
+      <ExerciseSet items={task.quiz ?? []} onPoints={onPoints} />
+    </section>
+  );
+}
+
+// ── مساعدات ─────────────────────────────────────────────────────────────
+function Head({ icon, de, ar }: { icon: string; de: string; ar: string }) {
+  return (
+    <>
+      <h3 style={{ fontWeight: 800, marginBottom: "0.2rem" }}>
+        {icon} <De>{de}</De>
+      </h3>
+      <div style={{ color: "var(--color-ink2)", marginBottom: "0.8rem" }}>{ar}</div>
+    </>
+  );
+}
+
+function Empty({ title }: { title: string }) {
+  return (
+    <div className="card" style={{ padding: "1.2rem" }}>
+      <strong>{title}</strong>
+    </div>
+  );
+}
+
+export function useVoicesReady() {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    warmVoices(() => setReady(true));
+  }, []);
+  return { ready, voices: germanVoices() };
+}

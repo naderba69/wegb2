@@ -1,0 +1,212 @@
+{
+  "rungen": [
+    {
+      "id": "h01",
+      "frage": "Ich lasse mir die Haare ___.",
+      "options": [
+        "schneiden",
+        "geschnitten",
+        "schneide",
+        "zu schneiden"
+      ],
+      "answer": 0,
+      "ar": "الفعل بعد lassen يأتي مصدراً بلا zu: «أدع شعري يُقصّ» — lassen + Infinitiv.",
+      "de": "lassen + Infinitiv ohne zu: Ich lasse die Haare schneiden."
+    },
+    {
+      "id": "h02",
+      "frage": "Er tut so, als ___ er alles schon.",
+      "options": [
+        "wüsste",
+        "wusste",
+        "hat gewusst",
+        "weiß"
+      ],
+      "answer": 0,
+      "ar": "بعد als في «als ob» المُخفَّفة نستخدم Konjunktiv II — wüsste لا wusste.",
+      "de": "Nach »als« im irrealen Vergleich steht Konjunktiv II: als wüsste er…"
+    },
+    {
+      "id": "h03",
+      "frage": "Je schneller du liest, ___ weniger behältst du.",
+      "options": [
+        "desto",
+        "als",
+        "wie",
+        "dass"
+      ],
+      "answer": 0,
+      "ar": "الزوج الأبدي: je … desto (أو umso). من وضع desto فالفعل يأتي بعده مباشرة.",
+      "de": "Je … desto/umso — und nach »desto« rückt das Verb auf Platz 1."
+    },
+    {
+      "id": "h04",
+      "frage": "Das Ergebnis ___ sich nicht überbewerten.",
+      "options": [
+        "lässt",
+        "ist",
+        "wird",
+        "hat"
+      ],
+      "answer": 0,
+      "ar": "«lässt sich + Infinitiv» = صيغة قدرة راقية بديلة عن kann: لا يُبالَغ فيه بسهولة.",
+      "de": "»Es lässt sich + Infinitiv« ist die gehobene Kann-Form."
+    },
+    {
+      "id": "h05",
+      "frage": "___ des schlechten Wetters fand die Fahrt statt.",
+      "options": [
+        "Trotz",
+        "Wegen",
+        "Aufgrund",
+        "Statt"
+      ],
+      "answer": 0,
+      "ar": "ت despite مع Genitiv؛ «wegen/ aufgrund» معناهما السبب لا التناقض.",
+      "de": "»trotz« + Genitiv drückt Widerspruch aus."
+    },
+    {
+      "id": "h06",
+      "frage": "Ich bin mir ___, dass er pünktlich kommt.",
+      "options": [
+        "sicher",
+        "bewusst",
+        "gewohnt",
+        "satt"
+      ],
+      "answer": 0,
+      "ar": "sich sicher sein + dass؛ bewusst تطلب «dessen»: Ich bin mir dessen bewusst.",
+      "de": "»sicher sein, dass…« — »bewusst« verlangt Genitiv (dessen bewusst)."
+    },
+    {
+      "id": "h07",
+      "frage": "Anstatt ___, hat er weitergearbeitet.",
+      "options": [
+        "zu pausieren",
+        "pausieren",
+        "dass er pausiert",
+        "gepaust zu haben"
+      ],
+      "answer": 0,
+      "ar": "anstatt/statt + zu + Infinitiv عند اتفاق الفاعلين؛ وأنّ-clause فقط لاختلافهما.",
+      "de": "anstatt + zu + Infinitiv bei gleichem Subjekt."
+    },
+    {
+      "id": "h08",
+      "frage": "Es kommt ___ an, ob du täglich übst.",
+      "options": [
+        "darauf",
+        "davon",
+        "damit",
+        "daran"
+      ],
+      "answer": 0,
+      "ar": "التركيب الثابت: es kommt darauf an, ob — البرونوم «da-» يلتهم الحرف «an» فيصبح darauf، لا daran ولا davon.",
+      "de": "»Es kommt darauf an, ob…« — an + Akkusativ, Korrelat »darauf«."
+    },
+    {
+      "id": "h09",
+      "frage": "Kein anderer war ___ vorbereitet wie du.",
+      "options": [
+        "so",
+        "als",
+        "wie",
+        "jemals"
+      ],
+      "answer": 0,
+      "ar": "النفي kein… + مثل: so … wie (لا als) — als للقياس المُتفاوِت فقط.",
+      "de": "Gleichheit nach Negation: so … wie (nicht »als«)."
+    },
+    {
+      "id": "h10",
+      "frage": "Das ___ dich nichts an!",
+      "options": [
+        "geht",
+        "sieht",
+        "hört",
+        "macht"
+      ],
+      "answer": 0,
+      "ar": "an|gehen + Akk: «لا يخصّك» — فعل منفصل يبتلع الضمير.",
+      "de": "»Das geht dich nichts an« — abtrennbares »angehen«."
+    },
+    {
+      "id": "h11",
+      "frage": "Der Film ist schwer ___.",
+      "options": [
+        "zu verstehen",
+        "zu verstehen ist",
+        "verstanden",
+        "verstehen"
+      ],
+      "answer": 0,
+      "ar": "sein + صفة + zu + Infinitiv: «يصعب فهمه» — بنية راقية تحل محل man-البناء.",
+      "de": "sein + Adjektiv + zu + Infinitiv: »schwer zu verstehen«."
+    },
+    {
+      "id": "h12",
+      "frage": "Im Gegensatz ___ seinem Bruder singt er nicht.",
+      "options": [
+        "zu",
+        "von",
+        "mit",
+        "auf"
+      ],
+      "answer": 0,
+      "ar": "الرابطة الثابتة: im Gegensatz zu + Dat — لا تُخلط مع «vs.» الإنجليزية.",
+      "de": "Feste Präposition: »im Gegensatz zu« + Dativ."
+    },
+    {
+      "id": "h13",
+      "frage": "Das Buch, ___ Cover alle kennen, wurde verfilmt.",
+      "options": [
+        "dessen",
+        "deren",
+        "dem",
+        "welchem"
+      ],
+      "answer": 0,
+      "ar": "موصول مِلكيّ لمحايد الجمع-مفرد مذكر: dessen. deren للعلاقة المؤنثة.",
+      "de": "Relativpronomen im Genitiv: »dessen« für das Buch."
+    },
+    {
+      "id": "h14",
+      "frage": "Es lohnt ___, den Text nochmal zu lesen.",
+      "options": [
+        "sich",
+        "es",
+        "ihn",
+        "dich"
+      ],
+      "answer": 0,
+      "ar": "sich lohnen دائماً بانعكاس: Es lohnt sich + zu + Inf.",
+      "de": "»sich lohnen« ist reflexiv: Es lohnt sich, …"
+    },
+    {
+      "id": "h15",
+      "frage": "Umso mehr freute es mich, ___ er sofort zusagte.",
+      "options": [
+        "als",
+        "wenn",
+        "dass",
+        "weil"
+      ],
+      "answer": 0,
+      "ar": "بعد umso/je يأتي als سببية-زمنية («حين») لا wenn الشرطية.",
+      "de": "Nach Steigerungs-»umso« folgt temporales »als«."
+    },
+    {
+      "id": "h16",
+      "frage": "Was ___ in der Zwischenzeit geschehen?",
+      "options": [
+        "ist",
+        "hat",
+        "war",
+        "hatte"
+      ],
+      "answer": 0,
+      "ar": "geschehen يُصرَّف مع sein في Perfect: «Was ist geschehen?» — من أفعال الحركة والتغيّر، لا تعرف haben.",
+      "de": "Perfekt von geschehen mit sein, nicht haben."
+    }
+  ]
+}

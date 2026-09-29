@@ -1,0 +1,593 @@
+[
+  {
+    "id": "w-a1-01",
+    "level": "A1",
+    "titleDe": "Stell dich vor!",
+    "titleAr": "قدّم نفسك",
+    "taskDe": "Schreibe 4–5 Sätze über dich: Name, Alter, Land, Stadt, Beruf/Schule, Sprachen.",
+    "taskAr": "اكتب 4–5 جمل عن نفسك: الاسم، العمر، البلد، المدينة، المهنة/الدراسة، اللغات.",
+    "criteria": [
+      "الفعل في الموضع الثاني (ich heiße, ich komme, ich wohne)",
+      "sein و haben مصرّفَين بشكل صحيح",
+      "أصل البلد بدون ein: aus Syrien",
+      "جملة ختامية عن تعلّمك الألمانية"
+    ],
+    "sample": "Guten Tag! Ich heiße Youssef. Ich bin 27 Jahre alt. Ich komme aus Tunesien und wohne in Tunis. Ich bin Ingenieur und arbeite in einer Firma. Ich spreche Arabisch, Französisch und Englisch. Jetzt lerne ich Deutsch, weil ich in Deutschland arbeiten möchte.",
+    "noteAr": [
+      "الفعل الثاني محروس في كل جملة: heiße / bin / komme…wohne / bin…arbeite / spreche / lerne — ست فقرات، ست إجابات عن الامتحان نفسه",
+      "«aus Tunesien» بلا أداة: قاعدةُ الأصل معلَّمةٌ بالمثال لا بالوعظ",
+      "الجملة الختامية بسببٍ (weil) ترفع النصَّ من قائمةٍ إلى فقرة — حيلةٌ تصلح لغير الألفيين أيضًا"
+    ]
+  },
+  {
+    "id": "w-a1-02",
+    "level": "A1",
+    "titleDe": "Formular ausfüllen",
+    "titleAr": "املأ استمارة",
+    "taskDe": "Schreibe deine Personalien als Formular: Vorname, Familienname, Alter, Geburtsdatum, Land, Adresse, Telefonnummer.",
+    "taskAr": "اكتب بياناتك الشخصية كاستمارة: الاسم، اسم العائلة، العمر، تاريخ الميلاد، البلد، العنوان، الهاتف.",
+    "criteria": [
+      "الأرقام مكتوبة بالألمانية",
+      "تاريخ الميلاد بصيغة: der 3. Mai 1998",
+      "البيانات متناسقة مع تقديرك السابق"
+    ],
+    "sample": "Vorname: Youssef · Familienname: Ben Ali · Alter: 27 Jahre · Geburtsdatum: der 3. Mai 1998 · Land: Tunesien · Straße: Rue de la Liberté 12 · Telefon: 0 71 234 567",
+    "noteAr": [
+      "التاريخ بصيغة «der 3. Mai 1998» حرفياً كما تطلب المعايير — صيغةٌ يخطئ فيها حتى B1",
+      "الأرقام مفصولة (0 71 234 567) كما في النماذج الرسمية لا متلاصقة",
+      "كل حقلٍ عنوانٌ ونقطةٌ وقيمة — لا جُمل: التنسيقُ نصفُ المهمة"
+    ]
+  },
+  {
+    "id": "w-a1-03",
+    "level": "A1",
+    "titleDe": "Meine Familie",
+    "titleAr": "عائلتي",
+    "taskDe": "Schreibe 5 Sätze über deine Familie (Vater, Mutter, Geschwister) mit Possessivartikeln.",
+    "taskAr": "اكتب 5 جمل عن عائلتك (أب، أم، إخوة) مع أدلة الملكية.",
+    "criteria": [
+      "mein/dein/sein… مع الجنس الصحيح",
+      "الفعل ثانياً: Mein Vater heißt…",
+      "جملة عن سكنهم أو عملهم"
+    ],
+    "sample": "Mein Vater heißt Ahmed und ist Lehrer. Meine Mutter heißt Salma und kocht sehr gut. Ich habe einen Bruder und zwei Schwestern. Mein Bruder wohnt in Sfax. Am Freitag essen wir zusammen.",
+    "noteAr": [
+      "ملكيةٌ صحيحة الجنس مع كل موصوف: Mein Vater / Meine Mutter — العمود الذي تُبنى عليه الألفية الثانية",
+      "الفعل ثانياً حتى في جملة UND: heißt…und ist Lehrer — صيغةٌ واحدة وأمانٌ كامل",
+      "خاتمةُ الجمعة تُدفّئ القائمة الجافة — معيارُ «جملة عن سكن/عمل» مُنجَزٌ ومربوطٌ بعاطفة"
+    ]
+  },
+  {
+    "id": "w-a1-04",
+    "level": "A1",
+    "titleDe": "Mein Tagesablauf",
+    "titleAr": "جدولي اليومي",
+    "taskDe": "Schreibe 6 Sätze über deinen Tag: Aufstehen, Arbeit, Mittag, Abend, Schlafen. Nutze trennbare Verben!",
+    "taskAr": "اكتب 6 جمل عن يومك: الاستيقاظ، العمل، الظهيرة، المساء، النوم. استعمل الأفعال المنفصلة!",
+    "criteria": [
+      "3 أفعال منفصلة على الأقل (aufstehen, einkaufen, anrufen…)",
+      "ظروف الزمن: morgens, dann, abends",
+      "الفعل ثانياً والبادئة للنهاية"
+    ],
+    "sample": "Ich stehe um halb sieben auf. Dann frühstücke ich schnell. Um acht fahre ich zur Arbeit. Am Mittag esse ich mit Kollegen. Abends kaufe ich im Supermarkt ein. Um elf Uhr gehe ich schlafen.",
+    "noteAr": [
+      "ثلاثة أفعالٍ منفصلة في مكانها الصحيح: stehe…auf / kaufe…ein — البادئة تُرمى للمؤخرة كما تُلْمَز",
+      "مؤشرات الزمن تُفتَتَح بها الجمل (Dann / Am Mittag / Abends) والقلبُ بعدها مباشرة — inversionٌ مُبَكِّرٌ مضمون",
+      "ست جمل لا أكثر: الوفاءُ بالعدد فضيلةُ A1 الأولى"
+    ]
+  },
+  {
+    "id": "w-a1-05",
+    "level": "A1",
+    "titleDe": "Eine kurze Nachricht",
+    "titleAr": "رسالة قصيرة",
+    "taskDe": "Schreibe eine kurze Nachricht an einen Freund: Termin am Freitag, Uhrzeit, Ort.",
+    "taskAr": "اكتب رسالة قصيرة لصديق: موعد يوم الجمعة، الساعة، المكان.",
+    "criteria": [
+      "تحية وختام مناسبان (Hallo … Tschüss)",
+      "الوقت والمكان بدقة",
+      "جملة دعوة واحدة"
+    ],
+    "sample": "Hallo Ahmed! Treffen wir uns am Freitag um achtzehn Uhr im Café Zentrum? Ich möchte dir ein Buch geben. Bitte schreib mir! Tschüss, Sami",
+    "noteAr": [
+      "رسالة كاملة بأربع جمل: تحية، سؤالُ لقاءٍ بـ wir, معلومتا وقتٍ ومكان، خاتمة — كل معيارٍ في سطره",
+      "«um achtzehn Uhr» منطوقةً بالألفاظ لا بالأرقام — كما في كتاب A1: الالتزامُ بالسياق مقدَّمٌ على الأناقة",
+      "جملة الدعوة صريحة (Möchtest du…?) لا تلويحاً — في A1 تُكافأ الصراحة"
+    ]
+  },
+  {
+    "id": "w-a2-01",
+    "level": "A2",
+    "titleDe": "Mein gestriger Tag",
+    "titleAr": "يومي أمس",
+    "taskDe": "Schreibe 6 Sätze über gestern – benutze mindestens 5× Perfekt (3× haben, 2× sein).",
+    "taskAr": "اكتب 6 جمل عن أمس — استعمل الماضي التام 5 مرات على الأقل (3 مع haben و2 مع sein).",
+    "criteria": [
+      "hat/ist في الموضع الثاني والتصريف الثالث للنهاية",
+      "تباين صحيح بين haben و sein",
+      "ظروف زمنية: gestern, am Morgen, dann",
+      "جملة بفعل منفصل (aufgestanden / eingekauft)"
+    ],
+    "sample": "Gestern bin ich früh aufgestanden. Ich habe schnell gefrühstückt und bin zur Arbeit gefahren. Am Mittag habe ich mit Kollegen gegessen. Am Nachmittag habe ich einen langen Bericht geschrieben. Am Abend bin ich müde nach Hause gegangen. Ich habe noch eine Stunde Deutsch gelernt.",
+    "noteAr": [
+      "ست جمل، خمسة Perfekt، وتناوبُ haben/sein مُطبَقٌ بلا شذوذ: bin…aufgestanden / habe…gegessen",
+      "الفعل المنفصل في التام: aufgestanden — البادئة ge في منتصفها، الدرسُ كله في كلمة",
+      "الترتيب الزمني ظاهريٌّ بظرفٍ في صدر كل جملة — Gestern / Am Mittag / Am Abend: لا تحتاج حينها روابط"
+    ]
+  },
+  {
+    "id": "w-a2-02",
+    "level": "A2",
+    "titleDe": "Warum ich Deutsch lerne",
+    "titleAr": "لماذا أتعلّم الألمانية",
+    "taskDe": "Schreibe einen Absatz (5–6 Sätze) mit 2× „weil“ und 1× „dass“. Denk an die Wortstellung!",
+    "taskAr": "اكتب فقرة (5–6 جمل) مع weil مرتين و dass مرة. انتبه لموضع الفعل!",
+    "criteria": [
+      "weil/dass + فعل للنهاية",
+      "رأي شخصي واحد على الأقل",
+      "كلمات ربط زمنية (zuerst, dann, natürlich)"
+    ],
+    "sample": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik schwer ist. Ich finde sie aber interessant. Natürlich ist die Aussprache nicht leicht. Trotzdem lerne ich jeden Tag, weil man nur so Fortschritte macht.",
+    "noteAr": [
+      "weil و dass في مواضعها، والفعلُ في القعر كل مرة — المعيارُ الذي يفصل A2 عن A1",
+      "رأيٌ صريح واحد (Ich finde sie aber interessant) كما يطلب المعيار — لا نصيحةٌ بلا «أنا»",
+      "رأيٌ شخصي بـ aber ثم ختامٌ بـ trotzdem في جملةٍ مستقلة — ثلاثُ أدواتٍ في خمسة أسطر، كلٌّ في حجمها"
+    ]
+  },
+  {
+    "id": "w-a2-03",
+    "level": "A2",
+    "titleDe": "Reise-E-Mail",
+    "titleAr": "بريد رحلة",
+    "taskDe": "Schreibe eine E-Mail an eine Freundin über deine Reise: Wohin, wann, wie (Zug/Flug), Hotel.",
+    "taskAr": "اكتب بريداً إلى صديقة عن رحلتك: إلى أين، متى، كيف (قطار/طائرة)، الفندق.",
+    "criteria": [
+      "بنية البريد: ترحيب + محتوى + خاتمة",
+      "Perfekt أو Futur I مرة واحدة",
+      "معلومات السفر الأربع كاملة"
+    ],
+    "sample": "Liebe Salma, wie geht es dir? Ich bin gestern nach München gefahren. Der Zug war pünktlich und bequem. Ich wohne in einem kleinen Hotel gegenüber vom Bahnhof. Nächstes Wochenende besuche ich das Museum. Schreib mir bald! Viele Grüße, Nour",
+    "noteAr": [
+      "بريدٌ كامل: Liebe… / محتوى / Schreib mir bald! / Viele Grüße — الهيكلُ يُدرَّس بالبنيان لا بالقوائم",
+      "مرتان Perfekt (bin…gefahren / war) وجملة حاضرةٍ بالمستقبل الدلالي — توازنُ أزمنةٍ صغير لكنه مسجَّل",
+      "معلوماتُ السفر الأربع كلها: وجهةٌ وموعدٌ ووسيلةٌ ونُزل — لا تُعَفَّ عن واحدةٍ لأنها «بديهية»"
+    ]
+  },
+  {
+    "id": "w-a2-04",
+    "level": "A2",
+    "titleDe": "Beim Arzt – eine Erklärung",
+    "titleAr": "شرح للطبيب",
+    "taskDe": "Schreibe, was du dem Arzt sagst: Symptome seit wann, Schmerzen, Medizin.",
+    "taskAr": "اكتب ما ستقوله للطبيب: الأعراض منذ متى، الآلام، الدواء.",
+    "criteria": [
+      "seit + Dativ (seit drei Tagen)",
+      "weh tun مع الجسم",
+      "طلب أو سؤال مهذّب للمطّب"
+    ],
+    "sample": "Seit drei Tagen tut mir der Hals weh. Ich habe Fieber und bin sehr müde. Ich habe auch ein bisschen Husten. Was soll ich tun, Herr Doktor? Muss ich Medizin nehmen?",
+    "noteAr": [
+      "seit + داتيف حيّة: Seit drei Tagen — حرفٌ واحد يُصلح ما يفسده الجميع",
+      "جسمٌ مرفوعٌ مع weh tun: tut mir der Hals weh — الصيغةُ لا تُختَرع",
+      "سؤالٌ مهذب في الختام (Was soll ich tun, Herr Doktor?) — مريضٌ يسلم قيادته بأدب فيُكافأ"
+    ]
+  },
+  {
+    "id": "w-a2-05",
+    "level": "A2",
+    "titleDe": "Einladung schreiben",
+    "titleAr": "كتابة دعوة",
+    "taskDe": "Schreibe eine Einladung zu einer Feier: Anlass, Tag, Uhrzeit, Ort, was mitbringen.",
+    "taskAr": "اكتب دعوة لحفلة: المناسبة، اليوم، الساعة، المكان، ماذا يحضر الضيوف.",
+    "criteria": [
+      "فعل أمر أو دعوة مهذّبة (Komm vorbei! / Kannst du kommen?)",
+      "كل المعلومات الخمس",
+      "نبرة ودّية + خاتمة"
+    ],
+    "sample": "Liebe Amina, am Samstag feiere ich meinen Geburtstag! Die Party beginnt um achtzehn Uhr bei mir zu Hause. Es gibt Kuchen und Musik. Bring bitte deine Cousine mit! Ich freue mich auf dich. Viele Grüße, Nour",
+    "noteAr": [
+      "خمس معلومات كاملة: مناسبة ويومٌ وساعةٌ ومكانٌ وما يُجلَب — لا تُرْمَز واحدةٌ بقرينة",
+      "فعل أمرٌ ودعوة معاً: feiere…! / Bring bitte… — الأمرُ بالألمانية مهذبٌ بحرفٍ واحد",
+      "«Ich freue mich auf dich» — جملةُ ودٍّ ختامية تُنقِذ قائمة المعلومات من الجفاف"
+    ]
+  },
+  {
+    "id": "w-b1-01",
+    "level": "B1",
+    "titleDe": "Meinung + Begründung",
+    "titleAr": "رأي مبرَّر",
+    "taskDe": "Schreibe einen Absatz (ca. 80 Wörter): Sollen Handys in Schulen verboten werden? Nutze: meiner Meinung nach, weil, deshalb, obwohl + 1× Konjunktiv II.",
+    "taskAr": "اكتب فقرة (80 كلمة تقريباً): هل يُحظر استعمال الهواتف في المدرسة؟ استعمل: رأيي، لأن، لذلك، رغم أن + كونونكتيف الثاني.",
+    "criteria": [
+      "جملة افتتاحية بالرأي",
+      "تعليلان بأدوات ربط مختلفة",
+      "جملة بـ Konjunktiv II",
+      "خاتمة أو توصية"
+    ],
+    "sample": "Meiner Meinung nach sollten Handys in Schulen eingeschränkt werden, weil sie die Konzentration stören: Ein kurzer Blick aufs Display genügt, und der Faden der Erklärung ist gerissen. Obwohl Handys nützliche Werkzeuge sind – als Wörterbuch oder Taschenrechner –, spielen sie im Unterricht oft nur eine Nebenrolle. Deshalb würde ich empfehlen, sie zu Stundenbeginn einsammeln und in der Pause zurückgeben zu lassen. Könnten Lehrkräfte zudem bewusste Medienminuten einbauen, hätten die Schüler ein doppeltes Lernfeld: Stoff und Selbstkontrolle. So wird das Handy vom Störenfried zum Gehilfen – nur eben nicht zur falschen Zeit.",
+    "noteAr": [
+      "كل أدوات المعيار في مواضعها: meiner Meinung nach / weil / obwohl / deshalb + würde — أربعُ علاماتِ تصريفٍ يقرأها المصححُ كأنه يمسحُ بطاقات",
+      "«Könnten Lehrkräfte zudem…» — جملةُ شرطٍ بلا wenn بقلب الفعل أولاً: ترفٌ في B1 يستحق الإشادة",
+      "الإطار دائري: يبدأ باليد كالمُزعج ويختم بها كالمُعين — بنيةٌ تُدرِّسُ البلاغة قبل اسمها"
+    ]
+  },
+  {
+    "id": "w-b1-02",
+    "level": "B1",
+    "titleDe": "Anschreiben (Bewerbung)",
+    "titleAr": "خطاب التوظيف",
+    "taskDe": "Schreibe den Kern eines Anschreibens (ca. 100 Wörter): Wer bist du? Warum diese Stelle? Was bringst du mit? Nutze 2 Relativsätze.",
+    "taskAr": "اكتب جوهر خطاب التوظيف (100 كلمة): من أنت؟ لماذا هذا المنصب؟ ماذا تقدّم؟ استعمل جملتين وصفيتين.",
+    "criteria": [
+      "أسلوب رسمي (Sie، بلا عامية)",
+      "ذاتي بضمير وصفي",
+      "سبب الترشّح واضح",
+      "خاتمة بالترحيب بمقابلة"
+    ],
+    "sample": "Sehr geehrte Damen und Herren, mit großem Interesse habe ich mich um die Stelle beworben, die Sie auf Ihrer Website ausgeschrieben haben. Ich bin Ingenieurin, die drei Jahre Erfahrung in der Entwicklung nachhaltiger Antriebe gesammelt hat. Besonders reizt mich an Ihrem Haus die Projektarbeit, die Technik und Umwelt zusammenbringt. In meiner jetzigen Firma habe ich ein Team von vier Kolleginnen geführt; das hat mich fachlich wie persönlich weitgebracht. Eine Übersicht meiner Projekte füge ich der Bewerbung bei. Über eine Einladung zu einem Gespräch, in dem ich Sie von meiner Motivation überzeugen kann, würde ich mich sehr freuen. Mit freundlichen Grüßen, Nadia Ferchichi",
+    "noteAr": [
+      "أربعةُ أوصال موصولة (die/der/das/was/in dem) — اثنان يكفيان، والزيادةُ بلا خطأ تُحسب لا تُخصم",
+      "ضميرُ العمل بصيغة المتكلم الفخري بلا تباهٍ: Ich bin Ingenieurin, die… — المعيارُ الذاتي بدقة",
+      "الخاتمة بدعوة مقابلةٍ بصيغة Konjunktiv (würde mich freuen) — البروتوكولُ الرسمي مُنجَزٌ حتى الحرف الأخير"
+    ]
+  },
+  {
+    "id": "w-b1-03",
+    "level": "B1",
+    "titleDe": "Erlebnis erzählen",
+    "titleAr": "سرد تجربة",
+    "taskDe": "Erzähle eine Geschichte (ca. 80 Wörter) mit Plusquamperfekt + Perfekt: Was war vorher passiert?",
+    "taskAr": "احكِ قصة (80 كلمة) بالماضي التام + الماضي المركّب: ماذا كان قد حدث قبل؟",
+    "criteria": [
+      "تسلسل زمني: nachdem/bevor أو قبلها/بعدها",
+      "Plusquamperfekt مرة + Perfekt مرتين",
+      "جملة ختامية فيها شعور"
+    ],
+    "sample": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt – an der Volkshochschule, mit Karteikarten und einer Lehrerin, die mir Mut machte. Trotzdem war der Anfang schwer: Im ersten Bürogespräch verstand ich nur Bahnhof, obwohl ich doch alles gelernt hatte. Ein Kollege hat mir sehr geholfen: Er hat mich ermutigt, einfach zu sprechen, auch mit Fehlern. Ohne ihn hätte ich nicht so schnell Fortschritte gemacht. Heute, zwei Jahre später, denke ich dankbar an diese erste Stunde im falschen Konferenzraum zurück – und lächle.",
+    "noteAr": [
+      "Plusquamperfekt مُثبَّتٌ في صدر «Bevor…» مرتين ثم مفارِقٌ عند الشعور — استخدامٌ وظيفي لا استعراضي",
+      "Perfekt مزدوج للحليف (hat geholfen / hat ermutigt) ثم رجوعٌ للحاضر (Heute… denke) — الزمنُ يُديرُ القوسَ الدرامي",
+      "«nur Bahnhof verstanden» — اصطلاحٌ ألماني أصيل في سردٍ لغَيرِ أصيلين: طبقةٌ تُدرَّسُ ولا تُترجَم"
+    ]
+  },
+  {
+    "id": "w-b1-04",
+    "level": "B1",
+    "titleDe": "Kommentar I: Umwelt",
+    "titleAr": "تعليق 1: البيئة",
+    "taskDe": "Kommentar (ca. 100 Wörter): Brauchen wir mehr Radwege? Gliederung: Einstieg → 2 Argumente (mit Konnektoren) → Schluss.",
+    "taskAr": "تعليق (100 كلمة): هل نحتاج ممرات دراجات أكثر؟ بنية: مدخل ← حجّتان بأدوات ربط ← خاتمة.",
+    "criteria": [
+      "بناء ثلاثي واضح",
+      "obwohl/trotzdem/deshalb كلها مستعملة",
+      "أقل تقدير واحد مدعوم بأرقام أو مثال"
+    ],
+    "sample": "In unserer Stadt wird über neue Radwege diskutiert – hitziger, als man erwarten würde. Einerseits kosten sie Geld, andererseits verbessern sie die Luft und machen die Wege sicherer. Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn es gute Radwege gäbe. Obwohl die Anfangskosten hoch sind, rechnet sich der Bau langfristig – weniger Staus, weniger Lärm, gesündere Kinder. Trotzdem fordern Anwohner Ersatz für wegfallende Parkplätze; ihr Einwand verdient eine ernsthafte Antwort, keine Abwehr. Deshalb sollten die Radwege gebaut werden – zusammen mit einem Parkraumkonzept. Für Gesundheit und Umwelt ist jede eingesparte Autofahrt ein Gewinn; die Frage ist nur, wer zuerst den Mut hat.",
+    "noteAr": [
+      "البناء الثلاثي ظاهرٌ بلا عنوان: قضية ← حجتان ← موقف — حتى المصحح المتعجّل يراه",
+      "رقمٌ مُدَّعًى لا مُوهَمًا: 70 Prozent + «würden…stehen lassen» شرطية — أرقامُ التعليقات أسلحةٌ لا حلي",
+      "الإجابة عن اعتراضِ الأنوار (Trotzdem fordern Anwohner…) قبل التوصية — فنُّ «خذِ الخصمَ على محمل الجد» مذكورٌ باسمه"
+    ]
+  },
+  {
+    "id": "w-b1-05",
+    "level": "B1",
+    "titleDe": "Rat geben",
+    "titleAr": "تقديم نصيحة",
+    "taskDe": "Ein Freund will seinen Job kündigen, obwohl er gut verdient. Schreibe deinen Rat (80 Wörter) mit Konjunktiv II.",
+    "taskAr": "صديق يريد ترك عمله رغم راتبه الجيد. اكتب نصيحتك (80 كلمة) بـ كونونكتيف الثاني.",
+    "criteria": [
+      "نصيحتان على الأقل بصيغة würde/müsste/könnte",
+      "جملة شرط غير واقعة (wenn … hätte)",
+      "نبرة هادئة تحترم قرار الصديق"
+    ],
+    "sample": "Lieber Karim, ich würde dir raten, über die Gründe erst einmal in Ruhe nachzudenken – Kündigung ist schnell ausgesprochen, das gute Gehalt kommt nicht genauso schnell zurück. Wenn ich an deiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef geführt; oft lässt sich mehr ändern, als man denkt. Falls du trotzdem gehen möchtest, würde ich empfehlen, vorher einen neuen Vertrag in der Tasche zu haben. Niemandem ist geholfen, wenn Frust gegen Leere getauscht wird. Vielleicht hilft dir auch der Gedanke, dass ein guter Chef dich gehen lässt und ein schlechter dich nie gehalten hat. Entscheiden musst du selbst – ich drücke dir die Daumen, egal wie es ausgeht.",
+    "noteAr": [
+      "نبرتا نصيحةٍ متدرجتان: würde raten / würde empfehlen — بين اللياقةِ والإلحاحِ خيطٌ لا يُرى ويُحفَظ",
+      "جملةُ «Wenn ich an deiner Stelle wäre, hätte ich…» — النموذجُ المدرسيُّ للشرط غير الواقع، موضوعةٌ في فم الصديق لا الكتاب",
+      "«Entscheiden musst du» — تسليمُ القرار للمُوجَّه إليه: المعيارُ الرابع (احترامُ الاختيار) مُنجَزٌ في سطرٍ واحد"
+    ]
+  },
+  {
+    "id": "w-b2-01",
+    "level": "B2",
+    "titleDe": "Zeitungskommentar",
+    "titleAr": "تعليق صحفي",
+    "taskDe": "Kommentar (ca. 150 Wörter) zur These: „Soziale Medien machen die Gesellschaft unzufriedener.“ Gliederung: Einstieg → These → 2 Argumente → indirekte Rede (1×) → Schluss. Mindestens 1 Funktionsverbgefüge.",
+    "taskAr": "تعليق (150 كلمة) حول: «وسائل التواصل تجعل المجتمع أقلّ سعادة». بنية: مدخل ← أطروحة ← حجّتان ← منقول واحد ← خاتمة. تركيب وظيفي واحد على الأقل.",
+    "criteria": [
+      "منقول صحافي بـ Konjunktiv I",
+      "Konnektoren متنوعة: einerseits, jedoch, außerdem, dennoch",
+      "Funktionsverbgefüge (eine Rolle spielen / in Frage stellen)",
+      "خاتمة فيها توصية أو سؤال مفتوح",
+      "بلا عامية (keine Umgangssprache)"
+    ],
+    "sample": "Soziale Medien spielen in unserem Alltag eine große Rolle. Einerseits verbinden sie Menschen über Grenzen hinweg; andererseits stellen viele Studien ihre Wirkung auf die Zufriedenheit infrage. Ein Psychologe erklärte kürzlich, der ständige Vergleich mit inszenierten Leben führe nachweislich zu Unzufriedenheit, zumal der Algorithmus Empörung höher bewerte als Zufriedenheit. Dennoch wäre ein Verbot der falsche Weg – Verbote machen Neugier erst interessant. Entscheidender ist die Kompetenz der Nutzerinnen und Nutzer: Wer Werbung als Werbung erkennt, lässt sich seltener vermessen. Meines Erachtens sollte deshalb Medienbildung früher in die Lehrpläne, damit Jugendliche die Werkzeuge beherrschen, statt von ihnen beherrscht zu werden. Ob uns das schnell genug gelingt, steht freilich dahin.",
+    "noteAr": [
+      "منقولٌ بـ Konjunktiv I حيّ: führe… / bewerte… — لا تجميلٌ بل نقلُ أمانة",
+      "الفعلُ الوظيفي مُزدوج: eine Rolle spielen + infrage stellen — المعيارُ مُنجَزٌ في أول سطرين",
+      "خاتمةٌ بسؤالٍ مفتوح (Ob uns das… steht dahin) — قالبُ التعليق الصحفيّ يُغلَق ولا يُغلِق"
+    ]
+  },
+  {
+    "id": "w-b2-02",
+    "level": "B2",
+    "titleDe": "Formelle E-Mail (Anfrage)",
+    "titleAr": "بريد رسمي (استفسار)",
+    "taskDe": "Schreibe eine formelle E-Mail (ca. 120 Wörter) an eine Firma: Interesse an einer Stelle, Qualifikationen, Termin für Gespräch. Nutze Funktionsverbgefüge + erweiterten Infinitiv.",
+    "taskAr": "اكتب بريداً رسمياً (120 كلمة) إلى شركة: اهتمام بمنصب، مؤهلات، موعد مقابلة. استعمل التركيبات الوظيفية والمصدر المطوّل.",
+    "criteria": [
+      "صيغة Sie كاملة + أسلوب رسمي (أفعل/يُفعل)",
+      "Funktionsverbgefüge اثنان",
+      "um zu / ohne zu / statt zu مرة واحدة",
+      "بنية: مقدمة ← سبب ← طلب ← خاتمة"
+    ],
+    "sample": "Sehr geehrte Damen und Herren, mit großem Interesse habe ich Ihre Stellenanzeige gelesen. Die ausgeschriebene Stelle bringt zwei Dinge zusammen, die mich fachlich prägen: Projektarbeit und Datenanalyse. Ich möchte meine Erfahrung in der Prozessautomatisierung gern in Ihr Team einbringen. Um meine Eignung zu belegen, füge ich einen Kurzbericht zweier Projekte bei, die ohne technische Fremdwörter auskommen und deren Ergebnis sich in Zahlen messen lässt. Statt mich in Floskeln zu verlieren, trete ich lieber den Beweis selbst an: In einem Gespräch innerhalb der nächsten zwei Wochen lege ich gern dar, wie ich Ihrer Abteilung zur Entlastung verhelfen kann. Über eine Einladung freue ich mich. Mit freundlichen Grüßen, A. Mansour",
+    "noteAr": [
+      "ثلاثيةُ um zu / ohne… / statt zu في مواضعها النحوية الصحيحة — معيارٌ لا ينجو منه إلا من درَّب",
+      "Funktionsverbgefüge ×2: einbringen + zur Entlastung verhelfen (وتَنجَز «den Beweis antreten») — ثلاثٌ إن حسبت",
+      "طلبُ موعدٍ بإطار زمني محدد (binnen zwei Wochen) — الرسميةُ لا تعني الضبابية"
+    ]
+  },
+  {
+    "id": "w-b2-03",
+    "level": "B2",
+    "titleDe": "Rezension",
+    "titleAr": "مراجعة نقدية",
+    "taskDe": "Rezension eines Buches/Films (ca. 150 Wörter): Inhalt kurz → Stärken/Schwächen → Fazit mit Empfehlung. Nutze zwar … doch, obgleich, im Hinblick auf.",
+    "taskAr": "مراجعة كتاب/فيلم (150 كلمة): محتوى موجز ← قوة/ضعف ← خاتمة بتوصية. استعمل: صحيح أن… لكن، رغم أن، في ضوء.",
+    "criteria": [
+      "تلخيص بلا كشف النهاية!",
+      "نقد متوازن (قوة واحدة وضعف واحد)",
+      "Konnektoren رفيعة (wenngleich, zugegeben, insgesamt)",
+      "توصية مبرَّرة"
+    ],
+    "sample": "Der Roman, dessen Titel manchem zu viel verspricht, hält fast alles, was er verspricht. Wer ein Buch sucht, das nicht nur unterhält, sondern zum Denken anregt, liegt hier richtig. Erzählt wird von einer Familie, die über drei Generationen hinweg ihre Sprache verliert; das Ende – mehr sei nicht verraten – passt in eine einzige Bahnhofsdurchsage. Zwar ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt die Handlung enorme Spannung. Obgleich die Rahmenhandlung gelegentlich konstruiert wirkt, überzeugt die Autorin durch Genauigkeit im Kleinen. Die Figuren bleiben im Hinblick auf ihre Widersprüche etwas blass; man erfährt, was sie tun, seltener, warum sie es tun. Zugegeben: Wer epische Ruhe sucht, wird hier fündig. Insgesamt – trotz der genannten Schwäche – eine klare Empfehlung für alle, die Literatur als Denkübung lesen.",
+    "noteAr": [
+      "تلخيصٌ بلا نهاية: «passt in eine Bahnhofsdurchsage — mehr sei nicht verraten» — الهمزُ بذكاء بدلَ الحرق",
+      "زوايا الربط الرفيعة كلها: zwar…doch / obgleich / im Hinblick auf / zugegeben / insgesamt — المعيارُ مُستنفَدٌ حرفياً",
+      "نقدٌ متزن حتى في الجملة الواحدة: قوةُ التفاصيل، ضعفُ الشخصيات — الميزانُ لا المجاملة"
+    ]
+  },
+  {
+    "id": "w-b2-04",
+    "level": "B2",
+    "titleDe": "Erörterung: Homeoffice",
+    "titleAr": "دراسة قضية: العمل من المنزل",
+    "taskDe": "Erörterung (ca. 150 Wörter): „Homeoffice ist die Zukunft der Arbeit.“ Für und Wider strukturiert, dann dein Standpunkt. Nutze Bedingungssätze.",
+    "taskAr": "دراسة قضية (150 كلمة): «العمل من المنزل مستقبل العمل». مؤيد ومعارض ببناء منظم ثم موقفك. استعمل جمل الشرط.",
+    "criteria": [
+      "فصل واضح بين الحجج المؤيدة والمعارضة",
+      "جملة شرط واحدة على الأقل (falls/unter der Bedingung)",
+      "موقف شخصي حاسم في النهاية",
+      "أسلوب موضوعي (بلا أنا كثير)"
+    ],
+    "sample": "Die Debatte über Homeoffice wird kontrovers geführt – quer durch alle Einkommensschichten, wie jüngste Befragungen zeigen. Befürworter betonen die Flexibilität: Wer die Pendelzeit spart, gewinnt Stunden fürs Leben; viele Produktivitätsstudien weisen sogar leichte Zugewinne aus. Kritiker verweisen auf den Verlust sozialer Kontakte und darauf, dass Führungskräfte unsichtbare Leistung schwerer beurteilen. Beide Seiten haben recht – auf jeder ihre Hälfte. Sofern die Arbeitsorganisation stimmt und Erreichbarkeit kein Dauerstress wird, sind die Ergebnisse im Schnitt besser. Unter der Bedingung, dass klare Regeln für Präsenztage gelten, entfaltet das Hybridmodell seine Wirkung; pauschale Abschaffung wie erzwungene Rückkehr wären beide Denkfehler. Meines Erachtens führt die Zukunft über die Mischung: zwei Tage Büro, drei Tage Ort der Wahl – vorausgesetzt, die Unternehmen investieren in Vertrauen statt Kontrolle. Wer Arbeit nach Anwesenheit bemisst, hat den Wandel nicht verstanden, nur verschoben.",
+    "noteAr": [
+      "فصلٌ معماري: proponents → critics → «كلٌّ صادقٌ في نصفه» → موقف — نمطُ Erörterung المصدَّق",
+      "شرطيتان نظاميتان: sofern / unter der Bedingung dass — و«vorausgesetzt» الثالثة مكافأة",
+      "النبرة بلا «أنا» حتى الجملةِ الموقعية الأخيرة (Meines Erachtens) — المعيارُ الموضوعيُّ مُطبَّقٌ بصيغته الرسمية"
+    ]
+  },
+  {
+    "id": "w-b2-05",
+    "level": "B2",
+    "titleDe": "Bewerbung auf Englisch? Nein: Motivationsschreiben B2",
+    "titleAr": "خطاب دافع (B2)",
+    "taskDe": "Motivationsschreiben (ca. 150 Wörter) für ein Stipendium/dein Traumstudium: Wer du bist, deine Ziele, warum genau du. Nutze Partizipialattribute.",
+    "taskAr": "خطاب دافع (150 كلمة) لمنحة/دراسة الحلم: من أنت، أهدافك، لماذا أنت تحديداً. استعمل الصفات المشتقة.",
+    "criteria": [
+      "Partizipialattribute اثنان على الأقل (die von mir …)",
+      "أهداف ملموسة (بدبابة عامة)",
+      "صلة واضحة بين خبراتك والفرصة",
+      "نبرة واثقة مهذّبة"
+    ],
+    "sample": "Die von mir während des Studiums gesammelten Erfahrungen im Solarbereich haben meinen Wunsch gefestigt, für netztaugliche Speichertechnologien zu arbeiten. Konkret leitete ich eine studentische Arbeitsgruppe, die ein Lastmanagement für ein tunesisches Dorf modellierte – ein Projekt, das ohne förderfähige Begleitung akademische Übung geblieben wäre. Als in Tunesien ausgebildete Ingenieurin bringe ich technisches Wissen, interkulturelle Erfahrung und die Gewohnheit mit, Knappheit als Designaufgabe zu begreifen, nicht als Ausrede. Mein Ziel ist es, Speicherkonzepte für den mediterranen Raum so zu entwickeln, dass sie auch Gemeinden mit kleiner Kasse tragen. Ein an Ihrer Fakultät erworbenes Masterdiplom wäre dafür die ideale Voraussetzung – und das von Ihnen vergebene Stipendium der entscheidende erste Schritt. Überzeugen kann ich vor allem durch Arbeit; meine bisherige liegt diesem Schreiben als Kurzdossier bei.",
+    "noteAr": [
+      "Partizipialattribute أربعةٌ سالمة: von mir… gesammelten / in Tunesien ausgebildete / an Ihrer Fakultät erworbenes / von Ihnen vergebene — المعيارُ مضاعَف",
+      "هدفٌ ملموسٌ مضاعف: Lastmanagement لقرية + تصميمٌ لذوي الجيوب الخفيفة — لا جملةُ «أحب البيئة» الفارغة",
+      "صلةُ الخبرة بالفرصة صريحة: ما نَقَصَكَ من تمويلٍ هنا هو ما اكتمل هناك"
+    ]
+  },
+  {
+    "id": "w-a1-06",
+    "level": "A1",
+    "titleDe": "Postkarte aus dem Urlaub",
+    "titleAr": "بطاقة بريدية من العطلة",
+    "taskDe": "Schreibe eine kurze Postkarte (4–5 Sätze) aus dem Urlaub: Wo bist du? Wie ist das Wetter? Was machst du?",
+    "taskAr": "اكتب بطاقة بريدية قصيرة (4–5 جمل) من العطلة: أين أنت؟ كيف الطقس؟ ماذا تفعل؟",
+    "criteria": [
+      "تحية ومقصود (Hallo … hier bin ich)",
+      "الطقس بجملة واحدة",
+      "نشاط واحد على الأقل",
+      "خاتمة ودّية"
+    ],
+    "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag gehe ich zum Strand. Das Essen ist sehr lecker. Viele Grüße, Sami",
+    "noteAr": [
+      "بطاقةُ بريده صغيرةٌ كعنوانها: خمسُ جمل لا تتزاحم",
+      "الطقسُ جملة، النشاطُ جملة — معيارُ «واحدٌ على الأقل» مُنجَزٌ بالضبط، لا بالإفراط",
+      "Viele Grüße + اسم — خاتمةُ البطاقة قارةٌ لا تُساوَم"
+    ]
+  },
+  {
+    "id": "w-a2-06",
+    "level": "A2",
+    "titleDe": "Beschwerde-E-Mail ans Hotel",
+    "titleAr": "بريد شكوى إلى الفندق",
+    "taskDe": "Schreibe eine kurze Beschwerde-E-Mail (6 Sätze) an ein Hotel: Problem (Zimmer/Lärm), Bitte um Lösung, Perfekt nutzen.",
+    "taskAr": "اكتب بريداً قصيراً للشكوى (6 جمل) إلى فندق: مشكلة (غرفة/ضجيج)، طلب حل، استعمل الماضي التام.",
+    "criteria": [
+      "وصف الحدث بالـ Perfekt",
+      "شكوى مهذّبة بلا غضب",
+      "طلب محدد واحد",
+      "بريد كامل بمقدمة وخاتمة"
+    ],
+    "sample": "Sehr geehrte Damen und Herren, ich habe letzte Woche in Ihrem Hotel übernachtet. Leider hat das Zimmer neben dem Aufzug sehr viel Lärm gemacht. Ich habe drei Nächte schlecht geschlafen. Bitte erstatten Sie mir einen Teil des Preises. Mit freundlichen Grüßen, N. Mansour",
+    "noteAr": [
+      "شكوى بلا غضب: leider + وصفٌ هادئ — النبرةُ تُقرَأ قبل الحجج",
+      "Perfekt في صدر الوقائع: habe…übernachtet / hat…gemacht — الماضي المُنجَز لا المستمر",
+      "طلبٌ محدد واحد (Teil erstatten) — من يطلب الكثير في A2 لا يُعطى شيئاً"
+    ]
+  },
+  {
+    "id": "w-b1-06",
+    "level": "B1",
+    "titleDe": "Forum-Post: Lernmethoden",
+    "titleAr": "مشاركة في منتدى: طرق التعلّم",
+    "taskDe": "Schreibe einen Forum-Post (ca. 100 Wörter): Wie lernst du am besten? Erzähle von deiner Erfahrung und gib Tipps. Nutze: einerseits/andererseits, deshalb.",
+    "taskAr": "اكتب مشاركة منتدى (100 كلمة): كيف تتعلّم أفضل؟ احكِ تجربتك وقدّم نصائح. استعمل: من جهة/من أخرى، لذلك.",
+    "criteria": [
+      "experience شخصية محدّدة (وليس نصائح عامة فقط)",
+      "أداة مقابلة واحدة",
+      "3 نصائح عملية على الأقل",
+      "نبرة منتدى ودّية"
+    ],
+    "sample": "Ich lerne Vokabeln am besten mit Karteikarten: Einerseits dauert es täglich nur zehn Minuten, andererseits wiederhole ich automatisch das, was ich sonst vergraben würde. Meine Erfahrung ist ernüchternd und nützlich zugleich – ohne tägliche Wiederholung hatte ich nach einer Woche die Hälfte vergessen, gemessen, nicht gefühlt! Mein erster Tipp: Lernt neue Wörter am Morgen, da ist das Gehirn noch leer. Mein zweiter: Hört abends deutsche Lieder mit Text – so lernt das Gehirn im Schlaf mit, ohne dass ihr müsst. Und der unbequemste Tipp zum Schluss: Führt ein kleines Fehlerheft und lest es vor dem Einschlafen. Wer seine eigenen Fehler nochmal liest, macht sie seltener ein drittes Mal. Viel Erfolg euch allen!",
+    "noteAr": [
+      "تجربةٌ رقمية شخصية: «نصف ما درستُ تبخّر في أسبوع، قِسْتُ ذلك» — لا عامّيةُ النصائح إلا بعدها",
+      "ثلاثُ نصائح مُسَمَّاة (erster / zweiter / unbequemster) — التعدادُ المرقَّمُ أمانةٌ لدى المصححين",
+      "«ohne dass ihr müsst» — subordinateٌ خفيفةٌ تنهي جملةً طويلة بأنفاسٍ كاملة: إيقاعٌ مقصودٌ لا سهو"
+    ]
+  },
+  {
+    "id": "w-b2-06",
+    "level": "B2",
+    "titleDe": "Bericht: Debatte zusammenfassen",
+    "titleAr": "تقرير: تلخيص مناظرة",
+    "taskDe": "Schreibe einen Bericht (ca. 150 Wörter) über die Debatte „KI im Unterricht“: Sachlich referieren (indirekte Rede!), Positionen wiedergeben, eigenes Fazit. Nutze: laut, zufolge, demzufolge.",
+    "taskAr": "اكتب تقريراً (150 كلمة) عن مناظرة «الذكاء الاصطناعي في التعليم»: نقل موضوعي (منقول!)، عرض المواقف، خلاصة خاصة. استعمل: حسب، بحسب، وبناءً عليه.",
+    "criteria": [
+      "نقل موضوعي بلا ضمير أنا (إلا في الفصل الأخير)",
+      "Konjunktiv I للمنقول (3 مرات)",
+      "عرض موقفين مختلفين بالتوازن",
+      "Fazit منفصل في النهاية",
+      "أقل تركيب وظيفي واحد"
+    ],
+    "sample": "In der Podiumsdiskussion „KI im Unterricht“ wurde die Rolle künstlicher Intelligenz kontrovers erörtert. Laut einer vorab verteilten Studie erwarten sechzig Prozent der Lehrkräfte Entlastung bei Vorbereitungsaufgaben – zugleich fürchten viele, dass die Urteilskraft auf der Strecke bleibe. Prof. Weber erklärte, einen Lehrer ersetzen zu wollen, sei ein Kategorienfehler; KI könne vorbereiten, aber nicht erziehen. Dr. Saleh pflichtete bei, sofern man die Technik als Werkzeug begreife, und warnte vor Abhängigkeit: Wer nur noch Ergebnisse konsumiere, verlerne das Denken. Der Lehrergewerkschaft zufolge fehlt zudem die Infrastruktur – zu wenige Geräte, zu löchriges Netz. Demzufolge lautete der Tenor am Abend: Technik ja, aber nur mit pädagogischem Kompass. Wer Urteilskraft stärkt, statt Ergebnisse zu bestellen, wird auch mit Maschinen gut unterrichten; wer umgekehrt rechnet, bereitet die nächste Debatte in zehn Jahren vor – dann mit besseren Geräten.",
+    "noteAr": [
+      "Konjunktiv I أربعُ مرات في المنقول (bleibe / sei / begreife / konsumiere / verlerne) — النقلُ الصحفيُّ أمانةٌ تصرفية",
+      "الأدوات الثلاث نظامية: laut / …zufolge / demzufolge — توزيعُ المصدرية كما يُلزِم التقرير",
+      "فصلٌ أخيرٌ بفعل التوازن: «تقنية نعم… لكن» بعد أن عُرِضَ الطرفان بلا رجَّةِ مرجَّح — ثم استشرافُ العشرِ سنوات: ختامُ التقارير الكبار"
+    ]
+  },
+  {
+    "id": "w-a1-07",
+    "level": "A1",
+    "titleDe": "Nachricht an einen Freund",
+    "titleAr": "رسالة قصيرة إلى صديق",
+    "taskDe": "Schreibe eine kurze Nachricht (3–5 Sätze) an einen Freund: Wie geht es dir? Was machst du heute Abend? Treffen wir uns?",
+    "taskAr": "اكتب رسالة قصيرة (3-5 جمل) لصديق: كيف حالك؟ ماذا تفعل هذا المساء؟ هل نلتقي؟",
+    "criteria": [
+      "3-5 جمل مفهومة",
+      "تحية وسؤال عن الحال",
+      "اقتراح موعد/لقاء",
+      "خاتمة مهذبة"
+    ],
+    "sample": "Lieber Sami, wie geht es dir? Mir geht es gut. Heute Abend bin ich frei. Möchtest du ins Café kommen? Wir können uns um acht Uhr treffen. Viele Grüße, Adam",
+    "noteAr": [
+      "سؤالُ حالٍ ثم عرضُ لقاءٍ بموعدٍ محدد — ثلاثيةُ الرسالة القصيرة",
+      "Möchtest du…? صيغةُ عرضٍ مهذبة تُحفَظ وتُستعمل",
+      "خمس جمل، كلٌّ في خدمة: لا حشو معفى في A1"
+    ]
+  },
+  {
+    "id": "w-a2-07",
+    "level": "A2",
+    "titleDe": "E-Mail an den Vermieter",
+    "titleAr": "بريد إلى صاحب الشقة",
+    "taskDe": "Schreibe eine E-Mail an deinen Vermieter: In deiner Wohnung ist etwas kaputt (z. B. der Wasserhahn). Beschreibe das Problem und schlage einen Termin vor.",
+    "taskAr": "اكتب بريداً إلى صاحب شقتك: شيء معطّل لديك (مثلاً صنبور الماء). صف المشكلة واقترح موعداً.",
+    "criteria": [
+      "مقدمة وشرح واضح للمشكلة",
+      "طلب مهذب",
+      "اقتراح موعد",
+      "خاتمة وتوقيع"
+    ],
+    "sample": "Sehr geehrte Frau Klein, in meiner Küche ist der Wasserhahn kaputt. Das Wasser läuft ständig. Ich arbeite von acht bis sechzehn Uhr. Passt Ihnen Donnerstag um zehn Uhr? Mit freundlichen Grüßen, Karim Mansour",
+    "noteAr": [
+      "مقدمة ووصف وموعدٌ مقترح وتوقيع: أربعُ ركائز لا تضطرب",
+      "Das Wasser läuft ständig — واقعةٌ واحدة بدقةٍ أفضل من فقرةِ انفعال",
+      "Passt Ihnen Donnerstag…? اقتراحُ موعدٍ بسؤال — لباقَةٌ تُسَرّع الصلاح"
+    ]
+  },
+  {
+    "id": "w-a2-08",
+    "level": "A2",
+    "titleDe": "Mein Tagesplan",
+    "titleAr": "جدولي اليومي",
+    "taskDe": "Schreibe über deinen Tagesplan: Wann stehst du auf? Was machst du am Vormittag, am Nachmittag und am Abend?",
+    "taskAr": "اكتب عن جدولك اليومي: متى تستيقظ؟ ماذا تفعل صباحاً وعصراً ومساءً؟",
+    "criteria": [
+      "استخدام أوقات (Uhr)",
+      "فترة الصباح والمساء",
+      "5 جمل على الأقل",
+      "أفعال متنوعة"
+    ],
+    "sample": "Ich stehe um halb sieben auf. Am Vormittag habe ich Kurs und lerne Deutsch. Um eins esse ich in der Mensa. Am Nachmittag arbeite ich im Büro. Am Abend koche ich und rufe meine Familie an. Um elf Uhr schlafe ich ein.",
+    "noteAr": [
+      "نصف يومٍ موزون: Kurs/ Arbeit / Kochen — لا جملة أطول من أختها",
+      "أفعال منفصلة في يومه (stehe…auf / rufe…an) — إعادةُ استعمالٍ ذكية لا حفظٌ منبري",
+      "Um elf Uhr schlafe ich ein — خاتمةٌ بزمن: انسجامُ قالبٍ حتى في النوم"
+    ]
+  },
+  {
+    "id": "w-b1-07",
+    "level": "B1",
+    "titleDe": "Handys im Unterricht – meine Meinung",
+    "titleAr": "الهواتف في الصف — رأيي",
+    "taskDe": "Schreibe einen Text (ca. 80 Wörter): Sollen Handys im Unterricht erlaubt sein? Begründe deine Meinung mit zwei Argumenten.",
+    "taskAr": "اكتب نصاً (نحو 80 كلمة): هل يُسمح بالهواتف في الصف؟ مهّد رأيي بحجّتين.",
+    "criteria": [
+      "رأي واضح في المقدمة",
+      "حجّتان مع شرح",
+      "رابط (deshalb, aber, außerdem)",
+      "خاتمة"
+    ],
+    "sample": "Meiner Meinung nach sollen Handys im Unterricht grundsätzlich tabu sein. Erstens lenken sie ab: Eine Nachricht genügt, und der Faden ist gerissen – das merken selbst die Schüler, die danach fragend schauen. Zweitens verlernen sie das Mitschreiben von Hand; wer nicht mitschreibt, vergisst schneller, als jedes Wörterbuch es ersetzen kann. Natürlich gibt es gute Ausnahmen, etwa die Recherche im Fremdsprachenunterricht. Deshalb schlage ich vor: Handys bleiben in der Tasche, außer die Lehrkraft erlaubt sie bewusst für eine Aufgabe – dann werden sie Werkzeug statt Störenfried.",
+    "noteAr": [
+      "رأيٌ في السطر الأول قبل أي تمهيد — في B1 لا تُكافأ المقدمةُ الدائرية",
+      "حجتان مشروحتان لا مرميتان: Erstens… (وقائع) / Zweitens… (مبررٌ معياريٌّ) — كل حجةٍ جملةٌ إضافية تُدافِع عنها",
+      "استثناءٌ مذكورٌ ومُؤطَّر («Natürlich… außer…» — لا: «außer die Lehrkraft erlaubt») — قوةُ موقفٍ تُظهِرُ حدودَه"
+    ]
+  },
+  {
+    "id": "w-b2-07",
+    "level": "B2",
+    "titleDe": "Formelle Beschwerde",
+    "titleAr": "شكوى رسمية",
+    "taskDe": "Du hast einen Online-Kurs gekauft, aber der Zugang funktioniert nicht. Schreibe eine formelle Beschwerde (ca. 100 Wörter): Sachverhalt, Forderung, Frist.",
+    "taskAr": "اشتريت دورة إلكترونية لكن الدخول لا يعمل. اكتب شكوى رسمية (نحو 100 كلمة): الوقائع، المطلب، الأجل.",
+    "criteria": [
+      "أسلوب رسمي (Sehr geehrte…)",
+      "وصف الوقائع بدقّة",
+      "مطلب واضح مع أجل",
+      "خاتمة رسمية"
+    ],
+    "sample": "Sehr geehrte Damen und Herren, am 3. Mai habe ich Ihren Online-Kurs „Deutsch B2“ gekauft (Bestellnummer 4471, Rechnung 2210). Leider funktioniert der Zugang bis heute nicht: Trotz zweimaliger Rücksetzung erhalte ich ständig die Meldung „Passwort falsch“ – ein Fehler, den Ihr Support telefonisch bestätigt, aber bisher nicht behoben hat. Ich bitte Sie, den Zugang bis zum kommenden Freitag, den 22. Mai, freizuschalten. Andernfalls trete ich vom Vertrag zurück und bitte um vollständige Rückerstattung des Kursbetrags von 89 Euro binnen weiterer vierzehn Tage. Die Belege zu Zahlung und Supportanfragen halte ich bereit und reiche sie auf Wunsch nach. Mit freundlichen Grüßen, Layla Haddad",
+    "noteAr": [
+      "أرقام وأرقامٌ عكسية: طلب + أجل محدد (bis Freitag) ثم شرطان (Rücktritt / Erstattung binnen vierzehn Tagen) — الشكوىُ قانونٌ مُهذَّب",
+      "دقة الوقائع: رقم طلب، رقم فاتورة، رسالة الخطأ حرفياً — لا «الوصولُ لا يعمل» بلا جثة دليل",
+      "«Belege halte ich bereit» — ورقةُ القوة الأخيرة تُلْمَح ولا تُلَوَّح: آدابُ الضغط الرسمي"
+    ]
+  },
+  {
+    "id": "w-b2-08",
+    "level": "B2",
+    "titleDe": "Essay: Ein Auslandsjahr",
+    "titleAr": "مقال: سنة في الخارج",
+    "taskDe": "Schreibe ein kurzes Essay (ca. 100 Wörter): Lohnt sich ein Auslandsjahr für junge Leute? Nutze Konjunktiv II und Vergleiche.",
+    "taskAr": "اكتب مقالاً قصيراً (نحو 100 كلمة): هل تستحق سنة في الخارج للشباب؟ استعمل Konjunktiv II وأساليب المقارنة.",
+    "criteria": [
+      "مقدمة وسؤال البحث",
+      "حجّتان مع أمثلة",
+      "استخدام Konjunktiv II",
+      "خاتمة متزنة"
+    ],
+    "sample": "Lohnt sich ein Auslandsjahr für junge Leute? Die Frage klingt einfach, entscheidet aber oft über Selbstverständnis und Lebenslauf. Je länger man im Ausland lebt, desto sicherer spricht man die Sprache – und desto schwerer fällt daheim die Antwort auf die Frage, warum man je geblieben sei. Ein Jahr wäre ideal; sechs Monate helfen, wer sie klug nutzt, genauso. Ohne Auslandserfahrung hätte ich nie gelernt, fremde Regeln zuerst zu verstehen statt zu beurteilen. Manche fürchten die Kosten; doch wer ein Stipendium sucht, findet häufig Unterstützung – teurer als ihr Ruf ist nur die Zeit, die man mit Zweifeln verbringt. Insgesamt überwiegt der Gewinn: Man kommt reicher zurück, als man hingegangen ist. Bereuen tut es, wenn überhaupt, nur, wer es nicht versucht hat.",
+    "noteAr": [
+      "je…desto مزدوجةٌ في صلب السؤال لا للزينة — قالبُ المقارنة كما يُطلَب",
+      "Konjunktiv II في خدمة الحُجَّة لا الحفظ: hätte… nie gelernt / wäre — شرطيّةُ تجربةٍ لا شرطيّةُ كتاب",
+      "قلبُ حجةِ التكلفة: الأغلى ليس الرحلةَ بل زمنُ الشكّ — تقنيةُ الردِّ الصفوة: ماثلةٌ في النص لا مسمّاةٌ في الحاشية"
+    ]
+  }
+]

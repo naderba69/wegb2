@@ -1,0 +1,481 @@
+{
+ "schema": 1,
+ "nuskh": 220,
+ "titel": "دفتر الدرجات الـ220 — السجلّ الدائم",
+ "tarikh": "2026-09-26",
+ "manhaj": "كل درجة مُسندة إلى هدف موجود على القرص؛ «محفور» له نص في الكود أو في سجل الجولة، و«دفتري» توزيع إعادة بناء معلن — يُحاسَب الهدف لا الرقم",
+ "tanbih": "وُلدت قائمة الـ220 محادثية؛ هذا أول سجل دائم لها، تفحصه بوابة K16 في npm run smoke",
+ "rungen": [
+  {
+   "min": 1,
+   "max": 6,
+   "unwan": "طور التحليل: مسح المكتبة وجرد Drive وقرار 270 يوماً",
+   "huduf": [
+    "../docs/tahlil-al-mawad.md",
+    "../docs/drive-inventory.json"
+   ],
+   "tabiī": "دفتري (إعادة بناء)"
+  },
+  {
+   "min": 7,
+   "max": 20,
+   "unwan": "المحركات: srs · plan · grader · kompetenz · fehler · spiel · speech · store · profiles · content",
+   "huduf": [
+    "lib/srs.ts",
+    "lib/plan.ts",
+    "lib/grader.ts",
+    "lib/kompetenz.ts",
+    "lib/fehler.ts",
+    "lib/spiel.ts",
+    "lib/speech.ts",
+    "lib/store.ts",
+    "lib/profiles.ts",
+    "lib/content.ts"
+   ],
+   "tabiī": "دفتري (إعادة بناء)"
+  },
+  {
+   "min": 21,
+   "max": 43,
+   "unwan": "الوحدات المؤسِّسة A–L: الخطة اليومية والأسبوعية والمهام والأوراق",
+   "huduf": [
+    "lib/aktivitaeten.ts"
+   ],
+   "tabiī": "دفتري (إعادة بناء)"
+  },
+  {
+   "min": 44,
+   "max": 59,
+   "unwan": "الدرجات المطوية المعلن عنها رقمياً: 44 · 49 · 50 · 55 · 59 — طويت في جاراتها بدل التكرار",
+   "huduf": [
+    "lib/aktivitaeten.ts"
+   ],
+   "tabiī": "محفور (قرار مسجّل)"
+  },
+  {
+   "min": 60,
+   "max": 98,
+   "unwan": "بنوك المحتوى المؤسِّسة: 180 جملة · 180 مفردة · 64 دعامة · 102 ترجمة · 31 خطأ · 26 فعلاً · 30 كتابة",
+   "huduf": [
+    "content/sentences.json",
+    "content/vocab.json",
+    "content/grammar.json",
+    "content/fehler.json",
+    "content/verben.json",
+    "content/writing.json",
+    "content/texts.json"
+   ],
+   "tabiī": "دفتري (إعادة بناء)"
+  },
+  {
+   "min": 99,
+   "max": 108,
+   "unwan": "مركز الامتحانات — Prüfungsschmiede",
+   "huduf": [
+    "components/pruefung.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "M"
+  },
+  {
+   "min": 109,
+   "max": 117,
+   "unwan": "مختبر الأخطاء — Fehlerlabor",
+   "huduf": [
+    "components/fehlerlabor.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "N"
+  },
+  {
+   "min": 118,
+   "max": 125,
+   "unwan": "مركز استراتيجيات التعلم — Lernstrategien",
+   "huduf": [
+    "components/lernstrategie.tsx"
+   ],
+   "tabiī": "محفور (Schritte 118–125)",
+   "modul": "O"
+  },
+  {
+   "min": 126,
+   "max": 130,
+   "unwan": "القاموس العميق — TiefenLexikon",
+   "huduf": [
+    "components/tiefenlex.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "P"
+  },
+  {
+   "min": 131,
+   "max": 136,
+   "unwan": "ساحة السيناريوهات — Szenarien",
+   "huduf": [
+    "components/szenarien.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "Q"
+  },
+  {
+   "min": 137,
+   "max": 141,
+   "unwan": "مولّد الدروس — Lektionsgenerator",
+   "huduf": [
+    "components/lektion.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "R"
+  },
+  {
+   "min": 142,
+   "max": 146,
+   "unwan": "تمارين UI التفاعلية — Übungen",
+   "huduf": [
+    "components/exercises.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "S"
+  },
+  {
+   "min": 147,
+   "max": 151,
+   "unwan": "مركز التقارير — BerichteZentrum + الورقة الرسمية A4",
+   "huduf": [
+    "components/berichte.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "T"
+  },
+  {
+   "min": 152,
+   "max": 155,
+   "unwan": "اللياقة الدراسية — Gesundheit",
+   "huduf": [
+    "components/gesundheit.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "U"
+  },
+  {
+   "min": 156,
+   "max": 160,
+   "unwan": "حزمة الأولياء — Elternpaket",
+   "huduf": [
+    "components/elternpaket.tsx"
+   ],
+   "tabiī": "دفتري (إعادة بناء)",
+   "modul": "V"
+  },
+  {
+   "min": 161,
+   "max": 164,
+   "unwan": "مختبر الاختبارات الذاتية — Selbsttests",
+   "huduf": [
+    "components/selbsttest.tsx"
+   ],
+   "tabiī": "محفور (Schritte 161–164)",
+   "modul": "W"
+  },
+  {
+   "min": 165,
+   "max": 168,
+   "unwan": "حقيبة الدقيقة — BlitzDrill",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (Schritte 165–168)",
+   "modul": "X"
+  },
+  {
+   "min": 169,
+   "max": 172,
+   "unwan": "محاكاة المدرسة — Schul-Simulator",
+   "huduf": [
+    "components/schulsim.tsx"
+   ],
+   "tabiī": "محفور (Schritte 169–172)",
+   "modul": "Y"
+  },
+  {
+   "min": 173,
+   "max": 177,
+   "unwan": "ساحة المقابلات + مصهر الرسائل — InterviewArena & BriefSchmiede",
+   "huduf": [
+    "components/interview2.tsx"
+   ],
+   "tabiī": "محفور (Schritte 173–177)",
+   "modul": "Z"
+  },
+  {
+   "min": 178,
+   "max": 193,
+   "unwan": "بنك العينة الأصعب 🥵: فخاخ h01–h16 — كل درجة ركيزة واحدة",
+   "huduf": [
+    "content/haerte.json"
+   ],
+   "tabiī": "محفور (h01–h16)",
+   "sub_ids": [
+    "h01",
+    "h02",
+    "h03",
+    "h04",
+    "h05",
+    "h06",
+    "h07",
+    "h08",
+    "h09",
+    "h10",
+    "h11",
+    "h12",
+    "h13",
+    "h14",
+    "h15",
+    "h16"
+   ]
+  },
+  {
+   "min": 194,
+   "max": 194,
+   "unwan": "إصلاح null-safe في حساب سجلّ الكفاءات (H3)",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 195,
+   "max": 195,
+   "unwan": "تسجيل الرقعة الخامسة «خمس رقعات» في سطر X بالسجلّ",
+   "huduf": [
+    "lib/aktivitaeten.ts"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 196,
+   "max": 196,
+   "unwan": "ترقيع unter نشط BlitzDrill",
+   "huduf": [
+    "lib/aktivitaeten.ts"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 197,
+   "max": 197,
+   "unwan": "K15a: تثبيت حجم بنك العينة (16) في الدخان",
+   "huduf": [
+    "scripts/engine_smoke.ts"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 198,
+   "max": 198,
+   "unwan": "K15b: تثبيت بنية البنك (خيارات فريدة · مؤشّر · فجوة · شرح)",
+   "huduf": [
+    "scripts/engine_smoke.ts"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 199,
+   "max": 199,
+   "unwan": "تصدير haerte عبر lib/content.ts (أنبوب واحد)",
+   "huduf": [
+    "lib/content.ts"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 200,
+   "max": 200,
+   "unwan": "اتساع نوع Deck في BlitzDrill إلى خمس رقعات",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 201,
+   "max": 201,
+   "unwan": "حقل opts في واجهة البطاقة",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 202,
+   "max": 202,
+   "unwan": "سطر DECKS لرقعة 🥵 بالتعريف الكامل",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 203,
+   "max": 203,
+   "unwan": "deckHaerte: ترتيب يومي حتمي (rng day*761+71)",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 204,
+   "max": 204,
+   "unwan": "خلط الخيارات الحتمي — ضدّ حفظ الموضع",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 205,
+   "max": 205,
+   "unwan": "فرع الـmemo لرقعة العينة قبل fallback الأخطاء",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 206,
+   "max": 206,
+   "unwan": "حلّ رقم الخيار إلى نصّه قبل التصحيح",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 207,
+   "max": 207,
+   "unwan": "عرض الخيارات مرقمة 1)–4) في وجه البطاقة",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 208,
+   "max": 208,
+   "unwan": "تحديث placeholder الحقل يشرح وضع الرقم",
+   "huduf": [
+    "components/blitz.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 209,
+   "max": 209,
+   "unwan": "إصلاح فخّ h08: استرجاع حرف an المفقود (es kommt darauf an)",
+   "huduf": [
+    "content/haerte.json"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 210,
+   "max": 210,
+   "unwan": "إعادة كتابة h16: فخّ sein-Perfekt بدل سؤال يقبل إجابتين",
+   "huduf": [
+    "content/haerte.json"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 211,
+   "max": 211,
+   "unwan": "تصحيح خطأ إملائي مُدخَل في البنك (veigessen→vergessen)",
+   "huduf": [
+    "content/haerte.json"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 212,
+   "max": 212,
+   "unwan": "مولّد الورقة الرسمية amtsblattHtml بكل شبكة الكفاءات",
+   "huduf": [
+    "components/berichte.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 213,
+   "max": 213,
+   "unwan": "تنسيق A4 للطباعة: @page وجدول الكفاءات والمعادلات",
+   "huduf": [
+    "components/berichte.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 214,
+   "max": 214,
+   "unwan": "ختم تحقق حتمي WB2-{day}-{code} يُعاد إنتاجه من الاسم واليوم",
+   "huduf": [
+    "components/berichte.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 215,
+   "max": 215,
+   "unwan": "زر «الورقة الرسمية A4» في شريط تصدير T",
+   "huduf": [
+    "components/berichte.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 216,
+   "max": 216,
+   "unwan": "بوابة npm run interaktiv: jsdom بنقرة حقيقية",
+   "huduf": [
+    "package.json"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 217,
+   "max": 217,
+   "unwan": "تهيئة بيئة DOM قبل React عبر dynamic import",
+   "huduf": [
+    "scripts/interaktiv_test.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 218,
+   "max": 218,
+   "unwan": "اعتراض نافذة الطباعة والتحقق من محتوى الورقة لا من فتحها",
+   "huduf": [
+    "scripts/interaktiv_test.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 219,
+   "max": 219,
+   "unwan": "دورة 🥵 التفاعلية الكاملة: 24 حكماً على نقرات فعلية",
+   "huduf": [
+    "scripts/interaktiv_test.tsx"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  },
+  {
+   "min": 220,
+   "max": 220,
+   "unwan": "هذا الدفتر نفسه: سجلّ الـ220 دائم ومُحاسَب آلياً (بوابة K16)",
+   "huduf": [
+    "docs/dafter-al-220.json"
+   ],
+   "tabiī": "محفور (سجل الجولة)"
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+  "nuancen": [
+    {
+      "a": "wissen",
+      "b": "kennen",
+      "aAr": "يعرف حقائق ومعلومات",
+      "bAr": "يعرِف شخصاً أو مكاناً عن قرب",
+      "regel": "wissen يليه جملة أنّ أو سؤال (wo/wann/wie) · kennen يليه شخص/مكان/شيء ملموس. لا نقول: „Ich kenne, dass…“",
+      "satzA": "Ich ___ nicht, wo der Bahnhof ist.",
+      "satzB": "Ich ___ diesen Mann seit Jahren.",
+      "hinweis": "wissen يُجيب عن: wo? wann? wie? ob?"
+    },
+    {
+      "a": "sagen",
+      "b": "sprechen",
+      "aAr": "يقول شيئاً محدداً (مفعول مباشر)",
+      "bAr": "يتكلم/يخاطب (مع · عن)",
+      "regel": "etwas sagen + Akk · mit jemandem sprechen · über etwas sprechen",
+      "satzA": "Er hat mir eine interessante Geschichte ___.",
+      "satzB": "Kann ich kurz mit dir ___?"
+    },
+    {
+      "a": "sehen",
+      "b": "schauen",
+      "aAr": "يرى (إدراك بالعين)",
+      "bAr": "ينظر عمداً إلى شيء",
+      "regel": "sehen = ما يقع في مجال البصر · schauen = نظرة مقصودة (nach/an)",
+      "satzA": "Vom Fenster aus ___ ich den See.",
+      "satzB": "Bitte ___ nach dem Kind!"
+    },
+    {
+      "a": "machen",
+      "b": "tun",
+      "aAr": "يفعل/يصنَع شيئاً محدداً",
+      "bAr": "يفعل عموماً (التساؤل والنفي)",
+      "regel": "machen مع الأنشطة والأشياء الملموسة · tun ثابت في: Was soll ich tun? / nichts zu tun haben",
+      "satzA": "Ich ___ heute meine Hausaufgaben.",
+      "satzB": "Was soll ich jetzt ___?"
+    },
+    {
+      "a": "bekommen",
+      "b": "erhalten",
+      "aAr": "يحصل على (يومي)",
+      "bAr": "يتلقى (رسمي/كتابي)",
+      "regel": "المعنى واحد — الفرق في السجل: gesprochen ↔ schriftlich/amtlich",
+      "satzA": "Hast du mein Paket ___?",
+      "satzB": "Wir ___ Ihr Schreiben vom 3. Mai."
+    },
+    {
+      "a": "brauchen",
+      "b": "benötigen",
+      "aAr": "يحتاج (يومي)",
+      "bAr": "يستلزم (رسمي)",
+      "regel": "في الأوراق والطلبات الرسمية: benötigen — brauchen للكلام اليومي",
+      "satzA": "Ich ___ morgen deine Hilfe.",
+      "satzB": "Für das Visum ___ Sie drei Fotos."
+    },
+    {
+      "a": "vielleicht",
+      "b": "möglicherweise",
+      "aAr": "ربما (عامي)",
+      "bAr": "من المحتمل (رسمي/أكاديمي)",
+      "regel": "vielleicht في الكلام · möglicherweise في التقارير والمراسلات",
+      "satzA": "Kommst du ___ mit ins Kino?",
+      "satzB": "Der Zug verspätet sich ___ um 20 Minuten."
+    },
+    {
+      "a": "anfangen",
+      "b": "beginnen",
+      "aAr": "يبدأ (يومي)",
+      "bAr": "يبدأ (رسمي/أدبي)",
+      "regel": "نفس الجذر تقريباً — anfangen منطوق، beginnen مكتوب واحتفالي",
+      "satzA": "Wann ___ wir mit der Arbeit?",
+      "satzB": "Mit diesem Kapitel ___ die eigentliche Untersuchung."
+    },
+    {
+      "a": "helfen",
+      "b": "unterstützen",
+      "aAr": "يساعد مباشرة + Dativ",
+      "bAr": "يدعم (رسمياً/مالياً) + Akk",
+      "regel": "jemandem helfen ↔ jemanden unterstützen — الحالة تتبدّل مع الفعل!",
+      "satzA": "Kannst du mir bitte ___?",
+      "satzB": "Die Firma ___ dieses Projekt finanziell."
+    },
+    {
+      "a": "zeigen",
+      "b": "erklären",
+      "aAr": "يُريك الشيء (بالدليل)",
+      "bAr": "يشرح لك كيف ولماذا",
+      "regel": "zeigen = إبراز محسوس · erklären = تعليل + Akk (+ Dativ للشخص)",
+      "satzA": "Er ___ mir den Weg zum Museum.",
+      "satzB": "Können Sie mir diese Regel ___?"
+    },
+    {
+      "a": "empfehlen",
+      "b": "raten",
+      "aAr": "يوصي بشيء + Akk",
+      "bAr": "ينصح شخصاً + Dativ",
+      "regel": "etwas empfehlen · jemandem raten — التوصية بالشيء، النصيحة للشخص",
+      "satzA": "Ich ___ dieses Restaurant von Herzen.",
+      "satzB": "Ich ___ dir, früher zu kommen."
+    },
+    {
+      "a": "besitzen",
+      "b": "gehören",
+      "aAr": "يمتلك (الsubject هو المالك)",
+      "bAr": "ينتمي لمالك (الsubject هو الشيء)",
+      "regel": "Ich besitze ein Auto. ↔ Das Auto gehört mir. — انقلب الاتجاه فانقلب الفعل والحالة!",
+      "satzA": "Diese Familie ___ ein altes Haus.",
+      "satzB": "Diese Idee ___ dem Team."
+    }
+  ],
+  "verben": [
+    { "verb": "warten", "luecke": "Ich warte ___ den Bus.", "praep": "auf", "kasus": "Akk.", "ar": "ينتظر", "options": ["auf", "für", "an", "über"] },
+    { "verb": "sich freuen", "luecke": "Ich freue mich ___ das Wochenende.", "praep": "auf", "kasus": "Akk.", "ar": "يتطلّع بفرح إلى (مستقبل)", "options": ["auf", "für", "über", "an"] },
+    { "verb": "denken", "luecke": "Denkst du oft ___ deine Kindheit?", "praep": "an", "kasus": "Akk.", "ar": "يفكّر في", "options": ["an", "auf", "für", "von"] },
+    { "verb": "sich erinnern", "luecke": "Ich erinnere mich gut ___ diesen Tag.", "praep": "an", "kasus": "Akk.", "ar": "يتذكّر", "options": ["an", "auf", "von", "über"] },
+    { "verb": "teilnehmen", "luecke": "Wir nehmen ___ dem Kurs teil.", "praep": "an", "kasus": "Dat.", "ar": "يشارك في", "options": ["an", "bei", "in", "auf"] },
+    { "verb": "sich interessieren", "luecke": "Sie interessiert sich ___ Politik.", "praep": "für", "kasus": "Akk.", "ar": "يهتم بـ", "options": ["für", "an", "über", "um"] },
+    { "verb": "sich bewerben", "luecke": "Er bewirbt sich ___ eine neue Stelle.", "praep": "um", "kasus": "Akk.", "ar": "يتقدّم بطلب لـ", "options": ["um", "für", "auf", "nach"] },
+    { "verb": "verzichten", "luecke": "Ich verzichte ___ Zucker.", "praep": "auf", "kasus": "Akk.", "ar": "يتخلى عن", "options": ["auf", "von", "für", "gegen"] },
+    { "verb": "abhängen", "luecke": "Das hängt ___ dem Wetter ab.", "praep": "von", "kasus": "Dat.", "ar": "يعتمد على", "options": ["von", "auf", "an", "mit"] },
+    { "verb": "warnen", "luecke": "Man warnt uns ___ dem kalten Wasser.", "praep": "vor", "kasus": "Dat.", "ar": "يحذّر من", "options": ["vor", "gegen", "von", "für"] },
+    { "verb": "Angst haben", "luecke": "Das Kind hat Angst ___ Hunden.", "praep": "vor", "kasus": "Dat.", "ar": "يخاف من", "options": ["vor", "von", "gegen", "für"] },
+    { "verb": "danken", "luecke": "Ich danke dir ___ deine Hilfe.", "praep": "für", "kasus": "Akk.", "ar": "يشكر على", "options": ["für", "auf", "zu", "wegen"] },
+    { "verb": "gratulieren", "luecke": "Ich gratuliere dir ___ deinem Geburtstag!", "praep": "zu", "kasus": "Dat.", "ar": "يهنّئ بمناسبة", "options": ["zu", "für", "zu der", "auf"] },
+    { "verb": "sprechen", "luecke": "Wir müssen heute ___ die Prüfung sprechen.", "praep": "über", "kasus": "Akk.", "ar": "يتكلم عن", "options": ["über", "von", "auf", "für"] },
+    { "verb": "bestehen", "luecke": "Der Kuchen besteht ___ Nüssen und Honig.", "praep": "aus", "kasus": "Dat.", "ar": "يتكوّن من", "options": ["aus", "von", "mit", "durch"] },
+    { "verb": "erzählen", "luecke": "Er erzählt ___ seinem Urlaub.", "praep": "von", "kasus": "Dat.", "ar": "يحكي عن", "options": ["von", "über", "auf", "für"] },
+    { "verb": "sich handeln", "luecke": "Es handelt sich ___ eine dringende Sache.", "praep": "um", "kasus": "Akk.", "ar": "يتعلق الأمر بـ", "options": ["um", "von", "über", "für"] },
+    { "verb": "sich ärgern", "luecke": "Ich ärgere mich ___ den Lärm.", "praep": "über", "kasus": "Akk.", "ar": "يغتاظ من", "options": ["über", "auf", "von", "wegen"] },
+    { "verb": "sich kümmern", "luecke": "Wer kümmert sich ___ die Kinder?", "praep": "um", "kasus": "Akk.", "ar": "يعتني بـ", "options": ["um", "für", "an", "auf"] },
+    { "verb": "gehören", "luecke": "Das Buch ___ der Bibliothek.", "praep": "zu", "kasus": "Dat.", "ar": "ينتمي إلى", "options": ["zu", "an", "auf", "mit"] }
+  ],
+  "funktion": [
+    { "gefüge": "eine Entscheidung treffen", "luecke": "eine Entscheidung ___", "ar": "يتخذ قراراً", "satz": "Nach langer Diskussion hat sie endlich eine Entscheidung ___.", "options": ["treffen", "machen", "nehmen", "geben"], "answer": "treffen" },
+    { "gefüge": "eine Frage stellen", "luecke": "eine Frage ___", "ar": "يطرح سؤالاً", "satz": "Darf ich eine kurze Frage ___?", "options": ["stellen", "machen", "fragen", "setzen"], "answer": "stellen" },
+    { "gefüge": "eine Rolle spielen", "luecke": "eine Rolle ___", "ar": "يلعب دوراً", "satz": "Die Erfahrung spielt hier eine große ___.", "options": ["spielen", "machen", "haben", "bringen"], "answer": "spielen" },
+    { "gefüge": "in Betracht ziehen", "luecke": "in Betracht ___", "ar": "يضع في الحسبان", "satz": "Wir sollten auch die Kosten in ___.", "options": ["ziehen", "nehmen", "machen", "bringen"], "answer": "ziehen" },
+    { "gefüge": "zur Verfügung stehen", "luecke": "zur Verfügung ___", "ar": "يوضع تحت التصرّف", "satz": "Ihnen ___ zwei Zimmer zur Verfügung.", "options": ["stehen", "sein", "bleiben", "gelten"], "answer": "stehen" },
+    { "gefüge": "in Anspruch nehmen", "luecke": "in Anspruch ___", "ar": "يستهلك وقتاً/جهداً", "satz": "Das Projekt nimmt viel Zeit in ___.", "options": ["nehmen", "machen", "bringen", "stellen"], "answer": "nehmen" },
+    { "gefüge": "eine Meinung äußern", "luecke": "eine Meinung ___", "ar": "يبدي رأياً", "satz": "Jeder darf hier frei eine Meinung ___.", "options": ["äußern", "sagen", "machen", "sprechen"], "answer": "äußern" },
+    { "gefüge": "Kritik üben", "luecke": "Kritik ___", "ar": "يمارس النقد على", "satz": "Der Lehrer hat sanft Kritik an der Arbeit ___.", "options": ["geübt", "gemacht", "geäußert", "getrieben"], "answer": "geübt" },
+    { "gefüge": "Aufmerksamkeit schenken", "luecke": "Aufmerksamkeit ___", "ar": "يلتفت إلى · يهتم بـ", "satz": "Bitte schenken Sie den Details Aufmerksamkeit." , "options": ["schenken", "geben", "bringen", "setzen"], "answer": "schenken" },
+    { "gefüge": "eine Verbindung herstellen", "luecke": "eine Verbindung ___", "ar": "يوصّل اتصالاً", "satz": "Der Techniker hat eine Verbindung zum Server ___.", "options": ["hergestellt", "gemacht", "genommen", "gegeben"], "answer": "hergestellt" },
+    { "gefüge": "einen Vorschlag machen", "luecke": "einen Vorschlag ___", "ar": "يقدّم اقتراحاً", "satz": "Ich habe der Gruppe einen Vorschlag ___.", "options": ["gemacht", "getroffen", "gegeben", "gestellt"], "answer": "gemacht" },
+    { "gefüge": "eine Ausnahme machen", "luecke": "eine Ausnahme ___", "ar": "يستثني · يخرج عن القاعدة", "satz": "Heute mache ich eine Ausnahme.", "options": ["machen", "treffen", "geben", "bilden"], "answer": "machen" }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "A1": [
+    { "id": "A1-C1", "de": "Ich kann mich vorstellen und begrüßen.", "ar": "أستطيع أن أُسلّم وأُقدّم نفسي." },
+    { "id": "A1-C2", "de": "Ich kann Zahlen, Datum und Uhrzeit sagen.", "ar": "أستطيع ذكر الأرقام والتاريخ والوقت." },
+    { "id": "A1-C3", "de": "Ich kann über meine Familie und Hobbys sprechen.", "ar": "أستطيع التحدث عن عائلتي وهواياتي." },
+    { "id": "A1-C4", "de": "Ich kann einfach bestellen und einkaufen.", "ar": "أستطيع الطلب والتسوق بعبارات بسيطة." },
+    { "id": "A1-C5", "de": "Ich kann über meinen Alltag und meine Wohnung erzählen.", "ar": "أستطيع الحديث عن يومي ومنزلي." },
+    { "id": "A1-C6", "de": "Ich kann kurze Sätze im Präsens schreiben.", "ar": "أستطيع كتابة جمل قصيرة في المضارع." },
+    { "id": "A1-C7", "de": "Ich kann einfache Hörtexte (Dialoge) verstehen.", "ar": "أستطيع فهم حوارات بسيطة مسموعة." },
+    { "id": "A1-C8", "de": "Ich kann nach dem Weg fragen und einfache Auskünfte geben.", "ar": "أستطيع السؤال عن الطريق وإعطاء معلومات بسيطة." }
+  ],
+  "A2": [
+    { "id": "A2-C1", "de": "Ich kann über die Vergangenheit (Perfekt) erzählen.", "ar": "أستطيع سرد الماضي (الماضي التام)." },
+    { "id": "A2-C2", "de": "Ich kann im Krankenhaus und beim Arzt erklären, was wehtut.", "ar": "أستطيع شرح شكواي عند الطبيب." },
+    { "id": "A2-C3", "de": "Ich kann eine Reise planen und buchen.", "ar": "أستطيع التخطيط لرحلة وحجزها." },
+    { "id": "A2-C4", "de": "Ich kann meine Meinung mit „weil“ und „dass“ begründen.", "ar": "أستطيع تبرير رأيي بـ weil و dass." },
+    { "id": "A2-C5", "de": "Ich kann Menschen und Kleidung beschreiben.", "ar": "أستطيع وصف الأشخاص والملابس." },
+    { "id": "A2-C6", "de": "Ich kann kurze persönliche E-Mails schreiben.", "ar": "أستطيع كتابة رسائل شخصية قصيرة." },
+    { "id": "A2-C7", "de": "Ich kann Hörtexte zu vertrauten Themen verstehen.", "ar": "أستطيع فهم نصوص مسموعة في مواضيع مألوفة." },
+    { "id": "A2-C8", "de": "Ich kann über Pläne und Wünsche sprechen.", "ar": "أستطيع التحدث عن الخطط والرغبات." }
+  ],
+  "B1": [
+    { "id": "B1-C1", "de": "Ich kann meine Meinung klar begründen und diskutieren.", "ar": "أستطيع تبرير رأيي بوضوح ومناقشته." },
+    { "id": "B1-C2", "de": "Ich kann Ratschläge geben (Konjunktiv II).", "ar": "أستطيع تقديم النصائح (كونونكتيف الثاني)." },
+    { "id": "B1-C3", "de": "Ich kann Erfahrungen mit dem Perfekt und Plusquamperfekt erzählen.", "ar": "أستطيع سرد التجارب بالماضي التام وما قبل الماضي." },
+    { "id": "B1-C4", "de": "Ich kann über Texte und Nachrichten berichten.", "ar": "أستطيع التبليغ عن النصوص والأخبار." },
+    { "id": "B1-C5", "de": "Ich kann eine Bewerbung und formelle E-Mails schreiben.", "ar": "أستطيع كتابة طلب توظيف ورسائل رسمية." },
+    { "id": "B1-C6", "de": "Ich kann längere Hörtexte (Radio, Podcast) verstehen.", "ar": "أستطيع فهم نصوص مسموعة أطول (راديو/بودكاست)." },
+    { "id": "B1-C7", "de": "Ich kann Relativsätze nutzen, um genau zu beschreiben.", "ar": "أستطيع استخدام الجمل الوصفية للوصف الدقيق." },
+    { "id": "B1-C8", "de": "Ich kann am Goethe-Zertifikat B1 teilnehmen.", "ar": "أستطيع اجتياز شهادة B1 (غوته)." }
+  ],
+  "B2": [
+    { "id": "B2-C1", "de": "Ich kann indirekte Rede verwenden (Konjunktiv I).", "ar": "أستطيع استخدام المنقول (كونونكتيف الأول)." },
+    { "id": "B2-C2", "de": "Ich kann Fachtexte und längere Artikel verstehen.", "ar": "أستطيع فهم النصوص المتخصصة والمقالات الطويلة." },
+    { "id": "B2-C3", "de": "Ich kann einen Kommentar und eine Rezension schreiben.", "ar": "أستطيع كتابة تعليق صحفي ومراجعة نقدية." },
+    { "id": "B2-C4", "de": "Ich kann flüssig und spontan mit Muttersprachlern diskutieren.", "ar": "أستطيع النقاش بطلاقة وعفوية مع الناطقين الأصليين." },
+    { "id": "B2-C5", "de": "Ich kann komplexe Bedingungen und Hypothesen ausdrücken.", "ar": "أستطيع التعبير عن الشروط المركّبة والافتراضات." },
+    { "id": "B2-C6", "de": "Ich kann präzise schreiben: Funktionsverbgefüge, Nominalstil.", "ar": "أستطيع الكتابة الدقيقة: التركيبات الوظيفية والأسلوب الاسمي." },
+    { "id": "B2-C7", "de": "Ich kann Vorträge halten und präsentieren.", "ar": "أستطيع إلقاء عروض وعروض تقديمية." },
+    { "id": "B2-C8", "de": "Ich kann das Goethe-Zertifikat B2 bestehen.", "ar": "أستطيع اجتياز شهادة B2 (غوته)." }
+  ]
+}

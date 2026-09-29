@@ -1,0 +1,645 @@
+{
+ "count": 80,
+ "einsaetze": [
+  {
+   "id": "d-a1-01",
+   "file": "/audio/dialog/d-a1-01.mp3",
+   "bytes": 155830,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-02",
+   "file": "/audio/dialog/d-a1-02.mp3",
+   "bytes": 114852,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-03",
+   "file": "/audio/dialog/d-a1-03.mp3",
+   "bytes": 133434,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-04",
+   "file": "/audio/dialog/d-a1-04.mp3",
+   "bytes": 118805,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-05",
+   "file": "/audio/dialog/d-a1-05.mp3",
+   "bytes": 90575,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-06",
+   "file": "/audio/dialog/d-a1-06.mp3",
+   "bytes": 112100,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-07",
+   "file": "/audio/dialog/d-a1-07.mp3",
+   "bytes": 97055,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-08",
+   "file": "/audio/dialog/d-a1-08.mp3",
+   "bytes": 114627,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-09",
+   "file": "/audio/dialog/d-a1-09.mp3",
+   "bytes": 140539,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-31",
+   "file": "/audio/dialog/d-a1-31.mp3",
+   "bytes": 134670,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a1-32",
+   "file": "/audio/dialog/d-a1-32.mp3",
+   "bytes": 94773,
+   "voice": "voice-01+voice-02",
+   "level": "A1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-01",
+   "file": "/audio/dialog/d-a2-01.mp3",
+   "bytes": 162065,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-02",
+   "file": "/audio/dialog/d-a2-02.mp3",
+   "bytes": 148708,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-03",
+   "file": "/audio/dialog/d-a2-03.mp3",
+   "bytes": 181726,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-04",
+   "file": "/audio/dialog/d-a2-04.mp3",
+   "bytes": 108757,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-05",
+   "file": "/audio/dialog/d-a2-05.mp3",
+   "bytes": 119433,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-06",
+   "file": "/audio/dialog/d-a2-06.mp3",
+   "bytes": 129655,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-07",
+   "file": "/audio/dialog/d-a2-07.mp3",
+   "bytes": 116907,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-08",
+   "file": "/audio/dialog/d-a2-08.mp3",
+   "bytes": 143883,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-09",
+   "file": "/audio/dialog/d-a2-09.mp3",
+   "bytes": 126956,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-31",
+   "file": "/audio/dialog/d-a2-31.mp3",
+   "bytes": 162483,
+   "voice": "voice-02+voice-03",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-a2-32",
+   "file": "/audio/dialog/d-a2-32.mp3",
+   "bytes": 117326,
+   "voice": "voice-01+voice-02",
+   "level": "A2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-01",
+   "file": "/audio/dialog/d-b1-01.mp3",
+   "bytes": 142403,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-02",
+   "file": "/audio/dialog/d-b1-02.mp3",
+   "bytes": 129028,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-03",
+   "file": "/audio/dialog/d-b1-03.mp3",
+   "bytes": 107712,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-04",
+   "file": "/audio/dialog/d-b1-04.mp3",
+   "bytes": 121714,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-05",
+   "file": "/audio/dialog/d-b1-05.mp3",
+   "bytes": 105205,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-06",
+   "file": "/audio/dialog/d-b1-06.mp3",
+   "bytes": 156422,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-07",
+   "file": "/audio/dialog/d-b1-07.mp3",
+   "bytes": 101861,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-08",
+   "file": "/audio/dialog/d-b1-08.mp3",
+   "bytes": 155377,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-09",
+   "file": "/audio/dialog/d-b1-09.mp3",
+   "bytes": 138241,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-10",
+   "file": "/audio/dialog/d-b1-10.mp3",
+   "bytes": 186133,
+   "voice": "voice-02+voice-03",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-11",
+   "file": "/audio/dialog/d-b1-11.mp3",
+   "bytes": 237540,
+   "voice": "voice-02+voice-03",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-12",
+   "file": "/audio/dialog/d-b1-12.mp3",
+   "bytes": 282698,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-13",
+   "file": "/audio/dialog/d-b1-13.mp3",
+   "bytes": 207028,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-14",
+   "file": "/audio/dialog/d-b1-14.mp3",
+   "bytes": 210166,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-15",
+   "file": "/audio/dialog/d-b1-15.mp3",
+   "bytes": 226257,
+   "voice": "voice-02+voice-03",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-16",
+   "file": "/audio/dialog/d-b1-16.mp3",
+   "bytes": 203060,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-17",
+   "file": "/audio/dialog/d-b1-17.mp3",
+   "bytes": 204941,
+   "voice": "voice-02+voice-03",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-18",
+   "file": "/audio/dialog/d-b1-18.mp3",
+   "bytes": 253197,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-19",
+   "file": "/audio/dialog/d-b1-19.mp3",
+   "bytes": 274949,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-20",
+   "file": "/audio/dialog/d-b1-20.mp3",
+   "bytes": 207031,
+   "voice": "voice-02+voice-03",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-21",
+   "file": "/audio/dialog/d-b1-21.mp3",
+   "bytes": 232107,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-22",
+   "file": "/audio/dialog/d-b1-22.mp3",
+   "bytes": 191566,
+   "voice": "voice-02+voice-03",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-23",
+   "file": "/audio/dialog/d-b1-23.mp3",
+   "bytes": 206194,
+   "voice": "voice-02+voice-03",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-24",
+   "file": "/audio/dialog/d-b1-24.mp3",
+   "bytes": 228553,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-25",
+   "file": "/audio/dialog/d-b1-25.mp3",
+   "bytes": 237331,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-26",
+   "file": "/audio/dialog/d-b1-26.mp3",
+   "bytes": 204523,
+   "voice": "voice-02+voice-03",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-27",
+   "file": "/audio/dialog/d-b1-27.mp3",
+   "bytes": 233989,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-31",
+   "file": "/audio/dialog/d-b1-31.mp3",
+   "bytes": 134670,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b1-32",
+   "file": "/audio/dialog/d-b1-32.mp3",
+   "bytes": 138851,
+   "voice": "voice-01+voice-02",
+   "level": "B1",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-01",
+   "file": "/audio/dialog/d-b2-01.mp3",
+   "bytes": 189650,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-02",
+   "file": "/audio/dialog/d-b2-02.mp3",
+   "bytes": 144493,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-03",
+   "file": "/audio/dialog/d-b2-03.mp3",
+   "bytes": 131309,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-04",
+   "file": "/audio/dialog/d-b2-04.mp3",
+   "bytes": 156405,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-05",
+   "file": "/audio/dialog/d-b2-05.mp3",
+   "bytes": 153705,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-06",
+   "file": "/audio/dialog/d-b2-06.mp3",
+   "bytes": 164780,
+   "voice": "voice-01+voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 3
+  },
+  {
+   "id": "d-b2-07",
+   "file": "/audio/dialog/d-b2-07.mp3",
+   "bytes": 161211,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-08",
+   "file": "/audio/dialog/d-b2-08.mp3",
+   "bytes": 144093,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-09",
+   "file": "/audio/dialog/d-b2-09.mp3",
+   "bytes": 125702,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-10",
+   "file": "/audio/dialog/d-b2-10.mp3",
+   "bytes": 309429,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-11",
+   "file": "/audio/dialog/d-b2-11.mp3",
+   "bytes": 293131,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-12",
+   "file": "/audio/dialog/d-b2-12.mp3",
+   "bytes": 297518,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-13",
+   "file": "/audio/dialog/d-b2-13.mp3",
+   "bytes": 292502,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-14",
+   "file": "/audio/dialog/d-b2-14.mp3",
+   "bytes": 297310,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-15",
+   "file": "/audio/dialog/d-b2-15.mp3",
+   "bytes": 291040,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-16",
+   "file": "/audio/dialog/d-b2-16.mp3",
+   "bytes": 286443,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-17",
+   "file": "/audio/dialog/d-b2-17.mp3",
+   "bytes": 294801,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-18",
+   "file": "/audio/dialog/d-b2-18.mp3",
+   "bytes": 264918,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-19",
+   "file": "/audio/dialog/d-b2-19.mp3",
+   "bytes": 284353,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-20",
+   "file": "/audio/dialog/d-b2-20.mp3",
+   "bytes": 295218,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-21",
+   "file": "/audio/dialog/d-b2-21.mp3",
+   "bytes": 303996,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-22",
+   "file": "/audio/dialog/d-b2-22.mp3",
+   "bytes": 268052,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-23",
+   "file": "/audio/dialog/d-b2-23.mp3",
+   "bytes": 268469,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-24",
+   "file": "/audio/dialog/d-b2-24.mp3",
+   "bytes": 284562,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-25",
+   "file": "/audio/dialog/d-b2-25.mp3",
+   "bytes": 295428,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-26",
+   "file": "/audio/dialog/d-b2-26.mp3",
+   "bytes": 247153,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-27",
+   "file": "/audio/dialog/d-b2-27.mp3",
+   "bytes": 310510,
+   "voice": "voice-02+voice-03",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-31",
+   "file": "/audio/dialog/d-b2-31.mp3",
+   "bytes": 196127,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  },
+  {
+   "id": "d-b2-32",
+   "file": "/audio/dialog/d-b2-32.mp3",
+   "bytes": 189633,
+   "voice": "voice-01+voice-02",
+   "level": "B2",
+   "stimmen": 2
+  }
+ ]
+}

@@ -1,0 +1,1645 @@
+[
+  {
+    "id": "s-a1-01",
+    "level": "A1",
+    "de": "Hallo! Ich heiße Omar. Wie heißt du?",
+    "ar": "مرحباً! اسمي عمر. ما اسمك؟",
+    "tags": [
+      "gruß"
+    ]
+  },
+  {
+    "id": "s-a1-02",
+    "level": "A1",
+    "de": "Ich komme aus Tunesien und wohne in Tunis.",
+    "ar": "أنا من تونس وأسكن في تونس العاصمة.",
+    "tags": [
+      "vorstellen"
+    ]
+  },
+  {
+    "id": "s-a1-03",
+    "level": "A1",
+    "de": "Ich bin 27 Jahre alt und arbeite als Ingenieur.",
+    "ar": "عمري 27 وأعمل مهندساً.",
+    "tags": [
+      "vorstellen"
+    ]
+  },
+  {
+    "id": "s-a1-04",
+    "level": "A1",
+    "de": "Guten Tag! Wie geht es Ihnen?",
+    "ar": "طاب يومكم! كيف حال حضرتك؟",
+    "tags": [
+      "gruß"
+    ]
+  },
+  {
+    "id": "s-a1-05",
+    "level": "A1",
+    "de": "Danke, gut! Und dir?",
+    "ar": "شكراً، بخير! وأنت؟",
+    "tags": [
+      "gruß"
+    ]
+  },
+  {
+    "id": "s-a1-06",
+    "level": "A1",
+    "de": "Ich habe einen Bruder und zwei Schwestern.",
+    "ar": "عندي أخ وأختان.",
+    "tags": [
+      "familie"
+    ]
+  },
+  {
+    "id": "s-a1-07",
+    "level": "A1",
+    "de": "Meine Familie wohnt in Sfax.",
+    "ar": "عائلتي تسكن في صفاقس.",
+    "tags": [
+      "familie"
+    ]
+  },
+  {
+    "id": "s-a1-08",
+    "level": "A1",
+    "de": "Das ist mein Vater. Er ist Lehrer.",
+    "ar": "هذا أبي. هو معلّم.",
+    "tags": [
+      "familie"
+    ]
+  },
+  {
+    "id": "s-a1-09",
+    "level": "A1",
+    "de": "Ich stehe jeden Tag um halb sieben auf.",
+    "ar": "أقوم كل يوم في السادسة والنصف.",
+    "tags": [
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-a1-10",
+    "level": "A1",
+    "de": "Am Morgen trinke ich Kaffee und esse Brot.",
+    "ar": "صباحاً أشرب القهوة وأأكل الخبز.",
+    "tags": [
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-a1-11",
+    "level": "A1",
+    "de": "Ich fahre mit dem Bus zur Arbeit.",
+    "ar": "أذهب بالحافلة إلى العمل.",
+    "tags": [
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-a1-12",
+    "level": "A1",
+    "de": "Abends lerne ich Deutsch oder sehe einen Film.",
+    "ar": "مساءً أتعلّم الألمانية أو أشاهد فيلماً.",
+    "tags": [
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-a1-13",
+    "level": "A1",
+    "de": "Ich gehe um elf Uhr schlafen.",
+    "ar": "أنام في الحادية عشرة.",
+    "tags": [
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-a1-14",
+    "level": "A1",
+    "de": "Wie viel Uhr ist es? Es ist acht Uhr.",
+    "ar": "كم الساعة؟ الساعة الثامنة.",
+    "tags": [
+      "zeit"
+    ]
+  },
+  {
+    "id": "s-a1-15",
+    "level": "A1",
+    "de": "Das Meeting beginnt um zehn vor neun.",
+    "ar": "يبدأ اللقاء في التاسعة إلا عشر دقائق.",
+    "tags": [
+      "zeit"
+    ]
+  },
+  {
+    "id": "s-a1-16",
+    "level": "A1",
+    "de": "Meine Telefonnummer ist null eins sieben sechs.",
+    "ar": "رقم هاتفي هو 0176.",
+    "tags": [
+      "zahl"
+    ]
+  },
+  {
+    "id": "s-a1-17",
+    "level": "A1",
+    "de": "Ein Kaffee kostet drei Euro.",
+    "ar": "القهوة تكلّف ثلاثة يورو.",
+    "tags": [
+      "einkaufen"
+    ]
+  },
+  {
+    "id": "s-a1-18",
+    "level": "A1",
+    "de": "Ich möchte eine Fahrkarte nach Berlin, bitte.",
+    "ar": "أريد تذكرة إلى برلين من فضلك.",
+    "tags": [
+      "einkaufen"
+    ]
+  },
+  {
+    "id": "s-a1-19",
+    "level": "A1",
+    "de": "Das ist zu teuer! Haben Sie etwas Billigeres?",
+    "ar": "هذا غالٍ جداً! هل لديكم أرخص؟",
+    "tags": [
+      "einkaufen"
+    ]
+  },
+  {
+    "id": "s-a1-20",
+    "level": "A1",
+    "de": "Ich wohne in einer kleinen Wohnung im Zentrum.",
+    "ar": "أسكن في شقة صغيرة في الوسط.",
+    "tags": [
+      "wohnen"
+    ]
+  },
+  {
+    "id": "s-a1-21",
+    "level": "A1",
+    "de": "Meine Wohnung hat drei Zimmer und eine Küche.",
+    "ar": "شقتي فيها ثلاث غرف ومطبخ.",
+    "tags": [
+      "wohnen"
+    ]
+  },
+  {
+    "id": "s-a1-22",
+    "level": "A1",
+    "de": "Entschuldigung, wo ist der Bahnhof?",
+    "ar": "عفواً، أين محطة القطار؟",
+    "tags": [
+      "weg"
+    ]
+  },
+  {
+    "id": "s-a1-23",
+    "level": "A1",
+    "de": "Gehen Sie geradeaus und dann links.",
+    "ar": "سيروا للأمام ثم إلى اليسار.",
+    "tags": [
+      "weg"
+    ]
+  },
+  {
+    "id": "s-a1-24",
+    "level": "A1",
+    "de": "Ich spreche Arabisch, Französisch und ein bisschen Deutsch.",
+    "ar": "أتحدث العربية والفرنسية وبعض الألمانية.",
+    "tags": [
+      "sprache"
+    ]
+  },
+  {
+    "id": "s-a1-25",
+    "level": "A1",
+    "de": "Deutsch ist schwer, aber sehr interessant.",
+    "ar": "الألمانية صعبة لكنها ممتعة جداً.",
+    "tags": [
+      "sprache"
+    ]
+  },
+  {
+    "id": "s-a1-26",
+    "level": "A1",
+    "de": "Können Sie das bitte wiederholen?",
+    "ar": "هل يمكنكم إعادة ذلك من فضلكم؟",
+    "tags": [
+      "sprache"
+    ]
+  },
+  {
+    "id": "s-a1-27",
+    "level": "A1",
+    "de": "Ich verstehe das nicht. Langsamer, bitte!",
+    "ar": "لا أفهم هذا. أبطأ من فضلك!",
+    "tags": [
+      "sprache"
+    ]
+  },
+  {
+    "id": "s-a1-28",
+    "level": "A1",
+    "de": "Am Wochenende besuche ich meine Freunde.",
+    "ar": "نهاية الأسبوع أزور أصدقائي.",
+    "tags": [
+      "freizeit"
+    ]
+  },
+  {
+    "id": "s-a1-29",
+    "level": "A1",
+    "de": "Mein Hobby ist Fußball. Ich spiele jeden Freitag.",
+    "ar": "هوايتي كرة القدم. ألعب كل جمعة.",
+    "tags": [
+      "freizeit"
+    ]
+  },
+  {
+    "id": "s-a1-30",
+    "level": "A1",
+    "de": "Haben Sie Hunger? Lass uns zusammen essen!",
+    "ar": "هل أنت جائع؟ هيا نأكل معاً!",
+    "tags": [
+      "essen"
+    ]
+  },
+  {
+    "id": "s-a2-01",
+    "level": "A2",
+    "de": "Gestern habe ich meine Wohnung aufgeräumt.",
+    "ar": "أمس نظّفت شقتي.",
+    "tags": [
+      "perfekt"
+    ]
+  },
+  {
+    "id": "s-a2-02",
+    "level": "A2",
+    "de": "Am Wochenende sind wir nach Hammamet gefahren.",
+    "ar": "نهاية الأسبوع ذهبنا إلى الحمامات.",
+    "tags": [
+      "perfekt"
+    ]
+  },
+  {
+    "id": "s-a2-03",
+    "level": "A2",
+    "de": "Er ist spät aufgestanden und hat den Bus verpasst.",
+    "ar": "قام متأخراً وفاتته الحافلة.",
+    "tags": [
+      "perfekt"
+    ]
+  },
+  {
+    "id": "s-a2-04",
+    "level": "A2",
+    "de": "Wir haben im Restaurant sehr lecker gegessen.",
+    "ar": "أكلنا لذيذاً جداً في المطعم.",
+    "tags": [
+      "essen"
+    ]
+  },
+  {
+    "id": "s-a2-05",
+    "level": "A2",
+    "de": "Hast du gestern gut geschlafen?",
+    "ar": "هل نمت جيداً أمس؟",
+    "tags": [
+      "perfekt"
+    ]
+  },
+  {
+    "id": "s-a2-06",
+    "level": "A2",
+    "de": "Ich bleibe zu Hause, weil es stark regnet.",
+    "ar": "أبقى في البيت لأنه يمطر بغزارة.",
+    "tags": [
+      "weil"
+    ]
+  },
+  {
+    "id": "s-a2-07",
+    "level": "A2",
+    "de": "Ich glaube, dass die Prüfung morgen ist.",
+    "ar": "أعتقد أن الامتحان غداً.",
+    "tags": [
+      "dass"
+    ]
+  },
+  {
+    "id": "s-a2-08",
+    "level": "A2",
+    "de": "Sie sagt, dass sie keine Zeit hat.",
+    "ar": "تقول إنها ليس لديها وقت.",
+    "tags": [
+      "dass"
+    ]
+  },
+  {
+    "id": "s-a2-09",
+    "level": "A2",
+    "de": "Wenn du Zeit hast, ruf mich bitte an.",
+    "ar": "إذا كان لديك وقت فاتصل بي من فضلك.",
+    "tags": [
+      "wenn"
+    ]
+  },
+  {
+    "id": "s-a2-10",
+    "level": "A2",
+    "de": "Mein Kopf tut weh. Ich muss zum Arzt gehen.",
+    "ar": "رأسي يؤلمني. يجب أن أذهب إلى الطبيب.",
+    "tags": [
+      "gesundheit"
+    ]
+  },
+  {
+    "id": "s-a2-11",
+    "level": "A2",
+    "de": "Der Arzt hat gesagt: Nehmen Sie diese Medizin dreimal am Tag.",
+    "ar": "قال الطبيب: خذ هذا الدواء ثلاث مرات يومياً.",
+    "tags": [
+      "gesundheit"
+    ]
+  },
+  {
+    "id": "s-a2-12",
+    "level": "A2",
+    "de": "Ich muss morgen früh aufstehen, deshalb gehe ich jetzt schlafen.",
+    "ar": "يجب أن أقوم باكراً غداً لذلك أنام الآن.",
+    "tags": [
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-a2-13",
+    "level": "A2",
+    "de": "Wir möchten zwei Zimmer für drei Nächte reservieren.",
+    "ar": "نريد حجز غرفتين لثلاث ليالٍ.",
+    "tags": [
+      "reise"
+    ]
+  },
+  {
+    "id": "s-a2-14",
+    "level": "A2",
+    "de": "Der Zug nach München fährt um 14:30 Uhr von Gleis 5.",
+    "ar": "قطار ميونخ ينطلق في 14:30 من الرصيف 5.",
+    "tags": [
+      "reise"
+    ]
+  },
+  {
+    "id": "s-a2-15",
+    "level": "A2",
+    "de": "In Frankfurt müssen wir in einen anderen Zug umsteigen.",
+    "ar": "في فرانكفورت علينا تبديل القطار.",
+    "tags": [
+      "reise"
+    ]
+  },
+  {
+    "id": "s-a2-16",
+    "level": "A2",
+    "de": "Das Hotel liegt im Zentrum, gegenüber vom Bahnhof.",
+    "ar": "الفندق في الوسط، مقابل المحطة.",
+    "tags": [
+      "reise"
+    ]
+  },
+  {
+    "id": "s-a2-17",
+    "level": "A2",
+    "de": "Ich freue mich auf das Wochenende.",
+    "ar": "أتطلع بشوق إلى نهاية الأسبوع.",
+    "tags": [
+      "gefühl"
+    ]
+  },
+  {
+    "id": "s-a2-18",
+    "level": "A2",
+    "de": "Er ärgert sich über den Lärm.",
+    "ar": "يغضب من الضجيج.",
+    "tags": [
+      "gefühl"
+    ]
+  },
+  {
+    "id": "s-a2-19",
+    "level": "A2",
+    "de": "Ich möchte mich verspätet entschuldigen.",
+    "ar": "أودّ الاعتذار المتأخر.",
+    "tags": [
+      "gefühl"
+    ]
+  },
+  {
+    "id": "s-a2-20",
+    "level": "A2",
+    "de": "Herzlichen Glückwunsch zum Geburtstag!",
+    "ar": "تهانينا بمناسبة عيد الميلاد!",
+    "tags": [
+      "feier"
+    ]
+  },
+  {
+    "id": "s-a2-21",
+    "level": "A2",
+    "de": "Kommst du zu meiner Party am Samstag?",
+    "ar": "هل ستأتي إلى حفلتي يوم السبت؟",
+    "tags": [
+      "feier"
+    ]
+  },
+  {
+    "id": "s-a2-22",
+    "level": "A2",
+    "de": "Das Kleid passt mir nicht. Haben Sie eine kleinere Größe?",
+    "ar": "الفستان لا يناسبني. هل لديكم مقاس أصغر؟",
+    "tags": [
+      "einkaufen"
+    ]
+  },
+  {
+    "id": "s-a2-23",
+    "level": "A2",
+    "de": "Ich suche einen Pullover aus Wolle.",
+    "ar": "أبحث عن سترة من الصوف.",
+    "tags": [
+      "einkaufen"
+    ]
+  },
+  {
+    "id": "s-a2-24",
+    "level": "A2",
+    "de": "Im Winter ist es kalt, aber der Frühling ist schön.",
+    "ar": "الشتاء بارد لكن الربيع جميل.",
+    "tags": [
+      "wetter"
+    ]
+  },
+  {
+    "id": "s-a2-25",
+    "level": "A2",
+    "de": "Das Bild hängt über dem Sofa.",
+    "ar": "الصورة معلّقة فوق الأريكة.",
+    "tags": [
+      "wohnen"
+    ]
+  },
+  {
+    "id": "s-a2-26",
+    "level": "A2",
+    "de": "Ich stelle die Flasche in den Kühlschrank.",
+    "ar": "أضع القارورة في الثلاجة.",
+    "tags": [
+      "wohnen"
+    ]
+  },
+  {
+    "id": "s-a2-27",
+    "level": "A2",
+    "de": "Gestern musste ich länger arbeiten.",
+    "ar": "أمس اضطررت للعمل أطول.",
+    "tags": [
+      "modal"
+    ]
+  },
+  {
+    "id": "s-a2-28",
+    "level": "A2",
+    "de": "Darf ich das Fenster öffnen?",
+    "ar": "هل يُسمح لي بفتح النافذة؟",
+    "tags": [
+      "modal"
+    ]
+  },
+  {
+    "id": "s-a2-29",
+    "level": "A2",
+    "de": "Ich will nächstes Jahr in Deutschland studieren.",
+    "ar": "أريد أن أدرس في ألمانيا العام القادم.",
+    "tags": [
+      "plan"
+    ]
+  },
+  {
+    "id": "s-a2-30",
+    "level": "A2",
+    "de": "Sollen wir am Sonntag eine Ausflug machen?",
+    "ar": "هل نقوم بنزهة يوم الأحد؟",
+    "tags": [
+      "plan"
+    ]
+  },
+  {
+    "id": "s-b1-01",
+    "level": "B1",
+    "de": "Meiner Meinung nach sollten Handys im Unterricht verboten werden.",
+    "ar": "في رأيي يجب حظر الهواتف في الحصص.",
+    "tags": [
+      "meinung"
+    ]
+  },
+  {
+    "id": "s-b1-02",
+    "level": "B1",
+    "de": "Ich würde dir raten, erst eine neue Stelle zu suchen.",
+    "ar": "أنصحك أولاً بالبحث عن منصب جديد.",
+    "tags": [
+      "rat"
+    ]
+  },
+  {
+    "id": "s-b1-03",
+    "level": "B1",
+    "de": "Könnten Sie mir bitte bei den Formularen helfen?",
+    "ar": "هل يمكنكم مساعدتي في الاستمارات؟",
+    "tags": [
+      "konj2"
+    ]
+  },
+  {
+    "id": "s-b1-04",
+    "level": "B1",
+    "de": "Wenn ich mehr Zeit hätte, würde ich mehr reisen.",
+    "ar": "لو كان لدي وقت أكثر لسافرت أكثر.",
+    "tags": [
+      "konj2"
+    ]
+  },
+  {
+    "id": "s-b1-05",
+    "level": "B1",
+    "de": "Obwohl es geregnet hat, sind wir spazieren gegangen.",
+    "ar": "رغم أنها أمطرت خرجنا نتمشّى.",
+    "tags": [
+      "konnektor"
+    ]
+  },
+  {
+    "id": "s-b1-06",
+    "level": "B1",
+    "de": "Es hat geregnet. Trotzdem sind wir ausgegangen.",
+    "ar": "أمطرت. ومع ذلك خرجنا.",
+    "tags": [
+      "konnektor"
+    ]
+  },
+  {
+    "id": "s-b1-07",
+    "level": "B1",
+    "de": "Die Luft ist verschmutzt, deshalb fordern die Bürger mehr Radwege.",
+    "ar": "الهواء ملوّث لذلك يطالب المواطنون بممرات دراجات أكثر.",
+    "tags": [
+      "umwelt"
+    ]
+  },
+  {
+    "id": "s-b1-08",
+    "level": "B1",
+    "de": "Der Klimawandel ist eine der größten Herausforderungen.",
+    "ar": "التغيّر المناخي من أكبر التحديات.",
+    "tags": [
+      "umwelt"
+    ]
+  },
+  {
+    "id": "s-b1-09",
+    "level": "B1",
+    "de": "Jeder sollte Rücksicht auf die Umwelt nehmen.",
+    "ar": "على الجميع أن يراعي البيئة.",
+    "tags": [
+      "umwelt"
+    ]
+  },
+  {
+    "id": "s-b1-10",
+    "level": "B1",
+    "de": "Das ist der Kollege, der neben mir im Büro arbeitet.",
+    "ar": "هذا الزميل الذي يعمل بجانبي في المكتب.",
+    "tags": [
+      "relativ"
+    ]
+  },
+  {
+    "id": "s-b1-11",
+    "level": "B1",
+    "de": "Die Stelle, um die ich mich bewerbe, ist sehr interessant.",
+    "ar": "المنصب الذي أتقدّم إليه مثير جداً.",
+    "tags": [
+      "relativ"
+    ]
+  },
+  {
+    "id": "s-b1-12",
+    "level": "B1",
+    "de": "Ich habe drei Jahre Erfahrung, die ich in Tunesien gesammelt habe.",
+    "ar": "لديّ ثلاث سنوات خبرة اكتسبتها في تونس.",
+    "tags": [
+      "relativ"
+    ]
+  },
+  {
+    "id": "s-b1-13",
+    "level": "B1",
+    "de": "Nachdem er gegessen hatte, hat er mich angerufen.",
+    "ar": "بعدما أكل اتصل بي.",
+    "tags": [
+      "plusquam"
+    ]
+  },
+  {
+    "id": "s-b1-14",
+    "level": "B1",
+    "de": "Ich weiß nicht, wann der nächste Bus kommt.",
+    "ar": "لا أعرف متى تأتي الحافلة القادمة.",
+    "tags": [
+      "indirekt"
+    ]
+  },
+  {
+    "id": "s-b1-15",
+    "level": "B1",
+    "de": "Er fragte, ob ich am Montag Zeit hätte.",
+    "ar": "سأل إن كان لدي وقت يوم الاثنين.",
+    "tags": [
+      "indirekt"
+    ]
+  },
+  {
+    "id": "s-b1-16",
+    "level": "B1",
+    "de": "In unserer Firma wird viel gearbeitet.",
+    "ar": "في شركتنا يُعمل كثيراً (مبني للمجهول).",
+    "tags": [
+      "passiv"
+    ]
+  },
+  {
+    "id": "s-b1-17",
+    "level": "B1",
+    "de": "Die Prüfung besteht aus vier Teilen.",
+    "ar": "الامتحان مؤلّف من أربعة أقسام.",
+    "tags": [
+      "pruefung"
+    ]
+  },
+  {
+    "id": "s-b1-18",
+    "level": "B1",
+    "de": "Ich habe die Prüfung bestanden, weil ich jeden Tag gelernt habe.",
+    "ar": "اجتزت الامتحان لأنني تعلّمت كل يوم.",
+    "tags": [
+      "pruefung"
+    ]
+  },
+  {
+    "id": "s-b1-19",
+    "level": "B1",
+    "de": "Auf der einen Seite ist das Internet praktisch, auf der anderen Seite gefährlich.",
+    "ar": "من جهة الإنترنت عملي، ومن جهة أخرى خطير.",
+    "tags": [
+      "diskussion"
+    ]
+  },
+  {
+    "id": "s-b1-20",
+    "level": "B1",
+    "de": "Ich bin der Meinung, dass Bildung die beste Investition ist.",
+    "ar": "أنا على رأي بأن التعليم أفضل استثمار.",
+    "tags": [
+      "diskussion"
+    ]
+  },
+  {
+    "id": "s-b1-21",
+    "level": "B1",
+    "de": "Können wir das Problem gemeinsam lösen?",
+    "ar": "هل يمكننا حلّ المشكلة معاً؟",
+    "tags": [
+      "arbeit"
+    ]
+  },
+  {
+    "id": "s-b1-21b",
+    "level": "B1",
+    "de": "Er hat eine Entscheidung getroffen, die sein Leben verändert hat.",
+    "ar": "اتّخذ قراراً غيّر حياته.",
+    "tags": [
+      "arbeit"
+    ]
+  },
+  {
+    "id": "s-b1-22",
+    "level": "B1",
+    "de": "Die Bewerbung sollte einen Lebenslauf und ein Anschreiben enthalten.",
+    "ar": "يجب أن يحتوي الطلب على سيرة ذاتية وخطاب.",
+    "tags": [
+      "arbeit"
+    ]
+  },
+  {
+    "id": "s-b1-23",
+    "level": "B1",
+    "de": "Ich möchte meine Erfahrungen mit Ihnen teilen.",
+    "ar": "أودّ مشاركة تجاربي معكم.",
+    "tags": [
+      "erzaehlen"
+    ]
+  },
+  {
+    "id": "s-b1-24",
+    "level": "B1",
+    "de": "Bevor ich kam, hatte er schon dreimal versucht.",
+    "ar": "قبل أن آتي كان قد حاول ثلاث مرات.",
+    "tags": [
+      "plusquam"
+    ]
+  },
+  {
+    "id": "s-b1-25",
+    "level": "B1",
+    "de": "Man sollte die öffentlichen Verkehrsmittel verbessern.",
+    "ar": "ينبغي تحسين وسائل النقل العام.",
+    "tags": [
+      "umwelt"
+    ]
+  },
+  {
+    "id": "s-b1-26",
+    "level": "B1",
+    "de": "Die Zeitung berichtet über die neue Reform.",
+    "ar": "الجريدة تبلّغ عن الإصلاح الجديد.",
+    "tags": [
+      "medien"
+    ]
+  },
+  {
+    "id": "s-b1-27",
+    "level": "B1",
+    "de": "Zusammenfassend lässt sich sagen, dass beide Seiten Recht haben.",
+    "ar": "خلاصة القول إن الطرفين محقّان.",
+    "tags": [
+      "schreiben"
+    ]
+  },
+  {
+    "id": "s-b1-28",
+    "level": "B1",
+    "de": "Ich fühle mich hier wohl, weil die Leute freundlich sind.",
+    "ar": "أشعر بالراحة هنا لأن الناس ودودون.",
+    "tags": [
+      "gefühl"
+    ]
+  },
+  {
+    "id": "s-b1-29",
+    "level": "B1",
+    "de": "Hätte ich das gewusst, wäre ich früher gekommen!",
+    "ar": "لو كنت أعلم لأتيت أبكر!",
+    "tags": [
+      "konj2"
+    ]
+  },
+  {
+    "id": "s-b1-30",
+    "level": "B1",
+    "de": "Mein Plan ist es, nächstes Jahr die B1-Prüfung zu machen.",
+    "ar": "خطتي أن أخوض امتحان B1 العام القادم.",
+    "tags": [
+      "plan"
+    ]
+  },
+  {
+    "id": "s-b2-01",
+    "level": "B2",
+    "de": "Der Minister sagte, die Lage sei stabil.",
+    "ar": "قال وزير إن الوضع مستقر.",
+    "tags": [
+      "indirekte-rede"
+    ]
+  },
+  {
+    "id": "s-b2-02",
+    "level": "B2",
+    "de": "Die Expertin erklärte, die Studie habe neue Zusammenhänge gezeigt.",
+    "ar": "أوضحت الخبيرة أن الدراسة أظهرت ترابطات جديدة.",
+    "tags": [
+      "indirekte-rede"
+    ]
+  },
+  {
+    "id": "s-b2-03",
+    "level": "B2",
+    "de": "Die Zeugen berichteten, sie hätten nichts Verdächtiges gesehen.",
+    "ar": "أفاد الشهود بأنهم لم يروا شيئاً مريبًا.",
+    "tags": [
+      "indirekte-rede"
+    ]
+  },
+  {
+    "id": "s-b2-04",
+    "level": "B2",
+    "de": "Die Opposition stellte die Zahlen in Frage.",
+    "ar": "شكّكت المعارضة في الأرقام.",
+    "tags": [
+      "funktionsverb"
+    ]
+  },
+  {
+    "id": "s-b2-05",
+    "level": "B2",
+    "de": "Die Regierung hat eine wichtige Entscheidung getroffen.",
+    "ar": "اتّخذت الحكومة قراراً مهماً.",
+    "tags": [
+      "funktionsverb"
+    ]
+  },
+  {
+    "id": "s-b2-06",
+    "level": "B2",
+    "de": "Digitalisierung spielt in der Bildung eine zentrale Rolle.",
+    "ar": "الرقمنة تلعب دوراً محورياً في التعليم.",
+    "tags": [
+      "funktionsverb"
+    ]
+  },
+  {
+    "id": "s-b2-07",
+    "level": "B2",
+    "de": "Er kam, ohne sich zu entschuldigen.",
+    "ar": "جاء دون أن يعتذر.",
+    "tags": [
+      "infinitiv"
+    ]
+  },
+  {
+    "id": "s-b2-08",
+    "level": "B2",
+    "de": "Sie lernt täglich, um die Prüfung zu bestehen.",
+    "ar": "تدرس يومياً لتجتاز الامتحان.",
+    "tags": [
+      "infinitiv"
+    ]
+  },
+  {
+    "id": "s-b2-09",
+    "level": "B2",
+    "de": "Es ist wichtig, die Quellen kritisch zu prüfen.",
+    "ar": "من المهم فحص المصادر نقدياً.",
+    "tags": [
+      "infinitiv"
+    ]
+  },
+  {
+    "id": "s-b2-10",
+    "level": "B2",
+    "de": "Die von der Regierung beschlossenen Maßnahmen wirken spürbar.",
+    "ar": "الإجراءات التي اعتمدتها الحكومة تظهر آثارها.",
+    "tags": [
+      "partizip"
+    ]
+  },
+  {
+    "id": "s-b2-11",
+    "level": "B2",
+    "de": "Das ist ein in vielen Studien belegter Zusammenhang.",
+    "ar": "هذا ترابط مثبت في دراسات كثيرة.",
+    "tags": [
+      "partizip"
+    ]
+  },
+  {
+    "id": "s-b2-12",
+    "level": "B2",
+    "de": "Hätte ich früher angefangen, wäre ich jetzt weiter.",
+    "ar": "لو كنت بدأت أبكر لكنت الآن أبعد.",
+    "tags": [
+      "bedingung"
+    ]
+  },
+  {
+    "id": "s-b2-13",
+    "level": "B2",
+    "de": "Falls Sie Hilfe brauchen, wenden Sie sich bitte an uns.",
+    "ar": "إذا احتجتم مساعدة رجاءً راسلونا.",
+    "tags": [
+      "bedingung"
+    ]
+  },
+  {
+    "id": "s-b2-14",
+    "level": "B2",
+    "de": "Unter der Bedingung, dass alle zustimmen, beginnen wir morgen.",
+    "ar": "بشرط موافقة الجميع نبدأ غداً.",
+    "tags": [
+      "bedingung"
+    ]
+  },
+  {
+    "id": "s-b2-15",
+    "level": "B2",
+    "de": "Sofern keine Einwände vorliegen, gilt der Vertrag als verlängert.",
+    "ar": "ما لم توجد اعتبارات، يُعدّ العقد مجدداً.",
+    "tags": [
+      "konnektor"
+    ]
+  },
+  {
+    "id": "s-b2-16",
+    "level": "B2",
+    "de": "Obgleich die Daten begrenzt sind, lassen sich Tendenzen erkennen.",
+    "ar": "رغم محدودية البيانات يمكن استخلاص اتجاهات.",
+    "tags": [
+      "konnektor"
+    ]
+  },
+  {
+    "id": "s-b2-17",
+    "level": "B2",
+    "de": "Die Auswirkungen des Klimawandels sind kaum noch zu leugnen.",
+    "ar": "انعكاسات التغيّر المناخي يصعب إنكارها.",
+    "tags": [
+      "umwelt"
+    ]
+  },
+  {
+    "id": "s-b2-18",
+    "level": "B2",
+    "de": "Nachhaltige Entwicklung setzt langfristiges Denken voraus.",
+    "ar": "التنمية المستدامة تستلزم تفكيراً بعيد المدى.",
+    "tags": [
+      "umwelt"
+    ]
+  },
+  {
+    "id": "s-b2-19",
+    "level": "B2",
+    "de": "Der Artikel wirft mehr Fragen auf, als er beantwortet.",
+    "ar": "المقال يطرح أسئلة أكثر مما يجيب.",
+    "tags": [
+      "kritik"
+    ]
+  },
+  {
+    "id": "s-b2-20",
+    "level": "B2",
+    "de": "Meines Erachtens wird die Debatte zu einseitig geführt.",
+    "ar": "في اعتقادي يُدار النقاش بانحياز.",
+    "tags": [
+      "kritik"
+    ]
+  },
+  {
+    "id": "s-b2-21",
+    "level": "B2",
+    "de": "Zusammenfassend lässt sich festhalten: ohne Investitionen droht Stillstand.",
+    "ar": "خلاصة: بدون استثمارات يهدّد الركود.",
+    "tags": [
+      "schreiben"
+    ]
+  },
+  {
+    "id": "s-b2-22",
+    "level": "B2",
+    "de": "Die Anforderungen an moderne Berufe sind gestiegen.",
+    "ar": "ارتفعت متطلبات المهن الحديثة.",
+    "tags": [
+      "arbeit"
+    ]
+  },
+  {
+    "id": "s-b2-23",
+    "level": "B2",
+    "de": "Sie hat das Projekt erfolgreich abgeschlossen.",
+    "ar": "أنهت المشروع بنجاح.",
+    "tags": [
+      "arbeit"
+    ]
+  },
+  {
+    "id": "s-b2-24",
+    "level": "B2",
+    "de": "Wobei zu berücksichtigen ist, dass die Studie nur 200 Personen umfasste.",
+    "ar": "مع مراعاة أن الدراسة شملت 200 شخص فقط.",
+    "tags": [
+      "konnektor"
+    ]
+  },
+  {
+    "id": "s-b2-25",
+    "level": "B2",
+    "de": "Es gibt keinen plausiblen Grund, diese Reform abzulehnen.",
+    "ar": "لا يوجد سبب معقول لرفض هذا الإصلاح.",
+    "tags": [
+      "argument"
+    ]
+  },
+  {
+    "id": "s-b2-26",
+    "level": "B2",
+    "de": "Angeblich hat der Konzern die Zahlen geschönt.",
+    "ar": "من المزعوم أن الشركة صفّحت الأرقام.",
+    "tags": [
+      "medien"
+    ]
+  },
+  {
+    "id": "s-b2-27",
+    "level": "B2",
+    "de": "Eine fundierte Schlussfolgerung erfordert belastbare Daten.",
+    "ar": "الاستنتاج الراسخ يتطلب بيانات موثوقة.",
+    "tags": [
+      "argument"
+    ]
+  },
+  {
+    "id": "s-b2-28",
+    "level": "B2",
+    "de": "Wer Verantwortung übernimmt, muss auch Konsequenzen tragen.",
+    "ar": "من يتحمّل المسؤولية عليه أن يتحمّل النتائج.",
+    "tags": [
+      "gesellschaft"
+    ]
+  },
+  {
+    "id": "s-b2-29",
+    "level": "B2",
+    "de": "Die Fähigkeit zur Selbstkritik ist die Voraussetzung für Fortschritt.",
+    "ar": "القدرة على النقد الذاتي شط المقدّم (شرط التقدّم).",
+    "tags": [
+      "gesellschaft"
+    ]
+  },
+  {
+    "id": "s-b2-30",
+    "level": "B2",
+    "de": "Im Hinblick auf die demografische Entwicklung brauchen wir neue Konzepte.",
+    "ar": "في ضوء التطور الديموغرافي نحتاج مفاهيم جديدة.",
+    "tags": [
+      "gesellschaft"
+    ]
+  },
+  {
+    "id": "s-a1-31",
+    "level": "A1",
+    "de": "Entschuldigen Sie bitte, ich habe eine Frage.",
+    "ar": "عفواً من فضلك، لديّ سؤال.",
+    "tags": [
+      "sprache"
+    ]
+  },
+  {
+    "id": "s-a1-32",
+    "level": "A1",
+    "de": "Wo ist die Toilette, bitte?",
+    "ar": "أين المرحاض من فضلك؟",
+    "tags": [
+      "weg"
+    ]
+  },
+  {
+    "id": "s-a1-33",
+    "level": "A1",
+    "de": "Ich hätte gern eine Tasse Tee.",
+    "ar": "أودّ فنجان شاي.",
+    "tags": [
+      "essen"
+    ]
+  },
+  {
+    "id": "s-a1-34",
+    "level": "A1",
+    "de": "Der Bus fährt um zehn Uhr ab.",
+    "ar": "الحافلة تنطلق في العاشرة.",
+    "tags": [
+      "zeit"
+    ]
+  },
+  {
+    "id": "s-a1-35",
+    "level": "A1",
+    "de": "Meine Schwester studiert Medizin in Sousse.",
+    "ar": "أختي تدرس الطب في سوسة.",
+    "tags": [
+      "familie"
+    ]
+  },
+  {
+    "id": "s-a1-36",
+    "level": "A1",
+    "de": "Kann ich mit Karte bezahlen?",
+    "ar": "هل يمكنني الدفع بالبطاقة؟",
+    "tags": [
+      "einkaufen"
+    ]
+  },
+  {
+    "id": "s-a1-37",
+    "level": "A1",
+    "de": "Das Wetter heute ist schön und sonnig.",
+    "ar": "طقس اليوم جميل ومشمس.",
+    "tags": [
+      "wetter"
+    ]
+  },
+  {
+    "id": "s-a1-38",
+    "level": "A1",
+    "de": "Bis morgen! Schlaf gut!",
+    "ar": "إلى الغد! نُم جيداً!",
+    "tags": [
+      "gruß"
+    ]
+  },
+  {
+    "id": "s-a2-31",
+    "level": "A2",
+    "de": "Ich habe lange geschlafen, weil ich gestern sehr müde war.",
+    "ar": "نمت طويلاً لأنني كنت متعباً جداً أمس.",
+    "tags": [
+      "perfekt"
+    ]
+  },
+  {
+    "id": "s-a2-32",
+    "level": "A2",
+    "de": "Nach dem Essen sind wir spazieren gegangen.",
+    "ar": "بعد الأكل خرجنا نتمشّى.",
+    "tags": [
+      "perfekt"
+    ]
+  },
+  {
+    "id": "s-a2-33",
+    "level": "A2",
+    "de": "Hast du die Nachricht schon geschrieben?",
+    "ar": "هل كتبت الرسالة بعد؟",
+    "tags": [
+      "perfekt"
+    ]
+  },
+  {
+    "id": "s-a2-34",
+    "level": "A2",
+    "de": "Sie hat sich über das Geschenk sehr gefreut.",
+    "ar": "فرحتِ بالهدية كثيراً.",
+    "tags": [
+      "gefühl"
+    ]
+  },
+  {
+    "id": "s-a2-35",
+    "level": "A2",
+    "de": "Wir müssen uns beeilen, sonst verpassen wir den Zug.",
+    "ar": "علينا الإسراع وإلا فاتنا القطار.",
+    "tags": [
+      "reise"
+    ]
+  },
+  {
+    "id": "s-a2-36",
+    "level": "A2",
+    "de": "Am Flughafen mussten wir lange warten.",
+    "ar": "في المطار اضطررنا للانتظار طويلاً.",
+    "tags": [
+      "reise"
+    ]
+  },
+  {
+    "id": "s-a2-37",
+    "level": "A2",
+    "de": "Können Sie mir bitte den Weg zum Museum zeigen?",
+    "ar": "هل يمكنك إرشادي إلى المتحف؟",
+    "tags": [
+      "weg"
+    ]
+  },
+  {
+    "id": "s-a2-38",
+    "level": "A2",
+    "de": "Am Montag habe ich einen Termin beim Zahnarzt.",
+    "ar": "يوم الاثنين لديّ موعد عند طبيب الأسنان.",
+    "tags": [
+      "gesundheit"
+    ]
+  },
+  {
+    "id": "s-b1-31",
+    "level": "B1",
+    "de": "Es ist keine Frage, dass Bildung Chancen öffnet.",
+    "ar": "لا شك أن التعليم يفتح الفرص.",
+    "tags": [
+      "diskussion"
+    ]
+  },
+  {
+    "id": "s-b1-32",
+    "level": "B1",
+    "de": "Ich bin davon überzeugt, dass wir das schaffen.",
+    "ar": "أنا مقتنع بأننا سننجح.",
+    "tags": [
+      "meinung"
+    ]
+  },
+  {
+    "id": "s-b1-33",
+    "level": "B1",
+    "de": "Die Ergebnisse deuten darauf hin, dass sich die Lage verbessert.",
+    "ar": "تشير النتائج إلى تحسّن الوضع.",
+    "tags": [
+      "medien"
+    ]
+  },
+  {
+    "id": "s-b1-34",
+    "level": "B1",
+    "de": "Wenn ich du wäre, würde ich das Angebot annehmen.",
+    "ar": "لو كنت مكانك لقبلتُ العرض.",
+    "tags": [
+      "konj2"
+    ]
+  },
+  {
+    "id": "s-b1-35",
+    "level": "B1",
+    "de": "Das hängt davon ab, wie viel Zeit wir haben.",
+    "ar": "ذلك يعتمد على الوقت المتوفر لدينا.",
+    "tags": [
+      "konnektor"
+    ]
+  },
+  {
+    "id": "s-b1-36",
+    "level": "B1",
+    "de": "Er hat den Job bekommen, weil er überzeugend aufgetreten ist.",
+    "ar": "حصل على الوظيفة لأنه ظهر مقنعاً.",
+    "tags": [
+      "arbeit"
+    ]
+  },
+  {
+    "id": "s-b1-37",
+    "level": "B1",
+    "de": "Bevor ich zusage, möchte ich den Vertrag lesen.",
+    "ar": "قبل الموافقة أريد قراءة العقد.",
+    "tags": [
+      "arbeit"
+    ]
+  },
+  {
+    "id": "s-b1-38",
+    "level": "B1",
+    "de": "Mein Plan ist es, nächstes Jahr die Prüfung zu machen.",
+    "ar": "خطتي أن أخوض الامتحان العام القادم.",
+    "tags": [
+      "plan"
+    ]
+  },
+  {
+    "id": "s-b2-31",
+    "level": "B2",
+    "de": "Der Bericht legt nahe, dass Reformen unvermeidlich sind.",
+    "ar": "يرجّح التقرير أن الإصلاحات لا مفرّ منها.",
+    "tags": [
+      "argument"
+    ]
+  },
+  {
+    "id": "s-b2-32",
+    "level": "B2",
+    "de": "Angesichts der Entwicklung müssen wir umdenken.",
+    "ar": "في ضوء التطور يجب علينا إعادة التفكير.",
+    "tags": [
+      "argument"
+    ]
+  },
+  {
+    "id": "s-b2-33",
+    "level": "B2",
+    "de": "Die Regierung hat angekündigt, die Ziele zu überprüfen.",
+    "ar": "أعلنت الحكومة أنها ستراجع الأهداف.",
+    "tags": [
+      "indirekte-rede"
+    ]
+  },
+  {
+    "id": "s-b2-34",
+    "level": "B2",
+    "de": "Es bleibt abzuwarten, ob die Maßnahmen greifen.",
+    "ar": "يبقى في الانتظار معرفة ما إذا كانت الإجراءات تنفع.",
+    "tags": [
+      "konnektor"
+    ]
+  },
+  {
+    "id": "s-b2-35",
+    "level": "B2",
+    "de": "Im Vergleich zum Vorjahr ist die Bilanz positiv.",
+    "ar": "مقارنة بالعام الماضي الحصيلة إيجابية.",
+    "tags": [
+      "argument"
+    ]
+  },
+  {
+    "id": "s-b2-36",
+    "level": "B2",
+    "de": "Sollte sich nichts ändern, droht eine Krise.",
+    "ar": "إن لم يتغيّر شيء تهدّد أزمة.",
+    "tags": [
+      "bedingung"
+    ]
+  },
+  {
+    "id": "s-b2-37",
+    "level": "B2",
+    "de": "Dieser Ansatz setzt voraus, dass alle mitwirken.",
+    "ar": "هذا المنهج يفترض مشاركة الجميع.",
+    "tags": [
+      "argument"
+    ]
+  },
+  {
+    "id": "s-b2-38",
+    "level": "B2",
+    "de": "Zusammenfassend lässt sich sagen: Prävention ist billiger als Reparatur.",
+    "ar": "خلاصة القول: الوقاية أرخص من العلاج.",
+    "tags": [
+      "schreiben"
+    ]
+  },
+  {
+    "id": "s-a2-39",
+    "level": "A2",
+    "de": "Ich rufe dich an, wenn ich zu Hause bin.",
+    "ar": "سأتصل بك عندما أكون في البيت.",
+    "tags": [
+      "neben",
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-a2-40",
+    "level": "A2",
+    "de": "Gestern haben wir im Park Fußball gespielt.",
+    "ar": "أمس لعبنا كرة القدم في الحديقة.",
+    "tags": [
+      "perfekt",
+      "freizeit"
+    ]
+  },
+  {
+    "id": "s-a2-41",
+    "level": "A2",
+    "de": "Meine Schwester kann sehr gut kochen.",
+    "ar": "أختي تجيد الطبخ كثيراً.",
+    "tags": [
+      "modal",
+      "familie"
+    ]
+  },
+  {
+    "id": "s-a2-42",
+    "level": "A2",
+    "de": "Wir müssen heute früher aufstehen.",
+    "ar": "علينا الاستيقاظ أبكر اليوم.",
+    "tags": [
+      "modal",
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-a2-43",
+    "level": "A2",
+    "de": "Ich habe keine Zeit, weil ich arbeiten muss.",
+    "ar": "ليس لديّ وقت لأن عليّ أن أعمل.",
+    "tags": [
+      "weil",
+      "arbeit"
+    ]
+  },
+  {
+    "id": "s-a2-44",
+    "level": "A2",
+    "de": "Kannst du mir bitte das Salz geben?",
+    "ar": "هل يمكنك أن تعطيني الملح من فضلك؟",
+    "tags": [
+      "bitte",
+      "dativ"
+    ]
+  },
+  {
+    "id": "s-a2-45",
+    "level": "A2",
+    "de": "Am Wochenende besuchen wir unsere Großeltern.",
+    "ar": "في نهاية الأسبوع نزور أجدادنا.",
+    "tags": [
+      "familie",
+      "zeit"
+    ]
+  },
+  {
+    "id": "s-a2-46",
+    "level": "A2",
+    "de": "Ich möchte einen Termin beim Zahnarzt machen.",
+    "ar": "أودّ أن أحجز موعداً عند طبيب الأسنان.",
+    "tags": [
+      "termin",
+      "arzt"
+    ]
+  },
+  {
+    "id": "s-a2-47",
+    "level": "A2",
+    "de": "Nach der Arbeit gehe ich immer einkaufen.",
+    "ar": "بعد العمل أذهب دائماً للتسوّق.",
+    "tags": [
+      "trennbar",
+      "alltag"
+    ]
+  },
+  {
+    "id": "s-b1-40",
+    "level": "B1",
+    "de": "Ich bin der Meinung, dass wir mehr Sport machen sollten.",
+    "ar": "أرى أن علينا ممارسة رياضة أكثر.",
+    "tags": [
+      "meinung",
+      "dass"
+    ]
+  },
+  {
+    "id": "s-b1-41",
+    "level": "B1",
+    "de": "Das Buch, das ich dir geliehen habe, war sehr spannend.",
+    "ar": "الكتاب الذي أعرتُك إياه كان مشوقاً جداً.",
+    "tags": [
+      "relativ"
+    ]
+  },
+  {
+    "id": "s-b1-42",
+    "level": "B1",
+    "de": "Obwohl es geregnet hat, sind wir spazieren gegangen.",
+    "ar": "رغم أنها أمطرت مشينا في نزهة.",
+    "tags": [
+      "konjunktor",
+      "perfekt"
+    ]
+  },
+  {
+    "id": "s-b1-43",
+    "level": "B1",
+    "de": "Wenn ich mehr Zeit hätte, würde ich eine neue Sprache lernen.",
+    "ar": "لو كان لديّ وقت أكثر لتعلّمت لغة جديدة.",
+    "tags": [
+      "konj2",
+      "bedingung"
+    ]
+  },
+  {
+    "id": "s-b1-44",
+    "level": "B1",
+    "de": "Er hat mir versprochen, pünktlich zu kommen.",
+    "ar": "وعدني أن يأتي في الموعد.",
+    "tags": [
+      "infinitiv"
+    ]
+  },
+  {
+    "id": "s-b1-45",
+    "level": "B1",
+    "de": "Die Entscheidung hängt von deiner Zeit ab.",
+    "ar": "القرار يعتمد على وقتك.",
+    "tags": [
+      "verb-praep",
+      "trennbar"
+    ]
+  },
+  {
+    "id": "s-b1-46",
+    "level": "B1",
+    "de": "Meiner Meinung nach ist das Problem nicht so einfach.",
+    "ar": "في رأيي المشكلة ليست بهذه البساطة.",
+    "tags": [
+      "meinung",
+      "genitiv"
+    ]
+  },
+  {
+    "id": "s-b1-47",
+    "level": "B1",
+    "de": "Ich würde gern wissen, wie der neue Kurs funktioniert.",
+    "ar": "أودّ أن أعرف كيف يسير الدورة الجديدة.",
+    "tags": [
+      "konj2",
+      "indirekt"
+    ]
+  },
+  {
+    "id": "s-b1-48",
+    "level": "B1",
+    "de": "Trotz des schlechten Wetters haben wir den Ausflug gemacht.",
+    "ar": "رغم سوء الطقس أقمنا الرحلة.",
+    "tags": [
+      "genitiv",
+      "konjunktor"
+    ]
+  },
+  {
+    "id": "s-b2-39",
+    "level": "B2",
+    "de": "Es wird behauptet, dass die Reformen keine Wirkung zeigen.",
+    "ar": "يُزعم أن الإصلاحات لا تُظهر أثراً.",
+    "tags": [
+      "passiv",
+      "indirekte"
+    ]
+  },
+  {
+    "id": "s-b2-40",
+    "level": "B2",
+    "de": "Hätte man früher eingegriffen, wäre die Lage nicht so kritisch geworden.",
+    "ar": "لو تدخّلنا مبكراً لما أصبح الوضع بهذا الخطورة.",
+    "tags": [
+      "konj2",
+      "bedingung"
+    ]
+  },
+  {
+    "id": "s-b2-41",
+    "level": "B2",
+    "de": "Die Forschungsergebnisse, die letzte Woche veröffentlicht wurden, widersprechen dieser Theorie.",
+    "ar": "نتائج الأبحاث التي نُشرت الأسبوع الماضي تناقض هذه النظرية.",
+    "tags": [
+      "relativ",
+      "partizip"
+    ]
+  },
+  {
+    "id": "s-b2-42",
+    "level": "B2",
+    "de": "Angesichts der neuen Lage müssen wir unsere Pläne überdenken.",
+    "ar": "في ظل الوضع الجديد علينا إعادة النظر في خططنا.",
+    "tags": [
+      "funktion",
+      "konstruktion"
+    ]
+  },
+  {
+    "id": "s-b2-43",
+    "level": "B2",
+    "de": "Man soll nicht alles glauben, was in den Medien steht.",
+    "ar": "لا ينبغي تصديق كل ما يُنشر في الإعلام.",
+    "tags": [
+      "modal",
+      "relativ"
+    ]
+  },
+  {
+    "id": "s-b2-44",
+    "level": "B2",
+    "de": "Je mehr ich übe, desto sicherer werde ich beim Sprechen.",
+    "ar": "كلما تدربت أكثر صرت أكثر ثقة في التحدث.",
+    "tags": [
+      "vergleich"
+    ]
+  },
+  {
+    "id": "s-b2-45",
+    "level": "B2",
+    "de": "Das setzt voraus, dass alle Beteiligten rechtzeitig informiert werden.",
+    "ar": "هذا يفترض إبلاغ جميع المعنيين في الوقت المناسب.",
+    "tags": [
+      "dass",
+      "passiv"
+    ]
+  },
+  {
+    "id": "s-b2-46",
+    "level": "B2",
+    "de": "Er tut so, als hätte er nichts davon gewusst.",
+    "ar": "يتصرف كما لو أنه لم يكن يعلم بشيء.",
+    "tags": [
+      "konj2"
+    ]
+  },
+  {
+    "id": "s-b2-47",
+    "level": "B2",
+    "de": "Anstatt sich zu beschweren, könnte er einfach mithelfen.",
+    "ar": "بدل أن يشتكي، كان بإمكانه أن يساعد ببساطة.",
+    "tags": [
+      "infinitiv",
+      "konstruktion"
+    ]
+  }
+]

@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #faf7f2;
+  --color-paper2: #f3efe7;
+  --color-ink: #1c1917;
+  --color-ink2: #57534e;
+  --color-cola: #7c2d12;
+  --color-cola-soft: #fef2f0;
+  --color-gold: #d97706;
+  --color-gold-soft: #fffbeb;
+  --color-a1: #059669;
+  --color-a2: #0284c7;
+  --color-b1: #d97706;
+  --color-b2: #7c3aed;
+  --color-line: #e7e2d8;
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Tahoma, Arial, sans-serif;
+  --shadow-soft: 0 1px 2px rgb(28 25 23 / 0.05), 0 8px 24px -12px rgb(28 25 23 / 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* German text snippets inside RTL pages */
+.de {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.6rem 1.1rem;
+  font-weight: 600;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--color-cola);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  background: #9a3412;
+}
+.btn-ghost {
+  background: white;
+  border-color: var(--color-line);
+  color: var(--color-ink);
+}
+.btn-ghost:hover:not(:disabled) {
+  border-color: var(--color-cola);
+  color: var(--color-cola);
+}
+.btn-gold {
+  background: var(--color-gold);
+  color: #fff;
+}
+.btn-gold:hover:not(:disabled) {
+  background: #b45309;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--color-line);
+  background: white;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: white;
+  font-size: 1rem;
+}
+.field:focus {
+  outline: 2px solid var(--color-cola);
+  outline-offset: 1px;
+}
+
+.rtl-num {
+  font-variant-numeric: tabular-nums;
+}
+
+.progressbar {
+  height: 0.6rem;
+  background: var(--color-paper2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.progressbar > div {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.fadein {
+  animation: fadein 0.35s ease;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ═══ الاستجابة — جولة كل الشاشات (المسار الواضح بلا ارتباك) ═══ */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+@media (max-width: 640px) {
+  html { font-size: 93.75%; }
+  .grid2 { grid-template-columns: 1fr; }
+  .card table, table { display: block; overflow-x: auto; max-width: 100%; }
+}
+@media (max-width: 400px) {
+  html { font-size: 87.5%; }
+  .card { border-radius: 12px; }
+}
+/* مربّعاتُ الاختيارِ والراديو: عناصرُ أصليةٌ صغيرةٌ بطبعِها — تُكبَّرُ ويُلزَمُ عنوانُها بمساحةِ اللمس */
+input[type="checkbox"], input[type="radio"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+  accent-color: var(--color-cola);
+  cursor: pointer;
+}
+label:has(input[type="checkbox"]), label:has(input[type="radio"]) {
+  align-items: center;
+}
+@media (pointer: coarse) {
+  .btn, .chip { min-height: 44px; }
+  input[type="checkbox"], input[type="radio"] { width: 1.4rem; height: 1.4rem; }
+  label:has(input[type="checkbox"]), label:has(input[type="radio"]) { min-height: 44px; }
+}
+@media (min-width: 1500px) {
+  html { font-size: 112.5%; }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ── 🖨 ورقةُ الشفرات A4: شاشةٌ مريحةٌ وطباعةٌ مضغوطةٌ بلا قصٍّ للبطاقات ── */
+.druckblatt {
+  max-width: 21cm;
+  margin: 0 auto;
+  padding: 0.8rem;
+  background: #fff;
+  color: #111;
+}
+.druck-sektion { break-inside: auto; margin-bottom: 0.5rem; }
+.druck-h2 {
+  font-size: 0.95rem;
+  font-weight: 900;
+  margin: 0.6rem 0 0.35rem;
+  padding: 0.18rem 0.5rem;
+  background: #f0ece2;
+  border-inline-start: 4px solid #8a6d3b;
+  border-radius: 0.3rem;
+  break-after: avoid;
+}
+.druck-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+@media (max-width: 640px) { .druck-grid { grid-template-columns: 1fr; } }
+.druck-karte {
+  border: 1px solid #c9c2b4;
+  border-radius: 0.4rem;
+  padding: 0.35rem 0.5rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.druck-titel { display: flex; justify-content: space-between; gap: 0.3rem; font-weight: 800; font-size: 0.82rem; }
+.druck-level { font-size: 0.66rem; border: 1px solid #aaa; border-radius: 0.6rem; padding: 0 0.3rem; }
+.druck-story { font-size: 0.72rem; line-height: 1.55; color: #333; margin: 0.15rem 0 0.25rem; }
+.druck-tab { width: 100%; border-collapse: collapse; }
+.druck-tab td { border-top: 1px dotted #bbb; padding: 0.08rem 0.2rem; vertical-align: top; }
+.druck-code { font-weight: 800; font-size: 0.7rem; white-space: nowrap; }
+.druck-de { font-size: 0.72rem; }
+.druck-warn { font-size: 0.68rem; color: #8a2b2b; margin-top: 0.2rem; }
+@page { size: A4 portrait; margin: 11mm; }
+@media print {
+  .druckblatt { max-width: none; padding: 0; }
+  .druck-karte { border-color: #999; }
+}
