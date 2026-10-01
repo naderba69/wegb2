@@ -28,7 +28,7 @@
      "6:30",
      "6.30"
     ],
-    "explanationAr": "في النصِّ حرفياً: halb sieben = 6:30."
+    "explanationAr": "الدليل حرفياً: «Jeden Tag stehe ich um halb sieben auf.» — halb sieben = 6:30."
    },
    {
     "id": "t-a1-01-q3",
@@ -79,7 +79,7 @@
     "answer": [
      "zwei"
     ],
-    "explanationAr": "في النصِّ حرفياً: zwei Schwestern."
+    "explanationAr": "الدليل حرفياً: «Ich habe einen Bruder und zwei Schwestern.» — zwei Schwestern."
    },
    {
     "id": "t-a1-02-q3",
@@ -132,7 +132,7 @@
      "zwei",
      "2"
     ],
-    "explanationAr": "في النصِّ حرفياً: zwei Euro."
+    "explanationAr": "الدليل حرفياً: «Das Brot kostet zwei Euro, die Eier drei Euro.» — zwei Euro."
    },
    {
     "id": "t-a1-03-q3",
@@ -143,7 +143,7 @@
      "funf",
      "5"
     ],
-    "explanationAr": "المجموع خمسة."
+    "explanationAr": "الدليل حرفياً: «Zusammen fünf Euro.» — المجموع خمسة."
    },
    {
     "id": "t-a1-03-q4",
@@ -175,7 +175,7 @@
      "hinter dem Hotel"
     ],
     "answer": "gegenüber vom Hotel",
-    "explanationAr": "مقابل الفندق."
+    "explanationAr": "الدليل حرفياً: «Der Bahnhof ist rechts, gegenüber vom Hotel.» — مقابل الفندق."
    },
    {
     "id": "t-a1-04-q2",
@@ -185,7 +185,7 @@
      "zweite",
      "2."
     ],
-    "explanationAr": "الشارع الثاني."
+    "explanationAr": "الدليل حرفياً: «Dann die zweite Straße links.» — الشارع الثاني."
    },
    {
     "id": "t-a1-04-q3",
@@ -195,7 +195,7 @@
      "Fuß",
      "fuss"
     ],
-    "explanationAr": "zu Fuß = مشياً."
+    "explanationAr": "الدليل حرفياً: «Nein, nur fünf Minuten zu Fuß.» — zu Fuß = مشياً."
    },
    {
     "id": "t-a1-04-q4",
@@ -249,7 +249,7 @@
      "falsch"
     ],
     "answer": "falsch",
-    "explanationAr": "Am Abend — مساءً."
+    "explanationAr": "الدليل حرفياً: «Am Abend lerne ich mit meinen Freunden.» — Am Abend — مساءً."
    },
    {
     "id": "t-a1-05-q4",
@@ -278,7 +278,7 @@
      "ist aufgestanden",
      "ist … aufgestanden"
     ],
-    "explanationAr": "في النصِّ حرفياً: aufstehen ← sein + Partizip II."
+    "explanationAr": "الدليل حرفياً: «Am Samstag bin ich früh aufgestanden und habe meine Wohnung aufgeräumt.» — aufstehen ← sein + Partizip II."
    },
    {
     "id": "t-a2-01-q2",
@@ -299,7 +299,7 @@
     "answer": [
      "geschlafen"
     ],
-    "explanationAr": "في النصِّ حرفياً: schlafen → geschlafen."
+    "explanationAr": "الدليل حرفياً: «Am Sonntag haben wir lange geschlafen.» — schlafen → geschlafen."
    },
    {
     "id": "t-a2-01-q4",
@@ -327,7 +327,7 @@
     "answer": [
      "Hals"
     ],
-    "explanationAr": "der Hals = الحلق."
+    "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Hals weh und ich habe Fieber.» — der Hals = الحلق."
    },
    {
     "id": "t-a2-02-q2",
@@ -393,7 +393,7 @@
      "80",
      "achtzig"
     ],
-    "explanationAr": "في النصِّ حرفياً: 80 Euro."
+    "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — 80 Euro."
    },
    {
     "id": "t-a2-03-q3",
@@ -402,7 +402,7 @@
     "answer": [
      "reserviert"
     ],
-    "explanationAr": "في النصِّ حرفياً: haben … reserviert (Perfekt)."
+    "explanationAr": "الدليل حرفياً: «Wir haben schon zwei Zimmer reserviert.» — haben … reserviert (Perfekt)."
    },
    {
     "id": "t-a2-03-q4",
@@ -413,7 +413,7 @@
      "falsch"
     ],
     "answer": "falsch",
-    "explanationAr": "القطارُ بثمانينَ يورو والطائرةُ بمئةٍ وعشرين — فالقطارُ أرخص."
+    "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — القطارُ بثمانينَ يورو والطائرةُ بمئةٍ وعشرين — فالقطارُ أرخص."
    }
   ]
  },
@@ -433,7 +433,7 @@
      "möchte",
      "will"
     ],
-    "explanationAr": "الفعل للنهاية: studieren möchte."
+    "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — الفعل للنهاية: studieren möchte."
    },
    {
     "id": "t-a2-04-q2",
@@ -442,7 +442,7 @@
     "answer": [
      "ist"
     ],
-    "explanationAr": "في النصِّ حرفياً: dass … ist."
+    "explanationAr": "الدليل حرفياً: «Meine Freundin sagt, dass die Grammatik sehr schwer ist.» — dass … ist."
    },
    {
     "id": "t-a2-04-q3",
@@ -454,7 +454,7 @@
      "weil er in Deutschland wohnt"
     ],
     "answer": "weil er jeden Tag hört und sieht",
-    "explanationAr": "التعليل في الجملة الأخيرة."
+    "explanationAr": "الدليل حرفياً: «Aber ich höre jeden Tag Musik und sehe Serien, deshalb verstehe ich schon viel.» — التعليل في الجملة الأخيرة."
    },
    {
     "id": "t-a2-04-q4",
@@ -463,7 +463,7 @@
     "answer": [
      "weil"
     ],
-    "explanationAr": "weil تدفعُ الفعلَ المصرَّفَ إلى آخرِ الجملة."
+    "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — weil تدفعُ الفعلَ المصرَّفَ إلى آخرِ الجملة."
    }
   ]
  },
@@ -480,12 +480,12 @@
     "type": "mc",
     "promptDe": "Wann beginnt die Party?",
     "options": [
-     "um 6 Uhr",
+     "um 18 Uhr",
      "um 8 Uhr",
      "um 16 Uhr"
     ],
-    "answer": "um 6 Uhr",
-    "explanationAr": "um 18 Uhr = السادسة مساءً."
+    "answer": "um 18 Uhr",
+    "explanationAr": "الدليل حرفياً: «Die Party beginnt um 18 Uhr bei mir zu Hause.» — um 18 Uhr = السادسة مساءً."
    },
    {
     "id": "t-a2-05-q2",
@@ -494,7 +494,7 @@
     "answer": [
      "mit"
     ],
-    "explanationAr": "mitbringen ينفصل: bring … mit."
+    "explanationAr": "الدليل حرفياً: «Bring bitte deine Freundin mit!» — mitbringen ينفصل: bring … mit."
    },
    {
     "id": "t-a2-05-q3",
@@ -506,7 +506,7 @@
      "Neujahr"
     ],
     "answer": "Geburtstag",
-    "explanationAr": "عيد الميلاد."
+    "explanationAr": "الدليل حرفياً: «Liebe Amina, am Samstag feiere ich meinen Geburtstag!» — عيد الميلاد."
    },
    {
     "id": "t-a2-05-q4",
@@ -559,7 +559,7 @@
     "answer": [
      "andererseits"
     ],
-    "explanationAr": "أداة المقابلة: einerseits … andererseits."
+    "explanationAr": "الدليل حرفياً: «Andererseits stören sie oft den Unterricht.» — أداة المقابلة: einerseits … andererseits."
    }
   ]
  },
@@ -578,7 +578,7 @@
     "answer": [
      "gelernt"
     ],
-    "explanationAr": "في النصِّ حرفياً: Plusquamperfekt: hatte gelernt."
+    "explanationAr": "الدليل حرفياً: «Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.» — Plusquamperfekt: hatte gelernt."
    },
    {
     "id": "t-b1-02-q2",
@@ -600,7 +600,7 @@
      "hätte",
      "haette"
     ],
-    "explanationAr": "في النصِّ حرفياً: Konjunktiv II: hätte … gemacht."
+    "explanationAr": "الدليل حرفياً: «Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.» — Konjunktiv II: hätte … gemacht."
    }
   ]
  },
@@ -619,7 +619,7 @@
     "answer": [
      "beschlossen"
     ],
-    "explanationAr": "obwohl + فعل للنهاية."
+    "explanationAr": "الدليل حرفياً: «Die Luft in unserer Stadt ist immer schlechter geworden, obwohl die Regierung neue Maßnahmen beschlossen hat.» — obwohl + فعل للنهاية."
    },
    {
     "id": "t-b1-03-q2",
@@ -675,7 +675,7 @@
      "20",
      "zwanzig"
     ],
-    "explanationAr": "20 دقيقة."
+    "explanationAr": "الدليل حرفياً: «Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten.» — 20 دقيقة."
    },
    {
     "id": "t-b1-04-q3",
@@ -719,7 +719,7 @@
      "wäre",
      "waere"
     ],
-    "explanationAr": "في النصِّ حرفياً: Konjunktiv II von sein."
+    "explanationAr": "الدليل حرفياً: «Ohne Plan zu kündigen, wäre riskant.» — Konjunktiv II von sein."
    },
    {
     "id": "t-b1-05-q3",
@@ -731,7 +731,7 @@
      "أرفض"
     ],
     "answer": "أنصح بـ",
-    "explanationAr": "نصيحة مهذّبة."
+    "explanationAr": "الدليل حرفياً: «Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.» — نصيحة مهذّبة."
    }
   ]
  },
@@ -762,7 +762,7 @@
     "answer": [
      "willen"
     ],
-    "explanationAr": "um … willen = من أجل."
+    "explanationAr": "الدليل حرفياً: «Es geht also nicht um Technik um ihrer selbst willen, sondern um nachhaltige Didaktik.» — um … willen = من أجل."
    },
    {
     "id": "t-b2-01-q3",
@@ -774,7 +774,7 @@
      "ينفي"
     ],
     "answer": "يشكّك في",
-    "explanationAr": "في النصِّ حرفياً: Funktionsverbgefüge."
+    "explanationAr": "الدليل حرفياً: «Einerseits ermöglichen neue Medien individuelles Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage.» — Funktionsverbgefüge."
    },
    {
     "id": "t-b2-01-q4",
@@ -804,7 +804,7 @@
     "answer": [
      "sei"
     ],
-    "explanationAr": "منقول: sei (Konjunktiv I)."
+    "explanationAr": "الدليل حرفياً: «Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.» — منقول: sei (Konjunktiv I)."
    },
    {
     "id": "t-b2-02-q2",
@@ -814,7 +814,7 @@
      "sei",
      "wäre"
     ],
-    "explanationAr": "sei أو wäre عند الالتباس."
+    "explanationAr": "الدليل حرفياً: «Viele Pendler berichteten, der Zug sei regelmäßig verspätet.» — sei أو wäre عند الالتباس."
    },
    {
     "id": "t-b2-02-q3",
@@ -837,7 +837,7 @@
      "falsch"
     ],
     "answer": "richtig",
-    "explanationAr": "الوزيرُ يقولُ منتظمةٌ وموثوقة، والعمدةُ تنقلُ تجربةً مغايرة — وهذا كلامٌ منقولٌ بصيغةِ Konjunktiv I."
+    "explanationAr": "الدليل حرفياً: «Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.» — الوزيرُ يقولُ منتظمةٌ وموثوقة، والعمدةُ تنقلُ تجربةً مغايرة — وهذا كلامٌ منقولٌ بصيغةِ Konjunktiv I."
    }
   ]
  },
@@ -856,7 +856,7 @@
     "answer": [
      "leugnen"
     ],
-    "explanationAr": "zu + مصدر: يصعب إنكارها."
+    "explanationAr": "الدليل حرفياً: «Die Auswirkungen des Klimawandels sind kaum noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle.» — zu + مصدر: يصعب إنكارها."
    },
    {
     "id": "t-b2-03-q2",
@@ -913,7 +913,7 @@
      "den Preis"
     ],
     "answer": "den Anfang und die Figuren",
-    "explanationAr": "في النصِّ حرفياً: «Der Anfang langsam … Figuren … blass.»"
+    "explanationAr": "الدليل حرفياً: «Zwar ist der Anfang langsam» و«Einzig die Figuren bleiben etwas blass». الفخّ: اللغة والسعر لم يُذكرا."
    },
    {
     "id": "t-b2-04-q2",
@@ -923,7 +923,7 @@
      "doch",
      "aber"
     ],
-    "explanationAr": "zwar … doch = صحيح أن … لكن."
+    "explanationAr": "الدليل حرفياً: «Zwar ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt der Plot eine enorme Spannung.» — zwar … doch = صحيح أن … لكن."
    },
    {
     "id": "t-b2-04-q3",
@@ -965,7 +965,7 @@
     "answer": [
      "Konsequenzen"
     ],
-    "explanationAr": "النتائج المترتبة."
+    "explanationAr": "الدليل حرفياً: «Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.» — النتائج المترتبة."
    },
    {
     "id": "t-b2-05-q2",
@@ -986,7 +986,7 @@
     "answer": [
      "ungeachtet"
     ],
-    "explanationAr": "ungeachtet + Genitiv = بغضّ النظر عن."
+    "explanationAr": "الدليل حرفياً: «Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.» — ungeachtet + Genitiv = بغضّ النظر عن."
    },
    {
     "id": "t-b2-05-q4",
@@ -1028,7 +1028,7 @@
     "answer": [
      "Regal"
     ],
-    "explanationAr": "das Regal = الرفّ."
+    "explanationAr": "الدليل حرفياً: «Auf dem Regal liegen viele Bücher.» — das Regal = الرفّ."
    },
    {
     "id": "t-a1-06-q3",
@@ -1037,7 +1037,7 @@
     "answer": [
      "ruhig"
     ],
-    "explanationAr": "هادئة."
+    "explanationAr": "الدليل حرفياً: «Ich mag mein Zimmer, weil es ruhig ist.» — هادئة."
    },
    {
     "id": "t-a1-06-q4",
@@ -1046,7 +1046,7 @@
     "answer": [
      "hängt"
     ],
-    "explanationAr": "hängen للمعلَّقِ على الجدار، لا liegen ولا stehen."
+    "explanationAr": "الدليل حرفياً: «An der Wand hängt ein Bild von meiner Familie.» — hängen للمعلَّقِ على الجدار، لا liegen ولا stehen."
    }
   ]
  },
@@ -1068,7 +1068,7 @@
      "Koch"
     ],
     "answer": "Taxifahrer",
-    "explanationAr": "سائق أجرة."
+    "explanationAr": "الدليل حرفياً: «Amir ist Taxifahrer.» — سائق أجرة."
    },
    {
     "id": "t-a1-07-q2",
@@ -1079,7 +1079,7 @@
      "funf",
      "5"
     ],
-    "explanationAr": "الخامسة."
+    "explanationAr": "الدليل حرفياً: «Er steht um fünf Uhr auf, denn seine Arbeit beginnt früh.» — الخامسة."
    },
    {
     "id": "t-a1-07-q3",
@@ -1091,7 +1091,7 @@
      "um 21:00"
     ],
     "answer": "um 22:30",
-    "explanationAr": "في النصِّ حرفياً: halb elf = 22:30."
+    "explanationAr": "الدليل حرفياً: «Um halb elf geht er schlafen.» — halb elf = 22:30."
    },
    {
     "id": "t-a1-07-q4",
@@ -1119,7 +1119,7 @@
     "answer": [
      "geschwommen"
     ],
-    "explanationAr": "schwimmen → geschwommen (شاذ)."
+    "explanationAr": "الدليل حرفياً: «Am Samstag haben wir am Strand gelegen und im Meer geschwommen.» — schwimmen → geschwommen (شاذ)."
    },
    {
     "id": "t-a2-06-q2",
@@ -1184,7 +1184,7 @@
     "answer": [
      "unkonzentriert"
     ],
-    "explanationAr": "غير مركّز."
+    "explanationAr": "الدليل حرفياً: «Wer zu wenig schläft, ist am Tag müde und unkonzentriert.» — غير مركّز."
    },
    {
     "id": "t-a2-07-q3",
@@ -1193,7 +1193,7 @@
     "answer": [
      "Wasser"
     ],
-    "explanationAr": "ماء."
+    "explanationAr": "الدليل حرفياً: «Man muss auch genug Wasser trinken.» — ماء."
    },
    {
     "id": "t-a2-07-q4",
@@ -1233,7 +1233,7 @@
     "answer": [
      "Anschreiben"
     ],
-    "explanationAr": "خطاب التوظيف."
+    "explanationAr": "الدليل حرفياً: «Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein Anschreiben enthalten.» — خطاب التوظيف."
    },
    {
     "id": "t-b1-06-q3",
@@ -1245,7 +1245,7 @@
      "dreißigste",
      "30."
     ],
-    "explanationAr": "في النصِّ حرفياً: der 30. Juni."
+    "explanationAr": "الدليل حرفياً: «Bewerbungsschluss ist der 30.» — der 30. Juni."
    }
   ]
  },
@@ -1265,7 +1265,7 @@
      "45",
      "fünfundvierzig"
     ],
-    "explanationAr": "في النصِّ حرفياً: 45%."
+    "explanationAr": "الدليل حرفياً: «Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.» — 45%."
    },
    {
     "id": "t-b1-07-q2",
@@ -1286,7 +1286,7 @@
     "answer": [
      "Praxisnähe"
     ],
-    "explanationAr": "القرب من الممارسة."
+    "explanationAr": "الدليل حرفياً: «Als Hauptgrund nennen sie die Praxisnähe.» — القرب من الممارسة."
    }
   ]
  },
@@ -1317,7 +1317,7 @@
     "answer": [
      "Konzentration"
     ],
-    "explanationAr": "التركيز."
+    "explanationAr": "الدليل حرفياً: «Wer dagegen bis spät in die Nacht büffelt, erzielt oft das Gegenteil: Die von Übermüdung geprägte Konzentration lässt nach.» — التركيز."
    },
    {
     "id": "t-b2-06-q3",
@@ -1359,7 +1359,7 @@
     "answer": [
      "Selbstzweck"
     ],
-    "explanationAr": "غاية بذاتها."
+    "explanationAr": "الدليل حرفياً: «Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck.» — غاية بذاتها."
    },
    {
     "id": "t-b2-07-q2",
@@ -1383,7 +1383,7 @@
      "schnell fahren"
     ],
     "answer": "scheitern",
-    "explanationAr": "استعارة: الفشل."
+    "explanationAr": "الدليل حرفياً: «Wer nur beschleunigt, ohne zu wissen wohin, fährt gegen die Wand.» — استعارة: الفشل."
    },
    {
     "id": "t-b2-07-q4",
@@ -1417,7 +1417,7 @@
      "Um neun Uhr"
     ],
     "answer": "Um sieben Uhr",
-    "explanationAr": "يستيقظ في السابعة صباحاً (um sieben Uhr)."
+    "explanationAr": "الدليل حرفياً: «Ich stehe jeden Tag um sieben Uhr auf.» — يستيقظ في السابعة صباحاً (um sieben Uhr)."
    },
    {
     "id": "t-a1-08-q2",
@@ -1430,7 +1430,7 @@
      "Mit dem Rad"
     ],
     "answer": "Mit dem Bus",
-    "explanationAr": "تذهب بالحافلة (mit dem Bus) والرحلة عشرون دقيقة."
+    "explanationAr": "الدليل حرفياً: «Um acht Uhr fahre ich mit dem Bus zur Arbeit.» — تذهب بالحافلة (mit dem Bus) والرحلة عشرون دقيقة."
    },
    {
     "id": "t-a1-08-q3",
@@ -1475,7 +1475,7 @@
      "Kuchen und Kaffee"
     ],
     "answer": "Brot, Milch, Äpfel, Käse und Eier",
-    "explanationAr": "القائمة: خبز وحليب وتفاح وجبن وبيض."
+    "explanationAr": "الدليل حرفياً: «Ich schreibe eine Liste: Brot, Milch, Äpfel, Käse und Eier.» — القائمة: خبز وحليب وتفاح وجبن وبيض."
    },
    {
     "id": "t-a1-09-q2",
@@ -1488,7 +1488,7 @@
      "Auf Rechnung"
     ],
     "answer": "Mit Karte",
-    "explanationAr": "يدفع بالبطاقة البنكية (mit Karte)."
+    "explanationAr": "الدليل حرفياً: «An der Kasse bezahle ich mit Karte.» — يدفع بالبطاقة البنكية (mit Karte)."
    },
    {
     "id": "t-a1-09-q3",
@@ -1532,7 +1532,7 @@
      "Weil sie Urlaub braucht"
     ],
     "answer": "Weil sie Kopfschmerzen hat",
-    "explanationAr": "لديها صداع منذ ثلاثة أيام (Kopfschmerzen)."
+    "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Kopf weh.» — لديها صداع منذ ثلاثة أيام (Kopfschmerzen)."
    },
    {
     "id": "t-a2-08-q2",
@@ -1545,7 +1545,7 @@
      "Weniger essen"
     ],
     "answer": "Mehr Wasser trinken und früher schlafen",
-    "explanationAr": "نصيحة الطبيب: شرب ماء أكثر والنوم أبكر."
+    "explanationAr": "الدليل حرفياً: «Der Arzt untersucht mich und sagt, ich soll mehr Wasser trinken und früher schlafen.» — نصيحة الطبيب: شرب ماء أكثر والنوم أبكر."
    },
    {
     "id": "t-a2-08-q3",
@@ -1566,7 +1566,7 @@
     "answer": [
      "Termin"
     ],
-    "explanationAr": "صيغةُ طلبٍ مهذّبة: hätte gern + مفعولٌ أكوزاتيف."
+    "explanationAr": "الدليل حرفياً: «Ich rufe beim Arzt an und sage: „Ich hätte gern einen Termin.“ Die Arzthelferin gibt mir einen Termin am Montag um zehn Uhr.» — صيغةُ طلبٍ مهذّبة: hätte gern + مفعولٌ أكوزاتيف."
    }
   ]
  },
@@ -1589,7 +1589,7 @@
      "Eine Woche"
     ],
     "answer": "Drei Stunden",
-    "explanationAr": "الرحلة تستغرق ثلاث ساعات."
+    "explanationAr": "الدليل حرفياً: «Die Fahrt dauert drei Stunden, und ich höre Musik.» — الرحلة تستغرق ثلاث ساعات."
    },
    {
     "id": "t-a2-09-q2",
@@ -1602,7 +1602,7 @@
      "Niemand"
     ],
     "answer": "Eine Frau mit einem Baby",
-    "explanationAr": "بجانبه امرأة مع رضيع."
+    "explanationAr": "الدليل حرفياً: «Neben mir sitzt eine Frau mit einem Baby.» — بجانبه امرأة مع رضيع."
    },
    {
     "id": "t-a2-09-q3",
@@ -1647,7 +1647,7 @@
      "Der Balkon"
     ],
     "answer": "Küche und Bad",
-    "explanationAr": "المطبخ والحّمام مشتركان، ولكل غرفته."
+    "explanationAr": "الدليل حرفياً: «Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.» — المطبخ والحّمام مشتركان، ولكل غرفته."
    },
    {
     "id": "t-b1-08-q2",
@@ -1660,7 +1660,7 @@
      "Wer studiert"
     ],
     "answer": "Wer ruhig wohnen will",
-    "explanationAr": "من يريد الهدوء فليبحث في أطراف المدينة."
+    "explanationAr": "الدليل حرفياً: «Wer ruhig wohnen will, sucht am besten am Stadtrand.» — من يريد الهدوء فليبحث في أطراف المدينة."
    },
    {
     "id": "t-b1-08-q3",
@@ -1695,7 +1695,7 @@
      "Kleidung"
     ],
     "answer": "Papier, Glas und Plastik",
-    "explanationAr": "يُجمع الورق والزجاج والبلاستيك بشكل منفصل."
+    "explanationAr": "الدليل حرفياً: «In Deutschland werden Papier, Glas und Plastik getrennt gesammelt.» — يُجمع الورق والزجاج والبلاستيك بشكل منفصل."
    },
    {
     "id": "t-b1-09-q2",
@@ -1708,7 +1708,7 @@
      "Eine Plastiktüte"
     ],
     "answer": "Eine Stofftasche",
-    "explanationAr": "كيس القماش (Stofftasche) بديل مفيد للبلاستيك."
+    "explanationAr": "الدليل حرفياً: «Auch beim Einkaufen hilft eine Stofftasche.» — كيس القماش (Stofftasche) بديل مفيد للبلاستيك."
    },
    {
     "id": "t-b1-09-q3",
@@ -1743,7 +1743,7 @@
      "Fünf"
     ],
     "answer": "Drei",
-    "explanationAr": "ينصح الخبراء بثلاثة أسئلة قبل التصديق."
+    "explanationAr": "الدليل حرفياً: «Experten empfehlen, drei Fragen zu stellen: Wer schreibt das?» — ينصح الخبراء بثلاثة أسئلة قبل التصديق."
    },
    {
     "id": "t-b2-08-q2",
@@ -1756,7 +1756,7 @@
      "Schneller zu tippen"
     ],
     "answer": "Zu erkennen, was seriös ist",
-    "explanationAr": "الهدف: تمييز الموثوق من صاخب اللامبالاة."
+    "explanationAr": "الدليل حرفياً: «Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.» — الهدف: تمييز الموثوق من صاخب اللامبالاة."
    },
    {
     "id": "t-b2-08-q3",
@@ -1779,7 +1779,7 @@
      "falsch"
     ],
     "answer": "richtig",
-    "explanationAr": "مَن يكتب؟ أيُّ مصادرَ تُذكَر؟ أترِدُ الوقائعُ في مكانٍ آخر؟"
+    "explanationAr": "الدليل حرفياً: «Experten empfehlen, drei Fragen zu stellen: Wer schreibt das? Welche Quellen werden genannt? Stehen die Fakten auch woanders?» — مَن يكتب؟ أيُّ مصادرَ تُذكَر؟ أترِدُ الوقائعُ في مكانٍ آخر؟"
    }
   ]
  },
@@ -1802,7 +1802,7 @@
      "Musik"
     ],
     "answer": "Das Lernen einer Fremdsprache",
-    "explanationAr": "تعلّم اللغة الأجنبية يحسّن الذاكرة في الشيخوخة."
+    "explanationAr": "الدليل حرفياً: «Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.» — تعلّم اللغة الأجنبية يحسّن الذاكرة في الشيخوخة."
    },
    {
     "id": "t-b2-09-q2",
@@ -1815,7 +1815,7 @@
      "Als Hobby"
     ],
     "answer": "Als Begleiterin fürs ganze Leben",
-    "explanationAr": "التعليم رفيق طوال الحياة، لا مرحلة تنتهي."
+    "explanationAr": "الدليل حرفياً: «Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.» — التعليم رفيق طوال الحياة، لا مرحلة تنتهي."
    },
    {
     "id": "t-b2-09-q3",
@@ -1872,7 +1872,7 @@
      "einen Euro"
     ],
     "answer": "zwei Euro fünfzig",
-    "explanationAr": "رقم السعر في النص حرفياً."
+    "explanationAr": "الدليل حرفياً: «Der Kaffee kostet zwei Euro fünfzig, der Kuchen drei Euro.» — رقم السعر في النص حرفياً."
    },
    {
     "id": "t-a1-10-q3",
@@ -1915,7 +1915,7 @@
      "einen Kaffee"
     ],
     "answer": "Äpfel, Tomaten und Brot",
-    "explanationAr": "قائمة المشتريات ثلاثية."
+    "explanationAr": "الدليل حرفياً: «Ich kaufe Äpfel, Tomaten und Brot.» — قائمة المشتريات ثلاثية."
    },
    {
     "id": "t-a1-11-q2",
@@ -1970,7 +1970,7 @@
      "warm"
     ],
     "answer": "kalt und nass",
-    "explanationAr": "مطر ورياح وثمانية درجات: بارد ومبلل."
+    "explanationAr": "الدليل حرفياً: «Es regnet und es ist windig. Die Temperatur ist nur acht Grad.» — مطر ورياح وثمانية درجات: بارد ومبلل."
    },
    {
     "id": "t-a1-12-q2",
@@ -2427,7 +2427,7 @@
      "der Chef"
     ],
     "answer": "ein Verkäufer",
-    "explanationAr": "في النصِّ حرفياً: «ein Verkäufer hat mir … geholfen»."
+    "explanationAr": "الدليل حرفياً: «Zum Glück hat mir ein Verkäufer geduldig geholfen». الفخّ: لا صديق ولا رئيس في النص."
    },
    {
     "id": "t-a2-11-q3",
@@ -2583,7 +2583,7 @@
      "seine Tante"
     ],
     "answer": "seine Schwester",
-    "explanationAr": "في النصِّ حرفياً: «meine Schwester war zu Besuch»."
+    "explanationAr": "الدليل حرفياً: «Letzte Woche war meine Schwester zu Besuch in Hamburg». الفخّ: الأخ والعمّة لم يُذكرا."
    },
    {
     "id": "t-a2-14-q2",
@@ -3310,7 +3310,7 @@
      "falsch"
     ],
     "answer": "richtig",
-    "explanationAr": "«… ließen sich nicht auf Fabriken übertragen» — Konjunktiv I في نقلِ الاعتراض."
+    "explanationAr": "الدليل حرفياً: «Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen» — Konjunktiv I في نقل الاعتراض."
    }
   ]
  },
@@ -3332,7 +3332,7 @@
      "Steigerung der Mieten"
     ],
     "answer": "Steigerung der Mieten",
-    "explanationAr": "الكراء لم يُذكر — الثلاث الأُخر في النص حرفيًا."
+    "explanationAr": "الدليل حرفياً: «ein begrüntes Dach dämmt im Winter, kühlt im Sommer, bindet Feinstaub und schluckt bei Starkregen die ersten Liter» — الكراء لم يُذكر — الثلاث الأُخر في النص حرفيًا."
    },
    {
     "id": "t-b2-11-q2",
@@ -3481,7 +3481,7 @@
      "falsch"
     ],
     "answer": "richtig",
-    "explanationAr": "هذه هي الظاهرةُ التي تُظهِرُها الأرقامُ الاسكندنافية."
+    "explanationAr": "الدليل حرفياً: «Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional.» — هذه هي الظاهرةُ التي تُظهِرُها الأرقامُ الاسكندنافية."
    }
   ]
  },
@@ -3560,7 +3560,7 @@
      "die Beraterzahl"
     ],
     "answer": "was nach dem Fehler passiert",
-    "explanationAr": "في النصِّ حرفياً: «sondern was nach dem Fehler passiert»."
+    "explanationAr": "الدليل حرفياً: «Nicht die Fehlerquote unterscheidet gute von schlechten Teams, sondern was danach passiert». الفخّ: نسبة الأخطاء منفيّة صراحة بـ«Nicht»."
    },
    {
     "id": "t-b2-15-q2",
@@ -3584,7 +3584,7 @@
      "Melderegister"
     ],
     "answer": "Intransparenz",
-    "explanationAr": "في النصِّ حرفياً: «Intransparenz kostet am Ende mehr»."
+    "explanationAr": "الدليل حرفياً: «Transparenz kostet Überwindung, Intransparenz am Ende mehr». الفخّ: «Überwindung» هو ثمن الشفافية لا ما يكلّف أكثر."
    },
    {
     "id": "t-b2-15-q4",
@@ -3709,7 +3709,7 @@
      "falsch"
     ],
     "answer": "richtig",
-    "explanationAr": "«Die Finanzierung decke bestenfalls die Rahmen» — Konjunktiv I في الاعتراض."
+    "explanationAr": "الدليل حرفياً: «Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen» — Konjunktiv I في الاعتراض، وعلامتا التنصيص حول Finanzierung تشكيك."
    }
   ]
  },
@@ -3851,7 +3851,7 @@
      "Versichertenkarte",
      "die Versichertenkarte"
     ],
-    "explanationAr": "بطاقةُ التأمينِ الصحّيِّ تُطلَبُ في كلِّ عيادةٍ ألمانية."
+    "explanationAr": "الدليل حرفياً: «An der Rezeption zeige ich meine Versichertenkarte.» — بطاقةُ التأمينِ الصحّيِّ تُطلَبُ في كلِّ عيادةٍ ألمانية."
    },
    {
     "id": "t-a1-20-q3",
@@ -3893,7 +3893,7 @@
      "650 Euro",
      "sechshundertfünfzig"
     ],
-    "explanationAr": "520 صافٍ + 130 جانبية = 650؛ وهذا هو الفرقُ العمليُّ بينَ Kaltmiete وWarmmiete."
+    "explanationAr": "الدليل حرفياً: «Die Kaltmiete beträgt 520 Euro, dazu kommen 130 Euro Nebenkosten.» — 520 صافٍ + 130 جانبية = 650؛ وهذا هو الفرقُ العمليُّ بينَ Kaltmiete وWarmmiete."
    },
    {
     "id": "t-a2-19-q2",
@@ -4018,7 +4018,7 @@
      "Es gibt zu wenige Freiwillige"
     ],
     "answer": "Der Staat spart dadurch Stellen",
-    "explanationAr": "في النصِّ حرفياً: «der Staat … spart dadurch Stellen»."
+    "explanationAr": "الدليل حرفياً: «dass der Staat sich auf diese Hilfe verlässt und dadurch Stellen spart». الفخّ: الجمعيات لا تدفع، والنص لا يذكر قلّة المتطوعين."
    },
    {
     "id": "t-b1-19-q3",
@@ -4027,7 +4027,7 @@
     "answer": [
      "würden"
     ],
-    "explanationAr": "شرطٌ غيرُ واقعيّ: Konjunktiv II بـwürden + مصدر."
+    "explanationAr": "الدليل حرفياً: «Fest steht: Ohne Ehrenamt würden viele Vereine schließen müssen.» — شرطٌ غيرُ واقعيّ: Konjunktiv II بـwürden + مصدر."
    }
   ]
  },
@@ -4047,7 +4047,7 @@
      "Nachdem",
      "nachdem"
     ],
-    "explanationAr": "Nachdem مع الماضي الأسبق (hatte nachgedacht) ثمَّ الماضي البسيط — تسلسلُ الزمنَين."
+    "explanationAr": "الدليل حرفياً: «Nachdem ich zwei Wochen nachgedacht hatte, sagte ich zu.» — Nachdem مع الماضي الأسبق (hatte nachgedacht) ثمَّ الماضي البسيط — تسلسلُ الزمنَين."
    },
    {
     "id": "t-b1-20-q2",
@@ -4093,7 +4093,7 @@
      "Konjunktiv I"
     ],
     "answer": "Partizip-Attribut",
-    "explanationAr": "صفةٌ اسميةٌ ممتدّةٌ ببناءِ Partizip II داخلَ المجموعةِ الاسمية — بديلٌ مختصَرٌ لجملةِ وصل."
+    "explanationAr": "الدليل حرفياً: «Hinzu kommt, dass die von Unternehmen geforderte Mobilität vielen Familien kaum zuzumuten ist.» — صفةٌ اسميةٌ ممتدّةٌ ببناءِ Partizip II داخلَ المجموعةِ الاسمية — بديلٌ مختصَرٌ لجملةِ وصل."
    },
    {
     "id": "t-b2-19-q2",
@@ -4145,7 +4145,7 @@
      "Würde",
      "würde"
     ],
-    "explanationAr": "شرطٌ بلا wenn: الفعلُ المساعدُ يتصدَّرُ الجملةَ (Würde man …, ließe sich …)."
+    "explanationAr": "الدليل حرفياً: «Würde man stattdessen konsequent Bauland ausweisen, ließe sich das Angebot mittelfristig erhöhen.» — شرطٌ بلا wenn: الفعلُ المساعدُ يتصدَّرُ الجملةَ (Würde man …, ließe sich …)."
    },
    {
     "id": "t-b2-20-q2",
@@ -4182,6 +4182,1828 @@
     "answer": "richtig",
     "explanationAr": "«sie schütze Bestandsmieter» — نقلٌ بصيغةِ Konjunktiv I."
    }
+  ]
+ },
+ {
+  "id": "t-b2-21",
+  "level": "B2",
+  "titleDe": "Ein Missverständnis unter Freunden",
+  "titleAr": "سوء فهم بين صديقين",
+  "de": "Als Rami erfuhr, dass sein Freund Tarek die Stelle bekommen hatte, auf die sie sich beide beworben hatten, sagte er zuerst gar nichts. Später schrieb er eine kurze Nachricht: „Glückwunsch.“ Ohne Ausrufezeichen. Tarek las darin eine Kränkung und antwortete drei Tage lang nicht. So begann ein Missverständnis, das ihr Verhältnis fast beendet hätte.\n\nIn Wahrheit war Rami weder neidisch noch wütend. Er gönnte Tarek den Erfolg, aber die eigene Enttäuschung war an diesem Abend größer als seine Zuneigung. Das ist menschlich, und es wäre kein Problem gewesen, hätte er es einfach gesagt. Stattdessen schwieg er, und Schweigen lässt sich in jede Richtung deuten. Tarek dachte an Neid; seine Schwester vermutete sogar, Tarek habe ihn betrügen wollen, weil Tarek ihm nichts von dem Gespräch erzählt hatte.\n\nDass die beiden heute wieder zusammen Fußball spielen, liegt an einer einzigen Frage. Tarek rief an und fragte nicht „Warum bist du so?“, sondern „Wie geht es dir damit?“. Diese Frage zeigt Mitgefühl; man muss dafür weder nachgeben noch sich rechtfertigen. Rami konnte antworten, ohne sein Selbstwertgefühl zu verteidigen. Gelassenheit heißt nicht, nichts zu fühlen; sie heißt, das Gefühl zu benennen, bevor es den anderen enttäuscht.",
+  "ar": "رامي وطارق تقدّما للوظيفة نفسها؛ حين فاز طارق أرسل رامي تهنئة جافّة، ففهمها طارق إهانة وصمت ثلاثة أيام. الحقيقة: رامي لم يحسد، لكن خيبته كانت أكبر من مودّته تلك الليلة، وصمته فُسّر حسداً وحتى ظنّاً بأن طارق أراد خداعه. أنقذت الصداقةَ مكالمةٌ بسؤال واحد يُظهر التعاطف: «كيف تشعر حيال ذلك؟» — الرزانة هي تسمية الشعور قبل أن يخيّب الآخر.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Warum antwortete Tarek drei Tage lang nicht?",
+    "options": [
+     "Er war neidisch auf Rami.",
+     "Er las in der kurzen Nachricht eine Kränkung.",
+     "Er wollte Rami nichts von dem Gespräch erzählen."
+    ],
+    "answer": "Er las in der kurzen Nachricht eine Kränkung.",
+    "explanationAr": "الدليل حرفياً: «Tarek las darin eine Kränkung und antwortete drei Tage lang nicht». الفخّ 1: الحسد ما ظنّه طارق برامي. الفخّ 2: عدم الإخبار عن المقابلة تفسير الأخت.",
+    "id": "t-b2-21-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was war laut Text an dem Abend größer als Ramis Zuneigung?",
+    "options": [
+     "sein Neid",
+     "seine Wut",
+     "seine eigene Enttäuschung"
+    ],
+    "answer": "seine eigene Enttäuschung",
+    "explanationAr": "الدليل حرفياً: «die eigene Enttäuschung war an diesem Abend größer als seine Zuneigung». الفخّ: «weder neidisch noch wütend» منفيّان صراحة.",
+    "id": "t-b2-21-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Tarek fragte am Telefon: „Warum bist du so?“",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «fragte nicht „Warum bist du so?“, sondern „Wie geht es dir damit?“».",
+    "id": "t-b2-21-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Er ___ Tarek den Erfolg, aber die eigene Enttäuschung war größer.",
+    "answer": [
+     "gönnte"
+    ],
+    "explanationAr": "الدليل حرفياً: «Er gönnte Tarek den Erfolg» — gönnen = يتمنّى الخير للآخر دون حسد، هنا في Präteritum.",
+    "id": "t-b2-21-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "das Missverständnis",
+   "die Zuneigung",
+   "der Neid",
+   "gönnen",
+   "nachgeben",
+   "die Enttäuschung",
+   "das Verhältnis",
+   "die Kränkung",
+   "die Gelassenheit",
+   "das Selbstwertgefühl",
+   "das Mitgefühl",
+   "betrügen",
+   "enttäuschen"
+  ]
+ },
+ {
+  "id": "t-b2-22",
+  "level": "B2",
+  "titleDe": "Zurück nach der Operation",
+  "titleAr": "العودة بعد العملية",
+  "de": "Nach acht Wochen kehrt Frau Lang ins Büro zurück. Im Frühjahr wurde sie am Knie operiert, danach folgten drei Wochen Reha und eine lange Krankschreibung. Die Genesung verlief gut, sagt sie, aber sie hat etwas gelernt, das mit dem Knie wenig zu tun hat: Wie ein Umfeld auf Krankheit reagiert, sagt mehr über das Arbeitsklima als jede Umfrage.\n\nIhre Kolleginnen hatten in der Zeit ihre Aufgaben still übernommen. Niemand fragte, wann sie „endlich“ zurückkomme. Diese Solidarität war keine Selbstverständlichkeit; in ihrer früheren Firma galt schon eine Erkältung als Schwäche, und wer zur Vorsorge ging, tat das heimlich. Dort war sie, wie sie heute selbst sagt, fast süchtig nach Anerkennung gewesen und hatte jede Pause als verlorene Zeit empfunden.\n\nJetzt dosiert sie die Anstrengung anders. Die Bildschirmarbeit unterbricht sie alle fünfzig Minuten, weil der Physiotherapeut es empfohlen hat, aber auch, weil sie gemerkt hat, dass die Arbeit danach besser wird. Ihr Chef hat das Modell für das ganze Team übernommen. Ob das die Produktivität steigert, weiß niemand genau. Dass es das Klima verbessert hat, merkt man schon an der Kaffeemaschine.",
+  "ar": "تعود السيدة لانغ إلى المكتب بعد ثمانية أسابيع: عملية في الركبة، ثلاثة أسابيع تأهيل، وإجازة مرضية طويلة. ما تعلّمته: ردّ فعل المحيط على المرض يكشف المناخ المهني. زميلاتها تولّين مهامها بصمت، بخلاف شركتها السابقة حيث كان الزكام ضعفاً والفحص الوقائي سرّاً، وكانت شبه مدمنة على التقدير. الآن تقسّم الجهد وتقطع عمل الشاشة كل خمسين دقيقة، وتبنّى رئيسها النموذج للفريق كله.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was sagt laut Frau Lang mehr über das Arbeitsklima als jede Umfrage?",
+    "options": [
+     "wie schnell die Genesung verläuft",
+     "wie oft man zur Vorsorge geht",
+     "wie ein Umfeld auf Krankheit reagiert"
+    ],
+    "answer": "wie ein Umfeld auf Krankheit reagiert",
+    "explanationAr": "الدليل حرفياً: «Wie ein Umfeld auf Krankheit reagiert, sagt mehr über das Arbeitsklima als jede Umfrage». الفخّ 1: التعافي سار جيداً لكنه ليس المقياس. الفخّ 2: الوقاية ذُكرت عن الشركة السابقة.",
+    "id": "t-b2-22-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Wie war es in ihrer früheren Firma?",
+    "options": [
+     "Schon eine Erkältung galt als Schwäche.",
+     "Die Kolleginnen übernahmen still die Aufgaben.",
+     "Man unterbrach die Bildschirmarbeit alle fünfzig Minuten."
+    ],
+    "answer": "Schon eine Erkältung galt als Schwäche.",
+    "explanationAr": "الدليل حرفياً: «in ihrer früheren Firma galt schon eine Erkältung als Schwäche». الفخّ 1: التضامن في الشركة الحالية. الفخّ 2: نموذج الخمسين دقيقة الآن.",
+    "id": "t-b2-22-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Es ist bewiesen, dass das neue Modell die Produktivität steigert.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «Ob das die Produktivität steigert, weiß niemand genau».",
+    "id": "t-b2-22-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Nach der Operation folgten drei Wochen ___ und eine lange Krankschreibung.",
+    "answer": [
+     "Reha"
+    ],
+    "explanationAr": "الدليل حرفياً: «danach folgten drei Wochen Reha und eine lange Krankschreibung».",
+    "id": "t-b2-22-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "operieren",
+   "die Genesung",
+   "die Krankschreibung",
+   "die Reha",
+   "die Vorsorge",
+   "die Bildschirmarbeit",
+   "das Arbeitsklima",
+   "süchtig",
+   "die Erkältung",
+   "das Umfeld",
+   "die Solidarität",
+   "dosieren",
+   "die Anstrengung"
+  ]
+ },
+ {
+  "id": "t-b2-23",
+  "level": "B2",
+  "titleDe": "Ein Passwort für alles",
+  "titleAr": "كلمة مرور واحدة لكل شيء",
+  "de": "Herr Ben Salem benutzte jahrelang ein einziges Passwort: für das Nutzerkonto beim Online-Händler, für die Cloud mit den Familienfotos und für das Spiel seines Sohnes. Er hielt das für praktisch. Dann kam eine E-Mail, die er für Spam hielt, und zwei Tage später war das Konto beim Händler gehackt. Bestellt wurde nichts Teures; die Angreifer wollten offenbar nur prüfen, wo das Passwort noch passt.\n\nDie Beraterin der Bank erklärte ihm, dass Cyberkriminalität selten wie im Film aussieht. Meistens sammelt jemand Zugangsdaten und probiert sie automatisch überall aus. Ein Chatbot der Bank hätte ihm dieselbe Antwort gegeben, sagte sie lachend, aber ohne Kaffee. Ihre Empfehlungen waren einfach: für jedes Konto ein eigenes Passwort, die Software regelmäßig aktualisieren, ein Backup außerhalb der Cloud.\n\nZu Hause stellte er fest, dass das letzte Update auf seinem Handy ein Jahr alt war, weil der Speicher voll war und der Akku bei jeder Installation schwächelte. Die Nutzungsbedingungen der Cloud hatte er nie gelesen; dort stand, wie lange die Datenspeicherung nach einer Kündigung weiterläuft. Nach der DSGVO darf er die Löschung verlangen. Er hat es getan, und die Fotos liegen jetzt zusätzlich auf einer kleinen Festplatte in der Küchenschublade.",
+  "ar": "السيد بن سالم استعمل كلمة مرور واحدة لكل حساباته حتى اختُرق حسابه عند المتجر بعد إيميل ظنّه بريداً مزعجاً؛ المهاجمون كانوا يختبرون أين تصلح الكلمة نفسها. مستشارة البنك: الجرائم السيبرانية غالباً تجميع بيانات دخول وتجربتها آلياً؛ توصياتها: كلمة لكل حساب، تحديث دوري، نسخة احتياطية خارج السحابة. اكتشف أن آخر تحديث لهاتفه عمره سنة لامتلاء الذاكرة، وأن شروط الاستخدام تحدّد مدة تخزين البيانات؛ طلب الحذف وفق اللائحة الأوروبية وحفظ الصور على قرص صغير.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was wollten die Angreifer laut Text offenbar?",
+    "options": [
+     "prüfen, wo das Passwort noch passt",
+     "etwas Teures bestellen",
+     "die Familienfotos löschen"
+    ],
+    "answer": "prüfen, wo das Passwort noch passt",
+    "explanationAr": "الدليل حرفياً: «die Angreifer wollten offenbar nur prüfen, wo das Passwort noch passt». الفخّ 1: «Bestellt wurde nichts Teures». الفخّ 2: الصور لم تُمسّ.",
+    "id": "t-b2-23-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Warum war das letzte Update ein Jahr alt?",
+    "options": [
+     "weil er die Nutzungsbedingungen nicht gelesen hatte",
+     "weil der Speicher voll war und der Akku schwächelte",
+     "weil die Bank es nicht empfohlen hatte"
+    ],
+    "answer": "weil der Speicher voll war und der Akku schwächelte",
+    "explanationAr": "الدليل حرفياً: «weil der Speicher voll war und der Akku bei jeder Installation schwächelte». الفخّ 1: الشروط تخصّ تخزين البيانات. الفخّ 2: البنك أوصى بالتحديث.",
+    "id": "t-b2-23-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Die Beraterin empfahl ein Backup außerhalb der Cloud.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «ein Backup außerhalb der Cloud».",
+    "id": "t-b2-23-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Nach der ___ darf er die Löschung verlangen.",
+    "answer": [
+     "DSGVO"
+    ],
+    "explanationAr": "الدليل حرفياً: «Nach der DSGVO darf er die Löschung verlangen».",
+    "id": "t-b2-23-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "das Passwort",
+   "das Nutzerkonto",
+   "die Cloud",
+   "das Backup",
+   "der Akku",
+   "der Speicher",
+   "das Update",
+   "aktualisieren",
+   "der Spam",
+   "hacken",
+   "die Cyberkriminalität",
+   "die Nutzungsbedingungen",
+   "der Chatbot",
+   "die Datenspeicherung",
+   "die DSGVO"
+  ]
+ },
+ {
+  "id": "t-b2-24",
+  "level": "B2",
+  "titleDe": "Das erste Semester",
+  "titleAr": "الفصل الجامعي الأول",
+  "de": "Mona hatte den Studienplatz erst im zweiten Anlauf bekommen; die Zulassung kam per Post, die Einschreibung musste sie persönlich erledigen. Dann saß sie in der ersten Vorlesung, in einem Hörsaal mit vierhundert Plätzen, und verstand nach zwanzig Minuten kaum noch ein Wort. Nicht wegen der Sprache. Wegen des Tempos.\n\nIn der Sprechstunde riet ihr die Dozentin zu etwas, das Mona zunächst kindisch fand: einem Lerntagebuch. Jeden Abend drei Zeilen: Was habe ich verstanden, was nicht, was mache ich morgen dagegen. Nach zwei Wochen sah Mona ein Muster. Ihre größte Ablenkung war nicht das Handy, sondern die Sorge, nicht gut genug zu sein. Diese Sorge kostete mehr Zeit als jede Nachricht.\n\nFür den ersten Leistungsnachweis, eine Hausarbeit von zwölf Seiten, plante sie rückwärts: Abgabe, Korrektur, Rohfassung, Gliederung, Lesen. Zeitmanagement heißt für sie seitdem nicht, mehr zu schaffen, sondern früher anzufangen. Die Arbeit wurde mit einer Zwei benotet. Die Dozentin schrieb darunter, die Gliederung sei ungewöhnlich klar. Bis zur Abschlussarbeit sind es noch Jahre, aber die Karteikarten mit den Fachbegriffen liegen schon jetzt in einer Schachtel neben dem Bett.",
+  "ar": "منى حصلت على مقعد الدراسة في المحاولة الثانية، وفي أول محاضرة في مدرّج بأربعمائة مقعد لم تفهم بعد عشرين دقيقة بسبب السرعة لا اللغة. في موعد المكتب نصحتها المحاضِرة بدفتر تعلّم: ثلاثة أسطر كل مساء. بعد أسبوعين اكتشفت أن أكبر مشتّت لها ليس الهاتف بل القلق من عدم الكفاءة. خطّطت للبحث المكتوب عكسياً من موعد التسليم؛ إدارة الوقت عندها صارت: البدء مبكراً لا الإنجاز أكثر. نالت درجة اثنين، والبطاقات جاهزة قرب السرير.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Warum verstand Mona in der ersten Vorlesung kaum noch ein Wort?",
+    "options": [
+     "wegen der Sprache",
+     "wegen des Tempos",
+     "wegen der vierhundert Plätze"
+    ],
+    "answer": "wegen des Tempos",
+    "explanationAr": "الدليل حرفياً: «Nicht wegen der Sprache. Wegen des Tempos». الفخّ 1: اللغة منفيّة صراحة. الفخّ 2: حجم المدرّج وصف لا سبب.",
+    "id": "t-b2-24-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was war laut Lerntagebuch Monas größte Ablenkung?",
+    "options": [
+     "das Handy",
+     "die Nachrichten der Freunde",
+     "die Sorge, nicht gut genug zu sein"
+    ],
+    "answer": "die Sorge, nicht gut genug zu sein",
+    "explanationAr": "الدليل حرفياً: «Ihre größte Ablenkung war nicht das Handy, sondern die Sorge, nicht gut genug zu sein». الفخّ: الهاتف منفيّ بـ«nicht … sondern».",
+    "id": "t-b2-24-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Die Hausarbeit wurde mit einer Zwei benotet.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «Die Arbeit wurde mit einer Zwei benotet».",
+    "id": "t-b2-24-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "In der ___ riet ihr die Dozentin zu einem Lerntagebuch.",
+    "answer": [
+     "Sprechstunde"
+    ],
+    "explanationAr": "الدليل حرفياً: «In der Sprechstunde riet ihr die Dozentin zu etwas».",
+    "id": "t-b2-24-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Vorlesung",
+   "das Hörsaal",
+   "die Hausarbeit",
+   "der Leistungsnachweis",
+   "benoten",
+   "die Einschreibung",
+   "der Studienplatz",
+   "die Zulassung",
+   "die Dozentin",
+   "die Sprechstunde",
+   "das Zeitmanagement",
+   "das Lerntagebuch",
+   "die Ablenkung",
+   "die Karteikarte",
+   "die Abschlussarbeit"
+  ]
+ },
+ {
+  "id": "t-b2-25",
+  "level": "B2",
+  "titleDe": "Die Niederlage im Turnier",
+  "titleAr": "الهزيمة في البطولة",
+  "de": "Das Turnier endete für den kleinen Verein aus dem Stadtteil im Halbfinale, mit einem Elfmeter in der letzten Minute. Der Schiedsrichter hatte ein Foul gesehen, das die Hälfte der Zuschauer nicht gesehen hatte. Die andere Hälfte jubelte. So ist das bei einem Wettkampf: Dieselbe Szene, zwei Wahrheiten.\n\nInteressanter als die Niederlage war, was danach geschah. Auf der Mitgliederversammlung zwei Wochen später sprach niemand über den Schiedsrichter. Man sprach über Training. Die Trainerin legte Zahlen vor: drei Zerrungen und zwei Prellungen in einer Saison, fast alle in der zweiten Halbzeit. Ihre Erklärung war unbequem. Das Ausdauertraining sei gut, das Krafttraining schwach, und vor den Spielen dehne sich kaum jemand länger als zwei Minuten.\n\nDer Verein beschloss, disziplinierter zu werden, ohne strenger zu sein: zwei feste Einheiten pro Woche, ein Aufwärmplan, den jeder kennt, und ein Notizbuch, in dem jede Spielerin ihre Bestleistung selbst einträgt. Seit dem Beschluss gab es sieben Beitritte, die meisten von Eltern, die vorher nur vom Rand aus angefeuert hatten. Ob die Mannschaft nächstes Jahr weiterkommt, ist offen. Dass sie besser vorbereitet verliert oder gewinnt, ist sicher.",
+  "ar": "خرج نادي الحي من البطولة في نصف النهائي بركلة جزاء في الدقيقة الأخيرة رأى الحكم فيها خطأً لم يره نصف الجمهور. الأهمّ ما جرى بعدها: في الجمعية العمومية لم يتحدث أحد عن الحكم بل عن التدريب؛ المدربة عرضت أرقام الإصابات (شدّ ورضوض معظمها في الشوط الثاني) وشخّصت ضعف تمارين القوة والإطالة. قرّر النادي الانضباط دون تشدّد: حصّتان ثابتتان، خطة إحماء، ودفتر تسجّل فيه كل لاعبة أفضل نتيجتها. سبعة انتساب جديد، معظمهم آباء كانوا يشجعون من الحافة.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Worüber sprach man auf der Mitgliederversammlung?",
+    "options": [
+     "über den Schiedsrichter",
+     "über den Elfmeter",
+     "über Training"
+    ],
+    "answer": "über Training",
+    "explanationAr": "الدليل حرفياً: «sprach niemand über den Schiedsrichter. Man sprach über Training». الفخّ: الحكم وركلة الجزاء منفيّان كموضوع.",
+    "id": "t-b2-25-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was war laut Trainerin schwach?",
+    "options": [
+     "das Krafttraining",
+     "das Ausdauertraining",
+     "die Disziplin der Zuschauer"
+    ],
+    "answer": "das Krafttraining",
+    "explanationAr": "الدليل حرفياً: «Das Ausdauertraining sei gut, das Krafttraining schwach». الفخّ 1: التحمل «gut». الفخّ 2: الجمهور لم يُقيَّم.",
+    "id": "t-b2-25-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Die meisten neuen Mitglieder sind Eltern, die vorher vom Rand aus angefeuert hatten.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «die meisten von Eltern, die vorher nur vom Rand aus angefeuert hatten».",
+    "id": "t-b2-25-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Drei ___ und zwei Prellungen in einer Saison, fast alle in der zweiten Halbzeit.",
+    "answer": [
+     "Zerrungen"
+    ],
+    "explanationAr": "الدليل حرفياً: «drei Zerrungen und zwei Prellungen in einer Saison».",
+    "id": "t-b2-25-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "der Wettkampf",
+   "das Turnier",
+   "die Niederlage",
+   "der Schiedsrichter",
+   "der Elfmeter",
+   "jubeln",
+   "anfeuern",
+   "das Ausdauertraining",
+   "das Krafttraining",
+   "sich dehnen",
+   "die Zerrung",
+   "die Prellung",
+   "die Mitgliederversammlung",
+   "der Beitritt",
+   "die Bestleistung",
+   "diszipliniert"
+  ]
+ },
+ {
+  "id": "t-b1-21",
+  "level": "B1",
+  "titleDe": "Der erste Monat in der Firma",
+  "titleAr": "الشهر الأول في الشركة",
+  "de": "Als Hanan die Teilzeitstelle bekam, war sie erleichtert und nervös zugleich. Die Branche war neu für sie, und im Vorstellungsgespräch hatte sie ehrlich gesagt, dass ihre Qualifikation aus einem anderen Bereich kommt. Die Chefin hatte geantwortet, ein ungewöhnlicher Werdegang sei kein Nachteil, wenn man lernen will. Trotzdem: Die Probezeit dauert sechs Monate, und in dieser Zeit kann man scheitern.\n\nDie Einarbeitungszeit war gut organisiert. Ein Kollege zeigte ihr den Arbeitsplatz, die Programme und die Regeln, die nirgends geschrieben stehen: Wer die Kaffeemaschine leer macht, füllt sie wieder auf. Nach vier Wochen gab es ein erstes Gespräch. Statt Kritik bekam Hanan eine Zielvereinbarung: drei kleine Ziele bis zum Ende der Probezeit. Über ihre Arbeitszeit konnte sie sogar verhandeln, weil ihre Tochter nachmittags aus der Schule kommt.\n\nAn Karriere oder Beförderung denkt sie noch nicht. Wichtiger ist ihr, dass sie sich als Arbeitnehmerin ernst genommen fühlt. Ihr altes Arbeitszeugnis liegt im Schrank; das neue, sagt sie lachend, soll besser werden. Und das Netzwerk, das sie hier aufbaut, ist vielleicht wertvoller als jeder Titel.",
+  "ar": "حنان حصلت على وظيفة بدوام جزئي في قطاع جديد عليها، وقالت بصراحة إن مؤهلها من مجال آخر؛ المديرة اعتبرت المسار غير المعتاد ميزة لمن يريد التعلّم. فترة التجربة ستة أشهر. التأهيل كان منظّماً، وبعد أربعة أسابيع تلقّت اتفاق أهداف بدل النقد، وتفاوضت على ساعات العمل بسبب ابنتها. لا تفكّر في الترقية الآن؛ الأهم أن تُؤخذ بجدّية كأجيرة، وشبكة العلاقات أثمن من أي لقب.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was sagte die Chefin über Hanans ungewöhnlichen Werdegang?",
+    "options": [
+     "Er ist ein Nachteil in dieser Branche.",
+     "Er ist kein Nachteil, wenn man lernen will.",
+     "Er verkürzt die Probezeit."
+    ],
+    "answer": "Er ist kein Nachteil, wenn man lernen will.",
+    "explanationAr": "الدليل حرفياً: «ein ungewöhnlicher Werdegang sei kein Nachteil, wenn man lernen will». الفخّ 1: قلب المعنى. الفخّ 2: فترة التجربة ستة أشهر بلا تغيير.",
+    "id": "t-b1-21-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was bekam Hanan nach vier Wochen?",
+    "options": [
+     "Kritik an ihrer Arbeit",
+     "eine Beförderung",
+     "eine Zielvereinbarung mit drei kleinen Zielen"
+    ],
+    "answer": "eine Zielvereinbarung mit drei kleinen Zielen",
+    "explanationAr": "الدليل حرفياً: «Statt Kritik bekam Hanan eine Zielvereinbarung: drei kleine Ziele». الفخّ 1: «Statt Kritik» ينفي النقد. الفخّ 2: الترقية لا تفكّر فيها بعد.",
+    "id": "t-b1-21-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Hanan konnte über ihre Arbeitszeit verhandeln.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «Über ihre Arbeitszeit konnte sie sogar verhandeln».",
+    "id": "t-b1-21-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Die ___ dauert sechs Monate, und in dieser Zeit kann man scheitern.",
+    "answer": [
+     "Probezeit"
+    ],
+    "explanationAr": "الدليل حرفياً: «Die Probezeit dauert sechs Monate».",
+    "id": "t-b1-21-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Probezeit",
+   "der Arbeitsplatz",
+   "der Arbeitnehmer",
+   "die Einarbeitungszeit",
+   "die Zielvereinbarung",
+   "die Beförderung",
+   "die Karriere",
+   "die Qualifikation",
+   "der Werdegang",
+   "das Arbeitszeugnis",
+   "verhandeln",
+   "die Branche",
+   "die Teilzeitstelle",
+   "scheitern",
+   "das Netzwerk"
+  ]
+ },
+ {
+  "id": "t-b1-22",
+  "level": "B1",
+  "titleDe": "Streit um den Balkon",
+  "titleAr": "خلاف حول الشرفة",
+  "de": "Als Familie Kaya im Frühjahr einzog, freute sie sich vor allem auf den Balkon. Im Sommer stand dort jeden Abend der Grill. Der Nachbar unter ihnen, Herr Brandt, wohnt seit zwanzig Jahren im Haus und hatte noch nie einen Grill über seinem Schlafzimmerfenster. Nach drei Wochen kam der erste Zettel im Hausflur, nach fünf Wochen die erste laute Auseinandersetzung im Treppenhaus.\n\nHerr Brandt warf der Familie vor, keine Rücksicht zu nehmen. Frau Kaya warf ihm vor, er habe nie freundlich gefragt. Beide hatten recht, und beide wollten nicht einlenken. Die Hausgemeinschaft war gespalten: Die einen sagten, wer Ruhe will, soll aufs Dorf ziehen; die anderen fanden, neue Mieter müssten sich erst einmal anpassen.\n\nAm Ende vermittelte die älteste Bewohnerin des Hauses. Sie lud beide in den Gemeinschaftsraum ein und schlug eine einfache Vereinbarung vor: Grillen ja, aber nur freitags und samstags bis zehn Uhr, und die Reinigungspflicht für den Hof übernimmt in diesem Monat Familie Kaya. Herr Brandt akzeptierte. Frau Kaya musste zugeben, dass die Regel fair war. Ob man so etwas Versöhnung nennen kann, ist offen. Beim Nachbarschaftsfest im September saßen sie jedenfalls am selben Tisch, und niemand musste jemandem etwas verzeihen, weil niemand mehr davon sprach. Ausziehen will jetzt keiner.",
+  "ar": "عائلة كايا انتقلت في الربيع وفرحت بالشرفة، وصار الشواء كل مساء فوق نافذة غرفة نوم الجار القديم السيد برانت؛ بعد أسابيع بدأت الرسائل ثم الخلاف الصاخب. كلٌّ اتّهم الآخر وكلاهما رفض التراجع، وانقسم سكان البناية. توسّطت أكبر ساكنة: اتفاق بسيط — شواء الجمعة والسبت حتى العاشرة، وتنظيف الفناء هذا الشهر على عائلة كايا. قبل الجار، واعترفت السيدة كايا بعدالة القاعدة. في مهرجان الجيران جلسوا على طاولة واحدة ولا أحد يريد الرحيل.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Wer vermittelte am Ende zwischen den Nachbarn?",
+    "options": [
+     "Herr Brandt",
+     "die neuen Mieter selbst",
+     "die älteste Bewohnerin des Hauses"
+    ],
+    "answer": "die älteste Bewohnerin des Hauses",
+    "explanationAr": "الدليل حرفياً: «Am Ende vermittelte die älteste Bewohnerin des Hauses». الفخّ 1: برانت طرف في الخلاف. الفخّ 2: المستأجرون الجدد طرف الخلاف.",
+    "id": "t-b1-22-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was gehört zur Vereinbarung?",
+    "options": [
+     "Grillen nur freitags und samstags bis zehn Uhr",
+     "Grillen jeden Abend bis zehn Uhr",
+     "Familie Kaya zieht aufs Dorf"
+    ],
+    "answer": "Grillen nur freitags und samstags bis zehn Uhr",
+    "explanationAr": "الدليل حرفياً: «Grillen ja, aber nur freitags und samstags bis zehn Uhr». الفخّ 1: «jeden Abend» كان الوضع القديم. الفخّ 2: القرية كانت رأي بعض السكان.",
+    "id": "t-b1-22-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Herr Brandt wohnt seit zwanzig Jahren im Haus.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «wohnt seit zwanzig Jahren im Haus».",
+    "id": "t-b1-22-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Beide hatten recht, und beide wollten nicht ___.",
+    "answer": [
+     "einlenken"
+    ],
+    "explanationAr": "الدليل حرفياً: «beide wollten nicht einlenken» — einlenken = يتراجع/يلين في خلاف.",
+    "id": "t-b1-22-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "der Balkon",
+   "einziehen",
+   "ausziehen",
+   "die Hausgemeinschaft",
+   "der Gemeinschaftsraum",
+   "die Reinigungspflicht",
+   "das Nachbarschaftsfest",
+   "die Auseinandersetzung",
+   "vermitteln",
+   "einlenken",
+   "die Versöhnung",
+   "verzeihen",
+   "vorwerfen",
+   "die Vereinbarung",
+   "akzeptieren"
+  ]
+ },
+ {
+  "id": "t-b1-23",
+  "level": "B1",
+  "titleDe": "Eine Nachricht, die nicht stimmte",
+  "titleAr": "خبر لم يكن صحيحاً",
+  "de": "Am Montagmorgen verbreitete sich in der Stadt eine Nachricht: Das Schwimmbad im Norden solle geschlossen werden. Die Meldung stand in einer Gruppe im Messenger, ohne Namen, ohne Datum, ohne Quelle. Bis zum Mittag hatten sie hunderte Menschen weitergeleitet, und am Nachmittag standen die ersten Eltern mit Plakaten vor dem Rathaus.\n\nEine junge Journalistin der Lokalzeitung wollte die Meldung nicht einfach übernehmen. Ihre Recherche dauerte zwei Stunden: ein Anruf bei der Stadt, ein Blick in die Sitzungsunterlagen, ein Gespräch mit dem Bademeister. Die Tatsache war viel kleiner als das Gerücht. Das Bad wird im Winter drei Wochen renoviert, mehr nicht. Die Stadt gab am Abend eine Stellungnahme ab, aber da war die Falschmeldung schon schneller gewesen als die Wahrheit.\n\nWer die Nachricht zuerst geschrieben hatte, blieb anonym. Vielleicht war es keine Manipulation, sondern nur ein Missverständnis, das jemand zugespitzt hatte. Die Journalistin schrieb einen Artikel, der beide Seiten zeigte: die Sorge der Eltern und die Antwort der Stadt. Ausgewogene Berichterstattung heißt nicht, dass beide recht haben. Sie heißt, dass man die Gegenposition ernst nimmt und jede Behauptung prüft, bevor man sie druckt. Seriös ist, wer die Quelle angibt, auch wenn das langsamer ist.",
+  "ar": "انتشر خبر بلا اسم ولا مصدر: مسبح الشمال سيُغلق؛ خلال ساعات تجمّع الأهالي أمام البلدية. صحفية محلية لم تنقل الخبر بل بحثت ساعتين: اتصال بالبلدية، وثائق الجلسة، حديث مع منقذ المسبح. الحقيقة أصغر بكثير: ترميم ثلاثة أسابيع شتاءً. البلدية أصدرت بياناً مساءً لكن الخبر الكاذب كان أسرع. الكاتب بقي مجهولاً؛ ربما سوء فهم بولغ فيه لا تلاعباً. كتبت مقالاً يعرض الطرفين: التغطية المتوازنة لا تعني أن الطرفين على حق، بل أن كل ادّعاء يُفحص ويُذكر مصدره.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was war die Tatsache hinter dem Gerücht?",
+    "options": [
+     "Das Bad wird im Winter drei Wochen renoviert.",
+     "Das Bad im Norden wird geschlossen.",
+     "Die Eltern haben das Bad gerettet."
+    ],
+    "answer": "Das Bad wird im Winter drei Wochen renoviert.",
+    "explanationAr": "الدليل حرفياً: «Das Bad wird im Winter drei Wochen renoviert, mehr nicht». الفخّ 1: الإغلاق هو الشائعة. الفخّ 2: احتجاج الأهالي لم يُنقذ شيئاً لأن الإغلاق لم يكن مقرّراً.",
+    "id": "t-b1-23-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was bedeutet laut Text ausgewogene Berichterstattung?",
+    "options": [
+     "dass beide Seiten recht haben",
+     "die Gegenposition ernst nehmen und jede Behauptung prüfen",
+     "die Meldung schnell weiterleiten"
+    ],
+    "answer": "die Gegenposition ernst nehmen und jede Behauptung prüfen",
+    "explanationAr": "الدليل حرفياً: «heißt nicht, dass beide recht haben. Sie heißt, dass man die Gegenposition ernst nimmt und jede Behauptung prüft». الفخّ 1: منفيّ صراحة. الفخّ 2: إعادة الإرسال هي ما فعله الناس بالشائعة.",
+    "id": "t-b1-23-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Die Person, die die Nachricht zuerst schrieb, ist bekannt.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «Wer die Nachricht zuerst geschrieben hatte, blieb anonym».",
+    "id": "t-b1-23-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Die Stadt gab am Abend eine ___ ab.",
+    "answer": [
+     "Stellungnahme"
+    ],
+    "explanationAr": "الدليل حرفياً: «Die Stadt gab am Abend eine Stellungnahme ab».",
+    "id": "t-b1-23-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Falschmeldung",
+   "verbreiten",
+   "der Journalist",
+   "die Tatsache",
+   "die Stellungnahme",
+   "die Recherche",
+   "behaupten",
+   "seriös",
+   "anonym",
+   "die Manipulation",
+   "zuspitzen",
+   "die Berichterstattung",
+   "einseitig",
+   "ausgewogen",
+   "die Gegenposition",
+   "die Quelle angeben"
+  ]
+ },
+ {
+  "id": "t-b1-24",
+  "level": "B1",
+  "titleDe": "Gesund bleiben im Schichtdienst",
+  "titleAr": "البقاء بصحة في العمل بالمناوبات",
+  "de": "Karim arbeitet seit vier Jahren im Schichtdienst in einer Bäckerei. Frühschicht ab drei Uhr, dann zwei Wochen Spätschicht, dann wieder früh. Sein Schlafrhythmus war irgendwann so durcheinander, dass er auch an freien Tagen um drei Uhr wach lag. Bei der Vorsorgeuntersuchung sagte der Arzt einen Satz, den Karim nicht vergessen hat: „Ihre Belastbarkeit ist nicht das Problem. Ihre Regeneration ist es.“\n\nEine Therapie mit Tabletten wollte Karim nicht, wegen der Nebenwirkungen und weil er nichts Chronisches hatte, nur eine ungesunde Lebensweise. Also änderte er drei Dinge. Er ging zur Ernährungsberatung, weil er nachts immer süß gegessen hatte. Er begann mit Ausdauer statt Kraft: dreimal pro Woche zwanzig Minuten laufen, langsam, ohne Muskelkater am nächsten Tag. Und er lernte eine Entspannungstechnik, die er im Bett anwendet, wenn der Kopf nicht aufhören will zu arbeiten.\n\nNach drei Monaten ist das Gleichgewicht nicht perfekt, aber besser. Sein Immunsystem scheint stabiler; die dritte Erkältung des Winters ist ausgeblieben. Das Wichtigste, sagt er, ist Achtsamkeit für kleine Signale: müde Augen, kurze Geduld, Hunger auf Zucker. Wer sie früh bemerkt, kann vorbeugen, statt später zu reparieren.",
+  "ar": "كريم يعمل بالمناوبات في مخبز منذ أربع سنوات واضطرب إيقاع نومه حتى صار يستيقظ في الثالثة حتى في العطل. في الفحص الوقائي قال الطبيب: المشكلة ليست تحمّلك بل استشفاؤك. رفض العلاج بالأقراص بسبب آثارها الجانبية ولأن حالته ليست مزمنة بل نمط حياة. غيّر ثلاثة أشياء: استشارة تغذية، تمارين تحمل خفيفة ثلاث مرات أسبوعياً، وتقنية استرخاء في السرير. بعد ثلاثة أشهر توازنه أفضل ومناعته أثبت. الأهم: الانتباه للإشارات الصغيرة مبكراً للوقاية بدل الإصلاح.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was ist laut Arzt Karims Problem?",
+    "options": [
+     "seine Belastbarkeit",
+     "seine Regeneration",
+     "eine chronische Krankheit"
+    ],
+    "answer": "seine Regeneration",
+    "explanationAr": "الدليل حرفياً: «Ihre Belastbarkeit ist nicht das Problem. Ihre Regeneration ist es». الفخّ 1: التحمل منفيّ صراحة. الفخّ 2: «nichts Chronisches».",
+    "id": "t-b1-24-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Warum wollte Karim keine Therapie mit Tabletten?",
+    "options": [
+     "weil die Ernährungsberatung billiger war",
+     "weil der Arzt es verboten hatte",
+     "wegen der Nebenwirkungen und weil er nichts Chronisches hatte"
+    ],
+    "answer": "wegen der Nebenwirkungen und weil er nichts Chronisches hatte",
+    "explanationAr": "الدليل حرفياً: «wegen der Nebenwirkungen und weil er nichts Chronisches hatte». الفخّ 1: استشارة التغذية خطوة أخرى لا سبب. الفخّ 2: لا منع من الطبيب.",
+    "id": "t-b1-24-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Karim läuft dreimal pro Woche zwanzig Minuten.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «dreimal pro Woche zwanzig Minuten laufen».",
+    "id": "t-b1-24-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Wer die Signale früh bemerkt, kann ___, statt später zu reparieren.",
+    "answer": [
+     "vorbeugen"
+    ],
+    "explanationAr": "الدليل حرفياً: «Wer sie früh bemerkt, kann vorbeugen, statt später zu reparieren».",
+    "id": "t-b1-24-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Vorsorgeuntersuchung",
+   "die Therapie",
+   "die Nebenwirkung",
+   "chronisch",
+   "das Immunsystem",
+   "die Belastbarkeit",
+   "das Gleichgewicht",
+   "die Ausdauer",
+   "die Ernährungsberatung",
+   "der Schlafrhythmus",
+   "die Regeneration",
+   "die Entspannungstechnik",
+   "der Muskelkater",
+   "vorbeugen",
+   "die Lebensweise",
+   "die Achtsamkeit"
+  ]
+ },
+ {
+  "id": "t-b1-25",
+  "level": "B1",
+  "titleDe": "Mehr Grün, weniger Lärm",
+  "titleAr": "خضرة أكثر وضجيج أقل",
+  "de": "Die Bürgerinitiative „Mehr Grün“ entstand an einem Küchentisch. Fünf Nachbarn hatten genug vom Verkehrslärm auf der Hauptstraße und von der Feinstaubbelastung, die man an den grauen Fensterbänken sehen konnte. Ihr Vorschlag: Ein Teil der Straße wird Fußgängerzone, der alte Parkplatz wird Grünfläche mit Bäumen und Bänken.\n\nDer Weg dorthin war länger als gedacht. Zuerst war die Zuständigkeit unklar: Straße oder Grünflächen, zwei verschiedene Ämter. In der Bürgersprechstunde riet der Bürgermeister, eine Beschlussvorlage für den Gemeinderat zu schreiben, mit Zahlen zur Anbindung: Wie kommen die Leute dann zum Supermarkt, wo parken die Lieferwagen? Die Initiative besuchte drei Sitzungen, sammelte Unterschriften und rechnete die Sanierung des Parkplatzes mit einem Architekten durch.\n\nIm Herbst stimmte der Gemeinderat über die Vorlage ab: angenommen, mit zwei Auflagen. Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone, und die Baugenehmigung für die Bänke bekommt die Stadt nur, wenn ein Weg für Rollstühle bleibt. Ob die Lebensqualität wirklich steigt, wird man erst im nächsten Sommer wissen. Dass fünf Leute die Infrastruktur einer ganzen Straße verändern können, wissen die Nachbarn jetzt schon.",
+  "ar": "مبادرة أهلية «خضرة أكثر» بدأت على طاولة مطبخ: خمسة جيران سئموا ضجيج المرور والجسيمات الدقيقة، واقترحوا تحويل جزء من الشارع إلى منطقة مشاة والموقف القديم إلى مساحة خضراء. الطريق كان طويلاً: اختصاص غير واضح بين إدارتين، نصيحة في ساعة المواطنين بكتابة مقترح قرار لمجلس البلدية بأرقام عن الربط بالمواصلات، ثلاث جلسات، توقيعات، وحساب الترميم مع مهندس. في الخريف صوّت المجلس بالموافقة بشرطين: دخول سيارات التوصيل حتى العاشرة صباحاً، وممر للكراسي المتحركة.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was war zuerst unklar?",
+    "options": [
+     "die Zahl der Unterschriften",
+     "die Kosten der Bänke",
+     "die Zuständigkeit zwischen zwei Ämtern"
+    ],
+    "answer": "die Zuständigkeit zwischen zwei Ämtern",
+    "explanationAr": "الدليل حرفياً: «Zuerst war die Zuständigkeit unklar: Straße oder Grünflächen, zwei verschiedene Ämter». الفخّ 1: التوقيعات جُمعت لاحقاً. الفخّ 2: الترميم حُسب مع مهندس.",
+    "id": "t-b1-25-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Welche Auflage gehört zum Beschluss?",
+    "options": [
+     "Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone.",
+     "Der Parkplatz bleibt für Lieferwagen.",
+     "Die Bänke brauchen keine Baugenehmigung."
+    ],
+    "answer": "Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone.",
+    "explanationAr": "الدليل حرفياً: «Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone». الفخّ 1: الموقف يصير مساحة خضراء. الفخّ 2: الترخيص مشروط بممر الكراسي.",
+    "id": "t-b1-25-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Der Gemeinderat hat die Vorlage abgelehnt.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «angenommen, mit zwei Auflagen».",
+    "id": "t-b1-25-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "In der ___ riet der Bürgermeister, eine Beschlussvorlage zu schreiben.",
+    "answer": [
+     "Bürgersprechstunde"
+    ],
+    "explanationAr": "الدليل حرفياً: «In der Bürgersprechstunde riet der Bürgermeister».",
+    "id": "t-b1-25-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Bürgerinitiative",
+   "die Fußgängerzone",
+   "der Verkehrslärm",
+   "die Grünfläche",
+   "die Lebensqualität",
+   "die Infrastruktur",
+   "die Anbindung",
+   "die Baugenehmigung",
+   "die Zuständigkeit",
+   "der Gemeinderat",
+   "die Bürgersprechstunde",
+   "die Beschlussvorlage",
+   "die Auflage",
+   "abstimmen über",
+   "die Feinstaubbelastung",
+   "die Sanierung"
+  ]
+ },
+ {
+  "id": "t-b2-26",
+  "level": "B2",
+  "titleDe": "Der Bürgerwindpark",
+  "titleAr": "مزرعة الرياح الأهلية",
+  "de": "Als das erste Windrad hinter dem Dorf geplant wurde, war die Stimmung schlecht. Man sprach über Schattenwurf am Morgen, über Infraschall, den niemand hört und alle fürchten, und über den Mindestabstand zu den letzten Häusern. Ein Windpark, hieß es, gehöre aufs Meer, nicht ins Tal.\n\nDie Wende kam mit einem anderen Modell. Statt eines fremden Betreibers gründete eine Gruppe aus dem Ort einen Bürgerwindpark: Wer will, kauft einen Anteil, und der Gewinn bleibt in der Region. Plötzlich rechneten dieselben Leute, die vorher nur Nachteile gesehen hatten, mit der Einspeisevergütung und fragten, wann die Anlage Strom ins Netz einspeisen könne. Akzeptanz, so lernte der Bürgermeister, entsteht selten durch Broschüren. Sie entsteht, wenn Menschen mitverdienen und mitentscheiden.\n\nGelöst ist damit nicht alles. Ohne Netzausbau kommt der Ökostrom nicht in die Stadt, und gegen die neue Stromtrasse klagt schon das Nachbardorf. Auf den Dächern der Schule liefert Solarenergie inzwischen den Strom für die Küche, das alte Kraftwerk am Fluss läuft nur noch im Winter. Erneuerbar heißt nicht einfach; es heißt, dass die Konflikte näher rücken, weil die Energie nicht mehr aus fossilen Quellen weit weg kommt, sondern vom Hügel hinter dem Haus.",
+  "ar": "حين خُطّط لأول عنفة رياح خلف القرية ساد الرفض: ظلّ الشفرات، ما تحت السمع، المسافة الدنيا. تغيّر المزاج مع نموذج آخر: مزرعة رياح أهلية يشتري فيها من يشاء حصة ويبقى الربح في المنطقة؛ صار المعارضون يحسبون تعرفة التغذية ويسألون متى يُضخّ التيار في الشبكة. القبول لا يأتي من الكتيّبات بل من المشاركة في الربح والقرار. لكن بلا توسيع الشبكة لا يصل التيار الأخضر، والقرية المجاورة تقاضي ضد ممرّ الكهرباء الجديد؛ المتجدد ليس سهلاً — الصراعات تقترب لأن الطاقة لم تعد تأتي من بعيد.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Wodurch entstand laut Bürgermeister Akzeptanz?",
+    "options": [
+     "dadurch, dass Menschen mitverdienen und mitentscheiden",
+     "durch Broschüren",
+     "durch den Mindestabstand zu den Häusern"
+    ],
+    "answer": "dadurch, dass Menschen mitverdienen und mitentscheiden",
+    "explanationAr": "الدليل حرفياً: «Akzeptanz … entsteht selten durch Broschüren. Sie entsteht, wenn Menschen mitverdienen und mitentscheiden». الفخّ 1: الكتيّبات منفيّة. الفخّ 2: المسافة الدنيا كانت من مخاوف البداية.",
+    "id": "t-b2-26-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was ist noch nicht gelöst?",
+    "options": [
+     "Die Schule hat keinen Strom für die Küche.",
+     "Ohne Netzausbau kommt der Ökostrom nicht in die Stadt.",
+     "Das alte Kraftwerk läuft das ganze Jahr."
+    ],
+    "answer": "Ohne Netzausbau kommt der Ökostrom nicht in die Stadt.",
+    "explanationAr": "الدليل حرفياً: «Ohne Netzausbau kommt der Ökostrom nicht in die Stadt». الفخّ 1: الطاقة الشمسية تغذّي المطبخ. الفخّ 2: المحطة «läuft nur noch im Winter».",
+    "id": "t-b2-26-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Das Nachbardorf klagt gegen die neue Stromtrasse.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «gegen die neue Stromtrasse klagt schon das Nachbardorf».",
+    "id": "t-b2-26-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Sie fragten, wann die Anlage Strom ins Netz ___ könne.",
+    "answer": [
+     "einspeisen"
+    ],
+    "explanationAr": "الدليل حرفياً: «wann die Anlage Strom ins Netz einspeisen könne».",
+    "id": "t-b2-26-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "das Windrad",
+   "der Windpark",
+   "erneuerbar",
+   "die Solarenergie",
+   "der Schattenwurf",
+   "der Infraschall",
+   "der Mindestabstand",
+   "die Akzeptanz",
+   "der Netzausbau",
+   "die Stromtrasse",
+   "einspeisen",
+   "die Einspeisevergütung",
+   "der Bürgerwindpark",
+   "fossil",
+   "das Kraftwerk",
+   "der Ökostrom"
+  ]
+ },
+ {
+  "id": "t-b2-27",
+  "level": "B2",
+  "titleDe": "Das Kleingedruckte",
+  "titleAr": "الخطّ الصغير",
+  "de": "Frau Öztürk arbeitet seit zwölf Jahren in einer Verbraucherzentrale und sagt, die Fälle hätten sich kaum verändert, nur die Verpackung. Früher kam die Kundschaft mit einem Katalog, heute mit einem Handy. Das Prinzip bleibt: Ein Lockvogel zieht an, das Kleingedruckte holt zurück.\n\nIhr häufigster Fall ist die Abo-Falle. Ein kostenloser Probemonat, ein hochwertig aussehendes Angebot, ein Schnäppchen mit Countdown. Wer nicht kündigt, zahlt. Der zweithäufigste Fall ist die Mogelpackung: gleiche Größe, weniger Inhalt, gleicher Preis. Das ist keine Irreführung im rechtlichen Sinn, solange das Gewicht irgendwo steht. Frau Öztürk nennt es trotzdem so, und die Kundschaft versteht sie.\n\nWas viele nicht wissen: Beim Kauf im Laden gibt es kein gesetzliches Rückgaberecht. Wer einen Pullover umtauschen will, weil er ihm nicht gefällt, ist auf die Kulanz des Händlers angewiesen. Reklamieren kann man dagegen immer, wenn die Ware minderwertig ist oder kaputt ankommt. Den Unterschied zwischen Umtausch und Reklamation erklärt sie jeden Tag. Und wenn ein Händler mit falschen Versprechen wirbt, schreibt die Zentrale eine Abmahnung. Das wirkt, sagt sie, meistens schneller als jedes Gericht.",
+  "ar": "السيدة أوزتورك تعمل في مركز حماية المستهلك منذ اثنتي عشرة سنة: الحالات لم تتغيّر، بل غلافها فقط. المبدأ: طُعم يجذب وخطّ صغير يستردّ. أكثر الحالات فخّ الاشتراك، ثم العبوة المخاتلة (حجم واحد، محتوى أقل، سعر واحد) — ليست تضليلاً قانونياً ما دام الوزن مكتوباً. ما لا يعرفه كثيرون: لا حقّ إرجاع قانونياً للشراء في المتجر؛ الاستبدال تفضّل من البائع، أما الشكوى فحقّ دائم للبضاعة الرديئة أو المعطوبة. وضد الإعلان الكاذب يكتب المركز إنذاراً قانونياً — أسرع من المحكمة.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was ist laut Frau Öztürk der häufigste Fall?",
+    "options": [
+     "die Mogelpackung",
+     "die Abo-Falle",
+     "die Abmahnung"
+    ],
+    "answer": "die Abo-Falle",
+    "explanationAr": "الدليل حرفياً: «Ihr häufigster Fall ist die Abo-Falle». الفخّ 1: العبوة المخاتلة «zweithäufigste». الفخّ 2: الإنذار أداة المركز لا حالة زبون.",
+    "id": "t-b2-27-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Wann kann man laut Text immer reklamieren?",
+    "options": [
+     "wenn der Pullover nicht gefällt",
+     "wenn der Probemonat abgelaufen ist",
+     "wenn die Ware minderwertig ist oder kaputt ankommt"
+    ],
+    "answer": "wenn die Ware minderwertig ist oder kaputt ankommt",
+    "explanationAr": "الدليل حرفياً: «Reklamieren kann man dagegen immer, wenn die Ware minderwertig ist oder kaputt ankommt». الفخّ 1: عدم الإعجاب يعتمد على تفضّل البائع. الفخّ 2: الشهر التجريبي يخصّ فخّ الاشتراك.",
+    "id": "t-b2-27-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Beim Kauf im Laden ist man beim Umtausch auf die Kulanz des Händlers angewiesen.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «ist auf die Kulanz des Händlers angewiesen».",
+    "id": "t-b2-27-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Ein ___ zieht an, das Kleingedruckte holt zurück.",
+    "answer": [
+     "Lockvogel"
+    ],
+    "explanationAr": "الدليل حرفياً: «Ein Lockvogel zieht an, das Kleingedruckte holt zurück».",
+    "id": "t-b2-27-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "das Kleingedruckte",
+   "die Abo-Falle",
+   "der Lockvogel",
+   "die Kulanz",
+   "die Abmahnung",
+   "die Mogelpackung",
+   "der Umtausch",
+   "umtauschen",
+   "reklamieren",
+   "das Rückgaberecht",
+   "die Kundschaft",
+   "das Schnäppchen",
+   "minderwertig",
+   "hochwertig",
+   "die Irreführung",
+   "die Verbraucherzentrale"
+  ]
+ },
+ {
+  "id": "t-b2-28",
+  "level": "B2",
+  "titleDe": "Wem gehört die Stadt?",
+  "titleAr": "لمن المدينة؟",
+  "de": "Im Viertel am Bahnhof eröffneten innerhalb von zwei Jahren drei Cafés, ein Yogastudio und ein Laden für Fahrräder, die mehr kosten als ein Kleinwagen. Die Zeitung nannte es Aufwertung. Die Familie im dritten Stock, deren Miete nach der Sanierung um ein Drittel stieg, nannte es anders. Gentrifizierung ist das Wort, aber das Gefühl dahinter heißt Verdrängung: Man wird nicht gekündigt, man wird herausgepreist.\n\nDie Stadt hat Instrumente, die sie selten nutzt. Der Mietspiegel zeigt, was ortsüblich ist; die Kappungsgrenze begrenzt, wie schnell die Miete steigen darf; das Vorkaufsrecht erlaubt der Stadt, ein Haus zu kaufen, bevor es ein Investor tut. Gegen die Zweckentfremdung von Wohnungen als Ferienunterkünfte gibt es ein Verbot, aber kaum jemand kontrolliert es. Der Leerstand im alten Postgebäude dauert seit sieben Jahren.\n\nBeim Bürgerentscheid im Frühjahr ging es um den Bebauungsplan für den letzten freien Platz: Nachverdichtung mit sechzig Wohnungen oder Stadtbegrünung mit Bäumen und einem Spielplatz. Die Gegner der Bebauung sprachen von Versiegelung und einer Frischluftschneise, die man nicht zubauen dürfe. Die Befürworter fragten, wo die Familien sonst wohnen sollten. Am Ende gewann die Bebauung knapp, mit der Auflage, das Dach zu begrünen. Bürgerbeteiligung heißt nicht, dass alle zufrieden sind. Sie heißt, dass niemand sagen kann, er sei nicht gefragt worden. Ob man ein Viertel aufwerten kann, ohne seine Bewohner zu verlieren, bleibt die eigentliche Frage.",
+  "ar": "حيّ المحطة: ثلاثة مقاهٍ وستوديو يوغا ومتجر دراجات غالية خلال سنتين؛ الجريدة سمّته ارتقاءً، والعائلة التي ارتفع إيجارها ثلثاً بعد الترميم سمّته إزاحة. للمدينة أدوات نادراً ما تستعملها: مرآة الإيجارات، سقف الزيادة، حق الشراء الأول، منع تحوير الشقق لسكن سياحي — ومبنى البريد فارغ منذ سبع سنوات. الاستفتاء المحلي حول آخر ساحة: حشو عمراني بستين شقة أم تخضير؛ فاز البناء بفارق ضئيل بشرط تخضير السطح. إشراك المواطنين لا يعني رضا الجميع بل ألا يقول أحد إنه لم يُسأل.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was bedeutet Verdrängung laut Text?",
+    "options": [
+     "Man bekommt eine Kündigung wegen der Sanierung.",
+     "Man zieht freiwillig ins Yogastudio-Viertel.",
+     "Man wird nicht gekündigt, man wird herausgepreist."
+    ],
+    "answer": "Man wird nicht gekündigt, man wird herausgepreist.",
+    "explanationAr": "الدليل حرفياً: «Man wird nicht gekündigt, man wird herausgepreist». الفخّ 1: الإخلاء منفيّ. الفخّ 2: لا طوعية في الأمر.",
+    "id": "t-b2-28-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Wie ging der Bürgerentscheid aus?",
+    "options": [
+     "Die Bebauung gewann knapp, mit der Auflage, das Dach zu begrünen.",
+     "Die Stadtbegrünung mit Spielplatz gewann.",
+     "Der Platz bleibt eine Frischluftschneise."
+    ],
+    "answer": "Die Bebauung gewann knapp, mit der Auflage, das Dach zu begrünen.",
+    "explanationAr": "الدليل حرفياً: «Am Ende gewann die Bebauung knapp, mit der Auflage, das Dach zu begrünen». الفخّ 1 و2: موقف المعارضين.",
+    "id": "t-b2-28-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Das Verbot der Zweckentfremdung wird streng kontrolliert.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «aber kaum jemand kontrolliert es».",
+    "id": "t-b2-28-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Das ___ erlaubt der Stadt, ein Haus zu kaufen, bevor es ein Investor tut.",
+    "answer": [
+     "Vorkaufsrecht"
+    ],
+    "explanationAr": "الدليل حرفياً: «das Vorkaufsrecht erlaubt der Stadt, ein Haus zu kaufen, bevor es ein Investor tut».",
+    "id": "t-b2-28-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Gentrifizierung",
+   "die Aufwertung",
+   "die Verdrängung",
+   "der Mietspiegel",
+   "die Kappungsgrenze",
+   "die Nachverdichtung",
+   "der Bebauungsplan",
+   "die Bürgerbeteiligung",
+   "der Bürgerentscheid",
+   "das Vorkaufsrecht",
+   "der Leerstand",
+   "die Stadtbegrünung",
+   "die Versiegelung",
+   "die Frischluftschneise",
+   "sanieren",
+   "aufwerten",
+   "die Zweckentfremdung"
+  ]
+ },
+ {
+  "id": "t-b2-29",
+  "level": "B2",
+  "titleDe": "Ankommen dauert",
+  "titleAr": "الوصول يستغرق وقتاً",
+  "de": "Als Dr. Amani vor sechs Jahren zugewandert ist, hatte sie einen Abschluss in Chemie und keine Arbeitserlaubnis. Die Gleichwertigkeitsprüfung ihres Diploms dauerte neun Monate; danach fehlte ein halbes Jahr Nachqualifizierung, weil ein Fach im deutschen Lehrplan anders heißt. In dieser Zeit lebte sie mit einer Duldung, die alle sechs Monate verlängert werden musste. Planen konnte sie nichts, nicht einmal einen Zahnarzttermin.\n\nDer Integrationskurs war für sie sprachlich zu leicht und bürokratisch zu wichtig: Ohne das Zertifikat keine Bleibeperspektive, ohne Bleibeperspektive kein Familiennachzug. Ihr Mann kam erst im dritten Jahr. Dass sie heute eine Blaue Karte hat und nächstes Jahr die Niederlassungserlaubnis beantragen kann, verdankt sie vor allem einer Kollegin im Labor, die ihr jeden Brief vom Amt erklärt hat. Willkommenskultur, sagt Dr. Amani, ist kein Plakat am Bahnhof. Es ist eine Person, die Zeit hat.\n\nOb sie die Staatsbürgerschaft beantragt, weiß sie noch nicht. Die Einbürgerung wäre ein Schritt, den ihre Eltern nicht verstehen würden. Sich einfügen, ohne sich aufzugeben, ist die Übung, die sie täglich macht. Die Mehrheitsgesellschaft merkt selten, wie viel Übersetzung das kostet, nicht nur beim Zweitspracherwerb. Ankommen, sagt sie, ist kein Datum. Es ist eine Richtung.",
+  "ar": "الدكتورة أماني هاجرت قبل ست سنوات بشهادة كيمياء وبلا رخصة عمل؛ معادلة الشهادة استغرقت تسعة أشهر ثم نصف سنة تأهيل لاحق، وعاشت بتحمّل مؤقت يُجدَّد كل ستة أشهر بلا قدرة على التخطيط. دورة الاندماج كانت لغوياً سهلة وبيروقراطياً حاسمة: بلا شهادة لا أفق بقاء ولا لحاق أسرة؛ زوجها جاء في السنة الثالثة. اليوم لديها البطاقة الزرقاء وستطلب الإقامة الدائمة — بفضل زميلة شرحت لها كل رسالة رسمية: ثقافة الترحيب شخص لديه وقت لا لافتة. التجنيس قرار لم تحسمه؛ الاندماج دون التخلّي عن الذات تمرين يومي. الوصول ليس تاريخاً بل اتجاه.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Warum brauchte Dr. Amani eine Nachqualifizierung?",
+    "options": [
+     "weil ein Fach im deutschen Lehrplan anders heißt",
+     "weil ihr Diplom nicht anerkannt wurde",
+     "weil sie den Integrationskurs nicht bestanden hatte"
+    ],
+    "answer": "weil ein Fach im deutschen Lehrplan anders heißt",
+    "explanationAr": "الدليل حرفياً: «weil ein Fach im deutschen Lehrplan anders heißt». الفخّ 1: المعادلة تمّت بعد تسعة أشهر. الفخّ 2: الدورة كانت «zu leicht».",
+    "id": "t-b2-29-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was ist Willkommenskultur laut Dr. Amani?",
+    "options": [
+     "ein Plakat am Bahnhof",
+     "eine Person, die Zeit hat",
+     "das Zertifikat des Integrationskurses"
+    ],
+    "answer": "eine Person, die Zeit hat",
+    "explanationAr": "الدليل حرفياً: «Willkommenskultur … ist kein Plakat am Bahnhof. Es ist eine Person, die Zeit hat». الفخّ 1: منفيّ صراحة. الفخّ 2: الشهادة شرط بيروقراطي.",
+    "id": "t-b2-29-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Ihr Mann kam erst im dritten Jahr nach Deutschland.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «Ihr Mann kam erst im dritten Jahr».",
+    "id": "t-b2-29-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "In dieser Zeit lebte sie mit einer ___, die alle sechs Monate verlängert werden musste.",
+    "answer": [
+     "Duldung"
+    ],
+    "explanationAr": "الدليل حرفياً: «lebte sie mit einer Duldung, die alle sechs Monate verlängert werden musste».",
+    "id": "t-b2-29-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Einbürgerung",
+   "die Staatsbürgerschaft",
+   "der Integrationskurs",
+   "die Duldung",
+   "die Niederlassungserlaubnis",
+   "der Familiennachzug",
+   "die Arbeitserlaubnis",
+   "die Gleichwertigkeitsprüfung",
+   "die Nachqualifizierung",
+   "die Bleibeperspektive",
+   "die Willkommenskultur",
+   "die Mehrheitsgesellschaft",
+   "sich einfügen",
+   "zugewandert",
+   "die Blaue Karte",
+   "der Zweitspracherwerb"
+  ]
+ },
+ {
+  "id": "t-b2-30",
+  "level": "B2",
+  "titleDe": "Ein Stein vor der Tür",
+  "titleAr": "حجر أمام الباب",
+  "de": "Vor dem Haus Nummer 14 liegt seit dem Frühjahr ein kleiner Stolperstein aus Messing. Ein Name, ein Geburtsjahr, ein Schicksal in drei Zeilen. Die Schülerinnen der zehnten Klasse haben die Geschichte der Familie recherchiert, die dort einmal wohnte, und bei der Verlegung eine Gedenkminute gehalten. Kein Mahnmal aus Stein, keine Gedenkstätte mit Öffnungszeiten, nur ein Stein, über den man beim Einkaufen stolpert. Das ist Erinnerungskultur im Kleinen.\n\nNicht alle im Haus waren dafür. Ein Bewohner fragte, ob man nicht irgendwann einen Schlussstrich ziehen könne; seine Großeltern seien doch nur Mitläufer gewesen. Die Lehrerin antwortete ruhig, dass Erinnerungsarbeit keine Schuldfrage an die Enkel stellt. Sie fragt, wie normale Menschen mitgemacht haben, damit normale Menschen es heute erkennen. Wer die Vergangenheit relativiert, sagt sie, schützt nicht die Großeltern, sondern die Bequemlichkeit.\n\nDer letzte Zeitzeuge aus der Straße ist vor zwei Jahren gestorben. Sein Interview liegt im Archiv der Schule, dreiundvierzig Minuten. Die Schülerinnen haben es gehört, bevor sie den Stein setzten. Vergangenheitsbewältigung ist ein schweres Wort für etwas Einfaches: hinsehen, aufarbeiten, weitergeben. Verharmlosung beginnt nicht mit einer Lüge, sondern mit einem Wort, das weicher klingt als die Tatsache. Wer der Toten gedenkt, sagt die Lehrerin, tut das nicht für die Toten.",
+  "ar": "أمام المنزل رقم 14 حجر عثرة نحاسي: اسم وسنة ميلاد ومصير في ثلاثة أسطر. تلميذات الصف العاشر بحثن قصة العائلة وأقمن دقيقة صمت عند التركيب — لا نصب حجري ولا موقع تذكير بأوقات دوام، بل حجر يعثر به المرء أثناء التسوق. ساكن سأل عن خطّ النهاية، فأجدادُه «مجرد منساقين»؛ المعلّمة: عمل التذكّر لا يطرح سؤال الذنب على الأحفاد بل يسأل كيف شارك أناس عاديون كي يميّز العاديون اليوم. آخر شاهد عصر في الشارع مات قبل سنتين ومقابلته في أرشيف المدرسة. التصغير لا يبدأ بكذبة بل بكلمة ألين من الحقيقة.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was fragt Erinnerungsarbeit laut Lehrerin?",
+    "options": [
+     "wer von den Enkeln schuldig ist",
+     "wie normale Menschen mitgemacht haben",
+     "wann man einen Schlussstrich ziehen kann"
+    ],
+    "answer": "wie normale Menschen mitgemacht haben",
+    "explanationAr": "الدليل حرفياً: «Sie fragt, wie normale Menschen mitgemacht haben». الفخّ 1: «keine Schuldfrage an die Enkel». الفخّ 2: خطّ النهاية سؤال الساكن.",
+    "id": "t-b2-30-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Womit beginnt Verharmlosung laut Text?",
+    "options": [
+     "mit einer Lüge",
+     "mit einem Mahnmal aus Stein",
+     "mit einem Wort, das weicher klingt als die Tatsache"
+    ],
+    "answer": "mit einem Wort, das weicher klingt als die Tatsache",
+    "explanationAr": "الدليل حرفياً: «Verharmlosung beginnt nicht mit einer Lüge, sondern mit einem Wort, das weicher klingt als die Tatsache». الفخّ 1: منفيّ بـ«nicht … sondern». الفخّ 2: النصب الحجري ما ليس موجوداً هنا.",
+    "id": "t-b2-30-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Der letzte Zeitzeuge aus der Straße lebt noch.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «Der letzte Zeitzeuge aus der Straße ist vor zwei Jahren gestorben».",
+    "id": "t-b2-30-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Vor dem Haus Nummer 14 liegt ein kleiner ___ aus Messing.",
+    "answer": [
+     "Stolperstein"
+    ],
+    "explanationAr": "الدليل حرفياً: «liegt seit dem Frühjahr ein kleiner Stolperstein aus Messing».",
+    "id": "t-b2-30-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "der Stolperstein",
+   "die Erinnerungskultur",
+   "das Gedenken",
+   "die Gedenkstätte",
+   "das Mahnmal",
+   "der Zeitzeuge",
+   "die Gedenkminute",
+   "die Verharmlosung",
+   "der Schlussstrich",
+   "die Erinnerungsarbeit",
+   "die Vergangenheitsbewältigung",
+   "die Schuldfrage",
+   "der Mitläufer",
+   "gedenken",
+   "aufarbeiten",
+   "relativieren"
+  ]
+ },
+ {
+  "id": "t-b1-26",
+  "level": "B1",
+  "titleDe": "Ein Abend im Theater",
+  "titleAr": "أمسية في المسرح",
+  "de": "Zum ersten Mal in Deutschland war Salma im Theater. Ihre Kollegin hatte zwei Karten für ein kleines Festival, bei dem junge Gruppen alte Texte neu zeigen. Salma zog sich elegant an, obwohl die Kollegin gesagt hatte, das sei nicht nötig. Die Tradition, sich für das Theater schön anzuziehen, kannte sie aus Tunis.\n\nDas Stück war nach einem Roman geschrieben, den Salma im Kurs gelesen hatte, aber nur bis zum dritten Kapitel. Auf der Bühne stand ein kleines Orchester: drei Musiker, jeder mit einem anderen Instrument. Zwischen den Szenen las eine Schauspielerin ein Gedicht, und im Hintergrund malte ein Künstler live ein Bild, das am Ende fertig war. Salma verstand nicht jedes Wort, aber der Eindruck war stark: Literatur, Musik und Kunst in einem Raum.\n\nAuf dem Heimweg diskutierten die beiden. Die Kollegin kritisierte das Ende, das sie zu schnell fand. Salma hatte gerade dieses Ende beeindruckt, weil niemand erklärt hatte, wie die Geschichte weitergeht. „Wie im Film“, sagte die Kollegin. „Nein“, sagte Salma, „im Film sieht man alles. Hier muss man selbst denken.“ Nächste Woche will sie den Roman zu Ende lesen.",
+  "ar": "سلمى في المسرح لأول مرة في ألمانيا، في مهرجان صغير تقدّم فيه فرق شابة نصوصاً قديمة. ارتدت ملابس أنيقة كتقليد تعرفه من تونس. المسرحية مقتبسة من رواية قرأت منها ثلاثة فصول فقط؛ على الخشبة أوركسترا صغيرة، قصيدة بين المشاهد، ورسّام يرسم لوحة حيّة. لم تفهم كل كلمة لكن الانطباع قوي. في طريق العودة انتقدت الزميلة النهاية السريعة، بينما أعجبت سلمى بها لأن أحداً لم يشرح ما بعدها — «في الفيلم ترى كل شيء، هنا تفكّر بنفسك».",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Warum zog sich Salma elegant an?",
+    "options": [
+     "Sie kannte diese Tradition aus Tunis.",
+     "Die Kollegin hatte es verlangt.",
+     "Das Festival hatte eine Kleiderregel."
+    ],
+    "answer": "Sie kannte diese Tradition aus Tunis.",
+    "explanationAr": "الدليل حرفياً: «Die Tradition, sich für das Theater schön anzuziehen, kannte sie aus Tunis». الفخّ 1: الزميلة قالت إنه غير ضروري. الفخّ 2: لا قاعدة لباس ذُكرت.",
+    "id": "t-b1-26-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was kritisierte die Kollegin?",
+    "options": [
+     "das Gedicht zwischen den Szenen",
+     "das Ende, das sie zu schnell fand",
+     "den Künstler, der live malte"
+    ],
+    "answer": "das Ende, das sie zu schnell fand",
+    "explanationAr": "الدليل حرفياً: «Die Kollegin kritisierte das Ende, das sie zu schnell fand». الفخّ 1 و2: عناصر العرض لم تُنتقَد.",
+    "id": "t-b1-26-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Salma hatte den Roman nur bis zum dritten Kapitel gelesen.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «aber nur bis zum dritten Kapitel».",
+    "id": "t-b1-26-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Auf der Bühne stand ein kleines ___: drei Musiker, jeder mit einem anderen Instrument.",
+    "answer": [
+     "Orchester"
+    ],
+    "explanationAr": "الدليل حرفياً: «Auf der Bühne stand ein kleines Orchester».",
+    "id": "t-b1-26-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "das Theater",
+   "das Orchester",
+   "das Instrument",
+   "die Kunst",
+   "malen",
+   "der Film",
+   "kritisieren",
+   "der Roman",
+   "das Gedicht",
+   "die Literatur",
+   "das Kapitel",
+   "das Festival",
+   "die Tradition",
+   "der Eindruck",
+   "beeindrucken",
+   "elegant"
+  ]
+ },
+ {
+  "id": "t-b1-27",
+  "level": "B1",
+  "titleDe": "Weniger verbrauchen",
+  "titleAr": "استهلاك أقل",
+  "de": "Als in unserer Straße zum zweiten Mal in drei Jahren der Keller unter Wasser stand, änderte sich etwas. Die Überschwemmung war klein, aber sie machte aus einer Diskussion eine Frage: Was können wir selbst tun? Ein Nachbar, der früher gegen jede neue Regel protestiert hatte, schlug vor, den Verbrauch der ganzen Straße zu messen.\n\nDas Ergebnis überraschte uns. Wir verbrauchen viel Strom aus Kohle und Erdgas, weil die Häuser alt sind, und wir konsumieren mehr, als wir brauchen: Der Abfall aus Verpackungen füllt jede Woche drei Tonnen. Beim Wasserverbrauch waren die Unterschiede zwischen den Familien enorm. Niemand wollte jemandem etwas vorwerfen; die Zahlen sprachen allein.\n\nSeitdem heizen wir sparsamer, kaufen weniger in Plastik und werfen weniger weg. Erdöl kann man nicht persönlich schützen, aber die Landschaft vor dem Dorf schon: Am Fluss haben wir Bäume gepflanzt, die bei Starkregen das Wasser halten. Ob das die nächste Überschwemmung verhindert, weiß niemand. Schädlich ist es sicher nicht. Und die Nachbarn, die vorher nur über Politik geredet haben, reden jetzt über Bäume.",
+  "ar": "حين غُمر القبو للمرة الثانية في ثلاث سنوات تحوّل النقاش إلى سؤال: ماذا نفعل نحن؟ جار كان يحتجّ على كل قاعدة اقترح قياس استهلاك الشارع. النتيجة: كهرباء كثيرة من الفحم والغاز لأن البيوت قديمة، استهلاك يفوق الحاجة، ثلاث حاويات تغليف أسبوعياً، وفروق هائلة في استهلاك الماء. لا أحد اتّهم أحداً؛ الأرقام تكلّمت. منذها نُدفّئ باقتصاد ونرمي أقل، وزرعنا أشجاراً عند النهر تمسك الماء. هل تمنع الفيضان القادم؟ لا أحد يعرف، لكنها ليست ضارة.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was schlug der Nachbar vor?",
+    "options": [
+     "gegen die neue Regel zu protestieren",
+     "den Verbrauch der ganzen Straße zu messen",
+     "den Keller neu zu bauen"
+    ],
+    "answer": "den Verbrauch der ganzen Straße zu messen",
+    "explanationAr": "الدليل حرفياً: «schlug vor, den Verbrauch der ganzen Straße zu messen». الفخّ 1: الاحتجاج كان ماضيه. الفخّ 2: القبو لم يُذكر بناؤه.",
+    "id": "t-b1-27-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Warum verbraucht die Straße viel Strom aus Kohle und Erdgas?",
+    "options": [
+     "weil die Familien viel Wasser verbrauchen",
+     "weil die Bäume am Fluss fehlen",
+     "weil die Häuser alt sind"
+    ],
+    "answer": "weil die Häuser alt sind",
+    "explanationAr": "الدليل حرفياً: «weil die Häuser alt sind». الفخّ 1: الماء موضوع منفصل. الفخّ 2: الأشجار زُرعت ضد الفيضان.",
+    "id": "t-b1-27-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Die Nachbarn haben am Fluss Bäume gepflanzt.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «Am Fluss haben wir Bäume gepflanzt».",
+    "id": "t-b1-27-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Seitdem heizen wir ___, kaufen weniger in Plastik und werfen weniger weg.",
+    "answer": [
+     "sparsamer"
+    ],
+    "explanationAr": "الدليل حرفياً: «Seitdem heizen wir sparsamer» — صيغة التفضيل من sparsam.",
+    "id": "t-b1-27-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "der Verbrauch",
+   "verbrauchen",
+   "sparsam",
+   "die Kohle",
+   "das Erdöl",
+   "das Erdgas",
+   "schädlich",
+   "schützen",
+   "der Abfall",
+   "die Verpackung",
+   "konsumieren",
+   "wegwerfen",
+   "der Wasserverbrauch",
+   "die Landschaft",
+   "die Überschwemmung",
+   "protestieren"
+  ]
+ },
+ {
+  "id": "t-b1-28",
+  "level": "B1",
+  "titleDe": "Vor Gericht",
+  "titleAr": "أمام المحكمة",
+  "de": "Herr Nasri hatte online eine Reise gebucht und zwei Tage später wieder storniert, weil seine Mutter krank wurde. Die Firma verlangte trotzdem den ganzen Preis. In der E-Mail stand, die Buchung sei verbindlich gewesen und das Widerrufsrecht gelte bei Reisen nicht. Herr Nasri fand das falsch, aber er ist kein Verbrecher, der weglaufen kann: Die Firma hatte seine Kreditkarte.\n\nEin Anwalt vom Verbraucherschutz erklärte ihm die Regelung in zehn Minuten. Ja, das Widerrufsrecht gilt bei Reisen nicht. Aber eine Stornierung ist trotzdem möglich, und die Firma darf nur die Kosten verlangen, die sie wirklich hatte. Alles andere muss sie begründen. Die Gebührenordnung der Firma, die pauschal hundert Prozent verlangte, sei deshalb angreifbar. Kostenpflichtig sei nur der Anwalt, wenn man verliert.\n\nVor Gericht kam es nicht. Nachdem der Anwalt einen Brief geschrieben hatte, räumte die Firma ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück. Die Polizei hatte damit nichts zu tun; niemandem wurde etwas verboten. Die Konsequenz für Herrn Nasri ist einfacher: Er liest jetzt vor dem Klick auf „verbindlich buchen“ den Absatz über Stornierung. Unverbindlich ist im Internet fast nichts.",
+  "ar": "السيد نصري حجز رحلة وألغاها بعد يومين لمرض أمه، فطالبت الشركة بالثمن كاملاً بحجة أن الحجز ملزم وأن حق التراجع لا يسري على الرحلات. محامٍ من حماية المستهلك شرح: صحيح أن حق التراجع لا يسري، لكن الإلغاء ممكن والشركة لا تطالب إلا بتكاليفها الفعلية، وعليها تعليل الباقي؛ لائحة الرسوم الجزافية قابلة للطعن. لم يصل الأمر للمحكمة: بعد رسالة المحامي أقرّت الشركة بغموض البند وردّت الثلثين. النتيجة: يقرأ الآن فقرة الإلغاء قبل الضغط على «حجز ملزم».",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was darf die Firma laut Anwalt verlangen?",
+    "options": [
+     "den ganzen Preis, weil die Buchung verbindlich war",
+     "nichts, weil das Widerrufsrecht gilt",
+     "nur die Kosten, die sie wirklich hatte"
+    ],
+    "answer": "nur die Kosten, die sie wirklich hatte",
+    "explanationAr": "الدليل حرفياً: «die Firma darf nur die Kosten verlangen, die sie wirklich hatte». الفخّ 1: مطالبة الشركة الأصلية. الفخّ 2: حق التراجع «gilt bei Reisen nicht».",
+    "id": "t-b1-28-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Wie endete der Fall?",
+    "options": [
+     "Die Firma räumte ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück.",
+     "Das Gericht verbot der Firma die Gebührenordnung.",
+     "Die Polizei nahm den Firmenchef fest."
+    ],
+    "answer": "Die Firma räumte ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück.",
+    "explanationAr": "الدليل حرفياً: «räumte die Firma ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück». الفخّ 1: «Vor Gericht kam es nicht». الفخّ 2: «Die Polizei hatte damit nichts zu tun».",
+    "id": "t-b1-28-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Das Widerrufsrecht gilt bei Reisen nicht.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «Ja, das Widerrufsrecht gilt bei Reisen nicht».",
+    "id": "t-b1-28-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Alles andere muss sie ___.",
+    "answer": [
+     "begründen"
+    ],
+    "explanationAr": "الدليل حرفياً: «Alles andere muss sie begründen».",
+    "id": "t-b1-28-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "das Gericht",
+   "der Anwalt",
+   "der Verbrecher",
+   "verbieten",
+   "die Polizei",
+   "die Konsequenz",
+   "die Regelung",
+   "begründen",
+   "einräumen",
+   "die Gebührenordnung",
+   "die Stornierung",
+   "kostenpflichtig",
+   "verbindlich",
+   "unverbindlich",
+   "das Widerrufsrecht",
+   "der Verbraucherschutz"
+  ]
+ },
+ {
+  "id": "t-b1-29",
+  "level": "B1",
+  "titleDe": "Die Pubertät meiner Tochter",
+  "titleAr": "مراهقة ابنتي",
+  "de": "Mit dreizehn hat meine Tochter angefangen, ihre Zimmertür zu schließen. Nicht laut, nur konsequent. Für mich war das der Beginn der Pubertät, und ich war nicht vorbereitet. In meiner eigenen Erziehung gab es keine geschlossenen Türen; Distanz galt als Kälte. Heute weiß ich: Sie ist ein Teil der Beziehung, nicht ihr Ende.\n\nDie ersten Monate waren voller Unsicherheit. Ich warf ihr vor, sie habe Geheimnisse; sie warf mir vor, ich würde mich zu viel um sie kümmern. Beides stimmte. Eine Freundin, die als Beraterin arbeitet, sagte mir einen Satz, den ich mir aufgeschrieben habe: Die Psyche eines Jugendlichen braucht eine Tür, die zu ist, und ein Haus, das offen bleibt.\n\nWir haben dann drei Dinge geändert. Das Taschengeld ist jetzt fest, und sie entscheidet allein darüber. Die Aufgabenteilung im Haushalt steht auf einem Zettel am Kühlschrank; ich muss mich nicht mehr jeden Abend durchsetzen. Und einmal pro Woche unterhalten wir uns beim Kochen über alles, worüber sie reden will, und über nichts, was sie nicht will. Das Familienleben ist ruhiger geworden. Die Grenze ist klar, und die Hoffnung, dass die Tür eines Tages von selbst aufgeht, hat sich schon zweimal erfüllt.",
+  "ar": "في الثالثة عشرة بدأت ابنتي تغلق باب غرفتها؛ كانت بداية المراهقة ولم أكن مستعدة، ففي تربيتي لم تكن هناك أبواب مغلقة والمسافة كانت برودة. الأشهر الأولى مليئة بعدم اليقين والاتهامات المتبادلة. صديقة مستشارة قالت: نفس المراهق تحتاج باباً مغلقاً وبيتاً يبقى مفتوحاً. غيّرنا ثلاثة أشياء: مصروف ثابت تقرّر فيه وحدها، توزيع مهام على ورقة الثلاجة، وحديث أسبوعي أثناء الطبخ عمّا تريد فقط. الحدود واضحة، والباب انفتح من تلقاء نفسه مرتين.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was galt in der Erziehung der Mutter als Kälte?",
+    "options": [
+     "Distanz",
+     "Taschengeld",
+     "Aufgabenteilung"
+    ],
+    "answer": "Distanz",
+    "explanationAr": "الدليل حرفياً: «Distanz galt als Kälte». الفخّ 1 و2: تغييرات لاحقة لا تخصّ تربيتها.",
+    "id": "t-b1-29-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was warf die Tochter der Mutter vor?",
+    "options": [
+     "dass sie Geheimnisse hat",
+     "dass sie sich zu viel um sie kümmert",
+     "dass sie die Tür schließt"
+    ],
+    "answer": "dass sie sich zu viel um sie kümmert",
+    "explanationAr": "الدليل حرفياً: «sie warf mir vor, ich würde mich zu viel um sie kümmern». الفخّ 1: الأسرار اتهام الأم. الفخّ 2: الباب تغلقه الابنة.",
+    "id": "t-b1-29-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Die Mutter entscheidet weiterhin über das Taschengeld.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «sie entscheidet allein darüber».",
+    "id": "t-b1-29-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Die ___ im Haushalt steht auf einem Zettel am Kühlschrank.",
+    "answer": [
+     "Aufgabenteilung"
+    ],
+    "explanationAr": "الدليل حرفياً: «Die Aufgabenteilung im Haushalt steht auf einem Zettel am Kühlschrank».",
+    "id": "t-b1-29-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Pubertät",
+   "die Erziehung",
+   "das Taschengeld",
+   "das Familienleben",
+   "die Aufgabenteilung",
+   "die Grenze",
+   "die Beziehung",
+   "die Distanz",
+   "das Geheimnis",
+   "sich kümmern um",
+   "sich unterhalten über",
+   "die Psyche",
+   "die Hoffnung",
+   "die Unsicherheit",
+   "vorwerfen",
+   "sich durchsetzen"
+  ]
+ },
+ {
+  "id": "t-b1-30",
+  "level": "B1",
+  "titleDe": "Die Dienstreise",
+  "titleAr": "رحلة العمل",
+  "de": "Meine erste Dienstreise begann mit einem Zettel von der Chefin: Zeitplan, Hotel, Name des Kunden und der Satz „Spesen bitte mit Quittung“. Meine Abwesenheit im Büro dauerte drei Tage; die Vertretung übernahm eine Kollegin, die mich am Abend vorher noch fragte, wo die Passwörter für den Kundendienst liegen.\n\nAm Flughafen konnte ich online einchecken, aber das Hotel wollte eine Kreditkarte, die ich nicht hatte. Ich musste Bargeld abheben und am nächsten Morgen wieder einzahlen, weil das Hotel doch per Rechnung abrechnete. Der Kunde selbst war freundlich. Meine Präsentation dauerte zwanzig Minuten; die Diskussion über die Umsetzung dauerte zwei Stunden. Am Ende wollte er einen Rabatt, den ich nicht versprechen durfte. Ich habe gesagt, ich melde mich, und das war richtig.\n\nZurück im Büro lernte ich den unangenehmsten Teil: die Bearbeitung der Spesen. Jede Quittung einzeln, jedes Taxi mit Grund. Die Dienstleistung, die wir verkaufen, ist kompliziert; die Regeln für ein Mittagessen auf Reisen sind es auch. Meine Chefin lachte und sagte, das gehöre dazu. Beim zweiten Mal, sagt sie, brauche ich für die Spesen nur noch eine halbe Stunde.",
+  "ar": "أول رحلة عمل بدأت بورقة من المديرة: الجدول، الفندق، اسم الزبون، و«المصاريف بالإيصالات». الغياب ثلاثة أيام وزميلة تنوب عني. تسجيل الوصول أونلاين سهل، لكن الفندق طلب بطاقة ائتمان لا أملكها فسحبت نقداً ثم أعدته لأن الفندق حاسب بالفاتورة. العرض عشرون دقيقة والنقاش حول التنفيذ ساعتان؛ الزبون طلب خصماً لا يحقّ لي الوعد به فقلت سأعود إليه. أصعب جزء: معالجة المصاريف، كل إيصال وكل تاكسي بسبب. المديرة تقول: في المرة الثانية نصف ساعة فقط.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Warum musste die Person Bargeld abheben?",
+    "options": [
+     "weil der Kunde einen Rabatt wollte",
+     "weil das Hotel eine Kreditkarte wollte, die sie nicht hatte",
+     "weil man am Flughafen nicht online einchecken konnte"
+    ],
+    "answer": "weil das Hotel eine Kreditkarte wollte, die sie nicht hatte",
+    "explanationAr": "الدليل حرفياً: «das Hotel wollte eine Kreditkarte, die ich nicht hatte. Ich musste Bargeld abheben». الفخّ 1: الخصم موضوع الزبون. الفخّ 2: تسجيل الوصول أونلاين نجح.",
+    "id": "t-b1-30-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was war laut Text der unangenehmste Teil?",
+    "options": [
+     "die Präsentation beim Kunden",
+     "die Abwesenheit im Büro",
+     "die Bearbeitung der Spesen"
+    ],
+    "answer": "die Bearbeitung der Spesen",
+    "explanationAr": "الدليل حرفياً: «lernte ich den unangenehmsten Teil: die Bearbeitung der Spesen». الفخّ 1: العرض دام عشرين دقيقة فقط. الفخّ 2: الغياب غطّته النائبة.",
+    "id": "t-b1-30-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Die Person hat dem Kunden den Rabatt versprochen.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «einen Rabatt, den ich nicht versprechen durfte. Ich habe gesagt, ich melde mich».",
+    "id": "t-b1-30-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Die ___ übernahm eine Kollegin.",
+    "answer": [
+     "Vertretung"
+    ],
+    "explanationAr": "الدليل حرفياً: «die Vertretung übernahm eine Kollegin».",
+    "id": "t-b1-30-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "die Dienstreise",
+   "die Spesen",
+   "die Vertretung",
+   "die Abwesenheit",
+   "der Kundendienst",
+   "die Dienstleistung",
+   "die Bearbeitung",
+   "einchecken",
+   "die Kreditkarte",
+   "das Bargeld",
+   "der Rabatt",
+   "abheben",
+   "einzahlen",
+   "die Präsentation",
+   "der Zeitplan",
+   "die Umsetzung"
+  ]
+ },
+ {
+  "id": "t-b2-31",
+  "level": "B2",
+  "titleDe": "Pendeln oder umziehen?",
+  "titleAr": "التنقّل اليومي أم الانتقال؟",
+  "de": "Seit ihrer Beförderung pendelt Frau Sahli täglich siebzig Kilometer. Morgens um sechs steht sie im Parkhaus am Bahnhof, abends um sieben wieder. Das Pendeln kostet sie drei Stunden am Tag, und wenn der Anschluss in der Kreisstadt ausfällt, vier. Ihr Mann arbeitet im Dorf, die Kinder gehen dort zur Schule, das Eigenheim ist abbezahlt. Umziehen wäre die logische Lösung und ist trotzdem keine.\n\nSie hat alles versucht. Eine Mitfahrgelegenheit scheiterte an den Arbeitszeiten, der Fernbus fährt zu selten, und der Nachtzug hilft nur, wer weit weg will. Das Elektroauto war ein Fortschritt, bis die einzige Ladestation im Ort drei Wochen defekt war. Die Verkehrswende, sagt sie, wird in der Stadt geplant und auf dem Land ausgehalten. Wer ländlich lebt, hört von Lastenrädern und lächelt müde.\n\nIhr Kompromiss ist kein Umzug, sondern eine Rechnung. Zwei Tage Homeoffice, drei Tage Bahn, und an den Bahntagen arbeitet sie im Zug, was ihr Arbeitgeber als Arbeitszeit anerkennt. Die Straßensperrung wegen der neuen Brücke nimmt sie gelassen; sie fährt ohnehin nicht mehr mit dem Auto in die Stadt. Ob das auf Dauer trägt, weiß sie nicht. Aber die Frage „pendeln oder umziehen?“ hat, wie viele Fragen, eine dritte Antwort.",
+  "ar": "منذ ترقيتها تتنقّل السيدة سحلي سبعين كيلومتراً يومياً: ثلاث ساعات، وأربع إذا ألغيت رحلة الربط. زوجها يعمل في القرية والأولاد في مدرستها والبيت مدفوع الثمن؛ الانتقال حلّ منطقي وليس حلاً. جرّبت مشاركة الرحلة، والحافلة البعيدة، وقطار الليل، والسيارة الكهربائية حتى تعطّلت محطة الشحن الوحيدة: تحوّل النقل يُخطَّط في المدينة ويُحتمَل في الريف. الحلّ الوسط: يومان عمل من البيت وثلاثة بالقطار مع احتساب العمل فيه — سؤال «تنقّل أم انتقال؟» له جواب ثالث.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Warum ist Umziehen für Frau Sahli keine Lösung?",
+    "options": [
+     "Der Nachtzug fährt zu selten.",
+     "Die Ladestation im Ort ist defekt.",
+     "Ihr Mann arbeitet im Dorf, die Kinder gehen dort zur Schule, das Eigenheim ist abbezahlt."
+    ],
+    "answer": "Ihr Mann arbeitet im Dorf, die Kinder gehen dort zur Schule, das Eigenheim ist abbezahlt.",
+    "explanationAr": "الدليل حرفياً: «Ihr Mann arbeitet im Dorf, die Kinder gehen dort zur Schule, das Eigenheim ist abbezahlt». الفخّ 1: قطار الليل «hilft nur, wer weit weg will». الفخّ 2: محطة الشحن كانت معطّلة ثلاثة أسابيع فقط.",
+    "id": "t-b2-31-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Worin besteht ihr Kompromiss?",
+    "options": [
+     "zwei Tage Homeoffice, drei Tage Bahn mit Arbeit im Zug",
+     "ein Umzug in die Kreisstadt",
+     "eine Mitfahrgelegenheit mit Kollegen"
+    ],
+    "answer": "zwei Tage Homeoffice, drei Tage Bahn mit Arbeit im Zug",
+    "explanationAr": "الدليل حرفياً: «Zwei Tage Homeoffice, drei Tage Bahn, und an den Bahntagen arbeitet sie im Zug». الفخّ 1: «kein Umzug». الفخّ 2: مشاركة الرحلة «scheiterte».",
+    "id": "t-b2-31-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Frau Sahli fährt nicht mehr mit dem Auto in die Stadt.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «sie fährt ohnehin nicht mehr mit dem Auto in die Stadt».",
+    "id": "t-b2-31-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Die Verkehrswende wird in der Stadt geplant und auf dem Land ___.",
+    "answer": [
+     "ausgehalten"
+    ],
+    "explanationAr": "الدليل حرفياً: «wird in der Stadt geplant und auf dem Land ausgehalten» — Passiv مع Partizip II.",
+    "id": "t-b2-31-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "pendeln",
+   "das Pendeln",
+   "umziehen",
+   "der Umzug",
+   "ländlich",
+   "das Eigenheim",
+   "die Mitfahrgelegenheit",
+   "das Lastenrad",
+   "der Fernbus",
+   "der Nachtzug",
+   "der Anschluss",
+   "die Straßensperrung",
+   "das Elektroauto",
+   "die Ladestation",
+   "die Verkehrswende",
+   "das Parkhaus"
+  ]
+ },
+ {
+  "id": "t-b2-32",
+  "level": "B2",
+  "titleDe": "Das perfekte Bild",
+  "titleAr": "الصورة المثالية",
+  "de": "Meine Nichte ist sechzehn und verbringt jeden Morgen vierzig Minuten mit Make-up, das am Ende so aussehen soll, als trüge sie keins. Ich habe sie gefragt, für wen. Ihre Antwort war ehrlicher, als ich erwartet hatte: „Für das Selfie. Ohne Filter geht das nicht mehr.“ Das Schönheitsideal, dem sie folgt, existiert nur auf Bildschirmen. Jedes Bild, das sie sieht, wurde retuschiert, und sie weiß das. Es hilft ihr nicht.\n\nIch wollte ihr Eitelkeit vorwerfen und habe es gelassen. Eitelkeit ist alt; neu ist die Reichweite. Früher verglich man sich mit Mitschülerinnen der eigenen Klasse, heute mit Millionen Fremden, deren Outfit ein Label bezahlt und deren Look ein Styling-Team baut. Was künstlich ist, sieht natürlich aus, und was natürlich ist, wirkt plötzlich unfertig.\n\nWir haben ein Experiment gemacht. Eine Woche lang postete sie Bilder ohne Retusche, stilvoll, aber echt. Die Zahl der Likes sank, die Zahl der Nachrichten von Freundinnen stieg. „Du siehst aus wie du“, schrieb eine. Ob das ihr Selbstbewusstsein stärkt, wird sich zeigen. Attraktiv, sagt sie jetzt, sei vielleicht das Wort für Bilder. Für Menschen brauche man ein anderes.",
+  "ar": "ابنة أختي (16) تقضي أربعين دقيقة صباحاً في مكياج يبدو كأنه غير موجود: «من أجل السيلفي، بلا فلتر لم يعد ممكناً». مثال الجمال الذي تتبعه موجود على الشاشات فقط، وكل صورة تراها منمَّقة وهي تعرف — ولا ينفعها. أردت اتهامها بالغرور فتراجعت: الغرور قديم، الجديد هو مدى الانتشار — المقارنة مع ملايين الغرباء بأزياء تدفعها علامات وفرق تنسيق. جرّبنا أسبوعاً من صور بلا تنميق: قلّت الإعجابات وزادت رسائل الصديقات «تبدين مثلك». «جذّاب» ربما كلمة للصور؛ للبشر نحتاج كلمة أخرى.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was ist laut Text neu, im Gegensatz zur Eitelkeit?",
+    "options": [
+     "die Reichweite",
+     "das Make-up",
+     "das Selfie"
+    ],
+    "answer": "die Reichweite",
+    "explanationAr": "الدليل حرفياً: «Eitelkeit ist alt; neu ist die Reichweite». الفخّ 1 و2: ذُكرا لكن ليسا موضوع المقارنة.",
+    "id": "t-b2-32-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was passierte in der Woche ohne Retusche?",
+    "options": [
+     "Die Likes stiegen, die Nachrichten sanken.",
+     "Die Likes sanken, die Nachrichten von Freundinnen stiegen.",
+     "Sie postete keine Bilder mehr."
+    ],
+    "answer": "Die Likes sanken, die Nachrichten von Freundinnen stiegen.",
+    "explanationAr": "الدليل حرفياً: «Die Zahl der Likes sank, die Zahl der Nachrichten von Freundinnen stieg». الفخّ 1: قلب الاتجاهين. الفخّ 2: نشرت صوراً «ohne Retusche».",
+    "id": "t-b2-32-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Die Nichte weiß, dass die Bilder retuschiert sind.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «Jedes Bild, das sie sieht, wurde retuschiert, und sie weiß das».",
+    "id": "t-b2-32-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Was ___ ist, sieht natürlich aus, und was natürlich ist, wirkt plötzlich unfertig.",
+    "answer": [
+     "künstlich"
+    ],
+    "explanationAr": "الدليل حرفياً: «Was künstlich ist, sieht natürlich aus».",
+    "id": "t-b2-32-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "das Schönheitsideal",
+   "das Make-up",
+   "retuschieren",
+   "die Retusche",
+   "das Selfie",
+   "das Selbstbewusstsein",
+   "die Eitelkeit",
+   "modisch",
+   "das Outfit",
+   "das Label",
+   "der Look",
+   "das Styling",
+   "stilvoll",
+   "künstlich",
+   "attraktiv",
+   "die Reichweite"
+  ]
+ },
+ {
+  "id": "t-b2-33",
+  "level": "B2",
+  "titleDe": "Der Verein und der Austritt",
+  "titleAr": "النادي والانسحاب",
+  "de": "Als Karim dem Verein beitrat, ging es ihm um Fußball. Fünf Jahre später ging es um alles andere: um die Radtour im Mai, den Campingplatz am See, das Mountainbike-Wochenende, den Marathon, den er nie lief, aber jedes Jahr am Rand anfeuerte. Der Verein war seine Freizeitgestaltung geworden, und die Unternehmungen der Gruppe füllten seinen Kalender.\n\nDann kam das Spiel. Pokal, Verlängerung, Elfmeterschießen, ein Unentschieden nach neunzig Minuten, das sich wie ein Sieg anfühlte, bis der Schiedsrichter im Elfmeterschießen einen Treffer nicht gab; er hatte vorher eine Abseitsstellung gepfiffen, die im Wiederholungsvideo nicht zu sehen war. Die Halle war ausverkauft, die Übertragung lief in zwei Kneipen. Und Karims Mannschaftskamerad Ben beleidigte den Schiedsrichter so laut, dass es der ganze Wettbewerb hörte.\n\nDer Vorstand verlangte eine Entschuldigung. Ben weigerte sich und erklärte seinen Austritt. Karim stand vor einer Frage, die nichts mit Fußball zu tun hatte: Tritt man mit dem Freund aus, oder bleibt man bei der Regel? Er blieb. Nicht, weil der Schiedsrichter recht hatte, sondern weil ein Verein ohne Regeln nur noch eine Gruppe ist, die zufällig dieselbe Farbe trägt. Ben und er fahren im Mai trotzdem zusammen Rad. Auf der Tour gibt es keine Schiedsrichter.",
+  "ar": "انضم كريم للنادي من أجل كرة القدم، وبعد خمس سنوات صار النادي كل وقت فراغه: جولة دراجات، تخييم، ماراثون يشجّع فيه من الحافة. ثم المباراة: وقت إضافي وركلات ترجيح، وحكم لم يحتسب هدفاً بعد تسلل لم يظهر في الفيديو؛ زميله بن شتم الحكم أمام الجميع. المجلس طلب اعتذاراً، رفض بن وأعلن انسحابه. وقف كريم أمام سؤال لا يخصّ الكرة: أينسحب مع الصديق أم يبقى مع القاعدة؟ بقي — لا لأن الحكم محقّ بل لأن نادياً بلا قواعد مجرد مجموعة بلون واحد. وفي مايو يركبان الدراجة معاً: لا حكام في الجولة.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Warum blieb Karim im Verein?",
+    "options": [
+     "weil der Schiedsrichter recht hatte",
+     "weil ein Verein ohne Regeln nur noch eine Gruppe mit derselben Farbe ist",
+     "weil Ben sich entschuldigt hatte"
+    ],
+    "answer": "weil ein Verein ohne Regeln nur noch eine Gruppe mit derselben Farbe ist",
+    "explanationAr": "الدليل حرفياً: «Nicht, weil der Schiedsrichter recht hatte, sondern weil ein Verein ohne Regeln nur noch eine Gruppe ist». الفخّ 1: منفيّ بـ«Nicht, weil». الفخّ 2: «Ben weigerte sich».",
+    "id": "t-b2-33-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was verlangte der Vorstand von Ben?",
+    "options": [
+     "den Austritt",
+     "eine Wiederholung des Elfmeterschießens",
+     "eine Entschuldigung"
+    ],
+    "answer": "eine Entschuldigung",
+    "explanationAr": "الدليل حرفياً: «Der Vorstand verlangte eine Entschuldigung». الفخّ 1: الانسحاب قرار بن نفسه. الفخّ 2: لم تُطلب إعادة.",
+    "id": "t-b2-33-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Karim ist den Marathon jedes Jahr mitgelaufen.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «den Marathon, den er nie lief, aber jedes Jahr am Rand anfeuerte».",
+    "id": "t-b2-33-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Ben weigerte sich und erklärte seinen ___.",
+    "answer": [
+     "Austritt"
+    ],
+    "explanationAr": "الدليل حرفياً: «Ben weigerte sich und erklärte seinen Austritt».",
+    "id": "t-b2-33-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "beitreten",
+   "der Austritt",
+   "austreten",
+   "der Wettbewerb",
+   "anfeuern",
+   "pfeifen",
+   "die Abseitsstellung",
+   "ausverkauft",
+   "die Übertragung",
+   "die Freizeitgestaltung",
+   "die Unternehmung",
+   "der Campingplatz",
+   "das Mountainbike",
+   "die Radtour",
+   "der Marathon",
+   "das Unentschieden",
+   "die Verlängerung",
+   "das Elfmeterschießen"
+  ]
+ },
+ {
+  "id": "t-b2-34",
+  "level": "B2",
+  "titleDe": "Zwischen den Zeilen",
+  "titleAr": "بين السطور",
+  "de": "In der zehnten Klasse lesen wir jeden Montag dieselbe Nachricht in drei Versionen: als Meldung einer Agentur, als Leitartikel einer großen Zeitung und als Beitrag in einem Kanal, der von Clickbait lebt. Die Schüler sollen nicht entscheiden, wer recht hat, sondern beschreiben, was jede Version mit dem Leser macht.\n\nSchnell erkennen sie die Zuspitzung in der Überschrift und die Untertreibung im Nebensatz. Schwieriger ist das Framing: Dieselbe Zahl heißt einmal „nur“ und einmal „schon“. Noch schwieriger ist die Frage, warum überhaupt über dieses Thema berichtet wird und nicht über ein anderes. Das ist Agenda-Setting, und es passiert auch bei Leitmedien, nicht nur in den Echokammern der Netzwerke. Die Filterblase, sagt eine Schülerin, sei nicht das Problem; das Problem sei, dass man sich darin wohlfühlt.\n\nDen Faktencheck machen wir zuletzt, nicht zuerst. Fake News sind selten frei erfunden; Desinformation arbeitet mit echten Zahlen in falscher Einordnung. Deshalb üben wir Quellenkritik als Gewohnheit: Wer schreibt, wer bezahlt, wer profitiert? Meinungsmache erkennt man daran, dass sie Polarisierung braucht. Und die Aufmerksamkeitsökonomie belohnt nicht den, der recht hat, sondern den, der Reichweite hat. Diesen Satz haben sie sich ohne mein Zutun an die Wand gehängt.",
+  "ar": "في الصف العاشر نقرأ كل اثنين الخبر نفسه بثلاث صيغ: وكالة، افتتاحية جريدة كبيرة، وقناة تعيش على صيد النقرات؛ لا يقرّر التلاميذ من على حق بل يصفون أثر كل صيغة. يكتشفون الحدّة في العنوان والتقليل في الجملة الفرعية؛ الأصعب التأطير («فقط» مقابل «بالفعل») ثم سؤال لماذا هذا الموضوع لا غيره — تقرير جدول النقاش، وهو يحدث في الإعلام الموجِّه أيضاً. التحقق من الوقائع آخراً لا أولاً؛ التضليل يستعمل أرقاماً حقيقية في سياق خاطئ. صناعة الرأي تحتاج استقطاباً، واقتصاد الانتباه يكافئ من له مدى انتشار لا من على حق.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was sollen die Schüler mit den drei Versionen tun?",
+    "options": [
+     "entscheiden, wer recht hat",
+     "die falsche Version löschen",
+     "beschreiben, was jede Version mit dem Leser macht"
+    ],
+    "answer": "beschreiben, was jede Version mit dem Leser macht",
+    "explanationAr": "الدليل حرفياً: «sollen nicht entscheiden, wer recht hat, sondern beschreiben, was jede Version mit dem Leser macht». الفخّ 1: منفيّ صراحة. الفخّ 2: لا حذف.",
+    "id": "t-b2-34-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Wie arbeitet Desinformation laut Text?",
+    "options": [
+     "mit echten Zahlen in falscher Einordnung",
+     "mit frei erfundenen Zahlen",
+     "nur in den Echokammern der Netzwerke"
+    ],
+    "answer": "mit echten Zahlen in falscher Einordnung",
+    "explanationAr": "الدليل حرفياً: «Desinformation arbeitet mit echten Zahlen in falscher Einordnung». الفخّ 1: «selten frei erfunden». الفخّ 2: غرف الصدى ذُكرت في سياق تقرير جدول النقاش.",
+    "id": "t-b2-34-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Der Faktencheck kommt in der Stunde zuletzt.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "richtig",
+    "explanationAr": "الدليل حرفياً: «Den Faktencheck machen wir zuletzt, nicht zuerst».",
+    "id": "t-b2-34-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Meinungsmache erkennt man daran, dass sie ___ braucht.",
+    "answer": [
+     "Polarisierung"
+    ],
+    "explanationAr": "الدليل حرفياً: «Meinungsmache erkennt man daran, dass sie Polarisierung braucht».",
+    "id": "t-b2-34-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "der Clickbait",
+   "die Reichweite",
+   "die Aufmerksamkeitsökonomie",
+   "die Meinungsmache",
+   "die Desinformation",
+   "die Fake News",
+   "der Faktencheck",
+   "die Einordnung",
+   "die Leitmedien",
+   "das Agenda-Setting",
+   "die Filterblase",
+   "die Echokammer",
+   "die Zuspitzung",
+   "die Polarisierung",
+   "die Quellenkritik",
+   "der Leitartikel",
+   "das Framing",
+   "die Untertreibung"
+  ]
+ },
+ {
+  "id": "t-b2-35",
+  "level": "B2",
+  "titleDe": "Das Forschungsprojekt",
+  "titleAr": "المشروع البحثي",
+  "de": "Als Leila anfing zu promovieren, hatte sie einen Karteikasten voller Begriffe und eine Eselsbrücke für jeden davon. Drei Jahre später hat sie ein Forschungsprojekt, eine Förderung für zwei Stellen und die Erkenntnis, dass Wissenschaft weniger aus Wissen besteht als aus Fristen, die man einhalten muss.\n\nIhr Projekt untersucht, wie Studenten lernen, die den Numerus clausus knapp geschafft haben. Sie befragte zweihundert Personen an drei Fakultäten und begleitete eine Gruppe auf einer Exkursion, um zu sehen, wie sich Kenntnisse außerhalb des Hörsaals verändern. Das Ergebnis war unbequem: Nicht die Effizienz des Lernens entscheidet, sondern die Frage, ob jemand da ist, der die Fragen des Anfängers ernst nimmt. Effizient lernen kann man allein; verstehen selten.\n\nDie Veröffentlichung dauerte länger als die Studie. Zwei Gutachter wollten mehr Zahlen, einer weniger Deutung. Leila zitiert heute gern einen Satz ihrer Betreuerin: Nachhaltigkeit in der Forschung heißt, dass jemand in zehn Jahren noch etwas mit deinen Daten anfangen kann. Deshalb liegen ihre Fragebögen offen im Archiv, mit einer Anleitung. Der Karteikasten liegt daneben. Sie braucht ihn nicht mehr, aber sie wirft ihn nicht weg.",
+  "ar": "حين بدأت ليلى الدكتوراه كان لديها صندوق بطاقات وحيلة حفظ لكل مصطلح؛ بعد ثلاث سنوات لديها مشروع بحثي وتمويل لوظيفتين واكتشاف أن العلم مهل تُلتزم أكثر منه معرفة. يدرس مشروعها كيف يتعلّم طلاب اجتازوا حدّ القبول بصعوبة: استطلعت مئتي شخص في ثلاث كليات ورافقت مجموعة في رحلة دراسية. النتيجة المزعجة: ليس كفاءة التعلّم ما يحسم بل وجود من يأخذ أسئلة المبتدئ بجدّية. النشر استغرق أطول من الدراسة. الاستدامة في البحث: أن يستطيع أحد بعد عشر سنوات الاستفادة من بياناتك — لذلك استبياناتها في الأرشيف مع دليل.",
+  "questions": [
+   {
+    "type": "mc",
+    "promptDe": "Was entscheidet laut Ergebnis über den Lernerfolg?",
+    "options": [
+     "ob jemand da ist, der die Fragen des Anfängers ernst nimmt",
+     "die Effizienz des Lernens",
+     "der Numerus clausus"
+    ],
+    "answer": "ob jemand da ist, der die Fragen des Anfängers ernst nimmt",
+    "explanationAr": "الدليل حرفياً: «Nicht die Effizienz des Lernens entscheidet, sondern die Frage, ob jemand da ist, der die Fragen des Anfängers ernst nimmt». الفخّ 1: منفيّ صراحة. الفخّ 2: حدّ القبول معيار اختيار العيّنة.",
+    "id": "t-b2-35-q1"
+   },
+   {
+    "type": "mc",
+    "promptDe": "Was bedeutet Nachhaltigkeit in der Forschung laut Betreuerin?",
+    "options": [
+     "dass die Veröffentlichung schnell erscheint",
+     "dass jemand in zehn Jahren noch etwas mit den Daten anfangen kann",
+     "dass man zweihundert Personen befragt"
+    ],
+    "answer": "dass jemand in zehn Jahren noch etwas mit den Daten anfangen kann",
+    "explanationAr": "الدليل حرفياً: «Nachhaltigkeit in der Forschung heißt, dass jemand in zehn Jahren noch etwas mit deinen Daten anfangen kann». الفخّ 1: النشر استغرق أطول. الفخّ 2: العيّنة تفصيل منهجي.",
+    "id": "t-b2-35-q2"
+   },
+   {
+    "type": "truefalse",
+    "promptDe": "Leila hat den Karteikasten weggeworfen.",
+    "options": [
+     "richtig",
+     "falsch"
+    ],
+    "answer": "falsch",
+    "explanationAr": "الدليل حرفياً: «aber sie wirft ihn nicht weg».",
+    "id": "t-b2-35-q3"
+   },
+   {
+    "type": "fill",
+    "promptDe": "Sie ___ zweihundert Personen an drei Fakultäten.",
+    "answer": [
+     "befragte"
+    ],
+    "explanationAr": "الدليل حرفياً: «Sie befragte zweihundert Personen an drei Fakultäten» — Präteritum من befragen.",
+    "id": "t-b2-35-q4"
+   }
+  ],
+  "neu": true,
+  "waisen": [
+   "das Forschungsprojekt",
+   "die Förderung",
+   "promovieren",
+   "die Veröffentlichung",
+   "die Erkenntnis",
+   "befragen",
+   "zitieren",
+   "einhalten",
+   "die Nachhaltigkeit",
+   "die Fakultät",
+   "die Exkursion",
+   "der Student",
+   "die Kenntnis",
+   "effizient",
+   "die Effizienz",
+   "der Numerus clausus",
+   "die Eselsbrücke",
+   "der Karteikasten"
   ]
  }
 ]

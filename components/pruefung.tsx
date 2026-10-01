@@ -8,7 +8,7 @@
 // كل محاولة تمرّ بخطّي الأنبوب: شبكة الكفاءات (logK) ودفتر الأخطاء (addFehlerNow).
 import { useMemo, useRef, useState } from "react";
 import type { Exercise, Level, Progress, Satz, VocabCard } from "@/lib/types";
-import { sentences, texts, dialogues, grammarMap, vocabMap, dialogAudioSrc } from "@/lib/content";
+import { sentences, texts, dialogues, grammarMap, vocabMap, dialogAudioSrc, leseText } from "@/lib/content";
 import { levelOf, pickN, rng, clozeFromSatz } from "@/lib/plan";
 import { normalize, konfidenz } from "@/lib/grader";
 import { klausurNote } from "@/lib/klausur";
@@ -416,7 +416,7 @@ function bauMock(saat: number, lvl: Level): MockItem[] {
   const rnd = rng(saat * 31 + 5);
   const out: MockItem[] = [];
   const ts = pickN(poolVon(texts, lvl), 2, rnd);
-  for (const t of ts) for (const q of t.questions.slice(0, 2)) out.push({ sec: "Lesen", ex: { ...q, id: `m-l-${q.id}` } });
+  for (const t of ts) for (const q of leseText(t).questions.slice(0, 2)) out.push({ sec: "Lesen", ex: { ...q, id: `m-l-${q.id}` } });
   const saetze = pickN(poolVon(sentences, lvl), 2, rnd);
   saetze.forEach((s, i) => out.push({ sec: "Grammatik", ex: { ...clozeFromSatz(s, 100 + i, rnd), id: `m-c-${s.id}` } }));
   const themen = Object.values(grammarMap).filter((g) => g.level === lvl);

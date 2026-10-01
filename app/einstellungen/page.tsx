@@ -7,7 +7,7 @@ import { noteFromPct } from "@/lib/grader";
 import { Fehlerkartei, Lernstrategien } from "@/components/fehler-ui";
 import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
 import { ProfilVerwaltung } from "@/components/profil";
-import { speakDe, germanVoices, warmVoices, speechAvailable } from "@/lib/speech";
+import { speakDe, germanVoices, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
 import type { UiLang } from "@/lib/types";
 
 export default function Einstellungen() {
@@ -106,7 +106,7 @@ export default function Einstellungen() {
         <h2 style={{ fontWeight: 800, marginBottom: "0.5rem" }}>🔊 النطق والتسميع (داخل المتصفح)</h2>
         <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", marginBottom: "0.7rem" }}>
           {speechAvailable()
-            ? "النطق يعمل بصوت ألماني من متصفحك — صفر اتصال خارجي. اختر الصوت وسرعة النطق:"
+            ? "**التسميع** يعمل بصوت ألماني من متصفحك — صفر اتصال خارجي. اختر الصوت وسرعة النطق. أمّا **الاستماع إلى نطقك** فله إذنٌ مستقلٌّ أدناه:"
             : "متصفحك لا يدعم Web Speech — التمارين تبقى نصية بالكامل."}
         </p>
         <div style={{ display: "grid", gap: "0.6rem" }}>
@@ -138,6 +138,37 @@ export default function Einstellungen() {
           <button className="btn btn-primary" onClick={() => speakDe("Hallo! Ich bin dein Lehrer. Heute lernen wir gemeinsam.", { voiceName: progress.settings.voiceName, rate: progress.settings.rate })}>
             ▶️ تجربة النطق
           </button>
+        </div>
+      </section>
+
+      <section className="card" style={{ padding: "1.3rem" }}>
+        <h2 style={{ fontWeight: 800, marginBottom: "0.5rem" }}>🎙️ إذن التعرُّف السحابي على الكلام</h2>
+        <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", marginBottom: "0.7rem" }}>
+          مدرِّبُ النطق ومحاكاةُ الامتحان يستطيعان أن يسمعا ما تنطقُ ويقيساه كلمةً كلمة — لكنَّ
+          <code> Web Speech API</code> في Chrome/Edge <strong>يُرسِلُ صوتَك إلى خدمةِ المتصفِّحِ الخارجية</strong> ليعيدَه نصًّا.
+          هذا هو الاتصالُ الخارجيُّ الوحيدُ في المشروعِ كلِّه، وهو <strong>بإذنِك وحدَك</strong> ومغلقٌ ما لم تفتحه.
+        </p>
+        <label style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", cursor: "pointer", minHeight: "44px" }}>
+          <input
+            type="checkbox"
+            style={{ marginTop: "0.25rem", width: "20px", height: "20px" }}
+            checked={progress.settings.cloudSpeech === true}
+            disabled={!recognitionAvailable()}
+            onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, cloudSpeech: e.target.checked } }))}
+          />
+          <span>
+            <strong>أُذِنُ بإرسال صوتي إلى خدمة التعرُّف الخارجية</strong>
+            <span style={{ display: "block", fontSize: "0.82rem", color: "var(--color-ink2)" }}>
+              {recognitionAvailable()
+                ? "متوفِّرٌ في متصفِّحِك. إن أبقيتَه مغلقاً فُتِحَ لك المسارُ المحلِّيُّ البديل."
+                : "غيرُ متوفِّرٍ في متصفِّحِك أصلاً — المفتاحُ معطَّلٌ ولا أثرَ له."}
+            </span>
+          </span>
+        </label>
+        <div style={{ marginTop: "0.7rem", padding: "0.6rem 0.75rem", background: "var(--color-paper2)", borderInlineStart: "3px solid var(--color-gold)", borderRadius: "6px", fontSize: "0.85rem" }}>
+          <strong>البديلُ المحلِّيُّ بلا إرسال:</strong> «مدرِّبُ النطق» يقيسُ مقاطعَك ووقفاتِك وسرعتَك ونسبةَ كلامِك إلى صمتِك
+          مقابلَ النموذج — كلُّ ذلك من مغلِّفِ الطاقة داخلَ جهازِك، ولا يخرجُ منه شيء.
+          وهو متاحٌ لك سواءٌ أَذِنتَ أم لا.
         </div>
       </section>
 
@@ -183,7 +214,7 @@ export default function Einstellungen() {
       <section className="card" style={{ padding: "1.3rem", background: "var(--color-paper2)" }}>
         <h2 style={{ fontWeight: 800, marginBottom: "0.5rem" }}>📐 الميثاق المنهجي للخطة</h2>
         <ul style={{ lineHeight: 1.9, fontSize: "0.92rem", paddingInlineStart: "1.2rem" }}>
-          <li><strong>270 يوماً</strong>: A1 (1–70) ← A2 (71–140) ← B1 (141–210) ← B2 (211–266) ← ختام (267–270).</li>
+          <li><strong>270 يوماً بتوزيعٍ أكاديمي</strong> (أوزان ساعات CEFR لا التساوي): A1 (1–42) ← A2 (43–91) ← B1 (92–168) ← B2 (169–266) ← ختام (267–270)؛ والحمل اليومي يتصاعد ×1.0 ← ×1.1 ← ×1.25 ← ×1.35.</li>
           <li><strong>الإيقاع الأسبوعي</strong>: 5 أيام تعلّم · يوم تثبيت (كتابة/تحدّث/أخطاء) · يوم فحص أسبوعي.</li>
           <li><strong>بنية الحصة الثابتة</strong>: استرجاع ← قواعد ← مفردات ← مهارة (تسميع/قراءة/كتابة/تحدّث) ← فحص.</li>
           <li><strong>قفل تسلسلي</strong>: لا غد قبل إغلاق اليوم.</li>

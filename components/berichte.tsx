@@ -12,6 +12,7 @@ import { planPct } from "@/lib/plan";
 import { noteFromPct } from "@/lib/grader";
 import { levelOfXp } from "@/lib/spiel";
 import { De } from "./De";
+import { StundenVertrag } from "./stundenvertrag";
 
 const HAND: Record<string, string> = { Lesen: "📖", Hoeren: "👂", Schreiben: "✍️", Sprechen: "🗣️", Grammatik: "🧩", Wortschatz: "🗂️" };
 
@@ -182,10 +183,13 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
         <span className="chip">{open ? "إخفاء ▲" : "إظهار ▼"}</span>
       </button>
       <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.6rem" }}>
-        جاهزية الامتحان بأربعة عوامل · فجوات المواضيع بخططها · تقرير شهري يُطبع PDF · أرقام CSV — كلها من شبكة الكفاءات ذاتها.
+        جاهزية الامتحان بأربعة عوامل · ⏱️ عقد الساعات مقابل مرجع CEFR · فجوات المواضيع بخططها · تقرير شهري يُطبع PDF · أرقام CSV — كلها من شبكة الكفاءات ذاتها.
       </div>
       {open && (
         <div style={{ display: "grid", gap: "0.7rem" }}>
+          {/* ⏱️ عقد الساعات — أوّل ما يُفتَح، لأنّه الإطار الذي تُقاس فيه كلُّ الأرقام الباقية */}
+          <StundenVertrag progress={progress} />
+
           {/* 🎯 الجاهزية */}
           <div className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)" }}>
             <div style={{ fontWeight: 900, marginBottom: "0.3rem" }}>🎯 جاهزية الامتحان — Prüfungsbereitschaft</div>

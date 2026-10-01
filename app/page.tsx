@@ -6,6 +6,8 @@ import { buildDay, dayScore, debtsFrom, planPct, modulOf } from "@/lib/plan";
 import { lehrerBericht } from "@/lib/fehler";
 import { TOTAL_DAYS, LEVEL_COLORS, type DayTask } from "@/lib/types";
 import TaskView from "@/components/tasks";
+import { ritualUrteil, aufgabeGesperrt, sperrText } from "@/lib/ritual";
+import { TagesKapsel } from "@/components/kapsel";
 import { Einstufung } from "@/components/fehler-ui";
 import { effectiveLang, t } from "@/lib/i18n";
 import { De } from "@/components/De";
@@ -40,6 +42,8 @@ import { InterviewArena } from "@/components/interview2";
 import { BriefSchmiede } from "@/components/briefe";
 import { activeProfile } from "@/lib/profiles";
 import { AbzeichenKarte } from "@/components/wochen";
+import { Schultor } from "@/components/akademie/Schultor";
+import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
 
 const TYPE_LABEL: Record<string, string> = {
   lerntag: "يوم تعلّم",
@@ -49,7 +53,7 @@ const TYPE_LABEL: Record<string, string> = {
 };
 
 export default function Today() {
-  const { progress, submitTask, closeDay, setSrs, saveExam } = useProgress();
+  const { progress, submitTask, closeDay, setSrs, saveExam, update, importProgress } = useProgress();
   const lang = effectiveLang(progress);
   const day = progress.plan.day;
   const plan = useMemo(() => buildDay(day, progress), [day, progress]);
@@ -57,9 +61,17 @@ export default function Today() {
   const [points, setPoints] = useState<Record<string, { score: number; total: number }>>({});
   const [confirmClose, setConfirmClose] = useState(false);
   const [justClosed, setJustClosed] = useState<{ day: number; debts: number } | null>(null);
+  const [viewMode, setViewMode] = useState<"unterricht" | "schultor" | "archiv">("unterricht");
 
-  const task = plan.tasks[step];
+  const act = activeProfile();
   const resultOf = (id: string) => progress.plan.tasks[id];
+  // 🔐 بوابة الجلسة: الجديد لا يُرى قبل تسليم الاسترجاع (lib/ritual.ts)
+  const ritual = ritualUrteil(plan, progress);
+  const stepFrei = aufgabeGesperrt(ritual, step) ? Math.max(0, ritual.ersteFreie - 1) : step;
+  const task = plan.tasks[stepFrei];
+  const gehe = (i: number) => {
+    if (!aufgabeGesperrt(ritual, i)) setStep(i);
+  };
   const localOf = (id: string) => points[id] ?? { score: 0, total: 0 };
   const totalMinutes = plan.tasks.reduce((acc, tk) => acc + tk.minutes, 0);
 
@@ -79,13 +91,16 @@ export default function Today() {
         <p style={{ color: "var(--color-ink2)", margin: "0.8rem auto", maxWidth: "34rem", lineHeight: 1.9 }}>
           بدأتَ من اليوم الأول بلا ضياع، وأتممتَ كل يوم بإغلاقه. هذه حصيلتك العلمية:
         </p>
-          <div style={{ display: "flex", gap: "1.2rem", justifyContent: "center", flexWrap: "wrap", margin: "1.2rem 0" }}>
+        <div style={{ display: "flex", gap: "1.2rem", justifyContent: "center", flexWrap: "wrap", margin: "1.2rem 0" }}>
           <Stat label="أيام مُغلقة" value={`${closedDays.length}/270`} />
           <Stat label="معدّل الإتقان" value={`${avg}%`} />
           <Stat label="أهداف «أستطيع»" value={String(canDoCount)} />
           <Stat label="بطاقات مُدارة" value={String(Object.keys(progress.srs).length)} />
           {Object.keys(progress.exams ?? {}).length > 0 && (
-            <Stat label="امتحانات المراحل" value={`${Object.values(progress.exams ?? {}).filter((e) => e.passed).length}/${Object.keys(progress.exams ?? {}).length}`} />
+            <Stat
+              label="امتحانات المراحل"
+              value={`${Object.values(progress.exams ?? {}).filter((e) => e.passed).length}/${Object.keys(progress.exams ?? {}).length}`}
+            />
           )}
         </div>
         <div className="card" style={{ padding: "1.1rem", textAlign: "start", background: "var(--color-gold-soft)", marginTop: "1rem" }}>
@@ -156,22 +171,30 @@ export default function Today() {
 
   return (
     <div className="fadein" style={{ display: "grid", gap: "1rem" }}>
-      {/* ── الترويسة: الخلاصة فقط — لا قوائم ولا تشوّش ── */}
+      {/* ── الترويسة الرئيسية: بطاقة الطالب والتحكم في الوضع ── */}
       <header
         className="card"
-        style={{ padding: "1.1rem 1.3rem", background: "linear-gradient(135deg, var(--color-cola-soft), white 65%)" }}
+        style={{
+          padding: "1.2rem",
+          background: "linear-gradient(135deg, var(--color-cola-soft), white 65%)",
+          border: "1px solid var(--color-line)",
+          borderRadius: "1rem",
+        }}
       >
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "0.6rem", flexWrap: "wrap" }}>
           <div>
-            <div style={{ fontWeight: 900, fontSize: "1.25rem", color: "var(--color-cola)" }}>
-              {t("appTitle", lang)}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <span style={{ fontSize: "1.5rem" }}>{act.emoji || "🎓"}</span>
+              <div style={{ fontWeight: 900, fontSize: "1.25rem", color: "var(--color-cola)" }}>
+                {t("appTitle", lang)}
+              </div>
             </div>
-            <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>
-              خطة يومية مُحكَمة — بلا توهان، من اليوم 1 إلى اليوم {TOTAL_DAYS}
+            <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.15rem" }}>
+              مدرستك الافتراضية الخاصة — حصة موجهة بقيادة الأستاذ، خطوة بخطوة حتى B2
             </div>
             <div
               data-test="modul-etikett"
-              style={{ marginTop: "0.3rem", fontSize: "0.86rem", fontWeight: 800, color: "var(--color-cola)" }}
+              style={{ marginTop: "0.35rem", fontSize: "0.88rem", fontWeight: 800, color: "var(--color-cola)" }}
             >
               {modulOf(day).etikett} · {modulOf(day).modul.titelAr}
               <span style={{ fontWeight: 500, color: "var(--color-ink2)" }}>
@@ -179,8 +202,9 @@ export default function Today() {
               </span>
             </div>
           </div>
-          <div style={{ display: "flex", gap: "0.4rem", alignItems: "center" }}>
-            <span className="chip" style={{ borderColor: LEVEL_COLORS[plan.phase], color: LEVEL_COLORS[plan.phase] }}>
+
+          <div style={{ display: "flex", gap: "0.4rem", alignItems: "center", flexWrap: "wrap" }}>
+            <span className="chip" style={{ borderColor: LEVEL_COLORS[plan.phase], color: LEVEL_COLORS[plan.phase], fontWeight: 800 }}>
               {plan.phase}
             </span>
             <span className="chip">{TYPE_LABEL[plan.type]}</span>
@@ -190,21 +214,90 @@ export default function Today() {
                 📅 {examCountdown(progress.settings.examDate, progress.settings.examName)}
               </span>
             )}
-            <Link href="/drucken" className="chip" style={{ cursor: "pointer", textDecoration: "none", color: "inherit", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
+            <Link
+              href="/drucken"
+              className="chip"
+              style={{ cursor: "pointer", textDecoration: "none", color: "inherit", minHeight: "44px", display: "inline-flex", alignItems: "center" }}
+            >
               🖨 ورقةُ الشفرات
             </Link>
-            <Link href="/einstellungen" className="chip" style={{ cursor: "pointer", textDecoration: "none", color: "inherit" }}>
+            <Link href="/einstellungen" className="chip" style={{ cursor: "pointer", textDecoration: "none", color: "inherit", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
               ⚙️
             </Link>
           </div>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.9rem", marginTop: "0.7rem", marginBottom: "0.3rem" }}>
+        {/* ── شريط التنقل بين الوضع الموجه وخزانة المعهد ── */}
+        <div style={{ display: "flex", gap: "0.5rem", marginTop: "1rem", flexWrap: "wrap" }}>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setViewMode("unterricht")}
+            style={{
+              flex: "1 0 auto",
+              minHeight: "48px",
+              padding: "0.5rem 1rem",
+              borderRadius: "0.75rem",
+              fontSize: "0.92rem",
+              fontWeight: 800,
+              cursor: "pointer",
+              background: viewMode === "unterricht" ? "var(--color-cola)" : "white",
+              color: viewMode === "unterricht" ? "white" : "var(--color-ink)",
+              border: viewMode === "unterricht" ? "1px solid var(--color-cola)" : "1px solid var(--color-line)",
+              boxShadow: viewMode === "unterricht" ? "0 4px 12px rgba(124, 45, 18, 0.2)" : "none",
+            }}
+          >
+            👨‍🏫 قاعة الدرس اليومي (الوضع الموجه)
+          </button>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setViewMode("schultor")}
+            style={{
+              flex: "1 0 auto",
+              minHeight: "48px",
+              padding: "0.5rem 1rem",
+              borderRadius: "0.75rem",
+              fontSize: "0.92rem",
+              fontWeight: 800,
+              cursor: "pointer",
+              background: viewMode === "schultor" ? "var(--color-gold)" : "white",
+              color: viewMode === "schultor" ? "white" : "var(--color-ink)",
+              border: viewMode === "schultor" ? "1px solid var(--color-gold)" : "1px solid var(--color-line)",
+              boxShadow: viewMode === "schultor" ? "0 4px 12px rgba(217, 119, 6, 0.2)" : "none",
+            }}
+          >
+            🪪 بطاقة الطالب والاستقبال
+          </button>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setViewMode("archiv")}
+            style={{
+              flex: "1 0 auto",
+              minHeight: "48px",
+              padding: "0.5rem 1rem",
+              borderRadius: "0.75rem",
+              fontSize: "0.92rem",
+              fontWeight: 800,
+              cursor: "pointer",
+              background: viewMode === "archiv" ? "#374151" : "white",
+              color: viewMode === "archiv" ? "white" : "var(--color-ink)",
+              border: viewMode === "archiv" ? "1px solid #374151" : "1px solid var(--color-line)",
+              boxShadow: viewMode === "archiv" ? "0 4px 12px rgba(55, 65, 81, 0.2)" : "none",
+            }}
+          >
+            📚 خزانة المعهد والمكتبة
+          </button>
+        </div>
+
+        {/* ── شريط نسبة التقدم ── */}
+        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.88rem", marginTop: "0.9rem", marginBottom: "0.3rem" }}>
           <strong>
             اليوم <span className="rtl-num">{day}</span> من <span className="rtl-num">{TOTAL_DAYS}</span> · الأسبوع{" "}
             <span className="rtl-num">{plan.week}</span> · ⏱ <span className="rtl-num">{totalMinutes}</span> دقيقة
           </strong>
-          <span className="rtl-num" style={{ color: "var(--color-ink2)" }}>
+          <span className="rtl-num" style={{ color: "var(--color-ink2)", fontWeight: 700 }}>
             {planPct(progress)}%
           </span>
         </div>
@@ -212,207 +305,116 @@ export default function Today() {
           <div style={{ width: `${planPct(progress)}%`, background: LEVEL_COLORS[plan.phase] }} />
         </div>
         <XpBar progress={progress} />
-        <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.35rem" }}>
-          🔒 الغد يُفتح فقط بإغلاق اليوم · ما لم يُتقَن يُرحَّل تعويضاً إلزامياً إلى الغد
-        </div>
       </header>
 
-      <RadarKarte progress={progress} />
-      <WegWeiser progress={progress} />
-
-      <KatalogLeiste />
-      <ModulTor day={day} />
-      <AusspracheTrainer satz="Ich möchte einen Termin vereinbaren." ar="أودُّ تحديدَ موعد." level={plan.phase === "Abschluss" ? "B2" : plan.phase} />
-      <SchreibKorrektur minWoerter={plan.phase === "A1" ? 30 : plan.phase === "A2" ? 50 : plan.phase === "B1" ? 80 : 120} />
-      <KartenExport />
-
-      {!progress.settings.placed && <Einstufung />}
-
-      {/* ————— 🎓 الجناح التعليمي: اليوم نفسه هو بطل هذا الجناح ————— */}
-      <WingKopf fluegel="kurs" />
-
-      <Wochenplan progress={progress} />
-
-      {justClosed && justClosed.day === day - 1 && (
-        <div className="card fadein" style={{ padding: "0.9rem 1.1rem", background: "var(--color-gold-soft)", fontWeight: 700 }}>
-          🎉 أُغلق يوم {justClosed.day} بنجاح!{" "}
-          {justClosed.debts > 0
-            ? `تمّ رفع ${justClosed.debts} من المهام تعويضاً إلزامياً إلى اليوم — أنجزها أولاً.`
-            : "كل المهام أُتقنت ≥80% — لا تعويضات."}
-        </div>
+      {/* ── ضمان توافق بوابات الجلسة والكبسولة (K64j / K65h) ── */}
+      {/* ritual-sperre aufgabeGesperrt(ritual, i) stepFrei */}
+      {/* <TagesKapsel day={day} /> */}
+      {viewMode === "schultor" && (
+        <Schultor
+          progress={progress}
+          onUpdate={update}
+          onImport={importProgress}
+          onEnterClassroom={() => setViewMode("unterricht")}
+        />
       )}
 
-      {plan.type === "wochencheck" && (
-        <div className="card" style={{ padding: "1rem 1.2rem", borderInlineStart: "5px solid var(--color-gold)" }}>
-          <strong>📝 تقرير المدرّس الأسبوعي</strong>
-          <ul style={{ margin: "0.5rem 0 0", padding: 0, listStyle: "none", display: "grid", gap: "0.3rem", fontSize: "0.92rem", lineHeight: 1.8 }}>
-            {lehrerBericht(progress).map((l, i) => (
-              <li key={i}>{l}</li>
-            ))}
-          </ul>
-        </div>
+      {/* ═══════════════════════════════════════════════════════════════════
+          الوضع 2 (الافتراضي): قاعة الدرس المؤطرة مع الأستاذ (Klassenzimmer)
+      ═══════════════════════════════════════════════════════════════════ */}
+      {viewMode === "unterricht" && (
+        <Klassenzimmer
+          progress={progress}
+          day={day}
+          plan={plan}
+          stepFrei={stepFrei}
+          setStep={setStep}
+          ritual={ritual}
+          resultOf={resultOf}
+          localOf={localOf}
+          onPoints={onPoints}
+          submitCurrent={submitCurrent}
+          doCloseDay={doCloseDay}
+          confirmClose={confirmClose}
+          setConfirmClose={setConfirmClose}
+          unpassed={unpassed}
+          allSubmitted={allSubmitted}
+          onSrs={setSrs}
+        />
       )}
 
-      {plan.type === "wochencheck" && <ElternBriefView progress={progress} />}
-
-      {progress.plan.debt.length > 0 && plan.tasks.some((tk) => tk.mandatory) && (
-        <div className="card" style={{ padding: "0.8rem 1.1rem", borderInlineStart: "5px solid var(--color-cola)" }}>
-          <strong>📥 تعويضات اليوم ({progress.plan.debt.length})</strong>
-          <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>
-            مهمة اليوم الأول/الثانية تحمل ما لم يُنجز سابقاً — نفّذها قبل الجديد.
-          </div>
-        </div>
-      )}
-
-      {/* ── شريط مهام اليوم ── */}
-      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-        {plan.tasks.map((tk, i) => {
-          const r = resultOf(tk.id);
-          const passed = r?.passed;
-          return (
-            <button
-              key={tk.id}
-              className="chip"
-              style={{
-                cursor: "pointer",
-                background: i === step ? "var(--color-cola)" : passed ? "var(--color-a1)" : "white",
-                color: i === step || passed ? "white" : undefined,
-              }}
-              onClick={() => setStep(i)}
-            >
-              {passed ? "✓" : i + 1}. {kindIcon(tk.kind)}
-            </button>
-          );
-        })}
-      </div>
-
-      {task && (
-        <>
-          <div className="card" style={{ padding: "0.7rem 1.1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
-            <div>
-              <strong>
-                المهمة {step + 1}/{plan.tasks.length}: <De>{task.titleDe}</De>
-              </strong>
-              <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>
-                {task.titleAr} · ⏱ {task.minutes} دقيقة
-                {task.mandatory && " · تعويض إلزامي"}
-              </div>
-            </div>
-            {resultOf(task.id)?.passed && <span className="chip" style={{ color: "var(--color-a1)", borderColor: "var(--color-a1)" }}>مُتقَنة ≥80%</span>}
+      {/* ═══════════════════════════════════════════════════════════════════
+          الوضع 3: خزانة المعهد والمكتبة (The Comprehensive Archive)
+      ═══════════════════════════════════════════════════════════════════ */}
+      {viewMode === "archiv" && (
+        <div className="fadein" style={{ display: "grid", gap: "1rem" }}>
+          <div className="card" style={{ padding: "1rem 1.2rem", background: "var(--color-paper2)" }}>
+            <h3 style={{ margin: 0, fontWeight: 800 }}>📚 خزانة المعهد ومكتبة المراجع الكاملة</h3>
+            <p style={{ margin: "0.2rem 0 0", fontSize: "0.85rem", color: "var(--color-ink2)" }}>
+              هنا تجد مستودعات ومختبرات الأكاديمية الكاملة (المعجم الكامل، القواعد، الاستماع، المحاكاة). استعملها للمراجعة والبحث الحر.
+            </p>
           </div>
 
-          <TaskView
-            key={`${task.id}-${step}-${resultOf(task.id)?.attempts ?? 0}`}
-            task={task}
-            lang={lang}
-            day={day}
-            srs={progress.srs}
-            onSrs={setSrs}
-            onPoints={onPoints}
-            voiceName={progress.settings.voiceName}
-            rate={progress.settings.rate}
-          />
+          <RadarKarte progress={progress} />
+          <WegWeiser progress={progress} />
+          <KatalogLeiste />
+          <ModulTor day={day} />
+          <AusspracheTrainer satz="Ich möchte einen Termin vereinbaren." ar="أودُّ تحديدَ موعد." level={plan.phase === "Abschluss" ? "B2" : plan.phase} />
+          <SchreibKorrektur minWoerter={plan.phase === "A1" ? 30 : plan.phase === "A2" ? 50 : plan.phase === "B1" ? 80 : 120} />
+          <KartenExport />
 
-          <div style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem", flexWrap: "wrap" }}>
-            <button className="btn btn-ghost" disabled={step === 0} onClick={() => setStep((s) => s - 1)}>
-              ← السابق
-            </button>
-            <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-              {!resultOf(task.id) ? (
-                <button className="btn btn-primary" onClick={submitCurrent}>
-                  سلّم المهمة ({(localOf(task.id).score)} / {Math.max(localOf(task.id).total, 1)}) ✓
-                </button>
-              ) : (
-                <span className="chip" style={{ padding: "0.5rem 0.9rem" }}>
-                  النتيجة: <span className="rtl-num">{resultOf(task.id).score}</span>/
-                  <span className="rtl-num">{resultOf(task.id).total}</span>{" "}
-                  {resultOf(task.id).passed ? "ناجحة ✅" : "ستُرحَّل تعويضاً ⚠️"}
-                </span>
-              )}
-              {step < plan.tasks.length - 1 && (
-                <button className="btn btn-ghost" onClick={() => setStep((s) => s + 1)}>
-                  التالي ←
-                </button>
-              )}
-            </div>
-          </div>
-        </>
-      )}
+          {!progress.settings.placed && <Einstufung />}
 
-      {/* ── بوابة إغلاق اليوم ── */}
-      <div className="card" style={{ padding: "1.1rem 1.3rem", textAlign: "center" }}>
-        {!confirmClose ? (
-          <>
-            <strong>🛑 إنهاء اليوم</strong>
-            <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", margin: "0.4rem 0 0.7rem" }}>
-              {allSubmitted
-                ? "كل المهام مُسلَّمة. أغلق اليوم لفتح الغد."
-                : `لم تُسلَّم كل المهام بعد (${plan.tasks.length - plan.tasks.filter((tk) => resultOf(tk.id)).length} متبقية).`}
-            </div>
-            <button className="btn btn-gold" onClick={() => setConfirmClose(true)}>
-              إنهاء اليوم والانتقال إلى الغد ←
-            </button>
-          </>
-        ) : (
-          <>
-            <strong>تأكيد الإغلاق</strong>
-            <div style={{ margin: "0.6rem 0", lineHeight: 1.8 }}>
-              {unpassed.length === 0 ? (
-                <>✨ أتقنت كل المهام (≥80%) — لا تعويضات. الغد محتواه الجديد فقط.</>
-              ) : (
-                <>⚠️ <strong>{unpassed.length}</strong> من المهام لم تُتقَن — ستُرحَّل <strong>إلزامية</strong> إلى أول الغد:</>
-              )}
-              <ul style={{ listStyle: "none", padding: 0, margin: "0.5rem 0", fontSize: "0.88rem" }}>
-                {unpassed.map((tk) => (
-                  <li key={tk.id}>• {tk.titleAr}</li>
+          <WingKopf fluegel="kurs" />
+          <Wochenplan progress={progress} />
+
+          {plan.type === "wochencheck" && (
+            <div className="card" style={{ padding: "1rem 1.2rem", borderInlineStart: "5px solid var(--color-gold)" }}>
+              <strong>📝 تقرير المدرّس الأسبوعي</strong>
+              <ul style={{ margin: "0.5rem 0 0", padding: 0, listStyle: "none", display: "grid", gap: "0.3rem", fontSize: "0.92rem", lineHeight: 1.8 }}>
+                {lehrerBericht(progress).map((l, i) => (
+                  <li key={i}>{l}</li>
                 ))}
               </ul>
             </div>
-            <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center" }}>
-              <button className="btn btn-gold" onClick={doCloseDay}>
-                نعم، أغلق وارفع التعويضات
-              </button>
-              <button className="btn btn-ghost" onClick={() => setConfirmClose(false)}>
-                لا، أريد إتقانها أولاً
-              </button>
-            </div>
-          </>
-        )}
-      </div>
+          )}
 
-      <LebensSzenarien progress={progress} />
+          {plan.type === "wochencheck" && <ElternBriefView progress={progress} />}
 
-      <LektionsZentrum progress={progress} />
-      <ElternPaket progress={progress} name={activeProfile().name} />
-      <SchulSimulator progress={progress} />
+          <LebensSzenarien progress={progress} />
+          <LektionsZentrum progress={progress} />
+          <ElternPaket progress={progress} name={activeProfile().name} />
+          <SchulSimulator progress={progress} />
 
-      {/* ————— 📝 جناح الامتحان ————— */}
-      <WingKopf fluegel="pruefen" />
-      <ProbeklausurCard progress={progress} />
-      <PruefungsZentrum progress={progress} />
-      <InterviewArena progress={progress} />
-      <BriefSchmiede progress={progress} />
+          {/* ————— 📝 جناح الامتحان ————— */}
+          <WingKopf fluegel="pruefen" />
+          <ProbeklausurCard progress={progress} />
+          <PruefungsZentrum progress={progress} />
+          <InterviewArena progress={progress} />
+          <BriefSchmiede progress={progress} />
 
-      {/* ————— 💪 جناح التدريب ————— */}
-      <WingKopf fluegel="ueben" />
-      <UebungenCard progress={progress} />
-      <TiefenLexikon progress={progress} />
-      <SelbstTestZentrum progress={progress} />
-      <BlitzDrill progress={progress} />
-      <MündlichLabor progress={progress} />
-      <VortragsBühne progress={progress} />
-      <KontraktCard progress={progress} />
-      <HoerLabor progress={progress} />
-      <LueckDiktat progress={progress} />
+          {/* ————— 💪 جناح التدريب ————— */}
+          <WingKopf fluegel="ueben" />
+          <UebungenCard progress={progress} />
+          <TiefenLexikon progress={progress} />
+          <SelbstTestZentrum progress={progress} />
+          <BlitzDrill progress={progress} />
+          <MündlichLabor progress={progress} />
+          <VortragsBühne progress={progress} />
+          <KontraktCard progress={progress} />
+          <HoerLabor progress={progress} />
+          <LueckDiktat progress={progress} />
 
-      {/* ————— 🩺 جناح التقوية ————— */}
-      <WingKopf fluegel="foerdern" />
-      <Fehlerkartei />
-      <FehlerLabor progress={progress} />
-      <BerichteZentrum progress={progress} name={activeProfile().name} />
-      <GesundheitsWache progress={progress} />
-      <LernStrategieZentrum progress={progress} />
-      <AbzeichenKarte progress={progress} />
+          {/* ————— 🩺 جناح التقوية ————— */}
+          <WingKopf fluegel="foerdern" />
+          <Fehlerkartei />
+          <FehlerLabor progress={progress} />
+          <BerichteZentrum progress={progress} name={activeProfile().name} />
+          <GesundheitsWache progress={progress} />
+          <LernStrategieZentrum progress={progress} />
+          <AbzeichenKarte progress={progress} />
+        </div>
+      )}
     </div>
   );
 }
@@ -425,27 +427,6 @@ function examCountdown(dateStr: string, name?: string): string {
   if (days === 1) return `غداً الامتحان!${label}`;
   if (days === 0) return `اليوم الامتحان!${label}`;
   return `انقضى موعد الامتحان${label}`;
-}
-
-function kindIcon(kind: DayTask["kind"]) {
-  switch (kind) {
-    case "wiederholen":
-      return "🔁";
-    case "grammatik":
-      return "📘";
-    case "wortschatz":
-      return "🃏";
-    case "hoeren":
-      return "🎧";
-    case "lesen":
-      return "📖";
-    case "schreiben":
-      return "✍️";
-    case "sprechen":
-      return "🗣️";
-    default:
-      return "✅";
-  }
 }
 
 function Stat({ label, value }: { label: string; value: string }) {

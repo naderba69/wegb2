@@ -8,11 +8,15 @@ import { normalize } from "@/lib/grader";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
-import { speakAny, listenDe, recognitionAvailable } from "@/lib/speech";
+import { speakAny, listenDe, recognitionAvailable, cloudSpracheFrei } from "@/lib/speech";
 import { DiktatBootcamp } from "./diktat";
 import { SchreibWerkstatt } from "./schreiben";
 import { GrammatikArena } from "./arena";
 import { De } from "./De";
+
+/** الإفصاحُ الموحَّد — لا يُستعمَلُ التعرُّفُ السحابيُّ بلا هذا السطرِ ظاهرًا بجانبِ الزرّ */
+export const CLOUD_SPEECH_DISCLOSURE =
+  "🎙️ الميكروفون يُرسِل صوتك إلى خدمة تعرُّف خارجية (متصفّح Chrome/Edge) ليقارنه بالجملة. التعطيل في الإعدادات — وحينها يبقى تدريبُ الإيقاع المحلّيُّ الذي لا يُرسِل شيئًا.";
 
 const PERSONEN = ["ich", "du", "er/sie/es", "wir", "ihr", "sie/Sie"];
 type Zeit = "präsens" | "perfekt" | "präteritum" | "konj2";
@@ -164,7 +168,7 @@ export function SprechTrainer({ progress }: { progress: Progress }) {
   const [heard, setHeard] = useState<string | null>(null);
   const [listening, setListening] = useState(false);
   const stopRef = useRef<null | (() => void)>(null);
-  const available = useMemo(() => recognitionAvailable(), []);
+  const available = useMemo(() => cloudSpracheFrei(), []);
 
   const s = items[idx];
   const ratio = (a: string, b: string) => {
@@ -216,9 +220,20 @@ export function SprechTrainer({ progress }: { progress: Progress }) {
   return (
     <div className="card" style={{ padding: "0.9rem 1rem", background: "var(--color-paper2)" }}>
       <div style={{ fontWeight: 800, marginBottom: "0.3rem" }}>Sprechtraining — كرّر الجملة</div>
-      {!available && (
+      {!available && recognitionAvailable() && (
+        <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginBottom: "0.4rem" }}>
+          ⏸️ عطّلتَ التعرُّفَ السحابيَّ من الإعدادات — وهو قرارٌ سليم. درِّب إيقاعَك ونبراتِك في <strong>مدرّب النطق المحلّي</strong>:
+          يقيس مقاطعَك ووقفاتِك وسرعتَك مقابلَ النموذج، <strong>وصوتُك لا يغادر جهازَك</strong>.
+        </div>
+      )}
+      {!recognitionAvailable() && (
         <div style={{ fontSize: "0.85rem", color: "var(--color-cola)", marginBottom: "0.4rem" }}>
           ⚠️ متصفحك لا يدعم التعرّف على الصوت (جرّب Chrome) — التدريب يتحوّل إلى وضع المقارنة الذاتية.
+        </div>
+      )}
+      {available && (
+        <div data-testid="cloud-speech-disclosure" style={{ fontSize: "0.8rem", color: "var(--color-cola)", background: "var(--color-cola-soft)", borderInlineStart: "3px solid var(--color-cola)", padding: "0.45rem 0.6rem", borderRadius: "6px", marginBottom: "0.5rem" }}>
+          {CLOUD_SPEECH_DISCLOSURE}
         </div>
       )}
       <div className="card" style={{ padding: "0.6rem 0.8rem", marginBottom: "0.5rem" }}>

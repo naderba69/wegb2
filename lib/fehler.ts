@@ -1,4 +1,5 @@
 // محرّك دفتر الأخطاء والتكيّف — «ذاكرة المدرّس» التي لا تنسى أخطاءك
+import { PHASE_START, levelAmTag } from "./phasen";
 import type {
   Exercise,
   FehlerEintrag,
@@ -7,6 +8,7 @@ import type {
   Progress,
 } from "./types";
 import { newCard, reviewCard, isDue } from "./srs";
+import { sicherheitsZeile } from "./sicherheit";
 
 export const FEHLER_KAT: Record<string, string> = {
   "falsche-freunde": "فخاخ زائفة",
@@ -182,6 +184,9 @@ export function fehlerDesMonats(p: Progress): FehlerState | null {
 
 /** تقرير المدرّس الأسبوعي — نصوص حتمية من بيانات المتعلّم */
 export function lehrerBericht(p: Progress): string[] {
+  const z = lehrerBerichtBasis(p); const sz = sicherheitsZeile(p.sicherheit); return sz ? [...z, sz] : z;
+}
+function lehrerBerichtBasis(p: Progress): string[] {
   const lines: string[] = [];
   const days = Object.entries(p.plan.days)
     .map(([d, r]) => [Number(d), r] as const)
@@ -244,9 +249,9 @@ export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise
 
 /** اقتراح اليوم الانطلاق حسب نتائج التحديد (صحيح من كل 3 لكل مستوى) */
 export function vorschlagTag(gruppen: Record<string, number>): number {
-  if ((gruppen.B2 ?? 0) >= 2) return 211;
-  if ((gruppen.B1 ?? 0) >= 2) return 141;
-  if ((gruppen.A2 ?? 0) >= 2) return 71;
+  if ((gruppen.B2 ?? 0) >= 2) return PHASE_START.B2;
+  if ((gruppen.B1 ?? 0) >= 2) return PHASE_START.B1;
+  if ((gruppen.A2 ?? 0) >= 2) return PHASE_START.A2;
   return 1;
 }
 
@@ -255,7 +260,7 @@ export function elternBrief(p: Progress): { de: string[]; ar: string[] } {
   const de: string[] = [];
   const ar: string[] = [];
   const day = Math.min(p.plan.day, 270);
-  const phase = day >= 211 ? "B2" : day >= 141 ? "B1" : day >= 71 ? "A2" : "A1";
+  const phase = levelAmTag(day);
   de.push(`Ihr Kind ist bei Tag ${day} von 270 (Phase ${phase}) auf dem Weg bis B2.`);
   ar.push(`طفلك في اليوم ${day} من 270 (مرحلة ${phase}) على الطريق نحو B2.`);
   const days = Object.entries(p.plan.days)

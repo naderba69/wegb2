@@ -1,0 +1,222 @@
+# -*- coding: utf-8 -*-
+"""Batch 9: 18 B1 + 18 B2 = 36 neue Uebungssaetze aus verwaisten Karten (121 Waisen aufgeloest)."""
+
+S = [
+    # --- B1 (18 Saetze) ---
+    ("B1",
+     "Wegen einer betrieblichen Urlaubssperre musste der beliebte Betriebsausflug verschoben werden, während die Beschäftigten ihre tägliche Tagesdosis an Vitaminen nahmen.",
+     "بسبب حظر الإجازات في الشركة، اضطروا لتأجيل الرحلة الجماعية المحبوبة للعاملين، بينما تناول الموظفون جرعتهم اليومية من الفيتامينات.",
+     ["die Tagesdosis", "die Urlaubssperre", "der Betriebsausflug"],
+     ["job", "gesundheit"]),
+
+    ("B1",
+     "Bevor Autofahrer einen Parkschein am Automaten lösen, kontrolliert die Polizei die grüne Umweltplakette und verlangt eine gültige Haftpflichtversicherung.",
+     "قبل أن يشتري السائقون تذكرة وقوف من الجهاز الآلي، تراقب الشرطة الملصق البيئي الأخضر وتطلب تأمين مسؤولية مدنية سارياً.",
+     ["der Parkschein", "die Umweltplakette", "die Haftpflichtversicherung"],
+     ["auto", "recht"]),
+
+    ("B1",
+     "Wenn Versicherte eine kleine Selbstbeteiligung tragen, sinkt ihr monatlicher Beitragssatz und sie erhalten am Jahresende oft eine erfreuliche Beitragsrückerstattung.",
+     "عندما يتحمل المؤمن عليهم نسبة تحمل صغيرة، ينخفض معدل اشتراكهم الشهري وغالباً ما يحصلون في نهاية العام على استرداد اشتراكات سار.",
+     ["die Selbstbeteiligung tragen", "der Beitragssatz", "die Beitragsrückerstattung"],
+     ["finanzen", "versicherung"]),
+
+    ("B1",
+     "Für eine sichere Altersvorsorge legte die Kundin ein festes Sparziel fest und bezahlte jede Kontoführungsgebühr automatisch per Lastschrift.",
+     "من أجل تأمين تقاعدي آمن، حددت العميلة هدف ادخار ثابتاً وسددت رسوم إدارة الحساب تلقائياً عبر الخصم المباشر.",
+     ["die Altersvorsorge", "das Sparziel", "die Lastschrift", "die Kontoführungsgebühr"],
+     ["finanzen", "bank"]),
+
+    ("B1",
+     "Mit großer Hilfsbereitschaft leistet der Vorstand wertvolle Freiwilligenarbeit, während sich alle Mitglieder für das gemeinsame Wohl einsetzen.",
+     "بكل روح مساعدة يقدم مجلس الإدارة عملاً تطوعياً قيماً، بينما يكرس جميع الأعضاء جهودهم من أجل الصالح العام.",
+     ["die Freiwilligenarbeit", "der Vorstand", "die Hilfsbereitschaft", "sich einsetzen für"],
+     ["ehrenamt", "gesellschaft"]),
+
+    ("B1",
+     "Auf der jährlichen Jahreshauptversammlung trugen die Mitglieder jedes wichtige Anliegen vor und beschlossen eine faire Ehrenamtspauschale für Betreuer.",
+     "في الجمعية العمومية السنوية، طرح الأعضاء كل مطلب مهم وأقروا مكافأة تطوع عادلة للمشرفين.",
+     ["das Anliegen", "die Jahreshauptversammlung", "die Ehrenamtspauschale"],
+     ["verein", "gesellschaft"]),
+
+    ("B1",
+     "Obwohl der Beginn enttäuschend schien, bot die beeindruckend schöne Landschaft einen erholsamen Aufenthalt mit einer beruhigenden Atmosphäre.",
+     "رغم أن البداية بدت مخيبة للآمال، إلا أن المشهد الطبيعي البديع بشكل مذهل وفر إقامة مريحة مع أجواء مهدئة.",
+     ["enttäuschend", "beeindruckend", "erholsam", "beruhigend"],
+     ["urlaub", "natur"]),
+
+    ("B1",
+     "Nach einer aufregenden Debatte stellten die Fachleute fest, dass die vorgelegten Unterlagen ausreichend waren und eine zutreffende Analyse boten.",
+     "بعد نقاش مثير، أكد الخبراء أن المستندات المقدمة كانت كافية وقدمت تحليلاً دقيقاً ومطابقاً للواقع.",
+     ["aufregend", "ausreichend", "zutreffend"],
+     ["bildung", "diskussion"]),
+
+    ("B1",
+     "Nach einem verdächtigen Betrugsversuch müssen Nutzer ihr Passwort ändern, die Datenschutzerklärung aufmerksam lesen und ihre ausdrückliche Einwilligung erteilen.",
+     "بعد محاولة احتيال مريبة، يجب على المستخدمين تغيير كلمة مرورهم وقراءة بيان حماية البيانات بانتباه وإعطاء موافقتهم الصريحة.",
+     ["das Passwort ändern", "der Betrugsversuch", "die Datenschutzerklärung", "die Einwilligung"],
+     ["digital", "sicherheit"]),
+
+    ("B1",
+     "Viele Patienten nutzen die bequeme Videosprechstunde, geben online eine ehrliche Bewertung ab und fordern Ärzte auf, ökologische Nachhaltigkeit zu beachten.",
+     "يستخدم العديد من المرضى الاستشارة الطبية المريحة عبر الفيديو، ويقدمون تقييماً صادقاً عبر الإنترنت ويطالبون الأطباء بمراعاة الاستدامة البيئية.",
+     ["die Videosprechstunde", "die Bewertung abgeben", "die Nachhaltigkeit beachten"],
+     ["gesundheit", "digital"]),
+
+    ("B1",
+     "Wer vor dem Einkauf einen Testbericht liest, sollte die Verfügbarkeit prüfen, auf eine kurze Lieferzeit achten und eine unkomplizierte Retoure vereinbaren.",
+     "من يقرأ تقرير اختبار قبل الشراء، ينبغي له فحص التوافر والحرص على مدة تسليم قصيرة والاتفاق على إرجاع للبضائع خالٍ من التعقيد.",
+     ["der Testbericht", "die Verfügbarkeit prüfen", "die Lieferzeit", "die Retoure"],
+     ["einkauf", "wirtschaft"]),
+
+    ("B1",
+     "Die sorgfältige Durchführung des Plans führte zu einer messbaren Verbesserung der Qualität, einer spürbaren Senkung der Kosten und einer sinnvollen Erweiterung.",
+     "أدى التنفيذ الدقيق للخطة إلى تحسن ملموس في الجودة وخفض ملحوظ في التكاليف وتوسعة مفيدة.",
+     ["die Durchführung", "die Verbesserung", "die Senkung", "die Erweiterung"],
+     ["arbeit", "organisation"]),
+
+    ("B1",
+     "Wegen einer finanziellen Kürzung im Bildungsbereich stand die Fortsetzung des Kurses auf dem Spiel, sodass ein schwerer Prüfungsteil entfiel.",
+     "بسبب اقتطاع مالي في قطاع التعليم، استمرارية الدورة كانت على المحك، مما أدى إلى إلغاء جزء امتحاني صعب.",
+     ["die Kürzung", "die Fortsetzung", "der Prüfungsteil"],
+     ["bildung", "pruefung"]),
+
+    ("B1",
+     "Kandidaten müssen die Bearbeitungszeit genau beachten, die genaue Aufgabenstellung lesen und für gute Noten die Bewertungskriterien der Musterlösung erfüllen.",
+     "يجب على المرشحين مراعاة وقت المعالجة بدقة، وقراءة نص المسألة المحدد واستيفاء معايير التقييم للحل النموذجي للحصول على درجات جيدة.",
+     ["die Bearbeitungszeit beachten", "die Aufgabenstellung", "die Musterlösung", "die Bewertungskriterien"],
+     ["pruefung", "lernen"]),
+
+    ("B1",
+     "Um die erforderliche Punktzahl zu erreichen und das offizielle Zertifikat zu erhalten, senkte eine strukturierte Lernstrategie den üblichen Prüfungsstress.",
+     "لتحقيق مجموع النقاط المطلوب والحصول على الشهادة الرسمية، قللت استراتيجية تعلم منظمة من توتر الامتحان المعتاد.",
+     ["die Punktzahl erreichen", "das Zertifikat", "der Prüfungsstress", "die Lernstrategie"],
+     ["pruefung", "erfolg"]),
+
+    ("B1",
+     "Bevor Schüler ihr individuelles Lernziel klar formulieren, hilft eine ehrliche Selbsteinschätzung, um jeden Lernfortschritt realistisch zu messen.",
+     "قبل أن يصيغ التلاميذ هدف تعلمهم الفردي بوضوح، يساعد التقييم الذاتي الصادق على قياس كل تقدم تعليمي بشكل واقعي.",
+     ["das Lernziel formulieren", "die Selbsteinschätzung", "der Lernfortschritt messen"],
+     ["bildung", "lernen"]),
+
+    ("B1",
+     "Der Dozent sprach einleitend über wichtige Grundlagen, behandelte anschließend praktische Übungen und fasste die zentralen Ergebnisse abschließend zusammen.",
+     "تحدث المحاضر استهلالياً عن الأسس المهمة، وتناول بعد ذلك تدريبات عملية ولخص النتائج المركزية ختامياً.",
+     ["einleitend", "anschließend", "abschließend"],
+     ["bildung", "vortrag"]),
+
+    ("B1",
+     "Wenn Teilnehmer sich um Verständnis bemühen und sich fleißig Notizen machen, bringt dies hierbei große Vorteile und sichert letztlich ihren Erfolg.",
+     "عندما يجتهد المشاركون في الفهم ويدونون الملاحظات بجد، فإن هذا يحقق هنا فوائد كبيرة ويضمن نجاحهم في نهاية المطاف.",
+     ["hierbei", "letztlich", "sich bemühen um", "sich Notizen machen"],
+     ["lernen", "erfolg"]),
+
+    # --- B2 (18 Saetze) ---
+    ("B2",
+     "Niemand brauchte sich wegen eines Versehens zu schämen, und wenn Schiedsrichter laut pfeifen, fühlt sich die überwältigt wirkende Mannschaft überglücklich.",
+     "لم يكن أحد بحاجة للخجل بسبب هفوة، وعندما يطلق الحكام صفيراً عالياً، يشعر الفريق المتأثر بشدة بسعادة غامرة.",
+     ["sich schämen", "überwältigt", "überglücklich", "pfeifen"],
+     ["gefuehle", "sport"]),
+
+    ("B2",
+     "Bürger können jederzeit einem gemeinnützigen Verein beitreten, bei Unzufriedenheit wieder austreten oder eine freiwillige Patenschaft für schutzbedürftige Kinder übernehmen.",
+     "يمكن للمواطنين في أي وقت الانضمام إلى جمعية ذات نفع عام، أو الانسحاب مجدداً عند عدم الرضا، أو تولي رعاية تطوعية لأطفال محتاجين للحماية.",
+     ["beitreten", "austreten", "die Patenschaft"],
+     ["gesellschaft", "ehrenamt"]),
+
+    ("B2",
+     "An Universitäten führt harter Notendruck zu einer frühen Selektion begabter Studierender, bevor Wissenschaftler ihre anspruchsvolle Habilitation erfolgreich abschließen.",
+     "في الجامعات، يؤدي ضغط الدرجات الشديد إلى فرز مبكر للطلاب الموهوبين قبل أن يكمل العلماء بنجاح تأهيلهم الأكاديمي العالي للأستاذية.",
+     ["die Habilitation", "die Selektion", "der Notendruck"],
+     ["bildung", "universitaet"]),
+
+    ("B2",
+     "Eine verlässliche Hausaufgabenbetreuung ermöglicht chancengleiche Bildungschancen für alle Kinder, indem moderner Unterricht stets kompetenzorientiert gestaltet wird.",
+     "تتيح الرعاية الموثوقة للواجبات المدرسية فرصاً تعليمية متكافئة لجميع الأطفال، حيث يتم تصميم التدريس الحديث دائماً بشكل موجه نحو الكفاءات.",
+     ["die Hausaufgabenbetreuung", "kompetenzorientiert", "chancengleich"],
+     ["bildung", "schule"]),
+
+    ("B2",
+     "Während der staatliche Solidaritätszuschlag die Infrastruktur finanzieren sollte, stieg der gesetzliche Regelsatz, um die drohende Armutsgefährdungsquote nachhaltig zu senken.",
+     "بينما كان الهدف من ضريبة التضامن الحكومية تمويل البنية التحتية، ارتفع المعدل القياسي القانوني للإعانة لخفض معدل خطر الفقر الوشيك بشكل مستدام.",
+     ["der Solidaritätszuschlag", "der Regelsatz", "die Armutsgefährdungsquote"],
+     ["staat", "soziales"]),
+
+    ("B2",
+     "Um gesellschaftliche Teilhabe zu fördern, nutzt der ehrenamtliche Trainer die steuerfreie Übungsleiterpauschale und schöpft den gesetzlichen Freibetrag voll aus.",
+     "لتعزيز المشاركة المجتمعية، يستفيد المدرب المتطوع من المكافأة المقطوعة للمدربين المعفاة من الضرائب ويستغل حد الإعفاء القانوني بالكامل.",
+     ["die Teilhabe", "die Übungsleiterpauschale", "der Freibetrag"],
+     ["sport", "ehrenamt"]),
+
+    ("B2",
+     "In einer krisenfesten Solidargemeinschaft vermittelt die örtliche Ehrenamtsagentur engagierte Freiwillige an einen traditionsreichen Wohlfahrtsverband.",
+     "في مجتمع تضامني مقاوم للأزمات، تتوسط وكالة العمل التطوعي المحلية لربط المتطوعين الملتزمين باتحاد رعاية اجتماعية عريق.",
+     ["die Solidargemeinschaft", "die Ehrenamtsagentur", "der Wohlfahrtsverband"],
+     ["gesellschaft", "sozialstaat"]),
+
+    ("B2",
+     "Arbeitnehmer beanspruchen gesetzliche Pflegezeit für kranke Angehörige, beantragen einen zusätzlichen Kinderzuschlag und stärken die demokratische Mitbestimmung im Betrieb.",
+     "يطلب الموظفون إجازة رعاية قانونية لأقاربهم المرضى، ويقدمون طلباً للحصول على علاوة أطفال إضافية ويعززون المشاركة في اتخاذ القرار في المؤسسة.",
+     ["die Pflegezeit", "der Kinderzuschlag", "die Mitbestimmung"],
+     ["arbeit", "familie"]),
+
+    ("B2",
+     "Unter Berücksichtigung der Versicherungspflicht und der Beitragsbemessungsgrenze erfüllt der Staat seine Fürsorgepflicht durch jede bewilligte Sozialleistung.",
+     "مع مراعاة إلزامية التأمين والحد الأقصى لاحتساب الاشتراكات، تؤدي الدولة واجب الرعاية المنوط بها عبر كل إعانة اجتماعية معتمدة.",
+     ["die Versicherungspflicht", "die Beitragsbemessungsgrenze", "die Fürsorgepflicht", "die Sozialleistung"],
+     ["recht", "sozialstaat"]),
+
+    ("B2",
+     "Durch eine moderne Gleichstromleitung wird erneuerbare Energie transportiert, während unzufriedene Haushalte ihren Grundversorger kündigen und einen Anbieterwechsel vollziehen.",
+     "يتم نقل الطاقة المتجددة عبر خط تيار مستمر حديث، بينما تلغي الأسر غير الراضية عقد المزود الأساسي وتجري تغييراً للشركة المزودة.",
+     ["die Gleichstromleitung", "der Grundversorger", "der Anbieterwechsel"],
+     ["energie", "infrastruktur"]),
+
+    ("B2",
+     "Eine transparente Stromkennzeichnung informiert Verbraucher über Energieträger, während ein leistungsfähiges Pumpspeicherkraftwerk Schwankungen ausgleicht und die Umlage dämpft.",
+     "يقدم التمييز الشفاف للكهرباء معلومات للمستهلكين حول مصادر الطاقة، بينما تعوض محطة التوليد بالضخ والتخزين الفعالة التقلبات وتخفف عبء الرسوم الإضافية.",
+     ["die Stromkennzeichnung", "das Pumpspeicherkraftwerk", "die Umlage"],
+     ["energie", "technik"]),
+
+    ("B2",
+     "Im Rahmen der europäischen Wasserstoffstrategie fördert der Emissionshandel innovative Industrieanlagen, die grünen Wasserstoff durch effiziente Elektrolyse gewinnen.",
+     "ضمن إطار استراتيجية الهيدروجين الأوروبية، يعزز تداول الانبعاثات المنشآت الصناعية المبتكرة التي تستخلص الهيدروجين الأخضر عبر التحليل الكهربائي الفعال.",
+     ["die Wasserstoffstrategie", "der Emissionshandel", "die Elektrolyse"],
+     ["klima", "industrie"]),
+
+    ("B2",
+     "Um einen drohenden Blackout im Winter zu verhindern, aktivieren Netzbetreiber die strategische Netzreserve und beenden den umweltschädlichen Braunkohletagebau.",
+     "لتفادي انقطاع شامل وشيك للكهرباء في الشتاء، يفعل مشغلو الشبكة الاحتياطي الاستراتيجي للشبكة وينهون استخراج الفحم البني السطحي المضر بالبيئة.",
+     ["der Blackout", "die Netzreserve", "der Braunkohletagebau"],
+     ["energie", "umwelt"]),
+
+    ("B2",
+     "Weil eine energieintensive Produktionsanlage zu viel Strom benötigt, müssen Betreiber bei Überlastung Generatoren abregeln und den hohen Flächenverbrauch reduzieren.",
+     "نظراً لأن منشأة إنتاج كثيفة الاستهلاك للطاقة تحتاج كهرباء كثيرة، يجب على المشغلين خفض قدرة المولدات عند فرط التحميل وتقليل الاستهلاك المرتفع للمساحات.",
+     ["energieintensiv", "abregeln", "der Flächenverbrauch"],
+     ["energie", "wirtschaft"]),
+
+    ("B2",
+     "Da erneuerbare Energiequellen oft volatil einspeisen, sind grundlastfähige Speicher unverzichtbar, um die Stromversorgung jederzeit absolut netzstabil zu halten.",
+     "نظراً لأن مصادر الطاقة المتجددة تضخ الكهرباء بشكل متقلب غالباً، فإن وحدات التخزين القادرة على تأمين الحمل الأساسي لا غنى عنها للحفاظ على استقرار الشبكة تماماً في أي وقت.",
+     ["volatil", "grundlastfähig", "netzstabil"],
+     ["technik", "energie"]),
+
+    ("B2",
+     "Zur Sicherung nationaler Energiesouveränität füllt das Land jeden unterirdischen Gasspeicher vollständig, damit eine gefährliche Stromknappheit rechtzeitig abgewendet wird.",
+     "لضمان السيادة الوطنية في مجال الطاقة، يملأ البلد كل مستودع غاز تحت الأرض بالكامل حتى يتم درء النقص الخطير في الكهرباء في الوقت المناسب.",
+     ["die Energiesouveränität", "der Gasspeicher", "die Stromknappheit"],
+     ["politik", "energie"]),
+
+    ("B2",
+     "Ein Blick auf die Nährwerttabelle verrät, ob schädliche Geschmacksverstärker, künstlicher Süßstoff oder ein ungesunder chemischer Zusatzstoff enthalten sind.",
+     "تكشف نظرة على جدول القيم الغذائية عما إذا كانت هناك معززات نكهة ضارة، أو مادة تحلية اصطناعية أو مادة مضافة كيميائية غير صحية.",
+     ["die Nährwerttabelle", "der Geschmacksverstärker", "der Zusatzstoff", "der Süßstoff"],
+     ["ernaehrung", "gesundheit"]),
+
+    ("B2",
+     "Kritische Verbraucher meiden billiges Palmöl und grausame Käfighaltung, befürworten eine gerechte Tierwohlabgabe und bevorzugen Fleisch mit verlässlichem Biosiegel.",
+     "يتجنب المستهلكون الواعون زيت النخيل الرخيص والتربية القاسية في أقفاص، ويؤيدون فرض ضريبة عادلة لرعاية الحيوان ويفضلون اللحوم الحاملة لختم عضوي موثوق.",
+     ["das Palmöl", "die Tierwohlabgabe", "die Käfighaltung", "das Biosiegel"],
+     ["verbraucher", "tierschutz"])
+]

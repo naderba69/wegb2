@@ -1,3 +1,4 @@
+import { PHASE_START } from "./phasen";
 import type { UiLang, Progress } from "./types";
 
 /**
@@ -8,8 +9,8 @@ export function effectiveLang(progress: Progress): UiLang {
   const setting = progress.settings.uiLang;
   if (setting !== "auto") return setting;
   const day = progress.plan?.day ?? 1;
-  if (day >= 211) return "de"; // B2 — غمر كامل
-  if (day >= 141) return "mix"; // B1 — مختلط
+  if (day >= PHASE_START.B2) return "de"; // B2 — غمر كامل
+  if (day >= PHASE_START.B1) return "mix"; // B1 — مختلط
   return "ar"; // A1/A2 — سند عربي
 }
 

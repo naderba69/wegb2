@@ -24,6 +24,9 @@ import {
   dayScore,
   debtsFrom,
   planPct,
+  planMinBis,
+  planStundenBis,
+  planStundenGesamt,
 } from "../lib/plan";
 import { newCard, reviewCard, isDue } from "../lib/srs";
 import {
@@ -41,11 +44,15 @@ import {
   FEHLER_KAT,
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct } from "../lib/grader";
+import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
+import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
+import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
+import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
 import { logK, kompetenzWerte, band, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN } from "../lib/kompetenz";
 import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak } from "../lib/store";
 import { readFileSync, existsSync } from "fs";
-import { sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap } from "../lib/content";
+import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap } from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
 import { bauHoerRunde, darfSpielen, fragenFrei, werteItem, werteRunde, hoerNote, RATE } from "../lib/hoeren";
@@ -54,11 +61,22 @@ import { karteninCsv, allesInCsv } from "../lib/karten-export";
 import { analysiere, bewerteAussprache, silbenImText, zielDauer } from "../lib/aussprache";
 import { pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen } from "../lib/schreibpruefer";
 import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan } from "../lib/modulpruefung";
-import { emptyProgress } from "../lib/types";
+import { emptyProgress, TOTAL_DAYS } from "../lib/types";
+import { baueLexikon, zerlege, baueAufgaben, erklaereAr, kopfwort, FUGEN } from "../lib/komposita";
+import {
+  CEFR_STUNDEN, PHASE_END_DAY, LEVEL_ORDER, urteileStunden, vergleichePlan,
+  erreichbaresNiveau, minutenEffektiv, clampMinuten, MAX_MIN_PRO_TASK, minutenZuStunden,
+} from "../lib/cefr";
+import { entdeckungsFrage, induktionMoeglich, ergebnisText, MIN_BEISPIELE } from "../lib/induktion";
+import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stilProfil } from "../lib/stil";
+import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE, KATEGORIE_AR } from "../lib/signalwoerter";
+import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE } from "../lib/kapsel";
+import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
+import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
 import { buildBrueckeItems, katVonSektion } from "../lib/bruecken";
 import { selbstKorrektur } from "../components/lernstrategie";
-import type { Exercise, Progress, TaskResult } from "../lib/types";
+import type { Exercise, Progress, TaskResult, DayTask } from "../lib/types";
 import { STUFEN, stufeVonTag, tagVonStufe, ankerVon, wegHeute } from "../lib/weg";
 import { AKTIVITAETEN } from "../lib/aktivitaeten";
 
@@ -118,7 +136,7 @@ const empty = () => loadProgress();
     if (ex.promptDe.includes("_____") && words.includes(word.toLowerCase())) good++;
   }
   ok(good === sentences.length, `C1 كل فجوات الـ${sentences.length} صالحة (نجح ${good})`);
-  ok(sentences.length === 180, "C2 حجم البنك 180 (تثبيت انحدار)");
+  ok(sentences.filter((x) => !(x as { neu?: boolean }).neu).length === 180 && sentences.length === 553, "C2 حجم البنك: 180 قديمة بصوت + 373 جديدة (neu) = 553 — تثبيت انحدار");
 }
 
 /* ═══ D · buildDay والدورة اليومية ═══ */
@@ -201,7 +219,7 @@ const empty = () => loadProgress();
   const pf = platzierungsFragen(grammarMap);
   ok(pf.length >= 8 && pf.every((e) => ["mc", "fill", "truefalse", "order", "dictation", "translate"].includes(e.type)), "F17 أسئلة المستوى صالحة");
   ok(pf.every((e) => e.type !== "mc" || (e.options?.length ?? 0) >= 2), "F18 MC له خيارات");
-  ok(vorschlagTag({}) === 1 && vorschlagTag({ A2: 2 }) === 71 && vorschlagTag({ A2: 1, B1: 2 }) === 141 && vorschlagTag({ B2: 2 }) === 211, "F19 vorschlagTag سلّم الأيام");
+  ok(vorschlagTag({}) === 1 && vorschlagTag({ A2: 2 }) === PHASE_START.A2 && vorschlagTag({ A2: 1, B1: 2 }) === PHASE_START.B1 && vorschlagTag({ B2: 2 }) === PHASE_START.B2, "F19 vorschlagTag سلّم الأيام (من lib/phasen لا أرقامٌ مزروعة)");
   ok(Object.keys(FEHLER_KAT).length === 10, "F20 عشر فئات أخطاء بالضبط");
   noThrow("F21 upsert بكل فئة", () => {
     let q = empty();
@@ -303,16 +321,16 @@ const empty = () => loadProgress();
 /* ═══ K · تثبيت أحجام البنوك (حراسة انحدار المحتوى) ═══ */
 {
   const counts: [string, number, number][] = [
-    ["sentences", sentences.length, 180],
-    ["texts", texts.length, 80],
-    ["dialogues", dialogues.length, 80],
-    ["writing", writingTasks.length, 30],
+    ["sentences", sentences.filter((x) => !(x as { neu?: boolean }).neu).length, 180],
+    ["texts", texts.filter((t) => !(t as { neu?: boolean }).neu).length, 80],
+    ["dialogues", dialogues.filter((d) => !(d as { neu?: boolean }).neu).length, 80],
+    ["writing", writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length, 30],
     ["vocab", alleVokabeln.length, 3316],
     ["fehler", fehlerList.length, 128],
-    ["grammar", Object.keys(grammarMap).length, 34],
+    ["grammar", Object.keys(grammarMap).length, 38],
     ["verben", verben.length, 126],
     ["szenarien", szenarien.length, 12],
-    ["eselsbruecken", eselsbruecken.length, 47],
+    ["eselsbruecken", eselsbruecken.length, 51],
     ["sprichwort-audio", Object.keys(sprichwortAudio).length, 8],
       ["mnemonik", Object.keys(mnemonikMap).length, 120],
     ["pakete", pakete.length, 3],
@@ -351,7 +369,7 @@ const empty = () => loadProgress();
 
   const LUECKEN = ["b2-futur-ii", "b2-relativ-generalisierend", "b2-doppelkonnektoren"];
   ok(LUECKEN.every((k) => grammarMap[k] && grammarMap[k].exercises.length >= 5 && grammarMap[k].level === "B2"), "K21g فجوات القواعد الثلاث سُدّت بمواضيع كاملة (≥5 تمارين B2)");
-  ok(Object.keys(grammarMap).length === 34, "K21h عدّاد المواضيع: 34 بعد الإضافة");
+  ok(Object.keys(grammarMap).length === 38, "K21h عدّاد المواضيع: 38 بعد سدّ فجوة Präteritum (war/hatte تعرُّفاً في A1 + الماضي البسيط إنتاجاً في A2)");
 
   const schreibenSrc = readFileSync("components/schreiben.tsx", "utf8");
   ok(schreibenSrc.includes('T3: { minutes: 75, ziel: 150') && schreibenSrc.includes('start("T3")'), "K21d وضع Goethe للكتابة: Teil 3 — 75د/150 كلمة موصول بالواجهة");
@@ -444,12 +462,12 @@ const empty = () => loadProgress();
   /* ===== K26 — مصنع الصوت: ملفات مُولَّدة تخدم من public/ ===== */
   {
     const man = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as { einsaetze: { id: string; file: string; bytes: number }[] };
-    ok(man.einsaetze.length === texts.length, "K26a المعلن == البنك: كلُّ نصٍ معلَنٌ ولا شبحَ ولا منسيَّ — يتحدَّثُ البنكُ فيتحدَّث");
+    ok(man.einsaetze.length === texts.filter((t) => !(t as { neu?: boolean }).neu).length, "K26a المعلن == البنك: كلُّ نصٍ معلَنٌ ولا شبحَ ولا منسيَّ — يتحدَّثُ البنكُ فيتحدَّث");
     ok(man.einsaetze.every((e) => existsSync("public" + e.file.replace(/^\//, "/")) || existsSync("public/" + e.file.replace(/^\//, ""))), "K26b كل معلن موجود على القرص — لا مدخل شبح");
     ok(man.einsaetze.every((e) => Math.abs(require("fs").statSync(`public${e.file}`).size - e.bytes) < 1), "K26c الحجوم المعلنة truthful بحرف واحد — لا ملف صامت مُموَّه");
     ok(man.einsaetze.every((e) => /^\/audio\/hoeren\/t-[ab][12]-\d\d\.mp3$/.test(e.file)), "K26d المسارات محلية النظام وحده: /audio/hoeren/… لا مضيف خارجي — قرار «لا روابط» محترم حتى في الوسائط");
-    const allIds = texts.map((t) => t.id);
-    ok(allIds.every((id) => hoerenAudio[id]) && allIds.length === texts.length, `K26e وعدُ المصنع مسدَّدٌ فورَ اتساع البنك: ${allIds.length} نصاً = ${allIds.length} صوتاً — لا وعدٌ معلَّقٌ على جدار`);
+    const allIds = texts.filter((t) => !(t as { neu?: boolean }).neu).map((t) => t.id);
+    ok(allIds.every((id) => hoerenAudio[id]) && texts.filter((t) => (t as { neu?: boolean }).neu).every((t) => !hoerenAudio[t.id]), `K26e وعدُ المصنع مسدَّدٌ فورَ اتساع البنك: ${allIds.length} نصاً = ${allIds.length} صوتاً — لا وعدٌ معلَّقٌ على جدار`);
     ok(Object.keys(hoerenAudio).length === man.einsaetze.length, "K26f الخريطة المصدَّرة بعدد المداخل — تصدير lib/content صادق");
     hoerenSrcCheck: {
       const src = readFileSync("components/hoeren.tsx", "utf8");
@@ -464,7 +482,7 @@ const empty = () => loadProgress();
     ok(dman.einsaetze.every((e) => Math.abs(require("fs").statSync(`public${e.file}`).size - e.bytes) < 1), "K27c حجوم الإملاء truthful بايتاً ببايت");
     ok(dman.einsaetze.every((e) => e.file === `/audio/diktat/${e.id}.mp3` && !e.file.startsWith("http")), "K27d المسار مطابقةٌ تامةٌ لمعرف الجملة — أديكاستيا سارياتٌ على s-b1-21b كما على سواها، وبلا مضيف خارجي");
     ok(dman.einsaetze.every((e) => sentences.some((sx) => sx.id === e.id)), "K27e لا صوت لجملة مجهولة — كل مدخل مشدودٌ إلى البنك");
-    ok(Object.keys(diktatAudio).length === ddisk.length && sentences.every((sx) => diktatSrc(sx.id) !== null) && diktatSrc("s-b2-48") === null, "K27f قفلُ المصنع: كلُّ جمل البنك تُحِلُّ إلى ملف، ومعرفٌ شبحٌ يُرَدُّ صفرًا — الحضورُ والغيابُ سواءٌ في الصدق");
+    ok(Object.keys(diktatAudio).length === ddisk.length && sentences.filter((sx) => !(sx as { neu?: boolean }).neu).every((sx) => diktatSrc(sx.id) !== null) && diktatSrc("s-x-999") === null, "K27f قفلُ المصنع: كلُّ جمل البنك تُحِلُّ إلى ملف، ومعرفٌ شبحٌ يُرَدُّ صفرًا — الحضورُ والغيابُ سواءٌ في الصدق");
     ok(existsSync("scripts/archive/expand_vocab.py") && existsSync("scripts/archive/expand_vocab2.py") && !existsSync("scripts/expand_vocab.py") && !existsSync("scripts/expand_vocab2.py"), "K28a مولّدا التوسعة مسجونان في الأرشيف — لا يداً طالت ولا يدٌ ستطال");
     {
       const pkg = JSON.parse(readFileSync("package.json", "utf8")) as { scripts: Record<string, string> };
@@ -527,8 +545,8 @@ const empty = () => loadProgress();
     {
       const tx = JSON.parse(readFileSync("content/texts.json", "utf8")) as unknown as { id: string; questions: { id: string; type: string; promptDe: string; options?: string[]; answer?: string | string[]; explanationAr?: string }[] }[];
       const qs = tx.reduce((n, t) => n + t.questions.length, 0);
-      ok(qs === 300, "K34a حصيلةُ الأسئلةِ من القرص: 240 + 60 سؤالاً رابعاً = 300");
-      ok(new Set(tx.flatMap((t) => t.questions.map((q) => q.id))).size === 300, "K34b معرّفاتٌ لا تتكرّرُ في كلِّ البنك");
+      ok(qs === 400, "K34a حصيلةُ الأسئلةِ من القرص: 300 قديمة + 100 (25 نصّاً جديداً B1/B2 × 4) = 400");
+      ok(new Set(tx.flatMap((t) => t.questions.map((q) => q.id))).size === 400, "K34b معرّفاتٌ لا تتكرّرُ في كلِّ البنك");
       ok(tx.every((t) => t.questions.every((q) => { const a = q.answer as string | string[]; if (q.type === "mc") return Array.isArray(q.options) && q.options.length >= 3 && q.options.length <= 4 && q.options.includes(a as string) && new Set(q.options).size === q.options.length; if (q.type === "truefalse") return JSON.stringify(q.options) === JSON.stringify(["richtig", "falsch"]) && (a === "richtig" || a === "falsch"); if (q.type === "fill") return Array.isArray(a) && a.length > 0 && a.every((x) => typeof x === "string" && x.length > 0); return false; })), "K34c الأنواعُ الثلاثةُ على نظامِها: mcٌ خياراهُ من ثلاثٍ أو أربع، truefalse مُثبَّتٌ بزوجِه، fillٌ بلائحةِ مقبولين");
       ok(tx.every((t) => t.questions.every((q) => (q.explanationAr ?? "").length >= 4)), "K34d شرحٌ عربيٌّ خلفَ كلِّ سؤالٍ ولو صدى جوابٍ قصير");
       ok(tx.every((t) => t.questions.every((q) => q.id.startsWith(t.id + "-q"))), "K34e هويّةُ السؤالِ تُشتقُّ من أبِيه — لا يتيمَ في البنك");
@@ -562,15 +580,17 @@ const empty = () => loadProgress();
       const ui = readFileSync("components/klausur.tsx", "utf8");
       ok(ui.includes("buildSkillKlausur") && ui.includes("sec.sprechen") && ui.includes("wrBy"), "K35e الواجهةُ موصولةٌ بالمحرّك: أزرارٌ أربعة، حقلُ كلام، وتحريرٌ مفصولٌ لكلِّ مهمّة");
       ok(ui.includes("minHeight: \"44px\""), "K35f لمسةُ الأزرارِ الجديدةُ 44px على الأقلّ — معيارُ الشاشاتِ سارٍ");
-      const dlgLvls = [1, 90, 170, 240].every((d) => {
+      const dlgLvls = [1, PHASEN.A2.von + 3, PHASEN.B1.von + 3, PHASEN.B2.von + 3].every((d) => {
         const k = buildSkillKlausur(d, "hoeren");
-        const need = d <= 45 ? "A1" : d <= 120 ? "A2" : d <= 200 ? "B1" : "B2";
+        const need = levelAmTag(d);
         return k.sections.every((x) => getDialogue(x.dialogueId!)?.level === need);
       });
       ok(dlgLvls, "K35g محاكاةُ الاستماعِ تلتزمُ مستوى اليومِ من جدولِ المراحل");
     }
     {
-      const dd = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as unknown as { id: string; level: string; lines: { who: string; de: string; ar: string }[]; questions: { id: string; type?: string; options?: string[]; answer: string }[]; dictation: string[] }[];
+      const ddAlle = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as unknown as { id: string; level: string; neu?: boolean; waisen?: string[]; lines: { who: string; de: string; ar: string }[]; questions: { id: string; type?: string; options?: string[]; answer: string }[]; dictation: string[] }[];
+      const dd = ddAlle.filter((x) => !x.neu);
+      ok(new Set(ddAlle.map((x) => x.id)).size === ddAlle.length && new Set(ddAlle.flatMap((x) => x.questions.map((q) => q.id))).size === ddAlle.reduce((a, x) => a + x.questions.length, 0), "K36b′ معرّفاتُ كلِّ الحواراتِ (القديمةِ والجديدة) وأسئلتِها لا تتكرّر");
       ok(dd.length === 80, "K36a بنكُ الحوارات: 36 → 72 → 80 بالضبط — البوابةُ تعدُّ من القرص");
       ok(new Set(dd.map((x) => x.id)).size === 80 && new Set(dd.flatMap((x) => x.questions.map((q) => q.id))).size === dd.reduce((a, x) => a + x.questions.length, 0), "K36b معرّفاتُ الحواراتِ وأسئلتها لا تتكرّر");
       ok(dd.every((x) => ["A1","A2","B1","B2"].includes(x.level)), "K36c سلّمُ المستويات رباعيٌّ في الحوارات أيضاً");
@@ -588,7 +608,18 @@ const empty = () => loadProgress();
       const dm = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as unknown as { count: number; einsaetze: { id: string; file: string; bytes: number; voice: string; level: string }[] };
       ok(dm.count === 80 && dm.einsaetze.length === 80, "K36g ثمانونَ صوتَ حوارٍ — وكلُّها بأداءِ أدوار: تسعةٌ وسبعونَ بصوتَينِ وواحدٌ بثلاثةِ أصوات · لا حوارَ أحاديَّ الصوتِ بعدَ اليوم — والعدّادُ صادق");
       ok(dm.einsaetze.every((e) => dd.some((x) => x.id === e.id && x.level === e.level) && (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03") && e.bytes > 8000 && readFileSync(`public${e.file}`).byteLength === e.bytes), "K36h كلُّ ملفٍ مذكورٍ موجودٌ بايتًا بايتًا، لصاحبِ الصوتِ الواحد، ومستواهُ كبطاقتِه");
-    ok(dialogues.every((d) => dm.einsaetze.some((e) => e.id === d.id)), "K36n لا حوارَ في البنكِ بلا صوتٍ على القرص — ثمانونَ من ثمانين");
+    ok(dialogues.filter((d) => !(d as { neu?: boolean }).neu).every((d) => dm.einsaetze.some((e) => e.id === d.id)), "K36n لا حوارَ قديماً بلا صوتٍ على القرص — ثمانونَ من ثمانين");
+    {
+      /* ═══ K82 · الموجةُ الرابعة (حواراتٌ من المفرداتِ اليتيمة): بلا صوتٍ بعدُ — مُعلَنٌ، لا مخفيّ ═══ */
+      const neu = ddAlle.filter((x) => x.neu);
+      ok(neu.length === 36 && neu.every((x) => x.level === "A2" || x.level === "A1"), `K82a ${neu.length} حواراً جديداً، كلُّها A1/A2 (سدُّ عدمِ التوازن)`);
+      ok(neu.every((x) => !dm.einsaetze.some((e) => e.id === x.id)), "K82b الجديدُ بلا صوتٍ على القرصِ — مُعلَنٌ بعلامةِ neu؛ الواجهةُ تعرضُ الحالةَ لا صوتاً وهمياً");
+      const st = (w: string) => { const x = w.toLowerCase().replace(/^(der|die|das|sich|jdn|jdm)\s+/, "").replace(/^etwas\s+/, "").split(/\s+/)[0]; return x.slice(0, Math.max(4, x.length - 2)); };
+      const normD = (s: string) => s.toLowerCase().replace(/é/g, "e").replace(/[^a-zäöüß0-9 ]/g, " ");
+      const waisenOk = neu.every((x) => { const low = normD(x.lines.map((l) => l.de).join(" ")); const drin = (x.waisen ?? []).filter((w) => alleVokabeln.some((c) => c.de === w && c.level === x.level) && low.includes(st(w))); return drin.length >= 8; });
+      ok(waisenOk, "K82c كلُّ حوارٍ جديدٍ يُدخِلُ ≥8 بطاقاتٍ يتيمةٍ من مستواه فعلاً في سطورِه");
+      ok(neu.every((x) => x.lines.length >= 8 && x.questions.length >= 3 && x.dictation.length >= 2 && x.dictation.every((s) => x.lines.some((l) => l.de === s || l.de.includes(s)))), "K82d ثمانيةُ أسطر، ثلاثةُ أسئلة، إملاءٌ منسوخٌ من السطور");
+    }
       const sz = (JSON.parse(readFileSync("content/szenarien.json", "utf8")) as unknown as { szenarien: { id: string; nameDe: string; saetze: { de: string; ar: string }[]; dialoge: { titel: string; lines: { who: string; role: string; de: string; ar: string }[] }[]; formular: { zeilen: string[] }; rolle: { stichworte: string[]; plan: string[] } }[] }).szenarien;
       ok(sz.length === 12 && new Set(sz.map((x) => x.id)).size === 12, "K37a اثنا عشرَ سيناريو بلا مصادير متكررة — من القرص لا من الذاكرة");
       ok(sz.every((x) => x.saetze.length === 6 && x.dialoge.length === 2 && x.dialoge.every((d) => d.lines.length >= 6) && x.formular.zeilen.length >= 5 && x.rolle.stichworte.length >= 3 && x.rolle.plan.length >= 3), "K37b قالبُ كلِّ وافدٍ كنظامِ القديم: ستةُ جُمَلٍ وحوارانِ ونموذجٌ ودورٌ بخطة");
@@ -633,7 +664,7 @@ const empty = () => loadProgress();
         }
       }
       if (fehlende.length) console.log("   ⤷ مراجعُ مفقودة:", fehlende.slice(0, 8).join(" | "));
-      ok(n === 1263, `K41a ألفٌ ومئتانِ وثلاثٌ وستونَ مهمةً عبرَ 270 يوماً — وجد ${n}`);
+      ok(n === 1282, `K41a 1282 مهمةً عبرَ 270 يوماً (1263 + 13 + 6 خاناتِ استماعٍ قصيرةٍ لـA1/A2 بعدَ الموجةِ الرابعة) — وجد ${n}`);
       ok(fehlende.length === 0, "K41b كلُّ مرجعٍ في كلِّ مهمةٍ يجدُ بنكَه: قاعدةً أو رفًّا أو نصًّا أو حواراً أو كتابةً أو جملة — صفرُ إشارةٍ معلَّقةٍ في الفراغ");
       ok(kinds.size === 8 && [...kinds.values()].every((v) => v >= 20), "K41c الأنواعُ الثمانيةُ مأهولةٌ فعلاً في الخطةِ لا في التعريفِ وحدَه");
       {
@@ -679,6 +710,144 @@ const empty = () => loadProgress();
     ok(bA1.punkte === bB2.punkte, "K59k الدرجةُ واحدةٌ والنطاقُ يختلف — لا نُعاقِبُ المبتدئَ بمعيارِ المتقدِّم");
     const strenger = ["nah_am_original", "verstaendlich", "mit_muehe"];
     ok(strenger.indexOf(bB2.band) >= strenger.indexOf(bA1.band), "K59l ومعيارُ B2 أشدُّ من معيارِ A1 عندَ الأداءِ نفسِه");
+  }
+
+  /* ═══ K62 · تمارينُ التحويل (Umformung): الإنتاجُ المقيَّدُ الذي كان صفراً ═══ */
+  {
+    const um = Object.values(grammarMap).flatMap((t) => t.exercises.filter((e) => e.type === "umformung").map((e) => ({ ...e, gid: t.id })));
+    ok(um.length === 77, `K62a سبعةٌ وسبعونَ تمرينَ تحويلٍ — كان العددُ صفراً (${um.length})`);
+    ok(Object.values(grammarMap).every((t) => t.exercises.filter((e) => e.type === "umformung").length >= 2), "K62b ولكلِّ درسٍ من السبعةِ والثلاثينَ تمرينانِ على الأقل — لا درسَ بلا إنتاج");
+    ok(um.every((e) => e.quelleDe && e.quelleDe.length > 2 && e.promptDe && /[\u0600-\u06ff]/.test(e.explanationAr ?? "")), "K62c كلُّ تمرين: مصدرٌ + تعليمةٌ + تفسيرٌ عربيّ");
+    ok(um.every((e) => grader.grade(e, Array.isArray(e.answer) ? e.answer[0] : e.answer).correct), "K62d النموذجُ نفسُهُ يُقبَلُ دائماً — لا تمرينَ مستحيل");
+    ok(um.every((e) => (e.alternativen ?? []).every((a) => grader.grade(e, a).correct)), "K62e وكلُّ بديلٍ معلَنٍ يُقبَل");
+    ok(um.every((e) => { const a = Array.isArray(e.answer) ? e.answer[0] : e.answer; return grader.grade(e, a.toLowerCase().replace(/[.!?,]/g, "")).correct; }), "K62f والترقيمُ وحالةُ الأحرفِ لا تُسقِطُ جواباً صحيحاً");
+    ok(um.every((e) => !grader.grade(e, "").correct), "K62g والفراغُ لا يُقبَلُ أبداً");
+    const mitFalle = um.filter((e) => e.darfNicht?.length);
+    ok(mitFalle.length >= 60, `K62h معظمُها يسمّي فخَّهُ صراحةً في darfNicht (${mitFalle.length})`);
+    const gefangen = mitFalle.filter((e) => { const r = grader.grade(e, e.quelleDe!); return !r.correct && /ما زلتَ|ينقصك|لم تكتمل/.test(r.feedbackAr ?? ""); });
+    ok(gefangen.length === mitFalle.length, `K62i وإعادةُ كتابةِ المصدرِ كما هو تُرفَضُ برسالةٍ موجَّهةٍ لا بـ«خطأ» (${gefangen.length}/${mitFalle.length})`);
+    const dat = grammarMap["a2-dativ"].exercises.find((e) => e.id === "a2-dativ-u1")!;
+    ok((grader.grade(dat, "Ich helfe dich.").feedbackAr ?? "").includes("dich"), "K62j «Ich helfe dich» يُردُّ بتسميةِ الكلمةِ الخاطئةِ نفسِها");
+    ok(grader.grade(dat, "ich helfe dir").correct, "K62k و«ich helfe dir» بلا نقطةٍ ولا حرفٍ كبيرٍ يُقبَل");
+    ok(!grader.grade(dat, "Ich helfe").correct && (grader.grade(dat, "Ich helfe").feedbackAr ?? "").includes("ينقصك"), "K62l والناقصُ يُقالُ له ما ينقصُه");
+    const nf = grammarMap["a2-negation"].exercises.find((e) => e.id === "a2-negation-u1")!;
+    ok(!grader.grade(nf, "Ich habe nicht Zeit.").correct, "K62m «nicht Zeit» — الفخُّ العربيُّ الشهيرُ — مرفوض");
+    ok(um.every((e) => (e.points ?? 1) === 2), "K62n والتحويلُ بنقطتين: إنتاجٌ يساوي ضعفَ التعرُّف");
+    ok(readFileSync("components/exercises.tsx", "utf8").includes('ex.type === "umformung" && ex.quelleDe') && readFileSync("components/exercises.tsx", "utf8").includes("umformung-quelle"),
+      "K62o والواجهةُ تعرضُ الجملةَ المصدرَ فوقَ حقلِ الإنتاج — لا نوعَ بلا مستهلِك");
+  }
+
+  /* ═══ K61 · مفكِّكُ المركَّبات: مهارةُ فكِّ شفرةٍ للعربيِّ الذي لا مركَّباتَ في لغتِه ═══ */
+  {
+    const lex = baueLexikon(alleVokabeln);
+    ok(lex.map.size > 2500, `K61a المعجمُ مبنيٌّ من البطاقاتِ نفسِها لا من قائمةٍ خارجية (${lex.map.size} رأساً)`);
+    ok(kopfwort("die Klimabewegung") === "Klimabewegung" && kopfwort("autofreie Zone") === null && kopfwort("der Test-Kauf") === null,
+      "K61b تنظيفُ الرأس: تُنزَعُ الأداةُ، وتُرفَضُ المدخلاتُ متعدِّدةُ الكلماتِ أو الموصولة");
+    const z1 = zerlege("Klimabewegung", lex);
+    ok(z1.teile.length === 2 && z1.teile[0].lemma === "Klima" && z1.teile[1].lemma === "Bewegung" && z1.artikelAusGrundwort === "die",
+      "K61c Klimabewegung = Klima + Bewegung، والجنسُ die من الأخيرة");
+    const z2 = zerlege("Wohnungsmarkt", lex);
+    ok(z2.teile.length === 2 && z2.teile[0].fuge === "s" && z2.teile[1].lemma === "Markt" && z2.artikelAusGrundwort === "der",
+      "K61d Wohnungsmarkt: حرفُ الوصلِ s بعدَ -ung مُلتقَطٌ باسمِه، والجنسُ der من Markt");
+    const z3 = zerlege("Krankenhaus", lex);
+    ok(z3.teile.length === 2 && z3.teile[0].lemma === "krank" && z3.teile[0].fuge === "en" && z3.teile[1].lemma === "Haus",
+      "K61e Krankenhaus: صفةٌ مصرَّفةٌ (krank + en) + اسم — المخصِّصُ ليس اسماً دائماً");
+    const z4 = zerlege("Sprachkurs", lex);
+    ok(z4.teile.length === 2 && z4.teile[0].lemma === "Sprache" && z4.teile[1].lemma === "Kurs",
+      "K61f Sprachkurs: الـe المحذوفةُ تُستعادُ إلى رأسِها Sprache");
+    const z5 = zerlege("Kenntnis", lex);
+    ok(z5.teile.length === 1 && !z5.sicher, "K61g Kenntnis ليست مركَّبةً — ولا يُخمَّنُ تفكيكٌ لكلمةٍ طويلةٍ بسيطة");
+    const z6 = zerlege("Xyzzyplomp", lex);
+    ok(z6.teile.length === 1 && !z6.sicher && erklaereAr(z6).includes("لم أجد"), "K61h والمجهولُ يُقالُ فيه «لم أجد» لا يُختلَق");
+    ok(zerlege("Arbeitslosengeld", lex).teile.length >= 2 && zerlege("Arbeitslosengeld", lex).teile.at(-1)!.lemma === "Geld",
+      "K61i Arbeitslosengeld ينحلُّ إلى Geld في آخرِه — القراءةُ من اليمين");
+    ok(FUGEN.includes("s") && FUGEN.includes("en") && FUGEN.includes("er") && FUGEN.includes(""), "K61j أحرفُ الوصلِ السبعةُ + الصفرُ معرَّفةٌ");
+
+    /* الصدقُ في البيانات: المحرِّكُ يكشفُ الاستثناءاتِ ولا يسألُ عنها */
+    const zz = zerlege("Zuckergehalt", lex); const mw = zerlege("Mittwoch", lex);
+    ok(zz.artikelStimmt === false && mw.artikelStimmt === false,
+      "K61k Zuckergehalt (der Gehalt = المحتوى) و Mittwoch (der رغم Woche) مُعلَّمانِ استثناءً لا خطأً");
+    let konflikte = 0; for (const v of alleVokabeln) if (v.article && zerlege(v.de, lex).artikelStimmt === false) konflikte++;
+    ok(konflikte <= 3, `K61l وعددُ ما يخالفُ فيه الجنسُ المخزَّنُ قاعدةَ Grundwort ضئيلٌ ومعلوم (${konflikte}) — لو زادَ فالبياناتُ مشكوكٌ فيها`);
+
+    /* التمارين */
+    const b1 = baueAufgaben(alleVokabeln, lex, "B1", 12, 7);
+    ok(b1.length === 12 && b1.every((a) => a.zerlegung.sicher && a.zerlegung.teile.length >= 2), "K61m اثنتا عشرةَ مهمةً لـB1 كلُّها بتفكيكٍ مؤكَّد — لا سؤالَ عن كلمةٍ نجهلُ جوابَها");
+    ok(b1.every((a) => a.article === a.zerlegung.artikelAusGrundwort), "K61n وجوابُ كلِّ مهمةٍ يطابقُ قاعدةَ Grundwort — الاستثناءاتُ مستبعَدةٌ من الامتحان");
+    ok(b1.every((a) => ["A1", "A2", "B1"].includes(a.level)), "K61o ولا كلمةَ B2 في تمرينِ B1 — لا يُطلَبُ ما لم يُعلَّم");
+    ok(JSON.stringify(baueAufgaben(alleVokabeln, lex, "B1", 6, 7)) === JSON.stringify(baueAufgaben(alleVokabeln, lex, "B1", 6, 7))
+      && JSON.stringify(baueAufgaben(alleVokabeln, lex, "B1", 6, 8)) !== JSON.stringify(baueAufgaben(alleVokabeln, lex, "B1", 6, 7)),
+      "K61p حتميةُ البذرة: نفسُها تُعيدُ نفسَ الجولة، وغيرُها يُجدِّدُ");
+    ok(baueAufgaben(alleVokabeln, lex, "A1", 6, 1).length >= 6 && baueAufgaben(alleVokabeln, lex, "B2", 6, 1).length >= 6,
+      "K61q ولكلِّ مستوىً معينٌ كافٍ — حتى A1 لديه ستُّ مركَّباتٍ مؤكَّدة");
+    ok(erklaereAr(z1).includes("الجنسُ من الأخيرة") && erklaereAr(z1).includes("die Bewegung"), "K61r والشرحُ العربيُّ يُعلِّمُ القاعدةَ في كلِّ مرّة لا الجوابَ وحدَه");
+    const grammarW = grammarMap["b1-wortbildung"];
+    ok(!!grammarW && grammarW.level === "B1" && grammarW.exercises.length >= 9 && (grammarW.pitfalls?.length ?? 0) >= 4,
+      "K61s درسُ Wortbildung موجودٌ في B1 بتسعةِ تمارينَ وأربعةِ فخاخ");
+    ok(readFileSync("components/tasks.tsx", "utf8").includes('topic.id === "b1-wortbildung"') && readFileSync("components/tasks.tsx", "utf8").includes("<KompositaWerkstatt"),
+      "K61t والورشةُ مركَّبةٌ داخلَ درسِها — لا محرِّكَ بلا مستهلِك");
+  }
+
+  /* ═══ K60 · عقدُ الساعات: الوعدُ يُقابَلُ بمرجعٍ لا بنفسِه ═══
+     وُجدت هذه الكتلة لأنَّ المشروعَ كان يَعِدُ «A0→B2 في 270 يوماً»
+     وهو لا يعرف كم ساعةً يخطِّط، ولا يسجِّل دقيقةً قضَاها المتعلِّم. */
+  {
+    /* المرجع */
+    ok(LEVEL_ORDER.every((l) => Array.isArray(CEFR_STUNDEN[l]) && CEFR_STUNDEN[l].length === 2 && CEFR_STUNDEN[l][0] < CEFR_STUNDEN[l][1]),
+      "K60a مرجعُ CEFR نطاقاتٌ [أدنى,أعلى] لكلِّ المستوياتِ الأربعة — لا رقمٌ حاسمٌ يُدَّعى");
+    ok(CEFR_STUNDEN.B2[0] >= 600 && CEFR_STUNDEN.B1[0] >= 350 && CEFR_STUNDEN.A2[0] >= 150 && CEFR_STUNDEN.A1[0] >= 60,
+      "K60b والنطاقاتُ مطابقةٌ لمرجعِ Goethe/telc التراكميِّ من الصفر");
+    ok(PHASE_END_DAY.A1 === PHASEN.A1.bis && PHASE_END_DAY.A2 === PHASEN.A2.bis && PHASE_END_DAY.B1 === PHASEN.B1.bis && PHASE_END_DAY.B2 === 270 && levelOf(PHASEN.A1.bis) === "A1" && levelOf(PHASEN.A1.bis + 1) === "A2" && levelOf(PHASEN.B1.bis + 1) === "B2",
+      "K60c ونهاياتُ المراحلِ هي حدودُ الخطةِ نفسِها — لا تقويمٌ موازٍ");
+
+    /* منحنى الخطة */
+    const ges = planStundenGesamt();
+    ok(ges > 400 && ges < 700, `K60d ساعاتُ الخطةِ كلِّها محسوبةٌ من buildDay لا مكتوبةٌ يدوياً (${ges.toFixed(1)} س)`);
+    ok(planMinBis(0) === 0 && planMinBis(270) === planMinBis(TOTAL_DAYS), "K60e المنحنى يبدأُ من الصفرِ وينتهي عند آخرِ يوم");
+    let mono = true; for (let d = 1; d <= TOTAL_DAYS; d++) if (planMinBis(d) < planMinBis(d - 1)) { mono = false; break; }
+    ok(mono, "K60f والمنحنى رتيبٌ لا ينقص — الدقائقُ تُجمَعُ لا تُطرَح");
+    ok(planStundenBis(PHASEN.A1.bis) < planStundenBis(PHASEN.A2.bis) && planStundenBis(PHASEN.A2.bis) < planStundenBis(PHASEN.B1.bis) && planStundenBis(PHASEN.B1.bis) < planStundenBis(270),
+      "K60g وكلُّ مرحلةٍ تزيدُ على سابقتِها — لا مرحلةَ صفرية");
+    ok(planMinBis(270) === planMinBis(270) && planStundenBis(100) === planStundenBis(100),
+      "K60h والحسابُ محفوظٌ فلا يُعادُ اشتقاقُ 270 يوماً عند كلِّ نقر");
+
+    /* صدقُ الوعد — البوابةُ الأهمّ في هذه الكتلة */
+    const vgl = vergleichePlan(planStundenBis);
+    ok(vgl.length === 4 && vgl.every((v) => v.planStd > 0 && v.deckungProzent > 0), "K60i المقارنةُ تُنتِجُ أربعةَ صفوفٍ بأرقامٍ حيّة");
+    const niv = erreichbaresNiveau(vgl);
+    const b2v = vgl[3];
+    ok(b2v.urteil === "erreicht" || niv === "B2" || b2v.fehlendBisMinimum > 0,
+      "K60j منطقُ الحكمِ متماسك: إمّا B2 وافٍ، أو مستوىً أدنى مُعلَن، أو نقصٌ محسوب — لا حالةٌ رابعةٌ صامتة");
+    if (b2v.urteil === "weitDarunter" || b2v.urteil === "darunter") {
+      ok(niv !== "B2", `K60k الصدقُ الإلزامي: ساعاتُ B2 (${b2v.planStd}) دون نطاقِها (${b2v.ref[0]}–${b2v.ref[1]}) فلا يُدَّعى B2 — المستوى المبلغُ ${niv}`);
+      ok(b2v.fehlendBisMinimum >= b2v.ref[0] - b2v.planStd - 0.11, `K60l والنقصُ محسوبٌ لا مُقدَّر (${b2v.fehlendBisMinimum} س)`);
+    } else {
+      ok(niv === "B2", "K60m وإن وُفّيَ المرجعُ صار B2 هو المُعلَن — الحكمُ يتبعُ الرقمَ لا العكس");
+    }
+    ok(urteileStunden(CEFR_STUNDEN.B2[1], CEFR_STUNDEN.B2) === "erreicht"
+      && urteileStunden(CEFR_STUNDEN.B2[0], CEFR_STUNDEN.B2) === "imBereich"
+      && urteileStunden(CEFR_STUNDEN.B2[0] * 0.75, CEFR_STUNDEN.B2) === "darunter"
+      && urteileStunden(CEFR_STUNDEN.B2[0] * 0.25, CEFR_STUNDEN.B2) === "weitDarunter",
+      "K60n وسلَّمُ الأحكامِ الأربعةِ يعملُ عند حدودِه لا في وسطِه فحسب");
+
+    /* قياسُ الوقتِ الفعلي */
+    ok(minutenEffektiv(emptyProgress) === 0, "K60o الأصلُ صفر: لا دقيقةَ مُثبَتةً قبل أن يحجزَها المتعلِّمُ بيدِه");
+    ok(minutenEffektiv({ ...emptyProgress, plan: { ...emptyProgress.plan, minutenEffektiv: 1234 } }) === 1234, "K60p والمحجوزُ يُقرأُ كما كُتب");
+    ok(minutenEffektiv({ ...emptyProgress, plan: { ...emptyProgress.plan, minutenEffektiv: -50 } }) === 0
+      && minutenEffektiv({ ...emptyProgress, plan: { ...emptyProgress.plan, minutenEffektiv: Number.NaN } }) === 0,
+      "K60q ولا قيمةَ سالبةً ولا NaN تتسرَّبُ إلى الساعةِ المعلَنة");
+    ok(clampMinuten(0) === 0 && clampMinuten(-20) === 0 && clampMinuten(MAX_MIN_PRO_TASK + 500) === MAX_MIN_PRO_TASK && clampMinuten(45.6) === 46,
+      `K60r والحجزُ مقصورٌ على (0, ${MAX_MIN_PRO_TASK}] — تبويبٌ منسيٌّ ليس ساعةَ دراسة`);
+    ok(minutenZuStunden(90) === 1.5 && minutenZuStunden(0) === 0, "K60s والتحويلُ إلى ساعاتٍ بدقةِ عُشرٍ لا بكسورٍ عائمةٍ معروضة");
+    ok(readFileSync("lib/store.ts", "utf8").includes("export function bucheMinuten")
+      && readFileSync("lib/store.ts", "utf8").includes("clampMinuten(minuten)"),
+      "K60t والحجزُ يمرُّ عبر clampMinuten في store — لا طريقَ يلتفُّ على القيد");
+    ok(readFileSync("components/stundenvertrag.tsx", "utf8").includes("planStundenGesamt")
+      && readFileSync("components/stundenvertrag.tsx", "utf8").includes("vergleichePlan")
+      && readFileSync("components/stundenvertrag.tsx", "utf8").includes("erreichbaresNiveau"),
+      "K60u واللوحةُ تستهلكُ المحرِّكَ فعلاً — لا محرِّكَ بلا مستهلِك");
+    ok(readFileSync("components/berichte.tsx", "utf8").includes("<StundenVertrag progress={progress} />"),
+      "K60v واللوحةُ مركَّبةٌ في مركزِ التقارير — ظاهرةٌ لا مدفونة");
   }
 
 
@@ -764,7 +933,7 @@ const empty = () => loadProgress();
     ok(!ueberlappung, "K56d ولا يومَ يقعُ في وحدتَين معاً");
     ok(MODULE.every((m) => levelOf(m.von) === m.level && levelOf(m.bis) === m.level), "K56e وحدودُ كلِّ وحدةٍ داخلَ مستواها لا تتخطّاه");
     ok(MODULE.every((m) => m.titelDe && /[\u0600-\u06FF]/.test(m.titelAr) && m.inhalteAr.length > 20), "K56f ولكلِّ وحدةٍ عنوانٌ ألمانيٌّ وعربيٌّ وقائمةُ محتوىً مفصَّلة");
-    const p1 = modulOf(1), p70 = modulOf(70), p211 = modulOf(211);
+    const p1 = modulOf(1), p70 = modulOf(PHASEN.A1.bis), p211 = modulOf(PHASEN.B2.von);
     ok(p1.etikett === "المستوى A1 — الوحدة 1 — الخطوة 1", `K56g وسمُ اليومِ الأوّلِ بالصيغةِ المطلوبة («${p1.etikett}»)`);
     ok(p70.modul.nr === 4 && p70.modul.level === "A1" && p211.modul.nr === 1 && p211.modul.level === "B2", "K56h وآخرُ A1 في وحدتِها الرابعةِ وأوّلُ B2 في أولاها");
   }
@@ -901,7 +1070,7 @@ const empty = () => loadProgress();
     for (let d = 1; d <= 270; d++) for (const t of buildDay(d, progV).tasks) if (t.deckId && !(t.deckId in erstD)) erstD[t.deckId] = d;
     const unerreicht = neue.filter((d) => !(d in erstD));
     ok(unerreicht.length === 0, `K49g كلُّ حزمةٍ جديدةٍ لها يومٌ يعرضُها فعلاً — لا حزمةَ بلا مستهلِك (${unerreicht.join(",") || "لا شيء"})`);
-    ok(neue.every((d) => erstD[d] <= (d.startsWith("a1") ? 70 : d.startsWith("a2") ? 140 : 210)), "K49h كلُّ حزمةٍ داخلَ مرحلتِها: A1 قبلَ 70 · A2 قبلَ 140 · B1 قبلَ 210");
+    ok(neue.every((d) => erstD[d] <= (d.startsWith("a1") ? PHASEN.A1.bis : d.startsWith("a2") ? PHASEN.A2.bis : PHASEN.B1.bis)), "K49h كلُّ حزمةٍ داخلَ مرحلتِها: A1 قبلَ نهايتِها · A2 · B1 كذلك");
     const neueKarten = neue.flatMap((d) => (vocabMap as Record<string, { cards: { de: string; ar: string; exampleDe?: string; exampleAr?: string; article?: string; img?: string }[] }>)[d].cards);
     ok(neueKarten.every((k) => !!k.exampleDe && !!k.exampleAr), "K49i لكلِّ بطاقةٍ جديدةٍ جملةُ سياقٍ ألمانيةٌ وترجمتُها — لا كلمةَ عاريةً من سياق");
     ok(neueKarten.every((k) => !k.article || k.de.startsWith(k.article + " ")), "K49j وأداةُ الاسمِ مكتوبةٌ في متنِ البطاقةِ نفسِها لا في حقلٍ منسيّ");
@@ -926,6 +1095,14 @@ const empty = () => loadProgress();
     ok(erst["a1-akkusativ"] < erst["a2-dativ"], "K48g الأكوزاتيف قبلَ الداتيف كما في كلِّ منهجٍ رصين");
     const stufen = alleG.map((g) => [g, erst[g]] as const).filter(([g]) => g.startsWith("a1"));
     ok(stufen.every(([, d]) => d <= 70), "K48h كلُّ دروسِ A1 داخلَ المرحلةِ الأولى — لا تأخيرَ لأساس");
+
+    /* K48i–m · سدُّ فجوة Präteritum: القرارُ المنهجيُّ مثبَّتٌ — تعرُّفٌ في A1 ثمَّ إنتاجٌ في A2 ثمَّ سردٌ في B1 */
+    ok("a1-war-hatte" in grammarMap && "a2-praeteritum" in grammarMap, "K48i درسا الماضي البسيط موجودان: war/hatte في A1 و Präteritum في A2");
+    ok(grammarMap["a1-war-hatte"].level === "A1" && grammarMap["a2-praeteritum"].level === "A2", "K48j مستواهما كما قُرِّر: A1 ثم A2 — لا قفزة");
+    ok(erst["a1-war-hatte"] < erst["a2-praeteritum"], `K48k التعرُّفُ قبلَ الإنتاج: war/hatte يومَ ${erst["a1-war-hatte"]} ← Präteritum يومَ ${erst["a2-praeteritum"]}`);
+    ok(erst["a2-praeteritum"] < erst["b1-plusquamperfekt"], `K48l الماضي البسيطُ قبلَ الماضي الأسبق — لا يُطلَبُ Plusquamperfekt ممّن لم يتعلّم Präteritum (${erst["a2-praeteritum"]} < ${erst["b1-plusquamperfekt"]})`);
+    ok(grammarMap["a2-praeteritum"].exercises.length >= 8 && grammarMap["a1-war-hatte"].exercises.length >= 7, "K48m الدرسَان مدرَّبان لا معلَنان: ≥8 و≥7 تمارين");
+    ok(grammarMap["a1-war-hatte"].pitfalls!.some((p) => p.de.includes("gewesen")) && grammarMap["a2-praeteritum"].pitfalls!.some((p) => p.de.includes("machte")), "K48n ولكلٍّ منهما فخُّه العربيُّ الصريح: „bin gewesen“ و„machtete“");
   }
 
   /* K47 · تنويعُ الأصوات: الحوارُ بصوتَينِ لا بنبرةٍ واحدة */
@@ -1002,7 +1179,7 @@ const empty = () => loadProgress();
       const umschrift = rein.filter(([, t]) => UMSCHRIFT.test(t));
       const doppelt = rein.filter(([, t]) => /  +|\s[,.!?;:]/.test(t));
       if (arabisch.length) console.log("   ⤷ عربيةٌ في ألمانية:", arabisch.slice(0, 5).map(([k, t]) => `${k}:${t.slice(0, 40)}`).join(" | "));
-      ok(rein.length === 6611, `K45a ستةُ آلافٍ وستُّمئةٍ وأحدَ عشرَ حقلاً ألمانياً خالصاً تحتَ الفحص — العددُ من البنوكِ لا من التقدير (${rein.length})`);
+      ok(rein.length === 8697, `K45a 8697 حقلاً (6650 قبلَ دفعاتِ الأمثلة؛ +72 حواراتُ الموجةِ الرابعةِ الأولى؛ +34 جمل A2؛ +279 جمل B1/B2 للترابط) ألمانياً خالصاً تحتَ الفحص — العددُ من البنوكِ لا من التقدير (${rein.length})`);
       ok(arabisch.length === 0, "K45b لا حرفَ عربيٌّ في جملةٍ تُنطَقُ بالألمانية — وإلا نطقَ المحرّكُ العربيةَ بصوتٍ ألمانيٍّ مشوَّه");
       ok(zeichen.length === 0, "K45c ولا علامةَ ترقيمٍ عربيةٍ (؟ ، ؛) تتسلَّلُ إلى جملةٍ ألمانية");
       ok(umschrift.length === 0, "K45d ولا بديلَ أومْلاوت (ue/oe/ae) — الحروفُ الألمانيةُ تُكتَبُ كما هي");
@@ -1063,10 +1240,10 @@ const empty = () => loadProgress();
         }
       }
       if (kaputt.length) console.log("   ⤷ أسئلةٌ معطوبة:", kaputt.slice(0, 6).join(" | "));
-      ok(leer.length === 0, "K43a كلُّ درسٍ من الأربعةِ والثلاثينَ يُولِّدُ أسئلةً من تركاتِه — لا امتحانَ فارغ");
+      ok(leer.length === 0, "K43a كلُّ درسٍ من السبعةِ والثلاثينَ يُولِّدُ أسئلةً من تركاتِه — لا امتحانَ فارغ");
       ok(kaputt.length === 0, "K43b كلُّ سؤالٍ: جوابُهُ بينَ خياراتِه · خياراتٌ فريدةٌ ≥3 · تفسيرٌ عربيٌّ مُسهِبٌ · فئةٌ يعرفُها دفترُ الأخطاء");
-      ok(gesamt === 131, `K43c مئةٌ وواحدٌ وثلاثونَ سؤالاً تُعرَضُ فعلاً بسقفِ ستةٍ للدرس (${gesamt})`);
-      ok(gesamtPool === 210, `K43c² ومَعينُ التوليدِ أعمقُ مما يُعرَض: مئتانِ وعشرةُ أسئلةٍ متاحةٌ للتدويرِ (${gesamtPool})`);
+      ok(gesamt === 148, `K43c ثمانيةٌ وأربعونَ ومئةُ سؤالٍ تُعرَضُ فعلاً بسقفِ ستةٍ للدرس (${gesamt})`);
+      ok(gesamtPool === 227, `K43c² ومَعينُ التوليدِ أعمقُ مما يُعرَض: سبعةٌ وعشرونَ ومئتا سؤالٍ متاحةٌ للتدويرِ (${gesamtPool})`);
       const a1 = buildBrueckeItems(getBrueckenFor("a1-akkusativ"), 7, 6, eselsbruecken);
       const a2 = buildBrueckeItems(getBrueckenFor("a1-akkusativ"), 7, 6, eselsbruecken);
       ok(JSON.stringify(a1) === JSON.stringify(a2), "K43d حتميةٌ تامّة: نفسُ البذرةِ تُنتِجُ نفسَ الامتحانِ حرفاً بحرف — لا عشوائيةَ تُفسِدُ المراجعة");
@@ -1093,7 +1270,7 @@ const empty = () => loadProgress();
     {
       const bb = eselsbruecken;
       const gids = Object.keys(grammarMap);
-      ok(bb.length === 47 && new Set(bb.map((b) => b.id)).size === 47, "K39a سبعٌ وأربعونَ تركةً بمعرّفاتٍ فريدة");
+      ok(bb.length === 51 && new Set(bb.map((b) => b.id)).size === 51, "K39a إحدى وخمسونَ تركةً بمعرّفاتٍ فريدة");
       ok(bb.every((b) => b.gramIds.length > 0 && b.gramIds.every((g) => gids.includes(g))), "K39b كلُّ تركةٍ معلَّقةٌ بدرسٍ موجودٍ فعلاً — لا شفرةٌ يتيمةٌ ولا إشارةٌ إلى درسٍ وهميّ");
       ok(bb.every((b) => getBrueckenFor(b.gramIds[0]).some((x) => x.id === b.id)), "K39c الطريقُ عكسيٌّ أيضاً: getBrueckenFor تُرجِعُ التركةَ لدرسِها — السلكُ حيٌّ لا مُعلَن");
       ok(bb.every((b) => /[\u0600-\u06ff]/.test(b.titleAr) && /[\u0600-\u06ff]/.test(b.storyAr) && b.storyAr.length >= 40), "K39d لكلِّ شفرةٍ قصةٌ عربيةٌ مسهبةٌ لا عنوانٌ أجرد");
@@ -1101,12 +1278,12 @@ const empty = () => loadProgress();
       ok(!/[\u3040-\u9fff]/.test(JSON.stringify(bb)), "K39f لا تلويثَ CJK في البنكِ كلِّه");
       ok(["genus", "satzbau", "praeposition", "verb", "adjektiv", "b2", "sprichwort"].every((sk) => bb.some((b) => b.sektion === sk)), "K39g الأقسامُ السبعةُ كلُّها مأهولةٌ — الموسوعةُ دخلَت بتمامِها");
       ok(bb.filter((b) => b.sektion === "sprichwort").length === 8 && bb.filter((b) => b.sektion === "sprichwort").every((b) => b.zeilen.length === 2), "K39h الأمثالُ الثمانيةُ كلٌّ منها بمثلِه وقاعدتِه المدمَجة");
-      ok(new Set(bb.flatMap((b) => b.gramIds)).size === gids.length && gids.every((g) => getBrueckenFor(g).length > 0), "K39i التغطيةُ تامّةٌ 34/34 — ما من درسِ قواعدَ واحدٍ يُفتَحُ بلا تركةِ حفظٍ تحتَه");
+      ok(new Set(bb.flatMap((b) => b.gramIds)).size === gids.length && gids.every((g) => getBrueckenFor(g).length > 0), "K39i التغطيةُ تامّةٌ 37/37 — ما من درسِ قواعدَ واحدٍ يُفتَحُ بلا تركةِ حفظٍ تحتَه");
       ok(readFileSync("components/tasks.tsx", "utf8").includes("getBrueckenFor(gramId)") && readFileSync("components/tasks.tsx", "utf8").includes("<BrueckenBlock gramId={topic.id} />"), "K39j بطاقةُ القاعدةِ تستهلكُ البنكَ فعلاً — لا ملفَّ بلا مستهلِك");
     }
     ok(readFileSync("components/diktat.tsx", "utf8").includes("diktatSrc(it.id)") && readFileSync("components/diktat.tsx", "utf8").includes("playbackRate") && readFileSync("components/diktat.tsx", "utf8").includes("speakAny("), "K27g معسكر الإملاء صوتي-first: ملفٌ إن وُجد، واحتياطٌ معلنٌ إن غاب");
   }
-  ok(texts.every((t) => Array.isArray(t.questions) && t.questions.length === (t.level === "B1" ? 3 : 4)), "K12 أربعةُ أسئلةٍ لكلِّ نصٍّ في A1/A2/B2 وثلاثةٌ في B1");
+  ok(texts.every((t) => Array.isArray(t.questions) && t.questions.length === ((t as { neu?: boolean }).neu ? 4 : t.level === "B1" ? 3 : 4)), "K12 أربعةُ أسئلةٍ لكلِّ نصٍّ في A1/A2/B2 وثلاثةٌ في B1 القديمة؛ الجديدةُ كلُّها بأربعة");
   ok(sentences.every((sx) => sx.de && sx.ar), "K13 كل جملة لها وجهان");
   ok(alleVokabeln.every((v) => ["A1", "A2", "B1", "B2"].includes(v.level)), "K14 مستويات المفردات نظامية");
 }
@@ -1130,6 +1307,599 @@ const empty = () => loadProgress();
 }
 
 /* ═══ الخلاصة ═══ */
+
+  /* ═══ K63 — التوزيع الأكاديمي للمراحل (lib/phasen.ts) ═══
+     كان: 70·70·70·60 يوماً بحملٍ ثابت ⇒ B2 = 517.6 س < 600 (الوعد لا يتحقّق).
+     صار: أيامٌ بأوزان زيادة CEFR (6·7·11·14 أسبوعاً) + حملٌ يوميٌّ تصاعدي. */
+  {
+    const L = ["A1", "A2", "B1", "B2"] as const;
+    ok(PHASEN.A1.von === 1 && L.every((l, i) => i === 0 || PHASEN[l].von === PHASEN[L[i - 1]].bis + 1) && PHASEN.B2.bis + 1 === ABSCHLUSS_VON && ABSCHLUSS_VON + 3 === 270,
+      "K63a المراحلُ متلاصقةٌ بلا فجوةٍ ولا تداخل: 1 → … → 266 ثمّ ختامُ 4 أيام → 270");
+    ok(L.every((l) => (PHASEN[l].bis - PHASEN[l].von + 1) === PHASEN[l].wochen * 7) && L.every((l) => ((PHASEN[l].bis - 1) % 7) + 1 === 7),
+      "K63b كلُّ مرحلةٍ أسابيعُ كاملةٌ وتنتهي بيومِ الفحصِ الأسبوعيِّ — الإيقاعُ محفوظ");
+    const tage = L.map((l) => PHASEN[l].wochen);
+    ok(tage.every((t, i) => i === 0 || t >= tage[i - 1]) && PHASEN.B2.wochen > PHASEN.A1.wochen * 2,
+      "K63c الأيامُ تتصاعدُ مع المستوى وB2 أكثرُ من ضعفِ A1 — لا التساوي القديم");
+    const mid = { A1: 105, A2: 120, B1: 200, B2: 275 };
+    const anteilRef = L.map((l) => mid[l] / 700), anteilPlan = L.map((l) => PHASEN[l].wochen / 38);
+    ok(anteilRef.every((r, i) => Math.abs(r - anteilPlan[i]) < 0.05),
+      `K63d حصّةُ كلِّ مرحلةٍ من الأيامِ تطابقُ وزنَ زيادةِ CEFR (منتصفُ النطاق) بانحرافٍ < 5 نقاط (${anteilPlan.map((x) => Math.round(x * 100)).join("/")}% مقابل ${anteilRef.map((x) => Math.round(x * 100)).join("/")}%)`);
+    ok(L.every((l, i) => i === 0 || LERNLAST[l] > LERNLAST[L[i - 1]]) && LERNLAST.A1 === 1 && LERNLAST.B2 <= 1.5,
+      "K63e معاملُ الحملِ تصاعديٌّ يبدأُ من 1.0 ولا يتجاوزُ 1.5 — لا إرهاقَ يُخفي عجزاً");
+    ok(lastMinuten(30, "A1") === 30 && lastMinuten(30, "B2") === 40 && lastMinuten(3, "A1") === 5 && lastMinuten(35, "B1") === 45,
+      "K63f التطبيقُ يقرِّبُ إلى 5 دقائق ولا ينزلُ تحتَ 5");
+    const v = vergleichePlan(planStundenBis);
+    ok(v.every((x) => x.urteil === "imBereich" || x.urteil === "erreicht"),
+      `K63g **كلُّ مرحلةٍ داخلَ نطاقِ CEFR** — ${v.map((x) => `${x.level} ${x.planStd}h`).join(" · ")}`);
+    ok((v.find((x) => x.level === "B2")?.planStd ?? 0) >= 600 + 20,
+      "K63h B2 فوقَ أدنى الحدِّ (600) بهامشٍ ≥ 20 ساعة — الوعدُ يتحقّقُ بالحملِ المخطَّط لا بالأمنيات");
+    const proTag = L.map((l) => (planStundenBis(PHASE_END_DAY[l]) - planStundenBis(PHASEN[l].von - 1)) / (PHASE_END_DAY[l] - PHASEN[l].von + 1));
+    ok(proTag.every((h, i) => i === 0 || h >= proTag[i - 1] - 0.01) && proTag[3] <= 2.75 && proTag[0] <= 2.0,
+      `K63i الحملُ اليوميُّ تصاعديٌّ وإنسانيّ: A1 ≤ 2.0 س · B2 ≤ 2.75 س (${proTag.map((h) => h.toFixed(2)).join(" → ")})`);
+    ok(MODULE.filter((m) => m.level === "B2").length === 4 && MODULE.every((m, i) => i === 0 || m.von === MODULE[i - 1].bis + 1) && MODULE[0].von === 1 && MODULE[15].bis === 270,
+      "K63j الوحداتُ الستَّ عشرةَ أُعيدَ تمديدُها متلاصقةً من 1 إلى 270 — أربعٌ لكلِّ مستوى");
+    ok(istPhasenPruefung(PHASEN.A1.bis) && istPhasenPruefung(PHASEN.B1.bis) && !istPhasenPruefung(70) && !istPhasenPruefung(140) && buildDay(PHASEN.A2.bis, emptyProgress).tasks.some((t) => t.kind === "check" && t.minutes >= 50),
+      "K63k امتحانُ نهايةِ المرحلةِ انتقلَ إلى الحدودِ الجديدةِ — ولم يبقَ في 70/140 القديمة");
+    const debt = buildDay(PHASEN.B2.von + 1, { ...emptyProgress, plan: { ...emptyProgress.plan, debt: [{ kind: "lesen", titleDe: "x", titleAr: "x", from: 5 }] } } as Progress).tasks.find((t) => t.mandatory);
+    ok(!!debt && debt.minutes === 15, "K63l التعويضُ الإلزاميُّ يبقى 15 دقيقةً — المعاملُ لا يضخِّمُ دَيناً قديماً");
+    const quellen = [require("fs").readFileSync("lib/fehler.ts", "utf8"), require("fs").readFileSync("lib/i18n.ts", "utf8"), require("fs").readFileSync("lib/spiel.ts", "utf8"), require("fs").readFileSync("components/tasks.tsx", "utf8"), require("fs").readFileSync("components/fehler-ui.tsx", "utf8")].join("\n");
+    ok(!/day >= 211|day >= 141|day >= 71|=== 211|=== 141|% 70 === 0/.test(quellen),
+      "K63m لا أرقامَ أيامٍ مزروعةً في الطبقاتِ المستهلِكة — الكلُّ يقرأُ lib/phasen.ts");
+    ok(levelAmTag(42) === "A1" && levelAmTag(43) === "A2" && levelAmTag(168) === "B1" && levelAmTag(169) === "B2" && levelAmTag(270) === "B2",
+      "K63n levelAmTag يطابقُ الحدودَ عندَ كلِّ عتبة");
+  }
+
+
+  /* ═══ K64 — قفل بدء الجلسة (lib/ritual.ts): الجديد لا يُرى قبل تسليم الاسترجاع ═══ */
+  {
+    const P = emptyProgress;
+    const t2 = buildDay(2, P), u2 = ritualUrteil(t2, P);
+    ok(u2.aktiv && u2.gesperrt && u2.torIndizes.length === 1 && t2.tasks[0].kind === "wiederholen",
+      "K64a يومُ التعلُّمِ الثاني: بوابةٌ نشطةٌ من مهمّةِ الاسترجاعِ الأولى — والباقي مقفول");
+    ok(!aufgabeGesperrt(u2, 0) && aufgabeGesperrt(u2, 1) && aufgabeGesperrt(u2, t2.tasks.length - 1),
+      "K64b مهمّةُ البوابةِ مفتوحةٌ وكلُّ ما بعدَها مقفول");
+    const u1 = ritualUrteil(buildDay(1, P), P);
+    ok(!u1.aktiv && u1.grund === "tag1" && !aufgabeGesperrt(u1, 3), "K64c اليومُ الأوّلُ بلا بوابة — لا «أمسَ» يُسترجَع (السببُ مسمًّى)");
+    const t7 = buildDay(7, P), u7 = ritualUrteil(t7, P);
+    ok(t7.type === "wochencheck" && !u7.aktiv && u7.grund === "wochencheck", "K64d الفحصُ الأسبوعيُّ بلا بوابة — امتحانُه هو الاسترجاع");
+    const abgegeben: Progress = { ...P, plan: { ...P.plan, tasks: { [t2.tasks[0].id]: { done: true, passed: false, score: 0, total: 3, attempts: 1 } } } } as Progress;
+    const u2b = ritualUrteil(t2, abgegeben);
+    ok(u2b.aktiv && !u2b.gesperrt && u2b.offen === 0 && !aufgabeGesperrt(u2b, 4),
+      "K64e التسليمُ يفتحُ البوابةَ ولو رسبَ المتعلِّم (0/3) — البوابةُ تطلبُ المحاولةَ لا الكمال");
+    const mitDebt = buildDay(9, { ...P, plan: { ...P.plan, debt: [{ kind: "lesen", titleDe: "x", titleAr: "x", from: 5 }, { kind: "hoeren", titleDe: "y", titleAr: "y", from: 6 }] } } as Progress);
+    const tor = torAufgaben(mitDebt.tasks);
+    ok(tor.length === 3 && !!mitDebt.tasks[0].mandatory && !!mitDebt.tasks[1].mandatory && mitDebt.tasks[2].kind === "wiederholen",
+      "K64f التعويضاتُ الإلزاميةُ في الرأسِ جزءٌ من البوابة: دَينُ الأمسِ قبلَ جديدِ اليوم");
+    const uD = ritualUrteil(mitDebt, P);
+    ok(uD.offen === 3 && /3 مهامَّ/.test(sperrText(uD)) && /سلِّم مهمّة الاسترجاع أولاً/.test(sperrText(u2)),
+      "K64g نصُّ القفلِ يسمّي العددَ الناقصَ بالضبط — لا «ممنوع» مبهمة");
+    ok(torAufgaben([{ id: "a", kind: "grammatik", titleDe: "", titleAr: "", minutes: 1 } as DayTask]).length === 0,
+      "K64h يومٌ لا يبدأُ باسترجاعٍ ⇒ لا بوابة — لا نخترعُ قفلاً بلا مفتاح");
+    const alleLerntage = Array.from({ length: 60 }, (_, i) => i + 2).filter((d) => buildDay(d, P).type !== "wochencheck");
+    ok(alleLerntage.every((d) => ritualUrteil(buildDay(d, P), P).aktiv), "K64i كلُّ أيامِ التعلُّمِ والتثبيتِ في أوّلِ شهرين لها بوابةٌ فعلاً (60 يوماً مفحوصة)");
+    const seite = require("fs").readFileSync("app/page.tsx", "utf8");
+    ok(/ritual-sperre/.test(seite) && /aufgabeGesperrt\(ritual, i\)/.test(seite) && /stepFrei/.test(seite),
+      "K64j الصفحةُ الرئيسةُ تستهلكُ الحكمَ: لافتةُ القفل + رقائقُ مقفولة + لا عرضَ لمهمّةٍ مقفولة");
+  }
+
+
+  /* ═══ K65 — كبسولة اليوم (lib/kapsel.ts): 3 جمل مساءً = جمل بوابة الغد ═══ */
+  {
+    const P = emptyProgress;
+    ok(KAPSEL_GROESSE === 3 && Array.from({ length: 270 }, (_, i) => kapselIds(i + 1)).every((k) => k.length === 3 && new Set(k).size === 3 && k.every((id) => !!getSatz(id))),
+      "K65a كلُّ يومٍ من الـ270 له كبسولةُ 3 جملٍ مختلفةٍ موجودةٍ في البنك — لا مساءَ بلا كبسولة");
+    ok(kapselIds(5).join() === kapselIds(5).join() && kapselIds(120).join() === kapselIds(120).join(), "K65b حتمية: اليومُ نفسُه ⇒ الكبسولةُ نفسُها");
+    const schleife = Array.from({ length: 265 }, (_, i) => i + 2).every((d) => {
+      const w = buildDay(d, P).tasks.find((t) => t.kind === "wiederholen");
+      return !!w && (w.sentenceIds ?? []).join() === kapselIds(d - 1).join();
+    });
+    ok(schleife, "K65c **الحلقة مغلقة**: من اليوم 2 إلى 266 جملُ الاسترجاعِ الصباحيِّ هي كبسولةُ الأمسِ بعينها");
+    const mitSatz = Array.from({ length: 60 }, (_, i) => i + 1).filter((d) => buildDay(d, P).tasks.some((t) => t.kind !== "wiederholen" && (t.sentenceIds ?? []).length > 0));
+    ok(mitSatz.length >= 20 && mitSatz.every((d) => kapselAusTag(d)), `K65d كلُّ يومٍ فيه مهمّةُ جملٍ (${mitSatz.length}/60) كبسولتُه من جملِ دروسِه نفسِها — لا جملٌ غريبة`);
+    ok(!kapselAusTag(7) && kapselIds(7).every((id) => getSatz(id)!.level === "A1"), "K65e يومٌ بلا مهمّةِ جملٍ (الفحص الأسبوعي) يُكمَّل من مخزونِ مستواه ويُعلَنُ ذلك");
+    const alleLvl = [[1, "A1"], [43, "A2"], [92, "B1"], [169, "B2"]] as const;
+    ok(alleLvl.every(([d, l]) => kapselSaetze(d).every((s) => s.level === l)), "K65f الكبسولةُ من مستوى اليوم عندَ كلِّ عتبةِ مرحلة");
+    const w2 = buildDay(2, P).tasks[0];
+    ok(w2.kind === "wiederholen" && (w2.sentenceIds ?? []).length === 3 && ritualUrteil(buildDay(2, P), P).gesperrt,
+      "K65g وكبسولةُ الأمسِ تقعُ خلفَ قفلِ البوابة: لا جديدَ قبلَ استظهارِها");
+    const seite = require("fs").readFileSync("app/page.tsx", "utf8"), komp = require("fs").readFileSync("components/kapsel.tsx", "utf8");
+    ok(/TagesKapsel day=\{day\}/.test(seite) && /data-testid="tageskapsel"/.test(komp) && !/قرأتها"\s*<\/button>/.test(komp) && /speakDe/.test(komp),
+      "K65h الصفحةُ تعرضُ الكبسولةَ، وفيها صوتٌ، وليس فيها زرُّ «قرأتها» — البرهانُ أداءُ الغد");
+    const t0 = Date.now(); for (let d = 1; d <= 270; d++) kapselIds(d);
+    ok(Date.now() - t0 < 1500, `K65i حسابُ 270 كبسولةً مع الحلقةِ الارتدادية أقلُّ من 1.5 ثانية (محفوظ) — ${Date.now() - t0}ms`);
+  }
+
+
+  /* ═══ K66 — رادار الكلمات الإشارية (lib/signalwoerter.ts): مشتقّ من الحوارات الـ80، بحدود معلَنة ═══ */
+  {
+    const s1 = signaleIn("Nein, nicht am Montag, sondern erst am Dienstag. Vielleicht später.");
+    ok(s1.map((x) => x.kategorie).join(",") === "korrektur,zeitfalle,kontrast,einschraenkung,sicherheit,reihenfolge",
+      "K66a الجملةُ الفخُّ الكلاسيكيةُ تُفكَّك إلى 6 إشاراتٍ بترتيبِ ورودِها وفئاتِها الصحيحة");
+    ok(signaleIn("Ich habe nicht mehr Zeit.").some((x) => x.wort.toLowerCase() === "nicht mehr" && x.kategorie === "zeitfalle") && !signaleIn("Ich habe nicht mehr Zeit.").some((x) => x.wort === "nicht"),
+      "K66b الصيغُ المركّبةُ تُلتقَطُ أولاً ولا تبتلعُها المفردة: «nicht mehr» واحدةٌ لا «nicht»+«mehr»");
+    ok(signaleIn("Nichtsdestotrotz kam er.").length === 0 && signaleIn("Die Schonzeit beginnt.").length === 0,
+      "K66c حدودُ الكلمةِ محترمة: لا «nicht» داخلَ Nichtsdestotrotz ولا «schon» داخلَ Schonzeit");
+    const kats = Object.keys(SIGNALE);
+    ok(kats.length === 7 && kats.every((k) => SIGNALE[k as keyof typeof SIGNALE].length >= 8 && /[\u0600-\u06FF]/.test(KATEGORIE_AR[k as keyof typeof KATEGORIE_AR].hinweis)),
+      "K66d سبعُ فئاتٍ، في كلٍّ ≥ 8 صيغ، ولكلٍّ تلميحٌ عربيٌّ يقولُ ماذا تفعلُ عندَ سماعِها");
+    const ab = radarAbdeckung(dialogues);
+    ok(ab.dialoge >= 80 && ab.mitSignal >= 60 && ab.mitFalle >= 80 && ab.fallen >= 280,
+      `K66e التغطيةُ الصادقة: ${ab.mitSignal}/${ab.dialoge} حواراً فيها إشارات · ${ab.mitFalle} فيها مُضلِّلٌ مسموع (${ab.fallen} مُضلِّلاً)`);
+    ok(dialogues.every((d) => ablenker(d).every((f) => d.lines[f.zeile] && f.anker.length > 0 && f.anker.every((k) => d.lines[f.zeile].de.toLowerCase().includes(k.toLowerCase())) && f.option !== f.richtig)),
+      "K66f كلُّ مُضلِّلٍ موسومٍ يُسمَعُ فعلاً في سطرِه (حرفيًّا أو بمراسيه)، وليس هو الجوابَ الصحيح");
+    const drills = dialogues.flatMap((d) => signalDrill(d));
+    ok(drills.length >= 100 && drills.every((e) => e.type === "mc" && e.options!.length === 4 && e.options!.includes(e.answer as string) && new Set(e.options).size === 4 && /»[^«]+«/.test(e.promptDe)),
+      `K66g ${drills.length} تمرينَ أذنٍ مشتقّاً: 4 خياراتٍ مختلفةٍ، الجوابُ بينَها، والكلمةُ معلَّمةٌ »« في السطر`);
+    ok(drills.every((e) => /[\u0600-\u06FF]/.test(e.explanationAr ?? "") && (e.explanationAr ?? "").includes(":")), "K66h ولكلِّ تمرينٍ تفسيرٌ عربيٌّ يسمّي الفئةَ وما تفعلُه");
+    ok(new Set(drills.map((e) => e.id)).size === drills.length, "K66i معرِّفاتُ التمارينِ فريدةٌ عبرَ البنكِ كلِّه");
+    const d1 = dialogues[0];
+    ok(JSON.stringify(signalDrill(d1)) === JSON.stringify(signalDrill(d1)) && JSON.stringify(signalRadar(d1)) === JSON.stringify(signalRadar(d1)), "K66j حتمية: الحوارُ نفسُه ⇒ الرادارُ والتمارينُ نفسُها");
+    const proDialog = dialogues.map((d) => signalDrill(d).length);
+    ok(Math.max(...proDialog) <= 3 && signalDrill(d1).every((e, i, a) => a.findIndex((x) => (x.explanationAr ?? "").split("=")[1] === (e.explanationAr ?? "").split("=")[1]) === i),
+      "K66k حتى 3 تمارينَ لكلِّ حوارٍ ومن فئاتٍ مختلفة — لا تكرارَ الفئةِ نفسِها");
+    const ui = require("fs").readFileSync("components/signalradar.tsx", "utf8"), tk = require("fs").readFileSync("components/tasks.tsx", "utf8");
+    ok(/بعد إجابتك/.test(ui) && /signalradar-leer/.test(ui) && tk.indexOf("<SignalRadar") > tk.indexOf("items={dlg.questions}"),
+      "K66l الرادارُ يُفتَحُ بعدَ الأسئلةِ لا قبلَها (لا يحلُّ محلَّ الاستماع)، ويصرِّحُ إن خلا الحوارُ من إشارات");
+  }
+
+
+  /* ═══ K67 — Nominalstil/Verbalstil: الدرس 38 + مبدّل الأسلوب (lib/stil.ts) ═══ */
+  {
+    const t = grammarMap["b2-nominalstil"];
+    ok(!!t && t.level === "B2" && t.rules.length >= 7 && (t.tables?.length ?? 0) >= 2 && (t.pitfalls?.length ?? 0) >= 4 && t.exercises.length >= 7,
+      "K67a الدرسُ b2-nominalstil موجود: 7 قواعدِ تحويلٍ، جدولان، 4 فخاخ، 7 تمارين");
+    ok(!!t && t.exercises.filter((e) => e.type === "umformung").length >= 3 && t.exercises.some((e) => e.type === "umformung" && /Verbalstil/.test(e.promptDe)),
+      "K67b وفيه تحويلٌ في الاتجاهين — إلى الاسمي وإلى الفعلي، لا اتجاهٌ واحد");
+    ok(!!t && t.exercises.every((e) => grader.grade(e, Array.isArray(e.answer) ? e.answer[0] : e.answer).correct), "K67c وكلُّ نماذجِه يقبلُها المصحّح");
+    ok(/"b2-futur-ii", "b2-nominalstil"\]/.test(require("fs").readFileSync("lib/plan.ts", "utf8")), "K67d ومُدرَجٌ في دورةِ قواعدِ B2 للخطة");
+    ok(bankPruefen().length === 0, `K67e بنكُ الأزواجِ سليم: mussEnthalten في النموذج، darfNicht ليست فيه، عربية، جملٌ كاملة (${bankPruefen().join(" | ") || "0 خطأ"})`);
+    ok(STIL_PAARE.length >= 24 && Object.keys(REGEL_AR).every((r) => STIL_PAARE.filter((p) => p.regel === r).length >= 2),
+      `K67f ${STIL_PAARE.length} زوجاً، ولكلِّ قاعدةٍ من الثماني زوجان على الأقل`);
+    const ue = stilUebungen();
+    ok(ue.length === STIL_PAARE.length * 2 && ue.every((e) => grader.grade(e, e.answer as string).correct) && ue.every((e) => (e.alternativen ?? []).every((a) => grader.grade(e, a).correct)),
+      `K67g ${ue.length} تمرينَ تحويلٍ مشتقّاً — كلُّ نموذجٍ وبديلٍ يقبلُه المصحّح`);
+    ok(ue.every((e) => !grader.grade(e, e.quelleDe!).correct && /ما زلتَ تكتبُ/.test(grader.grade(e, e.quelleDe!).feedbackAr ?? "")),
+      "K67h ونسخُ المصدرِ كما هو يُرفَضُ برسالةٍ موجَّهةٍ تسمّي الرابطَ المتروك");
+    const erk = registerErkennen(8);
+    ok(erk.length === 8 && erk.every((e) => e.options!.length === 2 && e.answer === STIL_PAARE.find((p) => e.id.startsWith(p.id))!.nominal) && erk.some((e) => e.options![0] === e.answer) && erk.some((e) => e.options![1] === e.answer),
+      "K67i تمارينُ التعرُّفِ: الجوابُ هو الاسميُّ دائماً، وموضعُه يتناوب — لا نمطَ يُحفَظ");
+    const pr = stilProfil("Wegen des Regens und trotz der Kälte kam er zur Sitzung."), pv = stilProfil("Weil es regnete und obwohl es kalt war, kam er, damit wir anfangen.");
+    ok(pr.nominal >= 3 && pr.verbal === 0 && pr.hinweise.length === 1 && pv.verbal >= 3 && pv.nominal === 0 && pv.hinweise.length === 1,
+      "K67j مقياسُ الأسلوبِ يعدُّ العلاماتِ ويُلمِّحُ عندَ الطرفين فقط — عدٌّ لا حكم");
+    const tk = require("fs").readFileSync("components/tasks.tsx", "utf8"), sw = require("fs").readFileSync("components/stilwechsler.tsx", "utf8");
+    ok(/topic\.id === "b2-nominalstil"/.test(tk) && /<StilWechsler/.test(tk) && /stil-schalter/.test(sw) && /لا حكمٌ على الجودة/.test(sw),
+      "K67k المبدّلُ مركَّبٌ داخلَ الدرس، بمفتاحِ قلبٍ حقيقيٍّ، ومقياسُه موسومٌ «عدٌّ لا حكم»");
+    ok(Object.keys(grammarMap).length === 38, `K67l البنكُ 38 درساً (${Object.keys(grammarMap).length})`);
+  }
+
+
+  /* ═══ K68 — الاستقراء قبل القاعدة (lib/induktion.ts): أمثلة ← تخمين ← كشف، بلا محتوى جديد ═══ */
+  {
+    const alle = Object.values(grammarMap);
+    const faehig = alle.filter(induktionMoeglich);
+    ok(faehig.length === alle.length, `K68a كلُّ الدروسِ الـ${alle.length} تصلحُ للاستقراء (≥ ${MIN_BEISPIELE} مثالين وقاعدة) — ${faehig.length}/${alle.length}`);
+    ok(alle.every((t) => { const f = entdeckungsFrage(t, alle, 0)!; return f.optionen.length >= 3 && f.optionen.filter((o) => o.richtig).length === 1 && f.optionen[f.richtigIndex].de === t.rules[0].de; }),
+      "K68b لكلِّ درسٍ سؤالُ اكتشافٍ: ≥ 3 خيارات، صحيحٌ واحدٌ هو قاعدةُ الدرسِ الأولى");
+    ok(alle.every((t) => { const f = entdeckungsFrage(t, alle, 0)!; return new Set(f.optionen.map((o) => o.de)).size === f.optionen.length; }), "K68c والخياراتُ لا تتكرّرُ نصّاً");
+    ok(alle.every((t) => { const f = entdeckungsFrage(t, alle, 0)!; return f.optionen.filter((o) => !o.richtig).every((o) => grammarMap[o.quelle] && grammarMap[o.quelle].level === t.level || alle.filter((x) => x.level === t.level && x.id !== t.id).length < 3); }),
+      "K68d المشتّتاتُ قواعدُ حقيقيةٌ من دروسِ المستوى نفسِه (لا مختلقة) — إلا إن قلّت دروسُ المستوى");
+    const pos = new Set([0, 1, 2, 3, 4, 5, 6, 7].map((sd) => entdeckungsFrage(grammarMap["a2-dativ"], alle, sd)!.richtigIndex));
+    ok(pos.size >= 2 && JSON.stringify(entdeckungsFrage(grammarMap["a2-dativ"], alle, 5)) === JSON.stringify(entdeckungsFrage(grammarMap["a2-dativ"], alle, 5)),
+      `K68e موضعُ الصحيحِ يتغيّرُ معَ البذرةِ (${[...pos].join(",")}) وحتميٌّ للبذرةِ نفسِها`);
+    ok(/الفجوة/.test(ergebnisText("falsch")) && /بنفسك/.test(ergebnisText("richtig")) && /أضعف/.test(ergebnisText("uebersprungen")) && !/خطأ|فشل|رسبت/.test(ergebnisText("falsch")),
+      "K68f نصوصُ النتيجةِ: الخطأُ «إخفاقٌ مُنتِج» بلا لفظِ فشل، والتخطّي مسمًّى بأثرِه الأضعف");
+    const tk = require("fs").readFileSync("components/tasks.tsx", "utf8");
+    const iEnt = tk.indexOf('data-testid="entdecken"'), iSum = tk.indexOf("{topic.summaryAr}"), iRules = tk.indexOf("topic.rules.map"), iVerdeckt = tk.indexOf('data-testid="regel-verdeckt"');
+    ok(iEnt > 0 && iEnt < iSum && iSum < iRules && iVerdeckt > 0 && /offen && \(<>/.test(tk) && /entdecken-ueberspringen/.test(tk),
+      "K68g في الواجهة: الاكتشافُ قبلَ الملخّصِ قبلَ القواعد، والباقي خلفَ `offen`، وبابُ التخطّي مرئيّ");
+  }
+
+
+  for (const LV of ["B2", "B1", "A2", "A1"] as const) {
+  /* ═══ K71 · مشتّتاتُ الفخّ في حواراتِ B2/B1: كلُّ مشتّتٍ مسموعٌ في الحوار، لا خياراتٍ سخيفة، شرحٌ يسمّي الفخّ ═══ */
+  {
+    const AR = /[\u0600-\u06FF]/;
+    const normW = (s: string) => s.toLowerCase().replace(/[^a-zäöüß0-9 ]/g, " ").split(/\s+/).filter((w) => w.length >= 3);
+    const STOP = new Set(["eine", "einen", "einer", "eines", "nicht", "dass", "wird", "werden", "wenn", "aber", "auch", "sich", "über", "ohne", "nach", "durch", "oder", "noch", "dann", "beim", "vom", "zum", "zur", "mit", "und", "der", "die", "das", "den", "dem", "des", "als", "für", "auf", "ist", "sind", "war", "weil", "damit", "statt", "trotz", "sofort", "nur"]);
+    const ABSURD = /^(nie|nichts|niemand|keine|gar nicht|sofort|ja|nein|presse|status|bargeld|ein foto|kündigung|schimpfen|abstimmen|ersparnis|prämie|kurzer|annullierung)$/i;
+    const b2 = dialogues.filter((d) => d.level === LV);
+    const mc = b2.flatMap((d) => d.questions.filter((q) => q.type === "mc").map((q) => ({ d, q })));
+    const SOLL_MC: Record<string, number> = { B2: 67, B1: 67, A2: 49, A1: 49 };
+    ok(mc.length === SOLL_MC[LV], `K71a·${LV} حواراتُ ${LV} الـ${b2.length} فيها ${SOLL_MC[LV]} سؤالَ mc (${mc.length})`);
+    ok(mc.every(({ q }) => (q.options ?? []).includes(q.answer as string) && new Set(q.options).size === (q.options ?? []).length), "K71b·${LV} الإجابةُ ضمنَ الخياراتِ ولا خيارَ مكرَّراً");
+    const absurd = mc.flatMap(({ q }) => (q.options ?? []).filter((o) => ABSURD.test(o.trim())));
+    ok(absurd.length === 0, `K71c·${LV} لا خيارَ سخيفاً يُستبعَدُ بلا سماع (${absurd.slice(0, 4).join("|")})`);
+    const ohneAnker: string[] = [];
+    for (const { d, q } of mc) {
+      const text = new Set(normW(d.lines.map((l) => l.who + " " + l.de).join(" ")));
+      for (const o of q.options ?? []) {
+        if (o === q.answer) continue;
+        const inhalt = normW(o).filter((w) => !STOP.has(w));
+        if (!inhalt.some((w) => text.has(w) || [...text].some((t) => t.startsWith(w.slice(0, 6)) && w.length >= 6))) ohneAnker.push(`${q.id}:${o}`);
+      }
+    }
+    ok(ohneAnker.length === 0, `K71d·${LV} كلُّ مشتّتٍ مرساهُ كلمةٌ مسموعةٌ في الحوارِ نفسِه — فخٌّ لا حشو (${ohneAnker.slice(0, 4).join("|")})`);
+    ok(mc.every(({ q }) => AR.test(q.explanationAr ?? "") && /الدليل/.test(q.explanationAr ?? "") && /الفخّ/.test(q.explanationAr ?? "")), "K71e·${LV} كلُّ شرحٍ يذكرُ الدليلَ ويسمّي الفخّ");
+    const zitatFehl: string[] = [];
+    for (const { d, q } of mc) {
+      const de = d.lines.map((l) => l.de).join(" ");
+      for (const m of (q.explanationAr ?? "").matchAll(/«([^»]+)»/g)) for (const piece of m[1].split(/…|←/)) { const p = piece.trim().replace(/^[ .,;:„“"]+|[ .,;:„“"]+$/g, ""); if (p.length >= 12 && !de.includes(p)) zitatFehl.push(`${q.id}:${p.slice(0, 25)}`); }
+    }
+    ok(zitatFehl.length === 0, `K71f·${LV} بوّابةُ الهذيان: كلُّ «اقتباس» في شروحِ الحواراتِ حرفيٌّ من سطورِها (${zitatFehl.slice(0, 3).join("|")})`);
+    const pos = mc.map(({ q }) => (q.options ?? []).indexOf(q.answer as string));
+    const cnt = [0, 1, 2].map((i) => pos.filter((p) => p === i).length);
+    ok(cnt.every((c) => c >= mc.length * 0.2), `K71g·${LV} موضعُ الصحيحِ موزَّعٌ (${cnt.join("/")}) — لا يُخمَّنُ من الموضع`);
+    const mitAbl = b2.filter((d) => ablenker(d).length > 0).length;
+    const ablGes = b2.reduce((s, d) => s + ablenker(d).length, 0);
+    const SOLL_ABL: Record<string, [number, number]> = { B2: [29, 110], B1: [29, 105], A2: [11, 22], A1: [11, 25] };
+    const alleAbl = b2.flatMap((d) => ablenker(d));
+    const ankerFalsch = alleAbl.filter((a) => { const z = b2.find((d) => d.questions.some((q) => q.id === a.frageId))!.lines[a.zeile].de.toLowerCase(); return !a.anker.every((k) => z.includes(k.toLowerCase())); });
+    ok(ankerFalsch.length === 0 && alleAbl.every((a) => a.art === "woertlich" || a.art === "stamm"), `K71i·${LV} كلُّ مرساةٍ يذكرُها الرادارُ موجودةٌ حرفيًّا في السطرِ المشارِ إليه (${ankerFalsch.length} خطأ)`);
+    ok(mitAbl >= SOLL_ABL[LV][0] && ablGes >= SOLL_ABL[LV][1], `K71h·${LV} رادارُ الإشاراتِ يلتقطُ مُضلِّلاً مسموعاً حرفيًّا في ${mitAbl}/${b2.length} حواراً (${ablGes} خياراً؛ كان 8/11 قبلَ الفخاخ) — لا تراجُع`);
+  }
+  }
+
+
+  /* ═══ K72 · جُملُ المثالِ في بطاقاتِ المفردات: الكلمةُ موجودةٌ فعلاً، الطولُ مناسب، لا عربيةَ، لا تكرار ═══ */
+  {
+    const AR = /[\u0600-\u06FF]/;
+    const PREF = ["voraus", "zusammen", "zurück", "durch", "über", "unter", "wieder", "weiter", "ab", "an", "auf", "aus", "bei", "ein", "mit", "nach", "vor", "zu", "weg", "um", "fest", "statt", "teil", "kennen", "fern", "hin", "her", "fort", "los", "frei"];
+    const normS = (s: string) => " " + s.toLowerCase().replace(/é/g, "e").replace(/[^a-zäöüß0-9 ]/g, " ") + " ";
+    const partOk = (w: string, low: string) => {
+      const base = w.endsWith("en") && w.length > 4 ? w.slice(0, -2) : w.endsWith("n") && w.length > 4 ? w.slice(0, -1) : w;
+      if (low.includes(base.slice(0, Math.max(4, base.length - 2)))) return true;
+      for (const p of PREF) if (w.startsWith(p) && w.length > p.length + 2) {
+        const rest = w.slice(p.length); const rb = rest.endsWith("en") ? rest.slice(0, -2) : rest;
+        if (low.includes(rb.slice(0, Math.max(3, rb.length - 2))) && (low.includes(` ${p} `) || low.includes(p + "ge" + rb.slice(0, 3)) || low.includes(p + rb.slice(0, 3)))) return true;
+      }
+      return false;
+    };
+    const wortDrin = (word: string, de: string) => {
+      const low = normS(de);
+      const w = word.toLowerCase().replace(/é/g, "e").replace(/^(der|die|das|sich)\s+/, "").replace(/\s+(auf|über|um|von|an|für)$/, "").replace(/\b(jdn|jdm|etwas|seine|sich)\b/g, "").trim();
+      return w.split(/[\s-]+/).filter((p) => p.length > 2).every((p) => partOk(p, low));
+    };
+    const mit = alleVokabeln.filter((k) => k.exampleDe);
+    const fehlWort = mit.filter((k) => !wortDrin(k.de, k.exampleDe!)).map((k) => k.id);
+    ok(mit.length === alleVokabeln.length, `K72a كلُّ البطاقاتِ بجملةِ مثال: ${mit.length}/${alleVokabeln.length} (كانت 1955 قبلَ الدفعات؛ 6 دفعاتٍ موثَّقة)`);
+    ok(alleVokabeln.every((k) => !!k.exampleDe && !!k.exampleAr), "K72h كلُّ بطاقةٍ من المستوياتِ الأربعةِ لها مثالٌ وترجمتُه — 3316/3316");
+    const batches = (require("../content/beispiele-batches.json") as { batches: { nr: number; ids: string[] }[] }).batches;
+    const neuIds = new Set(batches.flatMap((b) => b.ids));
+    const altFehl = fehlWort.filter((id) => !neuIds.has(id));
+    ok(altFehl.length <= 130, `K72b الكلمةُ تظهرُ في جملتِها — الاستثناءاتُ القديمةُ (صيغٌ شاذّة مثل tut weh/übernimmt) لا تزيدُ عن 130 (${altFehl.length})`);
+    const neuFehl = fehlWort.filter((id) => neuIds.has(id));
+    const neuMit = mit.filter((k) => neuIds.has(k.id));
+    ok(neuMit.length === neuIds.size && neuFehl.length === 0, `K72c كلُّ بطاقاتِ دفعاتِ الأمثلةِ الجديدةِ (${neuIds.size}) لها مثالٌ وتمرُّ من فحصِ الكلمة (ساقط: ${neuFehl.join(",")})`);
+    const lang = mit.filter((k) => { const n = k.exampleDe!.split(/\s+/).length; return n < 3 || n > 18; });
+    ok(lang.length <= 40, `K72d طولُ الجملِ 3–18 كلمة (خارجَه: ${lang.length})`);
+    ok(mit.every((k) => !AR.test(k.exampleDe!)), "K72e لا عربيةَ في exampleDe");
+    const cnt = new Map<string, number>(); for (const k of mit) cnt.set(k.exampleDe!, (cnt.get(k.exampleDe!) ?? 0) + 1);
+    const dup = [...cnt.entries()].filter(([, n]) => n > 1);
+    ok(dup.length <= 20, `K72f جملُ المثالِ لا تتكرّرُ بينَ البطاقات (مكرَّرة: ${dup.length})`);
+    ok(mit.filter((k) => k.exampleAr).length >= mit.length - 30, `K72g ولكلِّ مثالٍ ترجمتُه العربية (بلا: ${mit.filter((k) => !k.exampleAr).length})`);
+  }
+
+
+  /* ═══ K73 · المتلازماتُ اللفظية: كلمةُ البطاقةِ في كلِّ متلازمة، شريكٌ قابلٌ للإخفاء، تمرينٌ بلا خيارٍ ثانٍ صحيح ═══ */
+  {
+    const AR = /[\u0600-\u06FF]/;
+    const ids = new Map(alleVokabeln.map((k) => [k.id, k]));
+    const eintraege = Object.entries(kollokationen);
+    ok(eintraege.length >= 2090 && eintraege.every(([id]) => ids.has(id)), `K73a ${eintraege.length} بطاقةً لها متلازمات، وكلُّ معرِّفٍ موجودٌ في الدفتر`);
+    ok(eintraege.every(([, ks]) => ks.length >= 2 && ks.length <= 3 && ks.every((k) => k.split(/\s+/).length >= 2 && k.split(/\s+/).length <= 6 && !AR.test(k))), "K73b لكلِّ بطاقةٍ 2–3 متلازمات من 2–6 كلمات، بلا عربية");
+    const PREF2 = ["voraus", "zusammen", "zurück", "durch", "über", "unter", "wieder", "weiter", "ab", "an", "auf", "aus", "bei", "ein", "mit", "nach", "vor", "zu", "weg", "um", "fest", "statt", "teil", "kennen", "fern", "hin", "her", "fort", "los", "frei"];
+    const normS2 = (s: string) => " " + s.toLowerCase().replace(/é/g, "e").replace(/[^a-zäöüß0-9 ]/g, " ") + " ";
+    const partOk2 = (w: string, low: string) => {
+      const base = w.endsWith("en") && w.length > 4 ? w.slice(0, -2) : w.endsWith("n") && w.length > 4 ? w.slice(0, -1) : w;
+      if (low.includes(base.slice(0, Math.max(4, base.length - 2)))) return true;
+      for (const p of PREF2) if (w.startsWith(p) && w.length > p.length + 2) { const rest = w.slice(p.length); const rb = rest.endsWith("en") ? rest.slice(0, -2) : rest; if (low.includes(rb.slice(0, Math.max(3, rb.length - 2))) && (low.includes(` ${p} `) || low.includes(p + "ge" + rb.slice(0, 3)) || low.includes(p + rb.slice(0, 3)))) return true; }
+      return false;
+    };
+    const wortDrin2 = (word: string, de: string) => { const low = normS2(de); const w = word.toLowerCase().replace(/é/g, "e").replace(/^(der|die|das|sich)\s+/, "").replace(/\s+(auf|über|um|von|an|für)$/, "").replace(/\b(jdn|jdm|etwas|seine|sich)\b/g, "").trim(); return w.split(/[\s-]+/).filter((p) => p.length > 2).every((p) => partOk2(p, low)); };
+    const ohneWort = eintraege.flatMap(([id, ks]) => ks.filter((k) => !wortDrin2(ids.get(id)!.de, k)).map((k) => `${id}:${k}`));
+    ok(ohneWort.length === 0, `K73c كلمةُ البطاقةِ تظهرُ في كلِّ متلازمةٍ من متلازماتِها (${ohneWort.slice(0, 3).join("|")})`);
+    const alleK = eintraege.flatMap(([, ks]) => ks);
+    ok(new Set(alleK).size === alleK.length, "K73d لا متلازمةَ مكرَّرةً بينَ البطاقات");
+    const ohnePartner = eintraege.filter(([id, ks]) => !ks.some((k) => partnerWort(ids.get(id)!, k))).map(([id]) => id);
+    const strukturell = eintraege.flatMap(([id, ks]) => ks.filter((k) => !partnerWort(ids.get(id)!, k)));
+    ok(ohnePartner.length === 0 && strukturell.length <= 15, `K73e لكلِّ بطاقةٍ متلازمةٌ واحدةٌ على الأقلِّ بشريكٍ قابلٍ للإخفاء؛ البنيويّةُ (im Verhältnis zu…) تُعرَضُ ولا تُختبَر (${strukturell.length} ≤15)`);
+    const rand = rng(73);
+    const uebungen = eintraege.map(([id], i) => kollokationUebung(ids.get(id)!, alleVokabeln, rand, i)).filter(Boolean) as Exercise[];
+    ok(uebungen.length === eintraege.length, `K73f تمرينُ «أكمل المتلازمة» يُولَّدُ لكلِّ بطاقةٍ لها متلازمات (${uebungen.length}/${eintraege.length})`);
+    ok(uebungen.every((u) => u.options!.length === 3 && new Set(u.options).size === 3 && u.options!.includes(u.answer as string) && u.promptDe.includes("_____")), "K73g ثلاثةُ خياراتٍ مختلفةٌ، الصحيحُ بينَها، وفراغٌ واحدٌ في العبارة");
+    const zweitRichtig = uebungen.filter((u) => { const id = u.id.split("-")[1]; const eigene = kollokationenFuer({ id }).join(" ").toLowerCase(); return u.options!.some((o) => o !== u.answer && eigene.includes(o.toLowerCase())); });
+    ok(zweitRichtig.length === 0, `K73h لا مشتّتَ يظهرُ في متلازماتِ البطاقةِ نفسِها — لا خيارَ ثانٍ صحيحاً (${zweitRichtig.map((u) => u.id).slice(0, 3).join(",")})`);
+    const ausnahmen = require("../content/kollok-ausnahmen.json") as Record<string, { de: string; grund: string }>;
+    const b2 = alleVokabeln.filter((k) => k.level === "B2");
+    const b2Ohne = b2.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id]).map((k) => k.id);
+    ok(Object.keys(ausnahmen).length <= 45 && Object.entries(ausnahmen).every(([id, a]) => ids.has(id) && !kollokationen[id] && a.grund.length > 10 && a.de === ids.get(id)!.de), `K73k قائمةُ الاستثناءِ صريحةٌ ومعلَّلةٌ ومحدودة (${Object.keys(ausnahmen).length} ≤25)، ولا بطاقةَ فيها لها متلازمات`);
+    const b1 = alleVokabeln.filter((k) => k.level === "B1");
+    /** قاعدةٌ آليّة: بطاقةٌ من ≥2 كلمتَي محتوى (in Kauf nehmen, Ich würde sagen) هي متلازمةٌ بذاتِها — تُعرَضُ كما هي ولا تحتاجُ متلازمةً لمتلازمة */
+    const istWendung = (de: string) => de.replace(/^(der|die|das|sich)\s+/, "").replace(/\s+(um|über|auf|an|für|von|mit|bei|nach|zu|gegen|vor)$/, "").split(/\s+/).length >= 2;
+    const b1Ohne = b1.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id] && !istWendung(k.de));
+    const b1Wendungen = b1.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id] && istWendung(k.de)).length;
+    ok(b1Ohne.length === 0, `K73m تغطيةُ B1 كاملة: ${b1.length - b1Ohne.length - b1Wendungen} بمتلازمات/استثناء + ${b1Wendungen} تعبيراً مركّباً بذاتِه = ${b1.length} (ناقص ${b1Ohne.length}: ${b1Ohne.slice(0, 3).map((k) => k.de).join(",")})`);
+    ok(b1Wendungen <= 330 && b1.filter((k) => istWendung(k.de) && kollokationen[k.id]).length <= 5, `K73n التعابيرُ المركّبةُ في B1 محدودةٌ (${b1Wendungen} ≤330)، ومَن أُعطي منها متلازماتٍ رغمَ ذلك ≤5 (fit halten, die sozialen Medien)`);
+    const a2 = alleVokabeln.filter((k) => k.level === "A2");
+    const a2Mit = a2.filter((k) => kollokationen[k.id]).length;
+    const a1 = alleVokabeln.filter((k) => k.level === "A1");
+    const a1Mit = a1.filter((k) => kollokationen[k.id]).length;
+    ok(a1Mit >= 170 && a1.filter((k) => kollokationen[k.id] && /^(der|die|das)?\s*(rot|blau|grün|und|oder|aber|eins|zwei|drei|vier|fünf|zehn|hundert|an|auf|in|mit|ohne)$/.test(k.de)).length === 0, `K73p تغطيةُ A1 (أفعالٌ وأسماءٌ يوميّة فقط): ${a1Mit}/${a1.length} — لا متلازماتٍ لأدواتٍ/ألوانٍ/أعداد`);
+    ok(a2Mit >= 245, `K73o تغطيةُ A2 (أفعالٌ وأسماءٌ يوميّة): ${a2Mit}/${a2.length} — الهدفُ المعلَنُ في الخارطةِ ≥150، لا التغطيةُ الكاملة`);
+    ok(b2Ohne.length === 0, `K73l تغطيةُ B2: ${b2.length - b2Ohne.length}/${b2.length} بطاقةً لها متلازماتٌ أو استثناءٌ معلَن (ناقص ${b2Ohne.length}، السقفُ ينزلُ مع كلِّ دفعة)`);
+    ok(uebungen.every((u) => grader.grade(u, u.answer as string).correct && !grader.grade(u, u.options!.find((o) => o !== u.answer)!).correct), "K73i المصحِّحُ يقبلُ الشريكَ الصحيحَ ويرفضُ المشتّت");
+    const pos = [0, 1, 2].map((i) => uebungen.filter((u) => u.options!.indexOf(u.answer as string) === i).length);
+    ok(pos.every((p) => p >= uebungen.length * 0.2), `K73j موضعُ الصحيحِ موزَّع (${pos.join("/")})`);
+  }
+
+
+  /* ═══ K74 · تقييمُ الثقةِ قبلَ الإجابة: تسجيلٌ محدود، إحصاءٌ صحيح، سطرُ تقريرٍ صادقٌ عن حدِّه ═══ */
+  {
+    const e = (sicher: boolean, correct: boolean, i: number) => ({ t: `2026-09-29T10:00:${String(i % 60).padStart(2, "0")}Z`, id: `q${i}`, sicher, correct });
+    let p = { sicherheit: [] } as unknown as Progress;
+    for (let i = 0; i < MAX_EINTRAEGE + 40; i++) p = logSicherheit(p, e(true, true, i));
+    ok(p.sicherheit!.length === MAX_EINTRAEGE && p.sicherheit![0].id === "q40", "K74a السجلُّ محدودٌ بـ500 والأقدمُ يُحذَفُ أوّلاً — لا تضخّمَ في localStorage");
+    const liste = [e(true, true, 1), e(true, true, 2), e(true, false, 3), e(false, true, 4), e(false, false, 5), e(true, false, 6)];
+    const st = sicherheitsStatistik(liste);
+    ok(st.n === 6 && st.sicherRichtig === 2 && st.sicherFalsch === 2 && st.unsicherRichtig === 1 && st.unsicherFalsch === 1, "K74b الفئاتُ الأربعُ تُعدُّ صحيحاً");
+    ok(Math.abs(st.kalibrierung - 3 / 6) < 1e-9 && Math.abs(st.ueberkonfidenz - 2 / 4) < 1e-9, "K74c المعايرةُ = (متأكّد∧صحيح + غيرُ متأكّد∧خطأ)/n، والثقةُ الخاطئةُ = خطأُ المتأكّدين/المتأكّدين");
+    ok(sicherheitsStatistik(undefined).n === 0 && sicherheitsStatistik([]).kalibrierung === 0 && sicherheitsZeile([]) === null && sicherheitsZeile(liste.slice(0, 4)) === null, "K74d بلا بيانات أو <5 تقييمات: لا سطرَ تقرير — لا ادّعاءَ من عيّنةٍ فارغة");
+    const warn = sicherheitsZeile(liste)!;
+    ok(warn.startsWith("⚠️") && warn.includes("2 من 4") && warn.includes("6 سؤالاً"), `K74e عندَ ثقةٍ خاطئة ≥30% يُحذَّرُ بالأرقامِ الخام (${warn.slice(0, 40)}…)`);
+    const gut = sicherheitsZeile([e(true, true, 1), e(true, true, 2), e(true, true, 3), e(false, false, 4), e(false, true, 5)])!;
+    ok(gut.startsWith("🎯") && gut.includes("80%"), "K74f وعندَ معايرةٍ جيّدةٍ سطرٌ هادئٌ بالنسبةِ الصحيحة");
+    const pr = { ...empty(), sicherheit: liste };
+    ok(lehrerBericht(pr).some((l) => l.startsWith("⚠️ ثقةٌ خاطئة")) && !lehrerBericht({ ...pr, sicherheit: [] }).some((l) => l.includes("ثقة")), "K74g تقريرُ المدرّسِ الأسبوعيُّ يحملُ السطرَ عندَ وجودِ بيانات ويصمتُ بدونِها");
+  }
+
+
+  /* ═══ K75 · دفترُ الأخطاءِ 2.0: أولويّةُ الثقةِ الخاطئة، وتمرينُ نقلٍ جديدٌ بدلَ السؤالِ نفسِه ═══ */
+  {
+    let p = empty();
+    p = upsertFehler(p, { falsch: "die Frist verpassen", richtig: "einhalten", art: "wortstellung", ar: "المتلازمة: die Frist einhalten", quelle: "kol" });
+    p = upsertFehler(p, { falsch: "Termin", richtig: "Termin", art: "wortstellung", ar: "⚠️ ثقةٌ خاطئة — كنتَ متأكّداً: einen Termin vereinbaren", quelle: "x" });
+    p = upsertFehler(p, { falsch: "xyzq", richtig: "qqqq-nicht-im-lexikon", art: "konstruktion", ar: "—", quelle: "y" });
+    for (let i = 0; i < 3; i++) p = upsertFehler(p, { falsch: "die Frist verpassen", richtig: "einhalten", art: "wortstellung", ar: "المتلازمة: die Frist einhalten", quelle: "kol" });
+    for (const k of Object.keys(p.fehler!)) p.fehler![k].srs.due = "2000-01-01";
+    const due = dueFehlerPriorisiert(p, 8);
+    ok(due.length === 3 && istUeberkonfident(due[0]) && due[1].richtig === "einhalten", "K75a الترتيب: الثقةُ الخاطئةُ أوّلاً ولو كانت أقلَّ تكراراً، ثم الأكثرُ تكراراً");
+    const kE = verwandteKarte({ richtig: "einhalten", falsch: "" }, alleVokabeln);
+    const kT = verwandteKarte({ richtig: "Termin", falsch: "" }, alleVokabeln);
+    ok(!!kE && kE.de === "einhalten" && !!kT && /Termin$/.test(kT.de), "K75b البطاقةُ المرتبطةُ تُوجَدُ بالكلمةِ الصحيحةِ معَ أو بدونِ أداة");
+    ok(verwandteKarte({ richtig: "qqqq-nicht-im-lexikon", falsch: "" }, alleVokabeln) === null && verwandteKarte({ richtig: "zu", falsch: "" }, alleVokabeln) === null, "K75c لا بطاقةَ لكلمةٍ خارجَ الدفترِ أو أقصرَ من 3 أحرف — يبقى السؤالُ المباشر");
+    const rand = rng(75);
+    const tE = transferUebung(due[1], alleVokabeln, rand)!;
+    ok(!!tE && tE.art === "kollokation" && tE.ex.type === "mc" && tE.ex.promptDe.includes("_____") && tE.ex.options!.includes(tE.ex.answer as string), "K75d خطأُ einhalten يصيرُ تمرينَ متلازمةٍ جديداً (فراغٌ + 3 خيارات) لا «أيُّ صيغةٍ صحيحة؟»");
+    ok(tE.ex.promptDe !== due[1].falsch && !tE.ex.options!.includes(due[1].falsch), "K75e التمرينُ الجديدُ لا يعيدُ الصيغةَ الخاطئةَ القديمةَ كخيار");
+    ok(transferUebung(due[2], alleVokabeln, rand) === null, "K75f بلا بطاقةٍ مرتبطة: null — الواجهةُ تعودُ للسؤالِ المباشر");
+    const kv = alleVokabeln.find((c) => c.exampleDe && !kollokationen[c.id])!;
+    const b = beispielUebung(kv, { key: "k" });
+    ok(!!b && b.type === "fill" && b.promptDe.includes("_____") && kv.exampleDe!.includes(String((b.answer as string[])[0])), `K75g بطاقةٌ بلا متلازماتٍ تُعطي تمرينَ ملءٍ من جملةِ مثالِها (${kv.de} → ${(b!.answer as string[])[0]})`);
+    ok(grader.grade(b!, (b!.answer as string[])[0]).correct && !grader.grade(b!, "xxxxxx").correct, "K75h المصحِّحُ يقبلُ الصيغةَ الواردةَ في الجملةِ ويرفضُ غيرَها");
+    const stichprobe = alleVokabeln.filter((c) => c.level !== "A1").slice(0, 400);
+    const abgedeckt = stichprobe.filter((c) => transferUebung({ key: "s", falsch: "", richtig: c.de, art: "x", ar: "", srs: newCard(), treffer: 0 }, alleVokabeln, rand)).length;
+    ok(abgedeckt >= stichprobe.length * 0.9, `K75i من 400 بطاقةٍ A2–B2 يوجدُ تمرينُ نقلٍ لـ${abgedeckt} (≥90%)`);
+  }
+
+
+  /* ═══ K76 · لا هلوسةَ في البنوكِ القديمة: اقتباساتُ النصوصِ القصيرةِ حرفية، والترابطُ يُقاسُ ولا يتراجع ═══ */
+  {
+    const zitatFehl: string[] = [];
+    let ohneBeleg = 0;
+    for (const t of texts) for (const q of t.questions) {
+      const e = q.explanationAr ?? "";
+      if (!e.includes("«")) ohneBeleg++;
+      for (const m of e.matchAll(/«([^»]+)»/g)) for (const piece of m[1].split(/…/)) { const p = piece.trim().replace(/^[ .,;:„“"]+|[ .,;:„“"]+$/g, ""); if (p.length >= 12 && !t.de.includes(p)) zitatFehl.push(`${q.id}:${p.slice(0, 20)}`); }
+    }
+    ok(zitatFehl.length === 0, `K76a كلُّ «اقتباس» في شروحِ النصوصِ القصيرةِ (300 سؤال) حرفيٌّ من نصِّه — كانت 8 مُدَّعاةً «حرفياً» وهي مُعادُ صياغتِها (${zitatFehl.slice(0, 3).join("|")})`);
+    ok(ohneBeleg === 0, `K76b أسئلةُ النصوصِ القصيرةِ بلا دليلٍ مقتبَس: ${ohneBeleg} (سقفٌ تنازليٌّ حتى الصفر — المسار 1 في masterplan-2)`);
+    const stem = (w: string) => { const x = w.toLowerCase().replace(/^(der|die|das|sich)\s+/, "").split(/\s+/)[0]; return x.slice(0, Math.max(4, x.length - 2)); };
+    const korpus: Record<string, string> = {};
+    for (const L of ["A1", "A2", "B1", "B2"]) korpus[L] = [...texts.filter((t) => t.level === L).map((t) => leseText(t).de + " " + t.de), ...dialogues.filter((d) => d.level === L).flatMap((d) => d.lines.map((l) => l.de)), ...sentences.filter((x) => x.level === L).map((x) => x.de)].join(" ").toLowerCase();
+    const soll: Record<string, number> = { A1: 97, A2: 90, B1: 80, B2: 82 };
+    const ist: Record<string, number> = {};
+    for (const L of Object.keys(soll)) { const cs = alleVokabeln.filter((c) => c.level === L); ist[L] = Math.floor(100 * cs.filter((c) => korpus[L].includes(stem(c.de))).length / cs.length); }
+    ok(Object.keys(soll).every((L) => ist[L] >= soll[L]), `K76c الترابطُ (كلمةُ البطاقةِ تظهرُ في نصٍّ/حوارٍ من مستواها): A1 ${ist.A1}% · A2 ${ist.A2}% · B1 ${ist.B1}% · B2 ${ist.B2}% — خطُّ أساسٍ لا تراجع (المسار 3)`);
+  }
+
+
+  /* ═══ K79 · لا وقائعَ خارجيّةً صامتة: كلُّ نسبةٍ مئويّةٍ أو سنةٍ في أيِّ حقلٍ ألمانيٍّ مُعلَنةٌ في القائمةِ البيضاءِ بسببها ═══ */
+  {
+    const wl = require("../content/fakten-whitelist.json") as { eintraege: { muster: string; grund: string }[] };
+    const muster = wl.eintraege.map((e) => e.muster);
+    ok(wl.eintraege.every((e) => e.grund.length > 8), "K79a كلُّ إدخالٍ في القائمةِ البيضاءِ له سببٌ مكتوب");
+    const AR = /[\u0600-\u06FF]/;
+    const banken: Record<string, unknown> = { texts, dialogues, grammar: grammarMap, writing: writingTasks, sentences, szenarien, pakete, luecken: require("../content/luecken.json"), lang: texts.map((t) => (t as { lang?: unknown }).lang ?? null) };
+    const treffer: string[] = [];
+    const walk = (o: unknown, wo: string) => {
+      if (typeof o === "string") { if (AR.test(o)) return; for (const m of o.matchAll(/\b\d{1,3}(?:[,.]\d+)?\s?(?:%|Prozent)\b|\b(?:1[89]\d\d|20[0-4]\d)\b/g)) { const hit = m[0].replace(/\s?%/, " Prozent").trim(); if (!muster.some((x) => hit.startsWith(x.split(" ")[0]) && hit.includes("Prozent") === x.includes("Prozent"))) treffer.push(`${wo}: ${hit}`); } return; }
+      if (Array.isArray(o)) o.forEach((x, i) => walk(x, wo + "[" + i + "]"));
+      else if (o && typeof o === "object") for (const [k, v] of Object.entries(o as Record<string, unknown>)) walk(v, wo + "." + k);
+    };
+    for (const [n, b] of Object.entries(banken)) walk(b, n);
+    ok(treffer.length === 0, `K79b نسبٌ/سنواتٌ غيرُ مُعلَنة: ${treffer.length} (${treffer.slice(0, 3).join(" | ")})`);
+  }
+
+
+  /* ═══ K81 · فهرسُ الترابطِ الديناميكيّ: كلمةُ النصِّ تجدُ بطاقتَها، والبطاقةُ تجدُ نصوصَها، واليتامى يُعَدّون ═══ */
+  {
+    ok(karteFuerWort("Frist", "B2")?.de === "die Frist" && karteFuerWort("einhalten", "B2")?.de === "einhalten" && karteFuerWort("frisch", "A1")?.de === "frisch", "K81a كلمةٌ بصيغتِها المعجميّة تجدُ بطاقتَها");
+    const gespr = karteFuerWort("gesprochen", "B1"); const kuend = karteFuerWort("kündigte", "B2");
+    ok(!!gespr && /sprech/.test(gespr.de) && !!kuend && /kündig/.test(kuend.de), `K81b صيغةٌ مصرَّفةٌ تجدُ بطاقتَها بالجذعِ (gesprochen→${gespr?.de}, kündigte→${kuend?.de})`);
+    ok(karteFuerWort("und") === null && karteFuerWort("die") === null && karteFuerWort("xq") === null, "K81c كلماتُ الوقفِ والقصيرةُ لا تصيرُ روابط");
+    const a1 = karteFuerWort("Arbeit", "A1");
+    ok(!!a1 && a1.level === "A1", `K81d يُفضَّلُ مستوى النصِّ أو الأدنى (Arbeit في نصِّ A1 → ${a1?.de} ${a1?.level})`);
+    const fr = alleVokabeln.find((c) => c.de === "die Frist")!;
+    const v = verknuepfung(fr);
+    ok(v.kollokationen.length >= 2 && (v.texte.length + v.dialoge.length) >= 1 && v.texte.every((t) => t.level === fr.level) && v.dialoge.every((d) => d.level === fr.level), `K81e بطاقةُ Frist (${fr.level}) ترتبطُ بمتلازماتِها وبـ${v.texte.length} نصًّا و${v.dialoge.length} حواراً من مستواها فقط`);
+    const soll: Record<string, number> = { A1: 98, A2: 99, B1: 97, B2: 99 };
+    const ab = Object.fromEntries(Object.keys(soll).map((L) => [L, abdeckung(L)]));
+    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — لا تراجع`);
+    const w = Object.fromEntries(Object.keys(soll).map((L) => [L, verwaiste(L).length]));
+    const wSoll: Record<string, number> = { A1: 0, A2: 0, B1: 0, B2: 0 };
+    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى (لا نصَّ ولا حوارَ من المستوى): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2} — سقفٌ تنازليٌّ عبرَ الحواراتِ الجديدة`);
+    ok(stammVon("die Frist") === "fris" && stammVon("sich bewerben um") === "bewerb" && stammVon("zu") === "", "K81h قاعدةُ الجذعِ ثابتةٌ ومطابقةٌ لـK76c");
+    const kw = alleVokabeln.find((c) => c.de === "der Klimawandel")!;
+    const vk = verknuepfung(kw);
+    ok(!!vk.komposita && vk.komposita.sicher && vk.komposita.teile.length === 2, "K81i تفكيكُ المركّبِ مدمجٌ في ترابطِ بطاقةِ Klimawandel");
+    ok(v.partnerKarten.length >= 1, `K81j بطاقاتُ الشركاءِ ترتبطُ ببطاقةِ Frist (${v.partnerKarten.map((p) => p.de).join(",")})`);
+  }
+
+
+  /* ═══ K83 · جملُ التمرينِ الجديدة (من اليتامى): بلا صوتٍ بعدُ (neu)، ≥3 يتامى من مستواها في كلِّ جملة، ≥60 لكلِّ مستوى B ═══ */
+  {
+    const neuS = sentences.filter((x) => (x as { neu?: boolean }).neu) as unknown as { id: string; level: string; de: string; ar: string; waisen?: string[] }[];
+    ok(neuS.length === 373 && neuS.every((x) => /[\u0600-\u06FF]/.test(x.ar) && !/[\u0600-\u06FF]/.test(x.de)), `K83a ${neuS.length} جملةً جديدة، عربيّتُها في حقلِها`);
+    const st = (w: string) => { const x = w.toLowerCase().replace(/^(der|die|das|sich|jdn|jdm)\s+/, "").replace(/^etwas\s+/, "").split(/\s+/)[0]; return x.slice(0, Math.max(4, x.length - 2)); };
+    const normD = (s: string) => s.toLowerCase().replace(/é/g, "e").replace(/[^a-zäöüß0-9 -]/g, " ");
+    ok(neuS.every((x) => (x.waisen ?? []).filter((w) => alleVokabeln.some((c) => c.de === w && c.level === x.level) && normD(x.de).includes(st(w))).length >= 3), "K83b كلُّ جملةٍ تُدخِلُ ≥3 بطاقاتٍ يتيمةٍ من مستواها فعلاً");
+    ok(["A1", "A2", "B1", "B2"].every((L) => sentences.filter((x) => x.level === L).length >= 60), `K83c جملُ كلِّ مستوى ≥60 (${["A1", "A2", "B1", "B2"].map((L) => sentences.filter((x) => x.level === L).length).join("/")}) — مصفوفةُ الاكتمالِ مكتملةٌ لهذه الخلية`);
+    ok(new Set(sentences.map((x) => x.id)).size === sentences.length && sentences.length - new Set(sentences.map((x) => x.de)).size === 1, "K83d لا معرِّفَ مكرَّراً؛ جملةٌ قديمةٌ واحدةٌ مكرَّرةُ النصِّ بمعرِّفَين (Obwohl es geregnet hat…، لكلٍّ صوتُه) — مُعلَنة، ولا جديدَ مكرَّر");
+  }
+
+
+  /* ═══ K84 · نصوصُ القراءةِ الجديدة (من اليتامى): بلا صوتٍ بعدُ (neu)، ≥12 يتيمةً من مستواها، أدلةٌ حرفية، مشتّتاتٌ مرساة ═══ */
+  {
+    const neuT = texts.filter((t) => (t as { neu?: boolean }).neu) as unknown as { id: string; level: string; de: string; ar: string; waisen?: string[]; questions: Exercise[] }[];
+    ok(neuT.length === 25 && neuT.every((t) => (t.level === "B2" || t.level === "B1") && !hoerenAudio[t.id]) && neuT.filter((t) => t.level === "B1").length === 10, `K84a ${neuT.length} نصًّا جديداً (15 B2 + 10 B1) بلا صوتٍ — مُعلَنة`);
+    const st = (w: string) => { const x = w.toLowerCase().replace(/^(der|die|das|sich|jdn|jdm)\s+/, "").replace(/^etwas\s+/, "").split(/\s+/)[0]; return x.slice(0, Math.max(4, x.length - 2)); };
+    const normD = (s: string) => s.toLowerCase().replace(/é/g, "e").replace(/[^a-zäöüß0-9 ]/g, " ");
+    ok(neuT.every((t) => (t.waisen ?? []).filter((w) => alleVokabeln.some((c) => c.de === w && c.level === t.level) && normD(t.de).includes(st(w))).length >= 12), "K84b كلُّ نصٍّ يُدخِلُ ≥12 بطاقةً يتيمةً من مستواه");
+    ok(neuT.every((t) => t.de.split(/\s+/).length >= 150 && t.de.split(/\s+/).length <= 230 && t.de.split(/\n\n+/).length >= 3 && t.questions.length === 4), "K84c 150–230 كلمة، 3 فقرات، 4 أسئلة");
+    const zit = neuT.flatMap((t) => t.questions.flatMap((q) => [...(q.explanationAr ?? "").matchAll(/«([^»]+)»/g)].flatMap((m) => m[1].split(/…/).map((p) => p.trim().replace(/^[ .,;:„“"]+|[ .,;:„“"]+$/g, ""))).filter((p) => p.length >= 12 && !t.de.includes(p))));
+    ok(zit.length === 0, `K84d كلُّ اقتباسٍ حرفيٌّ (${zit.length})`);
+    ok(neuT.every((t) => t.questions.filter((q) => q.type === "mc").every((q) => q.options!.includes(q.answer as string) && q.options!.filter((o) => o !== q.answer).every((o) => normD(o).split(" ").some((w) => w.length >= 4 && normD(t.de).includes(w.slice(0, Math.max(4, w.length - 2))))))), "K84e كلُّ مشتّتٍ مرساهُ كلمةٌ من النصِّ نفسِه");
+  }
+
+
+  /* ═══ K85 · الكتابةُ ≥10 لكلِّ مستوى؛ الجديدُ بمعاييرَ عربيّةٍ ونموذجٍ بطولِ المستوى وبلا أرقامٍ قابلةٍ للتكذيب ═══ */
+  {
+    const neuW = writingTasks.filter((w) => (w as { neu?: boolean }).neu);
+    ok(["A1", "A2", "B1", "B2"].every((L) => writingTasks.filter((w) => w.level === L).length >= 10), `K85a مهامُّ الكتابةِ لكلِّ مستوى ≥10 (${["A1", "A2", "B1", "B2"].map((L) => writingTasks.filter((w) => w.level === L).length).join("/")})`);
+    const LEN: Record<string, [number, number]> = { A1: [25, 80], A2: [50, 130], B1: [80, 170], B2: [120, 260] };
+    ok(neuW.length === 12 && neuW.every((w) => w.criteria.length >= 3 && w.criteria.every((c) => /[\u0600-\u06FF]/.test(c)) && /[\u0600-\u06FF]/.test(w.taskAr) && !/[\u0600-\u06FF]/.test(w.sample) && w.sample.split(/\s+/).length >= LEN[w.level][0] && w.sample.split(/\s+/).length <= LEN[w.level][1]), "K85b 12 مهمةً جديدة: ≥3 معاييرَ عربيّة، نموذجٌ ألمانيٌّ بطولِ المستوى");
+    ok(neuW.every((w) => !/\d{1,3}\s?(%|Prozent)|\b(1[89]\d\d|20[0-4]\d)\b/.test(w.sample)), "K85c لا نسبَ ولا سنواتٍ في نماذجِ الكتابةِ الجديدة");
+    ok(new Set(writingTasks.map((w) => w.id)).size === writingTasks.length, "K85d معرِّفاتُ الكتابةِ فريدة");
+  }
+
+  /* ═══ K80 · مصفوفةُ الاكتمالِ (content/soll-matrix.json): لا مستوى بناقص، وكلُّ خليّةٍ تحققُ SOLL بلا تراجع ═══ */
+  {
+    const sollMatrix = require("../content/soll-matrix.json") as Record<string, Record<string, number>>;
+    const alleGrammatik = Object.values(grammarMap);
+    const lvls = ["A1", "A2", "B1", "B2"];
+    for (const lvl of lvls) {
+      const v = alleVokabeln.filter((k) => k.level === lvl);
+      const beispiele = v.filter((k) => k.exampleDe && k.exampleAr).length;
+      const kolls = v.filter((k) => kollokationen[k.id]).length;
+      const txts = texts.filter((t) => t.level === lvl).length;
+      const dlgs = dialogues.filter((d) => d.level === lvl).length;
+      const gramm = alleGrammatik.filter((g) => g.level === lvl).length;
+      const schr = writingTasks.filter((w) => w.level === lvl).length;
+      const saetz = sentences.filter((s) => s.level === lvl).length;
+
+      ok(v.length >= sollMatrix.vokabeln[lvl], `K80a·${lvl} المفرداتُ ≥ SOLL (${v.length}/${sollMatrix.vokabeln[lvl]})`);
+      ok(beispiele >= sollMatrix.beispieleUndUebersetzung[lvl], `K80b·${lvl} الأمثلةُ وترجماتُها ≥ SOLL (${beispiele}/${sollMatrix.beispieleUndUebersetzung[lvl]})`);
+      ok(kolls >= sollMatrix.kollokationen[lvl], `K80c·${lvl} المتلازماتُ ≥ SOLL (${kolls}/${sollMatrix.kollokationen[lvl]})`);
+      ok(txts >= sollMatrix.texte[lvl], `K80d·${lvl} النصوصُ ≥ SOLL (${txts}/${sollMatrix.texte[lvl]})`);
+      ok(dlgs >= sollMatrix.dialoge[lvl], `K80e·${lvl} الحواراتُ ≥ SOLL (${dlgs}/${sollMatrix.dialoge[lvl]})`);
+      ok(gramm >= sollMatrix.grammatik[lvl], `K80f·${lvl} دروسُ القواعدِ ≥ SOLL (${gramm}/${sollMatrix.grammatik[lvl]})`);
+      ok(schr >= sollMatrix.schreiben[lvl], `K80g·${lvl} مهامُّ الكتابةِ ≥ SOLL (${schr}/${sollMatrix.schreiben[lvl]})`);
+      ok(saetz >= sollMatrix.saetze[lvl], `K80h·${lvl} جملُ التمرينِ ≥ SOLL (${saetz}/${sollMatrix.saetze[lvl]})`);
+    }
+
+    const a1a2Soll = require("../content/kollok-a1a2-soll.json") as { A1: { sollAnzahl: number; karten: { id: string }[] }; A2: { sollAnzahl: number; karten: { id: string }[] } };
+    ok(a1a2Soll.A1.karten.length === 170 && a1a2Soll.A1.karten.every((k) => !!kollokationen[k.id]), "K80i قائمةُ متلازماتِ A1 المعلنة 170/170 في kollokationen.json");
+    ok(a1a2Soll.A2.karten.length === 245 && a1a2Soll.A2.karten.every((k) => !!kollokationen[k.id]), "K80j قائمةُ متلازماتِ A2 المعلنة 245/245 في kollokationen.json");
+  }
+
+  /* ═══ K86 · رادارُ القواعدِ في النصوص: كلُّ نصِّ B1/B2 يسمّي ≥2 موضوعين نحويَّين مع شواهدَ حرفيّة ═══ */
+  {
+    const { grammatikImText } = require("../lib/grammatikRadar");
+    const b1b2 = texts.filter((t) => t.level === "B1" || t.level === "B2");
+    ok(b1b2.every((t) => grammatikImText(leseText(t).de).length >= 2), `K86a كلُّ نصوصِ B1/B2 الـ${b1b2.length} ترصدُ ≥2 موضوعين نحويَّين`);
+    let belegFehl = 0;
+    for (const t of texts) {
+      const de = leseText(t).de;
+      for (const f of grammatikImText(de)) {
+        if (!de.includes(f.beleg)) belegFehl++;
+      }
+    }
+    ok(belegFehl === 0, `K86b بوّابةُ الصدق: كلُّ شاهدٍ نحويٍّ مقتبَسٌ حرفياً من النصِّ نفسِه (${belegFehl} خطأ)`);
+  }
+
+  /* ═══ K69 · بوّاباتُ التدقيقِ الشاملِ 2026-09-29 (docs/tadqiq-2026-09-29.md) ═══ */
+  {
+    const AR = /[\u0600-\u06FF]/;
+    const alleUeb = Object.entries(grammarMap).flatMap(([k, t]) => t.exercises.map((e) => ({ k, e })));
+    const ohneAr = alleUeb.filter(({ e }) => !AR.test(e.explanationAr ?? "")).map(({ e }) => e.id);
+    ok(ohneAr.length === 0, `K69a كلُّ تمرينِ قواعدَ له شرحٌ عربيّ (ناقص: ${ohneAr.slice(0, 5).join(",")})`);
+    const arImDe = alleUeb.filter(({ e }) => e.type !== "translate" && e.type !== "fill" && !/bedeutet/.test(e.promptDe) && AR.test(e.promptDe)).map(({ e }) => e.id);
+    ok(arImDe.length === 0, `K69b لا عربيةَ في promptDe لتمارينِ order/mc/truefalse — التعليمةُ في promptAr (${arImDe.slice(0, 5).join(",")})`);
+    const leerToken = alleUeb.filter(({ e }) => Array.isArray(e.answer) && e.answer.some((x) => !String(x).trim())).map(({ e }) => e.id);
+    ok(leerToken.length === 0, `K69c لا رمزَ فارغاً في إجاباتِ الترتيب (${leerToken.join(",")})`);
+    const typo = alleUeb.filter(({ e }) => /___ \./.test(e.promptDe)).map(({ e }) => e.id);
+    ok(typo.length === 0, `K69d لا فراغَ قبلَ النقطةِ بعدَ ___ (${typo.join(",")})`);
+    const imp = alleUeb.find(({ e }) => e.id === "a2-imp-e2")!.e, stg = alleUeb.find(({ e }) => e.id === "a2-stg-e5")!.e;
+    ok(!/sprechen!/.test(imp.promptDe) && /ist es am/.test(stg.promptDe), "K69e الأخطاءُ اللغويةُ المصحَّحة ثابتة: «Sprechen Sie bitte langsamer!» · «Heute ist es am kältesten»");
+    const pq = grammarMap["b1-plusquamperfekt"];
+    ok(pq.exercises.length >= 6 && pq.exercises.every((e) => /hatte|war|gegessen|Plusquamperfekt|abgefahren|bestanden/.test(e.promptDe + JSON.stringify(e.answer))),
+      `K69f درسُ Plusquamperfekt: ≥6 تمارين وكلُّها في موضوعِه (${pq.exercises.length})`);
+    for (const k of ["b2-partizip", "b1-wortbildung"]) {
+      const bad = (grammarMap[k].examples ?? []).filter((x) => !/[.!?…"“”»]$/.test(x.de.trim()));
+      ok(bad.length === 0, `K69g أمثلةُ ${k} تنتهي بعلامةِ ترقيم (${bad.length})`);
+    }
+    // تغطيةُ الخطة: كلُّ نصٍّ وكلُّ حوارٍ يُجدوَلُ مرةً على الأقلّ في 270 يوماً
+    const gesehenT = new Set<string>(), gesehenD = new Set<string>();
+    for (let d = 1; d <= TOTAL_DAYS; d++) for (const t of buildDay(d, emptyProgress).tasks) { if (t.textId) gesehenT.add(t.textId); if (t.dialogueId) gesehenD.add(t.dialogueId); }
+    const fehltT = texts.filter((t) => !gesehenT.has(t.id)).map((t) => t.id), fehltD = dialogues.filter((d) => !gesehenD.has(d.id)).map((d) => d.id);
+    ok(fehltT.length === 0, `K69h كلُّ النصوصِ الـ${texts.length} مجدوَلة (بلا موعد: ${fehltT.slice(0, 6).join(",")})`);
+    ok(fehltD.length === 0, `K69i كلُّ الحواراتِ الـ${dialogues.length} مجدوَلة (بلا موعد: ${fehltD.slice(0, 6).join(",")})`);
+    const a = buildDay(3, emptyProgress).tasks.map((t) => t.textId ?? t.dialogueId).join("|"), b = buildDay(3, emptyProgress).tasks.map((t) => t.textId ?? t.dialogueId).join("|");
+    ok(a === b, "K69j الدورانُ حتميّ: اليومُ نفسُه يعطي النصوصَ نفسَها");
+  }
+
+  /* ═══ K70 · النسخُ الطويلةُ للقراءة — طولُ CEFR + بوّابةُ الهذيان (كلُّ اقتباسٍ في الشرحِ موجودٌ حرفياً في النص) ═══ */
+  {
+    const AR = /[\u0600-\u06FF]/;
+    const SOLL: Record<string, [number, number]> = { A1: [90, 160], A2: [100, 200], B1: [150, 320], B2: [220, 420] };
+    const mitLang = texts.filter((t) => t.lang);
+    const b2 = texts.filter((t) => t.level === "B2");
+    ok(b2.filter((t) => !(t as { neu?: boolean }).neu).every((t) => !!t.lang), `K70a كلُّ نصوصِ B2 القديمةِ لها نسخةٌ طويلة؛ الجديدةُ (neu) طويلةٌ بذاتِها (${b2.filter((t) => t.lang).length})`);
+    const b1 = texts.filter((t) => t.level === "B1");
+    ok(b1.filter((t) => !(t as { neu?: boolean }).neu).every((t) => !!t.lang), `K70a2 كلُّ نصوصِ B1 القديمةِ لها نسخةٌ طويلة؛ الجديدةُ طويلةٌ بذاتِها (${b1.filter((t) => t.lang).length})`);
+    // الامتحاناتُ تقرأُ النسخةَ الطويلة
+    const kl = buildSkillKlausur(200, "lesen" as SkillKey).sections[0] as unknown as { passages?: { de: string }[] };
+    ok(!!kl.passages && kl.passages.length === 6 && kl.passages.every((p) => p.de.split(/\s+/).length >= 150), "K70j كلاوزور القراءةِ في B2 يعرضُ النصوصَ الطويلةَ لا القصيرة");
+    const laenge = mitLang.filter((t) => { const n = t.lang!.de.split(/\s+/).length; const [lo, hi] = SOLL[t.level]; return n < lo || n > hi; }).map((t) => t.id);
+    ok(laenge.length === 0, `K70b طولُ كلِّ نسخةٍ طويلةٍ ضمنَ نطاقِ مستواها (خارجه: ${laenge.join(",")})`);
+    ok(mitLang.every((t) => !AR.test(t.lang!.de) && t.lang!.de.split(/\n\n+/).length >= 3), "K70c النصُّ الطويلُ ألمانيٌّ صِرفٌ وذو ≥3 فقرات");
+    ok(mitLang.every((t) => t.lang!.questions.length >= (t.level === "A2" || t.level === "A1" ? 4 : 5) && AR.test(t.lang!.ar)), "K70d ≥5 أسئلةٍ لكلِّ نصٍّ طويل (A2: ≥4) + ملخّصٌ عربيّ");
+    const a2 = texts.filter((t) => t.level === "A2");
+    ok(a2.every((t) => !!t.lang), `K70a3 كلُّ نصوصِ A2 الـ${a2.length} لها نسخةٌ طويلة (${a2.filter((t) => t.lang).length})`);
+    ok(texts.every((t) => !!t.lang || ((t as { neu?: boolean }).neu && t.de.split(/\s+/).length >= 150)), `K70a4 كلُّ النصوصِ الـ${texts.length}: القديمةُ بنسخةٍ طويلة (${texts.filter((t) => t.lang).length}) والجديدةُ ≥150 كلمةً بذاتِها`);
+    const zitatFehl: string[] = [], antwortFehl: string[] = [], ids = new Set<string>(), doppel: string[] = [];
+    for (const t of mitLang) for (const q of t.lang!.questions) {
+      if (ids.has(q.id)) doppel.push(q.id); ids.add(q.id);
+      if (q.type === "mc" && !(q.options ?? []).includes(q.answer as string)) antwortFehl.push(q.id);
+      if (q.type === "fill") for (const a of (Array.isArray(q.answer) ? q.answer : [q.answer])) if (!new RegExp(`\\b${a}\\b`).test(t.lang!.de)) antwortFehl.push(q.id + ":" + a);
+      if (!AR.test(q.explanationAr ?? "")) antwortFehl.push(q.id + ":ar");
+      for (const m of (q.explanationAr ?? "").matchAll(/«([^»]+)»/g)) for (const piece of m[1].split(/…|\.\.\./)) {
+        const p = piece.trim().replace(/^[\s.,;:„“"]+|[\s.,;:„“"]+$/g, "");
+        if (p.length >= 12 && !t.lang!.de.includes(p)) zitatFehl.push(`${q.id}«${p.slice(0, 30)}»`);
+      }
+    }
+    ok(zitatFehl.length === 0, `K70e بوّابةُ الهذيان: كلُّ اقتباسٍ «…» في الشروحِ موجودٌ حرفياً في النصّ (${zitatFehl.slice(0, 3).join(" ")})`);
+    ok(antwortFehl.length === 0 && doppel.length === 0, `K70f إجاباتُ mc ضمنَ الخيارات، إجاباتُ fill من النصّ، شروحٌ عربية، معرّفاتٌ فريدة (${antwortFehl.slice(0, 3).join(",")}${doppel.join(",")})`);
+    const posen = new Set(mitLang.flatMap((t) => t.lang!.questions.filter((q) => q.type === "mc").map((q) => (q.options ?? []).indexOf(q.answer as string))));
+    ok(posen.size >= 3, `K70g موضعُ الإجابةِ الصحيحةِ في mc متنوّع (${[...posen].join(",")})`);
+    const tf = mitLang.flatMap((t) => t.lang!.questions.filter((q) => q.type === "truefalse"));
+    const tfOk = tf.every((q) => (q.options ?? []).includes(q.answer as string) && (q.answer === "richtig" || q.answer === "falsch"));
+    const tfR = tf.filter((q) => q.answer === "richtig").length;
+    ok(tf.length > 0 && tfOk && tfR >= tf.length * 0.35 && tfR <= tf.length * 0.65, `K70h صواب/خطأ: الإجابةُ ضمنَ الخيارات (richtig/falsch) ومتوازنة (${tfR}/${tf.length} صواب)`);
+    const kurzErhalten = texts.filter((t) => t.lang && t.de.split(/\s+/).length < 100);
+    ok(kurzErhalten.length === mitLang.length, "K70i النصُّ القصيرُ `de` محفوظٌ لِنصِّ الاستماعِ المسجَّل (الصوتُ لا يفقدُ نصَّه)");
+  }
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

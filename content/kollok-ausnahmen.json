@@ -1,0 +1,170 @@
+{
+ "v176": {
+  "de": "angesichts",
+  "grund": "Präposition (angesichts) — keine Nomen-Verb-Verbindung"
+ },
+ "v596": {
+  "de": "in den Ruhestand gehen",
+  "grund": "ist selbst eine Wendung (in den Ruhestand gehen)"
+ },
+ "v674": {
+  "de": "ins Minus rutschen",
+  "grund": "ist selbst eine Wendung (ins Minus rutschen)"
+ },
+ "v693": {
+  "de": "sich leisten können",
+  "grund": "ist selbst eine Wendung (sich leisten können)"
+ },
+ "v949": {
+  "de": "jdn bloßstellen",
+  "grund": "ist selbst eine Wendung (jdn bloßstellen)"
+ },
+ "v969": {
+  "de": "jdm etwas vorwerfen",
+  "grund": "ist selbst eine Wendung (jdm etwas vorwerfen)"
+ },
+ "v991": {
+  "de": "an seine Grenzen stoßen",
+  "grund": "ist selbst eine Wendung (an seine Grenzen stoßen)"
+ },
+ "v1131": {
+  "de": "sitzen bleiben",
+  "grund": "ist selbst eine Wendung (sitzen bleiben)"
+ },
+ "v1268": {
+  "de": "gentechnisch verändert",
+  "grund": "Partizip-Wendung (gentechnisch verändert) — ist selbst die feste Verbindung"
+ },
+ "v1314": {
+  "de": "dicht bebaut",
+  "grund": "Partizip-Wendung (dicht bebaut) — ist selbst die feste Verbindung"
+ },
+ "v1399": {
+  "de": "erinnerungspolitisch",
+  "grund": "Adjektiv nur attributiv in Fachtexten (erinnerungspolitisch) — keine feste Verbindung außerhalb"
+ },
+ "vg-argumen-009": {
+  "de": "dennoch",
+  "grund": "Konnektor (dennoch) — keine Nomen-Verb-Verbindung"
+ },
+ "vg-argumen-010": {
+  "de": "allerdings",
+  "grund": "Konnektor (allerdings)"
+ },
+ "vg-argumen-015": {
+  "de": "folglich",
+  "grund": "Konnektor (folglich)"
+ },
+ "vg-argumen-016": {
+  "de": "daher",
+  "grund": "Konnektor (daher)"
+ },
+ "vg-argumen-018": {
+  "de": "hinsichtlich",
+  "grund": "Präposition (hinsichtlich)"
+ },
+ "vh-projekt-041": {
+  "de": "erfreulicherweise",
+  "grund": "Satzadverb (erfreulicherweise)"
+ },
+ "vh-projekt-042": {
+  "de": "bedauerlicherweise",
+  "grund": "Satzadverb (bedauerlicherweise)"
+ },
+ "vk-b1x-034": {
+  "de": "vermutlich",
+  "grund": "Satzadverb (vermutlich)"
+ },
+ "vo-b1v-019": {
+  "de": "aufgrund",
+  "grund": "Präposition (aufgrund)"
+ },
+ "vo-b1v-020": {
+  "de": "infolge",
+  "grund": "Präposition (infolge)"
+ },
+ "vo-b1v-021": {
+  "de": "anlässlich",
+  "grund": "Präposition (anlässlich)"
+ },
+ "vo-b1v-022": {
+  "de": "mangels",
+  "grund": "Präposition (mangels)"
+ },
+ "vo-b1v-023": {
+  "de": "zwecks",
+  "grund": "Präposition (zwecks)"
+ },
+ "vo-b1v-025": {
+  "de": "gemäß",
+  "grund": "Präposition (gemäß)"
+ },
+ "vo-b1v-026": {
+  "de": "entgegen",
+  "grund": "Präposition (entgegen)"
+ },
+ "vo-b1v-027": {
+  "de": "dank",
+  "grund": "Präposition (dank)"
+ },
+ "vo-b1v-028": {
+  "de": "statt",
+  "grund": "Präposition (statt)"
+ },
+ "vo-b1v-029": {
+  "de": "außerhalb",
+  "grund": "Präposition (außerhalb)"
+ },
+ "vo-b1v-031": {
+  "de": "bezüglich",
+  "grund": "Präposition (bezüglich)"
+ },
+ "vo-b1v-033": {
+  "de": "unweit",
+  "grund": "Präposition (unweit)"
+ },
+ "vo-b1v-034": {
+  "de": "binnen",
+  "grund": "Präposition (binnen)"
+ },
+ "vs-b1r-014": {
+  "de": "zunächst",
+  "grund": "Textadverb (zunächst)"
+ },
+ "vs-b1r-015": {
+  "de": "anschließend",
+  "grund": "Textadverb (anschließend)"
+ },
+ "vs-b1r-016": {
+  "de": "abschließend",
+  "grund": "Textadverb (abschließend)"
+ },
+ "vs-b1r-017": {
+  "de": "einleitend",
+  "grund": "Textadverb (einleitend)"
+ },
+ "vs-b1r-018": {
+  "de": "hierbei",
+  "grund": "Textadverb (hierbei)"
+ },
+ "vs-b1r-019": {
+  "de": "dabei",
+  "grund": "Textadverb (dabei)"
+ },
+ "vs-b1r-022": {
+  "de": "erstens",
+  "grund": "Reihenadverb (erstens)"
+ },
+ "vs-b1r-023": {
+  "de": "zweitens",
+  "grund": "Reihenadverb (zweitens)"
+ },
+ "vs-b1r-024": {
+  "de": "letztlich",
+  "grund": "Textadverb (letztlich)"
+ },
+ "vo-b1v-032": {
+  "de": "jenseits von",
+  "grund": "Präposition (jenseits von)"
+ }
+}

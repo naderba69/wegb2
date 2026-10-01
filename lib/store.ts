@@ -10,6 +10,8 @@ import {
   type TaskKind,
   type TaskResult,
 } from "./types";
+import { clampMinuten } from "./cefr";
+import { logSicherheit } from "./sicherheit";
 import { upsertFehler, gradeFehlerIn } from "./fehler";
 import { checkAbzeichen } from "./spiel";
 import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
@@ -99,7 +101,7 @@ export function useProgress() {
 
   /** تسجيل نتيجة مهمة — النجاح ≥80% */
   const submitTask = useCallback(
-    (day: number, taskId: string, score: number, total: number, kind?: TaskKind) => {
+    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number) => {
       update((p) => {
         const prev = p.plan.tasks[taskId];
         const passed = total > 0 && score / total >= 0.8;
@@ -111,6 +113,7 @@ export function useProgress() {
           attempts: (prev?.attempts ?? 0) + 1,
           kind: kind ?? prev?.kind,
           at: new Date().toISOString(),
+          geplantMin: geplantMin ?? prev?.geplantMin,
         };
         return checkAbzeichen(
           logK(
@@ -215,6 +218,29 @@ export function useProgress() {
 }
 
 /** إدراج خطأ في الدفتر فوراً (بلا hook — من أي مكوّن/أي حدث) */
+/** ⏱️ حجزُ دقائقَ فعلية — المصدرُ الوحيدُ لساعاتِ CEFR المقضية.
+ *  تُclamp: لا زيادةَ سالبة، ولا أكثرُ من 90 دقيقة في حجزٍ واحد
+ *  (تبويبٌ مفتوحٌ ومنسيٌّ ليس ساعةَ دراسة، وقياسٌ كاذبٌ أخطرُ من لا قياس). */
+export function bucheMinuten(minuten: number): number {
+  const z = clampMinuten(minuten);
+  if (z <= 0) return 0;
+  try {
+    const p = loadProgress();
+    saveProgress({
+      ...p,
+      plan: { ...p.plan, minutenEffektiv: (p.plan.minutenEffektiv ?? 0) + z },
+    });
+  } catch {
+    return 0;
+  }
+  return z;
+}
+
+/** تسجيلُ تقييمِ الثقةِ فوراً (يعيشُ داخلَ Progress فيُزامَنُ معَ الملفِّ الشخصيّ) */
+export function logSicherheitNow(e: import("./types").SicherheitsEintrag) {
+  saveProgress(logSicherheit(loadProgress(), e));
+}
+
 export function addFehlerNow(e: FehlerEintrag) {
   saveProgress(upsertFehler(loadProgress(), e));
 }

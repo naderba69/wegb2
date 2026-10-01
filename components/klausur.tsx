@@ -7,7 +7,8 @@ import { getDialogue } from "@/lib/content";
 import { normalize } from "@/lib/grader";
 import { addFehlerNow, logKN } from "@/lib/store";
 import type { Kompetenz } from "@/lib/types";
-import { speakAny, speakLine, stopSpeech, listenDe, recognitionAvailable } from "@/lib/speech";
+import { speakAny, speakLine, stopSpeech, listenDe, recognitionAvailable, cloudSpracheFrei } from "@/lib/speech";
+import { CLOUD_SPEECH_DISCLOSURE } from "./trainer";
 import { De } from "./De";
 
 function gradeItem(ex: Exercise, resp: string): boolean {
@@ -294,7 +295,7 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
                       <li key={x}><De>{x}</De></li>
                     ))}
                   </ul>
-                  {recognitionAvailable() ? (
+                  {cloudSpracheFrei() ? (
                     <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
                       <button
                         className="btn"
@@ -314,7 +315,13 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
                       >
                         {micOn ? "🎙️ جارٍ الاستماع — اضغط للإيقاف" : "🎙️ جرّب الميكروفون (تدريبُ طلاقةٍ لا تصحيحٌ آليّ)"}
                       </button>
+                      <span data-testid="cloud-speech-disclosure" style={{ fontSize: "0.78rem", color: "var(--color-cola)", flexBasis: "100%" }}>{CLOUD_SPEECH_DISCLOSURE}</span>
                       {sprBy[secIdx] ? <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }} dir="ltr">«{sprBy[secIdx]}»</span> : null}
+                    </div>
+                  ) : recognitionAvailable() ? (
+                    <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>
+                      ⏸️ عطّلتَ التعرُّفَ السحابيَّ من الإعدادات. في الامتحانِ الشفويِّ الحقيقيِّ لا حاجةَ إلى آلة:
+                      سجِّلْ على هاتفِك وقارِنْ بالدعاماتِ أعلاه — وقيِّمْ نفسَك بالقائمةِ أدناه كما تفعلُ اللجنة.
                     </div>
                   ) : (
                     <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>تعرُّفُ الكلامِ غيرُ متوفّرٍ في متصفّحِك — جرّب Chrome/Edge، أو اكتفِ بالتسجيلِ على هاتفك والمقارنةِ بالدعامات.</div>
@@ -354,6 +361,85 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
                     {p.key}: <span className="rtl-num">{p.s}/{p.t}</span>
                   </span>
                 ))}
+              </div>
+
+              {/* Notenblatt — كشف درجات الامتحان الموحد مع معايير Goethe الرسمية */}
+              <div
+                style={{
+                  margin: "1.2rem auto",
+                  padding: "1rem",
+                  background: "white",
+                  borderRadius: "0.8rem",
+                  border: "1px solid #ddd",
+                  textAlign: "start",
+                }}
+              >
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "2px solid var(--color-gold)", paddingBottom: "0.5rem", marginBottom: "0.8rem" }}>
+                  <div>
+                    <h4 style={{ margin: 0, fontWeight: 900, fontSize: "1.05rem" }}>📜 Goethe-Zertifikat / telc — Notenblatt</h4>
+                    <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>شهادة محاكاة رقمية موحدة · المستوى {k.level}</div>
+                  </div>
+                  <button className="btn btn-ghost weg-print-hide" style={{ fontSize: "0.82rem", padding: "0.3rem 0.6rem" }} onClick={() => window.print()}>
+                    🖨️ طباعة النتيجة
+                  </button>
+                </div>
+
+                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem" }}>
+                  <thead>
+                    <tr style={{ background: "var(--color-paper2)", borderBottom: "1px solid #ccc", textAlign: "start" }}>
+                      <th style={{ padding: "0.45rem 0.6rem" }}>الوحدة (Modul)</th>
+                      <th style={{ padding: "0.45rem 0.6rem", textAlign: "center" }}>النقاط</th>
+                      <th style={{ padding: "0.45rem 0.6rem", textAlign: "center" }}>النسبة</th>
+                      <th style={{ padding: "0.45rem 0.6rem", textAlign: "center" }}>الحالة</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {report.per.map((p) => {
+                      const modPct = p.t ? Math.round((p.s / p.t) * 100) : 0;
+                      const modOk = modPct >= 60;
+                      return (
+                        <tr key={p.key} style={{ borderBottom: "1px solid #eee" }}>
+                          <td style={{ padding: "0.5rem 0.6rem", fontWeight: 700 }}>
+                            {p.key.startsWith("Lesen") ? "📖 " : p.key.startsWith("Hören") ? "🎧 " : p.key.startsWith("Schreiben") ? "✍️ " : p.key.startsWith("Sprechen") ? "🗣️ " : "🧩 "}
+                            {p.key}
+                          </td>
+                          <td style={{ padding: "0.5rem 0.6rem", textAlign: "center" }} className="rtl-num">
+                            {p.s} / {p.t}
+                          </td>
+                          <td style={{ padding: "0.5rem 0.6rem", textAlign: "center", fontWeight: 700 }} className="rtl-num">
+                            {modPct}%
+                          </td>
+                          <td style={{ padding: "0.5rem 0.6rem", textAlign: "center", fontWeight: 700, color: modOk ? "var(--color-a1)" : "var(--color-cola)" }}>
+                            {modOk ? "✅ bestanden" : "❌ nicht best."}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                  <tfoot>
+                    <tr style={{ borderTop: "2px solid #ccc", background: "var(--color-paper2)", fontWeight: 900 }}>
+                      <td style={{ padding: "0.5rem 0.6rem" }}>Gesamtergebnis (المجموع)</td>
+                      <td style={{ padding: "0.5rem 0.6rem", textAlign: "center" }} className="rtl-num">
+                        {report.per.reduce((a, b) => a + b.s, 0)} / {report.per.reduce((a, b) => a + b.t, 0)}
+                      </td>
+                      <td style={{ padding: "0.5rem 0.6rem", textAlign: "center" }} className="rtl-num">
+                        {report.pct}%
+                      </td>
+                      <td style={{ padding: "0.5rem 0.6rem", textAlign: "center", color: report.pct >= 60 ? "var(--color-a1)" : "var(--color-cola)" }}>
+                        {report.pct >= 60 ? "BESTANDEN" : "NICHT BEST."}
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+
+                <div style={{ marginTop: "0.7rem", fontSize: "0.78rem", color: "var(--color-ink2)", lineHeight: 1.6 }}>
+                  ℹ️ <strong>معيار Goethe الرسمي:</strong> النجاح الكلي يشترط تحقيق 60% على الأقل في كل وحدة مستقلة (Mindestpunktzahl: 60% je Modul).
+                  {report.pct >= 60 && !report.per.every((p) => p.t === 0 || (p.s / p.t) >= 0.6) && (
+                    <div style={{ color: "var(--color-cola)", fontWeight: 700, marginTop: "0.3rem" }}>
+                      ⚠️ تنبيه: إجمالي النقاط ناجح، لكن وحدة ({report.per.filter((p) => p.t > 0 && (p.s / p.t) < 0.6).map((p) => p.key).join("، ")}) لم تحقق عتبة 60% وتتطلب إعادة بموجب معايير Goethe.
+                    </div>
+                  )}
+                </div>
               </div>
               <div style={{ fontSize: "0.9rem", color: "var(--color-ink2)" }}>
                 {report.wrongCount > 0

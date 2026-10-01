@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""Kollokationen Batch 8 (B1 Verb+Präposition): je 2 Verbindungen, die die Präposition zeigen."""
+AUSNAHMEN = {"vo-b1v-032": "Präposition (jenseits von)"}
+K = {
+"vh-projekt-016": ["jemanden für seine Arbeit loben","für den Vortrag loben"],
+"vh-gesundh-021": ["der Umgang mit Stress","der Umgang mit Kritik"],
+"vh-technik-022": ["an Bedeutung zunehmen","an Gewicht zunehmen"],
+"vh-technik-023": ["an Gewicht abnehmen","an Bedeutung abnehmen"],
+"vi-stadt-u-016": ["gegen den Abriss protestieren","gegen die Pläne der Stadt protestieren"],
+"vi-geld-re-003": ["der Anspruch auf Erstattung","der Anspruch auf Urlaub"],
+"vi-geld-re-005": ["für den Schaden haften","für Fehler haften"],
+"vi-funktio-004": ["auf seinem Recht bestehen","auf einer schriftlichen Antwort bestehen"],
+"vi-funktio-005": ["sich auf den Vertrag beziehen","sich auf eine Studie beziehen"],
+"vi-funktio-006": ["auf das Auto verzichten","auf Zucker verzichten"],
+"vi-funktio-007": ["sich an den Kosten beteiligen","sich an der Diskussion beteiligen"],
+"vi-funktio-008": ["an einem Kurs teilnehmen","an der Wahl teilnehmen"],
+"vi-funktio-009": ["auf einen Fehler hinweisen","auf die Frist hinweisen"],
+"vi-funktio-010": ["über Erfahrung verfügen","über ein Konto verfügen"],
+"vi-funktio-011": ["sich auf die Gesundheit auswirken","sich negativ auswirken"],
+"vi-funktio-012": ["auf einen Fehler zurückführen","auf das Wetter zurückführen"],
+"vi-funktio-014": ["zur Orientierung dienen","dem Zweck dienen"],
+"vi-funktio-015": ["sich für Kinder eignen","sich für den Beruf eignen"],
+"vj-migrati-012": ["sich beim Kundendienst beschweren","sich bei der Behörde beschweren"],
+"vq-b1t-021": ["sich für den Klimaschutz einsetzen","sich für Kollegen einsetzen"],
+"vq-b1t-036": ["zuständig für die Anmeldung","für den Bereich zuständig"],
+"vs-b1r-025": ["sich um einen Termin bemühen","sich um eine Lösung bemühen"],
+"vs-b1r-026": ["sich nach dem Weg erkundigen","sich nach den Öffnungszeiten erkundigen"],
+"vu-b1p-022": ["sich mit Computern auskennen","sich mit Verträgen auskennen"],
+"vu-b1p-024": ["für die Kosten aufkommen","für den Schaden aufkommen"],
+"vu-b1p-029": ["auf Ersparnisse zurückgreifen","auf Erfahrung zurückgreifen"],
+"vv-verwal-012": ["über den Antrag abstimmen","über das Budget abstimmen"],
+}

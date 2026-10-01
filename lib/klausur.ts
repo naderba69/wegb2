@@ -1,6 +1,6 @@
 // محرّك المحاكاة الامتحانية — Probeklausur بتوقيت رسمي وتقييم Goethe
 import type { Exercise, Level } from "./types";
-import { texts, dialogues, writingTasks, grammarMap, sentences, muendlich } from "./content";
+import { texts, dialogues, writingTasks, grammarMap, sentences, muendlich, leseText } from "./content";
 import { levelOf, pickN, rng, clozeFromSatz } from "./plan";
 
 export interface KlausurWriteTask {
@@ -36,7 +36,7 @@ export function buildKlausur(day: number): Klausur {
 
   const ts = pickN(texts.filter((t) => t.level === lvl), 2, rand);
   const lesen: Exercise[] = ts.flatMap((t) =>
-    t.questions.slice(0, 2).map((q) => ({ ...q, id: `k-l-${q.id}` }))
+    leseText(t).questions.slice(0, 2).map((q) => ({ ...q, id: `k-l-${q.id}` }))
   );
 
   const dlg = pickN(dialogues.filter((x) => x.level === lvl), 1, rand)[0];
@@ -74,7 +74,7 @@ export function buildKlausur(day: number): Klausur {
         minutes: 15,
         realExamHint: "في امتحان Goethe الحقيقي: 65 دقيقة وأجزاء أطول — هنا تدريب مركّز على الاستراتيجية نفسها.",
         items: lesen,
-        passages: ts.map((t) => ({ titleDe: t.titleDe, de: t.de })),
+        passages: ts.map((t) => ({ titleDe: t.titleDe, de: leseText(t).de })),
       },
       {
         key: "Hören",
@@ -171,7 +171,7 @@ export function buildSkillKlausur(day: number, skill: SkillKey): Klausur {
     const ts = pickN(texts.filter((t) => t.level === lvl), 6, rand);
     // ثلاثةُ أسئلةٍ لكلِّ نصٍّ في الورقةِ الامتحانية (18 بالضبط)؛ السؤالُ الرابعُ — إن وُجِدَ — يبقى للتمرينِ اليوميّ
     const items = ts.flatMap((t) =>
-      t.questions.slice(0, 3).map((q) => {
+      leseText(t).questions.slice(0, 3).map((q) => {
         const base = { ...q, id: `sk-l-${q.id}` } as unknown as Exercise & { type: string };
         if (base.type === "truefalse") return { ...base, type: "mc" as const, options: ["richtig", "falsch"] };
         return base;
@@ -182,7 +182,7 @@ export function buildSkillKlausur(day: number, skill: SkillKey): Klausur {
       sections: [{
         key: "Lesen", titleDe: "Lesen — Modellsatz", titleAr: "القراءة — ستةُ نصوصٍ وثمانيةَ عشرَ سؤالاً", minutes: 30,
         realExamHint: "في Goethe الحقيقي (B1: 65د): نصوصٌ إعلانيةٌ وبريدٌ ومقالٌ طويل — هنا ستّةُ نصوصٍ كاملةٍ من بنكك مع مؤقّتٍ لا يرحم.",
-        items, passages: ts.map((t) => ({ titleDe: t.titleDe, de: t.de })),
+        items, passages: ts.map((t) => ({ titleDe: t.titleDe, de: leseText(t).de })),
       }],
     };
   }

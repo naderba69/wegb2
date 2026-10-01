@@ -18,7 +18,15 @@ export type Kompetenz = "Lesen" | "Hoeren" | "Schreiben" | "Sprechen" | "Grammat
 
 export interface Exercise {
   id: string;
-  type: "mc" | "fill" | "truefalse" | "order" | "dictation" | "translate";
+  type: "mc" | "fill" | "truefalse" | "order" | "dictation" | "translate" | "umformung";
+  /** 🔁 umformung: الجملةُ المُدخَلةُ التي يُطلَبُ تحويلُها (promptDe = التعليمة) */
+  quelleDe?: string;
+  /** 🔁 umformung: بدائلُ مقبولةٌ سوى answer (مثل ترتيبٍ آخرَ للظرف) */
+  alternativen?: string[];
+  /** 🔁 umformung: الكلماتُ التي يجبُ أن تظهرَ (تشخيصٌ موجَّه: «ينقصك …») */
+  mussEnthalten?: string[];
+  /** 🔁 umformung: ما يجبُ ألّا يظهرَ (الفخّ نفسه: «ما زلتَ تكتب …») */
+  darfNicht?: string[];
   promptDe: string;
   promptAr?: string;
   options?: string[];
@@ -92,6 +100,15 @@ export interface Lesetext {
   titleDe: string;
   titleAr: string;
   de: string;
+  ar: string;
+  questions: Exercise[];
+  /** 📜 النسخة الطويلة للقراءة بطول CEFR حقيقي (B2: 220–420 كلمة)؛ `de` القصيرة تبقى نصَّ الاستماع المسجَّل */
+  lang?: Langfassung;
+}
+
+export interface Langfassung {
+  de: string;
+  /** ملخّص عربي (لا ترجمة كاملة — القارئ في B2 يقرأ الألمانية) */
   ar: string;
   questions: Exercise[];
 }
@@ -230,6 +247,11 @@ export interface TaskResult {
   attempts: number;
   kind?: TaskKind;
   at?: string;
+  /** ⏱️ الدقائق المخطَّطة لهذه المهمة لحظةَ تسليمها — بها يُحسَب «مخطط مُنجَز»
+   *  (الخطة حتمية، فهي قابلة لإعادة الاشتقاق، لكن تثبيتها يجعل الحساب رخيصاً وصادقاً) */
+  geplantMin?: number;
+  /** ⏱️ الدقائق الفعلية المقضية — تُقاس عند التسليم، لا تُفتَرَض */
+  minutenEffektiv?: number;
 }
 
 export interface DayResult {
@@ -239,6 +261,8 @@ export interface DayResult {
   tasksDone: number;
   tasksTotal: number;
   at: string;
+  /** ⏱️ مجموع الدقائق الفعلية في هذا اليوم */
+  minutenEffektiv?: number;
 }
 
 export interface DebtItem {
@@ -301,13 +325,21 @@ export interface Kontrakt {
   lastShame?: string | null;
 }
 
+/** تقييمُ الثقةِ قبلَ الإجابة (Modul: Metakognition): سجلٌّ خامٌّ يُشتقُّ منه مؤشّرُ «الثقةِ الخاطئة» */
+export interface SicherheitsEintrag { t: string; id: string; sicher: boolean; correct: boolean }
+
 export interface Progress {
+  /** آخرُ 500 تقييمِ ثقةٍ قبلَ الإجابة — اختياريّ، يُملأ من ExerciseSet */
+  sicherheit?: SicherheitsEintrag[];
   v: number;
   plan: {
     day: number;
     tasks: Record<string, TaskResult>;
     days: Record<number, DayResult>;
     debt: DebtItem[];
+    /** ⏱️ إجمالي الدقائق الفعلية المقضية في الخطة كلها — المصدر الوحيد لساعات CEFR المزعومة.
+     *  بلا هذا الحقل لا يستطيع المشروع إثبات أي عدد ساعات، والوعد يبقى ادّعاءً. */
+    minutenEffektiv?: number;
   };
   srs: Record<string, SrsState>;
   canDo: Record<string, boolean>;
@@ -318,6 +350,9 @@ export interface Progress {
     voiceName?: string;
     /** مدرّس LLM اختياري (OpenAI-compatible) — يبقى محلياً في متصفحك */
     llm?: { baseUrl: string; apiKey: string; model: string };
+    /** 🎙️ التعرّف السحابي على الكلام (Web Speech API) — يُرسِل الصوتَ إلى خدمة المتصفّح الخارجية.
+     *  اختياريٌّ صريح: إن عُطِّل فُتح المسارُ المحلّيُّ البديل ولا يُحسبُ شيءٌ في الشبكة. */
+    cloudSpeech?: boolean;
     /** أُكِّد اختبار تحديد المستوى */
     placed?: boolean;
     /** موعد الامتحان الخارجي (YYYY-MM-DD) + اسمه */
