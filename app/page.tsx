@@ -93,6 +93,7 @@ export default function Today() {
   };
 
   const submitCurrent = () => {
+    localStorage.removeItem("weg-abend"); // أوّلُ مهمّةٍ في اليومِ الجديدِ تُعيدُ قفلَ التدريب الحرّ
     const task = plan.tasks[stepFrei];
     if (!task) return;
     const local = localOf(task.id);
@@ -123,6 +124,7 @@ export default function Today() {
     const ds = dayScore(plan, merged as never);
     const debts = debtsFrom(plan, merged as never);
     closeDay(day, ds.score, Math.max(ds.total, 1), ds.done, ds.tasksTotal, debts);
+    localStorage.setItem("weg-abend", "1"); // مساءُ ما بعدِ الإغلاق: بابُ «تدرّب» يُفتح
     setConfirmClose(false);
     setStep(0);
     setPoints({});
@@ -147,6 +149,7 @@ export default function Today() {
         },
       },
     }));
+    localStorage.setItem("weg-abend", "1"); // «يومٌ سيّئ» إغلاقٌ أيضاً — والمساء يُفتح
     setStep(0);
     setPoints({});
   };

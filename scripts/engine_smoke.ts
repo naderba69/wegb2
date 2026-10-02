@@ -456,9 +456,9 @@ const empty = () => loadProgress();
     const hoerenSrc = readFileSync("components/hoeren.tsx", "utf8");
     ok(hoerenSrc.includes("@/lib/hoeren") && !hoerenSrc.includes("function darfSpielen"), "K24k البطاقة تستورد القانون من lib/hoeren ولا تعيد اختراعه محلياً");
     ok(hoerenSrc.includes("🎧 معمل الاستماع") && hoerenSrc.includes("استماعة واحدة") && hoerenSrc.includes("🔒"), "K24l الواجهة تعد بما ينفذه المحرك: صرامة معلنة مقفلة");
-    const appSrc = existsSync("app/alt/page.tsx") ? readFileSync("app/alt/page.tsx", "utf8") : "";
-    ok(appSrc.includes("<HoerLabor progress={progress} />") && existsSync("app/alt/page.tsx"),
-      "K24m المعملُ مركَّبٌ في حجرِ /alt (يُنتقلُ إلى «تدرّب» في P3) — ليس كتالوجاً مؤجلاً");
+    const appSrc = existsSync("app/ueben/page.tsx") ? readFileSync("app/ueben/page.tsx", "utf8") : "";
+    ok(appSrc.includes("<HoerLabor progress={progress} />"),
+      "K24m المعملُ مركَّبٌ في تبويبِ «تدرّب» الحيّ (P3) — لم يبقَ محجوزاً في الحجر ولا كتالوجاً مؤجلاً");
   }
 
   /* ===== K26 — مصنع الصوت: ملفات مُولَّدة تخدم من public/ ===== */
@@ -519,7 +519,7 @@ const empty = () => loadProgress();
       const manL = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as unknown as { einsaetze: { id: string }[] };
       const aids = new Set(manL.einsaetze.map((e) => e.id));
       ok(lk.items.every((i) => aids.has(i.textId)), "K31d كلُّ وحدةٍ مشدودةٌ إلى شريطٍ مُعلَنٍ في المانيفستو — لا فراغَ بلا صوت");
-      ok(readFileSync("components/hoeren.tsx", "utf8").includes("LueckDiktat") && existsSync("app/alt/page.tsx") && readFileSync("app/alt/page.tsx", "utf8").includes("<LueckDiktat progress={progress} />"), "K31e المحركُ مركَّبٌ في مركزه داخل حجرِ /alt (يُنتقلُ في P3) — لا بياناتٍ في الدرج");
+      ok(readFileSync("components/hoeren.tsx", "utf8").includes("LueckDiktat") && existsSync("app/ueben/page.tsx") && readFileSync("app/ueben/page.tsx", "utf8").includes("<LueckDiktat progress={progress} />"), "K31e المحركُ مركَّبٌ في تبويبِ «تدرّب» الحيّ (P3) — لا بياناتٍ في الدرج");
       ok(readFileSync("lib/luecken.ts", "utf8").includes("pickLk") && readFileSync("components/hoeren.tsx", "utf8").includes("art: \"schreibung\""), "K31f الحتميَّةُ والدفترُ موصولان — الساقطُ يُسجَّل كتابةً");
     }
     {
@@ -1781,6 +1781,34 @@ void 0;
       "K110 الخلاصةُ تجمعُ ثلاثاً: ملخّصَ القاعدة + فخاخَها الشائعة + شفرةَ حفظِها — لا خلاصةٌ جُرْداء");
   }
 
+
+
+  /* ═══ K112–K114 — P3: تبويب «تدرّب»: ترتيبُ الأولوية · بوابةُ ما بعدِ الإغلاق · مَرتحَلُ الزائد ═══ */
+  {
+    const ueben = existsSync("app/ueben/page.tsx") ? readFileSync("app/ueben/page.tsx", "utf8") : "";
+    const heim = readFileSync("app/page.tsx", "utf8");
+    const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
+
+    // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← معجم ← كاتالوج");
+    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
+    const naoMontiert = montiert.filter((m) => !ueben.includes(m));
+    ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
+
+    // K113: بوابةُ ما بعدِ الإغلاق — العلامة تُوقَعُ عندِ الإغلاق وتُرفعُ عندَ أوّلِ مهمّة
+    const setN = (heim.match(/localStorage\.setItem\("weg-abend"/g) ?? []).length;
+    ok(setN >= 2 && heim.includes('localStorage.removeItem("weg-abend")'),
+      "K113a علامةُ المساءِ تُشعلُ عندَ إغلاقِ اليومِ وعندِ «يومٍ سيّئ» (" + setN + ") وتُطفأُ عندَ أوّلِ تسليمٍ في اليومِ الجديد");
+    ok(ueben.includes('weg-abend') && /أغلق يومك|إغلاق اليوم|بعد إغلاق/.test(ueben) && ueben.includes('href="/"'),
+      "K113b التبويبُ مقفلٌ بسببٍ معلنٍ ما لم تُغلقْ يومَك — وبابُه الوحيدُ «اليوم»");
+
+    // K114: الزائدُ عن 3 يَرتحِلُ إلى التدريب لا يضيع
+    ok(wiz.includes('weg-park-') && /slice\(3\)/.test(wiz),
+      "K114a المعالجُ يَرتحِلُ تمارينَ الزائدِ عن 3 إلى «تدريب إضافي» (weg-park- + slice(3)) — لا تمريرٌ يُخفي محتوى");
+    ok(ueben.includes('weg-park-') && ueben.includes("ExerciseSet") && /تدريب إضافي/.test(ueben),
+      "K114b التبويبُ يستقبلُ المَرتحَلَ ويعرضُه تمريناً حقيقيّاً — لا رابطَ ميت");
+  }
 
   /* ═══ K111 — الهويّةُ البصريةُ B (images/dirB-today.png) — كتلةُ شاشةِ اليومِ واحدةٌ قابلةٌ للتبديل ═══ */
   {

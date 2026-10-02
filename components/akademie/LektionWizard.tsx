@@ -44,6 +44,16 @@ export function LektionWizard({ topicId }: { topicId: string }) {
     try { localStorage.setItem(speicher, JSON.stringify({ schritt, erledigt })); } catch { /* ممتلئ = نanship */ }
   }, [geladen, speicher, schritt, erledigt]);
 
+  // ➕ الزائدُ عن 3 تمارينٍ يَرتحِلُ إلى «تدريب إضافي» في تبويب تدرّب (K114a)
+  useEffect(() => {
+    const t = grammarMap[topicId];
+    if (t && t.exercises.length > 3) {
+      try { localStorage.setItem(`weg-park-${topicId}`, JSON.stringify(t.exercises.slice(3).map((e) => e.id))); } catch { /* ممتلئ */ }
+    } else {
+      try { localStorage.removeItem(`weg-park-${topicId}`); } catch { /* لا شيء */ }
+    }
+  }, [topicId]);
+
   const seed = useMemo(() => Array.from(topicId).reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 11), [topicId]);
   const frage = useMemo(() => (topic ? entdeckungsFrage(topic, Object.values(grammarMap), seed) : null), [topic, seed]);
   const entdecken = !!frage && !!topic && induktionMoeglich(topic);
