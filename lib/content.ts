@@ -3,6 +3,8 @@ import type {
   VocabCard,
   Satz,
   Lesetext,
+  Langfassung,
+  Exercise,
   Hoerdialog,
   Schreibaufgabe,
   FehlerEintrag,
@@ -16,6 +18,14 @@ import sprichwortAudioRaw from "@/content/sprichwort-audio.json";
 import vocabRaw from "@/content/vocab.json";
 import sentencesRaw from "@/content/sentences.json";
 import textsRaw from "@/content/texts.json";
+import langB2a from "@/content/lang/b2-01-10.json";
+import langB2b from "@/content/lang/b2-11-20.json";
+import langB1a from "@/content/lang/b1-01-10.json";
+import langB1b from "@/content/lang/b1-11-20.json";
+import langA2a from "@/content/lang/a2-01-10.json";
+import langA2b from "@/content/lang/a2-11-20.json";
+import langA1a from "@/content/lang/a1-01-10.json";
+import langA1b from "@/content/lang/a1-11-20.json";
 import dialoguesRaw from "@/content/dialogues.json";
 import writingRaw from "@/content/writing.json";
 import candoRaw from "@/content/cando.json";
@@ -50,7 +60,14 @@ export const pakete = (paketeRaw as unknown as { pakete: import("./types").Konte
 export const alleVokabeln: VocabCard[] = Object.values(
   vocabRaw as unknown as Record<string, { cards: VocabCard[] }>
 ).flatMap((g) => g.cards);
-export const texts = textsRaw as unknown as Lesetext[];
+const langfassungen: Record<string, Langfassung> = { ...(langB2a as Record<string, Langfassung>), ...(langB2b as Record<string, Langfassung>), ...(langB1a as Record<string, Langfassung>), ...(langB1b as Record<string, Langfassung>), ...(langA2a as Record<string, Langfassung>), ...(langA2b as Record<string, Langfassung>), ...(langA1a as Record<string, Langfassung>), ...(langA1b as Record<string, Langfassung>) };
+/** النصوص؛ مَن له نسخة طويلة يحملها في `lang` — وقراءة B2 تعرضها (المهمّة lesen) بينما يبقى `de` نصَّ الصوت */
+export const texts = (textsRaw as unknown as Lesetext[]).map((t) => (langfassungen[t.id] ? { ...t, lang: langfassungen[t.id] } : t));
+/** نصُّ القراءةِ الفعليّ: الطويلُ إن وُجد وما لم يُطلَب القصير (تدرّج نسبة النصوص الأصلية 30→80٪) */
+export function leseText(t: Lesetext): { de: string; ar: string; questions: Exercise[]; lang: boolean } {
+  if (t.lang && !t.__weg_useShort) return { ...t.lang, lang: true };
+  return { de: t.de, ar: t.ar, questions: t.questions, lang: false };
+}
 export const dialogues = dialoguesRaw as unknown as Hoerdialog[];
 export const writingTasks = writingRaw as unknown as Schreibaufgabe[];
 export const candoMap = candoRaw as unknown as Record<

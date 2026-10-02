@@ -1,5 +1,6 @@
 // محرّك التحفيز — XP وأوسمة (حتمي، محلي بالكامل، بلا خدمات خارجية)
 import type { Progress } from "./types";
+import { PHASE_START } from "./phasen";
 
 export const XP_LEVELS: { xp: number; name: string; ar: string; icon: string }[] = [
   { xp: 0, name: "Anfänger", ar: "مبتدئ", icon: "🌱" },
@@ -101,7 +102,7 @@ export const ABZEICHEN: AbzeichenDef[] = [
     icon: "🏆",
     de: "B2 erreicht",
     ar: "وصلتَ إلى مرحلة B2",
-    test: (p) => p.plan.day >= 211,
+    test: (p) => p.plan.day >= PHASE_START.B2,
   },
 ];
 

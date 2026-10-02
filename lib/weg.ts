@@ -17,7 +17,7 @@ import { TOTAL_DAYS, type Progress } from "./types";
 
 export const STUFEN = 8;
 
-/** يوم 1..270 ← مرحلة 1..8 (خطية، بلا ثغرات ولا تكرار) */
+/** يوم 1..378 ← مرحلة 1..8 (خطية، بلا ثغرات ولا تكرار) */
 export function stufeVonTag(day: number): number {
   return Math.min(STUFEN, Math.max(1, Math.floor(((day - 1) * STUFEN) / TOTAL_DAYS) + 1));
 }

@@ -1,0 +1,532 @@
+{
+  "t-a2-01": {
+    "de": "Am Samstag bin ich schon um sieben Uhr aufgestanden. Zuerst habe ich meine Wohnung aufgeräumt, weil am Sonntag meine Eltern zu Besuch kommen wollten. Ich habe die Küche geputzt, Wäsche gewaschen und den Müll runtergebracht. Das hat fast drei Stunden gedauert.\n\nDanach bin ich mit meiner Schwester einkaufen gegangen. Der Supermarkt war sehr voll, und wir haben lange an der Kasse gewartet. Wir haben Gemüse, Fleisch und einen Kuchen gekauft. Am Nachmittag haben wir zusammen gekocht. Meine Schwester kann besser kochen als ich, deshalb habe ich nur das Gemüse geschnitten.\n\nAm Abend wollte ich eigentlich ins Kino gehen, aber ich war zu müde. Ich bin auf dem Sofa eingeschlafen, bevor der Film im Fernsehen angefangen hat.\n\nAm Sonntag sind meine Eltern um zwölf Uhr gekommen. Das Essen hat ihnen sehr gut geschmeckt, und meine Mutter hat gesagt, dass die Wohnung noch nie so sauber war. Das Wochenende war anstrengend, aber schön.",
+    "ar": "عطلة مرهقة: تنظيف الشقة صباح السبت لأن الوالدين سيزوران يوم الأحد، تسوّق مزدحم مع الأخت، طبخ مشترك، ثم نوم على الأريكة قبل الفيلم. الأحد: الوالدان أعجبهما الطعام ونظافة الشقة.",
+    "questions": [
+      {
+        "id": "t-a2-01-l1",
+        "type": "mc",
+        "promptDe": "Warum hat er am Samstag die Wohnung aufgeräumt?",
+        "options": [
+          "weil seine Schwester kommen wollte",
+          "weil seine Eltern am Sonntag kommen wollten",
+          "weil er ins Kino wollte"
+        ],
+        "answer": "weil seine Eltern am Sonntag kommen wollten",
+        "explanationAr": "الدليل في النص: «weil am Sonntag meine Eltern zu Besuch kommen wollten»."
+      },
+      {
+        "id": "t-a2-01-l2",
+        "type": "mc",
+        "promptDe": "Was hat er beim Kochen gemacht?",
+        "options": [
+          "alles allein gekocht",
+          "nur das Gemüse geschnitten",
+          "den Kuchen gebacken"
+        ],
+        "answer": "nur das Gemüse geschnitten",
+        "explanationAr": "«deshalb habe ich nur das Gemüse geschnitten» — لأن أخته تطبخ أفضل."
+      },
+      {
+        "id": "t-a2-01-l3",
+        "type": "truefalse",
+        "promptDe": "Am Samstagabend war er im Kino.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «wollte ich eigentlich ins Kino gehen, aber ich war zu müde»."
+      },
+      {
+        "id": "t-a2-01-l4",
+        "type": "mc",
+        "promptDe": "Was hat die Mutter gesagt?",
+        "options": [
+          "Das Essen war zu salzig.",
+          "Die Wohnung war noch nie so sauber.",
+          "Sie kommt nächste Woche wieder."
+        ],
+        "answer": "Die Wohnung war noch nie so sauber.",
+        "explanationAr": "الدليل في النص: «meine Mutter hat gesagt, dass die Wohnung noch nie so sauber war»."
+      }
+    ]
+  },
+  "t-a2-02": {
+    "de": "Ärztin: Guten Tag, Herr Haddad. Was fehlt Ihnen?\nPatient: Guten Tag. Seit drei Tagen tut mir der Hals weh, und ich habe Fieber. Gestern Abend hatte ich 38,5 Grad.\nÄrztin: Haben Sie auch Husten oder Schnupfen?\nPatient: Husten ja, besonders nachts. Schnupfen nicht.\n\nÄrztin: Machen Sie bitte den Mund auf. Ja, der Hals ist stark gerötet. Das ist wahrscheinlich eine Infektion. Sind Sie gegen etwas allergisch?\nPatient: Nein, ich glaube nicht.\nÄrztin: Gut. Ich schreibe Ihnen ein Medikament auf. Nehmen Sie dreimal am Tag eine Tablette, nach dem Essen. Und trinken Sie viel Tee mit Honig.\nPatient: Muss ich zu Hause bleiben?\nÄrztin: Ja, ich schreibe Sie bis Freitag krank. Bleiben Sie im Bett und schlafen Sie viel. Wenn das Fieber am Donnerstag noch da ist, kommen Sie bitte wieder.\n\nPatient: Kann ich trotzdem Sport machen? Ich habe am Mittwoch Fußballtraining.\nÄrztin: Auf keinen Fall! Mit Fieber ist Sport gefährlich. Warten Sie, bis Sie ganz gesund sind.\nPatient: Verstanden. Vielen Dank, Frau Doktor.\nÄrztin: Gute Besserung, Herr Haddad. Die Krankschreibung bekommen Sie vorne an der Anmeldung.",
+    "ar": "عند الطبيبة: ألم في الحلق وحمّى منذ ثلاثة أيام وسعال ليلي. التشخيص: التهاب. الدواء: قرص ثلاث مرات يومياً بعد الأكل، وشاي بعسل. إجازة مرضية حتى الجمعة، لا رياضة مع الحمّى، والعودة إن استمرت الحمّى الخميس.",
+    "questions": [
+      {
+        "id": "t-a2-02-l1",
+        "type": "mc",
+        "promptDe": "Welche Beschwerden hat Herr Haddad?",
+        "options": [
+          "Halsschmerzen, Fieber und Husten",
+          "Schnupfen und Bauchschmerzen",
+          "Kopfschmerzen und Husten"
+        ],
+        "answer": "Halsschmerzen, Fieber und Husten",
+        "explanationAr": "الدليل في النص: «tut mir der Hals weh, und ich habe Fieber … Husten ja … Schnupfen nicht»."
+      },
+      {
+        "id": "t-a2-02-l2",
+        "type": "mc",
+        "promptDe": "Wie soll er das Medikament nehmen?",
+        "options": [
+          "einmal am Tag vor dem Essen",
+          "dreimal am Tag nach dem Essen",
+          "nur nachts"
+        ],
+        "answer": "dreimal am Tag nach dem Essen",
+        "explanationAr": "الدليل في النص: «Nehmen Sie dreimal am Tag eine Tablette, nach dem Essen»."
+      },
+      {
+        "id": "t-a2-02-l3",
+        "type": "truefalse",
+        "promptDe": "Er darf mit Fieber keinen Sport machen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Auf keinen Fall! Mit Fieber ist Sport gefährlich»."
+      },
+      {
+        "id": "t-a2-02-l4",
+        "type": "mc",
+        "promptDe": "Wann soll er wiederkommen?",
+        "options": [
+          "auf jeden Fall am Freitag",
+          "wenn das Fieber am Donnerstag noch da ist",
+          "nächste Woche"
+        ],
+        "answer": "wenn das Fieber am Donnerstag noch da ist",
+        "explanationAr": "الدليل في النص: «Wenn das Fieber am Donnerstag noch da ist, kommen Sie bitte wieder»."
+      }
+    ]
+  },
+  "t-a2-03": {
+    "de": "Meine Freundin Leila und ich möchten im Sommer eine Woche nach München fahren. Gestern haben wir zusammen geplant.\n\nZuerst haben wir über den Weg gesprochen. Der Zug kostet 80 Euro pro Person und dauert sechs Stunden. Das Flugzeug kostet 120 Euro und dauert nur eine Stunde. Aber man muss zwei Stunden vorher am Flughafen sein, und der Flughafen liegt weit von der Stadt. Ich finde, der Zug ist besser: Er ist billiger, und wir können unterwegs lesen oder schlafen. Leila wollte lieber fliegen, aber am Ende hat sie zugestimmt.\n\nDann haben wir eine Unterkunft gesucht. Hotels in der Innenstadt sind sehr teuer. Deshalb haben wir eine kleine Ferienwohnung am Stadtrand gefunden. Sie kostet 60 Euro pro Nacht, hat eine Küche, und die U-Bahn ist nur fünf Minuten entfernt. So können wir manchmal selbst kochen und Geld sparen.\n\nIn München wollen wir das Deutsche Museum besuchen, im Englischen Garten spazieren gehen und einen Tag an einen See fahren. Leila möchte auch ein Fußballstadion sehen. Ich freue mich schon sehr auf die Reise!",
+    "ar": "تخطيط رحلة إلى ميونخ: القطار (80 يورو، 6 ساعات) مقابل الطائرة (120 يورو، ساعة + انتظار ومطار بعيد) — اتفقتا على القطار. شقة سياحية بأطراف المدينة بـ60 يورو لليلة بمطبخ وقرب المترو. البرنامج: متحف، حديقة، بحيرة، وملعب كرة قدم.",
+    "questions": [
+      {
+        "id": "t-a2-03-l1",
+        "type": "mc",
+        "promptDe": "Warum finden sie den Zug besser?",
+        "options": [
+          "weil er schneller ist",
+          "weil er billiger ist und man unterwegs lesen kann",
+          "weil Leila Angst vor dem Fliegen hat"
+        ],
+        "answer": "weil er billiger ist und man unterwegs lesen kann",
+        "explanationAr": "«Er ist billiger, und wir können unterwegs lesen oder schlafen». الخيار الأول يناقض «dauert sechs Stunden»."
+      },
+      {
+        "id": "t-a2-03-l2",
+        "type": "mc",
+        "promptDe": "Warum haben sie kein Hotel in der Innenstadt genommen?",
+        "options": [
+          "weil alle voll waren",
+          "weil sie zu teuer sind",
+          "weil sie zu weit von der U-Bahn liegen"
+        ],
+        "answer": "weil sie zu teuer sind",
+        "explanationAr": "الدليل في النص: «Hotels in der Innenstadt sind sehr teuer. Deshalb …»."
+      },
+      {
+        "id": "t-a2-03-l3",
+        "type": "truefalse",
+        "promptDe": "Leila wollte von Anfang an mit dem Zug fahren.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Leila wollte lieber fliegen, aber am Ende hat sie zugestimmt»."
+      },
+      {
+        "id": "t-a2-03-l4",
+        "type": "mc",
+        "promptDe": "Welchen Vorteil hat die Ferienwohnung?",
+        "options": [
+          "Sie liegt direkt in der Innenstadt.",
+          "Sie hat eine Küche, und die U-Bahn ist nah.",
+          "Sie ist kostenlos."
+        ],
+        "answer": "Sie hat eine Küche, und die U-Bahn ist nah.",
+        "explanationAr": "الدليل في النص: «hat eine Küche, und die U-Bahn ist nur fünf Minuten entfernt»."
+      }
+    ]
+  },
+  "t-a2-04": {
+    "de": "Ich lerne seit einem Jahr Deutsch. Viele Leute fragen mich, warum. Die Antwort ist einfach: Ich möchte nächstes Jahr in Deutschland studieren, und dafür brauche ich das Sprachzertifikat.\n\nAber das ist nicht der einzige Grund. Mein Onkel lebt seit zwanzig Jahren in Köln. Wenn wir ihn besuchen, sprechen seine Kinder nur Deutsch. Ich möchte mit meinen Cousins reden können, ohne dass jemand übersetzt.\n\nDeutsch ist nicht leicht. Die Artikel sind schwer, und die Verben stehen manchmal am Ende vom Satz. Am Anfang habe ich oft gedacht, dass ich es nie lerne. Meine Lehrerin hat gesagt, dass alle so denken. Sie hatte recht: Nach sechs Monaten konnte ich schon einfache Gespräche führen.\n\nJeden Tag lerne ich eine halbe Stunde. Ich höre deutsche Musik, schaue Serien mit Untertiteln und schreibe neue Wörter in ein kleines Heft. Meine Freundin sagt, dass ich verrückt bin, weil ich sogar im Bus Vokabeln lerne. Aber ich glaube, dass es sich lohnt. Wenn ich in Köln ankomme, will ich nicht nur verstehen, sondern auch mitreden.",
+    "ar": "لماذا أتعلّم الألمانية؟ للدراسة في ألمانيا العام القادم، وللحديث مع أبناء عمّي في كولونيا دون مترجم. اللغة صعبة (الأدوات، الفعل في آخر الجملة) لكن بعد ستة أشهر صارت المحادثات البسيطة ممكنة. نصف ساعة يومياً: موسيقى، مسلسلات مترجمة، دفتر كلمات.",
+    "questions": [
+      {
+        "id": "t-a2-04-l1",
+        "type": "mc",
+        "promptDe": "Was ist der wichtigste Grund für das Deutschlernen?",
+        "options": [
+          "Er möchte in Deutschland studieren.",
+          "Er möchte in Köln arbeiten.",
+          "Seine Freundin ist Deutsche."
+        ],
+        "answer": "Er möchte in Deutschland studieren.",
+        "explanationAr": "الدليل في النص: «Ich möchte nächstes Jahr in Deutschland studieren, und dafür brauche ich das Sprachzertifikat»."
+      },
+      {
+        "id": "t-a2-04-l2",
+        "type": "mc",
+        "promptDe": "Warum möchte er mit seinen Cousins Deutsch sprechen?",
+        "options": [
+          "weil sie kein Englisch können",
+          "weil sie nur Deutsch sprechen und er keinen Übersetzer will",
+          "weil sie ihn darum gebeten haben"
+        ],
+        "answer": "weil sie nur Deutsch sprechen und er keinen Übersetzer will",
+        "explanationAr": "الدليل في النص: «sprechen seine Kinder nur Deutsch. Ich möchte mit meinen Cousins reden können, ohne dass jemand übersetzt»."
+      },
+      {
+        "id": "t-a2-04-l3",
+        "type": "truefalse",
+        "promptDe": "Am Anfang fand er Deutsch schwer.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Deutsch ist nicht leicht … Am Anfang habe ich oft gedacht, dass ich es nie lerne»."
+      },
+      {
+        "id": "t-a2-04-l4",
+        "type": "mc",
+        "promptDe": "Was macht er NICHT zum Lernen?",
+        "options": [
+          "Musik hören",
+          "Serien mit Untertiteln schauen",
+          "einen Privatlehrer bezahlen"
+        ],
+        "answer": "einen Privatlehrer bezahlen",
+        "explanationAr": "المذكور: موسيقى، مسلسلات، دفتر كلمات، مفردات في الحافلة. المعلّم الخاص غير مذكور."
+      }
+    ]
+  },
+  "t-a2-05": {
+    "de": "Liebe Amina,\n\nam Samstag, dem 14., feiere ich meinen Geburtstag, und ich möchte dich herzlich einladen! Die Party beginnt um 18 Uhr bei mir zu Hause. Du kennst ja die Adresse: Gartenstraße 12, dritter Stock. Klingel bei „Kaya“.\n\nIch koche etwas Türkisches, und es gibt auch vegetarisches Essen, weil Jonas kein Fleisch isst. Getränke bringe ich, aber wenn du einen Kuchen mitbringen möchtest, sage ich nicht Nein! Bitte bring keine Geschenke mit – deine Anwesenheit ist genug.\n\nWir werden Musik hören und vielleicht tanzen, aber nicht zu laut, weil meine Nachbarn früh schlafen gehen. Ab 22 Uhr müssen wir leiser sein.\n\nKannst du bitte bis Mittwoch Bescheid sagen, ob du kommst? Ich muss wissen, wie viele Leute kommen, damit ich genug einkaufen kann. Und wenn du jemanden mitbringen möchtest, ist das kein Problem – sag mir nur vorher den Namen.\n\nIch freue mich sehr auf dich!\n\nLiebe Grüße\nSelin\n\nP.S. Der Bus 42 fährt bis 23 Uhr. Wenn du später gehst, kann Jonas dich mit dem Auto nach Hause bringen.",
+    "ar": "دعوة عيد ميلاد: السبت 14 الساعة 18 في بيت سيلين، Gartenstraße 12. طعام تركي ونباتي، المشروبات موفّرة، الكعك مرحّب به، لا هدايا. الموسيقى تهدأ بعد 22 لأجل الجيران. الردّ مطلوب حتى الأربعاء، ويمكن إحضار مرافق بإخبار مسبق. الحافلة 42 حتى 23، وبعدها يوناس يوصل بالسيارة.",
+    "questions": [
+      {
+        "id": "t-a2-05-l1",
+        "type": "mc",
+        "promptDe": "Was soll Amina mitbringen?",
+        "options": [
+          "ein Geschenk",
+          "Getränke",
+          "vielleicht einen Kuchen, aber kein Geschenk"
+        ],
+        "answer": "vielleicht einen Kuchen, aber kein Geschenk",
+        "explanationAr": "الدليل في النص: «wenn du einen Kuchen mitbringen möchtest, sage ich nicht Nein! Bitte bring keine Geschenke mit»."
+      },
+      {
+        "id": "t-a2-05-l2",
+        "type": "mc",
+        "promptDe": "Warum gibt es vegetarisches Essen?",
+        "options": [
+          "weil Selin Vegetarierin ist",
+          "weil Jonas kein Fleisch isst",
+          "weil Fleisch zu teuer ist"
+        ],
+        "answer": "weil Jonas kein Fleisch isst",
+        "explanationAr": "الدليل في النص: «es gibt auch vegetarisches Essen, weil Jonas kein Fleisch isst»."
+      },
+      {
+        "id": "t-a2-05-l3",
+        "type": "truefalse",
+        "promptDe": "Amina darf ohne Absprache mehrere Freunde mitbringen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "«wenn du jemanden mitbringen möchtest … sag mir nur vorher den Namen» — بإخبار مسبق."
+      },
+      {
+        "id": "t-a2-05-l4",
+        "type": "mc",
+        "promptDe": "Bis wann soll Amina antworten und warum?",
+        "options": [
+          "bis Samstag, wegen der Musik",
+          "bis Mittwoch, damit Selin genug einkaufen kann",
+          "bis Freitag, wegen des Busses"
+        ],
+        "answer": "bis Mittwoch, damit Selin genug einkaufen kann",
+        "explanationAr": "الدليل في النص: «bis Mittwoch Bescheid sagen … damit ich genug einkaufen kann»."
+      }
+    ]
+  },
+  "t-a2-06": {
+    "de": "Letztes Wochenende sind wir ans Meer gefahren – meine Frau, unsere zwei Kinder und ich. Wir sind am Freitagabend nach der Arbeit losgefahren und erst um elf Uhr nachts angekommen. Die Kinder haben im Auto geschlafen.\n\nAm Samstag hat die Sonne geschienen. Wir sind gleich nach dem Frühstück zum Strand gegangen. Das Wasser war noch kalt, aber die Kinder sind trotzdem geschwommen. Ich habe lieber ein Buch gelesen. Mittags haben wir Fisch in einem kleinen Restaurant am Hafen gegessen. Es war nicht billig, aber sehr lecker.\n\nAm Nachmittag hat es plötzlich angefangen zu regnen. Wir sind ins Ferienhaus zurückgegangen und haben Karten gespielt. Unsere Tochter hat dreimal gewonnen und war sehr stolz.\n\nAm Sonntag war das Wetter wieder besser. Wir haben eine Radtour gemacht und einen Leuchtturm besichtigt. Von oben konnte man das ganze Meer sehen. Um vier Uhr sind wir nach Hause gefahren. Die Fahrt hat lange gedauert, weil viel Verkehr war.\n\nDas Wochenende war kurz, aber wir haben uns gut erholt. Nächstes Jahr wollen wir eine ganze Woche bleiben.",
+    "ar": "عطلة عائلية على البحر: وصول ليلي متأخر، سباحة وقراءة وسمك في الميناء يوم السبت، مطر بعد الظهر ولعب ورق، وجولة دراجات ومنارة يوم الأحد. العودة استغرقت طويلاً بسبب الزحام. العام القادم أسبوع كامل.",
+    "questions": [
+      {
+        "id": "t-a2-06-l1",
+        "type": "mc",
+        "promptDe": "Wann sind sie angekommen?",
+        "options": [
+          "am Freitag um elf Uhr nachts",
+          "am Samstagmorgen",
+          "am Freitag nach dem Mittagessen"
+        ],
+        "answer": "am Freitag um elf Uhr nachts",
+        "explanationAr": "الدليل في النص: «am Freitagabend … losgefahren und erst um elf Uhr nachts angekommen»."
+      },
+      {
+        "id": "t-a2-06-l2",
+        "type": "mc",
+        "promptDe": "Was hat der Vater am Strand gemacht?",
+        "options": [
+          "Er ist geschwommen.",
+          "Er hat ein Buch gelesen.",
+          "Er hat Karten gespielt."
+        ],
+        "answer": "Er hat ein Buch gelesen.",
+        "explanationAr": "الدليل في النص: «Ich habe lieber ein Buch gelesen»."
+      },
+      {
+        "id": "t-a2-06-l3",
+        "type": "truefalse",
+        "promptDe": "Am Samstagnachmittag hat es geregnet.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Am Nachmittag hat es plötzlich angefangen zu regnen»."
+      },
+      {
+        "id": "t-a2-06-l4",
+        "type": "mc",
+        "promptDe": "Warum hat die Rückfahrt lange gedauert?",
+        "options": [
+          "weil das Auto kaputt war",
+          "weil viel Verkehr war",
+          "weil die Kinder müde waren"
+        ],
+        "answer": "weil viel Verkehr war",
+        "explanationAr": "الدليل في النص: «Die Fahrt hat lange gedauert, weil viel Verkehr war»."
+      }
+    ]
+  },
+  "t-a2-07": {
+    "de": "Wer gesund bleiben möchte, muss nicht viel Geld ausgeben. Ein paar einfache Regeln reichen oft schon.\n\nErstens: Essen Sie jeden Tag frisches Obst und Gemüse, am besten fünf Portionen. Ein Apfel am Morgen, eine Tomate zum Mittagessen, eine Handvoll Nüsse am Nachmittag – das ist nicht schwer. Trinken Sie außerdem genug Wasser, etwa anderthalb Liter am Tag. Süße Getränke sollten Sie nur selten trinken.\n\nZweitens: Bewegen Sie sich. Man muss nicht ins Fitnessstudio gehen. Es hilft schon, wenn man die Treppe statt den Aufzug nimmt oder eine Haltestelle früher aussteigt und zu Fuß geht. Dreißig Minuten Bewegung am Tag sind ideal.\n\nDrittens: Schlafen Sie genug. Die meisten Erwachsenen brauchen sieben bis acht Stunden. Wer zu wenig schläft, ist müde, kann sich schlecht konzentrieren und wird schneller krank.\n\nViertens: Machen Sie Pausen. Stress ist schlecht für den Körper. Gehen Sie in der Mittagspause kurz an die frische Luft, treffen Sie Freunde, und legen Sie das Handy manchmal weg.\n\nDiese Regeln kennt fast jeder. Das Problem ist nicht das Wissen, sondern das Tun. Fangen Sie deshalb klein an: eine Regel pro Woche. Nach einem Monat haben Sie alle vier – und fühlen sich besser.",
+    "ar": "أربع قواعد بسيطة للصحة بلا مال: خمس حصص خضار وفاكهة وماء كافٍ، حركة يومية نصف ساعة دون نادٍ، نوم 7–8 ساعات، واستراحات ضدّ التوتر. المشكلة ليست المعرفة بل التطبيق: ابدأ بقاعدة واحدة أسبوعياً.",
+    "questions": [
+      {
+        "id": "t-a2-07-l1",
+        "type": "mc",
+        "promptDe": "Wie viel Wasser soll man am Tag trinken?",
+        "options": [
+          "einen halben Liter",
+          "etwa anderthalb Liter",
+          "fünf Liter"
+        ],
+        "answer": "etwa anderthalb Liter",
+        "explanationAr": "«etwa anderthalb Liter am Tag» (anderthalb = واحد ونصف)."
+      },
+      {
+        "id": "t-a2-07-l2",
+        "type": "mc",
+        "promptDe": "Was ist ein Beispiel für Bewegung im Alltag?",
+        "options": [
+          "die Treppe statt den Aufzug nehmen",
+          "ins Fitnessstudio gehen",
+          "mit dem Auto fahren"
+        ],
+        "answer": "die Treppe statt den Aufzug nehmen",
+        "explanationAr": "«wenn man die Treppe statt den Aufzug nimmt». النادي مذكور كشيء غير ضروري («Man muss nicht …»)."
+      },
+      {
+        "id": "t-a2-07-l3",
+        "type": "truefalse",
+        "promptDe": "Der Text sagt: Das Problem ist, dass die Leute die Regeln nicht kennen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Das Problem ist nicht das Wissen, sondern das Tun»."
+      },
+      {
+        "id": "t-a2-07-l4",
+        "type": "mc",
+        "promptDe": "Was empfiehlt der Text am Ende?",
+        "options": [
+          "alle Regeln sofort umsetzen",
+          "eine Regel pro Woche anfangen",
+          "nur die wichtigste Regel befolgen"
+        ],
+        "answer": "eine Regel pro Woche anfangen",
+        "explanationAr": "الدليل في النص: «Fangen Sie deshalb klein an: eine Regel pro Woche»."
+      }
+    ]
+  },
+  "t-a2-08": {
+    "de": "Seit drei Tagen tut mir der Kopf weh, und heute Morgen war mir auch schlecht. Deshalb habe ich bei meiner Hausärztin angerufen.\n\nDie Sprechstundenhilfe hat gefragt, ob es dringend ist. Ich habe gesagt: „Ich hätte gern so bald wie möglich einen Termin.“ Sie hat mir einen Termin für morgen um 9:40 Uhr gegeben. Ich soll meine Versichertenkarte mitbringen und zehn Minuten früher da sein, weil ich ein Formular ausfüllen muss.\n\nDann hat sie mir noch Fragen gestellt: Habe ich Fieber? Nehme ich Medikamente? Ich habe gesagt, dass ich kein Fieber habe, aber seit einer Woche schlecht schlafe, weil ich viel Stress bei der Arbeit habe. Sie hat gemeint, das könnte der Grund sein, aber die Ärztin muss mich untersuchen.\n\nZum Schluss hat sie gesagt: „Wenn es heute schlimmer wird, gehen Sie bitte direkt in die Notaufnahme oder rufen Sie den ärztlichen Bereitschaftsdienst an.“ Sie hat mir die Nummer 116 117 gegeben.\n\nJetzt liege ich auf dem Sofa und trinke Tee. Morgen weiß ich hoffentlich mehr. Meinem Chef habe ich schon geschrieben, dass ich morgen später komme.",
+    "ar": "صداع منذ ثلاثة أيام وغثيان: اتصال بالطبيبة، موعد غداً 9:40، إحضار بطاقة التأمين والحضور مبكراً لملء استمارة. أسئلة عن الحمّى والأدوية؛ ربما السبب قلّة النوم بسبب ضغط العمل. إن ساء الوضع: الطوارئ أو الرقم 116 117.",
+    "questions": [
+      {
+        "id": "t-a2-08-l1",
+        "type": "mc",
+        "promptDe": "Wann ist der Termin?",
+        "options": [
+          "heute um 9:40 Uhr",
+          "morgen um 9:40 Uhr",
+          "morgen um 9:30 Uhr"
+        ],
+        "answer": "morgen um 9:40 Uhr",
+        "explanationAr": "«einen Termin für morgen um 9:40 Uhr» — والحضور قبله بعشر دقائق لا يغيّر وقت الموعد."
+      },
+      {
+        "id": "t-a2-08-l2",
+        "type": "mc",
+        "promptDe": "Warum soll er früher da sein?",
+        "options": [
+          "weil die Ärztin früher anfängt",
+          "weil er ein Formular ausfüllen muss",
+          "weil das Wartezimmer klein ist"
+        ],
+        "answer": "weil er ein Formular ausfüllen muss",
+        "explanationAr": "الدليل في النص: «zehn Minuten früher da sein, weil ich ein Formular ausfüllen muss»."
+      },
+      {
+        "id": "t-a2-08-l3",
+        "type": "truefalse",
+        "promptDe": "Er hat kein Fieber.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «dass ich kein Fieber habe»."
+      },
+      {
+        "id": "t-a2-08-l4",
+        "type": "mc",
+        "promptDe": "Was soll er tun, wenn es heute schlimmer wird?",
+        "options": [
+          "bis morgen warten",
+          "in die Notaufnahme gehen oder 116 117 anrufen",
+          "seinen Chef anrufen"
+        ],
+        "answer": "in die Notaufnahme gehen oder 116 117 anrufen",
+        "explanationAr": "الدليل في النص: «gehen Sie bitte direkt in die Notaufnahme oder rufen Sie den ärztlichen Bereitschaftsdienst an … 116 117»."
+      }
+    ]
+  },
+  "t-a2-09": {
+    "de": "Am Freitag fahre ich mit dem Zug nach Hamburg. Dort wohnt meine beste Freundin Dana, und ich bleibe eine Woche bei ihr. Mein Koffer ist ziemlich schwer, weil ich auch Geschenke für ihre Familie mitnehme.\n\nDie Fahrkarte habe ich schon vor einem Monat im Internet gekauft. So war sie viel billiger: nur 29 Euro statt 79 Euro. Ich habe auch einen Sitzplatz reserviert, am Fenster, weil ich gern die Landschaft anschaue.\n\nDer Zug fährt um 8:12 Uhr ab und kommt um 12:45 Uhr in Hamburg an. Ich muss einmal umsteigen, in Hannover. Dort habe ich nur acht Minuten Zeit. Das ist wenig, deshalb bin ich ein bisschen nervös. Wenn der erste Zug Verspätung hat, verpasse ich den Anschluss.\n\nFür die Fahrt habe ich ein Buch, Kopfhörer und belegte Brote eingepackt. Im Zug ist das Essen teuer. Außerdem nehme ich mein Ladekabel mit, weil mein Handy immer so schnell leer ist.\n\nDana holt mich am Bahnhof ab. Wir wollen am Wochenende den Hafen besuchen und eine Schifffahrt machen. Ich war noch nie in Hamburg und bin sehr gespannt.",
+    "ar": "رحلة بالقطار إلى هامبورغ لزيارة صديقة أسبوعاً. التذكرة اشتُريت مبكراً بـ29 بدل 79 يورو مع حجز مقعد بجانب النافذة. المغادرة 8:12 والوصول 12:45 مع تبديل في هانوفر خلال ثماني دقائق فقط — مصدر توتر. في الحقيبة: كتاب وسماعات وسندويشات وشاحن.",
+    "questions": [
+      {
+        "id": "t-a2-09-l1",
+        "type": "mc",
+        "promptDe": "Warum war die Fahrkarte billig?",
+        "options": [
+          "weil sie ein Student ist",
+          "weil sie die Karte früh im Internet gekauft hat",
+          "weil der Zug langsam ist"
+        ],
+        "answer": "weil sie die Karte früh im Internet gekauft hat",
+        "explanationAr": "الدليل في النص: «schon vor einem Monat im Internet gekauft. So war sie viel billiger»."
+      },
+      {
+        "id": "t-a2-09-l2",
+        "type": "mc",
+        "promptDe": "Warum ist sie nervös?",
+        "options": [
+          "weil sie in Hannover nur acht Minuten zum Umsteigen hat",
+          "weil sie Dana nicht kennt",
+          "weil der Koffer zu schwer ist"
+        ],
+        "answer": "weil sie in Hannover nur acht Minuten zum Umsteigen hat",
+        "explanationAr": "الدليل في النص: «Dort habe ich nur acht Minuten Zeit. Das ist wenig, deshalb bin ich ein bisschen nervös»."
+      },
+      {
+        "id": "t-a2-09-l3",
+        "type": "truefalse",
+        "promptDe": "Sie fährt ohne Umsteigen direkt nach Hamburg.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Ich muss einmal umsteigen, in Hannover»."
+      },
+      {
+        "id": "t-a2-09-l4",
+        "type": "mc",
+        "promptDe": "Warum nimmt sie Brote mit?",
+        "options": [
+          "weil es im Zug kein Essen gibt",
+          "weil das Essen im Zug teuer ist",
+          "weil Dana kein Essen hat"
+        ],
+        "answer": "weil das Essen im Zug teuer ist",
+        "explanationAr": "الدليل في النص: «Im Zug ist das Essen teuer»."
+      }
+    ]
+  },
+  "t-a2-10": {
+    "de": "Nächste Woche ziehe ich in eine neue Wohnung um. Sie ist größer als meine alte und näher an meiner Arbeit. Ich freue mich, aber ein Umzug ist viel Arbeit.\n\nSeit Montag packe ich jeden Abend Kartons. Bücher sind am schwersten – ich habe schon zwölf Kartons nur mit Büchern. Kleidung und Geschirr kommen später, weil ich sie noch brauche. Auf jeden Karton schreibe ich, was drin ist und in welches Zimmer er soll. Das spart am Umzugstag viel Zeit.\n\nZum Glück helfen mir zwei Freunde. Tarek hat einen Führerschein und fährt den Transporter, den ich für 60 Euro gemietet habe. Lisa hilft beim Tragen und beim Putzen der alten Wohnung. Als Dankeschön lade ich beide danach zum Essen ein.\n\nEinige Sachen brauche ich nicht mehr: das alte Sofa, einen kleinen Tisch und viele Bücher. Das Sofa habe ich im Internet verschenkt, die Bücher bringe ich in die Bibliothek.\n\nAm Umzugstag muss ich früh aufstehen. Um acht Uhr holen wir den Transporter ab. Ich hoffe, dass wir bis zum Abend fertig sind. Danach muss ich noch meine neue Adresse beim Einwohnermeldeamt anmelden – das habe ich fast vergessen!",
+    "ar": "انتقال إلى شقة أكبر وأقرب للعمل. تعبئة الصناديق كل مساء مع كتابة المحتوى والغرفة على كل صندوق. صديقان يساعدان: طارق يقود الشاحنة المستأجرة بـ60 يورو، وليزا تحمل وتنظّف؛ المكافأة عزومة. الأريكة أُهديت والكتب للمكتبة. بعد الانتقال: تسجيل العنوان الجديد.",
+    "questions": [
+      {
+        "id": "t-a2-10-l1",
+        "type": "mc",
+        "promptDe": "Warum schreibt sie auf jeden Karton, was drin ist?",
+        "options": [
+          "weil die Freunde es wissen wollen",
+          "weil das am Umzugstag Zeit spart",
+          "weil der Transporter klein ist"
+        ],
+        "answer": "weil das am Umzugstag Zeit spart",
+        "explanationAr": "الدليل في النص: «Das spart am Umzugstag viel Zeit»."
+      },
+      {
+        "id": "t-a2-10-l2",
+        "type": "mc",
+        "promptDe": "Was macht Tarek?",
+        "options": [
+          "Er putzt die alte Wohnung.",
+          "Er fährt den Transporter.",
+          "Er kocht das Essen."
+        ],
+        "answer": "Er fährt den Transporter.",
+        "explanationAr": "الدليل في النص: «Tarek hat einen Führerschein und fährt den Transporter»."
+      },
+      {
+        "id": "t-a2-10-l3",
+        "type": "truefalse",
+        "promptDe": "Sie hat das Sofa im Internet verschenkt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Das Sofa habe ich im Internet verschenkt»."
+      },
+      {
+        "id": "t-a2-10-l4",
+        "type": "mc",
+        "promptDe": "Was hat sie fast vergessen?",
+        "options": [
+          "den Transporter zu mieten",
+          "die neue Adresse anzumelden",
+          "die Bücher zu packen"
+        ],
+        "answer": "die neue Adresse anzumelden",
+        "explanationAr": "الدليل في النص: «meine neue Adresse beim Einwohnermeldeamt anmelden – das habe ich fast vergessen!»."
+      }
+    ]
+  }
+}

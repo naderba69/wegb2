@@ -1,0 +1,532 @@
+{
+  "t-a2-11": {
+    "de": "Am Samstag war ich im Baumarkt, weil die Lampe in meinem Wohnzimmer kaputt war. Ich wusste nicht genau, was ich brauche, deshalb habe ich die alte Lampe einfach mitgenommen.\n\nDer Baumarkt ist riesig. Ich habe zuerst zehn Minuten die Abteilung gesucht. Dann habe ich einen Mitarbeiter gefragt. Er hat sich die Lampe angesehen und gesagt: „Die Lampe ist in Ordnung, nur die Glühbirne ist kaputt.“ Ich war ein bisschen peinlich berührt, aber auch froh, weil eine neue Glühbirne nur drei Euro kostet und eine neue Lampe vierzig.\n\nDer Mitarbeiter hat mir eine LED-Birne empfohlen. Sie ist teurer als eine normale, aber sie hält viel länger und verbraucht weniger Strom. Er hat mir auch gezeigt, wie man die Birne richtig einschraubt, ohne dass sie kaputtgeht.\n\nWeil ich schon da war, habe ich noch ein paar andere Dinge gekauft: Schrauben für das Regal, das seit Wochen wackelt, und eine kleine Pflanze für den Balkon. Am Ende habe ich doch fünfundzwanzig Euro ausgegeben – aber alles war nützlich.\n\nZu Hause habe ich die Birne eingeschraubt, und die Lampe hat sofort funktioniert. Manchmal ist die Lösung einfacher, als man denkt.",
+    "ar": "في متجر الأدوات بسبب مصباح معطّل: تبيّن أن اللمبة فقط هي المعطّلة (3 يورو بدل 40). الموظف نصح بلمبة LED أطول عمراً وأقلّ استهلاكاً وشرح التركيب. اشترى أيضاً براغي للرفّ ونبتة. الحلّ أحياناً أبسط مما نظنّ.",
+    "questions": [
+      {
+        "id": "t-a2-11-l1",
+        "type": "mc",
+        "promptDe": "Was war wirklich kaputt?",
+        "options": [
+          "die Lampe",
+          "die Glühbirne",
+          "das Regal"
+        ],
+        "answer": "die Glühbirne",
+        "explanationAr": "الدليل في النص: «Die Lampe ist in Ordnung, nur die Glühbirne ist kaputt»."
+      },
+      {
+        "id": "t-a2-11-l2",
+        "type": "mc",
+        "promptDe": "Warum hat der Mitarbeiter eine LED-Birne empfohlen?",
+        "options": [
+          "weil sie billiger ist",
+          "weil sie länger hält und weniger Strom braucht",
+          "weil es keine anderen gab"
+        ],
+        "answer": "weil sie länger hält und weniger Strom braucht",
+        "explanationAr": "«sie hält viel länger und verbraucht weniger Strom». الخيار الأول يناقض «Sie ist teurer»."
+      },
+      {
+        "id": "t-a2-11-l3",
+        "type": "truefalse",
+        "promptDe": "Er hat nur die Glühbirne gekauft.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «habe ich noch ein paar andere Dinge gekauft: Schrauben … und eine kleine Pflanze»."
+      },
+      {
+        "id": "t-a2-11-l4",
+        "type": "mc",
+        "promptDe": "Warum hat er die alte Lampe mitgenommen?",
+        "options": [
+          "weil er sie umtauschen wollte",
+          "weil er nicht genau wusste, was er braucht",
+          "weil sie schwer war"
+        ],
+        "answer": "weil er nicht genau wusste, was er braucht",
+        "explanationAr": "الدليل في النص: «Ich wusste nicht genau, was ich brauche, deshalb habe ich die alte Lampe einfach mitgenommen»."
+      }
+    ]
+  },
+  "t-a2-12": {
+    "de": "Mein neuer Nachbar renoviert seine Wohnung. Seit Montag höre ich jeden Morgen ab sechs Uhr das Bohrgerät, und abends klopft er bis zehn Uhr. Ich arbeite im Schichtdienst und muss oft tagsüber schlafen. Das geht im Moment gar nicht.\n\nAm Mittwoch habe ich bei ihm geklingelt. Er war sehr freundlich und hat sich entschuldigt. Er hat gesagt, dass er nur noch zwei Wochen braucht und dass er nicht wusste, dass ich tagsüber schlafe. Wir haben einen Kompromiss gefunden: Er bohrt jetzt erst ab neun Uhr und hört um acht Uhr abends auf. Zwischen ein und drei Uhr macht er Pause, weil ich dann meistens schlafe.\n\nIch habe ihm auch erklärt, dass es in Deutschland Ruhezeiten gibt: Von 22 bis 6 Uhr und am Sonntag darf man keinen Lärm machen. Das wusste er nicht, weil er erst seit einem Monat hier wohnt.\n\nSeit dem Gespräch ist es viel besser. Gestern hat er mir sogar einen Kuchen vorbeigebracht. Ich bin froh, dass ich mit ihm gesprochen habe und nicht gleich beim Vermieter angerufen habe. Ein direktes Gespräch löst viele Probleme schneller.",
+    "ar": "جار جديد يجدّد شقته: حفر من السادسة صباحاً وطرق حتى العاشرة مساءً، والراوي يعمل بنظام نوبات وينام نهاراً. حديث ودّي أدّى إلى تسوية: عمل من التاسعة حتى الثامنة مساءً مع استراحة 13–15، وشرح أوقات الهدوء الألمانية. الجار أحضر كعكة. الحوار المباشر أسرع من الشكوى للمالك.",
+    "questions": [
+      {
+        "id": "t-a2-12-l1",
+        "type": "mc",
+        "promptDe": "Warum stört der Lärm besonders?",
+        "options": [
+          "weil der Erzähler Kinder hat",
+          "weil der Erzähler oft tagsüber schlafen muss",
+          "weil die Wände dünn sind"
+        ],
+        "answer": "weil der Erzähler oft tagsüber schlafen muss",
+        "explanationAr": "الدليل في النص: «Ich arbeite im Schichtdienst und muss oft tagsüber schlafen»."
+      },
+      {
+        "id": "t-a2-12-l2",
+        "type": "mc",
+        "promptDe": "Wie sieht der Kompromiss aus?",
+        "options": [
+          "Der Nachbar arbeitet nur am Wochenende.",
+          "Der Nachbar bohrt von 9 bis 20 Uhr mit Pause von 13 bis 15 Uhr.",
+          "Der Nachbar hört ganz auf."
+        ],
+        "answer": "Der Nachbar bohrt von 9 bis 20 Uhr mit Pause von 13 bis 15 Uhr.",
+        "explanationAr": "الدليل في النص: «erst ab neun Uhr … um acht Uhr abends auf. Zwischen ein und drei Uhr macht er Pause»."
+      },
+      {
+        "id": "t-a2-12-l3",
+        "type": "truefalse",
+        "promptDe": "Der Nachbar wohnt erst seit einem Monat hier.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Das wusste er nicht, weil er erst seit einem Monat hier wohnt»."
+      },
+      {
+        "id": "t-a2-12-l4",
+        "type": "mc",
+        "promptDe": "Was hat der Erzähler NICHT gemacht?",
+        "options": [
+          "beim Nachbarn geklingelt",
+          "beim Vermieter angerufen",
+          "die Ruhezeiten erklärt"
+        ],
+        "answer": "beim Vermieter angerufen",
+        "explanationAr": "الدليل في النص: «dass ich mit ihm gesprochen habe und nicht gleich beim Vermieter angerufen habe»."
+      }
+    ]
+  },
+  "t-a2-13": {
+    "de": "Als Kind habe ich nie schwimmen gelernt. In meiner Heimatstadt gab es kein Schwimmbad, und meine Eltern konnten auch nicht schwimmen. Als Erwachsener hatte ich immer Angst vor tiefem Wasser. Im Urlaub bin ich nur am Strand geblieben, während meine Freunde im Meer geschwommen sind.\n\nDieses Jahr wollte ich das ändern. Ich habe mich für einen Schwimmkurs für Erwachsene angemeldet. Der Kurs findet zweimal pro Woche statt, dienstags und donnerstags um 19 Uhr, und dauert acht Wochen. Er kostet 120 Euro.\n\nIn der ersten Stunde waren wir sieben Teilnehmer, alle zwischen 25 und 60 Jahren alt. Das hat mich beruhigt: Ich war nicht der Einzige. Die Trainerin war sehr geduldig. Zuerst haben wir nur gelernt, das Gesicht ins Wasser zu legen und auszuatmen. Das klingt einfach, aber für mich war es schwer.\n\nNach vier Wochen konnte ich zum ersten Mal ein paar Meter allein schwimmen. Ich war so glücklich, dass ich sofort meine Mutter angerufen habe. Jetzt, nach acht Wochen, schaffe ich eine ganze Bahn.\n\nIm nächsten Urlaub gehe ich mit meinen Freunden ins Meer. Es ist nie zu spät, etwas Neues zu lernen.",
+    "ar": "لم يتعلّم السباحة طفلاً وخاف من الماء العميق. سجّل في دورة للبالغين (مرتان أسبوعياً، ثماني أسابيع، 120 يورو). سبعة مشاركين من مختلف الأعمار طمأنوه، ومدرّبة صبورة. بعد أربعة أسابيع سبح أمتاراً وحده، وبعد ثمانية مسبحاً كاملاً. لم يفت الأوان أبداً.",
+    "questions": [
+      {
+        "id": "t-a2-13-l1",
+        "type": "mc",
+        "promptDe": "Warum hat er als Kind nicht schwimmen gelernt?",
+        "options": [
+          "weil er krank war",
+          "weil es kein Schwimmbad gab und die Eltern nicht schwimmen konnten",
+          "weil er keine Lust hatte"
+        ],
+        "answer": "weil es kein Schwimmbad gab und die Eltern nicht schwimmen konnten",
+        "explanationAr": "الدليل في النص: «gab es kein Schwimmbad, und meine Eltern konnten auch nicht schwimmen»."
+      },
+      {
+        "id": "t-a2-13-l2",
+        "type": "mc",
+        "promptDe": "Wie oft findet der Kurs statt?",
+        "options": [
+          "einmal pro Woche",
+          "zweimal pro Woche",
+          "jeden Tag"
+        ],
+        "answer": "zweimal pro Woche",
+        "explanationAr": "الدليل في النص: «zweimal pro Woche statt, dienstags und donnerstags um 19 Uhr»."
+      },
+      {
+        "id": "t-a2-13-l3",
+        "type": "truefalse",
+        "promptDe": "Er war der einzige Erwachsene im Kurs.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «waren wir sieben Teilnehmer … Ich war nicht der Einzige»."
+      },
+      {
+        "id": "t-a2-13-l4",
+        "type": "mc",
+        "promptDe": "Was konnte er nach vier Wochen?",
+        "options": [
+          "eine ganze Bahn schwimmen",
+          "ein paar Meter allein schwimmen",
+          "vom Turm springen"
+        ],
+        "answer": "ein paar Meter allein schwimmen",
+        "explanationAr": "«Nach vier Wochen konnte ich zum ersten Mal ein paar Meter allein schwimmen». المسبح الكامل بعد ثمانية أسابيع."
+      }
+    ]
+  },
+  "t-a2-14": {
+    "de": "Letzte Woche war meine Schwester Yasmin aus Tunis bei mir in Hamburg zu Besuch. Sie war zum ersten Mal in Deutschland, und wir hatten uns viel vorgenommen.\n\nAm ersten Tag sind wir durch die Innenstadt gelaufen und haben das Rathaus gesehen. Yasmin hat sehr viele Fotos gemacht. Am Abend haben wir in einem Restaurant am Wasser gegessen. Sie fand das Essen gut, aber zu wenig gewürzt.\n\nAm zweiten Tag hat es den ganzen Tag geregnet. Yasmin war überrascht, dass es im Juli so kalt sein kann. Ich habe ihr meine Jacke geliehen, und wir sind ins Museum gegangen. Danach haben wir zu Hause tunesisch gekocht – das hat uns beiden gefehlt.\n\nAm dritten Tag sind wir mit dem Schiff über die Elbe gefahren. Das war ihr Lieblingstag. Sie hat gesagt, dass Hamburg wie eine Stadt am Meer aussieht, obwohl das Meer hundert Kilometer weit weg ist.\n\nAm letzten Tag haben wir Geschenke für die Familie gekauft: Schokolade, ein Buch über Hamburg und einen Regenschirm – als Erinnerung an den zweiten Tag. Am Flughafen haben wir beide geweint. Aber im Winter fliege ich nach Tunis, und dann zeigt sie mir ihre Stadt neu.",
+    "ar": "زيارة الأخت ياسمين من تونس إلى هامبورغ: جولة في المدينة وعشاء على الماء (طعام قليل التوابل)، يوم ممطر بارد في يوليو مع متحف وطبخ تونسي، رحلة بالسفينة على الإلبه كانت المفضّلة، وهدايا للعائلة بينها مظلّة تذكاراً. دموع في المطار وموعد في الشتاء بتونس.",
+    "questions": [
+      {
+        "id": "t-a2-14-l1",
+        "type": "mc",
+        "promptDe": "Was hat Yasmin am Essen im Restaurant nicht gefallen?",
+        "options": [
+          "Es war zu teuer.",
+          "Es war zu wenig gewürzt.",
+          "Es war kalt."
+        ],
+        "answer": "Es war zu wenig gewürzt.",
+        "explanationAr": "الدليل في النص: «Sie fand das Essen gut, aber zu wenig gewürzt»."
+      },
+      {
+        "id": "t-a2-14-l2",
+        "type": "mc",
+        "promptDe": "Warum haben sie am zweiten Tag das Museum besucht?",
+        "options": [
+          "weil es geregnet hat",
+          "weil Yasmin Kunst studiert",
+          "weil es kostenlos war"
+        ],
+        "answer": "weil es geregnet hat",
+        "explanationAr": "الدليل في النص: «hat es den ganzen Tag geregnet … und wir sind ins Museum gegangen»."
+      },
+      {
+        "id": "t-a2-14-l3",
+        "type": "truefalse",
+        "promptDe": "Das Meer ist hundert Kilometer von Hamburg entfernt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «obwohl das Meer hundert Kilometer weit weg ist»."
+      },
+      {
+        "id": "t-a2-14-l4",
+        "type": "mc",
+        "promptDe": "Warum haben sie einen Regenschirm gekauft?",
+        "options": [
+          "weil es in Tunis viel regnet",
+          "als Erinnerung an den Regentag",
+          "weil er im Angebot war"
+        ],
+        "answer": "als Erinnerung an den Regentag",
+        "explanationAr": "الدليل في النص: «einen Regenschirm – als Erinnerung an den zweiten Tag»."
+      }
+    ]
+  },
+  "t-a2-15": {
+    "de": "Gestern ist mein Fahrrad auf dem Weg zur Arbeit kaputtgegangen. Plötzlich hat es komisch geklappert, und dann war der Reifen platt. Zum Glück war ich schon fast in der Stadt.\n\nIch habe das Fahrrad zu einer Werkstatt geschoben, die ich von außen kannte. Der Mechaniker hat es sich angesehen und gesagt: „Der Reifen hat ein Loch, und die Kette ist auch schon sehr alt. Die sollten Sie bald wechseln.“ Ich habe gefragt, was das kostet. Reifen flicken: 15 Euro. Neue Kette: 35 Euro. Zusammen 50 Euro.\n\nIch hatte nicht so viel Geld dabei, deshalb habe ich nur den Reifen reparieren lassen. Die Kette mache ich nächsten Monat. Der Mechaniker hat gesagt, dass das kein Problem ist, wenn ich sie regelmäßig öle.\n\nZur Arbeit bin ich dann mit dem Bus gefahren und war zwanzig Minuten zu spät. Meine Chefin war zum Glück verständnisvoll. Sie fährt selbst Fahrrad und kennt das Problem.\n\nAm Nachmittag habe ich das Fahrrad abgeholt. Es fährt wieder gut. Und ich habe mir vorgenommen, es in Zukunft besser zu pflegen – dann geht es auch nicht so oft kaputt.",
+    "ar": "عطل في الدراجة في الطريق إلى العمل: ثقب في الإطار وسلسلة قديمة. الإصلاح 15 يورو للإطار و35 للسلسلة؛ لم يكن معه ما يكفي فأصلح الإطار فقط وأجّل السلسلة. ذهب بالحافلة وتأخّر عشرين دقيقة، ورئيسته كانت متفهّمة. قرار: عناية أفضل بالدراجة.",
+    "questions": [
+      {
+        "id": "t-a2-15-l1",
+        "type": "mc",
+        "promptDe": "Was war am Fahrrad kaputt?",
+        "options": [
+          "nur die Kette",
+          "der Reifen, und die Kette war alt",
+          "die Bremsen"
+        ],
+        "answer": "der Reifen, und die Kette war alt",
+        "explanationAr": "الدليل في النص: «Der Reifen hat ein Loch, und die Kette ist auch schon sehr alt»."
+      },
+      {
+        "id": "t-a2-15-l2",
+        "type": "mc",
+        "promptDe": "Warum hat er die Kette nicht wechseln lassen?",
+        "options": [
+          "weil der Mechaniker keine Zeit hatte",
+          "weil er nicht genug Geld dabei hatte",
+          "weil die Kette noch gut war"
+        ],
+        "answer": "weil er nicht genug Geld dabei hatte",
+        "explanationAr": "الدليل في النص: «Ich hatte nicht so viel Geld dabei, deshalb habe ich nur den Reifen reparieren lassen»."
+      },
+      {
+        "id": "t-a2-15-l3",
+        "type": "truefalse",
+        "promptDe": "Die Chefin war wütend, weil er zu spät kam.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Meine Chefin war zum Glück verständnisvoll»."
+      },
+      {
+        "id": "t-a2-15-l4",
+        "type": "mc",
+        "promptDe": "Was hat er sich vorgenommen?",
+        "options": [
+          "ein neues Fahrrad zu kaufen",
+          "das Fahrrad besser zu pflegen",
+          "immer mit dem Bus zu fahren"
+        ],
+        "answer": "das Fahrrad besser zu pflegen",
+        "explanationAr": "الدليل في النص: «habe mir vorgenommen, es in Zukunft besser zu pflegen»."
+      }
+    ]
+  },
+  "t-a2-16": {
+    "de": "Ich habe eine Anzeige gelesen: Eine Bäckerei in meiner Nähe sucht eine Aushilfe für das Wochenende, samstags und sonntags von 6 bis 12 Uhr. Das passt gut, weil ich unter der Woche einen Sprachkurs besuche.\n\nSofort habe ich angefangen, eine Bewerbung zu schreiben. Das war nicht einfach. Zuerst habe ich meinen Lebenslauf gemacht: Name, Adresse, Schule, Erfahrung. Ich habe in meiner Heimat zwei Jahre in einem Café gearbeitet – das habe ich natürlich geschrieben.\n\nDann kam der schwierige Teil: das Anschreiben. Ich habe geschrieben, warum ich die Stelle möchte, was ich kann und wann ich anfangen kann. Mein Nachbar hat den Text korrigiert. Er hat gesagt, dass ich zu bescheiden bin. „Schreib nicht: Ich kann ein bisschen Deutsch. Schreib: Ich lerne Deutsch auf Niveau A2 und spreche jeden Tag mit Kunden.“\n\nDie Bewerbung habe ich per E-Mail geschickt, mit einem Foto und dem Zeugnis vom Café. Drei Tage später hat die Chefin angerufen und mich zu einem Probearbeiten eingeladen. Am Samstag um 6 Uhr muss ich da sein. Ich bin aufgeregt, aber ich freue mich. Frühes Aufstehen ist kein Problem – Brot backen hat mich schon immer interessiert.",
+    "ar": "إعلان: مخبز يبحث عن مساعد في عطلة نهاية الأسبوع من 6 إلى 12، وهو يناسبه لأن دورته اللغوية في الأسبوع. كتب سيرة ذاتية (خبرة سنتين في مقهى) وخطاباً صحّحه جاره ونصحه بألا يكون متواضعاً أكثر من اللازم. بعد ثلاثة أيام دُعي ليوم عمل تجريبي السبت السادسة صباحاً.",
+    "questions": [
+      {
+        "id": "t-a2-16-l1",
+        "type": "mc",
+        "promptDe": "Warum passt die Stelle gut?",
+        "options": [
+          "weil sie gut bezahlt ist",
+          "weil er unter der Woche einen Sprachkurs hat",
+          "weil die Bäckerei berühmt ist"
+        ],
+        "answer": "weil er unter der Woche einen Sprachkurs hat",
+        "explanationAr": "الدليل في النص: «Das passt gut, weil ich unter der Woche einen Sprachkurs besuche»."
+      },
+      {
+        "id": "t-a2-16-l2",
+        "type": "mc",
+        "promptDe": "Was hat der Nachbar kritisiert?",
+        "options": [
+          "Der Text war zu lang.",
+          "Der Text war zu bescheiden.",
+          "Der Text hatte viele Fehler."
+        ],
+        "answer": "Der Text war zu bescheiden.",
+        "explanationAr": "«Er hat gesagt, dass ich zu bescheiden bin» ثم مثال إعادة الصياغة."
+      },
+      {
+        "id": "t-a2-16-l3",
+        "type": "truefalse",
+        "promptDe": "Er hat in seiner Heimat zwei Jahre in einem Café gearbeitet.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Ich habe in meiner Heimat zwei Jahre in einem Café gearbeitet»."
+      },
+      {
+        "id": "t-a2-16-l4",
+        "type": "mc",
+        "promptDe": "Was passiert am Samstag um 6 Uhr?",
+        "options": [
+          "Er fängt fest an zu arbeiten.",
+          "Er hat ein Probearbeiten.",
+          "Er hat ein Gespräch im Sprachkurs."
+        ],
+        "answer": "Er hat ein Probearbeiten.",
+        "explanationAr": "الدليل في النص: «zu einem Probearbeiten eingeladen. Am Samstag um 6 Uhr muss ich da sein»."
+      }
+    ]
+  },
+  "t-a2-17": {
+    "de": "Unsere Stromrechnung war dieses Jahr sehr hoch: fast 300 Euro mehr als letztes Jahr. Deshalb haben wir in der Familie beschlossen, zusammen Strom zu sparen. Jeder hat eine Idee vorgeschlagen.\n\nMein Vater hat alle alten Glühbirnen durch LED-Lampen ersetzt. Das hat einmal 40 Euro gekostet, aber LED-Lampen brauchen viel weniger Strom.\n\nMeine Mutter achtet jetzt auf die Geräte in der Küche. Der Kühlschrank steht nicht mehr neben dem Herd, weil er dort mehr arbeiten musste. Und sie kocht mit Deckel auf dem Topf – so wird das Wasser schneller heiß.\n\nMeine kleine Schwester hat die wichtigste Regel: Licht aus, wenn man das Zimmer verlässt! Sie kontrolliert alle und ist sehr streng. Wenn jemand vergisst, das Licht auszumachen, muss er 50 Cent in eine Dose werfen.\n\nIch selbst habe eine Steckdosenleiste mit Schalter gekauft. Fernseher, Computer und Spielkonsole sind jetzt abends wirklich aus und nicht nur im Standby. Das spart mehr, als man denkt.\n\nNach drei Monaten haben wir den Zähler kontrolliert: Wir verbrauchen etwa 20 Prozent weniger als vorher. Das Geld aus der Dose meiner Schwester geben wir für ein Eis aus – für alle.",
+    "ar": "فاتورة كهرباء أعلى بـ300 يورو: قرار عائلي بالتوفير. الأب استبدل اللمبات بـLED، الأم أبعدت الثلاجة عن الموقد وتطبخ بغطاء، الأخت الصغيرة تفرض «أطفئ النور» مع غرامة 50 سنتاً، والراوي اشترى موزّع كهرباء بمفتاح لإطفاء الأجهزة كلياً. بعد ثلاثة أشهر: استهلاك أقلّ بنحو 20%.",
+    "questions": [
+      {
+        "id": "t-a2-17-l1",
+        "type": "mc",
+        "promptDe": "Warum wollte die Familie Strom sparen?",
+        "options": [
+          "weil der Strom ausgefallen ist",
+          "weil die Rechnung viel höher war als im Vorjahr",
+          "weil die Schwester es wollte"
+        ],
+        "answer": "weil die Rechnung viel höher war als im Vorjahr",
+        "explanationAr": "الدليل في النص: «fast 300 Euro mehr als letztes Jahr. Deshalb …»."
+      },
+      {
+        "id": "t-a2-17-l2",
+        "type": "mc",
+        "promptDe": "Warum steht der Kühlschrank nicht mehr neben dem Herd?",
+        "options": [
+          "weil er dort mehr Strom brauchte",
+          "weil er zu laut war",
+          "weil er nicht in die Küche passte"
+        ],
+        "answer": "weil er dort mehr Strom brauchte",
+        "explanationAr": "«weil er dort mehr arbeiten musste» — أي يستهلك أكثر بجانب الحرارة."
+      },
+      {
+        "id": "t-a2-17-l3",
+        "type": "truefalse",
+        "promptDe": "Wer das Licht vergisst, muss einen Euro bezahlen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «muss er 50 Cent in eine Dose werfen»."
+      },
+      {
+        "id": "t-a2-17-l4",
+        "type": "mc",
+        "promptDe": "Was macht die Steckdosenleiste mit Schalter?",
+        "options": [
+          "Sie macht die Geräte schneller.",
+          "Sie schaltet die Geräte ganz aus statt Standby.",
+          "Sie lädt das Handy."
+        ],
+        "answer": "Sie schaltet die Geräte ganz aus statt Standby.",
+        "explanationAr": "الدليل في النص: «sind jetzt abends wirklich aus und nicht nur im Standby»."
+      }
+    ]
+  },
+  "t-a2-18": {
+    "de": "Mein alter Handyvertrag läuft Ende des Monats aus. Heute war ich in einem Handyladen und habe mir drei Angebote angesehen.\n\nAngebot 1 kostet 10 Euro im Monat. Man bekommt 5 Gigabyte Internet und kann in Deutschland kostenlos telefonieren. Der Vertrag läuft 24 Monate.\n\nAngebot 2 kostet 15 Euro im Monat. Es gibt 20 Gigabyte, und man kann auch im Ausland telefonieren und surfen. Der Vertrag läuft ebenfalls 24 Monate. Dazu bekommt man ein neues Handy für nur einen Euro.\n\nAngebot 3 kostet 12 Euro im Monat mit 10 Gigabyte. Der Vorteil: Man kann jeden Monat kündigen. Es gibt aber kein neues Handy dazu.\n\nDer Verkäufer hat mir Angebot 2 empfohlen, wegen des neuen Handys. Aber mein Handy funktioniert noch gut, und ich möchte mich nicht zwei Jahre binden. Vielleicht ziehe ich nächstes Jahr in eine andere Stadt oder sogar ins Ausland. Ich telefoniere auch selten mit dem Ausland, weil ich mit meiner Familie über Internet spreche.\n\nDeshalb habe ich Angebot 3 genommen. Es ist nicht das billigste, aber das flexibelste. Der Verkäufer war ein bisschen enttäuscht. Ich glaube, er bekommt für Angebot 2 mehr Provision.",
+    "ar": "انتهاء عقد الهاتف: ثلاثة عروض — 10 يورو/5GB لعامين، 15 يورو/20GB مع خارج + هاتف بيورو لعامين، 12 يورو/10GB بإلغاء شهري بلا هاتف. البائع نصح بالثاني، لكن الراوي اختار الثالث لأنه لا يريد الالتزام عامين وقد ينتقل، ويكلّم أهله عبر الإنترنت.",
+    "questions": [
+      {
+        "id": "t-a2-18-l1",
+        "type": "mc",
+        "promptDe": "Welches Angebot kann man jeden Monat kündigen?",
+        "options": [
+          "Angebot 1",
+          "Angebot 2",
+          "Angebot 3"
+        ],
+        "answer": "Angebot 3",
+        "explanationAr": "الدليل في النص: «Angebot 3 … Man kann jeden Monat kündigen»."
+      },
+      {
+        "id": "t-a2-18-l2",
+        "type": "mc",
+        "promptDe": "Warum hat er Angebot 2 nicht genommen?",
+        "options": [
+          "weil es zu wenig Internet hat",
+          "weil er sich nicht zwei Jahre binden will und sein Handy noch gut ist",
+          "weil es kein Handy dazu gibt"
+        ],
+        "answer": "weil er sich nicht zwei Jahre binden will und sein Handy noch gut ist",
+        "explanationAr": "الدليل في النص: «mein Handy funktioniert noch gut, und ich möchte mich nicht zwei Jahre binden»."
+      },
+      {
+        "id": "t-a2-18-l3",
+        "type": "truefalse",
+        "promptDe": "Er telefoniert selten mit dem Ausland.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Ich telefoniere auch selten mit dem Ausland, weil ich mit meiner Familie über Internet spreche»."
+      },
+      {
+        "id": "t-a2-18-l4",
+        "type": "mc",
+        "promptDe": "Was vermutet er über den Verkäufer?",
+        "options": [
+          "Er kennt die Angebote nicht.",
+          "Er bekommt für Angebot 2 mehr Provision.",
+          "Er wollte ihm helfen, Geld zu sparen."
+        ],
+        "answer": "Er bekommt für Angebot 2 mehr Provision.",
+        "explanationAr": "الدليل في النص: «Ich glaube, er bekommt für Angebot 2 mehr Provision»."
+      }
+    ]
+  },
+  "t-a2-19": {
+    "de": "Gestern hatte ich eine Wohnungsbesichtigung. Die Wohnung liegt im dritten Stock eines alten Hauses, ohne Aufzug. Sie hat zwei Zimmer, eine kleine Küche und ein Bad mit Fenster. Die Miete beträgt 650 Euro warm, also mit Heizung und Wasser.\n\nDie Vermieterin, Frau Schulz, hat mir alles gezeigt. Das Wohnzimmer ist hell und hat einen Balkon nach Süden. Das Schlafzimmer ist kleiner und liegt zur Straße, deshalb hört man den Verkehr. Die Küche hat keinen Herd – den müsste ich selbst kaufen.\n\nIch habe einige Fragen gestellt: Sind Haustiere erlaubt? (Nein.) Gibt es einen Keller? (Ja, einen kleinen.) Wann kann man einziehen? (Ab dem Ersten des nächsten Monats.) Die Kaution beträgt zwei Monatsmieten.\n\nFrau Schulz hat gesagt, dass noch vier andere Interessenten kommen. Wenn ich die Wohnung möchte, soll ich bis Freitag eine Gehaltsbescheinigung und eine Kopie meines Ausweises schicken.\n\nIch bin noch nicht sicher. Die Wohnung ist schön und die Lage ist gut, aber der Lärm im Schlafzimmer und der fehlende Herd stören mich. Heute Abend spreche ich mit meiner Freundin darüber. Bis Freitag muss ich mich entscheiden.",
+    "ar": "معاينة شقة: الطابق الثالث بلا مصعد، غرفتان، 650 يورو شاملة التدفئة. صالة مشرقة بشرفة جنوبية، غرفة نوم على الشارع (ضجيج)، مطبخ بلا موقد. لا حيوانات، قبو صغير، دخول أول الشهر، تأمين شهرين. أربعة مهتمين آخرون؛ المطلوب حتى الجمعة: شهادة راتب ونسخة هوية. لم يقرّر بعد.",
+    "questions": [
+      {
+        "id": "t-a2-19-l1",
+        "type": "mc",
+        "promptDe": "Was bedeutet „650 Euro warm“?",
+        "options": [
+          "Die Wohnung hat eine gute Heizung.",
+          "Heizung und Wasser sind im Preis enthalten.",
+          "Die Miete steigt im Winter."
+        ],
+        "answer": "Heizung und Wasser sind im Preis enthalten.",
+        "explanationAr": "الدليل في النص: «650 Euro warm, also mit Heizung und Wasser»."
+      },
+      {
+        "id": "t-a2-19-l2",
+        "type": "mc",
+        "promptDe": "Was stört ihn an der Wohnung?",
+        "options": [
+          "der Balkon und die Küche",
+          "der Lärm im Schlafzimmer und der fehlende Herd",
+          "die Vermieterin und die Kaution"
+        ],
+        "answer": "der Lärm im Schlafzimmer und der fehlende Herd",
+        "explanationAr": "الدليل في النص: «der Lärm im Schlafzimmer und der fehlende Herd stören mich»."
+      },
+      {
+        "id": "t-a2-19-l3",
+        "type": "truefalse",
+        "promptDe": "Haustiere sind in der Wohnung erlaubt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Sind Haustiere erlaubt? (Nein.)»."
+      },
+      {
+        "id": "t-a2-19-l4",
+        "type": "mc",
+        "promptDe": "Was muss er bis Freitag schicken, wenn er die Wohnung will?",
+        "options": [
+          "die Kaution",
+          "eine Gehaltsbescheinigung und eine Ausweiskopie",
+          "einen Herd"
+        ],
+        "answer": "eine Gehaltsbescheinigung und eine Ausweiskopie",
+        "explanationAr": "الدليل في النص: «bis Freitag eine Gehaltsbescheinigung und eine Kopie meines Ausweises schicken»."
+      }
+    ]
+  },
+  "t-a2-20": {
+    "de": "Am Montag sollte ich einen Bericht abgeben. Ich hatte aber verstanden, dass die Frist erst am Mittwoch endet. Deshalb war ich am Montagmorgen ganz ruhig – bis meine Chefin in mein Büro kam und fragte, wo der Bericht ist.\n\nIch bin rot geworden. Ich habe erklärt, dass ich „bis Mitte der Woche“ verstanden hatte. Sie hatte aber „bis Montag, Mittag“ gesagt. Am Telefon klingt das ähnlich, besonders wenn man nicht Muttersprachler ist.\n\nMeine Chefin war zuerst verärgert, weil sie den Bericht für ein Meeting am Nachmittag brauchte. Dann hat sie gesagt: „Okay, das war ein Missverständnis. Wie schnell schaffen Sie es?“ Ich habe die Mittagspause ausfallen lassen und den Bericht bis 14 Uhr fertig gemacht. Er war kürzer als geplant, aber die wichtigsten Zahlen waren drin.\n\nAus dieser Geschichte habe ich etwas gelernt. Wenn ich jetzt einen Termin bekomme, wiederhole ich ihn: „Also bis Montag um zwölf Uhr, richtig?“ Und ich schreibe ihn sofort in meinen Kalender. Das dauert zehn Sekunden und verhindert viel Stress.\n\nMeine Chefin hat mir später gesagt, dass so etwas auch deutschen Kollegen passiert. Das hat mich beruhigt. Trotzdem: Einmal reicht.",
+    "ar": "سوء فهم في المكتب: فهم «حتى منتصف الأسبوع» بينما قالت المديرة «الاثنين ظهراً». غضبت لأنها تحتاج التقرير لاجتماع، ثم قبلت أنه سوء فهم. أنجزه حتى الثانية بلا استراحة غداء. الدرس: تكرار الموعد بصوت عالٍ وتدوينه فوراً. المديرة طمأنته أن ذلك يحدث للألمان أيضاً.",
+    "questions": [
+      {
+        "id": "t-a2-20-l1",
+        "type": "mc",
+        "promptDe": "Was hatte der Erzähler falsch verstanden?",
+        "options": [
+          "den Namen der Chefin",
+          "den Abgabetermin",
+          "das Thema des Berichts"
+        ],
+        "answer": "den Abgabetermin",
+        "explanationAr": "«Ich hatte aber verstanden, dass die Frist erst am Mittwoch endet» — بينما كان الاثنين."
+      },
+      {
+        "id": "t-a2-20-l2",
+        "type": "mc",
+        "promptDe": "Warum war die Chefin verärgert?",
+        "options": [
+          "weil sie den Bericht für ein Meeting am Nachmittag brauchte",
+          "weil der Bericht zu lang war",
+          "weil er die Mittagspause gemacht hat"
+        ],
+        "answer": "weil sie den Bericht für ein Meeting am Nachmittag brauchte",
+        "explanationAr": "الدليل في النص: «weil sie den Bericht für ein Meeting am Nachmittag brauchte»."
+      },
+      {
+        "id": "t-a2-20-l3",
+        "type": "truefalse",
+        "promptDe": "Der Bericht war kürzer als geplant.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Er war kürzer als geplant, aber die wichtigsten Zahlen waren drin»."
+      },
+      {
+        "id": "t-a2-20-l4",
+        "type": "mc",
+        "promptDe": "Was macht er jetzt bei jedem neuen Termin?",
+        "options": [
+          "Er fragt seine Kollegen.",
+          "Er wiederholt den Termin und schreibt ihn sofort in den Kalender.",
+          "Er bittet um eine E-Mail."
+        ],
+        "answer": "Er wiederholt den Termin und schreibt ihn sofort in den Kalender.",
+        "explanationAr": "الدليل في النص: «wiederhole ich ihn … Und ich schreibe ihn sofort in meinen Kalender»."
+      }
+    ]
+  }
+}

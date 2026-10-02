@@ -3,7 +3,7 @@
 // بأربعِ مهاراتٍ، ٨٠٪ مجموعاً — **ولا مهارةَ دونَ ٦٠٪** حتى لا يعبرَ أحدٌ بامتيازِ القراءةِ وحدَه.
 import type { Progress, Level } from "./types";
 import { MODULE, type Modul, modulOf } from "./plan";
-import { texts, dialogues, writingTasks } from "./content";
+import { texts, dialogues, writingTasks, leseText } from "./content";
 import { rng, pickN } from "./plan";
 
 export const GESAMT_SCHWELLE = 80;
@@ -54,7 +54,7 @@ export function buildModulPruefung(index: number, versuch = 0): ModulPruefung {
   const tOfLevel = texts.filter((t) => t.level === lv);
   const gewaehlteTexte = pickN(tOfLevel, 2, rand);
   const leseFragen: PruefFrage[] = gewaehlteTexte.flatMap((t) =>
-    t.questions.slice(0, 3).map((q) => ({
+    leseText(t).questions.slice(0, 3).map((q) => ({
       id: `mp${index}-l-${q.id}`,
       promptDe: q.promptDe,
       options: q.type === "truefalse" ? ["richtig", "falsch"] : q.options,
@@ -85,13 +85,13 @@ export function buildModulPruefung(index: number, versuch = 0): ModulPruefung {
   return {
     modulNr: index, level: lv, titelAr: m.titelAr, minuten: 45,
     abschnitte: [
-      { teil: "lesen", titelAr: "القراءة — نصّان وستّة أسئلة", passagen: gewaehlteTexte.map((t) => ({ titelDe: t.titleDe, de: t.de })), fragen: leseFragen },
+      { teil: "lesen", titelAr: "القراءة — نصّان وستّة أسئلة", passagen: gewaehlteTexte.map((t) => ({ titelDe: t.titleDe, de: leseText(t).de })), fragen: leseFragen },
       { teil: "hoeren", titelAr: "الاستماع — ثلاثة حوارات وستّة أسئلة", dialogIds: gewaehlteDialoge.map((d) => d.id), fragen: hoerFragen },
       {
         teil: "schreiben", titelAr: "الكتابة — مهمّة واحدة",
         aufgabeDe: w?.taskDe ?? "Schreiben Sie eine kurze E-Mail zum Thema des Moduls.",
         aufgabeAr: w?.taskAr ?? "اكتب بريداً قصيراً في موضوع الوحدة.",
-        minWoerter: lv === "A1" ? 30 : lv === "A2" ? 50 : lv === "B1" ? 80 : 120,
+        minWoerter: lv === "A0" ? 15 : lv === "A1" ? 30 : lv === "A2" ? 50 : lv === "B1" ? 80 : 120,
         kriterien: w?.criteria ?? ["التحية والختام", "الإجابة عن كل النقاط", "روابط الجُمل"],
       },
       { teil: "sprechen", titelAr: "النطق — ثلاث جُمل", saetze: sprechSaetze },

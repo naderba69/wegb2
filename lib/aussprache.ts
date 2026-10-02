@@ -3,7 +3,7 @@
 // ما يقيسُه: المدّةُ · عددُ المقاطعِ المنطوقةِ · الوقفاتُ ومواضعُها · نسبةُ الكلامِ إلى الصمت.
 // ما لا يقيسُه: الأصواتُ المفردة (ü/ch) — تلك مرحلةٌ تالية، ونقولُها صراحةً للمتعلِّم.
 
-export type Level = "A1" | "A2" | "B1" | "B2";
+export type Level = "A0" | "A1" | "A2" | "B1" | "B2";
 
 export type Analyse = {
   dauerS: number;        // مدّةُ النطقِ بالثواني
@@ -41,7 +41,7 @@ export function silbenImText(satz: string): number {
 
 /** المدّةُ المتوقَّعةُ للنموذج: سرعةُ الناطقِ تتدرَّجُ مع المستوى. */
 export function zielDauer(satz: string, level: Level): number {
-  const proSekunde = { A1: 2.6, A2: 3.0, B1: 3.4, B2: 3.8 }[level];
+  const proSekunde = ({ A0: 2.0, A1: 2.6, A2: 3.0, B1: 3.4, B2: 3.8 } as Record<Level, number>)[level] ?? 2.0;
   return +(silbenImText(satz) / proSekunde).toFixed(2);
 }
 
@@ -116,8 +116,9 @@ export function bewerteAussprache(a: Analyse, satz: string, level: Level): Bewer
   }
 
   punkte = Math.max(0, Math.min(100, punkte));
-  // النطاقُ يتدرَّجُ مع المستوى: A1 يكفيهِ الفهم، وB2 يُطلَبُ منه القربُ من الأصل
-  const grenzen = { A1: [55, 80], A2: [60, 84], B1: [68, 88], B2: [75, 92] }[level];
+  // النطاقُ يتدرَّجُ مع المستوى: A0/A1 يكفيه الفهم، وB2 يُطلَبُ منه القربُ من الأصل
+  const grenzenMap: Record<Level, [number, number]> = { A0: [45, 70], A1: [55, 80], A2: [60, 84], B1: [68, 88], B2: [75, 92] };
+  const grenzen = grenzenMap[level];
   const band: Bewertung["band"] = punkte >= grenzen[1] ? "nah_am_original" : punkte >= grenzen[0] ? "verstaendlich" : "mit_muehe";
   if (!hinweise.length) hinweise.push({ kurz: "إيقاعٌ سليم", tatAr: "أعِدْها مرّةً بسرعةِ النموذجِ لتثبيتِ العادة" });
   return { band, bandAr: BAND_AR[band], punkte, hinweise };

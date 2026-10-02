@@ -1,7 +1,7 @@
 // نماذج البيانات — طريقي إلى B2 (محرّك الخطة اليومية)
-export type Level = "A1" | "A2" | "B1" | "B2";
+export type Level = "A0" | "A1" | "A2" | "B1" | "B2";
 export type UiLang = "ar" | "mix" | "de";
-export type Phase = "A1" | "A2" | "B1" | "B2" | "Abschluss";
+export type Phase = "A0" | "A1" | "A2" | "B1" | "B2" | "Abschluss";
 export type TaskKind =
   | "wiederholen"
   | "grammatik"
@@ -10,6 +10,7 @@ export type TaskKind =
   | "lesen"
   | "schreiben"
   | "sprechen"
+  | "aussprache"
   | "check";
 export type DayType = "lerntag" | "festigung" | "wochencheck" | "abschluss";
 
@@ -18,7 +19,15 @@ export type Kompetenz = "Lesen" | "Hoeren" | "Schreiben" | "Sprechen" | "Grammat
 
 export interface Exercise {
   id: string;
-  type: "mc" | "fill" | "truefalse" | "order" | "dictation" | "translate";
+  type: "mc" | "fill" | "truefalse" | "order" | "dictation" | "translate" | "umformung";
+  /** 🔁 umformung: الجملةُ المُدخَلةُ التي يُطلَبُ تحويلُها (promptDe = التعليمة) */
+  quelleDe?: string;
+  /** 🔁 umformung: بدائلُ مقبولةٌ سوى answer (مثل ترتيبٍ آخرَ للظرف) */
+  alternativen?: string[];
+  /** 🔁 umformung: الكلماتُ التي يجبُ أن تظهرَ (تشخيصٌ موجَّه: «ينقصك …») */
+  mussEnthalten?: string[];
+  /** 🔁 umformung: ما يجبُ ألّا يظهرَ (الفخّ نفسه: «ما زلتَ تكتب …») */
+  darfNicht?: string[];
   promptDe: string;
   promptAr?: string;
   options?: string[];
@@ -92,6 +101,17 @@ export interface Lesetext {
   titleDe: string;
   titleAr: string;
   de: string;
+  ar: string;
+  questions: Exercise[];
+  /** 📜 النسخة الطويلة للقراءة بطول CEFR حقيقي (B2: 220–420 كلمة)؛ `de` القصيرة تبقى نصَّ الاستماع المسجَّل */
+  lang?: Langfassung;
+  /** 🧭 علامة داخلية: فضّل النسخة القصيرة (لتدرّج نسبة النصوص الأصلية) */
+  __weg_useShort?: boolean;
+}
+
+export interface Langfassung {
+  de: string;
+  /** ملخّص عربي (لا ترجمة كاملة — القارئ في B2 يقرأ الألمانية) */
   ar: string;
   questions: Exercise[];
 }
@@ -220,6 +240,10 @@ export interface DayPlan {
   phase: Phase;
   type: DayType;
   tasks: DayTask[];
+  tempo: Tempo;
+  zielMin: number;
+  /** المحطات الست للدرس (إحماء، نطق/ظل، مفردات، قواعد استقرائية، استماع/قراءة، إنتاج) */
+  stationen?: Array<{ id: string; titelAr: string; titelDe: string; min: number }>;
 }
 
 export interface TaskResult {
@@ -230,6 +254,11 @@ export interface TaskResult {
   attempts: number;
   kind?: TaskKind;
   at?: string;
+  /** ⏱️ الدقائق المخطَّطة لهذه المهمة لحظةَ تسليمها — بها يُحسَب «مخطط مُنجَز»
+   *  (الخطة حتمية، فهي قابلة لإعادة الاشتقاق، لكن تثبيتها يجعل الحساب رخيصاً وصادقاً) */
+  geplantMin?: number;
+  /** ⏱️ الدقائق الفعلية المقضية — تُقاس عند التسليم، لا تُفتَرَض */
+  minutenEffektiv?: number;
 }
 
 export interface DayResult {
@@ -239,6 +268,8 @@ export interface DayResult {
   tasksDone: number;
   tasksTotal: number;
   at: string;
+  /** ⏱️ مجموع الدقائق الفعلية في هذا اليوم */
+  minutenEffektiv?: number;
 }
 
 export interface DebtItem {
@@ -262,6 +293,8 @@ export interface SrsState {
   reps: number;
   lapses: number;
   learning?: boolean;
+  /** تاريخ إدخال البطاقة (لمراجعة أولى بعد 24 ساعة) */
+  introduced?: string;
 }
 
 /** خطأ مسجَّل في دفتر الأخطاء */
@@ -301,23 +334,47 @@ export interface Kontrakt {
   lastShame?: string | null;
 }
 
+/** تقييمُ الثقةِ قبلَ الإجابة (Modul: Metakognition): سجلٌّ خامٌّ يُشتقُّ منه مؤشّرُ «الثقةِ الخاطئة» */
+export interface SicherheitsEintrag { t: string; id: string; sicher: boolean; correct: boolean }
+
+/** سرعة التعلّم التي يختارها المستخدم (3 وتائر) */
+export type Tempo = "leicht" | "regelmaessig" | "intensiv";
+export const TEMPO_ZIELMIN: Record<Tempo, number> = { leicht: 15, regelmaessig: 30, intensiv: 60 };
+export const TEMPO_LABEL: Record<Tempo, { de: string; ar: string; min: number }> = {
+  leicht:       { de: "Leicht (15 Min/Tag)",     ar: "خفيف (15 دقيقة/يوم)",    min: 15 },
+  regelmaessig: { de: "Regelmäßig (30 Min/Tag)", ar: "منتظم (30 دقيقة/يوم)",   min: 30 },
+  intensiv:     { de: "Intensiv (60 Min/Tag)",   ar: "مكثّف (60 دقيقة/يوم)",   min: 60 },
+};
+export const NEW_CARDS_PER_DAY: Record<Tempo, number> = { leicht: 3, regelmaessig: 5, intensiv: 10 };
+
 export interface Progress {
+  /** آخرُ 500 تقييمِ ثقةٍ قبلَ الإجابة — اختياريّ، يُملأ من ExerciseSet */
+  sicherheit?: SicherheitsEintrag[];
   v: number;
   plan: {
     day: number;
     tasks: Record<string, TaskResult>;
     days: Record<number, DayResult>;
     debt: DebtItem[];
+    /** ⏱️ إجمالي الدقائق الفعلية المقضية في الخطة كلها — المصدر الوحيد لساعات CEFR المزعومة.
+     *  بلا هذا الحقل لا يستطيع المشروع إثبات أي عدد ساعات، والوعد يبقى ادّعاءً. */
+    minutenEffektiv?: number;
   };
   srs: Record<string, SrsState>;
   canDo: Record<string, boolean>;
   streak: { last: string | null; count: number };
+  /** يوم سيّئ: بصمة المستخدم أنّ اليوم كان صعباً → تُجمَّد السلسلة بدون عقاب ولا ديون */
+  badDay?: string;
   settings: {
     uiLang: "auto" | UiLang;
     rate: number;
+    tempo: Tempo;
     voiceName?: string;
     /** مدرّس LLM اختياري (OpenAI-compatible) — يبقى محلياً في متصفحك */
     llm?: { baseUrl: string; apiKey: string; model: string };
+    /** 🎙️ التعرّف السحابي على الكلام (Web Speech API) — يُرسِل الصوتَ إلى خدمة المتصفّح الخارجية.
+     *  اختياريٌّ صريح: إن عُطِّل فُتح المسارُ المحلّيُّ البديل ولا يُحسبُ شيءٌ في الشبكة. */
+    cloudSpeech?: boolean;
     /** أُكِّد اختبار تحديد المستوى */
     placed?: boolean;
     /** موعد الامتحان الخارجي (YYYY-MM-DD) + اسمه */
@@ -365,14 +422,15 @@ export const emptyProgress: Progress = {
   srs: {},
   canDo: {},
   streak: { last: null, count: 0 },
-  settings: { uiLang: "auto", rate: 0.9 },
+  settings: { uiLang: "auto", rate: 0.85, tempo: "regelmaessig" as Tempo },
   xp: 0,
   abzeichen: {},
   kompetenzLog: [],
 };
 
-export const TOTAL_DAYS = 270;
+export const TOTAL_DAYS = 378;
 export const LEVEL_COLORS: Record<Phase, string> = {
+  A0: "var(--color-gold)",
   A1: "var(--color-a1)",
   A2: "var(--color-a2)",
   B1: "var(--color-b1)",

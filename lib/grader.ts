@@ -64,6 +64,15 @@ export function konfidenz(given: string, ref: string): number {
   return Math.max(0, Math.min(1, ok / Math.max(r.length, g.length)));
 }
 
+/** نسبةُ الكلماتِ المشتركةِ على أساسِ diffWoerter — 0..1 */
+export function wortAehnlichkeit(given: string, ref: string): number {
+  const g = given.trim().split(/\s+/).filter(Boolean);
+  const r = ref.trim().split(/\s+/).filter(Boolean);
+  if (!r.length || !g.length) return 0;
+  const ok = diffWoerter(given, ref).filter((t) => t.s === "ok").length;
+  return Math.max(0, Math.min(1, ok / Math.max(r.length, g.length)));
+}
+
 export class DeterministicGrader implements Grader {
 
   grade(ex: Exercise, response: string | string[]): GradeResult {
@@ -90,6 +99,24 @@ export class DeterministicGrader implements Grader {
       const ratio = target.length ? matched / target.length : 0;
       const ok = ratio >= 0.85 && given.length > 0;
       return this.result(ok, maxPoints, ex, ok ? "قريب جداً — الكلمات الأساسية صحيحة." : `النص الصحيح: ${ex.answer}`);
+    }
+
+    if (ex.type === "umformung") {
+      /* 🔁 التحويل: إنتاجٌ حرٌّ مقيَّدٌ — ثلاثُ درجاتٍ من الحكم:
+         ١ مطابقةٌ تامّةٌ لِلنموذجِ أو لِبديلٍ مقبول ← صحيح
+         ٢ الكلماتُ الواجبةُ كلُّها حاضرةٌ والمحظورةُ غائبةٌ، والتشابهُ ≥ 0.85 ← صحيح (اختلافُ ترقيمٍ أو ظرفٍ)
+         ٣ وإلّا: تشخيصٌ موجَّهٌ — «ما زلتَ تكتبُ X» أعلى من «ينقصك Y» أعلى من الفرقِ الكلّي */
+      const given = normalize(Array.isArray(response) ? response.join(" ") : response);
+      if (!given) return this.result(false, maxPoints, ex, "اكتب التحويلَ أوّلاً.");
+      const modelle = [ ...(Array.isArray(ex.answer) ? ex.answer : [ex.answer]), ...(ex.alternativen ?? []) ].map(normalize);
+      if (modelle.includes(given)) return this.result(true, maxPoints, ex, "تحويلٌ سليم — البنيةُ الجديدةُ في مكانِها.");
+      const nochDa = (ex.darfNicht ?? []).filter((w) => new RegExp(`(^|\\s)${normalize(w).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\s|$)`).test(given));
+      if (nochDa.length) return this.result(false, maxPoints, ex, `ما زلتَ تكتبُ «${nochDa.join(" · ")}» — وهذا هو الفخُّ الذي يُدرِّبُك التحويلُ على تركِه.`);
+      const fehlt = (ex.mussEnthalten ?? []).filter((w) => !given.includes(normalize(w)));
+      if (fehlt.length) return this.result(false, maxPoints, ex, `ينقصك: ${fehlt.join(" · ")} — بلا هذه لا تقومُ البنيةُ المطلوبة.`);
+      const best = Math.max(...modelle.map((m) => wortAehnlichkeit(given, m)));
+      if (best >= 0.85) return this.result(true, maxPoints, ex, "مقبول — البنيةُ صحيحةٌ واختلافُك في التفاصيلِ فقط.");
+      return this.result(false, maxPoints, ex, `البنيةُ لم تكتمل. النموذج: ${Array.isArray(ex.answer) ? ex.answer[0] : ex.answer}`);
     }
 
     if (ex.type === "translate") {

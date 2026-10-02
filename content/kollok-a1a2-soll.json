@@ -1,0 +1,2088 @@
+{
+  "_beschreibung": "القائمة الصريحة لبطاقات A1 وA2 ذات المتلازمات اليومية (Masterplan-2 المسار 2)",
+  "A1": {
+    "sollAnzahl": 170,
+    "karten": [
+      {
+        "id": "v006",
+        "de": "heißen",
+        "ar": "يُدعى"
+      },
+      {
+        "id": "v007",
+        "de": "kommen",
+        "ar": "يأتي / يأتي من"
+      },
+      {
+        "id": "v008",
+        "de": "wohnen",
+        "ar": "يسكن"
+      },
+      {
+        "id": "v009",
+        "de": "sprechen",
+        "ar": "يتحدث"
+      },
+      {
+        "id": "v010",
+        "de": "verstehen",
+        "ar": "يفهم"
+      },
+      {
+        "id": "v011",
+        "de": "lernen",
+        "ar": "يتعلّم"
+      },
+      {
+        "id": "v012",
+        "de": "arbeiten",
+        "ar": "يعمل"
+      },
+      {
+        "id": "v014",
+        "de": "die Arbeit",
+        "ar": "العمل"
+      },
+      {
+        "id": "v015",
+        "de": "die Sprache",
+        "ar": "اللغة"
+      },
+      {
+        "id": "v017",
+        "de": "das Land",
+        "ar": "البلد / الريف"
+      },
+      {
+        "id": "v149",
+        "de": "bezahlen",
+        "ar": "يدفع"
+      },
+      {
+        "id": "v036",
+        "de": "aufstehen",
+        "ar": "يقوم من النوم (منفصل)"
+      },
+      {
+        "id": "v037",
+        "de": "schlafen",
+        "ar": "ينام"
+      },
+      {
+        "id": "v038",
+        "de": "essen",
+        "ar": "يأكل"
+      },
+      {
+        "id": "v039",
+        "de": "trinken",
+        "ar": "يشرب"
+      },
+      {
+        "id": "v045",
+        "de": "das Frühstück",
+        "ar": "الفطور"
+      },
+      {
+        "id": "v046",
+        "de": "das Mittagessen",
+        "ar": "غداء"
+      },
+      {
+        "id": "v047",
+        "de": "der Kaffee",
+        "ar": "القهوة"
+      },
+      {
+        "id": "v151",
+        "de": "das Abendessen",
+        "ar": "العشاء"
+      },
+      {
+        "id": "v152",
+        "de": "der Hund",
+        "ar": "الكلب"
+      },
+      {
+        "id": "v153",
+        "de": "die Katze",
+        "ar": "القطة"
+      },
+      {
+        "id": "v154",
+        "de": "das Kind",
+        "ar": "الطفل"
+      },
+      {
+        "id": "v156",
+        "de": "das Wochenende",
+        "ar": "عطلة نهاية الأسبوع"
+      },
+      {
+        "id": "v1402",
+        "de": "der Kühlschrank",
+        "ar": "الثلاجة"
+      },
+      {
+        "id": "v1415",
+        "de": "der Kuchen",
+        "ar": "الكعكة"
+      },
+      {
+        "id": "v1416",
+        "de": "der Zucker",
+        "ar": "السكر"
+      },
+      {
+        "id": "v1418",
+        "de": "die Milch",
+        "ar": "الحليب"
+      },
+      {
+        "id": "v1419",
+        "de": "der Tisch",
+        "ar": "الطاولة"
+      },
+      {
+        "id": "v1422",
+        "de": "das Wasser",
+        "ar": "الماء"
+      },
+      {
+        "id": "vw-a1ess-000",
+        "de": "das Brot",
+        "ar": "الخبز"
+      },
+      {
+        "id": "vw-a1ess-013",
+        "de": "das Ei",
+        "ar": "البيضة"
+      },
+      {
+        "id": "vw-a1ess-014",
+        "de": "der Käse",
+        "ar": "الجبن"
+      },
+      {
+        "id": "vw-a1ess-016",
+        "de": "der Apfel",
+        "ar": "التفاحة"
+      },
+      {
+        "id": "vw-a1ess-023",
+        "de": "das Gemüse",
+        "ar": "الخضار"
+      },
+      {
+        "id": "vw-a1ess-024",
+        "de": "das Obst",
+        "ar": "الفاكهة"
+      },
+      {
+        "id": "vw-a1ess-025",
+        "de": "der Salat",
+        "ar": "السلطة"
+      },
+      {
+        "id": "vw-a1ess-026",
+        "de": "die Suppe",
+        "ar": "الشوربة"
+      },
+      {
+        "id": "vw-a1ess-032",
+        "de": "der Hunger",
+        "ar": "الجوع"
+      },
+      {
+        "id": "vw-a1ess-033",
+        "de": "der Durst",
+        "ar": "العطش"
+      },
+      {
+        "id": "vw-a1ess-036",
+        "de": "kochen",
+        "ar": "يطبخ"
+      },
+      {
+        "id": "vw-a1ess-037",
+        "de": "backen",
+        "ar": "يخبز"
+      },
+      {
+        "id": "vw-a1ess-038",
+        "de": "schmecken",
+        "ar": "يكونُ طعمُه"
+      },
+      {
+        "id": "vw-a1ess-039",
+        "de": "bestellen",
+        "ar": "يطلب (في المطعم)"
+      },
+      {
+        "id": "vw-a1ess-042",
+        "de": "das Restaurant",
+        "ar": "المطعم"
+      },
+      {
+        "id": "vw-a1ess-043",
+        "de": "die Speisekarte",
+        "ar": "قائمةُ الطعام"
+      },
+      {
+        "id": "vw-a1ess-044",
+        "de": "der Kellner",
+        "ar": "النادل"
+      },
+      {
+        "id": "vw-a1ess-046",
+        "de": "das Glas",
+        "ar": "الكأس"
+      },
+      {
+        "id": "vw-a1ess-047",
+        "de": "die Tasse",
+        "ar": "الفنجان"
+      },
+      {
+        "id": "vw-a1ess-051",
+        "de": "die Flasche",
+        "ar": "القارورة"
+      },
+      {
+        "id": "vw-a1ess-052",
+        "de": "der Supermarkt",
+        "ar": "السوبرماركت"
+      },
+      {
+        "id": "vw-a1ess-053",
+        "de": "die Bäckerei",
+        "ar": "المخبزة"
+      },
+      {
+        "id": "vw-a1ess-059",
+        "de": "das Kilo",
+        "ar": "الكيلو"
+      },
+      {
+        "id": "vw-a1koe-008",
+        "de": "die Hand",
+        "ar": "اليد"
+      },
+      {
+        "id": "vw-a1koe-021",
+        "de": "das Hemd",
+        "ar": "القميص"
+      },
+      {
+        "id": "vw-a1koe-025",
+        "de": "die Jacke",
+        "ar": "السترة"
+      },
+      {
+        "id": "vw-a1koe-027",
+        "de": "der Schuh",
+        "ar": "الحذاء"
+      },
+      {
+        "id": "vw-a1koe-031",
+        "de": "die Tasche",
+        "ar": "الحقيبة"
+      },
+      {
+        "id": "vw-a1koe-032",
+        "de": "tragen",
+        "ar": "يرتدي / يحمل"
+      },
+      {
+        "id": "vw-a1koe-033",
+        "de": "anziehen",
+        "ar": "يلبس"
+      },
+      {
+        "id": "vw-a1koe-035",
+        "de": "passen",
+        "ar": "يناسب (مقاساً)"
+      },
+      {
+        "id": "vw-a1koe-036",
+        "de": "kosten",
+        "ar": "يكلّف"
+      },
+      {
+        "id": "vw-a1koe-039",
+        "de": "die Größe",
+        "ar": "المقاس"
+      },
+      {
+        "id": "vw-a1koe-040",
+        "de": "die Farbe",
+        "ar": "اللون"
+      },
+      {
+        "id": "vw-a1koe-049",
+        "de": "waschen",
+        "ar": "يغسل"
+      },
+      {
+        "id": "vw-a1sta-003",
+        "de": "der Platz",
+        "ar": "الساحة / المكان"
+      },
+      {
+        "id": "vw-a1sta-009",
+        "de": "die Post",
+        "ar": "مكتبُ البريد"
+      },
+      {
+        "id": "vw-a1sta-010",
+        "de": "die Bank",
+        "ar": "البنك"
+      },
+      {
+        "id": "vw-a1sta-014",
+        "de": "der Bus",
+        "ar": "الحافلة"
+      },
+      {
+        "id": "vw-a1sta-015",
+        "de": "der Zug",
+        "ar": "القطار"
+      },
+      {
+        "id": "vw-a1sta-016",
+        "de": "das Auto",
+        "ar": "السيارة"
+      },
+      {
+        "id": "vw-a1sta-017",
+        "de": "das Fahrrad",
+        "ar": "الدرّاجة"
+      },
+      {
+        "id": "vw-a1sta-018",
+        "de": "das Taxi",
+        "ar": "سيارةُ الأجرة"
+      },
+      {
+        "id": "vw-a1sta-019",
+        "de": "fahren",
+        "ar": "يقود / يسافر بمركبة"
+      },
+      {
+        "id": "vw-a1sta-020",
+        "de": "laufen",
+        "ar": "يمشي / يجري"
+      },
+      {
+        "id": "vw-a1sta-021",
+        "de": "fliegen",
+        "ar": "يطير"
+      },
+      {
+        "id": "vw-a1sta-022",
+        "de": "ankommen",
+        "ar": "يصل"
+      },
+      {
+        "id": "vw-a1sta-023",
+        "de": "abfahren",
+        "ar": "ينطلق"
+      },
+      {
+        "id": "vw-a1sta-034",
+        "de": "der Weg",
+        "ar": "الطريق"
+      },
+      {
+        "id": "vw-a1sta-035",
+        "de": "fragen",
+        "ar": "يسأل"
+      },
+      {
+        "id": "vw-a1sta-036",
+        "de": "zeigen",
+        "ar": "يُري / يدلّ"
+      },
+      {
+        "id": "vw-a1sta-037",
+        "de": "suchen",
+        "ar": "يبحث"
+      },
+      {
+        "id": "vw-a1sta-038",
+        "de": "finden",
+        "ar": "يجد"
+      },
+      {
+        "id": "vw-a1sta-040",
+        "de": "der Markt",
+        "ar": "السوق"
+      },
+      {
+        "id": "vw-a1sta-041",
+        "de": "kaufen",
+        "ar": "يشتري"
+      },
+      {
+        "id": "vw-a1sta-042",
+        "de": "verkaufen",
+        "ar": "يبيع"
+      },
+      {
+        "id": "vw-a1sta-043",
+        "de": "das Geld",
+        "ar": "المال"
+      },
+      {
+        "id": "vw-a1sta-045",
+        "de": "die Kasse",
+        "ar": "الصندوق (الدفع)"
+      },
+      {
+        "id": "vw-a1sta-046",
+        "de": "das Kino",
+        "ar": "السينما"
+      },
+      {
+        "id": "vw-a1sta-047",
+        "de": "das Café",
+        "ar": "المقهى"
+      },
+      {
+        "id": "vw-a1sta-048",
+        "de": "der Park",
+        "ar": "المنتزه"
+      },
+      {
+        "id": "vw-a1sta-052",
+        "de": "das Zentrum",
+        "ar": "المركز"
+      },
+      {
+        "id": "vx-zeit--000",
+        "de": "die Zeit",
+        "ar": "الوقت"
+      },
+      {
+        "id": "vx-zeit--001",
+        "de": "die Stunde",
+        "ar": "الساعة (مدّة)"
+      },
+      {
+        "id": "vx-zeit--002",
+        "de": "die Minute",
+        "ar": "الدقيقة"
+      },
+      {
+        "id": "vx-zeit--003",
+        "de": "der Tag",
+        "ar": "اليوم"
+      },
+      {
+        "id": "vx-zeit--004",
+        "de": "die Woche",
+        "ar": "الأسبوع"
+      },
+      {
+        "id": "vx-zeit--007",
+        "de": "der Morgen",
+        "ar": "الصباح"
+      },
+      {
+        "id": "vx-zeit--011",
+        "de": "der Abend",
+        "ar": "المساء"
+      },
+      {
+        "id": "vx-zeit--032",
+        "de": "die Uhr",
+        "ar": "الساعة (الجهاز)"
+      },
+      {
+        "id": "vx-haus--004",
+        "de": "die Tür",
+        "ar": "الباب"
+      },
+      {
+        "id": "vx-haus--005",
+        "de": "das Fenster",
+        "ar": "النافذة"
+      },
+      {
+        "id": "vx-haus--006",
+        "de": "das Bett",
+        "ar": "السرير"
+      },
+      {
+        "id": "vx-haus--014",
+        "de": "der Schlüssel",
+        "ar": "المفتاح"
+      },
+      {
+        "id": "vx-haus--021",
+        "de": "die Hausaufgabe",
+        "ar": "الواجبُ المنزلي"
+      },
+      {
+        "id": "vx-haus--024",
+        "de": "das Wort",
+        "ar": "الكلمة"
+      },
+      {
+        "id": "vx-haus--025",
+        "de": "der Satz",
+        "ar": "الجملة"
+      },
+      {
+        "id": "vx-haus--026",
+        "de": "der Text",
+        "ar": "النص"
+      },
+      {
+        "id": "vx-haus--028",
+        "de": "lesen",
+        "ar": "يقرأ"
+      },
+      {
+        "id": "vx-haus--029",
+        "de": "schreiben",
+        "ar": "يكتب"
+      },
+      {
+        "id": "vx-haus--030",
+        "de": "hören",
+        "ar": "يسمع"
+      },
+      {
+        "id": "vx-haus--031",
+        "de": "sehen",
+        "ar": "يرى"
+      },
+      {
+        "id": "vx-haus--032",
+        "de": "gehen",
+        "ar": "يذهب"
+      },
+      {
+        "id": "vx-haus--033",
+        "de": "machen",
+        "ar": "يفعل / يصنع"
+      },
+      {
+        "id": "vx-haus--034",
+        "de": "geben",
+        "ar": "يعطي"
+      },
+      {
+        "id": "vx-haus--035",
+        "de": "nehmen",
+        "ar": "يأخذ"
+      },
+      {
+        "id": "vx-haus--036",
+        "de": "sagen",
+        "ar": "يقول"
+      },
+      {
+        "id": "vx-haus--037",
+        "de": "bringen",
+        "ar": "يُحضِر"
+      },
+      {
+        "id": "vx-haus--038",
+        "de": "helfen",
+        "ar": "يساعد"
+      },
+      {
+        "id": "vx-haus--039",
+        "de": "brauchen",
+        "ar": "يحتاج"
+      },
+      {
+        "id": "vx-haus--040",
+        "de": "wissen",
+        "ar": "يعلم"
+      },
+      {
+        "id": "vx-haus--041",
+        "de": "kennen",
+        "ar": "يعرِفُ شخصاً"
+      },
+      {
+        "id": "vx-haus--043",
+        "de": "bleiben",
+        "ar": "يبقى"
+      },
+      {
+        "id": "vx-haus--044",
+        "de": "öffnen",
+        "ar": "يفتح"
+      },
+      {
+        "id": "vx-haus--045",
+        "de": "schließen",
+        "ar": "يُغلق"
+      },
+      {
+        "id": "vx-haus--046",
+        "de": "anfangen",
+        "ar": "يبدأ"
+      },
+      {
+        "id": "vx-haus--047",
+        "de": "aufhören",
+        "ar": "يتوقّف"
+      },
+      {
+        "id": "vx-haus--048",
+        "de": "vergessen",
+        "ar": "ينسى"
+      },
+      {
+        "id": "vx-haus--050",
+        "de": "warten",
+        "ar": "ينتظر"
+      },
+      {
+        "id": "vx-haus--051",
+        "de": "spielen",
+        "ar": "يلعب"
+      },
+      {
+        "id": "vx-haus--062",
+        "de": "der Sohn",
+        "ar": "الابن"
+      },
+      {
+        "id": "vx-haus--063",
+        "de": "die Tochter",
+        "ar": "الابنة"
+      },
+      {
+        "id": "vx-haus--066",
+        "de": "die Großmutter",
+        "ar": "الجدّة"
+      },
+      {
+        "id": "vx-haus--068",
+        "de": "der Onkel",
+        "ar": "العمّ / الخال"
+      },
+      {
+        "id": "vx-haus--069",
+        "de": "die Tante",
+        "ar": "العمّة / الخالة"
+      },
+      {
+        "id": "vy-natur-005",
+        "de": "das Meer",
+        "ar": "البحر"
+      },
+      {
+        "id": "vy-natur-006",
+        "de": "der Strand",
+        "ar": "الشاطئ"
+      },
+      {
+        "id": "vy-natur-013",
+        "de": "die Luft",
+        "ar": "الهواء"
+      },
+      {
+        "id": "vy-natur-022",
+        "de": "der Sport",
+        "ar": "الرياضة"
+      },
+      {
+        "id": "vy-natur-023",
+        "de": "der Fußball",
+        "ar": "كرةُ القدم"
+      },
+      {
+        "id": "vy-natur-024",
+        "de": "schwimmen",
+        "ar": "يسبح"
+      },
+      {
+        "id": "vy-natur-025",
+        "de": "tanzen",
+        "ar": "يرقص"
+      },
+      {
+        "id": "vy-natur-026",
+        "de": "singen",
+        "ar": "يغنّي"
+      },
+      {
+        "id": "vy-natur-029",
+        "de": "das Hobby",
+        "ar": "الهواية"
+      },
+      {
+        "id": "vy-natur-032",
+        "de": "das Foto",
+        "ar": "الصورة"
+      },
+      {
+        "id": "vy-natur-033",
+        "de": "reisen",
+        "ar": "يسافر"
+      },
+      {
+        "id": "vy-natur-034",
+        "de": "besuchen",
+        "ar": "يزور"
+      },
+      {
+        "id": "vy-natur-035",
+        "de": "treffen",
+        "ar": "يلتقي"
+      },
+      {
+        "id": "vy-natur-037",
+        "de": "die Freizeit",
+        "ar": "وقتُ الفراغ"
+      },
+      {
+        "id": "vy-natur-044",
+        "de": "lachen",
+        "ar": "يضحك"
+      },
+      {
+        "id": "vy-natur-047",
+        "de": "mögen",
+        "ar": "يستلطف"
+      },
+      {
+        "id": "vy-natur-053",
+        "de": "duschen",
+        "ar": "يستحمّ"
+      },
+      {
+        "id": "vy-natur-055",
+        "de": "die Wäsche",
+        "ar": "الغسيل"
+      },
+      {
+        "id": "vy-natur-060",
+        "de": "schneiden",
+        "ar": "يقطع"
+      },
+      {
+        "id": "vz-welt-b-013",
+        "de": "das Wörterbuch",
+        "ar": "القاموس"
+      },
+      {
+        "id": "vz-welt-b-014",
+        "de": "übersetzen",
+        "ar": "يترجم"
+      },
+      {
+        "id": "vz-welt-b-015",
+        "de": "buchstabieren",
+        "ar": "يتهجّى"
+      },
+      {
+        "id": "vz-welt-b-027",
+        "de": "das Büro",
+        "ar": "المكتب"
+      },
+      {
+        "id": "vz-welt-b-043",
+        "de": "holen",
+        "ar": "يجلب"
+      },
+      {
+        "id": "vz-welt-b-079",
+        "de": "die Hilfe",
+        "ar": "المساعدة"
+      },
+      {
+        "id": "va-modort-053",
+        "de": "die E-Mail",
+        "ar": "البريدُ الإلكتروني"
+      },
+      {
+        "id": "va-modort-069",
+        "de": "der Brief",
+        "ar": "الرسالة"
+      },
+      {
+        "id": "va-modort-070",
+        "de": "das Paket",
+        "ar": "الطرد"
+      },
+      {
+        "id": "va-modort-073",
+        "de": "abholen",
+        "ar": "يستلم"
+      },
+      {
+        "id": "va-modort-084",
+        "de": "leihen",
+        "ar": "يُعير / يستعير"
+      },
+      {
+        "id": "va-modort-088",
+        "de": "mitbringen",
+        "ar": "يُحضِرُ معه"
+      },
+      {
+        "id": "va-modort-091",
+        "de": "das Licht",
+        "ar": "الضوء"
+      },
+      {
+        "id": "va-modort-094",
+        "de": "das Problem",
+        "ar": "المشكلة"
+      },
+      {
+        "id": "vb-abschl-006",
+        "de": "antworten",
+        "ar": "يجيب"
+      },
+      {
+        "id": "vb-abschl-014",
+        "de": "die Idee",
+        "ar": "الفكرة"
+      },
+      {
+        "id": "vb-abschl-033",
+        "de": "der Regenschirm",
+        "ar": "المظلّة"
+      }
+    ]
+  },
+  "A2": {
+    "sollAnzahl": 245,
+    "karten": [
+      {
+        "id": "v049",
+        "de": "der Arzt",
+        "ar": "الطبيب"
+      },
+      {
+        "id": "v051",
+        "de": "der Kopf",
+        "ar": "الرأس"
+      },
+      {
+        "id": "v052",
+        "de": "der Bauch",
+        "ar": "المعدة/البطن"
+      },
+      {
+        "id": "v053",
+        "de": "die Medizin",
+        "ar": "الدواء"
+      },
+      {
+        "id": "v054",
+        "de": "die Reise",
+        "ar": "الرحلة"
+      },
+      {
+        "id": "v055",
+        "de": "der Bahnhof",
+        "ar": "محطة القطار"
+      },
+      {
+        "id": "v056",
+        "de": "die Fahrkarte",
+        "ar": "تذكرة السفر"
+      },
+      {
+        "id": "v057",
+        "de": "umsteigen",
+        "ar": "يبدّل وسيلة النقل (منفصل)"
+      },
+      {
+        "id": "v058",
+        "de": "reservieren",
+        "ar": "يحجز (طاولةً أو مقعداً)"
+      },
+      {
+        "id": "v059",
+        "de": "das Hotel",
+        "ar": "الفندق"
+      },
+      {
+        "id": "v060",
+        "de": "die Reservierung",
+        "ar": "الحجز"
+      },
+      {
+        "id": "v061",
+        "de": "sparen",
+        "ar": "يدّخر"
+      },
+      {
+        "id": "v062",
+        "de": "die Umwelt",
+        "ar": "البيئة"
+      },
+      {
+        "id": "v063",
+        "de": "das Wetter",
+        "ar": "الطقس"
+      },
+      {
+        "id": "v064",
+        "de": "regnen",
+        "ar": "تمطر"
+      },
+      {
+        "id": "v065",
+        "de": "der Frühling",
+        "ar": "الربيع"
+      },
+      {
+        "id": "v066",
+        "de": "der Sommer",
+        "ar": "الصيف"
+      },
+      {
+        "id": "v067",
+        "de": "der Herbst",
+        "ar": "الخريف"
+      },
+      {
+        "id": "v068",
+        "de": "der Winter",
+        "ar": "الشتاء"
+      },
+      {
+        "id": "v069",
+        "de": "putzen",
+        "ar": "ينظّف"
+      },
+      {
+        "id": "v070",
+        "de": "einkaufen",
+        "ar": "يتسوّق (منفصل)"
+      },
+      {
+        "id": "v071",
+        "de": "das Geschäft",
+        "ar": "المتجر"
+      },
+      {
+        "id": "v072",
+        "de": "das Angebot",
+        "ar": "العرض (تخفيض)"
+      },
+      {
+        "id": "v157",
+        "de": "der Zahnarzt",
+        "ar": "طبيب الأسنان"
+      },
+      {
+        "id": "v158",
+        "de": "die Rechnung",
+        "ar": "الفاتورة"
+      },
+      {
+        "id": "v159",
+        "de": "die Verspätung",
+        "ar": "التأخير"
+      },
+      {
+        "id": "v160",
+        "de": "das Gepäck",
+        "ar": "الأمتعة"
+      },
+      {
+        "id": "v161",
+        "de": "sich beeilen",
+        "ar": "يسرع (متعدد اللواحق)"
+      },
+      {
+        "id": "v162",
+        "de": "die Nacht",
+        "ar": "الليل"
+      },
+      {
+        "id": "v1403",
+        "de": "der Handschuh",
+        "ar": "القفاز"
+      },
+      {
+        "id": "v1404",
+        "de": "das Flugzeug",
+        "ar": "الطائرة"
+      },
+      {
+        "id": "v1414",
+        "de": "die Hose",
+        "ar": "السروال"
+      },
+      {
+        "id": "v1421",
+        "de": "die Straße",
+        "ar": "الشارع"
+      },
+      {
+        "id": "v1423",
+        "de": "das Feuer",
+        "ar": "النار"
+      },
+      {
+        "id": "v1425",
+        "de": "das Schlafzimmer",
+        "ar": "غرفةُ النوم"
+      },
+      {
+        "id": "v1426",
+        "de": "der Lehrer",
+        "ar": "المعلم"
+      },
+      {
+        "id": "v1427",
+        "de": "der Urlaub",
+        "ar": "العطلة"
+      },
+      {
+        "id": "v073",
+        "de": "die Meinung",
+        "ar": "الرأي"
+      },
+      {
+        "id": "v074",
+        "de": "das Gefühl",
+        "ar": "الشعور"
+      },
+      {
+        "id": "v075",
+        "de": "glauben",
+        "ar": "يعتقد"
+      },
+      {
+        "id": "v076",
+        "de": "sich freuen",
+        "ar": "يفرح (متعدد اللواحق)"
+      },
+      {
+        "id": "v077",
+        "de": "sich ärgern",
+        "ar": "يغضب/يضايق"
+      },
+      {
+        "id": "v078",
+        "de": "die Angst",
+        "ar": "الخوف"
+      },
+      {
+        "id": "v079",
+        "de": "der Streit",
+        "ar": "الشجار"
+      },
+      {
+        "id": "v080",
+        "de": "entschuldigen",
+        "ar": "يعتذر"
+      },
+      {
+        "id": "v081",
+        "de": "die Einladung",
+        "ar": "الدعوة"
+      },
+      {
+        "id": "v082",
+        "de": "gratulieren",
+        "ar": "يهنّئ (+Dativ)"
+      },
+      {
+        "id": "v083",
+        "de": "der Geburtstag",
+        "ar": "عيد الميلاد"
+      },
+      {
+        "id": "v084",
+        "de": "die Erfahrung",
+        "ar": "الخبرة/التجربة"
+      },
+      {
+        "id": "v085",
+        "de": "berichten",
+        "ar": "يبلّغ/ينبّئ عن"
+      },
+      {
+        "id": "v086",
+        "de": "erzählen",
+        "ar": "يسرد/يحكي"
+      },
+      {
+        "id": "v087",
+        "de": "beschreiben",
+        "ar": "يصف"
+      },
+      {
+        "id": "v088",
+        "de": "die Absicht",
+        "ar": "النية/القصد"
+      },
+      {
+        "id": "v089",
+        "de": "der Plan",
+        "ar": "الخطة"
+      },
+      {
+        "id": "v090",
+        "de": "hoffen",
+        "ar": "يأمل"
+      },
+      {
+        "id": "v091",
+        "de": "die Entscheidung",
+        "ar": "القرار"
+      },
+      {
+        "id": "v092",
+        "de": "empfehlen",
+        "ar": "يوصي بـ"
+      },
+      {
+        "id": "v093",
+        "de": "die Nachricht",
+        "ar": "الخبر"
+      },
+      {
+        "id": "v094",
+        "de": "die Zeitung",
+        "ar": "الجريدة"
+      },
+      {
+        "id": "v095",
+        "de": "das Internet",
+        "ar": "الإنترنت"
+      },
+      {
+        "id": "v096",
+        "de": "der Beruf",
+        "ar": "المهنة"
+      },
+      {
+        "id": "v163",
+        "de": "der Vorschlag",
+        "ar": "الاقتراح"
+      },
+      {
+        "id": "v164",
+        "de": "die Regel",
+        "ar": "القاعدة/الضابط"
+      },
+      {
+        "id": "v165",
+        "de": "die Chance",
+        "ar": "الفرصة"
+      },
+      {
+        "id": "v166",
+        "de": "erwarten",
+        "ar": "يتوقع"
+      },
+      {
+        "id": "v167",
+        "de": "die Antwort",
+        "ar": "الإجابة"
+      },
+      {
+        "id": "v168",
+        "de": "die Strecke",
+        "ar": "المسافة/المسار"
+      },
+      {
+        "id": "v1405",
+        "de": "das Gebäude",
+        "ar": "المبنى"
+      },
+      {
+        "id": "v566",
+        "de": "die Kollegin",
+        "ar": "الزميلة في العمل"
+      },
+      {
+        "id": "v571",
+        "de": "fleißig",
+        "ar": "مجتهد في عمله"
+      },
+      {
+        "id": "v592",
+        "de": "arbeitslos",
+        "ar": "عاطل عن العمل"
+      },
+      {
+        "id": "v602",
+        "de": "recyceln",
+        "ar": "يعيد التدوير"
+      },
+      {
+        "id": "v607",
+        "de": "verpacken",
+        "ar": "يغلّف"
+      },
+      {
+        "id": "v662",
+        "de": "günstig",
+        "ar": "مناسب الثمن"
+      },
+      {
+        "id": "v668",
+        "de": "eröffnen",
+        "ar": "يفتح حساباً"
+      },
+      {
+        "id": "v679",
+        "de": "die Verkäuferin",
+        "ar": "البائعة في المتجر"
+      },
+      {
+        "id": "v682",
+        "de": "die Einkaufsliste",
+        "ar": "قائمة التسوق"
+      },
+      {
+        "id": "v685",
+        "de": "die Qualität",
+        "ar": "جودة السلعة"
+      },
+      {
+        "id": "v725",
+        "de": "das Ticket",
+        "ar": "تذكرة رقمية أو ورقية"
+      },
+      {
+        "id": "v728",
+        "de": "sich verspäten",
+        "ar": "يتأخر عن موعده"
+      },
+      {
+        "id": "v731",
+        "de": "die Baustelle",
+        "ar": "ورش إصلاح الطريق"
+      },
+      {
+        "id": "v735",
+        "de": "die Ampel",
+        "ar": "إشارة المرور الضوئية"
+      },
+      {
+        "id": "v760",
+        "de": "der Führerschein",
+        "ar": "رخصة السياقة"
+      },
+      {
+        "id": "v764",
+        "de": "der Flughafen",
+        "ar": "مطار المدينة"
+      },
+      {
+        "id": "v781",
+        "de": "das Amt",
+        "ar": "الدائرة الحكومية"
+      },
+      {
+        "id": "v849",
+        "de": "die Übung",
+        "ar": "الحصة التطبيقية للمسائل"
+      },
+      {
+        "id": "v855",
+        "de": "die Note",
+        "ar": "الدرجة من واحد إلى ستة"
+      },
+      {
+        "id": "v863",
+        "de": "die Bibliothek",
+        "ar": "مكتبة الجامعة"
+      },
+      {
+        "id": "v887",
+        "de": "die Aussprache",
+        "ar": "صحة النطق"
+      },
+      {
+        "id": "v914",
+        "de": "überraschen",
+        "ar": "يفاجئ بشيء غير متوقع"
+      },
+      {
+        "id": "v920",
+        "de": "unsicher",
+        "ar": "متردد فاقد اليقين"
+      },
+      {
+        "id": "v927",
+        "de": "unruhig",
+        "ar": "قلِق الحركة"
+      },
+      {
+        "id": "v933",
+        "de": "mutig",
+        "ar": "مقدام بلا وجل"
+      },
+      {
+        "id": "v952",
+        "de": "neugierig",
+        "ar": "فضولي السؤال"
+      },
+      {
+        "id": "v957",
+        "de": "einsam",
+        "ar": "وحيد النسمة"
+      },
+      {
+        "id": "v965",
+        "de": "loben",
+        "ar": "يمدح علناً"
+      },
+      {
+        "id": "v1026",
+        "de": "wandern",
+        "ar": "يتنزه ماشياً في الجبل"
+      },
+      {
+        "id": "vw-a2arb-006",
+        "de": "der Kollege",
+        "ar": "الزميل"
+      },
+      {
+        "id": "vw-a2arb-018",
+        "de": "sich bewerben",
+        "ar": "يتقدَّمُ بطلب"
+      },
+      {
+        "id": "vw-a2arb-019",
+        "de": "verdienen",
+        "ar": "يكسب"
+      },
+      {
+        "id": "vw-a2arb-022",
+        "de": "der Termin",
+        "ar": "الموعد"
+      },
+      {
+        "id": "vw-a2arb-023",
+        "de": "absagen",
+        "ar": "يُلغي"
+      },
+      {
+        "id": "vw-a2arb-024",
+        "de": "verschieben",
+        "ar": "يؤجّل"
+      },
+      {
+        "id": "vw-a2arb-025",
+        "de": "die Unterlagen",
+        "ar": "الوثائق"
+      },
+      {
+        "id": "vw-a2arb-027",
+        "de": "das Formular",
+        "ar": "الاستمارة"
+      },
+      {
+        "id": "vw-a2arb-028",
+        "de": "ausfüllen",
+        "ar": "يملأ"
+      },
+      {
+        "id": "vw-a2arb-038",
+        "de": "bestehen",
+        "ar": "ينجح (في امتحان)"
+      },
+      {
+        "id": "vw-a2arb-040",
+        "de": "wiederholen",
+        "ar": "يعيد"
+      },
+      {
+        "id": "vw-a2arb-041",
+        "de": "der Kurs",
+        "ar": "الدورة"
+      },
+      {
+        "id": "vw-a2arb-043",
+        "de": "die Aufgabe",
+        "ar": "الواجب / المهمّة"
+      },
+      {
+        "id": "vw-a2arb-044",
+        "de": "erklären",
+        "ar": "يشرح"
+      },
+      {
+        "id": "vw-a2arb-046",
+        "de": "üben",
+        "ar": "يتمرَّن"
+      },
+      {
+        "id": "vw-a2arb-049",
+        "de": "pünktlich",
+        "ar": "منضبطٌ بالوقت"
+      },
+      {
+        "id": "vw-a2arb-050",
+        "de": "selbstständig",
+        "ar": "مستقلٌّ في العمل"
+      },
+      {
+        "id": "vw-a2arb-054",
+        "de": "der Chef",
+        "ar": "المدير"
+      },
+      {
+        "id": "vw-a2arb-055",
+        "de": "die Firma",
+        "ar": "الشركة"
+      },
+      {
+        "id": "vw-a2arb-056",
+        "de": "der Mitarbeiter",
+        "ar": "الموظف"
+      },
+      {
+        "id": "vw-a2arb-057",
+        "de": "die Sicherheit",
+        "ar": "السلامة / الأمان"
+      },
+      {
+        "id": "vw-a2arb-058",
+        "de": "der Fehler",
+        "ar": "الخطأ"
+      },
+      {
+        "id": "vw-a2arb-064",
+        "de": "die Anfrage",
+        "ar": "الاستفسار"
+      },
+      {
+        "id": "vw-a2arb-065",
+        "de": "die Bestätigung",
+        "ar": "التأكيد"
+      },
+      {
+        "id": "vw-a2arb-068",
+        "de": "der Schalter",
+        "ar": "الشبّاك (في إدارة)"
+      },
+      {
+        "id": "vw-a2arb-069",
+        "de": "die Warteschlange",
+        "ar": "طابورُ الانتظار"
+      },
+      {
+        "id": "vw-a2arb-076",
+        "de": "die Einarbeitung",
+        "ar": "التأهيلُ الأوّل"
+      },
+      {
+        "id": "vw-a2arb-077",
+        "de": "die Fortbildung",
+        "ar": "التكوينُ المستمر"
+      },
+      {
+        "id": "vw-a2arb-079",
+        "de": "die Teamarbeit",
+        "ar": "العملُ الجماعي"
+      },
+      {
+        "id": "vw-a2arb-080",
+        "de": "die Kenntnisse",
+        "ar": "المعارف / المهارات"
+      },
+      {
+        "id": "vw-a2arb-081",
+        "de": "sich vorstellen",
+        "ar": "يعرّفُ بنفسِه"
+      },
+      {
+        "id": "vw-a2arb-082",
+        "de": "nachfragen",
+        "ar": "يستفسر"
+      },
+      {
+        "id": "vw-a2arb-083",
+        "de": "sich melden",
+        "ar": "يتواصل / يبلّغ"
+      },
+      {
+        "id": "vw-a2arb-085",
+        "de": "die Unterstützung",
+        "ar": "الدعم"
+      },
+      {
+        "id": "vw-a2arb-087",
+        "de": "der Zeitdruck",
+        "ar": "ضغطُ الوقت"
+      },
+      {
+        "id": "vw-a2arb-088",
+        "de": "die Bewerbungsunterlagen",
+        "ar": "ملفُّ الترشّح"
+      },
+      {
+        "id": "vw-a2all-004",
+        "de": "die Heizung",
+        "ar": "التدفئة"
+      },
+      {
+        "id": "vw-a2all-006",
+        "de": "die Reparatur",
+        "ar": "التصليح"
+      },
+      {
+        "id": "vw-a2all-007",
+        "de": "kaputt",
+        "ar": "معطَّل"
+      },
+      {
+        "id": "vw-a2all-008",
+        "de": "reparieren",
+        "ar": "يصلح"
+      },
+      {
+        "id": "vw-a2all-011",
+        "de": "der Müll",
+        "ar": "القمامة"
+      },
+      {
+        "id": "vw-a2all-012",
+        "de": "trennen",
+        "ar": "يفرز / يفصل"
+      },
+      {
+        "id": "vw-a2all-013",
+        "de": "aufräumen",
+        "ar": "يرتّب"
+      },
+      {
+        "id": "vw-a2all-014",
+        "de": "die Ordnung",
+        "ar": "النظام / الترتيب"
+      },
+      {
+        "id": "vw-a2all-015",
+        "de": "das Handy",
+        "ar": "الهاتف المحمول"
+      },
+      {
+        "id": "vw-a2all-016",
+        "de": "anrufen",
+        "ar": "يتّصلُ هاتفياً"
+      },
+      {
+        "id": "vw-a2all-019",
+        "de": "schicken",
+        "ar": "يرسل"
+      },
+      {
+        "id": "vw-a2all-020",
+        "de": "erreichen",
+        "ar": "يبلغ / يتمكّنُ من الوصول"
+      },
+      {
+        "id": "vw-a2all-023",
+        "de": "absprechen",
+        "ar": "يتّفقُ مسبقاً"
+      },
+      {
+        "id": "vw-a2all-025",
+        "de": "einladen",
+        "ar": "يدعو"
+      },
+      {
+        "id": "vw-a2all-028",
+        "de": "sich entschuldigen",
+        "ar": "يعتذر"
+      },
+      {
+        "id": "vw-a2all-030",
+        "de": "das Geschenk",
+        "ar": "الهدية"
+      },
+      {
+        "id": "vw-a2all-033",
+        "de": "das Fest",
+        "ar": "الاحتفال"
+      },
+      {
+        "id": "vw-a2all-034",
+        "de": "feiern",
+        "ar": "يحتفل"
+      },
+      {
+        "id": "vw-a2all-035",
+        "de": "der Gast",
+        "ar": "الضيف"
+      },
+      {
+        "id": "vw-a2all-037",
+        "de": "der Regen",
+        "ar": "المطر"
+      },
+      {
+        "id": "vw-a2all-038",
+        "de": "der Schnee",
+        "ar": "الثلج"
+      },
+      {
+        "id": "vw-a2all-039",
+        "de": "der Wind",
+        "ar": "الريح"
+      },
+      {
+        "id": "vw-a2all-040",
+        "de": "die Wolke",
+        "ar": "السحابة"
+      },
+      {
+        "id": "vw-a2all-041",
+        "de": "die Sonne",
+        "ar": "الشمس"
+      },
+      {
+        "id": "vw-a2all-042",
+        "de": "das Gewitter",
+        "ar": "العاصفةُ الرعدية"
+      },
+      {
+        "id": "vw-a2all-043",
+        "de": "die Temperatur",
+        "ar": "درجةُ الحرارة"
+      },
+      {
+        "id": "vw-a2all-044",
+        "de": "sonnig",
+        "ar": "مشمس"
+      },
+      {
+        "id": "vw-a2all-045",
+        "de": "bewölkt",
+        "ar": "غائم"
+      },
+      {
+        "id": "vw-a2all-046",
+        "de": "neblig",
+        "ar": "ضبابي"
+      },
+      {
+        "id": "vw-a2all-049",
+        "de": "buchen",
+        "ar": "يحجز (رحلةً أو فندقاً)"
+      },
+      {
+        "id": "vw-a2all-051",
+        "de": "der Koffer",
+        "ar": "الحقيبة الكبيرة"
+      },
+      {
+        "id": "vw-a2all-052",
+        "de": "packen",
+        "ar": "يحزم"
+      },
+      {
+        "id": "vw-a2all-053",
+        "de": "der Ausweis",
+        "ar": "بطاقةُ الهوية"
+      },
+      {
+        "id": "vw-a2all-054",
+        "de": "der Pass",
+        "ar": "جوازُ السفر"
+      },
+      {
+        "id": "vw-a2all-058",
+        "de": "gültig",
+        "ar": "ساري المفعول"
+      },
+      {
+        "id": "vw-a2all-062",
+        "de": "der Hausmeister",
+        "ar": "حارسُ العمارة"
+      },
+      {
+        "id": "vw-a2all-063",
+        "de": "der Aufzug",
+        "ar": "المصعد"
+      },
+      {
+        "id": "vw-a2all-064",
+        "de": "der Keller",
+        "ar": "القبو"
+      },
+      {
+        "id": "vw-a2all-066",
+        "de": "lüften",
+        "ar": "يهوّي"
+      },
+      {
+        "id": "vw-a2all-067",
+        "de": "der Lärm",
+        "ar": "الضجيج"
+      },
+      {
+        "id": "vw-a2all-068",
+        "de": "sich beschweren",
+        "ar": "يشتكي"
+      },
+      {
+        "id": "vw-a2all-069",
+        "de": "die Sprachnachricht",
+        "ar": "الرسالةُ الصوتية"
+      },
+      {
+        "id": "vw-a2all-070",
+        "de": "der Anruf",
+        "ar": "المكالمة"
+      },
+      {
+        "id": "vw-a2all-071",
+        "de": "besetzt",
+        "ar": "مشغول (الخط)"
+      },
+      {
+        "id": "vw-a2all-072",
+        "de": "die Ansage",
+        "ar": "الرسالةُ المسجَّلة"
+      },
+      {
+        "id": "vw-a2all-073",
+        "de": "weiterleiten",
+        "ar": "يحوّلُ رسالة"
+      },
+      {
+        "id": "vw-a2all-074",
+        "de": "die Unterhaltung",
+        "ar": "المحادثة"
+      },
+      {
+        "id": "vw-a2all-076",
+        "de": "höflich",
+        "ar": "مهذّب"
+      },
+      {
+        "id": "vw-a2all-078",
+        "de": "vorschlagen",
+        "ar": "يقترح"
+      },
+      {
+        "id": "vw-a2all-079",
+        "de": "zusagen",
+        "ar": "يقبلُ دعوة"
+      },
+      {
+        "id": "vw-a2all-080",
+        "de": "sich bedanken",
+        "ar": "يشكر"
+      },
+      {
+        "id": "vw-a2all-081",
+        "de": "die Rücksicht",
+        "ar": "المراعاة"
+      },
+      {
+        "id": "vw-a2all-083",
+        "de": "der Frost",
+        "ar": "الصقيع"
+      },
+      {
+        "id": "vw-a2all-084",
+        "de": "die Hitze",
+        "ar": "الحرّ الشديد"
+      },
+      {
+        "id": "vw-a2all-085",
+        "de": "die Vorhersage",
+        "ar": "التوقُّعاتُ الجوية"
+      },
+      {
+        "id": "vw-a2all-086",
+        "de": "die Unterkunft",
+        "ar": "مكانُ الإقامة"
+      },
+      {
+        "id": "vy-leben-003",
+        "de": "der Grund",
+        "ar": "السبب"
+      },
+      {
+        "id": "vy-leben-005",
+        "de": "der Unterschied",
+        "ar": "الفرق"
+      },
+      {
+        "id": "vy-leben-006",
+        "de": "die Möglichkeit",
+        "ar": "الإمكانية"
+      },
+      {
+        "id": "vy-leben-008",
+        "de": "sich entscheiden",
+        "ar": "يقرّر"
+      },
+      {
+        "id": "vy-leben-010",
+        "de": "vergleichen",
+        "ar": "يقارن"
+      },
+      {
+        "id": "vy-leben-011",
+        "de": "bedeuten",
+        "ar": "يعني"
+      },
+      {
+        "id": "vy-leben-012",
+        "de": "erlauben",
+        "ar": "يسمح"
+      },
+      {
+        "id": "vy-leben-018",
+        "de": "aufpassen",
+        "ar": "يحترس / يراقب"
+      },
+      {
+        "id": "vy-leben-019",
+        "de": "versprechen",
+        "ar": "يَعِد"
+      },
+      {
+        "id": "vy-leben-021",
+        "de": "die Gelegenheit",
+        "ar": "الفرصة"
+      },
+      {
+        "id": "vy-leben-022",
+        "de": "die Bedingung",
+        "ar": "الشرط"
+      },
+      {
+        "id": "vy-leben-023",
+        "de": "der Zweck",
+        "ar": "الغرض"
+      },
+      {
+        "id": "vy-leben-024",
+        "de": "die Wirkung",
+        "ar": "الأثر"
+      },
+      {
+        "id": "vy-leben-025",
+        "de": "die Erfindung",
+        "ar": "الاختراع"
+      },
+      {
+        "id": "vy-leben-029",
+        "de": "löschen",
+        "ar": "يحذف"
+      },
+      {
+        "id": "vy-leben-030",
+        "de": "herunterladen",
+        "ar": "يُنزّل"
+      },
+      {
+        "id": "vy-leben-031",
+        "de": "die Verbindung",
+        "ar": "الاتصال"
+      },
+      {
+        "id": "vy-leben-041",
+        "de": "die Beschwerden",
+        "ar": "الأوجاع / الشكاوى"
+      },
+      {
+        "id": "vy-leben-044",
+        "de": "die Ernährung",
+        "ar": "التغذية"
+      },
+      {
+        "id": "vy-leben-045",
+        "de": "abnehmen",
+        "ar": "ينقصُ وزناً"
+      },
+      {
+        "id": "vy-leben-046",
+        "de": "zunehmen",
+        "ar": "يزيدُ وزناً"
+      },
+      {
+        "id": "vy-leben-047",
+        "de": "der Notfall",
+        "ar": "الحالةُ الطارئة"
+      },
+      {
+        "id": "vy-leben-050",
+        "de": "die Geschwindigkeit",
+        "ar": "السرعة"
+      },
+      {
+        "id": "vy-leben-054",
+        "de": "die Strafe",
+        "ar": "العقوبة / الغرامة"
+      },
+      {
+        "id": "vy-leben-057",
+        "de": "zuständig",
+        "ar": "مختصّ"
+      },
+      {
+        "id": "vy-leben-058",
+        "de": "die Auskunft",
+        "ar": "الاستعلام"
+      },
+      {
+        "id": "vy-leben-059",
+        "de": "das Erdgeschoss",
+        "ar": "الطابقُ الأرضي"
+      },
+      {
+        "id": "vy-leben-901",
+        "de": "die Beratung",
+        "ar": "الاستشارة"
+      },
+      {
+        "id": "vy-leben-902",
+        "de": "die Anlage",
+        "ar": "المرفق"
+      },
+      {
+        "id": "vy-leben-903",
+        "de": "die Nutzung",
+        "ar": "الاستعمال"
+      },
+      {
+        "id": "vz-schrei-001",
+        "de": "der Anlass",
+        "ar": "المناسبة / الداعي"
+      },
+      {
+        "id": "vz-schrei-002",
+        "de": "die Anrede",
+        "ar": "صيغةُ المخاطبة"
+      },
+      {
+        "id": "vz-schrei-003",
+        "de": "der Betreff",
+        "ar": "الموضوع (في رسالة)"
+      },
+      {
+        "id": "vz-schrei-004",
+        "de": "die Grußformel",
+        "ar": "عبارةُ الختام"
+      },
+      {
+        "id": "vz-schrei-006",
+        "de": "die Bitte",
+        "ar": "الرجاء"
+      },
+      {
+        "id": "vz-schrei-009",
+        "de": "zustimmen",
+        "ar": "يوافق"
+      },
+      {
+        "id": "vz-schrei-011",
+        "de": "der Standpunkt",
+        "ar": "وجهةُ النظر"
+      },
+      {
+        "id": "vz-schrei-012",
+        "de": "das Beispiel",
+        "ar": "المثال"
+      },
+      {
+        "id": "vz-schrei-019",
+        "de": "der Zuschuss",
+        "ar": "الإعانة"
+      },
+      {
+        "id": "vz-schrei-020",
+        "de": "die Kündigungsfrist",
+        "ar": "مهلةُ الإنهاء"
+      },
+      {
+        "id": "vz-schrei-022",
+        "de": "der Feiertag",
+        "ar": "العطلةُ الرسمية"
+      },
+      {
+        "id": "vz-schrei-023",
+        "de": "die Kinderbetreuung",
+        "ar": "رعايةُ الأطفال"
+      },
+      {
+        "id": "vz-schrei-024",
+        "de": "die Nachbarschaftshilfe",
+        "ar": "تعاونُ الجيران"
+      },
+      {
+        "id": "vz-schrei-025",
+        "de": "sich informieren",
+        "ar": "يستعلم"
+      },
+      {
+        "id": "vz-schrei-026",
+        "de": "teilnehmen",
+        "ar": "يشارك"
+      },
+      {
+        "id": "vz-schrei-027",
+        "de": "die Teilnahme",
+        "ar": "المشاركة"
+      },
+      {
+        "id": "vz-schrei-029",
+        "de": "die Verpflichtung",
+        "ar": "الالتزام"
+      },
+      {
+        "id": "vz-schrei-030",
+        "de": "die Bedienung",
+        "ar": "الخدمة (في مطعم)"
+      },
+      {
+        "id": "vz-schrei-036",
+        "de": "die Auswahl",
+        "ar": "التشكيلة"
+      },
+      {
+        "id": "vz-schr-900",
+        "de": "die Rückgabe",
+        "ar": "الإرجاع"
+      },
+      {
+        "id": "vz-schr-901",
+        "de": "die Anzahlung",
+        "ar": "العربون"
+      },
+      {
+        "id": "vz-schr-902",
+        "de": "die Beratungsstelle",
+        "ar": "مركزُ الإرشاد"
+      },
+      {
+        "id": "vz-schr-903",
+        "de": "der Sprachnachweis",
+        "ar": "إثباتُ اللغة"
+      },
+      {
+        "id": "vz-schr-904",
+        "de": "die Unterschrift",
+        "ar": "التوقيع"
+      },
+      {
+        "id": "vz-schr-905",
+        "de": "die Vollmacht",
+        "ar": "التوكيل"
+      },
+      {
+        "id": "vz-schr-906",
+        "de": "das Anschreiben",
+        "ar": "رسالةُ التقديم"
+      }
+    ]
+  }
+}

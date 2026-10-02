@@ -14,8 +14,24 @@
   --color-b1: #d97706;
   --color-b2: #7c3aed;
   --color-line: #e7e2d8;
-  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-sans: "Cairo", "Readex Pro", -apple-system, BlinkMacSystemFont, "Segoe UI Arabic", "Segoe UI", Tahoma, "Geeza Pro", "Arabic Typesetting", sans-serif;
+  --font-german: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
   --shadow-soft: 0 1px 2px rgb(28 25 23 / 0.05), 0 8px 24px -12px rgb(28 25 23 / 0.12);
+}
+
+:root {
+  --color-der: #1d4ed8;
+  --color-der-bg: #eff6ff;
+  --color-der-border: #bfdbfe;
+  --color-die: #e11d48;
+  --color-die-bg: #fff1f2;
+  --color-die-border: #fecdd3;
+  --color-das: #059669;
+  --color-das-bg: #ecfdf5;
+  --color-das-border: #a7f3d0;
+  --color-plural: #d97706;
+  --color-plural-bg: #fffbeb;
+  --color-plural-border: #fde68a;
 }
 
 html {
@@ -27,15 +43,69 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  line-height: 1.8;
 }
 
-/* German text snippets inside RTL pages */
-.de {
+/* German text snippets inside RTL pages — BiDi Isolation */
+bdi, .de {
   direction: ltr;
   unicode-bidi: isolate;
   display: inline-block;
   text-align: left;
-  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-family: var(--font-german);
+}
+
+/* الألوان الأكاديمية الصارمة لأدوات التعريف الألمانية */
+.art-der { color: var(--color-der); font-weight: 800; }
+.art-die { color: var(--color-die); font-weight: 800; }
+.art-das { color: var(--color-das); font-weight: 800; }
+.art-plural { color: var(--color-plural); font-weight: 800; }
+
+.badge-der { background: var(--color-der-bg); color: var(--color-der); border: 1px solid var(--color-der-border); font-weight: 800; border-radius: 999px; padding: 0.15rem 0.65rem; font-size: 0.85rem; display: inline-flex; align-items: center; }
+.badge-die { background: var(--color-die-bg); color: var(--color-die); border: 1px solid var(--color-die-border); font-weight: 800; border-radius: 999px; padding: 0.15rem 0.65rem; font-size: 0.85rem; display: inline-flex; align-items: center; }
+.badge-das { background: var(--color-das-bg); color: var(--color-das); border: 1px solid var(--color-das-border); font-weight: 800; border-radius: 999px; padding: 0.15rem 0.65rem; font-size: 0.85rem; display: inline-flex; align-items: center; }
+.badge-plural { background: var(--color-plural-bg); color: var(--color-plural); border: 1px solid var(--color-plural-border); font-weight: 800; border-radius: 999px; padding: 0.15rem 0.65rem; font-size: 0.85rem; display: inline-flex; align-items: center; }
+
+/* بطاقة الفلاشكارد التفاعلية ثلاثية الأبعاد */
+.flip-card-container {
+  perspective: 1200px;
+  width: 100%;
+}
+.flip-card {
+  width: 100%;
+  min-height: 220px;
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.flip-card.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.flip-face-front {
+  background: white;
+  border: 2px solid var(--color-line);
+}
+.flip-face-back {
+  background: var(--color-paper2);
+  border: 2px solid var(--color-gold);
+  transform: rotateY(180deg);
 }
 
 .card {

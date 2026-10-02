@@ -1,5 +1,44 @@
 [
   {
+    "id": "w-a0-01",
+    "level": "A0",
+    "titleDe": "Das Alphabet schreiben",
+    "titleAr": "كتابة الأبجدية الألمانية",
+    "taskDe": "Schreibe die 26 Buchstaben des Alphabets und die drei Umlaute (ä, ö, ü) sowie ß. Schreibe zu jedem Buchstaben ein Wort.",
+    "taskAr": "اكتب حروف الأبجدية الألمانية الستة وعشرين، مع ثلاثة حروف أوملاوت (ä, ö, ü) وحرف ß، واكتب كلمة واحدة بجانب كل حرف.",
+    "criteria": [
+      "جميع الحروف الـ26 موجودة",
+      "حروف الأوملاوت ä/ö/ü مكتوبة",
+      "ß مكتوب",
+      "كلمة واحدة صحيحة على الأقل بجانب كل حرف"
+    ],
+    "sample": "A – Apfel, B – Buch, C – Computer, D – Deutschland, E – Esel, F – Fisch, G – Geld, H – Haus, I – Insel, J – Jahr, K – Kaffee, L – Land, M – Mann, N – Name, O – Oma, P – Park, Q – Quelle, R – Radio, S – Schule, T – Tag, U – Uhr, V – Vater, W – Wasser, X – Xylofon, Y – Yoga, Z – Zug · ä – Ärzte, ö – Öl, ü – Übung, ß – Straße.",
+    "noteAr": [
+      "في A0 نكتفي بكتابة الحروف وكلمة واحدة: لا جُمَل مركَّبة ولا تصريف.",
+      "ß يُلفظ كـ s مشدودة.",
+      "ä/ö/ü لا تُكتب ae/oe/ue في الامتحان الرسمي — لكن كتابتها مقبولة في الرسائل."
+    ]
+  },
+  {
+    "id": "w-a0-02",
+    "level": "A0",
+    "titleDe": "Hallo! Ich heiße …",
+    "titleAr": "مرحباً! اسمي …",
+    "taskDe": "Schreibe 3 einfache Sätze über dich: Name, Herkunft, Sprache.",
+    "taskAr": "اكتب 3 جمل بسيطة عن نفسك: الاسم، البلد، اللغة.",
+    "criteria": [
+      "جملة اسمك (ich heiße …)",
+      "جملة بلدك (ich komme aus …)",
+      "جملة لغتك (ich spreche …)"
+    ],
+    "sample": "Hallo! Ich heiße Sara. Ich komme aus Tunesien. Ich spreche Arabisch und ein bisschen Deutsch.",
+    "noteAr": [
+      "في A0 الجمل بسيطة جداً: فاعل + فعل + مكمّل، بلا روابط.",
+      "«aus Tunesien» بلا أداة.",
+      "«ein bisschen Deutsch» = قليل من الألمانية — عبارة تحية متوقعة في اليوم الأول."
+    ]
+  },
+  {
     "id": "w-a1-01",
     "level": "A1",
     "titleDe": "Stell dich vor!",
@@ -236,18 +275,19 @@
     "level": "B1",
     "titleDe": "Erlebnis erzählen",
     "titleAr": "سرد تجربة",
-    "taskDe": "Erzähle eine Geschichte (ca. 80 Wörter) mit Plusquamperfekt + Perfekt: Was war vorher passiert?",
-    "taskAr": "احكِ قصة (80 كلمة) بالماضي التام + الماضي المركّب: ماذا كان قد حدث قبل؟",
+    "taskDe": "Erzähle eine Geschichte (ca. 80 Wörter) in der Erzählzeit: Präteritum für sein/haben (war, hatte), Plusquamperfekt für das Vorherige, Perfekt im wörtlichen Gespräch.",
+    "taskAr": "احكِ قصة (80 كلمة) بزمن السرد: Präteritum مع sein/haben (war·hatte)، والماضي الأسبق لما سبق الأحداث، و Perfekt داخل الكلام المنقول.",
     "criteria": [
       "تسلسل زمني: nachdem/bevor أو قبلها/بعدها",
+      "Präteritum من sein أو haben مرة على الأقل (war · hatte) — درس a2-praeteritum",
       "Plusquamperfekt مرة + Perfekt مرتين",
       "جملة ختامية فيها شعور"
     ],
     "sample": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt – an der Volkshochschule, mit Karteikarten und einer Lehrerin, die mir Mut machte. Trotzdem war der Anfang schwer: Im ersten Bürogespräch verstand ich nur Bahnhof, obwohl ich doch alles gelernt hatte. Ein Kollege hat mir sehr geholfen: Er hat mich ermutigt, einfach zu sprechen, auch mit Fehlern. Ohne ihn hätte ich nicht so schnell Fortschritte gemacht. Heute, zwei Jahre später, denke ich dankbar an diese erste Stunde im falschen Konferenzraum zurück – und lächle.",
     "noteAr": [
+      "war/hatte ليستا تزييناً: السردُ الألمانيُّ لا يقول «ist gewesen» في الكتابة — وهذه كانت فجوةَ المنهجِ حتى أُغلِقَت بدرسَي a1-war-hatte و a2-praeteritum",
       "Plusquamperfekt مُثبَّتٌ في صدر «Bevor…» مرتين ثم مفارِقٌ عند الشعور — استخدامٌ وظيفي لا استعراضي",
-      "Perfekt مزدوج للحليف (hat geholfen / hat ermutigt) ثم رجوعٌ للحاضر (Heute… denke) — الزمنُ يُديرُ القوسَ الدرامي",
-      "«nur Bahnhof verstanden» — اصطلاحٌ ألماني أصيل في سردٍ لغَيرِ أصيلين: طبقةٌ تُدرَّسُ ولا تُترجَم"
+      "Perfekt مزدوج للحليف (hat geholfen / hat ermutigt) ثم رجوعٌ للحاضر (Heute… denke) — الزمنُ يُديرُ الحكاية"
     ]
   },
   {
@@ -589,5 +629,247 @@
       "Konjunktiv II في خدمة الحُجَّة لا الحفظ: hätte… nie gelernt / wäre — شرطيّةُ تجربةٍ لا شرطيّةُ كتاب",
       "قلبُ حجةِ التكلفة: الأغلى ليس الرحلةَ بل زمنُ الشكّ — تقنيةُ الردِّ الصفوة: ماثلةٌ في النص لا مسمّاةٌ في الحاشية"
     ]
+  },
+  {
+    "id": "w-a1-08",
+    "level": "A1",
+    "titleDe": "Eine SMS an die Lehrerin",
+    "titleAr": "رسالة قصيرة إلى المعلّمة",
+    "taskDe": "Du bist krank und kannst nicht zum Kurs kommen. Schreibe eine kurze Nachricht (3–4 Sätze): Grund, wie lange, eine Frage zu den Hausaufgaben.",
+    "taskAr": "أنت مريض ولا تستطيع الحضور إلى الدورة. اكتب رسالة قصيرة (3–4 جمل): السبب، المدة، وسؤال عن الواجبات.",
+    "criteria": [
+      "تحية ووداع مناسبان (Liebe Frau … / Viele Grüße)",
+      "الفعل في الموضع الثاني",
+      "جملة بـ«kann … nicht kommen» (الفعل المساعد + المصدر في النهاية)",
+      "سؤال واحد بعلامة استفهام"
+    ],
+    "sample": "Liebe Frau Klein, ich bin krank und habe Fieber. Ich kann heute und morgen nicht zum Kurs kommen. Was sind die Hausaufgaben für Donnerstag? Viele Grüße, Omar",
+    "noteAr": [
+      "«kann … kommen»: قوس الفعل المساعد والمصدر — أهمّ بنية في رسائل A1",
+      "السؤال في النهاية يجعل الرسالة تواصلاً لا إعلاناً"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-a1-09",
+    "level": "A1",
+    "titleDe": "Postkarte aus dem Urlaub",
+    "titleAr": "بطاقة بريدية من العطلة",
+    "taskDe": "Schreibe eine Postkarte an einen Freund (4–5 Sätze): Wo bist du? Wie ist das Wetter? Was machst du? Wann kommst du zurück?",
+    "taskAr": "اكتب بطاقة بريدية لصديق (4–5 جمل): أين أنت؟ كيف الطقس؟ ماذا تفعل؟ متى تعود؟",
+    "criteria": [
+      "الإجابة عن الأسئلة الأربعة",
+      "جملة عن الطقس بـ«es ist / es regnet»",
+      "فعل منفصل واحد على الأقل (zurückkommen / mitkommen)",
+      "الأزمنة في الحاضر"
+    ],
+    "sample": "Hallo Karim, ich bin in Hamburg am Meer. Das Wetter ist gut, die Sonne scheint, aber der Wind ist kalt. Morgens schwimme ich, nachmittags gehe ich spazieren. Am Samstag komme ich zurück. Bis bald! Lina",
+    "noteAr": [
+      "«komme … zurück»: الفعل المنفصل في الحاضر — الجزء الثاني في نهاية الجملة",
+      "البطاقة تحتاج مخاطَباً وتوقيعاً — يُفحصان في الامتحان"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-a1-10",
+    "level": "A1",
+    "titleDe": "Ein Formular im Amt",
+    "titleAr": "استمارة في الدائرة",
+    "taskDe": "Fülle das Formular für die Anmeldung im Sprachkurs aus: Vorname, Nachname, Geburtsdatum, Adresse mit Postleitzahl, Telefon, Muttersprache, Kurs (A1/A2).",
+    "taskAr": "املأ استمارة التسجيل في دورة اللغة: الاسم، اسم العائلة، تاريخ الميلاد، العنوان مع الرمز البريدي، الهاتف، اللغة الأم، الدورة.",
+    "criteria": [
+      "كل الحقول معبّأة",
+      "تاريخ الميلاد بصيغة يوم.شهر.سنة",
+      "الرمز البريدي قبل اسم المدينة",
+      "الاسم بأحرف كبيرة في أوله"
+    ],
+    "sample": "Vorname: Salma · Nachname: Trabelsi · Geburtsdatum: 12. März, sechsundzwanzig Jahre alt · Adresse: Gartenstraße 8, 04109 Leipzig · Telefon: 0341 123456 · Muttersprache: Arabisch · Zweite Sprache: Französisch · Kurs: A1 am Vormittag · Unterschrift: S. Trabelsi",
+    "noteAr": [
+      "الاستمارة جزء ثابت من امتحان A1: لا جمل، بل حقول صحيحة",
+      "الرمز البريدي قبل المدينة — ترتيب ألماني يُخطئ فيه كثيرون"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-a2-09",
+    "level": "A2",
+    "titleDe": "Absage einer Einladung",
+    "titleAr": "الاعتذار عن دعوة",
+    "taskDe": "Eine Freundin lädt dich zu ihrer Hochzeit ein, aber du kannst nicht kommen. Schreibe eine E-Mail (6–8 Sätze): Dank, Grund, Entschuldigung, Vorschlag für ein Treffen.",
+    "taskAr": "صديقة تدعوك إلى زفافها لكنك لا تستطيع الحضور. اكتب إيميلاً (6–8 جمل): شكر، سبب، اعتذار، اقتراح لقاء.",
+    "criteria": [
+      "شكر على الدعوة في البداية",
+      "سبب بـweil (الفعل في النهاية)",
+      "اعتذار صريح (Es tut mir leid)",
+      "اقتراح بـ«Wollen wir …?» أو «Wie wäre es mit …?»"
+    ],
+    "sample": "Liebe Nour, vielen Dank für die Einladung zu deiner Hochzeit! Ich freue mich sehr für dich. Leider kann ich am 14. Juni nicht kommen, weil ich an diesem Tag eine Prüfung habe. Es tut mir wirklich leid. Ich möchte dir aber gratulieren und ein Geschenk vorbeibringen. Wollen wir uns in der Woche danach treffen? Ich lade dich zum Essen ein. Herzliche Grüße, Amina",
+    "noteAr": [
+      "Absage = اعتذار عن دعوة: البنية شكر ← سبب ← أسف ← بديل",
+      "«weil … habe»: الفعل في النهاية — يُقيَّم مباشرة"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-a2-10",
+    "level": "A2",
+    "titleDe": "Beschwerde beim Hausmeister",
+    "titleAr": "شكوى إلى حارس البناية",
+    "taskDe": "Die Heizung in deiner Wohnung funktioniert seit drei Tagen nicht. Schreibe eine kurze Nachricht an den Hausmeister (6–8 Sätze): Problem, seit wann, was du schon gemacht hast, Bitte um Termin.",
+    "taskAr": "التدفئة في شقتك لا تعمل منذ ثلاثة أيام. اكتب رسالة قصيرة إلى الحارس (6–8 جمل): المشكلة، منذ متى، ما فعلته، طلب موعد.",
+    "criteria": [
+      "مخاطبة رسمية (Sehr geehrter Herr …)",
+      "«seit» + Dativ للمدة",
+      "Perfekt لما فعلته (habe … probiert)",
+      "طلب مهذّب بـ«Könnten Sie …?»"
+    ],
+    "sample": "Sehr geehrter Herr Kaya, die Heizung in meiner Wohnung im dritten Stock funktioniert seit drei Tagen nicht. Ich habe schon alles probiert und den Regler neu eingestellt, aber es bleibt kalt. Die Kinder sind erkältet. Könnten Sie bitte diese Woche einen Termin machen? Ich bin jeden Tag ab 16 Uhr zu Hause. Vielen Dank im Voraus. Mit freundlichen Grüßen, Fatma Ben Ali",
+    "noteAr": [
+      "الشكوى المهذّبة تنجح بالحقائق: منذ متى، ماذا جرّبت، متى أنت متاح",
+      "«Könnten Sie» أهذب من «Können Sie» — Konjunktiv II الأول في A2"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-a2-11",
+    "level": "A2",
+    "titleDe": "Ein Erlebnis erzählen",
+    "titleAr": "سرد تجربة",
+    "taskDe": "Erzähle von einem Tag, an dem etwas nicht geklappt hat (7–9 Sätze): Was war der Plan? Was ist passiert? Wie ist es ausgegangen? Benutze das Perfekt.",
+    "taskAr": "احكِ عن يوم لم تسر فيه الأمور كما يجب (7–9 جمل): ما الخطة؟ ماذا حدث؟ كيف انتهى؟ استعمل الـPerfekt.",
+    "criteria": [
+      "Perfekt مع haben وsein بشكل صحيح",
+      "روابط زمنية (zuerst, dann, danach, schließlich)",
+      "جملة بـ«als» أو «nachdem» واحدة على الأقل",
+      "خاتمة قصيرة (Zum Glück / Leider)"
+    ],
+    "sample": "Letzten Samstag wollte ich mit dem Zug nach Köln fahren. Zuerst habe ich den Bus verpasst, dann bin ich zu Fuß zum Bahnhof gelaufen. Als ich angekommen bin, war der Zug schon weg. Ich habe eine Stunde gewartet und einen Kaffee getrunken. Danach habe ich den nächsten Zug genommen. In Köln hat es geregnet, aber meine Freundin hat am Bahnhof gewartet. Schließlich haben wir einen schönen Abend gehabt. Zum Glück ist alles gut ausgegangen.",
+    "noteAr": [
+      "sein مع أفعال الحركة: bin gelaufen / bin angekommen — الخطأ الأكثر شيوعاً في A2",
+      "الروابط الزمنية تحوّل قائمة أحداث إلى قصة"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-b1-08",
+    "level": "B1",
+    "titleDe": "Forumsbeitrag: Homeoffice",
+    "titleAr": "مشاركة في منتدى: العمل من البيت",
+    "taskDe": "In einem Forum wird diskutiert, ob Homeoffice gut für Familien ist. Schreibe einen Beitrag (ca. 100 Wörter): eigene Erfahrung, ein Vorteil, ein Nachteil, deine Meinung mit Begründung.",
+    "taskAr": "يُناقَش في منتدى هل العمل من البيت جيد للعائلات. اكتب مشاركة (~100 كلمة): تجربتك، ميزة، عيب، رأيك مع تعليل.",
+    "criteria": [
+      "بنية واضحة: تجربة ← ميزة ← عيب ← رأي",
+      "روابط رأي (Einerseits … andererseits, meiner Meinung nach)",
+      "جملة ثانوية بـobwohl أو dass",
+      "≥90 كلمة"
+    ],
+    "sample": "Ich arbeite seit einem Jahr zwei Tage pro Woche im Homeoffice, und meine Erfahrung ist gemischt. Einerseits spare ich jeden Tag eine Stunde Fahrt und kann meine Tochter von der Schule abholen. Andererseits verliere ich den Kontakt zu den Kollegen, und manche Absprachen dauern per Mail viel länger als im Büro. Obwohl ich die Flexibilität schätze, glaube ich nicht, dass Homeoffice allein gut für Familien ist. Meiner Meinung nach braucht man klare Regeln: feste Zeiten, an denen man erreichbar ist, und einen Tag pro Woche, an dem das ganze Team im Büro ist. So bleibt die Vereinbarkeit von Beruf und Familie realistisch.",
+    "noteAr": [
+      "نموذج امتحان B1 الكتابي: مشاركة منتدى بأربعة عناصر — يُقيَّم كلٌّ منها على حدة",
+      "«Obwohl … schätze, glaube ich nicht, dass …»: جملتان ثانويتان في جملة واحدة — علامة B1 ناضج"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-b1-09",
+    "level": "B1",
+    "titleDe": "Halbformelle E-Mail: Kurs verschieben",
+    "titleAr": "إيميل شبه رسمي: تأجيل دورة",
+    "taskDe": "Du hast einen Fortbildungskurs gebucht, kannst aber am Termin nicht teilnehmen. Schreibe an die Sprachschule (ca. 100 Wörter): Situation, Bitte um Verschiebung, Alternativtermine, Frage zu Kosten.",
+    "taskAr": "حجزت دورة تكوين لكنك لا تستطيع الحضور في الموعد. اكتب إلى مدرسة اللغة (~100 كلمة): الوضع، طلب التأجيل، مواعيد بديلة، سؤال عن التكاليف.",
+    "criteria": [
+      "مخاطبة وختام رسميان (Sehr geehrte Damen und Herren / Mit freundlichen Grüßen)",
+      "صيغة تهذيب بالمصدر: أرغب في / هل يمكن أن (Ich würde gern / Wäre es möglich)",
+      "ذكر رقم الحجز أو اسم الدورة",
+      "سؤال واضح عن الرسوم"
+    ],
+    "sample": "Sehr geehrte Damen und Herren, ich habe den Kurs „Deutsch für den Beruf B1“ ab dem 3. März gebucht (Buchungsnummer 4471). Leider muss ich an diesem Tag eine Dienstreise antreten, die mein Arbeitgeber erst gestern festgelegt hat. Wäre es möglich, meine Anmeldung auf den nächsten Kurs im April oder Mai zu verschieben? Beide Termine würden mir passen. Außerdem möchte ich fragen, ob für die Verschiebung eine Gebühr anfällt und ob meine Anzahlung erhalten bleibt. Für eine kurze Rückmeldung wäre ich Ihnen dankbar. Mit freundlichen Grüßen, Hedi Mansour",
+    "noteAr": [
+      "Konjunktiv II للتهذيب: wäre es möglich / würden mir passen / wäre ich dankbar — ثلاث صيغ في نصّ واحد",
+      "المعلومة الإدارية (رقم الحجز) تجعل الرسالة قابلة للمعالجة — يُحتسب في التقييم"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-b1-10",
+    "level": "B1",
+    "titleDe": "Bericht: Ein Missverständnis",
+    "titleAr": "تقرير: سوء فهم",
+    "taskDe": "Schreibe für den Kurs einen kurzen Bericht (ca. 100 Wörter) über ein Missverständnis in Deutschland: Was ist passiert? Warum kam es dazu? Was hast du daraus gelernt?",
+    "taskAr": "اكتب للدورة تقريراً قصيراً (~100 كلمة) عن سوء فهم في ألمانيا: ماذا حدث؟ لماذا؟ ماذا تعلّمت؟",
+    "criteria": [
+      "Präteritum لأفعال السرد الأساسية (war, hatte, wollte) وPerfekt للباقي",
+      "جملة سببية بـweil أو denn",
+      "جملة بـ«Ich habe gelernt, dass …»",
+      "لا اتهام لأحد — وصف موضوعي"
+    ],
+    "sample": "Im ersten Monat in Leipzig hatte ich einen Termin beim Amt um 9 Uhr. Ich kam um 9:10 Uhr, weil der Bus Verspätung hatte, und dachte, zehn Minuten seien kein Problem. Die Sachbearbeiterin hatte den Termin aber schon abgesagt, denn nach ihr war Pünktlichkeit Teil der Vereinbarung. Ich war zuerst enttäuscht und fand die Regel streng. Später hat mir eine Kollegin erklärt, dass man in solchen Fällen kurz anruft, auch wenn man nur fünf Minuten zu spät kommt. Ich habe daraus gelernt, dass Pünktlichkeit hier weniger mit Strenge als mit Respekt für die Zeit der anderen zu tun hat.",
+    "noteAr": [
+      "التقرير الحيادي: لا «الألمان صارمون» بل «الوقت جزء من الاتفاق»",
+      "مزج Präteritum وPerfekt في السرد المكتوب طبيعي في B1"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-b2-09",
+    "level": "B2",
+    "titleDe": "Leserbrief: Tempolimit in der Innenstadt",
+    "titleAr": "رسالة قارئ: تحديد السرعة في وسط المدينة",
+    "taskDe": "Die Lokalzeitung diskutiert ein Tempolimit von 30 km/h in der ganzen Innenstadt. Schreibe einen Leserbrief (ca. 150 Wörter): Bezug auf die Debatte, zwei Argumente, ein Gegenargument mit Entkräftung, Fazit.",
+    "taskAr": "الجريدة المحلية تناقش تحديد السرعة بـ30 كم/س في كل وسط المدينة. اكتب رسالة قارئ (~150 كلمة): إشارة إلى النقاش، حجتان، حجة مضادة مع دحضها، خلاصة.",
+    "criteria": [
+      "إشارة إلى المقال/النقاش في الجملة الأولى",
+      "حجتان مرتّبتان بروابط (zum einen … zum anderen)",
+      "حجة مضادة صريحة ثم دحضها (Zwar … doch / Man könnte einwenden, dass …)",
+      "خلاصة بموقف واضح؛ ≥130 كلمة؛ بلا إحصاءات مختلَقة"
+    ],
+    "sample": "Mit Interesse habe ich Ihren Bericht über das geplante Tempolimit in der Innenstadt gelesen und möchte der Debatte zwei Gedanken hinzufügen. Zum einen geht es nicht nur um Sicherheit, sondern um Lebensqualität: Wer an einer Hauptstraße wohnt, kennt den Unterschied zwischen dreißig und fünfzig nicht aus Statistiken, sondern aus dem Schlafzimmer. Zum anderen verändert Tempo 30 das Verhalten aller: Radfahrer trauen sich auf die Straße, Fußgänger überqueren sie ohne Angst. Man könnte einwenden, dass die Fahrzeit für Pendler steigt. Zwar stimmt das auf dem Papier, doch in der Innenstadt bestimmen Ampeln und Kreuzungen die Fahrzeit, nicht die Höchstgeschwindigkeit; die Verzögerung liegt im Bereich weniger Minuten. Ich plädiere deshalb dafür, das Tempolimit zunächst für ein Jahr einzuführen und dann offen zu prüfen, was sich verändert hat. Eine Stadt, die ihre Regeln testet, statt sie nur zu diskutieren, verdient Vertrauen.",
+    "noteAr": [
+      "نموذج امتحان B2: Leserbrief ببنية إشارة ← حجج ← دحض ← موقف",
+      "الدحض بـ«Zwar … doch» هو المهارة الفاصلة بين B1 وB2",
+      "الأرقام في النموذج عامة (Minuten) بلا إحصاء مختلَق — قاعدة المشروع"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-b2-10",
+    "level": "B2",
+    "titleDe": "Formelle Beschwerde: Onlinekauf",
+    "titleAr": "شكوى رسمية: شراء عبر الإنترنت",
+    "taskDe": "Ein online bestelltes Gerät kam beschädigt an, und der Kundendienst antwortet seit zwei Wochen nicht. Schreibe eine formelle Beschwerde (ca. 150 Wörter): Sachverhalt mit Daten, bisherige Schritte, konkrete Forderung mit Frist, Hinweis auf Verbraucherzentrale.",
+    "taskAr": "جهاز مطلوب عبر الإنترنت وصل معطوباً وخدمة الزبائن لا تردّ منذ أسبوعين. اكتب شكوى رسمية (~150 كلمة): الوقائع بالتواريخ، الخطوات السابقة، مطلب محدد بمهلة، إشارة إلى مركز حماية المستهلك.",
+    "criteria": [
+      "سطر موضوع (Betreff) بالرقم",
+      "الوقائع بترتيب زمني وبصيغة موضوعية (Passiv/Präteritum)",
+      "مطلب واحد واضح + مهلة (bis zum …)",
+      "لهجة حازمة مهذّبة؛ الإشارة إلى الخطوة التالية بلا تهديد"
+    ],
+    "sample": "Betreff: Reklamation – Bestellung Nr. 88214 vom 2. Mai\n\nSehr geehrte Damen und Herren,\n\nam 9. Mai wurde mir der bestellte Wasserkocher geliefert. Das Paket war bereits geöffnet, und das Gerät weist einen Riss im Glas auf; ein Foto und den Lieferschein füge ich bei. Noch am selben Tag habe ich den Schaden über Ihr Kontaktformular gemeldet und am 16. Mai telefonisch nachgefragt. Bis heute habe ich keine Antwort erhalten.\n\nIch fordere Sie daher auf, mir bis zum 6. Juni entweder ein einwandfreies Ersatzgerät zu liefern oder den Kaufpreis von 39,90 Euro zu erstatten. Die Rücksendung des defekten Geräts ist auf Ihre Kosten zu organisieren.\n\nSollte ich bis zu diesem Termin keine Rückmeldung erhalten, werde ich mich an die Verbraucherzentrale wenden und meine weiteren Rechte prüfen lassen.\n\nMit freundlichen Grüßen\nRania Haddad",
+    "noteAr": [
+      "الشكوى الرسمية تُبنى على تواريخ: كل خطوة بتاريخها — هذا ما يجعلها قابلة للتنفيذ",
+      "«Sollte ich … erhalten, werde ich …»: شرط بلا wenn + مستقبل — بنية B2 نموذجية للإنذار المهذّب"
+    ],
+    "neu": true
+  },
+  {
+    "id": "w-b2-11",
+    "level": "B2",
+    "titleDe": "Stellungnahme: Ehrenamt verpflichtend?",
+    "titleAr": "موقف: هل يكون التطوع إلزامياً؟",
+    "taskDe": "In deiner Stadt wird vorgeschlagen, dass alle Schülerinnen und Schüler der Oberstufe 40 Stunden Ehrenamt leisten müssen. Schreibe eine Stellungnahme (ca. 180 Wörter): Einleitung, Vorteile, Nachteile, eigene Position mit Begründung, Vorschlag.",
+    "taskAr": "في مدينتك يُقترح إلزام كل تلاميذ المرحلة العليا بأربعين ساعة تطوع. اكتب موقفاً (~180 كلمة): مقدمة، مزايا، عيوب، موقفك المعلَّل، اقتراح.",
+    "criteria": [
+      "مقدمة تعيد صياغة الاقتراح بكلماتك",
+      "مزيّتان وعيبان على الأقل مع روابط",
+      "موقف صريح مع تعليل (Ich bin der Ansicht, dass …, weil …)",
+      "اقتراح بديل أو تعديل؛ Nominalisierungen وPassiv مناسبان لـB2"
+    ],
+    "sample": "Der Vorschlag, alle Schülerinnen und Schüler der Oberstufe zu vierzig Stunden Ehrenamt zu verpflichten, klingt zunächst widersprüchlich: Kann Freiwilligkeit verordnet werden? Ein Blick auf die Argumente lohnt sich dennoch.\n\nFür den Vorschlag spricht, dass viele Jugendliche ohne einen solchen Anstoß nie erfahren würden, wie ein Verein, eine Tafel oder ein Pflegeheim von innen aussieht. Zudem entstehen Kontakte über die eigene soziale Gruppe hinaus, was der Integration aller Beteiligten dient. Dagegen lässt sich einwenden, dass erzwungenes Engagement schnell zur bloßen Pflichtübung wird und dass Schüler mit Nebenjob oder Betreuungsaufgaben zusätzlich belastet würden.\n\nIch bin der Ansicht, dass die Idee richtig, die Form aber falsch ist. Statt einer Pflicht mit Stundenzahl sollte die Schule ein Wahlpflichtfach „Engagement“ anbieten, das anerkannt und benotet wird, aber Raum für eigene Projekte lässt. So bliebe der Kern des Ehrenamts erhalten: dass man es selbst gewählt hat.",
+    "noteAr": [
+      "Stellungnahme في B2: الموقف يأتي بعد الموازنة لا قبلها",
+      "«Kann Freiwilligkeit verordnet werden?» سؤال بلاغي في المقدمة — أداة أسلوبية تُحتسب في B2",
+      "صيغ B2: Passiv (verordnet werden)، Nominalisierung (Freiwilligkeit، Engagement)، Konjunktiv II (bliebe)"
+    ],
+    "neu": true
   }
 ]

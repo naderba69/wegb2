@@ -1,1643 +1,1805 @@
 [
- {
-  "id": "gen-der",
-  "emoji": "🟥",
-  "sektion": "genus",
-  "level": "A1",
-  "titleAr": "المذكر der ➔ شفرة «أحمد في مَشْغَلْ تَنّ»",
-  "storyAr": "المذكرُ رجلٌ شقيٌّ يعملُ في ورشةٍ (مَشْغَلْ) وتعبانُ جداً حتى (تَنّ) — أصابَهُ الإعياء. كلُّ حرفٍ من «مَشْغَلْ تَنّ» نهايةُ اسمٍ مذكَّر.",
-  "zeilen": [
-   {
-    "code": "م → -ismus",
-    "de": "der Optimismus",
-    "ar": "التفاؤل — كلُّ المذاهبِ والمبادئِ مذكَّرة"
-   },
-   {
-    "code": "ش → -er",
-    "de": "der Lehrer",
-    "ar": "المعلّم — وكلُّ أسماءِ الفاعلِ والوظائف"
-   },
-   {
-    "code": "غ → -ig",
-    "de": "der Honig",
-    "ar": "العسل"
-   },
-   {
-    "code": "ل → -ling",
-    "de": "der Schmetterling",
-    "ar": "الفراشة — و der Lehrling المتدرّب"
-   },
-   {
-    "code": "ت → -ant",
-    "de": "der Praktikant",
-    "ar": "المتدرّب — و der Demonstrant"
-   },
-   {
-    "code": "ن → -ner",
-    "de": "der Rentner",
-    "ar": "المتقاعد — و der Gärtner البستاني"
-   }
-  ],
-  "gramIds": [
-   "a1-akkusativ",
-   "a2-dativ",
-   "b1-genitiv"
-  ],
-  "warnung": "الاستثناءُ المشهور: das Mädchen مؤنثٌ في المعنى محايدٌ في الأداةِ لأنَّ -chen تغلبُ كلَّ شيء."
- },
- {
-  "id": "gen-die",
-  "emoji": "🟥",
-  "sektion": "genus",
-  "level": "A1",
-  "titleAr": "المؤنث die ➔ شفرة «شَفَقْ البنتُ التعيسةُ نَزّت تِيهْ»",
-  "storyAr": "فتاةٌ اسمُها (شَفَقْ)، حظُّها (تَعْسٌ)، جُرِحَت في المكتبةِ فـ(نَزّت) دماً وصاحت (تِيهْ) من الألم.",
-  "zeilen": [
-   {
-    "code": "ش → -schaft",
-    "de": "die Freundschaft",
-    "ar": "الصداقة"
-   },
-   {
-    "code": "ف → -heit / -keit",
-    "de": "die Freiheit · die Möglichkeit",
-    "ar": "الحرية · الإمكانية"
-   },
-   {
-    "code": "ق → -ung",
-    "de": "die Zeitung",
-    "ar": "الجريدة — أوسعُ نهايةٍ مؤنثةٍ على الإطلاق"
-   },
-   {
-    "code": "ت → -tät",
-    "de": "die Universität",
-    "ar": "الجامعة"
-   },
-   {
-    "code": "ع → -ei",
-    "de": "die Bäckerei",
-    "ar": "المخبز"
-   },
-   {
-    "code": "س → -ion",
-    "de": "die Situation",
-    "ar": "الموقف — و die Nation و die Religion"
-   },
-   {
-    "code": "ن → -ik",
-    "de": "die Musik",
-    "ar": "الموسيقى"
-   },
-   {
-    "code": "ز → -enz / -anz",
-    "de": "die Existenz · die Eleganz",
-    "ar": "الوجود · الأناقة"
-   },
-   {
-    "code": "تِيهْ → -thek",
-    "de": "die Bibliothek",
-    "ar": "المكتبة"
-   }
-  ],
-  "gramIds": [
-   "a1-akkusativ",
-   "a2-dativ",
-   "b1-genitiv"
-  ],
-  "warnung": "فخُّ B2: der Brei استثناءُ -ei الوحيدُ الشهير، و das Ei (البيضة) ليست نهايةً بل كلمةً كاملة."
- },
- {
-  "id": "gen-das",
-  "emoji": "🟥",
-  "sektion": "genus",
-  "level": "A1",
-  "titleAr": "المحايد das ➔ شفرة «تَمْ حُبْ أُومَا»",
-  "storyAr": "المحايدُ كائنٌ باردٌ لا يتدخَّلُ بين المذكرِ والمؤنث؛ سُئِلَ عن مشاعرِه فقال: «تَمْ حُبْ أُومَا» — أي تمَّ حبُّ الجدّةِ (Oma) فقط!",
-  "zeilen": [
-   {
-    "code": "ت → -tum",
-    "de": "das Eigentum",
-    "ar": "الملكية — واستثناؤُهُ der Reichtum"
-   },
-   {
-    "code": "م → -ment",
-    "de": "das Dokument",
-    "ar": "الوثيقة"
-   },
-   {
-    "code": "ح → -chen",
-    "de": "das Mädchen",
-    "ar": "الفتاة — التصغيرُ يَمحو الجنسَ الأصليَّ محواً"
-   },
-   {
-    "code": "ب → -lein",
-    "de": "das Fräulein",
-    "ar": "الآنسة — تصغيرٌ أيضاً"
-   },
-   {
-    "code": "أُو → -um",
-    "de": "das Zentrum",
-    "ar": "المركز — و das Museum"
-   },
-   {
-    "code": "مَا → -ma",
-    "de": "das Klima",
-    "ar": "المناخ — و das Thema و das Drama"
-   }
-  ],
-  "gramIds": [
-   "a1-akkusativ",
-   "a2-dativ",
-   "b1-genitiv"
-  ]
- },
- {
-  "id": "satz-pos0",
-  "emoji": "🟩",
-  "sektion": "satzbau",
-  "level": "A2",
-  "titleAr": "روابطُ المركزِ (0) ➔ «أَدُوسْ فُونْ دِا — روابطُ طيّبةٌ ما لهاش في المشاكل»",
-  "storyAr": "شخصٌ اسمُه «أدوس» يرتدي ماركةَ «فون دا»: روابطُ مسالمةٌ لا تُحرِّكُ شيئاً — يأتي بعدَها الفاعلُ فوراً ويبقى الفعلُ المصرَّفُ في مركزِه الثاني الطبيعيّ.",
-  "zeilen": [
-   {
-    "code": "A",
-    "de": "aber",
-    "ar": "لكن"
-   },
-   {
-    "code": "D",
-    "de": "denn",
-    "ar": "لأنَّ — وهي سببٌ بلا شوطٍ للفعل، بعكس weil"
-   },
-   {
-    "code": "U",
-    "de": "und",
-    "ar": "و"
-   },
-   {
-    "code": "S",
-    "de": "sondern",
-    "ar": "بل"
-   },
-   {
-    "code": "O",
-    "de": "oder",
-    "ar": "أو"
-   },
-   {
-    "code": "+",
-    "de": "nicht nur … sondern auch",
-    "ar": "ليس فقط… بل أيضاً"
-   }
-  ],
-  "gramIds": [
-   "b1-konnektoren",
-   "a2-weil-dass"
-  ],
-  "warnung": "Denn و weil كلاهما «لأنّ» — لكنَّ denn تتركُ الفعلَ مكانَه و weil تركلُه إلى الآخر. هذا أشهرُ فخٍّ عربيٍّ في A2."
- },
- {
-  "id": "satz-pos1",
-  "emoji": "🟩",
-  "sektion": "satzbau",
-  "level": "B1",
-  "titleAr": "روابطُ المركزِ (1) ➔ «عصابةُ دَادْوَازْ — بلطجيةُ القواعد»",
-  "storyAr": "روابطُ DADWAS عصابةٌ: بمجرَّدِ دخولِها تطردُ الفاعلَ من الكرسيِّ الأول وتجلسُ مكانَه، فيقفزُ الفعلُ المصرَّفُ خلفَها مباشرةً في المركزِ الثاني، ويهربُ الفاعلُ إلى الثالث.",
-  "zeilen": [
-   {
-    "code": "D",
-    "de": "deshalb / darum / deswegen",
-    "ar": "لذلك — النتيجة"
-   },
-   {
-    "code": "A",
-    "de": "allerdings",
-    "ar": "على أنَّ — تحفُّظ"
-   },
-   {
-    "code": "D",
-    "de": "dann",
-    "ar": "ثمَّ — التتابع"
-   },
-   {
-    "code": "W",
-    "de": "trotzdem",
-    "ar": "ومع ذلك — التناقض"
-   },
-   {
-    "code": "A",
-    "de": "andererseits",
-    "ar": "من ناحيةٍ أخرى"
-   },
-   {
-    "code": "S",
-    "de": "sonst",
-    "ar": "وإلّا"
-   }
-  ],
-  "gramIds": [
-   "b1-konnektoren"
-  ],
-  "warnung": "الميزانُ الذهبي: Deshalb komme ich nicht ✓ — وليس Deshalb ich komme ✗."
- },
- {
-  "id": "satz-ende",
-  "emoji": "🟩",
-  "sektion": "satzbau",
-  "level": "A2",
-  "titleAr": "الفعلُ في الآخر ➔ «weil و dass يَشوتانِ الكرةَ لآخرِ الملعب»",
-  "storyAr": "لاعبانِ عنيفانِ في الدوري الألماني: أوَّلَ ما تلمحُ رابطاً يبدأُ بـ W (weil, wenn, obwohl, während) أو ينتهي بـ dass (dass, sodass, damit)، فاعلمْ أنَّهُ ركلَ الفعلَ المصرَّفَ حتى قبعَ آخرَ كلمةٍ قبلَ النقطة.",
-  "zeilen": [
-   {
-    "code": "weil",
-    "de": "Ich bleibe zu Hause, weil ich krank bin.",
-    "ar": "أبقى في البيتِ لأنّي مريض — bin في الآخر"
-   },
-   {
-    "code": "dass",
-    "de": "Ich hoffe, dass du kommst.",
-    "ar": "آمُلُ أن تأتي"
-   },
-   {
-    "code": "obwohl",
-    "de": "Obwohl es regnet, gehe ich.",
-    "ar": "رغمَ أنَّها تُمطر — لاحظ: الجملةُ الفرعيةُ أولاً فالفعلُ الرئيسُ يليها فوراً"
-   },
-   {
-    "code": "wenn",
-    "de": "Wenn ich Zeit habe, rufe ich an.",
-    "ar": "إن توفَّرَ وقتي اتصلتُ"
-   }
-  ],
-  "gramIds": [
-   "a2-weil-dass",
-   "b1-relativ"
-  ],
-  "warnung": "إذا تصدَّرتِ الجملةُ الفرعيةُ، صارَ الفعلانِ متجاورَينِ يتقابلانِ عندَ الفاصلة: …, gehe ich."
- },
- {
-  "id": "praep-tekamolo",
-  "emoji": "🟦",
-  "sektion": "praeposition",
-  "level": "B1",
-  "titleAr": "ترتيبُ الظروف ➔ «تِيكَامُولُو — المحقِّقُ اليابانيُّ الصارم»",
-  "storyAr": "محقِّقٌ يابانيٌّ صارمٌ اسمُه TeKaMoLo يقفُ في الجملة؛ إذا اجتمعَ الزمانُ والسببُ والطريقةُ والمكانُ صرخَ ورتَّبَهم إجبارياً.",
-  "zeilen": [
-   {
-    "code": "Te — Temporal",
-    "de": "heute · um acht",
-    "ar": "متى؟ الزمنُ أولاً دائماً"
-   },
-   {
-    "code": "Ka — Kausal",
-    "de": "wegen des Regens",
-    "ar": "لماذا؟ السبب"
-   },
-   {
-    "code": "Mo — Modal",
-    "de": "mit dem Auto",
-    "ar": "كيف؟ الطريقةُ والوسيلة"
-   },
-   {
-    "code": "Lo — Lokal",
-    "de": "nach Berlin",
-    "ar": "أين/إلى أين؟ المكانُ آخراً"
-   },
-   {
-    "code": "مثالٌ جامع",
-    "de": "Ich fahre heute wegen des Termins mit dem Auto nach Berlin.",
-    "ar": "أسافرُ اليومَ بسببِ الموعدِ بالسيارةِ إلى برلين"
-   }
-  ],
-  "gramIds": [
-   "a1-praesens",
-   "b1-konnektoren"
-  ]
- },
- {
-  "id": "praep-akk",
-  "emoji": "🟦",
-  "sektion": "praeposition",
-  "level": "A1",
-  "titleAr": "حروفُ النصبِ دائماً ➔ «فُودْغَبْ — بوجي طحن طماطم»",
-  "storyAr": "وحشٌ مضحكٌ يعشقُ النصبَ فينصبُ على كلِّ كلمةٍ تمرُّ به ويحوِّلُ أداةَ المذكَّرِ إلى den.",
-  "zeilen": [
-   {
-    "code": "F",
-    "de": "für",
-    "ar": "لأجل — für den Vater"
-   },
-   {
-    "code": "U",
-    "de": "um",
-    "ar": "حول — um den Tisch"
-   },
-   {
-    "code": "D",
-    "de": "durch",
-    "ar": "عبر — durch den Park"
-   },
-   {
-    "code": "G",
-    "de": "gegen",
-    "ar": "ضدّ — gegen den Wind"
-   },
-   {
-    "code": "E",
-    "de": "entlang",
-    "ar": "على طول — تأتي بعدَ الاسمِ: die Straße entlang"
-   },
-   {
-    "code": "B",
-    "de": "bis",
-    "ar": "حتى — bis nächsten Montag"
-   }
-  ],
-  "gramIds": [
-   "a1-akkusativ"
-  ]
- },
- {
-  "id": "praep-dat",
-  "emoji": "🟦",
-  "sektion": "praeposition",
-  "level": "A2",
-  "titleAr": "حروفُ الجرِّ دائماً ➔ «بِمْزُو نَامْجِش — الجدُّ العجوزُ الكسلان»",
-  "storyAr": "جدٌّ كسلانُ يجرُّ كلَّ اسمٍ فيُقعِدُهُ في الداتيف ولا يسمحُ له بالحركة.",
-  "zeilen": [
-   {
-    "code": "بِ",
-    "de": "bei",
-    "ar": "عند — bei dem (beim) Arzt"
-   },
-   {
-    "code": "مْ",
-    "de": "mit",
-    "ar": "مع — mit dem Bus"
-   },
-   {
-    "code": "زُو",
-    "de": "zu",
-    "ar": "إلى — للأشخاصِ والأماكنِ المحدَّدة: zu dem (zum) Bahnhof"
-   },
-   {
-    "code": "نَا",
-    "de": "nach",
-    "ar": "إلى الدولِ والمدنِ بلا أداة / وبعدَ: nach dem Essen"
-   },
-   {
-    "code": "أَ",
-    "de": "aus",
-    "ar": "من داخلِ مكانٍ مغلقٍ أو من بلد: aus der Türkei"
-   },
-   {
-    "code": "مْ",
-    "de": "von",
-    "ar": "من — للملكيةِ أو المصدر: von dem (vom) Chef"
-   },
-   {
-    "code": "جِ",
-    "de": "gegenüber",
-    "ar": "مقابل — تأتي غالباً بعدَ الاسم"
-   },
-   {
-    "code": "ش",
-    "de": "seit",
-    "ar": "منذُ — seit einem Jahr"
-   }
-  ],
-  "gramIds": [
-   "a2-dativ"
-  ],
-  "warnung": "الإدغامُ الإلزاميُّ عملياً: zu dem → zum · zu der → zur · bei dem → beim · von dem → vom."
- },
- {
-  "id": "praep-gen",
-  "emoji": "🟦",
-  "sektion": "praeposition",
-  "level": "B1",
-  "titleAr": "حروفُ المضافِ إليه ➔ شفرة «وِتْشْ زِبْ» (WTSZ)",
-  "storyAr": "أربعةُ حروفٍ أرستقراطيةٍ لا ترضى إلا بالـ Genitiv — وهي علامةُ اللغةِ المكتوبةِ الراقيةِ في B2.",
-  "zeilen": [
-   {
-    "code": "W",
-    "de": "wegen",
-    "ar": "بسبب — wegen des Wetters"
-   },
-   {
-    "code": "T",
-    "de": "trotz",
-    "ar": "بالرغم من — trotz des Regens"
-   },
-   {
-    "code": "S",
-    "de": "statt / anstatt",
-    "ar": "بدلاً من — statt des Autos"
-   },
-   {
-    "code": "Z",
-    "de": "zufolge / während",
-    "ar": "وفقاً لـ / أثناء — während des Unterrichts"
-   }
-  ],
-  "gramIds": [
-   "b1-genitiv"
-  ],
-  "warnung": "في العاميةِ المحكيةِ تسمعُ wegen dem Wetter بالداتيف — مقبولٌ نُطقاً، مرفوضٌ في الامتحانِ المكتوب."
- },
- {
-  "id": "praep-wechsel",
-  "emoji": "🟦",
-  "sektion": "praeposition",
-  "level": "A2",
-  "titleAr": "الحروفُ المشتركة ➔ «الأكوزاتيف نَطَّاط والداتيف قاعدٌ مرتاح»",
-  "storyAr": "تسعةُ حروفٍ ذاتُ وجهين: تخيَّلِ الأكوزاتيف شخصاً حركياً ينطُّ من مكانٍ إلى مكان (Wohin؟ إلى أين)، والداتيف بديناً جالساً على الأريكةِ لا يتحرَّك (Wo؟ أين).",
-  "zeilen": [
-   {
-    "code": "Wohin? ➔ Akk",
-    "de": "Ich hänge das Bild an die Wand.",
-    "ar": "أُعلِّقُ الصورةَ على الحائط — حركةٌ وانتقال"
-   },
-   {
-    "code": "Wo? ➔ Dat",
-    "de": "Das Bild hängt an der Wand.",
-    "ar": "الصورةُ معلَّقةٌ على الحائط — سكونٌ وثبات"
-   },
-   {
-    "code": "التسعة",
-    "de": "an · auf · hinter · in · neben · über · unter · vor · zwischen",
-    "ar": "احفظها زوجاً زوجاً بالصورةِ لا بالقائمة"
-   },
-   {
-    "code": "الفخُّ الكلاسيكي",
-    "de": "in die Schule gehen ≠ in der Schule sein",
-    "ar": "الذهابُ حركةٌ والكينونةُ سكون"
-   }
-  ],
-  "gramIds": [
-   "a2-wechsel"
-  ]
- },
- {
-  "id": "praep-ausser-ohne",
-  "emoji": "🟦",
-  "sektion": "praeposition",
-  "level": "A2",
-  "titleAr": "الاستثناء ➔ قاعدةُ «مِقصُّ الـ إي والـ أُو»",
-  "storyAr": "حرفانِ متجاوِرانِ في المعنى متضادَّانِ في الإعراب — احفظهما كقصٍّ واحد.",
-  "zeilen": [
-   {
-    "code": "außer",
-    "de": "außer dem Chef",
-    "ar": "باستثناء — Dativ دائماً"
-   },
-   {
-    "code": "ohne",
-    "de": "ohne den Schlüssel",
-    "ar": "بدون — Akkusativ دائماً"
-   },
-   {
-    "code": "الذاكرةُ الصوتية",
-    "de": "außer dem Chef · ohne den Chef",
-    "ar": "قابِلْ بينهما في نفسٍ واحد: außer تجرُّ بالداتيف و ohne تنصبُ بالأكوزاتيف — النغمةُ تحفظُ الحالة"
-   }
-  ],
-  "gramIds": [
-   "a2-dativ",
-   "a1-akkusativ"
-  ]
- },
- {
-  "id": "perf-sein",
-  "emoji": "🟨",
-  "sektion": "verb",
-  "level": "A2",
-  "titleAr": "الماضي التام ➔ قاعدةُ «الهروبِ من الأريكة»",
-  "storyAr": "كلُّ الأفعالِ تأخذُ haben لأنَّ الأصلَ كسل؛ ولا يأخذُ sein إلا فعلٌ أجبرَكَ على الهروبِ من الأريكة: إمَّا انتقالُ الجسمِ من نقطةٍ إلى نقطة، وإمّا تغيُّرٌ بيولوجيٌّ جذريٌّ في الحالة.",
-  "zeilen": [
-   {
-    "code": "① انتقالٌ مكاني",
-    "de": "gehen · fahren · fliegen · kommen",
-    "ar": "ich bin gegangen — الجسمُ غادرَ موضعَه"
-   },
-   {
-    "code": "② تغيُّرُ حالة",
-    "de": "sterben · einschlafen · aufstehen · aufwachen",
-    "ar": "er ist eingeschlafen — الحالةُ انقلبَت"
-   },
-   {
-    "code": "③ الشاذّان",
-    "de": "sein · bleiben",
-    "ar": "ich bin gewesen · ich bin geblieben — احفظهما استثناءً خالصاً"
-   },
-   {
-    "code": "الباقي كلُّه haben",
-    "de": "tanzen · spielen · arbeiten",
-    "ar": "ich habe getanzt — حركةٌ موضعيةٌ لا انتقال"
-   }
-  ],
-  "gramIds": [
-   "a2-perfekt"
-  ],
-  "warnung": "الفخُّ: fahren بمفعولٍ به يصيرُ haben — Ich habe das Auto gefahren (قُدتُ السيارة) مقابل Ich bin nach Köln gefahren."
- },
- {
-  "id": "refl-dativ",
-  "emoji": "🟨",
-  "sektion": "verb",
-  "level": "A2",
-  "titleAr": "الضمائرُ الانعكاسية ➔ «المفعولُ الأنانيُّ يطردُ الأكوزاتيف»",
-  "storyAr": "الضميرُ الانعكاسيُّ يعشقُ الأكوزاتيف (mich)؛ فإذا دخلَ مفعولٌ به صريحٌ آخرُ (die Hände) تصرَّفَ بأنانيةٍ وطردَهُ وأخذَ مكانَه، فبكى الانعكاسيُّ وتحوَّلَ مضطراً إلى الداتيف (mir).",
-  "zeilen": [
-   {
-    "code": "وحدَه ➔ Akk",
-    "de": "Ich wasche mich.",
-    "ar": "أغسلُ نفسي"
-   },
-   {
-    "code": "مع مفعولٍ صريح ➔ Dat",
-    "de": "Ich wasche mir die Hände.",
-    "ar": "أغسلُ يديَّ — الأيدي أخذتِ النصبَ فانزاحَ الضمير"
-   },
-   {
-    "code": "نظائرُ يوميّة",
-    "de": "sich die Zähne putzen · sich die Haare kämmen",
-    "ar": "كلُّ ما يخصُّ الجسدَ بجزءٍ مذكورٍ يمشي على القاعدة"
-   }
-  ],
-  "gramIds": [
-   "a2-reflexiv"
-  ]
- },
- {
-  "id": "adj-chef",
-  "emoji": "🟨",
-  "sektion": "adjektiv",
-  "level": "B1",
-  "titleAr": "تصريفُ الصفات ➔ «إذا حضرَ المديرُ تقشَّفَ الموظفون!»",
-  "storyAr": "أداةُ التعريفِ هي المديرُ القويُّ للشركة. إن كان المديرُ واقفاً في الجملةِ خافَ الموظفون (الصفات) وتقشَّفوا فأخذوا نهايةً ضعيفةً (e أو en) فقط. وإن غابَ المديرُ اضطرَّتِ الصفةُ أن تلبسَ بدلتَهُ وتأخذَ نهايتَهُ القوية.",
-  "zeilen": [
-   {
-    "code": "المديرُ حاضر ➔ ضعيف",
-    "de": "der gute Mann · den guten Mann",
-    "ar": "e في المرفوعِ المفرد، و en فيما عداه غالباً"
-   },
-   {
-    "code": "المديرُ غائب ➔ قوي",
-    "de": "guter Mann · gutes Kind · gute Frau",
-    "ar": "الصفةُ تحملُ علامةَ الأداةِ الغائبة"
-   },
-   {
-    "code": "المديرُ نصفُ حاضر ➔ مختلط",
-    "de": "ein guter Mann · ein gutes Kind",
-    "ar": "ein لا تُظهرُ الجنسَ فتكمِّلُهُ الصفة"
-   }
-  ],
-  "gramIds": [
-   "b1-adjektivendungen",
-   "b1-unbestimmte"
-  ],
-  "warnung": "القاعدةُ الحاكمة: علامةُ الجنسِ يجبُ أن تظهرَ مرةً واحدةً في المجموعة — إمّا على الأداةِ وإمّا على الصفة."
- },
- {
-  "id": "sondern-aber",
-  "emoji": "🟨",
-  "sektion": "satzbau",
-  "level": "A2",
-  "titleAr": "النفيُ الصارم ➔ Sondern مقابل Aber",
-  "storyAr": "لا تستعملْ sondern (بل) إلا إذا كانت الجملةُ قبلَها تحملُ نفياً صريحاً (nicht أو kein) وجاءت لتصحيحِ ما نُفي. وإن لم يكن ثمَّةَ نفيٌ فالجوابُ aber تلقائياً.",
-  "zeilen": [
-   {
-    "code": "نفيٌ + تصحيح ➔ sondern",
-    "de": "Das ist kein Tee, sondern Kaffee.",
-    "ar": "ليس شاياً بل قهوة"
-   },
-   {
-    "code": "بلا نفي ➔ aber",
-    "de": "Der Tee ist heiß, aber gut.",
-    "ar": "الشايُ ساخنٌ لكنَّهُ جيّد"
-   },
-   {
-    "code": "الفخُّ العربي",
-    "de": "✗ Das ist kein Tee, aber Kaffee.",
-    "ar": "العربيةُ تقولُ «لكن» في الموضعين، والألمانيةُ تفرِّق"
-   }
-  ],
-  "gramIds": [
-   "a2-negation",
-   "b1-konnektoren"
-  ]
- },
- {
-  "id": "nicht-magnet",
-  "emoji": "🟨",
-  "sektion": "satzbau",
-  "level": "A2",
-  "titleAr": "موقعُ النفي ➔ «مغناطيسُ المؤخّرة»",
-  "storyAr": "تميلُ nicht بطبعِها إلى نهايةِ الجملة، إلا أن يجذبَها مغناطيسٌ أقوى فتقفَ قبلَهُ مباشرةً لتنفيَهُ وحدَه.",
-  "zeilen": [
-   {
-    "code": "الأصل: آخرُ الجملة",
-    "de": "Ich kenne den Mann nicht.",
-    "ar": "لا أعرفُ الرجل — نفيٌ كليّ"
-   },
-   {
-    "code": "مغناطيس ①: الصفة",
-    "de": "Das Auto ist nicht teuer.",
-    "ar": "قبلَ الصفةِ مباشرة"
-   },
-   {
-    "code": "مغناطيس ②: حرفُ الجر",
-    "de": "Ich gehe nicht ins Kino.",
-    "ar": "قبلَ العبارةِ الجارَّة"
-   },
-   {
-    "code": "مغناطيس ③: الفعلُ الثاني",
-    "de": "Ich kann heute nicht kommen.",
-    "ar": "قبلَ المصدرِ في الآخر"
-   },
-   {
-    "code": "النفيُ الجزئي",
-    "de": "Ich fahre nicht heute, sondern morgen.",
-    "ar": "ضعْ nicht أمامَ ما تنفيهِ بالضبط"
-   }
-  ],
-  "gramIds": [
-   "a2-negation"
-  ]
- },
- {
-  "id": "da-wo",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "دمجُ حروفِ الجر ➔ شفرةُ «الجمادِ والعاقل»",
-  "storyAr": "السؤالُ الوحيدُ قبلَ الدمج: أعاقلٌ هو أم جماد؟ الجمادُ يُدمَج، والإنسانُ يُصانُ عن الدمجِ صيانةً تامّة.",
-  "zeilen": [
-   {
-    "code": "جماد ➔ دمج",
-    "de": "Ich warte darauf. · Worauf wartest du?",
-    "ar": "أنتظرُه (الشيء) — da+r+auf و wo+r+auf"
-   },
-   {
-    "code": "عاقل ➔ فصل",
-    "de": "Ich warte auf dich. · Auf wen wartest du?",
-    "ar": "أنتظرُكَ أنت — يُمنَعُ الدمجُ منعاً"
-   },
-   {
-    "code": "حرفُ الوصلِ r",
-    "de": "darauf · daran · worüber",
-    "ar": "يُقحَمُ r إذا بدأَ الحرفُ بحركة"
-   }
-  ],
-  "gramIds": [
-   "b1-verb-praeposition"
-  ]
- },
- {
-  "id": "werden-3",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "فعلُ التحوُّل ➔ «المُشَكِّلُ اللغويُّ werden»",
-  "storyAr": "werden وحدَهُ لا معنى له؛ معناهُ تحدِّدُهُ الكلمةُ الأخيرةُ في الجملة. انظرْ إلى ذيلِ الجملةِ تعرفْ رأسَها.",
-  "zeilen": [
-   {
-    "code": "+ اسم/صفة = يُصبح",
-    "de": "Ich werde Arzt.",
-    "ar": "سأصيرُ طبيباً"
-   },
-   {
-    "code": "+ مصدرٌ في الآخر = المستقبل",
-    "de": "Ich werde reisen.",
-    "ar": "سأسافر"
-   },
-   {
-    "code": "+ تصريفٌ ثالثٍ في الآخر = مجهول",
-    "de": "Das Auto wird repariert.",
-    "ar": "تُصلَّحُ السيارة"
-   },
-   {
-    "code": "+ worden = مجهولُ الماضي",
-    "de": "Das Auto ist repariert worden.",
-    "ar": "لاحظ worden لا geworden في المجهول"
-   }
-  ],
-  "gramIds": [
-   "a2-futur",
-   "b1-passiv",
-   "b2-futur-ii"
-  ]
- },
- {
-  "id": "passiv-ersatz",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "بدائلُ المجهول ➔ شفرةُ «الـ bar والـ zu»",
-  "storyAr": "المصحِّحُ يملُّ تكرارَ wird … worden؛ فبدِّلْ صيغتَكَ مرتَينِ في المقالِ الواحدِ تقفزْ درجة.",
-  "zeilen": [
-   {
-    "code": "① -bar",
-    "de": "Der Schaden ist reparierbar.",
-    "ar": "قابلٌ للإصلاح — صفةٌ من الفعل"
-   },
-   {
-    "code": "② sein + zu",
-    "de": "Die Aufgabe ist zu lösen.",
-    "ar": "يجبُ/يمكنُ حلُّها — إلزامٌ أو إمكان"
-   },
-   {
-    "code": "③ sich lassen",
-    "de": "Das lässt sich machen.",
-    "ar": "يمكنُ عملُه — الأكثرُ محكيةً"
-   },
-   {
-    "code": "④ man",
-    "de": "Man repariert das Auto.",
-    "ar": "أبسطُ بديلٍ وأسلمُه في A2/B1"
-   }
-  ],
-  "gramIds": [
-   "b1-passiv"
-  ]
- },
- {
-  "id": "doppel",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "الروابطُ الثنائية ➔ قالبُ «النفيِ والإثباتِ الرياضي»",
-  "storyAr": "أربعُ معادلاتٍ تُحفَظُ كالجدولِ الرياضي؛ كلُّ واحدةٍ تُغنيكَ عن جملتَينِ ركيكتَين.",
-  "zeilen": [
-   {
-    "code": "إثبات + إثبات",
-    "de": "sowohl … als auch",
-    "ar": "هذا وذاك"
-   },
-   {
-    "code": "تصعيد",
-    "de": "nicht nur … sondern auch",
-    "ar": "ليس هذا فحسب بل ذاك أيضاً"
-   },
-   {
-    "code": "تخيير",
-    "de": "entweder … oder",
-    "ar": "إمّا هذا أو ذاك"
-   },
-   {
-    "code": "نفيٌ مزدوجٌ قاطع",
-    "de": "weder … noch",
-    "ar": "لا هذا ولا ذاك — بلا nicht إضافيّة أبداً"
-   },
-   {
-    "code": "إثباتٌ بتحفُّظ",
-    "de": "zwar … aber",
-    "ar": "صحيحٌ أنَّ… لكن"
-   }
-  ],
-  "gramIds": [
-   "b2-doppelkonnektoren"
-  ]
- },
- {
-  "id": "pron-order",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B1",
-  "titleAr": "ترتيبُ المفعولَين ➔ «الضميرُ يسبقُ دائماً»",
-  "storyAr": "قاعدةٌ ذاتُ شقَّين لا ثالثَ لهما: الأسماءُ الصريحةُ تمشي داتيف ثمَّ أكوزاتيف؛ فإذا صارَ أحدُهما ضميراً قفزَ الضميرُ إلى الأمام.",
-  "zeilen": [
-   {
-    "code": "اسمانِ صريحان",
-    "de": "Ich gebe dem Mann das Buch.",
-    "ar": "داتيف ← أكوزاتيف"
-   },
-   {
-    "code": "الأكوزاتيفُ ضمير",
-    "de": "Ich gebe es dem Mann.",
-    "ar": "الضميرُ es قفزَ أولاً"
-   },
-   {
-    "code": "كلاهما ضمير",
-    "de": "Ich gebe es ihm.",
-    "ar": "أكوزاتيف ← داتيف — الترتيبُ انعكسَ تماماً"
-   }
-  ],
-  "gramIds": [
-   "a2-dativ"
-  ]
- },
- {
-  "id": "gen-es-s",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B1",
-  "titleAr": "جينيتيفُ المذكرِ والمحايد ➔ شفرةُ «الـ es والـ s»",
-  "storyAr": "متى -es ومتى -s؟ اللسانُ هو الحكم: ما ثقُلَ نطقُهُ أخذَ es ليستريح.",
-  "zeilen": [
-   {
-    "code": "-es للقصير",
-    "de": "des Mannes · des Kindes",
-    "ar": "مقطعٌ واحدٌ فيستدعي حركةَ وصل"
-   },
-   {
-    "code": "-es لأصواتِ الصفير",
-    "de": "des Hauses · des Platzes",
-    "ar": "بعدَ s, ss, ß, z, x إلزاماً"
-   },
-   {
-    "code": "-s للطويل",
-    "de": "des Computers · des Lehrers",
-    "ar": "مقطعانِ فأكثر"
-   },
-   {
-    "code": "المؤنثُ لا يتغيَّر",
-    "de": "der Frau",
-    "ar": "الاسمُ المؤنثُ يبقى عارياً — الأداةُ وحدَها تتحوَّل"
-   }
-  ],
-  "gramIds": [
-   "b1-genitiv"
-  ]
- },
- {
-  "id": "trotz-3",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B1",
-  "titleAr": "التناقضُ الثلاثيّ ➔ Trotz / Obwohl / Trotzdem",
-  "storyAr": "ثلاثُ كلماتٍ بمعنًى واحدٍ وثلاثةُ سلوكياتٍ نحويةٍ مختلفة — وهذا بالضبط ما يُمتحَنُ فيه.",
-  "zeilen": [
-   {
-    "code": "Trotz + اسم",
-    "de": "Trotz des Regens gehe ich.",
-    "ar": "حرفُ جرٍّ يليهِ اسمٌ في الجينيتيف"
-   },
-   {
-    "code": "Obwohl + جملة",
-    "de": "Obwohl es regnet, gehe ich.",
-    "ar": "رابطٌ فرعيٌّ يركلُ الفعلَ إلى الآخر"
-   },
-   {
-    "code": "Trotzdem + فعل",
-    "de": "Es regnet. Trotzdem gehe ich.",
-    "ar": "ظرفُ ربطٍ فالفعلُ بعدَهُ مباشرةً في المركزِ الثاني"
-   }
-  ],
-  "gramIds": [
-   "b1-konnektoren",
-   "b1-genitiv"
-  ]
- },
- {
-  "id": "nominal",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "الأسماءُ المشتقة ➔ قاعدةُ «الـ das الكبرى»",
-  "storyAr": "أسرعُ طريقٍ لنبرةٍ أكاديمية: خذِ الفعلَ في المصدر، اكتبْ حرفَهُ الأولَ كبيراً، وضعْ das أمامَه — صارَ اسماً محايداً رصيناً.",
-  "zeilen": [
-   {
-    "code": "القاعدة",
-    "de": "lernen → das Lernen",
-    "ar": "التعلُّم — وكلُّ مصدرٍ محايدٌ بلا استثناء"
-   },
-   {
-    "code": "في جملة",
-    "de": "Das Rauchen ist verboten.",
-    "ar": "التدخينُ ممنوع"
-   },
-   {
-    "code": "مع حرفِ جر",
-    "de": "beim Lesen · zum Schreiben",
-    "ar": "أثناءَ القراءةِ · للكتابة"
-   },
-   {
-    "code": "مقابلُ الركاكة",
-    "de": "Das Lesen von Büchern bildet.",
-    "ar": "أرقى من: Bücher zu lesen bildet"
-   }
-  ],
-  "gramIds": [
-   "b2-infinitiv"
-  ]
- },
- {
-  "id": "partizip",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "صفاتُ الحدث ➔ شفرةُ «الـ d والـ t»",
-  "storyAr": "حرفانِ يفصلانِ بين ما يجري الآنَ وما انتهى: d للجاري، t للمنتهي.",
-  "zeilen": [
-   {
-    "code": "Partizip I — جارٍ",
-    "de": "das weinende Kind",
-    "ar": "الطفلُ الباكي — مصدر + d + نهايةُ الصفة"
-   },
-   {
-    "code": "Partizip II — منتهٍ",
-    "de": "das gekaufte Auto",
-    "ar": "السيارةُ المشتراة — تصريفٌ ثالثٌ + نهايةُ الصفة"
-   },
-   {
-    "code": "الفاعليةُ والمفعولية",
-    "de": "der lesende Mann ≠ das gelesene Buch",
-    "ar": "الأولُ يفعل، والثاني وقعَ عليه الفعل"
-   },
-   {
-    "code": "الجملةُ الموسَّعة",
-    "de": "das gestern gekaufte Auto",
-    "ar": "بنيةُ B2 الصارمةُ في النصوصِ المكتوبة"
-   }
-  ],
-  "gramIds": [
-   "b2-partizip"
-  ]
- },
- {
-  "id": "innen",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "A2",
-  "titleAr": "فخُّ جمعِ المؤنثِ الوظيفي ➔ شفرةُ «الـ nen»",
-  "storyAr": "كلُّ مؤنثٍ وظيفيٍّ ينتهي بـ -in يُضاعِفُ النونَ أولاً قبلَ الجمع؛ نسيانُ النونِ الثانيةِ من أكثرِ أخطاءِ العربِ ظهوراً في الكتابة.",
-  "zeilen": [
-   {
-    "code": "القاعدة",
-    "de": "die Lehrerin → die Lehrerinnen",
-    "ar": "المعلّمة → المعلّمات"
-   },
-   {
-    "code": "نظائر",
-    "de": "die Ärztin → die Ärztinnen · die Studentin → die Studentinnen",
-    "ar": "الطبيبات · الطالبات"
-   },
-   {
-    "code": "الصيغةُ الرسميةُ الحديثة",
-    "de": "Kolleginnen und Kollegen",
-    "ar": "افتتاحيةُ كلِّ خطابٍ رسميٍّ ألمانيّ"
-   }
-  ],
-  "gramIds": [
-   "a1-akkusativ"
-  ]
- },
- {
-  "id": "spr-morgenstunde",
-  "emoji": "🟪",
-  "sektion": "sprichwort",
-  "level": "A1",
-  "titleAr": "مثلٌ ألمانيٌّ أصيل — الصباحُ شاحذٌ للهمم",
-  "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
-  "zeilen": [
-   {
-    "code": "المثل",
-    "de": "Morgenstunde hat Gold im Munde",
-    "ar": "الصباحُ شاحذٌ للهمم"
-   },
-   {
-    "code": "القاعدةُ المدمَجة",
-    "de": "Morgenstunde hat Gold im Munde",
-    "ar": "الظرفُ في المركزِ الأول والفعلُ المصرَّفُ hat في المركزِ الثاني — قاعدةُ الانقلابِ مجسَّدةً في مثل."
-   }
-  ],
-  "gramIds": [
-   "a1-praesens"
-  ]
- },
- {
-  "id": "spr-grube",
-  "emoji": "🟪",
-  "sektion": "sprichwort",
-  "level": "B1",
-  "titleAr": "مثلٌ ألمانيٌّ أصيل — من حفرَ حفرةً لأخيهِ وقعَ فيها",
-  "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
-  "zeilen": [
-   {
-    "code": "المثل",
-    "de": "Wer anderen eine Grube gräbt, fällt selbst hinein",
-    "ar": "من حفرَ حفرةً لأخيهِ وقعَ فيها"
-   },
-   {
-    "code": "القاعدةُ المدمَجة",
-    "de": "Wer anderen eine Grube gräbt, fällt selbst hinein",
-    "ar": "أداةُ Wer شحنَتِ الفعلَ gräbt إلى آخرِ جملتِها، ثمَّ جاءَ الفعلُ الرئيسُ fällt فوراً بعدَ الفاصلة."
-   }
-  ],
-  "gramIds": [
-   "b2-relativ-generalisierend",
-   "a2-weil-dass"
-  ]
- },
- {
-  "id": "spr-regen",
-  "emoji": "🟪",
-  "sektion": "sprichwort",
-  "level": "A2",
-  "titleAr": "مثلٌ ألمانيٌّ أصيل — بعدَ الضيقِ الفرج",
-  "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
-  "zeilen": [
-   {
-    "code": "المثل",
-    "de": "Nach dem Regen scheint die Sonne",
-    "ar": "بعدَ الضيقِ الفرج"
-   },
-   {
-    "code": "القاعدةُ المدمَجة",
-    "de": "Nach dem Regen scheint die Sonne",
-    "ar": "حرفُ nach يجرُّ بالداتيف فتحوَّلَ der Regen إلى dem Regen."
-   }
-  ],
-  "gramIds": [
-   "a2-dativ"
-  ]
- },
- {
-  "id": "spr-fleiss",
-  "emoji": "🟪",
-  "sektion": "sprichwort",
-  "level": "A2",
-  "titleAr": "مثلٌ ألمانيٌّ أصيل — من طلبَ العُلا سهرَ الليالي",
-  "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
-  "zeilen": [
-   {
-    "code": "المثل",
-    "de": "Ohne Fleiß kein Preis",
-    "ar": "من طلبَ العُلا سهرَ الليالي"
-   },
-   {
-    "code": "القاعدةُ المدمَجة",
-    "de": "Ohne Fleiß kein Preis",
-    "ar": "حرفُ ohne ينصبُ دائماً — والنفيُ kein جاءَ في محلِّ النصب."
-   }
-  ],
-  "gramIds": [
-   "a1-akkusativ",
-   "a2-negation"
-  ]
- },
- {
-  "id": "spr-brot",
-  "emoji": "🟪",
-  "sektion": "sprichwort",
-  "level": "B1",
-  "titleAr": "مثلٌ ألمانيٌّ أصيل — الخبزُ الجافُّ نعمة",
-  "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
-  "zeilen": [
-   {
-    "code": "المثل",
-    "de": "Altes Brot ist nicht hart",
-    "ar": "الخبزُ الجافُّ نعمة"
-   },
-   {
-    "code": "القاعدةُ المدمَجة",
-    "de": "Altes Brot ist nicht hart",
-    "ar": "غابَ المديرُ (لا أداةَ تعريف) فأخذتِ الصفةُ نهايةَ المحايدِ القويةَ -es."
-   }
-  ],
-  "gramIds": [
-   "b1-adjektivendungen"
-  ]
- },
- {
-  "id": "spr-spaet",
-  "emoji": "🟪",
-  "sektion": "sprichwort",
-  "level": "A2",
-  "titleAr": "مثلٌ ألمانيٌّ أصيل — أن تصلَ متأخراً خيرٌ من ألّا تصلَ أبداً",
-  "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
-  "zeilen": [
-   {
-    "code": "المثل",
-    "de": "Besser spät als nie",
-    "ar": "أن تصلَ متأخراً خيرٌ من ألّا تصلَ أبداً"
-   },
-   {
-    "code": "القاعدةُ المدمَجة",
-    "de": "Besser spät als nie",
-    "ar": "صيغةُ التفضيلِ besser تليها أداةُ المقارنةِ للاختلافِ als لا wie."
-   }
-  ],
-  "gramIds": [
-   "a2-steigerung"
-  ]
- },
- {
-  "id": "spr-rom",
-  "emoji": "🟪",
-  "sektion": "sprichwort",
-  "level": "B1",
-  "titleAr": "مثلٌ ألمانيٌّ أصيل — روما لم تُبنَ في يوم",
-  "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
-  "zeilen": [
-   {
-    "code": "المثل",
-    "de": "Rom wurde nicht an einem Tag gebaut",
-    "ar": "روما لم تُبنَ في يوم"
-   },
-   {
-    "code": "القاعدةُ المدمَجة",
-    "de": "Rom wurde nicht an einem Tag gebaut",
-    "ar": "مجهولُ الماضي: wurde في المركزِ الثاني والتصريفُ الثالثُ gebaut في آخرِ الجملة."
-   }
-  ],
-  "gramIds": [
-   "b1-passiv"
-  ]
- },
- {
-  "id": "spr-reden",
-  "emoji": "🟪",
-  "sektion": "sprichwort",
-  "level": "B2",
-  "titleAr": "مثلٌ ألمانيٌّ أصيل — إذا كانَ الكلامُ من فضةٍ فالسكوتُ من ذهب",
-  "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
-  "zeilen": [
-   {
-    "code": "المثل",
-    "de": "Reden ist Silber, Schweigen ist Gold",
-    "ar": "إذا كانَ الكلامُ من فضةٍ فالسكوتُ من ذهب"
-   },
-   {
-    "code": "القاعدةُ المدمَجة",
-    "de": "Reden ist Silber, Schweigen ist Gold",
-    "ar": "مصدرانِ تحوَّلا إلى اسمَينِ محايدَينِ مرفوعَين — قاعدةُ das الكبرى في مثلٍ شعبيّ."
-   }
-  ],
-  "gramIds": [
-   "b2-infinitiv"
-  ]
- },
- {
-  "id": "sein-haben-zwilling",
-  "emoji": "🟨",
-  "sektion": "verb",
-  "level": "A1",
-  "titleAr": "sein و haben ➔ «التوأمانِ الشاذّانِ يُحفَظانِ كالأذكار»",
-  "storyAr": "لا قاعدةَ تُنقِذُكَ هنا ولا شفرةَ تُغنيك: هذانِ الفعلانِ شاذّانِ خالصانِ يُحفَظانِ سرداً كالأذكارِ اليومية. لكنَّ التركةَ في المعنى: sein يربطُ ويُعرِّفُ (من أنت؟ كيف حالك؟)، و haben يملكُ ويُحِسّ — والألمانيةُ تَملِكُ ما نكونُهُ نحنُ في العربية.",
-  "zeilen": [
-   {
-    "code": "sein — السرد",
-    "de": "bin · bist · ist · sind · seid · sind",
-    "ar": "احفظ الستةَ دفعةً واحدةً بإيقاعٍ واحد"
-   },
-   {
-    "code": "haben — السرد",
-    "de": "habe · hast · hat · haben · habt · haben",
-    "ar": "لاحظ سقوطَ الـ b في hast و hat وحدَهما"
-   },
-   {
-    "code": "الفخُّ العربيُّ الأكبر",
-    "de": "Ich habe Hunger. ✓ / Ich bin hungrig.",
-    "ar": "«أنا جائع» تُقالُ بالامتلاكِ لا بالكينونة"
-   },
-   {
-    "code": "نظائرُه اليومية",
-    "de": "Zeit haben · Angst haben · Recht haben · Durst haben",
-    "ar": "يملكُ وقتاً · خوفاً · حقاً · عطشاً"
-   },
-   {
-    "code": "العمرُ كذلك",
-    "de": "Ich bin 30 Jahre alt.",
-    "ar": "وهنا بالعكس: العمرُ كينونةٌ لا امتلاك"
-   }
-  ],
-  "gramIds": [
-   "a1-sein-haben"
-  ],
-  "warnung": "أكثرُ جملةٍ يخطئُ فيها العربيُّ في أوّلِ أسبوع: ✗ Ich bin Hunger — تجمعُ الخطأينِ معاً."
- },
- {
-  "id": "pron-sie3",
-  "emoji": "🟨",
-  "sektion": "verb",
-  "level": "A1",
-  "titleAr": "ضمائرُ الفاعل ➔ «الـ sie الثلاثيةُ ذاتُ الأوجه»",
-  "storyAr": "كلمةُ sie في الألمانيةِ ثلاثةُ أشخاصٍ في جسدٍ واحد، والفعلُ وحدَهُ يفضحُ أيَّهم أمامَك: هي، هم، وحضرتُك الرسمية. انظرْ إلى نهايةِ الفعلِ وإلى الحرفِ الكبيرِ تعرفْ مَن يُخاطَب.",
-  "zeilen": [
-   {
-    "code": "sie + t = هي",
-    "de": "sie kommt",
-    "ar": "المفردةُ المؤنثة"
-   },
-   {
-    "code": "sie + en = هم",
-    "de": "sie kommen",
-    "ar": "الجمعُ الغائب"
-   },
-   {
-    "code": "Sie كبيرة = حضرتُك",
-    "de": "Sie kommen",
-    "ar": "الاحترامُ الرسميُّ — بحرفٍ كبيرٍ دائماً في وسطِ الجملة"
-   },
-   {
-    "code": "ميزانُ الفرق",
-    "de": "Sie sind Herr Müller? / Sie sind Studenten.",
-    "ar": "السياقُ يحسمُ ما تركَهُ الفعلُ ملتبساً"
-   }
-  ],
-  "gramIds": [
-   "a1-pronomen"
-  ],
-  "warnung": "في الرسائلِ الرسميةِ كلُّ Sie/Ihr/Ihnen بحرفٍ كبير؛ نسيانُها يُقرأُ وقاحةً لا خطأً إملائياً فقط."
- },
- {
-  "id": "trennbar-boomerang",
-  "emoji": "🟨",
-  "sektion": "verb",
-  "level": "A1",
-  "titleAr": "الأفعالُ المنفصلة ➔ «البومرانج: الرأسُ يطيرُ إلى آخرِ الجملة»",
-  "storyAr": "الفعلُ المنفصلُ سلاحُ بومرانج: ترمي بادئتَهُ (auf, ein, mit, an) فتطيرُ إلى آخرِ الجملةِ وتنتظرُكَ هناك. المعنى لا يكتملُ إلا بعدَ أن تسمعَ آخرَ كلمة — ولذلك يُصغي الألمانيُّ حتى النهايةِ ولا يقاطع.",
-  "zeilen": [
-   {
-    "code": "القاعدة",
-    "de": "aufstehen → Ich stehe um sieben auf.",
-    "ar": "أستيقظُ السابعةَ — auf طارت للآخر"
-   },
-   {
-    "code": "مع فعلٍ ناقص ➔ تلتئم",
-    "de": "Ich muss um sieben aufstehen.",
-    "ar": "الناقصُ يُعيدُ الفعلَ كاملاً إلى الآخر"
-   },
-   {
-    "code": "في الماضي ➔ ge في الوسط",
-    "de": "Ich bin aufgestanden.",
-    "ar": "الوصفةُ: auf + ge + standen — البادئةُ تعودُ فتلتصق"
-   },
-   {
-    "code": "غيرُ المنفصلة",
-    "de": "verstehen · bekommen · erklären",
-    "ar": "بوادئُ be/ge/er/ver/zer/ent لا تنفصلُ أبداً — ولا تأخذُ ge"
-   },
-   {
-    "code": "الميزانُ السمعي",
-    "de": "Ich rufe dich morgen an.",
-    "ar": "الجملةُ لا تُفهَمُ إلا بـ an الأخيرة"
-   }
-  ],
-  "gramIds": [
-   "a1-trennbar"
-  ]
- },
- {
-  "id": "zahlen-umgekehrt",
-  "emoji": "🟨",
-  "sektion": "verb",
-  "level": "A1",
-  "titleAr": "الأرقامُ والساعة ➔ «الألمانيُّ يقرأُ الرقمَ بالمقلوبِ ويعيشُ في نصفِ الساعةِ القادمة»",
-  "storyAr": "عقدتانِ تُربِكانِ العربيَّ يومياً: الرقمُ المركَّبُ يُقرأُ من اليمينِ إلى اليسارِ (الآحادُ قبلَ العشرات) — أربعةٌ وعشرون كما نقولُها نحنُ تماماً في «أربعةٌ وعشرون»! أما الساعةُ فالألمانيُّ لا ينظرُ إلى النصفِ الماضي بل يعُدُّ نصفَ الساعةِ الآتية.",
-  "zeilen": [
-   {
-    "code": "الرقمُ المقلوب",
-    "de": "24 = vierundzwanzig",
-    "ar": "أربعةٌ و عشرون — حرفياً كالعربيةِ الفصحى"
-   },
-   {
-    "code": "كلمةٌ واحدةٌ ملتصقة",
-    "de": "einundachtzig · siebenundneunzig",
-    "ar": "81 · 97 — تُكتَبُ بلا فراغٍ مهما طالت"
-   },
-   {
-    "code": "halb = النصفُ القادم",
-    "de": "halb acht = 7:30",
-    "ar": "«نصفُ الثامنة» أي نصفُ الطريقِ إليها — لا 8:30"
-   },
-   {
-    "code": "viertel",
-    "de": "Viertel nach acht · Viertel vor neun",
-    "ar": "الثامنةُ والربع · التاسعةُ إلا ربعاً"
-   },
-   {
-    "code": "الرسميُّ آمن",
-    "de": "Es ist 19:30 Uhr — neunzehn Uhr dreißig.",
-    "ar": "في المواعيدِ والقطاراتِ استعمل الصيغةَ الرقميةَ تسلمْ"
-   }
-  ],
-  "gramIds": [
-   "a1-zahlen"
-  ],
-  "warnung": "halb zehn تعني 9:30 لا 10:30 — خطأٌ يُضيِّعُ موعدَ طبيبٍ كاملاً."
- },
- {
-  "id": "modal-2ende",
-  "emoji": "🟨",
-  "sektion": "verb",
-  "level": "A2",
-  "titleAr": "الأفعالُ الناقصة ➔ «الناقصُ يجلسُ ثانياً ويُرسِلُ خادمَهُ إلى الآخر»",
-  "storyAr": "الفعلُ الناقصُ سيّدٌ لا يعمل: يجلسُ في المركزِ الثاني مصرَّفاً، ويُرسِلُ الفعلَ الحقيقيَّ في المصدرِ إلى آخرِ الجملةِ ليقومَ بالشغل. وفي المفردِ يفقدُ السيّدُ حركتَه (ich kann لا ich kanne) — لأنَّ السادةَ لا يتصرَّفون كالعامّة.",
-  "zeilen": [
-   {
-    "code": "البنية",
-    "de": "Ich muss heute arbeiten.",
-    "ar": "الناقصُ ثانياً والمصدرُ أخيراً"
-   },
-   {
-    "code": "المفردُ بلا نهاية",
-    "de": "ich kann · du kannst · er kann",
-    "ar": "لا -e في الأولِ ولا -t في الثالث"
-   },
-   {
-    "code": "سلَّمُ الإلزام",
-    "de": "müssen > sollen > dürfen > können > möchten",
-    "ar": "من الواجبِ الحديديِّ إلى الرغبةِ المهذَّبة"
-   },
-   {
-    "code": "الماضي الأسلم",
-    "de": "Ich musste arbeiten.",
-    "ar": "الناقصُ يُفضِّلُ Präteritum على Perfekt في الكلامِ والكتابة"
-   },
-   {
-    "code": "نفيُ müssen فخّ",
-    "de": "Du musst nicht kommen. · Du darfst nicht kommen.",
-    "ar": "الأولى: لستَ مضطراً للمجيء (رفعُ إلزام) · الثانية: ممنوعٌ أن تأتيَ (منعٌ صريح) — فرقٌ يقلبُ معنى العقد"
-   }
-  ],
-  "gramIds": [
-   "a2-modal"
-  ],
-  "warnung": "«لا يجبُ عليك» بالعربيةِ تعني المنعَ أحياناً؛ أما nicht müssen فتعني رفعَ الإلزامِ فقط — فرقٌ يُغيِّرُ معنى العقدِ كلِّه."
- },
- {
-  "id": "konj2-hoeflich",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B1",
-  "titleAr": "كونيونكتيف الثاني ➔ «مفتاحُ الأدبِ: würde تفتحُ كلَّ الأبواب»",
-  "storyAr": "الألمانيُّ لا يطلبُ بالأمرِ بل بالخيال: «هل كان ممكناً أن…». وأنتَ لستَ مضطراً لحفظِ صيغِ كلِّ الأفعالِ — würde + المصدرُ تكفي في تسعينَ بالمئةِ من المواقف، ولا يُستثنى منها إلا ستةٌ يجبُ حفظُ صيغتِها الأصليةِ لأنَّ würde معها تُسمَعُ ركيكة.",
-  "zeilen": [
-   {
-    "code": "القاعدةُ العامة",
-    "de": "Ich würde gern bezahlen.",
-    "ar": "أودُّ الدفعَ — würde + مصدرٌ في الآخر"
-   },
-   {
-    "code": "الستةُ الأصلية",
-    "de": "wäre · hätte · könnte · müsste · sollte · dürfte",
-    "ar": "احفظها ولا تقلْ würde sein ولا würde haben"
-   },
-   {
-    "code": "الطلبُ المهذَّب",
-    "de": "Könnten Sie mir bitte helfen?",
-    "ar": "أعلى درجاتِ الأدبِ في الخدماتِ والإدارة"
-   },
-   {
-    "code": "النصيحة",
-    "de": "An deiner Stelle würde ich warten.",
-    "ar": "لو كنتُ مكانَكَ لانتظرت"
-   },
-   {
-    "code": "الأمنيةُ المستحيلة",
-    "de": "Wenn ich Zeit hätte, würde ich reisen.",
-    "ar": "الشرطُ الخياليُّ بشقَّيه"
-   }
-  ],
-  "gramIds": [
-   "b1-konj2",
-   "b2-bedingung"
-  ],
-  "warnung": "في المطعمِ والإدارةِ استعمالُ الحاضرِ المجرَّدِ (Ich will Kaffee) يُسمَعُ فظاً — قلْ: Ich hätte gern einen Kaffee."
- },
- {
-  "id": "plusquam-nachdem",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B1",
-  "titleAr": "ما قبلَ الماضي ➔ «قاعدةُ التبكير: nachdem تُرجِعُ ساعةً إلى الوراء»",
-  "storyAr": "حينَ يقعُ حدثانِ في الماضي، الأسبقُ يُروى بما قبلَ الماضي (hatte/war + التصريفُ الثالث) واللاحقُ بالماضي العادي. والرابطُ nachdem علامةٌ شبهُ حتمية: ما بعدَها هو الأسبقُ زمناً.",
-  "zeilen": [
-   {
-    "code": "البنية",
-    "de": "hatte / war + Partizip II",
-    "ar": "المساعدُ في الماضي البسيطِ مع تصريفٍ ثالث: hatte gegessen · war gekommen"
-   },
-   {
-    "code": "الزوجُ الكلاسيكي",
-    "de": "Nachdem ich gegessen hatte, ging ich schlafen.",
-    "ar": "بعدَ أن كنتُ قد أكلتُ ذهبتُ للنوم"
-   },
-   {
-    "code": "اختيارُ المساعد",
-    "de": "ich hatte gearbeitet · ich war gefahren",
-    "ar": "نفسُ قاعدةِ الهروبِ من الأريكة: من يأخذُ sein في Perfekt يأخذُ war هنا، وسواهُ hatte"
-   },
-   {
-    "code": "السؤالُ المنقول",
-    "de": "Er fragte, ob ich gekommen sei.",
-    "ar": "ob للسؤالِ بلا أداة، والفعلُ في الآخر"
-   },
-   {
-    "code": "أداةُ السؤالِ تبقى",
-    "de": "Sie wollte wissen, wann der Zug fährt.",
-    "ar": "الأداةُ نفسُها تصيرُ رابطاً يشوتُ الفعل"
-   }
-  ],
-  "gramIds": [
-   "b1-plusquamperfekt"
-  ]
- },
- {
-  "id": "indirekte-presse",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "الكلامُ المنقول ➔ «قناعُ الصحفيِّ: أنقلُ ولا أتبنّى»",
-  "storyAr": "Konjunktiv I ليس زمناً بل موقفاً: الصحفيُّ والدبلوماسيُّ يقولان «هو زعمَ» دونَ أن يوقِّعا على صحةِ الكلام. القاعدةُ العمليةُ الوحيدةُ التي تحتاجُها: انزعِ الـ n من المصدرِ في الغائبِ المفرد، وإن تشابهتِ الصيغةُ مع العاديةِ فاهربْ إلى Konjunktiv II فوراً.",
-  "zeilen": [
-   {
-    "code": "التكوين",
-    "de": "er sagt → er sage · er hat → er habe",
-    "ar": "الغائبُ المفردُ محورُ الصيغةِ كلِّها"
-   },
-   {
-    "code": "sein شاذٌّ ومهمّ",
-    "de": "er sei · sie seien",
-    "ar": "أكثرُ صيغةٍ تراها في الصحافةِ الألمانية"
-   },
-   {
-    "code": "قاعدةُ الهروب",
-    "de": "sie haben → sie hätten",
-    "ar": "إذا التبسَتِ K-I بالعاديةِ استُبدِلَت بـ K-II وجوباً"
-   },
-   {
-    "code": "في جملة",
-    "de": "Der Minister sagte, er sei nicht informiert worden.",
-    "ar": "قالَ الوزيرُ إنَّهُ لم يُبلَّغ — بلا تبنٍّ للمحتوى"
-   },
-   {
-    "code": "الأثرُ الأسلوبي",
-    "de": "Er behauptet, er habe nichts gewusst.",
-    "ar": "«يزعمُ» — الصيغةُ وحدَها تحملُ الشكّ"
-   }
-  ],
-  "gramIds": [
-   "b2-indirekte-rede"
-  ]
- },
- {
-  "id": "bedingung-3",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "جملُ الشرطِ الثلاث ➔ «الواقعُ · الحلمُ · الحسرة»",
-  "storyAr": "ثلاثةُ أنواعٍ لا رابع: شرطٌ واقعيٌّ ممكنٌ بالحاضر، وحلمٌ بعيدٌ بالكونيونكتيف الثاني، وحسرةٌ على ماضٍ فاتَ لا يُستدرَك. تعرفُ نوعَها من زمنِ فعلِها لا من معناها.",
-  "zeilen": [
-   {
-    "code": "① الواقعي",
-    "de": "Wenn ich Zeit habe, komme ich.",
-    "ar": "ممكنٌ فعلاً — مضارعٌ في الشقَّين"
-   },
-   {
-    "code": "② الحلم",
-    "de": "Wenn ich Zeit hätte, käme ich / würde ich kommen.",
-    "ar": "غيرُ واقعٍ الآن لكنَّهُ متخيَّل"
-   },
-   {
-    "code": "③ الحسرة",
-    "de": "Wenn ich Zeit gehabt hätte, wäre ich gekommen.",
-    "ar": "فاتَ ولا سبيلَ إليه — hätte/wäre + ثالثٌ في الشقَّين"
-   },
-   {
-    "code": "بلا wenn",
-    "de": "Hätte ich Zeit, käme ich.",
-    "ar": "حذفُ wenn يرفعُ الفعلَ إلى الصدارة — أسلوبُ B2 الراقي"
-   },
-   {
-    "code": "sonst للنتيجة",
-    "de": "Beeil dich, sonst verpassen wir den Zug.",
-    "ar": "وإلّا — بديلٌ محكيٌّ عن الشرطِ المنفي"
-   }
-  ],
-  "gramIds": [
-   "b2-bedingung",
-   "b1-konj2"
-  ]
- },
- {
-  "id": "funktionsverb",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "التركيباتُ الوظيفية ➔ «سرُّ النصِّ الرسميّ: الفعلُ يُفرَّغُ والاسمُ يحكم»",
-  "storyAr": "في لغةِ الإدارةِ والتقاريرِ يُفرَّغُ الفعلُ من معناهُ ويُحمَّلُ المعنى على الاسم: لا تقلْ «قرَّر» بل «اتَّخذَ قراراً». هذه هي النبرةُ التي تقفزُ بمقالِكَ من B1 إلى B2 في عينِ المصحِّحِ مباشرة.",
-  "zeilen": [
-   {
-    "code": "القرار",
-    "de": "eine Entscheidung treffen",
-    "ar": "بدلاً من entscheiden"
-   },
-   {
-    "code": "السؤال",
-    "de": "eine Frage stellen",
-    "ar": "بدلاً من fragen"
-   },
-   {
-    "code": "الاعتبار",
-    "de": "in Betracht ziehen",
-    "ar": "يأخذُ بعينِ الاعتبار"
-   },
-   {
-    "code": "التأثير",
-    "de": "Einfluss nehmen auf + Akk",
-    "ar": "يؤثِّرُ في"
-   },
-   {
-    "code": "الاهتمام",
-    "de": "Interesse an + Dat haben",
-    "ar": "لاحظ: حرفُ الجرِّ جزءٌ من التركيبِ يُحفَظُ معه"
-   },
-   {
-    "code": "النقد",
-    "de": "Kritik üben an + Dat",
-    "ar": "بدلاً من kritisieren"
-   }
-  ],
-  "gramIds": [
-   "b2-funktionsverben"
-  ],
-  "warnung": "لا تُفرِطْ: ثلاثُ تركيباتٍ في المقالِ الواحدِ تكفي؛ أكثرُ من ذلك يُقرأُ تكلُّفاً لا رقيّاً."
- },
- {
-  "id": "imperativ-3",
-  "emoji": "🟩",
-  "sektion": "satzbau",
-  "level": "A2",
-  "titleAr": "صيغةُ الأمر ➔ «ثلاثةُ وجوهٍ: احذفْ · أضفْ · اقلبْ»",
-  "storyAr": "الأمرُ ثلاثُ صيغٍ فقط، وكلٌّ لها حركةٌ واحدةٌ تُحفَظ: للمفردِ الحميمِ تحذف، وللجمعِ الحميمِ تُبقي النهايةَ وتحذفُ الضمير، وللرسميِّ تقلبُ الترتيبَ وتُبقي Sie.",
-  "zeilen": [
-   {
-    "code": "du ➔ احذفْ -st والضمير",
-    "de": "du kommst → Komm!",
-    "ar": "تعال — ولا -e في المحكيّ"
-   },
-   {
-    "code": "ihr ➔ احذفِ الضميرَ فقط",
-    "de": "ihr kommt → Kommt!",
-    "ar": "تعالوا"
-   },
-   {
-    "code": "Sie ➔ اقلبْ وأبقِ الضمير",
-    "de": "Sie kommen → Kommen Sie!",
-    "ar": "تفضَّلْ حضرتُك"
-   },
-   {
-    "code": "الشاذُّ المهم",
-    "de": "sein → Sei! · Seid! · Seien Sie!",
-    "ar": "احفظه وحدَه"
-   },
-   {
-    "code": "bitte تُليِّنُ كلَّ شيء",
-    "de": "Kommen Sie bitte herein.",
-    "ar": "الأمرُ بلا bitte يُسمَعُ نهراً في الألمانية"
-   }
-  ],
-  "gramIds": [
-   "a2-imperativ"
-  ]
- },
- {
-  "id": "modalpartikel",
-  "emoji": "🟧",
-  "sektion": "b2",
-  "level": "B2",
-  "titleAr": "جسيماتُ النبرة ➔ «توابلُ الكلامِ التي لا تُترجَم»",
-  "storyAr": "doch, mal, ja, denn, halt — كلماتٌ بلا معنًى في القاموسِ وبكلِّ المعنى في الحياة. لا تُترجَمُ إلى العربيةِ بكلمةٍ بل بنبرةِ الصوت؛ ومن أتقنَها سُمِعَ ألمانياً لا متعلِّماً، وهي آخرُ ما يكتسبُهُ الأجنبيُّ عادةً.",
-  "zeilen": [
-   {
-    "code": "mal — التخفيف",
-    "de": "Komm mal her!",
-    "ar": "تعالَ قليلاً — يُحوِّلُ الأمرَ إلى دعوة"
-   },
-   {
-    "code": "doch — الإلحاحُ اللطيف",
-    "de": "Frag ihn doch!",
-    "ar": "اسألْه بالله عليك"
-   },
-   {
-    "code": "denn — فضولُ السؤال",
-    "de": "Was machst du denn hier?",
-    "ar": "ما الذي جاءَ بكَ هنا؟ — بلا denn يصيرُ استجواباً"
-   },
-   {
-    "code": "ja — المفاجأةُ أو المعلومُ",
-    "de": "Das ist ja toll!",
-    "ar": "يا سلام! · أو: كما تعلمُ طبعاً"
-   },
-   {
-    "code": "halt / eben — التسليم",
-    "de": "Das ist halt so.",
-    "ar": "هكذا هي الأمورُ ببساطة"
-   },
-   {
-    "code": "doch الجوابية",
-    "de": "— Du kommst nicht? — Doch!",
-    "ar": "بلى! — ردُّ الإثباتِ على سؤالٍ منفيّ، لا نظيرَ لها إلا «بلى» العربية"
-   }
-  ],
-  "gramIds": [
-   "b2-modalpartikel"
-  ],
-  "warnung": "doch الجوابيةُ تُقابِلُ «بلى» القرآنيةَ بدقّة — والعربيُّ يملكُ هذا الحسَّ سليقةً بينما يتعثَّرُ فيه الإنجليزيّ."
- }
+  {
+    "id": "gen-der",
+    "emoji": "🟥",
+    "sektion": "genus",
+    "level": "A1",
+    "titleAr": "المذكر der ➔ شفرة «أحمد في مَشْغَلْ تَنّ»",
+    "storyAr": "المذكرُ رجلٌ شقيٌّ يعملُ في ورشةٍ (مَشْغَلْ) وتعبانُ جداً حتى (تَنّ) — أصابَهُ الإعياء. كلُّ حرفٍ من «مَشْغَلْ تَنّ» نهايةُ اسمٍ مذكَّر.",
+    "zeilen": [
+      {
+        "code": "م → -ismus",
+        "de": "der Optimismus",
+        "ar": "التفاؤل — كلُّ المذاهبِ والمبادئِ مذكَّرة"
+      },
+      {
+        "code": "ش → -er",
+        "de": "der Lehrer",
+        "ar": "المعلّم — وكلُّ أسماءِ الفاعلِ والوظائف"
+      },
+      {
+        "code": "غ → -ig",
+        "de": "der Honig",
+        "ar": "العسل"
+      },
+      {
+        "code": "ل → -ling",
+        "de": "der Schmetterling",
+        "ar": "الفراشة — و der Lehrling المتدرّب"
+      },
+      {
+        "code": "ت → -ant",
+        "de": "der Praktikant",
+        "ar": "المتدرّب — و der Demonstrant"
+      },
+      {
+        "code": "ن → -ner",
+        "de": "der Rentner",
+        "ar": "المتقاعد — و der Gärtner البستاني"
+      }
+    ],
+    "gramIds": [
+      "a1-akkusativ",
+      "a2-dativ",
+      "b1-genitiv"
+    ],
+    "warnung": "الاستثناءُ المشهور: das Mädchen مؤنثٌ في المعنى محايدٌ في الأداةِ لأنَّ -chen تغلبُ كلَّ شيء."
+  },
+  {
+    "id": "gen-die",
+    "emoji": "🟥",
+    "sektion": "genus",
+    "level": "A1",
+    "titleAr": "المؤنث die ➔ شفرة «شَفَقْ البنتُ التعيسةُ نَزّت تِيهْ»",
+    "storyAr": "فتاةٌ اسمُها (شَفَقْ)، حظُّها (تَعْسٌ)، جُرِحَت في المكتبةِ فـ(نَزّت) دماً وصاحت (تِيهْ) من الألم.",
+    "zeilen": [
+      {
+        "code": "ش → -schaft",
+        "de": "die Freundschaft",
+        "ar": "الصداقة"
+      },
+      {
+        "code": "ف → -heit / -keit",
+        "de": "die Freiheit · die Möglichkeit",
+        "ar": "الحرية · الإمكانية"
+      },
+      {
+        "code": "ق → -ung",
+        "de": "die Zeitung",
+        "ar": "الجريدة — أوسعُ نهايةٍ مؤنثةٍ على الإطلاق"
+      },
+      {
+        "code": "ت → -tät",
+        "de": "die Universität",
+        "ar": "الجامعة"
+      },
+      {
+        "code": "ع → -ei",
+        "de": "die Bäckerei",
+        "ar": "المخبز"
+      },
+      {
+        "code": "س → -ion",
+        "de": "die Situation",
+        "ar": "الموقف — و die Nation و die Religion"
+      },
+      {
+        "code": "ن → -ik",
+        "de": "die Musik",
+        "ar": "الموسيقى"
+      },
+      {
+        "code": "ز → -enz / -anz",
+        "de": "die Existenz · die Eleganz",
+        "ar": "الوجود · الأناقة"
+      },
+      {
+        "code": "تِيهْ → -thek",
+        "de": "die Bibliothek",
+        "ar": "المكتبة"
+      }
+    ],
+    "gramIds": [
+      "a1-akkusativ",
+      "a2-dativ",
+      "b1-genitiv"
+    ],
+    "warnung": "فخُّ B2: der Brei استثناءُ -ei الوحيدُ الشهير، و das Ei (البيضة) ليست نهايةً بل كلمةً كاملة."
+  },
+  {
+    "id": "gen-das",
+    "emoji": "🟥",
+    "sektion": "genus",
+    "level": "A1",
+    "titleAr": "المحايد das ➔ شفرة «تَمْ حُبْ أُومَا»",
+    "storyAr": "المحايدُ كائنٌ باردٌ لا يتدخَّلُ بين المذكرِ والمؤنث؛ سُئِلَ عن مشاعرِه فقال: «تَمْ حُبْ أُومَا» — أي تمَّ حبُّ الجدّةِ (Oma) فقط!",
+    "zeilen": [
+      {
+        "code": "ت → -tum",
+        "de": "das Eigentum",
+        "ar": "الملكية — واستثناؤُهُ der Reichtum"
+      },
+      {
+        "code": "م → -ment",
+        "de": "das Dokument",
+        "ar": "الوثيقة"
+      },
+      {
+        "code": "ح → -chen",
+        "de": "das Mädchen",
+        "ar": "الفتاة — التصغيرُ يَمحو الجنسَ الأصليَّ محواً"
+      },
+      {
+        "code": "ب → -lein",
+        "de": "das Fräulein",
+        "ar": "الآنسة — تصغيرٌ أيضاً"
+      },
+      {
+        "code": "أُو → -um",
+        "de": "das Zentrum",
+        "ar": "المركز — و das Museum"
+      },
+      {
+        "code": "مَا → -ma",
+        "de": "das Klima",
+        "ar": "المناخ — و das Thema و das Drama"
+      }
+    ],
+    "gramIds": [
+      "a1-akkusativ",
+      "a2-dativ",
+      "b1-genitiv"
+    ]
+  },
+  {
+    "id": "satz-pos0",
+    "emoji": "🟩",
+    "sektion": "satzbau",
+    "level": "A2",
+    "titleAr": "روابطُ المركزِ (0) ➔ «أَدُوسْ فُونْ دِا — روابطُ طيّبةٌ ما لهاش في المشاكل»",
+    "storyAr": "شخصٌ اسمُه «أدوس» يرتدي ماركةَ «فون دا»: روابطُ مسالمةٌ لا تُحرِّكُ شيئاً — يأتي بعدَها الفاعلُ فوراً ويبقى الفعلُ المصرَّفُ في مركزِه الثاني الطبيعيّ.",
+    "zeilen": [
+      {
+        "code": "A",
+        "de": "aber",
+        "ar": "لكن"
+      },
+      {
+        "code": "D",
+        "de": "denn",
+        "ar": "لأنَّ — وهي سببٌ بلا شوطٍ للفعل، بعكس weil"
+      },
+      {
+        "code": "U",
+        "de": "und",
+        "ar": "و"
+      },
+      {
+        "code": "S",
+        "de": "sondern",
+        "ar": "بل"
+      },
+      {
+        "code": "O",
+        "de": "oder",
+        "ar": "أو"
+      },
+      {
+        "code": "+",
+        "de": "nicht nur … sondern auch",
+        "ar": "ليس فقط… بل أيضاً"
+      }
+    ],
+    "gramIds": [
+      "b1-konnektoren",
+      "a2-weil-dass"
+    ],
+    "warnung": "Denn و weil كلاهما «لأنّ» — لكنَّ denn تتركُ الفعلَ مكانَه و weil تركلُه إلى الآخر. هذا أشهرُ فخٍّ عربيٍّ في A2."
+  },
+  {
+    "id": "satz-pos1",
+    "emoji": "🟩",
+    "sektion": "satzbau",
+    "level": "B1",
+    "titleAr": "روابطُ المركزِ (1) ➔ «عصابةُ دَادْوَازْ — بلطجيةُ القواعد»",
+    "storyAr": "روابطُ DADWAS عصابةٌ: بمجرَّدِ دخولِها تطردُ الفاعلَ من الكرسيِّ الأول وتجلسُ مكانَه، فيقفزُ الفعلُ المصرَّفُ خلفَها مباشرةً في المركزِ الثاني، ويهربُ الفاعلُ إلى الثالث.",
+    "zeilen": [
+      {
+        "code": "D",
+        "de": "deshalb / darum / deswegen",
+        "ar": "لذلك — النتيجة"
+      },
+      {
+        "code": "A",
+        "de": "allerdings",
+        "ar": "على أنَّ — تحفُّظ"
+      },
+      {
+        "code": "D",
+        "de": "dann",
+        "ar": "ثمَّ — التتابع"
+      },
+      {
+        "code": "W",
+        "de": "trotzdem",
+        "ar": "ومع ذلك — التناقض"
+      },
+      {
+        "code": "A",
+        "de": "andererseits",
+        "ar": "من ناحيةٍ أخرى"
+      },
+      {
+        "code": "S",
+        "de": "sonst",
+        "ar": "وإلّا"
+      }
+    ],
+    "gramIds": [
+      "b1-konnektoren"
+    ],
+    "warnung": "الميزانُ الذهبي: Deshalb komme ich nicht ✓ — وليس Deshalb ich komme ✗."
+  },
+  {
+    "id": "satz-ende",
+    "emoji": "🟩",
+    "sektion": "satzbau",
+    "level": "A2",
+    "titleAr": "الفعلُ في الآخر ➔ «weil و dass يَشوتانِ الكرةَ لآخرِ الملعب»",
+    "storyAr": "لاعبانِ عنيفانِ في الدوري الألماني: أوَّلَ ما تلمحُ رابطاً يبدأُ بـ W (weil, wenn, obwohl, während) أو ينتهي بـ dass (dass, sodass, damit)، فاعلمْ أنَّهُ ركلَ الفعلَ المصرَّفَ حتى قبعَ آخرَ كلمةٍ قبلَ النقطة.",
+    "zeilen": [
+      {
+        "code": "weil",
+        "de": "Ich bleibe zu Hause, weil ich krank bin.",
+        "ar": "أبقى في البيتِ لأنّي مريض — bin في الآخر"
+      },
+      {
+        "code": "dass",
+        "de": "Ich hoffe, dass du kommst.",
+        "ar": "آمُلُ أن تأتي"
+      },
+      {
+        "code": "obwohl",
+        "de": "Obwohl es regnet, gehe ich.",
+        "ar": "رغمَ أنَّها تُمطر — لاحظ: الجملةُ الفرعيةُ أولاً فالفعلُ الرئيسُ يليها فوراً"
+      },
+      {
+        "code": "wenn",
+        "de": "Wenn ich Zeit habe, rufe ich an.",
+        "ar": "إن توفَّرَ وقتي اتصلتُ"
+      }
+    ],
+    "gramIds": [
+      "a2-weil-dass",
+      "b1-relativ"
+    ],
+    "warnung": "إذا تصدَّرتِ الجملةُ الفرعيةُ، صارَ الفعلانِ متجاورَينِ يتقابلانِ عندَ الفاصلة: …, gehe ich."
+  },
+  {
+    "id": "praep-tekamolo",
+    "emoji": "🟦",
+    "sektion": "praeposition",
+    "level": "B1",
+    "titleAr": "ترتيبُ الظروف ➔ «تِيكَامُولُو — المحقِّقُ اليابانيُّ الصارم»",
+    "storyAr": "محقِّقٌ يابانيٌّ صارمٌ اسمُه TeKaMoLo يقفُ في الجملة؛ إذا اجتمعَ الزمانُ والسببُ والطريقةُ والمكانُ صرخَ ورتَّبَهم إجبارياً.",
+    "zeilen": [
+      {
+        "code": "Te — Temporal",
+        "de": "heute · um acht",
+        "ar": "متى؟ الزمنُ أولاً دائماً"
+      },
+      {
+        "code": "Ka — Kausal",
+        "de": "wegen des Regens",
+        "ar": "لماذا؟ السبب"
+      },
+      {
+        "code": "Mo — Modal",
+        "de": "mit dem Auto",
+        "ar": "كيف؟ الطريقةُ والوسيلة"
+      },
+      {
+        "code": "Lo — Lokal",
+        "de": "nach Berlin",
+        "ar": "أين/إلى أين؟ المكانُ آخراً"
+      },
+      {
+        "code": "مثالٌ جامع",
+        "de": "Ich fahre heute wegen des Termins mit dem Auto nach Berlin.",
+        "ar": "أسافرُ اليومَ بسببِ الموعدِ بالسيارةِ إلى برلين"
+      }
+    ],
+    "gramIds": [
+      "a1-praesens",
+      "b1-konnektoren"
+    ]
+  },
+  {
+    "id": "praep-akk",
+    "emoji": "🟦",
+    "sektion": "praeposition",
+    "level": "A1",
+    "titleAr": "حروفُ النصبِ دائماً ➔ «فُودْغَبْ — بوجي طحن طماطم»",
+    "storyAr": "وحشٌ مضحكٌ يعشقُ النصبَ فينصبُ على كلِّ كلمةٍ تمرُّ به ويحوِّلُ أداةَ المذكَّرِ إلى den.",
+    "zeilen": [
+      {
+        "code": "F",
+        "de": "für",
+        "ar": "لأجل — für den Vater"
+      },
+      {
+        "code": "U",
+        "de": "um",
+        "ar": "حول — um den Tisch"
+      },
+      {
+        "code": "D",
+        "de": "durch",
+        "ar": "عبر — durch den Park"
+      },
+      {
+        "code": "G",
+        "de": "gegen",
+        "ar": "ضدّ — gegen den Wind"
+      },
+      {
+        "code": "E",
+        "de": "entlang",
+        "ar": "على طول — تأتي بعدَ الاسمِ: die Straße entlang"
+      },
+      {
+        "code": "B",
+        "de": "bis",
+        "ar": "حتى — bis nächsten Montag"
+      }
+    ],
+    "gramIds": [
+      "a1-akkusativ"
+    ]
+  },
+  {
+    "id": "praep-dat",
+    "emoji": "🟦",
+    "sektion": "praeposition",
+    "level": "A2",
+    "titleAr": "حروفُ الجرِّ دائماً ➔ «بِمْزُو نَامْجِش — الجدُّ العجوزُ الكسلان»",
+    "storyAr": "جدٌّ كسلانُ يجرُّ كلَّ اسمٍ فيُقعِدُهُ في الداتيف ولا يسمحُ له بالحركة.",
+    "zeilen": [
+      {
+        "code": "بِ",
+        "de": "bei",
+        "ar": "عند — bei dem (beim) Arzt"
+      },
+      {
+        "code": "مْ",
+        "de": "mit",
+        "ar": "مع — mit dem Bus"
+      },
+      {
+        "code": "زُو",
+        "de": "zu",
+        "ar": "إلى — للأشخاصِ والأماكنِ المحدَّدة: zu dem (zum) Bahnhof"
+      },
+      {
+        "code": "نَا",
+        "de": "nach",
+        "ar": "إلى الدولِ والمدنِ بلا أداة / وبعدَ: nach dem Essen"
+      },
+      {
+        "code": "أَ",
+        "de": "aus",
+        "ar": "من داخلِ مكانٍ مغلقٍ أو من بلد: aus der Türkei"
+      },
+      {
+        "code": "مْ",
+        "de": "von",
+        "ar": "من — للملكيةِ أو المصدر: von dem (vom) Chef"
+      },
+      {
+        "code": "جِ",
+        "de": "gegenüber",
+        "ar": "مقابل — تأتي غالباً بعدَ الاسم"
+      },
+      {
+        "code": "ش",
+        "de": "seit",
+        "ar": "منذُ — seit einem Jahr"
+      }
+    ],
+    "gramIds": [
+      "a2-dativ"
+    ],
+    "warnung": "الإدغامُ الإلزاميُّ عملياً: zu dem → zum · zu der → zur · bei dem → beim · von dem → vom."
+  },
+  {
+    "id": "praep-gen",
+    "emoji": "🟦",
+    "sektion": "praeposition",
+    "level": "B1",
+    "titleAr": "حروفُ المضافِ إليه ➔ شفرة «وِتْشْ زِبْ» (WTSZ)",
+    "storyAr": "أربعةُ حروفٍ أرستقراطيةٍ لا ترضى إلا بالـ Genitiv — وهي علامةُ اللغةِ المكتوبةِ الراقيةِ في B2.",
+    "zeilen": [
+      {
+        "code": "W",
+        "de": "wegen",
+        "ar": "بسبب — wegen des Wetters"
+      },
+      {
+        "code": "T",
+        "de": "trotz",
+        "ar": "بالرغم من — trotz des Regens"
+      },
+      {
+        "code": "S",
+        "de": "statt / anstatt",
+        "ar": "بدلاً من — statt des Autos"
+      },
+      {
+        "code": "Z",
+        "de": "zufolge / während",
+        "ar": "وفقاً لـ / أثناء — während des Unterrichts"
+      }
+    ],
+    "gramIds": [
+      "b1-genitiv"
+    ],
+    "warnung": "في العاميةِ المحكيةِ تسمعُ wegen dem Wetter بالداتيف — مقبولٌ نُطقاً، مرفوضٌ في الامتحانِ المكتوب."
+  },
+  {
+    "id": "praep-wechsel",
+    "emoji": "🟦",
+    "sektion": "praeposition",
+    "level": "A2",
+    "titleAr": "الحروفُ المشتركة ➔ «الأكوزاتيف نَطَّاط والداتيف قاعدٌ مرتاح»",
+    "storyAr": "تسعةُ حروفٍ ذاتُ وجهين: تخيَّلِ الأكوزاتيف شخصاً حركياً ينطُّ من مكانٍ إلى مكان (Wohin؟ إلى أين)، والداتيف بديناً جالساً على الأريكةِ لا يتحرَّك (Wo؟ أين).",
+    "zeilen": [
+      {
+        "code": "Wohin? ➔ Akk",
+        "de": "Ich hänge das Bild an die Wand.",
+        "ar": "أُعلِّقُ الصورةَ على الحائط — حركةٌ وانتقال"
+      },
+      {
+        "code": "Wo? ➔ Dat",
+        "de": "Das Bild hängt an der Wand.",
+        "ar": "الصورةُ معلَّقةٌ على الحائط — سكونٌ وثبات"
+      },
+      {
+        "code": "التسعة",
+        "de": "an · auf · hinter · in · neben · über · unter · vor · zwischen",
+        "ar": "احفظها زوجاً زوجاً بالصورةِ لا بالقائمة"
+      },
+      {
+        "code": "الفخُّ الكلاسيكي",
+        "de": "in die Schule gehen ≠ in der Schule sein",
+        "ar": "الذهابُ حركةٌ والكينونةُ سكون"
+      }
+    ],
+    "gramIds": [
+      "a2-wechsel"
+    ]
+  },
+  {
+    "id": "praep-ausser-ohne",
+    "emoji": "🟦",
+    "sektion": "praeposition",
+    "level": "A2",
+    "titleAr": "الاستثناء ➔ قاعدةُ «مِقصُّ الـ إي والـ أُو»",
+    "storyAr": "حرفانِ متجاوِرانِ في المعنى متضادَّانِ في الإعراب — احفظهما كقصٍّ واحد.",
+    "zeilen": [
+      {
+        "code": "außer",
+        "de": "außer dem Chef",
+        "ar": "باستثناء — Dativ دائماً"
+      },
+      {
+        "code": "ohne",
+        "de": "ohne den Schlüssel",
+        "ar": "بدون — Akkusativ دائماً"
+      },
+      {
+        "code": "الذاكرةُ الصوتية",
+        "de": "außer dem Chef · ohne den Chef",
+        "ar": "قابِلْ بينهما في نفسٍ واحد: außer تجرُّ بالداتيف و ohne تنصبُ بالأكوزاتيف — النغمةُ تحفظُ الحالة"
+      }
+    ],
+    "gramIds": [
+      "a2-dativ",
+      "a1-akkusativ"
+    ]
+  },
+  {
+    "id": "perf-sein",
+    "emoji": "🟨",
+    "sektion": "verb",
+    "level": "A2",
+    "titleAr": "الماضي التام ➔ قاعدةُ «الهروبِ من الأريكة»",
+    "storyAr": "كلُّ الأفعالِ تأخذُ haben لأنَّ الأصلَ كسل؛ ولا يأخذُ sein إلا فعلٌ أجبرَكَ على الهروبِ من الأريكة: إمَّا انتقالُ الجسمِ من نقطةٍ إلى نقطة، وإمّا تغيُّرٌ بيولوجيٌّ جذريٌّ في الحالة.",
+    "zeilen": [
+      {
+        "code": "① انتقالٌ مكاني",
+        "de": "gehen · fahren · fliegen · kommen",
+        "ar": "ich bin gegangen — الجسمُ غادرَ موضعَه"
+      },
+      {
+        "code": "② تغيُّرُ حالة",
+        "de": "sterben · einschlafen · aufstehen · aufwachen",
+        "ar": "er ist eingeschlafen — الحالةُ انقلبَت"
+      },
+      {
+        "code": "③ الشاذّان",
+        "de": "sein · bleiben",
+        "ar": "ich bin gewesen · ich bin geblieben — احفظهما استثناءً خالصاً"
+      },
+      {
+        "code": "الباقي كلُّه haben",
+        "de": "tanzen · spielen · arbeiten",
+        "ar": "ich habe getanzt — حركةٌ موضعيةٌ لا انتقال"
+      }
+    ],
+    "gramIds": [
+      "a2-perfekt"
+    ],
+    "warnung": "الفخُّ: fahren بمفعولٍ به يصيرُ haben — Ich habe das Auto gefahren (قُدتُ السيارة) مقابل Ich bin nach Köln gefahren."
+  },
+  {
+    "id": "refl-dativ",
+    "emoji": "🟨",
+    "sektion": "verb",
+    "level": "A2",
+    "titleAr": "الضمائرُ الانعكاسية ➔ «المفعولُ الأنانيُّ يطردُ الأكوزاتيف»",
+    "storyAr": "الضميرُ الانعكاسيُّ يعشقُ الأكوزاتيف (mich)؛ فإذا دخلَ مفعولٌ به صريحٌ آخرُ (die Hände) تصرَّفَ بأنانيةٍ وطردَهُ وأخذَ مكانَه، فبكى الانعكاسيُّ وتحوَّلَ مضطراً إلى الداتيف (mir).",
+    "zeilen": [
+      {
+        "code": "وحدَه ➔ Akk",
+        "de": "Ich wasche mich.",
+        "ar": "أغسلُ نفسي"
+      },
+      {
+        "code": "مع مفعولٍ صريح ➔ Dat",
+        "de": "Ich wasche mir die Hände.",
+        "ar": "أغسلُ يديَّ — الأيدي أخذتِ النصبَ فانزاحَ الضمير"
+      },
+      {
+        "code": "نظائرُ يوميّة",
+        "de": "sich die Zähne putzen · sich die Haare kämmen",
+        "ar": "كلُّ ما يخصُّ الجسدَ بجزءٍ مذكورٍ يمشي على القاعدة"
+      }
+    ],
+    "gramIds": [
+      "a2-reflexiv"
+    ]
+  },
+  {
+    "id": "adj-chef",
+    "emoji": "🟨",
+    "sektion": "adjektiv",
+    "level": "B1",
+    "titleAr": "تصريفُ الصفات ➔ «إذا حضرَ المديرُ تقشَّفَ الموظفون!»",
+    "storyAr": "أداةُ التعريفِ هي المديرُ القويُّ للشركة. إن كان المديرُ واقفاً في الجملةِ خافَ الموظفون (الصفات) وتقشَّفوا فأخذوا نهايةً ضعيفةً (e أو en) فقط. وإن غابَ المديرُ اضطرَّتِ الصفةُ أن تلبسَ بدلتَهُ وتأخذَ نهايتَهُ القوية.",
+    "zeilen": [
+      {
+        "code": "المديرُ حاضر ➔ ضعيف",
+        "de": "der gute Mann · den guten Mann",
+        "ar": "e في المرفوعِ المفرد، و en فيما عداه غالباً"
+      },
+      {
+        "code": "المديرُ غائب ➔ قوي",
+        "de": "guter Mann · gutes Kind · gute Frau",
+        "ar": "الصفةُ تحملُ علامةَ الأداةِ الغائبة"
+      },
+      {
+        "code": "المديرُ نصفُ حاضر ➔ مختلط",
+        "de": "ein guter Mann · ein gutes Kind",
+        "ar": "ein لا تُظهرُ الجنسَ فتكمِّلُهُ الصفة"
+      }
+    ],
+    "gramIds": [
+      "b1-adjektivendungen",
+      "b1-unbestimmte"
+    ],
+    "warnung": "القاعدةُ الحاكمة: علامةُ الجنسِ يجبُ أن تظهرَ مرةً واحدةً في المجموعة — إمّا على الأداةِ وإمّا على الصفة."
+  },
+  {
+    "id": "sondern-aber",
+    "emoji": "🟨",
+    "sektion": "satzbau",
+    "level": "A2",
+    "titleAr": "النفيُ الصارم ➔ Sondern مقابل Aber",
+    "storyAr": "لا تستعملْ sondern (بل) إلا إذا كانت الجملةُ قبلَها تحملُ نفياً صريحاً (nicht أو kein) وجاءت لتصحيحِ ما نُفي. وإن لم يكن ثمَّةَ نفيٌ فالجوابُ aber تلقائياً.",
+    "zeilen": [
+      {
+        "code": "نفيٌ + تصحيح ➔ sondern",
+        "de": "Das ist kein Tee, sondern Kaffee.",
+        "ar": "ليس شاياً بل قهوة"
+      },
+      {
+        "code": "بلا نفي ➔ aber",
+        "de": "Der Tee ist heiß, aber gut.",
+        "ar": "الشايُ ساخنٌ لكنَّهُ جيّد"
+      },
+      {
+        "code": "الفخُّ العربي",
+        "de": "✗ Das ist kein Tee, aber Kaffee.",
+        "ar": "العربيةُ تقولُ «لكن» في الموضعين، والألمانيةُ تفرِّق"
+      }
+    ],
+    "gramIds": [
+      "a2-negation",
+      "b1-konnektoren"
+    ]
+  },
+  {
+    "id": "nicht-magnet",
+    "emoji": "🟨",
+    "sektion": "satzbau",
+    "level": "A2",
+    "titleAr": "موقعُ النفي ➔ «مغناطيسُ المؤخّرة»",
+    "storyAr": "تميلُ nicht بطبعِها إلى نهايةِ الجملة، إلا أن يجذبَها مغناطيسٌ أقوى فتقفَ قبلَهُ مباشرةً لتنفيَهُ وحدَه.",
+    "zeilen": [
+      {
+        "code": "الأصل: آخرُ الجملة",
+        "de": "Ich kenne den Mann nicht.",
+        "ar": "لا أعرفُ الرجل — نفيٌ كليّ"
+      },
+      {
+        "code": "مغناطيس ①: الصفة",
+        "de": "Das Auto ist nicht teuer.",
+        "ar": "قبلَ الصفةِ مباشرة"
+      },
+      {
+        "code": "مغناطيس ②: حرفُ الجر",
+        "de": "Ich gehe nicht ins Kino.",
+        "ar": "قبلَ العبارةِ الجارَّة"
+      },
+      {
+        "code": "مغناطيس ③: الفعلُ الثاني",
+        "de": "Ich kann heute nicht kommen.",
+        "ar": "قبلَ المصدرِ في الآخر"
+      },
+      {
+        "code": "النفيُ الجزئي",
+        "de": "Ich fahre nicht heute, sondern morgen.",
+        "ar": "ضعْ nicht أمامَ ما تنفيهِ بالضبط"
+      }
+    ],
+    "gramIds": [
+      "a2-negation"
+    ]
+  },
+  {
+    "id": "da-wo",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "دمجُ حروفِ الجر ➔ شفرةُ «الجمادِ والعاقل»",
+    "storyAr": "السؤالُ الوحيدُ قبلَ الدمج: أعاقلٌ هو أم جماد؟ الجمادُ يُدمَج، والإنسانُ يُصانُ عن الدمجِ صيانةً تامّة.",
+    "zeilen": [
+      {
+        "code": "جماد ➔ دمج",
+        "de": "Ich warte darauf. · Worauf wartest du?",
+        "ar": "أنتظرُه (الشيء) — da+r+auf و wo+r+auf"
+      },
+      {
+        "code": "عاقل ➔ فصل",
+        "de": "Ich warte auf dich. · Auf wen wartest du?",
+        "ar": "أنتظرُكَ أنت — يُمنَعُ الدمجُ منعاً"
+      },
+      {
+        "code": "حرفُ الوصلِ r",
+        "de": "darauf · daran · worüber",
+        "ar": "يُقحَمُ r إذا بدأَ الحرفُ بحركة"
+      }
+    ],
+    "gramIds": [
+      "b1-verb-praeposition"
+    ]
+  },
+  {
+    "id": "werden-3",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "فعلُ التحوُّل ➔ «المُشَكِّلُ اللغويُّ werden»",
+    "storyAr": "werden وحدَهُ لا معنى له؛ معناهُ تحدِّدُهُ الكلمةُ الأخيرةُ في الجملة. انظرْ إلى ذيلِ الجملةِ تعرفْ رأسَها.",
+    "zeilen": [
+      {
+        "code": "+ اسم/صفة = يُصبح",
+        "de": "Ich werde Arzt.",
+        "ar": "سأصيرُ طبيباً"
+      },
+      {
+        "code": "+ مصدرٌ في الآخر = المستقبل",
+        "de": "Ich werde reisen.",
+        "ar": "سأسافر"
+      },
+      {
+        "code": "+ تصريفٌ ثالثٍ في الآخر = مجهول",
+        "de": "Das Auto wird repariert.",
+        "ar": "تُصلَّحُ السيارة"
+      },
+      {
+        "code": "+ worden = مجهولُ الماضي",
+        "de": "Das Auto ist repariert worden.",
+        "ar": "لاحظ worden لا geworden في المجهول"
+      }
+    ],
+    "gramIds": [
+      "a2-futur",
+      "b1-passiv",
+      "b2-futur-ii"
+    ]
+  },
+  {
+    "id": "passiv-ersatz",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "بدائلُ المجهول ➔ شفرةُ «الـ bar والـ zu»",
+    "storyAr": "المصحِّحُ يملُّ تكرارَ wird … worden؛ فبدِّلْ صيغتَكَ مرتَينِ في المقالِ الواحدِ تقفزْ درجة.",
+    "zeilen": [
+      {
+        "code": "① -bar",
+        "de": "Der Schaden ist reparierbar.",
+        "ar": "قابلٌ للإصلاح — صفةٌ من الفعل"
+      },
+      {
+        "code": "② sein + zu",
+        "de": "Die Aufgabe ist zu lösen.",
+        "ar": "يجبُ/يمكنُ حلُّها — إلزامٌ أو إمكان"
+      },
+      {
+        "code": "③ sich lassen",
+        "de": "Das lässt sich machen.",
+        "ar": "يمكنُ عملُه — الأكثرُ محكيةً"
+      },
+      {
+        "code": "④ man",
+        "de": "Man repariert das Auto.",
+        "ar": "أبسطُ بديلٍ وأسلمُه في A2/B1"
+      }
+    ],
+    "gramIds": [
+      "b1-passiv"
+    ]
+  },
+  {
+    "id": "doppel",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "الروابطُ الثنائية ➔ قالبُ «النفيِ والإثباتِ الرياضي»",
+    "storyAr": "أربعُ معادلاتٍ تُحفَظُ كالجدولِ الرياضي؛ كلُّ واحدةٍ تُغنيكَ عن جملتَينِ ركيكتَين.",
+    "zeilen": [
+      {
+        "code": "إثبات + إثبات",
+        "de": "sowohl … als auch",
+        "ar": "هذا وذاك"
+      },
+      {
+        "code": "تصعيد",
+        "de": "nicht nur … sondern auch",
+        "ar": "ليس هذا فحسب بل ذاك أيضاً"
+      },
+      {
+        "code": "تخيير",
+        "de": "entweder … oder",
+        "ar": "إمّا هذا أو ذاك"
+      },
+      {
+        "code": "نفيٌ مزدوجٌ قاطع",
+        "de": "weder … noch",
+        "ar": "لا هذا ولا ذاك — بلا nicht إضافيّة أبداً"
+      },
+      {
+        "code": "إثباتٌ بتحفُّظ",
+        "de": "zwar … aber",
+        "ar": "صحيحٌ أنَّ… لكن"
+      }
+    ],
+    "gramIds": [
+      "b2-doppelkonnektoren"
+    ]
+  },
+  {
+    "id": "pron-order",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B1",
+    "titleAr": "ترتيبُ المفعولَين ➔ «الضميرُ يسبقُ دائماً»",
+    "storyAr": "قاعدةٌ ذاتُ شقَّين لا ثالثَ لهما: الأسماءُ الصريحةُ تمشي داتيف ثمَّ أكوزاتيف؛ فإذا صارَ أحدُهما ضميراً قفزَ الضميرُ إلى الأمام.",
+    "zeilen": [
+      {
+        "code": "اسمانِ صريحان",
+        "de": "Ich gebe dem Mann das Buch.",
+        "ar": "داتيف ← أكوزاتيف"
+      },
+      {
+        "code": "الأكوزاتيفُ ضمير",
+        "de": "Ich gebe es dem Mann.",
+        "ar": "الضميرُ es قفزَ أولاً"
+      },
+      {
+        "code": "كلاهما ضمير",
+        "de": "Ich gebe es ihm.",
+        "ar": "أكوزاتيف ← داتيف — الترتيبُ انعكسَ تماماً"
+      }
+    ],
+    "gramIds": [
+      "a2-dativ"
+    ]
+  },
+  {
+    "id": "gen-es-s",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B1",
+    "titleAr": "جينيتيفُ المذكرِ والمحايد ➔ شفرةُ «الـ es والـ s»",
+    "storyAr": "متى -es ومتى -s؟ اللسانُ هو الحكم: ما ثقُلَ نطقُهُ أخذَ es ليستريح.",
+    "zeilen": [
+      {
+        "code": "-es للقصير",
+        "de": "des Mannes · des Kindes",
+        "ar": "مقطعٌ واحدٌ فيستدعي حركةَ وصل"
+      },
+      {
+        "code": "-es لأصواتِ الصفير",
+        "de": "des Hauses · des Platzes",
+        "ar": "بعدَ s, ss, ß, z, x إلزاماً"
+      },
+      {
+        "code": "-s للطويل",
+        "de": "des Computers · des Lehrers",
+        "ar": "مقطعانِ فأكثر"
+      },
+      {
+        "code": "المؤنثُ لا يتغيَّر",
+        "de": "der Frau",
+        "ar": "الاسمُ المؤنثُ يبقى عارياً — الأداةُ وحدَها تتحوَّل"
+      }
+    ],
+    "gramIds": [
+      "b1-genitiv"
+    ]
+  },
+  {
+    "id": "trotz-3",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B1",
+    "titleAr": "التناقضُ الثلاثيّ ➔ Trotz / Obwohl / Trotzdem",
+    "storyAr": "ثلاثُ كلماتٍ بمعنًى واحدٍ وثلاثةُ سلوكياتٍ نحويةٍ مختلفة — وهذا بالضبط ما يُمتحَنُ فيه.",
+    "zeilen": [
+      {
+        "code": "Trotz + اسم",
+        "de": "Trotz des Regens gehe ich.",
+        "ar": "حرفُ جرٍّ يليهِ اسمٌ في الجينيتيف"
+      },
+      {
+        "code": "Obwohl + جملة",
+        "de": "Obwohl es regnet, gehe ich.",
+        "ar": "رابطٌ فرعيٌّ يركلُ الفعلَ إلى الآخر"
+      },
+      {
+        "code": "Trotzdem + فعل",
+        "de": "Es regnet. Trotzdem gehe ich.",
+        "ar": "ظرفُ ربطٍ فالفعلُ بعدَهُ مباشرةً في المركزِ الثاني"
+      }
+    ],
+    "gramIds": [
+      "b1-konnektoren",
+      "b1-genitiv"
+    ]
+  },
+  {
+    "id": "nominal",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "الأسماءُ المشتقة ➔ قاعدةُ «الـ das الكبرى»",
+    "storyAr": "أسرعُ طريقٍ لنبرةٍ أكاديمية: خذِ الفعلَ في المصدر، اكتبْ حرفَهُ الأولَ كبيراً، وضعْ das أمامَه — صارَ اسماً محايداً رصيناً.",
+    "zeilen": [
+      {
+        "code": "القاعدة",
+        "de": "lernen → das Lernen",
+        "ar": "التعلُّم — وكلُّ مصدرٍ محايدٌ بلا استثناء"
+      },
+      {
+        "code": "في جملة",
+        "de": "Das Rauchen ist verboten.",
+        "ar": "التدخينُ ممنوع"
+      },
+      {
+        "code": "مع حرفِ جر",
+        "de": "beim Lesen · zum Schreiben",
+        "ar": "أثناءَ القراءةِ · للكتابة"
+      },
+      {
+        "code": "مقابلُ الركاكة",
+        "de": "Das Lesen von Büchern bildet.",
+        "ar": "أرقى من: Bücher zu lesen bildet"
+      }
+    ],
+    "gramIds": [
+      "b2-infinitiv"
+    ]
+  },
+  {
+    "id": "partizip",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "صفاتُ الحدث ➔ شفرةُ «الـ d والـ t»",
+    "storyAr": "حرفانِ يفصلانِ بين ما يجري الآنَ وما انتهى: d للجاري، t للمنتهي.",
+    "zeilen": [
+      {
+        "code": "Partizip I — جارٍ",
+        "de": "das weinende Kind",
+        "ar": "الطفلُ الباكي — مصدر + d + نهايةُ الصفة"
+      },
+      {
+        "code": "Partizip II — منتهٍ",
+        "de": "das gekaufte Auto",
+        "ar": "السيارةُ المشتراة — تصريفٌ ثالثٌ + نهايةُ الصفة"
+      },
+      {
+        "code": "الفاعليةُ والمفعولية",
+        "de": "der lesende Mann ≠ das gelesene Buch",
+        "ar": "الأولُ يفعل، والثاني وقعَ عليه الفعل"
+      },
+      {
+        "code": "الجملةُ الموسَّعة",
+        "de": "das gestern gekaufte Auto",
+        "ar": "بنيةُ B2 الصارمةُ في النصوصِ المكتوبة"
+      }
+    ],
+    "gramIds": [
+      "b2-partizip"
+    ]
+  },
+  {
+    "id": "innen",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "A2",
+    "titleAr": "فخُّ جمعِ المؤنثِ الوظيفي ➔ شفرةُ «الـ nen»",
+    "storyAr": "كلُّ مؤنثٍ وظيفيٍّ ينتهي بـ -in يُضاعِفُ النونَ أولاً قبلَ الجمع؛ نسيانُ النونِ الثانيةِ من أكثرِ أخطاءِ العربِ ظهوراً في الكتابة.",
+    "zeilen": [
+      {
+        "code": "القاعدة",
+        "de": "die Lehrerin → die Lehrerinnen",
+        "ar": "المعلّمة → المعلّمات"
+      },
+      {
+        "code": "نظائر",
+        "de": "die Ärztin → die Ärztinnen · die Studentin → die Studentinnen",
+        "ar": "الطبيبات · الطالبات"
+      },
+      {
+        "code": "الصيغةُ الرسميةُ الحديثة",
+        "de": "Kolleginnen und Kollegen",
+        "ar": "افتتاحيةُ كلِّ خطابٍ رسميٍّ ألمانيّ"
+      }
+    ],
+    "gramIds": [
+      "a1-akkusativ"
+    ]
+  },
+  {
+    "id": "spr-morgenstunde",
+    "emoji": "🟪",
+    "sektion": "sprichwort",
+    "level": "A1",
+    "titleAr": "مثلٌ ألمانيٌّ أصيل — الصباحُ شاحذٌ للهمم",
+    "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
+    "zeilen": [
+      {
+        "code": "المثل",
+        "de": "Morgenstunde hat Gold im Munde",
+        "ar": "الصباحُ شاحذٌ للهمم"
+      },
+      {
+        "code": "القاعدةُ المدمَجة",
+        "de": "Morgenstunde hat Gold im Munde",
+        "ar": "الظرفُ في المركزِ الأول والفعلُ المصرَّفُ hat في المركزِ الثاني — قاعدةُ الانقلابِ مجسَّدةً في مثل."
+      }
+    ],
+    "gramIds": [
+      "a1-praesens"
+    ]
+  },
+  {
+    "id": "spr-grube",
+    "emoji": "🟪",
+    "sektion": "sprichwort",
+    "level": "B1",
+    "titleAr": "مثلٌ ألمانيٌّ أصيل — من حفرَ حفرةً لأخيهِ وقعَ فيها",
+    "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
+    "zeilen": [
+      {
+        "code": "المثل",
+        "de": "Wer anderen eine Grube gräbt, fällt selbst hinein",
+        "ar": "من حفرَ حفرةً لأخيهِ وقعَ فيها"
+      },
+      {
+        "code": "القاعدةُ المدمَجة",
+        "de": "Wer anderen eine Grube gräbt, fällt selbst hinein",
+        "ar": "أداةُ Wer شحنَتِ الفعلَ gräbt إلى آخرِ جملتِها، ثمَّ جاءَ الفعلُ الرئيسُ fällt فوراً بعدَ الفاصلة."
+      }
+    ],
+    "gramIds": [
+      "b2-relativ-generalisierend",
+      "a2-weil-dass"
+    ]
+  },
+  {
+    "id": "spr-regen",
+    "emoji": "🟪",
+    "sektion": "sprichwort",
+    "level": "A2",
+    "titleAr": "مثلٌ ألمانيٌّ أصيل — بعدَ الضيقِ الفرج",
+    "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
+    "zeilen": [
+      {
+        "code": "المثل",
+        "de": "Nach dem Regen scheint die Sonne",
+        "ar": "بعدَ الضيقِ الفرج"
+      },
+      {
+        "code": "القاعدةُ المدمَجة",
+        "de": "Nach dem Regen scheint die Sonne",
+        "ar": "حرفُ nach يجرُّ بالداتيف فتحوَّلَ der Regen إلى dem Regen."
+      }
+    ],
+    "gramIds": [
+      "a2-dativ"
+    ]
+  },
+  {
+    "id": "spr-fleiss",
+    "emoji": "🟪",
+    "sektion": "sprichwort",
+    "level": "A2",
+    "titleAr": "مثلٌ ألمانيٌّ أصيل — من طلبَ العُلا سهرَ الليالي",
+    "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
+    "zeilen": [
+      {
+        "code": "المثل",
+        "de": "Ohne Fleiß kein Preis",
+        "ar": "من طلبَ العُلا سهرَ الليالي"
+      },
+      {
+        "code": "القاعدةُ المدمَجة",
+        "de": "Ohne Fleiß kein Preis",
+        "ar": "حرفُ ohne ينصبُ دائماً — والنفيُ kein جاءَ في محلِّ النصب."
+      }
+    ],
+    "gramIds": [
+      "a1-akkusativ",
+      "a2-negation"
+    ]
+  },
+  {
+    "id": "spr-brot",
+    "emoji": "🟪",
+    "sektion": "sprichwort",
+    "level": "B1",
+    "titleAr": "مثلٌ ألمانيٌّ أصيل — الخبزُ الجافُّ نعمة",
+    "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
+    "zeilen": [
+      {
+        "code": "المثل",
+        "de": "Altes Brot ist nicht hart",
+        "ar": "الخبزُ الجافُّ نعمة"
+      },
+      {
+        "code": "القاعدةُ المدمَجة",
+        "de": "Altes Brot ist nicht hart",
+        "ar": "غابَ المديرُ (لا أداةَ تعريف) فأخذتِ الصفةُ نهايةَ المحايدِ القويةَ -es."
+      }
+    ],
+    "gramIds": [
+      "b1-adjektivendungen"
+    ]
+  },
+  {
+    "id": "spr-spaet",
+    "emoji": "🟪",
+    "sektion": "sprichwort",
+    "level": "A2",
+    "titleAr": "مثلٌ ألمانيٌّ أصيل — أن تصلَ متأخراً خيرٌ من ألّا تصلَ أبداً",
+    "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
+    "zeilen": [
+      {
+        "code": "المثل",
+        "de": "Besser spät als nie",
+        "ar": "أن تصلَ متأخراً خيرٌ من ألّا تصلَ أبداً"
+      },
+      {
+        "code": "القاعدةُ المدمَجة",
+        "de": "Besser spät als nie",
+        "ar": "صيغةُ التفضيلِ besser تليها أداةُ المقارنةِ للاختلافِ als لا wie."
+      }
+    ],
+    "gramIds": [
+      "a2-steigerung"
+    ]
+  },
+  {
+    "id": "spr-rom",
+    "emoji": "🟪",
+    "sektion": "sprichwort",
+    "level": "B1",
+    "titleAr": "مثلٌ ألمانيٌّ أصيل — روما لم تُبنَ في يوم",
+    "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
+    "zeilen": [
+      {
+        "code": "المثل",
+        "de": "Rom wurde nicht an einem Tag gebaut",
+        "ar": "روما لم تُبنَ في يوم"
+      },
+      {
+        "code": "القاعدةُ المدمَجة",
+        "de": "Rom wurde nicht an einem Tag gebaut",
+        "ar": "مجهولُ الماضي: wurde في المركزِ الثاني والتصريفُ الثالثُ gebaut في آخرِ الجملة."
+      }
+    ],
+    "gramIds": [
+      "b1-passiv"
+    ]
+  },
+  {
+    "id": "spr-reden",
+    "emoji": "🟪",
+    "sektion": "sprichwort",
+    "level": "B2",
+    "titleAr": "مثلٌ ألمانيٌّ أصيل — إذا كانَ الكلامُ من فضةٍ فالسكوتُ من ذهب",
+    "storyAr": "احفظِ المثلَ تحفظْ قاعدتَه: العربُ يحفظونَ الحكمةَ بالطبع، فلتَركبِ القاعدةُ على ظهرِها.",
+    "zeilen": [
+      {
+        "code": "المثل",
+        "de": "Reden ist Silber, Schweigen ist Gold",
+        "ar": "إذا كانَ الكلامُ من فضةٍ فالسكوتُ من ذهب"
+      },
+      {
+        "code": "القاعدةُ المدمَجة",
+        "de": "Reden ist Silber, Schweigen ist Gold",
+        "ar": "مصدرانِ تحوَّلا إلى اسمَينِ محايدَينِ مرفوعَين — قاعدةُ das الكبرى في مثلٍ شعبيّ."
+      }
+    ],
+    "gramIds": [
+      "b2-infinitiv"
+    ]
+  },
+  {
+    "id": "sein-haben-zwilling",
+    "emoji": "🟨",
+    "sektion": "verb",
+    "level": "A1",
+    "titleAr": "sein و haben ➔ «التوأمانِ الشاذّانِ يُحفَظانِ كالأذكار»",
+    "storyAr": "لا قاعدةَ تُنقِذُكَ هنا ولا شفرةَ تُغنيك: هذانِ الفعلانِ شاذّانِ خالصانِ يُحفَظانِ سرداً كالأذكارِ اليومية. لكنَّ التركةَ في المعنى: sein يربطُ ويُعرِّفُ (من أنت؟ كيف حالك؟)، و haben يملكُ ويُحِسّ — والألمانيةُ تَملِكُ ما نكونُهُ نحنُ في العربية.",
+    "zeilen": [
+      {
+        "code": "sein — السرد",
+        "de": "bin · bist · ist · sind · seid · sind",
+        "ar": "احفظ الستةَ دفعةً واحدةً بإيقاعٍ واحد"
+      },
+      {
+        "code": "haben — السرد",
+        "de": "habe · hast · hat · haben · habt · haben",
+        "ar": "لاحظ سقوطَ الـ b في hast و hat وحدَهما"
+      },
+      {
+        "code": "الفخُّ العربيُّ الأكبر",
+        "de": "Ich habe Hunger. ✓ / Ich bin hungrig.",
+        "ar": "«أنا جائع» تُقالُ بالامتلاكِ لا بالكينونة"
+      },
+      {
+        "code": "نظائرُه اليومية",
+        "de": "Zeit haben · Angst haben · Recht haben · Durst haben",
+        "ar": "يملكُ وقتاً · خوفاً · حقاً · عطشاً"
+      },
+      {
+        "code": "العمرُ كذلك",
+        "de": "Ich bin 30 Jahre alt.",
+        "ar": "وهنا بالعكس: العمرُ كينونةٌ لا امتلاك"
+      }
+    ],
+    "gramIds": [
+      "a1-sein-haben"
+    ],
+    "warnung": "أكثرُ جملةٍ يخطئُ فيها العربيُّ في أوّلِ أسبوع: ✗ Ich bin Hunger — تجمعُ الخطأينِ معاً."
+  },
+  {
+    "id": "pron-sie3",
+    "emoji": "🟨",
+    "sektion": "verb",
+    "level": "A1",
+    "titleAr": "ضمائرُ الفاعل ➔ «الـ sie الثلاثيةُ ذاتُ الأوجه»",
+    "storyAr": "كلمةُ sie في الألمانيةِ ثلاثةُ أشخاصٍ في جسدٍ واحد، والفعلُ وحدَهُ يفضحُ أيَّهم أمامَك: هي، هم، وحضرتُك الرسمية. انظرْ إلى نهايةِ الفعلِ وإلى الحرفِ الكبيرِ تعرفْ مَن يُخاطَب.",
+    "zeilen": [
+      {
+        "code": "sie + t = هي",
+        "de": "sie kommt",
+        "ar": "المفردةُ المؤنثة"
+      },
+      {
+        "code": "sie + en = هم",
+        "de": "sie kommen",
+        "ar": "الجمعُ الغائب"
+      },
+      {
+        "code": "Sie كبيرة = حضرتُك",
+        "de": "Sie kommen",
+        "ar": "الاحترامُ الرسميُّ — بحرفٍ كبيرٍ دائماً في وسطِ الجملة"
+      },
+      {
+        "code": "ميزانُ الفرق",
+        "de": "Sie sind Herr Müller? / Sie sind Studenten.",
+        "ar": "السياقُ يحسمُ ما تركَهُ الفعلُ ملتبساً"
+      }
+    ],
+    "gramIds": [
+      "a1-pronomen"
+    ],
+    "warnung": "في الرسائلِ الرسميةِ كلُّ Sie/Ihr/Ihnen بحرفٍ كبير؛ نسيانُها يُقرأُ وقاحةً لا خطأً إملائياً فقط."
+  },
+  {
+    "id": "trennbar-boomerang",
+    "emoji": "🟨",
+    "sektion": "verb",
+    "level": "A1",
+    "titleAr": "الأفعالُ المنفصلة ➔ «البومرانج: الرأسُ يطيرُ إلى آخرِ الجملة»",
+    "storyAr": "الفعلُ المنفصلُ سلاحُ بومرانج: ترمي بادئتَهُ (auf, ein, mit, an) فتطيرُ إلى آخرِ الجملةِ وتنتظرُكَ هناك. المعنى لا يكتملُ إلا بعدَ أن تسمعَ آخرَ كلمة — ولذلك يُصغي الألمانيُّ حتى النهايةِ ولا يقاطع.",
+    "zeilen": [
+      {
+        "code": "القاعدة",
+        "de": "aufstehen → Ich stehe um sieben auf.",
+        "ar": "أستيقظُ السابعةَ — auf طارت للآخر"
+      },
+      {
+        "code": "مع فعلٍ ناقص ➔ تلتئم",
+        "de": "Ich muss um sieben aufstehen.",
+        "ar": "الناقصُ يُعيدُ الفعلَ كاملاً إلى الآخر"
+      },
+      {
+        "code": "في الماضي ➔ ge في الوسط",
+        "de": "Ich bin aufgestanden.",
+        "ar": "الوصفةُ: auf + ge + standen — البادئةُ تعودُ فتلتصق"
+      },
+      {
+        "code": "غيرُ المنفصلة",
+        "de": "verstehen · bekommen · erklären",
+        "ar": "بوادئُ be/ge/er/ver/zer/ent لا تنفصلُ أبداً — ولا تأخذُ ge"
+      },
+      {
+        "code": "الميزانُ السمعي",
+        "de": "Ich rufe dich morgen an.",
+        "ar": "الجملةُ لا تُفهَمُ إلا بـ an الأخيرة"
+      }
+    ],
+    "gramIds": [
+      "a1-trennbar"
+    ]
+  },
+  {
+    "id": "zahlen-umgekehrt",
+    "emoji": "🟨",
+    "sektion": "verb",
+    "level": "A1",
+    "titleAr": "الأرقامُ والساعة ➔ «الألمانيُّ يقرأُ الرقمَ بالمقلوبِ ويعيشُ في نصفِ الساعةِ القادمة»",
+    "storyAr": "عقدتانِ تُربِكانِ العربيَّ يومياً: الرقمُ المركَّبُ يُقرأُ من اليمينِ إلى اليسارِ (الآحادُ قبلَ العشرات) — أربعةٌ وعشرون كما نقولُها نحنُ تماماً في «أربعةٌ وعشرون»! أما الساعةُ فالألمانيُّ لا ينظرُ إلى النصفِ الماضي بل يعُدُّ نصفَ الساعةِ الآتية.",
+    "zeilen": [
+      {
+        "code": "الرقمُ المقلوب",
+        "de": "24 = vierundzwanzig",
+        "ar": "أربعةٌ و عشرون — حرفياً كالعربيةِ الفصحى"
+      },
+      {
+        "code": "كلمةٌ واحدةٌ ملتصقة",
+        "de": "einundachtzig · siebenundneunzig",
+        "ar": "81 · 97 — تُكتَبُ بلا فراغٍ مهما طالت"
+      },
+      {
+        "code": "halb = النصفُ القادم",
+        "de": "halb acht = 7:30",
+        "ar": "«نصفُ الثامنة» أي نصفُ الطريقِ إليها — لا 8:30"
+      },
+      {
+        "code": "viertel",
+        "de": "Viertel nach acht · Viertel vor neun",
+        "ar": "الثامنةُ والربع · التاسعةُ إلا ربعاً"
+      },
+      {
+        "code": "الرسميُّ آمن",
+        "de": "Es ist 19:30 Uhr — neunzehn Uhr dreißig.",
+        "ar": "في المواعيدِ والقطاراتِ استعمل الصيغةَ الرقميةَ تسلمْ"
+      }
+    ],
+    "gramIds": [
+      "a1-zahlen"
+    ],
+    "warnung": "halb zehn تعني 9:30 لا 10:30 — خطأٌ يُضيِّعُ موعدَ طبيبٍ كاملاً."
+  },
+  {
+    "id": "modal-2ende",
+    "emoji": "🟨",
+    "sektion": "verb",
+    "level": "A2",
+    "titleAr": "الأفعالُ الناقصة ➔ «الناقصُ يجلسُ ثانياً ويُرسِلُ خادمَهُ إلى الآخر»",
+    "storyAr": "الفعلُ الناقصُ سيّدٌ لا يعمل: يجلسُ في المركزِ الثاني مصرَّفاً، ويُرسِلُ الفعلَ الحقيقيَّ في المصدرِ إلى آخرِ الجملةِ ليقومَ بالشغل. وفي المفردِ يفقدُ السيّدُ حركتَه (ich kann لا ich kanne) — لأنَّ السادةَ لا يتصرَّفون كالعامّة.",
+    "zeilen": [
+      {
+        "code": "البنية",
+        "de": "Ich muss heute arbeiten.",
+        "ar": "الناقصُ ثانياً والمصدرُ أخيراً"
+      },
+      {
+        "code": "المفردُ بلا نهاية",
+        "de": "ich kann · du kannst · er kann",
+        "ar": "لا -e في الأولِ ولا -t في الثالث"
+      },
+      {
+        "code": "سلَّمُ الإلزام",
+        "de": "müssen > sollen > dürfen > können > möchten",
+        "ar": "من الواجبِ الحديديِّ إلى الرغبةِ المهذَّبة"
+      },
+      {
+        "code": "الماضي الأسلم",
+        "de": "Ich musste arbeiten.",
+        "ar": "الناقصُ يُفضِّلُ Präteritum على Perfekt في الكلامِ والكتابة"
+      },
+      {
+        "code": "نفيُ müssen فخّ",
+        "de": "Du musst nicht kommen. · Du darfst nicht kommen.",
+        "ar": "الأولى: لستَ مضطراً للمجيء (رفعُ إلزام) · الثانية: ممنوعٌ أن تأتيَ (منعٌ صريح) — فرقٌ يقلبُ معنى العقد"
+      }
+    ],
+    "gramIds": [
+      "a2-modal"
+    ],
+    "warnung": "«لا يجبُ عليك» بالعربيةِ تعني المنعَ أحياناً؛ أما nicht müssen فتعني رفعَ الإلزامِ فقط — فرقٌ يُغيِّرُ معنى العقدِ كلِّه."
+  },
+  {
+    "id": "konj2-hoeflich",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B1",
+    "titleAr": "كونيونكتيف الثاني ➔ «مفتاحُ الأدبِ: würde تفتحُ كلَّ الأبواب»",
+    "storyAr": "الألمانيُّ لا يطلبُ بالأمرِ بل بالخيال: «هل كان ممكناً أن…». وأنتَ لستَ مضطراً لحفظِ صيغِ كلِّ الأفعالِ — würde + المصدرُ تكفي في تسعينَ بالمئةِ من المواقف، ولا يُستثنى منها إلا ستةٌ يجبُ حفظُ صيغتِها الأصليةِ لأنَّ würde معها تُسمَعُ ركيكة.",
+    "zeilen": [
+      {
+        "code": "القاعدةُ العامة",
+        "de": "Ich würde gern bezahlen.",
+        "ar": "أودُّ الدفعَ — würde + مصدرٌ في الآخر"
+      },
+      {
+        "code": "الستةُ الأصلية",
+        "de": "wäre · hätte · könnte · müsste · sollte · dürfte",
+        "ar": "احفظها ولا تقلْ würde sein ولا würde haben"
+      },
+      {
+        "code": "الطلبُ المهذَّب",
+        "de": "Könnten Sie mir bitte helfen?",
+        "ar": "أعلى درجاتِ الأدبِ في الخدماتِ والإدارة"
+      },
+      {
+        "code": "النصيحة",
+        "de": "An deiner Stelle würde ich warten.",
+        "ar": "لو كنتُ مكانَكَ لانتظرت"
+      },
+      {
+        "code": "الأمنيةُ المستحيلة",
+        "de": "Wenn ich Zeit hätte, würde ich reisen.",
+        "ar": "الشرطُ الخياليُّ بشقَّيه"
+      }
+    ],
+    "gramIds": [
+      "b1-konj2",
+      "b2-bedingung"
+    ],
+    "warnung": "في المطعمِ والإدارةِ استعمالُ الحاضرِ المجرَّدِ (Ich will Kaffee) يُسمَعُ فظاً — قلْ: Ich hätte gern einen Kaffee."
+  },
+  {
+    "id": "plusquam-nachdem",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B1",
+    "titleAr": "ما قبلَ الماضي ➔ «قاعدةُ التبكير: nachdem تُرجِعُ ساعةً إلى الوراء»",
+    "storyAr": "حينَ يقعُ حدثانِ في الماضي، الأسبقُ يُروى بما قبلَ الماضي (hatte/war + التصريفُ الثالث) واللاحقُ بالماضي العادي. والرابطُ nachdem علامةٌ شبهُ حتمية: ما بعدَها هو الأسبقُ زمناً.",
+    "zeilen": [
+      {
+        "code": "البنية",
+        "de": "hatte / war + Partizip II",
+        "ar": "المساعدُ في الماضي البسيطِ مع تصريفٍ ثالث: hatte gegessen · war gekommen"
+      },
+      {
+        "code": "الزوجُ الكلاسيكي",
+        "de": "Nachdem ich gegessen hatte, ging ich schlafen.",
+        "ar": "بعدَ أن كنتُ قد أكلتُ ذهبتُ للنوم"
+      },
+      {
+        "code": "اختيارُ المساعد",
+        "de": "ich hatte gearbeitet · ich war gefahren",
+        "ar": "نفسُ قاعدةِ الهروبِ من الأريكة: من يأخذُ sein في Perfekt يأخذُ war هنا، وسواهُ hatte"
+      },
+      {
+        "code": "السؤالُ المنقول",
+        "de": "Er fragte, ob ich gekommen sei.",
+        "ar": "ob للسؤالِ بلا أداة، والفعلُ في الآخر"
+      },
+      {
+        "code": "أداةُ السؤالِ تبقى",
+        "de": "Sie wollte wissen, wann der Zug fährt.",
+        "ar": "الأداةُ نفسُها تصيرُ رابطاً يشوتُ الفعل"
+      }
+    ],
+    "gramIds": [
+      "b1-plusquamperfekt"
+    ]
+  },
+  {
+    "id": "indirekte-presse",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "الكلامُ المنقول ➔ «قناعُ الصحفيِّ: أنقلُ ولا أتبنّى»",
+    "storyAr": "Konjunktiv I ليس زمناً بل موقفاً: الصحفيُّ والدبلوماسيُّ يقولان «هو زعمَ» دونَ أن يوقِّعا على صحةِ الكلام. القاعدةُ العمليةُ الوحيدةُ التي تحتاجُها: انزعِ الـ n من المصدرِ في الغائبِ المفرد، وإن تشابهتِ الصيغةُ مع العاديةِ فاهربْ إلى Konjunktiv II فوراً.",
+    "zeilen": [
+      {
+        "code": "التكوين",
+        "de": "er sagt → er sage · er hat → er habe",
+        "ar": "الغائبُ المفردُ محورُ الصيغةِ كلِّها"
+      },
+      {
+        "code": "sein شاذٌّ ومهمّ",
+        "de": "er sei · sie seien",
+        "ar": "أكثرُ صيغةٍ تراها في الصحافةِ الألمانية"
+      },
+      {
+        "code": "قاعدةُ الهروب",
+        "de": "sie haben → sie hätten",
+        "ar": "إذا التبسَتِ K-I بالعاديةِ استُبدِلَت بـ K-II وجوباً"
+      },
+      {
+        "code": "في جملة",
+        "de": "Der Minister sagte, er sei nicht informiert worden.",
+        "ar": "قالَ الوزيرُ إنَّهُ لم يُبلَّغ — بلا تبنٍّ للمحتوى"
+      },
+      {
+        "code": "الأثرُ الأسلوبي",
+        "de": "Er behauptet, er habe nichts gewusst.",
+        "ar": "«يزعمُ» — الصيغةُ وحدَها تحملُ الشكّ"
+      }
+    ],
+    "gramIds": [
+      "b2-indirekte-rede"
+    ]
+  },
+  {
+    "id": "bedingung-3",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "جملُ الشرطِ الثلاث ➔ «الواقعُ · الحلمُ · الحسرة»",
+    "storyAr": "ثلاثةُ أنواعٍ لا رابع: شرطٌ واقعيٌّ ممكنٌ بالحاضر، وحلمٌ بعيدٌ بالكونيونكتيف الثاني، وحسرةٌ على ماضٍ فاتَ لا يُستدرَك. تعرفُ نوعَها من زمنِ فعلِها لا من معناها.",
+    "zeilen": [
+      {
+        "code": "① الواقعي",
+        "de": "Wenn ich Zeit habe, komme ich.",
+        "ar": "ممكنٌ فعلاً — مضارعٌ في الشقَّين"
+      },
+      {
+        "code": "② الحلم",
+        "de": "Wenn ich Zeit hätte, käme ich / würde ich kommen.",
+        "ar": "غيرُ واقعٍ الآن لكنَّهُ متخيَّل"
+      },
+      {
+        "code": "③ الحسرة",
+        "de": "Wenn ich Zeit gehabt hätte, wäre ich gekommen.",
+        "ar": "فاتَ ولا سبيلَ إليه — hätte/wäre + ثالثٌ في الشقَّين"
+      },
+      {
+        "code": "بلا wenn",
+        "de": "Hätte ich Zeit, käme ich.",
+        "ar": "حذفُ wenn يرفعُ الفعلَ إلى الصدارة — أسلوبُ B2 الراقي"
+      },
+      {
+        "code": "sonst للنتيجة",
+        "de": "Beeil dich, sonst verpassen wir den Zug.",
+        "ar": "وإلّا — بديلٌ محكيٌّ عن الشرطِ المنفي"
+      }
+    ],
+    "gramIds": [
+      "b2-bedingung",
+      "b1-konj2"
+    ]
+  },
+  {
+    "id": "funktionsverb",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "التركيباتُ الوظيفية ➔ «سرُّ النصِّ الرسميّ: الفعلُ يُفرَّغُ والاسمُ يحكم»",
+    "storyAr": "في لغةِ الإدارةِ والتقاريرِ يُفرَّغُ الفعلُ من معناهُ ويُحمَّلُ المعنى على الاسم: لا تقلْ «قرَّر» بل «اتَّخذَ قراراً». هذه هي النبرةُ التي تقفزُ بمقالِكَ من B1 إلى B2 في عينِ المصحِّحِ مباشرة.",
+    "zeilen": [
+      {
+        "code": "القرار",
+        "de": "eine Entscheidung treffen",
+        "ar": "بدلاً من entscheiden"
+      },
+      {
+        "code": "السؤال",
+        "de": "eine Frage stellen",
+        "ar": "بدلاً من fragen"
+      },
+      {
+        "code": "الاعتبار",
+        "de": "in Betracht ziehen",
+        "ar": "يأخذُ بعينِ الاعتبار"
+      },
+      {
+        "code": "التأثير",
+        "de": "Einfluss nehmen auf + Akk",
+        "ar": "يؤثِّرُ في"
+      },
+      {
+        "code": "الاهتمام",
+        "de": "Interesse an + Dat haben",
+        "ar": "لاحظ: حرفُ الجرِّ جزءٌ من التركيبِ يُحفَظُ معه"
+      },
+      {
+        "code": "النقد",
+        "de": "Kritik üben an + Dat",
+        "ar": "بدلاً من kritisieren"
+      }
+    ],
+    "gramIds": [
+      "b2-funktionsverben"
+    ],
+    "warnung": "لا تُفرِطْ: ثلاثُ تركيباتٍ في المقالِ الواحدِ تكفي؛ أكثرُ من ذلك يُقرأُ تكلُّفاً لا رقيّاً."
+  },
+  {
+    "id": "imperativ-3",
+    "emoji": "🟩",
+    "sektion": "satzbau",
+    "level": "A2",
+    "titleAr": "صيغةُ الأمر ➔ «ثلاثةُ وجوهٍ: احذفْ · أضفْ · اقلبْ»",
+    "storyAr": "الأمرُ ثلاثُ صيغٍ فقط، وكلٌّ لها حركةٌ واحدةٌ تُحفَظ: للمفردِ الحميمِ تحذف، وللجمعِ الحميمِ تُبقي النهايةَ وتحذفُ الضمير، وللرسميِّ تقلبُ الترتيبَ وتُبقي Sie.",
+    "zeilen": [
+      {
+        "code": "du ➔ احذفْ -st والضمير",
+        "de": "du kommst → Komm!",
+        "ar": "تعال — ولا -e في المحكيّ"
+      },
+      {
+        "code": "ihr ➔ احذفِ الضميرَ فقط",
+        "de": "ihr kommt → Kommt!",
+        "ar": "تعالوا"
+      },
+      {
+        "code": "Sie ➔ اقلبْ وأبقِ الضمير",
+        "de": "Sie kommen → Kommen Sie!",
+        "ar": "تفضَّلْ حضرتُك"
+      },
+      {
+        "code": "الشاذُّ المهم",
+        "de": "sein → Sei! · Seid! · Seien Sie!",
+        "ar": "احفظه وحدَه"
+      },
+      {
+        "code": "bitte تُليِّنُ كلَّ شيء",
+        "de": "Kommen Sie bitte herein.",
+        "ar": "الأمرُ بلا bitte يُسمَعُ نهراً في الألمانية"
+      }
+    ],
+    "gramIds": [
+      "a2-imperativ"
+    ]
+  },
+  {
+    "id": "modalpartikel",
+    "emoji": "🟧",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "جسيماتُ النبرة ➔ «توابلُ الكلامِ التي لا تُترجَم»",
+    "storyAr": "doch, mal, ja, denn, halt — كلماتٌ بلا معنًى في القاموسِ وبكلِّ المعنى في الحياة. لا تُترجَمُ إلى العربيةِ بكلمةٍ بل بنبرةِ الصوت؛ ومن أتقنَها سُمِعَ ألمانياً لا متعلِّماً، وهي آخرُ ما يكتسبُهُ الأجنبيُّ عادةً.",
+    "zeilen": [
+      {
+        "code": "mal — التخفيف",
+        "de": "Komm mal her!",
+        "ar": "تعالَ قليلاً — يُحوِّلُ الأمرَ إلى دعوة"
+      },
+      {
+        "code": "doch — الإلحاحُ اللطيف",
+        "de": "Frag ihn doch!",
+        "ar": "اسألْه بالله عليك"
+      },
+      {
+        "code": "denn — فضولُ السؤال",
+        "de": "Was machst du denn hier?",
+        "ar": "ما الذي جاءَ بكَ هنا؟ — بلا denn يصيرُ استجواباً"
+      },
+      {
+        "code": "ja — المفاجأةُ أو المعلومُ",
+        "de": "Das ist ja toll!",
+        "ar": "يا سلام! · أو: كما تعلمُ طبعاً"
+      },
+      {
+        "code": "halt / eben — التسليم",
+        "de": "Das ist halt so.",
+        "ar": "هكذا هي الأمورُ ببساطة"
+      },
+      {
+        "code": "doch الجوابية",
+        "de": "— Du kommst nicht? — Doch!",
+        "ar": "بلى! — ردُّ الإثباتِ على سؤالٍ منفيّ، لا نظيرَ لها إلا «بلى» العربية"
+      }
+    ],
+    "gramIds": [
+      "b2-modalpartikel"
+    ],
+    "warnung": "doch الجوابيةُ تُقابِلُ «بلى» القرآنيةَ بدقّة — والعربيُّ يملكُ هذا الحسَّ سليقةً بينما يتعثَّرُ فيه الإنجليزيّ."
+  },
+  {
+    "id": "war-hatte-erzaehlcode",
+    "emoji": "⏪",
+    "sektion": "verb",
+    "level": "A1",
+    "titleAr": "war / hatte ➔ «شفرة البداية: كل حكاية تُفتَح بهما»",
+    "storyAr": "لا تحاول أن تشتقّهما من قاعدة — فهذان الفعلان كسرا قاعدةَ Perfekt وخرجا عنها منذ قرون. احفظهما كما تحفظ «كان يا ما كان»: كل حكاية ألمانية تُفتَح بـ Es war einmal، وكل شكوى يومية تُفتَح بـ Ich hatte keine Zeit. التركةُ أن تلاحظ أن war و hatte يفعلان بالعربية فعلَ «كان» و«كان عنده» — فالعربية نفسها تستعمل «كان» في الماضي ولا تقول «كان يكون موجوداً».",
+    "zeilen": [
+      {
+        "code": "المفتاح السردي",
+        "de": "Es war einmal …",
+        "ar": "«كان يا ما كان» — أول جملة تسمعها في كل حكاية"
+      },
+      {
+        "code": "المفتاح اليومي",
+        "de": "Ich hatte keine Zeit.",
+        "ar": "«لم يكن عندي وقت» — أكثر جملة يقولها إنسان"
+      },
+      {
+        "code": "التماثل المنقذ",
+        "de": "ich war = er war · ich hatte = er hatte",
+        "ar": "الشخص الأول والثالث سواء — نصف الجدول محفوظ مجاناً"
+      },
+      {
+        "code": "المحظور",
+        "de": "„Ich bin krank gewesen“ △ → „Ich war krank“ ✓",
+        "ar": "لا تترجم «كنت» حرفياً بـPerfekt في الحديث"
+      }
+    ],
+    "gramIds": [
+      "a1-war-hatte"
+    ],
+    "warnung": "war/hatte يُطلب منك في A1 تعرُّفاً فقط — افهمهما حين تسمعهما، ولا تُجبَر على إنتاجهما قبل A2."
+  },
+  {
+    "id": "praeteritum-buchzeit",
+    "emoji": "📖",
+    "sektion": "verb",
+    "level": "A2",
+    "titleAr": "Präteritum ➔ «شفرة الكتاب: فمٌ يتكلم Perfekt ويدٌ تكتب Präteritum»",
+    "storyAr": "اجعل في ذهنك إنساناً واحداً بجهازَين: فمُه يتكلم مع صديقه فيقول Ich bin gegangen، ويدُه تكتب رسالةً فتقول Ich ging. الجهازان صحيحان، ولكلٍّ مقامُه. والاستثناء الوحيد الذي يكسر القاعدة: sein و haben والأفعال الناقصة — فهي تكتب **وتتكلّم** بـPräteritum معاً، لأن Ich habe gearbeitet haben ثقيلة على اللسان. احفظ التركة: «الفم Perfekt واليد Präteritum — والتوأمان والخدمُ الثلاثة يكتبون ويتكلّمون سواء».",
+    "zeilen": [
+      {
+        "code": "قانون الجهازين",
+        "de": "gesprochen: Perfekt · geschrieben: Präteritum",
+        "ar": "الفم يقول bin gegangen · اليد تكتب ging"
+      },
+      {
+        "code": "الاستثناء الثابت",
+        "de": "sein · haben · müssen/können/wollen → immer Präteritum",
+        "ar": "war · hatte · musste — حتى في الحديث اليومي"
+      },
+      {
+        "code": "العلامة المنتظمة",
+        "de": "Stamm + te: machen → machte · arbeiten → arbeitete",
+        "ar": "كل ما ينتهي بـt أو d يأخذ -ete حتى يُنطق"
+      },
+      {
+        "code": "التماثل المنقذ",
+        "de": "ich machte = er machte · ich ging = er ging",
+        "ar": "الأول والثالث واحد دائماً — احفظ نصف الجدول"
+      },
+      {
+        "code": "الشاذّ الثلاثي",
+        "de": "gehen – ging – gegangen",
+        "ar": "ثلاثة أعمدة تُحفَظ كاسمٍ واحد لا كقاعدة"
+      }
+    ],
+    "gramIds": [
+      "a2-praeteritum",
+      "a1-war-hatte"
+    ],
+    "warnung": "الخلط بين الشفوي والكتابي ليس خطأً نحوياً بل خطأ أسلوب — وفي امتحان Schreiben يُحسب عليك."
+  },
+  {
+    "id": "komposita-rechts-regiert",
+    "emoji": "🧩",
+    "sektion": "genus",
+    "level": "B1",
+    "titleAr": "المركّبات ➔ «شفرة اليمين يحكم: آخرُ كلمةٍ هي الملك»",
+    "storyAr": "تخيّل قطاراً ألمانياً: القاطرةُ في آخرِ القطار لا أوّلِه، وهي التي تقرِّر إلى أين يذهب وأيَّ لونٍ يحمل. في Klimabewegung القاطرةُ هي Bewegung — فالمركّب «حركةٌ» أنثى die، وKlima مجرّد عربة تقول أيَّ حركة. كلُّ كلمةٍ طويلةٍ تخيفُك: ابحث عن القاطرة في آخرها، خذ منها الجنسَ والمعنى، ثم اقرأ العرباتِ راجعاً إلى اليسار. وأحرفُ الوصل (s·n·en·er·e) هي وصلاتُ العربات — لا معنى لها، لكنها تُسهِّل الجرّ.",
+    "zeilen": [
+      {
+        "code": "القاطرة في الآخر",
+        "de": "die Klimabewegung, der Wohnungsmarkt",
+        "ar": "الجنسُ والمعنى من آخرِ كلمة (Bewegung · Markt) — دائماً"
+      },
+      {
+        "code": "اقلب فينقلب الجنس",
+        "de": "die Haustür, aber das Türhaus",
+        "ar": "نفسُ الكلمتين (Haus + Tür)، والجنسُ يتبع الأخيرة"
+      },
+      {
+        "code": "وصلة -s- الموثوقة",
+        "de": "Wohnungsmarkt, Freiheitsstatue, Universitätsstadt",
+        "ar": "بعد -ung/-heit/-keit/-schaft/-tät/-ion يأتي s بلا استثناء تقريباً"
+      },
+      {
+        "code": "اقرأ راجعاً",
+        "de": "Arbeitslosengeldanspruch: Anspruch auf Geld für Arbeitslose",
+        "ar": "من اليمين إلى اليسار تنحلّ كلُّ عقدة"
+      },
+      {
+        "code": "الاستثناءان الشهيران",
+        "de": "der Mittwoch, der Zuckergehalt",
+        "ar": "Mittwoch مذكّر رغم die Woche (أيام الأسبوع كلها der) · Gehalt ثنائي الجنس: der = المحتوى، das = الراتب"
+      }
+    ],
+    "gramIds": [
+      "b1-wortbildung"
+    ],
+    "warnung": "المفكّك في التطبيق يستعمل معجمَ بطاقاتِك فقط — ما لم تتعلّمه لا يُخمِّنه، ويقول «لم أجد» بدل أن يكذب."
+  },
+  {
+    "id": "nominalstil-7",
+    "emoji": "🎚️",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "الاسمي والفعلي ➔ «سبعةُ مفاتيح: وَتْبَنْفَزَدْ»",
+    "storyAr": "سبعُ علاقاتٍ فقط تُنقَلُ من الجملةِ الفرعيةِ إلى حرفِ جرٍّ واسم. احفظِ المفاتيحَ السبعةَ بترتيبٍ ثابت: وَ (wegen) تْ (trotz) بَ (bei) نْ (nach) فَ (vor) زَ (zur/zum) دْ (durch) — «وَتْبَنْفَزَدْ». الأوّلانِ Genitiv، والأربعةُ التاليةُ Dativ، والأخيرُ Akkusativ.",
+    "zeilen": [
+      {
+        "code": "وَ · weil",
+        "de": "wegen des Regens",
+        "ar": "سبب — Genitiv"
+      },
+      {
+        "code": "تْ · obwohl",
+        "de": "trotz der Kälte",
+        "ar": "تناقض — Genitiv"
+      },
+      {
+        "code": "بَ · wenn/als",
+        "de": "bei Regen",
+        "ar": "شرط أو زمن — Dativ"
+      },
+      {
+        "code": "نْ · nachdem",
+        "de": "nach der Ankunft",
+        "ar": "بعد — Dativ"
+      },
+      {
+        "code": "فَ · bevor",
+        "de": "vor Beginn der Prüfung",
+        "ar": "قبل — Dativ"
+      },
+      {
+        "code": "زَ · damit",
+        "de": "zur Verbesserung der Luft",
+        "ar": "غاية — zur للمؤنث وzum للمذكر والمحايد"
+      },
+      {
+        "code": "دْ · indem",
+        "de": "durch tägliches Lesen",
+        "ar": "وسيلة — Akkusativ"
+      }
+    ],
+    "gramIds": [
+      "b2-nominalstil"
+    ],
+    "warnung": "في الكلامِ اليوميِّ يقولُ الألمانُ wegen dem؛ في الورقةِ اكتبْ wegen des — المصحِّحُ يعدُّها."
+  }
 ]

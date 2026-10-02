@@ -1,0 +1,38 @@
+{
+ "A1": {
+  "anzahl": 0,
+  "abdeckung": {
+   "mit": 644,
+   "gesamt": 653,
+   "prozent": 98
+  },
+  "woerter": []
+ },
+ "A2": {
+  "anzahl": 0,
+  "abdeckung": {
+   "mit": 647,
+   "gesamt": 652,
+   "prozent": 99
+  },
+  "woerter": []
+ },
+ "B1": {
+  "anzahl": 0,
+  "abdeckung": {
+   "mit": 1069,
+   "gesamt": 1097,
+   "prozent": 97
+  },
+  "woerter": []
+ },
+ "B2": {
+  "anzahl": 0,
+  "abdeckung": {
+   "mit": 912,
+   "gesamt": 914,
+   "prozent": 99
+  },
+  "woerter": []
+ }
+}

@@ -1,11 +1,15 @@
 "use client";
 import { useMemo, useState } from "react";
+import { levelAmTag } from "@/lib/phasen";
 import type { FehlerState } from "@/lib/types";
 import { useProgress, gradeFehlerNow, addFehlerNow } from "@/lib/store";
 import { FEHLER_KAT, normKey, platzierungsFragen, vorschlagTag } from "@/lib/fehler";
 import { grammarMap } from "@/lib/content";
 import { speakAny } from "@/lib/speech";
 import ExerciseSet from "./exercises";
+import { transferUebung, istUeberkonfident } from "@/lib/fehlerbank2";
+import { alleVokabeln } from "@/lib/content";
+import { rng } from "@/lib/plan";
 
 // ── 📓 مهمة دفتر الأخطاء: مراجعة متباعدة بأخطائك الحقيقيّة ──────────────
 export function Fehlerheft({
@@ -24,6 +28,14 @@ export function Fehlerheft({
   const list = fehlerKeys
     .map((k) => progress.fehler?.[k])
     .filter(Boolean) as FehlerState[];
+  /** 2.0: تمرينُ نقلٍ جديدٌ لكلِّ خطأٍ له بطاقةٌ مرتبطة — لا السؤالُ نفسُه */
+  const transfers = useMemo(() => {
+    const rand = rng(fehlerKeys.join("|").length * 7 + 3);
+    const m: Record<string, ReturnType<typeof transferUebung>> = {};
+    for (const f of list) m[f.key] = transferUebung(f, alleVokabeln, rand);
+    return m;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [list.map((f) => f.key + ":" + f.treffer).join("|")]);
 
   if (!list.length) {
     return (
@@ -50,6 +62,23 @@ export function Fehlerheft({
       <div style={{ display: "grid", gap: "0.8rem" }}>
         {list.map((f) => {
           const st = state[f.key];
+          const tr = transfers[f.key];
+          if (tr) {
+            return (
+              <div key={f.key} data-testid="fehler-transfer" className="card" style={{ padding: "0.8rem 1rem", borderInlineStart: istUeberkonfident(f) ? "4px solid var(--color-cola)" : "4px solid var(--color-gold)" }}>
+                <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.3rem" }}>
+                  {istUeberkonfident(f) && <strong style={{ color: "var(--color-cola)" }}>⚠️ ثقة خاطئة سابقاً · </strong>}
+                  {FEHLER_KAT[f.art] ?? f.art} · تكرّر {f.treffer} مرة — سؤالٌ جديدٌ على الكلمةِ نفسِها ({tr.art === "kollokation" ? "متلازمة" : "جملة"}): <span dir="ltr">{f.richtig}</span>
+                </div>
+                <ExerciseSet items={[tr.ex]} onPoints={(p, m) => { const ok = p > 0; setState((s) => ({ ...s, [f.key]: { choice: ok ? f.richtig : f.falsch, ok } })); gradeFehlerNow(f.key, ok); onPoints(ok ? 1 : 0, 1); }} />
+                {st && (
+                  <div data-testid="fehler-transfer-ergebnis" style={{ marginTop: "0.5rem", fontSize: "0.9rem", lineHeight: 1.8 }}>
+                    {st.ok ? "✅ نُقلت المعرفة إلى سياق جديد — يبتعد موعد هذا الخطأ." : "❌ الخطأ ما زال حيّاً في سياق جديد — يعود غداً."} <span style={{ color: "var(--color-ink2)" }}>{f.ar}</span>
+                  </div>
+                )}
+              </div>
+            );
+          }
           // ترتيب حتمي للخيارات
           const opts = f.key.charCodeAt(0) % 2 === 0 ? [f.falsch, f.richtig] : [f.richtig, f.falsch];
           return (
@@ -343,7 +372,7 @@ export function Einstufung() {
         <div style={{ marginTop: "1rem", background: "var(--color-gold-soft)", borderRadius: "0.7rem", padding: "0.9rem 1rem" }}>
           <strong>
             اقتراح المدرّس: ابدأ من اليوم <span className="rtl-num">{vorschlag}</span>
-            {vorschlag === 211 ? " (B2)" : vorschlag === 141 ? " (B1)" : vorschlag === 71 ? " (A2)" : " (A1)"}
+            {` (${levelAmTag(vorschlag)})`}
           </strong>
           <div style={{ fontSize: "0.85rem", margin: "0.3rem 0 0.6rem" }}>
             نتائجك: A1 {gruppen.A1 ?? 0}/2 · A2 {gruppen.A2 ?? 0}/3 · B1 {gruppen.B1 ?? 0}/3 · B2 {gruppen.B2 ?? 0}/4

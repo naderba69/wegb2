@@ -5,3 +5,7 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+.cache/
+__pycache__/
+public/sync/*.bundle
+content/.grammar.bak

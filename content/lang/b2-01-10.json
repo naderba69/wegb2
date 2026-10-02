@@ -1,0 +1,637 @@
+{
+  "t-b2-01": {
+    "de": "Kaum ein Schlagwort hat die bildungspolitische Debatte der letzten Jahre so geprägt wie die Digitalisierung. Tablets für jede Klasse, Lernplattformen, Erklärvideos rund um die Uhr – wer heute eine Schule betritt, begegnet einer Technik, die es vor wenigen Jahren noch nicht gab. Doch je selbstverständlicher die Geräte werden, desto lauter wird auch die Frage, was sie eigentlich bewirken.\n\nBefürworter verweisen auf die Möglichkeit, Lernwege zu individualisieren. Ein Programm, das Fehler sofort erkennt und passende Übungen vorschlägt, kann auf jede Schülerin und jeden Schüler einzeln eingehen – etwas, das eine Lehrkraft vor dreißig Kindern kaum leisten kann. Zudem lernten Jugendliche, so das Argument, den verantwortungsvollen Umgang mit Medien am besten dort, wo sie ohnehin täglich damit arbeiten.\n\nSkeptiker halten dagegen, dass Technik allein noch keinen Unterricht verbessert. Ein Tablet, auf dem lediglich ein Arbeitsblatt angezeigt wird, sei nichts anderes als ein teures Blatt Papier. Entscheidend sei nicht das Gerät, sondern das didaktische Konzept dahinter: Welche Aufgabe wird gestellt, welche Rückmeldung erhält der Lernende, und wann ist ein Gespräch im Klassenzimmer der bessere Weg? Wo diese Fragen unbeantwortet blieben, verpuffe die Wirkung der Investitionen.\n\nZwischen diesen Positionen deutet sich ein Konsens an: Digitale Werkzeuge entfalten ihren Nutzen vor allem dann, wenn Lehrkräfte sie gezielt einsetzen und begleiten. Das setzt allerdings voraus, dass die Lehrenden selbst geschult werden – ein Punkt, der in vielen Ausbauplänen bislang zu kurz kommt. Es geht also nicht um Technik um ihrer selbst willen, sondern um die Frage, wie sie das Lernen tatsächlich nachhaltig unterstützt.",
+    "ar": "يناقش النص الجدل حول رقمنة التعليم: المؤيدون يرون فيها فرصة لتفريد التعلّم، والمتشككون يؤكدون أن الجهاز بلا مفهوم تربوي مجرد ورقة باهظة. الخلاصة: الفائدة تتحقق حين يوجّه المعلّمون الأدوات ويُدرَّبون عليها.",
+    "questions": [
+      {
+        "id": "t-b2-01-l1",
+        "type": "mc",
+        "promptDe": "Welche Aussage entspricht dem Text?",
+        "options": [
+          "Die Geräte sind inzwischen so selbstverständlich, dass niemand mehr nach ihrer Wirkung fragt.",
+          "Je verbreiteter die Geräte sind, desto stärker wird ihre Wirkung hinterfragt.",
+          "Die Wirkung der Geräte wurde bereits eindeutig nachgewiesen."
+        ],
+        "answer": "Je verbreiteter die Geräte sind, desto stärker wird ihre Wirkung hinterfragt.",
+        "explanationAr": "الدليل: «je selbstverständlicher die Geräte werden, desto lauter wird auch die Frage, was sie eigentlich bewirken». الخيار الأول يقلب المعنى رغم استعماله كلمة selbstverständlich من النص."
+      },
+      {
+        "id": "t-b2-01-l2",
+        "type": "mc",
+        "promptDe": "Was meinen die Skeptiker mit dem „teuren Blatt Papier“?",
+        "options": [
+          "Tablets sind zu teuer für die meisten Schulen.",
+          "Ein Tablet ohne didaktisches Konzept bringt keinen Mehrwert.",
+          "Arbeitsblätter sollten weiterhin auf Papier verteilt werden."
+        ],
+        "answer": "Ein Tablet ohne didaktisches Konzept bringt keinen Mehrwert.",
+        "explanationAr": "الصورة مجازية: جهاز يعرض ورقة عمل فقط لا يختلف عن الورقة. الموضوع هو غياب المفهوم التعليمي لا السعر."
+      },
+      {
+        "id": "t-b2-01-l3",
+        "type": "mc",
+        "promptDe": "„verpuffe die Wirkung“ (Absatz 3) bedeutet hier:",
+        "options": [
+          "die Wirkung verstärkt sich",
+          "die Wirkung geht wirkungslos verloren",
+          "die Wirkung wird gemessen"
+        ],
+        "answer": "die Wirkung geht wirkungslos verloren",
+        "explanationAr": "verpuffen = يتبدّد بلا أثر. السياق: الاستثمارات بلا إجابات على الأسئلة التعليمية تضيع."
+      },
+      {
+        "id": "t-b2-01-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Text wird die Schulung der Lehrkräfte in den meisten Ausbauplänen ausreichend berücksichtigt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "النص يقول العكس: «ein Punkt, der in vielen Ausbauplänen bislang zu kurz kommt» = لا يُعطى حقّه."
+      },
+      {
+        "id": "t-b2-01-l5",
+        "type": "mc",
+        "promptDe": "Welche Haltung nimmt der Autor am Ende ein?",
+        "options": [
+          "Er lehnt digitale Medien im Unterricht ab.",
+          "Er vermittelt zwischen den Positionen und betont die Rolle der Lehrkräfte.",
+          "Er fordert mehr Geräte für alle Schulen."
+        ],
+        "answer": "Er vermittelt zwischen den Positionen und betont die Rolle der Lehrkräfte.",
+        "explanationAr": "الفقرة الأخيرة تبدأ بـ«Zwischen diesen Positionen deutet sich ein Konsens an» وتؤكد التوجيه والتدريب."
+      }
+    ]
+  },
+  "t-b2-02": {
+    "de": "Wer morgens eine Tageszeitung aufschlägt, hält ein Produkt in der Hand, dessen Zukunft seit Jahren ungewiss ist. Die Auflagen sinken, Anzeigenkunden wandern ins Netz ab, und viele Redaktionen mussten Stellen streichen. Gleichzeitig war das Bedürfnis nach verlässlicher Information selten so groß wie heute. Dieser Widerspruch prägt die Branche.\n\nIn einer mittelgroßen Stadt hat eine Lokalredaktion darauf mit einem ungewöhnlichen Schritt reagiert. Statt die gedruckte Ausgabe einfach ins Internet zu übertragen, fragte sie ihre Leserinnen und Leser, wofür sie überhaupt bereit wären zu zahlen. Die Antwort überraschte: nicht für schnelle Meldungen, die ohnehin überall zu finden sind, sondern für Hintergründe aus der Nachbarschaft – warum die Brücke gesperrt ist, wer im Stadtrat wie abgestimmt hat, was aus dem alten Kino wird.\n\nDie Redaktion stellte daraufhin ihre Arbeit um. Kurze Meldungen erscheinen kostenlos im Netz, ausführliche Recherchen dagegen nur für Abonnenten. Zusätzlich lädt sie einmal im Monat zu einem offenen Redaktionsabend ein, bei dem Bürger Themen vorschlagen können. Der Chefredakteur beschreibt das so: „Wir haben aufgehört, für ein anonymes Publikum zu schreiben, und angefangen, für unsere Stadt zu arbeiten.“\n\nOb sich dieses Modell auf größere Häuser übertragen lässt, ist offen. Kritiker wenden ein, dass Bezahlschranken gerade jene ausschließen, die sich ein Abonnement nicht leisten können – und damit eine informierte Öffentlichkeit gefährden. Die Redaktion hält dem entgegen, dass eine Zeitung, die niemand mehr finanziert, am Ende gar niemanden mehr informiert. Beide Argumente haben Gewicht; eine einfache Lösung ist nicht in Sicht.",
+    "ar": "صحيفة محلية تواجه تراجع المبيعات بسؤال قرّائها عمّا يدفعون مقابله: ليس الأخبار السريعة بل خلفيات الحيّ. فصلت بين الأخبار المجانية والتحقيقات المدفوعة وفتحت أمسيات تحرير للمواطنين. النقاد يخشون إقصاء غير القادرين على الدفع.",
+    "questions": [
+      {
+        "id": "t-b2-02-l1",
+        "type": "mc",
+        "promptDe": "Welcher Widerspruch prägt laut Absatz 1 die Branche?",
+        "options": [
+          "Die Zeitungen werden teurer, aber schlechter.",
+          "Die wirtschaftliche Lage verschlechtert sich, obwohl verlässliche Information stark nachgefragt wird.",
+          "Es gibt zu viele Redaktionen und zu wenige Leser."
+        ],
+        "answer": "Die wirtschaftliche Lage verschlechtert sich, obwohl verlässliche Information stark nachgefragt wird.",
+        "explanationAr": "الفقرة تجمع «Auflagen sinken … Stellen streichen» مع «Bedürfnis nach verlässlicher Information selten so groß» ثم تسمّيه Widerspruch."
+      },
+      {
+        "id": "t-b2-02-l2",
+        "type": "mc",
+        "promptDe": "Wofür wollten die Leser zahlen?",
+        "options": [
+          "für schnelle Meldungen aus aller Welt",
+          "für Hintergrundberichte aus ihrer Umgebung",
+          "für eine günstigere gedruckte Ausgabe"
+        ],
+        "answer": "für Hintergrundberichte aus ihrer Umgebung",
+        "explanationAr": "«nicht für schnelle Meldungen …, sondern für Hintergründe aus der Nachbarschaft». الخيار الأول هو المنفيّ صراحة."
+      },
+      {
+        "id": "t-b2-02-l3",
+        "type": "mc",
+        "promptDe": "Was drückt das Zitat des Chefredakteurs aus?",
+        "options": [
+          "Die Redaktion schreibt jetzt weniger Artikel.",
+          "Die Redaktion versteht sich nun als Teil der Stadt statt als Anbieter für ein unbekanntes Publikum.",
+          "Die Redaktion hat ihre Arbeit eingestellt."
+        ],
+        "answer": "Die Redaktion versteht sich nun als Teil der Stadt statt als Anbieter für ein unbekanntes Publikum.",
+        "explanationAr": "«aufgehört, für ein anonymes Publikum zu schreiben» ≠ aufgehört zu schreiben. فخّ الفعل المنفصل عن سياقه."
+      },
+      {
+        "id": "t-b2-02-l4",
+        "type": "fill",
+        "promptDe": "Kritiker ___ ein, dass Bezahlschranken Menschen mit wenig Geld ausschließen.",
+        "answer": [
+          "wenden"
+        ],
+        "explanationAr": "einwenden (يعترض) — من النص: «Kritiker wenden ein, dass …». فعل منفصل: wenden … ein."
+      },
+      {
+        "id": "t-b2-02-l5",
+        "type": "truefalse",
+        "promptDe": "Der Autor lässt offen, ob sich das Modell auf andere Zeitungen übertragen lässt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "«Ob sich dieses Modell … übertragen lässt, ist offen» و«eine einfache Lösung ist nicht in Sicht» = الكاتب متحفّظ."
+      }
+    ]
+  },
+  "t-b2-03": {
+    "de": "Über kaum ein Thema wird so leidenschaftlich gestritten wie über den Klimawandel – und das, obwohl sich die Fachwelt in den Grundfragen weitgehend einig ist. Wie kommt es, dass Zahlen, die für Wissenschaftler eindeutig sind, in der öffentlichen Debatte so unterschiedlich gelesen werden?\n\nEin Grund liegt in der Natur der Daten selbst. Klimaentwicklungen zeigen sich in Durchschnittswerten über Jahrzehnte, nicht im Wetter einer einzelnen Woche. Wer einen kalten Winter erlebt, zieht daraus leicht den falschen Schluss, die Erwärmung sei übertrieben. Umgekehrt beweist ein heißer Sommer für sich genommen ebenfalls wenig. Die Statistik verlangt einen langen Atem, den der Alltag selten hat.\n\nHinzu kommt die Art der Vermittlung. Prognosen werden in der Wissenschaft stets mit Unsicherheiten angegeben – eine Spanne, keine feste Zahl. Genau diese Vorsicht wird jedoch häufig missverstanden: Wo Forscher „wahrscheinlich“ sagen, hören manche „unsicher“ und damit „zweifelhaft“. Dabei ist die Angabe einer Spanne kein Zeichen von Unwissen, sondern von wissenschaftlicher Redlichkeit.\n\nSchließlich spielen Interessen eine Rolle. Wer von einer Änderung der Politik Nachteile erwartet, hat wenig Anlass, unbequeme Befunde anzuerkennen. Zweifel lässt sich zudem leicht säen: Es genügt, eine einzelne abweichende Stimme neben hundert übereinstimmende zu stellen, um den Eindruck einer offenen Kontroverse zu erzeugen.\n\nWas folgt daraus? Sicher nicht, dass man Zahlen blind vertrauen sollte. Wohl aber, dass man lernen muss, sie zu lesen: nach Zeiträumen zu fragen, Spannen richtig zu deuten und zwischen wissenschaftlicher Vorsicht und echtem Dissens zu unterscheiden. Diese Fähigkeit ist keine Frage der Naturwissenschaft, sondern der Allgemeinbildung.",
+    "ar": "لماذا تُقرأ أرقام المناخ بطرق متناقضة رغم إجماع المختصين؟ يعرض النص ثلاثة أسباب: طبيعة البيانات (متوسطات عقود لا طقس أسبوع)، سوء فهم هوامش عدم اليقين، والمصالح التي تزرع الشك. الخلاصة: تعلّم قراءة الأرقام جزء من الثقافة العامة.",
+    "questions": [
+      {
+        "id": "t-b2-03-l1",
+        "type": "mc",
+        "promptDe": "Warum führt ein kalter Winter laut Text zu einem Fehlschluss?",
+        "options": [
+          "Weil kalte Winter heute seltener geworden sind.",
+          "Weil Klimaentwicklungen sich nur in langfristigen Durchschnittswerten zeigen.",
+          "Weil Wissenschaftler Winterdaten nicht erfassen."
+        ],
+        "answer": "Weil Klimaentwicklungen sich nur in langfristigen Durchschnittswerten zeigen.",
+        "explanationAr": "الدليل في النص: «Klimaentwicklungen zeigen sich in Durchschnittswerten über Jahrzehnte, nicht im Wetter einer einzelnen Woche»."
+      },
+      {
+        "id": "t-b2-03-l2",
+        "type": "mc",
+        "promptDe": "Was bedeutet laut Absatz 3 die Angabe einer Spanne?",
+        "options": [
+          "Die Forscher wissen zu wenig.",
+          "Die Forscher sind ehrlich über die Grenzen ihrer Prognose.",
+          "Die Forscher wollen sich nicht festlegen, um Kritik zu vermeiden."
+        ],
+        "answer": "Die Forscher sind ehrlich über die Grenzen ihrer Prognose.",
+        "explanationAr": "«kein Zeichen von Unwissen, sondern von wissenschaftlicher Redlichkeit». Redlichkeit = نزاهة/أمانة."
+      },
+      {
+        "id": "t-b2-03-l3",
+        "type": "mc",
+        "promptDe": "Wie wird laut Text der Eindruck einer offenen Kontroverse erzeugt?",
+        "options": [
+          "indem man hundert Studien veröffentlicht",
+          "indem man eine abweichende Stimme neben viele übereinstimmende stellt",
+          "indem man Prognosen ohne Spanne angibt"
+        ],
+        "answer": "indem man eine abweichende Stimme neben viele übereinstimmende stellt",
+        "explanationAr": "«eine einzelne abweichende Stimme neben hundert übereinstimmende zu stellen». المشتِّت الأول يستعمل «hundert» من النص بمعنى آخر."
+      },
+      {
+        "id": "t-b2-03-l4",
+        "type": "truefalse",
+        "promptDe": "Der Autor fordert, wissenschaftlichen Zahlen grundsätzlich zu vertrauen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "«Sicher nicht, dass man Zahlen blind vertrauen sollte» — بل يطالب بتعلّم قراءتها."
+      },
+      {
+        "id": "t-b2-03-l5",
+        "type": "fill",
+        "promptDe": "Die Statistik verlangt einen langen ___, den der Alltag selten hat.",
+        "answer": [
+          "Atem"
+        ],
+        "explanationAr": "einen langen Atem haben/brauchen = يحتاج نفَساً طويلاً (صبراً). تعبير اصطلاحي من النص."
+      }
+    ]
+  },
+  "t-b2-04": {
+    "de": "Es kommt nicht oft vor, dass ein Debütroman gleichzeitig von der Kritik gelobt und vom Publikum verschlungen wird. „Das Haus am Kanal“ ist ein solcher Fall – und das, obwohl das Buch auf den ersten Blick wenig verspricht: keine spektakuläre Handlung, keine berühmten Schauplätze, sondern die Geschichte einer Familie, die über drei Generationen hinweg in demselben Haus lebt.\n\nDie Stärke des Romans liegt in seiner Erzählweise. Die Autorin springt zwischen den Zeitebenen, ohne den Leser je zu verlieren. Ein Gegenstand – ein zerbrochener Teller, ein Brief im Schubfach – verbindet die Kapitel miteinander und lässt die Vergangenheit in die Gegenwart hineinragen. Was zunächst wie ein Stilmittel wirkt, entpuppt sich als Kern der Geschichte: Die Figuren tragen an dem, was vor ihnen geschah, auch wenn sie es nicht kennen.\n\nSprachlich bleibt die Autorin zurückhaltend. Sie verzichtet auf große Gefühlsausbrüche und vertraut darauf, dass eine genau beobachtete Geste mehr sagt als eine Seite Erklärung. Das verlangt vom Leser Aufmerksamkeit; wer das Buch nebenbei liest, wird manches übersehen. Belohnt wird, wer sich darauf einlässt.\n\nEinwände gibt es dennoch. Der Mittelteil zieht sich, einige Nebenfiguren bleiben blass, und das Ende kommt überraschend versöhnlich für eine Geschichte, die zuvor so wenig Trost angeboten hat. Man kann darin einen Bruch sehen – oder die leise Behauptung, dass Versöhnung möglich ist, ohne dass alles aufgeklärt wird.\n\nUnterm Strich ist „Das Haus am Kanal“ kein Buch, das man in einem Zug liest, sondern eines, zu dem man zurückkehrt. Für ein Debüt ist das eine bemerkenswerte Leistung – und ein Versprechen für das, was noch kommen mag.",
+    "ar": "مراجعة لرواية أولى تحكي ثلاثة أجيال في بيت واحد. قوّتها في التنقّل بين الأزمنة عبر أشياء صغيرة، ولغتها المتحفّظة تتطلب انتباهاً. المآخذ: وسط مطوّل وشخصيات ثانوية باهتة ونهاية متصالحة على نحو مفاجئ. الحكم: عمل لافت يُعاد إليه.",
+    "questions": [
+      {
+        "id": "t-b2-04-l1",
+        "type": "mc",
+        "promptDe": "Warum ist der Erfolg des Romans laut Absatz 1 bemerkenswert?",
+        "options": [
+          "Weil er an berühmten Orten spielt.",
+          "Weil Kritik und Publikum ihn gleichermaßen schätzen, obwohl er unspektakulär wirkt.",
+          "Weil die Autorin bereits bekannt war."
+        ],
+        "answer": "Weil Kritik und Publikum ihn gleichermaßen schätzen, obwohl er unspektakulär wirkt.",
+        "explanationAr": "الدليل في النص: «gleichzeitig von der Kritik gelobt und vom Publikum verschlungen … obwohl das Buch auf den ersten Blick wenig verspricht»."
+      },
+      {
+        "id": "t-b2-04-l2",
+        "type": "mc",
+        "promptDe": "Welche Funktion haben die Gegenstände (Teller, Brief) im Roman?",
+        "options": [
+          "Sie schmücken die Beschreibungen aus.",
+          "Sie verknüpfen die Zeitebenen und zeigen, wie die Vergangenheit nachwirkt.",
+          "Sie lenken vom eigentlichen Thema ab."
+        ],
+        "answer": "Sie verknüpfen die Zeitebenen und zeigen, wie die Vergangenheit nachwirkt.",
+        "explanationAr": "الدليل في النص: «verbindet die Kapitel miteinander und lässt die Vergangenheit in die Gegenwart hineinragen»."
+      },
+      {
+        "id": "t-b2-04-l3",
+        "type": "mc",
+        "promptDe": "„Der Mittelteil zieht sich“ bedeutet:",
+        "options": [
+          "Der Mittelteil ist zu lang und langatmig.",
+          "Der Mittelteil ist besonders spannend.",
+          "Der Mittelteil wurde gekürzt."
+        ],
+        "answer": "Der Mittelteil ist zu lang und langatmig.",
+        "explanationAr": "sich ziehen (عن نصّ) = يطول ويملّ. يقف في فقرة «Einwände» أي المآخذ."
+      },
+      {
+        "id": "t-b2-04-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Rezensentin übersieht manches, wer das Buch nebenbei liest.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "«wer das Buch nebenbei liest, wird manches übersehen» و«kein Buch, das man in einem Zug liest»."
+      },
+      {
+        "id": "t-b2-04-l5",
+        "type": "mc",
+        "promptDe": "Wie bewertet die Rezensentin das versöhnliche Ende?",
+        "options": [
+          "eindeutig als Fehler",
+          "eindeutig als Höhepunkt",
+          "als Bruch oder als leise Aussage – sie lässt beides offen"
+        ],
+        "answer": "als Bruch oder als leise Aussage – sie lässt beides offen",
+        "explanationAr": "«Man kann darin einen Bruch sehen – oder die leise Behauptung, dass Versöhnung möglich ist». صيغة «oder» تترك التقدير مفتوحاً."
+      }
+    ]
+  },
+  "t-b2-05": {
+    "de": "Noch vor wenigen Jahren galt eine Regel als unumstößlich: Wer eine Stelle wollte, musste sich um sie bemühen. Heute erleben viele Branchen das Gegenteil. Betriebe werben um Bewerber, Vorstellungsgespräche gleichen mitunter Verkaufsgesprächen, und wer eine gefragte Qualifikation mitbringt, kann zwischen mehreren Angeboten wählen. Der Arbeitsmarkt hat sich in Teilen gedreht – allerdings nicht überall gleichermaßen.\n\nDenn während Handwerk, Pflege und technische Berufe händeringend Personal suchen, ist die Lage in anderen Bereichen unverändert angespannt. Wer etwa im kulturellen Sektor oder in bestimmten geisteswissenschaftlichen Feldern Fuß fassen will, konkurriert nach wie vor mit vielen Mitbewerbern um wenige Stellen. Von einem Bewerbermarkt zu sprechen, ist deshalb nur die halbe Wahrheit.\n\nVerändert hat sich auch, was Unternehmen erwarten. Die klassische lückenlose Laufbahn verliert an Bedeutung; stattdessen rücken Fähigkeiten in den Vordergrund, die sich nicht in Zeugnissen messen lassen: die Bereitschaft, sich einzuarbeiten, der Umgang mit Unsicherheit, die Fähigkeit, im Team Verantwortung zu übernehmen. Manche Firmen verzichten inzwischen ganz auf das Anschreiben und lassen Bewerber stattdessen eine kleine Aufgabe lösen.\n\nFür Bewerberinnen und Bewerber bedeutet das zweierlei. Einerseits lohnt es sich, die eigene Position realistisch einzuschätzen: In welchem Segment bewege ich mich, und wie stark ist dort die Nachfrage? Andererseits sollte niemand die Verhandlungsmacht überschätzen, die ein knapper Markt verleiht. Wer sich als unersetzlich präsentiert, wirkt selten überzeugend – und Märkte, die sich einmal gedreht haben, können sich wieder drehen.",
+    "ar": "انقلب سوق العمل في قطاعات كثيرة: الشركات تتودّد للمرشحين. لكن ذلك لا يشمل الجميع؛ الثقافة والعلوم الإنسانية ما زالت مزدحمة. تغيّرت التوقعات أيضاً نحو مهارات غير قابلة للقياس بالشهادات. النصيحة: تقدير موقعك بواقعية وعدم المبالغة في قوّتك التفاوضية.",
+    "questions": [
+      {
+        "id": "t-b2-05-l1",
+        "type": "mc",
+        "promptDe": "Warum ist der Begriff „Bewerbermarkt“ laut Text nur die halbe Wahrheit?",
+        "options": [
+          "Weil Bewerber nach wie vor nichts zu wählen haben.",
+          "Weil die Lage je nach Branche sehr unterschiedlich ist.",
+          "Weil Unternehmen keine Anschreiben mehr lesen."
+        ],
+        "answer": "Weil die Lage je nach Branche sehr unterschiedlich ist.",
+        "explanationAr": "الفقرة 2 تقابل الحِرف والرعاية (نقص عمالة) بالقطاع الثقافي (منافسة شديدة) ثم تستنتج «nur die halbe Wahrheit»."
+      },
+      {
+        "id": "t-b2-05-l2",
+        "type": "mc",
+        "promptDe": "Was tritt bei den Erwartungen der Unternehmen in den Vordergrund?",
+        "options": [
+          "eine lückenlose Laufbahn",
+          "Fähigkeiten, die sich nicht in Zeugnissen messen lassen",
+          "möglichst viele Zeugnisse"
+        ],
+        "answer": "Fähigkeiten, die sich nicht in Zeugnissen messen lassen",
+        "explanationAr": "الدليل في النص: «Die klassische lückenlose Laufbahn verliert an Bedeutung; stattdessen rücken Fähigkeiten in den Vordergrund, die sich nicht in Zeugnissen messen lassen»."
+      },
+      {
+        "id": "t-b2-05-l3",
+        "type": "mc",
+        "promptDe": "„händeringend Personal suchen“ heißt:",
+        "options": [
+          "mit großer Sorgfalt auswählen",
+          "dringend und verzweifelt suchen",
+          "nur befristet einstellen"
+        ],
+        "answer": "dringend und verzweifelt suchen",
+        "explanationAr": "händeringend = بإلحاح ويأس (حرفياً: عاصراً يديه)."
+      },
+      {
+        "id": "t-b2-05-l4",
+        "type": "truefalse",
+        "promptDe": "Der Autor rät Bewerbern, sich als unersetzlich darzustellen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "«Wer sich als unersetzlich präsentiert, wirkt selten überzeugend» — تحذير لا نصيحة."
+      },
+      {
+        "id": "t-b2-05-l5",
+        "type": "fill",
+        "promptDe": "Wer im kulturellen Sektor Fuß ___ will, konkurriert mit vielen Mitbewerbern.",
+        "answer": [
+          "fassen"
+        ],
+        "explanationAr": "Fuß fassen = يثبّت قدمه/يجد موطئ قدم. تعبير ثابت من النص."
+      }
+    ]
+  },
+  "t-b2-06": {
+    "de": "Dass Schlaf wichtig ist, bestreitet niemand. Dass er für das Lernen eine ähnlich große Rolle spielt wie das Lernen selbst, überrascht dagegen viele. Wer vor einer Prüfung die Nacht durcharbeitet, tut genau das, was dem Gedächtnis am meisten schadet – und fühlt sich dabei womöglich noch fleißig.\n\nIm Schlaf ordnet das Gehirn, was am Tag aufgenommen wurde. Neue Informationen werden mit vorhandenem Wissen verknüpft, Unwichtiges wird aussortiert, Wichtiges gefestigt. Dieser Vorgang lässt sich nicht durch Willenskraft ersetzen. Wer ihn überspringt, hat am nächsten Morgen zwar mehr gelesen, behält davon aber weniger. Das erklärt eine Beobachtung, die viele aus eigener Erfahrung kennen: Der Stoff, den man abends noch für ungeordnet hielt, erscheint nach einer Nacht plötzlich klarer.\n\nDaraus ergeben sich praktische Folgen. Lernen in mehreren kürzeren Einheiten über mehrere Tage ist wirksamer als eine lange Sitzung am Vorabend, weil dazwischen geschlafen wird. Ebenso hilfreich ist es, schwierigen Stoff kurz vor dem Schlafen noch einmal zu wiederholen – nicht stundenlang, sondern gerade so, dass er im Kopf präsent ist. Und wer tagsüber müde ist, sollte eine kurze Pause dem dritten Kaffee vorziehen.\n\nWarum verhalten sich dann so viele Lernende anders? Ein Grund ist der Schein der Produktivität: Zehn Stunden am Schreibtisch fühlen sich nach Arbeit an, acht Stunden Schlaf nicht. Ein weiterer liegt in der Schulkultur, die Durchhalten belohnt und Pausen als Schwäche auslegt. Beides ist verständlich, beides führt in die Irre. Wer besser lernen will, muss nicht unbedingt mehr tun – manchmal genügt es, rechtzeitig aufzuhören.",
+    "ar": "النوم جزء من التعلّم لا استراحة منه: الدماغ يرتّب ويثبّت في أثناء النوم. لذلك التعلّم الموزّع على أيام أنجع من سهرة قبل الامتحان، والمراجعة القصيرة قبل النوم مفيدة. سبب الممارسة الخاطئة: وهم الإنتاجية وثقافة مدرسية تكافئ المكابدة.",
+    "questions": [
+      {
+        "id": "t-b2-06-l1",
+        "type": "mc",
+        "promptDe": "Was ist die zentrale These des Textes?",
+        "options": [
+          "Schlaf ist eine Pause vom Lernen.",
+          "Schlaf ist Teil des Lernprozesses selbst.",
+          "Wer mehr schläft, muss weniger lernen."
+        ],
+        "answer": "Schlaf ist Teil des Lernprozesses selbst.",
+        "explanationAr": "«Dass er für das Lernen eine ähnlich große Rolle spielt wie das Lernen selbst» + الفقرة 2 عن ترتيب الدماغ للمعلومات. الخيار الثالث مبالغة لا يقولها النص."
+      },
+      {
+        "id": "t-b2-06-l2",
+        "type": "mc",
+        "promptDe": "Warum sind mehrere kurze Lerneinheiten wirksamer als eine lange?",
+        "options": [
+          "weil man dabei weniger Kaffee trinkt",
+          "weil zwischen den Einheiten geschlafen wird",
+          "weil man dann mehr Seiten liest"
+        ],
+        "answer": "weil zwischen den Einheiten geschlafen wird",
+        "explanationAr": "الدليل في النص: «… ist wirksamer als eine lange Sitzung am Vorabend, weil dazwischen geschlafen wird»."
+      },
+      {
+        "id": "t-b2-06-l3",
+        "type": "mc",
+        "promptDe": "Was meint der Autor mit dem „Schein der Produktivität“?",
+        "options": [
+          "Lange Arbeitszeiten fühlen sich produktiv an, auch wenn sie es nicht sind.",
+          "Produktive Menschen scheinen weniger zu schlafen.",
+          "Lernen bei Licht ist produktiver."
+        ],
+        "answer": "Lange Arbeitszeiten fühlen sich produktiv an, auch wenn sie es nicht sind.",
+        "explanationAr": "«Zehn Stunden am Schreibtisch fühlen sich nach Arbeit an, acht Stunden Schlaf nicht». Schein = مظهر خادع، لا «Licht»."
+      },
+      {
+        "id": "t-b2-06-l4",
+        "type": "truefalse",
+        "promptDe": "Der Autor empfiehlt, den Stoff vor dem Schlafen nur kurz zu wiederholen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "«nicht stundenlang, sondern gerade so, dass er im Kopf präsent ist» — مراجعة قصيرة فقط."
+      },
+      {
+        "id": "t-b2-06-l5",
+        "type": "fill",
+        "promptDe": "Beides ist verständlich, beides führt in die ___.",
+        "answer": [
+          "Irre"
+        ],
+        "explanationAr": "in die Irre führen = يضلّل. تعبير من الفقرة الأخيرة."
+      }
+    ]
+  },
+  "t-b2-07": {
+    "de": "Es vergeht kaum eine Woche, in der nicht jemand beklagt, Deutschland verschlafe die Digitalisierung. Behörden arbeiteten mit Fax, Schulen ohne WLAN, Unternehmen mit Software aus dem letzten Jahrzehnt. Die Diagnose ist so vertraut, dass sie kaum noch jemand hinterfragt. Genau das aber sollte man tun – nicht, weil sie falsch wäre, sondern weil sie zu einfach ist.\n\nRichtig ist: In vielen Bereichen geht es zu langsam. Wer eine Wohnung anmelden will und dafür einen Termin in drei Wochen bekommt, hat wenig Verständnis für Erklärungen. Falsch ist jedoch der Umkehrschluss, Tempo sei an sich ein Wert. Eine Verwaltung, die eine schlecht durchdachte Software einführt, weil sie schnell sein will, produziert danach jahrelang Folgekosten – und zwar für alle.\n\nDer Vergleich mit Ländern, die scheinbar weiter sind, hinkt zudem häufig. Wo Register zentral geführt werden, lassen sich digitale Dienste leichter aufbauen; wo, wie hierzulande, der Datenschutz aus guten historischen Gründen streng ist, dauert es länger. Das ist kein Grund zur Selbstzufriedenheit, wohl aber zur Genauigkeit: Nicht jeder Rückstand ist Versäumnis, mancher ist Preis einer bewussten Entscheidung.\n\nWas also tun? Statt pauschal mehr Tempo zu fordern, sollte man fragen, wo Geschwindigkeit tatsächlich hilft und wo Sorgfalt wichtiger ist. Eine Terminvergabe online zu stellen, ist schnell zu leisten und nützt sofort. Ein einheitliches System für sensible Gesundheitsdaten verdient dagegen die Zeit, die es braucht. Wer beides über einen Kamm schert, bekommt am Ende weder das eine noch das andere.\n\nDie Debatte bräuchte deshalb weniger Empörung und mehr Unterscheidung. Das klingt unspektakulär – und ist vermutlich genau deshalb so selten.",
+    "ar": "تعليق يعترض على الشكوى المعتادة من بطء الرقمنة في ألمانيا: التشخيص صحيح لكنه مبسّط. السرعة ليست قيمة بذاتها، والمقارنة مع دول أخرى تتجاهل حماية البيانات. المطلوب التمييز بين ما ينفع فيه التسريع وما يستحق التأني.",
+    "questions": [
+      {
+        "id": "t-b2-07-l1",
+        "type": "mc",
+        "promptDe": "Warum sollte man die Diagnose „Deutschland verschläft die Digitalisierung“ hinterfragen?",
+        "options": [
+          "weil sie falsch ist",
+          "weil sie zu einfach ist",
+          "weil sie zu selten geäußert wird"
+        ],
+        "answer": "weil sie zu einfach ist",
+        "explanationAr": "«nicht, weil sie falsch wäre, sondern weil sie zu einfach ist». الخيار الأول هو المنفيّ صراحة."
+      },
+      {
+        "id": "t-b2-07-l2",
+        "type": "mc",
+        "promptDe": "Welche Position vertritt der Autor zum Tempo?",
+        "options": [
+          "Tempo ist immer ein Wert an sich.",
+          "Tempo ist nur dort sinnvoll, wo es tatsächlich hilft.",
+          "Tempo ist in der Verwaltung nie sinnvoll."
+        ],
+        "answer": "Tempo ist nur dort sinnvoll, wo es tatsächlich hilft.",
+        "explanationAr": "«fragen, wo Geschwindigkeit tatsächlich hilft und wo Sorgfalt wichtiger ist». مثال الموعد الإلكتروني يبيّن أنه لا يرفض السرعة كلياً."
+      },
+      {
+        "id": "t-b2-07-l3",
+        "type": "mc",
+        "promptDe": "„Der Vergleich hinkt“ bedeutet:",
+        "options": [
+          "Der Vergleich ist verspätet.",
+          "Der Vergleich ist nicht stimmig.",
+          "Der Vergleich ist überzeugend."
+        ],
+        "answer": "Der Vergleich ist nicht stimmig.",
+        "explanationAr": "ein Vergleich hinkt = المقارنة عرجاء/غير سليمة. المشتِّت «verspätet» يلعب على معنى hinken الحرفي."
+      },
+      {
+        "id": "t-b2-07-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Text ist jeder digitale Rückstand ein Versäumnis.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Nicht jeder Rückstand ist Versäumnis, mancher ist Preis einer bewussten Entscheidung»."
+      },
+      {
+        "id": "t-b2-07-l5",
+        "type": "fill",
+        "promptDe": "Wer beides über einen ___ schert, bekommt am Ende weder das eine noch das andere.",
+        "answer": [
+          "Kamm"
+        ],
+        "explanationAr": "alles über einen Kamm scheren = يضع الجميع في سلّة واحدة. تعبير اصطلاحي من النص."
+      }
+    ]
+  },
+  "t-b2-08": {
+    "de": "Früher war die Sache vergleichsweise übersichtlich: Es gab eine Handvoll Zeitungen, einige Radiosender und wenige Fernsehprogramme. Wer dort etwas behauptete, musste damit rechnen, dass es geprüft wurde – von Redaktionen, von Konkurrenten, von aufmerksamen Lesern. Dieses Gefüge ist ins Wanken geraten. Heute kann jeder senden, und die Frage, was wahr ist, wird zur Frage, wem man glaubt.\n\nEs wäre allerdings zu einfach, die Schuld allein den sozialen Netzwerken zuzuschieben. Auch etablierte Medien tragen zur Verunsicherung bei, wenn sie Schlagzeilen zuspitzen, Vorläufiges als gesichert darstellen oder Korrekturen kleiner drucken als den ursprünglichen Fehler. Vertrauen entsteht nicht durch die Behauptung, seriös zu sein, sondern durch nachvollziehbares Arbeiten: Quellen nennen, Unsicherheit benennen, Irrtümer sichtbar berichtigen.\n\nAuf der anderen Seite steht ein Publikum, das mit der Fülle an Informationen oft überfordert ist. Die Versuchung ist groß, jene Quellen zu bevorzugen, die das bestätigen, was man ohnehin denkt. Wer sich nur in solchen Umgebungen bewegt, hält am Ende eine Meinung für Wissen – und die eigene Blase für die Welt.\n\nWas hilft? Sicher keine Behörde, die über Wahrheit entscheidet; das wäre ein Heilmittel, das schlimmer ist als die Krankheit. Wirksamer sind Gewohnheiten: eine Nachricht erst prüfen, dann teilen; eine zweite Quelle suchen, bevor man sich empört; misstrauisch werden, wenn etwas zu gut zu den eigenen Erwartungen passt. Das ist mühsam und unspektakulär. Aber eine Öffentlichkeit, die diese Mühe scheut, überlässt die Wahrheit denjenigen, die am lautesten sind.",
+    "ar": "تغيّر نظام الإعلام: الجميع يبثّ، والسؤال «ما الحقيقة؟» صار «من نصدّق؟». الكاتب لا يحمّل الشبكات وحدها المسؤولية؛ الإعلام التقليدي يفقد الثقة حين يبالغ ويخفي تصحيحاته. الحلّ ليس هيئة تقرّر الحقيقة بل عادات فحص فردية.",
+    "questions": [
+      {
+        "id": "t-b2-08-l1",
+        "type": "mc",
+        "promptDe": "Wie hat sich laut Absatz 1 die Frage nach der Wahrheit verändert?",
+        "options": [
+          "Sie wird heute von Behörden beantwortet.",
+          "Sie ist zur Frage geworden, wem man glaubt.",
+          "Sie spielt keine Rolle mehr."
+        ],
+        "answer": "Sie ist zur Frage geworden, wem man glaubt.",
+        "explanationAr": "الدليل في النص: «die Frage, was wahr ist, wird zur Frage, wem man glaubt»."
+      },
+      {
+        "id": "t-b2-08-l2",
+        "type": "mc",
+        "promptDe": "Wodurch entsteht laut Autor Vertrauen in Medien?",
+        "options": [
+          "durch die Behauptung, seriös zu sein",
+          "durch nachvollziehbares Arbeiten wie das Nennen von Quellen",
+          "durch größere Schlagzeilen"
+        ],
+        "answer": "durch nachvollziehbares Arbeiten wie das Nennen von Quellen",
+        "explanationAr": "«nicht durch die Behauptung, seriös zu sein, sondern durch nachvollziehbares Arbeiten: Quellen nennen …». الخيار الأول هو المنفيّ."
+      },
+      {
+        "id": "t-b2-08-l3",
+        "type": "mc",
+        "promptDe": "Was kritisiert der Autor am Verhalten des Publikums?",
+        "options": [
+          "Es liest zu viele verschiedene Quellen.",
+          "Es bevorzugt Quellen, die die eigene Meinung bestätigen.",
+          "Es vertraut den Behörden zu sehr."
+        ],
+        "answer": "Es bevorzugt Quellen, die die eigene Meinung bestätigen.",
+        "explanationAr": "الدليل في النص: «jene Quellen zu bevorzugen, die das bestätigen, was man ohnehin denkt» → «die eigene Blase für die Welt» halten."
+      },
+      {
+        "id": "t-b2-08-l4",
+        "type": "truefalse",
+        "promptDe": "Der Autor lehnt eine Behörde ab, die über Wahrheit entscheidet.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Sicher keine Behörde, die über Wahrheit entscheidet; das wäre ein Heilmittel, das schlimmer ist als die Krankheit»."
+      },
+      {
+        "id": "t-b2-08-l5",
+        "type": "mc",
+        "promptDe": "Was passiert laut Schlusssatz, wenn die Öffentlichkeit die Mühe des Prüfens scheut?",
+        "options": [
+          "Die Wahrheit setzt sich von selbst durch.",
+          "Die Lautesten bestimmen, was als wahr gilt.",
+          "Die Medien übernehmen die Prüfung."
+        ],
+        "answer": "Die Lautesten bestimmen, was als wahr gilt.",
+        "explanationAr": "الدليل في النص: «überlässt die Wahrheit denjenigen, die am lautesten sind»."
+      }
+    ]
+  },
+  "t-b2-09": {
+    "de": "Der Satz, man lerne nie aus, war lange eine freundliche Redensart. Inzwischen ist er zur Anforderung geworden. Berufe verändern sich schneller, als Ausbildungen dauern; wer heute eine Lehre abschließt, wird in zwanzig Jahren vermutlich Aufgaben erledigen, die es jetzt noch gar nicht gibt. Lebenslanges Lernen ist deshalb weniger ein Ideal als eine Notwendigkeit.\n\nDoch der Begriff wird unterschiedlich verstanden. Für Unternehmen bedeutet er meist, dass Beschäftigte sich an neue Anforderungen anpassen – möglichst in der Freizeit und auf eigene Kosten. Für Bildungsforscher ist er dagegen ein Recht: die Möglichkeit, in jeder Lebensphase Zugang zu Bildung zu haben, unabhängig davon, ob sie unmittelbar verwertbar ist. Zwischen beiden Lesarten liegt ein erheblicher Unterschied, der in Sonntagsreden gern verwischt wird.\n\nIn der Praxis scheitert Weiterbildung selten am fehlenden Willen. Häufiger fehlen Zeit, Geld oder schlicht die Information, welche Angebote es gibt. Wer in Schicht arbeitet und Kinder betreut, kann nicht abends einen Kurs besuchen, so gern er wollte. Und wer schlechte Erfahrungen mit der Schule gemacht hat, betritt einen Kursraum nicht ohne Weiteres wieder. Diese Hürden sind bekannt; sie werden nur selten ernst genommen.\n\nErfolgreiche Modelle haben eines gemeinsam: Sie holen die Menschen dort ab, wo sie sind. Lernzeit während der Arbeit statt danach, kleine Einheiten statt monatelanger Lehrgänge, Anerkennung dessen, was jemand ohnehin schon kann. Wo das gelingt, verliert Weiterbildung ihren Charakter als Pflichtübung und wird zu dem, was sie sein sollte – eine Erweiterung der eigenen Möglichkeiten.",
+    "ar": "التعلّم مدى الحياة تحوّل من قول لطيف إلى ضرورة، لكن معناه مختلف: للشركات تكيّف على حساب الموظّف، وللباحثين حقّ في التعليم بكل مرحلة. العقبات ليست الإرادة بل الوقت والمال والمعلومة. النماذج الناجحة تأخذ الناس من حيث هم.",
+    "questions": [
+      {
+        "id": "t-b2-09-l1",
+        "type": "mc",
+        "promptDe": "Wie hat sich die Bedeutung des Satzes „Man lernt nie aus“ verändert?",
+        "options": [
+          "Von einer Anforderung zu einer Redensart.",
+          "Von einer Redensart zu einer Anforderung.",
+          "Er wird heute nicht mehr verwendet."
+        ],
+        "answer": "Von einer Redensart zu einer Anforderung.",
+        "explanationAr": "«war lange eine freundliche Redensart. Inzwischen ist er zur Anforderung geworden». الخيار الأول يعكس الاتجاه."
+      },
+      {
+        "id": "t-b2-09-l2",
+        "type": "mc",
+        "promptDe": "Worin unterscheiden sich Unternehmen und Bildungsforscher im Verständnis des Begriffs?",
+        "options": [
+          "Unternehmen sehen Anpassung auf eigene Kosten, Forscher ein Recht auf Bildung in jeder Lebensphase.",
+          "Unternehmen finanzieren Weiterbildung, Forscher lehnen sie ab.",
+          "Beide verstehen ihn gleich, streiten aber über den Namen."
+        ],
+        "answer": "Unternehmen sehen Anpassung auf eigene Kosten, Forscher ein Recht auf Bildung in jeder Lebensphase.",
+        "explanationAr": "الفقرة 2 تقابل «anpassen … auf eigene Kosten» بـ«ein Recht … in jeder Lebensphase»."
+      },
+      {
+        "id": "t-b2-09-l3",
+        "type": "mc",
+        "promptDe": "Woran scheitert Weiterbildung laut Absatz 3 meistens?",
+        "options": [
+          "am fehlenden Willen",
+          "an Zeit, Geld oder fehlender Information",
+          "an zu vielen Angeboten"
+        ],
+        "answer": "an Zeit, Geld oder fehlender Information",
+        "explanationAr": "الدليل في النص: «scheitert Weiterbildung selten am fehlenden Willen. Häufiger fehlen Zeit, Geld oder schlicht die Information»."
+      },
+      {
+        "id": "t-b2-09-l4",
+        "type": "mc",
+        "promptDe": "„Sie holen die Menschen dort ab, wo sie sind“ bedeutet:",
+        "options": [
+          "Sie bieten einen Fahrdienst zum Kurs an.",
+          "Sie passen das Angebot an die tatsächliche Lebenssituation an.",
+          "Sie verlegen die Kurse in andere Städte."
+        ],
+        "answer": "Sie passen das Angebot an die tatsächliche Lebenssituation an.",
+        "explanationAr": "تعبير مجازي: يبدأ من واقع الناس. الأمثلة بعده: وقت تعلّم في أثناء العمل، وحدات صغيرة، اعتراف بالمهارات."
+      },
+      {
+        "id": "t-b2-09-l5",
+        "type": "truefalse",
+        "promptDe": "Laut Text werden die Hürden der Weiterbildung meist ernst genommen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Diese Hürden sind bekannt; sie werden nur selten ernst genommen»."
+      }
+    ]
+  },
+  "t-b2-10": {
+    "de": "Vier Tage arbeiten, drei Tage frei – bei vollem Gehalt. Was vor wenigen Jahren wie eine Utopie klang, wird inzwischen in etlichen Betrieben erprobt. Die Befürworter versprechen sich zufriedenere Beschäftigte, weniger Krankheitstage und eine höhere Produktivität in der verbleibenden Zeit. Die Gegner warnen vor steigenden Kosten und einer Überlastung derer, die weiterhin fünf Tage im Einsatz sein müssen.\n\nDie Erfahrungen der Pilotbetriebe fallen gemischt aus. Wo Arbeit vor allem am Schreibtisch stattfindet, gelingt die Umstellung häufig: Sitzungen werden kürzer, unnötige Abstimmungen entfallen, und viele berichten, dass sie konzentrierter arbeiten, weil die Zeit knapper ist. Anders sieht es dort aus, wo Menschen betreut, Maschinen bedient oder Kunden beraten werden müssen. Eine Pflegekraft kann ihre Arbeit nicht in vier Tagen verdichten, ohne dass jemand die fünfte Schicht übernimmt.\n\nHinzu kommt eine Frage der Gerechtigkeit. Wenn die Vier-Tage-Woche vor allem Büroangestellten zugutekommt, vertieft sie eine Kluft, die ohnehin besteht: zwischen denen, die über ihre Zeit verfügen können, und denen, die es nicht können. Ein Modell, das die einen entlastet und die anderen zusätzlich belastet, verdient den Namen Fortschritt nur bedingt.\n\nDas spricht nicht gegen den Versuch, wohl aber gegen die Erwartung einer einfachen Antwort. Vermutlich wird es nicht das eine Modell für alle geben, sondern verschiedene Wege zum selben Ziel: Arbeit so zu gestalten, dass sie Menschen nicht verbraucht. Die Vier-Tage-Woche ist einer dieser Wege. Ob sie der richtige ist, hängt weniger vom Kalender ab als von der Frage, wer am Ende die fünfte Schicht übernimmt.",
+    "ar": "أسبوع الأربعة أيام يُجرَّب في شركات كثيرة. النتائج متباينة: ينجح في العمل المكتبي ويتعثّر في الرعاية والخدمات. المشكلة الأعمق مسألة عدالة بين من يملك وقته ومن لا يملكه. الكاتب لا يرفض التجربة لكنه يرفض توقّع إجابة بسيطة.",
+    "questions": [
+      {
+        "id": "t-b2-10-l1",
+        "type": "mc",
+        "promptDe": "Warum gelingt die Umstellung in Büroberufen laut Text häufig?",
+        "options": [
+          "weil dort weniger gearbeitet wird",
+          "weil Abläufe gestrafft werden und die Konzentration steigt",
+          "weil Büroangestellte höhere Gehälter bekommen"
+        ],
+        "answer": "weil Abläufe gestrafft werden und die Konzentration steigt",
+        "explanationAr": "الدليل في النص: «Sitzungen werden kürzer, unnötige Abstimmungen entfallen … konzentrierter arbeiten, weil die Zeit knapper ist»."
+      },
+      {
+        "id": "t-b2-10-l2",
+        "type": "mc",
+        "promptDe": "Welche Gerechtigkeitsfrage stellt der Autor?",
+        "options": [
+          "Ob alle das gleiche Gehalt bekommen sollten.",
+          "Ob das Modell die Kluft zwischen Berufsgruppen vertieft.",
+          "Ob Bürokräfte zu viele freie Tage haben."
+        ],
+        "answer": "Ob das Modell die Kluft zwischen Berufsgruppen vertieft.",
+        "explanationAr": "الدليل في النص: «vertieft sie eine Kluft, die ohnehin besteht: zwischen denen, die über ihre Zeit verfügen können, und denen, die es nicht können»."
+      },
+      {
+        "id": "t-b2-10-l3",
+        "type": "mc",
+        "promptDe": "„verdient den Namen Fortschritt nur bedingt“ heißt:",
+        "options": [
+          "ist eindeutig ein Fortschritt",
+          "ist nur unter Einschränkungen ein Fortschritt",
+          "ist überhaupt kein Fortschritt"
+        ],
+        "answer": "ist nur unter Einschränkungen ein Fortschritt",
+        "explanationAr": "nur bedingt = بشروط/جزئياً. لا نفي كامل ولا تأكيد كامل."
+      },
+      {
+        "id": "t-b2-10-l4",
+        "type": "truefalse",
+        "promptDe": "Der Autor warnt vor der Erwartung einer einfachen Antwort.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Das spricht nicht gegen den Versuch, wohl aber gegen die Erwartung einer einfachen Antwort»."
+      },
+      {
+        "id": "t-b2-10-l5",
+        "type": "mc",
+        "promptDe": "Wovon hängt laut Schlusssatz ab, ob das Modell der richtige Weg ist?",
+        "options": [
+          "von der Anzahl der Kalendertage",
+          "davon, wer die zusätzliche Arbeit übernimmt",
+          "von der Höhe des Gehalts"
+        ],
+        "answer": "davon, wer die zusätzliche Arbeit übernimmt",
+        "explanationAr": "«hängt weniger vom Kalender ab als von der Frage, wer am Ende die fünfte Schicht übernimmt». الخيار الأول هو المنفيّ."
+      }
+    ]
+  }
+}

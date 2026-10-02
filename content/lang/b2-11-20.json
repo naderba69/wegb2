@@ -1,0 +1,640 @@
+{
+  "t-b2-11": {
+    "de": "Wer im Sommer durch eine dicht bebaute Innenstadt geht, spürt es sofort: Zwischen Asphalt, Beton und Glas staut sich die Hitze, und selbst nachts kühlt es kaum ab. Städte sind Wärmeinseln, und mit jedem heißen Sommer wächst der Druck, etwas dagegen zu tun. Eine der einfachsten Antworten liegt buchstäblich über unseren Köpfen: begrünte Dächer.\n\nDie Vorteile sind gut belegt. Eine Pflanzenschicht auf dem Dach hält Regenwasser zurück und entlastet damit die Kanalisation bei Starkregen. Sie dämmt das Gebäude im Winter und kühlt es im Sommer, weil Verdunstung Wärme entzieht. Sie bindet Staub, bietet Insekten Lebensraum und verlängert obendrein die Lebensdauer der Dachabdichtung, die sonst der Sonne ausgesetzt wäre. Kaum eine andere Maßnahme verbindet so viele Wirkungen mit so geringem Platzbedarf.\n\nWarum sind dann nicht längst alle Dächer grün? Die Antwort ist weniger technisch als organisatorisch. Ein Gründach kostet in der Anschaffung mehr als ein herkömmliches, und der Nutzen verteilt sich auf viele: auf die Stadt, die weniger für Kanäle ausgibt, auf die Nachbarn, die kühlere Luft atmen, auf künftige Bewohner. Der Eigentümer, der zahlt, sieht davon nur einen Teil. Wo Kosten und Nutzen auseinanderfallen, passiert ohne Anreiz wenig.\n\nEinige Kommunen haben daraus Konsequenzen gezogen. Sie schreiben Begrünung bei Neubauten vor, bezuschussen die Nachrüstung oder senken die Abwassergebühr für Gebäude, die Regen zurückhalten. Solche Regeln kosten Geld und stoßen bei Bauherren nicht immer auf Begeisterung. Doch die Alternative – Städte, die im Sommer unbewohnbar werden – kommt am Ende teurer. Grüne Dächer lösen das Problem nicht allein. Aber sie zeigen, dass die Lösungen oft näher liegen, als man denkt.",
+    "ar": "المدن جزر حرارية، والأسطح الخضراء إحدى أبسط الإجابات: تحبس مياه المطر، تعزل وتبرّد، وتطيل عمر السقف. العائق تنظيمي لا تقني: المالك يدفع والنفع يتوزّع على الجميع. بعض البلديات تفرض أو تدعم التخضير.",
+    "questions": [
+      {
+        "id": "t-b2-11-l1",
+        "type": "mc",
+        "promptDe": "Warum sind laut Text noch nicht alle Dächer begrünt?",
+        "options": [
+          "weil die Technik noch nicht ausgereift ist",
+          "weil Kosten und Nutzen bei verschiedenen Personen liegen",
+          "weil Gründächer die Abdichtung beschädigen"
+        ],
+        "answer": "weil Kosten und Nutzen bei verschiedenen Personen liegen",
+        "explanationAr": "«Die Antwort ist weniger technisch als organisatorisch … Wo Kosten und Nutzen auseinanderfallen, passiert ohne Anreiz wenig». الخيار الثالث يناقض النص (تطيل عمر العزل)."
+      },
+      {
+        "id": "t-b2-11-l2",
+        "type": "mc",
+        "promptDe": "Wie kühlt ein Gründach das Gebäude im Sommer?",
+        "options": [
+          "durch Verdunstung, die Wärme entzieht",
+          "durch dickere Dachziegel",
+          "durch Beschattung der Fenster"
+        ],
+        "answer": "durch Verdunstung, die Wärme entzieht",
+        "explanationAr": "الدليل في النص: «kühlt es im Sommer, weil Verdunstung Wärme entzieht»."
+      },
+      {
+        "id": "t-b2-11-l3",
+        "type": "mc",
+        "promptDe": "Welche Maßnahmen ergreifen einige Kommunen?",
+        "options": [
+          "Sie verbieten Neubauten in der Innenstadt.",
+          "Sie schreiben Begrünung vor, geben Zuschüsse oder senken Gebühren.",
+          "Sie übernehmen die gesamten Kosten für alle Dächer."
+        ],
+        "answer": "Sie schreiben Begrünung vor, geben Zuschüsse oder senken Gebühren.",
+        "explanationAr": "الدليل في النص: «schreiben Begrünung bei Neubauten vor, bezuschussen die Nachrüstung oder senken die Abwassergebühr»."
+      },
+      {
+        "id": "t-b2-11-l4",
+        "type": "truefalse",
+        "promptDe": "Der Autor behauptet, grüne Dächer lösten das Hitzeproblem der Städte vollständig.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Grüne Dächer lösen das Problem nicht allein»."
+      },
+      {
+        "id": "t-b2-11-l5",
+        "type": "fill",
+        "promptDe": "Solche Regeln ___ bei Bauherren nicht immer auf Begeisterung.",
+        "answer": [
+          "stoßen"
+        ],
+        "explanationAr": "auf etwas stoßen = يلقى/يصادف (هنا: لا تلقى حماساً). تعبير من الفقرة الأخيرة."
+      }
+    ]
+  },
+  "t-b2-12": {
+    "de": "Eine Minute, höchstens zwei – länger dauern die Videos nicht, die Millionen täglich auf ihren Telefonen ansehen. Ein Fingerwisch, und das nächste beginnt. Dass diese Form der Unterhaltung Zeit kostet, ist offensichtlich. Ob sie darüber hinaus verändert, wie wir lesen und denken, ist die eigentlich interessante Frage.\n\nLehrkräfte berichten seit einiger Zeit von einer Beobachtung, die sich schwer messen, aber kaum übersehen lässt: Vielen Jugendlichen fällt es schwerer als früher, sich über mehrere Seiten hinweg auf einen Text einzulassen. Nicht, weil sie ihn nicht verstünden, sondern weil die Aufmerksamkeit nach wenigen Absätzen abwandert. Das Gehirn, so die Vermutung, gewöhnt sich an den schnellen Wechsel und empfindet Gleichbleibendes als anstrengend.\n\nMan sollte mit solchen Diagnosen vorsichtig sein. Jede Generation hat den Medien der nächsten misstraut – dem Roman, dem Radio, dem Fernsehen. Und tatsächlich lesen junge Menschen heute nicht weniger, sondern anders: mehr Nachrichten, mehr Kurztexte, mehr in Häppchen über den Tag verteilt. Wer das pauschal als Verfall beklagt, übersieht, was daran auch geschickt ist.\n\nDennoch geht etwas verloren, wenn das lange Lesen aus dem Alltag verschwindet. Ein Argument über zwanzig Seiten zu verfolgen, eine Figur über dreihundert Seiten zu begleiten, eine Ungewissheit auszuhalten, statt sofort weiterzuwischen – das sind Fähigkeiten, die nicht nur der Literatur dienen. Sie werden überall gebraucht, wo Probleme nicht in zwei Minuten zu lösen sind.\n\nDie Antwort kann deshalb nicht lauten, Kurzvideos zu verteufeln. Eher geht es darum, das lange Lesen bewusst zu pflegen, wie man einen Muskel trainiert, den der Alltag nicht mehr von selbst beansprucht. Wer das versäumt, verlernt nicht das Lesen. Er verlernt das Verweilen.",
+    "ar": "هل تغيّر الفيديوهات القصيرة طريقة قراءتنا؟ المعلّمون يلاحظون صعوبة التركيز على نصوص طويلة. الكاتب يحذّر من التهويل — كل جيل شكّ في وسائط الجيل التالي — لكنه يرى أن القراءة الطويلة مهارة تُفقد إن لم تُدرَّب كعضلة.",
+    "questions": [
+      {
+        "id": "t-b2-12-l1",
+        "type": "mc",
+        "promptDe": "Was beobachten Lehrkräfte laut Absatz 2?",
+        "options": [
+          "Jugendliche verstehen längere Texte nicht mehr.",
+          "Die Aufmerksamkeit der Jugendlichen lässt bei längeren Texten früh nach.",
+          "Jugendliche lesen überhaupt keine Texte mehr."
+        ],
+        "answer": "Die Aufmerksamkeit der Jugendlichen lässt bei längeren Texten früh nach.",
+        "explanationAr": "«Nicht, weil sie ihn nicht verstünden, sondern weil die Aufmerksamkeit nach wenigen Absätzen abwandert». الخيار الأول هو المنفيّ."
+      },
+      {
+        "id": "t-b2-12-l2",
+        "type": "mc",
+        "promptDe": "Warum mahnt der Autor zur Vorsicht bei solchen Diagnosen?",
+        "options": [
+          "weil es keine Lehrkräfte gibt, die das bestätigen",
+          "weil jede Generation den neuen Medien misstraut hat",
+          "weil junge Menschen heute deutlich weniger lesen"
+        ],
+        "answer": "weil jede Generation den neuen Medien misstraut hat",
+        "explanationAr": "«Jede Generation hat den Medien der nächsten misstraut». الخيار الثالث يناقض «lesen junge Menschen heute nicht weniger, sondern anders»."
+      },
+      {
+        "id": "t-b2-12-l3",
+        "type": "mc",
+        "promptDe": "Welche Fähigkeit geht laut Text mit dem langen Lesen verloren?",
+        "options": [
+          "die Fähigkeit, schnell zu wischen",
+          "die Fähigkeit, Ungewissheit auszuhalten und einem Gedanken lange zu folgen",
+          "die Fähigkeit, Nachrichten zu verstehen"
+        ],
+        "answer": "die Fähigkeit, Ungewissheit auszuhalten und einem Gedanken lange zu folgen",
+        "explanationAr": "الدليل في النص: «Ein Argument über zwanzig Seiten zu verfolgen … eine Ungewissheit auszuhalten»."
+      },
+      {
+        "id": "t-b2-12-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Autor ist es keine Lösung, Kurzvideos zu verteufeln.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Die Antwort kann deshalb nicht lauten, Kurzvideos zu verteufeln»."
+      },
+      {
+        "id": "t-b2-12-l5",
+        "type": "mc",
+        "promptDe": "Was bedeutet der Schlusssatz „Er verlernt das Verweilen“?",
+        "options": [
+          "Er vergisst, wie man Buchstaben liest.",
+          "Er verliert die Fähigkeit, bei einer Sache zu bleiben.",
+          "Er hört auf, Videos zu schauen."
+        ],
+        "answer": "Er verliert die Fähigkeit, bei einer Sache zu bleiben.",
+        "explanationAr": "verweilen = يمكث/يبقى. الجملة السابقة تنفي أنه ينسى القراءة نفسها."
+      }
+    ]
+  },
+  "t-b2-13": {
+    "de": "Ob ein Studium etwas kosten darf, wird in regelmäßigen Abständen neu verhandelt. Die einen halten Gebühren für ungerecht, weil sie junge Menschen aus einkommensschwachen Familien abschrecken. Die anderen halten die Gebührenfreiheit für ungerecht, weil sie von allen Steuerzahlern finanziert wird, aber vor allem jenen nützt, die später überdurchschnittlich verdienen. Beide Seiten berufen sich auf die Gerechtigkeit – und meinen etwas anderes damit.\n\nDas erste Argument zielt auf den Zugang. Wer weiß, dass am Ende Schulden stehen, überlegt zweimal, ob er sich ein Studium leisten kann – und zwar umso eher, je weniger Rücklagen die Familie hat. Selbst wenn Stipendien und Kredite existieren, wirkt allein die Aussicht auf Kosten abschreckend. Bildung, so die Position, ist ein öffentliches Gut; sie kommt der ganzen Gesellschaft zugute und sollte deshalb von ihr getragen werden.\n\nDas zweite Argument zielt auf die Verteilung. Ein Studium erhöht in der Regel das Lebenseinkommen deutlich. Wenn die Allgemeinheit es finanziert, zahlt auch die Verkäuferin für das Studium des künftigen Arztes. Eine nachgelagerte Beteiligung – etwa ein Beitrag, der erst ab einem bestimmten Einkommen fällig wird – würde diesen Effekt abmildern, ohne den Zugang zu erschweren.\n\nBemerkenswert ist, dass die Debatte meist so geführt wird, als gäbe es nur diese zwei Wege. Dabei zeigen andere Länder, dass die Ausgestaltung entscheidend ist: Gebühren mit großzügigen Erlassregelungen können sozial ausgewogener sein als eine formale Gebührenfreiheit, bei der die Lebenshaltungskosten dennoch viele ausschließen. Wer über Gerechtigkeit im Bildungssystem spricht, sollte deshalb nicht bei der Frage stehen bleiben, ob gezahlt wird, sondern fragen, wer wann wofür zahlt.",
+    "ar": "هل يجوز أن يكلّف التعليم الجامعي مالاً؟ معسكر يرى الرسوم ظالمة لأنها تُقصي الفقراء، وآخر يرى المجانية ظالمة لأن الجميع يموّل من سيكسب أكثر لاحقاً. الكاتب يقترح تجاوز الثنائية: المهم من يدفع ومتى ومقابل ماذا.",
+    "questions": [
+      {
+        "id": "t-b2-13-l1",
+        "type": "mc",
+        "promptDe": "Was haben beide Seiten laut Absatz 1 gemeinsam?",
+        "options": [
+          "Sie fordern dasselbe Modell.",
+          "Sie berufen sich auf Gerechtigkeit, verstehen darunter aber Verschiedenes.",
+          "Sie lehnen beide Studiengebühren ab."
+        ],
+        "answer": "Sie berufen sich auf Gerechtigkeit, verstehen darunter aber Verschiedenes.",
+        "explanationAr": "الدليل في النص: «Beide Seiten berufen sich auf die Gerechtigkeit – und meinen etwas anderes damit»."
+      },
+      {
+        "id": "t-b2-13-l2",
+        "type": "mc",
+        "promptDe": "Warum wirken Gebühren laut Text abschreckend, obwohl es Stipendien gibt?",
+        "options": [
+          "weil die Stipendien zu klein sind",
+          "weil schon die Aussicht auf Kosten abschreckt, besonders bei geringen Rücklagen",
+          "weil Kredite verboten sind"
+        ],
+        "answer": "weil schon die Aussicht auf Kosten abschreckt, besonders bei geringen Rücklagen",
+        "explanationAr": "الدليل في النص: «Selbst wenn Stipendien und Kredite existieren, wirkt allein die Aussicht auf Kosten abschreckend»."
+      },
+      {
+        "id": "t-b2-13-l3",
+        "type": "mc",
+        "promptDe": "Was ist mit „nachgelagerter Beteiligung“ gemeint?",
+        "options": [
+          "ein Beitrag, der erst ab einem bestimmten späteren Einkommen gezahlt wird",
+          "eine Gebühr, die vor Studienbeginn fällig ist",
+          "eine Beteiligung der Eltern an den Kosten"
+        ],
+        "answer": "ein Beitrag, der erst ab einem bestimmten späteren Einkommen gezahlt wird",
+        "explanationAr": "«etwa ein Beitrag, der erst ab einem bestimmten Einkommen fällig wird». nachgelagert = لاحق/مؤجّل."
+      },
+      {
+        "id": "t-b2-13-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Autor ist formale Gebührenfreiheit automatisch sozial gerechter als Gebühren.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Gebühren mit großzügigen Erlassregelungen können sozial ausgewogener sein als eine formale Gebührenfreiheit …»."
+      },
+      {
+        "id": "t-b2-13-l5",
+        "type": "mc",
+        "promptDe": "Welche Frage sollte man laut Schluss stellen?",
+        "options": [
+          "ob überhaupt gezahlt wird",
+          "wer wann wofür zahlt",
+          "wie viele Studierende es gibt"
+        ],
+        "answer": "wer wann wofür zahlt",
+        "explanationAr": "الدليل في النص: «nicht bei der Frage stehen bleiben, ob gezahlt wird, sondern fragen, wer wann wofür zahlt»."
+      }
+    ]
+  },
+  "t-b2-14": {
+    "de": "Über Luftverschmutzung wird viel gesprochen, über Lärm erstaunlich wenig – dabei ist er allgegenwärtig. Verkehr, Baustellen, Flugzeuge, die Musik des Nachbarn: Kaum jemand in einer Stadt verbringt einen Tag in Ruhe. Dass das lästig ist, weiß jeder. Dass es krank machen kann, ist weniger bekannt.\n\nDer Körper unterscheidet nicht zwischen Gefahr und Geräusch. Ein lautes Signal versetzt ihn in Alarmbereitschaft: Der Puls steigt, Stresshormone werden ausgeschüttet, die Muskeln spannen sich an. Bei einem einzelnen Ereignis ist das unproblematisch. Wiederholt es sich jedoch Tag für Tag, bleibt der Organismus in einem Zustand dauerhafter Anspannung – auch dann, wenn man den Lärm gar nicht mehr bewusst wahrnimmt. Genau darin liegt die Tücke: Gewöhnung schützt das Ohr, nicht aber das Herz.\n\nBesonders folgenreich ist Lärm in der Nacht. Selbst wer nicht aufwacht, schläft flacher, wenn draußen Lastwagen vorbeifahren. Der Schlaf verliert dann einen Teil seiner erholsamen Wirkung, und die Folgen zeigen sich schleichend: Müdigkeit, Reizbarkeit, Konzentrationsschwäche. Kinder, die an lauten Straßen aufwachsen, tun sich beim Lernen nachweislich schwerer.\n\nWarum wird das Problem dann so zögerlich angegangen? Ein Grund ist, dass Lärm keine sichtbaren Spuren hinterlässt; er verschmutzt keinen Fluss und färbt keinen Himmel. Ein anderer ist, dass wirksamer Schutz teuer ist und Interessen berührt: langsamere Straßen, leisere Reifen, Nachtflugverbote. Wo diese Maßnahmen dennoch umgesetzt wurden, berichten Anwohner von einer Verbesserung, die sie vorher für unmöglich gehalten hätten. Ruhe ist keine Nebensache. Sie ist eine Frage der Gesundheit – und damit auch der Politik.",
+    "ar": "الضجيج خطر صحي مُستهان به: الجسم يتعامل مع كل صوت عالٍ كإنذار، والتعوّد يحمي الأذن لا القلب. الضجيج الليلي يُضعف النوم ويؤثر في تعلّم الأطفال. الإهمال سببه أن الضجيج لا يترك أثراً مرئياً وأن الحماية مكلفة.",
+    "questions": [
+      {
+        "id": "t-b2-14-l1",
+        "type": "mc",
+        "promptDe": "Was ist mit „Gewöhnung schützt das Ohr, nicht aber das Herz“ gemeint?",
+        "options": [
+          "Man hört mit der Zeit schlechter.",
+          "Auch unbewusst wahrgenommener Lärm belastet den Körper weiter.",
+          "Lärm schadet nur dem Herzen, nicht dem Gehör."
+        ],
+        "answer": "Auch unbewusst wahrgenommener Lärm belastet den Körper weiter.",
+        "explanationAr": "الجملة السابقة: «auch dann, wenn man den Lärm gar nicht mehr bewusst wahrnimmt» يبقى الجسم في توتر."
+      },
+      {
+        "id": "t-b2-14-l2",
+        "type": "mc",
+        "promptDe": "Welche Folge hat nächtlicher Lärm laut Text auch ohne Aufwachen?",
+        "options": [
+          "Der Schlaf wird flacher und weniger erholsam.",
+          "Man schläft länger, um es auszugleichen.",
+          "Es gibt keine Folgen, wenn man nicht aufwacht."
+        ],
+        "answer": "Der Schlaf wird flacher und weniger erholsam.",
+        "explanationAr": "الدليل في النص: «Selbst wer nicht aufwacht, schläft flacher … Der Schlaf verliert dann einen Teil seiner erholsamen Wirkung»."
+      },
+      {
+        "id": "t-b2-14-l3",
+        "type": "mc",
+        "promptDe": "Warum wird das Problem laut Absatz 4 zögerlich angegangen?",
+        "options": [
+          "weil Lärm unsichtbar ist und Schutz teuer ist",
+          "weil niemand unter Lärm leidet",
+          "weil es keine wirksamen Maßnahmen gibt"
+        ],
+        "answer": "weil Lärm unsichtbar ist und Schutz teuer ist",
+        "explanationAr": "«Lärm keine sichtbaren Spuren hinterlässt» + «wirksamer Schutz teuer ist und Interessen berührt». الخيار الثالث يناقض «berichten Anwohner von einer Verbesserung»."
+      },
+      {
+        "id": "t-b2-14-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Text ist Ruhe eine Frage der Gesundheit.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Ruhe ist keine Nebensache. Sie ist eine Frage der Gesundheit»."
+      },
+      {
+        "id": "t-b2-14-l5",
+        "type": "fill",
+        "promptDe": "Genau darin liegt die ___: Gewöhnung schützt das Ohr, nicht aber das Herz.",
+        "answer": [
+          "Tücke"
+        ],
+        "explanationAr": "die Tücke = المكر/الخطر الخفي. «darin liegt die Tücke» = هنا يكمن الفخّ."
+      }
+    ]
+  },
+  "t-b2-15": {
+    "de": "In manchen Unternehmen hängt ein Plakat an der Wand: „Fehler sind erlaubt.“ Wer dort arbeitet, weiß oft aus Erfahrung, dass das Plakat nicht die ganze Wahrheit sagt. Fehler sind erlaubt – solange sie niemand bemerkt. Sobald einer sichtbar wird, beginnt die Suche nach dem Schuldigen. Zwischen dem, was eine Organisation über sich behauptet, und dem, was sie tatsächlich lebt, liegt häufig ein weiter Weg.\n\nDabei ist der Nutzen einer echten Fehlerkultur gut nachvollziehbar. Wo Mitarbeitende Fehler melden, ohne Nachteile zu befürchten, werden Probleme früh erkannt – bevor aus einem kleinen Versehen ein großer Schaden wird. Die Luftfahrt hat das früh begriffen: Dort werden Beinahe-Unfälle systematisch ausgewertet, und wer einen meldet, muss keine Strafe fürchten. Das Ergebnis ist eine Sicherheit, von der andere Branchen nur träumen können.\n\nWarum tun sich viele Organisationen so schwer damit? Ein Grund liegt in der Verwechslung von Fehler und Versagen. Ein Fehler ist ein Ereignis, aus dem man lernen kann; Versagen ist ein Urteil über eine Person. Solange beides gleichgesetzt wird, hat niemand einen Anreiz, offen zu sprechen. Ein zweiter Grund ist die Eile: Wer einen Schuldigen gefunden hat, kann den Fall abschließen. Die Frage, welche Umstände den Fehler begünstigt haben, ist unbequemer und dauert länger – führt aber allein zu Verbesserungen.\n\nEine Fehlerkultur entsteht deshalb nicht durch Plakate, sondern durch Vorbilder. Wenn eine Führungskraft eigene Irrtümer offen benennt, verändert das mehr als jedes Leitbild. Und sie entsteht durch Routinen: regelmäßige Rückblicke, in denen nicht gefragt wird, wer schuld war, sondern was man beim nächsten Mal anders machen will. Das klingt einfach. Es ist es nicht – sonst hinge das Plakat nicht an so vielen Wänden.",
+    "ar": "ثقافة الخطأ الحقيقية أبعد من ملصق على الجدار. فائدتها: اكتشاف المشكلات مبكراً كما في الطيران. العقبات: الخلط بين الخطأ (حدث نتعلّم منه) والفشل (حكم على شخص)، والاستعجال في البحث عن مذنب. تنشأ بالقدوة والروتين لا بالشعارات.",
+    "questions": [
+      {
+        "id": "t-b2-15-l1",
+        "type": "mc",
+        "promptDe": "Was kritisiert der Autor am Plakat „Fehler sind erlaubt“?",
+        "options": [
+          "dass es zu klein gedruckt ist",
+          "dass Anspruch und gelebte Praxis auseinanderklaffen",
+          "dass Fehler grundsätzlich nicht erlaubt sein sollten"
+        ],
+        "answer": "dass Anspruch und gelebte Praxis auseinanderklaffen",
+        "explanationAr": "الدليل في النص: «Zwischen dem, was eine Organisation über sich behauptet, und dem, was sie tatsächlich lebt, liegt häufig ein weiter Weg»."
+      },
+      {
+        "id": "t-b2-15-l2",
+        "type": "mc",
+        "promptDe": "Was unterscheidet laut Text Fehler und Versagen?",
+        "options": [
+          "Fehler sind klein, Versagen ist groß.",
+          "Ein Fehler ist ein Ereignis zum Lernen, Versagen ein Urteil über eine Person.",
+          "Fehler passieren Mitarbeitern, Versagen Führungskräften."
+        ],
+        "answer": "Ein Fehler ist ein Ereignis zum Lernen, Versagen ein Urteil über eine Person.",
+        "explanationAr": "الدليل في النص: «Ein Fehler ist ein Ereignis, aus dem man lernen kann; Versagen ist ein Urteil über eine Person»."
+      },
+      {
+        "id": "t-b2-15-l3",
+        "type": "mc",
+        "promptDe": "Warum wird das Beispiel der Luftfahrt angeführt?",
+        "options": [
+          "weil dort besonders viele Unfälle passieren",
+          "weil dort Beinahe-Unfälle straffrei gemeldet und ausgewertet werden",
+          "weil Piloten keine Fehler machen"
+        ],
+        "answer": "weil dort Beinahe-Unfälle straffrei gemeldet und ausgewertet werden",
+        "explanationAr": "الدليل في النص: «Beinahe-Unfälle systematisch ausgewertet, und wer einen meldet, muss keine Strafe fürchten»."
+      },
+      {
+        "id": "t-b2-15-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Autor führt die schnelle Suche nach einem Schuldigen zu Verbesserungen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "«Die Frage, welche Umstände den Fehler begünstigt haben … führt aber allein zu Verbesserungen» — لا البحث عن مذنب."
+      },
+      {
+        "id": "t-b2-15-l5",
+        "type": "mc",
+        "promptDe": "Wie ist der Schlusssatz „sonst hinge das Plakat nicht an so vielen Wänden“ zu verstehen?",
+        "options": [
+          "Viele Firmen haben eine gute Fehlerkultur.",
+          "Die Verbreitung des Plakats zeigt, dass echte Fehlerkultur selten ist.",
+          "Plakate sind ein wirksames Mittel."
+        ],
+        "answer": "Die Verbreitung des Plakats zeigt, dass echte Fehlerkultur selten ist.",
+        "explanationAr": "منطق ساخر: لو كان الأمر سهلاً لما احتاجت شركات كثيرة إلى الملصق. Konjunktiv II «hinge» يدلّ على الافتراض."
+      }
+    ]
+  },
+  "t-b2-16": {
+    "de": "Ein einziges Ticket für Busse, Straßenbahnen und Regionalzüge im ganzen Land, zu einem festen monatlichen Preis – die Idee war so einfach, dass viele sich fragten, warum es sie nicht längst gab. Als sie eingeführt wurde, waren die Erwartungen entsprechend hoch: weniger Autos auf den Straßen, volle Züge, ein Durchbruch für den öffentlichen Verkehr. Einige Zeit später lohnt sich ein nüchterner Blick.\n\nUnbestritten ist der Erfolg bei der Vereinfachung. Wer früher in eine andere Stadt fuhr, musste sich durch fremde Tarifzonen und Automaten kämpfen. Heute genügt ein Abonnement. Für Pendler, die ohnehin täglich fahren, bedeutet das eine spürbare Entlastung – finanziell wie organisatorisch. Auch Menschen, die den Nahverkehr zuvor selten nutzten, probierten ihn aus.\n\nZurückhaltender fällt die Bilanz beim eigentlichen Ziel aus. Ob nennenswert viele Autofahrer dauerhaft umgestiegen sind, ist umstritten. Ein günstiges Ticket nützt wenig, wo kein Bus fährt – und das ist auf dem Land vielerorts der Fall. Dort bleibt das Auto nicht aus Bequemlichkeit die erste Wahl, sondern aus Mangel an Alternativen. Ein Angebot kann nur nutzen, wer es erreicht.\n\nHinzu kommt die Frage der Finanzierung. Die Einnahmeausfälle der Verkehrsbetriebe müssen ausgeglichen werden, und Bund und Länder streiten regelmäßig darüber, wer wie viel trägt. Jede dieser Debatten verunsichert die Nutzer, die nicht wissen, ob das Ticket im nächsten Jahr noch existiert oder was es dann kostet.\n\nDas Ticket ist also weder der Durchbruch, den manche versprachen, noch der Fehlschlag, den andere befürchteten. Es hat gezeigt, dass Einfachheit selbst ein Wert ist. Ob daraus mehr wird, hängt nicht am Preis, sondern an dem, was man dafür bekommt: an Zügen, die fahren, und Bussen, die kommen.",
+    "ar": "تذكرة موحّدة للنقل العام بسعر شهري ثابت: نجاح واضح في التبسيط وتخفيف عبء المتنقلين. لكن الهدف الأصلي — تحويل السائقين من السيارة — متنازَع فيه لأن التذكرة الرخيصة لا تنفع حيث لا حافلة. الخلاصة: لا اختراق ولا فشل؛ القيمة في العرض لا في السعر.",
+    "questions": [
+      {
+        "id": "t-b2-16-l1",
+        "type": "mc",
+        "promptDe": "Welcher Erfolg des Tickets ist laut Text unbestritten?",
+        "options": [
+          "die deutliche Verringerung des Autoverkehrs",
+          "die Vereinfachung des Tarifsystems",
+          "die sichere Finanzierung"
+        ],
+        "answer": "die Vereinfachung des Tarifsystems",
+        "explanationAr": "«Unbestritten ist der Erfolg bei der Vereinfachung». الخياران الآخران يصفهما النص بـ«umstritten» و«streiten»."
+      },
+      {
+        "id": "t-b2-16-l2",
+        "type": "mc",
+        "promptDe": "Warum bleibt das Auto auf dem Land oft die erste Wahl?",
+        "options": [
+          "aus Bequemlichkeit",
+          "weil es an Alternativen fehlt",
+          "weil das Ticket dort teurer ist"
+        ],
+        "answer": "weil es an Alternativen fehlt",
+        "explanationAr": "«nicht aus Bequemlichkeit die erste Wahl, sondern aus Mangel an Alternativen». الخيار الأول هو المنفيّ صراحة."
+      },
+      {
+        "id": "t-b2-16-l3",
+        "type": "mc",
+        "promptDe": "Was verunsichert die Nutzer laut Absatz 4?",
+        "options": [
+          "die vielen Tarifzonen",
+          "die wiederkehrenden Streitigkeiten um die Finanzierung",
+          "die überfüllten Züge"
+        ],
+        "answer": "die wiederkehrenden Streitigkeiten um die Finanzierung",
+        "explanationAr": "الدليل في النص: «Jede dieser Debatten verunsichert die Nutzer, die nicht wissen, ob das Ticket im nächsten Jahr noch existiert»."
+      },
+      {
+        "id": "t-b2-16-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Autor ist das Ticket weder Durchbruch noch Fehlschlag.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «weder der Durchbruch … noch der Fehlschlag»."
+      },
+      {
+        "id": "t-b2-16-l5",
+        "type": "mc",
+        "promptDe": "Wovon hängt laut Schluss die Zukunft des Tickets ab?",
+        "options": [
+          "vom Preis",
+          "von der Qualität des Angebots",
+          "von der Zahl der Automaten"
+        ],
+        "answer": "von der Qualität des Angebots",
+        "explanationAr": "الدليل في النص: «hängt nicht am Preis, sondern an dem, was man dafür bekommt: an Zügen, die fahren, und Bussen, die kommen»."
+      }
+    ]
+  },
+  "t-b2-17": {
+    "de": "Wer durch eine Großstadt geht, wird angesprochen, ohne gefragt worden zu sein: von Plakatwänden, Leuchtflächen, Bildschirmen an Haltestellen, Aufschriften auf Bussen. Werbung im öffentlichen Raum ist so allgegenwärtig, dass sie kaum noch auffällt – und genau darin liegt ihre Wirkung. Einige Städte haben begonnen, diese Selbstverständlichkeit infrage zu stellen.\n\nDie Kritiker argumentieren mit dem Charakter des öffentlichen Raums. Straßen und Plätze gehörten allen; wer dort Botschaften verbreiten dürfe, sollte nicht allein davon abhängen, wer am meisten zahlt. Anders als beim Fernsehen oder im Internet könne man sich der Werbung auf dem Weg zur Arbeit nicht entziehen. Hinzu kommen ästhetische Einwände: Historische Fassaden verschwinden hinter Leuchtreklame, und die digitalen Flächen der jüngsten Generation lenken mit bewegten Bildern Autofahrer wie Fußgänger ab.\n\nDie Befürworter halten dagegen, dass Werbung Einnahmen bringt, auf die klamme Kommunen angewiesen sind. Wartehäuschen, öffentliche Toiletten und Stadtpläne werden vielerorts von Werbefirmen finanziert, die dafür Flächen erhalten. Fielen diese Verträge weg, müssten die Steuerzahler einspringen oder auf die Ausstattung verzichten. Außerdem sei Werbung Teil des städtischen Lebens; eine Innenstadt ohne sie wirke steril.\n\nInteressant ist, was in Städten geschah, die die Außenwerbung tatsächlich stark eingeschränkt haben. Der befürchtete Einbruch der Einnahmen blieb überschaubar, weil die Verträge neu verhandelt wurden. Viele Bewohner berichteten, dass ihnen die Gebäude ihrer Stadt zum ersten Mal wirklich auffielen. Andere vermissten die Farbe und Lebendigkeit. Der öffentliche Raum, so zeigt sich, ist kein neutraler Hintergrund. Wie er aussieht, ist eine Entscheidung – und wer sie trifft, sollte offen verhandelt werden.",
+    "ar": "الإعلانات في الفضاء العام: النقاد يرون أن الشوارع ملك للجميع ولا يمكن تجنّب الإعلان فيها كما في التلفاز، ويعترضون جمالياً. المؤيدون يذكّرون بأن الإعلان يموّل مرافق البلديات. تجارب المدن التي قيّدتها: خسائر محدودة، وانطباعات متباينة. الفضاء العام قرار لا خلفية محايدة.",
+    "questions": [
+      {
+        "id": "t-b2-17-l1",
+        "type": "mc",
+        "promptDe": "Worin unterscheidet sich Außenwerbung laut Kritikern von Werbung im Fernsehen?",
+        "options": [
+          "Sie ist teurer.",
+          "Man kann ihr im Alltag nicht ausweichen.",
+          "Sie ist weniger wirksam."
+        ],
+        "answer": "Man kann ihr im Alltag nicht ausweichen.",
+        "explanationAr": "الدليل في النص: «Anders als beim Fernsehen oder im Internet könne man sich der Werbung auf dem Weg zur Arbeit nicht entziehen»."
+      },
+      {
+        "id": "t-b2-17-l2",
+        "type": "mc",
+        "promptDe": "Welches Argument bringen die Befürworter?",
+        "options": [
+          "Werbung finanziert öffentliche Einrichtungen wie Wartehäuschen.",
+          "Werbung macht die Straßen sicherer.",
+          "Werbung schützt historische Fassaden."
+        ],
+        "answer": "Werbung finanziert öffentliche Einrichtungen wie Wartehäuschen.",
+        "explanationAr": "«Wartehäuschen, öffentliche Toiletten und Stadtpläne werden vielerorts von Werbefirmen finanziert». الخيار الثالث يناقض قسم النقاد."
+      },
+      {
+        "id": "t-b2-17-l3",
+        "type": "mc",
+        "promptDe": "„klamme Kommunen“ sind:",
+        "options": [
+          "Gemeinden mit wenig Geld",
+          "Gemeinden in kalten Regionen",
+          "Gemeinden mit vielen Einwohnern"
+        ],
+        "answer": "Gemeinden mit wenig Geld",
+        "explanationAr": "klamm = ضيّق المال (عامّية). المشتِّت «kalt» يلعب على معنى klamm الآخر (بارد رطب)."
+      },
+      {
+        "id": "t-b2-17-l4",
+        "type": "truefalse",
+        "promptDe": "In Städten mit starken Einschränkungen brachen die Einnahmen laut Text massiv ein.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Der befürchtete Einbruch der Einnahmen blieb überschaubar, weil die Verträge neu verhandelt wurden»."
+      },
+      {
+        "id": "t-b2-17-l5",
+        "type": "mc",
+        "promptDe": "Welche Schlussfolgerung zieht der Autor?",
+        "options": [
+          "Werbung sollte überall verboten werden.",
+          "Die Gestaltung des öffentlichen Raums ist eine Entscheidung, die offen verhandelt werden sollte.",
+          "Die Städte sollten mehr Werbeflächen verkaufen."
+        ],
+        "answer": "Die Gestaltung des öffentlichen Raums ist eine Entscheidung, die offen verhandelt werden sollte.",
+        "explanationAr": "«Wie er aussieht, ist eine Entscheidung – und wer sie trifft, sollte offen verhandelt werden». الكاتب لا ينحاز لحظر شامل."
+      }
+    ]
+  },
+  "t-b2-18": {
+    "de": "Ein Formular, drei Unterschriften, eine Kopie des Ausweises – und dann: warten. Wer schon einmal einen Antrag bei einer Behörde gestellt hat, kennt das Gefühl, dass irgendwo ein Stapel liegt, auf dem der eigene Vorgang ganz unten ruht. Drei Wochen für eine Entscheidung, die scheinbar in drei Minuten zu treffen wäre – wie kommt das?\n\nDie erste Antwort ist unspektakulär: Der Antrag ist selten allein. Eine Sachbearbeiterin betreut Hunderte Vorgänge gleichzeitig, und jeder davon erscheint dem jeweiligen Antragsteller als der wichtigste. Was von außen wie Untätigkeit wirkt, ist von innen oft eine Warteschlange, in der alle gleich behandelt werden – ein Prinzip, das man in anderen Zusammenhängen ausdrücklich schätzt.\n\nDie zweite Antwort betrifft die Prüfung selbst. Viele Entscheidungen hängen von Informationen ab, die eine andere Stelle liefern muss: das Einwohnermeldeamt, das Finanzamt, eine Behörde in einem anderen Bundesland. Jede dieser Anfragen kostet Tage, nicht weil jemand trödelt, sondern weil Zuständigkeiten getrennt sind – aus guten Gründen, denn niemand möchte, dass eine einzige Stelle über alle Daten verfügt. Der Preis dieser Trennung ist Zeit.\n\nDie dritte Antwort ist die unangenehmste: Manche Verfahren sind schlicht veraltet. Wo ein Antrag ausgedruckt, abgeheftet, weitergereicht und wieder eingescannt wird, geht Zeit verloren, die niemandem nützt. Hier liegt der eigentliche Spielraum – und hier tut sich inzwischen einiges, wenn auch langsamer, als viele hoffen.\n\nWer also drei Wochen wartet, wartet auf drei verschiedene Dinge: auf seinen Platz in der Reihe, auf Antworten anderer Stellen und auf eine Modernisierung, die noch nicht überall angekommen ist. Das macht das Warten nicht angenehmer. Aber es macht verständlich, warum die einfache Forderung „schneller!“ selten ausreicht.",
+    "ar": "لماذا يستغرق طلب إداري ثلاثة أسابيع؟ ثلاثة أسباب: طابور المعالجة العادل، تفرّق الاختصاصات بين جهات (لحماية البيانات) وما يكلّفه من وقت، وإجراءات ورقية بالية — وهنا مجال التحسين الحقيقي. المطالبة بـ«أسرع!» وحدها لا تكفي.",
+    "questions": [
+      {
+        "id": "t-b2-18-l1",
+        "type": "mc",
+        "promptDe": "Was ist mit der „Warteschlange, in der alle gleich behandelt werden“ gemeint?",
+        "options": [
+          "Anträge werden in der Reihenfolge des Eingangs bearbeitet.",
+          "Alle Anträge werden gleichzeitig abgelehnt.",
+          "Wichtige Anträge werden bevorzugt."
+        ],
+        "answer": "Anträge werden in der Reihenfolge des Eingangs bearbeitet.",
+        "explanationAr": "المساواة في الطابور = لا أولوية لأحد؛ الخيار الثالث يناقض ذلك."
+      },
+      {
+        "id": "t-b2-18-l2",
+        "type": "mc",
+        "promptDe": "Warum kosten Anfragen an andere Behörden Zeit?",
+        "options": [
+          "weil die Beamten dort trödeln",
+          "weil Zuständigkeiten bewusst getrennt sind",
+          "weil die Post zu langsam ist"
+        ],
+        "answer": "weil Zuständigkeiten bewusst getrennt sind",
+        "explanationAr": "«nicht weil jemand trödelt, sondern weil Zuständigkeiten getrennt sind – aus guten Gründen». الخيار الأول هو المنفيّ."
+      },
+      {
+        "id": "t-b2-18-l3",
+        "type": "mc",
+        "promptDe": "Wo liegt laut Text der „eigentliche Spielraum“ für Verbesserungen?",
+        "options": [
+          "bei der Abschaffung der Warteschlange",
+          "bei der Zusammenlegung aller Daten in einer Behörde",
+          "bei veralteten, papiergebundenen Verfahren"
+        ],
+        "answer": "bei veralteten, papiergebundenen Verfahren",
+        "explanationAr": "الفقرة 4: «Manche Verfahren sind schlicht veraltet … Hier liegt der eigentliche Spielraum». الخيار الثاني يرفضه النص («niemand möchte …»)."
+      },
+      {
+        "id": "t-b2-18-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Autor reicht die Forderung „schneller!“ selten aus.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «warum die einfache Forderung „schneller!“ selten ausreicht»."
+      },
+      {
+        "id": "t-b2-18-l5",
+        "type": "fill",
+        "promptDe": "Der ___ dieser Trennung ist Zeit.",
+        "answer": [
+          "Preis"
+        ],
+        "explanationAr": "der Preis von etwas sein = يكون ثمنه (مجازاً). من الفقرة 3."
+      }
+    ]
+  },
+  "t-b2-19": {
+    "de": "Handwerksbetriebe, die keine Lehrlinge finden, Kliniken, die Stationen schließen, Kindergärten mit verkürzten Öffnungszeiten – der Mangel an Fachkräften ist längst kein Thema für Wirtschaftsseiten mehr, sondern eine Erfahrung, die viele im Alltag machen. Über die Ursachen wird gestritten, oft mit einfachen Antworten. Ein genauerer Blick zeigt, dass mehrere Entwicklungen zusammenkommen.\n\nDie erste ist demografisch. Geburtenstarke Jahrgänge gehen in den Ruhestand, und die nachrückenden sind deutlich kleiner. Diese Lücke lässt sich nicht kurzfristig schließen; sie war seit Jahrzehnten absehbar und wurde dennoch lange unterschätzt. Die zweite Entwicklung betrifft die Verteilung: Es fehlen nicht überall Menschen, sondern vor allem in Berufen, die körperlich anstrengend, schlecht bezahlt oder mit ungünstigen Arbeitszeiten verbunden sind. Wo Bedingungen verbessert wurden, fanden sich häufig auch Bewerber.\n\nDie dritte Entwicklung ist die Bildung. Jahrelang galt das Studium als der sichere Weg, während die Ausbildung an Ansehen verlor. Die Folge: In akademischen Berufen herrscht teils Konkurrenz, während in der Werkstatt niemand mehr steht. Diese Schieflage lässt sich nicht durch Appelle beheben, sondern nur dadurch, dass eine Ausbildung wieder als gleichwertig wahrgenommen wird – in Bezahlung, Aufstiegschancen und gesellschaftlicher Anerkennung.\n\nWelche Wege bleiben? Zuwanderung kann Lücken füllen, setzt aber schnellere Anerkennungsverfahren und ernsthafte Integrationsangebote voraus. Ältere Beschäftigte länger zu halten, funktioniert nur, wenn die Arbeit ihren Kräften angepasst wird. Und Frauen, die wegen fehlender Betreuung in Teilzeit bleiben, könnten mehr arbeiten – wenn es die Betreuung gäbe. Keine dieser Maßnahmen reicht allein. Zusammen genommen zeigen sie jedoch, dass der Mangel weniger ein Schicksal ist als das Ergebnis von Entscheidungen, die sich ändern lassen.",
+    "ar": "نقص الكفاءات صار تجربة يومية. الأسباب: التحوّل الديموغرافي، سوء التوزيع بين مهن مجهدة أو ضعيفة الأجر، وتراجع مكانة التدريب المهني أمام الجامعة. الحلول: هجرة مع اعتراف أسرع، إبقاء الكبار بعمل مناسب، ورعاية أطفال تتيح للنساء العمل أكثر. النقص نتيجة قرارات لا قدر.",
+    "questions": [
+      {
+        "id": "t-b2-19-l1",
+        "type": "mc",
+        "promptDe": "Was sagt der Text über die demografische Lücke?",
+        "options": [
+          "Sie kam völlig überraschend.",
+          "Sie war lange absehbar, wurde aber unterschätzt.",
+          "Sie lässt sich kurzfristig schließen."
+        ],
+        "answer": "Sie war lange absehbar, wurde aber unterschätzt.",
+        "explanationAr": "الدليل في النص: «sie war seit Jahrzehnten absehbar und wurde dennoch lange unterschätzt»."
+      },
+      {
+        "id": "t-b2-19-l2",
+        "type": "mc",
+        "promptDe": "Wo fehlen laut Absatz 2 vor allem Arbeitskräfte?",
+        "options": [
+          "in allen Berufen gleichermaßen",
+          "in Berufen mit schlechten Bedingungen",
+          "in akademischen Berufen"
+        ],
+        "answer": "in Berufen mit schlechten Bedingungen",
+        "explanationAr": "الدليل في النص: «nicht überall …, sondern vor allem in Berufen, die körperlich anstrengend, schlecht bezahlt oder mit ungünstigen Arbeitszeiten verbunden sind»."
+      },
+      {
+        "id": "t-b2-19-l3",
+        "type": "mc",
+        "promptDe": "Wie lässt sich die „Schieflage“ zwischen Studium und Ausbildung laut Text beheben?",
+        "options": [
+          "durch Appelle an junge Menschen",
+          "durch tatsächliche Gleichwertigkeit in Bezahlung, Aufstieg und Anerkennung",
+          "durch weniger Studienplätze"
+        ],
+        "answer": "durch tatsächliche Gleichwertigkeit in Bezahlung, Aufstieg und Anerkennung",
+        "explanationAr": "الدليل في النص: «nicht durch Appelle …, sondern nur dadurch, dass eine Ausbildung wieder als gleichwertig wahrgenommen wird»."
+      },
+      {
+        "id": "t-b2-19-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Autor genügt Zuwanderung allein, um den Mangel zu beheben.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Keine dieser Maßnahmen reicht allein»."
+      },
+      {
+        "id": "t-b2-19-l5",
+        "type": "mc",
+        "promptDe": "Was drückt der Schlusssatz aus?",
+        "options": [
+          "Der Mangel ist unabänderlich.",
+          "Der Mangel ist Folge veränderbarer Entscheidungen.",
+          "Der Mangel ist ein Problem der Wirtschaftsseiten."
+        ],
+        "answer": "Der Mangel ist Folge veränderbarer Entscheidungen.",
+        "explanationAr": "الدليل في النص: «weniger ein Schicksal … als das Ergebnis von Entscheidungen, die sich ändern lassen»."
+      }
+    ]
+  },
+  "t-b2-20": {
+    "de": "Wer in einer großen Stadt eine Wohnung sucht, lernt schnell ein neues Vokabular: Besichtigungstermine mit vierzig Interessenten, Bewerbungsmappen wie für eine Arbeitsstelle, Mieten, die einen großen Teil des Einkommens verschlingen. Das Problem ist nicht neu, aber es hat sich zugespitzt – und es trifft längst nicht mehr nur Geringverdiener.\n\nDie Ursachen sind vielfältig, und gerade deshalb sind einfache Schuldzuweisungen wenig hilfreich. Städte wachsen, weil Arbeitsplätze, Hochschulen und kulturelles Leben Menschen anziehen. Gleichzeitig wurde jahrelang zu wenig gebaut, teils aus Kostengründen, teils weil Flächen fehlen, teils weil Genehmigungen lange dauern. Hinzu kommt, dass Wohnraum zunehmend als Geldanlage betrachtet wird: Wer eine Wohnung kauft, um sie zu vermieten, rechnet mit Rendite – und die entsteht durch steigende Mieten.\n\nDie politischen Antworten spiegeln diese Vielfalt. Die einen setzen auf Regulierung: Mietobergrenzen, Schutz vor Kündigung, Verbote der Umwandlung in Eigentumswohnungen. Die anderen setzen auf Angebot: schneller bauen, höher bauen, Bauvorschriften vereinfachen. Beide Lager haben gute Argumente und beide übersehen etwas. Regulierung schützt die, die bereits eine Wohnung haben, hilft aber jenen wenig, die noch suchen. Mehr Bauen wirkt erst nach Jahren – und nicht automatisch dort, wo die Not am größten ist.\n\nEinen Weg dazwischen gehen Städte, die eigenen Wohnraum schaffen oder gemeinnützige Genossenschaften fördern. Diese Wohnungen werden dem Markt dauerhaft entzogen und bleiben bezahlbar, unabhängig von der Konjunktur. Das ist teuer und langsam, aber es wirkt nachhaltig. Vielleicht liegt die Lehre der letzten Jahre genau hier: Es gibt keinen einzelnen Hebel, sondern nur die geduldige Kombination mehrerer – und die Bereitschaft, sie über Wahlperioden hinweg durchzuhalten.",
+    "ar": "أزمة السكن في المدن الكبرى تطال الطبقة الوسطى أيضاً. أسبابها: نموّ المدن، بناء قليل لسنوات، وتحوّل السكن إلى استثمار. الإجابات: تنظيم يحمي من يملك سكناً، أو بناء أكثر لا يؤثر إلا بعد سنوات. طريق ثالث: سكن بلدي وتعاونيات تُخرج الشقق من السوق دائماً.",
+    "questions": [
+      {
+        "id": "t-b2-20-l1",
+        "type": "mc",
+        "promptDe": "Warum hält der Autor einfache Schuldzuweisungen für wenig hilfreich?",
+        "options": [
+          "weil niemand schuld ist",
+          "weil die Ursachen vielfältig sind",
+          "weil das Problem neu ist"
+        ],
+        "answer": "weil die Ursachen vielfältig sind",
+        "explanationAr": "«Die Ursachen sind vielfältig, und gerade deshalb sind einfache Schuldzuweisungen wenig hilfreich». الخيار الثالث يناقض «Das Problem ist nicht neu»."
+      },
+      {
+        "id": "t-b2-20-l2",
+        "type": "mc",
+        "promptDe": "Was übersieht laut Text das Lager der Regulierung?",
+        "options": [
+          "dass Regulierung vor allem den Wohnungssuchenden hilft",
+          "dass Regulierung denen wenig hilft, die noch suchen",
+          "dass Regulierung das Bauen beschleunigt"
+        ],
+        "answer": "dass Regulierung denen wenig hilft, die noch suchen",
+        "explanationAr": "الدليل في النص: «Regulierung schützt die, die bereits eine Wohnung haben, hilft aber jenen wenig, die noch suchen»."
+      },
+      {
+        "id": "t-b2-20-l3",
+        "type": "mc",
+        "promptDe": "Was bedeutet „dem Markt dauerhaft entzogen“?",
+        "options": [
+          "Die Wohnungen werden nicht mehr nach Marktpreisen vermietet.",
+          "Die Wohnungen werden abgerissen.",
+          "Die Wohnungen werden an Investoren verkauft."
+        ],
+        "answer": "Die Wohnungen werden nicht mehr nach Marktpreisen vermietet.",
+        "explanationAr": "«bleiben bezahlbar, unabhängig von der Konjunktur» — أي خارج آلية السوق."
+      },
+      {
+        "id": "t-b2-20-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Text wirkt mehr Bauen erst nach Jahren.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Mehr Bauen wirkt erst nach Jahren – und nicht automatisch dort, wo die Not am größten ist»."
+      },
+      {
+        "id": "t-b2-20-l5",
+        "type": "fill",
+        "promptDe": "Es gibt keinen einzelnen ___, sondern nur die geduldige Kombination mehrerer.",
+        "answer": [
+          "Hebel"
+        ],
+        "explanationAr": "der Hebel = الرافعة؛ مجازاً: أداة تأثير. والتعبير الشائع: an einem Hebel ansetzen."
+      }
+    ]
+  }
+}

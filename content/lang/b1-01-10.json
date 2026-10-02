@@ -1,0 +1,646 @@
+{
+  "t-b1-01": {
+    "de": "An unserer Schule wird seit Wochen über ein Thema gestritten: Sollen Handys im Unterricht erlaubt sein oder nicht? Die Schulleitung möchte ein Verbot einführen. Viele Schülerinnen und Schüler sind dagegen, aber auch einige Lehrer haben Zweifel.\n\nDie Gegner des Verbots sagen, dass das Handy ein nützliches Werkzeug ist. Man kann damit Wörter nachschlagen, Fotos von der Tafel machen oder in Gruppen an einem Projekt arbeiten. Außerdem müssen Jugendliche lernen, verantwortungsvoll mit dem Gerät umzugehen – und das lernt man nicht, wenn es einfach verboten wird.\n\nDie Befürworter des Verbots sehen das anders. Sie beobachten, dass viele Schüler in der Pause nur noch auf ihr Handy schauen, statt miteinander zu reden. Im Unterricht lenken Nachrichten und Spiele ab, auch wenn das Handy nur in der Tasche vibriert. Und nicht jeder kann sich ein teures Gerät leisten, was zu Ungerechtigkeit führt.\n\nEin Kompromiss könnte so aussehen: Das Handy bleibt während des Unterrichts ausgeschaltet im Rucksack, darf aber benutzt werden, wenn die Lehrkraft es für eine Aufgabe erlaubt. In den Pausen gibt es handyfreie Zonen, zum Beispiel auf dem Schulhof. So hätten beide Seiten etwas gewonnen. Ob die Schulleitung darauf eingeht, entscheidet sich nächste Woche.",
+    "ar": "خلاف في مدرسة حول حظر الهواتف: المعارضون يرونها أداة مفيدة ووسيلة لتعلّم المسؤولية، والمؤيدون يرون أنها تشتّت وتعزل وتخلق تفاوتاً. الحلّ الوسط المقترح: مغلقة في الحقيبة إلا بإذن المعلّم، ومناطق خالية من الهواتف في الاستراحات.",
+    "questions": [
+      {
+        "id": "t-b1-01-l1",
+        "type": "mc",
+        "promptDe": "Wer ist laut Text gegen das Verbot?",
+        "options": [
+          "nur die Schulleitung",
+          "viele Schüler und einige Lehrer",
+          "alle Lehrer"
+        ],
+        "answer": "viele Schüler und einige Lehrer",
+        "explanationAr": "الدليل في النص: «Viele Schülerinnen und Schüler sind dagegen, aber auch einige Lehrer haben Zweifel»."
+      },
+      {
+        "id": "t-b1-01-l2",
+        "type": "mc",
+        "promptDe": "Welches Argument nennen die Gegner des Verbots?",
+        "options": [
+          "Handys sind billig.",
+          "Man lernt den verantwortungsvollen Umgang nicht durch ein Verbot.",
+          "Handys stören nie im Unterricht."
+        ],
+        "answer": "Man lernt den verantwortungsvollen Umgang nicht durch ein Verbot.",
+        "explanationAr": "الدليل في النص: «das lernt man nicht, wenn es einfach verboten wird»."
+      },
+      {
+        "id": "t-b1-01-l3",
+        "type": "mc",
+        "promptDe": "Warum sprechen die Befürworter von Ungerechtigkeit?",
+        "options": [
+          "weil nicht alle sich ein teures Handy leisten können",
+          "weil die Lehrer Handys benutzen dürfen",
+          "weil die Pausen zu kurz sind"
+        ],
+        "answer": "weil nicht alle sich ein teures Handy leisten können",
+        "explanationAr": "الدليل في النص: «nicht jeder kann sich ein teures Gerät leisten, was zu Ungerechtigkeit führt»."
+      },
+      {
+        "id": "t-b1-01-l4",
+        "type": "truefalse",
+        "promptDe": "Nach dem Kompromiss darf das Handy im Unterricht nie benutzt werden.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «darf aber benutzt werden, wenn die Lehrkraft es für eine Aufgabe erlaubt»."
+      },
+      {
+        "id": "t-b1-01-l5",
+        "type": "fill",
+        "promptDe": "In den Pausen gibt es handyfreie ___, zum Beispiel auf dem Schulhof.",
+        "answer": [
+          "Zonen"
+        ],
+        "explanationAr": "handyfreie Zonen = مناطق خالية من الهواتف. من الفقرة الأخيرة."
+      }
+    ]
+  },
+  "t-b1-02": {
+    "de": "Bevor ich nach Deutschland kam, hatte ich drei Jahre lang Deutsch gelernt. Ich kannte die Grammatik, hatte viele Vokabeln auswendig gelernt und dachte, ich wäre gut vorbereitet. Am ersten Tag in Hamburg merkte ich, dass ich fast nichts verstand.\n\nDie Leute sprachen schnell, benutzten Wörter, die in keinem Lehrbuch standen, und ließen Endungen einfach weg. Beim Bäcker fragte mich die Verkäuferin etwas, und ich nickte nur – später stellte ich fest, dass ich vier Brötchen statt zwei gekauft hatte. In der ersten Woche war ich abends so müde, als hätte ich den ganzen Tag körperlich gearbeitet.\n\nGeholfen hat mir vor allem eines: Ich habe aufgehört, alles verstehen zu wollen. Stattdessen habe ich mich auf die wichtigsten Wörter konzentriert und nachgefragt, wenn etwas unklar war. Die meisten Menschen waren geduldig und freuten sich sogar, dass ich es versuchte. Eine Nachbarin, Frau Petersen, lud mich jeden Donnerstag zum Kaffee ein. Bei ihr habe ich mehr gelernt als in manchem Kurs, weil sie langsam sprach und mich korrigierte, ohne mich zu beschämen.\n\nHeute, zwei Jahre später, arbeite ich in einem Büro und träume manchmal sogar auf Deutsch. Die Sprache ist immer noch nicht perfekt, aber sie ist meine geworden. Wenn mich jemand fragt, was der wichtigste Tipp ist, sage ich: Hab keine Angst vor Fehlern. Die Fehler sind der Weg, nicht das Hindernis.",
+    "ar": "سرد شخصي: بعد ثلاث سنوات من تعلّم الألمانية صُدم الكاتب في هامبورغ بأنه لا يفهم. ما ساعده: التوقف عن محاولة فهم كل شيء، السؤال، وجارة صبورة صحّحت له بلا إحراج. بعد عامين يعمل في مكتب ويحلم بالألمانية. النصيحة: لا تخف من الأخطاء.",
+    "questions": [
+      {
+        "id": "t-b1-02-l1",
+        "type": "mc",
+        "promptDe": "Warum verstand der Erzähler am Anfang so wenig?",
+        "options": [
+          "weil er nie Deutsch gelernt hatte",
+          "weil die Menschen schnell und anders als im Lehrbuch sprachen",
+          "weil er kein Wörterbuch hatte"
+        ],
+        "answer": "weil die Menschen schnell und anders als im Lehrbuch sprachen",
+        "explanationAr": "«sprachen schnell, benutzten Wörter, die in keinem Lehrbuch standen, und ließen Endungen einfach weg». الخيار الأول يناقض «drei Jahre lang Deutsch gelernt»."
+      },
+      {
+        "id": "t-b1-02-l2",
+        "type": "mc",
+        "promptDe": "Was zeigt die Geschichte mit den Brötchen?",
+        "options": [
+          "Er hatte großen Hunger.",
+          "Er tat so, als ob er verstünde, und bekam deshalb etwas Falsches.",
+          "Die Verkäuferin war unfreundlich."
+        ],
+        "answer": "Er tat so, als ob er verstünde, und bekam deshalb etwas Falsches.",
+        "explanationAr": "الدليل في النص: «ich nickte nur – später stellte ich fest, dass ich vier Brötchen statt zwei gekauft hatte»."
+      },
+      {
+        "id": "t-b1-02-l3",
+        "type": "mc",
+        "promptDe": "Was hat dem Erzähler am meisten geholfen?",
+        "options": [
+          "ein teurer Sprachkurs",
+          "der Versuch, jedes Wort zu verstehen",
+          "sich auf das Wichtigste zu konzentrieren und nachzufragen"
+        ],
+        "answer": "sich auf das Wichtigste zu konzentrieren und nachzufragen",
+        "explanationAr": "«Ich habe aufgehört, alles verstehen zu wollen. Stattdessen habe ich mich auf die wichtigsten Wörter konzentriert und nachgefragt». الخيار الثاني هو ما توقّف عنه."
+      },
+      {
+        "id": "t-b1-02-l4",
+        "type": "truefalse",
+        "promptDe": "Frau Petersen hat den Erzähler korrigiert, ohne ihn zu beschämen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "«mich korrigierte, ohne mich zu beschämen» = صحّحته دون إحراج."
+      },
+      {
+        "id": "t-b1-02-l5",
+        "type": "mc",
+        "promptDe": "„Die Fehler sind der Weg, nicht das Hindernis“ bedeutet:",
+        "options": [
+          "Fehler verhindern das Lernen.",
+          "Fehler gehören zum Lernen dazu.",
+          "Man sollte keine Fehler machen."
+        ],
+        "answer": "Fehler gehören zum Lernen dazu.",
+        "explanationAr": "Weg (طريق) مقابل Hindernis (عائق): الأخطاء وسيلة التعلّم لا عقبة أمامه."
+      }
+    ]
+  },
+  "t-b1-03": {
+    "de": "Die Luft in unserer Stadt ist in den letzten Jahren schlechter geworden. Vor allem an den großen Straßen klagen die Anwohner über Lärm, Staub und Abgase. Die Stadtverwaltung hat deshalb ein neues Verkehrskonzept vorgestellt, über das jetzt heftig diskutiert wird.\n\nDer Plan sieht vor, dass die Innenstadt für Autos weitgehend gesperrt wird. Nur Anwohner, Lieferanten und Menschen mit Behinderung dürfen noch hineinfahren. Dafür sollen mehr Busse fahren, und es werden neue Radwege gebaut. An den Stadtrand kommen große Parkplätze, von denen man mit der Straßenbahn ins Zentrum fahren kann.\n\nViele Geschäftsleute sind besorgt. Sie befürchten, dass Kunden wegbleiben, wenn sie nicht mehr direkt vor dem Laden parken können. „Die Leute fahren dann lieber ins Einkaufszentrum auf der grünen Wiese“, sagt ein Buchhändler. Die Verwaltung verweist dagegen auf andere Städte, in denen die Geschäfte nach der Sperrung sogar mehr Umsatz gemacht haben, weil die Innenstadt attraktiver wurde.\n\nAuch unter den Bürgern gehen die Meinungen auseinander. Familien mit Kindern und ältere Menschen freuen sich auf ruhigere Straßen. Pendler aus den Dörfern rund um die Stadt fragen sich dagegen, wie sie ohne Auto pünktlich zur Arbeit kommen sollen, wenn der Bus nur einmal pro Stunde fährt.\n\nIm nächsten Monat gibt es eine Bürgerversammlung. Dort soll entschieden werden, ob der Plan so umgesetzt wird oder ob es Änderungen gibt. Sicher ist nur eines: So wie bisher kann es nicht weitergehen.",
+    "ar": "المدينة تعرض خطة مرور جديدة: إغلاق المركز أمام السيارات إلا للسكان والموردين وذوي الإعاقة، مع حافلات ومسارات دراجات ومواقف على الأطراف. التجار قلقون على زبائنهم، والإدارة تستشهد بمدن ارتفع فيها الدخل. العائلات مرتاحة والمتنقلون من القرى قلقون. القرار في اجتماع للمواطنين.",
+    "questions": [
+      {
+        "id": "t-b1-03-l1",
+        "type": "mc",
+        "promptDe": "Wer darf nach dem Plan noch mit dem Auto in die Innenstadt?",
+        "options": [
+          "alle, die dort einkaufen wollen",
+          "Anwohner, Lieferanten und Menschen mit Behinderung",
+          "nur Busse und Straßenbahnen"
+        ],
+        "answer": "Anwohner, Lieferanten und Menschen mit Behinderung",
+        "explanationAr": "الدليل في النص: «Nur Anwohner, Lieferanten und Menschen mit Behinderung dürfen noch hineinfahren»."
+      },
+      {
+        "id": "t-b1-03-l2",
+        "type": "mc",
+        "promptDe": "Was befürchten die Geschäftsleute?",
+        "options": [
+          "dass die Mieten steigen",
+          "dass Kunden wegbleiben",
+          "dass mehr Radfahrer kommen"
+        ],
+        "answer": "dass Kunden wegbleiben",
+        "explanationAr": "الدليل في النص: «Sie befürchten, dass Kunden wegbleiben, wenn sie nicht mehr direkt vor dem Laden parken können»."
+      },
+      {
+        "id": "t-b1-03-l3",
+        "type": "mc",
+        "promptDe": "Was antwortet die Verwaltung auf diese Sorge?",
+        "options": [
+          "Sie verspricht Geld für die Geschäfte.",
+          "In anderen Städten stieg der Umsatz nach der Sperrung.",
+          "Die Geschäfte sollen ins Einkaufszentrum umziehen."
+        ],
+        "answer": "In anderen Städten stieg der Umsatz nach der Sperrung.",
+        "explanationAr": "الدليل في النص: «verweist dagegen auf andere Städte, in denen die Geschäfte nach der Sperrung sogar mehr Umsatz gemacht haben»."
+      },
+      {
+        "id": "t-b1-03-l4",
+        "type": "truefalse",
+        "promptDe": "Die Pendler aus den Dörfern sind mit dem Plan zufrieden.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Pendler … fragen sich dagegen, wie sie ohne Auto pünktlich zur Arbeit kommen sollen»."
+      },
+      {
+        "id": "t-b1-03-l5",
+        "type": "mc",
+        "promptDe": "Was meint der Buchhändler mit dem „Einkaufszentrum auf der grünen Wiese“?",
+        "options": [
+          "einen Markt für Gemüse",
+          "ein Einkaufszentrum außerhalb der Stadt mit Parkplätzen",
+          "einen Park in der Innenstadt"
+        ],
+        "answer": "ein Einkaufszentrum außerhalb der Stadt mit Parkplätzen",
+        "explanationAr": "«auf der grünen Wiese» تعبير عن مواقع خارج المدينة. السياق: الزبائن يفضّلونه لأنهم لا يجدون موقفاً في المركز."
+      }
+    ]
+  },
+  "t-b1-04": {
+    "de": "Lieber Hassan,\n\nwie geht es dir? Hier läuft alles gut, auch wenn die ersten Monate nicht einfach waren. Ich habe endlich eine Wohnung gefunden! Sie ist klein, nur zwei Zimmer, aber hell und nah an der U-Bahn. Die Suche hat fast ein halbes Jahr gedauert – bei jeder Besichtigung standen zwanzig Leute vor der Tür. Am Ende hat es geklappt, weil mein Chef mir eine Bescheinigung geschrieben hat, dass ich eine feste Stelle habe.\n\nDie Arbeit gefällt mir. Ich bin im Lager einer Firma, die Fahrradteile verkauft, und seit letztem Monat darf ich auch Bestellungen am Computer bearbeiten. Meine Kollegen sind freundlich, aber sie sprechen sehr schnell. Am Anfang habe ich oft nur gelächelt. Jetzt frage ich einfach nach, wenn ich etwas nicht verstehe, und das ist viel besser.\n\nWas mir fehlt, ist das Essen von zu Hause. Ich habe versucht, Mamas Reis nachzukochen, aber es schmeckt nie gleich. Vielleicht kannst du mir das Rezept noch einmal genau aufschreiben? Und grüß bitte alle, besonders Oma. Ich rufe am Sonntag an.\n\nIm Sommer habe ich zwei Wochen Urlaub. Wenn die Flüge nicht zu teuer sind, komme ich euch besuchen. Bis dahin: Pass auf dich auf und lern fleißig – du hast doch bald deine Prüfung!\n\nDein Karim",
+    "ar": "رسالة من كريم لأخيه حسن: وجد أخيراً شقة صغيرة بعد بحث طويل بفضل شهادة من رئيسه. العمل في مستودع قطع دراجات يعجبه، وصار يسأل بدل الابتسام. يفتقد طعام البيت ويطلب وصفة أمه. يخطط لزيارة في الصيف.",
+    "questions": [
+      {
+        "id": "t-b1-04-l1",
+        "type": "mc",
+        "promptDe": "Warum hat Karim die Wohnung am Ende bekommen?",
+        "options": [
+          "weil sie sehr teuer war",
+          "weil sein Chef ihm eine Bescheinigung über die feste Stelle gab",
+          "weil er der Einzige bei der Besichtigung war"
+        ],
+        "answer": "weil sein Chef ihm eine Bescheinigung über die feste Stelle gab",
+        "explanationAr": "«weil mein Chef mir eine Bescheinigung geschrieben hat, dass ich eine feste Stelle habe». الخيار الثالث يناقض «zwanzig Leute vor der Tür»."
+      },
+      {
+        "id": "t-b1-04-l2",
+        "type": "mc",
+        "promptDe": "Was hat sich bei Karims Arbeit verändert?",
+        "options": [
+          "Er arbeitet jetzt nur noch am Computer.",
+          "Er darf zusätzlich Bestellungen am Computer bearbeiten.",
+          "Er hat die Firma gewechselt."
+        ],
+        "answer": "Er darf zusätzlich Bestellungen am Computer bearbeiten.",
+        "explanationAr": "«seit letztem Monat darf ich auch Bestellungen am Computer bearbeiten» — «auch» تعني إضافة لا استبدالاً."
+      },
+      {
+        "id": "t-b1-04-l3",
+        "type": "mc",
+        "promptDe": "Was macht Karim jetzt anders als am Anfang?",
+        "options": [
+          "Er lächelt nur, wenn er etwas nicht versteht.",
+          "Er fragt nach, wenn er etwas nicht versteht.",
+          "Er spricht mit den Kollegen nur auf Englisch."
+        ],
+        "answer": "Er fragt nach, wenn er etwas nicht versteht.",
+        "explanationAr": "الدليل في النص: «Am Anfang habe ich oft nur gelächelt. Jetzt frage ich einfach nach»."
+      },
+      {
+        "id": "t-b1-04-l4",
+        "type": "truefalse",
+        "promptDe": "Karim kommt nur, wenn die Flüge nicht zu teuer sind.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "«Wenn die Flüge nicht zu teuer sind, komme ich euch besuchen» — مشروط."
+      },
+      {
+        "id": "t-b1-04-l5",
+        "type": "fill",
+        "promptDe": "Bei jeder Besichtigung standen zwanzig Leute vor der ___.",
+        "answer": [
+          "Tür"
+        ],
+        "explanationAr": "من الفقرة الأولى؛ يصوّر شدّة المنافسة على الشقق."
+      }
+    ]
+  },
+  "t-b1-05": {
+    "de": "Liebe Ratgeber-Redaktion,\n\nich habe ein Problem und weiß nicht, wie ich mich verhalten soll. Mein bester Freund möchte seinen Job kündigen, obwohl er dort gut verdient und die Stelle sicher ist. Er sagt, die Arbeit mache ihn unglücklich, und er wolle sich als Fotograf selbstständig machen. Ich finde das riskant und habe ihm das auch gesagt. Seitdem ist die Stimmung zwischen uns schlecht. Habe ich einen Fehler gemacht?\n\nMartin, 29\n\nLieber Martin,\n\nnein, einen Fehler haben Sie nicht gemacht – Sie haben ehrlich Ihre Meinung gesagt, und das ist unter Freunden wichtig. Trotzdem lohnt es sich, einen Moment die Perspektive zu wechseln. Ihr Freund hat Ihnen wahrscheinlich nicht von seinem Plan erzählt, weil er eine Risikoanalyse wollte. Er wollte gehört werden.\n\nSie können beides tun: seine Entscheidung respektieren und gleichzeitig Ihre Sorgen äußern. Der Unterschied liegt im Ton. Statt „Das ist riskant“ könnten Sie fragen: „Wie stellst du dir das erste Jahr vor? Was machst du, wenn es nicht klappt?“ Solche Fragen zeigen Interesse und helfen ihm, seinen Plan konkreter zu machen – ohne dass er sich verteidigen muss.\n\nUnd noch etwas: Eine sichere Stelle, die unglücklich macht, ist auch ein Risiko – nur ein langsameres. Vielleicht braucht Ihr Freund gerade keinen Kritiker, sondern jemanden, der ihm sagt: „Ich bin nicht sicher, ob es funktioniert, aber ich bin da, egal wie es ausgeht.“ Das ist oft mehr wert als jeder gute Rat.\n\nIhre Ratgeber-Redaktion",
+    "ar": "عمود نصائح: مارتن قلق لأن صديقه يريد ترك وظيفة مضمونة ليصبح مصوّراً مستقلاً، وقد أفسد رأيه الصريح العلاقة. الردّ: لم يخطئ، لكن الصديق أراد أن يُسمَع لا أن يُحلَّل. يمكن الجمع بين الاحترام والقلق عبر أسئلة بدل الأحكام، والوظيفة المؤمَّنة التي تُتعس صاحبها خطر أيضاً.",
+    "questions": [
+      {
+        "id": "t-b1-05-l1",
+        "type": "mc",
+        "promptDe": "Warum möchte Martins Freund kündigen?",
+        "options": [
+          "weil er zu wenig verdient",
+          "weil die Arbeit ihn unglücklich macht",
+          "weil die Stelle nicht sicher ist"
+        ],
+        "answer": "weil die Arbeit ihn unglücklich macht",
+        "explanationAr": "«die Arbeit mache ihn unglücklich». الخياران الآخران يناقضان «gut verdient und die Stelle sicher ist»."
+      },
+      {
+        "id": "t-b1-05-l2",
+        "type": "mc",
+        "promptDe": "Was wollte der Freund laut Redaktion eigentlich von Martin?",
+        "options": [
+          "eine Risikoanalyse",
+          "Geld für die Kamera",
+          "gehört zu werden"
+        ],
+        "answer": "gehört zu werden",
+        "explanationAr": "«nicht …, weil er eine Risikoanalyse wollte. Er wollte gehört werden». الخيار الأول هو المنفيّ."
+      },
+      {
+        "id": "t-b1-05-l3",
+        "type": "mc",
+        "promptDe": "Was empfiehlt die Redaktion statt „Das ist riskant“?",
+        "options": [
+          "gar nichts zu sagen",
+          "konkrete Fragen zu stellen",
+          "den Plan zu verbieten"
+        ],
+        "answer": "konkrete Fragen zu stellen",
+        "explanationAr": "الدليل في النص: «könnten Sie fragen: „Wie stellst du dir das erste Jahr vor? …“ Solche Fragen zeigen Interesse»."
+      },
+      {
+        "id": "t-b1-05-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Redaktion ist eine sichere Stelle immer die bessere Wahl.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Eine sichere Stelle, die unglücklich macht, ist auch ein Risiko – nur ein langsameres»."
+      },
+      {
+        "id": "t-b1-05-l5",
+        "type": "mc",
+        "promptDe": "„die Perspektive zu wechseln“ bedeutet hier:",
+        "options": [
+          "den Job zu wechseln",
+          "die Sache aus der Sicht des anderen zu sehen",
+          "das Thema zu wechseln"
+        ],
+        "answer": "die Sache aus der Sicht des anderen zu sehen",
+        "explanationAr": "Perspektive = زاوية نظر؛ السياق التالي يشرح ما أراده الصديق فعلاً."
+      }
+    ]
+  },
+  "t-b1-06": {
+    "de": "Stellenanzeige – Fachkraft Logistik (m/w/d)\n\nWir sind ein mittelständisches Unternehmen mit 120 Mitarbeitenden und beliefern Kunden in ganz Norddeutschland mit Ersatzteilen für Landmaschinen. Zur Verstärkung unseres Teams suchen wir zum nächstmöglichen Zeitpunkt eine Fachkraft für Lagerlogistik in Vollzeit.\n\nIhre Aufgaben: Sie nehmen Waren an, prüfen Lieferscheine und lagern die Teile fachgerecht ein. Sie stellen Bestellungen zusammen und bereiten sie für den Versand vor. Außerdem pflegen Sie die Bestände im Computersystem und melden fehlende Artikel rechtzeitig an den Einkauf.\n\nIhr Profil: Sie haben eine abgeschlossene Ausbildung im Bereich Lager oder Logistik oder mindestens zwei Jahre Berufserfahrung. Ein Staplerschein ist erforderlich. Sie arbeiten sorgfältig, auch wenn es hektisch wird, und sprechen gut Deutsch, da Sie täglich mit Fahrern und Kollegen kommunizieren. Bereitschaft zur Schichtarbeit (Früh- und Spätschicht, keine Nachtschicht) setzen wir voraus.\n\nWir bieten: einen unbefristeten Vertrag, 30 Tage Urlaub, Zuschuss zum Deutschlandticket und eine gründliche Einarbeitung. Wer möchte, kann sich bei uns zum Schichtleiter weiterentwickeln – zwei unserer heutigen Teamleiter haben im Lager angefangen.\n\nInteresse? Schicken Sie Ihren Lebenslauf und Ihre Zeugnisse bitte per E-Mail an Frau Lindqvist. Ein Anschreiben ist nicht nötig – wir lernen Sie lieber im Gespräch kennen. Bewerbungsschluss ist der 15. des kommenden Monats.",
+    "ar": "إعلان وظيفة: شركة متوسطة تبحث عن عامل لوجستيات للمستودع بدوام كامل. المهام: استلام البضائع، تجهيز الطلبات، صيانة المخزون في النظام. الشروط: تدريب مهني أو خبرة سنتين، رخصة رافعة شوكية، ألمانية جيدة، استعداد لنوبات صباحية ومسائية. المزايا: عقد دائم، 30 يوم إجازة، فرصة ترقّي. لا حاجة لخطاب تقديم.",
+    "questions": [
+      {
+        "id": "t-b1-06-l1",
+        "type": "mc",
+        "promptDe": "Welche Voraussetzung ist zwingend erforderlich?",
+        "options": [
+          "ein Führerschein für Lkw",
+          "ein Staplerschein",
+          "ein Studium"
+        ],
+        "answer": "ein Staplerschein",
+        "explanationAr": "الدليل في النص: «Ein Staplerschein ist erforderlich»."
+      },
+      {
+        "id": "t-b1-06-l2",
+        "type": "mc",
+        "promptDe": "Was gilt für die Arbeitszeiten?",
+        "options": [
+          "nur tagsüber, keine Schichten",
+          "Früh- und Spätschicht, aber keine Nachtschicht",
+          "auch Nachtschichten"
+        ],
+        "answer": "Früh- und Spätschicht, aber keine Nachtschicht",
+        "explanationAr": "الدليل في النص: «Schichtarbeit (Früh- und Spätschicht, keine Nachtschicht)»."
+      },
+      {
+        "id": "t-b1-06-l3",
+        "type": "mc",
+        "promptDe": "Was muss man NICHT mitschicken?",
+        "options": [
+          "den Lebenslauf",
+          "die Zeugnisse",
+          "ein Anschreiben"
+        ],
+        "answer": "ein Anschreiben",
+        "explanationAr": "الدليل في النص: «Ein Anschreiben ist nicht nötig – wir lernen Sie lieber im Gespräch kennen»."
+      },
+      {
+        "id": "t-b1-06-l4",
+        "type": "truefalse",
+        "promptDe": "Zwei Jahre Berufserfahrung können die Ausbildung ersetzen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "«oder mindestens zwei Jahre Berufserfahrung» — الخبرة بديل عن التدريب."
+      },
+      {
+        "id": "t-b1-06-l5",
+        "type": "mc",
+        "promptDe": "Warum wird erwähnt, dass zwei Teamleiter im Lager angefangen haben?",
+        "options": [
+          "um zu zeigen, dass man aufsteigen kann",
+          "um zu warnen, dass die Arbeit schwer ist",
+          "um zu erklären, warum das Team klein ist"
+        ],
+        "answer": "um zu zeigen, dass man aufsteigen kann",
+        "explanationAr": "الجملة السابقة: «kann sich bei uns zum Schichtleiter weiterentwickeln» — المثال دليل على إمكانية الترقّي."
+      }
+    ]
+  },
+  "t-b1-07": {
+    "de": "Nach dem Schulabschluss stehen viele junge Menschen vor derselben Frage: Ausbildung oder Studium? Lange galt das Studium als der bessere Weg. Wer konnte, ging an die Universität; die Ausbildung war etwas für die anderen. Dieses Bild beginnt sich zu verändern.\n\nLena, 19, hat sich nach dem Abitur für eine Ausbildung zur Elektronikerin entschieden. „Meine Lehrer waren überrascht“, erzählt sie. „Aber ich wollte etwas mit den Händen machen und von Anfang an Geld verdienen.“ Nach drei Jahren wird sie einen Beruf haben, der gesucht ist, und sie kann später immer noch studieren, wenn sie möchte.\n\nIhr Freund Jonas hat sich anders entschieden und studiert Informatik. Er findet, dass ihm das Studium mehr Freiheit gibt, sich auszuprobieren. „Ich weiß noch nicht genau, was ich später machen will. An der Uni kann ich verschiedene Richtungen kennenlernen.“ Dafür nimmt er in Kauf, dass er in den nächsten Jahren wenig Geld hat und nebenbei arbeiten muss.\n\nBeide Wege haben Vor- und Nachteile. Die Ausbildung bietet Praxis, ein eigenes Einkommen und oft eine schnelle Übernahme durch den Betrieb. Das Studium bietet mehr Theorie, längere Orientierungszeit und in manchen Berufen höhere Gehälter – aber nicht in allen. Ein guter Handwerksmeister verdient heute oft mehr als mancher Akademiker.\n\nWichtiger als die Frage „Was ist besser?“ ist deshalb die Frage „Was passt zu mir?“. Wer gern praktisch arbeitet, sollte sich nicht zum Studium drängen lassen. Und wer gern liest und forscht, ist im Hörsaal richtig. Falsch ist nur, den Weg zu wählen, den andere erwarten.",
+    "ar": "تدريب مهني أم جامعة؟ لينا اختارت التدريب كهربائية لتعمل بيديها وتكسب مبكراً، ويوناس اختار دراسة المعلوماتية ليجرّب اتجاهات. لكلّ طريق مزاياه: عملية ودخل مبكر مقابل نظرية ووقت للتوجّه. السؤال الصحيح ليس «ما الأفضل؟» بل «ما يناسبني؟».",
+    "questions": [
+      {
+        "id": "t-b1-07-l1",
+        "type": "mc",
+        "promptDe": "Warum hat Lena eine Ausbildung gewählt?",
+        "options": [
+          "weil sie kein Abitur hat",
+          "weil sie praktisch arbeiten und früh Geld verdienen wollte",
+          "weil ihre Lehrer es ihr empfohlen haben"
+        ],
+        "answer": "weil sie praktisch arbeiten und früh Geld verdienen wollte",
+        "explanationAr": "«ich wollte etwas mit den Händen machen und von Anfang an Geld verdienen». الخيار الأول يناقض «nach dem Abitur»، والثالث يناقض «Meine Lehrer waren überrascht»."
+      },
+      {
+        "id": "t-b1-07-l2",
+        "type": "mc",
+        "promptDe": "Was nimmt Jonas für sein Studium in Kauf?",
+        "options": [
+          "dass er wenig Geld hat und nebenbei arbeiten muss",
+          "dass er nie praktisch arbeiten kann",
+          "dass er später weniger verdient"
+        ],
+        "answer": "dass er wenig Geld hat und nebenbei arbeiten muss",
+        "explanationAr": "الدليل في النص: «Dafür nimmt er in Kauf, dass er in den nächsten Jahren wenig Geld hat und nebenbei arbeiten muss»."
+      },
+      {
+        "id": "t-b1-07-l3",
+        "type": "mc",
+        "promptDe": "Was sagt der Text über die Gehälter?",
+        "options": [
+          "Akademiker verdienen immer mehr.",
+          "Handwerksmeister verdienen immer mehr.",
+          "Ein Studium bringt nicht in allen Berufen ein höheres Gehalt."
+        ],
+        "answer": "Ein Studium bringt nicht in allen Berufen ein höheres Gehalt.",
+        "explanationAr": "«in manchen Berufen höhere Gehälter – aber nicht in allen. Ein guter Handwerksmeister verdient heute oft mehr als mancher Akademiker» — «oft/mancher» لا «immer»."
+      },
+      {
+        "id": "t-b1-07-l4",
+        "type": "truefalse",
+        "promptDe": "Nach der Ausbildung kann Lena nicht mehr studieren.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «sie kann später immer noch studieren, wenn sie möchte»."
+      },
+      {
+        "id": "t-b1-07-l5",
+        "type": "mc",
+        "promptDe": "Welche Entscheidung nennt der Autor „falsch“?",
+        "options": [
+          "die Ausbildung",
+          "das Studium",
+          "den Weg zu wählen, den andere erwarten"
+        ],
+        "answer": "den Weg zu wählen, den andere erwarten",
+        "explanationAr": "الدليل في النص: «Falsch ist nur, den Weg zu wählen, den andere erwarten»."
+      }
+    ]
+  },
+  "t-b1-08": {
+    "de": "In großen Städten ist Wohnraum knapp und teuer. Viele junge Leute können sich eine eigene Wohnung nicht leisten und teilen sich deshalb eine Wohnung mit anderen – eine Wohngemeinschaft, kurz WG. Jeder hat ein eigenes Zimmer; Küche und Bad werden gemeinsam benutzt.\n\nSofia, 24, wohnt seit zwei Jahren mit drei Mitbewohnern in einer WG. „Am Anfang war ich skeptisch“, sagt sie. „Ich dachte, ich hätte nie meine Ruhe.“ Inzwischen möchte sie es nicht anders haben. Wenn sie abends nach Hause kommt, ist immer jemand da, mit dem sie reden kann. Und die Miete ist nur halb so hoch wie für eine kleine Wohnung allein.\n\nNatürlich gibt es auch Konflikte. Wer putzt das Bad? Wer hat die Milch aufgebraucht und nicht nachgekauft? Darf der Freund einer Mitbewohnerin jedes Wochenende bleiben? In Sofias WG gibt es deshalb einen Putzplan an der Kühlschranktür und einmal im Monat ein gemeinsames Abendessen, bei dem alle Probleme offen angesprochen werden. „Das klingt streng“, sagt sie, „aber seitdem streiten wir viel weniger.“\n\nNicht jeder ist für das WG-Leben gemacht. Wer viel Ruhe braucht oder sehr ordentlich ist, wird sich in einer WG schwertun. Und mit zunehmendem Alter wünschen sich viele mehr Privatsphäre. Sofia weiß noch nicht, wie lange sie bleiben wird. „Irgendwann möchte ich eine eigene Wohnung“, sagt sie. „Aber im Moment würde mir etwas fehlen, wenn ich allein wohnen würde.“",
+    "ar": "السكن المشترك (WG) حلّ للشباب في المدن الغالية: غرفة خاصة ومطبخ وحمّام مشتركان. صوفيا كانت متشككة ثم صارت تحبّه للصحبة ونصف الإيجار. الخلافات تُدار بجدول تنظيف وعشاء شهري للحديث المفتوح. ليس مناسباً لمن يحتاج هدوءاً كثيراً.",
+    "questions": [
+      {
+        "id": "t-b1-08-l1",
+        "type": "mc",
+        "promptDe": "Was wird in einer WG gemeinsam benutzt?",
+        "options": [
+          "die Zimmer",
+          "Küche und Bad",
+          "nur der Kühlschrank"
+        ],
+        "answer": "Küche und Bad",
+        "explanationAr": "الدليل في النص: «Jeder hat ein eigenes Zimmer; Küche und Bad werden gemeinsam benutzt»."
+      },
+      {
+        "id": "t-b1-08-l2",
+        "type": "mc",
+        "promptDe": "Wie hat sich Sofias Meinung verändert?",
+        "options": [
+          "Erst begeistert, jetzt skeptisch.",
+          "Erst skeptisch, jetzt zufrieden.",
+          "Sie war immer dagegen."
+        ],
+        "answer": "Erst skeptisch, jetzt zufrieden.",
+        "explanationAr": "الدليل في النص: «Am Anfang war ich skeptisch … Inzwischen möchte sie es nicht anders haben»."
+      },
+      {
+        "id": "t-b1-08-l3",
+        "type": "mc",
+        "promptDe": "Wie löst Sofias WG Konflikte?",
+        "options": [
+          "Jeder putzt, wann er will.",
+          "Mit einem Putzplan und einem monatlichen Gespräch beim Essen.",
+          "Die Vermieterin entscheidet."
+        ],
+        "answer": "Mit einem Putzplan und einem monatlichen Gespräch beim Essen.",
+        "explanationAr": "الدليل في النص: «einen Putzplan an der Kühlschranktür und einmal im Monat ein gemeinsames Abendessen, bei dem alle Probleme offen angesprochen werden»."
+      },
+      {
+        "id": "t-b1-08-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Text ist nicht jeder für das WG-Leben gemacht.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Nicht jeder ist für das WG-Leben gemacht»."
+      },
+      {
+        "id": "t-b1-08-l5",
+        "type": "mc",
+        "promptDe": "„Wer viel Ruhe braucht, wird sich schwertun“ bedeutet:",
+        "options": [
+          "Er wird Schwierigkeiten haben.",
+          "Er wird schwer arbeiten müssen.",
+          "Er wird viel schlafen."
+        ],
+        "answer": "Er wird Schwierigkeiten haben.",
+        "explanationAr": "sich schwertun (mit etwas) = يجد صعوبة. المشتِّت الثاني يلعب على معنى schwer الحرفي."
+      }
+    ]
+  },
+  "t-b1-09": {
+    "de": "Jeder kann etwas für die Umwelt tun – das hört man oft. Aber was bringt es wirklich, wenn eine einzelne Person ihr Verhalten ändert? Diese Frage hat sich auch Familie Yilmaz gestellt und beschlossen, es ein Jahr lang auszuprobieren.\n\nDer erste Schritt war der Verkehr. Herr Yilmaz fährt jetzt mit dem Rad zur Arbeit, sieben Kilometer hin und zurück. „Im Winter war das hart“, gibt er zu, „aber ich bin fitter geworden und spare jeden Monat Geld für Benzin und Parkplatz.“ Das Auto steht jetzt meistens in der Garage und wird nur noch für größere Einkäufe oder Ausflüge benutzt.\n\nDer zweite Schritt betraf die Küche. Die Familie kauft weniger Fleisch und dafür mehr Gemüse vom Wochenmarkt. Lebensmittel werden geplant eingekauft, damit weniger im Müll landet. Die Tochter, 14, hat eine Liste am Kühlschrank angebracht, auf der steht, was zuerst gegessen werden muss. „Früher haben wir jede Woche Sachen weggeworfen“, sagt Frau Yilmaz. „Jetzt fast nie.“\n\nDer dritte Schritt war der schwierigste: weniger kaufen. Neue Kleidung nur, wenn alte kaputt ist; Geräte reparieren lassen statt neu anschaffen; Geschenke lieber selbst machen. „Das war eine Umstellung“, sagt die Tochter. „Aber ehrlich gesagt vermisse ich nichts.“\n\nOb die Familie damit das Klima rettet? Natürlich nicht allein. Aber sie hat gemerkt, dass die Veränderungen ihr Leben nicht schlechter, sondern in vielen Punkten besser gemacht haben – gesünder, günstiger und ruhiger. Und wenn Nachbarn fragen, wie sie das machen, erzählen sie es gern. Vielleicht ist genau das der größte Effekt.",
+    "ar": "عائلة تجرّب عاماً من التغييرات البيئية: الدراجة بدل السيارة، لحم أقلّ وتخطيط للطعام بلا هدر، وشراء أقلّ مع الإصلاح بدل الاستبدال. لم تنقذ المناخ وحدها، لكن حياتها صارت أصحّ وأرخص وأهدأ — وربما أثرها الأكبر أنها تُلهم الجيران.",
+    "questions": [
+      {
+        "id": "t-b1-09-l1",
+        "type": "mc",
+        "promptDe": "Wofür benutzt die Familie das Auto noch?",
+        "options": [
+          "für den täglichen Weg zur Arbeit",
+          "für größere Einkäufe und Ausflüge",
+          "gar nicht mehr"
+        ],
+        "answer": "für größere Einkäufe und Ausflüge",
+        "explanationAr": "الدليل في النص: «wird nur noch für größere Einkäufe oder Ausflüge benutzt»."
+      },
+      {
+        "id": "t-b1-09-l2",
+        "type": "mc",
+        "promptDe": "Wozu dient die Liste am Kühlschrank?",
+        "options": [
+          "um zu wissen, was zuerst gegessen werden muss",
+          "um Rezepte zu sammeln",
+          "um die Einkäufe zu bezahlen"
+        ],
+        "answer": "um zu wissen, was zuerst gegessen werden muss",
+        "explanationAr": "«auf der steht, was zuerst gegessen werden muss» — لتقليل الهدر."
+      },
+      {
+        "id": "t-b1-09-l3",
+        "type": "mc",
+        "promptDe": "Welcher Schritt war laut Text der schwierigste?",
+        "options": [
+          "mit dem Rad zu fahren",
+          "weniger Fleisch zu essen",
+          "weniger zu kaufen"
+        ],
+        "answer": "weniger zu kaufen",
+        "explanationAr": "الدليل في النص: «Der dritte Schritt war der schwierigste: weniger kaufen»."
+      },
+      {
+        "id": "t-b1-09-l4",
+        "type": "truefalse",
+        "promptDe": "Die Familie glaubt, dass sie allein das Klima rettet.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Ob die Familie damit das Klima rettet? Natürlich nicht allein»."
+      },
+      {
+        "id": "t-b1-09-l5",
+        "type": "mc",
+        "promptDe": "Was ist laut Schluss vielleicht der größte Effekt?",
+        "options": [
+          "das gesparte Geld",
+          "dass die Familie anderen davon erzählt",
+          "die bessere Fitness"
+        ],
+        "answer": "dass die Familie anderen davon erzählt",
+        "explanationAr": "الدليل في النص: «wenn Nachbarn fragen, wie sie das machen, erzählen sie es gern. Vielleicht ist genau das der größte Effekt»."
+      }
+    ]
+  },
+  "t-b1-10": {
+    "de": "Neulich gab es im Büro einen Streit zwischen meinem Kollegen Tobias und mir. Es ging um ein Projekt, an dem wir seit Wochen gemeinsam arbeiten. In der Besprechung mit der Chefin stellte Tobias die Ergebnisse vor – und sprach dabei nur von „seinen“ Ideen. Meinen Namen erwähnte er kein einziges Mal.\n\nIch war so wütend, dass ich ihn direkt nach der Besprechung vor allen Kollegen zur Rede stellte. Das war ein Fehler. Tobias fühlte sich angegriffen, wurde laut, und am Ende standen wir beide schlecht da. Die Kollegen schauten peinlich berührt auf ihre Bildschirme.\n\nAm nächsten Tag habe ich ihn gefragt, ob wir in Ruhe reden können. Wir sind in die Kantine gegangen, und ich habe ihm erklärt, wie es sich für mich angefühlt hat: als ob meine Arbeit unsichtbar wäre. Tobias war überrascht. Er sagte, er habe die Ideen gar nicht bewusst als seine eigenen dargestellt – er sei einfach nervös gewesen und habe schnell reden wollen. Er entschuldigte sich und schrieb noch am selben Tag eine E-Mail an die Chefin, in der er meinen Anteil klar benannte.\n\nHeute arbeiten wir wieder gut zusammen, vielleicht sogar besser als vorher. Ich habe aus der Sache zwei Dinge gelernt. Erstens: Kritik gehört nicht vor Publikum, sondern in ein Gespräch unter vier Augen. Zweitens: Was wie Absicht aussieht, ist oft nur Gedankenlosigkeit. Wer das im Kopf behält, spart sich viel Ärger.",
+    "ar": "خلاف مكتبي: توبياس عرض نتائج مشروع مشترك ونسبها لنفسه. الراوي واجهه أمام الجميع فساءت الأمور. في اليوم التالي تحدّثا بهدوء؛ تبيّن أن توبياس كان متوتراً لا متعمّداً، فاعتذر وأرسل رسالة للمديرة توضّح دور الراوي. الدرسان: النقد على انفراد، وما يبدو قصداً غالباً طيش.",
+    "questions": [
+      {
+        "id": "t-b1-10-l1",
+        "type": "mc",
+        "promptDe": "Worüber hat sich der Erzähler geärgert?",
+        "options": [
+          "Tobias hat das Projekt allein gemacht.",
+          "Tobias hat in der Besprechung seinen Anteil nicht erwähnt.",
+          "Tobias hat die Chefin kritisiert."
+        ],
+        "answer": "Tobias hat in der Besprechung seinen Anteil nicht erwähnt.",
+        "explanationAr": "«sprach dabei nur von „seinen“ Ideen. Meinen Namen erwähnte er kein einziges Mal». الخيار الأول يناقض «gemeinsam arbeiten»."
+      },
+      {
+        "id": "t-b1-10-l2",
+        "type": "mc",
+        "promptDe": "Warum war die Reaktion direkt nach der Besprechung ein Fehler?",
+        "options": [
+          "weil der Erzähler zu leise war",
+          "weil er Tobias vor allen Kollegen zur Rede stellte",
+          "weil er nichts gesagt hat"
+        ],
+        "answer": "weil er Tobias vor allen Kollegen zur Rede stellte",
+        "explanationAr": "الدليل في النص: «vor allen Kollegen zur Rede stellte. Das war ein Fehler. Tobias fühlte sich angegriffen»."
+      },
+      {
+        "id": "t-b1-10-l3",
+        "type": "mc",
+        "promptDe": "Wie erklärt Tobias sein Verhalten?",
+        "options": [
+          "Er wollte die Ideen absichtlich für sich beanspruchen.",
+          "Er war nervös und wollte schnell reden.",
+          "Er wusste nicht, dass der Erzähler mitgearbeitet hat."
+        ],
+        "answer": "Er war nervös und wollte schnell reden.",
+        "explanationAr": "«er sei einfach nervös gewesen und habe schnell reden wollen» — Konjunktiv I للكلام المنقول."
+      },
+      {
+        "id": "t-b1-10-l4",
+        "type": "truefalse",
+        "promptDe": "Tobias hat der Chefin noch am selben Tag eine E-Mail geschrieben.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «schrieb noch am selben Tag eine E-Mail an die Chefin, in der er meinen Anteil klar benannte»."
+      },
+      {
+        "id": "t-b1-10-l5",
+        "type": "mc",
+        "promptDe": "„ein Gespräch unter vier Augen“ ist:",
+        "options": [
+          "ein Gespräch zu zweit, ohne andere",
+          "ein Gespräch mit vier Personen",
+          "ein Gespräch per Videokonferenz"
+        ],
+        "answer": "ein Gespräch zu zweit, ohne andere",
+        "explanationAr": "unter vier Augen = على انفراد (عينان + عينان = شخصان). في مقابل «vor Publikum»."
+      }
+    ]
+  }
+}

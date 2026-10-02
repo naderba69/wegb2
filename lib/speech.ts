@@ -126,6 +126,17 @@ export function listenDe(
   };
 }
 
+/** قرارُ استعمالِ التعرّفِ السحابي — لا يُستعمَلُ أبداً بلا إذنٍ صريحٍ في الإعدادات */
+export function cloudSpeechEnabled(): boolean {
+  if (typeof window === "undefined") return false;
+  return loadProgress().settings.cloudSpeech === true;
+}
+
+/** متاحٌ تقنياً **و** مأذونٌ صراحةً — هذا وحده ما يفتح الميكروفون السحابي */
+export function cloudSpracheFrei(): boolean {
+  return recognitionAvailable() && cloudSpeechEnabled();
+}
+
 export function recognitionAvailable(): boolean {
   if (typeof window === "undefined") return false;
   const W = window as unknown as Record<string, unknown>;

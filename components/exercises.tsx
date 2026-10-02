@@ -5,7 +5,7 @@
 import { useState } from "react";
 import type { Exercise } from "@/lib/types";
 import { grader, deepReview, konfidenz, diffWoerter } from "@/lib/grader";
-import { addFehlerNow } from "@/lib/store";
+import { addFehlerNow, logSicherheitNow } from "@/lib/store";
 import { speakAny } from "@/lib/speech";
 import { VertrauensBalken, AntwortDiff } from "./ui";
 import { LehrerDiff } from "./lehrer";
@@ -24,6 +24,12 @@ interface ItemState {
   versuche: number;
   gezaehlt: boolean;
   retry?: boolean;
+  /** 🔁 umformung: تشخيصٌ موجَّهٌ بلا كشفِ الجواب يُعرَضُ قبلَ المحاولةِ الأخيرة */
+  hinweis?: string;
+  /** order: فهارسُ الرموزِ المختارةِ لتمييزِ المكرَّر */
+  chosenIdx?: number[];
+  /** 🎯 تقييمُ الثقةِ قبلَ الإجابة (mc): true متأكّد، false غيرُ متأكّد، undefined لم يُقيَّم */
+  sicher?: boolean;
 }
 
 /** عارض التمارين — تصحيح فوري عبر Grader (قابل للاستبدال بـ LLM) */
@@ -56,20 +62,27 @@ export default function ExerciseSet({ items, onPoints }: Props) {
         versuche,
         gezaehlt: true,
         feedback: halb ? "✅ أصبتَ من المحاولة الثانية — نصف النقاط" : res.feedbackAr,
+        sicher: st?.sicher,
       });
       if (!gezaehlt) onPoints?.(halb ? Math.round(res.maxPoints / 2) : res.points, res.maxPoints);
+      if (!gezaehlt && ex.type === "mc" && st?.sicher !== undefined) logSicherheitNow({ t: new Date().toISOString(), id: ex.id, sicher: st.sicher, correct: !halb });
       return;
     }
 
     if (versuche < 1) {
       // 🔁 خانئ — إعادة محاولة أخيرة بلا كشف
-      setState(ex.id, { response, checked: false, correct: false, versuche: 1, gezaehlt, retry: true });
+      // للتحويل: التشخيصُ الموجَّهُ («ما زلتَ تكتبُ …» / «ينقصك …») يُعطى الآن — هو تلميحٌ لا كشف؛
+      // أمّا رسالةُ «النموذج: …» فتكشفُ الجوابَ فلا تُعرَضُ قبلَ المحاولةِ الأخيرة
+      const hinweis = ex.type === "umformung" && res.feedbackAr && !res.feedbackAr.includes("النموذج:") ? res.feedbackAr : undefined;
+      setState(ex.id, { response, checked: false, correct: false, versuche: 1, gezaehlt, retry: true, hinweis, sicher: st?.sicher });
       return;
     }
 
     // ❌ الكشف النهائي: Diff + ثقة + فحص المدرّس + دفتر الأخطاء
-    setState(ex.id, { response, checked: true, correct: false, versuche, gezaehlt: true, feedback: res.feedbackAr });
+    setState(ex.id, { response, checked: true, correct: false, versuche, gezaehlt: true, feedback: res.feedbackAr, sicher: st?.sicher });
     if (!gezaehlt) onPoints?.(0, res.maxPoints);
+    const ueberkonfident = ex.type === "mc" && st?.sicher === true;
+    if (!gezaehlt && ex.type === "mc" && st?.sicher !== undefined) logSicherheitNow({ t: new Date().toISOString(), id: ex.id, sicher: st.sicher, correct: false });
     const given = givenOf({ response, checked: true, correct: false, versuche, gezaehlt: true });
     addFehlerNow({
       falsch: given && given.trim() ? given : ex.promptDe,
@@ -77,10 +90,12 @@ export default function ExerciseSet({ items, onPoints }: Props) {
       art:
         ex.type === "dictation" || ex.type === "translate"
           ? "schreibweise"
+          : ex.type === "umformung"
+            ? "konstruktion"
           : ex.type === "fill"
             ? "konstruktion"
             : "wortstellung",
-      ar: ex.explanationAr ?? "",
+      ar: (ueberkonfident ? "⚠️ ثقةٌ خاطئة — كنتَ متأكّداً: " : "") + (ex.explanationAr ?? ""),
       quelle: ex.promptDe.slice(0, 42),
     });
   };
@@ -88,11 +103,11 @@ export default function ExerciseSet({ items, onPoints }: Props) {
   // مراجعة المدرّس العميقة للأجوبة الكتابية الخاطئة (ترجمة/تسميع/ملء)
   const deepOf = (ex: Exercise, st?: ItemState) => {
     if (!st?.checked || st.correct) return null;
-    if (ex.type !== "translate" && ex.type !== "dictation" && ex.type !== "fill") return null;
+    if (ex.type !== "translate" && ex.type !== "dictation" && ex.type !== "fill" && ex.type !== "umformung") return null;
     return deepReview(givenOf(st), refOf(ex));
   };
 
-  const getippt = (ex: Exercise) => ex.type === "fill" || ex.type === "dictation" || ex.type === "translate";
+  const getippt = (ex: Exercise) => ex.type === "fill" || ex.type === "dictation" || ex.type === "translate" || ex.type === "umformung";
 
   return (
     <div style={{ display: "grid", gap: "1rem" }}>
@@ -126,6 +141,17 @@ export default function ExerciseSet({ items, onPoints }: Props) {
               )}
             </div>
 
+            {ex.type === "mc" && ex.options && !st?.checked && (
+              <div data-testid="sicherheit" style={{ display: "flex", gap: "0.4rem", alignItems: "center", marginBottom: "0.5rem", fontSize: "0.85rem", flexWrap: "wrap" }}>
+                <span style={{ color: "var(--color-ink2)" }}>قبلَ أن تجيب — كم أنت متأكّد؟</span>
+                <button type="button" className="btn btn-ghost" data-testid="sicher-ja" aria-pressed={st?.sicher === true}
+                  style={{ padding: "0.15rem 0.6rem", background: st?.sicher === true ? "var(--color-gold-soft)" : "white" }}
+                  onClick={() => setState(ex.id, { ...(st ?? emptySt(st)), sicher: true })}>👍 متأكّد</button>
+                <button type="button" className="btn btn-ghost" data-testid="sicher-nein" aria-pressed={st?.sicher === false}
+                  style={{ padding: "0.15rem 0.6rem", background: st?.sicher === false ? "var(--color-gold-soft)" : "white" }}
+                  onClick={() => setState(ex.id, { ...(st ?? emptySt(st)), sicher: false })}>🤔 غيرُ متأكّد</button>
+              </div>
+            )}
             {ex.type === "mc" && ex.options && (
               <div style={{ display: "grid", gap: "0.4rem" }}>
                 {ex.options.map((opt) => {
@@ -141,7 +167,7 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                         direction: "ltr",
                       }}
                       disabled={st?.checked}
-                      onClick={() => setState(ex.id, { ...emptySt(st), response: opt })}
+                      onClick={() => setState(ex.id, { ...emptySt(st), response: opt, sicher: st?.sicher })}
                     >
                       {opt}
                     </button>
@@ -160,7 +186,7 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                       className="btn btn-ghost"
                       style={{ background: selected ? "var(--color-gold-soft)" : "white" }}
                       disabled={st?.checked}
-                      onClick={() => setState(ex.id, { ...emptySt(st), response: opt })}
+                      onClick={() => setState(ex.id, { ...emptySt(st), response: opt, sicher: st?.sicher })}
                     >
                       {opt}
                     </button>
@@ -169,11 +195,27 @@ export default function ExerciseSet({ items, onPoints }: Props) {
               </div>
             )}
 
-            {(ex.type === "fill" || ex.type === "dictation" || ex.type === "translate") && (
+            {(ex.type === "fill" || ex.type === "dictation" || ex.type === "translate" || ex.type === "umformung") && (
               <>
+                {ex.type === "umformung" && ex.quelleDe && (
+                  <div data-testid="umformung-quelle" style={{ marginBottom: "0.5rem", padding: "0.5rem 0.7rem", background: "var(--color-paper2)", borderInlineStart: "3px solid var(--color-gold)", borderRadius: "6px" }}>
+                    <span style={{ fontSize: "0.72rem", color: "var(--color-ink2)", display: "block" }}>🔁 حوِّل هذه الجملة:</span>
+                    <De style={{ fontWeight: 700 }}>{ex.quelleDe}</De>
+                  </div>
+                )}
                 {ex.text && (
-                  <div style={{ marginBottom: "0.5rem" }}>
+                  <div style={{ marginBottom: "0.5rem" }} data-testid="ex-text">
                     <De>{ex.text.replace("___", "______")}</De>
+                    {ex.id.startsWith("pl-hoer") && (
+                      <button
+                        type="button"
+                        className="chip"
+                        style={{ marginTop: "0.3rem", cursor: "pointer" }}
+                        onClick={() => speakAny(ex.text!)}
+                      >
+                        🔊 استمع إلى المقطع
+                      </button>
+                    )}
                   </div>
                 )}
                 {ex.type === "dictation" && (
@@ -189,7 +231,7 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                 <input
                   className="field"
                   style={{ direction: "ltr", maxWidth: "30rem" }}
-                  placeholder={ex.type === "dictation" ? "Schreibe, was du hörst …" : ex.type === "translate" ? "Übersetze hier …" : "Antwort …"}
+                  placeholder={ex.type === "dictation" ? "Schreibe, was du hörst …" : ex.type === "translate" ? "Übersetze hier …" : ex.type === "umformung" ? "Schreibe den umgeformten Satz …" : "Antwort …"}
                   value={(st?.response as string) ?? ""}
                   disabled={st?.checked}
                   onChange={(e) =>
@@ -217,6 +259,7 @@ export default function ExerciseSet({ items, onPoints }: Props) {
             {st?.retry && !st.checked && (
               <div className="card" style={{ padding: "0.5rem 0.8rem", marginTop: "0.55rem", background: "var(--color-gold-soft)", fontSize: "0.85rem" }}>
                 🔁 <strong>قريب… لكن غير دقيق.</strong> لديك <strong>محاولة أخيرة بلا كشف</strong> — إن أصبتَ فنصف النقاط.
+                {st.hinweis && <div data-testid="umformung-hinweis" style={{ marginTop: "0.3rem", color: "var(--color-cola)" }}>🎯 {st.hinweis}</div>}
               </div>
             )}
 
@@ -232,6 +275,12 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                   <span style={{ color: st.correct ? "var(--color-a1)" : "var(--color-cola)" }}>
                     {st.feedback}
                   </span>
+                    {ex.type === "mc" && !st.correct && st.sicher === true && (
+                      <div data-testid="ueberkonfidenz" style={{ marginTop: "0.3rem", color: "var(--color-cola)", fontWeight: 700 }}>⚠️ كنتَ متأكّداً وأخطأت — هذه أولى ما يُراجَع؛ سُجّلت في دفتر الأخطاء بعلامة «ثقة خاطئة».</div>
+                    )}
+                    {ex.type === "mc" && st.correct && st.sicher === false && (
+                      <div data-testid="unterkonfidenz" style={{ marginTop: "0.3rem", color: "var(--color-ink2)" }}>🙂 كنتَ غيرَ متأكّد وأصبت — تعرفُ أكثر مما تظنّ.</div>
+                    )}
                   {/* 💡 الثقة النهائية + 🔍 المقارنة كلمةً كلمة */}
                   {getippt(ex) && (
                     <div style={{ marginTop: "0.3rem" }}>
@@ -277,6 +326,7 @@ function emptySt(st?: ItemState): ItemState {
     versuche: st?.versuche ?? 0,
     gezaehlt: st?.gezaehlt ?? false,
     retry: st?.retry,
+    chosenIdx: st?.chosenIdx,
   };
 }
 
@@ -291,19 +341,21 @@ function OrderWords({
 }) {
   const answer = Array.isArray(ex.answer) ? ex.answer : [ex.answer];
   // كلمات مبعثرة ثابتة (hash بسيط لخلط ثابت)
-  const pool = [...answer].sort((a, b) => a.localeCompare(b));
+  // كلمات مبعثرة ثابتة؛ الرموزُ المكرَّرة (مثل «wir» مرتين) تُميَّز بفهرسِها لا بنصِّها
+  const pool = answer.map((w, i) => ({ w, i })).sort((a, b) => a.w.localeCompare(b.w) || a.i - b.i);
   const chosen = (st?.response as string[]) ?? [];
+  const chosenIdx = st?.chosenIdx ?? [];
+  const belegt = (i: number) => chosenIdx.includes(i);
 
-  const add = (w: string) => {
-    if (st?.checked) return;
-    if (chosen.includes(w)) return;
-    setState(ex.id, { ...emptySt(st), response: [...chosen, w] });
+  const add = (w: string, i: number) => {
+    if (st?.checked || belegt(i)) return;
+    setState(ex.id, { ...emptySt(st), response: [...chosen, w], chosenIdx: [...chosenIdx, i] });
   };
   const remove = (idx: number) => {
     if (st?.checked) return;
-    const next = [...chosen];
-    next.splice(idx, 1);
-    setState(ex.id, { ...emptySt(st), response: next });
+    const next = [...chosen], nextIdx = [...chosenIdx];
+    next.splice(idx, 1); nextIdx.splice(idx, 1);
+    setState(ex.id, { ...emptySt(st), response: next, chosenIdx: nextIdx });
   };
 
   return (
@@ -339,13 +391,13 @@ function OrderWords({
         ))}
       </div>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", direction: "ltr" }}>
-        {pool.map((w) => (
+        {pool.map(({ w, i }) => (
           <button
-            key={w}
+            key={`${w}-${i}`}
             className="chip"
-            style={{ cursor: "pointer", opacity: chosen.includes(w) ? 0.35 : 1 }}
-            disabled={st?.checked || chosen.includes(w)}
-            onClick={() => add(w)}
+            style={{ cursor: "pointer", opacity: belegt(i) ? 0.35 : 1 }}
+            disabled={st?.checked || belegt(i)}
+            onClick={() => add(w, i)}
           >
             {w}
           </button>

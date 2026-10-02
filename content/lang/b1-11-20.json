@@ -1,0 +1,649 @@
+{
+  "t-b1-11": {
+    "de": "Seit einem Monat helfe ich jeden Samstag bei der Tafel. Die Tafel ist ein Verein, der Lebensmittel sammelt, die Supermärkte nicht mehr verkaufen können – Brot vom Vortag, Gemüse mit kleinen Fehlern, Joghurt kurz vor dem Ablaufdatum – und sie an Menschen verteilt, die wenig Geld haben.\n\nMein Tag beginnt um sieben Uhr. Zuerst fahren wir mit einem Kleinbus zu vier Supermärkten und holen die Kisten ab. Danach sortieren wir alles in der Ausgabestelle: Was ist noch gut, was muss weg? Um zehn Uhr öffnen wir die Tür, und die ersten Kunden warten schon. Jeder bekommt eine Nummer und darf dann aus dem Angebot auswählen. Pro Person gibt es einen kleinen Beitrag von einem Euro, damit es nicht wie ein Almosen wirkt.\n\nAm Anfang hatte ich Angst, etwas Falsches zu sagen. Aber die meisten Kunden sind freundlich und dankbar, und viele kommen seit Jahren. Eine ältere Dame bringt jedes Mal selbstgebackene Kekse für die Helfer mit. Ein junger Vater erzählt mir jede Woche, was seine Tochter in der Schule gelernt hat. Man lernt schnell, dass Armut viele Gesichter hat – Rentner, Studenten, Alleinerziehende, Menschen mit Arbeit, deren Lohn einfach nicht reicht.\n\nWas mir am meisten gefällt: Niemand fragt, warum du hier bist. Man packt an, man lacht zusammen, und um dreizehn Uhr ist alles aufgeräumt. Ich gehe müde nach Hause, aber mit dem Gefühl, dass der Samstag Sinn hatte. Wenn du auch Zeit hast: Die Tafel braucht immer Helfer, besonders Leute mit Führerschein.",
+    "ar": "تجربة تطوّع في «التافل» (جمعية توزّع فائض المتاجر على محدودي الدخل): جمع الصناديق صباحاً، فرز، ثم توزيع بأرقام ومساهمة رمزية بيورو. الزبائن ودودون، والفقر له وجوه كثيرة: متقاعدون وطلاب وعاملون بأجر لا يكفي. الشعور بأن السبت كان له معنى.",
+    "questions": [
+      {
+        "id": "t-b1-11-l1",
+        "type": "mc",
+        "promptDe": "Was macht die Tafel?",
+        "options": [
+          "Sie verkauft günstige Lebensmittel an alle.",
+          "Sie verteilt Lebensmittel, die Supermärkte nicht mehr verkaufen, an Bedürftige.",
+          "Sie kocht Essen für Restaurants."
+        ],
+        "answer": "Sie verteilt Lebensmittel, die Supermärkte nicht mehr verkaufen, an Bedürftige.",
+        "explanationAr": "الدليل في النص: «der Lebensmittel sammelt, die Supermärkte nicht mehr verkaufen können … und sie an Menschen verteilt, die wenig Geld haben»."
+      },
+      {
+        "id": "t-b1-11-l2",
+        "type": "mc",
+        "promptDe": "Warum zahlen die Kunden einen Euro?",
+        "options": [
+          "weil die Tafel Gewinn machen will",
+          "damit es nicht wie ein Almosen wirkt",
+          "um die Fahrer zu bezahlen"
+        ],
+        "answer": "damit es nicht wie ein Almosen wirkt",
+        "explanationAr": "«einen kleinen Beitrag von einem Euro, damit es nicht wie ein Almosen wirkt». Almosen = صدقة."
+      },
+      {
+        "id": "t-b1-11-l3",
+        "type": "mc",
+        "promptDe": "Was hat der Erzähler über Armut gelernt?",
+        "options": [
+          "Nur Arbeitslose kommen zur Tafel.",
+          "Armut betrifft ganz verschiedene Menschen, auch Berufstätige.",
+          "Arme Menschen sind meistens unfreundlich."
+        ],
+        "answer": "Armut betrifft ganz verschiedene Menschen, auch Berufstätige.",
+        "explanationAr": "الدليل في النص: «Armut viele Gesichter hat – Rentner, Studenten, Alleinerziehende, Menschen mit Arbeit, deren Lohn einfach nicht reicht»."
+      },
+      {
+        "id": "t-b1-11-l4",
+        "type": "truefalse",
+        "promptDe": "Der Erzähler hatte von Anfang an keine Unsicherheit im Umgang mit den Kunden.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Am Anfang hatte ich Angst, etwas Falsches zu sagen»."
+      },
+      {
+        "id": "t-b1-11-l5",
+        "type": "fill",
+        "promptDe": "Man ___ an, man lacht zusammen, und um dreizehn Uhr ist alles aufgeräumt.",
+        "answer": [
+          "packt"
+        ],
+        "explanationAr": "anpacken = يشمّر ويعمل. من الفقرة الأخيرة."
+      }
+    ]
+  },
+  "t-b1-12": {
+    "de": "Mein Kurskollege Amir lernt Vokabeln nur mit einer App auf dem Handy. Ich dagegen schreibe Karteikarten von Hand. Neulich haben wir darüber gestritten, was besser ist – und am Ende beschlossen, es zwei Wochen lang zu testen: Jeder lernt dieselben 100 Wörter, aber mit der Methode des anderen.\n\nDie App hat mich zuerst begeistert. Sie erinnert einen automatisch, wann man wiederholen soll, spricht die Wörter vor und zeigt Bilder. Man kann in der Bahn oder in der Warteschlange lernen, fünf Minuten hier, fünf Minuten dort. Aber ich habe gemerkt, dass ich oft nur auf „Gewusst“ tippe, ohne wirklich nachzudenken. Nach einer Woche kannte ich viele Wörter nur, wenn ich das Bild dazu sah.\n\nAmir ging es mit den Karten ähnlich – nur umgekehrt. Das Schreiben hat ihn genervt, und er hat die Karten zweimal zu Hause vergessen. Dafür sagte er, dass er sich die Wörter besser merken konnte, die er selbst geschrieben hatte. Und er fing an, auf die Rückseite eigene Beispielsätze zu schreiben, was die App nicht anbietet.\n\nDas Ergebnis nach zwei Wochen: Wir hatten beide fast gleich viele Wörter behalten. Der Unterschied lag woanders. Mit der App hatte ich mehr Wörter öfter gesehen; mit den Karten hatte Amir weniger Wörter tiefer gelernt.\n\nUnsere Lösung: Wir kombinieren jetzt beides. Neue, schwierige Wörter kommen auf eine Karte mit eigenem Satz. Zum schnellen Wiederholen benutzen wir die App. Der Streit ist beendet – und wir haben nebenbei 100 Wörter gelernt.",
+    "ar": "تجربة أسبوعين: أمير يتعلّم بتطبيق، والراوي ببطاقات مكتوبة بخط اليد، فتبادلا الطريقتين. التطبيق مريح ويذكّر بالمراجعة لكنه يغري بالنقر دون تفكير؛ البطاقات مزعجة لكنها ترسّخ أعمق. النتيجة متقاربة، والحلّ: الجمع بينهما.",
+    "questions": [
+      {
+        "id": "t-b1-12-l1",
+        "type": "mc",
+        "promptDe": "Wie sah der Test aus?",
+        "options": [
+          "Jeder lernte mit seiner eigenen Methode.",
+          "Jeder lernte dieselben Wörter mit der Methode des anderen.",
+          "Beide lernten nur mit der App."
+        ],
+        "answer": "Jeder lernte dieselben Wörter mit der Methode des anderen.",
+        "explanationAr": "الدليل في النص: «Jeder lernt dieselben 100 Wörter, aber mit der Methode des anderen»."
+      },
+      {
+        "id": "t-b1-12-l2",
+        "type": "mc",
+        "promptDe": "Welches Problem hatte die Erzählerin mit der App?",
+        "options": [
+          "Die App war zu teuer.",
+          "Sie tippte oft auf „Gewusst“, ohne nachzudenken.",
+          "Die App hatte keine Bilder."
+        ],
+        "answer": "Sie tippte oft auf „Gewusst“, ohne nachzudenken.",
+        "explanationAr": "«ich oft nur auf „Gewusst“ tippe, ohne wirklich nachzudenken». الخيار الثالث يناقض «zeigt Bilder»."
+      },
+      {
+        "id": "t-b1-12-l3",
+        "type": "mc",
+        "promptDe": "Was hat Amir mit den Karten zusätzlich gemacht?",
+        "options": [
+          "Er hat sie fotografiert.",
+          "Er hat eigene Beispielsätze auf die Rückseite geschrieben.",
+          "Er hat sie an die Wand gehängt."
+        ],
+        "answer": "Er hat eigene Beispielsätze auf die Rückseite geschrieben.",
+        "explanationAr": "الدليل في النص: «fing an, auf die Rückseite eigene Beispielsätze zu schreiben, was die App nicht anbietet»."
+      },
+      {
+        "id": "t-b1-12-l4",
+        "type": "truefalse",
+        "promptDe": "Nach zwei Wochen hatten beide fast gleich viele Wörter behalten.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Wir hatten beide fast gleich viele Wörter behalten»."
+      },
+      {
+        "id": "t-b1-12-l5",
+        "type": "mc",
+        "promptDe": "Was bedeutet „weniger Wörter tiefer gelernt“?",
+        "options": [
+          "Er hat weniger Wörter, aber gründlicher gelernt.",
+          "Er hat die Wörter leiser gesprochen.",
+          "Er hat gar keine Wörter gelernt."
+        ],
+        "answer": "Er hat weniger Wörter, aber gründlicher gelernt.",
+        "explanationAr": "tiefer = بعمق أكبر، مقابل «mehr Wörter öfter gesehen» عند التطبيق."
+      }
+    ]
+  },
+  "t-b1-13": {
+    "de": "Bevor ich mich bei der Firma vorstellte, habe ich das Gespräch mit meiner Freundin Nadia geübt. Sie arbeitet in der Personalabteilung eines großen Unternehmens und weiß, welche Fragen gestellt werden. Ich dachte zuerst, das sei übertrieben. Heute weiß ich: Ohne diese Übung hätte ich die Stelle wahrscheinlich nicht bekommen.\n\nNadia stellte mir die typischen Fragen: „Erzählen Sie etwas über sich.“ – „Warum wollen Sie bei uns arbeiten?“ – „Was sind Ihre Schwächen?“ Bei der ersten Frage redete ich fünf Minuten lang über meine Kindheit. Nadia unterbrach mich: „Die wollen keine Biografie, sondern in zwei Minuten wissen, was du kannst und warum du zu ihnen passt.“ Bei der Frage nach den Schwächen sagte ich, ich hätte keine. Sie lachte. „Das glaubt dir niemand. Nenn eine echte Schwäche und sag, wie du damit umgehst.“\n\nWir haben das Gespräch dreimal wiederholt. Beim dritten Mal war ich viel ruhiger, und meine Antworten waren kürzer und klarer. Nadia gab mir noch zwei Tipps: Vorher Fragen über die Firma vorbereiten – das zeigt Interesse – und am Ende nachfragen, wie es weitergeht.\n\nIm echten Gespräch kamen fast genau dieselben Fragen. Ich war trotzdem nervös, aber ich wusste, was ich sagen wollte. Als ich am Ende fragte, welche Projekte das Team im nächsten Jahr plane, sah ich, dass die Chefin überrascht lächelte. Zwei Tage später kam die Zusage.\n\nMein Rat an alle, die ein Vorstellungsgespräch haben: Übt es laut, mit einer Person, die ehrlich zu euch ist. Nicht, um Antworten auswendig zu lernen, sondern um zu merken, wo ihr zu lang, zu unklar oder zu unsicher seid.",
+    "ar": "الراوي تدرّب على مقابلة عمل مع صديقته العاملة في الموارد البشرية. أخطاؤه الأولى: سيرة طويلة بدل عرض موجز، وادّعاء عدم وجود نقاط ضعف. بعد ثلاث تجارب صار أهدأ وأوضح. في المقابلة الحقيقية جاءت الأسئلة ذاتها، وسؤاله عن مشاريع الفريق أثار إعجاب المديرة. النصيحة: تدرّب بصوت عالٍ مع شخص صريح.",
+    "questions": [
+      {
+        "id": "t-b1-13-l1",
+        "type": "mc",
+        "promptDe": "Warum konnte Nadia gut helfen?",
+        "options": [
+          "weil sie in derselben Firma arbeitet",
+          "weil sie in einer Personalabteilung arbeitet",
+          "weil sie Lehrerin ist"
+        ],
+        "answer": "weil sie in einer Personalabteilung arbeitet",
+        "explanationAr": "الدليل في النص: «Sie arbeitet in der Personalabteilung eines großen Unternehmens und weiß, welche Fragen gestellt werden»."
+      },
+      {
+        "id": "t-b1-13-l2",
+        "type": "mc",
+        "promptDe": "Was war das Problem bei der Antwort auf „Erzählen Sie etwas über sich“?",
+        "options": [
+          "Sie war zu kurz.",
+          "Sie war zu lang und zu persönlich.",
+          "Sie war auf Englisch."
+        ],
+        "answer": "Sie war zu lang und zu persönlich.",
+        "explanationAr": "الدليل في النص: «redete ich fünf Minuten lang über meine Kindheit … Die wollen keine Biografie»."
+      },
+      {
+        "id": "t-b1-13-l3",
+        "type": "mc",
+        "promptDe": "Was rät Nadia zur Frage nach den Schwächen?",
+        "options": [
+          "sagen, dass man keine hat",
+          "eine echte Schwäche nennen und erklären, wie man damit umgeht",
+          "das Thema wechseln"
+        ],
+        "answer": "eine echte Schwäche nennen und erklären, wie man damit umgeht",
+        "explanationAr": "«Nenn eine echte Schwäche und sag, wie du damit umgehst». الخيار الأول هو ما ضحكت منه."
+      },
+      {
+        "id": "t-b1-13-l4",
+        "type": "truefalse",
+        "promptDe": "Im echten Gespräch war der Erzähler überhaupt nicht mehr nervös.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Ich war trotzdem nervös, aber ich wusste, was ich sagen wollte»."
+      },
+      {
+        "id": "t-b1-13-l5",
+        "type": "mc",
+        "promptDe": "Wozu soll man das Gespräch laut Schluss üben?",
+        "options": [
+          "um Antworten auswendig zu lernen",
+          "um die eigenen Schwachstellen beim Antworten zu erkennen",
+          "um die Fragen der Firma zu erraten"
+        ],
+        "answer": "um die eigenen Schwachstellen beim Antworten zu erkennen",
+        "explanationAr": "الدليل في النص: «Nicht, um Antworten auswendig zu lernen, sondern um zu merken, wo ihr zu lang, zu unklar oder zu unsicher seid»."
+      }
+    ]
+  },
+  "t-b1-14": {
+    "de": "Zum Lernen gehe ich am liebsten in die Universitätsbibliothek, obwohl der Weg dorthin eine halbe Stunde dauert. Zu Hause habe ich einen Schreibtisch, Ruhe und Kaffee – und trotzdem schaffe ich dort viel weniger. Lange habe ich mich gefragt, woran das liegt.\n\nDer erste Grund ist einfach: In der Bibliothek gibt es nichts anderes zu tun. Kein Kühlschrank, der lockt, keine Wäsche, die plötzlich dringend gewaschen werden muss, kein Bett für „nur zehn Minuten“. Wenn ich mich hingesetzt habe, bleibt nur das Buch vor mir.\n\nDer zweite Grund sind die anderen. Um mich herum sitzen Menschen, die ebenfalls arbeiten. Niemand redet, alle sind konzentriert, und diese Stimmung steckt an. Wenn ich das Handy nehmen will, sehe ich die Studentin gegenüber, die seit zwei Stunden schreibt, und lege es wieder weg. Zu Hause sieht mich niemand.\n\nDer dritte Grund ist der Weg selbst. Auf der Hinfahrt überlege ich, was ich heute schaffen will; auf der Rückfahrt denke ich darüber nach, was ich gelernt habe. Der Tag hat einen Anfang und ein Ende. Zu Hause verschwimmt beides: Ich lerne ein bisschen, esse ein bisschen, schaue ein bisschen fern – und am Abend weiß ich nicht, was ich eigentlich getan habe.\n\nNatürlich geht es auch zu Hause, wenn man diszipliniert ist. Aber warum soll man es sich schwer machen? Ich habe gelernt, dass die Umgebung oft stärker ist als der gute Wille. Wer das weiß, kann sie bewusst wählen – und spart sich den Kampf gegen sich selbst.",
+    "ar": "لماذا ينجز الكاتب في مكتبة الجامعة أكثر من البيت رغم بعدها؟ ثلاثة أسباب: لا مشتّتات، حضور الآخرين المركّزين يُعدي، والطريق يعطي اليوم بداية ونهاية. الدرس: البيئة أقوى من الإرادة غالباً، فلنخترها بوعي.",
+    "questions": [
+      {
+        "id": "t-b1-14-l1",
+        "type": "mc",
+        "promptDe": "Warum lernt der Erzähler zu Hause schlechter, obwohl er dort Ruhe hat?",
+        "options": [
+          "weil es zu Hause zu laut ist",
+          "weil ihn zu Hause viele Dinge ablenken",
+          "weil er zu Hause keinen Schreibtisch hat"
+        ],
+        "answer": "weil ihn zu Hause viele Dinge ablenken",
+        "explanationAr": "«Kein Kühlschrank, der lockt, keine Wäsche … kein Bett» — في البيت كل ذلك موجود. الخيار الثالث يناقض «habe ich einen Schreibtisch»."
+      },
+      {
+        "id": "t-b1-14-l2",
+        "type": "mc",
+        "promptDe": "Was ist mit „diese Stimmung steckt an“ gemeint?",
+        "options": [
+          "Man wird in der Bibliothek krank.",
+          "Die Konzentration der anderen überträgt sich auf einen selbst.",
+          "Es ist in der Bibliothek zu warm."
+        ],
+        "answer": "Die Konzentration der anderen überträgt sich auf einen selbst.",
+        "explanationAr": "anstecken = يُعدي (مجازاً هنا). المشتِّت الأول يلعب على المعنى الطبي."
+      },
+      {
+        "id": "t-b1-14-l3",
+        "type": "mc",
+        "promptDe": "Welche Rolle spielt der Weg zur Bibliothek?",
+        "options": [
+          "Er ist nur Zeitverschwendung.",
+          "Er gibt dem Lerntag einen klaren Anfang und ein Ende.",
+          "Er dient zum Sport."
+        ],
+        "answer": "Er gibt dem Lerntag einen klaren Anfang und ein Ende.",
+        "explanationAr": "الدليل في النص: «Der Tag hat einen Anfang und ein Ende. Zu Hause verschwimmt beides»."
+      },
+      {
+        "id": "t-b1-14-l4",
+        "type": "truefalse",
+        "promptDe": "Laut Erzähler kann man auch zu Hause lernen, wenn man diszipliniert ist.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Natürlich geht es auch zu Hause, wenn man diszipliniert ist»."
+      },
+      {
+        "id": "t-b1-14-l5",
+        "type": "mc",
+        "promptDe": "Was ist die Hauptaussage des letzten Absatzes?",
+        "options": [
+          "Man sollte immer gegen sich selbst kämpfen.",
+          "Die Umgebung ist oft stärker als der Wille, deshalb sollte man sie bewusst wählen.",
+          "Bibliotheken sollten länger geöffnet sein."
+        ],
+        "answer": "Die Umgebung ist oft stärker als der Wille, deshalb sollte man sie bewusst wählen.",
+        "explanationAr": "الدليل في النص: «die Umgebung oft stärker ist als der gute Wille. Wer das weiß, kann sie bewusst wählen»."
+      }
+    ]
+  },
+  "t-b1-15": {
+    "de": "Früher habe ich fast alles im Internet bestellt: Kleidung, Bücher, sogar Lebensmittel. Es schien bequemer – kein Weg, keine Warteschlange, alles kommt bis zur Haustür. Nach einem Jahr habe ich meine Gewohnheiten geändert, und zwar aus mehreren Gründen.\n\nDer erste war der Ärger mit Rücksendungen. Eine Hose passte nicht, eine Jacke sah anders aus als auf dem Foto, ein Paket kam beschädigt an. Jedes Mal musste ich das Paket neu verpacken, ein Etikett drucken und zur Post bringen. Am Ende hatte ich mehr Zeit mit Zurückschicken verbracht als mit Einkaufen.\n\nDer zweite Grund war das Geld. Weil Bestellen so einfach ist, habe ich Dinge gekauft, die ich nicht brauchte – abends auf dem Sofa, mit zwei Klicks. Im Laden überlege ich länger, weil ich das Produkt in der Hand halte und den Preis an der Kasse wirklich bezahle.\n\nDer dritte Grund war die Stadt selbst. In meiner Straße haben in den letzten Jahren drei Geschäfte geschlossen, darunter die kleine Buchhandlung, in der ich als Kind meine ersten Bücher bekommen habe. Wenn alle nur noch online kaufen, gibt es bald keine Läden mehr – und dann fehlt etwas, das man nicht bestellen kann: ein Ort, an dem man Menschen trifft.\n\nHeute bestelle ich nur noch, was es hier nicht gibt oder was zu schwer zum Tragen ist. Alles andere kaufe ich im Laden, auch wenn es manchmal ein paar Euro mehr kostet. Ich sehe das nicht als Verzicht, sondern als Entscheidung dafür, wie meine Straße in zehn Jahren aussehen soll.",
+    "ar": "الكاتب كان يشتري كل شيء عبر الإنترنت ثم غيّر عاداته لثلاثة أسباب: عناء الإرجاع، الإنفاق على ما لا يحتاجه بنقرتين، وإغلاق متاجر شارعه. اليوم يطلب فقط ما لا يتوفر محلياً، ويرى ذلك قراراً بشأن شكل شارعه بعد عشر سنوات لا حرماناً.",
+    "questions": [
+      {
+        "id": "t-b1-15-l1",
+        "type": "mc",
+        "promptDe": "Warum war das Zurückschicken so ärgerlich?",
+        "options": [
+          "weil es Geld kostete",
+          "weil es viel Zeit und Aufwand bedeutete",
+          "weil die Post weit weg war"
+        ],
+        "answer": "weil es viel Zeit und Aufwand bedeutete",
+        "explanationAr": "الدليل في النص: «neu verpacken, ein Etikett drucken und zur Post bringen … mehr Zeit mit Zurückschicken verbracht als mit Einkaufen»."
+      },
+      {
+        "id": "t-b1-15-l2",
+        "type": "mc",
+        "promptDe": "Warum gibt der Erzähler im Laden weniger unnötiges Geld aus?",
+        "options": [
+          "weil die Läden billiger sind",
+          "weil er dort länger überlegt und den Preis bewusster bezahlt",
+          "weil er kein Bargeld hat"
+        ],
+        "answer": "weil er dort länger überlegt und den Preis bewusster bezahlt",
+        "explanationAr": "«Im Laden überlege ich länger, weil ich das Produkt in der Hand halte und den Preis an der Kasse wirklich bezahle». الخيار الأول يناقض «ein paar Euro mehr kostet»."
+      },
+      {
+        "id": "t-b1-15-l3",
+        "type": "mc",
+        "promptDe": "Was fehlt laut Text, wenn die Läden schließen?",
+        "options": [
+          "günstige Preise",
+          "ein Ort, an dem man Menschen trifft",
+          "schnelle Lieferung"
+        ],
+        "answer": "ein Ort, an dem man Menschen trifft",
+        "explanationAr": "الدليل في النص: «dann fehlt etwas, das man nicht bestellen kann: ein Ort, an dem man Menschen trifft»."
+      },
+      {
+        "id": "t-b1-15-l4",
+        "type": "truefalse",
+        "promptDe": "Der Erzähler bestellt heute gar nichts mehr im Internet.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Heute bestelle ich nur noch, was es hier nicht gibt oder was zu schwer zum Tragen ist»."
+      },
+      {
+        "id": "t-b1-15-l5",
+        "type": "mc",
+        "promptDe": "Wie sieht der Erzähler die höheren Preise im Laden?",
+        "options": [
+          "als Verzicht",
+          "als Entscheidung für die Zukunft seiner Straße",
+          "als Fehler der Geschäfte"
+        ],
+        "answer": "als Entscheidung für die Zukunft seiner Straße",
+        "explanationAr": "الدليل في النص: «nicht als Verzicht, sondern als Entscheidung dafür, wie meine Straße in zehn Jahren aussehen soll»."
+      }
+    ]
+  },
+  "t-b1-16": {
+    "de": "Als meine Nachbarin Frau Berger mir sagte, ich solle „mal vorbeikommen“, freute ich mich. Endlich eine Einladung! Am nächsten Tag stand ich um sechzehn Uhr mit einem Kuchen vor ihrer Tür. Sie öffnete in Hausschuhen, sichtlich überrascht, und hinter ihr lief der Fernseher. Es war ihr peinlich, mir war es peinlich – und ich verstand die Welt nicht mehr.\n\nErst später erklärte mir eine Kollegin, was passiert war. „Komm mal vorbei“ ist in Deutschland oft keine richtige Einladung, sondern eine freundliche Floskel. Sie bedeutet ungefähr: „Ich mag dich, wir könnten uns irgendwann sehen.“ Eine echte Einladung hat dagegen einen Tag und eine Uhrzeit: „Kommst du am Samstag um drei zum Kaffee?“ In meiner Heimat ist das anders. Dort ist „Komm vorbei“ ernst gemeint, und wer nicht kommt, gilt als unhöflich.\n\nSolche Missverständnisse passieren nicht, weil eine Seite unfreundlich ist, sondern weil dieselben Wörter in verschiedenen Kulturen Verschiedenes bedeuten. Ähnlich ist es mit „Wir sollten mal essen gehen“ oder „Ich melde mich“. Manchmal ist es ernst gemeint, manchmal nicht – und man lernt den Unterschied nur mit der Zeit.\n\nDie Geschichte hat übrigens ein gutes Ende. Frau Berger rief mich zwei Tage später an und lud mich richtig ein, mit Datum und Uhrzeit. Wir haben über das Missverständnis gelacht, und sie hat mir erzählt, dass sie in Spanien einmal genau den umgekehrten Fehler gemacht hat. Seitdem trinken wir jeden zweiten Sonntag zusammen Kaffee. Den Kuchen bringe ich mit – jetzt aber angekündigt.",
+    "ar": "سوء فهم ثقافي: «تعال زُرني» عند الجارة كانت مجاملة لا دعوة، فوقف الراوي بكعكة أمام بابها وأحرج الجميع. الدعوة الحقيقية في ألمانيا لها يوم وساعة. مثل ذلك «يجب أن نتغدّى معاً» و«سأتصل بك». النهاية سعيدة: دعوة حقيقية وقهوة كل أحدين.",
+    "questions": [
+      {
+        "id": "t-b1-16-l1",
+        "type": "mc",
+        "promptDe": "Warum war Frau Berger überrascht?",
+        "options": [
+          "weil sie den Kuchen nicht mochte",
+          "weil sie „Komm mal vorbei“ nicht als feste Einladung gemeint hatte",
+          "weil der Erzähler zu spät kam"
+        ],
+        "answer": "weil sie „Komm mal vorbei“ nicht als feste Einladung gemeint hatte",
+        "explanationAr": "الدليل في النص: «„Komm mal vorbei“ ist in Deutschland oft keine richtige Einladung, sondern eine freundliche Floskel»."
+      },
+      {
+        "id": "t-b1-16-l2",
+        "type": "mc",
+        "promptDe": "Woran erkennt man laut Text eine echte Einladung?",
+        "options": [
+          "an einem freundlichen Ton",
+          "an Tag und Uhrzeit",
+          "an einem Geschenk"
+        ],
+        "answer": "an Tag und Uhrzeit",
+        "explanationAr": "الدليل في النص: «Eine echte Einladung hat dagegen einen Tag und eine Uhrzeit»."
+      },
+      {
+        "id": "t-b1-16-l3",
+        "type": "mc",
+        "promptDe": "Warum entstehen solche Missverständnisse laut Text?",
+        "options": [
+          "weil Deutsche unfreundlich sind",
+          "weil dieselben Wörter in verschiedenen Kulturen Verschiedenes bedeuten",
+          "weil der Erzähler schlecht Deutsch spricht"
+        ],
+        "answer": "weil dieselben Wörter in verschiedenen Kulturen Verschiedenes bedeuten",
+        "explanationAr": "الدليل في النص: «nicht, weil eine Seite unfreundlich ist, sondern weil dieselben Wörter in verschiedenen Kulturen Verschiedenes bedeuten»."
+      },
+      {
+        "id": "t-b1-16-l4",
+        "type": "truefalse",
+        "promptDe": "Frau Berger hat den Erzähler zwei Tage später angerufen und eingeladen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «rief mich zwei Tage später an und lud mich richtig ein»."
+      },
+      {
+        "id": "t-b1-16-l5",
+        "type": "mc",
+        "promptDe": "Was ist eine „Floskel“?",
+        "options": [
+          "eine feste, höfliche Redewendung ohne wörtliche Bedeutung",
+          "eine Einladung mit Datum",
+          "ein Kuchenrezept"
+        ],
+        "answer": "eine feste, höfliche Redewendung ohne wörtliche Bedeutung",
+        "explanationAr": "Floskel = عبارة مجاملة جاهزة. النص يقابلها بـ«richtige Einladung»."
+      }
+    ]
+  },
+  "t-b1-17": {
+    "de": "Letzten Freitag stand ich mit meinem Fahrrad am Radweg: Platten. Der Hinterreifen war völlig leer, und bis zur nächsten Werkstatt waren es drei Kilometer. Dort hätte die Reparatur zwanzig Euro gekostet und bis Montag gedauert. Ich beschloss, es selbst zu versuchen – zum ersten Mal.\n\nIm Baumarkt kaufte ich ein Flickzeug für vier Euro und schaute mir zu Hause ein Video an. Es sah einfach aus: Rad ausbauen, Reifen mit den Hebeln von der Felge lösen, Schlauch herausnehmen, Loch suchen. Die ersten drei Schritte klappten. Das Loch fand ich nicht. Ich pumpte den Schlauch auf, hielt ihn ans Ohr, hörte nichts. Erst als ich ihn in eine Schüssel mit Wasser tauchte, stiegen kleine Blasen auf – ein winziger Riss, kaum zu sehen.\n\nDann kam der schwierigste Teil: die Stelle anrauen, Kleber auftragen, kurz warten, Flicken aufdrücken. Beim ersten Versuch war ich zu ungeduldig und drückte den Flicken zu früh auf. Er hielt nicht. Beim zweiten Versuch wartete ich die vollen fünf Minuten, wie im Video. Diesmal saß er fest.\n\nBeim Zusammenbauen merkte ich, warum der Schlauch kaputt war: In der Reifendecke steckte noch ein kleines Stück Glas. Hätte ich es nicht entfernt, wäre der neue Flicken am nächsten Tag wieder durch gewesen. Insgesamt brauchte ich eine Stunde und zwanzig Minuten. Der Profi braucht dafür zehn.\n\nTrotzdem war ich stolz. Nicht wegen der gesparten sechzehn Euro, sondern weil ich jetzt weiß, wie es geht. Und das nächste Mal – da bin ich sicher – brauche ich nur noch eine halbe Stunde.",
+    "ar": "ثقب في إطار الدراجة: بدل ورشة بعشرين يورو حتى الاثنين، اشترى الراوي عدّة ترقيع بأربعة يورو وتابع فيديو. وجد الثقب بغمر الأنبوب في الماء، وفشل الرقعة الأولى لعجلته، ونجحت الثانية بعد الانتظار الكامل. اكتشف قطعة زجاج في الإطار كانت ستثقب الأنبوب مجدداً. الفخر ليس بالمال الموفَّر بل بالمهارة المكتسبة.",
+    "questions": [
+      {
+        "id": "t-b1-17-l1",
+        "type": "mc",
+        "promptDe": "Warum hat der Erzähler die Reparatur selbst gemacht?",
+        "options": [
+          "weil die Werkstatt geschlossen war",
+          "weil die Werkstatt teuer war und bis Montag gebraucht hätte",
+          "weil er Mechaniker ist"
+        ],
+        "answer": "weil die Werkstatt teuer war und bis Montag gebraucht hätte",
+        "explanationAr": "«hätte die Reparatur zwanzig Euro gekostet und bis Montag gedauert». الخيار الثالث يناقض «zum ersten Mal»."
+      },
+      {
+        "id": "t-b1-17-l2",
+        "type": "mc",
+        "promptDe": "Wie hat er das Loch schließlich gefunden?",
+        "options": [
+          "indem er den Schlauch ans Ohr hielt",
+          "indem er den Schlauch ins Wasser tauchte",
+          "indem er den Reifen aufpumpte und wartete"
+        ],
+        "answer": "indem er den Schlauch ins Wasser tauchte",
+        "explanationAr": "«Erst als ich ihn in eine Schüssel mit Wasser tauchte, stiegen kleine Blasen auf». الخيار الأول جرّبه بلا نتيجة («hörte nichts»)."
+      },
+      {
+        "id": "t-b1-17-l3",
+        "type": "mc",
+        "promptDe": "Warum hielt der erste Flicken nicht?",
+        "options": [
+          "weil der Kleber alt war",
+          "weil er zu früh aufgedrückt wurde",
+          "weil das Loch zu groß war"
+        ],
+        "answer": "weil er zu früh aufgedrückt wurde",
+        "explanationAr": "الدليل في النص: «war ich zu ungeduldig und drückte den Flicken zu früh auf. Er hielt nicht»."
+      },
+      {
+        "id": "t-b1-17-l4",
+        "type": "truefalse",
+        "promptDe": "Das Glasstück im Reifen wurde erst nach der Reparatur entdeckt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "«Beim Zusammenbauen merkte ich … In der Reifendecke steckte noch ein kleines Stück Glas» — أي قبل إتمام التركيب، وأزاله."
+      },
+      {
+        "id": "t-b1-17-l5",
+        "type": "mc",
+        "promptDe": "Worauf ist der Erzähler am Ende stolz?",
+        "options": [
+          "auf das gesparte Geld",
+          "darauf, dass er jetzt weiß, wie es geht",
+          "darauf, schneller als der Profi zu sein"
+        ],
+        "answer": "darauf, dass er jetzt weiß, wie es geht",
+        "explanationAr": "«Nicht wegen der gesparten sechzehn Euro, sondern weil ich jetzt weiß, wie es geht». الخيار الثالث يناقض «Der Profi braucht dafür zehn»."
+      }
+    ]
+  },
+  "t-b1-18": {
+    "de": "In der Nacht vor meiner B1-Prüfung konnte ich nicht einschlafen. Ich lag im Bett und dachte an alles, was schiefgehen könnte: Was, wenn ich den Hörtext nicht verstehe? Was, wenn mir beim Sprechen kein Wort einfällt? Um zwei Uhr stand ich auf und wiederholte noch einmal die Grammatik. Um vier Uhr wusste ich nicht mehr, ob „wegen“ mit Dativ oder Genitiv steht, obwohl ich es seit Monaten konnte.\n\nAm Morgen war ich müde und nervös. In der Bahn zur Prüfung sah ich die anderen Kandidaten: Manche lernten noch, manche starrten aus dem Fenster, ein junger Mann hörte Musik und lächelte. Ich beneidete ihn.\n\nDie Prüfung selbst war dann weniger schlimm als die Nacht davor. Der Hörtext war klar, das Lesen ging gut, und beim Schreiben hatte ich genug Zeit. Nur beim Sprechen zitterte meine Stimme am Anfang. Die Prüferin lächelte freundlich und stellte eine einfache Frage – und plötzlich redete ich, als hätte ich nie Angst gehabt.\n\nAls ich das Gebäude verließ, war ich vor allem eines: erleichtert. Nicht, weil ich sicher war, bestanden zu haben, sondern weil es vorbei war. Drei Wochen später kam das Ergebnis. Bestanden – und beim Sprechen sogar mit der besten Note.\n\nWas ich daraus gelernt habe? Die Angst vor der Prüfung war schlimmer als die Prüfung. Und die Nacht davor ist nicht zum Lernen da. Wer bis dahin nicht vorbereitet ist, wird es um zwei Uhr morgens auch nicht mehr. Wer vorbereitet ist, braucht nur noch eines: Schlaf. Beim nächsten Mal höre ich in der Bahn Musik – und lächle.",
+    "ar": "ليلة أرق قبل امتحان B1: قلق من كل ما قد يفشل ومراجعة في الثانية فجراً حتى تشوّش ما كان يعرفه. الامتحان نفسه كان أهون من الليلة، ونجح بأفضل درجة في المحادثة. الدرس: الخوف من الامتحان أسوأ منه، والليلة السابقة للنوم لا للدراسة.",
+    "questions": [
+      {
+        "id": "t-b1-18-l1",
+        "type": "mc",
+        "promptDe": "Was zeigt die Stelle mit „wegen“ um vier Uhr morgens?",
+        "options": [
+          "dass der Erzähler diese Regel nie gelernt hatte",
+          "dass Müdigkeit und Angst sogar sicheres Wissen unsicher machen",
+          "dass „wegen“ eine sehr schwere Regel ist"
+        ],
+        "answer": "dass Müdigkeit und Angst sogar sicheres Wissen unsicher machen",
+        "explanationAr": "الدليل في النص: «wusste ich nicht mehr, ob „wegen“ mit Dativ oder Genitiv steht, obwohl ich es seit Monaten konnte»."
+      },
+      {
+        "id": "t-b1-18-l2",
+        "type": "mc",
+        "promptDe": "Warum beneidete der Erzähler den jungen Mann in der Bahn?",
+        "options": [
+          "weil er bessere Kopfhörer hatte",
+          "weil er entspannt wirkte",
+          "weil er die Prüfung schon bestanden hatte"
+        ],
+        "answer": "weil er entspannt wirkte",
+        "explanationAr": "«ein junger Mann hörte Musik und lächelte. Ich beneidete ihn» — على عكس توتره."
+      },
+      {
+        "id": "t-b1-18-l3",
+        "type": "mc",
+        "promptDe": "Welcher Teil der Prüfung war am Anfang schwierig?",
+        "options": [
+          "das Hören",
+          "das Schreiben",
+          "das Sprechen"
+        ],
+        "answer": "das Sprechen",
+        "explanationAr": "الدليل في النص: «Nur beim Sprechen zitterte meine Stimme am Anfang»."
+      },
+      {
+        "id": "t-b1-18-l4",
+        "type": "truefalse",
+        "promptDe": "Der Erzähler war erleichtert, weil die Prüfung vorbei war.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Nicht, weil ich sicher war, bestanden zu haben, sondern weil es vorbei war»."
+      },
+      {
+        "id": "t-b1-18-l5",
+        "type": "mc",
+        "promptDe": "Was ist der wichtigste Rat des Textes?",
+        "options": [
+          "In der Nacht vor der Prüfung noch einmal alles wiederholen.",
+          "Die Nacht vor der Prüfung zum Schlafen nutzen.",
+          "Vor der Prüfung keine Musik hören."
+        ],
+        "answer": "Die Nacht vor der Prüfung zum Schlafen nutzen.",
+        "explanationAr": "الدليل في النص: «die Nacht davor ist nicht zum Lernen da … Wer vorbereitet ist, braucht nur noch eines: Schlaf»."
+      }
+    ]
+  },
+  "t-b1-19": {
+    "de": "In Deutschland engagieren sich viele Menschen ehrenamtlich, also freiwillig und ohne Bezahlung. Sie trainieren Kindermannschaften, fahren für die freiwillige Feuerwehr, besuchen alte Menschen im Heim oder helfen Geflüchteten beim Ausfüllen von Formularen. Ohne diese Arbeit würde vieles im Land nicht funktionieren.\n\nWarum tun Menschen das? Die Gründe sind unterschiedlich. Manche wollen etwas zurückgeben, weil ihnen selbst einmal geholfen wurde. Andere suchen Kontakt, besonders nach einem Umzug oder im Ruhestand. Wieder andere möchten Erfahrungen sammeln, die ihnen im Beruf nützen – wer einen Verein leitet, lernt Organisation, Verhandlung und Geduld. Und viele sagen einfach: Es macht Freude, gebraucht zu werden.\n\nAuch für Neuankömmlinge ist das Ehrenamt eine Chance. Wer im Sportverein hilft oder bei einem Stadtfest mit anpackt, lernt Menschen kennen, die man sonst nie treffen würde, und spricht dabei automatisch Deutsch – nicht über Grammatik, sondern über Tore, Kuchen und Zelte. Viele berichten, dass sie so schneller Anschluss gefunden haben als in jedem Kurs.\n\nNatürlich gibt es auch Kritik. Manche sagen, der Staat verlasse sich zu sehr auf Freiwillige und spare an Stellen, die eigentlich bezahlt werden müssten. Und wer sich engagiert, muss darauf achten, sich nicht zu übernehmen: Ein Ehrenamt soll bereichern, nicht erschöpfen.\n\nWer anfangen möchte, findet in fast jeder Stadt eine Freiwilligenagentur, die Interessierte und Vereine zusammenbringt. Man muss keine besonderen Fähigkeiten mitbringen – nur Zeit und die Bereitschaft, sich auf andere einzulassen. Der Rest ergibt sich.",
+    "ar": "العمل التطوعي في ألمانيا: تدريب فرق أطفال، إطفاء تطوعي، زيارة المسنين، مساعدة اللاجئين. الدوافع: ردّ الجميل، البحث عن صحبة، اكتساب خبرة، فرحة الحاجة إليك. للقادمين الجدد فرصة للاندماج وممارسة اللغة طبيعياً. النقد: الدولة تعتمد عليه أكثر مما ينبغي، وعلى المتطوع ألا يرهق نفسه.",
+    "questions": [
+      {
+        "id": "t-b1-19-l1",
+        "type": "mc",
+        "promptDe": "Was bedeutet „ehrenamtlich“?",
+        "options": [
+          "gut bezahlt",
+          "freiwillig und ohne Bezahlung",
+          "nur für Beamte"
+        ],
+        "answer": "freiwillig und ohne Bezahlung",
+        "explanationAr": "الدليل في النص: «ehrenamtlich, also freiwillig und ohne Bezahlung»."
+      },
+      {
+        "id": "t-b1-19-l2",
+        "type": "mc",
+        "promptDe": "Welcher Grund für ein Ehrenamt wird NICHT genannt?",
+        "options": [
+          "Kontakt suchen",
+          "etwas zurückgeben",
+          "Steuern sparen"
+        ],
+        "answer": "Steuern sparen",
+        "explanationAr": "الفقرة 2 تذكر: zurückgeben، Kontakt، Erfahrungen، Freude. الضرائب غير مذكورة."
+      },
+      {
+        "id": "t-b1-19-l3",
+        "type": "mc",
+        "promptDe": "Warum ist das Ehrenamt für Neuankömmlinge nützlich?",
+        "options": [
+          "weil sie dort Geld verdienen",
+          "weil sie Menschen kennenlernen und dabei natürlich Deutsch sprechen",
+          "weil sie dann keinen Sprachkurs mehr brauchen"
+        ],
+        "answer": "weil sie Menschen kennenlernen und dabei natürlich Deutsch sprechen",
+        "explanationAr": "«lernt Menschen kennen … und spricht dabei automatisch Deutsch – nicht über Grammatik, sondern über Tore, Kuchen und Zelte». الخيار الثالث مبالغة لا يقولها النص."
+      },
+      {
+        "id": "t-b1-19-l4",
+        "type": "truefalse",
+        "promptDe": "Für ein Ehrenamt braucht man besondere Fähigkeiten.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Man muss keine besonderen Fähigkeiten mitbringen – nur Zeit und die Bereitschaft»."
+      },
+      {
+        "id": "t-b1-19-l5",
+        "type": "mc",
+        "promptDe": "Was bedeutet „sich nicht zu übernehmen“?",
+        "options": [
+          "keine Aufgaben annehmen",
+          "nicht mehr tun, als man schafft",
+          "die Aufgaben anderer nicht übernehmen"
+        ],
+        "answer": "nicht mehr tun, als man schafft",
+        "explanationAr": "sich übernehmen = يحمّل نفسه فوق طاقته. الجملة التالية تشرح: «bereichern, nicht erschöpfen»."
+      }
+    ]
+  },
+  "t-b1-20": {
+    "de": "Als mir meine Firma eine Stelle in Leipzig anbot, hatte ich drei Tage Zeit, mich zu entscheiden. Die Stelle war besser bezahlt und interessanter als meine jetzige. Aber Leipzig liegt vierhundert Kilometer von meiner Familie und meinen Freunden entfernt, und ich kannte dort niemanden.\n\nIch habe eine Liste gemacht, wie man es in Ratgebern liest: links die Vorteile, rechts die Nachteile. Links stand: mehr Geld, neue Aufgaben, eine Stadt, die alle loben, günstigere Mieten. Rechts stand: allein sein, alles neu, die Eltern seltener sehen, den Sportverein verlassen. Die linke Spalte war länger. Trotzdem fühlte sich die Entscheidung nicht richtig an.\n\nMeine Schwester sagte etwas, das mir geholfen hat: „Du entscheidest nicht für immer. Du entscheidest für die nächsten zwei Jahre.“ Das nahm der Sache die Schwere. Wenn es nicht klappt, kann ich zurückkommen – ärmer an Geld vielleicht, aber reicher an Erfahrung.\n\nIch habe zugesagt. Der Umzug war anstrengend, die ersten Wochen waren einsam. Ich habe mich in einem Chor angemeldet, obwohl ich nicht besonders gut singe, einfach um Leute zu treffen. Das war die beste Idee. Nach zwei Monaten hatte ich Menschen, mit denen ich essen gehen konnte, und nach einem halben Jahr fühlte sich die Wohnung wie ein Zuhause an.\n\nHeute, ein Jahr später, weiß ich immer noch nicht, ob ich für immer bleibe. Aber ich weiß, dass die Entscheidung richtig war – nicht, weil alles perfekt ist, sondern weil ich es versucht habe. Die Frage „Was wäre gewesen, wenn?“ muss ich mir nie stellen.",
+    "ar": "عرض عمل في لايبتسيغ على بعد 400 كم من الأهل: قائمة إيجابيات وسلبيات لم تُرِح الكاتب، لكن جملة أخته «تقرّر لعامين لا للأبد» أزالت الثقل. انتقل، كانت البداية موحشة، فانضمّ إلى جوقة ليلتقي بالناس — أفضل فكرة. بعد عام لا يعرف إن كان سيبقى، لكنه لن يسأل «ماذا لو؟».",
+    "questions": [
+      {
+        "id": "t-b1-20-l1",
+        "type": "mc",
+        "promptDe": "Warum war die Entscheidung schwer, obwohl die Vorteile überwogen?",
+        "options": [
+          "weil die Stelle schlechter bezahlt war",
+          "weil die Liste kurz war",
+          "weil sich die Entscheidung trotz der Liste nicht richtig anfühlte"
+        ],
+        "answer": "weil sich die Entscheidung trotz der Liste nicht richtig anfühlte",
+        "explanationAr": "«Die linke Spalte war länger. Trotzdem fühlte sich die Entscheidung nicht richtig an». الخيار الأول يناقض «besser bezahlt»."
+      },
+      {
+        "id": "t-b1-20-l2",
+        "type": "mc",
+        "promptDe": "Wie hat der Satz der Schwester geholfen?",
+        "options": [
+          "Er zeigte, dass die Entscheidung nicht endgültig ist.",
+          "Er zeigte, dass Leipzig die beste Stadt ist.",
+          "Er zeigte, dass man nie umziehen sollte."
+        ],
+        "answer": "Er zeigte, dass die Entscheidung nicht endgültig ist.",
+        "explanationAr": "الدليل في النص: «Du entscheidest nicht für immer. Du entscheidest für die nächsten zwei Jahre.» Das nahm der Sache die Schwere»."
+      },
+      {
+        "id": "t-b1-20-l3",
+        "type": "mc",
+        "promptDe": "Warum hat sich der Erzähler im Chor angemeldet?",
+        "options": [
+          "weil er sehr gut singt",
+          "um Leute kennenzulernen",
+          "weil die Firma es verlangte"
+        ],
+        "answer": "um Leute kennenzulernen",
+        "explanationAr": "الدليل في النص: «obwohl ich nicht besonders gut singe, einfach um Leute zu treffen»."
+      },
+      {
+        "id": "t-b1-20-l4",
+        "type": "truefalse",
+        "promptDe": "Der Erzähler weiß nach einem Jahr noch nicht, ob er für immer bleibt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «weiß ich immer noch nicht, ob ich für immer bleibe»."
+      },
+      {
+        "id": "t-b1-20-l5",
+        "type": "mc",
+        "promptDe": "Warum war die Entscheidung laut Erzähler richtig?",
+        "options": [
+          "weil alles perfekt geworden ist",
+          "weil er es versucht hat und sich nicht fragen muss, was gewesen wäre",
+          "weil er mehr Geld verdient"
+        ],
+        "answer": "weil er es versucht hat und sich nicht fragen muss, was gewesen wäre",
+        "explanationAr": "الدليل في النص: «nicht, weil alles perfekt ist, sondern weil ich es versucht habe. Die Frage „Was wäre gewesen, wenn?“ muss ich mir nie stellen»."
+      }
+    ]
+  }
+}
