@@ -745,3 +745,37 @@ details.dirb-details > summary:focus-visible { outline: 2px solid var(--dirb-gre
 .dirb-station-head { display: grid; gap: 0.15rem; }
 .dirb-station-title { color: var(--dirb-ink, #f5f7fa); font-weight: 900; font-size: 1.25rem; margin: 0; }
 .dirb-station-sub { color: var(--dirb-ink2, #9aa3af); font-size: 0.85rem; }
+
+/* ══════════════ DirB · سطح التمارين (ExerciseSet + TaskView) ══════════════
+   نطاقٌ بصريٌّ خالص: لا منطقَ ولا نصوصَ ولا testids تُمسّ — فقط إحساسٌ موحّد:
+   أهدافٌ كبيرةٌ تُلمَس، تغذيةٌ فوريةٌ ملوّنة، وتركيزٌ أخضر. */
+.dirb-ex { display: grid; gap: 0.8rem; }
+.dirb-ex .btn { min-height: 48px; border-radius: 0.9rem; font-weight: 700; transition: border-color 0.15s ease, background 0.15s ease, transform 0.1s ease; }
+.dirb-ex .btn:active:not(:disabled) { transform: scale(0.99); }
+.dirb-ex .btn-ghost:hover:not(:disabled) { border-color: #22c55e; }
+.dirb-ex .btn-primary { font-size: 1rem; padding-inline: 1.6rem; }
+.dirb-ex .field {
+  border-radius: 0.9rem;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-width: 2px;
+}
+.dirb-ex .field:focus { outline: none; border-color: #22c55e; box-shadow: 0 0 0 3px rgb(34 197 94 / 0.18); }
+.dirb-ex textarea.field { line-height: 1.8; min-height: 10rem; }
+.dirb-ex h3 { font-size: 1.15rem; }
+.dirb-ex h4 { font-size: 1rem; color: var(--color-ink); }
+.dirb-ex audio { width: 100%; max-width: 22rem; }
+.dirb-ex table { font-size: 0.9rem; }
+.dirb-ex table th { color: var(--color-ink); font-weight: 800; }
+/* خيارات الاختيار: أهدافٌ كبيرة بحدودٍ حاضرة */
+.dirb-ex-opt { width: 100%; font-size: 0.98rem; }
+.dirb-ex-opt[disabled] { cursor: default; }
+/* شريط تقدّم التمرين */
+.dirb-ex-progress { display: grid; gap: 0.3rem; }
+.dirb-ex-progress-top { display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 700; color: var(--color-ink2); }
+.dirb-ex-bar { background: #2a2f38; border-radius: 999px; height: 0.55rem; overflow: hidden; }
+.dirb-ex-fill { background: #22c55e; border-radius: 999px; height: 100%; transition: width 0.4s ease; }
+/* بطاقة التمرين: حدٌّ ملوّن أوضح قليلاً */
+.dirb-ex-item { border-radius: 1.05rem; }
+/* سطر الحوار النشط أثناء التسميع */
+.dirb-ex .card { scroll-margin-top: 0.8rem; }

@@ -217,7 +217,7 @@ function BrueckenQuiz({ gramId, bruecken }: { gramId: string; bruecken: Eselsbru
                 justifyContent: "flex-start",
                 minHeight: "44px",
                 border: "1px solid var(--color-line)",
-                background: richtig ? "var(--color-gold-soft)" : falsch ? "var(--color-cola-soft)" : "white",
+                background: richtig ? "rgb(34 197 94 / 0.14)" : falsch ? "var(--color-cola-soft)" : "transparent",
               }}
               disabled={!!wahl}
               onClick={() => antworte(o)}
@@ -376,7 +376,7 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
     /* 🧩 مهمةُ الأسبوعِ (Komposita / FVG): ورشةٌ بلا درسٍ مضيف — أسئلتُها قائمةٌ بذاتها لا شاشةً خاوية */
     if (task.quiz && task.quiz.length > 0) {
       return (
-        <section className="card fadein" style={{ padding: "1.2rem" }}>
+        <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
           <Head icon="🧩" de={task.titleDe} ar={task.titleAr} />
           <ExerciseSet items={task.quiz} onPoints={onPoints} />
         </section>
@@ -396,7 +396,7 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
   };
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="📘" de={topic.titleDe} ar={topic.titleAr} />
 
       {entdecken && ergebnis !== null && (
@@ -595,7 +595,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
   };
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head
         icon="🃏"
         de={deck?.titleDe ?? "Wiederholungskarten"}
@@ -730,7 +730,7 @@ function HoerenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" 
   }));
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="🎧" de={dlg.titleDe} ar={`${dlg.titleAr} — تسميع بالنطق الداخلي للمتصفح`} />
       {!speechAvailable() && (
         <p style={{ color: "var(--color-cola)" }}>
@@ -753,7 +753,8 @@ function HoerenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" 
             className="card"
             style={{
               padding: "0.55rem 0.8rem",
-              background: lineIdx === i ? "var(--color-gold-soft)" : "white",
+              background: lineIdx === i ? "rgb(34 197 94 / 0.14)" : "transparent",
+              borderColor: lineIdx === i ? "#22c55e" : undefined,
               display: "flex",
               gap: "0.6rem",
               alignItems: "flex-start",
@@ -800,7 +801,7 @@ function LesenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" |
   const woerter = lese.de.split(/\s+/).length;
   const radar = useMemo(() => grammatikImText(lese.de), [lese.de]);
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="📖" de={text.titleDe} ar={text.titleAr} />
       {lese.lang && (
         <div data-testid="lesen-lang" style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.5rem" }}>
@@ -851,7 +852,7 @@ function SchreibenTask({ task, onPoints }: Omit<TaskProps, "lang" | "day" | "srs
   const selfScore = w.criteria.filter((_, i) => checks[i]).length;
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="✍️" de={w.titleDe} ar={w.titleAr} />
       <div className="card" style={{ padding: "0.8rem 1rem", marginBottom: "0.8rem", background: "var(--color-gold-soft)" }}>
         <De>{w.taskDe}</De>
@@ -905,7 +906,7 @@ function SprechenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang
   const items = (task.sentenceIds ?? []).map((sid) => getSatz(sid)).filter(Boolean);
   const doneCount = items.filter((_, i) => done[i]).length;
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="🗣️" de="Sprechtraining (Shadowing)" ar={`${task.titleAr} — استمع، كرّر، سجّل نفسك`} />
       <div style={{ display: "grid", gap: "0.5rem" }}>
         {items.map((s, i) => (
@@ -973,7 +974,7 @@ function WiederholenTask({
     }));
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="🔁" de={task.titleDe} ar={task.titleAr} />
       {task.mandatory && (
         <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.6rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontWeight: 700, color: "var(--color-cola)" }}>
@@ -996,7 +997,7 @@ function WiederholenTask({
         <div style={{ display: "grid", gap: "0.9rem", marginTop: "0.4rem" }}>
           <div
             style={{
-              background: "linear-gradient(135deg, var(--color-cola-soft), #fff)",
+              background: "linear-gradient(135deg, var(--color-cola-soft), var(--color-card))",
               border: "1px solid var(--color-cola)",
               borderRadius: "0.8rem",
               padding: "1rem 1.1rem",
@@ -1026,17 +1027,18 @@ function WiederholenTask({
               • <strong>W</strong> تنطق «ف» (Wasser = فاسر) · <strong>V</strong> غالباً «ف» أو «ف» ناعمة · <strong>Z</strong> «تس» (Zeit = تسايت) · <strong>S</strong> قبل حرف علة = «ز» (sehen = زين) · <strong>R</strong> خفيفة من الحلق · <strong>ß</strong> صوت «س» طويل.
             </div>
           </div>
-          <button
-            type="button"
-            className="btn btn-primary"
-            style={{ minHeight: "48px", padding: "0.6rem 1.4rem", fontWeight: 800, justifySelf: "start" }}
-            onClick={() => {
-              const el = document.getElementById("st-woerter");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
+          <div
+            style={{
+              background: "rgb(34 197 94 / 0.10)",
+              border: "1px solid #22c55e",
+              borderRadius: "0.8rem",
+              padding: "0.7rem 1rem",
+              fontSize: "0.9rem",
+              lineHeight: 1.9,
             }}
           >
-            هيا نبدأ المفردات الأولى (المحطة 2) ←
-          </button>
+            👆 أكمل مهمّة اليوم، ثم سلّمها بزرّ «سلّم المهمة» بالأسفل — ومن الغد يبدأ كلّ يوم بالاسترجاع قبل الجديد.
+          </div>
         </div>
       )}
       <BrueckenSRS srs={srs} onSrs={onSrs} onPoints={onPoints} />
@@ -1084,7 +1086,7 @@ function useProgressMini() {
 // ── فحص ختامي ──────────────────────────────────────────────────────────
 function CheckTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void }) {
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="✅" de={task.titleDe} ar={task.titleAr} />
       {task.mandatory && (
         <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.6rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontWeight: 700, color: "var(--color-cola)" }}>
