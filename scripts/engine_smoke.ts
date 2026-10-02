@@ -1848,10 +1848,16 @@ void 0;
     // K116: «تقدّمي» سلبيةٌ محضة — عشرُ محطاتٍ وصفر رابط
     const fortMontiert = ["<BerichteZentrum progress={progress} name={activeProfile().name} />", "<WegWeiser progress={progress} />", "<RadarKarte progress={progress} />", "<Fehlerkartei />", "<AbzeichenKarte progress={progress} />", "<GesundheitsWache progress={progress} />", "<LernStrategieZentrum progress={progress} />", "<ElternPaket progress={progress} name={activeProfile().name} />", "<KontraktCard progress={progress} />", "<Wochenplan progress={progress} />"];
     const fortNao = fortMontiert.filter((m) => !fort.includes(m));
-    ok(fortNao.length === 0, "K116a عشرُ محطاتِ إحصاءٍ مركَّبةٌ في «تقدّمي» — ناقص: " + (fortNao.join(" · ") || "لا شيء"));
+    ok(fortNao.length === 0, "K116a محطاتُ الإحصاءِ الأصليّةُ العشرُ مركَّبةٌ في «تقدّمي» (والحاديةَ عشرةُ بطاقةُ الطالب — K116c) — ناقص: " + (fortNao.join(" · ") || "لا شيء"));
     const fortHref = [...fort.matchAll(/href="([^"]+)"/g)].map((x) => x[1]);
     ok(fortHref.length === 0 && !fort.includes("<Link"),
       "K116b «تقدّمي» سلبيةٌ محضة: صفر href وصفر Link — مشاهدةٌ لا روابطَ محتوى (" + fortHref.join(",") + ")");
+    // K116c/d: بطاقةُ الطالب (Schultor) محطةٌ حاديَةٌ عشرةٌ بوضعٍ سلبيٍّ — والمكوِّنُ نفسُه نظيفٌ وأبوابُه مطبوعةٌ خلفَ passiv
+    ok(fort.includes("<Schultor progress={progress} passiv />") && fort.includes("schultor:"),
+      "K116c بطاقةُ الطالبِ (Schultor) محطةٌ حاديَةَ عشرةَ في «تقدّمي» بوضعٍ سلبيٍّ passiv — لا مكوِّنٌ يتيمٌ في الخريطة");
+    const schultorD = existsSync("components/akademie/Schultor.tsx") ? readFileSync("components/akademie/Schultor.tsx", "utf8") : "";
+    ok(!/href="|<Link/.test(schultorD) && (schultorD.match(/\{!passiv && /g) ?? []).length >= 3,
+      "K116d بطاقةُ الطالب: صفر href وصفر Link في المكوِّنِ نفسِه، وثلاثةُ أبوابِه (الضبط · الحقيبة · قاعة الدرس) خلفَ {!passiv && — الوضعُ السلبيُّ عرضٌ محضٌ باباً باب");
 
     // K117: العناوينُ عربيةٌ والتنقّلُ عربيٌّ — لا نصُّ واجهةٍ ألمانيٍّ مُجرَّد
     const tabs = ["lernen", "ueben", "pruefen", "fortschritt"];

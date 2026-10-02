@@ -7,12 +7,14 @@ import { LEVEL_COLORS, type Progress } from "@/lib/types";
 
 interface SchultorProps {
   progress: Progress;
-  onUpdate: (updater: (p: Progress) => Progress) => void;
-  onImport: (jsonStr: string) => void;
-  onEnterClassroom: () => void;
+  /** الوضعُ السلبيُّ (محطةُ «تقدّمي»): عرضُ البطاقةِ وحدها — الأبوابُ الثلاثةُ مطبوعةٌ خلف passiv */
+  passiv?: boolean;
+  onUpdate?: (updater: (p: Progress) => Progress) => void;
+  onImport?: (jsonStr: string) => void;
+  onEnterClassroom?: () => void;
 }
 
-export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: SchultorProps) {
+export function Schultor({ progress, passiv = false, onUpdate, onImport, onEnterClassroom }: SchultorProps) {
   const act = activeProfile();
   const [name, setName] = useState(act.name === "الأساسي" ? "" : act.name);
   const [editingName, setEditingName] = useState(act.name === "الأساسي");
@@ -34,7 +36,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
 
   const setLevel = (lvl: "A1" | "A2" | "B1" | "B2") => {
     const startDay = PHASE_START[lvl];
-    onUpdate((p) => ({
+    onUpdate?.((p) => ({
       ...p,
       plan: {
         ...p.plan,
@@ -73,7 +75,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
     const reader = new FileReader();
     reader.onload = () => {
       try {
-        onImport(String(reader.result));
+        onImport?.(String(reader.result));
         setStatusMsg("تم استرجاع حقيبة دراستك بنجاح! مرحباً بعودتك ✓");
         setTimeout(() => setStatusMsg(""), 4000);
       } catch {
@@ -98,11 +100,10 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
       <div style={{ textAlign: "center", marginBottom: "1.2rem" }}>
         <div style={{ fontSize: "2.8rem", marginBottom: "0.2rem" }}>🏫</div>
         <h2 style={{ fontSize: "1.5rem", fontWeight: 900, color: "var(--color-cola)", margin: 0 }}>
-          استقبال الأكاديمية — طريقي إلى B2
+          {passiv ? "بطاقة الطالب — من ملفك" : "استقبال الأكاديمية — طريقي إلى B2"}
         </h2>
         <p style={{ color: "var(--color-ink2)", fontSize: "0.92rem", margin: "0.3rem auto 0", maxWidth: "30rem" }}>
-          مرحباً بك! هنا مدرستك الخاصة لتعلم الألمانية خطوة بخطوة حتى B2. سجّل اسمك وحدد مستواك لنبدأ الحصة فوراً.
-        </p>
+          {passiv ? "هويّتك ومسارك كما هي في ملفك — مشاهدةٌ من «تقدّمي»؛ التغييرُ من مكانِه لا من هنا." : "مرحباً بك! هنا مدرستك الخاصة لتعلم الألمانية خطوة بخطوة حتى B2. سجّل اسمك وحدد مستواك لنبدأ الحصة فوراً."}</p>
       </div>
 
       {/* ── بطاقة الطالب الرسمية (Studentenausweis) ── */}
@@ -182,6 +183,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
                   <span style={{ fontSize: "1.25rem", fontWeight: 900, color: "#fff" }}>
                     {act.name && act.name !== "الأساسي" ? act.name : "طالب الألمانية"}
                   </span>
+                  {!passiv && (
                   <button
                     onClick={() => setEditingName(true)}
                     style={{
@@ -196,6 +198,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
                   >
                     ✏️ تعديل
                   </button>
+                  )}
                 </div>
               )}
               <div style={{ fontSize: "0.82rem", color: "#d6d3d1", marginTop: "0.15rem" }}>
@@ -246,6 +249,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
       </div>
 
       {/* ── اختيار نقطة الانطلاق والمستوى ── */}
+      {!passiv && (
       <div style={{ marginBottom: "1.4rem" }}>
         <label style={{ display: "block", fontWeight: 800, fontSize: "0.95rem", marginBottom: "0.5rem", color: "var(--color-cola)" }}>
           🎯 اختر نقطة الانطلاق في دراستك:
@@ -279,18 +283,17 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
                   {lvl} {isSelected && "✓"}
                 </div>
                 <div style={{ fontSize: "0.72rem", color: "var(--color-ink2)" }}>
-                  {lvl === "A1" && "من الصفر (يوم 1)"}
-                  {lvl === "A2" && "تأسيس (يوم 43)"}
-                  {lvl === "B1" && "متوسط (يوم 92)"}
-                  {lvl === "B2" && "إتقان (يوم 169)"}
+                  بداية {lvl} — يوم {PHASE_START[lvl]}
                 </div>
               </button>
             );
           })}
         </div>
       </div>
+      )}
 
       {/* ── الحفظ المحلي والاسترداد (Local Vault) ── */}
+      {!passiv && (
       <div
         style={{
           background: "var(--color-paper2)",
@@ -340,6 +343,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
           />
         </div>
       </div>
+      )}
 
       {statusMsg && (
         <div
@@ -361,7 +365,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
       )}
 
       {/* ── زر الدخول الكبير إلى قاعة الدرس ── */}
-      {(() => {
+      {!passiv && (() => {
         const needsName = editingName || !name.trim();
         return (
           <div style={{ textAlign: "center" }}>
@@ -375,7 +379,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
                   return;
                 }
                 saveName();
-                onEnterClassroom();
+                onEnterClassroom?.();
               }}
               aria-disabled={needsName}
               style={{

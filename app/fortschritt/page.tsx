@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useProgress } from "@/lib/store";
 import { activeProfile } from "@/lib/profiles";
+import { Schultor } from "@/components/akademie/Schultor";
 import { BerichteZentrum } from "@/components/berichte";
 import { WegWeiser } from "@/components/wegweiser";
 import { RadarKarte } from "@/components/katalog";
@@ -15,7 +16,7 @@ import { Wochenplan } from "@/components/wochen";
 
 /**
  * 📈 وجهة «تقدّمي» (P4): مشاهدةٌ سلبيةٌ محضة (K116b — صفر href وصفر Link).
- * عشرُ محطاتِ إحصاءٍ تعرضُ ما صنعتَه ولا تدعوكَ إلى محتوى — الطابورُ وحده
+ * إحدى عشرة محطة تعرضُ ما صنعتَه ولا تدعوكَ إلى محتوى — الطابورُ وحده
  * يملكُ الأبواب. زرُّ الرجوعِ زرٌّ داخليٌّ لا رابط.
  */
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
@@ -29,6 +30,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   eltern: { icon: "🏠", titel: "إشراف الأسرة", unter: "تقريرُ الأسرة الأسبوعي" },
   kontrakt: { icon: "📝", titel: "عقد التقدّم", unter: "ساعاتُ الأسبوع والمعاملات المُوقَّعة" },
   wochen: { icon: "📆", titel: "جدول الأسبوع", unter: "نظرةٌ تقويميةٌ على أسبوعك" },
+  schultor: { icon: "🪪", titel: "بطاقة الطالب", unter: "هويّتك ومسارك كما هي — قراءةٌ فقط" },
 };
 
 export default function Fortschritt() {
@@ -52,12 +54,13 @@ export default function Fortschritt() {
           {offen === "eltern" && <ElternPaket progress={progress} name={activeProfile().name} />}
           {offen === "kontrakt" && <KontraktCard progress={progress} />}
           {offen === "wochen" && <Wochenplan progress={progress} />}
+          {offen === "schultor" && <Schultor progress={progress} passiv />}
         </section>
       </div>
     );
   }
 
-  const ids = ["berichte", "radar", "wegweiser", "fehlerkartei", "abzeichen", "gesundheit", "lernstrategie", "eltern", "kontrakt", "wochen"];
+  const ids = ["berichte", "radar", "wegweiser", "fehlerkartei", "abzeichen", "gesundheit", "lernstrategie", "eltern", "kontrakt", "wochen", "schultor"];
   return (
     <div className="today-screen fadein" data-testid="fortschritt-liste" style={{ display: "grid", gap: "0.8rem" }}>
       <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
