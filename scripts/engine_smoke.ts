@@ -1781,12 +1781,23 @@ void 0;
       "K110 الخلاصةُ تجمعُ ثلاثاً: ملخّصَ القاعدة + فخاخَها الشائعة + شفرةَ حفظِها — لا خلاصةٌ جُرْداء");
   }
 
+
+  /* ═══ K111 — الهويّةُ البصريةُ B (images/dirB-today.png) — كتلةُ شاشةِ اليومِ واحدةٌ قابلةٌ للتبديل ═══ */
+  {
+    const g = readFileSync("app/globals.css", "utf8");
+    ok(g.includes("#0e1013") && g.includes("#22c55e") && !g.includes("#17150f"),
+      "K111a أساسُ B مطبَّقٌ في كتلةِ شاشةِ اليوم (داكنٌ أزرقٌ باردٌ #0e1013 + أخضرُ حيّ #22c55e) ونُفي أساسُ A الدافئ #17150f — التبديلُ بكتلةٍ واحدةٍ كما وُعد");
+    ok(/\.today-screen \{[^}]*color-scheme: dark/s.test(g),
+      "K111b الكتلةُ تبقي داكنةً افتراضياً (color-scheme: dark) — الهويّةُ تتبدّل والداكنُ لا");
+  }
+
+
   /* ═══ K107 — لوحُ التنقّلِ الداكن + صفرَ بياضٍ inline في مكوّناتِ الواجهة ═══ */
   {
     const navPath = "components/akademie/Navigation.tsx";
     const navS = existsSync(navPath) ? readFileSync(navPath, "utf8") : "";
-    ok(navS.includes("#1c1917") && !navS.includes("var(--color-card"),
-      "K107a شريطُ التنقّلِ لوحٌ داكنٌ معلنٌ بنفسه (ليس var(--color-card) الذي يصيرُ أبيضَ في السياقِ الفاتح) — لا مستطيلٌ أبيضُ بكتابةٍ رمادية");
+    ok(navS.includes("#101318") && !navS.includes("var(--color-card"),
+      "K107a شريطُ التنقّلِ لوحُ هويّةِ B الداكنُ معلنٌ بنفسه #101318 (ليس var(--color-card) الذي يصيرُ أبيضَ) — لا مستطيلٌ أبيضُ بكتابةٍ رمادية");
     const weiss: string[] = [];
     const scan = (dir: string) => {
       for (const e of readdirSync(dir, { withFileTypes: true })) {
