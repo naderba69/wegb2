@@ -93,7 +93,7 @@ export function KompositaWerkstatt({ level, seed, anzahl = 6 }: { level: Level; 
                 {a.zerlegung.teile.map((t, i) => (
                   <span key={i} style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem" }}>
                     <span style={{
-                      padding: "0.3rem 0.6rem", borderRadius: "8px", background: "white",
+                      padding: "0.3rem 0.6rem", borderRadius: "8px", background: "var(--color-card)",
                       border: `2px solid ${t.grund ? "var(--color-gold)" : "var(--color-line)"}`,
                       fontWeight: t.grund ? 900 : 600,
                     }}>

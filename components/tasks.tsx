@@ -602,7 +602,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).style.display = "none";
               }}
-              style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "#fff" }}
+              style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "var(--color-card)" }}
             />
           )}
           <div style={{ fontSize: "1.7rem", fontWeight: 900 }}>

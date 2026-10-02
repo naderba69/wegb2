@@ -333,3 +333,17 @@ main { padding-bottom: 0; }
 
 /* بطاقةُ السياقِ الفاتح: تعريفٌ واحدٌ يجعلُ كلَّ background: var(--color-card) صحيحاً خارج شاشةِ اليوم */
 :root { --color-card: #ffffff; }
+
+/* ألواحُ الإشعارِ ثنائيةُ السياق: الجذرُ بلونِه الأصليّ (لا يتغيّر شيءٌ في /alt) */
+:root { --color-rosa-soft: #fef2f2; --color-amber-soft: #fef3c7; }
+
+/* طبقةُ شاشةِ اليومِ التكميلية: الألواحُ تصيرُ داكنةً هنا */
+.today-screen {
+  --color-gold: #e8c05a;
+  --color-gold-soft: #33280f;
+  --color-rosa-soft: #2a1717;
+  --color-amber-soft: #33280f;
+}
+
+/* التذييل تحت الشاشة الداكنة: لا رماديٌّ على أسود */
+body:has(.today-screen) footer { color: #b8ae9a; border-color: #3a352b; }

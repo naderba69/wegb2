@@ -632,7 +632,7 @@ export function Klassenzimmer({
               })}
             </div>
 
-            <div style={{ background: "var(--color-gold-soft)", border: "1px solid var(--color-gold)", borderRadius: "0.6rem", padding: "0.6rem 0.9rem", fontSize: "0.84rem", color: "#92400e", textAlign: "center" }}>
+            <div style={{ background: "var(--color-gold-soft)", border: "1px solid var(--color-gold)", borderRadius: "0.6rem", padding: "0.6rem 0.9rem", fontSize: "0.84rem", color: "var(--color-b1)", textAlign: "center" }}>
               📅 <strong>نظام التكرار المتباعد الأكاديمي:</strong> هذه الكلمات أُدرجت تلقائياً في جدول مراجعاتك بنهاية الأسبوع لضمان ترسيخها.
             </div>
           </div>
@@ -767,16 +767,16 @@ export function Klassenzimmer({
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.3rem" }}>
                   <span style={{ fontSize: "1.4rem" }}>⚡</span>
-                  <strong style={{ fontSize: "1.05rem", color: "#92400e" }}>
+                  <strong style={{ fontSize: "1.05rem", color: "var(--color-b1)" }}>
                     تريك الحفظ وشفرة الذاكرة (Eselsbrücke):
                   </strong>
                 </div>
                 {topicBruecken.map((b) => (
                   <div key={b.id} style={{ marginTop: "0.5rem" }}>
-                    <div style={{ fontWeight: 800, fontSize: "0.95rem", color: "#78350f" }}>
+                    <div style={{ fontWeight: 800, fontSize: "0.95rem", color: "var(--color-b1)" }}>
                       {b.titleAr}
                     </div>
-                    <p style={{ fontSize: "0.9rem", lineHeight: 1.8, color: "#92400e", margin: "0.25rem 0 0.45rem" }}>
+                    <p style={{ fontSize: "0.9rem", lineHeight: 1.8, color: "var(--color-b1)", margin: "0.25rem 0 0.45rem" }}>
                       {b.storyAr}
                     </p>
                     {b.zeilen && b.zeilen.length > 0 && (
@@ -847,18 +847,18 @@ export function Klassenzimmer({
               <div
                 key={idx}
                 style={{
-                  background: "#fef2f2",
+                  background: "var(--color-rosa-soft)",
                   border: "1px solid #fecaca",
-                  borderInlineStart: "5px solid #dc2626",
+                  borderInlineStart: "5px solid var(--color-die)",
                   borderRadius: "0.75rem",
                   padding: "0.85rem 1.1rem",
                 }}
               >
                 <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
-                  <span style={{ color: "#dc2626", fontWeight: 900, fontSize: "0.95rem" }}>فخ شائع:</span>
-                  <De style={{ fontWeight: 800, fontSize: "1rem", color: "#991b1b" }}>{p.de}</De>
+                  <span style={{ color: "var(--color-die)", fontWeight: 900, fontSize: "0.95rem" }}>فخ شائع:</span>
+                  <De style={{ fontWeight: 800, fontSize: "1rem", color: "var(--color-die)" }}>{p.de}</De>
                 </div>
-                <div style={{ marginTop: "0.3rem", fontSize: "0.88rem", color: "#7f1d1d", fontWeight: 600 }}>
+                <div style={{ marginTop: "0.3rem", fontSize: "0.88rem", color: "var(--color-die)", fontWeight: 600 }}>
                   💡 التصحيح وعلّة الخطأ: {p.ar}
                 </div>
               </div>
@@ -875,7 +875,7 @@ export function Klassenzimmer({
               {arabErrors.map((err) => (
                 <div key={err.id} style={{ background: "var(--color-card)", padding: "0.55rem 0.8rem", borderRadius: "0.5rem", border: "1px solid var(--color-line)", fontSize: "0.85rem" }}>
                   <div style={{ display: "flex", gap: "0.5rem", alignItems: "baseline" }}>
-                    <span style={{ color: "#dc2626", fontWeight: 800 }}>خطأ: <De>{err.falsch}</De></span>
+                    <span style={{ color: "var(--color-die)", fontWeight: 800 }}>خطأ: <De>{err.falsch}</De></span>
                     <span style={{ color: "var(--color-a1)", fontWeight: 800 }}>✓ صواب: <De>{err.richtig}</De></span>
                   </div>
                   <div style={{ color: "var(--color-ink2)", fontSize: "0.8rem", marginTop: "0.15rem" }}>

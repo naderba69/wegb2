@@ -52,7 +52,7 @@ import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, i
 import { logK, kompetenzWerte, band, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN } from "../lib/kompetenz";
 import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak } from "../lib/store";
-import { readFileSync, existsSync } from "fs";
+import { readFileSync, existsSync , readdirSync} from "fs";
 import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap } from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
@@ -1756,6 +1756,29 @@ void 0;
     ok(Date.now() - t0 < 1500, `K65i حسابُ 270 كبسولةً مع الحلقةِ الارتدادية أقلُّ من 1.5 ثانية (محفوظ) — ${Date.now() - t0}ms`);
   }
 
+
+
+  /* ═══ K107 — لوحُ التنقّلِ الداكن + صفرَ بياضٍ inline في مكوّناتِ الواجهة ═══ */
+  {
+    const navPath = "components/akademie/Navigation.tsx";
+    const navS = existsSync(navPath) ? readFileSync(navPath, "utf8") : "";
+    ok(navS.includes("#1c1917") && !navS.includes("var(--color-card"),
+      "K107a شريطُ التنقّلِ لوحٌ داكنٌ معلنٌ بنفسه (ليس var(--color-card) الذي يصيرُ أبيضَ في السياقِ الفاتح) — لا مستطيلٌ أبيضُ بكتابةٍ رمادية");
+    const weiss: string[] = [];
+    const scan = (dir: string) => {
+      for (const e of readdirSync(dir, { withFileTypes: true })) {
+        const p = dir + "/" + e.name;
+        if (e.isDirectory()) scan(p);
+        else if (e.name.endsWith(".tsx") && e.name !== "klausur.tsx" && e.name !== "blatt.tsx") { /* A4-Druckpapiere bleiben weiß mit dunkel deklariertem Text */
+          const src = readFileSync(p, "utf8");
+          if (/background: "white"|background: "#fff"|backgroundColor: "white"/.test(src)) weiss.push(e.name);
+        }
+      }
+    };
+    scan("components");
+    ok(weiss.length === 0,
+      "K107b صفرَ بياضٍ موروثٍ في مكوّناتِ الواجهة (ورقتا الطباعة A4 مستثناتان — بيضاءٌ بنصٍّ داكنٍ معلن): كلَّ سطحٍ آخرَ يرثُ var(--color-card) — متبقٍّ: " + (weiss.join(" · ") || "لا شيء"));
+  }
 
   /* ═══ K66 — رادار الكلمات الإشارية (lib/signalwoerter.ts): مشتقّ من الحوارات الـ80، بحدود معلَنة ═══ */
   {

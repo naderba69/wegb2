@@ -29,8 +29,8 @@ export default function Navigation() {
         insetInline: 0,
         display: "grid",
         gridTemplateColumns: "repeat(5, 1fr)",
-        background: "var(--color-card, #1c1917)",
-        borderTop: "1px solid var(--color-line, #3a352b)",
+        background: "#1c1917",
+        borderTop: "1px solid #3a352b",
         paddingBottom: "env(safe-area-inset-bottom, 0px)",
         zIndex: 50,
         direction: "rtl",
@@ -53,8 +53,8 @@ export default function Navigation() {
               textDecoration: "none",
               fontSize: "0.72rem",
               fontWeight: aktiv ? 900 : 600,
-              color: aktiv ? "var(--color-cola-light, #E06A5A)" : "var(--color-ink2, #B8AE9A)",
-              borderTop: aktiv ? "3px solid var(--color-cola-light, #E06A5A)" : "3px solid transparent",
+              color: aktiv ? "#e06a5a" : "#b8ae9a",
+              borderTop: aktiv ? "3px solid #e06a5a" : "3px solid transparent",
             }}
           >
             <span aria-hidden style={{ fontSize: "1.15rem", lineHeight: 1 }}>{z.icon}</span>

@@ -66,7 +66,7 @@ export default function AusspracheTrainer({ satz, ar, level = "A1" }: { satz: st
       </div>
 
       {status === "kein-mikro" && (
-        <div className="card" style={{ padding: "0.6rem", background: "#fef3c7", fontSize: "0.86rem" }}>
+        <div className="card" style={{ padding: "0.6rem", background: "var(--color-amber-soft)", fontSize: "0.86rem" }}>
           تعذّر الوصول إلى الميكروفون. المسار البديل: اقرأ الجملة بصوتٍ عالٍ ثلاث مرّات وقارنها بالنموذج المسموع —
           <strong> لكنّ هذه القراءة لا تُحتسَب في الدرجة</strong> لأنّها غير مقيسة.
         </div>
