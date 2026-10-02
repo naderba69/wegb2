@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import Navigation from "@/components/akademie/Navigation";
 
 export const metadata: Metadata = {
   title: "طريقي إلى B2 — Mein Weg bis B2",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main style={{ maxWidth: "56rem", margin: "0 auto", padding: "1rem 1rem 4rem" }}>
           {children}
         </main>
+      <Navigation />
         <footer
           style={{
             textAlign: "center",

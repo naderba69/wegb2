@@ -19,7 +19,7 @@ export function ProfilWahl() {
   return (
     <select
       className="chip"
-      style={{ cursor: "pointer", background: "white", padding: "0.15rem 0.4rem" }}
+      style={{ cursor: "pointer", background: "var(--color-card)", padding: "0.15rem 0.4rem" }}
       value={act.id}
       title="تبديل الملف العائلي"
       onChange={(e) => {

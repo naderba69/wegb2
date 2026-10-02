@@ -456,8 +456,9 @@ const empty = () => loadProgress();
     const hoerenSrc = readFileSync("components/hoeren.tsx", "utf8");
     ok(hoerenSrc.includes("@/lib/hoeren") && !hoerenSrc.includes("function darfSpielen"), "K24k البطاقة تستورد القانون من lib/hoeren ولا تعيد اختراعه محلياً");
     ok(hoerenSrc.includes("🎧 معمل الاستماع") && hoerenSrc.includes("استماعة واحدة") && hoerenSrc.includes("🔒"), "K24l الواجهة تعد بما ينفذه المحرك: صرامة معلنة مقفلة");
-    const appSrc = readFileSync("app/page.tsx", "utf8");
-    ok(appSrc.includes("<HoerLabor progress={progress} />"), "K24m المعمل مركَّب في الصفحة — ليس كتالوجاً مؤجلاً");
+    const appSrc = existsSync("app/alt/page.tsx") ? readFileSync("app/alt/page.tsx", "utf8") : "";
+    ok(appSrc.includes("<HoerLabor progress={progress} />") && existsSync("app/alt/page.tsx"),
+      "K24m المعملُ مركَّبٌ في حجرِ /alt (يُنتقلُ إلى «تدرّب» في P3) — ليس كتالوجاً مؤجلاً");
   }
 
   /* ===== K26 — مصنع الصوت: ملفات مُولَّدة تخدم من public/ ===== */
@@ -518,7 +519,7 @@ const empty = () => loadProgress();
       const manL = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as unknown as { einsaetze: { id: string }[] };
       const aids = new Set(manL.einsaetze.map((e) => e.id));
       ok(lk.items.every((i) => aids.has(i.textId)), "K31d كلُّ وحدةٍ مشدودةٌ إلى شريطٍ مُعلَنٍ في المانيفستو — لا فراغَ بلا صوت");
-      ok(readFileSync("components/hoeren.tsx", "utf8").includes("LueckDiktat") && readFileSync("app/page.tsx", "utf8").includes("<LueckDiktat progress={progress} />"), "K31e المحركُ مركَّبٌ في مركزه — لا بياناتٍ في الدرج");
+      ok(readFileSync("components/hoeren.tsx", "utf8").includes("LueckDiktat") && existsSync("app/alt/page.tsx") && readFileSync("app/alt/page.tsx", "utf8").includes("<LueckDiktat progress={progress} />"), "K31e المحركُ مركَّبٌ في مركزه داخل حجرِ /alt (يُنتقلُ في P3) — لا بياناتٍ في الدرج");
       ok(readFileSync("lib/luecken.ts", "utf8").includes("pickLk") && readFileSync("components/hoeren.tsx", "utf8").includes("art: \"schreibung\""), "K31f الحتميَّةُ والدفترُ موصولان — الساقطُ يُسجَّل كتابةً");
     }
     {
@@ -1621,6 +1622,58 @@ void 0;
     ok(dup.length === 0, `K96a jede Übung trägt eine eindeutige ID über alle ${Object.keys(grammarMap).length} Lektionen — doppelt: ${dup.slice(0, 6).join(", ") || "keine"}`);
   }
 
+  /* ═══ K100–K105 · إعادة الهيكلة P1: Today-Screen · التنقّل · حجر /alt · FehlerRevue ═══ */
+  {
+    const heim = readFileSync("app/page.tsx", "utf8");
+    const navSrc = existsSync("components/akademie/Navigation.tsx") ? readFileSync("components/akademie/Navigation.tsx", "utf8") : "";
+    const layoutSrc = readFileSync("app/layout.tsx", "utf8");
+    const globalsSrc = readFileSync("app/globals.css", "utf8");
+    const altOk = existsSync("app/alt/page.tsx");
+    const altSrc = altOk ? readFileSync("app/alt/page.tsx", "utf8") : "";
+    const revSrc = existsSync("components/akademie/FehlerRevue.tsx") ? readFileSync("components/akademie/FehlerRevue.tsx", "utf8") : "";
+    const klassSrc = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+
+    // K100: '/' = شاشة اليوم فقط — لا بطاقة خزانة تتسرب إليها
+    const archivMarker = ["WingKopf", "TiefenLexikon", "UebungenCard", "PruefungsZentrum", "BerichteZentrum", "LektionsZentrum", "<HoerLabor", "<LueckDiktat", "BlitzDrill", "InterviewArena", "ElternPaket", "SchulSimulator", "AbzeichenKarte", "viewMode"];
+    const leck = archivMarker.filter((mk) => heim.includes(mk));
+    ok(heim.includes("<Klassenzimmer") && leck.length === 0,
+      `K100a('/') شاشةُ اليومِ وحدَها: Klassenzimmer مركَّبةٌ ولا بطاقةَ خزانةَ تتسرب — متسرب: ${leck.join(" · ") || "لا شيء"}`);
+
+    // K101: التنقّل خمسة وجهات بالضبط ومرسوم في layout
+    const navHrefs = [...navSrc.matchAll(/href[=:]\s*"([^"]+)"/g)].map((x) => x[1]);
+    const sollNav = ["/", "/lernen", "/ueben", "/pruefen", "/fortschritt"];
+    const navFehlt = sollNav.filter((h) => navHrefs.filter((x) => x === h).length !== 1);
+    ok(navSrc.length > 0 && navFehlt.length === 0 && navHrefs.length === 5,
+      `K101a التنقّلُ خمسُ وجهاتٍ بالضبط (كلٌّ مرّةً واحدة) — ناقص/زائد: ${navFehlt.join(",") || navHrefs.join(",")}`);
+    ok(layoutSrc.includes("<Navigation"), "K101b الشريطُ السفليّ مركَّبٌ في layout — لا وجهاتٌ بلا باب");
+
+    // K102: صفر روابط قفز من '/' — لا مخرجٌ إلا رخصتان (الطباعة/الإعدادات)
+    const hrefs = [...heim.matchAll(/href="([^"]+)"/g)].map((x) => x[1]);
+    const erlaubt = ["/drucken", "/einstellungen"];
+    const fremd = hrefs.filter((h) => !erlaubt.includes(h));
+    ok(fremd.length === 0, `K102a صفرُ رابطِ قفزٍ من شاشةِ اليوم — رخصتان فقط (🖨/⚙️) — مخالف: ${fremd.join(", ") || "لا شيء"}`);
+
+    // K103: الوضع الداكن افتراضياً على شاشة اليوم (أساس A — قابل للتبديل بكتلة واحدة)
+    ok(globalsSrc.includes(".today-screen") && globalsSrc.includes("color-scheme: dark"),
+      "K103 شاشةُ اليومِ داكنةٌ افتراضياً (.today-screen + color-scheme: dark) — جوّالاً كان أم سطح مكتب");
+
+    // K104: الحجر /alt يخدم الصفحة القديمة كاملة — لا محتوى يضيع في النقل
+    ok(altOk && altSrc.includes("WingKopf") && altSrc.includes("LektionsZentrum") && altSrc.includes("Schultor"),
+      `K104a الحجرُ /alt يحملُ الخزانةَ كاملةً (WingKopf+LektionsZentrum+Schultor) — alt=${altOk}`);
+
+    // K106: قاعدة التصعيد — الخطأ الذي تكرّر 3 مرات يُبلَّغ عنه باسم مسؤوله (3× ← الدرس المركّز)
+    ok(revSrc.includes("lapses >= 3") && /مرات/.test(revSrc) && /الدرس/.test(revSrc) && /تدريب/.test(revSrc),
+      "K106a قاعدةُ التصعيدِ مكتوبةٌ في محطّةِ المراجعة: تكرارُ 3 ⇒ سطرُ إفادةٍ يسمّي المسؤولَ والدرسَ المركَّز");
+
+    // K105: محطة مراجعة الأخطاء المتكرّقة قبل الإغلاق — لا يُغلق يومٌ وماضيه مفتوح
+    ok(revSrc.includes("dueFehlerPriorisiert") && revSrc.includes("gradeFehlerNow"),
+      "K105a FehlerRevue يستدعي dueFehlerPriorisiert (الأولوية) وgradeFehlerNow (التقييم) — لا استرجاعَ بلا مصحِّح");
+    const iRev = klassSrc.indexOf("<FehlerRevue");
+    const iClose = klassSrc.indexOf("تأكيد إغلاق اليوم");
+    ok(iRev > 0 && iClose > 0 && iRev < iClose,
+      `K105b محطّةُ المراجعةِ تسبقُ نافذةَ الإغلاقِ في الترتيبِ اللونيّ (revue=${iRev}, close=${iClose})`);
+  }
+
 
   /* ═══ K64 — قفل بدء الجلسة (lib/ritual.ts): الجديد لا يُرى قبل تسليم الاسترجاع ═══ */
   {
@@ -1650,8 +1703,9 @@ void 0;
     const alleLerntage = Array.from({ length: 60 }, (_, i) => i + 2).filter((d) => buildDay(d, P).type !== "wochencheck");
     ok(alleLerntage.every((d) => ritualUrteil(buildDay(d, P), P).aktiv), "K64i كلُّ أيامِ التعلُّمِ والتثبيتِ في أوّلِ شهرين لها بوابةٌ فعلاً (60 يوماً مفحوصة)");
     const seite = require("fs").readFileSync("app/page.tsx", "utf8");
-    ok(/ritual-sperre/.test(seite) && /aufgabeGesperrt\(ritual, i\)/.test(seite) && /stepFrei/.test(seite),
-      "K64j الصفحةُ الرئيسةُ تستهلكُ الحكمَ: لافتةُ القفل + رقائقُ مقفولة + لا عرضَ لمهمّةٍ مقفولة");
+    const klass = require("fs").readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+    ok(/<Klassenzimmer/.test(seite) && /data-testid="ritual-sperre"/.test(klass) && /aufgabeGesperrt\(ritual, i\)/.test(klass) && /stepFrei/.test(klass),
+      "K64j شاشةُ اليومِ تركّبُ Klassenzimmer الحاملةَ للحكم: لافتةُ قفلٍ حقيقيةٌ (data-testid) + رقائقُ مقفولةٌ في موقعِ الرسم — لا تعليقاتٍ مُصطنعة");
   }
 
 
@@ -1695,7 +1749,8 @@ void 0;
     ok(seite2.includes("gesternKapsel") || /kapsel/.test(seite2), "K65g وكبسولةُ الأمسِ تقعُ خلفَ قفلِ البوابة: لا جديدَ قبلَ استظهارِها");
     const w2 = buildDay(2, P).tasks[0];
     const seite = require("fs").readFileSync("app/page.tsx", "utf8"), komp = require("fs").readFileSync("components/kapsel.tsx", "utf8");
-    ok(/TagesKapsel day=\{day\}/.test(seite) && /data-testid="tageskapsel"/.test(komp) && !/قرأتها"\s*<\/button>/.test(komp) && /speakDe/.test(komp),
+    const klassK = require("fs").readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+    ok(/<TagesKapsel day=\{day\}/.test(klassK) && /<Klassenzimmer/.test(seite) && /data-testid="tageskapsel"/.test(komp) && !/قرأتها"\s*<\/button>/.test(komp) && /speakDe/.test(komp),
       "K65h الصفحةُ تعرضُ الكبسولةَ، وفيها صوتٌ، وليس فيها زرُّ «قرأتها» — البرهانُ أداءُ الغد");
     const t0 = Date.now(); for (let d = 1; d <= TOTAL; d++) kapselIds(d);
     ok(Date.now() - t0 < 1500, `K65i حسابُ 270 كبسولةً مع الحلقةِ الارتدادية أقلُّ من 1.5 ثانية (محفوظ) — ${Date.now() - t0}ms`);

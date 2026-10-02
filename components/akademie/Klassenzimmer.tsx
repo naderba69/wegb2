@@ -1,5 +1,6 @@
 "use client";
 import { useState, useMemo, useEffect } from "react";
+import { FehlerRevue } from "./FehlerRevue";
 import {
   type DayPlan,
   type DayTask,
@@ -389,7 +390,7 @@ export function Klassenzimmer({
                     alignItems: "center",
                     justifyContent: "space-between",
                     gap: "0.6rem",
-                    background: "white",
+                    background: "var(--color-card)",
                     padding: "0.55rem 0.85rem",
                     borderRadius: "0.6rem",
                     border: "1px solid var(--color-line)",
@@ -421,7 +422,7 @@ export function Klassenzimmer({
               🎧 فخّ نطقي عربي لليوم:
             </div>
             <div style={{
-              background: "white", padding: "0.7rem 0.9rem", borderRadius: "0.6rem",
+              background: "var(--color-card)", padding: "0.7rem 0.9rem", borderRadius: "0.6rem",
               border: "1px solid var(--color-line)", fontSize: "0.88rem",
             }}>
               <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center", marginBottom: "0.4rem" }}>
@@ -550,7 +551,7 @@ export function Klassenzimmer({
                   )}
 
                   {currentVocabCard.exampleDe && (
-                    <div style={{ background: "white", padding: "0.7rem 0.9rem", borderRadius: "0.6rem", border: "1px solid var(--color-line)", margin: "0.4rem 0", width: "100%", textAlign: "center" }}>
+                    <div style={{ background: "var(--color-card)", padding: "0.7rem 0.9rem", borderRadius: "0.6rem", border: "1px solid var(--color-line)", margin: "0.4rem 0", width: "100%", textAlign: "center" }}>
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.4rem" }}>
                         <De style={{ fontWeight: 800, fontSize: "0.98rem" }}>{currentVocabCard.exampleDe}</De>
                         <button
@@ -682,7 +683,7 @@ export function Klassenzimmer({
 
             {/* ── القواعد الوظيفية ── */}
             {topic.rules && topic.rules.length > 0 && (
-              <div style={{ background: "white", padding: "0.85rem 1.1rem", borderRadius: "0.8rem", border: "1px solid var(--color-line)" }}>
+              <div style={{ background: "var(--color-card)", padding: "0.85rem 1.1rem", borderRadius: "0.8rem", border: "1px solid var(--color-line)" }}>
                 <div style={{ fontWeight: 800, fontSize: "0.92rem", color: "var(--color-cola)", marginBottom: "0.4rem" }}>
                   📐 القواعد الوظيفية:
                 </div>
@@ -702,7 +703,7 @@ export function Klassenzimmer({
                 {topic.tables.map((tbl, tIdx) => (
                   <div key={tIdx} style={{ marginBottom: "0.6rem" }}>
                     {tbl.captionAr && <div style={{ fontWeight: 700, fontSize: "0.85rem", marginBottom: "0.3rem" }}>{tbl.captionAr}</div>}
-                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem", background: "white", borderRadius: "0.5rem" }}>
+                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem", background: "var(--color-card)", borderRadius: "0.5rem" }}>
                       <thead>
                         <tr style={{ background: "var(--color-paper2)" }}>
                           {tbl.headers.map((h, hIdx) => (
@@ -781,7 +782,7 @@ export function Klassenzimmer({
                     {b.zeilen && b.zeilen.length > 0 && (
                       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))", gap: "0.35rem" }}>
                         {b.zeilen.map((z, zIdx) => (
-                          <div key={zIdx} style={{ background: "white", padding: "0.4rem 0.6rem", borderRadius: "0.4rem", fontSize: "0.82rem", border: "1px solid #fde68a" }}>
+                          <div key={zIdx} style={{ background: "var(--color-card)", padding: "0.4rem 0.6rem", borderRadius: "0.4rem", fontSize: "0.82rem", border: "1px solid #fde68a" }}>
                             <span style={{ fontWeight: 900, color: "#b45309" }}>{z.code} ➔ </span>
                             <De style={{ fontWeight: 800 }}>{z.de}</De>
                             <div style={{ color: "var(--color-ink2)", fontSize: "0.75rem" }}>{z.ar}</div>
@@ -872,7 +873,7 @@ export function Klassenzimmer({
             </div>
             <div style={{ display: "grid", gap: "0.5rem" }}>
               {arabErrors.map((err) => (
-                <div key={err.id} style={{ background: "white", padding: "0.55rem 0.8rem", borderRadius: "0.5rem", border: "1px solid var(--color-line)", fontSize: "0.85rem" }}>
+                <div key={err.id} style={{ background: "var(--color-card)", padding: "0.55rem 0.8rem", borderRadius: "0.5rem", border: "1px solid var(--color-line)", fontSize: "0.85rem" }}>
                   <div style={{ display: "flex", gap: "0.5rem", alignItems: "baseline" }}>
                     <span style={{ color: "#dc2626", fontWeight: 800 }}>خطأ: <De>{err.falsch}</De></span>
                     <span style={{ color: "var(--color-a1)", fontWeight: 800 }}>✓ صواب: <De>{err.richtig}</De></span>
@@ -1128,7 +1129,10 @@ export function Klassenzimmer({
           </div>
         </div>
 
-        {/* ── قرارات نهاية الحصة الـ 45 دقيقة ── */}
+        {/* ── محطة ٣: مراجعة الأخطاء المتكرّقة (قبل الإغلاق — K105) ── */}
+      {allSubmitted && <FehlerRevue progress={progress} />}
+
+      {/* ── قرارات نهاية الحصة الـ 45 دقيقة ── */}
         <div style={{ display: "grid", gap: "0.8rem", textAlign: "center" }}>
           {!confirmClose ? (
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", alignItems: "center" }}>
@@ -1189,7 +1193,7 @@ export function Klassenzimmer({
                   style={{
                     marginTop: "0.5rem",
                     padding: "0.8rem 1rem",
-                    background: "white",
+                    background: "var(--color-card)",
                     border: "1px dashed var(--color-gold)",
                     borderRadius: "0.6rem",
                     fontSize: "0.88rem",

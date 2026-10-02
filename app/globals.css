@@ -292,3 +292,44 @@ label:has(input[type="checkbox"]), label:has(input[type="radio"]) {
   .druckblatt { max-width: none; padding: 0; }
   .druck-karte { border-color: #999; }
 }
+
+
+/* ══════════════ Umstrukturierung P1 — شاشة «اليوم»: الأساس الداكن A (كلاسيكي جديد) ══════════════ */
+/* كتلة واحدة قابلة للتبديل بالكامل — الشاشة القديمة داخل /alt لا تُورَث منها شيئاً */
+.today-screen {
+  color-scheme: dark;
+  --color-paper: #17150f;
+  --color-paper2: #1c1a14;
+  --color-card: #24211a;
+  --color-ink: #ede6d6;
+  --color-ink2: #b8ae9a;
+  --color-line: #3a352b;
+  --color-cola-light: #e06a5a;
+  --color-cola-soft: #2a1f1b;
+  --color-a1: #6fa07c;
+  --color-a2: #7f96c9;
+  --color-b1: #d9b45c;
+  --color-b2: #67a3b8;
+  --shadow-soft: 0 4px 24px rgb(0 0 0 / 0.45);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  min-height: calc(100dvh - 7rem);
+  border-radius: 0.75rem;
+}
+.today-screen .card { background: var(--color-card); color: var(--color-ink); border-color: var(--color-line); }
+.today-screen .chip { background: var(--color-card); color: var(--color-ink); border-color: var(--color-line); }
+.today-screen .btn { background: var(--color-card); color: var(--color-ink); border-color: var(--color-line); }
+.today-screen .btn-primary { background: var(--color-cola-light); color: #fff; border-color: var(--color-cola-light); }
+.today-screen .btn-gold { background: var(--color-b1); color: #17150f; border-color: var(--color-b1); }
+.today-screen .btn-ghost { background: transparent; }
+.today-screen .progressbar { background: #3a352b; }
+.today-screen h1, .today-screen h2, .today-screen h3 { color: var(--color-ink); }
+.today-screen input, .today-screen textarea, .today-screen select { background: var(--color-paper2); color: var(--color-ink); border-color: var(--color-line); }
+body:has(.today-screen) { background: #17150f; }
+html:has(body .today-screen) { background: #17150f; }
+
+/* التنقّل السفلي (K101): مساحة لخط الأساس ثم الشريط */
+main { padding-bottom: 0; }
+
+/* بطاقةُ السياقِ الفاتح: تعريفٌ واحدٌ يجعلُ كلَّ background: var(--color-card) صحيحاً خارج شاشةِ اليوم */
+:root { --color-card: #ffffff; }

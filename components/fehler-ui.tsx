@@ -308,7 +308,7 @@ export function Lernstrategien() {
       <h2 style={{ fontWeight: 800, marginBottom: "0.5rem" }}>🧠 كيف يذاكر المحترفون — حيل الحفظ السريع</h2>
       <div style={{ display: "grid", gap: "0.5rem", margin: "0.6rem 0" }}>
         {techniken.map(([t1, t2]) => (
-          <div key={t1} style={{ background: "white", borderRadius: "0.6rem", padding: "0.55rem 0.8rem" }}>
+          <div key={t1} style={{ background: "var(--color-card)", borderRadius: "0.6rem", padding: "0.55rem 0.8rem" }}>
             <strong>{t1}</strong>
             <div style={{ fontSize: "0.87rem", color: "var(--color-ink2)" }}>{t2}</div>
           </div>

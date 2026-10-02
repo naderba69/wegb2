@@ -198,7 +198,7 @@ export function ElternBriefView({ progress }: { progress: Progress }) {
         رسالة جاهزة للطباعة أو القراءة — ألمانية وعربية، حتمية من نتائج الطالب الحقيقية.
       </p>
       <div className="grid2" style={{ gap: "0.8rem" }} dir="ltr">
-        <div style={{ background: "white", borderRadius: "0.7rem", padding: "0.8rem 0.9rem" }}>
+        <div style={{ background: "var(--color-card)", borderRadius: "0.7rem", padding: "0.8rem 0.9rem" }}>
           <strong style={{ fontSize: "0.85rem" }}>🇩🇪 Deutsch</strong>
           <ul style={{ margin: "0.4rem 0 0", paddingInlineStart: "1.1rem", fontSize: "0.88rem", lineHeight: 1.8 }}>
             {b.de.map((l, i) => (
@@ -206,7 +206,7 @@ export function ElternBriefView({ progress }: { progress: Progress }) {
             ))}
           </ul>
         </div>
-        <div style={{ background: "white", borderRadius: "0.7rem", padding: "0.8rem 0.9rem" }} dir="rtl">
+        <div style={{ background: "var(--color-card)", borderRadius: "0.7rem", padding: "0.8rem 0.9rem" }} dir="rtl">
           <strong style={{ fontSize: "0.85rem" }}>🇸🇦 العربية</strong>
           <ul style={{ margin: "0.4rem 0 0", paddingInlineStart: "1.1rem", fontSize: "0.88rem", lineHeight: 1.8 }}>
             {b.ar.map((l, i) => (
