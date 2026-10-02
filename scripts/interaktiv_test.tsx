@@ -381,32 +381,34 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(txt().includes("🎧 النتيجة:") && /\d+\/\d+/.test(txt()), "XII11 ورقة مصحَّحة: نتيجة بعدّاد وحكم مقياس Goethe");
     ok(!!btn("🔁 جولة نصٍّ جديد"), "XII12 طريق الثورة مفتوح — جولة جديدة لا إعادة مُثقلة");
 
+    const { levelOf } = await import("../lib/plan");
     const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
     mount(React.createElement(HoerLabor, { progress: p1 }));
-    ok(txt().includes("🔊 صوت مُنتَج"), "XII13 نص A1 اليومي يحمل شارة الصوت المُنتَج — لا TTS جهاز");
+    ok(txt().includes("🔊 صوت مُنتَج"), "XII13 نصُ اليومِ الأوّل يحملُ شارةَ الصوتِ المُنتَج — لا TTS جهاز");
     const aud = d0.querySelector("audio");
-    ok(!!aud && (aud.getAttribute("src") ?? "").startsWith("/audio/hoeren/t-a1-"), "XII14 عنصر ‹audio› موصول بملف محلي من public");
+    ok(!!aud && (aud.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(1).toLowerCase()}-`), "XII14 عنصر ‹audio› موصولٌ بلوحِه الحقّ t-${levelOf(1).toLowerCase()}- من public");
     const play1 = btn("استمع الآن");
     if (play1) click(play1);
     ok(txt().includes("استمعت 1×"), "XII15 النقر يسجّل الاستماعة على مسار الملف بلا صرخة");
     ok(!txt().includes("لا يوفّر صوتاً"), "XII16 مع الملف المرفق تسقط لافتة العطل — الامتحان لم يعد رهين الجهاز");
 
-    const pA2 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 80 } }; // داخل A2 (43–91) بعد التوزيع الأكاديمي
+    const pA2 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 80 } }; // داخلَ لوحِ levelOf(80) فعلًا بعدَ إعادةِ التوزيعِ الأكاديميّ
     mount(React.createElement(HoerLabor, { progress: pA2 }));
-    ok(txt().includes("🔊 صوت مُنتَج"), "XII17 يوم A2 يولد نصاً مغطى بالوجبة الثانية — الشارة حاضرة");
+    ok(txt().includes("🔊 صوت مُنتَج"), "XII17 يومٌ داخلَ اللوحِ المغطّى (80): نصُّه مسجَّلٌ والشارةُ حاضرة");
     const aud2 = d0.querySelector("audio");
-    ok(!!aud2 && (aud2.getAttribute("src") ?? "").startsWith("/audio/hoeren/t-a2-"), "XII18 عنصر الصوت موصول بلوح A2: لا يوم في اللوحين يُخدَم بغير ملفه");
+    
+    ok(!!aud2 && (aud2.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(80).toLowerCase()}-`), "XII18 عنصرُ الصوتِ موصولٌ بلوحه الفعليّ t-${levelOf(80).toLowerCase()}-: لا يومٌ في اللوحينِ يُخدَمُ بغير ملفه");
 
     const pB1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 150 } };
     mount(React.createElement(HoerLabor, { progress: pB1 }));
     const aud3 = d0.querySelector("audio");
-    ok((!!aud3 && (aud3.getAttribute("src") ?? "").startsWith("/audio/hoeren/t-b1-")) || (!aud3 && /صوت الجهاز|بلا صوت/.test(txt())), "XII19 يوم B1 (150): ملفُّه المسجَّل أو شارةٌ صادقةٌ لنصٍّ جديدٍ بلا mp3");
+    ok((!!aud3 && (aud3.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(150).toLowerCase()}-`)) || (!aud3 && /صوت الجهاز|بلا صوت/.test(txt())), "XII19 يوم 150 (لوح ${levelOf(150)}): ملفُّه المسجَّل أو شارةٌ صادقةٌ لنصٍّ جديدٍ بلا mp3");
 
     const pB2 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 240 } };
     mount(React.createElement(HoerLabor, { progress: pB2 }));
     const aud4 = d0.querySelector("audio");
-    if (!(!!aud4 && (aud4.getAttribute("src") ?? "").startsWith("/audio/hoeren/t-b2-"))) console.log("   ⤷ XII20 debug:", !!aud4, aud4?.getAttribute("src"), txt().slice(0, 200));
-    ok((!!aud4 && (aud4.getAttribute("src") ?? "").startsWith("/audio/hoeren/t-b2-")) || (!aud4 && /صوت الجهاز|بلا صوت/.test(txt())), "XII20 يوم B2 (240): إمّا ملفُّه المسجَّل أو — إن وقعَ على نصٍّ جديدٍ بلا mp3 — شارةُ «صوت الجهاز» الصادقة، لا صمتٌ ولا ادّعاء");
+    if (!(!!aud4 && (aud4.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(240).toLowerCase()}-`))) console.log("   ⤷ XII20 debug:", !!aud4, aud4?.getAttribute("src"), txt().slice(0, 200));
+    ok((!!aud4 && (aud4.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(240).toLowerCase()}-`)) || (!aud4 && /صوت الجهاز|بلا صوت/.test(txt())), "XII20 يوم 240 (لوح ${levelOf(240)}): إمّا ملفُّه المسجَّل أو — إن وقعَ على نصٍّ جديدٍ بلا mp3 — شارةُ «صوت الجهاز» الصادقة، لا صمتٌ ولا ادّعاء");
   }
 
 
@@ -629,13 +631,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
 
-  /* ---------- XXVIII — التغطيةُ التامّة: 37 درساً تُفتَحُ فتجدُ تركتَها ---------- */
+  /* ---------- XXVIII — التغطيةُ التامّة: 58 درساً تُفتَحُ فتجدُ تركتَها ---------- */
   {
     const { default: TaskView } = await import("../components/tasks");
     const { grammarMap, getBrueckenFor } = await import("../lib/content");
     const props = { lang: "ar" as const, day: 60, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
     const ids = Object.keys(grammarMap);
-    ok(ids.length === 38, "XXVIII1 ثمانيةٌ وثلاثونَ درسَ قواعدَ في البنك — Präteritum ×2 + Wortbildung");
+    ok(ids.length === 58, "XXVIII1 ثمانيةٌ وخمسونَ درسَ قواعدَ في البنك — بعدَ ضربِ البنوكِ وتوسيعِها لا بالتمنّي");
     let leer = 0; let ohneKopf = 0;
     for (const g of ids) {
       try {
@@ -645,7 +647,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       if (!t.includes("🧠 تركاتُ الحفظ لهذا الدرس")) ohneKopf++;
       if (!t.includes(`(${getBrueckenFor(g).length})`)) leer++;
     }
-    ok(ohneKopf === 0, "XXVIII2 كلُّ درسٍ من السبعةِ والثلاثينَ يَعرِضُ كتلةَ التركاتِ فعلاً — صفرُ درسٍ أجرد");
+    ok(ohneKopf === 0, "XXVIII2 كلُّ درسٍ من ثمانيةٍ وخمسينَ يَعرِضُ كتلةَ التركاتِ فعلاً — صفرُ درسٍ أجرد");
     ok(leer === 0, "XXVIII3 وعدَّادُ كلِّ درسٍ يطابقُ ما تُرجِعُهُ الدالةُ له بالضبط");
     ok(getBrueckenFor("b2-modalpartikel").length >= 1 && getBrueckenFor("a1-zahlen").length >= 1, "XXVIII4 آخرُ اليتامى (الجسيماتُ والأرقام) نالا تركتَهما");
     ok(ids.includes("a1-war-hatte") && ids.includes("a2-praeteritum"), "XXVIII5 درسا الماضي البسيط داخلَ البنكِ لا في ملفٍ يتيم");
@@ -726,8 +728,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
     console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ 270 يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
     if (crashes.length) console.error("   ⤷ انهيارات:", crashes.slice(0, 6).join(" | "));
     if (leere.length) console.error("   ⤷ شاشاتٌ خاوية:", leere.slice(0, 6).join(" | "));
-    ok(total === 1282, "XXXI1 1282 مهمةً عبرَ المسيرةِ (1263 + 19 استماعاً قصيراً A1/A2) — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي");
-    ok(kinds.size === 8, "XXXI2 الأنواعُ الثمانيةُ كلُّها مُمثَّلةٌ فعلاً في الأيامِ — لا نوعَ مكتوبٌ في الأنواعِ ولا يُولَد");
+    ok(total === 1473, `XXXI1 1473 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
+    ok(kinds.size === 9, `XXXI2 الأنواعُ التسعةُ كلُّها مُمثَّلةٌ فعلاً في الأيامِ — لا نوعَ مكتوبٍ ولا يُولَد (${[...kinds.keys()].join("، ")})`);
     ok(crashes.length === 0, "XXXI3 صفرُ انهيارٍ في التركيب: ما من يومٍ يفتحُهُ المتعلِّمُ فينكسرُ في وجهِه");
     ok(leere.length === 0, "XXXI4 صفرُ شاشةٍ خاوية: كلُّ مهمةٍ تعرضُ محتوًى حقيقياً لا هيكلاً فارغاً");
     ok([...kinds.values()].every((v) => v >= 20), "XXXI5 ولا نوعَ نادرٌ يظهرُ مرةً أو مرتَين — التوزيعُ حقيقيٌّ لا زينة");
@@ -1049,7 +1051,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
   /* ═══════════ XLI — وسمُ الوحدةِ يظهرُ في رأسِ اليومِ فعلاً ═══════════ */
   {
-    const { modulOf } = await import("../lib/plan");
+    const { modulOf, levelOf } = await import("../lib/plan");
     (globalThis as unknown as { self?: unknown }).self = globalThis;
     const { default: Heim } = await import("../app/page");
     mount(React.createElement(Heim));
@@ -1057,7 +1059,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!etikett, "XLI1 شريطُ «المستوى — الوحدة — الخطوة» مرسومٌ في الرأس");
     const t = etikett?.textContent ?? "";
     const erwartet = modulOf(1);
-    ok(t.includes("المستوى A1"), "XLI2 ويحملُ المستوى");
+    ok(t.includes(`المستوى ${levelOf(1)}`), "XLI2 ويحملُ المستوى — من جدولِ المراحلِ نفسِه لا من تثبيتٍ يدويّ");
     ok(t.includes("الوحدة"), "XLI3 ويحملُ رقمَ الوحدة");
     ok(t.includes("الخطوة"), "XLI4 ويحملُ رقمَ الخطوةِ داخلَها");
     ok(t.includes(erwartet.modul.titelAr), `XLI5 واسمُ الوحدةِ العربيُّ «${erwartet.modul.titelAr}» معروض`);
@@ -1105,7 +1107,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   {
     const { saveProgress } = await import("../lib/store");
     const { progressKeyActive } = await import("../lib/profiles");
-    const { kapselSaetze } = await import("../lib/kapsel");
+    const { kapselSaetzeAbend } = await import("../lib/kapsel");
     (globalThis as unknown as { self?: unknown }).self = globalThis;
     const { default: Heim } = await import("../app/page");
     act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 3 } }); });
@@ -1118,7 +1120,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     if (tg) click(tg);
     const li = rootEl.querySelectorAll('[data-testid="kapsel-satz"]');
     ok(li.length === 3, "LI4 النقرُ يفتحُ ثلاثَ جملٍ بالضبط");
-    const erw = kapselSaetze(3);
+    const erw = kapselSaetzeAbend(3);
     ok(erw.every((s) => (box?.textContent ?? "").includes(s.de) && (box?.textContent ?? "").includes(s.ar)), "LI5 وهي جملُ كبسولةِ اليومِ 3 من المحرّك، بألمانيّتِها وعربيّتِها");
     ok(li[0]?.querySelector('button[aria-label="استمع"]') !== null, "LI6 ولكلِّ جملةٍ زرُّ استماع");
     ok(!Array.from(rootEl.querySelectorAll("button")).some((b) => (b.textContent ?? "").includes("قرأتها")), "LI7 ولا زرَّ «قرأتها» — لا إقرارٌ ذاتيٌّ بلا برهان");
@@ -1418,11 +1420,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(t.includes("Goethe-Institut") && t.includes("نطاقات"), "XLVI12 والمرجعُ مسمًّى وموصوفٌ بأنه نطاقٌ لا رقمٌ حاسم");
 
     /* XLIX — التوزيع الأكاديمي ظاهرٌ على اللوحة لا في الكود فقط */
+    const { PHASEN, LERNLAST, PHASE_END_DAY } = await import("../lib/phasen");
     const vert = d0.querySelector('[data-testid="phasen-verteilung"]');
     ok(!!vert, "XLIX1 جدولُ التوزيعِ الأكاديميِّ عنصرٌ حقيقيٌّ في لوحةِ عقدِ الساعات");
     const zA1 = d0.querySelector('[data-testid="phase-zeile-A1"]')?.textContent ?? "", zB2 = d0.querySelector('[data-testid="phase-zeile-B2"]')?.textContent ?? "";
-    ok(zA1.includes("1–42") && zA1.includes("×1.00"), `XLIX2 صفُّ A1 يعرضُ أيامَه 1–42 ومعاملَه ×1.00 (${zA1.trim().slice(0, 40)})`);
-    ok(zB2.includes("169–270") && zB2.includes("×1.35") && zB2.includes("ختام"), `XLIX3 صفُّ B2 يعرضُ 169–270 و×1.35 والختام (${zB2.trim().slice(0, 50)})`);
+    ok(zA1.includes(`${PHASEN.A1.von}–${PHASE_END_DAY.A1}`) && zA1.includes(`×${LERNLAST.A1.toFixed(2)}`), `XLIX2 صفُّ A1 يعرضُ أيامَ عقدِه ${PHASEN.A1.von}–${PHASE_END_DAY.A1} ومعاملَه ×${LERNLAST.A1.toFixed(2)} — من جدولِ العقدِ نفسِه (${zA1.trim().slice(0, 40)})`);
+    ok(zB2.includes(`${PHASEN.B2.von}–${PHASE_END_DAY.B2}`) && zB2.includes(`×${LERNLAST.B2.toFixed(2)}`) && zB2.includes("ختام"), `XLIX3 صفُّ B2 يعرضُ ${PHASEN.B2.von}–${PHASE_END_DAY.B2} و×${LERNLAST.B2.toFixed(2)} والختام (${zB2.trim().slice(0, 50)})`);
     ok((vert?.textContent ?? "").includes("لا بالتساوي"), "XLIX4 والمبدأُ مكتوبٌ للمتعلِّم: بأوزانِ CEFR لا بالتساوي");
     ok(!(d0.querySelector('[data-testid="stunden-urteil"]')?.textContent ?? "").includes("ينقصُها"), "XLIX5 والحكمُ الصريحُ لم يعدْ يعلنُ نقصاً في B2 — لأنَّ النقصَ زال حساباً لا كلاماً");
 

@@ -331,7 +331,7 @@ const empty = () => loadProgress();
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
     ["szenarien", szenarien.length, 12],
-    ["eselsbruecken", eselsbruecken.length, 51],
+    ["eselsbruecken", eselsbruecken.length, 57],
     ["sprichwort-audio", Object.keys(sprichwortAudio).length, 8],
       ["mnemonik", Object.keys(mnemonikMap).length, 120],
     ["pakete", pakete.length, 3],
@@ -467,7 +467,7 @@ const empty = () => loadProgress();
     ok(man.einsaetze.length >= texts.filter((t) => !(t as { neu?: boolean }).neu).length - 5, "K26a المعلن == البنك: كلُّ نصٍ معلَنٌ ولا شبحَ ولا منسيَّ — يتحدَّثُ البنكُ فيتحدَّث");
     ok(man.einsaetze.every((e) => existsSync("public" + e.file.replace(/^\//, "/")) || existsSync("public/" + e.file.replace(/^\//, ""))), "K26b كل معلن موجود على القرص — لا مدخل شبح");
     ok(man.einsaetze.every((e) => Math.abs(require("fs").statSync(`public${e.file}`).size - e.bytes) < 1), "K26c الحجوم المعلنة truthful بحرف واحد — لا ملف صامت مُموَّه");
-    ok(man.einsaetze.every((e) => /^\/audio\/hoeren\/t-[ab][12]-\d\d\.mp3$/.test(e.file)), "K26d المسارات محلية النظام وحده: /audio/hoeren/… لا مضيف خارجي — قرار «لا روابط» محترم حتى في الوسائط");
+    ok(man.einsaetze.every((e) => /^\/audio\/hoeren\/t-(?:a[012]|b[12])-\d\d\.mp3$/.test(e.file)), "K26d المسارات محلية النظام وحده: /audio/hoeren/t-(a0|a1|a2|b1|b2)-NN.mp3 — لا مضيف خارجي، وقرارُ «لا روابط» محترمٌ حتى في الوسائط");
     const allIds = texts.filter((t) => !(t as { neu?: boolean }).neu && t.level !== "A0").map((t) => t.id);
     ok(allIds.every((id) => hoerenAudio[id]), `K26e وعدُ المصنع مسدَّدٌ فورَ اتساع البنك: ${allIds.length} نصاً = ${allIds.length} صوتاً (باستثناء A0 التمهيدي الذي يُنطَق عبر TTS) — لا وعدٌ معلَّقٌ على جدار`);
     ok(Object.keys(hoerenAudio).length === man.einsaetze.length, "K26f الخريطة المصدَّرة بعدد المداخل — تصدير lib/content صادق");
@@ -1318,7 +1318,7 @@ const empty = () => loadProgress();
     {
       const bb = eselsbruecken;
       const gids = Object.keys(grammarMap);
-      ok(bb.length === 51 && new Set(bb.map((b) => b.id)).size === 51, "K39a إحدى وخمسونَ تركةً بمعرّفاتٍ فريدة");
+      ok(bb.length === 57 && new Set(bb.map((b) => b.id)).size === 57, "K39a سبعُ وخمسونَ تركةً بمعرّفاتٍ فريدة — بعد تغطيةِ ثمانيةٍ وخمسينَ درساً");
       ok(bb.every((b) => b.gramIds.length > 0 && b.gramIds.every((g) => gids.includes(g))), "K39b كلُّ تركةٍ معلَّقةٌ بدرسٍ موجودٍ فعلاً — لا شفرةٌ يتيمةٌ ولا إشارةٌ إلى درسٍ وهميّ");
       ok(bb.every((b) => getBrueckenFor(b.gramIds[0]).some((x) => x.id === b.id)), "K39c الطريقُ عكسيٌّ أيضاً: getBrueckenFor تُرجِعُ التركةَ لدرسِها — السلكُ حيٌّ لا مُعلَن");
       ok(bb.every((b) => /[\u0600-\u06ff]/.test(b.titleAr) && /[\u0600-\u06ff]/.test(b.storyAr) && b.storyAr.length >= 40), "K39d لكلِّ شفرةٍ قصةٌ عربيةٌ مسهبةٌ لا عنوانٌ أجرد");
@@ -2408,6 +2408,14 @@ void 0;
     ok(kurzErhalten.length === mitLang.length, "K70i النصُّ القصيرُ `de` محفوظٌ لِنصِّ الاستماعِ المسجَّل (الصوتُ لا يفقدُ نصَّه)");
   }
 
+/* ═══ K119 — عاملهُ الأسبوع: مهمةُ الورشةِ بلا درسِ مضيف تُعرِضُ أسئلتها لا شاشةٍ خاويةً ═══ */
+{
+  const gD = readFileSync("components/tasks.tsx", "utf8");
+  ok(/if\s*\(\s*!topic\s*\)[\s\S]{0,500}task\.quiz/.test(gD),
+    "K119a GrammarTask يستقبِلُ مهمةَ الأسبوعِ بلا topicId ويُعرِضُ quiz بدلَ شاشةِ «قاعدة غير موجودة» — لا شاشةٍ خاويةٍ في يومِ من الأيام");
+  ok(gD.includes('return <Empty title="قاعدة غير موجودة" />'),
+    "K119b ويبقى بابُ الاحتياطِ: غابتِ الدرسُ والأسئلةُ معاً فالشاشةُ تُعلِنُ نقصةها بصراحة");
+}
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

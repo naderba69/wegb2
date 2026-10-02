@@ -372,7 +372,18 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
   const frage = useMemo(() => (topic ? entdeckungsFrage(topic, alleGrammatik, seed) : null), [topic, seed]);
   const [ergebnis, setErgebnis] = useState<EntdeckungsErgebnis | null>(null);
   const [gewaehlt, setGewaehlt] = useState<number | null>(null);
-  if (!topic) return <Empty title="قاعدة غير موجودة" />;
+  if (!topic) {
+    /* 🧩 مهمةُ الأسبوعِ (Komposita / FVG): ورشةٌ بلا درسٍ مضيف — أسئلتُها قائمةٌ بذاتها لا شاشةً خاوية */
+    if (task.quiz && task.quiz.length > 0) {
+      return (
+        <section className="card fadein" style={{ padding: "1.2rem" }}>
+          <Head icon="🧩" de={task.titleDe} ar={task.titleAr} />
+          <ExerciseSet items={task.quiz} onPoints={onPoints} />
+        </section>
+      );
+    }
+    return <Empty title="قاعدة غير موجودة" />;
+  }
   const entdecken = !!frage && induktionMoeglich(topic);
   const offen = !entdecken || ergebnis !== null;
 
