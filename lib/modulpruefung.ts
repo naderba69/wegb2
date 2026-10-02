@@ -91,7 +91,7 @@ export function buildModulPruefung(index: number, versuch = 0): ModulPruefung {
         teil: "schreiben", titelAr: "الكتابة — مهمّة واحدة",
         aufgabeDe: w?.taskDe ?? "Schreiben Sie eine kurze E-Mail zum Thema des Moduls.",
         aufgabeAr: w?.taskAr ?? "اكتب بريداً قصيراً في موضوع الوحدة.",
-        minWoerter: lv === "A1" ? 30 : lv === "A2" ? 50 : lv === "B1" ? 80 : 120,
+        minWoerter: lv === "A0" ? 15 : lv === "A1" ? 30 : lv === "A2" ? 50 : lv === "B1" ? 80 : 120,
         kriterien: w?.criteria ?? ["التحية والختام", "الإجابة عن كل النقاط", "روابط الجُمل"],
       },
       { teil: "sprechen", titelAr: "النطق — ثلاث جُمل", saetze: sprechSaetze },

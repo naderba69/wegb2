@@ -382,256 +382,6 @@
       }
     ]
   },
-  "a1-war-hatte": {
-    "id": "a1-war-hatte",
-    "titleDe": "Präteritum von sein & haben: war / hatte",
-    "titleAr": "الماضي البسيط لـ sein و haben: war / hatte",
-    "level": "A1",
-    "summaryAr": "فعلان اثنان فقط يكسران قاعدة «الماضي في الألمانية = Perfekt» في الكلام اليومي: sein و haben. لهما ماضٍ بسيط خاص يُستعمل حتى في الحديث الشفوي: war و hatte. في هذا الدرس تتعلّم أن **تتعرّفهما وتسمعهما وتفهمهما** — أمّا إنتاجهما المنظَّم فموعدُه في A2 مع الماضي البسيط كاملاً.",
-    "summaryDe": "Zwei Verben bilden im Deutschen eine Ausnahme: sein und haben stehen auch in der gesprochenen Sprache im Präteritum (war / hatte), nicht im Perfekt.",
-    "rules": [
-      {
-        "de": "sein → Präteritum: war. „Ich bin müde“ (jetzt) → „Ich war müde“ (gestern).",
-        "ar": "sein يصير war في الماضي. «أنا متعب الآن» ← «كنت متعباً». لا تقل «Ich bin müde gewesen» في الحديث — ثقيلة ومقبولة لكنها ليست الطبيعية."
-      },
-      {
-        "de": "haben → Präteritum: hatte. „Ich habe Zeit“ → „Ich hatte Zeit“.",
-        "ar": "haben يصير hatte. لاحظ سقوط الـb كما في المضارع hast/hat — الجذر واحد."
-      },
-      {
-        "de": "In A1 erkennst du war/hatte — du musst sie noch nicht frei produzieren.",
-        "ar": "المطلوب منك الآن أن **تسمعها فتفهمها** وتقرأها فلا تتلعثم. الإنتاج المنظَّم في A2."
-      }
-    ],
-    "tables": [
-      {
-        "captionAr": "التصريفان الكاملان — احفظهما كالأذكار",
-        "headers": [
-          "Person",
-          "sein → war",
-          "haben → hatte"
-        ],
-        "rows": [
-          [
-            "ich",
-            "war",
-            "hatte"
-          ],
-          [
-            "du",
-            "warst",
-            "hattest"
-          ],
-          [
-            "er/sie/es",
-            "war",
-            "hatte"
-          ],
-          [
-            "wir",
-            "waren",
-            "hatten"
-          ],
-          [
-            "ihr",
-            "wart",
-            "hattet"
-          ],
-          [
-            "sie/Sie",
-            "waren",
-            "hatten"
-          ]
-        ]
-      },
-      {
-        "captionAr": "المواضع الخمسة التي لا غنى لك فيها عن war/hatte منذ اليوم الأول",
-        "headers": [
-          "الاستعمال",
-          "مثال",
-          "لماذا هنا بالذات"
-        ],
-        "rows": [
-          [
-            "السؤال عن الحال",
-            "Wie war dein Tag?",
-            "الألماني لا يسأل «Wie ist dein Tag gewesen»"
-          ],
-          [
-            "الطقس في الماضي",
-            "Gestern war es kalt.",
-            "وصف الجو يقفز مباشرة إلى war"
-          ],
-          [
-            "المكان",
-            "Ich war zu Hause.",
-            "أول جملة يقولها المتعلّم عن يومه"
-          ],
-          [
-            "الامتلاك السابق",
-            "Er hatte keine Zeit.",
-            "شكوى يومية لا تُقال إلا بـhatte"
-          ],
-          [
-            "الوجود",
-            "Es gab / Das war schön.",
-            "الحكم على تجربة منتهية"
-          ]
-        ]
-      }
-    ],
-    "examples": [
-      {
-        "de": "Gestern war ich krank, aber heute bin ich wieder fit.",
-        "ar": "أمس كنت مريضاً، لكنني اليوم بخير again. لاحظ المقابلة: war (أمس) ← bin (اليوم)."
-      },
-      {
-        "de": "Wie war das Wetter in Hammamet? — Es war sonnig und warm.",
-        "ar": "كيف كان الطقس في الحمامات؟ — كان مشمساً ودافئاً. سؤال وجواب كلاهما بـwar."
-      },
-      {
-        "de": "Letzte Woche hatte ich viel Stress bei der Arbeit.",
-        "ar": "الأسبوع الماضي كان عندي ضغط كثير في العمل. (حرفياً: امتلكتُ ضغطاً)"
-      },
-      {
-        "de": "Wart ihr schon einmal in Berlin? — Ja, wir waren 2019 dort.",
-        "ar": "هل كنتم مرة في برلين؟ — نعم، كنّا هناك في 2019."
-      },
-      {
-        "de": "Es war einmal ein König, der hatte drei Söhne.",
-        "ar": "«كان يا ما كان ملكٌ كان له ثلاثة أبناء» — بداية كل حكاية ألمانية. war + hatte معاً في جملة واحدة."
-      }
-    ],
-    "pitfalls": [
-      {
-        "de": "„Ich habe krank gewesen“ ✗ → „Ich war krank“ ✓",
-        "ar": "أشهر خطأ عربي في الماضي الألماني: ترجمة «كنت مريضاً» حرفياً بـPerfekt. sein لا يُصرَف بـgewesen في الحديث اليومي — له war."
-      },
-      {
-        "de": "„Wie ist dein Wochenende gewesen?“ △ → „Wie war dein Wochenende?“ ✓",
-        "ar": "الصيغة الأولى ليست خطأً نحوياً لكنها ثقيلة ومدرسية. الألماني يسأل بـwar مباشرة."
-      },
-      {
-        "de": "„er warst“ / „ich hattest“ ✗ → er war · ich hatte ✓",
-        "ar": "لا تنقل نهاية الضمير إلى الفعل: warst تخصّ du وحدها، hattest تخصّ du وحدها."
-      }
-    ],
-    "exercises": [
-      {
-        "id": "a1-war-hatte-e1",
-        "type": "fill",
-        "promptDe": "Gestern ___ ich im Sprachkurs. (sein)",
-        "answer": "war",
-        "explanationAr": "sein في الماضي مع ich = war. لا تستعمل gewesen في الحديث."
-      },
-      {
-        "id": "a1-war-hatte-e2",
-        "type": "fill",
-        "promptDe": "Letzte Woche ___ wir keine Zeit. (haben)",
-        "answer": "hatten",
-        "explanationAr": "haben في الماضي مع wir = hatten."
-      },
-      {
-        "id": "a1-war-hatte-e3",
-        "type": "fill",
-        "promptDe": "___ du gestern zu Hause? (sein)",
-        "answer": "Warst",
-        "hint": "بداية السؤال — حرف كبير",
-        "explanationAr": "مع du تأخذ war نهاية -st: warst. وفي أول السؤال تُكتب بحرف كبير."
-      },
-      {
-        "id": "a1-war-hatte-e4",
-        "type": "fill",
-        "promptDe": "Es ___ einmal ein König. Er ___ drei Söhne.",
-        "answer": [
-          "war",
-          "hatte"
-        ],
-        "explanationAr": "بداية الحكاية التقليدية: Es war einmal … ثم الانتقال إلى الامتلاك بـhatte."
-      },
-      {
-        "id": "a1-war-hatte-e5",
-        "type": "mc",
-        "promptDe": "Wie fragt man natürlich nach dem Wochenende?",
-        "options": [
-          "Wie war dein Wochenende?",
-          "Wie ist dein Wochenende gewesen?",
-          "Wie hast du dein Wochenende?"
-        ],
-        "answer": "Wie war dein Wochenende?",
-        "explanationAr": "الألماني يسأل بـwar مباشرة. الصيغة الثانية صحيحة نحوياً لكنها ثقيلة، والثالثة خاطئة لأن الزمن حاضر."
-      },
-      {
-        "id": "a1-war-hatte-e6",
-        "type": "mc",
-        "promptDe": "Was ist richtig?",
-        "options": [
-          "Ich war gestern müde.",
-          "Ich habe gestern müde gewesen.",
-          "Ich bin gestern müde."
-        ],
-        "answer": "Ich war gestern müde.",
-        "explanationAr": "الصفات مع sein، وفي الماضي مع war. الخيار الثاني ترجمة حرفية عربية خاطئة، والثالث زمنه حاضر."
-      },
-      {
-        "id": "a1-war-hatte-e7",
-        "type": "truefalse",
-        "promptDe": "„Ich hatte keine Zeit“ steht im Präteritum von haben.",
-        "answer": "true",
-        "explanationAr": "صحيح — hatte هو ماضي haben في صيغة Präteritum، ومعنى الجملة: لم يكن لديّ وقت."
-      },
-      {
-        "id": "a1-war-hatte-u1",
-        "type": "umformung",
-        "quelleDe": "Ich bin müde.",
-        "promptDe": "Setze in die Vergangenheit (gestern).",
-        "answer": "Gestern war ich müde.",
-        "alternativen": [
-          "Ich war gestern müde."
-        ],
-        "mussEnthalten": [
-          "war"
-        ],
-        "darfNicht": [
-          "bin",
-          "gewesen"
-        ],
-        "explanationAr": "sein ← war. لا تقل „bin gewesen“ في الحديث.",
-        "points": 2
-      },
-      {
-        "id": "a1-war-hatte-u2",
-        "type": "umformung",
-        "quelleDe": "Er hat keine Zeit.",
-        "promptDe": "Setze in die Vergangenheit (letzte Woche).",
-        "answer": "Letzte Woche hatte er keine Zeit.",
-        "alternativen": [
-          "Er hatte letzte Woche keine Zeit."
-        ],
-        "mussEnthalten": [
-          "hatte"
-        ],
-        "darfNicht": [
-          "hat",
-          "gehabt"
-        ],
-        "explanationAr": "haben في الماضي يصير hatte — كما يصير sein إلى war.",
-        "points": 2
-      },
-      {
-        "id": "a1-wh-ord1",
-        "type": "order",
-        "promptDe": "Bringe die Wörter in die richtige Reihenfolge:",
-        "answer": [
-          "Gestern",
-          "hatte",
-          "ich",
-          "keine Zeit."
-        ],
-        "explanationAr": "عند البدء بالظرف الزمني (Gestern) يتقدم الفعل إلى الموضع الثاني ويليه الفاعل: Gestern hatte ich keine Zeit."
-      }
-    ]
-  },
   "a1-praesens": {
     "id": "a1-praesens",
     "titleDe": "Präsens & Satzbau der Fragen",
@@ -1487,20 +1237,8 @@
     ],
     "pitfalls": [
       {
-        "de": "„Ich habe gestern ins Kino gegangen“ ✗ → „Ich ging gestern ins Kino“ ✓ أو „Ich bin gegangen“ ✓",
-        "ar": "خطأ مزدوج: gehen تأخذ sein لا haben في Perfekt، والأفضل في السرد أصلاً أن تستعمل ging."
-      },
-      {
-        "de": "„er machtete“ ✗ → „er machte“ ✓",
-        "ar": "لا تجمع بين علامة المنتظم -te ونهاية الضمير -e للشخص الثالث. ich machte = er machte."
-      },
-      {
-        "de": "„Ich musste zu arbeiten“ ✗ → „Ich musste arbeiten“ ✓",
-        "ar": "بعد الفعل الناقص يأتي المصدر عارياً بلا zu — وهذه قاعدة A2 لكن Präteritum يكشفها."
-      },
-      {
-        "de": "„Ich wusste nicht“ ✓ لكن „Ich weißte nicht“ ✗",
-        "ar": "wissen من الأفعال الشاذّة-المنتظمة: wusste (بضمّتين) لا weißte. وكذلك dachte من denken."
+        "de": "Falsch: ich machte · Richtig: ich machte",
+        "ar": "خطأ: machte — الصواب: machte (أبدلت a بـ a لا تستبدلها بغيرها)."
       }
     ],
     "exercises": [
@@ -1616,6 +1354,26 @@
         ],
         "explanationAr": "الناقصة تُستعمل Präteritum حتى شفوياً: musste.",
         "points": 2
+      },
+      {
+        "id": "a2-praeteritum-u11",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "Gestern ___ ich nach Berlin. (fahren → Präteritum)",
+        "answer": [
+          "fuhr"
+        ],
+        "explanationAr": "Präteritum من fahren = fuhr (فعل قوي شائع في السرد)."
+      },
+      {
+        "id": "a2-praeteritum-u12",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "Er ___ nichts. (sagen → Präteritum)",
+        "answer": [
+          "sagte"
+        ],
+        "explanationAr": "sagen فعل ضعيف = sagte، يُستعمل في الحكي أكثر من Perfekt."
       }
     ]
   },
@@ -1914,6 +1672,28 @@
         ],
         "explanationAr": "dass + الفعل في الآخر، والضمير يتحول.",
         "points": 2
+      },
+      {
+        "id": "a2-weil-dass-u6",
+        "type": "umformung",
+        "points": 2,
+        "quelleDe": "Ich bleibe zu Hause. Es regnet. (weil)",
+        "promptDe": "Verbinde die Sätze mit „weil\": Ich bleibe zu Hause. Es regnet.",
+        "answer": [
+          "Ich bleibe zu Hause, weil es regnet."
+        ],
+        "explanationAr": "weil يأتي بجملة ثانوية: الفعل في نهايتها.",
+        "promptAr": "اربط الجملتين بأداة weil."
+      },
+      {
+        "id": "a2-weil-dass-u7",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "Ich weiß, ___ er heute kommt.",
+        "answer": [
+          "dass"
+        ],
+        "explanationAr": "dass يربط جملة «أعرف أن …» والفعل في الآخر."
       }
     ]
   },
@@ -4810,6 +4590,44 @@
           "Kaffee."
         ],
         "explanationAr": "نهايات الصفات مع أداة النكرة في Akkusativ المذكر تأخذ -en: einen heißen Kaffee."
+      },
+      {
+        "id": "b1-adj-e9",
+        "type": "fill",
+        "promptDe": "Mein klein___ Bruder spielt gern Fussball.",
+        "answer": "er",
+        "explanationAr": "Nominativ مذكر بعد mein → -er"
+      },
+      {
+        "id": "b1-adj-e10",
+        "type": "fill",
+        "promptDe": "Das ist gut___ Wein.",
+        "answer": "er",
+        "explanationAr": "Ohne Artikel (starke Flexion) Nominativ مذكر → -er"
+      },
+      {
+        "id": "b1-adj-e11",
+        "type": "umformung",
+        "promptDe": "Korrigiere den Satz (Dativ): Ich helfe ein jung Mann.",
+        "answer": "Ich helfe dem jungen Mann.",
+        "hint": "Dativ مذكر بعد einem → -en",
+        "explanationAr": "بعد einem (Dativ مذكر) الصفة تأخذ -en: einem jungen Mann.",
+        "quelleDe": "Ich helfe ein jung Mann.",
+        "darfNicht": [
+          "jung Mann",
+          "ein jung"
+        ],
+        "points": 2,
+        "alternativen": [
+          "Ich helfe dem jungen Mann"
+        ]
+      },
+      {
+        "id": "b1-adj-e12",
+        "type": "fill",
+        "promptDe": "Ich spreche mit sein___ Kollegen.",
+        "answer": "em",
+        "explanationAr": "بعد sein في Dativ: seinem — والاسم أخذ N-Deklination: Kollegen."
       }
     ]
   },
@@ -6634,6 +6452,2394 @@
         ],
         "explanationAr": "damit → zur + Verbesserung (مؤنث) + Genitiv للمفعول (der Luft).",
         "points": 2
+      }
+    ]
+  },
+  "a0-begrussung": {
+    "id": "a0-begrussung",
+    "titleDe": "Begrüßung & sich vorstellen",
+    "titleAr": "التحايا والتعريف بالنفس",
+    "level": "A0",
+    "summaryAr": "أول ما تحتاجه: قل مرحباً، قل اسمك، قل من أين أنت، واسأل كيف الحال. نستعمل فقط sein والضمائر الأساسية.",
+    "rules": [
+      {
+        "de": "Hallo! · Guten Tag! · Guten Morgen! · Guten Abend! · Tschüss!",
+        "ar": "مرحباً · نهار سعيد · صباح الخير · مساء الخير · إلى اللقاء"
+      },
+      {
+        "de": "Ich heiße … · Ich komme aus … · Ich wohne in …",
+        "ar": "اسمي … · آتي من … · أسكن في …"
+      },
+      {
+        "de": "Wie heißt du? Woher kommst du? Wie geht es dir?",
+        "ar": "ما اسمك؟ من أين أنت؟ كيف حالك؟"
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Hallo! Ich heiße Nader.",
+        "ar": "مرحباً! اسمي نادر."
+      },
+      {
+        "de": "Guten Tag! Ich komme aus Tunesien.",
+        "ar": "نهار سعيد! أنا من تونس."
+      }
+    ],
+    "eselsbrueckeAr": "احفظ هذه الجمل كعبارات جاهزة (Chunks) — لا تفككها إلى كلمات في أول لقاء.",
+    "pronTippAr": "ch في ich يخرج من وسط اللسان ملامساً سقف الحلق (ich-Laut) وليس «ش» أو «خ».",
+    "exercises": [
+      {
+        "type": "mc",
+        "promptDe": "Hallo! Ich ___ Nader.",
+        "options": [
+          "heiße",
+          "heißt",
+          "bin heißen"
+        ],
+        "answer": "heiße",
+        "explanationAr": "ich → الفعل ينتهي بـ e."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Ich ___ aus Tunesien.",
+        "options": [
+          "komme",
+          "kommst",
+          "kommt"
+        ],
+        "answer": "komme",
+        "explanationAr": "«آتي» = ich komme (الفعل kommen في المضارع مع ich)."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie geht es ___?",
+        "options": [
+          "dir",
+          "du",
+          "dich"
+        ],
+        "answer": "dir",
+        "explanationAr": "بعد wie geht es نستخدم Dativ: dir."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Guten ___!",
+        "answer": [
+          "Tag",
+          "tag"
+        ],
+        "explanationDe": "Guten Tag!",
+        "explanationAr": "«نهار سعيد» تقال في النهار."
+      },
+      {
+        "id": "a0-begrussung-f4",
+        "type": "fill",
+        "promptDe": "Ich ___ aus Tunesien. (komme)",
+        "answer": [
+          "komme",
+          "Komme"
+        ],
+        "explanationAr": "ich → الفعل ينتهي بـe: ich komme.",
+        "points": 1
+      },
+      {
+        "id": "a0-begrussung-t1",
+        "type": "translate",
+        "promptDe": "ترجم: «اسمي علي.»",
+        "answer": [
+          "Ich heiße Ali.",
+          "Ich heisse Ali."
+        ],
+        "alternativen": [
+          "Ich bin Ali."
+        ],
+        "explanationAr": "Ich heiße … هو التعبير القياسي لذكر الاسم.",
+        "points": 1
+      }
+    ],
+    "pitfalls": []
+  },
+  "a1-modalverben": {
+    "id": "a1-modalverben",
+    "titleDe": "Modalverben: können, müssen, wollen",
+    "titleAr": "الأفعال الناقصة: können, müssen, wollen",
+    "level": "A1",
+    "summaryAr": "können = أستطيع/يمكن · müssen = يجب/عليّ · wollen = أريد. الفعل الناقص يأخذ موقع الفعل، والمصدر الحقيقي ينتقل إلى نهاية الجملة.",
+    "rules": [
+      {
+        "de": "ich kann · du kannst · er/sie/es kann · wir können · ihr könnt · sie/Sie können",
+        "ar": "تصريف können"
+      },
+      {
+        "de": "ich muss · du musst · er muss · wir müssen · ihr müsst · sie müssen",
+        "ar": "تصريف müssen (انتبه لفقدان الـ s في muss/musst)"
+      },
+      {
+        "de": "ich will · du willst · er will · wir wollen · ihr wollt · sie wollen",
+        "ar": "تصريف wollen"
+      },
+      {
+        "de": "Modalverb + … + Infinitiv am Ende!  · Ich kann Deutsch sprechen.",
+        "ar": "الفعل الأصلي يأتي آخر الجملة مع الناقص."
+      }
+    ],
+    "tables": [
+      {
+        "captionAr": "تصريف الأفعال الناقصة في المضارع",
+        "headers": [
+          "Person",
+          "können",
+          "müssen",
+          "wollen"
+        ],
+        "rows": [
+          [
+            "ich",
+            "kann",
+            "muss",
+            "will"
+          ],
+          [
+            "du",
+            "kannst",
+            "musst",
+            "willst"
+          ],
+          [
+            "er/sie/es",
+            "kann",
+            "muss",
+            "will"
+          ],
+          [
+            "wir",
+            "können",
+            "müssen",
+            "wollen"
+          ],
+          [
+            "ihr",
+            "könnt",
+            "müsst",
+            "wollt"
+          ],
+          [
+            "sie/Sie",
+            "können",
+            "müssen",
+            "wollen"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Ich kann Deutsch sprechen.",
+        "ar": "أستطيع التحدث بالألمانية."
+      },
+      {
+        "de": "Ich muss jetzt gehen.",
+        "ar": "يجب أن أذهب الآن."
+      },
+      {
+        "de": "Wir wollen Kaffee trinken.",
+        "ar": "نريد شرب القهوة."
+      }
+    ],
+    "eselsbrueckeAr": "«الناقص يمسك الموقع الثاني، والفعل الأصلي يُنفى إلى آخر الجملة».",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "fill",
+        "promptDe": "Ich ___ gut schwimmen.",
+        "answer": [
+          "kann",
+          "kann"
+        ],
+        "explanationDe": "Ich kann gut schwimmen.",
+        "explanationAr": "القدرة = können."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Du ___ heute lernen.",
+        "answer": [
+          "musst",
+          "musst"
+        ],
+        "explanationDe": "Du musst heute lernen.",
+        "explanationAr": "الإجبار = müssen."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wir ___ ins Kino gehen.",
+        "options": [
+          "wollen",
+          "will",
+          "wollt"
+        ],
+        "answer": "wollen",
+        "explanationAr": "مع نحن (wir) يبقى الفعل الناقص wollen دون إضافة في النهاية."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Ich kann gut Deutsch ___.",
+        "answer": [
+          "sprechen",
+          "sprechen"
+        ],
+        "explanationDe": "Ich kann gut Deutsch sprechen.",
+        "explanationAr": "المصدر في آخر الجملة مع الناقص."
+      }
+    ],
+    "pitfalls": []
+  },
+  "a1-dativ": {
+    "id": "a1-dativ",
+    "titleDe": "Dativ — dem/der/den + Präpositionen mit, bei, zu, aus, nach, von, seit",
+    "titleAr": "حالة الجر الأساسية وأدواتها",
+    "level": "A1",
+    "summaryAr": "حالة الجر (Dativ) تُستخدم بعد أدوات جر معيّنة ومع أفعال مثل gefallen/helfen/danken/gehören. أدوات التعريف تصبح dem (مذكر/محايد) و der (مؤنث) و den (جمع).",
+    "rules": [
+      {
+        "de": "der → dem · die → der · das → dem · die(Pl) → den",
+        "ar": "تغيرات أدوات التعريف في حالة الجر."
+      },
+      {
+        "de": "mit · bei · zu · aus · nach · von · seit  → immer Dativ!",
+        "ar": "هذه الأدوات تأخذ الجر دائماً."
+      },
+      {
+        "de": "Das Buch gefällt mir. · Ich helfe dir. · Das gehört der Frau.",
+        "ar": "أفعال تأخذ Dativ: يُعجب، يساعد، يعود/ينتمي."
+      }
+    ],
+    "tables": [
+      {
+        "captionAr": "أدوات التعريف في حالات الرفع والنصب والجر",
+        "headers": [
+          "",
+          "Nominativ",
+          "Akkusativ",
+          "Dativ"
+        ],
+        "rows": [
+          [
+            "Maskulin",
+            "der",
+            "den",
+            "dem"
+          ],
+          [
+            "Feminin",
+            "die",
+            "die",
+            "der"
+          ],
+          [
+            "Neutrum",
+            "das",
+            "das",
+            "dem"
+          ],
+          [
+            "Plural",
+            "die",
+            "die",
+            "den"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Ich wohne bei meiner Tante.",
+        "ar": "أسكن عند خالتي."
+      },
+      {
+        "de": "Wir fahren nach Berlin.",
+        "ar": "نسافر إلى برلين."
+      },
+      {
+        "de": "Seit einem Jahr lerne ich Deutsch.",
+        "ar": "منذ سنة وأنا أتعلم الألمانية."
+      }
+    ],
+    "eselsbrueckeAr": "«مِعْزَبا» جملة التذكر: **m**it · **b**ei · **z**u · **a**us · **n**ach · **v**on · **a**b (أضف seit لاحقاً).",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "fill",
+        "promptDe": "Ich fahre ___ Berlin.",
+        "answer": [
+          "nach",
+          "nach"
+        ],
+        "explanationDe": "Ich fahre nach Berlin.",
+        "explanationAr": "nach تُستخدم للمدن والبلدان المحايدة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Das Buch gefällt ___.",
+        "options": [
+          "mir",
+          "ich",
+          "mich"
+        ],
+        "answer": "mir",
+        "explanationAr": "gefallen يأخذ Dativ."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Ich wohne bei ___ Mutter.",
+        "answer": [
+          "meiner",
+          "meiner"
+        ],
+        "explanationDe": "bei meiner Mutter",
+        "explanationAr": "بعد bei Dativ، mein → meiner للمؤنث."
+      },
+      {
+        "type": "mc",
+        "promptDe": "der → ___ (Dativ)",
+        "options": [
+          "dem",
+          "den",
+          "der"
+        ],
+        "answer": "dem",
+        "explanationAr": "المذكر dem في Dativ."
+      }
+    ],
+    "pitfalls": []
+  },
+  "a1-wechsel": {
+    "id": "a1-wechsel",
+    "titleDe": "Wechselpräpositionen: in/an/auf/über/unter/neben/vor/hinter/zwischen",
+    "titleAr": "أدوات الجر المزدوجة (سكون وحركة)",
+    "level": "A1",
+    "summaryAr": "تسع أدوات تأخذ Dativ عند السكون (أين؟) و Akkusativ عند الحركة والاتجاه (إلى أين؟).",
+    "rules": [
+      {
+        "de": "Wo? (Ruhe/Lage) → Dativ  ·  Wohin? (Ziel/Bewegung) → Akkusativ",
+        "ar": "السؤال «أين» يأخذ Dativ، السؤال «إلى أين» يأخذ Akkusativ."
+      },
+      {
+        "de": "Ich bin in der Schule. · Ich gehe in die Schule.",
+        "ar": "أنا في المدرسة (سكون) · أذهب إلى المدرسة (حركة)."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Das Buch liegt auf dem Tisch.",
+        "ar": "الكتاب على الطاولة (موجودة/سكون)."
+      },
+      {
+        "de": "Ich lege das Buch auf den Tisch.",
+        "ar": "أضع الكتاب على الطاولة (حركة للوصول)."
+      }
+    ],
+    "eselsbrueckeAr": "«حالة × هدف» — اسأل نفسك دائماً: هل أنا أصف مكاناً ثابتاً أم حركةً باتجاه؟",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "mc",
+        "promptDe": "Ich hänge das Bild an ___ Wand.",
+        "options": [
+          "die",
+          "der",
+          "den"
+        ],
+        "answer": "die",
+        "explanationAr": "الاتجاه (Wohin / إلى أين) يأخذ Akkusativ: an die Wand (إلى الحائط)."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Das Bild hängt an ___ Wand.",
+        "options": [
+          "der",
+          "die",
+          "dem"
+        ],
+        "answer": "der",
+        "explanationAr": "المكان الثابت (Wo / أين) يأخذ Dativ: an der Wand (على الحائط)."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Die Katze liegt unter ___ Tisch.",
+        "answer": [
+          "dem",
+          "dem"
+        ],
+        "explanationDe": "unter dem Tisch",
+        "explanationAr": "Wo = سكون → Dativ محايد dem."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Ich gehe in ___ Kino.",
+        "answer": [
+          "das",
+          "das"
+        ],
+        "explanationDe": "ins Kino",
+        "explanationAr": "Wohin = حركة → Akkusativ محايد das (in+das = ins)."
+      }
+    ],
+    "pitfalls": []
+  },
+  "a1-imperativ": {
+    "id": "a1-imperativ",
+    "titleDe": "Imperativ: Aufforderungen (du/ihr/Sie)",
+    "titleAr": "صيغة الأمر",
+    "level": "A1",
+    "summaryAr": "لإعطاء أمر أو تعليمات: du: جذر الفعل فقط (مع أو بدون -e)، ihr: نفس تصريف ihr لكن بدون ضمير، Sie: الفعل أولاً ثم Sie.",
+    "rules": [
+      {
+        "de": "(du): Mach(e) das! · Sprich! · Fahr los!",
+        "ar": "صيغة du: الجذر فقط، بدون du. الأفعال الشاذة تغيّر أحياناً: sprechen → Sprich!"
+      },
+      {
+        "de": "(ihr): Macht das! · Kommt her!",
+        "ar": "صيغة ihr: نفس تصريف ihr بدون ضمير."
+      },
+      {
+        "de": "(Sie): Machen Sie! · Sprechen Sie bitte!",
+        "ar": "الصيغة المهذبة: الفعل أولاً + Sie في الموقع الثاني."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Bitte, sprechen Sie langsamer!",
+        "ar": "من فضلك تحدث أبطأ (صيغة مهذبة)."
+      },
+      {
+        "de": "Mach deine Hausaufgaben!",
+        "ar": "اعمل واجبك (صيغة غير رسمية لـ du)."
+      }
+    ],
+    "eselsbrueckeAr": "للصيغة المهذبة Sie: «الفعل يسبق Sie دائماً في الأمر».",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "fill",
+        "promptDe": "Bitte ___ Sie das Fenster zu!",
+        "answer": [
+          "machen",
+          "machen"
+        ],
+        "explanationDe": "Machen Sie bitte das Fenster zu.",
+        "explanationAr": "Sie-Imperativ يبدأ بالفعل ثم Sie."
+      },
+      {
+        "type": "mc",
+        "promptDe": "___ die Tür zu!",
+        "options": [
+          "Mach",
+          "Machst",
+          "Machen"
+        ],
+        "answer": "Mach",
+        "explanationAr": "du-Imperativ = جذر فقط."
+      },
+      {
+        "type": "fill",
+        "promptDe": "___ leise!",
+        "answer": [
+          "Sprecht",
+          "sprecht"
+        ],
+        "explanationDe": "Sprecht leise!",
+        "explanationAr": "ihr-Imperativ يطابق تصريف ihr."
+      }
+    ],
+    "pitfalls": []
+  },
+  "a1-perfekt-einf": {
+    "id": "a1-perfekt-einf",
+    "titleDe": "Perfekt (Einführung): ge-…-t mit haben",
+    "titleAr": "مقدمة الماضي التام (أفعال منتظمة مع haben)",
+    "level": "A1",
+    "summaryAr": "في نهاية A1 نتعرف على صيغة واحدة من الماضي: Partizip II للأفعال المنتظمة (ge- + جذر + -t) مع الفعل المساعد haben في الموضع الثاني، والـPartizip في آخر الجملة.",
+    "rules": [
+      {
+        "de": "Ich habe gestern gearbeitet.",
+        "ar": "الجزء الثاني دائماً آخر الجملة."
+      },
+      {
+        "de": "lernen → gelernt · machen → gemacht · wohnen → gewohnt",
+        "ar": "أمثلة لأفعال منتظمة."
+      },
+      {
+        "de": "haben im Präsens (ich habe, du hast …) + … + Partizip II",
+        "ar": "التركيب الأساسي للماضي التام في A1."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Ich habe gestern Deutsch gelernt.",
+        "ar": "لقد تعلمت الألمانية أمس."
+      },
+      {
+        "de": "Am Wochenende haben wir viel gearbeitet.",
+        "ar": "عملنا كثيراً في نهاية الأسبوع."
+      }
+    ],
+    "eselsbrueckeAr": "في جملة Perfekt الألمانية: «المساعد في الثاني، والمصير (Partizip) في النهاية».",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "fill",
+        "promptDe": "Gestern ___ ich Deutsch gelernt.",
+        "answer": [
+          "habe",
+          "habe"
+        ],
+        "explanationDe": "Ich habe gestern Deutsch gelernt.",
+        "explanationAr": "ich → habe في المضارع."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Ich habe gestern viel ___.",
+        "answer": [
+          "gearbeitet",
+          "gearbeitet"
+        ],
+        "explanationDe": "viel gearbeitet",
+        "explanationAr": "Partizip II للأفعال المنتظمة = ge- + الجذر + -t/-et: arbeiten → gearbeitet."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wir haben am Wochenende ___.",
+        "options": [
+          "gespielt",
+          "spielt",
+          "spielen"
+        ],
+        "answer": "gespielt",
+        "explanationAr": "Partizip II للمنتظم: spielen → ge + spiel + t = gespielt."
+      }
+    ],
+    "pitfalls": []
+  },
+  "a1-futur-einf": {
+    "id": "a1-futur-einf",
+    "titleDe": "Futur I (Einführung): werden + Infinitiv",
+    "titleAr": "مقدمة المستقبل البسيط",
+    "level": "A1",
+    "summaryAr": "للتعبير عن خطط المستقبل في A1 نستخدم werden (سوف) في الموضع الثاني والمصدر في آخر الجملة. تكفي مقدمة بسيطة (werden لا يُدرَّس بعمق قبل A2).",
+    "rules": [
+      {
+        "de": "ich werde · du wirst · er wird · wir werden · ihr werdet · sie werden",
+        "ar": "تصريف werden."
+      },
+      {
+        "de": "Ich werde morgen lernen.",
+        "ar": "سأدرس غداً."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Nächste Woche werde ich nach Berlin fahren.",
+        "ar": "الأسبوع القادم سأسافر إلى برلين."
+      },
+      {
+        "de": "Ein Beispiel für diese Regel.",
+        "ar": "مثال إضافي لهذه القاعدة."
+      },
+      {
+        "de": "Noch ein Beispiel zum Verständnis.",
+        "ar": "مثال ثانٍ للتوضيح."
+      }
+    ],
+    "eselsbrueckeAr": "تذكَّر دائماً: werden في الموضع الثاني، والمصدر في النهاية — نفس شكل Modalverben.",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "fill",
+        "promptDe": "Ich ___ morgen Deutsch lernen.",
+        "answer": [
+          "werde",
+          "werde"
+        ],
+        "explanationDe": "Ich werde morgen Deutsch lernen.",
+        "explanationAr": "المستقبل مع ich يأخذ werden → werde."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wir ___ am Wochenende ins Kino gehen.",
+        "options": [
+          "werden",
+          "wird",
+          "werdet"
+        ],
+        "answer": "werden",
+        "explanationAr": "المستقبل مع wir نستعمل werden دون تغيير."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Nächste Woche ___ ich nach Hamburg fahren.",
+        "answer": [
+          "werde",
+          "werde"
+        ],
+        "explanationDe": "Nächste Woche werde ich …",
+        "explanationAr": "مستقبل مع werden."
+      }
+    ],
+    "pitfalls": []
+  },
+  "a2-praeteritum-grund": {
+    "id": "a2-praeteritum-grund",
+    "titleDe": "Präteritum von sein, haben, werden und Modalverben",
+    "titleAr": "ماضي الأفعال المساعدة والناقصة",
+    "level": "A2",
+    "summaryAr": "في السرد المكتوب والرواية نستخدم Präteritum لـ sein, haben, werden والأفعال الناقصة بدلاً من Perfekt. باقي الأفعال تبقى في Perfekt حتى B1.",
+    "summaryDe": "Zwei Verben bilden im Deutschen eine Ausnahme: sein und haben stehen auch in der gesprochenen Sprache im Präteritum (war / hatte), nicht im Perfekt.",
+    "rules": [
+      {
+        "de": "sein → Präteritum: war. „Ich bin müde“ (jetzt) → „Ich war müde“ (gestern).",
+        "ar": "sein يصير war في الماضي. «أنا متعب الآن» ← «كنت متعباً». لا تقل «Ich bin müde gewesen» في الحديث — ثقيلة ومقبولة لكنها ليست الطبيعية."
+      },
+      {
+        "de": "haben → Präteritum: hatte. „Ich habe Zeit“ → „Ich hatte Zeit“.",
+        "ar": "haben يصير hatte. لاحظ سقوط الـb كما في المضارع hast/hat — الجذر واحد."
+      },
+      {
+        "de": "In A1 erkennst du war/hatte — du musst sie noch nicht frei produzieren.",
+        "ar": "المطلوب منك الآن أن **تسمعها فتفهمها** وتقرأها فلا تتلعثم. الإنتاج المنظَّم في A2."
+      }
+    ],
+    "tables": [
+      {
+        "captionAr": "التصريفان الكاملان — احفظهما كالأذكار",
+        "headers": [
+          "Person",
+          "sein → war",
+          "haben → hatte"
+        ],
+        "rows": [
+          [
+            "ich",
+            "war",
+            "hatte"
+          ],
+          [
+            "du",
+            "warst",
+            "hattest"
+          ],
+          [
+            "er/sie/es",
+            "war",
+            "hatte"
+          ],
+          [
+            "wir",
+            "waren",
+            "hatten"
+          ],
+          [
+            "ihr",
+            "wart",
+            "hattet"
+          ],
+          [
+            "sie/Sie",
+            "waren",
+            "hatten"
+          ]
+        ]
+      },
+      {
+        "captionAr": "المواضع الخمسة التي لا غنى لك فيها عن war/hatte منذ اليوم الأول",
+        "headers": [
+          "الاستعمال",
+          "مثال",
+          "لماذا هنا بالذات"
+        ],
+        "rows": [
+          [
+            "السؤال عن الحال",
+            "Wie war dein Tag?",
+            "الألماني لا يسأل «Wie ist dein Tag gewesen»"
+          ],
+          [
+            "الطقس في الماضي",
+            "Gestern war es kalt.",
+            "وصف الجو يقفز مباشرة إلى war"
+          ],
+          [
+            "المكان",
+            "Ich war zu Hause.",
+            "أول جملة يقولها المتعلّم عن يومه"
+          ],
+          [
+            "الامتلاك السابق",
+            "Er hatte keine Zeit.",
+            "شكوى يومية لا تُقال إلا بـhatte"
+          ],
+          [
+            "الوجود",
+            "Es gab / Das war schön.",
+            "الحكم على تجربة منتهية"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Gestern war ich krank, aber heute bin ich wieder fit.",
+        "ar": "أمس كنت مريضاً، لكنني اليوم بخير again. لاحظ المقابلة: war (أمس) ← bin (اليوم)."
+      },
+      {
+        "de": "Wie war das Wetter in Hammamet? — Es war sonnig und warm.",
+        "ar": "كيف كان الطقس في الحمامات؟ — كان مشمساً ودافئاً. سؤال وجواب كلاهما بـwar."
+      },
+      {
+        "de": "Letzte Woche hatte ich viel Stress bei der Arbeit.",
+        "ar": "الأسبوع الماضي كان عندي ضغط كثير في العمل. (حرفياً: امتلكتُ ضغطاً)"
+      },
+      {
+        "de": "Wart ihr schon einmal in Berlin? — Ja, wir waren 2019 dort.",
+        "ar": "هل كنتم مرة في برلين؟ — نعم، كنّا هناك في 2019."
+      },
+      {
+        "de": "Es war einmal ein König, der hatte drei Söhne.",
+        "ar": "«كان يا ما كان ملكٌ كان له ثلاثة أبناء» — بداية كل حكاية ألمانية. war + hatte معاً في جملة واحدة."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "„Ich habe krank gewesen“ ✗ → „Ich war krank“ ✓",
+        "ar": "أشهر خطأ عربي في الماضي الألماني: ترجمة «كنت مريضاً» حرفياً بـPerfekt. sein لا يُصرَف بـgewesen في الحديث اليومي — له war."
+      },
+      {
+        "de": "„Wie ist dein Wochenende gewesen?“ △ → „Wie war dein Wochenende?“ ✓",
+        "ar": "الصيغة الأولى ليست خطأً نحوياً لكنها ثقيلة ومدرسية. الألماني يسأل بـwar مباشرة."
+      },
+      {
+        "de": "„er warst“ / „ich hattest“ ✗ → er war · ich hatte ✓",
+        "ar": "لا تنقل نهاية الضمير إلى الفعل: warst تخصّ du وحدها، hattest تخصّ du وحدها."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "a2-prae-grund-e1",
+        "type": "fill",
+        "promptDe": "Gestern ___ ich im Sprachkurs. (sein)",
+        "answer": "war",
+        "explanationAr": "sein في الماضي مع ich = war. لا تستعمل gewesen في الحديث."
+      },
+      {
+        "id": "a2-prae-grund-e2",
+        "type": "fill",
+        "promptDe": "Letzte Woche ___ wir keine Zeit. (haben)",
+        "answer": "hatten",
+        "explanationAr": "haben في الماضي مع wir = hatten."
+      },
+      {
+        "id": "a2-prae-grund-e3",
+        "type": "fill",
+        "promptDe": "___ du gestern zu Hause? (sein)",
+        "answer": "Warst",
+        "hint": "بداية السؤال — حرف كبير",
+        "explanationAr": "مع du تأخذ war نهاية -st: warst. وفي أول السؤال تُكتب بحرف كبير."
+      },
+      {
+        "id": "a2-prae-grund-e4",
+        "type": "fill",
+        "promptDe": "Es ___ einmal ein König. Er ___ drei Söhne.",
+        "answer": [
+          "war",
+          "hatte"
+        ],
+        "explanationAr": "بداية الحكاية التقليدية: Es war einmal … ثم الانتقال إلى الامتلاك بـhatte."
+      },
+      {
+        "id": "a2-prae-grund-e5",
+        "type": "mc",
+        "promptDe": "Wie fragt man natürlich nach dem Wochenende?",
+        "options": [
+          "Wie war dein Wochenende?",
+          "Wie ist dein Wochenende gewesen?",
+          "Wie hast du dein Wochenende?"
+        ],
+        "answer": "Wie war dein Wochenende?",
+        "explanationAr": "الألماني يسأل بـwar مباشرة. الصيغة الثانية صحيحة نحوياً لكنها ثقيلة، والثالثة خاطئة لأن الزمن حاضر."
+      },
+      {
+        "id": "a2-prae-grund-e6",
+        "type": "mc",
+        "promptDe": "Was ist richtig?",
+        "options": [
+          "Ich war gestern müde.",
+          "Ich habe gestern müde gewesen.",
+          "Ich bin gestern müde."
+        ],
+        "answer": "Ich war gestern müde.",
+        "explanationAr": "الصفات مع sein، وفي الماضي مع war. الخيار الثاني ترجمة حرفية عربية خاطئة، والثالث زمنه حاضر."
+      },
+      {
+        "id": "a2-prae-grund-e7",
+        "type": "truefalse",
+        "promptDe": "„Ich hatte keine Zeit“ steht im Präteritum von haben.",
+        "answer": "true",
+        "explanationAr": "صحيح — hatte هو ماضي haben في صيغة Präteritum، ومعنى الجملة: لم يكن لديّ وقت."
+      },
+      {
+        "id": "a1-war-hatte-u1",
+        "type": "umformung",
+        "quelleDe": "Ich bin müde.",
+        "promptDe": "Setze in die Vergangenheit (gestern).",
+        "answer": "Gestern war ich müde.",
+        "alternativen": [
+          "Ich war gestern müde."
+        ],
+        "mussEnthalten": [
+          "war"
+        ],
+        "darfNicht": [
+          "bin",
+          "gewesen"
+        ],
+        "explanationAr": "sein ← war. لا تقل „bin gewesen“ في الحديث.",
+        "points": 2
+      },
+      {
+        "id": "a1-war-hatte-u2",
+        "type": "umformung",
+        "quelleDe": "Er hat keine Zeit.",
+        "promptDe": "Setze in die Vergangenheit (letzte Woche).",
+        "answer": "Letzte Woche hatte er keine Zeit.",
+        "alternativen": [
+          "Er hatte letzte Woche keine Zeit."
+        ],
+        "mussEnthalten": [
+          "hatte"
+        ],
+        "darfNicht": [
+          "hat",
+          "gehabt"
+        ],
+        "explanationAr": "haben في الماضي يصير hatte — كما يصير sein إلى war.",
+        "points": 2
+      },
+      {
+        "id": "a1-wh-ord1",
+        "type": "order",
+        "promptDe": "Bringe die Wörter in die richtige Reihenfolge:",
+        "answer": [
+          "Gestern",
+          "hatte",
+          "ich",
+          "keine Zeit."
+        ],
+        "explanationAr": "عند البدء بالظرف الزمني (Gestern) يتقدم الفعل إلى الموضع الثاني ويليه الفاعل: Gestern hatte ich keine Zeit."
+      }
+    ]
+  },
+  "b1-partizip1": {
+    "id": "b1-partizip1",
+    "titleDe": "Partizip I als Adjektiv · Adjektivdeklination ohne Artikel",
+    "titleAr": "Partizip I كصفة وتصريف الصفات بدون أداة",
+    "level": "B1",
+    "summaryAr": "Partizip I (Infinitiv + d) يصف شيئاً يقوم بفعل (der lesende Student). يُعامل كصفة ويُصرف حسب الحالة. الصفات التي لا تسبقها أداة تعريفية تضاف لها نهايات واضحة.",
+    "rules": [
+      {
+        "de": "Partizip I = Infinitiv + d · laufen → laufend · weinen → weinend",
+        "ar": "كيف يتكوّن Partizip I."
+      },
+      {
+        "de": "guter Wein · kaltes Wasser · frische Milch  (ohne Artikel: Endung wie bestimmter Artikel)",
+        "ar": "نهايات الصفات بدون أداة."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Der weinende Junge heißt Max.",
+        "ar": "الصبي الباكي اسمه ماكس."
+      },
+      {
+        "de": "Ich trinke gern heißen Kaffee.",
+        "ar": "أحب شرب القهوة الساخنة."
+      }
+    ],
+    "eselsbrueckeAr": "«صفة بلا أداة تنال نهاية الأداة نفسها».",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "fill",
+        "promptDe": "Ein ___ Mann läuft auf der Straße.",
+        "answer": [
+          "laufender",
+          "laufender"
+        ],
+        "explanationDe": "ein laufender Mann",
+        "explanationAr": "Partizip I كصفة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Ich trinke ___ Tee.",
+        "options": [
+          "heißen",
+          "heiß",
+          "heißes"
+        ],
+        "answer": "heißen",
+        "explanationAr": "صفة بدون أداة أمام Akkusativ مذكر (Tee لا — الشاي مذكر في الألمانية: der Tee) ⇒ heißen."
+      },
+      {
+        "id": "b1-partizip1-f2",
+        "type": "fill",
+        "promptDe": "Das ___ Kind schläft. (weinen)",
+        "answer": [
+          "weinende",
+          "weinend"
+        ],
+        "explanationAr": "Partizip I كصفة قبل الاسم يأخذ لاحقة الصفة: das weinende Kind.",
+        "points": 1
+      },
+      {
+        "id": "b1-partizip1-u1",
+        "type": "umformung",
+        "quelleDe": "Der Mann, der dort steht, raucht.",
+        "promptDe": "Bilden Sie den Satz mit Partizip I um: «Der Mann, der dort steht, raucht.»",
+        "answer": [
+          "Der dort stehende Mann raucht.",
+          "Der stehende Mann dort raucht."
+        ],
+        "alternativen": [
+          "Der dort stehende Mann raucht"
+        ],
+        "explanationAr": "Partizip I يحل محل جملة الصلة بفاعل نشط.",
+        "darfNicht": [
+          "der dort steht"
+        ],
+        "promptAr": "صِغِ الجملة باستخدام Partizip I بدلاً من جملة الصلة.",
+        "points": 2
+      }
+    ],
+    "pitfalls": []
+  },
+  "b1-indirekte-fragen": {
+    "id": "b1-indirekte-fragen",
+    "titleDe": "Indirekte Fragesätze (ob/wie/wo/wann/was)",
+    "titleAr": "الأسئلة غير المباشرة",
+    "level": "B1",
+    "summaryAr": "بعد عبارات مثل Ich weiß nicht…/Ich frage mich…/Sagen Sie mir… يأتي سؤال غير مباشر ويتحول الفعل إلى آخر الجملة. نستخدم ob لـ نعم/لا وكلمات W المعتادة.",
+    "rules": [
+      {
+        "de": "Ich weiß nicht, ob er kommt. · Ich weiß nicht, wann er kommt.",
+        "ar": "الفعل في آخر الجملة الثانوية."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Kannst du mir sagen, wie viel das kostet?",
+        "ar": "هل يمكن أن تقول لي كم يكلّف هذا؟"
+      },
+      {
+        "de": "Ein Beispiel für diese Regel.",
+        "ar": "مثال إضافي لهذه القاعدة."
+      },
+      {
+        "de": "Noch ein Beispiel zum Verständnis.",
+        "ar": "مثال ثانٍ للتوضيح."
+      }
+    ],
+    "eselsbrueckeAr": "في الجملة الثانوية الألمانية «الفعل في الآخر مهما طال».",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "fill",
+        "promptDe": "Ich weiß nicht, ___ er kommt.",
+        "answer": [
+          "ob",
+          "ob"
+        ],
+        "explanationDe": "ob = إذا/هل",
+        "explanationAr": "سؤال نعم/لا غير مباشر."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Kannst du mir sagen, ___ die Kirche ist?",
+        "answer": [
+          "wo",
+          "wo"
+        ],
+        "explanationDe": "wo = أين",
+        "explanationAr": "سؤال غير مباشر بـ wo."
+      }
+    ],
+    "pitfalls": []
+  },
+  "b2-verschmolzene": {
+    "id": "b2-verschmolzene",
+    "titleDe": "Verschmolzene Präpositionen (zum, zur, am, im, ans, ins, übers, fürs, vorm, hinters)",
+    "titleAr": "اندماج أدوات الجر مع الأدوات",
+    "level": "B2",
+    "summaryAr": "في اللغة المكتوبة الرسمية واللغة المحكية ندمج حرف الجر مع أداة التعريف التالية: zu+dem=zum، zu+der=zur، an+dem=am، in+dem=im، وهكذا. في B2 يصبح استخدامها واجباً لطبيعية الأسلوب.",
+    "rules": [
+      {
+        "de": "zum = zu + dem · zur = zu + der · am = an + dem · im = in + dem · ans = an + das · ins = in + das",
+        "ar": "أشهر حالات الدمج."
+      },
+      {
+        "de": "Ich gehe zum Arzt. · Wir sind im Kino.",
+        "ar": "أمثلة شائعة."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Er geht zur Schule.",
+        "ar": "يذهب إلى المدرسة."
+      },
+      {
+        "de": "Sie ist am Wochenende zu Hause.",
+        "ar": "هي في البيت نهاية الأسبوع."
+      }
+    ],
+    "eselsbrueckeAr": "كلمة واحدة بدل كلمتين — في الكتابة الأكاديمية لا تُفكك.",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "fill",
+        "promptDe": "Ich gehe ___ Arzt.",
+        "answer": [
+          "zum",
+          "zum"
+        ],
+        "explanationDe": "zum Arzt",
+        "explanationAr": "الدمج القياسي: zu + dem = zum (إلى الـ… مذكر/محايد Dativ)."
+      },
+      {
+        "type": "fill",
+        "promptDe": "Wir sind ___ Kino.",
+        "answer": [
+          "im",
+          "im"
+        ],
+        "explanationDe": "im Kino",
+        "explanationAr": "الدمج القياسي: in + dem = im (في الـ… مذكر/محايد Dativ)."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Er fährt ___ Bahnhof.",
+        "options": [
+          "zum",
+          "zur",
+          "zu den"
+        ],
+        "answer": "zum",
+        "explanationAr": "Bahnhof مذكر: zu+dem = zum."
+      }
+    ],
+    "pitfalls": []
+  },
+  "b2-redew": {
+    "id": "b2-redew",
+    "titleDe": "Redewendungen und idiomatische Wendungen (B2)",
+    "titleAr": "التعابير الاصطلاحية الألمانية",
+    "level": "B2",
+    "summaryAr": "في B2 تحتاج مجموعة من التعابير الجاهزة كـ: einen Kater haben, die Nase voll haben, auf dem Laufenden bleiben, etwas in Kauf nehmen, im Grunde genommen … — هذه العبارات لا تُترجم حرفياً وتُميز المستخدم المستقل عن المتعلم.",
+    "rules": [
+      {
+        "de": "Die Redewendungen werden als Chunks gelernt, nicht Wort für Wort.",
+        "ar": "تُحفظ كعبارات جاهزة — لا كلمة كلمة."
+      },
+      {
+        "de": "Die Wendung ist wörtlich nicht übersetzbar — im Zweifel ist die wörtliche Übersetzung falsch.",
+        "ar": "لا تُترجم حرفياً: إن أعطتك الترجمة الحرفية معنى عربياً غريباً فهي ليست المعنى المقصود."
+      },
+      {
+        "de": "Viele Wendungen stammen aus Körper, Tieren und Verkehr: die Nase voll haben · einen Kater haben · der Zug ist abgefahren.",
+        "ar": "مصدرها الحياة اليومية (الجسم، الحيوانات، المرور) — وهذا سبب عدم ترجمتها حرفياً."
+      },
+      {
+        "de": "In Prüfungen wird die Wendung im ganzen Satz abgefragt — lerne sie mit einem Beispiel, nicht als Liste.",
+        "ar": "تُختبر داخل جملة كاملة في الامتحانات؛ احفظها مع مثال لا كقائمة كلمات."
+      }
+    ],
+    "tables": [
+      {
+        "captionAr": "تسع تعابير جاهزة للاستعمال اليومي",
+        "headers": [
+          "التعبير",
+          "المعنى بالعربية"
+        ],
+        "rows": [
+          [
+            "einen Kater haben",
+            "صاعده/صداع ما بعد الشرب"
+          ],
+          [
+            "die Nase voll haben",
+            "سئمَ حتى النخاع"
+          ],
+          [
+            "auf dem Laufenden bleiben",
+            "يبقى على اطلاع دائم"
+          ],
+          [
+            "etwas in Kauf nehmen",
+            "يتقبّل أمراً غير مرغوب بلا بديل"
+          ],
+          [
+            "im Grunde genommen",
+            "في الأساس / في حقيقته"
+          ],
+          [
+            "Ich verstehe nur Bahnhof.",
+            "لا أفهم شيئاً على الإطلاق"
+          ],
+          [
+            "Das ist mir Wurst.",
+            "الأمر متساوٍ عندي — لا يهمّني"
+          ],
+          [
+            "in Rätseln sprechen",
+            "يتكلّم بلغز يصعب فهمه"
+          ],
+          [
+            "der Zug ist abgefahren",
+            "فرصة ذهبت ولن تعود"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Ich habe die Nase voll.",
+        "ar": "لقد سئمت (ليس: أنفي ممتلئ)."
+      },
+      {
+        "de": "Wir bleiben auf dem Laufenden.",
+        "ar": "نبقى على اطلاع."
+      },
+      {
+        "de": "Ich nehme die lärmenden Nachbarn in Kauf, bis der Umbau fertig ist.",
+        "ar": "أتقبّل الجيران المزعجين بصبرٍ حتى ينتهي التجديد (in Kauf nehmen)."
+      },
+      {
+        "de": "Nach dem Meeting bleiben wir über die Entscheidung auf dem Laufenden.",
+        "ar": "بعد الاجتماع نبقى على اطلاع بالقرار (auf dem Laufenden bleiben)."
+      }
+    ],
+    "eselsbrueckeAr": "إذا كانت الترجمة الحرفية لا تعطي معنى عربياً منطقياً فالأرجح أنها Redewendung — احفظها ككتلة واحدة.",
+    "pronTippAr": "",
+    "exercises": [
+      {
+        "type": "mc",
+        "promptDe": "Ich habe gestern zu viel getrunken und heute habe ich einen ___.",
+        "options": [
+          "Kater",
+          "Katerling",
+          "Katze"
+        ],
+        "answer": "Kater",
+        "explanationAr": "einen Kater haben = صداع/ثقل الكحول."
+      },
+      {
+        "id": "b2-redew-f2",
+        "type": "fill",
+        "promptDe": "Die Nachricht hat mich völlig aus der ___ gebracht. (Ruhe)",
+        "answer": [
+          "Ruhe",
+          "ruhe"
+        ],
+        "explanationAr": "aus der Ruhe bringen = يُزعج، يُخرج عن طوره (Redewendung B2).",
+        "points": 1
+      },
+      {
+        "id": "b2-redew-f3",
+        "type": "fill",
+        "promptDe": "Es ist höchste ___, dass wir anfangen. (Zeit)",
+        "answer": [
+          "Zeit",
+          "zeit"
+        ],
+        "explanationAr": "es ist höchste Zeit = حان وقت الشيء دون إبطاء (تعبير قياسي B2).",
+        "points": 1
+      },
+      {
+        "id": "b2-redew-f4",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "Seine Rede hat mir den ___ gegeben, Deutsch zu lernen. (Anstoß)",
+        "answer": [
+          "Anstoß"
+        ],
+        "explanationAr": "jdm. den Anstoß geben = يُلهم/يُحفّز (تعبير B2 قياسي)."
+      },
+      {
+        "id": "b2-redew-u1",
+        "type": "umformung",
+        "points": 2,
+        "quelleDe": "Ich verstehe überhaupt nichts.",
+        "promptDe": "Schreibe die Redewendung für „ich verstehe gar nichts“.",
+        "answer": [
+          "Ich verstehe nur Bahnhof."
+        ],
+        "explanationAr": "«Ich verstehe nur Bahnhof» = لا أفهم شيئاً على الإطلاق (تعبير سمعي) — لا تكفيك جملة وصفية عادية.",
+        "promptAr": "اكتب التعبير الاصطلاحي الذي يعني «لا أفهم شيئاً».",
+        "darfNicht": [
+          "überhaupt nichts"
+        ],
+        "mussEnthalten": [
+          "bahnhof"
+        ]
+      },
+      {
+        "id": "b2-redew-f5",
+        "type": "fill",
+        "promptDe": "Schreib mir die Neuigkeiten, damit ich immer ___ Laufenden bin.",
+        "answer": [
+          "auf dem"
+        ],
+        "explanationAr": "auf dem Laufenden bleiben/sein = يبقى على اطلاع — جزءان لا يُفصلان.",
+        "points": 1
+      },
+      {
+        "id": "b2-redew-f6",
+        "type": "fill",
+        "promptDe": "Die lärmenden Nachbarn nehme ich bis zum Umbauende ___. (Kauf)",
+        "answer": [
+          "in Kauf"
+        ],
+        "explanationAr": "etwas in Kauf nehmen = يتقبّل أمراً غير مرغوب — in Kauf معاً في الفراغ.",
+        "points": 1
+      },
+      {
+        "id": "b2-redew-m2",
+        "type": "mc",
+        "promptDe": "Ob wir heute oder morgen fahren — das ist mir ___.",
+        "options": [
+          "Wurst",
+          "Bahnhof",
+          "Kater"
+        ],
+        "answer": "Wurst",
+        "explanationAr": "Das ist mir Wurst = لا يهمّني إطلاقاً (وليس: نقراً!)."
+      },
+      {
+        "id": "b2-redew-m3",
+        "type": "mc",
+        "promptDe": "Der Chef spricht immer in ___. Das versteht niemand.",
+        "options": [
+          "Rätseln",
+          "Sätzen",
+          "Farben"
+        ],
+        "answer": "Rätseln",
+        "explanationAr": "in Rätseln sprechen = يتكلّم بلغز يصعب فهمه."
+      },
+      {
+        "id": "b2-redew-t1",
+        "type": "translate",
+        "promptDe": "ترجم: نبقى على اطلاع بكل ما يخصّ هذا المشروع.",
+        "answer": "Wir bleiben über das Projekt auf dem Laufenden.",
+        "keywords": [
+          "auf dem Laufenden",
+          "Projekt"
+        ],
+        "explanationAr": "auf dem Laufenden bleiben مع ja للمعرفة: über das Projekt — الحرف والمعرفة لا يُهملان."
+      },
+      {
+        "id": "b2-redew-u2",
+        "type": "umformung",
+        "points": 2,
+        "quelleDe": "Wir müssen das akzeptieren, auch wenn wir es nicht wollen.",
+        "promptDe": "Ersetze „akzeptieren, auch wenn wir es nicht wollen“ durch die passende Redewendung.",
+        "answer": [
+          "Wir müssen das in Kauf nehmen, auch wenn wir es nicht wollen."
+        ],
+        "darfNicht": [
+          "akzeptieren"
+        ],
+        "mussEnthalten": [
+          "in Kauf"
+        ],
+        "explanationAr": "etwas in Kauf nehmen = يتقبّل مُكرَّهاً — «akzeptieren» تكفي في الكلام العامّ لا في الامتحان.",
+        "promptAr": "استبدل «akzeptieren, auch wenn …» بالتعبير الاصطلاحي المناسب (in Kauf nehmen)."
+      },
+      {
+        "id": "b2-redew-o1",
+        "type": "order",
+        "promptDe": "Bilde einen Satz: (ich / nehme / die lärmenden Nachbarn / in Kauf)",
+        "answer": [
+          "Ich",
+          "nehme",
+          "die lärmenden Nachbarn",
+          "in Kauf"
+        ],
+        "explanationAr": "in Kauf nehmen: الفعل nehmen يتبع القاعدة، والجار والمجرور in Kauf في المنتصف — ترتيب ثابت لا يُترجم.",
+        "points": 2,
+        "promptAr": "رتّب الكلمات لتكوّن جملة صحيحة."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "„Meine Nase ist voll“ ✗ → „Ich habe die Nase voll“ ✓",
+        "ar": "لا تُترجم حرفياً («أنفي ممتلئ») — العبارة كلّها تعني «سئمتُ حتى النخاع» مع الفعل haben."
+      },
+      {
+        "de": "„Ich bin auf dem laufenden“ ✗ → „Ich bin auf dem Laufenden“ ✓",
+        "ar": "Substantiviertes Adjektiv: يُكتب كبيراً لأنه بمعنى الاسم."
+      },
+      {
+        "de": "„Ich verstehe gar nichts“ ✗ (kein Idiom) → „Ich verstehe nur Bahnhof“ ✓",
+        "ar": "الفخّ: جملة صحيحة نحويّاً لكنها ليست العبارة الاصطلالية المطلوبة — الامتحان يطلب Wendung لا وصفاً."
+      }
+    ]
+  },
+  "a1-war-hatte": {
+    "id": "a1-war-hatte",
+    "level": "A1",
+    "titleDe": "war · hatte · konnte · musste (Präteritum der Hilfs-/Modalverben im A1)",
+    "titleAr": "كان · كان لديه · استطاع · اضطر (ماضي الأفعال المساعدة والناقصة في A1)",
+    "regel": "Placeholder pending full authoring.",
+    "regelAr": "نموذج مؤقت في انتظار الصياغة الكاملة.",
+    "achse": "a1-war-hatte",
+    "exercises": [
+      {
+        "id": "a1-war-hatte-e1",
+        "type": "mc",
+        "promptDe": "Gestern ___ ich im Kino.",
+        "promptAr": "البارحة كنتُ في السينما.",
+        "options": [
+          "war",
+          "hatte",
+          "bin",
+          "hat"
+        ],
+        "answer": "war",
+        "explanationAr": "مع المكان («im Kino»/في السينما) نستعمل war (Präteritum من sein)."
+      },
+      {
+        "id": "a1-war-hatte-e2",
+        "type": "mc",
+        "promptDe": "Wir ___ gestern viel Arbeit.",
+        "promptAr": "كان لدينا عملٌ كثير البارحة.",
+        "options": [
+          "hatten",
+          "war",
+          "sind",
+          "mussten"
+        ],
+        "answer": "hatten",
+        "explanationAr": "«كان لدينا» = wir hatten (Präteritum من haben)."
+      },
+      {
+        "id": "a1-war-hatte-e3",
+        "type": "fill",
+        "promptDe": "Er ___ gestern nicht kommen. (können)",
+        "promptAr": "لم يستطع المجيء البارحة — اكتب الصيغة الصحيحة من können.",
+        "answer": "konnte",
+        "explanationAr": "الماضي من können مع er = konnte."
+      },
+      {
+        "id": "a1-war-hatte-e4",
+        "type": "mc",
+        "promptDe": "Sie … das nicht tun. (nicht erlaubt)",
+        "promptAr": "لم يُسمح لها بفعل ذلك — اختر الفعل الناقص المناسب.",
+        "options": [
+          "durfte",
+          "musste",
+          "wollte",
+          "hatte"
+        ],
+        "answer": "durfte",
+        "explanationAr": "«مسموح/ممنوع» = dürfen، وماضيه durfte."
+      },
+      {
+        "id": "a1-war-hatte-e5",
+        "type": "mc",
+        "promptDe": "Welcher Satz ist richtig?",
+        "promptAr": "أي الجمل الآتية صحيح؟",
+        "options": [
+          "Ich musste gestern lernen.",
+          "Ich habe gestern müssen lernen.",
+          "Ich muss gestern lernen.",
+          "Ich gemusst gestern lernen."
+        ],
+        "answer": "Ich musste gestern lernen.",
+        "explanationAr": "الناقصة في الماضي تأتي مباشرة (musste) دون Perfekt."
+      },
+      {
+        "id": "a1-war-hatte-e6",
+        "type": "translate",
+        "promptDe": "ترجم إلى الألمانية: «البارحة كنتُ مريضاً ولم أستطع الذهاب إلى المدرسة.»",
+        "answer": "Gestern war ich krank und konnte nicht zur Schule gehen.",
+        "keywords": [
+          "gestern",
+          "war",
+          "krank",
+          "konnte",
+          "Schule",
+          "gehen"
+        ],
+        "explanationAr": "الصيغة المرجعية: Gestern war ich krank und konnte nicht zur Schule gehen. — استعمل war (كان) وkonnte (استطاع)."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "❌ Ich bin gestern in der Schule gewesen … (صحيح شفوياً لكن في الكتابة الأفضل: Ich war gestern in der Schule.)",
+        "ar": "في السرد المكتوب استعمل war بدلاً من bin gewesen في A1."
+      },
+      {
+        "de": "❌ Ich habe gestern müssen arbeiten → ✅ Ich musste gestern arbeiten.",
+        "ar": "الأفعال الناقصة في الماضي تأتي مباشرة (musste/konnte) لا ببناء Perfekt."
+      },
+      {
+        "de": "❌ Ich habe müssen gehen (فخ فارسي/عربي) → ✅ Ich musste gehen.",
+        "ar": "لا تستعمل Perfekt مع الناقصة في A1 — Präteritum أقصر وأصح."
+      }
+    ],
+    "examples": [
+      {
+        "de": "Gestern war ich zu Hause.",
+        "ar": "البارحة كنتُ في البيت."
+      },
+      {
+        "de": "Wir hatten keine Zeit.",
+        "ar": "لم يكن لدينا وقت."
+      },
+      {
+        "de": "Er musste gestern arbeiten.",
+        "ar": "اضطرّ للعمل البارحة."
+      },
+      {
+        "de": "Sie konnte nicht kommen, weil sie krank war.",
+        "ar": "لم تستطع المجيء لأنها كانت مريضة."
+      },
+      {
+        "de": "Ich wollte dich anrufen, aber ich hatte dein Nummer nicht.",
+        "ar": "أردتُ الاتصال بك لكن لم يكن لدي رقمك."
+      }
+    ],
+    "rules": [
+      {
+        "de": "sein (war/gewesen) und haben (hatte/gehabt) sind die Brücken zwischen Präsens und Vergangenheit. Im A1 lernst du die Präteritum-Formen war und hatte sowie die Modalverben im Präteritum (konnte, musste, sollte, wollte, durfte, mochte), weil sie auch in gesprochener Sprache üblicher sind als das Perfekt.",
+        "ar": "في A1 تتعلّم صيغ Präteritum لـ sein (war) و haben (hatte) والأفعال الناقصة (konnte/musste/sollte/wollte/durfte/mochte)، لأنها الأكثر شيوعاً في الكلام اليومي أيضاً — على عكس بقية الأفعال التي تبقى في Perfekt حتى مراحل لاحقة."
+      },
+      {
+        "de": "ich/er/sie/es → war/hatte/konnte/musste · du → warst/hattest/konntest/musstest · wir/Sie/sie → waren/hatten/konnten/mussten · ihr → wart/hattet/konntet/musstet",
+        "ar": "التصريف: ich/er/sie/es يأخذ war/hatte/konnte/musste؛ du تضيف -st؛ wir/Sie/sie يأخذون -en؛ ihr تضيف -t."
+      },
+      {
+        "de": "Für die Bedeutung (Präsens): sein = sein/ist · haben = haben/hat · können = kann · müssen = muss · sollen = soll · wollen = will · dürfen = darf · mögen = mag. Im Präteritum wird daraus war · hatte · konnte · musste · sollte · wollte · durfte · mochte.",
+        "ar": "المعاني: sein كان (Präsens: ist)، haben كان لديه/عنده (hat)، können استطاع (kann)، müssen اضطر/يجب (muss)، sollen ينبغي (soll)، wollen أراد (will)، dürfen سُمح له (darf)، mögen أحبَّ (mag). في Präteritum تصبح war · hatte · konnte · musste · sollte · wollte · durfte · mochte."
+      }
+    ],
+    "summaryAr": "كان · كان لديه · استطاع · اضطر (ماضي الأفعال المساعدة والناقصة في A1)"
+  },
+  "b1-funktionsverben": {
+    "id": "b1-funktionsverben",
+    "level": "B1",
+    "titleDe": "Funktionsverbgefüge (FVG)",
+    "titleAr": "تراكيب الأفعال الوظيفية Funktionsverbgefüge",
+    "regel": "Placeholder pending full authoring.",
+    "regelAr": "نموذج مؤقت في انتظار الصياغة الكاملة.",
+    "achse": "b1-funktionsverben",
+    "exercises": [
+      {
+        "id": "b1-fvg-e1",
+        "type": "mc",
+        "promptDe": "eine Entscheidung …",
+        "promptAr": "ما الفعل الوظيفي المناسب؟ اتخاذ قرار.",
+        "options": [
+          "treffen",
+          "machen",
+          "nehmen",
+          "geben"
+        ],
+        "answer": "treffen",
+        "explanationAr": "eine Entscheidung treffen = اتخاذ قرار."
+      },
+      {
+        "id": "b1-fvg-e2",
+        "type": "mc",
+        "promptDe": "eine Frage …",
+        "promptAr": "ما الفعل؟ طرح سؤال.",
+        "options": [
+          "stellen",
+          "sagen",
+          "sprechen",
+          "machen"
+        ],
+        "answer": "stellen",
+        "explanationAr": "eine Frage stellen = طرح سؤال."
+      },
+      {
+        "id": "b1-fvg-e3",
+        "type": "fill",
+        "promptDe": "Wir müssen Abschied von ihm ___. (nehmen/geben/machen)",
+        "promptAr": "يجب أن نودِّعه — اكتب الفعل الصحيح.",
+        "answer": "nehmen",
+        "explanationAr": "Abschied nehmen von = ودَّعَ."
+      },
+      {
+        "id": "b1-fvg-e4",
+        "type": "truefalse",
+        "promptDe": "Richtig oder falsch? „eine Entscheidung machen“ ist korrektes Deutsch.",
+        "promptAr": "صح أم خطأ: عبارة «eine Entscheidung machen» صحيحة بالألمانية؟",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "answer": "Falsch",
+        "explanationAr": "خطأ: الصحيح eine Entscheidung treffen."
+      },
+      {
+        "id": "b1-fvg-e5",
+        "type": "translate",
+        "promptDe": "ترجم: «طرحتُ عليه سؤالاً لكنه لم يجب».",
+        "answer": "Ich habe ihm eine Frage gestellt, aber er hat nicht geantwortet.",
+        "keywords": [
+          "Frage",
+          "gestellt",
+          "geantwortet"
+        ],
+        "explanationAr": "الصيغة المرجعية: Ich habe ihm eine Frage gestellt, aber er hat nicht geantwortet."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "❌ Ich mache eine Entscheidung → ✅ Ich treffe eine Entscheidung.",
+        "ar": "«اتخاذ قرار» = eine Entscheidung treffen (لا machen بالعربية لا تُترجم «اتخذ»)."
+      },
+      {
+        "de": "❌ Ich sage eine Frage → ✅ Ich stelle eine Frage.",
+        "ar": "«طرح سؤال» = eine Frage stellen (لا sagen)."
+      }
+    ],
+    "examples": [
+      {
+        "de": "Der Chef hat eine Entscheidung getroffen.",
+        "ar": "اتخذ المدير قراراً."
+      },
+      {
+        "de": "Kannst du mir eine Frage stellen?",
+        "ar": "هل يمكنك أن تطرح عليَّ سؤالاً؟"
+      },
+      {
+        "de": "Das Projekt ist in Bewegung gekommen.",
+        "ar": "انطلق المشروع (دخل في حركة)."
+      },
+      {
+        "de": "Wir müssen Abschied von ihm nehmen.",
+        "ar": "يجب أن نودِّعه."
+      },
+      {
+        "de": "Die Kritik hat ihn unter Druck gesetzt.",
+        "ar": "وضعه النقد تحت الضغط."
+      }
+    ],
+    "rules": [
+      {
+        "de": "Ein Funktionsverbgefüge (FVG) besteht aus einem Funktionsverb (bringen, stellen, nehmen, treffen, kommen, stehen, geben, üben …) und einem Substantiv (oft mit Präposition): z. B. „eine Entscheidung treffen“, „eine Frage stellen“, „in Bewegung kommen“. Das Substantiv trägt die eigentliche Bedeutung; das Funktionsverb bestimmt die „Handlungsart“ (Beginn, Dauer, Ende, Wirkung).",
+        "ar": "تركيب الفعل الوظيفي (FVG) = فعل وظيفي (treffen/stellen/nehmen/kommen …) + اسم (غالباً مع حرف جر) مثل «eine Frage stellen» (طرح سؤال). الاسم يحمل المعنى الأساسي، والفعل الوظيفي يحدد طريقة الحدث (بداية/استمرار/نهاية/تأثير)."
+      },
+      {
+        "de": "Die Wahl des Funktionsverbs ändert die Bedeutung (nicht beliebig austauschbar): Frage stellen ≠ Frage haben · Entscheidung treffen ≠ Entscheidung bringen · in Verbindung stehen ≠ in Verbindung bringen.",
+        "ar": "اختيار الفعل الوظيفي يغيّر المعنى: لا تبدّلها اعتباطاً."
+      },
+      {
+        "de": "In B1 erkennst und verstehst du die häufigsten FVG; produktiv benutzen wirst du sie in B2 (insbesondere in Schrifttexten und offiziellen Briefen).",
+        "ar": "في B1 تتعرّف على أشهر التراكيب وتفهمها، ثم تتقن استعمالها إنتاجياً في B2 خاصة في الكتابة الرسمية."
+      }
+    ],
+    "summaryAr": "تراكيب الأفعال الوظيفية Funktionsverbgefüge"
+  },
+  "a0-buchstaben": {
+    "id": "a0-buchstaben",
+    "titleDe": "Alphabet & Buchstabieren",
+    "titleAr": "الحروف الألمانية والتهجئة",
+    "level": "A0",
+    "summaryAr": "ستة وعشرون حرفاً لاتينياً + ثلاثة Umlaute (ä, ö, ü) وحرف ß إس-تسيت. تعلم نطق الحروف ونطق أسماء الناس بالتهجئة.",
+    "rules": [
+      {
+        "de": "A(a) · B(be) · C(ce) · D(de) · E(e) · F(ef) · G(ge) · H(ha) · I(i) · J(jott) · K(ka) · L(el) · M(em)",
+        "ar": "الأحرف A–M ونطقها الألماني."
+      },
+      {
+        "de": "N(en) · O(o) · P(pe) · Q(qu) · R(er) · S(es) · T(te) · U(u) · V(fau) · W(we) · X(ix) · Y(ypsilon) · Z(tsett)",
+        "ar": "الأحرف N–Z."
+      },
+      {
+        "de": "Ä (a-Umlaut) · Ö (o-Umlaut) · Ü (u-Umlaut) · ß (Eszett/Scharfes S = ss)",
+        "ar": "علامتا النقط على a/o/u، وحرف ß يُنطق «s» حادّاً."
+      },
+      {
+        "de": "«Buchstabiere bitte deinen Namen!» — «A – L – I. Ali.»",
+        "ar": "صيغة طلب التهجئة وكيفية الإجابة: حرفٌ فحرف ثم الاسم."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "A wie Apfel, B wie Bär, C wie Computer.",
+        "ar": "الحرف + «wie» + كلمة دالة لتوضيحه."
+      },
+      {
+        "de": "Mein Name ist Müller: M – Ü – L – L – E – R.",
+        "ar": "تهجئة الاسم M-Ü-L-L-E-R."
+      }
+    ],
+    "eselsbrueckeAr": "احفظ Y «ypsilon» مثل كلمة «إبسيلون» في الإغريقية، وW تنطق «ڤه» لا «دبليو».",
+    "pronTippAr": "ß تشبه الحرف س تماماً؛ Ä مثل «e» ممالاً قليلاً نحو a، وÖ مثل «e» في الفرنسية peu، وÜ مثل «u» الفرنسية vu.",
+    "exercises": [
+      {
+        "id": "a0-buchstaben-q1",
+        "type": "mc",
+        "points": 1,
+        "promptDe": "Welcher Buchstabe ist ein Umlaut?",
+        "options": [
+          "B",
+          "ß",
+          "Ö",
+          "Z"
+        ],
+        "answer": "Ö",
+        "explanationAr": "Ö (مثل öffnen) أحدُ الثلاثة Umlaute. «B» و«Z» حرفان عاديّان، و«ß» إس-تسيت لا علامتا نقط عليه."
+      },
+      {
+        "id": "a0-buchstaben-q2",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "Wie heißt das Alphabet auf Deutsch? Buchstabiere «Ali»: A – L – ___.",
+        "answer": [
+          "I",
+          "i"
+        ],
+        "explanationAr": "الحرف الثالث في «Ali» هو I (يُنطق «إي»)، لا Y ولا E."
+      },
+      {
+        "id": "a0-buchstaben-q3",
+        "type": "truefalse",
+        "points": 1,
+        "promptDe": "«W» wird auf Deutsch wie «V» ausgesprochen (weich).",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "W الألمانية تنطق ڤ (weich)، فكلمة Wasser تبدأ بصوت ڤ لا واو."
+      },
+      {
+        "id": "a0-buchstaben-q4",
+        "type": "translate",
+        "points": 1,
+        "promptDe": "ترجم: «Buchstabiere deinen Namen!»",
+        "answer": [
+          "هجِّ اسمك!",
+          "هجّئ اسمك!"
+        ],
+        "explanationAr": "«Buchstabiere» (فعل أمر من buchstabieren) = هجِّ/هجِّئ."
+      }
+    ]
+  },
+  "a0-zahlen": {
+    "id": "a0-zahlen",
+    "titleDe": "Zahlen, Datum & Uhrzeit",
+    "titleAr": "الأرقام، التاريخ، والوقت",
+    "level": "A0",
+    "summaryAr": "الأرقام من 1 إلى 100، السؤال عن العمر وثمن الشيء، قراءة التاريخ بالأشهر الألمانية، والسؤال عن الساعة.",
+    "rules": [
+      {
+        "de": "1 eins · 2 zwei · 3 drei · 4 vier · 5 fünf · 6 sechs · 7 sieben · 8 acht · 9 neun · 10 zehn",
+        "ar": "الأرقام 1–10."
+      },
+      {
+        "de": "11 elf · 12 zwölf · 13 dreizehn · … · 20 zwanzig · 21 einundzwanzig",
+        "ar": "الأرقام 11–19 تنتهي بـzehn، والعشرات تنتهي بـzig، والآحاد قبل العشرات مع und."
+      },
+      {
+        "de": "«Wie viel kostet das?» — «Zwei Euro.»",
+        "ar": "السؤال عن الثمن: «كم يُكلِّف هذا؟» والإجابة بالرقم + Euro."
+      },
+      {
+        "de": "«Wie alt bist du?» — «Ich bin dreißig Jahre alt.»",
+        "ar": "السؤال عن العمر وصيغته."
+      },
+      {
+        "de": "«Wie spät ist es?» — «Es ist drei Uhr.»",
+        "ar": "السؤال عن الساعة: «كم الساعة؟» والجواب «Es ist … Uhr.»"
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Heute ist Montag, der 5. Oktober.",
+        "ar": "اليوم اثنين، 5 أكتوبر."
+      },
+      {
+        "de": "Es ist halb vier.",
+        "ar": "الساعة الثالثة والنصف (halb vier = 15:30، انتبه: نصف الساعة التالية)."
+      }
+    ],
+    "eselsbrueckeAr": "واحد وعشرون تُنطق «واحد وعشرين» حرفياً: einundzwanzig. وفي الساعة «halb vier» = الثالثة والنصف (لا الرابعة).",
+    "pronTippAr": "ch في sechs وacht هو ch حلقي (مثل أخ)، أما ch في ich فيخرج من وسط اللسان.",
+    "exercises": [
+      {
+        "id": "a0-zahlen-q1",
+        "type": "mc",
+        "points": 1,
+        "promptDe": "Wie viel ist fünf plus drei?",
+        "options": [
+          "sechs",
+          "sieben",
+          "acht",
+          "neun"
+        ],
+        "answer": "acht",
+        "explanationAr": "5 + 3 = 8 acht (آخت)."
+      },
+      {
+        "id": "a0-zahlen-q2",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "Wie spät ist es? — Es ist ___ Uhr. (3)",
+        "answer": [
+          "drei",
+          "Drei"
+        ],
+        "explanationAr": "الساعة 3 = drei Uhr."
+      },
+      {
+        "id": "a0-zahlen-q3",
+        "type": "mc",
+        "points": 1,
+        "promptDe": "«Wie alt bist du?»",
+        "options": [
+          "Ich heiße Ali.",
+          "Ich komme aus Tunesien.",
+          "Ich bin dreißig Jahre alt.",
+          "Guten Tag."
+        ],
+        "answer": "Ich bin dreißig Jahre alt.",
+        "explanationAr": "السؤال عن العمر تُجيب بـ«Ich bin … Jahre alt»، لا بالاسم ولا بلد المنشأ."
+      },
+      {
+        "id": "a0-zahlen-q4",
+        "type": "translate",
+        "points": 1,
+        "promptDe": "ترجم: «كم الساعة؟»",
+        "answer": [
+          "Wie spät ist es?",
+          "Wie viel Uhr ist es?"
+        ],
+        "alternativen": [
+          "Wie spät ist es"
+        ],
+        "explanationAr": "الصيغتان القياسيتان: Wie spät ist es؟ / Wie viel Uhr ist es؟"
+      }
+    ]
+  },
+  "a2-konj2-hoflich": {
+    "id": "a2-konj2-hoflich",
+    "titleDe": "Höfliche Bitten (Konjunktiv II: könnten · würden · hätten)",
+    "titleAr": "الطلب المهذّب — كونجونكتيف 2 للأدب",
+    "level": "A2",
+    "summaryAr": "في الألمانية لا نقول Gib mir! للغرباء أو الكبار. نستخدم صيغ Konjunktiv II المهذّبة: «Könnten Sie mir bitte helfen؟» و«Würden Sie bitte langsamer sprechen؟» و«Hätten Sie einen Moment Zeit؟» — دون الدخول في القواعد الكاملة للشرط غير الواقعي (يأتي ذلك في B1).",
+    "rules": [
+      {
+        "de": "Könnten Sie …? ≈ Could you (polite) …?",
+        "ar": "لطلب فعل: Könnten Sie mir bitte helfen? — أيمكنك مساعدتي؟"
+      },
+      {
+        "de": "Würden Sie bitte …? ≈ Would you please …?",
+        "ar": "لطلب إجراء: Würden Sie bitte wiederholen? — هل يمكنك الإعادة من فضلك؟"
+      },
+      {
+        "de": "Hätten Sie …? ≈ Do you have (polite)?",
+        "ar": "لطلب شيء: Hätten Sie einen Stift؟ — هل معك قلم؟"
+      },
+      {
+        "de": "„bitte“",
+        "ar": "تأتي bitte بعد الفاعل أو في آخر الجملة."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Könnten Sie mir bitte sagen, wo der Bahnhof ist?",
+        "ar": "أيمكنك من فضلك أن تخبرني أين المحطة؟"
+      },
+      {
+        "de": "Würden Sie bitte langsamer sprechen?",
+        "ar": "هل يمكنك أن تتكلم أبطأ من فضلك؟"
+      },
+      {
+        "de": "Hätten Sie vielleicht einen Moment Zeit?",
+        "ar": "هل لديك لحظة من فضلك؟"
+      }
+    ],
+    "eselsbrueckeAr": "القاعدة الذهبية: للغرباء والخدمات استخدم دائماً Könnten/Würden/Hätten بدلاً من الصيغ المباشرة.",
+    "pronTippAr": "تنطق könnten بكسر ö مثل «كُنتن» و Würden مثل «ڤوردن»، وكلاهما بصيغة الجمع المهذب (Sie).",
+    "exercises": [
+      {
+        "id": "a2-konj2-hoflich-q1",
+        "type": "mc",
+        "points": 1,
+        "promptDe": "«___ Sie mir bitte helfen?»",
+        "options": [
+          "Können",
+          "Könnten",
+          "Kann",
+          "Kannst"
+        ],
+        "answer": "Könnten",
+        "explanationAr": "طلب مهذّب من شخص غريب = Konjunktiv II: könnten."
+      },
+      {
+        "id": "a2-konj2-hoflich-q2",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "«___ Sie bitte langsamer sprechen?» (würde)",
+        "answer": [
+          "Würden",
+          "würden"
+        ],
+        "explanationAr": "طلب فعل بأدب = Würden Sie bitte …؟"
+      },
+      {
+        "id": "a2-konj2-hoflich-q3",
+        "type": "translate",
+        "points": 1,
+        "promptDe": "ترجم: «هل معك قلم من فضلك؟» (بصيغة مهذّبة مع Hätten)",
+        "answer": [
+          "Hätten Sie einen Kugelschreiber bitte?",
+          "Hätten Sie einen Stift bitte?"
+        ],
+        "alternativen": [
+          "Hätten Sie bitte einen Stift?"
+        ],
+        "explanationAr": "طلب شيء مهذّباً = Hätten Sie …؟"
+      },
+      {
+        "id": "a2-konj2-hoflich-q4",
+        "type": "mc",
+        "points": 1,
+        "promptDe": "Welche Frage ist am höflichsten?",
+        "options": [
+          "Gib mir den Pass!",
+          "Geben Sie mir den Pass.",
+          "Könnten Sie mir bitte den Pass geben?",
+          "Pass bitte."
+        ],
+        "answer": "Könnten Sie mir bitte den Pass geben?",
+        "explanationAr": "الصيغ المباشرة للأمر فظّة مع الغرباء. الصيغة المهذّبة مع Könnten هي القياسية.",
+        "promptAr": "أيُّ صيغةٍ أكثر أدباً؟"
+      }
+    ]
+  },
+  "a2-verb-praep": {
+    "id": "a2-verb-praep",
+    "titleDe": "Verben mit festen Präpositionen (Grundlage)",
+    "titleAr": "أفعال بحروف جرّ ثابتة (أساسيات A2)",
+    "level": "A2",
+    "summaryAr": "أفعال كثيرة لا تعمل وحدها: تنتظر حرف جر بعينه. على سبيل المثال warten auf, sprechen über, denken an. هذا الدرس يعطي القاعدة الأساسية لثمانية أفعال شائعة.",
+    "rules": [
+      {
+        "de": "warten auf + Akk",
+        "ar": "أنا أنتظر الحافلة: Ich warte auf den Bus."
+      },
+      {
+        "de": "sprechen über + Akk",
+        "ar": "نتحدث عن العطلة: Wir sprechen über die Ferien."
+      },
+      {
+        "de": "denken an + Akk",
+        "ar": "أفكر فيك: Ich denke an dich."
+      },
+      {
+        "de": "sich freuen auf + Akk",
+        "ar": "أتطلع للقاء: Ich freue mich auf das Treffen."
+      },
+      {
+        "de": "sich freuen über + Akk",
+        "ar": "سعدتُ بالهدية: Ich freue mich über das Geschenk."
+      },
+      {
+        "de": "fragen nach + Dat",
+        "ar": "أسأل عن الطريق: Ich frage nach dem Weg."
+      },
+      {
+        "de": "träumen von + Dat",
+        "ar": "أحلم بالسفر: Ich träume von einer Reise."
+      },
+      {
+        "de": "teilnehmen an + Dat",
+        "ar": "أشارك في الدورة: Ich nehme am Kurs teil."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Ich warte schon eine Stunde auf den Bus.",
+        "ar": "أنا أنتظر الحافلة منذ ساعة."
+      },
+      {
+        "de": "Sprich bitte nicht über andere Menschen!",
+        "ar": "لا تتحدث عن الآخرين من فضلك."
+      },
+      {
+        "de": "Worauf wartest du? — Auf den Zug.",
+        "ar": "علام تنتظر؟ — على القطار."
+      }
+    ],
+    "eselsbrueckeAr": "حروف جر هذه الأفعال تُحفظ مع الفعل ككتلة واحدة لا تتغيّر.",
+    "pronTippAr": "auf تُنطَق «أوف» لا «أبف»، وüber بحرف ü ممدود «يوبا».",
+    "exercises": [
+      {
+        "id": "a2-verb-praep-q1",
+        "type": "mc",
+        "points": 1,
+        "promptDe": "Ich warte ___ den Bus.",
+        "options": [
+          "auf",
+          "an",
+          "über",
+          "nach"
+        ],
+        "answer": "auf",
+        "explanationAr": "warten auf + Akk = ينتظر."
+      },
+      {
+        "id": "a2-verb-praep-q2",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "Wir sprechen ___ das Wochenende. (über)",
+        "answer": [
+          "über"
+        ],
+        "explanationAr": "sprechen über = يتحدّث عن."
+      },
+      {
+        "id": "a2-verb-praep-q3",
+        "type": "fill",
+        "points": 1,
+        "promptDe": "Ich denke oft ___ dich. (an)",
+        "answer": [
+          "an"
+        ],
+        "explanationAr": "denken an = يفكر في."
+      },
+      {
+        "id": "a2-verb-praep-q4",
+        "type": "translate",
+        "points": 1,
+        "promptDe": "ترجم: «أنا سعيدةٌ بالخبر» (sich freuen über)",
+        "answer": [
+          "Ich freue mich über die Nachricht."
+        ],
+        "explanationAr": "السعادة بشيء حصل = sich freuen über + Akk."
+      },
+      {
+        "id": "a2-verb-praep-q5",
+        "type": "umformung",
+        "points": 2,
+        "quelleDe": "Welcher Bus kommt? Ich warte.",
+        "promptDe": "Verbinde die Sätze mit „warten auf“. (Welcher Bus? Ich warte.)",
+        "answer": [
+          "Ich warte auf den Bus."
+        ],
+        "explanationAr": "الجملة الصحيحة: Ich warte auf den Bus.",
+        "promptAr": "اربط الجملتين باستخدام warten auf."
+      }
+    ]
+  },
+  "a2-adjektiv-einfach": {
+    "id": "a2-adjektiv-einfach",
+    "titleDe": "Adjektivendungen nach der/die/das",
+    "titleAr": "نهايات الصفات بعد أدوات التعريف (der/die/das)",
+    "level": "A2",
+    "summaryAr": "بعد أداة تعريف (der/die/das/dieser/jeder) القاعدة الذهبية بسيطة: في حالة الرفع (Nominativ) والنصب (Akkusativ) المفرد تنتهي الصفة بـ-e، وكل ما عداها تنتهي بـ-en. لا تحتاج أكثر من ذلك للتعبير اليومي.",
+    "rules": [
+      {
+        "de": "der kleine Mann · die kleine Frau · das kleine Kind",
+        "ar": "Nominativ مفرد (رفع): -e دائماً"
+      },
+      {
+        "de": "den kleinen Mann · die kleine Frau · das kleine Kind",
+        "ar": "Akkusativ مفرد (نصب): المذكر يأخذ -en (بعد den)، الباقي -e"
+      },
+      {
+        "de": "dem kleinen Mann · der kleinen Frau · dem kleinen Kind",
+        "ar": "Dativ مفرد (جرّ/جار): -en في جميع الأجناس"
+      },
+      {
+        "de": "die kleinen Kinder · mit den kleinen Kindern",
+        "ar": "الجمع في كل الحالات: -en دائماً"
+      }
+    ],
+    "tables": [
+      {
+        "captionAr": "نهايات الصفات بعد der/die/das (الخلاصة)",
+        "headers": [
+          "الحالة",
+          "der (مذكر)",
+          "die (مؤنث)",
+          "das (محايد)",
+          "الجمع"
+        ],
+        "rows": [
+          [
+            "Nominativ",
+            "-e",
+            "-e",
+            "-e",
+            "-en"
+          ],
+          [
+            "Akkusativ",
+            "-en",
+            "-e",
+            "-e",
+            "-en"
+          ],
+          [
+            "Dativ",
+            "-en",
+            "-en",
+            "-en",
+            "-en"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Der alte Mann wohnt hier.",
+        "ar": "الرجل العجوز يسكن هنا."
+      },
+      {
+        "de": "Ich sehe den roten Wagen.",
+        "ar": "أرى السيارة الحمراء."
+      },
+      {
+        "de": "Gib dem kleinen Kind das Brot.",
+        "ar": "أعطِ الطفل الصغير الخبز."
+      },
+      {
+        "de": "Die neuen Bücher liegen dort.",
+        "ar": "الكتب الجديدة هناك."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "„der alt Mann“ ✗ → „der alte Mann“ ✓",
+        "ar": "بعد der لا تنسَ نهاية -e."
+      },
+      {
+        "de": "„den rot Wagen“ ✗ → „den roten Wagen“ ✓",
+        "ar": "بعد den (مذكر منصوب) الصفة تأخذ -en."
+      }
+    ],
+    "resources": [],
+    "exercises": [
+      {
+        "id": "a2-adj-e1",
+        "type": "fill",
+        "promptDe": "Der neu___ Wagen ist schnell.",
+        "answer": "e",
+        "explanationAr": "Nominativ مفرد بعد der → -e"
+      },
+      {
+        "id": "a2-adj-e2",
+        "type": "fill",
+        "promptDe": "Ich sehe den alt___ Mann.",
+        "answer": "en",
+        "explanationAr": "Akkusativ مذكر بعد den → -en"
+      },
+      {
+        "id": "a2-adj-e3",
+        "type": "fill",
+        "promptDe": "Wir helfen der klein___ Frau.",
+        "answer": "en",
+        "explanationAr": "Dativ مؤنث بعد der → -en"
+      },
+      {
+        "id": "a2-adj-e4",
+        "type": "fill",
+        "promptDe": "Die jung___ Kinder spielen im Garten.",
+        "answer": "en",
+        "explanationAr": "جمع بعد die → -en"
+      },
+      {
+        "id": "a2-adj-e5",
+        "type": "mc",
+        "promptDe": "Ich kaufe ___ Wagen.",
+        "options": [
+          "den roten",
+          "der rote",
+          "den rot"
+        ],
+        "answer": "den roten",
+        "explanationAr": "Akkusativ مذكر: den roten."
+      }
+    ]
+  },
+  "b2-adjektiv-partizip": {
+    "id": "b2-adjektiv-partizip",
+    "titleDe": "Partizipialattribute & nominalisierte Adjektive",
+    "titleAr": "صفات ممدّدة بصيغ الفعل الماضي/المستمر وصفات محوَّلة إلى أسماء",
+    "level": "B2",
+    "summaryAr": "في مستوى B2 تُستخدَم صيغتا Partizip I (laufend) وPartizip II (gelaufen) كصفات طويلة قبل الاسم، كما تُحوَّل الصفات إلى أسماء بكتابة الحرف كبير (der Alte, das Gute). كلها تُصرَّف كنهايات الصفات العادية.",
+    "rules": [
+      {
+        "de": "das laufende Kind · der angekommene Zug",
+        "ar": "Partizip I وII كصفات قبل الاسم: نهاية الصفة تُضاف مباشرة"
+      },
+      {
+        "de": "die sich unterhaltenden Gäste · die von der Sonne beschienene Wiese",
+        "ar": "يمكن توسيع الصفة بجار ومجرور أو durch/von لوصف فاعل/مفعول"
+      },
+      {
+        "de": "der Alte · eine Alte · das Gute · das Wichtigste",
+        "ar": "صفات محوَّلة لأسماء: تُكتب كبيرة وتأخذ نهاية الصفة نفسها"
+      },
+      {
+        "de": "viele bekannte Schriftsteller · manche alte Häuser",
+        "ar": "بعد viele/wenige/manche/einige: النهاية كالجمع بعد die (-en)"
+      }
+    ],
+    "tables": [
+      {
+        "captionAr": "ملخص نهايات الصفات الممدَّدة في B2",
+        "headers": [
+          "النمط",
+          "مثال",
+          "النهاية"
+        ],
+        "rows": [
+          [
+            "Partizip I",
+            "das weinende Kind",
+            "-e/-en كالصفة العادية"
+          ],
+          [
+            "Partizip II",
+            "das gestern gelesene Buch",
+            "-e/-en كالصفة العادية"
+          ],
+          [
+            "Nominalisiert",
+            "der Bekannte / ein Bekannter",
+            "نهاية الصفة متبوعة بالكبير"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Die gestern angekommene Delegation besucht die Fabrik.",
+        "ar": "الوفد الذي وصل البارحة يزور المصنع."
+      },
+      {
+        "de": "Das Wichtigste zuerst: Ruhe bewahren.",
+        "ar": "الأهم أولاً: الحفاظ على الهدوء."
+      },
+      {
+        "de": "Viele junge Menschen ziehen in die Stadt.",
+        "ar": "كثير من الشباب ينتقل إلى المدينة."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "„der angekommen Zug“ ✗ → „der angekommene Zug“ ✓",
+        "ar": "Partizip II كصفة يأخذ نهاية الصفة (-e في Nominativ)."
+      },
+      {
+        "de": "„das wichtige“ ✗ → „das Wichtige“ ✓",
+        "ar": "صفات محوَّلة إلى أسماء تُكتب بحرف كبير."
+      }
+    ],
+    "resources": [],
+    "exercises": [
+      {
+        "id": "b2-adj-p1",
+        "type": "fill",
+        "promptDe": "Der gestern angekommen___ Zug steht auf Gleis 3.",
+        "answer": "e",
+        "explanationAr": "Nominativ مفرد مذكر بعد der → -e"
+      },
+      {
+        "id": "b2-adj-p2",
+        "type": "fill",
+        "promptDe": "Das Wichtig___ ist die Pünktlichkeit.",
+        "answer": "ste",
+        "explanationAr": "das + nominalisiert → -ste (كصفة بعد das)"
+      },
+      {
+        "id": "b2-adj-p3",
+        "type": "umformung",
+        "promptDe": "Bilden Sie einen Satz mit Partizip I: Der Mann sieht das Kind. Das Kind weint.",
+        "answer": "Der Mann sieht das weinende Kind.",
+        "hint": "Partizip I + Endung -e nach das",
+        "explanationAr": "Partizip I (weinend) كصفة قبل الاسم: نهايته -e بعد das.",
+        "quelleDe": "Das Kind weint. Der Mann sieht das Kind.",
+        "darfNicht": [
+          "das kind weint",
+          "kind weint"
+        ],
+        "points": 2,
+        "alternativen": [
+          "Der Mann sieht das weinende Kind",
+          "Der Mann erblickt das weinende Kind."
+        ]
+      },
+      {
+        "id": "b2-adj-p4",
+        "type": "fill",
+        "promptDe": "Viele alt___ Häuser werden renoviert.",
+        "answer": "e",
+        "explanationAr": "Nominativ جمع بعد viele → -e"
+      },
+      {
+        "id": "b2-adj-p5",
+        "type": "mc",
+        "promptDe": "___ wird heute besprochen.",
+        "options": [
+          "Das Wichtigste",
+          "Das Wichtig",
+          "Wichtigste"
+        ],
+        "answer": "Das Wichtigste",
+        "explanationAr": "الصفة المحوَّلة إلى اسم تُكتب كبيرة وتأخذ نهاية الصفة: das Wichtigste."
+      },
+      {
+        "id": "b2-adj-p6",
+        "type": "translate",
+        "promptDe": "ترجم: الكتاب الذي قُرِئ البارحة كان ممتعاً.",
+        "answer": "Das gestern gelesene Buch war interessant.",
+        "hint": "Partizip II كصفة مع نهايتها بعد das",
+        "explanationAr": "Partizip II (gelesen) كصفة قبل الاسم: نهايته -e بعد das."
+      }
+    ]
+  },
+  "a1-weil-dass": {
+    "id": "a1-weil-dass",
+    "titleDe": "weil · dass — Gründe nennen",
+    "titleAr": "لأن وأن — الجمل التابعة في المستوى A1",
+    "level": "A1",
+    "summaryAr": "مع weil (لأن، سبب) وdass (أنّ، خبر/اعتقاد) تذهب إلى الجملة التابعة فعلاً مُصرَّفاً في نهايتها: «Ich bleibe zu Hause, weil ich müde bin.» — لا تقول «weil ich bin müde»؛ هذا أشهر خطأ عند العرب. ويمكنك البدء بالجملة التابعة: «Weil es regnet, nehme ich den Regenschirm.» ثم تأتي الجملة الرئيسية بفعلها ثانياً. هنا نبقى في المضارع البسيط؛ التراكيب المركّبة (wenn/obwohl، فعلان) تأتي في A2.",
+    "rules": [
+      {
+        "de": "Ich bleibe zu Hause, weil ich müde bin.",
+        "ar": "weil تفتح جملة تابعة: الفعل المصرَّف يذهب إلى نهايتها — bin في آخر السطر."
+      },
+      {
+        "de": "Sie sagt, dass sie heute aus Tunesien anruft.",
+        "ar": "dass بعد أفعال القول والاعتقاد (sagen, wissen, glauben): الفعل المصرَّف أيضاً في النهاية — anruft في آخره."
+      },
+      {
+        "de": "Weil es regnet, nehme ich den Regenschirm.",
+        "ar": "ابدأ بالتابعة إن شئت: بعد الفاصلة تأتي الجملة الرئيسية بفعلها ثانياً ثم فاعلها (nehme ich) — الفعل المصرَّف يبقى في التابعة."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Ich lerne Deutsch, weil ich in Berlin wohne.",
+        "ar": "أتعلّم الألمانية لأنّي أسكن في برلين. — wohne في النهاية."
+      },
+      {
+        "de": "Er sagt, dass er morgen früh kommt.",
+        "ar": "يقول إنه سيأتي صباحاً. — kommt في النهاية."
+      },
+      {
+        "de": "Weil es spät ist, gehe ich nach Hause.",
+        "ar": "لأنّه متأخر، أعود إلى البيت. — ist في التابعة، والرئيسية: gehe ich (فعل ثم فاعل)."
+      },
+      {
+        "de": "Wir bleiben zu Hause, weil die Kinder krank sind.",
+        "ar": "نبقى في البيت لأنّ الأطفال مرضى. — sind في النهاية."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "„weil ich bin müde“ ✗ → „weil ich müde bin“ ✓",
+        "ar": "أشهر خطأ عند المتعلمين العرب: لا تُبقي ترتيبك العربي — المصرَّف في النهاية."
+      },
+      {
+        "de": "„Ich habe keine Zeit, weil ich Arbeit“ ✗ → „…, weil ich arbeite“ ✓",
+        "ar": "الجملة التابعة لا تكون بلا فعل: خذ الفعل من الجملة الأصلية واصرِّفه في النهاية (arbeite)."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "a1-weil-e1",
+        "type": "fill",
+        "promptDe": "Ich bleibe heute zu Hause, weil ich müde ___. (sein)",
+        "answer": [
+          "bin"
+        ],
+        "explanationAr": "بعد weil يذهب الفعل المصرَّف إلى النهاية: müde bin."
+      },
+      {
+        "id": "a1-weil-e2",
+        "type": "fill",
+        "promptDe": "Wir fahren nicht nach Berlin, weil wir kein Geld ___. (haben)",
+        "answer": [
+          "haben"
+        ],
+        "explanationAr": "جملة weil كاملة: الفعل haben في النهاية — لا تتركها بلا فعل."
+      },
+      {
+        "id": "a1-weil-e3",
+        "type": "mc",
+        "promptDe": "___ du krank bist, darfst du heute zuhause bleiben.",
+        "options": [
+          "Weil",
+          "Dass",
+          "Ob"
+        ],
+        "answer": "Weil",
+        "explanationAr": "weil يفتح سبباً: «لأنّك مريض…». dass/ob لا يفتحان جملة شرط في هذا التركيب."
+      },
+      {
+        "id": "a1-weil-e4",
+        "type": "order",
+        "promptDe": "Bilde einen Satz: (sie / sagt / dass / sie / aus Tunis / kommt)",
+        "answer": [
+          "Sie",
+          "sagt,",
+          "dass sie",
+          "aus Tunis",
+          "kommt"
+        ],
+        "explanationAr": "sagt, dass sie … — kommt (المصرَّف) في نهاية التابعة.",
+        "points": 2,
+        "promptAr": "رتّب الكلمات لتكوّن جملة صحيحة."
+      },
+      {
+        "id": "a1-weil-e5",
+        "type": "translate",
+        "promptDe": "ترجم: أبقى في البيت لأنّ الجوّ ممطراً.",
+        "answer": "Ich bleibe zu Hause, weil es regnet.",
+        "keywords": [
+          "weil",
+          "regnet"
+        ],
+        "explanationAr": "الترتيب الصحيح: …, weil es regnet — regnet في نهاية التابعة."
+      },
+      {
+        "id": "a1-weil-e6",
+        "type": "fill",
+        "promptDe": "Sie sagt, dass sie morgen früh ___. (kommen)",
+        "answer": [
+          "kommt"
+        ],
+        "explanationAr": "بعد dass: المصرَّف kommt في نهاية الجملة التابعة."
       }
     ]
   }

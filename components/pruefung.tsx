@@ -227,7 +227,7 @@ export function DialogOrdnung({ level, onFertig }: { level: Level; onFertig: (ok
             <button
               key={orig}
               className="card"
-              style={{ padding: "0.6rem 0.9rem", textAlign: "start", cursor: schon < 0 ? "pointer" : "default", opacity: schon < 0 ? 1 : 0.45, background: "white", border: "1px solid var(--color-line)" }}
+              style={{ padding: "0.6rem 0.9rem", textAlign: "start", cursor: schon < 0 ? "pointer" : "default", opacity: schon < 0 ? 1 : 0.45, background: "var(--color-card)", border: "1px solid var(--color-line)" }}
               disabled={schon >= 0}
               onClick={() => setWahl((w) => [...w, orig])}
             >

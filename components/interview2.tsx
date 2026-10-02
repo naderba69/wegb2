@@ -183,14 +183,14 @@ export function InterviewArena({ progress }: { progress: Progress }) {
           <div style={{ background: "var(--color-paper2)", borderRadius: 10, padding: "0.5rem 0.75rem", fontSize: "0.74rem", display: "flex", gap: 6, flexWrap: "wrap" }} dir="rtl">
             <b>🧰 Redemittel:</b>
             {a.redemittel.map((r2) => (
-              <span key={r2} className="chip de" style={{ background: "white" }}>{r2}</span>
+              <span key={r2} className="chip de" style={{ background: "var(--color-card)" }}>{r2}</span>
             ))}
           </div>
           <div style={{ border: "1px solid var(--color-line)", borderRadius: 12, padding: "0.7rem 0.9rem", background: "var(--color-paper)" }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
               <span style={{ fontWeight: 900, fontSize: "0.72rem", color: "var(--color-b2)" }}>سؤال {qi + 1}</span>
               <div className="de" style={{ flex: 1, fontWeight: 800, fontSize: "0.98rem" }}>{qRot.f}</div>
-              <button title="اسمع السؤال من الممتحِن" onClick={() => speakDe(qRot.f)} style={{ border: "1px solid var(--color-line)", background: "white", borderRadius: 8, padding: "0.25rem 0.45rem", cursor: "pointer" }}>🔊</button>
+              <button title="اسمع السؤال من الممتحِن" onClick={() => speakDe(qRot.f)} style={{ border: "1px solid var(--color-line)", background: "var(--color-card)", borderRadius: 8, padding: "0.25rem 0.45rem", cursor: "pointer" }}>🔊</button>
             </div>
             <div style={{ fontSize: "0.74rem", color: "var(--color-ink2)", margin: "2px 0 8px" }} dir="rtl">{qRot.ar} — بصوتك الآن، ثم اكتبه كما قلته.</div>
             <textarea className="field" rows={4} style={{ width: "100%", direction: "ltr", resize: "vertical" }} value={text} onChange={(e) => setText(e.target.value)} placeholder="Antworte frei — sprich laut, dann tippe…" />

@@ -70,12 +70,18 @@ export function saveProgress(p: Progress) {
   }
 }
 
+export const MAX_STREAK = 7; // K-StreakCap: لا سلاسل عدوانية — السقف 7 مع حماية «يوم سيّئ»
+
 export function touchStreak(p: Progress): Progress {
   const today = new Date().toISOString().slice(0, 10);
   const last = p.streak.last;
   if (last === today) return p;
   const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
-  const count = last === yesterday ? p.streak.count + 1 : 1;
+  // يوم سيّئ أو غياب معلَن: تُجمَّد السلسلة عند قيمتها الحالية (≤7) بلا كسر
+  if (p.badDay === today || p.badDay === yesterday) {
+    return { ...p, streak: { last: today, count: Math.min(p.streak.count, MAX_STREAK) } };
+  }
+  const count = last === yesterday ? Math.min(p.streak.count + 1, MAX_STREAK) : 1;
   return { ...p, streak: { last: today, count } };
 }
 

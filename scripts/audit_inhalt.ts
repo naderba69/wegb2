@@ -48,7 +48,7 @@ for (const t of texts) {
   if (!t.questions?.length) add("text:keineFragen", t.id);
   for (const q of t.questions ?? []) pruefeExercise(q, t.id);
   const wc = t.de.split(/\s+/).length;
-  const soll = { A1: [40, 140], A2: [70, 200], B1: [120, 320], B2: [160, 450] }[t.level]!;
+  const soll = ({ A0: [20, 80], A1: [40, 140], A2: [70, 200], B1: [120, 320], B2: [160, 450] } as Record<string, [number, number]>)[t.level]!;
   if (wc < soll[0] || wc > soll[1]) add("text:länge", `${t.id} ${t.level} ${wc} Wörter (soll ${soll[0]}–${soll[1]})`);
 }
 for (const d of dialogues) {

@@ -1,5 +1,6 @@
 // محرّك المحاكاة الامتحانية — Probeklausur بتوقيت رسمي وتقييم Goethe
 import type { Exercise, Level } from "./types";
+import { TOTAL_DAYS } from "./types";
 import { texts, dialogues, writingTasks, grammarMap, sentences, muendlich, leseText } from "./content";
 import { levelOf, pickN, rng, clozeFromSatz } from "./plan";
 
@@ -30,7 +31,7 @@ export interface Klausur {
 
 /** بناء نموذج محاكاة حتمي من مخزون المرحلة (بذرة اليوم) */
 export function buildKlausur(day: number): Klausur {
-  const d0 = Math.min(Math.max(day, 1), 270);
+  const d0 = Math.min(Math.max(day, 1), TOTAL_DAYS);
   const lvl = levelOf(d0);
   const rand = rng(d0 * 313 + 29);
 
@@ -163,7 +164,7 @@ export const SKILL_LABELS: Record<SkillKey, { de: string; ar: string }> = {
 };
 
 export function buildSkillKlausur(day: number, skill: SkillKey): Klausur {
-  const d0 = Math.min(Math.max(day, 1), 270);
+  const d0 = Math.min(Math.max(day, 1), TOTAL_DAYS);
   const lvl = levelOf(d0);
   const rand = rng(d0 * 911 + 7);
 

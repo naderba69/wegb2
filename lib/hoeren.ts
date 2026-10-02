@@ -14,6 +14,7 @@ import type { Exercise } from "./types";
 import { levelOf, rng, pickN } from "./plan";
 import { normalize } from "./grader";
 import type { Level } from "./types";
+import { TOTAL_DAYS } from "./types";
 
 export type Modus = "training" | "pruefung";
 export type Tempo = "lern" | "pruefung";
@@ -53,8 +54,14 @@ function zuItem(q: Exercise): HoerItem {
 
 /** جولة اليوم حتمية: نفس (tag, level) ⇒ نفس النص ونفس ترتيب الأسئلة */
 export function bauHoerRunde(tag: number, level?: Level): HoerRunde {
-  const lv = level ?? levelOf(Math.min(tag, 270));
-  const pool = texts.filter((t) => t.level === lv);
+  const lv = level ?? levelOf(Math.min(tag, TOTAL_DAYS));
+  let pool = texts.filter((t) => t.level === lv);
+  // Fallback: falls eine Stufe noch keine Texte hat (z.B. frische A0-Pool), nächste Stufe probieren
+  const FALLBACK_ORDER: Level[] = ["A0","A1","A2","B1","B2"];
+  for (const fl of FALLBACK_ORDER) {
+    if (pool.length > 0) break;
+    pool = texts.filter((t) => t.level === fl);
+  }
   const r = rng(tag * 41 + 17);
   const picked = pickN(pool, 1, r)[0] ?? pool[0];
   const items = picked.questions.map(zuItem);

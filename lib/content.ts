@@ -63,9 +63,10 @@ export const alleVokabeln: VocabCard[] = Object.values(
 const langfassungen: Record<string, Langfassung> = { ...(langB2a as Record<string, Langfassung>), ...(langB2b as Record<string, Langfassung>), ...(langB1a as Record<string, Langfassung>), ...(langB1b as Record<string, Langfassung>), ...(langA2a as Record<string, Langfassung>), ...(langA2b as Record<string, Langfassung>), ...(langA1a as Record<string, Langfassung>), ...(langA1b as Record<string, Langfassung>) };
 /** النصوص؛ مَن له نسخة طويلة يحملها في `lang` — وقراءة B2 تعرضها (المهمّة lesen) بينما يبقى `de` نصَّ الصوت */
 export const texts = (textsRaw as unknown as Lesetext[]).map((t) => (langfassungen[t.id] ? { ...t, lang: langfassungen[t.id] } : t));
-/** نصُّ القراءةِ الفعليّ: الطويلُ إن وُجد */
+/** نصُّ القراءةِ الفعليّ: الطويلُ إن وُجد وما لم يُطلَب القصير (تدرّج نسبة النصوص الأصلية 30→80٪) */
 export function leseText(t: Lesetext): { de: string; ar: string; questions: Exercise[]; lang: boolean } {
-  return t.lang ? { ...t.lang, lang: true } : { de: t.de, ar: t.ar, questions: t.questions, lang: false };
+  if (t.lang && !t.__weg_useShort) return { ...t.lang, lang: true };
+  return { de: t.de, ar: t.ar, questions: t.questions, lang: false };
 }
 export const dialogues = dialoguesRaw as unknown as Hoerdialog[];
 export const writingTasks = writingRaw as unknown as Schreibaufgabe[];

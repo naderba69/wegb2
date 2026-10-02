@@ -13,10 +13,16 @@ import {
 const SPALTEN: Spalte[] = ["grammatik", "syntax", "wortwahl"];
 const FARBE: Record<Spalte, string> = { grammatik: "#be123c", syntax: "#b45309", wortwahl: "#1d4ed8" };
 
-export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr }: { minWoerter?: number; aufgabeAr?: string }) {
+export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "B1" }: { minWoerter?: number; aufgabeAr?: string; level?: "A0"|"A1"|"A2"|"B1"|"B2" }) {
   const [text, setText] = useState("");
   const [geprueft, setGeprueft] = useState(false);
-  const befunde = useMemo(() => (geprueft ? [...pruefeText(text), ...pruefeBrief(text, minWoerter)] : []), [geprueft, text, minWoerter]);
+  const befunde = useMemo(() => {
+    if (!geprueft) return [];
+    const alle = [...pruefeText(text), ...pruefeBrief(text, minWoerter)];
+    // K-StilLayer: طبقة الأسلوب لا تُفعَّل قبل B1 (لا إحباط مبكر على الأناقة)
+    if (level === "A0" || level === "A1" || level === "A2") return alle.filter((b) => b.schwere !== "stil");
+    return alle;
+  }, [geprueft, text, minWoerter, level]);
   const note = bewerteSchreiben(befunde);
   const woerter = text.trim().split(/\s+/).filter(Boolean).length;
 
@@ -37,6 +43,9 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr }: { minWo
   return (
     <section className="card" data-test="schreibkorrektur" style={{ padding: "1rem 1.2rem", display: "grid", gap: "0.6rem" }}>
       <h3 style={{ margin: 0 }}>✍️ التصحيح ثلاثيّ الأعمدة</h3>
+      <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--color-ink2)", background: "var(--color-warn-soft, #fff7ed)", padding: "0.45rem 0.6rem", borderRadius: "0.5rem", border: "1px dashed var(--color-warn, #f59e0b)" }}>
+        ⚠️ هذا كاشف أنماط يرى الشكل ولا يرى المعنى — يلتقط الأخطاءَ التركيبية والصرفية والهجائية، لكنّه لا يفهم قصدك ولا يقيّم جودة الأفكار.
+      </p>
       {aufgabeAr && <p style={{ margin: 0, fontSize: "0.88rem" }}>{aufgabeAr}</p>}
       <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--color-ink2)" }}>
         اكتب نصّك ثم اضغط «صحِّح». <strong>هذا كاشفُ أنماطٍ يرى الشكل ولا يرى المعنى</strong> — يلتقط ما بُرمِج له فقط.

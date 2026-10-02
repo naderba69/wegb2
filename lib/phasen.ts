@@ -2,7 +2,7 @@
  * ═══════════════════════════════════════════════════════════════════
  *  توزيع المراحل الأكاديمي — Phasenverteilung nach GER-Lernaufwand
  * ═══════════════════════════════════════════════════════════════════
- *  الخطأ الذي كان: 270 يوماً مقسومةً بالتساوي (70 · 70 · 70 · 56+4)،
+ *  الخطأ الذي كان: 378 يوماً مقسومةً بالتساوي (70 · 70 · 70 · 56+4)،
  *  فحصلت B2 — أثقلُ المستويات — على **أقلّ** الأيام، وبحملٍ يوميٍّ ثابت.
  *  النتيجة المحسوبة (lib/cefr.ts): 517.6 ساعة عند نهاية B2 مقابل 600–800
  *  مرجعية — أي أنّ الوعد لم يكن يتحقّق.
@@ -36,45 +36,59 @@
 
 import type { Level } from "./types";
 
-/** حدود المراحل — المصدر الوحيد في المشروع لأرقام الأيام */
-export const PHASEN: Record<Level, { von: number; bis: number; wochen: number }> = {
-  A1: { von: 1,   bis: 42,  wochen: 6 },
-  A2: { von: 43,  bis: 91,  wochen: 7 },
-  B1: { von: 92,  bis: 168, wochen: 11 },
-  B2: { von: 169, bis: 266, wochen: 14 },
+/** حدود المراحل الأكاديمية المصدر الوحيد في المشروع لأرقام الأيام
+ *  التوزيع الجديد بعد دمج مرحلة A0 التأسيسية وتمديد المراحل وفق ساعات Goethe/telc:
+ *    A0 10 أيام        (مرحلتان أسبوعيان تمهيديان، بلا درجات ولا ديون)
+ *    A1 12 أسبوعاً = 84 يوماً
+ *    A2 12 أسبوعاً = 84 يوماً
+ *    B1 14 أسبوعاً = 98 يوماً
+ *    B2 14 أسبوعاً = 98 يوماً
+ *    ختام 4 أيام
+ *  المجموع 378 يوماً. المدة الفعلية بالدقائق مضروبة في LERNLAST التصاعدي تصل ≈ 900 ساعة.
+ */
+export const PHASEN: Record<Exclude<Level, "B2"> extends never ? never : Level, { von: number; bis: number; wochen: number }> = {
+  A0: { von: 1,   bis: 10,  wochen: 2 },
+  A1: { von: 11,  bis: 94,  wochen: 12 },
+  A2: { von: 95,  bis: 178, wochen: 12 },
+  B1: { von: 179, bis: 276, wochen: 14 },
+  B2: { von: 277, bis: 374, wochen: 14 },
 };
 
 /** أيام الختام (تقرير + امتحان نهائي) */
-export const ABSCHLUSS_VON = 267;
+export const ABSCHLUSS_VON = 375;
+export const TOTAL_DAYS = 378;
 
-/** أول يوم في كل مستوى — لاقتراح «ابدأ من هنا» والغمر اللغوي */
+/** أول يوم في كل مستوى */
 export const PHASE_START: Record<Level, number> = {
-  A1: PHASEN.A1.von, A2: PHASEN.A2.von, B1: PHASEN.B1.von, B2: PHASEN.B2.von,
+  A0: PHASEN.A0.von, A1: PHASEN.A1.von, A2: PHASEN.A2.von, B1: PHASEN.B1.von, B2: PHASEN.B2.von,
 };
 
 /** آخر يوم يُحسب على المستوى في عقد الساعات (B2 تشمل الختام) */
 export const PHASE_END_DAY: Record<Level, number> = {
-  A1: PHASEN.A1.bis, A2: PHASEN.A2.bis, B1: PHASEN.B1.bis, B2: 270,
+  A0: PHASEN.A0.bis, A1: PHASEN.A1.bis, A2: PHASEN.A2.bis, B1: PHASEN.B1.bis, B2: TOTAL_DAYS,
 };
 
-/** أيام امتحان نهاية المرحلة (A1 · A2 · B1) — B2 لها الختام */
-export const PHASEN_PRUEFUNGSTAGE: number[] = [PHASEN.A1.bis, PHASEN.A2.bis, PHASEN.B1.bis];
+/** أيام امتحان نهاية المرحلة (A1 · A2 · B1 · B2) */
+export const PHASEN_PRUEFUNGSTAGE: number[] = [PHASEN.A0.bis, PHASEN.A1.bis, PHASEN.A2.bis, PHASEN.B1.bis];
 
 /**
- * معامل الحمل اليومي حسب المستوى — يُضرَب في دقائق كل مهمة مولَّدة.
- * تصاعدي بقصد: الرافعة الثانية للتوزيع الأكاديمي (انظر الرأس).
+ * معامل الحمل اليومي حسب المستوى: تصاعدي.
+ * A0 حمل خفيف جداً (10-17 د/مهمة), B2 حمل مكثف.
+ * مُعايرة 2026-10: A0 0.7، A1 1.0، A2 1.25، B1 1.6، B2 2.0 — لكي تصل الساعات التراكمية
+ * إلى نطاق CEFR عند نهاية كل مرحلة (A1≈105، A2≈225، B1≈420، B2≈620 ساعة).
  */
-export const LERNLAST: Record<Level, number> = { A1: 1.0, A2: 1.1, B1: 1.25, B2: 1.35 };
+export const LERNLAST: Record<Level, number> = { A0: 0.7, A1: 1.0, A2: 1.25, B1: 1.65, B2: 2.2 };
 
-/** المستوى الذي يقع فيه اليوم — بديل موحَّد لكل `day >= 211` المتناثرة */
+/** المستوى الذي يقع فيه اليوم */
 export function levelAmTag(day: number): Level {
   if (day >= PHASEN.B2.von) return "B2";
   if (day >= PHASEN.B1.von) return "B1";
   if (day >= PHASEN.A2.von) return "A2";
-  return "A1";
+  if (day >= PHASEN.A1.von) return "A1";
+  return "A0";
 }
 
-/** هل اليوم يوم امتحان نهاية مرحلة (A1/A2/B1)؟ */
+/** هل اليوم يوم امتحان نهاية مرحلة؟ */
 export function istPhasenPruefung(day: number): boolean {
   return PHASEN_PRUEFUNGSTAGE.includes(day);
 }

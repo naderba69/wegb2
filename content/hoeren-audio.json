@@ -1,566 +1,594 @@
 {
- "generated": "2026-09-26",
- "count": 80,
- "einsaetze": [
-  {
-   "id": "t-a1-01",
-   "file": "/audio/hoeren/t-a1-01.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 162186
-  },
-  {
-   "id": "t-a1-02",
-   "file": "/audio/hoeren/t-a1-02.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 140661
-  },
-  {
-   "id": "t-a1-03",
-   "file": "/audio/hoeren/t-a1-03.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 126659
-  },
-  {
-   "id": "t-a1-04",
-   "file": "/audio/hoeren/t-a1-04.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 95312
-  },
-  {
-   "id": "t-a1-05",
-   "file": "/audio/hoeren/t-a1-05.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 141079
-  },
-  {
-   "id": "t-a1-06",
-   "file": "/audio/hoeren/t-a1-06.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 118927
-  },
-  {
-   "id": "t-a1-07",
-   "file": "/audio/hoeren/t-a1-07.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 138571
-  },
-  {
-   "id": "t-a1-08",
-   "file": "/audio/hoeren/t-a1-08.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 122271
-  },
-  {
-   "id": "t-a1-09",
-   "file": "/audio/hoeren/t-a1-09.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 130421
-  },
-  {
-   "id": "t-a1-10",
-   "file": "/audio/hoeren/t-a1-10.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 151737
-  },
-  {
-   "id": "t-a1-11",
-   "file": "/audio/hoeren/t-a1-11.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 129376
-  },
-  {
-   "id": "t-a1-12",
-   "file": "/audio/hoeren/t-a1-12.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 133555
-  },
-  {
-   "id": "t-a1-13",
-   "file": "/audio/hoeren/t-a1-13.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 134600
-  },
-  {
-   "id": "t-a1-14",
-   "file": "/audio/hoeren/t-a1-14.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 156543
-  },
-  {
-   "id": "t-a1-15",
-   "file": "/audio/hoeren/t-a1-15.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 139407
-  },
-  {
-   "id": "t-a1-16",
-   "file": "/audio/hoeren/t-a1-16.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 147975
-  },
-  {
-   "id": "t-a1-17",
-   "file": "/audio/hoeren/t-a1-17.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 141706
-  },
-  {
-   "id": "t-a1-18",
-   "file": "/audio/hoeren/t-a1-18.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 143795
-  },
-  {
-   "id": "t-a1-19",
-   "file": "/audio/hoeren/t-a1-19.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 165947
-  },
-  {
-   "id": "t-a1-20",
-   "file": "/audio/hoeren/t-a1-20.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A1",
-   "bytes": 152573
-  },
-  {
-   "id": "t-a2-01",
-   "file": "/audio/hoeren/t-a2-01.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 130003
-  },
-  {
-   "id": "t-a2-02",
-   "file": "/audio/hoeren/t-a2-02.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 124151
-  },
-  {
-   "id": "t-a2-03",
-   "file": "/audio/hoeren/t-a2-03.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 122062
-  },
-  {
-   "id": "t-a2-04",
-   "file": "/audio/hoeren/t-a2-04.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 123315
-  },
-  {
-   "id": "t-a2-05",
-   "file": "/audio/hoeren/t-a2-05.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 114538
-  },
-  {
-   "id": "t-a2-06",
-   "file": "/audio/hoeren/t-a2-06.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 145467
-  },
-  {
-   "id": "t-a2-07",
-   "file": "/audio/hoeren/t-a2-07.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 138362
-  },
-  {
-   "id": "t-a2-08",
-   "file": "/audio/hoeren/t-a2-08.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 141497
-  },
-  {
-   "id": "t-a2-09",
-   "file": "/audio/hoeren/t-a2-09.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 134600
-  },
-  {
-   "id": "t-a2-10",
-   "file": "/audio/hoeren/t-a2-10.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 121644
-  },
-  {
-   "id": "t-a2-11",
-   "file": "/audio/hoeren/t-a2-11.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 134600
-  },
-  {
-   "id": "t-a2-12",
-   "file": "/audio/hoeren/t-a2-12.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 143795
-  },
-  {
-   "id": "t-a2-13",
-   "file": "/audio/hoeren/t-a2-13.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 142542
-  },
-  {
-   "id": "t-a2-14",
-   "file": "/audio/hoeren/t-a2-14.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 138362
-  },
-  {
-   "id": "t-a2-15",
-   "file": "/audio/hoeren/t-a2-15.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 153618
-  },
-  {
-   "id": "t-a2-16",
-   "file": "/audio/hoeren/t-a2-16.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 146094
-  },
-  {
-   "id": "t-a2-17",
-   "file": "/audio/hoeren/t-a2-17.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 166783
-  },
-  {
-   "id": "t-a2-18",
-   "file": "/audio/hoeren/t-a2-18.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 152364
-  },
-  {
-   "id": "t-a2-19",
-   "file": "/audio/hoeren/t-a2-19.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 196667
-  },
-  {
-   "id": "t-a2-20",
-   "file": "/audio/hoeren/t-a2-20.mp3",
-   "voice": "voice-01 (de)",
-   "level": "A2",
-   "bytes": 178904
-  },
-  {
-   "id": "t-b1-01",
-   "file": "/audio/hoeren/t-b1-01.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 164693
-  },
-  {
-   "id": "t-b1-02",
-   "file": "/audio/hoeren/t-b1-02.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 146721
-  },
-  {
-   "id": "t-b1-03",
-   "file": "/audio/hoeren/t-b1-03.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 156334
-  },
-  {
-   "id": "t-b1-04",
-   "file": "/audio/hoeren/t-b1-04.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 159469
-  },
-  {
-   "id": "t-b1-05",
-   "file": "/audio/hoeren/t-b1-05.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 147139
-  },
-  {
-   "id": "t-b1-06",
-   "file": "/audio/hoeren/t-b1-06.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 169082
-  },
-  {
-   "id": "t-b1-07",
-   "file": "/audio/hoeren/t-b1-07.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 159469
-  },
-  {
-   "id": "t-b1-08",
-   "file": "/audio/hoeren/t-b1-08.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 141288
-  },
-  {
-   "id": "t-b1-09",
-   "file": "/audio/hoeren/t-b1-09.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 114120
-  },
-  {
-   "id": "t-b1-10",
-   "file": "/audio/hoeren/t-b1-10.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 161768
-  },
-  {
-   "id": "t-b1-11",
-   "file": "/audio/hoeren/t-b1-11.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 155080
-  },
-  {
-   "id": "t-b1-12",
-   "file": "/audio/hoeren/t-b1-12.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 179949
-  },
-  {
-   "id": "t-b1-13",
-   "file": "/audio/hoeren/t-b1-13.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 186427
-  },
-  {
-   "id": "t-b1-14",
-   "file": "/audio/hoeren/t-b1-14.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 184755
-  },
-  {
-   "id": "t-b1-15",
-   "file": "/audio/hoeren/t-b1-15.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 177859
-  },
-  {
-   "id": "t-b1-16",
-   "file": "/audio/hoeren/t-b1-16.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 203773
-  },
-  {
-   "id": "t-b1-17",
-   "file": "/audio/hoeren/t-b1-17.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 181621
-  },
-  {
-   "id": "t-b1-18",
-   "file": "/audio/hoeren/t-b1-18.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 198130
-  },
-  {
-   "id": "t-b1-19",
-   "file": "/audio/hoeren/t-b1-19.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 211923
-  },
-  {
-   "id": "t-b1-20",
-   "file": "/audio/hoeren/t-b1-20.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B1",
-   "bytes": 182039
-  },
-  {
-   "id": "t-b2-01",
-   "file": "/audio/hoeren/t-b2-01.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 208997
-  },
-  {
-   "id": "t-b2-02",
-   "file": "/audio/hoeren/t-b2-02.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 169082
-  },
-  {
-   "id": "t-b2-03",
-   "file": "/audio/hoeren/t-b2-03.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 202101
-  },
-  {
-   "id": "t-b2-04",
-   "file": "/audio/hoeren/t-b2-04.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 189144
-  },
-  {
-   "id": "t-b2-05",
-   "file": "/audio/hoeren/t-b2-05.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 182666
-  },
-  {
-   "id": "t-b2-06",
-   "file": "/audio/hoeren/t-b2-06.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 217565
-  },
-  {
-   "id": "t-b2-07",
-   "file": "/audio/hoeren/t-b2-07.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 165738
-  },
-  {
-   "id": "t-b2-08",
-   "file": "/audio/hoeren/t-b2-08.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 130003
-  },
-  {
-   "id": "t-b2-09",
-   "file": "/audio/hoeren/t-b2-09.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 145467
-  },
-  {
-   "id": "t-b2-10",
-   "file": "/audio/hoeren/t-b2-10.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 227387
-  },
-  {
-   "id": "t-b2-11",
-   "file": "/audio/hoeren/t-b2-11.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 218401
-  },
-  {
-   "id": "t-b2-12",
-   "file": "/audio/hoeren/t-b2-12.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 238881
-  },
-  {
-   "id": "t-b2-13",
-   "file": "/audio/hoeren/t-b2-13.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 226760
-  },
-  {
-   "id": "t-b2-14",
-   "file": "/audio/hoeren/t-b2-14.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 230731
-  },
-  {
-   "id": "t-b2-15",
-   "file": "/audio/hoeren/t-b2-15.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 231776
-  },
-  {
-   "id": "t-b2-16",
-   "file": "/audio/hoeren/t-b2-16.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 253719
-  },
-  {
-   "id": "t-b2-17",
-   "file": "/audio/hoeren/t-b2-17.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 214431
-  },
-  {
-   "id": "t-b2-18",
-   "file": "/audio/hoeren/t-b2-18.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 225924
-  },
-  {
-   "id": "t-b2-19",
-   "file": "/audio/hoeren/t-b2-19.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 238881
-  },
-  {
-   "id": "t-b2-20",
-   "file": "/audio/hoeren/t-b2-20.mp3",
-   "voice": "voice-01 (de)",
-   "level": "B2",
-   "bytes": 222163
-  }
- ]
+  "generated": "2026-10-02",
+  "count": 84,
+  "einsaetze": [
+    {
+      "id": "t-a1-01",
+      "file": "/audio/hoeren/t-a1-01.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 162186
+    },
+    {
+      "id": "t-a1-02",
+      "file": "/audio/hoeren/t-a1-02.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 140661
+    },
+    {
+      "id": "t-a1-03",
+      "file": "/audio/hoeren/t-a1-03.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 126659
+    },
+    {
+      "id": "t-a1-04",
+      "file": "/audio/hoeren/t-a1-04.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 95312
+    },
+    {
+      "id": "t-a1-05",
+      "file": "/audio/hoeren/t-a1-05.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 141079
+    },
+    {
+      "id": "t-a1-06",
+      "file": "/audio/hoeren/t-a1-06.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 118927
+    },
+    {
+      "id": "t-a1-07",
+      "file": "/audio/hoeren/t-a1-07.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 138571
+    },
+    {
+      "id": "t-a1-08",
+      "file": "/audio/hoeren/t-a1-08.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 122271
+    },
+    {
+      "id": "t-a1-09",
+      "file": "/audio/hoeren/t-a1-09.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 130421
+    },
+    {
+      "id": "t-a1-10",
+      "file": "/audio/hoeren/t-a1-10.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 151737
+    },
+    {
+      "id": "t-a1-11",
+      "file": "/audio/hoeren/t-a1-11.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 129376
+    },
+    {
+      "id": "t-a1-12",
+      "file": "/audio/hoeren/t-a1-12.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 133555
+    },
+    {
+      "id": "t-a1-13",
+      "file": "/audio/hoeren/t-a1-13.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 134600
+    },
+    {
+      "id": "t-a1-14",
+      "file": "/audio/hoeren/t-a1-14.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 156543
+    },
+    {
+      "id": "t-a1-15",
+      "file": "/audio/hoeren/t-a1-15.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 139407
+    },
+    {
+      "id": "t-a1-16",
+      "file": "/audio/hoeren/t-a1-16.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 147975
+    },
+    {
+      "id": "t-a1-17",
+      "file": "/audio/hoeren/t-a1-17.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 141706
+    },
+    {
+      "id": "t-a1-18",
+      "file": "/audio/hoeren/t-a1-18.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 143795
+    },
+    {
+      "id": "t-a1-19",
+      "file": "/audio/hoeren/t-a1-19.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 165947
+    },
+    {
+      "id": "t-a1-20",
+      "file": "/audio/hoeren/t-a1-20.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A1",
+      "bytes": 152573
+    },
+    {
+      "id": "t-a2-01",
+      "file": "/audio/hoeren/t-a2-01.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 130003
+    },
+    {
+      "id": "t-a2-02",
+      "file": "/audio/hoeren/t-a2-02.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 124151
+    },
+    {
+      "id": "t-a2-03",
+      "file": "/audio/hoeren/t-a2-03.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 122062
+    },
+    {
+      "id": "t-a2-04",
+      "file": "/audio/hoeren/t-a2-04.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 123315
+    },
+    {
+      "id": "t-a2-05",
+      "file": "/audio/hoeren/t-a2-05.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 114538
+    },
+    {
+      "id": "t-a2-06",
+      "file": "/audio/hoeren/t-a2-06.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 145467
+    },
+    {
+      "id": "t-a2-07",
+      "file": "/audio/hoeren/t-a2-07.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 138362
+    },
+    {
+      "id": "t-a2-08",
+      "file": "/audio/hoeren/t-a2-08.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 141497
+    },
+    {
+      "id": "t-a2-09",
+      "file": "/audio/hoeren/t-a2-09.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 134600
+    },
+    {
+      "id": "t-a2-10",
+      "file": "/audio/hoeren/t-a2-10.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 121644
+    },
+    {
+      "id": "t-a2-11",
+      "file": "/audio/hoeren/t-a2-11.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 134600
+    },
+    {
+      "id": "t-a2-12",
+      "file": "/audio/hoeren/t-a2-12.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 143795
+    },
+    {
+      "id": "t-a2-13",
+      "file": "/audio/hoeren/t-a2-13.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 142542
+    },
+    {
+      "id": "t-a2-14",
+      "file": "/audio/hoeren/t-a2-14.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 138362
+    },
+    {
+      "id": "t-a2-15",
+      "file": "/audio/hoeren/t-a2-15.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 153618
+    },
+    {
+      "id": "t-a2-16",
+      "file": "/audio/hoeren/t-a2-16.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 146094
+    },
+    {
+      "id": "t-a2-17",
+      "file": "/audio/hoeren/t-a2-17.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 166783
+    },
+    {
+      "id": "t-a2-18",
+      "file": "/audio/hoeren/t-a2-18.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 152364
+    },
+    {
+      "id": "t-a2-19",
+      "file": "/audio/hoeren/t-a2-19.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 196667
+    },
+    {
+      "id": "t-a2-20",
+      "file": "/audio/hoeren/t-a2-20.mp3",
+      "voice": "voice-01 (de)",
+      "level": "A2",
+      "bytes": 178904
+    },
+    {
+      "id": "t-b1-01",
+      "file": "/audio/hoeren/t-b1-01.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 164693
+    },
+    {
+      "id": "t-b1-02",
+      "file": "/audio/hoeren/t-b1-02.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 146721
+    },
+    {
+      "id": "t-b1-03",
+      "file": "/audio/hoeren/t-b1-03.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 156334
+    },
+    {
+      "id": "t-b1-04",
+      "file": "/audio/hoeren/t-b1-04.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 159469
+    },
+    {
+      "id": "t-b1-05",
+      "file": "/audio/hoeren/t-b1-05.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 147139
+    },
+    {
+      "id": "t-b1-06",
+      "file": "/audio/hoeren/t-b1-06.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 169082
+    },
+    {
+      "id": "t-b1-07",
+      "file": "/audio/hoeren/t-b1-07.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 159469
+    },
+    {
+      "id": "t-b1-08",
+      "file": "/audio/hoeren/t-b1-08.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 141288
+    },
+    {
+      "id": "t-b1-09",
+      "file": "/audio/hoeren/t-b1-09.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 114120
+    },
+    {
+      "id": "t-b1-10",
+      "file": "/audio/hoeren/t-b1-10.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 161768
+    },
+    {
+      "id": "t-b1-11",
+      "file": "/audio/hoeren/t-b1-11.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 155080
+    },
+    {
+      "id": "t-b1-12",
+      "file": "/audio/hoeren/t-b1-12.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 179949
+    },
+    {
+      "id": "t-b1-13",
+      "file": "/audio/hoeren/t-b1-13.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 186427
+    },
+    {
+      "id": "t-b1-14",
+      "file": "/audio/hoeren/t-b1-14.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 184755
+    },
+    {
+      "id": "t-b1-15",
+      "file": "/audio/hoeren/t-b1-15.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 177859
+    },
+    {
+      "id": "t-b1-16",
+      "file": "/audio/hoeren/t-b1-16.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 203773
+    },
+    {
+      "id": "t-b1-17",
+      "file": "/audio/hoeren/t-b1-17.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 181621
+    },
+    {
+      "id": "t-b1-18",
+      "file": "/audio/hoeren/t-b1-18.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 198130
+    },
+    {
+      "id": "t-b1-19",
+      "file": "/audio/hoeren/t-b1-19.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 211923
+    },
+    {
+      "id": "t-b1-20",
+      "file": "/audio/hoeren/t-b1-20.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B1",
+      "bytes": 182039
+    },
+    {
+      "id": "t-b2-01",
+      "file": "/audio/hoeren/t-b2-01.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 208997
+    },
+    {
+      "id": "t-b2-02",
+      "file": "/audio/hoeren/t-b2-02.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 169082
+    },
+    {
+      "id": "t-b2-03",
+      "file": "/audio/hoeren/t-b2-03.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 202101
+    },
+    {
+      "id": "t-b2-04",
+      "file": "/audio/hoeren/t-b2-04.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 189144
+    },
+    {
+      "id": "t-b2-05",
+      "file": "/audio/hoeren/t-b2-05.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 182666
+    },
+    {
+      "id": "t-b2-06",
+      "file": "/audio/hoeren/t-b2-06.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 217565
+    },
+    {
+      "id": "t-b2-07",
+      "file": "/audio/hoeren/t-b2-07.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 165738
+    },
+    {
+      "id": "t-b2-08",
+      "file": "/audio/hoeren/t-b2-08.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 130003
+    },
+    {
+      "id": "t-b2-09",
+      "file": "/audio/hoeren/t-b2-09.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 145467
+    },
+    {
+      "id": "t-b2-10",
+      "file": "/audio/hoeren/t-b2-10.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 227387
+    },
+    {
+      "id": "t-b2-11",
+      "file": "/audio/hoeren/t-b2-11.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 218401
+    },
+    {
+      "id": "t-b2-12",
+      "file": "/audio/hoeren/t-b2-12.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 238881
+    },
+    {
+      "id": "t-b2-13",
+      "file": "/audio/hoeren/t-b2-13.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 226760
+    },
+    {
+      "id": "t-b2-14",
+      "file": "/audio/hoeren/t-b2-14.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 230731
+    },
+    {
+      "id": "t-b2-15",
+      "file": "/audio/hoeren/t-b2-15.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 231776
+    },
+    {
+      "id": "t-b2-16",
+      "file": "/audio/hoeren/t-b2-16.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 253719
+    },
+    {
+      "id": "t-b2-17",
+      "file": "/audio/hoeren/t-b2-17.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 214431
+    },
+    {
+      "id": "t-b2-18",
+      "file": "/audio/hoeren/t-b2-18.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 225924
+    },
+    {
+      "id": "t-b2-19",
+      "file": "/audio/hoeren/t-b2-19.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 238881
+    },
+    {
+      "id": "t-b2-20",
+      "file": "/audio/hoeren/t-b2-20.mp3",
+      "voice": "voice-01 (de)",
+      "level": "B2",
+      "bytes": 222163
+    },
+    {
+      "id": "t-a0-02",
+      "file": "/audio/hoeren/t-a0-02.mp3",
+      "voice": "voice-A0 (de, Arena)",
+      "level": "A0",
+      "bytes": 49581
+    },
+    {
+      "id": "t-a0-03",
+      "file": "/audio/hoeren/t-a0-03.mp3",
+      "voice": "voice-A0 (de, Arena)",
+      "level": "A0",
+      "bytes": 62253
+    },
+    {
+      "id": "t-a0-04",
+      "file": "/audio/hoeren/t-a0-04.mp3",
+      "voice": "voice-A0 (de, Arena)",
+      "level": "A0",
+      "bytes": 50541
+    },
+    {
+      "id": "t-a0-05",
+      "file": "/audio/hoeren/t-a0-05.mp3",
+      "voice": "voice-A0 (de, Arena)",
+      "level": "A0",
+      "bytes": 49581
+    }
+  ]
 }

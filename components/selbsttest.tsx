@@ -280,7 +280,7 @@ function FreieWiedergabe({ tag, day }: { tag: number; day: number }) {
               <button
                 title="اكشف الحروف الأولى (تُسجَّل مساعدة)"
                 onClick={() => setTipp((t) => ({ ...t, [k]: !t[k] }))}
-                style={{ border: "1px solid #d6d3d1", background: "white", borderRadius: 10, padding: "0.35rem 0.5rem", cursor: "pointer", fontSize: "0.85rem" }}
+                style={{ border: "1px solid #d6d3d1", background: "var(--color-card)", borderRadius: 10, padding: "0.35rem 0.5rem", cursor: "pointer", fontSize: "0.85rem" }}
               >
                 {tipp[k] ? "🙈" : "🔤"}
               </button>
@@ -364,7 +364,7 @@ function Textluecken({ tag, day }: { tag: number; day: number }) {
       <div style={{ fontWeight: 800, fontSize: "0.86rem" }} dir="rtl">
         📖 {run.titleAr} <span style={{ opacity: 0.6, fontWeight: 600 }} className="de">({run.titleDe})</span>
       </div>
-      <div style={{ background: "white", border: "1px solid #e7e5e4", borderRadius: 12, padding: "0.7rem 0.9rem", fontSize: "0.86rem", lineHeight: 2 }}>
+      <div style={{ background: "var(--color-card)", border: "1px solid #e7e5e4", borderRadius: 12, padding: "0.7rem 0.9rem", fontSize: "0.86rem", lineHeight: 2 }}>
         {run.masked.map((z, k) => (
           <p key={k} className="de" style={{ margin: k ? "0.4rem 0 0" : 0 }}>{z}</p>
         ))}
@@ -458,7 +458,7 @@ function InterleavingMischer({ tag, day }: { tag: number; day: number }) {
         <div style={{ fontSize: "0.76rem", flex: 1, minWidth: "14rem" }}>
           تسع بطاقات من ثلاثة مصادر <b>مُداخَلة</b> — أصعب الآن وأثبت لاحقاً. بدّل إلى «كتل» لتشمّ الفرق بنفسك.
         </div>
-        <button style={{ border: "1px solid var(--color-b2)", background: "white", color: "var(--color-b2)", borderRadius: 10, padding: "0.3rem 0.55rem", cursor: "pointer", fontWeight: 900, fontSize: "0.7rem" }} onClick={() => setBlockiert((v) => !v)}>
+        <button style={{ border: "1px solid var(--color-b2)", background: "var(--color-card)", color: "var(--color-b2)", borderRadius: 10, padding: "0.3rem 0.55rem", cursor: "pointer", fontWeight: 900, fontSize: "0.7rem" }} onClick={() => setBlockiert((v) => !v)}>
           {blockiert ? "الأوضاع: كتل 🧱" : "الأوضاع: تداخل 🔀"}
         </button>
       </div>

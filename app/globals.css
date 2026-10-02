@@ -292,3 +292,59 @@ label:has(input[type="checkbox"]), label:has(input[type="radio"]) {
   .druckblatt { max-width: none; padding: 0; }
   .druck-karte { border-color: #999; }
 }
+
+
+/* ══════════════ Umstrukturierung P1 — شاشة «اليوم»: الهويّة البصرية B (images/dirB-today.png) — داكنٌ أزرقٌ باردٌ + أخضر حيّ ══════════════ */
+/* كتلة واحدة قابلة للتبديل بالكامل — الشاشة القديمة داخل /alt لا تُورَث منها شيئاً */
+.today-screen {
+  color-scheme: dark;
+  --color-paper: #0e1013;
+  --color-paper2: #15181d;
+  --color-card: #1d2127;
+  --color-ink: #f5f7fa;
+  --color-ink2: #9aa3af;
+  --color-line: #2a2f38;
+  --color-cola: #22c55e;
+  --color-cola-light: #22c55e;
+  --color-cola-soft: #16321f;
+  --color-a1: #22c55e;
+  --color-a2: #38bdf8;
+  --color-b1: #facc15;
+  --color-b2: #a78bfa;
+  --shadow-soft: 0 8px 24px rgb(0 0 0 / 0.55);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  min-height: calc(100dvh - 7rem);
+  border-radius: 0.75rem;
+}
+.today-screen .card { background: var(--color-card); color: var(--color-ink); border-color: var(--color-line); border-radius: 1.15rem; }
+.today-screen .chip { background: var(--color-card); color: var(--color-ink); border-color: var(--color-line); }
+.today-screen .btn { background: var(--color-card); color: var(--color-ink); border-color: var(--color-line); }
+.today-screen .btn-primary { background: #22c55e; color: #0b0f14; border-color: #22c55e; border-radius: 999px; font-weight: 800; }
+.today-screen .btn-gold { background: var(--color-b1); color: #0b0f14; border-color: var(--color-b1); border-radius: 999px; }
+.today-screen .btn-ghost { background: transparent; }
+.today-screen .progressbar { background: #2a2f38; }
+.today-screen h1, .today-screen h2, .today-screen h3 { color: var(--color-ink); }
+.today-screen input, .today-screen textarea, .today-screen select { background: var(--color-paper2); color: var(--color-ink); border-color: var(--color-line); }
+body:has(.today-screen) { background: #0e1013; }
+html:has(body .today-screen) { background: #0e1013; }
+
+/* التنقّل السفلي (K101): مساحة لخط الأساس ثم الشريط */
+main { padding-bottom: 0; }
+
+/* بطاقةُ السياقِ الفاتح: تعريفٌ واحدٌ يجعلُ كلَّ background: var(--color-card) صحيحاً خارج شاشةِ اليوم */
+:root { --color-card: #ffffff; }
+
+/* ألواحُ الإشعارِ ثنائيةُ السياق: الجذرُ بلونِه الأصليّ (لا يتغيّر شيءٌ في /alt) */
+:root { --color-rosa-soft: #fef2f2; --color-amber-soft: #fef3c7; }
+
+/* طبقةُ شاشةِ اليومِ التكميلية: الألواحُ تصيرُ داكنةً هنا */
+.today-screen {
+  --color-gold: #4ade80;
+  --color-gold-soft: #14301e;
+  --color-rosa-soft: #2f2026;
+  --color-amber-soft: #2c2b1d;
+}
+
+/* التذييل تحت الشاشة الداكنة: لا رماديٌّ على أسود */
+body:has(.today-screen) footer { color: #9aa3af; border-color: #2a2f38; }

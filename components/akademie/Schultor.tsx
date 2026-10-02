@@ -361,33 +361,49 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
       )}
 
       {/* ── زر الدخول الكبير إلى قاعة الدرس ── */}
-      <div style={{ textAlign: "center" }}>
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={onEnterClassroom}
-          style={{
-            width: "100%",
-            maxWidth: "28rem",
-            fontSize: "1.15rem",
-            fontWeight: 900,
-            padding: "0.95rem 1.5rem",
-            minHeight: "56px",
-            borderRadius: "0.9rem",
-            boxShadow: "0 6px 20px rgba(124, 45, 18, 0.25)",
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "0.6rem",
-          }}
-        >
-          <span>👨‍🏫 دخول قاعة الدرس مع الأستاذ</span>
-          <span style={{ fontSize: "1.3rem" }}>←</span>
-        </button>
-        <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.45rem" }}>
-          حصة اليوم {progress.plan.day} جاهزة ومؤطرة بالكامل (أهداف · مفردات · قاعدة وتريك · تدريب · ختام)
-        </div>
-      </div>
+      {(() => {
+        const needsName = editingName || !name.trim();
+        return (
+          <div style={{ textAlign: "center" }}>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => {
+                if (needsName) {
+                  setStatusMsg("من فضلك اكتب اسمك أولاً — يناديك الأستاذ به طوال الرحلة.");
+                  setTimeout(() => setStatusMsg(""), 3500);
+                  return;
+                }
+                saveName();
+                onEnterClassroom();
+              }}
+              aria-disabled={needsName}
+              style={{
+                width: "100%",
+                maxWidth: "28rem",
+                fontSize: "1.15rem",
+                fontWeight: 900,
+                padding: "0.95rem 1.5rem",
+                minHeight: "56px",
+                borderRadius: "0.9rem",
+                boxShadow: needsName ? "none" : "0 6px 20px rgba(124, 45, 18, 0.25)",
+                opacity: needsName ? 0.55 : 1,
+                cursor: needsName ? "not-allowed" : "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.6rem",
+              }}
+            >
+              <span>{needsName ? "✍️ اكتب اسمك ثم ادخل" : "👨‍🏫 دخول قاعة الدرس مع الأستاذ"}</span>
+              {!needsName && <span style={{ fontSize: "1.3rem" }}>←</span>}
+            </button>
+            <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.45rem" }}>
+              حصة اليوم {progress.plan.day} جاهزة ومؤطرة بالكامل (أهداف · مفردات · قاعدة وتريك · تدريب · ختام)
+            </div>
+          </div>
+        );
+      })()}
     </section>
   );
 }

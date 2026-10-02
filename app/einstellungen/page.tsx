@@ -8,7 +8,8 @@ import { Fehlerkartei, Lernstrategien } from "@/components/fehler-ui";
 import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
 import { ProfilVerwaltung } from "@/components/profil";
 import { speakDe, germanVoices, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
-import type { UiLang } from "@/lib/types";
+import type { UiLang, Tempo } from "@/lib/types";
+import { TEMPO_LABEL } from "@/lib/types";
 
 export default function Einstellungen() {
   const { progress, update, importProgress, reset } = useProgress();
@@ -103,6 +104,37 @@ export default function Einstellungen() {
       </section>
 
       <section className="card" style={{ padding: "1.3rem" }}>
+        <h2 style={{ fontWeight: 800, marginBottom: "0.5rem" }}>⏱️ وتيرة التعلّم اليومية</h2>
+        <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", marginBottom: "0.8rem" }}>
+          اختر الوتيرة التي تناسب يومك. يضبط المحرّك تلقائياً طولَ الدرس وعدد البطاقات الجديدة وحدَّ المراجعة:
+          خفيف <strong>15</strong> دقيقة (3 بطاقات جديدة)، منتظم <strong>30</strong> دقيقة (5 بطاقات)، مكثّف <strong>60</strong> دقيقة (10 بطاقات).
+          لا توجد عقاب على تخفيف الوتيرة — وزر «يوم سيّئ» يجمّد السلسلة بلا ديون.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.6rem" }}>
+          {(["leicht", "regelmaessig", "intensiv"] as Tempo[]).map((v) => (
+            <button
+              key={v}
+              className="btn"
+              onClick={() => update((p) => ({ ...p, settings: { ...p.settings, tempo: v } }))}
+              style={{
+                padding: "0.85rem 0.6rem",
+                textAlign: "center",
+                background: progress.settings.tempo === v ? "var(--color-gold-soft)" : "white",
+                border: `2px solid ${progress.settings.tempo === v ? "var(--color-gold)" : "var(--color-line)"}`,
+                borderRadius: "0.75rem",
+                cursor: "pointer",
+                boxShadow: progress.settings.tempo === v ? "0 4px 14px rgba(212,160,23,0.25)" : "none",
+              }}
+            >
+              <div style={{ fontSize: "1.6rem" }}>{v === "leicht" ? "🌤️" : v === "regelmaessig" ? "⛅" : "🔥"}</div>
+              <div style={{ fontWeight: 800 }}>{TEMPO_LABEL[v].ar}</div>
+              <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{TEMPO_LABEL[v].de}</div>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="card" style={{ padding: "1.3rem" }}>
         <h2 style={{ fontWeight: 800, marginBottom: "0.5rem" }}>🔊 النطق والتسميع (داخل المتصفح)</h2>
         <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", marginBottom: "0.7rem" }}>
           {speechAvailable()
@@ -126,15 +158,18 @@ export default function Einstellungen() {
             <span style={{ minWidth: "6rem" }}>سرعة النطق:</span>
             <input
               type="range"
-              min={0.6}
-              max={1.2}
+              min={0.65}
+              max={1.0}
               step={0.05}
-              value={progress.settings.rate}
-              onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, rate: Number(e.target.value) } }))}
+              value={Math.max(0.65, Math.min(1.0, progress.settings.rate))}
+              onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, rate: Math.max(0.65, Math.min(1.0, Number(e.target.value))) } }))}
               style={{ flex: 1 }}
             />
-            <span className="rtl-num">{progress.settings.rate.toFixed(2)}</span>
+            <span className="rtl-num">{Math.max(0.65, Math.min(1.0, progress.settings.rate)).toFixed(2)}×</span>
           </div>
+          <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--color-ink2)" }}>
+            النطاق من <strong>0.65×</strong> (بطيء واضح للمبتدئين) إلى <strong>1.0×</strong> (سرعة طبيعية). لا سرعة أسرع من الطبيعي في الخطة الأساسية.
+          </p>
           <button className="btn btn-primary" onClick={() => speakDe("Hallo! Ich bin dein Lehrer. Heute lernen wir gemeinsam.", { voiceName: progress.settings.voiceName, rate: progress.settings.rate })}>
             ▶️ تجربة النطق
           </button>
@@ -147,6 +182,7 @@ export default function Einstellungen() {
           مدرِّبُ النطق ومحاكاةُ الامتحان يستطيعان أن يسمعا ما تنطقُ ويقيساه كلمةً كلمة — لكنَّ
           <code> Web Speech API</code> في Chrome/Edge <strong>يُرسِلُ صوتَك إلى خدمةِ المتصفِّحِ الخارجية</strong> ليعيدَه نصًّا.
           هذا هو الاتصالُ الخارجيُّ الوحيدُ في المشروعِ كلِّه، وهو <strong>بإذنِك وحدَك</strong> ومغلقٌ ما لم تفتحه.
+          الخدمة <strong>مجّانية 100٪</strong> (لا مفاتيح API، لا اشتراك، لا حساب، ولا بيانات تُجمَّع من طرف التطبيق) ولا يُرسَل أيُّ صوتٍ ما دام المفتاحُ مغلقاً.
         </p>
         <label style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", cursor: "pointer", minHeight: "44px" }}>
           <input

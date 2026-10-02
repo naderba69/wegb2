@@ -1,5 +1,6 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { FehlerRevue } from "./FehlerRevue";
 import {
   type DayPlan,
   type DayTask,
@@ -8,16 +9,18 @@ import {
   type SrsState,
   LEVEL_COLORS,
 } from "@/lib/types";
-import { grammarMap, getBrueckenFor, eselsbruecken, fehlerList, getDeck, alleVokabeln } from "@/lib/content";
-import { kapselSaetze } from "@/lib/kapsel";
+import { grammarMap, getBrueckenFor, eselsbruecken, fehlerList, getDeck, alleVokabeln, getMnemonik } from "@/lib/content";
+import { kapselSaetze, kapselSaetzeAbend } from "@/lib/kapsel";
 import { kollokationenFuer } from "@/lib/kollokationen";
 import { speakDe } from "@/lib/speech";
 import { activeProfile } from "@/lib/profiles";
 import TaskView from "@/components/tasks";
+import StationsLeiste, { stationOfTask } from "@/components/stationen";
 import { TagesKapsel } from "@/components/kapsel";
 import { aufgabeGesperrt, sperrText, type RitualUrteil } from "@/lib/ritual";
 import { De } from "@/components/De";
-import { newCard, reviewCard } from "@/lib/srs";
+import { newCard, reviewCard, todayDeck, newCardCap, MAX_REVIEWS_PER_DAY, isDue } from "@/lib/srs";
+import { paarDesTages } from "@/lib/arabinterferenz";
 import { addFehlerNow } from "@/lib/store";
 
 interface KlassenzimmerProps {
@@ -32,6 +35,7 @@ interface KlassenzimmerProps {
   onPoints: (p: number, m: number) => void;
   submitCurrent: () => void;
   doCloseDay: () => void;
+  badDayToday?: () => void;
   confirmClose: boolean;
   setConfirmClose: (b: boolean) => void;
   unpassed: DayTask[];
@@ -51,6 +55,7 @@ export function Klassenzimmer({
   onPoints,
   submitCurrent,
   doCloseDay,
+  badDayToday,
   confirmClose,
   setConfirmClose,
   unpassed,
@@ -104,16 +109,33 @@ export function Klassenzimmer({
     return alleVokabeln.filter((c) => c.level === plan.phase).slice(0, 6);
   }, [plan.tasks, plan.phase]);
 
-  // 5. جمل الإحماء من حصة الأمس (إن وُجدت)
+  // 5. جمل إحماء صباحية: كبسولة مساء الأمس (ثلاث جمل من دروس الأمس قُرِئت قبل النوم)
   const warmupSaetze = useMemo(() => {
     if (day <= 1) return [];
-    return kapselSaetze(day - 1);
+    return kapselSaetzeAbend(day - 1);
   }, [day]);
 
+  // دفعة SRS اليومية: بطاقات مستحقة + بطاقات جديدة بسقف الوتيرة
+  const srsPile = useMemo(() => {
+    const tempo = progress.settings.tempo ?? "regelmaessig";
+    const pile = todayDeck(progress.srs, tempo);
+    return pile;
+  }, [progress.srs, progress.settings.tempo]);
+
+  const newCap = newCardCap(progress.settings.tempo ?? "regelmaessig");
+  const newTodayCount = Object.values(progress.srs).filter(
+    (s) => s.reps === 0 && s.introduced && new Date(s.introduced).toDateString() === new Date().toDateString()
+  ).length;
+  const reviewsDoneToday = Object.values(progress.srs).filter((s) => s.reps > 0 && new Date(s.due).toDateString() === new Date().toDateString() && !isDue(s)).length;
+  const reviewsRemaining = Math.max(0, MAX_REVIEWS_PER_DAY - reviewsDoneToday);
+
   const handleCardRating = (quality: 0 | 2 | 4) => {
-    const card = keyVocab[activeCardIdx];
+    const card = keyVocab[activeCardIdx] ?? currentVocabCard;
     if (!card) return;
     const prev = progress.srs[card.id] ?? newCard();
+    // لا تُضف بطاقة جديدة إذا تجاوزنا سقف الوتيرة
+    const isBrandNew = prev.reps === 0;
+    if (isBrandNew && newTodayCount >= newCap) return;
     onSrs(card.id, reviewCard(prev, quality));
     if (quality === 0) {
       addFehlerNow({
@@ -135,9 +157,21 @@ export function Klassenzimmer({
 
   const currentVocabCard = keyVocab[activeCardIdx];
   const currentKolloks = currentVocabCard ? kollokationenFuer(currentVocabCard) : [];
+  const genderMnemonic = currentVocabCard ? getMnemonik(currentVocabCard.de) : null;
+  const interferenzPaar = paarDesTages(day, (plan.phase === "Abschluss" ? "B2" : plan.phase) as "A0"|"A1"|"A2"|"B1"|"B2");
 
   // المهمة الحالية في المحطة 5
   const currentTask = plan.tasks[stepFrei];
+
+  // ربط المحطة النشطة بالمهمة الحالية (K3: dynamic activeStation)
+  useEffect(() => {
+    if (!currentTask) return;
+    const s = stationOfTask(currentTask);
+    const map: Record<string, number> = {
+      warmup: 1, aussprache: 1, wortschatz: 2, grammatik: 3, rezeption: 5, produktion: 6,
+    };
+    setActiveStation(map[s] ?? 1);
+  }, [stepFrei, currentTask?.id]);
 
   const scrollToStation = (id: string, stNum?: number) => {
     if (stNum) setActiveStation(stNum);
@@ -147,6 +181,9 @@ export function Klassenzimmer({
 
   return (
     <div className="fadein" style={{ display: "grid", gap: "1.4rem" }}>
+      {/* ── شريط المحطات الست الأساسي (K-stations) مع تمييز المحطة النشطة ── */}
+      <StationsLeiste tasks={plan.tasks} step={stepFrei} zielMin={plan.zielMin} />
+
       {/* ── شريط التنقل السريع بين محطات الحصة الست (Station Jump Bar) ── */}
       <nav
         aria-label="محطات الحصة اليومية"
@@ -353,7 +390,7 @@ export function Klassenzimmer({
                     alignItems: "center",
                     justifyContent: "space-between",
                     gap: "0.6rem",
-                    background: "white",
+                    background: "var(--color-card)",
                     padding: "0.55rem 0.85rem",
                     borderRadius: "0.6rem",
                     border: "1px solid var(--color-line)",
@@ -374,6 +411,37 @@ export function Klassenzimmer({
                   </button>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── تمرين تدخّل صوتي عربي (Arabic Interference) ── */}
+        {interferenzPaar && (
+          <div style={{ marginTop: "1rem", borderTop: "1px dashed var(--color-line)", paddingTop: "0.9rem" }}>
+            <div style={{ fontWeight: 800, fontSize: "0.9rem", color: "var(--color-a1)", marginBottom: "0.3rem" }}>
+              🎧 فخّ نطقي عربي لليوم:
+            </div>
+            <div style={{
+              background: "var(--color-card)", padding: "0.7rem 0.9rem", borderRadius: "0.6rem",
+              border: "1px solid var(--color-line)", fontSize: "0.88rem",
+            }}>
+              <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center", marginBottom: "0.4rem" }}>
+                {interferenzPaar.de1 === interferenzPaar.de2 ? (
+                  <De style={{ fontWeight: 900, fontSize: "1rem" }}>{interferenzPaar.de1}</De>
+                ) : (
+                  <>
+                    <De style={{ fontWeight: 900, color: "var(--color-a1)" }}>{interferenzPaar.de1}</De>
+                    <span style={{ color: "var(--color-ink2)" }}>←/→</span>
+                    <De style={{ fontWeight: 900, color: "var(--color-b2)" }}>{interferenzPaar.de2}</De>
+                  </>
+                )}
+                <span style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>
+                  ({interferenzPaar.ar1}{interferenzPaar.de1 !== interferenzPaar.de2 ? ` · ${interferenzPaar.ar2}` : ""})
+                </span>
+              </div>
+              <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", lineHeight: 1.6 }}>
+                💡 {interferenzPaar.hinweisAr}
+              </div>
             </div>
           </div>
         )}
@@ -460,6 +528,11 @@ export function Klassenzimmer({
                         🤝 <De style={{ fontWeight: 800 }}>{currentKolloks[0]}</De>
                       </span>
                     )}
+                    {genderMnemonic && (
+                      <div style={{ fontSize: "0.8rem", marginTop: "0.7rem", padding: "0.45rem 0.6rem", borderRadius: "0.5rem", background: "var(--color-paper2, #f7f4ef)", border: "1px dashed var(--color-line)", textAlign: "center", width: "100%" }}>
+                        🧠 <strong>ذاكرة الجندر:</strong> {genderMnemonic.tipp}
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -478,7 +551,7 @@ export function Klassenzimmer({
                   )}
 
                   {currentVocabCard.exampleDe && (
-                    <div style={{ background: "white", padding: "0.7rem 0.9rem", borderRadius: "0.6rem", border: "1px solid var(--color-line)", margin: "0.4rem 0", width: "100%", textAlign: "center" }}>
+                    <div style={{ background: "var(--color-card)", padding: "0.7rem 0.9rem", borderRadius: "0.6rem", border: "1px solid var(--color-line)", margin: "0.4rem 0", width: "100%", textAlign: "center" }}>
                       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.4rem" }}>
                         <De style={{ fontWeight: 800, fontSize: "0.98rem" }}>{currentVocabCard.exampleDe}</De>
                         <button
@@ -559,7 +632,7 @@ export function Klassenzimmer({
               })}
             </div>
 
-            <div style={{ background: "var(--color-gold-soft)", border: "1px solid var(--color-gold)", borderRadius: "0.6rem", padding: "0.6rem 0.9rem", fontSize: "0.84rem", color: "#92400e", textAlign: "center" }}>
+            <div style={{ background: "var(--color-gold-soft)", border: "1px solid var(--color-gold)", borderRadius: "0.6rem", padding: "0.6rem 0.9rem", fontSize: "0.84rem", color: "var(--color-b1)", textAlign: "center" }}>
               📅 <strong>نظام التكرار المتباعد الأكاديمي:</strong> هذه الكلمات أُدرجت تلقائياً في جدول مراجعاتك بنهاية الأسبوع لضمان ترسيخها.
             </div>
           </div>
@@ -610,7 +683,7 @@ export function Klassenzimmer({
 
             {/* ── القواعد الوظيفية ── */}
             {topic.rules && topic.rules.length > 0 && (
-              <div style={{ background: "white", padding: "0.85rem 1.1rem", borderRadius: "0.8rem", border: "1px solid var(--color-line)" }}>
+              <div style={{ background: "var(--color-card)", padding: "0.85rem 1.1rem", borderRadius: "0.8rem", border: "1px solid var(--color-line)" }}>
                 <div style={{ fontWeight: 800, fontSize: "0.92rem", color: "var(--color-cola)", marginBottom: "0.4rem" }}>
                   📐 القواعد الوظيفية:
                 </div>
@@ -630,7 +703,7 @@ export function Klassenzimmer({
                 {topic.tables.map((tbl, tIdx) => (
                   <div key={tIdx} style={{ marginBottom: "0.6rem" }}>
                     {tbl.captionAr && <div style={{ fontWeight: 700, fontSize: "0.85rem", marginBottom: "0.3rem" }}>{tbl.captionAr}</div>}
-                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem", background: "white", borderRadius: "0.5rem" }}>
+                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem", background: "var(--color-card)", borderRadius: "0.5rem" }}>
                       <thead>
                         <tr style={{ background: "var(--color-paper2)" }}>
                           {tbl.headers.map((h, hIdx) => (
@@ -694,22 +767,22 @@ export function Klassenzimmer({
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.3rem" }}>
                   <span style={{ fontSize: "1.4rem" }}>⚡</span>
-                  <strong style={{ fontSize: "1.05rem", color: "#92400e" }}>
+                  <strong style={{ fontSize: "1.05rem", color: "var(--color-b1)" }}>
                     تريك الحفظ وشفرة الذاكرة (Eselsbrücke):
                   </strong>
                 </div>
                 {topicBruecken.map((b) => (
                   <div key={b.id} style={{ marginTop: "0.5rem" }}>
-                    <div style={{ fontWeight: 800, fontSize: "0.95rem", color: "#78350f" }}>
+                    <div style={{ fontWeight: 800, fontSize: "0.95rem", color: "var(--color-b1)" }}>
                       {b.titleAr}
                     </div>
-                    <p style={{ fontSize: "0.9rem", lineHeight: 1.8, color: "#92400e", margin: "0.25rem 0 0.45rem" }}>
+                    <p style={{ fontSize: "0.9rem", lineHeight: 1.8, color: "var(--color-b1)", margin: "0.25rem 0 0.45rem" }}>
                       {b.storyAr}
                     </p>
                     {b.zeilen && b.zeilen.length > 0 && (
                       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))", gap: "0.35rem" }}>
                         {b.zeilen.map((z, zIdx) => (
-                          <div key={zIdx} style={{ background: "white", padding: "0.4rem 0.6rem", borderRadius: "0.4rem", fontSize: "0.82rem", border: "1px solid #fde68a" }}>
+                          <div key={zIdx} style={{ background: "var(--color-card)", padding: "0.4rem 0.6rem", borderRadius: "0.4rem", fontSize: "0.82rem", border: "1px solid #fde68a" }}>
                             <span style={{ fontWeight: 900, color: "#b45309" }}>{z.code} ➔ </span>
                             <De style={{ fontWeight: 800 }}>{z.de}</De>
                             <div style={{ color: "var(--color-ink2)", fontSize: "0.75rem" }}>{z.ar}</div>
@@ -774,18 +847,18 @@ export function Klassenzimmer({
               <div
                 key={idx}
                 style={{
-                  background: "#fef2f2",
+                  background: "var(--color-rosa-soft)",
                   border: "1px solid #fecaca",
-                  borderInlineStart: "5px solid #dc2626",
+                  borderInlineStart: "5px solid var(--color-die)",
                   borderRadius: "0.75rem",
                   padding: "0.85rem 1.1rem",
                 }}
               >
                 <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
-                  <span style={{ color: "#dc2626", fontWeight: 900, fontSize: "0.95rem" }}>فخ شائع:</span>
-                  <De style={{ fontWeight: 800, fontSize: "1rem", color: "#991b1b" }}>{p.de}</De>
+                  <span style={{ color: "var(--color-die)", fontWeight: 900, fontSize: "0.95rem" }}>فخ شائع:</span>
+                  <De style={{ fontWeight: 800, fontSize: "1rem", color: "var(--color-die)" }}>{p.de}</De>
                 </div>
-                <div style={{ marginTop: "0.3rem", fontSize: "0.88rem", color: "#7f1d1d", fontWeight: 600 }}>
+                <div style={{ marginTop: "0.3rem", fontSize: "0.88rem", color: "var(--color-die)", fontWeight: 600 }}>
                   💡 التصحيح وعلّة الخطأ: {p.ar}
                 </div>
               </div>
@@ -800,9 +873,9 @@ export function Klassenzimmer({
             </div>
             <div style={{ display: "grid", gap: "0.5rem" }}>
               {arabErrors.map((err) => (
-                <div key={err.id} style={{ background: "white", padding: "0.55rem 0.8rem", borderRadius: "0.5rem", border: "1px solid var(--color-line)", fontSize: "0.85rem" }}>
+                <div key={err.id} style={{ background: "var(--color-card)", padding: "0.55rem 0.8rem", borderRadius: "0.5rem", border: "1px solid var(--color-line)", fontSize: "0.85rem" }}>
                   <div style={{ display: "flex", gap: "0.5rem", alignItems: "baseline" }}>
-                    <span style={{ color: "#dc2626", fontWeight: 800 }}>خطأ: <De>{err.falsch}</De></span>
+                    <span style={{ color: "var(--color-die)", fontWeight: 800 }}>خطأ: <De>{err.falsch}</De></span>
                     <span style={{ color: "var(--color-a1)", fontWeight: 800 }}>✓ صواب: <De>{err.richtig}</De></span>
                   </div>
                   <div style={{ color: "var(--color-ink2)", fontSize: "0.8rem", marginTop: "0.15rem" }}>
@@ -1056,28 +1129,53 @@ export function Klassenzimmer({
           </div>
         </div>
 
-        {/* ── قرارات نهاية الحصة الـ 45 دقيقة ── */}
+        {/* ── محطة ٣: مراجعة الأخطاء المتكرّقة (قبل الإغلاق — K105) ── */}
+      {allSubmitted && <FehlerRevue progress={progress} />}
+
+      {/* ── قرارات نهاية الحصة الـ 45 دقيقة ── */}
         <div style={{ display: "grid", gap: "0.8rem", textAlign: "center" }}>
           {!confirmClose ? (
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", alignItems: "center" }}>
-              <button
-                type="button"
-                className="btn btn-gold"
-                onClick={() => setConfirmClose(true)}
-                style={{
-                  width: "100%",
-                  maxWidth: "28rem",
-                  minHeight: "56px",
-                  fontSize: "1.1rem",
-                  fontWeight: 900,
-                  borderRadius: "0.85rem",
-                  boxShadow: "0 4px 15px rgba(217, 119, 6, 0.25)",
-                }}
-              >
-                🛑 إنهاء حصة اليوم وحفظ التقدّم ←
-              </button>
+              <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center", width: "100%", maxWidth: "32rem" }}>
+                <button
+                  type="button"
+                  className="btn btn-gold"
+                  onClick={() => setConfirmClose(true)}
+                  style={{
+                    flex: "2",
+                    minWidth: "14rem",
+                    minHeight: "56px",
+                    fontSize: "1.05rem",
+                    fontWeight: 900,
+                    borderRadius: "0.85rem",
+                    boxShadow: "0 4px 15px rgba(217, 119, 6, 0.25)",
+                  }}
+                >
+                  🛑 إنهاء حصة اليوم وحفظ التقدّم ←
+                </button>
+                {badDayToday && (
+                  <button
+                    type="button"
+                    className="btn btn-ghost"
+                    onClick={badDayToday}
+                    title="يوم سيّئ: تُجمَّد السلسلة بلا ديون ولا عقاب."
+                    style={{
+                      flex: "1",
+                      minWidth: "10rem",
+                      minHeight: "56px",
+                      borderRadius: "0.85rem",
+                      border: "1px dashed var(--color-line)",
+                      color: "var(--color-ink2)",
+                    }}
+                  >
+                    🧘 يوم سيّئ
+                  </button>
+                )}
+              </div>
               <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>
-                {allSubmitted ? "كل المهام مُسلَّمة. أغلق اليوم لفتح الغد." : "يمكنك الإغلاق الآن وسيتم ترحيل ما لم يُنجز كتعويض للغد."}
+                {allSubmitted
+                  ? "كل المهام مُسلَّمة. أغلق اليوم لفتح الغد."
+                  : "يمكنك الإغلاق الآن وسيُرحَّل ما لم يُنجز (≤ مهمّتَي دين)؛ أو استعمل «يوم سيّئ» لليالي الصعبة بلا ديون."}
               </div>
 
               {!extendedTime ? (
@@ -1095,7 +1193,7 @@ export function Klassenzimmer({
                   style={{
                     marginTop: "0.5rem",
                     padding: "0.8rem 1rem",
-                    background: "white",
+                    background: "var(--color-card)",
                     border: "1px dashed var(--color-gold)",
                     borderRadius: "0.6rem",
                     fontSize: "0.88rem",

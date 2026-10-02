@@ -115,6 +115,27 @@ export function pruefeText(text: string): Befund[] {
       }
     }
 
+    // ④ج أسئلة W-: أداة الاستفهام في البداية ثم الفعل المصرّف (Wann gehst du؟ لا Wann du gehst؟)
+    const W_FRAGE = ["wo","wann","warum","wer","wie","was","wohin","woher","welche","welcher","welches","wem","wen","wessen"];
+    if (w.length >= 3 && W_FRAGE.includes(klein[0])) {
+      // الموضع الثاني يجب أن يكون فعلاً مصروفاً (ليس ضميراً)
+      if (PRONOMEN.includes(klein[1])) {
+        b.push({ spalte: "syntax", schwere: "sicher", stelle: `${w[0]} ${w[1]} ${w[2]}`,
+          meldungAr: "في أسئلة W- يأتي الفعل المصرَّف ثانياً بعد أداة السؤال، لا الضمير",
+          vorschlagDe: `${w[0]} ${rein(w[2])} ${rein(w[1])} …?`, regelId: "a1-praesens" });
+      }
+    }
+    // ④د أسئلة نعم/لا (بدون W-): الفعل في البداية «Gehst du؟» — راقب «Du gehst؟» المبتدئ بضمير متبوع بظرف
+    if (satz.trim().endsWith("?") && !W_FRAGE.includes(klein[0]) && PRONOMEN.includes(klein[0]) && w.length >= 2) {
+      // ابحث عن فعل مصرَّف في موضع ليس الأول (نمط «Du gehst؟» جائز في العامية فقط)
+      const finites = /^(gehst|gehst|bist|hast|habe|kannst|willst|machst|kommst|sagst|heißt|ist|sind|haben|kann|muss|soll)/i;
+      if (finites.test(klein[1] ?? "")) {
+        b.push({ spalte: "syntax", schwere: "wahrscheinlich", stelle: `${w[0]} ${w[1]} …`,
+          meldungAr: "سؤال نعم/لا يبدأ بالفعل لا بالفاعل (رسمياً): «Gehst du؟» بدل «Du gehst؟»",
+          vorschlagDe: `${rein(w[1])} ${rein(w[0])} …?`, regelId: "a1-praesens" });
+      }
+    }
+
     // ④ب اسمُ المفعولِ في الماضي المركَّبِ يذهبُ إلى آخرِ الجملة: «Ich habe gesehen die Frau»
     const hilfIdx = klein.findIndex((x) => /^(habe|hast|hat|haben|habt|bin|bist|ist|sind|seid)$/.test(x));
     if (hilfIdx >= 0) {

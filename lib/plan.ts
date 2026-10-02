@@ -11,7 +11,8 @@ import type {
   TaskResult,
   VocabCard,
 } from "./types";
-import { TOTAL_DAYS , emptyProgress } from "./types";
+import { TOTAL_DAYS, emptyProgress, TEMPO_ZIELMIN } from "./types";
+import type { Tempo } from "./types";
 import {
   grammarMap,
   vocabMap,
@@ -26,12 +27,15 @@ import {
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
 import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten } from "./phasen";
-import { kapselIds } from "./kapsel";
+import { kapselIds, kapselIdsAbend, kapselQuiz } from "./kapsel";
+import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
+import { baueFvgAufgabe } from "./fvg-aufgabe";
+import { baueKompositaWoche } from "./komposita-aufgabe";
 
 /**
  * محرّك الخطة اليومية — قلب المشروع المنهجي
  * ------------------------------------------------
- * 270 يوماً بتوزيعٍ أكاديمي (lib/phasen.ts): A1 (1-42) · A2 (43-91) · B1 (92-168) · B2 (169-266) · ختام (267-270)
+ * 378 يوماً بتوزيعٍ أكاديمي (lib/phasen.ts): A0 (1-10) · A1 (11-94) · A2 (95-178) · B1 (179-276) · B2 (277-374) · ختام (375-378)
  * الحمل اليومي تصاعدي بمعامل LERNLAST — المبتدئ أخفّ، وB2 أثقل وأطول.
  * الإيقاع الأسبوعي الثابت: 5 أيام تعلّم · يوم تثبيت · يوم فحص أسبوعي
  * كل شيء حتمي (seeded) — «اليوم 47» يظهر بنفس المهام دائماً (لا توهان).
@@ -47,6 +51,15 @@ export function rng(seed: number) {
     return (s - 1) / 2147483646;
   };
 }
+/** خلط في المكان يُعيد المصفوفة (للاستخدام في buildQuiz بعد الالتقاط) */
+function shuffleArr<T>(arr: T[], rand: () => number): T[] {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 export function pickN<T>(arr: T[], n: number, rand: () => number): T[] {
   const copy = [...arr];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -58,6 +71,7 @@ export function pickN<T>(arr: T[], n: number, rand: () => number): T[] {
 
 // ── خرائط المناهج حسب المرحلة ─────────────────────────────────────────
 const PHASE_RANGES: { phase: Phase; from: number; to: number; level: Level }[] = [
+  { phase: "A0", from: PHASEN.A0.von, to: PHASEN.A0.bis, level: "A0" },
   { phase: "A1", from: PHASEN.A1.von, to: PHASEN.A1.bis, level: "A1" },
   { phase: "A2", from: PHASEN.A2.von, to: PHASEN.A2.bis, level: "A2" },
   { phase: "B1", from: PHASEN.B1.von, to: PHASEN.B1.bis, level: "B1" },
@@ -65,16 +79,18 @@ const PHASE_RANGES: { phase: Phase; from: number; to: number; level: Level }[] =
   { phase: "Abschluss", from: ABSCHLUSS_VON, to: TOTAL_DAYS, level: "B2" },
 ];
 
-const PHASE_TOPICS: Record<Phase, string[]> = {
-  A1: ["a1-sein-haben", "a1-war-hatte", "a1-pronomen", "a1-praesens", "a1-trennbar", "a1-zahlen", "a1-akkusativ"],
-  A2: ["a2-perfekt", "a2-praeteritum", "a2-negation", "a2-imperativ", "a2-weil-dass", "a2-dativ", "a2-modal", "a2-wechsel", "a2-reflexiv", "a2-steigerung", "a2-futur"],
-  B1: ["b1-konj2", "b1-relativ", "b1-konnektoren", "b1-plusquamperfekt", "b1-genitiv", "b1-adjektivendungen", "b1-wortbildung", "b1-unbestimmte", "b1-verb-praeposition", "b1-passiv"],
-  B2: ["b2-indirekte-rede", "b2-funktionsverben", "b2-partizip", "b2-infinitiv", "b2-bedingung", "b2-doppelkonnektoren", "b2-relativ-generalisierend", "b2-modalpartikel", "b2-futur-ii", "b2-nominalstil"],
+export const PHASE_TOPICS: Record<Phase, string[]> = {
+  A0: ["a0-begrussung", "a0-buchstaben", "a0-zahlen", "a1-pronomen", "a1-sein-haben", "a1-praesens", "a1-zahlen"],
+  A1: ["a1-praesens", "a1-pronomen", "a1-sein-haben", "a1-trennbar", "a1-weil-dass", "a1-war-hatte", "a1-zahlen", "a1-akkusativ", "a1-modalverben", "a1-dativ", "a1-wechsel", "a1-imperativ", "a1-perfekt-einf", "a1-futur-einf"],
+  A2: ["a2-praeteritum-grund", "a2-praeteritum", "a2-perfekt", "a2-dativ", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-weil-dass", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a2-futur"],
+  B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-adjektivendungen", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-partizip1", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben"],
+  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-nominalstil", "b2-verschmolzene", "b2-redew"],
   Abschluss: [],
 };
 
 const PHASE_DECKS: Record<Phase, string[]> = {
-  A1: ["a1-start", "a1-familie-alltag", "a1-essen-trinken", "a1-koerper-kleidung", "a1-stadt-wege", "a1-zeit-zahlen", "a1-haus-schule", "a1-natur-freizeit", "a1-welt-beruf", "a1-modal-ort", "a1-menschen-abschluss"],
+  A0: ["a1-start"],
+  A1: ["a1-start", "a1-familie-alltag", "a1-zeit-zahlen", "a1-essen-trinken", "a1-koerper-kleidung", "a1-stadt-wege", "a1-haus-schule", "a1-natur-freizeit", "a1-welt-beruf", "a1-modal-ort", "a1-menschen-abschluss"],
   A2: ["a2-komplett", "a2-arbeit-buero", "a2-alltag-dienste", "a2-leben-technik", "a2-schreiben-dienste", "a2-mensch-beziehung", "a2-reise-feste", "a2-medien-bildung", "a2-geld-gesundheit", "a2-wohnen-vertrag", "a2-arbeit-umwelt", "a2-kueche-haushalt", "a2-erzaehlen-zeit", "a2-redemittel", "a2-kultur-digital", "a2-b1-bruecke"],
   B1: ["b1-gesellschaft", "b1-staat-argument", "b1-karriere-psyche", "b1-gesundheit-technik", "b1-projekt-rede", "b1-stadt-recht", "b1-funktionsverben", "b1-bildung-migration-familie", "b1-dienst-natur-bild", "b1-brief-wirtschaft", "b1-wissen-zeit-wendungen", "b1-essen-kunst-hoeflichkeit", "b1-gesund-wohnen-praep", "b1-job-auto-praefix", "b1-geld-gemeinschaft-adj", "b1-digital-kauf-nomen", "b1-pruefung-text-reflexiv", "b1-klima-sport-komposita", "b1-medien-reise-verben", "b1-verwaltung-handwerk", "b1-arbeit-familie-geld", "a2-b1-bruecke"],
   B2: ["b2-medien-schule", "g01-beziehungen", "g02-gesundheit", "g03-gesellschaft", "g04-wohnen", "g05-digital", "g06-wissenschaft", "g07-schoenheit", "g08-kunst-kultur", "h01-arbeit-beruf", "h02-umwelt-klima", "h03-konsum-geld", "h04-mobilitaet-verkehr", "h05-staat-recht", "h06-studium-lernen", "h07-gefuehle-psyche", "h08-sport-freizeit", "i01-medien-meinung", "i02-bildung-politik", "i03-sozialstaat-ehrenamt", "i04-energie-wende", "i05-ernaehrung-verbraucherschutz", "i06-stadtentwicklung", "i07-migration-integration", "i08-erinnerungskultur"],
@@ -89,23 +105,30 @@ export type Modul = {
   titelDe: string; titelAr: string; inhalteAr: string;
 };
 export const MODULE: Modul[] = [
-  { nr: 1, level: "A1", von: 1,   bis: 10,   titelDe: "Persönliche Informationen", titelAr: "المعلومات الشخصية", inhalteAr: "التحية · الأبجدية · الأرقام · بلد المنشأ · المهن · ملء الاستمارات" },
-  { nr: 2, level: "A1", von: 11,  bis: 21,   titelDe: "Alltag",                    titelAr: "الحياة اليومية",     inhalteAr: "الوقت · الأيام والشهور · الطعام والتسوّق · الأسعار · الإعجاب والنفور" },
-  { nr: 3, level: "A1", von: 22,  bis: 31,   titelDe: "Wohnen & Umgebung",         titelAr: "السكن والمحيط",      inhalteAr: "الشقّة والأثاث · الغرف · الألوان · وصف المدينة والموقع" },
-  { nr: 4, level: "A1", von: 32,  bis: 42,   titelDe: "Freizeit & Gesundheit",     titelAr: "الفراغ والصحّة",     inhalteAr: "الهوايات · الرياضة · الطقس · أعضاء الجسد · موعد الطبيب" },
-  { nr: 1, level: "A2", von: 43,  bis: 54,   titelDe: "Soziales & Reisen",         titelAr: "الاجتماع والسفر",    inhalteAr: "الأسرة · السِّيَر · تنسيق المواعيد · حجز الفنادق والقطارات · الاتجاهات" },
-  { nr: 2, level: "A2", von: 55,  bis: 67,  titelDe: "Arbeit & Bildung",          titelAr: "العمل والتعليم",     inhalteAr: "المواد الدراسية · المسار المهني · تواصل العمل · المكالمات" },
-  { nr: 3, level: "A2", von: 68,  bis: 79,  titelDe: "Medien & Konsum",           titelAr: "الإعلام والاستهلاك", inhalteAr: "التلفاز · الإنترنت · الملابس · إرجاع السلع · المتاجر الكبرى" },
-  { nr: 4, level: "A2", von: 80,  bis: 91,  titelDe: "Gesellschaft & Natur",      titelAr: "المجتمع والطبيعة",   inhalteAr: "الأعياد · التقاليد · الحيوان · البيئة والطقس" },
-  { nr: 1, level: "B1", von: 92,  bis: 110, titelDe: "Identität & Beziehungen",   titelAr: "الهوية والعلاقات",   inhalteAr: "سمات الشخصية · النزاعات · النصيحة · فجوة الأجيال · الصداقة" },
-  { nr: 2, level: "B1", von: 111, bis: 130, titelDe: "Wohnen & Mobilität",        titelAr: "السكن والتنقّل",     inhalteAr: "أشكال السكن البديلة · الانتقال · المرور · النقل العام · تاريخ الهجرة" },
-  { nr: 3, level: "B1", von: 131, bis: 149, titelDe: "Beruf & Zukunft",           titelAr: "المهنة والمستقبل",   inhalteAr: "طلبات التوظيف · المقابلات · مهنة الحلم · شكاوى العمل · توازن الحياة" },
-  { nr: 4, level: "B1", von: 150, bis: 168, titelDe: "Kultur & Politik",          titelAr: "الثقافة والسياسة",   inhalteAr: "الفن · الموسيقى · تاريخ ألمانيا · النظام السياسي · حماية البيئة" },
-  { nr: 1, level: "B2", von: 169, bis: 193, titelDe: "Professionelle Meisterschaft", titelAr: "الإتقان المهني", inhalteAr: "المراسلة الرسمية · التفاوض · العروض · نماذج العمل العالمية" },
-  { nr: 2, level: "B2", von: 194, bis: 218, titelDe: "Wissenschaft & Technik",    titelAr: "العلم والتقنية",     inhalteAr: "الذكاء الاصطناعي · الابتكار · علم النفس · مناهج الدراسة · الجامعة" },
-  { nr: 3, level: "B2", von: 219, bis: 242, titelDe: "Politik & Globalisierung",  titelAr: "السياسة والعولمة",   inhalteAr: "مجتمع الاستهلاك · الوعي المالي · التجارة · الأنظمة الاجتماعية · الإعلام" },
-  { nr: 4, level: "B2", von: 243, bis: 270, titelDe: "Gesellschaft & Debatten",   titelAr: "المجتمع وقضاياه",    inhalteAr: "اتجاهات التغذية · البيئة والصناعة · الهجرة · العمل التطوّعي" },
+  // ── A0: 10 Tage ──
+  { nr: 1, level: "A0", von: 1,  bis: 10,  titelDe: "Einstieg & Alphabet",       titelAr: "الأبجدية والأصوات",    inhalteAr: "الأبجدية · ä/ö/ü/ß · الأصوات · التحيات · الضمائر · sein · الأرقام حتى 100 · أدوات التعريف" },
+  // ── A1: 12 Wochen / 84 Tage ──
+  { nr: 1, level: "A1", von: 11, bis: 31,  titelDe: "Lektion 1–2: Begrüßung & Zahlen",  titelAr: "التعارف والأرقام",      inhalteAr: "التحيات · sein/haben · تصريف منتظم · ضمائر · أرقام 0-100 · Ja/nein/W-Fragen" },
+  { nr: 2, level: "A1", von: 32, bis: 52,  titelDe: "Lektion 3–4: Familie & Gegenstände", titelAr: "العائلة والأشياء",      inhalteAr: "العائلة · أدوات الملكية · أفعال شاذة · der/die/das/kein · ألوان · صفات" },
+  { nr: 3, level: "A1", von: 53, bis: 73,  titelDe: "Lektion 5–6: Zeit & Essen",        titelAr: "الوقت والطعام",        inhalteAr: "الساعة · أفعال منفصلة · جر الوقت · المأكولات · Akkusativ · möchten" },
+  { nr: 4, level: "A1", von: 74, bis: 94,  titelDe: "Lektion 7–8: Hobbys & Wohnen",     titelAr: "الهوايات والسكن",      inhalteAr: "الهوايات · können · الطقس · الشقة · Dativ أساسي · Wechselpräpositionen · Modalverben · مقدمة Perfekt/Futur · Imperativ" },
+  // ── A2: 12 Wochen / 84 Tage ──
+  { nr: 1, level: "A2", von: 95,  bis: 115, titelDe: "Lektion 9–10: Vergangenheit & Orientierung", titelAr: "الماضي والتوجّه",  inhalteAr: "Perfekt كامل · Präteritum للناقصة · Dativ كامل · وصف الطريق · المواصلات" },
+  { nr: 2, level: "A2", von: 116, bis: 136, titelDe: "Lektion 11–12: Gesundheit & Kleidung", titelAr: "الصحة والملابس",       inhalteAr: "الطبيب · أفعال انعكاسية · تبديل الجر · صيغة الأمر (تثبيت) · المقارنة · الملابس والألوان" },
+  { nr: 3, level: "A2", von: 137, bis: 157, titelDe: "Lektion 13–14: Reisen & Briefe", titelAr: "السفر والمراسلات",         inhalteAr: "السفر والفنادق · Präteritum · الجمل التابعة weil/dass/wenn/als · الرسائل والدعوات · الروابط البسيطة" },
+  { nr: 4, level: "A2", von: 158, bis: 178, titelDe: "Lektion 15–16: Gefühle & Beruf", titelAr: "المشاعر والعمل",         inhalteAr: "الأفعال الانعكاسية · deshalb/trotzdem · العمل المكتبي · الهوايات · مقدمة Passiv · مقدمة Genitiv · مراجعة" },
+  // ── B1: 14 Wochen / 98 Tage ──
+  { nr: 1, level: "B1", von: 179, bis: 203, titelDe: "Lektion 17–18: Beziehungen & Ausbildung", titelAr: "العلاقات والتعليم",  inhalteAr: "الصداقات والنزاعات · Relativsätze · obwohl/trotzdem · السيرة الذاتية · Präteritum كامل · تصريف الصفات" },
+  { nr: 2, level: "B1", von: 204, bis: 228, titelDe: "Lektion 19–20: Bewerbung & Umwelt", titelAr: "البحث عن عمل والبيئة",   inhalteAr: "Konjunktiv II حاضر · um…zu/damit · Passiv بكل الأزمنة · أفعال بحروف جر · البيئة والطبيعة" },
+  { nr: 3, level: "B1", von: 229, bis: 252, titelDe: "Lektion 21–22: Konsum & Gesundheit", titelAr: "الاستهلاك والصحة",      inhalteAr: "Genitiv كامل · Futur I · Infinitiv mit zu · الصحة النفسية واللياقة · Nominalisierung أساسي" },
+  { nr: 4, level: "B1", von: 253, bis: 276, titelDe: "Lektion 23–24: Politik & Zukunft", titelAr: "السياسة والمستقبل",      inhalteAr: "الروابط الزمنية · صفات كأسماء · Konjunktiv II ماضي (مقدمة) · الأسئلة غير المباشرة · Partizip I · أحلام ومستقبل · مراجعة B1" },
+  // ── B2: 14 Wochen / 98 Tage ──
+  { nr: 1, level: "B2", von: 277, bis: 301, titelDe: "Lektion 25–26: Globalisierung & Arbeitswelt", titelAr: "العولمة وسوق العمل", inhalteAr: "الروابط المزدوجة · Funktionsverbgefüge · بدائل Passiv · الشركات الناشئة · الذكاء الاصطناعي · اندماج حروف جر" },
+  { nr: 2, level: "B2", von: 302, bis: 326, titelDe: "Lektion 27–28: Hochschule & Medien", titelAr: "الجامعة والإعلام",       inhalteAr: "الجامعة والبحث · Konjunktiv I (كلام غير مباشر) · Partizipattribute مطوّلة · الصحافة ووسائل التواصل · حرية الصحافة" },
+  { nr: 3, level: "B2", von: 327, bis: 350, titelDe: "Lektion 29–30: Medizin & Recht", titelAr: "الطب والقانون",            inhalteAr: "الطب الحديث · Modalverben ذاتية متقدمة · القانون · الجريمة · Konjunktiv II ماضي كامل · شرط ohne wenn" },
+  { nr: 4, level: "B2", von: 351, bis: 374, titelDe: "Lektion 31–32: Kunst & Nachhaltigkeit", titelAr: "الفنون والاستدامة",  inhalteAr: "الفن والأدب والعمارة · سوابق/لواحق · الاستدامة والطاقة · Nominalstil ↔ Verbalstil · Redewendungen/Kollokationen · مراجعة B2" },
 ];
+
 
 /** الوحدةُ التي يقعُ فيها اليوم، ورقمُ خطوتِه داخلَها. */
 export function modulOf(day: number): { modul: Modul; schritt: number; schritte: number; etikett: string } {
@@ -165,7 +188,7 @@ function dictationFromSatz(s: Satz, idx: number): Exercise {
   };
 }
 
-function translateFromSatz(s: Satz, idx: number): Exercise {
+export function translateFromSatz(s: Satz, idx: number): Exercise {
   const keyWords = s.de
     .split(/\s+/)
     .map((w) => w.replace(/[.,!?;:„“"']/g, "").toLowerCase())
@@ -240,10 +263,29 @@ function buildQuiz(day: number, phase: Phase, count: number): Exercise[] {
     if (wocheInPhase < 2) return false;
     return true;
   });
+  // K-40free: نسبة أسئلة الاستدعاء الحر (fill/translate/dictation/order) تتصاعد حسب المستوى لمنع وَهْم الإتقان.
+  // A0/A1: 40% free · A2: 50% · B1: 55% · B2: 60%
+  const freeRatioByLv: Record<string, number> = { A0: 0.4, A1: 0.4, A2: 0.5, B1: 0.55, B2: 0.6 };
+  const freeTarget = freeRatioByLv[level] ?? 0.5;
   const clozes = satzPool.map((s, i) => clozeFromSatz(s, i, rand));
-  const picked = pickN([...pool, ...clozes], count, rand);
+  const translates = satzPool.map((s, i) => translateFromSatz(s, i));
+  const freePool = shuffleArr([...clozes, ...translates], rand);
+  const mcPool = shuffleArr([...pool], rand);
 
-  // تكميل ببطاقات المفردات من الدِّكك المُدرَّسة فقط (لا بطاقات من حزم مستقبلية)
+  const nFree = Math.max(1, Math.round(count * freeTarget));
+  const nMc = Math.max(0, count - nFree);
+  const picked: Exercise[] = [];
+  for (let i = 0; i < nFree && freePool.length > 0; i++) {
+    const idx = Math.floor(rand() * freePool.length);
+    picked.push(freePool.splice(idx, 1)[0]);
+  }
+  for (let i = 0; i < nMc && mcPool.length > 0; i++) {
+    const idx = Math.floor(rand() * mcPool.length);
+    picked.push(mcPool.splice(idx, 1)[0]);
+  }
+  shuffleArr(picked, rand);
+
+  // تكميل ببطاقات المفردات من الدِّكك المُدرَّسة فقط — نخلط بين MC وfill لحفظ النسبة
   if (picked.length < count) {
     const cards: VocabCard[] = [];
     const deckSet = new Set<string>();
@@ -254,14 +296,29 @@ function buildQuiz(day: number, phase: Phase, count: number): Exercise[] {
     for (const dk of Array.from(deckSet)) {
       cards.push(...(getDeck(dk)?.cards ?? []));
     }
-    if (cards.length >= count - picked.length) {
-      const extra = pickN(cards, count - picked.length, rand).map((c, i) =>
-        mcFromCards([c, ...cards.filter((x) => x.id !== c.id)], i, rand)
-      );
-      picked.push(...extra);
+    let need = count - picked.length;
+    const shuffled = pickN(cards, cards.length, rand);
+    for (let i = 0; i < shuffled.length && need > 0; i++) {
+      const c = shuffled[i];
+      const asFree = picked.filter((x) => x.type !== "mc").length;
+      const targetFree = Math.round(count * freeTarget);
+      const useFree = asFree < targetFree;
+      if (useFree) {
+        picked.push({
+          id: `${c.id}-fr${i}`,
+          type: "translate",
+          promptDe: "Schreibe das deutsche Wort:",
+          promptAr: `${c.ar}`,
+          answer: [c.article ? `${c.article} ${c.de}` : c.de, c.de],
+          explanationAr: c.exampleDe ? `${c.ar} — مثال: ${c.exampleDe}` : c.ar,
+        });
+      } else {
+        picked.push(mcFromCards([c, ...shuffled.filter((x) => x.id !== c.id)], i, rand));
+      }
+      need--;
     }
   }
-  return picked.map((ex, i) => ({ ...ex, id: `q${day}-${i}-${ex.id}` }));
+  return picked.slice(0, count).map((ex, i) => ({ ...ex, id: `q${day}-${i}-${ex.id}` }));
 }
 
 // ── مولّد اليوم ─────────────────────────────────────────────────────────
@@ -304,15 +361,34 @@ export function buildDay(day: number, progress: Progress): DayPlan {
 
   const textsOfLevel = texts.filter((t) => t.level === level);
   const dialogsOfLevel = dialogues.filter((d) => d.level === level);
+  // 📚 نسبة النسخة الطويلة/الأصلية (Langfassung): 30% عند بداية B1 → 80% عند نهاية B2.
+  // في المستويات قبل B1 نظلُّ على النسخة الطويلة (حيث وُجدت) لأن المتعلم يحتاج الدعم الكامل.
+  // النسبة تُطبَّق بعد اختيار النص (round-robin على كل النصوص لضمان تغطية كاملة)،
+  // والعلم يُمرَّر عبر `__weg_useShort` لاحقاً في leseText/العرض.
+  const b1Start = PHASE_RANGES.find((p) => p.level === "B1")?.from ?? 189;
+  const b2End = PHASE_RANGES.find((p) => p.level === "B2")?.to ?? 378;
+  const langAnteil = day < b1Start
+    ? 1.0
+    : Math.min(0.8, 0.3 + ((day - b1Start) / Math.max(b2End - b1Start, 1)) * 0.5);
   // 🔁 دورانٌ حتميٌّ بدلَ القرعة: كلُّ نصٍّ وكلُّ حوارٍ من المستوى يصلُ المتعلِّمَ
-  // (القرعةُ القديمةُ تركت 20 نصاً و20 حواراً بلا موعدٍ في 270 يوماً)
+  // (القرعةُ القديمةُ تركت 20 نصاً و20 حواراً بلا موعدٍ في 378 يوماً)
   // خاناتُ النصِّ/الحوارِ لكلِّ يومِ أسبوع (حدٌّ أعلى) → رتبةُ اليومِ داخلَ مستواه = مجموعُ خاناتِ الأيامِ السابقة
   const TEXT_SLOTS = [1, 0, 0, 1, 0, 0, 2], DIALOG_SLOTS = level === "A1" ? [1, 1, 1, 1, 1, 0, 0] : level === "A2" ? [0, 1, 1, 1, 1, 0, 0] : [0, 1, 1, 0, 1, 0, 0];
   const levelStart = PHASE_RANGES.find((p) => p.level === level)?.from ?? 1;
   const rangVor = (slots: number[]) => { let n = 0; for (let d = levelStart; d < day; d++) n += slots[(d - 1) % 7]; return n; };
   const textRang = rangVor(TEXT_SLOTS), dialogRang = rangVor(DIALOG_SLOTS);
   let textSlot = 0, dialogSlot = 0;
-  const nextText = () => textsOfLevel.length ? textsOfLevel[(textRang + textSlot++) % textsOfLevel.length] : undefined;
+  const nextText = () => {
+    if (!textsOfLevel.length) return undefined;
+    const cand = textsOfLevel[(textRang + textSlot) % textsOfLevel.length];
+    const slot = textRang + textSlot;
+    const bias = (((day * 2654435761 + slot * 1013904223) >>> 0) % 1000) / 1000;
+    // إن كان للنص نسختان، نختار أيهما نخدمها بنسبة langAnteil.
+    // قبل B1 langAnteil=1.0 فيُستخدم دائماً النسخة الطويلة (الداعمة).
+    const useShort = !!cand.lang && bias >= langAnteil;
+    textSlot++;
+    return useShort ? { ...cand, __weg_useShort: true } as typeof cand : cand;
+  };
   const nextDialog = () => dialogsOfLevel.length ? dialogsOfLevel[(dialogRang + dialogSlot++) % dialogsOfLevel.length] : undefined;
   const writesOfLevel = writingTasks.filter((w) => w.level === level);
   const satzOfLevel = sentences.filter((s) => s.level === level);
@@ -337,14 +413,14 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(1),
         kind: "wiederholen",
         titleDe: "Wiederholung & Abruf",
-        titleAr: "استرجاع واستذكار (ما سبق)",
+        titleAr: "استرجاع واستذكار (مزيج 1/7/30 يومًا)",
         minutes: 15,
         // حزمةُ اليومِ في الاسترجاع: دورانٌ يوميٌّ يضمنُ أن تصلَ كلُّ حزمةٍ عينَ المتعلِّمِ
         // ولو زادَ عددُ الحزمِ على خاناتِ درسِ المفرداتِ الأسبوعية
         deckId: phaseDecks[(day - 1) % Math.max(phaseDecks.length, 1)],
-        // 🌙 حلقة الكبسولة: جملُ الاسترجاعِ الصباحيِّ هي كبسولةُ الأمسِ نفسُها (lib/kapsel.ts)
-        sentenceIds: kapselIds(day - 1),
-        quiz: buildQuiz(day - 1, phase, 3),
+        // 🌙 حلقة الكبسولة: مزيج التباعد المكاني 1/7/30 يومًا (lib/kapsel.ts)
+        sentenceIds: kapselIds(day),
+        quiz: kapselQuiz(day),
       });
     }
 
@@ -374,7 +450,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           kind: "lesen",
           titleDe: "Lesetraining",
           titleAr: "قراءة موجّهة",
-          minutes: 35,
+          minutes: level === "B2" ? 25 : level === "B1" ? 32 : 35,
           textId: nextText()?.id,
         });
         // A1: مرحلةٌ من ستّةِ أسابيعَ لـ29 حواراً — خانةُ استماعٍ قصيرةٌ ثانيةٌ يومَ الاثنين (K69i: كلُّ حوارٍ يُجدوَل)
@@ -394,9 +470,41 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           kind: "hoeren",
           titleDe: "Hörtraining (TTS)",
           titleAr: "تسميع واستماع (نطق المتصفح)",
-          minutes: 35,
+          minutes: level === "B2" ? 25 : level === "B1" ? 32 : 35,
           dialogueId: nextDialog()?.id,
         });
+      }
+      if (level === "B2" || level === "B1") {
+        tasks.push({
+          id: tid(12),
+          kind: "sprechen",
+          titleDe: "Mikro-Produktion",
+          titleAr: "جملةٌ شفوية: طبّق القاعدة الجديدة شفوياً قبل الفحص",
+          minutes: level === "B2" ? 15 : 10,
+          sentenceIds: pickN(satzOfLevel, 2, rand).map((s) => s.id),
+        });
+      }
+      // فخ «صديق كاذب» أسبوعي (K-FalscheFreunde): تدريب قصير على التداخل اللغوي
+      if (level !== "A0") {
+        const ff = baueFalschFreundAufgabe(day, level);
+        if (ff) {
+          tasks.push({
+            id: tid(8),
+            kind: "check",
+            titleDe: "Falsche-Freunde-Falle",
+            titleAr: "فخّ: صديق كاذب",
+            minutes: 5,
+            quiz: [{
+              id: ff.id,
+              type: ff.type,
+              promptDe: ff.promptDe,
+              promptAr: ff.promptAr,
+              options: ff.options,
+              answer: ff.options[ff.answer],
+              explanationAr: ff.explanationAr,
+            } as unknown as Exercise],
+          });
+        }
       }
       tasks.push({
         id: tid(5),
@@ -478,7 +586,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         kind: "wortschatz",
         titleDe: "Satzbau & Wortschatz",
         titleAr: "بناء الجملة والمفردات (دمج)",
-        minutes: 35,
+        minutes: level === "B2" ? 35 : 35,
         deckId: phaseDeckA,
         sentenceIds: pickN(satzOfLevel, 5, rand).map((s) => s.id),
       });
@@ -487,7 +595,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         kind: "schreiben",
         titleDe: "Schreibtraining",
         titleAr: "تدريب كتابة",
-        minutes: 35,
+        minutes: level === "B2" ? 40 : 35,
         writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
       });
       tasks.push({
@@ -495,9 +603,19 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         kind: "hoeren",
         titleDe: "Hörtraining (TTS)",
         titleAr: "تسميع واستماع",
-        minutes: 25,
+        minutes: level === "B2" ? 20 : 25,
         dialogueId: nextDialog()?.id,
       });
+      if (level === "B2" || level === "B1") {
+        tasks.push({
+          id: tid(12),
+          kind: "sprechen",
+          titleDe: "Mikro-Produktion",
+          titleAr: "جملتان شفويتان (10 دقائق): لخّص فقرةً من تدريب الكتابة",
+          minutes: 10,
+          sentenceIds: pickN(satzOfLevel, 3, rand).map((s) => s.id),
+        });
+      }
       tasks.push({
         id: tid(5),
         kind: "check",
@@ -512,27 +630,41 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       id: tid(1),
       kind: "wiederholen",
       titleDe: "Wochen-Wiederholung",
-      titleAr: "مراجعة الأسبوع كاملاً",
+      titleAr: "مراجعة الأسبوع كاملاً (كبسولة متباعدة)",
       minutes: 30,
-      sentenceIds: kapselIds(day - 1), // 🌙 كبسولة الأمس
-      quiz: buildQuiz(day - 1, phase, 8),
+      sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة 1/7/30
+      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 5)],
     });
     tasks.push({
       id: tid(2),
       kind: "schreiben",
       titleDe: "Langer Text",
-      titleAr: "كتابة نصّ كامل (المعيار: معايير التقييم)",
-      minutes: 40,
+      titleAr: level === "A0" || level === "A1"
+        ? "كتابة جمل بسيطة (تعبير موجّه)"
+        : "كتابة نصّ كامل (المعيار: معايير التقييم)",
+      minutes: level === "A0" ? 15 : 40,
       writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
     });
-    tasks.push({
-      id: tid(3),
-      kind: "sprechen",
-      titleDe: "Freies Sprechen",
-      titleAr: "تحدّث حرّ (سجّل نفسك)",
-      minutes: 20,
-      sentenceIds: pickN(satzOfLevel, 4, rand).map((s) => s.id),
-    });
+    // K-SilentPeriod: لا تحدّث حر قبل أواخر A2
+    if (level === "B1" || level === "B2" || day >= PHASEN.A2.bis - 7) {
+      tasks.push({
+        id: tid(3),
+        kind: "sprechen",
+        titleDe: "Freies Sprechen",
+        titleAr: "تحدّث حرّ (سجّل نفسك)",
+        minutes: 20,
+        sentenceIds: pickN(satzOfLevel, 4, rand).map((s) => s.id),
+      });
+    } else {
+      tasks.push({
+        id: tid(3),
+        kind: "aussprache",
+        titleDe: "Aussprache & Shadowing",
+        titleAr: "نطظ وترديد (فترة الصمت)",
+        minutes: 15,
+        sentenceIds: pickN(satzOfLevel, 4, rand).map((s) => s.id),
+      });
+    }
     tasks.push({
       id: tid(4),
       kind: "check",
@@ -567,51 +699,99 @@ export function buildDay(day: number, progress: Progress): DayPlan {
             textId: nextText()?.id,
           }
     );
+    // K-FVG: حصة Funktionsverbgefüge أسبوعية في B2
+    const fvg = baueFvgAufgabe(day, level, true);
+    if (fvg) {
+      tasks.push({
+        id: tid(9),
+        kind: "grammatik",
+        titleDe: "Funktionsverbgefüge der Woche",
+        titleAr: "تركيب فعلي وظيفي للأسبوع (B2)",
+        minutes: 8,
+        quiz: [fvg],
+      });
+    }
+    // K-Komposita: حصة فكّ المركَّبات أسبوعية من B1 فصاعداً (3 أسئلة اختيار من متعدد)
+    const kompW = baueKompositaWoche(day, level, true);
+    if (kompW.length > 0) {
+      tasks.push({
+        id: tid(10),
+        kind: "grammatik",
+        titleDe: "Komposita der Woche",
+        titleAr: "🔧 ورشة المركَّبات للأسبوع (B1/B2)",
+        minutes: 7,
+        quiz: kompW,
+      });
+    }
     tasks.push({
       id: tid(2),
       kind: "lesen",
       titleDe: "Lektüre zur Entspannung",
       titleAr: "قراءة خفيفة للتثبيت",
-      minutes: 25,
+      minutes: level === "B2" ? 12 : 15,
       textId: nextText()?.id,
     });
+    tasks.push({
+      id: tid(11),
+      kind: "schreiben",
+      titleDe: "Wochen-Satz",
+      titleAr: level === "A0" || level === "A1"
+        ? "جملة الأسبوع (3 جمل عن أسبوعك)"
+        : "جملة/فقرة الأسبوع (5 جمل تلخّص ما تعلّمته)",
+      minutes: level === "B2" ? 15 : level === "A0" ? 8 : level === "A1" ? 10 : 12,
+      writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+    });
+    if (level === "B2") {
+      tasks.push({
+        id: tid(13),
+        kind: "sprechen",
+        titleDe: "Wochen-Monolog",
+        titleAr: "مونولوج قصير (5 دقائق): لخّص أهمّ ما تعلّمته هذا الأسبوع شفوياً",
+        minutes: 5,
+        sentenceIds: pickN(satzOfLevel, 3, rand).map((s) => s.id),
+      });
+    }
     tasks.push({
       id: tid(3),
       kind: "wiederholen",
       titleDe: "Ich-kann & Ausblick",
-      titleAr: "أستطيع أن… + استعداد للأسبوع القادم",
+      titleAr: "أستطيع أن… + كبسولة متباعدة للأسبوع القادم",
       minutes: 15,
-      sentenceIds: kapselIds(day - 1), // 🌙 كبسولة الأمس (يوم التثبيت)
-      quiz: buildQuiz(day - 2, phase, 4),
+      sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة
+      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 4).slice(0, 4)],
     });
   } else {
-    // أيام الختام 267-270
+    // أيام الختام 375-378 — تستخدم الكبسولة المتباعدة لآخر البنك
+    const gesternKapsel = kapselIds(day);
+    // أيام الختام 375-378
     const finals: Record<number, DayTask[]> = {
-      267: [
+      375: [
         {
           id: tid(1),
           kind: "wiederholen",
-          titleDe: "Gesamtwiederholung",
-          titleAr: "مراجعة شاملة نهائية",
-          minutes: 60,
-          quiz: buildQuiz(266, "B2", 15),
+          titleDe: "Gesamtwiederholung + Kurz-Zusammenfassung",
+          titleAr: "مراجعة شاملة + تلخيص الرحلة في 5 جمل",
+          minutes: 50,
+          sentenceIds: gesternKapsel,
+          quiz: buildQuiz(374, "B2", 15),
+          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
         },
         {
           id: tid(2),
           kind: "check",
           titleDe: "Struktur-Test",
           titleAr: "اختبار هيكلي شامل (القواعد كلها)",
-          minutes: 45,
-          quiz: buildQuiz(267, "Abschluss", 15),
+          minutes: 30,
+          quiz: buildQuiz(375, "Abschluss", 15),
         },
       ],
-      268: [
+      376: [
         {
           id: tid(1),
           kind: "hoeren",
           titleDe: "Abschluss-Hören",
           titleAr: "محاكاة استماع نهائية",
-          minutes: 35,
+          minutes: 25,
           dialogueId: nextDialog()?.id,
         },
         {
@@ -619,19 +799,44 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           kind: "lesen",
           titleDe: "Abschluss-Lesen",
           titleAr: "محاكاة قراءة نهائية",
-          minutes: 35,
+          minutes: 25,
           textId: nextText()?.id,
+        },
+        {
+          id: tid(6),
+          kind: "schreiben",
+          titleDe: "Abschluss-Schreiben (Kurzform)",
+          titleAr: "تدريب كتابة ختامي قصير",
+          minutes: 15,
+          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+        },
+        {
+          id: tid(5),
+          kind: "sprechen",
+          titleDe: "Abschluss-Monolog",
+          titleAr: "مونولوج دقيقة واحدة — ملخّص ما سمعت وقرأت",
+          minutes: 15,
+          sentenceIds: pickN(satzOfLevel, 4, rand).map((s) => s.id),
         },
         {
           id: tid(3),
           kind: "check",
           titleDe: "Prüfungs-Check",
           titleAr: "فحص محاكاة",
-          minutes: 30,
-          quiz: buildQuiz(268, "Abschluss", 12),
+          minutes: 15,
+          quiz: buildQuiz(376, "Abschluss", 12),
+        },
+        {
+          id: tid(4),
+          kind: "wiederholen",
+          titleDe: "Kapsel von gestern",
+          titleAr: "كبسولة الأمس (استدعاء خاطف)",
+          minutes: 5,
+          sentenceIds: gesternKapsel,
+          quiz: [],
         },
       ],
-      269: [
+      377: [
         {
           id: tid(1),
           kind: "schreiben",
@@ -648,18 +853,35 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           minutes: 30,
           sentenceIds: pickN(satzOfLevel, 6, rand).map((s) => s.id),
         },
+        {
+          id: tid(3),
+          kind: "wiederholen",
+          titleDe: "Kapsel von gestern",
+          titleAr: "كبسولة الأمس (استدعاء خاطف)",
+          minutes: 5,
+          sentenceIds: gesternKapsel,
+          quiz: [],
+        },
       ],
-      270: [
+      378: [
         {
           id: tid(1),
           kind: "check",
           titleDe: "Abschlussprüfung",
           titleAr: "الامتحان الختامي الشامل — محاكاة Goethe B2",
-          minutes: 60,
-          quiz: buildQuiz(269, "Abschluss", 12),
+          minutes: 55,
+          quiz: buildQuiz(377, "Abschluss", 12),
           exam: true,
           textId: nextText()?.id,
           dialogueId: nextDialog()?.id,
+          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+        },
+        {
+          id: tid(6),
+          kind: "schreiben",
+          titleDe: "Abschluss-Schreiben (letzter Teil)",
+          titleAr: "قسم الكتابة الختامي",
+          minutes: 15,
           writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
         },
         {
@@ -667,12 +889,13 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           kind: "wiederholen",
           titleDe: "Bilanz & Ausblick",
           titleAr: "الحصيلة وخطة ما بعد B2",
-          minutes: 20,
-          quiz: buildQuiz(270, "Abschluss", 5),
+          minutes: 10,
+          sentenceIds: kapselIds(day),
+          quiz: [...kapselQuiz(day), ...buildQuiz(378, "Abschluss", 5).slice(0, 5)],
         },
       ],
     };
-    tasks.push(...(finals[day] ?? finals[270]));
+    tasks.push(...(finals[day] ?? finals[378]));
   }
 
   // ── محرّكات التعلّم الذكي ──────────────────────────────────────────
@@ -741,7 +964,15 @@ export function buildDay(day: number, progress: Progress): DayPlan {
 
   // ⚖️ الحمل الأكاديمي: معامل المستوى يُطبَّق على كل مهمة مولَّدة (لا على التعويضات: دقائقها عقدٌ سابق)
   for (const t of tasks) if (!t.mandatory) t.minutes = lastMinuten(t.minutes, level);
-  return { day, week, weekday, phase, type, tasks };
+  // ⏱️ إيقاع المستخدم الثلاثي (خفيف/منتظم/مكثّف): ضبط الدقائق نحو الهدف اليومي
+  const tempo = progress.settings.tempo ?? "regelmaessig";
+  const targetMin = TEMPO_ZIELMIN[tempo];
+  const aktuell = tasks.reduce((s, t) => s + t.minutes, 0);
+  if (aktuell > 0) {
+    const faktor = Math.max(0.5, Math.min(1.6, targetMin / aktuell));
+    for (const t of tasks) if (!t.mandatory) t.minutes = Math.max(5, Math.round((t.minutes * faktor) / 5) * 5);
+  }
+  return { day, week, weekday, phase, type, tasks, tempo, zielMin: targetMin };
 }
 
 // ── منطق القفل والتعويض ────────────────────────────────────────────────
@@ -773,13 +1004,16 @@ export function dayScore(plan: DayPlan, taskState: Record<string, TaskResult>) {
   return { score, total, done, tasksTotal: plan.tasks.length };
 }
 
-/** المهام غير المُتقَنة تتحول إلى ديون تعويضية للغد */
+/** المهام غير المُتقَنة تتحول إلى ديون تعويضية للغد
+ *  K-DebtCap: سقف الديون = مهمّتان كحد أقصى، وما زاد يُدمَج في مراجعة نهاية الأسبوع.
+ *  K-A0noDebt: في مرحلة A0 لا تُولَّد ديون على الإطلاق (لا عقاب، بلا إخفاق). */
 export function debtsFrom(plan: DayPlan, taskState: Record<string, TaskResult>): DebtItem[] {
+  if (plan.phase === "A0") return []; // A0 تهيئة صرفة: لا ديون ولا تقييم
   const debts: DebtItem[] = [];
   for (const t of plan.tasks) {
+    if (t.mandatory) continue; // الديون القديمة نفسها تُعالَج في الختام لا تضاف مرة أخرى
     const r = taskState[t.id];
     if (!isPassed(r)) {
-      // التعويضات القديمة غير المنقذة تبقى تعويضات
       debts.push({
         kind: t.kind,
         titleDe: t.titleDe.replace(/^Nachholen: /, ""),
@@ -795,7 +1029,8 @@ export function debtsFrom(plan: DayPlan, taskState: Record<string, TaskResult>):
       });
     }
   }
-  return debts.slice(0, 6); // سقف التعويض حتى لا ينهار الغد
+  // كحد أقصى مهمّتا دين تُرحَّلان للغد؛ الباقي ينتظر مراجعة نهاية الأسبوع
+  return debts.slice(0, 2);
 }
 
 /** تقدّم الخطة الكلي */
@@ -806,7 +1041,7 @@ export function planPct(progress: Progress): number {
 /* ═══ ⏱️ منحنى الساعات المخطَّطة — أساسُ عقد CEFR ═══
    الخطةُ حتميةٌ (بذرةُ كلِّ يومٍ رقمُه)، فمنحنى الدقائقِ المخطَّطةِ ثابتٌ
    ولا يتأثَّر بما أنجزَه المتعلِّم. لذلك يُحسَبُ مرّةً واحدةً ويُحفَظ.
-   بدونه كان قولُ «270 يوماً تكفي لـB2» رأياً بلا رقم. */
+   بدونه كان قولُ «378 يوماً تكفي لـB2» رأياً بلا رقم. */
 let PLAN_MIN_KUM: number[] | null = null;
 
 /** الدقائق المخطَّطة من اليوم 1 حتى اليوم `day` ضمناً */
@@ -830,7 +1065,7 @@ export function planStundenBis(day: number): number {
   return planMinBis(day) / 60;
 }
 
-/** إجمالي ساعات الخطة كاملةً (270 يوماً) */
+/** إجمالي ساعات الخطة كاملةً (378 يوماً) */
 export function planStundenGesamt(): number {
   return planStundenBis(TOTAL_DAYS);
 }

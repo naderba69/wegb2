@@ -6,7 +6,7 @@ import type {
   FehlerState,
   GrammarTopic,
   Progress,
-} from "./types";
+} from "./types"; import { TOTAL_DAYS } from "./types";
 import { newCard, reviewCard, isDue } from "./srs";
 import { sicherheitsZeile } from "./sicherheit";
 
@@ -224,9 +224,12 @@ function lehrerBerichtBasis(p: Progress): string[] {
   return lines;
 }
 
-/** أسئلة تحديد المستوى — 12 سؤالاً عبر المستويات (حتمية) */
+/** أسئلة تحديد المستوى — 12+ سؤالاً عبر المستويات (حتمية): قواعد + قراءة قصيرة + استماع TTS */
 export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise[] {
+  // 14 سؤالاً من A0 → B2 (2+2+3+3+4) مع سؤالين افتتاحيين عن الأبجدية والتحية لـA0
   const ids = [
+    "a0-begrussung",
+    "a1-sein-haben",
     "a1-praesens",
     "a1-akkusativ",
     "a2-perfekt",
@@ -235,24 +238,91 @@ export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise
     "b1-relativ",
     "b1-konnektoren",
     "b1-genitiv",
+    "b1-konj2",
     "b2-partizip",
     "b2-bedingung",
     "b2-indirekte-rede",
-    "b2-modalpartikel",
   ];
-  return ids.flatMap((id, i) => {
+  const out: Exercise[] = ids.flatMap((id, i) => {
     const t = gmap[id];
-    if (!t?.exercises?.length) return [];
+    if (!t?.exercises?.length) {
+      if (id === "a0-begrussung") {
+        return [{
+          id: `pl-${i}-${id}`,
+          type: "mc",
+          promptDe: "Was sagt man auf Deutsch zur Begrüßung?",
+          promptAr: "كيف نقول «مرحباً» بالألمانية؟",
+          options: ["Tschüss", "Hallo", "Danke", "Bitte"],
+          answer: "Hallo",
+          explanationAr: "التحية = Hallo، والوداع = Tschüss، الشكر = Danke، من فضلك = Bitte.",
+        }];
+      }
+      return [];
+    }
     return [{ ...t.exercises[0], id: `pl-${i}-${id}` }];
   });
+
+  // ── فقرات قراءة قصيرة بمستويات متدرّجة ──
+  out.push({
+    id: "pl-lesen-a1",
+    type: "mc",
+    promptDe: "Lesen: „Ich heiße Anna. Ich wohne in Berlin. Ich habe einen Bruder. Er heißt Tom.“ — Wie heißt der Bruder?",
+    promptAr: "📖 قراءة (مستوى A1): اقرأ الفقرة القصيرة ثم أجب: ما اسم أخي آنا؟",
+    text: "Ich heiße Anna. Ich wohne in Berlin. Ich habe einen Bruder. Er heißt Tom.",
+    options: ["Anna", "Berlin", "Tom", "Bruder"],
+    answer: "Tom",
+    explanationAr: "في الجملة الأخيرة «Er heißt Tom.» — Tom هو اسم الأخ.",
+  });
+  out.push({
+    id: "pl-lesen-b1",
+    type: "mc",
+    promptDe: "Lesen: „Obwohl das Wetter gestern schlecht war, sind wir spazieren gegangen. Danach haben wir in einem kleinen Café Kaffee getrunken.“ — Was ist richtig?",
+    promptAr: "📖 قراءة (مستوى B1): رغم سوء الجو بالأمس، خرجنا للمشي ثم شربنا القهوة في مقهى صغير.",
+    text: "Obwohl das Wetter gestern schlecht war, sind wir spazieren gegangen. Danach haben wir in einem kleinen Café Kaffee getrunken.",
+    options: [
+      "Wir sind zu Hause geblieben.",
+      "Wir sind spazieren gegangen und haben Kaffee getrunken.",
+      "Das Wetter war sehr gut.",
+      "Das Café war sehr groß.",
+    ],
+    answer: "Wir sind spazieren gegangen und haben Kaffee getrunken.",
+    explanationAr: "الجملة «sind wir spazieren gegangen … haben wir … Kaffee getrunken» تؤكد الخيار الصحيح.",
+  });
+
+  // ── فقرات استماع (تُنطَق عبر TTS داخل الواجهة؛ السؤال يطلب زر الاستماع) ──
+  out.push({
+    id: "pl-hoer-a2",
+    type: "mc",
+    promptDe: "🎧 Hören (▶ اضغط 🔊 على الجملة): „Am Samstag gehe ich mit meiner Freundin ins Kino. Wir sehen einen neuen französischen Film.“ — Wohin geht die Person am Samstag?",
+    promptAr: "🎧 استماع (مستوى A2): اضغط 🔊 على زر الاستماع في الأسفل ثم أجب: إلى أين تذهب المتكلمة يوم السبت؟",
+    text: "Am Samstag gehe ich mit meiner Freundin ins Kino. Wir sehen einen neuen französischen Film.",
+    options: ["ins Theater", "ins Kino", "in die Schule", "zur Arbeit"],
+    answer: "ins Kino",
+    explanationAr: "تقول الجملة «ins Kino» — السينما.",
+    hint: "🔊 استمع ثم اختر",
+  });
+  out.push({
+    id: "pl-hoer-b2",
+    type: "truefalse",
+    promptDe: "🎧 Hören (▶ اضغط 🔊): „Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.“ — Aussage: Die Person spielt jeden Tag Klavier. Richtig oder falsch?",
+    promptAr: "🎧 استماع (مستوى B2): الجملة تتحدث عن أمنية بلا تحقق. العبارة: «الشخص يعزف البيانو كل يوم» — هل هي صحيحة؟",
+    text: "Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.",
+    options: ["Richtig", "Falsch"],
+    answer: "Falsch",
+    explanationAr: "«Wenn ich mehr Zeit hätte, würde ich …» = أمنية (Konjunktiv II) لا تتحقق فعلياً؛ الدراسة تشغل كل يومها، إذاً العبارة خاطئة.",
+    hint: "🔊 استمع ثم اختر",
+  });
+
+  return out;
 }
 
-/** اقتراح اليوم الانطلاق حسب نتائج التحديد (صحيح من كل 3 لكل مستوى) */
+/** اقتراح اليوم الانطلاق حسب نتائج التحديد (≥1 صحيح من كل مستوى) */
 export function vorschlagTag(gruppen: Record<string, number>): number {
   if ((gruppen.B2 ?? 0) >= 2) return PHASE_START.B2;
   if ((gruppen.B1 ?? 0) >= 2) return PHASE_START.B1;
   if ((gruppen.A2 ?? 0) >= 2) return PHASE_START.A2;
-  return 1;
+  if ((gruppen.A1 ?? 0) >= 1) return PHASE_START.A1;
+  return PHASE_START.A0; // يبدأ من التهيئة الحقيقية
 }
 
 /** رسالة وليّ الأمر — تقرير ثنائي اللغة حتمي من نتائج الطالب (بلا استيراد plan تجنّباً للدورة) */
@@ -261,7 +331,7 @@ export function elternBrief(p: Progress): { de: string[]; ar: string[] } {
   const ar: string[] = [];
   const day = Math.min(p.plan.day, 270);
   const phase = levelAmTag(day);
-  de.push(`Ihr Kind ist bei Tag ${day} von 270 (Phase ${phase}) auf dem Weg bis B2.`);
+  de.push(`Ihr Kind ist bei Tag ${day} von 378 (Phase ${phase}) auf dem Weg bis B2.`);
   ar.push(`طفلك في اليوم ${day} من 270 (مرحلة ${phase}) على الطريق نحو B2.`);
   const days = Object.entries(p.plan.days)
     .map(([d, r]) => [Number(d), r] as const)

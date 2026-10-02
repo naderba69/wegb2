@@ -45,6 +45,9 @@ export default function AusspracheTrainer({ satz, ar, level = "A1" }: { satz: st
   return (
     <section className="card" data-test="aussprache" style={{ padding: "1rem 1.2rem", display: "grid", gap: "0.6rem" }}>
       <h3 style={{ margin: 0 }}>🎙️ مدرّب النطق — الإيقاع والطلاقة</h3>
+      <div className="card" style={{ padding: "0.5rem 0.75rem", background: "var(--color-warn-soft, #fff7ed)", border: "1px dashed var(--color-warn, #f59e0b)", fontSize: "0.8rem", color: "var(--color-ink2)" }}>
+        ⚠️ هذه الأداة <strong>اختيارية</strong> لا تُدخَل في الدرجة الرسمية ولا تُستخدَم لمنع عبور المراحل. تعطيك تغذية راجعة على الإيقاع والوقفات فقط — لا تعاقب نفسك على نتيجة غير مثالية.
+      </div>
       <div className="card" style={{ padding: "0.6rem 0.8rem", background: "var(--color-paper2)" }}>
         <De style={{ fontWeight: 800, fontSize: "1.02rem" }}>{satz}</De>
         {ar && <div style={{ fontSize: "0.86rem", color: "var(--color-ink2)" }}>{ar}</div>}
@@ -63,7 +66,7 @@ export default function AusspracheTrainer({ satz, ar, level = "A1" }: { satz: st
       </div>
 
       {status === "kein-mikro" && (
-        <div className="card" style={{ padding: "0.6rem", background: "#fef3c7", fontSize: "0.86rem" }}>
+        <div className="card" style={{ padding: "0.6rem", background: "var(--color-amber-soft)", fontSize: "0.86rem" }}>
           تعذّر الوصول إلى الميكروفون. المسار البديل: اقرأ الجملة بصوتٍ عالٍ ثلاث مرّات وقارنها بالنموذج المسموع —
           <strong> لكنّ هذه القراءة لا تُحتسَب في الدرجة</strong> لأنّها غير مقيسة.
         </div>

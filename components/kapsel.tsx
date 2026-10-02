@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { kapselSaetze, kapselAusTag } from "@/lib/kapsel";
+import { kapselSaetzeAbend, kapselAusTag } from "@/lib/kapsel";
 import { speakDe } from "@/lib/speech";
 import { De } from "@/components/De";
 
@@ -10,7 +10,7 @@ import { De } from "@/components/De";
  */
 export function TagesKapsel({ day, voiceName, rate }: { day: number; voiceName?: string; rate?: number }) {
   const [offen, setOffen] = useState(false);
-  const saetze = kapselSaetze(day);
+  const saetze = kapselSaetzeAbend(day);
   const eigen = kapselAusTag(day);
   if (saetze.length === 0) return null;
   return (

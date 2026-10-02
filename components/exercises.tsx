@@ -204,8 +204,18 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                   </div>
                 )}
                 {ex.text && (
-                  <div style={{ marginBottom: "0.5rem" }}>
+                  <div style={{ marginBottom: "0.5rem" }} data-testid="ex-text">
                     <De>{ex.text.replace("___", "______")}</De>
+                    {ex.id.startsWith("pl-hoer") && (
+                      <button
+                        type="button"
+                        className="chip"
+                        style={{ marginTop: "0.3rem", cursor: "pointer" }}
+                        onClick={() => speakAny(ex.text!)}
+                      >
+                        🔊 استمع إلى المقطع
+                      </button>
+                    )}
                   </div>
                 )}
                 {ex.type === "dictation" && (

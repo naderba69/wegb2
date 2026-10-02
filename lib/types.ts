@@ -1,7 +1,7 @@
 // نماذج البيانات — طريقي إلى B2 (محرّك الخطة اليومية)
-export type Level = "A1" | "A2" | "B1" | "B2";
+export type Level = "A0" | "A1" | "A2" | "B1" | "B2";
 export type UiLang = "ar" | "mix" | "de";
-export type Phase = "A1" | "A2" | "B1" | "B2" | "Abschluss";
+export type Phase = "A0" | "A1" | "A2" | "B1" | "B2" | "Abschluss";
 export type TaskKind =
   | "wiederholen"
   | "grammatik"
@@ -10,6 +10,7 @@ export type TaskKind =
   | "lesen"
   | "schreiben"
   | "sprechen"
+  | "aussprache"
   | "check";
 export type DayType = "lerntag" | "festigung" | "wochencheck" | "abschluss";
 
@@ -104,6 +105,8 @@ export interface Lesetext {
   questions: Exercise[];
   /** 📜 النسخة الطويلة للقراءة بطول CEFR حقيقي (B2: 220–420 كلمة)؛ `de` القصيرة تبقى نصَّ الاستماع المسجَّل */
   lang?: Langfassung;
+  /** 🧭 علامة داخلية: فضّل النسخة القصيرة (لتدرّج نسبة النصوص الأصلية) */
+  __weg_useShort?: boolean;
 }
 
 export interface Langfassung {
@@ -237,6 +240,10 @@ export interface DayPlan {
   phase: Phase;
   type: DayType;
   tasks: DayTask[];
+  tempo: Tempo;
+  zielMin: number;
+  /** المحطات الست للدرس (إحماء، نطق/ظل، مفردات، قواعد استقرائية، استماع/قراءة، إنتاج) */
+  stationen?: Array<{ id: string; titelAr: string; titelDe: string; min: number }>;
 }
 
 export interface TaskResult {
@@ -286,6 +293,8 @@ export interface SrsState {
   reps: number;
   lapses: number;
   learning?: boolean;
+  /** تاريخ إدخال البطاقة (لمراجعة أولى بعد 24 ساعة) */
+  introduced?: string;
 }
 
 /** خطأ مسجَّل في دفتر الأخطاء */
@@ -328,6 +337,16 @@ export interface Kontrakt {
 /** تقييمُ الثقةِ قبلَ الإجابة (Modul: Metakognition): سجلٌّ خامٌّ يُشتقُّ منه مؤشّرُ «الثقةِ الخاطئة» */
 export interface SicherheitsEintrag { t: string; id: string; sicher: boolean; correct: boolean }
 
+/** سرعة التعلّم التي يختارها المستخدم (3 وتائر) */
+export type Tempo = "leicht" | "regelmaessig" | "intensiv";
+export const TEMPO_ZIELMIN: Record<Tempo, number> = { leicht: 15, regelmaessig: 30, intensiv: 60 };
+export const TEMPO_LABEL: Record<Tempo, { de: string; ar: string; min: number }> = {
+  leicht:       { de: "Leicht (15 Min/Tag)",     ar: "خفيف (15 دقيقة/يوم)",    min: 15 },
+  regelmaessig: { de: "Regelmäßig (30 Min/Tag)", ar: "منتظم (30 دقيقة/يوم)",   min: 30 },
+  intensiv:     { de: "Intensiv (60 Min/Tag)",   ar: "مكثّف (60 دقيقة/يوم)",   min: 60 },
+};
+export const NEW_CARDS_PER_DAY: Record<Tempo, number> = { leicht: 3, regelmaessig: 5, intensiv: 10 };
+
 export interface Progress {
   /** آخرُ 500 تقييمِ ثقةٍ قبلَ الإجابة — اختياريّ، يُملأ من ExerciseSet */
   sicherheit?: SicherheitsEintrag[];
@@ -344,9 +363,12 @@ export interface Progress {
   srs: Record<string, SrsState>;
   canDo: Record<string, boolean>;
   streak: { last: string | null; count: number };
+  /** يوم سيّئ: بصمة المستخدم أنّ اليوم كان صعباً → تُجمَّد السلسلة بدون عقاب ولا ديون */
+  badDay?: string;
   settings: {
     uiLang: "auto" | UiLang;
     rate: number;
+    tempo: Tempo;
     voiceName?: string;
     /** مدرّس LLM اختياري (OpenAI-compatible) — يبقى محلياً في متصفحك */
     llm?: { baseUrl: string; apiKey: string; model: string };
@@ -400,14 +422,15 @@ export const emptyProgress: Progress = {
   srs: {},
   canDo: {},
   streak: { last: null, count: 0 },
-  settings: { uiLang: "auto", rate: 0.9 },
+  settings: { uiLang: "auto", rate: 0.85, tempo: "regelmaessig" as Tempo },
   xp: 0,
   abzeichen: {},
   kompetenzLog: [],
 };
 
-export const TOTAL_DAYS = 270;
+export const TOTAL_DAYS = 378;
 export const LEVEL_COLORS: Record<Phase, string> = {
+  A0: "var(--color-gold)",
   A1: "var(--color-a1)",
   A2: "var(--color-a2)",
   B1: "var(--color-b1)",

@@ -296,6 +296,74 @@ function BrueckenBlock({ gramId }: { gramId: string }) {
   );
 }
 
+// ── الحلقة الثلاثية بعد القاعدة: تعرّف → إكمال → إنتاج حر ──────────────
+function TriplePractice({ topic, seed, onPoints }: { topic: GrammarTopic; seed: number; onPoints: (p: number, m: number) => void }) {
+  const items = useMemo(() => {
+    // نبني من أمثلة القاعدة 3 تمارين فقط إن أمكن
+    const rand = rng(seed);
+    const beispiele = [...topic.examples].sort(() => rand() - 0.5).slice(0, 3);
+    if (beispiele.length < 2) return [] as Exercise[];
+    const out: Exercise[] = [];
+    // المرحلة 1: تعرّف (اختيار من متعدد) — أيُّ الجمل يخالف القاعدة / أو أيها صحيح؟
+    const richtig = beispiele[0];
+    // نولّد جملة مشوَّهة بسيطة من التحذيرات إن وُجدت، وإلا نحذف أداة/كلمة قصيرة
+    const pit = topic.pitfalls?.[Math.floor(rand() * (topic.pitfalls?.length ?? 1))];
+    const falschDe = pit?.de ?? richtig.de.replace(/\b(der|die|das|ein|eine)\b/i, "___").replace(/___\s+___/, "der");
+    out.push({
+      id: `trip-erk-${topic.id}-${seed}`,
+      type: "mc",
+      promptDe: "Welcher Satz ist korrekt?",
+      promptAr: "🧠 المرحلة 1 (تعرّف): أيُّ الجمل الآتية صحيح حسب القاعدة؟",
+      options: [richtig.de, falschDe].sort(() => rand() - 0.5),
+      answer: richtig.de,
+      explanationAr: `الجملة الصحيحة: «${richtig.de}» — ${richtig.ar}`,
+    });
+    // المرحلة 2: إكمال (fill) — نحذف كلمة مفتاحية من المثال الثاني
+    const ziel = beispiele[1];
+    const worte = ziel.de.split(/\s+/);
+    // اختر أطول كلمة (غالباً الكلمة المفتاحية)
+    const idx = worte.reduce((best, w, i) => (w.length > worte[best].length ? i : best), 0);
+    const loesung = worte[idx].replace(/[.,!?]+$/, "");
+    worte[idx] = "___";
+    out.push({
+      id: `trip-fill-${topic.id}-${seed}`,
+      type: "fill",
+      promptDe: "Ergänze die fehlende Wortform.",
+      promptAr: "✍️ المرحلة 2 (إكمال): أكمل الفراغ في الجملة:",
+      text: worte.join(" "),
+      answer: loesung,
+      explanationAr: `الجملة الكاملة: «${ziel.de}» — ${ziel.ar}`,
+    });
+    // المرحلة 3: إنتاج حر (translate) — ترجمة من العربية إلى الألمانية للمثال الثالث أو الأول
+    const prod = beispiele[2] ?? beispiele[0];
+    // نستخرج كلمات مفتاحية من الجملة الألمانية (أطول 3 كلمات)
+    const kw = prod.de
+      .replace(/[.,!?]/g, "")
+      .split(/\s+/)
+      .filter((w) => w.length >= 4 && !/^(der|die|das|ein|eine|einer|eines|einem|einen|ich|du|er|sie|es|wir|ihr|Sie|und|oder|aber|in|an|auf|zu|mit|von|für|ist|sind|war|bin|bist|hat|habe|haben|sein|nicht|auch|sehr)$/i.test(w))
+      .sort((a, b) => b.length - a.length)
+      .slice(0, 3);
+    out.push({
+      id: `trip-prod-${topic.id}-${seed}`,
+      type: "translate",
+      promptDe: "Übersetze ins Deutsche (Schlüsselwörter müssen vorkommen).",
+      promptAr: "🗣️ المرحلة 3 (إنتاج): ترجم إلى الألمانية (يجب أن تظهر الكلمات المفتاحية):",
+      text: prod.ar,
+      answer: prod.de,
+      keywords: kw,
+      explanationAr: `الجملة المرجعية: «${prod.de}» — ${prod.ar}`,
+    });
+    return out;
+  }, [topic, seed]);
+  if (items.length === 0) return null;
+  return (
+    <div style={{ marginTop: "0.8rem" }} data-testid="triple-practice">
+      <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>🔁 الحلقة الثلاثية: تعرّف ← إكمال ← إنتاج</h4>
+      <ExerciseSet items={items} onPoints={onPoints} />
+    </div>
+  );
+}
+
 // ── شرح القواعد + تمارينه ───────────────────────────────────────────────
 function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void }) {
   const topic = getGrammar(task.topicId ?? "");
@@ -304,7 +372,18 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
   const frage = useMemo(() => (topic ? entdeckungsFrage(topic, alleGrammatik, seed) : null), [topic, seed]);
   const [ergebnis, setErgebnis] = useState<EntdeckungsErgebnis | null>(null);
   const [gewaehlt, setGewaehlt] = useState<number | null>(null);
-  if (!topic) return <Empty title="قاعدة غير موجودة" />;
+  if (!topic) {
+    /* 🧩 مهمةُ الأسبوعِ (Komposita / FVG): ورشةٌ بلا درسٍ مضيف — أسئلتُها قائمةٌ بذاتها لا شاشةً خاوية */
+    if (task.quiz && task.quiz.length > 0) {
+      return (
+        <section className="card fadein" style={{ padding: "1.2rem" }}>
+          <Head icon="🧩" de={task.titleDe} ar={task.titleAr} />
+          <ExerciseSet items={task.quiz} onPoints={onPoints} />
+        </section>
+      );
+    }
+    return <Empty title="قاعدة غير موجودة" />;
+  }
   const entdecken = !!frage && induktionMoeglich(topic);
   const offen = !entdecken || ergebnis !== null;
 
@@ -448,6 +527,9 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
 
       <h4 style={{ fontWeight: 800, margin: "1rem 0 0.6rem" }}>تثبيت فوري</h4>
       <ExerciseSet items={topic.exercises} onPoints={onPoints} />
+
+      {/* 🔁 الحلقة الثلاثية: تعرّف → إكمال → إنتاج حر */}
+      <TriplePractice topic={topic} seed={Array.from(task.id).reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 41)} onPoints={onPoints} />
       </>)}
     </section>
   );
@@ -531,7 +613,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).style.display = "none";
               }}
-              style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "#fff" }}
+              style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "var(--color-card)" }}
             />
           )}
           <div style={{ fontSize: "1.7rem", fontWeight: 900 }}>
@@ -969,7 +1051,7 @@ function seedFrom(id: string): number {
   return Math.abs(h) + 1;
 }
 
-function CanDoList({ level, full }: { level: "A1" | "A2" | "B1" | "B2"; full?: boolean }) {
+function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; full?: boolean }) {
   const { toggleCanDo } = useProgressMini();
   const items = candoMap[level] ?? [];
   return (

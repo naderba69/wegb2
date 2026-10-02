@@ -22,7 +22,7 @@ export type Aktivitaet = {
 };
 
 export const FLUEGEL_META: { id: Fluegel; emoji: string; titel: string; unter: string }[] = [
-  { id: "kurs", emoji: "🎓", titel: "الجناح التعليمي — Lernplan-Kurs", unter: "خطة يومية محكمة من اليوم 1 إلى 270 تعوّض حصص المدرسة" },
+  { id: "kurs", emoji: "🎓", titel: "الجناح التعليمي — Lernplan-Kurs", unter: "خطة يومية محكمة من اليوم 1 إلى 378 تعوّض حصص المدرسة" },
   { id: "pruefen", emoji: "📝", titel: "جناح الامتحان — Prüfungszentrum", unter: "محاكاة رسمية بتوقيت Goethe + تحديد مستوى + Sprint" },
   { id: "ueben", emoji: "💪", titel: "جناح التدريب — Kompetenz-Training", unter: "مدرّبات مصنّفة بالكفاءة اللغوية لا باسم الأداة" },
   { id: "foerdern", emoji: "🩺", titel: "جناح التقوية — Förderzentrum", unter: "دفتر الأخطاء والتكرار المتباعد والتقارير والتحفيز" },
@@ -30,7 +30,7 @@ export const FLUEGEL_META: { id: Fluegel; emoji: string; titel: string; unter: s
 
 export const AKTIVITAETEN: Aktivitaet[] = [
   // ————— 🎓 الجناح التعليمي —————
-  { id: "tagesplan", emoji: "🗺️", titel: "خطة اليوم — Tagesplan", unter: "مهام اليوم بإغلاق إلزامي وتعويضات", fluegel: "kurs", handlung: ["Grammatik", "Wortschatz", "Schreiben", "Hoeren", "Lesen", "Sprechen"], stufe: [1, 8], merkmal: "270 يوماً × خطة مولّدة حتمياً: تعلّم/تثبيت/فحص أسبوعي/امتحان مرحلة — ما لم يُتقَن يُرحَّل تعويضاً", fehlerarten: "—", status: "live" },
+  { id: "tagesplan", emoji: "🗺️", titel: "خطة اليوم — Tagesplan", unter: "مهام اليوم بإغلاق إلزامي وتعويضات", fluegel: "kurs", handlung: ["Grammatik", "Wortschatz", "Schreiben", "Hoeren", "Lesen", "Sprechen"], stufe: [1, 8], merkmal: "378 يوماً × خطة مولّدة حتمياً: تعلّم/تثبيت/فحص أسبوعي/امتحان مرحلة — ما لم يُتقَن يُرحَّل تعويضاً", fehlerarten: "—", status: "live" },
   { id: "wegweiser", emoji: "🧭", titel: "البوصلة اليومية — WegWeiser", unter: "ثلاث وجهات من السجلّ حسب مرحلتك · المقفل مؤجَّل لا محذوف", fluegel: "kurs", handlung: ["Lesen", "Hoeren", "Schreiben", "Sprechen"], stufe: [1, 8], merkmal: "lib/weg.ts يشتق المرحلة من اليوم ويرشّح الأنشطة بشبكة الكفاءات — K20 تحكُم حتميتها", fehlerarten: "—", status: "live" },
   { id: "wochenplan", emoji: "📆", titel: "المادة الأسبوعية — Wochenplan", unter: "مفردات وأفعال ومواصفات الأسبوع", fluegel: "kurs", handlung: ["Wortschatz", "Grammatik"], stufe: [1, 8], merkmal: "قوائم مادة الأسبوع مربوطة بأيامها", fehlerarten: "—", status: "live" },
   { id: "arbeitsblatt", emoji: "📄", titel: "الواجب المطبوع — Arbeitsblatt", unter: "ورقة أسبوعية بالعربية", fluegel: "kurs", handlung: ["Schreiben", "Wortschatz"], stufe: [1, 8], merkmal: "تصطفّ مع خطة الأسبوع وتُطبع للأسرة", fehlerarten: "—", status: "live", nurKatalog: true, },
