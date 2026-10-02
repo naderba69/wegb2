@@ -1810,6 +1810,61 @@ void 0;
       "K114b التبويبُ يستقبلُ المَرتحَلَ ويعرضُه تمريناً حقيقيّاً — لا رابطَ ميت");
   }
 
+
+
+  /* ═══ K118 — حارسُ اللغة: صفر نصٍّ لاتينيٍّ ظاهر في أسطح الواجهة الثمانية (بعد التدقيق اليدوي) ═══ */
+  {
+    const flaeche = ["app/page.tsx", "app/lernen/page.tsx", "app/ueben/page.tsx", "app/pruefen/page.tsx", "app/fortschritt/page.tsx", "components/akademie/Navigation.tsx", "components/akademie/LektionWizard.tsx", "components/akademie/FehlerRevue.tsx"];
+    const sichtbarLatin: string[] = [];
+    const isClass = (t: string) => /^[a-z][a-z0-9-]*(\s[a-z0-9-]+)*$/.test(t);
+    for (const f of flaeche) {
+      if (!existsSync(f)) { sichtbarLatin.push(f + " (مفقود!)"); continue; }
+      const src = readFileSync(f, "utf8");
+      const werte = [...src.matchAll(/=\s*"([^"\n]{4,})"|:\s*"([^"\n]{4,})"/g)].map((x) => x[1] ?? x[2]);
+      for (const t of werte) {
+        if (!t.includes(" ") || !/[A-ZÄÖÜ]/.test(t)) continue;
+        if (/[\u0600-\u06FF]/.test(t)) continue; // نصٌّ عربيٌّ حتى لو فيه اختصارٌ لاتينيٌّ (JSON) فهو عربيٌّ الواجهة
+        if (isClass(t) || t.startsWith("use ")) continue;
+        sichtbarLatin.push(f + ": " + t.slice(0, 40));
+      }
+    }
+    ok(sichtbarLatin.length === 0,
+      "K118 صفرُ نصٍّ لاتينيٍّ ظاهرٍ في الأسطح الثمانية (classnames وأوامر مستثناة) — الواجهةُ عربيّةٌ والمحتوى الألماني يمرُّ عبر <De> مع عربيّته: " + (sichtbarLatin.slice(0, 4).join(" · ") || "نظيف"));
+  }
+
+
+  /* ═══ K115–K117 — P4: «اختبر» خلف بوابة الوحدات · «تقدّمي» سلبيّ بلا رابط · عربّةُ العناوين ═══ */
+  {
+    const pruef = existsSync("app/pruefen/page.tsx") ? readFileSync("app/pruefen/page.tsx", "utf8") : "";
+    const fort = existsSync("app/fortschritt/page.tsx") ? readFileSync("app/fortschritt/page.tsx", "utf8") : "";
+
+    // K115: بوابة الوحدات أولاً (ModulTor) ثم المحاكاة الأربعة — والبوابة شرطٌ حقيقيّ modulFrei
+    const pruefMontiert = ["<ModulTor day={day} />", "<ProbeklausurCard progress={progress} />", "<PruefungsZentrum progress={progress} />", "<SelbstTestZentrum progress={progress} />", "<SchulSimulator progress={progress} />"];
+    const pruefNao = pruefMontiert.filter((m) => !pruef.includes(m));
+    ok(pruefNao.length === 0, "K115a خمسُ أبوابِ اختبارٍ مركَّبةٌ فعلاً في «اختبر» — ناقص: " + (pruefNao.join(" · ") || "لا شيء"));
+    ok(pruef.indexOf("<ModulTor") !== -1 && pruef.indexOf("<ModulTor") < pruef.indexOf("<ProbeklausurCard") && pruef.includes("modulFrei("),
+      "K115b بوابةُ الوحداتِ تسبقُ المحاكاةَ في البناءِ والعرض، والشرطُ شرطُ المحرّك modulFrei لا زينة");
+
+    // K116: «تقدّمي» سلبيةٌ محضة — عشرُ محطاتٍ وصفر رابط
+    const fortMontiert = ["<BerichteZentrum progress={progress} name={activeProfile().name} />", "<WegWeiser progress={progress} />", "<RadarKarte progress={progress} />", "<Fehlerkartei />", "<AbzeichenKarte progress={progress} />", "<GesundheitsWache progress={progress} />", "<LernStrategieZentrum progress={progress} />", "<ElternPaket progress={progress} name={activeProfile().name} />", "<KontraktCard progress={progress} />", "<Wochenplan progress={progress} />"];
+    const fortNao = fortMontiert.filter((m) => !fort.includes(m));
+    ok(fortNao.length === 0, "K116a عشرُ محطاتِ إحصاءٍ مركَّبةٌ في «تقدّمي» — ناقص: " + (fortNao.join(" · ") || "لا شيء"));
+    const fortHref = [...fort.matchAll(/href="([^"]+)"/g)].map((x) => x[1]);
+    ok(fortHref.length === 0 && !fort.includes("<Link"),
+      "K116b «تقدّمي» سلبيةٌ محضة: صفر href وصفر Link — مشاهدةٌ لا روابطَ محتوى (" + fortHref.join(",") + ")");
+
+    // K117: العناوينُ عربيةٌ والتنقّلُ عربيٌّ — لا نصُّ واجهةٍ ألمانيٍّ مُجرَّد
+    const tabs = ["lernen", "ueben", "pruefen", "fortschritt"];
+    const latinH1 = tabs.filter((t) => {
+      const src = existsSync(`app/${t}/page.tsx`) ? readFileSync(`app/${t}/page.tsx`, "utf8") : "";
+      return /<h1[^>]*>\s*[A-Za-z]/.test(src);
+    });
+    ok(latinH1.length === 0, "K117a لا عنوانَ h1 بأبجديةٍ لاتينيةٍ في أيِّ تبويب — العناوينُ عربيّةٌ بالكامل (" + latinH1.join(",") + ")");
+    const navLabels = [...(existsSync("components/akademie/Navigation.tsx") ? readFileSync("components/akademie/Navigation.tsx", "utf8") : "").matchAll(/label: "([^"]+)"/g)].map((x) => x[1]);
+    ok(navLabels.length === 5 && navLabels.every((l) => /^[\u0600-\u06FF\s·]+$/.test(l)),
+      "K117b خمسُ تسمياتِ التنقّلِ عربيّةٌ بلا استثناء — " + navLabels.join(" · "));
+  }
+
   /* ═══ K111 — الهويّةُ البصريةُ B (images/dirB-today.png) — كتلةُ شاشةِ اليومِ واحدةٌ قابلةٌ للتبديل ═══ */
   {
     const g = readFileSync("app/globals.css", "utf8");
