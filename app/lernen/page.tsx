@@ -1,23 +1,37 @@
+"use client";
+import { useProgress } from "@/lib/store";
+import { buildDay } from "@/lib/plan";
+import { LektionWizard } from "@/components/akademie/LektionWizard";
+
 /**
- * 🚧 وجهة مؤقتة ضمن إعادة الهيكلة (P2) — الباب موجود ومُسجَّل في التنقّل (K101).
- * المحتوى يُبنى في الدفعة P2 وفق «وثيقة إعادة الهيكلة» docs/umstrukturierung.md.
+ * 📖 وجهة «الدرس» (P2): بابُ المعالج الخمسي.
+ * يفتح على درس اليوم نفسه — أي موضعٍ في الطابور — وبابه الوحيد «اليوم» (K109).
  */
-export default function LernenStub() {
+export default function Lernen() {
+  const { progress } = useProgress();
+  const day = progress.plan.day;
+  const plan = buildDay(day, progress);
+
+  const gramTask = plan.tasks.find((t) => t.kind === "grammatik" && t.topicId);
+  const topicId =
+    gramTask?.topicId ??
+    (plan.phase === "A1"
+      ? "a1-sein-haben"
+      : plan.phase === "A2"
+      ? "a2-perfekt"
+      : plan.phase === "B1"
+      ? "b1-passiv"
+      : "b2-nominalstil");
+
   return (
-    <div className="today-screen fadein card" style={{ padding: "2rem", textAlign: "center" }}>
-      <div style={{ fontSize: "2.5rem" }} aria-hidden>📖</div>
-      <h1 style={{ fontWeight: 900, fontSize: "1.4rem", margin: "0.6rem 0 0.3rem" }}>الدرس</h1>
-      <p style={{ color: "var(--color-ink2)", maxWidth: "30rem", margin: "0 auto", lineHeight: 1.9 }}>
-        المعالج المنهجي بخمس خطوات: خمّن ← قاعدة ← أمثلة ← تطبيق ← خلاصة.
-      </p>
-      <p style={{ margin: "1rem 0 0" }}>
-        <a className="btn btn-primary" href="/" style={{ minHeight: "44px", textDecoration: "none" }}>
-          ↩ العودة إلى «اليوم»
-        </a>
-      </p>
-      <p style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "1rem" }}>
-        بابٌ في الطابور لا في الزاوية — محتواه يفتح في P2.
-      </p>
+    <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }} data-testid="lernen-screen">
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
+        <h1 style={{ fontWeight: 900, fontSize: "1.2rem", margin: 0 }}>📖 الدرس</h1>
+        <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>
+          معالجُ خمسِ خطواتٍ — درسُ اليوم يُفتح هنا ولا يُقفزُ منه
+        </span>
+      </header>
+      <LektionWizard topicId={topicId} />
     </div>
   );
 }

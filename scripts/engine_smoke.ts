@@ -1758,6 +1758,29 @@ void 0;
 
 
 
+
+  /* ═══ K108–K110 — P2: معالج الدرس الخمسي (الدرس tab) ═══ */
+  {
+    const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
+    // K108: الخمس خطوات بالترتيب + نصف شاشة + ≤3 تمارين + قفل الأمام حتى التفاعل
+    const schritte = ["خمّن", "قاعدة", "أمثلة", "تطبيق", "خلاصة"];
+    let idx = -1; let inOrder = true;
+    for (const st of schritte) { const i = wiz.indexOf(st, idx + 1); if (i < 0) { inOrder = false; break; } idx = i; }
+    ok(wiz.length > 0 && inOrder, "K108a المعالجُ خمسُ خطواتٍ بالترتيبِ المتفقِ عليه: خمّن ← قاعدة ← أمثلة ← تطبيق ← خلاصة");
+    ok(wiz.includes("52dvh"), "K108b كلُّ خطوةٍ ≤ نصفِ شاشة (maxHeight 52dvh + تمريرٌ داخليّ)");
+    ok(/slice\(0, 3\)/.test(wiz) && wiz.includes("ExerciseSet"), "K108c خطوةُ التطبيقِ ≤3 تمارينٍ بالضبط ( exercised بـ ExerciseSet )");
+    ok(/disabled=\{!erledigt\[schritt\]\}/.test(wiz) && wiz.includes("أنجز الخطوة"), "K108d الأمامُ مقفلٌ حتى إتمامِ الخطوة — والقفل يسمّي سببه");
+    ok(wiz.includes("entdeckungsFrage") && wiz.includes("induktionMoeglich"), "K108e خطوةُ الخمّسِ موصولةٌ بمحرّكِ الاستقراء (lib/induktion) — لا استقراءٌ مُصطنع");
+    // K109: الباب يفتح المعالج وحده — وباب رجوعٍ واحد إلى الطابور
+    const lern = existsSync("app/lernen/page.tsx") ? readFileSync("app/lernen/page.tsx", "utf8") : "";
+    const lernHref = [...lern.matchAll(/href="([^"]+)"/g)].map((x) => x[1]);
+    ok(lern.includes("<LektionWizard") && lernHref.every((h) => h === "/"),
+      "K109a '/lernen' يركّب المعالج وله بابُ رجوعٍ واحدٌ إلى «اليوم» — لا قفزٌ من داخل الدرس (" + lernHref.join(",") + ")");
+    // K110: الخلاصة تحمل ما يُحفظ: الملخّص + الفخاخ + شفرة الحفظ
+    ok(wiz.includes("summaryAr") && wiz.includes("pitfalls") && (wiz.includes("getBrueckenFor") || wiz.includes("eselsbruecken")),
+      "K110 الخلاصةُ تجمعُ ثلاثاً: ملخّصَ القاعدة + فخاخَها الشائعة + شفرةَ حفظِها — لا خلاصةٌ جُرْداء");
+  }
+
   /* ═══ K107 — لوحُ التنقّلِ الداكن + صفرَ بياضٍ inline في مكوّناتِ الواجهة ═══ */
   {
     const navPath = "components/akademie/Navigation.tsx";
