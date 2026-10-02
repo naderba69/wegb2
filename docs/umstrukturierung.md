@@ -40,7 +40,7 @@
 | **تقدّمي** `/fortschritt` | Berichte (+StundenVertrag) · Radar · WegWeiser · Fehlerkartei (عرض) · Abzeichen · Gesundheit · LernStrategie · ElternPaket · Wochenplan-عرض |
 | **الإعدادات** | Profil · KartenExport · السرعة/الصوت/الداكن |
 | **مهمّة داخلية** (لا وجهة) | WortLink · SignalRadar · GrammatikRadar · Komposita · Stationen · StilWechsler · SchreibKorrektur · AusspracheTrainer |
-| **`/alt` حجر** (حتى P5) | كل ما كان في «خزانة المعهد»: الأجنحة الأربعة + WingKopf + Schultor + بطاقة الطالب |
+| ~~**`/alt` حجر**~~ **حُذف في P5** (2026-10-02) | الخزانة انتقلت كلّها: تدرّب/اختبر/تقدّمي/الدرس — ولم يبقَ محتوىً ضائعاً |
 | **تُلغى** | WingKopf · UebungenCard (محتواها = تبويب تدرّب) · LektionsZentrum-بطاقة (محرّك المعالج) · أوضاع الصفحة الثلاثة viewMode |
 
 ## 3) دفعات التنفيذ ومعايير القبول (DoD)
@@ -51,7 +51,7 @@
 | **P2** ✅ | معالج 5 خطوات (K108–K110 · 2026-10-02) | بوّابة: كل خطوة ≤ نصف شاشة · ≤3 تمارين — **محقّق** |
 | **P3** ✅ | /ueben بأولوية (K112–K114 · 2026-10-02) · HoerLabor/LueckDiktat/… من /alt إلى المسار الحيّ | بوّابة: ترتيب الأولوية · K24m/K31e تعود للمسار الجديد — **محقّق** |
 | **P4** ✅ | /pruefen (K115) + /fortschritt (K116) + مراجعة الأسماء واللغة (K117/K118 · 2026-10-02) | بوّابة: صفر نصّ واجهة ألماني بلا سبب — **محقّق** |
-| **P5** | حذف /alt · إعادة صياغة بوابات المصدر · README | smoke نهائي + build |
+| **P5** ✅ | حذف /alt (K104 ← «لا app/alt») · إعادة صياغة كل بوابات المصدر · README: خمس وجهات بدل أربعة أجنحة (2026-10-02) | smoke نهائي + build — **محقّق** |
 
 **حدّ صارم لـP1**: لا تعديل في `lib/plan|srs|kapsel|ritual` — واجهة فقط فوق المحرك الأخضر.
 

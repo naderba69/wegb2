@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
  * 🧭 التنقّل السفلي — خمس مقاعد في الطابور فقط (K101):
  * اليوم · الدرس · تدرّب · اختبر · تقدّمي.
  * لا وجهة سادسة ولا رابط محتوى — الوجهة نفسها تعرض مقعدك في الطابور.
- * في `/alt` (الحجر المؤقت) لا يُرسم — الصفحة القديمة تُعرض كما كانت.
  */
 const ZIELE = [
   { href: "/", icon: "📅", label: "اليوم" },
@@ -18,7 +17,6 @@ const ZIELE = [
 
 export default function Navigation() {
   const pathname = usePathname();
-  if (pathname === "/alt" || pathname?.startsWith("/alt/")) return null;
   return (
     <nav
       data-testid="bottom-nav"

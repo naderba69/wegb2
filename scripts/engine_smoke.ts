@@ -1657,9 +1657,9 @@ void 0;
     ok(globalsSrc.includes(".today-screen") && globalsSrc.includes("color-scheme: dark"),
       "K103 شاشةُ اليومِ داكنةٌ افتراضياً (.today-screen + color-scheme: dark) — جوّالاً كان أم سطح مكتب");
 
-    // K104: الحجر /alt يخدم الصفحة القديمة كاملة — لا محتوى يضيع في النقل
-    ok(altOk && altSrc.includes("WingKopf") && altSrc.includes("LektionsZentrum") && altSrc.includes("Schultor"),
-      `K104a الحجرُ /alt يحملُ الخزانةَ كاملةً (WingKopf+LektionsZentrum+Schultor) — alt=${altOk}`);
+    // K104 (P5): الحجر فُكّ — الخزانة عاشت في مساراتها الجديدة ثم حُذف الحجر
+    ok(!altOk,
+      `K104a الحجرُ فُكَّ في P5: لا app/alt/page.tsx بعد اليوم — الخزانةُ انتقلتُ كلُّها إلى وجهاتِها (تعلم/تدرّب/اختبر/تقدّمي) — alt=${altOk}`);
 
     // K106: قاعدة التصعيد — الخطأ الذي تكرّر 3 مرات يُبلَّغ عنه باسم مسؤوله (3× ← الدرس المركّز)
     ok(revSrc.includes("lapses >= 3") && /مرات/.test(revSrc) && /الدرس/.test(revSrc) && /تدريب/.test(revSrc),
