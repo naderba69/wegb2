@@ -94,7 +94,7 @@
 | R38 | رقم الخطة موحد: 378 يوماً عبر TOTAL_DAYS ولا أرقام مزروعة | `lib/types.ts:448` «TOTAL_DAYS = 378» · `scripts/engine_smoke.ts:2498` «K123a» | K123 | ✅ |
 | R39 | إعادة عدّ محتوى README (النصوص والحوارات) | `README.md:30` «110 نصوص» — إعادة العدّ الحرفية: 110 نصوص + 119 حواراً، والقفل يمنع الانجراف مستقبلاً | K125 | ✅ |
 | R40 | عنوانٌ مميز لكل نص/حوار/كتابة داخل المستوى (V8/V9) | `scripts/engine_smoke.ts:2685` «K129a» | K129 | ✅ |
-| R41 | لا حذفَ من بنك الجمل بلا تماثلٍ حرفيٍّ موثق؛ الحذف المقترح لـs-b1-42 أُلغي بالدليل (V10) | `scripts/engine_smoke.ts:2689` «K129b» · `content/sentences.json:1491` «Obwohl…» ≠ `:1551` «Trotz…» | K129 | ✅ |
+| R41 | لا حذفَ من بنك الجمل بلا تماثلٍ حرفيٍّ موثق؛ الحذف المقترح لـs-b1-42 أُلغي بالدليل (V10) | `scripts/engine_smoke.ts:2689` «K129b» · `content/sentences.json:1491` «Obwohl es geregnet hat» · `content/sentences.json:1550` «Trotz des schlechten Wetters» | K129 | ✅ |
 | R42 | لا إجاباتٍ مكررةٍ متطابقةً في تمارين القواعد (V11: 20→0) | `scripts/engine_smoke.ts:2698` «K129d» | K129 | ✅ |
 | R43 | ترويسات الجداول عربيةٌ حيث تُدرَّس، وجدول wo/wohin حاضر، ولا مسافة قبل الفاصلة (V12/V15/V16) | `scripts/engine_smoke.ts:2707` «K129j» | K129 | ✅ |
 | R44 | حدود التمارين الدنيا (8/7/6/6/6) + فخاخٌ لكل درسٍ من الـ58 (D4/D5/D6) | `scripts/engine_smoke.ts:2703` «K129g» · `:2705` «K129h» | K129 | ✅ |
