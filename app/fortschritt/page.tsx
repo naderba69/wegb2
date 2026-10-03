@@ -36,12 +36,20 @@ export default function Fortschritt() {
   const [offen, setOffen] = useState<string | null>(null);
 
   if (offen) {
+    const k = KARTE[offen];
     return (
-      <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }}>
-        <button type="button" className="btn btn-ghost" data-testid="fortschritt-zurueck" style={{ minHeight: "44px", justifySelf: "start" }} onClick={() => setOffen(null)}>
+      <div className="today-screen fadein dirb">
+        <button type="button" className="dirb-back" data-testid="fortschritt-zurueck" onClick={() => setOffen(null)}>
           → كل الإحصاءات
         </button>
-        <section style={{ display: "grid", gap: "1rem" }}>
+        {k && (
+          <div className="dirb-station-head">
+            <div className="dirb-kicker">{k.icon} FORTSCHRITT</div>
+            <h1 className="dirb-station-title">{k.titel}</h1>
+            <div className="dirb-station-sub">{k.unter}</div>
+          </div>
+        )}
+        <section className="dirb-station">
           {offen === "berichte" && <BerichteZentrum progress={progress} name={activeProfile().name} />}
           {offen === "radar" && <RadarKarte progress={progress} />}
           {offen === "wegweiser" && <WegWeiser progress={progress} />}
@@ -59,13 +67,14 @@ export default function Fortschritt() {
 
   const ids = ["berichte", "radar", "wegweiser", "fehlerkartei", "abzeichen", "gesundheit", "lernstrategie", "eltern", "kontrakt", "wochen"];
   return (
-    <div className="today-screen fadein" data-testid="fortschritt-liste" style={{ display: "grid", gap: "0.8rem" }}>
-      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
-        <h1 style={{ fontWeight: 900, fontSize: "1.2rem", margin: 0 }}>📈 تقدّمي</h1>
-        <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>مشاهدةٌ سلبية — لا روابطَ محتوى من هنا (الميثاق)</span>
+    <div className="today-screen fadein dirb" data-testid="fortschritt-liste">
+      <header className="dirb-tabhead dirb-hero-anim">
+        <div className="dirb-kicker">📈 FORTSCHRITT</div>
+        <h1 className="dirb-title">تقدّمي</h1>
+        <div className="dirb-sub">مشاهدةٌ سلبية — لا روابطَ محتوى من هنا (الميثاق)</div>
       </header>
 
-      <div style={{ display: "grid", gap: "0.6rem" }}>
+      <div className="dirb-menu dirb-hero-anim-2">
         {ids.map((id) => {
           const k = KARTE[id];
           if (!k) return null;
@@ -75,14 +84,14 @@ export default function Fortschritt() {
               type="button"
               data-testid={`fortschritt-karte-${id}`}
               onClick={() => setOffen(id)}
-              className="card"
-              style={{ minHeight: "56px", padding: "0.8rem 1rem", textAlign: "start", cursor: "pointer", display: "flex", gap: "0.8rem", alignItems: "center" }}
+              className="dirb-menu-btn"
             >
-              <span style={{ fontSize: "1.5rem" }} aria-hidden>{k.icon}</span>
-              <span>
-                <span style={{ fontWeight: 800, display: "block" }}>{k.titel}</span>
-                <span style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{k.unter}</span>
+              <span className="dirb-menu-ico" aria-hidden>{k.icon}</span>
+              <span className="dirb-menu-txt">
+                <b>{k.titel}</b>
+                <span>{k.unter}</span>
               </span>
+              <span className="dirb-chev" aria-hidden>←</span>
             </button>
           );
         })}
