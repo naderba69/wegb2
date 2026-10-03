@@ -222,9 +222,24 @@ export function pruefeBrief(text: string, minWoerter: number): Befund[] {
   return b;
 }
 
-/** درجةٌ من مئة: كلُّ مؤكَّدٍ −8 · مرجَّحٍ −4 · أسلوبيٍّ −1 (بحدٍّ أدنى صفر). */
-export function bewerteSchreiben(befunde: Befund[]): number {
-  const abzug = befunde.reduce((s, f) => s + (f.schwere === "sicher" ? 8 : f.schwere === "wahrscheinlich" ? 4 : 1), 0);
+/** عتبة التنزيل التلقائي: 3 اعتراضات صادقة على القاعدة تخفّض حدّتها (R33) */
+export const DISPUT_SCHWELLE = 3;
+
+/** الحدّة الفعلية بعد اعتراضات المتعلم: sicher→wahrscheinlich→stil (بلا regelId لا تنزيل). */
+export function effektiveSchwere(b: Befund, disputes?: Record<string, number>): Schwere {
+  const key = b.regelId ?? "";
+  const n = key ? (disputes?.[key] ?? 0) : 0;
+  if (b.schwere === "sicher") return n >= DISPUT_SCHWELLE * 2 ? "stil" : n >= DISPUT_SCHWELLE ? "wahrscheinlich" : "sicher";
+  if (b.schwere === "wahrscheinlich") return n >= DISPUT_SCHWELLE ? "stil" : "wahrscheinlich";
+  return "stil";
+}
+
+/** درجةٌ من مئة: كلُّ مؤكَّدٍ −8 · مرجَّحٍ −4 · أسلوبيٍّ −1 (بحدٍّ أدنى صفر) — بالحدّة الفعلية بعد الاعتراضات. */
+export function bewerteSchreiben(befunde: Befund[], disputes?: Record<string, number>): number {
+  const abzug = befunde.reduce((s, f) => {
+    const e = effektiveSchwere(f, disputes);
+    return s + (e === "sicher" ? 8 : e === "wahrscheinlich" ? 4 : 1);
+  }, 0);
   return Math.max(0, 100 - abzug);
 }
 

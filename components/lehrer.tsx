@@ -6,7 +6,7 @@
  *  · SchreibBerater: مستشار الكتابة (تشخيص محلي + مدرّس LLM اختياري)
  *  · Pruefung: امتحان شامل متعدد الأقسام بدرجة ألمانية وتقرير نقاط ضعف
  */
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { DayTask, Exercise, Hoerdialog } from "@/lib/types";
 import { getText, getDialogue, getWriting } from "@/lib/content";
 import {
@@ -24,6 +24,9 @@ import { De } from "./De";
 // ═══════════════ صحّح الخطأ (أخطاء العرب الشائعة) ═══════════════
 
 const PITFALL_RE = /„([^“]+)“\s*✗\s*→\s*„([^“]+)“\s*✓/;
+
+/** ⏱️ رادار الفخاخ موقوت: ثواني كل فخّ — انتهاء الوقت يكشف الصواب ويُدخله دفتر المراجعة (R11) */
+export const PITFALL_SEKUNDEN = 45;
 
 import { addFehlerNow } from "@/lib/store";
 
@@ -46,6 +49,40 @@ export function FehlerFinden({
   );
   const [ans, setAns] = useState<Record<number, string>>({});
   const [chk, setChk] = useState<Record<number, boolean>>({});
+  const [secs, setSecs] = useState<Record<number, number>>({});
+  const [zeitUm, setZeitUm] = useState<Record<number, boolean>>({});
+  const live = useRef({ ans, chk });
+  live.current = { ans, chk };
+  const itemsRef = useRef(items);
+  itemsRef.current = items;
+  const onPointsRef = useRef(onPoints);
+  onPointsRef.current = onPoints;
+  const secsRef = useRef<Record<number, number>>({});
+  useEffect(() => {
+    secsRef.current = Object.fromEntries(itemsRef.current.map((it) => [it.key, PITFALL_SEKUNDEN]));
+    setSecs({ ...secsRef.current });
+    const id = setInterval(() => {
+      const nx = { ...secsRef.current };
+      let changed = false;
+      for (const it of itemsRef.current) {
+        if (live.current.chk[it.key]) continue;
+        if ((nx[it.key] ?? 0) > 0) { nx[it.key] -= 1; changed = true; }
+        if (nx[it.key] === 0) {
+          const richtig = normalize(live.current.ans[it.key] ?? "") === normalize(it.right);
+          setChk((c) => (c[it.key] ? c : { ...c, [it.key]: true }));
+          setZeitUm((z) => (z[it.key] ? z : { ...z, [it.key]: true }));
+          onPointsRef.current(richtig ? 1 : 0, 1);
+          if (!richtig) {
+            addFehlerNow({ falsch: (live.current.ans[it.key] ?? "").trim() || it.wrong, richtig: it.right, art: "wortstellung", ar: `${it.ar} (انتهى وقت الرادار)`, quelle: "رادار الفخاخ" });
+          }
+        }
+      }
+      secsRef.current = nx;
+      if (changed) setSecs({ ...nx });
+    }, 1000);
+    return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   if (!items.length) return null;
 
   const pruefen = (it: { key: number; wrong: string; right: string; ar: string }) => {
@@ -100,6 +137,12 @@ export function FehlerFinden({
                 </button>
               </div>
               {!done ? (
+                <>
+                <div style={{ marginTop: "0.4rem" }}>
+                  <span data-testid={`pitfall-timer-${it.key}`} className="chip rtl-num" style={{ fontWeight: 800, color: (secs[it.key] ?? PITFALL_SEKUNDEN) <= 10 ? "var(--color-cola)" : "var(--color-ink2)" }}>
+                    ⏱️ {secs[it.key] ?? PITFALL_SEKUNDEN}s
+                  </span>
+                </div>
                 <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem", flexWrap: "wrap" }}>
                   <input
                     className="field"
@@ -113,14 +156,19 @@ export function FehlerFinden({
                     تحقّق
                   </button>
                 </div>
+                </>
               ) : (
                 <div style={{ marginTop: "0.5rem", fontSize: "0.92rem", lineHeight: 1.8 }}>
-                  {ok ? (
+                  {zeitUm[it.key] && ok ? (
+                    <strong style={{ color: "var(--color-a1)" }}>⏰ في اللحظة الأخيرة — أحسنت!</strong>
+                  ) : zeitUm[it.key] ? (
+                    <strong style={{ color: "var(--color-gold)" }}>⏰ انتهى الوقت ({PITFALL_SEKUNDEN}s) — الصواب دخل دفتر مراجعتك:</strong>
+                  ) : ok ? (
                     <strong style={{ color: "var(--color-a1)" }}>✅ ممتاز — صحّحتَ الخطأ بنفسك!</strong>
                   ) : (
                     <strong style={{ color: "var(--color-cola)" }}>❌ ليست بعد — الصواب:</strong>
                   )}
-                  {!ok && (
+                  {(!ok || zeitUm[it.key]) && (
                     <div style={{ margin: "0.25rem 0" }}>
                       <De style={{ fontWeight: 800, color: "var(--color-a1)" }}>{it.right}</De>
                     </div>
