@@ -2,6 +2,7 @@
 // 🎧 Diktat-Bootcamp — إملاء متدرّج (جمل قصيرة ← طويلة) بتصحيح فوري
 import { useRef, useState } from "react";
 import type { Progress } from "@/lib/types";
+import { TOTAL_DAYS } from "@/lib/types";
 import { sentences, diktatSrc } from "@/lib/content";
 import { levelOf, pickN, rng } from "@/lib/plan";
 import { normalize } from "@/lib/grader";
@@ -15,7 +16,7 @@ import { De } from "./De";
 
 export function DiktatBootcamp({ progress }: { progress: Progress }) {
   const { update } = useProgress();
-  const level = levelOf(Math.min(progress.plan.day, 270));
+  const level = levelOf(Math.min(progress.plan.day, TOTAL_DAYS));
   const [items] = useState(() => {
     const pool = [...sentences.filter((s) => s.level === level)].sort((a, b) => a.de.length - b.de.length);
     const half = Math.max(1, Math.ceil(pool.length / 2));

@@ -6,9 +6,11 @@
 //   📄 تقرير شهري مطبوع (PDF عبر الطباعة) + تصدير CSV للأرقام
 import { useMemo, useState } from "react";
 import type { Progress } from "@/lib/types";
+import { TOTAL_DAYS } from "@/lib/types";
 import { kompetenzWerte, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN, KOMPETENZ_AR, band } from "@/lib/kompetenz";
 import { fehlerFamilien, resistenteFehler, schwere, weakTopics, URSACHEN, ursacheVon } from "@/lib/fehler";
 import { planPct } from "@/lib/plan";
+import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "@/lib/metriken";
 import { noteFromPct } from "@/lib/grader";
 import { levelOfXp } from "@/lib/spiel";
 import { De } from "./De";
@@ -69,7 +71,7 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid
 </style></head><body>
 <div class="kopf">
 <h1>📊 التقرير الشهري — Monatsbericht</h1>
-<div>طريقي إلى B2 — <b>${name}</b> · تاريخ الإصدار: ${heute} · اليوم <b>${p.plan.day}</b>/270</div>
+<div>طريقي إلى B2 — <b>${name}</b> · تاريخ الإصدار: ${heute} · اليوم <b>${p.plan.day}</b>/${TOTAL_DAYS}</div>
 </div>
 <div class="kacheln">
 <div class="kachel"><b>${bereit.gesamt}%</b>جاهزية الامتحان<small> ${bb.name}</small></div>
@@ -104,6 +106,13 @@ function csvHtml(p: Progress): string {
   for (const h of KOMPETENZEN) zeilen.push(`kompetenz_${h},${w[h].wert}`);
   zeilen.push(`fehler_gesamt,${fehler.length}`);
   zeilen.push(`fehler_resistent,${resistenteFehler(p).length}`);
+  const m1 = feedbackQuote(p), m2 = fehlerHeilung(p), m3 = pruefungsKurve(p);
+  zeilen.push(`metrik_feedback_pct,${m1.pct ?? ""}`);
+  zeilen.push(`metrik_feedback_basis,${m1.graded}/${m1.done}`);
+  zeilen.push(`metrik_heilung_pct,${m2.pct ?? ""}`);
+  zeilen.push(`metrik_heilung_stuck,${m2.stuck}`);
+  zeilen.push(`metrik_kurve_trend,${m3.trend ?? ""}`);
+  zeilen.push(`metrik_kurve_wiederholt,${m3.wiederholt.join("|")}`);
   for (const f of fehlerFamilien(p)) zeilen.push(`familie_${f.art},${f.gl.length}`);
   zeilen.push(`srs_karten,${Object.keys(p.srs ?? {}).length}`);
   for (const [k, v] of Object.entries(p.exams ?? {})) zeilen.push(`pruefung_tag_${k},${v.score}`);
@@ -131,7 +140,7 @@ td,th{border-bottom:1px solid #ccc;padding:.35rem .5rem}th{background:#faf7f2;te
 code{background:#faf7f2;border:1px solid #ddd;border-radius:6px;padding:.1rem .4rem;font-size:.75rem}
 @media print{button{display:none}}button{position:fixed;inset-block-start:8px;inset-inline-end:8px;padding:.4rem .9rem;cursor:pointer}</style></head><body>
 <button onclick="print()">🖨️ طباعة / PDF</button><div class="frame">
-<h1>🎓 وثيقة مستوى — Amtliches Notblatt</h1><div class="sub">«طريقي إلى B2» · اليوم <b>${day}</b> من 270 · ${new Date().toISOString().slice(0, 10)}</div>
+<h1>🎓 وثيقة مستوى — Amtliches Notblatt</h1><div class="sub">«طريقي إلى B2» · اليوم <b>${day}</b> من ${TOTAL_DAYS} · ${new Date().toISOString().slice(0, 10)}</div>
 <p style="text-align:center;font-size:1rem">الحامل/ة: <b>${name}</b></p>
 <table><tr><th>الكفاءة</th><th>القيمة</th><th>المعادل الألماني</th></tr>${rows}</table>
 <div class="box">
@@ -189,6 +198,61 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
         <div style={{ display: "grid", gap: "0.7rem" }}>
           {/* ⏱️ عقد الساعات — أوّل ما يُفتَح، لأنّه الإطار الذي تُقاس فيه كلُّ الأرقام الباقية */}
           <StundenVertrag progress={progress} />
+
+          {/* 📊 مقاييس النجاح الثلاثة (R34) — من البيانات نفسها، بلا تجميل */}
+          {(() => {
+            const m1 = feedbackQuote(progress);
+            const m2 = fehlerHeilung(progress);
+            const m3 = pruefungsKurve(progress);
+            const trendTxt = m3.trend === "steigend" ? "📈 تصاعدي" : m3.trend === "fallend" ? "📉 تنازلي" : m3.trend === "stabil" ? "➡️ مستقر" : "—";
+            return (
+              <div data-testid="metriken-panel" className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)" }}>
+                <div style={{ fontWeight: 900, marginBottom: "0.35rem" }}>📊 مقاييس النجاح الثلاثة</div>
+                <div data-testid="metrik-feedback" style={{ fontSize: "0.85rem", padding: "0.3rem 0", borderTop: "1px dashed var(--color-line)" }}>
+                  <strong>1. التغذية الراجعة للمهام الحرّة:</strong>{" "}
+                  {m1.pct === null ? (
+                    <span style={{ color: "var(--color-ink2)" }}>لا بيانات بعد — تبدأ مع أول مهمة حرّة مسلَّمة.</span>
+                  ) : (
+                    <>
+                      <span className="rtl-num" style={{ fontWeight: 900 }}>{m1.pct}٪</span>
+                      <span style={{ color: "var(--color-ink2)" }}> ({m1.graded}/{m1.done} بتقييم مسجّل)</span>{" "}
+                      <span className="chip" style={{ fontSize: "0.7rem" }}>{m1.pct >= 90 ? "🟢 الهدف ≥90٪" : "🟡 دون الهدف 90٪"}</span>
+                    </>
+                  )}
+                </div>
+                <div data-testid="metrik-heilung" style={{ fontSize: "0.85rem", padding: "0.3rem 0", borderTop: "1px dashed var(--color-line)" }}>
+                  <strong>2. شفاء الأخطاء خلال 3 إعادات:</strong>{" "}
+                  {m2.pct === null ? (
+                    <span style={{ color: "var(--color-ink2)" }}>الدفتر فارغ — لا أخطاء بعد. 🌱</span>
+                  ) : (
+                    <>
+                      <span className="rtl-num" style={{ fontWeight: 900 }}>{m2.pct}٪</span>
+                      <span style={{ color: "var(--color-ink2)" }}> ({m2.geheilt}/{m2.total} شُفيت)</span>{" "}
+                      {m2.stuck > 0 && <span className="chip" style={{ fontSize: "0.7rem", borderColor: "var(--color-cola)", color: "var(--color-cola)" }}>🛑 {m2.stuck} عالق (3+ تعثّر)</span>}
+                    </>
+                  )}
+                </div>
+                <div data-testid="metrik-kurve" style={{ fontSize: "0.85rem", padding: "0.3rem 0", borderTop: "1px dashed var(--color-line)" }}>
+                  <strong>3. منحنى المحاكاة:</strong>{" "}
+                  {m3.punkte.length === 0 ? (
+                    <span style={{ color: "var(--color-ink2)" }}>لا امتحانات بعد.</span>
+                  ) : (
+                    <>
+                      <span style={{ fontWeight: 800 }}>{trendTxt}</span>{" "}
+                      <span style={{ color: "var(--color-ink2)" }}>
+                        {m3.punkte.map((x) => `ي${x.day}:${x.score}`).join(" · ")}
+                      </span>{" "}
+                      {m3.wiederholt.length > 0 && (
+                        <span className="chip" style={{ fontSize: "0.7rem", borderColor: "var(--color-cola)", color: "var(--color-cola)" }}>
+                          🔧 الوحدة {m3.wiederholt.join("، ")} أُعيدت مرتين — خلل في تصميمنا
+                        </span>
+                      )}
+                    </>
+                  )}
+                </div>
+              </div>
+            );
+          })()}
 
           {/* 🎯 الجاهزية */}
           <div className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)" }}>

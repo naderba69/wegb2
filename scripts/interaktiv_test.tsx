@@ -52,7 +52,7 @@ function ok(cond: boolean, label: string) {
 async function main() {
   const React = await import("react");
   const { createRoot } = await import("react-dom/client");
-  const { emptyProgress } = await import("../lib/types");
+  const { emptyProgress, TOTAL_DAYS } = await import("../lib/types");
   const act = (React as unknown as { act: (cb: () => void) => void }).act;
 
   const d0 = dom.window.document as unknown as Document;
@@ -631,13 +631,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
 
-  /* ---------- XXVIII — التغطيةُ التامّة: 58 درساً تُفتَحُ فتجدُ تركتَها ---------- */
+  /* ---------- XXVIII — التغطيةُ التامّة: 65 درساً تُفتَحُ فتجدُ تركتَها ---------- */
   {
     const { default: TaskView } = await import("../components/tasks");
     const { grammarMap, getBrueckenFor } = await import("../lib/content");
     const props = { lang: "ar" as const, day: 60, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
     const ids = Object.keys(grammarMap);
-    ok(ids.length === 58, "XXVIII1 ثمانيةٌ وخمسونَ درسَ قواعدَ في البنك — بعدَ ضربِ البنوكِ وتوسيعِها لا بالتمنّي");
+    ok(ids.length === 65, "XXVIII1 خمسةٌ وستّونَ درسَ قواعدَ في البنك — بعدَ ضربِ البنوكِ وتوسيعِها لا بالتمنّي");
     let leer = 0; let ohneKopf = 0;
     for (const g of ids) {
       try {
@@ -702,7 +702,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
 
-  /* ═══════════ XXXI — المسحُ التركيبيُّ الشامل: 270 يوماً تُفتَحُ مهمةً مهمة ═══════════ */
+  /* ═══════════ XXXI — المسحُ التركيبيُّ الشامل: 378 يوماً تُفتَحُ مهمةً مهمة ═══════════ */
   {
     const { default: TaskView } = await import("../components/tasks");
     const { buildDay } = await import("../lib/plan");
@@ -711,7 +711,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const crashes: string[] = [];
     const leere: string[] = [];
     let total = 0;
-    for (let day = 1; day <= 270; day++) {
+    for (let day = 1; day <= TOTAL_DAYS; day++) {
       const plan = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } });
       for (const task of plan.tasks) {
         total++;
@@ -725,10 +725,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
         }
       }
     }
-    console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ 270 يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
+    console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ ${TOTAL_DAYS} يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
     if (crashes.length) console.error("   ⤷ انهيارات:", crashes.slice(0, 6).join(" | "));
     if (leere.length) console.error("   ⤷ شاشاتٌ خاوية:", leere.slice(0, 6).join(" | "));
-    ok(total === 1473, `XXXI1 1473 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
+    ok(total === 2110, `XXXI1 2110 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
     ok(kinds.size === 9, `XXXI2 الأنواعُ التسعةُ كلُّها مُمثَّلةٌ فعلاً في الأيامِ — لا نوعَ مكتوبٍ ولا يُولَد (${[...kinds.keys()].join("، ")})`);
     ok(crashes.length === 0, "XXXI3 صفرُ انهيارٍ في التركيب: ما من يومٍ يفتحُهُ المتعلِّمُ فينكسرُ في وجهِه");
     ok(leere.length === 0, "XXXI4 صفرُ شاشةٍ خاوية: كلُّ مهمةٍ تعرضُ محتوًى حقيقياً لا هيكلاً فارغاً");
@@ -758,7 +758,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
         if (b.tagName === "BUTTON" && !(b.textContent ?? "").trim() && !b.getAttribute("aria-label") && !b.getAttribute("title")) stumm.push(wo);
       }
     };
-    for (let day = 1; day <= 270; day += 3) {
+    for (let day = 1; day <= TOTAL_DAYS; day += 3) {
       const plan = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } });
       for (const task of plan.tasks) {
         mount(React.createElement(TaskView, { task, day, ...props }));
@@ -1729,6 +1729,192 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const show = btn("📝 أظهر النص") ?? Array.from(rootEl.querySelectorAll("button")).find((b) => /أظهر النص|النص/.test(b.textContent ?? ""));
     if (show) click(show);
     ok(rootEl.querySelectorAll('[data-testid="wortlink-wort"]').length >= 5, "LXIII5 سطورُ الحوارِ بعدَ إظهارِ النصِّ مربوطةٌ أيضاً");
+  }
+
+
+  /* ═══ LXIV — رادار الفخاخ موقوت: 45 ثانية (R11) ═══ */
+  {
+    const { FehlerFinden } = await import("../components/lehrer");
+    mount(React.createElement(FehlerFinden, { pitfalls: [{ de: "„Ich helfe dich.“ ✗ → „Ich helfe dir.“ ✓", ar: "helfen + Dativ" }], onPoints: () => {} }));
+    const uhr = rootEl.querySelector('[data-testid="pitfall-timer-0"]');
+    ok(!!uhr && (uhr.textContent ?? "").includes("45"), "LXIV1 عدّادُ الفخِّ يبدأُ من 45 ثانية");
+  }
+
+  /* ═══ LXV — البديل الكتابي للشفوي (R16) ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const { sentences: sBankX } = await import("../lib/content");
+    const se = sBankX.slice(0, 2).map((s) => s.id);
+    const pr = { lang: "ar" as const, day: 200, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: { id: "t-xl-sprechen", kind: "sprechen" as const, titleDe: "S", titleAr: "ت", minutes: 10, sentenceIds: se }, ...pr }));
+    const ta = rootEl.querySelector('[data-testid="sprech-schrift-text"]') as HTMLTextAreaElement | null;
+    ok(!!ta, "LXV1 صندوقُ البديلِ الكتابيِّ حاضر");
+    const ab = rootEl.querySelector('[data-testid="sprech-schrift-ab"]') as HTMLButtonElement;
+    ok(ab.disabled, "LXV2 زرُّ التسليمِ معطَّلٌ قبلَ الكتابة");
+    typeIn(ta!, "Ich spreche jeden Tag laut und deutlich vor dem Spiegel.");
+    ok(!ab.disabled, "LXV3 يُفعَّلُ بعدَ كتابةٍ كافية");
+    click(ab);
+    ok(!!rootEl.querySelector('[data-testid="sprech-schrift-hinweis"]'), "LXV4 بعدَ التسليمِ: وسمُ «إنجاز لا نطق»");
+  }
+
+  /* ═══ LXVI — لوحة التوقف عند اكتمال اليوم (R19) ═══ */
+  {
+    const { Klassenzimmer } = await import("../components/akademie/Klassenzimmer");
+    const { buildDay } = await import("../lib/plan");
+    const { ritualUrteil } = await import("../lib/ritual");
+    const prog = { ...emptyProgress };
+    const plan = buildDay(2, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } });
+    const base: Record<string, never> = {} as never;
+    const props = {
+      ...base, progress: prog, day: 2, plan, stepFrei: 0, setStep: () => {}, ritual: ritualUrteil(plan, prog),
+      resultOf: () => ({ done: true, passed: true, score: 1, total: 1, attempts: 1 }),
+      localOf: () => ({ score: 0, total: 0 }), onPoints: () => {}, submitCurrent: () => {}, doCloseDay: () => {},
+      confirmClose: false, setConfirmClose: () => {}, unpassed: [], onSrs: () => {},
+    };
+    mount(React.createElement(Klassenzimmer, { ...props, allSubmitted: true } as never));
+    ok(!!rootEl.querySelector('[data-testid="stop-panel"]'), "LXVI1 اليومُ المكتملُ يعرضُ لوحةَ التوقف");
+    mount(React.createElement(Klassenzimmer, { ...props, allSubmitted: false } as never));
+    ok(!rootEl.querySelector('[data-testid="stop-panel"]'), "LXVI2 اليومُ الناقصُ بلا لوحة");
+  }
+
+  /* ═══ LXVII — الاعتراض يخفّض حدّة الكاشف (R33) ═══ */
+  {
+    const Schreib = (await import("../components/schreibkorrektur")).default;
+    mount(React.createElement(Schreib, { minWoerter: 5 }));
+    const ta = rootEl.querySelector("textarea") as HTMLTextAreaElement;
+    typeIn(ta, "Ich kaufe ein Geschenk für dem Mann.");
+    const go = Array.from(rootEl.querySelectorAll("button")).find((b) => (b.textContent ?? "").includes("صحِّح")) as HTMLElement;
+    click(go);
+    const btnDisput = () => rootEl.querySelector('[data-test="disput-a1-akkusativ"]') as HTMLElement | null;
+    ok(!!btnDisput(), "LXVII1 زرُّ الاعتراضِ حاضرٌ على نتيجةٍ لها regelId");
+    ok(!rootEl.querySelector('[data-test="disput-hinweis"]'), "LXVII2 قبلَ العتبةِ لا تنزيل");
+    click(btnDisput()!); click(btnDisput()!); click(btnDisput()!);
+    ok(!!rootEl.querySelector('[data-test="disput-hinweis"]'), "LXVII3 بعدَ 3 اعتراضاتٍ يظهرُ التنزيل");
+  }
+
+
+  /* ═══ LXVIII — نوع الكلمة على البطاقة (R30) ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const pr = { lang: "ar" as const, day: 200, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: { id: "t-xl-wort", kind: "wortschatz" as const, titleDe: "W", titleAr: "ك", minutes: 10, deckId: "a1-start" }, ...pr }));
+    const flip = Array.from(rootEl.querySelectorAll("button")).find((b) => (b.textContent ?? "").includes("اكشف المعنى")) as HTMLElement | undefined;
+    ok(!!flip, "LXVIII1 زرُّ الكشفِ حاضر");
+    if (flip) click(flip);
+    const chip = rootEl.querySelector('[data-testid="karte-pos"]');
+    ok(!!chip && (chip.textContent ?? "").includes("Interjektion"), "LXVIII2 بعدَ الكشفِ: شارةُ النوعِ (hallo ← Interjektion)");
+  }
+
+  /* ═══ LXIX — المرادف والضد في البطاقة المنبثقة (R29) ═══ */
+  {
+    const { WortKarte } = await import("../components/wortlink");
+    const { karteFuerWort } = await import("../lib/verknuepfung");
+    const karte = karteFuerWort("groß", "A1")!;
+    ok(!!karte && karte.ant?.[0] === "klein", "LXIX1 بطاقةُ groß تحملُ ضدَّها من البيانات");
+    mount(React.createElement(WortKarte, { karte, onClose: () => {} }));
+    ok(!!rootEl.querySelector('[data-testid="wortkarte-pos"]'), "LXIX2 شارةُ النوعِ في البطاقةِ المنبثقة");
+    const sa = rootEl.querySelector('[data-testid="wortkarte-synant"]');
+    ok(!!sa && (sa.textContent ?? "").includes("klein"), "LXIX3 الضدُّ معروضٌ في المنبثقة");
+  }
+
+  /* ═══ LXX — السيناريو يعلن دروسه المطبَّقة (R26) ═══ */
+  {
+    const { LebensSzenarien } = await import("../components/szenarien");
+    mount(React.createElement(LebensSzenarien, { progress: { ...emptyProgress } }));
+    const hdr = btn("LebensSzenarien");
+    ok(!!hdr, "LXX1 أكورديون السيناريوهات مركّب");
+    if (hdr) click(hdr);
+    const lek = rootEl.querySelector('[data-testid="szenario-lektionen"]');
+    ok(!!lek && lek.querySelectorAll(".chip").length >= 2, "LXX2 شرائحُ الدروسِ المطبَّقةِ ظاهرة");
+    ok((lek?.textContent ?? "").includes("يطبّق دروس"), "LXX3 عنوانُ الربطِ الصريح");
+  }
+
+  /* ═══ LXXI — مقاييس النجاح الثلاثة في مركز التقارير (R34) ═══ */
+  {
+    const { BerichteZentrum } = await import("../components/berichte");
+    const prog = { ...emptyProgress,
+      plan: { ...emptyProgress.plan, tasks: {
+        m1a: { done: true, passed: true, score: 3, total: 4, attempts: 1, kind: "schreiben" },
+        m1b: { done: true, passed: false, score: 0, total: 0, attempts: 1, kind: "sprechen" },
+      } },
+      fehler: { y: { key: "y", falsch: "a", richtig: "b", art: "s", ar: "x", treffer: 3, srs: { ease: 2.5, interval: 0, due: new Date().toISOString(), reps: 3, lapses: 3, learning: true } } },
+      exams: { 10: { score: 60, passed: false }, 20: { score: 90, passed: true } },
+      modulPruefungen: { 2: { versuche: 3, best: 70, bestanden: false } },
+    };
+    mount(React.createElement(BerichteZentrum, { progress: prog as never, name: "مقياس" }));
+    const hdr = btn("BerichteZentrum");
+    if (hdr) click(hdr);
+    ok(!!rootEl.querySelector('[data-testid="metriken-panel"]'), "LXXI1 لوحةُ المقاييسِ الثلاثةِ حاضرة");
+    ok((rootEl.querySelector('[data-testid="metrik-feedback"]')?.textContent ?? "").includes("50"), "LXXI2 التغذيةُ 1/2 = 50٪");
+    ok((rootEl.querySelector('[data-testid="metrik-heilung"]')?.textContent ?? "").includes("عالق"), "LXXI3 تنبيهُ الخطأِ العالق");
+    ok((rootEl.querySelector('[data-testid="metrik-kurve"]')?.textContent ?? "").includes("أُعيدت مرتين"), "LXXI4 تنبيهُ الوحدةِ المعادة");
+  }
+
+
+  /* ═══ LXXII — حزمة العائلة (V17) ═══ */
+  {
+    const { ElternPaket } = await import("../components/elternpaket");
+    mount(React.createElement(ElternPaket, { progress: { ...emptyProgress } }));
+    const hdr = btn("حزمة العائلة");
+    ok(!!hdr, "LXXII1 أكورديون حزمة العائلة مركّب");
+    if (hdr) click(hdr);
+    ok(txt().includes("Family Progress Report"), "LXXII2 التقرير العائلي يُفتح");
+  }
+
+  /* ═══ LXXIII — ساحة المقابلات (V17) ═══ */
+  {
+    const { InterviewArena } = await import("../components/interview2");
+    mount(React.createElement(InterviewArena, { progress: { ...emptyProgress } }));
+    const hdr = btn("ساحة المقابلات");
+    ok(!!hdr, "LXXIII1 ساحة المقابلات مركّبة");
+    if (hdr) click(hdr);
+    ok(!!rootEl.querySelector("textarea"), "LXXIII2 حقل الإجابة حاضر بعد الفتح");
+  }
+
+  /* ═══ LXXIV — دليل الأجنحة + شبكة الكفاءات (V17) ═══ */
+  {
+    const { KatalogLeiste, RadarKarte } = await import("../components/katalog");
+    mount(React.createElement(KatalogLeiste));
+    ok(txt().includes("دليل الأجنحة"), "LXXIV1 الدليل يُعرض مباشرة");
+    mount(React.createElement(RadarKarte, { progress: { ...emptyProgress } }));
+    ok(!!rootEl.querySelector('svg[aria-label="شبكة الكفاءات"]'), "LXXIV2 شبكة الكفاءات SVG حاضرة");
+  }
+
+  /* ═══ LXXV — العمق المعجمي (V17) ═══ */
+  {
+    const { TiefenLexikon } = await import("../components/tiefenlex");
+    mount(React.createElement(TiefenLexikon, { progress: { ...emptyProgress } }));
+    const hdr = btn("العمق المعجمي");
+    ok(!!hdr, "LXXV1 العمق المعجمي مركّب");
+    if (hdr) click(hdr);
+    ok(txt().includes("إخفاء"), "LXXV2 يُفتح تفاعلياً");
+  }
+
+  /* ═══ LXXVI — الأسبوع والأوسمة (V17) ═══ */
+  {
+    const { Wochenplan, XpBar, AbzeichenKarte } = await import("../components/wochen");
+    mount(React.createElement(Wochenplan, { progress: { ...emptyProgress } }));
+    ok(txt().includes("جدول الأسبوع"), "LXXVI1 جدول الأسبوع يُعرض");
+    mount(React.createElement(XpBar, { progress: { ...emptyProgress } }));
+    ok(txt().includes("XP"), "LXXVI2 شريط الخبرة يُعرض");
+    mount(React.createElement(AbzeichenKarte, { progress: { ...emptyProgress } }));
+    ok(txt().includes("الأوسمة"), "LXXVI3 بطاقة الأوسمة تُعرض");
+  }
+
+
+  /* ═══ LXXVII — الدروس الجديدة تُفتَح وتُستقرأ (N1–N7) ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const mkN = (topicId: string) => ({ id: "t-" + topicId, kind: "grammatik" as const, titleDe: "Grammatik", titleAr: "قاعدة", minutes: 15, topicId });
+    const propsN = { lang: "ar" as const, day: 60, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: mkN("a1-plural"), ...propsN }));
+    ok(txt().includes("جمع الأسماء"), "LXXVII1 درس الجمع يُعرض بعنوانه");
+    ok(txt().includes("سِرْ ناس"), "LXXVII2 تركة الجمع حاضرة في بطاقته");
+    mount(React.createElement(TaskView, { task: mkN("b1-konj2-vergangenheit"), ...propsN }));
+    ok(txt().includes("التخيلي الماضي"), "LXXVII3 درس التخيلي الماضي يُعرض");
+    ok(txt().includes("آلة الزمن"), "LXXVII4 تركته حاضرة");
+    mount(React.createElement(TaskView, { task: mkN("b2-textkonnektoren"), ...propsN }));
+    ok(txt().includes("روابط النص الراقية") && txt().includes("البهلوان"), "LXXVII5 درس B2 وتركته يُعرضان");
   }
 
   console.log(`\n${beste} نجح · ${fehler} فشل`);

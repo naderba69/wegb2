@@ -81,10 +81,10 @@ const PHASE_RANGES: { phase: Phase; from: number; to: number; level: Level }[] =
 
 export const PHASE_TOPICS: Record<Phase, string[]> = {
   A0: ["a0-begrussung", "a0-buchstaben", "a0-zahlen", "a1-pronomen", "a1-sein-haben", "a1-praesens", "a1-zahlen"],
-  A1: ["a1-praesens", "a1-pronomen", "a1-sein-haben", "a1-trennbar", "a1-weil-dass", "a1-war-hatte", "a1-zahlen", "a1-akkusativ", "a1-modalverben", "a1-dativ", "a1-wechsel", "a1-imperativ", "a1-perfekt-einf", "a1-futur-einf"],
-  A2: ["a2-praeteritum-grund", "a2-praeteritum", "a2-perfekt", "a2-dativ", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-weil-dass", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a2-futur"],
-  B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-adjektivendungen", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-partizip1", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben"],
-  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-nominalstil", "b2-verschmolzene", "b2-redew"],
+  A1: ["a1-praesens", "a1-pronomen", "a1-sein-haben", "a1-trennbar", "a1-weil-dass", "a1-war-hatte", "a1-zahlen", "a1-akkusativ", "a1-modalverben", "a1-dativ", "a1-wechsel", "a1-imperativ", "a1-perfekt-einf", "a1-futur-einf", "a1-plural", "a1-zeitpraep"],
+  A2: ["a2-praeteritum-grund", "a2-praeteritum", "a2-perfekt", "a2-dativ", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-weil-dass", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a2-futur", "a2-verschmolzene", "a2-neben", "a2-demo"],
+  B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-konj2-vergangenheit", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-partizip1", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben", "b1-absicht", "b1-adjektivendungen"],
+  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-nominalstil", "b2-redew", "b2-textkonnektoren"],
   Abschluss: [],
 };
 
@@ -321,6 +321,15 @@ function buildQuiz(day: number, phase: Phase, count: number): Exercise[] {
   return picked.slice(0, count).map((ex, i) => ({ ...ex, id: `q${day}-${i}-${ex.id}` }));
 }
 
+/** 🎯 تحققات الاستقلال المستحقة: دروسٌ أُنجِز تدريبُها وحلَّ يومُها (الأقدم أولاً) */
+export function dueVerify(progress: Progress, day: number): { lessonId: string; dueDay: number }[] {
+  return Object.entries(progress.verify ?? {})
+    .filter(([, v]) => v.dueDay <= day && v.doneDay === undefined)
+    .map(([lessonId, v]) => ({ lessonId, dueDay: v.dueDay }))
+    .filter((v) => (grammarMap[v.lessonId]?.verify ?? []).length > 0)
+    .sort((a, b) => a.dueDay - b.dueDay);
+}
+
 // ── مولّد اليوم ─────────────────────────────────────────────────────────
 export function buildDay(day: number, progress: Progress): DayPlan {
   const week = Math.ceil(day / 7);
@@ -349,6 +358,24 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       from: d.from,
     });
   });
+
+  // (1b) تحققات الاستقلال المستحقة — مهام جديدة لا إعادة (≤2 في اليوم، والباقي يبقى في الطابور)
+  dueVerify(progress, day)
+    .slice(0, 2)
+    .forEach((v) => {
+      const t = grammarMap[v.lessonId];
+      tasks.push({
+        id: `${day}:vrfy:${v.lessonId}`,
+        kind: "check",
+        titleDe: `Unabhängigkeits-Check: ${t?.titleDe ?? v.lessonId}`,
+        titleAr: `تحقق الاستقلال: ${t?.titleAr ?? v.lessonId} — مهمة جديدة لا إعادة`,
+        minutes: 10,
+        quiz: (t?.verify ?? []).slice(0, 3),
+        mandatory: true,
+        from: v.dueDay,
+        verifyFor: v.lessonId,
+      });
+    });
 
   const tid = (n: number) => `${day}:t${n}`;
   const phaseTopics = PHASE_TOPICS[phase];
