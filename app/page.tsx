@@ -5,7 +5,7 @@ import { useProgress, saveProgress } from "@/lib/store";
 import { buildDay, dayScore, debtsFrom, planPct, modulOf } from "@/lib/plan";
 import { TOTAL_DAYS, LEVEL_COLORS } from "@/lib/types";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
-import { Einstufung } from "@/components/fehler-ui";
+import { KindIcon } from "@/components/dirb/icons";
 import { XpBar, Wochenplan } from "@/components/wochen";
 import { ProfilWahl } from "@/components/profil";
 import { activeProfile } from "@/lib/profiles";
@@ -18,12 +18,36 @@ const TYPE_LABEL: Record<string, string> = {
   abschluss: "يوم ختامي",
 };
 
+/** أسماء المهارات بالألمانية للبطل (Hören…) وبالعربية للبطاقات الصغيرة. */
+const SKILL_DE: Record<string, string> = {
+  hoeren: "Hören",
+  lesen: "Lesen",
+  schreiben: "Schreiben",
+  sprechen: "Sprechen",
+  aussprache: "Aussprache",
+  grammatik: "Grammatik",
+  wortschatz: "Wortschatz",
+  wiederholen: "Wiederholen",
+  check: "Check",
+};
+const SKILL_AR: Record<string, string> = {
+  hoeren: "استماع",
+  lesen: "قراءة",
+  schreiben: "كتابة",
+  sprechen: "تحدّث",
+  aussprache: "نطق",
+  grammatik: "قواعد",
+  wortschatz: "مفردات",
+  wiederholen: "مراجعة",
+  check: "فحص",
+};
+
 /**
- * 📅 شاشة «اليوم» DirB — مهمّة واحدة في المقدّمة لا ستّ محطات مكدّسة:
- * ترويسة (التاريخ + المتبقي + التحية + اليوم) ← هدف اليوم ← وسم الوحدة ←
- * تهيئة إن لزمت ← جدول الأسبوع (مطويّ) ← Klassenzimmer
- * (البطل ← التالي ← التدريب المركّز ← الكبسولة ← المراجعة ← الإغلاق).
- * لا بطاقات خزانة ولا روابط قفز — كل شيء آخر في وجهاته (K100–K102).
+ * 📅 شاشة «اليوم» — بطلٌ واحد في المقدّمة (mockup):
+ * ترويسة (التاريخ + المتبقي ← التحية ← اليوم) ← هدف اليوم ← وسم الوحدة ←
+ * رقائق السياق (🖨/⚙️ رخصتا K102) ← بطاقة البطل + START ← مهام اليوم السريعة ←
+ * جدول الأسبوع (مطويّ) ← Klassenzimmer (المشغِّل الكامل + الإغلاق).
+ * زرّا البطل والبطاقات أزرارُ تمريرٍ وتبديلٍ — صفرُ روابطِ قفز (K102).
  */
 export default function Today() {
   const { progress, submitTask, closeDay, setSrs, saveExam, update } = useProgress();
@@ -47,6 +71,17 @@ export default function Today() {
   const restMin = Math.max(0, zielMin - doneMin);
   const tagesPct = zielMin > 0 ? Math.min(100, Math.round((doneMin / zielMin) * 100)) : 0;
   const datumDe = new Date().toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long' });
+
+  // 🦸 بطل اليوم = أوّل مهمّة حرّة (لا مقفولة أبداً بحكم stepFrei)
+  const held = plan.tasks[stepFrei] ?? plan.tasks[0];
+  const heldFertig = held ? !!resultOf(held.id) : false;
+  const scrollToPlayer = () => {
+    document.getElementById("aufgabe-spieler")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const springeZu = (i: number) => {
+    setStep(i);
+    scrollToPlayer();
+  };
 
   // ── نهاية الرحلة: اليوم 271 = الحصيلة النهائية ──
   if (day > TOTAL_DAYS) {
@@ -170,7 +205,7 @@ export default function Today() {
 
   return (
     <div className="today-screen fadein dirb" data-testid="today-screen">
-      {/* ── الترويسة DirB: التاريخ + المتبقي ← التحية ← اليوم ── */}
+      {/* ── الترويسة: التاريخ + المتبقي ← التحية ← اليوم ── */}
       <header className="dirb-hero-anim">
         <div className="dirb-date-row">
           <span className="dirb-date" dir="ltr">{datumDe}</span>
@@ -259,32 +294,79 @@ export default function Today() {
         </button>
       </div>
 
-      {/* ── تهيئة قبل الطابور: تحديد المستوى إن لم يُحدَّد بعد ── */}
-      {!progress.settings.placed && <Einstufung />}
+      {/* ── 🦸 بطل اليوم: المهارة ← الدرس ← المدة والمستوى ← START ── */}
+      {held && (
+        <section className="dirb-held dirb-hero-anim-2" aria-label="درس اليوم" data-testid="held-karte">
+          <KindIcon kind={held.kind} className="dirb-held-icon" />
+          <div className="dirb-held-skill" dir="ltr">{SKILL_DE[held.kind] ?? held.kind}</div>
+          <div className="dirb-held-lektion" dir="ltr">Lektion: {held.titleDe}</div>
+          <div className="dirb-held-ar">{held.titleAr}</div>
+          <div className="dirb-held-meta" dir="ltr">
+            ⏱ <span className="rtl-num">{held.minutes}</span> Min. | {plan.phase}
+          </div>
+          {held.exam && <div className="dirb-held-exam">📝 امتحان مرحلة — ركّز!</div>}
+          {heldFertig && <div className="dirb-held-done">✓ مسلَّمة — أكمل الباقي</div>}
+          <button type="button" className="dirb-start" onClick={scrollToPlayer} data-testid="held-start">
+            <span dir="ltr">START ▶</span>
+          </button>
+        </section>
+      )}
+
+      {/* ── مهام اليوم السريعة: قفزةٌ مباشرة للمشغِّل — المقفول 🔒 معطَّل ── */}
+      <div className="dirb-minis" role="list" aria-label="مهام اليوم">
+        {plan.tasks.map((tk, i) => {
+          const gesperrt = aufgabeGesperrt(ritual, i);
+          const fertig = !!resultOf(tk.id);
+          const jetzt = i === stepFrei;
+          return (
+            <button
+              key={tk.id}
+              type="button"
+              role="listitem"
+              disabled={gesperrt}
+              data-testid={`held-mini-${i}`}
+              className={"dirb-mini" + (jetzt ? " dirb-mini-jetzt" : "") + (fertig ? " dirb-mini-fertig" : "")}
+              onClick={() => springeZu(i)}
+              aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : fertig ? " (مسلَّمة)" : ""}`}
+            >
+              <KindIcon kind={tk.kind} className="dirb-mini-icon" />
+              <span className="dirb-mini-skill">
+                {gesperrt ? "🔒 " : fertig ? "✓ " : ""}
+                {SKILL_AR[tk.kind] ?? tk.kind}
+              </span>
+              <span className="dirb-mini-min">
+                <span className="rtl-num">{tk.minutes}</span> د
+              </span>
+            </button>
+          );
+        })}
+      </div>
 
       {/* ── جدول الأسبوع (مطويّ — سطر واحد حتى يُفتح) ── */}
       <Wochenplan progress={progress} />
 
-      {/* ── الطابور: البطل + التدريب المركّز + الكبسولة + المراجعة + الإغلاق ── */}
-      <Klassenzimmer
-        progress={progress}
-        day={day}
-        plan={plan}
-        stepFrei={stepFrei}
-        setStep={setStep}
-        ritual={ritual}
-        resultOf={resultOf}
-        localOf={localOf}
-        onPoints={onPoints}
-        submitCurrent={submitCurrent}
-        doCloseDay={doCloseDay}
-        badDayToday={badDayToday}
-        confirmClose={confirmClose}
-        setConfirmClose={setConfirmClose}
-        unpassed={unpassed}
-        allSubmitted={allSubmitted}
-        onSrs={setSrs}
-      />
+      {/* ── المشغِّل: التدريب المركّز + الكبسولة + المراجعة + الإغلاق ── */}
+      <div id="aufgabe-spieler" style={{ scrollMarginTop: "0.8rem" }}>
+        <Klassenzimmer
+          progress={progress}
+          day={day}
+          plan={plan}
+          stepFrei={stepFrei}
+          setStep={setStep}
+          ritual={ritual}
+          resultOf={resultOf}
+          localOf={localOf}
+          onPoints={onPoints}
+          submitCurrent={submitCurrent}
+          doCloseDay={doCloseDay}
+          badDayToday={badDayToday}
+          confirmClose={confirmClose}
+          setConfirmClose={setConfirmClose}
+          unpassed={unpassed}
+          allSubmitted={allSubmitted}
+          onSrs={setSrs}
+        />
+      </div>
     </div>
   );
 }
