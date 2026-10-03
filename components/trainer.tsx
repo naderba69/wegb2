@@ -187,14 +187,17 @@ export function SprechTrainer({ progress }: { progress: Progress }) {
     stopRef.current = listenDe(
       (text) => {
         setHeard(text);
-        const r = text ? ratio(text, s!.de) : 0;
+        const clean = text.trim();
+        // 🔇 تعذّر التحقق (ميكروفون/شبكة/خدمة) — ليس خطأً لغوياً: لا دفترَ ولا نقاطَ ولا لوم
+        if (!clean) return;
+        const r = ratio(clean, s!.de);
         update((p) => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (r >= 0.7 ? 4 : 1) }), "Sprechen", r >= 0.7));
         if (r < 0.7) {
           addFehlerNow({
-            falsch: text ? `نطق: ${text}` : "(لم يُسمع شيء)",
+            falsch: `مطابقة الكلمات: ${clean}`,
             richtig: s!.de,
-            art: "schreibung",
-            ar: `تدريب النطق — الجملة الصحيحة: ${s!.ar}`,
+            art: "sonst",
+            ar: `تدريب النطق (تمييز الكلمات المسموعة لا تقييم الأصوات) — الجملة الصحيحة: ${s!.ar}`,
             quelle: "تدريب النطق",
           });
         }
@@ -251,17 +254,27 @@ export function SprechTrainer({ progress }: { progress: Progress }) {
           </button>
         )}
       </div>
-      {heard !== null && (
+      {heard !== null && heard.trim() === "" && (
+        <div style={{ marginTop: "0.5rem", fontSize: "0.88rem", background: "var(--color-amber-soft)", borderRadius: "0.6rem", padding: "0.6rem 0.8rem", lineHeight: 1.9 }}>
+          🔇 <strong>تعذّر التحقق من الصوت</strong> — قد يكون الميكروفون أو الشبكة أو خدمة التعرّف.
+          هذا <strong>ليس خطأً منك</strong>: لا يدخل دفتر الأخطاء ولا ينقص شيئاً. تحقّق من إذن الميكروفون وحاول ثانيةً،
+          أو درّب إيقاعك في مدرّب النطق المحلّي (صوتك لا يغادر جهازك).
+        </div>
+      )}
+      {heard !== null && heard.trim() !== "" && (
         <div style={{ marginTop: "0.5rem", fontSize: "0.92rem" }}>
           <div>
-            سمعتُ: <span className="de">{heard || "…"}</span>
+            سمعتُ: <span className="de">{heard}</span>
           </div>
           <div style={{ marginTop: "0.2rem" }}>
-            المطابقة:{" "}
+            مطابقة الكلمات المسموعة:{" "}
             <strong style={{ color: (score ?? 0) >= 70 ? "var(--color-a1)" : "var(--color-cola)" }} className="rtl-num">
               {score}%
             </strong>{" "}
             {(score ?? 0) >= 70 ? " — ممتاز! ✅" : " — أعد المحاولة بعد الاستماع للنموذج."}
+          </div>
+          <div style={{ fontSize: "0.76rem", color: "var(--color-ink2)", marginTop: "0.25rem" }}>
+            تمييز كلمات مسموعة — ليس تقييماً للأصوات المفردة (ü / ch) ولا للّهجة.
           </div>
         </div>
       )}
