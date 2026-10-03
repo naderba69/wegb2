@@ -6,6 +6,7 @@
 //   📅 اجتماع الأحد — طقس أسبوعي بخمس خطوات يجمع العائلة حول التقدّم
 import { useState } from "react";
 import type { Progress } from "@/lib/types";
+import { TOTAL_DAYS } from "@/lib/types";
 import { sentences } from "@/lib/content";
 import { levelOf, pickN, rng } from "@/lib/plan";
 import { kompetenzWerte, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN } from "@/lib/kompetenz";
@@ -54,7 +55,7 @@ table{border-collapse:collapse;width:100%;max-width:26rem;font-size:.9rem}td,th{
 </style></head><body>
 <div class="kopf">
 <h1>🏠 Family Progress Report</h1>
-<div><b>Way to B2</b> — Student: <b>${name}</b> · Day <b>${p.plan.day}</b>/270 · Issued: ${heute}</div>
+<div><b>Way to B2</b> — Student: <b>${name}</b> · Day <b>${p.plan.day}</b>/${TOTAL_DAYS} · Issued: ${heute}</div>
 </div>
 <div class="kacheln">
 <div class="kachel"><b>${bereit.gesamt}%</b>Exam readiness<br><small>${EN_BAND(bereit.gesamt)}</small></div>

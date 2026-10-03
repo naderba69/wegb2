@@ -105,9 +105,9 @@ export function useProgress() {
     });
   }, []);
 
-  /** تسجيل نتيجة مهمة — النجاح ≥80% */
+  /** تسجيل نتيجة مهمة — النجاح ≥80% (ومهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً) */
   const submitTask = useCallback(
-    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number) => {
+    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number, verifyFor?: string) => {
       update((p) => {
         const prev = p.plan.tasks[taskId];
         const passed = total > 0 && score / total >= 0.8;
@@ -121,10 +121,16 @@ export function useProgress() {
           at: new Date().toISOString(),
           geplantMin: geplantMin ?? prev?.geplantMin,
         };
+        const rec = verifyFor ? p.verify?.[verifyFor] : undefined;
+        const verify =
+          verifyFor && rec && rec.doneDay === undefined
+            ? { ...(p.verify ?? {}), [verifyFor]: { ...rec, doneDay: day, passed: result.passed } }
+            : p.verify;
         return checkAbzeichen(
           logK(
             {
               ...p,
+              verify,
               xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
               plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
             },
@@ -249,6 +255,27 @@ export function logSicherheitNow(e: import("./types").SicherheitsEintrag) {
 
 export function addFehlerNow(e: FehlerEintrag) {
   saveProgress(upsertFehler(loadProgress(), e));
+}
+
+/** 🎯 جدولة تحقق استقلال لدرسٍ أُنجِز تدريبُه — مستحق بعد 3 أيام (قرار المنهج).
+ *  غبيةٌ عمداً: المتحقق من وجود بنود التحقق هو المنادي (يملك grammarMap) لا المخزن. */
+export function planeVerifikation(topicId: string, day: number) {
+  const p = loadProgress();
+  if (p.verify?.[topicId]) return;
+  saveProgress({ ...p, verify: { ...(p.verify ?? {}), [topicId]: { dueDay: day + 3 } } });
+}
+
+/** ⌨️ بديل كتابي لمهمة شفوية مستحيلة: إثبات إنجاز لا إثبات نطق (R16) */
+export function markiereSchriftlich(taskId: string) {
+  const p = loadProgress();
+  saveProgress({ ...p, schriftlich: { ...(p.schriftlich ?? {}), [taskId]: true } });
+}
+
+/** 🤔 اعتراض على قاعدة كاشفة: 3 اعتراضات تخفّض حدّتها تلقائياً (R33) */
+export function disputeRegel(regelId: string) {
+  const p = loadProgress();
+  const n = (p.disputiert?.[regelId] ?? 0) + 1;
+  saveProgress({ ...p, disputiert: { ...(p.disputiert ?? {}), [regelId]: n } });
 }
 
 /** تقييم مراجعة خطأ في الدفتر فوراً — ويُسجَّل على شبكة الكفاءات المتأثرة */
