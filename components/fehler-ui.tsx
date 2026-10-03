@@ -334,11 +334,12 @@ export function Lernstrategien() {
   );
 }
 
-// ── 🏫 اختبار تحديد المستوى ───────────────────────────────────────────
+// ── 🏫 اختبار تحديد المستوى: تشخيصٌ سريع بسؤالٍ واحدٍ في كلِّ مرة ────
 export function Einstufung() {
   const { update } = useProgress();
   const fragen = useMemo(() => platzierungsFragen(grammarMap), []);
   const [grp, setGrp] = useState<Record<string, boolean>>({});
+  const [idx, setIdx] = useState(0);
 
   const levelOfId = (id: string) => {
     const real = id.replace(/^pl-\d+-/, "");
@@ -346,40 +347,91 @@ export function Einstufung() {
   };
 
   const fertig = Object.keys(grp).length >= fragen.length;
+  const beantwortet = Object.keys(grp).length;
   const gruppen: Record<string, number> = {};
   for (const [id, ok] of Object.entries(grp)) {
     const lv = levelOfId(id);
     gruppen[lv] = (gruppen[lv] ?? 0) + (ok ? 1 : 0);
   }
   const vorschlag = vorschlagTag(gruppen);
+  const springe = (i: number) => setIdx(Math.max(0, Math.min(fragen.length - 1, i)));
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem", borderInlineStart: "5px solid var(--color-b1)" }}>
-      <h3 style={{ fontWeight: 900 }}>🏫 اختبار تحديد المستوى (اختياري — 12 سؤالاً)</h3>
-      <p style={{ fontSize: "0.88rem", color: "var(--color-ink2)", margin: "0.4rem 0 0.8rem" }}>
-        يقترح المدرّس نقطة انطلاقك A1→B2 لتفادي ما تتقنه فعلاً. أخطاؤك هنا تدخل دفتر الأخطاء مباشرة (تشخيص!). لن يتغيّر يومك إلا بتأكيدك.
+    <section className="card fadein" data-testid="einstufung" style={{ padding: "1.3rem", borderRadius: "1.3rem", borderInlineStart: "5px solid var(--color-b1)" }}>
+      <div className="dirb-kicker">🏫 EINSTUFUNG · اختياري</div>
+      <h3 style={{ fontWeight: 900, fontSize: "1.3rem", margin: "0.15rem 0 0.3rem" }}>من أين نبدأ؟</h3>
+      <p style={{ fontSize: "0.88rem", color: "var(--color-ink2)", margin: "0 0 0.8rem", lineHeight: 1.9 }}>
+        اختبار تحديد المستوى — <span className="rtl-num">{fragen.length}</span> سؤالاً تشخيصياً يقترح نقطة انطلاقك A1→B2 لتفادي ما تتقنه فعلاً.
+        أخطاؤك هنا تدخل دفتر الأخطاء مباشرة (تشخيص!). لن يتغيّر يومك إلا بتأكيدك.
       </p>
-      <div style={{ display: "grid", gap: "0.8rem" }}>
-        {fragen.map((ex) => (
-          <ExerciseSet
+
+      {/* ── التقدّم في التشخيص ── */}
+      <div className="dirb-ex-progress" aria-label="التقدم في اختبار تحديد المستوى">
+        <div className="dirb-ex-progress-top">
+          <span>أجبتَ عن <span className="rtl-num">{beantwortet}</span> من <span className="rtl-num">{fragen.length}</span></span>
+          <span className="rtl-num">السؤال {idx + 1}/{fragen.length}</span>
+        </div>
+        <div className="dirb-ex-bar" role="progressbar" aria-valuenow={beantwortet} aria-valuemin={0} aria-valuemax={fragen.length}>
+          <div className="dirb-ex-fill" style={{ width: `${fragen.length ? Math.round((beantwortet / fragen.length) * 100) : 0}%` }} />
+        </div>
+      </div>
+
+      {/* ── نقاط الأسئلة: أخضر=مُجاب · مضيء=الحالي ── */}
+      <div style={{ display: "flex", gap: "0.1rem", justifyContent: "center", flexWrap: "wrap", margin: "0.2rem 0 0.4rem" }} role="tablist" aria-label="أسئلة الاختبار">
+        {fragen.map((ex, i) => (
+          <button
             key={ex.id}
-            items={[ex]}
-            onPoints={(p) => setGrp((g) => ({ ...g, [ex.id]: p > 0 }))}
-          />
+            type="button"
+            role="tab"
+            aria-selected={i === idx}
+            aria-label={`السؤال ${i + 1}${grp[ex.id] !== undefined ? " (مُجاب)" : ""}`}
+            onClick={() => springe(i)}
+            style={{ background: "none", border: 0, cursor: "pointer", padding: "0.4rem 0.3rem", minWidth: "30px", minHeight: "32px", display: "flex", alignItems: "center", justifyContent: "center" }}
+          >
+            <span className={"dirb-dot" + (grp[ex.id] !== undefined ? " dirb-dot-done" : i === idx ? " dirb-dot-now" : "")} />
+          </button>
         ))}
       </div>
+
+      {/* ── سؤالٌ واحدٌ مرئيّ — الباقي محفوظُ الحالةِ لا مفقودُها ── */}
+      <div style={{ display: "grid", gap: "0.8rem" }}>
+        {fragen.map((ex, i) => (
+          <div key={ex.id} style={{ display: i === idx ? undefined : "none" }}>
+            <ExerciseSet
+              items={[ex]}
+              onPoints={(p) => setGrp((g) => ({ ...g, [ex.id]: p > 0 }))}
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* ── التنقّل بين الأسئلة ── */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "0.5rem", marginTop: "0.8rem" }}>
+        <button type="button" className="btn btn-ghost" disabled={idx === 0} onClick={() => springe(idx - 1)} style={{ minHeight: "48px" }}>
+          → السابق
+        </button>
+        {idx < fragen.length - 1 ? (
+          <button type="button" className="btn btn-ghost" onClick={() => springe(idx + 1)} style={{ minHeight: "48px" }}>
+            التالي ←
+          </button>
+        ) : (
+          <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>آخر سؤال — أجب لتظهر النتيجة</span>
+        )}
+      </div>
+
       {fertig && (
-        <div style={{ marginTop: "1rem", background: "var(--color-gold-soft)", borderRadius: "0.7rem", padding: "0.9rem 1rem" }}>
-          <strong>
-            اقتراح المدرّس: ابدأ من اليوم <span className="rtl-num">{vorschlag}</span>
+        <div style={{ marginTop: "1rem", background: "var(--color-gold-soft)", borderRadius: "0.9rem", padding: "1rem 1.1rem", border: "1px solid var(--color-gold)" }}>
+          <strong style={{ fontSize: "1.05rem" }}>
+            🎯 اقتراح المدرّس: ابدأ من اليوم <span className="rtl-num">{vorschlag}</span>
             {` (${levelAmTag(vorschlag)})`}
           </strong>
-          <div style={{ fontSize: "0.85rem", margin: "0.3rem 0 0.6rem" }}>
+          <div style={{ fontSize: "0.85rem", margin: "0.3rem 0 0.7rem", color: "var(--color-ink2)" }}>
             نتائجك: A1 {gruppen.A1 ?? 0}/2 · A2 {gruppen.A2 ?? 0}/3 · B1 {gruppen.B1 ?? 0}/3 · B2 {gruppen.B2 ?? 0}/4
           </div>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             <button
               className="btn btn-primary"
+              style={{ minHeight: "48px" }}
               onClick={() =>
                 update((p) => ({
                   ...p,
@@ -390,11 +442,23 @@ export function Einstufung() {
             >
               تابع من اليوم {vorschlag} ←
             </button>
-            <button className="btn btn-ghost" onClick={() => update((p) => ({ ...p, settings: { ...p.settings, placed: true } }))}>
+            <button className="btn btn-ghost" style={{ minHeight: "48px" }} onClick={() => update((p) => ({ ...p, settings: { ...p.settings, placed: true } }))}>
               أكمل من حيث أنا
             </button>
           </div>
         </div>
+      )}
+
+      {/* ── باب الخروج الصريح: مبتدئٌ تماماً لا يحتاج تشخيصاً ── */}
+      {!fertig && (
+        <button
+          type="button"
+          className="btn btn-ghost"
+          style={{ marginTop: "0.8rem", fontSize: "0.85rem", width: "100%", minHeight: "48px" }}
+          onClick={() => update((p) => ({ ...p, settings: { ...p.settings, placed: true } }))}
+        >
+          مبتدئ تماماً؟ تخطَّ الاختبار وابدأ من اليوم 1 ←
+        </button>
       )}
     </section>
   );
