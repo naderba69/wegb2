@@ -321,15 +321,6 @@ function buildQuiz(day: number, phase: Phase, count: number): Exercise[] {
   return picked.slice(0, count).map((ex, i) => ({ ...ex, id: `q${day}-${i}-${ex.id}` }));
 }
 
-/** 🎯 تحققات الاستقلال المستحقة: دروسٌ أُنجِز تدريبُها وحلَّ يومُها (الأقدم أولاً) */
-export function dueVerify(progress: Progress, day: number): { lessonId: string; dueDay: number }[] {
-  return Object.entries(progress.verify ?? {})
-    .filter(([, v]) => v.dueDay <= day && v.doneDay === undefined)
-    .map(([lessonId, v]) => ({ lessonId, dueDay: v.dueDay }))
-    .filter((v) => (grammarMap[v.lessonId]?.verify ?? []).length > 0)
-    .sort((a, b) => a.dueDay - b.dueDay);
-}
-
 // ── مولّد اليوم ─────────────────────────────────────────────────────────
 export function buildDay(day: number, progress: Progress): DayPlan {
   const week = Math.ceil(day / 7);
@@ -358,24 +349,6 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       from: d.from,
     });
   });
-
-  // (1b) تحققات الاستقلال المستحقة — مهام جديدة لا إعادة (≤2 في اليوم، والباقي يبقى في الطابور)
-  dueVerify(progress, day)
-    .slice(0, 2)
-    .forEach((v) => {
-      const t = grammarMap[v.lessonId];
-      tasks.push({
-        id: `${day}:vrfy:${v.lessonId}`,
-        kind: "check",
-        titleDe: `Unabhängigkeits-Check: ${t?.titleDe ?? v.lessonId}`,
-        titleAr: `تحقق الاستقلال: ${t?.titleAr ?? v.lessonId} — مهمة جديدة لا إعادة`,
-        minutes: 10,
-        quiz: (t?.verify ?? []).slice(0, 3),
-        mandatory: true,
-        from: v.dueDay,
-        verifyFor: v.lessonId,
-      });
-    });
 
   const tid = (n: number) => `${day}:t${n}`;
   const phaseTopics = PHASE_TOPICS[phase];

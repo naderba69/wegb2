@@ -109,28 +109,15 @@ export default function ExerciseSet({ items, onPoints }: Props) {
 
   const getippt = (ex: Exercise) => ex.type === "fill" || ex.type === "dictation" || ex.type === "translate" || ex.type === "umformung";
 
-  const doneN = items.filter((ex) => states[ex.id]?.checked).length;
-
   return (
-    <div className="dirb-ex">
-      {items.length > 1 && (
-        <div className="dirb-ex-progress" aria-label="التقدم في التمرين">
-          <div className="dirb-ex-progress-top">
-            <span>التقدّم في التمرين</span>
-            <span className="rtl-num">{doneN}/{items.length}</span>
-          </div>
-          <div className="dirb-ex-bar" role="progressbar" aria-valuenow={doneN} aria-valuemin={0} aria-valuemax={items.length}>
-            <div className="dirb-ex-fill" style={{ width: `${items.length ? Math.round((doneN / items.length) * 100) : 0}%` }} />
-          </div>
-        </div>
-      )}
+    <div style={{ display: "grid", gap: "1rem" }}>
       {items.map((ex, i) => {
         const st = states[ex.id];
         const liveWert = getippt(ex) && st && !st.checked ? konfidenz(givenOf(st), refOf(ex)) : null;
         return (
           <div
             key={ex.id}
-            className="card dirb-ex-item"
+            className="card"
             style={{
               padding: "1rem 1.1rem",
               borderInlineStart: st?.checked
@@ -158,10 +145,10 @@ export default function ExerciseSet({ items, onPoints }: Props) {
               <div data-testid="sicherheit" style={{ display: "flex", gap: "0.4rem", alignItems: "center", marginBottom: "0.5rem", fontSize: "0.85rem", flexWrap: "wrap" }}>
                 <span style={{ color: "var(--color-ink2)" }}>قبلَ أن تجيب — كم أنت متأكّد؟</span>
                 <button type="button" className="btn btn-ghost" data-testid="sicher-ja" aria-pressed={st?.sicher === true}
-                  style={{ padding: "0.4rem 0.8rem", minHeight: "44px", background: st?.sicher === true ? "var(--color-gold-soft)" : "transparent", borderColor: st?.sicher === true ? "var(--color-gold)" : undefined }}
+                  style={{ padding: "0.15rem 0.6rem", background: st?.sicher === true ? "var(--color-gold-soft)" : "white" }}
                   onClick={() => setState(ex.id, { ...(st ?? emptySt(st)), sicher: true })}>👍 متأكّد</button>
                 <button type="button" className="btn btn-ghost" data-testid="sicher-nein" aria-pressed={st?.sicher === false}
-                  style={{ padding: "0.4rem 0.8rem", minHeight: "44px", background: st?.sicher === false ? "var(--color-gold-soft)" : "transparent", borderColor: st?.sicher === false ? "var(--color-gold)" : undefined }}
+                  style={{ padding: "0.15rem 0.6rem", background: st?.sicher === false ? "var(--color-gold-soft)" : "white" }}
                   onClick={() => setState(ex.id, { ...(st ?? emptySt(st)), sicher: false })}>🤔 غيرُ متأكّد</button>
               </div>
             )}
@@ -172,12 +159,11 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                   return (
                     <button
                       key={opt}
-                      className="btn btn-ghost dirb-ex-opt"
+                      className="btn btn-ghost"
                       style={{
                         justifyContent: "flex-start",
                         textAlign: "start",
-                        background: selected ? "rgb(34 197 94 / 0.14)" : "transparent",
-                        borderColor: selected ? "#22c55e" : undefined,
+                        background: selected ? "var(--color-gold-soft)" : "white",
                         direction: "ltr",
                       }}
                       disabled={st?.checked}
@@ -197,8 +183,8 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                   return (
                     <button
                       key={opt}
-                      className="btn btn-ghost dirb-ex-opt"
-                      style={{ flex: 1, background: selected ? "rgb(34 197 94 / 0.14)" : "transparent", borderColor: selected ? "#22c55e" : undefined }}
+                      className="btn btn-ghost"
+                      style={{ background: selected ? "var(--color-gold-soft)" : "white" }}
                       disabled={st?.checked}
                       onClick={() => setState(ex.id, { ...emptySt(st), response: opt, sicher: st?.sicher })}
                     >

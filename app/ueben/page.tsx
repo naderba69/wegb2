@@ -82,18 +82,18 @@ export default function Ueben() {
   // ── الباب المقفل: سببٌ معلن وبابٌ واحد (K113b) ──
   if (!abend) {
     return (
-      <div className="today-screen fadein dirb" data-testid="ueben-gesperrt">
-        <div className="dirb-close dirb-hero-anim">
-          <div style={{ fontSize: "2.6rem" }} aria-hidden>🔒</div>
-          <h1 className="dirb-title" style={{ fontSize: "1.4rem" }}>تدرّب يفتح بعد إغلاق يومك</h1>
-          <p className="dirb-sub" style={{ lineHeight: 1.9 }}>
+      <div className="today-screen fadein" data-testid="ueben-gesperrt" style={{ display: "grid", gap: "1rem" }}>
+        <div className="card" style={{ padding: "2rem 1.4rem", textAlign: "center", borderInlineStart: "5px solid var(--color-die)" }}>
+          <div style={{ fontSize: "2.4rem" }} aria-hidden>🔒</div>
+          <h1 style={{ fontWeight: 900, fontSize: "1.3rem", margin: "0.5rem 0 0.3rem" }}>تدرّب يفتح بعد إغلاق يومك</h1>
+          <p style={{ color: "var(--color-ink2)", lineHeight: 1.9, maxWidth: "30rem", margin: "0 auto" }}>
             هكذا اتفقنا: الطابور أولاً — همّةُ اليوم تُنجَز ثم تُراجَع أخطاؤه ثم يُغلَق،
             وعندها يُفتح التدريب الحرّ لمساءٍ هادئ. لا زرَّ تخطٍّّ ولا طريقٌ جانبي.
           </p>
-          <p className="dirb-sub" style={{ fontSize: "0.8rem" }}>
-            الطريق: مهامّ اليوم ← مراجعة الأخطاء ← «تأكيد إغلاق اليوم».
+          <p style={{ color: "var(--color-ink2)", fontSize: "0.86rem", margin: "0.6rem 0 1.2rem" }}>
+            الطريق: مهامّ اليوم ← مراجعة الأخطاء (FehlerRevue) ← «تأكيد إغلاق اليوم».
           </p>
-          <Link href="/" className="dirb-start" style={{ textDecoration: "none" }}>
+          <Link href="/" className="btn btn-primary" style={{ minHeight: "44px", textDecoration: "none" }}>
             ↩ عُد إلى «اليوم» وأكمل طابورك
           </Link>
         </div>
@@ -104,16 +104,15 @@ export default function Ueben() {
   // ── محطة مَرتحِلة: تدريب إضافي ──
   if (offen === "zusatz") {
     return (
-      <div className="today-screen fadein dirb">
-        <button type="button" className="dirb-back" onClick={() => setOffen(null)}>
+      <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }}>
+        <button type="button" className="btn btn-ghost" style={{ minHeight: "44px", justifySelf: "start" }} onClick={() => setOffen(null)}>
           → كل التدريبات
         </button>
-        <div className="dirb-station-head">
-          <div className="dirb-kicker">➕ ZUSATZ</div>
-          <h1 className="dirb-station-title">تدريب إضافي</h1>
-          <div className="dirb-station-sub">تمارين درس اليوم التي زادت عن الثلاثة — ركّبناها هنا بدل أن نمرّرها.</div>
-        </div>
-        <section className="dirb-station">
+        <section className="card" style={{ padding: "1.1rem 1.2rem" }}>
+          <h1 style={{ fontWeight: 900, fontSize: "1.15rem", margin: "0 0 0.3rem" }}>➕ تدريب إضافي</h1>
+          <p style={{ fontSize: "0.85rem", color: "var(--color-ink2)", margin: "0 0 0.8rem" }}>
+            تمارين درس اليوم التي زادت عن الثلاثة — ركّبناها هنا بدل أن نمرّرها.
+          </p>
           <ExerciseSet items={parkExercises} onPoints={() => {}} />
         </section>
       </div>
@@ -122,20 +121,12 @@ export default function Ueben() {
 
   // ── محطة مفتوحة: شاشة واحدة بباب رجوع ──
   if (offen) {
-    const k = KARTE[offen];
     return (
-      <div className="today-screen fadein dirb">
-        <button type="button" className="dirb-back" data-testid="ueben-zurueck" onClick={() => setOffen(null)}>
+      <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }}>
+        <button type="button" className="btn btn-ghost" data-testid="ueben-zurueck" style={{ minHeight: "44px", justifySelf: "start" }} onClick={() => setOffen(null)}>
           → كل التدريبات
         </button>
-        {k && (
-          <div className="dirb-station-head">
-            <div className="dirb-kicker">{k.icon} ÜBEN</div>
-            <h1 className="dirb-station-title">{k.titel}</h1>
-            <div className="dirb-station-sub">{k.unter}</div>
-          </div>
-        )}
-        <section className="dirb-station">
+        <section style={{ display: "grid", gap: "1rem" }}>
           {offen === "fehlerlabor" && <FehlerLabor progress={progress} />}
           {offen === "uebungen" && <UebungenCard progress={progress} />}
           {offen === "blitz" && <BlitzDrill progress={progress} />}
@@ -156,20 +147,19 @@ export default function Ueben() {
   // ── القائمة حسب ترتيب الأولوية (K112a) ──
   const ids = UEBEN_REIHENFOLGE.split(",").filter((id) => id !== "zusatz" || hatZusatz);
   return (
-    <div className="today-screen fadein dirb" data-testid="ueben-liste">
-      <header className="dirb-tabhead dirb-hero-anim">
-        <div className="dirb-kicker">💪 ÜBEN</div>
-        <h1 className="dirb-title">تدرّب</h1>
-        <div className="dirb-sub">ترتيبُ الأولوية — الأخطاءَ قبل السرعة</div>
+    <div className="today-screen fadein" data-testid="ueben-liste" style={{ display: "grid", gap: "0.8rem" }}>
+      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
+        <h1 style={{ fontWeight: 900, fontSize: "1.2rem", margin: 0 }}>💪 تدرّب</h1>
+        <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>ترتيبُ الأولوية — الأخطاءَ قبل السرعة</span>
       </header>
 
       {offenBleibt && (
-        <div className="dirb-hinweis dirb-hero-anim-2" data-testid="ueben-hinweis">
-          طابورُ اليومِ ما زال مفتوحاً — درِّب ثم <Link href="/">عُد إلى «اليوم»</Link> حتى تُغلقه.
+        <div className="card" data-testid="ueben-hinweis" style={{ padding: "0.6rem 0.9rem", borderInlineStart: "5px solid var(--color-gold)", fontSize: "0.85rem", background: "var(--color-gold-soft)" }}>
+          طابورُ اليومِ ما زال مفتوحاً — درِّب ثم <Link href="/" style={{ color: "var(--color-cola)", fontWeight: 800 }}>عُد إلى «اليوم»</Link> حتى تُغلقه.
         </div>
       )}
 
-      <div className="dirb-menu dirb-hero-anim-2">
+      <div style={{ display: "grid", gap: "0.6rem" }}>
         {ids.map((id) => {
           const k = KARTE[id];
           if (!k) return null;
@@ -179,14 +169,14 @@ export default function Ueben() {
               type="button"
               data-testid={`ueben-karte-${id}`}
               onClick={() => setOffen(id)}
-              className="dirb-menu-btn"
+              className="card"
+              style={{ minHeight: "56px", padding: "0.8rem 1rem", textAlign: "start", cursor: "pointer", display: "flex", gap: "0.8rem", alignItems: "center" }}
             >
-              <span className="dirb-menu-ico" aria-hidden>{k.icon}</span>
-              <span className="dirb-menu-txt">
-                <b>{k.titel}</b>
-                <span>{k.unter}</span>
+              <span style={{ fontSize: "1.5rem" }} aria-hidden>{k.icon}</span>
+              <span>
+                <span style={{ fontWeight: 800, display: "block" }}>{k.titel}</span>
+                <span style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{k.unter}</span>
               </span>
-              <span className="dirb-chev" aria-hidden>←</span>
             </button>
           );
         })}

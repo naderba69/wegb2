@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ar" dir="rtl">
       <body>
-        <main style={{ maxWidth: "56rem", margin: "0 auto", padding: "1rem 1rem 6.5rem" }}>
+        <main style={{ maxWidth: "56rem", margin: "0 auto", padding: "1rem 1rem 4rem" }}>
           {children}
         </main>
       <Navigation />
@@ -24,10 +24,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           style={{
             textAlign: "center",
             color: "var(--color-ink2)",
-            fontSize: "0.72rem",
-            padding: "0 1.2rem 6.2rem",
-            maxWidth: "56rem",
-            margin: "0 auto",
+            fontSize: "0.78rem",
+            padding: "1.2rem",
+            borderTop: "1px solid var(--color-line)",
           }}
         >
           طريقي إلى B2 · نظام مغلق تماماً — كل الشروحات والنصوص والنطق داخل التطبيق · التقدّم في متصفحك

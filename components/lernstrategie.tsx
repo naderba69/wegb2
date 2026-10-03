@@ -563,6 +563,7 @@ function SelbstLinter() {
 /* ------------------------------------------------------------- المركز */
 
 export function LernStrategieZentrum({ progress }: { progress: Progress }) {
+  const { update } = useProgress();
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<"teile" | "pomo" | "feynman" | "plan" | "linter">("teile");
 
@@ -599,6 +600,16 @@ export function LernStrategieZentrum({ progress }: { progress: Progress }) {
           {tab === "feynman" && <Feynman />}
           {tab === "plan" && <WochenPlan progress={progress} />}
           {tab === "linter" && <SelbstLinter />}
+          <div style={{ display: "flex", justifyContent: "flex-end", borderTop: "1px dashed var(--color-line)", paddingTop: "0.5rem" }}>
+            <button
+              className="btn btn-ghost"
+              style={{ fontSize: "0.72rem" }}
+              onClick={() => update((p) => ({ ...p, settings: { ...p.settings, placed: false } }))}
+              title="يعيد بطاقة اختبار تحديد المستوى في أعلى الصفحة"
+            >
+              🏫 أعد اختبار تحديد المستوى
+            </button>
+          </div>
         </div>
       )}
     </div>

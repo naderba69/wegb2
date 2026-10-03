@@ -1,19 +1,18 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NavIcon, type NavIconName } from "@/components/dirb/icons";
 
 /**
- * 🧭 التنقّل السفلي DirB — خمس مقاعد في الطابور فقط (K101):
+ * 🧭 التنقّل السفلي — خمس مقاعد في الطابور فقط (K101):
  * اليوم · الدرس · تدرّب · اختبر · تقدّمي.
- * لوح الهوية الداكن #101318 + أيقونات SVG + النشط أخضر حيّ.
+ * لا وجهة سادسة ولا رابط محتوى — الوجهة نفسها تعرض مقعدك في الطابور.
  */
-const ZIELE: { href: string; icon: NavIconName; label: string }[] = [
-  { href: "/", icon: "home", label: "اليوم" },
-  { href: "/lernen", icon: "book", label: "الدرس" },
-  { href: "/ueben", icon: "bolt", label: "تدرّب" },
-  { href: "/pruefen", icon: "target", label: "اختبر" },
-  { href: "/fortschritt", icon: "chart", label: "تقدّمي" },
+const ZIELE = [
+  { href: "/", icon: "📅", label: "اليوم" },
+  { href: "/lernen", icon: "📖", label: "الدرس" },
+  { href: "/ueben", icon: "💪", label: "تدرّب" },
+  { href: "/pruefen", icon: "🎯", label: "اختبر" },
+  { href: "/fortschritt", icon: "📈", label: "تقدّمي" },
 ];
 
 export default function Navigation() {
@@ -26,6 +25,8 @@ export default function Navigation() {
         position: "fixed",
         bottom: 0,
         insetInline: 0,
+        display: "grid",
+        gridTemplateColumns: "repeat(5, 1fr)",
         background: "#101318",
         borderTop: "1px solid #2a2f38",
         paddingBottom: "env(safe-area-inset-bottom, 0px)",
@@ -33,28 +34,32 @@ export default function Navigation() {
         direction: "rtl",
       }}
     >
-      <div className="dirb-nav-inner">
-        {ZIELE.map((z) => {
-          const aktiv = pathname === z.href;
-          return (
-            <Link
-              key={z.href}
-              href={z.href}
-              aria-current={aktiv ? "page" : undefined}
-              className="dirb-nav-link"
-              style={{
-                color: aktiv ? "#22c55e" : "#9aa3af",
-                fontWeight: aktiv ? 900 : 600,
-                borderTop: aktiv ? "3px solid #22c55e" : "3px solid transparent",
-                textShadow: aktiv ? "0 0 18px rgb(34 197 94 / 0.55)" : "none",
-              }}
-            >
-              <NavIcon name={z.icon} className="dirb-nav-icon" />
-              {z.label}
-            </Link>
-          );
-        })}
-      </div>
+      {ZIELE.map((z) => {
+        const aktiv = pathname === z.href;
+        return (
+          <Link
+            key={z.href}
+            href={z.href}
+            aria-current={aktiv ? "page" : undefined}
+            style={{
+              minHeight: "56px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.1rem",
+              textDecoration: "none",
+              fontSize: "0.72rem",
+              fontWeight: aktiv ? 900 : 600,
+              color: aktiv ? "#22c55e" : "#9aa3af",
+              borderTop: aktiv ? "3px solid #22c55e" : "3px solid transparent",
+            }}
+          >
+            <span aria-hidden style={{ fontSize: "1.15rem", lineHeight: 1 }}>{z.icon}</span>
+            {z.label}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

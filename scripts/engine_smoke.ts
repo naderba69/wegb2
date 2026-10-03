@@ -2416,6 +2416,72 @@ void 0;
   ok(gD.includes('return <Empty title="قاعدة غير موجودة" />'),
     "K119b ويبقى بابُ الاحتياطِ: غابتِ الدرسُ والأسئلةُ معاً فالشاشةُ تُعلِنُ نقصةها بصراحة");
 }
+
+/* ═══ K120 — سجلُّ القواعدِ يفحصُ نفسَه: كلُّ دليلٍ «ملف:سطر» مذكورٍ موجودٌ حرفياً ═══ */
+{
+  const rules = readFileSync("RULES.md", "utf8");
+  const re = /`([^`]+\.(?:ts|tsx|json|css|md)):(\d+)`\s*«([^»]+)»/g;
+  const bad: string[] = [];
+  let m: RegExpExecArray | null;
+  let n = 0;
+  while ((m = re.exec(rules))) {
+    n++;
+    const f = m[1];
+    const anchor = m[3];
+    if (!existsSync(f) || !readFileSync(f, "utf8").includes(anchor)) bad.push(`${f}«${anchor.slice(0, 40)}»`);
+  }
+  ok(n >= 30, `K120a سجلُّ القواعدِ يحمِلُ ${n} دليلاً قابلاً للفحصِ الآلي`);
+  ok(bad.length === 0, `K120b كلُّ دليلٍ مذكورٍ موجودٌ حرفياً في ملفِّه (${bad.slice(0, 3).join(" · ")})`);
+}
+
+/* ═══ K121 — أقفالُ المحتوى المدقَّق (2026-10-03): التوحيدُ والتغطيةُ أرقامٌ لا وعود ═══ */
+{
+  const g = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
+  const ids = Object.keys(g);
+  const std = ids.filter((id) => g[id].ziel && g[id].voraus && g[id].anwendung && (g[id].verify ?? []).length >= 2);
+  ok(ids.length === 58 && std.length === 58, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (ziel/voraus/anwendung + تحققان لكل درس)`);
+  const v = JSON.parse(readFileSync("content/vocab.json", "utf8")) as any;
+  let n = 0, ex = 0, syn = 0;
+  const walk = (x: any): void => {
+    if (Array.isArray(x)) { x.forEach(walk); return; }
+    if (x && typeof x === "object") {
+      if (typeof x.de === "string") { n++; if (x.exampleDe) ex++; if (x.syn) syn++; }
+      Object.values(x).forEach(walk);
+    }
+  };
+  walk(v);
+  ok(n >= 3000 && ex === n, `K121b كلُّ بطاقةٍ لها مثالٌ ألماني (${ex}/${n})`);
+  ok(syn === 0, `K121c غيابُ syn موثَّق (=0) — أيُّ تقدُّمٍ في المرحلة 2 يجبُ أن يُحدِّثَ السجلَّ والقفل`);
+}
+
+/* ═══ K122 — أقفالُ الغيابِ والموافقة: الممنوعُ يبقى ممنوعاً والمصرَّحُ ببوابته ═══ */
+{
+  const srcOf = (f: string): string => readFileSync(f, "utf8");
+  const collect = (dir: string, out: string[] = []): string[] => {
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+      const p = `${dir}/${e.name}`;
+      if (e.isDirectory()) collect(p, out);
+      else if (/\.tsx?$/.test(p)) out.push(p);
+    }
+    return out;
+  };
+  const vRaw = srcOf("content/vocab.json");
+  ok(!/"fr"\s*:/.test(vRaw), "K122a لا مفتاح fr في المفردات — الفرنسيةُ خارجَ المشروع");
+  const ui = [...collect("app").filter((f) => f.endsWith("page.tsx")), ...collect("components")];
+  const claims = ["يفوق", "تتفوق", "أفضل من المدارس", "معتمد رسمي", "بديل المدرسة", "يغنيك عن المعلم", "نضمن"];
+  const hit: string[] = [];
+  for (const f of ["README.md", ...ui]) for (const c of claims) if (srcOf(f).includes(c)) hit.push(`${f}:${c}`);
+  ok(hit.length === 0, `K122b لا ادعاءاتِ تفوقٍ/اعتمادٍ في الواجهات (${hit.slice(0, 2).join(" ")})`);
+  const code = [...collect("app"), ...collect("components"), ...collect("lib")];
+  const fetchIn = code.filter((f) => srcOf(f).includes("fetch("));
+  ok(fetchIn.length === 1 && fetchIn[0] === "lib/grader.ts", `K122c الشبكةُ محصورةٌ في مصحّح LLM (${fetchIn.join(",") || "لا شيء"})`);
+  ok(srcOf("app/einstellungen/page.tsx").includes("أُذِنُ بإرسال صوتي") && srcOf("lib/speech.ts").includes("بلا إذنٍ صريحٍ في الإعدادات"),
+    "K122d سلسلةُ الموافقةِ السحابية: صياغةُ الإذنِ + شرطُ البوابةِ حاضران");
+  const callers = code.filter((f) => f !== "lib/speech.ts" && srcOf(f).includes("listenDe("));
+  ok(callers.length > 0 && callers.every((f) => srcOf(f).includes("cloudSpracheFrei")),
+    `K122e كلُّ منادٍ للتعرّفِ يفحصُ البوابةَ أولاً (${callers.join(",")})`);
+  ok(!srcOf("components/selbsttest.tsx").includes("recordTask("), "K122f الاختبارُ الذاتيُّ خارجَ الدرجةِ الرسمية — لا يسجِّلُ فيها");
+}
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
