@@ -1,15 +1,14 @@
 "use client";
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { useProgress, saveProgress } from "@/lib/store";
-import { buildDay, dayScore, debtsFrom, planPct, modulOf } from "@/lib/plan";
-import { TOTAL_DAYS, LEVEL_COLORS } from "@/lib/types";
+import { useProgress, saveProgress, planeVerifikation } from "@/lib/store";
+import { buildDay, dayScore, debtsFrom, modulOf } from "@/lib/plan";
+import { TOTAL_DAYS } from "@/lib/types";
+import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
-import { Einstufung } from "@/components/fehler-ui";
-import { effectiveLang, t } from "@/lib/i18n";
-import { XpBar, Wochenplan } from "@/components/wochen";
+import { KindIcon } from "@/components/dirb/icons";
+import { Wochenplan } from "@/components/wochen";
 import { ProfilWahl } from "@/components/profil";
-import { activeProfile } from "@/lib/profiles";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
 
 const TYPE_LABEL: Record<string, string> = {
@@ -19,28 +18,76 @@ const TYPE_LABEL: Record<string, string> = {
   abschluss: "يوم ختامي",
 };
 
-/**
- * 📅 شاشة «اليوم» — الطابور المتسلسل:
- * ترويسة (أين أنا؟) ← تهيئة إن لزمت ← جدول الأسبوع (مطويّ) ← Klassenzimmer
- * (بوابة الاسترجاع ← Stepper ← مراجعة الأخطاء ← إغلاق يدوي ← كبسولة المساء).
- * لا بطاقات خزانة ولا روابط قفز — كل شيء آخر في وجهاته (K100–K102).
- */
+/** أسماء المهارات التي تظهر في واجهة اليوم بالعربية. */
+const SKILL_AR: Record<string, string> = {
+  hoeren: "استماع",
+  lesen: "قراءة",
+  schreiben: "كتابة",
+  sprechen: "تحدّث",
+  aussprache: "نطق",
+  grammatik: "قواعد",
+  wortschatz: "مفردات",
+  wiederholen: "مراجعة",
+  check: "فحص",
+};
+
+/** شاشة «اليوم»: مهمة واحدة في المقدمة؛ الأدوات والبدائل قابلة للفتح عند الحاجة. */
 export default function Today() {
   const { progress, submitTask, closeDay, setSrs, saveExam, update } = useProgress();
-  const lang = effectiveLang(progress);
   const day = progress.plan.day;
   const plan = useMemo(() => buildDay(day, progress), [day, progress]);
   const [step, setStep] = useState(0);
   const [points, setPoints] = useState<Record<string, { score: number; total: number }>>({});
   const [confirmClose, setConfirmClose] = useState(false);
 
-  const act = activeProfile();
   const resultOf = (id: string) => progress.plan.tasks[id];
   // 🔐 بوابة الجلسة: الجديد لا يُرى قبل تسليم الاسترجاع (lib/ritual.ts)
   const ritual = ritualUrteil(plan, progress);
   const stepFrei = aufgabeGesperrt(ritual, step) ? Math.max(0, ritual.ersteFreie - 1) : step;
   const localOf = (id: string) => points[id] ?? { score: 0, total: 0 };
   const totalMinutes = plan.tasks.reduce((acc, tk) => acc + tk.minutes, 0);
+
+  // 🎯 هدف اليوم: المنجَز من المخطَّط (tempo) بالدقائق
+  const doneMin = plan.tasks.reduce((acc, tk) => acc + (resultOf(tk.id) ? tk.minutes : 0), 0);
+  const zielMin = plan.zielMin > 0 ? plan.zielMin : totalMinutes;
+  const tagesPct = zielMin > 0 ? Math.min(100, Math.round((doneMin / zielMin) * 100)) : 0;
+  const dateAr = new Date().toLocaleDateString("ar", { weekday: "long", day: "numeric", month: "long" });
+
+  // الخطوة الحالية هي الوحيدة في بطاقة المقدمة.
+  const held = plan.tasks[stepFrei] ?? plan.tasks[0];
+  const heldFertig = held ? !!resultOf(held.id) : false;
+  const heldBestanden = held ? !!resultOf(held.id)?.passed : false;
+  const allTodayDone = plan.tasks.length > 0 && plan.tasks.every((task) => !!resultOf(task.id));
+  // سبب الاختيار بلغة بسيطة، مع إبقاء معنى الاسترجاع والتحقق المستقل.
+  const heldGrund = !held
+    ? ""
+    : held.verifyFor
+      ? "مهمة جديدة للتأكد من ثبات ما تعلّمته."
+      : held.mandatory
+        ? `مراجعة لم تكتمل في اليوم ${held.from}؛ نبدأ بها اليوم.`
+        : held.exam
+          ? "اختبار هذه المرحلة — خذ وقتك وأجب بهدوء."
+          : held.kind === "wiederholen"
+            ? "مراجعة قصيرة قبل الانتقال إلى الجديد."
+            : "هذه هي الخطوة التالية في خطتك.";
+  const scrollToTraining = () => {
+    document.getElementById("dirb-training")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const startToday = () => {
+    if (allTodayDone) {
+      document.getElementById("dirb-abschluss")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    if (heldBestanden) {
+      const next = plan.tasks.findIndex((task, i) => !resultOf(task.id)?.passed && !aufgabeGesperrt(ritual, i));
+      if (next >= 0) setStep(next);
+    }
+    document.getElementById("dirb-training")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const springeZu = (i: number) => {
+    setStep(i);
+    scrollToTraining();
+  };
 
   // ── نهاية الرحلة: اليوم 271 = الحصيلة النهائية ──
   if (day > TOTAL_DAYS) {
@@ -50,34 +97,36 @@ export default function Today() {
     const avg = totalMax ? Math.round((totalScore / totalMax) * 100) : 0;
     const canDoCount = Object.keys(progress.canDo).length;
     return (
-      <div className="today-screen fadein card" style={{ padding: "2.2rem", textAlign: "center" }}>
-        <div style={{ fontSize: "3rem" }}>🎓</div>
-        <h1 style={{ fontWeight: 900, fontSize: "1.7rem", color: "var(--color-cola)" }}>
-          اكتملت الرحلة — 270 يوماً حتى B2!
-        </h1>
-        <p style={{ color: "var(--color-ink2)", margin: "0.8rem auto", maxWidth: "34rem", lineHeight: 1.9 }}>
-          بدأتَ من اليوم الأول بلا ضياع، وأتممتَ كل يوم بإغلاقه. هذه حصيلتك العلمية:
-        </p>
-        <div style={{ display: "flex", gap: "1.2rem", justifyContent: "center", flexWrap: "wrap", margin: "1.2rem 0" }}>
-          <Stat label="أيام مُغلقة" value={`${closedDays.length}/270`} />
-          <Stat label="معدّل الإتقان" value={`${avg}%`} />
-          <Stat label="أهداف «أستطيع»" value={String(canDoCount)} />
-          <Stat label="بطاقات مُدارة" value={String(Object.keys(progress.srs).length)} />
-          {Object.keys(progress.exams ?? {}).length > 0 && (
-            <Stat
-              label="امتحانات المراحل"
-              value={`${Object.values(progress.exams ?? {}).filter((e) => e.passed).length}/${Object.keys(progress.exams ?? {}).length}`}
-            />
-          )}
-        </div>
-        <div className="card" style={{ padding: "1.1rem", textAlign: "start", background: "var(--color-gold-soft)", marginTop: "1rem" }}>
-          <strong>🧭 بعد B2 — خارطة الاستمرار:</strong>
-          <ul style={{ paddingInlineStart: "1.2rem", lineHeight: 1.9, marginTop: "0.5rem" }}>
-            <li>استمر بالتسميع اليومي (Shadowing) ونصوص B2 الثقيلة.</li>
-            <li>خُض نموذج Goethe-Zertifikat B2 الرسمي كاملًا بتوقيت حقيقي.</li>
-            <li>واصل نحو C1: كتابة أكاديمية + Konjunktiv في النصوص الأدبية + محادثات طويلة.</li>
-            <li>ابدأ مسارًا جديدًا في أي وقت من الإعدادات (تصفير) — الخطة تتكرر بعينها حتمياً.</li>
-          </ul>
+      <div className="today-screen fadein" data-testid="today-screen">
+        <div className="dirb-finale">
+          <div style={{ fontSize: "3rem" }}>🎓</div>
+          <h1 style={{ fontWeight: 900, fontSize: "1.6rem", margin: 0 }}>
+            اكتملت الرحلة — {TOTAL_DAYS} يوماً حتى B2!
+          </h1>
+          <p style={{ color: "var(--color-ink2)", lineHeight: 1.9, margin: 0 }}>
+            بدأتَ من اليوم الأول بلا ضياع، وأتممتَ كل يوم بإغلاقه. هذه حصيلتك العلمية:
+          </p>
+          <div style={{ display: "flex", gap: "1.2rem", justifyContent: "center", flexWrap: "wrap", margin: "0.6rem 0" }}>
+            <Stat label="أيام مُغلقة" value={`${closedDays.length}/${TOTAL_DAYS}`} />
+            <Stat label="معدّل الإتقان" value={`${avg}%`} />
+            <Stat label="أهداف «أستطيع»" value={String(canDoCount)} />
+            <Stat label="بطاقات مُدارة" value={String(Object.keys(progress.srs).length)} />
+            {Object.keys(progress.exams ?? {}).length > 0 && (
+              <Stat
+                label="امتحانات المراحل"
+                value={`${Object.values(progress.exams ?? {}).filter((e) => e.passed).length}/${Object.keys(progress.exams ?? {}).length}`}
+              />
+            )}
+          </div>
+          <div className="card" style={{ padding: "1.1rem", textAlign: "start", background: "var(--color-gold-soft)" }}>
+            <strong>🧭 بعد B2 — خارطة الاستمرار:</strong>
+            <ul style={{ paddingInlineStart: "1.2rem", lineHeight: 1.9, marginTop: "0.5rem", marginBottom: 0 }}>
+              <li>استمر بالتسميع اليومي (Shadowing) ونصوص B2 الثقيلة.</li>
+              <li>خُض نموذج Goethe-Zertifikat B2 الرسمي كاملًا بتوقيت حقيقي.</li>
+              <li>واصل نحو C1: كتابة أكاديمية + Konjunktiv في النصوص الأدبية + محادثات طويلة.</li>
+              <li>ابدأ مسارًا جديدًا في أي وقت من الإعدادات (تصفير) — الخطة تتكرر بعينها حتمياً.</li>
+            </ul>
+          </div>
         </div>
       </div>
     );
@@ -97,7 +146,11 @@ export default function Today() {
     const task = plan.tasks[stepFrei];
     if (!task) return;
     const local = localOf(task.id);
-    submitTask(day, task.id, local.score, local.total, task.kind);
+    // 🎯 إنجازُ تدريبِ درسٍ يجدول تحققَ استقلاله بعد 3 أيام (مهمة جديدة لا إعادة)
+    if (task.topicId && (grammarMap[task.topicId]?.verify ?? []).length > 0 && !progress.verify?.[task.topicId]) {
+      planeVerifikation(task.topicId, day);
+    }
+    submitTask(day, task.id, local.score, local.total, task.kind, undefined, task.verifyFor);
     // امتحان مرحلة/ختامي: سجّل النتيجة في كشوف Zeugnis
     if (task.exam && local.total > 0) {
       const pct = Math.round((local.score / local.total) * 100);
@@ -161,68 +214,72 @@ export default function Today() {
   });
 
   return (
-    <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }} data-testid="today-screen">
-      {/* ── الترويسة: أين أنا؟ (المستوى — الوحدة — الخطوة) ── */}
-      <header
-        className="card"
-        style={{
-          padding: "1.2rem",
-          background: "linear-gradient(135deg, var(--color-cola-soft), var(--color-card) 65%)",
-          border: "1px solid var(--color-line)",
-          borderRadius: "1rem",
-        }}
-      >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "0.6rem", flexWrap: "wrap" }}>
-          <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <span style={{ fontSize: "1.5rem" }}>{act.emoji || "🎓"}</span>
-              <div style={{ fontWeight: 900, fontSize: "1.25rem", color: "var(--color-cola)" }}>
-                {t("appTitle", lang)}
-              </div>
-            </div>
-            <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.15rem" }}>
-              مدرستك الافتراضية الخاصة — خطوة بخطوة حتى B2
-            </div>
-            <div
-              data-test="modul-etikett"
-              style={{ marginTop: "0.35rem", fontSize: "0.88rem", fontWeight: 800, color: "var(--color-cola)" }}
-            >
-              {modulOf(day).etikett} · {modulOf(day).modul.titelAr}
-              <span style={{ fontWeight: 500, color: "var(--color-ink2)" }}>
-                {" "}({modulOf(day).schritt}/{modulOf(day).schritte}) — {modulOf(day).modul.inhalteAr}
-              </span>
-            </div>
-          </div>
+    <div className="today-screen fadein dirb" data-testid="today-screen">
+      <header className="dirb-hero-anim">
+        <div className="dirb-date-row">
+          <span className="dirb-date">{dateAr}</span>
+          <span className="dirb-pill">اليوم الدراسي <span className="rtl-num">{day}</span> / <span className="rtl-num">{TOTAL_DAYS}</span></span>
+        </div>
+        <h1 className="dirb-giant">خطوتك اليوم</h1>
+      </header>
 
-          <div style={{ display: "flex", gap: "0.4rem", alignItems: "center", flexWrap: "wrap" }}>
-            <span className="chip" style={{ borderColor: LEVEL_COLORS[plan.phase], color: LEVEL_COLORS[plan.phase], fontWeight: 800 }}>
-              {plan.phase}
-            </span>
+      {held && (
+        <section className="dirb-held dirb-hero-anim-2" aria-label="خطوتك التالية" data-testid="today-primary-step">
+          <KindIcon kind={held.kind} className="dirb-held-icon" />
+          <div className="dirb-held-skill">{SKILL_AR[held.kind] ?? held.kind}</div>
+          <div className="dirb-held-ar">{held.titleAr}</div>
+          <div className="dirb-held-lektion" lang="de" dir="ltr">{held.titleDe}</div>
+          <div className="dirb-held-meta">
+            ⏱ <span className="rtl-num">{held.minutes}</span> دقيقة · <span lang="de" dir="ltr">{plan.phase}</span>
+          </div>
+          <div className="dirb-held-grund">💡 {heldGrund}</div>
+          {heldFertig && <div className="dirb-held-done">✓ أُنجزت هذه الخطوة</div>}
+          <button type="button" className="dirb-start" onClick={startToday} data-testid="held-start">
+            {allTodayDone ? "راجع نهاية اليوم" : heldBestanden ? "ابدأ الخطوة التالية" : heldFertig ? "حاول مرة أخرى" : "ابدأ الآن"}
+            <span aria-hidden>←</span>
+          </button>
+        </section>
+      )}
+
+      <section className="dirb-tagesziel dirb-hero-anim-2" aria-label="هدف اليوم">
+        <div className="dirb-tagesziel-top">
+          <span className="dirb-tagesziel-title">هدف اليوم</span>
+          <span className="dirb-tagesziel-min">
+            <span className="rtl-num">{doneMin}</span> من <span className="rtl-num">{zielMin}</span> دقيقة
+          </span>
+        </div>
+        <div className="dirb-bar" role="progressbar" aria-label="التقدم في هدف اليوم" aria-valuenow={tagesPct} aria-valuemin={0} aria-valuemax={100}>
+          <div className="dirb-fill" style={{ width: `${Math.max(tagesPct, tagesPct > 0 ? 8 : 0)}%` }}>
+            <span className="rtl-num">{tagesPct}%</span>
+          </div>
+        </div>
+      </section>
+
+      <details className="dirb-extra" data-testid="today-extra">
+        <summary>
+          <span>تفاصيل وأدوات</span>
+          <span className="dirb-extra-hint">الوحدة · الملف · الطباعة · الإعدادات</span>
+        </summary>
+        <div className="dirb-extra-content">
+          <div className="dirb-etikett" data-test="modul-etikett">
+            {modulOf(day).etikett} · {modulOf(day).modul.titelAr}
+            <small>{" "}({modulOf(day).schritt}/{modulOf(day).schritte}) — {modulOf(day).modul.inhalteAr}</small>
+          </div>
+          <div className="dirb-chips">
+            <span className="chip">{plan.phase}</span>
             <span className="chip">{TYPE_LABEL[plan.type]}</span>
             <ProfilWahl />
             {progress.settings.examDate && (
-              <span className="chip" style={{ borderColor: "var(--color-b2)", color: "var(--color-b2)", fontWeight: 700 }}>
-                📅 {examCountdown(progress.settings.examDate, progress.settings.examName)}
-              </span>
+              <span className="chip">📅 {examCountdown(progress.settings.examDate, progress.settings.examName)}</span>
             )}
-            <Link
-              href="/drucken"
-              className="chip"
-              style={{ cursor: "pointer", textDecoration: "none", color: "inherit", minHeight: "44px", display: "inline-flex", alignItems: "center" }}
-            >
-              🖨 ورقةُ الشفرات
-            </Link>
-            <Link
-              href="/einstellungen"
-              className="chip"
-              style={{ cursor: "pointer", textDecoration: "none", color: "inherit", minHeight: "44px", display: "inline-flex", alignItems: "center" }}
-            >
-              ⚙️
-            </Link>
+          </div>
+          <div className="dirb-extra-actions">
+            <Link href="/drucken" className="dirb-extra-action">🖨 ورقة الشفرات</Link>
+            <Link href="/einstellungen" className="dirb-extra-action">⚙️ الإعدادات</Link>
             <button
               type="button"
-              className="chip"
-              title="نسخ احتياطي فوري (JSON) — ينزّل ملفاً يحتوي على كل تقدّمك الآن"
+              className="dirb-extra-action"
+              title="تنزيل نسخة احتياطية تحتوي على تقدّمك الحالي"
               onClick={() => {
                 saveProgress(progress);
                 const blob = new Blob([JSON.stringify(progress, null, 2)], { type: "application/json" });
@@ -235,55 +292,71 @@ export default function Today() {
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
               }}
-              style={{ cursor: "pointer", minHeight: "44px", border: "1px solid var(--color-line)", background: "var(--color-card)", borderRadius: "999px", padding: "0.2rem 0.75rem", fontWeight: 700, color: "var(--color-b1)" }}
             >
-              💾 نسخ احتياطي
+              💾 نسخة احتياطية
             </button>
           </div>
         </div>
+      </details>
 
-        {/* ── شريط حالة اليوم: كم متبقٍّ؟ ── */}
-        <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.88rem", marginTop: "0.9rem", marginBottom: "0.3rem" }}>
-          <strong>
-            اليوم <span className="rtl-num">{day}</span> من <span className="rtl-num">{TOTAL_DAYS}</span> · الأسبوع{" "}
-            <span className="rtl-num">{plan.week}</span> · ⏱ <span className="rtl-num">{totalMinutes}</span> دقيقة
-          </strong>
-          <span className="rtl-num" style={{ color: "var(--color-ink2)", fontWeight: 700 }}>
-            {planPct(progress)}%
-          </span>
+      <details className="dirb-task-map" data-testid="today-task-map">
+        <summary>
+          <span>قائمة مهام اليوم</span>
+          <span className="dirb-extra-hint">{plan.tasks.length} مهام · تنقّل عند الحاجة</span>
+        </summary>
+        <div className="dirb-minis" role="list" aria-label="مهام اليوم">
+          {plan.tasks.map((tk, i) => {
+            const gesperrt = aufgabeGesperrt(ritual, i);
+            const fertig = !!resultOf(tk.id);
+            const jetzt = i === stepFrei;
+            return (
+              <button
+                key={tk.id}
+                type="button"
+                role="listitem"
+                disabled={gesperrt}
+                data-testid={`held-mini-${i}`}
+                className={"dirb-mini" + (jetzt ? " dirb-mini-jetzt" : "") + (fertig ? " dirb-mini-fertig" : "")}
+                onClick={() => springeZu(i)}
+                aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : fertig ? (progress.schriftlich?.[tk.id] ? " (مسلَّمة كتابياً — إنجاز لا نطق)" : " (مسلَّمة)") : ""}`}
+              >
+                <KindIcon kind={tk.kind} className="dirb-mini-icon" />
+                <span className="dirb-mini-skill">
+                  {gesperrt ? "🔒 " : fertig ? "✓ " : ""}
+                  {SKILL_AR[tk.kind] ?? tk.kind}
+                </span>
+                <span className="dirb-mini-min"><span className="rtl-num">{tk.minutes}</span> دقيقة</span>
+              </button>
+            );
+          })}
         </div>
-        <div className="progressbar">
-          <div style={{ width: `${planPct(progress)}%`, background: LEVEL_COLORS[plan.phase] }} />
-        </div>
-        <XpBar progress={progress} />
-      </header>
+      </details>
+      <p className="dirb-time-hint" data-testid="zeit-hinweis">الأوقات تقديرية ومرنة؛ خذ استراحة أو تابع لاحقاً.</p>
 
-      {/* ── تهيئة قبل الطابور: تحديد المستوى إن لم يُحدَّد بعد ── */}
-      {!progress.settings.placed && <Einstufung />}
-
-      {/* ── جدول الأسبوع (مطويّ — سطر واحد حتى يُفتح) ── */}
       <Wochenplan progress={progress} />
 
-      {/* ── الطابور: بوابة + مهام + مراجعة الأخطاء + إغلاق يدوي + كبسولة المساء ── */}
-      <Klassenzimmer
-        progress={progress}
-        day={day}
-        plan={plan}
-        stepFrei={stepFrei}
-        setStep={setStep}
-        ritual={ritual}
-        resultOf={resultOf}
-        localOf={localOf}
-        onPoints={onPoints}
-        submitCurrent={submitCurrent}
-        doCloseDay={doCloseDay}
-        badDayToday={badDayToday}
-        confirmClose={confirmClose}
-        setConfirmClose={setConfirmClose}
-        unpassed={unpassed}
-        allSubmitted={allSubmitted}
-        onSrs={setSrs}
-      />
+      <div id="aufgabe-spieler" style={{ scrollMarginTop: "0.8rem" }}>
+        <Klassenzimmer
+          progress={progress}
+          day={day}
+          plan={plan}
+          stepFrei={stepFrei}
+          setStep={setStep}
+          ritual={ritual}
+          resultOf={resultOf}
+          localOf={localOf}
+          onPoints={onPoints}
+          submitCurrent={submitCurrent}
+          doCloseDay={doCloseDay}
+          badDayToday={badDayToday}
+          confirmClose={confirmClose}
+          setConfirmClose={setConfirmClose}
+          unpassed={unpassed}
+          allSubmitted={allSubmitted}
+          onSrs={setSrs}
+          showCurrentHero={false}
+        />
+      </div>
     </div>
   );
 }

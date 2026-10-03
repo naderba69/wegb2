@@ -8,6 +8,7 @@ import { ProbeklausurCard } from "@/components/klausur";
 import { PruefungsZentrum } from "@/components/pruefung";
 import { SelbstTestZentrum } from "@/components/selbsttest";
 import { SchulSimulator } from "@/components/schulsim";
+import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
  * 🎯 وجهة «اختبر» (P4): بوابة الوحدات أولاً (ModulTor — شرط المحرّك modulFrei)
@@ -15,11 +16,11 @@ import { SchulSimulator } from "@/components/schulsim";
  * الماكية لا تسبق البناء. شاشةٌ واحدة في كل مرّة وبابُ رجوعٍ زرّيّ لا رابط.
  */
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
-  tor: { icon: "🚪", titel: "بوابة الوحدة", unter: "امتحان الوحدة: أربع مهارات · 80٪ مجموعاً ولا مهارة دون 60٪" },
-  probeklausur: { icon: "📋", titel: "اختبار تجريبي", unter: "Preisprobe: جلسةُ امتحانٍ بتوقيتٍ حقيقيّ" },
-  zentrum: { icon: "🏛️", titel: "مركز الاختبارات", unter: "اختبارات المراحل وشهادات الإتقان" },
-  selbsttest: { icon: "🪞", titel: "الاختبار الذاتي", unter: "قِسْ مستواك بطرفٍ نقدٍّ لا بتمنّيك" },
-  schulsim: { icon: "🏫", titel: "محاكاة المدرسة", unter: "يومُ اختبارٍ كاملٌ في محاكاة" },
+  tor: { icon: "🚪", titel: "بوابة الوحدة", unter: "أربع مهارات · 80٪ مجموعاً ولا مهارة دون 60٪" },
+  probeklausur: { icon: "📋", titel: "اختبار تجريبي", unter: "جلسة تدريبية بوقت محدد." },
+  zentrum: { icon: "🏛️", titel: "مركز الاختبارات", unter: "اختبارات المراحل وسجلّ النتائج." },
+  selbsttest: { icon: "🪞", titel: "الاختبار الذاتي", unter: "راجع ما تتقنه وما يحتاج إلى تدريب." },
+  schulsim: { icon: "🏫", titel: "محاكاة المدرسة", unter: "تدرّب على يوم اختبار كامل." },
 };
 
 export default function Pruefen() {
@@ -31,12 +32,20 @@ export default function Pruefen() {
   const simsFrei = modulFrei(progress, modulIndex(modulOf(day).modul) + 1);
 
   if (offen) {
+    const k = KARTE[offen];
     return (
-      <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }}>
-        <button type="button" className="btn btn-ghost" data-testid="pruefen-zurueck" style={{ minHeight: "44px", justifySelf: "start" }} onClick={() => setOffen(null)}>
+      <div className="today-screen fadein dirb">
+        <button type="button" className="dirb-back" data-testid="pruefen-zurueck" onClick={() => setOffen(null)}>
           → كل الاختبارات
         </button>
-        <section style={{ display: "grid", gap: "1rem" }}>
+        {k && (
+          <div className="dirb-station-head">
+            <div className="dirb-kicker">{k.icon} محطة اختبار</div>
+            <h1 className="dirb-station-title">{k.titel}</h1>
+            <div className="dirb-station-sub">{k.unter}</div>
+          </div>
+        )}
+        <section className="dirb-station">
           {offen === "tor" && <ModulTor day={day} />}
           {offen === "probeklausur" && <ProbeklausurCard progress={progress} />}
           {offen === "zentrum" && <PruefungsZentrum progress={progress} />}
@@ -48,42 +57,61 @@ export default function Pruefen() {
   }
 
   const ids = ["tor", "probeklausur", "zentrum", "selbsttest", "schulsim"];
+  const renderCard = (id: string) => {
+    const k = KARTE[id];
+    if (!k) return null;
+    const gesperrt = id !== "tor" && !simsFrei;
+    return (
+      <button
+        key={id}
+        type="button"
+        data-testid={`pruefen-karte-${id}`}
+        disabled={gesperrt}
+        aria-describedby={gesperrt ? "pruefen-sperre" : undefined}
+        title={gesperrt ? "اجتز اختبار الوحدة أولاً" : undefined}
+        onClick={() => !gesperrt && setOffen(id)}
+        className="dirb-menu-btn"
+      >
+        <span className="dirb-menu-ico" aria-hidden>{gesperrt ? "🔒" : k.icon}</span>
+        <span className="dirb-menu-txt">
+          <b>{k.titel}</b>
+          <span>{gesperrt ? "مقفل الآن" : k.unter}</span>
+        </span>
+        <span className="dirb-chev" aria-hidden>{gesperrt ? "" : "←"}</span>
+      </button>
+    );
+  };
   return (
-    <div className="today-screen fadein" data-testid="pruefen-liste" style={{ display: "grid", gap: "0.8rem" }}>
-      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
-        <h1 style={{ fontWeight: 900, fontSize: "1.2rem", margin: 0 }}>🎯 اختبر</h1>
-        <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>بوابةُ الوحداتِ أولاً — الماكية لا تسبق البناء</span>
+    <div className="today-screen fadein dirb" data-testid="pruefen-liste">
+      <header className="dirb-tabhead dirb-hero-anim">
+        <h1 className="dirb-title">اختبر</h1>
+        <div className="dirb-sub">اختبر ما تعلّمته بعد إنهاء دروس الوحدة.</div>
       </header>
 
-      {!simsFrei && (
-        <div className="card" data-testid="pruefen-sperre" style={{ padding: "0.65rem 0.95rem", borderInlineStart: "5px solid var(--color-die)", fontSize: "0.85rem", background: "var(--color-rosa-soft)" }}>
-          🔒 الماكياتُ مقفلةٌ حتى تجتازَ امتحانَ وحدتك الحالية — الوحدةُ تُختبَرُ حين تكتمل، لا قبل.
-        </div>
-      )}
+      <div className="dirb-menu-groups dirb-hero-anim-2">
+        <MenuSection
+          id="pruefen-unit"
+          title="اختبار الوحدة"
+          description="ابدأ به قبل المحاكاة."
+          count={1}
+        >
+          {renderCard("tor")}
+        </MenuSection>
 
-      <div style={{ display: "grid", gap: "0.6rem" }}>
-        {ids.map((id) => {
-          const k = KARTE[id];
-          const gesperrt = id !== "tor" && !simsFrei;
-          return (
-            <button
-              key={id}
-              type="button"
-              data-testid={`pruefen-karte-${id}`}
-              disabled={gesperrt}
-              title={gesperrt ? "اجتز امتحان وحدتك أولاً" : undefined}
-              onClick={() => !gesperrt && setOffen(id)}
-              className="card"
-              style={{ minHeight: "56px", padding: "0.8rem 1rem", textAlign: "start", cursor: gesperrt ? "not-allowed" : "pointer", opacity: gesperrt ? 0.55 : 1, display: "flex", gap: "0.8rem", alignItems: "center" }}
-            >
-              <span style={{ fontSize: "1.5rem" }} aria-hidden>{gesperrt ? "🔒" : k.icon}</span>
-              <span>
-                <span style={{ fontWeight: 800, display: "block" }}>{k.titel}</span>
-                <span style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{gesperrt ? "مقفل — سببه: امتحانُ الوحدة لم يُجتَز" : k.unter}</span>
-              </span>
-            </button>
-          );
-        })}
+        {!simsFrei && (
+          <div id="pruefen-sperre" className="dirb-sperre" data-testid="pruefen-sperre" role="note">
+            🔒 تُفتح الاختبارات الإضافية بعد اجتياز اختبار الوحدة الحالية.
+          </div>
+        )}
+
+        <MenuSection
+          id="pruefen-simulations"
+          title="اختبارات إضافية"
+          description="خيارات أخرى للتدرّب على الاختبارات."
+          count={ids.length - 1}
+        >
+          {ids.filter((id) => id !== "tor").map(renderCard)}
+        </MenuSection>
       </div>
     </div>
   );

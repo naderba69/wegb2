@@ -62,7 +62,7 @@ export function karteFuerWort(wort: string, level?: string): VocabCard | null {
   const w = norm(wort).replace(/[^a-zäöüß-]/g, "");
   if (w.length < 3 || STOPP.has(w)) return null;
   const idx = index();
-  const rang: Record<string, number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
+  const rang: Record<string, number> = { A0: -1, A1: 0, A2: 1, B1: 2, B2: 3 };
   const max = level ? rang[level] ?? 3 : 3;
   const kern = (c: VocabCard) => norm(c.de).replace(/^(der|die|das|sich) /, "").split(" ")[0] ?? "";
   // صيغٌ مرشَّحة: الكلمةُ نفسُها، بلا ge- (Partizip)، بلا لواحقِ التصريف، وبعدَ ردِّ الأبلاوت (gesprochen→sprech)

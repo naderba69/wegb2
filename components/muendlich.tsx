@@ -13,6 +13,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { muendlich, type MuendlichKarte } from "@/lib/content";
+import { planeEinwand } from "@/lib/muendlich";
 import { speakDe } from "@/lib/speech";
 
 function rng(seed: number) {
@@ -27,10 +28,10 @@ function rng(seed: number) {
 
 const URTEIL = (sum: number): { ar: string; de: string; farbe: string } =>
   sum >= 7
-    ? { ar: "جاهز للامتحان — هذا أداء Teil-2 حقيقي", de: "prüfungsreif", farbe: "var(--color-a1)" }
+    ? { ar: "تقديرك الذاتي مرتفع لهذه البطاقة؛ لا يثبت جاهزية الامتحان", de: "Selbsteinschätzung: stark", farbe: "var(--color-a1)" }
     : sum >= 4
-      ? { ar: "اقتربت — أعد البطاقة بتركيز على المعيار الأضعف", de: "fast dabei", farbe: "var(--color-gold)" }
-      : { ar: "جولة إحماء — لا عار، الفم يحتاج كيلاً من الأكسجين", de: "Aufwärmrunde", farbe: "var(--color-cola)" };
+      ? { ar: "اختر معياراً واحداً للتركيز عليه في الجولة التالية", de: "nächster Übungsfokus", farbe: "var(--color-gold)" }
+      : { ar: "جولة تدريبية — ابدأ بمعيار واحد من البطاقة", de: "Übungsrunde", farbe: "var(--color-cola)" };
 
 export function MündlichLabor({ progress }: { progress: Progress }) {
   const [open, setOpen] = useState(false);
@@ -39,13 +40,20 @@ export function MündlichLabor({ progress }: { progress: Progress }) {
   const [phase, setPhase] = useState<"wahle" | "lauf" | "check">("wahle");
   const [noten, setNoten] = useState<number[]>([0, 0, 0, 0]);
   const [rest, setRest] = useState(0);
+  const [einwandGezeigt, setEinwandGezeigt] = useState(false);
+  const [einwandAntwort, setEinwandAntwort] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const einwandAusgeloestRef = useRef(false);
 
   const karten = useMemo(() => muendlich.filter((k) => k.teil === teil), [teil]);
   const karte: MuendlichKarte = useMemo(() => {
     const r = rng(progress.plan.day * 131 + (teil === 2 ? 0 : 97) + zug * 13);
     return karten[Math.floor(r() * karten.length)];
   }, [karten, teil, zug, progress.plan.day]);
+  const geplanterEinwand = useMemo(
+    () => teil === 3 ? planeEinwand(karte.id, karte.einwaende ?? [], progress.plan.day, zug) : null,
+    [karte, teil, progress.plan.day, zug],
+  );
 
   useEffect(() => {
     if (phase !== "lauf") return;
@@ -53,9 +61,20 @@ export function MündlichLabor({ progress }: { progress: Progress }) {
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [phase]);
 
+  useEffect(() => {
+    if (phase !== "lauf" || teil !== 3 || !geplanterEinwand || einwandGezeigt || rest <= 0) return;
+    const restBeiEinwand = karte.zeit_s - geplanterEinwand.nachSekunden;
+    if (rest > restBeiEinwand || einwandAusgeloestRef.current) return;
+    einwandAusgeloestRef.current = true;
+    setEinwandGezeigt(true);
+  }, [phase, teil, geplanterEinwand, einwandGezeigt, rest, karte.zeit_s]);
+
   function starten() {
     setNoten([0, 0, 0, 0]);
     setRest(karte.zeit_s);
+    setEinwandGezeigt(false);
+    setEinwandAntwort(false);
+    einwandAusgeloestRef.current = false;
     setPhase("lauf");
   }
   function beenden() {
@@ -97,7 +116,7 @@ table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1
         <span className="chip">{open ? "إخفاء ▲" : "إظهار ▼"}</span>
       </button>
       <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.6rem" }}>
-        وصف صورة في أربع دقائق بمخمين ومؤشر ورأي — أو مناقشة شريك افتراضي بخمس دقائق بحجج من الطرفين وتسوية معلنة. التقدير ذاتي بثمان نقاط، ويُطبع بروتوكولاً لا شبكة نقاط.
+        وصف صورة في أربع دقائق بمخمين ومؤشر ورأي — أو مناقشة بخمس دقائق بحجج من الطرفين، يتخللها اعتراض مفاجئ. التقدير ذاتي بثمان نقاط، ولا يُسجَّل الصوت ولا تُقيَّم اللغة آلياً.
       </div>
       {open && (
         <div>
@@ -111,6 +130,7 @@ table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1
           {phase === "wahle" && (
             <div style={{ textAlign: "center", padding: ".8rem 0" }}>
               <div style={{ fontSize: "0.85rem", marginBottom: ".6rem" }}>دورك في <b>اليوم {progress.plan.day}</b> محسوم: {karten.length} بطاقة لهذا الجزء وترتيبها حتمي كصباحك — لا اختيار، لا هروب.</div>
+              {teil === 3 && <div data-testid="muendlich-einwand-hinweis" style={{ fontSize: ".76rem", color: "var(--color-ink2)", margin: "0 auto .6rem", maxWidth: "38rem" }}>قد يتدخل اعتراض ألماني مفاجئ أثناء الجولة. يمكنك طلب قراءته بصوت الجهاز؛ ويبقى النص ظاهراً إن تعذّر الصوت. لن يُسجَّل صوتك أو تُقيَّم لغتك آلياً.</div>}
               <button className="btn btn-primary" onClick={starten}>▶ ابدأ — اقلب المؤقّت</button>
             </div>
           )}
@@ -137,6 +157,25 @@ table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1
                       <div key={i} className="de" dir="ltr" style={{ fontSize: "0.78rem", color: "var(--color-ink2)", paddingInlineStart: ".5rem", borderInlineStart: "2px solid var(--color-a1)" }}>{s}</div>
                     ))}
                   </div>
+                  {einwandGezeigt && geplanterEinwand && (
+                    <div role="alert" aria-live="assertive" data-testid="muendlich-einwand" style={{ marginTop: ".65rem", padding: ".65rem .8rem", border: "2px solid var(--color-cola)", borderRadius: 10, background: "var(--color-bg2)" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: ".4rem", flexWrap: "wrap" }}>
+                        <strong>⚡ مقاطعة مفاجئة — Einwand</strong>
+                        <button className="btn btn-ghost" style={{ padding: ".15rem .5rem" }} aria-label="استمع للاعتراض" onClick={() => speakDe(geplanterEinwand.einwand.de)}>🔊 اسمع الاعتراض</button>
+                      </div>
+                      <p className="de" dir="ltr" style={{ margin: ".35rem 0", fontWeight: 700 }}>{geplanterEinwand.einwand.de}</p>
+                      <details style={{ fontSize: ".75rem", marginBlock: ".25rem" }}>
+                        <summary style={{ cursor: "pointer" }}>ترجمة مساعدة</summary>
+                        <p style={{ margin: ".25rem 0" }}>{geplanterEinwand.einwand.ar}</p>
+                      </details>
+                      <div style={{ fontSize: ".76rem", marginTop: ".35rem" }}>أجب الآن بصوت مسموع. النص ظاهر إن تعذّر صوت الجهاز؛ لا تسجيل ولا تقييم آلي للنطق أو الإجابة.</div>
+                      {!einwandAntwort ? (
+                        <button className="btn btn-primary" data-testid="muendlich-einwand-antwort" style={{ marginTop: ".45rem", padding: ".2rem .65rem" }} onClick={() => setEinwandAntwort(true)}>✅ رددتُ عليه شفهياً</button>
+                      ) : (
+                        <div role="status" data-testid="muendlich-einwand-bestaetigt" style={{ marginTop: ".4rem", fontSize: ".74rem" }}>تمّ الإقرار بمحاولة الرد ذاتياً فقط؛ لا يُعدّ هذا إثباتاً للنطق أو للاستقلال.</div>
+                      )}
+                    </div>
+                  )}
                   <div style={{ display: "flex", gap: ".4rem", marginTop: ".6rem", flexWrap: "wrap" }}>
                     <button className="btn btn-primary" onClick={beenden}>⏹ أنهيت — إلى التقدير</button>
                     <button className="btn btn-ghost" onClick={() => { setPhase("wahle"); }}>↺ تراجع</button>
@@ -164,7 +203,7 @@ table{width:100%;border-collapse:collapse;font-size:.85rem}td,th{border-bottom:1
                   </div>
                   <div style={{ display: "flex", gap: ".4rem", marginTop: ".55rem", flexWrap: "wrap" }}>
                     <button className="btn btn-ghost" onClick={protokoll}>🖨️ بروتوكول مطبوع</button>
-                    <button className="btn btn-primary" onClick={() => { setZug((z) => z + 1); }}>🎴 بطاقة أخرى لنفس الجزء</button>
+                    <button className="btn btn-primary" onClick={() => { setZug((z) => z + 1); setEinwandGezeigt(false); setEinwandAntwort(false); setPhase("wahle"); }}>🎴 بطاقة أخرى لنفس الجزء</button>
                     <button className="btn btn-ghost" onClick={() => setPhase("wahle")}>↩︎ رجوع</button>
                   </div>
                 </div>

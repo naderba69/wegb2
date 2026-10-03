@@ -329,10 +329,10 @@ export function vorschlagTag(gruppen: Record<string, number>): number {
 export function elternBrief(p: Progress): { de: string[]; ar: string[] } {
   const de: string[] = [];
   const ar: string[] = [];
-  const day = Math.min(p.plan.day, 270);
+  const day = Math.min(p.plan.day, TOTAL_DAYS);
   const phase = levelAmTag(day);
   de.push(`Ihr Kind ist bei Tag ${day} von 378 (Phase ${phase}) auf dem Weg bis B2.`);
-  ar.push(`طفلك في اليوم ${day} من 270 (مرحلة ${phase}) على الطريق نحو B2.`);
+  ar.push(`طفلك في اليوم ${day} من ${TOTAL_DAYS} (مرحلة ${phase}) على الطريق نحو B2.`);
   const days = Object.entries(p.plan.days)
     .map(([d, r]) => [Number(d), r] as const)
     .sort((a, b) => a[0] - b[0]);
