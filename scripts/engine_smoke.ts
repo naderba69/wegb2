@@ -1,7 +1,7 @@
 /**
  * Engine-Smoke-Test — فحص خصومة لمحرّكات lib/*.ts + المصحّح الخماسي
  * ------------------------------------------------------------------
- * يشغّل كل دالة محرّكة على: progress فارغ، طرفَي الخطة (يوم 1/270)، ما بعد
+ * يشغّل كل دالة محرّكة على: progress فارغ، طرفَي الخطة (يوم 1/378)، ما بعد
  * النهاية، وبنوك كاملة — ويثبت المعادلات الموثّقة رقماً برقماً. الهدف: ما لا
  * يراه dev-build ولا SSG لأن الأجنحة تُطوى — مسارات التوليد العميقة.
  * التشغيل:  npm run smoke
@@ -60,7 +60,7 @@ import { bauHoerRunde, darfSpielen, fragenFrei, werteItem, werteRunde, hoerNote,
 import { buildSkillKlausur, SKILL_LABELS, type SkillKey } from "../lib/klausur";
 import { karteninCsv, allesInCsv } from "../lib/karten-export";
 import { analysiere, bewerteAussprache, silbenImText, zielDauer } from "../lib/aussprache";
-import { pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen } from "../lib/schreibpruefer";
+import { pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen, effektiveSchwere, DISPUT_SCHWELLE } from "../lib/schreibpruefer";
 import { buildModulPruefung, bewerte, darfWiederholen, modulFrei, tagGesperrt, rettungsplan } from "../lib/modulpruefung";
 import { emptyProgress, TOTAL_DAYS } from "../lib/types";
 import { baueLexikon, zerlege, baueAufgaben, erklaereAr, kopfwort, FUGEN } from "../lib/komposita";
@@ -142,7 +142,7 @@ const empty = () => loadProgress();
 
 /* ═══ D · buildDay والدورة اليومية ═══ */
 {
-  for (const d of [1, 2, 6, 7, 42, 100, 135, 180, 269, 270]) {
+  for (const d of [1, 2, 6, 7, 42, 100, 135, 180, 269, 270, 271, 300, 378]) {
     const plan = buildDay(d, empty());
     ok(plan.day === d && plan.tasks.length >= 1, `D1 يوم ${d}: مهام موجودة`);
     const ids = plan.tasks.map((t) => taskKey(d, t));
@@ -835,7 +835,7 @@ const empty = () => loadProgress();
   }
 
   /* ═══ K60 · عقدُ الساعات: الوعدُ يُقابَلُ بمرجعٍ لا بنفسِه ═══
-     وُجدت هذه الكتلة لأنَّ المشروعَ كان يَعِدُ «A0→B2 في 270 يوماً»
+     وُجدت هذه الكتلة لأنَّ المشروعَ كان يَعِدُ «A0→B2 في 378 يوماً»
      وهو لا يعرف كم ساعةً يخطِّط، ولا يسجِّل دقيقةً قضَاها المتعلِّم. */
   {
     /* المرجع */
@@ -855,7 +855,7 @@ const empty = () => loadProgress();
     ok(planStundenBis(PHASEN.A1.bis) < planStundenBis(PHASEN.A2.bis) && planStundenBis(PHASEN.A2.bis) < planStundenBis(PHASEN.B1.bis) && planStundenBis(PHASEN.B1.bis) < planStundenBis(TOTAL),
       "K60g وكلُّ مرحلةٍ تزيدُ على سابقتِها — لا مرحلةَ صفرية");
     ok(planMinBis(TOTAL) === planMinBis(TOTAL) && planStundenBis(100) === planStundenBis(100),
-      "K60h والحسابُ محفوظٌ فلا يُعادُ اشتقاقُ 270 يوماً عند كلِّ نقر");
+      "K60h والحسابُ محفوظٌ فلا يُعادُ اشتقاقُ 378 يوماً عند كلِّ نقر");
 
     /* صدقُ الوعد — البوابةُ الأهمّ في هذه الكتلة */
     const vgl = vergleichePlan(planStundenBis);
@@ -1753,7 +1753,7 @@ void 0;
     ok(/<TagesKapsel day=\{day\}/.test(klassK) && /<Klassenzimmer/.test(seite) && /data-testid="tageskapsel"/.test(komp) && !/قرأتها"\s*<\/button>/.test(komp) && /speakDe/.test(komp),
       "K65h الصفحةُ تعرضُ الكبسولةَ، وفيها صوتٌ، وليس فيها زرُّ «قرأتها» — البرهانُ أداءُ الغد");
     const t0 = Date.now(); for (let d = 1; d <= TOTAL; d++) kapselIds(d);
-    ok(Date.now() - t0 < 1500, `K65i حسابُ 270 كبسولةً مع الحلقةِ الارتدادية أقلُّ من 1.5 ثانية (محفوظ) — ${Date.now() - t0}ms`);
+    ok(Date.now() - t0 < 1500, `K65i حسابُ ${TOTAL} كبسولةً مع الحلقةِ الارتدادية أقلُّ من 1.5 ثانية (محفوظ) — ${Date.now() - t0}ms`);
   }
 
 
@@ -2350,7 +2350,7 @@ void 0;
       const bad = (grammarMap[k].examples ?? []).filter((x) => !/[.!?…"“”»]$/.test(x.de.trim()));
       ok(bad.length === 0, `K69g أمثلةُ ${k} تنتهي بعلامةِ ترقيم (${bad.length})`);
     }
-    // تغطيةُ الخطة: كلُّ نصٍّ وكلُّ حوارٍ يُجدوَلُ مرةً على الأقلّ في 270 يوماً
+    // تغطيةُ الخطة: كلُّ نصٍّ وكلُّ حوارٍ يُجدوَلُ مرةً على الأقلّ في 378 يوماً
     const gesehenT = new Set<string>(), gesehenD = new Set<string>();
     for (let d = 1; d <= TOTAL_DAYS; d++) for (const t of buildDay(d, emptyProgress).tasks) { if (t.textId) gesehenT.add(t.textId); if (t.dialogueId) gesehenD.add(t.dialogueId); }
     const fehltT = texts.filter((t) => !gesehenT.has(t.id)).map((t) => t.id), fehltD = dialogues.filter((d) => !gesehenD.has(d.id)).map((d) => d.id);
@@ -2482,6 +2482,53 @@ void 0;
     `K122e كلُّ منادٍ للتعرّفِ يفحصُ البوابةَ أولاً (${callers.join(",")})`);
   ok(!srcOf("components/selbsttest.tsx").includes("recordTask("), "K122f الاختبارُ الذاتيُّ خارجَ الدرجةِ الرسمية — لا يسجِّلُ فيها");
 }
+
+/* ═══ K123 — توحيد رقم الخطة 378: لا 270 مزروعاً في الكود (R38) ═══ */
+{
+  const collectR = (dir: string, out: string[] = []): string[] => {
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+      const r = `${dir}/${e.name}`;
+      if (e.isDirectory()) collectR(r, out);
+      else if (/\.tsx?$/.test(r)) out.push(r);
+    }
+    return out;
+  };
+  const code = [...collectR("app"), ...collectR("components"), ...collectR("lib")];
+  const mit270 = code.filter((f) => /\b270\b/.test(readFileSync(f, "utf8")));
+  ok(mit270.length === 0, `K123a لا رقمَ 270 مزروعاً في الكود — المرجعُ TOTAL_DAYS وحده (${mit270.join(",") || "نظيف"})`);
+  const seite = readFileSync("app/page.tsx", "utf8");
+  ok(seite.includes("اكتملت الرحلة — {TOTAL_DAYS}") && seite.includes("${closedDays.length}/${TOTAL_DAYS}"),
+    "K123b شاشةُ النهايةِ تستخدمُ TOTAL_DAYS لا رقماً مزروعاً");
+  const inter = readFileSync("scripts/interaktiv_test.tsx", "utf8");
+  ok((inter.match(/day <= TOTAL_DAYS/g) ?? []).length === 2, "K123c المسحُ التركيبيُّ يغطي الخطةَ كاملةً عبر TOTAL_DAYS");
+}
+
+/* ═══ K124 — بوابات المرحلة 1: المؤقت والاعتراض والبديل والتوقف (R11/R33/R16/R19/R20) ═══ */
+{
+  const lehrer = readFileSync("components/lehrer.tsx", "utf8");
+  ok(lehrer.includes("PITFALL_SEKUNDEN = 45") && lehrer.includes("setInterval(") && lehrer.includes("انتهى وقت الرادار") && lehrer.includes("pitfall-timer-"),
+    "K124a رادارُ الفخاخِ موقوتٌ: 45 ثانية + عدّادٌ حيٌّ + كشفٌ تلقائيٌّ يدخلُ الدفتر");
+  const korr = readFileSync("components/schreibkorrektur.tsx", "utf8");
+  ok(korr.includes("disput-") && korr.includes("disputeRegel(") && korr.includes("disput-hinweis") && korr.includes("effektiveSchwere("),
+    "K124b الاعتراضُ على الكاشفِ مربوطٌ: زرٌّ + تسجيلٌ + حدّةٌ فعلية");
+  const tasks = readFileSync("components/tasks.tsx", "utf8");
+  ok(tasks.includes("sprech-schrift-ab") && tasks.includes("markiereSchriftlich(") && tasks.includes("إثبات إنجاز لا إثبات نطق"),
+    "K124c البديلُ الكتابيُّ للشفويِّ: صندوقٌ + وسمٌ + صياغةُ القاعدة");
+  ok(readFileSync("components/akademie/Klassenzimmer.tsx", "utf8").includes("stop-panel") && readFileSync("app/page.tsx", "utf8").includes("zeit-hinweis"),
+    "K124d لوحةُ التوقفِ + تقديرُ الوقتِ المرنِ حاضران");
+  const schwerB = (schwere: "sicher" | "wahrscheinlich" | "stil", regelId?: string) =>
+    ({ spalte: "grammatik", schwere, stelle: "x", meldungAr: "y", regelId }) as never;
+  ok(DISPUT_SCHWELLE === 3, "K124e عتبةُ التنزيلِ 3 اعتراضات");
+  ok(effektiveSchwere(schwerB("sicher", "r"), {}) === "sicher" && effektiveSchwere(schwerB("sicher", "r"), { r: 2 }) === "sicher",
+    "K124f دونَ العتبةِ لا تنزيل");
+  ok(effektiveSchwere(schwerB("sicher", "r"), { r: 3 }) === "wahrscheinlich" && effektiveSchwere(schwerB("sicher", "r"), { r: 6 }) === "stil",
+    "K124g التنزيلُ التدريجيُّ: 3→محتملة، 6→أسلوبية");
+  ok(effektiveSchwere(schwerB("wahrscheinlich", "r"), { r: 3 }) === "stil" && effektiveSchwere(schwerB("sicher"), { r: 99 }) === "sicher",
+    "K124h بلا regelId لا تنزيلَ أبداً");
+  ok(bewerteSchreiben([schwerB("sicher", "r")]) === 92 && bewerteSchreiben([schwerB("sicher", "r")], { r: 3 }) === 96,
+    "K124i الدرجةُ تتبعُ الحدّةَ الفعليةَ لا المزروعة");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

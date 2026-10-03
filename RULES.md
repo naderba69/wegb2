@@ -34,7 +34,7 @@
 |---|---|---|---|---|
 | R9 | كل درس: هدف + متطلب + مهمة استخدام + تحققان (58/58) | `content/grammar.json:18` «"verify"» · `scripts/engine_smoke.ts:2442` «K121a» | K120 + K121a | ✅ |
 | R10 | الاستقراء قبل القاعدة (خمّن أولاً) | `components/akademie/LektionWizard.tsx:134` «الاستقراء قبل القاعدة (lib/induktion)» | K120 | ✅ |
-| R11 | الفخاخ سؤال تفاعلي مسجل (المؤقت: المرحلة 1) | `components/tasks.tsx:525` «FehlerFinden pitfalls» | K120 | ⚠️ |
+| R11 | الفخاخ سؤال تفاعلي مسجل وموقوت (45 ثانية، كشف تلقائي يدخل الدفتر) | `components/tasks.tsx:525` «FehlerFinden pitfalls» · `components/lehrer.tsx:29` «PITFALL_SEKUNDEN = 45» · `components/lehrer.tsx:76` «انتهى وقت الرادار» · `scripts/engine_smoke.ts:2510` «K124a» · `scripts/interaktiv_test.tsx:1740` «LXIV1» | K124a + LXIV | ✅ |
 
 ## التقييم والاستقلال
 
@@ -44,7 +44,7 @@
 | R13 | مهمة التحقق جديدة لا إعادة | `lib/plan.ts:371` «مهمة جديدة لا إعادة» | K120 | ✅ |
 | R14 | إعادة التدريب لا تمس سجل التحقق | `lib/store.ts:124` «verifyFor ? p.verify» | K120 | ✅ |
 | R15 | فشل التقنية له مسار بديل معلن لا عقوبة | `components/aussprachetrainer.tsx:70` «تعذّر الوصول إلى الميكروفون» | K120 | ✅ |
-| R16 | بديل كتابي بقاعدة مكتوبة عند استحالة الصوت | — (المرحلة 1) | — | ❌ |
+| R16 | بديل كتابي بقاعدة مكتوبة عند استحالة الصوت | `components/tasks.tsx:953` «sprech-schrift-ab» · `components/tasks.tsx:963` «إثبات إنجاز لا إثبات نطق» · `scripts/engine_smoke.ts:2516` «K124c» · `scripts/interaktiv_test.tsx:1751` «LXV1» | K124c + LXV | ✅ |
 
 ## تجربة المتعلم
 
@@ -52,8 +52,8 @@
 |---|---|---|---|---|
 | R17 | خطوة واحدة واضحة مع سببها | `app/page.tsx:83` «تحقق استقلال مستحق» | K120 | ✅ |
 | R18 | قفل الجلسة: الاسترجاع أولاً إجبارياً | `app/page.tsx:65` «ritual.ersteFreie - 1» · `lib/ritual.ts:63` «export function aufgabeGesperrt» | K120 | ✅ |
-| R19 | بعد الإنجاز: توقف أو نشاط إضافي محدود | — (المرحلة 1) | — | ❌ |
-| R20 | الوقت تقدير مرن معلن | — (المرحلة 1) | — | ❌ |
+| R19 | بعد الإنجاز: توقف أو نشاط إضافي محدود | `components/akademie/Klassenzimmer.tsx:395` «stop-panel» · `scripts/engine_smoke.ts:2518` «K124d» · `scripts/interaktiv_test.tsx:1775` «LXVI1» | K124d + LXVI | ✅ |
+| R20 | الوقت تقدير مرن معلن | `app/page.tsx:362` «zeit-hinweis» · `scripts/engine_smoke.ts:2518` «K124d» | K124d | ✅ |
 | R21 | التقدم محفوظ لكل مهمة (التوقف المبكر آمن) | `lib/store.ts:110` «taskId: string, score: number» | K120 | ✅ |
 
 ## الصوت والشبكة
@@ -81,9 +81,9 @@
 | R30 | نوع الكلمة على كل البطاقات | — (المرحلة 2) | — | ❌ |
 | R31 | اعتراضات الضغط الشفوي كآلية | — (المرحلة 3) | — | ❌ |
 | R32 | تعرف محلي (دراسة جدوى قبل الالتزام) | — (المرحلة 3) | — | ❌ |
-| R33 | تنزيل تلقائي للقواعد كثيرة الإنذار الكاذب (أو شطبها بقرار) | — (المرحلة 1) | — | ❌ |
+| R33 | تنزيل تلقائي للقواعد كثيرة الإنذار الكاذب (أو شطبها بقرار) | `lib/schreibpruefer.ts:226` «DISPUT_SCHWELLE = 3» · `components/schreibkorrektur.tsx:96` «disput-hinweis» · `scripts/engine_smoke.ts:2513` «K124b» · `scripts/interaktiv_test.tsx:1789` «LXVII1» | K124b–i + LXVII | ✅ |
 | R34 | مقاييس النجاح الثلاثة ظاهرة في لوحة | — (المرحلة 2) | — | ❌ |
-| R35 | الكلمات الإشارية مجدولة في الخطة (المكون موجود) | `components/signalradar.tsx:4` «@/lib/signalwoerter» | K120 | ⚠️ |
+| R35 | الكلمات الإشارية مجدولة في الخطة (المكون موجود) | `components/signalradar.tsx:4` «@/lib/signalwoerter» · `components/tasks.tsx:783` «SignalRadar dlg={dlg}» · `scripts/interaktiv_test.tsx:1138` «LII1» | K120 + LII | ✅ |
 
 ## الحوكمة والتوثيق
 
@@ -91,6 +91,8 @@
 |---|---|---|---|---|
 | R36 | بطاقة التسليم محدثة من قراءة القرص | `HANDOFF.md:3` «58/58» | K120 | ✅ |
 | R37 | كل ميزة جديدة تُرافقها بوابة | `scripts/engine_smoke.ts:2417` «K119b» | K120 | ✅ |
+| R38 | رقم الخطة موحد: 378 يوماً عبر TOTAL_DAYS ولا أرقام مزروعة | `lib/types.ts:448` «TOTAL_DAYS = 378» · `scripts/engine_smoke.ts:2498` «K123a» | K123 | ✅ |
+| R39 | إعادة عدّ محتوى README (النصوص والحوارات) | — (المرحلة 2: السطر 30 يقول 105/80 والتدقيق وجد 110/119) | — | ❌ |
 
 ## سجل القرارات
 
@@ -98,5 +100,8 @@
 - 2026-10-03 (R0): تثبيت "لا اتفاق شفهياً" قاعدة دائمة حاكمة بأمر المالك.
 - 2026-10-03: إنشاء السجل من تدقيق 2026-10-03 (39 قاعدة: 26 ✅ / 3 ⚠️ / 10 ❌).
 - 2026-10-03 (R38): رصد تعارض 270/378 أثناء التثبيت — الإصلاح في المرحلة 1.
+- 2026-10-03 (المرحلة 1): إنجاز R11/R16/R19/R20/R33/R35/R38 بالدليل والبوابات (K123/K124 + LXIV–LXVII) — smoke 872/0 وتفاعلي 545/0.
+- 2026-10-03 (R39): دَين موثق — إعادة عدّ محتوى README في المرحلة 2.
+- 2026-10-03 (إصلاح عابر): كسرُ PITFALL_RE بشرطةٍ مزدوجة أثناء التثبيت اكتشفه LXIV (الفخاخ كانت ترجع null) وأُصلح فوراً.
 
 *آخر تحديث: 2026-10-03 · يُحدَّث مع كل قاعدة جديدة أو تغيُّر دليل — والبوابة K120 تحرس التزامن.*

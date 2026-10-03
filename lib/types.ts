@@ -396,7 +396,11 @@ export interface Progress {
   /** 🎯 طابور تحقق الاستقلال: الدرس ← يوم الاستحقاق (التدريب+3) ونتيجة التحقق.
    *  إعادة المحاولة الفورية تدريبٌ فقط — الدليل مهمة جديدة مؤجلة. */
   verify?: Record<string, { dueDay: number; doneDay?: number; passed?: boolean }>;
-  /** 🔒 بوّابة الوحدة: رقم الوحدة 1..16 ← محاولاتها وأفضل نتيجة وحالة العبور */
+  /** 🤔 اعتراضات المتعلم على قواعد الكاشف: القاعدة ← عدد الاعتراضات (R33: 3 = تنزيل). */
+  disputiert?: Record<string, number>;
+  /** ⌨️ مهام شفوية سُلّمت كتابياً: إثبات إنجاز لا إثبات نطق (R16). */
+  schriftlich?: Record<string, true>;
+  /** 🔒 بوّابة الوحدة: رقم الوحدة ← محاولاتها وأفضل نتيجة وحالة العبور */
   modulPruefungen?: Record<number, {
     versuche: number; best: number; bestanden: boolean; zuletzt?: string;
     teile?: { lesen: number; hoeren: number; schreiben: number; sprechen: number };

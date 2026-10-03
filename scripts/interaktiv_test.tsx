@@ -52,7 +52,7 @@ function ok(cond: boolean, label: string) {
 async function main() {
   const React = await import("react");
   const { createRoot } = await import("react-dom/client");
-  const { emptyProgress } = await import("../lib/types");
+  const { emptyProgress, TOTAL_DAYS } = await import("../lib/types");
   const act = (React as unknown as { act: (cb: () => void) => void }).act;
 
   const d0 = dom.window.document as unknown as Document;
@@ -702,7 +702,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
 
-  /* ═══════════ XXXI — المسحُ التركيبيُّ الشامل: 270 يوماً تُفتَحُ مهمةً مهمة ═══════════ */
+  /* ═══════════ XXXI — المسحُ التركيبيُّ الشامل: 378 يوماً تُفتَحُ مهمةً مهمة ═══════════ */
   {
     const { default: TaskView } = await import("../components/tasks");
     const { buildDay } = await import("../lib/plan");
@@ -711,7 +711,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const crashes: string[] = [];
     const leere: string[] = [];
     let total = 0;
-    for (let day = 1; day <= 270; day++) {
+    for (let day = 1; day <= TOTAL_DAYS; day++) {
       const plan = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } });
       for (const task of plan.tasks) {
         total++;
@@ -725,10 +725,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
         }
       }
     }
-    console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ 270 يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
+    console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ ${TOTAL_DAYS} يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
     if (crashes.length) console.error("   ⤷ انهيارات:", crashes.slice(0, 6).join(" | "));
     if (leere.length) console.error("   ⤷ شاشاتٌ خاوية:", leere.slice(0, 6).join(" | "));
-    ok(total === 1473, `XXXI1 1473 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
+    ok(total === 2110, `XXXI1 2110 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
     ok(kinds.size === 9, `XXXI2 الأنواعُ التسعةُ كلُّها مُمثَّلةٌ فعلاً في الأيامِ — لا نوعَ مكتوبٍ ولا يُولَد (${[...kinds.keys()].join("، ")})`);
     ok(crashes.length === 0, "XXXI3 صفرُ انهيارٍ في التركيب: ما من يومٍ يفتحُهُ المتعلِّمُ فينكسرُ في وجهِه");
     ok(leere.length === 0, "XXXI4 صفرُ شاشةٍ خاوية: كلُّ مهمةٍ تعرضُ محتوًى حقيقياً لا هيكلاً فارغاً");
@@ -758,7 +758,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
         if (b.tagName === "BUTTON" && !(b.textContent ?? "").trim() && !b.getAttribute("aria-label") && !b.getAttribute("title")) stumm.push(wo);
       }
     };
-    for (let day = 1; day <= 270; day += 3) {
+    for (let day = 1; day <= TOTAL_DAYS; day += 3) {
       const plan = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } });
       for (const task of plan.tasks) {
         mount(React.createElement(TaskView, { task, day, ...props }));
@@ -1729,6 +1729,67 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const show = btn("📝 أظهر النص") ?? Array.from(rootEl.querySelectorAll("button")).find((b) => /أظهر النص|النص/.test(b.textContent ?? ""));
     if (show) click(show);
     ok(rootEl.querySelectorAll('[data-testid="wortlink-wort"]').length >= 5, "LXIII5 سطورُ الحوارِ بعدَ إظهارِ النصِّ مربوطةٌ أيضاً");
+  }
+
+
+  /* ═══ LXIV — رادار الفخاخ موقوت: 45 ثانية (R11) ═══ */
+  {
+    const { FehlerFinden } = await import("../components/lehrer");
+    mount(React.createElement(FehlerFinden, { pitfalls: [{ de: "„Ich helfe dich.“ ✗ → „Ich helfe dir.“ ✓", ar: "helfen + Dativ" }], onPoints: () => {} }));
+    const uhr = rootEl.querySelector('[data-testid="pitfall-timer-0"]');
+    ok(!!uhr && (uhr.textContent ?? "").includes("45"), "LXIV1 عدّادُ الفخِّ يبدأُ من 45 ثانية");
+  }
+
+  /* ═══ LXV — البديل الكتابي للشفوي (R16) ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const { sentences: sBankX } = await import("../lib/content");
+    const se = sBankX.slice(0, 2).map((s) => s.id);
+    const pr = { lang: "ar" as const, day: 200, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: { id: "t-xl-sprechen", kind: "sprechen" as const, titleDe: "S", titleAr: "ت", minutes: 10, sentenceIds: se }, ...pr }));
+    const ta = rootEl.querySelector('[data-testid="sprech-schrift-text"]') as HTMLTextAreaElement | null;
+    ok(!!ta, "LXV1 صندوقُ البديلِ الكتابيِّ حاضر");
+    const ab = rootEl.querySelector('[data-testid="sprech-schrift-ab"]') as HTMLButtonElement;
+    ok(ab.disabled, "LXV2 زرُّ التسليمِ معطَّلٌ قبلَ الكتابة");
+    typeIn(ta!, "Ich spreche jeden Tag laut und deutlich vor dem Spiegel.");
+    ok(!ab.disabled, "LXV3 يُفعَّلُ بعدَ كتابةٍ كافية");
+    click(ab);
+    ok(!!rootEl.querySelector('[data-testid="sprech-schrift-hinweis"]'), "LXV4 بعدَ التسليمِ: وسمُ «إنجاز لا نطق»");
+  }
+
+  /* ═══ LXVI — لوحة التوقف عند اكتمال اليوم (R19) ═══ */
+  {
+    const { Klassenzimmer } = await import("../components/akademie/Klassenzimmer");
+    const { buildDay } = await import("../lib/plan");
+    const { ritualUrteil } = await import("../lib/ritual");
+    const prog = { ...emptyProgress };
+    const plan = buildDay(2, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } });
+    const base: Record<string, never> = {} as never;
+    const props = {
+      ...base, progress: prog, day: 2, plan, stepFrei: 0, setStep: () => {}, ritual: ritualUrteil(plan, prog),
+      resultOf: () => ({ done: true, passed: true, score: 1, total: 1, attempts: 1 }),
+      localOf: () => ({ score: 0, total: 0 }), onPoints: () => {}, submitCurrent: () => {}, doCloseDay: () => {},
+      confirmClose: false, setConfirmClose: () => {}, unpassed: [], onSrs: () => {},
+    };
+    mount(React.createElement(Klassenzimmer, { ...props, allSubmitted: true } as never));
+    ok(!!rootEl.querySelector('[data-testid="stop-panel"]'), "LXVI1 اليومُ المكتملُ يعرضُ لوحةَ التوقف");
+    mount(React.createElement(Klassenzimmer, { ...props, allSubmitted: false } as never));
+    ok(!rootEl.querySelector('[data-testid="stop-panel"]'), "LXVI2 اليومُ الناقصُ بلا لوحة");
+  }
+
+  /* ═══ LXVII — الاعتراض يخفّض حدّة الكاشف (R33) ═══ */
+  {
+    const Schreib = (await import("../components/schreibkorrektur")).default;
+    mount(React.createElement(Schreib, { minWoerter: 5 }));
+    const ta = rootEl.querySelector("textarea") as HTMLTextAreaElement;
+    typeIn(ta, "Ich kaufe ein Geschenk für dem Mann.");
+    const go = Array.from(rootEl.querySelectorAll("button")).find((b) => (b.textContent ?? "").includes("صحِّح")) as HTMLElement;
+    click(go);
+    const btnDisput = () => rootEl.querySelector('[data-test="disput-a1-akkusativ"]') as HTMLElement | null;
+    ok(!!btnDisput(), "LXVII1 زرُّ الاعتراضِ حاضرٌ على نتيجةٍ لها regelId");
+    ok(!rootEl.querySelector('[data-test="disput-hinweis"]'), "LXVII2 قبلَ العتبةِ لا تنزيل");
+    click(btnDisput()!); click(btnDisput()!); click(btnDisput()!);
+    ok(!!rootEl.querySelector('[data-test="disput-hinweis"]'), "LXVII3 بعدَ 3 اعتراضاتٍ يظهرُ التنزيل");
   }
 
   console.log(`\n${beste} نجح · ${fehler} فشل`);

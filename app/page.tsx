@@ -108,13 +108,13 @@ export default function Today() {
         <div className="dirb-finale">
           <div style={{ fontSize: "3rem" }}>🎓</div>
           <h1 style={{ fontWeight: 900, fontSize: "1.6rem", margin: 0 }}>
-            اكتملت الرحلة — 270 يوماً حتى B2!
+            اكتملت الرحلة — {TOTAL_DAYS} يوماً حتى B2!
           </h1>
           <p style={{ color: "var(--color-ink2)", lineHeight: 1.9, margin: 0 }}>
             بدأتَ من اليوم الأول بلا ضياع، وأتممتَ كل يوم بإغلاقه. هذه حصيلتك العلمية:
           </p>
           <div style={{ display: "flex", gap: "1.2rem", justifyContent: "center", flexWrap: "wrap", margin: "0.6rem 0" }}>
-            <Stat label="أيام مُغلقة" value={`${closedDays.length}/270`} />
+            <Stat label="أيام مُغلقة" value={`${closedDays.length}/${TOTAL_DAYS}`} />
             <Stat label="معدّل الإتقان" value={`${avg}%`} />
             <Stat label="أهداف «أستطيع»" value={String(canDoCount)} />
             <Stat label="بطاقات مُدارة" value={String(Object.keys(progress.srs).length)} />
@@ -345,7 +345,7 @@ export default function Today() {
               data-testid={`held-mini-${i}`}
               className={"dirb-mini" + (jetzt ? " dirb-mini-jetzt" : "") + (fertig ? " dirb-mini-fertig" : "")}
               onClick={() => springeZu(i)}
-              aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : fertig ? " (مسلَّمة)" : ""}`}
+              aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : fertig ? (progress.schriftlich?.[tk.id] ? " (مسلَّمة كتابياً — إنجاز لا نطق)" : " (مسلَّمة)") : ""}`}
             >
               <KindIcon kind={tk.kind} className="dirb-mini-icon" />
               <span className="dirb-mini-skill">
@@ -358,6 +358,9 @@ export default function Today() {
             </button>
           );
         })}
+      </div>
+      <div data-testid="zeit-hinweis" style={{ fontSize: "0.8rem", color: "var(--color-ink2)", textAlign: "center" }}>
+        ⏳ الأوقات تقديرات مرنة — الجودة قبل الساعة.
       </div>
 
       {/* ── جدول الأسبوع (مطويّ — سطر واحد حتى يُفتح) ── */}

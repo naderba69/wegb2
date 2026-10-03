@@ -6,7 +6,7 @@ import { eselsbruecken, getBrueckenFor, getGrammar, sprichwortSrc, getDeck, getT
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue } from "@/lib/srs";
-import { addFehlerNow } from "@/lib/store";
+import { addFehlerNow, markiereSchriftlich } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
 import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
 import { buildBrueckeItems } from "@/lib/bruecken";
@@ -903,6 +903,8 @@ function SchreibenTask({ task, onPoints }: Omit<TaskProps, "lang" | "day" | "srs
 // ── تحدّث (Shadowing + تسميع) ───────────────────────────────────────────
 function SprechenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const [done, setDone] = useState<Record<number, boolean>>({});
+  const [schrift, setSchrift] = useState("");
+  const [schriftAb, setSchriftAb] = useState(false);
   const items = (task.sentenceIds ?? []).map((sid) => getSatz(sid)).filter(Boolean);
   const doneCount = items.filter((_, i) => done[i]).length;
   return (
@@ -930,6 +932,37 @@ function SprechenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang
       <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", margin: "0.7rem 0" }}>
         💡 قاعدة الظل اللغوي: استمع للجملة ← انسخ نغمة المتحدث بحذف اللامام ← سجّل صوتك بالهاتف واستمع كل 3 أيام لتلاحظ تقدّمك.
       </p>
+      {!schriftAb ? (
+        <div className="card" style={{ padding: "0.7rem 0.9rem", margin: "0 0 0.7rem", background: "var(--color-paper2)" }}>
+          <div style={{ fontWeight: 800, fontSize: "0.9rem" }}>⌨️ تعذّر النطق اليوم؟ (مرض · ضجيج · لا ميكروفون)</div>
+          <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.4rem" }}>
+            اكتب الجمل من الذاكرة بدلاً — يُحتسب إنجازاً للمهمة، لا دليل نطق.
+          </div>
+          <textarea
+            data-testid="sprech-schrift-text"
+            className="field"
+            rows={4}
+            value={schrift}
+            onChange={(e) => setSchrift(e.target.value)}
+            placeholder="Schreibe die Sätze aus dem Gedächtnis …"
+            style={{ width: "100%", padding: "0.5rem", fontSize: "0.9rem", borderRadius: "0.5rem" }}
+          />
+          <button
+            type="button"
+            className="btn btn-ghost"
+            data-testid="sprech-schrift-ab"
+            disabled={schrift.trim().length < 10}
+            onClick={() => { markiereSchriftlich(task.id); setSchriftAb(true); setDone(Object.fromEntries(items.map((_, i) => [i, true]))); }}
+            style={{ marginTop: "0.4rem" }}
+          >
+            سلّم كتابياً
+          </button>
+        </div>
+      ) : (
+        <div data-testid="sprech-schrift-hinweis" style={{ fontSize: "0.85rem", fontWeight: 700, margin: "0 0 0.7rem" }}>
+          📝 مسلَّم كتابياً — إثبات إنجاز لا إثبات نطق.
+        </div>
+      )}
       <button
         className="btn btn-primary"
         disabled={doneCount < items.length}

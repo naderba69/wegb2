@@ -265,6 +265,19 @@ export function planeVerifikation(topicId: string, day: number) {
   saveProgress({ ...p, verify: { ...(p.verify ?? {}), [topicId]: { dueDay: day + 3 } } });
 }
 
+/** ⌨️ بديل كتابي لمهمة شفوية مستحيلة: إثبات إنجاز لا إثبات نطق (R16) */
+export function markiereSchriftlich(taskId: string) {
+  const p = loadProgress();
+  saveProgress({ ...p, schriftlich: { ...(p.schriftlich ?? {}), [taskId]: true } });
+}
+
+/** 🤔 اعتراض على قاعدة كاشفة: 3 اعتراضات تخفّض حدّتها تلقائياً (R33) */
+export function disputeRegel(regelId: string) {
+  const p = loadProgress();
+  const n = (p.disputiert?.[regelId] ?? 0) + 1;
+  saveProgress({ ...p, disputiert: { ...(p.disputiert ?? {}), [regelId]: n } });
+}
+
 /** تقييم مراجعة خطأ في الدفتر فوراً — ويُسجَّل على شبكة الكفاءات المتأثرة */
 export function gradeFehlerNow(key: string, ok: boolean) {
   const p = gradeFehlerIn(loadProgress(), key, ok);

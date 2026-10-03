@@ -2,6 +2,7 @@
 // 🏋️ تدريبات المحترفين — Konjugationstrainer + Sprechtraining بالتعرف على الصوت
 import { useMemo, useRef, useState } from "react";
 import type { Progress } from "@/lib/types";
+import { TOTAL_DAYS } from "@/lib/types";
 import { verben, type VerbParadigmen, sentences } from "@/lib/content";
 import { levelOf, pickN, rng } from "@/lib/plan";
 import { normalize } from "@/lib/grader";
@@ -162,7 +163,7 @@ export function KonjTrainer() {
 
 export function SprechTrainer({ progress }: { progress: Progress }) {
   const { update } = useProgress();
-  const level = levelOf(Math.min(progress.plan.day, 270));
+  const level = levelOf(Math.min(progress.plan.day, TOTAL_DAYS));
   const [items] = useState(() => pickN(sentences.filter((s) => s.level === level), 5, rng((Date.now() % 2147483647) + 3)));
   const [idx, setIdx] = useState(0);
   const [heard, setHeard] = useState<string | null>(null);

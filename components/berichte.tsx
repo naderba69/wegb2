@@ -6,6 +6,7 @@
 //   📄 تقرير شهري مطبوع (PDF عبر الطباعة) + تصدير CSV للأرقام
 import { useMemo, useState } from "react";
 import type { Progress } from "@/lib/types";
+import { TOTAL_DAYS } from "@/lib/types";
 import { kompetenzWerte, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN, KOMPETENZ_AR, band } from "@/lib/kompetenz";
 import { fehlerFamilien, resistenteFehler, schwere, weakTopics, URSACHEN, ursacheVon } from "@/lib/fehler";
 import { planPct } from "@/lib/plan";
@@ -69,7 +70,7 @@ table{border-collapse:collapse;width:100%;font-size:.9rem}td,th{border:1px solid
 </style></head><body>
 <div class="kopf">
 <h1>📊 التقرير الشهري — Monatsbericht</h1>
-<div>طريقي إلى B2 — <b>${name}</b> · تاريخ الإصدار: ${heute} · اليوم <b>${p.plan.day}</b>/270</div>
+<div>طريقي إلى B2 — <b>${name}</b> · تاريخ الإصدار: ${heute} · اليوم <b>${p.plan.day}</b>/${TOTAL_DAYS}</div>
 </div>
 <div class="kacheln">
 <div class="kachel"><b>${bereit.gesamt}%</b>جاهزية الامتحان<small> ${bb.name}</small></div>
@@ -131,7 +132,7 @@ td,th{border-bottom:1px solid #ccc;padding:.35rem .5rem}th{background:#faf7f2;te
 code{background:#faf7f2;border:1px solid #ddd;border-radius:6px;padding:.1rem .4rem;font-size:.75rem}
 @media print{button{display:none}}button{position:fixed;inset-block-start:8px;inset-inline-end:8px;padding:.4rem .9rem;cursor:pointer}</style></head><body>
 <button onclick="print()">🖨️ طباعة / PDF</button><div class="frame">
-<h1>🎓 وثيقة مستوى — Amtliches Notblatt</h1><div class="sub">«طريقي إلى B2» · اليوم <b>${day}</b> من 270 · ${new Date().toISOString().slice(0, 10)}</div>
+<h1>🎓 وثيقة مستوى — Amtliches Notblatt</h1><div class="sub">«طريقي إلى B2» · اليوم <b>${day}</b> من ${TOTAL_DAYS} · ${new Date().toISOString().slice(0, 10)}</div>
 <p style="text-align:center;font-size:1rem">الحامل/ة: <b>${name}</b></p>
 <table><tr><th>الكفاءة</th><th>القيمة</th><th>المعادل الألماني</th></tr>${rows}</table>
 <div class="box">

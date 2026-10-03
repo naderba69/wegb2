@@ -391,6 +391,15 @@ export function Klassenzimmer({
       {/* ── محطّة مراجعة الأخطاء المتكرّقة (قبل الإغلاق) ── */}
       {allSubmitted && <FehlerRevue progress={progress} />}
 
+      {allSubmitted && !confirmClose && (
+        <div className="card fadein" data-testid="stop-panel" style={{ padding: "0.8rem 1rem", borderInlineStart: "5px solid var(--color-a1)" }}>
+          <div style={{ fontWeight: 900 }}>🛑 توقف هنا — يومك مكتمل.</div>
+          <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.25rem" }}>
+            ➕ نشاط إضافي محدود (اختياري): راجع كبسولة المساء أعلاه أو بطاقة واحدة من دفتر الأخطاء — ثم أغلق اليوم.
+          </div>
+        </div>
+      )}
+
       {/* ── 🛑 ختام اليوم ── */}
       <section id="dirb-abschluss" className="dirb-close" aria-label="ختام اليوم">
         <div style={{ fontSize: "2rem" }} aria-hidden>🎓</div>
