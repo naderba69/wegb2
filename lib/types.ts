@@ -66,6 +66,14 @@ export interface GrammarTopic {
   titleDe: string;
   titleAr: string;
   level: Level;
+  /** 🎯 معيار الدرس الواحد: هدفٌ واحد قابل للملاحظة — ما الذي سيفعله المتعلم بعد الدرس؟ */
+  ziel?: string;
+  /** 🧱 المتطلب السابق: IDs دروسٍ يُفترَض إتقانُها قبل هذا الدرس (فارغ = درس دخول) */
+  voraus?: string[];
+  /** 🚀 مهمة الاستخدام المستقل: موقف حقيقي جديد — تُعرَض في الخلاصة وتُحفَظ للتحقق المؤجل */
+  anwendung?: { ar: string; de: string; candoIds?: string[] };
+  /** 🎯 بنود التحقق المحجوزة: لا تُعرَض في التدريب أبداً — تُسحَب يوم الاستحقاق فقط (مهمة جديدة لا إعادة) */
+  verify?: Exercise[];
   summaryAr: string;
   summaryDe?: string;
   rules: { de: string; ar: string }[];
@@ -231,6 +239,8 @@ export interface DayTask {
   fehlerItems?: { falsch: string; richtig: string; ar: string; art?: string }[];
   /** وسم تدريب النقطة الضعيفة */
   schwach?: string;
+  /** 🎯 تحقق استقلال: ID الدرس الذي تتحقق منه هذه المهمة (مهمة جديدة لا إعادة) */
+  verifyFor?: string;
 }
 
 export interface DayPlan {
@@ -383,6 +393,9 @@ export interface Progress {
   };
   /** نتائج امتحانات المراحل: اليوم ← الدرجة المئوية ونجاح */
   exams?: Record<number, { score: number; passed: boolean }>;
+  /** 🎯 طابور تحقق الاستقلال: الدرس ← يوم الاستحقاق (التدريب+3) ونتيجة التحقق.
+   *  إعادة المحاولة الفورية تدريبٌ فقط — الدليل مهمة جديدة مؤجلة. */
+  verify?: Record<string, { dueDay: number; doneDay?: number; passed?: boolean }>;
   /** 🔒 بوّابة الوحدة: رقم الوحدة 1..16 ← محاولاتها وأفضل نتيجة وحالة العبور */
   modulPruefungen?: Record<number, {
     versuche: number; best: number; bestanden: boolean; zuletzt?: string;
