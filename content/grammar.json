@@ -4,6 +4,9 @@
     "titleDe": "sein & haben",
     "titleAr": "الفعلان sein (يكون) و haben (يملك)",
     "level": "A1",
+    "ziel": "تصرّف sein وhaben في المضارع بلا تردد وتستعملهما في 5 جمل عن نفسك.",
+    "voraus": ["a0-begrussung"],
+    "anwendung": {"ar": "اكتب 5 جمل عن نفسك وعائلتك مستخدماً sein وhaben (مثال: Ich habe zwei Brüder) — ثم صحّحها بالمصحّح.", "de": "Schreibe 5 Sätze über dich und deine Familie mit sein und haben.", "candoIds": ["A1-C1"]},
     "summaryAr": "فعلان أساسيان تصريفهما شاذ. sein يربط الاسم بالصفة أو الهوية (مثل «يكون» في العربية)، و haben يعبّر عن الامتلاك ويُستعمل أيضاً مع كثير من الأسماء: Zeit haben (يتوفر لديه وقت)، Hunger haben (جائع). احفظ تصريفهما في اليوم الأول!",
     "rules": [
       {
@@ -990,6 +993,9 @@
     "titleDe": "Präteritum — die Erzählzeit",
     "titleAr": "الماضي البسيط: زمن السرد",
     "level": "A2",
+    "ziel": "تصوغ الماضي البسيط (المنتظم والشاذّ الشائع) وتفرّق استعماله عن Perfekt.",
+    "voraus": ["a1-praesens", "a2-perfekt"],
+    "anwendung": {"ar": "اكتب 6 جمل عن عطلتك الماضية بصيغة Präteritum (war, hatte, ging, sah…) — هذا أسلوب السرد الكتابي.", "de": "Schreibe 6 Sätze über deinen letzten Urlaub im Präteritum.", "candoIds": ["A2-C9"]},
     "summaryAr": "بعد أن تعرّفتَ war و hatte في A1، يأتي هنا الماضي البسيط كاملاً: المنتظم (-te) والشاذّ (تغيير في الجذر)، ومتى تستعمله ومتى تستعمل Perfekt. هذا هو **زمن الكتابة والسرد**: به تكتب رسالةً عن عطلة، وبه تُحكى قصة في امتحان A2 وB1، وبه كُتبت كل رواية ألمانية تقرؤها.",
     "summaryDe": "Das Präteritum ist die Erzählzeit der geschriebenen Sprache: regelmäßige Bildung mit -te, unregelmäßige mit Stammwechsel, und eine klare Arbeitsteilung mit dem Perfekt.",
     "rules": [
@@ -1938,6 +1944,9 @@
     "titleDe": "Konjunktiv II (würde · könnte · hätte · wäre)",
     "titleAr": "كونونكتيف الثاني: النصائح والتخيلات والأمانى",
     "level": "B1",
+    "ziel": "تصوغ würde + مصدر، وتقدّم النصائح والأمنيات بـ Konjunktiv II في موقف حقيقي.",
+    "voraus": ["a2-praeteritum"],
+    "anwendung": {"ar": "انصح صديقاً يريد تعلم الألمانية: اكتب 4 نصائح بـ würde (مثال: Ich würde jeden Tag 20 Minuten üben).", "de": "Gib einem Freund 4 Ratschläge zum Deutschlernen mit würde + Infinitiv.", "candoIds": ["B1-C2"]},
     "summaryAr": "لثلاثة استعمالات: (1) الرجاء المهذّب: «Könnten Sie mir helfen?» (2) النصيحة: «Ich würde an deiner Stelle …» (3) الشرط غير الواقعي والأمنيات: «Wenn ich Zeit hätte, würde ich reisen». صيغتان تُحفظان: würde + مصدر (لباقي الأفعال)، والأهم الأشكال الشاذة hätte/wäre/könnte/müsste/dürfte.",
     "rules": [
       {
@@ -2437,6 +2446,9 @@
     "titleDe": "Indirekte Rede (Konjunktiv I)",
     "titleAr": "المنقول — أداة الصحافة والدبلوماسية",
     "level": "B2",
+    "ziel": "تحوّل كلاماً مباشراً إلى منقول (Konjunktiv I) مع قاعدة الاستبدال عند التطابق.",
+    "voraus": ["b1-konj2"],
+    "anwendung": {"ar": "حوّل 3 تصريحات صحفية قصيرة إلى جمل منقولة (مثال: Der Minister sagte, die Lage sei stabil).", "de": "Forme 3 kurze Presseaussagen in indirekte Rede um.", "candoIds": ["B2-C1"]},
     "summaryAr": "لنقل كلام الآخرين دون التزام بصحته (شرط أساسي في الصحافة!). الصيغة: فعل المنقول (Konjunktiv I) في نهاية الجملة التابعة: «Der Minister sagte, die Lage sei stabil.» إذا تطابقت صيغة المنقول مع المضارع (الحالة الشائعة مع wir/sie) ننتقل إلى Konjunktiv II: «Sie sagten, sie hätten keine Zeit.»",
     "rules": [
       {
@@ -6460,6 +6472,9 @@
     "titleDe": "Begrüßung & sich vorstellen",
     "titleAr": "التحايا والتعريف بالنفس",
     "level": "A0",
+    "ziel": "تحيّي بالألمانية وتعرّف بنفسك (الاسم والبلد) وتسأل عن الحال — شفهياً بلا ورقة.",
+    "voraus": [],
+    "anwendung": {"ar": "سجّل صوتياً (30 ثانية): حيِّ صديقاً، عرّف بنفسك، واسأله عن حاله — ثم استمع وقارن بالنموذج.", "de": "Nimm 30 Sekunden auf: Begrüße einen Freund, stell dich vor (Name, Land) und frag, wie es ihm geht.", "candoIds": ["a0-1", "a0-4"]},
     "summaryAr": "أول ما تحتاجه: قل مرحباً، قل اسمك، قل من أين أنت، واسأل كيف الحال. نستعمل فقط sein والضمائر الأساسية.",
     "rules": [
       {

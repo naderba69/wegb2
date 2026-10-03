@@ -66,6 +66,12 @@ export interface GrammarTopic {
   titleDe: string;
   titleAr: string;
   level: Level;
+  /** 🎯 معيار الدرس الواحد: هدفٌ واحد قابل للملاحظة — ما الذي سيفعله المتعلم بعد الدرس؟ */
+  ziel?: string;
+  /** 🧱 المتطلب السابق: IDs دروسٍ يُفترَض إتقانُها قبل هذا الدرس (فارغ = درس دخول) */
+  voraus?: string[];
+  /** 🚀 مهمة الاستخدام المستقل: موقف حقيقي جديد — تُعرَض في الخلاصة وتُحفَظ للتحقق المؤجل */
+  anwendung?: { ar: string; de: string; candoIds?: string[] };
   summaryAr: string;
   summaryDe?: string;
   rules: { de: string; ar: string }[];

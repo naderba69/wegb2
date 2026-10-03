@@ -9,7 +9,7 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { grammarMap, getBrueckenFor } from "@/lib/content";
+import { grammarMap, getBrueckenFor, candoMap } from "@/lib/content";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
@@ -113,6 +113,18 @@ export function LektionWizard({ topicId }: { topicId: string }) {
         <span style={{ color: "var(--color-cola)" }}>{topic.titleAr}</span>
         {" — "}<De>{topic.titleDe}</De>
       </div>
+
+      {/* ── 🎯 معيار الدرس: الهدف أولاً، ثم المتطلب السابق ── */}
+      {topic.ziel && (
+        <div data-testid="wizard-ziel" className="card" style={{ padding: "0.6rem 0.9rem", background: "var(--color-a1-soft)", borderInlineStart: "5px solid var(--color-a1)", fontSize: "0.9rem" }}>
+          🎯 <strong>هدف هذا الدرس:</strong> {topic.ziel}
+        </div>
+      )}
+      {topic.voraus && topic.voraus.length > 0 && (
+        <div data-testid="wizard-voraus" style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>
+          🧱 يبني على: {topic.voraus.map((v) => grammarMap[v]?.titleAr ?? v).join(" · ")}
+        </div>
+      )}
 
       {/* ── جسم الخطوة: ≤ نصف شاشة + تمريرٌ داخليّ (K108b) ── */}
       <div data-testid={`wizard-body-${schritt}`} style={{ maxHeight: "52dvh", overflowY: "auto", display: "grid", gap: "0.7rem", paddingInlineEnd: "0.2rem" }}>
@@ -257,6 +269,25 @@ export function LektionWizard({ topicId }: { topicId: string }) {
                     ))}
                   </div>
                 ))}
+              </div>
+            )}
+            {/* ── 🚀 مهمة الاستقلال: استخدامٌ حقيقي جديد — تُحفَظ للتحقق المؤجل ── */}
+            {topic.anwendung && (
+              <div data-testid="wizard-anwendung" className="card" style={{ padding: "0.7rem 0.9rem", borderInlineStart: "5px solid var(--color-b1)" }}>
+                <div style={{ fontWeight: 800, marginBottom: "0.3rem" }}>🚀 مهمة الاستقلال — جرّب وحدك بلا خيارات</div>
+                <De style={{ fontWeight: 700 }}>{topic.anwendung.de}</De>
+                <div style={{ fontSize: "0.88rem", color: "var(--color-ink2)", marginTop: "0.2rem", lineHeight: 1.9 }}>{topic.anwendung.ar}</div>
+                {(topic.anwendung.candoIds ?? []).length > 0 && (
+                  <div style={{ fontSize: "0.78rem", color: "var(--color-b1)", marginTop: "0.35rem" }}>
+                    ✓ تُحقِّق: {(topic.anwendung.candoIds ?? []).map((c) => {
+                      const hit = (Object.values(candoMap) as { id: string; ar: string }[][]).flat().find((x) => x.id === c);
+                      return hit ? hit.ar : c;
+                    }).join(" · ")}
+                  </div>
+                )}
+                <div style={{ fontSize: "0.76rem", color: "var(--color-ink2)", marginTop: "0.25rem" }}>
+                  تُحفَظ محاولتك هنا تدريباً — والتحقق من الاستقلال بمهمة جديدة بعد 3 أيام.
+                </div>
               </div>
             )}
             <Link href="/" className="btn btn-primary" data-testid="wizard-zurueck-heute" style={{ minHeight: "44px", textDecoration: "none" }} onClick={() => tuer(4)}>
