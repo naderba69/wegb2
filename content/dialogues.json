@@ -80,8 +80,8 @@
   {
     "id": "d-a1-02",
     "level": "A1",
-    "titleDe": "Im Café",
-    "titleAr": "في المقهى",
+    "titleDe": "Im Café: Kaffee und Kuchen",
+    "titleAr": "في المقهى: قهوة وكعك",
     "lines": [
       {
         "who": "Kellner",
@@ -1862,8 +1862,8 @@
   {
     "id": "d-a1-08",
     "level": "A1",
-    "titleDe": "Im Café",
-    "titleAr": "في المقهى",
+    "titleDe": "Im Café: Nur einen Apfel",
+    "titleAr": "في المقهى: تفاحة فقط",
     "lines": [
       {
         "who": "Kellner",
@@ -10384,7 +10384,7 @@
     "dictation": [
       "Wie viel ist eins plus zwei?",
       "Eins plus zwei ist drei.",
-      "Eins plus zwei ist drei."
+      "Danke!"
     ]
   },
   {
@@ -10401,7 +10401,7 @@
       {
         "sp": "B",
         "de": "A – L – I. Ali.",
-        "ar": "أ – إل – إي. علي."
+        "ar": "A – L – I. علي."
       },
       {
         "sp": "A",
@@ -10454,7 +10454,7 @@
     "dictation": [
       "Buchstabiere bitte deinen Namen!",
       "A – L – I. Ali.",
-      "A – L – I. Ali."
+      "Danke!"
     ]
   }
 ]

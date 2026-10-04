@@ -27,7 +27,7 @@ export default function KartenExport() {
     <section className="card" style={{ padding: "1rem 1.2rem", display: "grid", gap: "0.7rem" }}>
       <h3 style={{ margin: 0 }}>🗂️ تصدير البطاقات — ستّة أعمدة + CSV</h3>
       <p style={{ margin: 0, fontSize: "0.86rem", color: "var(--color-ink2)" }}>
-        اختر الحزمة، ثمّ انسخ كتلة CSV والصقها في Google Sheets (بيانات ← تقسيم النص) أو في Anki (استيراد ← الفاصل «؛»).
+        اختر الحزمة، ثمّ انسخ كتلة CSV والصقها في Google Sheets (بيانات ← تقسيم النص) أو في Anki (استيراد ← الفاصل «؛»). لا يظهر المرادف إلا مع أمثلة توضّح سياقه والفرق في الاستعمال.
       </p>
 
       <label style={{ display: "grid", gap: "0.25rem", fontSize: "0.9rem" }}>
@@ -43,7 +43,7 @@ export default function KartenExport() {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
           <thead>
             <tr>
-              {["الوجه", "مرساة اللون", "الظهر", "الكتلة السياقية", "مرادفات", "النطق"].map((h) => (
+              {["الوجه", "مرساة اللون", "الظهر", "الكتلة السياقية", "مرادفات سياقية", "النطق"].map((h) => (
                 <th key={h} style={{ borderBottom: "2px solid var(--color-line)", padding: "0.35rem", textAlign: "start" }}>{h}</th>
               ))}
             </tr>

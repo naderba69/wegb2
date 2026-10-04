@@ -7269,7 +7269,8 @@
  ],
  "v1427": [
   "Urlaub machen",
-  "im Urlaub sein"
+  "im Urlaub sein",
+  "in den Urlaub fahren"
  ],
  "v073": [
   "seine Meinung sagen",
@@ -7281,7 +7282,8 @@
  ],
  "v075": [
   "an die Zukunft glauben",
-  "an Gott glauben"
+  "an Gott glauben",
+  "glauben, dass der Bus kommt"
  ],
  "v076": [
   "sich über das Geschenk freuen",
@@ -8782,5 +8784,133 @@
  "vb-abschl-033": [
   "den Regenschirm mitnehmen",
   "einen Regenschirm brauchen"
+ ],
+ "vx-haus--085": [
+  "schnell fahren",
+  "schnell schreiben"
+ ],
+ "vx-haus--082": [
+  "eine wichtige Frage",
+  "eine wichtige Nachricht"
+ ],
+ "vx-haus--078": [
+  "die richtige Antwort",
+  "das richtige Ergebnis"
+ ],
+ "vx-haus--079": [
+  "eine falsche Antwort",
+  "eine falsche Angabe"
+ ],
+ "vx-haus--081": [
+  "eine leichte Aufgabe",
+  "eine leichte Frage"
+ ],
+ "vw-a1koe-037": [
+  "billige Schuhe",
+  "billiges Essen"
+ ],
+ "vw-a1koe-038": [
+  "teuer werden",
+  "ein Hotel teuer finden"
+ ],
+ "vy-natur-039": [
+  "glücklich über die Nachricht",
+  "glücklich über den Erfolg"
+ ],
+ "vy-natur-040": [
+  "traurig über den Abschied",
+  "traurig nach der Absage"
+ ],
+ "vw-a1koe-017": [
+  "müde nach dem Sport",
+  "am Abend müde"
+ ],
+ "vx-zeit--037": [
+  "oft spazieren gehen",
+  "oft Musik hören"
+ ],
+ "vx-zeit--040": [
+  "nie zu spät kommen",
+  "nie rauchen"
+ ],
+ "vx-haus--092": [
+  "vielleicht morgen kommen",
+  "vielleicht später gehen"
+ ],
+ "vz-welt-b-056": [
+  "ein Buch wieder lesen",
+  "wieder von vorn anfangen"
+ ],
+ "vz-welt-b-054": [
+  "schon angekommen",
+  "schon am Morgen"
+ ],
+ "vx-zeit--033": [
+  "jetzt anfangen",
+  "jetzt weiterarbeiten"
+ ],
+ "vx-haus--090": [
+  "zusammen kochen",
+  "zusammen lernen"
+ ],
+ "vb-abschl-049": [
+  "freundlich zu Gästen sein",
+  "freundlich antworten"
+ ],
+ "vw-a1koe-051": [
+  "schmutzige Hände",
+  "schmutzige Schuhe"
+ ],
+ "v033": [
+  "eine Wohnung mieten",
+  "in der Wohnung wohnen"
+ ],
+ "vx-haus--042": [
+  "an die Zukunft denken",
+  "denken, dass der Bus kommt"
+ ],
+ "vy-natur-046": [
+  "die Familie lieben",
+  "seine Kinder lieben"
+ ],
+ "vy-natur-048": [
+  "Gewalt hassen",
+  "Lügen hassen"
+ ],
+ "vw-a1koe-050": [
+  "sauberes Wasser",
+  "saubere Hände"
+ ],
+ "vx-zeit--036": [
+  "immer verfügbar",
+  "immer geöffnet"
+ ],
+ "v936": [
+  "froh über die Nachricht",
+  "froh über das Ergebnis"
+ ],
+ "vb-abschl-048": [
+  "nett zu Kindern",
+  "nett zu Gästen"
+ ],
+ "vw-a1sta-033": [
+  "weit weg vom Bahnhof",
+  "weit weg vom Zentrum"
+ ],
+ "vy-natur-043": [
+  "mit dem Ergebnis zufrieden",
+  "mit der Antwort zufrieden"
+ ],
+ "vf-kultur-010": [
+  "altmodisch aussehen",
+  "altmodisch wirken"
+ ],
+ "vd-gesund-006": [
+  "ein Spiel gewinnen",
+  "das Finale gewinnen"
+ ],
+ "vf-kultur-002": [
+  "kräftig gebaut",
+  "kräftig wirken"
  ]
 }

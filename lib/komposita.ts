@@ -11,7 +11,7 @@
  *    ما قبلَها (Bestimmungswort) يُحدِّد ويُخصِّص.
  *    die Bewegung → die Klimabewegung   ·   der Kauf → der Testkauf
  *
- *  المنهج: بحثٌ جشعٌ من اليمين إلى اليسار في معجمِ البطاقاتِ نفسِها (3316)
+ *  المنهج: بحثٌ جشعٌ من اليمين إلى اليسار في معجمِ البطاقاتِ نفسِها (3356)
  *  مع أحرفِ الوصلِ (Fugenelemente): -s- · -es- · -n- · -en- · -er- · -e- · -ens-
  *  وحذفِ الـe الختامية (Schule+Hof → Schulhof).
  *

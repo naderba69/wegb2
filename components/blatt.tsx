@@ -2,6 +2,7 @@
 // 🖨️ ورقة العمل الأسبوعية (Arbeitsblatt) — قابلة للطباعة، حتمية من خطة الأسبوع
 import { useState } from "react";
 import type { Progress } from "@/lib/types";
+import { TOTAL_DAYS } from "@/lib/types";
 import { buildDay, levelOf, pickN, rng } from "@/lib/plan";
 import { grammarMap, sentences, writingTasks, getDeck } from "@/lib/content";
 
@@ -18,13 +19,13 @@ export function ArbeitsblattButton({ progress }: { progress: Progress }) {
 }
 
 function Arbeitsblatt({ progress, onClose }: { progress: Progress; onClose: () => void }) {
-  const day = Math.min(progress.plan.day, 270);
+  const day = Math.min(progress.plan.day, TOTAL_DAYS);
   const week = Math.ceil(day / 7);
   const start = (week - 1) * 7 + 1;
   const level = levelOf(day);
   const calm: Progress = { ...progress, plan: { ...progress.plan, debt: [] }, weak: {} };
   const p1 = buildDay(start, calm);
-  const p3 = buildDay(Math.min(start + 2, 270), calm);
+  const p3 = buildDay(Math.min(start + 2, TOTAL_DAYS), calm);
   const topicA = p1.tasks.find((t) => t.kind === "grammatik")?.topicId;
   const topicB = p3.tasks.find((t) => t.kind === "grammatik")?.topicId;
   const deckId = p1.tasks.find((t) => t.kind === "wortschatz")?.deckId;

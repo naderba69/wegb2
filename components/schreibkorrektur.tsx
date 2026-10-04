@@ -2,11 +2,11 @@
 // ✍️ التصحيح ثلاثيّ الأعمدة + الحلقة العلاجية: خطأ ← قاعدة ← ثلاثة تمارين ← دفتر الأخطاء
 import { useMemo, useState } from "react";
 import { De } from "@/components/De";
-import { loadProgress, saveProgress } from "@/lib/store";
+import { loadProgress, saveProgress, disputeRegel } from "@/lib/store";
 import { upsertFehler } from "@/lib/fehler";
 import { grammarMap } from "@/lib/content";
 import {
-  pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen,
+  pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen, effektiveSchwere, DISPUT_SCHWELLE,
   SPALTE_AR, SCHWERE_AR, type Befund, type Spalte,
 } from "@/lib/schreibpruefer";
 
@@ -23,12 +23,14 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "
     if (level === "A0" || level === "A1" || level === "A2") return alle.filter((b) => b.schwere !== "stil");
     return alle;
   }, [geprueft, text, minWoerter, level]);
-  const note = bewerteSchreiben(befunde);
+  const [disputes, setDisputes] = useState<Record<string, number>>(() => loadProgress().disputiert ?? {});
+  const eff = useMemo(() => befunde.map((b) => ({ ...b, orig: b.schwere, schwere: effektiveSchwere(b, disputes) })), [befunde, disputes]);
+  const note = bewerteSchreiben(befunde, disputes);
   const woerter = text.trim().split(/\s+/).filter(Boolean).length;
 
   const insDefter = () => {
     let p = loadProgress();
-    for (const f of befunde.filter((x) => x.schwere !== "stil")) {
+    for (const f of eff.filter((x) => x.schwere !== "stil")) {
       p = upsertFehler(p, {
         falsch: f.stelle, richtig: f.vorschlagDe ?? "—", ar: f.meldungAr,
         art: f.spalte === "syntax" ? "wortstellung" : f.spalte === "wortwahl" ? "wortschatz" : "konstruktion",
@@ -72,7 +74,7 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "
                 <tr>
                   {SPALTEN.map((s) => (
                     <th key={s} style={{ borderBottom: `3px solid ${FARBE[s]}`, color: FARBE[s], padding: "0.4rem", textAlign: "start", width: "33%" }}>
-                      {SPALTE_AR[s]} ({befunde.filter((b) => b.spalte === s).length})
+                      {SPALTE_AR[s]} ({eff.filter((b) => b.spalte === s).length})
                     </th>
                   ))}
                 </tr>
@@ -81,14 +83,22 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "
                 <tr>
                   {SPALTEN.map((s) => (
                     <td key={s} style={{ verticalAlign: "top", padding: "0.4rem", borderInlineEnd: "1px solid var(--color-line)" }}>
-                      {befunde.filter((b) => b.spalte === s).length === 0 && <span style={{ color: "#15803d" }}>✓ لا شيء</span>}
-                      {befunde.filter((b) => b.spalte === s).map((b, i) => (
+                      {eff.filter((b) => b.spalte === s).length === 0 && <span style={{ color: "#15803d" }}>✓ لا شيء</span>}
+                      {eff.filter((b) => b.spalte === s).map((b, i) => (
                         <div key={i} style={{ marginBottom: "0.5rem" }}>
                           <div>{SCHWERE_AR[b.schwere]} <De style={{ fontWeight: 700 }}>{b.stelle}</De></div>
                           <div style={{ color: "var(--color-ink2)" }}>{b.meldungAr}</div>
                           {b.vorschlagDe && <div>↩ <De style={{ color: "#15803d" }}>{b.vorschlagDe}</De></div>}
                           {b.regelId && grammarMap[b.regelId] && (
                             <div style={{ fontSize: "0.78rem" }}>📘 القاعدة: {grammarMap[b.regelId].titleAr}</div>
+                          )}
+                          {b.orig !== b.schwere && (
+                            <div data-test="disput-hinweis" style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>⬇ خُفّضت حدّته بعد {DISPUT_SCHWELLE} اعتراضات — الكاشف يتعلّم منك.</div>
+                          )}
+                          {b.regelId && b.schwere !== "stil" && (
+                            <button className="chip" style={{ cursor: "pointer", marginTop: "0.25rem" }} data-test={`disput-${b.regelId}`} onClick={() => { disputeRegel(b.regelId!); setDisputes(loadProgress().disputiert ?? {}); }}>
+                              🤔 ليس خطأً؟{(disputes[b.regelId] ?? 0) > 0 ? ` (${disputes[b.regelId]})` : ""}
+                            </button>
                           )}
                         </div>
                       ))}
@@ -99,7 +109,7 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "
             </table>
           </div>
 
-          {befunde.filter((b) => b.schwere !== "stil").slice(0, 3).map((b, i) => (
+          {eff.filter((b) => b.schwere !== "stil").slice(0, 3).map((b, i) => (
             <div key={i} className="card" style={{ padding: "0.5rem 0.7rem", background: "var(--color-paper2)", fontSize: "0.84rem" }}>
               <div style={{ fontWeight: 800 }}>🛠️ علاجُ «{b.stelle}»</div>
               <ol style={{ margin: "0.2rem 1rem" }}>
@@ -108,7 +118,7 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "
             </div>
           ))}
 
-          {befunde.some((b) => b.schwere !== "stil") && (
+          {eff.some((b) => b.schwere !== "stil") && (
             <button className="btn" onClick={insDefter} disabled={gespeichert}>
               {gespeichert ? "✅ أُضيفت إلى دفتر الأخطاء" : "📓 أضِف الأخطاء إلى دفتري (تعود بعد ٣ أيام)"}
             </button>
