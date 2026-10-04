@@ -4364,6 +4364,94 @@ void 0;
     "K165 تجاوز تقدير اليوم 200 دقيقة يظهر للمراجعة التربوية ولا يُسمّى عيباً أو وقتاً مقاساً آلياً");
 }
 
+/* ═══ K166 — R92: مراجعة أول ثلاثة حوارات A1، كل سطر/سؤال/إملاء بمصدر ═══ */
+{
+  type DialogueAuditItem = { id: string; kind: string; status: string; sources: string[]; finding: string; action: string };
+  type DialogueAuditSource = { id: string; title: string; url: string; supports: string };
+  const audit = JSON.parse(readFileSync("docs/content-review-a1-dialogues-01-2026-10-04.json", "utf8")) as {
+    date: string;
+    batch: string;
+    coverage: { dialogues: number; dialogueMetadata: number; lines: number; questions: number; dictationSentences: number; unresolvedLevelNotes: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>;
+    sources: DialogueAuditSource[];
+    limitations: string[];
+    items: DialogueAuditItem[];
+  };
+  const auditMarkdown = readFileSync("docs/content-review-a1-dialogues-01-2026-10-04.md", "utf8");
+  const batch = ["d-a1-01", "d-a1-02", "d-a1-03"].map((id) => dialogues.find((dialogue) => dialogue.id === id));
+  const completeBatch = batch.every((dialogue) => !!dialogue && dialogue.level === "A1") ? batch as NonNullable<typeof batch[number]>[] : [];
+  const expectedIds = [
+    ...completeBatch.flatMap((dialogue) => [
+      dialogue.id,
+      ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+      ...dialogue.questions.map((question) => question.id),
+      ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+    ]),
+    "d-a1-03.level",
+  ];
+  const auditIds = audit.items.map((item) => item.id);
+  const auditById = new Map(audit.items.map((item) => [item.id, item]));
+  const expectedUnique = new Set(expectedIds);
+  ok(completeBatch.length === 3 && completeBatch.map((dialogue) => dialogue.lines.length).join(",") === "8,7,6" &&
+    completeBatch.map((dialogue) => dialogue.questions.length).join(",") === "2,2,2" &&
+    completeBatch.map((dialogue) => dialogue.dictation.length).join(",") === "3,3,3" &&
+    expectedIds.length === 40 && expectedUnique.size === expectedIds.length && auditIds.length === expectedIds.length &&
+    new Set(auditIds).size === auditIds.length && expectedIds.every((id) => auditById.has(id)) &&
+    audit.date === "2026-10-04" && audit.batch === "A1-dialogues-01" &&
+    audit.coverage.dialogues === 3 && audit.coverage.dialogueMetadata === 3 && audit.coverage.lines === 21 &&
+    audit.coverage.questions === 6 && audit.coverage.dictationSentences === 9 && audit.coverage.unresolvedLevelNotes === 1 &&
+    audit.coverage.totalTrackedItems === 40 && expectedIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
+    "K166a السجل يطابق 3 حوارات و21 سطراً و6 أسئلة و9 إملاءات وملاحظة مستوى واحدة؛ كل معرّف حاضر مرة في JSON وMarkdown");
+
+  const sourceIds = new Set(audit.sources.map((source) => source.id));
+  const referencedSources = new Set(audit.items.flatMap((item) => item.sources));
+  const computedStatuses = audit.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const completeEvidence = audit.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.kind.trim().length > 0 &&
+    item.sources.length > 0 && item.sources.every((id) => sourceIds.has(id)) &&
+    item.finding.trim().length > 0 && item.action.trim().length > 0
+  );
+  const sourceById = new Map(audit.sources.map((source) => [source.id, source]));
+  const completeSources = audit.sources.length === 11 && audit.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://")
+  ) && referencedSources.size === audit.sources.length && audit.sources.every((source) => referencedSources.has(source.id)) &&
+    sourceById.get("S11")?.url === "https://www.duden.de/rechtschreibung/Apparat";
+  ok(completeEvidence && completeSources &&
+    JSON.stringify(computedStatuses) === JSON.stringify({ "سليم": 33, "مُصحح": 6, "غير محسوم": 1 }) &&
+    JSON.stringify(audit.statusCounts) === JSON.stringify(computedStatuses) &&
+    audit.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&
+    auditById.get("d-a1-03.level")?.status === "غير محسوم",
+    "K166b لكل حكم دليل وإجراء ومصدر منشور معروف؛ 33 سليماً و6 مصححة ومستوى واحد غير محسوم بلا ادعاء مراجعة بشرية");
+
+  const d2q2 = completeBatch.find((dialogue) => dialogue.id === "d-a1-02")?.questions.find((question) => question.id === "d-a1-02-q2");
+  const d3 = completeBatch.find((dialogue) => dialogue.id === "d-a1-03");
+  ok(!!d2q2 && JSON.stringify(d2q2.answer) === JSON.stringify(["fünf"]) &&
+    grader.grade(d2q2, "fünf").correct && !grader.grade(d2q2, "funf").correct && !grader.grade(d2q2, "5").correct &&
+    auditById.get("d-a1-02-q2")?.status === "مُصحح",
+    "K166c فراغ السعر يقبل كتابة fünf فقط؛ يرفض funf غير المعيارية والرقم 5 في موضع الكلمة");
+
+  const d3q1 = d3?.questions.find((question) => question.id === "d-a1-03-q1");
+  const d3q2 = d3?.questions.find((question) => question.id === "d-a1-03-q2");
+  ok(!!d3 && d3.lines[0].de === "Hallo, hier spricht Nour. Kann ich mit Herrn Klein sprechen?" &&
+    d3.lines[2].ar.includes("أودّ تحديد موعد") &&
+    d3.lines[5].de === "Ja, am Dienstag um zehn Uhr habe ich Zeit. Bis Dienstag!" &&
+    d3.lines[5].ar.includes("لديّ وقت") &&
+    d3q1?.answer === "am Dienstag um zehn Uhr" && !!d3q1.explanationAr?.includes("Ja, am Dienstag um zehn Uhr habe ich Zeit") &&
+    !!d3q2?.answer?.includes("Termin") && !!d3q2.explanationAr?.includes("تحديد موعد") &&
+    ["d-a1-03.lines[0]", "d-a1-03.lines[2]", "d-a1-03.lines[5]", "d-a1-03-q1", "d-a1-03-q2"].every((id) => auditById.get(id)?.status === "مُصحح"),
+    "K166d التصحيح يحرس hier، ترجمة تحديد الموعد، قبول الثلاثاء 10 صراحةً، وترجمة/شرح السؤالين");
+
+  ok(completeBatch.length === 3 && completeBatch.every((dialogue) =>
+    dialogue.dictation.every((sentence) => dialogue.lines.some((line) => line.de.includes(sentence)))
+  ) && ["d-a1-01", "d-a1-02", "d-a1-03"].flatMap((id) => [
+    `${id}.dictation[0]`, `${id}.dictation[1]`, `${id}.dictation[2]`,
+  ]).every((id) => auditById.get(id)?.status === "سليم"),
+    "K166e جمل الإملاء التسع مطابقة لمواضعها في الحوارات ولكل واحدة حكم ومصدر وإجراء مسجل");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

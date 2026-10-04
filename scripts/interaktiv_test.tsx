@@ -2820,6 +2820,31 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ LXXXVII — حوار A1 الهاتفي بعد المراجعة: النص والترجمة والسؤال في الواجهة ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 3, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, {
+      task: { id: "t-dlg-a1-03-ui", kind: "hoeren" as const, dialogueId: "d-a1-03", titleDe: "Telefontermin", titleAr: "موعد هاتفي", minutes: 10 },
+      ...props,
+    }));
+    const reveal = btn("أظهر النص");
+    if (reveal) click(reveal);
+    const rendered = txt();
+    ok(!!reveal && rendered.includes("Hallo, hier spricht Nour.") && rendered.includes("أودّ تحديد موعد.") &&
+      rendered.includes("Ja, am Dienstag um zehn Uhr habe ich Zeit.") && rendered.includes("لديّ وقت يوم الثلاثاء في العاشرة"),
+      "LXXXVII1 واجهة الاستماع تعرض صيغة الهاتف المصححة، ترجمة الموعد، وتأكيد اليوم والساعة بعد كشف النص");
+
+    const q2 = Array.from(rootEl.querySelectorAll(".dirb-ex-item")).find((item) => (item.textContent ?? "").includes("Ich möchte einen ___ vereinbaren."));
+    const answer = q2?.querySelector("input") as HTMLInputElement | null;
+    const check = q2 ? Array.from(q2.querySelectorAll("button")).find((button) => (button.textContent ?? "").includes("تحقّق")) as HTMLElement | undefined : undefined;
+    if (answer) typeIn(answer, "Termin");
+    if (check) click(check);
+    ok(!!q2 && !!answer && !!check && (q2.textContent ?? "").includes("✅"),
+      "LXXXVII2 حقل سؤال Termin يقبل الإجابة الصحيحة عبر واجهة تمرين الاستماع الفعلية");
+    if (leave) leave();
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);
