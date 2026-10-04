@@ -1,0 +1,409 @@
+{
+  "date": "2026-10-04",
+  "batch": "A1-grammar-01",
+  "scope": "مراجعة فردية لأول ثلاثة موضوعات قواعد A1 فقط: a1-sein-haben وa1-pronomen وa1-praesens، بما فيها كل تمارينها وعناصر التحقق. لا يشمل هذا السجل بقية قواعد A1 أو النصوص/الحوارات أو A2–B2.",
+  "coverage": {
+    "grammarTopics": 3,
+    "grammarExercises": 20,
+    "grammarVerify": 6,
+    "totalTrackedItems": 29
+  },
+  "statusCounts": {
+    "سليم": 18,
+    "مُصحح": 11,
+    "غير محسوم": 0
+  },
+  "method": "قُرئ كل عنصر في سياق موضوعه، ثم قورنت القاعدة والصياغة والإجابة والشرح بمراجع لغوية/تعليمية منشورة ذات صلة. فُصل الخطأ المؤكد أو الالتباس المؤثر عن الملاحظة الأسلوبية، وأُزيلت دعوى التكرار غير المسندة بدلاً من استبدالها بدعوى أخرى. K159 يحرس تغطية السجل والتعديلات المحددة ولا يثبت مراجعة بشرية أو اعتماداً مهنياً.",
+  "statusDefinitions": {
+    "سليم": "فُحص ولم يظهر خطأ مؤكد ضمن نطاق هذا العنصر.",
+    "مُصحح": "فُحص ووجد خطأ مؤكد أو التباس/نقص تحريري يستلزم التصحيح؛ يذكر السجل الدليل والإجراء.",
+    "غير محسوم": "فُحص وبقيت مسألة لغوية أو تربوية غير محسومة؛ لم تُسجل أي حالة بهذا الحكم في هذه الدفعة."
+  },
+  "limitations": [
+    "الحكم محصور في الموضوعات الثلاثة ومعرّفات عناصرها المذكورة؛ لا يعني اكتمال تدقيق A1 أو المستويات A2–B2.",
+    "مصادر الإنترنت تدعم المطابقة اللغوية والقواعد المحددة؛ لا تمثل هذه المراجعة اعتماداً مدرسياً أو تحكيماً بشرياً شاملاً للمنهج.",
+    "لا يثبت فحص smoke صحة اللغة منفرداً؛ K159 يطابق السجل بالمحتوى ويثبت بقاء التصحيحات المحددة فقط."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Goethe Deutsch Online A1 — Redemittel und Grammatik, Kapitel 1–18",
+      "url": "https://lernen.goethe.de/deutschonline/A1/PDF/DE/deutschonline_Redemittel_und_Grammatik_1-18.pdf",
+      "supports": "أمثلة وجداول A1 لتصريف sein وhaben والأفعال المنتظمة، الضمائر du/Sie، صيغ sprechen/essen، وبناء أسئلة W وأسئلة نعم/لا."
+    },
+    {
+      "id": "S2",
+      "title": "Goethe Deutsch Online A1 — Redemittel und Grammatik, Kapitel 2",
+      "url": "https://lernen.goethe.de/deutschonline/A1/PDF/DE/deutschonline_Redemittel_und_Grammatik_2.pdf",
+      "supports": "جدول Personalpronomen und Verb: ich/du/er-es-sie/sie-Sie مع machen وarbeiten وhaben وsein، والتمييز السياقي بين ضمائر المفرد والجمع."
+    },
+    {
+      "id": "S3",
+      "title": "Goethe-Institut — Deutsche Grammatik: Fälle, Artikel und Pronomen",
+      "url": "https://www.goethe.de/ins/de/de/m/prf/grm.html",
+      "supports": "جداول الضمائر الشخصية في Nominativ/Akkusativ/Dativ، وشرح استعمال الضمير بدلاً من الاسم، وأدوات الملكية وتصريفها."
+    },
+    {
+      "id": "S4",
+      "title": "Goethe Deutsch Online A1 — Redemittel und Grammatik, Kapitel 8",
+      "url": "https://lernen.goethe.de/deutschonline/A1/PDF/DE/deutschonline_Redemittel_und_Grammatik_8.pdf",
+      "supports": "جدول Possessivartikel في Nominativ وAkkusativ، ومنها mein Tisch → meinen Tisch وثبات المؤنث والمحايد والجمع في الأمثلة، والتمييز بين sie وSie وihr وIhr."
+    },
+    {
+      "id": "S5",
+      "title": "Wunderbla — Personal pronouns in the accusative case",
+      "url": "https://www.gymglish.com/en/wunderbla/german-grammar/personal-pronouns-in-the-accusative-case",
+      "supports": "التحويل المطابق Ich sehe den Mann. → Ich sehe ihn. وجدول ضمائر Akkusativ."
+    },
+    {
+      "id": "S6",
+      "title": "Duden — Hunger",
+      "url": "https://www.duden.de/rechtschreibung/Hunger",
+      "supports": "المعنى الاسمي لـHunger والاستعمال المثبت Hunger haben."
+    },
+    {
+      "id": "S7",
+      "title": "Duden — hungrig",
+      "url": "https://www.duden.de/rechtschreibung/hungrig",
+      "supports": "hungrig صفة بمعنى Hunger habend؛ يعرض Duden مؤشراً للمدخل، لكنه لا يقارن تواتر hungrig sein بتركيب Hunger haben."
+    },
+    {
+      "id": "S8",
+      "title": "Duden — haben (Vollverb)",
+      "url": "https://www.duden.de/rechtschreibung/haben_Vollverb",
+      "supports": "haben فعل غير منتظم، واستعمالاته في الملكية/الأطفال/الوقت/التعبير عن Hunger وDurst."
+    },
+    {
+      "id": "S9",
+      "title": "Duden — durstig",
+      "url": "https://www.duden.de/rechtschreibung/durstig",
+      "supports": "durstig صفة بمعنى Durst habend، مع مثال sehr durstig sein."
+    },
+    {
+      "id": "S10",
+      "title": "Duden — müde",
+      "url": "https://www.duden.de/rechtschreibung/muede",
+      "supports": "müde صفة، مع شواهد صحيحة مثل sie war müde وfurchtbar müde sein."
+    },
+    {
+      "id": "S11",
+      "title": "Duden — fahren",
+      "url": "https://www.duden.de/rechtschreibung/fahren",
+      "supports": "تصريف الحاضر du fährst وer fährt."
+    },
+    {
+      "id": "S12",
+      "title": "Duden — lesen",
+      "url": "https://www.duden.de/rechtschreibung/lesen_dozieren",
+      "supports": "تصريف الحاضر du liest وer liest."
+    }
+  ],
+  "items": [
+    {
+      "id": "a1-sein-haben",
+      "kind": "grammar-topic",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S8",
+        "S10"
+      ],
+      "finding": "راجعت جدول تصريف sein/haben والأمثلة والتطبيق. التصريف والأمثلة الأساسية سليمة، لكن عبارة «احفظهما كأذكار يومية» غير مناسبة للسياق، والتعميم «الصفات تأتي مع sein وليس haben» أوسع من المثال المقصود.",
+      "action": "استُبدلت العبارة الأولى بـ«احفظ تصريفهما جيداً»، وقُيّدت الثانية بتعبير müde sein لا müde haben؛ لا تغيير للقاعدة أو الأمثلة الصحيحة."
+    },
+    {
+      "id": "g1e1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "Ich bin Lehrerin جواب صحيح؛ sein يربط الفاعل بالمهنة/الهوية والخيارات تفصل الضمير الصحيح.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g1e2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S8"
+      ],
+      "finding": "Du hast ein Auto صحيح في معنى الامتلاك، وتصريف haben مع du هو hast.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g1e3",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S10"
+      ],
+      "finding": "Wir sind müde تركيب صحيح؛ الصفة müde تسند حالة التعب، وsein مصرّف للجمع.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g1e4",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S8"
+      ],
+      "finding": "Er hat Zeit تركيب صحيح؛ Duden يثبت Zeit haben، والفاعل المفرد الغائب يأخذ hat.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g1e5",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": [
+        "S1"
+      ],
+      "finding": "الفراغ الأصلي «___ Sie Deutsch?» يقبل Sprechen Sie Deutsch?، لكنه قد يقبل أيضاً Sind Sie Deutsch? بمعنى الجنسية؛ لذلك لم تكن إجابة الاختيار الوحيدة محكمة.",
+      "action": "أضيفت fließend إلى السؤال؛ Sprechen Sie fließend Deutsch? يحدد معنى التحدث باللغة ويجعل الخيارات الأخرى غير مناسبة."
+    },
+    {
+      "id": "a1-sein-haben-u1",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "finding": "التحويل Ich bin hungrig → Ich habe Hunger صحيح. يعرض Duden مؤشراً لتواتر كل مدخل، لكنه لا يقارن شيوع التركيبين hungrig sein وHunger haben؛ لذا لا يثبت المؤشر وحده دعوى مقارنة على مستوى العبارتين.",
+      "action": "أزيلت المقارنة غير المسندة؛ يوضح الشرح أن الصيغتين صحيحتان وأن التحويل يتبع المطلوب النحوي."
+    },
+    {
+      "id": "a1-sein-haben-u2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S8",
+        "S9"
+      ],
+      "finding": "Wir haben Durst → Wir sind durstig تحويل صحيح؛ المصدر يثبت Durst haben والصفة durstig بمعنى عطشان.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-sein-ord1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "الترتيب Ich bin heute in Berlin جملة خبرية سليمة، والفعل المصرف في الموضع الثاني.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-sein-haben-v1",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": [
+        "S8",
+        "S9"
+      ],
+      "finding": "Ich bin durstig → Ich habe Durst صحيح؛ كلتا البنيتين مدعومة مع بقاء معنى العطش.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-sein-haben-v2",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "Meine Schwester ist 12 Jahre alt جملة صحيحة؛ العمر يُعبّر عنه بـsein.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-pronomen",
+      "kind": "grammar-topic",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "finding": "راجعت ضمائر الفاعل وأدوات الملكية في الرفع والنصب والأمثلة. الجداول والتصريف سليمة؛ شرح الصف sie/Sie ترجم المخاطبة الرسمية إلى المفرد فقط ولم يذكر أن Sie تستعمل رسمياً للمفرد والجمع.",
+      "action": "وُضّح في وسم الجدول أن Sie تعني المخاطَب الرسمي مفرداً أو جمعاً؛ أبقيت صيغ الضمائر وأدوات الملكية الصحيحة كما هي."
+    },
+    {
+      "id": "g2e1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "Ich bin aus Syrien يطابق ضمير المتكلم وتصريف sein؛ المشتتات لا تتفق مع bin.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g2e2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S2"
+      ],
+      "finding": "Es يعود إلى das Buch في Das Buch ist neu. Es ist interessant؛ الجنس النحوي محايد.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g2e3",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "Frühstücken ___ zusammen? يسمح بتأويل Sie الرسمية أو sie للجمع عند وقوعها في أول الجملة؛ الشرح حسم أحد التأويلين بلا سياق.",
+      "action": "أضيف النداء Herr Meyer لتثبيت المخاطبة الرسمية، فتطابق Sie الشرح والموقف."
+    },
+    {
+      "id": "a1-pronomen-u1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S3"
+      ],
+      "finding": "Wie geht es Sie? مقصودة كصيغة خاطئة في تمرين التصحيح؛ الجواب Wie geht es Ihnen? صحيح لأن التركيب يستعمل Dativ.",
+      "action": "لا تعديل؛ أُبقي الخطأ في المصدر لأنه هدف التمرين المعلن."
+    },
+    {
+      "id": "a1-pronomen-u2",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": [
+        "S5"
+      ],
+      "finding": "المصدر Ich sehe der Mann كان غير سليم نحوياً قبل تنفيذ مهمة استبدال الاسم بضمير Akkusativ؛ المثال المرجعي الصحيح هو Ich sehe den Mann → Ich sehe ihn.",
+      "action": "صُحح مصدر التحويل إلى Ich sehe den Mann؛ بقي الجواب Ich sehe ihn."
+    },
+    {
+      "id": "a1-pro-ord1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "Wir lernen jeden Tag Deutsch ترتيب سليم؛ الفعل المصرف في الموضع الثاني.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-pronomen-v1",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": [
+        "S4"
+      ],
+      "finding": "Das ist mein Buch صحيح في Nominativ؛ أداة الملكية للمالك ich مع الاسم المحايد Buch هي mein.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-pronomen-v2",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": [
+        "S2"
+      ],
+      "finding": "استبدال Der Hund بضمير الفاعل ينتج Er ist groß؛ الضمير يوافق المرجع المذكر.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-praesens",
+      "kind": "grammar-topic",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S2",
+        "S11",
+        "S12"
+      ],
+      "finding": "راجعت هدف الدرس وقاعدة تصريف الأفعال المنتظمة وتغيّر حركة الجذر وجدول الأسئلة والأمثلة والفخ. التصريف وبناء W-/Ja-Nein-Fragen صحيحان؛ الهدف أغفل أن الدرس يتدرّب أيضاً على أفعال يتغير جذرها، كما أن وصف النمط وجدول الضمير اقتصر على er/es وأغفل sie المفردة.",
+      "action": "وُسّع الهدف ليشمل أمثلة تغيّر الجذر، وحُدّدت قاعدة التغيير بـdu وer/sie/es، وأُكملت صيغ 3rd-person singular في القاعدة والجدول والفخ."
+    },
+    {
+      "id": "g3e1",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": [
+        "S1"
+      ],
+      "finding": "الإجابة mache صحيحة، لكن الشرح كرر الصيغة نفسها مرتين بلا إضافة تعليمية.",
+      "action": "اختُصر الشرح إلى قاعدة النهاية مع المثال مرة واحدة."
+    },
+    {
+      "id": "g3e2",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S11"
+      ],
+      "finding": "الإجابة fährst صحيحة، لكن الشرح كرر المثال وتحوّل a→ä مرتين.",
+      "action": "أزيل التكرار مع إبقاء صيغة التصريف وتحوّل الحركة مرة واحدة."
+    },
+    {
+      "id": "g3e3",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": [
+        "S1"
+      ],
+      "finding": "الإجابة spricht صحيحة والشرح كرر المثال؛ كما أن صياغة du/er أغفلت sie وes ضمن الغائب المفرد.",
+      "action": "أزيل التكرار ووُضّح أن التغيير يظهر مع du وer/sie/es."
+    },
+    {
+      "id": "a1-praesens-u1",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": [
+        "S11"
+      ],
+      "finding": "التحويل إلى du fährst صحيح؛ الشرح ذكر du/er من دون تسمية الضميرين الآخرين er/sie/es بوضوح.",
+      "action": "استُكملت الإشارة إلى er/sie/es في الشرح مع الإبقاء على صيغة الإجابة."
+    },
+    {
+      "id": "a1-praesens-u2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "wir sprechen → er spricht صحيح، والشرح يذكر er/sie/es ويبيّن تحول e→i.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-praes-ord1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S12"
+      ],
+      "finding": "Er liest gern ein Buch ترتيب صحيح، وصيغة liest مطابقة لتصريف lesen مع الغائب المفرد.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-praesens-v1",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "Du wohnst in Berlin صحيح؛ wohnen يأخذ النهاية -st مع du.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-praesens-v2",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "Woher kommst du? سؤال W صحيح عن الأصل؛ أداة السؤال أولاً ثم الفعل المصرف في الموضع الثاني والفاعل.",
+      "action": "لا تعديل."
+    }
+  ]
+}

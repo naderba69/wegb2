@@ -3821,6 +3821,96 @@ void 0;
     "K158g واجب ß يوضح Straße وحدود بدائل الامتحان، وترجمتا A/ABC تحفظان الحروف اللاتينية");
 }
 
+/* ═══ K159 — R84/R85: تدقيق عناصر قواعد A1 ودفعات الرفع ═══ */
+{
+  type A1AuditItem = { id: string; kind: string; status: string; sources: string[]; finding: string; action: string };
+  type A1AuditSource = { id: string; title: string; url: string; supports: string };
+  const audit = JSON.parse(readFileSync("docs/content-review-a1-2026-10-04.json", "utf8")) as {
+    date: string;
+    batch: string;
+    coverage: { grammarTopics: number; grammarExercises: number; grammarVerify: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>;
+    sources: A1AuditSource[];
+    items: A1AuditItem[];
+  };
+  const auditMarkdown = readFileSync("docs/content-review-a1-2026-10-04.md", "utf8");
+  const a1TopicIds = ["a1-sein-haben", "a1-pronomen", "a1-praesens"];
+  const a1Topics = a1TopicIds.map((id) => grammarMap[id]);
+  const expectedAuditIds = a1Topics.flatMap((topic) => [
+    topic.id,
+    ...topic.exercises.map((exercise) => exercise.id),
+    ...(topic.verify ?? []).map((exercise) => exercise.id),
+  ]);
+  const auditIds = audit.items.map((item) => item.id);
+  const auditById = new Map(audit.items.map((item) => [item.id, item]));
+  const expectedUnique = new Set(expectedAuditIds);
+  const a1ExerciseCount = a1Topics.reduce((total, topic) => total + topic.exercises.length, 0);
+  const a1VerifyCount = a1Topics.reduce((total, topic) => total + (topic.verify?.length ?? 0), 0);
+  ok(a1Topics.length === 3 && a1ExerciseCount === 20 && a1VerifyCount === 6 &&
+    audit.date === "2026-10-04" && audit.batch === "A1-grammar-01" &&
+    audit.coverage.grammarTopics === 3 && audit.coverage.grammarExercises === 20 && audit.coverage.grammarVerify === 6 &&
+    expectedAuditIds.length === 29 && expectedUnique.size === expectedAuditIds.length &&
+    audit.coverage.totalTrackedItems === expectedAuditIds.length && auditIds.length === expectedAuditIds.length &&
+    new Set(auditIds).size === auditIds.length && expectedAuditIds.every((id) => auditById.has(id)) &&
+    expectedAuditIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
+    "K159a سجل A1-grammar-01 يغطي الموضوعات الثلاثة وكل تمرين/تحقق في JSON وMarkdown بلا فقد أو تكرار");
+
+  const sourceIds = new Set(audit.sources.map((source) => source.id));
+  const statusCounts = audit.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const completeEvidence = audit.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.sources.length > 0 &&
+    item.sources.every((id) => sourceIds.has(id)) && item.finding.trim().length > 0 && item.action.trim().length > 0
+  );
+  const validSources = audit.sources.length === 12 && audit.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://")
+  );
+  const correctedIds = new Set([
+    "a1-sein-haben", "g1e5", "a1-sein-haben-u1",
+    "a1-pronomen", "g2e3", "a1-pronomen-u2",
+    "a1-praesens", "g3e1", "g3e2", "g3e3", "a1-praesens-u1",
+  ]);
+  const expectedStatuses = audit.items.every((item) => item.status === (correctedIds.has(item.id) ? "مُصحح" : "سليم"));
+  ok(completeEvidence && validSources && expectedStatuses &&
+    statusCounts["سليم"] === 18 && statusCounts["مُصحح"] === 11 && !statusCounts["غير محسوم"] &&
+    audit.statusCounts["سليم"] === 18 && audit.statusCounts["مُصحح"] === 11 && audit.statusCounts["غير محسوم"] === 0,
+    "K159b لكل واحد من العناصر الـ29 دليل وحكم وإجراء ومصدر صالح؛ التعداد 18 سليم/11 مصحح من دون ادعاء غير محسوم");
+
+  const getExercise = (topicId: string, id: string) => grammarMap[topicId]?.exercises.find((exercise) => exercise.id === id);
+  const getVerify = (topicId: string, id: string) => grammarMap[topicId]?.verify?.find((exercise) => exercise.id === id);
+  const seinTopic = grammarMap["a1-sein-haben"];
+  const hungerTransform = getExercise("a1-sein-haben", "a1-sein-haben-u1");
+  const speechQuestion = getExercise("a1-sein-haben", "g1e5");
+  const pronounTopic = grammarMap["a1-pronomen"];
+  const formalSieQuestion = getExercise("a1-pronomen", "g2e3");
+  const accusativeSource = getExercise("a1-pronomen", "a1-pronomen-u2");
+  const possessiveSieRow = pronounTopic.tables?.[0]?.rows.find((row) => String(row[0]).startsWith("sie / Sie"));
+  const presentTopic = grammarMap["a1-praesens"];
+  const stemChangeRule = presentTopic.rules.find((rule) => rule.de.includes("Stammvokalwechsel"));
+  const regularExample = getExercise("a1-praesens", "g3e1");
+  const fahrenExample = getExercise("a1-praesens", "g3e2");
+  const sprechenExample = getExercise("a1-praesens", "g3e3");
+  const fahrenTransform = getExercise("a1-praesens", "a1-praesens-u1");
+  const presentVowelHeader = presentTopic.tables?.[0]?.headers;
+  ok(!!seinTopic.rules[0]?.ar.includes("احفظ تصريفهما جيداً") &&
+    !!seinTopic.pitfalls?.[0]?.ar.includes("müde sein") && !seinTopic.pitfalls?.[0]?.ar.includes("الصفات تأتي مع sein") &&
+    speechQuestion?.promptDe === "___ Sie fließend Deutsch?" &&
+    !!hungerTransform?.explanationAr?.includes("كلتا الصيغتين صحيحتان") && !hungerTransform?.explanationAr?.includes("أقل شيوعاً") &&
+    !!formalSieQuestion?.promptDe.includes("Herr Meyer") && accusativeSource?.quelleDe === "Ich sehe den Mann." &&
+    !!possessiveSieRow && String(possessiveSieRow[0]).includes("مفرداً أو جمعاً") &&
+    !!presentTopic.ziel?.includes("تغيّر حركة الجذر") && !!stemChangeRule?.de.includes("er/sie/es") &&
+    !!stemChangeRule?.ar.includes("er/sie/es") && !!presentVowelHeader?.includes("er/sie/es") &&
+    regularExample?.explanationAr === "مع ich نضيف النهاية -e: ich mache." &&
+    !!fahrenExample?.explanationAr?.includes("du fährst") && !fahrenExample?.explanationAr?.includes("(fahren:") &&
+    !!sprechenExample?.explanationAr?.includes("er/sie/es") && !sprechenExample?.explanationAr?.includes("(sprechen:") &&
+    !!fahrenTransform?.explanationAr?.includes("er/sie/es") &&
+    getVerify("a1-praesens", "a1-praesens-v1")?.answer[0] === "wohnst" &&
+    getVerify("a1-praesens", "a1-praesens-v2")?.answer === "Woher kommst du?",
+    "K159c إصلاح غموض الاختيار ومرجع Akkusativ غير السليم، وتوحيد شرح sie المفردة وإزالة التكرار غير المسند");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

@@ -48,7 +48,7 @@
     "rules": [
       {
         "de": "sein (ich bin) und haben (ich habe) — zwei unregelmäßige Grundverben",
-        "ar": "فعلان شاذان — احفظهما كأذكار يومية — sein = يكون/يوجد · haben = يملك"
+        "ar": "فعلان شاذان — احفظ تصريفهما جيداً — sein = يكون/يوجد · haben = يملك"
       },
       {
         "de": "ich bin · du bist · er/sie/es ist · wir sind · ihr seid · sie/Sie sind",
@@ -122,7 +122,7 @@
     "pitfalls": [
       {
         "de": "„Ich habe müde“ ✗ → „Ich bin müde“ ✓",
-        "ar": "الصفات تأتي مع sein وليس haben! (عكس «أنا متعب» الحرفية)"
+        "ar": "للتعبير عن حالة التعب نقول müde sein، لا müde haben."
       },
       {
         "de": "„Du hast Hunger?“ ✓ (aber: „Du bist hungrig.“ ✓)",
@@ -180,7 +180,7 @@
       {
         "id": "g1e5",
         "type": "mc",
-        "promptDe": "___ Sie Deutsch?",
+        "promptDe": "___ Sie fließend Deutsch?",
         "options": [
           "Sind",
           "Haben",
@@ -203,7 +203,7 @@
           "bin",
           "hungrig"
         ],
-        "explanationAr": "«جائع» بالامتلاك: Hunger haben. الصفة hungrig صحيحة لكنها أقل شيوعاً.",
+        "explanationAr": "كلتا الصيغتين صحيحتان؛ هنا حوّلنا الصفة hungrig إلى الاسم Hunger بحسب المطلوب.",
         "points": 2
       },
       {
@@ -344,7 +344,7 @@
       {
         "id": "g2e3",
         "type": "mc",
-        "promptDe": "Frühstücken ___ zusammen?",
+        "promptDe": "Frühstücken ___ zusammen, Herr Meyer?",
         "options": [
           "du",
           "Sie",
@@ -371,7 +371,7 @@
       {
         "id": "a1-pronomen-u2",
         "type": "umformung",
-        "quelleDe": "Ich sehe der Mann.",
+        "quelleDe": "Ich sehe den Mann.",
         "promptDe": "Ersetze „der Mann“ durch ein Pronomen (Akkusativ).",
         "answer": "Ich sehe ihn.",
         "mussEnthalten": [
@@ -451,7 +451,7 @@
             "eure"
           ],
           [
-            "sie / Sie (هم / حضرتك)",
+            "sie / Sie (هم / المخاطَب الرسمي مفرداً أو جمعاً)",
             "ihr / Ihr",
             "ihre / Ihre",
             "ihr / Ihr",
@@ -466,7 +466,7 @@
     "titleDe": "Präsens & Satzbau der Fragen",
     "titleAr": "المضارع وبناء الجملة الاستفهامية (W-Fragen & Ja/Nein)",
     "level": "A1",
-    "ziel": "تصرّف الأفعال المنتظمة في المضارع وتبني سؤال W- وسؤال نعم/لا.",
+    "ziel": "تصرّف الأفعال المنتظمة وأمثلة الأفعال ذات تغيّر حركة الجذر في المضارع، وتبني سؤال W- وسؤال نعم/لا.",
     "voraus": [
       "a0-begrussung"
     ],
@@ -508,12 +508,12 @@
     "summaryAr": "تصريف الأفعال في الحاضر وقواعد ترتيب الجملة: الفعل دائماً في المركز 2 في الجملة الخبرية وسؤال W-Frage، وفي المركز 1 في سؤال نعم/لا.",
     "rules": [
       {
-        "de": "machen: ich mache · du machst · er macht · wir machen · ihr macht · sie machen.",
+        "de": "machen: ich mache · du machst · er/sie/es macht · wir machen · ihr macht · sie/Sie machen.",
         "ar": "التصريف القياسي للأفعال في المضارع بإضافة النهايات: -e, -st, -t, -en, -t, -en."
       },
       {
-        "de": "Stammvokalwechsel nur bei du & er/es: a→ä, e→i, e→ie.",
-        "ar": "تغير حرف العلة في جذر الفعل القوي يحدث فقط مع الضميرين du و er/es (مثل: fährst, liest)."
+        "de": "Bei Verben mit Stammvokalwechsel: nur in der 2./3. Person Singular (du, er/sie/es): a→ä, e→i, e→ie.",
+        "ar": "في الأفعال التي يتغيّر فيها حرف الجذر، يظهر التغيّر مع du ومع الغائب المفرد er/sie/es (مثل: fährst, liest)."
       },
       {
         "de": "W-Frage: Fragewort + Verb (Position 2) + Subjekt: Wo wohnen Sie? Was machst du?",
@@ -530,7 +530,7 @@
         "headers": [
           "المصدر",
           "du",
-          "er/es",
+          "er/sie/es",
           "النمط"
         ],
         "rows": [
@@ -633,7 +633,7 @@
     "pitfalls": [
       {
         "de": "„Du fahrst“ ✗ → „Du fährst“ ✓",
-        "ar": "لا تنسَ تغيير الحركة مع du و er عند الأفعال القوية"
+        "ar": "لا تنسَ تغيّر الحركة مع du ومع الغائب المفرد er/sie/es في هذه الأفعال."
       }
     ],
     "exercises": [
@@ -645,7 +645,7 @@
         "answer": [
           "mache"
         ],
-        "explanationAr": "ich + الجذر + e: ich mache. (ich + mache.)"
+        "explanationAr": "مع ich نضيف النهاية -e: ich mache."
       },
       {
         "id": "g3e2",
@@ -655,7 +655,7 @@
         "answer": [
           "fährst"
         ],
-        "explanationAr": "fahren من أفعال تغيير الجذر: du fährst (a→ä). (fahren: du fährst (a→ä).)"
+        "explanationAr": "fahren من الأفعال التي يتغير فيها حرف الجذر: du fährst (a→ä)."
       },
       {
         "id": "g3e3",
@@ -665,7 +665,7 @@
         "answer": [
           "spricht"
         ],
-        "explanationAr": "sprechen يغيّر الجذر مع du/er: er spricht (e→i). (sprechen: er spricht (e→i).)"
+        "explanationAr": "sprechen يغيّر حرف الجذر مع du وer/sie/es: er spricht (e→i)."
       },
       {
         "id": "a1-praesens-u1",
@@ -679,7 +679,7 @@
         "darfNicht": [
           "fahrst"
         ],
-        "explanationAr": "تغيير الجذر a→ä في du/er: fährst.",
+        "explanationAr": "يتغير حرف الجذر a→ä مع du، وكذلك مع er/sie/es: fährst.",
         "points": 2
       },
       {
