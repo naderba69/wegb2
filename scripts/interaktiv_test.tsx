@@ -2104,8 +2104,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const freundlichShown = !!freundlichContext && (freundlichContext.textContent ?? "").includes("nett");
     const sauber = karteFuerWort("sauber", "A1")!;
     mount(React.createElement(WortKarte, { karte: sauber, onClose: () => {} }));
-    ok(freundlichShown && !rootEl.querySelector('[data-testid="wortkarte-syn-context"]') && !(rootEl.textContent ?? "").includes("rein"),
-      "LXIX5 مرادف freundlich المنتج يظهر سياقياً، ومرادف sauber غير المنتج يبقى مخفياً");
+    const sauberContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    const sauberShown = !!sauberContext && (sauberContext.textContent ?? "").includes("reines Wasser");
+    const froh = karteFuerWort("froh", "A1")!;
+    mount(React.createElement(WortKarte, { karte: froh, onClose: () => {} }));
+    ok(freundlichShown && sauberShown && !rootEl.querySelector('[data-testid="wortkarte-syn-context"]') && !(rootEl.textContent ?? "").includes("glücklich"),
+      "LXIX5 المرادفان المنتجان freundlich/sauber يظهران، ومرادف froh غير المنتج يبقى مخفياً");
     const sehen = karteFuerWort("sehen", "A1")!;
     mount(React.createElement(WortKarte, { karte: sehen, onClose: () => {} }));
     const sehenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
@@ -2160,6 +2164,20 @@ const hasFile = txt().includes("صوتٌ من الدار");
       (wohnungContext.textContent ?? "").includes("ein Appartement mieten") &&
       (wohnungContext.textContent ?? "").includes("ein Appartement in der Stadt"),
       "LXIX13 die Wohnung→das Appartement يعرض تغيير المقال والأمثلة السياقية");
+    const denken = karteFuerWort("denken", "A1")!;
+    mount(React.createElement(WortKarte, { karte: denken, onClose: () => {} }));
+    const denkenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!denkenContext && (denkenContext.textContent ?? "").includes("glauben") &&
+      (denkenContext.textContent ?? "").includes("denken, dass der Bus kommt") &&
+      (denkenContext.textContent ?? "").includes("Ich denke, dass der Bus gleich kommt"),
+      "LXIX14 denken→glauben يظهران في سياق الترجيح لا كبديل عام");
+    const universitaet = karteFuerWort("Universität", "B1")!;
+    mount(React.createElement(WortKarte, { karte: universitaet, onClose: () => {} }));
+    const universitaetContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!universitaetContext && (universitaetContext.textContent ?? "").includes("Hochschule") &&
+      (universitaetContext.textContent ?? "").includes("an der Universität studieren") &&
+      (universitaetContext.textContent ?? "").includes("Sie studiert an der Universität"),
+      "LXIX15 die Universität→die Hochschule معروضتان بمثال الدراسة وحدود التقارب");
   }
 
   /* ═══ LXX — السيناريو يعلن دروسه المطبَّقة (R26) ═══ */

@@ -548,5 +548,115 @@
       "alternativAr": "نستأجر شقّة من نوع أبارتمون في المدينة.",
       "nuanceAr": "في سياق الاستئجار قد يتقاربان، لكن Wohnung اسم عام للمسكن، وAppartement يوحي غالباً بوحدة أصغر أو مؤثثة؛ كما يتغيّر المقال إلى ein بسبب جنس Appartement المحايد."
     }
+  },
+  "denken": {
+    "glauben": {
+      "basisKollokation": "denken, dass der Bus kommt",
+      "alternativKollokation": "glauben, dass der Bus kommt",
+      "basisDe": "Ich denke, dass der Bus gleich kommt.",
+      "basisAr": "أظن أن الحافلة ستأتي بعد قليل.",
+      "alternativDe": "Ich glaube, dass der Bus gleich kommt.",
+      "alternativAr": "أعتقد أن الحافلة ستأتي بعد قليل.",
+      "nuanceAr": "عند التعبير عن توقع أو رأي غير محسوم يتقاربان؛ denken أوسع وقد يعني إعمال الفكر، بينما glauben يبرز الاعتقاد أو الترجيح، فلا يتبادلان في كل معنى."
+    }
+  },
+  "lieben": {
+    "liebhaben": {
+      "basisKollokation": "die Familie lieben",
+      "alternativKollokation": "die Familie liebhaben",
+      "basisDe": "Ich liebe meine Familie.",
+      "basisAr": "أحب عائلتي.",
+      "alternativDe": "Ich habe meine Familie lieb.",
+      "alternativAr": "أكنّ لعائلتي مودةً.",
+      "nuanceAr": "في التعبير عن المودة للعائلة يتقاربان؛ lieben أوسع وقد يدل على حب عميق، أمّا liebhaben فغالباً أحنّ وأقل رسمية، ولا يصلح بديلاً في كل استعمال."
+    }
+  },
+  "mögen": {
+    "gern haben": {
+      "basisKollokation": "Kinder mögen Schokolade",
+      "alternativKollokation": "Schokolade gern haben",
+      "basisDe": "Viele Kinder mögen Schokolade.",
+      "basisAr": "يحب كثير من الأطفال الشوكولاتة.",
+      "alternativDe": "Viele Kinder haben Schokolade gern.",
+      "alternativAr": "يستطيب كثير من الأطفال الشوكولاتة.",
+      "nuanceAr": "في معنى الاستحسان يتقاربان؛ mögen أشيع ومحايد، وgern haben يعبّر عن المودة أو الاستحسان بنبرة شخصية أكثر، ويشيع خصوصاً مع الأشخاص."
+    }
+  },
+  "hassen": {
+    "verabscheuen": {
+      "basisKollokation": "Gewalt hassen",
+      "alternativKollokation": "Gewalt verabscheuen",
+      "basisDe": "Sie hasst Gewalt.",
+      "basisAr": "هي تكره العنف.",
+      "alternativDe": "Sie verabscheut Gewalt.",
+      "alternativAr": "هي تمقت العنف.",
+      "nuanceAr": "كلاهما يعبّر عن نفور شديد من العنف؛ verabscheuen أفصح وأقوى نبرةً، بينما hassen أشيع في الحديث ولا يتبادلان في كل تركيب."
+    }
+  },
+  "die Universität": {
+    "die Hochschule": {
+      "basisKollokation": "an der Universität studieren",
+      "alternativKollokation": "an der Hochschule studieren",
+      "basisDe": "Sie studiert an der Universität.",
+      "basisAr": "هي تدرس في الجامعة.",
+      "alternativDe": "Sie studiert an der Hochschule.",
+      "alternativAr": "هي تدرس في مؤسسة للتعليم العالي.",
+      "nuanceAr": "في سياق الدراسة يتقاربان، لكن Hochschule أوسع وقد تشمل أنواعاً مختلفة من مؤسسات التعليم العالي، بينما Universität نوع محدد منها؛ لذلك لا يُستبدل أحدهما بالآخر دائماً."
+    }
+  },
+  "das Gehalt": {
+    "der Lohn": {
+      "basisKollokation": "ein gutes Gehalt",
+      "alternativKollokation": "einen guten Lohn bekommen",
+      "basisDe": "Die Angestellte bekommt ein gutes Gehalt.",
+      "basisAr": "تتقاضى الموظفة راتباً جيداً.",
+      "alternativDe": "Die Angestellte bekommt einen guten Lohn.",
+      "alternativAr": "تتقاضى الموظفة أجراً جيداً.",
+      "nuanceAr": "كلاهما مقابل مالي للعمل؛ Gehalt يوحي غالباً براتب دوري ثابت، وLohn قد يرتبط بالأجر بالساعة أو بالمهمة، ويختلف الاستعمال باختلاف الوظيفة والسياق."
+    }
+  },
+  "schön": {
+    "hübsch": {
+      "basisKollokation": "schön aussehen",
+      "alternativKollokation": "hübsch aussehen",
+      "basisDe": "Das Kleid sieht schön aus.",
+      "basisAr": "يبدو الفستان جميلاً.",
+      "alternativDe": "Das Kleid sieht hübsch aus.",
+      "alternativAr": "يبدو الفستان أنيقاً وجميلاً.",
+      "nuanceAr": "عند وصف مظهر الفستان يتقاربان؛ schön أوسع وقد يصف الجمال عموماً، أمّا hübsch فيركّز غالباً على المظهر اللطيف أو الجذاب."
+    }
+  },
+  "modisch": {
+    "modern": {
+      "basisKollokation": "ein modischer Mantel",
+      "alternativKollokation": "ein moderner Mantel",
+      "basisDe": "Sie trägt einen modischen Mantel.",
+      "basisAr": "ترتدي معطفاً مواكباً للموضة.",
+      "alternativDe": "Sie trägt einen modernen Mantel.",
+      "alternativAr": "ترتدي معطفاً ذا تصميم عصري.",
+      "nuanceAr": "في وصف المعطف قد يتقاربان؛ modisch يركّز على مواكبة الموضة، بينما modern يصف التصميم أو الطابع العصري، فلا يلزم أن يكون كل حديثٍ مواكباً للموضة."
+    }
+  },
+  "sauber": {
+    "rein": {
+      "basisKollokation": "sauberes Wasser",
+      "alternativKollokation": "reines Wasser",
+      "basisDe": "Wir brauchen sauberes Wasser.",
+      "basisAr": "نحتاج إلى ماء نظيف.",
+      "alternativDe": "Wir brauchen reines Wasser.",
+      "alternativAr": "نحتاج إلى ماء نقي.",
+      "nuanceAr": "في وصف الماء يتقاربان؛ sauber ينفي الاتساخ، بينما rein يركّز أكثر على الخلو من الشوائب، ولذلك لا يتبادلان في كل وصف للنظافة."
+    }
+  },
+  "immer": {
+    "stets": {
+      "basisKollokation": "immer verfügbar",
+      "alternativKollokation": "stets verfügbar",
+      "basisDe": "Die Hilfe ist immer verfügbar.",
+      "basisAr": "المساعدة متاحة دائماً.",
+      "alternativDe": "Die Hilfe ist stets verfügbar.",
+      "alternativAr": "المساعدة متاحة على الدوام.",
+      "nuanceAr": "في معنى الاستمرار يتقاربان؛ immer أشيع في الكلام اليومي، أمّا stets فأكثر رسمية أو كتابية، ولا يحمل دائماً النبرة نفسها."
+    }
   }
 }
