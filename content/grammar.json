@@ -7976,7 +7976,7 @@
     "titleDe": "Modalverben: können, müssen, wollen",
     "titleAr": "الأفعال الناقصة: können, müssen, wollen",
     "level": "A1",
-    "ziel": "تستخدم können/müssen/wollen مع مصدر في آخر الجملة.",
+    "ziel": "تستخدم können/müssen/wollen مع مصدر في آخر الجملة الرئيسية، وتُميّز موضع الفعل الناقص في الجملة التابعة.",
     "voraus": [
       "a1-praesens"
     ],
@@ -7991,12 +7991,12 @@
       {
         "id": "a1-modalverben-v1",
         "type": "fill",
-        "promptDe": "Ich ___ gut schwimmen. (können)",
-        "text": "Ich ___ gut schwimmen. (können)",
+        "promptDe": "___ Sie mir bitte helfen? (können, höfliche Bitte)",
+        "text": "___ Sie mir bitte helfen? (können, höfliche Bitte)",
         "answer": [
-          "kann"
+          "Können"
         ],
-        "explanationAr": "können شاذّ: ich kann. والمصدر schwimmen في آخر الجملة."
+        "explanationAr": "للطلب المهذب مع Sie: Können Sie mir bitte helfen?؛ مع Sie يكون التصريف können، ويبقى helfen مصدراً في نهاية السؤال."
       },
       {
         "id": "a1-modalverben-v2",
@@ -8015,7 +8015,7 @@
         "points": 2
       }
     ],
-    "summaryAr": "können = أستطيع/يمكن · müssen = يجب/عليّ · wollen = أريد. الفعل الناقص يأخذ موقع الفعل، والمصدر الحقيقي ينتقل إلى نهاية الجملة.",
+    "summaryAr": "können = أستطيع/يمكن · müssen = يجب/عليّ · wollen = أريد/أنوي. في الجملة الخبرية الرئيسية يأتي الفعل الناقص المصرف في الموضع الثاني، ويأتي الفعل الآخر في المصدر آخر الجملة.",
     "rules": [
       {
         "de": "ich kann · du kannst · er/sie/es kann · wir können · ihr könnt · sie/Sie können",
@@ -8023,15 +8023,15 @@
       },
       {
         "de": "ich muss · du musst · er muss · wir müssen · ihr müsst · sie müssen",
-        "ar": "تصريف müssen (انتبه لفقدان الـ s في muss/musst)"
+        "ar": "تصريف müssen: تتحول ü إلى u في صيغ المفرد (ich muss · du musst · er/sie/es muss)، وتبقى ü في wir müssen وihr müsst."
       },
       {
         "de": "ich will · du willst · er will · wir wollen · ihr wollt · sie wollen",
         "ar": "تصريف wollen"
       },
       {
-        "de": "Modalverb + … + Infinitiv am Ende!  · Ich kann Deutsch sprechen.",
-        "ar": "الفعل الأصلي يأتي آخر الجملة مع الناقص."
+        "de": "Im Aussagesatz: Modalverb (konjugiert) auf Position II, Infinitiv am Satzende. · Ich kann Deutsch sprechen.",
+        "ar": "في الجملة الخبرية: يأتي الفعل الناقص المصرف في الموضع الثاني، والفعل المعجمي في المصدر في نهاية الجملة."
       }
     ],
     "tables": [
@@ -8097,13 +8097,13 @@
         "ar": "نريد شرب القهوة."
       }
     ],
-    "eselsbrueckeAr": "«الناقص يمسك الموقع الثاني، والفعل الأصلي يُنفى إلى آخر الجملة».",
+    "eselsbrueckeAr": "«في الجملة الخبرية يمسك الفعل الناقص الموضع الثاني، ويُرحَّل الفعل الأصلي بصيغة المصدر إلى نهاية الجملة».",
     "pronTippAr": "",
     "exercises": [
       {
         "id": "a1-modalverben-ex01",
         "type": "fill",
-        "promptDe": "Ich ___ gut schwimmen.",
+        "promptDe": "Ich ___ gut schwimmen. (können)",
         "answer": [
           "kann"
         ],
@@ -8113,7 +8113,7 @@
       {
         "id": "a1-modalverben-ex02",
         "type": "fill",
-        "promptDe": "Du ___ heute lernen.",
+        "promptDe": "Du ___ heute lernen. (müssen)",
         "answer": [
           "musst"
         ],
@@ -8135,7 +8135,7 @@
       {
         "id": "a1-modalverben-ex04",
         "type": "fill",
-        "promptDe": "Ich kann gut Deutsch ___.",
+        "promptDe": "Ich kann gut Deutsch ___. (sprechen)",
         "answer": [
           "sprechen"
         ],
@@ -8264,18 +8264,18 @@
         "ar": "منذ سنة وأنا أتعلم الألمانية."
       }
     ],
-    "eselsbrueckeAr": "«مِعْزَبا» جملة التذكر: **m**it · **b**ei · **z**u · **a**us · **n**ach · **v**on · **a**b (أضف seit لاحقاً).",
+    "eselsbrueckeAr": "احفظ مجموعة أدوات الجر مع Dativ كما هي: mit · bei · zu · aus · nach · von · seit؛ وتأتي بعدها حالة Dativ.",
     "pronTippAr": "",
     "exercises": [
       {
         "id": "a1-dativ-ex01",
         "type": "fill",
-        "promptDe": "Ich fahre ___ Berlin.",
+        "promptDe": "Ich fahre ___ Berlin. (Wohin? Ziel: Stadt)",
         "answer": [
           "nach"
         ],
         "explanationDe": "Ich fahre nach Berlin.",
-        "explanationAr": "nach تُستخدم للمدن والبلدان المحايدة."
+        "explanationAr": "nach تُستخدم هنا مع اسم المدينة Berlin للدلالة على الوجهة؛ وتُستخدم عادةً مع أسماء المدن والبلدان التي لا تأخذ أداة."
       },
       {
         "id": "a1-dativ-ex02",
@@ -8292,7 +8292,7 @@
       {
         "id": "a1-dativ-ex03",
         "type": "fill",
-        "promptDe": "Ich wohne bei ___ Mutter.",
+        "promptDe": "Ich wohne bei ___ Mutter. (die Mutter; mein)",
         "answer": [
           "meiner"
         ],
@@ -8302,7 +8302,7 @@
       {
         "id": "a1-dativ-ex04",
         "type": "mc",
-        "promptDe": "der → ___ (Dativ)",
+        "promptDe": "___ Mann (Dativ; Nominativ: der Mann)",
         "options": [
           "dem",
           "den",
@@ -8330,16 +8330,16 @@
   "a1-wechsel": {
     "id": "a1-wechsel",
     "titleDe": "Wechselpräpositionen: in/an/auf/über/unter/neben/vor/hinter/zwischen",
-    "titleAr": "أدوات الجر المزدوجة (سكون وحركة)",
+    "titleAr": "أدوات الجر المزدوجة (المكان أم الوجهة)",
     "level": "A1",
-    "ziel": "تختار Dativ للسكون وAkkusativ للحركة بعد in/an/auf.",
+    "ziel": "تختار Dativ للمكان الذي يجيب عن Wo? وAkkusativ للوجهة التي يجيب عنها Wohin? بعد أدوات الجر المزدوجة التسع.",
     "voraus": [
       "a1-dativ",
       "a1-akkusativ"
     ],
     "anwendung": {
-      "ar": "صِف غرفتك: 3 جمل سكون (in der …) و3 حركة (in die …).",
-      "de": "Beschreibe dein Zimmer: 3 Sätze Ruhe (Dativ), 3 Sätze Richtung (Akkusativ).",
+      "ar": "صِف غرفتك: 3 جمل عن مكان الأشياء (Wo? + Dativ) و3 عن وجهتها أو موضع نقلها (Wohin? + Akkusativ).",
+      "de": "Beschreibe dein Zimmer: 3 Sätze zum Ort (Wo? + Dativ) und 3 zum Ziel (Wohin? + Akkusativ).",
       "candoIds": [
         "A1-C5"
       ]
@@ -8353,13 +8353,13 @@
         "answer": [
           "dem"
         ],
-        "explanationAr": "liegt = سكون ← Dativ: auf dem Tisch."
+        "explanationAr": "الفعل يصف مكان الكتاب (Wo?)، لذلك Dativ: auf dem Tisch."
       },
       {
         "id": "a1-wechsel-v2",
         "type": "umformung",
         "quelleDe": "Das Buch liegt auf dem Tisch.",
-        "promptDe": "Lege es hin (Bewegung): Ich lege …",
+        "promptDe": "Lege es hin (Ziel: Wohin?): Ich lege …",
         "answer": "Ich lege das Buch auf den Tisch.",
         "mussEnthalten": [
           "den",
@@ -8368,28 +8368,28 @@
         "darfNicht": [
           "dem"
         ],
-        "explanationAr": "legen = حركة ← Akkusativ: auf den Tisch.",
+        "explanationAr": "السؤال عن الوجهة (Wohin?) يقتضي Akkusativ: auf den Tisch.",
         "points": 2
       }
     ],
-    "summaryAr": "تسع أدوات تأخذ Dativ عند السكون (أين؟) و Akkusativ عند الحركة والاتجاه (إلى أين؟).",
+    "summaryAr": "بعد كل واحدة من أدوات الجر المزدوجة التسع، يحدد المعنى الحالة: مكان الشيء أو موضع الحدث (Wo?) يأخذ Dativ، والوجهة التي ينتهي إليها الفعل (Wohin?) تأخذ Akkusativ. وجود فعل حركة وحده لا يوجب Akkusativ.",
     "rules": [
       {
-        "de": "Wo? (Ruhe/Lage) → Dativ  ·  Wohin? (Ziel/Bewegung) → Akkusativ",
-        "ar": "السؤال «أين» يأخذ Dativ، السؤال «إلى أين» يأخذ Akkusativ."
+        "de": "Wo? (Ort/Position, auch Bewegung an einem Ort) → Dativ · Wohin? (Richtung/Ziel) → Akkusativ",
+        "ar": "السؤال Wo? يحدد المكان الذي يقع فيه الحدث، حتى مع وجود حركة داخله؛ أما Wohin? فيحدد الوجهة أو المقصد، ولذلك يأخذ Akkusativ."
       },
       {
         "de": "Ich bin in der Schule. · Ich gehe in die Schule.",
-        "ar": "أنا في المدرسة (سكون) · أذهب إلى المدرسة (حركة)."
+        "ar": "أنا في المدرسة (Wo? + Dativ) · أذهب إلى المدرسة (Wohin? + Akkusativ)."
       }
     ],
     "tables": [
       {
-        "captionAr": "أين (سكون/Dativ) أم إلى أين (حركة/Akkusativ)",
+        "captionAr": "أين؟ (مكان/Dativ) أم إلى أين؟ (وجهة/Akkusativ)",
         "headers": [
-          "الحرف",
-          "سكون (wo + Dativ)",
-          "حركة (wohin + Akkusativ)"
+          "حرف الجر",
+          "المكان (Wo? + Dativ)",
+          "الوجهة (Wohin? + Akkusativ)"
         ],
         "rows": [
           [
@@ -8418,20 +8418,20 @@
     "examples": [
       {
         "de": "Das Buch liegt auf dem Tisch.",
-        "ar": "الكتاب على الطاولة (موجودة/سكون)."
+        "ar": "الكتاب موجود على الطاولة (مكان/Wo?)."
       },
       {
         "de": "Ich lege das Buch auf den Tisch.",
-        "ar": "أضع الكتاب على الطاولة (حركة للوصول)."
+        "ar": "أضع الكتاب على الطاولة (وجهة/Wohin?)."
       }
     ],
-    "eselsbrueckeAr": "«حالة × هدف» — اسأل نفسك دائماً: هل أنا أصف مكاناً ثابتاً أم حركةً باتجاه؟",
+    "eselsbrueckeAr": "«مكان أم وجهة؟» — اسأل: أين يقع الحدث (Wo? + Dativ)، أم إلى أين يتجه/ينتهي (Wohin? + Akkusativ).",
     "pronTippAr": "",
     "exercises": [
       {
         "id": "a1-wechsel-ex01",
         "type": "mc",
-        "promptDe": "Ich hänge das Bild an ___ Wand.",
+        "promptDe": "Ich hänge das Bild an ___ Wand. (Wohin?)",
         "options": [
           "die",
           "der",
@@ -8443,7 +8443,7 @@
       {
         "id": "a1-wechsel-ex02",
         "type": "mc",
-        "promptDe": "Das Bild hängt an ___ Wand.",
+        "promptDe": "Das Bild hängt an ___ Wand. (die Wand; Wo?)",
         "options": [
           "der",
           "die",
@@ -8455,36 +8455,36 @@
       {
         "id": "a1-wechsel-ex03",
         "type": "fill",
-        "promptDe": "Die Katze liegt unter ___ Tisch.",
+        "promptDe": "Die Katze liegt unter ___ Tisch. (der Tisch; Wo?)",
         "answer": [
           "dem"
         ],
         "explanationDe": "unter dem Tisch",
-        "explanationAr": "Wo = سكون → Dativ محايد dem."
+        "explanationAr": "المكان (Wo?) يأخذ Dativ؛ هنا unter dem Tisch، والاسم der Tisch."
       },
       {
         "id": "a1-wechsel-ex04",
         "type": "fill",
-        "promptDe": "Ich gehe in ___ Kino.",
+        "promptDe": "Ich gehe in ___ Kino. (das Kino; Wohin?)",
         "answer": [
           "das"
         ],
         "explanationDe": "ins Kino",
-        "explanationAr": "Wohin = حركة → Akkusativ محايد das (in+das = ins)."
+        "explanationAr": "الوجهة (Wohin?) تأخذ Akkusativ: in das Kino = ins Kino."
       }
     ],
     "pitfalls": [
       {
-        "de": "✗ Ich gehe in der Schule. → ✓ Ich gehe in die Schule.",
-        "ar": "حركة نحو الهدف (wohin) ← Akkusativ: gehe + in die — لا تستعمل der السكونية مع فعل حركة"
+        "de": "✗ Wohin gehst du? – In der Schule. → ✓ In die Schule.",
+        "ar": "السؤال عن الوجهة (Wohin?) يأخذ Akkusativ؛ أما Ich gehe im Park spazieren فيصف حركة داخل مكان (Wo?) ويأخذ Dativ. ليس كل فعل حركة يوجب Akkusativ."
       },
       {
         "de": "✗ Das Buch liegt auf den Tisch. → ✓ …auf dem Tisch.",
-        "ar": "سكون (wo) ← Dativ: liegt + auf dem — اسأل دائماً: أين (سكون) أم إلى أين (حركة)؟"
+        "ar": "الكتاب موجود على الطاولة (Wo?)، لذلك Dativ؛ اسأل عن المكان (Wo?) أم الوجهة (Wohin?)، لا عن وجود حركة فحسب."
       },
       {
-        "de": "✗ Ich hänge das Bild an der Wand. → ✓ …an die Wand.",
-        "ar": "hängen (يعلّق/حركة) ≠ hängen (معلّق/سكون): الفعل نفسه يغيّر الحالة حسب المعنى — انظر للفعل لا للحرف"
+        "de": "✗ Wohin hänge ich das Bild? – An der Wand. → ✓ An die Wand.",
+        "ar": "مع الوجهة (Wohin?) نقول an die Wand؛ أما Das Bild hängt an der Wand فيصف مكانه (Wo?) ويأخذ Dativ. الفعل وحده لا يحسم الحالة."
       }
     ]
   },

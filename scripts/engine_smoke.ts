@@ -3998,6 +3998,96 @@ void 0;
     "K160d مهام Akkusativ تُظهر جواباً واحداً واضحاً وتبقى مركزة على الأداة دون إدخال صرف صفة غير مشروح");
 }
 
+/* ═══ K161 — R84/R85: تدقيق الدفعة الثالثة من قواعد A1 ═══ */
+{
+  type A1Batch3Item = { id: string; kind: string; status: string; sources: string[]; finding: string; action: string };
+  type A1Batch3Source = { id: string; title: string; url: string; supports: string };
+  const audit = JSON.parse(readFileSync("docs/content-review-a1-grammar-03-2026-10-04.json", "utf8")) as {
+    date: string;
+    batch: string;
+    coverage: { grammarTopics: number; grammarExercises: number; grammarVerify: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>;
+    sources: A1Batch3Source[];
+    items: A1Batch3Item[];
+  };
+  const auditMarkdown = readFileSync("docs/content-review-a1-grammar-03-2026-10-04.md", "utf8");
+  const topicIds = ["a1-modalverben", "a1-dativ", "a1-wechsel"];
+  const topics = topicIds.map((id) => grammarMap[id]);
+  const expectedIds = topics.flatMap((topic) => [
+    topic.id,
+    ...topic.exercises.map((exercise) => exercise.id),
+    ...(topic.verify ?? []).map((exercise) => exercise.id),
+  ]);
+  const auditIds = audit.items.map((item) => item.id);
+  const auditById = new Map(audit.items.map((item) => [item.id, item]));
+  const exerciseCount = topics.reduce((total, topic) => total + topic.exercises.length, 0);
+  const verifyCount = topics.reduce((total, topic) => total + (topic.verify?.length ?? 0), 0);
+  ok(topics.length === 3 && exerciseCount === 12 && verifyCount === 6 &&
+    audit.date === "2026-10-04" && audit.batch === "A1-grammar-03" &&
+    audit.coverage.grammarTopics === 3 && audit.coverage.grammarExercises === 12 && audit.coverage.grammarVerify === 6 &&
+    expectedIds.length === 21 && new Set(expectedIds).size === 21 && audit.coverage.totalTrackedItems === 21 &&
+    auditIds.length === 21 && new Set(auditIds).size === 21 && expectedIds.every((id) => auditById.has(id)) &&
+    expectedIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
+    "K161a سجل A1-grammar-03 يغطي الموضوعات الثلاثة وكل تمرين/تحقق في JSON وMarkdown بلا فقد أو تكرار");
+
+  const sourceIds = new Set(audit.sources.map((source) => source.id));
+  const statusCounts = audit.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const completeEvidence = audit.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.sources.length > 0 &&
+    item.sources.every((id) => sourceIds.has(id)) && item.finding.trim().length > 0 && item.action.trim().length > 0
+  );
+  const validSources = audit.sources.length === 13 && audit.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://")
+  );
+  const referencedSources = new Set(audit.items.flatMap((item) => item.sources));
+  const correctedIds = new Set([
+    "a1-modalverben", "a1-modalverben-ex01", "a1-modalverben-ex02", "a1-modalverben-ex04", "a1-modalverben-v1",
+    "a1-dativ", "a1-dativ-ex01", "a1-dativ-ex03", "a1-dativ-ex04",
+    "a1-wechsel", "a1-wechsel-ex01", "a1-wechsel-ex02", "a1-wechsel-ex03", "a1-wechsel-ex04", "a1-wechsel-v1", "a1-wechsel-v2",
+  ]);
+  const expectedStatuses = audit.items.every((item) => item.status === (correctedIds.has(item.id) ? "مُصحح" : "سليم"));
+  ok(completeEvidence && validSources && referencedSources.size === audit.sources.length &&
+    expectedStatuses && statusCounts["سليم"] === 5 && statusCounts["مُصحح"] === 16 && !statusCounts["غير محسوم"] &&
+    audit.statusCounts["سليم"] === 5 && audit.statusCounts["مُصحح"] === 16 && audit.statusCounts["غير محسوم"] === 0,
+    "K161b لكل عنصر من الـ21 مصدر ودليل وحكم وإجراء؛ 5 سليم/16 مصحح من دون حالة غير محسومة");
+
+  const getExercise = (topicId: string, id: string) => grammarMap[topicId]?.exercises.find((exercise) => exercise.id === id);
+  const getVerify = (topicId: string, id: string) => grammarMap[topicId]?.verify?.find((exercise) => exercise.id === id);
+  const modalTopic = grammarMap["a1-modalverben"];
+  const modalVerify = getVerify("a1-modalverben", "a1-modalverben-v1");
+  const dativeTopic = grammarMap["a1-dativ"];
+  const wechselTopic = grammarMap["a1-wechsel"];
+  const wechselExercise4 = getExercise("a1-wechsel", "a1-wechsel-ex04");
+  const wechselVerify2 = getVerify("a1-wechsel", "a1-wechsel-v2");
+  ok(!!(modalTopic.ziel?.includes("الجملة الرئيسية") && modalTopic.rules[1]?.ar.includes("ü إلى u") &&
+    modalTopic.rules[3]?.de.includes("Im Aussagesatz") &&
+    getExercise("a1-modalverben", "a1-modalverben-ex01")?.promptDe.includes("(können)") &&
+    getExercise("a1-modalverben", "a1-modalverben-ex02")?.promptDe.includes("(müssen)") &&
+    getExercise("a1-modalverben", "a1-modalverben-ex04")?.promptDe.includes("(sprechen)") &&
+    modalVerify?.promptDe === "___ Sie mir bitte helfen? (können, höfliche Bitte)" &&
+    Array.isArray(modalVerify?.answer) && modalVerify.answer[0] === "Können" &&
+    (dativeTopic as unknown as { eselsbrueckeAr?: string }).eselsbrueckeAr?.includes("mit · bei · zu · aus · nach · von · seit") &&
+    getExercise("a1-dativ", "a1-dativ-ex01")?.promptDe.includes("Wohin? Ziel: Stadt") &&
+    getExercise("a1-dativ", "a1-dativ-ex03")?.promptDe.includes("die Mutter; mein") &&
+    getExercise("a1-dativ", "a1-dativ-ex04")?.promptDe.includes("Nominativ: der Mann")),
+    "K161c تصويب ملاحظة müssen، تقييد ترتيب الأفعال، حسم فراغات الأفعال الناقصة، وضبط تلميحات Dativ");
+  ok(!!(wechselTopic.titleAr.includes("المكان أم الوجهة") && !wechselTopic.titleAr.includes("سكون وحركة") &&
+    wechselTopic.rules[0]?.de.includes("auch Bewegung an einem Ort") &&
+    wechselTopic.ziel?.includes("Wo?") && wechselTopic.ziel?.includes("Wohin?") &&
+    wechselTopic.summaryAr.includes("وجود فعل حركة وحده لا يوجب Akkusativ") &&
+    wechselTopic.pitfalls?.[0]?.ar.includes("Ich gehe im Park spazieren") &&
+    getExercise("a1-wechsel", "a1-wechsel-ex01")?.promptDe.includes("Wohin?") &&
+    getExercise("a1-wechsel", "a1-wechsel-ex02")?.promptDe.includes("die Wand; Wo?") &&
+    getExercise("a1-wechsel", "a1-wechsel-ex03")?.promptDe.includes("der Tisch; Wo?") &&
+    wechselExercise4?.promptDe.includes("das Kino; Wohin?") &&
+    wechselVerify2?.promptDe.includes("Ziel: Wohin?") &&
+    wechselVerify2?.explanationAr?.includes("الوجهة")),
+    "K161d قاعدة Wechselpräpositionen تفصل Wo?/المكان عن Wohin?/الوجهة وتحرس القرائن والأمثلة المصححة");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
