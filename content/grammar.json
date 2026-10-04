@@ -8533,11 +8533,11 @@
         "points": 2
       }
     ],
-    "summaryAr": "لإعطاء أمر أو تعليمات: du: جذر الفعل فقط (مع أو بدون -e)، ihr: نفس تصريف ihr لكن بدون ضمير، Sie: الفعل أولاً ثم Sie.",
+    "summaryAr": "للأمر: du تستخدم جذر الفعل، وقد تلحقه -e بحسب الصيغة، مع تغيّر صوتي في بعض الأفعال مثل Sprich!؛ ihr تأخذ صيغة المضارع بلا الضمير، وSie تأتي بالفعل المصرف قبل الضمير Sie.",
     "rules": [
       {
         "de": "(du): Mach(e) das! · Sprich! · Fahr los!",
-        "ar": "صيغة du: الجذر فقط، بدون du. الأفعال الشاذة تغيّر أحياناً: sprechen → Sprich!"
+        "ar": "صيغة du: الجذر غالباً بلا du، وقد تلحقه -e؛ وبعض الأفعال القوية تغيّر حرف العلة مثل sprechen → Sprich!"
       },
       {
         "de": "(ihr): Macht das! · Kommt her!",
@@ -8545,7 +8545,7 @@
       },
       {
         "de": "(Sie): Machen Sie! · Sprechen Sie bitte!",
-        "ar": "الصيغة المهذبة: الفعل أولاً + Sie في الموقع الثاني."
+        "ar": "في الأمر الرسمي يأتي الفعل المصرف قبل الضمير Sie مباشرة؛ وإذا لم تسبقه كلمة أخرى يبدأ به الأمر."
       }
     ],
     "tables": [],
@@ -8559,7 +8559,7 @@
         "ar": "اعمل واجبك (صيغة غير رسمية لـ du)."
       }
     ],
-    "eselsbrueckeAr": "للصيغة المهذبة Sie: «الفعل يسبق Sie دائماً في الأمر».",
+    "eselsbrueckeAr": "للصيغة الرسمية Sie: «الفعل المصرف قبل Sie مباشرة»؛ ويأتي أولاً إذا لم تسبقه كلمة مثل Bitte.",
     "pronTippAr": "",
     "exercises": [
       {
@@ -8589,8 +8589,7 @@
         "type": "fill",
         "promptDe": "___ leise! (sprechen → ihr)",
         "answer": [
-          "Sprecht",
-          "sprecht"
+          "Sprecht"
         ],
         "explanationDe": "Sprecht leise!",
         "explanationAr": "ihr-Imperativ يطابق تصريف ihr."
@@ -8640,8 +8639,8 @@
         "ar": "أمر المفرد المخاطب: احذف -st (sprichst ← sprich) — أشهر خطأ: تصريف المضارع بدل الأمر"
       },
       {
-        "de": "✗ Gehen Sie! (لصديق) → ✓ Geh! / Geht! / Gehen Sie!",
-        "ar": "ثلاثة أوامر لثلاثة مخاطبين: du (Geh!) / ihr (Geht!) / Sie (Gehen Sie!) — اختر المخاطب أولاً"
+        "de": "Zu einem Freund: ✗ Gehen Sie! → ✓ Geh! · Zu mehreren Freunden: Geht! · Förmlich: Gehen Sie!",
+        "ar": "اختر المخاطَب أولاً: مع صديق واحد du استعمل Geh!؛ مع مجموعة تُخاطَب بصيغة ihr استعمل Geht!؛ وللنداء الرسمي استعمل Gehen Sie! لا تعرض الصيغ الثلاث كبدائل للمخاطَب نفسه."
       },
       {
         "de": "✗ Machen das Fenster zu! → ✓ Mach das Fenster zu!",
@@ -8654,7 +8653,7 @@
     "titleDe": "Perfekt (Einführung): ge-…-t mit haben",
     "titleAr": "مقدمة الماضي التام (أفعال منتظمة مع haben)",
     "level": "A1",
-    "ziel": "تبني الماضي التام المنتظم مع haben (ge-…-t).",
+    "ziel": "تطبّق نمط Partizip II المنتظم مع haben على أمثلة الدرس المحددة (ge-…-t).",
     "voraus": [
       "a1-sein-haben"
     ],
@@ -8669,8 +8668,8 @@
       {
         "id": "a1-perfekt-einf-v1",
         "type": "fill",
-        "promptDe": "Heute habe ich viel ___ . (lernen)",
-        "text": "Heute habe ich viel ___ . (lernen)",
+        "promptDe": "Heute habe ich viel ___. (lernen)",
+        "text": "Heute habe ich viel ___. (lernen)",
         "answer": [
           "gelernt"
         ],
@@ -8679,7 +8678,7 @@
       {
         "id": "a1-perfekt-einf-v2",
         "type": "translate",
-        "promptDe": "قُل: لعبتُ كرة القدم أمس.",
+        "promptDe": "قُلْ بـPerfekt: «لعبت كرة القدم أمس.»",
         "answer": "Ich habe gestern Fußball gespielt.",
         "keywords": [
           "habe",
@@ -8688,11 +8687,11 @@
         "explanationAr": "spielen منتظم: gespielt. أمس = gestern."
       }
     ],
-    "summaryAr": "في نهاية A1 نتعرف على صيغة واحدة من الماضي: Partizip II للأفعال المنتظمة (ge- + جذر + -t) مع الفعل المساعد haben في الموضع الثاني، والـPartizip في آخر الجملة.",
+    "summaryAr": "هذه مقدمة للأفعال المنتظمة المختارة مع haben: يتكوّن Partizip II غالباً من ge- + الجذر + -t/-et. في الجملة الخبرية الرئيسية يأتي haben المصرف في الموضع الثاني وPartizip II في نهاية الإطار الفعلي؛ أما الجملة التابعة فيختلف فيها ترتيب الأفعال. توجد أفعال تأخذ sein وأفعال قوية لها Partizip II غير منتظم.",
     "rules": [
       {
         "de": "Ich habe gestern gearbeitet.",
-        "ar": "الجزء الثاني دائماً آخر الجملة."
+        "ar": "في الجملة الخبرية الرئيسية يأتي Partizip II في نهاية الإطار الفعلي؛ في الجملة التابعة يأتي الفعل المساعد بعده."
       },
       {
         "de": "lernen → gelernt · machen → gemacht · wohnen → gewohnt",
@@ -8700,7 +8699,7 @@
       },
       {
         "de": "haben im Präsens (ich habe, du hast …) + … + Partizip II",
-        "ar": "التركيب الأساسي للماضي التام في A1."
+        "ar": "في الجملة الخبرية الرئيسية: haben في المضارع + عناصر الجملة + Partizip II في نهاية الإطار الفعلي."
       }
     ],
     "tables": [],
@@ -8714,7 +8713,7 @@
         "ar": "عملنا كثيراً في نهاية الأسبوع."
       }
     ],
-    "eselsbrueckeAr": "في جملة Perfekt الألمانية: «المساعد في الثاني، والمصير (Partizip) في النهاية».",
+    "eselsbrueckeAr": "في الجملة الخبرية الرئيسية: «المساعد في الموضع الثاني، وPartizip II في نهاية الإطار الفعلي».",
     "pronTippAr": "",
     "exercises": [
       {
@@ -8730,7 +8729,7 @@
       {
         "id": "a1-perfekt-einf-ex02",
         "type": "fill",
-        "promptDe": "Ich habe gestern viel ___.",
+        "promptDe": "Ich habe gestern viel ___. (arbeiten)",
         "answer": [
           "gearbeitet"
         ],
@@ -8762,7 +8761,7 @@
       {
         "id": "a1-perf-n2",
         "type": "order",
-        "promptDe": "Bringe die Wörter in die richtige Reihenfolge:",
+        "promptDe": "Beginne mit „Ich“ und bringe die Wörter in die richtige Reihenfolge:",
         "answer": [
           "Ich habe",
           "gestern",
@@ -8801,12 +8800,12 @@
     ],
     "pitfalls": [
       {
-        "de": "✗ Ich habe gegangen. → ✓ Ich bin gegangen.",
-        "ar": "أفعال الحركة والتغيّر تأخذ sein لا haben — gehen, kommen, fahren, bleiben: احفظها منفصلة"
+        "de": "✗ Ich habe gestern nach Hause gegangen. → ✓ Ich bin gestern nach Hause gegangen.",
+        "ar": "أفعال انتقال المكان مثل gehen وkommen تستخدم sein. وfahren في معنى الانتقال غالباً يأتي مع sein، لكنه قد يأخذ haben في استعمالات أخرى؛ وكذلك bleiben يأخذ sein رغم أنه لا يدل على انتقال. لا تعمم ذلك على كل فعل حركة: الاختيار يتبع الفعل واستعماله."
       },
       {
         "de": "✗ Ich habe gelernt Deutsch. → ✓ Ich habe Deutsch gelernt.",
-        "ar": "التصريف الثالث (Partizip II) في نهاية الجملة حتماً — لا شيء بعده إلا التابع"
+        "ar": "في الجملة الخبرية الرئيسية يقع Partizip II في نهاية الإطار الفعلي: Ich habe Deutsch gelernt. في الجملة التابعة يأتي المساعد بعده: … weil ich Deutsch gelernt habe."
       },
       {
         "de": "✗ Ich habe geschlafen gut. → ✓ Ich habe gut geschlafen.",
@@ -8819,7 +8818,7 @@
     "titleDe": "Futur I (Einführung): werden + Infinitiv",
     "titleAr": "مقدمة المستقبل البسيط",
     "level": "A1",
-    "ziel": "تعبّر عن المستقبل بـ werden + مصدر.",
+    "ziel": "تستخدم صيغة Futur I: werden المصرف + مصدر الفعل، في الجملة الخبرية الرئيسية.",
     "voraus": [
       "a1-praesens"
     ],
@@ -8845,7 +8844,7 @@
         "id": "a1-futur-einf-v2",
         "type": "umformung",
         "quelleDe": "Ich lerne Deutsch.",
-        "promptDe": "Plane für nächstes Jahr: …",
+        "promptDe": "Setze den Satz für nächstes Jahr ins Futur I um und beginne mit „Ich“: …",
         "answer": "Ich werde nächstes Jahr Deutsch lernen.",
         "mussEnthalten": [
           "werde",
@@ -8855,10 +8854,10 @@
         "points": 2
       }
     ],
-    "summaryAr": "للتعبير عن خطط المستقبل في A1 نستخدم werden (سوف) في الموضع الثاني والمصدر في آخر الجملة. تكفي مقدمة بسيطة (werden لا يُدرَّس بعمق قبل A2).",
+    "summaryAr": "تتكوّن صيغة Futur I من werden مُصرّفاً + المصدر. في الجملة الخبرية الرئيسية يأتي werden في الموضع الثاني والمصدر في نهاية الإطار الفعلي؛ وتستعمل الألمانية أيضاً Präsens مع قرينة زمنية واضحة للتعبير عن المستقبل. هذه مقدمة لصيغة واحدة وليست وصفاً لكل استعمالات werden.",
     "rules": [
       {
-        "de": "ich werde · du wirst · er wird · wir werden · ihr werdet · sie werden",
+        "de": "ich werde · du wirst · er/sie/es wird · wir werden · ihr werdet · sie/Sie werden",
         "ar": "تصريف werden."
       },
       {
@@ -8881,13 +8880,13 @@
         "ar": "سنسافر إلى تونس في الصيف. — werden مصرف + fahren في النهاية"
       }
     ],
-    "eselsbrueckeAr": "تذكَّر دائماً: werden في الموضع الثاني، والمصدر في النهاية — نفس شكل Modalverben.",
+    "eselsbrueckeAr": "في الجملة الخبرية الرئيسية: werden في الموضع الثاني والمصدر في نهاية الإطار الفعلي.",
     "pronTippAr": "",
     "exercises": [
       {
         "id": "a1-futur-einf-ex01",
         "type": "fill",
-        "promptDe": "Ich ___ morgen Deutsch lernen.",
+        "promptDe": "Ich ___ morgen Deutsch lernen. (werden)",
         "answer": [
           "werde"
         ],
@@ -8909,7 +8908,7 @@
       {
         "id": "a1-futur-einf-ex03",
         "type": "fill",
-        "promptDe": "Nächste Woche ___ ich nach Hamburg fahren.",
+        "promptDe": "Nächste Woche ___ ich nach Hamburg fahren. (werden)",
         "answer": [
           "werde"
         ],
@@ -8929,7 +8928,7 @@
       {
         "id": "a1-fut-n2",
         "type": "order",
-        "promptDe": "Bringe die Wörter in die richtige Reihenfolge:",
+        "promptDe": "Beginne mit „Wir“; die Zeitangabe steht vor der Ortsangabe. Bringe die Wörter in die richtige Reihenfolge:",
         "answer": [
           "Wir werden",
           "im Sommer",
@@ -8941,7 +8940,7 @@
       {
         "id": "a1-fut-n3",
         "type": "translate",
-        "promptDe": "ترجم: «سأتعلّم الألمانية.»",
+        "promptDe": "ترجم بـFutur I: «سأتعلّم الألمانية.»",
         "answer": "Ich werde Deutsch lernen.",
         "keywords": [
           "werde",
@@ -8953,15 +8952,15 @@
     "pitfalls": [
       {
         "de": "✗ Ich werde morgen ich lerne. → ✓ Ich werde morgen lernen.",
-        "ar": "فاعل واحد وفعل مصرف واحد (werde) + مصدر في النهاية — لا تكرر الفاعل ولا تصرّف المصدر"
+        "ar": "في الجملة الخبرية الرئيسية فاعل واحد وفعل مصرف واحد (werde)؛ ويأتي المصدر في نهاية الإطار الفعلي، لا فعلاً مصرفاً ثانياً."
       },
       {
         "de": "✗ Wir werden gehen ins Kino. → ✓ Wir werden ins Kino gehen.",
-        "ar": "المصدر (gehen) آخر الجملة بعد المكان والزمان — الترتيب: werde … [متى؟ أين؟] … مصدر"
+        "ar": "في الجملة الخبرية الرئيسية يأتي المصدر في نهاية الإطار الفعلي: Wir werden ins Kino gehen؛ يسبق المصدرَ مكمّل المكان هنا."
       },
       {
         "de": "✗ Er wird morgen kommt. → ✓ Er wird morgen kommen.",
-        "ar": "بعد wird مصدرٌ خام دائماً (kommen لا kommt) — نفس فخ الأفعال الناقصة"
+        "ar": "بعد werden في Futur I يبقى الفعل الرئيسي مصدراً (kommen لا kommt)، ويقع في نهاية الإطار الفعلي في الجملة الرئيسية."
       }
     ]
   },

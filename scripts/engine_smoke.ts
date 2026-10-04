@@ -4088,6 +4088,108 @@ void 0;
     "K161d قاعدة Wechselpräpositionen تفصل Wo?/المكان عن Wohin?/الوجهة وتحرس القرائن والأمثلة المصححة");
 }
 
+
+/* ═══ K162 — R87: تدقيق الدفعة الرابعة من قواعد A1 ═══ */
+{
+  type A1Batch4Item = { id: string; kind: string; status: string; sources: string[]; finding: string; action: string };
+  type A1Batch4Source = { id: string; title: string; url: string; supports: string };
+  const audit = JSON.parse(readFileSync("docs/content-review-a1-grammar-04-2026-10-04.json", "utf8")) as {
+    date: string;
+    batch: string;
+    coverage: { grammarTopics: number; grammarExercises: number; grammarVerify: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>;
+    sources: A1Batch4Source[];
+    items: A1Batch4Item[];
+  };
+  const auditMarkdown = readFileSync("docs/content-review-a1-grammar-04-2026-10-04.md", "utf8");
+  const topicIds = ["a1-imperativ", "a1-perfekt-einf", "a1-futur-einf"];
+  const topics = topicIds.map((id) => grammarMap[id]);
+  const expectedIds = topics.flatMap((topic) => [
+    topic.id,
+    ...topic.exercises.map((exercise) => exercise.id),
+    ...(topic.verify ?? []).map((exercise) => exercise.id),
+  ]);
+  const auditIds = audit.items.map((item) => item.id);
+  const auditById = new Map(audit.items.map((item) => [item.id, item]));
+  const exerciseCount = topics.reduce((total, topic) => total + topic.exercises.length, 0);
+  const verifyCount = topics.reduce((total, topic) => total + (topic.verify?.length ?? 0), 0);
+  ok(topics.length === 3 && exerciseCount === 19 && verifyCount === 6 &&
+    audit.date === "2026-10-04" && audit.batch === "A1-grammar-04" &&
+    audit.coverage.grammarTopics === 3 && audit.coverage.grammarExercises === 19 && audit.coverage.grammarVerify === 6 &&
+    expectedIds.length === 28 && new Set(expectedIds).size === 28 && audit.coverage.totalTrackedItems === 28 &&
+    auditIds.length === 28 && new Set(auditIds).size === 28 && expectedIds.every((id) => auditById.has(id)) &&
+    expectedIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
+    "K162a سجل A1-grammar-04 يغطي الموضوعات الثلاثة وكل تمرين/تحقق في JSON وMarkdown بلا فقد أو تكرار");
+
+  const sourceIds = new Set(audit.sources.map((source) => source.id));
+  const statusCounts = audit.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const completeEvidence = audit.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.sources.length > 0 &&
+    item.sources.every((id) => sourceIds.has(id)) && item.finding.trim().length > 0 && item.action.trim().length > 0
+  );
+  const validSources = audit.sources.length === 22 && audit.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://")
+  );
+  const referencedSources = new Set(audit.items.flatMap((item) => item.sources));
+  const correctedIds = new Set([
+    "a1-imperativ", "a1-imperativ-ex03",
+    "a1-perfekt-einf", "a1-perfekt-einf-ex02", "a1-perf-n2", "a1-perfekt-einf-v1", "a1-perfekt-einf-v2",
+    "a1-futur-einf", "a1-futur-einf-ex01", "a1-futur-einf-ex03", "a1-fut-n2", "a1-fut-n3", "a1-futur-einf-v2",
+  ]);
+  const expectedStatuses = audit.items.every((item) => item.status === (correctedIds.has(item.id) ? "مُصحح" : "سليم"));
+  ok(completeEvidence && validSources && referencedSources.size === audit.sources.length &&
+    expectedStatuses && statusCounts["سليم"] === 15 && statusCounts["مُصحح"] === 13 && !statusCounts["غير محسوم"] &&
+    audit.statusCounts["سليم"] === 15 && audit.statusCounts["مُصحح"] === 13 && audit.statusCounts["غير محسوم"] === 0,
+    "K162b لكل واحد من 28 عنصراً دليل ومصدر وحكم وإجراء؛ 15 سليماً و13 مصححاً بلا حالة غير محسومة");
+
+  const getExercise = (topicId: string, id: string) => grammarMap[topicId]?.exercises.find((exercise) => exercise.id === id);
+  const getVerify = (topicId: string, id: string) => grammarMap[topicId]?.verify?.find((exercise) => exercise.id === id);
+  const imperativeTopic = grammarMap["a1-imperativ"];
+  const imperativeExercise3 = getExercise("a1-imperativ", "a1-imperativ-ex03");
+  ok(!!(imperativeTopic.summaryAr.includes("بحسب الصيغة") &&
+    imperativeTopic.rules[2]?.ar.includes("قبل الضمير Sie") &&
+    imperativeTopic.pitfalls?.[1]?.de.includes("Zu einem Freund") &&
+    imperativeTopic.pitfalls?.[1]?.de.includes("Zu mehreren Freunden") &&
+    Array.isArray(imperativeExercise3?.answer) && imperativeExercise3.answer.length === 1 &&
+    imperativeExercise3.answer[0] === "Sprecht" &&
+    getVerify("a1-imperativ", "a1-imperativ-v1")?.answer[0] === "Sei"),
+    "K162c تمييز صيغ Imperativ بحسب المخاطب وحراسة أمر du/ihr وsein وإزالة بديل جواب مكرر");
+
+  const perfektTopic = grammarMap["a1-perfekt-einf"];
+  const perfektExercise2 = getExercise("a1-perfekt-einf", "a1-perfekt-einf-ex02");
+  const perfektOrder = getExercise("a1-perfekt-einf", "a1-perf-n2");
+  const perfektVerify1 = getVerify("a1-perfekt-einf", "a1-perfekt-einf-v1");
+  const perfektVerify2 = getVerify("a1-perfekt-einf", "a1-perfekt-einf-v2");
+  ok(!!(perfektTopic.ziel?.includes("أمثلة الدرس المحددة") &&
+    perfektTopic.summaryAr.includes("الجملة الخبرية الرئيسية") &&
+    perfektTopic.summaryAr.includes("الجملة التابعة") &&
+    perfektTopic.pitfalls?.[0]?.ar.includes("fahren في معنى الانتقال") &&
+    perfektTopic.pitfalls?.[0]?.ar.includes("bleiben") &&
+    perfektExercise2?.promptDe.includes("(arbeiten)") &&
+    perfektOrder?.promptDe.includes("Beginne mit „Ich“") &&
+    perfektVerify1?.promptDe === "Heute habe ich viel ___. (lernen)" && perfektVerify1.text === perfektVerify1.promptDe &&
+    perfektVerify2?.promptDe.includes("بـPerfekt")),
+    "K162d تحديد قرائن Perfekt والتمييز بين الجملة الرئيسية والتابعة وتصحيح اختيار sein وترقيم الفراغات");
+
+  const futurTopic = grammarMap["a1-futur-einf"];
+  const futurExercise1 = getExercise("a1-futur-einf", "a1-futur-einf-ex01");
+  const futurExercise3 = getExercise("a1-futur-einf", "a1-futur-einf-ex03");
+  const futurOrder = getExercise("a1-futur-einf", "a1-fut-n2");
+  const futurTranslation = getExercise("a1-futur-einf", "a1-fut-n3");
+  const futurVerify2 = getVerify("a1-futur-einf", "a1-futur-einf-v2");
+  ok(!!(futurTopic.rules[0]?.de.includes("sie/Sie werden") &&
+    futurTopic.summaryAr.includes("Präsens") && futurTopic.summaryAr.includes("الجملة الخبرية الرئيسية") &&
+    futurExercise1?.promptDe.includes("(werden)") && futurExercise3?.promptDe.includes("(werden)") &&
+    futurOrder?.promptDe.includes("Beginne mit „Wir“") && futurOrder.promptDe.includes("Zeitangabe steht vor der Ortsangabe") &&
+    futurTranslation?.promptDe.includes("بـFutur I") &&
+    futurVerify2?.promptDe.includes("für nächstes Jahr") && futurVerify2.promptDe.includes("Futur I") &&
+    futurVerify2.answer === "Ich werde nächstes Jahr Deutsch lernen."),
+    "K162e تقييد Futur I بجملة رئيسية وإضافة Sie والتنبيه إلى Präsens وحسم تلميحات التمارين");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
