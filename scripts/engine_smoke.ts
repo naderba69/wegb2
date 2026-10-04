@@ -4190,6 +4190,107 @@ void 0;
     "K162e تقييد Futur I بجملة رئيسية وإضافة Sie والتنبيه إلى Präsens وحسم تلميحات التمارين");
 }
 
+/* ═══ K163 — R88: تدقيق الدفعة الخامسة من قواعد A1 ═══ */
+{
+  type A1Batch5Item = { id: string; kind: string; status: string; sources: string[]; finding: string; action: string };
+  type A1Batch5Source = { id: string; title: string; url: string; supports: string };
+  const audit = JSON.parse(readFileSync("docs/content-review-a1-grammar-05-2026-10-04.json", "utf8")) as {
+    date: string;
+    batch: string;
+    scope: string;
+    method: string;
+    coverage: { grammarTopics: number; grammarExercises: number; grammarVerify: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>;
+    sources: A1Batch5Source[];
+    items: A1Batch5Item[];
+    limitations: string[];
+  };
+  const auditMarkdown = readFileSync("docs/content-review-a1-grammar-05-2026-10-04.md", "utf8");
+  const rulesMarkdown = readFileSync("RULES.md", "utf8");
+  const topicIds = ["a1-war-hatte", "a1-weil-dass", "a1-plural", "a1-zeitpraep"];
+  const topics = topicIds.map((id) => grammarMap[id]);
+  const expectedIds = topics.flatMap((topic) => [
+    topic.id,
+    ...topic.exercises.map((exercise) => exercise.id),
+    ...(topic.verify ?? []).map((exercise) => exercise.id),
+  ]);
+  const auditIds = audit.items.map((item) => item.id);
+  const auditById = new Map(audit.items.map((item) => [item.id, item]));
+  const exerciseCount = topics.reduce((total, topic) => total + topic.exercises.length, 0);
+  const verifyCount = topics.reduce((total, topic) => total + (topic.verify?.length ?? 0), 0);
+  ok(topicIds.length === 4 && exerciseCount === 26 && verifyCount === 8 &&
+    audit.date === "2026-10-04" && audit.batch === "A1-grammar-05" &&
+    audit.coverage.grammarTopics === 4 && audit.coverage.grammarExercises === 26 && audit.coverage.grammarVerify === 8 &&
+    expectedIds.length === 38 && new Set(expectedIds).size === 38 && audit.coverage.totalTrackedItems === 38 &&
+    auditIds.length === 38 && new Set(auditIds).size === 38 && expectedIds.every((id) => auditById.has(id)) &&
+    expectedIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
+    "K163a سجل A1-grammar-05 يغطي الموضوعات الأربعة وكل تمرين/تحقق في JSON وMarkdown بلا فقد أو تكرار");
+
+  const sourceIds = new Set(audit.sources.map((source) => source.id));
+  const statusCounts = audit.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const completeEvidence = audit.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.sources.length > 0 &&
+    item.sources.every((id) => sourceIds.has(id)) && item.finding.trim().length > 0 && item.action.trim().length > 0
+  );
+  ok(completeEvidence && audit.items.every((item) => item.kind.trim().length > 0) &&
+    statusCounts["سليم"] + statusCounts["مُصحح"] + (statusCounts["غير محسوم"] ?? 0) === 38,
+    "K163b لكل عنصر دليل وحكم ومصدر معروف وإجراء؛ لا تُسجل خانة مراجعة فارغة");
+
+  const referencedSources = new Set(audit.items.flatMap((item) => item.sources));
+  const sourceById = new Map(audit.sources.map((source) => [source.id, source]));
+  const validSources = audit.sources.length === 24 && audit.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://")
+  );
+  ok(validSources && referencedSources.size === audit.sources.length && audit.sources.every((source) => referencedSources.has(source.id)) &&
+    sourceById.get("S2")?.url === "https://www.dw.com/downloads/36168216/prteritum-der-modalverben.pdf" &&
+    sourceById.get("S3")?.url === "https://grammis.ids-mannheim.de/progr@mm/5202" &&
+    sourceById.get("S12")?.url === "https://learngerman.dw.com/en/nouns-plural/l-37372077/gr-38306003" &&
+    sourceById.get("S24")?.url === "https://www.duden.de/rechtschreibung/Zimmer",
+    "K163c المصادر الـ24 مباشرة وموثقة ومستخدمة؛ تُحرس روابط DW/IDS/Duden المصححة");
+
+  const correctedIds = new Set([
+    "a1-war-hatte", "a1-war-hatte-e4", "a1-war-hatte-e5",
+    "a1-weil-dass", "a1-weil-e3", "a1-weil-e5",
+    "a1-plural", "a1-plural-n2", "a1-plural-v1", "a1-zeitpraep",
+  ]);
+  const expectedStatuses = audit.items.every((item) => item.status === (correctedIds.has(item.id) ? "مُصحح" : "سليم"));
+  ok(expectedStatuses && statusCounts["سليم"] === 28 && statusCounts["مُصحح"] === 10 && !statusCounts["غير محسوم"] &&
+    audit.statusCounts["سليم"] === 28 && audit.statusCounts["مُصحح"] === 10 && audit.statusCounts["غير محسوم"] === 0,
+    "K163d أحكام الدفعة متطابقة: 28 سليماً و10 مصححاً ولا حالة غير محسومة");
+
+  const warTopic = grammarMap["a1-war-hatte"];
+  const weilTopic = grammarMap["a1-weil-dass"];
+  const pluralTopic = grammarMap["a1-plural"];
+  const timeTopic = grammarMap["a1-zeitpraep"];
+  ok(!!(warTopic.summaryAr.includes("Perfekt") && warTopic.pitfalls?.[1]?.ar.includes("Ersatzinfinitiv") &&
+    weilTopic.summaryAr.includes("سبباً") && weilTopic.summaryAr.includes("مضمون قول أو اعتقاد") &&
+    weilTopic.summaryAr.includes("ترتيب V2") && !weilTopic.summaryAr.includes("أشهر خطأ عند العرب") &&
+    pluralTopic.summaryAr.includes("Zimmer → die Zimmer") && pluralTopic.rules[0]?.de.includes("Stift → die Stifte") &&
+    pluralTopic.rules[0]?.de.includes("Stuhl → die Stühle") && pluralTopic.rules[1]?.de.includes("Kind → die Kinder") &&
+    pluralTopic.rules[1]?.de.includes("Buch → die Bücher") &&
+    timeTopic.summaryAr.includes("am") && timeTopic.summaryAr.includes("in der Nacht") &&
+    timeTopic.summaryAr.includes("um") && timeTopic.summaryAr.includes("im") && timeTopic.summaryAr.includes("Dativ")),
+    "K163e يحرس الفروق المصححة في Präteritum/Perfekt وweil/dass وأنماط الجمع وحروف الزمن");
+
+  const weilExercise3 = grammarMap["a1-weil-dass"].exercises.find((exercise) => exercise.id === "a1-weil-e3");
+  const weilAudit = auditById.get("a1-weil-e3");
+  const hobbyExercise = grammarMap["a1-plural"].exercises.find((exercise) => exercise.id === "a1-plural-n7");
+  const hobbyAudit = auditById.get("a1-plural-n7");
+  const r88Line = rulesMarkdown.split("\n").find((line) => line.startsWith("| R88 |"));
+  ok(!!(weilExercise3?.promptDe.includes("Welche Konjunktion nennt hier den Grund?") &&
+    weilExercise3.promptAr?.includes("أداة التعليل") && weilExercise3.answer === "Weil" &&
+    weilAudit?.finding.includes("أداة تعليل") && weilAudit.action.includes("promptDe") &&
+    hobbyExercise?.answer === "true" && hobbyAudit?.finding.includes("das Hobby") &&
+    hobbyAudit.finding.includes("die Hobbys") && !hobbyAudit.finding.includes("? لا") &&
+    audit.scope.includes("a1-war-hatte") && audit.scope.includes("a1-zeitpraep") &&
+    audit.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&
+    r88Line?.includes("K163") && r88Line.includes("38 عنصراً")),
+    "K163f صياغة سؤال السبب وسجل Hobby وحدود النطاق وعدم ادعاء مراجعة بشرية مرتبطة بقرار R88");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

@@ -9874,7 +9874,7 @@
   "a1-war-hatte": {
     "id": "a1-war-hatte",
     "level": "A1",
-    "ziel": "تستخدم war/hatte/konnte/musste في الماضي.",
+    "ziel": "تستخدم صيغ Präteritum لـ sein وhaben والأفعال الناقصة الشائعة (war, hatte, konnte, musste) في جمل عن الماضي.",
     "voraus": [
       "a1-sein-haben"
     ],
@@ -9910,8 +9910,8 @@
     ],
     "titleDe": "war · hatte · konnte · musste (Präteritum der Hilfs-/Modalverben im A1)",
     "titleAr": "كان · كان لديه · استطاع · اضطر (ماضي الأفعال المساعدة والناقصة في A1)",
-    "regel": "Placeholder pending full authoring.",
-    "regelAr": "نموذج مؤقت في انتظار الصياغة الكاملة.",
+    "regel": "Im gesprochenen Deutsch stehen sein, haben und Modalverben häufig im Präteritum: Ich war krank. Wir hatten Zeit. Ich konnte nicht kommen. Beim Modalverb steht das Vollverb im Infinitiv am Satzende.",
+    "regelAr": "في الكلام اليومي يشيع Präteritum مع sein وhaben والأفعال الناقصة. ومع الفعل الناقص يبقى الفعل الأساسي مصدراً في نهاية الجملة.",
     "achse": "a1-war-hatte",
     "exercises": [
       {
@@ -9953,8 +9953,8 @@
       {
         "id": "a1-war-hatte-e4",
         "type": "mc",
-        "promptDe": "Sie … das nicht tun. (nicht erlaubt)",
-        "promptAr": "لم يُسمح لها بفعل ذلك — اختر الفعل الناقص المناسب.",
+        "promptDe": "Anna ___ das nicht tun. (dürfen; nicht erlaubt)",
+        "promptAr": "لم يُسمح لآنا بفعل ذلك — اختر الصيغة الماضية من dürfen.",
         "options": [
           "durfte",
           "musste",
@@ -9967,16 +9967,16 @@
       {
         "id": "a1-war-hatte-e5",
         "type": "mc",
-        "promptDe": "Welcher Satz ist richtig?",
-        "promptAr": "أي الجمل الآتية صحيح؟",
+        "promptDe": "Welcher Satz steht im Präteritum?",
+        "promptAr": "أي جملة جاءت في Präteritum؟",
         "options": [
           "Ich musste gestern lernen.",
-          "Ich habe gestern müssen lernen.",
+          "Ich habe gestern lernen müssen.",
           "Ich muss gestern lernen.",
           "Ich gemusst gestern lernen."
         ],
         "answer": "Ich musste gestern lernen.",
-        "explanationAr": "الناقصة في الماضي تأتي مباشرة (musste) دون Perfekt."
+        "explanationAr": "المطلوب Präteritum: musste. الخيار Ich habe gestern lernen müssen صحيح أيضاً بوصفه Perfekt مع Ersatzinfinitiv، لكنه ليس الزمن المطلوب في السؤال."
       },
       {
         "id": "a1-war-hatte-e6",
@@ -9996,16 +9996,16 @@
     ],
     "pitfalls": [
       {
-        "de": "❌ Ich bin gestern in der Schule gewesen … (صحيح شفوياً لكن في الكتابة الأفضل: Ich war gestern in der Schule.)",
-        "ar": "في السرد المكتوب استعمل war بدلاً من bin gewesen في A1."
+        "de": "✓ Ich bin gestern in der Schule gewesen. / ✓ Ich war gestern in der Schule.",
+        "ar": "كلاهما صحيح؛ ويشيع Präteritum من sein في الكلام. يستهدف هذا الدرس war، ولا يجعل bin gewesen خطأً نحوياً."
       },
       {
-        "de": "❌ Ich habe gestern müssen arbeiten → ✅ Ich musste gestern arbeiten.",
-        "ar": "الأفعال الناقصة في الماضي تأتي مباشرة (musste/konnte) لا ببناء Perfekt."
+        "de": "Perfekt mit Modalverb: ✗ Ich habe gestern müssen arbeiten. → ✓ Ich habe gestern arbeiten müssen.",
+        "ar": "Perfekt مع فعل ناقص ومصدرٍ تابع ممكن بصيغة Ersatzinfinitiv؛ يأتي المصدر قبل الفعل الناقص في النهاية: arbeiten müssen. أما التمرينات هنا فتستهدف Präteritum: musste arbeiten."
       },
       {
-        "de": "❌ Ich habe müssen gehen (فخ فارسي/عربي) → ✅ Ich musste gehen.",
-        "ar": "لا تستعمل Perfekt مع الناقصة في A1 — Präteritum أقصر وأصح."
+        "de": "Bei einer vergangenen Tatsache: ✗ Ich müsste gestern arbeiten. → ✓ Ich musste gestern arbeiten.",
+        "ar": "müsste صيغة Konjunktiv II؛ وللتقرير عن واجبٍ ماضٍ فعلي استعمل musste."
       }
     ],
     "examples": [
@@ -10026,25 +10026,25 @@
         "ar": "لم تستطع المجيء لأنها كانت مريضة."
       },
       {
-        "de": "Ich wollte dich anrufen, aber ich hatte dein Nummer nicht.",
+        "de": "Ich wollte dich anrufen, aber ich hatte deine Nummer nicht.",
         "ar": "أردتُ الاتصال بك لكن لم يكن لدي رقمك."
       }
     ],
     "rules": [
       {
-        "de": "sein (war/gewesen) und haben (hatte/gehabt) sind die Brücken zwischen Präsens und Vergangenheit. Im A1 lernst du die Präteritum-Formen war und hatte sowie die Modalverben im Präteritum (konnte, musste, sollte, wollte, durfte, mochte), weil sie auch in gesprochener Sprache üblicher sind als das Perfekt.",
-        "ar": "في A1 تتعلّم صيغ Präteritum لـ sein (war) و haben (hatte) والأفعال الناقصة (konnte/musste/sollte/wollte/durfte/mochte)، لأنها الأكثر شيوعاً في الكلام اليومي أيضاً — على عكس بقية الأفعال التي تبقى في Perfekt حتى مراحل لاحقة."
+        "de": "Im gesprochenen Deutsch wird bei sein, haben und Modalverben häufig das Präteritum verwendet. Viele andere Vollverben stehen beim Erzählen oft im Perfekt; das ist eine Gebrauchstendenz, keine starre Regel. Beispiel: Ich war zu Hause; ich habe Brot gekauft.",
+        "ar": "في الكلام اليومي يشيع Präteritum مع sein وhaben والأفعال الناقصة؛ وكثيراً ما تُروى أفعال أخرى بـPerfekt. هذا ميل في الاستعمال لا قاعدة تمنع صيغةً أخرى."
       },
       {
-        "de": "ich/er/sie/es → war/hatte/konnte/musste · du → warst/hattest/konntest/musstest · wir/Sie/sie → waren/hatten/konnten/mussten · ihr → wart/hattet/konntet/musstet",
-        "ar": "التصريف: ich/er/sie/es يأخذ war/hatte/konnte/musste؛ du تضيف -st؛ wir/Sie/sie يأخذون -en؛ ihr تضيف -t."
+        "de": "ich/er/sie/es → war/hatte/konnte/musste · du → warst/hattest/konntest/musstest · wir/sie (Plural)/Sie (formell) → waren/hatten/konnten/mussten · ihr → wart/hattet/konntet/musstet",
+        "ar": "التصريف: ich وer/sie/es لهما الصيغة نفسها؛ du يأخذ -st؛ wir وsie الجمع وSie الرسمية يأخذون -en؛ ihr يأخذ -t. انتبه إلى الصيغ الخاصة wart وhattet."
       },
       {
-        "de": "Für die Bedeutung (Präsens): sein = sein/ist · haben = haben/hat · können = kann · müssen = muss · sollen = soll · wollen = will · dürfen = darf · mögen = mag. Im Präteritum wird daraus war · hatte · konnte · musste · sollte · wollte · durfte · mochte.",
-        "ar": "المعاني: sein كان (Präsens: ist)، haben كان لديه/عنده (hat)، können استطاع (kann)، müssen اضطر/يجب (muss)، sollen ينبغي (soll)، wollen أراد (will)، dürfen سُمح له (darf)، mögen أحبَّ (mag). في Präteritum تصبح war · hatte · konnte · musste · sollte · wollte · durfte · mochte."
+        "de": "Präsens → Präteritum (ich): ich bin → ich war · ich habe → ich hatte · ich kann → ich konnte · ich muss → ich musste · ich soll → ich sollte · ich will → ich wollte · ich darf → ich durfte · ich mag → ich mochte.",
+        "ar": "مقابلات المفرد بين الحاضر والماضي: ich bin → ich war، ich habe → ich hatte، ich kann → ich konnte، ich muss → ich musste، وهكذا في أمثلة الأفعال الناقصة."
       }
     ],
-    "summaryAr": "كان · كان لديه · استطاع · اضطر (ماضي الأفعال المساعدة والناقصة في A1)"
+    "summaryAr": "في الكلام اليومي يشيع Präteritum مع sein وhaben والأفعال الناقصة: war, hatte, konnte, musste. مع الناقص يأتي الفعل الأساسي مصدراً في نهاية الجملة: Ich musste gestern arbeiten. ويمكن أيضاً استعمال Perfekt مع الناقص، مثل Ich habe gestern arbeiten müssen؛ هذا الدرس يركز على صيغة Präteritum."
   },
   "b1-funktionsverben": {
     "id": "b1-funktionsverben",
@@ -11140,10 +11140,10 @@
   },
   "a1-weil-dass": {
     "id": "a1-weil-dass",
-    "titleDe": "weil · dass — Gründe nennen",
+    "titleDe": "weil · dass — Gründe und Aussagen verbinden",
     "titleAr": "لأن وأن — الجمل التابعة في المستوى A1",
     "level": "A1",
-    "ziel": "تبني جملة تابعة بـ weil/dass والفعل في آخرها.",
+    "ziel": "تربط جملتين بـ weil للسبب أو بـ dass لمضمون قول أو اعتقاد، مع الفعل المصرف في نهاية الجملة التابعة المستهدفة.",
     "voraus": [
       "a1-praesens"
     ],
@@ -11179,19 +11179,19 @@
         "points": 2
       }
     ],
-    "summaryAr": "مع weil (لأن، سبب) وdass (أنّ، خبر/اعتقاد) تذهب إلى الجملة التابعة فعلاً مُصرَّفاً في نهايتها: «Ich bleibe zu Hause, weil ich müde bin.» — لا تقول «weil ich bin müde»؛ هذا أشهر خطأ عند العرب. ويمكنك البدء بالجملة التابعة: «Weil es regnet, nehme ich den Regenschirm.» ثم تأتي الجملة الرئيسية بفعلها ثانياً. هنا نبقى في المضارع البسيط؛ التراكيب المركّبة (wenn/obwohl، فعلان) تأتي في A2.",
+    "summaryAr": "في الجملة التابعة المستهدفة، يقدّم weil سبباً ويقدّم dass مضمون قول أو اعتقاد؛ ويأتي الفعل المصرف عادةً في النهاية، مع فاصلة تفصل التابعة عن الرئيسية: Ich bleibe zu Hause, weil ich müde bin. ويمكن تقديم التابعة: Weil es regnet, nehme ich den Regenschirm؛ بعد الفاصلة يأتي فعل الجملة الرئيسية ثم الفاعل. توجد استعمالات محكية مخصوصة لـ weil مع ترتيب V2، لكنها ليست البناء الذي يتدرّب عليه هذا الدرس.",
     "rules": [
       {
         "de": "Ich bleibe zu Hause, weil ich müde bin.",
-        "ar": "weil تفتح جملة تابعة: الفعل المصرَّف يذهب إلى نهايتها — bin في آخر السطر."
+        "ar": "في الجملة التابعة المعيارية التي يتدرّب عليها الدرس، يذهب الفعل المصرف إلى النهاية: bin في آخر العبارة التابعة."
       },
       {
         "de": "Sie sagt, dass sie heute aus Tunesien anruft.",
-        "ar": "dass بعد أفعال القول والاعتقاد (sagen, wissen, glauben): الفعل المصرَّف أيضاً في النهاية — anruft في آخره."
+        "ar": "dass يقدّم مضمون قول أو معرفة أو اعتقاد (sagen, wissen, glauben)؛ والفعل المصرف يأتي في نهاية التابعة: anruft."
       },
       {
         "de": "Weil es regnet, nehme ich den Regenschirm.",
-        "ar": "ابدأ بالتابعة إن شئت: بعد الفاصلة تأتي الجملة الرئيسية بفعلها ثانياً ثم فاعلها (nehme ich) — الفعل المصرَّف يبقى في التابعة."
+        "ar": "إذا تقدمت التابعة، تأتي بعد الفاصلة الجملة الرئيسية بترتيب V2: الفعل المصرف ثم الفاعل (nehme ich). يبقى الفعل المصرف في التابعة عند نهايتها."
       }
     ],
     "tables": [],
@@ -11215,12 +11215,12 @@
     ],
     "pitfalls": [
       {
-        "de": "„weil ich bin müde“ ✗ → „weil ich müde bin“ ✓",
-        "ar": "أشهر خطأ عند المتعلمين العرب: لا تُبقي ترتيبك العربي — المصرَّف في النهاية."
+        "de": "In der hier geübten Nebensatzstellung: ✗ „…, weil ich bin müde“ → ✓ „…, weil ich müde bin“.",
+        "ar": "في الجملة التابعة المستهدفة يأتي الفعل المصرف في النهاية. قد يظهر ترتيب V2 مع weil في استعمالات محكية محددة؛ لا نعمم ذلك على هذه البنية التعليمية."
       },
       {
-        "de": "„Ich habe keine Zeit, weil ich Arbeit“ ✗ → „…, weil ich arbeite“ ✓",
-        "ar": "الجملة التابعة لا تكون بلا فعل: خذ الفعل من الجملة الأصلية واصرِّفه في النهاية (arbeite)."
+        "de": "✗ Ich habe keine Zeit, weil ich Arbeit. → ✓ Ich habe keine Zeit, weil ich viel Arbeit habe.",
+        "ar": "لا تترك الجملة التابعة بلا فعل، ولا تحذف اسم Arbeit؛ حافظ على المعنى وأكملها بالفعل haben في النهاية: weil ich viel Arbeit habe."
       }
     ],
     "exercises": [
@@ -11245,14 +11245,15 @@
       {
         "id": "a1-weil-e3",
         "type": "mc",
-        "promptDe": "___ du krank bist, darfst du heute zuhause bleiben.",
+        "promptDe": "Welche Konjunktion nennt hier den Grund? ___ du krank bist, darfst du heute zu Hause bleiben.",
+        "promptAr": "اختر أداة التعليل التي تذكر سبب السماح بالبقاء في المنزل.",
         "options": [
           "Weil",
           "Dass",
           "Ob"
         ],
         "answer": "Weil",
-        "explanationAr": "weil يفتح سبباً: «لأنّك مريض…». dass/ob لا يفتحان جملة شرط في هذا التركيب."
+        "explanationAr": "weil يقدّم سبباً يجيب عن Warum?؛ أما dass فيقدّم مضموناً. السؤال يطلب أداة التعليل، لذا الإجابة Weil."
       },
       {
         "id": "a1-weil-e4",
@@ -11272,7 +11273,7 @@
       {
         "id": "a1-weil-e5",
         "type": "translate",
-        "promptDe": "ترجم: أبقى في البيت لأنّ الجوّ ممطراً.",
+        "promptDe": "ترجم إلى الألمانية باستعمال weil: «أبقى في البيت لأنّ الجو ممطر.»",
         "answer": "Ich bleibe zu Hause, weil es regnet.",
         "keywords": [
           "weil",
@@ -11444,9 +11445,9 @@
   "a1-plural": {
     "id": "a1-plural",
     "level": "A1",
-    "titleDe": "Pluralbildung: -e/-er/-en/-s",
-    "titleAr": "جمع الأسماء",
-    "ziel": "تجمع الأسماء الشائعة بالنهايات الأربع مع الإمالة حيث تجب.",
+    "titleDe": "Pluralbildung: häufige Muster",
+    "titleAr": "أنماط شائعة لجمع الأسماء",
+    "ziel": "تتعرف أنماطاً شائعة للجمع (-e، -er، -(e)n، -s) وتربط Umlaut بالكلمة المحددة؛ احفظ الاسم مع أداته وجمعه.",
     "voraus": [
       "a1-akkusativ"
     ],
@@ -11455,28 +11456,28 @@
       "de": "Beschreibe dein Zimmer mit sechs Plural-Sätzen.",
       "candoIds": []
     },
-    "summaryAr": "للجمع أربع نهايات: ‎-e مع إمالة غالباً (Stühle) و‎-er مع إمالة (Kinder) و‎-(e)n للمؤنث (Frauen) و‎-s للدخيل (Autos) — واحفظ كل اسم بجمعه.",
+    "summaryAr": "لا توجد نهاية جمع واحدة تنطبق على كل الأسماء. من الأنماط الشائعة -e و-er و-(e)n و-s؛ كما توجد أسماء بلا نهاية مثل Zimmer → die Zimmer، وقد يصاحب بعض الجموع Umlaut. يتوقف الشكل على الاسم، فاحفظ كل اسم مع أداته وصيغته في الجمع.",
     "rules": [
       {
-        "de": "Viele Maskulina + Neutra: -e, oft mit Umlaut — der Stuhl → die Stühle · das Heft → die Hefte",
-        "ar": "كثير من المذكر والمحايد يأخذ ‎-e مع إمالة غالباً: Stuhl ← Stühle (u ← ü)."
+        "de": "Viele Maskulina und einige Neutra bilden den Plural auf -e; bei manchen kommt ein Umlaut dazu: der Stift → die Stifte · der Stuhl → die Stühle",
+        "ar": "كثير من المذكر وبعض المحايد يأخذ -e؛ وقد تظهر الإمالة في بعض الكلمات: Stift → Stifte بلا إمالة، وStuhl → Stühle بإمالة."
       },
       {
-        "de": "Kurze Neutra: -er mit Umlaut — das Kind → die Kinder · das Buch → die Bücher",
-        "ar": "المحايد القصير غالباً ‎-er مع إمالة: Kind ← Kinder."
+        "de": "Einige kurze Neutra bilden den Plural mit -er, mit oder ohne Umlaut: das Kind → die Kinder · das Buch → die Bücher",
+        "ar": "بعض الأسماء المحايدة القصيرة تأخذ -er؛ لا تلزم الإمالة مع اللاحقة: Kind → Kinder بلا Umlaut، لكن Buch → Bücher بإمالة."
       },
       {
-        "de": "Feminina fast immer -(e)n — die Frau → die Frauen · die Tasche → die Taschen",
-        "ar": "المؤنث يكاد يكون دائماً ‎-(e)n بلا إمالة: Frau ← Frauen."
+        "de": "Viele Feminina bilden den Plural mit -(e)n: die Frau → die Frauen · die Tasche → die Taschen; die Pluralform hängt vom einzelnen Nomen ab.",
+        "ar": "كثير من الأسماء المؤنثة يأخذ -(e)n: Frau → Frauen وTasche → Taschen؛ احفظ صيغة كل اسم ولا تجعلها قاعدة بلا استثناء."
       },
       {
-        "de": "Fremdwörter + Abkürzungen: -s — das Auto → die Autos · das Hobby → die Hobbys",
-        "ar": "الدخيل والمختصرات ‎-s — واحفظ كل اسم جديد بأداته وجمعه معاً!"
+        "de": "Bei manchen Fremdwörtern und Abkürzungen steht im Plural -s: das Auto → die Autos · das Hobby → die Hobbys.",
+        "ar": "تأخذ بعض الكلمات الدخيلة وبعض المختصرات -s، مثل Auto → Autos وHobby → Hobbys؛ وليس كل اسم دخيل على النمط نفسه."
       }
     ],
     "tables": [
       {
-        "captionAr": "نهايات الجمع الأربع",
+        "captionAr": "أمثلة لأنماط جمع شائعة، لا قائمة كاملة",
         "headers": [
           "النهاية",
           "مثال",
@@ -11486,22 +11487,27 @@
           [
             "-e",
             "die Stühle",
-            "غالباً نعم"
+            "في بعض الكلمات"
           ],
           [
             "-er",
-            "die Kinder",
-            "نعم"
+            "die Kinder / die Bücher",
+            "مع Umlaut أو بدونه بحسب الكلمة"
           ],
           [
             "-(e)n",
-            "die Frauen",
-            "لا"
+            "die Frauen / die Taschen",
+            "لا في هذين المثالين"
           ],
           [
             "-s",
             "die Autos",
-            "لا"
+            "لا في هذا المثال"
+          ],
+          [
+            "—",
+            "die Zimmer",
+            "لا نهاية جديدة؛ وقد يتغير الجذر في كلمات أخرى"
           ]
         ]
       }
@@ -11541,7 +11547,7 @@
         "answer": [
           "Kinder"
         ],
-        "explanationAr": "محايد قصير ← ‎-er مع إمالة: die Kinder."
+        "explanationAr": "هنا يضاف -er بلا تغيير حركة: Kind → Kinder؛ لا تلزم الإمالة مع هذه اللاحقة."
       },
       {
         "id": "a1-plural-n3",
@@ -11614,7 +11620,7 @@
         "answer": [
           "Kinder"
         ],
-        "explanationAr": "Kind ← Kinder: المحايد القصير يأخذ ‎-er."
+        "explanationAr": "Kind → Kinder: يضاف -er هنا من دون Umlaut. صيغة الجمع تُحفظ مع الاسم."
       },
       {
         "id": "a1-plural-v2",
@@ -11632,7 +11638,7 @@
     "pitfalls": [
       {
         "de": "✗ die Stuhle → ✓ die Stühle",
-        "ar": "نسيان الإمالة أشهر خطأ: u ← ü مع ‎-e."
+        "ar": "في Stühle تجتمع اللاحقة -e والإمالة؛ احفظ Umlaut مع صيغة الاسم ولا تستنتجه من اللاحقة وحدها."
       },
       {
         "de": "✗ die Kinds → ✓ die Kinder",
@@ -11649,7 +11655,7 @@
     "level": "A1",
     "titleDe": "Zeitpräpositionen: am/um/im/vor/nach",
     "titleAr": "حروف الوقت",
-    "ziel": "تحدد الزمن صحيحاً: الأيام بـam والساعة بـum والشهور بـim وقبل/بعد بحالة الجر.",
+    "ziel": "تختار am للأيام وأجزاء النهار (والليل: in der Nacht)، وum للساعة المحددة، وim للشهور والفصول، وvor/nach الزمانيتين مع Dativ.",
     "voraus": [
       "a1-zahlen"
     ],
@@ -11658,15 +11664,15 @@
       "de": "Schreibe dein Tagesprogramm mit vier Sätzen.",
       "candoIds": []
     },
-    "summaryAr": "للزمن أربعة حروف: ‎am للأيام وأجزائها و‎um للساعة المحددة و‎im للشهور والفصول و‎vor/nach (قبل/بعد) مع حالة الجر.",
+    "summaryAr": "للزمن: am للأيام وأجزاء النهار مثل am Morgen، لكن نقول in der Nacht؛ um للساعة المحددة؛ im للشهور والفصول؛ وvor/nach قبل حدث أو بعده مع Dativ.",
     "rules": [
       {
-        "de": "am + Tag/Tagesteil: am Montag · am Morgen · am Wochenende",
-        "ar": "‎am للأيام وأجزاء اليوم (وهي مدمجة an+dem — ستدرس الدمج في a2-verschmolzene)."
+        "de": "am + Tag/Tagesteil: am Montag · am Morgen · am Wochenende; Ausnahme: in der Nacht",
+        "ar": "am للأيام وأجزاء النهار، وهو اختصار an + dem؛ نقول am Morgen وam Wochenende، لكن in der Nacht."
       },
       {
-        "de": "um + Uhrzeit: um 8 Uhr · um halb neun",
-        "ar": "‎um للساعة المحددة فقط."
+        "de": "um + genaue Uhrzeit: um 8 Uhr · um halb neun",
+        "ar": "نستعمل um مع وقت الساعة المحدد: um 8 Uhr وum halb neun."
       },
       {
         "de": "im + Monat/Jahreszeit: im Mai · im Sommer",
@@ -11832,7 +11838,7 @@
     "pitfalls": [
       {
         "de": "✗ am 8 Uhr → ✓ um 8 Uhr",
-        "ar": "الساعة المحددة ‎um دائماً — ‎am للأيام فقط."
+        "ar": "وقت الساعة المحدد يأتي مع um؛ أمّا am فتأتي مع الأيام وأجزاء النهار مثل am Morgen، مع الاستثناء in der Nacht."
       },
       {
         "de": "✗ in Montag → ✓ am Montag",
