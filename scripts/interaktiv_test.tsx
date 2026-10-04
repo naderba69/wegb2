@@ -1420,6 +1420,124 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
   const minutenEffektivTest = (p: { plan: { minutenEffektiv?: number } }) => p.plan.minutenEffektiv ?? 0;
+  /* ═══ LXXXIII — R32: طيارُ de-DE المحلي، بلا fallback وبلا حكمٍ لغوي ═══ */
+  {
+    const W = dom.window as unknown as Record<string, unknown>;
+    const priorStandard = W.SpeechRecognition;
+    const priorWebkit = W.webkitSpeechRecognition;
+    let availability: "downloadable" | "available" = "downloadable";
+    let availabilityOptions: unknown = null;
+    let installOptions: unknown = null;
+    let installCalls = 0;
+    let webkitStarts = 0;
+    const startSnapshotRef: { current: { lang: string; processLocally: boolean } | null } = { current: null };
+    const recognitionRef: { current: StubLocalRecognition | null } = { current: null };
+
+    class StubLocalRecognition {
+      static async available(options: unknown) {
+        availabilityOptions = options;
+        return availability;
+      }
+      static async install(options: unknown) {
+        installOptions = options;
+        installCalls++;
+        availability = "available";
+        return true;
+      }
+      lang = "";
+      processLocally = false;
+      interimResults = false;
+      maxAlternatives = 1;
+      onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript?: string }>> }) => void) | null = null;
+      onerror: ((event: { error?: string }) => void) | null = null;
+      onend: (() => void) | null = null;
+      constructor() { recognitionRef.current = this; }
+      start() { startSnapshotRef.current = { lang: this.lang, processLocally: this.processLocally }; }
+      stop() { this.onend?.(); }
+    }
+    class StubWebkitRecognition {
+      start() { webkitStarts++; }
+      stop() {}
+    }
+    W.SpeechRecognition = StubLocalRecognition;
+    W.webkitSpeechRecognition = StubWebkitRecognition;
+
+    const flushAsync = async () => {
+      await new Promise<void>((resolve) => setTimeout(resolve, 0));
+    };
+    const asyncAct = act as unknown as (callback: () => Promise<void>) => Promise<void>;
+    const { default: LocalSpeechPilot } = await import("../components/LocalSpeechPilot");
+    const keysBefore = Array.from({ length: dom.window.localStorage.length }, (_, i) => {
+      const key = dom.window.localStorage.key(i)!;
+      return [key, dom.window.localStorage.getItem(key)] as const;
+    });
+
+    try {
+      mount(React.createElement(LocalSpeechPilot));
+      await asyncAct(flushAsync);
+      const state = d0.querySelector('[data-testid="local-asr-state"]');
+      const consent = d0.querySelector('[data-testid="local-asr-download-consent"]') as HTMLInputElement | null;
+      const install = d0.querySelector('[data-testid="local-asr-install"]') as HTMLButtonElement | null;
+      const initialStatus = state?.textContent ?? "";
+      ok(initialStatus.includes("يمكن طلب") && JSON.stringify(availabilityOptions).includes('"de-DE"') &&
+        JSON.stringify(availabilityOptions).includes('"processLocally":true'),
+        "LXXXIII1 يفحص حزمة de-DE بخيار processLocally=true ويعرض حالتها قبل طلب الميكروفون");
+      ok(!!consent && !!install && install.disabled && installCalls === 0,
+        "LXXXIII2 زر التثبيت معطّل ولا استدعاء قبل موافقة التنزيل المنفصلة");
+
+      if (consent && install) {
+        act(() => consent.click());
+        const allowedInstall = d0.querySelector('[data-testid="local-asr-install"]') as HTMLButtonElement | null;
+        ok(!!allowedInstall && !allowedInstall.disabled, "LXXXIII3 الموافقة الصريحة وحدها تفتح زر تنزيل de-DE");
+        if (allowedInstall) click(allowedInstall);
+        await asyncAct(flushAsync);
+      } else {
+        ok(false, "LXXXIII3 الموافقة الصريحة وحدها تفتح زر تنزيل de-DE");
+      }
+      const stateAfterInstall = d0.querySelector('[data-testid="local-asr-state"]')?.textContent ?? "";
+      ok(installCalls === 1 && JSON.stringify(installOptions).includes('"de-DE"') && stateAfterInstall.includes("متاحة"),
+        "LXXXIII4 التثبيت يستدعي حزمة de-DE فقط، ثم يعيد فحص الإتاحة");
+
+      const start = d0.querySelector('[data-testid="local-asr-start"]') as HTMLButtonElement | null;
+      if (start) click(start);
+      const startedWith = startSnapshotRef.current;
+      ok(!!startedWith && startedWith.lang === "de-DE" && startedWith.processLocally,
+        "LXXXIII5 قبل start يضبط lang=de-DE وprocessLocally=true فعلياً");
+      const currentRecognition = recognitionRef.current;
+      if (currentRecognition?.onresult) {
+        act(() => currentRecognition.onresult?.({ results: [[{ transcript: "Guten Morgen" }]] }));
+      }
+      const transcript = d0.querySelector('[data-testid="local-asr-transcript"]')?.textContent ?? "";
+      const localMessage = d0.querySelector('[data-testid="local-asr-message"]')?.textContent ?? "";
+      const keysAfter = Array.from({ length: dom.window.localStorage.length }, (_, i) => {
+        const key = dom.window.localStorage.key(i)!;
+        return [key, dom.window.localStorage.getItem(key)] as const;
+      });
+      ok(transcript.includes("Guten Morgen") && localMessage.includes("ليس تقييماً للنطق") &&
+        JSON.stringify(keysAfter) === JSON.stringify(keysBefore),
+        "LXXXIII6 يعرض النص للمراجعة الذاتية فقط ولا يحفظه في التقدّم");
+      if (currentRecognition?.onend) act(() => currentRecognition.onend?.());
+
+      const startAgain = d0.querySelector('[data-testid="local-asr-start"]') as HTMLButtonElement | null;
+      if (startAgain) click(startAgain);
+      const failedRecognition = recognitionRef.current;
+      if (failedRecognition?.onerror) act(() => failedRecognition.onerror?.({ error: "not-allowed" }));
+      ok((d0.querySelector('[data-testid="local-asr-message"]')?.textContent ?? "").includes("تعذّر التحقق تقنياً") &&
+        (d0.querySelector('[data-testid="local-asr-message"]')?.textContent ?? "").includes("لم يُحكم على كلامك"),
+        "LXXXIII7 رفض الميكروفون/فشل المحرك يعرض تعذّر التحقق لا حكماً على المتعلم");
+
+      W.SpeechRecognition = undefined;
+      mount(React.createElement(LocalSpeechPilot));
+      await asyncAct(flushAsync);
+      ok((d0.querySelector('[data-testid="local-asr-state"]')?.textContent ?? "").includes("لا يوفّر واجهة") && webkitStarts === 0,
+        "LXXXIII8 وجود webkit وحده لا يفعّل طياراً محلياً ولا يسقط إلى التعرف غير المثبت");
+    } finally {
+      if (leave) leave();
+      W.SpeechRecognition = priorStandard;
+      W.webkitSpeechRecognition = priorWebkit;
+    }
+  }
+
   /* ---------- XLVI — عقدُ الساعات: لوحةٌ تُفتَح، ورقمٌ يُحجَز، وحكمٌ يُعلَن ---------- */
   {
     const { BerichteZentrum } = await import("../components/berichte");

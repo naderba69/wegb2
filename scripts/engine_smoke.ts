@@ -2877,7 +2877,7 @@ void 0;
     study.includes("تعذّر التحقق"),
     "K134c تعذّرُ المحلي لا يتحولُ إلى السحابة ولا يُسجّلُ خطأً لغوياً");
   ok(study.includes("لا يثبت بمفرده سلامة الأصوات") && study.includes("يقيّم النطق أو الاستقلال") &&
-    study.includes("لم تُجرَ اختبارات جهاز حقيقي"),
+    study.includes("اختبارات المتصفحات والأجهزة والشبكة الفعلية لم تُنفذ"),
     "K134d نصُّ التعرّف ليسَ دليلاً على النطق أو الاستقلال؛ واختبارُ الأجهزة غيرُ مدّعى");
   ok(study.includes("75 MiB") && study.includes("273 MB") && study.includes("whisper.cpp"),
     "K134e بديلُ WASM موثّقٌ بحجم النموذج وذاكرته، لا يُعتمد بلا قياسٍ للأجهزة");
@@ -2900,6 +2900,35 @@ void 0;
   ok(networkLine.includes("اتصالَي الخدمة") && downloadLine.includes("زر تنزيل مستقل") &&
     downloadLine.includes("موافقة تنزيل منفصلة") && downloadLine.includes("R24"),
     "K135c بطاقةُ التسليم تعكسُ استثناءَ الشبكة بحدودِه وموافقتِه المنفصلة");
+}
+
+/* ═══ K142 — R32: طيارُ de-DE محلي منفصل؛ لا إذن سحابي ولا تصنيف لغوي ═══ */
+{
+  const local = readFileSync("lib/local-speech.ts", "utf8");
+  const pilot = readFileSync("components/LocalSpeechPilot.tsx", "utf8");
+  const settings = readFileSync("app/einstellungen/page.tsx", "utf8");
+  const localFlagAt = local.indexOf("recognition.processLocally = true");
+  const startAt = local.indexOf("recognition.start();");
+  const consentGuardAt = local.indexOf("if (!consented)");
+  const installAt = local.indexOf("Recognition.install(");
+  ok(local.includes('Recognition.available({ langs: [LOCAL_SPEECH_LANGUAGE], processLocally: true })') &&
+    local.includes('LOCAL_SPEECH_LANGUAGE = "de-DE"'),
+    "K142a فحص الإتاحة يطلب de-DE مع processLocally=true تحديداً");
+  ok(consentGuardAt >= 0 && installAt > consentGuardAt && local.includes("installLocalGermanModel(consented: boolean)") &&
+    pilot.includes('data-testid="local-asr-download-consent"') && pilot.includes("disabled={!consentToDownload || installing}"),
+    "K142b لا تنزيل إلا بطلب زر مستقل بعد موافقة صريحة غير محفوظة");
+  ok(localFlagAt >= 0 && startAt > localFlagAt && local.includes('recognition.processLocally !== true') &&
+    !local.includes("webkitSpeechRecognition ??"),
+    "K142c يثبّت وضع المحلي ويتحقق منه قبل start ولا يسقط إلى واجهة عامة/سحابية");
+  ok(pilot.includes('"local-asr-start"') && pilot.includes("startLocalGermanRecognition(") &&
+    settings.includes("<LocalSpeechPilot />") && settings.includes("طيار التعرّف المحلي الألماني"),
+    "K142d الطيار منفصل واختياري في الإعدادات، لا جزءاً من المهام الأساسية");
+  ok(pilot.includes("تعذّر التحقق") && pilot.includes("ليس تقييماً للنطق") &&
+    pilot.includes("لا تُحفظ المحاولة أو النص") && !pilot.includes("localStorage") && !pilot.includes("onPoints"),
+    "K142e الفشل التقني لا يصبح حكماً لغوياً؛ النص لا يُحفظ ولا يمنح نقاطاً");
+  ok(!local.includes("fetch(") && !pilot.includes("fetch(") && !pilot.includes("listenDe(") &&
+    !pilot.includes("cloudSpracheFrei()"),
+    "K142f لا إرسال أو fallback سحابي في وحدة الطيار");
 }
 
 /* ═══ K136 — R56: خطوةٌ واحدةٌ مرئية، والتفاصيل والأدوات باقيةٌ دون ازدحام ═══ */

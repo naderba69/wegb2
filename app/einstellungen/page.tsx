@@ -9,6 +9,7 @@ import { Fehlerkartei, Lernstrategien } from "@/components/fehler-ui";
 import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
 import { ProfilVerwaltung } from "@/components/profil";
 import { speakDe, germanVoices, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
+import LocalSpeechPilot from "@/components/LocalSpeechPilot";
 import type { UiLang, Tempo } from "@/lib/types";
 
 export default function Einstellungen() {
@@ -220,7 +221,7 @@ export default function Einstellungen() {
               <strong>أُذِنُ بإرسال صوتي إلى خدمة التعرُّف الخارجية</strong>
               <span style={{ display: "block", fontSize: "0.82rem", color: "var(--color-ink2)" }}>
                 {recognitionAvailable()
-                  ? "متوفِّرٌ في متصفِّحِك. إن أبقيتَه مغلقاً فُتِحَ لك المسارُ المحلِّيُّ البديل."
+                  ? "متوفِّرٌ تقنياً في متصفِّحِك. لا يُستخدم في المسار الأساسي إلا بإذنك؛ طيار de-DE المحلي أدناه مستقلٌّ عنه."
                   : "غيرُ متوفِّرٍ في متصفِّحِك أصلاً — المفتاحُ معطَّلٌ ولا أثرَ له."}
               </span>
             </span>
@@ -230,6 +231,11 @@ export default function Einstellungen() {
             مقابلَ النموذج — كلُّ ذلك من مغلِّفِ الطاقة داخلَ جهازِك، ولا يخرجُ منه شيء.
             وهو متاحٌ لك سواءٌ أَذِنتَ أم لا.
           </div>
+        </details>
+
+        <details className="dirb-details">
+          <summary>🧪 طيار التعرّف المحلي الألماني (de-DE) — منفصل واختياري</summary>
+          <LocalSpeechPilot />
         </details>
 
         <details className="dirb-details">
