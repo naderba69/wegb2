@@ -3393,6 +3393,50 @@ void 0;
     `K154a كل أزواج syn الـ70 لها سياق واحدٌ موثق، والعشر الجديدة اجتازت بوابات الحقول والمتلازمات؛ ${pairSet.size}/70`);
 }
 
+/* ═══ K155 — R81: كل مثال ألماني يربط صراحةً طرف العلاقة المناسب ═══ */
+{
+  const bank = JSON.parse(readFileSync("content/synonyme-kontext.json", "utf8")) as Record<string, Record<string, {
+    basisDe: string; alternativDe: string;
+  }>>;
+  const words = (text: string) => text.toLowerCase().normalize("NFC").replace(/[^a-zäöüß0-9 ]/g, " ").split(/\s+/).filter(Boolean);
+  const labelWords = (label: string) => words(label.replace(/^(der|die|das)\s+/i, "")).filter((word) => word.length > 2);
+  const labelInSentence = (label: string, sentence: string) => {
+    const tokens = words(sentence);
+    return labelWords(label).every((word) => {
+      const stem = word.length > 4 ? word.slice(0, Math.max(3, word.length - 2)) : word;
+      return tokens.some((token) => token === word || token.includes(stem));
+    });
+  };
+  const morphology: Record<string, { basis?: RegExp; alternative?: RegExp }> = {
+    "anfangen→beginnen": { basis: /\bfange\b.*\ban\b/i },
+    "sprechen→reden": { basis: /\bspricht\b/i },
+    "sparen→ansparen": { alternative: /\bspare\b.*\ban\b/i },
+    "holen→abholen": { alternative: /\bhole\b.*\bab\b/i },
+    "kommen→ankommen": { alternative: /\bkommen\b.*\ban\b/i },
+    "sagen→mitteilen": { alternative: /\bteilt\b.*\bmit\b/i },
+    "besuchen→aufsuchen": { alternative: /\bsuchen\b.*\bauf\b/i },
+    "lieben→liebhaben": { alternative: /\bhabe\b.*\blieb\b/i },
+  };
+  const pairs = Object.entries(bank).flatMap(([source, alternatives]) => Object.entries(alternatives).map(([target, context]) => ({
+    source, target, context: context as { basisDe: string; alternativDe: string },
+  })));
+  const linked = pairs.every(({ source, target, context }) => {
+    const exception = morphology[`${source}→${target}`];
+    const basisLinked = labelInSentence(source, context.basisDe) || !!exception?.basis?.test(context.basisDe);
+    const alternativeLinked = labelInSentence(target, context.alternativDe) || !!exception?.alternative?.test(context.alternativDe);
+    return basisLinked && alternativeLinked;
+  });
+  const exceptionsValid = Object.entries(morphology).every(([pair, exception]) => {
+    const [source, target] = pair.split("→");
+    const context = bank[source]?.[target];
+    return !!context && (!exception.basis || exception.basis.test(context.basisDe)) &&
+      (!exception.alternative || exception.alternative.test(context.alternativDe));
+  });
+  ok(pairs.length === 70 && Object.keys(morphology).length === 8 && linked && exceptionsValid &&
+    !labelInSentence("weit", "Das Dorf liegt direkt am Bahnhof."),
+    `K155a كل مثال أساس/بديل يذكر لفظه؛ 70 علاقة، مع 8 صيغ أبلاوت/فصل موثقة ومن دون تمرير مثال غير مرتبط`);
+}
+
 /* ═══ K136 — R56: خطوةٌ واحدةٌ مرئية، والتفاصيل والأدوات باقيةٌ دون ازدحام ═══ */
 {
   const home = readFileSync("app/page.tsx", "utf8");
