@@ -3437,6 +3437,20 @@ void 0;
     `K155a كل مثال أساس/بديل يذكر لفظه؛ 70 علاقة، مع 8 صيغ أبلاوت/فصل موثقة ومن دون تمرير مثال غير مرتبط`);
 }
 
+/* ═══ K156 — R82: ترجمة rasch تنقل حركة القطار لا معنى المغادرة ═══ */
+{
+  const bank = JSON.parse(readFileSync("content/synonyme-kontext.json", "utf8")) as Record<string, Record<string, {
+    basisDe: string; basisAr: string; alternativDe: string; alternativAr: string;
+  }>>;
+  const context = bank.schnell?.rasch;
+  ok(!!context && context.basisDe === "Der Zug fährt heute schnell." &&
+    context.alternativDe === "Der Zug fährt heute rasch." &&
+    context.basisAr === "يسير القطار اليوم بسرعة." &&
+    context.alternativAr === "يسير القطار اليوم بسرعة." &&
+    !context.alternativAr.includes("ينطلق") && !context.alternativAr.includes("يغادر"),
+    "K156a مثال schnell→rasch يترجم حركة القطار بسرعة دون تحويلها إلى المغادرة");
+}
+
 /* ═══ K136 — R56: خطوةٌ واحدةٌ مرئية، والتفاصيل والأدوات باقيةٌ دون ازدحام ═══ */
 {
   const home = readFileSync("app/page.tsx", "utf8");
