@@ -4452,6 +4452,100 @@ void 0;
     "K166e جمل الإملاء التسع مطابقة لمواضعها في الحوارات ولكل واحدة حكم ومصدر وإجراء مسجل");
 }
 
+/* ═══ K167 — R93: مراجعة الحوارات A1 d-a1-04–06 ═══ */
+{
+  type DialogueAuditItem = { id: string; kind: string; status: string; sources: string[]; finding: string; action: string };
+  type DialogueAuditSource = { id: string; title: string; url: string; supports: string };
+  const audit = JSON.parse(readFileSync("docs/content-review-a1-dialogues-02-2026-10-04.json", "utf8")) as {
+    date: string;
+    batch: string;
+    scope: string;
+    method: string;
+    coverage: { dialogues: number; dialogueMetadata: number; lines: number; questions: number; dictationSentences: number; unresolvedLevelNotes: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>;
+    sources: DialogueAuditSource[];
+    limitations: string[];
+    items: DialogueAuditItem[];
+  };
+  const auditMarkdown = readFileSync("docs/content-review-a1-dialogues-02-2026-10-04.md", "utf8");
+  const batchIds = ["d-a1-04", "d-a1-05", "d-a1-06"];
+  const batch = batchIds.map((id) => dialogues.find((dialogue) => dialogue.id === id));
+  const completeBatch = batch.every((dialogue) => !!dialogue && dialogue.level === "A1") ? batch as NonNullable<typeof batch[number]>[] : [];
+  const expectedIds = [
+    ...completeBatch.flatMap((dialogue) => [
+      dialogue.id,
+      ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+      ...dialogue.questions.map((question) => question.id),
+      ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+    ]),
+    "d-a1-06.level",
+  ];
+  const auditIds = audit.items.map((item) => item.id);
+  const auditById = new Map(audit.items.map((item) => [item.id, item]));
+  const markdownRowsUnique = expectedIds.every((id) =>
+    auditMarkdown.split("\n").filter((line) => line.startsWith(`| ${id} |`)).length === 1
+  );
+  ok(completeBatch.length === 3 && completeBatch.map((dialogue) => dialogue.lines.length).join(",") === "6,5,5" &&
+    completeBatch.map((dialogue) => dialogue.questions.length).join(",") === "2,2,2" &&
+    completeBatch.map((dialogue) => dialogue.dictation.length).join(",") === "3,3,3" &&
+    expectedIds.length === 35 && new Set(expectedIds).size === 35 && auditIds.length === 35 &&
+    new Set(auditIds).size === 35 && expectedIds.every((id) => auditById.has(id)) && markdownRowsUnique &&
+    audit.date === "2026-10-04" && audit.batch === "A1-dialogues-02" &&
+    audit.coverage.dialogues === 3 && audit.coverage.dialogueMetadata === 3 && audit.coverage.lines === 16 &&
+    audit.coverage.questions === 6 && audit.coverage.dictationSentences === 9 && audit.coverage.unresolvedLevelNotes === 1 &&
+    audit.coverage.totalTrackedItems === 35,
+    "K167a السجل يطابق 3 حوارات و16 سطراً و6 أسئلة و9 إملاءات وملاحظة مستوى؛ كل معرّف حاضر مرة في JSON وMarkdown");
+
+  const sourceIds = new Set(audit.sources.map((source) => source.id));
+  const referencedSources = new Set(audit.items.flatMap((item) => item.sources));
+  const statusCounts = audit.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const completeEvidence = audit.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.sources.length > 0 &&
+    item.sources.every((id) => sourceIds.has(id)) && item.finding.trim().length > 0 && item.action.trim().length > 0
+  );
+  const validSources = audit.sources.length === 22 && audit.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://")
+  );
+  const correctedIds = new Set([
+    "d-a1-04.lines[1]", "d-a1-04-q1",
+    "d-a1-05", "d-a1-05.lines[0]", "d-a1-05.lines[3]", "d-a1-05-q1", "d-a1-05-q2",
+    "d-a1-06.lines[2]", "d-a1-06.lines[4]", "d-a1-06-q2",
+  ]);
+  const expectedStatuses = audit.items.every((item) =>
+    item.status === (item.id === "d-a1-06.level" ? "غير محسوم" : correctedIds.has(item.id) ? "مُصحح" : "سليم")
+  );
+  ok(completeEvidence && validSources && referencedSources.size === audit.sources.length && expectedStatuses &&
+    statusCounts["سليم"] === 24 && statusCounts["مُصحح"] === 10 && statusCounts["غير محسوم"] === 1 &&
+    audit.statusCounts["سليم"] === 24 && audit.statusCounts["مُصحح"] === 10 && audit.statusCounts["غير محسوم"] === 1 &&
+    audit.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&
+    audit.items.some((item) => item.id === "d-a1-06.level" && item.sources.includes("S19")),
+    "K167b لكل عنصر دليل وحكم وإجراء ومصدر منشور؛ 22 مصدراً مستعملة، والأعداد 24/10/1 وحدود المراجعة متسقة");
+
+  const d4 = completeBatch.find((dialogue) => dialogue.id === "d-a1-04");
+  const d5 = completeBatch.find((dialogue) => dialogue.id === "d-a1-05");
+  const d6 = completeBatch.find((dialogue) => dialogue.id === "d-a1-06");
+  const d4q1 = d4?.questions.find((question) => question.id === "d-a1-04-q1");
+  const d5q1 = d5?.questions.find((question) => question.id === "d-a1-05-q1");
+  const d5q2 = d5?.questions.find((question) => question.id === "d-a1-05-q2");
+  const d6q2 = d6?.questions.find((question) => question.id === "d-a1-06-q2");
+  const d6Level = auditById.get("d-a1-06.level");
+  ok(!!(d4?.lines[1]?.ar === "أعطني كيلو من فضلك." && d4q1?.promptAr === "أكمل الفراغ بالسعر الصحيح من الحوار." &&
+    Array.isArray(d4q1?.answer) && d4q1.answer.includes("drei") && d4q1.answer.includes("3") &&
+    d5?.titleAr === "وقت الفراغ في عطلة نهاية الأسبوع" &&
+    d5.lines[0]?.ar === "ماذا تفعل في عطلة نهاية الأسبوع؟" &&
+    d5.lines[3]?.ar === "يوم الأحد أزور عمتي أو خالتي. وأنتِ؟" &&
+    d5q1?.explanationAr?.includes("عمته أو خالته") === true &&
+    d5q2?.promptDe === "Da ___ ich meine Tante." && Array.isArray(d5q2.answer) && d5q2.answer[0] === "besuche" &&
+    d6?.lines[2]?.ar === "هذا الخط الخاطئ. يجب عليك أن تنزل هنا." &&
+    d6.lines[4]?.ar === "الحافلة رقم 12 في الجهة المقابلة." &&
+    d6q2?.promptDe === "Sie müssen hier ___." && Array.isArray(d6q2.answer) && d6q2.answer[0] === "aussteigen" &&
+    d6Level?.status === "غير محسوم" && d6Level.finding.includes("لا برهان قاطع")),
+    "K167c تصحيحات الترجمة ومطابقة تعليمات الأسئلة للمفاتيح محفوظة؛ لا تعديل تخميني لملحوظة المستوى");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

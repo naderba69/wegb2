@@ -232,7 +232,7 @@
       {
         "who": "Amina",
         "de": "Geben Sie mir bitte ein Kilo.",
-        "ar": "أعطيني كيلو من فضلك."
+        "ar": "أعطني كيلو من فضلك."
       },
       {
         "who": "Verkäufer",
@@ -265,7 +265,7 @@
           "3"
         ],
         "explanationAr": "3 يورو.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "أكمل الفراغ بالسعر الصحيح من الحوار."
       },
       {
         "id": "d-a1-04-q2",
@@ -291,12 +291,12 @@
     "id": "d-a1-05",
     "level": "A1",
     "titleDe": "Freizeit am Wochenende",
-    "titleAr": "الفراغ نهاية الأسبوع",
+    "titleAr": "وقت الفراغ في عطلة نهاية الأسبوع",
     "lines": [
       {
         "who": "Lina",
         "de": "Was machst du am Wochenende?",
-        "ar": "ماذا تفعل نهاية الأسبوع؟"
+        "ar": "ماذا تفعل في عطلة نهاية الأسبوع؟"
       },
       {
         "who": "Karim",
@@ -311,7 +311,7 @@
       {
         "who": "Karim",
         "de": "Da besuche ich meine Tante. Und du?",
-        "ar": "أزور خالتي. وأنتِ؟"
+        "ar": "يوم الأحد أزور عمتي أو خالتي. وأنتِ؟"
       },
       {
         "who": "Lina",
@@ -330,17 +330,17 @@
           "Er lernt Deutsch zu Hause."
         ],
         "answer": "Er spielt Fußball mit Freunden.",
-        "explanationAr": "الدليل: «Am Samstag spiele ich Fußball mit Freunden». الفخّ 1: العمّة يوم الأحد. الفخّ 2: تعلّم الألمانية برنامج لينا.",
+        "explanationAr": "الدليل: «Am Samstag spiele ich Fußball mit Freunden». الفخّ 1: يزور عمته أو خالته يوم الأحد، لا السبت. الفخّ 2: تعلّم الألمانية في البيت نشاط لينا.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
         "id": "d-a1-05-q2",
         "type": "fill",
-        "promptDe": "Am Sonntag ___ er seine Tante.",
+        "promptDe": "Da ___ ich meine Tante.",
         "answer": [
-          "besucht"
+          "besuche"
         ],
-        "explanationAr": "er besucht (المضارع).",
+        "explanationAr": "الإجابة: besuche؛ وردت مع الضمير ich في الحوار.",
         "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
       }
     ],
@@ -1357,7 +1357,7 @@
       {
         "who": "Fahrer",
         "de": "Das ist die falsche Linie. Sie müssen hier aussteigen.",
-        "ar": "هذه الخط الخاطئ. عليكم النزول هنا."
+        "ar": "هذا الخط الخاطئ. يجب عليك أن تنزل هنا."
       },
       {
         "who": "Sami",
@@ -1367,7 +1367,7 @@
       {
         "who": "Fahrer",
         "de": "Nummer zwölf, gegenüber.",
-        "ar": "الرقم اثنا عشر، مقابل."
+        "ar": "الحافلة رقم 12 في الجهة المقابلة."
       }
     ],
     "questions": [
@@ -1387,11 +1387,11 @@
       {
         "id": "d-a1-06-q2",
         "type": "fill",
-        "promptDe": "Er muss ___ Bus nehmen: Nummer zwölf.",
+        "promptDe": "Sie müssen hier ___.",
         "answer": [
-          "den"
+          "aussteigen"
         ],
-        "explanationAr": "الحافلة المحدّدة.",
+        "explanationAr": "الإجابة: aussteigen؛ أي يجب على سامي النزول هنا.",
         "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
       }
     ],

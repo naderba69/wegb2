@@ -1,0 +1,572 @@
+{
+  "date": "2026-10-04",
+  "batch": "A1-dialogues-02",
+  "scope": "مراجعة فردية لـ d-a1-04 وd-a1-05 وd-a1-06 فقط: العنوان والسياق لكل حوار، كل سطر وترجمته، كل سؤال مع خياراته/إجابته/شرحه، وكل جملة إملاء. أضيفت ملاحظة مستوى غير محسومة لحوار الحافلة. لا يشمل هذا السجل بقية حوارات A1 أو سائر النصوص والمستويات.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 16,
+    "questions": 6,
+    "dictationSentences": 9,
+    "unresolvedLevelNotes": 1,
+    "totalTrackedItems": 35
+  },
+  "statusCounts": {
+    "سليم": 24,
+    "مُصحح": 10,
+    "غير محسوم": 1
+  },
+  "method": "قُرئت بيانات الحوارات الثلاثة كاملةً من JSON، ثم فُحص كل عنوان وسياق وسطر ألماني وترجمته، وكل سؤال وخياراته ومفتاحه وشرحه، وكل جملة إملاء على حدة وفي موضعها. طوبقت المعاني والصيغ مع صفحات منشورة مناسبة، وفُصلت الأخطاء المؤكدة عن تحسينات الأسلوب ومؤشر المستوى غير الحاسم. لا تُعد الفحوص البرمجية بديلاً عن مراجعة المحتوى، ولا تمثل هذه مراجعة بشرية أو اعتماداً مهنياً.",
+  "statusDefinitions": {
+    "سليم": "فُحص العنصر بالمصدر والسياق؛ لا خطأ مؤكد يستدعي تعديلاً.",
+    "مُصحح": "فُحص العنصر؛ وُجد خلل محدد وصُحح مع تسجيل الدليل والإجراء.",
+    "غير محسوم": "فُحص العنصر، لكن المصادر/السياق لا تحسم الحكم؛ لم يُجر تعديل تخميني."
+  },
+  "limitations": [
+    "هذا السجل يغطي الحوارات d-a1-04 إلى d-a1-06 فقط، وليس مراجعة لبقية حوارات A1 أو جميع محتوى المشروع.",
+    "Goethe Wortlisten مراجع لنطاق مفردات امتحاناتها وليست حداً حصرياً لكل كلمة يمكن أن تظهر في نص مبسّط. كذلك يضع Duden كلمات مثل besuchen وTante وFreizeit وWochenende في وسم Goethe B1، مع ورودها في موارد Goethe A1 لهذا المشروع؛ لذا لا يُعامل وسم B1 وحده كحد أدنى حصري أو دليلاً على خطأ المستوى (S1–S3, S5, S20–S22).",
+    "ملاحظة المستوى في d-a1-06 بقيت غير محسومة: Duden يوسم بعض مفردات السطر B1، بينما تظهر gegenüber وStadtzentrum أيضاً في قائمة Goethe A2؛ هذا يستحق مراجعة تعليمية لاحقة ولا يثبت وحده عدم صلاحية الحوار لـA1.",
+    "الحوارات إنشائية وأسماؤها افتراضية؛ المصادر تثبت معنى المفردات والقواعد ونطاقات قوائمها لا وقائع عن أشخاص حقيقيين.",
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة، وليست مراجعة بشرية أو اعتماداً مدرسياً/مهنياً."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Goethe-Institut — Goethe-Zertifikat A1 Start Deutsch 1 Wortliste",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "supports": "مرجع رسمي لنطاق A1. تتضمن القائمة مفردات/أمثلة مرتبطة بالتسوّق والطعام والوزن والسعر، وBus/Fahrkarte/aussteigen، وFreizeit/Fußball/الأيام؛ منها «An der nächsten Haltestelle müssen Sie aussteigen» و«In meiner Freizeit spiele ich oft Fußball» و«Das macht zusammen 2 Euro 80». ليست قائمة حصرية لكل كلمة ممكنة في نص مدرسي."
+    },
+    {
+      "id": "S2",
+      "title": "Goethe-Institut — Deutsch Online A1 Glossary, Chapters 1–18",
+      "url": "https://lernen.goethe.de/deutschonline/A1/PDF/EN/A1_deutschonline_course_vocabulary_1-18.pdf",
+      "supports": "قاموس ودروس A1؛ يعرض سؤال «Was machst du am Wochenende?» ومفردات نهاية الأسبوع والرياضة والأنشطة اليومية، فيدعم موضوع الحوار والسؤال d-a1-05-q1."
+    },
+    {
+      "id": "S3",
+      "title": "Goethe-Institut — Goethe-Zertifikat A1 Fit in Deutsch 1 Wortliste",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A1_Fit1_Wortliste.pdf",
+      "supports": "قائمة Goethe لمتعلمي A1 الناشئين تدرج أفراد الأسرة، ومنهم Tante وOnkel؛ شاهد ملائم لمفردة القرابة، لا حكم حصري على مفردات كل مقرر A1."
+    },
+    {
+      "id": "S4",
+      "title": "Goethe-Institut — Goethe-Zertifikat A2 Wortliste",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf",
+      "supports": "تدرج gegenüber مع المثال المكاني «Die Post ist gegenüber vom Bahnhof» و«Die Hausnummer 84 ist gleich gegenüber»، كما يظهر Stadtzentrum في أمثلة القائمة؛ مرجع للمقارنة مع وسم Duden لا دليلاً على أن المفردة ممنوعة في A1."
+    },
+    {
+      "id": "S5",
+      "title": "Duden — besuchen",
+      "url": "https://www.duden.de/rechtschreibung/besuchen",
+      "supports": "المعنى الأول يشمل زيارة الأقارب والأصدقاء، ويعرض تصريف besuchen/besucht؛ يدعم سياق Tante وتصحيح السؤال ليستعمل besuche الواردة فعلاً في الحوار. يضع Duden الوسم ضمن Goethe B1، لكن قائمة Goethe A1 S1 نفسها تعرض besuchen؛ الوسم لا يعني أن الكلمة لا ترد إلا في B1."
+    },
+    {
+      "id": "S6",
+      "title": "Duden — aussteigen",
+      "url": "https://www.duden.de/rechtschreibung/aussteigen",
+      "supports": "يعرف الفعل في معنى مغادرة مركبة/وسيلة نقل، ويورد أمثلة من السيارة والقطار؛ يسند ترجمة النزول من الحافلة ومفتاح السؤال d-a1-06-q2."
+    },
+    {
+      "id": "S7",
+      "title": "Duden — Linie",
+      "url": "https://www.duden.de/rechtschreibung/Linie",
+      "supports": "يعرّف Linie في الاستعمال المروري بأنها مسار منتظم تسلكه وسائل النقل، ويورد «Linie 12»؛ يصرّح بأن الاسم مؤنث، ويضعه ضمن مفردات Goethe B1، وهي إشارة مستوى لا حكم استبعاد قاطع."
+    },
+    {
+      "id": "S8",
+      "title": "Duden — Buslinie",
+      "url": "https://www.duden.de/rechtschreibung/Buslinie",
+      "supports": "يعرف Buslinie بأنها وصلة/مسار تسلكه الحافلة، ويحدد جنس الاسم بالمؤنث؛ يدعم معنى سياق الخط لا اختيار جنس الاسم العربي."
+    },
+    {
+      "id": "S9",
+      "title": "Duden — gegenüber (Präposition)",
+      "url": "https://www.duden.de/rechtschreibung/gegenueber_Praeposition",
+      "supports": "يعرف gegenüber مكانياً بوصفه موضعاً مقابلاً، ويذكر استعمالاته مع الداتيف، ويضعه ضمن Goethe B1؛ لا يكفي وسم المستوى وحده لإثبات خطأ الحوار."
+    },
+    {
+      "id": "S10",
+      "title": "PONS — Tante (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Tante",
+      "supports": "يفصل بين Tante جهة الأب = عمة وTante جهة الأم = خالة؛ لذا Tante وحدها لا تحدد جهة القرابة، ولا تسند «خالتي» وحدها."
+    },
+    {
+      "id": "S11",
+      "title": "PONS — Freizeit (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Freizeit",
+      "supports": "يعرض مقابل Freizeit «أوقات الفراغ»؛ يسند إدخال «وقت» في ترجمة العنوان."
+    },
+    {
+      "id": "S12",
+      "title": "PONS — Wochenende (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Wochenende",
+      "supports": "يعرض المقابل العربي «(عطلة) نهاية الأسبوع»؛ يسند الصياغة العربية للعنوان والسؤال."
+    },
+    {
+      "id": "S13",
+      "title": "PONS — Kilo (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Kilo",
+      "supports": "يعرض Kilo/Kilogramm بمقابلي «كيلو» و«كيلوغرام»؛ يسند إبقاء «كيلو» في حوار السوق."
+    },
+    {
+      "id": "S14",
+      "title": "PONS — bitte (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/bitte",
+      "supports": "يعرض bitte بمعنى «من فضلك»، ويعرض استعمال التقديم/العرض بمعنى «تفضّل»؛ يدعم ترجمات الطلب وتسليم الشيء."
+    },
+    {
+      "id": "S15",
+      "title": "PONS — Zentrum (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Zentrum",
+      "supports": "يعرض Zentrum Stadt- بمقابل «وسط»؛ يسند فهم «zum Zentrum» في سياق الحافلة، وإن كانت «وسط المدينة» صياغة عربية أوضح عند الحاجة."
+    },
+    {
+      "id": "S16",
+      "title": "University of Zurich — Kalimāt, جدول تصريف أَعْطَى",
+      "url": "https://www.aoi.uzh.ch/kalimat/ar/Musterverb_45_act_unv",
+      "supports": "جدول التصريف يميز أمر المفرد المذكر أنتَ «أعط» من أمر المفرد المؤنث أنتِ «أعطي»؛ يدعم اختيار المخاطبة المذكرة في «أعطني» مع وسم Verkäufer المذكر."
+    },
+    {
+      "id": "S17",
+      "title": "Humanities LibreTexts — Arabic Subject Pronouns",
+      "url": "https://human.libretexts.org/Bookshelves/Languages/Arabic/Arabic_Level_One/04:_Chapter_Four-_Introduce_Self/4.05:_Subject_Pronouns",
+      "supports": "يفصل ضمائر المخاطب أنتَ للمفرد المذكر، أنتِ للمفرد المؤنث، وأنتم للجمع المذكر؛ يسند مطابقة «أنتِ» للينا وتصحيح صيغة الجمع في خطاب سامي المفرد."
+    },
+    {
+      "id": "S18",
+      "title": "Humanities LibreTexts — Demonstrative Pronouns in Arabic",
+      "url": "https://human.libretexts.org/Bookshelves/Languages/Arabic/Arabic_Level_Three/07:_Food_and_Meals/7.04:_Demonstrative_Pronouns_in_Arabic",
+      "supports": "يصرح بأن اسم الإشارة المفرد يطابق جنس الاسم، ويعرض هذا للمذكر وهذه للمؤنث؛ يسند تصحيح «هذه الخط» إلى «هذا الخط»."
+    },
+    {
+      "id": "S19",
+      "title": "Duden — Zentrum",
+      "url": "https://www.duden.de/rechtschreibung/Zentrum",
+      "supports": "يعرف Zentrum في معنى Mittelpunkt/Mitte، ويذكر المثال «im Zentrum (Stadtzentrum) wohnen»، ويضع الكلمة ضمن Goethe B1؛ يسند دلالة المركز ومؤشر المستوى غير الحاسم."
+    },
+    {
+      "id": "S20",
+      "title": "Duden — Tante",
+      "url": "https://www.duden.de/rechtschreibung/Tante",
+      "supports": "يعرف Tante بأنها أخت أو زوجة أخ أحد الوالدين، ويضعها في وسم Goethe B1؛ تقارن هذه الإشارة مع ورود Tante في قائمة Goethe A1 Fit in Deutsch 1 (S3)، فلا تعني أن الكلمة لا تظهر إلا في B1."
+    },
+    {
+      "id": "S21",
+      "title": "Duden — Freizeit",
+      "url": "https://www.duden.de/rechtschreibung/Freizeit",
+      "supports": "يعرف Freizeit بأنها وقت خالٍ من العمل والالتزامات للهوايات أو الراحة، ويضعها في وسم Goethe B1؛ تقارن مع ورودها في قائمة Goethe A1/Deutsch Online (S1–S2)."
+    },
+    {
+      "id": "S22",
+      "title": "Duden — Wochenende",
+      "url": "https://www.duden.de/rechtschreibung/Wochenende",
+      "supports": "يعرف Wochenende بأنه مساء الجمعة والسبت والأحد كأيام عطلة، ويورد استعمال «am Wochenende»، مع وسم Goethe B1؛ تقارن مع السؤال الصريح في مادة Goethe Deutsch Online A1 (S2)."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a1-04",
+      "kind": "حوار: العنوان والسياق والمستوى المعلن",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "العنوان «Einkaufen auf dem Markt / التسوّق في السوق» يطابق مشهداً قصيراً لشراء طماطم وخبز وبيض مع سؤال عن السعر والكمية؛ لا يتضمن ادعاءً واقعياً خارج الحوار.",
+      "action": "أُبقي العنوان والسياق؛ ينسجم موضوع الشراء والطعام والسعر مع مرجع مفردات A1."
+    },
+    {
+      "id": "d-a1-04.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S13"
+      ],
+      "finding": "Verkäufer: «Frische Tomaten! Ein Kilo für drei Euro.» — «طماطم طازجة! الكيلو بثلاثة يورو.» المعنى والسعر والكمية منقولون بوضوح، وKilo مقابل صحيح في PONS.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-04.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S13",
+        "S14",
+        "S16"
+      ],
+      "finding": "Amina: «Geben Sie mir bitte ein Kilo.» — كانت الترجمة «أعطيني كيلو من فضلك». في الحوار المخاطَب هو Verkäufer، صيغة اسم مذكر، و«أعطيني» أمر للمفردة المؤنثة في الفصحى؛ PONS يسند كيلو ومن فضلك، وجدول جامعة زيورخ يميز الأمر المذكر «أعط» من المؤنث «أعطي».",
+      "action": "صُححت الترجمة إلى «أعطني كيلو من فضلك» لتوافق المخاطَب المذكر وسجل العربية الفصحى في المحتوى."
+    },
+    {
+      "id": "d-a1-04.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S14"
+      ],
+      "finding": "Verkäufer: «Sonst noch etwas?» — «شيء آخر؟» سؤال محذوف الفعل شائع في سياق البيع؛ الترجمة تحفظ الإيجاز والمعنى ولا تضيف مضموناً.",
+      "action": "لا تعديل؛ الإيجاز هنا مقبول وليس خطأً مؤكداً."
+    },
+    {
+      "id": "d-a1-04.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "Amina: «Ja, ein Brot und sechs Eier.» — «نعم، خبز وست بيضات.» يطابق صنفي المشتريات والعدد الوارد في الألمانية.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-04.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "Verkäufer: «Das macht zusammen sechs Euro.» — «المجموع ستة يورو.» يحفظ الإجمالي والعملة؛ يتسق مع أمثلة الأسعار والمجموع في قائمة A1.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-04.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S14"
+      ],
+      "finding": "Amina: «Hier, bitte. Danke schön!» — «تفضّل. شكراً جزيلاً!» «تفضّل» تلائم تسليم النقود إلى البائع، وDanke schön منقول بمعناه.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-04-q1",
+      "kind": "سؤال ملء فراغ مع المفتاح والشرح والتعليمات",
+      "status": "مُصحح",
+      "sources": [
+        "S1"
+      ],
+      "finding": "السؤال «Ein Kilo Tomaten kostet ___ Euro.» يقبل drei أو 3، والشرح «3 يورو» صحيح. لكن promptAr كان يطلب «الكلمة المناسبة» مع أن المفتاح يقبل أيضاً رقماً.",
+      "action": "غيّرت التعليمات إلى «أكمل الفراغ بالسعر الصحيح من الحوار» لتطابق صيغتي الإجابة المقبولتين."
+    },
+    {
+      "id": "d-a1-04-q2",
+      "kind": "سؤال اختيار من متعدد مع المشتتات والمفتاح والشرح",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "«Wie viele Eier kauft Amina?» المفتاح «sechs Eier» يطابق السطر؛ «drei Eier» يشتت بسعر الطماطم، و«ein Kilo Eier» يخلط كمية الطماطم بالبيض. الشرح يحدد الدليلين.",
+      "action": "أُبقي السؤال والمشتتات والإجابة والشرح."
+    },
+    {
+      "id": "d-a1-04.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "«Ein Kilo für drei Euro.» جملة مقتبسة من عرض السعر في السطر الأول؛ الإملاء لا يغيّر الرقم أو الوحدة.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-04.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S14",
+        "S16"
+      ],
+      "finding": "«Geben Sie mir bitte ein Kilo.» تطابق طلب أمينة في الحوار؛ لا اختلاف إملائي أو صرفي عن السطر.",
+      "action": "أُبقي الجملة الألمانية؛ ترجمتها المصححة في السطر نفسه مسجلة في d-a1-04.lines[1]."
+    },
+    {
+      "id": "d-a1-04.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1"
+      ],
+      "finding": "«Das macht zusammen sechs Euro.» تطابق جملة الإجمالي في الحوار؛ Das macht zusammen صياغة سعرية طبيعية.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-05",
+      "kind": "حوار: العنوان والسياق والمستوى المعلن",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S2",
+        "S11",
+        "S12",
+        "S21",
+        "S22"
+      ],
+      "finding": "العنوان «Freizeit am Wochenende» يجمع Freizeit (أوقات الفراغ) وWochenende (عطلة نهاية الأسبوع). كانت الترجمة «الفراغ نهاية الأسبوع» ناقصة رابطاً وتغفل معنى الوقت المتاح.",
+      "action": "صُحح العنوان العربي إلى «وقت الفراغ في عطلة نهاية الأسبوع»."
+    },
+    {
+      "id": "d-a1-05.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S2",
+        "S12"
+      ],
+      "finding": "Lina: «Was machst du am Wochenende?» كانت الترجمة «ماذا تفعل نهاية الأسبوع؟»؛ المعنى مفهوم، لكن غابت «في» وجاء تركيب نهاية الأسبوع أقل سلامة في العربية المعيارية.",
+      "action": "صُححت إلى «ماذا تفعل في عطلة نهاية الأسبوع؟»، وهي أوضح وتطابق مثال السؤال المنشور في Goethe Deutsch Online A1."
+    },
+    {
+      "id": "d-a1-05.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "Karim: «Am Samstag spiele ich Fußball mit Freunden.» — «يوم السبت ألعب كرة القدم مع الأصدقاء.» النشاط واليوم والرفقة منقولة دون تغيير للفاعل.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-05.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S2"
+      ],
+      "finding": "Lina: «Und am Sonntag?» — «ويوم الأحد؟» سؤال متابعة قصير يحافظ على حذف الفعل المفهوم من السياق.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-05.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S2",
+        "S3",
+        "S5",
+        "S10",
+        "S17",
+        "S20"
+      ],
+      "finding": "Karim: «Da besuche ich meine Tante. Und du?» كانت الترجمة «أزور خالتي. وأنتِ؟»؛ غاب فيها مرجع Da إلى يوم الأحد، كما حُسمت جهة Tante للأم بلا دليل. «أنتِ» صحيحة لمخاطبة Lina الأنثى.",
+      "action": "صُححت الترجمة إلى «يوم الأحد أزور عمتي أو خالتي. وأنتِ؟» لإظهار مرجع Da وحفظ عدم تحديد جهة القرابة، مع إبقاء تأنيث المخاطبة."
+    },
+    {
+      "id": "d-a1-05.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "Lina: «Ich bleibe zu Hause und lerne Deutsch.» — «أبقى في البيت وأتعلّم الألمانية.» المعنى والفاعل محفوظان.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-05-q1",
+      "kind": "سؤال اختيار من متعدد مع المشتتات والمفتاح والشرح",
+      "status": "مُصحح",
+      "sources": [
+        "S2",
+        "S5",
+        "S10"
+      ],
+      "finding": "سؤال السبت ومفتاح «Er spielt Fußball mit Freunden» صحيحان؛ المشتتان يخلطان زيارة Tante يوم الأحد وتعلّم لينا الألمانية في المنزل. كان شرح الفخ الأول يخصصها بالعمّة لأب دون دليل من Tante.",
+      "action": "عُدّل الشرح إلى «يزور عمته أو خالته يوم الأحد، لا السبت»، ووُضحت قرينة نشاط لينا؛ بقي المفتاح والمشتتات كما هي."
+    },
+    {
+      "id": "d-a1-05-q2",
+      "kind": "سؤال ملء فراغ مع المفتاح والشرح والتعليمات",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S5"
+      ],
+      "finding": "كان promptDe «Am Sonntag ___ er seine Tante.» ويتوقع «besucht»، مع أن promptAr يقول إن المطلوب كلمة من الحوار، والسطر الأصلي «Da besuche ich meine Tante» بصيغة ich.",
+      "action": "جُعل promptDe «Da ___ ich meine Tante.» والمفتاح «besuche»، وصار الشرح يربط الإجابة بضمير ich؛ هكذا يسترجع المتعلم لفظاً موجوداً في الحوار."
+    },
+    {
+      "id": "d-a1-05.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "«Am Samstag spiele ich Fußball mit Freunden.» تطابق سطر السبت حرفياً، ويحفظ Fußball إملاءً صحيحاً.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-05.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S5",
+        "S10"
+      ],
+      "finding": "«Da besuche ich meine Tante.» تطابق الجملة الألمانية؛ التعديل كان في ترجمة درجة القرابة لا في النص الألماني.",
+      "action": "أُبقي الإملاء الألماني كما هو؛ لا يحدد النص جهة القرابة."
+    },
+    {
+      "id": "d-a1-05.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "«Ich bleibe zu Hause und lerne Deutsch.» تطابق السطر وترتيب الفعل والعبارة المكانية.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-06",
+      "kind": "حوار: العنوان والسياق والمستوى المعلن",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "العنوان «Im Bus / في الحافلة» يطابق مشهد تذكرة ووجهة وخط ونزول من وسيلة نقل؛ الموضوع اليومي مناسب لسياق A1، مع إبقاء ملاحظة المفردات المحددة مستقلة وغير محسومة أدناه.",
+      "action": "أُبقي العنوان والسياق؛ لا يُستنتج من ملاحظة كلمة واحدة تغيير وسم المستوى العام."
+    },
+    {
+      "id": "d-a1-06.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S14"
+      ],
+      "finding": "Fahrer: «Fahrkarte, bitte!» — «التذكرة من فضلك!» طلب التذكرة ومقابل bitte منقولان بوضوح.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-06.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S14",
+        "S15"
+      ],
+      "finding": "Sami: «Hier, bitte. Eine Fahrkarte zum Zentrum?» — «تفضّل. تذكرة إلى الوسط؟» سياق التذكرة واضح، وPONS يسند «الوسط» في Zusammensetzung Stadtzentrum؛ «وسط المدينة» توضيح أسلوبي ممكن لا خطأ مثبت.",
+      "action": "لا تعديل؛ سُجلت ملاحظة الوضوح بوصفها اقتراحاً أسلوبياً لا عيباً مؤكداً."
+    },
+    {
+      "id": "d-a1-06.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S6",
+        "S7",
+        "S8",
+        "S17",
+        "S18"
+      ],
+      "finding": "Fahrer: «Das ist die falsche Linie. Sie müssen hier aussteigen.» كانت الترجمة «هذه الخط الخاطئ. عليكم النزول هنا.» لفظ Linie مؤنث في الألمانية ويعني مساراً، لكن المقابل العربي المختار «الخط» مذكر فيلزم «هذا». كما أن المخاطب سامي المفرد، بينما «عليكم» جمع.",
+      "action": "صُححت إلى «هذا الخط الخاطئ. يجب عليك أن تنزل هنا.» لتطابق جنس الاسم العربي وعدد المخاطب، مع حفظ معنى النزول من المركبة."
+    },
+    {
+      "id": "d-a1-06.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S15"
+      ],
+      "finding": "Sami: «Oh, danke! Und welcher Bus fährt zum Zentrum?» — «أوه، شكراً! وأي حافلة تذهب إلى الوسط؟» سؤال الوجهة مفهوم، و«الوسط» مقابل موثق لـStadtzentrum؛ «وسط المدينة» صياغة أكثر تحديداً فقط.",
+      "action": "لا تعديل؛ لا يُحوّل تفضيل صياغة أوضح إلى خطأ مؤكد."
+    },
+    {
+      "id": "d-a1-06.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S4",
+        "S9"
+      ],
+      "finding": "Fahrer: «Nummer zwölf, gegenüber.» كانت الترجمة «الرقم اثنا عشر، مقابل.» وهي تترك «مقابل» بلا متمم وتغفل أن الجواب يحدد الحافلة. Duden يثبت المعنى المكاني المقابل في هذا السياق.",
+      "action": "صُححت إلى «الحافلة رقم 12 في الجهة المقابلة.» لإظهار المحذوف المفهوم وإكمال التركيب العربي دون تغيير الوجهة."
+    },
+    {
+      "id": "d-a1-06-q1",
+      "kind": "سؤال اختيار من متعدد مع المشتتات والمفتاح والشرح",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S7",
+        "S9"
+      ],
+      "finding": "«Ist Sami im richtigen Bus?» المفتاح «Nein, das ist die falsche Linie.» يطابق تصريح السائق؛ الخياران الآخران يناقضان أن Sami على الخط الخطأ وأن رقم 12 هو الحافلة التي يحتاجها. الشرح يذكر القرينة نفسها.",
+      "action": "أُبقي السؤال والمشتتات والمفتاح والشرح."
+    },
+    {
+      "id": "d-a1-06-q2",
+      "kind": "سؤال ملء فراغ مع المفتاح والشرح والتعليمات",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S6"
+      ],
+      "finding": "كان promptDe «Er muss ___ Bus nehmen: Nummer zwölf.» ويتوقع den، وهي كلمة غير واردة في الحوار رغم أن promptAr يطلب كلمة منه؛ كما أن الجملة تصوغ استنتاجاً جديداً لا استرجاعاً مباشراً.",
+      "action": "استُبدل بـ«Sie müssen hier ___.» والمفتاح aussteigen والشرح «الإجابة: aussteigen؛ أي يجب على سامي النزول هنا»، اقتباساً من السطر الأصلي."
+    },
+    {
+      "id": "d-a1-06.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S14"
+      ],
+      "finding": "«Fahrkarte, bitte!» تطابق طلب السائق في أول الحوار؛ الكلمة وعلامة التعجب سليمتان.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-06.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S6"
+      ],
+      "finding": "«Sie müssen hier aussteigen.» تطابق السطر الألماني ومفتاح المفردة؛ Duden يسند معنى مغادرة وسيلة النقل.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "d-a1-06.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S4",
+        "S9"
+      ],
+      "finding": "«Nummer zwölf, gegenüber.» تطابق السطر الألماني كما هو؛ الإملاء الألماني صحيح، وملاحظة المستوى منفصلة في d-a1-06.level.",
+      "action": "لا تعديل في جملة الإملاء؛ تصحيح الترجمة مسجل في d-a1-06.lines[4]."
+    },
+    {
+      "id": "d-a1-06.level",
+      "kind": "ملاحظة مستوى لمفردات الحوار",
+      "status": "غير محسوم",
+      "sources": [
+        "S1",
+        "S2",
+        "S4",
+        "S5",
+        "S7",
+        "S9",
+        "S19",
+        "S15",
+        "S20",
+        "S21",
+        "S22"
+      ],
+      "finding": "Duden يضع gegenüber وLinie وZentrum في مفردات Goethe B1؛ وتعرض قائمة Goethe A2 gegenüber بمثال مكاني وتورد Stadtzentrum. قائمة Start Deutsch 1 تسند أساسيات سياق النقل مثل Bus وFahrkarte وaussteigen، لكنها لا تجعل كل كلمة غير واردة فيها خطأً ممنوعاً. كما أن Duden يضع besuchen وTante وFreizeit وWochenende في وسم B1 رغم ورودها في موارد Goethe A1 (S1–S5, S20–S22)، ما يبيّن أن الوسم ليس حداً أدنى حصرياً. هذا تفاوت في مؤشرات القوائم، لا برهان قاطع على أن الحوار A1 غير مناسب.",
+      "action": "أُبقي الجمل ووسم الحوار دون تعديل تخميني؛ تبقى ملاءمة مفردات هذا الحوار للمستوى مسألة غير محسومة للمراجعة التعليمية اللاحقة."
+    }
+  ]
+}

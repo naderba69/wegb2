@@ -2845,6 +2845,48 @@ const hasFile = txt().includes("صوتٌ من الدار");
     if (leave) leave();
   }
 
+  /* ═══ LXXXVIII — الحوارات A1 04–06 بعد المراجعة: نص ظاهر وإجابات فعلية ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 4, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    const cases = [
+      {
+        id: "d-a1-04", titleDe: "Einkaufen auf dem Markt", titleAr: "التسوّق في السوق",
+        prompt: "Ein Kilo Tomaten kostet ___ Euro.", answer: "drei",
+        visible: ["أعطني كيلو من فضلك.", "أكمل الفراغ بالسعر الصحيح من الحوار."],
+      },
+      {
+        id: "d-a1-05", titleDe: "Freizeit am Wochenende", titleAr: "وقت الفراغ في عطلة نهاية الأسبوع",
+        prompt: "Da ___ ich meine Tante.", answer: "besuche",
+        visible: ["يوم الأحد أزور عمتي أو خالتي. وأنتِ؟", "ماذا تفعل في عطلة نهاية الأسبوع؟"],
+      },
+      {
+        id: "d-a1-06", titleDe: "Im Bus", titleAr: "في الحافلة",
+        prompt: "Sie müssen hier ___.", answer: "aussteigen",
+        visible: ["هذا الخط الخاطئ. يجب عليك أن تنزل هنا.", "الحافلة رقم 12 في الجهة المقابلة."],
+      },
+    ];
+    for (const item of cases) {
+      const cleanup = mount(React.createElement(TaskView, {
+        task: { id: `t-${item.id}-review-ui`, kind: "hoeren" as const, dialogueId: item.id, titleDe: item.titleDe, titleAr: item.titleAr, minutes: 10 },
+        ...props,
+      }));
+      const reveal = btn("أظهر النص");
+      if (reveal) click(reveal);
+      const rendered = txt();
+      ok(!!reveal && item.visible.every((snippet) => rendered.includes(snippet)),
+        `LXXXVIII1 ${item.id} واجهة الاستماع تعرض الترجمة/التعليمات المصححة بعد كشف النص`);
+      const exercise = Array.from(rootEl.querySelectorAll(".dirb-ex-item")).find((node) => (node.textContent ?? "").includes(item.prompt));
+      const input = exercise?.querySelector("input") as HTMLInputElement | null;
+      const check = exercise ? Array.from(exercise.querySelectorAll("button")).find((button) => (button.textContent ?? "").includes("تحقّق")) as HTMLElement | undefined : undefined;
+      if (input) typeIn(input, item.answer);
+      if (check) click(check);
+      ok(!!exercise && !!input && !!check && (exercise.textContent ?? "").includes("✅"),
+        `LXXXVIII2 ${item.id} مفتاح سؤال الاسترجاع الجديد يقبل ${item.answer} في الواجهة الفعلية`);
+      if (cleanup) cleanup();
+    }
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);
