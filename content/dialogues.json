@@ -1410,7 +1410,7 @@
       {
         "who": "Friseur",
         "de": "Guten Tag! Was darf es sein?",
-        "ar": "طاب يومكم! ماذا تفضّل؟"
+        "ar": "طاب يومكم! ماذا تفضّلين؟"
       },
       {
         "who": "Kundin",
@@ -1420,7 +1420,7 @@
       {
         "who": "Friseur",
         "de": "Alles klar. Möchten Sie auch waschen?",
-        "ar": "واضح. هل تريدين غسلاً أيضاً؟"
+        "ar": "حسنًا. هل تريدين غسل شعركِ أيضًا؟"
       },
       {
         "who": "Kundin",
@@ -1437,14 +1437,14 @@
       {
         "id": "d-a1-07-q1",
         "type": "mc",
-        "promptDe": "Was möchte die Kundin?",
+        "promptDe": "Wie soll der Friseur schneiden?",
         "options": [
           "nur waschen",
           "sehr kurz schneiden",
           "schneiden, nicht zu kurz"
         ],
         "answer": "schneiden, nicht zu kurz",
-        "explanationAr": "الدليل: «Nur schneiden, bitte. Nicht zu kurz!». الفخّ 1: الغسل اقتراح الحلّاق وافقت عليه لاحقاً كإضافة. الفخّ 2: «kurz» سُمع مع «nicht zu».",
+        "explanationAr": "الدليل: «Nur schneiden, bitte. Nicht zu kurz!». السؤال هنا عن طول القصّة؛ والغسل خدمة إضافية وافقت عليها لاحقاً. الفخّ 1: «nur waschen» لا يصف القصّ. الفخّ 2: «kurz» وردت مع «nicht zu».",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
@@ -1456,7 +1456,7 @@
           "20"
         ],
         "explanationAr": "20 يورو.",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "أكمل الفراغ بالمبلغ الصحيح من الحوار."
       }
     ],
     "dictation": [
@@ -1866,7 +1866,7 @@
       {
         "who": "Kellner",
         "de": "Guten Tag! Was möchten Sie?",
-        "ar": "نهاراً سعيداً! ماذا تريد؟"
+        "ar": "نهارًا سعيدًا! ماذا تريدين؟"
       },
       {
         "who": "Mia",
@@ -1912,7 +1912,7 @@
       {
         "id": "d-a1-08-q2",
         "type": "mc",
-        "promptDe": "Wie viel bezahlt sie?",
+        "promptDe": "Was kostet die Bestellung?",
         "options": [
           "fünf Euro fünfzig",
           "drei Euro",
@@ -1920,7 +1920,7 @@
           "drei Euro fünfzig"
         ],
         "answer": "drei Euro fünfzig",
-        "explanationAr": "الدليل: «Das macht drei Euro fünfzig». الفخّان: «drei» و«fünfzig» يظهران منفصلين في الخيارات الخاطئة.",
+        "explanationAr": "الدليل على تكلفة الطلب: «Das macht drei Euro fünfzig». و«Stimmt so» تعني أن النادل لا يعيد باقيًا، لكنها لا تحدد مقدار النقد الذي ناولته ميا. الفخّان: «drei» و«fünfzig» يظهران منفصلين في خيارين خاطئين.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       }
     ],
@@ -1943,7 +1943,7 @@
       {
         "who": "Herr Weber",
         "de": "Guten Tag, Frau Ibrahim. Hier ist Herr Weber aus dem Büro.",
-        "ar": "نهارك سعيد يا سارة. أنا السيد فيبر من المكتب."
+        "ar": "نهارك سعيد يا سيدة إبراهيم. أنا السيد فيبر من المكتب."
       },
       {
         "who": "Sara",
@@ -1953,12 +1953,12 @@
       {
         "who": "Herr Weber",
         "de": "Ist morgen um neun Uhr ein Termin möglich?",
-        "ar": "هل يكون موعد غداً التاسعة ممكناً؟"
+        "ar": "هل يمكن تحديد موعد غدًا عند الساعة التاسعة؟"
       },
       {
         "who": "Sara",
         "de": "Ja, um neun Uhr passt gut.",
-        "ar": "نعم، التاسعة تناسب."
+        "ar": "نعم، الساعة التاسعة مناسبة."
       },
       {
         "who": "Herr Weber",
@@ -1974,11 +1974,11 @@
         "options": [
           "Herr Weber aus dem Büro",
           "Frau Ibrahim",
-          "Sara",
-          "der Chef von Sara"
+          "Herr Weber aus dem Café",
+          "Frau Weber aus dem Büro"
         ],
         "answer": "Herr Weber aus dem Büro",
-        "explanationAr": "الدليل: «Hier ist Herr Weber aus dem Büro». الفخّ: سارة إبراهيم هي من ردّت («am Apparat»)، لا من اتّصل.",
+        "explanationAr": "الدليل: «Hier ist Herr Weber aus dem Büro». الفخّ 1: سارة هي من ردّت على المكالمة («am Apparat»). الفخّان 2 و3 يبدّلان معلومةً مصرّحاً بها: Büro لا Café، وHerr لا Frau.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {

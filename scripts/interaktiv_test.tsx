@@ -2887,6 +2887,75 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ LXXXIX — الحوارات A1 07–09: النصوص والترجمات والأسئلة في واجهة الاستماع ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 5, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    const cases: {
+      id: string;
+      titleDe: string;
+      titleAr: string;
+      visible: string[];
+      questions: { type: "mc" | "fill"; prompt: string; answer: string }[];
+    }[] = [
+      {
+        id: "d-a1-07", titleDe: "Beim Friseur", titleAr: "عند الحلاق",
+        visible: ["ماذا تفضّلين؟", "حسنًا. هل تريدين غسل شعركِ أيضًا؟", "أكمل الفراغ بالمبلغ الصحيح من الحوار."],
+        questions: [
+          { type: "mc", prompt: "Wie soll der Friseur schneiden?", answer: "schneiden, nicht zu kurz" },
+          { type: "fill", prompt: "Es kostet zusammen ___ Euro.", answer: "20" },
+        ],
+      },
+      {
+        id: "d-a1-08", titleDe: "Im Café: Nur einen Apfel", titleAr: "في المقهى: تفاحة فقط",
+        visible: ["ماذا تريدين؟", "قهوة بالحليب من فضلك.", "تفاحة فقط."],
+        questions: [
+          { type: "mc", prompt: "Was bestellt Mia?", answer: "einen Kaffee mit Milch und einen Apfel" },
+          { type: "mc", prompt: "Was kostet die Bestellung?", answer: "drei Euro fünfzig" },
+        ],
+      },
+      {
+        id: "d-a1-09", titleDe: "Am Telefon", titleAr: "في الهاتف",
+        visible: ["يا سيدة إبراهيم", "هل يمكن تحديد موعد غدًا عند الساعة التاسعة؟", "نعم، الساعة التاسعة مناسبة."],
+        questions: [
+          { type: "mc", prompt: "Wer ruft an?", answer: "Herr Weber aus dem Büro" },
+          { type: "mc", prompt: "Wann ist der Termin?", answer: "morgen um neun Uhr" },
+        ],
+      },
+    ];
+    for (const item of cases) {
+      const cleanup = mount(React.createElement(TaskView, {
+        task: { id: `t-${item.id}-review-ui`, kind: "hoeren" as const, dialogueId: item.id, titleDe: item.titleDe, titleAr: item.titleAr, minutes: 10 },
+        ...props,
+      }));
+      const reveal = btn("أظهر النص");
+      if (reveal) click(reveal);
+      const rendered = txt();
+      ok(!!reveal && item.visible.every((snippet) => rendered.includes(snippet)),
+        `LXXXIX1 ${item.id} واجهة الاستماع تعرض الترجمة/التعليمات المصححة بعد كشف النص`);
+
+      for (const question of item.questions) {
+        const exercise = Array.from(rootEl.querySelectorAll(".dirb-ex-item"))
+          .find((node) => (node.textContent ?? "").includes(question.prompt));
+        let answerControl: HTMLElement | null = null;
+        if (question.type === "mc") {
+          answerControl = (Array.from(exercise?.querySelectorAll(".dirb-ex-opt") ?? [])
+            .find((option) => (option.textContent ?? "").trim() === question.answer) as HTMLElement | undefined) ?? null;
+        } else {
+          answerControl = (exercise?.querySelector("input.field") as HTMLInputElement | null);
+          if (answerControl) typeIn(answerControl as HTMLInputElement, question.answer);
+        }
+        if (question.type === "mc" && answerControl) click(answerControl);
+        const check = exercise ? Array.from(exercise.querySelectorAll("button"))
+          .find((button) => (button.textContent ?? "").includes("تحقّق")) as HTMLElement | undefined : undefined;
+        if (check) click(check);
+        ok(!!exercise && !!answerControl && !!check && (exercise.textContent ?? "").includes("✅"),
+          `LXXXIX2 ${item.id} الإجابة الصحيحة لسؤال «${question.prompt}» تُقبل في واجهة التمرين`);
+      }
+      if (cleanup) cleanup();
+    }
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);
