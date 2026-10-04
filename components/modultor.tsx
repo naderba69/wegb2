@@ -75,7 +75,7 @@ export default function ModulTor({ day }: { day: number }) {
       </p>
 
       {!modulFrei(progress, idx) && (
-        <div className="card" style={{ padding: "0.6rem 0.8rem", background: "#fee2e2", color: "#7f1d1d" }}>
+        <div className="card" style={{ padding: "0.6rem 0.8rem", background: "var(--color-rosa-soft)", color: "var(--color-die)" }}>
           🚧 هذه الوحدة مقفلة: عليك أوّلاً اجتياز امتحان الوحدة {idx - 1}.
         </div>
       )}
@@ -167,7 +167,7 @@ export default function ModulTor({ day }: { day: number }) {
       )}
 
       {erg && (
-        <div className="card" data-test="tor-ergebnis" style={{ padding: "0.7rem 0.9rem", background: erg.bestanden ? "#dcfce7" : "#fef3c7" }}>
+        <div className="card" data-test="tor-ergebnis" style={{ padding: "0.7rem 0.9rem", background: erg.bestanden ? "var(--ui-green-soft)" : "var(--ui-gold-soft)", borderColor: erg.bestanden ? "var(--ui-green)" : "var(--ui-gold)" }}>
           <div style={{ fontWeight: 900 }}>
             {erg.bestanden ? `🎉 عبرتَ البوّابة — ${erg.gesamt}٪` : `⏳ لم تعبر بعد — ${erg.gesamt}٪`}
           </div>

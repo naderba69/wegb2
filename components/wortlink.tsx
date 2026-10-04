@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
 import type { VocabCard } from "@/lib/types";
+import { POS_AR } from "@/lib/types";
 import { karteFuerWort, verknuepfung } from "@/lib/verknuepfung";
 import { erklaereAr } from "@/lib/komposita";
 import { speakAny } from "@/lib/speech";
+import { SynonymKontext } from "./SynonymKontext";
 
 /**
  * نصٌّ ألمانيٌّ قابلٌ للنقر: كلُّ كلمةٍ لها بطاقةٌ تصيرُ زرًّا يفتحُ البطاقةَ (المعنى، المثال، المتلازمات، أين تظهرُ أيضاً).
@@ -36,13 +38,20 @@ export function WortKarte({ karte, onClose }: { karte: VocabCard; onClose: () =>
   return (
     <span data-testid="wortkarte" dir="rtl" style={{ display: "block", margin: "0.5rem 0", padding: "0.7rem 0.9rem", borderRadius: "0.6rem", background: "var(--color-sand, #f3ede2)", fontSize: "0.9rem", lineHeight: 1.8 }}>
       <span style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem", alignItems: "baseline" }}>
-        <strong><span lang="de" dir="ltr">{karte.de}</span> — {karte.ar} <span style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>({karte.level})</span></strong>
+        <strong><span lang="de" dir="ltr">{karte.de}</span> — {karte.ar} <span style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>({karte.level})</span>{" "}
+        {karte.pos && <span data-testid="wortkarte-pos" className="chip" style={{ fontSize: "0.72rem" }}>🏷️ {karte.pos}{POS_AR[karte.pos] ? ` · ${POS_AR[karte.pos]}` : ""}</span>}</strong>
         <span>
           <button type="button" className="chip" onClick={() => speakAny(karte.de)}>🔊</button>{" "}
           <button type="button" className="chip" onClick={onClose} aria-label="إغلاق">✕</button>
         </span>
       </span>
       {karte.exampleDe && <span style={{ display: "block" }}><span lang="de" dir="ltr">{karte.exampleDe}</span><span style={{ display: "block", color: "var(--color-ink2)" }}>{karte.exampleAr}</span></span>}
+      {(karte.ant?.length ?? 0) > 0 && (
+        <span data-testid="wortkarte-synant" style={{ display: "block" }}>
+          <span style={{ display: "block" }}>↔️ ضدّ: <span lang="de" dir="ltr">{karte.ant!.join(" · ")}</span></span>
+        </span>
+      )}
+      <SynonymKontext karte={karte} testId="wortkarte-syn-context" />
       {v.komposita && (
         <span data-testid="wortkarte-komposita" style={{ display: "block", color: "var(--color-ink2)", fontSize: "0.85rem" }}>
           🧩 أصل المركّب: {v.komposita.teile.map((t, idx) => (
