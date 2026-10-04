@@ -1,4 +1,4 @@
-/* تدقيق ديناميكي: تركيب كلّ مهمّة من كلّ يوم (270 يوماً) + كلّ درس/نص/حوار — أيّ استثناء أو تحذير React يُسجَّل */
+/* تدقيق ديناميكي: تركيب كلّ مهمّة من كلّ يوم (378 يوماً) + كلّ درس/نص/حوار — أيّ استثناء أو تحذير React يُسجَّل */
 import { JSDOM } from "jsdom";
 const dom = new JSDOM(`<!doctype html><html><body><div id="root"></div></body></html>`, { url: "http://localhost/", pretendToBeVisual: true });
 (dom.window as unknown as { scrollTo: () => void }).scrollTo = () => {};

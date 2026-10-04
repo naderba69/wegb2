@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useProgress } from "@/lib/store";
 import { buildDay } from "@/lib/plan";
 import { LektionWizard } from "@/components/akademie/LektionWizard";
@@ -24,13 +25,14 @@ export default function Lernen() {
       : "b2-nominalstil");
 
   return (
-    <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }} data-testid="lernen-screen">
-      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
-        <h1 style={{ fontWeight: 900, fontSize: "1.2rem", margin: 0 }}>📖 الدرس</h1>
-        <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>
-          معالجُ خمسِ خطواتٍ — درسُ اليوم يُفتح هنا ولا يُقفزُ منه
-        </span>
+    <div className="today-screen fadein dirb ui-page" data-testid="lernen-screen">
+      <header className="dirb-tabhead dirb-hero-anim">
+        <h1 className="dirb-title">الدرس</h1>
+        <div className="dirb-sub">افهم القاعدة، شاهد مثالاً، ثم تدرّب.</div>
       </header>
+      <Link href="/masar" className="curriculum-entry-link" data-testid="curriculum-map-link">
+        🧭 استكشف مسار المنهج الكامل · 378 يوماً
+      </Link>
       <LektionWizard topicId={topicId} />
     </div>
   );

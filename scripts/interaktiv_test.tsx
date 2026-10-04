@@ -52,7 +52,7 @@ function ok(cond: boolean, label: string) {
 async function main() {
   const React = await import("react");
   const { createRoot } = await import("react-dom/client");
-  const { emptyProgress } = await import("../lib/types");
+  const { emptyProgress, TOTAL_DAYS } = await import("../lib/types");
   const act = (React as unknown as { act: (cb: () => void) => void }).act;
 
   const d0 = dom.window.document as unknown as Document;
@@ -175,6 +175,55 @@ async function main() {
     const finish = btn("أنهيت");
     if (finish) click(finish);
     ok(txt().includes("التقدير الذاتي"), "III4d الإنهاء يكشف لوحة المعايير الأربعة");
+
+    const nativeSetInterval = globalThis.setInterval;
+    const nativeClearInterval = globalThis.clearInterval;
+    const ticks: Array<() => void> = [];
+    const fakeIds = new Set<number>();
+    let fakeId = 0;
+    globalThis.setInterval = ((handler: TimerHandler, delay?: number, ...args: any[]) => {
+      if (delay === 1000) {
+        const id = ++fakeId;
+        fakeIds.add(id);
+        const callback = handler as (...callbackArgs: any[]) => void;
+        ticks.push(() => callback(...args));
+        return id as unknown as ReturnType<typeof setInterval>;
+      }
+      return nativeSetInterval(handler as (...callbackArgs: any[]) => void, delay, ...args);
+    }) as unknown as typeof globalThis.setInterval;
+    globalThis.clearInterval = ((id: ReturnType<typeof setInterval>) => {
+      if (typeof id === "number" && fakeIds.has(id)) { fakeIds.delete(id); return; }
+      nativeClearInterval(id);
+    }) as unknown as typeof globalThis.clearInterval;
+    try {
+      const teil3 = btn("المناقشة");
+      if (teil3) click(teil3);
+      ok(!!d0.querySelector('[data-testid="muendlich-einwand-hinweis"]'), "LXXIX1 قبل الجولة يُعلَنُ نمطُ المقاطعة وحدودُ الصوت والتقييم");
+      const startDiscussion = btn("ابدأ");
+      if (startDiscussion) click(startDiscussion);
+      ok(!d0.querySelector('[data-testid="muendlich-einwand"]'), "LXXIX2 الاعتراضُ لا يظهر في بداية الجولة");
+      act(() => { for (let i = 0; i < 121; i++) ticks.forEach((tick) => tick()); });
+      const interruption = d0.querySelector('[data-testid="muendlich-einwand"]');
+      ok(!!interruption && !!interruption.querySelector('[aria-label="استمع للاعتراض"]') && txt().includes("02:59"),
+        "LXXIX3 اعتراضٌ ألماني مفاجئٌ يظهر بعد مرور الوقت ويبقى المؤقّت جارياً مع خيار القراءة المحلية");
+      const reply = d0.querySelector('[data-testid="muendlich-einwand-antwort"]') as HTMLElement | null;
+      if (reply) click(reply);
+      ok(!!d0.querySelector('[data-testid="muendlich-einwand-bestaetigt"]') && txt().includes("لا يُعدّ هذا إثباتاً للنطق"),
+        "LXXIX4 تأكيدُ الردّ إقرارٌ ذاتيٌّ لا إثباتٌ آليٌّ للنطق أو الاستقلال");
+      const finishDiscussion = btn("أنهيت — إلى التقدير");
+      if (finishDiscussion) click(finishDiscussion);
+      ok(!txt().includes("جاهز للامتحان") && !txt().includes("prüfungsreif") && txt().includes("جولة تدريبية"),
+        "LXXIX6 بطاقةُ التقدير تعرض تدريباً ذاتياً بلا ادعاء جاهزية امتحان");
+      const nextCard = btn("بطاقة أخرى لنفس الجزء");
+      if (nextCard) click(nextCard);
+      ok(!!nextCard && !!btn("ابدأ") && txt().includes("دورك في") && !d0.querySelector('[data-testid="muendlich-einwand"]'),
+        "LXXIX5 بطاقةُ أخرى تعودُ إلى بداية الجولة وتسمحُ بمقاطعة جديدة بدل شاشة تقييم عالقة");
+    } finally {
+      const unmountForTest = leave as unknown as (() => void) | null;
+      if (unmountForTest) unmountForTest();
+      globalThis.setInterval = nativeSetInterval;
+      globalThis.clearInterval = nativeClearInterval;
+    }
 
     mount(React.createElement(SchulSimulator, { progress: { ...emptyProgress } }));
     ok(txt().includes("Schul-Simulator"), "III3a محاكي المدرسة يركّب");
@@ -516,7 +565,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 3316, "XIX1 البنكُ 3316 بطاقةً بالضبط بعدَ ستٍّ وعشرينَ موجة");
+    ok(alleVokabeln.length === 3356, "XIX1 البنكُ 3356 بطاقةً بالضبط بعدَ ستٍّ وعشرينَ موجةً ولوحِ A0");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id));
     ok(neu.length === 31 && neu.every((c: { article?: string; de: string }) => c.article && c.de.startsWith(c.article + " ")), "XIX3 إحدى وثلاثونَ وافدةً بأدواتِها الصحيحةِ لا تُقلَّد");
@@ -631,13 +680,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
 
-  /* ---------- XXVIII — التغطيةُ التامّة: 58 درساً تُفتَحُ فتجدُ تركتَها ---------- */
+  /* ---------- XXVIII — التغطيةُ التامّة: 66 درساً تُفتَحُ فتجدُ تركتَها ---------- */
   {
     const { default: TaskView } = await import("../components/tasks");
     const { grammarMap, getBrueckenFor } = await import("../lib/content");
     const props = { lang: "ar" as const, day: 60, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
     const ids = Object.keys(grammarMap);
-    ok(ids.length === 58, "XXVIII1 ثمانيةٌ وخمسونَ درسَ قواعدَ في البنك — بعدَ ضربِ البنوكِ وتوسيعِها لا بالتمنّي");
+    ok(ids.length === 66, "XXVIII1 ستةٌ وستّونَ درسَ قواعدَ في البنك — بعدَ ضربِ البنوكِ وتوسيعِها لا بالتمنّي");
     let leer = 0; let ohneKopf = 0;
     for (const g of ids) {
       try {
@@ -647,7 +696,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       if (!t.includes("🧠 تركاتُ الحفظ لهذا الدرس")) ohneKopf++;
       if (!t.includes(`(${getBrueckenFor(g).length})`)) leer++;
     }
-    ok(ohneKopf === 0, "XXVIII2 كلُّ درسٍ من ثمانيةٍ وخمسينَ يَعرِضُ كتلةَ التركاتِ فعلاً — صفرُ درسٍ أجرد");
+    ok(ohneKopf === 0, "XXVIII2 كلُّ درسٍ من ستةٍ وستّينَ يَعرِضُ كتلةَ التركاتِ فعلاً — صفرُ درسٍ أجرد");
     ok(leer === 0, "XXVIII3 وعدَّادُ كلِّ درسٍ يطابقُ ما تُرجِعُهُ الدالةُ له بالضبط");
     ok(getBrueckenFor("b2-modalpartikel").length >= 1 && getBrueckenFor("a1-zahlen").length >= 1, "XXVIII4 آخرُ اليتامى (الجسيماتُ والأرقام) نالا تركتَهما");
     ok(ids.includes("a1-war-hatte") && ids.includes("a2-praeteritum"), "XXVIII5 درسا الماضي البسيط داخلَ البنكِ لا في ملفٍ يتيم");
@@ -702,7 +751,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
 
-  /* ═══════════ XXXI — المسحُ التركيبيُّ الشامل: 270 يوماً تُفتَحُ مهمةً مهمة ═══════════ */
+  /* ═══════════ XXXI — المسحُ التركيبيُّ الشامل: 378 يوماً تُفتَحُ مهمةً مهمة ═══════════ */
   {
     const { default: TaskView } = await import("../components/tasks");
     const { buildDay } = await import("../lib/plan");
@@ -711,7 +760,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const crashes: string[] = [];
     const leere: string[] = [];
     let total = 0;
-    for (let day = 1; day <= 270; day++) {
+    for (let day = 1; day <= TOTAL_DAYS; day++) {
       const plan = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } });
       for (const task of plan.tasks) {
         total++;
@@ -725,10 +774,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
         }
       }
     }
-    console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ 270 يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
+    console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ ${TOTAL_DAYS} يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
     if (crashes.length) console.error("   ⤷ انهيارات:", crashes.slice(0, 6).join(" | "));
     if (leere.length) console.error("   ⤷ شاشاتٌ خاوية:", leere.slice(0, 6).join(" | "));
-    ok(total === 1473, `XXXI1 1473 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
+    ok(total === 2110, `XXXI1 2110 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
     ok(kinds.size === 9, `XXXI2 الأنواعُ التسعةُ كلُّها مُمثَّلةٌ فعلاً في الأيامِ — لا نوعَ مكتوبٍ ولا يُولَد (${[...kinds.keys()].join("، ")})`);
     ok(crashes.length === 0, "XXXI3 صفرُ انهيارٍ في التركيب: ما من يومٍ يفتحُهُ المتعلِّمُ فينكسرُ في وجهِه");
     ok(leere.length === 0, "XXXI4 صفرُ شاشةٍ خاوية: كلُّ مهمةٍ تعرضُ محتوًى حقيقياً لا هيكلاً فارغاً");
@@ -758,7 +807,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
         if (b.tagName === "BUTTON" && !(b.textContent ?? "").trim() && !b.getAttribute("aria-label") && !b.getAttribute("title")) stumm.push(wo);
       }
     };
-    for (let day = 1; day <= 270; day += 3) {
+    for (let day = 1; day <= TOTAL_DAYS; day += 3) {
       const plan = buildDay(day, { ...emptyProgress, plan: { ...emptyProgress.plan, day } });
       for (const task of plan.tasks) {
         mount(React.createElement(TaskView, { task, day, ...props }));
@@ -1371,19 +1420,138 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
   const minutenEffektivTest = (p: { plan: { minutenEffektiv?: number } }) => p.plan.minutenEffektiv ?? 0;
+  /* ═══ LXXXIII — R32: طيارُ de-DE المحلي، بلا fallback وبلا حكمٍ لغوي ═══ */
+  {
+    const W = dom.window as unknown as Record<string, unknown>;
+    const priorStandard = W.SpeechRecognition;
+    const priorWebkit = W.webkitSpeechRecognition;
+    let availability: "downloadable" | "available" = "downloadable";
+    let availabilityOptions: unknown = null;
+    let installOptions: unknown = null;
+    let installCalls = 0;
+    let webkitStarts = 0;
+    const startSnapshotRef: { current: { lang: string; processLocally: boolean } | null } = { current: null };
+    const recognitionRef: { current: StubLocalRecognition | null } = { current: null };
+
+    class StubLocalRecognition {
+      static async available(options: unknown) {
+        availabilityOptions = options;
+        return availability;
+      }
+      static async install(options: unknown) {
+        installOptions = options;
+        installCalls++;
+        availability = "available";
+        return true;
+      }
+      lang = "";
+      processLocally = false;
+      interimResults = false;
+      maxAlternatives = 1;
+      onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript?: string }>> }) => void) | null = null;
+      onerror: ((event: { error?: string }) => void) | null = null;
+      onend: (() => void) | null = null;
+      constructor() { recognitionRef.current = this; }
+      start() { startSnapshotRef.current = { lang: this.lang, processLocally: this.processLocally }; }
+      stop() { this.onend?.(); }
+    }
+    class StubWebkitRecognition {
+      start() { webkitStarts++; }
+      stop() {}
+    }
+    W.SpeechRecognition = StubLocalRecognition;
+    W.webkitSpeechRecognition = StubWebkitRecognition;
+
+    const flushAsync = async () => {
+      await new Promise<void>((resolve) => setTimeout(resolve, 0));
+    };
+    const asyncAct = act as unknown as (callback: () => Promise<void>) => Promise<void>;
+    const { default: LocalSpeechPilot } = await import("../components/LocalSpeechPilot");
+    const keysBefore = Array.from({ length: dom.window.localStorage.length }, (_, i) => {
+      const key = dom.window.localStorage.key(i)!;
+      return [key, dom.window.localStorage.getItem(key)] as const;
+    });
+
+    try {
+      mount(React.createElement(LocalSpeechPilot));
+      await asyncAct(flushAsync);
+      const state = d0.querySelector('[data-testid="local-asr-state"]');
+      const consent = d0.querySelector('[data-testid="local-asr-download-consent"]') as HTMLInputElement | null;
+      const install = d0.querySelector('[data-testid="local-asr-install"]') as HTMLButtonElement | null;
+      const initialStatus = state?.textContent ?? "";
+      ok(initialStatus.includes("يمكن طلب") && JSON.stringify(availabilityOptions).includes('"de-DE"') &&
+        JSON.stringify(availabilityOptions).includes('"processLocally":true'),
+        "LXXXIII1 يفحص حزمة de-DE بخيار processLocally=true ويعرض حالتها قبل طلب الميكروفون");
+      ok(!!consent && !!install && install.disabled && installCalls === 0,
+        "LXXXIII2 زر التثبيت معطّل ولا استدعاء قبل موافقة التنزيل المنفصلة");
+
+      if (consent && install) {
+        act(() => consent.click());
+        const allowedInstall = d0.querySelector('[data-testid="local-asr-install"]') as HTMLButtonElement | null;
+        ok(!!allowedInstall && !allowedInstall.disabled, "LXXXIII3 الموافقة الصريحة وحدها تفتح زر تنزيل de-DE");
+        if (allowedInstall) click(allowedInstall);
+        await asyncAct(flushAsync);
+      } else {
+        ok(false, "LXXXIII3 الموافقة الصريحة وحدها تفتح زر تنزيل de-DE");
+      }
+      const stateAfterInstall = d0.querySelector('[data-testid="local-asr-state"]')?.textContent ?? "";
+      ok(installCalls === 1 && JSON.stringify(installOptions).includes('"de-DE"') && stateAfterInstall.includes("متاحة"),
+        "LXXXIII4 التثبيت يستدعي حزمة de-DE فقط، ثم يعيد فحص الإتاحة");
+
+      const start = d0.querySelector('[data-testid="local-asr-start"]') as HTMLButtonElement | null;
+      if (start) click(start);
+      const startedWith = startSnapshotRef.current;
+      ok(!!startedWith && startedWith.lang === "de-DE" && startedWith.processLocally,
+        "LXXXIII5 قبل start يضبط lang=de-DE وprocessLocally=true فعلياً");
+      const currentRecognition = recognitionRef.current;
+      if (currentRecognition?.onresult) {
+        act(() => currentRecognition.onresult?.({ results: [[{ transcript: "Guten Morgen" }]] }));
+      }
+      const transcript = d0.querySelector('[data-testid="local-asr-transcript"]')?.textContent ?? "";
+      const localMessage = d0.querySelector('[data-testid="local-asr-message"]')?.textContent ?? "";
+      const keysAfter = Array.from({ length: dom.window.localStorage.length }, (_, i) => {
+        const key = dom.window.localStorage.key(i)!;
+        return [key, dom.window.localStorage.getItem(key)] as const;
+      });
+      ok(transcript.includes("Guten Morgen") && localMessage.includes("ليس تقييماً للنطق") &&
+        JSON.stringify(keysAfter) === JSON.stringify(keysBefore),
+        "LXXXIII6 يعرض النص للمراجعة الذاتية فقط ولا يحفظه في التقدّم");
+      if (currentRecognition?.onend) act(() => currentRecognition.onend?.());
+
+      const startAgain = d0.querySelector('[data-testid="local-asr-start"]') as HTMLButtonElement | null;
+      if (startAgain) click(startAgain);
+      const failedRecognition = recognitionRef.current;
+      if (failedRecognition?.onerror) act(() => failedRecognition.onerror?.({ error: "not-allowed" }));
+      ok((d0.querySelector('[data-testid="local-asr-message"]')?.textContent ?? "").includes("تعذّر التحقق تقنياً") &&
+        (d0.querySelector('[data-testid="local-asr-message"]')?.textContent ?? "").includes("لم يُحكم على كلامك"),
+        "LXXXIII7 رفض الميكروفون/فشل المحرك يعرض تعذّر التحقق لا حكماً على المتعلم");
+
+      W.SpeechRecognition = undefined;
+      mount(React.createElement(LocalSpeechPilot));
+      await asyncAct(flushAsync);
+      ok((d0.querySelector('[data-testid="local-asr-state"]')?.textContent ?? "").includes("لا يوفّر واجهة") && webkitStarts === 0,
+        "LXXXIII8 وجود webkit وحده لا يفعّل طياراً محلياً ولا يسقط إلى التعرف غير المثبت");
+    } finally {
+      if (leave) leave();
+      W.SpeechRecognition = priorStandard;
+      W.webkitSpeechRecognition = priorWebkit;
+    }
+  }
+
   /* ---------- XLVI — عقدُ الساعات: لوحةٌ تُفتَح، ورقمٌ يُحجَز، وحكمٌ يُعلَن ---------- */
   {
     const { BerichteZentrum } = await import("../components/berichte");
-    const { planStundenGesamt, planStundenBis } = await import("../lib/plan");
+    const { planStundenGesamt, planStundenBis, planMinBis } = await import("../lib/plan");
     const { vergleichePlan, erreichbaresNiveau, MAX_MIN_PRO_TASK } = await import("../lib/cefr");
-    const { loadProgress, saveProgress, bucheMinuten } = await import("../lib/store");
+    const { loadProgress, saveProgress, bucheMinuten, recordStudyMinutes } = await import("../lib/store");
     const { progressKeyActive } = await import("../lib/profiles");
 
     const ges = planStundenGesamt();
     const vgl = vergleichePlan(planStundenBis);
     const niv = erreichbaresNiveau(vgl);
 
-    ok(ges >= 620 && ges < 680, `XLVI1 ساعاتُ الخطةِ ${ges.toFixed(1)} س — بعدَ التوزيعِ الأكاديميِّ (كانت 517.6 دونَ عتبةِ B2)`);
+    ok(Number.isFinite(ges) && ges > 0 && Math.abs(ges - planMinBis(TOTAL_DAYS) / 60) < 0.01,
+      `XLVI1 مجموعُ تقديراتِ مهام الخطة ${ges.toFixed(1)} س مستمدٌ من المحرك، لا من هدف الجلسة ولا من الوقت المقاس`);
     ok(vgl[0].planStd < vgl[1].planStd && vgl[1].planStd < vgl[2].planStd && vgl[2].planStd < vgl[3].planStd,
       "XLVI2 والمنحنى تراكميٌّ فعلاً: كلُّ مرحلةٍ فوقَ سابقتِها");
 
@@ -1429,27 +1597,35 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok((vert?.textContent ?? "").includes("لا بالتساوي"), "XLIX4 والمبدأُ مكتوبٌ للمتعلِّم: بأوزانِ CEFR لا بالتساوي");
     ok(!(d0.querySelector('[data-testid="stunden-urteil"]')?.textContent ?? "").includes("ينقصُها"), "XLIX5 والحكمُ الصريحُ لم يعدْ يعلنُ نقصاً في B2 — لأنَّ النقصَ زال حساباً لا كلاماً");
 
-    /* الحجز بالنقر */
-    ok(minutenEffektivTest(loadProgress()) === 0, "XLVI13 والأصلُ صفرُ دقيقةٍ فعلية");
+    /* إدخال يدوي منفصل عن وقت المؤقّت */
+    ok(minutenEffektivTest(loadProgress()) === 0, "XLVI13 الأصلُ صفرُ دقيقةٍ مقاسة");
     const feld = d0.querySelector("#minuten-buchen") as HTMLInputElement | null;
-    ok(!!feld, "XLVI14 وحقلُ الحجزِ موجودٌ ومعنونٌ بـ label لا placeholder يتيم");
-    const bu = btn("احجِز");
-    ok(!!bu && (bu as HTMLButtonElement).disabled, "XLVI15 وزرُّ الحجزِ معطَّلٌ ما دام الحقلُ فارغاً — لا حجزَ صفرياً");
+    ok(!!feld && !!d0.querySelector('[data-testid="stunden-manual-entry"]'), "XLVI14 حقلُ وقتٍ مُبلَّغ عنه، معنْون ومنفصل عن القياس");
+    const bu = d0.querySelector('[data-testid="manual-time-add"]') as HTMLElement | null;
+    ok(!!bu && (bu as HTMLButtonElement).disabled, "XLVI15 زرُّ الإدخال اليدوي معطّل ما دام الحقل فارغاً");
     if (feld && bu) {
       typeIn(feld, "45");
-      ok(!(bu as HTMLButtonElement).disabled, "XLVI16 فإذا كُتب رقمٌ فُتح الزر");
+      ok(!(bu as HTMLButtonElement).disabled, "XLVI16 إذا كُتب رقم فُتح زرّ الإدخال");
       click(bu);
       await new Promise((r) => setTimeout(r, 30));
-      ok(minutenEffektivTest(loadProgress()) === 45, `XLVI17 والحجزُ استقرَّ في الحالة: ${minutenEffektivTest(loadProgress())} دقيقة`);
-      ok(txt().includes("0.8") || txt().includes("0.7"), "XLVI18 والساعةُ الفعليةُ ظهرت على اللوحةِ بعدَ الحجز");
+      const booked = loadProgress();
+      ok(minutenEffektivTest(booked) === 0 && (booked.plan.minutenManuell ?? 0) === 45 && (booked.plan.minutenManuellTage?.[100] ?? 0) === 45,
+        `XLVI17 الإدخالُ اليدوي ${booked.plan.minutenManuell} د محفوظٌ منفصلاً ولا يلوّث الوقت المقاس`);
+      ok((d0.querySelector('[data-testid="stunden-effektiv"]')?.textContent ?? "").includes("0.0") &&
+        (d0.querySelector('[data-testid="stunden-manuell"]')?.textContent ?? "").includes("0.8"),
+        "XLVI18 اللوحةُ تعرضُ 0.0 س مقاسةً و0.8 س مُبلَّغاً عنها في حقلين منفصلين");
     }
-    /* act: الحجزُ يُطلقُ حدثَ الحالة، واللوحةُ ما زالت مركَّبةً فتحدِّثُ حالتَها */
+    /* act: الإدخال اليدوي يمر عبر الحدّ ويُطلق تحديث الحالة */
     let z1 = 0, z2 = 0, z3 = 0;
-    act(() => { z1 = bucheMinuten(MAX_MIN_PRO_TASK + 999); });
+    act(() => { z1 = bucheMinuten(MAX_MIN_PRO_TASK + 999, 100); });
     ok(z1 === MAX_MIN_PRO_TASK,
-      `XLVI19 والحجزُ المبالغُ فيه يُقصَرُ عند ${MAX_MIN_PRO_TASK} — لا تضخيمَ ذاتيَّ الرقم`);
-    act(() => { z2 = bucheMinuten(-30); z3 = bucheMinuten(0); });
-    ok(z2 === 0 && z3 === 0, "XLVI20 ولا حجزَ سالبٌ ولا صفري");
+      `XLVI19 الإدخالُ المبالغُ فيه يُقصَر عند ${MAX_MIN_PRO_TASK} — ولا يضيف وقتاً مقاساً`);
+    act(() => { z2 = bucheMinuten(-30, 100); z3 = bucheMinuten(0, 100); });
+    ok(z2 === 0 && z3 === 0, "XLVI20 لا إدخال يدوي سالب أو صفري");
+    act(() => { recordStudyMinutes(100, 12); });
+    const separated = loadProgress();
+    ok(minutenEffektivTest(separated) === 12 && separated.plan.minutenManuell === 45 + MAX_MIN_PRO_TASK,
+      "XLVI21 التسجيلُ المقاس يذهب إلى سجلّ المؤقّت وحده؛ لا يمحو ولا يضمّ الوقتَ اليدوي");
 
     dom.window.localStorage.removeItem(progressKeyActive());
   }
@@ -1565,6 +1741,42 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(rootEl.querySelectorAll("button.chip").length >= 6 + 4, "LV4 الشريطُ المختارُ يعرضُ الأربعَ المختارةَ بأزرارِ حذف");
   }
 
+  /* ═══════════ LVb — تمرينان بلا ID لا يتشاركان حالةَ الإجابة (حمايةٌ دفاعية من البيانات القديمة) ═══════════ */
+  {
+    const { default: ExerciseSet } = await import("../components/exercises");
+    const items = [
+      { id: "", type: "fill", promptDe: "Ich ___ müde.", answer: ["bin"] },
+      { id: "", type: "fill", promptDe: "Ich ___ Zeit.", answer: ["habe"] },
+    ] as Parameters<typeof ExerciseSet>[0]["items"];
+    mount(React.createElement(ExerciseSet, { items, onPoints: () => {} }));
+    const fields = Array.from(rootEl.querySelectorAll("input.field")) as HTMLInputElement[];
+    ok(fields.length === 2, "LVb1 عارضان لتمرينين بلا ID");
+    if (fields.length === 2) {
+      typeIn(fields[0], "bin");
+      ok(fields[0].value === "bin" && fields[1].value === "", "LVb2 كتابةُ الأول لا تنسخُ الإجابةَ إلى الثاني");
+      const checks = Array.from(rootEl.querySelectorAll("button")).filter((b) => (b.textContent ?? "").trim() === "تحقّق") as HTMLButtonElement[];
+      if (checks[0]) click(checks[0]);
+      const fieldsAfter = Array.from(rootEl.querySelectorAll("input.field")) as HTMLInputElement[];
+      ok(fieldsAfter[0]?.disabled === true && fieldsAfter[1]?.disabled === false,
+        "LVb3 تصحيحُ الأول يُقفله وحده ويُبقي الثاني قابلاً للإجابة");
+    }
+  }
+
+  /* ═══════════ LVc — مسودّة التمرين الجاري تعود بعد إغلاق المشغّل وفتحه ═══════════ */
+  {
+    const { default: ExerciseSet } = await import("../components/exercises");
+    const storageKey = "wegb2:test-pause-draft";
+    const ex = { id: "pause-draft-1", type: "fill" as const, promptDe: "Ich ___ bereit.", answer: ["bin"] };
+    const props = { items: [ex], onPoints: () => {}, storageKey };
+    mount(React.createElement(ExerciseSet, props));
+    const field = rootEl.querySelector("input.field") as HTMLInputElement | null;
+    if (field) typeIn(field, "bin");
+    mount(React.createElement(ExerciseSet, props));
+    const restored = rootEl.querySelector("input.field") as HTMLInputElement | null;
+    ok(!!restored && restored.value === "bin", "LVc1 الإجابةُ غير المسلَّمة تُحفَظ وتعود بعد إعادة فتح التمرين");
+    dom.window.localStorage.removeItem(storageKey);
+  }
+
   /* ═══════════ LVI — قراءةُ B2 الطويلة: فقرات، عدّاد كلمات، ملخّص بعد القراءة، 5 أسئلة ═══════════ */
   {
     const { default: TaskView } = await import("../components/tasks");
@@ -1621,7 +1833,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const deckId = Object.values(vocabMap).find((d) => d.cards.some((c) => c.id === "v013"))!.id;
     const deck = getDeck(deckId)!;
     const srs: Record<string, ReturnType<typeof newCard>> = {};
-    for (const c of deck.cards) if (c.id !== "v013") srs[c.id] = reviewCard(newCard(), 4);
+    const introducedYesterday = new Date(Date.now() - 86400000).toISOString();
+    for (const c of deck.cards) if (c.id !== "v013") {
+      srs[c.id] = { ...reviewCard(newCard(), 4), introduced: introducedYesterday };
+    }
     const { default: TaskView } = await import("../components/tasks");
     mount(React.createElement(TaskView, { task: { id: "t-voc-lix", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId }, lang: "ar" as const, day: 3, srs, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 }));
     ok(txt().includes("Schule") && !txt().includes("Meine Tochter geht jeden Morgen"), "LIX1 البطاقةُ v013 أولاً، والمثالُ محجوبٌ قبلَ الكشف");
@@ -1639,7 +1854,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const deckId = Object.values(vocabMap).find((d) => d.cards.some((c) => c.id === "v445"))!.id;
     const deck = getDeck(deckId)!;
     const srs: Record<string, ReturnType<typeof newCard>> = {};
-    for (const c of deck.cards) if (c.id !== "v445") srs[c.id] = reviewCard(newCard(), 4);
+    const introducedYesterday = new Date(Date.now() - 86400000).toISOString();
+    for (const c of deck.cards) if (c.id !== "v445") {
+      srs[c.id] = { ...reviewCard(newCard(), 4), introduced: introducedYesterday };
+    }
     const { default: TaskView } = await import("../components/tasks");
     mount(React.createElement(TaskView, { task: { id: "t-voc-lx", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId }, lang: "ar" as const, day: 200, srs, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 }));
     ok(!rootEl.querySelector('[data-testid="kollokationen"]'), "LX1 المتلازماتُ محجوبةٌ قبلَ كشفِ البطاقة");
@@ -1652,6 +1870,65 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(optBtns.length >= 3, `LX4 وفيه ≥3 أزرارِ خيارات (${optBtns.length})`);
   }
 
+
+  /* ═══════════ LX0 — حدّ البطاقات الجديدة حسب الوتيرة، تقديم المستحق واستبعاد غير المستحق ═══════════ */
+  {
+    const { vocabMap } = await import("../lib/content");
+    const { newCard } = await import("../lib/srs");
+    const { default: TaskView } = await import("../components/tasks");
+    const deck = Object.values(vocabMap).find((d) => d.cards.length >= 10)!;
+    const base = { lang: "ar" as const, day: 12, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    const total = () => rootEl.querySelector('[data-testid="vocab-queue-count"]')?.textContent?.trim() ?? "";
+    const yesterday = new Date(Date.now() - 86400000).toISOString();
+    const dueCard = deck.cards[0], notDueCard = deck.cards[1];
+    const due = { ...newCard(), reps: 1, introduced: yesterday, due: yesterday };
+    const notDue = { ...newCard(), introduced: yesterday, due: new Date(Date.now() + 86400000).toISOString() };
+    mount(React.createElement(TaskView, {
+      task: { id: "t-tempo-due", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
+      ...base, srs: { [dueCard.id]: due, [notDueCard.id]: notDue }, tempo: "leicht" as const,
+    }));
+    ok(total() === "1 / 4" && txt().includes(dueCard.de) && !txt().includes(notDueCard.de), "LX0a بطاقة مستحقّة أولاً؛ غير المستحق لا يملأ الطابور، وثلاث جديدة كحدّ أقصى");
+
+    const otherDeckIds = Object.values(vocabMap).flatMap((d) => d.cards).filter((c) => !deck.cards.some((x) => x.id === c.id)).slice(0, 2);
+    const todaySrs = Object.fromEntries(otherDeckIds.map((c) => [c.id, newCard()]));
+    mount(React.createElement(TaskView, {
+      task: { id: "t-tempo-global", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
+      ...base, srs: todaySrs, tempo: "leicht" as const,
+    }));
+    ok(total() === "1 / 1", "LX0b البطاقتان المُدخلتان اليوم من حزمة أخرى تُحتسبان ضمن السقف اليومي العام");
+
+    mount(React.createElement(TaskView, {
+      task: { id: "t-tempo-regular", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
+      ...base, srs: {}, tempo: "regelmaessig" as const,
+    }));
+    const regular = total();
+    mount(React.createElement(TaskView, {
+      task: { id: "t-tempo-intensive", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
+      ...base, srs: {}, tempo: "intensiv" as const,
+    }));
+    ok(regular === "1 / 5" && total() === "1 / 10", "LX0c واجهة المفردات تطبق 5 للمنتظم و10 للمكثف");
+
+    const pendingCard = deck.cards[2];
+    const pendingSrs = { ...newCard(), reps: 0, introduced: new Date().toISOString() };
+    mount(React.createElement(TaskView, {
+      task: { id: "t-tempo-resume", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
+      ...base, srs: { [pendingCard.id]: pendingSrs }, tempo: "leicht" as const,
+    }));
+    ok(total() === "1 / 3" && txt().includes(pendingCard.de), "LX0d البطاقة الجديدة التي ظهرت ولم تُقيَّم تُستأنف ولا تُحتسب مرتين ضمن السقف");
+
+    const dueBeforePendingCard = deck.cards[3];
+    const pendingAfterDueCard = deck.cards[4];
+    const dueBeforePending = { ...newCard(), reps: 1, introduced: yesterday, due: yesterday };
+    const pendingAfterDue = { ...newCard(), reps: 0, introduced: new Date().toISOString() };
+    mount(React.createElement(TaskView, {
+      task: { id: "t-tempo-review-before-resume", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
+      ...base, srs: { [dueBeforePendingCard.id]: dueBeforePending, [pendingAfterDueCard.id]: pendingAfterDue }, tempo: "leicht" as const,
+    }));
+    const dueWasFirst = txt().includes(dueBeforePendingCard.de) && !txt().includes(pendingAfterDueCard.de);
+    click(btn("اكشف المعنى")!);
+    click(btn("سهّل! (4)")!);
+    ok(dueWasFirst && txt().includes(pendingAfterDueCard.de), "LX0e المراجعة المستحقّة تسبق البطاقة غير المُقيَّمة ثم تُستأنف بعدها");
+  }
 
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
@@ -1707,7 +1984,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     if (pruefBtn()) { click(opts()[1]); click(pruefBtn()!); }
     const nach = loadProgress().fehler![kE];
     ok(nach.srs.due > "2000-01-01" && !!rootEl.querySelector('[data-testid="fehler-transfer-ergebnis"]'), "LXII3 بعدَ الإجابةِ يُقيَّمُ الخطأُ في SRS (يتغيّرُ موعدُه) وتظهرُ نتيجةُ النقل"); }
-    const p2 = loadProgress(); delete p2.fehler![kE]; delete p2.fehler![kQ]; saveProgress(p2);
+    const p2 = loadProgress(); delete p2.fehler![kE]; delete p2.fehler![kQ]; act(() => { saveProgress(p2); });
   }
 
 
@@ -1718,8 +1995,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(TaskView, { task: { id: "t-l", kind: "lesen" as const, textId: "t-b2-01", titleDe: "L", titleAr: "ق", minutes: 15 }, ...props }));
     const links = rootEl.querySelectorAll('[data-testid="wortlink-wort"]');
     ok(links.length >= 20, `LXIII1 نصُّ القراءةِ B2 فيه ≥20 كلمةً مربوطةً ببطاقة (${links.length})`);
-    const frist = Array.from(links).find((b) => /^Frist/.test((b.textContent ?? "").trim())) ?? links[0];
-    click(frist as HTMLElement);
+    const frist = Array.from(links).find((b) => /^Debatte/.test((b.textContent ?? "").trim())) ?? links[0];
+    click(frist as HTMLElement); // LXIII: Debatte بطاقةٌ غنيّةٌ (متلازمات+ظهور) — links[0] صار Kaum (A0 بلا إثراء: صحيحٌ لا عطل)
     const karte = rootEl.querySelector('[data-testid="wortkarte"]');
     ok(!!karte && (karte.textContent ?? "").includes("—") && /[\u0600-\u06FF]/.test(karte.textContent ?? ""), "LXIII2 النقرُ يفتحُ بطاقةً بالمعنى العربيّ");
     ok(!!karte && (!!karte.querySelector('[data-testid="wortkarte-kollok"]') || !!karte.querySelector('[data-testid="wortkarte-vorkommen"]')), "LXIII3 وفيها المتلازماتُ أو مواضعُ الظهورِ الأخرى");
@@ -1729,6 +2006,843 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const show = btn("📝 أظهر النص") ?? Array.from(rootEl.querySelectorAll("button")).find((b) => /أظهر النص|النص/.test(b.textContent ?? ""));
     if (show) click(show);
     ok(rootEl.querySelectorAll('[data-testid="wortlink-wort"]').length >= 5, "LXIII5 سطورُ الحوارِ بعدَ إظهارِ النصِّ مربوطةٌ أيضاً");
+  }
+
+
+  /* ═══ LXIV — رادار الفخاخ موقوت: 45 ثانية (R11) ═══ */
+  {
+    const { FehlerFinden } = await import("../components/lehrer");
+    mount(React.createElement(FehlerFinden, { pitfalls: [{ de: "„Ich helfe dich.“ ✗ → „Ich helfe dir.“ ✓", ar: "helfen + Dativ" }], onPoints: () => {} }));
+    const uhr = rootEl.querySelector('[data-testid="pitfall-timer-0"]');
+    ok(!!uhr && (uhr.textContent ?? "").includes("45"), "LXIV1 عدّادُ الفخِّ يبدأُ من 45 ثانية");
+  }
+
+  /* ═══ LXV — البديل الكتابي للشفوي (R16) ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const { sentences: sBankX } = await import("../lib/content");
+    const se = sBankX.slice(0, 2).map((s) => s.id);
+    const pr = { lang: "ar" as const, day: 200, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: { id: "t-xl-sprechen", kind: "sprechen" as const, titleDe: "S", titleAr: "ت", minutes: 10, sentenceIds: se }, ...pr }));
+    const ta = rootEl.querySelector('[data-testid="sprech-schrift-text"]') as HTMLTextAreaElement | null;
+    ok(!!ta, "LXV1 صندوقُ البديلِ الكتابيِّ حاضر");
+    const ab = rootEl.querySelector('[data-testid="sprech-schrift-ab"]') as HTMLButtonElement;
+    ok(ab.disabled, "LXV2 زرُّ التسليمِ معطَّلٌ قبلَ الكتابة");
+    typeIn(ta!, "Ich spreche jeden Tag laut und deutlich vor dem Spiegel.");
+    ok(!ab.disabled, "LXV3 يُفعَّلُ بعدَ كتابةٍ كافية");
+    click(ab);
+    ok(!!rootEl.querySelector('[data-testid="sprech-schrift-hinweis"]'), "LXV4 بعدَ التسليمِ: وسمُ «إنجاز لا نطق»");
+  }
+
+  /* ═══ LXVI — لوحة التوقف والإيقاف المبكر بلا لوم أو إغلاق قسري (R19) ═══ */
+  {
+    const { Klassenzimmer } = await import("../components/akademie/Klassenzimmer");
+    const { buildDay } = await import("../lib/plan");
+    const { ritualUrteil } = await import("../lib/ritual");
+    const { loadProgress, saveProgress } = await import("../lib/store");
+    const beforePause = loadProgress();
+    const prog = { ...emptyProgress };
+    const plan = buildDay(2, { ...emptyProgress, plan: { ...emptyProgress.plan, day: 2 } });
+    const emptyPlan = { ...plan, tasks: [] };
+    const base: Record<string, never> = {} as never;
+    let closeCalls = 0;
+    const props = {
+      ...base, progress: prog, day: 2, plan, stepFrei: 0, setStep: () => {}, ritual: ritualUrteil(plan, prog),
+      resultOf: () => ({ done: true, passed: true, score: 1, total: 1, attempts: 1 }),
+      localOf: () => ({ score: 0, total: 0 }), onPoints: () => {}, submitCurrent: () => {}, doCloseDay: () => { closeCalls++; },
+      confirmClose: false, setConfirmClose: () => {}, unpassed: [], onSrs: () => {},
+    };
+    mount(React.createElement(Klassenzimmer, { ...props, allSubmitted: true } as never));
+    ok(!!rootEl.querySelector('[data-testid="stop-panel"]'), "LXVI1 اليومُ المكتملُ يعرضُ لوحةَ التوقف");
+    mount(React.createElement(Klassenzimmer, { ...props, allSubmitted: false, plan: emptyPlan, ritual: ritualUrteil(emptyPlan, prog) } as never));
+    ok(!rootEl.querySelector('[data-testid="stop-panel"]'), "LXVI2 اليومُ الناقصُ بلا لوحة اكتمال");
+    click(rootEl.querySelector('[data-testid="pause-and-save"]') as HTMLElement);
+    ok(!!rootEl.querySelector('[data-testid="pause-saved-message"]') && closeCalls === 0 && loadProgress().plan.day === prog.plan.day,
+      "LXVI3 حفظُ التوقّف يُبقي اليوم مفتوحاً بلا إغلاق أو ترحيل أو فشل");
+    saveProgress(beforePause);
+    dom.window.localStorage.removeItem("wegb2:day-step:2");
+  }
+
+  /* ═══ LXVII — الاعتراض يخفّض حدّة الكاشف (R33) ═══ */
+  {
+    const Schreib = (await import("../components/schreibkorrektur")).default;
+    mount(React.createElement(Schreib, { minWoerter: 5 }));
+    const ta = rootEl.querySelector("textarea") as HTMLTextAreaElement;
+    typeIn(ta, "Ich kaufe ein Geschenk für dem Mann.");
+    const go = Array.from(rootEl.querySelectorAll("button")).find((b) => (b.textContent ?? "").includes("صحِّح")) as HTMLElement;
+    click(go);
+    const btnDisput = () => rootEl.querySelector('[data-test="disput-a1-akkusativ"]') as HTMLElement | null;
+    ok(!!btnDisput(), "LXVII1 زرُّ الاعتراضِ حاضرٌ على نتيجةٍ لها regelId");
+    ok(!rootEl.querySelector('[data-test="disput-hinweis"]'), "LXVII2 قبلَ العتبةِ لا تنزيل");
+    click(btnDisput()!); click(btnDisput()!); click(btnDisput()!);
+    ok(!!rootEl.querySelector('[data-test="disput-hinweis"]'), "LXVII3 بعدَ 3 اعتراضاتٍ يظهرُ التنزيل");
+  }
+
+
+  /* ═══ LXVIII — نوع الكلمة على البطاقة (R30) ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const pr = { lang: "ar" as const, day: 200, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: { id: "t-xl-wort", kind: "wortschatz" as const, titleDe: "W", titleAr: "ك", minutes: 10, deckId: "a1-start" }, ...pr }));
+    const flip = Array.from(rootEl.querySelectorAll("button")).find((b) => (b.textContent ?? "").includes("اكشف المعنى")) as HTMLElement | undefined;
+    ok(!!flip, "LXVIII1 زرُّ الكشفِ حاضر");
+    if (flip) click(flip);
+    const chip = rootEl.querySelector('[data-testid="karte-pos"]');
+    ok(!!chip && (chip.textContent ?? "").includes("Interjektion"), "LXVIII2 بعدَ الكشفِ: شارةُ النوعِ (hallo ← Interjektion)");
+  }
+
+  /* ═══ LXIX — المرادف والضد في البطاقة المنبثقة (R29) ═══ */
+  {
+    const { WortKarte } = await import("../components/wortlink");
+    const { karteFuerWort } = await import("../lib/verknuepfung");
+    const karte = karteFuerWort("groß", "A1")!;
+    ok(!!karte && karte.ant?.[0] === "klein", "LXIX1 بطاقةُ groß تحملُ ضدَّها من البيانات");
+    mount(React.createElement(WortKarte, { karte, onClose: () => {} }));
+    ok(!!rootEl.querySelector('[data-testid="wortkarte-pos"]'), "LXIX2 شارةُ النوعِ في البطاقةِ المنبثقة");
+    const sa = rootEl.querySelector('[data-testid="wortkarte-synant"]');
+    ok(!!sa && (sa.textContent ?? "").includes("klein"), "LXIX3 الضدُّ معروضٌ في المنبثقة");
+    const anfangen = karteFuerWort("anfangen", "A1")!;
+    mount(React.createElement(WortKarte, { karte: anfangen, onClose: () => {} }));
+    const context = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!context && (context.textContent ?? "").includes("قريب في هذا السياق") &&
+      (context.textContent ?? "").includes("beginnen") && (context.textContent ?? "").includes("Ich fange heute"),
+      "LXIX4 المرادفُ المُنتَجُ وحده يظهر مع متلازمةٍ ومثالين وملاحظةِ الفرق");
+    const freundlich = karteFuerWort("freundlich", "A1")!;
+    mount(React.createElement(WortKarte, { karte: freundlich, onClose: () => {} }));
+    const freundlichContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    const freundlichShown = !!freundlichContext && (freundlichContext.textContent ?? "").includes("nett");
+    const sauber = karteFuerWort("sauber", "A1")!;
+    mount(React.createElement(WortKarte, { karte: sauber, onClose: () => {} }));
+    const sauberContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    const sauberShown = !!sauberContext && (sauberContext.textContent ?? "").includes("reines Wasser");
+    ok(freundlichShown && sauberShown,
+      "LXIX5 سياقا freundlich/sauber المنتجان يظهران في البطاقة المنبثقة");
+    const froh = karteFuerWort("froh", "A1")!;
+    mount(React.createElement(WortKarte, { karte: froh, onClose: () => {} }));
+    const frohContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!frohContext && (frohContext.textContent ?? "").includes("glücklich") &&
+      (frohContext.textContent ?? "").includes("froh über die Nachricht") &&
+      (frohContext.textContent ?? "").includes("Sie ist glücklich über die Nachricht"),
+      "LXIX16 froh→glücklich يظهر بعد استيفاء المتلازمة والمثالين والفرق");
+    const sehen = karteFuerWort("sehen", "A1")!;
+    mount(React.createElement(WortKarte, { karte: sehen, onClose: () => {} }));
+    const sehenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!sehenContext && (sehenContext.textContent ?? "").includes("schauen") &&
+      (sehenContext.textContent ?? "").includes("einen Film im Kino sehen") &&
+      (sehenContext.textContent ?? "").includes("Wir sehen heute Abend"),
+      "LXIX6 مرادف الدفعة الثانية يظهر مع مثالين يحددان استعمال المشاهدة");
+    const auto = karteFuerWort("Auto", "A1")!;
+    mount(React.createElement(WortKarte, { karte: auto, onClose: () => {} }));
+    const autoContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!auto && !!autoContext && (autoContext.textContent ?? "").includes("Wagen") &&
+      (autoContext.textContent ?? "").includes("mit dem Auto fahren"),
+      "LXIX7 البحث عن اسمٍ بأداة التعريف يفتح سياقه الموثق");
+    const kommen = karteFuerWort("kommen", "A1")!;
+    mount(React.createElement(WortKarte, { karte: kommen, onClose: () => {} }));
+    const kommenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!kommenContext && (kommenContext.textContent ?? "").includes("ankommen") &&
+      (kommenContext.textContent ?? "").includes("nach Hause kommen") &&
+      (kommenContext.textContent ?? "").includes("Wir kommen heute gegen acht"),
+      "LXIX8 علاقة kommen/ankommen معروضة في سياق الوصول المحدد لا كبديل عام");
+    const brief = karteFuerWort("Brief", "A1")!;
+    mount(React.createElement(WortKarte, { karte: brief, onClose: () => {} }));
+    const briefContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!brief && !!briefContext && (briefContext.textContent ?? "").includes("Schreiben") &&
+      (briefContext.textContent ?? "").includes("einen Brief bekommen"),
+      "LXIX9 اسم ذو أداة تعريف في الدفعة الثالثة يحافظ على سياق الرسالة الرسمية");
+    const schnell = karteFuerWort("schnell", "A1")!;
+    mount(React.createElement(WortKarte, { karte: schnell, onClose: () => {} }));
+    const schnellContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!schnellContext && (schnellContext.textContent ?? "").includes("rasch") &&
+      (schnellContext.textContent ?? "").includes("schnell fahren") &&
+      (schnellContext.textContent ?? "").includes("Der Zug fährt heute schnell"),
+      "LXIX10 مرادف سريع يظهر مع متلازمة الأساس ومثالَي السياق");
+    const leicht = karteFuerWort("leicht", "A1")!;
+    mount(React.createElement(WortKarte, { karte: leicht, onClose: () => {} }));
+    const leichtContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!leicht && !!leichtContext && (leichtContext.textContent ?? "").includes("einfach") &&
+      (leichtContext.textContent ?? "").includes("eine leichte Aufgabe"),
+      "LXIX11 سياق الصفات الجديدة يظهر في البطاقة المنبثقة");
+    const oft = karteFuerWort("oft", "A1")!;
+    mount(React.createElement(WortKarte, { karte: oft, onClose: () => {} }));
+    const oftContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!oftContext && (oftContext.textContent ?? "").includes("häufig") &&
+      (oftContext.textContent ?? "").includes("oft spazieren gehen") &&
+      (oftContext.textContent ?? "").includes("Wir gehen oft im Park spazieren"),
+      "LXIX12 مرادف oft يظهر مع المتلازمة ومثالي السياق");
+    const wohnung = karteFuerWort("Wohnung", "A1")!;
+    mount(React.createElement(WortKarte, { karte: wohnung, onClose: () => {} }));
+    const wohnungContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!wohnung && !!wohnungContext && (wohnungContext.textContent ?? "").includes("das Appartement") &&
+      (wohnungContext.textContent ?? "").includes("eine Wohnung mieten") &&
+      (wohnungContext.textContent ?? "").includes("ein Appartement mieten") &&
+      (wohnungContext.textContent ?? "").includes("ein Appartement in der Stadt"),
+      "LXIX13 die Wohnung→das Appartement يعرض تغيير المقال والأمثلة السياقية");
+    const denken = karteFuerWort("denken", "A1")!;
+    mount(React.createElement(WortKarte, { karte: denken, onClose: () => {} }));
+    const denkenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!denkenContext && (denkenContext.textContent ?? "").includes("glauben") &&
+      (denkenContext.textContent ?? "").includes("denken, dass der Bus kommt") &&
+      (denkenContext.textContent ?? "").includes("Ich denke, dass der Bus gleich kommt"),
+      "LXIX14 denken→glauben يظهران في سياق الترجيح لا كبديل عام");
+    const universitaet = karteFuerWort("Universität", "B1")!;
+    mount(React.createElement(WortKarte, { karte: universitaet, onClose: () => {} }));
+    const universitaetContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!universitaetContext && (universitaetContext.textContent ?? "").includes("Hochschule") &&
+      (universitaetContext.textContent ?? "").includes("an der Universität studieren") &&
+      (universitaetContext.textContent ?? "").includes("Sie studiert an der Universität"),
+      "LXIX15 die Universität→die Hochschule معروضتان بمثال الدراسة وحدود التقارب");
+    const altmodisch = karteFuerWort("altmodisch", "A2")!;
+    mount(React.createElement(WortKarte, { karte: altmodisch, onClose: () => {} }));
+    const altmodischContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!altmodischContext && (altmodischContext.textContent ?? "").includes("veraltet") &&
+      (altmodischContext.textContent ?? "").includes("altmodisch aussehen") &&
+      (altmodischContext.textContent ?? "").includes("Das Handy sieht veraltet aus"),
+      "LXIX17 altmodisch→veraltet يقتصر على مظهر الجهاز وتقادم التقنية");
+    const urlaub = karteFuerWort("Urlaub", "A2")!;
+    mount(React.createElement(WortKarte, { karte: urlaub, onClose: () => {} }));
+    const urlaubContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!urlaubContext && (urlaubContext.textContent ?? "").includes("die Ferien") &&
+      (urlaubContext.textContent ?? "").includes("in den Urlaub fahren") &&
+      (urlaubContext.textContent ?? "").includes("Die Familie fährt im Sommer in die Ferien"),
+      "LXIX18 Urlaub→Ferien يظهر في سياق السفر والعطلة المحدد");
+    const rente = karteFuerWort("Rente", "B2")!;
+    mount(React.createElement(WortKarte, { karte: rente, onClose: () => {} }));
+    const renteContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!renteContext && (renteContext.textContent ?? "").includes("Pension") &&
+      (renteContext.textContent ?? "").includes("in Rente gehen") &&
+      (renteContext.textContent ?? "").includes("Die Beamtin geht nach vielen Dienstjahren in Pension"),
+      "LXIX19 Rente→Pension يعرض فرق العامل وموظف الدولة");
+    const gewinnen = karteFuerWort("gewinnen", "A2")!;
+    mount(React.createElement(WortKarte, { karte: gewinnen, onClose: () => {} }));
+    const gewinnenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!gewinnenContext && (gewinnenContext.textContent ?? "").includes("siegen") &&
+      (gewinnenContext.textContent ?? "").includes("ein Spiel gewinnen") &&
+      (gewinnenContext.textContent ?? "").includes("Unsere Mannschaft siegt im Spiel"),
+      "LXIX20 gewinnen→siegen يعرض اختلاف تركيب المفعول والنصر");
+    const glauben = karteFuerWort("glauben", "A2")!;
+    mount(React.createElement(WortKarte, { karte: glauben, onClose: () => {} }));
+    const glaubenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!glaubenContext && (glaubenContext.textContent ?? "").includes("meinen") &&
+      (glaubenContext.textContent ?? "").includes("glauben, dass der Bus kommt") &&
+      (glaubenContext.textContent ?? "").includes("Ich meine, dass der Bus gleich kommt"),
+      "LXIX21 glauben→meinen يعرض تقارباً محصوراً في الرأي أو التقدير");
+    const kraeftig = karteFuerWort("kräftig", "A2")!;
+    mount(React.createElement(WortKarte, { karte: kraeftig, onClose: () => {} }));
+    const kraeftigContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!kraeftigContext && (kraeftigContext.textContent ?? "").includes("muskulös") &&
+      (kraeftigContext.textContent ?? "").includes("kräftig gebaut") &&
+      (kraeftigContext.textContent ?? "").includes("Der Mann ist muskulös gebaut"),
+      "LXIX22 kräftig→muskulös يقتصر على وصف بنية الجسم");
+    const nett = karteFuerWort("nett", "A1")!;
+    mount(React.createElement(WortKarte, { karte: nett, onClose: () => {} }));
+    const nettContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!nettContext && (nettContext.textContent ?? "").includes("freundlich") &&
+      (nettContext.textContent ?? "").includes("nett zu Kindern") &&
+      (nettContext.textContent ?? "").includes("Die Lehrerin ist freundlich zu den Kindern"),
+      "LXIX23 nett→freundlich يعرض سياق حسن التعامل المحدد");
+    const weit = karteFuerWort("weit", "A1")!;
+    mount(React.createElement(WortKarte, { karte: weit, onClose: () => {} }));
+    const weitContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!weitContext && (weitContext.textContent ?? "").includes("entfernt") &&
+      (weitContext.textContent ?? "").includes("weit weg vom Bahnhof") &&
+      (weitContext.textContent ?? "").includes("Das Dorf liegt weit vom Bahnhof entfernt"),
+      "LXIX24 weit→entfernt يقتصر على المسافة المكانية");
+    const zufrieden = karteFuerWort("zufrieden", "A1")!;
+    mount(React.createElement(WortKarte, { karte: zufrieden, onClose: () => {} }));
+    const zufriedenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!zufriedenContext && (zufriedenContext.textContent ?? "").includes("befriedigt") &&
+      (zufriedenContext.textContent ?? "").includes("mit dem Ergebnis zufrieden") &&
+      (zufriedenContext.textContent ?? "").includes("Die Kundin zeigt sich von dem Ergebnis sehr befriedigt"),
+      "LXIX25 zufrieden→befriedigt محصور في تقييم نتيجة محددة مع تنبيه الاستعمال");
+  }
+
+  /* ═══ LXX — السيناريو يعلن دروسه المطبَّقة (R26) ═══ */
+  {
+    const { LebensSzenarien } = await import("../components/szenarien");
+    mount(React.createElement(LebensSzenarien, { progress: { ...emptyProgress } }));
+    const hdr = btn("LebensSzenarien");
+    ok(!!hdr, "LXX1 أكورديون السيناريوهات مركّب");
+    if (hdr) click(hdr);
+    const lek = rootEl.querySelector('[data-testid="szenario-lektionen"]');
+    ok(!!lek && lek.querySelectorAll(".chip").length >= 2, "LXX2 شرائحُ الدروسِ المطبَّقةِ ظاهرة");
+    ok((lek?.textContent ?? "").includes("يطبّق دروس"), "LXX3 عنوانُ الربطِ الصريح");
+  }
+
+  /* ═══ LXXI — مقاييس النجاح الثلاثة في مركز التقارير (R34) ═══ */
+  {
+    const { BerichteZentrum } = await import("../components/berichte");
+    const prog = { ...emptyProgress,
+      plan: { ...emptyProgress.plan, tasks: {
+        m1a: { done: true, passed: true, score: 3, total: 4, attempts: 1, kind: "schreiben" },
+        m1b: { done: true, passed: false, score: 0, total: 0, attempts: 1, kind: "sprechen" },
+      } },
+      fehler: { y: { key: "y", falsch: "a", richtig: "b", art: "s", ar: "x", treffer: 3, srs: { ease: 2.5, interval: 0, due: new Date().toISOString(), reps: 3, lapses: 3, learning: true } } },
+      exams: { 10: { score: 60, passed: false }, 20: { score: 90, passed: true } },
+      modulPruefungen: { 2: { versuche: 3, best: 70, bestanden: false } },
+    };
+    mount(React.createElement(BerichteZentrum, { progress: prog as never, name: "مقياس" }));
+    const hdr = btn("BerichteZentrum");
+    if (hdr) click(hdr);
+    ok(!!rootEl.querySelector('[data-testid="metriken-panel"]'), "LXXI1 لوحةُ المقاييسِ الثلاثةِ حاضرة");
+    ok((rootEl.querySelector('[data-testid="metrik-feedback"]')?.textContent ?? "").includes("50"), "LXXI2 التغذيةُ 1/2 = 50٪");
+    ok((rootEl.querySelector('[data-testid="metrik-heilung"]')?.textContent ?? "").includes("عالق"), "LXXI3 تنبيهُ الخطأِ العالق");
+    ok((rootEl.querySelector('[data-testid="metrik-kurve"]')?.textContent ?? "").includes("أُعيدت مرتين"), "LXXI4 تنبيهُ الوحدةِ المعادة");
+  }
+
+
+  /* ═══ LXXII — حزمة العائلة (V17) ═══ */
+  {
+    const { ElternPaket } = await import("../components/elternpaket");
+    mount(React.createElement(ElternPaket, { progress: { ...emptyProgress } }));
+    const hdr = btn("حزمة العائلة");
+    ok(!!hdr, "LXXII1 أكورديون حزمة العائلة مركّب");
+    if (hdr) click(hdr);
+    ok(txt().includes("Family Progress Report"), "LXXII2 التقرير العائلي يُفتح");
+  }
+
+  /* ═══ LXXIII — ساحة المقابلات (V17) ═══ */
+  {
+    const { InterviewArena } = await import("../components/interview2");
+    mount(React.createElement(InterviewArena, { progress: { ...emptyProgress } }));
+    const hdr = btn("ساحة المقابلات");
+    ok(!!hdr, "LXXIII1 ساحة المقابلات مركّبة");
+    if (hdr) click(hdr);
+    ok(!!rootEl.querySelector("textarea"), "LXXIII2 حقل الإجابة حاضر بعد الفتح");
+  }
+
+  /* ═══ LXXIV — دليل الأجنحة + شبكة الكفاءات (V17) ═══ */
+  {
+    const { KatalogLeiste, RadarKarte } = await import("../components/katalog");
+    mount(React.createElement(KatalogLeiste));
+    ok(txt().includes("دليل الأجنحة"), "LXXIV1 الدليل يُعرض مباشرة");
+    mount(React.createElement(RadarKarte, { progress: { ...emptyProgress } }));
+    ok(!!rootEl.querySelector('svg[aria-label="شبكة الكفاءات"]'), "LXXIV2 شبكة الكفاءات SVG حاضرة");
+  }
+
+  /* ═══ LXXV — العمق المعجمي (V17) ═══ */
+  {
+    const { TiefenLexikon } = await import("../components/tiefenlex");
+    mount(React.createElement(TiefenLexikon, { progress: { ...emptyProgress } }));
+    const hdr = btn("العمق المعجمي");
+    ok(!!hdr, "LXXV1 العمق المعجمي مركّب");
+    if (hdr) click(hdr);
+    ok(txt().includes("إخفاء"), "LXXV2 يُفتح تفاعلياً");
+  }
+
+  /* ═══ LXXVI — الأسبوع والأوسمة (V17) ═══ */
+  {
+    const { Wochenplan, XpBar, AbzeichenKarte } = await import("../components/wochen");
+    mount(React.createElement(Wochenplan, { progress: { ...emptyProgress } }));
+    ok(txt().includes("جدول الأسبوع"), "LXXVI1 جدول الأسبوع يُعرض");
+    mount(React.createElement(XpBar, { progress: { ...emptyProgress } }));
+    ok(txt().includes("XP"), "LXXVI2 شريط الخبرة يُعرض");
+    mount(React.createElement(AbzeichenKarte, { progress: { ...emptyProgress } }));
+    ok(txt().includes("الأوسمة"), "LXXVI3 بطاقة الأوسمة تُعرض");
+  }
+
+
+  /* ═══ LXXVII — الدروس الجديدة تُفتَح وتُستقرأ (N1–N7) ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const mkN = (topicId: string) => ({ id: "t-" + topicId, kind: "grammatik" as const, titleDe: "Grammatik", titleAr: "قاعدة", minutes: 15, topicId });
+    const propsN = { lang: "ar" as const, day: 60, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: mkN("a1-plural"), ...propsN }));
+    ok(txt().includes("جمع الأسماء"), "LXXVII1 درس الجمع يُعرض بعنوانه");
+    ok(txt().includes("سِرْ ناس"), "LXXVII2 تركة الجمع حاضرة في بطاقته");
+    mount(React.createElement(TaskView, { task: mkN("b1-konj2-vergangenheit"), ...propsN }));
+    ok(txt().includes("التخيلي الماضي"), "LXXVII3 درس التخيلي الماضي يُعرض");
+    ok(txt().includes("آلة الزمن"), "LXXVII4 تركته حاضرة");
+    mount(React.createElement(TaskView, { task: mkN("b2-textkonnektoren"), ...propsN }));
+    ok(txt().includes("روابط النص الراقية") && txt().includes("البهلوان"), "LXXVII5 درس B2 وتركته يُعرضان");
+  }
+
+  /* ═══ LXXVIII — مهمةُ الاستقلال في المعالج + تحققٌ مؤجلٌ ثلاثةَ أيام ═══ */
+  {
+    const storage = dom.window.localStorage;
+    const saved = Array.from({ length: storage.length }, (_, i) => {
+      const key = storage.key(i)!;
+      return [key, storage.getItem(key)!] as const;
+    });
+    const oldAutoEntdecken = autoEntdecken;
+    try {
+      storage.clear();
+      storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-03" }] }));
+      const startProgress = JSON.parse(JSON.stringify(emptyProgress)) as typeof emptyProgress;
+      startProgress.plan.day = 40;
+      storage.setItem("weg-b2-progress-p1", JSON.stringify(startProgress));
+      autoEntdecken = false;
+
+      const { LektionWizard } = await import("../components/akademie/LektionWizard");
+      const { grammarMap } = await import("../lib/content");
+      mount(React.createElement(LektionWizard, { topicId: "a2-wasfuer" }));
+      ok(txt().includes("السؤال عن النوع") && txt().includes("هدف هذا الدرس") && txt().includes("يبني على"), "LXXVIII1 المعالج يعرض درس Was-für وهدفه ومتطلباته");
+
+      const unlock0 = (d0.querySelector('[data-testid="wizard-ueberspringen"]') ?? d0.querySelector('[data-testid="wizard-beobachtet"]')) as HTMLElement | null;
+      ok(!!unlock0, "LXXVIII2 خطوةُ اكتشاف النمط تتيح المتابعة بتفاعل صريح");
+      if (unlock0) click(unlock0);
+      const next0 = d0.querySelector('[data-testid="wizard-next"]') as HTMLButtonElement | null;
+      ok(!!next0 && !next0.disabled, "LXXVIII3 إكمالُ الاكتشاف يفتح الخطوة التالية");
+      if (next0 && !next0.disabled) click(next0);
+
+      const ruleDone = d0.querySelector('[data-testid="wizard-regel-gelesen"]') as HTMLElement | null;
+      if (ruleDone) click(ruleDone);
+      const next1 = d0.querySelector('[data-testid="wizard-next"]') as HTMLButtonElement | null;
+      if (next1 && !next1.disabled) click(next1);
+      const examplesDone = d0.querySelector('[data-testid="wizard-beispiele-gesehen"]') as HTMLElement | null;
+      const model = d0.querySelector('[data-testid="wizard-model"]');
+      if (examplesDone) click(examplesDone);
+      const next2 = d0.querySelector('[data-testid="wizard-next"]') as HTMLButtonElement | null;
+      if (next2 && !next2.disabled) click(next2);
+      ok(!!ruleDone && !!examplesDone && !!model && txt().includes("أجب عن التمارين الثلاثة"), "LXXVIII4 الشرح والنموذج المحلول يسبقان التدريب المتدرج");
+
+      const practice = grammarMap["a2-wasfuer"].exercises.slice(0, 3);
+      const answerExercise = (ex: (typeof practice)[number]) => {
+        const answer = Array.isArray(ex.answer) ? ex.answer : [ex.answer];
+        if (ex.type === "mc" || ex.type === "truefalse") {
+          const answerButton = Array.from(d0.querySelectorAll("button")).find((b) => (b.textContent ?? "").trim() === String(answer[0])) as HTMLElement | undefined;
+          if (answerButton) click(answerButton);
+        } else if (ex.type === "order") {
+          for (const token of answer) {
+            const word = Array.from(d0.querySelectorAll("button")).find((b) => !((b as HTMLButtonElement).disabled) && (b.textContent ?? "").trim() === String(token)) as HTMLElement | undefined;
+            if (word) click(word);
+          }
+        } else {
+          const input = Array.from(d0.querySelectorAll("input.field")).find((el) => !(el as HTMLInputElement).disabled) as HTMLInputElement | undefined;
+          if (input) typeIn(input, String(answer[0]));
+        }
+        const check = Array.from(d0.querySelectorAll("button")).find((b) => (b.textContent ?? "").includes("تحقّق") && !(b as HTMLButtonElement).disabled) as HTMLElement | undefined;
+        if (check) click(check);
+        return !!check;
+      };
+      const firstChecked = answerExercise(practice[0]);
+      let next3 = d0.querySelector('[data-testid="wizard-next"]') as HTMLButtonElement | null;
+      ok(firstChecked && !!next3 && next3.disabled && (d0.querySelector('[data-testid="wizard-practice-progress"]')?.textContent ?? "").includes("1/3"),
+        "LXXVIII5 لا تفتح خطوة التطبيق بعد سؤال واحد؛ التقدّم يُظهر 1/3");
+      if (leave) leave();
+      mount(React.createElement(LektionWizard, { topicId: "a2-wasfuer" }));
+      const restoredProgress = d0.querySelector('[data-testid="wizard-practice-progress"]')?.textContent ?? "";
+      ok(restoredProgress.includes("1/3") && !!(d0.querySelector('[data-testid="wizard-next"]') as HTMLButtonElement | null)?.disabled,
+        "LXXVIII6 تعود المحاولة المحفوظة بعد إعادة فتح الدرس دون تجاوز التمرينين الباقيين");
+      const secondChecked = answerExercise(practice[1]);
+      const thirdChecked = answerExercise(practice[2]);
+      next3 = d0.querySelector('[data-testid="wizard-next"]') as HTMLButtonElement | null;
+      ok(secondChecked && thirdChecked && !!next3 && !next3.disabled && (d0.querySelector('[data-testid="wizard-practice-progress"]')?.textContent ?? "").includes("3/3"),
+        "LXXVIII7 تصحيح التمارين الثلاثة يفتح الخلاصة ويعرض عدد الإجابات الصحيحة");
+      if (next3 && !next3.disabled) click(next3);
+
+      const independent = d0.querySelector('[data-testid="wizard-anwendung"]');
+      const answerInput = d0.querySelector('[data-testid="wizard-anwendung-input"]') as HTMLTextAreaElement | null;
+      ok(!!independent && !!answerInput && (independent.textContent ?? "").includes("Im Café") && (independent.textContent ?? "").includes("في مقهى") && (independent.textContent ?? "").includes("قائمة"),
+        "LXXVIII8 مهمة الاستعمال تظهر مع خانة كتابة مستقلة بالألمانية والعربية");
+      if (answerInput) typeIn(answerInput, "Was für ein Getränk probierst du gern? Ich probiere gern Minztee.");
+      const saveApplication = d0.querySelector('[data-testid="wizard-anwendung-save"]') as HTMLButtonElement | null;
+      if (saveApplication) click(saveApplication);
+      const savedAnswer = storage.getItem("weg-wizard-anwendung-a2-wasfuer");
+      ok(!!saveApplication && !!savedAnswer?.includes("Minztee") && !!d0.querySelector('[data-testid="wizard-anwendung-status"]'),
+        "LXXVIII9 المحاولة الحرة تُحفظ محلياً كتدريب فقط ولا تُعلن استقلالاً");
+      const finish = d0.querySelector('[data-testid="wizard-zurueck-heute"]') as HTMLElement | null;
+      if (finish) click(finish);
+      const afterRaw = storage.getItem("weg-b2-progress-p1");
+      const after = afterRaw ? JSON.parse(afterRaw) as typeof startProgress : null;
+      const dueDay = after?.verify?.["a2-wasfuer"]?.dueDay;
+      ok(!!finish && dueDay === 43, `LXXVIII10 حفظُ التدريب وجدولته يتحقّق بمهمة جديدة في اليوم +3 (الموعد ${dueDay ?? "مفقود"})`);
+      const { dueVerify, buildDay } = await import("../lib/plan");
+      const premature = after ? dueVerify(after, 42).some((v) => v.lessonId === "a2-wasfuer") : true;
+      const dueEntry = after ? dueVerify(after, 43).find((v) => v.lessonId === "a2-wasfuer") : undefined;
+      const dueTask = after ? buildDay(43, after).tasks.find((t) => t.verifyFor === "a2-wasfuer") : undefined;
+      ok(!premature && !!dueEntry && dueTask?.kind === "check" && dueTask.quiz?.length === 2,
+        "LXXVIII11 لا يظهر قبل موعده؛ وفي اليوم الثالث يظهر تحققٌ مستقلٌ ببندين جديدين");
+    } finally {
+      if (leave) leave();
+      autoEntdecken = oldAutoEntdecken;
+      storage.clear();
+      for (const [key, value] of saved) storage.setItem(key, value);
+    }
+  }
+
+  /* ═══ LXXX — R58: المسار المرئي، محتوى الدرس، وخريطة الختام بلا لمس التقدم ═══ */
+  {
+    const { CurriculumMap } = await import("../components/akademie/CurriculumMap");
+    const mapProgress = JSON.parse(JSON.stringify(emptyProgress)) as typeof emptyProgress;
+    mapProgress.plan.day = 20;
+    mapProgress.plan.curriculumLegacyThroughDay = 21;
+    mapProgress.plan.days = {
+      15: { closed: true, score: 5, total: 5, tasksDone: 2, tasksTotal: 2, at: "2026-10-03" },
+    };
+    mapProgress.plan.tasks = {
+      "15:t2": { done: true, passed: true, score: 5, total: 5, attempts: 1 },
+    };
+    const savedBeforeMap = JSON.stringify(mapProgress);
+    mount(React.createElement(CurriculumMap, { progress: mapProgress }));
+    const returnToToday = d0.querySelector('.curriculum-primary-link') as HTMLAnchorElement | null;
+    ok(txt().includes("مسار المنهج") && txt().includes("378") && txt().includes("A0") &&
+      txt().includes("B2") && txt().includes("66") && txt().includes("الأسبوع الجاري محفوظان") &&
+      returnToToday?.getAttribute("href") === "/",
+      "LXXX1 العنوان يبيّن المسار الكامل ويحفظ الأسبوع، مع باب رجوع مباشر إلى خطة اليوم");
+
+    const lessonCard = d0.querySelector('[data-testid="curriculum-lesson-a2-wasfuer"]') as HTMLDetailsElement | null;
+    if (lessonCard) act(() => { lessonCard.open = true; });
+    ok(!!lessonCard && txt().includes("هدف الدرس") && txt().includes("يبني على") &&
+      txt().includes("أمثلة مع ترجمتها") && txt().includes("استعمال مستقل في موقف جديد"),
+      "LXXX2 بطاقة الدرس تعرض هدفه ومتطلبه وأمثلته ومهمة استعماله");
+
+    const daysTab = d0.querySelector('[data-testid="curriculum-tab-days"]') as HTMLElement | null;
+    if (daysTab) click(daysTab);
+    const sectionButtons = d0.querySelectorAll('[data-testid^="map-section-"]');
+    ok(!!daysTab && sectionButtons.length === 18,
+      "LXXX3 خريطة الأيام تعرض الوحدات الـ17 ومحطة الختام بصورة منفصلة");
+
+    const finalSection = d0.querySelector('[data-testid="map-section-finale-375-378"]') as HTMLElement | null;
+    if (finalSection) click(finalSection);
+    const closingDays = [375, 376, 377, 378].map((day) => d0.querySelector(`[data-testid="map-day-${day}"]`));
+    ok(!!finalSection && closingDays.every(Boolean) && txt().includes("الختام الشامل") &&
+      txt().includes("استماع") && txt().includes("قراءة") && txt().includes("كتابة") && txt().includes("تحدّث"),
+      "LXXX4 أيام 375–378 ظاهرة، ومعها مهارات الاستماع والقراءة والكتابة والتحدث");
+
+    const day375 = d0.querySelector('[data-testid="map-day-375"] .curriculum-day-toggle') as HTMLElement | null;
+    if (day375) click(day375);
+    ok(!!day375 && txt().includes("مراجعة شاملة") && txt().includes("بنود التدريب أو الفحص"),
+      "LXXX5 فتح اليوم يُظهر مهامه ومحتواها من مصدر الخطة");
+    ok(JSON.stringify(mapProgress) === savedBeforeMap,
+      "LXXX6 التنقل وفتح محتوى الخريطة لا يغيّران التقدم المحفوظ");
+  }
+
+  /* ═══ LXXXI — R59: مكونات DirB المشتركة وإطار التطبيق ═══ */
+  {
+    const { UiAppShell, UiSurface, UiBadge, UiPageHeading } = await import("../components/dirb/DesignSystem");
+    mount(React.createElement(
+      UiAppShell,
+      { "data-ui-shell": "interactive-check" },
+      React.createElement(
+        "main",
+        { id: "main-content" },
+        React.createElement(UiPageHeading, { className: "test-heading", "data-testid": "design-heading" },
+          React.createElement("h1", { dir: "rtl" }, "واجهة عربية")),
+        React.createElement(UiSurface, { className: "test-surface", "data-testid": "design-surface", "aria-label": "بطاقة" },
+          React.createElement("p", null, "محتوى البطاقة"),
+          React.createElement(UiBadge, { className: "test-badge", "aria-label": "الحالة" }, "مكتمل")),
+      ),
+    ));
+    const shell = d0.querySelector('[data-ui-shell="interactive-check"]');
+    const skipLink = d0.querySelector('.ui-skip-link') as HTMLAnchorElement | null;
+    ok(!!shell && shell.classList.contains("ui-app-shell") && skipLink?.getAttribute("href") === "#main-content",
+      "LXXXI1 إطار التطبيق يوفّر غلافاً مشتركاً ورابط تخطٍّ يصل إلى المحتوى");
+
+    const heading = d0.querySelector('[data-testid="design-heading"]');
+    ok(!!heading && heading.tagName === "HEADER" && heading.classList.contains("ui-page-heading") &&
+      heading.querySelector("h1[dir='rtl']")?.textContent === "واجهة عربية",
+      "LXXXI2 ترويسة الصفحة المشتركة تحفظ الدلالة والاتجاه العربي");
+
+    const surface = d0.querySelector('[data-testid="design-surface"]');
+    ok(!!surface && surface.tagName === "SECTION" && surface.classList.contains("ui-surface") &&
+      surface.getAttribute("aria-label") === "بطاقة" && surface.textContent?.includes("محتوى البطاقة"),
+      "LXXXI3 السطح المشترك دلالي ويحتفظ بخصائص الوصول ومحتواه");
+
+    const badge = d0.querySelector('.test-badge');
+    ok(!!badge && badge.classList.contains("ui-badge") && badge.getAttribute("aria-label") === "الحالة" &&
+      badge.textContent === "مكتمل",
+      "LXXXI4 الشارة المشتركة تعرض الحالة وتحتفظ باسمها الميسّر");
+    if (leave) leave();
+  }
+
+  /* ═══ LXXXII — R60: الشفرات كاملةً في درسها، والمستحقّة موسومة حسب SRS ═══ */
+  {
+    const storage = dom.window.localStorage;
+    const saved = Array.from({ length: storage.length }, (_, i) => {
+      const key = storage.key(i)!;
+      return [key, storage.getItem(key)!] as const;
+    });
+    const oldAutoEntdecken = autoEntdecken;
+    try {
+      storage.clear();
+      storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-04" }] }));
+      const startProgress = JSON.parse(JSON.stringify(emptyProgress)) as typeof emptyProgress;
+      const topicId = "a1-akkusativ";
+      const { grammarMap, getBrueckenFor } = await import("../lib/content");
+      const bridges = getBrueckenFor(topicId);
+      const dueId = bridges[0]?.id;
+      if (dueId) startProgress.srs[`bru:${dueId}`] = { ease: 2.5, interval: 1, due: "2000-01-01T00:00:00.000Z", reps: 1, lapses: 0 };
+      storage.setItem("weg-b2-progress-p1", JSON.stringify(startProgress));
+      storage.setItem(`weg-wizard-${topicId}`, JSON.stringify({ schritt: 4, erledigt: [true, true, true, true, false] }));
+      autoEntdecken = false;
+
+      const { LektionWizard } = await import("../components/akademie/LektionWizard");
+      mount(React.createElement(LektionWizard, { topicId }));
+      const lessonCodes = bridges.map((b) => d0.querySelector(`[data-testid="wizard-bruecke-${b.id}"]`));
+      const dueBadge = dueId ? d0.querySelector(`[data-testid="wizard-bruecke-due-${dueId}"]`) : null;
+      ok(bridges.length === 7 && lessonCodes.every(Boolean) && !!dueBadge && txt().includes("7 شفرة"),
+        "LXXXII1 درس Akkusativ يعرض شفراته السبع ويُميّز المستحقة داخل الخلاصة");
+      if (dueId) {
+        const toggle = d0.querySelector(`[data-testid="wizard-bruecke-toggle-${dueId}"]`) as HTMLElement | null;
+        if (toggle) click(toggle);
+        const bridge = bridges.find((b) => b.id === dueId)!;
+        const panel = d0.querySelector(`#wizard-bruecke-content-${dueId}`);
+        const complete = !!panel && bridge.zeilen.every((line) => (panel.textContent ?? "").includes(line.code) && (panel.textContent ?? "").includes(line.de) && (panel.textContent ?? "").includes(line.ar));
+        ok(!!toggle && complete, `LXXXII2 الشفرة المستحقة تُفتح كاملةً مع كل أسطرها وتفسيرها (${bridge.zeilen.length} أسطر)`);
+      } else {
+        ok(false, "LXXXII2 توجد شفرةٌ مستحقة للاختبار");
+      }
+
+      const { default: TaskView } = await import("../components/tasks");
+      const task = { id: "test-grammar-a1-akkusativ", kind: "grammatik" as const, titleDe: "Akkusativ", titleAr: "المنصوب", minutes: 15, topicId };
+      autoEntdecken = true;
+      mount(React.createElement(TaskView, { task, lang: "ar" as const, day: 6, srs: startProgress.srs, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 }));
+      const dailyCodes = bridges.map((b) => d0.querySelector(`[data-testid="grammar-bruecke-${b.id}"]`));
+      ok(dailyCodes.every(Boolean) && !!(dueId && d0.querySelector(`[data-testid="grammar-bruecke-due-${dueId}"]`)),
+        "LXXXII3 بطاقة القاعدة اليومية تعرض الشفرات نفسها وتوسم المستحقّة");
+
+      const foundationId = "a0-begrussung";
+      storage.setItem(`weg-wizard-${foundationId}`, JSON.stringify({ schritt: 0, erledigt: [false, false, false, false, false] }));
+      autoEntdecken = false;
+      mount(React.createElement(LektionWizard, { topicId: foundationId }));
+      const foundationPrereq = d0.querySelector('[data-testid="wizard-voraus"]');
+      ok(!!foundationPrereq && (foundationPrereq.textContent ?? "").includes("درس تأسيسي — لا متطلب سابق"),
+        "LXXXII4 الدرس التأسيسي يعلن صراحةً عدم وجود متطلب سابق");
+    } finally {
+      if (leave) leave();
+      autoEntdecken = oldAutoEntdecken;
+      storage.clear();
+      for (const [key, value] of saved) storage.setItem(key, value);
+    }
+  }
+
+  /* ═══ LXXXIV — R62/R63: هدف الجلسة منفصل عن مجموع اليوم، والتوقف يحفظ غير المُسلَّم كمسودة فقط ═══ */
+  {
+    const storage = dom.window.localStorage;
+    const saved = Array.from({ length: storage.length }, (_, i) => {
+      const key = storage.key(i)!;
+      return [key, storage.getItem(key)!] as const;
+    });
+    try {
+      storage.clear();
+      storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-04" }] }));
+      const { buildDay } = await import("../lib/plan");
+      const progress = JSON.parse(JSON.stringify(emptyProgress)) as typeof emptyProgress;
+      progress.plan.day = 278;
+      progress.plan.minutenEffektiv = 90;
+      progress.plan.minutenEffektivTage = { 278: 90 };
+      progress.plan.minutenTrennungVersion = 1;
+      const dayPlan = buildDay(278, progress);
+      const totalMinutes = dayPlan.tasks.reduce((sum, task) => sum + task.minutes, 0);
+      const targetMinutes = dayPlan.zielMin;
+      const completed: typeof progress.plan.tasks = {};
+      let completedMinutes = 0;
+      for (const task of dayPlan.tasks) {
+        if (completedMinutes >= targetMinutes) break;
+        completed[task.id] = { done: true, passed: true, score: 5, total: 5, attempts: 1, kind: task.kind };
+        completedMinutes += task.minutes;
+      }
+      progress.plan.tasks = completed;
+      storage.setItem("weg-b2-progress-p1", JSON.stringify(progress));
+      storage.setItem("weg-b2-progress-p1:study-clock:278", JSON.stringify({
+        day: 278, totalMs: 90 * 60_000, syncedMs: 90 * 60_000, goalMinutes: 90, taskMs: {},
+      }));
+      storage.setItem("wegb2:day-step:278", "0");
+
+      const { default: Today } = await import("../app/page");
+      mount(React.createElement(Today));
+      const note = d0.querySelector('[data-testid="session-time-note"]');
+      const goalReadout = d0.querySelector('[data-testid="session-goal-progress"]');
+      const bar = d0.querySelector('[aria-label="التقدّم نحو هدف الجلسة"]');
+      const remaining = dayPlan.tasks.length - Object.keys(completed).length;
+      ok(!!note && (note.textContent ?? "").includes(`مجموع تقديرات مهام اليوم ${totalMinutes} دقيقة`) &&
+        (note.textContent ?? "").includes(`الهدف الحالي ${targetMinutes} دقيقة`) &&
+        (note.textContent ?? "").includes("لا يلزمك بإكمال القائمة في جلسة واحدة") &&
+        !!d0.querySelector('[data-testid="session-goal-choice"]') && remaining > 0,
+        `LXXXIV1 المؤقّت المقاس له هدف ${targetMinutes} د مستقل عن مجموع تقديرات الخطة ${totalMinutes} د؛ تبقى ${remaining} مهام غير فاشلة`);
+      ok(!!goalReadout && (goalReadout.textContent ?? "").includes(`${targetMinutes}.0 من ${targetMinutes} دقيقة مقاسة`) &&
+        !!bar && bar.getAttribute("aria-valuenow") === "100" && remaining > 0 &&
+        !!d0.querySelector('[data-testid="session-more"]') && !!d0.querySelector('[data-testid="session-goal-stop"]'),
+        "LXXXIV2 عند بلوغ 90 تظهر خيارتا المزيد أو الحفظ؛ اكتمال المؤقّت لا يعلن اكتمال مهام الخطة");
+      const moreButton = d0.querySelector('[data-testid="session-more"]') as HTMLElement | null;
+      if (moreButton) click(moreButton);
+      const afterMoreReadout = d0.querySelector('[data-testid="session-goal-progress"]')?.textContent ?? "";
+      ok(afterMoreReadout.includes(`${targetMinutes}.0 من ${targetMinutes + 30} دقيقة`),
+        "LXXXIV2a اختيار المزيد يضيف كتلة 30 دقيقة دون تغيير مجموع تقديرات اليوم");
+      const activeStop = d0.querySelector('[data-testid="session-stop-save"]') as HTMLElement | null;
+      ok(!!activeStop, "LXXXIV2b أثناء الجلسة الموسّعة يظل زر الإيقاف والحفظ متاحاً فوراً");
+      if (activeStop) click(activeStop);
+      const savedSessionClock = JSON.parse(storage.getItem("weg-b2-progress-p1:study-clock:278") ?? "null") as { totalMs?: number; syncedMs?: number; goalMinutes?: number } | null;
+      const savedProgress = JSON.parse(storage.getItem("weg-b2-progress-p1") ?? "null") as typeof progress | null;
+      ok(!!d0.querySelector('[data-testid="session-saved"]') && !!savedSessionClock &&
+        (savedSessionClock.totalMs ?? 0) >= 90 * 60_000 && (savedSessionClock.syncedMs ?? 0) >= 90 * 60_000 &&
+        savedSessionClock.goalMinutes === 120 && (savedProgress?.plan.minutenEffektiv ?? 0) >= 90,
+        "LXXXIV2c الإيقاف يحفظ حالة الساعة ويزامن وقتها المقاس مع سجلّ اليوم ويعرض تأكيد الحفظ");
+
+      if (leave) leave();
+
+      // A 30-minute session is still stoppable even though its 90-minute target is not reached.
+      progress.plan.minutenEffektiv = 30;
+      progress.plan.minutenEffektivTage = { 278: 30 };
+      storage.setItem("weg-b2-progress-p1", JSON.stringify(progress));
+      storage.setItem("weg-b2-progress-p1:study-clock:278", JSON.stringify({
+        day: 278, totalMs: 30 * 60_000, syncedMs: 30 * 60_000, goalMinutes: 90, taskMs: {},
+      }));
+      mount(React.createElement(Today));
+      const startSession = d0.querySelector('[data-testid="session-start"]') as HTMLElement | null;
+      if (startSession) click(startSession);
+      const earlyStop = d0.querySelector('[data-testid="session-stop-save"]') as HTMLElement | null;
+      ok(!!startSession && !!earlyStop, "LXXXIV2d بعد 30 دقيقة وهدف 90 يبقى زر إيقاف الجلسة وحفظها متاحاً");
+      if (earlyStop) click(earlyStop);
+      const earlyClock = JSON.parse(storage.getItem("weg-b2-progress-p1:study-clock:278") ?? "null") as { totalMs?: number; goalMinutes?: number } | null;
+      ok(!!d0.querySelector('[data-testid="session-saved"]') && !!earlyClock &&
+        (earlyClock.totalMs ?? 0) >= 30 * 60_000 && (earlyClock.totalMs ?? Infinity) < 90 * 60_000 &&
+        earlyClock.goalMinutes === 90 && !d0.querySelector('[data-testid="session-goal-choice"]'),
+        "LXXXIV2e الإيقاف بعد 30 يحفظ الوقت والموضع بلا إجبار على الهدف أو وسم الهدف مكتملاً");
+      if (leave) leave();
+
+      storage.clear();
+      storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-04" }] }));
+      const pauseProgress = JSON.parse(JSON.stringify(emptyProgress)) as typeof emptyProgress;
+      pauseProgress.plan.day = 2;
+      const basePlan = buildDay(2, pauseProgress);
+      const currentTask = { id: "pause-unsent-writing", kind: "schreiben" as const, titleDe: "Schreiben", titleAr: "كتابة", minutes: 15, writeId: "w-a2-01" };
+      const pausePlan = { ...basePlan, tasks: [currentTask] };
+      const { ritualUrteil } = await import("../lib/ritual");
+      const { Klassenzimmer } = await import("../components/akademie/Klassenzimmer");
+      const { loadProgress } = await import("../lib/store");
+      storage.setItem("weg-b2-progress-p1", JSON.stringify(pauseProgress));
+      let closeCalls = 0;
+      let pauseCalls = 0;
+      mount(React.createElement(Klassenzimmer, {
+        progress: pauseProgress, day: 2, plan: pausePlan, stepFrei: 0, setStep: () => {},
+        ritual: ritualUrteil(pausePlan, pauseProgress), resultOf: () => undefined, localOf: () => ({ score: 0, total: 0 }),
+        onPoints: () => {}, submitCurrent: () => {}, doCloseDay: () => { closeCalls++; }, confirmClose: false,
+        setConfirmClose: () => {}, unpassed: [], allSubmitted: false, onSrs: () => {}, onPauseSession: () => { pauseCalls++; },
+      }));
+      const writingDraft = d0.querySelector("textarea") as HTMLTextAreaElement | null;
+      const draftText = "Ich schreibe heute einen kurzen Brief an meine Freundin.";
+      if (writingDraft) typeIn(writingDraft, draftText);
+      click(d0.querySelector('[data-testid="pause-and-save"]') as HTMLElement);
+      const rawDraft = storage.getItem("wegb2:partial:pause-unsent-writing:writing");
+      const parsedDraft = rawDraft ? JSON.parse(rawDraft) as { text?: string; submitted?: boolean } : null;
+      const afterPause = loadProgress();
+      const pauseStatus = d0.querySelector('[data-testid="pause-saved-message"]')?.textContent ?? "";
+      ok(!!writingDraft && parsedDraft?.text === draftText && parsedDraft.submitted === false &&
+        pauseStatus.includes("غير مُسلَّمة") && pauseStatus.includes("لا تُسجَّل لها نتيجة") &&
+        !afterPause.plan.tasks[currentTask.id] && afterPause.plan.day === 2 &&
+        !afterPause.plan.days[2]?.closed && JSON.stringify(afterPause.plan.debt) === JSON.stringify(pauseProgress.plan.debt) &&
+        storage.getItem("wegb2:day-step:2") === "0" && closeCalls === 0 && pauseCalls === 1,
+        "LXXXIV3 التوقف يستدعي حفظ المؤقّت والموضع والمسودة غير المُسلَّمة؛ لا نتيجة أو إغلاق أو ترحيل أو تعويض");
+    } finally {
+      if (leave) leave();
+      storage.clear();
+      for (const [key, value] of saved) storage.setItem(key, value);
+    }
+  }
+
+  /* ═══ LXXXV — تبديل قائمة «أستطيع» يحفظ مباشرةً بلا اشتراك Progress متداخل ═══ */
+  {
+    const storage = dom.window.localStorage;
+    const saved = Array.from({ length: storage.length }, (_, i) => {
+      const key = storage.key(i)!;
+      return [key, storage.getItem(key)!] as const;
+    });
+    try {
+      storage.clear();
+      storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [{ id: "p1", name: "اختبار", emoji: "🧪", created: "2026-10-04" }] }));
+      const { default: TaskView } = await import("../components/tasks");
+      const { loadProgress } = await import("../lib/store");
+      const { candoMap } = await import("../lib/content");
+      const first = candoMap.A0[0];
+      mount(React.createElement(TaskView, {
+        task: { id: "cando-toggle-test", kind: "wiederholen" as const, titleDe: "Wiederholung", titleAr: "استرجاع", minutes: 5, sentenceIds: [], quiz: [] },
+        lang: "ar" as const, day: 1, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1,
+      }));
+      const checkbox = d0.querySelector('input[type="checkbox"]') as HTMLInputElement | null;
+      if (checkbox) click(checkbox);
+      const enabled = loadProgress().canDo[first.id] === true;
+      if (checkbox) click(checkbox);
+      const disabled = !loadProgress().canDo[first.id];
+      ok(!!first && !!checkbox && enabled && disabled,
+        "LXXXV تبديل «أستطيع» يحفظ حالته في الملف ويعكسها عند النقر الثاني دون تحديث حالة مكررة في الابن");
+    } finally {
+      if (leave) leave();
+      storage.clear();
+      for (const [key, value] of saved) storage.setItem(key, value);
+    }
+  }
+
+  /* ═══ LXXXVI — عزل ساعة الجلسة عند تبديل اليوم أو الملف ═══ */
+  {
+    const storage = dom.window.localStorage;
+    const saved = Array.from({ length: storage.length }, (_, i) => {
+      const key = storage.key(i)!;
+      return [key, storage.getItem(key)!] as const;
+    });
+    let clockRoot: ReturnType<typeof createRoot> | null = null;
+    try {
+      if (leave) leave();
+      storage.clear();
+      storage.setItem("weg-b2-profiles", JSON.stringify({ active: "p1", list: [
+        { id: "p1", name: "الأول", emoji: "🧪", created: "2026-10-04" },
+        { id: "p2", name: "الثاني", emoji: "📘", created: "2026-10-04" },
+      ] }));
+      const { useSessionClock } = await import("../hooks/use-session-clock");
+      const { switchProfile } = await import("../lib/profiles");
+      function ClockProbe({ day }: { day: number }) {
+        const session = useSessionClock(day, "probe-task", true);
+        return React.createElement("span", { "data-testid": "clock-probe" }, `${session.clock.day}:${session.clock.totalMs}`);
+      }
+
+      const dayOneKey = "weg-b2-progress-p1:study-clock:1";
+      const dayTwoKey = "weg-b2-progress-p1:study-clock:2";
+      storage.setItem(dayOneKey, JSON.stringify({ day: 1, totalMs: 30 * 60_000, syncedMs: 30 * 60_000, goalMinutes: 90, taskMs: {} }));
+      clockRoot = createRoot(rootEl);
+      act(() => clockRoot!.render(React.createElement(ClockProbe, { day: 1 })));
+      act(() => clockRoot!.render(React.createElement(ClockProbe, { day: 2 })));
+      const nextDayClock = JSON.parse(storage.getItem(dayTwoKey) ?? "null") as { day?: number; totalMs?: number } | null;
+      const oldDayClock = JSON.parse(storage.getItem(dayOneKey) ?? "null") as { totalMs?: number } | null;
+      ok(oldDayClock?.totalMs === 30 * 60_000 && nextDayClock?.day === 2 && nextDayClock.totalMs === 0 &&
+        d0.querySelector('[data-testid="clock-probe"]')?.textContent === "2:0",
+        "LXXXVI1 تبديل اليوم يحفظ ساعة اليوم السابق في مفتاحها ولا ينسخ دقائقها إلى يوم جديد");
+
+      act(() => clockRoot!.unmount());
+      clockRoot = null;
+      storage.setItem(dayTwoKey, JSON.stringify({ day: 2, totalMs: 15 * 60_000, syncedMs: 15 * 60_000, goalMinutes: 90, taskMs: {} }));
+      clockRoot = createRoot(rootEl);
+      act(() => clockRoot!.render(React.createElement(ClockProbe, { day: 2 })));
+      const loadedOldProfile = d0.querySelector('[data-testid="clock-probe"]')?.textContent;
+      act(() => {
+        switchProfile("p2");
+        clockRoot!.render(React.createElement(ClockProbe, { day: 2 }));
+      });
+      const oldProfileClock = JSON.parse(storage.getItem(dayTwoKey) ?? "null") as { totalMs?: number } | null;
+      const newProfileClock = JSON.parse(storage.getItem("weg-b2-progress-p2:study-clock:2") ?? "null") as { day?: number; totalMs?: number } | null;
+      ok(loadedOldProfile === `2:${15 * 60_000}` && oldProfileClock?.totalMs === 15 * 60_000 &&
+        newProfileClock?.day === 2 && newProfileClock.totalMs === 0,
+        "LXXXVI2 تبديل الملف يحفظ ساعة الملف السابق ولا يسرّبها إلى الملف الجديد");
+    } finally {
+      if (clockRoot) act(() => clockRoot!.unmount());
+      storage.clear();
+      for (const [key, value] of saved) storage.setItem(key, value);
+    }
+  }
+
+  /* ═══ LXXXVII — حوار A1 الهاتفي بعد المراجعة: النص والترجمة والسؤال في الواجهة ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 3, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, {
+      task: { id: "t-dlg-a1-03-ui", kind: "hoeren" as const, dialogueId: "d-a1-03", titleDe: "Telefontermin", titleAr: "موعد هاتفي", minutes: 10 },
+      ...props,
+    }));
+    const reveal = btn("أظهر النص");
+    if (reveal) click(reveal);
+    const rendered = txt();
+    ok(!!reveal && rendered.includes("Hallo, hier spricht Nour.") && rendered.includes("أودّ تحديد موعد.") &&
+      rendered.includes("Ja, am Dienstag um zehn Uhr habe ich Zeit.") && rendered.includes("لديّ وقت يوم الثلاثاء في العاشرة"),
+      "LXXXVII1 واجهة الاستماع تعرض صيغة الهاتف المصححة، ترجمة الموعد، وتأكيد اليوم والساعة بعد كشف النص");
+
+    const q2 = Array.from(rootEl.querySelectorAll(".dirb-ex-item")).find((item) => (item.textContent ?? "").includes("Ich möchte einen ___ vereinbaren."));
+    const answer = q2?.querySelector("input") as HTMLInputElement | null;
+    const check = q2 ? Array.from(q2.querySelectorAll("button")).find((button) => (button.textContent ?? "").includes("تحقّق")) as HTMLElement | undefined : undefined;
+    if (answer) typeIn(answer, "Termin");
+    if (check) click(check);
+    ok(!!q2 && !!answer && !!check && (q2.textContent ?? "").includes("✅"),
+      "LXXXVII2 حقل سؤال Termin يقبل الإجابة الصحيحة عبر واجهة تمرين الاستماع الفعلية");
+    if (leave) leave();
   }
 
   console.log(`\n${beste} نجح · ${fehler} فشل`);

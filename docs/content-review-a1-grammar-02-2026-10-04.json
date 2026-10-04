@@ -1,0 +1,314 @@
+{
+  "date": "2026-10-04",
+  "batch": "A1-grammar-02",
+  "scope": "مراجعة فردية للموضوعات الثلاثة التالية من قواعد A1: a1-trennbar وa1-zahlen وa1-akkusativ، بما فيها كل التمارين وعناصر التحقق. لا يشمل هذا السجل بقية قواعد A1 أو النصوص/الحوارات أو A2–B2.",
+  "coverage": {
+    "grammarTopics": 3,
+    "grammarExercises": 18,
+    "grammarVerify": 6,
+    "totalTrackedItems": 27
+  },
+  "statusCounts": {
+    "سليم": 18,
+    "مُصحح": 9,
+    "غير محسوم": 0
+  },
+  "method": "قُرئ كل عنصر في سياق موضوعه، وقورنت القاعدة والصياغة والإجابة والشرح بمراجع لغوية وتعليمية منشورة. فُصل الخطأ/التناقض المؤكد عن الملاحظة التحريرية، وقُيّد الاستعمال الإقليمي بمرجعه بدلاً من تعميمه. K160 يحرس تغطية السجل ومطابقة التعديلات المحددة ولا يثبت مراجعة بشرية أو اعتماداً مهنياً.",
+  "statusDefinitions": {
+    "سليم": "فُحص ولم يظهر خطأ مؤكد ضمن نطاق هذا العنصر.",
+    "مُصحح": "فُحص ووجد تناقض أو غموض أو خلل تحريري محدد يستلزم تصحيحاً؛ يذكر السجل الدليل والإجراء.",
+    "غير محسوم": "فُحص وبقيت مسألة لغوية أو تربوية غير محسومة؛ لا توجد حالة بهذا الحكم في هذه الدفعة."
+  },
+  "limitations": [
+    "الحكم محصور في الموضوعات الثلاثة ومعرّفات عناصرها المسجلة؛ لا يعني تدقيق بقية A1 أو A2–B2.",
+    "لم تُراجع النصوص أو الحوارات في هذه الدفعة؛ وكل ما لم يرد في قائمة العناصر يبقى خارج النطاق.",
+    "المراجع تثبت صيغاً وقواعد محددة، ولا تمثل اعتماداً مدرسياً أو حكماً بشرياً شاملاً على التدرج والمنهج.",
+    "K160 يطابق التغطية والأحكام والتصحيحات المحددة فقط؛ نجاحه لا يثبت صحة لغوية عامة."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Klett — DEUTSCH INTENSIV Grammatik A1, Probekapitel: trennbare Verben und Perfekt",
+      "url": "https://www.klett-sprachen.de/downloads/27220/Probekapitel_5FGrammatik_5FA1/pdf",
+      "supports": "قاعدة انفصال السابقة إلى نهاية الجملة، أمثلة aufstehen/einkaufen/anrufen/abfahren، وصيغة Perfekt: Ich bin aufgestanden."
+    },
+    {
+      "id": "S2",
+      "title": "Goethe-Zertifikat A1: Fit in Deutsch 1 — Wortliste (Goethe-Institut, 2024)",
+      "url": "https://www.goethe.de/pro/relaunch/prf/en/Goethe-Zertifikat_A1_Fit1_Wortliste.pdf",
+      "supports": "قائمة الأعداد 1–100 وأمثلة تكوينها، موضوع الهاتف والوقت والتاريخ، وأمثلة A1 مثل Der Zug fährt gleich ab وIch rufe dich morgen an."
+    },
+    {
+      "id": "S3",
+      "title": "Goethe Deutsch Online A1 — Redemittel und Grammatik, Kapitel 4",
+      "url": "https://lernen.goethe.de/deutschonline/A1/PDF/DE/deutschonline_Redemittel_und_Grammatik_4.pdf",
+      "supports": "جدول Nominativ/Akkusativ: der/ein/kein → den/einen/keinen للمذكر، وبقاء الأشكال المؤنثة والمحايدة والجمع؛ وأمثلة einen Kaffee وein Bier وeine Limonade."
+    },
+    {
+      "id": "S4",
+      "title": "Goethe Deutsch Online A1 — Redemittel und Grammatik, Kapitel 6",
+      "url": "https://lernen.goethe.de/deutschonline/A1/PDF/DE/deutschonline_Redemittel_und_Grammatik_6.pdf",
+      "supports": "صياغة التاريخ مع السؤال Welches Datum ist heute? (Der dritte Oktober) مقابل Wann? (Am dritten Oktober)، وأمثلة الأوقات والتواريخ."
+    },
+    {
+      "id": "S5",
+      "title": "Wunderbla — Telling the time using halb and Viertel",
+      "url": "https://www.gymglish.com/en/wunderbla/german-grammar/telling-the-time-using-halb-and-viertel",
+      "supports": "08:30 = halb neun، 07:30 = halb acht، و14:45 = Viertel vor drei؛ يذكر أيضاً وجود صيغ إقليمية أخرى لربع الساعة."
+    },
+    {
+      "id": "S6",
+      "title": "Duden — Schreibung von Uhrzeitangaben",
+      "url": "https://www.duden.de/sprachwissen/sprachratgeber/Uhrzeitangaben",
+      "supports": "كتابة الوقت بالأرقام؛ الصيغة القياسية ذات النقطتين وبديل النقطة، مع أمثلة مثل 08:30 Uhr و8.03 Uhr."
+    },
+    {
+      "id": "S7",
+      "title": "Atlas der Alltagssprache — Uhrzeit: 7.20, 7.40, 7.05",
+      "url": "https://www.atlas-alltagssprache.de/uhrzeit/",
+      "supports": "zehn vor halb acht تساوي 7:20 في مناطق، بينما 20 nach sieben شائعة في مناطق أخرى؛ يثبت أن الصيغة إقليمية لا عامة لكل الناطقين."
+    },
+    {
+      "id": "S8",
+      "title": "Duden — Wohnung",
+      "url": "https://www.duden.de/rechtschreibung/Wohnung",
+      "supports": "Wohnung اسم مؤنث: die Wohnung؛ يدعم اختيار eine Wohnung في المفعول."
+    },
+    {
+      "id": "S9",
+      "title": "Duden — Stuhl",
+      "url": "https://www.duden.de/rechtschreibung/Stuhl",
+      "supports": "Stuhl اسم مذكر: der Stuhl؛ يدعم einen Stuhl في Akkusativ."
+    },
+    {
+      "id": "S10",
+      "title": "Duden — Tisch",
+      "url": "https://www.duden.de/rechtschreibung/Tisch",
+      "supports": "Tisch اسم مذكر: der Tisch؛ يدعم einen Tisch في Akkusativ."
+    },
+    {
+      "id": "S11",
+      "title": "Duden — Uhr",
+      "url": "https://www.duden.de/rechtschreibung/Uhr",
+      "supports": "يعرض Duden صيغتي 6:30 [Uhr] و6.30 [Uhr]، ويورد السؤال Wie viel Uhr ist es?؛ أي إن حذف Uhr ممكن في هذا السياق، كما يقبل النقطتين والنقطة في كتابة الوقت."
+    }
+  ],
+  "items": [
+    {
+      "id": "a1-trennbar",
+      "kind": "grammar-topic",
+      "status": "مُصحح",
+      "sources": ["S1", "S2"],
+      "finding": "راجعت الهدف والملخص والقاعدة والأمثلة والفخ. انفصال السابقة في الجملة الخبرية وصيغة aufstehen صحيحتان؛ في المقابل احتوى الملخص خطأ كتابياً («الوهج» بدل «الفعل»)، ووصف العربية «الجملة الاسمية» غير دقيق لـAussagesatz، كما كانت ملاحظة Perfekt شذرةً ملتبسة لا تذكر المساعد الصحيح.",
+      "action": "صُحّح الملخص إلى فعل/بادئة، وقُيّدت قاعدة الموضع بالجملة الخبرية، واستُبدلت شذرة Perfekt بالمثال الموثق Ich bin aufgestanden مع بيان ge والفاعل المساعد sein."
+    },
+    {
+      "id": "g4e1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S1"],
+      "finding": "Ich stehe um 6 Uhr auf ترتيب صحيح للفعل المنفصل في الجملة الخبرية.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g4e2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S1"],
+      "finding": "Wir kaufen im Geschäft ein هي صياغة سليمة؛ السابقة ein تأتي في نهاية الجملة.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g4e3",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": ["S1", "S2"],
+      "finding": "Der Zug fährt um 8 Uhr ab صحيح. قائمة الإجابات احتوت أيضاً «fährt … ab» مع نقاط حذف لا تمثل استجابة مستقلة، والشرح كرر المثال نفسه.",
+      "action": "أُبقيت صيغة الفراغين الحقيقية «fährt ab» فقط، واختُصر الشرح إلى مثال واحد كامل."
+    },
+    {
+      "id": "a1-trennbar-u1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S1"],
+      "finding": "Ich aufstehe um 7 Uhr جملة متعمدة الخطأ في مهمة التصحيح؛ الجواب Ich stehe um 7 Uhr auf صحيح.",
+      "action": "لا تعديل؛ إبقاء الجملة الخاطئة مقصود في هذا التمرين."
+    },
+    {
+      "id": "a1-trennbar-u2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S1"],
+      "finding": "ترتيب Ich rufe dich morgen an صحيح، والبديل Morgen rufe ich dich an يحافظ على الفعل في الموضع الثاني عند تقديم ظرف الزمن.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-trennbar-v1",
+      "kind": "grammar-verify",
+      "status": "مُصحح",
+      "sources": ["S1", "S2"],
+      "finding": "الإجابة auf صحيحة، لكن وجود مسافة قبل النقطة في promptDe وtext كان سيظهر ترقيمًا مفصولاً عن الجملة.",
+      "action": "أزيلت المسافة قبل النقطة في الموضعين."
+    },
+    {
+      "id": "a1-trennbar-v2",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": ["S1"],
+      "finding": "الإجابة الإيجابية Ja, ich rufe dich heute an صحيحة؛ تبديل mich إلى dich مناسب لتغيير المتكلم والمخاطب.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-zahlen",
+      "kind": "grammar-topic",
+      "status": "مُصحح",
+      "sources": ["S2", "S4", "S5", "S7"],
+      "finding": "راجعت قواعد الأعداد والساعة والتاريخ والأمثلة. القاعدة «halb neun = 8:30» صحيحة، لكن سطر الفخ الألماني كان يناقضها بعلامتي ≠، كما قُدمت zehn vor halb acht دون تقييد إقليمي رغم أن المصدر الجغرافي يثبت اختلاف التسمية حسب المنطقة.",
+      "action": "صُحّح سطر الفخ إلى halb neun = 8:30 (nicht 9:30)، وأضيف قيد «في بعض المناطق» إلى مثال zehn vor halb acht."
+    },
+    {
+      "id": "g5e1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S2"],
+      "finding": "23 تكتب dreiundzwanzig؛ الوحدة تسبق العشرات ويربطهما und.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g5e2",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": ["S2"],
+      "finding": "الإجابة siebenundvierzig صحيحة، لكن الشرح أعاد الصيغة نفسها حرفياً داخل قوسين وأضاف شرطات قد توهم أنها كتابة الكلمة.",
+      "action": "حُذف التكرار، وبُيّن ترتيب الوحدة ثم und ثم العشرات مع توضيح أن العدد كلمة واحدة."
+    },
+    {
+      "id": "g5e3",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S5"],
+      "finding": "Es ist halb acht تعني 7:30؛ الإجابة الوحيدة المطابقة من الخيارات هي 7:30.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g5e4",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": ["S5", "S6", "S11"],
+      "finding": "zehn nach sechs تساوي 6:10. يؤكد Duden صيغتي 6:30 [Uhr] و6.30 [Uhr] مع إمكان حذف Uhr، كما يدعم كتابة الوقت بالنقطتين أو النقطة؛ لذلك صيغ الإجابة الرقمية السياقية مقبولة. كان الشرح يكرر التحويل مرتين.",
+      "action": "اختُصر الشرح إلى معنى واحد واضح؛ أُبقيت بدائل إدخال الوقت (6:10 و6.10 و06:10) المدعومة بتهجئات الوقت المنشورة."
+    },
+    {
+      "id": "a1-zahlen-u1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S5"],
+      "finding": "8:30 تُقال halb neun، لا halb acht؛ الإجابة والبدائل تطابق قاعدة تسمية الساعة التالية.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-zahlen-u2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S5"],
+      "finding": "14:45 يمكن قولها Viertel vor drei؛ الصيغة صحيحة في نمط vor/nach المستعمل في السؤال.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-zahl-ord1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S1", "S2"],
+      "finding": "Der Zug fährt um acht Uhr ab جملة سليمة؛ الوقت مع um، وتصريف abfahren والسابقة في النهاية صحيحان.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-zahlen-v1",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": ["S2"],
+      "finding": "68 تكتب achtundsechzig؛ إكمال الفراغ بـacht صحيح.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-zahlen-v2",
+      "kind": "grammar-verify",
+      "status": "مُصحح",
+      "sources": ["S4"],
+      "finding": "der dritte Oktober صحيح عند إجابة Welches Datum ist heute?، أما إذا كان المقصود Wann? فالصيغة am dritten Oktober؛ prompt الأصلي لم يحدد السؤال.",
+      "action": "حُدد سياق السؤال بأنه Welches Datum ist heute?، وأضيف في الشرح الفرق عن am dritten Oktober."
+    },
+    {
+      "id": "a1-akkusativ",
+      "kind": "grammar-topic",
+      "status": "سليم",
+      "sources": ["S3"],
+      "finding": "راجعت الملخص وقاعدة تغيّر أداة المذكر في Akkusativ والجدول والأمثلة. التفريق بين der/den وein/einen وkein/keinen وبقاء المؤنث والمحايد صحيح؛ الأمثلة تطابق جنس الأسماء ووظيفتها.",
+      "action": "لا تعديل على الشرح والجدول والأمثلة."
+    },
+    {
+      "id": "g6e1",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S3"],
+      "finding": "Ich kaufe einen Kaffee صحيح؛ Kaffee مذكر والمفعول المباشر يأخذ einen.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g6e2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S3", "S8"],
+      "finding": "Er sucht eine Wohnung صحيح؛ Wohnung مؤنث، وأداة النكرة تبقى eine في Akkusativ.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "g6e3",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S3"],
+      "finding": "Ich sehe den Mann صحيح؛ أداة المذكر تتحول من der إلى den في Akkusativ.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-akkusativ-u1",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": ["S3", "S10"],
+      "finding": "الجواب Ich habe einen Tisch صحيح، لكن كلمة davor في prompt كانت توحي بإضافة عبارة قبل الجملة المصدر، لا بإعادة صياغتها كما يطلب الجواب.",
+      "action": "أعيدت صياغة التعليمات لتطلب التحويل والبدء بـIch habe؛ لم يتغير الجواب الصحيح."
+    },
+    {
+      "id": "a1-akkusativ-u2",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": ["S3"],
+      "finding": "Ich trinke den Kaffee صحيح؛ Kaffee مذكر ومفعول مباشر، فتتحول أداة التعريف der إلى den.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-akk-ord1",
+      "kind": "grammar-exercise",
+      "status": "مُصحح",
+      "sources": ["S3", "S10"],
+      "finding": "ترتيب Ich kaufe einen neuen Tisch صحيح لغوياً، لكنه أدخل نهاية الصفة neuen رغم أن هدف الدرس وجدوله يقتصران على أداة Akkusativ.",
+      "action": "حُذف النعت من قطع الترتيب والشرح؛ بقيت المهمة مركزة على einen Tisch دون اختبار تصريف صفات غير مشروح."
+    },
+    {
+      "id": "a1-akkusativ-v1",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": ["S3"],
+      "finding": "Ich trinke einen Kaffee صحيح؛ صيغة Akkusativ للمذكر مطابقة للمثال الوارد في مصدر Goethe.",
+      "action": "لا تعديل."
+    },
+    {
+      "id": "a1-akkusativ-v2",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": ["S3", "S9"],
+      "finding": "Ich kaufe einen Stuhl صحيح؛ Stuhl مذكر ويأخذ einen بعد kaufen في المفعول المباشر.",
+      "action": "لا تعديل."
+    }
+  ]
+}

@@ -41,16 +41,22 @@ function hash(s: string): number {
   return h >>> 0;
 }
 
+const STUFEN = ["A0", "A1", "A2", "B1", "B2"] as const;
+/** بُعد المستوى: 0 نفسه، 1 مجاور، 2+ بعيد — المشتّت البعيد ضجيجٌ لا تعليم (V7) */
+export function stufenAbstand(a: string, b: string): number {
+  return Math.abs(STUFEN.indexOf(a as (typeof STUFEN)[number]) - STUFEN.indexOf(b as (typeof STUFEN)[number]));
+}
+
 /**
- * سؤال الاكتشاف: القاعدة الأولى للدرس + حتى 3 قواعد من دروس أخرى في المستوى نفسه
- * (أو المستوى المجاور إن قلّت). حتمي: الترتيب من بذرة (topic.id + seed).
+ * سؤال الاكتشاف: القاعدة الأولى للدرس + حتى 3 قواعد من دروس أخرى، مرتبةً
+ * ببُعد المستوى (نفسه ثمّ المجاور ثمّ البعيد) فبالبذرة الحتمية.
  */
 export function entdeckungsFrage(t: GrammarTopic, alle: GrammarTopic[], seed = 0): EntdeckungsFrage | null {
   if (!induktionMoeglich(t)) return null;
   const richtig = t.rules[0];
   const kandidaten = alle
     .filter((x) => x.id !== t.id && x.rules?.length)
-    .sort((a, b) => (a.level === t.level ? 0 : 1) - (b.level === t.level ? 0 : 1) || hash(a.id + t.id) - hash(b.id + t.id))
+    .sort((a, b) => stufenAbstand(a.level, t.level) - stufenAbstand(b.level, t.level) || hash(a.id + t.id) - hash(b.id + t.id))
     .map((x) => ({ de: x.rules[0].de, ar: x.rules[0].ar, richtig: false, quelle: x.id }))
     .filter((o) => o.de !== richtig.de)
     .slice(0, 3);

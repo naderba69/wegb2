@@ -107,8 +107,8 @@
   {
     "id": "t-a1-03",
     "level": "A1",
-    "titleDe": "Im Supermarkt",
-    "titleAr": "في السوبرماركت",
+    "titleDe": "Im Supermarkt: Wo ist die Milch?",
+    "titleAr": "في السوبرماركت: أين الحليب؟",
     "de": "Entschuldigung, wo ist die Milch? Die Milch ist dort, hinter dem Käse. Danke! Ich möchte noch Brot und Eier. Das Brot kostet zwei Euro, die Eier drei Euro. Zusammen fünf Euro. Haben Sie eine Tüte? Ja, hier, bitte. Auf Wiedersehen!",
     "ar": "عفواً، أين الحليب؟ الحليب هناك خلف الجبن. شكراً! أريد أيضاً خبزاً وبيضاً. الخبز بيوروين والبيض بثلاثة يورو. المجموع خمسة يورو. هل لديكم كيس؟ نعم، تفضّل. إلى اللقاء!",
     "questions": [
@@ -1459,8 +1459,8 @@
   {
     "id": "t-a1-09",
     "level": "A1",
-    "titleDe": "Im Supermarkt",
-    "titleAr": "في المتجر الكبير",
+    "titleDe": "Der Einkaufstag",
+    "titleAr": "يوم التسوّق",
     "de": "Samstag ist Einkaufstag in unserer Familie. Ich schreibe eine Liste: Brot, Milch, Äpfel, Käse und Eier. Im Supermarkt nehme ich einen Wagen. Das Obst ist heute frisch und billig. An der Kasse bezahle ich mit Karte. Zu Hause räume ich alles in den Kühlschrank.",
     "ar": "السبت يوم التسوّق لعائلتي. أكتب قائمة: خبز، حليب، تفاح، جبن وبيض. في المتجر أخذ عربة. الفاكهة اليوم طازجة ورخيصة. عند الصندوق أدفع بالبطاقة. في البيت أرتّب كل شيء في الثلاجة.",
     "questions": [
@@ -1900,8 +1900,8 @@
   {
     "id": "t-a1-11",
     "level": "A1",
-    "titleDe": "Mein Wochenende",
-    "titleAr": "عطّلتي",
+    "titleDe": "Mein Wochenende: Markt und Park",
+    "titleAr": "عطلتي: السوق والحديقة",
     "de": "Am Samstag gehe ich auf den Markt. Ich kaufe Äpfel, Tomaten und Brot. Am Sonntag habe ich Zeit. Ich fahre mit dem Bus in den Stadtpark und lese dort ein Buch. Es ist schön und ruhig. Abends koche ich mit meinen Freunden und wir sehen einen Film an. So ist mein Wochenende.",
     "ar": "يوم السبت أذهب إلى السوق. أشتري تفاحًا وطماطم وخبزًا. الأحد عندي وقت. أركب الحافلة إلى حديقة المدينة وأقرأ هناك كتابًا. إنها جميلة وهادئة. مساءً أطبخ مع أصدقائي ونشاهد فيلمًا. هكذا يكون عطّلتي.",
     "questions": [
@@ -3773,8 +3773,8 @@
   {
     "id": "t-a1-19",
     "level": "A1",
-    "titleDe": "Mein Wochenende",
-    "titleAr": "عطلةُ أسبوعي",
+    "titleDe": "Mein Wochenende: Familie und Freunde",
+    "titleAr": "عطلتي: العائلة والأصدقاء",
     "de": "Am Samstag stehe ich spät auf. Ich frühstücke mit meiner Familie: Brot, Käse und Tee. Danach gehe ich auf den Markt und kaufe Obst und Gemüse. Am Nachmittag besuche ich meinen Freund Karim. Wir spielen Fußball im Park. Am Abend bin ich müde, aber glücklich. Am Sonntag lerne ich zwei Stunden Deutsch und rufe meine Mutter an.",
     "ar": "يومَ السبتِ أنهضُ متأخِّراً. أفطرُ مع عائلتي: خبزٌ وجبنٌ وشاي. ثمَّ أذهبُ إلى السوقِ وأشتري فاكهةً وخضاراً. بعدَ الظهرِ أزورُ صديقي كريم. نلعبُ كرةَ القدمِ في المنتزه. مساءً أكونُ متعباً لكنّي سعيد. يومَ الأحدِ أدرسُ الألمانيةَ ساعتَينِ وأتّصلُ بأمّي.",
     "questions": [
@@ -6012,7 +6012,7 @@
     "titleDe": "Das Alphabet",
     "titleAr": "الأبجدية",
     "de": "A, B, C, D, E, F, G. H, I, J, K, L, M, N. O, P, Q, R, S, T. U, V, W, X, Y, Z. Ä, Ö, Ü, ß. Das ist das deutsche Alphabet.",
-    "ar": "أ، ب، ت، د، إ، ف، گ. هـ، إي، يوت، كا، إل، إم، إن. أو، پ، كو، إر، إس، تيه. أو، فاو، في، إكس، إبسلون، تset. إيه أوملاوت، أو أوملاوت، أو أوملاوت، إستسيت. هذه هي الأبجدية الألمانية.",
+    "ar": "أسماء الحروف تقريباً بالكتابة اللاتينية: A (ah)، B (beh)، C (tseh)، D (deh)، E (eh)، F (eff)، G (geh). H (hah)، I (ih)، J (jott)، K (kah)، L (ell)، M (emm)، N (enn). O (oh)، P (peh)، Q (kuh)، R (err)، S (ess)، T (teh). U (uh)، V (fau)، W (weh)، X (iks)، Y (ypsilon)، Z (tset). Ä (A-Umlaut)، Ö (O-Umlaut)، Ü (U-Umlaut)، ß (Eszett). هذه أسماء الحروف الألمانية.",
     "questions": [
       {
         "options": [
@@ -6044,16 +6044,11 @@
       },
       {
         "id": "t-a0-01-q3",
-        "type": "mc",
-        "promptDe": "Wie viele Buchstaben mit Umlaut nennt der Text?",
-        "options": [
-          "zwei",
-          "drei",
-          "vier",
-          "fünf"
-        ],
-        "answer": "drei",
-        "explanationAr": "النص يذكر Ä, Ö, Ü — ثلاثة حروف ذات علامتي نقط (Umlaute)."
+        "type": "fill",
+        "promptDe": "Welcher Buchstabe steht direkt vor ß im Text?",
+        "promptAr": "أي حرف يسبق ß مباشرةً في النص؟",
+        "answer": "Ü",
+        "explanationAr": "ترتيب نهاية النص هو Ä، Ö، Ü، ß؛ لذلك يسبق Ü حرف ß مباشرةً."
       }
     ]
   },
@@ -6096,15 +6091,16 @@
       {
         "id": "t-a0-02-q3",
         "type": "mc",
-        "promptDe": "Woher kommt Ali?",
+        "promptDe": "Welche Begrüßung folgt auf «Ich komme aus Tunesien»?",
+        "promptAr": "أي تحية تأتي بعد «Ich komme aus Tunesien»؟",
         "options": [
-          "aus Deutschland",
-          "aus Tunesien",
-          "aus Ägypten",
-          "aus der Schweiz"
+          "Hallo!",
+          "Guten Tag!",
+          "Auf Wiedersehen!",
+          "Danke!"
         ],
-        "answer": "aus Tunesien",
-        "explanationAr": "«Ich komme aus Tunesien.» — آتي من تونس."
+        "answer": "Guten Tag!",
+        "explanationAr": "قبل سؤال «Wie heißt du?» مباشرةً يقول النص «Guten Tag!»."
       }
     ]
   },
@@ -6113,8 +6109,8 @@
     "level": "A0",
     "titleDe": "Zahlen 1 bis 10",
     "titleAr": "الأرقام من 1 إلى 10",
-    "de": "Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. Das sind Zahlen. Ich bin dreißig Jahre alt.",
-    "ar": "واحد، اثنان، ثلاثة، أربعة، خمسة، ستة، سبعة، ثمانية، تسعة، عشرة. هذه أرقام. عمري ثلاثون سنة.",
+    "de": "Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. Das sind Zahlen. Null ist eine Zahl. Ich bin dreißig Jahre alt.",
+    "ar": "واحد، اثنان، ثلاثة، أربعة، خمسة، ستة، سبعة، ثمانية، تسعة، عشرة. هذه أرقام. الصفر عددٌ. عمري ثلاثون سنة.",
     "questions": [
       {
         "options": [
@@ -6164,8 +6160,8 @@
     "level": "A0",
     "titleDe": "Die Tage",
     "titleAr": "الأيام",
-    "de": "Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag. Eine Woche hat sieben Tage. Heute ist Montag.",
-    "ar": "الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت، الأحد. الأسبوع فيه سبعة أيام. اليوم هو الاثنين.",
+    "de": "Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag. Eine Woche hat sieben Tage. Samstag und Sonntag sind das Wochenende. Heute ist Montag.",
+    "ar": "الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت، الأحد. الأسبوع فيه سبعة أيام. السبت والأحد هما عطلة نهاية الأسبوع. اليوم هو الاثنين.",
     "questions": [
       {
         "options": [
@@ -6183,17 +6179,17 @@
       },
       {
         "options": [
-          "Montag",
-          "Mittwoch",
-          "Freitag",
-          "Sonntag"
+          "das Wochenende",
+          "eine Woche",
+          "ein Monat",
+          "ein Jahr"
         ],
-        "answer": "Sonntag",
+        "answer": "das Wochenende",
         "id": "t-a0-04-q2",
         "type": "mc",
-        "promptDe": "Welcher Tag ist das Wochenende?",
-        "promptAr": "أي يوم عطلة؟",
-        "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        "promptDe": "Was sind Samstag und Sonntag?",
+        "promptAr": "ماذا يمثّل السبت والأحد؟",
+        "explanationAr": "الدليل في النص: «Samstag und Sonntag sind das Wochenende.» — السبت والأحد هما عطلة نهاية الأسبوع."
       },
       {
         "id": "t-a0-04-q3",
@@ -6216,7 +6212,7 @@
     "titleDe": "Ich bin da",
     "titleAr": "أنا هنا",
     "de": "Ich bin hier. Du bist da. Er ist da. Sie ist da. Wir sind hier. Ihr seid da. Sie sind da. Das ist mein Name.",
-    "ar": "أنا هنا. أنتَ هناك. هو هناك. هي هناك. نحن هنا. أنتم هناك. هم هناك. هذا اسمي.",
+    "ar": "أنا هنا. أنتَ هناك. هو هناك. هي هناك. نحن هنا. أنتم هناك. هم هناك (وتُستعمل Sie أيضاً للمخاطَب الرسمي بحسب السياق). هذا اسمي.",
     "questions": [
       {
         "options": [
@@ -6249,7 +6245,8 @@
       {
         "id": "t-a0-05-q3",
         "type": "mc",
-        "promptDe": "Wer ist «hier» zuerst?",
+        "promptDe": "Welches Pronomen steht am Anfang des Textes?",
+        "promptAr": "أي ضمير يرد في بداية النص؟",
         "options": [
           "du",
           "ich",
@@ -6257,7 +6254,7 @@
           "ihr"
         ],
         "answer": "ich",
-        "explanationAr": "الجملة الأولى «Ich bin hier.» — المفرد «ich» (أنا) أولَ مَن يعلن وجودَه."
+        "explanationAr": "الضمير في أول جملة هو ich: «Ich bin hier.»"
       }
     ]
   }

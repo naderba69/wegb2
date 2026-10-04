@@ -1,0 +1,772 @@
+{
+  "anfangen": {
+    "beginnen": {
+      "basisKollokation": "mit der Arbeit anfangen",
+      "alternativKollokation": "mit der Arbeit beginnen",
+      "basisDe": "Ich fange heute mit der Arbeit an.",
+      "basisAr": "أبدأ العمل اليوم.",
+      "alternativDe": "Ich beginne heute mit der Arbeit.",
+      "alternativAr": "أبدأ العمل اليوم.",
+      "nuanceAr": "في هذا السياق المعنى قريب. anfangen فعلٌ منفصل في الحاضر (fange … an)، أمّا beginnen فلا ينفصل؛ ويشيع beginnen أكثر في الأسلوب الرسمي."
+    }
+  },
+  "antworten": {
+    "beantworten": {
+      "basisKollokation": "auf die Frage antworten",
+      "alternativKollokation": "die Frage beantworten",
+      "basisDe": "Sie antwortet auf die Frage.",
+      "basisAr": "تجيب عن السؤال.",
+      "alternativDe": "Sie beantwortet die Frage.",
+      "alternativAr": "تجيب عن السؤال.",
+      "nuanceAr": "المعنى التواصلي متقارب، لكن antworten يأتي هنا مع auf + Akkusativ، بينما يأخذ beantworten السؤالَ مباشرةً مفعولاً به."
+    }
+  },
+  "helfen": {
+    "unterstützen": {
+      "basisKollokation": "der Mutter helfen",
+      "alternativKollokation": "die Mutter unterstützen",
+      "basisDe": "Ich helfe meiner Schwester beim Umzug.",
+      "basisAr": "أساعد أختي في الانتقال.",
+      "alternativDe": "Ich unterstütze meine Schwester beim Umzug.",
+      "alternativAr": "أساند أختي في الانتقال.",
+      "nuanceAr": "كلاهما يدل على تقديم العون في هذا الموقف. helfen يأخذ الشخص بالداتيف، أمّا unterstützen فيأخذه مفعولاً مباشراً وقد يوحي بمساندة أوسع أو أطول."
+    }
+  },
+  "wohnen": {
+    "leben": {
+      "basisKollokation": "in Berlin wohnen",
+      "alternativKollokation": "in Berlin leben",
+      "basisDe": "Ich wohne in Berlin.",
+      "basisAr": "أسكن في برلين.",
+      "alternativDe": "Ich lebe in Berlin.",
+      "alternativAr": "أعيش في برلين.",
+      "nuanceAr": "في جملة المكان قد يتقاربان: wohnen يركّز على السكن أو محل الإقامة، أمّا leben فأوسع ويصف مكان الحياة عموماً."
+    }
+  },
+  "sprechen": {
+    "reden": {
+      "basisKollokation": "langsam sprechen",
+      "alternativKollokation": "langsam reden",
+      "basisDe": "Er spricht heute langsam.",
+      "basisAr": "يتحدث ببطء اليوم.",
+      "alternativDe": "Er redet heute langsam.",
+      "alternativAr": "يتكلم ببطء اليوم.",
+      "nuanceAr": "في هذا المثال كلاهما يصف طريقة الكلام؛ sprechen محايد ويشيع أيضاً عند الحديث عن مهارة لغة، أمّا reden فأكثر يومية ويركّز غالباً على المحادثة."
+    }
+  },
+  "treffen": {
+    "begegnen": {
+      "basisKollokation": "Freunde treffen",
+      "alternativKollokation": "einem Freund begegnen",
+      "basisDe": "Ich treffe meinen Freund am Samstag im Café.",
+      "basisAr": "ألتقي صديقي في المقهى يوم السبت.",
+      "alternativDe": "Ich bin meinem Freund am Samstag zufällig im Café begegnet.",
+      "alternativAr": "صادفت صديقي في المقهى يوم السبت.",
+      "nuanceAr": "قد يتقاربان عند رؤية شخص، لكن treffen قد يكون لقاءً مرتباً؛ أمّا begegnen فيصف غالباً مصادفة اللقاء، ويأخذ الشخص بالداتيف."
+    }
+  },
+  "erzählen": {
+    "berichten": {
+      "basisKollokation": "von der Reise erzählen",
+      "alternativKollokation": "von der Reise berichten",
+      "basisDe": "Er erzählt von der Reise.",
+      "basisAr": "يحكي عن الرحلة.",
+      "alternativDe": "Er berichtet von der Reise.",
+      "alternativAr": "يقدّم تقريراً عن الرحلة.",
+      "nuanceAr": "erzählen يميل إلى سرد الحكاية أو التجربة؛ berichten أقرب إلى عرض الوقائع أو تقديم تقرير، وقد يكون أرسميّاً."
+    }
+  },
+  "erklären": {
+    "erläutern": {
+      "basisKollokation": "die Regel erklären",
+      "alternativKollokation": "die Regel erläutern",
+      "basisDe": "Die Lehrerin erklärt die Regel.",
+      "basisAr": "تشرح المعلمة القاعدة.",
+      "alternativDe": "Die Lehrerin erläutert die Regel.",
+      "alternativAr": "توضّح المعلمة القاعدة.",
+      "nuanceAr": "في هذا المثال كلاهما للشرح. erläutern غالباً يضيف تفصيلاً أو مثالاً لتوضيح الفكرة، ونبرته أميل إلى الرسمية."
+    }
+  },
+  "schreiben": {
+    "verfassen": {
+      "basisKollokation": "einen Brief schreiben",
+      "alternativKollokation": "einen Brief verfassen",
+      "basisDe": "Sie schreibt einen Brief an ihre Freundin.",
+      "basisAr": "تكتب رسالة إلى صديقتها.",
+      "alternativDe": "Sie verfasst einen Brief an ihre Freundin.",
+      "alternativAr": "تحرّر رسالة إلى صديقتها.",
+      "nuanceAr": "كلاهما ممكن هنا؛ schreiben أعمّ وأشيع، أمّا verfassen فيوحي بإعداد نصٍّ مكتوب ويشيع أكثر في السياق الرسمي."
+    }
+  },
+  "sparen": {
+    "ansparen": {
+      "basisKollokation": "Geld sparen",
+      "alternativKollokation": "Geld für eine Reise ansparen",
+      "basisDe": "Ich spare Geld für die Reise.",
+      "basisAr": "أدّخر المال للرحلة.",
+      "alternativDe": "Ich spare Geld für die Reise an.",
+      "alternativAr": "أجمع المال تدريجياً للرحلة.",
+      "nuanceAr": "sparen ادّخار عام؛ ansparen يركّز على جمع المال تدريجياً لغرض أو مبلغ مستهدف، وهو فعل منفصل (spare … an)."
+    }
+  },
+  "sehen": {
+    "schauen": {
+      "basisKollokation": "einen Film im Kino sehen",
+      "alternativKollokation": "einen Film im Kino schauen",
+      "basisDe": "Wir sehen heute Abend einen Film im Kino.",
+      "basisAr": "نشاهد فيلماً في السينما مساء اليوم.",
+      "alternativDe": "Wir schauen heute Abend einen Film im Kino.",
+      "alternativAr": "نتفرج على فيلم في السينما مساء اليوم.",
+      "nuanceAr": "عند مشاهدة فيلم بقصد يتقاربان؛ sehen أعمّ ويعني أيضاً الإدراك بالبصر، أمّا schauen فيبرز توجيه النظر ويشيع في الحديث اليومي."
+    }
+  },
+  "holen": {
+    "abholen": {
+      "basisKollokation": "die Kinder holen",
+      "alternativKollokation": "die Kinder von der Schule abholen",
+      "basisDe": "Ich hole heute die Kinder von der Schule.",
+      "basisAr": "أذهب اليوم لأخذ الأطفال من المدرسة.",
+      "alternativDe": "Ich hole heute die Kinder von der Schule ab.",
+      "alternativAr": "أصطحب الأطفال اليوم من المدرسة.",
+      "nuanceAr": "في هذا الموقف يتقاربان؛ holen يعني الإحضار أو الأخذ عموماً، أمّا abholen فيحدد أخذ شخص من مكان معيّن، وهو فعل منفصل (hole … ab)."
+    }
+  },
+  "das Auto": {
+    "der Wagen": {
+      "basisKollokation": "mit dem Auto fahren",
+      "alternativKollokation": "mit dem Wagen fahren",
+      "basisDe": "Wir fahren mit dem Auto nach Hause.",
+      "basisAr": "نعود إلى المنزل بالسيارة.",
+      "alternativDe": "Wir fahren mit dem Wagen nach Hause.",
+      "alternativAr": "نعود إلى المنزل بالسيارة.",
+      "nuanceAr": "في هذا المثال كلاهما سيارة؛ Auto هو اللفظ المحايد الشائع، أمّا Wagen فقد يعني مركبة أو عربة بحسب السياق، وقد يبدو أقدم أو أسلوبيّاً."
+    }
+  },
+  "das Wort": {
+    "der Ausdruck": {
+      "basisKollokation": "ein neues Wort",
+      "alternativKollokation": "ein neuer Ausdruck",
+      "basisDe": "Im Text steht ein neues Wort.",
+      "basisAr": "توجد في النص كلمة جديدة.",
+      "alternativDe": "Im Text steht ein neuer Ausdruck.",
+      "alternativAr": "يوجد في النص تعبير جديد.",
+      "nuanceAr": "Wort غالباً كلمة مفردة؛ أمّا Ausdruck فقد يكون تركيباً من كلمات أو طريقةً لصياغة المعنى، لذا لا يتبادلان دائماً."
+    }
+  },
+  "das Problem": {
+    "die Schwierigkeit": {
+      "basisKollokation": "kein Problem",
+      "alternativKollokation": "keine Schwierigkeit",
+      "basisDe": "Das ist für mich kein Problem.",
+      "basisAr": "لا تمثل هذه مشكلةً بالنسبة لي.",
+      "alternativDe": "Das ist für mich keine Schwierigkeit.",
+      "alternativAr": "لا تشكّل هذه صعوبةً بالنسبة إليّ.",
+      "nuanceAr": "يتقاربان عند وصف أمر يمكن التعامل معه؛ Problem أوسع للدلالة على مسألة أو عائق، بينما Schwierigkeit تركز على الصعوبة أو العقبة."
+    }
+  },
+  "die Idee": {
+    "der Gedanke": {
+      "basisKollokation": "eine gute Idee",
+      "alternativKollokation": "ein guter Gedanke",
+      "basisDe": "Das ist eine gute Idee.",
+      "basisAr": "هذه فكرة جيدة.",
+      "alternativDe": "Das ist ein guter Gedanke.",
+      "alternativAr": "هذه فكرة وجيهة.",
+      "nuanceAr": "في سياق اقتراحٍ مقبول يتقاربان؛ Idee تميل إلى خطة أو اقتراح، وGedanke إلى فكرة أو تأمّل، ولا يتطابقان في كل السياقات."
+    }
+  },
+  "die Firma": {
+    "das Unternehmen": {
+      "basisKollokation": "in einer Firma arbeiten",
+      "alternativKollokation": "in einem Unternehmen arbeiten",
+      "basisDe": "Meine Schwester arbeitet in einer Firma.",
+      "basisAr": "تعمل أختي في شركة.",
+      "alternativDe": "Meine Schwester arbeitet in einem Unternehmen.",
+      "alternativAr": "تعمل أختي في مؤسسة تجارية.",
+      "nuanceAr": "في سياق مكان العمل يتقاربان؛ Firma شائع للشركة، وUnternehmen أوسع أو أميل إلى الرسمية وقد يشير إلى النشاط التجاري كله."
+    }
+  },
+  "der Chef": {
+    "der Vorgesetzte": {
+      "basisKollokation": "mit dem Chef sprechen",
+      "alternativKollokation": "mit dem Vorgesetzten sprechen",
+      "basisDe": "Ich spreche morgen mit meinem Chef.",
+      "basisAr": "أتحدث غداً مع مديري.",
+      "alternativDe": "Ich spreche morgen mit meinem Vorgesetzten.",
+      "alternativAr": "أتحدث غداً مع مشرفي.",
+      "nuanceAr": "في العمل يتقاربان؛ Chef شائع وأقل رسمية وقد يعني رئيس العمل، أمّا Vorgesetzter فيحدد المشرف ضمن التسلسل الإداري ولا يعني بالضرورة مالك الشركة."
+    }
+  },
+  "höflich": {
+    "zuvorkommend": {
+      "basisKollokation": "höflich sein",
+      "alternativKollokation": "zuvorkommend sein",
+      "basisDe": "Die Bedienung ist höflich.",
+      "basisAr": "النادلة مهذبة.",
+      "alternativDe": "Die Bedienung ist zuvorkommend.",
+      "alternativAr": "النادلة لبقة ومهتمة بخدمة الضيوف.",
+      "nuanceAr": "كلاهما يتصل بحسن التعامل؛ höflich يصف الأدب والاحترام، وzuvorkommend يضيف المبادرة إلى مراعاة حاجة الآخر ومساعدته."
+    }
+  },
+  "das Mittagessen": {
+    "das Mittagsmahl": {
+      "basisKollokation": "zum Mittagessen gehen",
+      "alternativKollokation": "zum Mittagsmahl gehen",
+      "basisDe": "Wir gehen um zwölf zum Mittagessen.",
+      "basisAr": "نذهب عند الثانية عشرة لتناول الغداء.",
+      "alternativDe": "Wir gehen um zwölf zum Mittagsmahl.",
+      "alternativAr": "نذهب عند الثانية عشرة إلى وجبة الظهيرة.",
+      "nuanceAr": "يدلان هنا على وجبة منتصف النهار، لكن Mittagsmahl أندر وأفخم أو أدبيّ النبرة؛ في الحديث اليومي يُفضَّل Mittagessen."
+    }
+  },
+  "kommen": {
+    "ankommen": {
+      "basisKollokation": "nach Hause kommen",
+      "alternativKollokation": "zu Hause ankommen",
+      "basisDe": "Wir kommen heute gegen acht nach Hause.",
+      "basisAr": "نعود إلى المنزل اليوم نحو الساعة الثامنة.",
+      "alternativDe": "Wir kommen heute gegen acht zu Hause an.",
+      "alternativAr": "نصل إلى المنزل اليوم نحو الساعة الثامنة.",
+      "nuanceAr": "في سياق الوصول إلى المنزل يتقاربان؛ kommen أوسع، أمّا ankommen فيركّز على بلوغ الوجهة، وهو فعل منفصل (kommen … an). لا يتبادلان في كل استعمال."
+    }
+  },
+  "sagen": {
+    "mitteilen": {
+      "basisKollokation": "die Wahrheit sagen",
+      "alternativKollokation": "jemandem die Wahrheit mitteilen",
+      "basisDe": "Mina sagt ihrer Freundin die Wahrheit.",
+      "basisAr": "تقول مينا لصديقتها الحقيقة.",
+      "alternativDe": "Mina teilt ihrer Freundin die Wahrheit mit.",
+      "alternativAr": "تُبلغ مينا صديقتها بالحقيقة.",
+      "nuanceAr": "في هذا السياق كلاهما لإيصال الحقيقة؛ sagen أعمّ وأشيع، بينما mitteilen يركّز على نقل معلومة وقد يبدو أرسميّاً، وهو فعل منفصل (teilt … mit)."
+    }
+  },
+  "verstehen": {
+    "begreifen": {
+      "basisKollokation": "alles verstehen",
+      "alternativKollokation": "alles begreifen",
+      "basisDe": "Nach der Erklärung verstehe ich endlich alles.",
+      "basisAr": "بعد الشرح أفهم أخيراً كل شيء.",
+      "alternativDe": "Nach der Erklärung begreife ich endlich alles.",
+      "alternativAr": "بعد الشرح أستوعب أخيراً كل شيء.",
+      "nuanceAr": "في سياق فهم الشرح يتقاربان؛ verstehen أعمّ، بينما begreifen يبرز الاستيعاب الذهني وقد يبدو أقوى تأكيداً."
+    }
+  },
+  "bezahlen": {
+    "begleichen": {
+      "basisKollokation": "bar bezahlen",
+      "alternativKollokation": "eine Rechnung bar begleichen",
+      "basisDe": "Ich bezahle die Rechnung bar.",
+      "basisAr": "أدفع الفاتورة نقداً.",
+      "alternativDe": "Ich begleiche die Rechnung bar.",
+      "alternativAr": "أسدّد الفاتورة نقداً.",
+      "nuanceAr": "عند تسديد فاتورة يتقاربان؛ bezahlen أوسع ويصلح للمشتريات عموماً، أمّا begleichen فيعني تسوية مبلغ أو دين مستحق، فلا يُستعمل بديلاً عاماً."
+    }
+  },
+  "finden": {
+    "entdecken": {
+      "basisKollokation": "den Weg finden",
+      "alternativKollokation": "einen neuen Weg entdecken",
+      "basisDe": "Beim Wandern finden wir einen neuen Weg zum See.",
+      "basisAr": "نعثر أثناء التنزه على مسار جديد إلى البحيرة.",
+      "alternativDe": "Beim Wandern entdecken wir einen neuen Weg zum See.",
+      "alternativAr": "نكتشف أثناء التنزه مساراً جديداً إلى البحيرة.",
+      "nuanceAr": "هنا فقط، عند العثور على مسار غير معروف للمتحدث، يتقاربان؛ finden أوسع وقد يعني تحديد مكان شيء، أمّا entdecken فيضيف معنى اكتشاف الجديد."
+    }
+  },
+  "reisen": {
+    "verreisen": {
+      "basisKollokation": "nach Tunesien reisen",
+      "alternativKollokation": "nach Tunesien verreisen",
+      "basisDe": "Wir reisen im Juli nach Tunesien.",
+      "basisAr": "نسافر إلى تونس في يوليو.",
+      "alternativDe": "Wir verreisen im Juli nach Tunesien.",
+      "alternativAr": "نغادر في رحلة إلى تونس في يوليو.",
+      "nuanceAr": "في سياق رحلة إلى وجهة يتقاربان؛ verreisen يبرز مغادرة مكان الإقامة في رحلة، غالباً للراحة، أمّا reisen فأوسع ولا يعني دائماً إجازة."
+    }
+  },
+  "besuchen": {
+    "aufsuchen": {
+      "basisKollokation": "die Großeltern besuchen",
+      "alternativKollokation": "die Großeltern aufsuchen",
+      "basisDe": "Am Sonntag besuchen wir unsere Großeltern.",
+      "basisAr": "نزور جدّينا يوم الأحد.",
+      "alternativDe": "Am Sonntag suchen wir unsere Großeltern auf.",
+      "alternativAr": "نتوجّه لزيارة جدّينا يوم الأحد.",
+      "nuanceAr": "في هذا المثال يمكن أن يصفا الذهاب إليهما؛ besuchen محايد وشائع للزيارة، أمّا aufsuchen فأكثر رسمية ويؤكد قصد التوجّه إلى شخص أو مكان."
+    }
+  },
+  "die Arbeit": {
+    "der Job": {
+      "basisKollokation": "die Arbeit beginnt um acht",
+      "alternativKollokation": "der Job beginnt um acht",
+      "basisDe": "Meine Arbeit beginnt morgen um acht Uhr.",
+      "basisAr": "يبدأ عملي غداً الساعة الثامنة.",
+      "alternativDe": "Mein Job beginnt morgen um acht Uhr.",
+      "alternativAr": "يبدأ دوامي في الوظيفة غداً الساعة الثامنة.",
+      "nuanceAr": "في سياق وقت بدء الدوام يتقاربان؛ Arbeit أوسع وتشمل العمل أو الوظيفة، أمّا Job فأشيع للوظيفة المدفوعة وهو أكثر يومية."
+    }
+  },
+  "der Brief": {
+    "das Schreiben": {
+      "basisKollokation": "einen Brief bekommen",
+      "alternativKollokation": "ein Schreiben bekommen",
+      "basisDe": "Ich habe gestern einen Brief von der Versicherung bekommen.",
+      "basisAr": "تلقيت أمس رسالةً من شركة التأمين.",
+      "alternativDe": "Ich habe gestern ein Schreiben von der Versicherung bekommen.",
+      "alternativAr": "تلقيت أمس خطاباً رسمياً من شركة التأمين.",
+      "nuanceAr": "عند تلقي مراسلة يتقاربان؛ Brief لفظ عام للرسالة، أمّا Schreiben فيوحي غالباً بخطاب أو وثيقة رسمية."
+    }
+  },
+  "der Kollege": {
+    "der Mitarbeiter": {
+      "basisKollokation": "mit dem Kollegen essen",
+      "alternativKollokation": "mit dem Mitarbeiter essen",
+      "basisDe": "Heute esse ich mit meinem Kollegen in der Kantine.",
+      "basisAr": "أتناول الغداء اليوم مع زميلي في المقصف.",
+      "alternativDe": "Heute esse ich mit einem Mitarbeiter in der Kantine.",
+      "alternativAr": "أتناول الغداء اليوم مع أحد الموظفين في المقصف.",
+      "nuanceAr": "في مكان العمل قد يشير الاثنان إلى الشخص نفسه؛ Kollege يركّز على علاقة الزمالة، بينما Mitarbeiter يعني موظفاً في المؤسسة وقد يكون تابعاً إدارياً."
+    }
+  },
+  "schnell": {
+    "rasch": {
+      "basisKollokation": "schnell fahren",
+      "alternativKollokation": "rasch fahren",
+      "basisDe": "Der Zug fährt heute schnell.",
+      "basisAr": "يسير القطار اليوم بسرعة.",
+      "alternativDe": "Der Zug fährt heute rasch.",
+      "alternativAr": "يسير القطار اليوم بسرعة.",
+      "nuanceAr": "في وصف سرعة القطار، تتقارب rasch مع schnell؛ لا يظهر هنا فرقٌ أسلوبيٌّ عام. وقد تكتسب تراكيب محددة نبرة أدبية، لذا لا نعمّم فرق الأسلوب ولا نستبدل إحداهما بالأخرى في كل تركيب."
+    }
+  },
+  "wichtig": {
+    "bedeutsam": {
+      "basisKollokation": "eine wichtige Frage",
+      "alternativKollokation": "eine bedeutsame Frage",
+      "basisDe": "Das ist eine wichtige Frage.",
+      "basisAr": "هذا سؤال مهم.",
+      "alternativDe": "Das ist eine bedeutsame Frage.",
+      "alternativAr": "هذا سؤال ذو أهمية كبيرة.",
+      "nuanceAr": "كلاهما يصف أهمية السؤال؛ bedeutsam أميل إلى الرسمية ويؤكد أن للسؤال دلالة أو أثراً، بينما wichtig أعمّ وأشيع."
+    }
+  },
+  "richtig": {
+    "korrekt": {
+      "basisKollokation": "die richtige Antwort",
+      "alternativKollokation": "die korrekte Antwort",
+      "basisDe": "Das ist die richtige Antwort.",
+      "basisAr": "هذه هي الإجابة الصحيحة.",
+      "alternativDe": "Das ist die korrekte Antwort.",
+      "alternativAr": "هذه هي الإجابة الصحيحة.",
+      "nuanceAr": "في تصحيح إجابة يتقاربان جداً؛ korrekt أرسميّ وأكثر تحديداً لمعيار أو قاعدة، وrichtig أوسع استعمالاً."
+    }
+  },
+  "falsch": {
+    "inkorrekt": {
+      "basisKollokation": "eine falsche Angabe",
+      "alternativKollokation": "eine inkorrekte Angabe",
+      "basisDe": "Die Angabe auf dem Formular ist falsch.",
+      "basisAr": "البيان في الاستمارة غير صحيح.",
+      "alternativDe": "Die Angabe auf dem Formular ist inkorrekt.",
+      "alternativAr": "البيان في الاستمارة غير مطابق للصواب.",
+      "nuanceAr": "في تقييم معلومة أو بيان يتقاربان؛ falsch يومي وأوسع، أمّا inkorrekt فأرسميّ ويشيع عند الحكم على الدقة أو القواعد."
+    }
+  },
+  "leicht": {
+    "einfach": {
+      "basisKollokation": "eine leichte Aufgabe",
+      "alternativKollokation": "eine einfache Aufgabe",
+      "basisDe": "Das ist eine leichte Aufgabe.",
+      "basisAr": "هذه مهمة سهلة.",
+      "alternativDe": "Das ist eine einfache Aufgabe.",
+      "alternativAr": "هذه مهمة بسيطة.",
+      "nuanceAr": "في وصف صعوبة المهمة يتقاربان؛ leicht يركّز على قلة الجهد أو الصعوبة، وeinfach على بساطة الخطوات، وقد تعني leicht أيضاً خفيف الوزن."
+    }
+  },
+  "billig": {
+    "preiswert": {
+      "basisKollokation": "billige Schuhe",
+      "alternativKollokation": "preiswerte Schuhe",
+      "basisDe": "Diese Schuhe sind billig.",
+      "basisAr": "هذه الأحذية رخيصة.",
+      "alternativDe": "Diese Schuhe sind preiswert.",
+      "alternativAr": "سعر هذه الأحذية مناسب قياساً بقيمتها.",
+      "nuanceAr": "كلاهما يتصل بانخفاض السعر؛ billig قد يوحي أيضاً بجودة منخفضة، بينما preiswert يقدّم السعر غالباً على أنه مناسب لما يُنال مقابله."
+    }
+  },
+  "teuer": {
+    "kostspielig": {
+      "basisKollokation": "ein Hotel teuer finden",
+      "alternativKollokation": "ein Hotel kostspielig finden",
+      "basisDe": "Ich finde das Hotel für eine Nacht sehr teuer.",
+      "basisAr": "أجد الفندق باهظاً جداً لليلة واحدة.",
+      "alternativDe": "Ich finde das Hotel für eine Nacht sehr kostspielig.",
+      "alternativAr": "أجد كلفة الفندق مرتفعة جداً لليلة واحدة.",
+      "nuanceAr": "في وصف كلفة الإقامة يتقاربان؛ kostspielig أرسميّ ويركّز على عبء النفقات، أما teuer فأشيع وأوسع."
+    }
+  },
+  "glücklich": {
+    "froh": {
+      "basisKollokation": "glücklich über die Nachricht",
+      "alternativKollokation": "froh über die Nachricht",
+      "basisDe": "Ich bin glücklich über die Nachricht.",
+      "basisAr": "أنا سعيد بهذا الخبر.",
+      "alternativDe": "Ich bin froh über die Nachricht.",
+      "alternativAr": "أنا مسرور بهذا الخبر.",
+      "nuanceAr": "عند الاستجابة لخبر سار يتقاربان؛ glücklich قد يصف سعادة أعمق أو أطول، وfroh كثيراً ما يعبّر عن الارتياح أو السرور بسبب محدد."
+    }
+  },
+  "traurig": {
+    "betrübt": {
+      "basisKollokation": "traurig über den Abschied",
+      "alternativKollokation": "betrübt über den Abschied",
+      "basisDe": "Sie ist traurig über den Abschied.",
+      "basisAr": "هي حزينة بسبب الوداع.",
+      "alternativDe": "Sie ist betrübt über den Abschied.",
+      "alternativAr": "هي مغمومة بسبب الوداع.",
+      "nuanceAr": "في وصف الحزن على الوداع يتقاربان؛ traurig شائع ومحايد، أمّا betrübt فأفصح أو أدبيّ النبرة."
+    }
+  },
+  "müde": {
+    "schläfrig": {
+      "basisKollokation": "müde nach dem Sport",
+      "alternativKollokation": "schläfrig nach dem Sport",
+      "basisDe": "Nach dem Sport bin ich müde.",
+      "basisAr": "أشعر بالتعب بعد الرياضة.",
+      "alternativDe": "Nach dem Sport bin ich schläfrig.",
+      "alternativAr": "أشعر بالنعاس بعد الرياضة.",
+      "nuanceAr": "قد يتقاربان بعد مجهود إذا صاحبه نعاس؛ müde أوسع ويعني التعب، بينما schläfrig يحدد الميل إلى النوم."
+    }
+  },
+  "oft": {
+    "häufig": {
+      "basisKollokation": "oft spazieren gehen",
+      "alternativKollokation": "häufig spazieren gehen",
+      "basisDe": "Wir gehen oft im Park spazieren.",
+      "basisAr": "كثيراً ما نتمشّى في الحديقة.",
+      "alternativDe": "Wir gehen häufig im Park spazieren.",
+      "alternativAr": "كثيراً ما نتمشّى في الحديقة.",
+      "nuanceAr": "في وصف تكرار التنزّه يتقاربان؛ oft أشيع في الكلام اليومي، بينما häufig قد يبدو أرسميّ أو أدقّ قليلاً، ولا يتبادلان آلياً في كل تركيب."
+    }
+  },
+  "nie": {
+    "niemals": {
+      "basisKollokation": "nie zu spät kommen",
+      "alternativKollokation": "niemals zu spät kommen",
+      "basisDe": "Sie kommt nie zu spät zur Arbeit.",
+      "basisAr": "إنها لا تتأخر أبداً عن العمل.",
+      "alternativDe": "Sie kommt niemals zu spät zur Arbeit.",
+      "alternativAr": "إنها لا تتأخر مطلقاً عن العمل.",
+      "nuanceAr": "كلاهما ينفي حدوث الشيء في أي وقت؛ niemals قد يشدّد النفي أكثر، وnie هو الشكل اليومي الأقصر والأشيع."
+    }
+  },
+  "vielleicht": {
+    "möglicherweise": {
+      "basisKollokation": "vielleicht morgen kommen",
+      "alternativKollokation": "möglicherweise morgen kommen",
+      "basisDe": "Vielleicht kommt der Bus morgen früh.",
+      "basisAr": "ربما تأتي الحافلة صباح الغد.",
+      "alternativDe": "Möglicherweise kommt der Bus morgen früh.",
+      "alternativAr": "من المحتمل أن تأتي الحافلة صباح الغد.",
+      "nuanceAr": "كلاهما يقدّم الاحتمال لا اليقين؛ vielleicht أشيع ومحايد في الحديث، أمّا möglicherweise فأرسميّ أو أكثر تصريحاً بالاحتمال."
+    }
+  },
+  "wieder": {
+    "erneut": {
+      "basisKollokation": "ein Buch wieder lesen",
+      "alternativKollokation": "ein Buch erneut lesen",
+      "basisDe": "Ich lese dieses Buch wieder.",
+      "basisAr": "أقرأ هذا الكتاب من جديد.",
+      "alternativDe": "Ich lese dieses Buch erneut.",
+      "alternativAr": "أعيد قراءة هذا الكتاب.",
+      "nuanceAr": "في معنى التكرار يتقاربان؛ wieder أشيع ومرنّ، بينما erneut أرسميّ قليلاً ويبرز حدوث الفعل مرة أخرى."
+    }
+  },
+  "schon": {
+    "bereits": {
+      "basisKollokation": "schon angekommen",
+      "alternativKollokation": "bereits angekommen",
+      "basisDe": "Der Zug ist schon angekommen.",
+      "basisAr": "لقد وصل القطار بالفعل.",
+      "alternativDe": "Der Zug ist bereits angekommen.",
+      "alternativAr": "وصل القطار في وقت مبكر أو قبل المتوقع.",
+      "nuanceAr": "كلاهما يفيد أن الوصول حصل قبل الآن؛ bereits أرسميّ نسبياً وقد يبرز أن الحدث وقع قبل الموعد أو المتوقع، وschon أشيع في الكلام."
+    }
+  },
+  "jetzt": {
+    "nun": {
+      "basisKollokation": "jetzt anfangen",
+      "alternativKollokation": "nun anfangen",
+      "basisDe": "Wir fangen jetzt mit der Aufgabe an.",
+      "basisAr": "نبدأ المهمة الآن.",
+      "alternativDe": "Nun fangen wir mit der Aufgabe an.",
+      "alternativAr": "والآن نبدأ المهمة.",
+      "nuanceAr": "في هذا السياق كلاهما يحدّد وقت البدء؛ jetzt يومي ومباشر، بينما nun أميل إلى الرسمية أو السرد ويصلح للانتقال إلى خطوة جديدة."
+    }
+  },
+  "zusammen": {
+    "gemeinsam": {
+      "basisKollokation": "zusammen kochen",
+      "alternativKollokation": "gemeinsam kochen",
+      "basisDe": "Heute kochen wir zusammen.",
+      "basisAr": "نطبخ معاً اليوم.",
+      "alternativDe": "Heute kochen wir gemeinsam.",
+      "alternativAr": "نطبخ سوياً اليوم.",
+      "nuanceAr": "عند وصف الطبخ مع أشخاص آخرين يتقاربان؛ zusammen أشيع وقد يشير إلى الفعل في صحبة بعضنا، وgemeinsam يبرز المشاركة في نشاط واحد."
+    }
+  },
+  "freundlich": {
+    "nett": {
+      "basisKollokation": "freundlich zu Gästen sein",
+      "alternativKollokation": "nett zu Gästen sein",
+      "basisDe": "Die Verkäuferin ist freundlich zu den Gästen.",
+      "basisAr": "البائعة ودودة مع الضيوف.",
+      "alternativDe": "Die Verkäuferin ist nett zu den Gästen.",
+      "alternativAr": "البائعة لطيفة مع الضيوف.",
+      "nuanceAr": "في وصف التعامل مع الضيوف يتقاربان؛ freundlich يركّز على الودّ وحسن المعاملة، بينما nett أعمّ وانطباعيّ أكثر، وقد يعني لطيفاً أو محبّباً."
+    }
+  },
+  "schmutzig": {
+    "dreckig": {
+      "basisKollokation": "schmutzige Hände",
+      "alternativKollokation": "dreckige Hände",
+      "basisDe": "Nach der Gartenarbeit sind meine Hände schmutzig.",
+      "basisAr": "يداي متّسختان بعد العمل في الحديقة.",
+      "alternativDe": "Nach der Gartenarbeit sind meine Hände dreckig.",
+      "alternativAr": "يداي متّسختان بعد العمل في الحديقة.",
+      "nuanceAr": "كلاهما يصف عدم النظافة؛ schmutzig محايد وأشيع في السياقات العامة، أمّا dreckig فأكثر تداولاً وقد يبدو أقوى أو أشدّ عامية."
+    }
+  },
+  "die Wohnung": {
+    "das Appartement": {
+      "basisKollokation": "eine Wohnung mieten",
+      "alternativKollokation": "ein Appartement mieten",
+      "basisDe": "Wir mieten eine Wohnung in der Stadt.",
+      "basisAr": "نستأجر مسكناً في المدينة.",
+      "alternativDe": "Wir mieten ein Appartement in der Stadt.",
+      "alternativAr": "نستأجر شقّة من نوع أبارتمون في المدينة.",
+      "nuanceAr": "في سياق الاستئجار قد يتقاربان، لكن Wohnung اسم عام للمسكن، وAppartement يوحي غالباً بوحدة أصغر أو مؤثثة؛ كما يتغيّر المقال إلى ein بسبب جنس Appartement المحايد."
+    }
+  },
+  "denken": {
+    "glauben": {
+      "basisKollokation": "denken, dass der Bus kommt",
+      "alternativKollokation": "glauben, dass der Bus kommt",
+      "basisDe": "Ich denke, dass der Bus gleich kommt.",
+      "basisAr": "أظن أن الحافلة ستأتي بعد قليل.",
+      "alternativDe": "Ich glaube, dass der Bus gleich kommt.",
+      "alternativAr": "أعتقد أن الحافلة ستأتي بعد قليل.",
+      "nuanceAr": "عند التعبير عن توقع أو رأي غير محسوم يتقاربان؛ denken أوسع وقد يعني إعمال الفكر، بينما glauben يبرز الاعتقاد أو الترجيح، فلا يتبادلان في كل معنى."
+    }
+  },
+  "lieben": {
+    "liebhaben": {
+      "basisKollokation": "die Familie lieben",
+      "alternativKollokation": "die Familie liebhaben",
+      "basisDe": "Ich liebe meine Familie.",
+      "basisAr": "أحب عائلتي.",
+      "alternativDe": "Ich habe meine Familie lieb.",
+      "alternativAr": "أكنّ لعائلتي مودةً.",
+      "nuanceAr": "في التعبير عن المودة للعائلة يتقاربان؛ lieben أوسع وقد يدل على حب عميق، أمّا liebhaben فغالباً أحنّ وأقل رسمية، ولا يصلح بديلاً في كل استعمال."
+    }
+  },
+  "mögen": {
+    "gern haben": {
+      "basisKollokation": "Kinder mögen Schokolade",
+      "alternativKollokation": "Schokolade gern haben",
+      "basisDe": "Viele Kinder mögen Schokolade.",
+      "basisAr": "يحب كثير من الأطفال الشوكولاتة.",
+      "alternativDe": "Viele Kinder haben Schokolade gern.",
+      "alternativAr": "يستطيب كثير من الأطفال الشوكولاتة.",
+      "nuanceAr": "في معنى الاستحسان يتقاربان؛ mögen أشيع ومحايد، وgern haben يعبّر عن المودة أو الاستحسان بنبرة شخصية أكثر، ويشيع خصوصاً مع الأشخاص."
+    }
+  },
+  "hassen": {
+    "verabscheuen": {
+      "basisKollokation": "Gewalt hassen",
+      "alternativKollokation": "Gewalt verabscheuen",
+      "basisDe": "Sie hasst Gewalt.",
+      "basisAr": "هي تكره العنف.",
+      "alternativDe": "Sie verabscheut Gewalt.",
+      "alternativAr": "هي تمقت العنف.",
+      "nuanceAr": "كلاهما يعبّر عن نفور شديد من العنف؛ verabscheuen أفصح وأقوى نبرةً، بينما hassen أشيع في الحديث ولا يتبادلان في كل تركيب."
+    }
+  },
+  "die Universität": {
+    "die Hochschule": {
+      "basisKollokation": "an der Universität studieren",
+      "alternativKollokation": "an der Hochschule studieren",
+      "basisDe": "Sie studiert an der Universität.",
+      "basisAr": "هي تدرس في الجامعة.",
+      "alternativDe": "Sie studiert an der Hochschule.",
+      "alternativAr": "هي تدرس في مؤسسة للتعليم العالي.",
+      "nuanceAr": "في سياق الدراسة يتقاربان، لكن Hochschule أوسع وقد تشمل أنواعاً مختلفة من مؤسسات التعليم العالي، بينما Universität نوع محدد منها؛ لذلك لا يُستبدل أحدهما بالآخر دائماً."
+    }
+  },
+  "das Gehalt": {
+    "der Lohn": {
+      "basisKollokation": "ein gutes Gehalt",
+      "alternativKollokation": "einen guten Lohn bekommen",
+      "basisDe": "Die Angestellte bekommt ein gutes Gehalt.",
+      "basisAr": "تتقاضى الموظفة راتباً جيداً.",
+      "alternativDe": "Die Angestellte bekommt einen guten Lohn.",
+      "alternativAr": "تتقاضى الموظفة أجراً جيداً.",
+      "nuanceAr": "كلاهما مقابل مالي للعمل؛ Gehalt يوحي غالباً براتب دوري ثابت، وLohn قد يرتبط بالأجر بالساعة أو بالمهمة، ويختلف الاستعمال باختلاف الوظيفة والسياق."
+    }
+  },
+  "schön": {
+    "hübsch": {
+      "basisKollokation": "schön aussehen",
+      "alternativKollokation": "hübsch aussehen",
+      "basisDe": "Das Kleid sieht schön aus.",
+      "basisAr": "يبدو الفستان جميلاً.",
+      "alternativDe": "Das Kleid sieht hübsch aus.",
+      "alternativAr": "يبدو الفستان أنيقاً وجميلاً.",
+      "nuanceAr": "عند وصف مظهر الفستان يتقاربان؛ schön أوسع وقد يصف الجمال عموماً، أمّا hübsch فيركّز غالباً على المظهر اللطيف أو الجذاب."
+    }
+  },
+  "modisch": {
+    "modern": {
+      "basisKollokation": "ein modischer Mantel",
+      "alternativKollokation": "ein moderner Mantel",
+      "basisDe": "Sie trägt einen modischen Mantel.",
+      "basisAr": "ترتدي معطفاً مواكباً للموضة.",
+      "alternativDe": "Sie trägt einen modernen Mantel.",
+      "alternativAr": "ترتدي معطفاً ذا تصميم عصري.",
+      "nuanceAr": "في وصف المعطف قد يتقاربان؛ modisch يركّز على مواكبة الموضة، بينما modern يصف التصميم أو الطابع العصري، فلا يلزم أن يكون كل حديثٍ مواكباً للموضة."
+    }
+  },
+  "sauber": {
+    "rein": {
+      "basisKollokation": "sauberes Wasser",
+      "alternativKollokation": "reines Wasser",
+      "basisDe": "Wir brauchen sauberes Wasser.",
+      "basisAr": "نحتاج إلى ماء نظيف.",
+      "alternativDe": "Wir brauchen reines Wasser.",
+      "alternativAr": "نحتاج إلى ماء نقي.",
+      "nuanceAr": "في وصف الماء يتقاربان؛ sauber ينفي الاتساخ، بينما rein يركّز أكثر على الخلو من الشوائب، ولذلك لا يتبادلان في كل وصف للنظافة."
+    }
+  },
+  "immer": {
+    "stets": {
+      "basisKollokation": "immer verfügbar",
+      "alternativKollokation": "stets verfügbar",
+      "basisDe": "Die Hilfe ist immer verfügbar.",
+      "basisAr": "المساعدة متاحة دائماً.",
+      "alternativDe": "Die Hilfe ist stets verfügbar.",
+      "alternativAr": "المساعدة متاحة على الدوام.",
+      "nuanceAr": "في معنى الاستمرار يتقاربان؛ immer أشيع في الكلام اليومي، أمّا stets فأكثر رسمية أو كتابية، ولا يحمل دائماً النبرة نفسها."
+    }
+  },
+  "altmodisch": {
+    "veraltet": {
+      "basisKollokation": "altmodisch aussehen",
+      "alternativKollokation": "veraltet aussehen",
+      "basisDe": "Das Handy sieht altmodisch aus.",
+      "basisAr": "يبدو الهاتف قديماً في طرازه.",
+      "alternativDe": "Das Handy sieht veraltet aus.",
+      "alternativAr": "يبدو الهاتف متقادماً.",
+      "nuanceAr": "عند وصف جهاز أو تقنيته قد يتقاربان؛ altmodisch يركّز على مظهر قديم الطراز، وveraltet على التقادم وعدم مواكبة الحاضر، لذلك لا يتبادلان في كل وصف للقديم."
+    }
+  },
+  "der Urlaub": {
+    "die Ferien": {
+      "basisKollokation": "in den Urlaub fahren",
+      "alternativKollokation": "in die Ferien fahren",
+      "basisDe": "Die Familie fährt im Sommer in den Urlaub.",
+      "basisAr": "تسافر الأسرة في الصيف لقضاء إجازتها.",
+      "alternativDe": "Die Familie fährt im Sommer in die Ferien.",
+      "alternativAr": "تسافر الأسرة في الصيف لقضاء العطلة.",
+      "nuanceAr": "في سياق السفر قد يتقاربان؛ Urlaub يركّز على إجازة الشخص أو الرحلة، وFerien اسم جمع لفترة عطلة، ولا سيما المدرسية أو الجامعية؛ لذلك لا يحل أحدهما محل الآخر في كل استعمال."
+    }
+  },
+  "die Rente": {
+    "die Pension": {
+      "basisKollokation": "in Rente gehen",
+      "alternativKollokation": "in Pension gehen",
+      "basisDe": "Die Angestellte geht nach vielen Arbeitsjahren in Rente.",
+      "basisAr": "تتقاعد الموظفة بعد سنوات طويلة من العمل.",
+      "alternativDe": "Die Beamtin geht nach vielen Dienstjahren in Pension.",
+      "alternativAr": "تتقاعد الموظفة الحكومية بعد سنوات طويلة من الخدمة.",
+      "nuanceAr": "في حديث التقاعد بألمانيا، Rente شائعة لمعاش التأمين القانوني للعاملين، وPension لمعاش موظفي الدولة؛ وفي النمسا قد تُستعمل Pension أوسع. يلتقيان في موضوع دخل التقاعد، لا بوصفهما بديلين مطلقين."
+    }
+  },
+  "froh": {
+    "glücklich": {
+      "basisKollokation": "froh über die Nachricht",
+      "alternativKollokation": "glücklich über die Nachricht",
+      "basisDe": "Sie ist froh über die Nachricht.",
+      "basisAr": "هي مسرورة بالخبر.",
+      "alternativDe": "Sie ist glücklich über die Nachricht.",
+      "alternativAr": "هي سعيدة بالخبر.",
+      "nuanceAr": "عند التعبير عن رد فعل إيجابي تجاه خبر يتقاربان؛ froh قد يبرز الارتياح، بينما glücklich أوسع وغالباً أقوى، فلا يتبادلان في كل معنى للسعادة."
+    }
+  },
+  "gewinnen": {
+    "siegen": {
+      "basisKollokation": "ein Spiel gewinnen",
+      "alternativKollokation": "im Spiel siegen",
+      "basisDe": "Unsere Mannschaft gewinnt das Spiel.",
+      "basisAr": "يفوز فريقنا بالمباراة.",
+      "alternativDe": "Unsere Mannschaft siegt im Spiel.",
+      "alternativAr": "ينتصر فريقنا في المباراة.",
+      "nuanceAr": "في سياق المنافسة يتقاربان؛ gewinnen يأخذ غالباً مفعولاً به لما يُفاز به، أما siegen فيصف إحراز النصر ولا يأخذ ذلك المفعول مباشرةً؛ فلا يُستبدل الفعلان مع بقاء التركيب نفسه."
+    }
+  },
+  "glauben": {
+    "meinen": {
+      "basisKollokation": "glauben, dass der Bus kommt",
+      "alternativKollokation": "meinen, dass der Bus kommt",
+      "basisDe": "Ich glaube, dass der Bus gleich kommt.",
+      "basisAr": "أعتقد أن الحافلة ستأتي بعد قليل.",
+      "alternativDe": "Ich meine, dass der Bus gleich kommt.",
+      "alternativAr": "أرى أن الحافلة ستأتي بعد قليل.",
+      "nuanceAr": "عند إبداء تقدير بشأن واقعة محتملة قد يتقاربان؛ meinen يقدّم الرأي أو التقدير، وglauben قد يدل أيضاً على الاعتقاد أو الثقة، فلا يتبادلان في كل معنى."
+    }
+  },
+  "kräftig": {
+    "muskulös": {
+      "basisKollokation": "kräftig gebaut",
+      "alternativKollokation": "muskulös gebaut",
+      "basisDe": "Der Mann ist kräftig gebaut.",
+      "basisAr": "بنية الرجل قوية.",
+      "alternativDe": "Der Mann ist muskulös gebaut.",
+      "alternativAr": "بنية الرجل عضلية.",
+      "nuanceAr": "في وصف بنية الجسم يتقاربان؛ kräftig أوسع وقد يدل على القوة أو المتانة، بينما muskulös يحدّد بروز العضلات؛ فلا يصفان بالطريقة نفسها كل جسم قوي."
+    }
+  },
+  "nett": {
+    "freundlich": {
+      "basisKollokation": "nett zu Kindern",
+      "alternativKollokation": "freundlich zu Kindern",
+      "basisDe": "Die Lehrerin ist nett zu den Kindern.",
+      "basisAr": "المعلمة لطيفة مع الأطفال.",
+      "alternativDe": "Die Lehrerin ist freundlich zu den Kindern.",
+      "alternativAr": "المعلمة ودودة مع الأطفال.",
+      "nuanceAr": "في وصف التعامل مع الأطفال يتقاربان؛ nett أعمّ وأقرب إلى «لطيف» في الحكم على الشخص، بينما freundlich يصف الود أو حسن المعاملة الظاهر، ولا يتبادلان في كل تركيب."
+    }
+  },
+  "weit": {
+    "entfernt": {
+      "basisKollokation": "weit weg vom Bahnhof",
+      "alternativKollokation": "weit vom Bahnhof entfernt",
+      "basisDe": "Das Dorf liegt weit weg vom Bahnhof.",
+      "basisAr": "تقع القرية بعيداً عن محطة القطار.",
+      "alternativDe": "Das Dorf liegt weit vom Bahnhof entfernt.",
+      "alternativAr": "تقع القرية على مسافة بعيدة من محطة القطار.",
+      "nuanceAr": "في وصف المسافة المكانية يتقاربان؛ entfernt يحدّد البعد عن نقطة، أما weit فأوسع وقد يصف الامتداد أو النطاق، فلا يكونان بديلين في كل استعمال."
+    }
+  },
+  "zufrieden": {
+    "befriedigt": {
+      "basisKollokation": "mit dem Ergebnis zufrieden",
+      "alternativKollokation": "von dem Ergebnis sehr befriedigt",
+      "basisDe": "Die Kundin ist mit dem Ergebnis zufrieden.",
+      "basisAr": "الزبونة راضية عن النتيجة.",
+      "alternativDe": "Die Kundin zeigt sich von dem Ergebnis sehr befriedigt.",
+      "alternativAr": "تُظهر الزبونة رضاها الكبير عن النتيجة.",
+      "nuanceAr": "في تقييم رسمي لنتيجة محددة قد يتقاربان؛ zufrieden أعمّ في وصف الرضا، بينما befriedigt يوحي بأن مطلباً أو توقعاً قد لُبّي، وهو أخصّ وقد يحمل مع الأشخاص إيحاءً آخر؛ فلا يُستبدل به عموماً."
+    }
+  }
+}

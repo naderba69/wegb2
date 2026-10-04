@@ -80,8 +80,8 @@
   {
     "id": "d-a1-02",
     "level": "A1",
-    "titleDe": "Im Café",
-    "titleAr": "في المقهى",
+    "titleDe": "Im Café: Kaffee und Kuchen",
+    "titleAr": "في المقهى: قهوة وكعك",
     "lines": [
       {
         "who": "Kellner",
@@ -138,9 +138,7 @@
         "type": "fill",
         "promptDe": "Zusammen ___ Euro fünfzig.",
         "answer": [
-          "fünf",
-          "funf",
-          "5"
+          "fünf"
         ],
         "explanationAr": "5,50 يورو.",
         "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
@@ -160,7 +158,7 @@
     "lines": [
       {
         "who": "Nour",
-        "de": "Hallo, spricht Nour. Kann ich mit Herrn Klein sprechen?",
+        "de": "Hallo, hier spricht Nour. Kann ich mit Herrn Klein sprechen?",
         "ar": "مرحباً، نور معكم. هل أتحدث مع هير كلاين؟"
       },
       {
@@ -171,7 +169,7 @@
       {
         "who": "Nour",
         "de": "Guten Tag. Ich möchte einen Termin vereinbaren.",
-        "ar": "طاب يومكم. أريد اتخاذ موعد."
+        "ar": "مرحباً. أودّ تحديد موعد."
       },
       {
         "who": "Klein",
@@ -185,8 +183,8 @@
       },
       {
         "who": "Klein",
-        "de": "Am Dienstag bin ich frei. Bis Dienstag!",
-        "ar": "يوم الثلاثاء أنا حرّ. إلى الثلاثاء!"
+        "de": "Ja, am Dienstag um zehn Uhr habe ich Zeit. Bis Dienstag!",
+        "ar": "نعم، لديّ وقت يوم الثلاثاء في العاشرة. إلى اللقاء يوم الثلاثاء!"
       }
     ],
     "questions": [
@@ -200,7 +198,7 @@
           "am Dienstag um zehn Uhr"
         ],
         "answer": "am Dienstag um zehn Uhr",
-        "explanationAr": "الدليل: «Am Dienstag um zehn Uhr?» … «Am Dienstag bin ich frei». الفخّ 1: Dienstag/Donnerstag تشابه صوتي. الفخّ 2: zehn/zwölf تشابه صوتي.",
+        "explanationAr": "الدليل الصريح: «Am Dienstag um zehn Uhr?» … «Ja, am Dienstag um zehn Uhr habe ich Zeit». يثبت الجواب الآن اليوم والساعة بلا استنتاج من ردٍّ لا يذكر الساعة صراحةً. الفخّ 1: Dienstag/Donnerstag تشابه صوتي. الفخّ 2: zehn/zwölf تشابه صوتي.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
@@ -210,7 +208,7 @@
         "answer": [
           "Termin"
         ],
-        "explanationAr": "einen Termin vereinbaren = اتخاذ موعد.",
+        "explanationAr": "في هذا السياق: einen Termin vereinbaren = تحديد موعد.",
         "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
       }
     ],
@@ -1862,8 +1860,8 @@
   {
     "id": "d-a1-08",
     "level": "A1",
-    "titleDe": "Im Café",
-    "titleAr": "في المقهى",
+    "titleDe": "Im Café: Nur einen Apfel",
+    "titleAr": "في المقهى: تفاحة فقط",
     "lines": [
       {
         "who": "Kellner",
@@ -10384,7 +10382,7 @@
     "dictation": [
       "Wie viel ist eins plus zwei?",
       "Eins plus zwei ist drei.",
-      "Eins plus zwei ist drei."
+      "Danke!"
     ]
   },
   {
@@ -10401,7 +10399,7 @@
       {
         "sp": "B",
         "de": "A – L – I. Ali.",
-        "ar": "أ – إل – إي. علي."
+        "ar": "A – L – I. علي."
       },
       {
         "sp": "A",
@@ -10454,7 +10452,7 @@
     "dictation": [
       "Buchstabiere bitte deinen Namen!",
       "A – L – I. Ali.",
-      "A – L – I. Ali."
+      "Danke!"
     ]
   }
 ]
