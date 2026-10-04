@@ -106,7 +106,7 @@ export function FehlerLabor({ progress }: { progress: Progress }) {
               <button
                 key={t.id}
                 className="chip"
-                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "white", color: tab === t.id ? "white" : undefined }}
+                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === t.id ? "var(--ui-on-accent)" : undefined }}
                 onClick={() => setTab(t.id)}
                 title={t.unter}
               >
@@ -194,7 +194,7 @@ export function FehlerLabor({ progress }: { progress: Progress }) {
                             padding: "0.25rem 0.4rem",
                             textAlign: "center",
                             background: v ? `rgba(53, 94, 59, ${0.15 + 0.75 * (v / waerme.max)})` : "transparent",
-                            color: v && v / waerme.max > 0.55 ? "white" : undefined,
+                            color: v && v / waerme.max > 0.55 ? "var(--ui-on-accent)" : undefined,
                             borderRadius: 6,
                           }}
                         >

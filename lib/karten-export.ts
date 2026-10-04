@@ -1,11 +1,13 @@
 import { vocabMap } from "@/lib/content";
+import { synonymKontexteFuer } from "@/lib/synonyme";
+import type { VocabCard } from "@/lib/types";
 
 export type ExportKarte = {
   vorne: string;      // الوجه: الألمانيةُ بأداتِها
   farbe: string;      // مرساةُ اللون: BLAU/ROT/GRÜN
   hinten: string;     // الظهر: عربية (وفرنسيةٌ إن وُجِدَت)
   chunk: string;      // الكتلةُ السياقية
-  synonyme: string;   // مرادفات/أضداد
+  synonyme: string;   // المرادف إذا توفر سياق موثّق
   aussprache: string; // تلميحُ النطق
 };
 
@@ -25,7 +27,9 @@ export function exportKarten(deckId: string): ExportKarte[] {
       farbe: farbe ? `${farbe} — ${FARBE_AR[farbe] ?? ""}`.trim() : "—",
       hinten: fr ? `${ar} | ${fr}` : ar,
       chunk: c.exampleDe ? `${String(c.exampleDe)} — ${String(c.exampleAr ?? "")}` : "—",
-      synonyme: c.synonyme ? String(c.synonyme) : "—",
+      synonyme: synonymKontexteFuer(c as unknown as VocabCard)
+        .map(({ synonym, kontext }) => `${synonym} — ${kontext.basisKollokation} ↔ ${kontext.alternativKollokation} (${kontext.nuanceAr})`)
+        .join(" | ") || "—",
       aussprache: c.aussprache ? String(c.aussprache) : "—",
     };
   });
@@ -35,7 +39,7 @@ const esc = (s: string) => s.replace(/;/g, ",").replace(/[\r\n]+/g, " ").trim();
 
 /** CSV بفاصلةٍ منقوطة: يُلصَقُ مباشرةً في Google Sheets أو Anki. */
 export function karteninCsv(deckId: string): string {
-  const kopf = "Vorderseite;Farbanker;Rückseite;Chunk;Synonyme;Aussprache";
+  const kopf = "Vorderseite;Farbanker;Rückseite;Chunk;Kontextuelle Synonyme;Aussprache";
   const zeilen = exportKarten(deckId).map((k) =>
     [k.vorne, k.farbe, k.hinten, k.chunk, k.synonyme, k.aussprache].map(esc).join(";")
   );
@@ -44,7 +48,7 @@ export function karteninCsv(deckId: string): string {
 
 /** كلُّ الحزمِ في ملفٍّ واحد — مع عمودِ الحزمةِ والمستوى. */
 export function allesInCsv(): string {
-  const kopf = "Deck;Niveau;Vorderseite;Farbanker;Rückseite;Chunk;Synonyme;Aussprache";
+  const kopf = "Deck;Niveau;Vorderseite;Farbanker;Rückseite;Chunk;Kontextuelle Synonyme;Aussprache";
   const zeilen: string[] = [];
   for (const [id, deck] of Object.entries(vocabMap as unknown as Record<string, { level: string; cards: unknown[] }>)) {
     for (const k of exportKarten(id)) {

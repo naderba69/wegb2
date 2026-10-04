@@ -41,7 +41,7 @@ export type ModulStand = {
   teile?: Record<PruefTeil, number>;
 };
 
-/** رقمُ الوحدةِ المطلَق 1..16 (لأنَّ nr يتكرَّرُ 1..4 في كلِّ مستوى). */
+/** رقمُ الوحدةِ المطلَق (لأنَّ nr يتكرَّرُ في كلِّ مستوى) — الحدود من MODULE لا أرقام مزروعة. */
 export const modulIndex = (m: Modul) => MODULE.findIndex((x) => x.level === m.level && x.nr === m.nr) + 1;
 export const modulNachIndex = (i: number) => MODULE[i - 1];
 

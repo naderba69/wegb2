@@ -73,7 +73,7 @@ export default function AusspracheTrainer({ satz, ar, level = "A1" }: { satz: st
       )}
 
       {analyse && urteil && (
-        <div className="card" data-test="aussprache-ergebnis" style={{ padding: "0.7rem 0.9rem", background: urteil.band === "mit_muehe" ? "#fef3c7" : "#dcfce7" }}>
+        <div className="card" data-test="aussprache-ergebnis" style={{ padding: "0.7rem 0.9rem", background: urteil.band === "mit_muehe" ? "var(--ui-gold-soft)" : "var(--ui-green-soft)", borderColor: urteil.band === "mit_muehe" ? "var(--ui-gold)" : "var(--ui-green)" }}>
           <div style={{ fontWeight: 900 }}>{urteil.bandAr} — {urteil.punkte}/100</div>
           <div style={{ fontSize: "0.85rem", marginTop: "0.2rem" }}>
             مدّتك {analyse.dauerS}s مقابل {ziel}s · مقاطع {analyse.silben}/{silbenImText(satz)} · وقفات {analyse.pausen} · نسبة الكلام {Math.round(analyse.sprechAnteil * 100)}٪

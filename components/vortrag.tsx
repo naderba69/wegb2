@@ -165,7 +165,7 @@ export function VortragsBühne({ progress }: { progress: Progress }) {
                   <span style={{ fontSize: ".79rem" }}>{s.ar} <span className="de" dir="ltr" style={{ color: "var(--color-ink2)", fontSize: ".7rem" }}>— {s.de}</span></span>
                   <span style={{ display: "flex", gap: ".25rem" }}>
                     {[0, 1, 2].map((v) => (
-                      <button key={v} className="chip" style={{ cursor: "pointer", background: noten[i] === v ? "var(--color-cola)" : "white", color: noten[i] === v ? "white" : undefined, minWidth: 44 }} onClick={() => setNoten((n) => n.map((x, j) => (j === i ? v : x)))}>{v}</button>
+                      <button key={v} className="chip" style={{ cursor: "pointer", background: noten[i] === v ? "var(--color-cola)" : "var(--ui-surface-raised)", color: noten[i] === v ? "var(--ui-on-accent)" : undefined, minWidth: 44 }} onClick={() => setNoten((n) => n.map((x, j) => (j === i ? v : x)))}>{v}</button>
                     ))}
                   </span>
                 </div>

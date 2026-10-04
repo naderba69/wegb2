@@ -357,7 +357,7 @@ function WochenTest({ level, woche, onFertig }: { level: Level; woche: number; o
                   <button
                     key={o}
                     className="chip"
-                    style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "white", color: richtig || gewaehlt ? "white" : undefined }}
+                    style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "var(--ui-surface-raised)", color: richtig || gewaehlt ? "var(--ui-on-accent)" : undefined }}
                     disabled={done}
                     onClick={() => setAntworten((a) => ({ ...a, [q.ex.id]: o }))}
                   >
@@ -531,7 +531,7 @@ function MonatsMock({ level, tag }: { level: Level; tag: number }) {
                         <button
                           key={o}
                           className="chip"
-                          style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "white", color: richtig || gewaehlt ? "white" : undefined }}
+                          style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "var(--ui-surface-raised)", color: richtig || gewaehlt ? "var(--ui-on-accent)" : undefined }}
                           disabled={done}
                           onClick={() => setAntworten((a) => ({ ...a, [q.ex.id]: o }))}
                         >
@@ -621,7 +621,7 @@ export function PruefungsZentrum({ progress }: { progress: Progress }) {
               <button
                 key={t.id}
                 className="chip"
-                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "white", color: tab === t.id ? "white" : undefined }}
+                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === t.id ? "var(--ui-on-accent)" : undefined }}
                 onClick={() => setTab(t.id)}
                 title={t.unter}
               >

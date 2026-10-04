@@ -179,7 +179,7 @@ function LektionsGenerator({ progress }: { progress: Progress }) {
                 const gewaehlt = antworten[q.ex.id] === o;
                 const richtig = done && gradeItem(q.ex, o);
                 return (
-                  <button key={o} className="chip" style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "white", color: richtig || gewaehlt ? "white" : undefined }} disabled={done} onClick={() => setAntworten((a) => ({ ...a, [q.ex.id]: o }))}>
+                  <button key={o} className="chip" style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "var(--ui-surface-raised)", color: richtig || gewaehlt ? "var(--ui-on-accent)" : undefined }} disabled={done} onClick={() => setAntworten((a) => ({ ...a, [q.ex.id]: o }))}>
                     {o}
                   </button>
                 );
@@ -362,7 +362,7 @@ export function LektionsZentrum({ progress }: { progress: Progress }) {
         <>
           <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
             {TABS.map((t) => (
-              <button key={t.id} className="chip" style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "white", color: tab === t.id ? "white" : undefined }} onClick={() => setTab(t.id)} title={t.unter}>
+              <button key={t.id} className="chip" style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === t.id ? "var(--ui-on-accent)" : undefined }} onClick={() => setTab(t.id)} title={t.unter}>
                 {t.emoji} {t.name}
               </button>
             ))}
@@ -373,7 +373,7 @@ export function LektionsZentrum({ progress }: { progress: Progress }) {
             <>
               <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
                 {pakete.map((x) => (
-                  <button key={x.id} className="chip" style={{ cursor: "pointer", background: pid === x.id ? "var(--color-gold)" : "white", color: pid === x.id ? "white" : undefined }} onClick={() => setPid(x.id)}>
+                  <button key={x.id} className="chip" style={{ cursor: "pointer", background: pid === x.id ? "var(--color-gold)" : "var(--ui-surface-raised)", color: pid === x.id ? "var(--ui-on-accent)" : undefined }} onClick={() => setPid(x.id)}>
                     {x.emoji} {x.nameAr}
                   </button>
                 ))}

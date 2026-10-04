@@ -64,6 +64,32 @@ export function newCardCap(tempo: Tempo): number {
   return NEW_CARDS_PER_DAY[tempo];
 }
 
+/** هل أُدخلت البطاقة في اليوم المحلي نفسه؟ */
+export function wasIntroducedToday(state: SrsState | undefined, now = new Date()): boolean {
+  if (!state?.introduced) return false;
+  const date = new Date(state.introduced);
+  return Number.isFinite(date.getTime())
+    && date.getFullYear() === now.getFullYear()
+    && date.getMonth() === now.getMonth()
+    && date.getDate() === now.getDate();
+}
+
+/** عدد بطاقات المفردات التي أُدخلت اليوم عبر جميع الحزم (وفق اليوم المحلي). */
+export function countNewCardsIntroducedToday(
+  srs: Record<string, SrsState>,
+  cardIds: Iterable<string>,
+  now = new Date(),
+): number {
+  const seen = new Set<string>();
+  let count = 0;
+  for (const id of cardIds) {
+    if (seen.has(id)) continue;
+    seen.add(id);
+    if (wasIntroducedToday(srs[id], now)) count++;
+  }
+  return count;
+}
+
 /**
  * اختيار دفعة اليوم من SRS:
  *  1. بطاقات المراجعة المستحقة (≤150 بطاقة).
