@@ -658,5 +658,115 @@
       "alternativAr": "المساعدة متاحة على الدوام.",
       "nuanceAr": "في معنى الاستمرار يتقاربان؛ immer أشيع في الكلام اليومي، أمّا stets فأكثر رسمية أو كتابية، ولا يحمل دائماً النبرة نفسها."
     }
+  },
+  "altmodisch": {
+    "veraltet": {
+      "basisKollokation": "altmodisch aussehen",
+      "alternativKollokation": "veraltet aussehen",
+      "basisDe": "Das Handy sieht altmodisch aus.",
+      "basisAr": "يبدو الهاتف قديماً في طرازه.",
+      "alternativDe": "Das Handy sieht veraltet aus.",
+      "alternativAr": "يبدو الهاتف متقادماً.",
+      "nuanceAr": "عند وصف جهاز أو تقنيته قد يتقاربان؛ altmodisch يركّز على مظهر قديم الطراز، وveraltet على التقادم وعدم مواكبة الحاضر، لذلك لا يتبادلان في كل وصف للقديم."
+    }
+  },
+  "der Urlaub": {
+    "die Ferien": {
+      "basisKollokation": "in den Urlaub fahren",
+      "alternativKollokation": "in die Ferien fahren",
+      "basisDe": "Die Familie fährt im Sommer in den Urlaub.",
+      "basisAr": "تسافر الأسرة في الصيف لقضاء إجازتها.",
+      "alternativDe": "Die Familie fährt im Sommer in die Ferien.",
+      "alternativAr": "تسافر الأسرة في الصيف لقضاء العطلة.",
+      "nuanceAr": "في سياق السفر قد يتقاربان؛ Urlaub يركّز على إجازة الشخص أو الرحلة، وFerien اسم جمع لفترة عطلة، ولا سيما المدرسية أو الجامعية؛ لذلك لا يحل أحدهما محل الآخر في كل استعمال."
+    }
+  },
+  "die Rente": {
+    "die Pension": {
+      "basisKollokation": "in Rente gehen",
+      "alternativKollokation": "in Pension gehen",
+      "basisDe": "Die Angestellte geht nach vielen Arbeitsjahren in Rente.",
+      "basisAr": "تتقاعد الموظفة بعد سنوات طويلة من العمل.",
+      "alternativDe": "Die Beamtin geht nach vielen Dienstjahren in Pension.",
+      "alternativAr": "تتقاعد الموظفة الحكومية بعد سنوات طويلة من الخدمة.",
+      "nuanceAr": "في حديث التقاعد بألمانيا، Rente شائعة لمعاش التأمين القانوني للعاملين، وPension لمعاش موظفي الدولة؛ وفي النمسا قد تُستعمل Pension أوسع. يلتقيان في موضوع دخل التقاعد، لا بوصفهما بديلين مطلقين."
+    }
+  },
+  "froh": {
+    "glücklich": {
+      "basisKollokation": "froh über die Nachricht",
+      "alternativKollokation": "glücklich über die Nachricht",
+      "basisDe": "Sie ist froh über die Nachricht.",
+      "basisAr": "هي مسرورة بالخبر.",
+      "alternativDe": "Sie ist glücklich über die Nachricht.",
+      "alternativAr": "هي سعيدة بالخبر.",
+      "nuanceAr": "عند التعبير عن رد فعل إيجابي تجاه خبر يتقاربان؛ froh قد يبرز الارتياح، بينما glücklich أوسع وغالباً أقوى، فلا يتبادلان في كل معنى للسعادة."
+    }
+  },
+  "gewinnen": {
+    "siegen": {
+      "basisKollokation": "ein Spiel gewinnen",
+      "alternativKollokation": "im Spiel siegen",
+      "basisDe": "Unsere Mannschaft gewinnt das Spiel.",
+      "basisAr": "يفوز فريقنا بالمباراة.",
+      "alternativDe": "Unsere Mannschaft siegt im Spiel.",
+      "alternativAr": "ينتصر فريقنا في المباراة.",
+      "nuanceAr": "في سياق المنافسة يتقاربان؛ gewinnen يأخذ غالباً مفعولاً به لما يُفاز به، أما siegen فيصف إحراز النصر ولا يأخذ ذلك المفعول مباشرةً؛ فلا يُستبدل الفعلان مع بقاء التركيب نفسه."
+    }
+  },
+  "glauben": {
+    "meinen": {
+      "basisKollokation": "glauben, dass der Bus kommt",
+      "alternativKollokation": "meinen, dass der Bus kommt",
+      "basisDe": "Ich glaube, dass der Bus gleich kommt.",
+      "basisAr": "أعتقد أن الحافلة ستأتي بعد قليل.",
+      "alternativDe": "Ich meine, dass der Bus gleich kommt.",
+      "alternativAr": "أرى أن الحافلة ستأتي بعد قليل.",
+      "nuanceAr": "عند إبداء تقدير بشأن واقعة محتملة قد يتقاربان؛ meinen يقدّم الرأي أو التقدير، وglauben قد يدل أيضاً على الاعتقاد أو الثقة، فلا يتبادلان في كل معنى."
+    }
+  },
+  "kräftig": {
+    "muskulös": {
+      "basisKollokation": "kräftig gebaut",
+      "alternativKollokation": "muskulös gebaut",
+      "basisDe": "Der Mann ist kräftig gebaut.",
+      "basisAr": "بنية الرجل قوية.",
+      "alternativDe": "Der Mann ist muskulös gebaut.",
+      "alternativAr": "بنية الرجل عضلية.",
+      "nuanceAr": "في وصف بنية الجسم يتقاربان؛ kräftig أوسع وقد يدل على القوة أو المتانة، بينما muskulös يحدّد بروز العضلات؛ فلا يصفان بالطريقة نفسها كل جسم قوي."
+    }
+  },
+  "nett": {
+    "freundlich": {
+      "basisKollokation": "nett zu Kindern",
+      "alternativKollokation": "freundlich zu Kindern",
+      "basisDe": "Die Lehrerin ist nett zu den Kindern.",
+      "basisAr": "المعلمة لطيفة مع الأطفال.",
+      "alternativDe": "Die Lehrerin ist freundlich zu den Kindern.",
+      "alternativAr": "المعلمة ودودة مع الأطفال.",
+      "nuanceAr": "في وصف التعامل مع الأطفال يتقاربان؛ nett أعمّ وأقرب إلى «لطيف» في الحكم على الشخص، بينما freundlich يصف الود أو حسن المعاملة الظاهر، ولا يتبادلان في كل تركيب."
+    }
+  },
+  "weit": {
+    "entfernt": {
+      "basisKollokation": "weit weg vom Bahnhof",
+      "alternativKollokation": "weit vom Bahnhof entfernt",
+      "basisDe": "Das Dorf liegt weit weg vom Bahnhof.",
+      "basisAr": "تقع القرية بعيداً عن محطة القطار.",
+      "alternativDe": "Das Dorf liegt weit vom Bahnhof entfernt.",
+      "alternativAr": "تقع القرية على مسافة بعيدة من محطة القطار.",
+      "nuanceAr": "في وصف المسافة المكانية يتقاربان؛ entfernt يحدّد البعد عن نقطة، أما weit فأوسع وقد يصف الامتداد أو النطاق، فلا يكونان بديلين في كل استعمال."
+    }
+  },
+  "zufrieden": {
+    "befriedigt": {
+      "basisKollokation": "mit dem Ergebnis zufrieden",
+      "alternativKollokation": "von dem Ergebnis sehr befriedigt",
+      "basisDe": "Die Kundin ist mit dem Ergebnis zufrieden.",
+      "basisAr": "الزبونة راضية عن النتيجة.",
+      "alternativDe": "Die Kundin zeigt sich von dem Ergebnis sehr befriedigt.",
+      "alternativAr": "تُظهر الزبونة رضاها الكبير عن النتيجة.",
+      "nuanceAr": "في تقييم رسمي لنتيجة محددة قد يتقاربان؛ zufrieden أعمّ في وصف الرضا، بينما befriedigt يوحي بأن مطلباً أو توقعاً قد لُبّي، وهو أخصّ وقد يحمل مع الأشخاص إيحاءً آخر؛ فلا يُستبدل به عموماً."
+    }
   }
 }

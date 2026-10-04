@@ -2106,10 +2106,15 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(WortKarte, { karte: sauber, onClose: () => {} }));
     const sauberContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
     const sauberShown = !!sauberContext && (sauberContext.textContent ?? "").includes("reines Wasser");
+    ok(freundlichShown && sauberShown,
+      "LXIX5 سياقا freundlich/sauber المنتجان يظهران في البطاقة المنبثقة");
     const froh = karteFuerWort("froh", "A1")!;
     mount(React.createElement(WortKarte, { karte: froh, onClose: () => {} }));
-    ok(freundlichShown && sauberShown && !rootEl.querySelector('[data-testid="wortkarte-syn-context"]') && !(rootEl.textContent ?? "").includes("glücklich"),
-      "LXIX5 المرادفان المنتجان freundlich/sauber يظهران، ومرادف froh غير المنتج يبقى مخفياً");
+    const frohContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!frohContext && (frohContext.textContent ?? "").includes("glücklich") &&
+      (frohContext.textContent ?? "").includes("froh über die Nachricht") &&
+      (frohContext.textContent ?? "").includes("Sie ist glücklich über die Nachricht"),
+      "LXIX16 froh→glücklich يظهر بعد استيفاء المتلازمة والمثالين والفرق");
     const sehen = karteFuerWort("sehen", "A1")!;
     mount(React.createElement(WortKarte, { karte: sehen, onClose: () => {} }));
     const sehenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
@@ -2178,6 +2183,69 @@ const hasFile = txt().includes("صوتٌ من الدار");
       (universitaetContext.textContent ?? "").includes("an der Universität studieren") &&
       (universitaetContext.textContent ?? "").includes("Sie studiert an der Universität"),
       "LXIX15 die Universität→die Hochschule معروضتان بمثال الدراسة وحدود التقارب");
+    const altmodisch = karteFuerWort("altmodisch", "A2")!;
+    mount(React.createElement(WortKarte, { karte: altmodisch, onClose: () => {} }));
+    const altmodischContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!altmodischContext && (altmodischContext.textContent ?? "").includes("veraltet") &&
+      (altmodischContext.textContent ?? "").includes("altmodisch aussehen") &&
+      (altmodischContext.textContent ?? "").includes("Das Handy sieht veraltet aus"),
+      "LXIX17 altmodisch→veraltet يقتصر على مظهر الجهاز وتقادم التقنية");
+    const urlaub = karteFuerWort("Urlaub", "A2")!;
+    mount(React.createElement(WortKarte, { karte: urlaub, onClose: () => {} }));
+    const urlaubContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!urlaubContext && (urlaubContext.textContent ?? "").includes("die Ferien") &&
+      (urlaubContext.textContent ?? "").includes("in den Urlaub fahren") &&
+      (urlaubContext.textContent ?? "").includes("Die Familie fährt im Sommer in die Ferien"),
+      "LXIX18 Urlaub→Ferien يظهر في سياق السفر والعطلة المحدد");
+    const rente = karteFuerWort("Rente", "B2")!;
+    mount(React.createElement(WortKarte, { karte: rente, onClose: () => {} }));
+    const renteContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!renteContext && (renteContext.textContent ?? "").includes("Pension") &&
+      (renteContext.textContent ?? "").includes("in Rente gehen") &&
+      (renteContext.textContent ?? "").includes("Die Beamtin geht nach vielen Dienstjahren in Pension"),
+      "LXIX19 Rente→Pension يعرض فرق العامل وموظف الدولة");
+    const gewinnen = karteFuerWort("gewinnen", "A2")!;
+    mount(React.createElement(WortKarte, { karte: gewinnen, onClose: () => {} }));
+    const gewinnenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!gewinnenContext && (gewinnenContext.textContent ?? "").includes("siegen") &&
+      (gewinnenContext.textContent ?? "").includes("ein Spiel gewinnen") &&
+      (gewinnenContext.textContent ?? "").includes("Unsere Mannschaft siegt im Spiel"),
+      "LXIX20 gewinnen→siegen يعرض اختلاف تركيب المفعول والنصر");
+    const glauben = karteFuerWort("glauben", "A2")!;
+    mount(React.createElement(WortKarte, { karte: glauben, onClose: () => {} }));
+    const glaubenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!glaubenContext && (glaubenContext.textContent ?? "").includes("meinen") &&
+      (glaubenContext.textContent ?? "").includes("glauben, dass der Bus kommt") &&
+      (glaubenContext.textContent ?? "").includes("Ich meine, dass der Bus gleich kommt"),
+      "LXIX21 glauben→meinen يعرض تقارباً محصوراً في الرأي أو التقدير");
+    const kraeftig = karteFuerWort("kräftig", "A2")!;
+    mount(React.createElement(WortKarte, { karte: kraeftig, onClose: () => {} }));
+    const kraeftigContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!kraeftigContext && (kraeftigContext.textContent ?? "").includes("muskulös") &&
+      (kraeftigContext.textContent ?? "").includes("kräftig gebaut") &&
+      (kraeftigContext.textContent ?? "").includes("Der Mann ist muskulös gebaut"),
+      "LXIX22 kräftig→muskulös يقتصر على وصف بنية الجسم");
+    const nett = karteFuerWort("nett", "A1")!;
+    mount(React.createElement(WortKarte, { karte: nett, onClose: () => {} }));
+    const nettContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!nettContext && (nettContext.textContent ?? "").includes("freundlich") &&
+      (nettContext.textContent ?? "").includes("nett zu Kindern") &&
+      (nettContext.textContent ?? "").includes("Die Lehrerin ist freundlich zu den Kindern"),
+      "LXIX23 nett→freundlich يعرض سياق حسن التعامل المحدد");
+    const weit = karteFuerWort("weit", "A1")!;
+    mount(React.createElement(WortKarte, { karte: weit, onClose: () => {} }));
+    const weitContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!weitContext && (weitContext.textContent ?? "").includes("entfernt") &&
+      (weitContext.textContent ?? "").includes("weit weg vom Bahnhof") &&
+      (weitContext.textContent ?? "").includes("Das Dorf liegt weit vom Bahnhof entfernt"),
+      "LXIX24 weit→entfernt يقتصر على المسافة المكانية");
+    const zufrieden = karteFuerWort("zufrieden", "A1")!;
+    mount(React.createElement(WortKarte, { karte: zufrieden, onClose: () => {} }));
+    const zufriedenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!zufriedenContext && (zufriedenContext.textContent ?? "").includes("befriedigt") &&
+      (zufriedenContext.textContent ?? "").includes("mit dem Ergebnis zufrieden") &&
+      (zufriedenContext.textContent ?? "").includes("Die Kundin zeigt sich von dem Ergebnis sehr befriedigt"),
+      "LXIX25 zufrieden→befriedigt محصور في تقييم نتيجة محددة مع تنبيه الاستعمال");
   }
 
   /* ═══ LXX — السيناريو يعلن دروسه المطبَّقة (R26) ═══ */

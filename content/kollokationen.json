@@ -7269,7 +7269,8 @@
  ],
  "v1427": [
   "Urlaub machen",
-  "im Urlaub sein"
+  "im Urlaub sein",
+  "in den Urlaub fahren"
  ],
  "v073": [
   "seine Meinung sagen",
@@ -7281,7 +7282,8 @@
  ],
  "v075": [
   "an die Zukunft glauben",
-  "an Gott glauben"
+  "an Gott glauben",
+  "glauben, dass der Bus kommt"
  ],
  "v076": [
   "sich über das Geschenk freuen",
@@ -8882,5 +8884,33 @@
  "vx-zeit--036": [
   "immer verfügbar",
   "immer geöffnet"
+ ],
+ "v936": [
+  "froh über die Nachricht",
+  "froh über das Ergebnis"
+ ],
+ "vb-abschl-048": [
+  "nett zu Kindern",
+  "nett zu Gästen"
+ ],
+ "vw-a1sta-033": [
+  "weit weg vom Bahnhof",
+  "weit weg vom Zentrum"
+ ],
+ "vy-natur-043": [
+  "mit dem Ergebnis zufrieden",
+  "mit der Antwort zufrieden"
+ ],
+ "vf-kultur-010": [
+  "altmodisch aussehen",
+  "altmodisch wirken"
+ ],
+ "vd-gesund-006": [
+  "ein Spiel gewinnen",
+  "das Finale gewinnen"
+ ],
+ "vf-kultur-002": [
+  "kräftig gebaut",
+  "kräftig wirken"
  ]
 }
