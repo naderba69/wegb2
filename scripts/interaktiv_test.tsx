@@ -2100,8 +2100,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "LXIX4 المرادفُ المُنتَجُ وحده يظهر مع متلازمةٍ ومثالين وملاحظةِ الفرق");
     const freundlich = karteFuerWort("freundlich", "A1")!;
     mount(React.createElement(WortKarte, { karte: freundlich, onClose: () => {} }));
-    ok(!rootEl.querySelector('[data-testid="wortkarte-syn-context"]') && !(rootEl.textContent ?? "").includes("nett"),
-      "LXIX5 المرادف غيرُ المنتج سياقياً يبقى مخزّناً ولا يظهر كبديل عام");
+    const freundlichContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    const freundlichShown = !!freundlichContext && (freundlichContext.textContent ?? "").includes("nett");
+    const sauber = karteFuerWort("sauber", "A1")!;
+    mount(React.createElement(WortKarte, { karte: sauber, onClose: () => {} }));
+    ok(freundlichShown && !rootEl.querySelector('[data-testid="wortkarte-syn-context"]') && !(rootEl.textContent ?? "").includes("rein"),
+      "LXIX5 مرادف freundlich المنتج يظهر سياقياً، ومرادف sauber غير المنتج يبقى مخفياً");
     const sehen = karteFuerWort("sehen", "A1")!;
     mount(React.createElement(WortKarte, { karte: sehen, onClose: () => {} }));
     const sehenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
@@ -2141,6 +2145,21 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!leicht && !!leichtContext && (leichtContext.textContent ?? "").includes("einfach") &&
       (leichtContext.textContent ?? "").includes("eine leichte Aufgabe"),
       "LXIX11 سياق الصفات الجديدة يظهر في البطاقة المنبثقة");
+    const oft = karteFuerWort("oft", "A1")!;
+    mount(React.createElement(WortKarte, { karte: oft, onClose: () => {} }));
+    const oftContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!oftContext && (oftContext.textContent ?? "").includes("häufig") &&
+      (oftContext.textContent ?? "").includes("oft spazieren gehen") &&
+      (oftContext.textContent ?? "").includes("Wir gehen oft im Park spazieren"),
+      "LXIX12 مرادف oft يظهر مع المتلازمة ومثالي السياق");
+    const wohnung = karteFuerWort("Wohnung", "A1")!;
+    mount(React.createElement(WortKarte, { karte: wohnung, onClose: () => {} }));
+    const wohnungContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!wohnung && !!wohnungContext && (wohnungContext.textContent ?? "").includes("das Appartement") &&
+      (wohnungContext.textContent ?? "").includes("eine Wohnung mieten") &&
+      (wohnungContext.textContent ?? "").includes("ein Appartement mieten") &&
+      (wohnungContext.textContent ?? "").includes("ein Appartement in der Stadt"),
+      "LXIX13 die Wohnung→das Appartement يعرض تغيير المقال والأمثلة السياقية");
   }
 
   /* ═══ LXX — السيناريو يعلن دروسه المطبَّقة (R26) ═══ */

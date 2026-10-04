@@ -438,5 +438,115 @@
       "alternativAr": "أشعر بالنعاس بعد الرياضة.",
       "nuanceAr": "قد يتقاربان بعد مجهود إذا صاحبه نعاس؛ müde أوسع ويعني التعب، بينما schläfrig يحدد الميل إلى النوم."
     }
+  },
+  "oft": {
+    "häufig": {
+      "basisKollokation": "oft spazieren gehen",
+      "alternativKollokation": "häufig spazieren gehen",
+      "basisDe": "Wir gehen oft im Park spazieren.",
+      "basisAr": "كثيراً ما نتمشّى في الحديقة.",
+      "alternativDe": "Wir gehen häufig im Park spazieren.",
+      "alternativAr": "كثيراً ما نتمشّى في الحديقة.",
+      "nuanceAr": "في وصف تكرار التنزّه يتقاربان؛ oft أشيع في الكلام اليومي، بينما häufig قد يبدو أرسميّ أو أدقّ قليلاً، ولا يتبادلان آلياً في كل تركيب."
+    }
+  },
+  "nie": {
+    "niemals": {
+      "basisKollokation": "nie zu spät kommen",
+      "alternativKollokation": "niemals zu spät kommen",
+      "basisDe": "Sie kommt nie zu spät zur Arbeit.",
+      "basisAr": "إنها لا تتأخر أبداً عن العمل.",
+      "alternativDe": "Sie kommt niemals zu spät zur Arbeit.",
+      "alternativAr": "إنها لا تتأخر مطلقاً عن العمل.",
+      "nuanceAr": "كلاهما ينفي حدوث الشيء في أي وقت؛ niemals قد يشدّد النفي أكثر، وnie هو الشكل اليومي الأقصر والأشيع."
+    }
+  },
+  "vielleicht": {
+    "möglicherweise": {
+      "basisKollokation": "vielleicht morgen kommen",
+      "alternativKollokation": "möglicherweise morgen kommen",
+      "basisDe": "Vielleicht kommt der Bus morgen früh.",
+      "basisAr": "ربما تأتي الحافلة صباح الغد.",
+      "alternativDe": "Möglicherweise kommt der Bus morgen früh.",
+      "alternativAr": "من المحتمل أن تأتي الحافلة صباح الغد.",
+      "nuanceAr": "كلاهما يقدّم الاحتمال لا اليقين؛ vielleicht أشيع ومحايد في الحديث، أمّا möglicherweise فأرسميّ أو أكثر تصريحاً بالاحتمال."
+    }
+  },
+  "wieder": {
+    "erneut": {
+      "basisKollokation": "ein Buch wieder lesen",
+      "alternativKollokation": "ein Buch erneut lesen",
+      "basisDe": "Ich lese dieses Buch wieder.",
+      "basisAr": "أقرأ هذا الكتاب من جديد.",
+      "alternativDe": "Ich lese dieses Buch erneut.",
+      "alternativAr": "أعيد قراءة هذا الكتاب.",
+      "nuanceAr": "في معنى التكرار يتقاربان؛ wieder أشيع ومرنّ، بينما erneut أرسميّ قليلاً ويبرز حدوث الفعل مرة أخرى."
+    }
+  },
+  "schon": {
+    "bereits": {
+      "basisKollokation": "schon angekommen",
+      "alternativKollokation": "bereits angekommen",
+      "basisDe": "Der Zug ist schon angekommen.",
+      "basisAr": "لقد وصل القطار بالفعل.",
+      "alternativDe": "Der Zug ist bereits angekommen.",
+      "alternativAr": "وصل القطار في وقت مبكر أو قبل المتوقع.",
+      "nuanceAr": "كلاهما يفيد أن الوصول حصل قبل الآن؛ bereits أرسميّ نسبياً وقد يبرز أن الحدث وقع قبل الموعد أو المتوقع، وschon أشيع في الكلام."
+    }
+  },
+  "jetzt": {
+    "nun": {
+      "basisKollokation": "jetzt anfangen",
+      "alternativKollokation": "nun anfangen",
+      "basisDe": "Wir fangen jetzt mit der Aufgabe an.",
+      "basisAr": "نبدأ المهمة الآن.",
+      "alternativDe": "Nun fangen wir mit der Aufgabe an.",
+      "alternativAr": "والآن نبدأ المهمة.",
+      "nuanceAr": "في هذا السياق كلاهما يحدّد وقت البدء؛ jetzt يومي ومباشر، بينما nun أميل إلى الرسمية أو السرد ويصلح للانتقال إلى خطوة جديدة."
+    }
+  },
+  "zusammen": {
+    "gemeinsam": {
+      "basisKollokation": "zusammen kochen",
+      "alternativKollokation": "gemeinsam kochen",
+      "basisDe": "Heute kochen wir zusammen.",
+      "basisAr": "نطبخ معاً اليوم.",
+      "alternativDe": "Heute kochen wir gemeinsam.",
+      "alternativAr": "نطبخ سوياً اليوم.",
+      "nuanceAr": "عند وصف الطبخ مع أشخاص آخرين يتقاربان؛ zusammen أشيع وقد يشير إلى الفعل في صحبة بعضنا، وgemeinsam يبرز المشاركة في نشاط واحد."
+    }
+  },
+  "freundlich": {
+    "nett": {
+      "basisKollokation": "freundlich zu Gästen sein",
+      "alternativKollokation": "nett zu Gästen sein",
+      "basisDe": "Die Verkäuferin ist freundlich zu den Gästen.",
+      "basisAr": "البائعة ودودة مع الضيوف.",
+      "alternativDe": "Die Verkäuferin ist nett zu den Gästen.",
+      "alternativAr": "البائعة لطيفة مع الضيوف.",
+      "nuanceAr": "في وصف التعامل مع الضيوف يتقاربان؛ freundlich يركّز على الودّ وحسن المعاملة، بينما nett أعمّ وانطباعيّ أكثر، وقد يعني لطيفاً أو محبّباً."
+    }
+  },
+  "schmutzig": {
+    "dreckig": {
+      "basisKollokation": "schmutzige Hände",
+      "alternativKollokation": "dreckige Hände",
+      "basisDe": "Nach der Gartenarbeit sind meine Hände schmutzig.",
+      "basisAr": "يداي متّسختان بعد العمل في الحديقة.",
+      "alternativDe": "Nach der Gartenarbeit sind meine Hände dreckig.",
+      "alternativAr": "يداي متّسختان بعد العمل في الحديقة.",
+      "nuanceAr": "كلاهما يصف عدم النظافة؛ schmutzig محايد وأشيع في السياقات العامة، أمّا dreckig فأكثر تداولاً وقد يبدو أقوى أو أشدّ عامية."
+    }
+  },
+  "die Wohnung": {
+    "das Appartement": {
+      "basisKollokation": "eine Wohnung mieten",
+      "alternativKollokation": "ein Appartement mieten",
+      "basisDe": "Wir mieten eine Wohnung in der Stadt.",
+      "basisAr": "نستأجر مسكناً في المدينة.",
+      "alternativDe": "Wir mieten ein Appartement in der Stadt.",
+      "alternativAr": "نستأجر شقّة من نوع أبارتمون في المدينة.",
+      "nuanceAr": "في سياق الاستئجار قد يتقاربان، لكن Wohnung اسم عام للمسكن، وAppartement يوحي غالباً بوحدة أصغر أو مؤثثة؛ كما يتغيّر المقال إلى ein بسبب جنس Appartement المحايد."
+    }
   }
 }
