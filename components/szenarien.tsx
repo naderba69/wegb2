@@ -5,7 +5,7 @@
 // التسميع والتقييم الذاتي يمرّان بخطّي الأنابيب: شبكة الكفاءات ودفتر الأخطاء.
 import { useState } from "react";
 import type { Progress, Szenario } from "@/lib/types";
-import { szenarien } from "@/lib/content";
+import { szenarien, grammarMap } from "@/lib/content";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
@@ -102,7 +102,7 @@ function Dialoge({ s }: { s: Szenario }) {
                 <button
                   key={r}
                   className="chip"
-                  style={{ cursor: "pointer", background: rolleAus === r ? "var(--color-cola)" : "white", color: rolleAus === r ? "white" : undefined }}
+                  style={{ cursor: "pointer", background: rolleAus === r ? "var(--color-cola)" : "var(--ui-surface-raised)", color: rolleAus === r ? "var(--ui-on-accent)" : undefined }}
                   onClick={() => setRolleAus(rolleAus === r ? null : r)}
                 >
                   {rolleAus === r ? `👁 دور ${r} مخفي` : `أدِّ دور ${r}`}
@@ -252,7 +252,7 @@ export function LebensSzenarien({ progress }: { progress: Progress }) {
               <button
                 key={x.id}
                 className="chip"
-                style={{ cursor: "pointer", background: sid === x.id ? "var(--color-cola)" : "white", color: sid === x.id ? "white" : undefined }}
+                style={{ cursor: "pointer", background: sid === x.id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: sid === x.id ? "var(--ui-on-accent)" : undefined }}
                 onClick={() => { setSid(x.id); setTab("saetze"); }}
               >
                 {x.emoji} {x.nameAr}
@@ -262,12 +262,25 @@ export function LebensSzenarien({ progress }: { progress: Progress }) {
           <div className="card" style={{ padding: "0.6rem 0.9rem", fontSize: "0.85rem", marginBottom: "0.6rem", background: "var(--color-paper)" }}>
             <strong><De>{s.nameDe}</De> — {s.nameAr}:</strong> {s.kontext}
           </div>
+          {(s.lektionen?.length ?? 0) > 0 && (
+            <div data-testid="szenario-lektionen" style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap", marginBottom: "0.6rem", fontSize: "0.78rem", alignItems: "center" }}>
+              <span style={{ fontWeight: 800 }}>🧩 يطبّق دروس:</span>
+              {s.lektionen.map((id) => {
+                const gm = grammarMap[id];
+                return (
+                  <span key={id} className="chip" style={{ fontSize: "0.72rem" }} title={gm?.titleDe ?? id}>
+                    📖 {gm?.titleAr ?? id}
+                  </span>
+                );
+              })}
+            </div>
+          )}
           <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
             {TAB_LABEL.map((t) => (
               <button
                 key={t.id}
                 className="chip"
-                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-a2)" : "white", color: tab === t.id ? "white" : undefined }}
+                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-a2)" : "var(--ui-surface-raised)", color: tab === t.id ? "var(--ui-on-accent)" : undefined }}
                 onClick={() => setTab(t.id)}
               >
                 {t.emoji} {t.name}

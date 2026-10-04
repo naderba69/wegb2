@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import { activeProfile, renameProfile } from "@/lib/profiles";
 import { PHASE_START, levelAmTag } from "@/lib/phasen";
 import { modulOf, planPct } from "@/lib/plan";
-import { LEVEL_COLORS, type Progress } from "@/lib/types";
+import { LEVEL_COLORS, TOTAL_DAYS, type Progress } from "@/lib/types";
 
 interface SchultorProps {
   progress: Progress;
@@ -199,7 +199,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
                 </div>
               )}
               <div style={{ fontSize: "0.82rem", color: "#d6d3d1", marginTop: "0.15rem" }}>
-                المستوى الحالي: <strong style={{ color: LEVEL_COLORS[currentLevel] }}>{currentLevel}</strong> · اليوم {progress.plan.day} من 270
+                المستوى الحالي: <strong style={{ color: LEVEL_COLORS[currentLevel] }}>{currentLevel}</strong> · اليوم {progress.plan.day} من {TOTAL_DAYS}
               </div>
             </div>
           </div>
@@ -269,7 +269,7 @@ export function Schultor({ progress, onUpdate, onImport, onEnterClassroom }: Sch
                   justifyContent: "center",
                   gap: "0.2rem",
                   border: isSelected ? `2px solid ${LEVEL_COLORS[lvl]}` : "1px solid var(--color-line)",
-                  background: isSelected ? "var(--color-paper2)" : "white",
+                  background: isSelected ? "var(--color-paper2)" : "var(--ui-surface-raised)",
                   boxShadow: isSelected ? "0 4px 12px rgba(0,0,0,0.08)" : "none",
                   borderRadius: "0.8rem",
                   cursor: "pointer",

@@ -34,6 +34,8 @@ export interface Exercise {
   answer: string | string[];
   /** كلمات مفتاحية للترجمة (كلها مطلوبة) */
   keywords?: string[];
+  /** لا تدمج ß مع ss إذا كان التمرين يختبر هذا الفرق الإملائي تحديداً. */
+  strictEszett?: boolean;
   text?: string;
   hint?: string;
   explanationAr?: string;
@@ -46,6 +48,12 @@ export interface VocabCard {
   de: string;
   ar: string;
   pos?: string;
+  /** تفصيل النوع المحفوظ من الوسم القديم (unregelmäßig، ‏+Dativ …) — يعرض ولا يصفَّى به */
+  posInfo?: string;
+  /** مرادفات مدققة (R29) */
+  syn?: string[];
+  /** أضداد مدققة — لكل صفة ضدّها أو استثناء معلَن (R29) */
+  ant?: string[];
   article?: string;
   plural?: string;
   exampleDe?: string;
@@ -66,6 +74,14 @@ export interface GrammarTopic {
   titleDe: string;
   titleAr: string;
   level: Level;
+  /** 🎯 معيار الدرس الواحد: هدفٌ واحد قابل للملاحظة — ما الذي سيفعله المتعلم بعد الدرس؟ */
+  ziel?: string;
+  /** 🧱 المتطلب السابق: IDs دروسٍ يُفترَض إتقانُها قبل هذا الدرس (فارغ = درس دخول) */
+  voraus?: string[];
+  /** 🚀 مهمة الاستخدام المستقل: موقف حقيقي جديد — تُعرَض في الخلاصة وتُحفَظ للتحقق المؤجل */
+  anwendung?: { ar: string; de: string; candoIds?: string[] };
+  /** 🎯 بنود التحقق المحجوزة: لا تُعرَض في التدريب أبداً — تُسحَب يوم الاستحقاق فقط (مهمة جديدة لا إعادة) */
+  verify?: Exercise[];
   summaryAr: string;
   summaryDe?: string;
   rules: { de: string; ar: string }[];
@@ -193,6 +209,8 @@ export interface Szenario {
   dialoge: { titel: string; lines: { who: "A" | "B"; role: string; de: string; ar: string }[] }[];
   formular: { titel: string; zeilen: string[] };
   rolle: { sitter: string; partner: string; stichworte: string[]; plan: string[] };
+  /** ربط صريح بالدروس المطبَّقة: السيناريو يطبّق ولا يستبدل (R26) */
+  lektionen: string[];
 }
 
 /** حزمة سياق حيوي — Modul R */
@@ -231,6 +249,8 @@ export interface DayTask {
   fehlerItems?: { falsch: string; richtig: string; ar: string; art?: string }[];
   /** وسم تدريب النقطة الضعيفة */
   schwach?: string;
+  /** 🎯 تحقق استقلال: ID الدرس الذي تتحقق منه هذه المهمة (مهمة جديدة لا إعادة) */
+  verifyFor?: string;
 }
 
 export interface DayPlan {
@@ -268,7 +288,7 @@ export interface DayResult {
   tasksDone: number;
   tasksTotal: number;
   at: string;
-  /** ⏱️ مجموع الدقائق الفعلية في هذا اليوم */
+  /** ⏱️ مجموع الدقائق المقاسة في جلسات هذا اليوم، لا مجموع التقديرات */
   minutenEffektiv?: number;
 }
 
@@ -337,13 +357,12 @@ export interface Kontrakt {
 /** تقييمُ الثقةِ قبلَ الإجابة (Modul: Metakognition): سجلٌّ خامٌّ يُشتقُّ منه مؤشّرُ «الثقةِ الخاطئة» */
 export interface SicherheitsEintrag { t: string; id: string; sicher: boolean; correct: boolean }
 
-/** سرعة التعلّم التي يختارها المستخدم (3 وتائر) */
+/** إيقاع المحتوى الذي يختاره المستخدم؛ لا يحدد هدف الجلسة ولا يغيّر تقدير دقائق المهام. */
 export type Tempo = "leicht" | "regelmaessig" | "intensiv";
-export const TEMPO_ZIELMIN: Record<Tempo, number> = { leicht: 15, regelmaessig: 30, intensiv: 60 };
-export const TEMPO_LABEL: Record<Tempo, { de: string; ar: string; min: number }> = {
-  leicht:       { de: "Leicht (15 Min/Tag)",     ar: "خفيف (15 دقيقة/يوم)",    min: 15 },
-  regelmaessig: { de: "Regelmäßig (30 Min/Tag)", ar: "منتظم (30 دقيقة/يوم)",   min: 30 },
-  intensiv:     { de: "Intensiv (60 Min/Tag)",   ar: "مكثّف (60 دقيقة/يوم)",   min: 60 },
+export const TEMPO_LABEL: Record<Tempo, { de: string; ar: string; cards: number }> = {
+  leicht:       { de: "Leicht — bis zu 3 neue Karten/Tag", ar: "خفيف — حتى 3 بطاقات جديدة/يوم", cards: 3 },
+  regelmaessig: { de: "Regelmäßig — bis zu 5 neue Karten/Tag", ar: "منتظم — حتى 5 بطاقات جديدة/يوم", cards: 5 },
+  intensiv:     { de: "Intensiv — bis zu 10 neue Karten/Tag", ar: "مكثّف — حتى 10 بطاقات جديدة/يوم", cards: 10 },
 };
 export const NEW_CARDS_PER_DAY: Record<Tempo, number> = { leicht: 3, regelmaessig: 5, intensiv: 10 };
 
@@ -356,9 +375,20 @@ export interface Progress {
     tasks: Record<string, TaskResult>;
     days: Record<number, DayResult>;
     debt: DebtItem[];
-    /** ⏱️ إجمالي الدقائق الفعلية المقضية في الخطة كلها — المصدر الوحيد لساعات CEFR المزعومة.
-     *  بلا هذا الحقل لا يستطيع المشروع إثبات أي عدد ساعات، والوعد يبقى ادّعاءً. */
+    /** إصدار ترتيب الدروس، مستقلّ عن إصدار بنية Progress. */
+    curriculumScheduleVersion?: number;
+    /** آخر يوم يبقى على الجدول القديم عند ترحيل المستخدم القائم. */
+    curriculumLegacyThroughDay?: number;
+    /** ⏱️ دقائق الجلسات المقاسة على شاشة اليوم؛ لا تتضمن تقديرات المهام. */
     minutenEffektiv?: number;
+    /** دقائق الجلسات المقاسة بحسب يوم الخطة. */
+    minutenEffektivTage?: Record<number, number>;
+    /** وقتٌ أُدخل يدوياً/أفاد به المتعلم؛ منفصل عن الزمن المقاس بالمؤقّت. */
+    minutenManuell?: number;
+    /** الإدخال اليدوي بحسب يوم الخطة (للعرض فقط؛ لا يدخل في القياس الفعلي). */
+    minutenManuellTage?: Record<number, number>;
+    /** يمنع إعادة ترحيل الأرقام القديمة التي كانت تُسمّى «فعلياً» بلا مصدر موثوق. */
+    minutenTrennungVersion?: 1;
   };
   srs: Record<string, SrsState>;
   canDo: Record<string, boolean>;
@@ -383,7 +413,14 @@ export interface Progress {
   };
   /** نتائج امتحانات المراحل: اليوم ← الدرجة المئوية ونجاح */
   exams?: Record<number, { score: number; passed: boolean }>;
-  /** 🔒 بوّابة الوحدة: رقم الوحدة 1..16 ← محاولاتها وأفضل نتيجة وحالة العبور */
+  /** 🎯 طابور تحقق الاستقلال: الدرس ← يوم الاستحقاق (التدريب+3) ونتيجة التحقق.
+   *  إعادة المحاولة الفورية تدريبٌ فقط — الدليل مهمة جديدة مؤجلة. */
+  verify?: Record<string, { dueDay: number; doneDay?: number; passed?: boolean }>;
+  /** 🤔 اعتراضات المتعلم على قواعد الكاشف: القاعدة ← عدد الاعتراضات (R33: 3 = تنزيل). */
+  disputiert?: Record<string, number>;
+  /** ⌨️ مهام شفوية سُلّمت كتابياً: إثبات إنجاز لا إثبات نطق (R16). */
+  schriftlich?: Record<string, true>;
+  /** 🔒 بوّابة الوحدة: رقم الوحدة ← محاولاتها وأفضل نتيجة وحالة العبور */
   modulPruefungen?: Record<number, {
     versuche: number; best: number; bestanden: boolean; zuletzt?: string;
     teile?: { lesen: number; hoeren: number; schreiben: number; sprechen: number };
@@ -416,9 +453,19 @@ export interface Progress {
   blitz?: Record<string, number>;
 }
 
+export const TOTAL_DAYS = 378;
+export const CURRICULUM_SCHEDULE_VERSION = 3;
+
 export const emptyProgress: Progress = {
   v: 2,
-  plan: { day: 1, tasks: {}, days: {}, debt: [] },
+  plan: {
+    day: 1,
+    tasks: {},
+    days: {},
+    debt: [],
+    curriculumScheduleVersion: CURRICULUM_SCHEDULE_VERSION,
+    curriculumLegacyThroughDay: 0,
+  },
   srs: {},
   canDo: {},
   streak: { last: null, count: 0 },
@@ -428,7 +475,12 @@ export const emptyProgress: Progress = {
   kompetenzLog: [],
 };
 
-export const TOTAL_DAYS = 378;
+/** المقابل العربي لأنواع الكلمات المحكومة (R30) */
+export const POS_AR: Record<string, string> = {
+  Nomen: "اسم", Verb: "فعل", Adjektiv: "صفة", Adverb: "حال/ظرف", Pronomen: "ضمير",
+  Präposition: "حرف جرّ", Konjunktion: "أداة ربط", Artikel: "أداة", Zahl: "عدد",
+  Interjektion: "تعجّب/تحية", Wendung: "عبارة", Satz: "جملة",
+};
 export const LEVEL_COLORS: Record<Phase, string> = {
   A0: "var(--color-gold)",
   A1: "var(--color-a1)",

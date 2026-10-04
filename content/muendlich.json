@@ -222,7 +222,19 @@
           "de": "Kompromiss formuliert"
         }
       ],
-      "zeit_s": 300
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm07-einwand-1",
+          "de": "Ganz so einfach ist es nicht: Im Homeoffice fehlen oft der direkte Austausch und die schnelle Hilfe im Team. Wie wollen Sie das ausgleichen?",
+          "ar": "ليس الأمر بهذه البساطة: قد يغيب عن العمل من المنزل التواصل المباشر والمساعدة السريعة داخل الفريق. كيف تعوّضون ذلك؟"
+        },
+        {
+          "id": "mm07-einwand-2",
+          "de": "Ich verstehe Ihren Punkt, aber wer zu Hause keinen ruhigen Arbeitsplatz hat, ist benachteiligt. Sollte Homeoffice wirklich für alle gelten?",
+          "ar": "أفهم وجهة نظرك، لكن من لا يملك مكاناً هادئاً للعمل في المنزل يكون في وضع أضعف. هل ينبغي أن ينطبق العمل من المنزل على الجميع فعلاً؟"
+        }
+      ]
     },
     {
       "id": "mm08",
@@ -254,7 +266,19 @@
           "de": "Ergebnis zusammengefasst"
         }
       ],
-      "zeit_s": 300
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm08-einwand-1",
+          "de": "Ein Verbot löst das Problem nicht unbedingt: Manche Schülerinnen und Schüler brauchen ihr Handy auf dem Schulweg oder für wichtige Absprachen. Wie sollte die Schule damit umgehen?",
+          "ar": "الحظر لا يحل المشكلة بالضرورة: قد يحتاج بعض التلاميذ إلى هواتفهم في طريق المدرسة أو للتنسيق في أمور مهمة. كيف ينبغي للمدرسة أن تتعامل مع ذلك؟"
+        },
+        {
+          "id": "mm08-einwand-2",
+          "de": "Das klingt nach mehr Ruhe, aber ein pauschales Verbot behandelt alle gleich, obwohl sie das Handy unterschiedlich nutzen. Wäre eine klare Nutzungsregel nicht fairer?",
+          "ar": "قد يبدو ذلك باعثاً على الهدوء، لكن الحظر الشامل يعامل الجميع بالطريقة نفسها رغم اختلاف استخدامهم للهاتف. ألن تكون قاعدة واضحة للاستخدام أعدل؟"
+        }
+      ]
     },
     {
       "id": "mm09",
@@ -286,7 +310,19 @@
           "de": "klarer Abschluss"
         }
       ],
-      "zeit_s": 300
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm09-einwand-1",
+          "de": "Kostenlos heißt nicht, dass keine Kosten entstehen: Die Ausgaben müssten anders finanziert werden. Wer sollte dafür bezahlen?",
+          "ar": "كون النقل مجانياً لا يعني انعدام تكلفته؛ فلا بد من تمويل النفقات بطريقة أخرى. فمن ينبغي أن يدفع؟"
+        },
+        {
+          "id": "mm09-einwand-2",
+          "de": "Ein kostenloses Ticket nützt wenig, wenn die Verbindung für manche Menschen nicht passt. Wie berücksichtigen Sie diese Gruppen?",
+          "ar": "لا تفيد البطاقة المجانية كثيراً إذا لم يناسب خطّ النقل بعض الناس. كيف تراعون هذه الفئات؟"
+        }
+      ]
     },
     {
       "id": "mm10",
@@ -318,7 +354,19 @@
           "de": "Einigkeit/Streit notiert"
         }
       ],
-      "zeit_s": 300
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm10-einwand-1",
+          "de": "Eine Pflicht kann Widerstand auslösen, wenn die Regeln kompliziert sind. Wie verhindern Sie, dass Menschen nur aus Angst vor Strafen trennen?",
+          "ar": "قد يثير الإلزام مقاومةً إذا كانت القواعد معقّدة. كيف تمنعون الناس من الفرز لمجرد الخوف من العقوبة؟"
+        },
+        {
+          "id": "mm10-einwand-2",
+          "de": "Nicht jeder Haushalt hat Platz für mehrere Behälter. Sollte man zuerst bessere Bedingungen schaffen, bevor man Kontrollen einführt?",
+          "ar": "ليس في كل منزل متّسع لعدة حاويات. ألا ينبغي توفير ظروف أفضل أولاً قبل فرض الرقابة؟"
+        }
+      ]
     },
     {
       "id": "mm11",
@@ -350,7 +398,19 @@
           "de": "Beschlussformel"
         }
       ],
-      "zeit_s": 300
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm11-einwand-1",
+          "de": "Weniger Hausaufgaben bedeuten nicht automatisch mehr Erholung: Vielleicht verbringen manche Kinder die zusätzliche Zeit am Bildschirm. Woran würden Sie erkennen, dass Ihr Versuch wirkt?",
+          "ar": "تقليل الواجبات لا يعني تلقائياً مزيداً من الراحة؛ فقد يقضي بعض الأطفال الوقت الإضافي أمام الشاشة. كيف تعرفون أن التجربة حققت أثرها؟"
+        },
+        {
+          "id": "mm11-einwand-2",
+          "de": "Wenn Hausaufgaben wegfallen, könnte selbstständiges Üben seltener werden. Wie ließe sich dieser Nachteil ausgleichen?",
+          "ar": "إذا أُلغيت الواجبات، فقد تقلّ فرص التدريب المستقل. كيف يمكن تعويض هذا الجانب السلبي؟"
+        }
+      ]
     },
     {
       "id": "mm12",
@@ -382,7 +442,19 @@
           "de": "angepasstes Urteil"
         }
       ],
-      "zeit_s": 300
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm12-einwand-1",
+          "de": "Ein früher Beginn allein garantiert keinen Lernerfolg. Entscheidend ist auch, ob genügend qualifizierte Lehrkräfte da sind. Wie würden Sie das sicherstellen?",
+          "ar": "البدء المبكر وحده لا يضمن نجاح التعلّم؛ فالأمر يتوقف أيضاً على توافر عدد كافٍ من المعلمين المؤهلين. كيف تضمنون ذلك؟"
+        },
+        {
+          "id": "mm12-einwand-2",
+          "de": "Wenn der Unterricht zu früh beginnt, könnten andere Grundlagen zu kurz kommen. Warum sollte eine Fremdsprache trotzdem Vorrang haben?",
+          "ar": "إذا بدأ تعليم اللغة مبكراً جداً، فقد لا تحظى أسس أخرى بما يكفي من الوقت. فلماذا ينبغي أن تتقدم اللغة الأجنبية رغم ذلك؟"
+        }
+      ]
     }
   ]
 }

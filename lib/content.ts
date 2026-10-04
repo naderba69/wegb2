@@ -60,6 +60,14 @@ export const pakete = (paketeRaw as unknown as { pakete: import("./types").Konte
 export const alleVokabeln: VocabCard[] = Object.values(
   vocabRaw as unknown as Record<string, { cards: VocabCard[] }>
 ).flatMap((g) => g.cards);
+
+/** صيغة الاسم الكاملة/العنصر دون تكرار أداة التعريف المخزّنة في de. */
+export function deFormOf(card: VocabCard, includeArticle = true): string {
+  const prefix = card.article ? `${card.article} ` : "";
+  const full = prefix && !card.de.startsWith(prefix) ? `${prefix}${card.de}` : card.de;
+  return includeArticle || !prefix ? full : full.slice(prefix.length);
+}
+
 const langfassungen: Record<string, Langfassung> = { ...(langB2a as Record<string, Langfassung>), ...(langB2b as Record<string, Langfassung>), ...(langB1a as Record<string, Langfassung>), ...(langB1b as Record<string, Langfassung>), ...(langA2a as Record<string, Langfassung>), ...(langA2b as Record<string, Langfassung>), ...(langA1a as Record<string, Langfassung>), ...(langA1b as Record<string, Langfassung>) };
 /** النصوص؛ مَن له نسخة طويلة يحملها في `lang` — وقراءة B2 تعرضها (المهمّة lesen) بينما يبقى `de` نصَّ الصوت */
 export const texts = (textsRaw as unknown as Lesetext[]).map((t) => (langfassungen[t.id] ? { ...t, lang: langfassungen[t.id] } : t));
@@ -152,6 +160,11 @@ export interface HaerteRung {
 }
 export const haerte: HaerteRung[] = (haerteRaw as unknown as { rungen: HaerteRung[] }).rungen;
 
+export interface MuendlichEinwand {
+  id: string;
+  de: string;
+  ar: string;
+}
 export interface MuendlichKarte {
   id: string;
   teil: 2 | 3;
@@ -161,6 +174,8 @@ export interface MuendlichKarte {
   stuetzen: string[];
   kriterien: { ar: string; de: string }[];
   zeit_s: number;
+  /** B2 discussion only: unseen objections for the timed pressure round. */
+  einwaende?: MuendlichEinwand[];
 }
 /** 🗣️ مختبر الشفهي — 12 بطاقة: 6 وصف صورة + 6 مناقشة (Modul AA) */
 export const muendlich: MuendlichKarte[] = (muendlichRaw as unknown as { karten: MuendlichKarte[] }).karten;
