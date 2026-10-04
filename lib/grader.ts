@@ -17,13 +17,21 @@ export interface Grader {
   grade(ex: Exercise, response: string | string[]): GradeResult;
 }
 
-export function normalize(s: string): string {
-  return s
+function normalizeText(s: string, foldEszett: boolean): string {
+  const normalized = s
     .toLowerCase()
     .replace(/[.,!?;:„“"''()\[\]]/g, "")
     .replace(/\s+/g, " ")
-    .replace(/ß/g, "ss")
     .trim();
+  return foldEszett ? normalized.replace(/ß/g, "ss") : normalized;
+}
+
+export function normalize(s: string): string {
+  return normalizeText(s, true);
+}
+
+function normalizeForExercise(s: string, ex: Exercise): string {
+  return normalizeText(s, !ex.strictEszett);
 }
 
 export type DiffToken = { w: string; s: "ok" | "falsch" | "fehlt" | "extra" };
@@ -120,9 +128,22 @@ export class DeterministicGrader implements Grader {
     }
 
     if (ex.type === "translate") {
-      const given = normalize(Array.isArray(response) ? response.join(" ") : response);
+      const given = normalizeForExercise(Array.isArray(response) ? response.join(" ") : response, ex);
       const keys = ex.keywords ?? [];
-      const missing = keys.filter((k) => !given.includes(normalize(k)));
+      if (keys.length === 0) {
+        const accepted = [
+          ...(Array.isArray(ex.answer) ? ex.answer : [ex.answer]),
+          ...(ex.alternativen ?? []),
+        ].map((answer) => normalizeForExercise(answer, ex));
+        const ok = given.length > 0 && accepted.includes(given);
+        return this.result(
+          ok,
+          maxPoints,
+          ex,
+          ok ? "ترجمة تطابق النموذج أو بديلاً معلناً." : "لم تطابق الترجمة نموذجاً أو بديلاً معلناً."
+        );
+      }
+      const missing = keys.filter((k) => !given.includes(normalizeForExercise(k, ex)));
       const ok = given.length > 0 && missing.length === 0;
       return this.result(
         ok,
@@ -136,8 +157,8 @@ export class DeterministicGrader implements Grader {
       );
     }
 
-    const answers = (Array.isArray(ex.answer) ? ex.answer : [ex.answer]).map(normalize);
-    const given = normalize(Array.isArray(response) ? response.join(" ") : response);
+    const answers = (Array.isArray(ex.answer) ? ex.answer : [ex.answer]).map((answer) => normalizeForExercise(answer, ex));
+    const given = normalizeForExercise(Array.isArray(response) ? response.join(" ") : response, ex);
     const ok = answers.includes(given) && given.length > 0;
     return this.result(ok, maxPoints, ex);
   }

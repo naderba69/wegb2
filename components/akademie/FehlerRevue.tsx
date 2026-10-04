@@ -70,7 +70,7 @@ export function FehlerRevue({ progress }: { progress: Progress }) {
                     type="button"
                     className="btn"
                     data-testid="revue-fest"
-                    style={{ minHeight: "44px", flex: 1, background: "var(--color-a1)", color: "white", border: "none" }}
+                    style={{ minHeight: "44px", flex: 1, background: "var(--color-a1)", color: "var(--ui-on-accent)", border: "none" }}
                     onClick={() => {
                       gradeFehlerNow(f.key, true);
                       setGraded((g) => ({ ...g, [f.key]: true }));

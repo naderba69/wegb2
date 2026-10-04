@@ -16,6 +16,7 @@ import { upsertFehler, gradeFehlerIn } from "./fehler";
 import { checkAbzeichen } from "./spiel";
 import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
+import { migrateCurriculumSchedule } from "./curriculum-schedule";
 
 const KEY = "weg-b2-progress";
 export const PROGRESS_EVENT = "weg-progress-changed";
@@ -34,28 +35,28 @@ export function loadProgress(): Progress {
     const p = JSON.parse(raw) as Progress;
     if (p.v !== emptyProgress.v) {
       // ترحيل: الاحتفاظ بالمفردات والتقدّم البشري، إعادة ضبط الخطة
-    return {
-      ...emptyProgress,
-      srs: p.srs ?? {},
-      canDo: p.canDo ?? {},
-      streak: p.streak ?? { last: null, count: 0 },
-      fehler: p.fehler ?? {},
-      weak: p.weak ?? {},
-      exams: p.exams ?? {},
-      modulPruefungen: p.modulPruefungen ?? {},
-      xp: p.xp ?? 0,
-      abzeichen: p.abzeichen ?? {},
-      kompetenzLog: p.kompetenzLog ?? [],
-      gesundheit: p.gesundheit ?? { augenPause: true },
-      settings: { ...emptyProgress.settings, ...(p.settings ?? {}) },
-    };
+      return migrateCurriculumSchedule({
+        ...emptyProgress,
+        srs: p.srs ?? {},
+        canDo: p.canDo ?? {},
+        streak: p.streak ?? { last: null, count: 0 },
+        fehler: p.fehler ?? {},
+        weak: p.weak ?? {},
+        exams: p.exams ?? {},
+        modulPruefungen: p.modulPruefungen ?? {},
+        xp: p.xp ?? 0,
+        abzeichen: p.abzeichen ?? {},
+        kompetenzLog: p.kompetenzLog ?? [],
+        gesundheit: p.gesundheit ?? { augenPause: true },
+        settings: { ...emptyProgress.settings, ...(p.settings ?? {}) },
+      });
     }
-    return {
+    return migrateCurriculumSchedule({
       ...emptyProgress,
       ...p,
       plan: { ...emptyProgress.plan, ...p.plan },
       settings: { ...emptyProgress.settings, ...p.settings },
-    };
+    });
   } catch {
     return emptyProgress;
   }
@@ -63,7 +64,8 @@ export function loadProgress(): Progress {
 
 export function saveProgress(p: Progress) {
   try {
-    window.localStorage.setItem(progressKeyActive(), JSON.stringify(p));
+    const migrated = migrateCurriculumSchedule(p);
+    window.localStorage.setItem(progressKeyActive(), JSON.stringify(migrated));
     emit();
   } catch {
     /* التخزين ممتلئ أو محظور */
@@ -105,9 +107,9 @@ export function useProgress() {
     });
   }, []);
 
-  /** تسجيل نتيجة مهمة — النجاح ≥80% */
+  /** تسجيل نتيجة مهمة — النجاح ≥80% (ومهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً) */
   const submitTask = useCallback(
-    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number) => {
+    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number, verifyFor?: string) => {
       update((p) => {
         const prev = p.plan.tasks[taskId];
         const passed = total > 0 && score / total >= 0.8;
@@ -121,10 +123,16 @@ export function useProgress() {
           at: new Date().toISOString(),
           geplantMin: geplantMin ?? prev?.geplantMin,
         };
+        const rec = verifyFor ? p.verify?.[verifyFor] : undefined;
+        const verify =
+          verifyFor && rec && rec.doneDay === undefined
+            ? { ...(p.verify ?? {}), [verifyFor]: { ...rec, doneDay: day, passed: result.passed } }
+            : p.verify;
         return checkAbzeichen(
           logK(
             {
               ...p,
+              verify,
               xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
               plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
             },
@@ -153,7 +161,7 @@ export function useProgress() {
           xp: (p.xp ?? 0) + 30,
           plan: {
             ...p.plan,
-            day: day + 1, // يسمح بالوصول إلى 271 = «الحصيلة النهائية»
+            day: day + 1, // يتقدّم يوماً بيوم حتى TOTAL_DAYS (378) ثمّ يثبت عليه levelOf
             days: {
               ...p.plan.days,
               [day]: {
@@ -205,12 +213,12 @@ export function useProgress() {
 
   const importProgress = useCallback((json: string) => {
     const p = JSON.parse(json) as Progress;
-    const merged = {
+    const merged = migrateCurriculumSchedule({
       ...emptyProgress,
       ...p,
       plan: { ...emptyProgress.plan, ...p.plan },
       settings: { ...emptyProgress.settings, ...p.settings },
-    };
+    });
     saveProgress(merged);
     setProgress(merged);
   }, []);
@@ -249,6 +257,27 @@ export function logSicherheitNow(e: import("./types").SicherheitsEintrag) {
 
 export function addFehlerNow(e: FehlerEintrag) {
   saveProgress(upsertFehler(loadProgress(), e));
+}
+
+/** 🎯 جدولة تحقق استقلال لدرسٍ أُنجِز تدريبُه — مستحق بعد 3 أيام (قرار المنهج).
+ *  غبيةٌ عمداً: المتحقق من وجود بنود التحقق هو المنادي (يملك grammarMap) لا المخزن. */
+export function planeVerifikation(topicId: string, day: number) {
+  const p = loadProgress();
+  if (p.verify?.[topicId]) return;
+  saveProgress({ ...p, verify: { ...(p.verify ?? {}), [topicId]: { dueDay: day + 3 } } });
+}
+
+/** ⌨️ بديل كتابي لمهمة شفوية مستحيلة: إثبات إنجاز لا إثبات نطق (R16) */
+export function markiereSchriftlich(taskId: string) {
+  const p = loadProgress();
+  saveProgress({ ...p, schriftlich: { ...(p.schriftlich ?? {}), [taskId]: true } });
+}
+
+/** 🤔 اعتراض على قاعدة كاشفة: 3 اعتراضات تخفّض حدّتها تلقائياً (R33) */
+export function disputeRegel(regelId: string) {
+  const p = loadProgress();
+  const n = (p.disputiert?.[regelId] ?? 0) + 1;
+  saveProgress({ ...p, disputiert: { ...(p.disputiert ?? {}), [regelId]: n } });
 }
 
 /** تقييم مراجعة خطأ في الدفتر فوراً — ويُسجَّل على شبكة الكفاءات المتأثرة */

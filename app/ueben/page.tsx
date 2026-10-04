@@ -16,6 +16,7 @@ import { BriefSchmiede } from "@/components/briefe";
 import { LebensSzenarien } from "@/components/szenarien";
 import { TiefenLexikon } from "@/components/tiefenlex";
 import { KatalogLeiste } from "@/components/katalog";
+import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
  * 💪 وجهة «تدرّب» (P3):
@@ -28,20 +29,41 @@ import { KatalogLeiste } from "@/components/katalog";
 const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,tiefen,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
-  zusatz: { icon: "➕", titel: "تدريب إضافي", unter: "ما زاد عن 3 تمارين في درس اليوم — لا يمرُّ ولا يضيع" },
-  fehlerlabor: { icon: "🔬", titel: "معمل تحليل الخطأ", unter: "أخطاؤك أولاً: ستّة أسباب · عائلات · حرارة · خطأ الشهر" },
-  uebungen: { icon: "🗂️", titel: "التدريب الحرّ", unter: "بطاقات ومفردات وشفرات — SRS حرّ بلا موعد" },
-  blitz: { icon: "⚡", titel: "برقّ", unter: "جولة سريعة: سؤال واحد لا ينتظر" },
-  hoeren: { icon: "🎧", titel: "معمل الاستماع", unter: "نصوص مقروءة بصوت مُنتَج — استماع واحد يُحسب" },
-  lueck: { icon: "🩳", titel: "فجوات الإملاء", unter: "أكمل ما نُقص من الجملة — أذنك تكتب" },
-  muendlich: { icon: "🗣️", titel: "المختبر الشفوي", unter: "تحدَّث ثم تلقَّ تصحيحاً صوتياً" },
-  vortrag: { icon: "🎤", titel: "خشبة العرض", unter: "عِرْض مُوقَّت بهدوء — دقة ووقت" },
-  interview: { icon: "🤝", titel: "ساحة المقابلة", unter: "محاكاة مقابلة عمل بأسئلة حقيقية" },
-  briefe: { icon: "✉️", titel: "مِسبَك الرسائل", unter: "اكتب رسالة ورقيّة مُحكَمة" },
-  szenarien: { icon: "🏙️", titel: "سيناريوهات الحياة", unter: "طبيب · بنك · دوام — مواقف واقعية" },
-  tiefen: { icon: "📖", titel: "المعجم العميق", unter: "بحثٌ حرٌّ في بنك الكلمات كله" },
-  katalog: { icon: "🗃️", titel: "الكاتالوج", unter: "كل تدريبات الأكاديمية في قائمة واحدة" },
+  zusatz: { icon: "➕", titel: "تدريب إضافي", unter: "تمارين أخرى بقيت من درس اليوم." },
+  fehlerlabor: { icon: "🔬", titel: "معمل تحليل الخطأ", unter: "افهم سبب الخطأ وتدرّب على تصحيحه." },
+  uebungen: { icon: "🗂️", titel: "التدريب الحرّ", unter: "راجع المفردات والبطاقات وفق حاجتك." },
+  blitz: { icon: "⚡", titel: "جولة سريعة", unter: "تدريب قصير من سؤال واحد." },
+  hoeren: { icon: "🎧", titel: "معمل الاستماع", unter: "تدرّب على فهم النص المسموع." },
+  lueck: { icon: "📝", titel: "إكمال الجمل", unter: "أكمل الكلمات الناقصة في الجملة." },
+  muendlich: { icon: "🗣️", titel: "التدريب الشفوي", unter: "تحدّث ثم راجع الملاحظات المتاحة." },
+  vortrag: { icon: "🎤", titel: "التحدّث أمام الجمهور", unter: "تدرّب على عرض قصير ضمن وقت محدد." },
+  interview: { icon: "🤝", titel: "مقابلة العمل", unter: "تدرّب على الإجابة عن أسئلة المقابلة." },
+  briefe: { icon: "✉️", titel: "كتابة الرسائل", unter: "اكتب رسالة تناسب الموقف." },
+  szenarien: { icon: "🏙️", titel: "مواقف من الحياة", unter: "طبّق ما تعلّمته في مواقف واقعية." },
+  tiefen: { icon: "📖", titel: "معجم المفردات", unter: "ابحث عن كلمة أو معنى عند الحاجة." },
+  katalog: { icon: "🗃️", titel: "دليل التدريبات", unter: "استعرض التدريبات المتاحة في الأكاديمية." },
 };
+
+const MENU_GROUPS: { id: string; title: string; description: string; items: string[] }[] = [
+  {
+    id: "ueben-priority",
+    title: "ابدأ بالأهم",
+    description: "ابدأ بما بقي من الدرس، ثم راجع الأخطاء.",
+    items: ["zusatz", "fehlerlabor", "uebungen", "blitz"],
+  },
+  {
+    id: "ueben-skills",
+    title: "تدرّب على المهارات",
+    description: "اختر مهارة أو طبّق ما تعلّمته في موقف.",
+    items: ["hoeren", "lueck", "muendlich", "vortrag", "interview", "briefe", "szenarien"],
+  },
+  {
+    id: "ueben-reference",
+    title: "مراجع إضافية",
+    description: "للبحث والاستكشاف عند الحاجة.",
+    items: ["tiefen", "katalog"],
+  },
+];
 
 export default function Ueben() {
   const { progress } = useProgress();
@@ -77,23 +99,36 @@ export default function Ueben() {
   }, [topicId, parkIds]);
   const hatZusatz = parkExercises.length > 0;
 
-  if (!geladen) return null;
+  if (!geladen) {
+    return (
+      <div className="today-screen fadein dirb ui-page" data-testid="ueben-loading" aria-busy="true">
+        <header className="dirb-tabhead">
+          <h1 className="dirb-title">تدرّب</h1>
+          <div className="dirb-sub">لحظات، نجهّز قائمة التدريب.</div>
+        </header>
+        <div className="dirb-loading-state" role="status" aria-live="polite">
+          <span className="dirb-loading-spinner" aria-hidden="true" />
+          <span>يُحمّل التطبيق حالة يومك.</span>
+        </div>
+      </div>
+    );
+  }
 
   // ── الباب المقفل: سببٌ معلن وبابٌ واحد (K113b) ──
   if (!abend) {
     return (
-      <div className="today-screen fadein" data-testid="ueben-gesperrt" style={{ display: "grid", gap: "1rem" }}>
-        <div className="card" style={{ padding: "2rem 1.4rem", textAlign: "center", borderInlineStart: "5px solid var(--color-die)" }}>
-          <div style={{ fontSize: "2.4rem" }} aria-hidden>🔒</div>
-          <h1 style={{ fontWeight: 900, fontSize: "1.3rem", margin: "0.5rem 0 0.3rem" }}>تدرّب يفتح بعد إغلاق يومك</h1>
-          <p style={{ color: "var(--color-ink2)", lineHeight: 1.9, maxWidth: "30rem", margin: "0 auto" }}>
+      <div className="today-screen fadein dirb ui-page" data-testid="ueben-gesperrt">
+        <div className="dirb-close dirb-hero-anim">
+          <div style={{ fontSize: "2.6rem" }} aria-hidden>🔒</div>
+          <h1 className="dirb-title" style={{ fontSize: "1.4rem" }}>تدرّب يفتح بعد إغلاق يومك</h1>
+          <p className="dirb-sub" style={{ lineHeight: 1.9 }}>
             هكذا اتفقنا: الطابور أولاً — همّةُ اليوم تُنجَز ثم تُراجَع أخطاؤه ثم يُغلَق،
             وعندها يُفتح التدريب الحرّ لمساءٍ هادئ. لا زرَّ تخطٍّّ ولا طريقٌ جانبي.
           </p>
-          <p style={{ color: "var(--color-ink2)", fontSize: "0.86rem", margin: "0.6rem 0 1.2rem" }}>
-            الطريق: مهامّ اليوم ← مراجعة الأخطاء (FehlerRevue) ← «تأكيد إغلاق اليوم».
+          <p className="dirb-sub" style={{ fontSize: "0.8rem" }}>
+            الطريق: مهامّ اليوم ← مراجعة الأخطاء ← «تأكيد إغلاق اليوم».
           </p>
-          <Link href="/" className="btn btn-primary" style={{ minHeight: "44px", textDecoration: "none" }}>
+          <Link href="/" className="dirb-start" style={{ textDecoration: "none" }}>
             ↩ عُد إلى «اليوم» وأكمل طابورك
           </Link>
         </div>
@@ -104,15 +139,15 @@ export default function Ueben() {
   // ── محطة مَرتحِلة: تدريب إضافي ──
   if (offen === "zusatz") {
     return (
-      <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }}>
-        <button type="button" className="btn btn-ghost" style={{ minHeight: "44px", justifySelf: "start" }} onClick={() => setOffen(null)}>
+      <div className="today-screen fadein dirb ui-page">
+        <button type="button" className="dirb-back" onClick={() => setOffen(null)}>
           → كل التدريبات
         </button>
-        <section className="card" style={{ padding: "1.1rem 1.2rem" }}>
-          <h1 style={{ fontWeight: 900, fontSize: "1.15rem", margin: "0 0 0.3rem" }}>➕ تدريب إضافي</h1>
-          <p style={{ fontSize: "0.85rem", color: "var(--color-ink2)", margin: "0 0 0.8rem" }}>
-            تمارين درس اليوم التي زادت عن الثلاثة — ركّبناها هنا بدل أن نمرّرها.
-          </p>
+        <div className="dirb-station-head">
+          <h1 className="dirb-station-title">تدريب إضافي</h1>
+          <div className="dirb-station-sub">تمارين الدرس التي يمكنك حلّها بعد المهمة الأساسية.</div>
+        </div>
+        <section className="dirb-station">
           <ExerciseSet items={parkExercises} onPoints={() => {}} />
         </section>
       </div>
@@ -121,12 +156,20 @@ export default function Ueben() {
 
   // ── محطة مفتوحة: شاشة واحدة بباب رجوع ──
   if (offen) {
+    const k = KARTE[offen];
     return (
-      <div className="today-screen fadein" style={{ display: "grid", gap: "1rem" }}>
-        <button type="button" className="btn btn-ghost" data-testid="ueben-zurueck" style={{ minHeight: "44px", justifySelf: "start" }} onClick={() => setOffen(null)}>
+      <div className="today-screen fadein dirb ui-page">
+        <button type="button" className="dirb-back" data-testid="ueben-zurueck" onClick={() => setOffen(null)}>
           → كل التدريبات
         </button>
-        <section style={{ display: "grid", gap: "1rem" }}>
+        {k && (
+          <div className="dirb-station-head">
+            <div className="dirb-kicker">{k.icon} محطة تدريب</div>
+            <h1 className="dirb-station-title">{k.titel}</h1>
+            <div className="dirb-station-sub">{k.unter}</div>
+          </div>
+        )}
+        <section className="dirb-station">
           {offen === "fehlerlabor" && <FehlerLabor progress={progress} />}
           {offen === "uebungen" && <UebungenCard progress={progress} />}
           {offen === "blitz" && <BlitzDrill progress={progress} />}
@@ -144,42 +187,57 @@ export default function Ueben() {
     );
   }
 
-  // ── القائمة حسب ترتيب الأولوية (K112a) ──
+  // ── القائمة حسب ترتيب الأولوية؛ التقسيم لا يغيّر ترتيبها (K112a) ──
   const ids = UEBEN_REIHENFOLGE.split(",").filter((id) => id !== "zusatz" || hatZusatz);
+  const groups = MENU_GROUPS
+    .map((group) => ({ ...group, items: group.items.filter((id) => ids.includes(id)) }))
+    .filter((group) => group.items.length > 0);
+  const renderCard = (id: string) => {
+    const k = KARTE[id];
+    if (!k) return null;
+    return (
+      <button
+        key={id}
+        type="button"
+        data-testid={`ueben-karte-${id}`}
+        onClick={() => setOffen(id)}
+        className="dirb-menu-btn"
+      >
+        <span className="dirb-menu-ico" aria-hidden>{k.icon}</span>
+        <span className="dirb-menu-txt">
+          <b>{k.titel}</b>
+          <span>{k.unter}</span>
+        </span>
+        <span className="dirb-chev" aria-hidden>←</span>
+      </button>
+    );
+  };
+
   return (
-    <div className="today-screen fadein" data-testid="ueben-liste" style={{ display: "grid", gap: "0.8rem" }}>
-      <header style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap" }}>
-        <h1 style={{ fontWeight: 900, fontSize: "1.2rem", margin: 0 }}>💪 تدرّب</h1>
-        <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>ترتيبُ الأولوية — الأخطاءَ قبل السرعة</span>
+    <div className="today-screen fadein dirb ui-page" data-testid="ueben-liste">
+      <header className="dirb-tabhead dirb-hero-anim">
+        <h1 className="dirb-title">تدرّب</h1>
+        <div className="dirb-sub">اختر مجموعة التدريب التي تناسب ما تحتاجه اليوم.</div>
       </header>
 
       {offenBleibt && (
-        <div className="card" data-testid="ueben-hinweis" style={{ padding: "0.6rem 0.9rem", borderInlineStart: "5px solid var(--color-gold)", fontSize: "0.85rem", background: "var(--color-gold-soft)" }}>
-          طابورُ اليومِ ما زال مفتوحاً — درِّب ثم <Link href="/" style={{ color: "var(--color-cola)", fontWeight: 800 }}>عُد إلى «اليوم»</Link> حتى تُغلقه.
+        <div className="dirb-hinweis dirb-hero-anim-2" data-testid="ueben-hinweis">
+          مهامّ اليوم ما زالت مفتوحة؛ أنجزها من <Link href="/">صفحة اليوم</Link> ثم تابع التدريب هنا.
         </div>
       )}
 
-      <div style={{ display: "grid", gap: "0.6rem" }}>
-        {ids.map((id) => {
-          const k = KARTE[id];
-          if (!k) return null;
-          return (
-            <button
-              key={id}
-              type="button"
-              data-testid={`ueben-karte-${id}`}
-              onClick={() => setOffen(id)}
-              className="card"
-              style={{ minHeight: "56px", padding: "0.8rem 1rem", textAlign: "start", cursor: "pointer", display: "flex", gap: "0.8rem", alignItems: "center" }}
-            >
-              <span style={{ fontSize: "1.5rem" }} aria-hidden>{k.icon}</span>
-              <span>
-                <span style={{ fontWeight: 800, display: "block" }}>{k.titel}</span>
-                <span style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{k.unter}</span>
-              </span>
-            </button>
-          );
-        })}
+      <div className="dirb-menu-groups dirb-hero-anim-2">
+        {groups.map((group) => (
+          <MenuSection
+            key={group.id}
+            id={group.id}
+            title={group.title}
+            description={group.description}
+            count={group.items.length}
+          >
+            {group.items.map(renderCard)}
+          </MenuSection>
+        ))}
       </div>
     </div>
   );
