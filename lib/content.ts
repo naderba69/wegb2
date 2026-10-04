@@ -152,6 +152,11 @@ export interface HaerteRung {
 }
 export const haerte: HaerteRung[] = (haerteRaw as unknown as { rungen: HaerteRung[] }).rungen;
 
+export interface MuendlichEinwand {
+  id: string;
+  de: string;
+  ar: string;
+}
 export interface MuendlichKarte {
   id: string;
   teil: 2 | 3;
@@ -161,6 +166,8 @@ export interface MuendlichKarte {
   stuetzen: string[];
   kriterien: { ar: string; de: string }[];
   zeit_s: number;
+  /** B2 discussion only: unseen objections for the timed pressure round. */
+  einwaende?: MuendlichEinwand[];
 }
 /** 🗣️ مختبر الشفهي — 12 بطاقة: 6 وصف صورة + 6 مناقشة (Modul AA) */
 export const muendlich: MuendlichKarte[] = (muendlichRaw as unknown as { karten: MuendlichKarte[] }).karten;

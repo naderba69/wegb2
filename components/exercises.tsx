@@ -2,7 +2,7 @@
 // عارض التمارين — تصحيح فوري عبر Grader مع التغذية الآنية (Modul S):
 //   💡 مؤشر ثقة حيّ أثناء الكتابة · 🔍 Diff view كلمةً كلمة · 🔁 إعادة محاولة بلا كشف
 // كل هذا يعيش في طبقة التصحيح الموحّدة — فيستفيد كل تمرين في التطبيق دفعةً واحدة.
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Exercise } from "@/lib/types";
 import { grader, deepReview, konfidenz, diffWoerter } from "@/lib/grader";
 import { addFehlerNow, logSicherheitNow } from "@/lib/store";
@@ -11,9 +11,19 @@ import { VertrauensBalken, AntwortDiff } from "./ui";
 import { LehrerDiff } from "./lehrer";
 import { De } from "./De";
 
+export interface ExerciseProgress {
+  checked: number;
+  correct: number;
+  total: number;
+}
+
 interface Props {
   items: Exercise[];
   onPoints?: (points: number, max: number) => void;
+  /** حفظ اختياري لحالة المحاولة عند مغادرة الخطوة والعودة إليها. */
+  storageKey?: string;
+  /** تقرير التقدّم الفعلي، لا مجرد النقر على زرّ. */
+  onProgress?: (progress: ExerciseProgress) => void;
 }
 
 interface ItemState {
@@ -33,8 +43,37 @@ interface ItemState {
 }
 
 /** عارض التمارين — تصحيح فوري عبر Grader (قابل للاستبدال بـ LLM) */
-export default function ExerciseSet({ items, onPoints }: Props) {
+export default function ExerciseSet({ items, onPoints, storageKey, onProgress }: Props) {
   const [states, setStates] = useState<Record<string, ItemState>>({});
+  const [storageReady, setStorageReady] = useState(!storageKey);
+
+  useEffect(() => {
+    if (!storageKey) {
+      setStates({});
+      setStorageReady(true);
+      return;
+    }
+    setStorageReady(false);
+    try {
+      const raw = localStorage.getItem(storageKey);
+      const parsed = raw ? JSON.parse(raw) as Record<string, ItemState> : {};
+      setStates(parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {});
+    } catch {
+      setStates({});
+    }
+    setStorageReady(true);
+  }, [storageKey]);
+
+  useEffect(() => {
+    if (!storageKey || !storageReady) return;
+    try { localStorage.setItem(storageKey, JSON.stringify(states)); } catch { /* تخزينٌ ممتلئ = لا نمسح المحاولة الحالية */ }
+  }, [storageKey, storageReady, states]);
+
+  useEffect(() => {
+    if (!onProgress || !storageReady) return;
+    const done = items.filter((ex) => states[ex.id]?.checked);
+    onProgress({ checked: done.length, correct: done.filter((ex) => states[ex.id]?.correct).length, total: items.length });
+  }, [items, states, onProgress, storageReady]);
 
   const setState = (id: string, s: ItemState) =>
     setStates((prev) => {
@@ -109,15 +148,32 @@ export default function ExerciseSet({ items, onPoints }: Props) {
 
   const getippt = (ex: Exercise) => ex.type === "fill" || ex.type === "dictation" || ex.type === "translate" || ex.type === "umformung";
 
+  const doneN = items.filter((ex) => states[ex.id]?.checked).length;
+
+  if (!storageReady) {
+    return <div className="card" role="status" aria-live="polite">⏳ جارٍ استعادة محاولتك المحفوظة…</div>;
+  }
+
   return (
-    <div style={{ display: "grid", gap: "1rem" }}>
+    <div className="dirb-ex">
+      {items.length > 1 && (
+        <div className="dirb-ex-progress" aria-label="التقدم في التمرين">
+          <div className="dirb-ex-progress-top">
+            <span>التقدّم في التمرين</span>
+            <span className="rtl-num">{doneN}/{items.length}</span>
+          </div>
+          <div className="dirb-ex-bar" role="progressbar" aria-valuenow={doneN} aria-valuemin={0} aria-valuemax={items.length}>
+            <div className="dirb-ex-fill" style={{ width: `${items.length ? Math.round((doneN / items.length) * 100) : 0}%` }} />
+          </div>
+        </div>
+      )}
       {items.map((ex, i) => {
         const st = states[ex.id];
         const liveWert = getippt(ex) && st && !st.checked ? konfidenz(givenOf(st), refOf(ex)) : null;
         return (
           <div
             key={ex.id}
-            className="card"
+            className="card dirb-ex-item"
             style={{
               padding: "1rem 1.1rem",
               borderInlineStart: st?.checked
@@ -145,10 +201,10 @@ export default function ExerciseSet({ items, onPoints }: Props) {
               <div data-testid="sicherheit" style={{ display: "flex", gap: "0.4rem", alignItems: "center", marginBottom: "0.5rem", fontSize: "0.85rem", flexWrap: "wrap" }}>
                 <span style={{ color: "var(--color-ink2)" }}>قبلَ أن تجيب — كم أنت متأكّد؟</span>
                 <button type="button" className="btn btn-ghost" data-testid="sicher-ja" aria-pressed={st?.sicher === true}
-                  style={{ padding: "0.15rem 0.6rem", background: st?.sicher === true ? "var(--color-gold-soft)" : "white" }}
+                  style={{ padding: "0.4rem 0.8rem", minHeight: "44px", background: st?.sicher === true ? "var(--color-gold-soft)" : "transparent", borderColor: st?.sicher === true ? "var(--color-gold)" : undefined }}
                   onClick={() => setState(ex.id, { ...(st ?? emptySt(st)), sicher: true })}>👍 متأكّد</button>
                 <button type="button" className="btn btn-ghost" data-testid="sicher-nein" aria-pressed={st?.sicher === false}
-                  style={{ padding: "0.15rem 0.6rem", background: st?.sicher === false ? "var(--color-gold-soft)" : "white" }}
+                  style={{ padding: "0.4rem 0.8rem", minHeight: "44px", background: st?.sicher === false ? "var(--color-gold-soft)" : "transparent", borderColor: st?.sicher === false ? "var(--color-gold)" : undefined }}
                   onClick={() => setState(ex.id, { ...(st ?? emptySt(st)), sicher: false })}>🤔 غيرُ متأكّد</button>
               </div>
             )}
@@ -159,11 +215,12 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                   return (
                     <button
                       key={opt}
-                      className="btn btn-ghost"
+                      className="btn btn-ghost dirb-ex-opt"
                       style={{
                         justifyContent: "flex-start",
                         textAlign: "start",
-                        background: selected ? "var(--color-gold-soft)" : "white",
+                        background: selected ? "rgb(34 197 94 / 0.14)" : "transparent",
+                        borderColor: selected ? "#22c55e" : undefined,
                         direction: "ltr",
                       }}
                       disabled={st?.checked}
@@ -183,8 +240,8 @@ export default function ExerciseSet({ items, onPoints }: Props) {
                   return (
                     <button
                       key={opt}
-                      className="btn btn-ghost"
-                      style={{ background: selected ? "var(--color-gold-soft)" : "white" }}
+                      className="btn btn-ghost dirb-ex-opt"
+                      style={{ flex: 1, background: selected ? "rgb(34 197 94 / 0.14)" : "transparent", borderColor: selected ? "#22c55e" : undefined }}
                       disabled={st?.checked}
                       onClick={() => setState(ex.id, { ...emptySt(st), response: opt, sicher: st?.sicher })}
                     >

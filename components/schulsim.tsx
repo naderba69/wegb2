@@ -188,7 +188,7 @@ function Antrag({ progress }: { progress: Progress }) {
             {geprueft[4] ? "✓" : "✗"} ⑤ الطول ≥70 كلمة — تحت هذا الحد تفقد النقاط تلقائياً في الامتحان
           </div>
           {geprueft.every(Boolean) && (
-            <div style={{ background: "var(--color-a1)", color: "white", borderRadius: 8, padding: "0.4rem 0.7rem", fontWeight: 900, fontSize: "0.78rem" }} dir="rtl">
+            <div style={{ background: "var(--color-a1)", color: "var(--ui-on-accent)", borderRadius: 8, padding: "0.4rem 0.7rem", fontWeight: 900, fontSize: "0.78rem" }} dir="rtl">
               🎉 طلبك مكتمل البنية — سلّمه لأهلك، فقد حوّلته لورقة منزلية حقيقية.
             </div>
           )}
@@ -263,7 +263,7 @@ function Zeugnis({ progress }: { progress: Progress }) {
           <b>1.</b> Was steht als <span className="de">Note 1</span> — ما درجة «١» في ألمانيا؟
           <div style={{ display: "flex", gap: 6, marginTop: 4, flexWrap: "wrap" }} dir="ltr">
             {["sehr gut", "gut", "nicht bestanden"].map((o, k) => (
-              <button key={o} className="chip" style={{ cursor: "pointer", border: mc === k ? "1.5px solid var(--color-a1)" : "1px solid var(--color-line)", background: mc === k ? "var(--color-a1)" : "white", color: mc === k ? "white" : undefined }} onClick={() => setMc(k)}>{o}</button>
+              <button key={o} className="chip" style={{ cursor: "pointer", border: mc === k ? "1.5px solid var(--color-a1)" : "1px solid var(--color-line)", background: mc === k ? "var(--color-a1)" : "var(--ui-surface-raised)", color: mc === k ? "var(--ui-on-accent)" : undefined }} onClick={() => setMc(k)}>{o}</button>
             ))}
           </div>
         </div>
@@ -362,7 +362,7 @@ function Amtsdeutsch({ progress }: { progress: Progress }) {
                 const istRichtig = j === r.correct;
                 const farbe = gewaehlt === undefined ? undefined : istRichtig ? "var(--color-a1)" : markiert ? "#b91c1c" : undefined;
                 return (
-                  <button key={j} disabled={gewaehlt !== undefined} onClick={() => antworte(k, j)} className="de" style={{ fontSize: "0.72rem", textAlign: "start", borderRadius: 9, padding: "0.3rem 0.55rem", cursor: gewaehlt === undefined ? "pointer" : "default", border: `1px solid ${farbe ?? "var(--color-line)"}`, background: farbe ?? "white", color: farbe ? "white" : undefined, opacity: gewaehlt !== undefined && !istRichtig && !markiert ? 0.55 : 1 }}>
+                  <button key={j} disabled={gewaehlt !== undefined} onClick={() => antworte(k, j)} className="de" style={{ fontSize: "0.72rem", textAlign: "start", borderRadius: 9, padding: "0.3rem 0.55rem", cursor: gewaehlt === undefined ? "pointer" : "default", border: `1px solid ${farbe ?? "var(--color-line)"}`, background: farbe ?? "var(--ui-surface-raised)", color: farbe ? "white" : undefined, opacity: gewaehlt !== undefined && !istRichtig && !markiert ? 0.55 : 1 }}>
                     {o}
                   </button>
                 );
@@ -408,7 +408,7 @@ export function SchulSimulator({ progress }: { progress: Progress }) {
                 ["amt", "🏫 شيفرة المكتب"],
               ] as const
             ).map(([id, label]) => (
-              <button key={id} className="chip" style={{ cursor: "pointer", background: tab === id ? "var(--color-cola)" : "white", color: tab === id ? "white" : undefined }} onClick={() => setTab(id)}>
+              <button key={id} className="chip" style={{ cursor: "pointer", background: tab === id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === id ? "var(--ui-on-accent)" : undefined }} onClick={() => setTab(id)}>
                 {label}
               </button>
             ))}

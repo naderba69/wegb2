@@ -105,10 +105,10 @@ export function HoerLabor({ progress }: { progress: Progress }) {
       )}
 
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
-        <button className="chip" style={{ cursor: "pointer", background: modus === "training" ? "var(--color-cola)" : "white", color: modus === "training" ? "white" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => reset("training")}>🎓 تدريب — مرات بلا حد</button>
-        <button className="chip" style={{ cursor: "pointer", background: modus === "pruefung" ? "var(--color-cola)" : "white", color: modus === "pruefung" ? "white" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => reset("pruefung")}>⚙️ امتحان — استماعة واحدة 🔒</button>
-        <button className="chip" style={{ cursor: "pointer", background: tempo === "lern" ? "var(--color-mid)" : "white", color: tempo === "lern" ? "white" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("lern")}>🐢 {RATE.lern}×</button>
-        <button className="chip" style={{ cursor: "pointer", background: tempo === "pruefung" ? "var(--color-mid)" : "white", color: tempo === "pruefung" ? "white" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("pruefung")}>⚡ {RATE.pruefung}× Prüfungstempo</button>
+        <button className="chip" style={{ cursor: "pointer", background: modus === "training" ? "var(--color-cola)" : "var(--ui-surface-raised)", color: modus === "training" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => reset("training")}>🎓 تدريب — مرات بلا حد</button>
+        <button className="chip" style={{ cursor: "pointer", background: modus === "pruefung" ? "var(--color-cola)" : "var(--ui-surface-raised)", color: modus === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => reset("pruefung")}>⚙️ امتحان — استماعة واحدة 🔒</button>
+        <button className="chip" style={{ cursor: "pointer", background: tempo === "lern" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "lern" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("lern")}>🐢 {RATE.lern}×</button>
+        <button className="chip" style={{ cursor: "pointer", background: tempo === "pruefung" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("pruefung")}>⚡ {RATE.pruefung}× Prüfungstempo</button>
       </div>
 
       {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="auto" />}
@@ -153,7 +153,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
                     <button
                       key={o}
                       className="btn btn-ghost"
-                      style={{ padding: "0.35rem 0.8rem", background: antworten[it.id] === o ? "var(--color-cola)" : "white", color: antworten[it.id] === o ? "white" : undefined, minHeight: "44px" }}
+                      style={{ padding: "0.35rem 0.8rem", background: antworten[it.id] === o ? "var(--color-cola)" : "var(--ui-surface-raised)", color: antworten[it.id] === o ? "var(--ui-on-accent)" : undefined, minHeight: "44px" }}
                       onClick={() => setAntworten((a) => ({ ...a, [it.id]: o }))}
                     >
                       {o}
@@ -260,10 +260,10 @@ export function LueckDiktat({ progress }: { progress: Progress }) {
       {file && <audio ref={audioRef} src={file} preload="auto" />}
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", margin: "0.4rem 0 0.6rem", alignItems: "center" }}>
         {(["B1", "B2"] as const).map((L) => (
-          <button key={L} className="chip" style={{ cursor: "pointer", background: nivel === L ? "var(--color-cola)" : "white", color: nivel === L ? "white" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => { setNivel(L); setNr(0); reset(); }}>🎚 {L}</button>
+          <button key={L} className="chip" style={{ cursor: "pointer", background: nivel === L ? "var(--color-cola)" : "var(--ui-surface-raised)", color: nivel === L ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => { setNivel(L); setNr(0); reset(); }}>🎚 {L}</button>
         ))}
         <button className="btn btn-gold" onClick={abspielen} disabled={!file}>▶️ {plays === 0 ? "استمع" : `إعادة ${plays + 1}`}</button>
-        <button className="chip" style={{ cursor: "pointer", padding: "0.45rem 0.7rem", minHeight: "44px", background: tempo === "lern" ? "var(--color-mid)" : "white", color: tempo === "lern" ? "white" : undefined }} onClick={() => setTempo(tempo === "lern" ? "pruefung" : "lern")}>
+        <button className="chip" style={{ cursor: "pointer", padding: "0.45rem 0.7rem", minHeight: "44px", background: tempo === "lern" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "lern" ? "var(--ui-on-accent)" : undefined }} onClick={() => setTempo(tempo === "lern" ? "pruefung" : "lern")}>
           {tempo === "lern" ? `🐢 ${RATE.lern}×` : `⚡ ${RATE.pruefung}×`}
         </button>
         {!file && <span className="chip">🔇 لا شريطَ لهذا النص — تُركت الوحدةُ عمداً بلا تمرير</span>}

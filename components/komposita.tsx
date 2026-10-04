@@ -73,7 +73,7 @@ export function KompositaWerkstatt({ level, seed, anzahl = 6 }: { level: Level; 
                 onClick={() => antworte(o)}
                 style={{
                   minHeight: "44px", minWidth: "5rem", fontWeight: 800,
-                  background: wahl ? (o === a.article ? "var(--color-ok-soft)" : o === wahl ? "var(--color-cola-soft)" : "white") : "white",
+                  background: wahl ? (o === a.article ? "var(--color-ok-soft)" : o === wahl ? "var(--color-cola-soft)" : "var(--ui-surface-raised)") : "var(--ui-surface-raised)",
                   borderColor: wahl && o === a.article ? "var(--color-ok)" : undefined,
                   color: ART_FARBE[o],
                 }}

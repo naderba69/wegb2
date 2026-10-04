@@ -67,14 +67,14 @@ export default function StationsLeiste({ tasks, step, zielMin }: Props) {
               textAlign: "center",
               borderRadius: "0.65rem",
               border: isActive
-                ? "2px solid var(--color-gold, #d4a017)"
-                : "1px solid var(--color-line, #ddd)",
+                ? "2px solid var(--ui-gold)"
+                : "1px solid var(--ui-border)",
               background: isActive
-                ? "linear-gradient(180deg, #fff7d6 0%, #ffe9a3 100%)"
+                ? "linear-gradient(180deg, rgb(242 200 102 / 0.16), rgb(242 200 102 / 0.06))"
                 : done
-                ? "rgba(76, 145, 65, 0.12)"
-                : "white",
-              boxShadow: isActive ? "0 4px 14px rgba(212,160,23,0.28)" : "none",
+                ? "var(--ui-green-soft)"
+                : "var(--ui-surface-raised)",
+              boxShadow: isActive ? "0 4px 14px rgb(242 200 102 / 0.16)" : "none",
               transform: isActive ? "translateY(-2px)" : "none",
               transition: "all 0.2s ease",
               fontSize: "0.78rem",
