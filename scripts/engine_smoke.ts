@@ -3911,6 +3911,93 @@ void 0;
     "K159c إصلاح غموض الاختيار ومرجع Akkusativ غير السليم، وتوحيد شرح sie المفردة وإزالة التكرار غير المسند");
 }
 
+/* ═══ K160 — R84/R85: تدقيق الدفعة الثانية من قواعد A1 ═══ */
+{
+  type A1Batch2Item = { id: string; kind: string; status: string; sources: string[]; finding: string; action: string };
+  type A1Batch2Source = { id: string; title: string; url: string; supports: string };
+  const audit = JSON.parse(readFileSync("docs/content-review-a1-grammar-02-2026-10-04.json", "utf8")) as {
+    date: string;
+    batch: string;
+    coverage: { grammarTopics: number; grammarExercises: number; grammarVerify: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>;
+    sources: A1Batch2Source[];
+    items: A1Batch2Item[];
+  };
+  const auditMarkdown = readFileSync("docs/content-review-a1-grammar-02-2026-10-04.md", "utf8");
+  const topicIds = ["a1-trennbar", "a1-zahlen", "a1-akkusativ"];
+  const topics = topicIds.map((id) => grammarMap[id]);
+  const expectedIds = topics.flatMap((topic) => [
+    topic.id,
+    ...topic.exercises.map((exercise) => exercise.id),
+    ...(topic.verify ?? []).map((exercise) => exercise.id),
+  ]);
+  const auditIds = audit.items.map((item) => item.id);
+  const auditById = new Map(audit.items.map((item) => [item.id, item]));
+  const exerciseCount = topics.reduce((total, topic) => total + topic.exercises.length, 0);
+  const verifyCount = topics.reduce((total, topic) => total + (topic.verify?.length ?? 0), 0);
+  ok(topics.length === 3 && exerciseCount === 18 && verifyCount === 6 &&
+    audit.date === "2026-10-04" && audit.batch === "A1-grammar-02" &&
+    audit.coverage.grammarTopics === 3 && audit.coverage.grammarExercises === 18 && audit.coverage.grammarVerify === 6 &&
+    expectedIds.length === 27 && new Set(expectedIds).size === 27 && audit.coverage.totalTrackedItems === 27 &&
+    auditIds.length === 27 && new Set(auditIds).size === 27 && expectedIds.every((id) => auditById.has(id)) &&
+    expectedIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
+    "K160a سجل A1-grammar-02 يغطي الموضوعات الثلاثة وكل تمرين/تحقق في JSON وMarkdown بلا فقد أو تكرار");
+
+  const sourceIds = new Set(audit.sources.map((source) => source.id));
+  const statusCounts = audit.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const completeEvidence = audit.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.sources.length > 0 &&
+    item.sources.every((id) => sourceIds.has(id)) && item.finding.trim().length > 0 && item.action.trim().length > 0
+  );
+  const validSources = audit.sources.length === 11 && audit.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://")
+  );
+  const correctedIds = new Set([
+    "a1-trennbar", "g4e3", "a1-trennbar-v1",
+    "a1-zahlen", "g5e2", "g5e4", "a1-zahlen-v2",
+    "a1-akkusativ-u1", "a1-akk-ord1",
+  ]);
+  const expectedStatuses = audit.items.every((item) => item.status === (correctedIds.has(item.id) ? "مُصحح" : "سليم"));
+  ok(completeEvidence && validSources && expectedStatuses &&
+    statusCounts["سليم"] === 18 && statusCounts["مُصحح"] === 9 && !statusCounts["غير محسوم"] &&
+    audit.statusCounts["سليم"] === 18 && audit.statusCounts["مُصحح"] === 9 && audit.statusCounts["غير محسوم"] === 0,
+    "K160b لكل عنصر من الـ27 مصدر ودليل وحكم وإجراء؛ 18 سليم/9 مصحح من دون حالة غير محسومة");
+
+  const getExercise = (topicId: string, id: string) => grammarMap[topicId]?.exercises.find((exercise) => exercise.id === id);
+  const getVerify = (topicId: string, id: string) => grammarMap[topicId]?.verify?.find((exercise) => exercise.id === id);
+  const trennTopic = grammarMap["a1-trennbar"];
+  const trennFill = getExercise("a1-trennbar", "g4e3");
+  const trennVerify = getVerify("a1-trennbar", "a1-trennbar-v1");
+  const zahlenTopic = grammarMap["a1-zahlen"];
+  const dateVerify = getVerify("a1-zahlen", "a1-zahlen-v2");
+  const clockNumeric = getExercise("a1-zahlen", "g5e4");
+  const akkTopic = grammarMap["a1-akkusativ"];
+  const akkTransform = getExercise("a1-akkusativ", "a1-akkusativ-u1");
+  const akkOrder = getExercise("a1-akkusativ", "a1-akk-ord1");
+  ok(!!trennTopic.rules[0]?.de.includes("Im Aussagesatz") &&
+    trennTopic.rules[1]?.de === "Perfekt von aufstehen: Ich bin aufgestanden." &&
+    !!trennTopic.rules[1]?.ar.includes("sein: Ich bin aufgestanden") &&
+    trennVerify?.promptDe === "Ich stehe um 7 Uhr ___. (aufstehen)" &&
+    Array.isArray(trennFill?.answer) && trennFill.answer.join("|") === "fährt ab" &&
+    !!zahlenTopic.pitfalls?.[0]?.de.includes("= 8:30") && !!zahlenTopic.pitfalls?.[0]?.de.includes("nicht 9:30") &&
+    zahlenTopic.summaryAr.includes("في بعض المناطق") && !!dateVerify?.promptDe.includes("Welches Datum ist heute?") &&
+    dateVerify?.answer === "der dritte Oktober" && !!dateVerify?.explanationAr?.includes("am dritten Oktober") &&
+    Array.isArray(clockNumeric?.answer) && clockNumeric.answer.includes("6.10") &&
+    !!auditById.get("g5e4")?.sources.includes("S11") &&
+    getExercise("a1-zahlen", "a1-zahlen-u2")?.answer === "Es ist Viertel vor drei.",
+    "K160c تصحيح Perfekt/الترقيم ومفارقة halb neun، تقييد صيغة الساعة الإقليمية، وتحديد سؤال التاريخ");
+  ok(!!akkTopic.rules[0]?.de.includes("der → den") &&
+    !!akkTransform?.promptDe.includes("Forme den Satz um") && akkTransform?.answer === "Ich habe einen Tisch." &&
+    !!akkOrder && Array.isArray(akkOrder.answer) && akkOrder.answer.join("|") === "Ich|kaufe|einen|Tisch." &&
+    getExercise("a1-akkusativ", "g6e2")?.answer === "eine" &&
+    Array.isArray(getVerify("a1-akkusativ", "a1-akkusativ-v1")?.answer) &&
+    getVerify("a1-akkusativ", "a1-akkusativ-v1")?.answer[0] === "einen",
+    "K160d مهام Akkusativ تُظهر جواباً واحداً واضحاً وتبقى مركزة على الأداة دون إدخال صرف صفة غير مشروح");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

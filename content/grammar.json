@@ -732,8 +732,8 @@
       {
         "id": "a1-trennbar-v1",
         "type": "fill",
-        "promptDe": "Ich stehe um 7 Uhr ___ . (aufstehen)",
-        "text": "Ich stehe um 7 Uhr ___ . (aufstehen)",
+        "promptDe": "Ich stehe um 7 Uhr ___. (aufstehen)",
+        "text": "Ich stehe um 7 Uhr ___. (aufstehen)",
         "answer": [
           "auf"
         ],
@@ -756,15 +756,15 @@
         "points": 2
       }
     ],
-    "summaryAr": "كثير من الألمانية مركّب: البادئة + الفعل. إذا كانت البادئة منفصلة (auf-, an-, ein-, aus-, mit-, zu-, ab-) ينفصل الوهج في الجملة: «aufstehen» → «Ich stehe um 7 Uhr auf». البادئة تذهب لآخر الجملة — وهي «الهدية» التي تنتظرها حتى النهاية!",
+    "summaryAr": "تتكوّن بعض الأفعال الألمانية من بادئة وفعل، مثل aufstehen = auf + stehen. في الجملة الرئيسية البسيطة في المضارع ينفصل الفعل: «Ich stehe um 7 Uhr auf». من البوادئ المنفصلة: auf-, an-, ein-, aus-, mit-, zu-, ab-؛ وتأتي البادئة في نهاية الجملة.",
     "rules": [
       {
-        "de": "Die trennbare Vorsilbe steht am Satzende: Ich stehe um sieben auf.",
-        "ar": "البادئةُ المنفصلةُ تذهبُ إلى آخرِ الجملة — الفعل في الموضع الثاني، البادئة في النهاية — المقطع المنقوص (البادئة) يذهب إلى نهاية الجملة الاسمية"
+        "de": "Im Aussagesatz steht die trennbare Vorsilbe am Satzende: Ich stehe um sieben auf.",
+        "ar": "في الجملة الخبرية البسيطة، يأتي الفعل المصرف في الموضع الثاني وتأتي البادئة المنفصلة في نهاية الجملة."
       },
       {
-        "de": "haben/sein (Perfekt) : aufgestanden",
-        "ar": "في الماضي التام البادئة تعود للفعل: ge…t في المنتصف — مع haben/sein أو لمّ (Perfekt) يعودان معاً: aufgestanden"
+        "de": "Perfekt von aufstehen: Ich bin aufgestanden.",
+        "ar": "في صيغة Partizip II من aufstehen يأتي ge بين البادئة وجذر الفعل، فنقول aufgestanden؛ وفي Perfekt نستخدم sein: Ich bin aufgestanden."
       }
     ],
     "examples": [
@@ -784,7 +784,7 @@
     "pitfalls": [
       {
         "de": "„Ich aufstehe um 7.“ ✗ → „Ich stehe um 7 auf.“ ✓",
-        "ar": "الجملة الاسمية الألمانية: الفعل دائماً في الموضع الثاني!"
+        "ar": "في الجملة الخبرية الألمانية يأتي الفعل المصرف في الموضع الثاني."
       }
     ],
     "exercises": [
@@ -818,10 +818,9 @@
         "promptDe": "Der Zug ___ um 8 Uhr ___. (abfahren)",
         "text": "Der Zug ___ um 8 Uhr ___.",
         "answer": [
-          "fährt ab",
-          "fährt … ab"
+          "fährt ab"
         ],
-        "explanationAr": "الفعل المنفصل: الجذر ثانياً والبادئة في آخر الجملة: fährt … ab. (abfahren: er fährt … ab.)"
+        "explanationAr": "abfahren ينفصل في الجملة الخبرية: Der Zug fährt um 8 Uhr ab."
       },
       {
         "id": "a1-trennbar-u1",
@@ -890,16 +889,16 @@
       {
         "id": "a1-zahlen-v2",
         "type": "translate",
-        "promptDe": "قُل التاريخ: 3 أكتوبر.",
+        "promptDe": "أجب عن السؤال: Welches Datum ist heute? (3 أكتوبر)",
         "answer": "der dritte Oktober",
         "keywords": [
           "dritte",
           "oktober"
         ],
-        "explanationAr": "اليوم ترتيبي: der dritte Oktober."
+        "explanationAr": "إذا كان السؤال Welches Datum ist heute? نقول der dritte Oktober؛ أما مع سؤال Wann? فنقول am dritten Oktober."
       }
     ],
-    "summaryAr": "من 13–19 ينتهي العدد بـ -zehn، ومن 20–90 بوحدات مركّبة: واحد وعشرون = einundzwanzig («واحد» أولاً ثم «و» ثم العشرة!). للساعة: «Es ist ein Uhr» (الواحدة)، أمّا باقي الدقائق فبـ «nach» (بعد) و «vor» (قبل): fünf nach zehn (10:05), zehn vor halb acht (7:20 — حرفياً: عشر دقائق قبل نصف الثامنة!).",
+    "summaryAr": "من 13–19 ينتهي العدد بـ -zehn، ومن 20–90 بوحدات مركّبة: واحد وعشرون = einundzwanzig («واحد» أولاً ثم «و» ثم العشرة!). للساعة: «Es ist ein Uhr» (الواحدة)، أمّا باقي الدقائق فبـ nach (بعد) وvor (قبل): fünf nach zehn (10:05)، وفي بعض المناطق zehn vor halb acht (7:20).",
     "rules": [
       {
         "de": "1–12: eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf",
@@ -934,7 +933,7 @@
     ],
     "pitfalls": [
       {
-        "de": "„halb neun“ ≠ 8:30 ≠ 9:30?",
+        "de": "„halb neun“ = 8:30 (nicht 9:30).",
         "ar": "halb neun = 8:30 بالضبط (قبل التاسعة بـ 30 دقيقة)"
       }
     ],
@@ -958,7 +957,7 @@
         "answer": [
           "siebenundvierzig"
         ],
-        "explanationAr": "47 = الآحاد أولاً ثم und ثم العشرات: sieben-und-vierzig. (47 = sieben-und-vierzig.)"
+        "explanationAr": "في 47 تأتي الآحاد أولاً، ثم und، ثم العشرات: siebenundvierzig، وتُكتب كلمةً واحدة."
       },
       {
         "id": "g5e3",
@@ -981,7 +980,7 @@
           "6.10",
           "06:10"
         ],
-        "explanationAr": "zehn nach sechs = عشر دقائق بعد السادسة = 6:10. (zehn nach sechs = 6:10.)"
+        "explanationAr": "zehn nach sechs تعني عشر دقائق بعد السادسة: 6:10."
       },
       {
         "id": "a1-zahlen-u1",
@@ -1175,7 +1174,7 @@
         "id": "a1-akkusativ-u1",
         "type": "umformung",
         "quelleDe": "Das ist ein Tisch.",
-        "promptDe": "Setze „Ich habe …“ davor.",
+        "promptDe": "Forme den Satz um. Beginne mit: „Ich habe …“.",
         "answer": "Ich habe einen Tisch.",
         "mussEnthalten": [
           "einen tisch"
@@ -1208,10 +1207,10 @@
         "answer": [
           "Ich",
           "kaufe",
-          "einen neuen",
+          "einen",
           "Tisch."
         ],
-        "explanationAr": "مفعول Akkusativ المذكر يأخذ einen: Ich kaufe einen neuen Tisch."
+        "explanationAr": "مع أداة النكرة، يصبح المفعول المذكر einen Tisch: Ich kaufe einen Tisch."
       }
     ]
   },
