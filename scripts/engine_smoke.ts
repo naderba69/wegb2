@@ -3451,6 +3451,20 @@ void 0;
     "K156a مثال schnell→rasch يترجم حركة القطار بسرعة دون تحويلها إلى المغادرة");
 }
 
+/* ═══ K157 — R83: لا تعميمَ لفرق الأسلوب بين schnell وrasch ═══ */
+{
+  const bank = JSON.parse(readFileSync("content/synonyme-kontext.json", "utf8")) as Record<string, Record<string, {
+    basisDe: string; alternativDe: string; nuanceAr: string;
+  }>>;
+  const context = bank.schnell?.rasch;
+  const note = context?.nuanceAr ?? "";
+  ok(!!context && context.basisDe === "Der Zug fährt heute schnell." &&
+    context.alternativDe === "Der Zug fährt heute rasch." &&
+    note.includes("لا يظهر هنا فرقٌ أسلوبيٌّ عام") && note.includes("تراكيب محددة") &&
+    note.includes("لا نعمّم فرق الأسلوب") && !note.includes("أكثر رسمية أو أدبية"),
+    "K157a يقيّد نبرة rasch بسياق المثال ولا يعمم فرقاً أسلوبياً غير موثق");
+}
+
 /* ═══ K136 — R56: خطوةٌ واحدةٌ مرئية، والتفاصيل والأدوات باقيةٌ دون ازدحام ═══ */
 {
   const home = readFileSync("app/page.tsx", "utf8");
