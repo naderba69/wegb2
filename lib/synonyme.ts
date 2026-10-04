@@ -15,11 +15,12 @@ type SynonymKontextBank = Record<string, Record<string, SynonymKontextEintrag>>;
 const bank = raw as SynonymKontextBank;
 
 const norm = (value: string) => value.trim().toLowerCase();
+const bankNachQuelle = new Map(Object.entries(bank).map(([quelle, eintraege]) => [norm(quelle), eintraege]));
 const lemmaVon = (de: string) => norm(de).replace(/^(der|die|das)\s+/i, "");
 
 /** يعيد فقط المرادفات التي لها أمثلة متقابلة وملاحظة سياقية مُنتَجة. */
 export function synonymKontexteFuer(card: VocabCard): { synonym: string; kontext: SynonymKontextEintrag }[] {
-  const kontexte = bank[lemmaVon(card.de)];
+  const kontexte = bankNachQuelle.get(norm(card.de)) ?? bankNachQuelle.get(lemmaVon(card.de));
   if (!kontexte) return [];
   const erlaubteSynonyme = new Set((card.syn ?? []).map(norm));
   return Object.entries(kontexte)

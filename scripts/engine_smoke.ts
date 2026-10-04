@@ -3013,25 +3013,47 @@ void 0;
     const x = entry.kontext;
     return card.syn?.includes(entry.synonym) === true &&
       kollokationenFuer(card).includes(x.basisKollokation) &&
-      x.alternativKollokation.toLowerCase().includes(entry.synonym.toLowerCase()) &&
+      x.alternativKollokation.toLowerCase().includes(entry.synonym.toLowerCase().replace(/^(der|die|das)\s+/, "")) &&
       [x.basisDe, x.alternativDe, x.basisKollokation, x.alternativKollokation].every((s) => !!s.trim() && !arabic.test(s)) &&
       [x.basisAr, x.alternativAr, x.nuanceAr].every((s) => arabic.test(s));
   });
-  ok(synonymKontextAnzahl() === 10 && contextual.length === 10 && valid,
-    `K144a عشر علاقات مرادفة فقط لها متلازمة أصلية ومقابل سياقي وأمثلة ثنائية (سليم ${contextual.length}/10)`);
+  ok(synonymKontextAnzahl() === 20 && contextual.length === 20 && valid,
+    `K144a عشرون علاقة مرادفة فقط لها متلازمة أصلية ومقابل سياقي وأمثلة ثنائية (سليم ${contextual.length}/20)`);
   const beginnenDeck = Object.values(vocabMap).find((deck) => deck.cards.some((card) => card.de === "anfangen"));
   const sehenDeck = Object.values(vocabMap).find((deck) => deck.cards.some((card) => card.de === "sehen"));
+  const freundlichDeck = Object.values(vocabMap).find((deck) => deck.cards.some((card) => card.de === "freundlich"));
   const exportAnfangen = beginnenDeck && exportKarten(beginnenDeck.id).find((card) => card.vorne.toLowerCase().includes("anfangen"));
   const exportSehen = sehenDeck && exportKarten(sehenDeck.id).find((card) => card.vorne.toLowerCase().includes("sehen"));
+  const exportFreundlich = freundlichDeck && exportKarten(freundlichDeck.id).find((card) => card.vorne.toLowerCase().includes("freundlich"));
   ok(!!exportAnfangen && exportAnfangen.synonyme.includes("beginnen") && exportAnfangen.synonyme.includes("↔") &&
-    !!exportSehen && exportSehen.synonyme === "—",
-    "K144b التصدير يعرض المرادف الموثق بسياقه ويحجب المرادف غير المنتج سياقياً");
+    !!exportSehen && exportSehen.synonyme.includes("schauen") && exportSehen.synonyme.includes("↔") &&
+    !!exportFreundlich && exportFreundlich.synonyme === "—",
+    "K144b التصدير يعرض سياق الدفعتين ويحجب مرادفاً لم يُنتج سياقياً");
   const wordUi = readFileSync("components/wortlink.tsx", "utf8");
   const taskUi = readFileSync("components/tasks.tsx", "utf8");
   ok(wordUi.includes('<SynonymKontext karte={karte} testId="wortkarte-syn-context" />') &&
     taskUi.includes('<SynonymKontext karte={card} testId="karte-syn-context" />') &&
     !wordUi.includes("karte.syn!.join") && !taskUi.includes("card.syn.join"),
     "K144c البطاقة المنبثقة ومهمة المفردات تستخدمان عرض السياق ولا تعرضان قائمة syn الخام");
+}
+
+/* ═══ K145 — R71: دفعة السياق الثانية مع إبقاء غير المنتج مخفياً ═══ */
+{
+  const bank = JSON.parse(readFileSync("content/synonyme-kontext.json", "utf8")) as Record<string, Record<string, unknown>>;
+  const expected: Record<string, string> = {
+    sehen: "schauen", holen: "abholen", "das Auto": "der Wagen", "das Wort": "der Ausdruck",
+    "das Problem": "die Schwierigkeit", "die Idee": "der Gedanke", "die Firma": "das Unternehmen",
+    "der Chef": "der Vorgesetzte", höflich: "zuvorkommend", "das Mittagessen": "das Mittagsmahl",
+  };
+  const firstBatch = new Set(["anfangen", "antworten", "helfen", "wohnen", "sprechen", "treffen", "erzählen", "erklären", "schreiben", "sparen"]);
+  const pairs = Object.entries(expected);
+  const valid = pairs.every(([source, target]) => {
+    const card = alleVokabeln.find((item) => item.de === source);
+    return !firstBatch.has(source) && !!card && card.syn?.includes(target) &&
+      !!bank[source]?.[target] && kollokationenFuer(card).includes((bank[source][target] as { basisKollokation: string }).basisKollokation);
+  });
+  ok(pairs.length === 10 && synonymKontextAnzahl() === 20 && valid,
+    `K145a الدفعة الثانية عشر علاقات جديدة موثقة من syn والمتلازمات؛ الإجمالي ${synonymKontextAnzahl()}/70`);
 }
 
 /* ═══ K136 — R56: خطوةٌ واحدةٌ مرئية، والتفاصيل والأدوات باقيةٌ دون ازدحام ═══ */

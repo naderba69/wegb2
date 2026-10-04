@@ -156,8 +156,16 @@ def main() -> None:
             for key in ("basisAr", "alternativAr", "nuanceAr"):
                 assert ARABIC.search(item[key]), f"غياب العربية في {source}/{key}"
 
-    OUT.write_text(json.dumps(BATCH, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"نجح الفحص السابق للكتابة: {sum(map(len, BATCH.values()))} أزواج سياقية، A1/A2، أمثلة ثنائية ومتلازمة المصدر → {OUT}")
+    existing = load_json(str(OUT)) if OUT.exists() else {}
+    merged = {source: dict(alternatives) for source, alternatives in existing.items()}
+    for source, alternatives in BATCH.items():
+        prior = merged.setdefault(source, {})
+        for alt, item in alternatives.items():
+            assert alt not in prior or prior[alt] == item, f"تعارض سياق موجود: {source}→{alt}"
+            prior[alt] = item
+    OUT.write_text(json.dumps(merged, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    total = sum(map(len, merged.values()))
+    print(f"نجح الفحص السابق للكتابة: تحقق {sum(map(len, BATCH.values()))} سياقات من الدفعة 1، الإجمالي {total}/70 → {OUT}")
 
 
 if __name__ == "__main__":

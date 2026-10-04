@@ -2102,6 +2102,19 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(WortKarte, { karte: freundlich, onClose: () => {} }));
     ok(!rootEl.querySelector('[data-testid="wortkarte-syn-context"]') && !(rootEl.textContent ?? "").includes("nett"),
       "LXIX5 المرادف غيرُ المنتج سياقياً يبقى مخزّناً ولا يظهر كبديل عام");
+    const sehen = karteFuerWort("sehen", "A1")!;
+    mount(React.createElement(WortKarte, { karte: sehen, onClose: () => {} }));
+    const sehenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!sehenContext && (sehenContext.textContent ?? "").includes("schauen") &&
+      (sehenContext.textContent ?? "").includes("einen Film im Kino sehen") &&
+      (sehenContext.textContent ?? "").includes("Wir sehen heute Abend"),
+      "LXIX6 مرادف الدفعة الثانية يظهر مع مثالين يحددان استعمال المشاهدة");
+    const auto = karteFuerWort("Auto", "A1")!;
+    mount(React.createElement(WortKarte, { karte: auto, onClose: () => {} }));
+    const autoContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!auto && !!autoContext && (autoContext.textContent ?? "").includes("Wagen") &&
+      (autoContext.textContent ?? "").includes("mit dem Auto fahren"),
+      "LXIX7 البحث عن اسمٍ بأداة التعريف يفتح سياقه الموثق");
   }
 
   /* ═══ LXX — السيناريو يعلن دروسه المطبَّقة (R26) ═══ */
