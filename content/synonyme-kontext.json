@@ -328,5 +328,115 @@
       "alternativAr": "أتناول الغداء اليوم مع أحد الموظفين في المقصف.",
       "nuanceAr": "في مكان العمل قد يشير الاثنان إلى الشخص نفسه؛ Kollege يركّز على علاقة الزمالة، بينما Mitarbeiter يعني موظفاً في المؤسسة وقد يكون تابعاً إدارياً."
     }
+  },
+  "schnell": {
+    "rasch": {
+      "basisKollokation": "schnell fahren",
+      "alternativKollokation": "rasch fahren",
+      "basisDe": "Der Zug fährt heute schnell.",
+      "basisAr": "يسير القطار اليوم بسرعة.",
+      "alternativDe": "Der Zug fährt heute rasch.",
+      "alternativAr": "ينطلق القطار اليوم بسرعة.",
+      "nuanceAr": "في وصف السرعة يتقاربان؛ schnell أشيع ومحايد، أمّا rasch فأكثر رسمية أو أدبية، ولا يتبادلان في كل تركيب."
+    }
+  },
+  "wichtig": {
+    "bedeutsam": {
+      "basisKollokation": "eine wichtige Frage",
+      "alternativKollokation": "eine bedeutsame Frage",
+      "basisDe": "Das ist eine wichtige Frage.",
+      "basisAr": "هذا سؤال مهم.",
+      "alternativDe": "Das ist eine bedeutsame Frage.",
+      "alternativAr": "هذا سؤال ذو أهمية كبيرة.",
+      "nuanceAr": "كلاهما يصف أهمية السؤال؛ bedeutsam أميل إلى الرسمية ويؤكد أن للسؤال دلالة أو أثراً، بينما wichtig أعمّ وأشيع."
+    }
+  },
+  "richtig": {
+    "korrekt": {
+      "basisKollokation": "die richtige Antwort",
+      "alternativKollokation": "die korrekte Antwort",
+      "basisDe": "Das ist die richtige Antwort.",
+      "basisAr": "هذه هي الإجابة الصحيحة.",
+      "alternativDe": "Das ist die korrekte Antwort.",
+      "alternativAr": "هذه هي الإجابة الصحيحة.",
+      "nuanceAr": "في تصحيح إجابة يتقاربان جداً؛ korrekt أرسميّ وأكثر تحديداً لمعيار أو قاعدة، وrichtig أوسع استعمالاً."
+    }
+  },
+  "falsch": {
+    "inkorrekt": {
+      "basisKollokation": "eine falsche Angabe",
+      "alternativKollokation": "eine inkorrekte Angabe",
+      "basisDe": "Die Angabe auf dem Formular ist falsch.",
+      "basisAr": "البيان في الاستمارة غير صحيح.",
+      "alternativDe": "Die Angabe auf dem Formular ist inkorrekt.",
+      "alternativAr": "البيان في الاستمارة غير مطابق للصواب.",
+      "nuanceAr": "في تقييم معلومة أو بيان يتقاربان؛ falsch يومي وأوسع، أمّا inkorrekt فأرسميّ ويشيع عند الحكم على الدقة أو القواعد."
+    }
+  },
+  "leicht": {
+    "einfach": {
+      "basisKollokation": "eine leichte Aufgabe",
+      "alternativKollokation": "eine einfache Aufgabe",
+      "basisDe": "Das ist eine leichte Aufgabe.",
+      "basisAr": "هذه مهمة سهلة.",
+      "alternativDe": "Das ist eine einfache Aufgabe.",
+      "alternativAr": "هذه مهمة بسيطة.",
+      "nuanceAr": "في وصف صعوبة المهمة يتقاربان؛ leicht يركّز على قلة الجهد أو الصعوبة، وeinfach على بساطة الخطوات، وقد تعني leicht أيضاً خفيف الوزن."
+    }
+  },
+  "billig": {
+    "preiswert": {
+      "basisKollokation": "billige Schuhe",
+      "alternativKollokation": "preiswerte Schuhe",
+      "basisDe": "Diese Schuhe sind billig.",
+      "basisAr": "هذه الأحذية رخيصة.",
+      "alternativDe": "Diese Schuhe sind preiswert.",
+      "alternativAr": "سعر هذه الأحذية مناسب قياساً بقيمتها.",
+      "nuanceAr": "كلاهما يتصل بانخفاض السعر؛ billig قد يوحي أيضاً بجودة منخفضة، بينما preiswert يقدّم السعر غالباً على أنه مناسب لما يُنال مقابله."
+    }
+  },
+  "teuer": {
+    "kostspielig": {
+      "basisKollokation": "ein Hotel teuer finden",
+      "alternativKollokation": "ein Hotel kostspielig finden",
+      "basisDe": "Ich finde das Hotel für eine Nacht sehr teuer.",
+      "basisAr": "أجد الفندق باهظاً جداً لليلة واحدة.",
+      "alternativDe": "Ich finde das Hotel für eine Nacht sehr kostspielig.",
+      "alternativAr": "أجد كلفة الفندق مرتفعة جداً لليلة واحدة.",
+      "nuanceAr": "في وصف كلفة الإقامة يتقاربان؛ kostspielig أرسميّ ويركّز على عبء النفقات، أما teuer فأشيع وأوسع."
+    }
+  },
+  "glücklich": {
+    "froh": {
+      "basisKollokation": "glücklich über die Nachricht",
+      "alternativKollokation": "froh über die Nachricht",
+      "basisDe": "Ich bin glücklich über die Nachricht.",
+      "basisAr": "أنا سعيد بهذا الخبر.",
+      "alternativDe": "Ich bin froh über die Nachricht.",
+      "alternativAr": "أنا مسرور بهذا الخبر.",
+      "nuanceAr": "عند الاستجابة لخبر سار يتقاربان؛ glücklich قد يصف سعادة أعمق أو أطول، وfroh كثيراً ما يعبّر عن الارتياح أو السرور بسبب محدد."
+    }
+  },
+  "traurig": {
+    "betrübt": {
+      "basisKollokation": "traurig über den Abschied",
+      "alternativKollokation": "betrübt über den Abschied",
+      "basisDe": "Sie ist traurig über den Abschied.",
+      "basisAr": "هي حزينة بسبب الوداع.",
+      "alternativDe": "Sie ist betrübt über den Abschied.",
+      "alternativAr": "هي مغمومة بسبب الوداع.",
+      "nuanceAr": "في وصف الحزن على الوداع يتقاربان؛ traurig شائع ومحايد، أمّا betrübt فأفصح أو أدبيّ النبرة."
+    }
+  },
+  "müde": {
+    "schläfrig": {
+      "basisKollokation": "müde nach dem Sport",
+      "alternativKollokation": "schläfrig nach dem Sport",
+      "basisDe": "Nach dem Sport bin ich müde.",
+      "basisAr": "أشعر بالتعب بعد الرياضة.",
+      "alternativDe": "Nach dem Sport bin ich schläfrig.",
+      "alternativAr": "أشعر بالنعاس بعد الرياضة.",
+      "nuanceAr": "قد يتقاربان بعد مجهود إذا صاحبه نعاس؛ müde أوسع ويعني التعب، بينما schläfrig يحدد الميل إلى النوم."
+    }
   }
 }

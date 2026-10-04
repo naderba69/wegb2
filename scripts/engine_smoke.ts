@@ -2612,7 +2612,7 @@ void 0;
   ok(nS2 === 608 && nW === 44 && nV === 126 && lies.includes("608") && lies.includes("writing 44"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً`);
   const nKt = J("content/kollokationen.json");
   const nLue = (JSON.parse(readFileSync("content/luecken.json", "utf8")).items as { gaps: unknown[] }[]).reduce((n, it) => n + it.gaps.length, 0);
-  ok(nKt === 2090 && nLue === 216 && lies.includes("2090") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`);
+  ok(nKt === 2100 && nLue === 216 && lies.includes("2100") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`);
 }
 
 
@@ -3017,21 +3017,24 @@ void 0;
       [x.basisDe, x.alternativDe, x.basisKollokation, x.alternativKollokation].every((s) => !!s.trim() && !arabic.test(s)) &&
       [x.basisAr, x.alternativAr, x.nuanceAr].every((s) => arabic.test(s));
   });
-  ok(synonymKontextAnzahl() === 30 && contextual.length === 30 && valid,
-    `K144a ثلاثون علاقة مرادفة فقط لها متلازمة أصلية ومقابل سياقي وأمثلة ثنائية (سليم ${contextual.length}/30)`);
+  ok(synonymKontextAnzahl() === 40 && contextual.length === 40 && valid,
+    `K144a أربعون علاقة مرادفة فقط لها متلازمة أصلية ومقابل سياقي وأمثلة ثنائية (سليم ${contextual.length}/40)`);
   const beginnenDeck = Object.values(vocabMap).find((deck) => deck.cards.some((card) => card.de === "anfangen"));
   const sehenDeck = Object.values(vocabMap).find((deck) => deck.cards.some((card) => card.de === "sehen"));
   const freundlichDeck = Object.values(vocabMap).find((deck) => deck.cards.some((card) => card.de === "freundlich"));
   const kommenDeck = Object.values(vocabMap).find((deck) => deck.cards.some((card) => card.de === "kommen"));
+  const schnellDeck = Object.values(vocabMap).find((deck) => deck.cards.some((card) => card.de === "schnell"));
   const exportAnfangen = beginnenDeck && exportKarten(beginnenDeck.id).find((card) => card.vorne.toLowerCase().includes("anfangen"));
   const exportSehen = sehenDeck && exportKarten(sehenDeck.id).find((card) => card.vorne.toLowerCase().includes("sehen"));
   const exportKommen = kommenDeck && exportKarten(kommenDeck.id).find((card) => card.vorne.toLowerCase().includes("kommen"));
+  const exportSchnell = schnellDeck && exportKarten(schnellDeck.id).find((card) => card.vorne.toLowerCase().includes("schnell"));
   const exportFreundlich = freundlichDeck && exportKarten(freundlichDeck.id).find((card) => card.vorne.toLowerCase().includes("freundlich"));
   ok(!!exportAnfangen && exportAnfangen.synonyme.includes("beginnen") && exportAnfangen.synonyme.includes("↔") &&
     !!exportSehen && exportSehen.synonyme.includes("schauen") && exportSehen.synonyme.includes("↔") &&
     !!exportKommen && exportKommen.synonyme.includes("ankommen") && exportKommen.synonyme.includes("↔") &&
+    !!exportSchnell && exportSchnell.synonyme.includes("rasch") && exportSchnell.synonyme.includes("↔") &&
     !!exportFreundlich && exportFreundlich.synonyme === "—",
-    "K144b التصدير يعرض سياقات الدفعات الثلاث ويحجب مرادفاً لم يُنتج سياقياً");
+    "K144b التصدير يعرض سياقات الدفعات الأربع ويحجب مرادفاً لم يُنتج سياقياً");
   const wordUi = readFileSync("components/wortlink.tsx", "utf8");
   const taskUi = readFileSync("components/tasks.tsx", "utf8");
   ok(wordUi.includes('<SynonymKontext karte={karte} testId="wortkarte-syn-context" />') &&
@@ -3081,8 +3084,63 @@ void 0;
       kollokationenFuer(card).includes(context.basisKollokation);
   });
   const rawCount = Object.values(rawSyn).reduce((sum, alternatives) => sum + alternatives.length, 0);
-  ok(pairs.length === 10 && synonymKontextAnzahl() === 30 && rawCount === 70 && valid,
-    `K146a الدفعة الثالثة عشر علاقات A1/A2 موثقة، وبنك syn الخام بقي 70؛ الإجمالي السياقي ${synonymKontextAnzahl()}/70`);
+  ok(pairs.length === 10 && synonymKontextAnzahl() >= 30 && rawCount === 70 && valid,
+    `K146a الدفعة الثالثة محفوظة بعشر علاقات A1/A2 موثقة، وبنك syn الخام بقي 70؛ الإجمالي السياقي ${synonymKontextAnzahl()}/70`);
+}
+
+/* ═══ K147 — R73: متلازمات مساندة فريدة للبطاقات A1 التي لم تكن مغطاة ═══ */
+{
+  const expected: Record<string, string[]> = {
+    "vx-haus--085": ["schnell fahren", "schnell schreiben"],
+    "vx-haus--082": ["eine wichtige Frage", "eine wichtige Nachricht"],
+    "vx-haus--078": ["die richtige Antwort", "das richtige Ergebnis"],
+    "vx-haus--079": ["eine falsche Antwort", "eine falsche Angabe"],
+    "vx-haus--081": ["eine leichte Aufgabe", "eine leichte Frage"],
+    "vw-a1koe-037": ["billige Schuhe", "billiges Essen"],
+    "vw-a1koe-038": ["teuer werden", "ein Hotel teuer finden"],
+    "vy-natur-039": ["glücklich über die Nachricht", "glücklich über den Erfolg"],
+    "vy-natur-040": ["traurig über den Abschied", "traurig nach der Absage"],
+    "vw-a1koe-017": ["müde nach dem Sport", "am Abend müde"],
+  };
+  const ids = new Map(alleVokabeln.map((card) => [card.id, card]));
+  const entries = Object.entries(expected);
+  const added = entries.flatMap(([, phrases]) => phrases);
+  const core = require("../content/kollok-a1a2-soll.json") as { A1: { karten: { id: string }[] } };
+  const valid = entries.every(([id, phrases]) => {
+    const card = ids.get(id);
+    return !!card && card.level === "A1" && JSON.stringify(kollokationen[id]) === JSON.stringify(phrases) &&
+      !core.A1.karten.some((item) => item.id === id) && phrases.every((phrase) => !!partnerWort(card, phrase));
+  });
+  const all = Object.values(kollokationen).flat();
+  ok(entries.length === 10 && added.length === 20 && Object.keys(kollokationen).length === 2100 &&
+    new Set(added).size === 20 && new Set(all).size === all.length && valid,
+    `K147a عشر بطاقات A1 غير مغطاة أُضيف لكل منها زوج متلازمات فريد قابل للتدريب؛ البنك ${Object.keys(kollokationen).length} بطاقة`);
+}
+
+/* ═══ K148 — R74: الدفعة الرابعة؛ syn الخام ثابت وغير المنتج مخفي ═══ */
+{
+  const bank = JSON.parse(readFileSync("content/synonyme-kontext.json", "utf8")) as Record<string, Record<string, unknown>>;
+  const rawSyn = JSON.parse(readFileSync("content/synonyme.json", "utf8")) as Record<string, string[]>;
+  const expected: Record<string, string> = {
+    schnell: "rasch", wichtig: "bedeutsam", richtig: "korrekt", falsch: "inkorrekt", leicht: "einfach",
+    billig: "preiswert", teuer: "kostspielig", glücklich: "froh", traurig: "betrübt", müde: "schläfrig",
+  };
+  const earlier = new Set([
+    "anfangen", "antworten", "helfen", "wohnen", "sprechen", "treffen", "erzählen", "erklären", "schreiben", "sparen",
+    "sehen", "holen", "das Auto", "das Wort", "das Problem", "die Idee", "die Firma", "der Chef", "höflich", "das Mittagessen",
+    "kommen", "sagen", "verstehen", "bezahlen", "finden", "reisen", "besuchen", "die Arbeit", "der Brief", "der Kollege",
+  ]);
+  const pairs = Object.entries(expected);
+  const valid = pairs.every(([source, target]) => {
+    const card = alleVokabeln.find((item) => item.de.toLowerCase() === source);
+    const context = bank[source]?.[target] as { basisKollokation?: string } | undefined;
+    return !earlier.has(source) && !!card && card.level === "A1" && card.syn?.includes(target) === true &&
+      rawSyn[source]?.includes(target) === true && !!context?.basisKollokation &&
+      kollokationenFuer(card).includes(context.basisKollokation);
+  });
+  const rawCount = Object.values(rawSyn).reduce((sum, alternatives) => sum + alternatives.length, 0);
+  ok(pairs.length === 10 && synonymKontextAnzahl() === 40 && rawCount === 70 && valid,
+    `K148a عشر علاقات A1 جديدة موثقة؛ syn بقي 70 والسياقات ${synonymKontextAnzahl()}/70`);
 }
 
 /* ═══ K136 — R56: خطوةٌ واحدةٌ مرئية، والتفاصيل والأدوات باقيةٌ دون ازدحام ═══ */

@@ -2128,6 +2128,19 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!brief && !!briefContext && (briefContext.textContent ?? "").includes("Schreiben") &&
       (briefContext.textContent ?? "").includes("einen Brief bekommen"),
       "LXIX9 اسم ذو أداة تعريف في الدفعة الثالثة يحافظ على سياق الرسالة الرسمية");
+    const schnell = karteFuerWort("schnell", "A1")!;
+    mount(React.createElement(WortKarte, { karte: schnell, onClose: () => {} }));
+    const schnellContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!schnellContext && (schnellContext.textContent ?? "").includes("rasch") &&
+      (schnellContext.textContent ?? "").includes("schnell fahren") &&
+      (schnellContext.textContent ?? "").includes("Der Zug fährt heute schnell"),
+      "LXIX10 مرادف سريع يظهر مع متلازمة الأساس ومثالَي السياق");
+    const leicht = karteFuerWort("leicht", "A1")!;
+    mount(React.createElement(WortKarte, { karte: leicht, onClose: () => {} }));
+    const leichtContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!leicht && !!leichtContext && (leichtContext.textContent ?? "").includes("einfach") &&
+      (leichtContext.textContent ?? "").includes("eine leichte Aufgabe"),
+      "LXIX11 سياق الصفات الجديدة يظهر في البطاقة المنبثقة");
   }
 
   /* ═══ LXX — السيناريو يعلن دروسه المطبَّقة (R26) ═══ */
