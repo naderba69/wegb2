@@ -130,9 +130,11 @@ def main() -> None:
     current = load_json(str(OUT))
     current_count = sum(len(items) for items in current.values())
     assert len(BATCH) == 10 and sum(len(items) for items in BATCH.values()) == 10, "يجب أن تضم الدفعة الثانية عشر علاقات بالضبط"
-    already_applied = current_count == BEFORE + 10 and all(current.get(source, {}).get(target) == item for source, alternatives in BATCH.items() for target, item in alternatives.items())
-    assert current_count == BEFORE or already_applied, f"تغيّر أساس البنك: المتوقّع {BEFORE} علاقة قبل الدفعة أو {BEFORE + 10} بعدها، الموجود {current_count}"
-    if not already_applied:
+    already_applied = all(current.get(source, {}).get(target) == item for source, alternatives in BATCH.items() for target, item in alternatives.items())
+    if already_applied:
+        assert current_count >= BEFORE + 10, f"الدفعة الثانية موجودة لكن عدد البنك غير منطقي: {current_count}"
+    else:
+        assert current_count == BEFORE, f"تغيّر أساس البنك: المتوقّع {BEFORE} علاقة قبل الدفعة، الموجود {current_count}"
         assert not set(BATCH).intersection(current), "مصدر مكرر بين الدفعتين"
 
     vocab = load_json("content/vocab.json")

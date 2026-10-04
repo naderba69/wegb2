@@ -2115,6 +2115,19 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!auto && !!autoContext && (autoContext.textContent ?? "").includes("Wagen") &&
       (autoContext.textContent ?? "").includes("mit dem Auto fahren"),
       "LXIX7 البحث عن اسمٍ بأداة التعريف يفتح سياقه الموثق");
+    const kommen = karteFuerWort("kommen", "A1")!;
+    mount(React.createElement(WortKarte, { karte: kommen, onClose: () => {} }));
+    const kommenContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!kommenContext && (kommenContext.textContent ?? "").includes("ankommen") &&
+      (kommenContext.textContent ?? "").includes("nach Hause kommen") &&
+      (kommenContext.textContent ?? "").includes("Wir kommen heute gegen acht"),
+      "LXIX8 علاقة kommen/ankommen معروضة في سياق الوصول المحدد لا كبديل عام");
+    const brief = karteFuerWort("Brief", "A1")!;
+    mount(React.createElement(WortKarte, { karte: brief, onClose: () => {} }));
+    const briefContext = rootEl.querySelector('[data-testid="wortkarte-syn-context"]');
+    ok(!!brief && !!briefContext && (briefContext.textContent ?? "").includes("Schreiben") &&
+      (briefContext.textContent ?? "").includes("einen Brief bekommen"),
+      "LXIX9 اسم ذو أداة تعريف في الدفعة الثالثة يحافظ على سياق الرسالة الرسمية");
   }
 
   /* ═══ LXX — السيناريو يعلن دروسه المطبَّقة (R26) ═══ */

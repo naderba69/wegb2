@@ -218,5 +218,115 @@
       "alternativAr": "نذهب عند الثانية عشرة إلى وجبة الظهيرة.",
       "nuanceAr": "يدلان هنا على وجبة منتصف النهار، لكن Mittagsmahl أندر وأفخم أو أدبيّ النبرة؛ في الحديث اليومي يُفضَّل Mittagessen."
     }
+  },
+  "kommen": {
+    "ankommen": {
+      "basisKollokation": "nach Hause kommen",
+      "alternativKollokation": "zu Hause ankommen",
+      "basisDe": "Wir kommen heute gegen acht nach Hause.",
+      "basisAr": "نعود إلى المنزل اليوم نحو الساعة الثامنة.",
+      "alternativDe": "Wir kommen heute gegen acht zu Hause an.",
+      "alternativAr": "نصل إلى المنزل اليوم نحو الساعة الثامنة.",
+      "nuanceAr": "في سياق الوصول إلى المنزل يتقاربان؛ kommen أوسع، أمّا ankommen فيركّز على بلوغ الوجهة، وهو فعل منفصل (kommen … an). لا يتبادلان في كل استعمال."
+    }
+  },
+  "sagen": {
+    "mitteilen": {
+      "basisKollokation": "die Wahrheit sagen",
+      "alternativKollokation": "jemandem die Wahrheit mitteilen",
+      "basisDe": "Mina sagt ihrer Freundin die Wahrheit.",
+      "basisAr": "تقول مينا لصديقتها الحقيقة.",
+      "alternativDe": "Mina teilt ihrer Freundin die Wahrheit mit.",
+      "alternativAr": "تُبلغ مينا صديقتها بالحقيقة.",
+      "nuanceAr": "في هذا السياق كلاهما لإيصال الحقيقة؛ sagen أعمّ وأشيع، بينما mitteilen يركّز على نقل معلومة وقد يبدو أرسميّاً، وهو فعل منفصل (teilt … mit)."
+    }
+  },
+  "verstehen": {
+    "begreifen": {
+      "basisKollokation": "alles verstehen",
+      "alternativKollokation": "alles begreifen",
+      "basisDe": "Nach der Erklärung verstehe ich endlich alles.",
+      "basisAr": "بعد الشرح أفهم أخيراً كل شيء.",
+      "alternativDe": "Nach der Erklärung begreife ich endlich alles.",
+      "alternativAr": "بعد الشرح أستوعب أخيراً كل شيء.",
+      "nuanceAr": "في سياق فهم الشرح يتقاربان؛ verstehen أعمّ، بينما begreifen يبرز الاستيعاب الذهني وقد يبدو أقوى تأكيداً."
+    }
+  },
+  "bezahlen": {
+    "begleichen": {
+      "basisKollokation": "bar bezahlen",
+      "alternativKollokation": "eine Rechnung bar begleichen",
+      "basisDe": "Ich bezahle die Rechnung bar.",
+      "basisAr": "أدفع الفاتورة نقداً.",
+      "alternativDe": "Ich begleiche die Rechnung bar.",
+      "alternativAr": "أسدّد الفاتورة نقداً.",
+      "nuanceAr": "عند تسديد فاتورة يتقاربان؛ bezahlen أوسع ويصلح للمشتريات عموماً، أمّا begleichen فيعني تسوية مبلغ أو دين مستحق، فلا يُستعمل بديلاً عاماً."
+    }
+  },
+  "finden": {
+    "entdecken": {
+      "basisKollokation": "den Weg finden",
+      "alternativKollokation": "einen neuen Weg entdecken",
+      "basisDe": "Beim Wandern finden wir einen neuen Weg zum See.",
+      "basisAr": "نعثر أثناء التنزه على مسار جديد إلى البحيرة.",
+      "alternativDe": "Beim Wandern entdecken wir einen neuen Weg zum See.",
+      "alternativAr": "نكتشف أثناء التنزه مساراً جديداً إلى البحيرة.",
+      "nuanceAr": "هنا فقط، عند العثور على مسار غير معروف للمتحدث، يتقاربان؛ finden أوسع وقد يعني تحديد مكان شيء، أمّا entdecken فيضيف معنى اكتشاف الجديد."
+    }
+  },
+  "reisen": {
+    "verreisen": {
+      "basisKollokation": "nach Tunesien reisen",
+      "alternativKollokation": "nach Tunesien verreisen",
+      "basisDe": "Wir reisen im Juli nach Tunesien.",
+      "basisAr": "نسافر إلى تونس في يوليو.",
+      "alternativDe": "Wir verreisen im Juli nach Tunesien.",
+      "alternativAr": "نغادر في رحلة إلى تونس في يوليو.",
+      "nuanceAr": "في سياق رحلة إلى وجهة يتقاربان؛ verreisen يبرز مغادرة مكان الإقامة في رحلة، غالباً للراحة، أمّا reisen فأوسع ولا يعني دائماً إجازة."
+    }
+  },
+  "besuchen": {
+    "aufsuchen": {
+      "basisKollokation": "die Großeltern besuchen",
+      "alternativKollokation": "die Großeltern aufsuchen",
+      "basisDe": "Am Sonntag besuchen wir unsere Großeltern.",
+      "basisAr": "نزور جدّينا يوم الأحد.",
+      "alternativDe": "Am Sonntag suchen wir unsere Großeltern auf.",
+      "alternativAr": "نتوجّه لزيارة جدّينا يوم الأحد.",
+      "nuanceAr": "في هذا المثال يمكن أن يصفا الذهاب إليهما؛ besuchen محايد وشائع للزيارة، أمّا aufsuchen فأكثر رسمية ويؤكد قصد التوجّه إلى شخص أو مكان."
+    }
+  },
+  "die Arbeit": {
+    "der Job": {
+      "basisKollokation": "die Arbeit beginnt um acht",
+      "alternativKollokation": "der Job beginnt um acht",
+      "basisDe": "Meine Arbeit beginnt morgen um acht Uhr.",
+      "basisAr": "يبدأ عملي غداً الساعة الثامنة.",
+      "alternativDe": "Mein Job beginnt morgen um acht Uhr.",
+      "alternativAr": "يبدأ دوامي في الوظيفة غداً الساعة الثامنة.",
+      "nuanceAr": "في سياق وقت بدء الدوام يتقاربان؛ Arbeit أوسع وتشمل العمل أو الوظيفة، أمّا Job فأشيع للوظيفة المدفوعة وهو أكثر يومية."
+    }
+  },
+  "der Brief": {
+    "das Schreiben": {
+      "basisKollokation": "einen Brief bekommen",
+      "alternativKollokation": "ein Schreiben bekommen",
+      "basisDe": "Ich habe gestern einen Brief von der Versicherung bekommen.",
+      "basisAr": "تلقيت أمس رسالةً من شركة التأمين.",
+      "alternativDe": "Ich habe gestern ein Schreiben von der Versicherung bekommen.",
+      "alternativAr": "تلقيت أمس خطاباً رسمياً من شركة التأمين.",
+      "nuanceAr": "عند تلقي مراسلة يتقاربان؛ Brief لفظ عام للرسالة، أمّا Schreiben فيوحي غالباً بخطاب أو وثيقة رسمية."
+    }
+  },
+  "der Kollege": {
+    "der Mitarbeiter": {
+      "basisKollokation": "mit dem Kollegen essen",
+      "alternativKollokation": "mit dem Mitarbeiter essen",
+      "basisDe": "Heute esse ich mit meinem Kollegen in der Kantine.",
+      "basisAr": "أتناول الغداء اليوم مع زميلي في المقصف.",
+      "alternativDe": "Heute esse ich mit einem Mitarbeiter in der Kantine.",
+      "alternativAr": "أتناول الغداء اليوم مع أحد الموظفين في المقصف.",
+      "nuanceAr": "في مكان العمل قد يشير الاثنان إلى الشخص نفسه؛ Kollege يركّز على علاقة الزمالة، بينما Mitarbeiter يعني موظفاً في المؤسسة وقد يكون تابعاً إدارياً."
+    }
   }
 }
