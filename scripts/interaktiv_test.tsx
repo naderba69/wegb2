@@ -3182,6 +3182,81 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ XCIII — الحوارات A1 19–21: الترجمة المصححة والمسائل المفتوحة ومفاتيح الواجهة ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 7, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    const cases: {
+      id: string;
+      titleDe: string;
+      titleAr: string;
+      visible: string[];
+      questions: { type: "mc" | "truefalse" | "fill"; prompt: string; answer: string }[];
+    }[] = [
+      {
+        id: "d-a1-19", titleDe: "Frühstück in der Familie", titleAr: "فطور في العائلة",
+        visible: ["هل توجد فاكهة أيضاً؟ أريد موزة.", "Gibt es auch Obst? Ich möchte eine Banane.", "Was gibt es zum Mittagessen?"],
+        questions: [
+          { type: "mc", prompt: "Was gibt es zum Mittagessen?", answer: "Reis mit Gemüse" },
+          { type: "mc", prompt: "Wo ist das Salz?", answer: "auf dem Tisch, neben der Katze" },
+          { type: "truefalse", prompt: "Die Familie backt heute Abend einen Kuchen.", answer: "richtig" },
+        ],
+      },
+      {
+        id: "d-a1-20", titleDe: "Ein Termin im Kalender", titleAr: "موعد في التقويم",
+        visible: ["Also übermorgen. Und die Uhrzeit?", "إذن بعد غد. والساعة؟", "Vorgestern, am Montag."],
+        questions: [
+          { type: "mc", prompt: "Wann ist der Termin mit der Firma Berger?", answer: "am Donnerstag um Punkt zwölf" },
+          { type: "mc", prompt: "Wie lange war der letzte Termin?", answer: "nur eine Stunde" },
+          { type: "fill", prompt: "Das Datum ist der 28. ___.", answer: "März" },
+        ],
+      },
+      {
+        id: "d-a1-21", titleDe: "In der Schule", titleAr: "في المدرسة",
+        visible: ["Brauchen wir das Heft oder ein Papier?", "Das Heft, bitte. Und einen blauen Stift, keinen Bleistift.", "هل نحتاج الدفتر أم ورقة؟"],
+        questions: [
+          { type: "mc", prompt: "Womit schreiben die Schüler das Diktat?", answer: "mit einem blauen Stift ins Heft" },
+          { type: "mc", prompt: "Wie oft liest die Lehrerin jeden Satz?", answer: "zweimal" },
+          { type: "truefalse", prompt: "Die Pause dauert zehn Minuten.", answer: "richtig" },
+        ],
+      },
+    ];
+    for (const item of cases) {
+      const cleanup = mount(React.createElement(TaskView, {
+        task: { id: `t-${item.id}-review-ui-07`, kind: "hoeren" as const, dialogueId: item.id, titleDe: item.titleDe, titleAr: item.titleAr, minutes: 10 },
+        ...props,
+      }));
+      const reveal = btn("أظهر النص");
+      if (reveal) click(reveal);
+      const rendered = txt();
+      ok(!!reveal && item.visible.every((snippet) => rendered.includes(snippet)),
+        `XCIII1 ${item.id} الواجهة تعرض الترجمة الحية والسطر/المسألة المفتوحة بعد كشف النص`);
+
+      let allAnswersAccepted = true;
+      for (const question of item.questions) {
+        const exercise = Array.from(rootEl.querySelectorAll(".dirb-ex-item"))
+          .find((node) => (node.textContent ?? "").includes(question.prompt));
+        if (!exercise) { allAnswersAccepted = false; continue; }
+        let answerControl: HTMLElement | null = null;
+        if (question.type === "fill") {
+          answerControl = exercise.querySelector("input.field") as HTMLInputElement | null;
+          if (answerControl) typeIn(answerControl as HTMLInputElement, question.answer);
+        } else {
+          answerControl = (Array.from(exercise.querySelectorAll(".dirb-ex-opt"))
+            .find((option) => (option.textContent ?? "").trim() === question.answer) as HTMLElement | undefined) ?? null;
+          if (answerControl) click(answerControl);
+        }
+        const check = Array.from(exercise.querySelectorAll("button"))
+          .find((button) => (button.textContent ?? "").includes("تحقّق")) as HTMLElement | undefined;
+        if (!answerControl || !check) { allAnswersAccepted = false; continue; }
+        click(check);
+        if (!(exercise.textContent ?? "").includes("✅")) allAnswersAccepted = false;
+      }
+      ok(allAnswersAccepted, `XCIII2 ${item.id} مفاتيح الأسئلة الثلاثة تُقبل في واجهة الاستماع الفعلية`);
+      if (cleanup) cleanup();
+    }
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

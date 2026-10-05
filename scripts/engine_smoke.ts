@@ -5176,6 +5176,157 @@ void 0;
     "K171f الصياغة المحايدة متزامنة بين الدرس وبنك التركات والمولّد والعناوين؛ لا تعميم غير مسند على العرب");
 }
 
+/* ═══ K172 — R98: تدقيق الحوارات A1 d-a1-19–21 بالمصادر والبيانات الحية ═══ */
+{
+  type DialogueAuditItem07 = {
+    id: string; kind: string; status: string; sources: string[]; finding: string; action: string;
+    reviewed: Record<string, any>; before?: Record<string, any>;
+  };
+  type DialogueAuditSource07 = { id: string; title: string; url: string; supports: string };
+  const audit07 = JSON.parse(readFileSync("docs/content-review-a1-dialogues-07-2026-10-05.json", "utf8")) as {
+    date: string; batch: string; scope: string; method: string;
+    coverage: {
+      dialogues: number; dialogueMetadata: number; lines: number; questions: number;
+      dictationSentences: number; unresolvedLevelNotes: number; unresolvedContextNotes: number; totalTrackedItems: number;
+    };
+    statusCounts: Record<string, number>; statusDefinitions: Record<string, string>; limitations: string[];
+    sources: DialogueAuditSource07[];
+    historicalPatchReview: { file: string; role: string; usageCheck: string; comparisons: unknown[] };
+    patch: { file: string; preflight: string; fieldsChanged: number; correctedItemIds: string[]; changes: string[] };
+    items: DialogueAuditItem07[];
+  };
+  const auditMarkdown07 = readFileSync("docs/content-review-a1-dialogues-07-2026-10-05.md", "utf8");
+  type LiveDialogue07 = {
+    id: string; level: string; titleDe: string; titleAr: string; waisen: string[];
+    lines: { who: string; de: string; ar: string }[];
+    questions: { id: string; type: string; promptDe: string; options?: string[]; answer: string | string[];
+      promptAr: string; explanationAr: string; falle?: boolean }[];
+    dictation: string[];
+  };
+  const liveBatch07 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as LiveDialogue07[];
+  const batchIds07 = ["d-a1-19", "d-a1-20", "d-a1-21"];
+  const completeBatch07 = batchIds07.map((id) => liveBatch07.find((dialogue) => dialogue.id === id));
+  const validBatch07 = completeBatch07.every((dialogue) => !!dialogue && dialogue.level === "A1")
+    ? completeBatch07 as NonNullable<typeof completeBatch07[number]>[] : [];
+  const expectedIds07 = validBatch07.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question) => question.id),
+    ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const auditIds07 = audit07.items.map((item) => item.id);
+  const auditById07 = new Map(audit07.items.map((item) => [item.id, item]));
+  const auditSection07 = auditMarkdown07.split("## سجل المراجعة بنداً بنداً")[1]?.split("## المصادر المنشورة")[0] ?? "";
+  const markdownRowsUnique07 = expectedIds07.every((id) =>
+    auditSection07.split("\n").filter((line) => line.startsWith(`| ${id} |`)).length === 1
+  );
+  ok(validBatch07.length === 3 && validBatch07.every((dialogue) => dialogue.lines.length === 8 &&
+      dialogue.questions.length === 3 && dialogue.dictation.length === 2) &&
+    expectedIds07.length === 42 && new Set(expectedIds07).size === 42 &&
+    JSON.stringify(expectedIds07) === JSON.stringify(auditIds07) && markdownRowsUnique07 &&
+    audit07.date === "2026-10-05" && audit07.batch === "A1-dialogues-07" &&
+    audit07.coverage.dialogues === 3 && audit07.coverage.dialogueMetadata === 3 && audit07.coverage.lines === 24 &&
+    audit07.coverage.questions === 9 && audit07.coverage.dictationSentences === 6 &&
+    audit07.coverage.unresolvedLevelNotes === 0 && audit07.coverage.unresolvedContextNotes === 3 &&
+    audit07.coverage.totalTrackedItems === 42 &&
+    batchIds07.every((id) => audit07.scope.includes(id)),
+    "K172a تقرير R98 وMarkdown يغطيان المعرفات الـ42 بالترتيب: 3 بيانات حوار و24 سطراً و9 أسئلة و6 إملاءات");
+
+  const sourceIds07 = new Set(audit07.sources.map((source) => source.id));
+  const referencedSources07 = new Set(audit07.items.flatMap((item) => item.sources));
+  const computedStatuses07 = audit07.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const correctedIds07 = new Set(["d-a1-19.lines[1]"]);
+  const unresolvedIds07 = new Set(["d-a1-20.lines[1]", "d-a1-20.lines[2]", "d-a1-21.lines[1]"]);
+  const expectedStatuses07 = audit07.items.every((item) =>
+    item.status === (correctedIds07.has(item.id) ? "مُصحح" : unresolvedIds07.has(item.id) ? "غير محسوم" : "سليم")
+  );
+  const completeEvidence07 = audit07.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.kind.trim().length > 0 &&
+    item.sources.length > 0 && item.sources.every((id) => sourceIds07.has(id)) &&
+    item.finding.trim().length > 0 && item.action.trim().length > 0 && !!item.reviewed
+  );
+  const completeSources07 = audit07.sources.length === 65 && sourceIds07.size === 65 && audit07.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://") &&
+    auditMarkdown07.includes(`<a id="${source.id.toLowerCase()}"></a>${source.id}`)
+  ) && referencedSources07.size === audit07.sources.length && audit07.sources.every((source) => referencedSources07.has(source.id));
+  ok(completeEvidence07 && completeSources07 && expectedStatuses07 &&
+    computedStatuses07["سليم"] === 38 && computedStatuses07["مُصحح"] === 1 && computedStatuses07["غير محسوم"] === 3 &&
+    audit07.statusCounts["سليم"] === 38 && audit07.statusCounts["مُصحح"] === 1 && audit07.statusCounts["غير محسوم"] === 3 &&
+    audit07.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&
+    audit07.statusDefinitions["غير محسوم"].includes("لم تُعدّل"),
+    "K172b لكل بند دليل وحكم وإجراء ومصدر؛ 65 مصدراً مستخدماً، مع فصل تصحيح واحد عن ثلاث مسائل غير محسومة");
+
+  const snapshotsMatch07 = audit07.items.every((item) => {
+    const metadata = item.reviewed;
+    const dialogue = validBatch07.find((candidate) => candidate.id === item.id || item.id.startsWith(`${candidate.id}.`) ||
+      candidate.questions.some((question) => question.id === item.id));
+    if (!dialogue) return false;
+    if (item.id === dialogue.id) {
+      return metadata.titleDe === dialogue.titleDe && metadata.titleAr === dialogue.titleAr &&
+        metadata.level === dialogue.level && JSON.stringify(metadata.waisen) === JSON.stringify(dialogue.waisen);
+    }
+    const lineMatch = item.id.match(/\.lines\[(\d+)\]$/);
+    if (lineMatch) {
+      const line = dialogue.lines[Number(lineMatch[1])];
+      return !!line && metadata.who === line.who && metadata.de === line.de && metadata.ar === line.ar;
+    }
+    const dictationMatch = item.id.match(/\.dictation\[(\d+)\]$/);
+    if (dictationMatch) return metadata.sentence === dialogue.dictation[Number(dictationMatch[1])];
+    const question = dialogue.questions.find((candidate) => candidate.id === item.id);
+    return !!question && metadata.type === question.type && metadata.promptDe === question.promptDe &&
+      JSON.stringify(metadata.options) === JSON.stringify(question.options) &&
+      JSON.stringify(metadata.answer) === JSON.stringify(question.answer) &&
+      metadata.promptAr === question.promptAr && metadata.explanationAr === question.explanationAr &&
+      metadata.falle === question.falle;
+  });
+  const corrected07 = auditById07.get("d-a1-19.lines[1]");
+  const correctedDialogue07 = validBatch07.find((dialogue) => dialogue.id === "d-a1-19");
+  const unresolvedCalendar07 = auditById07.get("d-a1-20.lines[1]");
+  const unresolvedTimeline07 = auditById07.get("d-a1-20.lines[2]");
+  const unresolvedPaper07 = auditById07.get("d-a1-21.lines[1]");
+  const liveTimeline07 = validBatch07.find((dialogue) => dialogue.id === "d-a1-20");
+  ok(snapshotsMatch07 && corrected07?.status === "مُصحح" &&
+    corrected07.before?.ar === "هل يوجد فاكهة أيضاً؟ أريد موزة." &&
+    correctedDialogue07?.lines[1]?.ar === "هل توجد فاكهة أيضاً؟ أريد موزة." &&
+    unresolvedCalendar07?.status === "غير محسوم" && unresolvedCalendar07.finding.includes("لا يذكر سنة") &&
+    unresolvedTimeline07?.status === "غير محسوم" && unresolvedTimeline07.finding.includes("إصلاحان محتملان") &&
+    liveTimeline07?.lines[2]?.de === "Also übermorgen. Und die Uhrzeit?" &&
+    liveTimeline07.lines[5]?.de.startsWith("Vorgestern, am Montag.") &&
+    liveTimeline07.dictation[0] === liveTimeline07.lines[2]?.de &&
+    unresolvedPaper07?.status === "غير محسوم" && unresolvedPaper07.reviewed.de === "Brauchen wir das Heft oder ein Papier?",
+    "K172c كل لقطات التقرير تطابق الحي؛ صُحح تأنيث فاكهة فقط وبقيت احتمالات الزمن وPapier بلا تعديل");
+
+  const history07 = audit07.historicalPatchReview;
+  const historicalPatchSource07 = readFileSync(history07.file, "utf8");
+  const historyIdsAbsent07 = batchIds07.every((id) => !historicalPatchSource07.includes(id));
+  ok(history07.file === "scripts/patches/dialoge_a1_neu1.py" && history07.comparisons.length === 0 &&
+    history07.role.includes("تاريخي") && history07.usageCheck.includes("لم يظهر أي تطابق") && historyIdsAbsent07 &&
+    auditMarkdown07.includes("comparisons` فارغة") &&
+    audit07.patch.file === "scripts/patches/review_a1_dialogues_07.py" && audit07.patch.fieldsChanged === 1 &&
+    audit07.patch.correctedItemIds.length === 1 && existsSync(audit07.patch.file),
+    "K172d لا مقارنة تاريخية بلا تطابق في السكربت؛ التقرير يسجل غياب المعرّفات ولا يخترع مادة مقارنة");
+
+  const patchSource07 = readFileSync(audit07.patch.file, "utf8");
+  ok(audit07.patch.preflight.includes("القيمة السابقة الدقيقة") &&
+    patchSource07.includes("mixed before/after state; refusing partial application") &&
+    patchSource07.includes("preflight failed; no write performed") && patchSource07.includes("--apply") &&
+    patchSource07.includes("هل يوجد فاكهة أيضاً؟ أريد موزة.") &&
+    patchSource07.includes("هل توجد فاكهة أيضاً؟ أريد موزة.") &&
+    patchSource07.includes("leave unresolved übermorgen/vorgestern mismatch unchanged") &&
+    audit07.patch.changes.length === 1 && audit07.patch.changes[0].includes("توجد"),
+    "K172e الرقعة محمية بقيمة سابقة دقيقة، وتُبقي تناقض الموعد غير المحسوم بلا إصلاح تخميني");
+
+  ok(audit07.method.includes("لا تحدد قصد المؤلف") &&
+    audit07.limitations.some((limitation) => limitation.includes("CEFR") && limitation.includes("مؤجلة")) &&
+    audit07.limitations.some((limitation) => limitation.includes("مراجعة بشرية أو اعتماداً")) &&
+    auditMarkdown07.includes("ولا تحل محل مراجعة بشرية أو اعتماد مهني") &&
+    audit07.coverage.unresolvedContextNotes === 3 && audit07.coverage.unresolvedLevelNotes === 0,
+    "K172f المنهج يفصل بين الخطأ المثبت وما لا يحسمه السياق؛ CEFR والنسبة وحساب المستوى والمراجعة البشرية خارج النطاق");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
