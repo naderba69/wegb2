@@ -6,6 +6,11 @@
    "nameDe": "Notfall & Arzt",
    "nameAr": "الطوارئ والطبيب",
    "kontext": "حادث مفاجئ أو مرض: نداء إسعاف، عيادة طوارئ، صيدلية — اللغة التي تنقذ يومك.",
+   "lektionen": [
+    "a1-imperativ",
+    "a1-dativ",
+    "a1-praesens"
+   ],
    "saetze": [
     {
      "de": "Hilfe! Bitte rufen Sie einen Krankenwagen!",
@@ -148,6 +153,11 @@
    "nameDe": "Bürgeramt",
    "nameAr": "البلدية والإجراءات",
    "kontext": "الانضمام الرسمي إلى المدينة: تسجيل الإقامة، المواعيد، الشهادات — بيروقراطية بألمانية بسيطة.",
+   "lektionen": [
+    "a2-konj2-hoflich",
+    "a2-reflexiv",
+    "a1-modalverben"
+   ],
    "saetze": [
     {
      "de": "Ich möchte mich bitte anmelden.",
@@ -290,6 +300,11 @@
    "nameDe": "Bank",
    "nameAr": "البنك والمال",
    "kontext": "فتح حساب، تحويل، حظر بطاقة مسروقة — عبارات مالية تحميك في أول شهر.",
+   "lektionen": [
+    "a2-konj2-hoflich",
+    "b1-passiv",
+    "a1-perfekt-einf"
+   ],
    "saetze": [
     {
      "de": "Ich möchte ein Girokonto eröffnen.",
@@ -432,6 +447,11 @@
    "nameDe": "Wohnung & Miete",
    "nameAr": "السكن والإيجار",
    "kontext": "معاينة شقة، عطب في التدفئة، إنهاء العقد — حقوقك ولغتك تحت سقف واحد.",
+   "lektionen": [
+    "a2-reflexiv",
+    "a2-verb-praep",
+    "a1-wechsel"
+   ],
    "saetze": [
     {
      "de": "Ich interessiere mich für die Wohnung in der Parkstraße.",
@@ -574,6 +594,11 @@
    "nameDe": "Arbeit & Bewerbung",
    "nameAr": "العمل والتقديم",
    "kontext": "طلب عمل، مقابلة، إشعار مرض — البوّابة إلى الاستقرار في ألمانيا.",
+   "lektionen": [
+    "a2-reflexiv",
+    "a2-verb-praep",
+    "a2-konj2-hoflich"
+   ],
    "saetze": [
     {
      "de": "Hiermit bewerbe ich mich um die Stelle als Verkäufer.",
@@ -716,6 +741,11 @@
    "nameDe": "Universität",
    "nameAr": "الجامعة",
    "kontext": "تسجيل سمينار، تمديد مهلة ورقة، ساعة استقبال الأستاذ — لغة الدراسة الجامعية.",
+   "lektionen": [
+    "a1-trennbar",
+    "a2-reflexiv",
+    "a1-modalverben"
+   ],
    "saetze": [
     {
      "de": "Ich möchte mich für das Seminar anmelden.",
@@ -858,6 +888,11 @@
    "nameDe": "Bürgergeld & Mitwirkung",
    "nameAr": "عِوَضُ المواطنةِ وواجبُ التعاون",
    "kontext": "تسجيلٌ كعاطلٍ، طلبُ Bürgergeld، ودعوتُ Integration: الوثائقُ غلافُ الأمر، والصمتُ عن الدعوةِ يُكلِّفُ المال.",
+   "lektionen": [
+    "a2-praeteritum",
+    "a2-negation",
+    "b1-genitiv"
+   ],
    "saetze": [
     {
      "de": "Ich möchte mich arbeitslos melden — mein Vertrag endete zum Monatsende.",
@@ -1000,6 +1035,11 @@
    "nameDe": "Wohngeld — Mietzuschuss",
    "nameAr": "بدلُ السكنِ — إعانةُ الإيجار",
    "kontext": "دخلٌ لا يكفي والإيجارُ ثابت: Wohngeld يردُّ الفارق — إن عرفتَ كيف تُثبِتُ الدخلَ والسكنَ معًا.",
+   "lektionen": [
+    "a1-dativ",
+    "a1-akkusativ",
+    "a1-wechsel"
+   ],
    "saetze": [
     {
      "de": "Ich beantrage Wohngeld für eine Zweizimmerwohnung.",
@@ -1142,6 +1182,11 @@
    "nameDe": "Kindergeld & Familienkasse",
    "nameAr": "بدلُ الأطفالِ وصندوقُ الأسرة",
    "kontext": "أطفالٌ في تونس أو في ألمانيا والمبلغُ يُدفَعُ في الحالتين — لمن عرفَ الرقمَ الخاصَّ والأوراقَ المُصدَّقة.",
+   "lektionen": [
+    "a1-modalverben",
+    "b1-passiv",
+    "b1-partizip1"
+   ],
    "saetze": [
     {
      "de": "Für meine Kinder in Tunesien beantrage ich Kindergeld.",
@@ -1284,6 +1329,11 @@
    "nameDe": "Krankenkasse: Familie & Beitrag",
    "nameAr": "صندوقُ المرض: الأسرةُ والاشتراك",
    "kontext": "زوجةٌ بلا عملٍ وأبناءٌ صِغار: التأمينُ العائليُّ المجانيُّ يحميهم — بحدِّ دخلٍ دقيقٍ وشروطِ إقامة.",
+   "lektionen": [
+    "a1-akkusativ",
+    "b1-passiv",
+    "a1-dativ"
+   ],
    "saetze": [
     {
      "de": "Ich möchte meine Familie familienversichern lassen.",
@@ -1426,6 +1476,11 @@
    "nameDe": "BAföG & Rückmeldung",
    "nameAr": "دعمُ الدراسةِ وإعادةُ التسجيل",
    "kontext": "جامعَةٌ وراتبُ والدينٍ بالخارج: BAföG يُحتسَبُ بالدخلِ المُترجَم، والتسجيلُ الجامعيُّ له سقوفٌ لا ترحم.",
+   "lektionen": [
+    "b1-funktionsverben",
+    "a1-akkusativ",
+    "a1-wechsel"
+   ],
    "saetze": [
     {
      "de": "Ich brauche das Formblatt über das ausländische Elterneinkommen.",
@@ -1568,6 +1623,11 @@
    "nameDe": "Steuer-ID & Lohnsteuer",
    "nameAr": "الرقمُ الضريبيُّ وضريبةُ الأجر",
    "kontext": "مفاتيحُ النظام: Steuer-ID في كلِّ عقدٍ، وLohnsteuererklärung قد تردُّ ما دفعَه صاحبُ العملِ عنك في غيرِ محلِّه.",
+   "lektionen": [
+    "a1-akkusativ",
+    "a1-dativ",
+    "a1-modalverben"
+   ],
    "saetze": [
     {
      "de": "Ich brauche meine Steuer-Identifikationsnummer für den Arbeitsvertrag.",

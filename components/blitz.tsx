@@ -331,7 +331,7 @@ export function BlitzDrill({ progress }: { progress: Progress }) {
           <div style={{ display: "flex", gap: 10, alignItems: "baseline", flexWrap: "wrap" }} dir="rtl">
             <span style={{ fontSize: "1.9rem", fontWeight: 900, color: score.hits >= 10 ? "var(--color-a1)" : "var(--color-cola)" }}>{score.hits}</span>
             <span style={{ fontWeight: 800, fontSize: "0.85rem" }}>إصابة من {score.n} — {score.n ? Math.round((100 * score.hits) / score.n) : 0}٪</span>
-            {neuBest && <span className="chip" style={{ background: "var(--color-gold)", color: "white", border: 0 }}>🏆 رقم قياسي جديد!</span>}
+            {neuBest && <span className="chip" style={{ background: "var(--color-gold)", color: "var(--ui-on-accent)", border: 0 }}>🏆 رقم قياسي جديد!</span>}
             <span style={{ fontSize: "0.72rem", color: "var(--color-ink2)" }}>
               {score.hits >= 10 ? `+${Math.min(12, score.hits) + 3} XP — سرعة الامتحان وصلت، وهذا هو الهدف.` : `+${Math.min(12, score.hits)} XP`}
             </span>

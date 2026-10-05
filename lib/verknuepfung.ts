@@ -62,7 +62,7 @@ export function karteFuerWort(wort: string, level?: string): VocabCard | null {
   const w = norm(wort).replace(/[^a-zäöüß-]/g, "");
   if (w.length < 3 || STOPP.has(w)) return null;
   const idx = index();
-  const rang: Record<string, number> = { A1: 0, A2: 1, B1: 2, B2: 3 };
+  const rang: Record<string, number> = { A0: -1, A1: 0, A2: 1, B1: 2, B2: 3 };
   const max = level ? rang[level] ?? 3 : 3;
   const kern = (c: VocabCard) => norm(c.de).replace(/^(der|die|das|sich) /, "").split(" ")[0] ?? "";
   // صيغٌ مرشَّحة: الكلمةُ نفسُها، بلا ge- (Partizip)، بلا لواحقِ التصريف، وبعدَ ردِّ الأبلاوت (gesprochen→sprech)
@@ -71,7 +71,7 @@ export function karteFuerWort(wort: string, level?: string): VocabCard | null {
   const kandidaten = new Map<string, { c: VocabCard; score: number }>();
   const add = (c: VocabCard, score: number) => { const alt = kandidaten.get(c.id); if (!alt || alt.score > score) kandidaten.set(c.id, { c, score }); };
   for (const v of varianten) {
-    for (let n = v.length; n >= 4; n--) {
+    for (let n = v.length; n >= 3; n--) {
       const st = v.slice(0, n); const l = idx.karten.get(st); if (!l) continue;
       for (const c of l) {
         const k = kern(c);

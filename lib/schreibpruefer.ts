@@ -46,7 +46,7 @@ export const SYNONYM_MATRIX: Record<string, { ersatz: string[]; hinweisAr: strin
   kriegen: { ersatz: ["erhalten", "bekommen", "beziehen"], hinweisAr: "«kriegen» عاميّةٌ صِرفة" },
 };
 
-/* خريطةُ الأجناسِ من دفترِ المفردات — 3316 بطاقةً تصنعُ المسطرة. */
+/* خريطةُ الأجناسِ من دفترِ المفردات — 3356 بطاقةً تصنعُ المسطرة. */
 const GENUS: Record<string, string> = (() => {
   const m: Record<string, string> = {};
   for (const deck of Object.values(vocabMap as unknown as Record<string, { cards: { de: string; article?: string }[] }>)) {
@@ -68,7 +68,7 @@ export function pruefeText(text: string): Befund[] {
   const b: Befund[] = [];
   const saetze = text.split(/(?<=[.!?])\s+/).filter((s) => s.trim());
 
-  // ① أخطاءُ العربِ المعروفة — 128 نمطاً من البنك
+  // ① أنماطٌ لغويةٌ قابلةٌ للفحص — 128 نمطاً من البنك
   for (const f of FEHLER) {
     if (f.falsch.length > 6 && text.toLowerCase().includes(f.falsch.toLowerCase())) {
       b.push({ spalte: f.kat === "wortstellung" ? "syntax" : f.kat === "wortschatz" || f.kat === "falsche-freunde" ? "wortwahl" : "grammatik",
@@ -222,9 +222,24 @@ export function pruefeBrief(text: string, minWoerter: number): Befund[] {
   return b;
 }
 
-/** درجةٌ من مئة: كلُّ مؤكَّدٍ −8 · مرجَّحٍ −4 · أسلوبيٍّ −1 (بحدٍّ أدنى صفر). */
-export function bewerteSchreiben(befunde: Befund[]): number {
-  const abzug = befunde.reduce((s, f) => s + (f.schwere === "sicher" ? 8 : f.schwere === "wahrscheinlich" ? 4 : 1), 0);
+/** عتبة التنزيل التلقائي: 3 اعتراضات صادقة على القاعدة تخفّض حدّتها (R33) */
+export const DISPUT_SCHWELLE = 3;
+
+/** الحدّة الفعلية بعد اعتراضات المتعلم: sicher→wahrscheinlich→stil (بلا regelId لا تنزيل). */
+export function effektiveSchwere(b: Befund, disputes?: Record<string, number>): Schwere {
+  const key = b.regelId ?? "";
+  const n = key ? (disputes?.[key] ?? 0) : 0;
+  if (b.schwere === "sicher") return n >= DISPUT_SCHWELLE * 2 ? "stil" : n >= DISPUT_SCHWELLE ? "wahrscheinlich" : "sicher";
+  if (b.schwere === "wahrscheinlich") return n >= DISPUT_SCHWELLE ? "stil" : "wahrscheinlich";
+  return "stil";
+}
+
+/** درجةٌ من مئة: كلُّ مؤكَّدٍ −8 · مرجَّحٍ −4 · أسلوبيٍّ −1 (بحدٍّ أدنى صفر) — بالحدّة الفعلية بعد الاعتراضات. */
+export function bewerteSchreiben(befunde: Befund[], disputes?: Record<string, number>): number {
+  const abzug = befunde.reduce((s, f) => {
+    const e = effektiveSchwere(f, disputes);
+    return s + (e === "sicher" ? 8 : e === "wahrscheinlich" ? 4 : 1);
+  }, 0);
   return Math.max(0, 100 - abzug);
 }
 

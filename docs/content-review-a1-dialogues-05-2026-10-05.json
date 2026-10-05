@@ -1,0 +1,1242 @@
+{
+  "date": "2026-10-05",
+  "batch": "A1-dialogues-05",
+  "scope": "تدقيق فردي للحوارات الحية d-a1-13 وd-a1-14 وd-a1-15: بيانات العنوان والسياق والمستوى وwaisen، كل سطر ألماني وترجمته، كل سؤال مع النوع والنص والخيارات والمفتاح والشرح والتعليمات، وكل جملة إملاء. قورنت الحقول ذات الصلة بالسكربت التاريخي scripts/patches/dialoge_a1_neu1.py دون اعتباره مصدراً معتمداً. لا يشمل التقرير أي حوار آخر.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictationSentences": 6,
+    "unresolvedLevelNotes": 0,
+    "unresolvedContextNotes": 3,
+    "totalTrackedItems": 42
+  },
+  "statusCounts": {
+    "سليم": 37,
+    "مُصحح": 2,
+    "غير محسوم": 3
+  },
+  "method": "قُرئت السجلات الحية كاملة من content/dialogues.json ثم أُنشئ سجل لكل عنصر (42 معرفاً). فُحصت الترجمات والتهجئة والسياق والأسئلة والخيارات والمفاتيح والشروح والتعليمات والإملاء. قورنت الادعاءات المتغيرة بمصادر منشورة ملائمة؛ وفُصل الخطأ المثبت عن الملاحظة الأسلوبية وما يتطلب معلومات عن المنتج أو الفرع أو التاريخ. قورنت النسخة التاريخية بعد قراءة الحي؛ لا تمنحها المقارنة أولوية. صيغ التصحيح كسعر طرد تابع للمواصفات ومثال منفصل لرسالة دولية محددة؛ لا يُعامل 1,25 يورو كتعرفة طرد أو كنفْي لإمكان المبالغ السابقة على منتجات أخرى.",
+  "statusDefinitions": {
+    "سليم": "لم يثبت خطأ ضمن الأدلة والنطاق؛ قد يتضمن الحكم ملاحظة اصطلاحية/أسلوبية لا تستوجب التعديل.",
+    "مُصحح": "ثبتت مشكلة محددة بمصدر مناسب وطُبق تصحيح ثنائي اللغة أو متصل بالسؤال.",
+    "غير محسوم": "تنقص معلومات لا يقدمها الحوار أو لا يحسمها المصدر؛ لم يُعدّ خطأ مؤكداً ولم يُعدّل."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة، وليست مراجعة بشرية أو اعتماداً لغوياً/مدرسياً/مهنياً.",
+    "قائمة Goethe إرشادية وغير حصرية؛ توافق الموضوعات لا يثبت مستوى كل متعلم أو منهج محلي.",
+    "لا يمكن مطابقة وقت القطار أو سعر المقعد بخدمة حقيقية من دون محطة منشأ وتاريخ وشركة وفئة رحلة؛ بقي سعر 4 يورو غير محسوم.",
+    "تعرفة البريد تتغير. فُتحت صفحاتها في 2026-10-05؛ يخص 1,25 يورو Standardbrief دولياً حتى20غ، لا طرداً غير محدد. تاريخ الاطلاع لا يثبت وحده تاريخ السريان؛ صفحة DHL لا تعرض تاريخاً واضحاً، ولم تُستخدم نتيجة PDF الرسمية المؤرخة 1 يوليو 2025 لإثبات أسعار 2026.",
+    "لا يمكن التحقق من سعر ظرف بالتجزئة بلا مواصفاته أو من ساعات فرع مجهول؛ 1010 Wien عنوان المستلم لا موقع مكتب الإرسال.",
+    "حوار الشقة سيناريو تعليمي خيالي؛ المصادر تسند اللغة ولا تثبت وقائع سكن. لا يعني التقرير مراجعة بقية محتوى المشروع."
+  ],
+  "historicalPatchReview": {
+    "file": "scripts/patches/dialoge_a1_neu1.py",
+    "role": "سكربت تأليف تاريخي للحوارات d-a1-13..18، لا ملف التطبيق الحي ولا مصدر معتمد للحقيقة اللغوية أو التعرفة.",
+    "usageCheck": "فُحص app/components/lib فلم يظهر استيراد أو استدعاء إنتاجي للملف. بحث scripts/package.json أظهر قراءة صريحة له داخل بوابتي المقارنة K169 وK170، لا تشغيله لتغذية التطبيق. قورنت نصوصه بالبيانات الحية بعد قراءتها.",
+    "comparisons": [
+      {
+        "id": "d-a1-13",
+        "patchOptions": [
+          "um Viertel nach neun",
+          "um Viertel vor zwölf",
+          "um vier Uhr",
+          "Der Zug ist voll.",
+          "Er hat zwei Gepäckstücke.",
+          "Der Zug ist nicht pünktlich.",
+          "richtig",
+          "falsch"
+        ],
+        "patchAnswer": [
+          "um Viertel nach neun",
+          "Der Zug ist voll.",
+          "richtig"
+        ],
+        "patchLines": [
+          "Abfahrt um Viertel nach neun, Gleis 4.",
+          "Ankunft um Viertel vor zwölf. Der Zug ist meistens pünktlich.",
+          "Ein Sitzplatz kostet vier Euro."
+        ],
+        "liveAssessment": "العنوان والمستوى والمرساة والأسطر الثنائية والإملاء متطابقة دلالياً؛ الأسئلة ومفاتيحها وشروحها متطابقة، وترتيب خيارات q1 مختلف فقط. السعر 4 يورو موجود في النسختين لكنه بقي غير محسوم واقعياً لغياب الشركة/الفئة/التاريخ.",
+        "decision": "لم يُنسخ patch؛ بقيت البيانات الحية كما هي، مع تسجيل تحفّظ السعر خارج المقارنة التاريخية.",
+        "sources": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "S9"
+        ]
+      },
+      {
+        "id": "d-a1-14",
+        "patchOptions": [
+          "nach Österreich",
+          "ins Ausland zu ihrem Mann",
+          "nach Wien zum Abholen",
+          "85 Cent",
+          "20 Cent",
+          "neun Euro",
+          "richtig",
+          "falsch"
+        ],
+        "patchAnswer": [
+          "nach Österreich",
+          "85 Cent",
+          "falsch"
+        ],
+        "patchLines": [
+          "Neun Euro. Und für den Brief brauchen Sie eine Briefmarke für 85 Cent.",
+          "Ja, zwanzig Cent.",
+          "Von acht bis achtzehn Uhr. Am Samstag schließen wir um zwölf."
+        ],
+        "liveAssessment": "كان السكربت مطابقاً للحي قبل التصحيح في النص والأسئلة، لكن ترتيب خيارات q2 مختلف: JSON الحي بدأ بـ20 Cent والسكريبت بـ85 Cent. المبالغ 9 يورو و85 سنتاً و20 سنتاً وردت بلا مواصفات المنتج/الوزن؛ المصادر لا تثبت استحالة أي منها لكل المنتجات، والوجود في سكربت تاريخي لا يوثق تعرفة سارية.",
+        "decision": "أُعيد تحديد السطر ومفتاح q2 بمثال بريدي محدد للوجهة والوزن؛ لم يُدّع أن 9 يورو أو85 سنتاً مستحيلان لكل منتج. بقي سعر الظرف وساعات الفرع غير المسمى غير محسومين؛ لم تُتبع الأرقام التاريخية لمجرد ورودها في patch.",
+        "sources": [
+          "S13",
+          "S14",
+          "S15",
+          "S16",
+          "S21",
+          "S23"
+        ]
+      },
+      {
+        "id": "d-a1-15",
+        "patchOptions": [
+          "neben der Küche",
+          "im Badezimmer",
+          "im Flur",
+          "der Boden im Wohnzimmer",
+          "das Badezimmer",
+          "das Sofa"
+        ],
+        "patchAnswer": [
+          "neben der Küche",
+          "der Boden im Wohnzimmer",
+          "möbliert"
+        ],
+        "patchLines": [
+          "Hier ist der Schlüssel. Die Wohnung ist möbliert.",
+          "Nein, die Toilette ist extra, neben der Küche.",
+          "Der Boden im Wohnzimmer ist ein bisschen schmutzig."
+        ],
+        "liveAssessment": "العنوان والأسطر الثنائية والمرساة والإملاء والأسئلة ومفاتيحها متطابقة دلالياً. ترتيب خيارات q1 وq2 مختلف في الملف التاريخي؛ fill في النسختين يقبل möbliert.",
+        "decision": "أُبقي المحتوى الحي؛ لا مبرر لتغيير ترتيب الخيارات أو النص الصحيح.",
+        "sources": [
+          "S1",
+          "S29",
+          "S30",
+          "S31",
+          "S32",
+          "S33",
+          "S34",
+          "S35",
+          "S36",
+          "S38",
+          "S39",
+          "S40"
+        ]
+      }
+    ]
+  },
+  "patch": {
+    "file": "scripts/patches/review_a1_dialogues_05.py",
+    "preflight": "أوقف dry-run الأول قبل أي كتابة لأنه كشف أن ترتيب خيارات q2 في JSON الحي يبدأ بـ20 Cent خلافاً للترتيب التاريخي؛ عُدّل توقع القيمة السابقة ليطابق الحي لا السكربت. بعد ذلك تحققت الأداة من القيم الخمس الحية الدقيقة، طبقت التصحيح، ثم أعادت قراءة JSON المحفوظ وفحص الشكل والخيارات والمفتاح. يرفض السكربت الحالة الجزئية.",
+    "fieldsChanged": 5,
+    "correctedItemIds": [
+      "d-a1-14.lines[3]",
+      "d-a1-14-q2"
+    ],
+    "changes": [
+      "d-a1-14.lines[3]: حذف السعر الثابت غير المقيّد للطرد، وبيان تعرفة الطرد المتغيرة؛ تسمية الرسالة الدولية القياسية حتى20غ وسعر 1,25 يورو مع ترجمة عربية مطابقة.",
+      "d-a1-14-q2: نقل المفتاح والخيارات والشرح من 85 Cent إلى 1,25 Euro؛ بقي 20 Cent للظرف وأضيف 1,80 Euro لفئة دولية مختلفة."
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Goethe-Institut — Goethe-Zertifikat A1 Start Deutsch 1 Wortliste",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "supports": "مرجع Goethe الرسمي يدرج موضوعات النقل والسفر والأمتعة والبريد والأسعار والسكن والغرف والأثاث، ويشرح قراءة الساعة بصيغ Viertel vor/nach. يدعم ملاءمة الموضوعات لـA1؛ القائمة مرجعية غير حصرية ولا تحكم منهجاً محلياً بعينه."
+    },
+    {
+      "id": "S2",
+      "title": "PONS — Abfahrt / abfahren (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Abfahrt",
+      "supports": "يعطي Abfahrt معنى الانطلاق ويعرض abfahren للفعل المنفصل؛ يسند سؤال المغادرة وترجمة الانطلاق."
+    },
+    {
+      "id": "S3",
+      "title": "PONS — Ankunft (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Ankunft",
+      "supports": "يعطي Ankunft معنى الوصول؛ يسند سؤال الوصول وترجمته."
+    },
+    {
+      "id": "S4",
+      "title": "PONS — Viertel (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Viertel?q=Viertel",
+      "supports": "يسند ربع الساعة في تعبير الوقت: Viertel nach neun = 9:15، وViertel vor zwölf = 11:45؛ وتؤكد قائمة Goethe صيغة الساعة ضمن A1."
+    },
+    {
+      "id": "S5",
+      "title": "PONS — Gleis (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Gleis",
+      "supports": "يعطي Gleis معنى خط/قضبان السكة. «الرصيف 4» مفهوم للمسافر كتسمية موقع الصعود؛ سُجل الفرق الاصطلاحي لكن لا دليل يثبت خطأ التكييف السياقي."
+    },
+    {
+      "id": "S6",
+      "title": "PONS — pünktlich (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/p%C3%BCnktlich",
+      "supports": "يسند معنى الوصول/الحضور في الموعد المحدد؛ يدعم السطر وشرح المشتت."
+    },
+    {
+      "id": "S7",
+      "title": "PONS — Sitzplatz (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Sitzplatz",
+      "supports": "يعطي Sitzplatz معنى مقعد/مكان للجلوس، ولا يتضمن وحده معنى «محجوز»؛ يسند تسجيل التخصيص السياقي في العربية."
+    },
+    {
+      "id": "S8",
+      "title": "PONS — reservieren (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/reservieren",
+      "supports": "يعطي reservieren معنى الحجز؛ يوضح الفرق بين المقعد نفسه وحجزه."
+    },
+    {
+      "id": "S9",
+      "title": "Deutsche Bahn — Sitzplatzreservierung im Fern- und Nahverkehr",
+      "url": "https://www.bahn.de/angebot/zusatzticket/sitzplatzreservierung",
+      "supports": "تقول DB إن حجز مقعد في النقل البعيد متاح منفرداً أو مع التذكرة ويبدأ من 5,50 يورو. هذا عرض DB المحدد وقت الفحص؛ لا يثبت خطأ 4 يورو في حوار لا يذكر الشركة أو فئة الرحلة أو التاريخ."
+    },
+    {
+      "id": "S10",
+      "title": "PONS — Gepäckstück (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Gep%C3%A4ckst%C3%BCck",
+      "supports": "يعطي Gepäckstück معنى حقيبة/قطعة أمتعة؛ يسند العدد والترجمة في حوار القطار."
+    },
+    {
+      "id": "S11",
+      "title": "PONS — Koffer (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Koffer",
+      "supports": "يسند ترجمة Koffer إلى حقيبة سفر/صندوق أمتعة بحسب السياق."
+    },
+    {
+      "id": "S12",
+      "title": "PONS — Tasche (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Tasche",
+      "supports": "يعطي Tasche معنى حقيبة، ويورد Handtasche بمعنى أخص؛ «حقيبة يد» تخصيص سياقي مقبول لا خطأ مثبت."
+    },
+    {
+      "id": "S13",
+      "title": "PONS — Paket (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Paket",
+      "supports": "يعطي Paket معنى طرد/حزمة؛ يسند استعمال الكلمة في مشهد البريد."
+    },
+    {
+      "id": "S14",
+      "title": "Deutsche Post — Briefporto (التعرفة الوطنية والدولية)",
+      "url": "https://shop.deutschepost.de/briefporto",
+      "supports": "الصفحة المفتوحة في 2026-10-05 تعرض Standardbrief دولياً حتى20غ بـ1,25 يورو وKompaktbrief حتى50غ بـ1,80 يورو، وتذكر 0,95 يورو للرسالة الوطنية القياسية حتى20غ؛ تاريخ الاطلاع لا يثبت وحده تاريخ السريان."
+    },
+    {
+      "id": "S15",
+      "title": "DHL — Preise und Produkte für internationalen Versand",
+      "url": "https://www.dhl.de/de/privatkunden/pakete-versenden/weltweit-versenden/preise-international.html",
+      "supports": "الصفحة الحية التي فُتحت في 2026-10-05 تعرض في Zone 1 إلى النمسا منتجات وأسعاراً متعددة بحسب الوزن والأبعاد وطريقة الشراء (أونلاين/فرع)، ومنها 6,99 و10,49 و14,49 و17,49 يورو. لا تعرض الصفحة تاريخ سريان الأسعار بوضوح؛ ونتيجة PDF الرسمية المؤرخة 1 يوليو 2025 لم تُستخدم لإثبات تعرفة 2026. تنوع الفئات يمنع تعميم 9 يورو كسعر كل طرد غير موصوف، لكنه لا يثبت استحالة هذا السعر لمنتج بعينه."
+    },
+    {
+      "id": "S16",
+      "title": "PONS — Briefmarke (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Briefmarke",
+      "supports": "يعطي Briefmarke مقابلاً عربياً «طابع بريد»؛ يسند اللفظ في السطر والسؤال."
+    },
+    {
+      "id": "S17",
+      "title": "PONS — Postleitzahl (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Postleitzahl",
+      "supports": "يسند ترجمة Postleitzahl إلى الرمز/الرقم البريدي."
+    },
+    {
+      "id": "S18",
+      "title": "PONS — Adresse (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Adresse",
+      "supports": "يعطي Adresse معنى عنوان؛ يسند سؤال العنوان على الطرد."
+    },
+    {
+      "id": "S19",
+      "title": "PONS — Österreich (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/%C3%96sterreich",
+      "supports": "يسند ترجمة Österreich إلى النمسا."
+    },
+    {
+      "id": "S20",
+      "title": "PONS — Ausland (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Ausland",
+      "supports": "يعطي Ausland معنى الخارج ويورد ins Ausland بمعنى إلى الخارج."
+    },
+    {
+      "id": "S21",
+      "title": "PONS — Umschlag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Umschlag",
+      "supports": "في سياق الرسائل يترجم Umschlag إلى ظرف؛ يسند السؤال والترجمة."
+    },
+    {
+      "id": "S22",
+      "title": "PONS — abholen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/abholen",
+      "supports": "يعطي abholen معنى أخذ/استلام شيء؛ يسند طلب استلام الطرد."
+    },
+    {
+      "id": "S23",
+      "title": "Deutsche Post — Hilfe zu Standorten",
+      "url": "https://www.deutschepost.de/de/hilfe-kundenservice/versenden/standorte.html",
+      "supports": "تفاصيل الموقع المركزي تعرض أوقات الدوام لكل فرع/نوع موقع؛ يلزم تحديد الفرع للتحقق. الرمز 1010 Wien هو عنوان المستلم، وليس دليلاً على موقع مكتب الإرسال."
+    },
+    {
+      "id": "S24",
+      "title": "PONS — Öffnungszeiten (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/%C3%96ffnungszeiten",
+      "supports": "يعطي Öffnungszeiten معنى أوقات الدوام/الفتح؛ يسند سؤال ساعات العمل."
+    },
+    {
+      "id": "S25",
+      "title": "PONS — geöffnet (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/ge%C3%B6ffnet",
+      "supports": "يعطي geöffnet معنى مفتوح؛ يسند سؤال الصح والخطأ عن السبت."
+    },
+    {
+      "id": "S26",
+      "title": "PONS — schließen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/schlie%C3%9Fen",
+      "supports": "يعطي schließen معنى الإغلاق؛ يسند إعلان موعد الإغلاق."
+    },
+    {
+      "id": "S27",
+      "title": "PONS — Größe (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Gr%C3%B6%C3%9Fe",
+      "supports": "يسند معنى Größe بوصفها الحجم/المقاس في توضيح تعرفة الطرد."
+    },
+    {
+      "id": "S28",
+      "title": "PONS — Gewicht (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Gewicht",
+      "supports": "يعطي Gewicht معنى الوزن؛ يسند شرط التعرفة المصحح."
+    },
+    {
+      "id": "S29",
+      "title": "PONS — Schlüssel (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Schl%C3%BCssel",
+      "supports": "يعطي Schlüssel معنى مفتاح؛ يسند السطر والإملاء."
+    },
+    {
+      "id": "S30",
+      "title": "PONS — möbliert (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/m%C3%B6bliert",
+      "supports": "يسند معنى möbliert بوصفها مفروشة، ويورد استعمالها في وصف السكن."
+    },
+    {
+      "id": "S31",
+      "title": "PONS — Sofa (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Sofa",
+      "supports": "يعطي Sofa معنى أريكة/كنبة؛ يسند تعداد الأثاث."
+    },
+    {
+      "id": "S32",
+      "title": "PONS — Stuhl (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Stuhl",
+      "supports": "يعطي Stuhl معنى كرسي ويورد جمع Stühle؛ يسند ترجمة أربعة كراسٍ."
+    },
+    {
+      "id": "S33",
+      "title": "PONS — Badezimmer (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Badezimmer",
+      "supports": "يعطي Badezimmer معنى الحمّام؛ يسند وصف الغرفة والسؤال عنها."
+    },
+    {
+      "id": "S34",
+      "title": "PONS — Toilette (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Toilette",
+      "supports": "يعطي Toilette في معنى WC مقابلاً هو مرحاض؛ يسند السؤال والإجابة."
+    },
+    {
+      "id": "S35",
+      "title": "PONS — Küche (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/K%C3%BCche",
+      "supports": "يعطي Küche معنى مطبخ؛ يسند عبارة «بجانب المطبخ»."
+    },
+    {
+      "id": "S36",
+      "title": "PONS — extra (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/extra",
+      "supports": "يسجل extra بمعنى منفصل/على حدة بحسب السياق؛ يسند ترجمة المرحاض المنفصل."
+    },
+    {
+      "id": "S37",
+      "title": "PONS — Flur (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Flur",
+      "supports": "يسند معنى Flur بوصفه ممراً/دهليزاً أو ردهة بحسب البيت."
+    },
+    {
+      "id": "S38",
+      "title": "PONS — Boden (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Boden",
+      "supports": "يسند معاني Boden الأرض/الأرضية؛ سياق Wohnzimmer يعني أرضية الغرفة."
+    },
+    {
+      "id": "S39",
+      "title": "PONS — Wohnzimmer (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Wohnzimmer",
+      "supports": "يعطي Wohnzimmer معنى غرفة الجلوس؛ يسند «الصالة» في السياق."
+    },
+    {
+      "id": "S40",
+      "title": "PONS — schmutzig (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/schmutzig",
+      "supports": "يعطي schmutzig معنى متّسخ/وسخ؛ يسند الوصف والسؤال."
+    },
+    {
+      "id": "S41",
+      "title": "PONS — sauber (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/sauber",
+      "supports": "يعطي sauber معنى نظيف؛ يسند الوصف بعد التنظيف."
+    },
+    {
+      "id": "S42",
+      "title": "PONS — Putzfrau (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Putzfrau",
+      "supports": "يعطي Putzfrau معنى عاملة/منظفة؛ يسند «عاملة التنظيف». لا يحسم القاموس تفضيلاً أسلوبياً محلياً بينها وبين Reinigungskraft."
+    },
+    {
+      "id": "S43",
+      "title": "Österreichische Post — offizieller Standortdatensatz (CSV)",
+      "url": "https://secure.post.at/downloads/DepositoriesV2.csv",
+      "supports": "يتضمن الدليل الرسمي سجلاً لموقع في 1010 Wien، فيسند استعمال زوج الرمز/المدينة. لا يثبت أن 1010 Wien وحده عنوان مستلم كامل ولا يحدد فرع الإرسال في الحوار."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a1-13",
+      "kind": "حوار: العنوان والسياق والمستوى ومرساة المفردات",
+      "status": "سليم",
+      "reviewed": {
+        "titleDe": "Am Bahnhof: Der Zug nach Köln",
+        "titleAr": "في المحطة: القطار إلى كولن",
+        "level": "A1",
+        "waisen": [
+          "ankommen",
+          "abfahren",
+          "die Abfahrt",
+          "die Ankunft",
+          "der Sitzplatz",
+          "das Gepäckstück",
+          "Viertel vor",
+          "Viertel nach",
+          "pünktlich sein"
+        ]
+      },
+      "finding": "العنوان يطابق مشهد سؤال القطار، والوصف A1 ينسجم مع موضوعات النقل/السفر والأمتعة وقراءة الوقت في قائمة Goethe. عناصر waisen التسعة تظهر بصيغها أو بتصريفها؛ لا أتعامل مع القائمة بوصفها حداً حصرياً. الجدول الزمني تدريب تمثيلي لا جدول خدمة حقيقية لأن المنشأ والتاريخ والشركة غير محددة.",
+      "action": "أُبقي العنوان والمستوى وwaisen؛ لا تغيير تخمينياً على سيناريو القطار.",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S10",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "id": "d-a1-13.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Entschuldigung, wann fährt der Zug nach Köln ab?",
+        "ar": "عفواً، متى ينطلق القطار إلى كولن؟"
+      },
+      "finding": "صيغة السؤال تستعمل abfahren انفصالياً في مكانه؛ والترجمة تحفظ الانطلاق إلى كولن.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "d-a1-13.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Abfahrt um Viertel nach neun, Gleis 4.",
+        "ar": "الانطلاق في التاسعة والربع، الرصيف 4."
+      },
+      "finding": "Viertel nach neun تعني 9:15 وAbfahrt هي الانطلاق. Gleis هو خط/مسار السكة؛ «الرصيف 4» صياغة موجهة للمسافر ولا يثبت الدليل أنها خطأ.",
+      "action": "لا تعديل؛ سُجل فرق اصطلاحي لا خطأ مؤكد.",
+      "sources": [
+        "S1",
+        "S2",
+        "S4",
+        "S5"
+      ]
+    },
+    {
+      "id": "d-a1-13.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Und wann kommt er in Köln an?",
+        "ar": "ومتى يصل إلى كولن؟"
+      },
+      "finding": "ankommen في سؤال الوصول يطابق Köln ankommen، والترجمة العربية واضحة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S3"
+      ]
+    },
+    {
+      "id": "d-a1-13.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Ankunft um Viertel vor zwölf. Der Zug ist meistens pünktlich.",
+        "ar": "الوصول في الثانية عشرة إلا ربعاً. القطار في موعده غالباً."
+      },
+      "finding": "Viertel vor zwölf تساوي 11:45؛ Ankunft هي الوصول وpünktlich تعني في الموعد. الوقتان متسقان داخل السيناريو، لا يثبتان جدول قطار واقعي بلا منشأ/تاريخ.",
+      "action": "لا تعديل؛ النص تدريب لغوي لا وعد بموعد خدمة واقعي.",
+      "sources": [
+        "S1",
+        "S3",
+        "S4",
+        "S6"
+      ]
+    },
+    {
+      "id": "d-a1-13.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Brauche ich einen Sitzplatz?",
+        "ar": "هل أحتاج مقعداً محجوزاً؟"
+      },
+      "finding": "Sitzplatz يعني مقعداً، وليس «مقعداً محجوزاً» حرفياً؛ سياق امتلاء القطار والكلفة التالية يجعل تخصيص العربية مفهوماً بوصفه حجزاً.",
+      "action": "لا تعديل؛ يمكن تسمية Reservierung صراحة في مراجعة مستقبلية لدقة أعلى.",
+      "sources": [
+        "S7",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "id": "d-a1-13.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "reviewed": {
+        "de": "Heute ja, der Zug ist voll. Ein Sitzplatz kostet vier Euro.",
+        "ar": "اليوم نعم، القطار ممتلئ. المقعد بأربعة يورو."
+      },
+      "finding": "السطر يسعّر «المقعد» بأربعة يورو، بينما DB تعرض حالياً حجز مقعد في النقل البعيد ابتداءً من 5,50 يورو. لا يحدد الحوار الشركة أو نوع الرحلة أو تاريخ التعرفة، لذا لا يثبت ذلك وحده أن 4 يورو خطأ؛ والمدفوع عادة هو الحجز لا المقعد ذاته.",
+      "action": "أُبقي السطر وسُجل السعر غير محسوم؛ يلزم تحديد الشركة/نوع الرحلة/التاريخ قبل استبداله.",
+      "sources": [
+        "S7",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "id": "d-a1-13.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Gut. Ich habe zwei Gepäckstücke, einen Koffer und eine Tasche.",
+        "ar": "حسناً. معي قطعتا أمتعة، حقيبة سفر وحقيبة يد."
+      },
+      "finding": "Gepäckstück جمع لقطتين، وKoffer حقيبة سفر وTasche حقيبة؛ العربية تحفظ العدد والنوعين. «حقيبة يد» أضيق من Tasche قليلاً لكنها معقولة في سياق السفر.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S10",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "id": "d-a1-13.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Kein Problem. Seien Sie bitte pünktlich am Gleis.",
+        "ar": "لا مشكلة. كن في الرصيف في الوقت من فضلك."
+      },
+      "finding": "السطر يطلب الحضور في الموعد عند Gleis؛ «رصيف» مفهوم للمسافر مع أن القاموس يعطي خط/قضبان للفظ الألماني.",
+      "action": "لا تعديل؛ لا دليل كافٍ لفرض مقابل عربي واحد.",
+      "sources": [
+        "S5",
+        "S6"
+      ]
+    },
+    {
+      "id": "d-a1-13-q1",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wann fährt der Zug ab?",
+        "options": [
+          "um Viertel vor zwölf",
+          "um vier Uhr",
+          "um Viertel nach neun"
+        ],
+        "answer": "um Viertel nach neun",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "explanationAr": "الدليل: «Abfahrt um Viertel nach neun». الفخّ 1: الثانية عشرة إلا ربعاً هي الوصول. الفخّ 2: أربعة يورو ثمن المقعد.",
+        "falle": true
+      },
+      "finding": "الإجابة um Viertel nach neun هي المغادرة؛ um Viertel vor zwölf وقت الوصول وum vier Uhr مشتت زمني. الشرح يقتبس الدليل ويفسر المشتتين.",
+      "action": "أُبقي السؤال والمفتاح والشرح والتعليمات؛ لا تعديل.",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "id": "d-a1-13-q2",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Warum braucht Sami heute einen Sitzplatz?",
+        "options": [
+          "Der Zug ist voll.",
+          "Er hat zwei Gepäckstücke.",
+          "Der Zug ist nicht pünktlich."
+        ],
+        "answer": "Der Zug ist voll.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "explanationAr": "الدليل: «Heute ja, der Zug ist voll». الفخّ 1: الأمتعة سبب آخر لم يُربط بالمقعد. الفخّ 2: القطار «meistens pünktlich».",
+        "falle": true
+      },
+      "finding": "الموظفة تجيب «der Zug ist voll» مباشرة عن المقعد؛ وجود حقيبتين معلومة منفصلة لا يذكرها الحوار سبباً، وmeistens pünktlich يفنّد مشتت التأخر.",
+      "action": "أُبقي السؤال والمفتاح والشرح والتعليمات؛ لا تعديل.",
+      "sources": [
+        "S1",
+        "S6",
+        "S7",
+        "S10"
+      ]
+    },
+    {
+      "id": "d-a1-13-q3",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Der Zug fährt von Gleis 4.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "explanationAr": "الدليل: «Abfahrt um Viertel nach neun, Gleis 4»."
+      },
+      "finding": "النص يذكر Gleis 4؛ لذلك مفتاح richtig صحيح من داخل الحوار. «الرصيف» ترجمة مسافر، ولا يثبت اختلاف اللفظ خطأً.",
+      "action": "أُبقي السؤال والمفتاح والشرح والتعليمات؛ لا تعديل.",
+      "sources": [
+        "S1",
+        "S5"
+      ]
+    },
+    {
+      "id": "d-a1-13.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Und wann kommt er in Köln an?"
+      },
+      "finding": "تطابق حرفي مع سؤال الوصول في lines[2]؛ الترتيب وعلامة الاستفهام محفوظان.",
+      "action": "لا تعديل؛ الإملاء مؤسس على الحوار.",
+      "sources": [
+        "S1",
+        "S3"
+      ]
+    },
+    {
+      "id": "d-a1-13.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Heute ja, der Zug ist voll."
+      },
+      "finding": "تطابق حرفي مع lines[5]؛ لا يضيف الإملاء معلومة خارج السطر، مع بقاء التعرفة الواقعية غير محسومة في بندها.",
+      "action": "لا تعديل؛ الإملاء مؤسس على الحوار.",
+      "sources": [
+        "S1",
+        "S6",
+        "S7"
+      ]
+    },
+    {
+      "id": "d-a1-14",
+      "kind": "حوار: العنوان والسياق والمستوى ومرساة المفردات",
+      "status": "سليم",
+      "reviewed": {
+        "titleDe": "Auf der Post",
+        "titleAr": "في مكتب البريد",
+        "level": "A1",
+        "waisen": [
+          "das Paket",
+          "die Briefmarke",
+          "der Umschlag",
+          "die Postleitzahl",
+          "abholen",
+          "Österreich",
+          "das Ausland",
+          "schließen",
+          "geöffnet"
+        ]
+      },
+      "finding": "مشهد مكتب بريد وإرسال إلى النمسا يطابق موضوعَي Post وPreis/Bezahlen في A1. قائمة waisen ممثلة في الحوار، و1010 Wien رمز/مدينة مستخدمان فعلاً؛ السطر يعرض الرمز والمدينة ولا يدّعي أنه العنوان البريدي الكامل.",
+      "action": "أُبقي العنوان والسياق وA1 وwaisen؛ لم أستنتج أن «1010 Wien» هو عنوان كامل وحده.",
+      "sources": [
+        "S1",
+        "S13",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S43"
+      ]
+    },
+    {
+      "id": "d-a1-14.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Guten Tag. Ich möchte ein Paket nach Österreich schicken.",
+        "ar": "طاب يومك. أريد إرسال طرد إلى النمسا."
+      },
+      "finding": "التحية ثم نية إرسال Paket إلى Österreich متطابقتان. «طاب يومك» مفهومة كتحية حرفية، وإن كانت «مرحباً» أشيع في العربية المعيارية؛ الفرق أسلوبي لا خطأ معنى مثبت.",
+      "action": "أُبقي السطر؛ لا أفرض تحسيناً أسلوبياً.",
+      "sources": [
+        "S1",
+        "S13",
+        "S19"
+      ]
+    },
+    {
+      "id": "d-a1-14.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Ins Ausland, gut. Ist die Adresse mit Postleitzahl auf dem Paket?",
+        "ar": "إلى الخارج، حسناً. هل العنوان مع الرمز البريدي على الطرد؟"
+      },
+      "finding": "Adresse وPostleitzahl يسندان العنوان والرمز البريدي؛ السؤال يستفسر عمّا إذا كان العنوان مع الرمز على الطرد.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S17",
+        "S18",
+        "S20"
+      ]
+    },
+    {
+      "id": "d-a1-14.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Ja, hier: 1010 Wien. Was kostet das?",
+        "ar": "نعم، هنا: 1010 فيينا. كم يكلّف؟"
+      },
+      "finding": "1010 Wien زوج رمز/مدينة وارد في دليل النمسا الرسمي. لا يعرض السطر اسماً وشارعاً ورقم منزل، لكنه لا يقول إن الرمز والمدينة وحدهما كامل العنوان.",
+      "action": "لا تعديل؛ لا أضيف تفاصيل عنوان غير موجودة.",
+      "sources": [
+        "S17",
+        "S18",
+        "S19",
+        "S43"
+      ]
+    },
+    {
+      "id": "d-a1-14.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "reviewed": {
+        "de": "Der Paketpreis hängt von Größe und Gewicht ab. Für einen Standardbrief ins Ausland bis 20 Gramm brauchen Sie eine Briefmarke für 1,25 Euro.",
+        "ar": "تعتمد كلفة الطرد على حجمه ووزنه. ولإرسال رسالة عادية إلى الخارج لا يزيد وزنها على 20 غراماً، تحتاجين إلى طابع بريدي بقيمة 1.25 يورو."
+      },
+      "finding": "السطر القديم يذكر 9 يورو للطرد و85 سنتاً للطابع دون تحديد صنف الطرد أو مواصفات الرسالة؛ لا تثبت هذه الأدلة استحالة المبلغين على كل المنتجات. صفحة Deutsche Post المفتوحة وقت الفحص تعرض 0,95 يورو للرسالة الوطنية القياسية حتى20غ و1,25 يورو للدولية القياسية حتى20غ و1,80 يورو للدولية المدمجة حتى50غ. صفحة DHL الحية التي فُتحت في 2026-10-05 تعرض أسعار Zone 1 متعددة حسب المنتج والوزن والأبعاد والقناة، لكنها لا تعرض تاريخ سريان واضحاً؛ لذا لا تُعمم 9 يورو ولا يُدّعى استحالته لمنتج معين. صيغ الطرد بحسب حجمه ووزنه، وسُمّيت فئة الرسالة الدولية ووزنها قبل ذكر 1,25 يورو؛ هذا مثال بريدي محدد وليس تصحيحاً شاملاً لكل تعرفة.",
+      "action": "استُبدل السطر بثنائية تميز تعرفة الطرد المعتمدة على مواصفاته عن مثال Standardbrief دولي حتى20غ؛ عُدّل q2. لا يقرر التغيير أن سعري 9 يورو أو85 سنتاً مستحيلان لكل منتج، بل يتفادى عرض المبلغين بلا مواصفات في سياق تعليمي.",
+      "action": "استُبدل السطر بثنائية تميز تعرفة الطرد المعتمدة على مواصفاته عن مثال Standardbrief دولي حتى20غ؛ عُدّل q2. لا يقرر التغيير أن سعري 9 يورو أو85 سنتاً مستحيلان لكل منتج، بل يتفادى عرض المبلغين بلا مواصفات في سياق تعليمي.",
+      "sources": [
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S20",
+        "S27",
+        "S28"
+      ],
+      "before": {
+        "de": "Neun Euro. Und für den Brief brauchen Sie eine Briefmarke für 85 Cent.",
+        "ar": "تسعة يورو. وللرسالة تحتاجين طابعاً بـ85 سنتاً."
+      }
+    },
+    {
+      "id": "d-a1-14.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Danke. Haben Sie auch einen Umschlag?",
+        "ar": "شكراً. هل لديكم ظرف أيضاً؟"
+      },
+      "finding": "Umschlag في سياق الرسالة يعني الظرف؛ المقابل العربي دقيق.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S21"
+      ]
+    },
+    {
+      "id": "d-a1-14.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "reviewed": {
+        "de": "Ja, zwanzig Cent. Noch etwas?",
+        "ar": "نعم، عشرون سنتاً. شيء آخر؟"
+      },
+      "finding": "الجملة تعطي عشرين سنتاً لسعر ظرف يباع في هذا الحوار؛ لا تحدد المقاس أو المادة أو البائع، ولا يوجد سعر موحد لكل الأظرف. لا دليل أن هذا السعر مستحيل لمنتج محلي بعينه.",
+      "action": "أُبقي المبلغ مثال بيع محلي غير قابل للتحقق بلا مواصفات؛ لا أعدّه رسماً بريدياً ولا أصححه تخميناً.",
+      "sources": [
+        "S21",
+        "S14"
+      ]
+    },
+    {
+      "id": "d-a1-14.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Mein Mann möchte morgen ein Paket abholen. Wann ist geöffnet?",
+        "ar": "زوجي يريد استلام طرد غداً. متى تفتحون؟"
+      },
+      "finding": "abholen تعني الاستلام/الأخذ؛ ترجمة طلب الزوج استلام الطرد غداً وسؤال ساعات الدوام تحفظ المعنى.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S22",
+        "S24"
+      ]
+    },
+    {
+      "id": "d-a1-14.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "reviewed": {
+        "de": "Von acht bis achtzehn Uhr. Am Samstag schließen wir um zwölf.",
+        "ar": "من الثامنة إلى السادسة مساءً. يوم السبت نغلق في الثانية عشرة."
+      },
+      "finding": "لا تناقض بين ساعات الأيام الأخرى 8–18 وإغلاق السبت12؛ لكن لا يمكن التحقق من ساعات فرع غير مسمى. 1010 Wien عنوان المستلم النمساوي وليس موقع مكتب الإرسال.",
+      "action": "أُبقي الجدول كساعات فرع خيالي/غير مسمى؛ لا أعممه على أي شبكة بريد.",
+      "sources": [
+        "S23",
+        "S24",
+        "S25",
+        "S26"
+      ]
+    },
+    {
+      "id": "d-a1-14-q1",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wohin schickt die Kundin das Paket?",
+        "options": [
+          "nach Österreich",
+          "ins Ausland zu ihrem Mann",
+          "nach Wien zum Abholen"
+        ],
+        "answer": "nach Österreich",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "explanationAr": "الدليل: «ein Paket nach Österreich schicken». الفخّ 1: الزوج يستلم طرداً هنا غداً لا في الخارج. الفخّ 2: فيينا وجهة الطرد لا مكان الاستلام.",
+        "falle": true
+      },
+      "finding": "الإجابة nach Österreich منصوص عليها؛ الزوج يستلم طرداً غداً و1010 Wien وجهة/جزء من عنوان المستلم لا مكان الاستلام. شرح الفخين متسق.",
+      "action": "أُبقي السؤال والمفتاح والشرح والتعليمات؛ لا تعديل.",
+      "sources": [
+        "S1",
+        "S13",
+        "S19",
+        "S20",
+        "S22"
+      ]
+    },
+    {
+      "id": "d-a1-14-q2",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "مُصحح",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was kostet die Briefmarke?",
+        "options": [
+          "20 Cent",
+          "1,80 Euro",
+          "1,25 Euro"
+        ],
+        "answer": "1,25 Euro",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "explanationAr": "الدليل: «Für einen Standardbrief ins Ausland bis 20 Gramm brauchen Sie eine Briefmarke für 1,25 Euro». الفخّ 1: 20 سنتاً ثمن الظرف. الفخّ 2: 1,80 يورو لتعرفة الرسالة المدمجة حتى 50 غراماً، لا الرسالة المعيارية حتى 20 غراماً.",
+        "falle": true
+      },
+      "finding": "بعد تحديد Standardbrief ins Ausland حتى20غ، المفتاح 1,25 Euro مدعوم بجدول Deutsche Post. 20 Cent ثمن الظرف؛ و1,80 Euro لفئة دولية مختلفة حتى50غ. الشرح لا يخلط رسوم الظرف والطرد بالرسالة.",
+      "action": "حُدث المفتاح والخيارات والشرح ليتطابق السؤال مع التعرفة المقيّدة في السطر المصحح.",
+      "sources": [
+        "S14",
+        "S15",
+        "S16",
+        "S21"
+      ],
+      "before": {
+        "options": [
+          "20 Cent",
+          "85 Cent",
+          "neun Euro"
+        ],
+        "answer": "85 Cent",
+        "explanationAr": "الدليل: «eine Briefmarke für 85 Cent». الفخّ 1: 20 سنتاً الظرف. الفخّ 2: تسعة يورو الطرد."
+      }
+    },
+    {
+      "id": "d-a1-14-q3",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Am Samstag ist die Post bis achtzehn Uhr geöffnet.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "explanationAr": "الدليل: «Am Samstag schließen wir um zwölf»."
+      },
+      "finding": "داخل الحوار يقول الموظف إن الفرع يغلق السبت عند12؛ لذا الادعاء بالدوام حتى18 خاطئ بالنسبة إلى الجدول المعروض، لا حكماً على فرع حقيقي مجهول.",
+      "action": "أُبقي السؤال والمفتاح والشرح والتعليمات؛ لا تعديل.",
+      "sources": [
+        "S23",
+        "S24",
+        "S25",
+        "S26"
+      ]
+    },
+    {
+      "id": "d-a1-14.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Ich möchte ein Paket nach Österreich schicken."
+      },
+      "finding": "تطابق حرفي مع lines[0]؛ التهجئة والنقطة محفوظتان.",
+      "action": "لا تعديل؛ الإملاء مؤسس على الحوار.",
+      "sources": [
+        "S1",
+        "S13",
+        "S19"
+      ]
+    },
+    {
+      "id": "d-a1-14.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Am Samstag schließen wir um zwölf."
+      },
+      "finding": "الجملة جزء حرفي من lines[7]؛ تختبر schließen وجدول الحوار لا ساعات فرع حقيقي.",
+      "action": "لا تعديل؛ الإملاء مؤسس على الحوار.",
+      "sources": [
+        "S1",
+        "S23",
+        "S26"
+      ]
+    },
+    {
+      "id": "d-a1-15",
+      "kind": "حوار: العنوان والسياق والمستوى ومرساة المفردات",
+      "status": "سليم",
+      "reviewed": {
+        "titleDe": "Die neue Wohnung",
+        "titleAr": "الشقة الجديدة",
+        "level": "A1",
+        "waisen": [
+          "das Badezimmer",
+          "die Toilette",
+          "der Flur",
+          "der Stuhl",
+          "das Sofa",
+          "der Boden",
+          "der Schlüssel",
+          "möbliert",
+          "sauber",
+          "schmutzig"
+        ]
+      },
+      "finding": "مشهد Wohnung مفروشة وغرف/أثاث وتنظيف؛ هذه من موضوعات A1 الرسمية. عناصر waisen العشرة ظاهرة نصاً أو بصيغة جمع/تصريف مثل Stuhl/Stühle؛ لا دليل على خطأ في العنوان أو المستوى.",
+      "action": "أُبقي العنوان والمستوى وwaisen؛ لم أبدل Putzfrau ببديل أسلوبي مثل Reinigungskraft.",
+      "sources": [
+        "S1",
+        "S29",
+        "S30",
+        "S31",
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36",
+        "S37",
+        "S38",
+        "S39",
+        "S40",
+        "S41",
+        "S42"
+      ]
+    },
+    {
+      "id": "d-a1-15.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Hier ist der Schlüssel. Die Wohnung ist möbliert.",
+        "ar": "هذا هو المفتاح. الشقة مفروشة."
+      },
+      "finding": "Schlüssel يعني مفتاح وmöbliert تعني مفروشة؛ الترجمة متطابقة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S29",
+        "S30"
+      ]
+    },
+    {
+      "id": "d-a1-15.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Schön! Ein Sofa, ein Tisch und vier Stühle.",
+        "ar": "جميل! أريكة وطاولة وأربعة كراسٍ."
+      },
+      "finding": "تسرد الجملة أريكة وطاولة وأربعة كراسٍ؛ العربية تحفظ الأشياء والعدد.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S31",
+        "S32"
+      ]
+    },
+    {
+      "id": "d-a1-15.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Der Flur ist klein, aber das Badezimmer ist groß.",
+        "ar": "الممر صغير لكن الحمّام كبير."
+      },
+      "finding": "الممر صغير والحمام كبير، مع مقابلات عربية مناسبة لـFlur وBadezimmer.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S33",
+        "S37"
+      ]
+    },
+    {
+      "id": "d-a1-15.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Ist die Toilette im Badezimmer?",
+        "ar": "هل المرحاض داخل الحمّام؟"
+      },
+      "finding": "السؤال عن وجود المرحاض داخل الحمام مترجم بدقة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S33",
+        "S34"
+      ]
+    },
+    {
+      "id": "d-a1-15.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Nein, die Toilette ist extra, neben der Küche.",
+        "ar": "لا، المرحاض منفصل، بجانب المطبخ."
+      },
+      "finding": "extra هنا بمعنى منفصل/على حدة، وneben der Küche تعني بجانب المطبخ؛ الترجمة تحفظ المعنيين والمكان.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S34",
+        "S35",
+        "S36"
+      ]
+    },
+    {
+      "id": "d-a1-15.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Der Boden im Wohnzimmer ist ein bisschen schmutzig.",
+        "ar": "أرضية الصالة متّسخة قليلاً."
+      },
+      "finding": "Boden im Wohnzimmer هو أرضية غرفة الجلوس؛ schmutzig تعني متسخة. «أرضية الصالة» مقابل سياقي سليم.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S38",
+        "S39",
+        "S40"
+      ]
+    },
+    {
+      "id": "d-a1-15.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Ja, morgen kommt die Putzfrau. Dann ist alles sauber.",
+        "ar": "نعم، غداً تأتي عاملة التنظيف. عندها يكون كل شيء نظيفاً."
+      },
+      "finding": "Putzfrau نُقلت إلى عاملة التنظيف وsauber إلى نظيف. بدائل أسلوبية محايدة ممكنة للمسمى الألماني، لكنها لا تثبت خطأً في النص.",
+      "action": "لا تعديل؛ لا أستبدل مفردة صحيحة لمجرد وجود بديل أسلوبي.",
+      "sources": [
+        "S41",
+        "S42"
+      ]
+    },
+    {
+      "id": "d-a1-15.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "de": "Gut. Dann komme ich am Samstag mit meinen Sachen.",
+        "ar": "حسناً. إذن آتي يوم السبت بأغراضي."
+      },
+      "finding": "المتحدثة ستأتي السبت مع أغراضها؛ «Dann» نتيجة/انتقال وترجمة «إذن» مناسبة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1"
+      ]
+    },
+    {
+      "id": "d-a1-15-q1",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wo ist die Toilette?",
+        "options": [
+          "im Badezimmer",
+          "neben der Küche",
+          "im Flur"
+        ],
+        "answer": "neben der Küche",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "explanationAr": "الدليل: «die Toilette ist extra, neben der Küche». الفخّ 1: «Nein» على سؤال الحمّام. الفخّ 2: الممر صغير فقط.",
+        "falle": true
+      },
+      "finding": "neben der Küche يرد بعد نفي وجود Toilette في Badezimmer؛ المشتتان im Badezimmer وim Flur لا يطابقان النص.",
+      "action": "أُبقي السؤال والمفتاح والشرح والتعليمات؛ لا تعديل.",
+      "sources": [
+        "S33",
+        "S34",
+        "S35",
+        "S36",
+        "S37"
+      ]
+    },
+    {
+      "id": "d-a1-15-q2",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was ist schmutzig?",
+        "options": [
+          "das Badezimmer",
+          "das Sofa",
+          "der Boden im Wohnzimmer"
+        ],
+        "answer": "der Boden im Wohnzimmer",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "explanationAr": "الدليل: «Der Boden im Wohnzimmer ist ein bisschen schmutzig». الفخّ 1: الحمّام كبير. الفخّ 2: الأريكة من الأثاث.",
+        "falle": true
+      },
+      "finding": "الدليل يسمّي Boden im Wohnzimmer بأنه ein bisschen schmutzig؛ الحمام كبير والأريكة من الأثاث.",
+      "action": "أُبقي السؤال والمفتاح والشرح والتعليمات؛ لا تعديل.",
+      "sources": [
+        "S31",
+        "S33",
+        "S38",
+        "S39",
+        "S40"
+      ]
+    },
+    {
+      "id": "d-a1-15-q3",
+      "kind": "سؤال: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "fill",
+        "promptDe": "Die Wohnung ist ___.",
+        "answer": [
+          "möbliert"
+        ],
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+        "explanationAr": "الدليل: «Die Wohnung ist möbliert»."
+      },
+      "finding": "ملء الفراغ بـmöbliert ينتج Die Wohnung ist möbliert، كما ورد في أول سطر؛ المفتاح والشرح صحيحان.",
+      "action": "أُبقي السؤال والمفتاح والشرح والتعليمات؛ لا تعديل.",
+      "sources": [
+        "S1",
+        "S30"
+      ]
+    },
+    {
+      "id": "d-a1-15.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Hier ist der Schlüssel."
+      },
+      "finding": "تطابق مع بداية lines[0] حرفياً.",
+      "action": "لا تعديل؛ الإملاء مؤسس على الحوار.",
+      "sources": [
+        "S1",
+        "S29"
+      ]
+    },
+    {
+      "id": "d-a1-15.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Der Flur ist klein, aber das Badezimmer ist groß."
+      },
+      "finding": "تطابق حرفي مع lines[2]؛ الترقيم والحروف الألمانية سليمة.",
+      "action": "لا تعديل؛ الإملاء مؤسس على الحوار.",
+      "sources": [
+        "S1",
+        "S33",
+        "S37"
+      ]
+    }
+  ]
+}
