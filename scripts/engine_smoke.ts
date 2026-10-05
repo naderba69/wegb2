@@ -5923,6 +5923,175 @@ void 0;
     "K176c حدود Git shallow مسجلة؛ الغياب مؤكد فقط في الأشجار المتاحة ولا يُعمّم على تاريخ سابق");
 }
 
+{
+  type A2DialogueAuditEntry = {
+    id: string; level: string; titleDe: string; titleAr: string;
+    lines: { who: string; de: string; ar: string }[];
+    questions: any[]; dictation: string[]; waisen?: string[];
+  };
+  type A2ReviewItem = {
+    id: string; kind: string; status: string; sources: string[];
+    finding: string; action: string; reviewed: any;
+  };
+  type A2ReviewReport = {
+    date: string; batch: string; scope: string; method: string;
+    coverage: Record<string, number>; statusCounts: Record<string, number>;
+    statusDefinitions: Record<string, string>; limitations: string[];
+    historicalPatchReview: { sources: string[]; comparisons: any[] };
+    contentPatch: { fieldsChanged: number; changedFields: string[]; reason: string; protectedUnresolvedItemIds: string[] };
+    openNotes: { id: string; status: string; sources: string[]; finding: string; action: string }[];
+    audioAssetAudit: { id: string; file: string; metadataBytes: number; actualBytes: number;
+      exists: boolean; voices: number; voice: string; check: string }[];
+    sources: { id: string; title: string; url: string; supports: string }[];
+    items: A2ReviewItem[];
+  };
+  const reviewA2 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-01-2026-10-05.json", "utf8")) as A2ReviewReport;
+  const reviewMarkdownA2 = readFileSync("docs/content-review-a2-dialogues-01-2026-10-05.md", "utf8");
+  const liveA2 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as A2DialogueAuditEntry[];
+  const batchA2 = liveA2.filter((dialogue) => ["d-a2-31", "d-a2-32"].includes(dialogue.id));
+  const expectedIdsA2 = batchA2.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question) => question.id),
+    ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const reviewIdsA2 = reviewA2.items.map((item) => item.id);
+  const reviewByIdA2 = new Map(reviewA2.items.map((item) => [item.id, item]));
+  const reviewRowsA2 = reviewMarkdownA2.split("## سجل كل عنصر")[1]?.split("## المصادر المنشورة")[0] ?? "";
+  const uniqueRowsA2 = expectedIdsA2.every((id) =>
+    reviewRowsA2.split("\n").filter((line) => line.startsWith(`| \`${id}\` |`)).length === 1
+  );
+  ok(reviewA2.date === "2026-10-05" && reviewA2.batch === "A2-dialogues-01" && batchA2.length === 2 &&
+    batchA2[0]?.lines.length === 6 && batchA2[1]?.lines.length === 5 &&
+    batchA2[0]?.questions.length === 3 && batchA2[1]?.questions.length === 2 &&
+    batchA2.every((dialogue) => dialogue.dictation.length === 3) && expectedIdsA2.length === 24 &&
+    new Set(expectedIdsA2).size === 24 && JSON.stringify(expectedIdsA2) === JSON.stringify(reviewIdsA2) && uniqueRowsA2 &&
+    reviewA2.coverage.dialogues === 2 && reviewA2.coverage.dialogueMetadata === 2 &&
+    reviewA2.coverage.lines === 11 && reviewA2.coverage.questions === 5 &&
+    reviewA2.coverage.dictationSentences === 6 && reviewA2.coverage.audioAssets === 2 &&
+    reviewA2.coverage.unresolvedContextNotes === 3 && reviewA2.coverage.totalTrackedItems === 24 &&
+    reviewA2.scope.includes("d-a1-28–d-a1-30") && reviewA2.scope.includes("لا صلة لهذه الدفعة") &&
+    reviewMarkdownA2.includes("تبقى منفصلة وغير محسومة"),
+    "K177a تقرير A2 يغطي البيانات والأسطر والأسئلة والإملاء لكل من 31 و32؛ ولا يستبدل فجوة A1 28–30");
+
+  const sourceIdsA2 = new Set(reviewA2.sources.map((source) => source.id));
+  const referencedSourceIdsA2 = new Set([
+    ...reviewA2.items.flatMap((item) => item.sources),
+    ...reviewA2.openNotes.flatMap((note) => note.sources),
+  ]);
+  const computedStatusCountsA2 = reviewA2.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const evidenceCompleteA2 = reviewA2.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.kind.trim().length > 0 &&
+    item.sources.length > 0 && item.sources.every((id) => sourceIdsA2.has(id)) &&
+    item.finding.trim().length > 0 && item.action.trim().length > 0 && !!item.reviewed
+  );
+  const sourcesCompleteA2 = reviewA2.sources.length === 31 && sourceIdsA2.size === 31 &&
+    referencedSourceIdsA2.size === reviewA2.sources.length &&
+    reviewA2.sources.every((source) => source.title.trim().length > 0 && source.supports.trim().length > 0 &&
+      source.url.startsWith("https://") && reviewMarkdownA2.includes(`<a id="${source.id.toLowerCase()}"></a>${source.id}`) &&
+      referencedSourceIdsA2.has(source.id));
+  const statusesExactA2 = reviewA2.items.every((item) => item.status === (
+    ["d-a2-31.lines[0]", "d-a2-31.lines[1]", "d-a2-31.lines[5]", "d-a2-31-q1", "d-a2-32.lines[4]", "d-a2-32-q1", "d-a2-32-q2"].includes(item.id) ? "مُصحح" :
+      ["d-a2-31.lines[3]", "d-a2-31-q2"].includes(item.id) ? "غير محسوم" : "سليم"
+  ));
+  ok(evidenceCompleteA2 && sourcesCompleteA2 && statusesExactA2 &&
+    computedStatusCountsA2["سليم"] === 15 && computedStatusCountsA2["مُصحح"] === 7 &&
+    computedStatusCountsA2["غير محسوم"] === 2 && reviewA2.statusCounts["سليم"] === 15 &&
+    reviewA2.statusCounts["مُصحح"] === 7 && reviewA2.statusCounts["غير محسوم"] === 2 &&
+    reviewA2.openNotes.length === 3 && reviewA2.openNotes.every((note) => note.finding && note.action &&
+      note.sources.length > 0 && note.sources.every((source) => sourceIdsA2.has(source))) &&
+    (reviewByIdA2.get("d-a2-31.lines[3]")?.finding.includes("لا يثبت خطأ") ?? false) &&
+    (reviewByIdA2.get("d-a2-31-q2")?.action.includes("لا تغيير") ?? false) &&
+    reviewA2.sources.some((source) => source.id === "S27" && source.supports.includes("إبلاغ صاحب العمل")) &&
+    reviewA2.sources.some((source) => source.id === "S28" && source.supports.includes("إخبار بالمرض")),
+    "K177b لكل عنصر دليل وحكم وإجراء ومصدر؛ تُفصل الأخطاء المؤكدة عن 3 ملاحظات سياقية/تربوية");
+
+  const snapshotsMatchA2 = reviewA2.items.every((item) => {
+    const dialogue = batchA2.find((candidate) => candidate.id === item.id || item.id.startsWith(`${candidate.id}.`) ||
+      candidate.questions.some((question) => question.id === item.id));
+    if (!dialogue) return false;
+    const r = item.reviewed;
+    if (item.id === dialogue.id) {
+      const expected = { titleDe: dialogue.titleDe, titleAr: dialogue.titleAr, level: dialogue.level,
+        lineCount: dialogue.lines.length, questionCount: dialogue.questions.length,
+        dictationCount: dialogue.dictation.length, hasWaisen: Object.prototype.hasOwnProperty.call(dialogue, "waisen") };
+      return JSON.stringify(r) === JSON.stringify(expected);
+    }
+    const lineMatch = item.id.match(/\.lines\[(\d+)\]$/);
+    if (lineMatch) return JSON.stringify(r) === JSON.stringify(dialogue.lines[Number(lineMatch[1])]);
+    const dictationMatch = item.id.match(/\.dictation\[(\d+)\]$/);
+    if (dictationMatch) return JSON.stringify(r) === JSON.stringify({ sentence: dialogue.dictation[Number(dictationMatch[1])] });
+    const question = dialogue.questions.find((candidate) => candidate.id === item.id);
+    return !!question && JSON.stringify(r) === JSON.stringify(question);
+  });
+  const q1A2 = reviewByIdA2.get("d-a2-31-q1")?.reviewed;
+  const q2A2 = reviewByIdA2.get("d-a2-32-q2")?.reviewed;
+  ok(snapshotsMatchA2 && reviewA2.contentPatch.fieldsChanged === 7 && reviewA2.contentPatch.changedFields.length === 7 &&
+    ["d-a2-31.lines[0].ar", "d-a2-31.lines[1].ar", "d-a2-31.lines[5].ar", "d-a2-31.questions[0].explanationAr", "d-a2-32.lines[4].ar",
+      "d-a2-32.questions[0].explanationAr", "d-a2-32.questions[1].explanationAr"].every((field) => reviewA2.contentPatch.changedFields.includes(field)) &&
+    batchA2[0]?.lines[0]?.ar.startsWith("مرحباً.") && batchA2[0]?.lines[1]?.ar.includes("معكِ") &&
+    batchA2[0]?.lines[5]?.ar.includes("تستلمينَ") && batchA2[1]?.lines[4]?.ar.includes("إشعاراً بمرضي") &&
+    q1A2?.answer === "ihr Geld zurück" && q1A2?.explanationAr.includes("لا قاعدة عامة لكل المتاجر") &&
+    q2A2?.answer?.[0] === "Krankmeldung" &&
+    q2A2?.explanationAr.includes("إبلاغُ جهةِ العملِ بالمرض") &&
+    (reviewByIdA2.get("d-a2-32-q1")?.reviewed?.explanationAr.includes("موعد إرسال الإشعار بالبريد") ?? false) &&
+    !(reviewByIdA2.get("d-a2-32-q1")?.reviewed?.explanationAr.includes("إرسال الشهادة بالبريد") ?? true) &&
+    reviewA2.contentPatch.protectedUnresolvedItemIds.includes("d-a2-31.lines[3]") &&
+    reviewA2.contentPatch.protectedUnresolvedItemIds.includes("d-a2-31-q2"),
+    "K177c كل اللقطات تطابق المحتوى الحي؛ التصحيحات السبعة الموثقة موجودة ولا تمس العناصر غير المحسومة");
+
+  const dialogueWaveA2 = readFileSync("scripts/dialoge_welle.py", "utf8");
+  const distractorPatchA2 = readFileSync("scripts/patches/a_dialog_fallen.py", "utf8");
+  const historyA2 = reviewA2.historicalPatchReview;
+  const hist31A2 = historyA2.comparisons.find((comparison) => comparison.dialogueId === "d-a2-31");
+  const hist32A2 = historyA2.comparisons.find((comparison) => comparison.dialogueId === "d-a2-32");
+  const historicalLiveOptionsA2 = [
+    JSON.stringify(hist31A2?.questions?.[0]?.liveOptions) === JSON.stringify(batchA2[0]?.questions[0]?.options),
+    JSON.stringify(hist32A2?.questions?.[0]?.liveOptions) === JSON.stringify(batchA2[1]?.questions[0]?.options),
+  ].every(Boolean);
+  const historicalEvidenceA2 = historyA2.sources.includes("scripts/dialoge_welle.py") &&
+    historyA2.sources.includes("scripts/patches/a_dialog_fallen.py") && existsSync("scripts/dialoge_welle.py") &&
+    existsSync("scripts/patches/a_dialog_fallen.py") && historyA2.comparisons.length === 2 &&
+    hist31A2?.baseline === "scripts/dialoge_welle.py" && hist31A2?.postEdit === "scripts/patches/a_dialog_fallen.py" &&
+    hist32A2?.baseline === "scripts/dialoge_welle.py" && hist32A2?.postEdit === "scripts/patches/a_dialog_fallen.py" &&
+    dialogueWaveA2.includes('"id":"d-a2-31"') && dialogueWaveA2.includes('"id":"d-a2-32"') &&
+    dialogueWaveA2.includes('"options":["einen Umtausch","ihr Geld zurück","eine Reparatur"]') &&
+    distractorPatchA2.includes('"d-a2-31-q1": dict(o=["einen neuen Wasserkocher","ihr Geld zurück","eine Reparatur innerhalb von vierzehn Tagen"]') &&
+    distractorPatchA2.includes('"d-a2-32-q1": dict(o=["einen Tag","drei Tage","bis heute Abend"]') &&
+    hist31A2?.questions?.[0]?.initialAnswer === "ihr Geld zurück" &&
+    hist31A2?.questions?.[0]?.postEditAnswer === "ihr Geld zurück" &&
+    hist31A2?.questions?.[0]?.liveExplanation === batchA2[0]?.questions[0]?.explanationAr &&
+    hist32A2?.questions?.[0]?.initialAnswer === "drei Tage" &&
+    hist32A2?.questions?.[0]?.liveExplanation === batchA2[1]?.questions[0]?.explanationAr &&
+    historicalLiveOptionsA2 && hist31A2?.dictationChanges?.[0]?.live?.join("|") === batchA2[0]?.dictation.join("|") &&
+    hist32A2?.dictationChanges?.[0]?.live?.join("|") === batchA2[1]?.dictation.join("|") &&
+    hist31A2?.linesAndTitles.includes("ثلاثة حقول") && reviewMarkdownA2.includes("اختلاف الترتيب آلياً بوصفه خطأ");
+  ok(historicalEvidenceA2,
+    "K177d تسلسل التأسيس والتحرير والنسخة الحية موثق؛ تغير المشتت أو ترتيب المفتاح لا يُعد خطأً تلقائياً");
+
+  const audioManifestA2 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as {
+    einsaetze: { id: string; file: string; bytes: number; stimmen?: number; voice?: string }[];
+  };
+  const audioMatchesA2 = reviewA2.audioAssetAudit.map((audit) => {
+    const entry = audioManifestA2.einsaetze.find((candidate) => candidate.id === audit.id);
+    const assetPath = `public${audit.file.startsWith("/") ? audit.file : `/${audit.file}`}`;
+    const actualBytes = existsSync(assetPath) ? readFileSync(assetPath).byteLength : -1;
+    return !!entry && audit.exists && actualBytes === entry.bytes && audit.actualBytes === actualBytes &&
+      audit.metadataBytes === entry.bytes && audit.file === entry.file && audit.voices === entry.stimmen &&
+      audit.voice === entry.voice && audit.check.includes("لم تُختبر مطابقة النطق");
+  });
+  ok(reviewA2.audioAssetAudit.length === 2 && audioMatchesA2.length === 2 && audioMatchesA2.every(Boolean) &&
+    reviewA2.limitations.some((limitation) => limitation.includes("لم يُستمع إليهما")) &&
+    reviewA2.limitations.some((limitation) => limitation.includes("لم أعد تقييم CEFR")) &&
+    reviewA2.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&
+    reviewMarkdownA2.includes("لم يُدّعَ سماعهما") && reviewMarkdownA2.includes("لا اعتماداً مهنياً أو مراجعة بشرية") &&
+    reviewMarkdownA2.includes("لم يُعدّل CEFR أو النسبة أو حساب المستوى"),
+    "K177e الصوتان مفحوصان بالحجم والوجود فقط؛ لا ادعاء سمعي/مهني، ولا تعديل CEFR أو النسبة أو المستوى");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

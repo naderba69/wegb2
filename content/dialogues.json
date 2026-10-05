@@ -5989,12 +5989,12 @@
       {
         "who": "Kundin",
         "de": "Guten Tag. Ich habe diesen Wasserkocher vorgestern gekauft, aber er funktioniert nicht.",
-        "ar": "مساءَ الخير. اشتريتُ هذه الغلّايةَ أوّلَ أمسٍ لكنّها لا تعمل."
+        "ar": "مرحباً. اشتريتُ هذه الغلّايةَ أوّلَ أمسٍ لكنّها لا تعمل."
       },
       {
         "who": "Verkäufer",
         "de": "Das tut mir leid. Haben Sie den Kassenbon dabei?",
-        "ar": "يؤسفُني. أمعكَ إيصالُ الشراء؟"
+        "ar": "يؤسفُني. هل معكِ إيصالُ الشراء؟"
       },
       {
         "who": "Kundin",
@@ -6014,7 +6014,7 @@
       {
         "who": "Verkäufer",
         "de": "Nur hier unten, dann bekommen Sie den Betrag bar.",
-        "ar": "هنا في الأسفلِ فقط، ثمَّ تستلمُ المبلغَ نقداً."
+        "ar": "هنا في الأسفلِ فقط، ثمَّ تستلمينَ المبلغَ نقداً."
       }
     ],
     "questions": [
@@ -6028,7 +6028,7 @@
           "eine Reparatur innerhalb von vierzehn Tagen"
         ],
         "answer": "ihr Geld zurück",
-        "explanationAr": "الدليل: «Ich hätte gern mein Geld zurück». الفخّ 1: لم تطلب استبدالاً. الفخّ 2: 14 يوماً مهلة الاسترجاع، لا إصلاح.",
+        "explanationAr": "الدليل: «Ich hätte gern mein Geld zurück». الفخّ 1: لم تطلب استبدالاً. الفخّ 2: أربعة عشر يوماً هي المهلة التي ذكرها البائع لقبول طلبها في هذا الحوار، لا مدة إصلاح ولا قاعدة عامة لكل المتاجر.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
@@ -6089,7 +6089,7 @@
       {
         "who": "Amir",
         "de": "Die Krankmeldung schicke ich heute noch per Post.",
-        "ar": "أُرسِلُ الإجازةَ المرضيةَ اليومَ بالبريد."
+        "ar": "سأُرسِلُ إشعاراً بمرضي اليومَ بالبريد."
       }
     ],
     "questions": [
@@ -6103,7 +6103,7 @@
           "bis heute Abend"
         ],
         "answer": "drei Tage",
-        "explanationAr": "الدليل: «Der Arzt hat mich für drei Tage krankgeschrieben». الفخّ 1: «drei» صحيح والوحدة خاطئة. الفخّ 2: «heute noch» موعد إرسال الشهادة بالبريد.",
+        "explanationAr": "الدليل: «Der Arzt hat mich für drei Tage krankgeschrieben». الفخّ 1: «drei» صحيح والوحدة خاطئة. الفخّ 2: «heute noch» موعد إرسال الإشعار بالبريد.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
@@ -6113,7 +6113,7 @@
         "answer": [
           "Krankmeldung"
         ],
-        "explanationAr": "Krankmeldung = ورقةُ الإجازةِ المرضيةِ التي تُرسَلُ لصاحبِ العمل.",
+        "explanationAr": "Krankmeldung = إبلاغُ جهةِ العملِ بالمرض؛ وفي الحوارِ يرسلُ أميرٌ هذا الإشعارَ بالبريد.",
         "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
       }
     ],
