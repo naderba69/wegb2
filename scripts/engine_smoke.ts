@@ -5664,6 +5664,265 @@ void 0;
     "K174f المنهج يفصل المؤكد عن الأسلوب/السياق ويحفظ CEFR والنسبة والحساب خارج النطاق");
 }
 
+
+{
+  type DialogueAuditSource10 = { id: string; title: string; url: string; supports: string };
+  type DialogueAuditItem10 = {
+    id: string; kind: string; status: string; sources: string[]; finding: string; action: string;
+    reviewed: Record<string, any>;
+  };
+  type LiveDialogue10 = {
+    id: string; level: string; titleDe: string; titleAr: string;
+    lines: { who: string; de: string; ar: string }[];
+    questions: { id: string; type: string; promptDe: string; options?: string[]; answer: string | string[];
+      promptAr?: string; explanationAr?: string; falle?: boolean }[];
+    dictation: string[];
+  };
+  const audit10 = JSON.parse(readFileSync("docs/content-review-a1-dialogues-10-2026-10-05.json", "utf8")) as {
+    date: string; batch: string; scope: string; method: string;
+    coverage: { dialogues: number; dialogueMetadata: number; lines: number; questions: number;
+      dictationSentences: number; audioAssets: number; unresolvedContextNotes: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>; statusDefinitions: Record<string, string>; limitations: string[];
+    contentPatch: { fieldsChanged: number; reason: string; protectedUnresolvedItemIds: string[] };
+    historicalPatchReview: { sources: string[]; comparisons: any[] };
+    audioAssetAudit: { id: string; file: string; metadataBytes: number; actualBytes: number; exists: boolean;
+      voices: number; voice: string; check: string }[];
+    sources: DialogueAuditSource10[]; items: DialogueAuditItem10[];
+  };
+  const auditMarkdown10 = readFileSync("docs/content-review-a1-dialogues-10-2026-10-05.md", "utf8");
+  const liveBatchAll10 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as LiveDialogue10[];
+  const batchIds10 = ["d-a1-31", "d-a1-32"];
+  const completeBatch10 = batchIds10.map((id) => liveBatchAll10.find((dialogue) => dialogue.id === id));
+  const validBatch10 = completeBatch10.every((dialogue) => !!dialogue && dialogue.level === "A1")
+    ? completeBatch10 as NonNullable<typeof completeBatch10[number]>[] : [];
+  const expectedIds10 = validBatch10.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question) => question.id),
+    ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const auditIds10 = audit10.items.map((item) => item.id);
+  const auditById10 = new Map(audit10.items.map((item) => [item.id, item]));
+  const auditSection10 = auditMarkdown10.split("## سجل كل عنصر")[1]?.split("## المصادر المنشورة")[0] ?? "";
+  const markdownRowsUnique10 = expectedIds10.every((id) =>
+    auditSection10.split("\n").filter((line) => line.startsWith(`| ${id} |`)).length === 1
+  );
+  ok(validBatch10.length === 2 && validBatch10[0]?.lines.length === 5 && validBatch10[1]?.lines.length === 6 &&
+    validBatch10.every((dialogue) => dialogue.questions.length === 2 && dialogue.dictation.length === 3) &&
+    expectedIds10.length === 23 && new Set(expectedIds10).size === 23 &&
+    JSON.stringify(expectedIds10) === JSON.stringify(auditIds10) && markdownRowsUnique10 &&
+    !liveBatchAll10.some((dialogue) => ["d-a1-28", "d-a1-29", "d-a1-30"].includes(dialogue.id)) &&
+    audit10.date === "2026-10-05" && audit10.batch === "A1-dialogues-10" &&
+    audit10.coverage.dialogues === 2 && audit10.coverage.dialogueMetadata === 2 && audit10.coverage.lines === 11 &&
+    audit10.coverage.questions === 4 && audit10.coverage.dictationSentences === 6 && audit10.coverage.audioAssets === 2 &&
+    audit10.coverage.unresolvedContextNotes === 1 && audit10.coverage.totalTrackedItems === 23 &&
+    batchIds10.every((id) => audit10.scope.includes(id)) && audit10.scope.includes("d-a1-28") &&
+    audit10.scope.includes("d-a1-29") && audit10.scope.includes("d-a1-30"),
+    "K175a تقرير الدفعة 10 يغطي كل 23 معرفاً حياً، ويسجل بوضوح غياب 28–30 دون استبدال صامت");
+
+  const sourceIds10 = new Set(audit10.sources.map((source) => source.id));
+  const referencedSources10 = new Set(audit10.items.flatMap((item) => item.sources));
+  const computedStatuses10 = audit10.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const completeEvidence10 = audit10.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.kind.trim().length > 0 &&
+    item.sources.length > 0 && item.sources.every((id) => sourceIds10.has(id)) &&
+    item.finding.trim().length > 0 && item.action.trim().length > 0 && !!item.reviewed
+  );
+  const completeSources10 = audit10.sources.length === 18 && sourceIds10.size === 18 && audit10.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://") &&
+    auditMarkdown10.includes(`<a id="${source.id.toLowerCase()}"></a>${source.id}`)
+  ) && referencedSources10.size === audit10.sources.length &&
+    audit10.sources.every((source) => referencedSources10.has(source.id));
+  const unresolvedId10 = "d-a1-31.lines[3]";
+  const statusesExact10 = audit10.items.every((item) => item.status === (item.id === unresolvedId10 ? "غير محسوم" : "سليم"));
+  ok(completeEvidence10 && completeSources10 && statusesExact10 &&
+    computedStatuses10["سليم"] === 22 && (computedStatuses10["مُصحح"] ?? 0) === 0 && computedStatuses10["غير محسوم"] === 1 &&
+    audit10.statusCounts["سليم"] === 22 && audit10.statusCounts["مُصحح"] === 0 && audit10.statusCounts["غير محسوم"] === 1 &&
+    audit10.statusDefinitions["غير محسوم"].includes("يتوقف الحكم") &&
+    (auditById10.get(unresolvedId10)?.finding.includes("Duden") ?? false) &&
+    (auditById10.get(unresolvedId10)?.action.includes("لا أستبدل") ?? false) &&
+    auditMarkdown10.includes("«غير محسوم» لا يعني ثبوت الخطأ"),
+    "K175b لكل بند دليل/حكم/إجراء ومصدر مباشر؛ الملاحظة غير المحسومة مفصولة عن الخطأ المؤكد");
+
+  const snapshotsMatch10 = audit10.items.every((item) => {
+    const metadata = item.reviewed;
+    const dialogue = validBatch10.find((candidate) => candidate.id === item.id || item.id.startsWith(`${candidate.id}.`) ||
+      candidate.questions.some((question) => question.id === item.id));
+    if (!dialogue) return false;
+    if (item.id === dialogue.id) {
+      return metadata.titleDe === dialogue.titleDe && metadata.titleAr === dialogue.titleAr &&
+        metadata.level === dialogue.level && metadata.lineCount === dialogue.lines.length &&
+        metadata.questionCount === dialogue.questions.length && metadata.dictationCount === dialogue.dictation.length &&
+        metadata.hasWaisen === Object.prototype.hasOwnProperty.call(dialogue, "waisen");
+    }
+    const lineMatch = item.id.match(/\.lines\[(\d+)\]$/);
+    if (lineMatch) {
+      const line = dialogue.lines[Number(lineMatch[1])];
+      return !!line && metadata.who === line.who && metadata.de === line.de && metadata.ar === line.ar;
+    }
+    const dictationMatch = item.id.match(/\.dictation\[(\d+)\]$/);
+    if (dictationMatch) return metadata.sentence === dialogue.dictation[Number(dictationMatch[1])];
+    const question = dialogue.questions.find((candidate) => candidate.id === item.id);
+    if (!question) return false;
+    const keys = ["id", "type", "promptDe", "promptAr", "options", "answer", "explanationAr", "falle"];
+    return keys.every((key) => JSON.stringify(metadata[key]) === JSON.stringify((question as any)[key]) &&
+      Object.prototype.hasOwnProperty.call(metadata, key) === Object.prototype.hasOwnProperty.call(question, key));
+  });
+  const ambiguity10 = auditById10.get(unresolvedId10);
+  ok(snapshotsMatch10 && ambiguity10?.reviewed.ar === validBatch10[0]?.lines[3]?.ar &&
+    auditById10.get("d-a1-32.lines[1]")?.status === "سليم" &&
+    (auditById10.get("d-a1-32.lines[1]")?.finding.includes("لا يثبت أن الترجمة الحالية خاطئة") ?? false) &&
+    audit10.contentPatch.fieldsChanged === 0 && audit10.contentPatch.protectedUnresolvedItemIds.length === 1 &&
+    audit10.contentPatch.protectedUnresolvedItemIds[0] === unresolvedId10,
+    "K175c كل اللقطات تطابق النص والأسئلة والإملاء الحي؛ لا تعديل تخمينياً للحروف أو كلمة الإشارة");
+
+  const dialogueWave10 = readFileSync("scripts/dialoge_welle.py", "utf8");
+  const distractorPatch10 = readFileSync("scripts/patches/a_dialog_fallen.py", "utf8");
+  const history10 = audit10.historicalPatchReview;
+  const hist31 = history10.comparisons.find((comparison) => comparison.dialogueId === "d-a1-31");
+  const hist32 = history10.comparisons.find((comparison) => comparison.dialogueId === "d-a1-32");
+  const baselineLinesMatch10 = validBatch10.every((dialogue) => dialogue.lines.every((line) =>
+    dialogueWave10.includes(`L(${JSON.stringify(line.who)},${JSON.stringify(line.de)},${JSON.stringify(line.ar)})`)
+  ));
+  const baselineMatches10 = baselineLinesMatch10 &&
+    dialogueWave10.includes('"id":"d-a1-31"') &&
+    dialogueWave10.includes('"titleDe":"An der Rezeption","titleAr":"في الاستقبال"') &&
+    dialogueWave10.includes('"titleDe":"Nach dem Weg fragen","titleAr":"السؤالُ عن الطريق"') &&
+    dialogueWave10.includes('"options":["um acht Uhr","um neun Uhr","um zehn Uhr"]') &&
+    dialogueWave10.includes('"options":["neben der Bank","hinter der Schule","vor dem Kino"]') &&
+    distractorPatch10.includes('"d-a1-31-q1": dict(o=["um neun Uhr bei Frau Bauer","um neun Uhr bei Herrn Haddad","um zehn Uhr bei Frau Bauer"]') &&
+    distractorPatch10.includes('"d-a1-32-q1": dict(o=["neben der Bank","an der Ampel","fünf Minuten geradeaus, dann links"]');
+  const historySnapshotsMatch10 = hist31?.baseline === "scripts/dialoge_welle.py" &&
+    hist31?.postEdit === "scripts/patches/a_dialog_fallen.py" && hist32?.baseline === "scripts/dialoge_welle.py" &&
+    hist32?.postEdit === "scripts/patches/a_dialog_fallen.py" && hist31?.questions?.[0]?.initialAnswer === "um neun Uhr" &&
+    hist31?.questions?.[0]?.postEditAnswer === "um neun Uhr bei Frau Bauer" &&
+    JSON.stringify(hist31?.questions?.[0]?.liveOptions) === JSON.stringify(validBatch10[0]?.questions[0]?.options) &&
+    JSON.stringify(hist32?.questions?.[0]?.liveOptions) === JSON.stringify(validBatch10[1]?.questions[0]?.options) &&
+    hist31?.dictationChanges?.[0]?.live?.every((sentence: string) => validBatch10[0]?.lines.some((line) => line.de.includes(sentence))) &&
+    (hist32?.dictationChanges?.[0]?.live?.every((sentence: string) => validBatch10[1]?.lines.some((line) => line.de.includes(sentence))) ?? false);
+  ok(history10.sources.includes("scripts/dialoge_welle.py") && history10.sources.includes("scripts/patches/a_dialog_fallen.py") &&
+    existsSync("scripts/dialoge_welle.py") && existsSync("scripts/patches/a_dialog_fallen.py") &&
+    history10.comparisons.length === 2 && baselineMatches10 && historySnapshotsMatch10 &&
+    auditMarkdown10.includes("تحرك ترتيب المفتاح") && auditMarkdown10.includes("لم أعتبر اختلاف الترتيب خطأً"),
+    "K175d المصدر التاريخي وخط تحرير المشتتات موثقان؛ اختلافات الخيارات/الإملاء لا تُصنف آلياً كأخطاء");
+
+  const audioManifest10 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as {
+    einsaetze: { id: string; file: string; bytes: number; stimmen?: number; voice?: string }[];
+  };
+  const audioChecks10 = audit10.audioAssetAudit.map((audit) => {
+    const entry = audioManifest10.einsaetze.find((candidate) => candidate.id === audit.id);
+    const assetPath = `public${audit.file.startsWith("/") ? audit.file : `/${audit.file}`}`;
+    const actualBytes = existsSync(assetPath) ? readFileSync(assetPath).byteLength : -1;
+    return !!entry && audit.exists && actualBytes === entry.bytes && audit.actualBytes === actualBytes &&
+      audit.metadataBytes === entry.bytes && audit.file === entry.file && audit.voices === entry.stimmen &&
+      audit.voice === entry.voice && audit.check.includes("لم تُختبر مطابقة النطق");
+  });
+  ok(audit10.audioAssetAudit.length === 2 && audioChecks10.length === 2 && audioChecks10.every(Boolean) &&
+    audit10.coverage.audioAssets === 2 && auditMarkdown10.includes("وجود وحجم فقط؛ لا تحقق من transcript/النطق"),
+    "K175e صوتا الحوارين موجودان وحجماهما يطابقان الفهرس؛ الاختبار لا يدعي تفريغاً أو تحققاً سمعياً");
+
+  ok(audit10.method.includes("بنداً بنداً") &&
+    audit10.limitations.some((limitation) => limitation.includes("CEFR") && limitation.includes("لم أعد تقييم")) &&
+    audit10.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية أو اعتماداً")) &&
+    auditMarkdown10.includes("لا اعتماداً مهنياً ولا مراجعة بشرية") &&
+    audit10.sources.some((source) => source.id === "S18" && source.supports.includes("لا لإعادة تقييم CEFR")) &&
+    audit10.contentPatch.reason.includes("لم يثبت خطأ مؤكد"),
+    "K175f المنهج والدور والحدود مثبتة؛ لا CEFR/نسبة/حساب مستوى ولا ادعاء اعتماد بشري");
+}
+
+
+{
+  type GapDialogue10 = { id: string; level?: string; waisen?: string[] };
+  type GapCardDeck10 = { level?: string; cards?: { id: string; de: string; level?: string }[] };
+  const gap28to30 = JSON.parse(readFileSync("docs/content-gap-a1-dialogues-28-30-2026-10-05.json", "utf8")) as {
+    date: string; status: string; scope: string; liveContent: { a1DialogueCount: number; a1Ids: string[];
+      missingIds: string[]; dialogue31_32HaveWaisen: Record<string, boolean> };
+    gitHistory: { searchedRefs: string; pathSearches: string[]; reachableHistoryBoundary: {
+      isShallow: boolean; reachableCommitCount: number; baseCommit: string; baseCommitParents: string[]; meaning: string;
+    } };
+    orphanCardTrace: { vocabPath: string; a1DeckCount: number; a1CardCount: number; dialogueSources: Record<string, {
+      dialogueIds: string[]; dialoguesWithWaisen: number; termMentions: number; uniqueTerms: number;
+      missingFromVocab: string[]; wrongLevel: string[];
+    }>; interpretation: string };
+    sources: { id: string; path: string; finding: string; role: string }[];
+    decision: string;
+  };
+  const gapMarkdown28to30 = readFileSync("docs/content-gap-a1-dialogues-28-30-2026-10-05.md", "utf8");
+  const liveGapBatch = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as GapDialogue10[];
+  const vocabGap = JSON.parse(readFileSync("content/vocab.json", "utf8")) as Record<string, GapCardDeck10>;
+  const a1CardsGap = Object.values(vocabGap).filter((deck) => deck.level === "A1")
+    .flatMap((deck) => deck.cards ?? []);
+  const a1CardWordsGap = new Set(a1CardsGap.filter((card) => card.level === "A1").map((card) => card.de));
+  const idsForGapRange = (from: number, to: number) => liveGapBatch.filter((dialogue) => dialogue.level === "A1" &&
+    from <= Number(dialogue.id.split("-").at(-1)) && Number(dialogue.id.split("-").at(-1)) <= to);
+  const sourceDlg10to18 = idsForGapRange(10, 18);
+  const sourceDlg19to27 = idsForGapRange(19, 27);
+  const trackedGapTerms = [...sourceDlg10to18, ...sourceDlg19to27].flatMap((dialogue) => dialogue.waisen ?? []);
+  const vocabHasNoDialoguePointersGap = Object.values(vocabGap).every((deck) =>
+    !Object.keys(deck).some((key) => /dialogue|dialog/i.test(key)) && (deck.cards ?? []).every((card) =>
+      !Object.keys(card).some((key) => /dialogue|dialog/i.test(key)) && !JSON.stringify(card).match(/d-a1-(28|29|30)/)
+    )
+  );
+  const sourceScriptsGap = [
+    "scripts/patches/dialoge_a1_neu1.py", "scripts/patches/dialoge_a1_neu2.py",
+    "scripts/patches/apply_dialoge.py", "scripts/dialoge_welle.py", "scripts/patches/a_dialog_fallen.py",
+    "content/dialogues.json", "content/vocab.json",
+  ];
+  const sourcesExistGap = sourceScriptsGap.every((path) => existsSync(path)) &&
+    gap28to30.sources.every((source) => existsSync(source.path));
+  const explicitSourcesGap = readFileSync("scripts/patches/dialoge_a1_neu1.py", "utf8");
+  const secondSourcesGap = readFileSync("scripts/patches/dialoge_a1_neu2.py", "utf8");
+  const applySourceGap = readFileSync("scripts/patches/apply_dialoge.py", "utf8");
+  const waveSourceGap = readFileSync("scripts/dialoge_welle.py", "utf8");
+  const primaryReview10 = readFileSync("docs/content-review-a1-dialogues-10-2026-10-05.md", "utf8");
+  const missingIdsGap = ["d-a1-28", "d-a1-29", "d-a1-30"];
+  ok(gap28to30.date === "2026-10-05" && gap28to30.liveContent.a1DialogueCount === 29 &&
+    JSON.stringify(gap28to30.liveContent.missingIds) === JSON.stringify(missingIdsGap) &&
+    missingIdsGap.every((id) => !liveGapBatch.some((dialogue) => dialogue.id === id)) &&
+    gap28to30.liveContent.dialogue31_32HaveWaisen["d-a1-31"] === false &&
+    gap28to30.liveContent.dialogue31_32HaveWaisen["d-a1-32"] === false &&
+    gap28to30.status.includes("غير محسوم") && gap28to30.status.includes("لا تُعد هذه مراجعة") &&
+    gap28to30.decision.includes("لا أستبدلها بـ31–32") &&
+    gapMarkdown28to30.includes("غير محسومة وغير مدققة لغوياً"),
+    "K176a غياب 28–30 موثق كفجوة غير محسومة، لا كحوارات مدققة ولا بديل عنها 31–32");
+
+  const sourceSet10to18 = gap28to30.orphanCardTrace.dialogueSources["10-18"];
+  const sourceSet19to27 = gap28to30.orphanCardTrace.dialogueSources["19-27"];
+  const cardMappingMatchesGap = sourceDlg10to18.length === 9 && sourceDlg19to27.length === 9 &&
+    sourceSet10to18.dialoguesWithWaisen === 9 && sourceSet19to27.dialoguesWithWaisen === 9 &&
+    sourceSet10to18.termMentions === 89 && sourceSet19to27.termMentions === 89 &&
+    sourceSet10to18.uniqueTerms === 89 && sourceSet19to27.uniqueTerms === 89 &&
+    sourceSet10to18.missingFromVocab.length === 0 && sourceSet19to27.missingFromVocab.length === 0 &&
+    sourceSet10to18.wrongLevel.length === 0 && sourceSet19to27.wrongLevel.length === 0 &&
+    trackedGapTerms.length === 178 && new Set(trackedGapTerms).size === 177 &&
+    trackedGapTerms.every((term) => a1CardWordsGap.has(term));
+  ok(sourcesExistGap && gap28to30.orphanCardTrace.a1DeckCount === 11 &&
+    gap28to30.orphanCardTrace.a1CardCount === 650 && a1CardsGap.length === 650 && cardMappingMatchesGap &&
+    vocabHasNoDialoguePointersGap &&
+    explicitSourcesGap.includes("d-a1-10") && explicitSourcesGap.includes("d-a1-18") &&
+    secondSourcesGap.includes("d-a1-19") && secondSourcesGap.includes("d-a1-27") &&
+    applySourceGap.includes("waisen<8") && applySourceGap.includes('cards[w]["level"]!=LEVEL') &&
+    waveSourceGap.includes('"id":"d-a1-31"') && waveSourceGap.includes('"id":"d-a1-32"') &&
+    !waveSourceGap.includes('"id":"d-a1-28"') && !waveSourceGap.includes('"id":"d-a1-29"') &&
+    !waveSourceGap.includes('"id":"d-a1-30"') &&
+    gap28to30.orphanCardTrace.interpretation.includes("يعيّن بطاقات إلى 28–30"),
+    "K176b مصدر البطاقات موصول فقط بحوارات 10–27؛ 178 إحالة/177 فريدة، ولا خريطة تربط بطاقات بـ28–30");
+
+  ok(gap28to30.gitHistory.reachableHistoryBoundary.isShallow === true &&
+    gap28to30.gitHistory.reachableHistoryBoundary.baseCommit === "791b72ea572ac17812aa176cf8bbbea6552a028a" &&
+    gap28to30.gitHistory.reachableHistoryBoundary.baseCommitParents.length === 0 &&
+    gap28to30.gitHistory.reachableHistoryBoundary.reachableCommitCount === 76 &&
+    gap28to30.gitHistory.pathSearches.length === 3 &&
+    gap28to30.gitHistory.reachableHistoryBoundary.meaning.includes("لا يستطيع إثبات") &&
+    gapMarkdown28to30.includes("لا يمكن فحص تاريخ ما قبل نقطة الأساس") &&
+    primaryReview10.includes("content-gap-a1-dialogues-28-30-2026-10-05.md") &&
+    primaryReview10.includes("لا يجزم التقرير بأنها لم توجد"),
+    "K176c حدود Git shallow مسجلة؛ الغياب مؤكد فقط في الأشجار المتاحة ولا يُعمّم على تاريخ سابق");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
