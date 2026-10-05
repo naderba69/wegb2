@@ -3023,6 +3023,81 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ XCI — الحوارات A1 13–15: السطور الموثقة والأسئلة بعد تحديث التعرفة ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 6, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    const cases: {
+      id: string;
+      titleDe: string;
+      titleAr: string;
+      visible: string[];
+      questions: { type: "mc" | "truefalse" | "fill"; prompt: string; answer: string }[];
+    }[] = [
+      {
+        id: "d-a1-13", titleDe: "Am Bahnhof: Der Zug nach Köln", titleAr: "في المحطة: القطار إلى كولن",
+        visible: ["Abfahrt um Viertel nach neun, Gleis 4.", "الانطلاق في التاسعة والربع، الرصيف 4.", "قطعتا أمتعة"],
+        questions: [
+          { type: "mc", prompt: "Wann fährt der Zug ab?", answer: "um Viertel nach neun" },
+          { type: "mc", prompt: "Warum braucht Sami heute einen Sitzplatz?", answer: "Der Zug ist voll." },
+          { type: "truefalse", prompt: "Der Zug fährt von Gleis 4.", answer: "richtig" },
+        ],
+      },
+      {
+        id: "d-a1-14", titleDe: "Auf der Post", titleAr: "في مكتب البريد",
+        visible: ["Standardbrief ins Ausland bis 20 Gramm", "تعتمد كلفة الطرد على حجمه ووزنه.", "إلى طابع بريدي بقيمة 1.25 يورو"],
+        questions: [
+          { type: "mc", prompt: "Wohin schickt die Kundin das Paket?", answer: "nach Österreich" },
+          { type: "mc", prompt: "Was kostet die Briefmarke?", answer: "1,25 Euro" },
+          { type: "truefalse", prompt: "Am Samstag ist die Post bis achtzehn Uhr geöffnet.", answer: "falsch" },
+        ],
+      },
+      {
+        id: "d-a1-15", titleDe: "Die neue Wohnung", titleAr: "الشقة الجديدة",
+        visible: ["Die Wohnung ist möbliert.", "الشقة مفروشة.", "أرضية الصالة متّسخة قليلاً."],
+        questions: [
+          { type: "mc", prompt: "Wo ist die Toilette?", answer: "neben der Küche" },
+          { type: "mc", prompt: "Was ist schmutzig?", answer: "der Boden im Wohnzimmer" },
+          { type: "fill", prompt: "Die Wohnung ist ___.", answer: "möbliert" },
+        ],
+      },
+    ];
+    for (const item of cases) {
+      const cleanup = mount(React.createElement(TaskView, {
+        task: { id: `t-${item.id}-review-ui`, kind: "hoeren" as const, dialogueId: item.id, titleDe: item.titleDe, titleAr: item.titleAr, minutes: 10 },
+        ...props,
+      }));
+      const reveal = btn("أظهر النص");
+      if (reveal) click(reveal);
+      const rendered = txt();
+      ok(!!reveal && item.visible.every((snippet) => rendered.includes(snippet)),
+        `XCI1 ${item.id} واجهة الاستماع تعرض السطر الثنائي المصحح/المراجع بعد كشف النص`);
+
+      let allAnswersAccepted = true;
+      for (const question of item.questions) {
+        const exercise = Array.from(rootEl.querySelectorAll(".dirb-ex-item"))
+          .find((node) => (node.textContent ?? "").includes(question.prompt));
+        if (!exercise) { allAnswersAccepted = false; continue; }
+        let answerControl: HTMLElement | null = null;
+        if (question.type === "fill") {
+          answerControl = exercise.querySelector("input.field") as HTMLInputElement | null;
+          if (answerControl) typeIn(answerControl as HTMLInputElement, question.answer);
+        } else {
+          answerControl = (Array.from(exercise.querySelectorAll(".dirb-ex-opt"))
+            .find((option) => (option.textContent ?? "").trim() === question.answer) as HTMLElement | undefined) ?? null;
+          if (answerControl) click(answerControl);
+        }
+        const check = Array.from(exercise.querySelectorAll("button"))
+          .find((button) => (button.textContent ?? "").includes("تحقّق")) as HTMLElement | undefined;
+        if (!answerControl || !check) { allAnswersAccepted = false; continue; }
+        click(check);
+        if (!(exercise.textContent ?? "").includes("✅")) allAnswersAccepted = false;
+      }
+      ok(allAnswersAccepted, `XCI2 ${item.id} مفاتيح الأسئلة الثلاثة تُقبل عبر واجهة الاستماع الفعلية`);
+      if (cleanup) cleanup();
+    }
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

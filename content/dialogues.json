@@ -8765,8 +8765,8 @@
       },
       {
         "who": "Mitarbeiter",
-        "de": "Neun Euro. Und für den Brief brauchen Sie eine Briefmarke für 85 Cent.",
-        "ar": "تسعة يورو. وللرسالة تحتاجين طابعاً بـ85 سنتاً."
+        "de": "Der Paketpreis hängt von Größe und Gewicht ab. Für einen Standardbrief ins Ausland bis 20 Gramm brauchen Sie eine Briefmarke für 1,25 Euro.",
+        "ar": "تعتمد كلفة الطرد على حجمه ووزنه. ولإرسال رسالة عادية إلى الخارج لا يزيد وزنها على 20 غراماً، تحتاجين إلى طابع بريدي بقيمة 1.25 يورو."
       },
       {
         "who": "Kundin",
@@ -8809,11 +8809,11 @@
         "promptDe": "Was kostet die Briefmarke?",
         "options": [
           "20 Cent",
-          "85 Cent",
-          "neun Euro"
+          "1,80 Euro",
+          "1,25 Euro"
         ],
-        "answer": "85 Cent",
-        "explanationAr": "الدليل: «eine Briefmarke für 85 Cent». الفخّ 1: 20 سنتاً الظرف. الفخّ 2: تسعة يورو الطرد.",
+        "answer": "1,25 Euro",
+        "explanationAr": "الدليل: «Für einen Standardbrief ins Ausland bis 20 Gramm brauchen Sie eine Briefmarke für 1,25 Euro». الفخّ 1: 20 سنتاً ثمن الظرف. الفخّ 2: 1,80 يورو لتعرفة الرسالة المدمجة حتى 50 غراماً، لا الرسالة المعيارية حتى 20 غراماً.",
         "id": "d-a1-14-q2",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
