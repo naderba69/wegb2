@@ -1,0 +1,1209 @@
+{
+  "date": "2026-10-05",
+  "batch": "A2-dialogues-02",
+  "scope": "مراجعة مصدرية لكل عنصر في الحوارات الحية d-a2-01 وd-a2-02 وd-a2-03: البيانات، الأسطر وترجماتها، كل حقول الأسئلة، وجمل الإملاء. فجوة A1 d-a1-28–d-a1-30 تظل منفصلة وغير محسومة؛ لا يُستنتج محتواها من d-a1-31 أو d-a1-32.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 20,
+    "questions": 6,
+    "dictationSentences": 9,
+    "audioAssets": 3,
+    "unresolvedContextNotes": 0,
+    "totalTrackedItems": 38
+  },
+  "statusCounts": {
+    "سليم": 36,
+    "مُصحح": 2,
+    "غير محسوم": 0
+  },
+  "method": "قُرئت البيانات الحية لكل حوار، وكل متحدث ونص وترجمة في الأسطر، وكل موجه وخيارات ومفتاح وشرح في الأسئلة، وكل جملة إملاء على حدة. أُسند كل عنصر إلى صفحات قاموس منشورة (PONS) أو قواعد/معجم Duden بحسب نوع الدليل؛ وقورنت فقط المعرّفات الثلاثة التي ظهرت في سجل المشتتات التاريخي. فُحص وجود ملفات الصوت وأحجامها مقابل البيان فقط، من دون استماع أو تفريغ.",
+  "statusDefinitions": {
+    "سليم": "لم يثبت خطأ لغوي/ترجمي يتطلب تغييراً؛ ولا تحول الملاحظة الأسلوبية المحتملة وحدها العنصر إلى خطأ.",
+    "مُصحح": "خلل مؤكد في الكتابة أو اكتمال الترجمة عُدّل في الملف الحي وسُجل النص السابق.",
+    "غير محسوم": "ملاحظة يتوقف حكمها على سياق أو هدف غير مسجل؛ لا تعديل تخمينياً. لا توجد حالة من هذا النوع في عناصر هذه الدفعة."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة؛ ليست مراجعة بشرية أو اعتماداً مهنياً.",
+    "قيم المستوى A2 بقيت كما خُزنت؛ لم يُعد تقييم CEFR ولم تُعدّل النسبة أو طريقة حساب المستوى.",
+    "حوار الطبيب راجع لغوياً فقط؛ لا يثبت هذا التقرير سلامة نصيحة علاجية ولا يقدم اعتماداً أو استشارة سريرية.",
+    "فحص الصوت اقتصر على وجود ملفات MP3 وتطابق حجم كل ملف مع البيان؛ لم يُستمع إليها ولم تُقارن بالكلام سطراً بسطراً.",
+    "المقارنة التاريخية محصورة بثلاثة سجلات أسئلة في scripts/patches/a_dialog_fallen.py؛ لم يُعثر في الملفات المفحوصة على خط أساس تاريخي كامل للعناوين والأسطر والإملاء، ولا يُعمّم الغياب على تاريخ Git قبل نقطة الأساس shallow.",
+    "فجوة d-a1-28–d-a1-30 باقية منفصلة وغير محسومة؛ لم يُنشأ لها محتوى بديل ولم تُستخدم d-a1-31–d-a1-32 لتخمينها."
+  ],
+  "historicalPatchReview": {
+    "sources": [
+      "scripts/patches/a_dialog_fallen.py"
+    ],
+    "role": "هذا الملف سجل تحرير للمشتتات في ثلاثة أسئلة مطابقة بالمعرّف، لا مرجع لغوي ولا نسخة كاملة للأسطر أو العناوين أو الإملاء. لم يُعثر في الملفات المفحوصة على تأسيس تاريخي مطابق للأسطر والعناوين والإملاء لهذه الحوارات؛ لذلك لا يُنسب إليها خط أساس غير موجود.",
+    "comparisons": [
+      {
+        "id": "d-a2-01-q2",
+        "historicalOptions": [
+          "neben dem Reisebüro",
+          "im Zentrum, gegenüber vom Bahnhof",
+          "in München am Stadtrand"
+        ],
+        "liveOptions": [
+          "neben dem Bahnhof in München",
+          "in München am Stadtrand",
+          "im Zentrum, gegenüber vom Bahnhof"
+        ],
+        "historicalAnswer": "im Zentrum, gegenüber vom Bahnhof",
+        "liveAnswer": "im Zentrum, gegenüber vom Bahnhof",
+        "note": "في السجل التاريخي استُبدل مشتت «neben dem Reisebüro» في النسخة الحية بـ«neben dem Bahnhof in München»، وتغير ترتيب خيارَي المركز/أطراف المدينة؛ بقي المفتاح نفسه. الاختلاف وحده لا يثبت خطأً."
+      },
+      {
+        "id": "d-a2-02-q1",
+        "historicalOptions": [
+          "seinen Geburtstag",
+          "eine Party am Samstag um acht",
+          "den Geburtstag von Selma"
+        ],
+        "liveOptions": [
+          "seinen Geburtstag",
+          "eine Party am Samstag um acht",
+          "den Geburtstag von Selma"
+        ],
+        "historicalAnswer": "seinen Geburtstag",
+        "liveAnswer": "seinen Geburtstag",
+        "note": "الخيارات والمفتاح متطابقة بين سجل المشتتات والحي."
+      },
+      {
+        "id": "d-a2-03-q2",
+        "historicalOptions": [
+          "dreimal am Tag",
+          "zweimal am Tag",
+          "drei Tage lang einmal"
+        ],
+        "liveOptions": [
+          "zweimal am Tag",
+          "dreimal am Tag",
+          "drei Tage lang einmal"
+        ],
+        "historicalAnswer": "dreimal am Tag",
+        "liveAnswer": "dreimal am Tag",
+        "note": "تغير ترتيب الخيارات فقط؛ بقيت المجموعة والمفتاح، فلا يصنف الترتيب وحده خطأً."
+      }
+    ],
+    "unavailableHistoricalFields": [
+      "titles",
+      "lines",
+      "question explanations/prompts outside the three matched IDs",
+      "dictation"
+    ]
+  },
+  "contentPatch": {
+    "fieldsChanged": 2,
+    "changedFields": [
+      "d-a2-01.questions[0].explanationAr",
+      "d-a2-02.lines[1].ar"
+    ],
+    "reason": "تبديل الشرح الملتبس للعدد الترتيبي المنفرد بمثال am zwölften Juli الصحيح في سياق الحوار، وإضافة المقابل المحذوف danke = شكراً في ترجمة رد Selma.",
+    "protectedUnresolvedItemIds": []
+  },
+  "openNotes": [],
+  "audioAssetAudit": [
+    {
+      "id": "d-a2-01",
+      "file": "/audio/dialog/d-a2-01.mp3",
+      "metadataBytes": 162065,
+      "actualBytes": 162065,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "فحص الوجود وتطابق الحجم مع البيان فقط؛ لم يُستمع إلى الملف ولم تُطابق عناصره سطراً بسطر."
+    },
+    {
+      "id": "d-a2-02",
+      "file": "/audio/dialog/d-a2-02.mp3",
+      "metadataBytes": 148708,
+      "actualBytes": 148708,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "فحص الوجود وتطابق الحجم مع البيان فقط؛ لم يُستمع إلى الملف ولم تُطابق عناصره سطراً بسطر."
+    },
+    {
+      "id": "d-a2-03",
+      "file": "/audio/dialog/d-a2-03.mp3",
+      "metadataBytes": 181726,
+      "actualBytes": 181726,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "فحص الوجود وتطابق الحجم مع البيان فقط؛ لم يُستمع إلى الملف ولم تُطابق عناصره سطراً بسطر."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "PONS — Guten Tag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Guten+Tag",
+      "supports": "يعرض «مرحباً» و«نهارك سعيد» مقابلاتٍ للتحية Guten Tag؛ لا يخصصها للمساء."
+    },
+    {
+      "id": "S2",
+      "title": "PONS — Reisebüro (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Reiseb%C3%BCro",
+      "supports": "يسند معنى مكتب السفر/وكالة السفر في عنوان الحوار."
+    },
+    {
+      "id": "S3",
+      "title": "PONS — fahren (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/fahren",
+      "supports": "يسند فعل التنقل/السفر بـfahren في سياق رحلة إلى مدينة."
+    },
+    {
+      "id": "S4",
+      "title": "PONS — München (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/M%C3%BCnchen",
+      "supports": "يوثق اسم مدينة München وكتابته؛ تُنقل عربياً ميونخ/ميونيخ."
+    },
+    {
+      "id": "S5",
+      "title": "PONS — Juli (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Juli",
+      "supports": "يسند مقابِل الشهر Juli: يوليو."
+    },
+    {
+      "id": "S6",
+      "title": "PONS — möchten (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/m%C3%B6chten",
+      "supports": "يعرض was möchten Sie? = ماذا تريد؛ يسند دلالة Ich möchte على الرغبة."
+    },
+    {
+      "id": "S7",
+      "title": "PONS — gern (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/gern",
+      "supports": "يعرض gern = بسرور، بما يطابق الرد الإيجابي."
+    },
+    {
+      "id": "S8",
+      "title": "PONS — Fahrkarte (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Fahrkarte",
+      "supports": "يعرض Fahrkarte = تذكرة سفر/ركوب."
+    },
+    {
+      "id": "S9",
+      "title": "PONS — zurück (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/zur%C3%BCck",
+      "supports": "يعرض التعبير hin und zurück Fahrkarte = ذهاباً وإياباً."
+    },
+    {
+      "id": "S10",
+      "title": "Duden — Datum",
+      "url": "https://www.duden.de/sprachwissen/rechtschreibregeln/datum",
+      "supports": "يعرض صيغ التاريخ مع am، ومنها am Montag, 5. April، ويبين أن اليوم التقويمي مع am يمكن أن يأتي في الداتيف أو الأكوزاتيف."
+    },
+    {
+      "id": "S11",
+      "title": "Duden — Schreibung der Ordnungszahlen",
+      "url": "https://www.duden.de/sprachwissen/sprachratgeber/Schreibung-der-Ordnungszahlen",
+      "supports": "الأعداد الترتيبية تُكتب كبيرة عموماً حين تستقل/تُسمّى، وصغيرة فقط حين تستعمل صفةً قبل اسم؛ لذلك am zwölften Juli صغيرة وder Zwölfte مستقلة كبيرة."
+    },
+    {
+      "id": "S12",
+      "title": "PONS — Zug (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Zug",
+      "supports": "يسند معنى Zug = قطار في السياق."
+    },
+    {
+      "id": "S13",
+      "title": "PONS — kosten (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/kosten",
+      "supports": "يسند دلالة kosten على أن السعر يبلغ مبلغاً."
+    },
+    {
+      "id": "S14",
+      "title": "PONS — Person (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Person",
+      "supports": "يسند معنى Person = شخص؛ عبارة pro Person تعني لكل شخص."
+    },
+    {
+      "id": "S15",
+      "title": "PONS — können (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/k%C3%B6nnen",
+      "supports": "يسند دلالة الإمكان/القدرة في سؤال Können Sie …?"
+    },
+    {
+      "id": "S16",
+      "title": "PONS — reservieren (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/reservieren",
+      "supports": "يسند reservieren = يحجز."
+    },
+    {
+      "id": "S17",
+      "title": "PONS — Hotel (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Hotel",
+      "supports": "يسند معنى Hotel = فندق."
+    },
+    {
+      "id": "S18",
+      "title": "PONS — Doppelzimmer (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Doppelzimmer",
+      "supports": "يسند نوع الغرفة المزدوجة/المعدة لشخصين."
+    },
+    {
+      "id": "S19",
+      "title": "PONS — Zentrum (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Zentrum",
+      "supports": "يسند معنى Zentrum = المركز/وسط المدينة بحسب السياق."
+    },
+    {
+      "id": "S20",
+      "title": "PONS — gegenüber (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/gegen%C3%BCber",
+      "supports": "يسند معنى gegenüber = مقابل، لا بجانب."
+    },
+    {
+      "id": "S21",
+      "title": "PONS — Bahnhof (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Bahnhof",
+      "supports": "يسند Bahnhof = محطة القطار/المحطة."
+    },
+    {
+      "id": "S22",
+      "title": "PONS — Telefon (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Telefon",
+      "supports": "يسند عنوان Am Telefon: على الهاتف."
+    },
+    {
+      "id": "S23",
+      "title": "PONS — Einladung (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Einladung",
+      "supports": "يعرض Einladung = دعوة؛ يسند عنوان الدعوة."
+    },
+    {
+      "id": "S24",
+      "title": "PONS — Hallo (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/hallo",
+      "supports": "يعرض Hallo للتحية = مرحباً، وفي الهاتف = ألو."
+    },
+    {
+      "id": "S25",
+      "title": "PONS — Wie geht es dir? (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Wie+geht+es+dir",
+      "supports": "يعرض Wie geht es dir? = كيف حالك؟؛ يسند الترجمة العربية للسؤال."
+    },
+    {
+      "id": "S26",
+      "title": "PONS — gut (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/guten",
+      "supports": "يعرض es geht mir gut = أنا بخير، فيسند الجزء Gut من الرد."
+    },
+    {
+      "id": "S27",
+      "title": "PONS — danke (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/danke",
+      "supports": "يعرض danke = شكراً؛ يسند استعادة الجزء الساقط من الترجمة."
+    },
+    {
+      "id": "S28",
+      "title": "PONS — Neues (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Neues",
+      "supports": "يعرض nichts Neues = لا جديد؛ يسند سؤال Was gibt's Neues?"
+    },
+    {
+      "id": "S29",
+      "title": "PONS — Samstag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Samstag",
+      "supports": "يسند Samstag = السبت."
+    },
+    {
+      "id": "S30",
+      "title": "PONS — feiern (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/feiern",
+      "supports": "يسند فعل الاحتفال في Am Samstag feiere ich …"
+    },
+    {
+      "id": "S31",
+      "title": "PONS — Geburtstag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Geburtstag",
+      "supports": "يسند Geburtstag = عيد الميلاد؛ ويُستعمل مع feiern للاحتفال بعيد الميلاد."
+    },
+    {
+      "id": "S32",
+      "title": "PONS — kommen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/kommen",
+      "supports": "يسند kommen = يأتي/يحضر؛ يطابق سؤال دعوة Selma للحضور."
+    },
+    {
+      "id": "S33",
+      "title": "PONS — beginnen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/beginnen",
+      "supports": "يسند beginnen = يبدأ."
+    },
+    {
+      "id": "S34",
+      "title": "PONS — Party (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Party",
+      "supports": "يسند Party = حفلة."
+    },
+    {
+      "id": "S35",
+      "title": "Duden — Schreibung von Uhrzeitangaben",
+      "url": "https://www.duden.de/sprachwissen/sprachratgeber/Uhrzeitangaben",
+      "supports": "يعرض التوقيت الشفهي بصيغ مثل um drei Uhr وum fünfzehn Uhr؛ يثبت استعمال صيغة الساعة، و18 Uhr تساوي السادسة مساءً بتحويل 24 ساعة."
+    },
+    {
+      "id": "S36",
+      "title": "PONS — Hause (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Hause",
+      "supports": "يعرض zu Hause = في البيت وnach Hause = إلى البيت."
+    },
+    {
+      "id": "S37",
+      "title": "PONS — sollen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/sollen",
+      "supports": "يسند الدلالة المطلوبة في Soll ich etwas …?، أي هل ينبغي/هل أفعل؟"
+    },
+    {
+      "id": "S38",
+      "title": "PONS — mitbringen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/mitbringen",
+      "supports": "يسند معنى إحضار شيء مع المتكلم في سؤال Soll ich etwas mitbringen?"
+    },
+    {
+      "id": "S39",
+      "title": "PONS — gute Laune (German–English)",
+      "url": "https://en.pons.com/translate/german-english/gute+Laune",
+      "supports": "يعرض gute Laune = good mood؛ يسند معنى «مزاج جيد»."
+    },
+    {
+      "id": "S40",
+      "title": "PONS — mood (English–Arabic)",
+      "url": "https://en.pons.com/translate/english-arabic/mood",
+      "supports": "يعرض mood مقابلاً لـمزاج/حالة مزاجية؛ يُقرأ مع S39 لإسناد العبارة كاملةً."
+    },
+    {
+      "id": "S41",
+      "title": "PONS — Arzt (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Arzt",
+      "supports": "يسند Arzt = طبيب وعنوان Beim Arzt = عند الطبيب."
+    },
+    {
+      "id": "S42",
+      "title": "PONS — fehlen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/fehlen",
+      "supports": "يسند سؤال Was fehlt Ihnen? إلى معنى ما بك/ما الذي تشكوه؟"
+    },
+    {
+      "id": "S43",
+      "title": "PONS — seit (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/seit",
+      "supports": "يعرض seit + Dativ = منذ؛ يسند بداية مدة الأعراض."
+    },
+    {
+      "id": "S44",
+      "title": "Duden — wehtun",
+      "url": "https://www.duden.de/rechtschreibung/wehtun",
+      "supports": "يعرف الفعل بأنه مصدر للألم، ويورد مثال der Kopf tut mir weh؛ يسند تركيب tut mir der Hals weh."
+    },
+    {
+      "id": "S45",
+      "title": "PONS — Hals (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Hals",
+      "supports": "يعرض Hals بمعنى العنق، وكذلك (Kehle)؛ يسند استعماله التشريحي في الشكوى."
+    },
+    {
+      "id": "S46",
+      "title": "PONS — throat (English–Arabic)",
+      "url": "https://en.pons.com/translate/english-arabic/throat",
+      "supports": "يعرض throat بمقابلات عربية منها الحلق/الحنجرة؛ مع S45 يسند المقصود من Hals في سياق الألم."
+    },
+    {
+      "id": "S47",
+      "title": "PONS — Husten (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Husten",
+      "supports": "يسند Husten = سعال."
+    },
+    {
+      "id": "S48",
+      "title": "PONS — Fieber (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Fieber",
+      "supports": "يسند Fieber = حمى/حمّى."
+    },
+    {
+      "id": "S49",
+      "title": "PONS — ein bisschen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/ein+bisschen",
+      "supports": "يعرض bisschen = قليلاً؛ يسند جواب المريض."
+    },
+    {
+      "id": "S50",
+      "title": "PONS — müde (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/m%C3%BCde",
+      "supports": "يسند müde = متعب."
+    },
+    {
+      "id": "S51",
+      "title": "PONS — Rezept (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Rezept",
+      "supports": "يعرض Rezept بمعنى وصفة، بما فيه السياق الطبي."
+    },
+    {
+      "id": "S52",
+      "title": "PONS — nehmen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/nehmen",
+      "supports": "يعرض nehmen = يأخذ/يتناول؛ يسند الفعل في التعليمات اللغوية."
+    },
+    {
+      "id": "S53",
+      "title": "PONS — Medizin (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Medizin",
+      "supports": "يميّز Medizin (Arznei) = دواء، لا الطب بوصفه علماً."
+    },
+    {
+      "id": "S54",
+      "title": "PONS — three times a day (English–German)",
+      "url": "https://en.pons.com/translate/english-german/three+times+a+day",
+      "supports": "يعرض three times a day = dreimal täglich؛ يسند تكرار الجرعة لغوياً لا طبياً."
+    },
+    {
+      "id": "S55",
+      "title": "PONS — müssen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/m%C3%BCssen",
+      "supports": "يعرض ich muss = يجب عليّ أن؛ يسند سؤال Muss ich zu Hause bleiben?"
+    },
+    {
+      "id": "S56",
+      "title": "PONS — bleiben (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/bleiben",
+      "supports": "يسند bleiben = يبقى/يمكث."
+    },
+    {
+      "id": "S57",
+      "title": "PONS — trinken (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/trinken",
+      "supports": "يسند trinken = يشرب."
+    },
+    {
+      "id": "S58",
+      "title": "PONS — viel (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/viel",
+      "supports": "يسند viel = كثيراً/كثير؛ يصف مقدار الشاي."
+    },
+    {
+      "id": "S59",
+      "title": "PONS — Tee (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Tee",
+      "supports": "يسند Tee = شاي."
+    },
+    {
+      "id": "S60",
+      "title": "PONS — zwei (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/zwei",
+      "supports": "يعرض zwei = اثنان/اثنتان، ويعطي für zwei Tage = لمدة يومين؛ يسند الجواب المختصر على مدة البقاء."
+    },
+    {
+      "id": "S61",
+      "title": "PONS — Tag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Tag",
+      "supports": "يعرض Tag = يوم؛ يسند المدة الزمنية zwei Tage."
+    },
+    {
+      "id": "S62",
+      "title": "PONS — neben (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/neben",
+      "supports": "يعرض neben مكانياً = بجانب؛ يميّزه عن gegenüber = مقابل."
+    },
+    {
+      "id": "S63",
+      "title": "PONS — Stadtrand (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Stadtrand",
+      "supports": "يعرض Stadtrand = ضواحي المدينة؛ يبيّن تعارضه مع وصف الفندق بأنه في Zentrum."
+    }
+  ],
+  "items": [
+    {
+      "kind": "بيانات الحوار: العنوان والمستوى والبنية",
+      "status": "سليم",
+      "sources": [
+        "S2",
+        "S5"
+      ],
+      "finding": "Im Reisebüro يقابل «في مكتب السفر». البنية الحية: 6 أسطر وسؤالان و3 جمل إملاء؛ وسم A2 محفوظ كما هو ولا يعاد تقييم CEFR.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01",
+      "reviewed": {
+        "titleDe": "Im Reisebüro",
+        "titleAr": "في مكتب السفر",
+        "level": "A2",
+        "lineCount": 6,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "finding": "Ich möchte … nach München fahren تنقل رغبة السفر إلى ميونخ في يوليو. PONS يسند möchte وfahren واسم المدينة والشهر. Guten Tag تحية عامة؛ «طاب يومكم» مفهوم ولا يضيف وقتاً محدداً.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.lines[0]",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Guten Tag. Ich möchte im Juli nach München fahren.",
+        "ar": "طاب يومكم. أريد السفر إلى ميونخ في يوليو."
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "finding": "Gern تقابل «بكل سرور»، وHin- und Rückfahrkarte تذكرة ذهاب وإياب؛ السؤال والترجمة يحفظان الاستفهام.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.lines[1]",
+      "reviewed": {
+        "who": "Agent",
+        "de": "Gern. Hin- und Rückfahrkarte?",
+        "ar": "بكل سرور. تذكرة ذهاب وإياب؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S5",
+        "S9",
+        "S10",
+        "S11"
+      ],
+      "finding": "تحدد الجملة الذهاب في الخامس والعودة في الثاني عشر من يوليو. صيغة am zwölften Juli صفةٌ قبل اسم فتبقى صغيرة؛ ترتيب التاريخ في الألمانية والعربية متوافق.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.lines[2]",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Ja, hin am fünften, zurück am zwölften Juli.",
+        "ar": "نعم، الذهاب في الخامس والعودة في الثاني عشر من يوليو."
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "finding": "Der Zug = القطار؛ kostet achtzig Euro pro Person يثبت السعر لكل شخص. الترجمة «القطار بثمانين يورو للشخص» أمينة للمعنى.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.lines[3]",
+      "reviewed": {
+        "who": "Agent",
+        "de": "Der Zug kostet achtzig Euro pro Person.",
+        "ar": "القطار بثمانين يورو للشخص."
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "finding": "Können Sie … reservieren? سؤال مهذب عن إمكان حجز فندق أيضاً؛ المقابلات العربية تحفظ الطلب والمعنى.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.lines[4]",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Gut. Können Sie auch ein Hotel reservieren?",
+        "ar": "جيد. هل يمكنكم حجز فندق أيضاً؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S18",
+        "S19",
+        "S20",
+        "S21"
+      ],
+      "finding": "Doppelzimmer im Zentrum, gegenüber vom Bahnhof = غرفة مزدوجة في وسط المدينة مقابل المحطة. «مقابل» يطابق gegenüber، ولا يخلطها بـneben.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.lines[5]",
+      "reviewed": {
+        "who": "Agent",
+        "de": "Natürlich. Ein Doppelzimmer im Zentrum, gegenüber vom Bahnhof.",
+        "ar": "بالطبع. غرفة مزدوجة في الوسط، مقابل المحطة."
+      }
+    },
+    {
+      "kind": "سؤال إكمال وشرح كتابة العدد الترتيبي",
+      "status": "مُصحح",
+      "sources": [
+        "S10",
+        "S11",
+        "S5"
+      ],
+      "finding": "الإجابة zwölften صحيحة في السياق am zwölften Juli؛ Duden يكتب العدد الترتيبي صغيراً قبل الاسم، وكبيراً إذا استقل اسماً مثل der Zwölfte. الشرح السابق عرض المثال مستقلاً بصيغة der zwölfte، فكان الحرف صغيراً خطأً في ذلك السياق؛ استُبدل بمثال الحوار نفسه لتفادي الالتباس.",
+      "action": "استُبدل الشرح بـam zwölften Juli = في اليوم الثاني عشر من يوليو؛ لم يتغير المفتاح أو السؤال.",
+      "id": "d-a2-01-q1",
+      "reviewed": {
+        "id": "d-a2-01-q1",
+        "type": "fill",
+        "promptDe": "Rückfahrt am ___ Juli.",
+        "answer": [
+          "zwölften",
+          "12."
+        ],
+        "explanationAr": "am zwölften Juli = في اليوم الثاني عشر من يوليو.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      "before": {
+        "explanationAr": "der zwölfte = الثاني عشر."
+      }
+    },
+    {
+      "kind": "سؤال اختيار من متعدد ومشتتاته",
+      "status": "سليم",
+      "sources": [
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S62",
+        "S63"
+      ],
+      "finding": "المفتاح im Zentrum, gegenüber vom Bahnhof يطابق السطر. neben يصف المجاورة لا المقابلة، وStadtrand يناقض Zentrum؛ المشتتات لا تغيّر المفتاح الصحيح.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01-q2",
+      "reviewed": {
+        "id": "d-a2-01-q2",
+        "type": "mc",
+        "promptDe": "Wo ist das Hotel?",
+        "options": [
+          "neben dem Bahnhof in München",
+          "in München am Stadtrand",
+          "im Zentrum, gegenüber vom Bahnhof"
+        ],
+        "answer": "im Zentrum, gegenüber vom Bahnhof",
+        "explanationAr": "الدليل: «Ein Doppelzimmer im Zentrum, gegenüber vom Bahnhof». الفخّ 1: «neben» ≠ «gegenüber». الفخّ 2: ميونيخ صحيحة لكن «Stadtrand» يناقض «Zentrum».",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "finding": "الجملة تطابق سطر الحوار الأول حرفياً وتحفظ الرغبة والسفر والشهر والوجهة.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.dictation[0]",
+      "reviewed": {
+        "de": "Ich möchte im Juli nach München fahren."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "finding": "الجملة تطابق سطر السعر حرفياً؛ Zug وkosten وpro Person منقولة دون تغيير للمبلغ أو وحدة الشخص.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.dictation[1]",
+      "reviewed": {
+        "de": "Der Zug kostet achtzig Euro pro Person."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S18",
+        "S19"
+      ],
+      "finding": "مقطع إملاء حرفي من جواب الوكيل «Ein Doppelzimmer im Zentrum …»؛ استعماله كعبارة جوابية قصيرة ملائم للسياق.",
+      "action": "لا تعديل.",
+      "id": "d-a2-01.dictation[2]",
+      "reviewed": {
+        "de": "Ein Doppelzimmer im Zentrum."
+      }
+    },
+    {
+      "kind": "بيانات الحوار: العنوان والمستوى والبنية",
+      "status": "سليم",
+      "sources": [
+        "S22",
+        "S23"
+      ],
+      "finding": "Am Telefon: Einladung = «على الهاتف: دعوة». البنية: 7 أسطر وسؤالان و3 جمل إملاء؛ وسم A2 مخزّن كما هو، لا حكم جديداً على CEFR.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02",
+      "reviewed": {
+        "titleDe": "Am Telefon: Einladung",
+        "titleAr": "على الهاتف: دعوة",
+        "level": "A2",
+        "lineCount": 7,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S22",
+        "S24",
+        "S25"
+      ],
+      "finding": "Hallo تحية، وWie geht's? تقابل «كيف حالك؟»؛ «مهدي معك» صياغة عربية طبيعية لافتتاح المكالمة hier ist Mehdi.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.lines[0]",
+      "reviewed": {
+        "who": "Mehdi",
+        "de": "Hallo Selma, hier ist Mehdi. Wie geht's?",
+        "ar": "مرحباً سلمى، مهدي معك. كيف حالك؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "finding": "Gut تقابل «بخير» وWas gibt's Neues? تقابل «ما الجديد؟»، لكن الترجمة الحية أسقطت danke = «شكراً». هذا نقص دلالي مؤكد، لا تفضيل أسلوبي.",
+      "action": "أُضيفت «شكراً» بعد «بخير»؛ بقية الترجمة باقية.",
+      "id": "d-a2-02.lines[1]",
+      "reviewed": {
+        "who": "Selma",
+        "de": "Hi Mehdi! Gut, danke. Was gibt's Neues?",
+        "ar": "أهلاً مهدي! بخير، شكراً. ما الجديد؟"
+      },
+      "before": {
+        "ar": "أهلاً مهدي! بخير. ما الجديد؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S29",
+        "S30",
+        "S31",
+        "S32"
+      ],
+      "finding": "Am Samstag feiere ich meinen Geburtstag تنقل السبت والاحتفال بعيد المتكلم؛ Kommst du? ترجمت «هل تأتين؟» على مخاطبة Selma المؤنثة.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.lines[2]",
+      "reviewed": {
+        "who": "Mehdi",
+        "de": "Am Samstag feiere ich meinen Geburtstag. Kommst du?",
+        "ar": "يوم السبت أحتفل بعيد ميلادي. هل تأتين؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S7",
+        "S33",
+        "S34"
+      ],
+      "finding": "Oh, gern! جواب قبول، وWann beginnt die Party? سؤال عن وقت بدء الحفلة؛ الترجمة تحفظ المعنى.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.lines[3]",
+      "reviewed": {
+        "who": "Selma",
+        "de": "Oh, gern! Wann beginnt die Party?",
+        "ar": "أوه، بكل سرور! متى تبدأ الحفلة؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S35",
+        "S36"
+      ],
+      "finding": "Um achtzehn Uhr = الساعة 18:00 (السادسة مساءً)، وbei mir zu Hause = عندي في البيت؛ الترجمة صحيحة. تحويل 18:00 إلى السادسة مساءً حساب نظام 24 ساعة، لا ادعاء لغوي إضافي.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.lines[4]",
+      "reviewed": {
+        "who": "Mehdi",
+        "de": "Um achtzehn Uhr bei mir zu Hause.",
+        "ar": "في السادسة مساءً عندي في البيت."
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S37",
+        "S38"
+      ],
+      "finding": "Soll ich etwas mitbringen? سؤال عمّا إذا كان ينبغي إحضار شيء؛ «هل أحضر شيئاً معي؟» يحفظ modal sollen والفعل المنفصل mitbringen.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.lines[5]",
+      "reviewed": {
+        "who": "Selma",
+        "de": "Super. Soll ich etwas mitbringen?",
+        "ar": "رائع. هل أحضر شيئاً معي؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S39",
+        "S40"
+      ],
+      "finding": "Nur gute Laune! = مزاج جيد فقط؛ يقابل النقل الحرفي المقصود في ختام الدعوة ولا يضيف غرضاً آخر.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.lines[6]",
+      "reviewed": {
+        "who": "Mehdi",
+        "de": "Nur gute Laune!",
+        "ar": "مزاجاً جيداً فقط!"
+      }
+    },
+    {
+      "kind": "سؤال فهم واختيار من متعدد",
+      "status": "سليم",
+      "sources": [
+        "S29",
+        "S30",
+        "S31",
+        "S35"
+      ],
+      "finding": "المفتاح seinen Geburtstag يطابق Am Samstag feiere ich meinen Geburtstag. المشتت الذي يذكر um acht لا يطابق 18 Uhr؛ يظل الفرق في وقت البدء واضحاً ولا يغير المفتاح.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02-q1",
+      "reviewed": {
+        "id": "d-a2-02-q1",
+        "type": "mc",
+        "promptDe": "Was feiert Mehdi?",
+        "options": [
+          "seinen Geburtstag",
+          "eine Party am Samstag um acht",
+          "den Geburtstag von Selma"
+        ],
+        "answer": "seinen Geburtstag",
+        "explanationAr": "الدليل: «Am Samstag feiere ich meinen Geburtstag». الفخّ 1: الحفلة في «achtzehn Uhr» لا الثامنة. الفخّ 2: عيد ميلاد مهدي لا سلمى.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "kind": "سؤال إكمال وشرح الفعل المنفصل",
+      "status": "سليم",
+      "sources": [
+        "S37",
+        "S38"
+      ],
+      "finding": "المفتاح mitbringen يكمّل Soll ich etwas …?، ويحفظ معنى إحضار شيء مع المتكلم؛ الشرح العربي صحيح.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02-q2",
+      "reviewed": {
+        "id": "d-a2-02-q2",
+        "type": "fill",
+        "promptDe": "Soll ich etwas ___?",
+        "answer": [
+          "mitbringen"
+        ],
+        "explanationAr": "mitbringen = أحضر معي.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S29",
+        "S30",
+        "S31"
+      ],
+      "finding": "تطابق جملة الحوار عن الاحتفال بعيد الميلاد حرفياً.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.dictation[0]",
+      "reviewed": {
+        "de": "Am Samstag feiere ich meinen Geburtstag."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S35",
+        "S36"
+      ],
+      "finding": "تطابق الجملة التي تحدد 18 Uhr وbei mir zu Hause؛ لا خطأ في الصياغة الألمانية.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.dictation[1]",
+      "reviewed": {
+        "de": "Um achtzehn Uhr bei mir zu Hause."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S37",
+        "S38"
+      ],
+      "finding": "تطابق سؤال Selma عن إحضار شيء؛ علامة الاستفهام والفعل المنفصل محفوظان.",
+      "action": "لا تعديل.",
+      "id": "d-a2-02.dictation[2]",
+      "reviewed": {
+        "de": "Soll ich etwas mitbringen?"
+      }
+    },
+    {
+      "kind": "بيانات الحوار: العنوان والمستوى والبنية",
+      "status": "سليم",
+      "sources": [
+        "S41"
+      ],
+      "finding": "Beim Arzt = «عند الطبيب». البنية: 7 أسطر وسؤالان و3 جمل إملاء؛ المستوى A2 قيمة مخزنة لا يعاد تقييمها.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03",
+      "reviewed": {
+        "titleDe": "Beim Arzt",
+        "titleAr": "عند الطبيب",
+        "level": "A2",
+        "lineCount": 7,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S42"
+      ],
+      "finding": "Was fehlt Ihnen? سؤال عن العارض/ما بالمريض. «طاب يومكم» ترجمة حرفية مفهومة لـGuten Tag؛ لا يظهر خطأ معنى مثبت، فلا تعديل.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.lines[0]",
+      "reviewed": {
+        "who": "Arzt",
+        "de": "Guten Tag. Was fehlt Ihnen?",
+        "ar": "طاب يومكم. ماذا بك؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S43",
+        "S44",
+        "S45",
+        "S46",
+        "S48"
+      ],
+      "finding": "Seit drei Tagen تعني منذ ثلاثة أيام؛ tut mir der Hals weh يصف ألماً في الحلق، وFieber = حمّى. الترجمة العربية تحفظ المدة والعارضين.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.lines[1]",
+      "reviewed": {
+        "who": "Patient",
+        "de": "Seit drei Tagen tut mir der Hals weh, und ich habe Fieber.",
+        "ar": "منذ ثلاثة أيام يؤلمني حلقي وعندي حُمّى."
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S47"
+      ],
+      "finding": "Husten = سعال؛ سؤال الطبيب والترجمة «هل لديك سعال أيضاً؟» متوافقان.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.lines[2]",
+      "reviewed": {
+        "who": "Arzt",
+        "de": "Haben Sie auch Husten?",
+        "ar": "هل لديك سعال أيضاً؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S49",
+        "S50"
+      ],
+      "finding": "ein bisschen = قليلاً وsehr müde = متعب جداً؛ الترجمة تحفظ المقدار والصفة.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.lines[3]",
+      "reviewed": {
+        "who": "Patient",
+        "de": "Ja, ein bisschen. Und ich bin sehr müde.",
+        "ar": "نعم، قليلاً. وأنا متعب جداً."
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S51",
+        "S52",
+        "S53",
+        "S54"
+      ],
+      "finding": "الترجمة تقابل كتابة وصفة وأخذ الدواء ثلاث مرات يومياً. هذا فحص لغوي فقط؛ لا يقيّم سلامة نصيحة علاجية أو جرعة طبية.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.lines[4]",
+      "reviewed": {
+        "who": "Arzt",
+        "de": "Ich schreibe Ihnen ein Rezept. Nehmen Sie die Medizin dreimal am Tag.",
+        "ar": "سأكتب لك وصفة. خذ الدواء ثلاث مرات يومياً."
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S27",
+        "S55",
+        "S36",
+        "S56"
+      ],
+      "finding": "Danke = شكراً؛ Muss ich …? = هل يجب عليّ…؟، وzu Hause bleiben = البقاء في البيت؛ الترجمة العربية تحفظ العناصر الثلاثة.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.lines[5]",
+      "reviewed": {
+        "who": "Patient",
+        "de": "Danke. Muss ich zu Hause bleiben?",
+        "ar": "شكراً. هل يجب أن أبقى في البيت؟"
+      }
+    },
+    {
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S57",
+        "S58",
+        "S59",
+        "S60",
+        "S61"
+      ],
+      "finding": "Ja, zwei Tage جواب مختصر عن مدة البقاء في المنزل، وPONS يورد für zwei Tage = لمدة يومين؛ Trinken Sie viel Tee! تعني اشرب شاياً كثيراً. الترجمة تحفظ الجواب والأمر والكمية والمشروب.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.lines[6]",
+      "reviewed": {
+        "who": "Arzt",
+        "de": "Ja, zwei Tage. Trinken Sie viel Tee!",
+        "ar": "نعم، يومين. اشرب شاياً كثيراً!"
+      }
+    },
+    {
+      "kind": "سؤال إكمال وشرح المفردة",
+      "status": "سليم",
+      "sources": [
+        "S43",
+        "S44",
+        "S45",
+        "S46"
+      ],
+      "finding": "المفتاح Hals يطابق موضع الألم في الجملة؛ tut ihm weh تركيب الألم نفسه مع ضمير الغائب، أما الحوار فيستعمل tut mir weh للمتكلم. الشرح Hals = الحلق ملائم للسياق.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03-q1",
+      "reviewed": {
+        "id": "d-a2-03-q1",
+        "type": "fill",
+        "promptDe": "Seit drei Tagen tut ihm der ___ weh.",
+        "answer": [
+          "Hals"
+        ],
+        "explanationAr": "der Hals = الحلق.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "kind": "سؤال فهم واختيار من متعدد",
+      "status": "سليم",
+      "sources": [
+        "S52",
+        "S53",
+        "S54"
+      ],
+      "finding": "المفتاح dreimal am Tag يطابق تكرار أخذ الدواء؛ PONS يورد المقابل dreimal täglich. يميز الشرح بين عدد المرات وبين يومي البقاء ومدة الأعراض.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03-q2",
+      "reviewed": {
+        "id": "d-a2-03-q2",
+        "type": "mc",
+        "promptDe": "Wie oft soll er die Medizin nehmen?",
+        "options": [
+          "zweimal am Tag",
+          "dreimal am Tag",
+          "drei Tage lang einmal"
+        ],
+        "answer": "dreimal am Tag",
+        "explanationAr": "الدليل: «Nehmen Sie die Medizin dreimal am Tag». الفخّ 1: «zwei» هو أيام البقاء في البيت. الفخّ 2: «drei Tage» مدّة ألم الحلق.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S43",
+        "S44",
+        "S45",
+        "S46"
+      ],
+      "finding": "تطابق جملة المريض عن ألم الحلق منذ ثلاثة أيام حرفياً.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.dictation[0]",
+      "reviewed": {
+        "de": "Seit drei Tagen tut mir der Hals weh."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S52",
+        "S53",
+        "S54"
+      ],
+      "finding": "تطابق تعليمات الطبيب في النص الحي حرفياً؛ التقرير لا يقيّم مضمونها كإرشاد طبي.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.dictation[1]",
+      "reviewed": {
+        "de": "Nehmen Sie die Medizin dreimal am Tag."
+      }
+    },
+    {
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S57",
+        "S58",
+        "S59"
+      ],
+      "finding": "تطابق أمر شرب الشاي حرفياً؛ مفردات الفعل والكمية والمشروب موثقة.",
+      "action": "لا تعديل.",
+      "id": "d-a2-03.dictation[2]",
+      "reviewed": {
+        "de": "Trinken Sie viel Tee!"
+      }
+    }
+  ]
+}

@@ -396,7 +396,7 @@
           "zwölften",
           "12."
         ],
-        "explanationAr": "der zwölfte = الثاني عشر.",
+        "explanationAr": "am zwölften Juli = في اليوم الثاني عشر من يوليو.",
         "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
       },
       {
@@ -433,7 +433,7 @@
       {
         "who": "Selma",
         "de": "Hi Mehdi! Gut, danke. Was gibt's Neues?",
-        "ar": "أهلاً مهدي! بخير. ما الجديد؟"
+        "ar": "أهلاً مهدي! بخير، شكراً. ما الجديد؟"
       },
       {
         "who": "Mehdi",
