@@ -6763,6 +6763,207 @@ void 0;
     "K181h حدود المعجم والمراجعة والوسم الأسلوبي وCEFR معلنة؛ لا تعميم أو اعتماد بشري مزعوم");
 }
 
+// K182 — source-audited review record for A2 dialogues 13–15 (R108).
+{
+  const reviewA2Batch6 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-06-2026-10-05.json", "utf8")) as any;
+  const reviewMarkdownA2Batch6 = readFileSync("docs/content-review-a2-dialogues-06-2026-10-05.md", "utf8");
+  const liveDialoguesA2Batch6 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const selectedA2Batch6 = liveDialoguesA2Batch6.filter((dialogue) => ["d-a2-13", "d-a2-14", "d-a2-15"].includes(dialogue.id));
+  const itemByIdA2Batch6 = new Map<string, any>(reviewA2Batch6.items.map((item: any) => [item.id, item]));
+  const expectedIdsA2Batch6 = selectedA2Batch6.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_: any, index: number) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question: any) => question.id),
+    ...dialogue.dictation.map((_: any, index: number) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const expectedCountsA2Batch6 = { dialogues: 3, dialogueMetadata: 3, lines: 24, questions: 9, dictationSentences: 6, audioAssets: 0, unresolvedContextNotes: 3, totalTrackedItems: 42, waisenTermsReviewed: 29 };
+  const statusesA2Batch6 = reviewA2Batch6.items.reduce((counts: Record<string, number>, item: any) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const snapshotMatchesA2Batch6 = selectedA2Batch6.every((dialogue) => {
+    const metadata = itemByIdA2Batch6.get(dialogue.id)?.reviewed;
+    if (!metadata || metadata.titleDe !== dialogue.titleDe || metadata.titleAr !== dialogue.titleAr ||
+      metadata.level !== dialogue.level || metadata.lineCount !== dialogue.lines.length ||
+      metadata.questionCount !== dialogue.questions.length || metadata.dictationCount !== dialogue.dictation.length ||
+      metadata.neu !== dialogue.neu || metadata.hasWaisen !== Array.isArray(dialogue.waisen) ||
+      JSON.stringify(metadata.waisen) !== JSON.stringify(dialogue.waisen)) return false;
+    return dialogue.lines.every((line: any, index: number) =>
+      JSON.stringify(itemByIdA2Batch6.get(`${dialogue.id}.lines[${index}]`)?.reviewed) === JSON.stringify(line)) &&
+      dialogue.questions.every((question: any) =>
+        JSON.stringify(itemByIdA2Batch6.get(question.id)?.reviewed) === JSON.stringify(question)) &&
+      dialogue.dictation.every((sentence: string, index: number) =>
+        itemByIdA2Batch6.get(`${dialogue.id}.dictation[${index}]`)?.reviewed?.sentence === sentence);
+  });
+  ok(selectedA2Batch6.length === 3 && JSON.stringify(selectedA2Batch6.map((dialogue) => dialogue.id)) === JSON.stringify(["d-a2-13", "d-a2-14", "d-a2-15"]) &&
+    JSON.stringify(expectedIdsA2Batch6) === JSON.stringify(reviewA2Batch6.items.map((item: any) => item.id)) &&
+    reviewA2Batch6.items.length === 42 && reviewA2Batch6.coverage.totalTrackedItems === 42 &&
+    JSON.stringify(reviewA2Batch6.coverage) === JSON.stringify(expectedCountsA2Batch6) && snapshotMatchesA2Batch6 &&
+    statusesA2Batch6["سليم"] === 39 && statusesA2Batch6["مُصحح"] === 1 && statusesA2Batch6["غير محسوم"] === 2 &&
+    reviewA2Batch6.statusCounts["سليم"] === 39 && reviewA2Batch6.statusCounts["مُصحح"] === 1 && reviewA2Batch6.statusCounts["غير محسوم"] === 2 &&
+    reviewA2Batch6.items.every((item: any) => reviewMarkdownA2Batch6.includes(`| \`${item.id}\` |`)),
+    "K182a تغطية R108 كاملة: 42 وحدة و29 مفردة waisen؛ الترتيب واللقطات الحية في JSON/Markdown مطابقة والنتائج متوازنة");
+
+  const sourceIdsA2Batch6 = reviewA2Batch6.sources.map((source: any) => source.id);
+  const referencedSourcesA2Batch6 = new Set<string>([
+    ...reviewA2Batch6.items.flatMap((item: any) => item.sources),
+    ...reviewA2Batch6.openNotes.flatMap((note: any) => note.sources),
+    ...reviewA2Batch6.styleNotes.flatMap((note: any) => note.sources),
+  ]);
+  const expectedWaisenSourcesA2Batch6: Record<string, string[]> = {
+    "d-a2-13": ["S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08"],
+    "d-a2-14": ["S09", "S10", "S11", "S12", "S13", "S14", "S15", "S16", "S17", "S18"],
+    "d-a2-15": ["S19", "S20", "S21", "S22", "S23", "S24", "S25", "S26", "S27", "S28", "S29"],
+  };
+  const waisenEvidenceCompleteA2Batch6 = Object.entries(expectedWaisenSourcesA2Batch6).every(([id, sourceIds]) =>
+    sourceIds.every((sourceId) => itemByIdA2Batch6.get(id)?.sources.includes(sourceId)));
+  ok(reviewA2Batch6.sources.length === 81 && new Set(sourceIdsA2Batch6).size === 81 &&
+    new Set(reviewA2Batch6.sources.map((source: any) => source.url)).size === 81 &&
+    sourceIdsA2Batch6.every((id: string, index: number) => id === `S${String(index + 1).padStart(2, "0")}`) &&
+    reviewA2Batch6.sources.every((source: any) => typeof source.url === "string" && source.url.startsWith("https://") &&
+      typeof source.title === "string" && typeof source.supports === "string" && source.supports.length > 0) &&
+    referencedSourcesA2Batch6.size === 81 && reviewA2Batch6.sources.every((source: any) => referencedSourcesA2Batch6.has(source.id)) &&
+    waisenEvidenceCompleteA2Batch6 && reviewA2Batch6.items.every((item: any) => item.sources.length > 0 && item.finding.length > 0 && item.action.length > 0),
+    "K182b كل وحدة ووسوم waisen مسندة بدليل وحكم وإجراء؛ 81 مرجعاً فريداً وكلها مستعملة");
+
+  const correctedArabicA2Batch6 = itemByIdA2Batch6.get("d-a2-13.lines[2]");
+  const liveDialogue13A2Batch6 = selectedA2Batch6.find((dialogue) => dialogue.id === "d-a2-13");
+  const oldArabicOnboardingA2Batch6 = "فترة التأهيل تدوم أربعة أسابيع. في هذه الفترة لا ضغط وقت.";
+  const newArabicOnboardingA2Batch6 = "تستغرق فترة التهيئة في العمل أربعة أسابيع. وخلالها لا يوجد ضغط زمني.";
+  const patchScriptA2Batch6 = readFileSync("scripts/patches/review_a2_dialogues_06.py", "utf8");
+  ok(reviewA2Batch6.contentPatch.fieldsChanged === 1 &&
+    JSON.stringify(reviewA2Batch6.contentPatch.changedFields) === JSON.stringify(["d-a2-13.lines[2].ar"]) &&
+    correctedArabicA2Batch6?.status === "مُصحح" && correctedArabicA2Batch6?.before?.ar === oldArabicOnboardingA2Batch6 &&
+    correctedArabicA2Batch6?.reviewed?.ar === newArabicOnboardingA2Batch6 &&
+    correctedArabicA2Batch6?.before?.de === correctedArabicA2Batch6?.reviewed?.de &&
+    correctedArabicA2Batch6?.reviewed?.de === liveDialogue13A2Batch6?.lines[2]?.de &&
+    liveDialogue13A2Batch6?.lines[2]?.ar === newArabicOnboardingA2Batch6 &&
+    patchScriptA2Batch6.includes("BEFORE =") && patchScriptA2Batch6.includes("AFTER =") &&
+    patchScriptA2Batch6.includes("check_protected_content") &&
+    !reviewA2Batch6.contentPatch.changedFields.some((field: string) => /cefr|level|percent|score|\.de$|\.answer$|options/i.test(field)),
+    "K182c إصلاح العربية محصور بحقل واحد مع before/after؛ الألمانية والأسئلة والمستويات لم تتغير والرقعة محروسة");
+
+  const protectedDialogue14A2Batch6 = selectedA2Batch6.find((dialogue) => dialogue.id === "d-a2-14");
+  const protectedQuestion14A2Batch6 = protectedDialogue14A2Batch6?.questions.find((question: any) => question.id === "d-a2-14-q2");
+  const protectedDialogue15A2Batch6 = selectedA2Batch6.find((dialogue) => dialogue.id === "d-a2-15");
+  const deferredA2Batch6 = reviewA2Batch6.contentPatch.deferredSuggestions;
+  ok(protectedDialogue14A2Batch6?.lines[2]?.de === "Lang, aber die Landung war pünktlich. Ich habe nur ein kleines Gepäck." &&
+    protectedDialogue14A2Batch6?.lines[2]?.ar === "طويلة، لكن الهبوط كان في موعده. معي أمتعة صغيرة فقط." &&
+    protectedQuestion14A2Batch6?.promptDe === "Wie viele Übernachtungen bleibt er?" &&
+    protectedQuestion14A2Batch6?.answer === "drei" &&
+    JSON.stringify(protectedQuestion14A2Batch6?.options) === JSON.stringify(["zwei", "drei", "eine Übernachtung"]) &&
+    protectedDialogue15A2Batch6?.lines[1]?.de === "Ja. Das Fleisch habe ich gestern aus dem Gefrierfach genommen, es ist aufgetaut." &&
+    protectedDialogue15A2Batch6?.lines[2]?.de === "Gut. Zuerst den Backofen vorheizen, 180 Grad." &&
+    deferredA2Batch6.length === 3 && reviewA2Batch6.contentPatch.protectedUnresolvedItemIds.includes("d-a2-14.lines[2]") &&
+    reviewA2Batch6.contentPatch.protectedUnresolvedItemIds.includes("d-a2-14.lines[7]") &&
+    reviewA2Batch6.contentPatch.protectedStyleItemIds.includes("d-a2-14-q2.promptDe") &&
+    reviewA2Batch6.contentPatch.protectedStyleItemIds.includes("d-a2-15.lines[2].de"),
+    "K182j الغموض والبدائل الأسلوبية محفوظة بلا تعديل تخميني؛ لم تتحول قطعة الأمتعة أو أسلوب السؤال/الوصفة إلى أخطاء مؤكدة");
+
+  const historyA2Batch6 = reviewA2Batch6.historicalPatchReview;
+  const creationPatchA2Batch6 = readFileSync("scripts/patches/dialoge_a2_neu1.py", "utf8");
+  const oldQuestionPatchA2Batch6 = readFileSync("scripts/patches/a_dialog_fallen.py", "utf8");
+  ok(historyA2Batch6.sources.includes("scripts/patches/dialoge_a2_neu1.py") &&
+    historyA2Batch6.sources.includes("scripts/patches/a_dialog_fallen.py") &&
+    creationPatchA2Batch6.includes(oldArabicOnboardingA2Batch6) &&
+    creationPatchA2Batch6.includes("طويلة، لكن الهبوط كان في موعده. معي أمتعة صغيرة فقط.") &&
+    !oldQuestionPatchA2Batch6.includes("d-a2-13") && !oldQuestionPatchA2Batch6.includes("d-a2-14") && !oldQuestionPatchA2Batch6.includes("d-a2-15") &&
+    historyA2Batch6.comparisons.length === 3 &&
+    historyA2Batch6.comparisons[0].id === "d-a2-13.lines[2].ar" && historyA2Batch6.comparisons[0].historicalText === oldArabicOnboardingA2Batch6 &&
+    historyA2Batch6.comparisons[0].liveText === newArabicOnboardingA2Batch6 &&
+    historyA2Batch6.comparisons[1].historicalText === historyA2Batch6.comparisons[1].liveText &&
+    historyA2Batch6.comparisons[2].historicalText === historyA2Batch6.comparisons[2].liveText &&
+    historyA2Batch6.role.includes("لا كحكم لغوي") && historyA2Batch6.role.includes("سجل تعديل كامل") &&
+    historyA2Batch6.unavailableHistoricalFields.length >= 3,
+    "K182d المقارنة التاريخية مقتصرة على ملف الإنشاء؛ لا تُنسب إلى ملف الأسئلة أو تُدّعى كسجل كامل");
+
+  const audioManifestA2Batch6 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; file: string }[] };
+  const targetAudioIdsA2Batch6 = new Set(["d-a2-13", "d-a2-14", "d-a2-15"]);
+  const manifestAudioMatchesA2Batch6 = audioManifestA2Batch6.einsaetze.filter((entry) => targetAudioIdsA2Batch6.has(entry.id));
+  const publicMatchesA2Batch6: string[] = [];
+  const scanPublicA2Batch6 = (directory: string) => {
+    if (!existsSync(directory)) return;
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const path = `${directory}/${entry.name}`;
+      if (entry.isDirectory()) scanPublicA2Batch6(path);
+      else if (/d-a2-(13|14|15)/.test(entry.name)) publicMatchesA2Batch6.push(path);
+    }
+  };
+  scanPublicA2Batch6("public");
+  ok(manifestAudioMatchesA2Batch6.length === 0 && publicMatchesA2Batch6.length === 0 &&
+    reviewA2Batch6.audioAssetAudit.length === 0 && reviewA2Batch6.coverage.audioAssets === 0 &&
+    reviewA2Batch6.limitations.some((limitation: string) => limitation.includes("لم يحدث تشغيل أو استماع")) &&
+    reviewMarkdownA2Batch6.includes("لم يحدث تشغيل أو استماع") && selectedA2Batch6.every((dialogue) => dialogue.neu === true),
+    "K182e فُحص بيان الصوت وأسماء الملفات؛ لا ادعاء تشغيل أو استماع ولا استنتاج أن غياب الصوت عيب");
+
+  const baggageNoteA2Batch6 = reviewA2Batch6.openNotes.find((note: any) => note.id === "d-a2-14.lines[2]");
+  const tippingNoteA2Batch6 = reviewA2Batch6.openNotes.find((note: any) => note.id === "d-a2-14.lines[7]");
+  const thawNoteA2Batch6 = reviewA2Batch6.openNotes.find((note: any) => note.id === "d-a2-15.lines[1]");
+  ok(reviewA2Batch6.openNotes.length === 3 && baggageNoteA2Batch6?.status === "غير محسوم" &&
+    baggageNoteA2Batch6.finding.includes("Gepäckstück") && baggageNoteA2Batch6.finding.includes("لا يحسم نية الحوار") &&
+    tippingNoteA2Batch6?.status === "غير محسوم" && tippingNoteA2Batch6.finding.includes("بلد الفندق") && tippingNoteA2Batch6.finding.includes("الجهة المقصودة") &&
+    thawNoteA2Batch6?.status === "غير محسوم" && thawNoteA2Batch6.finding.includes("الدواجن") && thawNoteA2Batch6.finding.includes("لا يسمح") &&
+    JSON.stringify(thawNoteA2Batch6.relatedItemIds) === JSON.stringify(["d-a2-15.lines[1]"]) &&
+    reviewA2Batch6.coverage.unresolvedContextNotes === 3 &&
+    ["d-a2-14.lines[2]", "d-a2-14.lines[7]"].every((id) => reviewA2Batch6.contentPatch.protectedUnresolvedItemIds.includes(id)) &&
+    reviewA2Batch6.items.find((item: any) => item.id === "d-a2-15.lines[1]")?.status === "سليم",
+    "K182f الإكرامية وسلامة إذابة لحم غير محدد وغموض Gepäck موثقة كحدود سياق لا كأخطاء لغوية مثبتة");
+
+  const expectedAnswersA2Batch6 = new Map<string, string | string[]>([
+    ["d-a2-13-q1", "vier Wochen"],
+    ["d-a2-13-q2", "ihr Kollege Tom"],
+    ["d-a2-13-q3", ["Zeitdruck"]],
+    ["d-a2-14-q1", "ein Einzelzimmer mit Aussicht auf den Fluss"],
+    ["d-a2-14-q2", "drei"],
+    ["d-a2-14-q3", "falsch"],
+    ["d-a2-15-q1", "das Fleisch aus dem Gefrierfach genommen"],
+    ["d-a2-15-q2", "weil es sonst Klumpen gibt"],
+    ["d-a2-15-q3", ["vorheizen"]],
+  ]);
+  const liveQuestionChecksA2Batch6 = selectedA2Batch6.flatMap((dialogue) => dialogue.questions).every((question: any) => {
+    const expectedAnswer = expectedAnswersA2Batch6.get(question.id);
+    const validAnswer = question.type === "fill"
+      ? Array.isArray(question.answer) && question.answer.length > 0 && question.promptDe.includes("___")
+      : Array.isArray(question.answer) ? question.answer.every((value: string) => question.options.includes(value)) : question.options.includes(question.answer);
+    const item = itemByIdA2Batch6.get(question.id);
+    return expectedAnswer !== undefined && JSON.stringify(question.answer) === JSON.stringify(expectedAnswer) && validAnswer &&
+      item?.reviewed?.promptDe === question.promptDe &&
+      JSON.stringify(item.reviewed.options) === JSON.stringify(question.options) &&
+      JSON.stringify(item.reviewed.answer) === JSON.stringify(question.answer) &&
+      item.reviewed.explanationAr === question.explanationAr && item.finding.length > 0 && item.action.length > 0;
+  });
+  const liveDictationChecksA2Batch6 = selectedA2Batch6.every((dialogue) => dialogue.dictation.every((sentence: string, index: number) => {
+    const isQuotedInDialogue = dialogue.lines.some((line: any) => line.de.includes(sentence));
+    const item = itemByIdA2Batch6.get(`${dialogue.id}.dictation[${index}]`);
+    return isQuotedInDialogue && item?.reviewed?.sentence === sentence && item?.status === "سليم";
+  }));
+  ok(liveQuestionChecksA2Batch6 && liveDictationChecksA2Batch6 &&
+    reviewA2Batch6.items.filter((item: any) => item.kind === "سؤال/خيارات/مفتاح/شرح").length === 9 &&
+    reviewA2Batch6.items.filter((item: any) => item.kind === "جملة إملاء").length === 6,
+    "K182g مفاتيح الأسئلة التسعة متوقعة وضمن خياراتها الحية وشروحها مطابقة؛ جمل الإملاء الست واردة في الحوار");
+
+  const statusDefinitionsA2Batch6 = reviewA2Batch6.statusDefinitions;
+  ok(reviewA2Batch6.limitations.some((limitation: string) => limitation.includes("ليست مراجعة بشرية أو اعتماداً لغوياً/مهنياً")) &&
+    reviewA2Batch6.limitations.some((limitation: string) => limitation.includes("لم يُعَد تقييم A2/CEFR")) &&
+    reviewA2Batch6.limitations.some((limitation: string) => limitation.includes("مداخل القواميس تسند مفردات محددة")) &&
+    statusDefinitionsA2Batch6["غير محسوم"].includes("لا يعني التصنيف ثبوت خطأ لغوي") &&
+    reviewA2Batch6.contentPatch.fieldsChanged === 1 &&
+    !reviewA2Batch6.contentPatch.changedFields.some((field: string) => /cefr|level|percent|percentage|score/i.test(field)) &&
+    reviewA2Batch6.items.some((item: any) => item.id === "d-a2-14-q2" && item.status === "سليم" && item.finding.includes("اقتراحاً أسلوبياً")) &&
+    reviewA2Batch6.items.some((item: any) => item.id === "d-a2-15.lines[2]" && item.status === "سليم" && item.finding.includes("لا يكفي وحده لإثبات خطأ")) &&
+    reviewMarkdownA2Batch6.includes("مراجعة بشرية") && reviewMarkdownA2Batch6.includes("لم يُعَد تقييم A2/CEFR"),
+    "K182h حدود المعجم والمراجعة وCEFR معلنة؛ لا اعتماد بشري مزعوم ولا ترقية لملاحظة أسلوبية إلى خطأ");
+
+  ok(reviewA2Batch6.sources.every((source: any) => reviewMarkdownA2Batch6.includes(source.url)) &&
+    reviewA2Batch6.items.every((item: any) => item.sources.every((sourceId: string) =>
+      reviewMarkdownA2Batch6.includes(`${sourceId}`))) &&
+    reviewMarkdownA2Batch6.includes("## سجل المصادر المنشورة وحدودها") &&
+    reviewMarkdownA2Batch6.includes("## بدائل أسلوبية مؤجلة — ليست أخطاء مؤكدة") &&
+    reviewMarkdownA2Batch6.includes("## المقارنة التاريخية المحدودة") &&
+    reviewMarkdownA2Batch6.includes("## تدقيق الصوت والاختبارات"),
+    "K182i Markdown يضم روابط المصادر وحدودها وكل أقسام السجل والبدائل والتاريخ والصوت");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
