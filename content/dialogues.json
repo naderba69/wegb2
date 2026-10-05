@@ -8474,14 +8474,14 @@
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Was tut Frau Nasri weh?",
+        "promptDe": "Welche Körperstelle nennt Frau Nasri zuerst?",
         "options": [
           "der Rücken",
           "das Ohr ein bisschen",
           "der Zahn"
         ],
         "answer": "der Rücken",
-        "explanationAr": "الدليل: «Der Rücken tut weh, und ich habe Husten». الفخّ 1: «Das Ohr nicht». الفخّ 2: «der Zahn ist gut».",
+        "explanationAr": "الدليل الأول: «Der Rücken tut weh, und ich habe Husten». تقول لاحقاً إن أنفها يؤلمها قليلاً؛ لذا يسأل عن موضع الجسم الذي ذكرته أولاً. الفخّ 1: الأذن لا تؤلمها. الفخّ 2: السن بخير.",
         "id": "d-a1-11-q1",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
@@ -8574,8 +8574,8 @@
       },
       {
         "who": "Rami",
-        "de": "Gut. Das Hemd nehme ich nicht, ich habe nicht so viel Geld dabei.",
-        "ar": "حسناً. القميص لا آخذه، ليس معي مال كثير."
+        "de": "Gut. Die Socken nehme ich nicht. Ich habe nicht so viel Geld dabei.",
+        "ar": "حسناً. لن آخذ الجوارب. ليس معي مال كثير."
       }
     ],
     "questions": [
@@ -8598,11 +8598,11 @@
         "promptDe": "Was kauft Rami nicht?",
         "options": [
           "die Mütze",
-          "die Socken",
-          "das Hemd"
+          "der Mantel",
+          "die Socken"
         ],
-        "answer": "das Hemd",
-        "explanationAr": "الدليل: «Das Hemd nehme ich nicht». الفخّ: القبعة والجوارب يأخذهما.",
+        "answer": "die Socken",
+        "explanationAr": "الدليل: «Die Socken nehme ich nicht». الفخّ 1: القبعة قال إنه يحتاجها. الفخّ 2: طلب المعطف وحدد لونه وسعره.",
         "id": "d-a1-12-q2",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
@@ -8616,7 +8616,7 @@
         ],
         "explanationAr": "الدليل: «Der Mantel kostet 89 Euro».",
         "id": "d-a1-12-q3",
-        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        "promptAr": "أكمل الفراغ بالمبلغ الصحيح من الحوار."
       }
     ],
     "dictation": [
@@ -8628,7 +8628,6 @@
       "der Mantel",
       "die Mütze",
       "die Socke",
-      "das Hemd",
       "die Größe",
       "die Farbe",
       "blau",

@@ -2956,6 +2956,73 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ XC — الحوارات A1 10–12: النصوص والمفتاح والإرشادات بعد التصحيح ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 5, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    const cases: {
+      id: string;
+      titleDe: string;
+      titleAr: string;
+      visible: string[];
+      questions: { type: "mc" | "fill"; prompt: string; answer: string }[];
+    }[] = [
+      {
+        id: "d-a1-10", titleDe: "Im Restaurant bestellen", titleAr: "الطلب في المطعم",
+        visible: ["هذه قائمة الطعام.", "الدجاج مع الأرز أو السمك مع البطاطا.", "الكعك طازج اليوم."],
+        questions: [
+          { type: "mc", prompt: "Was isst Amir?", answer: "den Fisch und einen Salat" },
+        ],
+      },
+      {
+        id: "d-a1-11", titleDe: "Beim Arzt: Was tut weh?", titleAr: "عند الطبيب: ما الذي يؤلم؟",
+        visible: ["الظهر يؤلمني، وعندي سعال.", "الأنف قليلاً. الأذن لا.", "استريحي ثلاثة أيام وابقي في البيت."],
+        questions: [
+          { type: "mc", prompt: "Welche Körperstelle nennt Frau Nasri zuerst?", answer: "der Rücken" },
+        ],
+      },
+      {
+        id: "d-a1-12", titleDe: "Kleidung für den Winter", titleAr: "ملابس للشتاء",
+        visible: ["قبعة زرقاء. وجوارب دافئة.", "لن آخذ الجوارب.", "أكمل الفراغ بالمبلغ الصحيح من الحوار."],
+        questions: [
+          { type: "mc", prompt: "Was kauft Rami nicht?", answer: "die Socken" },
+          { type: "fill", prompt: "Der Mantel kostet ___ Euro.", answer: "89" },
+        ],
+      },
+    ];
+    for (const item of cases) {
+      const cleanup = mount(React.createElement(TaskView, {
+        task: { id: `t-${item.id}-review-ui`, kind: "hoeren" as const, dialogueId: item.id, titleDe: item.titleDe, titleAr: item.titleAr, minutes: 10 },
+        ...props,
+      }));
+      const reveal = btn("أظهر النص");
+      if (reveal) click(reveal);
+      const rendered = txt();
+      ok(!!reveal && item.visible.every((snippet) => rendered.includes(snippet)),
+        `XC1 ${item.id} واجهة الاستماع تعرض الحوار وترجمته/تعليمته المصححة بعد الكشف`);
+
+      for (const question of item.questions) {
+        const exercise = Array.from(rootEl.querySelectorAll(".dirb-ex-item"))
+          .find((node) => (node.textContent ?? "").includes(question.prompt));
+        let answerControl: HTMLElement | null = null;
+        if (question.type === "mc") {
+          answerControl = (Array.from(exercise?.querySelectorAll(".dirb-ex-opt") ?? [])
+            .find((option) => (option.textContent ?? "").trim() === question.answer) as HTMLElement | undefined) ?? null;
+        } else {
+          answerControl = (exercise?.querySelector("input.field") as HTMLInputElement | null);
+          if (answerControl) typeIn(answerControl as HTMLInputElement, question.answer);
+        }
+        if (question.type === "mc" && answerControl) click(answerControl);
+        const check = exercise ? Array.from(exercise.querySelectorAll("button"))
+          .find((button) => (button.textContent ?? "").includes("تحقّق")) as HTMLElement | undefined : undefined;
+        if (check) click(check);
+        ok(!!exercise && !!answerControl && !!check && (exercise.textContent ?? "").includes("✅"),
+          `XC2 ${item.id} مفتاح «${question.answer}» يُقبل في واجهة التمرين الفعلية`);
+      }
+      if (cleanup) cleanup();
+    }
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

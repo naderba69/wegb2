@@ -4666,6 +4666,170 @@ void 0;
     "K168e اقتراحات الـpatch التاريخي الخمسة قورنت بالحيّ؛ رُفض المشتت المكرر والعلاقة/المكان غير المسندين");
 }
 
+/* ═══ K169 — R95: مراجعة الحوارات A1 d-a1-10–12 ═══ */
+{
+  type DialogueAuditItem04 = {
+    id: string; kind: string; status: string; sources: string[]; finding: string; action: string;
+    reviewed: Record<string, any>; before?: Record<string, any>;
+  };
+  type DialogueAuditSource04 = { id: string; title: string; url: string; supports: string };
+  type HistoricalComparison04 = {
+    id: string; patchOptions: string[]; patchAnswer: string | string[];
+    liveAssessment: string; decision: string; sources: string[];
+  };
+  const audit = JSON.parse(readFileSync("docs/content-review-a1-dialogues-04-2026-10-05.json", "utf8")) as {
+    date: string;
+    batch: string;
+    scope: string;
+    method: string;
+    coverage: {
+      dialogues: number; dialogueMetadata: number; lines: number; questions: number;
+      dictationSentences: number; unresolvedLevelNotes: number; unresolvedClinicalNotes: number; totalTrackedItems: number;
+    };
+    statusCounts: Record<string, number>;
+    sources: DialogueAuditSource04[];
+    limitations: string[];
+    historicalPatchReview: {
+      file: string; role: string; usageCheck: string; comparisons: HistoricalComparison04[];
+    };
+    patch: { file: string; fieldsChanged: number; correctedItemIds: string[]; changes: string[] };
+    items: DialogueAuditItem04[];
+  };
+  const auditMarkdown = readFileSync("docs/content-review-a1-dialogues-04-2026-10-05.md", "utf8");
+  const dialogueMetadata = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as { id: string; waisen?: string[] }[];
+  const batchIds = ["d-a1-10", "d-a1-11", "d-a1-12"];
+  const batch = batchIds.map((id) => dialogues.find((dialogue) => dialogue.id === id));
+  const completeBatch = batch.every((dialogue) => !!dialogue && dialogue.level === "A1")
+    ? batch as NonNullable<typeof batch[number]>[] : [];
+  const expectedIds = completeBatch.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question) => question.id),
+    ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+  ]).concat("d-a1-11.level");
+  const auditIds = audit.items.map((item) => item.id);
+  const auditById = new Map(audit.items.map((item) => [item.id, item]));
+  const auditSection = auditMarkdown.split("## سجل المراجعة بنداً بنداً")[1]?.split("## المصادر المنشورة")[0] ?? "";
+  const markdownRowsUnique = expectedIds.every((id) =>
+    auditSection.split("\n").filter((line) => line.startsWith(`| ${id} |`)).length === 1
+  );
+  ok(completeBatch.length === 3 && completeBatch.every((dialogue) => dialogue.lines.length === 8 &&
+      dialogue.questions.length === 3 && dialogue.dictation.length === 2) &&
+    expectedIds.length === 43 && new Set(expectedIds).size === 43 && auditIds.length === 43 &&
+    new Set(auditIds).size === 43 && expectedIds.every((id) => auditById.has(id)) && markdownRowsUnique &&
+    audit.date === "2026-10-05" && audit.batch === "A1-dialogues-04" &&
+    audit.coverage.dialogues === 3 && audit.coverage.dialogueMetadata === 3 && audit.coverage.lines === 24 &&
+    audit.coverage.questions === 9 && audit.coverage.dictationSentences === 6 &&
+    audit.coverage.unresolvedLevelNotes === 1 && audit.coverage.unresolvedClinicalNotes === 1 &&
+    audit.coverage.totalTrackedItems === 43 &&
+    ["d-a1-10", "d-a1-11", "d-a1-12"].every((id) => auditMarkdown.includes(`| ${id} |`)),
+    "K169a سجل JSON وMarkdown يغطي بيانات الحوارات 10–12 وكل 24 سطراً و9 أسئلة و6 إملاءات وملاحظتي المستوى/الصحة مرةً واحدة");
+
+  const sourceIds = new Set(audit.sources.map((source) => source.id));
+  const referencedSources = new Set([
+    ...audit.items.flatMap((item) => item.sources),
+    ...audit.historicalPatchReview.comparisons.flatMap((comparison) => comparison.sources),
+  ]);
+  const computedStatuses = audit.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const correctedIds = new Set(["d-a1-11-q1", "d-a1-12", "d-a1-12.lines[7]", "d-a1-12-q2", "d-a1-12-q3"]);
+  const unresolvedIds = new Set(["d-a1-11.level", "d-a1-11.lines[6]"]);
+  const expectedStatuses = audit.items.every((item) =>
+    item.status === (correctedIds.has(item.id) ? "مُصحح" : unresolvedIds.has(item.id) ? "غير محسوم" : "سليم")
+  );
+  const completeEvidence = audit.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.kind.trim().length > 0 &&
+    item.sources.length > 0 && item.sources.every((id) => sourceIds.has(id)) &&
+    item.finding.trim().length > 0 && item.action.trim().length > 0 && !!item.reviewed
+  );
+  const completeSources = audit.sources.length === 26 && audit.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://") &&
+    auditMarkdown.includes(`<a id="${source.id.toLowerCase()}"></a>${source.id}`)
+  ) && referencedSources.size === audit.sources.length && audit.sources.every((source) => referencedSources.has(source.id));
+  ok(completeEvidence && completeSources && expectedStatuses &&
+    computedStatuses["سليم"] === 36 && computedStatuses["مُصحح"] === 5 && computedStatuses["غير محسوم"] === 2 &&
+    audit.statusCounts["سليم"] === 36 && audit.statusCounts["مُصحح"] === 5 && audit.statusCounts["غير محسوم"] === 2 &&
+    audit.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&
+    audit.limitations.some((limitation) => limitation.includes("ليست قوائم حصرية")) &&
+    audit.limitations.some((limitation) => limitation.includes("تقييم سريري")) &&
+    auditById.get("d-a1-11.level")?.status === "غير محسوم" &&
+    auditById.get("d-a1-11.lines[6]")?.status === "غير محسوم",
+    "K169b لكل بند محتوى ودليل ومصدر وإجراء؛ 26 مصدراً مستخدماً، مع فصل خمسة تصويبات عن ملاحظتي المستوى والطب غير المحسومتين");
+
+  const snapshotsMatch = audit.items.every((item) => {
+    const metadata = item.reviewed;
+    if (item.id === "d-a1-11.level") return dialogues.find((dialogue) => dialogue.id === "d-a1-11")?.level === metadata.level;
+    const dialogue = dialogues.find((candidate) => candidate.id === item.id ||
+      (item.id.startsWith(`${candidate.id}.`) || candidate.questions.some((question) => question.id === item.id)));
+    if (!dialogue) return false;
+    if (item.id === dialogue.id) {
+      const rawMetadata = dialogueMetadata.find((candidate) => candidate.id === dialogue.id);
+      return !!rawMetadata && metadata.titleDe === dialogue.titleDe && metadata.titleAr === dialogue.titleAr &&
+        metadata.level === dialogue.level && JSON.stringify(metadata.waisen) === JSON.stringify(rawMetadata.waisen);
+    }
+    const lineMatch = item.id.match(/\.lines\[(\d+)\]$/);
+    if (lineMatch) {
+      const line = dialogue.lines[Number(lineMatch[1])];
+      return !!line && metadata.de === line.de && metadata.ar === line.ar;
+    }
+    const dictationMatch = item.id.match(/\.dictation\[(\d+)\]$/);
+    if (dictationMatch) return metadata.sentence === dialogue.dictation[Number(dictationMatch[1])];
+    const question = dialogue.questions.find((candidate) => candidate.id === item.id);
+    return !!question && metadata.type === question.type && metadata.promptDe === question.promptDe &&
+      JSON.stringify(metadata.options) === JSON.stringify(question.options) &&
+      JSON.stringify(metadata.answer) === JSON.stringify(question.answer) &&
+      metadata.promptAr === question.promptAr && metadata.explanationAr === question.explanationAr;
+  });
+  ok(snapshotsMatch,
+    "K169c كل لقطة محتوى في سجل التدقيق تطابق البيانات الحية؛ التصويبات ثنائية اللغة والمفاتيح والتعليمات محفوظة حرفياً");
+
+  const d10 = completeBatch.find((dialogue) => dialogue.id === "d-a1-10");
+  const d11 = completeBatch.find((dialogue) => dialogue.id === "d-a1-11");
+  const d12 = completeBatch.find((dialogue) => dialogue.id === "d-a1-12");
+  const d11q1 = d11?.questions.find((question) => question.id === "d-a1-11-q1");
+  const d12q2 = d12?.questions.find((question) => question.id === "d-a1-12-q2");
+  const d12q3 = d12?.questions.find((question) => question.id === "d-a1-12-q3");
+  const d12Line8 = d12?.lines[7];
+  const d12Waisen = dialogueMetadata.find((dialogue) => dialogue.id === "d-a1-12")?.waisen ?? [];
+  const exactDictation = completeBatch.every((dialogue) => dialogue.dictation.every((sentence) =>
+    dialogue.lines.some((line) => line.de === sentence || line.de.includes(sentence))
+  )) && expectedIds.filter((id) => id.includes(".dictation[")).every((id) => auditById.get(id)?.status === "سليم");
+  const fillAcceptsBoth = !!d12q3 && grader.grade(d12q3, "89").correct && grader.grade(d12q3, "neunundachtzig").correct;
+  ok(!!d10 && !!d11 && !!d12 &&
+    d11q1?.promptDe === "Welche Körperstelle nennt Frau Nasri zuerst?" && d11q1.answer === "der Rücken" &&
+    d11q1.options?.length === 3 && (d11q1.explanationAr ?? "").includes("تقول لاحقاً إن أنفها يؤلمها قليلاً") &&
+    d11.lines[6]?.de === "Der Körper braucht Ruhe. Ruhen Sie sich drei Tage aus, bleiben Sie zu Hause." &&
+    d12Line8?.de === "Gut. Die Socken nehme ich nicht. Ich habe nicht so viel Geld dabei." &&
+    d12Line8?.ar === "حسناً. لن آخذ الجوارب. ليس معي مال كثير." &&
+    d12Waisen.length === 9 && !d12Waisen.includes("das Hemd") &&
+    d12q2?.answer === "die Socken" && d12q2.options?.length === 3 && d12q2.options.includes("der Mantel") &&
+    d12q2.options.includes("die Socken") && !d12q2.options.includes("das Hemd") &&
+    d12q3?.promptAr === "أكمل الفراغ بالمبلغ الصحيح من الحوار." &&
+    fillAcceptsBoth && exactDictation,
+    "K169d السؤال المضيّق ورفض الجوارب الممهّد وwaisen والمبلغ والإملاء محفوظة؛ يقبل المصحّح الرقم وكتابته بالحروف");
+
+  const history = audit.historicalPatchReview;
+  const historicalIds = ["d-a1-10-q1", "d-a1-11-q1", "d-a1-12-q2", "d-a1-12-q3"];
+  const patchSource = readFileSync(history.file, "utf8");
+  const historicalSection = auditMarkdown.split("## مقارنة السكربت التاريخي")[1]?.split("## التصويبات المطبقة")[0] ?? "";
+  const historicalEvidence = history.comparisons.every((comparison) => {
+    const answers = Array.isArray(comparison.patchAnswer) ? comparison.patchAnswer : [comparison.patchAnswer];
+    return comparison.patchOptions.every((option) => patchSource.includes(option)) &&
+      answers.every((answer) => patchSource.includes(answer)) &&
+      comparison.liveAssessment.trim().length > 0 && comparison.decision.trim().length > 0 &&
+      comparison.sources.length > 0 && comparison.sources.every((source) => sourceIds.has(source)) &&
+      historicalSection.split("\n").filter((line) => line.startsWith(`| ${comparison.id} |`)).length === 1;
+  });
+  ok(history.file === "scripts/patches/dialoge_a1_neu1.py" && history.comparisons.length === 4 &&
+    history.comparisons.map((comparison) => comparison.id).join(",") === historicalIds.join(",") &&
+    history.usageCheck.includes("لم يعثر") && historicalEvidence &&
+    audit.patch.file === "scripts/patches/review_a1_dialogues_04.py" && audit.patch.fieldsChanged === 9 &&
+    audit.patch.correctedItemIds.length === 5 && existsSync(audit.patch.file),
+    "K169e اقتراحات السكربت التاريخي الأربعة قورنت بالحيّ؛ سجلّ patch الحديث يثبت الفحص المسبق والتصويبات دون اعتماد تاريخي أعمى");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
