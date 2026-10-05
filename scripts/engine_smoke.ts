@@ -5327,6 +5327,181 @@ void 0;
     "K172f المنهج يفصل بين الخطأ المثبت وما لا يحسمه السياق؛ CEFR والنسبة وحساب المستوى والمراجعة البشرية خارج النطاق");
 }
 
+/* ═══ K173 — R99: تدقيق الحوارات A1 d-a1-22–24 بالمصادر والبيانات الحية ═══ */
+{
+  type DialogueAuditItem08 = {
+    id: string; kind: string; status: string; sources: string[]; finding: string; action: string;
+    reviewed: Record<string, any>; before?: Record<string, any>;
+  };
+  type DialogueAuditSource08 = { id: string; title: string; url: string; supports: string };
+  const audit08 = JSON.parse(readFileSync("docs/content-review-a1-dialogues-08-2026-10-05.json", "utf8")) as {
+    date: string; batch: string; scope: string; method: string;
+    coverage: { dialogues: number; dialogueMetadata: number; lines: number; questions: number;
+      dictationSentences: number; unresolvedLevelNotes: number; unresolvedContextNotes: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>; statusDefinitions: Record<string, string>; limitations: string[];
+    sources: DialogueAuditSource08[];
+    historicalPatchReview: { file: string; role: string; usageCheck: string; comparisons: any[] };
+    patch: { file: string; preflight: string; fieldsChanged: number; correctedItemIds: string[]; changes: string[] };
+    items: DialogueAuditItem08[];
+  };
+  const auditMarkdown08 = readFileSync("docs/content-review-a1-dialogues-08-2026-10-05.md", "utf8");
+  type LiveDialogue08 = {
+    id: string; level: string; titleDe: string; titleAr: string; waisen: string[];
+    lines: { who: string; de: string; ar: string }[];
+    questions: { id: string; type: string; promptDe: string; options?: string[]; answer: string | string[];
+      promptAr?: string; explanationAr?: string; falle?: boolean }[];
+    dictation: string[];
+  };
+  const liveBatchAll08 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as LiveDialogue08[];
+  const batchIds08 = ["d-a1-22", "d-a1-23", "d-a1-24"];
+  const completeBatch08 = batchIds08.map((id) => liveBatchAll08.find((dialogue) => dialogue.id === id));
+  const validBatch08 = completeBatch08.every((dialogue) => !!dialogue && dialogue.level === "A1")
+    ? completeBatch08 as NonNullable<typeof completeBatch08[number]>[] : [];
+  const expectedIds08 = validBatch08.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question) => question.id),
+    ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const auditIds08 = audit08.items.map((item) => item.id);
+  const auditById08 = new Map(audit08.items.map((item) => [item.id, item]));
+  const auditSection08 = auditMarkdown08.split("## سجل المراجعة بنداً بنداً")[1]?.split("## المصادر المنشورة")[0] ?? "";
+  const markdownRowsUnique08 = expectedIds08.every((id) =>
+    auditSection08.split("\n").filter((line) => line.startsWith(`| ${id} |`)).length === 1
+  );
+  ok(validBatch08.length === 3 && validBatch08.every((dialogue) => dialogue.lines.length === 8 &&
+      dialogue.questions.length === 3 && dialogue.dictation.length === 2) &&
+    expectedIds08.length === 42 && new Set(expectedIds08).size === 42 &&
+    JSON.stringify(expectedIds08) === JSON.stringify(auditIds08) && markdownRowsUnique08 &&
+    audit08.date === "2026-10-05" && audit08.batch === "A1-dialogues-08" &&
+    audit08.coverage.dialogues === 3 && audit08.coverage.dialogueMetadata === 3 && audit08.coverage.lines === 24 &&
+    audit08.coverage.questions === 9 && audit08.coverage.dictationSentences === 6 &&
+    audit08.coverage.unresolvedLevelNotes === 0 && audit08.coverage.unresolvedContextNotes === 3 &&
+    audit08.coverage.totalTrackedItems === 42 && batchIds08.every((id) => audit08.scope.includes(id)),
+    "K173a تقرير R99 وMarkdown يغطيان 42 معرفاً بالترتيب: 3 بيانات حوار و24 سطراً و9 أسئلة و6 إملاءات");
+
+  const sourceIds08 = new Set(audit08.sources.map((source) => source.id));
+  const referencedSources08 = new Set(audit08.items.flatMap((item) => item.sources));
+  const computedStatuses08 = audit08.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const correctedIds08 = new Set(["d-a1-22.lines[2]", "d-a1-22.lines[4]", "d-a1-22.lines[7]", "d-a1-24.lines[1]"]);
+  const unresolvedIds08 = new Set(["d-a1-23.lines[0]", "d-a1-23.lines[3]", "d-a1-23.lines[7]"]);
+  const expectedStatuses08 = audit08.items.every((item) =>
+    item.status === (correctedIds08.has(item.id) ? "مُصحح" : unresolvedIds08.has(item.id) ? "غير محسوم" : "سليم")
+  );
+  const completeEvidence08 = audit08.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.kind.trim().length > 0 &&
+    item.sources.length > 0 && item.sources.every((id) => sourceIds08.has(id)) &&
+    item.finding.trim().length > 0 && item.action.trim().length > 0 && !!item.reviewed
+  );
+  const completeSources08 = audit08.sources.length === 56 && sourceIds08.size === 56 && audit08.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://") &&
+    auditMarkdown08.includes(`<a id="${source.id.toLowerCase()}"></a>${source.id}`)
+  ) && referencedSources08.size === audit08.sources.length && audit08.sources.every((source) => referencedSources08.has(source.id));
+  ok(completeEvidence08 && completeSources08 && expectedStatuses08 &&
+    computedStatuses08["سليم"] === 35 && computedStatuses08["مُصحح"] === 4 && computedStatuses08["غير محسوم"] === 3 &&
+    audit08.statusCounts["سليم"] === 35 && audit08.statusCounts["مُصحح"] === 4 && audit08.statusCounts["غير محسوم"] === 3 &&
+    audit08.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&
+    audit08.statusDefinitions["غير محسوم"].includes("لا يحسم"),
+    "K173b كل بند له دليل وحكم وإجراء ومصدر؛ 56 مصدراً مستخدماً وفصل 4 تصحيحات عن 3 سياقات غير محسومة");
+
+  const snapshotsMatch08 = audit08.items.every((item) => {
+    const metadata = item.reviewed;
+    const dialogue = validBatch08.find((candidate) => candidate.id === item.id || item.id.startsWith(`${candidate.id}.`) ||
+      candidate.questions.some((question) => question.id === item.id));
+    if (!dialogue) return false;
+    if (item.id === dialogue.id) {
+      return metadata.titleDe === dialogue.titleDe && metadata.titleAr === dialogue.titleAr &&
+        metadata.level === dialogue.level && JSON.stringify(metadata.waisen) === JSON.stringify(dialogue.waisen);
+    }
+    const lineMatch = item.id.match(/\.lines\[(\d+)\]$/);
+    if (lineMatch) {
+      const line = dialogue.lines[Number(lineMatch[1])];
+      return !!line && metadata.who === line.who && metadata.de === line.de && metadata.ar === line.ar;
+    }
+    const dictationMatch = item.id.match(/\.dictation\[(\d+)\]$/);
+    if (dictationMatch) return metadata.sentence === dialogue.dictation[Number(dictationMatch[1])];
+    const question = dialogue.questions.find((candidate) => candidate.id === item.id);
+    return !!question && metadata.type === question.type && metadata.promptDe === question.promptDe &&
+      JSON.stringify(metadata.options) === JSON.stringify(question.options) &&
+      JSON.stringify(metadata.answer) === JSON.stringify(question.answer) &&
+      metadata.promptAr === question.promptAr && metadata.explanationAr === question.explanationAr &&
+      metadata.falle === question.falle;
+  });
+  const corrected22_2 = auditById08.get("d-a1-22.lines[2]");
+  const corrected22_4 = auditById08.get("d-a1-22.lines[4]");
+  const corrected22_7 = auditById08.get("d-a1-22.lines[7]");
+  const corrected24_1 = auditById08.get("d-a1-24.lines[1]");
+  const live22 = validBatch08.find((dialogue) => dialogue.id === "d-a1-22");
+  const live24 = validBatch08.find((dialogue) => dialogue.id === "d-a1-24");
+  const liveFire08 = validBatch08.find((dialogue) => dialogue.id === "d-a1-23");
+  ok(snapshotsMatch08 &&
+    corrected22_2?.before?.ar === "نعم، الطائرة تصل في الثانية. زوجي يأخذهما." &&
+    live22?.lines[2]?.ar === "نعم، تصل الطائرة في الساعة الثانية بعد الظهر. سيذهب زوجي لاستقبالهما." &&
+    corrected22_4?.before?.ar === "نعم، أسبوعين. إخوتي يأتون للزيارة أيضاً." &&
+    live22?.lines[4]?.ar === "نعم، أسبوعين. إخوتي يأتون للزيارة حينها أيضاً." &&
+    corrected22_7?.before?.ar === "ما أجمل! إذن البيت ممتلئ. جدتك تفرح بالرضيعة بالتأكيد." &&
+    live22?.lines[7]?.ar === "ما أجمل! إذن البيت ممتلئ. جدتك تتطلع بالتأكيد إلى قدوم الطفلة." &&
+    corrected24_1?.before?.ar === "أمارس رياضة كثيرة. أسبح يومياً في السابعة صباحاً." &&
+    live24?.lines[1]?.ar === "أمارس الرياضة كثيراً. أسبح يومياً في السابعة صباحاً." &&
+    liveFire08?.lines[0]?.de === "Hallo, hier Weber, Gartenstraße 8. In der Küche ist Feuer!" &&
+    liveFire08.lines[3]?.de.endsWith("fünf Minuten.") &&
+    liveFire08.lines[7]?.de === "Auf die andere Straßenseite. Warten Sie dort auf die Feuerwehr." &&
+    live24?.lines[2]?.de === "Jeden Tag? Ich gehe lieber spazieren, im Park.",
+    "K173c لقطات التقرير تطابق الحي؛ التصحيحات الأربعة مبررة ومحدودة وتفاصيل الحريق والفاصلة بقيت كما هي");
+
+  const history08 = audit08.historicalPatchReview;
+  const historicalPatchSource08 = readFileSync(history08.file, "utf8");
+  const historicalOptionsMatch08 = historicalPatchSource08.includes('"options":["der Ehemann von Salma","die Schwester von Salma","die Großmutter selbst"]') &&
+    historicalPatchSource08.includes('"options":["in fünf Minuten","in acht Minuten","sie ist schon da"]') &&
+    historicalPatchSource08.includes('"options":["täglich, morgens um sieben","am Samstag mit Freundinnen","später im Park"]') &&
+    historicalPatchSource08.includes('"options":["ein Foto vom Chor","ein Lied im Buch","den Park"]');
+  const expectedHistoricalChanges08 = [
+    ["d-a1-22-q1", ["der Ehemann von Salma", "die Schwester von Salma", "die Großmutter selbst"], ["die Schwester von Salma", "die Großmutter selbst", "der Ehemann von Salma"]],
+    ["d-a1-23-q2", ["in fünf Minuten", "in acht Minuten", "sie ist schon da"], ["in acht Minuten", "in fünf Minuten", "sie ist schon da"]],
+    ["d-a1-24-q1", ["täglich, morgens um sieben", "am Samstag mit Freundinnen", "später im Park"], ["am Samstag mit Freundinnen", "täglich, morgens um sieben", "später im Park"]],
+    ["d-a1-24-q2", ["ein Foto vom Chor", "ein Lied im Buch", "den Park"], ["ein Lied im Buch", "den Park", "ein Foto vom Chor"]],
+  ];
+  const actualHistoricalChanges08 = history08.comparisons.flatMap((comparison) => comparison.optionOrderChanges ?? []);
+  const historyChangesMatch08 = JSON.stringify(actualHistoricalChanges08.map((change) =>
+    [change.questionId, change.historicalOptions, change.liveOptions]
+  )) === JSON.stringify(expectedHistoricalChanges08);
+  ok(history08.file === "scripts/patches/dialoge_a1_neu2.py" && history08.comparisons.length === 3 &&
+    history08.usageCheck.includes("dialoge_a1_neu2.py فقط") &&
+    historicalOptionsMatch08 && historyChangesMatch08 &&
+    history08.comparisons.every((comparison) => comparison.unchangedAnswerAndExplanation === true &&
+      JSON.stringify(comparison.fieldsAbsentFromHistory) === JSON.stringify(["question.id", "question.promptAr", "question.falle"])) &&
+    audit08.historicalPatchReview.role.includes("تاريخي") &&
+    audit08.patch.file === "scripts/patches/review_a1_dialogues_08.py" && audit08.patch.fieldsChanged === 4 &&
+    audit08.patch.correctedItemIds.length === 4 && existsSync(audit08.patch.file),
+    "K173d المقارنة التاريخية محدودة إلى تطابق موجود؛ اختلاف الخيارات الأربعة موثق مع بقاء المفاتيح والشروح");
+
+  const patchSource08 = readFileSync(audit08.patch.file, "utf8");
+  const taskSource08 = readFileSync("components/tasks.tsx", "utf8");
+  const neutralTitle08 = !/(أخطاء\s*شائعة\s*عند\s*العرب|الأخطاء\s*الشائعة\s*لدى\s*العرب|أخطاء\s*العرب\s*الشائعة)/u.test(taskSource08);
+  ok(audit08.patch.preflight.includes("القيم السابقة الدقيقة") &&
+    patchSource08.includes("mixed before/after state; refusing partial application") &&
+    patchSource08.includes("preflight failed; no write performed") && patchSource08.includes("--apply") &&
+    patchSource08.includes("patch changed a field outside the four reviewed Arabic lines") &&
+    audit08.patch.changes.length === 4 && neutralTitle08 &&
+    audit08.limitations.some((limitation) => limitation.includes("لا يُعمم")) &&
+    auditMarkdown08.includes("«غير محسوم» لا يعني أن العبارة خاطئة"),
+    "K173e الرقعة ترفض القيم غير المتوقعة وتحمي غير المحسوم؛ لا يظهر تعميم «أخطاء شائعة عند العرب» في واجهة التمارين");
+
+  ok(audit08.method.includes("قُرئ كل سجل حي") &&
+    audit08.limitations.some((limitation) => limitation.includes("CEFR") && limitation.includes("مؤجلة")) &&
+    audit08.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية أو اعتماداً")) &&
+    auditMarkdown08.includes("ليست بشرية أو اعتماداً مهنياً") &&
+    audit08.coverage.unresolvedContextNotes === 3 && audit08.coverage.unresolvedLevelNotes === 0 &&
+    auditById08.get("d-a1-23.lines[3]")?.status === "غير محسوم" &&
+    (auditById08.get("d-a1-23.lines[7]")?.finding.includes("لا يقرر قاعدة عامة لعبور الشارع") ?? false) &&
+    (auditById08.get("d-a1-23.lines[0]")?.action.includes("لا أختلق مدينة") ?? false) &&
+    (auditById08.get("d-a1-23")?.finding.includes("ثمانية على الأقل") ?? false),
+    "K173f تُفصل الملاحظات الثلاث عن الأخطاء المؤكدة؛ CEFR والنسبة والحساب والاعتماد البشري/المهني مؤجلة");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
