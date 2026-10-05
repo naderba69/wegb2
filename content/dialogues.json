@@ -2064,7 +2064,7 @@
           "Lutschtabletten und einen Tee"
         ],
         "answer": "Lutschtabletten und einen Tee",
-        "explanationAr": "الدليل: «Ich gebe Ihnen Lutschtabletten und einen Tee». الفخّ 1: الماء نصيحة للشرب لا دواء. الفخّ 2: «schlucken» ذُكر كألم. الفخّ 3: الماء لا يُباع هنا.",
+        "explanationAr": "الدليل: «Ich gebe Ihnen Lutschtabletten und einen Tee». الفخّ 1: «Trinken Sie viel Wasser!» نصيحة للشرب، لا ضمن ما قالت الصيدلانية إنها ستعطيه. الفخّ 2: «schlucken» ورد في وصف ألم البلع، لا كنوع الأقراص. الفخّ 3: لا يذكر الحوار شراء الماء.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       }
     ],
@@ -2087,7 +2087,7 @@
       {
         "who": "Mitarbeiterin",
         "de": "Um vierzehn Uhr dreißig, Gleis fünf.",
-        "ar": "الثانية عشرة والنصف، الرصيف الخامس."
+        "ar": "الساعة الثانية والنصف بعد الظهر، على الرصيف الخامس."
       },
       {
         "who": "Jonas",

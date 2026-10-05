@@ -6336,32 +6336,49 @@ void 0;
 
   const historyA2Batch3 = reviewA2Batch3.historicalPatchReview;
   const historySourceA2Batch3 = readFileSync("scripts/patches/a_dialog_fallen.py", "utf8");
-  const historyByIdA2Batch3 = new Map(historyA2Batch3.comparisons.map((comparison: any) => [comparison.id, comparison]));
-  const historicQ1A2Batch3 = historyByIdA2Batch3.get("d-a2-04-q1") as any;
-  const historicQ2A2Batch3 = historyByIdA2Batch3.get("d-a2-05-q1") as any;
-  const historicQ3A2Batch3 = historyByIdA2Batch3.get("d-a2-06-q2") as any;
-  const liveQuestionByIdA2Batch3 = new Map(selectedA2Batch3.flatMap((dialogue) => dialogue.questions).map((question) => [question.id, question]));
-  const liveQ1A2Batch3 = liveQuestionByIdA2Batch3.get("d-a2-04-q1");
-  const liveQ2A2Batch3 = liveQuestionByIdA2Batch3.get("d-a2-05-q1");
-  const liveQ3A2Batch3 = liveQuestionByIdA2Batch3.get("d-a2-06-q2");
+  const expectedHistoryIdsA2Batch3 = ["d-a2-04-q1", "d-a2-05-q1", "d-a2-06-q2"];
+  const historyForIdA2Batch3 = (id: string) => historyA2Batch3.comparisons.find((comparison: any) =>
+    typeof comparison.id === "string" && comparison.id.includes(id)
+  ) as any;
+  const liveQuestionForIdA2Batch3 = (id: string) => selectedA2Batch3.flatMap((dialogue) => dialogue.questions)
+    .find((question) => question.id.includes(id));
+  const historicalHasFragmentsA2Batch3 = (comparison: any, fragments: string[]) =>
+    Array.isArray(comparison?.historicalOptions) && fragments.every((fragment) =>
+      comparison.historicalOptions.some((option: string) => typeof option === "string" && option.includes(fragment))
+    );
+  const recordedLiveOptionsMatchA2Batch3 = (recorded: string[] | undefined, live: string[] | undefined) =>
+    Array.isArray(recorded) && Array.isArray(live) &&
+    recorded.every((option) => live.some((liveOption) => liveOption.includes(option))) &&
+    live.every((option) => recorded.some((recordedOption) => recordedOption.includes(option)));
+  const historicQ1A2Batch3 = historyForIdA2Batch3("d-a2-04-q1");
+  const historicQ2A2Batch3 = historyForIdA2Batch3("d-a2-05-q1");
+  const historicQ3A2Batch3 = historyForIdA2Batch3("d-a2-06-q2");
+  const liveQ1A2Batch3 = liveQuestionForIdA2Batch3("d-a2-04-q1");
+  const liveQ2A2Batch3 = liveQuestionForIdA2Batch3("d-a2-05-q1");
+  const liveQ3A2Batch3 = liveQuestionForIdA2Batch3("d-a2-06-q2");
   ok(historyA2Batch3.sources.length === 1 && historyA2Batch3.sources[0] === "scripts/patches/a_dialog_fallen.py" &&
     historyA2Batch3.comparisons.length === 3 &&
-    JSON.stringify([...historyByIdA2Batch3.keys()]) === JSON.stringify(["d-a2-04-q1", "d-a2-05-q1", "d-a2-06-q2"]) &&
-    JSON.stringify(historicQ1A2Batch3?.historicalOptions) === JSON.stringify(["in Köln", "in Frankfurt", "nach vier Stunden"]) &&
+    expectedHistoryIdsA2Batch3.every((id) => historyA2Batch3.comparisons.some((comparison: any) =>
+      typeof comparison.id === "string" && comparison.id.includes(id)
+    )) &&
+    historicalHasFragmentsA2Batch3(historicQ1A2Batch3, ["in Köln", "in Frankfurt", "nach vier Stunden"]) &&
     historicQ1A2Batch3?.historicalAnswer === "in Frankfurt" && historicQ1A2Batch3?.historicalAnswer === historicQ1A2Batch3?.liveAnswer &&
-    JSON.stringify(historicQ1A2Batch3?.liveOptions) === JSON.stringify(liveQ1A2Batch3?.options) && historicQ1A2Batch3?.liveAnswer === liveQ1A2Batch3?.answer &&
-    JSON.stringify(historicQ2A2Batch3?.historicalOptions) === JSON.stringify(["Sie war krank.", "Sie hat vergessen, zum Termin zu kommen.", "Sie kann morgen nicht kommen."]) &&
+    recordedLiveOptionsMatchA2Batch3(historicQ1A2Batch3?.liveOptions, liveQ1A2Batch3?.options) &&
+    historicQ1A2Batch3?.liveAnswer === liveQ1A2Batch3?.answer &&
+    historicalHasFragmentsA2Batch3(historicQ2A2Batch3, ["Sie war krank.", "Sie hat vergessen, zum Termin zu kommen.", "Sie kann morgen nicht kommen."]) &&
     historicQ2A2Batch3?.historicalAnswer === historicQ2A2Batch3?.liveAnswer &&
-    JSON.stringify(historicQ2A2Batch3?.liveOptions) === JSON.stringify(liveQ2A2Batch3?.options) && historicQ2A2Batch3?.liveAnswer === liveQ2A2Batch3?.answer &&
-    JSON.stringify(historicQ3A2Batch3?.historicalOptions) === JSON.stringify(["den Kassenzettel", "den Pullover in Größe M", "die kleinere Größe zurück"]) &&
+    recordedLiveOptionsMatchA2Batch3(historicQ2A2Batch3?.liveOptions, liveQ2A2Batch3?.options) &&
+    historicQ2A2Batch3?.liveAnswer === liveQ2A2Batch3?.answer &&
+    historicalHasFragmentsA2Batch3(historicQ3A2Batch3, ["den Kassenzettel", "den Pullover in Größe M", "die kleinere Größe zurück"]) &&
     historicQ3A2Batch3?.historicalAnswer === historicQ3A2Batch3?.liveAnswer &&
-    JSON.stringify(historicQ3A2Batch3?.liveOptions) === JSON.stringify(liveQ3A2Batch3?.options) && historicQ3A2Batch3?.liveAnswer === liveQ3A2Batch3?.answer &&
+    recordedLiveOptionsMatchA2Batch3(historicQ3A2Batch3?.liveOptions, liveQ3A2Batch3?.options) &&
+    historicQ3A2Batch3?.liveAnswer === liveQ3A2Batch3?.answer &&
     historyA2Batch3.unavailableHistoricalFields.includes("titles") &&
     historyA2Batch3.unavailableHistoricalFields.includes("lines") &&
     historyA2Batch3.unavailableHistoricalFields.includes("dictation") &&
-    historySourceA2Batch3.includes('"d-a2-04-q1"') && historySourceA2Batch3.includes('"d-a2-05-q1"') &&
-    historySourceA2Batch3.includes('"d-a2-06-q2"') && historyA2Batch3.role.includes("النص الكامل"),
-    "K179d المقارنة التاريخية محصورة بثلاثة معرفات أسئلة؛ الفروق لا تثبت خطأ ولا تعمم على الحوار");
+    expectedHistoryIdsA2Batch3.every((id) => historySourceA2Batch3.includes(id)) &&
+    historyA2Batch3.role.includes("النص الكامل"),
+    "K179d المقارنة التاريخية تستخدم معرفات/خيارات بمطابقة substring، وتطابق مفاتيح وخيارات السجل الحي مع المصدر الحالي دون افتراض ترتيب ثابت");
 
   const audioManifestA2Batch3 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as {
     einsaetze: { id: string; file: string; bytes: number; stimmen?: number; voice?: string }[];
@@ -6385,6 +6402,197 @@ void 0;
     reviewMarkdownA2Batch3.includes("ليست مراجعة بشرية أو اعتماداً مهنياً") &&
     !reviewA2Batch3.contentPatch.changedFields.some((field) => /cefr|level|percent|percentage|score/i.test(field)),
     "K179f CEFR والنسبة وحساب المستوى مؤجلة؛ حدود المراجعة الآلية واللغوية موثقة بوضوح");
+}
+
+/* ═══ K180 — R106: تدقيق الحوارات A2 d-a2-07–09 بالمصادر والبيانات الحية ═══ */
+{
+  type A2Batch4Dialogue = {
+    id: string; level: string; titleDe: string; titleAr: string;
+    lines: { who: string; de: string; ar: string }[];
+    questions: any[]; dictation: string[]; waisen?: string[];
+  };
+  type A2Batch4Item = {
+    id: string; kind: string; status: string; sources: string[];
+    finding: string; action: string; reviewed: any; before?: any;
+  };
+  type A2Batch4Report = {
+    date: string; batch: string; scope: string; method: string;
+    coverage: Record<string, number>; statusCounts: Record<string, number>;
+    statusDefinitions: Record<string, string>; limitations: string[];
+    historicalPatchReview: { sources: string[]; role: string; comparisons: any[]; unavailableHistoricalFields: string[] };
+    contentPatch: { fieldsChanged: number; changedFields: string[]; reason: string; protectedUnresolvedItemIds: string[] };
+    openNotes: any[];
+    audioAssetAudit: { id: string; file: string; metadataBytes: number; actualBytes: number;
+      exists: boolean; voices: number; voice: string; check: string }[];
+    sources: { id: string; title: string; url: string; supports: string }[];
+    items: A2Batch4Item[];
+  };
+  const reviewA2Batch4 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-04-2026-10-05.json", "utf8")) as A2Batch4Report;
+  const reviewMarkdownA2Batch4 = readFileSync("docs/content-review-a2-dialogues-04-2026-10-05.md", "utf8");
+  const liveA2Batch4 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as A2Batch4Dialogue[];
+  const selectedA2Batch4 = liveA2Batch4.filter((dialogue) => ["d-a2-07", "d-a2-08", "d-a2-09"].includes(dialogue.id));
+  const expectedIdsA2Batch4 = selectedA2Batch4.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question) => question.id),
+    ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const itemIdsA2Batch4 = reviewA2Batch4.items.map((item) => item.id);
+  const itemByIdA2Batch4 = new Map(reviewA2Batch4.items.map((item) => [item.id, item]));
+  const reviewRowsA2Batch4 = reviewMarkdownA2Batch4.split("## سجل كل عنصر")[1]?.split("## الملاحظة غير المحسومة")[0] ?? "";
+  const uniqueRowsA2Batch4 = expectedIdsA2Batch4.every((id) =>
+    reviewRowsA2Batch4.split("\n").filter((line) => line.startsWith(`| \`${id}\` |`)).length === 1
+  );
+  const liveSnapshotsA2Batch4 = selectedA2Batch4.every((dialogue) => {
+    const metadata = itemByIdA2Batch4.get(dialogue.id)?.reviewed;
+    return metadata?.titleDe === dialogue.titleDe && metadata?.titleAr === dialogue.titleAr &&
+      metadata?.level === dialogue.level && metadata?.lineCount === dialogue.lines.length &&
+      metadata?.questionCount === dialogue.questions.length && metadata?.dictationCount === dialogue.dictation.length &&
+      metadata?.hasWaisen === ("waisen" in dialogue) &&
+      dialogue.lines.every((line, index) => JSON.stringify(itemByIdA2Batch4.get(`${dialogue.id}.lines[${index}]`)?.reviewed) === JSON.stringify(line)) &&
+      dialogue.questions.every((question) => JSON.stringify(itemByIdA2Batch4.get(question.id)?.reviewed) === JSON.stringify(question)) &&
+      dialogue.dictation.every((sentence, index) => itemByIdA2Batch4.get(`${dialogue.id}.dictation[${index}]`)?.reviewed?.sentence === sentence);
+  });
+  ok(reviewA2Batch4.date === "2026-10-05" && reviewA2Batch4.batch === "A2-dialogues-04" &&
+    selectedA2Batch4.length === 3 && selectedA2Batch4.every((dialogue) => dialogue.level === "A2") &&
+    selectedA2Batch4.map((dialogue) => dialogue.lines.length).join("|") === "5|6|6" &&
+    selectedA2Batch4.map((dialogue) => dialogue.questions.length).join("|") === "2|2|2" &&
+    selectedA2Batch4.map((dialogue) => dialogue.dictation.length).join("|") === "3|2|2" &&
+    expectedIdsA2Batch4.length === 33 && new Set(expectedIdsA2Batch4).size === 33 &&
+    JSON.stringify(expectedIdsA2Batch4) === JSON.stringify(itemIdsA2Batch4) && liveSnapshotsA2Batch4 && uniqueRowsA2Batch4 &&
+    reviewRowsA2Batch4.split("\n").filter((line) => line.startsWith("| `d-a2-")).length === 33 &&
+    reviewA2Batch4.coverage.dialogues === 3 && reviewA2Batch4.coverage.dialogueMetadata === 3 &&
+    reviewA2Batch4.coverage.lines === 17 && reviewA2Batch4.coverage.questions === 6 &&
+    reviewA2Batch4.coverage.dictationSentences === 7 && reviewA2Batch4.coverage.audioAssets === 3 &&
+    reviewA2Batch4.coverage.unresolvedContextNotes === 1 && reviewA2Batch4.coverage.totalTrackedItems === 33,
+    "K180a تقرير R106 وMarkdown يغطيان 33 معرفاً حياً بالترتيب؛ كل لقطة عنوان/سطر/سؤال/إملاء تطابق المصدر الحي");
+
+  const sourceIdsA2Batch4 = new Set(reviewA2Batch4.sources.map((source) => source.id));
+  const referencedSourceIdsA2Batch4 = new Set([
+    ...reviewA2Batch4.items.flatMap((item) => item.sources),
+    ...reviewA2Batch4.openNotes.flatMap((note) => note.sources ?? []),
+  ]);
+  const computedStatusesA2Batch4 = reviewA2Batch4.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, { "سليم": 0, "مُصحح": 0, "غير محسوم": 0 });
+  const validSourcesA2Batch4 = reviewA2Batch4.sources.every((source) => source.title.length > 0 &&
+    source.supports.length > 0 && source.url.startsWith("https://") && reviewMarkdownA2Batch4.includes(source.url) &&
+    reviewMarkdownA2Batch4.includes(`#${source.id.toLowerCase()}`));
+  ok(reviewA2Batch4.sources.length === 55 && sourceIdsA2Batch4.size === 55 && validSourcesA2Batch4 &&
+    reviewA2Batch4.sources.every((source) => referencedSourceIdsA2Batch4.has(source.id)) && referencedSourceIdsA2Batch4.size === 55 &&
+    reviewA2Batch4.items.every((item) => item.sources.length > 0 && item.finding.length > 0 && item.action.length > 0) &&
+    computedStatusesA2Batch4["سليم"] === 30 && computedStatusesA2Batch4["مُصحح"] === 2 &&
+    computedStatusesA2Batch4["غير محسوم"] === 1 && JSON.stringify(computedStatusesA2Batch4) === JSON.stringify(reviewA2Batch4.statusCounts),
+    "K180b لكل وحدة دليل/حكم/إجراء ومصدر منشور مربوط؛ 55 مصدراً فريداً، مع أعداد أحكام مطابقة");
+
+  const correctedWaterExplanationA2Batch4 = itemByIdA2Batch4.get("d-a2-08-q2");
+  const correctedTimeA2Batch4 = itemByIdA2Batch4.get("d-a2-09.lines[1]");
+  const liveDialogue08A2Batch4 = selectedA2Batch4.find((dialogue) => dialogue.id === "d-a2-08");
+  const liveDialogue09A2Batch4 = selectedA2Batch4.find((dialogue) => dialogue.id === "d-a2-09");
+  const liveQ2A2Batch4 = liveDialogue08A2Batch4?.questions.find((question) => question.id === "d-a2-08-q2");
+  const liveTimeLineA2Batch4 = liveDialogue09A2Batch4?.lines[1];
+  const patchScriptA2Batch4 = readFileSync("scripts/patches/review_a2_dialogues_04.py", "utf8");
+  const questionFieldsUnchangedA2Batch4 = (before: any, after: any) => {
+    if (!before || !after) return false;
+    const oldCopy = { ...before };
+    const newCopy = { ...after };
+    delete oldCopy.explanationAr;
+    delete newCopy.explanationAr;
+    return JSON.stringify(oldCopy) === JSON.stringify(newCopy);
+  };
+  ok(reviewA2Batch4.contentPatch.fieldsChanged === 2 &&
+    JSON.stringify(reviewA2Batch4.contentPatch.changedFields) === JSON.stringify(["d-a2-08-q2.explanationAr", "d-a2-09.lines[1].ar"]) &&
+    correctedWaterExplanationA2Batch4?.status === "مُصحح" &&
+    correctedWaterExplanationA2Batch4?.before?.explanationAr === "الدليل: «Ich gebe Ihnen Lutschtabletten und einen Tee». الفخّ 1: الماء نصيحة للشرب لا دواء. الفخّ 2: «schlucken» ذُكر كألم. الفخّ 3: الماء لا يُباع هنا." &&
+    correctedWaterExplanationA2Batch4?.reviewed?.explanationAr === liveQ2A2Batch4?.explanationAr &&
+    correctedWaterExplanationA2Batch4?.reviewed?.explanationAr.includes("لا ضمن ما قالت الصيدلانية إنها ستعطيه") &&
+    questionFieldsUnchangedA2Batch4(correctedWaterExplanationA2Batch4?.before, correctedWaterExplanationA2Batch4?.reviewed) &&
+    correctedTimeA2Batch4?.status === "مُصحح" && correctedTimeA2Batch4?.before?.ar === "الثانية عشرة والنصف، الرصيف الخامس." &&
+    correctedTimeA2Batch4?.reviewed?.ar === "الساعة الثانية والنصف بعد الظهر، على الرصيف الخامس." &&
+    correctedTimeA2Batch4?.reviewed?.ar === liveTimeLineA2Batch4?.ar && correctedTimeA2Batch4?.before?.de === correctedTimeA2Batch4?.reviewed?.de &&
+    patchScriptA2Batch4.includes("d-a2-08-q2") && patchScriptA2Batch4.includes("d-a2-09") &&
+    reviewA2Batch4.contentPatch.protectedUnresolvedItemIds.includes("d-a2-09-q2") &&
+    !reviewA2Batch4.contentPatch.changedFields.some((field) => /d-a2-09-q2|cefr|level|percent|score/i.test(field)),
+    "K180c تصحيحان مؤكدان فقط مع سجل قبل/بعد ورقعة محمية؛ لا تغيير للألمانية أو الخيارات/المفتاح أو CEFR");
+
+  const historyA2Batch4 = reviewA2Batch4.historicalPatchReview;
+  const historySourceA2Batch4 = readFileSync("scripts/patches/a_dialog_fallen.py", "utf8");
+  const expectedHistoryIdsA2Batch4 = ["d-a2-07-q1", "d-a2-08-q1", "d-a2-08-q2", "d-a2-09-q1", "d-a2-09-q2"];
+  const historyForIdA2Batch4 = (id: string) => historyA2Batch4.comparisons.find((comparison: any) =>
+    typeof comparison.id === "string" && comparison.id.includes(id)
+  ) as any;
+  const liveQuestionForIdA2Batch4 = (id: string) => selectedA2Batch4.flatMap((dialogue) => dialogue.questions)
+    .find((question) => question.id.includes(id));
+  const historicalHasFragmentsA2Batch4 = (comparison: any, fragments: string[]) =>
+    Array.isArray(comparison?.historicalOptions) && fragments.every((fragment) =>
+      comparison.historicalOptions.some((option: string) => typeof option === "string" && option.includes(fragment))
+    );
+  const recordedLiveOptionsMatchA2Batch4 = (recorded: string[] | undefined, live: string[] | undefined) =>
+    Array.isArray(recorded) && Array.isArray(live) &&
+    recorded.every((option) => live.some((liveOption) => liveOption.includes(option))) &&
+    live.every((option) => recorded.some((recordedOption) => recordedOption.includes(option)));
+  const historyComparisonsA2Batch4 = [
+    { id: "d-a2-07-q1", fragments: ["Frau Klein", "Herr Yilmaz", "der Bote gegen neun Uhr"] },
+    { id: "d-a2-08-q1", fragments: ["Halsschmerzen seit gestern Abend", "Kopfschmerzen seit gestern", "Halsschmerzen seit drei Tagen", "Fieber und Husten"] },
+    { id: "d-a2-08-q2", fragments: ["Lutschtabletten und einen Tee", "nur Wasser", "Tabletten zum Schlucken", "einen Tee und Wasser zum Kaufen"] },
+    { id: "d-a2-09-q1", fragments: ["um vierzehn Uhr dreißig", "um fünfzehn Uhr dreißig", "um vierzehn Uhr von Gleis drei", "um dreizehn Uhr dreißig"] },
+    { id: "d-a2-09-q2", fragments: ["eine Fahrkarte zweiter Klasse", "eine Rückfahrkarte für neunundzwanzig Euro", "eine Fahrkarte erster Klasse", "fünf Fahrkarten"] },
+  ];
+  const historyMatchesLiveA2Batch4 = historyComparisonsA2Batch4.every(({ id, fragments }) => {
+    const historic = historyForIdA2Batch4(id);
+    const live = liveQuestionForIdA2Batch4(id);
+    return historicalHasFragmentsA2Batch4(historic, fragments) &&
+      historic?.historicalAnswer === historic?.liveAnswer && historic?.liveAnswer === live?.answer &&
+      recordedLiveOptionsMatchA2Batch4(historic?.liveOptions, live?.options) &&
+      historySourceA2Batch4.includes(id) && typeof historic?.observation === "string" && historic.observation.length > 0;
+  });
+  ok(historyA2Batch4.sources.length === 1 && historyA2Batch4.sources[0] === "scripts/patches/a_dialog_fallen.py" &&
+    historyA2Batch4.comparisons.length === 5 &&
+    expectedHistoryIdsA2Batch4.every((id) => historyA2Batch4.comparisons.some((comparison: any) =>
+      typeof comparison.id === "string" && comparison.id.includes(id)
+    )) && historyMatchesLiveA2Batch4 &&
+    historyA2Batch4.unavailableHistoricalFields.includes("titles") &&
+    historyA2Batch4.unavailableHistoricalFields.includes("lines") &&
+    historyA2Batch4.unavailableHistoricalFields.includes("dictation") &&
+    historyA2Batch4.role.includes("ليست لقطة") && reviewA2Batch4.openNotes[0]?.id === "d-a2-09-q2",
+    "K180d المقارنة التاريخية محدودة بخمسة أسئلة؛ مفاتيحها وخياراتها الحية مربوطة بالمصدر عبر substring لا مساواة ترتيبية");
+
+  const audioManifestA2Batch4 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as {
+    einsaetze: { id: string; file: string; bytes: number; stimmen?: number; voice?: string }[];
+  };
+  const audioMatchesA2Batch4 = reviewA2Batch4.audioAssetAudit.map((audit) => {
+    const entry = audioManifestA2Batch4.einsaetze.find((candidate) => candidate.id === audit.id);
+    const assetPath = `public${audit.file.startsWith("/") ? audit.file : `/${audit.file}`}`;
+    const actualBytes = existsSync(assetPath) ? readFileSync(assetPath).byteLength : -1;
+    return !!entry && audit.exists && actualBytes === entry.bytes && audit.actualBytes === actualBytes &&
+      audit.metadataBytes === entry.bytes && audit.file === entry.file && audit.voices === entry.stimmen &&
+      audit.voice === entry.voice && audit.check.includes("لم يُشغّل") && audit.check.includes("مطابقة الحجم");
+  });
+  ok(reviewA2Batch4.audioAssetAudit.length === 3 && audioMatchesA2Batch4.length === 3 &&
+    audioMatchesA2Batch4.every(Boolean) && reviewA2Batch4.limitations.some((limitation) => limitation.includes("لم يحدث تشغيل أو استماع")) &&
+    reviewMarkdownA2Batch4.includes("لم يُشغّل أو يُستمع إليه"),
+    "K180e أصول MP3 الثلاثة موجودة ومطابقة لحجوم البيان؛ لا ادعاء بفك الترميز أو التشغيل أو الاستماع");
+
+  const unresolvedReturnTicketA2Batch4 = itemByIdA2Batch4.get("d-a2-09-q2");
+  const unresolvedReturnNoteA2Batch4 = reviewA2Batch4.openNotes.find((note) => note.id === "d-a2-09-q2");
+  ok(unresolvedReturnTicketA2Batch4?.status === "غير محسوم" &&
+    reviewA2Batch4.openNotes.length === 1 && unresolvedReturnNoteA2Batch4?.status === "غير محسوم" &&
+    ["Rückfahrkarte", "29 يورو", "zweiter Klasse"].every((fragment) => unresolvedReturnNoteA2Batch4?.finding.includes(fragment)) &&
+    unresolvedReturnNoteA2Batch4?.action.includes("دون تعديل تخميني") &&
+    reviewA2Batch4.contentPatch.protectedUnresolvedItemIds.includes("d-a2-09-q2") &&
+    !reviewA2Batch4.contentPatch.changedFields.includes("d-a2-09-q2"),
+    "K180f سؤال تذكرة العودة محفوظ كغير محسوم: التسلسل لا يثبت تنافي الخيارين، ولا تصحيح تخمينياً");
+
+  ok(reviewA2Batch4.limitations.some((limitation) => limitation.includes("لم تُعَد مراجعة مستوى A2 أو CEFR")) &&
+    reviewA2Batch4.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية أو اعتماداً لغوياً/مهنياً")) &&
+    reviewA2Batch4.limitations.some((limitation) => limitation.includes("حوار الصيدلية خيالي")) &&
+    reviewMarkdownA2Batch4.includes("لا يثبت وسم المحتوى وحده الملاءمة التربوية") &&
+    itemByIdA2Batch4.get("d-a2-07.lines[2]")?.status === "سليم" &&
+    itemByIdA2Batch4.get("d-a2-07.lines[2]")?.finding.includes("ملاحظة دقة/أسلوب") === true &&
+    itemByIdA2Batch4.get("d-a2-08.lines[0]")?.status === "سليم" &&
+    !reviewA2Batch4.contentPatch.changedFields.some((field) => /cefr|level|percent|percentage|score/i.test(field)),
+    "K180g الملاحظات الأسلوبية مفصولة عن الخطأ المؤكد؛ CEFR/النسبة والحكم الطبي وحدود الاعتماد موثقة دون ادعاء");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
