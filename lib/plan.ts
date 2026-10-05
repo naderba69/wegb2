@@ -11,7 +11,8 @@ import type {
   TaskResult,
   VocabCard,
 } from "./types";
-import { TOTAL_DAYS, emptyProgress, TEMPO_ZIELMIN } from "./types";
+import { TOTAL_DAYS, emptyProgress } from "./types";
+import { DEFAULT_SESSION_GOAL_MINUTES } from "./session-clock";
 import type { Tempo } from "./types";
 import {
   grammarMap,
@@ -31,6 +32,7 @@ import { kapselIds, kapselIdsAbend, kapselQuiz } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
 import { baueKompositaWoche } from "./komposita-aufgabe";
+import { legacyThroughDayFor } from "./curriculum-schedule";
 
 /**
  * محرّك الخطة اليومية — قلب المشروع المنهجي
@@ -81,15 +83,57 @@ const PHASE_RANGES: { phase: Phase; from: number; to: number; level: Level }[] =
 
 export const PHASE_TOPICS: Record<Phase, string[]> = {
   A0: ["a0-begrussung", "a0-buchstaben", "a0-zahlen", "a1-pronomen", "a1-sein-haben", "a1-praesens", "a1-zahlen"],
-  A1: ["a1-praesens", "a1-pronomen", "a1-sein-haben", "a1-trennbar", "a1-weil-dass", "a1-war-hatte", "a1-zahlen", "a1-akkusativ", "a1-modalverben", "a1-dativ", "a1-wechsel", "a1-imperativ", "a1-perfekt-einf", "a1-futur-einf"],
-  A2: ["a2-praeteritum-grund", "a2-praeteritum", "a2-perfekt", "a2-dativ", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-weil-dass", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a2-futur"],
-  B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-adjektivendungen", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-partizip1", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben"],
-  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-nominalstil", "b2-verschmolzene", "b2-redew"],
+  A1: ["a1-praesens", "a1-pronomen", "a1-sein-haben", "a1-trennbar", "a1-weil-dass", "a1-war-hatte", "a1-zahlen", "a1-akkusativ", "a1-modalverben", "a1-dativ", "a1-wechsel", "a1-imperativ", "a1-perfekt-einf", "a1-futur-einf", "a1-plural", "a1-zeitpraep"],
+  A2: ["a2-praeteritum-grund", "a2-praeteritum", "a2-perfekt", "a2-dativ", "a2-wasfuer", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-weil-dass", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a2-futur", "a2-verschmolzene", "a2-neben", "a2-demo"],
+  B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-konj2-vergangenheit", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-partizip1", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben", "b1-absicht", "b1-adjektivendungen"],
+  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-nominalstil", "b2-redew", "b2-textkonnektoren"],
   Abschluss: [],
 };
 
-const PHASE_DECKS: Record<Phase, string[]> = {
-  A0: ["a1-start"],
+const LEVEL_SEQUENCE: Level[] = ["A0", "A1", "A2", "B1", "B2"];
+const LEVEL_RANK = new Map<Level, number>(LEVEL_SEQUENCE.map((level, index) => [level, index]));
+
+/**
+ * الدروس الفريدة لكل مستوى، مرتبة ترتيباً ثابتاً يحترم متطلباتها السابقة.
+ * تبقى PHASE_TOPICS كما كانت حتى يستطيع الترحيل إعادة بناء الأيام المحفوظة.
+ */
+function orderCourseTopics(level: Level): string[] {
+  const candidates = [...new Set(PHASE_TOPICS[level].filter((id) => grammarMap[id]?.level === level))];
+  const pending = new Set(candidates);
+  const ordered: string[] = [];
+
+  while (pending.size > 0) {
+    const next = candidates.find((id) => {
+      if (!pending.has(id)) return false;
+      const prerequisites = grammarMap[id]?.voraus ?? [];
+      return prerequisites.every((prerequisiteId) => {
+        const prerequisite = grammarMap[prerequisiteId];
+        if (!prerequisite) return false;
+        if (prerequisite.level === level) return !pending.has(prerequisiteId);
+        return (LEVEL_RANK.get(prerequisite.level) ?? Number.POSITIVE_INFINITY) < (LEVEL_RANK.get(level) ?? 0);
+      });
+    });
+    if (!next) {
+      // نبقي البناء قابلاً للاستكشاف عند وجود بيانات غير سليمة؛ K138 يرفضها بوضوح.
+      ordered.push(...candidates.filter((id) => pending.has(id)));
+      break;
+    }
+    ordered.push(next);
+    pending.delete(next);
+  }
+  return ordered;
+}
+
+export const COURSE_TOPIC_ORDER: Record<Level, string[]> = {
+  A0: orderCourseTopics("A0"),
+  A1: orderCourseTopics("A1"),
+  A2: orderCourseTopics("A2"),
+  B1: orderCourseTopics("B1"),
+  B2: orderCourseTopics("B2"),
+};
+
+export const PHASE_DECKS: Record<Phase, string[]> = {
+  A0: ["a0-start"],
   A1: ["a1-start", "a1-familie-alltag", "a1-zeit-zahlen", "a1-essen-trinken", "a1-koerper-kleidung", "a1-stadt-wege", "a1-haus-schule", "a1-natur-freizeit", "a1-welt-beruf", "a1-modal-ort", "a1-menschen-abschluss"],
   A2: ["a2-komplett", "a2-arbeit-buero", "a2-alltag-dienste", "a2-leben-technik", "a2-schreiben-dienste", "a2-mensch-beziehung", "a2-reise-feste", "a2-medien-bildung", "a2-geld-gesundheit", "a2-wohnen-vertrag", "a2-arbeit-umwelt", "a2-kueche-haushalt", "a2-erzaehlen-zeit", "a2-redemittel", "a2-kultur-digital", "a2-b1-bruecke"],
   B1: ["b1-gesellschaft", "b1-staat-argument", "b1-karriere-psyche", "b1-gesundheit-technik", "b1-projekt-rede", "b1-stadt-recht", "b1-funktionsverben", "b1-bildung-migration-familie", "b1-dienst-natur-bild", "b1-brief-wirtschaft", "b1-wissen-zeit-wendungen", "b1-essen-kunst-hoeflichkeit", "b1-gesund-wohnen-praep", "b1-job-auto-praefix", "b1-geld-gemeinschaft-adj", "b1-digital-kauf-nomen", "b1-pruefung-text-reflexiv", "b1-klima-sport-komposita", "b1-medien-reise-verben", "b1-verwaltung-handwerk", "b1-arbeit-familie-geld", "a2-b1-bruecke"],
@@ -98,7 +142,7 @@ const PHASE_DECKS: Record<Phase, string[]> = {
 };
 
 
-/* ═══ الوحداتُ الستَّ عشرة: أربعٌ لكلِّ مستوى، بأسمائِها ومداها اليوميِّ ═══
+/* ═══ الوحداتُ السبع عشرة: وحدةُ A0 وأربعٌ لكلِّ مستوى A1–B2 ═══
    مأخوذةٌ حرفياً من مخطَّطِ المنهجِ الذي اشترطَهُ المالك؛ كلُّ يومٍ يقعُ في وحدةٍ واحدةٍ لا غير. */
 export type Modul = {
   nr: 1 | 2 | 3 | 4; level: Level; von: number; bis: number;
@@ -153,6 +197,150 @@ export function dayType(day: number): DayType {
   if (wd <= 5) return "lerntag";
   if (wd === 6) return "festigung";
   return "wochencheck";
+}
+
+export type GrammarAssignmentStatus = "new" | "practice" | "review";
+export type GrammarAssignment = { topicId: string; status: GrammarAssignmentStatus };
+
+function rangeOfPhase(phase: Phase) {
+  return PHASE_RANGES.find((range) => range.phase === phase);
+}
+
+function grammarTaskDay(day: number): boolean {
+  const weekday = ((day - 1) % 7) + 1;
+  return dayType(day) === "lerntag" && weekday <= 4;
+}
+
+/** أيام تقديم درس جديد في طوره: الاثنين/الأربعاء، مع تهيئة واحدة إن بدأ الطور وسط الأسبوع. */
+function topicSlotDays(phase: Phase): number[] {
+  const range = rangeOfPhase(phase);
+  if (!range || phase === "Abschluss") return [];
+  const slots: number[] = [];
+  let firstGrammarDay: number | undefined;
+  for (let day = range.from; day <= range.to; day++) {
+    if (!grammarTaskDay(day)) continue;
+    firstGrammarDay ??= day;
+    const weekday = ((day - 1) % 7) + 1;
+    if (weekday === 1 || weekday === 3) slots.push(day);
+  }
+  if (firstGrammarDay !== undefined) {
+    const weekday = ((firstGrammarDay - 1) % 7) + 1;
+    if ((weekday === 2 || weekday === 4) && !slots.includes(firstGrammarDay)) slots.push(firstGrammarDay);
+  }
+  return slots.sort((a, b) => a - b);
+}
+
+/** إعادة اشتقاق المهمة القديمة كما وُلّدت قبل الترحيل؛ لا تُغيّر PHASE_TOPICS. */
+function legacyTopicForDay(day: number): string | undefined {
+  if (!grammarTaskDay(day)) return undefined;
+  const phase = phaseOf(day);
+  const topics = PHASE_TOPICS[phase];
+  if (!topics?.length) return undefined;
+  const weekday = ((day - 1) % 7) + 1;
+  const week = Math.ceil(day / 7);
+  const index = (week - 1) * 2 + (weekday <= 2 ? 0 : 1);
+  return topics[index % topics.length];
+}
+
+function legacyAssignment(day: number): GrammarAssignment | undefined {
+  const topicId = legacyTopicForDay(day);
+  if (!topicId) return undefined;
+  const weekday = ((day - 1) % 7) + 1;
+  const phase = phaseOf(day);
+  if (weekday === 1 || weekday === 3) {
+    const range = rangeOfPhase(phase);
+    const repeated = range
+      ? Array.from({ length: Math.max(0, day - range.from) }, (_, index) => range.from + index)
+          .some((pastDay) => {
+            const pastWeekday = ((pastDay - 1) % 7) + 1;
+            return (pastWeekday === 1 || pastWeekday === 3) && legacyTopicForDay(pastDay) === topicId;
+          })
+      : false;
+    return { topicId, status: repeated ? "review" : "new" };
+  }
+  const previousDay = day - 1;
+  const wasIntroducedTodayCycle =
+    phaseOf(previousDay) === phase && legacyTopicForDay(previousDay) === topicId;
+  if (wasIntroducedTodayCycle) return { topicId, status: "practice" };
+  const range = rangeOfPhase(phase);
+  const repeated = range
+    ? Array.from({ length: Math.max(0, day - range.from) }, (_, index) => range.from + index)
+        .some((pastDay) => {
+          const pastWeekday = ((pastDay - 1) % 7) + 1;
+          return (pastWeekday === 1 || pastWeekday === 3) && legacyTopicForDay(pastDay) === topicId;
+        })
+    : false;
+  return { topicId, status: repeated ? "review" : "practice" };
+}
+
+function legacyTopicsScheduledInPhase(phase: Phase, throughDay: number): Set<string> {
+  const range = rangeOfPhase(phase);
+  const topics = new Set<string>();
+  if (!range) return topics;
+  for (let day = range.from; day <= Math.min(range.to, throughDay); day++) {
+    const topicId = legacyTopicForDay(day);
+    if (topicId && grammarMap[topicId]?.level === range.level) topics.add(topicId);
+  }
+  return topics;
+}
+
+function assignmentForNewSlot(day: number, progress: Progress): GrammarAssignment | undefined {
+  const phase = phaseOf(day);
+  const range = rangeOfPhase(phase);
+  if (!range || phase === "Abschluss") return undefined;
+  const throughDay = legacyThroughDayFor(progress);
+  const order = COURSE_TOPIC_ORDER[range.level];
+  if (!order.length) return undefined;
+
+  const alreadyScheduled = legacyTopicsScheduledInPhase(phase, throughDay);
+  const remaining = order.filter((topicId) => !alreadyScheduled.has(topicId));
+  const slotsAfterLegacy = topicSlotDays(phase).filter((slot) => slot > throughDay && slot <= day);
+  const slotIndex = slotsAfterLegacy.indexOf(day);
+  if (slotIndex < 0) return undefined;
+  if (slotIndex < remaining.length) return { topicId: remaining[slotIndex], status: "new" };
+  return { topicId: order[(slotIndex - remaining.length) % order.length], status: "review" };
+}
+
+/**
+ * الدرس الذي تعرضه الخطة في هذا اليوم. الأيام المحمية تعيد إسنادها القديم حرفياً؛
+ * وما بعدها يسير حسب المتطلبات، ثم يتحول التكرار إلى مراجعة معلنة.
+ */
+export function grammarAssignmentForDay(day: number, progress: Progress): GrammarAssignment | undefined {
+  if (!grammarTaskDay(day)) return undefined;
+  const throughDay = legacyThroughDayFor(progress);
+  if (day <= throughDay) return legacyAssignment(day);
+
+  const phase = phaseOf(day);
+  const phaseSlots = topicSlotDays(phase);
+  if (phaseSlots.includes(day)) return assignmentForNewSlot(day, progress);
+
+  const previousSlot = [...phaseSlots].reverse().find((slot) => slot < day);
+  if (previousSlot !== undefined) {
+    const priorAssignment = previousSlot <= throughDay
+      ? legacyAssignment(previousSlot)
+      : assignmentForNewSlot(previousSlot, progress);
+    if (!priorAssignment) return undefined;
+    return {
+      topicId: priorAssignment.topicId,
+      status: priorAssignment.status === "review" ? "review" : "practice",
+    };
+  }
+  return undefined;
+}
+
+function learnedTopicsThrough(day: number, phase: Phase, progress: Progress): Set<string> {
+  const range = rangeOfPhase(phase);
+  const learned = new Set<string>();
+  if (!range) return learned;
+  const throughDay = legacyThroughDayFor(progress);
+  for (const slot of topicSlotDays(phase)) {
+    if (slot > day) break;
+    const assignment = slot <= throughDay
+      ? legacyAssignment(slot)
+      : assignmentForNewSlot(slot, progress);
+    if (assignment && grammarMap[assignment.topicId]?.level === range.level) learned.add(assignment.topicId);
+  }
+  return learned;
 }
 
 // ── بناء تمارين تلقائية من المخزون اللغوي ────────────────────────────
@@ -229,7 +417,7 @@ function mcFromCards(cards: VocabCard[], idx: number, rand: () => number): Exerc
  * بناء فحص من المخزون الذي تمت دراسته حتى اليوم فقط (لا مستقبل، لا مفاجآت).
  * في اليوم 0 / الأسبوع 0 لا يوجد «ماضٍ» يُسترجَع ⇐ مصفوفة فارغة (يُعالَج المتعلِّمُ بلافتة ترحيب).
  */
-function buildQuiz(day: number, phase: Phase, count: number): Exercise[] {
+function buildQuiz(day: number, phase: Phase, count: number, progress: Progress): Exercise[] {
   // لا شيء يُسبق اليوم الأول ⇐ فحص الاسترجاع الأول فارغ (مرحباً وتهيئة لا اختبار)
   if (day < 1) return [];
   const rand = rng(day * 977 + 13);
@@ -239,11 +427,17 @@ function buildQuiz(day: number, phase: Phase, count: number): Exercise[] {
   const phaseDecks = PHASE_DECKS[phase];
   const pool: Exercise[] = [];
 
-  // قواعد المرحلة حتى الأسبوع الحالي فقط (لا قواعد لم تُعرض بعد)
+  // الأيام المحمية تبقى على منطق الاسترجاع القديم؛ وما بعدها لا يسحب درساً قبل موعده.
   const gelehrteThemen = new Set<string>();
-  for (let w = 1; w <= week; w++) {
-    gelehrteThemen.add(phaseTopics[((w - 1) * 2) % Math.max(phaseTopics.length, 1)]);
-    gelehrteThemen.add(phaseTopics[((w - 1) * 2 + 1) % Math.max(phaseTopics.length, 1)]);
+  if (day <= legacyThroughDayFor(progress)) {
+    for (let w = 1; w <= week; w++) {
+      const first = phaseTopics[((w - 1) * 2) % Math.max(phaseTopics.length, 1)];
+      const second = phaseTopics[((w - 1) * 2 + 1) % Math.max(phaseTopics.length, 1)];
+      if (first) gelehrteThemen.add(first);
+      if (second) gelehrteThemen.add(second);
+    }
+  } else {
+    for (const topicId of learnedTopicsThrough(day, phase, progress)) gelehrteThemen.add(topicId);
   }
   for (const tid of phaseTopics) {
     if (!gelehrteThemen.has(tid)) continue;
@@ -321,6 +515,15 @@ function buildQuiz(day: number, phase: Phase, count: number): Exercise[] {
   return picked.slice(0, count).map((ex, i) => ({ ...ex, id: `q${day}-${i}-${ex.id}` }));
 }
 
+/** 🎯 تحققات الاستقلال المستحقة: دروسٌ أُنجِز تدريبُها وحلَّ يومُها (الأقدم أولاً) */
+export function dueVerify(progress: Progress, day: number): { lessonId: string; dueDay: number }[] {
+  return Object.entries(progress.verify ?? {})
+    .filter(([, v]) => v.dueDay <= day && v.doneDay === undefined)
+    .map(([lessonId, v]) => ({ lessonId, dueDay: v.dueDay }))
+    .filter((v) => (grammarMap[v.lessonId]?.verify ?? []).length > 0)
+    .sort((a, b) => a.dueDay - b.dueDay);
+}
+
 // ── مولّد اليوم ─────────────────────────────────────────────────────────
 export function buildDay(day: number, progress: Progress): DayPlan {
   const week = Math.ceil(day / 7);
@@ -350,10 +553,27 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     });
   });
 
+  // (1b) تحققات الاستقلال المستحقة — مهام جديدة لا إعادة (≤2 في اليوم، والباقي يبقى في الطابور)
+  dueVerify(progress, day)
+    .slice(0, 2)
+    .forEach((v) => {
+      const t = grammarMap[v.lessonId];
+      tasks.push({
+        id: `${day}:vrfy:${v.lessonId}`,
+        kind: "check",
+        titleDe: `Unabhängigkeits-Check: ${t?.titleDe ?? v.lessonId}`,
+        titleAr: `تحقق الاستقلال: ${t?.titleAr ?? v.lessonId} — مهمة جديدة لا إعادة`,
+        minutes: 10,
+        quiz: (t?.verify ?? []).slice(0, 3),
+        mandatory: true,
+        from: v.dueDay,
+        verifyFor: v.lessonId,
+      });
+    });
+
   const tid = (n: number) => `${day}:t${n}`;
   const phaseTopics = PHASE_TOPICS[phase];
-  const weekTopicA = phaseTopics[((week - 1) * 2) % Math.max(phaseTopics.length, 1)];
-  const weekTopicB = phaseTopics[((week - 1) * 2 + 1) % Math.max(phaseTopics.length, 1)];
+  const grammarAssignment = grammarAssignmentForDay(day, progress);
   const phaseDecks = PHASE_DECKS[phase];
   const phaseDeckA = phaseDecks[((week - 1) * 2) % Math.max(phaseDecks.length, 1)];
   const phaseDeckB = phaseDecks[((week - 1) * 2 + 1) % Math.max(phaseDecks.length, 1)];
@@ -425,16 +645,25 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     }
 
     if (weekday === 1 || weekday === 3) {
-      // يوم القواعد الجديد
-      const topicId = weekday === 1 ? weekTopicA : weekTopicB;
-      tasks.push({
-        id: tid(2),
-        kind: "grammatik",
-        titleDe: grammarMap[topicId]?.titleDe ?? "Grammatik",
-        titleAr: `قاعدة جديدة: ${grammarMap[topicId]?.titleAr ?? ""}`,
-        minutes: 30,
-        topicId,
-      });
+      // درس جديد حسب المتطلبات؛ بعد نفاد الدروس يتحول التكرار إلى مراجعة معلنة.
+      const assignment = grammarAssignment;
+      const topicId = assignment?.topicId;
+      if (assignment && topicId) {
+        const topicTitle = grammarMap[topicId]?.titleDe ?? "Grammatik";
+        const legacyScheduleDay = day <= legacyThroughDayFor(progress);
+        const titleDe = assignment.status === "review"
+          ? `Wiederholung: ${topicTitle}`
+          : legacyScheduleDay ? topicTitle : `Neue Grammatik: ${topicTitle}`;
+        const statusArabic = assignment.status === "new" ? "قاعدة جديدة" : "مراجعة وتثبيت";
+        tasks.push({
+          id: tid(2),
+          kind: "grammatik",
+          titleDe,
+          titleAr: `${statusArabic}: ${grammarMap[topicId]?.titleAr ?? ""}`,
+          minutes: 30,
+          topicId,
+        });
+      }
       tasks.push({
         id: tid(3),
         kind: "wortschatz",
@@ -512,19 +741,23 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Tagescheck",
         titleAr: "فحص اليوم (عتبة النجاح 80%)",
         minutes: 15,
-        quiz: buildQuiz(day, phase, 8),
+        quiz: buildQuiz(day, phase, 8, progress),
       });
     } else if (weekday === 2 || weekday === 4) {
-      // تعميق قواعد الأسبوع
-      const topicId = weekday === 2 ? weekTopicA : weekTopicB;
-      tasks.push({
-        id: tid(2),
-        kind: "grammatik",
-        titleDe: `Vertiefung: ${grammarMap[topicId]?.titleDe ?? ""}`,
-        titleAr: `تعميق القاعدة: ${grammarMap[topicId]?.titleAr ?? ""}`,
-        minutes: 30,
-        topicId,
-      });
+      // تعميق الدرس الأقرب؛ وإن كان التكرار بعد انتهاء المحتوى فيُوسم مراجعة.
+      const assignment = grammarAssignment;
+      const topicId = assignment?.topicId;
+      if (assignment && topicId) {
+        const isReview = assignment.status === "review";
+        tasks.push({
+          id: tid(2),
+          kind: "grammatik",
+          titleDe: `${isReview ? "Wiederholung" : "Vertiefung"}: ${grammarMap[topicId]?.titleDe ?? ""}`,
+          titleAr: `${isReview ? "مراجعة وتثبيت" : "تعميق القاعدة"}: ${grammarMap[topicId]?.titleAr ?? ""}`,
+          minutes: 30,
+          topicId,
+        });
+      }
       if (weekday === 2) {
         tasks.push({
           id: tid(3),
@@ -577,7 +810,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Tagescheck",
         titleAr: "فحص اليوم (عتبة النجاح 80%)",
         minutes: 15,
-        quiz: buildQuiz(day, phase, 8),
+        quiz: buildQuiz(day, phase, 8, progress),
       });
     } else {
       // يوم 5 — دمج وبناء الجملة
@@ -622,7 +855,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Tagescheck",
         titleAr: "فحص اليوم (عتبة النجاح 80%)",
         minutes: 15,
-        quiz: buildQuiz(day, phase, 10),
+        quiz: buildQuiz(day, phase, 10, progress),
       });
     }
   } else if (type === "festigung") {
@@ -633,7 +866,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleAr: "مراجعة الأسبوع كاملاً (كبسولة متباعدة)",
       minutes: 30,
       sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة 1/7/30
-      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 5)],
+      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 5, progress)],
     });
     tasks.push({
       id: tid(2),
@@ -671,7 +904,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleDe: "Festigungs-Check",
       titleAr: "فحص التثبيت",
       minutes: 20,
-      quiz: buildQuiz(day, phase, 10),
+      quiz: buildQuiz(day, phase, 10, progress),
     });
   } else if (type === "wochencheck") {
     const isPhaseExam = istPhasenPruefung(day); // امتحان نهاية المرحلة — أيامها من lib/phasen.ts
@@ -683,7 +916,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
             titleDe: `Prüfung ${phase}`,
             titleAr: `امتحان نهاية مرحلة ${phase} — قراءة/استماع/قواعد/كتابة`,
             minutes: 50,
-            quiz: buildQuiz(day, phase, 12),
+            quiz: buildQuiz(day, phase, 12, progress),
             exam: true,
             textId: nextText()?.id,
             dialogueId: nextDialog()?.id,
@@ -695,7 +928,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
             titleDe: "Wochenprüfung",
             titleAr: "الفحص الأسبوعي (12 سؤالاً من محتوى الأسبوع)",
             minutes: 40,
-            quiz: buildQuiz(day, phase, 12),
+            quiz: buildQuiz(day, phase, 12, progress),
             textId: nextText()?.id,
           }
     );
@@ -758,7 +991,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleAr: "أستطيع أن… + كبسولة متباعدة للأسبوع القادم",
       minutes: 15,
       sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة
-      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 4).slice(0, 4)],
+      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 4, progress).slice(0, 4)],
     });
   } else {
     // أيام الختام 375-378 — تستخدم الكبسولة المتباعدة لآخر البنك
@@ -773,7 +1006,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleAr: "مراجعة شاملة + تلخيص الرحلة في 5 جمل",
           minutes: 50,
           sentenceIds: gesternKapsel,
-          quiz: buildQuiz(374, "B2", 15),
+          quiz: buildQuiz(374, "B2", 15, progress),
           writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
         },
         {
@@ -782,7 +1015,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Struktur-Test",
           titleAr: "اختبار هيكلي شامل (القواعد كلها)",
           minutes: 30,
-          quiz: buildQuiz(375, "Abschluss", 15),
+          quiz: buildQuiz(375, "Abschluss", 15, progress),
         },
       ],
       376: [
@@ -824,7 +1057,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Prüfungs-Check",
           titleAr: "فحص محاكاة",
           minutes: 15,
-          quiz: buildQuiz(376, "Abschluss", 12),
+          quiz: buildQuiz(376, "Abschluss", 12, progress),
         },
         {
           id: tid(4),
@@ -870,7 +1103,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Abschlussprüfung",
           titleAr: "الامتحان الختامي الشامل — محاكاة Goethe B2",
           minutes: 55,
-          quiz: buildQuiz(377, "Abschluss", 12),
+          quiz: buildQuiz(377, "Abschluss", 12, progress),
           exam: true,
           textId: nextText()?.id,
           dialogueId: nextDialog()?.id,
@@ -891,7 +1124,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleAr: "الحصيلة وخطة ما بعد B2",
           minutes: 10,
           sentenceIds: kapselIds(day),
-          quiz: [...kapselQuiz(day), ...buildQuiz(378, "Abschluss", 5).slice(0, 5)],
+          quiz: [...kapselQuiz(day), ...buildQuiz(378, "Abschluss", 5, progress).slice(0, 5)],
         },
       ],
     };
@@ -920,7 +1153,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       }
     }
   }
-  // (2) فخاخ الموسوعة: تدريب استباقي في أيام التثبيت على أخطاء العرب الشائعة
+  // (2) فخاخ الموسوعة: تدريب استباقي على الأنماط الألمانية التي يلتقطها بنك التصحيح
   if (type === "festigung") {
     const fp = fehlerList.filter((f) => f.level && f.level <= level);
     if (fp.length) {
@@ -929,7 +1162,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(87),
         kind: "wiederholen",
         titleDe: "Fehlerfallen",
-        titleAr: "🪤 فخاخ الأخطاء الشائعة — تدريب استباقي من موسوعة أخطاء العرب",
+        titleAr: "🪤 فخاخ الأخطاء الشائعة — تدريب استباقي على أنماط ألمانية",
         minutes: 12,
         fehlerItems: chosen.map((f) => ({ falsch: f.falsch, richtig: f.richtig, ar: f.ar, art: f.art })),
       });
@@ -962,17 +1195,10 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     });
   }
 
-  // ⚖️ الحمل الأكاديمي: معامل المستوى يُطبَّق على كل مهمة مولَّدة (لا على التعويضات: دقائقها عقدٌ سابق)
+  // ⚖️ تقديرات كل مهمة مستقلة عن هدف الجلسة وإيقاع البطاقات؛ لا نضغط مجموعها ولا نمدّه.
   for (const t of tasks) if (!t.mandatory) t.minutes = lastMinuten(t.minutes, level);
-  // ⏱️ إيقاع المستخدم الثلاثي (خفيف/منتظم/مكثّف): ضبط الدقائق نحو الهدف اليومي
   const tempo = progress.settings.tempo ?? "regelmaessig";
-  const targetMin = TEMPO_ZIELMIN[tempo];
-  const aktuell = tasks.reduce((s, t) => s + t.minutes, 0);
-  if (aktuell > 0) {
-    const faktor = Math.max(0.5, Math.min(1.6, targetMin / aktuell));
-    for (const t of tasks) if (!t.mandatory) t.minutes = Math.max(5, Math.round((t.minutes * faktor) / 5) * 5);
-  }
-  return { day, week, weekday, phase, type, tasks, tempo, zielMin: targetMin };
+  return { day, week, weekday, phase, type, tasks, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES };
 }
 
 // ── منطق القفل والتعويض ────────────────────────────────────────────────

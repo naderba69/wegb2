@@ -190,9 +190,9 @@ function Eichstreifen({ n, erwartet, gesetzt }: { n: number; erwartet: number | 
               height: 26,
               borderRadius: 8,
               cursor: "pointer",
-              border: erwartet === k ? "1.5px solid var(--color-b2)" : "1px solid #d6d3d1",
-              background: erwartet === k ? "var(--color-b2)" : "white",
-              color: erwartet === k ? "white" : undefined,
+              border: erwartet === k ? "1.5px solid var(--color-b2)" : "1px solid var(--ui-border)",
+              background: erwartet === k ? "var(--color-b2)" : "var(--ui-surface-raised)",
+              color: erwartet === k ? "var(--ui-on-accent)" : undefined,
               fontWeight: 800,
               fontSize: "0.7rem",
             }}
@@ -271,7 +271,7 @@ function FreieWiedergabe({ tag, day }: { tag: number; day: number }) {
       {items.map((it, k) => {
         const b = bewertung?.[k];
         return (
-          <div key={it.id} style={{ border: "1px solid #e7e5e4", borderRadius: 12, padding: "0.6rem 0.8rem" }}>
+          <div key={it.id} style={{ border: "1px solid var(--ui-border)", borderRadius: 12, padding: "0.6rem 0.8rem" }}>
             <div style={{ fontWeight: 800, fontSize: "0.86rem" }} dir="rtl">
               <span className="rtl-num">{k + 1}.</span> {it.ar}
             </div>
@@ -280,7 +280,7 @@ function FreieWiedergabe({ tag, day }: { tag: number; day: number }) {
               <button
                 title="اكشف الحروف الأولى (تُسجَّل مساعدة)"
                 onClick={() => setTipp((t) => ({ ...t, [k]: !t[k] }))}
-                style={{ border: "1px solid #d6d3d1", background: "var(--color-card)", borderRadius: 10, padding: "0.35rem 0.5rem", cursor: "pointer", fontSize: "0.85rem" }}
+                style={{ border: "1px solid var(--ui-border)", background: "var(--color-card)", borderRadius: 10, padding: "0.35rem 0.5rem", cursor: "pointer", fontSize: "0.85rem" }}
               >
                 {tipp[k] ? "🙈" : "🔤"}
               </button>
@@ -364,7 +364,7 @@ function Textluecken({ tag, day }: { tag: number; day: number }) {
       <div style={{ fontWeight: 800, fontSize: "0.86rem" }} dir="rtl">
         📖 {run.titleAr} <span style={{ opacity: 0.6, fontWeight: 600 }} className="de">({run.titleDe})</span>
       </div>
-      <div style={{ background: "var(--color-card)", border: "1px solid #e7e5e4", borderRadius: 12, padding: "0.7rem 0.9rem", fontSize: "0.86rem", lineHeight: 2 }}>
+      <div style={{ background: "var(--color-card)", border: "1px solid var(--ui-border)", borderRadius: 12, padding: "0.7rem 0.9rem", fontSize: "0.86rem", lineHeight: 2 }}>
         {run.masked.map((z, k) => (
           <p key={k} className="de" style={{ margin: k ? "0.4rem 0 0" : 0 }}>{z}</p>
         ))}
@@ -377,7 +377,7 @@ function Textluecken({ tag, day }: { tag: number; day: number }) {
         {run.holes.map((h) => {
           const b = bewertung?.[h.zahl - 1];
           return (
-            <div key={h.zahl} style={{ border: "1px solid #e7e5e4", borderRadius: 10, padding: "0.35rem 0.55rem" }}>
+            <div key={h.zahl} style={{ border: "1px solid var(--ui-border)", borderRadius: 10, padding: "0.35rem 0.55rem" }}>
               <div style={{ fontSize: "0.66rem", fontWeight: 900, opacity: 0.7 }} dir="rtl">الفجوة <span className="rtl-num">{h.zahl}</span></div>
               <input className="field" style={{ direction: "ltr", width: "100%" }} value={gaben[h.zahl] ?? ""} onChange={(e) => setGaben((g) => ({ ...g, [h.zahl]: e.target.value }))} disabled={fertig} />
               {b && (
@@ -465,7 +465,7 @@ function InterleavingMischer({ tag, day }: { tag: number; day: number }) {
       {geordnet.map((it, k) => {
         const b = bewertung?.[k];
         return (
-          <div key={k} style={{ border: "1px solid #e7e5e4", borderRadius: 12, padding: "0.55rem 0.8rem" }}>
+          <div key={k} style={{ border: "1px solid var(--ui-border)", borderRadius: 12, padding: "0.55rem 0.8rem" }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
               <span className="chip" style={{ fontWeight: 900 }}>{QLABEL[it.quell]}</span>
               <span style={{ fontWeight: 800, fontSize: "0.85rem" }}>
@@ -521,7 +521,7 @@ export function SelbstTestZentrum({ progress }: { progress: Progress }) {
                 ["mischer", "🔀 الخلّاط المتداخل"],
               ] as const
             ).map(([id, label]) => (
-              <button key={id} className="chip" style={{ cursor: "pointer", background: tab === id ? "var(--color-cola)" : "white", color: tab === id ? "white" : undefined }} onClick={() => setTab(id)}>
+              <button key={id} className="chip" style={{ cursor: "pointer", background: tab === id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === id ? "var(--ui-on-accent)" : undefined }} onClick={() => setTab(id)}>
                 {label}
               </button>
             ))}

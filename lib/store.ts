@@ -16,9 +16,44 @@ import { upsertFehler, gradeFehlerIn } from "./fehler";
 import { checkAbzeichen } from "./spiel";
 import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
+import { migrateCurriculumSchedule } from "./curriculum-schedule";
 
 const KEY = "weg-b2-progress";
 export const PROGRESS_EVENT = "weg-progress-changed";
+
+/** Move legacy, source-unknown minute totals out of the measured-time field. Before the session timer,
+ *  the UI's only way to add time was manual booking, so old totals are self-reported, not measured. */
+export function separateLegacyManualMinutes(progress: Progress): Progress {
+  const plan = progress.plan;
+  if (plan.minutenTrennungVersion === 1) return progress;
+
+  const safeMinutes = (value: unknown) => typeof value === "number" && Number.isFinite(value) ? Math.max(0, value) : 0;
+  const manualByDay: Record<number, number> = {};
+  for (const [day, value] of Object.entries(plan.minutenManuellTage ?? {})) {
+    const parsedDay = Number(day);
+    const minutes = safeMinutes(value);
+    if (Number.isInteger(parsedDay) && parsedDay >= 1 && minutes > 0) manualByDay[parsedDay] = minutes;
+  }
+  for (const [day, value] of Object.entries(plan.minutenEffektivTage ?? {})) {
+    const parsedDay = Number(day);
+    const minutes = safeMinutes(value);
+    if (Number.isInteger(parsedDay) && parsedDay >= 1 && minutes > 0) {
+      manualByDay[parsedDay] = (manualByDay[parsedDay] ?? 0) + minutes;
+    }
+  }
+
+  return {
+    ...progress,
+    plan: {
+      ...plan,
+      minutenEffektiv: 0,
+      minutenEffektivTage: {},
+      minutenManuell: safeMinutes(plan.minutenManuell) + safeMinutes(plan.minutenEffektiv),
+      minutenManuellTage: manualByDay,
+      minutenTrennungVersion: 1,
+    },
+  };
+}
 
 function emit() {
   if (typeof window !== "undefined") {
@@ -34,28 +69,28 @@ export function loadProgress(): Progress {
     const p = JSON.parse(raw) as Progress;
     if (p.v !== emptyProgress.v) {
       // ترحيل: الاحتفاظ بالمفردات والتقدّم البشري، إعادة ضبط الخطة
-    return {
-      ...emptyProgress,
-      srs: p.srs ?? {},
-      canDo: p.canDo ?? {},
-      streak: p.streak ?? { last: null, count: 0 },
-      fehler: p.fehler ?? {},
-      weak: p.weak ?? {},
-      exams: p.exams ?? {},
-      modulPruefungen: p.modulPruefungen ?? {},
-      xp: p.xp ?? 0,
-      abzeichen: p.abzeichen ?? {},
-      kompetenzLog: p.kompetenzLog ?? [],
-      gesundheit: p.gesundheit ?? { augenPause: true },
-      settings: { ...emptyProgress.settings, ...(p.settings ?? {}) },
-    };
+      return separateLegacyManualMinutes(migrateCurriculumSchedule({
+        ...emptyProgress,
+        srs: p.srs ?? {},
+        canDo: p.canDo ?? {},
+        streak: p.streak ?? { last: null, count: 0 },
+        fehler: p.fehler ?? {},
+        weak: p.weak ?? {},
+        exams: p.exams ?? {},
+        modulPruefungen: p.modulPruefungen ?? {},
+        xp: p.xp ?? 0,
+        abzeichen: p.abzeichen ?? {},
+        kompetenzLog: p.kompetenzLog ?? [],
+        gesundheit: p.gesundheit ?? { augenPause: true },
+        settings: { ...emptyProgress.settings, ...(p.settings ?? {}) },
+      }));
     }
-    return {
+    return separateLegacyManualMinutes(migrateCurriculumSchedule({
       ...emptyProgress,
       ...p,
       plan: { ...emptyProgress.plan, ...p.plan },
       settings: { ...emptyProgress.settings, ...p.settings },
-    };
+    }));
   } catch {
     return emptyProgress;
   }
@@ -63,7 +98,8 @@ export function loadProgress(): Progress {
 
 export function saveProgress(p: Progress) {
   try {
-    window.localStorage.setItem(progressKeyActive(), JSON.stringify(p));
+    const migrated = migrateCurriculumSchedule(separateLegacyManualMinutes(p));
+    window.localStorage.setItem(progressKeyActive(), JSON.stringify(migrated));
     emit();
   } catch {
     /* التخزين ممتلئ أو محظور */
@@ -105,9 +141,9 @@ export function useProgress() {
     });
   }, []);
 
-  /** تسجيل نتيجة مهمة — النجاح ≥80% */
-  const submitTask = useCallback(
-    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number) => {
+  /** تسجيل نتيجة مهمة — النجاح ≥80% (ومهمةُ التحقق تُغلِق سجلَّ درسِها استقلالاً أو حاجةً) */
+    const submitTask = useCallback(
+    (day: number, taskId: string, score: number, total: number, kind?: TaskKind, geplantMin?: number, verifyFor?: string, minutenEffektiv?: number) => {
       update((p) => {
         const prev = p.plan.tasks[taskId];
         const passed = total > 0 && score / total >= 0.8;
@@ -120,11 +156,20 @@ export function useProgress() {
           kind: kind ?? prev?.kind,
           at: new Date().toISOString(),
           geplantMin: geplantMin ?? prev?.geplantMin,
+          minutenEffektiv: Number.isFinite(minutenEffektiv)
+            ? Math.max(prev?.minutenEffektiv ?? 0, Math.max(0, minutenEffektiv as number))
+            : prev?.minutenEffektiv,
         };
+        const rec = verifyFor ? p.verify?.[verifyFor] : undefined;
+        const verify =
+          verifyFor && rec && rec.doneDay === undefined
+            ? { ...(p.verify ?? {}), [verifyFor]: { ...rec, doneDay: day, passed: result.passed } }
+            : p.verify;
         return checkAbzeichen(
           logK(
             {
               ...p,
+              verify,
               xp: (p.xp ?? 0) + (result.passed ? 15 : 5),
               plan: { ...p.plan, tasks: { ...p.plan.tasks, [taskId]: result } },
             },
@@ -153,7 +198,7 @@ export function useProgress() {
           xp: (p.xp ?? 0) + 30,
           plan: {
             ...p.plan,
-            day: day + 1, // يسمح بالوصول إلى 271 = «الحصيلة النهائية»
+            day: day + 1, // يتقدّم يوماً بيوم حتى TOTAL_DAYS (378) ثمّ يثبت عليه levelOf
             days: {
               ...p.plan.days,
               [day]: {
@@ -163,6 +208,7 @@ export function useProgress() {
                 tasksDone,
                 tasksTotal,
                 at: new Date().toISOString(),
+                minutenEffektiv: p.plan.minutenEffektivTage?.[day] ?? 0,
               },
             },
             debt: debts,
@@ -205,17 +251,24 @@ export function useProgress() {
 
   const importProgress = useCallback((json: string) => {
     const p = JSON.parse(json) as Progress;
-    const merged = {
+    const merged = separateLegacyManualMinutes(migrateCurriculumSchedule({
       ...emptyProgress,
       ...p,
       plan: { ...emptyProgress.plan, ...p.plan },
       settings: { ...emptyProgress.settings, ...p.settings },
-    };
+    }));
     saveProgress(merged);
     setProgress(merged);
   }, []);
 
   const reset = useCallback(() => {
+    try {
+      const prefix = `${progressKeyActive()}:study-clock:`;
+      for (let i = window.localStorage.length - 1; i >= 0; i--) {
+        const key = window.localStorage.key(i);
+        if (key?.startsWith(prefix)) window.localStorage.removeItem(key);
+      }
+    } catch { /* progress reset still works if optional timer storage is unavailable */ }
     saveProgress(emptyProgress);
     setProgress(emptyProgress);
   }, []);
@@ -223,18 +276,44 @@ export function useProgress() {
   return { progress, ready, update, submitTask, closeDay, setSrs, saveExam, toggleCanDo, importProgress, reset };
 }
 
-/** إدراج خطأ في الدفتر فوراً (بلا hook — من أي مكوّن/أي حدث) */
-/** ⏱️ حجزُ دقائقَ فعلية — المصدرُ الوحيدُ لساعاتِ CEFR المقضية.
- *  تُclamp: لا زيادةَ سالبة، ولا أكثرُ من 90 دقيقة في حجزٍ واحد
- *  (تبويبٌ مفتوحٌ ومنسيٌّ ليس ساعةَ دراسة، وقياسٌ كاذبٌ أخطرُ من لا قياس). */
-export function bucheMinuten(minuten: number): number {
+/** تسجيل دقائق جلسة قاسها المؤقّت؛ لا تُستمد من تقدير المهمة ولا من إدخال يدوي. */
+export function recordStudyMinutes(day: number, minutes: number): number {
+  if (!Number.isInteger(day) || day < 1 || !Number.isFinite(minutes) || minutes <= 0) return 0;
+  try {
+    const p = loadProgress();
+    const byDay = p.plan.minutenEffektivTage ?? {};
+    saveProgress({
+      ...p,
+      plan: {
+        ...p.plan,
+        minutenEffektiv: (p.plan.minutenEffektiv ?? 0) + minutes,
+        minutenEffektivTage: { ...byDay, [day]: (byDay[day] ?? 0) + minutes },
+        minutenTrennungVersion: 1,
+      },
+    });
+    return minutes;
+  } catch {
+    return 0;
+  }
+}
+
+/** Store a learner-reported duration separately; manual entries never count as measured timer time. */
+export function bucheMinuten(minuten: number, day?: number): number {
   const z = clampMinuten(minuten);
   if (z <= 0) return 0;
   try {
     const p = loadProgress();
+    const minutenManuellTage = Number.isInteger(day) && (day as number) >= 1
+      ? { ...(p.plan.minutenManuellTage ?? {}), [day as number]: ((p.plan.minutenManuellTage ?? {})[day as number] ?? 0) + z }
+      : p.plan.minutenManuellTage;
     saveProgress({
       ...p,
-      plan: { ...p.plan, minutenEffektiv: (p.plan.minutenEffektiv ?? 0) + z },
+      plan: {
+        ...p.plan,
+        minutenManuell: (p.plan.minutenManuell ?? 0) + z,
+        minutenManuellTage,
+        minutenTrennungVersion: 1,
+      },
     });
   } catch {
     return 0;
@@ -249,6 +328,27 @@ export function logSicherheitNow(e: import("./types").SicherheitsEintrag) {
 
 export function addFehlerNow(e: FehlerEintrag) {
   saveProgress(upsertFehler(loadProgress(), e));
+}
+
+/** 🎯 جدولة تحقق استقلال لدرسٍ أُنجِز تدريبُه — مستحق بعد 3 أيام (قرار المنهج).
+ *  غبيةٌ عمداً: المتحقق من وجود بنود التحقق هو المنادي (يملك grammarMap) لا المخزن. */
+export function planeVerifikation(topicId: string, day: number) {
+  const p = loadProgress();
+  if (p.verify?.[topicId]) return;
+  saveProgress({ ...p, verify: { ...(p.verify ?? {}), [topicId]: { dueDay: day + 3 } } });
+}
+
+/** ⌨️ بديل كتابي لمهمة شفوية مستحيلة: إثبات إنجاز لا إثبات نطق (R16) */
+export function markiereSchriftlich(taskId: string) {
+  const p = loadProgress();
+  saveProgress({ ...p, schriftlich: { ...(p.schriftlich ?? {}), [taskId]: true } });
+}
+
+/** 🤔 اعتراض على قاعدة كاشفة: 3 اعتراضات تخفّض حدّتها تلقائياً (R33) */
+export function disputeRegel(regelId: string) {
+  const p = loadProgress();
+  const n = (p.disputiert?.[regelId] ?? 0) + 1;
+  saveProgress({ ...p, disputiert: { ...(p.disputiert ?? {}), [regelId]: n } });
 }
 
 /** تقييم مراجعة خطأ في الدفتر فوراً — ويُسجَّل على شبكة الكفاءات المتأثرة */
