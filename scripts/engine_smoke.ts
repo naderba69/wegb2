@@ -4986,6 +4986,196 @@ void 0;
     "K170e رقعة d-a1-14 تفحص القيم الحية الخمس قبل الكتابة، ترفض الحالة الجزئية، وتحفظ سعر الرسالة المحدد لا تعرفة طرد عامة");
 }
 
+/* ═══ K171 — R97: تدقيق الحوارات A1 d-a1-16–18 بالمصادر والبيانات الحية ═══ */
+{
+  type DialogueAuditItem06 = {
+    id: string; kind: string; status: string; sources: string[]; finding: string; action: string;
+    reviewed: Record<string, any>; before?: Record<string, any>;
+  };
+  type DialogueAuditSource06 = { id: string; title: string; url: string; supports: string };
+  type HistoricalComparison06 = {
+    id: string; patchOptions: string[]; patchAnswer: string | string[]; patchLines: string[];
+    liveAssessment: string; decision: string; sources: string[];
+  };
+  const audit06 = JSON.parse(readFileSync("docs/content-review-a1-dialogues-06-2026-10-05.json", "utf8")) as {
+    date: string; batch: string; scope: string; method: string;
+    coverage: {
+      dialogues: number; dialogueMetadata: number; lines: number; questions: number;
+      dictationSentences: number; unresolvedLevelNotes: number; unresolvedContextNotes: number; totalTrackedItems: number;
+    };
+    statusCounts: Record<string, number>; statusDefinitions: Record<string, string>; limitations: string[];
+    sources: DialogueAuditSource06[];
+    historicalPatchReview: { file: string; role: string; usageCheck: string; comparisons: HistoricalComparison06[] };
+    patch: { file: string; preflight: string; fieldsChanged: number; correctedItemIds: string[]; changes: string[] };
+    items: DialogueAuditItem06[];
+  };
+  const auditMarkdown06 = readFileSync("docs/content-review-a1-dialogues-06-2026-10-05.md", "utf8");
+  type LiveDialogue06 = {
+    id: string; level: string; titleDe: string; titleAr: string; waisen: string[];
+    lines: { who: string; de: string; ar: string }[];
+    questions: { id: string; type: string; promptDe: string; options?: string[]; answer: string | string[];
+      promptAr: string; explanationAr: string; falle?: boolean }[];
+    dictation: string[];
+  };
+  const liveBatch06 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as LiveDialogue06[];
+  const batchIds06 = ["d-a1-16", "d-a1-17", "d-a1-18"];
+  const completeBatch06 = batchIds06.map((id) => liveBatch06.find((dialogue) => dialogue.id === id));
+  const validBatch06 = completeBatch06.every((dialogue) => !!dialogue && dialogue.level === "A1")
+    ? completeBatch06 as NonNullable<typeof completeBatch06[number]>[] : [];
+  const expectedIds06 = validBatch06.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question) => question.id),
+    ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const auditIds06 = audit06.items.map((item) => item.id);
+  const auditById06 = new Map(audit06.items.map((item) => [item.id, item]));
+  const auditSection06 = auditMarkdown06.split("## سجل المراجعة بنداً بنداً")[1]?.split("## المصادر المنشورة")[0] ?? "";
+  const markdownRowsUnique06 = expectedIds06.every((id) =>
+    auditSection06.split("\n").filter((line) => line.startsWith(`| ${id} |`)).length === 1
+  );
+  ok(validBatch06.length === 3 && validBatch06.every((dialogue) => dialogue.lines.length === 8 &&
+      dialogue.questions.length === 3 && dialogue.dictation.length === 2) &&
+    expectedIds06.length === 42 && new Set(expectedIds06).size === 42 &&
+    JSON.stringify(expectedIds06) === JSON.stringify(auditIds06) && markdownRowsUnique06 &&
+    audit06.date === "2026-10-05" && audit06.batch === "A1-dialogues-06" &&
+    audit06.coverage.dialogues === 3 && audit06.coverage.dialogueMetadata === 3 && audit06.coverage.lines === 24 &&
+    audit06.coverage.questions === 9 && audit06.coverage.dictationSentences === 6 &&
+    audit06.coverage.unresolvedLevelNotes === 0 && audit06.coverage.unresolvedContextNotes === 2 &&
+    audit06.coverage.totalTrackedItems === 42 &&
+    audit06.scope.includes("d-a1-16") && audit06.scope.includes("d-a1-17") && audit06.scope.includes("d-a1-18"),
+    "K171a تقرير JSON/Markdown يغطي 42 معرفاً بالترتيب: 3 بيانات حوار و24 سطراً و9 أسئلة و6 إملاءات");
+
+  const sourceIds06 = new Set(audit06.sources.map((source) => source.id));
+  const referencedSources06 = new Set([
+    ...audit06.items.flatMap((item) => item.sources),
+    ...audit06.historicalPatchReview.comparisons.flatMap((comparison) => comparison.sources),
+  ]);
+  const computedStatuses06 = audit06.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const correctedIds06 = new Set(["d-a1-16.lines[1]", "d-a1-16.lines[7]", "d-a1-16-q1", "d-a1-17-q1"]);
+  const unresolvedIds06 = new Set(["d-a1-18", "d-a1-18.lines[7]"]);
+  const expectedStatuses06 = audit06.items.every((item) =>
+    item.status === (correctedIds06.has(item.id) ? "مُصحح" : unresolvedIds06.has(item.id) ? "غير محسوم" : "سليم")
+  );
+  const completeEvidence06 = audit06.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.kind.trim().length > 0 &&
+    item.sources.length > 0 && item.sources.every((id) => sourceIds06.has(id)) &&
+    item.finding.trim().length > 0 && item.action.trim().length > 0 && !!item.reviewed
+  );
+  const completeSources06 = audit06.sources.length === 45 && sourceIds06.size === 45 && audit06.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://") &&
+    auditMarkdown06.includes(`<a id="${source.id.toLowerCase()}"></a>${source.id}`)
+  ) && referencedSources06.size === audit06.sources.length && audit06.sources.every((source) => referencedSources06.has(source.id));
+  ok(completeEvidence06 && completeSources06 && expectedStatuses06 &&
+    computedStatuses06["سليم"] === 36 && computedStatuses06["مُصحح"] === 4 && computedStatuses06["غير محسوم"] === 2 &&
+    audit06.statusCounts["سليم"] === 36 && audit06.statusCounts["مُصحح"] === 4 && audit06.statusCounts["غير محسوم"] === 2 &&
+    audit06.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&
+    audit06.method.includes("مؤجل") && audit06.statusDefinitions["غير محسوم"].includes("لم يُعلن الخطأ"),
+    "K171b لكل بند حكم ودليل وإجراء ومصدر؛ 45 مصدراً مستخدماً، مع فصل 4 تصويبات مؤكدة عن ملاحظتين غير محسومتين");
+
+  const snapshotsMatch06 = audit06.items.every((item) => {
+    const metadata = item.reviewed;
+    const dialogue = validBatch06.find((candidate) => candidate.id === item.id || item.id.startsWith(`${candidate.id}.`) ||
+      candidate.questions.some((question) => question.id === item.id));
+    if (!dialogue) return false;
+    if (item.id === dialogue.id) {
+      return metadata.titleDe === dialogue.titleDe && metadata.titleAr === dialogue.titleAr &&
+        metadata.level === dialogue.level && JSON.stringify(metadata.waisen) === JSON.stringify(dialogue.waisen);
+    }
+    const lineMatch = item.id.match(/\.lines\[(\d+)\]$/);
+    if (lineMatch) {
+      const line = dialogue.lines[Number(lineMatch[1])];
+      return !!line && metadata.who === line.who && metadata.de === line.de && metadata.ar === line.ar;
+    }
+    const dictationMatch = item.id.match(/\.dictation\[(\d+)\]$/);
+    if (dictationMatch) return metadata.sentence === dialogue.dictation[Number(dictationMatch[1])];
+    const question = dialogue.questions.find((candidate) => candidate.id === item.id);
+    return !!question && metadata.type === question.type && metadata.promptDe === question.promptDe &&
+      JSON.stringify(metadata.options) === JSON.stringify(question.options) &&
+      JSON.stringify(metadata.answer) === JSON.stringify(question.answer) &&
+      metadata.promptAr === question.promptAr && metadata.explanationAr === question.explanationAr &&
+      metadata.falle === question.falle;
+  });
+  const birdLine06 = auditById06.get("d-a1-16.lines[1]");
+  const firstTask06 = auditById06.get("d-a1-17-q1");
+  ok(snapshotsMatch06 &&
+    birdLine06?.reviewed.ar === "انظر، طائر على الشجرة! يغرّد." &&
+    auditById06.get("d-a1-16.lines[7]")?.reviewed.de === "Können wir morgen wiederkommen?" &&
+    auditById06.get("d-a1-16-q1")?.reviewed.explanationAr.includes("الطائر على الشجرة") &&
+    !auditById06.get("d-a1-16-q1")?.reviewed.explanationAr.includes("العصفور") &&
+    firstTask06?.reviewed.promptDe === "Welche Aufgabe nennt die Mutter zuerst?" &&
+    firstTask06.reviewed.answer === "Er kehrt die Küche." && firstTask06.reviewed.options?.includes(firstTask06.reviewed.answer) &&
+    firstTask06.reviewed.explanationAr.includes("لا دليلاً على ترتيب تنفيذ الأعمال") &&
+    auditById06.get("d-a1-18")?.status === "غير محسوم" && auditById06.get("d-a1-18.lines[7]")?.status === "غير محسوم",
+    "K171c كل اللقطات تطابق البيانات الحية؛ تصحيح Vogel وwiederkommen والسؤال، مع إبقاء ملاحظتي d-a1-18 بلا تعديل");
+
+  const history06 = audit06.historicalPatchReview;
+  const historicalIds06 = ["d-a1-16", "d-a1-17", "d-a1-18"];
+  const historicalPatchSource06 = readFileSync(history06.file, "utf8");
+  const historicalSection06 = auditMarkdown06.split("## مقارنة السكربت التاريخي")[1]?.split("## التصويبات المطبقة")[0] ?? "";
+  const historicalEvidence06 = history06.comparisons.every((comparison) => {
+    const answers = Array.isArray(comparison.patchAnswer) ? comparison.patchAnswer : [comparison.patchAnswer];
+    return comparison.patchOptions.every((option) => historicalPatchSource06.includes(option)) &&
+      answers.every((answer) => historicalPatchSource06.includes(answer)) &&
+      comparison.patchLines.every((line) => historicalPatchSource06.includes(line)) &&
+      comparison.liveAssessment.trim().length > 0 && comparison.decision.trim().length > 0 &&
+      comparison.sources.length > 0 && comparison.sources.every((source) => sourceIds06.has(source)) &&
+      historicalSection06.split("\n").filter((line) => line.startsWith(`| ${comparison.id} |`)).length === 1;
+  });
+  ok(history06.file === "scripts/patches/dialoge_a1_neu1.py" && history06.comparisons.length === 3 &&
+    history06.comparisons.map((comparison) => comparison.id).join(",") === historicalIds06.join(",") &&
+    history06.role.includes("تاريخي") && history06.usageCheck.includes("لا يظهر استيراداً إنتاجياً") && historicalEvidence06 &&
+    audit06.patch.file === "scripts/patches/review_a1_dialogues_06.py" && audit06.patch.fieldsChanged === 5 &&
+    audit06.patch.correctedItemIds.length === 4 && existsSync(audit06.patch.file) &&
+    auditMarkdown06.includes("لم تُمنح أولوية") && auditMarkdown06.includes("غير محسوم"),
+    "K171d اقتراحات السكربت التاريخي الثلاثة قورنت بالحي؛ التقرير لا يعتمده تلقائياً ويسجل إجراء التصحيح ومصدره");
+
+  const patchSource06 = readFileSync(audit06.patch.file, "utf8");
+  const birdBefore06 = auditById06.get("d-a1-16.lines[1]")?.before;
+  const birdQuestionBefore06 = auditById06.get("d-a1-16-q1")?.before;
+  const spellingBefore06 = auditById06.get("d-a1-16.lines[7]")?.before;
+  const taskBefore06 = auditById06.get("d-a1-17-q1")?.before;
+  const lehrerSource06 = readFileSync("components/lehrer.tsx", "utf8");
+  const fehlerUiSource06 = readFileSync("components/fehler-ui.tsx", "utf8");
+  const taskSource06 = readFileSync("components/tasks.tsx", "utf8");
+  ok(audit06.patch.preflight.includes("القيم الحية الخمس الدقيقة") &&
+    patchSource06.includes("mixed before/after state; refusing partial application") &&
+    patchSource06.includes("preflight failed; no write performed") && patchSource06.includes("--apply") &&
+    !!birdBefore06 && patchSource06.includes(birdBefore06.ar) &&
+    !!birdQuestionBefore06 && patchSource06.includes(birdQuestionBefore06.explanationAr) &&
+    !!spellingBefore06 && patchSource06.includes(spellingBefore06.de) &&
+    !!taskBefore06 && patchSource06.includes(taskBefore06.promptDe) &&
+    lehrerSource06.includes("تدرّب على تصحيح الجمل الألمانية") &&
+    lehrerSource06.includes('quelle: "تمرين تصحيح الألمانية"') &&
+    !lehrerSource06.includes("أخطاء العرب الشائعة") && !lehrerSource06.includes("الناطقين بالعربية") &&
+    fehlerUiSource06.includes("اختر الصيغة الألمانية الصحيحة") && !fehlerUiSource06.includes("أخطاء الناطقين بالعربية") &&
+    !taskSource06.includes("أخطاء شائعة عند العرب"),
+    "K171e الرقعة ذات الفحص المسبق تعيد فحص القيم؛ تسميات الواجهة محايدة ولا تنسب الأخطاء إلى جماعة لغوية");
+
+  const grammarCopy06 = readFileSync("content/grammar.json", "utf8");
+  const mnemonicCopy06 = JSON.parse(readFileSync("content/eselsbruecken.json", "utf8")) as { id: string; storyAr: string }[];
+  const generatorCopy06 = readFileSync("scripts/_es1.py", "utf8");
+  const planCopy06 = readFileSync("lib/plan.ts", "utf8");
+  const contentLabels06 = readFileSync("lib/content.ts", "utf8");
+  const spellingLabels06 = readFileSync("lib/schreibpruefer.ts", "utf8");
+  const phoneticsLabels06 = readFileSync("lib/arabinterferenz.ts", "utf8");
+  const pluralMnemonic06 = mnemonicCopy06.find((entry) => entry.id === "innen");
+  const neutralPluralCue06 = "تذكّرْ كتابةَ النونِ مرتين في صيغةِ الجمع.";
+  ok(grammarCopy06.includes("في هذه البنية لا يبقى الفعل المصرَّف في المركز الثاني") &&
+    !grammarCopy06.includes("عند العرب الخطأ الشائع") && !!pluralMnemonic06 &&
+    pluralMnemonic06.storyAr.includes(neutralPluralCue06) && !pluralMnemonic06.storyAr.includes("أخطاءِ العربِ") && generatorCopy06.includes(neutralPluralCue06) &&
+    !generatorCopy06.includes("أخطاءِ العربِ") && planCopy06.includes("تدريب استباقي على أنماط ألمانية") &&
+    !planCopy06.includes("موسوعة أخطاء العرب") && contentLabels06.includes("بنك أنماط التصحيح الألمانية") &&
+    !contentLabels06.includes("موسوعة أخطاء العرب الشائعة") && spellingLabels06.includes("أنماطٌ لغويةٌ قابلةٌ للفحص") &&
+    !spellingLabels06.includes("أخطاءُ العربِ المعروفة") &&
+    phoneticsLabels06.includes("تدريبات النطق للمتعلمين الناطقين بالعربية") &&
+    !phoneticsLabels06.includes("يخطئ فيها العرب كثيراً"),
+    "K171f الصياغة المحايدة متزامنة بين الدرس وبنك التركات والمولّد والعناوين؛ لا تعميم غير مسند على العرب");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

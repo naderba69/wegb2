@@ -21,7 +21,7 @@ import { speakLine, speakAny, stopSpeech } from "@/lib/speech";
 import ExerciseSet from "./exercises";
 import { De } from "./De";
 
-// ═══════════════ صحّح الخطأ (أخطاء العرب الشائعة) ═══════════════
+// ═══════════════ صحّح الخطأ — تدريب على الصيغ الألمانية ═══════════════
 
 const PITFALL_RE = /„([^“]+)“\s*✗\s*→\s*„([^“]+)“\s*✓/;
 
@@ -96,7 +96,7 @@ export function FehlerFinden({
         richtig: it.right,
         art: "wortstellung",
         ar: it.ar,
-        quelle: "أخطاء شائعة",
+        quelle: "تمرين تصحيح الألمانية",
       });
     }
   };
@@ -104,7 +104,7 @@ export function FehlerFinden({
   return (
     <div style={{ margin: "1.1rem 0" }}>
       <h4 style={{ fontWeight: 800, margin: "0 0 0.5rem" }}>
-        🛠️ صحّح الخطأ — هكذا يدرّبك المدرّس على أخطاء العرب الشائعة
+        🛠️ صحّح الخطأ — تدرّب على تصحيح الجمل الألمانية
       </h4>
       <div style={{ display: "grid", gap: "0.7rem" }}>
         {items.map((it) => {

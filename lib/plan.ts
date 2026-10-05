@@ -1153,7 +1153,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       }
     }
   }
-  // (2) فخاخ الموسوعة: تدريب استباقي في أيام التثبيت على أخطاء العرب الشائعة
+  // (2) فخاخ الموسوعة: تدريب استباقي على الأنماط الألمانية التي يلتقطها بنك التصحيح
   if (type === "festigung") {
     const fp = fehlerList.filter((f) => f.level && f.level <= level);
     if (fp.length) {
@@ -1162,7 +1162,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(87),
         kind: "wiederholen",
         titleDe: "Fehlerfallen",
-        titleAr: "🪤 فخاخ الأخطاء الشائعة — تدريب استباقي من موسوعة أخطاء العرب",
+        titleAr: "🪤 فخاخ الأخطاء الشائعة — تدريب استباقي على أنماط ألمانية",
         minutes: 12,
         fehlerItems: chosen.map((f) => ({ falsch: f.falsch, richtig: f.richtig, ar: f.ar, art: f.art })),
       });

@@ -82,7 +82,7 @@ export const candoMap = candoRaw as unknown as Record<
   Level,
   { id: string; de: string; ar: string }[]
 >;
-/** موسوعة أخطاء العرب الشائعة (مترابطة بمحرّك دفتر الأخطاء) */
+/** بنك أنماط التصحيح الألمانية (مترابط بمحرّك دفتر الأخطاء) */
 export const fehlerList = fehlerRaw as unknown as (FehlerEintrag & { id: string; kat: string })[];
 /** حيل الحفظ السريع لكل كلمة (كلمة مفتاحية/قصة/جذر عربي) */
 export const mnemonikMap = mnemonikRaw as unknown as Record<

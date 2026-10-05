@@ -8967,7 +8967,7 @@
       {
         "who": "Kind",
         "de": "Schau, ein Vogel auf dem Baum! Er singt.",
-        "ar": "انظر، عصفور على الشجرة! يغرّد."
+        "ar": "انظر، طائر على الشجرة! يغرّد."
       },
       {
         "who": "Vater",
@@ -8996,7 +8996,7 @@
       },
       {
         "who": "Kind",
-        "de": "Können wir morgen wieder kommen?",
+        "de": "Können wir morgen wiederkommen?",
         "ar": "هل نأتي مجدداً غداً؟"
       }
     ],
@@ -9010,7 +9010,7 @@
           "am Fluss"
         ],
         "answer": "am Fluss",
-        "explanationAr": "الدليل: «dort am Fluss stehen zwei Pferde». الفخّ 1: العصفور على الشجرة. الفخّ 2: الغابة هدف النزهة.",
+        "explanationAr": "الدليل: «dort am Fluss stehen zwei Pferde». الفخّ 1: الطائر على الشجرة. الفخّ 2: الغابة هدف النزهة.",
         "id": "d-a1-16-q1",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
@@ -9111,14 +9111,14 @@
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Was macht der Sohn zuerst?",
+        "promptDe": "Welche Aufgabe nennt die Mutter zuerst?",
         "options": [
           "Er kehrt die Küche.",
           "Er wäscht den Topf.",
           "Er bügelt die Hemden."
         ],
         "answer": "Er kehrt die Küche.",
-        "explanationAr": "الدليل: «Du kehrst die Küche». الفخّ 1: القدر تغسله الأم. الفخّ 2: الكيّ «danach».",
+        "explanationAr": "الدليل: «Du kehrst die Küche»؛ هذه أول مهمة محددة تذكرها الأم، لا دليلاً على ترتيب تنفيذ الأعمال. الفخّ 1: الأم تغسل القدر. الفخّ 2: الكيّ ذُكر «danach».",
         "id": "d-a1-17-q1",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."

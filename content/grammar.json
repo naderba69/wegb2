@@ -1911,7 +1911,7 @@
         "points": 2
       }
     ],
-    "summaryAr": "أهم قاعدة نحوية في A2 وأصل أخطاء B1: مع weil / dass / wenn / ob / obwohl يذهب الفعل المصرَّف إلى نهاية الجملة التابعة! «Ich lerne Deutsch, weil ich in Berlin arbeiten will.» لاحظ will في النهاية. عند العرب الخطأ الشائع هو إبقاء الفعل في موضعه العربي (ثانياً).",
+    "summaryAr": "أهم قاعدة نحوية في A2 وأصل أخطاء B1: مع weil / dass / wenn / ob / obwohl يذهب الفعل المصرَّف إلى نهاية الجملة التابعة! «Ich lerne Deutsch, weil ich in Berlin arbeiten will.» لاحظ will في النهاية. في هذه البنية لا يبقى الفعل المصرَّف في المركز الثاني؛ بل يأتي في نهاية الجملة التابعة.",
     "rules": [
       {
         "de": "Das konjugierte Verb steht am Ende des Nebensatzes: …, weil ich müde bin.",

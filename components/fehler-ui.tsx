@@ -172,7 +172,7 @@ export function FehlerFallen({
     <section className="card fadein" style={{ padding: "1.2rem" }}>
       <h3 style={{ fontWeight: 900, marginBottom: "0.3rem" }}>🪤 فخاخ الأخطاء الشائعة</h3>
       <p style={{ fontSize: "0.88rem", color: "var(--color-ink2)", marginBottom: "0.9rem" }}>
-        من موسوعة أخطاء الناطقين بالعربية — اختر الصيغة الصحيحة قبل أن يخدعك الفخّ. ما تخطئه يدخل دفتر أخطائك الشخصي فوراً.
+        اختر الصيغة الألمانية الصحيحة؛ وما تخطئه يدخل دفتر أخطائك الشخصي فوراً.
       </p>
       <div style={{ display: "grid", gap: "0.8rem" }}>
         {items.map((it, i) => {

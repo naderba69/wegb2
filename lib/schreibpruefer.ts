@@ -68,7 +68,7 @@ export function pruefeText(text: string): Befund[] {
   const b: Befund[] = [];
   const saetze = text.split(/(?<=[.!?])\s+/).filter((s) => s.trim());
 
-  // ① أخطاءُ العربِ المعروفة — 128 نمطاً من البنك
+  // ① أنماطٌ لغويةٌ قابلةٌ للفحص — 128 نمطاً من البنك
   for (const f of FEHLER) {
     if (f.falsch.length > 6 && text.toLowerCase().includes(f.falsch.toLowerCase())) {
       b.push({ spalte: f.kat === "wortstellung" ? "syntax" : f.kat === "wortschatz" || f.kat === "falsche-freunde" ? "wortwahl" : "grammatik",

@@ -3098,6 +3098,90 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ XCII — الحوارات A1 16–18: التصحيحات المثبتة ومفاتيح الواجهة ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 7, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    const cases: {
+      id: string;
+      titleDe: string;
+      titleAr: string;
+      visible: string[];
+      questions: { type: "mc" | "truefalse" | "fill"; prompt: string; answer: string }[];
+      firstExplanation?: string;
+    }[] = [
+      {
+        id: "d-a1-16", titleDe: "Ein Spaziergang in der Natur", titleAr: "نزهة في الطبيعة",
+        visible: ["انظر، طائر على الشجرة! يغرّد.", "Können wir morgen wiederkommen?", "هل نأتي مجدداً غداً؟"],
+        questions: [
+          { type: "mc", prompt: "Wo stehen die Pferde?", answer: "am Fluss" },
+          { type: "mc", prompt: "Woher kommt die Kuh?", answer: "vom Bauernhof" },
+          { type: "truefalse", prompt: "Der Vogel singt auf dem Baum.", answer: "richtig" },
+        ],
+      },
+      {
+        id: "d-a1-17", titleDe: "Hausarbeit am Samstag", titleAr: "أعمال البيت يوم السبت",
+        visible: ["Heute ist Samstag.", "الغسيل أغسله أنا، وأنت تكوي القمصان بعده.", "Welche Aufgabe nennt die Mutter zuerst?"],
+        questions: [
+          { type: "mc", prompt: "Welche Aufgabe nennt die Mutter zuerst?", answer: "Er kehrt die Küche." },
+          { type: "mc", prompt: "Was ist leer?", answer: "der Schrank" },
+          { type: "fill", prompt: "Die wasche ich mit ___.", answer: "Seife" },
+        ],
+        firstExplanation: "لا دليلاً على ترتيب تنفيذ الأعمال",
+      },
+      {
+        id: "d-a1-18", titleDe: "Woher kommst du?", titleAr: "من أين أنت؟",
+        visible: ["Herr Haddad, welche Nationalität haben Sie?", "كثير من الأجانب في الدورة عزّاب أيضاً.", "Viele Ausländer im Kurs sind auch ledig."],
+        questions: [
+          { type: "mc", prompt: "Welche Sprache ist die dritte Sprache von Herrn Haddad?", answer: "Deutsch" },
+          { type: "mc", prompt: "Ist Herr Haddad verheiratet?", answer: "Nein, er ist ledig." },
+          { type: "truefalse", prompt: "Er darf im Kurs ein Wörterbuch benutzen.", answer: "richtig" },
+        ],
+      },
+    ];
+    for (const item of cases) {
+      const cleanup = mount(React.createElement(TaskView, {
+        task: { id: `t-${item.id}-review-ui-06`, kind: "hoeren" as const, dialogueId: item.id, titleDe: item.titleDe, titleAr: item.titleAr, minutes: 10 },
+        ...props,
+      }));
+      const reveal = btn("أظهر النص");
+      if (reveal) click(reveal);
+      const rendered = txt();
+      ok(!!reveal && item.visible.every((snippet) => rendered.includes(snippet)),
+        `XCII1 ${item.id} واجهة الاستماع تعرض النص الحي والترجمة/السؤال المحدّث بعد الكشف`);
+
+      let allAnswersAccepted = true;
+      let firstQuestion: HTMLElement | undefined;
+      for (let index = 0; index < item.questions.length; index++) {
+        const question = item.questions[index];
+        const exercise = Array.from(rootEl.querySelectorAll(".dirb-ex-item"))
+          .find((node) => (node.textContent ?? "").includes(question.prompt));
+        if (!exercise) { allAnswersAccepted = false; continue; }
+        if (index === 0) firstQuestion = exercise as HTMLElement;
+        let answerControl: HTMLElement | null = null;
+        if (question.type === "fill") {
+          answerControl = exercise.querySelector("input.field") as HTMLInputElement | null;
+          if (answerControl) typeIn(answerControl as HTMLInputElement, question.answer);
+        } else {
+          answerControl = (Array.from(exercise.querySelectorAll(".dirb-ex-opt"))
+            .find((option) => (option.textContent ?? "").trim() === question.answer) as HTMLElement | undefined) ?? null;
+          if (answerControl) click(answerControl);
+        }
+        const check = Array.from(exercise.querySelectorAll("button"))
+          .find((button) => (button.textContent ?? "").includes("تحقّق")) as HTMLElement | undefined;
+        if (!answerControl || !check) { allAnswersAccepted = false; continue; }
+        click(check);
+        if (!(exercise.textContent ?? "").includes("✅")) allAnswersAccepted = false;
+      }
+      ok(allAnswersAccepted, `XCII2 ${item.id} مفاتيح الأسئلة الثلاثة تُقبل في واجهة الاستماع الفعلية`);
+      if (item.firstExplanation) {
+        ok(!!firstQuestion && (firstQuestion.textContent ?? "").includes(item.firstExplanation),
+          "XCII3 d-a1-17-q1 يظهر الشرح الذي يميز ذكر المهمة عن ترتيب تنفيذها");
+      }
+      if (cleanup) cleanup();
+    }
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);
