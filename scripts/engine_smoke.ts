@@ -5502,6 +5502,168 @@ void 0;
     "K173f تُفصل الملاحظات الثلاث عن الأخطاء المؤكدة؛ CEFR والنسبة والحساب والاعتماد البشري/المهني مؤجلة");
 }
 
+/* ═══ K174 — R100: تدقيق الحوارات A1 d-a1-25–27 بالمصادر والبيانات الحية ═══ */
+{
+  type DialogueAuditItem09 = {
+    id: string; kind: string; status: string; sources: string[]; finding: string; action: string;
+    reviewed: Record<string, any>; before?: Record<string, any>;
+  };
+  type DialogueAuditSource09 = { id: string; title: string; url: string; supports: string };
+  const audit09 = JSON.parse(readFileSync("docs/content-review-a1-dialogues-09-2026-10-05.json", "utf8")) as {
+    date: string; batch: string; scope: string; method: string;
+    coverage: { dialogues: number; dialogueMetadata: number; lines: number; questions: number;
+      dictationSentences: number; unresolvedLevelNotes: number; unresolvedContextNotes: number; totalTrackedItems: number };
+    statusCounts: Record<string, number>; statusDefinitions: Record<string, string>; limitations: string[];
+    sources: DialogueAuditSource09[];
+    historicalPatchReview: { file: string; role: string; usageCheck: string; comparisons: any[] };
+    patch: { file: string; preflight: string; fieldsChanged: number; correctedItemIds: string[]; changes: string[] };
+    items: DialogueAuditItem09[];
+  };
+  const auditMarkdown09 = readFileSync("docs/content-review-a1-dialogues-09-2026-10-05.md", "utf8");
+  type LiveDialogue09 = {
+    id: string; level: string; titleDe: string; titleAr: string; waisen: string[];
+    lines: { who: string; de: string; ar: string }[];
+    questions: { id: string; type: string; promptDe: string; options?: string[]; answer: string | string[];
+      promptAr?: string; explanationAr?: string; falle?: boolean }[];
+    dictation: string[];
+  };
+  const liveBatchAll09 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as LiveDialogue09[];
+  const batchIds09 = ["d-a1-25", "d-a1-26", "d-a1-27"];
+  const completeBatch09 = batchIds09.map((id) => liveBatchAll09.find((dialogue) => dialogue.id === id));
+  const validBatch09 = completeBatch09.every((dialogue) => !!dialogue && dialogue.level === "A1")
+    ? completeBatch09 as NonNullable<typeof completeBatch09[number]>[] : [];
+  const expectedIds09 = validBatch09.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_, index) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question) => question.id),
+    ...dialogue.dictation.map((_, index) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const auditIds09 = audit09.items.map((item) => item.id);
+  const auditById09 = new Map(audit09.items.map((item) => [item.id, item]));
+  const auditSection09 = auditMarkdown09.split("## سجل المراجعة بنداً بنداً")[1]?.split("## المصادر المنشورة")[0] ?? "";
+  const markdownRowsUnique09 = expectedIds09.every((id) =>
+    auditSection09.split("\n").filter((line) => line.startsWith(`| ${id} |`)).length === 1
+  );
+  ok(validBatch09.length === 3 && validBatch09.every((dialogue) => dialogue.lines.length === 8 &&
+      dialogue.questions.length === 3 && dialogue.dictation.length === 2) &&
+    expectedIds09.length === 42 && new Set(expectedIds09).size === 42 &&
+    JSON.stringify(expectedIds09) === JSON.stringify(auditIds09) && markdownRowsUnique09 &&
+    audit09.date === "2026-10-05" && audit09.batch === "A1-dialogues-09" &&
+    audit09.coverage.dialogues === 3 && audit09.coverage.dialogueMetadata === 3 && audit09.coverage.lines === 24 &&
+    audit09.coverage.questions === 9 && audit09.coverage.dictationSentences === 6 &&
+    audit09.coverage.unresolvedLevelNotes === 0 && audit09.coverage.unresolvedContextNotes === 1 &&
+    audit09.coverage.totalTrackedItems === 42 && batchIds09.every((id) => audit09.scope.includes(id)),
+    "K174a تقرير R100 وMarkdown يغطيان 42 معرفاً بالترتيب: 3 بيانات حوار و24 سطراً و9 أسئلة و6 إملاءات");
+
+  const sourceIds09 = new Set(audit09.sources.map((source) => source.id));
+  const referencedSources09 = new Set(audit09.items.flatMap((item) => item.sources));
+  const computedStatuses09 = audit09.items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const correctedIds09 = new Set(["d-a1-25.lines[7]", "d-a1-26.lines[2]"]);
+  const unresolvedIds09 = new Set(["d-a1-25.lines[4]"]);
+  const expectedStatuses09 = audit09.items.every((item) =>
+    item.status === (correctedIds09.has(item.id) ? "مُصحح" : unresolvedIds09.has(item.id) ? "غير محسوم" : "سليم")
+  );
+  const completeEvidence09 = audit09.items.every((item) =>
+    ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.kind.trim().length > 0 &&
+    item.sources.length > 0 && item.sources.every((id) => sourceIds09.has(id)) &&
+    item.finding.trim().length > 0 && item.action.trim().length > 0 && !!item.reviewed
+  );
+  const completeSources09 = audit09.sources.length === 64 && sourceIds09.size === 64 && audit09.sources.every((source) =>
+    source.title.trim().length > 0 && source.supports.trim().length > 0 && source.url.startsWith("https://") &&
+    auditMarkdown09.includes(`<a id="${source.id.toLowerCase()}"></a>${source.id}`)
+  ) && referencedSources09.size === audit09.sources.length && audit09.sources.every((source) => referencedSources09.has(source.id));
+  ok(completeEvidence09 && completeSources09 && expectedStatuses09 &&
+    computedStatuses09["سليم"] === 39 && computedStatuses09["مُصحح"] === 2 && computedStatuses09["غير محسوم"] === 1 &&
+    audit09.statusCounts["سليم"] === 39 && audit09.statusCounts["مُصحح"] === 2 && audit09.statusCounts["غير محسوم"] === 1 &&
+    audit09.statusDefinitions["غير محسوم"].includes("لا تحسم") &&
+    audit09.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")),
+    "K174b لكل بند دليل وحكم وإجراء ومصدر؛ 64 مصدراً مستخدماً مع فصل التصحيحين عن الملاحظة غير المحسومة");
+
+  const snapshotsMatch09 = audit09.items.every((item) => {
+    const metadata = item.reviewed;
+    const dialogue = validBatch09.find((candidate) => candidate.id === item.id || item.id.startsWith(`${candidate.id}.`) ||
+      candidate.questions.some((question) => question.id === item.id));
+    if (!dialogue) return false;
+    if (item.id === dialogue.id) {
+      return metadata.titleDe === dialogue.titleDe && metadata.titleAr === dialogue.titleAr &&
+        metadata.level === dialogue.level && JSON.stringify(metadata.waisen) === JSON.stringify(dialogue.waisen);
+    }
+    const lineMatch = item.id.match(/\.lines\[(\d+)\]$/);
+    if (lineMatch) {
+      const line = dialogue.lines[Number(lineMatch[1])];
+      return !!line && metadata.who === line.who && metadata.de === line.de && metadata.ar === line.ar;
+    }
+    const dictationMatch = item.id.match(/\.dictation\[(\d+)\]$/);
+    if (dictationMatch) return metadata.sentence === dialogue.dictation[Number(dictationMatch[1])];
+    const question = dialogue.questions.find((candidate) => candidate.id === item.id);
+    return !!question && metadata.type === question.type && metadata.promptDe === question.promptDe &&
+      JSON.stringify(metadata.options) === JSON.stringify(question.options) &&
+      JSON.stringify(metadata.answer) === JSON.stringify(question.answer) &&
+      metadata.promptAr === question.promptAr && metadata.explanationAr === question.explanationAr &&
+      metadata.falle === question.falle;
+  });
+  const corrected251 = auditById09.get("d-a1-25.lines[7]");
+  const corrected262 = auditById09.get("d-a1-26.lines[2]");
+  const unresolved254 = auditById09.get("d-a1-25.lines[4]");
+  const live25 = validBatch09.find((dialogue) => dialogue.id === "d-a1-25");
+  const live26 = validBatch09.find((dialogue) => dialogue.id === "d-a1-26");
+  const live27 = validBatch09.find((dialogue) => dialogue.id === "d-a1-27");
+  ok(snapshotsMatch09 &&
+    corrected251?.before?.ar === "على الأرجح نعم، حتى الرابعة." &&
+    live25?.lines[7]?.ar === "على الأرجح نعم، حتى الساعة الرابعة بعد الظهر." &&
+    corrected262?.before?.ar === "لا، في البيت. أي فصل هذا؟ أكتوبر جميل عادة!" &&
+    live26?.lines[2]?.ar === "لا، في البيت. أي فصل هذا؟ لكن أكتوبر جميل!" &&
+    unresolved254?.status === "غير محسوم" && unresolved254.reviewed.de.includes("kleinen Scheinen") &&
+    live27?.lines[5]?.de === "Ich denke, das schaffe ich bis zum Mittag." &&
+    live27?.lines[6]?.de === "Sehr gut. Unser Ziel: alle Maschinen bis Freitag fertig.",
+    "K174c لقطات التقرير تطابق البيانات الحية؛ صُحح وقت 16 Uhr ودلالة doch وبقي غموض فئات النقد");
+
+  const history09 = audit09.historicalPatchReview;
+  const historySource09 = readFileSync(history09.file, "utf8");
+  const historicalOptionsMatch09 = historySource09.includes('"options":["Er ist heute Morgen kaputtgegangen.","Karim hat die falsche Geheimzahl.","Er gibt nur Fünfziger."]') &&
+    historySource09.includes('"options":["Sie fährt nach Hause und zieht trockene Sachen an.","Sie kauft einen Regenschirm.","Sie wartet auf den Schnee im Dezember."]') &&
+    historySource09.includes('"options":["um zwei","um vier","um acht"]') &&
+    historySource09.includes('"options":["eine Kontrolle an der letzten Maschine","alle großen Maschinen","alle Maschinen bis Freitag"]');
+  const expectedChanges09 = [
+    ["d-a1-25-q1", ["Er ist heute Morgen kaputtgegangen.", "Karim hat die falsche Geheimzahl.", "Er gibt nur Fünfziger."], ["Karim hat die falsche Geheimzahl.", "Er gibt nur Fünfziger.", "Er ist heute Morgen kaputtgegangen."]],
+    ["d-a1-26-q2", ["Sie fährt nach Hause und zieht trockene Sachen an.", "Sie kauft einen Regenschirm.", "Sie wartet auf den Schnee im Dezember."], ["Sie kauft einen Regenschirm.", "Sie fährt nach Hause und zieht trockene Sachen an.", "Sie wartet auf den Schnee im Dezember."]],
+    ["d-a1-27-q1", ["um zwei", "um vier", "um acht"], ["um vier", "um zwei", "um acht"]],
+    ["d-a1-27-q2", ["eine Kontrolle an der letzten Maschine", "alle großen Maschinen", "alle Maschinen bis Freitag"], ["alle großen Maschinen", "alle Maschinen bis Freitag", "eine Kontrolle an der letzten Maschine"]],
+  ];
+  const actualChanges09 = history09.comparisons.flatMap((comparison) => comparison.optionOrderChanges ?? []);
+  const historyChangesMatch09 = JSON.stringify(actualChanges09.map((change) =>
+    [change.questionId, change.historicalOptions, change.liveOptions]
+  )) === JSON.stringify(expectedChanges09);
+  ok(history09.file === "scripts/patches/dialoge_a1_neu2.py" && history09.comparisons.length === 3 &&
+    history09.usageCheck.includes("dialoge_a1_neu2.py فقط") && historicalOptionsMatch09 && historyChangesMatch09 &&
+    history09.comparisons.every((comparison) => comparison.unchangedAnswerAndExplanation === true &&
+      JSON.stringify(comparison.fieldsAbsentFromHistory) === JSON.stringify(["question.id", "question.promptAr", "question.falle"])) &&
+    history09.role.includes("تاريخي") && audit09.patch.file === "scripts/patches/review_a1_dialogues_09.py" &&
+    audit09.patch.fieldsChanged === 2 && audit09.patch.correctedItemIds.length === 2 && existsSync(audit09.patch.file),
+    "K174d المقارنة التاريخية فقط عند التطابق؛ أربعة اختلافات ترتيب خيارات موثقة مع ثبات الأجوبة والشروح");
+
+  const patchSource09 = readFileSync(audit09.patch.file, "utf8");
+  ok(audit09.patch.preflight.includes("القيم السابقة الدقيقة") &&
+    patchSource09.includes("mixed before/after state; refusing partial application") &&
+    patchSource09.includes("preflight failed; no write performed") && patchSource09.includes("--apply") &&
+    patchSource09.includes("patch changed a field outside the two reviewed Arabic lines") &&
+    patchSource09.includes("kleinen Scheinen") && patchSource09.includes("Ich denke, das schaffe ich bis zum Mittag.") &&
+    audit09.patch.changes.length === 2 && auditMarkdown09.includes("«غير محسوم» لا يعني ثبوت الخطأ"),
+    "K174e الرقعة تحرس القيم السابقة وترفض الحالة الجزئية وتحافظ على المحتوى السياقي غير المحسوم");
+
+  ok(audit09.method.includes("قُرئت البيانات الحية") &&
+    audit09.limitations.some((limitation) => limitation.includes("CEFR") && limitation.includes("مؤجلة")) &&
+    audit09.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية أو اعتماداً")) &&
+    auditMarkdown09.includes("ليست اعتماداً بشرياً أو مهنياً") &&
+    (auditById09.get("d-a1-25.lines[7]")?.finding.includes("16:00") ?? false) &&
+    (auditById09.get("d-a1-26.lines[3]")?.finding.includes("غير مطلق") ?? false) &&
+    (auditById09.get("d-a1-27.lines[6]")?.finding.includes("ليس تناقضاً مثبتاً") ?? false),
+    "K174f المنهج يفصل المؤكد عن الأسلوب/السياق ويحفظ CEFR والنسبة والحساب خارج النطاق");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
