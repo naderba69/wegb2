@@ -6595,6 +6595,174 @@ void 0;
     "K180g الملاحظات الأسلوبية مفصولة عن الخطأ المؤكد؛ CEFR/النسبة والحكم الطبي وحدود الاعتماد موثقة دون ادعاء");
 }
 
+// K181 — source-audited review record for A2 dialogues 10–12 (R107).
+{
+  const reviewA2Batch5 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-05-2026-10-05.json", "utf8")) as any;
+  const reviewMarkdownA2Batch5 = readFileSync("docs/content-review-a2-dialogues-05-2026-10-05.md", "utf8");
+  const liveDialoguesA2Batch5 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const selectedA2Batch5 = liveDialoguesA2Batch5.filter((dialogue) => ["d-a2-10", "d-a2-11", "d-a2-12"].includes(dialogue.id));
+  const itemByIdA2Batch5 = new Map<string, any>(reviewA2Batch5.items.map((item: any) => [item.id, item]));
+  const expectedIdsA2Batch5 = selectedA2Batch5.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_: any, index: number) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question: any) => question.id),
+    ...dialogue.dictation.map((_: any, index: number) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const expectedCountsA2Batch5 = { dialogues: 3, dialogueMetadata: 3, lines: 24, questions: 9, dictationSentences: 6, audioAssets: 0, unresolvedContextNotes: 2, totalTrackedItems: 42, waisenTermsReviewed: 25 };
+  const statusesA2Batch5 = reviewA2Batch5.items.reduce((counts: Record<string, number>, item: any) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, {});
+  const snapshotMatchesA2Batch5 = selectedA2Batch5.every((dialogue) => {
+    const metadata = itemByIdA2Batch5.get(dialogue.id)?.reviewed;
+    if (!metadata || metadata.titleDe !== dialogue.titleDe || metadata.titleAr !== dialogue.titleAr ||
+      metadata.level !== dialogue.level || metadata.lineCount !== dialogue.lines.length ||
+      metadata.questionCount !== dialogue.questions.length || metadata.dictationCount !== dialogue.dictation.length ||
+      metadata.neu !== dialogue.neu || metadata.hasWaisen !== Array.isArray(dialogue.waisen) ||
+      JSON.stringify(metadata.waisen) !== JSON.stringify(dialogue.waisen)) return false;
+    return dialogue.lines.every((line: any, index: number) =>
+      JSON.stringify(itemByIdA2Batch5.get(`${dialogue.id}.lines[${index}]`)?.reviewed) === JSON.stringify(line)) &&
+      dialogue.questions.every((question: any) =>
+        JSON.stringify(itemByIdA2Batch5.get(question.id)?.reviewed) === JSON.stringify(question)) &&
+      dialogue.dictation.every((sentence: string, index: number) =>
+        itemByIdA2Batch5.get(`${dialogue.id}.dictation[${index}]`)?.reviewed?.sentence === sentence);
+  });
+  ok(selectedA2Batch5.length === 3 && JSON.stringify(expectedIdsA2Batch5) === JSON.stringify(reviewA2Batch5.items.map((item: any) => item.id)) &&
+    reviewA2Batch5.items.length === 42 && reviewA2Batch5.coverage.totalTrackedItems === 42 &&
+    JSON.stringify(reviewA2Batch5.coverage) === JSON.stringify(expectedCountsA2Batch5) && snapshotMatchesA2Batch5 &&
+    statusesA2Batch5["سليم"] === 35 && statusesA2Batch5["مُصحح"] === 1 && statusesA2Batch5["غير محسوم"] === 6 &&
+    reviewA2Batch5.statusCounts["سليم"] === 35 && reviewA2Batch5.statusCounts["مُصحح"] === 1 && reviewA2Batch5.statusCounts["غير محسوم"] === 6 &&
+    reviewA2Batch5.items.every((item: any) => reviewMarkdownA2Batch5.includes(`| \`${item.id}\` |`)),
+    "K181a تغطية R107 كاملة: 3 بيانات/24 سطراً/9 أسئلة/6 إملاءات و25 وسم waisen؛ كل اللقطات في JSON وMarkdown تطابق البيانات الحية");
+
+  const sourceIdsA2Batch5 = reviewA2Batch5.sources.map((source: any) => source.id);
+  const referencedSourcesA2Batch5 = new Set<string>([
+    ...reviewA2Batch5.items.flatMap((item: any) => item.sources),
+    ...reviewA2Batch5.openNotes.flatMap((note: any) => note.sources),
+  ]);
+  const expectedWaisenSourcesA2Batch5: Record<string, string[]> = {
+    "d-a2-10": ["S06", "S07", "S01", "S12", "S15", "S25", "S20", "S19"],
+    "d-a2-11": ["S38", "S40", "S41", "S48", "S50", "S43", "S39", "S44"],
+    "d-a2-12": ["S76", "S83", "S73", "S65", "S58", "S77", "S68", "S62", "S60"],
+  };
+  const waisenEvidenceCompleteA2Batch5 = Object.entries(expectedWaisenSourcesA2Batch5).every(([id, sourceIds]) =>
+    sourceIds.every((sourceId) => itemByIdA2Batch5.get(id)?.sources.includes(sourceId)));
+  ok(reviewA2Batch5.sources.length === 83 && new Set(sourceIdsA2Batch5).size === 83 &&
+    sourceIdsA2Batch5.every((id: string, index: number) => id === `S${String(index + 1).padStart(2, "0")}`) &&
+    reviewA2Batch5.sources.every((source: any) => typeof source.url === "string" && source.url.startsWith("https://") &&
+      typeof source.title === "string" && typeof source.supports === "string" && source.supports.length > 0 &&
+      reviewMarkdownA2Batch5.includes(source.url)) &&
+    referencedSourcesA2Batch5.size === 83 && reviewA2Batch5.sources.every((source: any) => referencedSourcesA2Batch5.has(source.id)) &&
+    waisenEvidenceCompleteA2Batch5 &&
+    reviewA2Batch5.items.every((item: any) => item.sources.length > 0 && item.finding.length > 0 && item.action.length > 0),
+    "K181b كل وحدة وكل مفردات waisen لها دليل وحكم وإجراء؛ 83 رابطاً فريداً منشوراً وحدود إسنادها مربوطة بالسجل");
+
+  const correctedSteigenA2Batch5 = itemByIdA2Batch5.get("d-a2-12.lines[3]");
+  const liveDialogue12A2Batch5 = selectedA2Batch5.find((dialogue) => dialogue.id === "d-a2-12");
+  const oldArabicSteigenA2Batch5 = "تصل الحرارة إلى 27 درجة. ليس حرّاً شديداً لكنه دافئ جداً لشهر أبريل.";
+  const newArabicSteigenA2Batch5 = "ترتفع درجة الحرارة إلى 27 درجة. ليس حرّاً شديداً لكنه دافئ جداً لشهر أبريل.";
+  const patchScriptA2Batch5 = readFileSync("scripts/patches/review_a2_dialogues_05.py", "utf8");
+  ok(reviewA2Batch5.contentPatch.fieldsChanged === 1 &&
+    JSON.stringify(reviewA2Batch5.contentPatch.changedFields) === JSON.stringify(["d-a2-12.lines[3].ar"]) &&
+    correctedSteigenA2Batch5?.status === "مُصحح" && correctedSteigenA2Batch5?.before?.ar === oldArabicSteigenA2Batch5 &&
+    correctedSteigenA2Batch5?.reviewed?.ar === newArabicSteigenA2Batch5 &&
+    correctedSteigenA2Batch5?.before?.de === correctedSteigenA2Batch5?.reviewed?.de &&
+    correctedSteigenA2Batch5?.reviewed?.de === liveDialogue12A2Batch5?.lines[3]?.de &&
+    liveDialogue12A2Batch5?.lines[3]?.ar === newArabicSteigenA2Batch5 &&
+    patchScriptA2Batch5.includes("d-a2-12") && patchScriptA2Batch5.includes("EXPECTED_BEFORE") && patchScriptA2Batch5.includes("EXPECTED_AFTER") &&
+    reviewA2Batch5.contentPatch.protectedUnresolvedItemIds.includes("d-a2-12.lines[3]") &&
+    !reviewA2Batch5.contentPatch.changedFields.some((field: string) => /cefr|level|percent|score|\.de$|\.answer$|options/i.test(field)),
+    "K181c إصلاح steigen محدود لحقل الترجمة مع before/after ورقعة محمية؛ لا تغيير للألمانية أو القيمة أو الأسئلة أو CEFR");
+
+  const historyA2Batch5 = reviewA2Batch5.historicalPatchReview;
+  const creationPatchA2Batch5 = readFileSync("scripts/patches/dialoge_a2_neu1.py", "utf8");
+  const oldHistoryPatchA2Batch5 = readFileSync("scripts/patches/a_dialog_fallen.py", "utf8");
+  ok(historyA2Batch5.sources.includes("scripts/patches/dialoge_a2_neu1.py") &&
+    historyA2Batch5.sources.includes("scripts/patches/a_dialog_fallen.py") &&
+    creationPatchA2Batch5.includes("d-a2-12") && creationPatchA2Batch5.includes(oldArabicSteigenA2Batch5) &&
+    !oldHistoryPatchA2Batch5.includes("d-a2-10") && !oldHistoryPatchA2Batch5.includes("d-a2-11") && !oldHistoryPatchA2Batch5.includes("d-a2-12") &&
+    historyA2Batch5.comparisons.length === 1 && historyA2Batch5.comparisons[0].id === "d-a2-12.lines[3].ar" &&
+    historyA2Batch5.comparisons[0].historicalText === oldArabicSteigenA2Batch5 &&
+    historyA2Batch5.comparisons[0].liveText === newArabicSteigenA2Batch5 &&
+    historyA2Batch5.role.includes("لا كحكم لغوي") && historyA2Batch5.unavailableHistoricalFields.length >= 3,
+    "K181d المقارنة التاريخية محدودة بمصدر الإنشاء وبحث ملف الأسئلة؛ لا تدّعي استعادة تاريخ كامل");
+
+  const audioManifestA2Batch5 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; file: string }[] };
+  const targetAudioIdsA2Batch5 = new Set(["d-a2-10", "d-a2-11", "d-a2-12"]);
+  const manifestAudioMatchesA2Batch5 = audioManifestA2Batch5.einsaetze.filter((entry) => targetAudioIdsA2Batch5.has(entry.id));
+  const publicMatchesA2Batch5: string[] = [];
+  const scanPublicA2Batch5 = (directory: string) => {
+    if (!existsSync(directory)) return;
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const path = `${directory}/${entry.name}`;
+      if (entry.isDirectory()) scanPublicA2Batch5(path);
+      else if (/d-a2-(10|11|12)/.test(entry.name)) publicMatchesA2Batch5.push(path);
+    }
+  };
+  scanPublicA2Batch5("public");
+  ok(manifestAudioMatchesA2Batch5.length === 0 && publicMatchesA2Batch5.length === 0 &&
+    reviewA2Batch5.audioAssetAudit.length === 0 && reviewA2Batch5.coverage.audioAssets === 0 &&
+    reviewA2Batch5.limitations.some((limitation: string) => limitation.includes("لم يُشغّل متصفح TTS")) &&
+    reviewMarkdownA2Batch5.includes("لم يحدث استماع") && selectedA2Batch5.every((dialogue) => dialogue.neu === true),
+    "K181e فحص البيان وأسماء الملفات بلا استنتاج أن الصوت مطلوب؛ لا ادعاء تشغيل/استماع أو اختبار TTS");
+
+  const legalNoteA2Batch5 = reviewA2Batch5.openNotes.find((note: any) => note.id === "d-a2-10.lines[3]");
+  const weatherNoteA2Batch5 = reviewA2Batch5.openNotes.find((note: any) => note.id === "d-a2-12.lines[0]");
+  const expectedWeatherItemsA2Batch5 = ["d-a2-12.lines[0]", "d-a2-12.lines[1]", "d-a2-12.lines[3]", "d-a2-12.lines[5]", "d-a2-12.lines[6]", "d-a2-12.lines[7]"];
+  ok(reviewA2Batch5.openNotes.length === 2 && legalNoteA2Batch5?.status === "غير محسوم" &&
+    legalNoteA2Batch5.finding.includes("لا تكفي جملة المستأجرة") && legalNoteA2Batch5.finding.includes("§536 BGB") &&
+    weatherNoteA2Batch5?.status === "غير محسوم" &&
+    JSON.stringify(weatherNoteA2Batch5.relatedItemIds) === JSON.stringify(expectedWeatherItemsA2Batch5) &&
+    expectedWeatherItemsA2Batch5.every((id) => reviewA2Batch5.contentPatch.protectedUnresolvedItemIds.includes(id)) &&
+    itemByIdA2Batch5.get("d-a2-10.lines[3]")?.status === "غير محسوم" &&
+    [0, 1, 5, 6, 7].every((index) => itemByIdA2Batch5.get(`d-a2-12.lines[${index}]`)?.status === "غير محسوم") &&
+    itemByIdA2Batch5.get("d-a2-12.lines[3]")?.status === "مُصحح" && reviewA2Batch5.coverage.unresolvedContextNotes === 2,
+    "K181f سببية العفن ووقائع الطقس محفوظة كغير محسومة؛ لا تخمين في المحتوى، مع فصل تصحيح الترجمة عن صحة التنبؤ");
+
+  const expectedAnswersA2Batch5 = new Map<string, string | string[]>([
+    ["d-a2-10-q1", "Weil das Fenster sehr klein ist und die Feuchtigkeit bleibt."],
+    ["d-a2-10-q2", "schriftlich, mit Foto und Datum"],
+    ["d-a2-10-q3", "richtig"],
+    ["d-a2-11-q1", "Sie ist gerade besetzt."],
+    ["d-a2-11-q2", "seinen Namen und seine Nummer sprechen"],
+    ["d-a2-11-q3", ["weiterleiten"]],
+    ["d-a2-12-q1", "neblig, besonders an den Flüssen"],
+    ["d-a2-12-q2", "in den Bergen"],
+    ["d-a2-12-q3", "falsch"],
+  ]);
+  const liveQuestionChecksA2Batch5 = selectedA2Batch5.flatMap((dialogue) => dialogue.questions).every((question: any) => {
+    const answer = question.answer;
+    const expectedAnswer = expectedAnswersA2Batch5.get(question.id);
+    const validAnswer = question.type === "fill"
+      ? Array.isArray(answer) && answer.length > 0 && question.promptDe.includes("___")
+      : Array.isArray(answer) ? answer.every((value: string) => question.options.includes(value)) : question.options.includes(answer);
+    const item = itemByIdA2Batch5.get(question.id);
+    return expectedAnswer !== undefined && JSON.stringify(answer) === JSON.stringify(expectedAnswer) && validAnswer && item?.status === "سليم" &&
+      JSON.stringify(item.reviewed.options) === JSON.stringify(question.options) &&
+      JSON.stringify(item.reviewed.answer) === JSON.stringify(question.answer) &&
+      item.reviewed.explanationAr === question.explanationAr;
+  });
+  const liveDictationChecksA2Batch5 = selectedA2Batch5.every((dialogue) => dialogue.dictation.every((sentence: string, index: number) => {
+    const isQuotedInDialogue = dialogue.lines.some((line: any) => line.de.includes(sentence));
+    const item = itemByIdA2Batch5.get(`${dialogue.id}.dictation[${index}]`);
+    return isQuotedInDialogue && item?.reviewed?.sentence === sentence && item?.status === "سليم";
+  }));
+  ok(liveQuestionChecksA2Batch5 && liveDictationChecksA2Batch5 &&
+    reviewA2Batch5.items.filter((item: any) => item.kind === "سؤال/خيارات/مفتاح/شرح").length === 9 &&
+    reviewA2Batch5.items.filter((item: any) => item.kind === "جملة إملاء").length === 6,
+    "K181g مفاتيح الأسئلة التسعة متوقعة وضمن الخيارات الحية وشروحها مطابقة؛ جمل الإملاء مسندة حرفياً إلى النص الحي");
+
+  ok(reviewA2Batch5.limitations.some((limitation: string) => limitation.includes("ليست مراجعة بشرية أو اعتماداً لغوياً/قانونياً/مهنياً")) &&
+    reviewA2Batch5.limitations.some((limitation: string) => limitation.includes("لم يُعَد تقييم A2/CEFR")) &&
+    reviewA2Batch5.limitations.some((limitation: string) => limitation.includes("لا تحسم بمفردها سلاسة كل جملة عربية")) &&
+    reviewA2Batch5.contentPatch.fieldsChanged === 1 &&
+    !reviewA2Batch5.contentPatch.changedFields.some((field: string) => /cefr|level|percent|percentage|score/i.test(field)) &&
+    reviewA2Batch5.items.some((item: any) => item.id === "d-a2-11.lines[6]" && item.status === "سليم" && item.finding.includes("ملاحظة وضوح لا خطأ مؤكد")) &&
+    reviewMarkdownA2Batch5.includes("لا يُعد غير المحسوم خطأً لغوياً") &&
+    reviewMarkdownA2Batch5.includes("لا تحل هذه البوابات محل مراجعة بشرية"),
+    "K181h حدود المعجم والمراجعة والوسم الأسلوبي وCEFR معلنة؛ لا تعميم أو اعتماد بشري مزعوم");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
