@@ -1,17 +1,21 @@
-/* جرد وتدقيق المحتوى — يطبع الأخطاء الفعلية لا التقديرات */
+/* جرد المحتوى — يفصل العيوب البنيوية عن إشارات heuristic التي تحتاج حكماً بشرياً */
 import { readFileSync, existsSync } from "fs";
-import { grammarMap, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, pakete, eselsbruecken, muendlich, vortrag, verben, szenarien } from "../lib/content";
+import { grammarMap, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, eselsbruecken, muendlich, vortrag, verben, szenarien, leseText } from "../lib/content";
 import { grader } from "../lib/grader";
 import { buildDay } from "../lib/plan";
 import { emptyProgress, TOTAL_DAYS } from "../lib/types";
 import type { Exercise } from "../lib/types";
 
 const F: Record<string, string[]> = {};
+const H: Record<string, string[]> = {};
+const I: Record<string, string[]> = {};
 const add = (k: string, m: string) => (F[k] ??= []).push(m);
+const hinweis = (k: string, m: string) => (H[k] ??= []).push(m);
+const info = (k: string, m: string) => (I[k] ??= []).push(m);
 const AR = /[\u0600-\u06FF]/, DE_ONLY_BAD = /[\u0600-\u06FF]/;
 
 function pruefeExercise(e: Exercise, wo: string) {
-  if (!e.id) add("exercise:id", wo);
+  if (typeof e.id !== "string" || !e.id.trim()) add("exercise:id fehlt", wo);
   if (e.type === "mc") {
     if (!e.options || e.options.length < 2) add("mc:options", `${wo} ${e.id}`);
     const a = Array.isArray(e.answer) ? e.answer[0] : e.answer;
@@ -23,7 +27,7 @@ function pruefeExercise(e: Exercise, wo: string) {
     if (!a || !a.trim()) add("answer:leer", `${wo} ${e.id}`);
     const r = grader.grade(e, a);
     if (!r.correct) add("grader:modelRejected", `${wo} ${e.id} → ${r.feedbackAr}`);
-    if (e.type === "fill" && !/_{3,}/.test(e.promptDe)) add("fill:keineLücke", `${wo} ${e.id} «${e.promptDe}»`);
+    // fill هو نوع حقل، وليس عقداً بأن يحتوي promptDe على ___؛ أسئلة الإدخال الحر صالحة أيضاً.
   }
   if (!e.explanationAr || !AR.test(e.explanationAr)) add("explanationAr:fehlt", `${wo} ${e.id}`);
   if (e.promptDe && e.type !== "dictation" && e.type !== "translate" && /[\u0600-\u06FF]/.test(e.promptDe) && e.type !== "fill") add("promptDe:arabisch", `${wo} ${e.id}`);
@@ -39,7 +43,7 @@ for (const t of Object.values(grammarMap)) {
   for (const r of t.rules) { if (DE_ONLY_BAD.test(r.de)) add("grammar:rule.de arabisch", `${t.id} «${r.de}»`); if (!AR.test(r.ar)) add("grammar:rule.ar", `${t.id} «${r.de}»`); }
   for (const ex of t.examples) { if (AR.test(ex.de)) add("grammar:example.de arabisch", `${t.id} «${ex.de}»`); if (!/[.!?…"“”»]$/.test(ex.de.trim())) add("grammar:example ohne Satzzeichen", `${t.id} «${ex.de}»`); }
   for (const e of t.exercises) { if (ids.has(e.id)) add("exercise:dupId", e.id); ids.add(e.id); pruefeExercise(e, t.id); }
-  if (t.exercises.length < 5) add("grammar:wenigeÜbungen(<5)", `${t.id} (${t.exercises.length})`);
+  if (t.exercises.length < 5) hinweis("grammar:wenigeÜbungen — prüfen تربوياً", `${t.id} (${t.exercises.length})`);
 }
 /* texts / dialogues */
 const audioText = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8"));
@@ -47,46 +51,51 @@ const audioDlg = JSON.parse(readFileSync("content/dialog-audio.json", "utf8"));
 for (const t of texts) {
   if (!t.questions?.length) add("text:keineFragen", t.id);
   for (const q of t.questions ?? []) pruefeExercise(q, t.id);
-  const wc = t.de.split(/\s+/).length;
-  const soll = ({ A0: [20, 80], A1: [40, 140], A2: [70, 200], B1: [120, 320], B2: [160, 450] } as Record<string, [number, number]>)[t.level]!;
-  if (wc < soll[0] || wc > soll[1]) add("text:länge", `${t.id} ${t.level} ${wc} Wörter (soll ${soll[0]}–${soll[1]})`);
+  const shown = leseText(t).de;
+  const wc = shown.trim().split(/\s+/).filter(Boolean).length;
+  // الحدود متزامنة مع سجل الجودة: نقيس النص الذي يراه قارئ القراءة (leseText)، لا نسخة الصوت القصيرة.
+  const soll = ({ A0: [20, 80], A1: [90, 160], A2: [151, 192], B1: [169, 260], B2: [173, 270] } as Record<string, [number, number]>)[t.level]!;
+  if (t.level === "A0" && wc < soll[0]) {
+    hinweis("text:A0 kurz — لا يُصنَّف آلياً كخطأ", `${t.id} ${wc} كلمة في النسخة المعروضة؛ مراجعة تربوية فقط`);
+  } else if (wc < soll[0] || wc > soll[1]) {
+    add("text:länge", `${t.id} ${t.level} ${wc} Wörter في النسخة المعروضة (soll ${soll[0]}–${soll[1]})`);
+  }
 }
 for (const d of dialogues) {
   if (!d.questions?.length) add("dialog:keineFragen", d.id);
   for (const q of d.questions ?? []) pruefeExercise(q, d.id);
-  if (d.lines.length < 4) add("dialog:kurz", `${d.id} ${d.lines.length} Zeilen`);
+  if (d.lines.length < 4) hinweis("dialog:kurz — سياق A0 يحتاج حكماً بشرياً", `${d.id} ${d.lines.length} Zeilen`);
   for (const l of d.lines) if (AR.test(l.de) || !l.ar) add("dialog:zeile", `${d.id} «${l.de}»`);
 }
 /* audio — الصيغة {generated,count,einsaetze:[{id,file,…}]} */
 type Einsatz = { id: string; file: string };
-function audioCheck(json: { einsaetze?: Einsatz[] }, k: string): Set<string> {
-  const ids = new Set<string>();
+function audioCheck(json: { einsaetze?: Einsatz[] }, k: string): void {
   for (const e of json.einsaetze ?? []) {
-    ids.add(e.id); ids.add(e.id.replace(/-\d+$/, ""));
     const p = "public" + (e.file.startsWith("/") ? e.file : "/" + e.file);
     if (!existsSync(p)) add(`${k}:audio-datei fehlt`, `${e.id} → ${e.file}`);
   }
-  return ids;
 }
-const idsT = audioCheck(audioText, "text"), idsD = audioCheck(audioDlg, "dialog");
-const textsOhneAudio = texts.filter((t) => !idsT.has(t.id) && ![...idsT].some((x) => x.startsWith(t.id))).map((t) => t.id);
-const dlgOhneAudio = dialogues.filter((d) => !idsD.has(d.id) && ![...idsD].some((x) => x.startsWith(d.id))).map((d) => d.id);
-if (textsOhneAudio.length) add("text:ohneAudio", textsOhneAudio.join(" "));
-if (dlgOhneAudio.length) add("dialog:ohneAudio", dlgOhneAudio.join(" "));
+// غياب track مستقل ليس خطأً: الصوت اختياري وتوجد مسارات TTS/نص بديلة؛ نفحص الملفات المُعلنة فقط.
+audioCheck(audioText, "text");
+audioCheck(audioDlg, "dialog");
 /* vocab */
-const vIds = new Set<string>(); let ohneBeispiel = 0, ohneArt = 0, ohnePos = 0, dupDe = new Map<string, number>();
+const vIds = new Set<string>(); let ohneBeispiel = 0, artikelKandidat = 0, ohnePos = 0, dupDe = new Map<string, number>();
+const nomenOhneArtikel: string[] = [];
 for (const c of alleVokabeln) {
   if (vIds.has(c.id)) add("vocab:dupId", c.id); vIds.add(c.id);
   if (!c.de || !c.ar) add("vocab:leer", c.id);
   if (AR.test(c.de)) add("vocab:de arabisch", `${c.id} «${c.de}»`);
   if (!c.exampleDe) ohneBeispiel++;
   if (!(c as { pos?: string }).pos) ohnePos++;
-  const m = /^(der|die|das) /.exec(c.de); if (!m && /^[A-ZÄÖÜ][a-zäöüß]+$/.test(c.de)) ohneArt++;
+  if (c.pos === "Nomen" && !c.article && !/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer)\b/i.test(c.de)) {
+    artikelKandidat++; nomenOhneArtikel.push(`${c.id} «${c.de}»`);
+  }
   dupDe.set(c.de.toLowerCase(), (dupDe.get(c.de.toLowerCase()) ?? 0) + 1);
-  if (c.exampleDe && !c.exampleDe.toLowerCase().includes(c.de.replace(/^(der|die|das) /, "").toLowerCase().slice(0, 4))) add("vocab:beispiel ohne Stichwort", `${c.id} «${c.de}» / «${c.exampleDe}»`);
+  // K72 في engine_smoke يستعمل فحصاً صرفياً للفصل والأفعال الشاذة؛ لا نكرّر هنا بادئةً حرفيةً مضلِّلة.
 }
 const dups = [...dupDe.entries()].filter(([, n]) => n > 1);
-add("vocab:stat", `${alleVokabeln.length} Karten · ohne exampleDe ${ohneBeispiel} · ohne pos ${ohnePos} · Nomen ohne Artikel ${ohneArt} · doppelte de ${dups.length} (z.B. ${dups.slice(0, 8).map(([d, n]) => d + "×" + n).join(", ")})`);
+info("vocab:stat", `${alleVokabeln.length} Karten · ohne exampleDe ${ohneBeispiel} · ohne pos ${ohnePos} · Nomen-Kandidaten ohne Artikel (heuristisch) ${artikelKandidat} · doppelte de ${dups.length} (z.B. ${dups.slice(0, 8).map(([d, n]) => d + "×" + n).join(", ")})`);
+if (nomenOhneArtikel.length) hinweis("vocab:Nomen ohne Artikel — قائمة مرشّحين heuristic لا حكم لغوي", nomenOhneArtikel.join(" · "));
 /* sentences */
 for (const s of sentences) { if (AR.test(s.de) || !AR.test(s.ar)) add("satz:sprache", s.id); if (!/[.!?]$/.test(s.de.trim())) add("satz:ohneSatzzeichen", `${s.id} «${s.de}»`); }
 /* eselsbruecken */
@@ -98,7 +107,7 @@ for (const b of eselsbruecken) {
 for (const w of writingTasks) { const x = w as unknown as Record<string, unknown>; if (!x.promptDe && !x.aufgabeDe && !x.titleDe) add("writing:kopf", w.id); }
 /* plan: alle Tage bauen, Referenzen prüfen */
 const { getDeck, getText, getDialogue, getWriting, getSatz } = require("../lib/content") as typeof import("../lib/content");
-const genutzt = { text: new Set<string>(), dialog: new Set<string>(), deck: new Set<string>(), topic: new Set<string>(), write: new Set<string>() };
+const genutzt = { text: new Set<string>(), dialog: new Set<string>(), topic: new Set<string>(), write: new Set<string>() };
 let minGesamt = 0; const proTag: number[] = [];
 for (let d = 1; d <= TOTAL_DAYS; d++) {
   let p; try { p = buildDay(d, emptyProgress); } catch (e) { add("plan:buildDay wirft", `Tag ${d}: ${(e as Error).message}`); continue; }
@@ -106,7 +115,7 @@ for (let d = 1; d <= TOTAL_DAYS; d++) {
   for (const t of p.tasks) {
     m += t.minutes;
     if (t.topicId) { if (!grammarMap[t.topicId]) add("plan:topic tot", `Tag ${d} ${t.topicId}`); genutzt.topic.add(t.topicId); }
-    if (t.deckId) { if (!getDeck(t.deckId)) add("plan:deck tot", `Tag ${d} ${t.deckId}`); genutzt.deck.add(t.deckId); }
+    if (t.deckId && !getDeck(t.deckId)) add("plan:deck tot", `Tag ${d} ${t.deckId}`);
     if (t.textId) { if (!getText(t.textId)) add("plan:text tot", `Tag ${d} ${t.textId}`); genutzt.text.add(t.textId); }
     if (t.dialogueId) { if (!getDialogue(t.dialogueId)) add("plan:dialog tot", `Tag ${d} ${t.dialogueId}`); genutzt.dialog.add(t.dialogueId); }
     if (t.writeId) { if (!getWriting(t.writeId)) add("plan:write tot", `Tag ${d} ${t.writeId}`); genutzt.write.add(t.writeId); }
@@ -115,19 +124,50 @@ for (let d = 1; d <= TOTAL_DAYS; d++) {
     if (t.minutes <= 0) add("plan:minuten≤0", `Tag ${d} ${t.id}`);
   }
   proTag.push(m); minGesamt += m;
-  if (m > 200) add("plan:Tag>200min", `Tag ${d}: ${m}`);
+  // >200 min is a workload estimate, not proof of a structural defect or actual study time.
+  // Keep it visible for pedagogical review; never equate it with the independent 90-minute session target.
+  if (m > 200) hinweis("plan:Tag>200min — مجموع تقديرات يحتاج مراجعة تربوية", `Tag ${d}: ${m} Minuten geschätzt (لا يثبت وقتاً فعلياً ولا عيباً بنيوياً)`);
 }
-add("plan:stat", `Ø ${(minGesamt / TOTAL_DAYS).toFixed(0)} min/Tag · max ${Math.max(...proTag)} · min ${Math.min(...proTag)}`);
-add("abdeckung:texte ungenutzt", texts.filter((t) => !genutzt.text.has(t.id)).map((t) => t.id).join(" ") || "—");
-add("abdeckung:dialoge ungenutzt", dialogues.filter((d) => !genutzt.dialog.has(d.id)).map((d) => d.id).join(" ") || "—");
-add("abdeckung:writing ungenutzt", writingTasks.filter((w) => !genutzt.write.has(w.id)).map((w) => w.id).join(" ") || "—");
-add("abdeckung:decks ungenutzt", pakete.filter((p) => !genutzt.deck.has(p.id)).map((p) => p.id).join(" ") || "—");
-add("abdeckung:topics ungenutzt", Object.keys(grammarMap).filter((g) => !genutzt.topic.has(g)).join(" ") || "—");
+info("plan:stat", `Ø ${(minGesamt / TOTAL_DAYS).toFixed(0)} min/Tag · max ${Math.max(...proTag)} · min ${Math.min(...proTag)}`);
+const texteUnbenutzt = texts.filter((t) => !genutzt.text.has(t.id)).map((t) => t.id);
+const dialogeUnbenutzt = dialogues.filter((d) => !genutzt.dialog.has(d.id)).map((d) => d.id);
+if (texteUnbenutzt.length) hinweis("abdeckung:texte خارج الخطة الافتراضية", texteUnbenutzt.join(" "));
+else info("abdeckung:texte", `${texts.length}/${texts.length} نصوص مستخدمة في الخطة الافتراضية`);
+if (dialogeUnbenutzt.length) hinweis("abdeckung:dialoge خارج الخطة الافتراضية", dialogeUnbenutzt.join(" "));
+else info("abdeckung:dialoge", `${dialogues.length}/${dialogues.length} حواراً مستخدماً في الخطة الافتراضية`);
+const writingUnbenutzt = writingTasks.filter((w) => !genutzt.write.has(w.id)).map((w) => w.id);
+const writingWorkshopSource = readFileSync("components/schreiben.tsx", "utf8");
+const trainerSource = readFileSync("components/trainer.tsx", "utf8");
+const wA201AlternativeReachable = writingUnbenutzt.includes("w-a2-01")
+  && writingWorkshopSource.includes("writingTasks.filter((w) => w.level === level)")
+  && writingWorkshopSource.includes("setTask(pickN(pool, 1, rng(seed))[0] ?? pool[0])")
+  && trainerSource.includes("<SchreibWerkstatt progress={progress} />");
+const unresolvedWriting = writingUnbenutzt.filter((id) => id !== "w-a2-01" || !wA201AlternativeReachable);
+if (wA201AlternativeReachable) info("abdeckung:writing-alternative", "w-a2-01 خارج الخطة الافتراضية لكنه متاح في SchreibWerkstatt لمستوى A2؛ لا يُضاف تلقائياً");
+if (unresolvedWriting.length) hinweis("abdeckung:writing خارج الخطة اليومية — افحص البدائل", unresolvedWriting.join(" "));
+else if (writingUnbenutzt.length === 0) info("abdeckung:writing", `${writingTasks.length}/${writingTasks.length} مهام كتابة مجدولة في الخطة الافتراضية`);
+// لا نُقارن KontextPaket IDs بحزم المفردات؛ فحص المراجع الصحيحة أعلاه هو العقد الفعلي.
+const topicsUnbenutzt = Object.keys(grammarMap).filter((g) => !genutzt.topic.has(g));
+if (topicsUnbenutzt.length) hinweis("abdeckung:topics خارج الخطة الافتراضية", topicsUnbenutzt.join(" "));
+else info("abdeckung:topics", `${Object.keys(grammarMap).length}/${Object.keys(grammarMap).length} موضوع قواعد مستخدم في الخطة الافتراضية`);
 /* Ausgabe */
 const keys = Object.keys(F).sort();
+if (keys.length === 0) console.log("\n### العيوب البنيوية المؤكدة: صفر");
 for (const k of keys) {
   const v = F[k];
-  console.log(`\n### ${k} (${v.length})`);
+  console.log(`\n### عيب بنيوي: ${k} (${v.length})`);
   for (const m of v.slice(0, 12)) console.log("  - " + m);
   if (v.length > 12) console.log(`  … +${v.length - 12}`);
 }
+for (const k of Object.keys(H).sort()) {
+  const v = H[k];
+  console.log(`\n### يحتاج مراجعة بشرية/تربوية: ${k} (${v.length})`);
+  for (const m of v.slice(0, 12)) console.log("  - " + m);
+  if (v.length > 12) console.log(`  … +${v.length - 12}`);
+}
+for (const k of Object.keys(I).sort()) {
+  const v = I[k];
+  console.log(`\n### مؤشرات/معلومات لا تُعدّ عيوباً: ${k}`);
+  for (const m of v) console.log("  - " + m);
+}
+if (keys.length > 0) process.exitCode = 1;
