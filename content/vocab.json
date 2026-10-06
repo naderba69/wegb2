@@ -34471,16 +34471,19 @@
    },
    {
     "id": "vd-wohnen-021",
-    "de": "die Nachmieter suchen",
-    "ar": "يبحثُ عن مستأجرٍ بديل",
+    "de": "der Nachmieter",
+    "ar": "المستأجرُ البديلُ",
     "pos": "Nomen",
-    "exampleDe": "Ich suche Nachmieter für die Wohnung.",
-    "exampleAr": "أبحثُ عن مستأجرٍ بديل",
+    "exampleDe": "Ich suche einen Nachmieter für die Wohnung.",
+    "exampleAr": "أبحثُ عن مستأجرٍ بديلٍ للشقة.",
     "level": "A2",
     "tags": [
      "wohnen"
     ],
-    "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+    "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+    "article": "der",
+    "plural": "die Nachmieter",
+    "farbe": "BLAU"
    },
    {
     "id": "vd-wohnen-022",

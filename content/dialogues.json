@@ -7112,17 +7112,17 @@
       },
       {
         "type": "mc",
-        "promptDe": "Wo ist der Erste-Hilfe-Kasten?",
+        "promptDe": "Welche Aussage zum Erste-Hilfe-Kasten stimmt?",
         "options": [
-          "neben der Tür",
-          "in der Halle beim gelben Schild",
-          "beim Meister"
+          "Der Erste-Hilfe-Kasten hängt neben der Tür und ist rot.",
+          "Der Erste-Hilfe-Kasten steht neben der Tür und ist rot.",
+          "Der Erste-Hilfe-Kasten hängt neben der Tür und ist gelb."
         ],
-        "answer": "neben der Tür",
-        "explanationAr": "الدليل: «Der Erste-Hilfe-Kasten hängt neben der Tür, rot». الفخّ 1: اللافتة الصفراء تحذير. الفخّ 2: المعلّم يُبلَّغ بعد الإسعاف.",
+        "answer": "Der Erste-Hilfe-Kasten hängt neben der Tür und ist rot.",
+        "explanationAr": "الدليل: «Der Erste-Hilfe-Kasten hängt neben der Tür, rot». يثبت السطر مكان الصندوق وطريقة تعليقه ولونه. الفخّ: اعتبار «das gelbe Schild» دليلاً على أن الصندوق أصفر أو أن اللافتة تحذير؛ لا يذكر الحوار ذلك.",
         "id": "d-a2-16-q2",
         "falle": true,
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "أيّ وصف لصندوق الإسعافات الأولية يطابق الحوار؟"
       },
       {
         "type": "truefalse",
@@ -7192,8 +7192,8 @@
       },
       {
         "who": "Lehrerin",
-        "de": "Der Akzent ist kein Problem, wenn Sie langsam sprechen. Wichtig ist: dranbleiben.",
-        "ar": "اللكنة ليست مشكلة إذا تكلمت ببطء. المهم: الاستمرار."
+        "de": "Ein Akzent ist normal. Sprechen Sie langsam und deutlich. Wenn man Sie nicht versteht, wiederholen Sie den Satz. Wichtig ist: dranbleiben.",
+        "ar": "اللكنة أمر طبيعي. تحدّث ببطء ووضوح. وإذا لم يفهمك الآخرون، فأعِد الجملة. المهم: واصل التعلّم."
       },
       {
         "who": "Ben Ali",
@@ -7211,7 +7211,7 @@
           "der Akzent"
         ],
         "answer": "der Wortschatz",
-        "explanationAr": "الدليل: «Ihr Problem ist der Wortschatz: zu wenige Wörter». الفخّ 1: القواعد «kennen Sie». الفخّ 2: اللكنة «kein Problem».",
+        "explanationAr": "الدليل: «Ihr Problem ist der Wortschatz: zu wenige Wörter». الفخّ 1: القواعد «kennen Sie». أمّا اللكنة فهي موضوع نصيحة لاحقة، لا السبب الذي سمّته المعلمة.",
         "id": "d-a2-17-q1",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
@@ -7277,7 +7277,7 @@
       },
       {
         "who": "Vermieter",
-        "de": "Sehr gut, das sehe ich. Die Wohnfläche sind 54 Quadratmeter, alles sauber.",
+        "de": "Sehr gut, das sehe ich. Die Wohnfläche ist 54 Quadratmeter, alles sauber.",
         "ar": "ممتاز، أرى ذلك. مساحة السكن 54 متراً مربعاً، كل شيء نظيف."
       },
       {
@@ -7288,7 +7288,7 @@
       {
         "who": "Vermieter",
         "de": "Ja, in vier Wochen, nach der letzten Abrechnung der Warmmiete.",
-        "ar": "نعم، خلال أربعة أسابيع، بعد آخر تسوية للإيجار الشامل."
+        "ar": "نعم، بعد أربعة أسابيع، عقب آخر تسوية للإيجار الشامل."
       },
       {
         "who": "Mieter",
@@ -7303,7 +7303,7 @@
       {
         "who": "Mieter",
         "de": "Nein, die Hausverwaltung hat ihn gefunden. Er zieht am Ersten ein.",
-        "ar": "لا، إدارة العقار وجدته. يدخل في الأول من الشهر."
+        "ar": "لا، إدارة العقار وجدته. سينتقل إلى الشقة في الأول من الشهر."
       }
     ],
     "questions": [
@@ -7330,20 +7330,20 @@
           "in vier Wochen, nach der Abrechnung"
         ],
         "answer": "in vier Wochen, nach der Abrechnung",
-        "explanationAr": "الدليل: «in vier Wochen, nach der letzten Abrechnung der Warmmiete». الفخّ 1: الأول من الشهر موعد دخول المستأجر التالي. الفخّ 2: التسليم الآن.",
+        "explanationAr": "الدليل: «in vier Wochen, nach der letzten Abrechnung der Warmmiete». الفخّ: موعد «am Ersten» هو انتقال المستأجر التالي إلى الشقة، لا موعد ردّ الكفالة.",
         "id": "d-a2-18-q2",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
         "type": "truefalse",
-        "promptDe": "Die Wohnfläche sind 54 Quadratmeter.",
+        "promptDe": "Die Wohnfläche ist 54 Quadratmeter.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "الدليل: «Die Wohnfläche sind 54 Quadratmeter, alles sauber».",
+        "explanationAr": "الدليل: «Die Wohnfläche ist 54 Quadratmeter, alles sauber». الفاعل المفرد «Die Wohnfläche» يقتضي «ist»؛ وتبقى الإجابة «richtig» لأن المعلومة صحيحة بعد التصحيح.",
         "id": "d-a2-18-q3",
         "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
       }
@@ -7362,7 +7362,7 @@
       "die Warmmiete",
       "der Stellplatz",
       "die Hausverwaltung",
-      "die Nachmieter suchen"
+      "der Nachmieter"
     ]
   },
   {
