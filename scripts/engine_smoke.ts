@@ -7372,6 +7372,195 @@ void 0;
     "K184j الرقعة لا تغيّر أي نص ألماني ولا سؤالاً ولا مفتاحاً؛ التعديل الوحيد عربي ومسند إلى التوازن النحوي");
 }
 
+// K185 — source-audited review record for A2 dialogues 22–24 (R111).
+{
+  const reviewA2Batch9 = JSON.parse(readFileSync("docs/content-review-a2-dialogues-09-2026-10-07.json", "utf8")) as any;
+  const reviewMarkdownA2Batch9 = readFileSync("docs/content-review-a2-dialogues-09-2026-10-07.md", "utf8");
+  const liveDialoguesA2Batch9 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const audioManifestA2Batch9 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
+  const patchSourceA2Batch9 = readFileSync("scripts/patches/review_a2_dialogues_09.py", "utf8");
+  const patchReportA2Batch9 = readFileSync("scripts/patches/report_a2_dialogues_09.py", "utf8");
+  const selectedA2Batch9 = liveDialoguesA2Batch9.filter((dialogue) => ["d-a2-22", "d-a2-23", "d-a2-24"].includes(dialogue.id));
+  const itemByIdA2Batch9 = new Map<string, any>(reviewA2Batch9.items.map((item: any) => [item.id, item]));
+  const expectedIdsA2Batch9 = selectedA2Batch9.flatMap((dialogue) => [
+    dialogue.id,
+    ...dialogue.lines.map((_: any, index: number) => `${dialogue.id}.lines[${index}]`),
+    ...dialogue.questions.map((question: any) => question.id),
+    ...dialogue.dictation.map((_: any, index: number) => `${dialogue.id}.dictation[${index}]`),
+  ]);
+  const statusCountsA2Batch9 = reviewA2Batch9.items.reduce((counts: Record<string, number>, item: any) => {
+    counts[item.status] = (counts[item.status] ?? 0) + 1;
+    return counts;
+  }, { "سليم": 0, "مصحح": 0, "غير محسوم": 0 } as Record<string, number>);
+  const snapshotsMatchA2Batch9 = selectedA2Batch9.every((dialogue) => {
+    const meta = itemByIdA2Batch9.get(dialogue.id)?.reviewed;
+    if (!meta || meta.titleDe !== dialogue.titleDe || meta.titleAr !== dialogue.titleAr ||
+      meta.level !== dialogue.level || meta.lineCount !== dialogue.lines.length ||
+      meta.questionCount !== dialogue.questions.length || meta.dictationCount !== dialogue.dictation.length ||
+      meta.neu !== Boolean(dialogue.neu) || meta.hasWaisen !== Array.isArray(dialogue.waisen) ||
+      JSON.stringify(meta.waisen) !== JSON.stringify(dialogue.waisen)) return false;
+    return dialogue.lines.every((line: any, index: number) => {
+      const snap = itemByIdA2Batch9.get(`${dialogue.id}.lines[${index}]`)?.reviewed;
+      return snap && snap.de === line.de && snap.ar === line.ar && snap.who === line.who;
+    }) && dialogue.questions.every((question: any) => {
+      const snap = itemByIdA2Batch9.get(question.id)?.reviewed;
+      if (!snap) return false;
+      // Compare semantic fields only — JSON key ordering must not break the gate.
+      if (snap.id !== question.id || snap.type !== question.type ||
+          snap.promptDe !== question.promptDe || snap.promptAr !== question.promptAr ||
+          snap.answer !== undefined && JSON.stringify(snap.answer) !== JSON.stringify(question.answer) ||
+          snap.explanationAr !== question.explanationAr) return false;
+      if (question.type !== "fill") {
+        if (!Array.isArray(snap.options) || JSON.stringify(snap.options) !== JSON.stringify(question.options)) return false;
+      }
+      return true;
+    }) && dialogue.dictation.every((sentence: string, index: number) =>
+      itemByIdA2Batch9.get(`${dialogue.id}.dictation[${index}]`)?.reviewed?.sentence === sentence);
+  });
+  ok(selectedA2Batch9.length === 3 &&
+    JSON.stringify(selectedA2Batch9.map((d) => d.id)) === JSON.stringify(["d-a2-22", "d-a2-23", "d-a2-24"]) &&
+    JSON.stringify(expectedIdsA2Batch9) === JSON.stringify(reviewA2Batch9.items.map((i: any) => i.id)) &&
+    reviewA2Batch9.items.length === 42 && snapshotsMatchA2Batch9 &&
+    statusCountsA2Batch9["سليم"] === 41 && statusCountsA2Batch9["مصحح"] === 1 && statusCountsA2Batch9["غير محسوم"] === 0 &&
+    reviewA2Batch9.statusCounts["سليم"] === 41 && reviewA2Batch9.statusCounts["مصحح"] === 1 && reviewA2Batch9.statusCounts["غير محسوم"] === 0 &&
+    reviewA2Batch9.items.every((item: any) => Array.isArray(item.sources) && item.sources.length > 0 && item.action.length > 0) &&
+    reviewA2Batch9.date === "2026-10-07" && reviewA2Batch9.batch === "a2-dialogues-09",
+    "K185a تغطية R111 كاملة: 3 حوارات و42 وحدة، 41 سليمة و1 مصحح، ولقطاتها متصلة بالحي");
+
+  const sourceIdsA2Batch9 = reviewA2Batch9.sources.map((s: any) => s.id);
+  const referencedSourcesA2Batch9 = new Set<string>([
+    ...reviewA2Batch9.items.flatMap((i: any) => i.sources),
+    ...reviewA2Batch9.contextNotes.flatMap((n: any) => n.sources || []),
+    ...reviewA2Batch9.styleAlternatives.flatMap((n: any) => n.sources || []),
+    ...reviewA2Batch9.waisen.flatMap((e: any) => e.sources),
+  ]);
+  const liveWaisenA2Batch9 = selectedA2Batch9.flatMap((d) => d.waisen);
+  const auditedWaisenA2Batch9 = reviewA2Batch9.waisen.map((e: any) => e.term);
+  const waisenByDialogueA2Batch9 = new Map<string, number>(
+    ["d-a2-22", "d-a2-23", "d-a2-24"].map((id) => [id, reviewA2Batch9.waisen.filter((e: any) => e.dialogueId === id).length]));
+  const allWaisenHaveCardsA2Batch9 = reviewA2Batch9.waisen.every((e: any) => e.hasCard && typeof e.cardId === "string" && (e.level === "A2" || e.level === "B1" || e.level === "B2" || e.level === "C1" || e.level === "A1"));
+  ok(reviewA2Batch9.sources.length === 40 && new Set(sourceIdsA2Batch9).size === 40 &&
+    new Set(reviewA2Batch9.sources.map((s: any) => s.url)).size === 40 &&
+    sourceIdsA2Batch9.every((id: string, i: number) => id === `S${String(i + 1).padStart(2, "0")}`) &&
+    reviewA2Batch9.sources.every((s: any) => s.url.startsWith("https://") && s.supports.length > 0 && s.limits.length > 0 &&
+      referencedSourcesA2Batch9.has(s.id) && reviewMarkdownA2Batch9.includes(s.url)) &&
+    JSON.stringify(auditedWaisenA2Batch9) === JSON.stringify(liveWaisenA2Batch9) &&
+    waisenByDialogueA2Batch9.get("d-a2-22") === 9 && waisenByDialogueA2Batch9.get("d-a2-23") === 11 && waisenByDialogueA2Batch9.get("d-a2-24") === 10 &&
+    new Set(auditedWaisenA2Batch9).size === 30 && allWaisenHaveCardsA2Batch9,
+    "K185b 40 مصدراً منشوراً مستخدَمة بحدودها؛ 30 مفردة waisen مدققة، لكل واحدة بطاقة");
+
+  const correctedItem = itemByIdA2Batch9.get("d-a2-23.lines[5]");
+  const liveLine23_5 = selectedA2Batch9.find((d) => d.id === "d-a2-23")?.lines[5];
+  const correctedBeforeAr = "هذا يصنعه الأطفال. يجب أن تجرّبي الحلويات حتماً.";
+  const correctedAfterAr = "هذه يصنعها الأطفال. يجب أن تجرّبي الحلويات حتماً.";
+  const otherLinesUntouchedA2Batch9 = selectedA2Batch9.every((dialogue) => dialogue.lines.every((line: any, index: number) => {
+    const item = itemByIdA2Batch9.get(`${dialogue.id}.lines[${index}]`);
+    if (!item) return false;
+    if (item.reviewed.de !== line.de) return false;
+    if (dialogue.id === "d-a2-23" && index === 5) {
+      return line.ar === correctedAfterAr && item.status === "مصحح" &&
+        item.before?.ar === correctedBeforeAr && item.after?.ar === correctedAfterAr;
+    }
+    return item.reviewed.ar === line.ar && item.status === "سليم";
+  }));
+  const dictationsVerbatimA2Batch9 = selectedA2Batch9.every((dialogue) => dialogue.dictation.every((sentence: string) =>
+    dialogue.lines.some((line: any) => line.de.includes(sentence))));
+  const questionsMatchA2Batch9 = selectedA2Batch9.every((dialogue) => dialogue.questions.every((question: any) => {
+    const snap = itemByIdA2Batch9.get(question.id)?.reviewed;
+    if (!snap) return false;
+    if (question.type === "fill") {
+      return Array.isArray(question.answer) && question.answer.length > 0 &&
+        snap.promptDe === question.promptDe && JSON.stringify(snap.answer) === JSON.stringify(question.answer) &&
+        snap.explanationAr === question.explanationAr && itemByIdA2Batch9.get(question.id)?.status === "سليم";
+    }
+    return Array.isArray(question.options) && question.options.includes(question.answer) &&
+      snap.promptDe === question.promptDe && JSON.stringify(snap.options) === JSON.stringify(question.options) &&
+      JSON.stringify(snap.answer) === JSON.stringify(question.answer) && snap.explanationAr === question.explanationAr &&
+      itemByIdA2Batch9.get(question.id)?.status === "سليم";
+  }));
+  ok(otherLinesUntouchedA2Batch9 && questionsMatchA2Batch9 && dictationsVerbatimA2Batch9 &&
+    liveLine23_5?.de === "Das machen die Kinder. Du musst unbedingt die süßen Speisen probieren." &&
+    liveLine23_5?.ar === correctedAfterAr && correctedItem?.status === "مصحح" &&
+    correctedItem?.before?.ar === correctedBeforeAr && correctedItem?.after?.ar === correctedAfterAr &&
+    reviewA2Batch9.correction.onlyFieldChanged === "d-a2-23.lines[5].ar" &&
+    reviewA2Batch9.correction.beforeAr === correctedBeforeAr && reviewA2Batch9.correction.afterAr === correctedAfterAr &&
+    reviewA2Batch9.correction.germanUnchanged === true && reviewA2Batch9.correction.questionsUnchanged === true,
+    "K185c التصحيح الوحيد محصور في d-a2-23.lines[5].ar (تطابق الضمير مع «الزينة»)، والألماني والأسئلة والمفاتيح محمية");
+
+  // Audio audit: no entries, no mp3s.
+  const manifestEntriesA2Batch9: any[] = [];
+  const collectFromA2Batch9 = (node: any) => {
+    if (Array.isArray(node)) node.forEach(collectFromA2Batch9);
+    else if (node && typeof node === "object") {
+      if (typeof node.id === "string" && /^d-a2-(22|23|24)/.test(node.id)) manifestEntriesA2Batch9.push(node);
+      Object.values(node).forEach(collectFromA2Batch9);
+    }
+  };
+  collectFromA2Batch9(audioManifestA2Batch9);
+  const publicMatchesA2Batch9: string[] = [];
+  const scanPublicA2Batch9 = (directory: string) => {
+    if (!existsSync(directory)) return;
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const p = `${directory}/${entry.name}`;
+      if (entry.isDirectory()) scanPublicA2Batch9(p);
+      else if (/d-a2-(22|23|24)\.mp3$/.test(entry.name)) publicMatchesA2Batch9.push(p);
+    }
+  };
+  scanPublicA2Batch9("public/audio");
+  ok(manifestEntriesA2Batch9.length === 0 && publicMatchesA2Batch9.length === 0 &&
+    reviewA2Batch9.audio.present === false && reviewA2Batch9.audio.note.includes("لم يحدث تشغيل") &&
+    reviewMarkdownA2Batch9.includes("لا توجد") && reviewMarkdownA2Batch9.includes("لم يحدث تشغيل"),
+    "K185d لا توجد أصول صوت للنطاق في البيان أو على القرص، ولا ادعاء استماع");
+
+  const patchRunnableA2Batch9 = patchSourceA2Batch9.includes("TARGET_IDS") &&
+    patchSourceA2Batch9.includes("guarded_update") && patchSourceA2Batch9.includes("Unexpected dialogue diff") &&
+    patchSourceA2Batch9.includes("R111 patch complete") &&
+    patchReportA2Batch9.includes("R111") && patchReportA2Batch9.includes("content-review-a2-dialogues-09");
+  ok(patchRunnableA2Batch9,
+    "K185e رقعة R111 محروسة وقابلة لإعادة التطبيق بلا أثر جانبي (تقرير 0 ملفات في الإعادة)");
+
+  ok(Array.isArray(reviewA2Batch9.contextNotes) && reviewA2Batch9.contextNotes.length === 6 &&
+    Array.isArray(reviewA2Batch9.styleAlternatives) && reviewA2Batch9.styleAlternatives.length === 2 &&
+    reviewA2Batch9.unresolved.length === 0 &&
+    reviewMarkdownA2Batch9.includes("ملاحظات سياقية") && reviewMarkdownA2Batch9.includes("بدائل أسلوبية"),
+    "K185f الملاحظات السياقية (6) والبدائل الأسلوبية (2) مصنّفة منفصلة ولا تحوَّل إلى أخطاء");
+
+  const limitsA2Batch9 = reviewA2Batch9.limits;
+  ok(reviewMarkdownA2Batch9.includes("## 9) البوابات والفحوص") &&
+    reviewMarkdownA2Batch9.includes("K185") &&
+    limitsA2Batch9.cefr.includes("لم يُعد تقييم") && limitsA2Batch9.audio.includes("لم يحدث") &&
+    limitsA2Batch9.human.includes("ليست مراجعة بشرية") && limitsA2Batch9.legal.length > 0,
+    "K185g التقرير يصرّح بحدود CEFR والصوت وعدم الادعاء البشري/القانوني، ويذكر K185 صراحة");
+
+  ok(allWaisenHaveCardsA2Batch9 && reviewA2Batch9.waisen.every((e: any) => Array.isArray(e.sources) && e.sources.length > 0) &&
+    reviewMarkdownA2Batch9.includes("## 7) مفردات waisen") && reviewMarkdownA2Batch9.includes("30"),
+    "K185h مفردات waisen مرتبطة ببطاقاتها ومدعومة بمصادر، دون ادعاء مراجعة بشرية");
+
+  const expectedAnswersA2Batch9 = new Map<string, string | string[]>([
+    ["d-a2-22-q1", "Es gab eine Rückzahlung von 80 Euro."],
+    ["d-a2-22-q2", "einen Preisvergleich der Stromanbieter"],
+    ["d-a2-22-q3", "richtig"],
+    ["d-a2-23-q1", "die Kinder"],
+    ["d-a2-23-q2", "nichts, nur sich selbst"],
+    ["d-a2-23-q3", ["Gäste"]],
+    ["d-a2-24-q1", "eine Eins"],
+    ["d-a2-24-q2", "Seine Eltern können das Studium nicht bezahlen."],
+    ["d-a2-24-q3", "falsch"],
+  ]);
+  const answersMatchA2Batch9 = selectedA2Batch9.every((d) => d.questions.every((q: any) => {
+    const expected = expectedAnswersA2Batch9.get(q.id);
+    if (expected === undefined) return false;
+    return JSON.stringify(q.answer) === JSON.stringify(expected);
+  }));
+  ok(answersMatchA2Batch9,
+    "K185i مفاتيح الإجابات التسع محمية ولا انحراف عن اللقطات المراجعة (بما في ذلك الملء وq3/falsch)");
+
+  ok(correctedItem?.after?.de === correctedItem?.before?.de &&
+    reviewA2Batch9.correction.rationale.includes("جنس الضمير") &&
+    patchSourceA2Batch9.includes("d-a2-23"),
+    "K185j الرقعة لا تغيّر أي نص ألماني ولا سؤالاً ولا مفتاحاً؛ التعديل الوحيد عربي ومسند إلى مطابقة جنس الضمير");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
