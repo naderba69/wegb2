@@ -1021,7 +1021,7 @@
       {
         "who": "Moderatorin",
         "de": "Frau Berger, wie bewerten Sie die bisherige Klimapolitik?",
-        "ar": "سيدتي بيرغر، كيف تقيّمون سياسة المناخ حتى الآن؟"
+        "ar": "سيدة بيرغر، كيف تقيّمون سياسة المناخ حتى الآن؟"
       },
       {
         "who": "Berger",
@@ -1036,17 +1036,17 @@
       {
         "who": "Berger",
         "de": "Es geht um nachhaltige Investitionen. Ohne sie wären alle Ziele illusorisch.",
-        "ar": "الأمر يتعلق باستثمارات مستدامة. بدونها ستكون كل الأهداف وهمية."
+        "ar": "الأمر يتعلق باستثمارات مستدامة. بدونها لكانت كل الأهداف وهمية."
       },
       {
         "who": "Moderatorin",
         "de": "Die Regierung hält dagegen die Zahlen für ausreichend.",
-        "ar": "الحكومة تعتبر بالأرقام أنها كافية."
+        "ar": "في المقابل، ترى الحكومة أن الأرقام كافية."
       },
       {
         "who": "Berger",
         "de": "Dieser Optimismus ist, gelinde gesagt, schwer nachvollziehbar.",
-        "ar": "هذا التفاؤل، بلطف شديد، يصعب تبريره."
+        "ar": "هذا التفاؤل، بعبارةٍ لطيفة، يصعب فهمه."
       }
     ],
     "questions": [
@@ -1105,7 +1105,7 @@
       {
         "who": "Beraterin",
         "de": "Natürlich. Entscheidend ist, dass die von uns geplanten Schulungen begleitend stattfinden.",
-        "ar": "بالطبع. الحاسم أن التدريبات التي خططنا لها تجري موازية."
+        "ar": "بالطبع. الحاسم أن الدورات التدريبية التي خططنا لها تجري بالتوازي."
       },
       {
         "who": "Projektleiter",
@@ -1154,7 +1154,7 @@
       {
         "who": "Jonas",
         "de": "Hast du den Artikel gelesen? Angeblich hat der Konzern die Zahlen geschönt.",
-        "ar": "هل قرأت المقال؟ من المزعوم أن الشركة صفّحت الأرقام."
+        "ar": "هل قرأت المقال؟ يُقالُ إنّ الشركةَ جمّلت الأرقام."
       },
       {
         "who": "Dina",
@@ -1169,7 +1169,7 @@
       {
         "who": "Dina",
         "de": "Genau. Ohne belastbare Daten ist die Schlussfolgerung hinfällig.",
-        "ar": "بالضبط. بدون بيانات موثوقة يكون الاستنتاج بلا مصداقية."
+        "ar": "بالضبط. بدون بيانات موثوقة يكون الاستنتاج باطلاً."
       }
     ],
     "questions": [

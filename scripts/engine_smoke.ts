@@ -9085,6 +9085,134 @@ void 0;
     "K196j ملاحظات سياقية (3+ لكل حوار) وبدائل أسلوبية للاثنين والصوت بلا استماع");
 }
 
+
+// K197 — first B2 batch d-b2-01..d-b2-03 (R123).
+{
+  const reviewB201 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-01-2026-10-08.json", "utf8")) as any;
+  const reviewB201Md = readFileSync("docs/content-review-b2-dialogues-01-2026-10-08.md", "utf8");
+  const liveB201 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB201 = readFileSync("scripts/patches/review_b2_dialogues_01.py", "utf8");
+  const scope201 = ["d-b2-01", "d-b2-02", "d-b2-03"];
+  ok(reviewB201.reviewRule === "R123" && reviewB201.date === "2026-10-08" &&
+    JSON.stringify(reviewB201.dialogues.map((d: any) => d.id)) === JSON.stringify(scope201) &&
+    reviewB201.totals.lines === 15 && reviewB201.totals.questions === 6 &&
+    reviewB201.totals.dictation === 9 && reviewB201.totals.approximateUnits === 108,
+    "K197a أول دفعة B2 d-b2-01..03 موثقة (15 سطراً، 6 أسئلة، 9 إملاءات، 108 وحدات)");
+
+  ok(reviewB201.corrections.length === 7 && reviewB201.judgement.corrected === 7 &&
+    reviewB201.judgement.unresolved === 0 && reviewB201.waisen.present === false,
+    "K197b سبعة تصحيحات عربية مؤكدة بلا غير محسوم (نداء، مخالفة واقعية، Schönen، اصطلاحات)");
+
+  const d201 = liveB201.find((d) => d.id === "d-b2-01");
+  ok(d201.lines[0].ar.includes("سيدة بيرغر") && !d201.lines[0].ar.includes("سيدتي") &&
+    d201.lines[3].ar.includes("لكانت كل الأهداف وهمية") && !d201.lines[3].ar.includes("ستكون") &&
+    d201.lines[4].ar.includes("في المقابل، ترى الحكومة أن الأرقام كافية") &&
+    d201.lines[5].ar.includes("بعبارةٍ لطيفة") && d201.lines[5].ar.includes("يصعب فهمه") &&
+    !d201.lines[5].ar.includes("بلطف شديد"),
+    "K197c d-b2-01: سيدة بيرغر، لكأن المخالفة الواقعية، في المقابل، واصطلاحا gelinde/nachvollziehbar");
+
+  const d202 = liveB201.find((d) => d.id === "d-b2-02");
+  const d203 = liveB201.find((d) => d.id === "d-b2-03");
+  ok(d202.lines[3].ar.includes("الدورات التدريبية") && d202.lines[3].ar.includes("تجري بالتوازي") &&
+    !d202.lines[3].ar.includes("موازية") &&
+    d203.lines[0].ar.includes("جمّلت الأرقام") && !d203.lines[0].ar.includes("صفّحت") &&
+    d203.lines[0].ar.includes("يُقالُ إنّ") &&
+    d203.lines[3].ar.includes("الاستنتاج باطلاً") && !d203.lines[3].ar.includes("بلا مصداقية"),
+    "K197d d-b2-02/03: الدورات التدريبية/بالتوازي، جمّلت الأرقام لا صفّحت، والاستنتاج باطلاً");
+
+  const expectedDE201: Record<string, string[]> = {
+    "d-b2-01": [
+      "Frau Berger, wie bewerten Sie die bisherige Klimapolitik?",
+      "Die Maßnahmen gehen in die richtige Richtung, reichen aber bei Weitem nicht aus.",
+      "Was schlagen Sie konkret vor?",
+      "Es geht um nachhaltige Investitionen. Ohne sie wären alle Ziele illusorisch.",
+      "Die Regierung hält dagegen die Zahlen für ausreichend.",
+      "Dieser Optimismus ist, gelinde gesagt, schwer nachvollziehbar.",
+    ],
+    "d-b2-02": [
+      "Wo sehen Sie die größte Herausforderung?",
+      "Die Digitalisierung setzt eine Infrastruktur voraus, die viele Kommunen noch nicht haben.",
+      "Gleichwohl müssen wir anfangen.",
+      "Natürlich. Entscheidend ist, dass die von uns geplanten Schulungen begleitend stattfinden.",
+      "Einverstanden. Dann machen wir weiter mit dem Zeitplan.",
+    ],
+    "d-b2-03": [
+      "Hast du den Artikel gelesen? Angeblich hat der Konzern die Zahlen geschönt.",
+      "Ich habe die Quelle geprüft: Sie ist nicht besonders seriös.",
+      "Also sollten wir die Behauptung in Frage stellen.",
+      "Genau. Ohne belastbare Daten ist die Schlussfolgerung hinfällig.",
+    ],
+  };
+  const expectedAnswers201: Record<string, any[]> = {
+    "d-b2-01": ["die unzureichenden Maßnahmen", ["illusorisch"]],
+    "d-b2-02": [["voraus"], "dass die Schulungen begleitend stattfinden"],
+    "d-b2-03": ["nicht besonders seriös", ["Frage"]],
+  };
+  const expectedDict201: Record<string, string[]> = {
+    "d-b2-01": [
+      "Die Maßnahmen reichen bei Weitem nicht aus.",
+      "Es geht um nachhaltige Investitionen.",
+      "Dieser Optimismus ist schwer nachvollziehbar.",
+    ],
+    "d-b2-02": [
+      "Die Digitalisierung setzt eine Infrastruktur voraus.",
+      "Gleichwohl müssen wir anfangen.",
+      "Die von uns geplanten Schulungen finden begleitend statt.",
+    ],
+    "d-b2-03": [
+      "Angeblich hat der Konzern die Zahlen geschönt.",
+      "Wir sollten die Behauptung in Frage stellen.",
+      "Ohne belastbare Daten ist die Schlussfolgerung hinfällig.",
+    ],
+  };
+  let locksOk201 = true;
+  for (const did of scope201) {
+    const dlg = liveB201.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE201[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE201[did][i]) locksOk201 = false;
+    }
+    for (let i = 0; i < expectedAnswers201[did].length; i++) {
+      if (JSON.stringify(dlg.questions[i].answer) !== JSON.stringify(expectedAnswers201[did][i])) locksOk201 = false;
+    }
+    for (let i = 0; i < expectedDict201[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict201[did][i]) locksOk201 = false;
+    }
+  }
+  ok(locksOk201, "K197e كل الألماني/الأسئلة/الإملاءات مقفلة لم تتغير (15 سطراً، 6 أسئلة، 9 إملاءات)");
+
+  ok(Array.isArray(reviewB201.contentWarnings) && reviewB201.contentWarnings.length === 1 &&
+    reviewB201.contentWarnings[0].id === "W5" && reviewB201.contentWarnings[0].dialogue === "d-b2-02" &&
+    reviewB201.contentWarnings[0].field.includes("promptDe") && reviewB201.contentWarnings[0].modified === false &&
+    reviewB201.contentWarnings[0].statement.includes("Digitalisung") &&
+    reviewB201.contentChecks.length >= 4,
+    "K197f تحذير نصي واحد غير معدّل W5 («Digitalisung») مع فحوص محتوى موثقة");
+
+  ok(patchSourceB201.includes("d-b2-01") && patchSourceB201.includes("d-b2-02") &&
+    patchSourceB201.includes("d-b2-03") && patchSourceB201.includes("<R123> patch complete") &&
+    reviewB201.corrections.length === 7,
+    "K197g الرقعة تغطي الحوارات الثلاثة وتطبق السبعة تصحيحات وتطبع سطر النهاية");
+
+  const srcMap201 = reviewB201.sources as Record<string, any[]>;
+  ok(reviewB201Md.includes("## الحكم") && reviewB201Md.includes("## التصحيحات") &&
+    reviewB201Md.includes("## المصادر") && reviewB201Md.includes("K197") &&
+    Object.keys(srcMap201).every((k) => srcMap201[k].length >= 3) &&
+    Object.values(srcMap201).reduce((n: number, v: any[]) => n + v.length, 0) >= 9,
+    "K197h التقرير العربي ومصادره (3+ لكل حوار، 9+ إجمالاً) يذكر K197");
+
+  ok(reviewB201.limits.audio.includes("لا استماع") && reviewB201.limits.cefr.includes("لم يُعد") &&
+    reviewB201.limits.human.includes("ليست") &&
+    reviewB201.limits.legal.length > 0 && reviewB201.limits.medical.length > 0 &&
+    reviewB201.limits.professional.length > 0,
+    "K197i حدود الصوت/CEFR/بشري/قانوني/طبي/مهني معلنة");
+
+  ok(reviewB201.contextNotes["d-b2-01"].length >= 3 && reviewB201.contextNotes["d-b2-02"].length >= 3 &&
+    reviewB201.contextNotes["d-b2-03"].length >= 3 &&
+    reviewB201.styleAlternatives["d-b2-01"] && reviewB201.styleAlternatives["d-b2-02"] &&
+    reviewB201.styleAlternatives["d-b2-03"] &&
+    reviewB201.audio.note.includes("لا استماع"),
+    "K197j ملاحظات سياقية (3+ لكل حوار) وبدائل أسلوبية للثلاثة والصوت بلا استماع");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
