@@ -3014,7 +3014,7 @@
       {
         "who": "Schaffnerin Weiß",
         "de": "Bei fünfzig Minuten stehen Ihnen fünfzehn Prozent des Preises zu.",
-        "ar": "بخمسينَ لك خمسةَ عشرَ بالمئةِ من الثمن."
+        "ar": "عند خمسين دقيقة يحقّ لكم خمسةَ عشرَ بالمئةِ من الثمن."
       },
       {
         "who": "Amir",
@@ -3024,7 +3024,7 @@
       {
         "who": "Schaffnerin Weiß",
         "de": "Das Formular „Geld zurück“ online ausfüllen — die Erstattung geht aufs Konto.",
-        "ar": "عبِّئْ نموذجَ «استردادِ المال» على الشبكة، والعِوَضُ ينزلُ حسابَك."
+        "ar": "عبِّئوا نموذجَ «استرداد المال» على الشبكة، والعِوَضُ ينزلُ حسابَكم."
       },
       {
         "who": "Amir",
@@ -3034,17 +3034,17 @@
       {
         "who": "Schaffnerin Weiß",
         "de": "Eine Kopie genügt — bewahren Sie das Original auf.",
-        "ar": "نسخةٌ تكفي، واحتفظْ بالأصل."
+        "ar": "نسخةٌ تكفي، واحتفظوا بالأصل."
       },
       {
         "who": "Amir",
         "de": "Der Anschlusszug fiel auch aus!",
-        "ar": "وقد فاتني القطارُ الموالي لهذا السبب!"
+        "ar": "وأُلغي القطارُ الموالي أيضاً!"
       },
       {
         "who": "Schaffnerin Weiß",
         "de": "Dann gilt der nächste Zug ohne Aufpreis — wir haben es vermerkt.",
-        "ar": "يسري إذنِ التالي بلا زيادةٍ في الثمن — دوَّناه في النظام."
+        "ar": "يسري إذن القطارُ التالي بلا زيادةٍ في الثمن — دوَّناه."
       }
     ],
     "questions": [
@@ -3112,7 +3112,7 @@
       {
         "who": "Lehrerin Kern",
         "de": "Eltern können auch beim Vorlesen helfen.",
-        "ar": "وبعضُ الآباءِ يقرؤون مع الأطفالَ أسبوعياً."
+        "ar": "ويمكن للآباء أيضاً المساعدة في القراءة بصوتٍ عالٍ."
       },
       {
         "who": "Selim",
@@ -3122,7 +3122,7 @@
       {
         "who": "Lehrerin Kern",
         "de": "Die Abschlussfeier planen wir als Arbeitsgruppe am Freitag.",
-        "ar": "وحفلُ الختامِ نجعلُه مجموعةَ عملٍ يومَ الجمعة."
+        "ar": "وحفلُ الختامِ فنُخطِّطُ له في مجموعةِ عملٍ يومَ الجمعة."
       },
       {
         "who": "Selim",
@@ -3137,7 +3137,7 @@
       {
         "who": "Selim",
         "de": "Die Einladung geht raus; sie meldet ihre Auftrittskinder an.",
-        "ar": "الرسالةُ تُرسَل، وهم يُسجِّلون أطفالَ الأداءِ عندهم."
+        "ar": "الدعوةُ تُرسَل، وهي تُسجِّل أطفالَها المشاركين في العرضِ."
       }
     ],
     "questions": [
@@ -3195,12 +3195,12 @@
       {
         "who": "Frau Dittrich",
         "de": "Gestern nach Mitternacht war es laut — die Hausordnung kennt Ruhezeiten.",
-        "ar": "أمسَ بعدَ منتصفِ الليل علتِ الأصوات، ونظامُ البنايةِ يعرفُ سكوناً."
+        "ar": "أمسَ بعد منتصفِ الليل علتِ الأصوات، وتنصُّ لائحةُ البنايةِ على أوقاتِ السكون."
       },
       {
         "who": "Oussama",
         "de": "Das war die Übertragung meines Bruders, laut verstärkt.",
-        "ar": "كان بثَّ مباراةِ أخي عبرَ مكبِّرٍ صوتيّ."
+        "ar": "كان بثُّ أخي مضخَّماً بصوتٍ عالٍ."
       },
       {
         "who": "Frau Dittrich",
@@ -3210,22 +3210,22 @@
       {
         "who": "Oussama",
         "de": "Entschuldigung — schön, dass Sie sprechen statt zu schelten. Die Übertragung bleibt künftig aus.",
-        "ar": "عذراً — أحسنتَ بالكلامِ بدلَ الشكاة. لن تعودَ المباراةُ المنقولة."
+        "ar": "عذراً — أحسنتم بالكلامِ بدلَ التوبيخ. وسيظلُّ البثُّ متوقفاً من الآن فصاعداً."
       },
       {
         "who": "Frau Dittrich",
         "de": "Bei Gästen sage ich Bescheid — zwanzig Minuten vorher.",
-        "ar": "وإن نزلَ ضيوف، فأُنذِرُك قبلَها بعشرينَ دقيقة."
+        "ar": "وإن نزلَ ضيوف، أُخبِرُكم قبلَ وصولهم بعشرينَ دقيقة."
       },
       {
         "who": "Oussama",
         "de": "Dringt bei uns Musik durch die Wand, klopfen Sie einmal — wir drehen sofort leiser.",
-        "ar": "وإن تسرَّبَ منّا لحنٌ، فقَرِعَ مرّةً — نُخفِّضُه حالاً."
+        "ar": "وإن تسرَّبت منّا موسيقى عبرَ الجدار، فاطرقوا مرّةً — نُخفِّضُها حالاً."
       },
       {
         "who": "Frau Dittrich",
         "de": "Abgemacht — Treppe und Ruhe teilen wir uns.",
-        "ar": "عَهدٌ مُتفَق — الدرجَ والصمتَ نتقاسمهما."
+        "ar": "اتّفقنا — الدرجَ والهدوءَ نتقاسمهما."
       }
     ],
     "questions": [

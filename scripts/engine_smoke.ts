@@ -8391,6 +8391,146 @@ void 0;
     "K191j التقرير العربي ومصادره (2+ لكل حوار، 7+ إجمالاً) يذكر K191");
 }
 
+// K192 — fifth B1 batch d-b1-16..d-b1-18 (R118).
+{
+  const reviewB105 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-05-2026-10-08.json", "utf8")) as any;
+  const reviewB105Md = readFileSync("docs/content-review-b1-dialogues-05-2026-10-08.md", "utf8");
+  const liveB105 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB105 = readFileSync("scripts/patches/review_b1_dialogues_05.py", "utf8");
+  const scope = ["d-b1-16", "d-b1-17", "d-b1-18"];
+  ok(reviewB105.reviewRule === "R118" && reviewB105.date === "2026-10-08" &&
+    JSON.stringify(reviewB105.dialogues.map((d: any) => d.id)) === JSON.stringify(scope) &&
+    reviewB105.totals.lines === 23 && reviewB105.totals.questions === 9 && reviewB105.totals.dictation === 6,
+    "K192a دفعة B1 الخامسة d-b1-16..18 موثقة (23 سطراً، 9 أسئلة، 6 إملاءات)");
+
+  ok(reviewB105.corrections.length === 14,
+    "K192b أربعة عشر تصحيحاً عربياً مؤكداً (Sie→جمع، معاني ausfallen/Einladung/planen/Ruhezeiten/Ruhe/Musik/Bescheid/schelten، إزالة إضافات)");
+
+  const d16 = liveB105.find((d) => d.id === "d-b1-16");
+  const d17 = liveB105.find((d) => d.id === "d-b1-17");
+  const d18 = liveB105.find((d) => d.id === "d-b1-18");
+  ok(d16.lines[1].ar.includes("يحقّ لكم") && !d16.lines[1].ar.includes("بخمسينَ لك") &&
+    d16.lines[3].ar.includes("عبِّئوا") && d16.lines[3].ar.includes("حسابَكم") && !d16.lines[3].ar.includes("حسابَك.") &&
+    d16.lines[5].ar.includes("واحتفظوا") && !d16.lines[5].ar.includes("واحتفظْ") &&
+    d16.lines[6].ar.includes("أُلغي") && !d16.lines[6].ar.includes("فاتني") &&
+    d16.lines[7].ar.includes("القطارُ التالي") && d16.lines[7].ar.includes("دوَّناه") && !d16.lines[7].ar.includes("في النظام"),
+    "K192c d-b1-16: Sie→لكم/عبِّئوا/حسابَكم/احتفظوا، ausfallen=أُلغي لا فاتني، وحذف «في النظام»");
+
+  ok(d17.lines[2].ar.includes("ويمكن للآباء") && d17.lines[2].ar.includes("بصوتٍ عالٍ") &&
+    !d17.lines[2].ar.includes("أسبوعياً") && !d17.lines[2].ar.includes("بعضُ الآباءِ") &&
+    d17.lines[4].ar.includes("نُخطِّطُ له") && !d17.lines[4].ar.includes("نجعلُه") &&
+    d17.lines[7].ar.includes("الدعوةُ تُرسَل") && !d17.lines[7].ar.includes("الرسالةُ") &&
+    d17.lines[7].ar.includes("المشاركين في العرض") && !d17.lines[7].ar.includes("عندهم"),
+    "K192d d-b1-17: können…helfen ويمكن للآباء، planen=نُخطِّط لا نجعل، Einladung=الدعوة لا الرسالة");
+
+  ok(d18.lines[0].ar.includes("لائحةُ البنايةِ") && d18.lines[0].ar.includes("أوقاتِ السكون") && !d18.lines[0].ar.includes("يعرفُ سكوناً") &&
+    d18.lines[1].ar.includes("بصوتٍ عالٍ") && !d18.lines[1].ar.includes("مباراة") &&
+    d18.lines[3].ar.includes("أحسنتم") && d18.lines[3].ar.includes("التوبيخ") && !d18.lines[3].ar.includes("الشكاة") &&
+    !d18.lines[3].ar.includes("المباراة") && d18.lines[3].ar.includes("البثُّ متوقفاً") && !d18.lines[3].ar.includes("لن تعودَ") &&
+    d18.lines[4].ar.includes("أُخبِرُكم") && !d18.lines[4].ar.includes("أُنذِرُك") && d18.lines[4].ar.includes("قبلَ وصولهم") &&
+    d18.lines[5].ar.includes("موسيقى") && d18.lines[5].ar.includes("فاطرقوا") && !d18.lines[5].ar.includes("فقَرِعَ") && !d18.lines[5].ar.includes("لحنٌ") &&
+    d18.lines[6].ar.includes("اتّفقنا") && d18.lines[6].ar.includes("الهدوءَ") && !d18.lines[6].ar.includes("الصمتَ"),
+    "K192e d-b1-18: لائحة/أوقات السكون، حذف «مباراة»×2، schelten=التوبيخ، Bescheid=أُخبِرُكم، Musik=موسيقى، klopfen=فاطرقوا، Abgemacht=اتّفقنا");
+
+  // Locked DE/who/questions/dictations.
+  const expectedDE5: Record<string, string[]> = {
+    "d-b1-16": [
+      "Mein Zug nach München hatte fünfzig Minuten Verspätung — Fahrgastrechte bitte.",
+      "Bei fünfzig Minuten stehen Ihnen fünfzehn Prozent des Preises zu.",
+      "Bar oder aufs Konto?",
+      "Das Formular „Geld zurück“ online ausfüllen — die Erstattung geht aufs Konto.",
+      "Muss ich die Fahrkarte beilegen?",
+      "Eine Kopie genügt — bewahren Sie das Original auf.",
+      "Der Anschlusszug fiel auch aus!",
+      "Dann gilt der nächste Zug ohne Aufpreis — wir haben es vermerkt.",
+    ],
+    "d-b1-17": [
+      "Willkommen — wie steht es um unseren Lesetag?",
+      "Die Leseecke ist fertig; für die Bibliothek fehlt ein Sponsor.",
+      "Eltern können auch beim Vorlesen helfen.",
+      "Ich melde mich: einmal monatlich, samstags vor zehn.",
+      "Die Abschlussfeier planen wir als Arbeitsgruppe am Freitag.",
+      "Freitag passt erst nach siebzehn — mein Dienst beginnt früher.",
+      "Wer lädt unsere Partnerschule ein?",
+      "Die Einladung geht raus; sie meldet ihre Auftrittskinder an.",
+    ],
+    "d-b1-18": [
+      "Gestern nach Mitternacht war es laut — die Hausordnung kennt Ruhezeiten.",
+      "Das war die Übertragung meines Bruders, laut verstärkt.",
+      "Das bleibt einmalig — ich erwarte eine Entschuldigung, und Nachtruhe ab zweiundzwanzig.",
+      "Entschuldigung — schön, dass Sie sprechen statt zu schelten. Die Übertragung bleibt künftig aus.",
+      "Bei Gästen sage ich Bescheid — zwanzig Minuten vorher.",
+      "Dringt bei uns Musik durch die Wand, klopfen Sie einmal — wir drehen sofort leiser.",
+      "Abgemacht — Treppe und Ruhe teilen wir uns.",
+    ],
+  };
+  const expectedWho5: Record<string, string[]> = {
+    "d-b1-16": ["Amir","Schaffnerin Weiß","Amir","Schaffnerin Weiß","Amir","Schaffnerin Weiß","Amir","Schaffnerin Weiß"],
+    "d-b1-17": ["Lehrerin Kern","Selim","Lehrerin Kern","Selim","Lehrerin Kern","Selim","Lehrerin Kern","Selim"],
+    "d-b1-18": ["Frau Dittrich","Oussama","Frau Dittrich","Oussama","Frau Dittrich","Oussama","Frau Dittrich"],
+  };
+  const expectedAnswers5: Record<string, any[]> = {
+    "d-b1-16": ["fünfzehn Prozent des Preises", "das Onlineformular und eine Kopie der Fahrkarte", "der nächste Zug ohne Aufpreis"],
+    "d-b1-17": ["ein Sponsor", "einmal monatlich, samstags vor zehn", "die Abschlussfeier"],
+    "d-b1-18": ["die laut verstärkte Übertragung des Bruders", "um zweiundzwanzig Uhr", "Die Übertragung bleibt künftig aus."],
+  };
+  const expectedDict5: Record<string, string[]> = {
+    "d-b1-16": [
+      "Dann gilt der nächste Zug ohne Aufpreis — wir haben es vermerkt.",
+      "Bei fünfzig Minuten stehen Ihnen fünfzehn Prozent des Preises zu.",
+    ],
+    "d-b1-17": [
+      "Die Leseecke ist fertig; für die Bibliothek fehlt ein Sponsor.",
+      "Die Einladung geht raus; sie meldet ihre Auftrittskinder an.",
+    ],
+    "d-b1-18": [
+      "Das bleibt einmalig — ich erwarte eine Entschuldigung, und Nachtruhe ab zweiundzwanzig.",
+      "Bei Gästen sage ich Bescheid — zwanzig Minuten vorher.",
+    ],
+  };
+  let locksOk5 = true;
+  for (const did of scope) {
+    const dlg = liveB105.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE5[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE5[did][i] || dlg.lines[i].who !== expectedWho5[did][i]) locksOk5 = false;
+    }
+    for (let i = 0; i < expectedAnswers5[did].length; i++) {
+      if (dlg.questions[i].answer !== expectedAnswers5[did][i]) locksOk5 = false;
+    }
+    for (let i = 0; i < expectedDict5[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict5[did][i]) locksOk5 = false;
+    }
+  }
+  ok(locksOk5, "K192f كل الألماني/who/الأسئلة/الإملاءات مقفلة لم تتغير (23/9/6)");
+
+  ok(reviewB105.judgement.corrected === 14 && reviewB105.judgement.unresolved === 0 &&
+    reviewB105.waisen.present === false &&
+    patchSourceB105.includes("d-b1-16") && patchSourceB105.includes("d-b1-17") &&
+    patchSourceB105.includes("d-b1-18") && patchSourceB105.includes("<R118> patch complete"),
+    "K192g الرقعة تغطي الثلاثة حوارات وتطبق الأربعة عشر تصحيحاً وتطبع سطر النهاية");
+
+  const warn5 = (reviewB105.contentWarnings ?? []) as any[];
+  ok(reviewB105.contextNotes["d-b1-16"] && reviewB105.contextNotes["d-b1-17"] && reviewB105.contextNotes["d-b1-18"] &&
+    reviewB105.styleAlternatives["d-b1-18"] && reviewB105.styleAlternatives["d-b1-17"] &&
+    warn5.length === 1 && warn5[0].modified === false && warn5[0].dialogue === "d-b1-16" &&
+    warn5[0].statement.includes("2021/782") && warn5[0].evidence.includes("Verbraucherzentrale") &&
+    warn5[0].recommendation.length > 0,
+    "K192h ملاحظات سياقية (قطار/مدرسة/جيرة) وبدائل، وتحذير محتوى واحد موثق غير معدّل: 15%/50د لا تطابق VO 2021/782");
+
+  ok(reviewB105.limits.audio.includes("لا استماع") && reviewB105.limits.cefr.includes("لم يُعد") &&
+    reviewB105.limits.human.includes("ليست") &&
+    reviewB105.limits.legal.length > 0 && reviewB105.limits.professional.length > 0,
+    "K192i حدود الصوت/CEFR/بشري/قانوني/تربوي معلنة");
+
+  const srcMap5 = reviewB105.sources as Record<string, any[]>;
+  ok(reviewB105Md.includes("## الحكم") && reviewB105Md.includes("## التصحيحات") &&
+    reviewB105Md.includes("## المصادر") && reviewB105Md.includes("## تحذيرات محتوى") &&
+    reviewB105Md.includes("K192") &&
+    Object.keys(srcMap5).every((k) => srcMap5[k].length >= 2) &&
+    Object.values(srcMap5).reduce((n: number, v: any[]) => n + v.length, 0) >= 7,
+    "K192j التقرير العربي ومصادره (2+ لكل حوار، 7+ إجمالاً) وتحذير المحتوى يذكر K192");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
