@@ -8010,6 +8010,124 @@ void 0;
     "K188j الحقل dictation قائمة نصية بعدد 3 جمل لكل حوار (18 إجمالاً) وهو مقفل");
 }
 
+// K189 — second B1 batch d-b1-07..d-b1-09 (R115).
+{
+  const reviewB102 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-02-2026-10-08.json", "utf8")) as any;
+  const reviewB102Md = readFileSync("docs/content-review-b1-dialogues-02-2026-10-08.md", "utf8");
+  const liveB102 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB102 = readFileSync("scripts/patches/review_b1_dialogues_02.py", "utf8");
+  const scope = ["d-b1-07", "d-b1-08", "d-b1-09"];
+  ok(reviewB102.reviewRule === "R115" && reviewB102.date === "2026-10-08" &&
+    JSON.stringify(reviewB102.dialogues.map((d: any) => d.id)) === JSON.stringify(scope) &&
+    reviewB102.totals.lines === 17 && reviewB102.totals.questions === 6 && reviewB102.totals.dictation === 7,
+    "K189a دفعة B1 الثانية d-b1-07..09 موثقة (17 سطراً، 6 أسئلة، 7 إملاءات)");
+
+  ok(reviewB102.corrections.length === 2 &&
+    reviewB102.corrections[0].unit === "d-b1-07.lines[2].ar" &&
+    reviewB102.corrections[0].new.includes("تعملوا") && reviewB102.corrections[0].new.includes("تأخذوا") &&
+    reviewB102.corrections[1].unit === "d-b1-09.lines[4].ar" &&
+    reviewB102.corrections[1].new.includes("يمكنكم") &&
+    liveB102.find((d) => d.id === "d-b1-07").lines[2].ar === reviewB102.corrections[0].new &&
+    liveB102.find((d) => d.id === "d-b1-09").lines[4].ar === reviewB102.corrections[1].new,
+    "K189b تصحيحان عربيان: Sie→جمع (تعملوا/تأخذوا، يمكنكم) وتصحيح فعل عامي");
+
+  const expectedDE: Record<string, string[]> = {
+    "d-b1-07": [
+      "Die Untersuchung zeigt: Es ist nichts Schlimmes.",
+      "Gott sei Dank! Was soll ich denn tun?",
+      "Sie sollten weniger am Bildschirm arbeiten und Pausen machen.",
+      "Und wenn die Schmerzen zurückkommen?",
+      "Dann kommen Sie bitte sofort wieder.",
+    ],
+    "d-b1-08": [
+      "Nina, können wir über die Küche reden?",
+      "Gern. Ich finde, es ist zu unordentlich.",
+      "Du hast recht. Ich schlage einen Putzplan vor.",
+      "Gute Idee! Jeder macht einmal pro Woche sauber.",
+      "Und der Einkauf? Sollen wir zusammen kaufen?",
+      "Ja, das spart Geld. Ich schreibe eine Liste.",
+    ],
+    "d-b1-09": [
+      "Guten Abend. Ich habe ein Problem mit meinem Zimmer.",
+      "Was ist denn los, mein Herr?",
+      "Die Heizung funktioniert nicht, und es ist sehr kalt.",
+      "Das tut mir leid. Ich schicke sofort einen Techniker.",
+      "Und könnten Sie vielleicht das Zimmer wechseln?",
+      "Natürlich. Zimmer 205 ist frei und warm.",
+    ],
+  };
+  const expectedWho: Record<string, string[]> = {
+    "d-b1-07": ["Ärztin","Patient","Ärztin","Patient","Ärztin"],
+    "d-b1-08": ["Paul","Nina","Paul","Nina","Paul","Nina"],
+    "d-b1-09": ["Anwar","Rezeption","Anwar","Rezeption","Anwar","Rezeption"],
+  };
+  const expectedAnswers: Record<string, any[]> = {
+    "d-b1-07": ["nichts Schlimmes", ["Bildschirm"]],
+    "d-b1-08": ["einen Putzplan", "Das spart Geld."],
+    "d-b1-09": ["Die Heizung funktioniert nicht.", "ein anderes Zimmer, Nummer 205"],
+  };
+  const expectedDict: Record<string, string[]> = {
+    "d-b1-07": ["Es ist nichts Schlimmes.", "Sie sollten Pausen machen.", "Dann kommen Sie bitte sofort wieder."],
+    "d-b1-08": ["Ich schlage einen Putzplan vor.", "Jeder macht einmal pro Woche sauber."],
+    "d-b1-09": ["Die Heizung funktioniert nicht.", "Ich schicke sofort einen Techniker."],
+  };
+  let locksOk = true;
+  for (const did of scope) {
+    const dlg = liveB102.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE[did][i] || dlg.lines[i].who !== expectedWho[did][i]) locksOk = false;
+    }
+    for (let i = 0; i < expectedAnswers[did].length; i++) {
+      const a = dlg.questions[i].answer; const e = expectedAnswers[did][i];
+      if (Array.isArray(e) ? JSON.stringify(a.slice().sort()) !== JSON.stringify(e.slice().sort()) : a !== e) locksOk = false;
+    }
+    for (let i = 0; i < expectedDict[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict[did][i]) locksOk = false;
+    }
+  }
+  ok(locksOk, "K189c كل الألماني/who/الأسئلة/الإملاءات مقفلة (3+2+2=7 إملاءات)");
+
+  ok(reviewB102.judgement.corrected === 2 && reviewB102.judgement.unresolved === 0 &&
+    reviewB102.waisen.present === false &&
+    patchSourceB102.includes("d-b1-07") && patchSourceB102.includes("d-b1-08") &&
+    patchSourceB102.includes("d-b1-09") &&
+    patchSourceB102.includes("<R115> patch complete"),
+    "K189d الرقعة تغطي الثلاثة حوارات وتطبق التصحيحين وتطبع سطر النهاية");
+
+  ok(reviewB102.contextNotes["d-b1-07"] &&
+    reviewB102.contextNotes["d-b1-07"].some((n: any) => n.note.includes("طبية")) &&
+    reviewB102.contextNotes["d-b1-08"] && reviewB102.contextNotes["d-b1-09"] &&
+    reviewB102.styleAlternatives["d-b1-07"] && reviewB102.styleAlternatives["d-b1-07"].some((a: any) => a.phrase.includes("Gott sei Dank")),
+    "K189e ملاحظات سياقية (حدود طبية) وبدائل أسلوبية مسجلة");
+
+  ok(reviewB102.limits.audio.includes("لا استماع") && reviewB102.limits.cefr.includes("لم يُعد") &&
+    reviewB102.limits.human.includes("ليست") && reviewB102.limits.medical.length > 0 &&
+    reviewB102.limits.legal.length > 0,
+    "K189f حدود الصوت/CEFR/بشري/طبي/قانوني معلنة");
+
+  const srcMap2 = reviewB102.sources as Record<string, any[]>;
+  ok(reviewB102Md.includes("## الحكم") && reviewB102Md.includes("## التصحيحات") &&
+    reviewB102Md.includes("## المصادر") && reviewB102Md.includes("K189") &&
+    Object.keys(srcMap2).every((k) => srcMap2[k].length >= 2) &&
+    Object.values(srcMap2).reduce((n: number, v: any[]) => n + v.length, 0) >= 6,
+    "K189g التقرير العربي ومصادره (2+ لكل حوار، 6+ إجمالاً) يذكر K189");
+
+  ok(patchSourceB102.includes("locked DE lines") &&
+    reviewB102.corrections[0].rationale.includes("Sie") &&
+    reviewB102.corrections[1].rationale.includes("Sie"),
+    "K189h الرقعة تقفل النص وتشرح كل تصحيح بالرجوع إلى صيغة Sie");
+
+  ok(reviewB102.audio.mp3Files.length === 3 && reviewB102.audio.manifestEntries.length === 3 &&
+    reviewB102.audio.note.includes("لا استماع"),
+    "K189i الصوت موجود (3 ملفات) ولكن لا يُدّعى استماعه");
+
+  ok(reviewB102.totals.dictation === 7 &&
+    reviewB102.dialogues.find((d: any) => d.id === "d-b1-07").dictation === 3 &&
+    reviewB102.dialogues.find((d: any) => d.id === "d-b1-08").dictation === 2 &&
+    reviewB102.dialogues.find((d: any) => d.id === "d-b1-09").dictation === 2,
+    "K189j عدد الإملاءات 7 (3+2+2) مقفل");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
