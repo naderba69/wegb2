@@ -39,7 +39,7 @@ npm run audit:content # تدقيق بنيوي يفصل المرشّحات الت
 | الأمر | النتيجة |
 |---|---|
 | `./node_modules/.bin/tsc --noEmit` | **نجح** ✅ |
-| `npm run smoke` | **1343 نجح · 0 فشل** ✅ (يشمل K202a–j/R128 وK201a–j/R127 وK200a–j/R126 وK199a–j/R125 وK198a–j/R124 وK197a–j/R123 وK196a–j/R122 وK195a–j/R121 وK194a–j/R120 وK193a–j/R119 وK192a–j/R118 وK191a–j/R117 وK190a–j/R116 وK189a–j/R115 وK188a–j/R114 وK187a–e/R113 وK186a–j/R112 وK185a–j/R111 وK184a–j/R110 وK183a–h/R109 وK182a–j/R108 وK181a–h/R107 والبوابات السابقة) |
+| `npm run smoke` | **1353 نجح · 0 فشل** ✅ (يشمل K202a–j/R128 وK201a–j/R127 وK200a–j/R126 وK199a–j/R125 وK198a–j/R124 وK197a–j/R123 وK196a–j/R122 وK195a–j/R121 وK194a–j/R120 وK193a–j/R119 وK192a–j/R118 وK191a–j/R117 وK190a–j/R116 وK189a–j/R115 وK188a–j/R114 وK187a–e/R113 وK186a–j/R112 وK185a–j/R111 وK184a–j/R110 وK183a–h/R109 وK182a–j/R108 وK181a–h/R107 والبوابات السابقة) |
 | `npm run interaktiv` | **699 نجح · 0 فشل** ✅؛ رسائل `HTMLMediaElement.play/pause` المعروفة في jsdom لا تثبت تشغيل الصوت |
 | `npm run build` | **نجح · توليد 11/11 صفحة ساكنة** ✅ |
 | `npm audit --no-fund` | **0 ثغرات** ✅ بعد تحديث transitive `sharp` 0.35.5 و`source-map-js` 1.2.2 في lockfile فقط |
@@ -79,7 +79,7 @@ npm run audit:content # تدقيق بنيوي يفصل المرشّحات الت
 | **فخاخ الامتحان** | **160** — معروضة تفاعلياً ومسجلة (المؤقت: R11/المرحلة 1) | حقل داخل `grammar.json` |
 | ملفات صوتية mp3 | **352** | `public/audio/` |
 | صور البطاقات png | **180** | `public/cards/` |
-| بوابات المحرّك | **1343 فحصاً ناجحاً في آخر smoke (يشمل K202a–j/R128 وK201a–j/R127 وK200a–j/R126 (يشمل K188/R114 وK187/R113 وK186/R112 وK185/R111 وK184/R110 وK183/R109 وK182/R108 وK181/R107 وK180/R106 وK179d) · 699 تفاعلياً** | `scripts/engine_smoke.ts` + `scripts/interaktiv_test.tsx` |
+| بوابات المحرّك | **1353 فحصاً ناجحاً في آخر smoke (يشمل K202a–j/R128 وK201a–j/R127 وK200a–j/R126 (يشمل K188/R114 وK187/R113 وK186/R112 وK185/R111 وK184/R110 وK183/R109 وK182/R108 وK181/R107 وK180/R106 وK179d) · 699 تفاعلياً** | `scripts/engine_smoke.ts` + `scripts/interaktiv_test.tsx` |
 | مهام الخطة | **2110 مهمة عبر 378 يوماً** (محاكاة تقدُّمٍ جديد، صفر انهيار) | مولّدة من `lib/plan.ts` |
 | عناصر تفاعل ملموسة | **19045** (صفر عارٍ · صفر أخرس · صفر بلا عنوان؛ آخر تشغيل لـ`interaktiv`) | `interaktiv_test.tsx` |
 
@@ -293,7 +293,9 @@ R60/K140 وR61/K141 كانتا فجوتي عرض وتوجيه ظهرتا في ت
 | `scripts/patches/review_b2_dialogues_06.py` · `scripts/patches/report_b2_dialogues_06.py` | رقعة حرِسة وتقرير R128 (ملف B2 دفعة 06) |
 | `docs/content-review-b2-dialogues-07-2026-10-08.json` · `.md` | تقرير سابع دفعة B2 d-b2-19..21: 24 سطراً، 9 أسئلة، 6 إملاءات ≈162 وحدة، 18 تصحيحاً، لا تحذيرات جديدة (W1–W6 مفتوحة)، 12 مصدراً؛ K203a–j (R129) |
 | `scripts/patches/review_b2_dialogues_07.py` · `scripts/patches/report_b2_dialogues_07.py` | رقعة حرِسة وتقرير R129 (ملف B2 دفعة 07) |
-| `PROFESSIONAL_CONTINUATION_PROMPT_AR.md` | خطة استكمال عربية محدثة: حالة R127 وقيوده واختباراته، وتحذيرات المحتوى W1–W6، وتقدّم B2، ونطاق R130 المرشح (B2 الدفعة 7 d-b2-19–21 أو A0) والخطوة التالية |
+| `docs/content-review-b2-dialogues-08-2026-10-08.json` · `.md` | تقرير ثامن دفعة B2 d-b2-22..24: 24 سطراً، 9 أسئلة، 6 إملاءات ≈162 وحدة، 22 تصحيحاً، لا تحذيرات جديدة (W1–W6 مفتوحة)، 12 مصدراً؛ K204a–j (R130) |
+| `scripts/patches/review_b2_dialogues_08.py` · `scripts/patches/report_b2_dialogues_08.py` | رقعة حرِسة وتقرير R130 (ملف B2 دفعة 08) |
+| `PROFESSIONAL_CONTINUATION_PROMPT_AR.md` | خطة استكمال عربية محدثة: حالة R127 وقيوده واختباراته، وتحذيرات المحتوى W1–W6، وتقدّم B2، ونطاق R131 المرشح (B2 الدفعة 7 d-b2-19–21 أو A0) والخطوة التالية |
 | `docs/audit-2026-10-04.md` | تقرير التدقيق وسجل الدفعات المكتملة وحدودها |
 | `docs/drive-inventory.json` | جرد القرص |
 

@@ -5272,42 +5272,42 @@
       {
         "who": "Imen",
         "de": "Die Überweisung zum Radiologen dauert Wochen — meine Schmerzen lassen nicht nach.",
-        "ar": "التحويلةُ إلى طبيبِ الأشعةِ تمتدُّ أسابيع — وألمي لا يرحم."
+        "ar": "التحويلةُ إلى طبيبِ الأشعةِ تستغرقُ أسابيع — والألمُ لا يهدأ."
       },
       {
         "who": "Ärztin",
         "de": "Wir stufen als akut ein: Dringlichkeitscode C auf dem Schein verkürzt die Wartezeit.",
-        "ar": "نُدرجُها طارئة: رمزُ C على الوصفةِ يقصُمُ ظهرَ الانتظار."
+        "ar": "نُصنِّفُها حادة: رمزُ الاستعجالِ C على التحويلةِ يُقصِّرُ الانتظار."
       },
       {
         "who": "Imen",
         "de": "Kann eine Zweitüberweisung an ein anderes Krankenhaus helfen?",
-        "ar": "أنجدي تحويلَةٌ ثانيةً إلى مستشفى آخر؟"
+        "ar": "هل تُفيدُ تحويلةٌ ثانيةٌ إلى مستشفى آخر؟"
       },
       {
         "who": "Ärztin",
         "de": "Parallel ja, aber die Akten müssen austauschbar sein — mit Ihrem Einverständnis.",
-        "ar": "متوازياً نعم، على أن تتبادَلَ الملفاتُ بموافقتكِ الخطيةِ الموقَّعة."
+        "ar": "نعم بالتوازي، لكن يجب أن تكون الملفاتُ قابلةً للتبادل — بموافقتكِ."
       },
       {
         "who": "Imen",
         "de": "Welche Befunde braucht der Facharzt zwingend?",
-        "ar": "ما النتائجُ التي لا غنى عنها للطبيبِ المختص؟"
+        "ar": "ما التقاريرُ التي يحتاجُها الاختصاصيُّ إلزامياً؟"
       },
       {
         "who": "Ärztin",
         "de": "Laborwerte der Woche, Voraufnahmen im DICOM-Format, keine Komprimierung.",
-        "ar": "تحاليلَ الأسبوعِ الطازجة، وصورًا صيغة DICOM غيرَ مضغوطة."
+        "ar": "تحاليلُ الأسبوع، والصورُ السابقةُ بصيغةِ DICOM دون ضغط."
       },
       {
         "who": "Imen",
         "de": "Der Termin bestätigt — wie storniere ich, falls es früher klappt?",
-        "ar": "حُجِزَ الموعد — وإن فرَجَ الله قبلَه، فكيف ألغي؟"
+        "ar": "أُكِّد الموعد — كيف أُلغيه إن توفَّر موعدٌ أبكرُ؟"
       },
       {
         "who": "Ärztin",
         "de": "Ein Anruf genügt; der Platz wandert sofort auf die Nachrückliste.",
-        "ar": "مكالمةٌ واحدة — فيقفزُ الصفُّ إلى قائمةِ المُستخلفين حالاً."
+        "ar": "مكالمةٌ واحدة تكفي — فيُنقَلُ المقعدُ فوراً إلى قائمةِ الانتظارِ الاحتياطية."
       }
     ],
     "questions": [
@@ -5373,27 +5373,27 @@
       {
         "who": "Betriebsrätin",
         "de": "Das Arbeitszeitkonto muss monatlich ausgeglichen werden — wir haben die Betriebsvereinbarung.",
-        "ar": "يجبُ تصفيةُ حسابِ العملِ شهريّاً؛ وقد نصَّت اتفاقُنا التنظيميُّ على ذلك."
+        "ar": "يجبُ تسويةُ رصيدِ ساعاتِ العمل شهرياً — فنحن نستندُ إلى اتفاقيةِ المنشأة."
       },
       {
         "who": "Amir",
         "de": "Schlagen Sie eine Zeitschiene statt Auszahlung vor?",
-        "ar": "أتقترحون رصيداً زمنيّاً بدلَ النقد؟"
+        "ar": "أتقترحون جدولةً زمنيةً بدلَ الدفع النقدي؟"
       },
       {
         "who": "Betriebsrätin",
         "de": "Frei im Block: zwei Tage plus Zuschlag pro Überstunde laut Tarif.",
-        "ar": "عطلةٌ متتابعة: يومانِ وعلاوةٌ لكلِّ ساعةٍ بحكمِ الاتفاقية."
+        "ar": "إجازةٌ متصلة: يومان، إضافةً إلى علاوةٍ عن كلِّ ساعةٍ إضافيةٍ وفقَ الاتفاقيةِ الأجرية."
       },
       {
         "who": "Amir",
         "de": "Der Schichtplan lässt das nicht zu — wir brauchen das Kontingent vor Ostern abgebaut.",
-        "ar": "جدولُ المناوباتِ لا يسمح — علينا تفكيكُ الرصيدِ قبلَ الفصح."
+        "ar": "جدولُ المناوباتِ لا يسمحُ بذلك — علينا تصريفُ الرصيدِ قبلَ عيدِ الفصح."
       },
       {
         "who": "Betriebsrätin",
         "de": "Wir setzen die Liste am Montag mit dem Schichtleiter durch — verbindlich.",
-        "ar": "سنُنَفِّذُ القائمةَ الاثنين مع قائدِ المناوبة — بيقينٍ لا مع وعود."
+        "ar": "سنُمرِّرُ القائمةَ يومَ الاثنين مع قائدِ المناوبة — بشكلٍ ملزم."
       },
       {
         "who": "Amir",
@@ -5403,7 +5403,7 @@
       {
         "who": "Betriebsrätin",
         "de": "Dann Einigungsstelle; der Spruch ersetzt die Weigerung des Arbeitgebers.",
-        "ar": "إذن لجنةُ التوفيق، وحكمُها يحلُّ محلَّ عنادِ صاحبِ العمل."
+        "ar": "فهيئةُ التسوية؛ ويحلُّ قرارُها محلَّ رفضِ صاحبِ العمل."
       }
     ],
     "questions": [
@@ -5464,42 +5464,42 @@
       {
         "who": "Firas",
         "de": "Ich habe die telc-Prüfung B1 knapp bestanden — Zertifikat oder nicht?",
-        "ar": "نجحتُ بفارقٍ ضئيلٍ في امتحان telc B1 — أليَّ شهادة؟"
+        "ar": "نجحتُ في امتحانِ telc B1 بفارقٍ ضئيل — هل أحصلُ على الشهادة؟"
       },
       {
         "who": "Kursleitung",
         "de": "Bestanden ist bestanden — das Zertifikat kommt nach vier Wochen per Post.",
-        "ar": "نجحتَ ولو شعرة: ستصلُك الشهادةُ بالبريدِ خلالَ أربعةِ أسابيع."
+        "ar": "النجاحُ نجاح: ستصلُك الشهادةُ بالبريدِ بعدَ أربعةِ أسابيع."
       },
       {
         "who": "Firas",
         "de": "Fehlt für meine Aufenthaltserlaubnis nicht der Nachweis der Wiederholung?",
-        "ar": "وليس مطلوباً منّي إثباتُ إعادةٍ لإقامتي؟"
+        "ar": "ألا يُشترطُ لإقامتي إثباتُ إعادةِ الامتحان؟"
       },
       {
         "who": "Kursleitung",
         "de": "Bei Bestehen keine — Wiederholungen nur bei Nichtbestehen, maximal zweimal.",
-        "ar": "عندَ النجاحِ لا شيء؛ والإعادةُ للحاصلِ فقط على الراسب، مرتينِ كحدٍّ أقصى."
+        "ar": "عندَ النجاحِ لا شيء؛ والإعادةُ تكونُ فقط عندَ الرسوب، وبحدٍّ أقصى مرتين."
       },
       {
         "who": "Firas",
         "de": "Falls ich die B2-Prüfung ablegen will: Anmeldung über die Volkshochschule?",
-        "ar": "وإن أردتُ B2: التسجيلُ عبرَ جامعةِ الشعب؟"
+        "ar": "وإن أردتُ التقدُّمَ لامتحان B2: ألتسجيلُ عبرَ معهدِ تعليمِ الكبار؟"
       },
       {
         "who": "Kursleitung",
         "de": "Direkt über das Sprachenzentrum, Termin im Frühjahr — Warteliste inklusive.",
-        "ar": "من مركزِ اللغاتِ مباشرة؛ موعدُ الربيع، وقائمةُ الانتظارِ مضمَّنةٌ لك."
+        "ar": "عبرَ مركزِ اللغاتِ مباشرة؛ الموعدُ في الربيع، ومعه قائمةُ انتظار."
       },
       {
         "who": "Firas",
         "de": "Welche Fördermittel greifen bei wiederholtem Versuch?",
-        "ar": "وما المنحُ لمن أُعيدَ كرَّةُ الفشل؟"
+        "ar": "وما وسائلُ الدعمِ المتاحةِ عندَ إعادةِ المحاولة؟"
       },
       {
         "who": "Kursleitung",
         "de": "Die Kursträger können die Gebühren halbieren — Antrag binnen zwei Wochen.",
-        "ar": "قد يُخفِّضُ حاملو الدورةِ نصفَ الرسوم؛ فاطلبْ خلالَ أسبوعَين لا أكثر."
+        "ar": "يستطيعُ منظمو الدورةِ تخفيضَ الرسومِ إلى النصف؛ قدِّم الطلبَ خلالَ أسبوعين."
       }
     ],
     "questions": [
