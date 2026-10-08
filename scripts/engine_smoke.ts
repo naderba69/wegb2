@@ -9655,6 +9655,49 @@ void 0;
     "K201j حدود الصوت/CEFR/بشري/قانوني/ضريبي وW1–W6 مفتوحة والصوت بلا استماع");
 }
 
+
+/* ═══ K202 — سادس دفعة B2 d-b2-16..d-b2-18 (R128). ═══ */
+{
+  const reviewB206 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-06-2026-10-08.json", "utf8")) as any;
+  const reviewB206Md = readFileSync("docs/content-review-b2-dialogues-06-2026-10-08.md", "utf8");
+  const patchB206Src = readFileSync("scripts/patches/review_b2_dialogues_06.py", "utf8");
+  ok(reviewB206.reviewRule === "R128" && reviewB206.totals.dialogues === 3 &&
+    reviewB206.totals.lines === 24 && reviewB206.totals.questions === 9 && reviewB206.totals.dictation === 6 &&
+    reviewB206.totals.approximateUnits === 162,
+    "K202a سادس دفعة B2 d-b2-16..18 موثقة (24 سطراً، 9 أسئلة، 6 إملاءات، 162 وحدة)");
+  ok(reviewB206.corrections.length === 19 && reviewB206.judgement.corrected === 19 &&
+    reviewB206.judgement.unresolved === 0 && reviewB206.contentWarnings.length === 0,
+    "K202b تسعة عشر تصحيحاً عربياً مؤكدة بلا غير محسوم ولا تحذير نصي جديد");
+  ok(["d-b2-16.lines[0].ar","d-b2-16.lines[1].ar","d-b2-16.lines[2].ar","d-b2-16.lines[3].ar","d-b2-16.lines[5].ar"].every(u => reviewB206.corrections.some((c:any)=>c.unit===u)),
+    "K202c d-b2-16: خمسة تصحيحات (يتعارض/منفتحون، إعادة حجز، إعفاء من الرسم، غير قابل للإسقاط، 80٪)");
+  ok(["d-b2-17.lines[0].ar","d-b2-17.lines[1].ar","d-b2-17.lines[3].ar","d-b2-17.lines[4].ar","d-b2-17.lines[5].ar","d-b2-17.lines[6].ar","d-b2-17.lines[7].ar"].every(u => reviewB206.corrections.some((c:any)=>c.unit===u)),
+    "K202d d-b2-17: سبعة تصحيحات (شركة، شرط استرداد، التزام، يُوقَف الاستحقاق، ستصلكم، اتفاق خطي، قسم الأفراد)");
+  ok(["d-b2-18.lines[1].ar","d-b2-18.lines[2].ar","d-b2-18.lines[3].ar","d-b2-18.lines[4].ar","d-b2-18.lines[5].ar","d-b2-18.lines[6].ar","d-b2-18.lines[7].ar"].every(u => reviewB206.corrections.some((c:any)=>c.unit===u)),
+    "K202e d-b2-18: سبعة تصحيحات (طلب الإنهاء، Bonusheft/أمراض مزمنة، تصرف عبر الوصفة، تغطية بلا فجوات، تسوية محاسبية، ستصلكم)");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const locksOk206 = reviewB206.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
+    ["d-b2-16","d-b2-17","d-b2-18"].every((id)=>{
+      const dlg=dialoguesArr.find((x:any)=>x.id===id);
+      return dlg.lines.length===8 && dlg.questions.length===3 && dlg.dictation.length===2 &&
+        dlg.questions.every((q:any)=>Array.isArray(q.options) && q.options.length===3);
+    });
+  ok(locksOk206, "K202f كل الألماني/الأسئلة/الإملاءات مقفلة لم تتغير (24 سطراً، 9 أسئلة، 6 إملاءات)");
+  ok((reviewB206.contextNotes["d-b2-16"]?.length||0)>=3 && (reviewB206.contextNotes["d-b2-17"]?.length||0)>=3 &&
+     (reviewB206.contextNotes["d-b2-18"]?.length||0)>=3 && reviewB206.contentChecks.length >= 4 &&
+     reviewB206.judgement.note.includes("W1") && reviewB206.judgement.note.includes("W6"),
+    "K202g فحوص محتوى موثقة (4+) وملاحظات سياقية (3+ لكل حوار) وW1–W6 مفتوحة");
+  ok(patchB206Src.includes("<R128> patch complete") && patchB206Src.includes("locked DE lines:") &&
+     patchB206Src.includes("expected 19 fixes") && patchB206Src.includes("changes applied:"),
+    "K202h الرقعة تغطي الحوارات الثلاثة وتطبق التسعة عشر تصحيحاً وتطبع سطر النهاية");
+  const srcMap206 = reviewB206.sources as Record<string, any[]>;
+  ok(reviewB206Md.includes("## الحكم") && reviewB206Md.includes("## التصحيحات") &&
+    reviewB206Md.includes("## المصادر") && reviewB206Md.includes("K202") &&
+    (srcMap206["d-b2-16"]?.length||0)>=3 && (srcMap206["d-b2-17"]?.length||0)>=3 && (srcMap206["d-b2-18"]?.length||0)>=3,
+    "K202i التقرير العربي ومصادره (3+ لكل حوار، 10+ إجمالاً) يذكر K202");
+  ok(reviewB206.limits.human && reviewB206.limits.legal && reviewB206.audio.note.includes("لا استماع"),
+    "K202j حدود الصوت/CEFR/بشري/قانوني/مهني والصوت بلا استماع");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

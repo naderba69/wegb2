@@ -4696,22 +4696,22 @@
       {
         "who": "Nadia",
         "de": "Der Samstagstermin kollidiert mit meiner Schicht — gegen einen Tausch wäre offen?",
-        "ar": "موعدُ السبتِ يتصادمُ مع مناوبتي — أيجوزُ تبديلٌ؟"
+        "ar": "موعدُ السبت يتعارض مع مناوبتي — هل أنتم منفتحون على تبديل؟"
       },
       {
         "who": "Kursverwaltung",
         "de": "Plätze frei im Donnerstagsblock ab 18; Umbuchung kostet 15 Euro.",
-        "ar": "مقاعدُ شاغرةٌ في مجموعةِ الخميسِ من الساعة 18؛ والتحويلُ بـ15 يورو."
+        "ar": "أماكن شاغرة في مجموعة الخميس من الساعة 18؛ وإعادةُ الحجز تكلّف 15 يورو."
       },
       {
         "who": "Nadia",
         "de": "Wenn ich beim Füllen der Warteliste helfe — erlassen Sie die Gebühr?",
-        "ar": "إن أعنتُ في استكمالِ قائمةِ الانتظار — فتتنازلون عنِ الرسم؟"
+        "ar": "إن ساعدتُ في ملء قائمة الانتظار — أتعفونني من الرسم؟"
       },
       {
         "who": "Kursverwaltung",
         "de": "Fair — dann Tausch ohne Gebühr, aber die Anwesenheitspflicht bleibt heilig.",
-        "ar": "منصف — بلا رسوم، لكنَّ إلزامَ الحضورِ يبقى مقدَّسًا."
+        "ar": "منصف — إذن تبديل بلا رسم، لكنّ إلزامَ الحضور يظلّ غيرَ قابل للإسقاط."
       },
       {
         "who": "Nadia",
@@ -4721,7 +4721,7 @@
       {
         "who": "Kursverwaltung",
         "de": "Das Zertifikat setzt 80 Prozent Teilnahme voraus, nicht weniger.",
-        "ar": "يشترطُ الختامُ ثمانينَ بالمئةِ حضورًا لا أقلّ."
+        "ar": "تتطلّب الشهادةُ حضورَ ثمانينَ بالمئة على الأقلّ."
       },
       {
         "who": "Nadia",
@@ -4792,12 +4792,12 @@
       {
         "who": "Karim",
         "de": "Die Zertifikatskurse kosten 2.400 Euro — trägt die Firma einen Teil?",
-        "ar": "دوراتُ الاعتمادِ بـ2.400 يورو — أيتحمَّلُ المصنعُ جزءاً؟"
+        "ar": "دوراتُ الاعتماد بـ2.400 يورو — هل تتحمَّل الشركةُ جزءاً؟"
       },
       {
         "who": "Personalleitung",
         "de": "Bei Branchennähe ja; Rückzahlungsklausel bei Wechsel unter 24 Monaten.",
-        "ar": "لصلتها بمجالنا — بنُدَّ عنك إن انتقلتَ قبلَ أربعةَ وعشرين شهراً."
+        "ar": "نعم، إن كانت ذات صلةٍ بمجال عملنا؛ ويوجد شرطُ استردادٍ إن تركتَ الشركة قبل أربعة وعشرين شهراً."
       },
       {
         "who": "Karim",
@@ -4807,27 +4807,27 @@
       {
         "who": "Personalleitung",
         "de": "Zwei Tage pro Monat frei gegen Bindung an ein Jahr Weiterbildung.",
-        "ar": "يومانِ شهريّاً بإجازةٍ مدفوعةٍ مقابلَ ارتباطِ سنةٍ كاملة."
+        "ar": "يومانِ شهرياً إجازةً مدفوعةً مقابل التزامٍ بسنة تدريب."
       },
       {
         "who": "Karim",
         "de": "Und wenn ich während des Kurses Elterngeld nehme — Aussetzen?",
-        "ar": "وإن أخذتُ بدلَ الوالدية أثناءَ الدورة — نُبقيها مجمَّدة؟"
+        "ar": "وإن أخذتُ بدلَ الوالدية أثناء الدورة — هل يُوقَف الاستحقاق؟"
       },
       {
         "who": "Personalleitung",
         "de": "Der Anspruch ruht; wir verlängern die Bindung um die Pause, nicht die Kosten.",
-        "ar": "يتوقفُ الاستحقاق؛ نُطيلُ الارتباطَ بمقدارِ الغيابِ لا المال."
+        "ar": "يتوقّف الاستحقاق؛ نُمدّد فترة الالتزام بمدة التوقف، لا التكاليف."
       },
       {
         "who": "Karim",
         "de": "Schriftliche Vereinbarung über beides — dann melde ich mich an.",
-        "ar": "اتفاقٌ خطيٌّ للاثنين، وحينئذٍ أسجِّلُ اسمي."
+        "ar": "اتفاقٌ خطيّ يغطّي كلا الأمرَين، وعندها أسجّل نفسي."
       },
       {
         "who": "Personalleitung",
         "de": "Morgen im Personalbüro, mit Ihren Zusatzstunden im Vertrag.",
-        "ar": "غداً في قسمِ الأفراد، وستُدرَجُ الساعاتُ الإضافيةُ في عقدك."
+        "ar": "غداً في قسم شؤون الأفراد، وستصلكم الأوراق بعد إدراج الساعات الإضافية في عقدكم."
       }
     ],
     "questions": [
@@ -4893,37 +4893,37 @@
       {
         "who": "Kassenberatung",
         "de": "Frist läuft; die neue Kasse reicht die Kündigung digital ein.",
-        "ar": "الميعادُ جارٍ؛ وصندوقُك الجديدُ يتولّى الإبلاغَ رقمياً."
+        "ar": "المهلةُ لا تزال سارية؛ والصندوق الجديد يتولّى تقديمَ طلبِ الإنهاء رقميّاً."
       },
       {
         "who": "Sami",
         "de": "Was geschieht mit dem Bonusheft und den Dauermedikamenten?",
-        "ar": "ماذا يحدثُ لدفترِ المكافآتِ والأدويةِ المزمنة؟"
+        "ar": "ماذا يحدث لدفترِ نقاطِ المكافآت وأدوية الأمراض المزمنة؟"
       },
       {
         "who": "Kassenberatung",
         "de": "Das Heft bleibt gültig, die Medikamente laufen nahtlos über die elektronische Verordnung.",
-        "ar": "يبقى الدفترُ سارياً، والأدويةُ تنتقلُ دونَ انقطاعٍ عبرَ الوصفةِ الإلكترونية."
+        "ar": "يبقى الدفترُ سارياً، وتُصرفُ الأدويةُ دون انقطاع عبر الوصفة الإلكترونية."
       },
       {
         "who": "Sami",
         "de": "Lückenlos versichert — darf ich im Übergangsmonat zum Arzt?",
-        "ar": "تغطيةٌ متواصلة — أأذهبُ للطبيبِ في شهرِ العبور؟"
+        "ar": "التغطيةُ بلا فجوات — هل أستطيع زيارة الطبيب في شهر الانتقال؟"
       },
       {
         "who": "Kassenberatung",
         "de": "Ja, der Versicherungsschutz bleibt bis zum letzten Tag bestehen.",
-        "ar": "نعم — تظلُّ الحمايةُ ساريةً إلى آخرِ يومٍ من العقد."
+        "ar": "نعم — التغطيةُ التأمينية تظلُّ سارية حتى آخر يوم من العقد."
       },
       {
         "who": "Sami",
         "de": "Die Beitragsanteile des Arbeitgebers — wer rechnet ab?",
-        "ar": "وحصةُ صاحبِ العملِ من الاشتراكات — مَن يُسَوِّيها؟"
+        "ar": "أما حصة صاحب العمل من الاشتراكات فمن يجري تسويتَها محاسبياً؟"
       },
       {
         "who": "Kassenberatung",
         "de": "Die Buchhaltung beider Kassen tut das unter sich; Sie erhalten eine Sammelbescheinigung.",
-        "ar": "يتصالحُ محاسبو الصندوقَين بينهما، وتصلُك شهادةٌ إجماليةٌ موحَّدة."
+        "ar": "يقوم محاسبا الصندوقين بتسوية الحسابات فيما بينهما، وستصلكم شهادةٌ إجمالية."
       }
     ],
     "questions": [
