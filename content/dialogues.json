@@ -5560,12 +5560,12 @@
       {
         "who": "Selim",
         "de": "Die Sendung kam drei Tage später an, das Kühlpaket war offen.",
-        "ar": "وصلتِ الشحنةُ متأخرةً ثلاثةَ أيام، وكان ثلجُ التبريدِ مفتوحاً."
+        "ar": "وصلتِ الشحنةُ متأخرةً ثلاثةَ أيام، وكان كيسُ التبريدِ مفتوحاً."
       },
       {
         "who": "Servicecenter",
         "de": "Belegfotos, Packzettel und Zeitstempel der Tür — dann öffnen wir das Verfahren.",
-        "ar": "صورُ البضاعة، ورقةُ التعبئة، وختمُ الوقتِ عند الباب — فنفتحُ ملفاً."
+        "ar": "صورُ إثبات، وقائمةُ التعبئة، وطابعٌ زمنيٌّ عند الباب — فنفتحُ الإجراء."
       },
       {
         "who": "Selim",
@@ -5575,17 +5575,17 @@
       {
         "who": "Servicecenter",
         "de": "Rückerstattung plus 10-Euro-Gutschein — gutgeschrieben binnen 72 Stunden.",
-        "ar": "يُرَدُّ المبلغُ وتُهْدَى قسيمةُ 10 يوروهاتٍ خلالَ 72 ساعة."
+        "ar": "تُستردُّ الرسومُ وتُقيَّد قسيمةُ 10 يورو خلال 72 ساعة."
       },
       {
         "who": "Selim",
         "de": "Wenn der Kurier wiederholt öffnet — hat das Konsequenzen?",
-        "ar": "وإن تكرَّرَ فتحُ الحقائبِ — فماذا عليه؟"
+        "ar": "وإن كرّر الساعي فتح الطرود، فهل لذلك عواقب؟"
       },
       {
         "who": "Servicecenter",
         "de": "Wir protokollieren die Charge und setzen ihn bis zur Schulung vom Dienst.",
-        "ar": "نسجِّلُ الشحنةَ ونُوقِفُه عن الخدمةِ إلى أن يُدرَّب."
+        "ar": "نسجِّلُ الدفعةَ ونُوقِفُ الساعي عن العمل حتى اجتياز التدريب."
       },
       {
         "who": "Selim",
@@ -5595,7 +5595,7 @@
       {
         "who": "Servicecenter",
         "de": "Auf Deutsch reicht — unser Haus übersetzt für Sie ins Englische.",
-        "ar": "بالألمانيةِ تكفي؛ دارُنا تُترجمُها عنك إلى الإنجليزية."
+        "ar": "بالألمانية تكفي؛ قسمنا الداخلي يترجمها إلى الإنجليزية."
       }
     ],
     "questions": [
@@ -5656,27 +5656,27 @@
       {
         "who": "Amina",
         "de": "Meine Betreuerin geht in den Ruhestand — die Betreuung muss neu geordnet werden.",
-        "ar": "مشرفتي على التقاعد — فأعيِدوا توزيعَ الإشراف."
+        "ar": "مشرفتي ستتقاعد — فيجب إعادة ترتيب الإشراف."
       },
       {
         "who": "Dekan",
         "de": "Wir brauchen eine neue Erstprüferin mit gleicher Qualifikation, binnen sechs Wochen.",
-        "ar": "نحتاجُ ممتحنةً أولى بكفاءتِها نفسِها — في ستةِ أسابيع."
+        "ar": "نحتاج مشرفةً فاحصةً جديدةً بنفس المؤهل خلال ستة أسابيع."
       },
       {
         "who": "Amina",
         "de": "Herr Dr. Weiler erklärte sich bereit, sofern die Dissertationsrichtung bleibt.",
-        "ar": "الدكتور فايلرُ أبدى الاستعداد، بشرطِ بقاءِ اتجاهِ الرسالة."
+        "ar": "أبدى الدكتور فايلر استعداده، بشرط بقاء اتجاه الأطروحة."
       },
       {
         "who": "Dekan",
         "de": "Dann unterschreiben beide den Wechsel; die alten Gutachten werden übertragen.",
-        "ar": "إذن يوقِّعُ الاثنانِ الانتقال؛ وتُنقلُ التقييماتُ السابقةُ كما هي."
+        "ar": "إذن يوقّع كلا الطرفين على التبديل، وتُنقل التقارير السابقة كما هي."
       },
       {
         "who": "Amina",
         "de": "Verschiebt sich damit mein Kolloquiumstermin?",
-        "ar": "فهَل يتزحزحُ ميعادُ مناقشتي؟"
+        "ar": "فهل يتأخر موعد مناقشتي؟"
       },
       {
         "who": "Dekan",
@@ -5691,7 +5691,7 @@
       {
         "who": "Dekan",
         "de": "Zwei externe Gutachten — die Verwaltung holt sie bis Monatsende ein.",
-        "ar": "تقاريرُ خارجيةٌ اثنان — والإدارةُ تستحصِلُها بنهايةِ الشهر."
+        "ar": "تقريران خارجيان، وتستصدرهما الإدارة بنهاية الشهر."
       }
     ],
     "questions": [
@@ -5752,42 +5752,42 @@
       {
         "who": "Yara",
         "de": "Die Hecke meines Nachbarn ragt 40 Zentimeter auf mein Grundstück — die Mahnung half nicht.",
-        "ar": "سياجُ جاري يتدخَّلُ أربعينَ سنتيمترًا في أرضي — وما أفادَ الإنذارُ الخطّي."
+        "ar": "سياج جاري يمتد أربعين سنتيمتراً داخل أرضي، ولم يُجدِ الإنذار الخطي."
       },
       {
         "who": "Schiedsfrau",
         "de": "Vor der Klage gehört der Schlichtungsversuch zur Pflicht — dazu bin ich da.",
-        "ar": "قبلَ أيِّ دعوى تجبُ محاولةُ الصلح — ولأجلِها وُجِدَ مكتبي."
+        "ar": "قبل أي دعوى تكون محاولة الصلح واجبة — ولهذا أنا هنا."
       },
       {
         "who": "Yara",
         "de": "Wenn er die Grenze akzeptiert — verzichte ich auf Schadensersatz.",
-        "ar": "إن قبلَ بالحدّ — فأَتنازلتُ عنِ التعويض."
+        "ar": "إن قبل بالحد، سأتنازل عن التعويض."
       },
       {
         "who": "Schiedsfrau",
         "de": "Dann schlage ich einen Vergleich mit Frist zum Rückschnitt vor.",
-        "ar": "إذن أقترحُ صلحًا بمهلةٍ مُلزِمةٍ للتقليم."
+        "ar": "إذن أقترح تسويةً بمهلة لتقليم السياج."
       },
       {
         "who": "Yara",
         "de": "Und die Frist — kann die gerichtlich bestätigt werden?",
-        "ar": "وهَل تُصدَّقُ المهلةُ قضائيًّا؟"
+        "ar": "وهل تُصادَق على المهلة قضائياً؟"
       },
       {
         "who": "Schiedsfrau",
         "de": "Ja — bei Verstoß droht ein Zwangsgeld bis 250.000 Euro.",
-        "ar": "نعم — وكلُّ إخلالٍ يُعرِّضُ لغرامةٍ جبريةٍ تبلغُ 250.000 يورو."
+        "ar": "نعم — وفي حال المخالفة تُفرَض غرامة إجبارية تصل إلى 250000 يورو."
       },
       {
         "who": "Yara",
         "de": "Welche Unterlagen brauche ich für den Termin?",
-        "ar": "ما أوراقُ موعدِكِ؟"
+        "ar": "ما الأوراق المطلوبة للموعد؟"
       },
       {
         "who": "Schiedsfrau",
         "de": "Katasterauszug, Fotos mit Maßstab, die Mahnung von damals, zwei Zeugen genügen.",
-        "ar": "كشفٌ عقاري، صورٌ بمعيار، خطابُ الإنذار، وشاهدانِ يكفيان."
+        "ar": "كشفُ السجل العقاري، صورٌ بمقياس، خطابُ الإنذار، وشاهدان تكفي."
       },
       {
         "who": "Yara",
@@ -5797,7 +5797,7 @@
       {
         "who": "Schiedsfrau",
         "de": "Dann wird das Scheitern protokolliert — und die Klage wird zulässig.",
-        "ar": "يُحرَّرُ محضرُ الفشلِ — فتُصبِحُ الدعوى مقبولة."
+        "ar": "يُسجَّل فشل الصلح في محضر، فتصبح الدعوى مقبولة."
       }
     ],
     "questions": [
