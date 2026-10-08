@@ -8675,6 +8675,157 @@ void 0;
     "K193j التقرير العربي ومصادره (2+ لكل حوار، 7+ إجمالاً) يذكر K193");
 }
 
+// K194 — seventh B1 batch d-b1-22..d-b1-24 (R120).
+{
+  const reviewB107 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-07-2026-10-08.json", "utf8")) as any;
+  const reviewB107Md = readFileSync("docs/content-review-b1-dialogues-07-2026-10-08.md", "utf8");
+  const liveB107 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB107 = readFileSync("scripts/patches/review_b1_dialogues_07.py", "utf8");
+  const scope7 = ["d-b1-22", "d-b1-23", "d-b1-24"];
+  ok(reviewB107.reviewRule === "R120" && reviewB107.date === "2026-10-08" &&
+    JSON.stringify(reviewB107.dialogues.map((d: any) => d.id)) === JSON.stringify(scope7) &&
+    reviewB107.totals.lines === 24 && reviewB107.totals.questions === 9 && reviewB107.totals.dictation === 6,
+    "K194a دفعة B1 السابعة d-b1-22..24 موثقة (24 سطراً، 9 أسئلة، 6 إملاءات)");
+
+  ok(reviewB107.corrections.length === 18,
+    "K194b ثمانية عشر تصحيحاً عربياً مؤكداً (Sie الصريح، معانٍ ومصطلحات، إضافات محذوفة، أرقام وزمن، تحية وداع)");
+
+  const d22 = liveB107.find((d) => d.id === "d-b1-22");
+  const d23 = liveB107.find((d) => d.id === "d-b1-23");
+  const d24 = liveB107.find((d) => d.id === "d-b1-24");
+  ok(d22.lines[1].ar.includes("لكم الحق") && d22.lines[1].ar.includes("الصنفُ يخصُّ الطاولةَ المجاورة") &&
+    !d22.lines[1].ar.includes("لكِ الحق") &&
+    d22.lines[2].ar.includes("المبلغَ من فضلكم") && !d22.lines[2].ar.includes("المجموعَ") &&
+    d22.lines[5].ar.includes("أُبلِغَ داخلياً") && !d22.lines[5].ar.includes("رسمياً") &&
+    d22.lines[6].ar.includes("بالإنصافِ نعودُ —") && !d22.lines[6].ar.includes("غداً") &&
+    d22.lines[7].ar.includes("ليلةً سعيدة") && !d22.lines[7].ar.includes("سهرةً طيبة"),
+    "K194c d-b1-22: لكم الحق، الصنف يخص الطاولة المجاورة، المبلغ لا المجموع، داخلياً لا رسمياً، حذف غداً، ليلة سعيدة");
+
+  ok(d23.lines[0].ar.includes("إعادةُ ترتيبِ جدولِ المحاضرات") && d23.lines[0].ar.includes("المحاضرةُ مقابلَ التدريبِ العمليّ") &&
+    !d23.lines[0].ar.includes("صياغةَ جدولٍ") && !d23.lines[0].ar.includes("ضاقَ") &&
+    d23.lines[1].ar.includes("متى يقعُ تدريبُكِ العمليُّ") && !d23.lines[1].ar.includes("ما ساعاتُ") &&
+    d23.lines[3].ar.includes("المحاضرةُ متوفّرةٌ كتسجيلٍ") && d23.lines[3].ar.includes("في الدورةِ باء") &&
+    !d23.lines[3].ar.includes("تُنزَّلُ") && !d23.lines[3].ar.includes("القسمِ باء") &&
+    d23.lines[4].ar.includes("على الجامعةِ أن تعترفَ بالتدريبِ العمليّ") && !d23.lines[4].ar.includes("المنشأةُ معترفٌ") &&
+    d23.lines[5].ar.includes("تأكيدٌ من الشركةِ") && d23.lines[5].ar.includes("بحدٍّ أقصى") && !d23.lines[5].ar.includes("رسالةُ اعتمادٍ") &&
+    d23.lines[6].ar.includes("الشركةُ خطاباً") && !d23.lines[6].ar.includes("المنشأةُ كتاباً") &&
+    d23.lines[7].ar.includes("بلا صيغةٍ رسمية") && d23.lines[7].ar.includes("خطّيّ — يكفي") &&
+    !d23.lines[7].ar.includes("غيرُ مُختم") && !d23.lines[7].ar.includes("بموضوعٍ وساعاتٍ"),
+    "K194d d-b1-23: إعادة ترتيب الجدول وسؤال «متى»، الجامعة لا المنشأة، الدورة لا القسم، تأكيد الشركة وخطاب وبريد formlos schriftlich");
+
+  ok(d24.lines[0].ar.includes("أمسِ مساءً") && d24.lines[0].ar.includes("حقيبةَ الحاسوبِ") && !d24.lines[0].ar.includes("وفيها حاسوبي") &&
+    d24.lines[1].ar.includes("الخطُّ والمحطة") && !d24.lines[1].ar.includes("الرقمُ والمحطة") &&
+    d24.lines[3].ar.includes("غرضٌ معثورٌ عليه") && d24.lines[3].ar.includes("الثامنةَ وعشرينَ دقيقةً مساءً") &&
+    !d24.lines[3].ar.includes("وِجادةٌ") && !d24.lines[3].ar.includes("العشرينُ والعشرون") &&
+    d24.lines[5].ar.includes("من التاسعة") && d24.lines[5].ar.includes("إثباتُ الملكية") &&
+    d24.lines[6].ar.includes("لقطاتٍ للجهاز") && !d24.lines[6].ar.includes("من حاسوبي") &&
+    d24.lines[7].ar.includes("أربعةَ عشرَ يوماً للحفظ") && d24.lines[7].ar.includes("مخزنُ المزادِ") &&
+    d24.lines[7].ar.includes("فلتحضروا في الموعد") && !d24.lines[7].ar.includes("أسبوعانِ") && !d24.lines[7].ar.includes("باكراً"),
+    "K194e d-b1-24: الخط لا الرقم، 20:20 بالحروف، من التاسعة، لقطات للجهاز، 14 يوماً للحفظ ثم مخزن المزاد، pünktlich=في الموعد");
+
+  // Locked DE/who/questions/dictations.
+  const expectedDE7: Record<string, string[]> = {
+    "d-b1-22": [
+      "Auf der Rechnung steht Mineralwasser — wir haben nichts bestellt.",
+      "Ich prüfe das System … Sie haben recht — das ging an den Nebentisch.",
+      "Bitte korrigieren Sie den Betrag vor dem Bezahlen.",
+      "Zwölf Euro weniger: sechsundzwanzig statt achtunddreißig.",
+      "Außerdem kam die Hauptspeise kalt.",
+      "Das Dessert geht aufs Haus — Küche ist intern gemeldet.",
+      "Mit Fairness kommt man wieder — danke.",
+      "Bis zum nächsten Besuch, gute Nacht!",
+    ],
+    "d-b1-23": [
+      "Ich muss den Stundenplan umbauen: Vorlesung gegen Praktikum.",
+      "Wann liegt das Praktikum?",
+      "Täglich acht bis zwölf — Fabrik im Industriegebiet.",
+      "Die Vorlesung gibt es als Aufzeichnung; wir buchen Kurs B.",
+      "Muss die Uni das Praktikum anerkennen?",
+      "Ja: Bestätigung der Firma mit Zeiten, maximal dreißig Wochenstunden.",
+      "Und wenn die Firma kein Schreiben ausstellt?",
+      "Eine E-Mail der Chefin — formlos, aber schriftlich — genügt.",
+    ],
+    "d-b1-24": [
+      "Gestern Abend verlor ich im Bus die Laptoptasche.",
+      "Linie und Haltestelle — genau, bitte.",
+      "Linie sechsundzwanzig, Endhaltestelle, Sitz hinten links.",
+      "Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt.",
+      "Wann kann ich abholen?",
+      "Ab neun — Ausweis und Eigentumsnachweis: Rechnung oder Fotos.",
+      "Ich bringe Rechnung und Screenshots des Geräts.",
+      "Vierzehn Tage Aufbewahrung, dann Versteigerungslager — kommen Sie pünktlich.",
+    ],
+  };
+  const expectedWho7: Record<string, string[]> = {
+    "d-b1-22": ["Leila","Ober","Leila","Ober","Leila","Ober","Leila","Ober"],
+    "d-b1-23": ["Maha","Beraterin","Maha","Beraterin","Maha","Beraterin","Maha","Beraterin"],
+    "d-b1-24": ["Wassim","Polizist","Wassim","Polizist","Wassim","Polizist","Wassim","Polizist"],
+  };
+  const expectedAnswers7: Record<string, any[]> = {
+    "d-b1-22": ["das Mineralwasser", "mit einem Dessert aufs Haus", "sechsundzwanzig Euro"],
+    "d-b1-23": ["die Vorlesung und das Praktikum", "dreißig Wochenstunden", "eine formlose E-Mail der Chefin"],
+    "d-b1-24": ["Verlust im Bus", "Ausweis und Eigentumsnachweis", "vierzehn Tage"],
+  };
+  const expectedDict7: Record<string, string[]> = {
+    "d-b1-22": [
+      "Zwölf Euro weniger: sechsundzwanzig statt achtunddreißig.",
+      "Das Dessert geht aufs Haus — Küche ist intern gemeldet.",
+    ],
+    "d-b1-23": [
+      "Ja: Bestätigung der Firma mit Zeiten, maximal dreißig Wochenstunden.",
+      "Eine E-Mail der Chefin — formlos, aber schriftlich — genügt.",
+    ],
+    "d-b1-24": [
+      "Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt.",
+      "Vierzehn Tage Aufbewahrung, dann Versteigerungslager — kommen Sie pünktlich.",
+    ],
+  };
+  let locksOk7 = true;
+  for (const did of scope7) {
+    const dlg = liveB107.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE7[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE7[did][i] || dlg.lines[i].who !== expectedWho7[did][i]) locksOk7 = false;
+    }
+    for (let i = 0; i < expectedAnswers7[did].length; i++) {
+      if (dlg.questions[i].answer !== expectedAnswers7[did][i]) locksOk7 = false;
+    }
+    for (let i = 0; i < expectedDict7[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict7[did][i]) locksOk7 = false;
+    }
+  }
+  ok(locksOk7, "K194f كل الألماني/who/الأسئلة/الإملاءات مقفلة لم تتغير (24/9/6)");
+
+  ok(reviewB107.judgement.corrected === 18 && reviewB107.judgement.unresolved === 0 &&
+    reviewB107.waisen.present === false &&
+    patchSourceB107.includes("d-b1-22") && patchSourceB107.includes("d-b1-23") &&
+    patchSourceB107.includes("d-b1-24") && patchSourceB107.includes("<R120> patch complete"),
+    "K194g الرقعة تغطي الثلاثة حوارات وتطبق الثمانية عشر تصحيحاً وتطبع سطر النهاية");
+
+  ok(reviewB107.contextNotes["d-b1-22"] && reviewB107.contextNotes["d-b1-23"] && reviewB107.contextNotes["d-b1-24"] &&
+    reviewB107.styleAlternatives["d-b1-22"] && reviewB107.styleAlternatives["d-b1-24"] &&
+    Array.isArray(reviewB107.contentWarnings) && reviewB107.contentWarnings.length === 1 &&
+    reviewB107.contentWarnings[0].id === "W2" && reviewB107.contentWarnings[0].dialogue === "d-b1-24" &&
+    reviewB107.contentWarnings[0].modified === false && reviewB107.contentWarnings[0].statement.includes("ستة أشهر") &&
+    reviewB107.contentChecks.length >= 3 &&
+    reviewB107.contextNotes["d-b1-23"].some((n: any) => n.note.includes("Werkstudentenprivileg")) &&
+    reviewB107.contextNotes["d-b1-24"].some((n: any) => n.note.includes("§ 965 BGB")) &&
+    reviewB107Md.includes("## تحذيرات محتوى"),
+    "K194h تحذير محتوى واحد موثق (W2: 14 يوماً للحفظ مقابل ستة أشهر § 973 BGB) مع ملاحظات سياقية (مطعم/جامعة/مفقودات) وفحوص");
+
+  ok(reviewB107.limits.audio.includes("لا استماع") && reviewB107.limits.cefr.includes("لم يُعد") &&
+    reviewB107.limits.human.includes("ليست") &&
+    reviewB107.limits.legal.length > 0 && reviewB107.limits.medical.length > 0 &&
+    reviewB107.limits.professional.length > 0,
+    "K194i حدود الصوت/CEFR/بشري/قانوني/طبي/إداري معلنة");
+
+  const srcMap7 = reviewB107.sources as Record<string, any[]>;
+  ok(reviewB107Md.includes("## الحكم") && reviewB107Md.includes("## التصحيحات") &&
+    reviewB107Md.includes("## المصادر") && reviewB107Md.includes("K194") &&
+    Object.keys(srcMap7).every((k) => srcMap7[k].length >= 3) &&
+    Object.values(srcMap7).reduce((n: number, v: any[]) => n + v.length, 0) >= 10,
+    "K194j التقرير العربي ومصادره (3+ لكل حوار، 10+ إجمالاً) يذكر K194");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

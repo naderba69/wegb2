@@ -3567,12 +3567,12 @@
       {
         "who": "Ober",
         "de": "Ich prüfe das System … Sie haben recht — das ging an den Nebentisch.",
-        "ar": "أُراجِعُ النظام… لكِ الحق، إنها الطاولةُ المجاورة."
+        "ar": "أُراجِعُ النظام… لكم الحق — الصنفُ يخصُّ الطاولةَ المجاورة."
       },
       {
         "who": "Leila",
         "de": "Bitte korrigieren Sie den Betrag vor dem Bezahlen.",
-        "ar": "أصلِحوا المجموعَ من فضلكم قبلَ الدفع."
+        "ar": "أصلِحوا المبلغَ من فضلكم قبلَ الدفع."
       },
       {
         "who": "Ober",
@@ -3587,17 +3587,17 @@
       {
         "who": "Ober",
         "de": "Das Dessert geht aufs Haus — Küche ist intern gemeldet.",
-        "ar": "الحلوى من حسابِ الدار، والمطبخُ أُبلِغَ رسمياً."
+        "ar": "الحلوى من حسابِ الدار، والمطبخُ أُبلِغَ داخلياً."
       },
       {
         "who": "Leila",
         "de": "Mit Fairness kommt man wieder — danke.",
-        "ar": "بالإنصافِ نعودُ غداً — شكراً."
+        "ar": "بالإنصافِ نعودُ — شكراً."
       },
       {
         "who": "Ober",
         "de": "Bis zum nächsten Besuch, gute Nacht!",
-        "ar": "وإلى اللقاء، وسهرةً طيبة!"
+        "ar": "وإلى اللقاء، وليلةً سعيدة!"
       }
     ],
     "questions": [
@@ -3655,12 +3655,12 @@
       {
         "who": "Maha",
         "de": "Ich muss den Stundenplan umbauen: Vorlesung gegen Praktikum.",
-        "ar": "أُعيدُ صياغةَ جدولٍ ضاقَ عن موعدين."
+        "ar": "عليَّ إعادةُ ترتيبِ جدولِ المحاضرات: المحاضرةُ مقابلَ التدريبِ العمليّ."
       },
       {
         "who": "Beraterin",
         "de": "Wann liegt das Praktikum?",
-        "ar": "ما ساعاتُ تدريبِكِ العمليّ؟"
+        "ar": "متى يقعُ تدريبُكِ العمليُّ؟"
       },
       {
         "who": "Maha",
@@ -3670,27 +3670,27 @@
       {
         "who": "Beraterin",
         "de": "Die Vorlesung gibt es als Aufzeichnung; wir buchen Kurs B.",
-        "ar": "محاضرتُك تُنزَّلُ مسجَّلة — فنحوِّلُك إلى القسمِ باء."
+        "ar": "المحاضرةُ متوفّرةٌ كتسجيلٍ — وسنسجِّلُك في الدورةِ باء."
       },
       {
         "who": "Maha",
         "de": "Muss die Uni das Praktikum anerkennen?",
-        "ar": "أالمنشأةُ معترفٌ بتدريبِها عندكم؟"
+        "ar": "وهل يجبُ على الجامعةِ أن تعترفَ بالتدريبِ العمليّ؟"
       },
       {
         "who": "Beraterin",
         "de": "Ja: Bestätigung der Firma mit Zeiten, maximal dreißig Wochenstunden.",
-        "ar": "نعم: رسالةُ اعتمادٍ بالمواعيد، وحدُّها ثلاثونَ ساعةً أسبوعياً."
+        "ar": "نعم: تأكيدٌ من الشركةِ بالمواعيد، بحدٍّ أقصى ثلاثونَ ساعةً أسبوعياً."
       },
       {
         "who": "Maha",
         "de": "Und wenn die Firma kein Schreiben ausstellt?",
-        "ar": "وإن لم تُصدِرِ المنشأةُ كتاباً؟"
+        "ar": "وإن لم تُصدِرِ الشركةُ خطاباً؟"
       },
       {
         "who": "Beraterin",
         "de": "Eine E-Mail der Chefin — formlos, aber schriftlich — genügt.",
-        "ar": "بريدُ المديرةِ بموضوعٍ وساعاتٍ يكفيه غيرُ مُختم."
+        "ar": "بريدُ المديرةِ الإلكترونيُّ — بلا صيغةٍ رسمية، لكن خطّيّ — يكفي."
       }
     ],
     "questions": [
@@ -3748,12 +3748,12 @@
       {
         "who": "Wassim",
         "de": "Gestern Abend verlor ich im Bus die Laptoptasche.",
-        "ar": "أمسَ أضعتُ في الحافلةِ حقيبةً وفيها حاسوبي."
+        "ar": "أمسِ مساءً أضعتُ في الحافلةِ حقيبةَ الحاسوبِ."
       },
       {
         "who": "Polizist",
         "de": "Linie und Haltestelle — genau, bitte.",
-        "ar": "الرقمُ والمحطة — بدقّةٍ رجاءً."
+        "ar": "الخطُّ والمحطة — بدقّةٍ، رجاءً."
       },
       {
         "who": "Wassim",
@@ -3763,7 +3763,7 @@
       {
         "who": "Polizist",
         "de": "Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt.",
-        "ar": "وِجادةٌ أُبلِغَ عنها العشرينُ والعشرون، فوافقَها وصفُك."
+        "ar": "غرضٌ معثورٌ عليه أُبلِغَ عنه الساعةَ الثامنةَ وعشرينَ دقيقةً مساءً — والوصفُ مطابق."
       },
       {
         "who": "Wassim",
@@ -3773,17 +3773,17 @@
       {
         "who": "Polizist",
         "de": "Ab neun — Ausweis und Eigentumsnachweis: Rechnung oder Fotos.",
-        "ar": "التاسعة: الهويّةُ وإثباتُ ملكية: فاتورةٌ أو صور."
+        "ar": "من التاسعة — الهويّةُ وإثباتُ الملكية: فاتورةٌ أو صور."
       },
       {
         "who": "Wassim",
         "de": "Ich bringe Rechnung und Screenshots des Geräts.",
-        "ar": "سأجيءُ بالفاتورةِ ولقطاتٍ من حاسوبي."
+        "ar": "سأجيءُ بالفاتورةِ ولقطاتٍ للجهاز."
       },
       {
         "who": "Polizist",
         "de": "Vierzehn Tage Aufbewahrung, dann Versteigerungslager — kommen Sie pünktlich.",
-        "ar": "أسبوعانِ في خزانتِنا ثم مزاد — فلتأتِ باكراً."
+        "ar": "أربعةَ عشرَ يوماً للحفظ، ثم مخزنُ المزادِ — فلتحضروا في الموعد."
       }
     ],
     "questions": [
