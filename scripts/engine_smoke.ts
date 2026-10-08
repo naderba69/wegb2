@@ -9338,6 +9338,132 @@ void 0;
     "K198j حدود الصوت/CEFR/بشري/قانوني/طبي/مهني وملاحظات سياقية (3+ لكل حوار) والصوت بلا استماع");
 }
 
+// K199 — third B2 batch d-b2-07..d-b2-09 (R125).
+{
+  const reviewB203 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-03-2026-10-08.json", "utf8")) as any;
+  const reviewB203Md = readFileSync("docs/content-review-b2-dialogues-03-2026-10-08.md", "utf8");
+  const liveB203 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB203 = readFileSync("scripts/patches/review_b2_dialogues_03.py", "utf8");
+  const scope203 = ["d-b2-07", "d-b2-08", "d-b2-09"];
+  ok(reviewB203.reviewRule === "R125" && reviewB203.date === "2026-10-08" &&
+    JSON.stringify(reviewB203.dialogues.map((d: any) => d.id)) === JSON.stringify(scope203) &&
+    reviewB203.totals.lines === 17 && reviewB203.totals.questions === 6 &&
+    reviewB203.totals.dictation === 7 && reviewB203.totals.approximateUnits === 116,
+    "K199a ثالث دفعة B2 d-b2-07..09 موثقة (17 سطراً، 6 أسئلة، 7 إملاءات، 116 وحدة)");
+
+  ok(reviewB203.corrections.length === 9 && reviewB203.judgement.corrected === 9 &&
+    reviewB203.judgement.unresolved === 0 && reviewB203.waisen.present === false &&
+    Array.isArray(reviewB203.contentWarnings) && reviewB203.contentWarnings.length === 0,
+    "K199b تسعة تصحيحات عربية مؤكدة بلا غير محسوم ولا تحذير نصي جديد");
+
+  const d207 = liveB203.find((d) => d.id === "d-b2-07");
+  ok(d207.lines[2].ar.includes("بشرطِ أن تختصروا مهلةَ التسليم") &&
+    d207.lines[2].ar.includes("لدفع خمسةٍ بالمئة زيادةً") &&
+    !d207.lines[2].ar.includes("في حال اختصاركم") && !d207.lines[2].ar.includes("5%"),
+    "K199c d-b2-07: sofern=بشرط، Frist=مهلة، والنسبة بالحروف لا رمزاً");
+
+  const d208 = liveB203.find((d) => d.id === "d-b2-08");
+  ok(d208.lines[0].ar.includes("تقيّمون") && !d208.lines[0].ar.includes("تقيّمين") &&
+    d208.lines[3].ar.includes("بالكاد يمكن تعميم النتائج") && !d208.lines[3].ar.includes("يصعب تعميمها") &&
+    d208.lines[4].ar.includes("يمكنكم التعمق") && !d208.lines[4].ar.includes("يمكنك التعمق") &&
+    d208.lines[5].ar.includes("سأضيف قسماً") && !d208.lines[5].ar.includes("فصلاً"),
+    "K199d d-b2-08: تقيّمون/يمكنكم (Sie)، بالكاد لا يصعب، وقسمٌ لا فصل");
+
+  const d209 = liveB203.find((d) => d.id === "d-b2-09");
+  ok(d209.lines[0].ar.includes("تقدّمتم") && !d209.lines[0].ar.includes("تقدّمتِ") &&
+    d209.lines[2].ar.includes("قوّتكم؟") && !d209.lines[2].ar.includes("قوّتك؟") &&
+    d209.lines[4].ar.includes("لديكم أسئلة") && !d209.lines[4].ar.includes("لديك أسئلة") &&
+    d209.lines[5].ar.includes("فترة التهيئة") && !d209.lines[5].ar.includes("مرحلة التأهيل"),
+    "K199e d-b2-09: تقدّمتم/قوّتكم/لديكم (Sie) وفترة التهيئة لا مرحلة التأهيل");
+
+  const expectedDE203: Record<string, string[]> = {
+    "d-b2-07": [
+      "Die von Ihnen angebotenen Konditionen decken unsere Kosten kaum.",
+      "Angesichts der Marktlage halten wir unser Angebot für fair.",
+      "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
+      "Einverstanden, unter der Bedingung einer längeren Vertragslaufzeit.",
+      "Das können wir prüfen. Dann machen wir nächste Woche weiter.",
+    ],
+    "d-b2-08": [
+      "Frau Haddad, wie bewerten Sie diese Studie?",
+      "Methodisch stark, aber die Stichprobe ist zu klein.",
+      "Inwiefern ist das ein Problem?",
+      "Die Ergebnisse lassen sich kaum verallgemeinern.",
+      "Guter Punkt. Könnten Sie das im Paper vertiefen?",
+      "Ja, ich ergänze einen Abschnitt über die Grenzen der Forschung.",
+    ],
+    "d-b2-09": [
+      "Warum haben Sie sich bei uns beworben?",
+      "Ihre Firma arbeitet an nachhaltigen Projekten – genau das interessiert mich.",
+      "Was ist Ihre größte Stärke?",
+      "Ich arbeite strukturiert und bleibe auch unter Druck ruhig.",
+      "Haben Sie Fragen an uns?",
+      "Ja: Wie sieht die Einarbeitung in den ersten Wochen aus?",
+    ],
+  };
+  const expectedAnswers203: Record<string, any[]> = {
+    "d-b2-07": [["Prozent", "prozent"], "eine längere Vertragslaufzeit"],
+    "d-b2-08": ["die zu kleine Stichprobe", "einen Abschnitt über die Grenzen der Forschung"],
+    "d-b2-09": ["wegen der nachhaltigen Projekte", "strukturiertes Arbeiten und Ruhe unter Druck"],
+  };
+  const expectedDict203: Record<string, string[]> = {
+    "d-b2-07": [
+      "Angesichts der Marktlage halten wir unser Angebot für fair.",
+      "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
+      "Unter der Bedingung einer längeren Vertragslaufzeit.",
+    ],
+    "d-b2-08": [
+      "Methodisch stark, aber die Stichprobe ist zu klein.",
+      "Die Ergebnisse lassen sich kaum verallgemeinern.",
+    ],
+    "d-b2-09": [
+      "Was ist Ihre größte Stärke?",
+      "Ich arbeite strukturiert und bleibe auch unter Druck ruhig.",
+    ],
+  };
+  let locksOk203 = true;
+  for (const did of scope203) {
+    const dlg = liveB203.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE203[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE203[did][i]) locksOk203 = false;
+    }
+    for (let i = 0; i < expectedAnswers203[did].length; i++) {
+      if (JSON.stringify(dlg.questions[i].answer) !== JSON.stringify(expectedAnswers203[did][i])) locksOk203 = false;
+    }
+    for (let i = 0; i < expectedDict203[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict203[did][i]) locksOk203 = false;
+    }
+  }
+  ok(locksOk203, "K199f كل الألماني/الأسئلة/الإملاءات مقفلة لم تتغير (17 سطراً، 6 أسئلة، 7 إملاءات)");
+
+  ok(reviewB203.contentChecks.length >= 5 && reviewB203.judgement.note.includes("W5") &&
+    reviewB203.contentWarnings.length === 0,
+    "K199g فحوص محتوى موثقة (5+) وW5 السابق مذكور مفتوحاً بلا تحذير جديد");
+
+  ok(patchSourceB203.includes("d-b2-07") && patchSourceB203.includes("d-b2-08") &&
+    patchSourceB203.includes("d-b2-09") && patchSourceB203.includes("<R125> patch complete") &&
+    reviewB203.corrections.length === 9,
+    "K199h الرقعة تغطي الحوارات الثلاثة وتطبق التسعة تصحيحات وتطبع سطر النهاية");
+
+  const srcMap203 = reviewB203.sources as Record<string, any[]>;
+  ok(reviewB203Md.includes("## الحكم") && reviewB203Md.includes("## التصحيحات") &&
+    reviewB203Md.includes("## المصادر") && reviewB203Md.includes("K199") &&
+    Object.keys(srcMap203).every((k) => srcMap203[k].length >= 3) &&
+    Object.values(srcMap203).reduce((n: number, v: any[]) => n + v.length, 0) >= 9,
+    "K199i التقرير العربي ومصادره (3+ لكل حوار، 9+ إجمالاً) يذكر K199");
+
+  ok(reviewB203.limits.audio.includes("لا استماع") && reviewB203.limits.cefr.includes("لم يُعد") &&
+    reviewB203.limits.human.includes("ليست") &&
+    reviewB203.limits.legal.length > 0 && reviewB203.limits.medical.length > 0 &&
+    reviewB203.limits.professional.length > 0 &&
+    reviewB203.contextNotes["d-b2-07"].length >= 3 && reviewB203.contextNotes["d-b2-08"].length >= 3 &&
+    reviewB203.contextNotes["d-b2-09"].length >= 3 &&
+    reviewB203.styleAlternatives["d-b2-07"] && reviewB203.styleAlternatives["d-b2-08"] &&
+    reviewB203.styleAlternatives["d-b2-09"] &&
+    reviewB203.audio.note.includes("لا استماع"),
+    "K199j حدود الصوت/CEFR/بشري/قانوني/طبي/مهني وملاحظات سياقية (3+ لكل حوار) والصوت بلا استماع");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

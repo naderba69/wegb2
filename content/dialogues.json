@@ -1811,7 +1811,7 @@
       {
         "who": "Einkäufer",
         "de": "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
-        "ar": "في حال اختصاركم أجل التسليم نكون مستعدين لزيادة 5%."
+        "ar": "بشرطِ أن تختصروا مهلةَ التسليم نكون مستعدين لدفع خمسةٍ بالمئة زيادةً."
       },
       {
         "who": "Anbieter",
@@ -2298,7 +2298,7 @@
       {
         "who": "Dozentin",
         "de": "Frau Haddad, wie bewerten Sie diese Studie?",
-        "ar": "سيدة حداد، كيف تقيّمين هذه الدراسة؟"
+        "ar": "سيدة حداد، كيف تقيّمون هذه الدراسة؟"
       },
       {
         "who": "Layla",
@@ -2313,17 +2313,17 @@
       {
         "who": "Layla",
         "de": "Die Ergebnisse lassen sich kaum verallgemeinern.",
-        "ar": "النتائج يصعب تعميمها."
+        "ar": "بالكاد يمكن تعميم النتائج."
       },
       {
         "who": "Dozentin",
         "de": "Guter Punkt. Könnten Sie das im Paper vertiefen?",
-        "ar": "نقطة جيدة. هل يمكنك التعمق في ذلك في الورقة؟"
+        "ar": "نقطة جيدة. هل يمكنكم التعمق في ذلك في الورقة؟"
       },
       {
         "who": "Layla",
         "de": "Ja, ich ergänze einen Abschnitt über die Grenzen der Forschung.",
-        "ar": "نعم، سأضيف فصلاً عن حدود البحث."
+        "ar": "نعم، سأضيف قسماً عن حدود البحث."
       }
     ],
     "questions": [
@@ -2372,7 +2372,7 @@
       {
         "who": "Personalchefin",
         "de": "Warum haben Sie sich bei uns beworben?",
-        "ar": "لماذا تقدّمتِ للعمل عندنا؟"
+        "ar": "لماذا تقدّمتم للعمل عندنا؟"
       },
       {
         "who": "Sami",
@@ -2382,7 +2382,7 @@
       {
         "who": "Personalchefin",
         "de": "Was ist Ihre größte Stärke?",
-        "ar": "ما أكبر نقاط قوّتك؟"
+        "ar": "ما أكبر نقاط قوّتكم؟"
       },
       {
         "who": "Sami",
@@ -2392,12 +2392,12 @@
       {
         "who": "Personalchefin",
         "de": "Haben Sie Fragen an uns?",
-        "ar": "هل لديك أسئلة لنا؟"
+        "ar": "هل لديكم أسئلة لنا؟"
       },
       {
         "who": "Sami",
         "de": "Ja: Wie sieht die Einarbeitung in den ersten Wochen aus?",
-        "ar": "نعم: كيف تبدو مرحلة التأهيل في الأسابيع الأولى؟"
+        "ar": "نعم: كيف تبدو فترة التهيئة في الأسابيع الأولى؟"
       }
     ],
     "questions": [
