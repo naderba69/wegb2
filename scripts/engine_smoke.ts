@@ -8128,6 +8128,138 @@ void 0;
     "K189j عدد الإملاءات 7 (3+2+2) مقفل");
 }
 
+// K190 — third B1 batch d-b1-10..d-b1-12 (R116).
+{
+  const reviewB103 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-03-2026-10-08.json", "utf8")) as any;
+  const reviewB103Md = readFileSync("docs/content-review-b1-dialogues-03-2026-10-08.md", "utf8");
+  const liveB103 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB103 = readFileSync("scripts/patches/review_b1_dialogues_03.py", "utf8");
+  const scope = ["d-b1-10", "d-b1-11", "d-b1-12"];
+  ok(reviewB103.reviewRule === "R116" && reviewB103.date === "2026-10-08" &&
+    JSON.stringify(reviewB103.dialogues.map((d: any) => d.id)) === JSON.stringify(scope) &&
+    reviewB103.totals.lines === 25 && reviewB103.totals.questions === 9 && reviewB103.totals.dictation === 6,
+    "K190a دفعة B1 الثالثة d-b1-10..12 موثقة (25 سطراً، 9 أسئلة، 6 إملاءات)");
+
+  ok(reviewB103.corrections.length === 7,
+    "K190b سبعة تصحيحات عربية مؤكدة (تحية، صيغة Sie، إضافات زائدة، Herd=موقد، صياغة طبية)");
+
+  // Verify specific corrections applied in content.
+  const d10 = liveB103.find((d) => d.id === "d-b1-10");
+  const d11 = liveB103.find((d) => d.id === "d-b1-11");
+  const d12 = liveB103.find((d) => d.id === "d-b1-12");
+  ok(d10.lines[0].ar.startsWith("طابَ يومُكم") && !d10.lines[0].ar.includes("مساءُ") &&
+    d10.lines[1].ar.includes("أجريتُم") && !d10.lines[1].ar.includes("أجريتِ") &&
+    d10.lines[3].ar.includes("تناسبكم") && d10.lines[3].ar.includes("الساعةَ التاسعة"),
+    "K190c تحية Guten Tag→طاب يومكم، Sie→جمع في سطري Yara، إضافة الساعة في الموعد");
+
+  ok(!d11.lines[0].ar.includes("في الصور") &&
+    d11.lines[1].ar.includes("الموقد") && !d11.lines[1].ar.includes("البوق"),
+    "K190d حذف الإضافة «في الصور» وتصحيح Herd=الموقد");
+
+  ok(!d12.lines[3].ar.includes("بكتيريا") && d12.lines[3].ar.includes("عدوى فيروسية") &&
+    d12.lines[5].ar.includes("لا يجوز له الذهاب") && !d12.lines[5].ar.includes("فحتى") &&
+    !d12.lines[5].ar.includes("ذروة"),
+    "K190e حذف «لا بكتيرية» الزائدة، صياغة darf-nitch-sit-temp+bis بشكل سليم");
+
+  // Locked DE/who/questions/dictations.
+  const expectedDE: Record<string, string[]> = {
+    "d-b1-10": [
+      "Guten Tag, ich möchte mich für den Deutschkurs anmelden.",
+      "Sehr gern. Haben Sie den Einstufungstest schon gemacht?",
+      "Noch nicht — ist das Pflicht?",
+      "Ja, sonst passt die Gruppe nicht. Der Test ist Donnerstag um neun.",
+      "Was kostet der Kurs pro Monat?",
+      "Dreiundachtzig Euro — die Prüfung ist inklusive.",
+      "Brauche ich einen Nachweis über meinen Aufenthalt?",
+      "Nur Pass und Meldebescheinigung. Bis Donnerstag!",
+    ],
+    "d-b1-11": [
+      "Danke für den Termin — die Anzeige klang vielversprechend.",
+      "Gern. Die Küche ist möbliert: Herd, Spüle und Schränke bleiben.",
+      "Sind Wasser und Heizung in der Miete enthalten?",
+      "Nein — Kaltmiete vierhundertfünfzig, Nebenkosten kommen dazu.",
+      "Die Wohnung wäre perfekt — wann wird sie frei?",
+      "Zum Ersten. Ich brauche Selbstauskunft und Schufa.",
+      "Die Unterlagen kommen bis morgen per Mail — und die Kaution?",
+      "Zwei Monatsmieten, wie immer. Herzlich willkommen, wenn alles passt.",
+    ],
+    "d-b1-12": [
+      "Mein Sohn hat seit gestern Fieber und einen Ausschlag.",
+      "Seit wann genau, und hat er Ungewohntes gegessen?",
+      "Seit gestern Abend — und nein, wir sind da sehr vorsichtig.",
+      "Mund auf, bitte … Das sieht nach einer Virusinfektion aus.",
+      "Ist das ansteckend für die Kita?",
+      "Ja — bis zwei Tage nach dem letzten Fieber darf er nicht hin.",
+      "Soll ich ein Antibiotikum geben?",
+      "Nein, bei Viren wirkt es nicht. Fieber senken, viel trinken, beobachten.",
+      "Wenn der Ausschlag bleibt — soll ich dann sofort wieder kommen?",
+    ],
+  };
+  const expectedWho: Record<string, string[]> = {
+    "d-b1-10": ["Frau Weber","Yara","Frau Weber","Yara","Frau Weber","Yara","Frau Weber","Yara"],
+    "d-b1-11": ["Frau Bähr","Nadia","Frau Bähr","Nadia","Frau Bähr","Nadia","Frau Bähr","Nadia"],
+    "d-b1-12": ["Karim","Dr. Sommer","Karim","Dr. Sommer","Karim","Dr. Sommer","Karim","Dr. Sommer","Karim"],
+  };
+  const expectedAnswers: Record<string, any[]> = {
+    "d-b1-10": ["ein Einstufungstest", "83 Euro", "Pass und Meldebescheinigung"],
+    "d-b1-11": ["Herd, Spüle und Schränke", "die Nebenkosten", "zwei Monatsmieten"],
+    "d-b1-12": ["Fieber und einen Ausschlag", "nein, erst zwei Tage nach dem letzten Fieber", "weil es bei Viren nicht wirkt"],
+  };
+  const expectedDict: Record<string, string[]> = {
+    "d-b1-10": [
+      "Ja, sonst passt die Gruppe nicht. Der Test ist Donnerstag um neun.",
+      "Nur Pass und Meldebescheinigung. Bis Donnerstag!",
+    ],
+    "d-b1-11": [
+      "Nein — Kaltmiete vierhundertfünfzig, Nebenkosten kommen dazu.",
+      "Zwei Monatsmieten, wie immer. Herzlich willkommen, wenn alles passt.",
+    ],
+    "d-b1-12": [
+      "Ja — bis zwei Tage nach dem letzten Fieber darf er nicht hin.",
+      "Nein, bei Viren wirkt es nicht. Fieber senken, viel trinken, beobachten.",
+    ],
+  };
+  let locksOk = true;
+  for (const did of scope) {
+    const dlg = liveB103.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE[did][i] || dlg.lines[i].who !== expectedWho[did][i]) locksOk = false;
+    }
+    for (let i = 0; i < expectedAnswers[did].length; i++) {
+      if (dlg.questions[i].answer !== expectedAnswers[did][i]) locksOk = false;
+    }
+    for (let i = 0; i < expectedDict[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict[did][i]) locksOk = false;
+    }
+  }
+  ok(locksOk, "K190f كل الألماني/who/الأسئلة/الإملاءات مقفلة لم تتغير (25 سطراً، 9 أسئلة، 6 إملاءات)");
+
+  ok(reviewB103.judgement.corrected === 7 && reviewB103.judgement.unresolved === 0 &&
+    reviewB103.waisen.present === false &&
+    patchSourceB103.includes("d-b1-10") && patchSourceB103.includes("d-b1-11") &&
+    patchSourceB103.includes("d-b1-12") &&
+    patchSourceB103.includes("<R116> patch complete"),
+    "K190g الرقعة تغطي الثلاثة حوارات وتطبق السبعة تصحيحات وتطبع سطر النهاية");
+
+  ok(reviewB103.contextNotes["d-b1-12"] &&
+    reviewB103.contextNotes["d-b1-12"].some((n: any) => n.note.includes("طبية")) &&
+    reviewB103.contextNotes["d-b1-10"] && reviewB103.contextNotes["d-b1-11"] &&
+    reviewB103.styleAlternatives["d-b1-12"],
+    "K190h ملاحظات سياقية (حدود طبية، وثائق، كاوتسيون) وبدائل مسجلة");
+
+  ok(reviewB103.limits.audio.includes("لا استماع") && reviewB103.limits.cefr.includes("لم يُعد") &&
+    reviewB103.limits.human.includes("ليست") && reviewB103.limits.medical.length > 0 &&
+    reviewB103.limits.legal.length > 0,
+    "K190i حدود الصوت/CEFR/بشري/طبي/قانوني معلنة (الطبي والقانوني هامان في هذه الدفعة)");
+
+  const srcMap3 = reviewB103.sources as Record<string, any[]>;
+  ok(reviewB103Md.includes("## الحكم") && reviewB103Md.includes("## التصحيحات") &&
+    reviewB103Md.includes("## المصادر") && reviewB103Md.includes("K190") &&
+    Object.keys(srcMap3).every((k) => srcMap3[k].length >= 2) &&
+    Object.values(srcMap3).reduce((n: number, v: any[]) => n + v.length, 0) >= 7,
+    "K190j التقرير العربي ومصادره (2+ لكل حوار، 7+ إجمالاً) يذكر K190");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

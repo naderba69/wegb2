@@ -2446,12 +2446,12 @@
       {
         "who": "Frau Weber",
         "de": "Guten Tag, ich möchte mich für den Deutschkurs anmelden.",
-        "ar": "مساءُ الخير، أريدُ التسجيلَ في دورةِ الألمانية."
+        "ar": "طابَ يومُكم، أريدُ التسجيلَ في دورةِ الألمانية."
       },
       {
         "who": "Yara",
         "de": "Sehr gern. Haben Sie den Einstufungstest schon gemacht?",
-        "ar": "بكلِّ سرور. هل أجريتِ اختبارَ تحديدِ المستوى بعدُ؟"
+        "ar": "بكلِّ سرور. هل أجريتُم اختبارَ تحديدِ المستوى بعدُ؟"
       },
       {
         "who": "Frau Weber",
@@ -2461,7 +2461,7 @@
       {
         "who": "Yara",
         "de": "Ja, sonst passt die Gruppe nicht. Der Test ist Donnerstag um neun.",
-        "ar": "نعم، وإلا لم تُناسِبْك المجموعة. الاختبارُ الخميسَ التاسعةَ صباحاً."
+        "ar": "نعم، وإلا لم تناسبكم المجموعة. الاختبارُ الخميسَ الساعةَ التاسعةَ صباحاً."
       },
       {
         "who": "Frau Weber",
@@ -2539,12 +2539,12 @@
       {
         "who": "Frau Bähr",
         "de": "Danke für den Termin — die Anzeige klang vielversprechend.",
-        "ar": "شكراً على الموعد — كانَ الإعلانُ واعداً في الصور."
+        "ar": "شكراً على الموعد — كانَ الإعلانُ واعداً."
       },
       {
         "who": "Nadia",
         "de": "Gern. Die Küche ist möbliert: Herd, Spüle und Schränke bleiben.",
-        "ar": "بسرور. المطبخُ مؤثَّث: البوقُ والحوضُ والخزائنُ تبقى."
+        "ar": "بسرور. المطبخُ مؤثَّث: الموقدُ والحوضُ والخزائنُ تبقى."
       },
       {
         "who": "Frau Bähr",
@@ -2647,7 +2647,7 @@
       {
         "who": "Dr. Sommer",
         "de": "Mund auf, bitte … Das sieht nach einer Virusinfektion aus.",
-        "ar": "افتح فمَك رجاءً … تشبه عدوى فيروسية، لا بكتيرية."
+        "ar": "افتح فمَك رجاءً … يبدو أنَّها عدوى فيروسية."
       },
       {
         "who": "Karim",
@@ -2657,7 +2657,7 @@
       {
         "who": "Dr. Sommer",
         "de": "Ja — bis zwei Tage nach dem letzten Fieber darf er nicht hin.",
-        "ar": "نعم — فحتى يومَين بعدَ آخرِ ذروةِ حرارةٍ لا يدخلُها."
+        "ar": "نعم — لا يجوز له الذهابُ حتى يومينِ بعدَ آخرِ ارتفاعٍ في الحرارة."
       },
       {
         "who": "Karim",
