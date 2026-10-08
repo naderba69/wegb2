@@ -3283,32 +3283,32 @@
       {
         "who": "Amira",
         "de": "Mein Freitagtermin fällt mit meiner Prüfung zusammen — ein Monat später?",
-        "ar": "موعدي الجمعةَ يتصادمُ مع امتحاني — أبعدَه شهراً؟"
+        "ar": "موعدي يومَ الجمعةِ يتعارضُ مع امتحاني — هل يمكنُ تأجيلُه شهراً؟"
       },
       {
         "who": "Hedi",
         "de": "Verschiebungen nur schriftlich; den Grund bitte nachweisen.",
-        "ar": "التأجيلُ خطّيٌّ فقط، والهاتِ دليلَ العذر."
+        "ar": "التأجيلُ خطّيٌّ فقط، مع إثباتِ السبب."
       },
       {
         "who": "Amira",
         "de": "Hier ist die Prüfungsanmeldung der Universität.",
-        "ar": "تفضَّلي إشعارَ امتحانِ الجامعةِ مطبوعاً."
+        "ar": "هذا إشعارُ تسجيلِ امتحانِ الجامعةِ."
       },
       {
         "who": "Hedi",
         "de": "Neuer Termin: Erster des Folgemonats, vierzehn Uhr dreißig — nur mit diesem Brief.",
-        "ar": "الجديد: أولَ الشهرِ التالي، الثانيةَ عشرةَ والنصف — وبهذه الرسالةِ يدخلُ صاحبُها."
+        "ar": "الموعدُ الجديد: أولَ الشهرِ التالي، الساعةَ الثانيةَ والنصفَ بعدَ الظهر — وبهذه الرسالةِ يدخلُ صاحبُها."
       },
       {
         "who": "Amira",
         "de": "Die Unterlagen wieder in voller Zahl?",
-        "ar": "أأُعيدُ كلَّ الوثائق؟"
+        "ar": "أأُحضرُ الوثائقَ كلَّها مرةً أخرى؟"
       },
       {
         "who": "Hedi",
         "de": "Pass, Aufenthaltstitel, Mietvertrag, Versicherungsnachweis — wie beim ersten Mal.",
-        "ar": "جوازٌ وإقامةٌ وعقدُ إيجارٍ وتأمين — كما في الزيارةِ الأولى."
+        "ar": "جوازُ سفرٍ وتصريحُ إقامةٍ وعقدُ إيجارٍ وإثباتُ تأمينٍ — كما في المرةِ الأولى."
       },
       {
         "who": "Amira",
@@ -3376,22 +3376,22 @@
       {
         "who": "Frau Seidl",
         "de": "Ist heute Nacht Notdienst? Der Kinderarzt schickte mich.",
-        "ar": "أنوبتُكم الليلة؟ طبيبُ الأطفالِ وجَّهني إليكم."
+        "ar": "هل تقدّمون خدمةَ الطوارئِ الليلة؟ طبيبُ الأطفالِ وجَّهني إليكم."
       },
       {
         "who": "Firas",
         "de": "Ja — bis acht Uhr früh. Was benötigen Sie?",
-        "ar": "نعم — حتى الثامنةِ فجراً. ما مطلوبُك؟"
+        "ar": "نعم — حتى الثامنةِ صباحاً. ماذا تحتاجون؟"
       },
       {
         "who": "Frau Seidl",
         "de": "Ein Fiebermittel für ein zehnjähriges Kind, rezeptfrei?",
-        "ar": "خافِضُ حرارةٍ لعاشرةِ أعوامٍ — بلا وصفة؟"
+        "ar": "خافضُ حرارةٍ لطفلةٍ في العاشرةِ من عمرها — بلا وصفة؟"
       },
       {
         "who": "Firas",
         "de": "Acht Euro fünfzig — die Beilage genau durchlesen, bitte.",
-        "ar": "ثمانيةٌ ونصفٌ باليورو — واقرأ نشرةَ العبوةِ بدقة."
+        "ar": "ثمانيةٌ وخمسون يورو — مع قراءةِ النشرةِ الداخليةِ بعناية، من فضلك."
       },
       {
         "who": "Frau Seidl",
@@ -3406,12 +3406,12 @@
       {
         "who": "Frau Seidl",
         "de": "Das Rezept fürs Kind kann ich morgen bringen?",
-        "ar": "أَأُتمُّ وصفةَ الطفلِ غداً؟"
+        "ar": "هل يمكنني إحضارُ وصفةِ الطفلِ غداً؟"
       },
       {
         "who": "Firas",
         "de": "Rezepte gelten bundesweit — gute Besserung für die Kleine!",
-        "ar": "وصفاتُ الأطباءِ نافذةٌ في البلادِ كلها — وفي الصغيرِ عافية."
+        "ar": "وصفاتُ الأطباءِ نافذةٌ في البلادِ كلها — وألفُ عافيةٍ للصغيرة!"
       }
     ],
     "questions": [
@@ -3474,27 +3474,27 @@
       {
         "who": "Studioleiter",
         "de": "Die Frist beträgt sechs Wochen, schriftlich — siehe Vertrag.",
-        "ar": "ستةُ أسابيع خطيّاً كما وردَ في العقد."
+        "ar": "المهلةُ ستةُ أسابيع، والإنهاءُ خطّيٌّ — كما في العقد."
       },
       {
         "who": "Riadh",
         "de": "Ich telefonierte vor zwei Wochen; keine Bestätigung kam.",
-        "ar": "اتصلتُ قبلَ أسبوعَين، ولم تصلني بطاقةُ تأكيد."
+        "ar": "اتصلتُ قبلَ أسبوعَين، ولم يصلني أيُّ تأكيدٍ."
       },
       {
         "who": "Studioleiter",
         "de": "Telefon allein genügt nicht — schriftlich muss es vorliegen, dann zählt es.",
-        "ar": "الهاتفُ وحدَه لا يُعتَدّ. أختمُ بريدَك بالاستلامِ ختماً."
+        "ar": "الاتصالُ الهاتفيُّ وحدَه لا يكفي — لا بدَّ أن يكونَ خطّيّاً، وعندها يُعتَدُّ به."
       },
       {
         "who": "Riadh",
         "de": "Warum wurde schon abgebucht, obwohl ich kündigte?",
-        "ar": "ولم خصمتم بعدُ وقد أعلمت؟"
+        "ar": "ولماذا خصمتم المبلغَ مسبقاً وقد أنهيتُ العقدَ؟"
       },
       {
         "who": "Studioleiter",
         "de": "Wir stoppen mit Fristablauf — zu viel Gezahltes wird erstattet.",
-        "ar": "نوقفُ بانتهاءِ المدة، والمُدفَعُ فوقَها يُعادُ إليك."
+        "ar": "نوقفُ الخصمَ عندَ انتهاءِ المهلة، وما دُفِعَ زيادةً يُرَدُّ."
       },
       {
         "who": "Riadh",
@@ -3504,7 +3504,7 @@
       {
         "who": "Studioleiter",
         "de": "Fünfzehn Euro zurück, binnen vierzehn Tagen nach Übergabe.",
-        "ar": "خمسةَ عشرَ تُرَدُّ خلالَ أسبوعَين من التسليم."
+        "ar": "خمسةَ عشرَ يورو تُرَدُّ خلالَ أربعةَ عشرَ يوماً من التسليم."
       }
     ],
     "questions": [

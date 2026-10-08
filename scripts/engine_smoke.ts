@@ -8531,6 +8531,150 @@ void 0;
     "K192j التقرير العربي ومصادره (2+ لكل حوار، 7+ إجمالاً) وتحذير المحتوى يذكر K192");
 }
 
+// K193 — sixth B1 batch d-b1-19..d-b1-21 (R119).
+{
+  const reviewB106 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-06-2026-10-08.json", "utf8")) as any;
+  const reviewB106Md = readFileSync("docs/content-review-b1-dialogues-06-2026-10-08.md", "utf8");
+  const liveB106 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB106 = readFileSync("scripts/patches/review_b1_dialogues_06.py", "utf8");
+  const scope = ["d-b1-19", "d-b1-20", "d-b1-21"];
+  ok(reviewB106.reviewRule === "R119" && reviewB106.date === "2026-10-08" &&
+    JSON.stringify(reviewB106.dialogues.map((d: any) => d.id)) === JSON.stringify(scope) &&
+    reviewB106.totals.lines === 24 && reviewB106.totals.questions === 9 && reviewB106.totals.dictation === 6,
+    "K193a دفعة B1 السادسة d-b1-19..21 موثقة (24 سطراً، 9 أسئلة، 6 إملاءات)");
+
+  ok(reviewB106.corrections.length === 18,
+    "K193b ثمانية عشر تصحيحاً عربياً مؤكداً (أرقام محذوفة/مترجمة خطأ، جنس المخاطَب، Sie الصريح، خطأ نحوي، إضافات محذوفة ومصطلحات)");
+
+  const d19 = liveB106.find((d) => d.id === "d-b1-19");
+  const d20 = liveB106.find((d) => d.id === "d-b1-20");
+  const d21 = liveB106.find((d) => d.id === "d-b1-21");
+  ok(d19.lines[0].ar.includes("يتعارضُ مع امتحاني") && d19.lines[0].ar.includes("هل يمكنُ تأجيلُه") &&
+    !d19.lines[0].ar.includes("يتصادمُ") && !d19.lines[0].ar.includes("أبعدَه") &&
+    d19.lines[1].ar.includes("مع إثباتِ السبب") && !d19.lines[1].ar.includes("والهاتِ") &&
+    d19.lines[2].ar.includes("إشعارُ تسجيلِ امتحانِ الجامعةِ") && !d19.lines[2].ar.includes("تفضَّلي") && !d19.lines[2].ar.includes("مطبوعاً") &&
+    d19.lines[3].ar.includes("الموعدُ الجديد") && d19.lines[3].ar.includes("الساعةَ الثانيةَ والنصفَ بعدَ الظهر") && !d19.lines[3].ar.includes("الثانيةَ عشرةَ والنصف") &&
+    d19.lines[4].ar.includes("أأُحضرُ الوثائقَ كلَّها مرةً أخرى") && !d19.lines[4].ar.includes("أأُعيدُ") &&
+    d19.lines[5].ar.includes("تصريحُ إقامةٍ") && d19.lines[5].ar.includes("إثباتُ تأمينٍ") && d19.lines[5].ar.includes("كما في المرةِ الأولى"),
+    "K193c d-b1-19: تأجيل/تعارض، إثبات السبب، حذف تفضَّلي ومطبوعاً، 14:30=الثانية والنصف بعد الظهر، أحضر لا أُعيد، تصريح إقامة/إثبات تأمين");
+
+  ok(d20.lines[0].ar.includes("هل تقدّمون خدمةَ الطوارئِ الليلة") && !d20.lines[0].ar.includes("أنوبتُكم") &&
+    d20.lines[1].ar.includes("حتى الثامنةِ صباحاً") && !d20.lines[1].ar.includes("فجراً") &&
+    d20.lines[1].ar.includes("ماذا تحتاجون؟") && !d20.lines[1].ar.includes("ما مطلوبُك") &&
+    d20.lines[2].ar.includes("لطفلةٍ في العاشرةِ من عمرها") && !d20.lines[2].ar.includes("لعاشرةِ أعوامٍ") &&
+    d20.lines[3].ar.includes("ثمانيةٌ وخمسون يورو") && d20.lines[3].ar.includes("النشرةِ الداخليةِ") && !d20.lines[3].ar.includes("واقرأ نشرةَ العبوةِ") &&
+    d20.lines[6].ar.includes("إحضارُ وصفةِ الطفلِ غداً") && !d20.lines[6].ar.includes("أَأُتمُّ") &&
+    d20.lines[7].ar.includes("ألفُ عافيةٍ للصغيرة") && !d20.lines[7].ar.includes("وفي الصغيرِ عافية"),
+    "K193d d-b1-20: Notdienst، الثامنة صباحاً، Sie→تحتاجون، طفلة في العاشرة، 8,50 والنشرة الداخلية، إحضار لا إتمام، الصغيرة مؤنثة");
+
+  ok(d21.lines[1].ar.includes("المهلةُ ستةُ أسابيع") && d21.lines[1].ar.includes("والإنهاءُ خطّيٌّ") && !d21.lines[1].ar.includes("خطيّاً كما وردَ") &&
+    d21.lines[2].ar.includes("ولم يصلني أيُّ تأكيدٍ") && !d21.lines[2].ar.includes("بطاقةُ تأكيد") &&
+    d21.lines[3].ar.includes("لا بدَّ أن يكونَ خطّيّاً") && d21.lines[3].ar.includes("وعندها يُعتَدُّ به") && !d21.lines[3].ar.includes("أختمُ بريدَك") &&
+    d21.lines[4].ar.includes("ولماذا خصمتم المبلغَ مسبقاً") && d21.lines[4].ar.includes("وقد أنهيتُ العقدَ") && !d21.lines[4].ar.includes("ولم خصمتم") &&
+    d21.lines[5].ar.includes("نوقفُ الخصمَ عندَ انتهاءِ المهلة") && d21.lines[5].ar.includes("وما دُفِعَ زيادةً يُرَدُّ") && !d21.lines[5].ar.includes("يُعادُ إليك") &&
+    d21.lines[7].ar.includes("خمسةَ عشرَ يورو تُرَدُّ") && d21.lines[7].ar.includes("أربعةَ عشرَ يوماً") && !d21.lines[7].ar.includes("خلالَ أسبوعَين"),
+    "K193e d-b1-21: المهلة/الإنهاء خطي، أيُّ تأكيد، حذف مشهد الختم، لماذا خصمتم+أنهيتُ، يُرَدُّ المبني للمجهول، 15 يورو/14 يوماً");
+
+  // Locked DE/who/questions/dictations.
+  const expectedDE6: Record<string, string[]> = {
+    "d-b1-19": [
+      "Mein Freitagtermin fällt mit meiner Prüfung zusammen — ein Monat später?",
+      "Verschiebungen nur schriftlich; den Grund bitte nachweisen.",
+      "Hier ist die Prüfungsanmeldung der Universität.",
+      "Neuer Termin: Erster des Folgemonats, vierzehn Uhr dreißig — nur mit diesem Brief.",
+      "Die Unterlagen wieder in voller Zahl?",
+      "Pass, Aufenthaltstitel, Mietvertrag, Versicherungsnachweis — wie beim ersten Mal.",
+      "Verstanden — dann bin ich sicher da; und was folgt bei zweitem Versäumnis?",
+      "Bei zweitem Versäumnis: Ablehnung, neue Gebühr.",
+    ],
+    "d-b1-20": [
+      "Ist heute Nacht Notdienst? Der Kinderarzt schickte mich.",
+      "Ja — bis acht Uhr früh. Was benötigen Sie?",
+      "Ein Fiebermittel für ein zehnjähriges Kind, rezeptfrei?",
+      "Acht Euro fünfzig — die Beilage genau durchlesen, bitte.",
+      "Und etwas gegen nächtlichen Husten?",
+      "Nicht kombinieren bei Kindern: nur ein Mittel zur Zeit.",
+      "Das Rezept fürs Kind kann ich morgen bringen?",
+      "Rezepte gelten bundesweit — gute Besserung für die Kleine!",
+    ],
+    "d-b1-21": [
+      "Ich kündige meinen Vertrag zum Monatsende.",
+      "Die Frist beträgt sechs Wochen, schriftlich — siehe Vertrag.",
+      "Ich telefonierte vor zwei Wochen; keine Bestätigung kam.",
+      "Telefon allein genügt nicht — schriftlich muss es vorliegen, dann zählt es.",
+      "Warum wurde schon abgebucht, obwohl ich kündigte?",
+      "Wir stoppen mit Fristablauf — zu viel Gezahltes wird erstattet.",
+      "Und meine Schlüsselkaution?",
+      "Fünfzehn Euro zurück, binnen vierzehn Tagen nach Übergabe.",
+    ],
+  };
+  const expectedWho6: Record<string, string[]> = {
+    "d-b1-19": ["Amira","Hedi","Amira","Hedi","Amira","Hedi","Amira","Hedi"],
+    "d-b1-20": ["Frau Seidl","Firas","Frau Seidl","Firas","Frau Seidl","Firas","Frau Seidl","Firas"],
+    "d-b1-21": ["Riadh","Studioleiter","Riadh","Studioleiter","Riadh","Studioleiter","Riadh","Studioleiter"],
+  };
+  const expectedAnswers6: Record<string, any[]> = {
+    "d-b1-19": ["nur schriftlich mit Nachweis des Grundes", "alle Unterlagen wie beim ersten Mal", "Ablehnung und eine neue Gebühr"],
+    "d-b1-20": ["bis acht Uhr früh", "nur ein Mittel zur Zeit", "Ja, Rezepte gelten bundesweit."],
+    "d-b1-21": ["Schriftform mit sechs Wochen Frist", "Sie wird erstattet.", "fünfzehn Euro"],
+  };
+  const expectedDict6: Record<string, string[]> = {
+    "d-b1-19": [
+      "Verschiebungen nur schriftlich; den Grund bitte nachweisen.",
+      "Bei zweitem Versäumnis: Ablehnung, neue Gebühr.",
+    ],
+    "d-b1-20": [
+      "Nicht kombinieren bei Kindern: nur ein Mittel zur Zeit.",
+      "Acht Euro fünfzig — die Beilage genau durchlesen, bitte.",
+    ],
+    "d-b1-21": [
+      "Wir stoppen mit Fristablauf — zu viel Gezahltes wird erstattet.",
+      "Telefon allein genügt nicht — schriftlich muss es vorliegen, dann zählt es.",
+    ],
+  };
+  let locksOk6 = true;
+  for (const did of scope) {
+    const dlg = liveB106.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE6[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE6[did][i] || dlg.lines[i].who !== expectedWho6[did][i]) locksOk6 = false;
+    }
+    for (let i = 0; i < expectedAnswers6[did].length; i++) {
+      if (dlg.questions[i].answer !== expectedAnswers6[did][i]) locksOk6 = false;
+    }
+    for (let i = 0; i < expectedDict6[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict6[did][i]) locksOk6 = false;
+    }
+  }
+  ok(locksOk6, "K193f كل الألماني/who/الأسئلة/الإملاءات مقفلة لم تتغير (24/9/6)");
+
+  ok(reviewB106.judgement.corrected === 18 && reviewB106.judgement.unresolved === 0 &&
+    reviewB106.waisen.present === false &&
+    patchSourceB106.includes("d-b1-19") && patchSourceB106.includes("d-b1-20") &&
+    patchSourceB106.includes("d-b1-21") && patchSourceB106.includes("<R119> patch complete"),
+    "K193g الرقعة تغطي الثلاثة حوارات وتطبق الثمانية عشر تصحيحاً وتطبع سطر النهاية");
+
+  ok(reviewB106.contextNotes["d-b1-19"] && reviewB106.contextNotes["d-b1-20"] && reviewB106.contextNotes["d-b1-21"] &&
+    reviewB106.styleAlternatives["d-b1-19"] && reviewB106.styleAlternatives["d-b1-21"] &&
+    Array.isArray(reviewB106.contentWarnings) && reviewB106.contentWarnings.length === 0 &&
+    reviewB106.contentChecks.length >= 3 &&
+    reviewB106.contextNotes["d-b1-20"].some((n: any) => n.note.includes("2.50")) &&
+    reviewB106Md.includes("## تحذيرات محتوى"),
+    "K193h ملاحظات سياقية (أجانب/صيدلية/نادٍ) وبدائل، ولا تحذيرات محتوى جديدة مع فحوصٍ موثقة (رسوم المناوبة)");
+
+  ok(reviewB106.limits.audio.includes("لا استماع") && reviewB106.limits.cefr.includes("لم يُعد") &&
+    reviewB106.limits.human.includes("ليست") &&
+    reviewB106.limits.legal.length > 0 && reviewB106.limits.medical.length > 0 &&
+    reviewB106.limits.professional.length > 0,
+    "K193i حدود الصوت/CEFR/بشري/قانوني/طبي/إداري معلنة");
+
+  const srcMap6 = reviewB106.sources as Record<string, any[]>;
+  ok(reviewB106Md.includes("## الحكم") && reviewB106Md.includes("## التصحيحات") &&
+    reviewB106Md.includes("## المصادر") && reviewB106Md.includes("K193") &&
+    Object.keys(srcMap6).every((k) => srcMap6[k].length >= 2) &&
+    Object.values(srcMap6).reduce((n: number, v: any[]) => n + v.length, 0) >= 7,
+    "K193j التقرير العربي ومصادره (2+ لكل حوار، 7+ إجمالاً) يذكر K193");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
