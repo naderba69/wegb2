@@ -6142,7 +6142,7 @@
       {
         "who": "Nadia",
         "de": "Das kann ich nachvollziehen. Trotzdem hätte ein kurzer Anruf gereicht.",
-        "ar": "أتفهَّمُ ذلك. ومع هذا كانت مكالمةٌ قصيرةٌ لتكفي."
+        "ar": "أتفهَّمُ ذلك. ومع ذلك كانت تكفي مكالمةٌ قصيرة."
       },
       {
         "who": "Jonas",
@@ -6152,7 +6152,7 @@
       {
         "who": "Nadia",
         "de": "Gut. Dann halten wir das so fest.",
-        "ar": "حسناً. نثبّتُ الأمرَ هكذا."
+        "ar": "حسناً. إذن نثبّتُ الأمرَ هكذا."
       }
     ],
     "questions": [
@@ -6217,7 +6217,7 @@
       {
         "who": "Lehrerin",
         "de": "Das legt sich meistens. Wichtig wäre, dass er öfter laut liest.",
-        "ar": "هذا يزولُ غالباً. المهمُّ أن يقرأَ بصوتٍ عالٍ أكثر."
+        "ar": "هذا يزولُ غالباً. المهمُّ أن يُكثِرَ من القراءةِ بصوتٍ عالٍ."
       },
       {
         "who": "Vater",
@@ -6227,7 +6227,7 @@
       {
         "who": "Lehrerin",
         "de": "Fünfzehn Minuten reichen, wenn es regelmäßig geschieht.",
-        "ar": "خمسَ عشرةَ دقيقةً تكفي إن كانَ بانتظام."
+        "ar": "خمسَ عشرةَ دقيقةً تكفي إن كانَ ذلك بانتظامٍ."
       }
     ],
     "questions": [

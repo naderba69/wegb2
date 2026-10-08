@@ -8978,6 +8978,113 @@ void 0;
     "K195j التقرير العربي ومصادره (3+ لكل حوار، 10+ إجمالاً) يذكر K195");
 }
 
+
+// K196 — ninth and final B1 batch d-b1-31..d-b1-32 (R122).
+{
+  const reviewB109 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-09-2026-10-08.json", "utf8")) as any;
+  const reviewB109Md = readFileSync("docs/content-review-b1-dialogues-09-2026-10-08.md", "utf8");
+  const liveB109 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB109 = readFileSync("scripts/patches/review_b1_dialogues_09.py", "utf8");
+  const scope9 = ["d-b1-31", "d-b1-32"];
+  ok(reviewB109.reviewRule === "R122" && reviewB109.date === "2026-10-08" &&
+    JSON.stringify(reviewB109.dialogues.map((d: any) => d.id)) === JSON.stringify(scope9) &&
+    reviewB109.totals.lines === 10 && reviewB109.totals.questions === 5 &&
+    reviewB109.totals.dictation === 6 && reviewB109.totals.approximateUnits === 77,
+    "K196a الدفعة B1 التاسعة والأخيرة d-b1-31..32 موثقة (10 أسطر، 5 أسئلة، 6 إملاءات، 77 وحدة)");
+
+  ok(reviewB109.corrections.length === 4 && reviewB109.judgement.corrected === 4 &&
+    reviewB109.judgement.unresolved === 0 && reviewB109.waisen.present === false,
+    "K196b أربعة تصحيحات عربية مؤكدة بلا غير محسوم (مخالفة واقعية، Dann مفقود، öfter، فاعل es)");
+
+  const d31 = liveB109.find((d) => d.id === "d-b1-31");
+  const d32 = liveB109.find((d) => d.id === "d-b1-32");
+  ok(d31.lines[2].ar.includes("ومع ذلك كانت تكفي مكالمةٌ قصيرة") && !d31.lines[2].ar.includes("لتكفي") &&
+    !d31.lines[2].ar.includes("ومع هذا") &&
+    d31.lines[4].ar.includes("حسناً. إذن نثبّتُ الأمرَ هكذا") && !d31.lines[4].ar.includes("حسناً. نثبّتُ"),
+    "K196c d-b1-31: «كانت تكفي» للمخالفة الواقعية و«إذن» المستعادة لـDann");
+
+  ok(d32.lines[2].ar.includes("المهمُّ أن يُكثِرَ من القراءةِ بصوتٍ عالٍ") && !d32.lines[2].ar.includes("عالٍ أكثر") &&
+    d32.lines[4].ar.includes("تكفي إن كانَ ذلك بانتظامٍ"),
+    "K196d d-b1-32: يُكثِر من القراءة (تكرار لا علوّ صوت) وفاعل es («إن كان ذلك بانتظامٍ»)");
+
+  const expectedDE9: Record<string, string[]> = {
+    "d-b1-31": [
+      "Mir ist aufgefallen, dass du die Absprache nicht eingehalten hast.",
+      "Das stimmt, aber ich war unter großem Zeitdruck.",
+      "Das kann ich nachvollziehen. Trotzdem hätte ein kurzer Anruf gereicht.",
+      "Da hast du recht. Ich melde mich beim nächsten Mal früher.",
+      "Gut. Dann halten wir das so fest.",
+    ],
+    "d-b1-32": [
+      "Ihr Sohn arbeitet gut mit, aber er meldet sich selten.",
+      "Zu Hause erzählt er viel. In der Klasse ist er wohl schüchtern.",
+      "Das legt sich meistens. Wichtig wäre, dass er öfter laut liest.",
+      "Wie viel sollte er täglich üben?",
+      "Fünfzehn Minuten reichen, wenn es regelmäßig geschieht.",
+    ],
+  };
+  const expectedWho9: Record<string, string[]> = {
+    "d-b1-31": ["Nadia", "Jonas", "Nadia", "Jonas", "Nadia"],
+    "d-b1-32": ["Lehrerin", "Vater", "Lehrerin", "Vater", "Lehrerin"],
+  };
+  const expectedAnswers9: Record<string, any[]> = {
+    "d-b1-31": ["Sie versteht sie, kritisiert aber trotzdem.", ["Trotzdem"], "falsch"],
+    "d-b1-32": ["dass er täglich fünfzehn Minuten laut liest", ["regelmäßig"]],
+  };
+  const expectedDict9: Record<string, string[]> = {
+    "d-b1-31": [
+      "Mir ist aufgefallen, dass du die Absprache nicht eingehalten hast.",
+      "Das stimmt, aber ich war unter großem Zeitdruck.",
+      "Das kann ich nachvollziehen. Trotzdem hätte ein kurzer Anruf gereicht.",
+    ],
+    "d-b1-32": [
+      "Ihr Sohn arbeitet gut mit, aber er meldet sich selten.",
+      "Zu Hause erzählt er viel. In der Klasse ist er wohl schüchtern.",
+      "Das legt sich meistens. Wichtig wäre, dass er öfter laut liest.",
+    ],
+  };
+  let locksOk9 = true;
+  for (const did of scope9) {
+    const dlg = liveB109.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE9[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE9[did][i] || dlg.lines[i].who !== expectedWho9[did][i]) locksOk9 = false;
+    }
+    for (let i = 0; i < expectedAnswers9[did].length; i++) {
+      if (JSON.stringify(dlg.questions[i].answer) !== JSON.stringify(expectedAnswers9[did][i])) locksOk9 = false;
+    }
+    for (let i = 0; i < expectedDict9[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict9[did][i]) locksOk9 = false;
+    }
+  }
+  ok(locksOk9, "K196e كل الألماني/who/الأسئلة/الإملاءات مقفلة لم تتغير (10/5/6)");
+
+  ok(Array.isArray(reviewB109.contentWarnings) && reviewB109.contentWarnings.length === 0 &&
+    reviewB109.contentChecks.length >= 3,
+    "K196f لا تحذيرات محتوى في الدفعة (لا ادعاءات قانونية/رقمية جديدة) مع فحوص محتوى موثقة");
+
+  ok(patchSourceB109.includes("d-b1-31") && patchSourceB109.includes("d-b1-32") &&
+    patchSourceB109.includes("<R122> patch complete") && reviewB109.corrections.length === 4,
+    "K196g الرقعة تغطي الحوارين وتطبق الأربعة تصحيحات وتطبع سطر النهاية");
+
+  const srcMap9 = reviewB109.sources as Record<string, any[]>;
+  ok(reviewB109Md.includes("## الحكم") && reviewB109Md.includes("## التصحيحات") &&
+    reviewB109Md.includes("## المصادر") && reviewB109Md.includes("K196") &&
+    Object.keys(srcMap9).every((k) => srcMap9[k].length >= 3) &&
+    Object.values(srcMap9).reduce((n: number, v: any[]) => n + v.length, 0) >= 6,
+    "K196h التقرير العربي ومصادره (3+ لكل حوار، 6+ إجمالاً) يذكر K196");
+
+  ok(reviewB109.limits.audio.includes("لا استماع") && reviewB109.limits.cefr.includes("لم يُعد") &&
+    reviewB109.limits.human.includes("ليست") &&
+    reviewB109.limits.legal.length > 0 && reviewB109.limits.medical.length > 0 &&
+    reviewB109.limits.professional.length > 0,
+    "K196i حدود الصوت/CEFR/بشري/قانوني/طبي/تربوي معلنة");
+
+  ok(reviewB109.contextNotes["d-b1-31"].length >= 3 && reviewB109.contextNotes["d-b1-32"].length >= 3 &&
+    reviewB109.styleAlternatives["d-b1-31"] && reviewB109.styleAlternatives["d-b1-32"] &&
+    reviewB109.audio.note.includes("لا استماع"),
+    "K196j ملاحظات سياقية (3+ لكل حوار) وبدائل أسلوبية للاثنين والصوت بلا استماع");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
