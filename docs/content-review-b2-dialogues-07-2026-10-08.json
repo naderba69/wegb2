@@ -1,0 +1,375 @@
+{
+  "reviewRule": "R129",
+  "date": "2026-10-08",
+  "scope": "خامس دفعة B2: d-b2-13..15 (بدل الوالدية واستشارة، الإقرار الضريبي وتمديد المهلة، تلف الماء مع شركة التأمين) — الحوارات الثلاث بلا waisen.",
+  "dialogues": [
+    {
+      "id": "d-b2-19",
+      "level": "B2",
+      "titleDe": "Konflikt im Team: Moderation",
+      "titleAr": "نزاعٌ في الفريق: تَوسُّط",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 54,
+      "hasWaisenField": false,
+      "who": [
+        "Leila",
+        "Teamleitung"
+      ]
+    },
+    {
+      "id": "d-b2-20",
+      "level": "B2",
+      "titleDe": "Pflegeversicherung: Begutachtung",
+      "titleAr": "تأمينُ الرعاية: تقديرُ اللجنة",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 54,
+      "hasWaisenField": false,
+      "who": [
+        "Gutachter",
+        "Hedi"
+      ]
+    },
+    {
+      "id": "d-b2-21",
+      "level": "B2",
+      "titleDe": "Bildungskredit verhandeln",
+      "titleAr": "تفاوضٌ على قرضٍ تعليمي",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 54,
+      "hasWaisenField": false,
+      "who": [
+        "Bankberaterin",
+        "Maha"
+      ]
+    }
+  ],
+  "totals": {
+    "dialogues": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictation": 6,
+    "approximateUnits": 162
+  },
+  "corrections": [
+    {
+      "unit": "d-b2-19.lines[0].ar",
+      "old": "اتفاقُنا مع قسمِ المشترياتِ انقلبَ مرتين، دونَ إخطار.",
+      "new": "اتفاقُنا مع قسمِ المشترياتِ أُلغيَ مرتين، دونَ ردٍّ.",
+      "rationale": "zweimal gekippt=أُلغي مرتين، ohne Rückmeldung=دون رد."
+    },
+    {
+      "unit": "d-b2-19.lines[1].ar",
+      "old": "وما الذي فعلتِه أنتِ؟",
+      "new": "وماذا فعلتِ أنتِ بنفسِك؟",
+      "rationale": "selbst unternommen=فعلتِ بنفسك."
+    },
+    {
+      "unit": "d-b2-19.lines[2].ar",
+      "old": "وثَّقتُ المحاضرَ بالتواريخ وكتبتُ الاعتراضَ بموضوعيةٍ بالبريدِ لا بالمحادثة.",
+      "new": "وثَّقتُ المحاضرَ بالتاريخ وصغتُ النقدَ بموضوعيةٍ بالبريدِ لا بالمحادثة.",
+      "rationale": "Kritik sachlich formuliert=صغتُ النقد بموضوعية (لا «اعتراض»)."
+    },
+    {
+      "unit": "d-b2-19.lines[3].ar",
+      "old": "أحسنتِ — نجعلُ طاولةً مستديرة: كلُّ جهةٍ تُسمِّي ثلاثَ حاجات.",
+      "new": "أحسنتِ — نُقيمُ طاولةً مستديرة: كلُّ جهةٍ تذكر ثلاثَ حاجات.",
+      "rationale": "setzen wir einen runden Tisch=نُقيم طاولة مستديرة."
+    },
+    {
+      "unit": "d-b2-19.lines[4].ar",
+      "old": "أولويتي: مواعيدُ تسليمٍ مُلزِمةٌ لا نداءاتٌ في الممرّ.",
+      "new": "أولويتي: مواعيدُ تسليمٍ مُلزِمةٌ بدلاً من المناداةِ في الممر.",
+      "rationale": "statt Zurufen im Flur=بدلاً من المناداة في الممر."
+    },
+    {
+      "unit": "d-b2-19.lines[5].ar",
+      "old": "نُثبِتُ في المحضرِ المواعيدَ ويوقِّعُها الطرفانِ جميعاً.",
+      "new": "يُثبَّتُ في المحضرِ المواعيدَ ويوقِّعُه الطرفان.",
+      "rationale": "gegenzeichnen=يوقِّعُه الطرفان (توقيع مقابل)، حذف «جميعاً» الزائد."
+    },
+    {
+      "unit": "d-b2-19.lines[6].ar",
+      "old": "فهمتُ — وأُحضِرُ أرقامَ المقارنةِ إلى الأربعاءِ لا أكثر.",
+      "new": "فهمتُ — وسأُحضِرُ أرقامَ المقارنةِ بحلول الأربعاء.",
+      "rationale": "bis Mittwoch=بحلول الأربعاء، حذف «لا أكثر»."
+    },
+    {
+      "unit": "d-b2-19.lines[7].ar",
+      "old": "بنّاءٌ الأمر. نُعيدُ العرضَ بعدَ ستةِ أسابيع لئلا يخبوَ الأثر.",
+      "new": "بنّاء. إعادةُ الطرحِ بعدَ ستةِ أسابيع لئلا يذهبَ الأثرُ سدىً.",
+      "rationale": "Wiedervorlage=إعادة طرح، verpufft=يذهب سدى."
+    },
+    {
+      "unit": "d-b2-20.lines[0].ar",
+      "old": "أصابَ أبي جلطةٌ قبلَ أربعةِ أسابيع — فما درجةُ رعايتِه المتوقعة؟",
+      "new": "أصابَ أبي سكتةٌ دماغيةٌ قبلَ أربعةِ أسابيع — فما درجةُ رعايتِه المتوقعة؟",
+      "rationale": "Schlaganfall=سكتة دماغية (لا جلطة)."
+    },
+    {
+      "unit": "d-b2-20.lines[2].ar",
+      "old": "صباحًا يُعينُ على الغسلِ واللباس، وعندَ الظهرِ يكفي الإشراف.",
+      "new": "صباحاً يحتاجُ إلى مساعدةٍ في الغسلِ والارتداء، وفي الظهرِ يكفي الإشراف.",
+      "rationale": "braucht Hilfe=يحتاج إلى مساعدة في الغسل والارتداء."
+    },
+    {
+      "unit": "d-b2-20.lines[3].ar",
+      "old": "قلقٌ ليليٌّ وخوفُ سقوط — دوّنوا ذلك في المذكرةِ من فضلكم.",
+      "new": "اضطرابٌ ليليٌّ وخوفُ السقوط — دوّنوا ذلك في اليومياتِ من فضلكم.",
+      "rationale": "Nächtliche Unruhe=اضطراب ليلي، Sturzangst=خوف السقوط، Tagebuch=اليوميات."
+    },
+    {
+      "unit": "d-b2-20.lines[4].ar",
+      "old": "القائمةُ الأسبوعيةُ جاهزةٌ بساعاتِها.",
+      "new": "قائمةُ الأسبوعينِ جاهزةٌ بمواعيدِها.",
+      "rationale": "zweiwöchige Liste=قائمة الأسبوعين."
+    },
+    {
+      "unit": "d-b2-20.lines[6].ar",
+      "old": "وكم يستغرقُ القرار — وإن جاءَ التقديرُ بخيلًا؟",
+      "new": "وكم يستغرقُ الرد — وإن جاءَ التقديرُ متدنياً؟",
+      "rationale": "Bescheid=الرد، zu knapp=متدنياً."
+    },
+    {
+      "unit": "d-b2-20.lines[7].ar",
+      "old": "خطيًّا خلالَ خمسةٍ وعشرين يومَ عمل؛ ومع التقديرِ البخيل: اعتراض.",
+      "new": "خطياً خلالَ خمسةٍ وعشرين يومَ عمل؛ وإن كان التقديرُ متدنياً فالاعتراضُ.",
+      "rationale": "Schriftlich binnen 25 AT=خطياً خلال 25 يوم عمل، Widerspruch=اعتراض."
+    },
+    {
+      "unit": "d-b2-21.lines[1].ar",
+      "old": "الحدُّ الأقصى مكفولٌ اتحادياً؛ وقرضٌ مصرفيٌّ ميسَّرُ الربا بضمانٍ شخصيٍّ منا.",
+      "new": "الحدُّ الأقصى مسقوفٌ حكومياً؛ وقرضٌ مصرفيٌّ ميسَّرُ الفائدةِ بكفالةٍ شخصية.",
+      "rationale": "gedeckelt=مسقوف حكومياً، zinsgünstig=ميسَّر الفائدة (لا ربا)، Bürgschaft=كفالة."
+    },
+    {
+      "unit": "d-b2-21.lines[2].ar",
+      "old": "يسرُّني بدءُ السدادِ بعدَ سنتَين من المزاول.",
+      "new": "أودُّ بدءَ السدادِ بعدَ سنتينِ من مزاولةِ المهنة.",
+      "rationale": "zweites Berufsjahr=سنتين من مزاولة المهنة."
+    },
+    {
+      "unit": "d-b2-21.lines[6].ar",
+      "old": "ومكافأتانِ سنويّاً تجعلُ سدادَ دفعةٍ إضافيةٍ كلَّ عامٍ بديلاً.",
+      "new": "وبدفعتينِ استثنائيتينِ سنوياً يُتَّفقُ على تسديدٍ إضافيٍّ كلَّ عام.",
+      "rationale": "Sonderzahlung=دفعات استثنائية، Sondertilgung=تسديد إضافي."
+    },
+    {
+      "unit": "d-b2-21.lines[7].ar",
+      "old": "سنثبِّتُه في القرار؛ فالتوقيعُ على المنصّةِ بالهويّةِ الإلكترونية.",
+      "new": "هكذا نُثبِّته في الإشعار؛ والتوقيعُ إلكترونيٌّ بالهويةِ الرقمية.",
+      "rationale": "Bescheid=الإشعار، eID=الهوية الرقمية."
+    }
+  ],
+  "contextNotes": {
+    "d-b2-19": [
+      {
+        "note": "«zweimal gekippt ohne Rückmeldung» = أُلغي مرتين دون رد.",
+        "source": "d-b2-19.L0"
+      },
+      {
+        "note": "«Kritik sachlich per Mail, nicht im Chat» صياغة النقد بالبريد (شاهد Q1).",
+        "source": "d-b2-19-q1"
+      },
+      {
+        "note": "«Protokoll mit Fristen gegenzeichnen / Wiedervorlage nach sechs Wochen» محضر بتوقيع الطرفين وإعادة طرح (شاهد Q3).",
+        "source": "d-b2-19-q3"
+      }
+    ],
+    "d-b2-20": [
+      {
+        "note": "«Schlaganfall» سكتة دماغية؛ Pflegegrad يُقيَّم بالاستقلالية لا التشخيص.",
+        "source": "d-b2-20-q0"
+      },
+      {
+        "note": "«zweiwöchige Liste mit Uhrzeiten» قائمة الأسبوعين بالمواعيد؛ «Tagebuch» يوميات للحالة الليلية.",
+        "source": "d-b2-20-q1"
+      },
+      {
+        "note": "«schriftlich binnen 25 Arbeitstagen; Widerspruch bei zu knapper Bewertung».",
+        "source": "d-b2-20-q2"
+      }
+    ],
+    "d-b2-21": [
+      {
+        "note": "«staatlich gedeckelt + zinsgünstiges Darlehen mit Bürgschaft» سقف حكومي وقرض ميسَّر بكفالة.",
+        "source": "d-b2-21-q0"
+      },
+      {
+        "note": "«Karenzzeit 18 Monate/Zinsen gestundet» مهلة سماح 18 شهراً والفوائد مؤجَّلة.",
+        "source": "d-b2-21-q1"
+      },
+      {
+        "note": "«Tilgung 120–200€ + Sonderzahlung zweimal jährlich + eID».",
+        "source": "d-b2-21-q2/L6/L7"
+      }
+    ]
+  },
+  "styleAlternatives": {
+    "d-b2-19": [
+      {
+        "phrase": "نُقيم طاولة مستديرة",
+        "alternative": "ندعو إلى طاولة مستديرة",
+        "note": "«setzen wir»."
+      },
+      {
+        "phrase": "يذهب الأثر سدىً",
+        "alternative": "يتبخّر",
+        "note": "«verpufft»."
+      },
+      {
+        "phrase": "بدلاً من المناداة",
+        "alternative": "لا مناداة",
+        "note": "«statt Zurufen»."
+      }
+    ],
+    "d-b2-20": [
+      {
+        "phrase": "سكتة دماغية",
+        "alternative": "سكتة دماغيّة",
+        "note": "«Schlaganfall»."
+      },
+      {
+        "phrase": "متدنياً",
+        "alternative": "متدنّ",
+        "note": "«zu knapp»."
+      },
+      {
+        "phrase": "قائمة الأسبوعين",
+        "alternative": "قائمة أسبوعين",
+        "note": "«zweiwöchig»."
+      }
+    ],
+    "d-b2-21": [
+      {
+        "phrase": "مسقوف حكومياً",
+        "alternative": "محدد بقانون",
+        "note": "«gedeckelt»."
+      },
+      {
+        "phrase": "ميسَّر الفائدة",
+        "alternative": "مخفّض الفائدة",
+        "note": "«zinsgünstig»."
+      },
+      {
+        "phrase": "دفعتان استثنائيتان",
+        "alternative": "سدادان خاصّان",
+        "note": "«Sonderzahlung»."
+      }
+    ]
+  },
+  "sources": {
+    "d-b2-19": [
+      {
+        "id": "S1",
+        "citation": "DWDS: kippen = إلغاء/إفشال (اتفاق).",
+        "url": "https://www.dwds.de/wb/kippen"
+      },
+      {
+        "id": "S2",
+        "citation": "DWDS: gegenzeichnen = توقيع مقابل.",
+        "url": "https://www.dwds.de/wb/gegenzeichnen"
+      },
+      {
+        "id": "S3",
+        "citation": "DWDS: Wiedervorlage/verpuffen.",
+        "url": "https://www.dwds.de/wb/verpuffen"
+      },
+      {
+        "id": "S4",
+        "citation": "مقارنة داخلية: Protokoll=محضر، sachlich=بموضوعية (R127).",
+        "url": "content/dialogues.json"
+      }
+    ],
+    "d-b2-20": [
+      {
+        "id": "S5",
+        "citation": "Duden: Schlaganfall = سكتة دماغية.",
+        "url": "https://www.duden.de/rechtschreibung/Schlaganfall"
+      },
+      {
+        "id": "S6",
+        "citation": "Duden: Pflegegrad/Begutachtung.",
+        "url": "https://www.duden.de/rechtschreibung/Pflegegrad"
+      },
+      {
+        "id": "S7",
+        "citation": "DWDS: Widerspruch = اعتراض (R127 قفل).",
+        "url": "https://www.dwds.de/wb/Widerspruch"
+      },
+      {
+        "id": "S8",
+        "citation": "Duden: binnen 25 Arbeitstagen = خلال 25 يوم عمل.",
+        "url": "https://www.duden.de/rechtschreibung/binnen"
+      }
+    ],
+    "d-b2-21": [
+      {
+        "id": "S9",
+        "citation": "DWDS: deckeln = سقف/تحديد الحد.",
+        "url": "https://www.dwds.de/wb/deckeln"
+      },
+      {
+        "id": "S10",
+        "citation": "Duden: zinsgünstig = ميسَّر الفائدة (لا ربا).",
+        "url": "https://www.duden.de/rechtschreibung/zinsguenstig"
+      },
+      {
+        "id": "S11",
+        "citation": "DWDS: Bürgschaft/Karenzzeit/Sondertilgung.",
+        "url": "https://www.dwds.de/wb/Sondertilgung"
+      },
+      {
+        "id": "S12",
+        "citation": "Duden: Bescheid = إشعار/قرار.",
+        "url": "https://www.duden.de/rechtschreibung/Bescheid"
+      }
+    ]
+  },
+  "contentWarnings": [],
+  "contentChecks": [
+    "d-b2-19: الوساطة متسقة: إلغاء اتفاق مرتين دون رد → توثيق بالبريد → طاولة مستديرة (3 حاجات) → محضر بتوقيع الطرفين + إعادة طرح بعد 6 أسابيع. مفاتيح Q1/Q2/Q3 مطابقة.",
+    "d-b2-20: تقدير Pflegegrad متسق: سكتة دماغية → تقييم استقلالية → مساعدة صباحية، اضطراب ليلي/يوميات → قائمة أسبوعين → درجة 2–3 → رد خلال 25 يوم عمل واعتراض عند التدني. مفاتيح Q0/Q1/Q2 مطابقة.",
+    "d-b2-21: تفاوض القرض متسق: سقف حكومي + قرض ميسَّر بكفالة → سداد بعد سنتي مزاولة → مهلة 18 شهراً والفوائد مؤجلة → قسط 120–200€ → دفعات استثنائية → إشعار بتوقيع eID. مفاتيح Q0/Q1/Q2 مطابقة.",
+    "لا تحذيرات محتوى جديدة؛ W1–W6 مفتوحة."
+  ],
+  "audio": {
+    "manifestEntries": [
+      "d-b2-19",
+      "d-b2-20",
+      "d-b2-21"
+    ],
+    "mp3Files": [
+      "/home/user/wegb2/public/audio/dialog/d-b2-19.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b2-20.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b2-21.mp3"
+    ],
+    "note": "لا استماع ولا ادعاء صوتي."
+  },
+  "waisen": {
+    "present": false,
+    "note": "الحوارات الثلاثة بلا حقل waisen (فحص صريح لكل كائن)."
+  },
+  "judgement": {
+    "correct": 144,
+    "corrected": 18,
+    "unresolved": 0,
+    "note": "ثمانية عشر تصحيحاً عربياً مؤكداً — d-b2-19 (8): gekippt=أُلغي، Rückmeldung=ردّ، selbst=بنفسك، Kritik=النقد (لا اعتراض)، runden Tisch=نُقيم طاولة مستديرة، statt Zurufe=بدلاً من المناداة، gegenzeichnen=توقيع مقابل، bis Mittwoch=بحلول الأربعاء، Wiedervorlage/verpufft=إعادة طرح/سدىً؛ d-b2-20 (6): Schlaganfall=سكتة دماغية، Hilfe=مساعدة غسل/ارتداء، Nächtliche Unruhe=اضطراب ليلي/Tagebuch=اليوميات، zweiwöchige=قائمة الأسبوعين، Bescheid=الرد/zu knapp=متدنياً، Widerspruch=اعتراض؛ d-b2-21 (4): gedeckelt=مسقوف، zinsgünstig=ميسَّر الفائدة (لا ربا)/Bürgschaft=كفالة، Berufsjahr=سنتي مزاولة، Sonderzahlung=دفعات استثنائية، Bescheid/eID=إشعار/هوية رقمية. لا تحذيرات محتوى جديدة؛ W1–W6 تبقى مفتوحة. الألماني/who/الأسئلة/المفاتيح/الإملاءات مقفلة."
+  },
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو النسبة.",
+    "audio": "لا استماع ولا توليد صوتي.",
+    "human": "ليست مراجعة بشرية.",
+    "legal": "سياق قانوني/إداري عام (إعانات والدية، إقرار ضريبي، مطالبات تأمين): التصحيحات لغوية-مصطلحية، وليست مشورة قانونية أو ضريبية.",
+    "medical": "لا محتوى طبي في هذه الدفعة.",
+    "professional": "لا توصيات مالية/مهنية؛ مفردات حوارات إدارية/تأمينية لا نصائح."
+  },
+  "gates": {
+    "planned": "K203a–j"
+  }
+}

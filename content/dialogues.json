@@ -4984,42 +4984,42 @@
       {
         "who": "Leila",
         "de": "Die Absprache mit der Einkaufsabteilung ist zweimal gekippt — ohne Rückmeldung.",
-        "ar": "اتفاقُنا مع قسمِ المشترياتِ انقلبَ مرتين، دونَ إخطار."
+        "ar": "اتفاقُنا مع قسمِ المشترياتِ أُلغيَ مرتين، دونَ ردٍّ."
       },
       {
         "who": "Teamleitung",
         "de": "Was haben Sie selbst unternommen?",
-        "ar": "وما الذي فعلتِه أنتِ؟"
+        "ar": "وماذا فعلتِ أنتِ بنفسِك؟"
       },
       {
         "who": "Leila",
         "de": "Ich habe die Protokolle datiert und die Kritik sachlich formuliert — per Mail, nicht im Chat.",
-        "ar": "وثَّقتُ المحاضرَ بالتواريخ وكتبتُ الاعتراضَ بموضوعيةٍ بالبريدِ لا بالمحادثة."
+        "ar": "وثَّقتُ المحاضرَ بالتاريخ وصغتُ النقدَ بموضوعيةٍ بالبريدِ لا بالمحادثة."
       },
       {
         "who": "Teamleitung",
         "de": "Gut so. Dann setzen wir einen runden Tisch: jede Seite nennt drei Bedürfnisse.",
-        "ar": "أحسنتِ — نجعلُ طاولةً مستديرة: كلُّ جهةٍ تُسمِّي ثلاثَ حاجات."
+        "ar": "أحسنتِ — نُقيمُ طاولةً مستديرة: كلُّ جهةٍ تذكر ثلاثَ حاجات."
       },
       {
         "who": "Leila",
         "de": "Meine Priorität: verbindliche Lieferfristen statt Zurufen im Flur.",
-        "ar": "أولويتي: مواعيدُ تسليمٍ مُلزِمةٌ لا نداءاتٌ في الممرّ."
+        "ar": "أولويتي: مواعيدُ تسليمٍ مُلزِمةٌ بدلاً من المناداةِ في الممر."
       },
       {
         "who": "Teamleitung",
         "de": "Vereinbart wird ein Protokoll mit Fristen, das beide gegenzeichnen.",
-        "ar": "نُثبِتُ في المحضرِ المواعيدَ ويوقِّعُها الطرفانِ جميعاً."
+        "ar": "يُثبَّتُ في المحضرِ المواعيدَ ويوقِّعُه الطرفان."
       },
       {
         "who": "Leila",
         "de": "Verstanden — und ich bringe die Zahlen für den Vergleich bis Mittwoch mit.",
-        "ar": "فهمتُ — وأُحضِرُ أرقامَ المقارنةِ إلى الأربعاءِ لا أكثر."
+        "ar": "فهمتُ — وسأُحضِرُ أرقامَ المقارنةِ بحلول الأربعاء."
       },
       {
         "who": "Teamleitung",
         "de": "Konstruktiv. Wiedervorlage nach sechs Wochen — damit es nicht verpufft.",
-        "ar": "بنّاءٌ الأمر. نُعيدُ العرضَ بعدَ ستةِ أسابيع لئلا يخبوَ الأثر."
+        "ar": "بنّاء. إعادةُ الطرحِ بعدَ ستةِ أسابيع لئلا يذهبَ الأثرُ سدىً."
       }
     ],
     "questions": [
@@ -5080,7 +5080,7 @@
       {
         "who": "Hedi",
         "de": "Mein Vater hatte vor vier Wochen einen Schlaganfall — wie hoch wird der Pflegegrad sein?",
-        "ar": "أصابَ أبي جلطةٌ قبلَ أربعةِ أسابيع — فما درجةُ رعايتِه المتوقعة؟"
+        "ar": "أصابَ أبي سكتةٌ دماغيةٌ قبلَ أربعةِ أسابيع — فما درجةُ رعايتِه المتوقعة؟"
       },
       {
         "who": "Gutachter",
@@ -5090,17 +5090,17 @@
       {
         "who": "Hedi",
         "de": "Morgens braucht er Hilfe beim Waschen und Anziehen, mittags reicht Aufsicht.",
-        "ar": "صباحًا يُعينُ على الغسلِ واللباس، وعندَ الظهرِ يكفي الإشراف."
+        "ar": "صباحاً يحتاجُ إلى مساعدةٍ في الغسلِ والارتداء، وفي الظهرِ يكفي الإشراف."
       },
       {
         "who": "Gutachter",
         "de": "Nächtliche Unruhe und Sturzangst — dokumentieren Sie das bitte im Tagebuch.",
-        "ar": "قلقٌ ليليٌّ وخوفُ سقوط — دوّنوا ذلك في المذكرةِ من فضلكم."
+        "ar": "اضطرابٌ ليليٌّ وخوفُ السقوط — دوّنوا ذلك في اليومياتِ من فضلكم."
       },
       {
         "who": "Hedi",
         "de": "Die zweiwöchige Liste ist vorbereitet, mit Uhrzeiten.",
-        "ar": "القائمةُ الأسبوعيةُ جاهزةٌ بساعاتِها."
+        "ar": "قائمةُ الأسبوعينِ جاهزةٌ بمواعيدِها."
       },
       {
         "who": "Gutachter",
@@ -5110,12 +5110,12 @@
       {
         "who": "Hedi",
         "de": "Und wie lange dauert der Bescheid — was, wenn die Bewertung zu knapp ausfällt?",
-        "ar": "وكم يستغرقُ القرار — وإن جاءَ التقديرُ بخيلًا؟"
+        "ar": "وكم يستغرقُ الرد — وإن جاءَ التقديرُ متدنياً؟"
       },
       {
         "who": "Gutachter",
         "de": "Schriftlich binnen 25 Arbeitstagen; bei zu knapper Bewertung: Widerspruch.",
-        "ar": "خطيًّا خلالَ خمسةٍ وعشرين يومَ عمل؛ ومع التقديرِ البخيل: اعتراض."
+        "ar": "خطياً خلالَ خمسةٍ وعشرين يومَ عمل؛ وإن كان التقديرُ متدنياً فالاعتراضُ."
       }
     ],
     "questions": [
@@ -5181,12 +5181,12 @@
       {
         "who": "Bankberaterin",
         "de": "Höchstbetrag staatlich gedeckelt; bankseitig ein zinsgünstiges Darlehen mit Bürgschaft.",
-        "ar": "الحدُّ الأقصى مكفولٌ اتحادياً؛ وقرضٌ مصرفيٌّ ميسَّرُ الربا بضمانٍ شخصيٍّ منا."
+        "ar": "الحدُّ الأقصى مسقوفٌ حكومياً؛ وقرضٌ مصرفيٌّ ميسَّرُ الفائدةِ بكفالةٍ شخصية."
       },
       {
         "who": "Maha",
         "de": "Die Rückzahlung möchte ich nach dem zweiten Berufsjahr beginnen.",
-        "ar": "يسرُّني بدءُ السدادِ بعدَ سنتَين من المزاول."
+        "ar": "أودُّ بدءَ السدادِ بعدَ سنتينِ من مزاولةِ المهنة."
       },
       {
         "who": "Bankberaterin",
@@ -5206,12 +5206,12 @@
       {
         "who": "Maha",
         "de": "Sonderzahlung zweimal jährlich — damit wäre eine jährliche Sondertilgung vereinbart.",
-        "ar": "ومكافأتانِ سنويّاً تجعلُ سدادَ دفعةٍ إضافيةٍ كلَّ عامٍ بديلاً."
+        "ar": "وبدفعتينِ استثنائيتينِ سنوياً يُتَّفقُ على تسديدٍ إضافيٍّ كلَّ عام."
       },
       {
         "who": "Bankberaterin",
         "de": "So fixieren wir es im Bescheid — Unterschrift online per eID.",
-        "ar": "سنثبِّتُه في القرار؛ فالتوقيعُ على المنصّةِ بالهويّةِ الإلكترونية."
+        "ar": "هكذا نُثبِّته في الإشعار؛ والتوقيعُ إلكترونيٌّ بالهويةِ الرقمية."
       }
     ],
     "questions": [
