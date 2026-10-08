@@ -9705,6 +9705,8 @@ void 0;
   const reviewB208 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.json", "utf8")) as any;
   const reviewB209 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.json", "utf8")) as any;
   const reviewB210 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.json", "utf8")) as any;
+  const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
+  const reviewFixW5Md = readFileSync("docs/content-review-fix-w5-2026-10-09.md", "utf8");
   const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
   const reviewA001Md = readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.md", "utf8");
   const reviewB210Md = readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.md", "utf8");
@@ -9904,6 +9906,45 @@ void 0;
     "K207i الحوارات الثلاث بلا حقل waisen");
   const a0Count = dialoguesArr.filter((d:any)=>d.level==="A0").length;
   ok(a0Count === 3, `K207j مستوى A0 يغطي 3 حوارات في content/dialogues.json (فعلياً ${a0Count})`);
+/* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
+{
+  const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
+  const patchFixW5Src = readFileSync("scripts/patches/review_fix_w5.py", "utf8");
+  const reviewFixW5Md = readFileSync("docs/content-review-fix-w5-2026-10-09.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const db202 = dialoguesArr.find((d:any)=>d.id==="d-b2-02");
+  ok(reviewFixW5.reviewRule === "R134" && reviewFixW5.totals.dialogues === 1 &&
+    reviewFixW5.corrections.length === 1,
+    "K208a تقرير R134 لتثبيت إصلاح W5 بتصحيح إملائي واحد");
+  ok(db202 && db202.questions[0].promptDe === "Die Digitalisierung setzt eine Infrastruktur ___." &&
+    db202.questions[0].promptAr.length > 0 && db202.questions[0].answer.length > 0,
+    "K208b نص السؤال الألماني مصحَّح (Digitalisierung) والعربية سليمة بلا تغيير");
+  const raw = JSON.stringify(dialoguesArr);
+  ok(!raw.includes("Digitalisung"),
+    "K208c لا وجود لكلمة «Digitalisung» المخطوءة في كامل content/dialogues.json");
+  ok(reviewFixW5.judgement.corrected === 1 && reviewFixW5.judgement.unresolved === 0,
+    "K208d حكم التقرير: تصحيح واحد مؤكَّد وبلا غير محسوم");
+  ok(reviewFixW5.contentChecks.length >= 4,
+    "K208e فحوص محتوى تؤكد إغلاق W5 وقفل بقية الحقول");
+  ok(patchFixW5Src.includes("<R134> patch complete") && patchFixW5Src.includes("locked DE lines:") && patchFixW5Src.includes("changes applied:"),
+    "K208f الرقعة تطبّق تصحيحاً إملائياً واحداً وتطبع سطر النهاية");
+  ok(reviewFixW5Md.includes("Digitalisierung") && reviewFixW5Md.includes("## الحكم") &&
+    reviewFixW5Md.includes("W5") && reviewFixW5.sources["d-b2-02"].length >= 1,
+    "K208g التقرير العربي ومصدر Duden للصياغة القياسية");
+  ok(reviewFixW5.limits.human && reviewFixW5.limits.legal && reviewFixW5.audio.note.includes("لا استماع"),
+    "K208h الحدود معلَنة والصوت بلا استماع");
+  const w5 = reviewFixW5.contentWarnings.find((w:any)=>w.id==="W5");
+  const othersOpen = ["W1","W2","W3","W4","W6"].every(wid=>{
+    const ww=reviewFixW5.contentWarnings.find((w:any)=>w.id===wid);
+    return ww && ww.status==="open";
+  });
+  ok(w5 && w5.status==="fixed-R134" && othersOpen,
+    "K208i W5 مغلق رسمياً بموجب R134 وبقية W1–W4/W6 ما زالت مفتوحة");
+  ok(db202.questions[0].answer && db202.lines.length>0 && db202.dictation.length>0,
+    "K208j بقية الأسطر/المفتاح/الإملاءات مقفلة وبلا تغيير");
+}
+
+
 }
 
 
