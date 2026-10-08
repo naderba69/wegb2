@@ -7826,6 +7826,190 @@ void 0;
     "K187e التقرير يصرّح بحدود CEFR والمراجعة البشرية/قانونية");
 }
 
+// K188 — first B1 batch d-b1-01..d-b1-06 (R114).
+{
+  const reviewB101 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-01-2026-10-08.json", "utf8")) as any;
+  const reviewB101Md = readFileSync("docs/content-review-b1-dialogues-01-2026-10-08.md", "utf8");
+  const liveB101 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB101 = readFileSync("scripts/patches/review_b1_dialogues_01.py", "utf8");
+  const reportSourceB101 = readFileSync("scripts/patches/report_b1_dialogues_01.py", "utf8");
+  const scope = ["d-b1-01", "d-b1-02", "d-b1-03", "d-b1-04", "d-b1-05", "d-b1-06"];
+  const lineCounts = [5, 5, 5, 5, 5, 6];
+  ok(reviewB101.reviewRule === "R114" && reviewB101.date === "2026-10-08" &&
+    JSON.stringify(reviewB101.dialogues.map((d: any) => d.id)) === JSON.stringify(scope) &&
+    reviewB101.dialogues.every((d: any, i: number) => d.lines === lineCounts[i] && d.questions === 2 && d.dictation === 3) &&
+    reviewB101.totals.lines === 31 && reviewB101.totals.questions === 12 && reviewB101.totals.dictation === 18,
+    "K188a دفعة B1 الأولى d-b1-01..06 موثقة بستة حوارات (31 سطراً، 12 سؤالاً، 18 إملاء)");
+
+  ok(reviewB101.corrections.length === 1 &&
+    reviewB101.corrections[0].unit === "d-b1-01.lines[3].ar" &&
+    reviewB101.corrections[0].old.includes("لوفّقت") &&
+    reviewB101.corrections[0].new.includes("لوافقتُ") &&
+    liveB101.find((d) => d.id === "d-b1-01").lines[3].ar === reviewB101.corrections[0].new &&
+    liveB101.find((d) => d.id === "d-b1-01").lines[3].de ===
+      "Wenn die Firma gute Regeln hätte, würde ich zustimmen.",
+    "K188b تصحيح عربي واحد مؤكد: d-b1-01.lines[3].ar يطابق الألماني würde ich zustimmen");
+
+  // Locks: DE text, who, questions, dictation unchanged for all six dialogues.
+  const expectedDE: Record<string, string[]> = {
+    "d-b1-01": [
+      "Meiner Meinung nach ist Homeoffice die Zukunft der Arbeit.",
+      "Da bin ich nicht ganz einverstanden. Zwar spart man Zeit, aber man verliert den Kontakt.",
+      "Trotzdem glaube ich, dass die Flexibilität überwiegt.",
+      "Wenn die Firma gute Regeln hätte, würde ich zustimmen.",
+      "Also: eine Mischung wäre die beste Lösung.",
+    ],
+    "d-b1-02": [
+      "Erzählen Sie kurz etwas über sich.",
+      "Gern. Ich habe drei Jahre als Techniker gearbeitet und spreche Deutsch auf B1-Niveau.",
+      "Warum möchten Sie wechseln?",
+      "Ich möchte neue Erfahrungen sammeln und mehr Verantwortung übernehmen.",
+      "Gut. Wir melden uns nächste Woche bei Ihnen.",
+    ],
+    "d-b1-03": [
+      "Hast du die Nachrichten gehört? Der Streik geht weiter.",
+      "Ja, die Züge fahren heute wieder nicht.",
+      "Ich habe gelesen, die Verhandlungen hätten gestern begonnen.",
+      "Hoffentlich finden sie bald eine Lösung.",
+      "Sonst muss ich jeden Tag mit dem Rad fahren.",
+    ],
+    "d-b1-04": [
+      "Danke, dass du mir beim Umzug hilfst!",
+      "Gern! Was sollen wir zuerst tragen?",
+      "Die Bücher sind am schwersten. Die Kartons stehen schon im Flur.",
+      "Alles klar. Achtung, die Tür ist eng!",
+      "Danke dir. Nachher essen wir Pizza — mein Angebot!",
+    ],
+    "d-b1-05": [
+      "Was hast du vor, nach der Prüfung zu machen?",
+      "Ich würde gern ein Praktikum in einer Klinik machen.",
+      "Das ist eine gute Idee! Wo willst du dich bewerben?",
+      "Vielleicht in Köln. Dort hätte ich bessere Chancen.",
+      "Ich drücke dir die Daumen!",
+    ],
+    "d-b1-06": [
+      "Guten Tag. Ich möchte einen Termin zur Anmeldung vereinbaren.",
+      "Gern. Haben Sie alle Unterlagen schon mitgebracht?",
+      "Ich habe Pass und Mietvertrag dabei. Fehlt noch etwas?",
+      "Eine Meldebescheinigung wäre noch nötig.",
+      "Alles klar. Könnte der Termin am Donnerstag sein?",
+      "Ja, um 11:30 Uhr. Bitte kommen Sie pünktlich.",
+    ],
+  };
+  const expectedWho: Record<string, string[]> = {
+    "d-b1-01": ["Mara","Tim","Mara","Tim","Mara"],
+    "d-b1-02": ["Chefin","Bewerber","Chefin","Bewerber","Chefin"],
+    "d-b1-03": ["Lea","Yusuf","Lea","Yusuf","Lea"],
+    "d-b1-04": ["Paul","Rana","Paul","Rana","Paul"],
+    "d-b1-05": ["Ali","Mira","Ali","Mira","Ali"],
+    "d-b1-06": ["Bürgerin","Sachbearbeiter","Bürgerin","Sachbearbeiter","Bürgerin","Sachbearbeiter"],
+  };
+  const expectedAnswers: Record<string, any[]> = {
+    "d-b1-01": ["Man verliert den Kontakt.", ["hätte","haette"]],
+    "d-b1-02": [["Verantwortung"], "Die Firma meldet sich."],
+    "d-b1-03": ["Es gibt einen Streik.", ["Lösung"]],
+    "d-b1-04": ["die Bücher", ["Pizza"]],
+    "d-b1-05": ["ein Praktikum in einer Klinik machen", ["Daumen"]],
+    "d-b1-06": [["Meldebescheinigung"], "Donnerstag um 11:30 Uhr"],
+  };
+  const expectedDict: Record<string, string[]> = {
+    "d-b1-01": [
+      "Meiner Meinung nach ist Homeoffice die Zukunft der Arbeit.",
+      "Trotzdem glaube ich, dass die Flexibilität überwiegt.",
+      "Eine Mischung wäre die beste Lösung.",
+    ],
+    "d-b1-02": [
+      "Ich habe drei Jahre als Techniker gearbeitet.",
+      "Ich möchte neue Erfahrungen sammeln.",
+      "Wir melden uns nächste Woche bei Ihnen.",
+    ],
+    "d-b1-03": [
+      "Der Streik geht weiter.",
+      "Die Verhandlungen hätten gestern begonnen.",
+      "Hoffentlich finden sie bald eine Lösung.",
+    ],
+    "d-b1-04": [
+      "Danke, dass du mir beim Umzug hilfst!",
+      "Die Bücher sind am schwersten.",
+      "Mein Angebot!",
+    ],
+    "d-b1-05": [
+      "Ich würde gern ein Praktikum in einer Klinik machen.",
+      "Dort hätte ich bessere Chancen.",
+      "Ich drücke dir die Daumen!",
+    ],
+    "d-b1-06": [
+      "Ich möchte einen Termin vereinbaren.",
+      "Eine Meldebescheinigung wäre noch nötig.",
+      "Bitte kommen Sie pünktlich.",
+    ],
+  };
+  let locksOk = true;
+  for (const did of scope) {
+    const dlg = liveB101.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE[did][i] || dlg.lines[i].who !== expectedWho[did][i]) locksOk = false;
+    }
+    for (let i = 0; i < 2; i++) {
+      const a = dlg.questions[i].answer;
+      const e = expectedAnswers[did][i];
+      if (Array.isArray(e) ? JSON.stringify(a.slice().sort()) !== JSON.stringify(e.slice().sort()) : a !== e) locksOk = false;
+    }
+    for (let i = 0; i < 3; i++) {
+      if (dlg.dictation[i] !== expectedDict[did][i]) locksOk = false;
+    }
+  }
+  ok(locksOk, "K188c كل الألماني وأسماء الشخصيات والأسئلة/المفاتيح والإملاءات مقفلة ولم تتغير");
+
+  ok(reviewB101.judgement.corrected === 1 && reviewB101.judgement.unresolved === 0 &&
+    reviewB101.waisen.present === false &&
+    patchSourceB101.includes("d-b1-01") && patchSourceB101.includes("d-b1-02") &&
+    patchSourceB101.includes("d-b1-03") && patchSourceB101.includes("d-b1-04") &&
+    patchSourceB101.includes("d-b1-05") && patchSourceB101.includes("d-b1-06") &&
+    patchSourceB101.includes("لوافقتُ") &&
+    patchSourceB101.includes("<R114> patch complete"),
+    "K188d الرقعة تغطي النطاق الكامل وتطبق التصحيح الواحد وتطبع سطر النهاية");
+
+  ok(reviewB101.contextNotes["d-b1-06"] &&
+    reviewB101.contextNotes["d-b1-06"][0].note.includes("Wohnungsgeber") &&
+    reviewB101.contextNotes["d-b1-05"] &&
+    reviewB101.contextNotes["d-b1-05"][0].note.includes("Daumen") &&
+    reviewB101.contextNotes["d-b1-04"] &&
+    reviewB101.contextNotes["d-b1-04"][0].note.includes("Pizza"),
+    "K188e ملاحظات سياقية مسجلة — Meldebescheinigung تبسيط دراسي، Daumen drücken، Pizza für Umzug");
+
+  ok(reviewB101.audio.mp3Files.length === 6 && reviewB101.audio.manifestEntries.length === 6 &&
+    reviewB101.limits.audio.includes("لا استماع") &&
+    reviewB101.limits.cefr.includes("لم يُعد") &&
+    reviewB101.limits.human.includes("ليست") &&
+    reviewB101.limits.legal.length > 0 &&
+    reviewB101.limits.medical.length > 0 && reviewB101.limits.professional.length > 0,
+    "K188f الصوت موجود ولكنه لم يُستمع إليه؛ حدود CEFR/بشري/قانوني/طبي/مهني معلنة");
+
+  ok(reviewB101Md.includes("## الحكم") && reviewB101Md.includes("## التصحيحات") &&
+    reviewB101Md.includes("## المصادر") && reviewB101Md.includes("K188") &&
+    reviewB101Md.includes("لوافقتُ") &&
+    reportSourceB101.includes("S1") && reportSourceB101.includes("S14"),
+    "K188g التقرير العربي يحتوي الحكم والتصحيحات والمصادر والبوابة K188");
+
+  // Idempotency verified by running patch twice and getting 0 changes; ensure file contains expected marker.
+  ok(patchSourceB101.includes("changes applied:") &&
+    patchSourceB101.includes("locked DE lines") &&
+    reportSourceB101.includes("write_outputs"),
+    "K188h الرقعة تقفل الألماني والأسئلة والإملاءات وتطبع ملخصها؛ المُولِّد ينتج JSON+Markdown");
+
+  // Source list covers all six dialogues (at least 2 per dialogue).
+  const srcMap = reviewB101.sources as Record<string, any[]>;
+  const perDialogueSources = Object.keys(srcMap).every((k) => srcMap[k].length >= 2);
+  ok(perDialogueSources &&
+    Object.values(srcMap).reduce((n: number, v: any[]) => n + v.length, 0) >= 12,
+    "K188i كل حوار مدعوم بمصدرين منشورين على الأقل (12+ مرجع إجمالاً)");
+
+  ok(reviewB101.totals.dictation === 18 && reviewB101.dialogues.every((d: any) => d.dictation === 3) &&
+    patchSourceB101.includes('"dictation"'),
+    "K188j الحقل dictation قائمة نصية بعدد 3 جمل لكل حوار (18 إجمالاً) وهو مقفل");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

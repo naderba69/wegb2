@@ -1,0 +1,310 @@
+{
+  "reviewRule": "R114",
+  "date": "2026-10-08",
+  "scope": "أول ستة حوارات B1 قصيرة بلا بطاقات waisen: d-b1-01..06 (Homeoffice، Bewerbungsgespräch، Nachrichten/Streik، Umzug، Pläne/Zukunft، Termin beim Amt).",
+  "dialogues": [
+    {
+      "id": "d-b1-01",
+      "level": "B1",
+      "titleDe": "Diskussion: Homeoffice",
+      "titleAr": "نقاش: العمل من المنزل",
+      "lines": 5,
+      "questions": 2,
+      "dictation": 3,
+      "units": 35,
+      "hasWaisenField": false,
+      "who": [
+        "Mara",
+        "Tim",
+        "Mara",
+        "Tim",
+        "Mara"
+      ]
+    },
+    {
+      "id": "d-b1-02",
+      "level": "B1",
+      "titleDe": "Bewerbungsgespräch",
+      "titleAr": "مقابلة توظيف",
+      "lines": 5,
+      "questions": 2,
+      "dictation": 3,
+      "units": 35,
+      "hasWaisenField": false,
+      "who": [
+        "Chefin",
+        "Bewerber",
+        "Chefin",
+        "Bewerber",
+        "Chefin"
+      ]
+    },
+    {
+      "id": "d-b1-03",
+      "level": "B1",
+      "titleDe": "Nachrichten am Morgen",
+      "titleAr": "أخبار الصباح",
+      "lines": 5,
+      "questions": 2,
+      "dictation": 3,
+      "units": 35,
+      "hasWaisenField": false,
+      "who": [
+        "Lea",
+        "Yusuf",
+        "Lea",
+        "Yusuf",
+        "Lea"
+      ]
+    },
+    {
+      "id": "d-b1-04",
+      "level": "B1",
+      "titleDe": "Beim Umzug helfen",
+      "titleAr": "مساعدة الانتقال",
+      "lines": 5,
+      "questions": 2,
+      "dictation": 3,
+      "units": 35,
+      "hasWaisenField": false,
+      "who": [
+        "Paul",
+        "Rana",
+        "Paul",
+        "Rana",
+        "Paul"
+      ]
+    },
+    {
+      "id": "d-b1-05",
+      "level": "B1",
+      "titleDe": "Pläne für die Zukunft",
+      "titleAr": "خطط للمستقبل",
+      "lines": 5,
+      "questions": 2,
+      "dictation": 3,
+      "units": 35,
+      "hasWaisenField": false,
+      "who": [
+        "Ali",
+        "Mira",
+        "Ali",
+        "Mira",
+        "Ali"
+      ]
+    },
+    {
+      "id": "d-b1-06",
+      "level": "B1",
+      "titleDe": "Termin beim Amt",
+      "titleAr": "موعد في الدائرة الرسمية",
+      "lines": 6,
+      "questions": 2,
+      "dictation": 3,
+      "units": 38,
+      "hasWaisenField": false,
+      "who": [
+        "Bürgerin",
+        "Sachbearbeiter",
+        "Bürgerin",
+        "Sachbearbeiter",
+        "Bürgerin",
+        "Sachbearbeiter"
+      ]
+    }
+  ],
+  "totals": {
+    "dialogues": 6,
+    "lines": 31,
+    "questions": 12,
+    "dictation": 18,
+    "approximateUnits": 213
+  },
+  "corrections": [
+    {
+      "unit": "d-b1-01.lines[3].ar",
+      "old": "لو كانت لدى الشركة قواعد جيدة لوفّقت.",
+      "new": "لو كانت لدى الشركة قواعد جيدة لوافقتُ",
+      "rationale": "الألماني «würde ich zustimmen» = كنت لأوافق (من الفعل zustimmen = وافق على/ارتضى). الترجمة السابقة «لوفّقت» من جذر وفّق (وفّق بين/نجح/زوّج) لا تطابق المعنى. التصحيح يطابق المعنى المعجمي لـ zustimmen ويحافظ على بناء الشرط غير الواقعي (Konjunktiv II)."
+    }
+  ],
+  "contextNotes": {
+    "d-b1-01": [
+      {
+        "note": "الألماني صحيح لغوياً ويدعم حوار نقاش بين رأيين (تيم يُبدي تحفظاً، مارا تُرجّح المرونة، ويتفقان على المزج).",
+        "source": "Bitkom-Studie Homeoffice (2023): 45% arbeiten mindestens teilweise von zu Hause, Kommunikationsverlust häufige Kritik; DLF/HSU Hamburg (2022): Flexibilität 71% (HO) vs 54% (Büro); Isolation 32% HO; Kontaktverlust 55%."
+      }
+    ],
+    "d-b1-02": [
+      {
+        "note": "الحوار يصوغ مقابلة عمل قصيرة بصيغة «Sie» الرسمية الألمانية، مترجمة بصيغة الجمع العربية «أنتم/بكم» المحايدة دراسياً.",
+        "source": "Goethe Institut B1 Bewerbungsgespräch-Muster (Erzählen Sie über sich, Warum möchten Sie wechseln, Verantwortung übernehmen)؛ Goethe/BAMF B1-Rahmen."
+      }
+    ],
+    "d-b1-03": [
+      {
+        "note": "الإضراب الألماني النموذجي في سكك الحديد GDL وتعطل القطارات وقيادة الدراجة بديلاً صياغة واقعية لـB1.",
+        "source": "ADAC GDL-Einigung 2024؛ 24Rhein Streiknachrichten؛ ZEIT Bahngipfel März 2024."
+      }
+    ],
+    "d-b1-04": [
+      {
+        "note": "«Pizza auf meine Kosten / mein Angebot» عبارة مألوفة عند مساعدة الأصدقاء في الانتقال في ألمانيا (Pizza+Bier für Helfer traditionell). صورة الكتب أثقل شيء وصناديق نصف الممتلئة في الممر متوافقة مع نصائح الانتقال الشائعة.",
+        "source": "stern.de/neon Umzugstipps (Kartons nur halbvoll mit Büchern, Pizza+Bier für Helfer)؛ reddit r/de thread über Umzugshelfer-Regeln."
+      }
+    ],
+    "d-b1-05": [
+      {
+        "note": "«Ich drücke dir die Daumen» تعبير اصطلاحي يعني «أتمنى لك التوفيق» (لا ترجمة حرفية). الكولونيا كمدينة كبيرة فيها فرص عمل أو تدريب في المستشفيات اختيار واقعي.",
+        "source": "Duden «jm. die Daumen drücken»؛ TheLocal.de German idioms 2022؛ deutsch-mentor.de Daumen drücken."
+      }
+    ],
+    "d-b1-06": [
+      {
+        "note": "⚠️ ملاحظة سياقية (لا تُعدّل): الحوار يقول «Eine Meldebescheinigung wäre noch nötig» عند التسجيل، لكن تسجيل السكن Anmeldung يتطلب فعلاً Wohnungsgeberbestätigung (إقرار من المؤجر) بالإضافة للجواز وعقد الإيجار في بعض الولايات، وMeldebescheinigung هي ما تحصل عليه بعد التسجيل وليس ما هو ناقص. هذا تبسيط دراسي مألوف في مناهج B1؛ النص الألماني ومفتاح السؤال محميان ولا يُعدّلان، لأن تغييرهما سيكسر السؤال.",
+        "source": "amtsdeutschland.de Anmeldung؛ handbookgermany.de Anmeldung (Wohnungsgeberbestätigung seit 2015 erforderlich)."
+      }
+    ]
+  },
+  "styleAlternatives": {
+    "d-b1-01": [
+      {
+        "phrase": "die Flexibilität überwiegt",
+        "alternative": "die Vorteile überwiegen",
+        "note": "صياغة أشيع في النقاش اليومي دون أن تكون أخطاء."
+      }
+    ],
+    "d-b1-04": [
+      {
+        "phrase": "mein Angebot!",
+        "alternative": "das geht auf mich!",
+        "note": "كلاهما مألوف؛ «mein Angebot» أكثر مباشرة في حوار B1 قصير."
+      }
+    ]
+  },
+  "sources": {
+    "d-b1-01": [
+      {
+        "id": "S1",
+        "citation": "Bitkom Research, Presseinformation 17.01.2023: «Jeder Zweite kann mobil arbeiten»",
+        "url": "https://www.bitkom.org/Presse/Presseinformation/Jeder-Zweite-kann-mobil-arbeiten"
+      },
+      {
+        "id": "S2",
+        "citation": "Deutschlandfunk / HSU Hamburg, «Arbeiten im Homeoffice: Vorteile und Nachteile»",
+        "url": "https://www.deutschlandfunk.de/"
+      },
+      {
+        "id": "S3",
+        "citation": "Bertelsmann-Stiftung, «Mobiles Arbeiten in Deutschland» (2022)",
+        "url": "https://www.bertelsmann-stiftung.de/"
+      }
+    ],
+    "d-b1-02": [
+      {
+        "id": "S4",
+        "citation": "Goethe-Institut B1-Übungsmaterialien: Bewerbungsgespräch (Musterfragen)",
+        "url": "https://www.goethe.de/"
+      },
+      {
+        "id": "S5",
+        "citation": "BAMF, B1-Rahmencurriculum für Berufssprachkurse",
+        "url": "https://www.bamf.de/"
+      }
+    ],
+    "d-b1-03": [
+      {
+        "id": "S6",
+        "citation": "ADAC: GDL-Einigung im Tarifstreit (2024)",
+        "url": "https://www.adac.de/"
+      },
+      {
+        "id": "S7",
+        "citation": "24Rhein: Streik bei der Bahn 2024",
+        "url": "https://www.24rhein.de/"
+      },
+      {
+        "id": "S8",
+        "citation": "ZEIT ONLINE: Bahngipfel März 2024",
+        "url": "https://www.zeit.de/"
+      }
+    ],
+    "d-b1-04": [
+      {
+        "id": "S9",
+        "citation": "stern.de/neon: Umzugstipps für Helfer (Kartons halbvoll mit Büchern, Pizza+Bier)",
+        "url": "https://www.stern.de/"
+      },
+      {
+        "id": "S10",
+        "citation": "reddit.com/r/de: «Großes Lob an alle die bei einem Umzug helfen» (Regeln für Helfer)",
+        "url": "https://www.reddit.com/r/de/"
+      }
+    ],
+    "d-b1-05": [
+      {
+        "id": "S11",
+        "citation": "Duden online: «jemandem die Daumen drücken»",
+        "url": "https://www.duden.de/rechtschreibung/Daumen_druecken"
+      },
+      {
+        "id": "S12",
+        "citation": "TheLocal.de: 12 German idioms you need to know (2022)",
+        "url": "https://www.thelocal.de/"
+      }
+    ],
+    "d-b1-06": [
+      {
+        "id": "S13",
+        "citation": "amtsdeutschland.de: Anmeldung der Wohnung",
+        "url": "https://amtsdeutschland.de/"
+      },
+      {
+        "id": "S14",
+        "citation": "handbookgermany.de: Registering your address (Wohnungsgeberbestätigung seit 2015)",
+        "url": "https://www.handbookgermany.de/"
+      }
+    ]
+  },
+  "audio": {
+    "manifestEntries": [
+      "d-b1-01",
+      "d-b1-02",
+      "d-b1-03",
+      "d-b1-04",
+      "d-b1-05",
+      "d-b1-06"
+    ],
+    "mp3Files": [
+      "/home/user/wegb2/public/audio/dialog/d-b1-01.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-02.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-03.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-04.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-05.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-06.mp3"
+    ],
+    "note": "لا إدخالات/ملفات صوت مطابقة لهذه الدفعة في النسخة الحية؛ لا استماع ولا ادعاء صوتي."
+  },
+  "waisen": {
+    "present": false,
+    "note": "هذه الحوارات الست بلا حقل waisen؛ لم تُدقق مفردات يتيمة لهذه الدفعة.",
+    "unattributedLocked": 0
+  },
+  "judgement": {
+    "correct": 212,
+    "corrected": 1,
+    "unresolved": 0,
+    "note": "وحدة عربية مصححة (d-b1-01.lines[3].ar)، وباقي الوحدات سليمة؛ الألماني والأسئلة والمفاتيح والإملاءات والشخصيات (who) مقفلة وغير معدّلة. مُلاحظة سياقية واحدة (Meldebescheinigung/Wohnungsgeberbestätigung في d-b1-06) غير معدّلة كتبسيط دراسي."
+  },
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو النسبة أو الحساب.",
+    "audio": "لا استماع ولا توليد صوتي ولا ادعاء جودة صوتية.",
+    "human": "المراجعة مؤازرة بالمصادر المنشورة وليست مراجعة بشرية رسمية.",
+    "legal": "ملاحظات إدارية (Wohnungsgeberbestätigung) سياقية دراسية وليست مشورة قانونية؛ الاستشارة الرسمية عند الجهة الإدارية المختصة.",
+    "medical": "كلمة «Klinik» في d-b1-05 مذكورة في سياق تدريب عملي عام ولا تُعد نصيحة طبية.",
+    "professional": "الحوار حول Bewerbung/Homeoffice صياغة دراسية B1 وليست دليلاً مهنياً."
+  },
+  "gates": {
+    "planned": "K188a–j"
+  }
+}
