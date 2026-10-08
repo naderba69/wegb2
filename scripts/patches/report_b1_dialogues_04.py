@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""R117 — review report for fourth B1 batch d-b1-13..d-b1-15."""
+from __future__ import annotations
+import json, glob
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[2]
+D=json.loads((ROOT/"content/dialogues.json").read_text(encoding="utf-8"))
+AUDIO=json.loads((ROOT/"content/dialog-audio.json").read_text(encoding="utf-8"))
+SCOPE=[f"d-b1-{i:02d}" for i in range(13,16)]
+OUT_JSON=ROOT/"docs/content-review-b1-dialogues-04-2026-10-08.json"
+OUT_MD=ROOT/"docs/content-review-b1-dialogues-04-2026-10-08.md"
+
+CORRECTIONS=[
+ {"unit":"d-b1-13.lines[5].ar","old":"التاسعةُ مناسبة. وأحتاجُ مفتاحَ القبو.","new":"التاسعةُ مناسبة. وأحتاج الدخول إلى القبو.",
+  "rationale":"الألماني «Zugang zum Keller» يعني الوصول/الدخول إلى القبو، لا «مفتاح» القبو؛ ذكر المفتاح جاء في السطر التالي L6 فحسب."},
+ {"unit":"d-b1-13.lines[6].ar","old":"الاستقبالُ يُبقي المفتاحَ مُعَدّاً لك.","new":"يُجهّز الاستقبالُ المفتاحَ لكم.",
+  "rationale":"الألماني «für Sie» صيغة رسمية (جمع عربي «لكم» لا مفرد «لك»)، و«hält … bereit» = يُجهّز/يُحتفظ به جاهزاً لكم."},
+ {"unit":"d-b1-13.lines[7].ar","old":"شكراً لمرونتِك!","new":"شكراً لمرونتكم!",
+  "rationale":"«Ihre Flexibilität» صيغة رسمية (جمع)، فالضمير «ـكم» لا المؤنث «ـكِ»."},
+ {"unit":"d-b1-14.lines[2].ar","old":"سيتولّى طارق، والأوراقُ تصلُه قبلَ العاشرة.","new":"سيتولّى طارق، والشرائحُ سأرسلها له قبل العاشرة.",
+  "rationale":"(أ) «die Folien» شرائح العرض (presentation slides) لا أوراق. (ب) «sende ich ihm» متكلم = سأرسلها له، لا مبني للمجهول «تصلُه»."},
+ {"unit":"d-b1-14.lines[5].ar","old":"اراحي إذن — فالصحةُ تُقدَّمُ على الموعد.","new":"استريحوا إذن — فالصحّةُ تقدَّم على المهلة.",
+  "rationale":"(أ) «ruhen Sie aus» أمر رسمي جمع «استريحوا» لا مفرد مؤنث «اراحي» (الرئيس يخاطب رانيا بـSie). (ب) «Frist» مهلة/موعد نهائي لا «موعد» عام، وسياقها ملفات الضرائب للاثنين."},
+ {"unit":"d-b1-14.lines[6].ar","old":"شكراً — وسأُخطِرُك متى استطعت.","new":"شكراً — سأخطركم حالما أستطيع.",
+  "rationale":"رانيا تخاطب رئيسها بـSie → جمع «أخطركم»؛ «sobald» أدق بـ«حالما» من «متى»."},
+ {"unit":"d-b1-14.lines[7].ar","old":"لا كلمةَ عَجَلٍ تُثقلُك — ارتَحْ جيّدًا!","new":"لا داعي للعجلة — استريحوا جيّداً!",
+  "rationale":"(أ) «erholen Sie sich gut» أمر رسمي جمع «استريحوا» لا مذكر مفرد «ارتَحْ». (ب) «Kein Wort der Eile» تعبير اصطلاحي = لا داعي للعجلة/لا تستعجِل، والترجمة «كلمة عجل تثقلك» أدبية مبالغ فيها لحوارات B1."},
+ {"unit":"d-b1-15.lines[1].ar","old":"أُلغِيَت. متى وأين آخرُ استعمال؟","new":"أُوقِفَت. متى وأين آخرُ استعمال؟",
+  "rationale":"«sperren» في سياق البطاقة المصرفية يعني إيقاف/حظر مؤقت لمنع إساءة الاستعمال، أما «أُلغِيَت» فإلغاء دائم لا يمكن بعده بطاقة بديلة (النص يذكر بطاقة جديدة بعد 14 يوماً)."},
+ {"unit":"d-b1-15.lines[4].ar","old":"كم يكلِّفُ التعليقُ؟","new":"كم يكلف الإيقاف؟",
+  "rationale":"اتساقاً مع تصحيح L1: Sperrung = الإيقاف."},
+ {"unit":"d-b1-15.lines[7].ar","old":"ستةٌ إذن. ولا تنسَ هويّتك عند الاستلام.","new":"ستة يورو إذن. وأحضروا بطاقة هويتكم عند الاستلام.",
+  "rationale":"(أ) «Den Ausweis … mitbringen» أمر رسمي جمع «أحضروا» لا مفرد «تنسَ/هويتك». (ب) ذِكر «يورو» و«بطاقة» يجعل الجملة أوضح في السياق المصرفي."},
+]
+
+CONTEXT_NOTES={
+ "d-b1-13":[
+  {"note":"حوار تأجيل موعد حرفي/صنايعي (Handwerker) لإصلاح التدفئة، يتفقان على الاثنين التاسعة صباحاً (بعد إيداع الأطفال الروضة)، ويحتاج الصانع الدخول إلى القبو، ويحضر المفتاح من الاستقبال. الصياغة واقعية لـB1.","source":"Goethe/DW B1 Handwerker/Termin verschieben; Alltag-Deutsch Handwerkertermin."},
+ ],
+ "d-b1-14":[
+  {"note":"حوار إبلاغ المكتب بالمرض (Krankmeldung): الصداع، تأجيل الاجتماع لطارق مع إرسال الشرائح، ملفات الضرائب موجودة في المجلد المشترك، والرئيس يقدّم الصحة على المهلة. عبارة «Gute Besserung» و«erholen Sie sich gut» شائعة في بيئة العمل.","source":"DW Business-Deutsch B1/B2 Krankmeldung; Goethe B1 Berufssprache."},
+ ],
+ "d-b1-15":[
+  {"note":"حوار إيقاف بطاقة مصرفية عند فقدانها (Sperrung EC-Karte): الإيقاف الفوري، التحقق من عدم إساءة الاستخدام، رسوم 20 يورو للسرقة و6 يورو للفقدان، بطاقة بديلة بعد 14 يوماً، إحضار الهوية للاستلام. الأرقام والرسوم سياق تعليمي (الرسوم الفعلية تختلف حسب المصرف والبطاقة).","source":"Duden: «sperren», «EC-Karte», «Sperrung»; handbookgermany.de Girokonto; باختصار: تعليمي دراسي ولا يُعدّ مشورة مصرفية."},
+ ],
+}
+
+STYLE_ALTERNATIVES={
+ "d-b1-13":[
+  {"phrase":"Ich plane sonst den Tag umsonst.","alternative":"Sonst plane ich den Tag umsonst.","note":"الصياغة الحالية سليمة."},
+ ],
+ "d-b1-14":[
+  {"phrase":"ألفُ عافية!","alternative":"طهور/سلامتك/أرجو الشفاء","note":"كل التعابير تحية شفاء شائعة; «ألف عافية» شائع شامياً."},
+ ],
+ "d-b1-15":[
+  {"phrase":"EC-Karte (girocard)","alternative":"Bankkarte / Girokarte","note":"EC-Karte مصطلح قديم ولكنه لا يزال شائعاً في النصوص التعليمية."},
+ ],
+}
+
+SOURCES={
+ "d-b1-13":[{"id":"S1","citation":"Goethe/DW B1: Termin mit Handwerker verschieben","url":"https://www.goethe.de/"},{"id":"S2","citation":"Alltag-Deutsch: Kellerzugang, Rezeption, Schlüssel","url":"https://www.dw.com/"}],
+ "d-b1-14":[{"id":"S3","citation":"DW Business-Deutsch B1/B2: Krankmeldung, Frist, Gesundheit geht vor","url":"https://www.dw.com/"},{"id":"S4","citation":"Goethe Institut B1 Berufssprache (Meeting, Folien, Ordner)","url":"https://www.goethe.de/"}],
+ "d-b1-15":[{"id":"S5","citation":"Duden: sperren/Sperrung, EC-Karte","url":"https://www.duden.de/"},{"id":"S6","citation":"handbookgermany.de Girokonto / Kartensperrung","url":"https://handbookgermany.de/"},{"id":"S7","citation":"BAMF/BMF: Gebühren für Ersatzkarte bei Sperrung (سياق تعليمي)","url":"https://www.bamf.de/"}],
+}
+
+by={d["id"]:d for d in D}
+scope=[];units=lt=qt=dt=0
+for did in SCOPE:
+    dlg=by[did];lines=dlg["lines"];qs=dlg["questions"];dc=dlg.get("dictation") or []
+    lu=sum(len([k for k in ln if k in ("who","de","ar")]) for ln in lines)
+    qu=sum(len(q) for q in qs);u=4+lu+qu+len(dc)
+    units+=u;lt+=len(lines);qt+=len(qs);dt+=len(dc)
+    scope.append({"id":did,"level":dlg["level"],"titleDe":dlg["titleDe"],"titleAr":dlg["titleAr"],"lines":len(lines),"questions":len(qs),"dictation":len(dc),"units":u,"hasWaisenField":"waisen" in dlg,"who":[ln["who"] for ln in lines]})
+
+ah=[]
+def walk(n):
+    if isinstance(n,dict):
+        if isinstance(n.get("id"),str) and n["id"] in SCOPE: ah.append(n["id"])
+        for v in n.values(): walk(v)
+    elif isinstance(n,list):
+        for v in n: walk(v)
+walk(AUDIO)
+mh=[]
+for tid in SCOPE: mh.extend(glob.glob(str(ROOT/"public"/"audio"/"**"/f"*{tid}*.mp3"),recursive=True))
+
+rep={
+ "reviewRule":"R117","date":"2026-10-08",
+ "scope":"الدفعة B1 الرابعة d-b1-13..15 (تأجيل موعد الحِرفي، إبلاغ المكتب بالمرض، إيقاف بطاقة مصرفية مفقودة) — حوارات قصيرة بلا waisen.",
+ "dialogues":scope,
+ "totals":{"dialogues":3,"lines":lt,"questions":qt,"dictation":dt,"approximateUnits":units},
+ "corrections":CORRECTIONS,"contextNotes":CONTEXT_NOTES,"styleAlternatives":STYLE_ALTERNATIVES,"sources":SOURCES,
+ "audio":{"manifestEntries":ah,"mp3Files":mh,"note":"لا استماع ولا ادعاء صوتي."},
+ "waisen":{"present":False,"note":"الحوارات الثلاث بلا حقل waisen."},
+ "judgement":{"correct":units-len(CORRECTIONS),"corrected":len(CORRECTIONS),"unresolved":0,
+  "note":"عشر وحدات عربية مصححة: اتفاق صيغة Sie→جمع في كل حوارات الدفعة (أريع حالات لـ«لكم/مرونتكم/استريحوا/أخطركم/أحضروا»)، تصحيح معنى Zugang (دخول لا مفتاح)، Folien=شرائح لا أوراق، Frist=مهلة، Sperrung=إيقاف لا إلغاء، وإزالة صياغة أدبية حرّة في «كلمة عجل تثقلك». الألماني/who/الأسئلة/الإملاءات/الخيارات/الشرح مقفلة."},
+ "limits":{"cefr":"لم يُعد تقييم CEFR أو النسبة.","audio":"لا استماع ولا توليد صوتي.","human":"ليست مراجعة بشرية.","legal":"الرسوم المصرفية (6/20 يورو) سياق تعليمي ولا تُعدّ مشورة قانونية/مصرفية.","medical":"الصداع/الراحة نص تعليمي لـB1 ولا يُعدّ توصية طبية.","professional":"صياغة المكتب/الحِرفي دراسية ولا تُعدّ دليلاً مهنياً."},
+ "gates":{"planned":"K191a–j"},
+}
+OUT_JSON.parent.mkdir(parents=True,exist_ok=True)
+OUT_JSON.write_text(json.dumps(rep,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+md=[]
+md.append("# مراجعة حوارات B1 دفعة 04: d-b1-13–d-b1-15\n\n")
+md.append("**التاريخ:** 2026-10-08 · **القاعدة:** R117 · **البوابات:** K191a–j\n\n")
+md.append("## النطاق\n\n");md.append(f"{rep['scope']}\n\n")
+md.append("## الإجمالي\n\n");t=rep["totals"]
+md.append(f"- حوارات: **{t['dialogues']}** · أسطر: **{t['lines']}** · أسئلة: **{t['questions']}** · إملاءات: **{t['dictation']}** · وحدات≈**{t['approximateUnits']}**\n\n")
+md.append("## الحكم\n\n");j=rep["judgement"]
+md.append(f"- **سليمة:** {j['correct']} · **مصححة:** {j['corrected']} · **غير محسومة:** {j['unresolved']}\n- {j['note']}\n\n")
+md.append("## التصحيحات المطبقة\n\n")
+for c in rep["corrections"]: md.append(f"- `{c['unit']}`: من «{c['old']}» إلى «{c['new']}» — {c['rationale']}\n")
+md.append("\n## ملاحظات سياقية (غير معدّلة)\n\n")
+for did,ns in rep["contextNotes"].items():
+    md.append(f"### {did}\n")
+    for n in ns: md.append(f"- {n['note']}\n  - المصدر: {n['source']}\n")
+md.append("\n## بدائل أسلوبية (غير معدّلة)\n\n")
+for did,al in rep["styleAlternatives"].items():
+    md.append(f"### {did}\n")
+    for a in al: md.append(f"- `{a['phrase']}` — بديل: `{a['alternative']}` — {a['note']}\n")
+md.append("\n## المصادر\n\n");ts=0
+for did,sl in rep["sources"].items():
+    md.append(f"### {did}\n")
+    for s in sl: md.append(f"- [{s['id']}] {s['citation']} — {s['url']}\n");ts+=1
+md.append(f"\n(مجموع المراجع: {ts}.)\n\n")
+md.append("## الصوت\n\n")
+md.append(f"- إدخالات بيان صوتي: {rep['audio']['manifestEntries'] or 'لا يوجد'}.\n- ملفات mp3: {rep['audio']['mp3Files'] or 'لا يوجد'}.\n- {rep['audio']['note']}\n\n")
+md.append("## البطاقات اليتيمة\n\n- "+rep["waisen"]["note"]+"\n\n")
+md.append("## الحدود\n\n")
+for k,v in rep["limits"].items(): md.append(f"- **{k}:** {v}\n")
+OUT_MD.write_text("".join(md),encoding="utf-8")
+print(f"Wrote {OUT_JSON.name} and {OUT_MD.name}")
+print(f"  lines={lt} q={qt} dict={dt} ≈units={units} corrections={len(CORRECTIONS)}")
+
+if __name__=="__main__": pass

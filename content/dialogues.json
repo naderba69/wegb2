@@ -2755,17 +2755,17 @@
       {
         "who": "Sami",
         "de": "Neun Uhr passt. Ich brauche Zugang zum Keller.",
-        "ar": "التاسعةُ مناسبة. وأحتاجُ مفتاحَ القبو."
+        "ar": "التاسعةُ مناسبة. وأحتاج الدخول إلى القبو."
       },
       {
         "who": "Frau Krause",
         "de": "Den Schlüssel hält die Rezeption für Sie bereit.",
-        "ar": "الاستقبالُ يُبقي المفتاحَ مُعَدّاً لك."
+        "ar": "يُجهّز الاستقبالُ المفتاحَ لكم."
       },
       {
         "who": "Sami",
         "de": "Danke für Ihre Flexibilität!",
-        "ar": "شكراً لمرونتِك!"
+        "ar": "شكراً لمرونتكم!"
       }
     ],
     "questions": [
@@ -2833,7 +2833,7 @@
       {
         "who": "Rania",
         "de": "Tarek übernimmt; die Folien sende ich ihm vor zehn.",
-        "ar": "سيتولّى طارق، والأوراقُ تصلُه قبلَ العاشرة."
+        "ar": "سيتولّى طارق، والشرائحُ سأرسلها له قبل العاشرة."
       },
       {
         "who": "Chef Linke",
@@ -2848,17 +2848,17 @@
       {
         "who": "Chef Linke",
         "de": "Dann ruhen Sie aus — die Gesundheit geht vor der Frist.",
-        "ar": "اراحي إذن — فالصحةُ تُقدَّمُ على الموعد."
+        "ar": "استريحوا إذن — فالصحّةُ تقدَّم على المهلة."
       },
       {
         "who": "Rania",
         "de": "Vielen Dank — ich melde mich, sobald ich wieder kann.",
-        "ar": "شكراً — وسأُخطِرُك متى استطعت."
+        "ar": "شكراً — سأخطركم حالما أستطيع."
       },
       {
         "who": "Chef Linke",
         "de": "Kein Wort der Eile — erholen Sie sich gut!",
-        "ar": "لا كلمةَ عَجَلٍ تُثقلُك — ارتَحْ جيّدًا!"
+        "ar": "لا داعي للعجلة — استريحوا جيّداً!"
       }
     ],
     "questions": [
@@ -2921,7 +2921,7 @@
       {
         "who": "Berater Vogel",
         "de": "Die Karte ist gesperrt. Wann und wo zuletzt benutzt?",
-        "ar": "أُلغِيَت. متى وأين آخرُ استعمال؟"
+        "ar": "أُوقِفَت. متى وأين آخرُ استعمال؟"
       },
       {
         "who": "Imen",
@@ -2936,7 +2936,7 @@
       {
         "who": "Imen",
         "de": "Was kostet die Sperrung?",
-        "ar": "كم يكلِّفُ التعليقُ؟"
+        "ar": "كم يكلف الإيقاف؟"
       },
       {
         "who": "Berater Vogel",
@@ -2951,7 +2951,7 @@
       {
         "who": "Berater Vogel",
         "de": "Dann sechs Euro. Den Ausweis bitte zum Abholen mitbringen.",
-        "ar": "ستةٌ إذن. ولا تنسَ هويّتك عند الاستلام."
+        "ar": "ستة يورو إذن. وأحضروا بطاقة هويتكم عند الاستلام."
       }
     ],
     "questions": [

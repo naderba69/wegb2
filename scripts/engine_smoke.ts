@@ -8260,6 +8260,137 @@ void 0;
     "K190j التقرير العربي ومصادره (2+ لكل حوار، 7+ إجمالاً) يذكر K190");
 }
 
+// K191 — fourth B1 batch d-b1-13..d-b1-15 (R117).
+{
+  const reviewB104 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-04-2026-10-08.json", "utf8")) as any;
+  const reviewB104Md = readFileSync("docs/content-review-b1-dialogues-04-2026-10-08.md", "utf8");
+  const liveB104 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB104 = readFileSync("scripts/patches/review_b1_dialogues_04.py", "utf8");
+  const scope = ["d-b1-13", "d-b1-14", "d-b1-15"];
+  ok(reviewB104.reviewRule === "R117" && reviewB104.date === "2026-10-08" &&
+    JSON.stringify(reviewB104.dialogues.map((d: any) => d.id)) === JSON.stringify(scope) &&
+    reviewB104.totals.lines === 24 && reviewB104.totals.questions === 9 && reviewB104.totals.dictation === 6,
+    "K191a دفعة B1 الرابعة d-b1-13..15 موثقة (24 سطراً، 9 أسئلة، 6 إملاءات)");
+
+  ok(reviewB104.corrections.length === 10,
+    "K191b عشرة تصحيحات عربية مؤكدة (Sie→جمع، معاني Zugang/Folien/Frist/Sperrung، إزالة صياغة حرّة)");
+
+  const d13 = liveB104.find((d) => d.id === "d-b1-13");
+  const d14 = liveB104.find((d) => d.id === "d-b1-14");
+  const d15 = liveB104.find((d) => d.id === "d-b1-15");
+  ok(d13.lines[5].ar.includes("الدخول إلى القبو") && !d13.lines[5].ar.includes("مفتاح") &&
+    d13.lines[6].ar.includes("لكم") && !d13.lines[6].ar.includes("لك.") &&
+    d13.lines[7].ar.includes("مرونتكم"),
+    "K191c d-b1-13: Zugang=دخول، Sie→لكم/مرونتكم");
+
+  ok(d14.lines[2].ar.includes("الشرائح") && d14.lines[2].ar.includes("سأرسلها") &&
+    !d14.lines[2].ar.includes("الأوراق") && !d14.lines[2].ar.includes("تصلُه") &&
+    d14.lines[5].ar.includes("استريحوا") && d14.lines[5].ar.includes("المهلة") &&
+    !d14.lines[5].ar.includes("اراحي") &&
+    d14.lines[6].ar.includes("سأخطركم حالما") && !d14.lines[6].ar.includes("أُخطِرُك") &&
+    d14.lines[7].ar.includes("لا داعي للعجلة") && d14.lines[7].ar.includes("استريحوا"),
+    "K191d d-b1-14: Folien=شرائح، sende=سأرسل، Sie-plural استريحوا/أخطركم/أحضروا، Frist=مهلة، Kein-Wort-Eile بسيط");
+
+  ok(d15.lines[1].ar.includes("أُوقِفَت") && !d15.lines[1].ar.includes("أُلغِيَت") &&
+    d15.lines[4].ar.includes("الإيقاف") && !d15.lines[4].ar.includes("التعليق") &&
+    d15.lines[7].ar.includes("أحضروا بطاقة هويتكم") && d15.lines[7].ar.includes("ستة يورو"),
+    "K191e d-b1-15: sperren=أوقِفَت (لا أُلغِيَت)، Sie→أحضروا، ذكر يورو");
+
+  // Locked DE/who/questions/dictations.
+  const expectedDE: Record<string, string[]> = {
+    "d-b1-13": [
+      "Mein Termin für die Heizung am Dienstag — ich muss ihn verschieben.",
+      "Warum? Ich plane sonst den Tag umsonst.",
+      "Mein Chef gab mir unerwartet einen dringenden Auftrag.",
+      "Donnerstag wäre frei — oder Montag um neun.",
+      "Montag, aber nicht vor neun: erst die Kinder in die Kita.",
+      "Neun Uhr passt. Ich brauche Zugang zum Keller.",
+      "Den Schlüssel hält die Rezeption für Sie bereit.",
+      "Danke für Ihre Flexibilität!",
+    ],
+    "d-b1-14": [
+      "Ich melde mich für heute krank — starke Kopfschmerzen.",
+      "Gute Besserung! Kann das Meeting um elf warten?",
+      "Tarek übernimmt; die Folien sende ich ihm vor zehn.",
+      "Und die Steuerunterlagen für Montag?",
+      "Längst im gemeinsamen Ordner, seit gestern Abend.",
+      "Dann ruhen Sie aus — die Gesundheit geht vor der Frist.",
+      "Vielen Dank — ich melde mich, sobald ich wieder kann.",
+      "Kein Wort der Eile — erholen Sie sich gut!",
+    ],
+    "d-b1-15": [
+      "Ich habe meine EC-Karte verloren — bitte sofort sperren!",
+      "Die Karte ist gesperrt. Wann und wo zuletzt benutzt?",
+      "Gestern Vormittag, Automat am Hauptbahnhof.",
+      "Kein Missbrauch vermerkt. Die neue Karte kommt in vierzehn Tagen.",
+      "Was kostet die Sperrung?",
+      "Zwanzig Euro bei Diebstahl, sechs bei Verlust — verloren, richtig?",
+      "Leider Verlust — gestohlen wurde sie nicht.",
+      "Dann sechs Euro. Den Ausweis bitte zum Abholen mitbringen.",
+    ],
+  };
+  const expectedWho: Record<string, string[]> = {
+    "d-b1-13": ["Frau Krause","Sami","Frau Krause","Sami","Frau Krause","Sami","Frau Krause","Sami"],
+    "d-b1-14": ["Rania","Chef Linke","Rania","Chef Linke","Rania","Chef Linke","Rania","Chef Linke"],
+    "d-b1-15": ["Imen","Berater Vogel","Imen","Berater Vogel","Imen","Berater Vogel","Imen","Berater Vogel"],
+  };
+  const expectedAnswers: Record<string, any[]> = {
+    "d-b1-13": ["Ihr Chef gab ihr einen dringenden Auftrag.", "Montag um neun", "Zugang zum Keller"],
+    "d-b1-14": ["Tarek", "Sie liegen seit gestern im gemeinsamen Ordner.", "die Gesundheit vor der Frist"],
+    "d-b1-15": ["Die Karte wird gesperrt.", "sechs Euro", "in vierzehn Tagen"],
+  };
+  const expectedDict: Record<string, string[]> = {
+    "d-b1-13": [
+      "Neun Uhr passt. Ich brauche Zugang zum Keller.",
+      "Montag, aber nicht vor neun: erst die Kinder in die Kita.",
+    ],
+    "d-b1-14": [
+      "Dann ruhen Sie aus — die Gesundheit geht vor der Frist.",
+      "Längst im gemeinsamen Ordner, seit gestern Abend.",
+    ],
+    "d-b1-15": [
+      "Zwanzig Euro bei Diebstahl, sechs bei Verlust — verloren, richtig?",
+      "Kein Missbrauch vermerkt. Die neue Karte kommt in vierzehn Tagen.",
+    ],
+  };
+  let locksOk = true;
+  for (const did of scope) {
+    const dlg = liveB104.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE[did][i] || dlg.lines[i].who !== expectedWho[did][i]) locksOk = false;
+    }
+    for (let i = 0; i < expectedAnswers[did].length; i++) {
+      if (dlg.questions[i].answer !== expectedAnswers[did][i]) locksOk = false;
+    }
+    for (let i = 0; i < expectedDict[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict[did][i]) locksOk = false;
+    }
+  }
+  ok(locksOk, "K191f كل الألماني/who/الأسئلة/الإملاءات مقفلة لم تتغير (24/9/6)");
+
+  ok(reviewB104.judgement.corrected === 10 && reviewB104.judgement.unresolved === 0 &&
+    reviewB104.waisen.present === false &&
+    patchSourceB104.includes("d-b1-13") && patchSourceB104.includes("d-b1-14") &&
+    patchSourceB104.includes("d-b1-15") && patchSourceB104.includes("<R117> patch complete"),
+    "K191g الرقعة تغطي الثلاثة حوارات وتطبق العشرة تصحيحات وتطبع سطر النهاية");
+
+  ok(reviewB104.contextNotes["d-b1-14"] && reviewB104.contextNotes["d-b1-15"] &&
+    reviewB104.styleAlternatives["d-b1-15"],
+    "K191h ملاحظات سياقية (مكتب/صرف) وبدائل مسجلة");
+
+  ok(reviewB104.limits.audio.includes("لا استماع") && reviewB104.limits.cefr.includes("لم يُعد") &&
+    reviewB104.limits.human.includes("ليست") &&
+    reviewB104.limits.medical.length > 0 && reviewB104.limits.legal.length > 0,
+    "K191i حدود الصوت/CEFR/بشري/طبي/قانوني معلنة");
+
+  const srcMap4 = reviewB104.sources as Record<string, any[]>;
+  ok(reviewB104Md.includes("## الحكم") && reviewB104Md.includes("## التصحيحات") &&
+    reviewB104Md.includes("## المصادر") && reviewB104Md.includes("K191") &&
+    Object.keys(srcMap4).every((k) => srcMap4[k].length >= 2) &&
+    Object.values(srcMap4).reduce((n: number, v: any[]) => n + v.length, 0) >= 7,
+    "K191j التقرير العربي ومصادره (2+ لكل حوار، 7+ إجمالاً) يذكر K191");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
