@@ -1213,7 +1213,7 @@
       {
         "who": "Mitarbeiter",
         "de": "Ich möchte gern über meine Vergütung sprechen.",
-        "ar": "أودّ الحديث عن تعويضي."
+        "ar": "أودّ الحديث عن أجري."
       },
       {
         "who": "Vorgesetzte",
@@ -1233,7 +1233,7 @@
       {
         "who": "Mitarbeiter",
         "de": "Unter der Bedingung einer schriftlichen Zusage für nächstes Jahr wäre ich einverstanden.",
-        "ar": "بشرط تعهد مكتوب للعام القادم أكون موافقاً."
+        "ar": "بشرط تعهد خطي للعام القادم أكون موافقاً."
       }
     ],
     "questions": [
@@ -1282,17 +1282,17 @@
       {
         "who": "Karim",
         "de": "Die Sprache ist brillant, wenngleich der Plot etwas vorhersehbar wirkt.",
-        "ar": "اللغة ساحرة وإن بدت الحبكة متوقعة قليلاً."
+        "ar": "اللغة بارعة وإن بدت الحبكة متوقعة قليلاً."
       },
       {
         "who": "Helena",
         "de": "Das sehe ich anders. Gerade die Figurenentwicklung überzeugt mich.",
-        "ar": "أنا أرى العكس. تطوّر الشخصيات يقنعني تحديداً."
+        "ar": "أنا أرى الأمر على نحوٍ آخر. تطوّر الشخصيات تحديداً هو ما يقنعني."
       },
       {
         "who": "Karim",
         "de": "Zugegeben, die Hauptfigur ist vielschichtig angelegt.",
-        "ar": "أعترف، الشخصية الرئيسية مصمّمة بطبقات معقّدة."
+        "ar": "أعترف، الشخصية الرئيسية مصمّمة على طبقات متعددة."
       },
       {
         "who": "Helena",
@@ -1737,7 +1737,7 @@
       {
         "who": "Prof. Weber",
         "de": "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler. KI kann vorbereiten, aber nicht erziehen.",
-        "ar": "استبدال المعلّم خطأ مفاهيمي. الذكاء الاصطناعي يُعدّ لكنه لا يربّي."
+        "ar": "استبدال المعلّم خطأ مفاهيمي. الذكاء الاصطناعي يستطيع التحضير لكنه لا يربّي."
       },
       {
         "who": "Dr. Saleh",
@@ -1752,7 +1752,7 @@
       {
         "who": "Dr. Saleh",
         "de": "In der Abhängigkeit: Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
-        "ar": "في الاعتماد: من يستهلك النتائج فقط ينسى التفكير."
+        "ar": "في الاعتماد: من يستهلك النتائج فقط يفقد القدرة على التفكير."
       },
       {
         "who": "Prof. Weber",

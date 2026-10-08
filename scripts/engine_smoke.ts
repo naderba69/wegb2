@@ -9213,6 +9213,131 @@ void 0;
     "K197j ملاحظات سياقية (3+ لكل حوار) وبدائل أسلوبية للثلاثة والصوت بلا استماع");
 }
 
+// K198 — second B2 batch d-b2-04..d-b2-06 (R124).
+{
+  const reviewB202 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-02-2026-10-08.json", "utf8")) as any;
+  const reviewB202Md = readFileSync("docs/content-review-b2-dialogues-02-2026-10-08.md", "utf8");
+  const liveB202 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB202 = readFileSync("scripts/patches/review_b2_dialogues_02.py", "utf8");
+  const scope202 = ["d-b2-04", "d-b2-05", "d-b2-06"];
+  ok(reviewB202.reviewRule === "R124" && reviewB202.date === "2026-10-08" &&
+    JSON.stringify(reviewB202.dialogues.map((d: any) => d.id)) === JSON.stringify(scope202) &&
+    reviewB202.totals.lines === 17 && reviewB202.totals.questions === 6 &&
+    reviewB202.totals.dictation === 9 && reviewB202.totals.approximateUnits === 114,
+    "K198a ثاني دفعة B2 d-b2-04..06 موثقة (17 سطراً، 6 أسئلة، 9 إملاءات، 114 وحدة)");
+
+  ok(reviewB202.corrections.length === 7 && reviewB202.judgement.corrected === 7 &&
+    reviewB202.judgement.unresolved === 0 && reviewB202.waisen.present === false &&
+    Array.isArray(reviewB202.contentWarnings) && reviewB202.contentWarnings.length === 0,
+    "K198b سبعة تصحيحات عربية مؤكدة بلا غير محسوم ولا تحذير نصي جديد");
+
+  const d204 = liveB202.find((d) => d.id === "d-b2-04");
+  ok(d204.lines[0].ar.includes("عن أجري") && !d204.lines[0].ar.includes("تعويضي") &&
+    d204.lines[4].ar.includes("تعهد خطي") && !d204.lines[4].ar.includes("مكتوب"),
+    "K198c d-b2-04: الأجر لا التعويض، وتوحيد schriftlich «خطي»");
+
+  const d205 = liveB202.find((d) => d.id === "d-b2-05");
+  ok(d205.lines[1].ar.includes("اللغة بارعة") && !d205.lines[1].ar.includes("ساحرة") &&
+    d205.lines[2].ar.includes("على نحوٍ آخر") && !d205.lines[2].ar.includes("العكس") &&
+    d205.lines[2].ar.includes("تطوّر الشخصيات تحديداً هو ما يقنعني") &&
+    d205.lines[3].ar.includes("على طبقات متعددة") && !d205.lines[3].ar.includes("معقّدة"),
+    "K198d d-b2-05: بارعة لا ساحرة، على نحوٍ آخر لا العكس، وعلى طبقات متعددة");
+
+  const d206 = liveB202.find((d) => d.id === "d-b2-06");
+  ok(d206.lines[1].ar.includes("يستطيع التحضير") && !d206.lines[1].ar.includes("يُعدّ") &&
+    d206.lines[4].ar.includes("يفقد القدرة على التفكير") && !d206.lines[4].ar.includes("ينسى التفكير"),
+    "K198e d-b2-06: يستطيع التحضير (vorbereiten) ويفقد القدرة على التفكير (verlernen)");
+
+  const expectedDE202: Record<string, string[]> = {
+    "d-b2-04": [
+      "Ich möchte gern über meine Vergütung sprechen.",
+      "Gern. Welche Argumente bringen Sie vor?",
+      "Ich habe das Projekt erfolgreich abgeschlossen und seit einem Jahr zusätzliche Verantwortung.",
+      "Das ist nachvollziehbar. Allerdings sind die Spielräume dieses Jahr begrenzt.",
+      "Unter der Bedingung einer schriftlichen Zusage für nächstes Jahr wäre ich einverstanden.",
+    ],
+    "d-b2-05": [
+      "Was hältst du von dem Roman?",
+      "Die Sprache ist brillant, wenngleich der Plot etwas vorhersehbar wirkt.",
+      "Das sehe ich anders. Gerade die Figurenentwicklung überzeugt mich.",
+      "Zugegeben, die Hauptfigur ist vielschichtig angelegt.",
+      "Also empfehlst du das Buch trotzdem?",
+      "Absolut. Es lohnt sich, es zweimal zu lesen.",
+    ],
+    "d-b2-06": [
+      "Dürfen KI-Werkzeuge den Unterricht ersetzen?",
+      "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler. KI kann vorbereiten, aber nicht erziehen.",
+      "Dem stimme ich zu, sofern man KI als Werkzeug begreift.",
+      "Wo liegt die größte Gefahr?",
+      "In der Abhängigkeit: Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
+      "Genau darum brauchen wir Urteilskraft als Lernziel.",
+    ],
+  };
+  const expectedAnswers202: Record<string, any[]> = {
+    "d-b2-04": [["abgeschlossen"], "eine schriftliche Zusage für nächstes Jahr"],
+    "d-b2-05": ["den vorhersehbaren Plot", ["lohnt sich", "lohnt sich."]],
+    "d-b2-06": ["den Lehrer durch KI zu ersetzen", ["Abhängigkeit"]],
+  };
+  const expectedDict202: Record<string, string[]> = {
+    "d-b2-04": [
+      "Ich möchte gern über meine Vergütung sprechen.",
+      "Ich habe das Projekt erfolgreich abgeschlossen.",
+      "Unter der Bedingung einer schriftlichen Zusage.",
+    ],
+    "d-b2-05": [
+      "Die Sprache ist brillant.",
+      "Gerade die Figurenentwicklung überzeugt mich.",
+      "Es lohnt sich, es zweimal zu lesen.",
+    ],
+    "d-b2-06": [
+      "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler.",
+      "Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
+      "Wir brauchen Urteilskraft als Lernziel.",
+    ],
+  };
+  let locksOk202 = true;
+  for (const did of scope202) {
+    const dlg = liveB202.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE202[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE202[did][i]) locksOk202 = false;
+    }
+    for (let i = 0; i < expectedAnswers202[did].length; i++) {
+      if (JSON.stringify(dlg.questions[i].answer) !== JSON.stringify(expectedAnswers202[did][i])) locksOk202 = false;
+    }
+    for (let i = 0; i < expectedDict202[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict202[did][i]) locksOk202 = false;
+    }
+  }
+  ok(locksOk202, "K198f كل الألماني/الأسئلة/الإملاءات مقفلة لم تتغير (17 سطراً، 6 أسئلة، 9 إملاءات)");
+
+  ok(reviewB202.contentChecks.length >= 5 && reviewB202.judgement.note.includes("W5") &&
+    reviewB202.contentWarnings.length === 0,
+    "K198g فحوص محتوى موثقة (5+) وW5 السابق مذكور مفتوحاً بلا تحذير جديد");
+
+  ok(patchSourceB202.includes("d-b2-04") && patchSourceB202.includes("d-b2-05") &&
+    patchSourceB202.includes("d-b2-06") && patchSourceB202.includes("<R124> patch complete") &&
+    reviewB202.corrections.length === 7,
+    "K198h الرقعة تغطي الحوارات الثلاثة وتطبق السبعة تصحيحات وتطبع سطر النهاية");
+
+  const srcMap202 = reviewB202.sources as Record<string, any[]>;
+  ok(reviewB202Md.includes("## الحكم") && reviewB202Md.includes("## التصحيحات") &&
+    reviewB202Md.includes("## المصادر") && reviewB202Md.includes("K198") &&
+    Object.keys(srcMap202).every((k) => srcMap202[k].length >= 3) &&
+    Object.values(srcMap202).reduce((n: number, v: any[]) => n + v.length, 0) >= 9,
+    "K198i التقرير العربي ومصادره (3+ لكل حوار، 9+ إجمالاً) يذكر K198");
+
+  ok(reviewB202.limits.audio.includes("لا استماع") && reviewB202.limits.cefr.includes("لم يُعد") &&
+    reviewB202.limits.human.includes("ليست") &&
+    reviewB202.limits.legal.length > 0 && reviewB202.limits.medical.length > 0 &&
+    reviewB202.limits.professional.length > 0 &&
+    reviewB202.contextNotes["d-b2-04"].length >= 3 && reviewB202.contextNotes["d-b2-05"].length >= 3 &&
+    reviewB202.contextNotes["d-b2-06"].length >= 3 &&
+    reviewB202.styleAlternatives["d-b2-04"] && reviewB202.styleAlternatives["d-b2-05"] &&
+    reviewB202.styleAlternatives["d-b2-06"] &&
+    reviewB202.audio.note.includes("لا استماع"),
+    "K198j حدود الصوت/CEFR/بشري/قانوني/طبي/مهني وملاحظات سياقية (3+ لكل حوار) والصوت بلا استماع");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
