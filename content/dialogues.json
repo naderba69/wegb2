@@ -4408,7 +4408,7 @@
       {
         "who": "Selma",
         "de": "Ich beantrage Elterngeld ab April — welche Fristen gelten?",
-        "ar": "أقدِّمُ طلبَ بدلِ الوالدية من أبريل — ما المواعيد؟"
+        "ar": "أقدِّمُ طلبَ بدلِ الوالدية من أبريل — ما المهل؟"
       },
       {
         "who": "Beraterin",
@@ -4418,7 +4418,7 @@
       {
         "who": "Selma",
         "de": "Mein Mann und ich teilen die Monate — wie wirkt sich Partnerschaftsbonus aus?",
-        "ar": "نتقاسمُ الأشهر، فكيف يعملُ مكافأةُ الشراكةِ الزوجية؟"
+        "ar": "نتقاسمُ الأشهر أنا وزوجي، فكيف تعملُ مكافأةُ الشراكة؟"
       },
       {
         "who": "Beraterin",
@@ -4428,12 +4428,12 @@
       {
         "who": "Selma",
         "de": "Die Berechnung basiert auf dem Netto der letzten zwölf Monate?",
-        "ar": "تحسبان على صافي الاثني عشرَ شهراً الماضية؟"
+        "ar": "هل تُحسَب على صافي دخل الاثني عشرَ شهراً الماضية؟"
       },
       {
         "who": "Beraterin",
         "de": "Ja — unteres Einkommen wird prozentual stärker ersetzt, bis 67 Prozent.",
-        "ar": "نعم — الدخلُ الأدنى يُعوَّضُ نسبةً أعلى، إلى سبعةٍ وستين بالمئة."
+        "ar": "نعم — الدخلُ الأدنى يُعوَّضُ بنسبةٍ أعلى، حتى سبعةٍ وستين بالمئة."
       },
       {
         "who": "Selma",
@@ -4443,7 +4443,7 @@
       {
         "who": "Beraterin",
         "de": "Im Portal als PDF, je Monat ein Dokument — Scans ohne Stempel akzeptieren wir nicht.",
-        "ar": "في البوابةِ PDF صفحةً لكلِّ شهر — وأما المسحُ بلا ختمٍ فلن يُقبَل."
+        "ar": "في البوابة بصيغة PDF، مستنداً لكل شهر — وأما المسوحاتُ بلا ختمٍ فلا نقبلها."
       }
     ],
     "questions": [
@@ -4504,12 +4504,12 @@
       {
         "who": "Tarek",
         "de": "Die Abgabefrist läuft — ich schaffe sie ohne Steuerberater nicht mehr.",
-        "ar": "على وشك الانتهاء — ولن أُتمَّها دونَ مُستشارٍ ضريبيّ."
+        "ar": "مهلةُ التقديم قاربت على الانتهاء، ولن ألحقها دون مستشارٍ ضريبي."
       },
       {
         "who": "Finanzamt-Hotline",
         "de": "Mit Beratung verlängert sich die Frist automatisch bis April nächsten Jahres.",
-        "ar": "بالاستعانةِ بمستشارٍ يمدَّدُ الأجلُ تلقائياً إلى أبريل العامِ القادم."
+        "ar": "مع تعيين مستشارٍ ضريبي تُمدَّدُ المهلةُ تلقائياً إلى أبريل من العام القادم."
       },
       {
         "who": "Tarek",
@@ -4519,12 +4519,12 @@
       {
         "who": "Finanzamt-Hotline",
         "de": "Arbeitszimmer-Grundriss, Verträge, Nebenkostenanteil — pauschal genügt der Nachweis der Nutzung.",
-        "ar": "مخططُ الغرفة، العقود، ونسبةُ النفقات — وإثباتُ الاستعمالِ يكفي بدلَها."
+        "ar": "مخططُ غرفة العمل، العقود، وحصةُ النفقات الجانبية؛ وفي نظام المبلغ المقطوع يكفي إثباتُ الاستعمال."
       },
       {
         "who": "Tarek",
         "de": "Die Vorauszahlung wurde erhöht — Widerspruch möglich?",
-        "ar": "زادت الدفعةُ المقدمة — أيعترضُ عليَّ؟"
+        "ar": "زِيدَت الدفعةُ المقدَّمة — هل يمكنني الاعتراض؟"
       },
       {
         "who": "Finanzamt-Hotline",
@@ -4534,12 +4534,12 @@
       {
         "who": "Tarek",
         "de": "Reicht die Übermittlung über ELSTER als Nachweis des Eingangs?",
-        "ar": "هل تكفي منصة ELSTER لإثباتِ الوصل؟"
+        "ar": "هل يكفي الإرسالُ عبر ELSTER لإثباتِ الاستلام؟"
       },
       {
         "who": "Finanzamt-Hotline",
         "de": "Ja, die Sendebestätigung aufheben — sie ist das einzige Quittungsdokument.",
-        "ar": "نعم — واحتفظْ بإشعارِ الإرسال، فهو الوصلُ الوحيد."
+        "ar": "نعم — واحتفظوا بإشعارِ الإرسال، فهو مستندُ الاستلامِ الوحيد."
       }
     ],
     "questions": [
@@ -4600,12 +4600,12 @@
       {
         "who": "Rim",
         "de": "Seit gestern quillt Wasser aus der Decke — Schaden gemeldet, Nummer 7714.",
-        "ar": "منذ الأمسِ يتسرَّبُ الماءُ من السقف — أُعلِنَ الخطبُ برقم 7714."
+        "ar": "منذ الأمس يتسرَّبُ الماءُ من السقف؛ وقد أبلغتُ عن الضرر، والرقم 7714."
       },
       {
         "who": "Sachbearbeiter",
         "de": "Protokoll: Fotos, Uhrzeit, Handwerker-Notdienst bereits beauftragt?",
-        "ar": "المحضر: صور، وقت، وهل استُقدمَ السبّاكُ الطارئ؟"
+        "ar": "في المحضر: صور، وقت، وهل استُدعيَ فنيُّ الطوارئ بالفعل؟"
       },
       {
         "who": "Rim",
@@ -4615,7 +4615,7 @@
       {
         "who": "Sachbearbeiter",
         "de": "Wir regulieren nach dem Gutachtertermin, binnen zwei Wochen.",
-        "ar": "نُسَوِّي بعدَ زيارةِ الخبير، في موعدينِ كحدٍّ أقصى."
+        "ar": "نُسوِّي المطالبةَ بعد موعد الخبير، خلال أسبوعين."
       },
       {
         "who": "Rim",
@@ -4625,17 +4625,17 @@
       {
         "who": "Sachbearbeiter",
         "de": "Dann halten wir uns den Rückgriff vor; Sie bekommen Vorschuss.",
-        "ar": "نُبقي حقَّ الرجوع؛ وأنت تأخذين عربوناً الآن."
+        "ar": "نحتفظُ بحقِّ الرجوع على المؤجِّر؛ وستصلكم سلفةٌ الآن."
       },
       {
         "who": "Rim",
         "de": "Mietausfall für die Trocknungszeit — zahlt die Versicherung?",
-        "ar": "بدلُ انتفاعٍ أثناءَ التجفيف — على مَن؟"
+        "ar": "فواتُ الإيجار أثناء مدة التجفيف — هل تدفعه التأمين؟"
       },
       {
         "who": "Sachbearbeiter",
         "de": "Hausrat zahlt Trocknung und Hotel bis zur Wiederbewohnbarkeit; Mietminderung beim Vermieter.",
-        "ar": "منقولاتُك تدفعُ التجفيفَ والفندقَ إلى السكنية؛ وتخفيضُ الإيجارِ على صاحبِ الملك."
+        "ar": "تأمينُ المنقولات يدفعُ التجفيفَ والفندقَ حتى يعودَ المسكنُ صالحاً للسكن؛ وأما تخفيضُ الإيجار فعلى المؤجِّر."
       }
     ],
     "questions": [

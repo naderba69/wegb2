@@ -9604,6 +9604,57 @@ void 0;
     "K200j التقرير العربي ومصادره (3+ لكل حوار، 9+ إجمالاً) يذكر K200 وW6");
 }
 
+
+/* ═══ K201 — خامس دفعة B2 d-b2-13..d-b2-15 (R127). ═══ */
+{
+  const reviewB205 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-05-2026-10-08.json", "utf8")) as any;
+  const reviewB205Md = readFileSync("docs/content-review-b2-dialogues-05-2026-10-08.md", "utf8");
+  const patchB205Src = readFileSync("scripts/patches/review_b2_dialogues_05.py", "utf8");
+  const reportB205Src = readFileSync("scripts/patches/report_b2_dialogues_05.py", "utf8");
+  ok(reviewB205.reviewRule === "R127" && reviewB205.totals.dialogues === 3 &&
+    reviewB205.totals.lines === 24 && reviewB205.totals.questions === 9 && reviewB205.totals.dictation === 6 &&
+    reviewB205.totals.approximateUnits === 162,
+    "K201a خامس دفعة B2 d-b2-13..15 موثقة (24 سطراً، 9 أسئلة، 6 إملاءات، 162 وحدة)");
+  ok(reviewB205.corrections.length === 17 && reviewB205.judgement.corrected === 17 &&
+    reviewB205.judgement.unresolved === 0 && reviewB205.contentWarnings.length === 0,
+    "K201b سبعة عشر تصحيحاً عربياً مؤكدة بلا غير محسوم ولا تحذير نصي جديد");
+  ok(reviewB205.corrections.some((c:any)=>c.unit==="d-b2-13.lines[0].ar") &&
+    reviewB205.corrections.some((c:any)=>c.unit==="d-b2-13.lines[5].ar" && c.new.includes("حتى سبعةٍ وستين بالمئة")),
+    "K201c d-b2-13: المهل (Frist)، صافي الدخل، بنسبة أعلى حتى 67 بالمئة، صيغة PDF لكل شهر");
+  ok(reviewB205.corrections.some((c:any)=>c.unit==="d-b2-14.lines[1].ar" && c.new.includes("تُمدَّدُ المهلةُ")) &&
+    reviewB205.corrections.some((c:any)=>c.unit==="d-b2-14.lines[4].ar" && c.new.includes("هل يمكنني الاعتراض")) &&
+    reviewB205.corrections.some((c:any)=>c.unit==="d-b2-14.lines[7].ar" && c.new.includes("واحتفظوا")),
+    "K201d d-b2-14: مهلة التقديم/تمديدها، حصة النفقات الجانبية، الاعتراض، إثبات الاستلام، واحتفظوا (Sie→جمع)");
+  ok(reviewB205.corrections.some((c:any)=>c.unit==="d-b2-15.lines[3].ar" && c.new.includes("خلال أسبوعين")) &&
+    reviewB205.corrections.some((c:any)=>c.unit==="d-b2-15.lines[5].ar" && c.new.includes("سلفة")) &&
+    reviewB205.corrections.some((c:any)=>c.unit==="d-b2-15.lines[7].ar" && c.new.includes("تأمينُ المنقولات")),
+    "K201e d-b2-15: أبلغتُ عن الضرر، فنيُّ الطوارئ، تسوية المطالبة خلال أسبوعين، سلفة (لا عربون)، تأمين المنقولات");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const locksOk205 = reviewB205.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
+    ["d-b2-13","d-b2-14","d-b2-15"].every((id,i)=>{
+      const dlg=dialoguesArr.find((x:any)=>x.id===id);
+      return dlg.lines.length===8 && dlg.questions.length===3 && dlg.dictation.length===2 &&
+        dlg.questions.every((q:any)=>Array.isArray(q.options) && q.options.length===3);
+    });
+  ok(locksOk205, "K201f كل الألماني/الأسئلة/الإملاءات مقفلة لم تتغير (24 سطراً، 9 أسئلة، 6 إملاءات)");
+  ok((reviewB205.contextNotes["d-b2-13"]?.length||0)>=4 && (reviewB205.contextNotes["d-b2-14"]?.length||0)>=4 &&
+     (reviewB205.contextNotes["d-b2-15"]?.length||0)>=4 && reviewB205.contentChecks.length >= 6,
+    "K201g فحوص محتوى موثقة (6+) وملاحظات سياقية (4+ لكل حوار) بلا تحذير جديد (W1–W6 تبقى مفتوحة)");
+  ok(patchB205Src.includes("<R127> patch complete") && patchB205Src.includes("locked DE lines:") &&
+     patchB205Src.includes("assert applied == 17") && reportB205Src.includes('"reviewRule": "R127"') &&
+     reportB205Src.includes('K201a'),
+    "K201h الرقعة تغطي الحوارات الثلاثة وتطبق السبعة عشر تصحيحاً وتطبع سطر النهاية");
+  const srcMap205 = reviewB205.sources as Record<string, any[]>;
+  ok(reviewB205Md.includes("## الحكم") && reviewB205Md.includes("## التصحيحات") &&
+    reviewB205Md.includes("## المصادر") && reviewB205Md.includes("تحذيرات محتوى") &&
+    reviewB205Md.includes("K201") &&
+    (srcMap205["d-b2-13"]?.length||0) >= 3 && (srcMap205["d-b2-14"]?.length||0) >= 3 && (srcMap205["d-b2-15"]?.length||0) >= 3,
+    "K201i التقرير العربي ومصادره (3+ لكل حوار، 9+ إجمالاً) يذكر K201");
+  ok(reviewB205.judgement.note.includes("W1") && reviewB205.judgement.note.includes("W6") &&
+    reviewB205.limits.human && reviewB205.limits.legal && reviewB205.audio.note.includes("لا استماع"),
+    "K201j حدود الصوت/CEFR/بشري/قانوني/ضريبي وW1–W6 مفتوحة والصوت بلا استماع");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
