@@ -6280,12 +6280,12 @@
       {
         "who": "Personalerin",
         "de": "Inwiefern hat Sie diese Zeit beruflich weitergebracht?",
-        "ar": "بأيِّ معنىً نفعتْكَ هذه المدّةُ مهنياً؟"
+        "ar": "كيف أفادتْكَ هذه المدةُ مهنياً؟"
       },
       {
         "who": "Bewerber",
         "de": "Ich habe gelernt, unter Belastung zu priorisieren, was mir heute täglich zugutekommt.",
-        "ar": "تعلَّمتُ ترتيبَ الأولوياتِ تحتَ الضغط، وهو ما ينفعُني يومياً اليوم."
+        "ar": "تعلَّمتُ ترتيبَ الأولوياتِ تحتَ الضغط، وهو ما يفيدُني يومياً في عملي."
       },
       {
         "who": "Personalerin",
@@ -6295,7 +6295,7 @@
       {
         "who": "Bewerber",
         "de": "Ich würde zunächst die Aufgaben sichten und anschließend Prioritäten gemeinsam abstimmen.",
-        "ar": "سأفحصُ المهامَّ أوّلاً ثمَّ أنسّقُ الأولوياتِ جماعياً."
+        "ar": "سأستعرضُ المهامَّ أوّلاً ثمَّ أنسّقُ الأولوياتِ جماعياً."
       }
     ],
     "questions": [
@@ -6351,7 +6351,7 @@
       {
         "who": "Yara",
         "de": "Ein generelles Tempolimit würde Leben retten und Emissionen senken.",
-        "ar": "تحديدُ سرعةٍ عامٌّ سينقذُ أرواحاً ويخفضُ الانبعاثات."
+        "ar": "حدُّ سرعةٍ عامٍّ سينقذُ أرواحاً ويخفضُ الانبعاثات."
       },
       {
         "who": "Tobias",
@@ -6371,7 +6371,7 @@
       {
         "who": "Yara",
         "de": "Damit kann ich leben. Dann sind wir uns im Grundsatz einig.",
-        "ar": "بهذا أقبل. إذن نحنُ متّفقانِ من حيثُ المبدأ."
+        "ar": "أقبلُ بهذا. إذن نحنُ متّفقانِ من حيثُ المبدأ."
       }
     ],
     "questions": [

@@ -9704,6 +9704,8 @@ void 0;
   const reviewB207 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-07-2026-10-08.json", "utf8")) as any;
   const reviewB208 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.json", "utf8")) as any;
   const reviewB209 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.json", "utf8")) as any;
+  const reviewB210 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.json", "utf8")) as any;
+  const reviewB210Md = readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.md", "utf8");
   const reviewB209Md = readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.md", "utf8");
   const reviewB208Md = readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.md", "utf8");
   const reviewB207Md = readFileSync("docs/content-review-b2-dialogues-07-2026-10-08.md", "utf8");
@@ -9824,6 +9826,47 @@ void 0;
     "K205i التقرير العربي ومصادره (3+ لكل حوار) يذكر K205");
   ok(reviewB209.limits.human && reviewB209.limits.legal && reviewB209.audio.note.includes("لا استماع"),
     "K205j حدود الصوت/CEFR/بشري/قانوني/مهني والصوت بلا استماع");
+/* ═══ K206 — عاشر دفعة B2 d-b2-31..32 (R132، الدفعة الأخيرة). ═══ */
+{
+  const reviewB210 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.json", "utf8")) as any;
+  const patchB210Src = readFileSync("scripts/patches/review_b2_dialogues_10.py", "utf8");
+  const reviewB210Md = readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.md", "utf8");
+  ok(reviewB210.reviewRule === "R132" && reviewB210.totals.dialogues === 2 &&
+    reviewB210.totals.lines === 11 && reviewB210.totals.questions === 6 && reviewB210.totals.dictation === 6 &&
+    reviewB210.totals.approximateUnits === 89,
+    "K206a عاشر دفعة B2 d-b2-31..32 موثقة (11 سطراً، 6 أسئلة، 6 إملاءات، 89 وحدة)");
+  ok(reviewB210.corrections.length === 5 && reviewB210.judgement.corrected === 5 &&
+    reviewB210.judgement.unresolved === 0 && reviewB210.contentWarnings.length === 0,
+    "K206b خمسة تصحيحات عربية مؤكدة بلا غير محسوم ولا تحذير نصي جديد — وبذلك اكتملت B2");
+  ok(["d-b2-31.lines[2].ar","d-b2-31.lines[3].ar","d-b2-31.lines[5].ar"].every(u => reviewB210.corrections.some((c:any)=>c.unit===u)),
+    "K206c d-b2-31: 3 تصحيحات (كيف أفادتك، يفيدني في عملي، سأستعرض)");
+  ok(["d-b2-32.lines[0].ar","d-b2-32.lines[4].ar"].every(u => reviewB210.corrections.some((c:any)=>c.unit===u)),
+    "K206d d-b2-32: تصحيحان (حد السرعة، أقبل بهذا)");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const locksOk = reviewB210.corrections.every((c:any)=>c.unit.endsWith(".ar")) &&
+    ["d-b2-31","d-b2-32"].every((id)=>{
+      const dlg=dialoguesArr.find((x:any)=>x.id===id);
+      return [6,5].includes(dlg.lines.length) && dlg.questions.length===3 && dlg.dictation.length===3;
+    });
+  ok(locksOk, "K206e كل الألماني/who/الأسئلة/الإملاءات مقفلة (11 سطراً، 6 أسئلة، 6 إملاءات)");
+  ok((reviewB210.contextNotes["d-b2-31"]?.length||0)>=3 && (reviewB210.contextNotes["d-b2-32"]?.length||0)>=3 && reviewB210.contentChecks.length >= 3 &&
+     reviewB210.judgement.note.includes("W1") && reviewB210.judgement.note.includes("W6"),
+    "K206f فحوص محتوى وملاحظات سياقية وW1–W6 مفتوحة");
+  ok(patchB210Src.includes("<R132> patch complete") && patchB210Src.includes("locked DE lines:") && patchB210Src.includes("changes applied:") && patchB210Src.includes("EXPECTED_FIXES = 5"),
+    "K206g الرقعة تغطي الحوارين وتطبق خمسة تصحيحات وتطبع سطر النهاية");
+  const srcMap = reviewB210.sources as Record<string, any[]>;
+  ok(reviewB210Md.includes("## الحكم") && reviewB210Md.includes("## التصحيحات") &&
+    reviewB210Md.includes("## المصادر") && reviewB210Md.includes("K206") &&
+    (srcMap["d-b2-31"]?.length||0)>=3 && (srcMap["d-b2-32"]?.length||0)>=3,
+    "K206h التقرير العربي ومصادره (3+ لكل حوار) يذكر K206");
+  ok(reviewB210.limits.human && reviewB210.limits.legal && reviewB210.audio.note.includes("لا استماع"),
+    "K206i حدود الصوت/CEFR/بشري/قانوني/مهني والصوت بلا استماع");
+  // Final B2 completion marker
+  const b2Count = dialoguesArr.filter((d:any)=>d.level==="B2").length;
+  ok(b2Count === 29, `K206j مراجعة B2 مكتملة: 29 حواراً في content/dialogues.json (فعلياً ${b2Count})`);
+}
+
+
 }
 
 
