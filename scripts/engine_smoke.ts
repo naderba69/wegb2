@@ -8826,6 +8826,158 @@ void 0;
     "K194j التقرير العربي ومصادره (3+ لكل حوار، 10+ إجمالاً) يذكر K194");
 }
 
+// K195 — eighth B1 batch d-b1-25..d-b1-27 (R121).
+{
+  const reviewB108 = JSON.parse(readFileSync("docs/content-review-b1-dialogues-08-2026-10-08.json", "utf8")) as any;
+  const reviewB108Md = readFileSync("docs/content-review-b1-dialogues-08-2026-10-08.md", "utf8");
+  const liveB108 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB108 = readFileSync("scripts/patches/review_b1_dialogues_08.py", "utf8");
+  const scope8 = ["d-b1-25", "d-b1-26", "d-b1-27"];
+  ok(reviewB108.reviewRule === "R121" && reviewB108.date === "2026-10-08" &&
+    JSON.stringify(reviewB108.dialogues.map((d: any) => d.id)) === JSON.stringify(scope8) &&
+    reviewB108.totals.lines === 24 && reviewB108.totals.questions === 9 && reviewB108.totals.dictation === 6,
+    "K195a دفعة B1 الثامنة d-b1-25..27 موثقة (24 سطراً، 9 أسئلة، 6 إملاءات)");
+
+  ok(reviewB108.corrections.length === 19,
+    "K195b تسعة عشر تصحيحاً عربياً مؤكداً (Sie الصريح، معانٍ ومصطلحات، أرقام فخاخ، عملة محذوفة، إضافات محذوفة)");
+
+  const d25 = liveB108.find((d) => d.id === "d-b1-25");
+  const d26 = liveB108.find((d) => d.id === "d-b1-26");
+  const d27 = liveB108.find((d) => d.id === "d-b1-27");
+  ok(d25.lines[0].ar.includes("تسجيلَ العنوانِ الجديد") && !d25.lines[0].ar.includes("تحديثَ إقامتي") &&
+    d25.lines[1].ar.includes("المهلةُ أسبوعان بالضبط") && d25.lines[1].ar.includes("وفي الوقت") && !d25.lines[1].ar.includes("حانَ فيهما") &&
+    d25.lines[3].ar.includes("الانتقالَ إلى المسكن") && !d25.lines[3].ar.includes("بدءَ سُكنانا") &&
+    d25.lines[5].ar.includes("سأُعطيكم شهادةً مؤقَّتة") && !d25.lines[5].ar.includes("لكنْ خُذ مني") &&
+    d25.lines[6].ar.includes("وكم تكلِّفُ؟") && !d25.lines[6].ar.includes("وبكم هي") &&
+    d25.lines[7].ar.includes("ستةُ يورو لخاصيةِ الهويةِ الإلكترونية") && !d25.lines[7].ar.includes("وستةٌ لخاصيةِ"),
+    "K195c d-b1-25: تسجيل العنوان لا تحديث الإقامة، المهلة بالضبط، سأُعطيكم شهادة مؤقتة، وكم تكلّف، وستة يورو");
+
+  ok(d26.lines[0].ar.includes("اعتباراً من أولِ الشهر") && d26.lines[0].ar.includes("أريدُ كهرباءَكم") &&
+    !d26.lines[0].ar.includes("المقبل") && !d26.lines[0].ar.includes("أنتقلُ إليكم") &&
+    d26.lines[1].ar.includes("مهلةُ إنهاءِ عقدِك القديم") && d26.lines[1].ar.includes("كلَّ الإجراءات") && !d26.lines[1].ar.includes("العتيقِ") &&
+    d26.lines[2].ar.includes("أُبلِغُ قراءةَ العدّادِ") && !d26.lines[2].ar.includes("أُعلِنُ") &&
+    d26.lines[3].ar.includes("بالنموذجِ الإلكترونيّ") && d26.lines[3].ar.includes("في موعدٍ أقصاه العاشرةُ مساءً") && !d26.lines[3].ar.includes("الشبكيّ") &&
+    d26.lines[4].ar.includes("وهل ينقطعُ الإمداد") && !d26.lines[4].ar.includes("أنُقطَعُ") &&
+    d26.lines[5].ar.includes("التزويدُ الأساسيُّ يتدخّلُ") && !d26.lines[5].ar.includes("المِلكيةُ العامةُ") &&
+    d26.lines[7].ar.includes("اثني عشرَ شهراً") && d26.lines[7].ar.includes("بتثبيتِ السعر") &&
+    !d26.lines[7].ar.includes("سنة") && !d26.lines[7].ar.includes("بثباتِه"),
+    "K195d d-b1-26: اعتباراً من أول الشهر، مهلة الإنهاء، إبلاغ القراءة، النموذج الإلكتروني، ينقطع الإمداد، التزويد الأساسي، اثنا عشر شهراً");
+
+  ok(d27.lines[0].ar.includes("متى يمكنني التقدّمُ للامتحانِ النظريّ") && d27.lines[0].ar.includes("أربعينَ ساعةَ تدريب") && !d27.lines[0].ar.includes("نظريُّ الامتحان") &&
+    d27.lines[1].ar.includes("في أقربِ الأحوال بعد أسبوعَين") && d27.lines[1].ar.includes("مطلوبةٌ قبلَ الامتحان") && !d27.lines[1].ar.includes("شرطٌ سابق") &&
+    d27.lines[2].ar.includes("وما مدةُ صلاحيةِ شهادةِ الإسعاف") && !d27.lines[2].ar.includes("كم تعيشُ") &&
+    d27.lines[4].ar.includes("التي يطلبُها الممتحِن") && !d27.lines[4].ar.includes("عندَ المُمتحِن") &&
+    d27.lines[5].ar.includes("اختبارُ نظر") && d27.lines[5].ar.includes("صورةٌ شخصية") &&
+    !d27.lines[5].ar.includes("نظارةُ قياس") && !d27.lines[5].ar.includes("صورةٌ شمسية") &&
+    d27.lines[7].ar.includes("حظرُ أربعةَ عشرَ يوماً") && !d27.lines[7].ar.includes("أسبوعان انتظاراً"),
+    "K195e d-b1-27: يمكنني التقدّم، أقرب الأحوال، مدة الصلاحية، يطلبها الممتحن، اختبار نظر وصورة شخصية، حظر 14 يوماً");
+
+  // Locked DE/who/questions/dictations.
+  const expectedDE8: Record<string, string[]> = {
+    "d-b1-25": [
+      "Ich bin vor zwei Wochen umgezogen — Ummeldung, bitte.",
+      "Genau zwei Wochen Frist — rechtzeitig. Formular, Ausweis, Vermieterbestätigung.",
+      "Was ist diese Bestätigung?",
+      "Ein Blatt mit der Unterschrift des Vermieters über den Einzug.",
+      "Der Vermieter weilt in Tunesien; die Post braucht Tage.",
+      "Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung.",
+      "Was kostet sie?",
+      "Anmeldung gratis; die eID-Funktion kostet sechs Euro.",
+    ],
+    "d-b1-26": [
+      "Ich kündige zum Monatsersten und will Ihren Strom.",
+      "Die Altvertragsfrist sind vier Wochen — wir übernehmen alles.",
+      "Wie melde ich den Zählerstand am Umschalttag?",
+      "Foto per Onlineformular, spätestens zweiundzwanzig Uhr.",
+      "Wird die Versorgung unterbrochen?",
+      "Nie — die Grundversorgung springt ohne eine Sekunde Pause ein.",
+      "Was sagt die Bonusklausel?",
+      "Bonus nur bei zwölf Monaten Bindung; Preisgarantie braucht Preisbindung.",
+    ],
+    "d-b1-27": [
+      "Wann kann ich zur Theorieprüfung — vierzig Übungsstunden?",
+      "Frühestens in zwei Wochen — Erste-Hilfe-Kurs vorher nötig.",
+      "Wie lange ist diese Bescheinigung gültig?",
+      "Einmal im Leben: sie läuft nie ab.",
+      "Welche Papiere verlangt der Prüfer?",
+      "Ausweis, Sehtest, Erste-Hilfe, Ausbildungsprotokoll, Passfoto — Gebühr vor Ort.",
+      "Und nach zweimaligem Nichtbestehen?",
+      "Vierzehn Tage Sperre — die Gebühr bleibt gültig, keine Neuanmeldung.",
+    ],
+  };
+  const expectedWho8: Record<string, string[]> = {
+    "d-b1-25": ["Toufik","Amtsfrau Berg","Toufik","Amtsfrau Berg","Toufik","Amtsfrau Berg","Toufik","Amtsfrau Berg"],
+    "d-b1-26": ["Fatma","Hotline","Fatma","Hotline","Fatma","Hotline","Fatma","Hotline"],
+    "d-b1-27": ["Sonda","Fahrlehrer","Sonda","Fahrlehrer","Sonda","Fahrlehrer","Sonda","Fahrlehrer"],
+  };
+  const expectedAnswers8: Record<string, any[]> = {
+    "d-b1-25": ["innerhalb von zwei Wochen", "der Vermieter", "eine vorläufige Bescheinigung"],
+    "d-b1-26": ["der neue Anbieter", "per Foto im Onlineformular bis 22 Uhr", "an zwölf Monaten Preisbindung"],
+    "d-b1-27": ["die Erste-Hilfe-Bescheinigung", "sie läuft nie ab", "vierzehn Tage Sperre, Gebühr bleibt gültig"],
+  };
+  const expectedDict8: Record<string, string[]> = {
+    "d-b1-25": [
+      "Genau zwei Wochen Frist — rechtzeitig. Formular, Ausweis, Vermieterbestätigung.",
+      "Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung.",
+    ],
+    "d-b1-26": [
+      "Nie — die Grundversorgung springt ohne eine Sekunde Pause ein.",
+      "Bonus nur bei zwölf Monaten Bindung; Preisgarantie braucht Preisbindung.",
+    ],
+    "d-b1-27": [
+      "Einmal im Leben: sie läuft nie ab.",
+      "Vierzehn Tage Sperre — die Gebühr bleibt gültig, keine Neuanmeldung.",
+    ],
+  };
+  let locksOk8 = true;
+  for (const did of scope8) {
+    const dlg = liveB108.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE8[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE8[did][i] || dlg.lines[i].who !== expectedWho8[did][i]) locksOk8 = false;
+    }
+    for (let i = 0; i < expectedAnswers8[did].length; i++) {
+      if (dlg.questions[i].answer !== expectedAnswers8[did][i]) locksOk8 = false;
+    }
+    for (let i = 0; i < expectedDict8[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict8[did][i]) locksOk8 = false;
+    }
+  }
+  ok(locksOk8, "K195f كل الألماني/who/الأسئلة/الإملاءات مقفلة لم تتغير (24/9/6)");
+
+  ok(reviewB108.judgement.corrected === 19 && reviewB108.judgement.unresolved === 0 &&
+    reviewB108.waisen.present === false &&
+    patchSourceB108.includes("d-b1-25") && patchSourceB108.includes("d-b1-26") &&
+    patchSourceB108.includes("d-b1-27") && patchSourceB108.includes("<R121> patch complete"),
+    "K195g الرقعة تغطي الثلاثة حوارات وتطبق التسعة عشر تصحيحاً وتطبع سطر النهاية");
+
+  ok(reviewB108.contextNotes["d-b1-25"] && reviewB108.contextNotes["d-b1-26"] && reviewB108.contextNotes["d-b1-27"] &&
+    reviewB108.styleAlternatives["d-b1-25"] && reviewB108.styleAlternatives["d-b1-27"] &&
+    Array.isArray(reviewB108.contentWarnings) && reviewB108.contentWarnings.length === 2 &&
+    reviewB108.contentWarnings[0].id === "W3" && reviewB108.contentWarnings[0].dialogue === "d-b1-25" &&
+    reviewB108.contentWarnings[1].id === "W4" && reviewB108.contentWarnings[1].dialogue === "d-b1-27" &&
+    reviewB108.contentWarnings[0].modified === false && reviewB108.contentWarnings[1].modified === false &&
+    reviewB108.contentWarnings[0].statement.includes("مجانيان") &&
+    reviewB108.contentWarnings[1].statement.includes("كل محاولة") &&
+    reviewB108.contentChecks.length >= 3 &&
+    reviewB108.contextNotes["d-b1-25"].some((n: any) => n.note.includes("§ 17")) &&
+    reviewB108.contextNotes["d-b1-27"].some((n: any) => n.note.includes("§ 18 FeV")) &&
+    reviewB108Md.includes("## تحذيرات محتوى"),
+    "K195h تحذيرا محتوى موثقان غير معدّلين (W3: eID مقابل المجانية، W4: الرسوم لكل محاولة) مع ملاحظات سياقية وفحوص");
+
+  ok(reviewB108.limits.audio.includes("لا استماع") && reviewB108.limits.cefr.includes("لم يُعد") &&
+    reviewB108.limits.human.includes("ليست") &&
+    reviewB108.limits.legal.length > 0 && reviewB108.limits.medical.length > 0 &&
+    reviewB108.limits.professional.length > 0,
+    "K195i حدود الصوت/CEFR/بشري/قانوني/طبي/إداري معلنة");
+
+  const srcMap8 = reviewB108.sources as Record<string, any[]>;
+  ok(reviewB108Md.includes("## الحكم") && reviewB108Md.includes("## التصحيحات") &&
+    reviewB108Md.includes("## المصادر") && reviewB108Md.includes("K195") &&
+    Object.keys(srcMap8).every((k) => srcMap8[k].length >= 3) &&
+    Object.values(srcMap8).reduce((n: number, v: any[]) => n + v.length, 0) >= 10,
+    "K195j التقرير العربي ومصادره (3+ لكل حوار، 10+ إجمالاً) يذكر K195");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

@@ -3841,12 +3841,12 @@
       {
         "who": "Toufik",
         "de": "Ich bin vor zwei Wochen umgezogen — Ummeldung, bitte.",
-        "ar": "قبلَ أسبوعَين انتقلتُ، فأريدُ تحديثَ إقامتي."
+        "ar": "قبلَ أسبوعَين انتقلتُ، فأريدُ تسجيلَ العنوانِ الجديد."
       },
       {
         "who": "Amtsfrau Berg",
         "de": "Genau zwei Wochen Frist — rechtzeitig. Formular, Ausweis, Vermieterbestätigung.",
-        "ar": "الأسبوعان هما الميعاد تماماً — حانَ فيهما. النموذجُ والهويّةُ وشهادةُ المؤجِّر."
+        "ar": "المهلةُ أسبوعان بالضبط — وفي الوقت. النموذجُ والهويّةُ وشهادةُ المؤجِّر."
       },
       {
         "who": "Toufik",
@@ -3856,7 +3856,7 @@
       {
         "who": "Amtsfrau Berg",
         "de": "Ein Blatt mit der Unterschrift des Vermieters über den Einzug.",
-        "ar": "ورقةٌ يوقِّعُها المؤجِّرُ ويُثبِتُ فيها بدءَ سُكنانا."
+        "ar": "ورقةٌ يوقِّعُها المؤجِّرُ ويُثبِتُ فيها الانتقالَ إلى المسكن."
       },
       {
         "who": "Toufik",
@@ -3866,17 +3866,17 @@
       {
         "who": "Amtsfrau Berg",
         "de": "Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung.",
-        "ar": "بلا شهادةٍ لا تسجيل — لكنْ خُذ مني الآنَ ورقةً مؤقَّتة."
+        "ar": "بدونها لا تسجيل — سأُعطيكم شهادةً مؤقَّتة."
       },
       {
         "who": "Toufik",
         "de": "Was kostet sie?",
-        "ar": "وبكم هي؟"
+        "ar": "وكم تكلِّفُ؟"
       },
       {
         "who": "Amtsfrau Berg",
         "de": "Anmeldung gratis; die eID-Funktion kostet sechs Euro.",
-        "ar": "التسجيلُ مجاناً، وستةٌ لخاصيةِ الهويّةِ الإلكترونية."
+        "ar": "التسجيلُ مجاناً، وستةُ يورو لخاصيةِ الهويةِ الإلكترونية."
       }
     ],
     "questions": [
@@ -3934,32 +3934,32 @@
       {
         "who": "Fatma",
         "de": "Ich kündige zum Monatsersten und will Ihren Strom.",
-        "ar": "أُنهي عقدي أولَ الشهرِ المقبل وأنتقلُ إليكم."
+        "ar": "أُنهي عقدي اعتباراً من أولِ الشهر — وأريدُ كهرباءَكم."
       },
       {
         "who": "Hotline",
         "de": "Die Altvertragsfrist sind vier Wochen — wir übernehmen alles.",
-        "ar": "مدةُ عقدِك العتيقِ أربعةُ أسابيع، ونحن نتولّى كلَّ إجراء."
+        "ar": "مهلةُ إنهاءِ عقدِك القديم أربعةُ أسابيع — ونحن نتولّى كلَّ الإجراءات."
       },
       {
         "who": "Fatma",
         "de": "Wie melde ich den Zählerstand am Umschalttag?",
-        "ar": "وكيف أُعلِنُ قراءةَ العدّادِ يومَ التبديل؟"
+        "ar": "وكيف أُبلِغُ قراءةَ العدّادِ يومَ التبديل؟"
       },
       {
         "who": "Hotline",
         "de": "Foto per Onlineformular, spätestens zweiundzwanzig Uhr.",
-        "ar": "صورةٌ بالنموذجِ الشبكيّ، أقصاها العاشرةُ ليلاً."
+        "ar": "صورةٌ بالنموذجِ الإلكترونيّ، في موعدٍ أقصاه العاشرةُ مساءً."
       },
       {
         "who": "Fatma",
         "de": "Wird die Versorgung unterbrochen?",
-        "ar": "أنُقطَعُ عن الإمداد؟"
+        "ar": "وهل ينقطعُ الإمداد؟"
       },
       {
         "who": "Hotline",
         "de": "Nie — die Grundversorgung springt ohne eine Sekunde Pause ein.",
-        "ar": "أبداً — فالمِلكيةُ العامةُ تسدُّ الفجوةَ بلا ثانيةٍ واحدة."
+        "ar": "أبداً — التزويدُ الأساسيُّ يتدخّلُ دون ثانيةِ انقطاعٍ واحدة."
       },
       {
         "who": "Fatma",
@@ -3969,7 +3969,7 @@
       {
         "who": "Hotline",
         "de": "Bonus nur bei zwölf Monaten Bindung; Preisgarantie braucht Preisbindung.",
-        "ar": "مكافأتُنا لمن يلبثُ سنة — وضمانُ السعرِ مشروطٌ بثباتِه."
+        "ar": "المكافأةُ فقط عندَ ارتباطِ اثني عشرَ شهراً — وضمانُ السعرِ مشروطٌ بتثبيتِ السعر."
       }
     ],
     "questions": [
@@ -4027,17 +4027,17 @@
       {
         "who": "Sonda",
         "de": "Wann kann ich zur Theorieprüfung — vierzig Übungsstunden?",
-        "ar": "متى يحينُ نظريُّ الامتحان؟ وقد أتمتُ أربعينَ ساعة."
+        "ar": "متى يمكنني التقدّمُ للامتحانِ النظريّ — وقد أتممتُ أربعينَ ساعةَ تدريب؟"
       },
       {
         "who": "Fahrlehrer",
         "de": "Frühestens in zwei Wochen — Erste-Hilfe-Kurs vorher nötig.",
-        "ar": "بعدَ أسبوعَين على الأقلّ — ومعه دورةُ الإسعافِ شرطٌ سابق."
+        "ar": "في أقربِ الأحوال بعد أسبوعَين — ودورةُ الإسعافِ مطلوبةٌ قبلَ الامتحان."
       },
       {
         "who": "Sonda",
         "de": "Wie lange ist diese Bescheinigung gültig?",
-        "ar": "وكم تعيشُ شهادةُ الإسعاف؟"
+        "ar": "وما مدةُ صلاحيةِ شهادةِ الإسعاف؟"
       },
       {
         "who": "Fahrlehrer",
@@ -4047,12 +4047,12 @@
       {
         "who": "Sonda",
         "de": "Welche Papiere verlangt der Prüfer?",
-        "ar": "وما الوثائقُ عندَ المُمتحِن؟"
+        "ar": "وما الوثائقُ التي يطلبُها الممتحِن؟"
       },
       {
         "who": "Fahrlehrer",
         "de": "Ausweis, Sehtest, Erste-Hilfe, Ausbildungsprotokoll, Passfoto — Gebühr vor Ort.",
-        "ar": "هويّة، نظارةُ قياس، إسعاف، سجلُّ التدريب، صورةٌ شمسية — والرسومُ في المكان."
+        "ar": "هويّة، اختبارُ نظر، إسعاف، سجلُّ التدريب، صورةٌ شخصية — والرسومُ في المكان."
       },
       {
         "who": "Sonda",
@@ -4062,7 +4062,7 @@
       {
         "who": "Fahrlehrer",
         "de": "Vierzehn Tage Sperre — die Gebühr bleibt gültig, keine Neuanmeldung.",
-        "ar": "أسبوعان انتظاراً والرسومُ نافذة — لا إعادةَ تسجيل."
+        "ar": "حظرُ أربعةَ عشرَ يوماً — والرسومُ نافذة، ولا إعادةَ تسجيل."
       }
     ],
     "questions": [
