@@ -10307,7 +10307,8 @@
           "niemand"
         ],
         "answer": "A",
-        "explanationAr": "هي سارة (A) التي تقول «Freut mich!» بعد التعارف."
+        "explanationAr": "هي سارة (A) التي تقول «Freut mich!» بعد التعارف.",
+        "promptAr": "مَنْ يَقول «سعيدة بلقائك»؟"
       }
     ],
     "dictation": [
@@ -10364,7 +10365,8 @@
           "beide"
         ],
         "answer": "A",
-        "explanationAr": "A هو من يشكر B بعد الإجابة."
+        "explanationAr": "A هو من يشكر B بعد الإجابة.",
+        "promptAr": "مَنْ يَقول «شكراً»؟"
       },
       {
         "id": "d-a0-02-q3",
@@ -10375,7 +10377,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "1 + 2 = 3 لا 4 — الجملة خاطئة."
+        "explanationAr": "1 + 2 = 3 لا 4 — الجملة خاطئة.",
+        "promptAr": "هل الجملة «الناتج أربعة» صحيحة؟"
       }
     ],
     "dictation": [
@@ -10432,7 +10435,8 @@
           "M – A – X"
         ],
         "answer": "A – L – I",
-        "explanationAr": "يقول B: «A – L – I. Ali.»."
+        "explanationAr": "يقول B: «A – L – I. Ali.».",
+        "promptAr": "أيَّةَ حروفٍ يَتهجّاها B؟"
       },
       {
         "id": "d-a0-03-q3",
@@ -10445,7 +10449,8 @@
           "lesen"
         ],
         "answer": "buchstabieren",
-        "explanationAr": "«Buchstabiere bitte deinen Namen!» — طلب تهجئة الاسم."
+        "explanationAr": "«Buchstabiere bitte deinen Namen!» — طلب تهجئة الاسم.",
+        "promptAr": "ماذا يَطلُب A مِن B؟"
       }
     ],
     "dictation": [

@@ -9705,6 +9705,8 @@ void 0;
   const reviewB208 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.json", "utf8")) as any;
   const reviewB209 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.json", "utf8")) as any;
   const reviewB210 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.json", "utf8")) as any;
+  const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
+  const reviewA001Md = readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.md", "utf8");
   const reviewB210Md = readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.md", "utf8");
   const reviewB209Md = readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.md", "utf8");
   const reviewB208Md = readFileSync("docs/content-review-b2-dialogues-08-2026-10-08.md", "utf8");
@@ -9864,6 +9866,47 @@ void 0;
   // Final B2 completion marker
   const b2Count = dialoguesArr.filter((d:any)=>d.level==="B2").length;
   ok(b2Count === 29, `K206j مراجعة B2 مكتملة: 29 حواراً في content/dialogues.json (فعلياً ${b2Count})`);
+/* ═══ K207 — أول دفعة A0 d-a0-01..03 (R133). ═══ */
+{
+  const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
+  const patchA001Src = readFileSync("scripts/patches/review_a0_dialogues_01.py", "utf8");
+  const reviewA001Md = readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.md", "utf8");
+  ok(reviewA001.reviewRule === "R133" && reviewA001.totals.dialogues === 3 &&
+    reviewA001.totals.lines === 12 && reviewA001.totals.questions === 9 && reviewA001.totals.dictation === 9 &&
+    reviewA001.totals.approximateUnits === 120,
+    "K207a أول دفعة A0 d-a0-01..03 موثقة (12 سطراً، 9 أسئلة، 9 إملاءات، 120 وحدة)");
+  ok(reviewA001.corrections.length === 5 && reviewA001.judgement.corrected === 5 &&
+    reviewA001.judgement.unresolved === 0 && reviewA001.contentWarnings.length === 0,
+    "K207b خمسة تصحيحات (استكمال حقول promptAr الفارغة) بلا غير محسوم ولا تحذير جديد");
+  const a0units = ["d-a0-01.questions[2].promptAr","d-a0-02.questions[1].promptAr","d-a0-02.questions[2].promptAr","d-a0-03.questions[1].promptAr","d-a0-03.questions[2].promptAr"];
+  ok(a0units.every(u => reviewA001.corrections.some((c:any)=>c.unit===u)),
+    "K207c استكمال حقول promptAr الخمسة (Freut mich/Danke/صح-خطأ/Buchstaben/bitten)");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const locksOk = reviewA001.corrections.every((c:any)=>c.unit.includes("questions") && c.unit.endsWith(".promptAr")) &&
+    ["d-a0-01","d-a0-02","d-a0-03"].every((id)=>{
+      const dlg=dialoguesArr.find((x:any)=>x.id===id);
+      return dlg && [6,3,3].includes(dlg.lines.length) && dlg.questions.length===3 && dlg.dictation.length===3 && dlg.lines.every((l:any)=>"sp" in l);
+    });
+  ok(locksOk, "K207d كل الألماني/الأسطر/الخيارات/المفاتيح/الإملاءات مقفلة (A0 تستخدم حقل sp لا who)");
+  ok((reviewA001.contextNotes["d-a0-01"]?.length||0)>=3 && (reviewA001.contextNotes["d-a0-02"]?.length||0)>=3 && (reviewA001.contextNotes["d-a0-03"]?.length||0)>=3 && reviewA001.contentChecks.length >= 4 &&
+     reviewA001.judgement.note.includes("W1"),
+    "K207e فحوص محتوى وملاحظات سياقية وذكر W1–W6 (موروثة دون تعديل)");
+  ok(patchA001Src.includes("<R133> patch complete") && patchA001Src.includes("locked DE lines:") && patchA001Src.includes("changes applied:"),
+    "K207f الرقعة تطبق خمسة استكمالات وتطبع سطر النهاية");
+  const srcMap = reviewA001.sources as Record<string, any[]>;
+  ok(reviewA001Md.includes("## الحكم") && reviewA001Md.includes("## التصحيحات") &&
+    reviewA001Md.includes("## المصادر") && reviewA001Md.includes("K207") &&
+    (srcMap["d-a0-01"]?.length||0)>=3 && (srcMap["d-a0-02"]?.length||0)>=3 && (srcMap["d-a0-03"]?.length||0)>=3,
+    "K207g التقرير العربي ومصادره (3+ لكل حوار) يذكر K207");
+  ok(reviewA001.limits.human && reviewA001.limits.legal && reviewA001.audio.note.includes("لا استماع"),
+    "K207h حدود الصوت/CEFR/بشري/قانوني/مهني والصوت بلا استماع");
+  ok(reviewA001.waisen.present === false,
+    "K207i الحوارات الثلاث بلا حقل waisen");
+  const a0Count = dialoguesArr.filter((d:any)=>d.level==="A0").length;
+  ok(a0Count === 3, `K207j مستوى A0 يغطي 3 حوارات في content/dialogues.json (فعلياً ${a0Count})`);
+}
+
+
 }
 
 
