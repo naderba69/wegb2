@@ -4120,27 +4120,27 @@
       {
         "who": "Youssef",
         "de": "Danke, dass Sie sich die Zeit nehmen — Ihre Stelle interessiert mich sehr.",
-        "ar": "شكراً على وقتك — وظيفتُكم تهمُّني للغاية."
+        "ar": "شكراً على وقتكم — وظيفتُكم تهمُّني للغاية."
       },
       {
         "who": "Personalchefin",
         "de": "Ebenso. Was schwebt Ihnen tariflich vor?",
-        "ar": "وكذلك. ما الذي تُقَدِّمُه لنفسك أجرياً؟"
+        "ar": "وكذلك. وما الأجرُ الذي يخطرُ ببالكم؟"
       },
       {
         "who": "Youssef",
         "de": "Angesichts meiner Erfahrung käme ich auf 48.000 Euro brutto.",
-        "ar": "في ضوءِ خبرتي، أقولُ 48.000 يورو إجماليّاً (ثمانيةً وأربعين ألفاً)."
+        "ar": "في ضوءِ خبرتي، أبلغُ 48.000 يورو إجماليّاً (ثمانيةً وأربعين ألفاً)."
       },
       {
         "who": "Personalchefin",
         "de": "Das liegt über unserem Rahmen; 45.000 plus variabler Anteil wäre verhandelbar.",
-        "ar": "هذا يفوقُ هامشَنا؛ خمسةٌ وأربعون ألفاً زائدُ المتغيرِ قابلٌ للنقاش."
+        "ar": "هذا يفوقُ نطاقَنا؛ خمسةٌ وأربعون ألفاً زائدُ حصةٍ متغيّرةٍ قابلٌ للتفاوض."
       },
       {
         "who": "Youssef",
         "de": "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
-        "ar": "لستُ مُصمِّماً على الرقم — لكني أَعُدُّ وقتَ تدريبي إيراداً غيرَ مباشر."
+        "ar": "لستُ مُصمِّماً على الرقم — لكني أَعُدُّ وقتَ تدريبي أداءً."
       },
       {
         "who": "Personalchefin",
@@ -4150,12 +4150,12 @@
       {
         "who": "Youssef",
         "de": "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft.",
-        "ar": "بشرطِ أن تُقَصَّرَ التجربةُ إلى ثلاثةِ أشهر، نكونُ قد اتفقنا."
+        "ar": "بشرطِ ألّا تتجاوزَ فترةُ التجربةِ في العقدِ ثلاثةَ أشهر، نكونُ قد اتفقنا."
       },
       {
         "who": "Personalchefin",
         "de": "Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag.",
-        "ar": "تمّ — ستصلُك نسخةُ العقدِ خطياً غدًا صباحاً."
+        "ar": "تمّ — سيصلُكم التعهدُ خطياً غدًا صباحاً."
       }
     ],
     "questions": [
@@ -4221,7 +4221,7 @@
       {
         "who": "Hausverwaltung",
         "de": "Unsere Belege: Mietspiegel und Wirtschaftlichkeitsberechnung.",
-        "ar": "حججُنا: مؤشّرُ الإيجاراتِ ودراسةُ الجدوى الاقتصادية."
+        "ar": "أدلتُنا: مؤشّرُ الإيجاراتِ وحسابُ الجدوى الاقتصادية."
       },
       {
         "who": "Amel",
@@ -4231,7 +4231,7 @@
       {
         "who": "Hausverwaltung",
         "de": "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
-        "ar": "صحيح — حسابُ رسالتك سليم؛ فنُصحِّحُ إلى تسعةٍ فاصلةَ ثمانية بالمئة."
+        "ar": "صحيح — حسابُ رسالتكم سليم؛ فنُصحِّحُ إلى تسعةٍ فاصلةَ ثمانية بالمئة."
       },
       {
         "who": "Amel",
@@ -4241,7 +4241,7 @@
       {
         "who": "Hausverwaltung",
         "de": "Das Protokoll folgt binnen vierzehn Tagen samt Belegen.",
-        "ar": "يُرسلُ المحضرُ خلالَ أسبوعَين مع الفواتير."
+        "ar": "يُرسلُ المحضرُ خلالَ أربعةَ عشرَ يوماً مع الأدلة."
       },
       {
         "who": "Amel",
@@ -4251,7 +4251,7 @@
       {
         "who": "Hausverwaltung",
         "de": "Per Mail bestätigt — danke für die sachliche Gesprächsführung.",
-        "ar": "وصلَ التأكيدُ بالبريد — شكرًا على منهجيةِ النقاش."
+        "ar": "مؤكَّدٌ بالبريد — شكرًا على إدارةِ النقاشِ بموضوعيةٍ."
       }
     ],
     "questions": [
@@ -4317,17 +4317,17 @@
       {
         "who": "Sachbearbeiterin",
         "de": "Beglaubigte Übersetzung, Fächerübersicht, Nachweis praktischer Tätigkeiten.",
-        "ar": "ترجمةٌ مُصدَّق عليها، وقائمةُ مواد، وإثباتُ سنواتِ الخبرةِ العملية."
+        "ar": "ترجمةٌ مُصدَّق عليها، وقائمةُ الموادِّ الدراسية، وإثباتُ الخبرةِ العملية."
       },
       {
         "who": "Mehdi",
         "de": "Wie lange dauert die Prüfung, und kann ich währenddessen arbeiten?",
-        "ar": "كم تستغرقُ اللجان، وهل يحقُّ لي العملُ بين الأيادي؟"
+        "ar": "كم يستغرقُ فحصُ الطلب، وهل يحقُّ لي العملُ خلاله؟"
       },
       {
         "who": "Sachbearbeiterin",
         "de": "Regulär drei Monate; mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt.",
-        "ar": "ثلاثةُ أشهر نظاماً؛ وبإذنِ مهنتك في وضعِ الانتظار — عملٌ مقيَّدٌ نعم."
+        "ar": "ثلاثةُ أشهر نظاماً؛ وبإذنِ مزاولةِ المهنة في وضعِ الانتظار — نعم، عملٌ مقيَّد."
       },
       {
         "who": "Mehdi",
@@ -4337,7 +4337,7 @@
       {
         "who": "Sachbearbeiterin",
         "de": "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
-        "ar": "يُسنَدُ إليك دوراتٌ تكييفية، أقصاها ستةَ عشرَ شهراً عمليةً موجَّهة."
+        "ar": "يُسنَدُ إليكم دورةٌ تكييفية، أقصاها ستةَ عشرَ شهراً من الممارسةِ العملية."
       },
       {
         "who": "Mehdi",
@@ -4347,7 +4347,7 @@
       {
         "who": "Sachbearbeiterin",
         "de": "400 Euro Vorauszahlung; die Erstattung richtet sich nach dem Landrecht.",
-        "ar": "400 يورو مقدَّماً؛ والاستردادُ بحسبِ قانونِ الولاية."
+        "ar": "400 يورو دفعةً مقدَّمة؛ والاستردادُ بحسبِ قانونِ الولاية."
       }
     ],
     "questions": [

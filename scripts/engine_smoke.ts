@@ -9464,6 +9464,146 @@ void 0;
     "K199j حدود الصوت/CEFR/بشري/قانوني/طبي/مهني وملاحظات سياقية (3+ لكل حوار) والصوت بلا استماع");
 }
 
+// K200 — fourth B2 batch d-b2-10..d-b2-12 (R126).
+{
+  const reviewB204 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-04-2026-10-08.json", "utf8")) as any;
+  const reviewB204Md = readFileSync("docs/content-review-b2-dialogues-04-2026-10-08.md", "utf8");
+  const liveB204 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const patchSourceB204 = readFileSync("scripts/patches/review_b2_dialogues_04.py", "utf8");
+  const scope204 = ["d-b2-10", "d-b2-11", "d-b2-12"];
+  ok(reviewB204.reviewRule === "R126" && reviewB204.date === "2026-10-08" &&
+    JSON.stringify(reviewB204.dialogues.map((d: any) => d.id)) === JSON.stringify(scope204) &&
+    reviewB204.totals.lines === 24 && reviewB204.totals.questions === 9 &&
+    reviewB204.totals.dictation === 6 && reviewB204.totals.approximateUnits === 162,
+    "K200a رابع دفعة B2 d-b2-10..12 موثقة (24 سطراً، 9 أسئلة، 6 إملاءات، 162 وحدة)");
+
+  ok(reviewB204.corrections.length === 16 && reviewB204.judgement.corrected === 16 &&
+    reviewB204.judgement.unresolved === 0 && reviewB204.waisen.present === false &&
+    Array.isArray(reviewB204.contentWarnings) && reviewB204.contentWarnings.length === 1 &&
+    reviewB204.contentWarnings[0].id === "W6" && reviewB204.contentWarnings[0].modified === false,
+    "K200b ستة عشر تصحيحاً عربياً مؤكدة بلا غير محسوم وW6 جديد (غير معدّل)");
+
+  const d210 = liveB204.find((d) => d.id === "d-b2-10");
+  ok(d210.lines[0].ar.includes("على وقتكم") && !d210.lines[0].ar.includes("على وقتك —") &&
+    d210.lines[1].ar.includes("يخطرُ ببالكم") && !d210.lines[1].ar.includes("تُقَدِّمُه") &&
+    d210.lines[2].ar.includes("أبلغُ 48.000") && !d210.lines[2].ar.includes("أقولُ 48.000"),
+    "K200c d-b2-10: وقتكم (Sie)، يخطر ببالكم (vorschweben)، أبلغُ لا أقولُ");
+
+  ok(d210.lines[3].ar.includes("نطاقَنا") && d210.lines[3].ar.includes("حصةٍ متغيّرةٍ") &&
+    d210.lines[3].ar.includes("قابلٌ للتفاوض") && !d210.lines[3].ar.includes("هامشَنا") &&
+    !d210.lines[3].ar.includes("للنقاش") &&
+    d210.lines[4].ar.includes("وقتَ تدريبي أداءً") && !d210.lines[4].ar.includes("إيراداً") &&
+    d210.lines[6].ar.includes("ألّا تتجاوزَ فترةُ التجربةِ") && !d210.lines[6].ar.includes("تُقَصَّرَ") &&
+    d210.lines[7].ar.includes("سيصلُكم التعهدُ") && !d210.lines[7].ar.includes("ستصلُك نسخةُ العقدِ"),
+    "K200d d-b2-10: نطاق/حصة متغيرة/للتفاوض، أداءً (Leistung)، فترة التجربة، سيصلُكم التعهدُ");
+
+  const d211 = liveB204.find((d) => d.id === "d-b2-11");
+  ok(d211.lines[1].ar.includes("أدلتُنا") && d211.lines[1].ar.includes("حسابُ الجدوى") &&
+    !d211.lines[1].ar.includes("حججُنا") &&
+    d211.lines[3].ar.includes("حسابُ رسالتكم سليم") && !d211.lines[3].ar.includes("رسالتك سليم") &&
+    d211.lines[5].ar.includes("أربعةَ عشرَ يوماً") && !d211.lines[5].ar.includes("أسبوعَين") &&
+    d211.lines[5].ar.includes("مع الأدلة") && !d211.lines[5].ar.includes("الفواتير") &&
+    d211.lines[7].ar.includes("مؤكَّدٌ بالبريد") && d211.lines[7].ar.includes("بموضوعيةٍ") &&
+    !d211.lines[7].ar.includes("منهجيةِ"),
+    "K200e d-b2-11: أدلتُنا/حساب الجدوى، رسالتكم، أربعة عشر يوماً/الأدلة، مؤكَّدٌ بموضوعية");
+
+  const d212 = liveB204.find((d) => d.id === "d-b2-12");
+  ok(d212.lines[1].ar.includes("قائمةُ الموادِّ الدراسية") && d212.lines[1].ar.includes("إثباتُ الخبرةِ العملية") &&
+    !d212.lines[1].ar.includes("سنواتِ") &&
+    d212.lines[2].ar.includes("فحصُ الطلب") && d212.lines[2].ar.includes("العملُ خلاله") &&
+    !d212.lines[2].ar.includes("اللجان") && !d212.lines[2].ar.includes("بين الأيادي") &&
+    d212.lines[3].ar.includes("إذنِ مزاولةِ المهنة") && d212.lines[3].ar.includes("نعم، عملٌ مقيَّد") &&
+    !d212.lines[3].ar.includes("مهنتك") &&
+    d212.lines[5].ar.includes("إليكم دورةٌ تكييفية") && d212.lines[5].ar.includes("من الممارسةِ العملية") &&
+    !d212.lines[5].ar.includes("موجَّهة") &&
+    d212.lines[7].ar.includes("دفعةً مقدَّمة") && !d212.lines[7].ar.includes("مقدَّماً"),
+    "K200f d-b2-12: المواد الدراسية، فحص الطلب/خلاله، إذن مزاولة المهنة، دورة تكييفية، دفعة مقدَّمة");
+
+  const expectedDE204: Record<string, string[]> = {
+    "d-b2-10": [
+      "Danke, dass Sie sich die Zeit nehmen — Ihre Stelle interessiert mich sehr.",
+      "Ebenso. Was schwebt Ihnen tariflich vor?",
+      "Angesichts meiner Erfahrung käme ich auf 48.000 Euro brutto.",
+      "Das liegt über unserem Rahmen; 45.000 plus variabler Anteil wäre verhandelbar.",
+      "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
+      "Fair. Dann 45.500, zwei Tage Homeoffice und 400 Euro Weiterbildungsbudget.",
+      "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft.",
+      "Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag.",
+    ],
+    "d-b2-11": [
+      "Die angekündigte Erhöhung um 15 Prozent übersteigt die ortsübliche Miete.",
+      "Unsere Belege: Mietspiegel und Wirtschaftlichkeitsberechnung.",
+      "Genau der Mietspiegel besagt: Kappungsgrenze bei elf Prozent in drei Jahren.",
+      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
+      "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
+      "Das Protokoll folgt binnen vierzehn Tagen samt Belegen.",
+      "Sofern alles eintrifft, akzeptiere ich den neuen Betrag zum Ersten.",
+      "Per Mail bestätigt — danke für die sachliche Gesprächsführung.",
+    ],
+    "d-b2-12": [
+      "Mein tunesisches Ingenieurdiplom soll anerkannt werden — welche Dokumente?",
+      "Beglaubigte Übersetzung, Fächerübersicht, Nachweis praktischer Tätigkeiten.",
+      "Wie lange dauert die Prüfung, und kann ich währenddessen arbeiten?",
+      "Regulär drei Monate; mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt.",
+      "Und wenn die Gleichwertigkeit teilweise verneint wird?",
+      "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
+      "Die Gebühren sind mir unklar — wer trägt sie bei Erfolg?",
+      "400 Euro Vorauszahlung; die Erstattung richtet sich nach dem Landrecht.",
+    ],
+  };
+  const expectedAnswers204: Record<string, any[]> = {
+    "d-b2-10": ["45.500 Euro mit Homeoffice und Weiterbildungsbudget", "eine Probezeit von höchstens drei Monaten", "die Zusage über den gesamten Kompromiss"],
+    "d-b2-11": ["auf den Mietspiegel und die Kappungsgrenze", "eine korrigierte Forderung von 9,8 Prozent plus Protokoll", "wenn Protokoll und Belege eingetroffen sind"],
+    "d-b2-12": ["beglaubigte Übersetzung, Fächerübersicht und Praxisnachweis", "eingeschränkt, mit Berufserlaubnis", "höchstens 16 Monate"],
+  };
+  const expectedDict204: Record<string, string[]> = {
+    "d-b2-10": [
+      "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
+      "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft.",
+    ],
+    "d-b2-11": [
+      "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
+      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
+    ],
+    "d-b2-12": [
+      "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
+      "Regulär drei Monate; mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt.",
+    ],
+  };
+  let locksOk204 = true;
+  for (const did of scope204) {
+    const dlg = liveB204.find((x) => x.id === did);
+    for (let i = 0; i < expectedDE204[did].length; i++) {
+      if (dlg.lines[i].de !== expectedDE204[did][i]) locksOk204 = false;
+    }
+    for (let i = 0; i < expectedAnswers204[did].length; i++) {
+      if (JSON.stringify(dlg.questions[i].answer) !== JSON.stringify(expectedAnswers204[did][i])) locksOk204 = false;
+    }
+    for (let i = 0; i < expectedDict204[did].length; i++) {
+      if (dlg.dictation[i] !== expectedDict204[did][i]) locksOk204 = false;
+    }
+  }
+  ok(locksOk204, "K200g كل الألماني/الأسئلة/الإملاءات مقفلة لم تتغير (24 سطراً، 9 أسئلة، 6 إملاءات)");
+
+  ok(reviewB204.contentChecks.length >= 5 && reviewB204.judgement.note.includes("W6") &&
+    reviewB204.judgement.note.includes("W5") && reviewB204.contentWarnings.length === 1 &&
+    (reviewB204.contentWarnings[0].evidence.includes("558") || reviewB204.contentWarnings[0].evidence.includes("BGB")),
+    "K200h فحوص محتوى موثقة (5+) وW6 موثق بمصدره وW5 مذكور مفتوحاً");
+
+  ok(patchSourceB204.includes("d-b2-10") && patchSourceB204.includes("d-b2-11") &&
+    patchSourceB204.includes("d-b2-12") && patchSourceB204.includes("<R126> patch complete") &&
+    patchSourceB204.includes("16 confirmed"),
+    "K200i الرقعة تغطي الحوارات الثلاثة وتطبق الستة عشر تصحيحاً وتطبع سطر النهاية");
+
+  const srcMap204 = reviewB204.sources as Record<string, any[]>;
+  ok(reviewB204Md.includes("## الحكم") && reviewB204Md.includes("## التصحيحات") &&
+    reviewB204Md.includes("## المصادر") && reviewB204Md.includes("تحذيرات محتوى") &&
+    reviewB204Md.includes("W6") && reviewB204Md.includes("K200") &&
+    Object.keys(srcMap204).every((k) => srcMap204[k].length >= 3) &&
+    Object.values(srcMap204).reduce((n: number, v: any[]) => n + v.length, 0) >= 9,
+    "K200j التقرير العربي ومصادره (3+ لكل حوار، 9+ إجمالاً) يذكر K200 وW6");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
