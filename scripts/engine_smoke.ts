@@ -7767,6 +7767,65 @@ void 0;
     "K186j الرقعة لا تغيّر أي نص ألماني ولا سؤالاً ولا مفتاحاً؛ التعديلات الأربعة عربية ومسندة إلى مطابقة جنس الضمير/الصفة");
 }
 
+// K187 — gap report for A2 d-a2-28..d-a2-30 (R113); mirrors K176 for the A1 gap.
+{
+  const gapA2Report28 = JSON.parse(readFileSync("docs/content-gap-a2-dialogues-28-30-2026-10-08.json", "utf8")) as any;
+  const gapA2Report28Md = readFileSync("docs/content-gap-a2-dialogues-28-30-2026-10-08.md", "utf8");
+  const liveDialoguesGapA2 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const audioManifestGapA2 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
+  const a2Live = liveDialoguesGapA2.filter((d) => (d.id as string).startsWith("d-a2-"));
+  const a2LiveIds = a2Live.map((d) => d.id).sort();
+  const expectedA2Ids = [
+    ...Array.from({ length: 27 }, (_, i) => `d-a2-${String(i + 1).padStart(2, "0")}`),
+    "d-a2-31", "d-a2-32",
+  ];
+  const missing = ["d-a2-28", "d-a2-29", "d-a2-30"];
+  const manifestEntriesGapA2: any[] = [];
+  const collectGapA2 = (node: any) => {
+    if (Array.isArray(node)) node.forEach(collectGapA2);
+    else if (node && typeof node === "object") {
+      if (typeof node.id === "string" && missing.includes(node.id)) manifestEntriesGapA2.push(node);
+      Object.values(node).forEach(collectGapA2);
+    }
+  };
+  collectGapA2(audioManifestGapA2);
+  ok(gapA2Report28.reviewRule === "R113" && gapA2Report28.date === "2026-10-08" &&
+    JSON.stringify(a2LiveIds) === JSON.stringify(expectedA2Ids) && a2Live.length === 29 &&
+    missing.every((id) => !a2LiveIds.includes(id)) &&
+    gapA2Report28.liveContent.a2DialogueCount === 29 &&
+    gapA2Report28.liveContent.allExpectedPresent === true &&
+    JSON.stringify(gapA2Report28.liveContent.missingIds) === JSON.stringify(missing),
+    "K187a فجوة A2 28–30 موثقة: النسخة الحية تضم 29 حوار A2 (01–27 و31–32) ولا تحتوي 28/29/30");
+
+  ok(Array.isArray(gapA2Report28.sources) && gapA2Report28.sources.length >= 6 &&
+    gapA2Report28.sources.every((s: any) => s.id && s.path && s.proves && s.limits) &&
+    gapA2Report28.generators && gapA2Report28.generators["dialoge_a2_neu2.py"]?.containsAnyMissingId === false &&
+    gapA2Report28.generators["dialoge_a2_neu1.py"]?.containsAnyMissingId === false &&
+    gapA2Report28.generators["dialoge_welle.py"]?.containsAnyMissingId === false &&
+    gapA2Report28Md.includes("schliesst A2 auf 29 Dialoge") &&
+    gapA2Report28Md.includes("غير محسوم"),
+    "K187b التقرير يسند الفجوة بمصادر ومولدات ولا ينشئ محتوى بديلاً");
+
+  ok(manifestEntriesGapA2.length === 0 && gapA2Report28.audio.manifestEntriesForMissing.length === 0 &&
+    gapA2Report28.audio.mp3FilesForMissing.length === 0 &&
+    gapA2Report28.limits.audio.includes("لا") &&
+    gapA2Report28.limits.contentCreation.includes("لم يُنشأ"),
+    "K187c لا إدخالات صوت مطابقة ولا محتوى بديل، والحدود مُعلنة");
+
+  ok(typeof gapA2Report28.gitHistory.isShallowRepository === "boolean" &&
+    gapA2Report28.gitHistory.hitsPerMissingId &&
+    Object.keys(gapA2Report28.gitHistory.hitsPerMissingId).length === 3 &&
+    gapA2Report28.decision.length > 0 &&
+    gapA2Report28Md.includes("## القرار") &&
+    gapA2Report28Md.includes("K187"),
+    "K187d سجل Git (بما في ذلك كونه shallow) والقرار مذكوران صراحة مع ذكر K187");
+
+  ok(gapA2Report28.limits.cefr.includes("لم يُعد") &&
+    gapA2Report28.limits.human.includes("ليست") &&
+    gapA2Report28.limits.legal.length > 0,
+    "K187e التقرير يصرّح بحدود CEFR والمراجعة البشرية/قانونية");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
