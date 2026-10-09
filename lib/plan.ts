@@ -417,7 +417,7 @@ function mcFromCards(cards: VocabCard[], idx: number, rand: () => number): Exerc
  * بناء فحص من المخزون الذي تمت دراسته حتى اليوم فقط (لا مستقبل، لا مفاجآت).
  * في اليوم 0 / الأسبوع 0 لا يوجد «ماضٍ» يُسترجَع ⇐ مصفوفة فارغة (يُعالَج المتعلِّمُ بلافتة ترحيب).
  */
-function buildQuiz(day: number, phase: Phase, count: number, progress: Progress): Exercise[] {
+function buildQuiz(day: number, phase: Phase, count: number, progress: Progress, prefix: string = ""): Exercise[] {
   // لا شيء يُسبق اليوم الأول ⇐ فحص الاسترجاع الأول فارغ (مرحباً وتهيئة لا اختبار)
   if (day < 1) return [];
   const rand = rng(day * 977 + 13);
@@ -512,7 +512,7 @@ function buildQuiz(day: number, phase: Phase, count: number, progress: Progress)
       need--;
     }
   }
-  return picked.slice(0, count).map((ex, i) => ({ ...ex, id: `q${day}-${i}-${ex.id}` }));
+  return picked.slice(0, count).map((ex, i) => ({ ...ex, id: `q${day}-${prefix || ""}${prefix?"-":""}${i}-${ex.id}` }));
 }
 
 /** 🎯 تحققات الاستقلال المستحقة: دروسٌ أُنجِز تدريبُها وحلَّ يومُها (الأقدم أولاً) */
@@ -741,7 +741,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Tagescheck",
         titleAr: "فحص اليوم (عتبة النجاح 80%)",
         minutes: 15,
-        quiz: buildQuiz(day, phase, 8, progress),
+        quiz: buildQuiz(day, phase, 8, progress, "tc"),
       });
     } else if (weekday === 2 || weekday === 4) {
       // تعميق الدرس الأقرب؛ وإن كان التكرار بعد انتهاء المحتوى فيُوسم مراجعة.
@@ -810,7 +810,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Tagescheck",
         titleAr: "فحص اليوم (عتبة النجاح 80%)",
         minutes: 15,
-        quiz: buildQuiz(day, phase, 8, progress),
+        quiz: buildQuiz(day, phase, 8, progress, "tc2"),
       });
     } else {
       // يوم 5 — دمج وبناء الجملة
@@ -855,7 +855,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Tagescheck",
         titleAr: "فحص اليوم (عتبة النجاح 80%)",
         minutes: 15,
-        quiz: buildQuiz(day, phase, 10, progress),
+        quiz: buildQuiz(day, phase, 10, progress, "tc3"),
       });
     }
   } else if (type === "festigung") {
@@ -866,7 +866,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleAr: "مراجعة الأسبوع كاملاً (كبسولة متباعدة)",
       minutes: 30,
       sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة 1/7/30
-      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 5, progress)],
+      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 5, progress, "wdfest")],
     });
     tasks.push({
       id: tid(2),
@@ -904,7 +904,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleDe: "Festigungs-Check",
       titleAr: "فحص التثبيت",
       minutes: 20,
-      quiz: buildQuiz(day, phase, 10, progress),
+      quiz: buildQuiz(day, phase, 10, progress, "fc"),
     });
   } else if (type === "wochencheck") {
     const isPhaseExam = istPhasenPruefung(day); // امتحان نهاية المرحلة — أيامها من lib/phasen.ts
@@ -916,7 +916,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
             titleDe: `Prüfung ${phase}`,
             titleAr: `امتحان نهاية مرحلة ${phase} — قراءة/استماع/قواعد/كتابة`,
             minutes: 50,
-            quiz: buildQuiz(day, phase, 12, progress),
+            quiz: buildQuiz(day, phase, 12, progress, "pp"),
             exam: true,
             textId: nextText()?.id,
             dialogueId: nextDialog()?.id,
@@ -928,7 +928,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
             titleDe: "Wochenprüfung",
             titleAr: "الفحص الأسبوعي (12 سؤالاً من محتوى الأسبوع)",
             minutes: 40,
-            quiz: buildQuiz(day, phase, 12, progress),
+            quiz: buildQuiz(day, phase, 12, progress, "wp"),
             textId: nextText()?.id,
           }
     );
@@ -991,7 +991,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleAr: "أستطيع أن… + كبسولة متباعدة للأسبوع القادم",
       minutes: 15,
       sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة
-      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 4, progress).slice(0, 4)],
+      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 4, progress, "wk").slice(0, 4)],
     });
   } else {
     // أيام الختام 375-378 — تستخدم الكبسولة المتباعدة لآخر البنك
@@ -1006,7 +1006,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleAr: "مراجعة شاملة + تلخيص الرحلة في 5 جمل",
           minutes: 50,
           sentenceIds: gesternKapsel,
-          quiz: buildQuiz(374, "B2", 15, progress),
+          quiz: buildQuiz(374, "B2", 15, progress, "final374"),
           writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
         },
         {
@@ -1015,7 +1015,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Struktur-Test",
           titleAr: "اختبار هيكلي شامل (القواعد كلها)",
           minutes: 30,
-          quiz: buildQuiz(375, "Abschluss", 15, progress),
+          quiz: buildQuiz(375, "Abschluss", 15, progress, "final375"),
         },
       ],
       376: [
@@ -1057,7 +1057,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Prüfungs-Check",
           titleAr: "فحص محاكاة",
           minutes: 15,
-          quiz: buildQuiz(376, "Abschluss", 12, progress),
+          quiz: buildQuiz(376, "Abschluss", 12, progress, "final376"),
         },
         {
           id: tid(4),
@@ -1103,7 +1103,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Abschlussprüfung",
           titleAr: "الامتحان الختامي الشامل — محاكاة Goethe B2",
           minutes: 55,
-          quiz: buildQuiz(377, "Abschluss", 12, progress),
+          quiz: buildQuiz(377, "Abschluss", 12, progress, "final377"),
           exam: true,
           textId: nextText()?.id,
           dialogueId: nextDialog()?.id,
@@ -1124,7 +1124,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleAr: "الحصيلة وخطة ما بعد B2",
           minutes: 10,
           sentenceIds: kapselIds(day),
-          quiz: [...kapselQuiz(day), ...buildQuiz(378, "Abschluss", 5, progress).slice(0, 5)],
+          quiz: [...kapselQuiz(day), ...buildQuiz(378, "Abschluss", 5, progress, "wk2").slice(0, 5)],
         },
       ],
     };
