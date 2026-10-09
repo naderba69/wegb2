@@ -578,7 +578,8 @@
           "Sie sind billig."
         ],
         "answer": "Man findet schnell Informationen.",
-        "explanationAr": "في النصِّ حرفياً: «weil Schüler schnell Informationen finden»."
+        "explanationAr": "في النصِّ حرفياً: «weil Schüler schnell Informationen finden».",
+        "promptAr": "ما ميزة الهواتف المحمولة؟"
       },
       {
         "id": "t-b1-01-q2",
@@ -590,7 +591,8 @@
           "Handys im Unterricht"
         ],
         "answer": "Handys nur in der Pause",
-        "explanationAr": "في النصِّ حرفياً: «Handys ja, aber nur in der Pause.»"
+        "explanationAr": "في النصِّ حرفياً: «Handys ja, aber nur in der Pause.»",
+        "promptAr": "ماذا يقترح الكاتب؟"
       },
       {
         "id": "t-b1-01-q3",
@@ -599,7 +601,8 @@
         "answer": [
           "andererseits"
         ],
-        "explanationAr": "الدليل حرفياً: «Andererseits stören sie oft den Unterricht.» — أداة المقابلة: einerseits … andererseits."
+        "explanationAr": "الدليل حرفياً: «Andererseits stören sie oft den Unterricht.» — أداة المقابلة: einerseits … andererseits.",
+        "promptAr": "من ناحية مفيدة، ومن ناحية ___ مزعجة."
       }
     ]
   },
@@ -618,7 +621,8 @@
         "answer": [
           "gelernt"
         ],
-        "explanationAr": "الدليل حرفياً: «Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.» — Plusquamperfekt: hatte gelernt."
+        "explanationAr": "الدليل حرفياً: «Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.» — Plusquamperfekt: hatte gelernt.",
+        "promptAr": "قبل مجيئه كان قد ___ الألمانية ثلاث سنوات."
       },
       {
         "id": "t-b1-02-q2",
@@ -630,7 +634,8 @@
           "seine Mutter"
         ],
         "answer": "ein Kollege",
-        "explanationAr": "في النصِّ حرفياً: «Ein Kollege … hat mir sehr geholfen.»"
+        "explanationAr": "في النصِّ حرفياً: «Ein Kollege … hat mir sehr geholfen.»",
+        "promptAr": "من ساعده؟"
       },
       {
         "id": "t-b1-02-q3",
@@ -640,7 +645,8 @@
           "hätte",
           "haette"
         ],
-        "explanationAr": "الدليل حرفياً: «Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.» — Konjunktiv II: hätte … gemacht."
+        "explanationAr": "الدليل حرفياً: «Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.» — Konjunktiv II: hätte … gemacht.",
+        "promptAr": "بدونه ___ لم يُحرِز تقدماً سريعاً."
       }
     ]
   },
@@ -659,7 +665,8 @@
         "answer": [
           "beschlossen"
         ],
-        "explanationAr": "الدليل حرفياً: «Die Luft in unserer Stadt ist immer schlechter geworden, obwohl die Regierung neue Maßnahmen beschlossen hat.» — obwohl + فعل للنهاية."
+        "explanationAr": "الدليل حرفياً: «Die Luft in unserer Stadt ist immer schlechter geworden, obwohl die Regierung neue Maßnahmen beschlossen hat.» — obwohl + فعل للنهاية.",
+        "promptAr": "رغم أن الحكومة ___ إجراءات جديدة."
       },
       {
         "id": "t-b1-03-q2",
@@ -671,7 +678,8 @@
           "90 Prozent"
         ],
         "answer": "70 Prozent",
-        "explanationAr": "في النصِّ حرفياً: «70 Prozent …»."
+        "explanationAr": "في النصِّ حرفياً: «70 Prozent …».",
+        "promptAr": "كم في المئة سيتركون السيارة؟"
       },
       {
         "id": "t-b1-03-q3",
@@ -683,7 +691,8 @@
           "ein Gesamtkonzept"
         ],
         "answer": "ein Gesamtkonzept",
-        "explanationAr": "في النصِّ حرفياً: «sondern ein Gesamtkonzept»."
+        "explanationAr": "في النصِّ حرفياً: «sondern ein Gesamtkonzept».",
+        "promptAr": "ما الحل؟"
       }
     ]
   },
@@ -705,7 +714,8 @@
           "bei der Arbeit"
         ],
         "answer": "am Stadtrand",
-        "explanationAr": "«am Stadtrand» — أطراف المدينة."
+        "explanationAr": "«am Stadtrand» — أطراف المدينة.",
+        "promptAr": "أين تقع الشقة؟"
       },
       {
         "id": "t-b1-04-q2",
@@ -715,7 +725,8 @@
           "20",
           "zwanzig"
         ],
-        "explanationAr": "الدليل حرفياً: «Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten.» — 20 دقيقة."
+        "explanationAr": "الدليل حرفياً: «Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten.» — 20 دقيقة.",
+        "promptAr": "تستغرق الرحلة إلى العمل ___ دقيقة."
       },
       {
         "id": "t-b1-04-q3",
@@ -727,7 +738,8 @@
           "jeden Freitag"
         ],
         "answer": "jeden Sonntag",
-        "explanationAr": "في النصِّ حرفياً: «jeden Sonntag»."
+        "explanationAr": "في النصِّ حرفياً: «jeden Sonntag».",
+        "promptAr": "متى يتقابلون؟"
       }
     ]
   },
@@ -749,7 +761,8 @@
           "eine Reise machen"
         ],
         "answer": "mit dem Chef sprechen",
-        "explanationAr": "في النصِّ حرفياً: «hätte ich zuerst ein Gespräch mit dem Chef»."
+        "explanationAr": "في النصِّ حرفياً: «hätte ich zuerst ein Gespräch mit dem Chef».",
+        "promptAr": "ماذا سيفعل المستشار أولاً؟"
       },
       {
         "id": "t-b1-05-q2",
@@ -759,7 +772,8 @@
           "wäre",
           "waere"
         ],
-        "explanationAr": "الدليل حرفياً: «Ohne Plan zu kündigen, wäre riskant.» — Konjunktiv II von sein."
+        "explanationAr": "الدليل حرفياً: «Ohne Plan zu kündigen, wäre riskant.» — Konjunktiv II von sein.",
+        "promptAr": "الاستقالة بلا تخطيط ___ أمراً خطيراً."
       },
       {
         "id": "t-b1-05-q3",
@@ -771,7 +785,8 @@
           "أرفض"
         ],
         "answer": "أنصح بـ",
-        "explanationAr": "الدليل حرفياً: «Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.» — نصيحة مهذّبة."
+        "explanationAr": "الدليل حرفياً: «Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.» — نصيحة مهذّبة.",
+        "promptAr": "«أنصح بـ» تعني:"
       }
     ]
   },
@@ -1280,7 +1295,8 @@
           "Bildung"
         ],
         "answer": "Logistik",
-        "explanationAr": "في النصِّ حرفياً: «Erfahrung in der Logistik»."
+        "explanationAr": "في النصِّ حرفياً: «Erfahrung in der Logistik».",
+        "promptAr": "أي خبرة مطلوبة؟"
       },
       {
         "id": "t-b1-06-q2",
@@ -1289,7 +1305,8 @@
         "answer": [
           "Anschreiben"
         ],
-        "explanationAr": "الدليل حرفياً: «Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein Anschreiben enthalten.» — خطاب التوظيف."
+        "explanationAr": "الدليل حرفياً: «Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein Anschreiben enthalten.» — خطاب التوظيف.",
+        "promptAr": "المستندات التي تتضمن السيرة الذاتية و___."
       },
       {
         "id": "t-b1-06-q3",
@@ -1301,7 +1318,8 @@
           "dreißigste",
           "30."
         ],
-        "explanationAr": "الدليل حرفياً: «Bewerbungsschluss ist der 30.» — der 30. Juni."
+        "explanationAr": "الدليل حرفياً: «Bewerbungsschluss ist der 30.» — der 30. Juni.",
+        "promptAr": "آخر موعد للتقديم: ___ يونيو."
       }
     ]
   },
@@ -1321,7 +1339,8 @@
           "45",
           "fünfundvierzig"
         ],
-        "explanationAr": "الدليل حرفياً: «Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.» — 45%."
+        "explanationAr": "الدليل حرفياً: «Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.» — 45%.",
+        "promptAr": "___ في المئة يفضّلون التكوين المهني."
       },
       {
         "id": "t-b1-07-q2",
@@ -1333,7 +1352,8 @@
           "nur arbeiten"
         ],
         "answer": "zuerst Praktika machen",
-        "explanationAr": "في النصِّ حرفياً: «zuerst Praktika zu machen»."
+        "explanationAr": "في النصِّ حرفياً: «zuerst Praktika zu machen».",
+        "promptAr": "بماذا ينصح الخبراء؟"
       },
       {
         "id": "t-b1-07-q3",
@@ -1342,7 +1362,8 @@
         "answer": [
           "Praxisnähe"
         ],
-        "explanationAr": "الدليل حرفياً: «Als Hauptgrund nennen sie die Praxisnähe.» — القرب من الممارسة."
+        "explanationAr": "الدليل حرفياً: «Als Hauptgrund nennen sie die Praxisnähe.» — القرب من الممارسة.",
+        "promptAr": "يذكرون أن السبب الرئيسي هو ___."
       }
     ]
   },
@@ -1719,7 +1740,8 @@
           "Der Balkon"
         ],
         "answer": "Küche und Bad",
-        "explanationAr": "الدليل حرفياً: «Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.» — المطبخ والحّمام مشتركان، ولكل غرفته."
+        "explanationAr": "الدليل حرفياً: «Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.» — المطبخ والحّمام مشتركان، ولكل غرفته.",
+        "promptAr": "ماذا يُشترك فيه في السكن المشترك؟"
       },
       {
         "id": "t-b1-08-q2",
@@ -1732,7 +1754,8 @@
           "Wer studiert"
         ],
         "answer": "Wer ruhig wohnen will",
-        "explanationAr": "الدليل حرفياً: «Wer ruhig wohnen will, sucht am besten am Stadtrand.» — من يريد الهدوء فليبحث في أطراف المدينة."
+        "explanationAr": "الدليل حرفياً: «Wer ruhig wohnen will, sucht am besten am Stadtrand.» — من يريد الهدوء فليبحث في أطراف المدينة.",
+        "promptAr": "مَن يُنصح بالسكن على أطراف المدينة؟"
       },
       {
         "id": "t-b1-08-q3",
@@ -1744,7 +1767,8 @@
           "die hohe Miete"
         ],
         "answer": "Lärm und wenig Privatsphäre",
-        "explanationAr": "«…aber auch Nachteile: Lärm und wenig Privatsphäre.» والمطبخُ المشتركُ من المزايا لا النقائص."
+        "explanationAr": "«…aber auch Nachteile: Lärm und wenig Privatsphäre.» والمطبخُ المشتركُ من المزايا لا النقائص.",
+        "promptAr": "ما مساوئ السكن المشترك؟"
       }
     ]
   },
@@ -1767,7 +1791,8 @@
           "Kleidung"
         ],
         "answer": "Papier, Glas und Plastik",
-        "explanationAr": "الدليل حرفياً: «In Deutschland werden Papier, Glas und Plastik getrennt gesammelt.» — يُجمع الورق والزجاج والبلاستيك بشكل منفصل."
+        "explanationAr": "الدليل حرفياً: «In Deutschland werden Papier, Glas und Plastik getrennt gesammelt.» — يُجمع الورق والزجاج والبلاستيك بشكل منفصل.",
+        "promptAr": "ماذا يُفرز في ألمانيا؟"
       },
       {
         "id": "t-b1-09-q2",
@@ -1780,7 +1805,8 @@
           "Eine Plastiktüte"
         ],
         "answer": "Eine Stofftasche",
-        "explanationAr": "الدليل حرفياً: «Auch beim Einkaufen hilft eine Stofftasche.» — كيس القماش (Stofftasche) بديل مفيد للبلاستيك."
+        "explanationAr": "الدليل حرفياً: «Auch beim Einkaufen hilft eine Stofftasche.» — كيس القماش (Stofftasche) بديل مفيد للبلاستيك.",
+        "promptAr": "ماذا يُفيد عند التسوق؟"
       },
       {
         "id": "t-b1-09-q3",
@@ -1792,7 +1818,8 @@
           "Mit dem Flugzeug"
         ],
         "answer": "Mit dem Rad",
-        "explanationAr": "«Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto.» — stattٌ تضادٌّ لا تشابه."
+        "explanationAr": "«Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto.» — stattٌ تضادٌّ لا تشابه.",
+        "promptAr": "كيف تذهب إلى العمل إذا أردت حماية البيئة؟"
       }
     ]
   },
@@ -3005,7 +3032,8 @@
           "weil sie verschiedene Projekte hatten"
         ],
         "answer": "weil Tobias seine Ideen als seine ausgegeben hatte",
-        "explanationAr": "في النصِّ حرفياً: «weil er meine Ideen … als seine ausgegeben hatte»."
+        "explanationAr": "في النصِّ حرفياً: «weil er meine Ideen … als seine ausgegeben hatte».",
+        "promptAr": "لماذا وقع الخلاف؟"
       },
       {
         "id": "t-b1-10-q2",
@@ -3017,7 +3045,8 @@
           "Er ging zur Chefin."
         ],
         "answer": "Er sprach ruhig unter vier Augen mit Tobias.",
-        "explanationAr": "في النصِّ حرفياً: «Stattdessen habe ich ihn ruhig unter vier Augen gefragt»."
+        "explanationAr": "في النصِّ حرفياً: «Stattdessen habe ich ihn ruhig unter vier Augen gefragt».",
+        "promptAr": "كيف تصرّف الراوي؟"
       },
       {
         "id": "t-b1-10-q3",
@@ -3029,7 +3058,8 @@
           "die Firma zu wechseln"
         ],
         "answer": "jeden Beitrag mit Namen zu notieren",
-        "explanationAr": "في النصِّ حرفياً: «künftig jeden Beitrag mit Namen zu notieren»."
+        "explanationAr": "في النصِّ حرفياً: «künftig jeden Beitrag mit Namen zu notieren».",
+        "promptAr": "علام اتفقا؟"
       }
     ]
   },
@@ -3051,7 +3081,8 @@
           "Bücher an Schüler"
         ],
         "answer": "Lebensmittel an Bedürftige",
-        "explanationAr": "في النصِّ حرفياً: «die Lebensmittel an Bedürftige verteilt»."
+        "explanationAr": "في النصِّ حرفياً: «die Lebensmittel an Bedürftige verteilt».",
+        "promptAr": "ماذا توزّع «مأدبة الطعام»؟"
       },
       {
         "id": "t-b1-11-q2",
@@ -3063,7 +3094,8 @@
           "der Feierabend"
         ],
         "answer": "das Gespräch mit den Menschen",
-        "explanationAr": "في النصِّ حرفياً: «dass das Gespräch … mindestens genauso wichtig ist»."
+        "explanationAr": "في النصِّ حرفياً: «dass das Gespräch … mindestens genauso wichtig ist».",
+        "promptAr": "ما الذي أصبح مهماً بقدر الأهمية لديه؟"
       },
       {
         "id": "t-b1-11-q3",
@@ -3075,7 +3107,8 @@
           "täglich"
         ],
         "answer": "jeden Samstag",
-        "explanationAr": "في النصِّ حرفياً: «jeden Samstag bei der Tafel aus»."
+        "explanationAr": "في النصِّ حرفياً: «jeden Samstag bei der Tafel aus».",
+        "promptAr": "كم مرة يتطوّع؟"
       }
     ]
   },
@@ -3097,7 +3130,8 @@
           "dass die Karten verloren"
         ],
         "answer": "dass beide gleich viel wussten",
-        "explanationAr": "في النصِّ حرفياً: «wussten wir beide gleich viel»."
+        "explanationAr": "في النصِّ حرفياً: «wussten wir beide gleich viel».",
+        "promptAr": "ماذا أظهرت المقارنة بعد أسبوعين؟"
       },
       {
         "id": "t-b1-12-q2",
@@ -3109,7 +3143,8 @@
           "die App-Firmen-Marke"
         ],
         "answer": "regelmäßiges Wiederholen",
-        "explanationAr": "في النصِّ حرفياً: «Entscheidend ist nicht das Werkzeug, sondern dass man regelmäßig wiederholt»."
+        "explanationAr": "في النصِّ حرفياً: «Entscheidend ist nicht das Werkzeug, sondern dass man regelmäßig wiederholt».",
+        "promptAr": "ما العامل الحاسم حسب النص؟"
       },
       {
         "id": "t-b1-12-q3",
@@ -3121,7 +3156,8 @@
           "für die Prüfung"
         ],
         "answer": "für die U-Bahn",
-        "explanationAr": "في النصِّ حرفياً: «praktisch für die U-Bahn»."
+        "explanationAr": "في النصِّ حرفياً: «praktisch für die U-Bahn».",
+        "promptAr": "لماذا يُعَدّ التطبيق عملياً؟"
       }
     ]
   },
@@ -3143,7 +3179,8 @@
           "sein Kurskollege"
         ],
         "answer": "seine Freundin Lena",
-        "explanationAr": "في النصِّ حرفياً: «mit meiner Freundin Lena durchgespielt»."
+        "explanationAr": "في النصِّ حرفياً: «mit meiner Freundin Lena durchgespielt».",
+        "promptAr": "من تدرب معه على المقابلة؟"
       },
       {
         "id": "t-b1-13-q2",
@@ -3155,7 +3192,8 @@
           "Fragen zur Gehaltsvorstellung nur"
         ],
         "answer": "unangenehme nach Lücke und Schwächen",
-        "explanationAr": "في النصِّ حرفياً: «absichtlich unangenehme Fragen: nach meiner Lücke … und nach meinen Schwächen»."
+        "explanationAr": "في النصِّ حرفياً: «absichtlich unangenehme Fragen: nach meiner Lücke … und nach meinen Schwächen».",
+        "promptAr": "ما نوع الأسئلة التي طرحتها عمداً؟"
       },
       {
         "id": "t-b1-13-q3",
@@ -3167,7 +3205,8 @@
           "er musste passen"
         ],
         "answer": "er antwortete ruhiger",
-        "explanationAr": "في النصِّ حرفياً: «habe ich dann ruhiger geantwortet als beim ersten Probelauf»."
+        "explanationAr": "في النصِّ حرفياً: «habe ich dann ruhiger geantwortet als beim ersten Probelauf».",
+        "promptAr": "ما أثر ذلك في المقابلة الحقيقية؟"
       }
     ]
   },
@@ -3189,7 +3228,8 @@
           "eine Stunde"
         ],
         "answer": "eine halbe Stunde",
-        "explanationAr": "في النصِّ حرفياً: «eine halbe Stunde dauert»."
+        "explanationAr": "في النصِّ حرفياً: «eine halbe Stunde dauert».",
+        "promptAr": "كم يستغرق الطريق إلى المكتبة؟"
       },
       {
         "id": "t-b1-14-q2",
@@ -3201,7 +3241,8 @@
           "weil die Stühle bequemer sind"
         ],
         "answer": "weil ringsum alle schweigen",
-        "explanationAr": "في النصِّ حرفياً: «weil ringsum alle schweigen und alle dasselbe Ziel haben»."
+        "explanationAr": "في النصِّ حرفياً: «weil ringsum alle schweigen und alle dasselbe Ziel haben».",
+        "promptAr": "لماذا يتركز في العمل هناك أكثر؟"
       },
       {
         "id": "t-b1-14-q3",
@@ -3213,7 +3254,8 @@
           "ein Buch"
         ],
         "answer": "ein Monat Handyvertrag",
-        "explanationAr": "في النصِّ حرفياً: «billiger als ein Monat Handyvertrag»."
+        "explanationAr": "في النصِّ حرفياً: «billiger als ein Monat Handyvertrag».",
+        "promptAr": "بماذا يقارن رسم العضوية؟"
       }
     ]
   },
@@ -3235,7 +3277,8 @@
           "der Rat seiner Schwester"
         ],
         "answer": "Ärger mit Rücksendungen und falschen Größen",
-        "explanationAr": "في النصِّ حرفياً: «Nach dem Ärger mit Rücksendungen und falschen Größen…»"
+        "explanationAr": "في النصِّ حرفياً: «Nach dem Ärger mit Rücksendungen und falschen Größen…»",
+        "promptAr": "ما الذي جعله يعيد التفكير؟"
       },
       {
         "id": "t-b1-15-q2",
@@ -3247,7 +3290,8 @@
           "Bücher"
         ],
         "answer": "Schuhe",
-        "explanationAr": "في النصِّ حرفياً: «Heute kaufe ich Schuhe wieder im Geschäft»."
+        "explanationAr": "في النصِّ حرفياً: «Heute kaufe ich Schuhe wieder im Geschäft».",
+        "promptAr": "ماذا يشتري الآن من المتجر مجدداً؟"
       },
       {
         "id": "t-b1-15-q3",
@@ -3259,7 +3303,8 @@
           "der günstigste Preis immer"
         ],
         "answer": "was man kauft",
-        "explanationAr": "في النصِّ حرفياً: «entscheidend ist, was man kauft»."
+        "explanationAr": "في النصِّ حرفياً: «entscheidend ist, was man kauft».",
+        "promptAr": "ما العامل الحاسم عنده؟"
       }
     ]
   },
@@ -3281,7 +3326,8 @@
           "ohne anzuklopfen gegen Mittag"
         ],
         "answer": "pünktlich um zehn",
-        "explanationAr": "في النصِّ حرفياً: «stand ich … pünktlich um zehn vor ihrer Tür»."
+        "explanationAr": "في النصِّ حرفياً: «stand ich … pünktlich um zehn vor ihrer Tür».",
+        "promptAr": "متى حضر إلى بابها؟"
       },
       {
         "id": "t-b1-16-q2",
@@ -3293,7 +3339,8 @@
           "als Beschwerde"
         ],
         "answer": "nur so dahergesagt als Einladung",
-        "explanationAr": "في النصِّ حرفياً: «nur so dahingesagt … eine Einladung, kein Termin»."
+        "explanationAr": "في النصِّ حرفياً: «nur so dahingesagt … eine Einladung, kein Termin».",
+        "promptAr": "كيف قصدت «المرور على»؟"
       },
       {
         "id": "t-b1-16-q3",
@@ -3305,7 +3352,8 @@
           "sie sind Grund zum Aufgeben"
         ],
         "answer": "sie sind lehrreicher als jedes Lehrbuch",
-        "explanationAr": "في النصِّ حرفياً: «sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch»."
+        "explanationAr": "في النصِّ حرفياً: «sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch».",
+        "promptAr": "ماذا يقول عن مثل سوء الفهم هذا؟"
       }
     ]
   },
@@ -3327,7 +3375,8 @@
           "ein Freund"
         ],
         "answer": "sein Vater",
-        "explanationAr": "«der mir als Kind das Flicken gezeigt hat» — الأب هو المعلِّم."
+        "explanationAr": "«der mir als Kind das Flicken gezeigt hat» — الأب هو المعلِّم.",
+        "promptAr": "من علّمه إصلاح الإطار؟"
       },
       {
         "id": "t-b1-17-q2",
@@ -3339,7 +3388,8 @@
           "den ganzen Tag"
         ],
         "answer": "eine Stunde",
-        "explanationAr": "في النصِّ حرفياً: «Es dauerte eine Stunde»."
+        "explanationAr": "في النصِّ حرفياً: «Es dauerte eine Stunde».",
+        "promptAr": "كم استغرق التصليح؟"
       },
       {
         "id": "t-b1-17-q3",
@@ -3351,7 +3401,8 @@
           "die Distanz"
         ],
         "answer": "der Stolz",
-        "explanationAr": "في النصِّ حرفياً: «war der Stolz größer als jede Ersparnis»."
+        "explanationAr": "في النصِّ حرفياً: «war der Stolz größer als jede Ersparnis».",
+        "promptAr": "ماذا كان أكبر من التوفير؟"
       }
     ]
   },
@@ -3373,7 +3424,8 @@
           "Er lernte weiter im Bett."
         ],
         "answer": "Er stand auf und schrieb drei Seiten.",
-        "explanationAr": "في النصِّ حرفياً: «stand ich auf … und schrieb drei Seiten auf»."
+        "explanationAr": "في النصِّ حرفياً: «stand ich auf … und schrieb drei Seiten auf».",
+        "promptAr": "ماذا فعل في الليل؟"
       },
       {
         "id": "t-b1-18-q2",
@@ -3385,7 +3437,8 @@
           "erst nach der Prüfung"
         ],
         "answer": "gegen halb zwei",
-        "explanationAr": "في النصِّ حرفياً: «Gegen halb zwei schlief ich ein»."
+        "explanationAr": "في النصِّ حرفياً: «Gegen halb zwei schlief ich ein».",
+        "promptAr": "متى نام؟"
       },
       {
         "id": "t-b1-18-q3",
@@ -3397,7 +3450,8 @@
           "sie verschwindet nie"
         ],
         "answer": "sie ist meistens lauter als die Fakten",
-        "explanationAr": "في النصِّ حرفياً: «Sie ist meistens lauter als die Fakten»."
+        "explanationAr": "في النصِّ حرفياً: «Sie ist meistens lauter als die Fakten».",
+        "promptAr": "ماذا يرى صحيحاً عن الخوف؟"
       }
     ]
   },
@@ -4166,7 +4220,8 @@
           "nur für Rentner"
         ],
         "answer": "ohne Bezahlung",
-        "explanationAr": "النصُّ يفسّرُها بنفسِه: «also ohne Bezahlung»."
+        "explanationAr": "النصُّ يفسّرُها بنفسِه: «also ohne Bezahlung».",
+        "promptAr": "ماذا تعني «تطوّعياً»؟"
       },
       {
         "id": "t-b1-19-q2",
@@ -4178,7 +4233,8 @@
           "Es gibt zu wenige Freiwillige"
         ],
         "answer": "Der Staat spart dadurch Stellen",
-        "explanationAr": "الدليل حرفياً: «dass der Staat sich auf diese Hilfe verlässt und dadurch Stellen spart». الفخّ: الجمعيات لا تدفع، والنص لا يذكر قلّة المتطوعين."
+        "explanationAr": "الدليل حرفياً: «dass der Staat sich auf diese Hilfe verlässt und dadurch Stellen spart». الفخّ: الجمعيات لا تدفع، والنص لا يذكر قلّة المتطوعين.",
+        "promptAr": "ماذا ينتقد البعض؟"
       },
       {
         "id": "t-b1-19-q3",
@@ -4187,7 +4243,8 @@
         "answer": [
           "würden"
         ],
-        "explanationAr": "الدليل حرفياً: «Fest steht: Ohne Ehrenamt würden viele Vereine schließen müssen.» — شرطٌ غيرُ واقعيّ: Konjunktiv II بـwürden + مصدر."
+        "explanationAr": "الدليل حرفياً: «Fest steht: Ohne Ehrenamt würden viele Vereine schließen müssen.» — شرطٌ غيرُ واقعيّ: Konjunktiv II بـwürden + مصدر.",
+        "promptAr": "بدون التطوّع ___ كثير من الجمعيات على الإغلاق."
       }
     ]
   },
@@ -4207,7 +4264,8 @@
           "Nachdem",
           "nachdem"
         ],
-        "explanationAr": "الدليل حرفياً: «Nachdem ich zwei Wochen nachgedacht hatte, sagte ich zu.» — Nachdem مع الماضي الأسبق (hatte nachgedacht) ثمَّ الماضي البسيط — تسلسلُ الزمنَين."
+        "explanationAr": "الدليل حرفياً: «Nachdem ich zwei Wochen nachgedacht hatte, sagte ich zu.» — Nachdem مع الماضي الأسبق (hatte nachgedacht) ثمَّ الماضي البسيط — تسلسلُ الزمنَين.",
+        "promptAr": "___ أن فكّرتُ أسبوعين وافقتُ."
       },
       {
         "id": "t-b1-20-q2",
@@ -4219,7 +4277,8 @@
           "Die neue Firma"
         ],
         "answer": "Die Freunde blieben in Köln",
-        "explanationAr": "في النصِّ حرفياً: «andererseits lebten meine Freunde alle in Köln»."
+        "explanationAr": "في النصِّ حرفياً: «andererseits lebten meine Freunde alle in Köln».",
+        "promptAr": "ما كان عيباً؟"
       },
       {
         "id": "t-b1-20-q3",
@@ -4231,7 +4290,8 @@
           "Er will zurück"
         ],
         "answer": "Er bereut nichts",
-        "explanationAr": "في النصِّ حرفياً: «bereue ich nichts»."
+        "explanationAr": "في النصِّ حرفياً: «bereue ich nichts».",
+        "promptAr": "كيف يرى الانتقال اليوم؟"
       }
     ]
   },
@@ -4719,7 +4779,8 @@
         ],
         "answer": "Er ist kein Nachteil, wenn man lernen will.",
         "explanationAr": "الدليل حرفياً: «ein ungewöhnlicher Werdegang sei kein Nachteil, wenn man lernen will». الفخّ 1: قلب المعنى. الفخّ 2: فترة التجربة ستة أشهر بلا تغيير.",
-        "id": "t-b1-21-q1"
+        "id": "t-b1-21-q1",
+        "promptAr": "ماذا قالت المديرة عن مسار حنان غير المعتاد؟"
       },
       {
         "type": "mc",
@@ -4731,7 +4792,8 @@
         ],
         "answer": "eine Zielvereinbarung mit drei kleinen Zielen",
         "explanationAr": "الدليل حرفياً: «Statt Kritik bekam Hanan eine Zielvereinbarung: drei kleine Ziele». الفخّ 1: «Statt Kritik» ينفي النقد. الفخّ 2: الترقية لا تفكّر فيها بعد.",
-        "id": "t-b1-21-q2"
+        "id": "t-b1-21-q2",
+        "promptAr": "ماذا حصلت حنان عليه بعد أربعة أسابيع؟"
       },
       {
         "type": "truefalse",
@@ -4742,7 +4804,8 @@
         ],
         "answer": "richtig",
         "explanationAr": "الدليل حرفياً: «Über ihre Arbeitszeit konnte sie sogar verhandeln».",
-        "id": "t-b1-21-q3"
+        "id": "t-b1-21-q3",
+        "promptAr": "هل استطاعت حنان التفاوض على وقت العمل؟"
       },
       {
         "type": "fill",
@@ -4751,7 +4814,8 @@
           "Probezeit"
         ],
         "explanationAr": "الدليل حرفياً: «Die Probezeit dauert sechs Monate».",
-        "id": "t-b1-21-q4"
+        "id": "t-b1-21-q4",
+        "promptAr": "تدوم ___ ستة أشهر، ويمكن خلالها الفشل."
       }
     ],
     "neu": true,
@@ -4791,7 +4855,8 @@
         ],
         "answer": "die älteste Bewohnerin des Hauses",
         "explanationAr": "الدليل حرفياً: «Am Ende vermittelte die älteste Bewohnerin des Hauses». الفخّ 1: برانت طرف في الخلاف. الفخّ 2: المستأجرون الجدد طرف الخلاف.",
-        "id": "t-b1-22-q1"
+        "id": "t-b1-22-q1",
+        "promptAr": "من توصّل إلى وساطة بين الجارين في النهاية؟"
       },
       {
         "type": "mc",
@@ -4803,7 +4868,8 @@
         ],
         "answer": "Grillen nur freitags und samstags bis zehn Uhr",
         "explanationAr": "الدليل حرفياً: «Grillen ja, aber nur freitags und samstags bis zehn Uhr». الفخّ 1: «jeden Abend» كان الوضع القديم. الفخّ 2: القرية كانت رأي بعض السكان.",
-        "id": "t-b1-22-q2"
+        "id": "t-b1-22-q2",
+        "promptAr": "ماذا تضمّن الاتفاق؟"
       },
       {
         "type": "truefalse",
@@ -4814,7 +4880,8 @@
         ],
         "answer": "richtig",
         "explanationAr": "الدليل حرفياً: «wohnt seit zwanzig Jahren im Haus».",
-        "id": "t-b1-22-q3"
+        "id": "t-b1-22-q3",
+        "promptAr": "هل يسكن السيد برانت في البيت منذ عشرين سنة؟"
       },
       {
         "type": "fill",
@@ -4823,7 +4890,8 @@
           "einlenken"
         ],
         "explanationAr": "الدليل حرفياً: «beide wollten nicht einlenken» — einlenken = يتراجع/يلين في خلاف.",
-        "id": "t-b1-22-q4"
+        "id": "t-b1-22-q4",
+        "promptAr": "كلا الطرفين محقّ، وكلا الطرفين رفض ___."
       }
     ],
     "neu": true,
@@ -4863,7 +4931,8 @@
         ],
         "answer": "Das Bad wird im Winter drei Wochen renoviert.",
         "explanationAr": "الدليل حرفياً: «Das Bad wird im Winter drei Wochen renoviert, mehr nicht». الفخّ 1: الإغلاق هو الشائعة. الفخّ 2: احتجاج الأهالي لم يُنقذ شيئاً لأن الإغلاق لم يكن مقرّراً.",
-        "id": "t-b1-23-q1"
+        "id": "t-b1-23-q1",
+        "promptAr": "ما الحقيقة وراء الإشاعة؟"
       },
       {
         "type": "mc",
@@ -4875,7 +4944,8 @@
         ],
         "answer": "die Gegenposition ernst nehmen und jede Behauptung prüfen",
         "explanationAr": "الدليل حرفياً: «heißt nicht, dass beide recht haben. Sie heißt, dass man die Gegenposition ernst nimmt und jede Behauptung prüft». الفخّ 1: منفيّ صراحة. الفخّ 2: إعادة الإرسال هي ما فعله الناس بالشائعة.",
-        "id": "t-b1-23-q2"
+        "id": "t-b1-23-q2",
+        "promptAr": "ماذا تعني التقارير المتوازنة حسب النص؟"
       },
       {
         "type": "truefalse",
@@ -4886,7 +4956,8 @@
         ],
         "answer": "falsch",
         "explanationAr": "الدليل حرفياً: «Wer die Nachricht zuerst geschrieben hatte, blieb anonym».",
-        "id": "t-b1-23-q3"
+        "id": "t-b1-23-q3",
+        "promptAr": "هل هوية كاتب الخبر الأول معروفة؟"
       },
       {
         "type": "fill",
@@ -4895,7 +4966,8 @@
           "Stellungnahme"
         ],
         "explanationAr": "الدليل حرفياً: «Die Stadt gab am Abend eine Stellungnahme ab».",
-        "id": "t-b1-23-q4"
+        "id": "t-b1-23-q4",
+        "promptAr": "أصدرت المدينة مساءً ___."
       }
     ],
     "neu": true,
@@ -4936,7 +5008,8 @@
         ],
         "answer": "seine Regeneration",
         "explanationAr": "الدليل حرفياً: «Ihre Belastbarkeit ist nicht das Problem. Ihre Regeneration ist es». الفخّ 1: التحمل منفيّ صراحة. الفخّ 2: «nichts Chronisches».",
-        "id": "t-b1-24-q1"
+        "id": "t-b1-24-q1",
+        "promptAr": "ما مشكلة كريم حسب الطبيب؟"
       },
       {
         "type": "mc",
@@ -4948,7 +5021,8 @@
         ],
         "answer": "wegen der Nebenwirkungen und weil er nichts Chronisches hatte",
         "explanationAr": "الدليل حرفياً: «wegen der Nebenwirkungen und weil er nichts Chronisches hatte». الفخّ 1: استشارة التغذية خطوة أخرى لا سبب. الفخّ 2: لا منع من الطبيب.",
-        "id": "t-b1-24-q2"
+        "id": "t-b1-24-q2",
+        "promptAr": "لماذا رفض العلاج بالأدوية؟"
       },
       {
         "type": "truefalse",
@@ -4959,7 +5033,8 @@
         ],
         "answer": "richtig",
         "explanationAr": "الدليل حرفياً: «dreimal pro Woche zwanzig Minuten laufen».",
-        "id": "t-b1-24-q3"
+        "id": "t-b1-24-q3",
+        "promptAr": "هل يركض كريم عشرين دقيقة ثلاث مرات في الأسبوع؟"
       },
       {
         "type": "fill",
@@ -4968,7 +5043,8 @@
           "vorbeugen"
         ],
         "explanationAr": "الدليل حرفياً: «Wer sie früh bemerkt, kann vorbeugen, statt später zu reparieren».",
-        "id": "t-b1-24-q4"
+        "id": "t-b1-24-q4",
+        "promptAr": "مَن يلاحظ الإشارات باكراً يستطيع ___ بدلاً من أن يُصلّح لاحقاً."
       }
     ],
     "neu": true,
@@ -5009,7 +5085,8 @@
         ],
         "answer": "die Zuständigkeit zwischen zwei Ämtern",
         "explanationAr": "الدليل حرفياً: «Zuerst war die Zuständigkeit unklar: Straße oder Grünflächen, zwei verschiedene Ämter». الفخّ 1: التوقيعات جُمعت لاحقاً. الفخّ 2: الترميم حُسب مع مهندس.",
-        "id": "t-b1-25-q1"
+        "id": "t-b1-25-q1",
+        "promptAr": "ماذا كان غير واضح في البداية؟"
       },
       {
         "type": "mc",
@@ -5021,7 +5098,8 @@
         ],
         "answer": "Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone.",
         "explanationAr": "الدليل حرفياً: «Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone». الفخّ 1: الموقف يصير مساحة خضراء. الفخّ 2: الترخيص مشروط بممر الكراسي.",
-        "id": "t-b1-25-q2"
+        "id": "t-b1-25-q2",
+        "promptAr": "أي شرط في القرار؟"
       },
       {
         "type": "truefalse",
@@ -5032,7 +5110,8 @@
         ],
         "answer": "falsch",
         "explanationAr": "الدليل حرفياً: «angenommen, mit zwei Auflagen».",
-        "id": "t-b1-25-q3"
+        "id": "t-b1-25-q3",
+        "promptAr": "هل رفض المجلس البلدي المشروع؟"
       },
       {
         "type": "fill",
@@ -5041,7 +5120,8 @@
           "Bürgersprechstunde"
         ],
         "explanationAr": "الدليل حرفياً: «In der Bürgersprechstunde riet der Bürgermeister».",
-        "id": "t-b1-25-q4"
+        "id": "t-b1-25-q4",
+        "promptAr": "في ___ نصح العمدة بصياغة مشروع قرار."
       }
     ],
     "neu": true,
@@ -5448,7 +5528,8 @@
         ],
         "answer": "Sie kannte diese Tradition aus Tunis.",
         "explanationAr": "الدليل حرفياً: «Die Tradition, sich für das Theater schön anzuziehen, kannte sie aus Tunis». الفخّ 1: الزميلة قالت إنه غير ضروري. الفخّ 2: لا قاعدة لباس ذُكرت.",
-        "id": "t-b1-26-q1"
+        "id": "t-b1-26-q1",
+        "promptAr": "لماذا ارتدت سلمى ثياباً أنيقة؟"
       },
       {
         "type": "mc",
@@ -5460,7 +5541,8 @@
         ],
         "answer": "das Ende, das sie zu schnell fand",
         "explanationAr": "الدليل حرفياً: «Die Kollegin kritisierte das Ende, das sie zu schnell fand». الفخّ 1 و2: عناصر العرض لم تُنتقَد.",
-        "id": "t-b1-26-q2"
+        "id": "t-b1-26-q2",
+        "promptAr": "بماذا انتقدت زميلتها؟"
       },
       {
         "type": "truefalse",
@@ -5471,7 +5553,8 @@
         ],
         "answer": "richtig",
         "explanationAr": "الدليل حرفياً: «aber nur bis zum dritten Kapitel».",
-        "id": "t-b1-26-q3"
+        "id": "t-b1-26-q3",
+        "promptAr": "هل قرأت سلمى الرواية حتى الفصل الثالث فقط؟"
       },
       {
         "type": "fill",
@@ -5480,7 +5563,8 @@
           "Orchester"
         ],
         "explanationAr": "الدليل حرفياً: «Auf der Bühne stand ein kleines Orchester».",
-        "id": "t-b1-26-q4"
+        "id": "t-b1-26-q4",
+        "promptAr": "على الخشبة وقف ___ صغير: ثلاثة عازفين، كل بآلة مختلفة."
       }
     ],
     "neu": true,
@@ -5521,7 +5605,8 @@
         ],
         "answer": "den Verbrauch der ganzen Straße zu messen",
         "explanationAr": "الدليل حرفياً: «schlug vor, den Verbrauch der ganzen Straße zu messen». الفخّ 1: الاحتجاج كان ماضيه. الفخّ 2: القبو لم يُذكر بناؤه.",
-        "id": "t-b1-27-q1"
+        "id": "t-b1-27-q1",
+        "promptAr": "ماذا اقترح الجار؟"
       },
       {
         "type": "mc",
@@ -5533,7 +5618,8 @@
         ],
         "answer": "weil die Häuser alt sind",
         "explanationAr": "الدليل حرفياً: «weil die Häuser alt sind». الفخّ 1: الماء موضوع منفصل. الفخّ 2: الأشجار زُرعت ضد الفيضان.",
-        "id": "t-b1-27-q2"
+        "id": "t-b1-27-q2",
+        "promptAr": "لماذا تستهلك الشارع كثيراً من الكهرباء من الفحم والغاز؟"
       },
       {
         "type": "truefalse",
@@ -5544,7 +5630,8 @@
         ],
         "answer": "richtig",
         "explanationAr": "الدليل حرفياً: «Am Fluss haben wir Bäume gepflanzt».",
-        "id": "t-b1-27-q3"
+        "id": "t-b1-27-q3",
+        "promptAr": "هل غرس الجيران أشجاراً على ضفة النهر؟"
       },
       {
         "type": "fill",
@@ -5553,7 +5640,8 @@
           "sparsamer"
         ],
         "explanationAr": "الدليل حرفياً: «Seitdem heizen wir sparsamer» — صيغة التفضيل من sparsam.",
-        "id": "t-b1-27-q4"
+        "id": "t-b1-27-q4",
+        "promptAr": "منذ ذلك الحين ندفأ ___ ونشتري أقلّ بالبلاستيك ونرمي أقل."
       }
     ],
     "neu": true,
@@ -5594,7 +5682,8 @@
         ],
         "answer": "nur die Kosten, die sie wirklich hatte",
         "explanationAr": "الدليل حرفياً: «die Firma darf nur die Kosten verlangen, die sie wirklich hatte». الفخّ 1: مطالبة الشركة الأصلية. الفخّ 2: حق التراجع «gilt bei Reisen nicht».",
-        "id": "t-b1-28-q1"
+        "id": "t-b1-28-q1",
+        "promptAr": "ماذا يحق للشركة المطالبة به حسب المحامي؟"
       },
       {
         "type": "mc",
@@ -5606,7 +5695,8 @@
         ],
         "answer": "Die Firma räumte ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück.",
         "explanationAr": "الدليل حرفياً: «räumte die Firma ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück». الفخّ 1: «Vor Gericht kam es nicht». الفخّ 2: «Die Polizei hatte damit nichts zu tun».",
-        "id": "t-b1-28-q2"
+        "id": "t-b1-28-q2",
+        "promptAr": "كيف انتهت القضية؟"
       },
       {
         "type": "truefalse",
@@ -5617,7 +5707,8 @@
         ],
         "answer": "richtig",
         "explanationAr": "الدليل حرفياً: «Ja, das Widerrufsrecht gilt bei Reisen nicht».",
-        "id": "t-b1-28-q3"
+        "id": "t-b1-28-q3",
+        "promptAr": "هل حق الانسحاب لا يسري على الرحلات؟"
       },
       {
         "type": "fill",
@@ -5626,7 +5717,8 @@
           "begründen"
         ],
         "explanationAr": "الدليل حرفياً: «Alles andere muss sie begründen».",
-        "id": "t-b1-28-q4"
+        "id": "t-b1-28-q4",
+        "promptAr": "كلّ ما عدا ذلك عليها أن ___."
       }
     ],
     "neu": true,
@@ -5667,7 +5759,8 @@
         ],
         "answer": "Distanz",
         "explanationAr": "الدليل حرفياً: «Distanz galt als Kälte». الفخّ 1 و2: تغييرات لاحقة لا تخصّ تربيتها.",
-        "id": "t-b1-29-q1"
+        "id": "t-b1-29-q1",
+        "promptAr": "ماذا عُدّ برودةً في تربية الأم؟"
       },
       {
         "type": "mc",
@@ -5679,7 +5772,8 @@
         ],
         "answer": "dass sie sich zu viel um sie kümmert",
         "explanationAr": "الدليل حرفياً: «sie warf mir vor, ich würde mich zu viel um sie kümmern». الفخّ 1: الأسرار اتهام الأم. الفخّ 2: الباب تغلقه الابنة.",
-        "id": "t-b1-29-q2"
+        "id": "t-b1-29-q2",
+        "promptAr": "بماذا اتهمت الابنة أمها؟"
       },
       {
         "type": "truefalse",
@@ -5690,7 +5784,8 @@
         ],
         "answer": "falsch",
         "explanationAr": "الدليل حرفياً: «sie entscheidet allein darüber».",
-        "id": "t-b1-29-q3"
+        "id": "t-b1-29-q3",
+        "promptAr": "هل تظل الأم من يقرر مصروف الجيب؟"
       },
       {
         "type": "fill",
@@ -5699,7 +5794,8 @@
           "Aufgabenteilung"
         ],
         "explanationAr": "الدليل حرفياً: «Die Aufgabenteilung im Haushalt steht auf einem Zettel am Kühlschrank».",
-        "id": "t-b1-29-q4"
+        "id": "t-b1-29-q4",
+        "promptAr": "___ في البيت مكتوبة على ورقة على الثلاجة."
       }
     ],
     "neu": true,
@@ -5740,7 +5836,8 @@
         ],
         "answer": "weil das Hotel eine Kreditkarte wollte, die sie nicht hatte",
         "explanationAr": "الدليل حرفياً: «das Hotel wollte eine Kreditkarte, die ich nicht hatte. Ich musste Bargeld abheben». الفخّ 1: الخصم موضوع الزبون. الفخّ 2: تسجيل الوصول أونلاين نجح.",
-        "id": "t-b1-30-q1"
+        "id": "t-b1-30-q1",
+        "promptAr": "لماذا اضطرت لسحب نقدي؟"
       },
       {
         "type": "mc",
@@ -5752,7 +5849,8 @@
         ],
         "answer": "die Bearbeitung der Spesen",
         "explanationAr": "الدليل حرفياً: «lernte ich den unangenehmsten Teil: die Bearbeitung der Spesen». الفخّ 1: العرض دام عشرين دقيقة فقط. الفخّ 2: الغياب غطّته النائبة.",
-        "id": "t-b1-30-q2"
+        "id": "t-b1-30-q2",
+        "promptAr": "ما أكثر ما أزعجها حسب النص؟"
       },
       {
         "type": "truefalse",
@@ -5763,7 +5861,8 @@
         ],
         "answer": "falsch",
         "explanationAr": "الدليل حرفياً: «einen Rabatt, den ich nicht versprechen durfte. Ich habe gesagt, ich melde mich».",
-        "id": "t-b1-30-q3"
+        "id": "t-b1-30-q3",
+        "promptAr": "هل وعدت الزبون بالخصم؟"
       },
       {
         "type": "fill",
@@ -5772,7 +5871,8 @@
           "Vertretung"
         ],
         "explanationAr": "الدليل حرفياً: «die Vertretung übernahm eine Kollegin».",
-        "id": "t-b1-30-q4"
+        "id": "t-b1-30-q4",
+        "promptAr": "تولّت ___ زميلة."
       }
     ],
     "neu": true,

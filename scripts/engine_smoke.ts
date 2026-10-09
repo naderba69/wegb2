@@ -9711,6 +9711,8 @@ void 0;
   const reviewA1T2 = JSON.parse(readFileSync("docs/content-review-a1-texts-02-2026-10-09.json", "utf8")) as any;
   const reviewA1T3 = JSON.parse(readFileSync("docs/content-review-a1-texts-03-2026-10-09.json", "utf8")) as any;
   const reviewA2T1 = JSON.parse(readFileSync("docs/content-review-a2-texts-01-2026-10-09.json", "utf8")) as any;
+  const reviewB1T1 = JSON.parse(readFileSync("docs/content-review-b1-texts-01-2026-10-09.json", "utf8")) as any;
+  const reviewB1T1Md = readFileSync("docs/content-review-b1-texts-01-2026-10-09.md", "utf8");
   const reviewA2T1Md = readFileSync("docs/content-review-a2-texts-01-2026-10-09.md", "utf8");
   const reviewA1T3Md = readFileSync("docs/content-review-a1-texts-03-2026-10-09.md", "utf8");
   const reviewA1T2Md = readFileSync("docs/content-review-a1-texts-02-2026-10-09.md", "utf8");
@@ -10095,6 +10097,38 @@ void 0;
     "K213i مستوى A2 يغطي 20 نص");
   ok(a2t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
     "K213j الحقول الأساسية مقفلة");
+/* ═══ K214 — نصوص B1 كاملة t-b1-01..30 (R140). ═══ */
+{
+  const reviewB1T1 = JSON.parse(readFileSync("docs/content-review-b1-texts-01-2026-10-09.json", "utf8")) as any;
+  const patchB1T1Src = readFileSync("scripts/patches/review_b1_texts_01.py", "utf8");
+  const reviewB1T1Md = readFileSync("docs/content-review-b1-texts-01-2026-10-09.md", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json","utf8")) as any[];
+  const tgts=Array.from({length:30},(_,i)=>"t-b1-"+String(i+1).padStart(2,"0"));
+  const b1t = textsArr.filter((t:any)=>tgts.includes(t.id));
+  ok(reviewB1T1.reviewRule === "R140" && b1t.length === 30 && reviewB1T1.totals.texts === 30,
+    "K214a ثلاثون نصاً B1 موثقة");
+  const emptyAll = textsArr.filter((t:any)=>t.level==="B1").flatMap((t:any)=>t.questions).filter((q:any)=>!q.promptAr || !q.promptAr.trim()).length;
+  ok(emptyAll === 0, `K214b لا حقول فارغة في كامل B1 (فعلياً ${emptyAll})`);
+  ok(reviewB1T1.corrections.length === 100 && reviewB1T1.judgement.corrected === 100,
+    "K214c 100 تصحيح مؤكَّد");
+  ok(patchB1T1Src.includes("<R140> patch complete") && patchB1T1Src.includes("changes applied:"),
+    "K214d الرقعة تطبّق 100 تصحيح");
+  ok(reviewB1T1Md.includes("الحكم") && reviewB1T1Md.includes("K214") && reviewB1T1Md.includes("B1 كاملة"),
+    "K214e التقرير يذكر إكمال B1");
+  ok(reviewB1T1.limits.human && reviewB1T1.audio.note.includes("لا استماع"),
+    "K214f الحدود معلَنة");
+  ok(Array.isArray(reviewB1T1.contentChecks) && reviewB1T1.contentChecks.length>=5,
+    "K214g فحوص كافية");
+  const t01=b1t.find((t:any)=>t.id==="t-b1-01"), t15=b1t.find((t:any)=>t.id==="t-b1-15"), t30=b1t.find((t:any)=>t.id==="t-b1-30");
+  ok(t01.questions[0].promptAr.includes("ميزة") && t15.questions[0].promptAr.includes("التفكير") && t30.questions[3].promptAr.includes("تولّت"),
+    "K214h نماذج عربية مطابقة");
+  ok(textsArr.filter((t:any)=>t.level==="B1").length===30,
+    "K214i مستوى B1 = 30 نص");
+  ok(b1t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
+    "K214j الحقول مقفلة");
+}
+
+
 }
 
 

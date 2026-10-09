@@ -1,0 +1,2332 @@
+{
+  "reviewRule": "R140",
+  "batchLabel": "نصوص B1 كاملة",
+  "targetIds": [
+    "t-b1-01",
+    "t-b1-02",
+    "t-b1-03",
+    "t-b1-04",
+    "t-b1-05",
+    "t-b1-06",
+    "t-b1-07",
+    "t-b1-08",
+    "t-b1-09",
+    "t-b1-10",
+    "t-b1-11",
+    "t-b1-12",
+    "t-b1-13",
+    "t-b1-14",
+    "t-b1-15",
+    "t-b1-16",
+    "t-b1-17",
+    "t-b1-18",
+    "t-b1-19",
+    "t-b1-20",
+    "t-b1-21",
+    "t-b1-22",
+    "t-b1-23",
+    "t-b1-24",
+    "t-b1-25",
+    "t-b1-26",
+    "t-b1-27",
+    "t-b1-28",
+    "t-b1-29",
+    "t-b1-30"
+  ],
+  "totals": {
+    "texts": 30,
+    "questions": 100,
+    "approximateUnits": 220
+  },
+  "snapshots": {
+    "t-b1-01": {
+      "id": "t-b1-01",
+      "level": "B1",
+      "titleDe": "Handys in der Schule?",
+      "titleAr": "الهواتف في المدرسة؟",
+      "de": "In letzter Zeit diskutieren viele über Handys in Schulen. Einerseits sind Handys nützlich, weil Schüler schnell Informationen finden. Andererseits stören sie oft den Unterricht. Meiner Meinung nach sollten Schulen klare Regeln einführen: Handys ja, aber nur in der Pause. So können sich alle besser konzentrieren, trotzdem bleibt die digitale Kompetenz erhalten.",
+      "ar": "في الآونة الأخيرة يكثر النقاش حول الهواتف في المدارس. من جهة الهواتف مفيدة لأن التلاميذ يجدون المعلومات بسرعة. ومن جهة أخرى تعطّل الحصص غالباً. في رأيي يجب على المدارس إقرار قواعد واضحة: الهواتف نعم لكن في الاستراحة فقط. هكذا يركّز الجميع أفضل وتبقى الكفاءة الرقمية محفوظة.",
+      "questions": [
+        {
+          "id": "t-b1-01-q1",
+          "type": "mc",
+          "promptDe": "Was ist ein Vorteil der Handys?",
+          "options": [
+            "Sie stören den Unterricht.",
+            "Man findet schnell Informationen.",
+            "Sie sind billig."
+          ],
+          "answer": "Man findet schnell Informationen.",
+          "explanationAr": "في النصِّ حرفياً: «weil Schüler schnell Informationen finden».",
+          "promptAr": "ما ميزة الهواتف المحمولة؟"
+        },
+        {
+          "id": "t-b1-01-q2",
+          "type": "mc",
+          "promptDe": "Was schlägt der Autor vor?",
+          "options": [
+            "Handys verbieten",
+            "Handys nur in der Pause",
+            "Handys im Unterricht"
+          ],
+          "answer": "Handys nur in der Pause",
+          "explanationAr": "في النصِّ حرفياً: «Handys ja, aber nur in der Pause.»",
+          "promptAr": "ماذا يقترح الكاتب؟"
+        },
+        {
+          "id": "t-b1-01-q3",
+          "type": "fill",
+          "promptDe": "Einerseits nützlich, ___ störend.",
+          "answer": [
+            "andererseits"
+          ],
+          "explanationAr": "الدليل حرفياً: «Andererseits stören sie oft den Unterricht.» — أداة المقابلة: einerseits … andererseits.",
+          "promptAr": "من ناحية مفيدة، ومن ناحية ___ مزعجة."
+        }
+      ]
+    },
+    "t-b1-02": {
+      "id": "t-b1-02",
+      "level": "B1",
+      "titleDe": "Mein Weg nach Deutschland",
+      "titleAr": "طريقي إلى ألمانيا",
+      "de": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt. Trotzdem war der Anfang schwer: Die Leute sprachen sehr schnell, und ich hatte Angst, Fehler zu machen. Ein Kollege, der neben mir arbeitete, hat mir sehr geholfen. Er hat mich ermutigt, einfach zu sprechen. Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.",
+      "ar": "قبل أن آتي إلى ألمانيا كنت تعلّمت الألمانية ثلاث سنوات. ومع ذلك كان البداية صعبة: الناس يتحدثون بسرعة وكان لديّ خشية من الخطأ. زميل يعمل بجانبي ساعدني كثيراً. شجّعني على التحدث ببساطة. اليوم أنا ممتن له جداً فبدونه لما أحرزت تقدماً بهذه السرعة.",
+      "questions": [
+        {
+          "id": "t-b1-02-q1",
+          "type": "fill",
+          "promptDe": "Bevor er gekommen war, hatte er drei Jahre Deutsch ___.",
+          "answer": [
+            "gelernt"
+          ],
+          "explanationAr": "الدليل حرفياً: «Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.» — Plusquamperfekt: hatte gelernt.",
+          "promptAr": "قبل مجيئه كان قد ___ الألمانية ثلاث سنوات."
+        },
+        {
+          "id": "t-b1-02-q2",
+          "type": "mc",
+          "promptDe": "Wer hat ihm geholfen?",
+          "options": [
+            "ein Kollege",
+            "ein Arzt",
+            "seine Mutter"
+          ],
+          "answer": "ein Kollege",
+          "explanationAr": "في النصِّ حرفياً: «Ein Kollege … hat mir sehr geholfen.»",
+          "promptAr": "من ساعده؟"
+        },
+        {
+          "id": "t-b1-02-q3",
+          "type": "fill",
+          "promptDe": "Ohne ihn ___ er nicht so schnell Fortschritte gemacht.",
+          "answer": [
+            "hätte",
+            "haette"
+          ],
+          "explanationAr": "الدليل حرفياً: «Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.» — Konjunktiv II: hätte … gemacht.",
+          "promptAr": "بدونه ___ لم يُحرِز تقدماً سريعاً."
+        }
+      ]
+    },
+    "t-b1-03": {
+      "id": "t-b1-03",
+      "level": "B1",
+      "titleDe": "Umwelt und Verkehr",
+      "titleAr": "البيئة والمواصلات",
+      "de": "Die Luft in unserer Stadt ist immer schlechter geworden, obwohl die Regierung neue Maßnahmen beschlossen hat. Viele Bürger fordern deshalb mehr Radwege und bessere Busse. Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn der Nahverkehr besser wäre. Die Lösung ist also nicht ein einzelnes Projekt, sondern ein Gesamtkonzept, das alle Bereiche verbindet.",
+      "ar": "الهواء في مدينتنا يزداد سوءاً رغم أن الحكومة اعتمدت إجراءات جديدة. لذلك يطالب كثير من المواطنين بممرات دراجات وحافلات أفضل. استطلاع يبيّن: 70% سيتركون السيارة لو كان النقل المحلي أفضل. الحل إذن ليس مشروعاً منفرداً بل مفهوماً شاملاً يربط كل القطاعات.",
+      "questions": [
+        {
+          "id": "t-b1-03-q1",
+          "type": "fill",
+          "promptDe": "…, obwohl die Regierung neue Maßnahmen ___ hat.",
+          "answer": [
+            "beschlossen"
+          ],
+          "explanationAr": "الدليل حرفياً: «Die Luft in unserer Stadt ist immer schlechter geworden, obwohl die Regierung neue Maßnahmen beschlossen hat.» — obwohl + فعل للنهاية.",
+          "promptAr": "رغم أن الحكومة ___ إجراءات جديدة."
+        },
+        {
+          "id": "t-b1-03-q2",
+          "type": "mc",
+          "promptDe": "Wie viele Prozent würden das Auto stehen lassen?",
+          "options": [
+            "50 Prozent",
+            "70 Prozent",
+            "90 Prozent"
+          ],
+          "answer": "70 Prozent",
+          "explanationAr": "في النصِّ حرفياً: «70 Prozent …».",
+          "promptAr": "كم في المئة سيتركون السيارة؟"
+        },
+        {
+          "id": "t-b1-03-q3",
+          "type": "mc",
+          "promptDe": "Was ist die Lösung?",
+          "options": [
+            "ein einzelnes Projekt",
+            "mehr Autos",
+            "ein Gesamtkonzept"
+          ],
+          "answer": "ein Gesamtkonzept",
+          "explanationAr": "في النصِّ حرفياً: «sondern ein Gesamtkonzept».",
+          "promptAr": "ما الحل؟"
+        }
+      ]
+    },
+    "t-b1-04": {
+      "id": "t-b1-04",
+      "level": "B1",
+      "titleDe": "Ein Brief aus der Heimat",
+      "titleAr": "رسالة من الوطن",
+      "de": "Lief Hassan, wie geht es dir? Hier läuft alles gut. Ich habe endlich eine Wohnung gefunden, die nicht zu teuer ist. Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten. Letztes Wochenende war ich im Park und habe Leute kennengelernt, die auch aus Tunesien kommen. Wir treffen uns jetzt jeden Sonntag. Du würdest dich freuen! Schreib mir bald. Viele Grüße, Sami",
+      "ar": "عزيز حسان، كيف حالك؟ هنا كل شيء يسير جيداً. وجدت أخيراً شقة ليست غالياً. تقع في أطراف المدينة لكن الطريق إلى العمل يستغرق 20 دقيقة فقط. نهاية الأسبوع الماضي كنت في الحديقة وتعرّفت على أشخاص من تونس أيضاً. نلتقي الآن كل أحد. ستفرح لو كنت هنا! اكتب لي قريباً. تحياتي، سامي",
+      "questions": [
+        {
+          "id": "t-b1-04-q1",
+          "type": "mc",
+          "promptDe": "Wo liegt die Wohnung?",
+          "options": [
+            "im Zentrum",
+            "am Stadtrand",
+            "bei der Arbeit"
+          ],
+          "answer": "am Stadtrand",
+          "explanationAr": "«am Stadtrand» — أطراف المدينة.",
+          "promptAr": "أين تقع الشقة؟"
+        },
+        {
+          "id": "t-b1-04-q2",
+          "type": "fill",
+          "promptDe": "Der Weg zur Arbeit dauert ___ Minuten.",
+          "answer": [
+            "20",
+            "zwanzig"
+          ],
+          "explanationAr": "الدليل حرفياً: «Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten.» — 20 دقيقة.",
+          "promptAr": "تستغرق الرحلة إلى العمل ___ دقيقة."
+        },
+        {
+          "id": "t-b1-04-q3",
+          "type": "mc",
+          "promptDe": "Wann treffen sie sich?",
+          "options": [
+            "jeden Samstag",
+            "jeden Sonntag",
+            "jeden Freitag"
+          ],
+          "answer": "jeden Sonntag",
+          "explanationAr": "في النصِّ حرفياً: «jeden Sonntag».",
+          "promptAr": "متى يتقابلون؟"
+        }
+      ]
+    },
+    "t-b1-05": {
+      "id": "t-b1-05",
+      "level": "B1",
+      "titleDe": "Ratgeber-Kolumne",
+      "titleAr": "عمود النصائح",
+      "de": "Ich habe ein Problem: Mein Freund möchte seinen Job kündigen, obwohl er dort gut verdient. Was soll er tun? Ich würde Ihnen raten, erst einmal über die Gründe zu sprechen. Wenn ich an seiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef. Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen. Ohne Plan zu kündigen, wäre riskant.",
+      "ar": "لديّ مشكلة: صديقي يريد ترك عمله رغم أنه يكسب جيداً. ماذا يفعل؟ أنصحكم أولاً بالحديث عن الأسباب. لو كنت مكانه لبدأت بحديث مع المدير. أما إذا أراد فعلاً الاستقالة فأنصح بالبحث عن منصب جديد أولاً. الاستقالة بدون خطة ستكون مغامرة.",
+      "questions": [
+        {
+          "id": "t-b1-05-q1",
+          "type": "mc",
+          "promptDe": "Was würde der Berater zuerst tun?",
+          "options": [
+            "sofort kündigen",
+            "mit dem Chef sprechen",
+            "eine Reise machen"
+          ],
+          "answer": "mit dem Chef sprechen",
+          "explanationAr": "في النصِّ حرفياً: «hätte ich zuerst ein Gespräch mit dem Chef».",
+          "promptAr": "ماذا سيفعل المستشار أولاً؟"
+        },
+        {
+          "id": "t-b1-05-q2",
+          "type": "fill",
+          "promptDe": "Ohne Plan zu kündigen, ___ riskant.",
+          "answer": [
+            "wäre",
+            "waere"
+          ],
+          "explanationAr": "الدليل حرفياً: «Ohne Plan zu kündigen, wäre riskant.» — Konjunktiv II von sein.",
+          "promptAr": "الاستقالة بلا تخطيط ___ أمراً خطيراً."
+        },
+        {
+          "id": "t-b1-05-q3",
+          "type": "mc",
+          "promptDe": "„Ich würde empfehlen …“ bedeutet:",
+          "options": [
+            "أنصح بـ",
+            "أمر بـ",
+            "أرفض"
+          ],
+          "answer": "أنصح بـ",
+          "explanationAr": "الدليل حرفياً: «Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.» — نصيحة مهذّبة.",
+          "promptAr": "«أنصح بـ» تعني:"
+        }
+      ]
+    },
+    "t-b1-06": {
+      "id": "t-b1-06",
+      "level": "B1",
+      "titleDe": "Eine Stellenanzeige",
+      "titleAr": "إعلان وظيفة",
+      "de": "Gesucht wird eine Fachkraft (m/w/d), die Erfahrung in der Logistik mitbringt. Zu den Aufgaben, die Sie übernehmen, gehören Planung und Kontrolle der Lieferketten. Wir bieten eine Stelle, die viel Verantwortung und eigenständiges Arbeiten ermöglicht. Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein Anschreiben enthalten. Bewerbungsschluss ist der 30. Juni.",
+      "ar": "نبحث عن خبير/ة لديه خبرة في اللوجستيك. من المهام التي ستتولّونها التخطيط والتحكم في سلاسل التوريد. نوفّر منصباً يتيح مسؤولية كبيرة وعملاً مستقلاً. تقدّموا بملفات تتضمن سيرتكم الذاتية وخطاباً. آخر أجل للترشح هو 30 يونيو.",
+      "questions": [
+        {
+          "id": "t-b1-06-q1",
+          "type": "mc",
+          "promptDe": "Welche Erfahrung wird gesucht?",
+          "options": [
+            "Logistik",
+            "Medizin",
+            "Bildung"
+          ],
+          "answer": "Logistik",
+          "explanationAr": "في النصِّ حرفياً: «Erfahrung in der Logistik».",
+          "promptAr": "أي خبرة مطلوبة؟"
+        },
+        {
+          "id": "t-b1-06-q2",
+          "type": "fill",
+          "promptDe": "…Unterlagen, die Ihren Lebenslauf und ein ___ enthalten.",
+          "answer": [
+            "Anschreiben"
+          ],
+          "explanationAr": "الدليل حرفياً: «Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein Anschreiben enthalten.» — خطاب التوظيف.",
+          "promptAr": "المستندات التي تتضمن السيرة الذاتية و___."
+        },
+        {
+          "id": "t-b1-06-q3",
+          "type": "fill",
+          "promptDe": "Bewerbungsschluss: der ___ Juni.",
+          "answer": [
+            "30.",
+            "30",
+            "dreißigste",
+            "30."
+          ],
+          "explanationAr": "الدليل حرفياً: «Bewerbungsschluss ist der 30.» — der 30. Juni.",
+          "promptAr": "آخر موعد للتقديم: ___ يونيو."
+        }
+      ]
+    },
+    "t-b1-07": {
+      "id": "t-b1-07",
+      "level": "B1",
+      "titleDe": "Ausbildung oder Studium?",
+      "titleAr": "تكوين مهني أم دراسة جامعية؟",
+      "de": "Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen. Als Hauptgrund nennen sie die Praxisnähe. Trotzdem bleibt das Studium bei denjenigen beliebt, die später forschen wollen. Experten raten dazu, zuerst Praktika zu machen: Nur so findet man heraus, was zu einem passt.",
+      "ar": "استطلاع بين 500 شاب يبيّن صورة مفاجئة: 45% يفضّلون اليوم التكوين المهني على الجامعة. يذكرون كسبب رئيسي القرب من الممارسة. مع ذلك تبقى الجامعة محبّبة لدى الراغبين بالبحث لاحقاً. ينصح الخبراء بالتدريب العملي أولاً: هكذا فقط يكتشف المرء ما يناسبه.",
+      "questions": [
+        {
+          "id": "t-b1-07-q1",
+          "type": "fill",
+          "promptDe": "___ Prozent würden eine Ausbildung vorziehen.",
+          "answer": [
+            "45",
+            "fünfundvierzig"
+          ],
+          "explanationAr": "الدليل حرفياً: «Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.» — 45%.",
+          "promptAr": "___ في المئة يفضّلون التكوين المهني."
+        },
+        {
+          "id": "t-b1-07-q2",
+          "type": "mc",
+          "promptDe": "Was raten die Experten?",
+          "options": [
+            "sofort studieren",
+            "zuerst Praktika machen",
+            "nur arbeiten"
+          ],
+          "answer": "zuerst Praktika machen",
+          "explanationAr": "في النصِّ حرفياً: «zuerst Praktika zu machen».",
+          "promptAr": "بماذا ينصح الخبراء؟"
+        },
+        {
+          "id": "t-b1-07-q3",
+          "type": "fill",
+          "promptDe": "Als Hauptgrund nennen sie die ___.",
+          "answer": [
+            "Praxisnähe"
+          ],
+          "explanationAr": "الدليل حرفياً: «Als Hauptgrund nennen sie die Praxisnähe.» — القرب من الممارسة.",
+          "promptAr": "يذكرون أن السبب الرئيسي هو ___."
+        }
+      ]
+    },
+    "t-b1-08": {
+      "id": "t-b1-08",
+      "level": "B1",
+      "titleDe": "Wohnen in der Stadt",
+      "titleAr": "السكن في المدينة",
+      "de": "In großen Städten ist eine Wohnung teuer. Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam. Das hat Vorteile – man ist nicht allein –, aber auch Nachteile: Lärm und wenig Privatsphäre. Wer ruhig wohnen will, sucht am besten am Stadtrand.",
+      "ar": "في المدن الكبيرة يكون السكن غالياً. لذلك يتقاسم كثيرون من الشباب شقة مشتركة: لكل غرفته الخاصة، لكن المطبخ والحمّام مشتركان. في ذلك مزايا – لست وحدك – لكن أيضاً عيوب: ضجيج وقلة خصوصية. من يريد سكناً هادئاً فليرجّح أطراف المدينة.",
+      "questions": [
+        {
+          "id": "t-b1-08-q1",
+          "type": "mc",
+          "promptDe": "Was ist gemeinsam in einer WG?",
+          "options": [
+            "Küche und Bad",
+            "Nur das Bad",
+            "Alle Zimmer",
+            "Der Balkon"
+          ],
+          "answer": "Küche und Bad",
+          "explanationAr": "الدليل حرفياً: «Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.» — المطبخ والحّمام مشتركان، ولكل غرفته.",
+          "promptAr": "ماذا يُشترك فيه في السكن المشترك؟"
+        },
+        {
+          "id": "t-b1-08-q2",
+          "type": "mc",
+          "promptDe": "Wer sucht besser am Stadtrand?",
+          "options": [
+            "Wer ruhig wohnen will",
+            "Wer wenig Geld hat",
+            "Wer allein ist",
+            "Wer studiert"
+          ],
+          "answer": "Wer ruhig wohnen will",
+          "explanationAr": "الدليل حرفياً: «Wer ruhig wohnen will, sucht am besten am Stadtrand.» — من يريد الهدوء فليبحث في أطراف المدينة.",
+          "promptAr": "مَن يُنصح بالسكن على أطراف المدينة؟"
+        },
+        {
+          "id": "t-b1-08-q3",
+          "type": "mc",
+          "promptDe": "Was gilt in einer WG als Nachteil?",
+          "options": [
+            "Lärm und wenig Privatsphäre",
+            "die gemeinsame Küche",
+            "die hohe Miete"
+          ],
+          "answer": "Lärm und wenig Privatsphäre",
+          "explanationAr": "«…aber auch Nachteile: Lärm und wenig Privatsphäre.» والمطبخُ المشتركُ من المزايا لا النقائص.",
+          "promptAr": "ما مساوئ السكن المشترك؟"
+        }
+      ]
+    },
+    "t-b1-09": {
+      "id": "t-b1-09",
+      "level": "B1",
+      "titleDe": "Umwelt im Alltag",
+      "titleAr": "البيئة في الحياة اليومية",
+      "de": "Jeder kann etwas für die Umwelt tun. Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ausschalten und Müll trennen. In Deutschland werden Papier, Glas und Plastik getrennt gesammelt. Auch beim Einkaufen hilft eine Stofftasche. Kleine Schritte wirken zusammen sehr stark.",
+      "ar": "الجميع يستطيع فعل شيء للبيئة. مثلاً: الذهاب للعمل بالدراجة بدل السيارة، وإطفاء الضوء، وفرز النفايات. في ألمانيا يُجمع الورق والزجاج والبلاستيك بشكل منفصل. ويساعد كيس القماش عند التسوّق أيضاً. الخطوات الصغيرة معاً تصنع أثراً كبيراً.",
+      "questions": [
+        {
+          "id": "t-b1-09-q1",
+          "type": "mc",
+          "promptDe": "Was wird in Deutschland getrennt gesammelt?",
+          "options": [
+            "Papier, Glas und Plastik",
+            "Nur Papier",
+            "Essen und Trinken",
+            "Kleidung"
+          ],
+          "answer": "Papier, Glas und Plastik",
+          "explanationAr": "الدليل حرفياً: «In Deutschland werden Papier, Glas und Plastik getrennt gesammelt.» — يُجمع الورق والزجاج والبلاستيك بشكل منفصل.",
+          "promptAr": "ماذا يُفرز في ألمانيا؟"
+        },
+        {
+          "id": "t-b1-09-q2",
+          "type": "mc",
+          "promptDe": "Was hilft beim Einkaufen?",
+          "options": [
+            "Eine Stofftasche",
+            "Ein großer Koffer",
+            "Ein Korb aus Metall",
+            "Eine Plastiktüte"
+          ],
+          "answer": "Eine Stofftasche",
+          "explanationAr": "الدليل حرفياً: «Auch beim Einkaufen hilft eine Stofftasche.» — كيس القماش (Stofftasche) بديل مفيد للبلاستيك.",
+          "promptAr": "ماذا يُفيد عند التسوق؟"
+        },
+        {
+          "id": "t-b1-09-q3",
+          "type": "mc",
+          "promptDe": "Womit soll man zur Arbeit fahren, wenn man die Umwelt schonen will?",
+          "options": [
+            "Mit dem Rad",
+            "Mit dem Auto",
+            "Mit dem Flugzeug"
+          ],
+          "answer": "Mit dem Rad",
+          "explanationAr": "«Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto.» — stattٌ تضادٌّ لا تشابه.",
+          "promptAr": "كيف تذهب إلى العمل إذا أردت حماية البيئة؟"
+        }
+      ]
+    },
+    "t-b1-10": {
+      "id": "t-b1-10",
+      "level": "B1",
+      "titleDe": "Ein Streit im Büro",
+      "titleAr": "خلافٌ في المكتب",
+      "de": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, weil er meine Ideen in der Besprechung als seine ausgegeben hatte. Ich war zuerst so wütend, dass ich am liebsten laut geworden wäre. Stattdessen habe ich ihn ruhig unter vier Augen gefragt, warum er das gemacht hat. Er gab zu, dass er unter Druck stand. Wir einigten uns darauf, künftig jeden Beitrag mit Namen zu notieren.",
+      "ar": "منذ أيام نشب خلافٌ بيني وبين زميلي توبياس لأنه كان قد نسب أفكاري في الاجتماع إلى نفسه. كنت أولاً غاضبًا جدًا حتى إنني كدت أرفع صوتي. بدلاً من ذلك سألته بهدوء على انفراد لماذا فعلها. اعترف بأنه كان تحت ضغط. اتفقنا أن نسجّل كل مساهمة باسم صاحبها مستقبلًا.",
+      "questions": [
+        {
+          "id": "t-b1-10-q1",
+          "type": "mc",
+          "promptDe": "Warum gab es den Streit?",
+          "options": [
+            "weil Tobias seine Ideen als seine ausgegeben hatte",
+            "weil Tobias zu laut war",
+            "weil sie verschiedene Projekte hatten"
+          ],
+          "answer": "weil Tobias seine Ideen als seine ausgegeben hatte",
+          "explanationAr": "في النصِّ حرفياً: «weil er meine Ideen … als seine ausgegeben hatte».",
+          "promptAr": "لماذا وقع الخلاف؟"
+        },
+        {
+          "id": "t-b1-10-q2",
+          "type": "mc",
+          "promptDe": "Wie reagierte der Erzähler?",
+          "options": [
+            "Er wurde sofort laut.",
+            "Er sprach ruhig unter vier Augen mit Tobias.",
+            "Er ging zur Chefin."
+          ],
+          "answer": "Er sprach ruhig unter vier Augen mit Tobias.",
+          "explanationAr": "في النصِّ حرفياً: «Stattdessen habe ich ihn ruhig unter vier Augen gefragt».",
+          "promptAr": "كيف تصرّف الراوي؟"
+        },
+        {
+          "id": "t-b1-10-q3",
+          "type": "mc",
+          "promptDe": "Worauf einigten sie sich?",
+          "options": [
+            "Nie wieder Besprechungen zu haben",
+            "jeden Beitrag mit Namen zu notieren",
+            "die Firma zu wechseln"
+          ],
+          "answer": "jeden Beitrag mit Namen zu notieren",
+          "explanationAr": "في النصِّ حرفياً: «künftig jeden Beitrag mit Namen zu notieren».",
+          "promptAr": "علام اتفقا؟"
+        }
+      ]
+    },
+    "t-b1-11": {
+      "id": "t-b1-11",
+      "level": "B1",
+      "titleDe": "Ehrenamt bei der Tafel",
+      "titleAr": "تطوّعٌ في «مأدبة الطعام»",
+      "de": "Seit einem Monat helfe ich jeden Samstag bei der Tafel aus, die Lebensmittel an Bedürftige verteilt. Anfänglich dachte ich, es gehe nur ums Kisten Schleppen. Inzwischen weiß ich, dass das Gespräch mit den Menschen mindestens genauso wichtig ist. Manche kommen zum Reden, nicht nur zum Holen. Die Arbeit kostet mich keine fünf Stunden, aber sie gibt mir mehr zurück, als ich je erwartet hätte.",
+      "ar": "منذ شهر أساعد كل سبت في «التافِل» التي توزّع أطعمة على المحتاجين. في البداية ظننت أنها مجرد حمل صناديق. الآن عرفت أن الحديث مع الناس لا يقلّ أهمية. بعضهم يأتي للحديث لا للأخذ فقط. العمل يكلفني أقل من خمس ساعات، لكنه يعطيني أكثر مما توقعت يومًا.",
+      "questions": [
+        {
+          "id": "t-b1-11-q1",
+          "type": "mc",
+          "promptDe": "Was verteilt die Tafel?",
+          "options": [
+            "Lebensmittel an Bedürftige",
+            "Kleider an Touristen",
+            "Bücher an Schüler"
+          ],
+          "answer": "Lebensmittel an Bedürftige",
+          "explanationAr": "في النصِّ حرفياً: «die Lebensmittel an Bedürftige verteilt».",
+          "promptAr": "ماذا توزّع «مأدبة الطعام»؟"
+        },
+        {
+          "id": "t-b1-11-q2",
+          "type": "mc",
+          "promptDe": "Was ist ihm inzwischen genauso wichtig geworden?",
+          "options": [
+            "das Kistenschleppen",
+            "das Gespräch mit den Menschen",
+            "der Feierabend"
+          ],
+          "answer": "das Gespräch mit den Menschen",
+          "explanationAr": "في النصِّ حرفياً: «dass das Gespräch … mindestens genauso wichtig ist».",
+          "promptAr": "ما الذي أصبح مهماً بقدر الأهمية لديه؟"
+        },
+        {
+          "id": "t-b1-11-q3",
+          "type": "mc",
+          "promptDe": "Wie oft hilft er?",
+          "options": [
+            "jeden Samstag",
+            "einmal im Monat",
+            "täglich"
+          ],
+          "answer": "jeden Samstag",
+          "explanationAr": "في النصِّ حرفياً: «jeden Samstag bei der Tafel aus».",
+          "promptAr": "كم مرة يتطوّع؟"
+        }
+      ]
+    },
+    "t-b1-12": {
+      "id": "t-b1-12",
+      "level": "B1",
+      "titleDe": "Vokabeln: App oder Karteikarten?",
+      "titleAr": "مفردات: تطبيقٌ أم بطاقات؟",
+      "de": "Mein Kurskollege lernt nur mit einer App, ich schwöre dagegen auf Karteikarten von Hand. Neulich haben wir nachgemessen: Nach zwei Wochen wussten wir beide gleich viel. Die Wahrheit liegt wohl dazwischen. Eine App ist praktisch für die U-Bahn, aber beim Schreiben von Hand bleibt mehr im Kopf. Entscheidend ist nicht das Werkzeug, sondern dass man regelmäßig wiederholt – ganz egal womit.",
+      "ar": "زميلي في الدورة يدرس بالتطبيق وحده، وأنا أحلف بالبطاقات المكتوبة يدويًا. مؤخرًا قِسنا الأمر: بعد أسبوعين كان كلاهما يعرف القدر نفسه. الحقيقة على الأرجح في المنتصف. التطبيق عملي في المترو، لكن حين تكتب بيدك يبقى أكثر في الرأس. الحاسم ليس الأداة بل أن تُكرّر بانتظام — مهما كانت الوسيلة.",
+      "questions": [
+        {
+          "id": "t-b1-12-q1",
+          "type": "mc",
+          "promptDe": "Was zeigte der Vergleich nach zwei Wochen?",
+          "options": [
+            "dass beide gleich viel wussten",
+            "dass die App klar gewann",
+            "dass die Karten verloren"
+          ],
+          "answer": "dass beide gleich viel wussten",
+          "explanationAr": "في النصِّ حرفياً: «wussten wir beide gleich viel».",
+          "promptAr": "ماذا أظهرت المقارنة بعد أسبوعين؟"
+        },
+        {
+          "id": "t-b1-12-q2",
+          "type": "mc",
+          "promptDe": "Was ist laut Text entscheidend?",
+          "options": [
+            "das richtige Werkzeug",
+            "regelmäßiges Wiederholen",
+            "die App-Firmen-Marke"
+          ],
+          "answer": "regelmäßiges Wiederholen",
+          "explanationAr": "في النصِّ حرفياً: «Entscheidend ist nicht das Werkzeug, sondern dass man regelmäßig wiederholt».",
+          "promptAr": "ما العامل الحاسم حسب النص؟"
+        },
+        {
+          "id": "t-b1-12-q3",
+          "type": "mc",
+          "promptDe": "Wofür ist eine App praktisch?",
+          "options": [
+            "für die U-Bahn",
+            "fürs Diktat",
+            "für die Prüfung"
+          ],
+          "answer": "für die U-Bahn",
+          "explanationAr": "في النصِّ حرفياً: «praktisch für die U-Bahn».",
+          "promptAr": "لماذا يُعَدّ التطبيق عملياً؟"
+        }
+      ]
+    },
+    "t-b1-13": {
+      "id": "t-b1-13",
+      "level": "B1",
+      "titleDe": "Ein Vorstellungsgespräch üben",
+      "titleAr": "تمرينُ مقابلةِ عمل",
+      "de": "Bevor ich mich bei der Firma bewarb, habe ich das Vorstellungsgespräch mit meiner Freundin Lena durchgespielt. Sie stellte absichtlich unangenehme Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen. Zuerst war mir das peinlich, doch genau das war der Nutzen. Im echten Gespräch habe ich dann ruhiger geantwortet als beim ersten Probelauf. Üben nimmt dem, was Angst macht, die Hälfte seiner Schärfe.",
+      "ar": "قبل أن أتقدم إلى الشركة دربتُ المقابلة مع صديقتي لينا. طرحت عمدًا أسئلة محرجة: عن الفجوة في سيرتي الذاتية وعن نقاط ضعفي. أولاً خجلت من ذلك، لكن هذا بعينه كان الفائدة. في المقابلة الحقيقية أجبت بهدوء أكثر من المحاولة الأولى. التمرّس يسلب الأمر المخيف نصف حدّته.",
+      "questions": [
+        {
+          "id": "t-b1-13-q1",
+          "type": "mc",
+          "promptDe": "Wer hat mit ihm geübt?",
+          "options": [
+            "seine Freundin Lena",
+            "ein Personalchef",
+            "sein Kurskollege"
+          ],
+          "answer": "seine Freundin Lena",
+          "explanationAr": "في النصِّ حرفياً: «mit meiner Freundin Lena durchgespielt».",
+          "promptAr": "من تدرب معه على المقابلة؟"
+        },
+        {
+          "id": "t-b1-13-q2",
+          "type": "mc",
+          "promptDe": "Welche Fragen stellte sie absichtlich?",
+          "options": [
+            "langweilige Standardfragen",
+            "unangenehme nach Lücke und Schwächen",
+            "Fragen zur Gehaltsvorstellung nur"
+          ],
+          "answer": "unangenehme nach Lücke und Schwächen",
+          "explanationAr": "في النصِّ حرفياً: «absichtlich unangenehme Fragen: nach meiner Lücke … und nach meinen Schwächen».",
+          "promptAr": "ما نوع الأسئلة التي طرحتها عمداً؟"
+        },
+        {
+          "id": "t-b1-13-q3",
+          "type": "mc",
+          "promptDe": "Was war der Effekt im echten Gespräch?",
+          "options": [
+            "er war noch nervöser",
+            "er antwortete ruhiger",
+            "er musste passen"
+          ],
+          "answer": "er antwortete ruhiger",
+          "explanationAr": "في النصِّ حرفياً: «habe ich dann ruhiger geantwortet als beim ersten Probelauf».",
+          "promptAr": "ما أثر ذلك في المقابلة الحقيقية؟"
+        }
+      ]
+    },
+    "t-b1-14": {
+      "id": "t-b1-14",
+      "level": "B1",
+      "titleDe": "Die Bibliothek als Lernort",
+      "titleAr": "المكتبةُ مطرحًا للدراسة",
+      "de": "Zum Lernen gehe ich am liebsten in die Universitätsbibliothek, obwohl der Weg dorthin eine halbe Stunde dauert. Warum? Zu Hause locken Kühlschrank und Sofa, im Café ist es zu laut. In der Bibliothek dagegen arbeitet es sich konzentriert, weil ringsum alle schweigen und alle dasselbe Ziel haben. Seit dem Semesterende bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
+      "ar": "للدراسة أختار مكتبة الجامعة، رغم أن الطريق إليها يستغرق نصف ساعة. لماذا؟ في البيت يغريني الثلاجة والأريكة، وفي المقهى ضجيج. أما في المكتبة فأعمل بتركيز لأن الجميع حولي يصمتون ولكلٍّ الهدف نفسه. ومن نهاية الفصل أصبحت عضوًا: أربعة عشر يورو في السنة — أرخص من عقد هاتفٍ لشهر، وأنفع.",
+      "questions": [
+        {
+          "id": "t-b1-14-q1",
+          "type": "mc",
+          "promptDe": "Wie lange dauert der Weg zur Bibliothek?",
+          "options": [
+            "eine halbe Stunde",
+            "zwei Minuten",
+            "eine Stunde"
+          ],
+          "answer": "eine halbe Stunde",
+          "explanationAr": "في النصِّ حرفياً: «eine halbe Stunde dauert».",
+          "promptAr": "كم يستغرق الطريق إلى المكتبة؟"
+        },
+        {
+          "id": "t-b1-14-q2",
+          "type": "mc",
+          "promptDe": "Warum arbeitet er dort konzentrierter?",
+          "options": [
+            "weil es kostenlos ist",
+            "weil ringsum alle schweigen",
+            "weil die Stühle bequemer sind"
+          ],
+          "answer": "weil ringsum alle schweigen",
+          "explanationAr": "في النصِّ حرفياً: «weil ringsum alle schweigen und alle dasselbe Ziel haben».",
+          "promptAr": "لماذا يتركز في العمل هناك أكثر؟"
+        },
+        {
+          "id": "t-b1-14-q3",
+          "type": "mc",
+          "promptDe": "Was vergleicht er mit dem Mitgliedsbeitrag?",
+          "options": [
+            "ein Monat Handyvertrag",
+            "ein Kaffee",
+            "ein Buch"
+          ],
+          "answer": "ein Monat Handyvertrag",
+          "explanationAr": "في النصِّ حرفياً: «billiger als ein Monat Handyvertrag».",
+          "promptAr": "بماذا يقارن رسم العضوية؟"
+        }
+      ]
+    },
+    "t-b1-15": {
+      "id": "t-b1-15",
+      "level": "B1",
+      "titleDe": "Online bestellen oder im Laden kaufen?",
+      "titleAr": "طلبٌ إلكترونيٌّ أم من المتجر؟",
+      "de": "Früher habe ich alles im Internet bestellt, weil es bequemer schien. Nach dem Ärger mit Rücksendungen und falschen Größen habe ich meine Gewohnheit überdacht. Heute kaufe ich Schuhe wieder im Geschäft, denn dort kann ich anprobieren und sofort umtauschen. Elektronik dagegen bestelle ich weiterhin online, wo die Preise transparent verglichen werden können. Bequemlichkeit ist kein Argument – entscheidend ist, was man kauft.",
+      "ar": "سابقًا كنت أطلب كل شيء من الإنترنت لأنه بدا أريح. بعد مشكلتين مع المرتجعات والمقاسات الخاطئة أعدت التفكير في عادتي. اليوم أشتري الأحذية في المتجر من جديد، لأني أستطيع التجربة والاستبدال فورًا. أما الإلكترونيات فأظل أطلبها إلكترونيًا حيث تُقارن الأسعار بشفافية. الراحة ليست حجة — الحاسمُ هو ماذا تشتري.",
+      "questions": [
+        {
+          "id": "t-b1-15-q1",
+          "type": "mc",
+          "promptDe": "Was hat ihn zum Umdenken gebracht?",
+          "options": [
+            "die gestiegenen Preise",
+            "Ärger mit Rücksendungen und falschen Größen",
+            "der Rat seiner Schwester"
+          ],
+          "answer": "Ärger mit Rücksendungen und falschen Größen",
+          "explanationAr": "في النصِّ حرفياً: «Nach dem Ärger mit Rücksendungen und falschen Größen…»",
+          "promptAr": "ما الذي جعله يعيد التفكير؟"
+        },
+        {
+          "id": "t-b1-15-q2",
+          "type": "mc",
+          "promptDe": "Was kauft er jetzt wieder im Geschäft?",
+          "options": [
+            "Elektronik",
+            "Schuhe",
+            "Bücher"
+          ],
+          "answer": "Schuhe",
+          "explanationAr": "في النصِّ حرفياً: «Heute kaufe ich Schuhe wieder im Geschäft».",
+          "promptAr": "ماذا يشتري الآن من المتجر مجدداً؟"
+        },
+        {
+          "id": "t-b1-15-q3",
+          "type": "mc",
+          "promptDe": "Was ist für ihn entscheidend?",
+          "options": [
+            "die Bequemlichkeit",
+            "was man kauft",
+            "der günstigste Preis immer"
+          ],
+          "answer": "was man kauft",
+          "explanationAr": "في النصِّ حرفياً: «entscheidend ist, was man kauft».",
+          "promptAr": "ما العامل الحاسم عنده؟"
+        }
+      ]
+    },
+    "t-b1-16": {
+      "id": "t-b1-16",
+      "level": "B1",
+      "titleDe": "Ein Missverständnis",
+      "titleAr": "سوءُ فهم",
+      "de": "Als mir meine Nachbarin sagte, ich solle «mal vorbeikommen», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im Schlafanzug beim Frühstück. Sie lachte und sagte, sie habe es nur so dahingesagt. Erst verstand ich die Wendung nicht, doch inzwischen kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine Einladung, kein Termin. Missverständnisse dieser Art gehören zum Deutschlernen dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
+      "ar": "لمّا قالت لي جارتي «مرَّ عليّ ذات مرة»، وقفتُ اليوم التالي في العاشرة أمام بابها — ولقيتها ببيجامتها على الفطور. ضحكت وقالت إنها كانت تتكلم على عواهنها. أولًا لم أفهم العبارة، لكني أعرف نبرتها الآن: «مرَّ عليّ» عندها دعوةٌ لا موعد. هذا النوع من سوء الفهم جزء من تعلم الألمانية — مزعج، لكنه أنفع من كل كتاب.",
+      "questions": [
+        {
+          "id": "t-b1-16-q1",
+          "type": "mc",
+          "promptDe": "Wann erschien er vor ihrer Tür?",
+          "options": [
+            "pünktlich um zehn",
+            "am Abend",
+            "ohne anzuklopfen gegen Mittag"
+          ],
+          "answer": "pünktlich um zehn",
+          "explanationAr": "في النصِّ حرفياً: «stand ich … pünktlich um zehn vor ihrer Tür».",
+          "promptAr": "متى حضر إلى بابها؟"
+        },
+        {
+          "id": "t-b1-16-q2",
+          "type": "mc",
+          "promptDe": "Wie meinte sie das «Vorbeikommen»?",
+          "options": [
+            "als festen Termin",
+            "nur so dahergesagt als Einladung",
+            "als Beschwerde"
+          ],
+          "answer": "nur so dahergesagt als Einladung",
+          "explanationAr": "في النصِّ حرفياً: «nur so dahingesagt … eine Einladung, kein Termin».",
+          "promptAr": "كيف قصدت «المرور على»؟"
+        },
+        {
+          "id": "t-b1-16-q3",
+          "type": "mc",
+          "promptDe": "Was sagt er über solche Missverständnisse?",
+          "options": [
+            "sie sind vermeidbar",
+            "sie sind lehrreicher als jedes Lehrbuch",
+            "sie sind Grund zum Aufgeben"
+          ],
+          "answer": "sie sind lehrreicher als jedes Lehrbuch",
+          "explanationAr": "في النصِّ حرفياً: «sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch».",
+          "promptAr": "ماذا يقول عن مثل سوء الفهم هذا؟"
+        }
+      ]
+    },
+    "t-b1-17": {
+      "id": "t-b1-17",
+      "level": "B1",
+      "titleDe": "Den Platten selbst geflickt",
+      "titleAr": "إصلاحُ الإطارِ بيدَيَّ",
+      "de": "Letzten Freitag lag ich mit dem Fahrrad auf dem Radweg: Platten. Statt zwanzig Euro für die Werkstatt zu zahlen, erinnerte ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat. Zu Hause holte ich die Hebel, den Flicken und die Luftpumpe hervor und legte los. Es dauerte eine Stunde, schmutzig war es auch – aber als das Rad wieder stand, war der Stolz größer als jede Ersparnis von achtzehn Euro.",
+      "ar": "الجمعة الماضية استلقيت بدراجتي على مسار الدراجات: إطار مثقوب. بدلاً من دفع عشرين يورو للورشة، ذكرت أبي الذي علّمني الترقيع في الصغر. في البيت أخرجت الرافعات والرقعة والمنفاخ وشرعت. استغرق الأمر ساعة، وكان وسخًا — لكن حين وقفت الدراجة من جديد، كان الفخر أكبر من كل توفيرٍ قدره ثمانية عشر يورو.",
+      "questions": [
+        {
+          "id": "t-b1-17-q1",
+          "type": "mc",
+          "promptDe": "Wer hatte ihm das Flicken beigebracht?",
+          "options": [
+            "sein Vater",
+            "ein Mechaniker",
+            "ein Freund"
+          ],
+          "answer": "sein Vater",
+          "explanationAr": "«der mir als Kind das Flicken gezeigt hat» — الأب هو المعلِّم.",
+          "promptAr": "من علّمه إصلاح الإطار؟"
+        },
+        {
+          "id": "t-b1-17-q2",
+          "type": "mc",
+          "promptDe": "Wie lange dauerte die Reparatur?",
+          "options": [
+            "eine Stunde",
+            "zehn Minuten",
+            "den ganzen Tag"
+          ],
+          "answer": "eine Stunde",
+          "explanationAr": "في النصِّ حرفياً: «Es dauerte eine Stunde».",
+          "promptAr": "كم استغرق التصليح؟"
+        },
+        {
+          "id": "t-b1-17-q3",
+          "type": "mc",
+          "promptDe": "Was war größer als die Ersparnis?",
+          "options": [
+            "der Ärger",
+            "der Stolz",
+            "die Distanz"
+          ],
+          "answer": "der Stolz",
+          "explanationAr": "في النصِّ حرفياً: «war der Stolz größer als jede Ersparnis».",
+          "promptAr": "ماذا كان أكبر من التوفير؟"
+        }
+      ]
+    },
+    "t-b1-18": {
+      "id": "t-b1-18",
+      "level": "B1",
+      "titleDe": "Schlaflos in der Fremde",
+      "titleAr": "سهرٌ في الغربة",
+      "de": "In der Nacht vor meiner B1-Prüfung konnte ich nicht einschlafen. Immerhin hundertmal dachte ich an den Text, den ich nicht mehr wusste. Statt im Bett zu verzweifeln, stand ich auf, setzte mich ans Fenster und schrieb drei Seiten auf, was ich noch konnte. Seltsamerweise wurde ich danach müde. Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im Prüfungsraum auf, dass der gefürchtete Text gar nicht drankam. So ist das mit der Angst: Sie ist meistens lauter als die Fakten.",
+      "ar": "في الليلة قبل امتحان B1 لم أستطع النوم. ربما مئة مرة فكرت في النص الذي لم أعد أحفظه. بدلاً من اليأس في السرير نهضت وجلست عند النافذة وكتبت ثلاث صفحات عمّا أقدر عليه. لللغرابة شعرت بالتعب بعد ذلك. نمت في الثانية فجرًا — وفي الصباح فوجئت في قاعة الامتحان بأن النص المخيف لم يأتِ أصلًا. هكذا الخوف: عادةً أعلى صوتًا من الحقائق.",
+      "questions": [
+        {
+          "id": "t-b1-18-q1",
+          "type": "mc",
+          "promptDe": "Was tat er in der Nacht?",
+          "options": [
+            "Er stand auf und schrieb drei Seiten.",
+            "Er rief seinen Vater an.",
+            "Er lernte weiter im Bett."
+          ],
+          "answer": "Er stand auf und schrieb drei Seiten.",
+          "explanationAr": "في النصِّ حرفياً: «stand ich auf … und schrieb drei Seiten auf».",
+          "promptAr": "ماذا فعل في الليل؟"
+        },
+        {
+          "id": "t-b1-18-q2",
+          "type": "mc",
+          "promptDe": "Wann schlief er ein?",
+          "options": [
+            "gegen halb zwei",
+            "um acht",
+            "erst nach der Prüfung"
+          ],
+          "answer": "gegen halb zwei",
+          "explanationAr": "في النصِّ حرفياً: «Gegen halb zwei schlief ich ein».",
+          "promptAr": "متى نام؟"
+        },
+        {
+          "id": "t-b1-18-q3",
+          "type": "mc",
+          "promptDe": "Was gilt laut ihm über die Angst?",
+          "options": [
+            "sie ist kleiner als die Fakten",
+            "sie ist meistens lauter als die Fakten",
+            "sie verschwindet nie"
+          ],
+          "answer": "sie ist meistens lauter als die Fakten",
+          "explanationAr": "في النصِّ حرفياً: «Sie ist meistens lauter als die Fakten».",
+          "promptAr": "ماذا يرى صحيحاً عن الخوف؟"
+        }
+      ]
+    },
+    "t-b1-19": {
+      "id": "t-b1-19",
+      "level": "B1",
+      "titleDe": "Ehrenamt: Zeit statt Geld",
+      "titleAr": "التطوُّع: وقتٌ بدلَ المال",
+      "de": "In Deutschland engagieren sich Millionen Menschen ehrenamtlich, also ohne Bezahlung. Sie trainieren Kindermannschaften, begleiten alte Menschen oder geben Sprachkurse. Viele sagen, das Ehrenamt gebe ihnen mehr, als es koste: neue Kontakte, Anerkennung und das Gefühl, gebraucht zu werden. Kritiker weisen allerdings darauf hin, dass der Staat sich auf diese Hilfe verlässt und dadurch Stellen spart. Fest steht: Ohne Ehrenamt würden viele Vereine schließen müssen.",
+      "ar": "في ألمانيا يتطوَّعُ ملايينُ الناسِ بلا أجر: يدرّبونَ فرقَ الأطفال، ويرافقونَ المسنّين، ويعطونَ دوراتٍ لغوية. يقولُ كثيرونَ إنَّ التطوُّعَ يمنحُهم أكثرَ ممّا يكلّفُهم: علاقاتٌ جديدةٌ وتقديرٌ وشعورٌ بأنّهم مطلوبون. غيرَ أنَّ نقّاداً ينبّهونَ إلى أنَّ الدولةَ تتّكلُ على هذه المساعدةِ فتوفّرُ وظائف. والثابتُ أنَّ جمعياتٍ كثيرةً كانت ستُغلَقُ لولا التطوُّع.",
+      "questions": [
+        {
+          "id": "t-b1-19-q1",
+          "type": "mc",
+          "promptDe": "Was bedeutet „ehrenamtlich“ hier?",
+          "options": [
+            "gut bezahlt",
+            "ohne Bezahlung",
+            "nur für Rentner"
+          ],
+          "answer": "ohne Bezahlung",
+          "explanationAr": "النصُّ يفسّرُها بنفسِه: «also ohne Bezahlung».",
+          "promptAr": "ماذا تعني «تطوّعياً»؟"
+        },
+        {
+          "id": "t-b1-19-q2",
+          "type": "mc",
+          "promptDe": "Was kritisieren manche?",
+          "options": [
+            "Der Staat spart dadurch Stellen",
+            "Die Vereine zahlen zu viel",
+            "Es gibt zu wenige Freiwillige"
+          ],
+          "answer": "Der Staat spart dadurch Stellen",
+          "explanationAr": "الدليل حرفياً: «dass der Staat sich auf diese Hilfe verlässt und dadurch Stellen spart». الفخّ: الجمعيات لا تدفع، والنص لا يذكر قلّة المتطوعين.",
+          "promptAr": "ماذا ينتقد البعض؟"
+        },
+        {
+          "id": "t-b1-19-q3",
+          "type": "fill",
+          "promptDe": "Ohne Ehrenamt ___ viele Vereine schließen müssen.",
+          "answer": [
+            "würden"
+          ],
+          "explanationAr": "الدليل حرفياً: «Fest steht: Ohne Ehrenamt würden viele Vereine schließen müssen.» — شرطٌ غيرُ واقعيّ: Konjunktiv II بـwürden + مصدر.",
+          "promptAr": "بدون التطوّع ___ كثير من الجمعيات على الإغلاق."
+        }
+      ]
+    },
+    "t-b1-20": {
+      "id": "t-b1-20",
+      "level": "B1",
+      "titleDe": "Umzug in eine andere Stadt",
+      "titleAr": "الانتقالُ إلى مدينةٍ أخرى",
+      "de": "Als mir die Firma eine Stelle in Leipzig anbot, musste ich schnell entscheiden. Einerseits war das Gehalt besser, andererseits lebten meine Freunde alle in Köln. Nachdem ich zwei Wochen nachgedacht hatte, sagte ich zu. Der Umzug war anstrengend: Wohnungssuche, Ummeldung beim Amt, neuer Arzt, neue Wege. Heute, ein Jahr später, bereue ich nichts. Ich habe gelernt, dass man sich schneller an Neues gewöhnt, als man denkt.",
+      "ar": "لمّا عرضت عليَّ الشركةُ وظيفةً في لايبزيغ كانَ عليَّ أن أقرّرَ سريعاً. من جهةٍ كانَ الراتبُ أفضل، ومن جهةٍ أخرى كانَ أصدقائي كلُّهم في كولونيا. بعدَ أن فكَّرتُ أسبوعَين وافقت. كانَ الانتقالُ مُتعِباً: بحثٌ عن سكن، تسجيلٌ في البلدية، طبيبٌ جديد، طرقٌ جديدة. واليومَ بعدَ سنةٍ لا أندمُ على شيء. تعلَّمتُ أنَّ المرءَ يعتادُ الجديدَ أسرعَ ممّا يظن.",
+      "questions": [
+        {
+          "id": "t-b1-20-q1",
+          "type": "fill",
+          "promptDe": "___ ich zwei Wochen nachgedacht hatte, sagte ich zu.",
+          "answer": [
+            "Nachdem",
+            "nachdem"
+          ],
+          "explanationAr": "الدليل حرفياً: «Nachdem ich zwei Wochen nachgedacht hatte, sagte ich zu.» — Nachdem مع الماضي الأسبق (hatte nachgedacht) ثمَّ الماضي البسيط — تسلسلُ الزمنَين.",
+          "promptAr": "___ أن فكّرتُ أسبوعين وافقتُ."
+        },
+        {
+          "id": "t-b1-20-q2",
+          "type": "mc",
+          "promptDe": "Was war ein Nachteil?",
+          "options": [
+            "Das Gehalt",
+            "Die Freunde blieben in Köln",
+            "Die neue Firma"
+          ],
+          "answer": "Die Freunde blieben in Köln",
+          "explanationAr": "في النصِّ حرفياً: «andererseits lebten meine Freunde alle in Köln».",
+          "promptAr": "ما كان عيباً؟"
+        },
+        {
+          "id": "t-b1-20-q3",
+          "type": "mc",
+          "promptDe": "Wie beurteilt er den Umzug heute?",
+          "options": [
+            "Er bereut ihn",
+            "Er bereut nichts",
+            "Er will zurück"
+          ],
+          "answer": "Er bereut nichts",
+          "explanationAr": "في النصِّ حرفياً: «bereue ich nichts».",
+          "promptAr": "كيف يرى الانتقال اليوم؟"
+        }
+      ]
+    },
+    "t-b1-21": {
+      "id": "t-b1-21",
+      "level": "B1",
+      "titleDe": "Der erste Monat in der Firma",
+      "titleAr": "الشهر الأول في الشركة",
+      "de": "Als Hanan die Teilzeitstelle bekam, war sie erleichtert und nervös zugleich. Die Branche war neu für sie, und im Vorstellungsgespräch hatte sie ehrlich gesagt, dass ihre Qualifikation aus einem anderen Bereich kommt. Die Chefin hatte geantwortet, ein ungewöhnlicher Werdegang sei kein Nachteil, wenn man lernen will. Trotzdem: Die Probezeit dauert sechs Monate, und in dieser Zeit kann man scheitern.\n\nDie Einarbeitungszeit war gut organisiert. Ein Kollege zeigte ihr den Arbeitsplatz, die Programme und die Regeln, die nirgends geschrieben stehen: Wer die Kaffeemaschine leer macht, füllt sie wieder auf. Nach vier Wochen gab es ein erstes Gespräch. Statt Kritik bekam Hanan eine Zielvereinbarung: drei kleine Ziele bis zum Ende der Probezeit. Über ihre Arbeitszeit konnte sie sogar verhandeln, weil ihre Tochter nachmittags aus der Schule kommt.\n\nAn Karriere oder Beförderung denkt sie noch nicht. Wichtiger ist ihr, dass sie sich als Arbeitnehmerin ernst genommen fühlt. Ihr altes Arbeitszeugnis liegt im Schrank; das neue, sagt sie lachend, soll besser werden. Und das Netzwerk, das sie hier aufbaut, ist vielleicht wertvoller als jeder Titel.",
+      "ar": "حنان حصلت على وظيفة بدوام جزئي في قطاع جديد عليها، وقالت بصراحة إن مؤهلها من مجال آخر؛ المديرة اعتبرت المسار غير المعتاد ميزة لمن يريد التعلّم. فترة التجربة ستة أشهر. التأهيل كان منظّماً، وبعد أربعة أسابيع تلقّت اتفاق أهداف بدل النقد، وتفاوضت على ساعات العمل بسبب ابنتها. لا تفكّر في الترقية الآن؛ الأهم أن تُؤخذ بجدّية كأجيرة، وشبكة العلاقات أثمن من أي لقب.",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Was sagte die Chefin über Hanans ungewöhnlichen Werdegang?",
+          "options": [
+            "Er ist ein Nachteil in dieser Branche.",
+            "Er ist kein Nachteil, wenn man lernen will.",
+            "Er verkürzt die Probezeit."
+          ],
+          "answer": "Er ist kein Nachteil, wenn man lernen will.",
+          "explanationAr": "الدليل حرفياً: «ein ungewöhnlicher Werdegang sei kein Nachteil, wenn man lernen will». الفخّ 1: قلب المعنى. الفخّ 2: فترة التجربة ستة أشهر بلا تغيير.",
+          "id": "t-b1-21-q1",
+          "promptAr": "ماذا قالت المديرة عن مسار حنان غير المعتاد؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Was bekam Hanan nach vier Wochen?",
+          "options": [
+            "Kritik an ihrer Arbeit",
+            "eine Beförderung",
+            "eine Zielvereinbarung mit drei kleinen Zielen"
+          ],
+          "answer": "eine Zielvereinbarung mit drei kleinen Zielen",
+          "explanationAr": "الدليل حرفياً: «Statt Kritik bekam Hanan eine Zielvereinbarung: drei kleine Ziele». الفخّ 1: «Statt Kritik» ينفي النقد. الفخّ 2: الترقية لا تفكّر فيها بعد.",
+          "id": "t-b1-21-q2",
+          "promptAr": "ماذا حصلت حنان عليه بعد أربعة أسابيع؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Hanan konnte über ihre Arbeitszeit verhandeln.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "richtig",
+          "explanationAr": "الدليل حرفياً: «Über ihre Arbeitszeit konnte sie sogar verhandeln».",
+          "id": "t-b1-21-q3",
+          "promptAr": "هل استطاعت حنان التفاوض على وقت العمل؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Die ___ dauert sechs Monate, und in dieser Zeit kann man scheitern.",
+          "answer": [
+            "Probezeit"
+          ],
+          "explanationAr": "الدليل حرفياً: «Die Probezeit dauert sechs Monate».",
+          "id": "t-b1-21-q4",
+          "promptAr": "تدوم ___ ستة أشهر، ويمكن خلالها الفشل."
+        }
+      ]
+    },
+    "t-b1-22": {
+      "id": "t-b1-22",
+      "level": "B1",
+      "titleDe": "Streit um den Balkon",
+      "titleAr": "خلاف حول الشرفة",
+      "de": "Als Familie Kaya im Frühjahr einzog, freute sie sich vor allem auf den Balkon. Im Sommer stand dort jeden Abend der Grill. Der Nachbar unter ihnen, Herr Brandt, wohnt seit zwanzig Jahren im Haus und hatte noch nie einen Grill über seinem Schlafzimmerfenster. Nach drei Wochen kam der erste Zettel im Hausflur, nach fünf Wochen die erste laute Auseinandersetzung im Treppenhaus.\n\nHerr Brandt warf der Familie vor, keine Rücksicht zu nehmen. Frau Kaya warf ihm vor, er habe nie freundlich gefragt. Beide hatten recht, und beide wollten nicht einlenken. Die Hausgemeinschaft war gespalten: Die einen sagten, wer Ruhe will, soll aufs Dorf ziehen; die anderen fanden, neue Mieter müssten sich erst einmal anpassen.\n\nAm Ende vermittelte die älteste Bewohnerin des Hauses. Sie lud beide in den Gemeinschaftsraum ein und schlug eine einfache Vereinbarung vor: Grillen ja, aber nur freitags und samstags bis zehn Uhr, und die Reinigungspflicht für den Hof übernimmt in diesem Monat Familie Kaya. Herr Brandt akzeptierte. Frau Kaya musste zugeben, dass die Regel fair war. Ob man so etwas Versöhnung nennen kann, ist offen. Beim Nachbarschaftsfest im September saßen sie jedenfalls am selben Tisch, und niemand musste jemandem etwas verzeihen, weil niemand mehr davon sprach. Ausziehen will jetzt keiner.",
+      "ar": "عائلة كايا انتقلت في الربيع وفرحت بالشرفة، وصار الشواء كل مساء فوق نافذة غرفة نوم الجار القديم السيد برانت؛ بعد أسابيع بدأت الرسائل ثم الخلاف الصاخب. كلٌّ اتّهم الآخر وكلاهما رفض التراجع، وانقسم سكان البناية. توسّطت أكبر ساكنة: اتفاق بسيط — شواء الجمعة والسبت حتى العاشرة، وتنظيف الفناء هذا الشهر على عائلة كايا. قبل الجار، واعترفت السيدة كايا بعدالة القاعدة. في مهرجان الجيران جلسوا على طاولة واحدة ولا أحد يريد الرحيل.",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Wer vermittelte am Ende zwischen den Nachbarn?",
+          "options": [
+            "Herr Brandt",
+            "die neuen Mieter selbst",
+            "die älteste Bewohnerin des Hauses"
+          ],
+          "answer": "die älteste Bewohnerin des Hauses",
+          "explanationAr": "الدليل حرفياً: «Am Ende vermittelte die älteste Bewohnerin des Hauses». الفخّ 1: برانت طرف في الخلاف. الفخّ 2: المستأجرون الجدد طرف الخلاف.",
+          "id": "t-b1-22-q1",
+          "promptAr": "من توصّل إلى وساطة بين الجارين في النهاية؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Was gehört zur Vereinbarung?",
+          "options": [
+            "Grillen nur freitags und samstags bis zehn Uhr",
+            "Grillen jeden Abend bis zehn Uhr",
+            "Familie Kaya zieht aufs Dorf"
+          ],
+          "answer": "Grillen nur freitags und samstags bis zehn Uhr",
+          "explanationAr": "الدليل حرفياً: «Grillen ja, aber nur freitags und samstags bis zehn Uhr». الفخّ 1: «jeden Abend» كان الوضع القديم. الفخّ 2: القرية كانت رأي بعض السكان.",
+          "id": "t-b1-22-q2",
+          "promptAr": "ماذا تضمّن الاتفاق؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Herr Brandt wohnt seit zwanzig Jahren im Haus.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "richtig",
+          "explanationAr": "الدليل حرفياً: «wohnt seit zwanzig Jahren im Haus».",
+          "id": "t-b1-22-q3",
+          "promptAr": "هل يسكن السيد برانت في البيت منذ عشرين سنة؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Beide hatten recht, und beide wollten nicht ___.",
+          "answer": [
+            "einlenken"
+          ],
+          "explanationAr": "الدليل حرفياً: «beide wollten nicht einlenken» — einlenken = يتراجع/يلين في خلاف.",
+          "id": "t-b1-22-q4",
+          "promptAr": "كلا الطرفين محقّ، وكلا الطرفين رفض ___."
+        }
+      ]
+    },
+    "t-b1-23": {
+      "id": "t-b1-23",
+      "level": "B1",
+      "titleDe": "Eine Nachricht, die nicht stimmte",
+      "titleAr": "خبر لم يكن صحيحاً",
+      "de": "Am Montagmorgen verbreitete sich in der Stadt eine Nachricht: Das Schwimmbad im Norden solle geschlossen werden. Die Meldung stand in einer Gruppe im Messenger, ohne Namen, ohne Datum, ohne Quelle. Bis zum Mittag hatten sie hunderte Menschen weitergeleitet, und am Nachmittag standen die ersten Eltern mit Plakaten vor dem Rathaus.\n\nEine junge Journalistin der Lokalzeitung wollte die Meldung nicht einfach übernehmen. Ihre Recherche dauerte zwei Stunden: ein Anruf bei der Stadt, ein Blick in die Sitzungsunterlagen, ein Gespräch mit dem Bademeister. Die Tatsache war viel kleiner als das Gerücht. Das Bad wird im Winter drei Wochen renoviert, mehr nicht. Die Stadt gab am Abend eine Stellungnahme ab, aber da war die Falschmeldung schon schneller gewesen als die Wahrheit.\n\nWer die Nachricht zuerst geschrieben hatte, blieb anonym. Vielleicht war es keine Manipulation, sondern nur ein Missverständnis, das jemand zugespitzt hatte. Die Journalistin schrieb einen Artikel, der beide Seiten zeigte: die Sorge der Eltern und die Antwort der Stadt. Ausgewogene Berichterstattung heißt nicht, dass beide recht haben. Sie heißt, dass man die Gegenposition ernst nimmt und jede Behauptung prüft, bevor man sie druckt. Seriös ist, wer die Quelle angibt, auch wenn das langsamer ist.",
+      "ar": "انتشر خبر بلا اسم ولا مصدر: مسبح الشمال سيُغلق؛ خلال ساعات تجمّع الأهالي أمام البلدية. صحفية محلية لم تنقل الخبر بل بحثت ساعتين: اتصال بالبلدية، وثائق الجلسة، حديث مع منقذ المسبح. الحقيقة أصغر بكثير: ترميم ثلاثة أسابيع شتاءً. البلدية أصدرت بياناً مساءً لكن الخبر الكاذب كان أسرع. الكاتب بقي مجهولاً؛ ربما سوء فهم بولغ فيه لا تلاعباً. كتبت مقالاً يعرض الطرفين: التغطية المتوازنة لا تعني أن الطرفين على حق، بل أن كل ادّعاء يُفحص ويُذكر مصدره.",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Was war die Tatsache hinter dem Gerücht?",
+          "options": [
+            "Das Bad wird im Winter drei Wochen renoviert.",
+            "Das Bad im Norden wird geschlossen.",
+            "Die Eltern haben das Bad gerettet."
+          ],
+          "answer": "Das Bad wird im Winter drei Wochen renoviert.",
+          "explanationAr": "الدليل حرفياً: «Das Bad wird im Winter drei Wochen renoviert, mehr nicht». الفخّ 1: الإغلاق هو الشائعة. الفخّ 2: احتجاج الأهالي لم يُنقذ شيئاً لأن الإغلاق لم يكن مقرّراً.",
+          "id": "t-b1-23-q1",
+          "promptAr": "ما الحقيقة وراء الإشاعة؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Was bedeutet laut Text ausgewogene Berichterstattung?",
+          "options": [
+            "dass beide Seiten recht haben",
+            "die Gegenposition ernst nehmen und jede Behauptung prüfen",
+            "die Meldung schnell weiterleiten"
+          ],
+          "answer": "die Gegenposition ernst nehmen und jede Behauptung prüfen",
+          "explanationAr": "الدليل حرفياً: «heißt nicht, dass beide recht haben. Sie heißt, dass man die Gegenposition ernst nimmt und jede Behauptung prüft». الفخّ 1: منفيّ صراحة. الفخّ 2: إعادة الإرسال هي ما فعله الناس بالشائعة.",
+          "id": "t-b1-23-q2",
+          "promptAr": "ماذا تعني التقارير المتوازنة حسب النص؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Die Person, die die Nachricht zuerst schrieb, ist bekannt.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "الدليل حرفياً: «Wer die Nachricht zuerst geschrieben hatte, blieb anonym».",
+          "id": "t-b1-23-q3",
+          "promptAr": "هل هوية كاتب الخبر الأول معروفة؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Die Stadt gab am Abend eine ___ ab.",
+          "answer": [
+            "Stellungnahme"
+          ],
+          "explanationAr": "الدليل حرفياً: «Die Stadt gab am Abend eine Stellungnahme ab».",
+          "id": "t-b1-23-q4",
+          "promptAr": "أصدرت المدينة مساءً ___."
+        }
+      ]
+    },
+    "t-b1-24": {
+      "id": "t-b1-24",
+      "level": "B1",
+      "titleDe": "Gesund bleiben im Schichtdienst",
+      "titleAr": "البقاء بصحة في العمل بالمناوبات",
+      "de": "Karim arbeitet seit vier Jahren im Schichtdienst in einer Bäckerei. Frühschicht ab drei Uhr, dann zwei Wochen Spätschicht, dann wieder früh. Sein Schlafrhythmus war irgendwann so durcheinander, dass er auch an freien Tagen um drei Uhr wach lag. Bei der Vorsorgeuntersuchung sagte der Arzt einen Satz, den Karim nicht vergessen hat: „Ihre Belastbarkeit ist nicht das Problem. Ihre Regeneration ist es.“\n\nEine Therapie mit Tabletten wollte Karim nicht, wegen der Nebenwirkungen und weil er nichts Chronisches hatte, nur eine ungesunde Lebensweise. Also änderte er drei Dinge. Er ging zur Ernährungsberatung, weil er nachts immer süß gegessen hatte. Er begann mit Ausdauer statt Kraft: dreimal pro Woche zwanzig Minuten laufen, langsam, ohne Muskelkater am nächsten Tag. Und er lernte eine Entspannungstechnik, die er im Bett anwendet, wenn der Kopf nicht aufhören will zu arbeiten.\n\nNach drei Monaten ist das Gleichgewicht nicht perfekt, aber besser. Sein Immunsystem scheint stabiler; die dritte Erkältung des Winters ist ausgeblieben. Das Wichtigste, sagt er, ist Achtsamkeit für kleine Signale: müde Augen, kurze Geduld, Hunger auf Zucker. Wer sie früh bemerkt, kann vorbeugen, statt später zu reparieren.",
+      "ar": "كريم يعمل بالمناوبات في مخبز منذ أربع سنوات واضطرب إيقاع نومه حتى صار يستيقظ في الثالثة حتى في العطل. في الفحص الوقائي قال الطبيب: المشكلة ليست تحمّلك بل استشفاؤك. رفض العلاج بالأقراص بسبب آثارها الجانبية ولأن حالته ليست مزمنة بل نمط حياة. غيّر ثلاثة أشياء: استشارة تغذية، تمارين تحمل خفيفة ثلاث مرات أسبوعياً، وتقنية استرخاء في السرير. بعد ثلاثة أشهر توازنه أفضل ومناعته أثبت. الأهم: الانتباه للإشارات الصغيرة مبكراً للوقاية بدل الإصلاح.",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Was ist laut Arzt Karims Problem?",
+          "options": [
+            "seine Belastbarkeit",
+            "seine Regeneration",
+            "eine chronische Krankheit"
+          ],
+          "answer": "seine Regeneration",
+          "explanationAr": "الدليل حرفياً: «Ihre Belastbarkeit ist nicht das Problem. Ihre Regeneration ist es». الفخّ 1: التحمل منفيّ صراحة. الفخّ 2: «nichts Chronisches».",
+          "id": "t-b1-24-q1",
+          "promptAr": "ما مشكلة كريم حسب الطبيب؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Warum wollte Karim keine Therapie mit Tabletten?",
+          "options": [
+            "weil die Ernährungsberatung billiger war",
+            "weil der Arzt es verboten hatte",
+            "wegen der Nebenwirkungen und weil er nichts Chronisches hatte"
+          ],
+          "answer": "wegen der Nebenwirkungen und weil er nichts Chronisches hatte",
+          "explanationAr": "الدليل حرفياً: «wegen der Nebenwirkungen und weil er nichts Chronisches hatte». الفخّ 1: استشارة التغذية خطوة أخرى لا سبب. الفخّ 2: لا منع من الطبيب.",
+          "id": "t-b1-24-q2",
+          "promptAr": "لماذا رفض العلاج بالأدوية؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Karim läuft dreimal pro Woche zwanzig Minuten.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "richtig",
+          "explanationAr": "الدليل حرفياً: «dreimal pro Woche zwanzig Minuten laufen».",
+          "id": "t-b1-24-q3",
+          "promptAr": "هل يركض كريم عشرين دقيقة ثلاث مرات في الأسبوع؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Wer die Signale früh bemerkt, kann ___, statt später zu reparieren.",
+          "answer": [
+            "vorbeugen"
+          ],
+          "explanationAr": "الدليل حرفياً: «Wer sie früh bemerkt, kann vorbeugen, statt später zu reparieren».",
+          "id": "t-b1-24-q4",
+          "promptAr": "مَن يلاحظ الإشارات باكراً يستطيع ___ بدلاً من أن يُصلّح لاحقاً."
+        }
+      ]
+    },
+    "t-b1-25": {
+      "id": "t-b1-25",
+      "level": "B1",
+      "titleDe": "Mehr Grün, weniger Lärm",
+      "titleAr": "خضرة أكثر وضجيج أقل",
+      "de": "Die Bürgerinitiative „Mehr Grün“ entstand an einem Küchentisch. Fünf Nachbarn hatten genug vom Verkehrslärm auf der Hauptstraße und von der Feinstaubbelastung, die man an den grauen Fensterbänken sehen konnte. Ihr Vorschlag: Ein Teil der Straße wird Fußgängerzone, der alte Parkplatz wird Grünfläche mit Bäumen und Bänken.\n\nDer Weg dorthin war länger als gedacht. Zuerst war die Zuständigkeit unklar: Straße oder Grünflächen, zwei verschiedene Ämter. In der Bürgersprechstunde riet der Bürgermeister, eine Beschlussvorlage für den Gemeinderat zu schreiben, mit Zahlen zur Anbindung: Wie kommen die Leute dann zum Supermarkt, wo parken die Lieferwagen? Die Initiative besuchte drei Sitzungen, sammelte Unterschriften und rechnete die Sanierung des Parkplatzes mit einem Architekten durch.\n\nIm Herbst stimmte der Gemeinderat über die Vorlage ab: angenommen, mit zwei Auflagen. Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone, und die Baugenehmigung für die Bänke bekommt die Stadt nur, wenn ein Weg für Rollstühle bleibt. Ob die Lebensqualität wirklich steigt, wird man erst im nächsten Sommer wissen. Dass fünf Leute die Infrastruktur einer ganzen Straße verändern können, wissen die Nachbarn jetzt schon.",
+      "ar": "مبادرة أهلية «خضرة أكثر» بدأت على طاولة مطبخ: خمسة جيران سئموا ضجيج المرور والجسيمات الدقيقة، واقترحوا تحويل جزء من الشارع إلى منطقة مشاة والموقف القديم إلى مساحة خضراء. الطريق كان طويلاً: اختصاص غير واضح بين إدارتين، نصيحة في ساعة المواطنين بكتابة مقترح قرار لمجلس البلدية بأرقام عن الربط بالمواصلات، ثلاث جلسات، توقيعات، وحساب الترميم مع مهندس. في الخريف صوّت المجلس بالموافقة بشرطين: دخول سيارات التوصيل حتى العاشرة صباحاً، وممر للكراسي المتحركة.",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Was war zuerst unklar?",
+          "options": [
+            "die Zahl der Unterschriften",
+            "die Kosten der Bänke",
+            "die Zuständigkeit zwischen zwei Ämtern"
+          ],
+          "answer": "die Zuständigkeit zwischen zwei Ämtern",
+          "explanationAr": "الدليل حرفياً: «Zuerst war die Zuständigkeit unklar: Straße oder Grünflächen, zwei verschiedene Ämter». الفخّ 1: التوقيعات جُمعت لاحقاً. الفخّ 2: الترميم حُسب مع مهندس.",
+          "id": "t-b1-25-q1",
+          "promptAr": "ماذا كان غير واضح في البداية؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Welche Auflage gehört zum Beschluss?",
+          "options": [
+            "Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone.",
+            "Der Parkplatz bleibt für Lieferwagen.",
+            "Die Bänke brauchen keine Baugenehmigung."
+          ],
+          "answer": "Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone.",
+          "explanationAr": "الدليل حرفياً: «Die Lieferwagen dürfen morgens bis zehn Uhr in die Zone». الفخّ 1: الموقف يصير مساحة خضراء. الفخّ 2: الترخيص مشروط بممر الكراسي.",
+          "id": "t-b1-25-q2",
+          "promptAr": "أي شرط في القرار؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Der Gemeinderat hat die Vorlage abgelehnt.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "الدليل حرفياً: «angenommen, mit zwei Auflagen».",
+          "id": "t-b1-25-q3",
+          "promptAr": "هل رفض المجلس البلدي المشروع؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "In der ___ riet der Bürgermeister, eine Beschlussvorlage zu schreiben.",
+          "answer": [
+            "Bürgersprechstunde"
+          ],
+          "explanationAr": "الدليل حرفياً: «In der Bürgersprechstunde riet der Bürgermeister».",
+          "id": "t-b1-25-q4",
+          "promptAr": "في ___ نصح العمدة بصياغة مشروع قرار."
+        }
+      ]
+    },
+    "t-b1-26": {
+      "id": "t-b1-26",
+      "level": "B1",
+      "titleDe": "Ein Abend im Theater",
+      "titleAr": "أمسية في المسرح",
+      "de": "Zum ersten Mal in Deutschland war Salma im Theater. Ihre Kollegin hatte zwei Karten für ein kleines Festival, bei dem junge Gruppen alte Texte neu zeigen. Salma zog sich elegant an, obwohl die Kollegin gesagt hatte, das sei nicht nötig. Die Tradition, sich für das Theater schön anzuziehen, kannte sie aus Tunis.\n\nDas Stück war nach einem Roman geschrieben, den Salma im Kurs gelesen hatte, aber nur bis zum dritten Kapitel. Auf der Bühne stand ein kleines Orchester: drei Musiker, jeder mit einem anderen Instrument. Zwischen den Szenen las eine Schauspielerin ein Gedicht, und im Hintergrund malte ein Künstler live ein Bild, das am Ende fertig war. Salma verstand nicht jedes Wort, aber der Eindruck war stark: Literatur, Musik und Kunst in einem Raum.\n\nAuf dem Heimweg diskutierten die beiden. Die Kollegin kritisierte das Ende, das sie zu schnell fand. Salma hatte gerade dieses Ende beeindruckt, weil niemand erklärt hatte, wie die Geschichte weitergeht. „Wie im Film“, sagte die Kollegin. „Nein“, sagte Salma, „im Film sieht man alles. Hier muss man selbst denken.“ Nächste Woche will sie den Roman zu Ende lesen.",
+      "ar": "سلمى في المسرح لأول مرة في ألمانيا، في مهرجان صغير تقدّم فيه فرق شابة نصوصاً قديمة. ارتدت ملابس أنيقة كتقليد تعرفه من تونس. المسرحية مقتبسة من رواية قرأت منها ثلاثة فصول فقط؛ على الخشبة أوركسترا صغيرة، قصيدة بين المشاهد، ورسّام يرسم لوحة حيّة. لم تفهم كل كلمة لكن الانطباع قوي. في طريق العودة انتقدت الزميلة النهاية السريعة، بينما أعجبت سلمى بها لأن أحداً لم يشرح ما بعدها — «في الفيلم ترى كل شيء، هنا تفكّر بنفسك».",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Warum zog sich Salma elegant an?",
+          "options": [
+            "Sie kannte diese Tradition aus Tunis.",
+            "Die Kollegin hatte es verlangt.",
+            "Das Festival hatte eine Kleiderregel."
+          ],
+          "answer": "Sie kannte diese Tradition aus Tunis.",
+          "explanationAr": "الدليل حرفياً: «Die Tradition, sich für das Theater schön anzuziehen, kannte sie aus Tunis». الفخّ 1: الزميلة قالت إنه غير ضروري. الفخّ 2: لا قاعدة لباس ذُكرت.",
+          "id": "t-b1-26-q1",
+          "promptAr": "لماذا ارتدت سلمى ثياباً أنيقة؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Was kritisierte die Kollegin?",
+          "options": [
+            "das Gedicht zwischen den Szenen",
+            "das Ende, das sie zu schnell fand",
+            "den Künstler, der live malte"
+          ],
+          "answer": "das Ende, das sie zu schnell fand",
+          "explanationAr": "الدليل حرفياً: «Die Kollegin kritisierte das Ende, das sie zu schnell fand». الفخّ 1 و2: عناصر العرض لم تُنتقَد.",
+          "id": "t-b1-26-q2",
+          "promptAr": "بماذا انتقدت زميلتها؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Salma hatte den Roman nur bis zum dritten Kapitel gelesen.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "richtig",
+          "explanationAr": "الدليل حرفياً: «aber nur bis zum dritten Kapitel».",
+          "id": "t-b1-26-q3",
+          "promptAr": "هل قرأت سلمى الرواية حتى الفصل الثالث فقط؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Auf der Bühne stand ein kleines ___: drei Musiker, jeder mit einem anderen Instrument.",
+          "answer": [
+            "Orchester"
+          ],
+          "explanationAr": "الدليل حرفياً: «Auf der Bühne stand ein kleines Orchester».",
+          "id": "t-b1-26-q4",
+          "promptAr": "على الخشبة وقف ___ صغير: ثلاثة عازفين، كل بآلة مختلفة."
+        }
+      ]
+    },
+    "t-b1-27": {
+      "id": "t-b1-27",
+      "level": "B1",
+      "titleDe": "Weniger verbrauchen",
+      "titleAr": "استهلاك أقل",
+      "de": "Als in unserer Straße zum zweiten Mal in drei Jahren der Keller unter Wasser stand, änderte sich etwas. Die Überschwemmung war klein, aber sie machte aus einer Diskussion eine Frage: Was können wir selbst tun? Ein Nachbar, der früher gegen jede neue Regel protestiert hatte, schlug vor, den Verbrauch der ganzen Straße zu messen.\n\nDas Ergebnis überraschte uns. Wir verbrauchen viel Strom aus Kohle und Erdgas, weil die Häuser alt sind, und wir konsumieren mehr, als wir brauchen: Der Abfall aus Verpackungen füllt jede Woche drei Tonnen. Beim Wasserverbrauch waren die Unterschiede zwischen den Familien enorm. Niemand wollte jemandem etwas vorwerfen; die Zahlen sprachen allein.\n\nSeitdem heizen wir sparsamer, kaufen weniger in Plastik und werfen weniger weg. Erdöl kann man nicht persönlich schützen, aber die Landschaft vor dem Dorf schon: Am Fluss haben wir Bäume gepflanzt, die bei Starkregen das Wasser halten. Ob das die nächste Überschwemmung verhindert, weiß niemand. Schädlich ist es sicher nicht. Und die Nachbarn, die vorher nur über Politik geredet haben, reden jetzt über Bäume.",
+      "ar": "حين غُمر القبو للمرة الثانية في ثلاث سنوات تحوّل النقاش إلى سؤال: ماذا نفعل نحن؟ جار كان يحتجّ على كل قاعدة اقترح قياس استهلاك الشارع. النتيجة: كهرباء كثيرة من الفحم والغاز لأن البيوت قديمة، استهلاك يفوق الحاجة، ثلاث حاويات تغليف أسبوعياً، وفروق هائلة في استهلاك الماء. لا أحد اتّهم أحداً؛ الأرقام تكلّمت. منذها نُدفّئ باقتصاد ونرمي أقل، وزرعنا أشجاراً عند النهر تمسك الماء. هل تمنع الفيضان القادم؟ لا أحد يعرف، لكنها ليست ضارة.",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Was schlug der Nachbar vor?",
+          "options": [
+            "gegen die neue Regel zu protestieren",
+            "den Verbrauch der ganzen Straße zu messen",
+            "den Keller neu zu bauen"
+          ],
+          "answer": "den Verbrauch der ganzen Straße zu messen",
+          "explanationAr": "الدليل حرفياً: «schlug vor, den Verbrauch der ganzen Straße zu messen». الفخّ 1: الاحتجاج كان ماضيه. الفخّ 2: القبو لم يُذكر بناؤه.",
+          "id": "t-b1-27-q1",
+          "promptAr": "ماذا اقترح الجار؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Warum verbraucht die Straße viel Strom aus Kohle und Erdgas?",
+          "options": [
+            "weil die Familien viel Wasser verbrauchen",
+            "weil die Bäume am Fluss fehlen",
+            "weil die Häuser alt sind"
+          ],
+          "answer": "weil die Häuser alt sind",
+          "explanationAr": "الدليل حرفياً: «weil die Häuser alt sind». الفخّ 1: الماء موضوع منفصل. الفخّ 2: الأشجار زُرعت ضد الفيضان.",
+          "id": "t-b1-27-q2",
+          "promptAr": "لماذا تستهلك الشارع كثيراً من الكهرباء من الفحم والغاز؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Die Nachbarn haben am Fluss Bäume gepflanzt.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "richtig",
+          "explanationAr": "الدليل حرفياً: «Am Fluss haben wir Bäume gepflanzt».",
+          "id": "t-b1-27-q3",
+          "promptAr": "هل غرس الجيران أشجاراً على ضفة النهر؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Seitdem heizen wir ___, kaufen weniger in Plastik und werfen weniger weg.",
+          "answer": [
+            "sparsamer"
+          ],
+          "explanationAr": "الدليل حرفياً: «Seitdem heizen wir sparsamer» — صيغة التفضيل من sparsam.",
+          "id": "t-b1-27-q4",
+          "promptAr": "منذ ذلك الحين ندفأ ___ ونشتري أقلّ بالبلاستيك ونرمي أقل."
+        }
+      ]
+    },
+    "t-b1-28": {
+      "id": "t-b1-28",
+      "level": "B1",
+      "titleDe": "Vor Gericht",
+      "titleAr": "أمام المحكمة",
+      "de": "Herr Nasri hatte online eine Reise gebucht und zwei Tage später wieder storniert, weil seine Mutter krank wurde. Die Firma verlangte trotzdem den ganzen Preis. In der E-Mail stand, die Buchung sei verbindlich gewesen und das Widerrufsrecht gelte bei Reisen nicht. Herr Nasri fand das falsch, aber er ist kein Verbrecher, der weglaufen kann: Die Firma hatte seine Kreditkarte.\n\nEin Anwalt vom Verbraucherschutz erklärte ihm die Regelung in zehn Minuten. Ja, das Widerrufsrecht gilt bei Reisen nicht. Aber eine Stornierung ist trotzdem möglich, und die Firma darf nur die Kosten verlangen, die sie wirklich hatte. Alles andere muss sie begründen. Die Gebührenordnung der Firma, die pauschal hundert Prozent verlangte, sei deshalb angreifbar. Kostenpflichtig sei nur der Anwalt, wenn man verliert.\n\nVor Gericht kam es nicht. Nachdem der Anwalt einen Brief geschrieben hatte, räumte die Firma ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück. Die Polizei hatte damit nichts zu tun; niemandem wurde etwas verboten. Die Konsequenz für Herrn Nasri ist einfacher: Er liest jetzt vor dem Klick auf „verbindlich buchen“ den Absatz über Stornierung. Unverbindlich ist im Internet fast nichts.",
+      "ar": "السيد نصري حجز رحلة وألغاها بعد يومين لمرض أمه، فطالبت الشركة بالثمن كاملاً بحجة أن الحجز ملزم وأن حق التراجع لا يسري على الرحلات. محامٍ من حماية المستهلك شرح: صحيح أن حق التراجع لا يسري، لكن الإلغاء ممكن والشركة لا تطالب إلا بتكاليفها الفعلية، وعليها تعليل الباقي؛ لائحة الرسوم الجزافية قابلة للطعن. لم يصل الأمر للمحكمة: بعد رسالة المحامي أقرّت الشركة بغموض البند وردّت الثلثين. النتيجة: يقرأ الآن فقرة الإلغاء قبل الضغط على «حجز ملزم».",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Was darf die Firma laut Anwalt verlangen?",
+          "options": [
+            "den ganzen Preis, weil die Buchung verbindlich war",
+            "nichts, weil das Widerrufsrecht gilt",
+            "nur die Kosten, die sie wirklich hatte"
+          ],
+          "answer": "nur die Kosten, die sie wirklich hatte",
+          "explanationAr": "الدليل حرفياً: «die Firma darf nur die Kosten verlangen, die sie wirklich hatte». الفخّ 1: مطالبة الشركة الأصلية. الفخّ 2: حق التراجع «gilt bei Reisen nicht».",
+          "id": "t-b1-28-q1",
+          "promptAr": "ماذا يحق للشركة المطالبة به حسب المحامي؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Wie endete der Fall?",
+          "options": [
+            "Die Firma räumte ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück.",
+            "Das Gericht verbot der Firma die Gebührenordnung.",
+            "Die Polizei nahm den Firmenchef fest."
+          ],
+          "answer": "Die Firma räumte ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück.",
+          "explanationAr": "الدليل حرفياً: «räumte die Firma ein, dass die Klausel unklar war, und zahlte zwei Drittel zurück». الفخّ 1: «Vor Gericht kam es nicht». الفخّ 2: «Die Polizei hatte damit nichts zu tun».",
+          "id": "t-b1-28-q2",
+          "promptAr": "كيف انتهت القضية؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Das Widerrufsrecht gilt bei Reisen nicht.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "richtig",
+          "explanationAr": "الدليل حرفياً: «Ja, das Widerrufsrecht gilt bei Reisen nicht».",
+          "id": "t-b1-28-q3",
+          "promptAr": "هل حق الانسحاب لا يسري على الرحلات؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Alles andere muss sie ___.",
+          "answer": [
+            "begründen"
+          ],
+          "explanationAr": "الدليل حرفياً: «Alles andere muss sie begründen».",
+          "id": "t-b1-28-q4",
+          "promptAr": "كلّ ما عدا ذلك عليها أن ___."
+        }
+      ]
+    },
+    "t-b1-29": {
+      "id": "t-b1-29",
+      "level": "B1",
+      "titleDe": "Die Pubertät meiner Tochter",
+      "titleAr": "مراهقة ابنتي",
+      "de": "Mit dreizehn hat meine Tochter angefangen, ihre Zimmertür zu schließen. Nicht laut, nur konsequent. Für mich war das der Beginn der Pubertät, und ich war nicht vorbereitet. In meiner eigenen Erziehung gab es keine geschlossenen Türen; Distanz galt als Kälte. Heute weiß ich: Sie ist ein Teil der Beziehung, nicht ihr Ende.\n\nDie ersten Monate waren voller Unsicherheit. Ich warf ihr vor, sie habe Geheimnisse; sie warf mir vor, ich würde mich zu viel um sie kümmern. Beides stimmte. Eine Freundin, die als Beraterin arbeitet, sagte mir einen Satz, den ich mir aufgeschrieben habe: Die Psyche eines Jugendlichen braucht eine Tür, die zu ist, und ein Haus, das offen bleibt.\n\nWir haben dann drei Dinge geändert. Das Taschengeld ist jetzt fest, und sie entscheidet allein darüber. Die Aufgabenteilung im Haushalt steht auf einem Zettel am Kühlschrank; ich muss mich nicht mehr jeden Abend durchsetzen. Und einmal pro Woche unterhalten wir uns beim Kochen über alles, worüber sie reden will, und über nichts, was sie nicht will. Das Familienleben ist ruhiger geworden. Die Grenze ist klar, und die Hoffnung, dass die Tür eines Tages von selbst aufgeht, hat sich schon zweimal erfüllt.",
+      "ar": "في الثالثة عشرة بدأت ابنتي تغلق باب غرفتها؛ كانت بداية المراهقة ولم أكن مستعدة، ففي تربيتي لم تكن هناك أبواب مغلقة والمسافة كانت برودة. الأشهر الأولى مليئة بعدم اليقين والاتهامات المتبادلة. صديقة مستشارة قالت: نفس المراهق تحتاج باباً مغلقاً وبيتاً يبقى مفتوحاً. غيّرنا ثلاثة أشياء: مصروف ثابت تقرّر فيه وحدها، توزيع مهام على ورقة الثلاجة، وحديث أسبوعي أثناء الطبخ عمّا تريد فقط. الحدود واضحة، والباب انفتح من تلقاء نفسه مرتين.",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Was galt in der Erziehung der Mutter als Kälte?",
+          "options": [
+            "Distanz",
+            "Taschengeld",
+            "Aufgabenteilung"
+          ],
+          "answer": "Distanz",
+          "explanationAr": "الدليل حرفياً: «Distanz galt als Kälte». الفخّ 1 و2: تغييرات لاحقة لا تخصّ تربيتها.",
+          "id": "t-b1-29-q1",
+          "promptAr": "ماذا عُدّ برودةً في تربية الأم؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Was warf die Tochter der Mutter vor?",
+          "options": [
+            "dass sie Geheimnisse hat",
+            "dass sie sich zu viel um sie kümmert",
+            "dass sie die Tür schließt"
+          ],
+          "answer": "dass sie sich zu viel um sie kümmert",
+          "explanationAr": "الدليل حرفياً: «sie warf mir vor, ich würde mich zu viel um sie kümmern». الفخّ 1: الأسرار اتهام الأم. الفخّ 2: الباب تغلقه الابنة.",
+          "id": "t-b1-29-q2",
+          "promptAr": "بماذا اتهمت الابنة أمها؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Die Mutter entscheidet weiterhin über das Taschengeld.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "الدليل حرفياً: «sie entscheidet allein darüber».",
+          "id": "t-b1-29-q3",
+          "promptAr": "هل تظل الأم من يقرر مصروف الجيب؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Die ___ im Haushalt steht auf einem Zettel am Kühlschrank.",
+          "answer": [
+            "Aufgabenteilung"
+          ],
+          "explanationAr": "الدليل حرفياً: «Die Aufgabenteilung im Haushalt steht auf einem Zettel am Kühlschrank».",
+          "id": "t-b1-29-q4",
+          "promptAr": "___ في البيت مكتوبة على ورقة على الثلاجة."
+        }
+      ]
+    },
+    "t-b1-30": {
+      "id": "t-b1-30",
+      "level": "B1",
+      "titleDe": "Die Dienstreise",
+      "titleAr": "رحلة العمل",
+      "de": "Meine erste Dienstreise begann mit einem Zettel von der Chefin: Zeitplan, Hotel, Name des Kunden und der Satz „Spesen bitte mit Quittung“. Meine Abwesenheit im Büro dauerte drei Tage; die Vertretung übernahm eine Kollegin, die mich am Abend vorher noch fragte, wo die Passwörter für den Kundendienst liegen.\n\nAm Flughafen konnte ich online einchecken, aber das Hotel wollte eine Kreditkarte, die ich nicht hatte. Ich musste Bargeld abheben und am nächsten Morgen wieder einzahlen, weil das Hotel doch per Rechnung abrechnete. Der Kunde selbst war freundlich. Meine Präsentation dauerte zwanzig Minuten; die Diskussion über die Umsetzung dauerte zwei Stunden. Am Ende wollte er einen Rabatt, den ich nicht versprechen durfte. Ich habe gesagt, ich melde mich, und das war richtig.\n\nZurück im Büro lernte ich den unangenehmsten Teil: die Bearbeitung der Spesen. Jede Quittung einzeln, jedes Taxi mit Grund. Die Dienstleistung, die wir verkaufen, ist kompliziert; die Regeln für ein Mittagessen auf Reisen sind es auch. Meine Chefin lachte und sagte, das gehöre dazu. Beim zweiten Mal, sagt sie, brauche ich für die Spesen nur noch eine halbe Stunde.",
+      "ar": "أول رحلة عمل بدأت بورقة من المديرة: الجدول، الفندق، اسم الزبون، و«المصاريف بالإيصالات». الغياب ثلاثة أيام وزميلة تنوب عني. تسجيل الوصول أونلاين سهل، لكن الفندق طلب بطاقة ائتمان لا أملكها فسحبت نقداً ثم أعدته لأن الفندق حاسب بالفاتورة. العرض عشرون دقيقة والنقاش حول التنفيذ ساعتان؛ الزبون طلب خصماً لا يحقّ لي الوعد به فقلت سأعود إليه. أصعب جزء: معالجة المصاريف، كل إيصال وكل تاكسي بسبب. المديرة تقول: في المرة الثانية نصف ساعة فقط.",
+      "questions": [
+        {
+          "type": "mc",
+          "promptDe": "Warum musste die Person Bargeld abheben?",
+          "options": [
+            "weil der Kunde einen Rabatt wollte",
+            "weil das Hotel eine Kreditkarte wollte, die sie nicht hatte",
+            "weil man am Flughafen nicht online einchecken konnte"
+          ],
+          "answer": "weil das Hotel eine Kreditkarte wollte, die sie nicht hatte",
+          "explanationAr": "الدليل حرفياً: «das Hotel wollte eine Kreditkarte, die ich nicht hatte. Ich musste Bargeld abheben». الفخّ 1: الخصم موضوع الزبون. الفخّ 2: تسجيل الوصول أونلاين نجح.",
+          "id": "t-b1-30-q1",
+          "promptAr": "لماذا اضطرت لسحب نقدي؟"
+        },
+        {
+          "type": "mc",
+          "promptDe": "Was war laut Text der unangenehmste Teil?",
+          "options": [
+            "die Präsentation beim Kunden",
+            "die Abwesenheit im Büro",
+            "die Bearbeitung der Spesen"
+          ],
+          "answer": "die Bearbeitung der Spesen",
+          "explanationAr": "الدليل حرفياً: «lernte ich den unangenehmsten Teil: die Bearbeitung der Spesen». الفخّ 1: العرض دام عشرين دقيقة فقط. الفخّ 2: الغياب غطّته النائبة.",
+          "id": "t-b1-30-q2",
+          "promptAr": "ما أكثر ما أزعجها حسب النص؟"
+        },
+        {
+          "type": "truefalse",
+          "promptDe": "Die Person hat dem Kunden den Rabatt versprochen.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "الدليل حرفياً: «einen Rabatt, den ich nicht versprechen durfte. Ich habe gesagt, ich melde mich».",
+          "id": "t-b1-30-q3",
+          "promptAr": "هل وعدت الزبون بالخصم؟"
+        },
+        {
+          "type": "fill",
+          "promptDe": "Die ___ übernahm eine Kollegin.",
+          "answer": [
+            "Vertretung"
+          ],
+          "explanationAr": "الدليل حرفياً: «die Vertretung übernahm eine Kollegin».",
+          "id": "t-b1-30-q4",
+          "promptAr": "تولّت ___ زميلة."
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "unit": "t-b1-01.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما ميزة الهواتف المحمولة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-01.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يقترح الكاتب؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-01.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "من ناحية مفيدة، ومن ناحية ___ مزعجة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-02.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "قبل مجيئه كان قد ___ الألمانية ثلاث سنوات.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-02.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "من ساعده؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-02.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بدونه ___ لم يُحرِز تقدماً سريعاً.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-03.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "رغم أن الحكومة ___ إجراءات جديدة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-03.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كم في المئة سيتركون السيارة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-03.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الحل؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-04.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أين تقع الشقة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-04.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "تستغرق الرحلة إلى العمل ___ دقيقة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-04.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "متى يتقابلون؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-05.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا سيفعل المستشار أولاً؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-05.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "الاستقالة بلا تخطيط ___ أمراً خطيراً.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-05.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "«أنصح بـ» تعني:",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-06.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أي خبرة مطلوبة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-06.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "المستندات التي تتضمن السيرة الذاتية و___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-06.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "آخر موعد للتقديم: ___ يونيو.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-07.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "___ في المئة يفضّلون التكوين المهني.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-07.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بماذا ينصح الخبراء؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-07.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "يذكرون أن السبب الرئيسي هو ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-08.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يُشترك فيه في السكن المشترك؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-08.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "مَن يُنصح بالسكن على أطراف المدينة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-08.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما مساوئ السكن المشترك؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-09.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يُفرز في ألمانيا؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-09.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يُفيد عند التسوق؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-09.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف تذهب إلى العمل إذا أردت حماية البيئة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-10.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا وقع الخلاف؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-10.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف تصرّف الراوي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-10.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "علام اتفقا؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-11.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا توزّع «مأدبة الطعام»؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-11.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الذي أصبح مهماً بقدر الأهمية لديه؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-11.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كم مرة يتطوّع؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-12.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا أظهرت المقارنة بعد أسبوعين؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-12.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما العامل الحاسم حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-12.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا يُعَدّ التطبيق عملياً؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-13.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "من تدرب معه على المقابلة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-13.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما نوع الأسئلة التي طرحتها عمداً؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-13.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما أثر ذلك في المقابلة الحقيقية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-14.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كم يستغرق الطريق إلى المكتبة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-14.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا يتركز في العمل هناك أكثر؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-14.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بماذا يقارن رسم العضوية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-15.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الذي جعله يعيد التفكير؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-15.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يشتري الآن من المتجر مجدداً؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-15.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما العامل الحاسم عنده؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-16.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "متى حضر إلى بابها؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-16.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف قصدت «المرور على»؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-16.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يقول عن مثل سوء الفهم هذا؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-17.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "من علّمه إصلاح الإطار؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-17.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كم استغرق التصليح؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-17.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا كان أكبر من التوفير؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-18.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا فعل في الليل؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-18.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "متى نام؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-18.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يرى صحيحاً عن الخوف؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-19.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تعني «تطوّعياً»؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-19.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا ينتقد البعض؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-19.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بدون التطوّع ___ كثير من الجمعيات على الإغلاق.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-20.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "___ أن فكّرتُ أسبوعين وافقتُ.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-20.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما كان عيباً؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-20.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف يرى الانتقال اليوم؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-21.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا قالت المديرة عن مسار حنان غير المعتاد؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-21.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا حصلت حنان عليه بعد أربعة أسابيع؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-21.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل استطاعت حنان التفاوض على وقت العمل؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-21.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "تدوم ___ ستة أشهر، ويمكن خلالها الفشل.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-22.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "من توصّل إلى وساطة بين الجارين في النهاية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-22.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تضمّن الاتفاق؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-22.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يسكن السيد برانت في البيت منذ عشرين سنة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-22.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كلا الطرفين محقّ، وكلا الطرفين رفض ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-23.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الحقيقة وراء الإشاعة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-23.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تعني التقارير المتوازنة حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-23.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل هوية كاتب الخبر الأول معروفة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-23.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أصدرت المدينة مساءً ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-24.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما مشكلة كريم حسب الطبيب؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-24.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا رفض العلاج بالأدوية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-24.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يركض كريم عشرين دقيقة ثلاث مرات في الأسبوع؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-24.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "مَن يلاحظ الإشارات باكراً يستطيع ___ بدلاً من أن يُصلّح لاحقاً.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-25.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا كان غير واضح في البداية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-25.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أي شرط في القرار؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-25.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل رفض المجلس البلدي المشروع؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-25.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "في ___ نصح العمدة بصياغة مشروع قرار.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-26.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا ارتدت سلمى ثياباً أنيقة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-26.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بماذا انتقدت زميلتها؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-26.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل قرأت سلمى الرواية حتى الفصل الثالث فقط؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-26.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "على الخشبة وقف ___ صغير: ثلاثة عازفين، كل بآلة مختلفة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-27.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا اقترح الجار؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-27.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا تستهلك الشارع كثيراً من الكهرباء من الفحم والغاز؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-27.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل غرس الجيران أشجاراً على ضفة النهر؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-27.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "منذ ذلك الحين ندفأ ___ ونشتري أقلّ بالبلاستيك ونرمي أقل.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-28.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يحق للشركة المطالبة به حسب المحامي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-28.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف انتهت القضية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-28.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل حق الانسحاب لا يسري على الرحلات؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-28.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كلّ ما عدا ذلك عليها أن ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-29.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا عُدّ برودةً في تربية الأم؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-29.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بماذا اتهمت الابنة أمها؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-29.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل تظل الأم من يقرر مصروف الجيب؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-29.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "___ في البيت مكتوبة على ورقة على الثلاجة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-30.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا اضطرت لسحب نقدي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-30.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما أكثر ما أزعجها حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-30.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل وعدت الزبون بالخصم؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b1-30.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "تولّت ___ زميلة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    }
+  ],
+  "contextNotes": {},
+  "styleAlternatives": {},
+  "sources": {},
+  "contentChecks": [
+    {
+      "id": "CHK-R140-01",
+      "check": "حقول promptAr الـ100 مملوءة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R140-02",
+      "check": "لا حقول فارغة في نصوص B1 كافة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R140-03",
+      "check": "الأسئلة العربية تطابق الألماني.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R140-04",
+      "check": "الألماني/الخيارات/المفاتيح مقفلة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R140-05",
+      "check": "نصوص B1 كاملة عربياً.",
+      "status": "pass"
+    }
+  ],
+  "contentWarnings": [],
+  "judgement": {
+    "corrected": 100,
+    "unresolved": 0,
+    "note": "استكمال 100 حقل من حقول promptAr الفارغة في نصوص B1 الثلاثين كاملة (t-b1-01..30). النصوص تغطي: الهواتف في المدرسة، طريق ألمانيا، البيئة، رسالة من الوطن، النصائح، إعلان وظيفة، التكوين أم الجامعة، السكن، البيئة اليومية، خلاف المكتب، التطوع، بطاقات الحفظ، مقابلة العمل، المكتبة، الشراء الإلكتروني، سوء فهم، إصلاح الإطار، الأرق في الغربة، التطوع بلا أجر، الانتقال، الشهر الأول، الشرفة، خبر زائف، الصحة في المناوبات، خضرة وضجيج، مسرح، استهلاك أقل، المحكمة، المراهقة، رحلة العمل. العربية مطابقة للألماني في أزمنة الماضي التام والكارجيف وKonjunktiv II والجمل الموصولة؛ لا تعديل للألماني أو المفاتيح. بهذه الدفعة تكتمل نصوص B1 عربياً (30/30)."
+  },
+  "limits": {
+    "human": "لا اعتماد لغوي بشري.",
+    "legal": "لا محتوى قانوني.",
+    "medical": "لا محتوى طبي.",
+    "cefr": "لا إعادة حساب CEFR."
+  },
+  "gates": {
+    "patch": "scripts/patches/review_b1_texts_01.py",
+    "report": "scripts/patches/report_b1_texts_01.py",
+    "smoke": "K214a–j"
+  },
+  "audio": {
+    "mp3Files": 0,
+    "note": "لا استماع."
+  }
+}
