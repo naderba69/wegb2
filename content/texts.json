@@ -298,7 +298,8 @@
           "ist aufgestanden",
           "ist … aufgestanden"
         ],
-        "explanationAr": "الدليل حرفياً: «Am Samstag bin ich früh aufgestanden und habe meine Wohnung aufgeräumt.» — aufstehen ← sein + Partizip II."
+        "explanationAr": "الدليل حرفياً: «Am Samstag bin ich früh aufgestanden und habe meine Wohnung aufgeräumt.» — aufstehen ← sein + Partizip II.",
+        "promptAr": "يوم السبت ___ باكراً (aufstehen)."
       },
       {
         "id": "t-a2-01-q2",
@@ -310,7 +311,8 @@
           "gearbeitet"
         ],
         "answer": "eingekauft und gegessen",
-        "explanationAr": "في النصِّ حرفياً: «Wir haben eingekauft und … gegessen.»"
+        "explanationAr": "في النصِّ حرفياً: «Wir haben eingekauft und … gegessen.»",
+        "promptAr": "ماذا فعلا في المدينة؟"
       },
       {
         "id": "t-a2-01-q3",
@@ -319,7 +321,8 @@
         "answer": [
           "geschlafen"
         ],
-        "explanationAr": "الدليل حرفياً: «Am Sonntag haben wir lange geschlafen.» — schlafen → geschlafen."
+        "explanationAr": "الدليل حرفياً: «Am Sonntag haben wir lange geschlafen.» — schlafen → geschlafen.",
+        "promptAr": "يوم الأحد ___ طويلاً."
       },
       {
         "id": "t-a2-01-q4",
@@ -328,7 +331,8 @@
         "answer": [
           "aufgestanden"
         ],
-        "explanationAr": "الماضي المركّبُ لفعلِ الحركةِ يأخذُ sein: «bin ich früh aufgestanden»."
+        "explanationAr": "الماضي المركّبُ لفعلِ الحركةِ يأخذُ sein: «bin ich früh aufgestanden».",
+        "promptAr": "يوم السبت قمتُ باكراً ___."
       }
     ]
   },
@@ -347,7 +351,8 @@
         "answer": [
           "Hals"
         ],
-        "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Hals weh und ich habe Fieber.» — der Hals = الحلق."
+        "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Hals weh und ich habe Fieber.» — der Hals = الحلق.",
+        "promptAr": "منذ ثلاثة أيام يؤلمه ___."
       },
       {
         "id": "t-a2-02-q2",
@@ -359,7 +364,8 @@
           "zweimal"
         ],
         "answer": "dreimal",
-        "explanationAr": "في النصِّ حرفياً: «dreimal am Tag»."
+        "explanationAr": "في النصِّ حرفياً: «dreimal am Tag».",
+        "promptAr": "كم مرة يأخذ الدواء؟"
       },
       {
         "id": "t-a2-02-q3",
@@ -371,7 +377,8 @@
           "Milch"
         ],
         "answer": "Tee",
-        "explanationAr": "في النصِّ حرفياً: «Trinken Sie viel Tee.»"
+        "explanationAr": "في النصِّ حرفياً: «Trinken Sie viel Tee.»",
+        "promptAr": "ماذا يشرب؟"
       },
       {
         "id": "t-a2-02-q4",
@@ -381,7 +388,8 @@
           "dreimal",
           "3-mal"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Nehmen Sie die Medizin dreimal am Tag nach dem Essen»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Nehmen Sie die Medizin dreimal am Tag nach dem Essen».",
+        "promptAr": "خذ الدواء ___ في اليوم."
       }
     ]
   },
@@ -403,7 +411,8 @@
           "Er ist schneller."
         ],
         "answer": "Man sieht die Landschaft.",
-        "explanationAr": "في النصِّ حرفياً: «weil man die Landschaft sieht»."
+        "explanationAr": "في النصِّ حرفياً: «weil man die Landschaft sieht».",
+        "promptAr": "لماذا القطار أفضل؟"
       },
       {
         "id": "t-a2-03-q2",
@@ -413,7 +422,8 @@
           "80",
           "achtzig"
         ],
-        "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — 80 Euro."
+        "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — 80 Euro.",
+        "promptAr": "القطار يكلف ___ يورو."
       },
       {
         "id": "t-a2-03-q3",
@@ -422,7 +432,8 @@
         "answer": [
           "reserviert"
         ],
-        "explanationAr": "الدليل حرفياً: «Wir haben schon zwei Zimmer reserviert.» — haben … reserviert (Perfekt)."
+        "explanationAr": "الدليل حرفياً: «Wir haben schon zwei Zimmer reserviert.» — haben … reserviert (Perfekt).",
+        "promptAr": "حجزوا غرفتَين ___."
       },
       {
         "id": "t-a2-03-q4",
@@ -433,7 +444,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — القطارُ بثمانينَ يورو والطائرةُ بمئةٍ وعشرين — فالقطارُ أرخص."
+        "explanationAr": "الدليل حرفياً: «Der Zug kostet 80 Euro, das Flugzeug 120 Euro.» — القطارُ بثمانينَ يورو والطائرةُ بمئةٍ وعشرين — فالقطارُ أرخص.",
+        "promptAr": "هل الطائرة أرخص من القطار؟"
       }
     ]
   },
@@ -453,7 +465,8 @@
           "möchte",
           "will"
         ],
-        "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — الفعل للنهاية: studieren möchte."
+        "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — الفعل للنهاية: studieren möchte.",
+        "promptAr": "يتعلّم الألمانية لأنه ___ أن يدرس في ألمانيا."
       },
       {
         "id": "t-a2-04-q2",
@@ -462,7 +475,8 @@
         "answer": [
           "ist"
         ],
-        "explanationAr": "الدليل حرفياً: «Meine Freundin sagt, dass die Grammatik sehr schwer ist.» — dass … ist."
+        "explanationAr": "الدليل حرفياً: «Meine Freundin sagt, dass die Grammatik sehr schwer ist.» — dass … ist.",
+        "promptAr": "قالت الصديقة إن القواعد ___ صعبة."
       },
       {
         "id": "t-a2-04-q3",
@@ -474,7 +488,8 @@
           "weil er in Deutschland wohnt"
         ],
         "answer": "weil er jeden Tag hört und sieht",
-        "explanationAr": "الدليل حرفياً: «Aber ich höre jeden Tag Musik und sehe Serien, deshalb verstehe ich schon viel.» — التعليل في الجملة الأخيرة."
+        "explanationAr": "الدليل حرفياً: «Aber ich höre jeden Tag Musik und sehe Serien, deshalb verstehe ich schon viel.» — التعليل في الجملة الأخيرة.",
+        "promptAr": "لماذا يفهم الكثير فعلاً؟"
       },
       {
         "id": "t-a2-04-q4",
@@ -483,7 +498,8 @@
         "answer": [
           "weil"
         ],
-        "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — weil تدفعُ الفعلَ المصرَّفَ إلى آخرِ الجملة."
+        "explanationAr": "الدليل حرفياً: «Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte.» — weil تدفعُ الفعلَ المصرَّفَ إلى آخرِ الجملة.",
+        "promptAr": "أتعلم الألمانية، ___ أريد الدراسة في ألمانيا."
       }
     ]
   },
@@ -505,7 +521,8 @@
           "um 16 Uhr"
         ],
         "answer": "um 18 Uhr",
-        "explanationAr": "الدليل حرفياً: «Die Party beginnt um 18 Uhr bei mir zu Hause.» — um 18 Uhr = السادسة مساءً."
+        "explanationAr": "الدليل حرفياً: «Die Party beginnt um 18 Uhr bei mir zu Hause.» — um 18 Uhr = السادسة مساءً.",
+        "promptAr": "متى تبدأ الحفلة؟"
       },
       {
         "id": "t-a2-05-q2",
@@ -514,7 +531,8 @@
         "answer": [
           "mit"
         ],
-        "explanationAr": "الدليل حرفياً: «Bring bitte deine Freundin mit!» — mitbringen ينفصل: bring … mit."
+        "explanationAr": "الدليل حرفياً: «Bring bitte deine Freundin mit!» — mitbringen ينفصل: bring … mit.",
+        "promptAr": "أحضر صديقتك ___ من فضلك."
       },
       {
         "id": "t-a2-05-q3",
@@ -526,7 +544,8 @@
           "Neujahr"
         ],
         "answer": "Geburtstag",
-        "explanationAr": "الدليل حرفياً: «Liebe Amina, am Samstag feiere ich meinen Geburtstag!» — عيد الميلاد."
+        "explanationAr": "الدليل حرفياً: «Liebe Amina, am Samstag feiere ich meinen Geburtstag!» — عيد الميلاد.",
+        "promptAr": "ماذا تحتفل نور؟"
       },
       {
         "id": "t-a2-05-q4",
@@ -536,7 +555,8 @@
           "18",
           "achtzehn"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Die Party beginnt um 18 Uhr bei mir zu Hause»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Die Party beginnt um 18 Uhr bei mir zu Hause».",
+        "promptAr": "تبدأ الحفلة الساعة ___."
       }
     ]
   },
@@ -1147,7 +1167,8 @@
         "answer": [
           "geschwommen"
         ],
-        "explanationAr": "الدليل حرفياً: «Am Samstag haben wir am Strand gelegen und im Meer geschwommen.» — schwimmen → geschwommen (شاذ)."
+        "explanationAr": "الدليل حرفياً: «Am Samstag haben wir am Strand gelegen und im Meer geschwommen.» — schwimmen → geschwommen (شاذ).",
+        "promptAr": "يوم السبت ___ في البحر."
       },
       {
         "id": "t-a2-06-q2",
@@ -1159,7 +1180,8 @@
           "weil das Restaurant geschlossen war"
         ],
         "answer": "weil es geregnet hat",
-        "explanationAr": "في النصِّ حرفياً: «Leider hat es … geregnet, deshalb …»."
+        "explanationAr": "في النصِّ حرفياً: «Leider hat es … geregnet, deshalb …».",
+        "promptAr": "لماذا عادوا باكراً؟"
       },
       {
         "id": "t-a2-06-q3",
@@ -1170,7 +1192,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "في النصِّ حرفياً: «Trotzdem war es ein schönes Wochenende.»"
+        "explanationAr": "في النصِّ حرفياً: «Trotzdem war es ein schönes Wochenende.»",
+        "promptAr": "هل كانت العطلة سيئة تماماً؟"
       },
       {
         "id": "t-a2-06-q4",
@@ -1181,7 +1204,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Leider hat es am Sonntag geregnet, deshalb sind wir früher nach Hause gefahren»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Leider hat es am Sonntag geregnet, deshalb sind wir früher nach Hause gefahren».",
+        "promptAr": "هل قضت المجموعة الأحد كله على الشاطئ؟"
       }
     ]
   },
@@ -1203,7 +1227,8 @@
           "jeden Tag"
         ],
         "answer": "dreimal pro Woche",
-        "explanationAr": "في النصِّ حرفياً: «Dreimal pro Woche …»."
+        "explanationAr": "في النصِّ حرفياً: «Dreimal pro Woche …».",
+        "promptAr": "كم مرة يُنصح بممارسة الرياضة؟"
       },
       {
         "id": "t-a2-07-q2",
@@ -1212,7 +1237,8 @@
         "answer": [
           "unkonzentriert"
         ],
-        "explanationAr": "الدليل حرفياً: «Wer zu wenig schläft, ist am Tag müde und unkonzentriert.» — غير مركّز."
+        "explanationAr": "الدليل حرفياً: «Wer zu wenig schläft, ist am Tag müde und unkonzentriert.» — غير مركّز.",
+        "promptAr": "من ينم قليلاً يكون نهاره متعباً و___."
       },
       {
         "id": "t-a2-07-q3",
@@ -1221,7 +1247,8 @@
         "answer": [
           "Wasser"
         ],
-        "explanationAr": "الدليل حرفياً: «Man muss auch genug Wasser trinken.» — ماء."
+        "explanationAr": "الدليل حرفياً: «Man muss auch genug Wasser trinken.» — ماء.",
+        "promptAr": "يجب شرب كمية كافية من ___."
       },
       {
         "id": "t-a2-07-q4",
@@ -1230,7 +1257,8 @@
         "answer": [
           "Stunde"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Dreimal pro Woche eine halbe Stunde bewegen reicht schon»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Dreimal pro Woche eine halbe Stunde bewegen reicht schon».",
+        "promptAr": "التحرك نصف ___ ثلاث مرات في الأسبوع يكفي."
       }
     ]
   },
@@ -1568,7 +1596,8 @@
           "Weil sie Urlaub braucht"
         ],
         "answer": "Weil sie Kopfschmerzen hat",
-        "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Kopf weh.» — لديها صداع منذ ثلاثة أيام (Kopfschmerzen)."
+        "explanationAr": "الدليل حرفياً: «Seit drei Tagen tut mir der Kopf weh.» — لديها صداع منذ ثلاثة أيام (Kopfschmerzen).",
+        "promptAr": "لماذا تتصل بالطبيب؟"
       },
       {
         "id": "t-a2-08-q2",
@@ -1581,7 +1610,8 @@
           "Weniger essen"
         ],
         "answer": "Mehr Wasser trinken und früher schlafen",
-        "explanationAr": "الدليل حرفياً: «Der Arzt untersucht mich und sagt, ich soll mehr Wasser trinken und früher schlafen.» — نصيحة الطبيب: شرب ماء أكثر والنوم أبكر."
+        "explanationAr": "الدليل حرفياً: «Der Arzt untersucht mich und sagt, ich soll mehr Wasser trinken und früher schlafen.» — نصيحة الطبيب: شرب ماء أكثر والنوم أبكر.",
+        "promptAr": "ماذا ينصحها الطبيب؟"
       },
       {
         "id": "t-a2-08-q3",
@@ -1593,7 +1623,8 @@
           "eine Spritze"
         ],
         "answer": "Tabletten",
-        "explanationAr": "«Er verschreibt mir Tabletten.» — التحسينُ كان ماءً ونوماً، لكن الوصفةَ أقراصٌ حرفياً."
+        "explanationAr": "«Er verschreibt mir Tabletten.» — التحسينُ كان ماءً ونوماً، لكن الوصفةَ أقراصٌ حرفياً.",
+        "promptAr": "ماذا يصف الطبيب؟"
       },
       {
         "id": "t-a2-08-q4",
@@ -1602,7 +1633,8 @@
         "answer": [
           "Termin"
         ],
-        "explanationAr": "الدليل حرفياً: «Ich rufe beim Arzt an und sage: „Ich hätte gern einen Termin.“ Die Arzthelferin gibt mir einen Termin am Montag um zehn Uhr.» — صيغةُ طلبٍ مهذّبة: hätte gern + مفعولٌ أكوزاتيف."
+        "explanationAr": "الدليل حرفياً: «Ich rufe beim Arzt an und sage: „Ich hätte gern einen Termin.“ Die Arzthelferin gibt mir einen Termin am Montag um zehn Uhr.» — صيغةُ طلبٍ مهذّبة: hätte gern + مفعولٌ أكوزاتيف.",
+        "promptAr": "أود حجز ___."
       }
     ]
   },
@@ -1625,7 +1657,8 @@
           "Eine Woche"
         ],
         "answer": "Drei Stunden",
-        "explanationAr": "الدليل حرفياً: «Die Fahrt dauert drei Stunden, und ich höre Musik.» — الرحلة تستغرق ثلاث ساعات."
+        "explanationAr": "الدليل حرفياً: «Die Fahrt dauert drei Stunden, und ich höre Musik.» — الرحلة تستغرق ثلاث ساعات.",
+        "promptAr": "كم تستغرق الرحلة؟"
       },
       {
         "id": "t-a2-09-q2",
@@ -1638,7 +1671,8 @@
           "Niemand"
         ],
         "answer": "Eine Frau mit einem Baby",
-        "explanationAr": "الدليل حرفياً: «Neben mir sitzt eine Frau mit einem Baby.» — بجانبه امرأة مع رضيع."
+        "explanationAr": "الدليل حرفياً: «Neben mir sitzt eine Frau mit einem Baby.» — بجانبه امرأة مع رضيع.",
+        "promptAr": "من يجلس بجانبها؟"
       },
       {
         "id": "t-a2-09-q3",
@@ -1650,7 +1684,8 @@
           "Wagen 7, Platz 42"
         ],
         "answer": "Wagen 7, Platz 24",
-        "explanationAr": "«Wagen 7, Platz 24.» — والأرقامُ تُخدعُ من يقلبُها بصرياً فلا تراجعْ تذكرتَك."
+        "explanationAr": "«Wagen 7, Platz 24.» — والأرقامُ تُخدعُ من يقلبُها بصرياً فلا تراجعْ تذكرتَك.",
+        "promptAr": "أي مقعد لها في القطار؟"
       },
       {
         "id": "t-a2-09-q4",
@@ -1660,7 +1695,8 @@
           "drei",
           "3"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Die Fahrt dauert drei Stunden»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Die Fahrt dauert drei Stunden».",
+        "promptAr": "تستغرق الرحلة ___ ساعات."
       }
     ]
   },
@@ -2430,7 +2466,8 @@
           "am Montag"
         ],
         "answer": "nächste Woche",
-        "explanationAr": "في النصِّ حرفياً: «Nächste Woche ziehe ich … um»."
+        "explanationAr": "في النصِّ حرفياً: «Nächste Woche ziehe ich … um».",
+        "promptAr": "متى الانتقال؟"
       },
       {
         "id": "t-a2-10-q2",
@@ -2442,7 +2479,8 @@
           "niemand"
         ],
         "answer": "meine Freunde",
-        "explanationAr": "في النصِّ حرفياً: «helfen mir meine Freunde am Samstag»."
+        "explanationAr": "في النصِّ حرفياً: «helfen mir meine Freunde am Samstag».",
+        "promptAr": "من يساعد يوم السبت؟"
       },
       {
         "id": "t-a2-10-q3",
@@ -2454,7 +2492,8 @@
           "es gibt einen Aufzug"
         ],
         "answer": "die Miete ist günstiger",
-        "explanationAr": "في النصِّ حرفياً: «Dafür ist die Miete günstiger als vorher»."
+        "explanationAr": "في النصِّ حرفياً: «Dafür ist die Miete günstiger als vorher».",
+        "promptAr": "ما ميزة الشقة الجديدة؟"
       },
       {
         "id": "t-a2-10-q4",
@@ -2465,7 +2504,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Dafür ist die Miete günstiger als vorher»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Dafür ist die Miete günstiger als vorher».",
+        "promptAr": "هل الشقة الجديدة أغلى من القديمة؟"
       }
     ]
   },
@@ -2487,7 +2527,8 @@
           "er suchte ein Fahrrad"
         ],
         "answer": "die Lampe war kaputt",
-        "explanationAr": "في النصِّ حرفياً: «weil die Lampe … kaputt war»."
+        "explanationAr": "في النصِّ حرفياً: «weil die Lampe … kaputt war».",
+        "promptAr": "لماذا ذهب إلى متجر الأدوات؟"
       },
       {
         "id": "t-a2-11-q2",
@@ -2499,7 +2540,8 @@
           "der Chef"
         ],
         "answer": "ein Verkäufer",
-        "explanationAr": "الدليل حرفياً: «Zum Glück hat mir ein Verkäufer geduldig geholfen». الفخّ: لا صديق ولا رئيس في النص."
+        "explanationAr": "الدليل حرفياً: «Zum Glück hat mir ein Verkäufer geduldig geholfen». الفخّ: لا صديق ولا رئيس في النص.",
+        "promptAr": "من ساعده؟"
       },
       {
         "id": "t-a2-11-q3",
@@ -2511,7 +2553,8 @@
           "eine neue Lampe"
         ],
         "answer": "zwei Glühbirnen und einen Schraubenzieher",
-        "explanationAr": "في النصِّ حرفياً: «Außerdem habe ich einen Schraubenzieher und zwei Glühbirnen gekauft»."
+        "explanationAr": "في النصِّ حرفياً: «Außerdem habe ich einen Schraubenzieher und zwei Glühbirnen gekauft».",
+        "promptAr": "ماذا اشترى غير السلك؟"
       },
       {
         "id": "t-a2-11-q4",
@@ -2520,7 +2563,8 @@
         "answer": [
           "geduldig"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «hat mir ein Verkäufer geduldig geholfen»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «hat mir ein Verkäufer geduldig geholfen».",
+        "promptAr": "ساعدني البائع ___."
       }
     ]
   },
@@ -2542,7 +2586,8 @@
           "er sucht eine neue Wohnung"
         ],
         "answer": "er renoviert seine Wohnung",
-        "explanationAr": "في النصِّ حرفياً: «Mein neuer Nachbar renoviert seine Wohnung»."
+        "explanationAr": "في النصِّ حرفياً: «Mein neuer Nachbar renoviert seine Wohnung».",
+        "promptAr": "ماذا يفعل الجار منذ الاثنين؟"
       },
       {
         "id": "t-a2-12-q2",
@@ -2554,7 +2599,8 @@
           "um sieben Uhr"
         ],
         "answer": "ab sechs Uhr",
-        "explanationAr": "في النصِّ حرفياً: «ab sechs Uhr»."
+        "explanationAr": "في النصِّ حرفياً: «ab sechs Uhr».",
+        "promptAr": "من الساعة كم يبدأ الضجيج؟"
       },
       {
         "id": "t-a2-12-q3",
@@ -2566,7 +2612,8 @@
           "er hat nichts gesagt"
         ],
         "answer": "er hat sich entschuldigt",
-        "explanationAr": "في النصِّ حرفياً: «Er hat sich entschuldigt und versprochen …»."
+        "explanationAr": "في النصِّ حرفياً: «Er hat sich entschuldigt und versprochen …».",
+        "promptAr": "كيف تفاعل الجار؟"
       },
       {
         "id": "t-a2-12-q4",
@@ -2577,7 +2624,8 @@
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Er hat sich entschuldigt und versprochen, später anzufangen»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Er hat sich entschuldigt und versprochen, später anzufangen».",
+        "promptAr": "هل وعد الجار أن يبدأ لاحقاً؟"
       }
     ]
   },
@@ -2599,7 +2647,8 @@
           "seine Kinder wollten schwimmen lernen"
         ],
         "answer": "er wollte schwimmen lernen",
-        "explanationAr": "في النصِّ حرفياً: «Als Kind habe ich nie schwimmen gelernt. Das wollte ich ändern»."
+        "explanationAr": "في النصِّ حرفياً: «Als Kind habe ich nie schwimmen gelernt. Das wollte ich ändern».",
+        "promptAr": "لماذا سجّل في دورة سباحة؟"
       },
       {
         "id": "t-a2-13-q2",
@@ -2611,7 +2660,8 @@
           "vor den anderen Teilnehmern"
         ],
         "answer": "vor dem tiefen Wasser",
-        "explanationAr": "في النصِّ حرفياً: «Angst vor dem tiefen Wasser»."
+        "explanationAr": "في النصِّ حرفياً: «Angst vor dem tiefen Wasser».",
+        "promptAr": "ممّا كان يخاف في البداية؟"
       },
       {
         "id": "t-a2-13-q3",
@@ -2623,7 +2673,8 @@
           "nach einem Jahr"
         ],
         "answer": "nach acht Wochen",
-        "explanationAr": "في النصِّ حرفياً: «Nach acht Wochen konnte ich … schwimmen»."
+        "explanationAr": "في النصِّ حرفياً: «Nach acht Wochen konnte ich … schwimmen».",
+        "promptAr": "متى استطاع السباحة وحده؟"
       },
       {
         "id": "t-a2-13-q4",
@@ -2633,7 +2684,8 @@
           "acht",
           "8"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Nach acht Wochen konnte ich zum ersten Mal allein … schwimmen»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Nach acht Wochen konnte ich zum ersten Mal allein … schwimmen».",
+        "promptAr": "بعد ___ أسابيع استطعت السباحة وحدي."
       }
     ]
   },
@@ -2655,7 +2707,8 @@
           "seine Tante"
         ],
         "answer": "seine Schwester",
-        "explanationAr": "الدليل حرفياً: «Letzte Woche war meine Schwester zu Besuch in Hamburg». الفخّ: الأخ والعمّة لم يُذكرا."
+        "explanationAr": "الدليل حرفياً: «Letzte Woche war meine Schwester zu Besuch in Hamburg». الفخّ: الأخ والعمّة لم يُذكرا.",
+        "promptAr": "من كان في الزيارة؟"
       },
       {
         "id": "t-a2-14-q2",
@@ -2667,7 +2720,8 @@
           "einen Museumsbesuch"
         ],
         "answer": "eine Bootsfahrt",
-        "explanationAr": "في النصِّ حرفياً: «Am ersten Tag haben wir eine Bootsfahrt … gemacht»."
+        "explanationAr": "في النصِّ حرفياً: «Am ersten Tag haben wir eine Bootsfahrt … gemacht».",
+        "promptAr": "ماذا فعلوا اليوم الأول؟"
       },
       {
         "id": "t-a2-14-q3",
@@ -2679,7 +2733,8 @@
           "zu kalt"
         ],
         "answer": "perfekt",
-        "explanationAr": "في النصِّ حرفياً: «Das Wetter hat … perfekt mitgespielt»."
+        "explanationAr": "في النصِّ حرفياً: «Das Wetter hat … perfekt mitgespielt».",
+        "promptAr": "كيف كان الجو؟"
       },
       {
         "id": "t-a2-14-q4",
@@ -2688,7 +2743,8 @@
         "answer": [
           "Fahrrad"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «am zweiten Tag sind wir mit dem Fahrrad durch die Stadt gefahren»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «am zweiten Tag sind wir mit dem Fahrrad durch die Stadt gefahren».",
+        "promptAr": "اليوم الثاني تجولنا في المدينة ب___."
       }
     ]
   },
@@ -2710,7 +2766,8 @@
           "die Bremsen"
         ],
         "answer": "der Reifen und die Kette",
-        "explanationAr": "في النصِّ حرفياً: «Der Reifen war platt und die Kette … auch»."
+        "explanationAr": "في النصِّ حرفياً: «Der Reifen war platt und die Kette … auch».",
+        "promptAr": "ماذا تعطّل في الدراجة؟"
       },
       {
         "id": "t-a2-15-q2",
@@ -2722,7 +2779,8 @@
           "zwanzig Euro"
         ],
         "answer": "fünfzig Euro",
-        "explanationAr": "في النصِّ حرفياً: «Die Reparatur kostet fünfzig Euro»."
+        "explanationAr": "في النصِّ حرفياً: «Die Reparatur kostet fünfzig Euro».",
+        "promptAr": "كم تكلفة التصليح؟"
       },
       {
         "id": "t-a2-15-q3",
@@ -2734,7 +2792,8 @@
           "es zu verkaufen"
         ],
         "answer": "es reparieren zu lassen",
-        "explanationAr": "في النصِّ حرفياً: «… entschieden, es reparieren zu lassen»."
+        "explanationAr": "في النصِّ حرفياً: «… entschieden, es reparieren zu lassen».",
+        "promptAr": "ماذا قرر؟"
       },
       {
         "id": "t-a2-15-q4",
@@ -2745,7 +2804,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Also habe ich mich entschieden, es reparieren zu lassen»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Also habe ich mich entschieden, es reparieren zu lassen».",
+        "promptAr": "هل اشترى دراجة جديدة؟"
       }
     ]
   },
@@ -2767,7 +2827,8 @@
           "eine Fabrik"
         ],
         "answer": "eine Bäckerei",
-        "explanationAr": "في النصِّ حرفياً: «Eine Bäckerei … sucht eine Aushilfe»."
+        "explanationAr": "في النصِّ حرفياً: «Eine Bäckerei … sucht eine Aushilfe».",
+        "promptAr": "من يبحث عن عامل مؤقت؟"
       },
       {
         "id": "t-a2-16-q2",
@@ -2779,7 +2840,8 @@
           "sie hat mitgearbeitet"
         ],
         "answer": "sie hat den Lebenslauf verbessert",
-        "explanationAr": "في النصِّ حرفياً: «Meine Schwester hat mir geholfen, den Lebenslauf zu verbessern»."
+        "explanationAr": "في النصِّ حرفياً: «Meine Schwester hat mir geholfen, den Lebenslauf zu verbessern».",
+        "promptAr": "ماذا فعلت الأخت؟"
       },
       {
         "id": "t-a2-16-q3",
@@ -2791,7 +2853,8 @@
           "nichts"
         ],
         "answer": "eine Einladung zum Gespräch",
-        "explanationAr": "في النصِّ حرفياً: «hat mich die Chefin angerufen und zu einem Gespräch eingeladen»."
+        "explanationAr": "في النصِّ حرفياً: «hat mich die Chefin angerufen und zu einem Gespräch eingeladen».",
+        "promptAr": "ماذا وصل بعد يومين؟"
       },
       {
         "id": "t-a2-16-q4",
@@ -2800,7 +2863,8 @@
         "answer": [
           "zuverlässig"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «dass ich zuverlässig bin und gerne früh aufstehe»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «dass ich zuverlässig bin und gerne früh aufstehe».",
+        "promptAr": "كتبت في الطلب أنني ___."
       }
     ]
   },
@@ -2822,7 +2886,8 @@
           "das Geld ist knapp"
         ],
         "answer": "die Rechnung war hoch",
-        "explanationAr": "في النصِّ حرفياً: «Die Stromrechnung ist … ziemlich hoch gewesen»."
+        "explanationAr": "في النصِّ حرفياً: «Die Stromrechnung ist … ziemlich hoch gewesen».",
+        "promptAr": "لماذا يريدون التوفير؟"
       },
       {
         "id": "t-a2-17-q2",
@@ -2834,7 +2899,8 @@
           "die Heizung"
         ],
         "answer": "die Lampen durch LED-Lampen",
-        "explanationAr": "في النصِّ حرفياً: «Die alten Glühbirnen ersetzen wir durch LED-Lampen»."
+        "explanationAr": "في النصِّ حرفياً: «Die alten Glühbirnen ersetzen wir durch LED-Lampen».",
+        "promptAr": "ماذا يستبدلون؟"
       },
       {
         "id": "t-a2-17-q3",
@@ -2846,7 +2912,8 @@
           "nie"
         ],
         "answer": "im nächsten Monat",
-        "explanationAr": "في النصِّ حرفياً: «Im nächsten Monat können wir … einen Unterschied sehen»."
+        "explanationAr": "في النصِّ حرفياً: «Im nächsten Monat können wir … einen Unterschied sehen».",
+        "promptAr": "متى يلاحظون الفرق؟"
       },
       {
         "id": "t-a2-17-q4",
@@ -2855,7 +2922,8 @@
         "answer": [
           "LED"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «ersetzen wir durch LED-Lampen, die viel weniger Strom verbrauchen»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «ersetzen wir durch LED-Lampen, die viel weniger Strom verbrauchen».",
+        "promptAr": "نستبدل المصابيح القديمة بمصابيح ___."
       }
     ]
   },
@@ -2877,7 +2945,8 @@
           "den Vertrag verlängert"
         ],
         "answer": "drei Angebote verglichen",
-        "explanationAr": "في النصِّ حرفياً: «habe drei Angebote verglichen»."
+        "explanationAr": "في النصِّ حرفياً: «habe drei Angebote verglichen».",
+        "promptAr": "ماذا فعل في المتجر؟"
       },
       {
         "id": "t-a2-18-q2",
@@ -2889,7 +2958,8 @@
           "zehn Gigabytes"
         ],
         "answer": "fünf Gigabytes",
-        "explanationAr": "في النصِّ حرفياً: «fünf Gigabytes Datenvolumen»."
+        "explanationAr": "في النصِّ حرفياً: «fünf Gigabytes Datenvolumen».",
+        "promptAr": "كم حجم البيانات؟"
       },
       {
         "id": "t-a2-18-q3",
@@ -2901,7 +2971,8 @@
           "drei Jahre"
         ],
         "answer": "zwei Jahre",
-        "explanationAr": "في النصِّ حرفياً: «die Vertragslaufzeit zwei Jahre beträgt»."
+        "explanationAr": "في النصِّ حرفياً: «die Vertragslaufzeit zwei Jahre beträgt».",
+        "promptAr": "كم مدة العقد؟"
       },
       {
         "id": "t-a2-18-q4",
@@ -2911,7 +2982,8 @@
           "zwei",
           "2"
         ],
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «dass die Vertragslaufzeit zwei Jahre beträgt»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «dass die Vertragslaufzeit zwei Jahre beträgt».",
+        "promptAr": "مدة العقد ___ سنوات."
       }
     ]
   },
@@ -3973,7 +4045,8 @@
           "650 Euro",
           "sechshundertfünfzig"
         ],
-        "explanationAr": "الدليل حرفياً: «Die Kaltmiete beträgt 520 Euro, dazu kommen 130 Euro Nebenkosten.» — 520 صافٍ + 130 جانبية = 650؛ وهذا هو الفرقُ العمليُّ بينَ Kaltmiete وWarmmiete."
+        "explanationAr": "الدليل حرفياً: «Die Kaltmiete beträgt 520 Euro, dazu kommen 130 Euro Nebenkosten.» — 520 صافٍ + 130 جانبية = 650؛ وهذا هو الفرقُ العمليُّ بينَ Kaltmiete وWarmmiete.",
+        "promptAr": "الأجرة الشاملة مع التدفئة ___ يورو."
       },
       {
         "id": "t-a2-19-q2",
@@ -3985,7 +4058,8 @@
           "130 Euro"
         ],
         "answer": "1040 Euro",
-        "explanationAr": "«zwei Monatsmieten» أي ضِعفُ الإيجارِ الصافي 520."
+        "explanationAr": "«zwei Monatsmieten» أي ضِعفُ الإيجارِ الصافي 520.",
+        "promptAr": "كم مبلغ التأمين؟"
       },
       {
         "id": "t-a2-19-q3",
@@ -3997,7 +4071,8 @@
           "Der Vermieter war unfreundlich"
         ],
         "answer": "Es gab zwölf Interessenten",
-        "explanationAr": "في النصِّ حرفياً: «es waren zwölf Interessenten da»."
+        "explanationAr": "في النصِّ حرفياً: «es waren zwölf Interessenten da».",
+        "promptAr": "لماذا الفرصة ضئيلة؟"
       },
       {
         "id": "t-a2-19-q4",
@@ -4008,7 +4083,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «im dritten Stock, ohne Aufzug»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «im dritten Stock, ohne Aufzug».",
+        "promptAr": "هل الشقة في الطابق الثالث وبها مصعد؟"
       }
     ]
   },
@@ -4030,7 +4106,8 @@
           "Der Chef war krank"
         ],
         "answer": "Er hatte die Frist falsch verstanden",
-        "explanationAr": "«Ich hatte verstanden, dass die Frist am Mittwoch endet» — ماضٍ أسبق Plusquamperfekt."
+        "explanationAr": "«Ich hatte verstanden, dass die Frist am Mittwoch endet» — ماضٍ أسبق Plusquamperfekt.",
+        "promptAr": "لماذا لم يكن التقرير جاهزاً؟"
       },
       {
         "id": "t-a2-20-q2",
@@ -4041,7 +4118,8 @@
           "18",
           "18 Uhr"
         ],
-        "explanationAr": "«bis achtzehn Uhr» أي السادسةَ مساءً."
+        "explanationAr": "«bis achtzehn Uhr» أي السادسةَ مساءً.",
+        "promptAr": "يرسل التقرير حتى الساعة ___."
       },
       {
         "id": "t-a2-20-q3",
@@ -4053,7 +4131,8 @@
           "Er kommt früher"
         ],
         "answer": "Er schreibt jede Frist in den Kalender",
-        "explanationAr": "في النصِّ حرفياً: «Seitdem schreibe ich mir jede Frist in den Kalender.»"
+        "explanationAr": "في النصِّ حرفياً: «Seitdem schreibe ich mir jede Frist in den Kalender.»",
+        "promptAr": "ماذا يفعل الآن دائماً؟"
       },
       {
         "id": "t-a2-20-q4",
@@ -4064,7 +4143,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "الجوابُ في النصِّ حرفياً: «Der Chef war ruhig»."
+        "explanationAr": "الجوابُ في النصِّ حرفياً: «Der Chef war ruhig».",
+        "promptAr": "هل صرخ المدير بصوت عالٍ؟"
       }
     ]
   },
