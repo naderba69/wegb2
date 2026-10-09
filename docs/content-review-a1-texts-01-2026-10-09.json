@@ -1,0 +1,374 @@
+{
+  "reviewRule": "R136",
+  "batchLabel": "أول دفعة نصوص A1",
+  "targetIds": [
+    "t-a1-01",
+    "t-a1-02",
+    "t-a1-03"
+  ],
+  "totals": {
+    "texts": 3,
+    "questions": 12,
+    "approximateUnits": 24
+  },
+  "snapshots": {
+    "t-a1-01": {
+      "id": "t-a1-01",
+      "level": "A1",
+      "titleDe": "Ein neuer Tag",
+      "titleAr": "يوم جديد",
+      "de": "Ich heiße Youssef und bin 27 Jahre alt. Ich komme aus Tunesien und wohne seit einem Jahr in Berlin. Ich bin Ingenieur und arbeite in einer kleinen Firma. Jeden Tag stehe ich um halb sieben auf. Zuerst trinke ich Kaffee, dann fahre ich mit dem Bus zur Arbeit. Deutsch lerne ich jeden Abend. Es ist schwer, aber ich mache Fortschritte.",
+      "ar": "اسمي يوسف وعمري 27. من تونس وأسكن في برلين منذ سنة. أنا مهندس وأعمل في شركة صغيرة. كل يوم أقوم في السادسة والنصف. أولاً أشرب القهوة ثم أذهب بالحافلة إلى العمل. الألمانية أتعلّمها كل مساء. إنها صعبة لكنني أحرز تقدماً.",
+      "questions": [
+        {
+          "id": "t-a1-01-q1",
+          "type": "mc",
+          "promptDe": "Woher kommt Youssef?",
+          "options": [
+            "aus Berlin",
+            "aus Tunesien",
+            "aus Syrien"
+          ],
+          "answer": "aus Tunesien",
+          "explanationAr": "في النصِّ حرفياً: «Ich komme aus Tunesien.»",
+          "promptAr": "من أين يوسف؟"
+        },
+        {
+          "id": "t-a1-01-q2",
+          "type": "fill",
+          "promptDe": "Er steht um ___ auf. (Zeit)",
+          "answer": [
+            "halb sieben",
+            "6:30",
+            "6.30"
+          ],
+          "explanationAr": "الدليل حرفياً: «Jeden Tag stehe ich um halb sieben auf.» — halb sieben = 6:30.",
+          "promptAr": "يقوم في الساعة ___ (الوقت)."
+        },
+        {
+          "id": "t-a1-01-q3",
+          "type": "truefalse",
+          "promptDe": "Er arbeitet in einer großen Firma.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "في النصِّ حرفياً: «in einer kleinen Firma».",
+          "promptAr": "يعمل في شركة كبيرة."
+        },
+        {
+          "id": "t-a1-01-q4",
+          "type": "fill",
+          "promptDe": "Youssef steht um ___ sieben auf.",
+          "answer": [
+            "halb"
+          ],
+          "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Jeden Tag stehe ich um halb sieben auf» — halb sieben = 6:30.",
+          "promptAr": "يوسف يقوم في الساعة ___ والنصف."
+        }
+      ]
+    },
+    "t-a1-02": {
+      "id": "t-a1-02",
+      "level": "A1",
+      "titleDe": "Meine Familie",
+      "titleAr": "عائلتي",
+      "de": "Das ist meine Familie. Mein Vater heißt Ahmed und ist Lehrer. Meine Mutter heißt Salma und kocht sehr gut. Ich habe einen Bruder und zwei Schwestern. Mein Bruder wohnt in Sfax, meine Schwestern wohnen bei meinen Eltern. Am Freitag essen wir immer zusammen. Ich vermisse meine Familie, aber wir telefonieren jeden Tag.",
+      "ar": "هذه عائلتي. أبي اسمه أحمد وهو معلّم. أمي اسمها سلمى وتطبخ جيداً جداً. عندي أخ وأختان. أخي يسكن في صفاقس وأخواتي تسكن مع والديّ. يوم الجمعة نأكل دائماً معاً. أفتقد عائلتي لكننا نتصل هاتفياً كل يوم.",
+      "questions": [
+        {
+          "id": "t-a1-02-q1",
+          "type": "mc",
+          "promptDe": "Was ist der Vater von ihm?",
+          "options": [
+            "Arzt",
+            "Lehrer",
+            "Ingenieur"
+          ],
+          "answer": "Lehrer",
+          "explanationAr": "في النصِّ حرفياً: «Mein Vater … ist Lehrer.»",
+          "promptAr": "ماذا يعمل أبيه؟"
+        },
+        {
+          "id": "t-a1-02-q2",
+          "type": "fill",
+          "promptDe": "Er hat einen Bruder und ___ Schwestern.",
+          "answer": [
+            "zwei"
+          ],
+          "explanationAr": "الدليل حرفياً: «Ich habe einen Bruder und zwei Schwestern.» — zwei Schwestern.",
+          "promptAr": "عنده أخ و___ أخوات."
+        },
+        {
+          "id": "t-a1-02-q3",
+          "type": "mc",
+          "promptDe": "Wann essen sie zusammen?",
+          "options": [
+            "Am Freitag",
+            "Am Montag",
+            "Jeden Tag"
+          ],
+          "answer": "Am Freitag",
+          "explanationAr": "في النصِّ حرفياً: «Am Freitag essen wir immer zusammen.»",
+          "promptAr": "متى يأكلون معاً؟"
+        },
+        {
+          "id": "t-a1-02-q4",
+          "type": "fill",
+          "promptDe": "Am ___ essen wir immer zusammen.",
+          "answer": [
+            "Freitag"
+          ],
+          "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Am Freitag essen wir immer zusammen».",
+          "promptAr": "يوم ___ نأكل دائماً معاً."
+        }
+      ]
+    },
+    "t-a1-03": {
+      "id": "t-a1-03",
+      "level": "A1",
+      "titleDe": "Im Supermarkt: Wo ist die Milch?",
+      "titleAr": "في السوبرماركت: أين الحليب؟",
+      "de": "Entschuldigung, wo ist die Milch? Die Milch ist dort, hinter dem Käse. Danke! Ich möchte noch Brot und Eier. Das Brot kostet zwei Euro, die Eier drei Euro. Zusammen fünf Euro. Haben Sie eine Tüte? Ja, hier, bitte. Auf Wiedersehen!",
+      "ar": "عفواً، أين الحليب؟ الحليب هناك خلف الجبن. شكراً! أريد أيضاً خبزاً وبيضاً. الخبز بيوروين والبيض بثلاثة يورو. المجموع خمسة يورو. هل لديكم كيس؟ نعم، تفضّل. إلى اللقاء!",
+      "questions": [
+        {
+          "id": "t-a1-03-q1",
+          "type": "mc",
+          "promptDe": "Wo ist die Milch?",
+          "options": [
+            "vor dem Käse",
+            "hinter dem Käse",
+            "neben dem Brot"
+          ],
+          "answer": "hinter dem Käse",
+          "explanationAr": "«hinter dem Käse» — خلف الجبن.",
+          "promptAr": "أين الحليب؟"
+        },
+        {
+          "id": "t-a1-03-q2",
+          "type": "fill",
+          "promptDe": "Brot kostet ___ Euro.",
+          "answer": [
+            "zwei",
+            "2"
+          ],
+          "explanationAr": "الدليل حرفياً: «Das Brot kostet zwei Euro, die Eier drei Euro.» — zwei Euro.",
+          "promptAr": "الخبز يكلف ___ يورو."
+        },
+        {
+          "id": "t-a1-03-q3",
+          "type": "fill",
+          "promptDe": "Zusammen ___ Euro.",
+          "answer": [
+            "fünf",
+            "funf",
+            "5"
+          ],
+          "explanationAr": "الدليل حرفياً: «Zusammen fünf Euro.» — المجموع خمسة.",
+          "promptAr": "المجموع ___ يورو."
+        },
+        {
+          "id": "t-a1-03-q4",
+          "type": "fill",
+          "promptDe": "Das Brot kostet ___ Euro.",
+          "answer": [
+            "zwei",
+            "2"
+          ],
+          "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Das Brot kostet zwei Euro».",
+          "promptAr": "الخبز يكلف ___ يورو."
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "unit": "t-a1-01.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "من أين يوسف؟",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-01.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "يقوم في الساعة ___ (الوقت).",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-01.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "يعمل في شركة كبيرة.",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-01.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "يوسف يقوم في الساعة ___ والنصف.",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-02.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يعمل أبيه؟",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-02.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "عنده أخ و___ أخوات.",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-02.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "متى يأكلون معاً؟",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-02.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "يوم ___ نأكل دائماً معاً.",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-03.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أين الحليب؟",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-03.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "الخبز يكلف ___ يورو.",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-03.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "المجموع ___ يورو.",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    },
+    {
+      "unit": "t-a1-03.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "الخبز يكلف ___ يورو.",
+      "reason": "استكمال حقل promptAr فارغ لسؤال نص A1 مطابقة الألماني."
+    }
+  ],
+  "contextNotes": {
+    "t-a1-01": [
+      {
+        "note": "نص تعريفي عن شاب تونسي في برلين؛ نصف سابعة = 6:30 صباحاً."
+      },
+      {
+        "note": "«شركة صغيرة» لا كبيرة، لذا جواب الصح/الخطأ Q2 هو falsch."
+      },
+      {
+        "note": "«يحرز تقدماً» لـFortschritte machen ترجمة صحيحة."
+      }
+    ],
+    "t-a1-02": [
+      {
+        "note": "يوم الجمعة = Am Freitag يوم الأكل معاً عند العائلة العربية (تقارب ثقافي مناسب)."
+      },
+      {
+        "note": "عندي أخ وأختان (Bruder/zwei Schwestern) مطابق للألماني."
+      },
+      {
+        "note": "صفاقس مدينة تونسية ساحلية؛ النص يطابق d-a2-27 في ذكر سوسة/صفاقس."
+      }
+    ],
+    "t-a1-03": [
+      {
+        "note": "حوار سوبرماركت: الحليب خلف الجبن، الخبز 2 يورو، البيض 3 يورو، المجموع 5 يورو."
+      },
+      {
+        "note": "Q1 وQ3 يتطابقان في الجواب (zwei/2) وهو تكرار تعليمي مقصود."
+      },
+      {
+        "note": "«تفضّل» لـbitte، «عفواً» لـEntschuldigung؛ صياغ سليمة."
+      }
+    ]
+  },
+  "styleAlternatives": {},
+  "sources": {
+    "t-a1-01": [
+      {
+        "cite": "Goethe A1 — Sich vorstellen / Tagesablauf.",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "مفردات التعريف بالاسم/العمر/السكن/المهنة والروتين اليومي."
+      }
+    ],
+    "t-a1-02": [
+      {
+        "cite": "Goethe A1 — Meine Familie.",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "الأب/الأم/الإخوة والعائلة والروتين الأسبوعي."
+      }
+    ],
+    "t-a1-03": [
+      {
+        "cite": "Goethe A1 — Einkaufen (Im Supermarkt).",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "مفردات التسوّق والسؤال عن موقع السلع والأسعار البسيطة."
+      }
+    ]
+  },
+  "contentChecks": [
+    {
+      "id": "CHK-R136-01",
+      "check": "حقول promptAr الاثنا عشر مملوءة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R136-02",
+      "check": "الأسئلة العربية تطابق الألماني معنىً.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R136-03",
+      "check": "الألماني/الخيارات/المفاتيح/العناوين/النصوص مقفلة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R136-04",
+      "check": "لا تحذيرات محتوى جديدة.",
+      "status": "pass"
+    }
+  ],
+  "contentWarnings": [],
+  "judgement": {
+    "corrected": 12,
+    "unresolved": 0,
+    "note": "استكمال اثني عشر حقلاً من حقول promptAr الفارغة في نصوص A1 الثلاثة الأولى (t-a1-01..03). رُوجعت النصوص والترجمات العربية؛ العربية مطابقة للألماني في أزمنة الحاضر البسيط، ومفردات التعريف، والعائلة، والتسوق. لا تعديل للألماني أو المفاتيح."
+  },
+  "limits": {
+    "human": "لا اعتماد لغوي بشري.",
+    "legal": "لا محتوى قانوني.",
+    "medical": "لا محتوى طبي.",
+    "cefr": "لا إعادة حساب CEFR."
+  },
+  "gates": {
+    "patch": "scripts/patches/review_a1_texts_01.py",
+    "report": "scripts/patches/report_a1_texts_01.py",
+    "smoke": "K210a–j"
+  },
+  "audio": {
+    "mp3Files": 0,
+    "note": "لا استماع للصوت."
+  }
+}

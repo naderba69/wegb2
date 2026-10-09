@@ -9707,6 +9707,8 @@ void 0;
   const reviewB210 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.json", "utf8")) as any;
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
   const reviewA0T1 = JSON.parse(readFileSync("docs/content-review-a0-texts-01-2026-10-09.json", "utf8")) as any;
+  const reviewA1T1 = JSON.parse(readFileSync("docs/content-review-a1-texts-01-2026-10-09.json", "utf8")) as any;
+  const reviewA1T1Md = readFileSync("docs/content-review-a1-texts-01-2026-10-09.md", "utf8");
   const reviewA0T1Md = readFileSync("docs/content-review-a0-texts-01-2026-10-09.md", "utf8");
   const reviewFixW5Md = readFileSync("docs/content-review-fix-w5-2026-10-09.md", "utf8");
   const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
@@ -9973,6 +9975,37 @@ void 0;
     "K209i فحوص محتوى لا تقل عن أربعة");
   ok(a0t.every((t:any)=>t.de && t.ar && t.titleDe && t.titleAr && Array.isArray(t.questions) && t.questions.length>=3),
     "K209j كل نص A0 له عنوان ونص ألماني/عربي وأسئلة، وجميع الحقول مقفلة");
+/* ═══ K210 — أول دفعة نصوص A1 t-a1-01..03 (R136). ═══ */
+{
+  const reviewA1T1 = JSON.parse(readFileSync("docs/content-review-a1-texts-01-2026-10-09.json", "utf8")) as any;
+  const patchA1T1Src = readFileSync("scripts/patches/review_a1_texts_01.py", "utf8");
+  const reviewA1T1Md = readFileSync("docs/content-review-a1-texts-01-2026-10-09.md", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json","utf8")) as any[];
+  const a1t = textsArr.filter((t:any)=>["t-a1-01","t-a1-02","t-a1-03"].includes(t.id));
+  ok(reviewA1T1.reviewRule === "R136" && a1t.length === 3 && reviewA1T1.totals.texts === 3,
+    "K210a ثلاثة نصوص A1 موثقة في التقرير");
+  const emptyA1 = a1t.flatMap((t:any)=>t.questions).filter((q:any)=>!q.promptAr || !q.promptAr.trim()).length;
+  ok(emptyA1 === 0, `K210b لا حقول promptAr فارغة في نصوص A1 الأولى (فعلياً ${emptyA1})`);
+  ok(reviewA1T1.corrections.length === 12 && reviewA1T1.judgement.corrected === 12 && reviewA1T1.judgement.unresolved === 0,
+    "K210c اثنا عشر تصحيحاً مؤكَّداً بلا غير محسوم");
+  const t01=a1t.find((t:any)=>t.id==="t-a1-01"), t02=a1t.find((t:any)=>t.id==="t-a1-02"), t03=a1t.find((t:any)=>t.id==="t-a1-03");
+  ok(t01.questions[0].promptAr==="من أين يوسف؟" && t02.questions[0].promptAr==="ماذا يعمل أبيه؟" && t03.questions[0].promptAr==="أين الحليب؟",
+    "K210d نماذج من الأسئلة العربية المستكملة مطابقة");
+  ok(reviewA1T1.contextNotes["t-a1-01"]?.length>=3 && reviewA1T1.contextNotes["t-a1-02"]?.length>=3 && reviewA1T1.contextNotes["t-a1-03"]?.length>=3,
+    "K210e ملاحظات سياقية لكل نص");
+  ok(patchA1T1Src.includes("<R136> patch complete") && patchA1T1Src.includes("locked titles:"),
+    "K210f الرقعة تطبّق الاثني عشر تصحيحاً وتطبع سطر النهاية");
+  ok(reviewA1T1Md.includes("## الحكم") && reviewA1T1Md.includes("## التصحيحات") && reviewA1T1Md.includes("K210"),
+    "K210g التقرير العربي بصيغه الصحيحة ويذكر K210");
+  ok(reviewA1T1.limits.human && reviewA1T1.audio.note.includes("لا استماع"),
+    "K210h الحدود معلَنة والصوت بلا استماع");
+  ok(Array.isArray(reviewA1T1.contentChecks) && reviewA1T1.contentChecks.length >= 4,
+    "K210i فحوص محتوى لا تقل عن أربعة");
+  ok(a1t.every((t:any)=>t.de && t.ar && t.titleDe && t.titleAr && Array.isArray(t.questions) && t.questions.length>=4),
+    "K210j كل نص A1 له عنوان ونص ألماني/عربي وأسئلة، وجميع الحقول مقفلة");
+}
+
+
 }
 
 
