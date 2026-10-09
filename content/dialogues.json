@@ -10458,5 +10458,54 @@
       "A – L – I. Ali.",
       "Danke!"
     ]
+  },
+  {
+    "id": "dlg-a1-fahrkarte",
+    "level": "A1",
+    "titleDe": "Eine Fahrkarte kaufen",
+    "titleAr": "شراء تذكرة قطار",
+    "de": "Guten Tag! Ich möchte eine Fahrkarte nach Berlin, bitte.\nEinfach oder hin und zurück?\nEinfach, bitte. Wann fährt der nächste Zug?\nUm Viertel nach zehn von Gleis vier.\nWas kostet die Karte?\nNeunundzwanzig Euro, bitte.\nHier sind dreißig Euro.\nDanke, und einen Euro zurück. Gute Fahrt!\nVielen Dank, auf Wiedersehen!",
+    "ar": "— نهار سعيد! أريد تذكرة إلى برلين من فضلك.\n— ذهاب فقط أم ذهاب وعودة؟\n— ذهاب فقط، من فضلك. متى يغادر القطار التالي؟\n— الساعة العاشرة والربع من الرصيف الرابع.\n— بكم التذكرة؟\n— تسعة وعشرون يورو من فضلك.\n— هنا ثلاثون يورو.\n— شكراً، يورو كباقي. رحلة سعيدة!\n— شكراً جزيلاً، إلى اللقاء!",
+    "questions": [
+      {
+        "q": "Was für eine Fahrkarte kauft er?",
+        "options": [
+          "Hin und Rückfahrt",
+          "Einfach",
+          "Gruppenkarte"
+        ],
+        "answer": "Einfach",
+        "explanationAr": "يشتري تذكرة Einfach (ذهاب فقط)."
+      },
+      {
+        "q": "Von welchem Gleis fährt der Zug?",
+        "options": [
+          "Gleis 3",
+          "Gleis 4",
+          "Gleis 5"
+        ],
+        "answer": "Gleis 4",
+        "explanationAr": "القطار من الرصيف الرابع (Gleis vier)."
+      },
+      {
+        "q": "Was kostet die Fahrkarte?",
+        "options": [
+          "29 €",
+          "30 €",
+          "19 €"
+        ],
+        "answer": "29 €",
+        "explanationAr": "التذكرة بتسعة وعشرين يورو."
+      }
+    ]
+  },
+  {
+    "id": "dlg-a1-reklamation-hotel",
+    "level": "A2",
+    "titleDe": "Reklamation im Hotel",
+    "titleAr": "شكوى في الفندق",
+    "de": "Guten Abend. Ich habe ein Problem mit meinem Zimmer.\nGuten Abend. Was ist los?\nDas Zimmer ist nicht sauber und das Licht im Bad funktioniert nicht.\nEs tut mir sehr leid. Ich schicke sofort jemand, der das repariert.\nUnd das WLAN funktioniert auch nicht!\nIch kann Ihnen ein anderes Zimmer anbieten. Zimmer 214 ist frei.\nVielen Dank, das ist sehr freundlich.",
+    "ar": "— مساء الخير. عندي مشكلة في غرفتي.\n— مساء الخير. ما الأمر؟\n— الغرفة غير نظيفة والمصباح في الحمام لا يعمل.\n— أعتذر جداً. سأرسل حالاً شخصاً ليصلح ذلك.\n— والـWLAN لا يعمل أيضاً!\n— يمكنني أن أعرض عليك غرفة أخرى. الغرفة 214 شاغرة.\n— شكراً جزيلاً، هذا لطف منك.",
+    "questions": []
   }
 ]
