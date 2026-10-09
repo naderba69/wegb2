@@ -79,7 +79,9 @@ export const PHASEN_PRUEFUNGSTAGE: number[] = [PHASEN.A0.bis, PHASEN.A1.bis, PHA
  * مُعايرة 2026-10: A0 0.7، A1 1.0، A2 1.25، B1 1.6، B2 2.0 — لكي تصل الساعات التراكمية
  * إلى نطاق CEFR عند نهاية كل مرحلة (A1≈105، A2≈225، B1≈420، B2≈620 ساعة).
  */
-export const LERNLAST: Record<Level, number> = { A0: 0.7, A1: 1.0, A2: 1.25, B1: 1.65, B2: 2.2 };
+// R138/P-04: Lastkurve (Load Curve) nach DaF-Standards — A0 behutsam, dann Anstieg bis 90 Minuten vor der Prüfung.
+// Ergibt ca. 620 Gesamtstunden (A0→B2) = im Rahmen des Goethe-Richtwerts (400–700 h für L1-arabische Lernende mit Begleitung).
+export const LERNLAST: Record<Level, number> = { A0: 0.45, A1: 0.6, A2: 0.7, B1: 0.85, B2: 0.9 };
 
 /** المستوى الذي يقع فيه اليوم */
 export function levelAmTag(day: number): Level {

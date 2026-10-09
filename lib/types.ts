@@ -454,7 +454,8 @@ export interface Progress {
 }
 
 export const TOTAL_DAYS = 378;
-export const CURRICULUM_SCHEDULE_VERSION = 3;
+// R138: P-01/P-03 grammar reorder (Artikel day 4, Akkusativ before trennbar, Futur/weil-dass to A2, Plural earlier).
+export const CURRICULUM_SCHEDULE_VERSION = 4;
 
 export const emptyProgress: Progress = {
   v: 2,

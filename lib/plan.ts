@@ -82,9 +82,12 @@ const PHASE_RANGES: { phase: Phase; from: number; to: number; level: Level }[] =
 ];
 
 export const PHASE_TOPICS: Record<Phase, string[]> = {
-  A0: ["a0-begrussung", "a0-buchstaben", "a0-zahlen", "a1-pronomen", "a1-sein-haben", "a1-praesens", "a1-zahlen"],
-  A1: ["a1-praesens", "a1-pronomen", "a1-sein-haben", "a1-trennbar", "a1-weil-dass", "a1-war-hatte", "a1-zahlen", "a1-akkusativ", "a1-modalverben", "a1-dativ", "a1-wechsel", "a1-imperativ", "a1-perfekt-einf", "a1-futur-einf", "a1-plural", "a1-zeitpraep"],
-  A2: ["a2-praeteritum-grund", "a2-praeteritum", "a2-perfekt", "a2-dativ", "a2-wasfuer", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-weil-dass", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a2-futur", "a2-verschmolzene", "a2-neben", "a2-demo"],
+  // R138/P-03: a0-artikel (der/die/das + Plural) added to A0 so gender is taught from day ~4; R138/P-21: a0-du-sie added after begrüßung. R138/P-02: dedicated Aussprache units (vowels day 3, umlaut day 10, ch day 17, r day 24, sp/st day 31, auslaut day 38).
+  A0: ["a0-begrussung", "a0-buchstaben", "a0-du-sie", "a0-artikel", "a0-aussprache-vowels", "a0-zahlen", "a0-aussprache-umlaut", "a1-sein-haben", "a1-pronomen", "a1-praesens", "a1-zahlen"],
+  // R138/P-01: a1-weil-dass & a1-futur-einf moved to A2 (too early for A1). Reordered so akkusativ precedes trennbar. Aussprache units spaced weekly.
+  A1: ["a1-sein-haben", "a1-pronomen", "a1-praesens", "a1-zahlen", "a1-akkusativ", "a1-plural", "a1-trennbar", "a1-aussprache-ch", "a1-modalverben", "a1-dativ", "a1-aussprache-r", "a1-wechsel", "a1-aussprache-sp-st", "a1-imperativ", "a1-perfekt-einf", "a1-war-hatte", "a1-zeitpraep", "a1-aussprache-auslaut"],
+  // R138/P-01: added a1-weil-dass (renamed to be A2 introductory weil/dass) and a1-futur-einf (now A2); existing a2-weil-dass deepens, a2-futur covers Futur I fully.
+  A2: ["a2-perfekt", "a2-praeteritum-grund", "a2-praeteritum", "a1-weil-dass", "a2-weil-dass", "a2-dativ", "a2-wasfuer", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a1-futur-einf", "a2-futur", "a2-verschmolzene", "a2-neben", "a2-demo"],
   B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-konj2-vergangenheit", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-partizip1", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben", "b1-absicht", "b1-adjektivendungen"],
   B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-nominalstil", "b2-redew", "b2-textkonnektoren"],
   Abschluss: [],

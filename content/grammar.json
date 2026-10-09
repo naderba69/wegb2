@@ -6,6 +6,7 @@
     "level": "A1",
     "ziel": "تصرّف sein وhaben في المضارع بلا تردد وتستعملهما في 5 جمل عن نفسك.",
     "voraus": [
+      "a0-artikel",
       "a0-begrussung"
     ],
     "anwendung": {
@@ -247,6 +248,7 @@
     "level": "A1",
     "ziel": "تستخدم ضمائر الفاعل وأدوات الملكية (mein/dein/sein) مع الاسم الصحيح.",
     "voraus": [
+      "a0-artikel",
       "a0-begrussung"
     ],
     "anwendung": {
@@ -474,7 +476,8 @@
     "level": "A1",
     "ziel": "تصرّف الأفعال المنتظمة وأمثلة الأفعال ذات تغيّر حركة الجذر في المضارع، وتبني سؤال W- وسؤال نعم/لا.",
     "voraus": [
-      "a0-begrussung"
+      "a1-pronomen",
+      "a1-sein-haben"
     ],
     "anwendung": {
       "ar": "اكتب 5 أسئلة لزميل جديد (Wo wohnst du؟ Was machst du؟ …) ثم أجب عنها بنفسك.",
@@ -725,7 +728,8 @@
     "level": "A1",
     "ziel": "تفصل السابقة المنفصلة إلى آخر الجملة في المضارع.",
     "voraus": [
-      "a1-praesens"
+      "a1-praesens",
+      "a1-akkusativ"
     ],
     "anwendung": {
       "ar": "صِف صباحك في 4 جمل بأفعال منفصلة (aufstehen, einkaufen, anrufen, fernsehen).",
@@ -8736,7 +8740,8 @@
     "level": "A1",
     "ziel": "تطبّق نمط Partizip II المنتظم مع haben على أمثلة الدرس المحددة (ge-…-t).",
     "voraus": [
-      "a1-sein-haben"
+      "a1-sein-haben",
+      "a1-akkusativ"
     ],
     "anwendung": {
       "ar": "احكِ يومك أمس في 4 جمل بالماضي التام (Heute habe ich … gemacht).",
@@ -8899,10 +8904,11 @@
     "id": "a1-futur-einf",
     "titleDe": "Futur I (Einführung): werden + Infinitiv",
     "titleAr": "مقدمة المستقبل البسيط",
-    "level": "A1",
+    "level": "A2",
     "ziel": "تستخدم صيغة Futur I: werden المصرف + مصدر الفعل، في الجملة الخبرية الرئيسية.",
     "voraus": [
-      "a1-praesens"
+      "a2-praesens-wdh",
+      "a2-perfekt"
     ],
     "anwendung": {
       "ar": "اكتب خطط عطلة نهاية الأسبوع: 4 جمل بـ werden.",
@@ -11245,10 +11251,10 @@
     "id": "a1-weil-dass",
     "titleDe": "weil · dass — Gründe und Aussagen verbinden",
     "titleAr": "لأن وأن — الجمل التابعة في المستوى A1",
-    "level": "A1",
+    "level": "A2",
     "ziel": "تربط جملتين بـ weil للسبب أو بـ dass لمضمون قول أو اعتقاد، مع الفعل المصرف في نهاية الجملة التابعة المستهدفة.",
     "voraus": [
-      "a1-praesens"
+      "a2-perfekt"
     ],
     "anwendung": {
       "ar": "علِّل 3 عادات لك بـ weil (Ich trinke Kaffee, weil …).",
@@ -11554,6 +11560,7 @@
     "titleAr": "أنماط شائعة لجمع الأسماء",
     "ziel": "تتعرف أنماطاً شائعة للجمع (-e، -er، -(e)n، -s) وتربط Umlaut بالكلمة المحددة؛ احفظ الاسم مع أداته وجمعه.",
     "voraus": [
+      "a0-artikel",
       "a1-akkusativ"
     ],
     "anwendung": {
@@ -13228,5 +13235,1050 @@
         "ar": "كبير ومنفصل دائماً!"
       }
     ]
+  },
+  "a0-artikel": {
+    "id": "a0-artikel",
+    "titleDe": "der · die · das — Geschlecht der Nomen",
+    "titleAr": "أدوات التعريف: der/die/das وجنس الاسم",
+    "level": "A0",
+    "ziel": "تتعرّف على أن كل اسم ألماني له جنس (مذكر/مؤنث/محايد) وتحفظ مع كل كلمة أداة التعريف معها من اليوم الأول، وتجمع أول 20 اسماً جمعاً بسيطاً.",
+    "voraus": [
+      "a0-buchstaben"
+    ],
+    "anwendung": {
+      "ar": "خذ 10 أسماء من قائمة اليوم (مثل der Mann, die Frau, das Kind) وردّدها مع أداتها خمس مرات. ثم حاول أن تقولها من الذاكرة.",
+      "de": "Lerne 10 Nomen aus der heutigen Liste (z. B. der Mann, die Frau, das Kind) und wiederhole jedes Nomen mit seinem Artikel fünfmal. Dann sag sie aus dem Gedächtnis.",
+      "candoIds": [
+        "a0-6"
+      ]
+    },
+    "verify": [
+      {
+        "id": "a0-artikel-v1",
+        "type": "choice",
+        "promptDe": "___ Mann kommt aus Berlin.",
+        "options": [
+          "Der",
+          "Die",
+          "Das"
+        ],
+        "answer": [
+          "Der"
+        ],
+        "explanationAr": "Mann مذكر → der Mann."
+      },
+      {
+        "id": "a0-artikel-v2",
+        "type": "choice",
+        "promptDe": "___ Frau heißt Anna.",
+        "options": [
+          "Der",
+          "Die",
+          "Das"
+        ],
+        "answer": [
+          "Die"
+        ],
+        "explanationAr": "Frau مؤنثة → die Frau."
+      },
+      {
+        "id": "a0-artikel-v3",
+        "type": "choice",
+        "promptDe": "___ Kind ist drei Jahre alt.",
+        "options": [
+          "Der",
+          "Die",
+          "Das"
+        ],
+        "answer": [
+          "Das"
+        ],
+        "explanationAr": "Kind محايد → das Kind."
+      }
+    ],
+    "summaryAr": "الدرس الأهم في الألمانية: كل اسم له جنس دائماً يُحفظ مع الكلمة من أول مرة (der/die/das)، لا تُحفظ الاسم وحده. الجمع يُحفظ مع الأداة die جمعاً. أهم شيفرة: الأسماء المنتهية بـ -er/-en/-ig/-ling غالباً مذكر؛ -in/-ung/-heit/-keit/-schaft/-ei/-tion مؤنثة؛ -chen/-lein/-um/-ium محايدة.",
+    "rules": [
+      {
+        "de": "der = المذكر · die = المؤنث · das = المحايد · die (pl) = الجمع",
+        "ar": "أدوات التعريف: der للمذكر، die للمؤنث، das للمحايد، die للجميع في الجمع."
+      },
+      {
+        "de": "der Mann — die Männer · die Frau — die Frauen · das Kind — die Kinder",
+        "ar": "الرجل/الرجال · المرأة/النساء · الطفل/الأطفال — مثال أولي للجمع."
+      },
+      {
+        "de": "Regel: Lerne IMMER das Nomen mit Artikel, nie allein!",
+        "ar": "قاعدة ذهبية: احفظ الاسم مع أداتها دائماً، لا تحفظ الاسم منفرداً أبداً."
+      }
+    ],
+    "tables": [
+      {
+        "captionDe": "Erste 12 Nomen mit Artikel",
+        "captionAr": "أول 12 اسماً مع أدواتها",
+        "headers": [
+          "Artikel",
+          "Nomen",
+          "Arabisch",
+          "Plural"
+        ],
+        "rows": [
+          [
+            "der",
+            "Mann",
+            "رجل",
+            "die Männer"
+          ],
+          [
+            "die",
+            "Frau",
+            "امرأة",
+            "die Frauen"
+          ],
+          [
+            "das",
+            "Kind",
+            "طفل",
+            "die Kinder"
+          ],
+          [
+            "der",
+            "Vater",
+            "أب",
+            "die Väter"
+          ],
+          [
+            "die",
+            "Mutter",
+            "أم",
+            "die Mütter"
+          ],
+          [
+            "der",
+            "Sohn",
+            "ابن",
+            "die Söhne"
+          ],
+          [
+            "die",
+            "Tochter",
+            "ابنة",
+            "die Töchter"
+          ],
+          [
+            "das",
+            "Haus",
+            "بيت",
+            "die Häuser"
+          ],
+          [
+            "der",
+            "Tag",
+            "يوم",
+            "die Tage"
+          ],
+          [
+            "die",
+            "Zeit",
+            "وقت",
+            "die Zeiten"
+          ],
+          [
+            "das",
+            "Jahr",
+            "سنة",
+            "die Jahre"
+          ],
+          [
+            "der",
+            "Name",
+            "اسم",
+            "die Namen"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Der Mann heißt Omar.",
+        "ar": "الرجل اسمه عمر."
+      },
+      {
+        "de": "Die Frau kommt aus Tunesien.",
+        "ar": "المرأة من تونس."
+      },
+      {
+        "de": "Das Kind ist drei Jahre alt.",
+        "ar": "الطفل عمره ثلاث سنوات."
+      }
+    ],
+    "eselsbruecke": "شفرة أولية سريعة: الـ«der» كلمة مذكر والـ«die» مؤنث والـ«das» محايد — اعتبر الأداة جزءاً من الكلمة (derMann, dieFrau, dasKind).",
+    "exercises": [
+      {
+        "id": "a0-artikel-v1",
+        "type": "choice",
+        "promptDe": "___ Mann kommt aus Berlin.",
+        "options": [
+          "Der",
+          "Die",
+          "Das"
+        ],
+        "answer": [
+          "Der"
+        ],
+        "explanationAr": "Mann مذكر → der Mann.",
+        "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "a0-artikel-v2",
+        "type": "choice",
+        "promptDe": "___ Frau heißt Anna.",
+        "options": [
+          "Der",
+          "Die",
+          "Das"
+        ],
+        "answer": [
+          "Die"
+        ],
+        "explanationAr": "Frau مؤنثة → die Frau.",
+        "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "a0-artikel-v3",
+        "type": "choice",
+        "promptDe": "___ Kind ist drei Jahre alt.",
+        "options": [
+          "Der",
+          "Die",
+          "Das"
+        ],
+        "answer": [
+          "Das"
+        ],
+        "explanationAr": "Kind محايد → das Kind.",
+        "promptAr": "اختر الإجابة الصحيحة."
+      }
+    ],
+    "pitfalls": [],
+    "eselsbrueckeAr": "شفرة أولية سريعة: الـ«der» كلمة مذكر والـ«die» مؤنث والـ«das» محايد — اعتبر الأداة جزءاً من الكلمة (derMann, dieFrau, dasKind).",
+    "pronTippAr": ""
+  },
+  "a0-du-sie": {
+    "id": "a0-du-sie",
+    "titleDe": "du · ihr · Sie — formell und informell",
+    "titleAr": "أنتَ وأنتم وأنتم (الرسمي): du وihr وSie",
+    "level": "A0",
+    "ziel": "تميّز بين مخاطبة الصديق/الطفل بـ du، مجموعة أصدقاء بـ ihr، والغرباء والكبار بـ Sie (صيغة رسمية دائماً كبيرة).",
+    "voraus": [
+      "a0-begrussung",
+      "a0-buchstaben"
+    ],
+    "anwendung": {
+      "ar": "تدرّب: قل جملة لصديق (Wie heißt du?), لمجموعة أصدقاء (Woher kommt ihr?), ولشخص غريب (Wie heißen Sie?).",
+      "de": "Übe: Sag einen Satz zu einem Freund (Wie heißt du?), zu Freunden (Woher kommt ihr?), zu einem Fremden (Wie heißen Sie?).",
+      "candoIds": [
+        "a0-1",
+        "a0-4"
+      ]
+    },
+    "verify": [
+      {
+        "id": "a0-du-sie-v1",
+        "type": "choice",
+        "promptDe": "Guten Tag, Frau Schmidt, wie geht es ___?",
+        "options": [
+          "du",
+          "ihr",
+          "Ihnen"
+        ],
+        "answer": [
+          "Ihnen"
+        ],
+        "explanationAr": "مع Frau Schmidt (شخص أكبر/غريب) نستخدم الصيغة الرسمية: Wie geht es Ihnen?"
+      },
+      {
+        "id": "a0-du-sie-v2",
+        "type": "choice",
+        "promptDe": "Hallo Anna, wo wohnst ___?",
+        "options": [
+          "du",
+          "ihr",
+          "Sie"
+        ],
+        "answer": [
+          "du"
+        ],
+        "explanationAr": "مع صديق/طفل نستخدم du: Wo wohnst du?"
+      },
+      {
+        "id": "a0-du-sie-v3",
+        "type": "choice",
+        "promptDe": "Woher kommt ___ (ihr zwei)?",
+        "options": [
+          "du",
+          "ihr",
+          "Sie"
+        ],
+        "answer": [
+          "ihr"
+        ],
+        "explanationAr": "لمجموعة أصدقاء (أنتما/أنتم غير الرسمي) نستخدم ihr: Woher kommt ihr?"
+      }
+    ],
+    "summaryAr": "في الألمانية ثلاث صيغ للمخاطب: du (أنتَ/أنتِ غير الرسمي للأصدقاء والأطفال)، ihr (أنتم غير الرسمي لمجموعة أصدقاء)، Sie (أنتم الرسمي — دائماً بحرف كبير! — للغرباء والكبار وزملاء العمل والرؤساء والطبيب والموظفين). متى Sie؟ أول لقاء، أكبر سناً، لقب رسمي (Herr/Frau/Dr.). متى du؟ الأصدقاء، الطلبة، الأطفال، أفراد الأسرة.",
+    "rules": [
+      {
+        "de": "du = أنتَ/أنتِ (صديق، طفل، قريب)",
+        "ar": "صيغة غير رسمية للمفرد: تُستعمل مع الأصدقاء، الأطفال، أفراد الأسرة، الطلبة."
+      },
+      {
+        "de": "ihr = أنتم (مجموعة أصدقاء/أطفال)",
+        "ar": "صيغة غير رسمية للجمع: لمجموعة من الأصدقاء أو الأطفال."
+      },
+      {
+        "de": "Sie = أنتَ/أنتِ/أنتم (رسمي) — IMMER großgeschrieben!",
+        "ar": "صيغة الرسمي للمفرد والجمع معاً: للغرباء، الكبار، زملاء العمل، الموظفين، الطبيب. تكتب دائماً بحرف كبير S."
+      },
+      {
+        "de": "Faustregel: Bei ersten Begegnungen immer Sie — der Partner sagt schnell \"Du kannst du sagen\".",
+        "ar": "قاعدة ذهبية: في أول لقاء استخدم Sie دائماً، والطرف الآخر سيقول فوراً «بإمكانك قول du» إذا أراد الصداقة."
+      }
+    ],
+    "tables": [
+      {
+        "captionDe": "du / ihr / Sie im Vergleich",
+        "captionAr": "مقارنة du وihr وSie",
+        "headers": [
+          "Situationsbeispiel",
+          "Form",
+          "Arabisch",
+          "Beispiel"
+        ],
+        "rows": [
+          [
+            "Freund(in)",
+            "du",
+            "أنتَ/أنتِ (ودّي)",
+            "Wie heißt du?"
+          ],
+          [
+            "Freundesgruppe",
+            "ihr",
+            "أنتم (ودّي)",
+            "Woher kommt ihr?"
+          ],
+          [
+            "Fremder/Chef/Arzt",
+            "Sie",
+            "حضرتك/سيادتك (رسمي)",
+            "Wie heißen Sie?"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Guten Tag, Herr Doktor! Wie geht es Ihnen?",
+        "ar": "نهار سعيد يا دكتور! كيف حال حضرتك؟"
+      },
+      {
+        "de": "Hallo Omar! Wie geht es dir?",
+        "ar": "أهلاً عمر! كيف حالك؟"
+      },
+      {
+        "de": "Wo wohnt ihr, Anna und Ali?",
+        "ar": "أين تسكنان يا آنا وعلي؟"
+      }
+    ],
+    "eselsbruecke": "تخيل «Sie» مثل «سيادتك» — تبدأ بحرف S كبير دائماً لأن الشخص يستحق احتراماً زائداً. مع الأصدقاء الصغار: du (أنتَ صغير = du = كلمتان قصيرتان).",
+    "exercises": [
+      {
+        "id": "a0-du-sie-v1",
+        "type": "choice",
+        "promptDe": "Guten Tag, Frau Schmidt, wie geht es ___?",
+        "options": [
+          "du",
+          "ihr",
+          "Ihnen"
+        ],
+        "answer": [
+          "Ihnen"
+        ],
+        "explanationAr": "مع Frau Schmidt (شخص أكبر/غريب) نستخدم الصيغة الرسمية: Wie geht es Ihnen?",
+        "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "a0-du-sie-v2",
+        "type": "choice",
+        "promptDe": "Hallo Anna, wo wohnst ___?",
+        "options": [
+          "du",
+          "ihr",
+          "Sie"
+        ],
+        "answer": [
+          "du"
+        ],
+        "explanationAr": "مع صديق/طفل نستخدم du: Wo wohnst du?",
+        "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "a0-du-sie-v3",
+        "type": "choice",
+        "promptDe": "Woher kommt ___ (ihr zwei)?",
+        "options": [
+          "du",
+          "ihr",
+          "Sie"
+        ],
+        "answer": [
+          "ihr"
+        ],
+        "explanationAr": "لمجموعة أصدقاء (أنتما/أنتم غير الرسمي) نستخدم ihr: Woher kommt ihr?",
+        "promptAr": "اختر الإجابة الصحيحة."
+      }
+    ],
+    "pitfalls": [],
+    "eselsbrueckeAr": "تخيل «Sie» مثل «سيادتك» — تبدأ بحرف S كبير دائماً لأن الشخص يستحق احتراماً زائداً. مع الأصدقاء الصغار: du (أنتَ صغير = du = كلمتان قصيرتان).",
+    "pronTippAr": ""
+  },
+  "a0-aussprache-vowels": {
+    "id": "a0-aussprache-vowels",
+    "titleDe": "Aussprache: Lange und kurze Vokale",
+    "titleAr": "نطق الحركات الطويلة والقصيرة",
+    "level": "A0",
+    "ziel": "تُميّز بين الحركة الطويلة والقصيرة وتُلاحظ أن الطول يُغيّر المعنى (Stadt/Staat، offen/Ofen، Hütte/Hüte، bin/Biene).",
+    "voraus": [
+      "a0-buchstaben"
+    ],
+    "anwendung": {
+      "ar": "استمع للمثال وكرّر: Stadt (a قصيرة) / Staat (aa طويلة)؛ offen (o قصيرة) / Ofen (o طويلة)؛ Hütte (ü قصيرة) / Hüte (ü طويلة). سجّل صوتك وقارن.",
+      "de": "Hör zu und wiederhole: Stadt (kurz) / Staat (lang); offen (kurz) / Ofen (lang); Hütte (kurz) / Hüte (lang). Nimm dich auf und vergleiche.",
+      "candoIds": []
+    },
+    "verify": [
+      {
+        "id": "a0-av-v1",
+        "type": "choice",
+        "promptDe": "Welches Wort hat ein LANGES a?",
+        "options": [
+          "Stadt",
+          "Staat",
+          "Satz"
+        ],
+        "answer": [
+          "Staat"
+        ],
+        "explanationAr": "Staat تُنطَق بـ aa طويل (دولة)؛ Stadt a قصيرة (مدينة)."
+      },
+      {
+        "id": "a0-av-v2",
+        "type": "choice",
+        "promptDe": "Welches Wort hat ein KURZES i?",
+        "options": [
+          "ihm",
+          "bin",
+          "ihn"
+        ],
+        "answer": [
+          "bin"
+        ],
+        "explanationAr": "bin i قصيرة (أنا)؛ ihm/ihn بـ ih طويلة."
+      }
+    ],
+    "summaryAr": "الحركات الألمانية طويلة أو قصيرة، والطول يُغيّر المعنى. قاعدة سريعة: الحرف متبوع بـ h أو مكرر (ie/aa/ee/oo) → طويل؛ قبل عدة حروف ساكنة → قصير غالباً (Stadt, offen, Hütte, bin).",
+    "rules": [
+      {
+        "de": "lang: ie, ih, ieh, aa, ee, oo, uh, ah, eh, öh, üh",
+        "ar": "طويل: إذا تبع الحرف h أو جاء مكرراً (aa/ee/oo) أو جاء بعده حرف ساكن واحد."
+      },
+      {
+        "de": "kurz: vor mehreren Konsonanten (Stadt, offen, Hütte, bin)",
+        "ar": "قصير: قبل عدة حروف ساكنة."
+      }
+    ],
+    "tables": [
+      {
+        "captionDe": "Minimalpaare",
+        "captionAr": "أزواج متشابهة يفرّقها طول الحركة",
+        "headers": [
+          "kurz",
+          "lang",
+          "Unterschied"
+        ],
+        "rows": [
+          [
+            "Stadt (مدينة)",
+            "Staat (دولة)",
+            "a قصيرة vs aa طويلة"
+          ],
+          [
+            "offen (مفتوح)",
+            "Ofen (فرن)",
+            "o قصيرة vs oh طويلة"
+          ],
+          [
+            "Hütte (كوخ)",
+            "Hüte (قبعات)",
+            "ü قصيرة vs üh طويلة"
+          ],
+          [
+            "bin (أنا)",
+            "Biene (نحلة)",
+            "i قصيرة vs ie طويلة"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Stadt — Staat",
+        "ar": "مدينة — دولة (الطول يُغيّر المعنى)"
+      }
+    ],
+    "eselsbruecke": "تخيّل الحرف h علامة مطّ (طويل)، تماماً كما في العربية: دام vs دامـه.",
+    "exercises": [
+      {
+        "id": "a0-av-v1",
+        "type": "choice",
+        "promptDe": "Welches Wort hat ein LANGES a?",
+        "options": [
+          "Stadt",
+          "Staat",
+          "Satz"
+        ],
+        "answer": [
+          "Staat"
+        ],
+        "explanationAr": "Staat تُنطَق بـ aa طويل (دولة)؛ Stadt a قصيرة (مدينة).",
+        "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "a0-av-v2",
+        "type": "choice",
+        "promptDe": "Welches Wort hat ein KURZES i?",
+        "options": [
+          "ihm",
+          "bin",
+          "ihn"
+        ],
+        "answer": [
+          "bin"
+        ],
+        "explanationAr": "bin i قصيرة (أنا)؛ ihm/ihn بـ ih طويلة.",
+        "promptAr": "اختر الإجابة الصحيحة."
+      }
+    ],
+    "pitfalls": [],
+    "eselsbrueckeAr": "تخيّل الحرف h علامة مطّ (طويل)، تماماً كما في العربية: دام vs دامـه.",
+    "pronTippAr": ""
+  },
+  "a0-aussprache-umlaut": {
+    "id": "a0-aussprache-umlaut",
+    "titleDe": "Aussprache: Umlaute ä, ö, ü",
+    "titleAr": "نطق علامات الإمالة: ä / ö / ü",
+    "level": "A0",
+    "ziel": "تُنطِق ä/ö/ü بشكل صحيح، لا تخلط بين u/ü أو o/ö.",
+    "voraus": [
+      "a0-buchstaben",
+      "a0-aussprache-vowels"
+    ],
+    "anwendung": {
+      "ar": "تدرّب أمام المرآة: شفاهك مستديرة قليلاً عند ö، وضيّقة عند ü؛ ä مثل e مفتوحة.",
+      "de": "Übe vor dem Spiegel: Lippen leicht gerundet bei ö, eng bei ü; ä wie offenes e.",
+      "candoIds": []
+    },
+    "verify": [
+      {
+        "id": "a0-au-v1",
+        "type": "choice",
+        "promptDe": "Welcher Umlaut klingt wie ein gerundetes \"i\"?",
+        "options": [
+          "ä",
+          "ö",
+          "ü"
+        ],
+        "answer": [
+          "ü"
+        ],
+        "explanationAr": "ü = i مع استدارة الشفاه (كما في الفرنسية tu أو التركية ü)."
+      }
+    ],
+    "summaryAr": "ä ≈ e مفتوحة (Männer). ö ≈ e مع استدارة الشفاه (hören). ü = i مع استدارة الشفاه (Tür = تِيُور).",
+    "rules": [
+      {
+        "de": "ä = offenes e (ähnlich wie Bett)",
+        "ar": "ä مثل e مفتوحة."
+      },
+      {
+        "de": "ö = e mit runden Lippen",
+        "ar": "ö = e ومعها استدارة الشفاه، كأنك تنطق e مع شكل فم o."
+      },
+      {
+        "de": "ü = i mit runden Lippen (wie frz. tu)",
+        "ar": "ü = i ومعها استدارة الشفاه."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "die Männer — hören — die Tür",
+        "ar": "الرجال — يسمع — الباب (أمثلة ä/ö/ü)"
+      }
+    ],
+    "eselsbruecke": "طريقة مجرّبة: انطق e ثم دوّر شفتيك — تسمع ö. انطق i ثم دوّر شفتيك — تسمع ü.",
+    "exercises": [
+      {
+        "id": "a0-au-v1",
+        "type": "choice",
+        "promptDe": "Welcher Umlaut klingt wie ein gerundetes \"i\"?",
+        "options": [
+          "ä",
+          "ö",
+          "ü"
+        ],
+        "answer": [
+          "ü"
+        ],
+        "explanationAr": "ü = i مع استدارة الشفاه (كما في الفرنسية tu أو التركية ü).",
+        "promptAr": "اختر الإجابة الصحيحة."
+      }
+    ],
+    "pitfalls": [],
+    "eselsbrueckeAr": "طريقة مجرّبة: انطق e ثم دوّر شفتيك — تسمع ö. انطق i ثم دوّر شفتيك — تسمع ü.",
+    "pronTippAr": ""
+  },
+  "a1-aussprache-ch": {
+    "id": "a1-aussprache-ch",
+    "titleDe": "Aussprache: ch — ich-Laut vs ach-Laut",
+    "titleAr": "نطق ch: ich-Laut الناعم وach-Laut الخشن",
+    "level": "A1",
+    "ziel": "تُفرّق بين ich-Laut (بعد i/e/ö/ü/ä/äu/ei/ie/eu/ai/r/l/n — ناعم) وach-Laut (بعد a/o/u/au — خشن كالخاء العربية).",
+    "voraus": [
+      "a1-praesens"
+    ],
+    "anwendung": {
+      "ar": "كرّر: ich, mich, dich, nicht, Bücher, Mädchen (ناعم) · Bach, Buch, Koch, Nacht, auch (خشن).",
+      "de": "Wiederhole: ich, mich, dich, nicht, Bücher, Mädchen (weich) · Bach, Buch, Koch, Nacht, auch (hart).",
+      "candoIds": []
+    },
+    "verify": [
+      {
+        "id": "a1-ac-v1",
+        "type": "choice",
+        "promptDe": "Welches Wort hat den WEICHEN ch-Laut (ich-Laut)?",
+        "options": [
+          "Buch",
+          "ich",
+          "Nacht"
+        ],
+        "answer": [
+          "ich"
+        ],
+        "explanationAr": "ich → ch بعد i → ich-Laut ناعم (لا «ش» ولا «خ»! هاء مرققة من وسط اللسان). Buch/Nacht → ach-Laut خشن."
+      },
+      {
+        "id": "a1-ac-v2",
+        "type": "choice",
+        "promptDe": "Welches Wort hat den HARTEN ch-Laut (ach-Laut)?",
+        "options": [
+          "nicht",
+          "Bücher",
+          "auch"
+        ],
+        "answer": [
+          "auch"
+        ],
+        "explanationAr": "auch → ch بعد au → ach-Laut خشن (كالخاء)."
+      }
+    ],
+    "summaryAr": "ch صوتان مختلفان: 1) الناعم (ich-Laut) بعد i/e/ö/ü/ä والحروف المركبة ei/ie/eu/ai/äu وبعد r/l/n: ich, nicht, Kirche, Chemie, Mädchen. 2) الخشن (ach-Laut) بعد a/o/u/au: auch, Buch, Koch, Nacht.",
+    "rules": [
+      {
+        "de": "weich (ich-Laut): nach i, e, ö, ü, ä, äu, ei, ie, eu, ai, r, l, n",
+        "ar": "ناعم بعد الحروف الأمامية."
+      },
+      {
+        "de": "hart (ach-Laut): nach a, o, u, au",
+        "ar": "خشن بعد الحروف الخلفية."
+      }
+    ],
+    "tables": [
+      {
+        "captionDe": "ich-Laut vs ach-Laut",
+        "captionAr": "الناعم والخشن",
+        "headers": [
+          "weich (ich-Laut)",
+          "hart (ach-Laut)"
+        ],
+        "rows": [
+          [
+            "ich (أنا)",
+            "auch (أيضاً)"
+          ],
+          [
+            "nicht (لا)",
+            "Buch (كتاب)"
+          ],
+          [
+            "Bücher (كتب)",
+            "Nacht (ليل)"
+          ],
+          [
+            "Kirche (كنيسة)",
+            "Koch (طباخ)"
+          ],
+          [
+            "Mädchen (بنت)",
+            "Bach (نهر صغير)"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Ich habe auch ein Buch.",
+        "ar": "عندي أيضاً كتاب. (ich ناعم، auch/Buch خشان)"
+      }
+    ],
+    "eselsbruecke": "تخيّل ch مع الحروف الأمامية (i/e) = هواء يمر عبر قناة ضيقة (ناعم)، والحروف الخلفية (a/o/u) = هواء يمر من أقصى الحلق كالخاء.",
+    "exercises": [
+      {
+        "id": "a1-ac-v1",
+        "type": "choice",
+        "promptDe": "Welches Wort hat den WEICHEN ch-Laut (ich-Laut)?",
+        "options": [
+          "Buch",
+          "ich",
+          "Nacht"
+        ],
+        "answer": [
+          "ich"
+        ],
+        "explanationAr": "ich → ch بعد i → ich-Laut ناعم (لا «ش» ولا «خ»! هاء مرققة من وسط اللسان). Buch/Nacht → ach-Laut خشن.",
+        "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "a1-ac-v2",
+        "type": "choice",
+        "promptDe": "Welches Wort hat den HARTEN ch-Laut (ach-Laut)?",
+        "options": [
+          "nicht",
+          "Bücher",
+          "auch"
+        ],
+        "answer": [
+          "auch"
+        ],
+        "explanationAr": "auch → ch بعد au → ach-Laut خشن (كالخاء).",
+        "promptAr": "اختر الإجابة الصحيحة."
+      }
+    ],
+    "pitfalls": [],
+    "eselsbrueckeAr": "تخيّل ch مع الحروف الأمامية (i/e) = هواء يمر عبر قناة ضيقة (ناعم)، والحروف الخلفية (a/o/u) = هواء يمر من أقصى الحلق كالخاء.",
+    "pronTippAr": ""
+  },
+  "a1-aussprache-r": {
+    "id": "a1-aussprache-r",
+    "titleDe": "Aussprache: Das deutsche r",
+    "titleAr": "نطق حرف r الألماني",
+    "level": "A1",
+    "voraus": [
+      "a1-praesens"
+    ],
+    "ziel": "تُنطِق r في بداية الكلمة رخواً (ليس كالراء العربية المفخّمة)، وتنطق -er آخر الكلمة كـ a خفيفة (Vater = فاتَ).",
+    "anwendung": {
+      "ar": "كرّر: rot, reisen, richtig, Frau؛ ثم: Vater, Mutter, Kinder, der, er.",
+      "de": "Wiederhole: rot, reisen, richtig, Frau; dann: Vater, Mutter, Kinder, der, er.",
+      "candoIds": []
+    },
+    "verify": [
+      {
+        "id": "a1-ar-v1",
+        "type": "choice",
+        "promptDe": "Wie wird das \"-er\" in \"Vater\" ausgesprochen?",
+        "options": [
+          "-er بلسان ملفوف",
+          "schwaches a (Vata)",
+          "-e"
+        ],
+        "answer": [
+          "schwaches a (Vata)"
+        ],
+        "explanationAr": "مقطع -er في نهاية الكلمة يُختزل إلى a خفيفة: Vater = فاتَ."
+      }
+    ],
+    "summaryAr": "حرف r الألماني ليس كالراء العربية المفخّمة المطولة، بل رخو من مؤخرة اللسان أو احتكاكي من الحنك. قواعد: 1) بداية الكلمة/المقطع (rot, Frau) رخو/غُري؛ 2) -er في نهاية الكلمة (Vater, Kinder) يُختزل إلى a خفيفة (Schwa).",
+    "rules": [
+      {
+        "de": "r am Silbenanfang: rot, Reise, Frau, richtig — Zäpfchen-r oder Zungen-r, gerieben, nicht gerollt",
+        "ar": "بداية المقطع: راء رخوة."
+      },
+      {
+        "de": "-er am Silben-/Wortende: Vater, Mutter, Kinder → schwaches a (Schwa)",
+        "ar": "نهاية المقطع بصيغة -er: تُختزل إلى a خفيفة."
+      }
+    ],
+    "tables": [],
+    "examples": [
+      {
+        "de": "Vater [ˈfaːtɐ], Mutter [ˈmʊtɐ], Kinder [ˈkɪndɐ]",
+        "ar": "أب/أم/أطفال — -er آخراً = a خفيفة."
+      }
+    ],
+    "eselsbruecke": "بدل أن تقرأ Vater «فاتِر»، قلها «فاتَ» وكأن آخرها a خفيفة.",
+    "exercises": [
+      {
+        "id": "a1-ar-v1",
+        "type": "choice",
+        "promptDe": "Wie wird das \"-er\" in \"Vater\" ausgesprochen?",
+        "options": [
+          "-er بلسان ملفوف",
+          "schwaches a (Vata)",
+          "-e"
+        ],
+        "answer": [
+          "schwaches a (Vata)"
+        ],
+        "explanationAr": "مقطع -er في نهاية الكلمة يُختزل إلى a خفيفة: Vater = فاتَ.",
+        "promptAr": "اختر الإجابة الصحيحة."
+      }
+    ],
+    "pitfalls": [],
+    "eselsbrueckeAr": "بدل أن تقرأ Vater «فاتِر»، قلها «فاتَ» وكأن آخرها a خفيفة.",
+    "pronTippAr": ""
+  },
+  "a1-aussprache-sp-st": {
+    "id": "a1-aussprache-sp-st",
+    "titleDe": "Aussprache: sp/st und sch",
+    "titleAr": "نطق sch و sp/st في بداية الكلمة",
+    "level": "A1",
+    "voraus": [
+      "a1-praesens"
+    ],
+    "ziel": "تعلم أن sp و st في بداية الكلمة/المقطع يُنطقان shp/sht (شب/شت)، وأن sch تُنطق دائماً «ش».",
+    "anwendung": {
+      "ar": "كرّر: spielen=شبيلِن، Stadt=شتات، Straße=شتراسَ، Schule=شولَ، schreiben=شرايبن.",
+      "de": "Wiederhole: spielen, Stadt, Straße, Schule, schreiben.",
+      "candoIds": []
+    },
+    "verify": [
+      {
+        "id": "a1-as-v1",
+        "type": "choice",
+        "promptDe": "Wie wird \"Stadt\" ausgesprochen?",
+        "options": [
+          "s-tat",
+          "schtatt",
+          "ts-tat"
+        ],
+        "answer": [
+          "schtatt"
+        ],
+        "explanationAr": "st في بداية الكلمة = sht (شت): Stadt = شتات."
+      }
+    ],
+    "summaryAr": "قواعد النطق: 1) sch دائماً = «ش» (Schule, Fisch). 2) sp في بداية الكلمة/المقطع = shp (شب): spielen, sprechen. 3) st في بداية الكلمة/المقطع = sht (شت): Stadt, stehen. في وسط الكلمة أو آخرها تنطق سين عادية (best, Fenster).",
+    "rules": [
+      {
+        "de": "sch = sch (immer wie sch): Schule, schreiben, Fisch",
+        "ar": "sch دائماً = ش."
+      },
+      {
+        "de": "sp im Wort-/Silbenanfang = schp: spielen, sprechen",
+        "ar": "sp في بداية الكلمة/المقطع = shp."
+      },
+      {
+        "de": "st im Wort-/Silbenanfang = scht: Stadt, stehen, verstehen",
+        "ar": "st في بداية الكلمة/المقطع = sht."
+      }
+    ],
+    "tables": [
+      {
+        "captionDe": "Beispiele",
+        "captionAr": "أمثلة",
+        "headers": [
+          "Wort",
+          "Aussprache",
+          "Arabisch"
+        ],
+        "rows": [
+          [
+            "spielen",
+            "شبيلِن",
+            "يلعب"
+          ],
+          [
+            "sprechen",
+            "شبريخِن",
+            "يتكلم"
+          ],
+          [
+            "Stadt",
+            "شتات",
+            "مدينة"
+          ],
+          [
+            "Straße",
+            "شتراسَ",
+            "شارع"
+          ],
+          [
+            "Schule",
+            "شولَ",
+            "مدرسة"
+          ],
+          [
+            "Fisch",
+            "فيش",
+            "سمك"
+          ],
+          [
+            "best",
+            "بست",
+            "أفضل (سين في الوسط)"
+          ]
+        ]
+      }
+    ],
+    "examples": [],
+    "eselsbruecke": "حرف s قبل p أو t في بداية الكلمة يخجل من النطق فيستعين بحرف ش: sp→شب، st→شت.",
+    "exercises": [
+      {
+        "id": "a1-as-v1",
+        "type": "choice",
+        "promptDe": "Wie wird \"Stadt\" ausgesprochen?",
+        "options": [
+          "s-tat",
+          "schtatt",
+          "ts-tat"
+        ],
+        "answer": [
+          "schtatt"
+        ],
+        "explanationAr": "st في بداية الكلمة = sht (شت): Stadt = شتات.",
+        "promptAr": "اختر الإجابة الصحيحة."
+      }
+    ],
+    "pitfalls": [],
+    "eselsbrueckeAr": "حرف s قبل p أو t في بداية الكلمة يخجل من النطق فيستعين بحرف ش: sp→شب، st→شت.",
+    "pronTippAr": ""
+  },
+  "a1-aussprache-auslaut": {
+    "id": "a1-aussprache-auslaut",
+    "titleDe": "Aussprache: Auslautverhärtung — b/d/g → p/t/k",
+    "titleAr": "نطق نهاية المقطع: b/d/g تُنطَق p/t/k",
+    "level": "A1",
+    "voraus": [
+      "a1-praesens",
+      "a1-akkusativ"
+    ],
+    "ziel": "تدرك أن الحروف المجهورة b/d/g في آخر المقطع/الكلمة تُنطَق عديمة الجهر (p/t/k).",
+    "anwendung": {
+      "ar": "كرّر: Tag = تاك، lieb = ليب، Kind = كينت، Hund = هونت، ab = آب. لا تنطق g نهائياً جيم!",
+      "de": "Wiederhole: Tag, lieb, Kind, Hund, ab — final b→p, d→t, g→k.",
+      "candoIds": []
+    },
+    "verify": [
+      {
+        "id": "a1-al-v1",
+        "type": "choice",
+        "promptDe": "Wie wird \"Tag\" ausgesprochen?",
+        "options": [
+          "تاغ",
+          "تاك",
+          "تا"
+        ],
+        "answer": [
+          "تاك"
+        ],
+        "explanationAr": "Auslautverhärtung: آخر حرف g ينطق k → Tag = تاك."
+      }
+    ],
+    "summaryAr": "قاعدة نطقية مهمة: في نهاية الكلمة/المقطع، لا يوجد جهر بالأحرف: b → p، d → t، g → k. هذا يفسر لماذا Tag = تاك وlieb = ليب وKind = كينت.",
+    "rules": [
+      {
+        "de": "b am Ende → p: lieb, ab",
+        "ar": "b نهاية → p."
+      },
+      {
+        "de": "d am Ende → t: Kind, Hund",
+        "ar": "d نهاية → t."
+      },
+      {
+        "de": "g am Ende → k: Tag, Weg",
+        "ar": "g نهاية → k."
+      }
+    ],
+    "tables": [
+      {
+        "captionDe": "Beispiele",
+        "captionAr": "أمثلة",
+        "headers": [
+          "geschrieben",
+          "Aussprache",
+          "Arabisch"
+        ],
+        "rows": [
+          [
+            "Tag",
+            "تاك",
+            "يوم"
+          ],
+          [
+            "Weg",
+            "فيك",
+            "طريق"
+          ],
+          [
+            "Kind",
+            "كينت",
+            "طفل"
+          ],
+          [
+            "Hund",
+            "هونت",
+            "كلب"
+          ],
+          [
+            "lieb",
+            "ليب",
+            "محبوب"
+          ],
+          [
+            "ab",
+            "آب",
+            "من (حرف جر)"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Der Tag ist gut. → [deːɐ̯ ta:k ɪst gu:t]",
+        "ar": "اليوم جميل."
+      }
+    ],
+    "eselsbruecke": "الألمان يرهبون الجهر في آخر الكلمة: كل مجهور يفقد جهره في النهاية.",
+    "exercises": [
+      {
+        "id": "a1-al-v1",
+        "type": "choice",
+        "promptDe": "Wie wird \"Tag\" ausgesprochen?",
+        "options": [
+          "تاغ",
+          "تاك",
+          "تا"
+        ],
+        "answer": [
+          "تاك"
+        ],
+        "explanationAr": "Auslautverhärtung: آخر حرف g ينطق k → Tag = تاك.",
+        "promptAr": "اختر الإجابة الصحيحة."
+      }
+    ],
+    "pitfalls": [],
+    "eselsbrueckeAr": "الألمان يرهبون الجهر في آخر الكلمة: كل مجهور يفقد جهره في النهاية.",
+    "pronTippAr": ""
   }
 }
