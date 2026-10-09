@@ -89,7 +89,8 @@ export const PHASE_TOPICS: Record<Phase, string[]> = {
   // R138/P-01: added a1-weil-dass (renamed to be A2 introductory weil/dass) and a1-futur-einf (now A2); existing a2-weil-dass deepens, a2-futur covers Futur I fully.
   A2: ["a2-perfekt", "a2-praeteritum-grund", "a2-praeteritum", "a1-weil-dass", "a2-weil-dass", "a2-dativ", "a2-wasfuer", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a1-futur-einf", "a2-futur", "a2-verschmolzene", "a2-neben", "a2-demo"],
   B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-konj2-vergangenheit", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-partizip1", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben", "b1-absicht", "b1-adjektivendungen"],
-  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-nominalstil", "b2-redew", "b2-textkonnektoren"],
+  // R138/P-06/P-08: Genitivpräpositionen, Konzessivsätze und Relativsätze mit deren/dessen ergänzt (fehlten für Schriftlicher Ausdruck B2).
+  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-genitiv-praep", "b2-konzessiv", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-relativ-genitiv", "b2-nominalstil", "b2-redew", "b2-textkonnektoren"],
   Abschluss: [],
 };
 
