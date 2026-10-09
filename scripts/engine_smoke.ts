@@ -8409,12 +8409,13 @@ void 0;
   const d16 = liveB105.find((d) => d.id === "d-b1-16");
   const d17 = liveB105.find((d) => d.id === "d-b1-17");
   const d18 = liveB105.find((d) => d.id === "d-b1-18");
-  ok(d16.lines[1].ar.includes("يحقّ لكم") && !d16.lines[1].ar.includes("بخمسينَ لك") &&
+  ok(d16.lines[0].ar.includes("ستّينَ دقيقة") && d16.lines[1].ar.includes("خمسةٌ وعشرونَ بالمئة") &&
+    d16.lines[1].ar.includes("يحقّ لكم") &&
     d16.lines[3].ar.includes("عبِّئوا") && d16.lines[3].ar.includes("حسابَكم") && !d16.lines[3].ar.includes("حسابَك.") &&
     d16.lines[5].ar.includes("واحتفظوا") && !d16.lines[5].ar.includes("واحتفظْ") &&
     d16.lines[6].ar.includes("أُلغي") && !d16.lines[6].ar.includes("فاتني") &&
     d16.lines[7].ar.includes("القطارُ التالي") && d16.lines[7].ar.includes("دوَّناه") && !d16.lines[7].ar.includes("في النظام"),
-    "K192c d-b1-16: Sie→لكم/عبِّئوا/حسابَكم/احتفظوا، ausfallen=أُلغي لا فاتني، وحذف «في النظام»");
+    "K192c d-b1-16: ستون دقيقة/25٪ (W1 fix)، Sie→لكم/عبِّئوا/حسابَكم/احتفظوا، ausfallen=أُلغي لا فاتني، وحذف «في النظام»");
 
   ok(d17.lines[2].ar.includes("ويمكن للآباء") && d17.lines[2].ar.includes("بصوتٍ عالٍ") &&
     !d17.lines[2].ar.includes("أسبوعياً") && !d17.lines[2].ar.includes("بعضُ الآباءِ") &&
@@ -8719,9 +8720,9 @@ void 0;
     !d24.lines[3].ar.includes("وِجادةٌ") && !d24.lines[3].ar.includes("العشرينُ والعشرون") &&
     d24.lines[5].ar.includes("من التاسعة") && d24.lines[5].ar.includes("إثباتُ الملكية") &&
     d24.lines[6].ar.includes("لقطاتٍ للجهاز") && !d24.lines[6].ar.includes("من حاسوبي") &&
-    d24.lines[7].ar.includes("ستةُ أشهرِ حفظٍ بعد الإبلاغ") && d24.lines[7].ar.includes("للمزاد العلني") && d24.lines[7].ar.includes("تُطرح") &&
-    d24.lines[7].ar.includes("فلتحضروا في الموعد") && !d24.lines[7].ar.includes("أسبوعانِ") && !d24.lines[7].ar.includes("باكراً"),
-    "K194e d-b1-24: الخط لا الرقم، 20:20 بالحروف، من التاسعة، لقطات للجهاز، ستة أشهر للحفظ (§ 973 BGB) ثم للمزاد العلني، pünktlich=في الموعد");
+    d24.lines[7].ar.includes("ستةُ أشهرٍ للحفظ بعد الإبلاغ") && d24.lines[7].ar.includes("المزادُ العلني") &&
+    d24.lines[7].ar.includes("فلتحضروا في الموعد") && !d24.lines[7].ar.includes("أربعةَ عشرَ يوماً للحفظ"),
+    "K194e d-b1-24: الخط لا الرقم، 20:20 بالحروف، من التاسعة، لقطات للجهاز، ستة أشهر حفظ (W2 fix) ثم المزاد، pünktlich=في الموعد");
 
   // Locked DE/who/questions/dictations.
   const expectedDE7: Record<string, string[]> = {
@@ -8753,7 +8754,7 @@ void 0;
       "Wann kann ich abholen?",
       "Ab neun — Ausweis und Eigentumsnachweis: Rechnung oder Fotos.",
       "Ich bringe Rechnung und Screenshots des Geräts.",
-      "Sechs Monate Aufbewahrung nach Anzeige — dann geht er in die Versteigerung; kommen Sie pünktlich.",
+      "Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung — kommen Sie pünktlich.",
     ],
   };
   const expectedWho7: Record<string, string[]> = {
@@ -8777,7 +8778,7 @@ void 0;
     ],
     "d-b1-24": [
       "Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt.",
-      "Sechs Monate Aufbewahrung nach Anzeige — dann geht er in die Versteigerung; kommen Sie pünktlich.",
+      "Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung — kommen Sie pünktlich.",
     ],
   };
   let locksOk7 = true;
@@ -8849,9 +8850,10 @@ void 0;
     d25.lines[3].ar.includes("الانتقالَ إلى المسكن") && !d25.lines[3].ar.includes("بدءَ سُكنانا") &&
     d25.lines[5].ar.includes("سأُعطيكم شهادةً مؤقَّتة") && !d25.lines[5].ar.includes("لكنْ خُذ مني") &&
     d25.lines[6].ar.includes("وكم تكلِّفُ؟") && !d25.lines[6].ar.includes("وبكم هي") &&
-    d25.lines[7].ar.includes("مجّانيّان") && d25.lines[7].ar.includes("مُفعَّلة بالفعل") &&
-    !d25.lines[7].ar.includes("ستةُ يورو"),
-    "K195c d-b1-25: تسجيل العنوان لا تحديث الإقامة، المهلة بالضبط، سأُعطيكم شهادة مؤقتة، وكم تكلّف، التسجيل وeID مجّانيّان (§ 1 Abs. 5 PersAuswGebV)");
+    d25.lines[7].ar.includes("التسجيلُ وتغييرُ العنوان مجّانيّان") && d25.lines[7].ar.includes("نُفعِّلُ خاصّيةَ الهويةِ الإلكترونيةِ مجّاناً") &&
+    d25.lines[7].ar.includes("الصورةُ البيومتريةُ") && d25.lines[7].ar.includes("ستة يورو") &&
+    !d25.lines[7].ar.includes("ستةُ يورو لخاصيةِ الهويةِ الإلكترونية"),
+    "K195c d-b1-25: تسجيل العنوان، المهلة بالضبط، شهادة مؤقتة، وكم تكلف، التسجيل وeID مجانًا (W3 fix) والستة يورو للصورة البيومترية");
 
   ok(d26.lines[0].ar.includes("اعتباراً من أولِ الشهر") && d26.lines[0].ar.includes("أريدُ كهرباءَكم") &&
     !d26.lines[0].ar.includes("المقبل") && !d26.lines[0].ar.includes("أنتقلُ إليكم") &&
@@ -8870,9 +8872,9 @@ void 0;
     d27.lines[4].ar.includes("التي يطلبُها الممتحِن") && !d27.lines[4].ar.includes("عندَ المُمتحِن") &&
     d27.lines[5].ar.includes("اختبارُ نظر") && d27.lines[5].ar.includes("صورةٌ شخصية") &&
     !d27.lines[5].ar.includes("نظارةُ قياس") && !d27.lines[5].ar.includes("صورةٌ شمسية") &&
-    d27.lines[7].ar.includes("حظرُ أربعةَ عشرَ يوماً") && d27.lines[7].ar.includes("الطلبُ يبقى سارياً") &&
-    d27.lines[7].ar.includes("رسمُ الامتحان يُدفَع عن كلِّ محاولة") && !d27.lines[7].ar.includes("أسبوعان انتظاراً"),
-    "K195e d-b1-27: يمكنني التقدّم، أقرب الأحوال، مدة الصلاحية، يطلبها الممتحن، اختبار نظر وصورة شخصية، حظر 14 يوماً، رسم كل محاولة (§ 18 FeV)");
+    d27.lines[7].ar.includes("حظرُ أربعةَ عشرَ يوماً") && d27.lines[7].ar.includes("رسمُ الامتحانِ يُدفعُ من جديد") &&
+    d27.lines[7].ar.includes("لا حاجةَ إلى تقديم طلب جديد") && !d27.lines[7].ar.includes("والرسومُ نافذة"),
+    "K195e d-b1-27: يمكنني التقدّم، أقرب الأحوال، مدة الصلاحية، يطلبها الممتحن، اختبار نظر وصورة شخصية، حظر 14 يوماً ورسم كل محاولة (W4 fix)");
 
   // Locked DE/who/questions/dictations.
   const expectedDE8: Record<string, string[]> = {
@@ -8884,7 +8886,7 @@ void 0;
       "Der Vermieter weilt in Tunesien; die Post braucht Tage.",
       "Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung.",
       "Was kostet sie?",
-      "Anmeldung und Adressänderung sind gebührenfrei, und die eID-Funktion ist bereits aktiviert.",
+      "Anmeldung und Adressänderung sind gebührenfrei; die eID-Funktion schalten wir auch kostenlos frei. Nur ein biometrisches Lichtbild im Amt kostet etwa sechs Euro, falls Sie keines mitbringen.",
     ],
     "d-b1-26": [
       "Ich kündige zum Monatsersten und will Ihren Strom.",
@@ -8904,7 +8906,7 @@ void 0;
       "Welche Papiere verlangt der Prüfer?",
       "Ausweis, Sehtest, Erste-Hilfe, Ausbildungsprotokoll, Passfoto — Gebühr vor Ort.",
       "Und nach zweimaligem Nichtbestehen?",
-      "Vierzehn Tage Sperre — der Antrag bleibt gültig, die Prüfgebühr wird pro Versuch neu fällig.",
+      "Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig.",
     ],
   };
   const expectedWho8: Record<string, string[]> = {
@@ -8913,9 +8915,9 @@ void 0;
     "d-b1-27": ["Sonda","Fahrlehrer","Sonda","Fahrlehrer","Sonda","Fahrlehrer","Sonda","Fahrlehrer"],
   };
   const expectedAnswers8: Record<string, any[]> = {
-    "d-b1-25": ["innerhalb von zwei Wochen", "der Vermieter", "eine vorläufige Bescheinigung"],
+    "d-b1-25": ["innerhalb von zwei Wochen", "der Vermieter", "ein biometrisches Lichtbild im Amt (ca. sechs Euro)"],
     "d-b1-26": ["der neue Anbieter", "per Foto im Onlineformular bis 22 Uhr", "an zwölf Monaten Preisbindung"],
-    "d-b1-27": ["die Erste-Hilfe-Bescheinigung", "sie läuft nie ab", "vierzehn Tage Sperre; Antrag bleibt gültig, Prüfgebühr pro Versuch neu fällig"],
+    "d-b1-27": ["die Erste-Hilfe-Bescheinigung", "sie läuft nie ab", "vierzehn Tage Sperre; Prüfgebühr wird pro Versuch erneut fällig"],
   };
   const expectedDict8: Record<string, string[]> = {
     "d-b1-25": [
@@ -8928,7 +8930,7 @@ void 0;
     ],
     "d-b1-27": [
       "Einmal im Leben: sie läuft nie ab.",
-      "Vierzehn Tage Sperre — der Antrag bleibt gültig, die Prüfgebühr wird pro Versuch neu fällig.",
+      "Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig.",
     ],
   };
   let locksOk8 = true;
@@ -9500,17 +9502,16 @@ void 0;
     "K200d d-b2-10: نطاق/حصة متغيرة/للتفاوض، أداءً (Leistung)، فترة التجربة، سيصلُكم التعهدُ");
 
   const d211 = liveB204.find((d) => d.id === "d-b2-11");
-  ok(d211.lines[0].ar.includes("بثمانيةَ عشرَ بالمئةِ") && d211.lines[0].ar.includes("سقفَ الزيادة") &&
-    d211.lines[1].ar.includes("أدلتُنا") && d211.lines[1].ar.includes("حسابُ الجدوى") &&
+  ok(d211.lines[1].ar.includes("أدلتُنا") && d211.lines[1].ar.includes("حسابُ الجدوى") &&
     !d211.lines[1].ar.includes("حججُنا") &&
-    d211.lines[2].ar.includes("عشرون بالمئة") && d211.lines[2].ar.includes("خمسةَ عشرَ") &&
-    d211.lines[3].ar.includes("أربعةَ عشرَ فاصلةَ سبعة بالمئة") &&
+    d211.lines[2].ar.includes("سقفَ الزيادة") && d211.lines[2].ar.includes("خمسةَ عشرَ بالمئة خلال ثلاث سنوات") &&
+    !d211.lines[2].ar.includes("أحدَ عشرَ بالمئة") &&
     d211.lines[3].ar.includes("حسابُ رسالتكم سليم") && !d211.lines[3].ar.includes("رسالتك سليم") &&
     d211.lines[5].ar.includes("أربعةَ عشرَ يوماً") && !d211.lines[5].ar.includes("أسبوعَين") &&
     d211.lines[5].ar.includes("مع الأدلة") && !d211.lines[5].ar.includes("الفواتير") &&
     d211.lines[7].ar.includes("مؤكَّدٌ بالبريد") && d211.lines[7].ar.includes("بموضوعيةٍ") &&
     !d211.lines[7].ar.includes("منهجيةِ"),
-    "K200e d-b2-11: 18% Forderung، 20%/15% Kappung (§ 558 Abs. 3 BGB)، 14,7% تصحيح، رسالتكم/أدلة، أربعة عشر يوماً، موضوعية");
+    "K200e d-b2-11: أدلتُنا/حساب الجدوى، Kappungsgrenze 15٪ (W6 fix)، رسالتكم، أربعة عشر يوماً/الأدلة، مؤكَّدٌ بموضوعية");
 
   const d212 = liveB204.find((d) => d.id === "d-b2-12");
   ok(d212.lines[1].ar.includes("قائمةُ الموادِّ الدراسية") && d212.lines[1].ar.includes("إثباتُ الخبرةِ العملية") &&
@@ -9536,10 +9537,10 @@ void 0;
       "Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag.",
     ],
     "d-b2-11": [
-      "Die angekündigte Erhöhung um achtzehn Prozent übersteigt die ortsübliche Vergleichsmiete nicht — aber die Kappungsgrenze.",
+      "Die angekündigte Erhöhung um 15 Prozent übersteigt die ortsübliche Miete.",
       "Unsere Belege: Mietspiegel und Wirtschaftlichkeitsberechnung.",
-      "Genau der Mietspiegel zeigt: die Kappungsgrenze beträgt zwanzig Prozent in drei Jahren; in angespannten Gebieten fünfzehn.",
-      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf vierzehn Komma sieben Prozent.",
+      "Genau der Mietspiegel zeigt: in unserem Markt gilt die Kappungsgrenze von fünfzehn Prozent in drei Jahren.",
+      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
       "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
       "Das Protokoll folgt binnen vierzehn Tagen samt Belegen.",
       "Sofern alles eintrifft, akzeptiere ich den neuen Betrag zum Ersten.",
@@ -9558,7 +9559,7 @@ void 0;
   };
   const expectedAnswers204: Record<string, any[]> = {
     "d-b2-10": ["45.500 Euro mit Homeoffice und Weiterbildungsbudget", "eine Probezeit von höchstens drei Monaten", "die Zusage über den gesamten Kompromiss"],
-    "d-b2-11": ["auf den Mietspiegel und die Kappungsgrenze", "eine korrigierte Forderung von 14,7 Prozent plus Protokoll", "wenn Protokoll und Belege eingetroffen sind"],
+    "d-b2-11": ["auf den Mietspiegel und die Kappungsgrenze", "eine korrigierte Forderung von 9,8 Prozent plus Protokoll", "wenn Protokoll und Belege eingetroffen sind"],
     "d-b2-12": ["beglaubigte Übersetzung, Fächerübersicht und Praxisnachweis", "eingeschränkt, mit Berufserlaubnis", "höchstens 16 Monate"],
   };
   const expectedDict204: Record<string, string[]> = {
@@ -9568,7 +9569,7 @@ void 0;
     ],
     "d-b2-11": [
       "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
-      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf vierzehn Komma sieben Prozent.",
+      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
     ],
     "d-b2-12": [
       "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
@@ -10163,6 +10164,37 @@ void 0;
     "K215i تعداد المستويات 5+20+20+30+35=110 نص");
   ok(b2t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
     "K215j الحقول مقفلة");
+}
+/* ═══ K216 — تصحيح تحذيرات المحتوى W1–W6 (R142). ═══ */
+{
+  const dialogs = JSON.parse(readFileSync("content/dialogues.json","utf8")) as any[];
+  const find=(id:string)=>dialogs.find((d:any)=>d.id===id);
+  const d16=find("d-b1-16"), d24=find("d-b1-24"), d25=find("d-b1-25"), d27=find("d-b1-27"), d11=find("d-b2-11");
+  // W1: 60 Min → 25%
+  ok(d16.lines[0].de.includes("sechzig Minuten") && d16.lines[1].de.includes("fünfundzwanzig Prozent"),
+    "K216a W1: ستون دقيقة → 25٪ وفق VO (EU) 2021/782");
+  ok(d16.questions[0].answer==="fünfundzwanzig Prozent des Preises" && d16.questions[0].options.includes("fünfzig Prozent des Preises"),
+    "K216b W1: خيار الإجابة والمشتتات محدَّثان");
+  // W2: 6 Monate Aufbewahrung
+  ok(d24.lines[7].de.includes("Sechs Monate") && !d24.lines[7].de.includes("Vierzehn Tage Aufbewahrung"),
+    "K216c W2: ستة أشهر حفظ وفق § 973 BGB");
+  ok(d24.questions[2].answer==="sechs Monate nach Anzeige",
+    "K216d W2: إجابة السؤال محدَّثة إلى 6 أشهر");
+  // W3: eID und Anmeldung gebührenfrei; 6 EUR = biometrisches Lichtbild
+  ok(d25.lines[7].de.includes("gebührenfrei") && d25.lines[7].de.includes("biometrisches Lichtbild") && d25.lines[7].de.includes("sechs Euro"),
+    "K216e W3: التسجيل والعنوان وeID مجّانية؛ رسم 6€ للصورة البيومترية");
+  ok(d25.questions[2].answer.includes("biometrisches Lichtbild"),
+    "K216f W3: إجابة السؤال محدَّثة");
+  // W4: Gebühr pro Versuch erneut fällig
+  ok(d27.lines[7].de.includes("Prüfgebühr wird für jeden Versuch erneut fällig"),
+    "K216g W4: رسم الامتحان يُدفع في كل محاولة");
+  ok(d27.questions[2].answer.includes("Prüfgebühr wird pro Versuch erneut fällig"),
+    "K216h W4: إجابة السؤال محدَّثة");
+  // W6: Kappungsgrenze 15 %
+  ok(d11.lines[2].de.includes("Kappungsgrenze von fünfzehn Prozent") && !d11.lines[2].de.includes("elf Prozent"),
+    "K216i W6: سقف Kappungsgrenze 15٪ وفق § 558 Abs. 3 BGB");
+  ok(d11.questions[1].options.includes("eine Erhöhung um zwanzig Prozent"),
+    "K216j W6: خيارات السؤال محدَّثة");
 }
 
 

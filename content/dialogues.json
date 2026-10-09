@@ -3014,7 +3014,7 @@
       {
         "who": "Schaffnerin Weiß",
         "de": "Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu.",
-        "ar": "عند ستّين دقيقة يحقّ لكم خمسةٌ وعشرون بالمئةِ من الثمن."
+        "ar": "عند ستّين دقيقة يحقّ لكم خمسةٌ وعشرونَ بالمئةِ من الثمن."
       },
       {
         "who": "Amir",
@@ -3058,7 +3058,7 @@
           "fünfundzwanzig Prozent des Preises"
         ],
         "answer": "fünfundzwanzig Prozent des Preises",
-        "explanationAr": "الدليل: «Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu» (المادة 19 من لائحة حقوق الركاب EU 2021/782: 25٪ عند 60–119 دقيقة تأخير، و50٪ عند 120 دقيقة فأكثر). الفخّ 1: خمسون بالمئة تعويضُ تأخير ساعتين فأكثر لا ساعة. الفخّ 2: القطارُ التالي يخصّ المواصلة المفقودة لا التعويض المالي.",
+        "explanationAr": "الدليل: «Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu» (المادة 19 من لائحة حقوق المسافرين بالقطار EU/2021/782: 25٪ بين 60 و119 دقيقة، و50٪ من 120 دقيقة فما فوق). الفخّ 1: خمسون بالمئة ليس فئةً نظاميةً عند ستّين دقيقة. الفخّ 2: القطار التالي بلا زيادة يخصّ الرحلة الملغاة لا التعويض عن التأخير.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
@@ -3084,7 +3084,7 @@
           "kein Anspruch, weil der Anschlusszug ausfiel"
         ],
         "answer": "der nächste Zug ohne Aufpreis",
-        "explanationAr": "الدليل: «Dann gilt der nächste Zug ohne Aufpreis». الفخّ 1: 25٪ تعويضُ التأخير لا بديلاً عن المواصلة. الفخّ 2: إلغاءُ القطار الموالي يمنح الحقّ في البديل المجاني لا يسقطه.",
+        "explanationAr": "الدليل: «Dann gilt der nächste Zug ohne Aufpreis — wir haben es vermerkt». الفخّ 1: 25٪ للتأخير (بين 60 و119 دقيقة) لا لفوات القطار الموالي. الفخّ 2: فوات الموالي يمنح الحق في ركوب القطار التالي بلا زيادة ولا يلغي التعويض.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       }
     ],
@@ -3782,8 +3782,8 @@
       },
       {
         "who": "Polizist",
-        "de": "Sechs Monate Aufbewahrung nach Anzeige — dann geht er in die Versteigerung; kommen Sie pünktlich.",
-        "ar": "ستةُ أشهرِ حفظٍ بعد الإبلاغ، ثم تُطرح للمزاد العلني — فلتحضروا في الموعد."
+        "de": "Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung — kommen Sie pünktlich.",
+        "ar": "ستةُ أشهرٍ للحفظ بعد الإبلاغ، ثم المزادُ العلني — فلتحضروا في الموعد."
       }
     ],
     "questions": [
@@ -3816,20 +3816,20 @@
       {
         "id": "d-b1-24-q3",
         "type": "mc",
-        "promptDe": "Wie lange wird die Tasche aufbewahrt, bevor sie versteigert wird?",
+        "promptDe": "Wie lange wird die Tasche aufbewahrt?",
         "options": [
           "bis neun Uhr",
           "sechs Monate nach Anzeige",
           "bis zwanzig Uhr zwanzig"
         ],
         "answer": "sechs Monate nach Anzeige",
-        "explanationAr": "الدليل: «Sechs Monate Aufbewahrung nach Anzeige — dann geht er in die Versteigerung» (§ 973 BGB: بعد ستة أشهر من إبلاغ الجهة المختصة ينتقل الملك إلى الواجد إن لم يتقدم صاحب الحق). الفخّ 1: «من التاسعة» بدايةُ الاستلام لا مدة الحفظ. الفخّ 2: 20:20 وقتُ الإبلاغ عن العثور لا المهلة.",
-        "promptAr": "كم تُحفَظ الحقيبةُ قبل أن تُطرح للمزاد؟"
+        "explanationAr": "الدليل: «Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung» — مهلة الحفظ النظامية ستة أشهر من تاريخ البلاغ (المادة 973 من القانون المدني BGB)، ثم يصبح الشيء من حق الواجد أو يُباع بالمزاد العلني (المادتان 979 و980). الفخّ 1: «Ab neun» بداية وقت الاستلام لا مدة الحفظ. الفخّ 2: «zwanzig zwanzig» ساعةُ الإبلاغ عن العثور لا مدة الحفظ.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       }
     ],
     "dictation": [
       "Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt.",
-      "Sechs Monate Aufbewahrung nach Anzeige — dann geht er in die Versteigerung; kommen Sie pünktlich."
+      "Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung — kommen Sie pünktlich."
     ]
   },
   {
@@ -3875,8 +3875,8 @@
       },
       {
         "who": "Amtsfrau Berg",
-        "de": "Anmeldung und Adressänderung sind gebührenfrei, und die eID-Funktion ist bereits aktiviert.",
-        "ar": "التسجيلُ وتغييرُ العنوان مجّانيّان، وخاصيةُ الهوية الإلكترونية مُفعَّلة بالفعل."
+        "de": "Anmeldung und Adressänderung sind gebührenfrei; die eID-Funktion schalten wir auch kostenlos frei. Nur ein biometrisches Lichtbild im Amt kostet etwa sechs Euro, falls Sie keines mitbringen.",
+        "ar": "التسجيلُ وتغييرُ العنوان مجّانيّان، ونُفعِّلُ خاصّيةَ الهويةِ الإلكترونيةِ مجّاناً أيضاً. فقط الصورةُ البيومتريةُ في المكتب إن لم تحضروها معكم تكلف نحو ستة يورو."
       }
     ],
     "questions": [
@@ -3886,11 +3886,11 @@
         "promptDe": "Wann muss umgemeldet werden?",
         "options": [
           "sobald der Vermieter zurück ist",
-          "am Tag der Unterschrift",
+          "innerhalb von sechs Tagen",
           "innerhalb von zwei Wochen"
         ],
         "answer": "innerhalb von zwei Wochen",
-        "explanationAr": "الدليل: «Genau zwei Wochen Frist — rechtzeitig» (مهلة أسبوعين قانونية لتسجيل السكن الجديد). الفخّ 1: غيابُ المؤجّر لا يمدّد المهلة. الفخّ 2: لا رسم على التسجيل أو تفعيل الهوية الرقمية.",
+        "explanationAr": "الدليل: «Genau zwei Wochen Frist — rechtzeitig». الفخّ 1: غياب المؤجّر لا يمدّد المهلة. الفخّ 2: ستّة هي يوروهات الـeID.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
@@ -3909,15 +3909,15 @@
       {
         "id": "d-b1-25-q3",
         "type": "mc",
-        "promptDe": "Was gibt es ohne sie?",
+        "promptDe": "Was kostet bei der Ummeldung extra, wenn Sie kein Passfoto mitbringen?",
         "options": [
-          "eine volle Anmeldung ohne Unterschrift",
-          "eine vorläufige Bescheinigung",
-          "die eID-Funktion mit Unterschrift"
+          "die Anmeldung selbst",
+          "ein biometrisches Lichtbild im Amt (ca. sechs Euro)",
+          "die eID-Funktion"
         ],
-        "answer": "eine vorläufige Bescheinigung",
-        "explanationAr": "الدليل: «Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung». الفخّ 1: التسجيلُ الكاملُ غير ممكن بدون توقيع المؤجِّر. الفخّ 2: خاصيةُ الهوية الإلكترونية مُفعَّلة بالفعل وليست بديلاً عن شهادة التسجيل.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "answer": "ein biometrisches Lichtbild im Amt (ca. sechs Euro)",
+        "explanationAr": "الدليل: «Anmeldung und Adressänderung sind gebührenfrei; die eID-Funktion schalten wir auch kostenlos frei … biometrisches Lichtbild im Amt kostet etwa sechs Euro». التسجيل وتغيير العنوان مجّانيّان (الفقرة 5 من المادة 1 من لائحة رسوم بطاقة الهوية)، وتفعيلُ الهوية الإلكترونية وإعادة تعيين الرقم السريّ مجّانيّان؛ رسم الستة يورو هو ثمن التصوير البيومتري في المكتب إن لم يحضر المستخدم صورةً. الفخّ 1: التسجيل نفسُه مجّانيّ فلا يُختار كـ«مكلِّف». الفخّ 2: تفعيل الهوية الإلكترونية (eID) مجّانيّ أيضاً.",
+        "promptAr": "ما الذي يكلّف مبلغاً إضافيّاً عند تسجيل العنوان إن لم تحضِروا صورةً شخصيةً؟"
       }
     ],
     "dictation": [
@@ -4061,8 +4061,8 @@
       },
       {
         "who": "Fahrlehrer",
-        "de": "Vierzehn Tage Sperre — der Antrag bleibt gültig, die Prüfgebühr wird pro Versuch neu fällig.",
-        "ar": "حظرُ أربعةَ عشرَ يوماً — الطلبُ يبقى سارياً، ورسمُ الامتحان يُدفَع عن كلِّ محاولة."
+        "de": "Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig.",
+        "ar": "حظرُ أربعةَ عشرَ يوماً حتى المحاولة التالية؛ ورسمُ الامتحانِ يُدفعُ من جديد في كلِّ محاولة، ولا حاجةَ إلى تقديم طلب جديد في الدائرة."
       }
     ],
     "questions": [
@@ -4095,20 +4095,20 @@
       {
         "id": "d-b1-27-q3",
         "type": "mc",
-        "promptDe": "Was gilt nach zweimaligem Nichtbestehen?",
+        "promptDe": "Nach zweimaligem Scheitern?",
         "options": [
-          "eine Neuanmeldung ist nötig, mit neuer Gebühr",
-          "vierzehn Tage Sperre; Antrag bleibt gültig, Prüfgebühr pro Versuch neu fällig",
-          "lebenslange Sperre"
+          "Neuantrag mit neuer Gebühr beim Amt",
+          "vierzehn Tage Sperre; Prüfgebühr wird pro Versuch erneut fällig",
+          "Sperre auf Lebenszeit"
         ],
-        "answer": "vierzehn Tage Sperre; Antrag bleibt gültig, Prüfgebühr pro Versuch neu fällig",
-        "explanationAr": "الدليل: «Vierzehn Tage Sperre — der Antrag bleibt gültig, die Prüfgebühr wird pro Versuch neu fällig» (§ 18 FeV: مهلة 14 يوماً بين المحاولات، ورسم TÜV/DEKRA نحو 22,49 يورو لكل محاولة، ولا حاجة لإعادة تقديم الطلب). الفخّ 1: إعادةُ التسجيل غير لازمة ما دام الطلب سارياً. الفخّ 2: لا حظرَ مدى الحياة في القانون الألماني.",
-        "promptAr": "ماذا يجري بعد الرسوب مرتين؟"
+        "answer": "vierzehn Tage Sperre; Prüfgebühr wird pro Versuch erneut fällig",
+        "explanationAr": "الدليل: «Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig» — المادة 18 من لائحة رخص السياقة تقتضي أسبوعين على الأقل بين المحاولات، ورسم هيئة الفحص (نحو 25 يورو للفئة B) يُستحقّ في كل محاولة، بينما يبقى ملف الطلب صالحاً سنةً دون إعادة تقديم. الفخّ 1: لا إعادةَ تقديم للطلب في الدائرة. الفخّ 2: لا حظرَ مدى الحياة لعدد المحاولات.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       }
     ],
     "dictation": [
       "Einmal im Leben: sie läuft nie ab.",
-      "Vierzehn Tage Sperre — der Antrag bleibt gültig, die Prüfgebühr wird pro Versuch neu fällig."
+      "Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig."
     ]
   },
   {
@@ -4215,8 +4215,8 @@
     "lines": [
       {
         "who": "Amel",
-        "de": "Die angekündigte Erhöhung um achtzehn Prozent übersteigt die ortsübliche Vergleichsmiete nicht — aber die Kappungsgrenze.",
-        "ar": "الزيادةُ المعلَنةُ بثمانيةَ عشرَ بالمئةِ لا تتجاوزُ الإيجارَ المقارِنَ المعتادَ محليًّا — لكنّها تتجاوزُ سقفَ الزيادة."
+        "de": "Die angekündigte Erhöhung um 15 Prozent übersteigt die ortsübliche Miete.",
+        "ar": "الزيادةُ المعلَنةُ بخمسةَ عشرَ بالمئةِ تتجاوزُ الإيجارَ المعتادَ محليًّا."
       },
       {
         "who": "Hausverwaltung",
@@ -4225,13 +4225,13 @@
       },
       {
         "who": "Amel",
-        "de": "Genau der Mietspiegel zeigt: die Kappungsgrenze beträgt zwanzig Prozent in drei Jahren; in angespannten Gebieten fünfzehn.",
-        "ar": "مؤشّرُ الإيجاراتِ نفسُه يُظهر: سقفُ الزيادةِ عشرون بالمئة خلال ثلاث سنوات؛ وفي المناطق المشدودة خمسةَ عشرَ."
+        "de": "Genau der Mietspiegel zeigt: in unserem Markt gilt die Kappungsgrenze von fünfzehn Prozent in drei Jahren.",
+        "ar": "مؤشّرُ الإيجارات نفسُه يُظهر أنّ سقفَ الزيادة في سوقنا هو خمسةَ عشرَ بالمئة خلال ثلاث سنوات."
       },
       {
         "who": "Hausverwaltung",
-        "de": "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf vierzehn Komma sieben Prozent.",
-        "ar": "صحيح — حسابُ رسالتكم سليم؛ فنُصحِّحُ إلى أربعةَ عشرَ فاصلةَ سبعة بالمئة."
+        "de": "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
+        "ar": "صحيح — حسابُ رسالتكم سليم؛ فنُصحِّحُ إلى تسعةٍ فاصلةَ ثمانية بالمئة."
       },
       {
         "who": "Amel",
@@ -4265,7 +4265,7 @@
           "auf den Mietspiegel und die Kappungsgrenze"
         ],
         "answer": "auf den Mietspiegel und die Kappungsgrenze",
-        "explanationAr": "الدليل: «Genau der Mietspiegel zeigt: die Kappungsgrenze beträgt zwanzig Prozent in drei Jahren». الفخّ 1: الـWirtschaftlichkeitsberechnung دليلُ الإدارة. الفخّ 2: الـNebenkosten طلبٌ إضافي (محضر) لا حجّة.",
+        "explanationAr": "الدليل: «Genau der Mietspiegel zeigt: in unserem Markt gilt die Kappungsgrenze von fünfzehn Prozent in drei Jahren» — سقف الزيادة حسب المادة 558 الفقرة 3 من القانون المدني هو 20٪ عموماً و15٪ في المناطق ذات السوق الإيجاري المشدود (كبرلين وهامبورغ ومدن أخرى بمراسيم محلية). الفخّ 1: حسابُ الجدوى الاقتصادية دليلُ الإدارة لا حجّةُ المستأجرة. الفخّ 2: تسوية النفقات الجانبية طلب إضافي.",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
@@ -4274,12 +4274,12 @@
         "type": "mc",
         "promptDe": "Was folgt nach dem Brief?",
         "options": [
-          "eine korrigierte Forderung von 14,7 Prozent plus Protokoll",
-          "eine Erhöhung um achtzehn Prozent",
-          "eine Erhöhung um zwanzig Prozent (volle Kappungsgrenze)"
+          "eine korrigierte Forderung von 9,8 Prozent plus Protokoll",
+          "eine Erhöhung um 15 Prozent",
+          "eine Erhöhung um zwanzig Prozent"
         ],
-        "answer": "eine korrigierte Forderung von 14,7 Prozent plus Protokoll",
-        "explanationAr": "الدليل: «wir korrigieren auf vierzehn Komma sieben Prozent» و«Das Protokoll folgt binnen vierzehn Tagen». الفخّ 1: 18٪ الطلبُ الأصلي المتجاوز للسقف. الفخّ 2: 20٪ هو السقفُ القانوني العام (§ 558 Abs. 3 BGB) لا المبلغ المصحَّح إليه؛ وفي المناطق المشدودة يُخفَّض السقف إلى 15٪.",
+        "answer": "eine korrigierte Forderung von 9,8 Prozent plus Protokoll",
+        "explanationAr": "الدليل: «wir korrigieren auf 9,8 Prozent» و«Das Protokoll folgt binnen vierzehn Tagen». الفخّ 1: 15٪ هي الزيادة الأصلية المطلوبة قبل التصحيح وهي في هذه الحالة السقف النظامي لا المبلغ المقبول. الفخّ 2: 20٪ هو السقف العام في المادة 558 الفقرة 3 BGB خارج المناطق المشدودة، لا المبلغ المصحَّح إليه.",
         "falle": true,
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
@@ -4300,7 +4300,7 @@
     ],
     "dictation": [
       "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
-      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf vierzehn Komma sieben Prozent."
+      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent."
     ]
   },
   {
