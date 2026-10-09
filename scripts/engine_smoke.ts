@@ -8435,8 +8435,8 @@ void 0;
   // Locked DE/who/questions/dictations.
   const expectedDE5: Record<string, string[]> = {
     "d-b1-16": [
-      "Mein Zug nach München hatte fünfzig Minuten Verspätung — Fahrgastrechte bitte.",
-      "Bei fünfzig Minuten stehen Ihnen fünfzehn Prozent des Preises zu.",
+      "Mein Zug nach München hatte sechzig Minuten Verspätung — Fahrgastrechte bitte.",
+      "Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu.",
       "Bar oder aufs Konto?",
       "Das Formular „Geld zurück“ online ausfüllen — die Erstattung geht aufs Konto.",
       "Muss ich die Fahrkarte beilegen?",
@@ -8470,14 +8470,14 @@ void 0;
     "d-b1-18": ["Frau Dittrich","Oussama","Frau Dittrich","Oussama","Frau Dittrich","Oussama","Frau Dittrich"],
   };
   const expectedAnswers5: Record<string, any[]> = {
-    "d-b1-16": ["fünfzehn Prozent des Preises", "das Onlineformular und eine Kopie der Fahrkarte", "der nächste Zug ohne Aufpreis"],
+    "d-b1-16": ["fünfundzwanzig Prozent des Preises", "das Onlineformular und eine Kopie der Fahrkarte", "der nächste Zug ohne Aufpreis"],
     "d-b1-17": ["ein Sponsor", "einmal monatlich, samstags vor zehn", "die Abschlussfeier"],
     "d-b1-18": ["die laut verstärkte Übertragung des Bruders", "um zweiundzwanzig Uhr", "Die Übertragung bleibt künftig aus."],
   };
   const expectedDict5: Record<string, string[]> = {
     "d-b1-16": [
       "Dann gilt der nächste Zug ohne Aufpreis — wir haben es vermerkt.",
-      "Bei fünfzig Minuten stehen Ihnen fünfzehn Prozent des Preises zu.",
+      "Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu.",
     ],
     "d-b1-17": [
       "Die Leseecke ist fertig; für die Bibliothek fehlt ein Sponsor.",
@@ -8719,9 +8719,9 @@ void 0;
     !d24.lines[3].ar.includes("وِجادةٌ") && !d24.lines[3].ar.includes("العشرينُ والعشرون") &&
     d24.lines[5].ar.includes("من التاسعة") && d24.lines[5].ar.includes("إثباتُ الملكية") &&
     d24.lines[6].ar.includes("لقطاتٍ للجهاز") && !d24.lines[6].ar.includes("من حاسوبي") &&
-    d24.lines[7].ar.includes("أربعةَ عشرَ يوماً للحفظ") && d24.lines[7].ar.includes("مخزنُ المزادِ") &&
+    d24.lines[7].ar.includes("ستةُ أشهرِ حفظٍ بعد الإبلاغ") && d24.lines[7].ar.includes("للمزاد العلني") && d24.lines[7].ar.includes("تُطرح") &&
     d24.lines[7].ar.includes("فلتحضروا في الموعد") && !d24.lines[7].ar.includes("أسبوعانِ") && !d24.lines[7].ar.includes("باكراً"),
-    "K194e d-b1-24: الخط لا الرقم، 20:20 بالحروف، من التاسعة، لقطات للجهاز، 14 يوماً للحفظ ثم مخزن المزاد، pünktlich=في الموعد");
+    "K194e d-b1-24: الخط لا الرقم، 20:20 بالحروف، من التاسعة، لقطات للجهاز، ستة أشهر للحفظ (§ 973 BGB) ثم للمزاد العلني، pünktlich=في الموعد");
 
   // Locked DE/who/questions/dictations.
   const expectedDE7: Record<string, string[]> = {
@@ -8753,7 +8753,7 @@ void 0;
       "Wann kann ich abholen?",
       "Ab neun — Ausweis und Eigentumsnachweis: Rechnung oder Fotos.",
       "Ich bringe Rechnung und Screenshots des Geräts.",
-      "Vierzehn Tage Aufbewahrung, dann Versteigerungslager — kommen Sie pünktlich.",
+      "Sechs Monate Aufbewahrung nach Anzeige — dann geht er in die Versteigerung; kommen Sie pünktlich.",
     ],
   };
   const expectedWho7: Record<string, string[]> = {
@@ -8764,7 +8764,7 @@ void 0;
   const expectedAnswers7: Record<string, any[]> = {
     "d-b1-22": ["das Mineralwasser", "mit einem Dessert aufs Haus", "sechsundzwanzig Euro"],
     "d-b1-23": ["die Vorlesung und das Praktikum", "dreißig Wochenstunden", "eine formlose E-Mail der Chefin"],
-    "d-b1-24": ["Verlust im Bus", "Ausweis und Eigentumsnachweis", "vierzehn Tage"],
+    "d-b1-24": ["Verlust im Bus", "Ausweis und Eigentumsnachweis", "sechs Monate nach Anzeige"],
   };
   const expectedDict7: Record<string, string[]> = {
     "d-b1-22": [
@@ -8777,7 +8777,7 @@ void 0;
     ],
     "d-b1-24": [
       "Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt.",
-      "Vierzehn Tage Aufbewahrung, dann Versteigerungslager — kommen Sie pünktlich.",
+      "Sechs Monate Aufbewahrung nach Anzeige — dann geht er in die Versteigerung; kommen Sie pünktlich.",
     ],
   };
   let locksOk7 = true;
@@ -8849,8 +8849,9 @@ void 0;
     d25.lines[3].ar.includes("الانتقالَ إلى المسكن") && !d25.lines[3].ar.includes("بدءَ سُكنانا") &&
     d25.lines[5].ar.includes("سأُعطيكم شهادةً مؤقَّتة") && !d25.lines[5].ar.includes("لكنْ خُذ مني") &&
     d25.lines[6].ar.includes("وكم تكلِّفُ؟") && !d25.lines[6].ar.includes("وبكم هي") &&
-    d25.lines[7].ar.includes("ستةُ يورو لخاصيةِ الهويةِ الإلكترونية") && !d25.lines[7].ar.includes("وستةٌ لخاصيةِ"),
-    "K195c d-b1-25: تسجيل العنوان لا تحديث الإقامة، المهلة بالضبط، سأُعطيكم شهادة مؤقتة، وكم تكلّف، وستة يورو");
+    d25.lines[7].ar.includes("مجّانيّان") && d25.lines[7].ar.includes("مُفعَّلة بالفعل") &&
+    !d25.lines[7].ar.includes("ستةُ يورو"),
+    "K195c d-b1-25: تسجيل العنوان لا تحديث الإقامة، المهلة بالضبط، سأُعطيكم شهادة مؤقتة، وكم تكلّف، التسجيل وeID مجّانيّان (§ 1 Abs. 5 PersAuswGebV)");
 
   ok(d26.lines[0].ar.includes("اعتباراً من أولِ الشهر") && d26.lines[0].ar.includes("أريدُ كهرباءَكم") &&
     !d26.lines[0].ar.includes("المقبل") && !d26.lines[0].ar.includes("أنتقلُ إليكم") &&
@@ -8869,8 +8870,9 @@ void 0;
     d27.lines[4].ar.includes("التي يطلبُها الممتحِن") && !d27.lines[4].ar.includes("عندَ المُمتحِن") &&
     d27.lines[5].ar.includes("اختبارُ نظر") && d27.lines[5].ar.includes("صورةٌ شخصية") &&
     !d27.lines[5].ar.includes("نظارةُ قياس") && !d27.lines[5].ar.includes("صورةٌ شمسية") &&
-    d27.lines[7].ar.includes("حظرُ أربعةَ عشرَ يوماً") && !d27.lines[7].ar.includes("أسبوعان انتظاراً"),
-    "K195e d-b1-27: يمكنني التقدّم، أقرب الأحوال، مدة الصلاحية، يطلبها الممتحن، اختبار نظر وصورة شخصية، حظر 14 يوماً");
+    d27.lines[7].ar.includes("حظرُ أربعةَ عشرَ يوماً") && d27.lines[7].ar.includes("الطلبُ يبقى سارياً") &&
+    d27.lines[7].ar.includes("رسمُ الامتحان يُدفَع عن كلِّ محاولة") && !d27.lines[7].ar.includes("أسبوعان انتظاراً"),
+    "K195e d-b1-27: يمكنني التقدّم، أقرب الأحوال، مدة الصلاحية، يطلبها الممتحن، اختبار نظر وصورة شخصية، حظر 14 يوماً، رسم كل محاولة (§ 18 FeV)");
 
   // Locked DE/who/questions/dictations.
   const expectedDE8: Record<string, string[]> = {
@@ -8882,7 +8884,7 @@ void 0;
       "Der Vermieter weilt in Tunesien; die Post braucht Tage.",
       "Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung.",
       "Was kostet sie?",
-      "Anmeldung gratis; die eID-Funktion kostet sechs Euro.",
+      "Anmeldung und Adressänderung sind gebührenfrei, und die eID-Funktion ist bereits aktiviert.",
     ],
     "d-b1-26": [
       "Ich kündige zum Monatsersten und will Ihren Strom.",
@@ -8902,7 +8904,7 @@ void 0;
       "Welche Papiere verlangt der Prüfer?",
       "Ausweis, Sehtest, Erste-Hilfe, Ausbildungsprotokoll, Passfoto — Gebühr vor Ort.",
       "Und nach zweimaligem Nichtbestehen?",
-      "Vierzehn Tage Sperre — die Gebühr bleibt gültig, keine Neuanmeldung.",
+      "Vierzehn Tage Sperre — der Antrag bleibt gültig, die Prüfgebühr wird pro Versuch neu fällig.",
     ],
   };
   const expectedWho8: Record<string, string[]> = {
@@ -8913,7 +8915,7 @@ void 0;
   const expectedAnswers8: Record<string, any[]> = {
     "d-b1-25": ["innerhalb von zwei Wochen", "der Vermieter", "eine vorläufige Bescheinigung"],
     "d-b1-26": ["der neue Anbieter", "per Foto im Onlineformular bis 22 Uhr", "an zwölf Monaten Preisbindung"],
-    "d-b1-27": ["die Erste-Hilfe-Bescheinigung", "sie läuft nie ab", "vierzehn Tage Sperre, Gebühr bleibt gültig"],
+    "d-b1-27": ["die Erste-Hilfe-Bescheinigung", "sie läuft nie ab", "vierzehn Tage Sperre; Antrag bleibt gültig, Prüfgebühr pro Versuch neu fällig"],
   };
   const expectedDict8: Record<string, string[]> = {
     "d-b1-25": [
@@ -8926,7 +8928,7 @@ void 0;
     ],
     "d-b1-27": [
       "Einmal im Leben: sie läuft nie ab.",
-      "Vierzehn Tage Sperre — die Gebühr bleibt gültig, keine Neuanmeldung.",
+      "Vierzehn Tage Sperre — der Antrag bleibt gültig, die Prüfgebühr wird pro Versuch neu fällig.",
     ],
   };
   let locksOk8 = true;
@@ -9498,14 +9500,17 @@ void 0;
     "K200d d-b2-10: نطاق/حصة متغيرة/للتفاوض، أداءً (Leistung)، فترة التجربة، سيصلُكم التعهدُ");
 
   const d211 = liveB204.find((d) => d.id === "d-b2-11");
-  ok(d211.lines[1].ar.includes("أدلتُنا") && d211.lines[1].ar.includes("حسابُ الجدوى") &&
+  ok(d211.lines[0].ar.includes("بثمانيةَ عشرَ بالمئةِ") && d211.lines[0].ar.includes("سقفَ الزيادة") &&
+    d211.lines[1].ar.includes("أدلتُنا") && d211.lines[1].ar.includes("حسابُ الجدوى") &&
     !d211.lines[1].ar.includes("حججُنا") &&
+    d211.lines[2].ar.includes("عشرون بالمئة") && d211.lines[2].ar.includes("خمسةَ عشرَ") &&
+    d211.lines[3].ar.includes("أربعةَ عشرَ فاصلةَ سبعة بالمئة") &&
     d211.lines[3].ar.includes("حسابُ رسالتكم سليم") && !d211.lines[3].ar.includes("رسالتك سليم") &&
     d211.lines[5].ar.includes("أربعةَ عشرَ يوماً") && !d211.lines[5].ar.includes("أسبوعَين") &&
     d211.lines[5].ar.includes("مع الأدلة") && !d211.lines[5].ar.includes("الفواتير") &&
     d211.lines[7].ar.includes("مؤكَّدٌ بالبريد") && d211.lines[7].ar.includes("بموضوعيةٍ") &&
     !d211.lines[7].ar.includes("منهجيةِ"),
-    "K200e d-b2-11: أدلتُنا/حساب الجدوى، رسالتكم، أربعة عشر يوماً/الأدلة، مؤكَّدٌ بموضوعية");
+    "K200e d-b2-11: 18% Forderung، 20%/15% Kappung (§ 558 Abs. 3 BGB)، 14,7% تصحيح، رسالتكم/أدلة، أربعة عشر يوماً، موضوعية");
 
   const d212 = liveB204.find((d) => d.id === "d-b2-12");
   ok(d212.lines[1].ar.includes("قائمةُ الموادِّ الدراسية") && d212.lines[1].ar.includes("إثباتُ الخبرةِ العملية") &&
@@ -9531,10 +9536,10 @@ void 0;
       "Abgemacht — die Zusage bekommen Sie schriftlich morgen Vormittag.",
     ],
     "d-b2-11": [
-      "Die angekündigte Erhöhung um 15 Prozent übersteigt die ortsübliche Miete.",
+      "Die angekündigte Erhöhung um achtzehn Prozent übersteigt die ortsübliche Vergleichsmiete nicht — aber die Kappungsgrenze.",
       "Unsere Belege: Mietspiegel und Wirtschaftlichkeitsberechnung.",
-      "Genau der Mietspiegel besagt: Kappungsgrenze bei elf Prozent in drei Jahren.",
-      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
+      "Genau der Mietspiegel zeigt: die Kappungsgrenze beträgt zwanzig Prozent in drei Jahren; in angespannten Gebieten fünfzehn.",
+      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf vierzehn Komma sieben Prozent.",
       "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
       "Das Protokoll folgt binnen vierzehn Tagen samt Belegen.",
       "Sofern alles eintrifft, akzeptiere ich den neuen Betrag zum Ersten.",
@@ -9553,7 +9558,7 @@ void 0;
   };
   const expectedAnswers204: Record<string, any[]> = {
     "d-b2-10": ["45.500 Euro mit Homeoffice und Weiterbildungsbudget", "eine Probezeit von höchstens drei Monaten", "die Zusage über den gesamten Kompromiss"],
-    "d-b2-11": ["auf den Mietspiegel und die Kappungsgrenze", "eine korrigierte Forderung von 9,8 Prozent plus Protokoll", "wenn Protokoll und Belege eingetroffen sind"],
+    "d-b2-11": ["auf den Mietspiegel und die Kappungsgrenze", "eine korrigierte Forderung von 14,7 Prozent plus Protokoll", "wenn Protokoll und Belege eingetroffen sind"],
     "d-b2-12": ["beglaubigte Übersetzung, Fächerübersicht und Praxisnachweis", "eingeschränkt, mit Berufserlaubnis", "höchstens 16 Monate"],
   };
   const expectedDict204: Record<string, string[]> = {
@@ -9563,7 +9568,7 @@ void 0;
     ],
     "d-b2-11": [
       "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
-      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
+      "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf vierzehn Komma sieben Prozent.",
     ],
     "d-b2-12": [
       "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
