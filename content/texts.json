@@ -187,7 +187,8 @@
           "hinter dem Hotel"
         ],
         "answer": "gegenüber vom Hotel",
-        "explanationAr": "الدليل حرفياً: «Der Bahnhof ist rechts, gegenüber vom Hotel.» — مقابل الفندق."
+        "explanationAr": "الدليل حرفياً: «Der Bahnhof ist rechts, gegenüber vom Hotel.» — مقابل الفندق.",
+        "promptAr": "أين المحطة؟"
       },
       {
         "id": "t-a1-04-q2",
@@ -197,7 +198,8 @@
           "zweite",
           "2."
         ],
-        "explanationAr": "الدليل حرفياً: «Dann die zweite Straße links.» — الشارع الثاني."
+        "explanationAr": "الدليل حرفياً: «Dann die zweite Straße links.» — الشارع الثاني.",
+        "promptAr": "الشارع ___ إلى اليسار."
       },
       {
         "id": "t-a1-04-q3",
@@ -207,7 +209,8 @@
           "Fuß",
           "fuss"
         ],
-        "explanationAr": "الدليل حرفياً: «Nein, nur fünf Minuten zu Fuß.» — zu Fuß = مشياً."
+        "explanationAr": "الدليل حرفياً: «Nein, nur fünf Minuten zu Fuß.» — zu Fuß = مشياً.",
+        "promptAr": "خمس دقائق على ___ فقط."
       },
       {
         "id": "t-a1-04-q4",
@@ -216,7 +219,8 @@
         "answer": [
           "Hotel"
         ],
-        "explanationAr": "«gegenüber vom Hotel» — gegenüber معَ الداتيف."
+        "explanationAr": "«gegenüber vom Hotel» — gegenüber معَ الداتيف.",
+        "promptAr": "المحطة مقابل ___."
       }
     ]
   },
@@ -238,7 +242,8 @@
           "Deutsch"
         ],
         "answer": "Informatik",
-        "explanationAr": "في النصِّ حرفياً: «Ich … studiere Informatik.»"
+        "explanationAr": "في النصِّ حرفياً: «Ich … studiere Informatik.»",
+        "promptAr": "ماذا تدرس سارة؟"
       },
       {
         "id": "t-a1-05-q2",
@@ -250,7 +255,8 @@
           "müde"
         ],
         "answer": "geduldig",
-        "explanationAr": "«sehr geduldig» — صبور جداً."
+        "explanationAr": "«sehr geduldig» — صبور جداً.",
+        "promptAr": "كيف هو المعلّم؟"
       },
       {
         "id": "t-a1-05-q3",
@@ -261,7 +267,8 @@
           "falsch"
         ],
         "answer": "falsch",
-        "explanationAr": "الدليل حرفياً: «Am Abend lerne ich mit meinen Freunden.» — Am Abend — مساءً."
+        "explanationAr": "الدليل حرفياً: «Am Abend lerne ich mit meinen Freunden.» — Am Abend — مساءً.",
+        "promptAr": "تتعلّم سارة صباحاً مع أصدقائها."
       },
       {
         "id": "t-a1-05-q4",
@@ -270,7 +277,8 @@
         "answer": [
           "Informatik"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Ich bin 24 Jahre alt und studiere Informatik»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Ich bin 24 Jahre alt und studiere Informatik».",
+        "promptAr": "تدرس سارة ___."
       }
     ]
   },
@@ -1031,7 +1039,8 @@
           "neben dem Bild"
         ],
         "answer": "an der Wand",
-        "explanationAr": "في النصِّ حرفياً: «Das Bett steht an der Wand.»"
+        "explanationAr": "في النصِّ حرفياً: «Das Bett steht an der Wand.»",
+        "promptAr": "أين السرير؟"
       },
       {
         "id": "t-a1-06-q2",
@@ -1040,7 +1049,8 @@
         "answer": [
           "Regal"
         ],
-        "explanationAr": "الدليل حرفياً: «Auf dem Regal liegen viele Bücher.» — das Regal = الرفّ."
+        "explanationAr": "الدليل حرفياً: «Auf dem Regal liegen viele Bücher.» — das Regal = الرفّ.",
+        "promptAr": "على ___ كتب كثيرة."
       },
       {
         "id": "t-a1-06-q3",
@@ -1049,7 +1059,8 @@
         "answer": [
           "ruhig"
         ],
-        "explanationAr": "الدليل حرفياً: «Ich mag mein Zimmer, weil es ruhig ist.» — هادئة."
+        "explanationAr": "الدليل حرفياً: «Ich mag mein Zimmer, weil es ruhig ist.» — هادئة.",
+        "promptAr": "يحب غرفته لأنها ___."
       },
       {
         "id": "t-a1-06-q4",
@@ -1058,7 +1069,8 @@
         "answer": [
           "hängt"
         ],
-        "explanationAr": "الدليل حرفياً: «An der Wand hängt ein Bild von meiner Familie.» — hängen للمعلَّقِ على الجدار، لا liegen ولا stehen."
+        "explanationAr": "الدليل حرفياً: «An der Wand hängt ein Bild von meiner Familie.» — hängen للمعلَّقِ على الجدار، لا liegen ولا stehen.",
+        "promptAr": "على الجدار ___ صورة لعائلته."
       }
     ]
   },
