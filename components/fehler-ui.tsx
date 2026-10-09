@@ -1,10 +1,8 @@
 "use client";
 import { useMemo, useState } from "react";
-import { levelAmTag } from "@/lib/phasen";
 import type { FehlerState } from "@/lib/types";
 import { useProgress, gradeFehlerNow, addFehlerNow } from "@/lib/store";
-import { FEHLER_KAT, normKey, platzierungsFragen, vorschlagTag } from "@/lib/fehler";
-import { grammarMap } from "@/lib/content";
+import { FEHLER_KAT, normKey } from "@/lib/fehler";
 import { speakAny } from "@/lib/speech";
 import ExerciseSet from "./exercises";
 import { transferUebung, istUeberkonfident } from "@/lib/fehlerbank2";
@@ -106,8 +104,8 @@ export function Fehlerheft({
                       justifyContent: "flex-start",
                       textAlign: "start",
                       direction: "ltr",
-                      background: st ? (o === f.richtig ? "var(--color-a1)" : "white") : "white",
-                      color: st && o === f.richtig ? "white" : undefined,
+                      background: st ? (o === f.richtig ? "var(--color-a1)" : "var(--ui-surface-raised)") : "var(--ui-surface-raised)",
+                      color: st && o === f.richtig ? "var(--ui-on-accent)" : undefined,
                     }}
                     disabled={!!st}
                     onClick={() => pruefen(f, o)}
@@ -174,7 +172,7 @@ export function FehlerFallen({
     <section className="card fadein" style={{ padding: "1.2rem" }}>
       <h3 style={{ fontWeight: 900, marginBottom: "0.3rem" }}>🪤 فخاخ الأخطاء الشائعة</h3>
       <p style={{ fontSize: "0.88rem", color: "var(--color-ink2)", marginBottom: "0.9rem" }}>
-        من موسوعة أخطاء الناطقين بالعربية — اختر الصيغة الصحيحة قبل أن يخدعك الفخّ. ما تخطئه يدخل دفتر أخطائك الشخصي فوراً.
+        اختر الصيغة الألمانية الصحيحة؛ وما تخطئه يدخل دفتر أخطائك الشخصي فوراً.
       </p>
       <div style={{ display: "grid", gap: "0.8rem" }}>
         {items.map((it, i) => {
@@ -205,8 +203,8 @@ export function FehlerFallen({
                       justifyContent: "flex-start",
                       textAlign: "start",
                       direction: "ltr",
-                      background: st && o === it.richtig ? "var(--color-a1)" : "white",
-                      color: st && o === it.richtig ? "white" : undefined,
+                      background: st && o === it.richtig ? "var(--color-a1)" : "var(--ui-surface-raised)",
+                      color: st && o === it.richtig ? "var(--ui-on-accent)" : undefined,
                     }}
                     disabled={!!st}
                     onClick={() => pruefen(i, it, o)}
@@ -286,7 +284,6 @@ export function Fehlerkartei() {
 
 // ── 🧠 استراتيجيات التعلّم وحيل الحفظ ─────────────────────────────────
 export function Lernstrategien() {
-  const { update } = useProgress();
   const techniken = [
     ["⏱ التكرار المتباعد (SM-2)", "البطاقات والأخطاء تعود في مواعيدها العلمية: 1 ← 3 ← 7 ← 15… يوماً — لا تحفظ مرتين في يوم."],
     ["🩸 الجرعات الصغيرة", "3–5 كلمات جديدة في الجلسة، مراجعة كثيرة — هذا أثبت من «حشو» 50 كلمة."],
@@ -325,77 +322,6 @@ export function Lernstrategien() {
           ))}
         </tbody>
       </table>
-      <div style={{ marginTop: "0.9rem", display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-        <button className="btn btn-ghost" onClick={() => update((p) => ({ ...p, settings: { ...p.settings, placed: false } }))}>
-          🏫 أعد اختبار تحديد المستوى
-        </button>
-      </div>
-    </section>
-  );
-}
-
-// ── 🏫 اختبار تحديد المستوى ───────────────────────────────────────────
-export function Einstufung() {
-  const { update } = useProgress();
-  const fragen = useMemo(() => platzierungsFragen(grammarMap), []);
-  const [grp, setGrp] = useState<Record<string, boolean>>({});
-
-  const levelOfId = (id: string) => {
-    const real = id.replace(/^pl-\d+-/, "");
-    return grammarMap[real]?.level ?? "A1";
-  };
-
-  const fertig = Object.keys(grp).length >= fragen.length;
-  const gruppen: Record<string, number> = {};
-  for (const [id, ok] of Object.entries(grp)) {
-    const lv = levelOfId(id);
-    gruppen[lv] = (gruppen[lv] ?? 0) + (ok ? 1 : 0);
-  }
-  const vorschlag = vorschlagTag(gruppen);
-
-  return (
-    <section className="card fadein" style={{ padding: "1.2rem", borderInlineStart: "5px solid var(--color-b1)" }}>
-      <h3 style={{ fontWeight: 900 }}>🏫 اختبار تحديد المستوى (اختياري — 12 سؤالاً)</h3>
-      <p style={{ fontSize: "0.88rem", color: "var(--color-ink2)", margin: "0.4rem 0 0.8rem" }}>
-        يقترح المدرّس نقطة انطلاقك A1→B2 لتفادي ما تتقنه فعلاً. أخطاؤك هنا تدخل دفتر الأخطاء مباشرة (تشخيص!). لن يتغيّر يومك إلا بتأكيدك.
-      </p>
-      <div style={{ display: "grid", gap: "0.8rem" }}>
-        {fragen.map((ex) => (
-          <ExerciseSet
-            key={ex.id}
-            items={[ex]}
-            onPoints={(p) => setGrp((g) => ({ ...g, [ex.id]: p > 0 }))}
-          />
-        ))}
-      </div>
-      {fertig && (
-        <div style={{ marginTop: "1rem", background: "var(--color-gold-soft)", borderRadius: "0.7rem", padding: "0.9rem 1rem" }}>
-          <strong>
-            اقتراح المدرّس: ابدأ من اليوم <span className="rtl-num">{vorschlag}</span>
-            {` (${levelAmTag(vorschlag)})`}
-          </strong>
-          <div style={{ fontSize: "0.85rem", margin: "0.3rem 0 0.6rem" }}>
-            نتائجك: A1 {gruppen.A1 ?? 0}/2 · A2 {gruppen.A2 ?? 0}/3 · B1 {gruppen.B1 ?? 0}/3 · B2 {gruppen.B2 ?? 0}/4
-          </div>
-          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-            <button
-              className="btn btn-primary"
-              onClick={() =>
-                update((p) => ({
-                  ...p,
-                  settings: { ...p.settings, placed: true },
-                  plan: { ...p.plan, day: Math.max(p.plan.day, vorschlag) },
-                }))
-              }
-            >
-              تابع من اليوم {vorschlag} ←
-            </button>
-            <button className="btn btn-ghost" onClick={() => update((p) => ({ ...p, settings: { ...p.settings, placed: true } }))}>
-              أكمل من حيث أنا
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 }

@@ -1,0 +1,881 @@
+{
+  "date": "2026-10-05",
+  "batch": "A2-dialogues-01",
+  "scope": "مراجعة d-a2-31 وd-a2-32 الموجودين في content/dialogues.json: عنوانا الحوار ومستواهما المخزن، كل سطر وترجمته، كل سؤال بجميع حقوله، وجمل الإملاء. لا صلة لهذه الدفعة بفجوة A1 d-a1-28–d-a1-30؛ تلك باقية غير محسومة ولم تُستبدل أو تُعدّل. تم فحص مصادر إنترنت لكل بند، ومقارنة التأليف التاريخي وتحرير المشتتات.",
+  "coverage": {
+    "dialogues": 2,
+    "dialogueMetadata": 2,
+    "lines": 11,
+    "questions": 5,
+    "dictationSentences": 6,
+    "audioAssets": 2,
+    "unresolvedContextNotes": 3,
+    "totalTrackedItems": 24
+  },
+  "statusCounts": {
+    "سليم": 15,
+    "مُصحح": 7,
+    "غير محسوم": 2
+  },
+  "method": "قُرئ السجل الحي بنداً بنداً: بيانات الحوار، المتحدث والنص والترجمة في كل سطر، كل موجّه وخيارات ومفتاح وشرح لكل سؤال، وكل جملة إملاء. رُبط كل عنصر بمصدر إنترنت ودليل وحكم وإجراء. قورنت الأسطر بملف التأليف والمشتتات بملف التحرير التاريخي. جرى فحص وجود ملفي الصوت وحجميهما فقط؛ لم يُدّعَ الاستماع أو مطابقة الأداء.",
+  "statusDefinitions": {
+    "سليم": "لم يثبت خطأ يتطلب تغييراً؛ قد ترد ملاحظة أسلوبية لا تبرر الإصلاح.",
+    "مُصحح": "خلل ترجمة/شرح مؤكد عُدّل في النص الحي.",
+    "غير محسوم": "هناك ملاحظة تتوقف على سياق أو هدف غير مسجل؛ لم تُسوَّ تخميناً."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر مباشرة؛ ليست مراجعة بشرية ولا اعتماداً لغوياً أو تربوياً أو قانونياً أو مهنياً.",
+    "وسم A2 محفوظ كما هو؛ لم أعد تقييم CEFR أو النسبة أو حساب المستوى.",
+    "الملاحظات القانونية عن ألمانيا سياقية وليست استشارة قانونية؛ تميّز بين ما يقوله البائع في هذا الحوار وبين قاعدة عامة.",
+    "أُخذت لقطة نصية من السجل بعد التصحيحات؛ الصوتان موجودان والحجم يطابق الفهرس، لكن لم يُستمع إليهما ولم تُختبر مطابقتهما للنص."
+  ],
+  "historicalPatchReview": {
+    "sources": [
+      "scripts/dialoge_welle.py",
+      "scripts/patches/a_dialog_fallen.py"
+    ],
+    "role": "dialoge_welle.py مصدر تأليف تأسيسي تاريخي، وa_dialog_fallen.py سجل تحرير للمشتتات؛ كلاهما دليل على تاريخ الصياغة لا مرجع لغوي أعلى من المصادر المنشورة ولا بيانات حيّة.",
+    "comparisons": [
+      {
+        "dialogueId": "d-a2-31",
+        "baseline": "scripts/dialoge_welle.py",
+        "postEdit": "scripts/patches/a_dialog_fallen.py",
+        "linesAndTitles": "العنوان والأسطر الألمانية الستة مطابقة للمصدر التأسيسي. اختلفت ثلاثة حقول ترجمة عربية عن التأسيس: الأسطر 0 و1 و5؛ صُححت الآن، وبقيت الترجمات في الأسطر 2 و3 و4 كما في التأسيس. لا توجد waisen في السجل الحي.",
+        "questions": [
+          {
+            "id": "d-a2-31-q1",
+            "initialOptions": [
+              "einen Umtausch",
+              "ihr Geld zurück",
+              "eine Reparatur"
+            ],
+            "postEditOptions": [
+              "einen neuen Wasserkocher",
+              "ihr Geld zurück",
+              "eine Reparatur innerhalb von vierzehn Tagen"
+            ],
+            "liveOptions": [
+              "ihr Geld zurück",
+              "einen neuen Wasserkocher",
+              "eine Reparatur innerhalb von vierzehn Tagen"
+            ],
+            "initialAnswer": "ihr Geld zurück",
+            "postEditAnswer": "ihr Geld zurück",
+            "liveAnswer": "ihr Geld zurück",
+            "note": "تغيرت المشتتات وبقي المفتاح؛ انتقل موضعه من الثاني في patch إلى الأول في الحي. عُدّل الشرح الآن لينسب الأربعة عشر يوماً إلى قول البائع في هذا الحوار فقط، لا إلى قاعدة عامة.",
+            "liveExplanation": "الدليل: «Ich hätte gern mein Geld zurück». الفخّ 1: لم تطلب استبدالاً. الفخّ 2: أربعة عشر يوماً هي المهلة التي ذكرها البائع لقبول طلبها في هذا الحوار، لا مدة إصلاح ولا قاعدة عامة لكل المتاجر.",
+            "initialExplanation": "«Ich hätte gern mein Geld zurück» — صيغةُ طلبٍ مهذّبةٌ بـhätte gern.",
+            "postEditExplanation": "الدليل: «Ich hätte gern mein Geld zurück». الفخّ 1: لم تطلب استبدالاً. الفخّ 2: 14 يوماً مهلة الاسترجاع، لا إصلاح."
+          },
+          {
+            "id": "d-a2-31-q2",
+            "initialPrompt": "___ von vierzehn Tagen ist das kein Problem.",
+            "livePrompt": "___ von vierzehn Tagen ist das kein Problem.",
+            "initialAnswer": [
+              "Innerhalb"
+            ],
+            "liveAnswer": [
+              "Innerhalb"
+            ],
+            "note": "السؤال والمفتاح ثابتان؛ الملاحظة الحالية على اكتمال الشرح النحوي لا على صحة الجواب.",
+            "liveExplanation": "innerhalb حرفُ جرٍّ يجرُّ بالمضاف: innerhalb von vierzehn Tagen.",
+            "initialExplanation": "innerhalb حرفُ جرٍّ يجرُّ بالمضاف: innerhalb von vierzehn Tagen."
+          },
+          {
+            "id": "d-a2-31-q3",
+            "initialPrompt": "Sie bekommt den Betrag mit Karte.",
+            "livePrompt": "Sie bekommt den Betrag mit Karte.",
+            "initialAnswer": "falsch",
+            "liveAnswer": "falsch",
+            "note": "الموجه والمفتاح لم يتغيرا؛ النص يقول bar.",
+            "liveExplanation": "في النصِّ: «bekommen Sie den Betrag bar» أي نقداً.",
+            "initialExplanation": "في النصِّ: «bekommen Sie den Betrag bar» أي نقداً."
+          }
+        ],
+        "dictationChanges": [
+          {
+            "initial": [
+              "Haben Sie den Kassenbon dabei?",
+              "Ich hätte gern mein Geld zurück.",
+              "Muss ich etwas unterschreiben?"
+            ],
+            "live": [
+              "Guten Tag. Ich habe diesen Wasserkocher vorgestern gekauft, aber er funktioniert nicht.",
+              "Das tut mir leid. Haben Sie den Kassenbon dabei?",
+              "Ja, hier. Ich hätte gern mein Geld zurück."
+            ],
+            "note": "أصبحت الإملاءات جُملاً كاملة من الحوار. القائمة الحية الحالية تغطي الأسطر الألمانية 0–2؛ أما القائمة التاريخية فتغطي أسطرًا أخرى (منها سؤال الإيصال والتوقيع)، ولذلك سُجل اختلاف الاختيار لا بوصفه خطأً."
+          }
+        ],
+        "unavailableHistoricalFields": [
+          "question.promptAr"
+        ]
+      },
+      {
+        "dialogueId": "d-a2-32",
+        "baseline": "scripts/dialoge_welle.py",
+        "postEdit": "scripts/patches/a_dialog_fallen.py",
+        "linesAndTitles": "العنوان والأسطر الألمانية الخمسة مطابقة للمصدر التأسيسي. الترجمة العربية للسطر 4 عُدلت الآن؛ سائر الترجمات القديمة محفوظة. لا توجد waisen في السجل الحي.",
+        "questions": [
+          {
+            "id": "d-a2-32-q1",
+            "initialOptions": [
+              "einen Tag",
+              "drei Tage",
+              "eine Woche"
+            ],
+            "postEditOptions": [
+              "einen Tag",
+              "drei Tage",
+              "bis heute Abend"
+            ],
+            "liveOptions": [
+              "drei Wochen",
+              "drei Tage",
+              "bis heute Abend"
+            ],
+            "initialAnswer": "drei Tage",
+            "postEditAnswer": "drei Tage",
+            "liveAnswer": "drei Tage",
+            "note": "تغيرت المشتتات في الحي إلى drei Wochen وbis heute Abend، وتوسع الشرح لتمييز وحدة المدة عن موعد الإرسال؛ وصُحح فيه الشهادة إلى الإشعار لأن المرسل Krankmeldung.",
+            "initialExplanation": "«für drei Tage krankgeschrieben».",
+            "postEditExplanation": "الدليل: «Der Arzt hat mich für drei Tage krankgeschrieben». الفخّ: «heute noch» موعد إرسال الشهادة بالبريد.",
+            "liveExplanation": "الدليل: «Der Arzt hat mich für drei Tage krankgeschrieben». الفخّ 1: «drei» صحيح والوحدة خاطئة. الفخّ 2: «heute noch» موعد إرسال الإشعار بالبريد."
+          },
+          {
+            "id": "d-a2-32-q2",
+            "initialPrompt": "Die ___ schicke ich heute per Post.",
+            "livePrompt": "Die ___ schicke ich heute per Post.",
+            "initialAnswer": [
+              "Krankmeldung"
+            ],
+            "liveAnswer": [
+              "Krankmeldung"
+            ],
+            "note": "الكلمة المفتاحية ثابتة؛ عُدّل الشرح العربي الآن لفصل Krankmeldung (الإبلاغ) عن الشهادة الطبية.",
+            "liveExplanation": "Krankmeldung = إبلاغُ جهةِ العملِ بالمرض؛ وفي الحوارِ يرسلُ أميرٌ هذا الإشعارَ بالبريد.",
+            "initialExplanation": "Krankmeldung = ورقةُ الإجازةِ المرضيةِ التي تُرسَلُ لصاحبِ العمل."
+          }
+        ],
+        "dictationChanges": [
+          {
+            "initial": [
+              "Ich bin leider krank geworden.",
+              "Ich habe Fieber.",
+              "Die Krankmeldung schicke ich per Post."
+            ],
+            "live": [
+              "Guten Morgen, Herr Weber. Ich bin leider krank geworden.",
+              "Das tut mir leid. Was fehlt Ihnen denn?",
+              "Ich habe Fieber. Der Arzt hat mich für drei Tage krankgeschrieben."
+            ],
+            "note": "الإملاءات الحية جمل كاملة من الحوار؛ لم تعد تقتطع العبارات الوسطية الثلاث التاريخية."
+          }
+        ],
+        "unavailableHistoricalFields": [
+          "question.promptAr"
+        ]
+      }
+    ]
+  },
+  "contentPatch": {
+    "fieldsChanged": 7,
+    "changedFields": [
+      "d-a2-31.lines[0].ar",
+      "d-a2-31.lines[1].ar",
+      "d-a2-31.lines[5].ar",
+      "d-a2-31.questions[0].explanationAr",
+      "d-a2-32.lines[4].ar",
+      "d-a2-32.questions[0].explanationAr",
+      "d-a2-32.questions[1].explanationAr"
+    ],
+    "reason": "تصحيح تحية زمنية أضيق من الأصل، ومطابقة مخاطبة الزبونة المؤنثة في سطرين، وتقييد شرح الأربعة عشر يوماً بوعد البائع في الحوار لا بقاعدة عامة، وفصل Krankmeldung (إبلاغ) عن الإجازة/الشهادة في ترجمة السطر وشرحي السؤالين.",
+    "protectedUnresolvedItemIds": [
+      "d-a2-31.lines[3]",
+      "d-a2-31-q2"
+    ]
+  },
+  "openNotes": [
+    {
+      "id": "d-a2-31.lines[3]",
+      "status": "غير محسوم",
+      "kind": "سياق قانوني/سياسة متجر",
+      "finding": "مصادر حماية المستهلك تفرق بين علاج السلعة المعيبة، وحق الانسحاب في الشراء عن بعد، وسياسة الإرجاع الطوعية في المتجر. لكن البائع في الحوار يستطيع أن يعرض رد المال طوعاً؛ ولا يحدد النص هل البيع حضوري أم عن بعد أو هل العبارة سياسة المتجر. لذلك لا تثبت مخالفة ولا تُعامل الجملة كقاعدة عامة.",
+      "action": "لا تعديل تخمينياً. إن أُريد تعليم حق قانوني عام، يلزم تأطير السيناريو بحسب نوع الشراء وسياسة البائع.",
+      "sources": [
+        "S18",
+        "S19"
+      ]
+    },
+    {
+      "id": "d-a2-31-q2",
+      "status": "ملاحظة تربوية غير محسومة",
+      "kind": "دقة الشرح النحوي",
+      "finding": "الجواب und phrase صحيحان. الشرح يذكر الحكم العام لـinnerhalb مع Genitiv، بينما المثال يستخدم داخل التركيب von + Dativ؛ المرجعان متوافقان ولا يثبتان خطأ، لكن توضيح الفرق مفيد إذا كان المقصود تعليم الحالات.",
+      "action": "لا تعديل الآن؛ السؤال الظاهر يسأل عن الكلمة الناقصة ولا يصرّح بأن هدفه اختبار الحالة.",
+      "sources": [
+        "S10",
+        "S11"
+      ]
+    },
+    {
+      "id": "d-a2-32.lines[4]",
+      "status": "ملاحظة سياقية غير محسومة",
+      "kind": "حداثة الإجراء الإداري",
+      "finding": "المصدر الحكومي يوضح أن eAU تُتاح إلكترونياً غالباً لموظفي التأمين الصحي القانوني منذ 2023، مع استمرار واجب إبلاغ جهة العمل. لكن Krankmeldung هنا تعني الإبلاغ نفسه، لا يلزم أنها شهادة AU الورقية، كما أن نوع التأمين وسياسة جهة العمل غير محددين.",
+      "action": "لم يتغير أصل وسيلة البريد. إذا كان الحوار يشرح الإجراء القياسي لموظف مؤمّن قانونياً في ألمانيا، فالأفضل إضافة هذا التحديد أو اختيار قناة تواصل حديثة؛ أما السجل الحالي فلا يثبت خطأً عاماً.",
+      "sources": [
+        "S27",
+        "S28",
+        "S30"
+      ]
+    }
+  ],
+  "audioAssetAudit": [
+    {
+      "id": "d-a2-31",
+      "file": "/audio/dialog/d-a2-31.mp3",
+      "metadataBytes": 162483,
+      "actualBytes": 162483,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-02+voice-03",
+      "check": "فحص وجود الملف وتطابق الحجم فقط؛ لم تُختبر مطابقة النطق/المحتوى الصوتي سطراً بسطور."
+    },
+    {
+      "id": "d-a2-32",
+      "file": "/audio/dialog/d-a2-32.mp3",
+      "metadataBytes": 117326,
+      "actualBytes": 117326,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "فحص وجود الملف وتطابق الحجم فقط؛ لم تُختبر مطابقة النطق/المحتوى الصوتي سطراً بسطور."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Duden — Tag",
+      "url": "https://www.duden.de/rechtschreibung/Tag_Zeiteinheit",
+      "supports": "يعرض Guten/guten Tag صيغة تحية؛ يثبت أن العبارة تحية عامة، لا مساوية لـGuten Abend."
+    },
+    {
+      "id": "S2",
+      "title": "PONS — Guten Tag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Guten+Tag",
+      "supports": "يعطي نهارك سعيد، سلامات، ومرحباً مقابلاتٍ لـGuten Tag؛ لا يختار مساء الخير."
+    },
+    {
+      "id": "S3",
+      "title": "Duden — Wasserkocher",
+      "url": "https://www.duden.de/rechtschreibung/Wasserkocher",
+      "supports": "يعرّف Wasserkocher جهازاً كهربائياً لغلي الماء؛ يسند معنى الغلّاية في السطر."
+    },
+    {
+      "id": "S4",
+      "title": "Cambridge English–Arabic Dictionary — kettle",
+      "url": "https://dictionary.cambridge.org/dictionary/english-arabic/kettle",
+      "supports": "يترجم kettle إلى غلّاية ويعرّفه وعاءً لغلي الماء؛ يدعم المقابل العربي للمركب Wasserkocher مع تعريف Duden."
+    },
+    {
+      "id": "S5",
+      "title": "PONS — vorgestern (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/vorgestern",
+      "supports": "يترجم vorgestern إلى أول أمس؛ يقابل أوّل أمس في النص."
+    },
+    {
+      "id": "S6",
+      "title": "Duden — Kassenbon",
+      "url": "https://www.duden.de/rechtschreibung/Kassenbon",
+      "supports": "يربط Kassenbon بـBon/Kassenzettel/Rechnung؛ يسند إيصال الشراء في الحوار."
+    },
+    {
+      "id": "S7",
+      "title": "Madinah Arabic — pronouns and attached forms",
+      "url": "https://madinaharabic.com/free-content/grammar/lesson-23/part-4",
+      "supports": "يفرق في ضمير المخاطب المفرد بين كَ للمذكر وكِ للمؤنث؛ لذلك لا تلائم كَ زبونةً مؤنثة."
+    },
+    {
+      "id": "S8",
+      "title": "Madinah Arabic — feminine singular present verb",
+      "url": "https://madinaharabic.com/free-content/grammar/lesson-35/part-2",
+      "supports": "يشرح علامة -ينَ في الفعل المضارع للمخاطبة المفردة المؤنثة، بمثال تذهبين؛ يسند تصحيح تستلمينَ."
+    },
+    {
+      "id": "S9",
+      "title": "PONS — Reklamation (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Reklamation",
+      "supports": "يعطي Reklamation = شكوى؛ يدعم عنوان الحوار وسياق الاعتراض على سلعة معطوبة."
+    },
+    {
+      "id": "S10",
+      "title": "PONS — innerhalb (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/innerhalb",
+      "supports": "يعطي المعنى الزمني خلال/في غضون، ويعرض داخله mit Genitiv؛ يسند معنى الجملة وقاعدة الشرح العامة."
+    },
+    {
+      "id": "S11",
+      "title": "Leibniz-Institut für Deutsche Sprache (Grammis) — Einfache Strukturen",
+      "url": "https://grammis.ids-mannheim.de/systematische-grammatik/1422",
+      "supports": "يشرح أن Präposition تحكم الحالة، وأن بنية von الداخلية تأتي بالداتيف؛ يساعد على قراءة innerhalb von vierzehn Tagen دون ادعاء أن العبارة خاطئة."
+    },
+    {
+      "id": "S12",
+      "title": "PONS — unterschreiben (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/unterschreiben",
+      "supports": "يعطي unterschreiben = وقّع/أمضى؛ يسند معنى توقيع الاستمارة."
+    },
+    {
+      "id": "S13",
+      "title": "PONS — Geld (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Geld",
+      "supports": "يعطي Geld بمعنى المال/النقود؛ يسند طلب المال في الحوار."
+    },
+    {
+      "id": "S14",
+      "title": "PONS — zurück (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/zur%C3%BCck",
+      "supports": "يعطي zurück معاني الرجوع/العودة؛ مع Geld zurück والسياق يوافق طلب استرداد المال."
+    },
+    {
+      "id": "S15",
+      "title": "PONS — Betrag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Betrag",
+      "supports": "يعطي Betrag = مبلغ؛ يسند المبلغ في حوار الرد النقدي وسؤال الصح والخطأ."
+    },
+    {
+      "id": "S16",
+      "title": "PONS — bekommen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/bekommen",
+      "supports": "يعرض bekommen (empfangen) = استلم؛ يسند معنى حصول الزبونة على المبلغ، مع تصريف العربية المؤنث."
+    },
+    {
+      "id": "S17",
+      "title": "PONS — bar (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/bar",
+      "supports": "يعطي in bar = نقداً؛ يحسم أن جواب سؤال «mit Karte» خطأ بحسب النص."
+    },
+    {
+      "id": "S18",
+      "title": "Verbraucherzentrale — Gewährleistung und Garantie",
+      "url": "https://www.verbraucherzentrale.de/wissen/vertraege-reklamation/kundenrechte/alles-zu-gewaehrleistung-und-garantie-5057",
+      "supports": "توضح أن علاج السلعة المعيبة يبدأ عادةً بالإصلاح أو الاستبدال، وأن استرداد السعر يرتبط بشروط لاحقة؛ تستخدم لملاحظة السياق لا للحكم بأن البائع ممنوع من رد المال طوعاً."
+    },
+    {
+      "id": "S19",
+      "title": "Verbraucherzentrale — Widerruf, Umtausch und Rückgabe",
+      "url": "https://www.verbraucherzentrale.de/wissen/vertraege-reklamation/kundenrechte/von-widerruf-bis-umtausch-wenn-sie-mit-der-ware-nicht-zufrieden-sind-5117",
+      "supports": "تفرق بين مهلة 14 يوماً في عقود المسافة/الإنترنت وبين الشراء في المتجر، وتذكر أن العودة في المتجر قد تكون سياسة طوعية؛ تسند إبقاء تعميم النص غير محسوم."
+    },
+    {
+      "id": "S20",
+      "title": "PONS — krank (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/krank",
+      "supports": "يعطي krank = مريض؛ يسند مرض Amir في الحوار."
+    },
+    {
+      "id": "S21",
+      "title": "PONS — Guten Morgen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Guten+Morgen",
+      "supports": "يعطي Guten Morgen = صباح الخير؛ يؤيد الترجمة في الحوار الثاني."
+    },
+    {
+      "id": "S22",
+      "title": "PONS — fehlen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/fehlen",
+      "supports": "يعرض Was fehlt Ihnen? بمقابل عربي من نوع ما بك/ما بكِ؛ يثبت وظيفة السؤال عن العارض."
+    },
+    {
+      "id": "S23",
+      "title": "PONS — Fieber (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Fieber",
+      "supports": "يعطي Fieber = حمى؛ يسند مفردة السطر والسؤال عن مدة المرض."
+    },
+    {
+      "id": "S24",
+      "title": "Duden — krankschreiben",
+      "url": "https://www.duden.de/rechtschreibung/krankschreiben",
+      "supports": "يعرّف krankschreiben بأنه تصديق الطبيب كتابةً على عجز مؤقت عن العمل بسبب المرض، ويورد für eine Woche krankgeschrieben."
+    },
+    {
+      "id": "S25",
+      "title": "PONS — Krankschreibung (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Krankschreibung",
+      "supports": "يعطي Krankschreibung = شهادة طبية؛ يساند تمييزها من Krankmeldung في الشرح."
+    },
+    {
+      "id": "S26",
+      "title": "Duden — auskurieren",
+      "url": "https://www.duden.de/rechtschreibung/auskurieren",
+      "supports": "يعرّف auskurieren بمعنى الشفاء التام والعودة إلى الصحة؛ يسند sich richtig auskurieren = التعافي تماماً كما ينبغي."
+    },
+    {
+      "id": "S27",
+      "title": "Duden — Krankmeldung",
+      "url": "https://www.duden.de/rechtschreibung/Krankmeldung",
+      "supports": "يعرّف Krankmeldung بأنها إبلاغ صاحب العمل أو المدرسة بأن الشخص مريض؛ لا يعرّفها حصراً بوصفها إجازة مرضية."
+    },
+    {
+      "id": "S28",
+      "title": "PONS — Krankmeldung (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Krankmeldung",
+      "supports": "يعطي Krankmeldung = إخبار بالمرض؛ يسند تعديل الترجمة والشرح العربيين."
+    },
+    {
+      "id": "S29",
+      "title": "PONS — Post (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Post",
+      "supports": "يعطي mit der Post = بالبريد؛ يسند إرسال الإشعار بالبريد."
+    },
+    {
+      "id": "S30",
+      "title": "gesund.bund.de — electronic sick leave notice (eAU)",
+      "url": "https://gesund.bund.de/en/die-elektronische-arbeitsunfaehigkeitsbescheinigung-eau",
+      "supports": "يشرح أن أصحاب التأمين القانوني غالباً لا يرسلون شهادة AU ورقياً منذ 2023، لكن عليهم إبلاغ جهة العمل؛ يسجل ملاحظة سياقية دون إثبات استحالة البريد في كل حالة."
+    },
+    {
+      "id": "S31",
+      "title": "Duden — Abend",
+      "url": "https://www.duden.de/rechtschreibung/Abend",
+      "supports": "يعرّف Abend وقت المساء ويورد Guten Abend صيغة تحية؛ مع مدخل Guten Tag/مقابلات PONS يثبت أن مساء الخير تخص تحية المساء ولا يلزم إسقاطها على Guten Tag."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a2-31",
+      "kind": "بيانات الحوار: العنوان والمستوى والبنية",
+      "status": "سليم",
+      "sources": [
+        "S3",
+        "S4",
+        "S9"
+      ],
+      "finding": "العنوان Eine Reklamation يقابل شكوى تجارية، والسلعة في الحوار غلّاية ماء. المستوى A2 كما هو مخزّن؛ لم أعد تقييم CEFR ولا أضفت وِحدات مفردات غير موجودة.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "titleDe": "Eine Reklamation",
+        "titleAr": "شكوى على سلعة",
+        "level": "A2",
+        "lineCount": 6,
+        "questionCount": 3,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a2-31.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S31"
+      ],
+      "finding": "كان Guten Tag مترجماً بـمساء الخير، وهي تحية مسائية بينما النص لا يحدد المساء. Duden يسجل Guten Tag تحية، وPONS يعطي نهارك سعيد/مرحباً؛ الغلّاية وأول أمس مترجمتان بما يوافق المراجع.",
+      "action": "استُبدلت مساء الخير بـمرحباً لتجنب إضافة وقت غير مذكور؛ بقية السطر باقية.",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Guten Tag. Ich habe diesen Wasserkocher vorgestern gekauft, aber er funktioniert nicht.",
+        "ar": "مرحباً. اشتريتُ هذه الغلّايةَ أوّلَ أمسٍ لكنّها لا تعمل."
+      }
+    },
+    {
+      "id": "d-a2-31.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "finding": "Kundin مؤنث. كان الضمير العربي المشكول أمعكَ للمذكر في خطاب البائع إلى الزبونة؛ كَ للمذكر وكِ للمؤنث. Kassenbon هو إيصال شراء.",
+      "action": "استُبدل السؤال بـهل معكِ إيصال الشراء؟ للمخاطبة المؤنثة.",
+      "reviewed": {
+        "who": "Verkäufer",
+        "de": "Das tut mir leid. Haben Sie den Kassenbon dabei?",
+        "ar": "يؤسفُني. هل معكِ إيصالُ الشراء؟"
+      }
+    },
+    {
+      "id": "d-a2-31.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S13",
+        "S14"
+      ],
+      "finding": "الزبونة تسلّم الإيصال إلى البائع الرجل ثم تطلب Geld zurück؛ نعم، هنا، تفضّل صياغة سليمة لمخاطبة البائع، وطلب استرداد المال مطابق للقول الألماني.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Ja, hier. Ich hätte gern mein Geld zurück.",
+        "ar": "نعم، تفضَّل. أودُّ استردادَ مالي."
+      }
+    },
+    {
+      "id": "d-a2-31.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته + ملاحظة سياقية",
+      "status": "غير محسوم",
+      "sources": [
+        "S10",
+        "S11",
+        "S18",
+        "S19"
+      ],
+      "finding": "Innerhalb von vierzehn Tagen يقابل خلال أربعة عشر يوماً، والجملة سليمة لغوياً. ملاحظة منفصلة: لا يُعرف هل يقصد البائع سياسة متجر بعينه أم قاعدة عامة؛ إرجاع ثمن سلعة معيبة خلال 14 يوماً ليس وصفاً عاماً كافياً للقانون، لكن يمكن للبائع أن يوافق طوعاً. لذلك لا يثبت خطأ في الحوار ولا يصح تعميمه.",
+      "action": "تُترك الجملة دون تعديل تخميني؛ إذا كان المقصود قاعدة قانونية عامة فينبغي تحديد سياق البيع/سياسة المتجر أولاً.",
+      "reviewed": {
+        "who": "Verkäufer",
+        "de": "Innerhalb von vierzehn Tagen ist das kein Problem.",
+        "ar": "خلالَ أربعةَ عشرَ يوماً لا مشكلة."
+      }
+    },
+    {
+      "id": "d-a2-31.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S12"
+      ],
+      "finding": "Muss ich etwas unterschreiben? سؤال عن التوقيع؛ أعليّ التوقيع على شيء تنقل المقصود. لم يظهر دليل على خلل دلالي.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Sehr gut. Muss ich etwas unterschreiben?",
+        "ar": "ممتاز. أعليَّ التوقيعُ على شيء؟"
+      }
+    },
+    {
+      "id": "d-a2-31.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S7",
+        "S8",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "finding": "Betrag = المبلغ، bekommen بمعنى الاستلام، وbar = نقداً. البائع يخاطب Kundin؛ كانت تستلمُ بصيغة المذكر، بينما علامة -ينَ هي للمخاطبة المفردة المؤنثة.",
+      "action": "صُححت تستلمُ إلى تستلمينَ لمطابقة الزبونة المؤنثة؛ بقي معنى المبلغ النقدي.",
+      "reviewed": {
+        "who": "Verkäufer",
+        "de": "Nur hier unten, dann bekommen Sie den Betrag bar.",
+        "ar": "هنا في الأسفلِ فقط، ثمَّ تستلمينَ المبلغَ نقداً."
+      }
+    },
+    {
+      "id": "d-a2-31-q1",
+      "kind": "سؤال فهم: الموجه والخيارات والمفتاح والشرح",
+      "status": "مُصحح",
+      "sources": [
+        "S9",
+        "S13",
+        "S14",
+        "S18",
+        "S19"
+      ],
+      "finding": "المفتاح ihr Geld zurück منصوص عليه، والبديلان لا يطابقان طلب الزبونة. كان الشرح يصف الأربعة عشر يوماً بأنها مهلة استرجاع بصياغة قد تُقرأ قاعدة عامة. صيغ الآن على أنها المهلة التي ذكرها البائع لقبول الطلب في هذا الحوار فقط؛ وتوضح مصادر المستهلك أن الحقوق تختلف بحسب نوع البيع وأن المتجر قد يمنح سياسة طوعية.",
+      "action": "حُدث الشرح ليربط الأربعة عشر يوماً بوعد البائع في الحوار، لا بقاعدة عامة؛ لم تتغير الخيارات أو الإجابة الصحيحة.",
+      "reviewed": {
+        "id": "d-a2-31-q1",
+        "type": "mc",
+        "promptDe": "Was möchte die Kundin?",
+        "options": [
+          "ihr Geld zurück",
+          "einen neuen Wasserkocher",
+          "eine Reparatur innerhalb von vierzehn Tagen"
+        ],
+        "answer": "ihr Geld zurück",
+        "explanationAr": "الدليل: «Ich hätte gern mein Geld zurück». الفخّ 1: لم تطلب استبدالاً. الفخّ 2: أربعة عشر يوماً هي المهلة التي ذكرها البائع لقبول طلبها في هذا الحوار، لا مدة إصلاح ولا قاعدة عامة لكل المتاجر.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-31-q2",
+      "kind": "سؤال إكمال وشرح القاعدة",
+      "status": "غير محسوم",
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "finding": "الإجابة Innerhalb صحيحة وتطابق الجملة. الشرح يذكر أن innerhalb يأتي مع Genitiv؛ وهذا صحيح عموماً، لكن المثال نفسه يستخدم innerhalb von + Dativ. لا يظهر خطأ في الجواب أو المثال، وقد يحتاج الشرح توضيحاً إذا كان هدفه تعليم الحالة النحوية.",
+      "action": "لا تغيير؛ تُسجل ملاحظة تربوية غير محسومة لأن هدف السؤال الظاهر هو إكمال المفردة، لا شرح كل حالات الجر.",
+      "reviewed": {
+        "id": "d-a2-31-q2",
+        "type": "fill",
+        "promptDe": "___ von vierzehn Tagen ist das kein Problem.",
+        "answer": [
+          "Innerhalb"
+        ],
+        "explanationAr": "innerhalb حرفُ جرٍّ يجرُّ بالمضاف: innerhalb von vierzehn Tagen.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-31-q3",
+      "kind": "سؤال صح/خطأ وشرحه",
+      "status": "سليم",
+      "sources": [
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "finding": "القول Sie bekommt den Betrag mit Karte خاطئ حسب السطر الذي يقول den Betrag bar؛ معنى bar هنا نقداً. المفتاح falsch والشرح متسقان.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a2-31-q3",
+        "type": "truefalse",
+        "promptDe": "Sie bekommt den Betrag mit Karte.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "في النصِّ: «bekommen Sie den Betrag bar» أي نقداً.",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+      }
+    },
+    {
+      "id": "d-a2-31.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S31"
+      ],
+      "finding": "جملة ألمانية كاملة مطابقة للسطر الأول؛ تحوي التحية والغلّاية وأول أمس كما في الحوار.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Guten Tag. Ich habe diesen Wasserkocher vorgestern gekauft, aber er funktioniert nicht."
+      }
+    },
+    {
+      "id": "d-a2-31.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S6"
+      ],
+      "finding": "جملة كاملة مطابقة لسؤال الإيصال في السطر الثاني؛ تتبع نص المتحدث الألماني، ولا تحفظ الترجمة القديمة المصححة.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Das tut mir leid. Haben Sie den Kassenbon dabei?"
+      }
+    },
+    {
+      "id": "d-a2-31.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S13",
+        "S14"
+      ],
+      "finding": "جملة كاملة مطابقة لرد الزبونة في السطر الثالث؛ الاسترداد مذكور بوضوح.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Ja, hier. Ich hätte gern mein Geld zurück."
+      }
+    },
+    {
+      "id": "d-a2-32",
+      "kind": "بيانات الحوار: العنوان والمستوى والبنية",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S24",
+        "S27"
+      ],
+      "finding": "Krankmeldung beim Chef يقابل إبلاغ المدير بالمرض؛ المتحدثان Amir وWeber، والبنية 5 أسطر وسؤالان وثلاث جمل إملاء. المستوى A2 هو الوسم المخزّن فقط.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "titleDe": "Krankmeldung beim Chef",
+        "titleAr": "إبلاغُ المديرِ بالمرض",
+        "level": "A2",
+        "lineCount": 5,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a2-32.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S21"
+      ],
+      "finding": "Guten Morgen تقابل صباح الخير، وkrank geworden تعني أنه مرض. الترجمة العربية تحفظ التحية والمرض والأسف.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Amir",
+        "de": "Guten Morgen, Herr Weber. Ich bin leider krank geworden.",
+        "ar": "صباحَ الخير سيد فيبر. للأسفِ مرضت."
+      }
+    },
+    {
+      "id": "d-a2-32.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S22"
+      ],
+      "finding": "Was fehlt Ihnen denn? سؤال عمّا يشكو منه Amir؛ PONS يعطي المقابل الاستفهامي ما بك/ما بكِ. تشكو هنا تؤدي معنى العارض، وصيغة المذكر تلائم Amir.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Weber",
+        "de": "Das tut mir leid. Was fehlt Ihnen denn?",
+        "ar": "يؤسفُني. ما الذي تشكوه؟"
+      }
+    },
+    {
+      "id": "d-a2-32.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S23",
+        "S24",
+        "S25"
+      ],
+      "finding": "Fieber = حمى. Duden يعرّف krankgeschrieben بأنه تصديق طبي على عجز مؤقت عن العمل، وPONS يورد شهادة طبية لـKrankschreibung. إجازة ثلاثة أيام تنقل المقصود العام في سياق المرض والطبيب، ولا يثبت الفحص خطأً يلزم تغييره.",
+      "action": "لا تعديل؛ يمكن أن تكون شهادة طبية أدق اصطلاحياً، لكن الصياغة الحالية مفهومة وليست خطأً مؤكداً.",
+      "reviewed": {
+        "who": "Amir",
+        "de": "Ich habe Fieber. Der Arzt hat mich für drei Tage krankgeschrieben.",
+        "ar": "لديَّ حمّى. أعطاني الطبيبُ إجازةً ثلاثةَ أيام."
+      }
+    },
+    {
+      "id": "d-a2-32.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S26"
+      ],
+      "finding": "Duden يعرّف auskurieren بمعنى الشفاء التام والعودة إلى الصحة؛ «إذن تعافَ كما ينبغي» موافقة لمعنى Dann kurieren Sie sich bitte richtig aus.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Weber",
+        "de": "Dann kurieren Sie sich bitte richtig aus.",
+        "ar": "إذنْ تعافَ كما ينبغي."
+      }
+    },
+    {
+      "id": "d-a2-32.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته + ملاحظة سياقية",
+      "status": "مُصحح",
+      "sources": [
+        "S27",
+        "S28",
+        "S29",
+        "S30"
+      ],
+      "finding": "Duden وPONS يعرّفان Krankmeldung بإبلاغ جهة العمل بالمرض؛ الترجمة السابقة الإجازة المرضية خلطت الإبلاغ بالإجازة/الشهادة. عُدلت إلى إشعار بمرضي. ملاحظة معاصرة: في النظام الألماني، غالباً ما تُرسل شهادة AU إلكترونياً لموظفي التأمين القانوني، مع بقاء واجب إبلاغ صاحب العمل؛ النص يقول Krankmeldung بالبريد ولا يحدد نوع التأمين أو إجراء الشركة، لذلك لا يكفي ذلك لعدّ الحوار خطأً.",
+      "action": "صُححت الدلالة إلى إشعار بمرضي. لم تُغيّر وسيلة البريد؛ الملاحظة عن eAU سياقية وغير حاسمة في غياب تفاصيل الحالة.",
+      "reviewed": {
+        "who": "Amir",
+        "de": "Die Krankmeldung schicke ich heute noch per Post.",
+        "ar": "سأُرسِلُ إشعاراً بمرضي اليومَ بالبريد."
+      }
+    },
+    {
+      "id": "d-a2-32-q1",
+      "kind": "سؤال فهم المدة: الموجه والخيارات والمفتاح والشرح",
+      "status": "مُصحح",
+      "sources": [
+        "S24",
+        "S25",
+        "S27",
+        "S28",
+        "S29"
+      ],
+      "finding": "المفتاح drei Tage مطابق لعبارة für drei Tage krankgeschrieben. المشتتات تخلط وحدة المدة أو وقت إرسال الإشعار؛ كان الشرح يسمي Krankmeldung المرسلة بالبريد شهادةً، مع أن Duden وPONS يعرّفانها إبلاغاً بالمرض. صُحح اسم الشيء المرسل إلى الإشعار، وبقي السؤال والمفتاح صحيحين.",
+      "action": "عُدّل وصف الفخ الثاني من إرسال الشهادة إلى إرسال الإشعار بالبريد؛ لم تتغير الخيارات أو الإجابة.",
+      "reviewed": {
+        "id": "d-a2-32-q1",
+        "type": "mc",
+        "promptDe": "Wie lange ist er krankgeschrieben?",
+        "options": [
+          "drei Wochen",
+          "drei Tage",
+          "bis heute Abend"
+        ],
+        "answer": "drei Tage",
+        "explanationAr": "الدليل: «Der Arzt hat mich für drei Tage krankgeschrieben». الفخّ 1: «drei» صحيح والوحدة خاطئة. الفخّ 2: «heute noch» موعد إرسال الإشعار بالبريد.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-32-q2",
+      "kind": "سؤال إكمال وشرح المصطلح",
+      "status": "مُصحح",
+      "sources": [
+        "S27",
+        "S28",
+        "S29"
+      ],
+      "finding": "Krankmeldung هو الإبلاغ عن المرض إلى جهة العمل؛ Duden وPONS يؤيدان هذا المعنى، وmit der Post = بالبريد. الشرح السابق وصفه بأنه ورقة إجازة مرضية، فخلط الإبلاغ بالشهادة/الإجازة.",
+      "action": "حُدث الشرح إلى: إبلاغ جهة العمل بالمرض، مع ربطه بإشعار Amir المرسل بالبريد.",
+      "reviewed": {
+        "id": "d-a2-32-q2",
+        "type": "fill",
+        "promptDe": "Die ___ schicke ich heute per Post.",
+        "answer": [
+          "Krankmeldung"
+        ],
+        "explanationAr": "Krankmeldung = إبلاغُ جهةِ العملِ بالمرض؛ وفي الحوارِ يرسلُ أميرٌ هذا الإشعارَ بالبريد.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-32.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S21"
+      ],
+      "finding": "الجملة كاملة وتطابق السطر الأول من الحوار.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Guten Morgen, Herr Weber. Ich bin leider krank geworden."
+      }
+    },
+    {
+      "id": "d-a2-32.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S22"
+      ],
+      "finding": "الجملة كاملة وتطابق سؤال Weber في السطر الثاني.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Das tut mir leid. Was fehlt Ihnen denn?"
+      }
+    },
+    {
+      "id": "d-a2-32.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S23",
+        "S24",
+        "S25"
+      ],
+      "finding": "الجملة كاملة وتطابق السطر الثالث؛ Fieber والمدة والكتابة الطبية منقولة كما في الحوار.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Ich habe Fieber. Der Arzt hat mich für drei Tage krankgeschrieben."
+      }
+    }
+  ]
+}

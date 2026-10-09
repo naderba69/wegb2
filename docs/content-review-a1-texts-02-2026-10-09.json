@@ -1,0 +1,352 @@
+{
+  "reviewRule": "R137",
+  "batchLabel": "ثاني دفعة نصوص A1 (t-a1-04..06)",
+  "targetIds": [
+    "t-a1-04",
+    "t-a1-05",
+    "t-a1-06"
+  ],
+  "totals": {
+    "texts": 3,
+    "questions": 12,
+    "approximateUnits": 24
+  },
+  "snapshots": {
+    "t-a1-04": {
+      "id": "t-a1-04",
+      "level": "A1",
+      "titleDe": "Weg zum Bahnhof",
+      "titleAr": "الطريق إلى المحطة",
+      "de": "Entschuldigung, wie komme ich zum Bahnhof? Gehen Sie hier geradeaus. Dann die zweite Straße links. Der Bahnhof ist rechts, gegenüber vom Hotel. Ist das weit? Nein, nur fünf Minuten zu Fuß. Vielen Dank!",
+      "ar": "عفواً، كيف أصل إلى المحطة؟ سيّروا هنا للأمام ثم في الشارع الثاني إلى اليسار. المحطة على اليمين مقابل الفندق. هل هذا بعيد؟ لا، خمس دقائق مشياً فقط. شكراً جزيلاً!",
+      "questions": [
+        {
+          "id": "t-a1-04-q1",
+          "type": "mc",
+          "promptDe": "Wo ist der Bahnhof?",
+          "options": [
+            "neben dem Hotel",
+            "gegenüber vom Hotel",
+            "hinter dem Hotel"
+          ],
+          "answer": "gegenüber vom Hotel",
+          "explanationAr": "الدليل حرفياً: «Der Bahnhof ist rechts, gegenüber vom Hotel.» — مقابل الفندق.",
+          "promptAr": "أين المحطة؟"
+        },
+        {
+          "id": "t-a1-04-q2",
+          "type": "fill",
+          "promptDe": "Die ___ Straße links.",
+          "answer": [
+            "zweite",
+            "2."
+          ],
+          "explanationAr": "الدليل حرفياً: «Dann die zweite Straße links.» — الشارع الثاني.",
+          "promptAr": "الشارع ___ إلى اليسار."
+        },
+        {
+          "id": "t-a1-04-q3",
+          "type": "fill",
+          "promptDe": "Nur fünf Minuten zu ___.",
+          "answer": [
+            "Fuß",
+            "fuss"
+          ],
+          "explanationAr": "الدليل حرفياً: «Nein, nur fünf Minuten zu Fuß.» — zu Fuß = مشياً.",
+          "promptAr": "خمس دقائق على ___ فقط."
+        },
+        {
+          "id": "t-a1-04-q4",
+          "type": "fill",
+          "promptDe": "Der Bahnhof ist gegenüber vom ___.",
+          "answer": [
+            "Hotel"
+          ],
+          "explanationAr": "«gegenüber vom Hotel» — gegenüber معَ الداتيف.",
+          "promptAr": "المحطة مقابل ___."
+        }
+      ]
+    },
+    "t-a1-05": {
+      "id": "t-a1-05",
+      "level": "A1",
+      "titleDe": "Im Sprachkurs",
+      "titleAr": "في دورة اللغة",
+      "de": "Guten Tag! Mein Name ist Sara. Ich bin 24 Jahre alt und studiere Informatik. Ich spreche Arabisch, Englisch und ein bisschen Deutsch. Deutsch ist schwer, aber schön. Am Abend lerne ich mit meinen Freunden. Wir trinken Tee und machen Hausaufgaben. Unser Lehrer heißt Herr Klein und ist sehr geduldig.",
+      "ar": "طاب يومكم! اسمي سارة. عمري 24 وأدرس المعلوماتية. أتحدث العربية والإنجليزية وبعض الألمانية. الألمانية صعبة لكنها جميلة. مساءً أتعلّم مع أصدقائي. نشرب الشاي ونحلّ الواجبات. معلّمنا اسمه هير كلاين وهو صبور جداً.",
+      "questions": [
+        {
+          "id": "t-a1-05-q1",
+          "type": "mc",
+          "promptDe": "Was studiert Sara?",
+          "options": [
+            "Medizin",
+            "Informatik",
+            "Deutsch"
+          ],
+          "answer": "Informatik",
+          "explanationAr": "في النصِّ حرفياً: «Ich … studiere Informatik.»",
+          "promptAr": "ماذا تدرس سارة؟"
+        },
+        {
+          "id": "t-a1-05-q2",
+          "type": "mc",
+          "promptDe": "Wie ist der Lehrer?",
+          "options": [
+            "ungeduldig",
+            "geduldig",
+            "müde"
+          ],
+          "answer": "geduldig",
+          "explanationAr": "«sehr geduldig» — صبور جداً.",
+          "promptAr": "كيف هو المعلّم؟"
+        },
+        {
+          "id": "t-a1-05-q3",
+          "type": "truefalse",
+          "promptDe": "Sara lernt am Morgen mit Freunden.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "الدليل حرفياً: «Am Abend lerne ich mit meinen Freunden.» — Am Abend — مساءً.",
+          "promptAr": "تتعلّم سارة صباحاً مع أصدقائها."
+        },
+        {
+          "id": "t-a1-05-q4",
+          "type": "fill",
+          "promptDe": "Sara studiert ___.",
+          "answer": [
+            "Informatik"
+          ],
+          "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Ich bin 24 Jahre alt und studiere Informatik».",
+          "promptAr": "تدرس سارة ___."
+        }
+      ]
+    },
+    "t-a1-06": {
+      "id": "t-a1-06",
+      "level": "A1",
+      "titleDe": "Mein Zimmer",
+      "titleAr": "غرفتي",
+      "de": "Mein Zimmer ist klein, aber gemütlich. Das Bett steht an der Wand. Neben dem Bett ist ein Tisch mit einer Lampe. An der Wand hängt ein Bild von meiner Familie. Auf dem Regal liegen viele Bücher. Ich mag mein Zimmer, weil es ruhig ist. Hier lerne ich jeden Abend Deutsch.",
+      "ar": "غرفتي صغيرة لكنها مريحة. السرير عند الجدار. بجانب السرير طاولة بمصباح. على الجدار صورة لعائلتي. على الرفّ كتب كثيرة. أحب غرفتي لأنها هادئة. هنا أتعلّم الألمانية كل مساء.",
+      "questions": [
+        {
+          "id": "t-a1-06-q1",
+          "type": "mc",
+          "promptDe": "Wo ist das Bett?",
+          "options": [
+            "an der Wand",
+            "auf dem Regal",
+            "neben dem Bild"
+          ],
+          "answer": "an der Wand",
+          "explanationAr": "في النصِّ حرفياً: «Das Bett steht an der Wand.»",
+          "promptAr": "أين السرير؟"
+        },
+        {
+          "id": "t-a1-06-q2",
+          "type": "fill",
+          "promptDe": "Auf dem ___ liegen viele Bücher.",
+          "answer": [
+            "Regal"
+          ],
+          "explanationAr": "الدليل حرفياً: «Auf dem Regal liegen viele Bücher.» — das Regal = الرفّ.",
+          "promptAr": "على ___ كتب كثيرة."
+        },
+        {
+          "id": "t-a1-06-q3",
+          "type": "fill",
+          "promptDe": "Er mag das Zimmer, weil es ___ ist.",
+          "answer": [
+            "ruhig"
+          ],
+          "explanationAr": "الدليل حرفياً: «Ich mag mein Zimmer, weil es ruhig ist.» — هادئة.",
+          "promptAr": "يحب غرفته لأنها ___."
+        },
+        {
+          "id": "t-a1-06-q4",
+          "type": "fill",
+          "promptDe": "An der Wand ___ ein Bild von meiner Familie.",
+          "answer": [
+            "hängt"
+          ],
+          "explanationAr": "الدليل حرفياً: «An der Wand hängt ein Bild von meiner Familie.» — hängen للمعلَّقِ على الجدار، لا liegen ولا stehen.",
+          "promptAr": "على الجدار ___ صورة لعائلته."
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "unit": "t-a1-04.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أين المحطة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-04.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "الشارع ___ إلى اليسار.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-04.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "خمس دقائق على ___ فقط.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-04.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "المحطة مقابل ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-05.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تدرس سارة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-05.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف هو المعلّم؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-05.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "تتعلّم سارة صباحاً مع أصدقائها.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-05.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "تدرس سارة ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-06.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أين السرير؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-06.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "على ___ كتب كثيرة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-06.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "يحب غرفته لأنها ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-a1-06.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "على الجدار ___ صورة لعائلته.",
+      "reason": "استكمال حقل promptAr فارغ."
+    }
+  ],
+  "contextNotes": {
+    "t-a1-04": [
+      {
+        "note": "كيف أصل إلى المحطة: استقيم، الشارع الثاني يساراً، يمين، مقابل الفندق، 5 دقائق مشياً."
+      }
+    ],
+    "t-a1-05": [
+      {
+        "note": "سارة 24، تدرس المعلوماتية، تتحدث العربية/الإنجليزية/قليلاً من الألمانية، تتعلم مساءً مع أصدقائها، معلّمها هير كلاين صبور."
+      }
+    ],
+    "t-a1-06": [
+      {
+        "note": "غرفة صغيرة مريحة؛ سرير عند الجدار؛ طاولة بمصباح؛ صورة عائلية على الجدار؛ كتب على الرف؛ هادئة."
+      }
+    ]
+  },
+  "styleAlternatives": {},
+  "sources": {
+    "t-a1-04": [
+      {
+        "cite": "Goethe A1 — Wegbeschreibung",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "الاتجاهات والمحطة والفندق مشياً."
+      }
+    ],
+    "t-a1-05": [
+      {
+        "cite": "Goethe A1 — Im Sprachkurs",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "التعريف والدراسة واللغات والأصدقاء والمعلم."
+      }
+    ],
+    "t-a1-06": [
+      {
+        "cite": "Goethe A1 — Mein Zimmer / Wohnung",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "وصف الغرفة والأثاث والمواقع."
+      }
+    ]
+  },
+  "contentChecks": [
+    {
+      "id": "CHK-R137-01",
+      "check": "حقول promptAr مملوءة للنصوص المستهدفة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R137-02",
+      "check": "الأسئلة العربية تطابق الألماني معنىً.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R137-03",
+      "check": "الألماني/الخيارات/المفاتيح/العناوين/النصوص مقفلة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R137-04",
+      "check": "لا تحذيرات محتوى جديدة.",
+      "status": "pass"
+    }
+  ],
+  "contentWarnings": [],
+  "judgement": {
+    "corrected": 12,
+    "unresolved": 0,
+    "note": "استكمال 12 حقلاً من حقول promptAr الفارغة في نصوص A1 (t-a1-04..06: الطريق إلى المحطة، في دورة اللغة، غرفتي). العربية مطابقة للألماني في مفردات الاتجاهات والدرس اللغوي ووصف الغرفة. لا تعديل للألماني أو المفاتيح."
+  },
+  "limits": {
+    "human": "لا اعتماد لغوي بشري.",
+    "legal": "لا محتوى قانوني.",
+    "medical": "لا محتوى طبي.",
+    "cefr": "لا إعادة حساب CEFR."
+  },
+  "gates": {
+    "patch": "scripts/patches/review_a1_texts_02.py",
+    "report": "scripts/patches/report_a1_texts_02.py",
+    "smoke": "K211a–j"
+  },
+  "audio": {
+    "mp3Files": 0,
+    "note": "لا استماع للصوت."
+  }
+}

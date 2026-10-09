@@ -40,7 +40,7 @@ export function StilWechsler({ seed = 0, onPoints }: { seed?: number; onPoints?:
       {/* ① الاستكشاف */}
       <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
         {ALLE.map((k) => (
-          <button key={k} className="chip" style={{ cursor: "pointer", background: k === regel ? "var(--color-cola)" : "white", color: k === regel ? "white" : undefined }} onClick={() => { setRegel(k); setIdx(0); }} data-testid={`stil-regel-${k}`}>
+          <button key={k} className="chip" style={{ cursor: "pointer", background: k === regel ? "var(--color-cola)" : "var(--ui-surface-raised)", color: k === regel ? "var(--ui-on-accent)" : undefined }} onClick={() => { setRegel(k); setIdx(0); }} data-testid={`stil-regel-${k}`}>
             {REGEL_AR[k].titel}
           </button>
         ))}

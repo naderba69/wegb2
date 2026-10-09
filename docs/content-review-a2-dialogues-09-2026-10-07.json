@@ -1,0 +1,1571 @@
+{
+  "reviewRule": "R111",
+  "date": "2026-10-07",
+  "batch": "a2-dialogues-09",
+  "targetDialogueIds": [
+    "d-a2-22",
+    "d-a2-23",
+    "d-a2-24"
+  ],
+  "totals": {
+    "items": 42,
+    "okay": 41,
+    "corrected": 1,
+    "unresolved": 0,
+    "sources": 40,
+    "waisenAudited": 30
+  },
+  "coverage": {
+    "dialogues": 3,
+    "items": 42,
+    "waisen": 30
+  },
+  "statusCounts": {
+    "سليم": 41,
+    "مصحح": 1,
+    "غير محسوم": 0
+  },
+  "statusDefinitions": {
+    "سليم": "وحدة روجعت ضد مصادر متاحة ووجدت متطابقة من غير خطأ مؤكد؛ بقيت كما هي.",
+    "مصحح": "وحدة حُدّد فيها خطأ مؤكَّد فصُحّح مع بقاء الألماني والمفاتيح محمية.",
+    "غير محسوم": "وحدة تحتاج معلومات إضافية أو حكماً تربوياً/بشرياً لا يتوفر من المصادر؛ تُترك دون تعديل."
+  },
+  "correction": {
+    "onlyFieldChanged": "d-a2-23.lines[5].ar",
+    "beforeAr": "هذا يصنعه الأطفال. يجب أن تجرّبي الحلويات حتماً.",
+    "afterAr": "هذه يصنعها الأطفال. يجب أن تجرّبي الحلويات حتماً.",
+    "rationale": "تطابق جنس الضمير «هذه» مع المؤنث «الزينة» بدلاً من المحايد الألماني Das الذي لا جنس له في العربية؛ الألماني لم يتغير.",
+    "germanUnchanged": true,
+    "questionsUnchanged": true
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "key": "mieterhilfe_nebennach",
+      "title": "Mieterhilfeverein: Nachzahlung Nebenkosten — Fristen",
+      "url": "https://www.mieterhilfeverein.de/ratgeber/nebenkosten/nachzahlung-nebenkosten/",
+      "supports": "يسند وجود Nachzahlung/Rückzahlung في التسوية السنوية للمرافق، وأن Strom وHeizung/Warmwasser من بنودها المحتملة.",
+      "limits": "لا يحسم إن كان عداد الكهرباء في العقد منفصلاً أو ضمن التسوية (تبسيط تربوي مقبول في A2)."
+    },
+    {
+      "id": "S02",
+      "key": "hartz4_heizkosten",
+      "title": "Hartz4widerspruch: Heizkosten — Abschlag/Nachzahlung/Rückzahlung",
+      "url": "https://hartz4widerspruch.de/ratgeber/wohnen/heizkosten/",
+      "supports": "يشرح أن Nebenkosten تُدفع كأقساط شهرية (Abschlag) وتُسوّى سنوياً، فينتج Nachzahlung أو Rückzahlung.",
+      "limits": "يخص متلقي Bürgergeld ولا يثبت حالة الحوار المالية."
+    },
+    {
+      "id": "S03",
+      "key": "heizung_de_abschlag",
+      "title": "heizung.de: Heizkostenabrechnung — Abschlag und Nachzahlung",
+      "url": "https://www.heizung.de/finanzielles/wissen/heizkostenabrechnung-zu-hoch-diese-tipps-helfen.html",
+      "supports": "يسند آلية التسوية السنوية وتعديل القسط الشهري بعدها.",
+      "limits": "لا يثبت قيمة 240 أو 80 يورو (أمثلة تربوية)."
+    },
+    {
+      "id": "S04",
+      "key": "vz_stromtarif",
+      "title": "Verbraucherzentrale: Den passenden Strom-/Gastarif finden",
+      "url": "https://www.verbraucherzentrale.de/wissen/energie/preise-tarife-anbieterwechsel/so-finden-sie-den-passenden-strom-oder-gastarif-6436",
+      "supports": "ينصح بمقارنة الأسعار عبر البوابات ومراجعة Anbieter قبل تبديل مزود الكهرباء.",
+      "limits": "البوابات ليست محايدة تماماً؛ لا يحدد أرخصية مزود بعينه."
+    },
+    {
+      "id": "S05",
+      "key": "vzbw_anbieterwechsel",
+      "title": "Verbraucherportal BW: Anbieterwechsel und Preisvergleichsportale",
+      "url": "https://www.verbraucherportal-bw.de/,Lde/Startseite/Verbraucherschutz/Wechsel+des+Strom_+und+Gasanbieters+_+Tarifrechner+und+Preisvergleichsportale",
+      "supports": "يؤكد أن التبديل يمكن أن يوفر التكاليف ويشدد على الحذر من Vorauszahlung وPakettarife.",
+      "limits": "لا يثبت نسبة التوفير أو مدة العقد."
+    },
+    {
+      "id": "S06",
+      "key": "netkredit24_stromraten",
+      "title": "Netkredit24: Stromnachzahlung in Raten zahlen",
+      "url": "https://www.netkredit24.de/blog/stromrechnung-per-kredit/",
+      "supports": "يسند عبارة «في Raten zahlen» عند عدم القدرة على الدفع دفعة واحدة؛ في Grundversorgung يوجد حق قانوني لاتفاق تقسيط بلا رسوم.",
+      "limits": "لا يثبت موافقة أي مزود بعينه؛ السؤال «هل نستطيع» واقعي كاقتراح."
+    },
+    {
+      "id": "S07",
+      "key": "teag_heiztemp",
+      "title": "TEAG Mein Zuhause: Richtig heizen — Raumtemperaturen",
+      "url": "https://mein-zuhause.teag.de/energie-ratgeber/energieeffizienz/richtig-heizen-heizkosten-sparen",
+      "supports": "يوصي بدرجة 20 مئوية في غرفة المعيشة و23 في الحمام، ويعتبر 23 مئوية في Wohnzimmer إسرافاً.",
+      "limits": "نصائح عامة لا تحسم عادات الأبطال."
+    },
+    {
+      "id": "S08",
+      "key": "klimaaktiv_heizen",
+      "title": "klimaaktiv: Raumtemperatur-Empfehlungen (Wohnzimmer 20–22 °C)",
+      "url": "https://www.klimaaktiv.at/private/energiesparen/richtig-heizen",
+      "supports": "يؤكد أن خفض الدرجة بمقدار درجتين يخفض التكاليف بنحو 12% (6% لكل درجة).",
+      "limits": "توجيه نمساوي، لا يغيّر أن الرقمين 20 و23 مقبولان في محادثة A2."
+    },
+    {
+      "id": "S09",
+      "key": "toom_heiztipps",
+      "title": "toom: Richtig heizen — Thermostatstufen",
+      "url": "https://toom.de/selbermachen/wohnen-haushalt/waerme-energie/heizen/richtig-heizen/",
+      "supports": "يسند أن الدرجة 20 مئوية توافق Stufe 3 و24 مئوية Stufe 4، فيمكن وصف 23 في Wohnzimmer بالتدفئة المفرطة.",
+      "limits": "مصدر تجاري/توجيهي ولا يُعامل كمعيار ملزم."
+    },
+    {
+      "id": "S10",
+      "key": "helpster_bayram",
+      "title": "helpster: Zum Bayram-Fest eingeladen — Traditionen",
+      "url": "https://www.helpster.de/zum-bayram-fest-eingeladen-die-traditionen-einhalten_50447",
+      "supports": "يسند أن لـRamazan Bayram/Zuckerfest تقليد عائلي، حلويات (Süßigkeiten)، ودعوة «Frohes Fest» مقبولة.",
+      "limits": "صفحة معيشية شعبية؛ لا تمثل فتوى دينية."
+    },
+    {
+      "id": "S11",
+      "key": "welt_der_legenden_bayram",
+      "title": "Welt der Legenden: Bayram 2026 Zuckerfest/Opferfest",
+      "url": "https://welt-der-legenden.de/bayram-2026-deutschland-termine-zuckerfest-opferfest/",
+      "supports": "يسند عبارة «Frohes Fest» كتحية مفهومة ومقدَّرة في Ramadanfest بألمانيا.",
+      "limits": "مدونة ثقافية؛ التواريخ تقويمية وقد تختلف بيوم."
+    },
+    {
+      "id": "S12",
+      "key": "gdk_rostock_zuckerfest",
+      "title": "GdK Rostock: Zuckerfest (Bayram)",
+      "url": "https://www.gdk-rostock.de/news-1/zuckerfest-bayram",
+      "supports": "يصف العيد (عيد الفطر/السكر) بالاجتماع العائلي والحلويات و«Frohes Fest» كعبارة تهنئة مناسبة لغير المسلمين.",
+      "limits": "صفحة مجتمعية محلية ولا تحسم التفاصيل العائلية."
+    },
+    {
+      "id": "S13",
+      "key": "mkjfgfi_gratulation",
+      "title": "MKJFGFI NRW: Interreligiöser Kalender — Gratulationsformen",
+      "url": "https://www.mkjfgfi.nrw/sites/default/files/documents/interreligioser_kalender_gratulationsformen_final.pdf",
+      "supports": "يسند رسمياً أن التحية البديلة «Frohes Fest» مقبولة لـRamadanfest في التعايش بألمانيا.",
+      "limits": "دليل متعدد الأديان؛ لا يقيّد العربية في الحوار."
+    },
+    {
+      "id": "S14",
+      "key": "kandil_wishes",
+      "title": "Kandil: Wünsche zu islamischen Festen international",
+      "url": "https://www.kandil.de/arabesken/wuensche-zu-islamischen-festen-international",
+      "supports": "يذكر «Frohes Fest» كتهنئة ألمانية مناسبة للأعياد الإسلامية.",
+      "limits": "صفحة ثقافية لا مرجعية دينية رسمية."
+    },
+    {
+      "id": "S15",
+      "key": "hks_ottersberg_dstip",
+      "title": "HKS Ottersberg: Deutschlandstipendium — Bewerbungsunterlagen",
+      "url": "https://www.hks-ottersberg.de/studium/deutschlandstipendium.php",
+      "supports": "يسند أن وثائق التقدُّم تشمل Zeugnis وLebenslauf وMotivationsschreiben.",
+      "limits": "نموذج جامعة محددة؛ لا يعمم على كل المنح."
+    },
+    {
+      "id": "S16",
+      "key": "ovgu_faq_dstip",
+      "title": "OVGU: FAQ Deutschlandstipendium",
+      "url": "https://www.ovgu.de/deutschlandstipendiumfaq.html?rewrite_engine=fast",
+      "supports": "يسند طلب Motivationsschreiben وLebenslauf وZeugnis، وأن المنحة لا تُحسب على BAföG حكماً.",
+      "limits": "لا يثبت موعد 15 مارس فهو مثال حواري."
+    },
+    {
+      "id": "S17",
+      "key": "studis_bewerbung",
+      "title": "Studis Online: Bewerbungstipps für ein Stipendium",
+      "url": "https://www.studis-online.de/studienfinanzierung/stipendien-bewerbung.php",
+      "supports": "يسند أن معظم الجهات تطلب Motivationsschreiben وLebenslauf وZeugnisse، وتجري مقابلة شخصية (Gespräch).",
+      "limits": "نصائح عامة لا تحسم نوع المنحة."
+    },
+    {
+      "id": "S18",
+      "key": "erstenachhilfe_noten",
+      "title": "Erste Nachhilfe: Benotung in der Schule (1 bis 6)",
+      "url": "https://www.erstenachhilfe.de/blog/benotung-in-der-schule-zensuren-oder-punkte",
+      "supports": "يسند النظام الألماني للدرجات: 1 = الأفضل و6 = الأسوأ، وEine Zwei جيدة، Eine Eins أفضل.",
+      "limits": "يخص المرحلة ما قبل Oberstufe."
+    },
+    {
+      "id": "S19",
+      "key": "aok_zeugnis_bem",
+      "title": "AOK: Schulzeugnisse — Bemerkungen (fleißig, selbstständig)",
+      "url": "https://www.aok.de/fk/bayern/sozialversicherung/ausbilden/auszubildende-erfolgreich-werben/schulzeugnisse-in-der-bewerbung/",
+      "supports": "يسند أن fleißig وselbstständig من أوصاف السلوك المدرسي الإيجابية.",
+      "limits": "نصائح توظيف لا تقوّم لغة الحوار."
+    },
+    {
+      "id": "S20",
+      "key": "duden_stromanbieter",
+      "title": "Duden: Stromanbieter",
+      "url": "https://www.duden.de/rechtschreibung/Stromanbieter",
+      "supports": "يسند المفردة بمعنى شركة توريد الكهرباء.",
+      "limits": "لا يقيّم تعرفة الأسعار."
+    },
+    {
+      "id": "S21",
+      "key": "duden_nebenkosten",
+      "title": "Duden: Nebenkostenabrechnung",
+      "url": "https://www.duden.de/rechtschreibung/Nebenkostenabrechnung",
+      "supports": "يسند المفردة (تسوية التكاليف الجانبية/المرافق).",
+      "limits": "لا يحسب مبلغاً."
+    },
+    {
+      "id": "S22",
+      "key": "duden_nachzahlen",
+      "title": "Duden: nachzahlen",
+      "url": "https://www.duden.de/rechtschreibung/nachzahlen",
+      "supports": "يسند المعنى «دفع مبلغ إضافي متأخر/لاحق».",
+      "limits": "لا يحدد وضعه القانوني."
+    },
+    {
+      "id": "S23",
+      "key": "duden_rueckzahlung",
+      "title": "Duden: Rückzahlung",
+      "url": "https://www.duden.de/rechtschreibung/Rueckzahlung",
+      "supports": "يسند المفردة بمعنى المبلغ المسترد.",
+      "limits": "لا يحدد سبب الرد."
+    },
+    {
+      "id": "S24",
+      "key": "duden_sparsam",
+      "title": "Duden: sparsam",
+      "url": "https://www.duden.de/rechtschreibung/sparsam",
+      "supports": "يسند صفة sparsam (مقتصد/موفر).",
+      "limits": "لا يحدد درجة حرارة."
+    },
+    {
+      "id": "S25",
+      "key": "duden_ratenzahlung",
+      "title": "Duden: Ratenzahlung",
+      "url": "https://www.duden.de/rechtschreibung/Ratenzahlung",
+      "supports": "يسند المفردة بمعنى الدفع على أقساط.",
+      "limits": "لا يقيّم حق قانوني."
+    },
+    {
+      "id": "S26",
+      "key": "duden_ramadanfest",
+      "title": "Duden: Ramadanfest",
+      "url": "https://www.duden.de/rechtschreibung/Ramadanfest",
+      "supports": "يسند الاسم الألماني للعيد (عيد الفطر/عيد رمضان).",
+      "limits": "لا يصف عادات محددة."
+    },
+    {
+      "id": "S27",
+      "key": "duden_gastfreundschaft",
+      "title": "Duden: Gastfreundschaft",
+      "url": "https://www.duden.de/rechtschreibung/Gastfreundschaft",
+      "supports": "يسند المفردة بمعنى الضيافة.",
+      "limits": "لا يقوّم ثقافة."
+    },
+    {
+      "id": "S28",
+      "key": "duden_gymnasium",
+      "title": "Duden: Gymnasium",
+      "url": "https://www.duden.de/rechtschreibung/Gymnasium",
+      "supports": "يسند Gymnasium كثانوية تؤهل للدراسة الجامعية في ألمانيا.",
+      "limits": "لا يعادلها بنظام عربي واحد."
+    },
+    {
+      "id": "S29",
+      "key": "duden_klassenarbeit",
+      "title": "Duden: Klassenarbeit",
+      "url": "https://www.duden.de/rechtschreibung/Klassenarbeit",
+      "supports": "يسند المفردة بمعنى اختبار/امتحان فصل دراسي.",
+      "limits": "لا يحدد موعداً."
+    },
+    {
+      "id": "S30",
+      "key": "duden_fleissig",
+      "title": "Duden: fleißig",
+      "url": "https://www.duden.de/rechtschreibung/fleissig",
+      "supports": "يسند صفة fleißig (مجتهد/مجدّ).",
+      "limits": "لا يقوّم أداء شخصية."
+    },
+    {
+      "id": "S31",
+      "key": "duden_selbststaendig",
+      "title": "Duden: selbstständig",
+      "url": "https://www.duden.de/rechtschreibung/selbststaendig",
+      "supports": "يسند صفة selbstständig (مستقل/يعتمد على نفسه).",
+      "limits": "لا يصنف منحة."
+    },
+    {
+      "id": "S32",
+      "key": "duden_bewerbungsunterlagen",
+      "title": "Duden: Bewerbungsunterlagen",
+      "url": "https://www.duden.de/rechtschreibung/Bewerbungsunterlagen",
+      "supports": "يسند الجمع بمعنى وثائق/مستندات التقديم.",
+      "limits": "لا يحدد قائمة حصرية."
+    },
+    {
+      "id": "S33",
+      "key": "duden_motivationsschreiben",
+      "title": "Duden: Motivationsschreiben",
+      "url": "https://www.duden.de/rechtschreibung/Motivationsschreiben",
+      "supports": "يسند المفردة بمعنى رسالة الدوافع.",
+      "limits": "لا يقترح طولها."
+    },
+    {
+      "id": "S34",
+      "key": "duden_rechnung",
+      "title": "Duden: Rechnung",
+      "url": "https://www.duden.de/rechtschreibung/Rechnung",
+      "supports": "يسند المفردة بمعنى فاتورة/حساب.",
+      "limits": "لا يحدد قيمة."
+    },
+    {
+      "id": "S35",
+      "key": "duden_gast",
+      "title": "Duden: Gast",
+      "url": "https://www.duden.de/rechtschreibung/Gast",
+      "supports": "يسند المفردة بمعنى ضيف.",
+      "limits": "لا يصف عادات الضيافة."
+    },
+    {
+      "id": "S36",
+      "key": "duden_dekoration",
+      "title": "Duden: Dekoration",
+      "url": "https://www.duden.de/rechtschreibung/Dekoration",
+      "supports": "يسند المفردة بمعنى زينة/ديكور.",
+      "limits": "لا يحدد مَن يصنعها."
+    },
+    {
+      "id": "S37",
+      "key": "duden_eltern",
+      "title": "Duden: Eltern",
+      "url": "https://www.duden.de/rechtschreibung/Eltern",
+      "supports": "يسند المفردة بمعنى الوالدين.",
+      "limits": "لا يحكم على الوضع المالي."
+    },
+    {
+      "id": "S38",
+      "key": "duden_bezahlen",
+      "title": "Duden: bezahlen",
+      "url": "https://www.duden.de/rechtschreibung/bezahlen",
+      "supports": "يسند الفعل بمعنى يدفع.",
+      "limits": "لا يصف منحة."
+    },
+    {
+      "id": "S39",
+      "key": "duden_supermarkt",
+      "title": "Duden: Supermarkt",
+      "url": "https://www.duden.de/rechtschreibung/Supermarkt",
+      "supports": "يسند المفردة بمعنى السوبرماركت.",
+      "limits": "لا يصف عقد العمل."
+    },
+    {
+      "id": "S40",
+      "key": "duden_ausdrucken",
+      "title": "Duden: ausdrucken",
+      "url": "https://www.duden.de/rechtschreibung/ausdrucken",
+      "supports": "يسند الفعل بمعنى يطبع.",
+      "limits": "لا يصف أجهزة."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a2-22",
+      "kind": "dialogue",
+      "status": "سليم",
+      "finding": "بيانات الحوار d-a2-22 (Die Stromrechnung): 8 أسطر، 3 أسئلة، 2 إملاء، و9 waisen.",
+      "action": "بقيت بيانات الحوار (العنوانان، العلامة neu، وقائمة waisen) كما هي بعد التحقق.",
+      "sources": [
+        "S04"
+      ],
+      "reviewed": {
+        "titleDe": "Die Stromrechnung",
+        "titleAr": "فاتورة الكهرباء",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "der Stromanbieter",
+          "die Nebenkostenabrechnung",
+          "nachzahlen",
+          "die Rückzahlung",
+          "die Energiekosten",
+          "sparsam heizen",
+          "vergleichen",
+          "der Preisvergleich",
+          "die Ausgaben"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-22.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S22"
+      ],
+      "reviewed": {
+        "who": "Fatma",
+        "de": "Schau, die Nebenkostenabrechnung ist gekommen. Wir müssen 240 Euro nachzahlen.",
+        "ar": "انظر، وصلت تسوية المصاريف الجانبية. علينا دفع 240 يورو إضافية."
+      }
+    },
+    {
+      "id": "d-a2-22.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S24"
+      ],
+      "reviewed": {
+        "who": "Omar",
+        "de": "So viel? Letztes Jahr gab es eine Rückzahlung von 80 Euro.",
+        "ar": "كل هذا؟ السنة الماضية كان هناك استرداد 80 يورو."
+      }
+    },
+    {
+      "id": "d-a2-22.lines[2]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S04",
+        "S07",
+        "S08"
+      ],
+      "reviewed": {
+        "who": "Fatma",
+        "de": "Die Energiekosten sind gestiegen. Und wir haben im Winter zu viel geheizt.",
+        "ar": "ارتفعت تكاليف الطاقة. ونحن دفّأنا كثيراً في الشتاء."
+      }
+    },
+    {
+      "id": "d-a2-22.lines[3]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S07",
+        "S08",
+        "S09",
+        "S24"
+      ],
+      "reviewed": {
+        "who": "Omar",
+        "de": "Dann heizen wir nächsten Winter sparsam: 20 Grad im Wohnzimmer, nicht 23.",
+        "ar": "إذن ندفّئ الشتاء القادم باقتصاد: 20 درجة في الصالة لا 23."
+      }
+    },
+    {
+      "id": "d-a2-22.lines[4]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S04",
+        "S05",
+        "S21"
+      ],
+      "reviewed": {
+        "who": "Fatma",
+        "de": "Und ich mache einen Preisvergleich. Vielleicht ist ein anderer Stromanbieter billiger.",
+        "ar": "وأنا أعمل مقارنة أسعار. ربما مزوّد كهرباء آخر أرخص."
+      }
+    },
+    {
+      "id": "d-a2-22.lines[5]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S04"
+      ],
+      "reviewed": {
+        "who": "Omar",
+        "de": "Gute Idee. Wir sollten alle Ausgaben einmal vergleichen: Strom, Internet, Versicherung.",
+        "ar": "فكرة جيدة. ينبغي أن نقارن كل المصاريف مرة: الكهرباء والإنترنت والتأمين."
+      }
+    },
+    {
+      "id": "d-a2-22.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S04",
+        "S06",
+        "S34",
+        "S40"
+      ],
+      "reviewed": {
+        "who": "Fatma",
+        "de": "Machen wir am Sonntag. Ich drucke alle Rechnungen aus.",
+        "ar": "نفعل ذلك يوم الأحد. سأطبع كل الفواتير."
+      }
+    },
+    {
+      "id": "d-a2-22.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S06",
+        "S25"
+      ],
+      "reviewed": {
+        "who": "Omar",
+        "de": "Und die 240 Euro? Können wir in Raten zahlen?",
+        "ar": "والـ240 يورو؟ هل نستطيع الدفع بالتقسيط؟"
+      }
+    },
+    {
+      "id": "d-a2-22-q1",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "reviewed": {
+        "id": "d-a2-22-q1",
+        "type": "mc",
+        "promptDe": "Was war letztes Jahr anders?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "Es gab eine Rückzahlung von 80 Euro.",
+        "explanationAr": "الدليل: «Letztes Jahr gab es eine Rückzahlung von 80 Euro». الفخّ 1: قلب الاتجاه. الفخّ 2: تغيير المزوّد فكرة للمستقبل.",
+        "falle": true,
+        "options": [
+          "Sie mussten 80 Euro nachzahlen.",
+          "Der Stromanbieter war billiger.",
+          "Es gab eine Rückzahlung von 80 Euro."
+        ]
+      }
+    },
+    {
+      "id": "d-a2-22-q2",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S04"
+      ],
+      "reviewed": {
+        "id": "d-a2-22-q2",
+        "type": "mc",
+        "promptDe": "Was will Fatma machen?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "einen Preisvergleich der Stromanbieter",
+        "explanationAr": "الدليل: «ich mache einen Preisvergleich. Vielleicht ist ein anderer Stromanbieter billiger». الفخّ 1: التقسيط سؤال عمر. الفخّ 2: 23 درجة هو ما يريدون تركه.",
+        "falle": true,
+        "options": [
+          "einen Preisvergleich der Stromanbieter",
+          "alle Rechnungen in Raten zahlen",
+          "im Winter 23 Grad heizen"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-22-q3",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S01"
+      ],
+      "reviewed": {
+        "id": "d-a2-22-q3",
+        "type": "truefalse",
+        "promptDe": "Sie müssen 240 Euro nachzahlen.",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "answer": "richtig",
+        "explanationAr": "الدليل: «Wir müssen 240 Euro nachzahlen».",
+        "falle": false,
+        "options": [
+          "richtig",
+          "falsch"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-22.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت جملة الإملاء كما هي.",
+      "sources": [
+        "S07"
+      ],
+      "reviewed": {
+        "sentence": "Die Energiekosten sind gestiegen."
+      }
+    },
+    {
+      "id": "d-a2-22.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت جملة الإملاء كما هي.",
+      "sources": [
+        "S04",
+        "S21"
+      ],
+      "reviewed": {
+        "sentence": "Vielleicht ist ein anderer Stromanbieter billiger."
+      }
+    },
+    {
+      "id": "d-a2-23",
+      "kind": "dialogue",
+      "status": "سليم",
+      "finding": "بيانات الحوار d-a2-23 (Einladung zum Fest): 8 أسطر، 3 أسئلة، 2 إملاء، و11 waisen.",
+      "action": "بقيت بيانات الحوار (العنوانان، العلامة neu، وقائمة waisen) كما هي بعد التحقق.",
+      "sources": [
+        "S10"
+      ],
+      "reviewed": {
+        "titleDe": "Einladung zum Fest",
+        "titleAr": "دعوة إلى العيد",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "das Fest",
+          "der Gast",
+          "die Einladung",
+          "gratulieren",
+          "die Dekoration",
+          "die Vorbereitung",
+          "vorbereiten",
+          "die Speise",
+          "probieren",
+          "die Gastfreundschaft",
+          "das Ramadanfest"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-23.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S10",
+        "S12",
+        "S26",
+        "S27"
+      ],
+      "reviewed": {
+        "who": "Lena",
+        "de": "Danke für die Einladung zum Ramadanfest, Salma! Was soll ich mitbringen?",
+        "ar": "شكراً على دعوة عيد الفطر يا سلمى! ماذا أحضر معي؟"
+      }
+    },
+    {
+      "id": "d-a2-23.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "reviewed": {
+        "who": "Salma",
+        "de": "Nur dich selbst. Die Vorbereitung machen wir in der Familie, das ist Tradition.",
+        "ar": "فقط نفسك. التحضير نقوم به في العائلة، هذا تقليد."
+      }
+    },
+    {
+      "id": "d-a2-23.lines[2]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S35"
+      ],
+      "reviewed": {
+        "who": "Lena",
+        "de": "Wie viele Gäste kommen?",
+        "ar": "كم ضيفاً سيأتي؟"
+      }
+    },
+    {
+      "id": "d-a2-23.lines[3]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "reviewed": {
+        "who": "Salma",
+        "de": "Ungefähr zwanzig. Meine Mutter bereitet seit gestern die Speisen vor.",
+        "ar": "حوالي عشرين. أمي تحضّر الأطباق منذ أمس."
+      }
+    },
+    {
+      "id": "d-a2-23.lines[4]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S36"
+      ],
+      "reviewed": {
+        "who": "Lena",
+        "de": "Und die Dekoration? Die Lichter am Fenster sind wunderschön.",
+        "ar": "والزينة؟ الأضواء على النافذة رائعة."
+      }
+    },
+    {
+      "id": "d-a2-23.lines[5]",
+      "kind": "line",
+      "status": "مصحح",
+      "finding": "تطابق الضمير مع المؤنث «الزينة»: كان العربية يستخدم «هذا يصنعه» مطابقة لضمير الألماني المحايد Das، وفي العربية «الزينة» مؤنثة، فاقتضى ذلك «هذه يصنعها» دون أي تغيير في الألماني.",
+      "action": "صُحّح الضمير والفعل من «هذا يصنعه» إلى «هذه يصنعها» لتطابق جنس المؤنث «الزينة»، مع بقاء الجملة الألمانية والمعنى كما هما.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "reviewed": {
+        "who": "Salma",
+        "de": "Das machen die Kinder. Du musst unbedingt die süßen Speisen probieren.",
+        "ar": "هذه يصنعها الأطفال. يجب أن تجرّبي الحلويات حتماً."
+      },
+      "before": {
+        "de": "Das machen die Kinder. Du musst unbedingt die süßen Speisen probieren.",
+        "ar": "هذا يصنعه الأطفال. يجب أن تجرّبي الحلويات حتماً."
+      },
+      "after": {
+        "de": "Das machen die Kinder. Du musst unbedingt die süßen Speisen probieren.",
+        "ar": "هذه يصنعها الأطفال. يجب أن تجرّبي الحلويات حتماً."
+      }
+    },
+    {
+      "id": "d-a2-23.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S13",
+        "S14"
+      ],
+      "reviewed": {
+        "who": "Lena",
+        "de": "Gern! Wie gratuliert man richtig?",
+        "ar": "بكل سرور! كيف أهنّئ بشكل صحيح؟"
+      }
+    },
+    {
+      "id": "d-a2-23.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S10",
+        "S12",
+        "S13",
+        "S14",
+        "S27"
+      ],
+      "reviewed": {
+        "who": "Salma",
+        "de": "Sag einfach „Frohes Fest“. Gastfreundschaft ist bei uns das Wichtigste.",
+        "ar": "قولي ببساطة «عيد سعيد». الضيافة عندنا هي الأهم."
+      }
+    },
+    {
+      "id": "d-a2-23-q1",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "reviewed": {
+        "id": "d-a2-23-q1",
+        "type": "mc",
+        "promptDe": "Wer macht die Dekoration?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "die Kinder",
+        "explanationAr": "الدليل: «Und die Dekoration? … Das machen die Kinder». الفخّ 1: الأم تحضّر الأطباق. الفخّ 2: الضيوف يأتون فقط.",
+        "falle": true,
+        "options": [
+          "die Kinder",
+          "Salmas Mutter",
+          "die Gäste"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-23-q2",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S10"
+      ],
+      "reviewed": {
+        "id": "d-a2-23-q2",
+        "type": "mc",
+        "promptDe": "Was soll Lena mitbringen?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "nichts, nur sich selbst",
+        "explanationAr": "الدليل: «Nur dich selbst». الفخّ 1: الحلويات تجرّبها. الفخّ 2: الأضواء زينة العائلة.",
+        "falle": true,
+        "options": [
+          "süße Speisen",
+          "nichts, nur sich selbst",
+          "Lichter für das Fenster"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-23-q3",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S10"
+      ],
+      "reviewed": {
+        "id": "d-a2-23-q3",
+        "type": "fill",
+        "promptDe": "Ungefähr zwanzig ___ kommen.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+        "answer": [
+          "Gäste"
+        ],
+        "explanationAr": "الدليل: «Wie viele Gäste kommen?» … «Ungefähr zwanzig».",
+        "falle": false
+      }
+    },
+    {
+      "id": "d-a2-23.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت جملة الإملاء كما هي.",
+      "sources": [
+        "S10"
+      ],
+      "reviewed": {
+        "sentence": "Die Vorbereitung machen wir in der Familie, das ist Tradition."
+      }
+    },
+    {
+      "id": "d-a2-23.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت جملة الإملاء كما هي.",
+      "sources": [
+        "S10",
+        "S12",
+        "S27"
+      ],
+      "reviewed": {
+        "sentence": "Gastfreundschaft ist bei uns das Wichtigste."
+      }
+    },
+    {
+      "id": "d-a2-24",
+      "kind": "dialogue",
+      "status": "سليم",
+      "finding": "بيانات الحوار d-a2-24 (Bewerbung für das Stipendium): 8 أسطر، 3 أسئلة، 2 إملاء، و10 waisen.",
+      "action": "بقيت بيانات الحوار (العنوانان، العلامة neu، وقائمة waisen) كما هي بعد التحقق.",
+      "sources": [
+        "S15"
+      ],
+      "reviewed": {
+        "titleDe": "Bewerbung für das Stipendium",
+        "titleAr": "طلب المنحة الدراسية",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "das Stipendium",
+          "der Abschluss",
+          "das Gymnasium",
+          "die Klassenarbeit",
+          "die Note",
+          "fleißig",
+          "selbstständig",
+          "die Bewerbungsunterlagen",
+          "die Unterstützung",
+          "sich vorbereiten auf"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-24.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S15",
+        "S17",
+        "S32"
+      ],
+      "reviewed": {
+        "who": "Beraterin",
+        "de": "Sie möchten sich für das Stipendium bewerben? Erzählen Sie kurz von sich.",
+        "ar": "تريد التقدّم للمنحة؟ حدّثني عن نفسك باختصار."
+      }
+    },
+    {
+      "id": "d-a2-24.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S18",
+        "S28"
+      ],
+      "reviewed": {
+        "who": "Youssef",
+        "de": "Ich habe letztes Jahr den Abschluss am Gymnasium gemacht, mit guten Noten.",
+        "ar": "أنهيت الثانوية العامة السنة الماضية بدرجات جيدة."
+      }
+    },
+    {
+      "id": "d-a2-24.lines[2]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S18"
+      ],
+      "reviewed": {
+        "who": "Beraterin",
+        "de": "Welche Note in Mathematik?",
+        "ar": "أي درجة في الرياضيات؟"
+      }
+    },
+    {
+      "id": "d-a2-24.lines[3]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S18",
+        "S29"
+      ],
+      "reviewed": {
+        "who": "Youssef",
+        "de": "Eine Zwei. In der letzten Klassenarbeit sogar eine Eins.",
+        "ar": "اثنان. وفي آخر اختبار حتى واحد."
+      }
+    },
+    {
+      "id": "d-a2-24.lines[4]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S17",
+        "S19",
+        "S30",
+        "S31"
+      ],
+      "reviewed": {
+        "who": "Beraterin",
+        "de": "Gut. Das Stipendium ist für Studierende, die fleißig und selbstständig arbeiten. Warum brauchen Sie die Unterstützung?",
+        "ar": "جيد. المنحة للطلبة المجتهدين والمستقلين. لماذا تحتاج الدعم؟"
+      }
+    },
+    {
+      "id": "d-a2-24.lines[5]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S37",
+        "S38",
+        "S39"
+      ],
+      "reviewed": {
+        "who": "Youssef",
+        "de": "Meine Eltern können das Studium nicht bezahlen. Ich arbeite nebenbei im Supermarkt.",
+        "ar": "والداي لا يستطيعان دفع تكاليف الدراسة. أعمل بجانب ذلك في السوبرماركت."
+      }
+    },
+    {
+      "id": "d-a2-24.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S15",
+        "S16",
+        "S17",
+        "S32",
+        "S33"
+      ],
+      "reviewed": {
+        "who": "Beraterin",
+        "de": "Verstehe. Schicken Sie die Bewerbungsunterlagen bis zum 15. März: Zeugnis, Lebenslauf und ein kurzes Motivationsschreiben.",
+        "ar": "فهمت. أرسل وثائق الطلب حتى 15 مارس: الشهادة والسيرة الذاتية ورسالة دوافع قصيرة."
+      }
+    },
+    {
+      "id": "d-a2-24.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان مع المصادر المتاحة من ناحية المعنى والمفردات والسياق التربوي.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S17"
+      ],
+      "reviewed": {
+        "who": "Youssef",
+        "de": "Und wie bereite ich mich auf das Gespräch vor?",
+        "ar": "وكيف أستعدّ للمقابلة؟"
+      }
+    },
+    {
+      "id": "d-a2-24-q1",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S18",
+        "S29"
+      ],
+      "reviewed": {
+        "id": "d-a2-24-q1",
+        "type": "mc",
+        "promptDe": "Welche Note hatte Youssef in der letzten Klassenarbeit?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "eine Eins",
+        "explanationAr": "الدليل: «In der letzten Klassenarbeit sogar eine Eins». الفخّ 1: «Eine Zwei» هي درجة الرياضيات العامة. الفخّ 2: قلب الدرجتين.",
+        "falle": true,
+        "options": [
+          "eine Zwei",
+          "eine Eins",
+          "eine Zwei in Mathematik und eine Drei in der Klassenarbeit"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-24-q2",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S15",
+        "S37",
+        "S38"
+      ],
+      "reviewed": {
+        "id": "d-a2-24-q2",
+        "type": "mc",
+        "promptDe": "Warum braucht Youssef das Stipendium?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "Seine Eltern können das Studium nicht bezahlen.",
+        "explanationAr": "الدليل: «Meine Eltern können das Studium nicht bezahlen». الفخّ 1: العمل في السوبرماركت واقع لا سبب. الفخّ 2: الدرجات جيدة.",
+        "falle": true,
+        "options": [
+          "Er will nicht mehr im Supermarkt arbeiten.",
+          "Er hat schlechte Noten.",
+          "Seine Eltern können das Studium nicht bezahlen."
+        ]
+      }
+    },
+    {
+      "id": "d-a2-24-q3",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر، والفخاخ لا تغيّر النص أو تستنتج وقائع خارج الحوار؛ شرح العربية يسمي الدليل والفخّ.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي؛ لم يُعدَّل أي سؤال في هذه الدفعة.",
+      "sources": [
+        "S15"
+      ],
+      "reviewed": {
+        "id": "d-a2-24-q3",
+        "type": "truefalse",
+        "promptDe": "Die Bewerbungsunterlagen müssen bis zum 15. April da sein.",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Schicken Sie die Bewerbungsunterlagen bis zum 15. März» — مارس لا أبريل.",
+        "falle": false,
+        "options": [
+          "richtig",
+          "falsch"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-24.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت جملة الإملاء كما هي.",
+      "sources": [
+        "S18"
+      ],
+      "reviewed": {
+        "sentence": "Welche Note in Mathematik?"
+      }
+    },
+    {
+      "id": "d-a2-24.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت جملة الإملاء كما هي.",
+      "sources": [
+        "S37",
+        "S38"
+      ],
+      "reviewed": {
+        "sentence": "Meine Eltern können das Studium nicht bezahlen."
+      }
+    }
+  ],
+  "contextNotes": [
+    {
+      "where": "d-a2-22 العنوان والسطر 0",
+      "note": "عبارة «Nebenkostenabrechnung» في الحياة العملية الألمانية تخص عادة تسوية المرافق التي يحصّلها المؤجر (Heizung/Wasser/Hausmeister…)، والكهرباء الخاصة غالباً عقد منفصل مع مزودها. الحوار يستخدم المصطلح على نحو مبسّط كمحادثة منزلية عن وصول فاتورة/تسوية ينتج عنها دفع إضافي، ويعالج بعدها مقارنة Stromanbieter على أنها إجراء منفصل. لا يُعدّ ذلك خطأً في مستوى A2، وبقيت العبارة دون تعديل.",
+      "sources": [
+        "S01",
+        "S02",
+        "S22"
+      ]
+    },
+    {
+      "where": "d-a2-22.lines[0,2,7]",
+      "note": "الأرقام 240 و80 يورو وذكر «في Raten zahlen» (التقسيط) تُعامل كقيم حوارية تربوية. المصادر تثبت أن Nachzahlung وRatenzahlung ممكنة وواردة، لكن لا يوجد مصدر يثبت مبلغاً محدداً أو موافقة المزود؛ السطر يطرح السؤال فقط «هل نستطيع» دون تأكيد الموافقة.",
+      "sources": [
+        "S06",
+        "S25"
+      ]
+    },
+    {
+      "where": "d-a2-22.lines[3]",
+      "note": "درجتا الحرارة 20 و23 مئوية في Wohnzimmer متوافقتان مع نصائح توفير الطاقة الألمانية/النمساوية التي توصي بـ20–22 درجة في المعيشة وتعتبر 23–24 إسرافاً؛ لا يوجد ادعاء بملزَمية هذه القيم.",
+      "sources": [
+        "S07",
+        "S08",
+        "S09"
+      ]
+    },
+    {
+      "where": "d-a2-23 العنوان والسطر 0",
+      "note": "عنوان الحوار «Einladung zum Fest» عام، بينما السطر الأول يسمّي «Ramadanfest» (عيد الفطر/السكر)؛ التفاصيل (حلويات، تهنئة «Frohes Fest»، تحضير عائلي) متوافقة مع وصف عيد الفطر في مصادر ثقافية متعددة بألمانيا. التحية «عيد سعيد» تقابل «Frohes Fest» على مستوى A2، وقد تُستخدم أيضاً «عيد مبارك»، لكنها بديل أسلوبي لا خطأ.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ]
+    },
+    {
+      "where": "d-a2-24.lines[1,4]",
+      "note": "وصف «Abschluss am Gymnasium» و«Studierende, die fleißig und selbstständig arbeiten» يعمّم منظور طلب المنح الدراسية في ألمانيا (مثل Deutschlandstipendium) حيث تُطلب Zeugnis وLebenslauf وMotivationsschreiben. النماذج تختلف بين الجامعات والمؤسسات، والتاريخ «15. März» مثال حواري لا مرجع تقويمي حقيقي.",
+      "sources": [
+        "S15",
+        "S16",
+        "S17",
+        "S30",
+        "S31"
+      ]
+    },
+    {
+      "where": "d-a2-24.lines[3]",
+      "note": "الدرجتان «Eine Zwei» و«eine Eins» تستخدمان نظام العلامات الألماني (1=ممتاز، 2=جيد)، مطابقاً لنظام Zensuren 1–6 قبل Oberstufe؛ العربية «اثنان/واحد» مبسّطة ومتوقعة في محادثة A2.",
+      "sources": [
+        "S18"
+      ]
+    }
+  ],
+  "styleAlternatives": [
+    {
+      "where": "d-a2-22.lines[2].ar",
+      "alt": "يمكن صياغة «zu viel geheizt» أدقّ كـ«أفرطنا في التدفئة» أو «دفّأنا أكثر من اللازم» بدلاً من «دفّأنا كثيراً»، لكن الصياغة الحالية سليمة ولا تقدّم معنى خاطئاً في سياق A2.",
+      "sources": [
+        "S23"
+      ],
+      "notChanged": true
+    },
+    {
+      "where": "d-a2-24.lines[1].ar",
+      "alt": "«أنهيت الثانوية العامة» تبسيط مقبول لـAbschluss am Gymnasium (شهادة Abitur/الأبيتور). قد يُفضَّل «شهادة الأبيتور» أو «الثانوية المؤهلة للجامعة» لدقة أكبر، لكن العبارة الحالية لا تخلّ بالمعنى في مستوى A2، فلم تُعدَّل.",
+      "sources": [
+        "S28"
+      ],
+      "notChanged": true
+    }
+  ],
+  "unresolved": [],
+  "waisen": [
+    {
+      "term": "der Stromanbieter",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "vd-wohnen-025",
+      "level": "A2",
+      "sources": [
+        "S20",
+        "S21"
+      ]
+    },
+    {
+      "term": "die Nebenkostenabrechnung",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "vd-wohnv-800",
+      "level": "A2",
+      "sources": [
+        "S22"
+      ]
+    },
+    {
+      "term": "nachzahlen",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "vd-wohnen-027",
+      "level": "A2",
+      "sources": [
+        "S23"
+      ]
+    },
+    {
+      "term": "die Rückzahlung",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "vd-wohnen-028",
+      "level": "A2",
+      "sources": [
+        "S24"
+      ]
+    },
+    {
+      "term": "die Energiekosten",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "ve-umwelt--001",
+      "level": "A2",
+      "sources": [
+        "S04"
+      ]
+    },
+    {
+      "term": "sparsam heizen",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "ve-umwelt--006",
+      "level": "A2",
+      "sources": [
+        "S07",
+        "S08",
+        "S24"
+      ]
+    },
+    {
+      "term": "vergleichen",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "vy-leben-010",
+      "level": "A2",
+      "sources": [
+        "S04"
+      ]
+    },
+    {
+      "term": "der Preisvergleich",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "vd-geld-k-010",
+      "level": "A2",
+      "sources": [
+        "S04",
+        "S05"
+      ]
+    },
+    {
+      "term": "die Ausgaben",
+      "dialogueId": "d-a2-22",
+      "hasCard": true,
+      "cardId": "vd-geld-k-001",
+      "level": "A2",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "term": "das Fest",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vw-a2all-033",
+      "level": "A2",
+      "sources": [
+        "S10",
+        "S26"
+      ]
+    },
+    {
+      "term": "der Gast",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vw-a2all-035",
+      "level": "A2",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "term": "die Einladung",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "v081",
+      "level": "A2",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "term": "gratulieren",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "v082",
+      "level": "A2",
+      "sources": [
+        "S13",
+        "S14"
+      ]
+    },
+    {
+      "term": "die Dekoration",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vc-reise--027",
+      "level": "A2",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "term": "die Vorbereitung",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vc-reise--028",
+      "level": "A2",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "term": "vorbereiten",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vc-reise--029",
+      "level": "A2",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "term": "die Speise",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vc-reise-804",
+      "level": "A2",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "term": "probieren",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vc-reise-805",
+      "level": "A2",
+      "sources": [
+        "S10"
+      ]
+    },
+    {
+      "term": "die Gastfreundschaft",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vc-reise--025",
+      "level": "A2",
+      "sources": [
+        "S27"
+      ]
+    },
+    {
+      "term": "das Ramadanfest",
+      "dialogueId": "d-a2-23",
+      "hasCard": true,
+      "cardId": "vc-reise--022",
+      "level": "A2",
+      "sources": [
+        "S12",
+        "S26"
+      ]
+    },
+    {
+      "term": "das Stipendium",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "vc-medien-023",
+      "level": "A2",
+      "sources": [
+        "S15"
+      ]
+    },
+    {
+      "term": "der Abschluss",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "vc-medien-021",
+      "level": "A2",
+      "sources": [
+        "S28"
+      ]
+    },
+    {
+      "term": "das Gymnasium",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "vc-medien-020",
+      "level": "A2",
+      "sources": [
+        "S28"
+      ]
+    },
+    {
+      "term": "die Klassenarbeit",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "vc-medien-017",
+      "level": "A2",
+      "sources": [
+        "S29"
+      ]
+    },
+    {
+      "term": "die Note",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "v855",
+      "level": "A2",
+      "sources": [
+        "S18"
+      ]
+    },
+    {
+      "term": "fleißig",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "v571",
+      "level": "A2",
+      "sources": [
+        "S30"
+      ]
+    },
+    {
+      "term": "selbstständig",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "vw-a2arb-050",
+      "level": "A2",
+      "sources": [
+        "S31"
+      ]
+    },
+    {
+      "term": "die Bewerbungsunterlagen",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "vw-a2arb-088",
+      "level": "A2",
+      "sources": [
+        "S32"
+      ]
+    },
+    {
+      "term": "die Unterstützung",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "vw-a2arb-085",
+      "level": "A2",
+      "sources": [
+        "S15"
+      ]
+    },
+    {
+      "term": "sich vorbereiten auf",
+      "dialogueId": "d-a2-24",
+      "hasCard": true,
+      "cardId": "vc-medien-027",
+      "level": "A2",
+      "sources": [
+        "S17"
+      ]
+    }
+  ],
+  "audio": {
+    "present": false,
+    "manifestEntries": [],
+    "mp3Files": [],
+    "note": "لا توجد إدخالات مطابقة في `content/dialog-audio.json` ولا ملفات mp3 تحت `public/audio/dialog` لهذه المعرّفات الثلاثة، لذا لم يحدث تشغيل أو استماع لهذه الدفعة؛ التقرير لا يدّعي ذلك."
+  },
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو نسبة المحتوى أو حساب المستوى في هذه الدفعة.",
+    "audio": "لم يحدث تشغيل/استماع لأي ملف صوتي؛ لا توجد أصول صوت مطابقة لهذه المعرّفات.",
+    "human": "المراجعة مؤازرة بمصادر منشورة وليست مراجعة بشرية أو اعتماداً مهنياً.",
+    "medical": "الدفعة لا تحتوي محتوى طبياً سريرياً؛ أي ذكر للدرجات/المنح لا يُعدّ مشورة تعليمية ملزمة.",
+    "legal": "المعلومات العامة عن Nebenkosten وRatenzahlung وBewerbungsunterlagen لا تغني عن استشارة رسمية من مزود طاقة أو جامعة أو جهة مانحة."
+  },
+  "gates": {
+    "planned": "K185a–j (مقررة في `scripts/engine_smoke.ts` بعد التقرير)."
+  }
+}

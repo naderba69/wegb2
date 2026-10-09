@@ -2,6 +2,7 @@
 // ✍️ Schreib-Werkstatt — كتابة بتوقيت امتحان (Teil 1: 15د · Teil 2: 28د) مع مستشار الكتابة
 import { useEffect, useMemo, useState } from "react";
 import type { Progress, Schreibaufgabe } from "@/lib/types";
+import { TOTAL_DAYS } from "@/lib/types";
 import { writingTasks } from "@/lib/content";
 import { levelOf, pickN, rng } from "@/lib/plan";
 import { useProgress } from "@/lib/store";
@@ -19,7 +20,7 @@ const TEIL_CFG: Record<Teil, { minutes: number; ziel: number; label: string }> =
 
 export function SchreibWerkstatt({ progress }: { progress: Progress }) {
   const { update } = useProgress();
-  const level = levelOf(Math.min(progress.plan.day, 270));
+  const level = levelOf(Math.min(progress.plan.day, TOTAL_DAYS));
   const [teil, setTeil] = useState<Teil | null>(null);
   const [task, setTask] = useState<Schreibaufgabe | null>(null);
   const [text, setText] = useState("");

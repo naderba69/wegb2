@@ -36,7 +36,7 @@ e_bad=[f'{e.get("id")}: يشيرُ إلى درسٍ غيرِ موجودٍ {e.get(
        if e.get("grammarId") and e["grammarId"] not in gids]
 melde(e_bad,"شفراتٌ تشيرُ إلى دروسٍ مفقودة")
 
-# ④ بنكُ أخطاءِ العرب: لكلِّ مدخلٍ خطأٌ وصوابٌ مختلفان
+# ④ بنكُ أنماطِ الخطأ والصواب: لكلِّ مدخلٍ خطأٌ وصوابٌ مختلفان
 f_bad=[f'{i}: الخطأُ والصوابُ متطابقان «{x.get("falsch","")[:40]}»' for i,x in enumerate(F)
        if x.get("falsch") and x.get("falsch")==x.get("richtig")]
 melde(f_bad,"مداخلُ خطأٍ وصوابٍ متطابقة")

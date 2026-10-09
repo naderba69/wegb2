@@ -1,0 +1,226 @@
+{
+  "reviewRule": "R132",
+  "date": "2026-10-08",
+  "scope": "عاشر دفعة B2 (الأخيرة): d-b2-31..32 (مقابلة عمل: سؤال الفجوة، سجال حد السرعة) — الحواران بلا waisen.",
+  "dialogues": [
+    {
+      "id": "d-b2-31",
+      "level": "B2",
+      "titleDe": "Bewerbungsgespräch: die kritische Frage",
+      "titleAr": "مقابلةُ عمل: السؤالُ الحرج",
+      "lines": 6,
+      "questions": 3,
+      "dictation": 3,
+      "units": 46,
+      "hasWaisenField": false,
+      "who": [
+        "Bewerber",
+        "Personalerin"
+      ]
+    },
+    {
+      "id": "d-b2-32",
+      "level": "B2",
+      "titleDe": "Streitgespräch: Tempolimit",
+      "titleAr": "سجال: تحديدُ السرعة",
+      "lines": 5,
+      "questions": 3,
+      "dictation": 3,
+      "units": 43,
+      "hasWaisenField": false,
+      "who": [
+        "Tobias",
+        "Yara"
+      ]
+    }
+  ],
+  "totals": {
+    "dialogues": 2,
+    "lines": 11,
+    "questions": 6,
+    "dictation": 6,
+    "approximateUnits": 89
+  },
+  "corrections": [
+    {
+      "unit": "d-b2-31.lines[2].ar",
+      "old": "بأيِّ معنىً نفعتْكَ هذه المدّةُ مهنياً؟",
+      "new": "كيف أفادتْكَ هذه المدةُ مهنياً؟",
+      "rationale": "Inwiefern … weitergebracht=كيف أفادك (لا «بأي معنى نفعتك»)."
+    },
+    {
+      "unit": "d-b2-31.lines[3].ar",
+      "old": "تعلَّمتُ ترتيبَ الأولوياتِ تحتَ الضغط، وهو ما ينفعُني يومياً اليوم.",
+      "new": "تعلَّمتُ ترتيبَ الأولوياتِ تحتَ الضغط، وهو ما يفيدُني يومياً في عملي.",
+      "rationale": "zugutekommt=يُفيد، تكرار «اليوم/يومياً» زائد."
+    },
+    {
+      "unit": "d-b2-31.lines[5].ar",
+      "old": "سأفحصُ المهامَّ أوّلاً ثمَّ أنسّقُ الأولوياتِ جماعياً.",
+      "new": "سأستعرضُ المهامَّ أوّلاً ثمَّ أنسّقُ الأولوياتِ جماعياً.",
+      "rationale": "sichten=استعراض/فرز (لا «فحص» بمعنى امتحان)."
+    },
+    {
+      "unit": "d-b2-32.lines[0].ar",
+      "old": "تحديدُ سرعةٍ عامٌّ سينقذُ أرواحاً ويخفضُ الانبعاثات.",
+      "new": "حدُّ سرعةٍ عامٍّ سينقذُ أرواحاً ويخفضُ الانبعاثات.",
+      "rationale": "Tempolimit=حد السرعة (لا «تحديد» كمصدر)."
+    },
+    {
+      "unit": "d-b2-32.lines[4].ar",
+      "old": "بهذا أقبل. إذن نحنُ متّفقانِ من حيثُ المبدأ.",
+      "new": "أقبلُ بهذا. إذن نحنُ متّفقانِ من حيثُ المبدأ.",
+      "rationale": "Damit kann ich leben=أقبل بهذا (تقديم الجارّ والمجرور)."
+    }
+  ],
+  "contextNotes": {
+    "d-b2-31": [
+      {
+        "note": "Lebenslauf-Lücke 8 Monate pflege+Fachkurs: رعاية الأم ودورة تخصصية بجانبها (Q0).",
+        "source": "d-b2-31-q0"
+      },
+      {
+        "note": "unter Belastung priorisieren: ترتيب الأولويات تحت الضغط (Q0).",
+        "source": "d-b2-31-q0"
+      },
+      {
+        "note": "Angenommen + Konjunktiv II تفتح سؤالاً افتراضياً؛ يردّ بسرد خطوتين: sichten → abstimmen (Q1/Q2).",
+        "source": "d-b2-31-q1"
+      }
+    ],
+    "d-b2-32": [
+      {
+        "note": "Tempolimit rettet Leben/senkt Emissionen (Q0).",
+        "source": "d-b2-32-q0"
+      },
+      {
+        "note": "Einsparung geringer als behauptet اعتراض توبياس؛ يارا تردّ «Selbst wenn … kostet nichts und wirkt sofort» (Q1).",
+        "source": "d-b2-32-q1"
+      },
+      {
+        "note": "Tobias stimmt zu «sofern gleichzeitig in Schienen investiert» → اتفاق مبدئي (Q2).",
+        "source": "d-b2-32-q2"
+      }
+    ]
+  },
+  "styleAlternatives": {
+    "d-b2-31": [
+      {
+        "phrase": "كيف أفادتك",
+        "alternative": "إلى أي مدى طوّرتك",
+        "note": "«Inwiefern weitergebracht». "
+      },
+      {
+        "phrase": "تحت الضغط",
+        "alternative": "في ظل الضغط",
+        "note": "«unter Belastung». "
+      },
+      {
+        "phrase": "سأستعرض",
+        "alternative": "سأحصر",
+        "note": "«sichten» الفرز. "
+      }
+    ],
+    "d-b2-32": [
+      {
+        "phrase": "حد سرعة",
+        "alternative": "سقف سرعة",
+        "note": "«Tempolimit». "
+      },
+      {
+        "phrase": "أقبل بهذا",
+        "alternative": "أستطيع التعايش مع هذا",
+        "note": "«Damit kann ich leben». "
+      },
+      {
+        "phrase": "من حيث المبدأ",
+        "alternative": "مبدئياً",
+        "note": "«im Grundsatz». "
+      }
+    ]
+  },
+  "sources": {
+    "d-b2-31": [
+      {
+        "id": "S1",
+        "citation": "Duden: Lebenslauf = السيرة الذاتية؛ Lücke = فجوة زمنية.",
+        "url": "https://www.duden.de/rechtschreibung/Lebenslauf"
+      },
+      {
+        "id": "S2",
+        "citation": "Duden: weiterbringen = يُفيد/يطوّر مهنياً.",
+        "url": "https://www.duden.de/rechtschreibung/weiterbringen"
+      },
+      {
+        "id": "S3",
+        "citation": "Duden: priorisieren = يرتّب الأولويات.",
+        "url": "https://www.duden.de/rechtschreibung/priorisieren"
+      },
+      {
+        "id": "S4",
+        "citation": "Duden: sichten = يستعرض/يفرز.",
+        "url": "https://www.duden.de/rechtschreibung/sichten"
+      }
+    ],
+    "d-b2-32": [
+      {
+        "id": "S5",
+        "citation": "Duden: Tempolimit = حد السرعة.",
+        "url": "https://www.duden.de/rechtschreibung/Tempolimit"
+      },
+      {
+        "id": "S6",
+        "citation": "Duden: Emission = انبعاث.",
+        "url": "https://www.duden.de/rechtschreibung/Emission"
+      },
+      {
+        "id": "S7",
+        "citation": "Duden: Selbst wenn = حتى لو.",
+        "url": "https://www.duden.de/rechtschreibung/selbst"
+      },
+      {
+        "id": "S8",
+        "citation": "Duden: sofern = شريطة أن.",
+        "url": "https://www.duden.de/rechtschreibung/sofern"
+      }
+    ]
+  },
+  "contentWarnings": [],
+  "contentChecks": [
+    "d-b2-31: مقابلة العمل متسقة: فجوة 8 أشهر (رعاية أم+دورة) → كيف أفادت مهنياً؟ → تعلّم ترتيب الأولويات تحت الضغط → سؤال افتراضي (فريق مُثقَل) → أستعرض ثم أنسّق جماعياً. Q0 صحيح/فخّان، Q1 ملء Angenommen، Q2 صحيح (خطوتان).",
+    "d-b2-32: سجال حد السرعة متسق: ينقذ أرواحاً ويخفض انبعاثات → التوفير أقل من المُدَّعى → حتى لو صغير لا يكلّف → موافق شريطة الاستثمار في السكك → اتفاق مبدئي. Q0 صحيح/فخّان، Q1 ملء Selbst، Q2 خطأ (اتفاق مبدئي لا خصومة مفتوحة).",
+    "لا تحذيرات محتوى جديدة؛ W1–W6 مفتوحة."
+  ],
+  "audio": {
+    "manifestEntries": [
+      "d-b2-31",
+      "d-b2-32"
+    ],
+    "mp3Files": [
+      "/home/user/wegb2/public/audio/dialog/d-b2-31.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b2-32.mp3"
+    ],
+    "note": "لا استماع ولا ادعاء صوتي."
+  },
+  "waisen": {
+    "present": false,
+    "note": "الحوارات الثلاثة بلا حقل waisen (فحص صريح لكل كائن)."
+  },
+  "judgement": {
+    "correct": 84,
+    "corrected": 5,
+    "unresolved": 0,
+    "note": "خمسة تصحيحات عربية مؤكدة — d-b2-31 (3): Inwiefern weitergebracht=كيف أفادتك (لا «بأي معنى نفعتك»)، zugutekommt=يفيدني في عملي (حذف تكرار «اليوم/يومياً»)، sichten=أستعرض (لا «أفحص» بمعنى امتحان)؛ d-b2-32 (2): Tempolimit=حد سرعة (لا «تحديد» مصدر)، Damit kann ich leben=أقبل بهذا (تقديم الجار والمجرور، لا «بهذا أقبل» الذي يوهم «هكذا أقبل»). الحواران قصيران (6+5=11 سطراً)؛ الأسئلة/المفاتيح/الإملاءات مقفلة. لا تحذيرات محتوى جديدة؛ W1–W6 مفتوحة. الألماني/who/الأسئلة/المفاتيح/الإملاءات مقفلة."
+  },
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو النسبة.",
+    "audio": "لا استماع ولا توليد صوتي.",
+    "human": "ليست مراجعة بشرية.",
+    "legal": "سياق مقابلة عمل/سجال سياسة نقل عام: التصحيحات لغوية، لا مشورة قانونية.",
+    "medical": "لا محتوى طبي في هذه الدفعة.",
+    "professional": "لا توصيات مهنية؛ مفردات مقابلة وسجال لا نصائح."
+  },
+  "gates": {
+    "planned": "K206a–j"
+  }
+}

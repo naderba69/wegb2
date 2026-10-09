@@ -1,0 +1,1169 @@
+{
+  "date": "2026-10-05",
+  "batch": "A2-dialogues-04",
+  "scope": "مراجعة مصدرية فردية لـ33 وحدة حية في d-a2-07 إلى d-a2-09: 3 بيانات حوار، 17 سطراً، 6 أسئلة، و7 جمل إملاء. سُجلت ثلاثة أصول صوتية منفصلة وفُحص وجودها وحجمها فقط.",
+  "method": "استُخرجت المعرفات والترتيب من content/dialogues.json الحي، وفُحصت كل وحدة على حدة بسياقها وبمرجع منشور يسند النقطة المعينة؛ سُجل الدليل والحكم والإجراء واللقطة الحالية. عُدّل المؤكد فقط. المقارنة التاريخية مقتصرة على خمسة سجلات أسئلة في ملف المشتتات ولا تُعامل حكماً لغوياً.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 17,
+    "questions": 6,
+    "dictationSentences": 7,
+    "audioAssets": 3,
+    "unresolvedContextNotes": 1,
+    "totalTrackedItems": 33
+  },
+  "statusCounts": {
+    "سليم": 30,
+    "مُصحح": 2,
+    "غير محسوم": 1
+  },
+  "statusDefinitions": {
+    "سليم": "فُحصت الوحدة بسياقها ومصدرها؛ لم يثبت فيها خطأ مؤكّد يستوجب التعديل. قد تسجل ملاحظة أسلوبية دون تحويلها إلى عيب.",
+    "مُصحح": "ثبت خلل محدد في الترجمة/الشرح بالمقابلة مع النص والمصدر، وعُدّل الحقل المحدد في البيانات الحية.",
+    "غير محسوم": "يوجد احتمال تداخل/دقة لا يحسمها الحوار؛ لا تعديل تخمينياً حتى مراجعة تحريرية أو توضيح السياق."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة؛ ليست مراجعة بشرية أو اعتماداً لغوياً/مهنياً.",
+    "فحص الصوت اقتصر على وجود الملفات ومطابقة الحجم بالبايت مع البيان؛ لم يحدث تشغيل أو استماع أو تحقق من فك الترميز أو النطق أو مطابقة الصوت للنص.",
+    "ملف scripts/patches/a_dialog_fallen.py سجل محدود لخيارات ومفاتيح خمسة أسئلة؛ لا يوفّر تاريخاً للعناوين أو الأسطر أو الإملاء، ولا يثبت صحة المحتوى أو خطأه.",
+    "لم تُعَد مراجعة مستوى A2 أو CEFR أو النسبة أو حساب المستوى الممكن؛ لا يثبت وسم المحتوى وحده الملاءمة التربوية.",
+    "حوار الصيدلية خيالي؛ لم يُقيّم كنصيحة صحية أو علاجية.",
+    "المراجع المعجمية تسند معاني محددة؛ لا تثبت وحدها طبيعية كل صياغة عربية أو أثراً تعليمياً."
+  ],
+  "historicalPatchReview": {
+    "sources": [
+      "scripts/patches/a_dialog_fallen.py"
+    ],
+    "role": "مقارنة تحريرية محدودة لخيارات ومفاتيح خمسة أسئلة حاضرة في السجل؛ ليست لقطة للنص الحواري الكامل أو مرجعاً لغوياً، ولا يُستدل من تغير الترتيب وحده على خطأ.",
+    "unavailableHistoricalFields": [
+      "titles",
+      "lines",
+      "dictation"
+    ],
+    "comparisons": [
+      {
+        "id": "d-a2-07-q1",
+        "historicalOptions": [
+          "Frau Klein",
+          "Herr Yilmaz",
+          "der Bote gegen neun Uhr"
+        ],
+        "liveOptions": [
+          "Frau Klein",
+          "Herr Yilmaz",
+          "der Bote gegen neun Uhr"
+        ],
+        "historicalAnswer": "Herr Yilmaz",
+        "liveAnswer": "Herr Yilmaz",
+        "observation": "لم تتغير مجموعة الخيارات أو ترتيبها أو المفتاح في السجل التاريخي المحدود."
+      },
+      {
+        "id": "d-a2-08-q1",
+        "historicalOptions": [
+          "Halsschmerzen seit gestern Abend",
+          "Kopfschmerzen seit gestern",
+          "Halsschmerzen seit drei Tagen",
+          "Fieber und Husten"
+        ],
+        "liveOptions": [
+          "Kopfschmerzen seit gestern",
+          "Halsschmerzen seit drei Tagen",
+          "Halsschmerzen seit gestern Abend",
+          "Schmerzen beim Schlucken seit gestern Morgen"
+        ],
+        "historicalAnswer": "Halsschmerzen seit gestern Abend",
+        "liveAnswer": "Halsschmerzen seit gestern Abend",
+        "observation": "المفتاح محفوظ؛ تغيّر مشتت Fieber und Husten إلى Schmerzen beim Schlucken seit gestern Morgen، مع تغير ترتيب الخيارات. الفارق لا يثبت وحده خللاً."
+      },
+      {
+        "id": "d-a2-08-q2",
+        "historicalOptions": [
+          "Lutschtabletten und einen Tee",
+          "nur Wasser",
+          "Tabletten zum Schlucken",
+          "einen Tee und Wasser zum Kaufen"
+        ],
+        "liveOptions": [
+          "nur Wasser",
+          "Tabletten zum Schlucken",
+          "einen Tee und Wasser zum Kaufen",
+          "Lutschtabletten und einen Tee"
+        ],
+        "historicalAnswer": "Lutschtabletten und einen Tee",
+        "liveAnswer": "Lutschtabletten und einen Tee",
+        "observation": "مجموعة الخيارات والمفتاح محفوظان مع اختلاف الترتيب؛ شرح السجل التاريخي ليس مرجعاً للحكم الحالي، وصُحح شرح الماء في اللقطة الحية."
+      },
+      {
+        "id": "d-a2-09-q1",
+        "historicalOptions": [
+          "um vierzehn Uhr dreißig",
+          "um fünfzehn Uhr dreißig",
+          "um vierzehn Uhr von Gleis drei",
+          "um dreizehn Uhr dreißig"
+        ],
+        "liveOptions": [
+          "um vierzehn Uhr dreißig",
+          "um fünfzehn Uhr dreißig",
+          "um vierzehn Uhr von Gleis drei",
+          "um dreizehn Uhr dreißig"
+        ],
+        "historicalAnswer": "um vierzehn Uhr dreißig",
+        "liveAnswer": "um vierzehn Uhr dreißig",
+        "observation": "الخيارات والمفتاح كما في السجل؛ التحقق من الوقت استند إلى مصادر الوقت والحوار لا إلى الأرشيف."
+      },
+      {
+        "id": "d-a2-09-q2",
+        "historicalOptions": [
+          "eine Fahrkarte zweiter Klasse",
+          "eine Rückfahrkarte für neunundzwanzig Euro",
+          "eine Fahrkarte erster Klasse",
+          "fünf Fahrkarten"
+        ],
+        "liveOptions": [
+          "eine Rückfahrkarte für neunundzwanzig Euro",
+          "eine Fahrkarte zweiter Klasse",
+          "eine Fahrkarte erster Klasse",
+          "fünf Fahrkarten"
+        ],
+        "historicalAnswer": "eine Fahrkarte zweiter Klasse",
+        "liveAnswer": "eine Fahrkarte zweiter Klasse",
+        "observation": "تحرك ترتيب المفتاح والمشتت الأول؛ السجل التاريخي لا يحسم التداخل الدلالي المحتمل بين التذكرة المعروضة والدرجة المطلوبة."
+      }
+    ]
+  },
+  "contentPatch": {
+    "fieldsChanged": 2,
+    "changedFields": [
+      "d-a2-08-q2.explanationAr",
+      "d-a2-09.lines[1].ar"
+    ],
+    "reason": "استُبدل ادعاء غير مسند عن عدم بيع الماء بتفسير يستند إلى ما قالت الصيدلانية إنها ستعطيه؛ وصُححت 14:30 من «الثانية عشرة والنصف» إلى الثانية والنصف بعد الظهر. لم تتغير الجمل الألمانية أو مفاتيح الإجابة.",
+    "protectedUnresolvedItemIds": [
+      "d-a2-09-q2"
+    ]
+  },
+  "openNotes": [
+    {
+      "id": "d-a2-09-q2",
+      "status": "غير محسوم",
+      "sources": [
+        "S44",
+        "S45",
+        "S47",
+        "S48",
+        "S49"
+      ],
+      "finding": "السؤال عن Rückfahrkarte تبعه عرض سعرها (29 يورو) ثم طلب Fahrkarte zweiter Klasse. تسلسل الحوار يسمح بفهم الطلب على أنه قبول للتذكرة المعروضة، ولا ينفي صراحةً أنها ذهاب وإياب؛ لذلك قد لا يكون المشتت الخاص بتذكرة العودة خاطئاً، ولا يمكن الجزم من النص وحده بأن المفتاح منفرد. معنى المفردات في PONS/Duden لا يحسم قصد المتكلم التداولي.",
+      "action": "أُبقي السؤال والشرح كما هما دون تعديل تخميني. عند تحرير لاحق، اجعل السؤال عن الدرجة تحديداً أو أضف رفضاً/طلباً صريحاً لتذكرة العودة كي تصبح الخيارات متمايزة."
+    }
+  ],
+  "audioAssetAudit": [
+    {
+      "id": "d-a2-07",
+      "file": "/audio/dialog/d-a2-07.mp3",
+      "metadataBytes": 116907,
+      "actualBytes": 116907,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "التحقق اقتصر على وجود الملف ومطابقة الحجم بالبايت مع البيان؛ لم يُشغّل ولم يُستمع إليه ولم يُتحقق من الترميز أو النطق."
+    },
+    {
+      "id": "d-a2-08",
+      "file": "/audio/dialog/d-a2-08.mp3",
+      "metadataBytes": 143883,
+      "actualBytes": 143883,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "التحقق اقتصر على وجود الملف ومطابقة الحجم بالبايت مع البيان؛ لم يُشغّل ولم يُستمع إليه ولم يُتحقق من الترميز أو النطق."
+    },
+    {
+      "id": "d-a2-09",
+      "file": "/audio/dialog/d-a2-09.mp3",
+      "metadataBytes": 126956,
+      "actualBytes": 126956,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "التحقق اقتصر على وجود الملف ومطابقة الحجم بالبايت مع البيان؛ لم يُشغّل ولم يُستمع إليه ولم يُتحقق من الترميز أو النطق."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "PONS: Nachbar",
+      "url": "https://en.pons.com/translate/german-arabic/Nachbar",
+      "supports": "يورد Nachbar بمعنى الجار؛ يسند طرف العنوان وسياق الجوار."
+    },
+    {
+      "id": "S02",
+      "title": "PONS: Paket",
+      "url": "https://en.pons.com/translate/german-arabic/Paket",
+      "supports": "يورد Paket بمعنى طرد/حزمة، وهو المقصود في الحوار."
+    },
+    {
+      "id": "S03",
+      "title": "PONS: annehmen",
+      "url": "https://en.pons.com/translate/german-arabic/annehmen",
+      "supports": "يسجل annehmen بمعنى قبول/استلام الشيء، ويعرض تصريف Partizip II angenommen."
+    },
+    {
+      "id": "S04",
+      "title": "PONS: Bote",
+      "url": "https://en.pons.com/translate/german-arabic/Bote",
+      "supports": "يورد Bote بمعنى الرسول/الساعي، ويدعم وصف عامل توصيل الطرد في السياق."
+    },
+    {
+      "id": "S05",
+      "title": "PONS: kommen",
+      "url": "https://en.pons.com/translate/german-arabic/kommen",
+      "supports": "يورد kommen بمعنى جاء/أتى؛ وفي Perfekt مع sein: ist gekommen."
+    },
+    {
+      "id": "S06",
+      "title": "PONS: gegen",
+      "url": "https://en.pons.com/translate/german-arabic/gegen",
+      "supports": "يعرض gegen في استعمال الوقت التقريبي؛ gegen neun = نحو التاسعة."
+    },
+    {
+      "id": "S07",
+      "title": "PONS: frei",
+      "url": "https://en.pons.com/translate/german-arabic/frei",
+      "supports": "من معاني frei التفرغ/عدم العمل؛ يورد مثال haben wir frei بمعنى يوم عطلة."
+    },
+    {
+      "id": "S08",
+      "title": "PONS: Sie",
+      "url": "https://en.pons.com/translate/german-arabic/sie?q=Sie",
+      "supports": "يفصل ضمير المخاطبة الرسمي Sie عن المفرد المؤنث والجمع، ويورد Entschuldigen Sie! مقابلاً سياقياً لـ«عفواً»."
+    },
+    {
+      "id": "S09",
+      "title": "PONS: freundlich",
+      "url": "https://en.pons.com/translate/german-arabic/freundlich",
+      "supports": "يورد freundlich بمعنى لطيف/ودود، وهو وصف الامتنان لجار أخذ الطرد."
+    },
+    {
+      "id": "S10",
+      "title": "PONS: Kaffee",
+      "url": "https://en.pons.com/translate/german-arabic/Kaffee",
+      "supports": "يورد Kaffee بمعنى قهوة."
+    },
+    {
+      "id": "S11",
+      "title": "PONS: gern",
+      "url": "https://en.pons.com/translate/german-arabic/gern",
+      "supports": "يورد gern في معنى القبول بسرور/بكل سرور."
+    },
+    {
+      "id": "S12",
+      "title": "PONS: kurz",
+      "url": "https://en.pons.com/translate/german-arabic/kurz",
+      "supports": "يسند معنى kurz إلى القِصر/الإيجاز؛ لا يحسم وحده إن كان القصر زمنياً أو في الكلام، لذا سُجلت ملاحظة السياق أسلوبية."
+    },
+    {
+      "id": "S13",
+      "title": "PONS: Guten Morgen",
+      "url": "https://en.pons.com/translate/german-arabic/guten+Morgen?q=Guten+Morgen",
+      "supports": "يعرض Guten Morgen مقابل «صباح الخير» مباشرةً."
+    },
+    {
+      "id": "S14",
+      "title": "PONS: danke",
+      "url": "https://en.pons.com/translate/german-arabic/danke",
+      "supports": "يورد danke بمعنى «شكراً»."
+    },
+    {
+      "id": "S15",
+      "title": "PONS: Guten Tag",
+      "url": "https://en.pons.com/translate/german-arabic/guten+Tag?q=Guten_Tag",
+      "supports": "يعرض نهارك سعيد، سلامات، ومرحباً مقابلاتٍ للتحية؛ يفيد في تقويم المعنى لا في فرض صيغة عربية وحيدة."
+    },
+    {
+      "id": "S16",
+      "title": "PONS: Apotheke",
+      "url": "https://en.pons.com/translate/german-arabic/Apotheke",
+      "supports": "يورد Apotheke بمعنى صيدلية."
+    },
+    {
+      "id": "S17",
+      "title": "PONS: Halsschmerzen",
+      "url": "https://en.pons.com/translate/german-arabic/Halsschmerzen",
+      "supports": "يورد Halsschmerzen بمعنى ألم/آلام الحلق."
+    },
+    {
+      "id": "S18",
+      "title": "PONS: dagegen",
+      "url": "https://en.pons.com/translate/german-arabic/dagegen",
+      "supports": "يسند استعمال etwas dagegen إلى شيء يُستعمل/يؤخذ ضد المشكلة أو لتخفيفها."
+    },
+    {
+      "id": "S19",
+      "title": "PONS: seit",
+      "url": "https://en.pons.com/translate/german-arabic/seit",
+      "supports": "يعرض seit للمدة التي بدأت في الماضي، ويورد سؤالاً من نمط seit wann?؛ يسند منذ متى/منذ."
+    },
+    {
+      "id": "S20",
+      "title": "PONS: Schmerz",
+      "url": "https://en.pons.com/translate/german-arabic/Schmerz",
+      "supports": "يورد Schmerz بمعنى ألم."
+    },
+    {
+      "id": "S21",
+      "title": "PONS: Abend",
+      "url": "https://en.pons.com/translate/german-arabic/Abend",
+      "supports": "يورد Abend بمعنى المساء ويعرض gestern Abend بمعنى مساء أمس."
+    },
+    {
+      "id": "S22",
+      "title": "PONS: schlucken",
+      "url": "https://en.pons.com/translate/german-arabic/schlucken",
+      "supports": "يورد schlucken بمعنى يبلع؛ في النص يرد وصفاً لألم البلع."
+    },
+    {
+      "id": "S23",
+      "title": "Duden: Lutschtablette",
+      "url": "https://www.duden.de/rechtschreibung/Lutschtablette",
+      "supports": "يعرّف Lutschtablette بأنها قرص يُمصّ؛ لم يقدّم PONS في الفحص مدخلاً عربياً مستقلاً للكلمة المركبة."
+    },
+    {
+      "id": "S24",
+      "title": "PONS: Tablette",
+      "url": "https://en.pons.com/translate/german-arabic/Tablette",
+      "supports": "يورد Tablette بمعنى قرص/حبّة؛ يدعم مكوّن الاسم المركب لا ترجمته الكاملة وحده."
+    },
+    {
+      "id": "S25",
+      "title": "PONS: lutschen",
+      "url": "https://en.pons.com/translate/german-arabic/lutschen",
+      "supports": "يورد lutschen بمعنى يمصّ؛ مع تعريف Duden يسند «أقراصاً للامتصاص»."
+    },
+    {
+      "id": "S26",
+      "title": "PONS: Tee",
+      "url": "https://en.pons.com/translate/german-arabic/Tee",
+      "supports": "يورد Tee بمعنى شاي."
+    },
+    {
+      "id": "S27",
+      "title": "PONS: trinken",
+      "url": "https://en.pons.com/translate/german-arabic/trinken",
+      "supports": "يورد trinken بمعنى يشرب؛ يسند كون جملة الماء نصيحةً للشرب."
+    },
+    {
+      "id": "S28",
+      "title": "PONS: Wasser",
+      "url": "https://en.pons.com/translate/german-arabic/Wasser",
+      "supports": "يورد Wasser بمعنى ماء."
+    },
+    {
+      "id": "S29",
+      "title": "PONS: dankeschön",
+      "url": "https://en.pons.com/translate/german-arabic/dankesch%C3%B6n",
+      "supports": "يعرض dankeschön مقابل «شكراً جزيلاً»."
+    },
+    {
+      "id": "S30",
+      "title": "Elon.io: Dialogue—Shopping and Prices",
+      "url": "https://elon.io/grammar/german/texts/dialogue-shopping",
+      "supports": "يستعمل Was macht das zusammen? للسؤال عن مجموع السعر؛ يسند «كم المجموع؟» في سياق الصيدلية، لا بقية الحوار."
+    },
+    {
+      "id": "S31",
+      "title": "PONS: Bahnhof",
+      "url": "https://en.pons.com/translate/german-arabic/Bahnhof",
+      "supports": "يورد Bahnhof بمعنى محطة؛ يسند عنوان الحوار Am Bahnhof."
+    },
+    {
+      "id": "S32",
+      "title": "PONS: Zug",
+      "url": "https://en.pons.com/translate/german-arabic/Zug",
+      "supports": "يميز Zug بمعنى قطار السكك الحديدية."
+    },
+    {
+      "id": "S33",
+      "title": "PONS: fahren",
+      "url": "https://en.pons.com/translate/german-arabic/fahren",
+      "supports": "يسند fahren إلى السفر/السير أو انطلاق وسيلة النقل بحسب السياق."
+    },
+    {
+      "id": "S34",
+      "title": "PONS: nach",
+      "url": "https://en.pons.com/translate/german-arabic/nach",
+      "supports": "يعرض nach مع الاتجاه بمعنى إلى؛ يدعم nach Köln."
+    },
+    {
+      "id": "S35",
+      "title": "PONS: nächste",
+      "url": "https://en.pons.com/translate/german-arabic/n%C3%A4chste",
+      "supports": "يعرض nächste في الاستعمال الزمني بمعنى القادم/التالي."
+    },
+    {
+      "id": "S36",
+      "title": "PONS: Köln",
+      "url": "https://en.pons.com/translate/german-arabic/K%C3%B6ln",
+      "supports": "يورد المقابل العربي لكولن: كولونيا."
+    },
+    {
+      "id": "S37",
+      "title": "DW Learn German: Time—12-hour clock",
+      "url": "https://learngerman.dw.com/en/time-12-hour-clock-1/l-37442425/gr-38303328",
+      "supports": "يوضح التعبير بالنظام ذي 12 ساعة، ومنه 14:30 = halb drei؛ يسند الساعة الثانية والنصف بعد الظهر."
+    },
+    {
+      "id": "S38",
+      "title": "DW Learn German: Expressing times of the day",
+      "url": "https://learngerman.dw.com/en/expressing-times-of-the-day/l-58581138/gr-60991104",
+      "supports": "يعرض التعبير عن الوقت اليومي بالنظام الرقمي ذي 24 ساعة؛ يثبت أن vierzehn Uhr dreißig هي 14:30."
+    },
+    {
+      "id": "S39",
+      "title": "PONS: vierzehn",
+      "url": "https://en.pons.com/translate/german-arabic/vierzehn",
+      "supports": "يورد vierzehn = أربعة عشر (14)."
+    },
+    {
+      "id": "S40",
+      "title": "PONS: dreißig",
+      "url": "https://en.pons.com/translate/german-arabic/drei%C3%9Fig",
+      "supports": "يورد dreißig = ثلاثون (30)."
+    },
+    {
+      "id": "S41",
+      "title": "PONS: fünf",
+      "url": "https://en.pons.com/translate/german-arabic/f%C3%BCnf",
+      "supports": "يورد fünf = خمسة؛ يدعم رقم Gleis fünf، مع الاستناد إلى Bahnsteig لا إلى هذا المدخل وحده لترجمة «رصيف»."
+    },
+    {
+      "id": "S42",
+      "title": "PONS: Gleis",
+      "url": "https://en.pons.com/translate/german-arabic/Gleis",
+      "supports": "يورد Gleis بمعنى خط/قضبان؛ لا يُستخدم وحده لإثبات مقابل «رصيف المحطة»."
+    },
+    {
+      "id": "S43",
+      "title": "PONS: Bahnsteig",
+      "url": "https://en.pons.com/translate/german-arabic/Bahnsteig",
+      "supports": "يورد Bahnsteig بمعنى رصيف المحطة؛ يسند المقابل العربي في تعليمات الوصول إلى المسار."
+    },
+    {
+      "id": "S44",
+      "title": "PONS: Rückfahrkarte",
+      "url": "https://en.pons.com/translate/german-arabic/R%C3%BCckfahrkarte",
+      "supports": "يترجم Rückfahrkarte صراحةً إلى تذكرة ذهاب وإياب؛ مهم لملاحظة تداخل خيارات السؤال الأخير."
+    },
+    {
+      "id": "S45",
+      "title": "PONS: kosten",
+      "url": "https://en.pons.com/translate/german-arabic/kosten?q=Kosten",
+      "supports": "يعرض kosten بمعنى يكلّف ومثال wieviel kostet das? = كم يكلّف هذا؟"
+    },
+    {
+      "id": "S46",
+      "title": "PONS: Euro",
+      "url": "https://en.pons.com/translate/german-arabic/Euro",
+      "supports": "يورد Euro بمعنى يورو."
+    },
+    {
+      "id": "S47",
+      "title": "Duden: neunundzwanzig",
+      "url": "https://www.duden.de/rechtschreibung/neunundzwanzig",
+      "supports": "يحدد كتابة neunundzwanzig بالحروف الرقمية 29."
+    },
+    {
+      "id": "S48",
+      "title": "PONS: Fahrkarte",
+      "url": "https://en.pons.com/translate/german-arabic/Fahrkarte",
+      "supports": "يترجم Fahrkarte إلى تذكرة سفر/ركوب، ويورد einfache Fahrkarte = تذكرة ذهاب."
+    },
+    {
+      "id": "S49",
+      "title": "PONS: Klasse",
+      "url": "https://en.pons.com/translate/german-arabic/Klasse",
+      "supports": "يورد Klasse في معنى Stufe مقابل درجة؛ يدعم zweiter Klasse = الدرجة الثانية."
+    },
+    {
+      "id": "S50",
+      "title": "PONS: hier",
+      "url": "https://en.pons.com/translate/german-arabic/hier",
+      "supports": "يورد hier بمعنى هنا، وتُقرأ هنا في سياق مناولة التذكرة."
+    },
+    {
+      "id": "S51",
+      "title": "PONS: bitte",
+      "url": "https://en.pons.com/translate/german-arabic/bitte",
+      "supports": "يفصل bitte بين «من فضلك» والاستعمال عند المناولة/العرض مثل «تفضل»."
+    },
+    {
+      "id": "S52",
+      "title": "PONS: Reise",
+      "url": "https://en.pons.com/translate/german-arabic/Reise",
+      "supports": "يورد Reise بمعنى رحلة/سفر؛ Gute Reise تحية برحلة سعيدة."
+    },
+    {
+      "id": "S53",
+      "title": "PONS: fünfzehn",
+      "url": "https://en.pons.com/translate/german-arabic/f%C3%BCnfzehn",
+      "supports": "يورد fünfzehn = خمسة عشر (15)، كما في مشتت وقت السؤال."
+    },
+    {
+      "id": "S54",
+      "title": "PONS: dreizehn",
+      "url": "https://en.pons.com/translate/german-arabic/dreizehn",
+      "supports": "يورد dreizehn = ثلاثة عشر (13)، كما في مشتت وقت السؤال."
+    },
+    {
+      "id": "S55",
+      "title": "PONS: neun",
+      "url": "https://en.pons.com/translate/german-arabic/neun",
+      "supports": "يورد neun = تسعة؛ يسند جواب الفراغ und gegen neun Uhr."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a2-07",
+      "kind": "بيانات الحوار/العنوان",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "finding": "العنوان «Der Nachbar und das Paket» يطابق موضوع الجار والطرد؛ اللقطة الحية تحوي خمسة أسطر وسؤالين وثلاث جمل إملاء. لا يستنتج من وسم A2 وحده حكم تربوي جديد.",
+      "action": "لا تغيير؛ حُفظ العنوان والبنية الحية كما هما، ولا يُعاد اعتماد مستوى CEFR.",
+      "reviewed": {
+        "titleDe": "Der Nachbar und das Paket",
+        "titleAr": "الجار والطرد",
+        "level": "A2",
+        "lineCount": 5,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a2-07.lines[0]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S02",
+        "S03",
+        "S08",
+        "S13"
+      ],
+      "finding": "Guten Morgen تقابل «صباح الخير». أخذ الجار الطرد وعبارة Ihr الرسمية ممثلة بضمير الاحترام «ـكم»؛ استلامه الطرد يطابق angenommen في هذا السياق.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Herr Yilmaz",
+        "de": "Guten Morgen, Frau Klein! Ich habe Ihr Paket angenommen.",
+        "ar": "صباح الخير يا سيدة كلاين! استلمت طردكم."
+      }
+    },
+    {
+      "id": "d-a2-07.lines[1]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S04",
+        "S05",
+        "S14"
+      ],
+      "finding": "Bote هو الساعي/الرسول، وist … gekommen يسأل عن وقت وصوله؛ «الموزّع» تعبير سياقي مفهوم لعامل التوصيل، ولا يثبت المصدر خطأً فيه.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Frau Klein",
+        "de": "Oh, danke! Wann ist der Bote gekommen?",
+        "ar": "أوه، شكراً! متى جاء الموزّع؟"
+      }
+    },
+    {
+      "id": "d-a2-07.lines[2]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S06",
+        "S07"
+      ],
+      "finding": "gegen neun تعني نحو التاسعة؛ وfrei قد تعني أنه لم يكن يعمل/كان متفرغاً. «كنت في راحة» مفهومة لكنها قد توحي باستراحة فعلية، و«كنت متفرغاً حينها» أصرح؛ هذه ملاحظة دقة/أسلوب لا تثبت خطأً يلزم تغييره.",
+      "action": "لا تغيير تخمينياً؛ تُسجّل «كنت متفرغاً حينها» بديلاً أسلوبياً ممكناً لا تصحيحاً مؤكداً.",
+      "reviewed": {
+        "who": "Herr Yilmaz",
+        "de": "Gegen neun Uhr. Ich hatte gerade frei.",
+        "ar": "حوالي التاسعة. كنت في راحة."
+      }
+    },
+    {
+      "id": "d-a2-07.lines[3]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S09",
+        "S10"
+      ],
+      "finding": "Sie للمخاطبة الرسمية في عرض القهوة؛ صيغة الجمع في «أنتم/تريدون» تمثيل عربي ممكن للتوقير، وfreundlich = لطيف/ودود. المعنى محفوظ.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Frau Klein",
+        "de": "Sie sind sehr freundlich. Möchten Sie einen Kaffee?",
+        "ar": "أنتم لطفاء جداً. هل تريدون قهوة؟"
+      }
+    },
+    {
+      "id": "d-a2-07.lines[4]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S11",
+        "S12",
+        "S14"
+      ],
+      "finding": "Gern تنقل «بكل سرور». في سياق قبول القهوة، nur kurz يرجح «لكن لفترة قصيرة»؛ «لكن باختصار» مفهومة ويمكن أن تعني بإيجاز، إلا أنها أقل تحديداً لمدة الزيارة. ملاحظة أسلوبية غير كافية لتصحيح إلزامي.",
+      "action": "لا تغيير؛ تبقى «لكن لفترة قصيرة» صياغة أدق اختيارية، دون وسم النص الحالي خطأً مؤكداً.",
+      "reviewed": {
+        "who": "Herr Yilmaz",
+        "de": "Gern, aber nur kurz. Danke!",
+        "ar": "بكل سرور، لكن باختصار. شكراً!"
+      }
+    },
+    {
+      "id": "d-a2-07-q1",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S02",
+        "S03",
+        "S04"
+      ],
+      "finding": "قال Herr Yilmaz صراحةً Ich habe Ihr Paket angenommen؛ هو الذي استلم الطرد. Frau Klein صاحبته، والساعي Bote هو من جاء به. المفتاح والشرح يطابقان تسلسل الحوار.",
+      "action": "لا تغيير؛ المفتاح والشرح محفوظان بعد مطابقة السطر والخيارات.",
+      "reviewed": {
+        "id": "d-a2-07-q1",
+        "type": "mc",
+        "promptDe": "Wer hat das Paket angenommen?",
+        "options": [
+          "Frau Klein",
+          "Herr Yilmaz",
+          "der Bote gegen neun Uhr"
+        ],
+        "answer": "Herr Yilmaz",
+        "explanationAr": "الدليل: «Ich habe Ihr Paket angenommen» — يقولها السيد يلماز. الفخّ 1: فراو كلاين صاحبة الطرد. الفخّ 2: الساعي سلّمه لا استلمه.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-07-q2",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S06",
+        "S55"
+      ],
+      "finding": "يقول الحوار Gegen neun Uhr؛ الكلمة الناقصة neun صحيحة، وقبول الرقم 9 تمثيل مكافئ للعدد في هذا الفراغ.",
+      "action": "لا تغيير؛ المفتاح يقبل لفظ العدد ورقمه، وكلاهما يسنده السطر.",
+      "reviewed": {
+        "id": "d-a2-07-q2",
+        "type": "fill",
+        "promptDe": "Der Bote ist gegen ___ Uhr gekommen.",
+        "answer": [
+          "neun",
+          "9"
+        ],
+        "explanationAr": "التاسعة.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-07.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S02",
+        "S03",
+        "S08"
+      ],
+      "finding": "الجملة تملي الجزء Ich habe Ihr Paket angenommen من السطر الأول كاملاً، بما فيه الضمير الرسمي والفعل المنفصل صرفياً في Perfekt.",
+      "action": "لا تغيير؛ طوبقت الجملة مع السطر الألماني الحي.",
+      "reviewed": {
+        "sentence": "Ich habe Ihr Paket angenommen."
+      }
+    },
+    {
+      "id": "d-a2-07.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S04",
+        "S05"
+      ],
+      "finding": "الجملة تطابق سؤال Wann ist der Bote gekommen? في السطر الثاني كلمةً وتركيباً.",
+      "action": "لا تغيير؛ طوبقت الجملة مع السطر الألماني الحي.",
+      "reviewed": {
+        "sentence": "Wann ist der Bote gekommen?"
+      }
+    },
+    {
+      "id": "d-a2-07.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S09"
+      ],
+      "finding": "الجملة تطابق Sie sind sehr freundlich من السطر الرابع، وتحفظ صيغة Sie الرسمية.",
+      "action": "لا تغيير؛ طوبقت الجملة مع السطر الألماني الحي.",
+      "reviewed": {
+        "sentence": "Sie sind sehr freundlich."
+      }
+    },
+    {
+      "id": "d-a2-08",
+      "kind": "بيانات الحوار/العنوان",
+      "status": "سليم",
+      "sources": [
+        "S15",
+        "S16"
+      ],
+      "finding": "العنوان In der Apotheke يطابق «في الصيدلية»؛ في اللقطة ستة أسطر وسؤالان وجملتا إملاء. لا يُستنتج من الوسم A2 وحده اعتماد ملاءمة المستوى.",
+      "action": "لا تغيير؛ حُفظ العنوان والبنية الحية كما هما، ولا يُعاد اعتماد مستوى CEFR.",
+      "reviewed": {
+        "titleDe": "In der Apotheke",
+        "titleAr": "في الصيدلية",
+        "level": "A2",
+        "lineCount": 6,
+        "questionCount": 2,
+        "dictationCount": 2,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a2-08.lines[0]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S15"
+      ],
+      "finding": "Guten Tag تحية، وPONS يعرض «نهارك سعيد/مرحباً» مقابلات لها. «نهاراً سعيداً» ينقل معنى good day لكنه اختيار صياغي أقل اصطلاحية؛ «مرحباً» أو «طاب نهارك» بديل ممكن لا يثبت خطأً. Was kann ich für Sie tun? تقابل سؤال المساعدة.",
+      "action": "لا تغيير؛ الاختلاف في صيغة التحية أسلوبي ولا يستلزم استبدالاً إلزامياً.",
+      "reviewed": {
+        "who": "Apothekerin",
+        "de": "Guten Tag! Was kann ich für Sie tun?",
+        "ar": "نهاراً سعيداً! كيف أساعدك؟"
+      }
+    },
+    {
+      "id": "d-a2-08.lines[1]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S17",
+        "S18"
+      ],
+      "finding": "Halsschmerzen تعني ألم الحلق، وbrauche etwas dagegen تفيد الحاجة إلى شيء لذلك الألم. «أحتاج شيئاً ضده» مفهومة وقريبة؛ «شيئاً يخفف الألم» أكثر اصطلاحية بالعربية، لا دليل على خطأ معنى مؤكد.",
+      "action": "لا تغيير؛ تُترك الصياغة الحالية مع تسجيل بديل عربي أسلس كملاحظة فقط.",
+      "reviewed": {
+        "who": "Karim",
+        "de": "Ich habe Halsschmerzen und brauche etwas dagegen.",
+        "ar": "عندي ألم في الحلق وأحتاج شيئاً ضده."
+      }
+    },
+    {
+      "id": "d-a2-08.lines[2]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S19",
+        "S20"
+      ],
+      "finding": "Seit wann haben Sie die Schmerzen? يسأل منذ متى بدأ الألم؛ «منذ متى تشعر بالألم؟» تنقل السؤال، وSie للمخاطبة الرسمية ممثلة بضمير المفرد العربي المعتاد في هذا التركيب.",
+      "action": "لا تغيير؛ المعنى والاستفهام الزمني محفوظان.",
+      "reviewed": {
+        "who": "Apothekerin",
+        "de": "Seit wann haben Sie die Schmerzen?",
+        "ar": "منذ متى تشعر بالألم؟"
+      }
+    },
+    {
+      "id": "d-a2-08.lines[3]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S19",
+        "S21",
+        "S22"
+      ],
+      "finding": "Seit gestern Abend = منذ مساء أمس؛ وAuch schlucken tut weh يذكر أن البلع مؤلم أيضاً. الترجمة العربية تحفظ الزمن وإضافة ألم البلع.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Karim",
+        "de": "Seit gestern Abend. Auch schlucken tut weh.",
+        "ar": "منذ مساء أمس. وحتى البلع يؤلمني."
+      }
+    },
+    {
+      "id": "d-a2-08.lines[4]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "finding": "Lutschtablette هي قرص يُمصّ بحسب Duden؛ يسند PONS جزأي Tablette وlutschen، ولا ندّعي أن PONS ترجم المركب مباشرة. الصيدلانية تسمي أقراص المص والشاي ثم تنصح بشرب الماء؛ العربية تنقل ذلك. لم يُقيّم النص كإرشاد طبي.",
+      "action": "لا تغيير؛ الترجمة مفهومة. تدقيق صحة النص الطبي/العلاجي خارج هذا النطاق.",
+      "reviewed": {
+        "who": "Apothekerin",
+        "de": "Ich gebe Ihnen Lutschtabletten und einen Tee. Trinken Sie viel Wasser!",
+        "ar": "سأعطيك أقراصاً للامتصاص وشاياً. اشرب ماءً كثيراً!"
+      }
+    },
+    {
+      "id": "d-a2-08.lines[5]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S29",
+        "S30",
+        "S45"
+      ],
+      "finding": "Danke schön تقابل «شكراً جزيلاً». Elon.io يستعمل Was macht das zusammen? للسؤال عن الإجمالي؛ «كم المجموع؟» مقابل عربي سياقي سليم.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Karim",
+        "de": "Danke schön. Was macht das zusammen?",
+        "ar": "شكراً جزيلاً. كم المجموع؟"
+      }
+    },
+    {
+      "id": "d-a2-08-q1",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S17",
+        "S19",
+        "S20",
+        "S21"
+      ],
+      "finding": "قال Karim Halsschmerzen ثم حدّد Seit gestern Abend؛ يطابق المفتاح. لم يُذكر ألم الرأس أو ثلاثة أيام؛ وألم البلع موجود، لكن «gestern Morgen» لا يطابق مساء أمس. تغيّر مشتت تاريخي فقط لا يثبت خطأ السؤال.",
+      "action": "لا تغيير؛ المفتاح والشرح محفوظان بعد فحص الحوار ومقارنة الخيارات.",
+      "reviewed": {
+        "id": "d-a2-08-q1",
+        "type": "mc",
+        "promptDe": "Was hat Karim?",
+        "options": [
+          "Kopfschmerzen seit gestern",
+          "Halsschmerzen seit drei Tagen",
+          "Halsschmerzen seit gestern Abend",
+          "Schmerzen beim Schlucken seit gestern Morgen"
+        ],
+        "answer": "Halsschmerzen seit gestern Abend",
+        "explanationAr": "الدليل: «Ich habe Halsschmerzen» و«Seit gestern Abend». الفخّ 1: الرأس لم يُذكر. الفخّ 2: «drei Tage» ليست في هذا الحوار. الفخّ 3: البلع مؤلم فعلاً لكن منذ «Abend» لا «Morgen».",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-08-q2",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "مُصحح",
+      "sources": [
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "finding": "المفتاح يطابق Ich gebe Ihnen Lutschtabletten und einen Tee. الماء ورد في جملة نصيحة للشرب، لا ضمن ما قالت الصيدلانية إنها ستعطيه. وذكر ألم البلع لا يثبت أنها أعطت أقراصاً للبلع. الشرح السابق زعم أن الماء «لا يُباع هنا»، وهذه دعوى لا يثبتها الحوار؛ صُحح الشرح فقط.",
+      "action": "عُدّل شرح الفخّ إلى دليل الحوار: الماء نصيحة للشرب وليس ضمن قائمة ما ستعطيه الصيدلانية؛ لم تتغير الخيارات أو المفتاح أو الألمانية.",
+      "reviewed": {
+        "id": "d-a2-08-q2",
+        "type": "mc",
+        "promptDe": "Was bekommt er?",
+        "options": [
+          "nur Wasser",
+          "Tabletten zum Schlucken",
+          "einen Tee und Wasser zum Kaufen",
+          "Lutschtabletten und einen Tee"
+        ],
+        "answer": "Lutschtabletten und einen Tee",
+        "explanationAr": "الدليل: «Ich gebe Ihnen Lutschtabletten und einen Tee». الفخّ 1: «Trinken Sie viel Wasser!» نصيحة للشرب، لا ضمن ما قالت الصيدلانية إنها ستعطيه. الفخّ 2: «schlucken» ورد في وصف ألم البلع، لا كنوع الأقراص. الفخّ 3: لا يذكر الحوار شراء الماء.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "before": {
+        "id": "d-a2-08-q2",
+        "type": "mc",
+        "promptDe": "Was bekommt er?",
+        "options": [
+          "nur Wasser",
+          "Tabletten zum Schlucken",
+          "einen Tee und Wasser zum Kaufen",
+          "Lutschtabletten und einen Tee"
+        ],
+        "answer": "Lutschtabletten und einen Tee",
+        "explanationAr": "الدليل: «Ich gebe Ihnen Lutschtabletten und einen Tee». الفخّ 1: الماء نصيحة للشرب لا دواء. الفخّ 2: «schlucken» ذُكر كألم. الفخّ 3: الماء لا يُباع هنا.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-08.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S19",
+        "S20"
+      ],
+      "finding": "الإملاء يطابق سؤال الصيدلانية Seit wann haben Sie die Schmerzen? كاملاً.",
+      "action": "لا تغيير؛ طوبقت الجملة مع السطر الألماني الحي.",
+      "reviewed": {
+        "sentence": "Seit wann haben Sie die Schmerzen?"
+      }
+    },
+    {
+      "id": "d-a2-08.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S27",
+        "S28"
+      ],
+      "finding": "الإملاء يطابق Trinken Sie viel Wasser!، ويحفظ النصيحة بصيغة المخاطبة Sie.",
+      "action": "لا تغيير؛ طوبقت الجملة مع السطر الألماني الحي.",
+      "reviewed": {
+        "sentence": "Trinken Sie viel Wasser!"
+      }
+    },
+    {
+      "id": "d-a2-09",
+      "kind": "بيانات الحوار/العنوان",
+      "status": "سليم",
+      "sources": [
+        "S31",
+        "S32"
+      ],
+      "finding": "العنوان Am Bahnhof يطابق «في محطة القطار»؛ في اللقطة ستة أسطر وسؤالان وجملتا إملاء. لا يُعاد تقييم وسم A2 من هذا العنوان.",
+      "action": "لا تغيير؛ حُفظ العنوان والبنية الحية كما هما، ولا يُستنتج حكم CEFR جديد.",
+      "reviewed": {
+        "titleDe": "Am Bahnhof",
+        "titleAr": "في محطة القطار",
+        "level": "A2",
+        "lineCount": 6,
+        "questionCount": 2,
+        "dictationCount": 2,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a2-09.lines[0]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36"
+      ],
+      "finding": "Entschuldigung تؤدي وظيفة «عفواً» في الاستفتاح؛ wann fährt der nächste Zug nach Köln? تسأل عن موعد القطار التالي إلى كولونيا. الترجمة تحفظ المقصد والوجهة.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Jonas",
+        "de": "Entschuldigung, wann fährt der nächste Zug nach Köln?",
+        "ar": "عفواً، متى ينطلق القطار التالي إلى كولونيا؟"
+      }
+    },
+    {
+      "id": "d-a2-09.lines[1]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "مُصحح",
+      "sources": [
+        "S37",
+        "S38",
+        "S39",
+        "S40",
+        "S41",
+        "S42",
+        "S43"
+      ],
+      "finding": "vierzehn Uhr dreißig هو 14:30 في صيغة 24 ساعة؛ DW يربطه بـhalb drei في نظام 12 ساعة، أي الثانية والنصف بعد الظهر، لا الثانية عشرة والنصف (12:30). Gleis خمسة رقم المسار؛ وللمقابل العربي «رصيف المحطة» استُخدم مدخل Bahnsteig لا Gleis وحده.",
+      "action": "صُححت العربية إلى «الساعة الثانية والنصف بعد الظهر، على الرصيف الخامس.»؛ لم تتغير الألمانية أو بيانات المسار.",
+      "reviewed": {
+        "who": "Mitarbeiterin",
+        "de": "Um vierzehn Uhr dreißig, Gleis fünf.",
+        "ar": "الساعة الثانية والنصف بعد الظهر، على الرصيف الخامس."
+      },
+      "before": {
+        "who": "Mitarbeiterin",
+        "de": "Um vierzehn Uhr dreißig, Gleis fünf.",
+        "ar": "الثانية عشرة والنصف، الرصيف الخامس."
+      }
+    },
+    {
+      "id": "d-a2-09.lines[2]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S44"
+      ],
+      "finding": "Rückfahrkarte تعني تذكرة ذهاب وإياب؛ «هل توجد بطاقة ذهاب وإياب؟» تنقل السؤال مباشرة.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Jonas",
+        "de": "Gibt es eine Rückfahrkarte?",
+        "ar": "هل توجد بطاقة ذهاب وإياب؟"
+      }
+    },
+    {
+      "id": "d-a2-09.lines[3]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S45",
+        "S46",
+        "S47"
+      ],
+      "finding": "kosten تعني يكلّف، neunundzwanzig تكتب 29 بحسب Duden، وEuro = يورو؛ «ثمنها تسعة وعشرون يورو» دقيقة.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Mitarbeiterin",
+        "de": "Ja, die kostet neunundzwanzig Euro.",
+        "ar": "نعم، ثمنها تسعة وعشرون يورو."
+      }
+    },
+    {
+      "id": "d-a2-09.lines[4]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S48",
+        "S49",
+        "S51"
+      ],
+      "finding": "Fahrkarte تذكرة سفر وzweiter Klasse الدرجة الثانية؛ المفتاح اللغوي محفوظ. «تذكرة من الدرجة الثانية» بديل عربي أتمّ أسلوباً من «تذكرة درجة ثانية»، لكن الحالية مفهومة ولا يثبت خطأها.",
+      "action": "لا تغيير؛ ملاحظة الصياغة العربية اختيارية وليست تصحيحاً مؤكداً.",
+      "reviewed": {
+        "who": "Jonas",
+        "de": "Eine Fahrkarte zweiter Klasse, bitte.",
+        "ar": "تذكرة درجة ثانية من فضلك."
+      }
+    },
+    {
+      "id": "d-a2-09.lines[5]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S50",
+        "S51",
+        "S52"
+      ],
+      "finding": "Hier, bitte في مقام تسليم التذكرة يقابل «تفضل»، وGute Reise تحية برحلة سعيدة؛ السياق والترجمة متوافقان.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Mitarbeiterin",
+        "de": "Hier, bitte. Gute Reise!",
+        "ar": "تفضل. رحلة سعيدة!"
+      }
+    },
+    {
+      "id": "d-a2-09-q1",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S37",
+        "S38",
+        "S39",
+        "S40",
+        "S41",
+        "S53",
+        "S54"
+      ],
+      "finding": "السطر يحدد Um vierzehn Uhr dreißig؛ نظام 24 ساعة ومقابل 12 ساعة يثبتان 14:30. الخيارتان 13:30 و15:30 تخالفان الزمن المنطوق؛ والخيار الثالث يخلط وقتاً صحيحاً برقم Gleis غير صحيح. المفتاح والشرح متسقان.",
+      "action": "لا تغيير؛ المفتاح والشرح محفوظان بعد مطابقة الوقت والمسار في الحوار.",
+      "reviewed": {
+        "id": "d-a2-09-q1",
+        "type": "mc",
+        "promptDe": "Wann fährt der Zug?",
+        "options": [
+          "um vierzehn Uhr dreißig",
+          "um fünfzehn Uhr dreißig",
+          "um vierzehn Uhr von Gleis drei",
+          "um dreizehn Uhr dreißig"
+        ],
+        "answer": "um vierzehn Uhr dreißig",
+        "explanationAr": "الدليل: «Um vierzehn Uhr dreißig, Gleis fünf». الفخّ 1: vierzehn/fünfzehn. الفخّ 2: الرصيف خمسة لا ثلاثة، و«dreißig» دقائق. الفخّ 3: dreizehn/dreißig.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-09-q2",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "غير محسوم",
+      "sources": [
+        "S44",
+        "S45",
+        "S47",
+        "S48",
+        "S49"
+      ],
+      "finding": "Jonas يسأل أولاً عن Rückfahrkarte، ويُقال له إن ثمنها 29 يورو، ثم يطلب Fahrkarte zweiter Klasse. قد يُفهم الطلب الأخير على أنه قبول للتذكرة المعروضة، ولا ينفي الحوار شراء تذكرة ذهاب وإياب. لذلك لا يثبت السياق أن مشتت «eine Rückfahrkarte für neunundzwanzig Euro» خطأ، ولا يحسم أن المفتاح منفرد. السجل التاريخي للمشتت لا يحسم المعنى.",
+      "action": "لا تعديل تخمينياً للمفتاح أو الشرح. إن تقرر تحريرياً حسم السؤال لاحقاً، فليُسأل تحديداً «في أي درجة يريد السفر؟» أو يُصرّح بالحوار برفض/طلب تذكرة العودة.",
+      "reviewed": {
+        "id": "d-a2-09-q2",
+        "type": "mc",
+        "promptDe": "Was kauft Jonas?",
+        "options": [
+          "eine Rückfahrkarte für neunundzwanzig Euro",
+          "eine Fahrkarte zweiter Klasse",
+          "eine Fahrkarte erster Klasse",
+          "fünf Fahrkarten"
+        ],
+        "answer": "eine Fahrkarte zweiter Klasse",
+        "explanationAr": "الدليل: «Eine Fahrkarte zweiter Klasse, bitte». الفخّ 1: عن تذكرة العودة سأل فقط ولم يطلبها. الفخّ 2: erster/zweiter. الفخّ 3: «fünf» رقم الرصيف.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-09.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36"
+      ],
+      "finding": "الإملاء يطابق سؤال Wann fährt der nächste Zug nach Köln? من السطر الأول كاملاً.",
+      "action": "لا تغيير؛ طوبقت الجملة مع السطر الألماني الحي.",
+      "reviewed": {
+        "sentence": "Wann fährt der nächste Zug nach Köln?"
+      }
+    },
+    {
+      "id": "d-a2-09.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S51",
+        "S52"
+      ],
+      "finding": "الإملاء يطابق Gute Reise! من السطر الأخير حرفياً.",
+      "action": "لا تغيير؛ طوبقت الجملة مع السطر الألماني الحي.",
+      "reviewed": {
+        "sentence": "Gute Reise!"
+      }
+    }
+  ]
+}

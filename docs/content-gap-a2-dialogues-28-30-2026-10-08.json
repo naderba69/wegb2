@@ -1,0 +1,128 @@
+{
+  "reviewRule": "R113",
+  "date": "2026-10-08",
+  "status": "غير محسوم — لا توجد مواد حوارية حية للمعرفات d-a2-28..d-a2-30؛ الجزء السابق من تاريخ Git غير متاح في نسخة shallow؛ لا تُعد هذه مراجعة للنصوص أو الأسئلة أو التمارين لهذه المعرفات.",
+  "scope": "تحقق تمهيدي من وجود d-a2-28 وd-a2-29 وd-a2-30، ومن مصادر توليد الحوارات A2 والتاريخ المتاح؛ لا إنشاء محتوى بديل ولا إسناد كلمات إلى هذه المعرفات بالتخمين.",
+  "liveContent": {
+    "a2DialogueCount": 29,
+    "expectedA2Count": 29,
+    "presentA2Ids": [
+      "d-a2-01",
+      "d-a2-02",
+      "d-a2-03",
+      "d-a2-04",
+      "d-a2-05",
+      "d-a2-06",
+      "d-a2-07",
+      "d-a2-08",
+      "d-a2-09",
+      "d-a2-10",
+      "d-a2-11",
+      "d-a2-12",
+      "d-a2-13",
+      "d-a2-14",
+      "d-a2-15",
+      "d-a2-16",
+      "d-a2-17",
+      "d-a2-18",
+      "d-a2-19",
+      "d-a2-20",
+      "d-a2-21",
+      "d-a2-22",
+      "d-a2-23",
+      "d-a2-24",
+      "d-a2-25",
+      "d-a2-26",
+      "d-a2-27",
+      "d-a2-31",
+      "d-a2-32"
+    ],
+    "missingIds": [
+      "d-a2-28",
+      "d-a2-29",
+      "d-a2-30"
+    ],
+    "allExpectedPresent": true
+  },
+  "audio": {
+    "manifestEntriesForMissing": [],
+    "mp3FilesForMissing": [],
+    "note": "لا إدخالات ولا ملفات صوتية مطابقة للمعرفات المفقودة؛ هذا وحده لا يثبت غياب الحوارات."
+  },
+  "gitHistory": {
+    "isShallowRepository": true,
+    "firstAvailableCommit": "4d1d9bc1f62fbaa37d5417e28f992f8e6e4b8422",
+    "searchedRefs": "--all (الفروع المحلية والبعيدة المتاحة)",
+    "hitsPerMissingId": {
+      "d-a2-28": [],
+      "d-a2-29": [],
+      "d-a2-30": []
+    }
+  },
+  "generators": {
+    "dialoge_a2_neu1.py": {
+      "declaredRange": "d-a2-10..18 (9 dialogues from orphaned A2 cards)",
+      "containsAnyMissingId": false,
+      "notableComment": "9 neue A2-Dialoge (d-a2-10..18)"
+    },
+    "dialoge_a2_neu2.py": {
+      "declaredRange": "d-a2-19..27 (9 dialogues — closes A2 to 29 dialogues)",
+      "containsAnyMissingId": false,
+      "notableComment": "9 neue A2-Dialoge (d-a2-19..27) aus verwaisten A2-Karten — schliesst A2 auf 29 Dialoge."
+    },
+    "dialoge_welle.py": {
+      "declaredRange": "wave dialogues d-a2-31/32 (boundary), no 28..30",
+      "containsAnyMissingId": false,
+      "notableComment": "adds 2 dialogues per level (31, 32) only — no 28..30"
+    }
+  },
+  "sources": [
+    {
+      "id": "G1",
+      "path": "content/dialogues.json",
+      "proves": "النسخة الحية تضم 29 حواراً من مستوى A2 (d-a2-01..27 وd-a2-31..d-a2-32). لا يوجد كائن للمعرفات 28–30.",
+      "limits": "يصف النسخة الحية فقط ولا يثبت أن المعرفات لم تكن موجودة في تاريخ Git أقدم من commit الأساس."
+    },
+    {
+      "id": "G2",
+      "path": "scripts/patches/dialoge_a2_neu1.py",
+      "proves": "المصدر يصرّح عن d-a2-10..18 بوصفها دفعة البطاقات اليتيمة الأولى لمستوى A2.",
+      "limits": "لا يذكر المعرفات 28–30."
+    },
+    {
+      "id": "G3",
+      "path": "scripts/patches/dialoge_a2_neu2.py",
+      "proves": "المصدر يصرّح عن d-a2-19..27، وفي تعليق الملف «schliesst A2 auf 29 Dialoge» يطابق عدد سجلات A2 الحالية.",
+      "limits": "التعليق حسابي مطابق للعدد الحي وليس برهاناً مستقلاً على تاريخ 28–30."
+    },
+    {
+      "id": "G4",
+      "path": "scripts/dialoge_welle.py",
+      "proves": "مولد حوارات الموجة يُدرج حوارين لكل مستوى عند المعرفات 31 و32؛ لا يُدرج 28–30.",
+      "limits": "لا يفسر ما إذا كان من المفترض وجود دفعة وسيطة."
+    },
+    {
+      "id": "G5",
+      "path": "content/dialog-audio.json + public/audio/**",
+      "proves": "لا توجد إدخالات بيان صوتي للمعرفات ['d-a2-28', 'd-a2-29', 'd-a2-30']، ولا ملفات mp3 مطابقة (0 مدخلات، 0 ملفات).",
+      "limits": "غياب الصوت وحده لا يثبت غياب الحوارات."
+    },
+    {
+      "id": "G6",
+      "path": "git log --all -G<id>",
+      "proves": "لم تظهر ضربات نصية لأي من المعرفات الثلاثة في سجل content/dialogues.json عبر المراجع المتاحة (--all).",
+      "limits": "المستودع shallow؛ النتائج تخص المراجع المتاحة فقط."
+    }
+  ],
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو النسبة أو الحساب.",
+    "audio": "لا استماع ولا ادعاء صوتي.",
+    "human": "التقرير تتبع مصدر/بنية فقط، وليست مراجعة بشرية.",
+    "legal": "لا ادعاء قانوني.",
+    "contentCreation": "لم يُنشأ أي محتوى بديل ولم يُستبدل 28–30 بـ31–32."
+  },
+  "decision": "تبقى d-a2-28..d-a2-30 غير محسومة وغير مدققة لغوياً. لم يُنشأ محتوى بديل، ولم تُنسب بطاقات مفردات يتيمة إلى هذه المعرفات دون دليل. يلزم تاريخ Git أقدم من commit الأساس أو ملف إنتاج/تصدير/تعليمات آخر يعرّف المحتوى قبل ملء الفجوة.",
+  "gates": {
+    "planned": "K187a–e"
+  }
+}

@@ -1,0 +1,1291 @@
+{
+  "reviewRule": "R141",
+  "batchLabel": "نصوص B2 كاملة (إكمال جميع النصوص)",
+  "targetIds": [
+    "t-b2-01",
+    "t-b2-02",
+    "t-b2-03",
+    "t-b2-04",
+    "t-b2-05",
+    "t-b2-06",
+    "t-b2-07",
+    "t-b2-08",
+    "t-b2-09",
+    "t-b2-10",
+    "t-b2-11",
+    "t-b2-12",
+    "t-b2-13",
+    "t-b2-14",
+    "t-b2-15",
+    "t-b2-16",
+    "t-b2-17",
+    "t-b2-18",
+    "t-b2-19",
+    "t-b2-20",
+    "t-b2-21",
+    "t-b2-22",
+    "t-b2-23",
+    "t-b2-24",
+    "t-b2-25",
+    "t-b2-26",
+    "t-b2-27",
+    "t-b2-28",
+    "t-b2-29",
+    "t-b2-30",
+    "t-b2-31",
+    "t-b2-32",
+    "t-b2-33",
+    "t-b2-34",
+    "t-b2-35"
+  ],
+  "totals": {
+    "texts": 35,
+    "questions": 140,
+    "approximateUnits": 280
+  },
+  "snapshots": {
+    "t-b2-01": {
+      "id": "t-b2-01",
+      "level": "B2",
+      "titleDe": "Die Digitalisierung der Bildung",
+      "titleAr": "رقمنة التعليم"
+    },
+    "t-b2-02": {
+      "id": "t-b2-02",
+      "level": "B2",
+      "titleDe": "Aus der Tageszeitung",
+      "titleAr": "من اليومية"
+    },
+    "t-b2-03": {
+      "id": "t-b2-03",
+      "level": "B2",
+      "titleDe": "Klimawandel: Zahlen und Zweifel",
+      "titleAr": "التغيّر المناخي: أرقام وشكوك"
+    },
+    "t-b2-04": {
+      "id": "t-b2-04",
+      "level": "B2",
+      "titleDe": "Rezension: ein bemerkenswerter Roman",
+      "titleAr": "مراجعة: رواية تستحق"
+    },
+    "t-b2-05": {
+      "id": "t-b2-05",
+      "level": "B2",
+      "titleDe": "Bewerbung und Arbeitsmarkt",
+      "titleAr": "التقديم وسوق العمل"
+    },
+    "t-b2-06": {
+      "id": "t-b2-06",
+      "level": "B2",
+      "titleDe": "Schlaf und Lernen",
+      "titleAr": "النوم والتعلّم"
+    },
+    "t-b2-07": {
+      "id": "t-b2-07",
+      "level": "B2",
+      "titleDe": "Kommentar: Tempo der Digitalisierung",
+      "titleAr": "تعليق: وتيرة الرقمنة"
+    },
+    "t-b2-08": {
+      "id": "t-b2-08",
+      "level": "B2",
+      "titleDe": "Medien und Wahrheit",
+      "titleAr": "الإعلام والحقيقة"
+    },
+    "t-b2-09": {
+      "id": "t-b2-09",
+      "level": "B2",
+      "titleDe": "Lebenslanges Lernen",
+      "titleAr": "التعلّم مدى الحياة"
+    },
+    "t-b2-10": {
+      "id": "t-b2-10",
+      "level": "B2",
+      "titleDe": "Vier-Tage-Woche: Chance oder Risiko?",
+      "titleAr": "أسبوعٌ بأربعة أيام: فرصةٌ أم مخاطرة؟"
+    },
+    "t-b2-11": {
+      "id": "t-b2-11",
+      "level": "B2",
+      "titleDe": "Grüne Dächer für graue Städte",
+      "titleAr": "أسقفٌ خضراء لمدنٍ رمادية"
+    },
+    "t-b2-12": {
+      "id": "t-b2-12",
+      "level": "B2",
+      "titleDe": "Lesen im Zeitalter des Kurzvideos",
+      "titleAr": "القراءةُ في زمنِ المقطعِ القصير"
+    },
+    "t-b2-13": {
+      "id": "t-b2-13",
+      "level": "B2",
+      "titleDe": "Soll Studium kostenlos sein?",
+      "titleAr": "أيجبُ أن تكونَ الجامعةُ مجانية؟"
+    },
+    "t-b2-14": {
+      "id": "t-b2-14",
+      "level": "B2",
+      "titleDe": "Lärm: der unterschätzte Risikofaktor",
+      "titleAr": "الضجيج: عاملُ خطرٍ يُستهانُ به"
+    },
+    "t-b2-15": {
+      "id": "t-b2-15",
+      "level": "B2",
+      "titleDe": "Vom Wert der Fehlerkultur",
+      "titleAr": "من قيمةِ ثقافةِ الخطأ"
+    },
+    "t-b2-16": {
+      "id": "t-b2-16",
+      "level": "B2",
+      "titleDe": "Das 49-Euro-Ticket: Erfolg?",
+      "titleAr": "تذكرةُ التاسعةِ والأربعين: نجاح؟"
+    },
+    "t-b2-17": {
+      "id": "t-b2-17",
+      "level": "B2",
+      "titleDe": "Reklame im öffentlichen Raum",
+      "titleAr": "إعلانٌ في الفضاءِ العام"
+    },
+    "t-b2-18": {
+      "id": "t-b2-18",
+      "level": "B2",
+      "titleDe": "Warum der Antrag drei Wochen braucht",
+      "titleAr": "لماذا يستغرقُ الطلبُ ثلاثةَ أسابيع"
+    },
+    "t-b2-19": {
+      "id": "t-b2-19",
+      "level": "B2",
+      "titleDe": "Fachkräftemangel: Ursachen und Wege",
+      "titleAr": "نقصُ الكفاءات: الأسبابُ والمسالك"
+    },
+    "t-b2-20": {
+      "id": "t-b2-20",
+      "level": "B2",
+      "titleDe": "Wohnraum in Ballungsräumen",
+      "titleAr": "السكنُ في المناطقِ المكتظّة"
+    },
+    "t-b2-21": {
+      "id": "t-b2-21",
+      "level": "B2",
+      "titleDe": "Ein Missverständnis unter Freunden",
+      "titleAr": "سوء فهم بين صديقين"
+    },
+    "t-b2-22": {
+      "id": "t-b2-22",
+      "level": "B2",
+      "titleDe": "Zurück nach der Operation",
+      "titleAr": "العودة بعد العملية"
+    },
+    "t-b2-23": {
+      "id": "t-b2-23",
+      "level": "B2",
+      "titleDe": "Ein Passwort für alles",
+      "titleAr": "كلمة مرور واحدة لكل شيء"
+    },
+    "t-b2-24": {
+      "id": "t-b2-24",
+      "level": "B2",
+      "titleDe": "Das erste Semester",
+      "titleAr": "الفصل الجامعي الأول"
+    },
+    "t-b2-25": {
+      "id": "t-b2-25",
+      "level": "B2",
+      "titleDe": "Die Niederlage im Turnier",
+      "titleAr": "الهزيمة في البطولة"
+    },
+    "t-b2-26": {
+      "id": "t-b2-26",
+      "level": "B2",
+      "titleDe": "Der Bürgerwindpark",
+      "titleAr": "مزرعة الرياح الأهلية"
+    },
+    "t-b2-27": {
+      "id": "t-b2-27",
+      "level": "B2",
+      "titleDe": "Das Kleingedruckte",
+      "titleAr": "الخطّ الصغير"
+    },
+    "t-b2-28": {
+      "id": "t-b2-28",
+      "level": "B2",
+      "titleDe": "Wem gehört die Stadt?",
+      "titleAr": "لمن المدينة؟"
+    },
+    "t-b2-29": {
+      "id": "t-b2-29",
+      "level": "B2",
+      "titleDe": "Ankommen dauert",
+      "titleAr": "الوصول يستغرق وقتاً"
+    },
+    "t-b2-30": {
+      "id": "t-b2-30",
+      "level": "B2",
+      "titleDe": "Ein Stein vor der Tür",
+      "titleAr": "حجر أمام الباب"
+    },
+    "t-b2-31": {
+      "id": "t-b2-31",
+      "level": "B2",
+      "titleDe": "Pendeln oder umziehen?",
+      "titleAr": "التنقّل اليومي أم الانتقال؟"
+    },
+    "t-b2-32": {
+      "id": "t-b2-32",
+      "level": "B2",
+      "titleDe": "Das perfekte Bild",
+      "titleAr": "الصورة المثالية"
+    },
+    "t-b2-33": {
+      "id": "t-b2-33",
+      "level": "B2",
+      "titleDe": "Der Verein und der Austritt",
+      "titleAr": "النادي والانسحاب"
+    },
+    "t-b2-34": {
+      "id": "t-b2-34",
+      "level": "B2",
+      "titleDe": "Zwischen den Zeilen",
+      "titleAr": "بين السطور"
+    },
+    "t-b2-35": {
+      "id": "t-b2-35",
+      "level": "B2",
+      "titleDe": "Das Forschungsprojekt",
+      "titleAr": "المشروع البحثي"
+    }
+  },
+  "corrections": [
+    {
+      "unit": "t-b2-01.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الذي يحقق أفضل النتائج؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-01.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ليست التقنية غاية في ___، بل البيداغوجيا.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-01.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "«يشكّك في» تعني:",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-01.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل تؤثر الوسائط الرقمية بقوة بدون مفهوم تربوي حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-02.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أعلن الوزير أن الخط ___ في موعده.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-02.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أفاد المسافرون أن القطار ___ متأخراً.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-02.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا طالبت المعارضة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-02.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يقيم الوزير والعميدة الوضع بشكل مختلف؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-03.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "الآثار بالكاد يمكن ___ بعد الآن.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-03.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تثبت الدراسة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-03.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف يقيّم النص الانتظار؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-03.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يرى النص الانتظار مسؤولاً في مسألة المناخ؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-04.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بماذا تنتقد المراجعة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-04.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "رغم بطء البداية، ___ تتطور الحبكة بتشويق.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-04.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "الخلاصة:",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-04.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل أُشيد بالشخصيات كأنها مرسومة بقوة خاصة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-05.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "يجب على المتقدمين إظهار ما ___ تصرفهم.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-05.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يُطلب إلى جانب المعرفة المتخصصة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-05.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "___ المتطلبات الشكلية.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-05.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل تكفي المعرفة المتخصصة وحدها للمهن الحديثة حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-06.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الأكثر فعالية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-06.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "___ التي يطبعها الإرهاق تضعف.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-06.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "الخلاصة:",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-06.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يحقق من يسهر ليلاً في التعلم عكس ما يريد حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-07.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كأنها ___ في ذاتها.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-07.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يطالب التعليق؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-07.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "«يصطدم بالحائط» تعني هنا:",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-07.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يطالب النص بإبطاء الرقمنة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-08.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كم سؤالاً يوصي الخبراء؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-08.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما هدف هذه الأسئلة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-08.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "عمّا يسأل السؤال الثالث؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-08.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يذكر النص ثلاثة أسئلة لفحص الأخبار؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-09.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما يحسّن الذاكرة في الكبر؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-09.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف توصف التربية في النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-09.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الذي كان مختلفاً في الماضي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-09.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل تنتهي التربية اليوم بانتهاء المدرسة حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-10.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا أظهرت التجربة البريطانية الميدانية حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-10.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "علام يردّ النقاد؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-10.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا تظل الدراسة «تجربة بين تجارب كثيرة» حسب الكاتب؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-10.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يشكك النقاد في قابلية نقل التجربة إلى المصانع؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-11.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أي فائدة للسقوف الخضراء لا تُذكر؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-11.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الجانب الآخر (السيئ) حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-11.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بماذا ينصح الكاتب في الختام؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-11.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يكتم النص مساوئ السقوف الخضراء؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-12.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تنفي الدراسة عن الشكوى؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-12.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا لا يدربه القراءة اللقيمية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-12.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "إلام يدعو الختام؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-12.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل تزعم الدراسة أن الناس يقرأون أقل من السابق؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-13.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يتنبأ الاقتصاديون؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-13.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "من ينتفع بالإعفاء من الرسوم أكثر من اللازم حسب الأرقام؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-13.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أين يجب أن نُدوّر الذراع حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-13.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يستفيد أبناء الأكاديميين من الإعفاء أكثر من اللازم؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-14.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كم تقدّر منظمة الصحة الخسارة السنوية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-14.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا لا توجد تقريباً ضوابط ضد الضجيج؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-14.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "من أي منظور يجب على المخططين قياس الديسيبل؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-14.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل للضجيج حدود واضحة كما للجسيمات الدقيقة حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-15.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الذي يميز الفرق الجيدة حسب البحث؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-15.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا ينال من يُعاقب على الخطأ؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-15.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الأكثر كلفة في النهاية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-15.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يحصل من يُعاقب على الأخطاء على تبليغات أقل حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-16.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا ساء في أماكن كثيرة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-16.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا قللت السياسة من شأنه حسب الاتحادات؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-16.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "إلام تهدف مسألة الختام؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-16.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل تحسّن الإشغال في أوقات الذروة بعد التذكرة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-17.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تموّل لوحات الإعلان حسب حجة الدفاع؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-17.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تظهر دراسات التعرض الدائم منذ عقود؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-17.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف يجب على المدن التعامل مع المساحات الإعلانية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-17.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يشكك المحللون في أن الإعلان يموّن المحطات فعلاً؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-18.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "علام لا تتعثر شهادة التسجيل حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-18.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يبقى واجباً على الدائرة حسب القانون الرقمي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-18.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يجب اختراعه حسب الختام؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-18.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يكمن التأخير في التقنية أساساً حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-19.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أي بناء نحوي يُحمل «الحركية المطلوبة من الشركات»؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-19.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "___ الاقتصاديين، سيكون المزيج الأكثر فعالية.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-19.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما يُضعف أثر الهجرة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-19.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل لنقص الكفاءات سبب واحد حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-20.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "إذا ___ أراضٍ للبناء بدلاً من ذلك، لأمكن رفع العرض.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-20.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يقول نقاد تحديد سقف الإيجار؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-20.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أي شرط في الجملة الأخيرة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-20.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يرى داعمو تحديد الإيجار فيه حمايةً لساكني الشقق القائمة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-21.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا لم يردّ طارق ثلاثة أيام؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-21.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا كان أكبر من مودة رامي في تلك الليلة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-21.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل سأل طارق في الهاتف «لماذا أنت كذلك؟»",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-21.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هو ___ لطارق النجاح، لكن خيبة أمله كانت أكبر.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-22.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يقول عن مناخ العمل أكثر من أي استبيان حسب السيدة لانغ؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-22.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف كان الأمر في شركتها السابقة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-22.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل ثبت أن النموذج الجديد يزيد الإنتاجية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-22.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بعد العملية تبعتها ثلاثة أسابيع ___ وإجازة مرضية طويلة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-23.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا أراد المهاجمون حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-23.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا كان آخر تحديث منذ سنة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-23.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل أوصت المستشارة بنسخة احتياطية خارج السحابة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-23.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بعد ___ يجوز له طلب الحذف.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-24.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا لم تفهم منى في المحاضرة الأولى شيئاً تقريباً؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-24.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما أكبر ما ألهى منى حسب مذكرتها التعلمية؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-24.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل حصل البحث على علامة «اثنين»؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-24.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "في ___ نصحتها المحاضِرة بمذكرة تعلمية.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-25.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "عمّا دار الكلام في جمعية الأعضاء؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-25.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا كان ضعيفاً حسب المدربة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-25.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل معظم الأعضاء الجدد أولياء كانوا يهتفون من الحافة سابقاً؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-25.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ثلاث ___ ورضّتان في موسم واحد، كلها في الشوط الثاني.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-26.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "مم نشأ القبول حسب العمدة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-26.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الذي لم يُحلّ بعد؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-26.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل القرية المجاورة تقيم دعوى على خط الكهرباء الجديد؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-26.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "سألوا متى يمكن للمزرعة ___ في الشبكة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-27.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما أكثر الحالات شيوعاً حسب السيدة أوزتورك؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-27.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "متى يمكن الاعتراض/الشكوى دائماً حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-27.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل في الشراء من المتجر يعود الاستبدال إلى تساهل البائع؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-27.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "___ يجذب، والخط الصغير يردّ.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-28.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تعني المزاحمة حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-28.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف انتهى استفتاء المواطنين؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-28.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يُراقب حظر إساءة استعمال المساكن بصرامة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-28.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "يسمح ___ للمدينة بشراء البيت قبل المستثمر.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-29.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا احتاجت الدكتورة أماني لتأهيل تكميلي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-29.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما ثقافة الترحيب حسب الدكتورة أماني؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-29.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل جاء زوجها في السنة الثالثة فقط؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-29.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "عاشت كل تلك المدة بـ___ كانت تُجدد كل ستة أشهر.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-30.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "عمّا تسأل أعمال الذاكرة حسب المعلمة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-30.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "بماذا يبدأ التهوين حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-30.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل آخر شاهد عيان من الشارع لا يزال على قيد الحياة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-30.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "أمام البيت رقم 14 حجر صغير من النحاس يُدعى ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-31.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا الانتقال ليس حلاً للسيدة سهلي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-31.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "فيم يتمثل حلها الوسطي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-31.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل لم تعد السيدة سهلي تقود السيارة إلى المدينة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-31.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "تُخطط لتحول المواصلات في المدينة وتُ___ في الريف.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-32.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الجديد بخلاف الغرور حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-32.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا حدث في الأسبوع بلا تنقيح للصور؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-32.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل تعرف ابنة الأخت أن الصور منقحة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-32.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما ___ يبدو طبيعياً، وما طبيعي يبدو غير مكتمل فجأة.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-33.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "لماذا بقي كريم في النادي؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-33.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا طلبت الهيئة الإدارية من بن؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-33.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل شارك كريم في الماراثون كل سنة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-33.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "رفض بن وأعلن ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-34.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا يُطلب من التلاميذ فعل بالنسخ الثلاث؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-34.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كيف تعمل المعلومات المضللة حسب النص؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-34.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل يأتي فحص الحقائق أخيراً في الحصة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-34.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "تكشف التعبئة الرأي عن نفسها بأنها تحتاج إلى ___.",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-35.questions[0].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما الذي يقرر نجاح التعلم حسب النتيجة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-35.questions[1].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ماذا تعني الاستدامة في البحث حسب المشرفة؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-35.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "هل ألقت ليلى بصندوق البطاقات؟",
+      "reason": "استكمال حقل promptAr فارغ."
+    },
+    {
+      "unit": "t-b2-35.questions[3].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "___ مائتي شخص في ثلاث كليات.",
+      "reason": "استكمال حقل promptAr فارغ."
+    }
+  ],
+  "contextNotes": {},
+  "styleAlternatives": {},
+  "sources": {},
+  "contentChecks": [
+    {
+      "id": "CHK-R141-01",
+      "check": "حقول promptAr الـ140 مملوءة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R141-02",
+      "check": "لا حقول فارغة في جميع نصوص A0–B2 (110 نص).",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R141-03",
+      "check": "الأسئلة العربية تطابق الألماني.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R141-04",
+      "check": "الألماني/الخيارات/المفاتيح مقفلة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R141-05",
+      "check": "نصوص B2 كاملة عربياً؛ كل نصوص A0–B2 كاملة عربياً.",
+      "status": "pass"
+    }
+  ],
+  "contentWarnings": [],
+  "judgement": {
+    "corrected": 140,
+    "unresolved": 0,
+    "note": "استكمال 140 حقل promptAr فارغ في نصوص B2 الخمسة والثلاثين كاملة. تغطي النصوص: رقمنة التعليم، الخبر اليومي، المناخ، مراجعة الرواية، سوق العمل، النوم والتعلم، وتيرة الرقمنة، الإعلام والحقيقة، التعلم مدى الحياة، أسبوع الأربعة أيام، الأسقف الخضراء، القراءة في عصر الفيديو القصير، المجانية الجامعية، الضجيج، ثقافة الخطأ، تذكرة 49 يورو، الإعلان العام، الطلبات الإدارية، نقص الكفاءات، السكن في المناطق المكتظة، سوء فهم بين صديقين، العودة بعد العملية، كلمة مرور واحدة، الفصل الأول، الهزيمة في البطولة، مزرعة الرياح الأهلية، الخط الصغير، لمن المدينة، الوصول يستغرق، حجر أمام الباب، التنقل أم الانتقال، الصورة المثالية، النادي والانسحاب، بين السطور، المشروع البحثي. العربية مطابقة للألماني في Konjunktiv II والمبني للمجهول والأبنية الموصولة والتعابير الاصطلاحية. لا تعديل للألماني. بهذه الدفعة تكتمل جميع نصوص المستويات A0–B2 عربياً (110/110)."
+  },
+  "limits": {
+    "human": "لا اعتماد لغوي بشري.",
+    "legal": "لا محتوى قانوني.",
+    "medical": "لا محتوى طبي.",
+    "cefr": "لا إعادة حساب CEFR."
+  },
+  "gates": {
+    "patch": "scripts/patches/review_b2_texts_01.py",
+    "report": "scripts/patches/report_b2_texts_01.py",
+    "smoke": "K215a–j"
+  },
+  "audio": {
+    "mp3Files": 0,
+    "note": "لا استماع."
+  }
+}

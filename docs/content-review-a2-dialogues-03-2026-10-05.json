@@ -1,0 +1,1088 @@
+{
+  "date": "2026-10-05",
+  "batch": "A2-dialogues-03",
+  "scope": "المراجعة المصدرية الفردية للحوارات الحية d-a2-04 إلى d-a2-06: بيانات العناوين، كل الأسطر الألمانية وترجماتها العربية، الأسئلة ومفاتيحها وشروحها، وجمل الإملاء. قورنت ثلاثة أسئلة فقط بسجل تاريخي لمشتتات الأسئلة. فُحص وجود ملفات الصوت وحجمها الفعلي؛ لم يُستمع إليها.",
+  "method": "استخراج المعرفات من content/dialogues.json، مراجعة كل عنصر على حدة بمراجع معجمية/قواعدية منشورة مع دليل وحكم وإجراء؛ مقارنة مقتصرة على المعرفات التاريخية المطابقة؛ تصحيح المؤكد فقط. اللقطات reviewed مأخوذة من JSON الحي بعد التصحيح.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 16,
+    "questions": 6,
+    "dictationSentences": 9,
+    "audioAssets": 3,
+    "unresolvedContextNotes": 1,
+    "totalTrackedItems": 34
+  },
+  "statusCounts": {
+    "سليم": 31,
+    "مُصحح": 2,
+    "غير محسوم": 1
+  },
+  "statusDefinitions": {
+    "سليم": "راجعت الوحدة ووجدت الدليل متسقاً؛ لا عيب مؤكداً يستدعي تغييراً.",
+    "مُصحح": "ثبتت مشكلة محددة بالمصدر والسياق، وصُححت في المحتوى الحي.",
+    "غير محسوم": "توجد ملاحظة حدّ/دقة تفسيرية لا تثبت خطأ؛ لا تعديل تخمينياً."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة، وليست مراجعة بشرية أو اعتماداً لغوياً/مهنياً.",
+    "فحص الصوت اقتصر على وجود ملفات MP3 ومطابقة الحجم بالبايت مع البيان؛ لم يحدث تشغيل أو استماع أو تقييم نطق.",
+    "ملف a_dialog_fallen.py سجل تحرير تاريخي لمشتتات ثلاثة أسئلة فقط؛ ليس مرجعاً للحوار الكامل أو سلطة لغوية، ولا تتوافر فيه لقطة للعناوين والأسطر والإملاء.",
+    "لم تُعَد مراجعة مستوى A2 أو CEFR أو النسبة أو حساب المستوى الممكن؛ القاموس وحده لا يثبت ملاءمة تربوية.",
+    "لم يُقيّم أي محتوى صحي أو قانوني؛ الحوارات الخيالية لا تُعامل كنصيحة مهنية."
+  ],
+  "historicalPatchReview": {
+    "sources": [
+      "scripts/patches/a_dialog_fallen.py"
+    ],
+    "role": "تاريخ تحرير لمشتتات أسئلة محددة فقط؛ لا يُعتمد لإعادة بناء النص الكامل أو تقرير الصحة اللغوية.",
+    "unavailableHistoricalFields": [
+      "titles",
+      "lines",
+      "dictation"
+    ],
+    "comparisons": [
+      {
+        "id": "d-a2-04-q1",
+        "historicalOptions": [
+          "in Köln",
+          "in Frankfurt",
+          "nach vier Stunden"
+        ],
+        "liveOptions": [
+          "in Köln",
+          "nach vier Stunden",
+          "in Frankfurt"
+        ],
+        "historicalAnswer": "in Frankfurt",
+        "liveAnswer": "in Frankfurt",
+        "observation": "تغيّر ترتيب الخيارين الثاني/الثالث فقط؛ المجموعة والمفتاح in Frankfurt محفوظان."
+      },
+      {
+        "id": "d-a2-05-q1",
+        "historicalOptions": [
+          "Sie war krank.",
+          "Sie hat vergessen, zum Termin zu kommen.",
+          "Sie kann morgen nicht kommen."
+        ],
+        "liveOptions": [
+          "Sie hat vergessen, zum Termin zu kommen.",
+          "Sie war krank.",
+          "Sie kann morgen nicht kommen."
+        ],
+        "historicalAnswer": "Sie hat vergessen, zum Termin zu kommen.",
+        "liveAnswer": "Sie hat vergessen, zum Termin zu kommen.",
+        "observation": "تغيّر ترتيب المشتتات حول المفتاح؛ المفتاح والجمل الثلاث محفوظة."
+      },
+      {
+        "id": "d-a2-06-q2",
+        "historicalOptions": [
+          "den Kassenzettel",
+          "den Pullover in Größe M",
+          "die kleinere Größe zurück"
+        ],
+        "liveOptions": [
+          "den Kassenzettel",
+          "Größe M",
+          "die kleinere Größe zurück"
+        ],
+        "historicalAnswer": "den Kassenzettel",
+        "liveAnswer": "den Kassenzettel",
+        "observation": "تغيّر نص المشتت الثاني من den Pullover in Größe M إلى Größe M؛ المفتاح den Kassenzettel محفوظ."
+      }
+    ]
+  },
+  "contentPatch": {
+    "fieldsChanged": 2,
+    "changedFields": [
+      "d-a2-05.lines[3].ar",
+      "d-a2-06.lines[0].ar"
+    ],
+    "reason": "تصحيح مخاطبة Sara بالمؤنث، وإظهار معنى zu klein واختيار مقابل أدق لـPullover؛ التغييران مؤيدان بمراجع، ولم تتغير الجمل الألمانية أو مفاتيح الإجابة.",
+    "protectedUnresolvedItemIds": [
+      "d-a2-06-q2"
+    ]
+  },
+  "openNotes": [
+    {
+      "id": "d-a2-06-q2",
+      "status": "غير محسوم",
+      "sources": [
+        "S33",
+        "S34",
+        "S39"
+      ],
+      "finding": "الجواب نفسه مثبت صراحةً بطلب الإيصال. أما عبارة الشرح التي تفترض إعادة القطعة الأصغر فمعقولة في سياق Umtausch، لكنها لا ترد كفعل صريح في الحوار. لا توجد قرينة كافية لوسمها خطأً؛ تبقى ملاحظة دقة تربوية منفصلة.",
+      "action": "لا تعديل تخميني. يمكن مستقبلاً تضييق الشرح إلى أن البائع طلب الإيصال صراحةً، إذا تقرر تحريرياً حذف الاستدلال على الإرجاع؛ القرار مؤجل."
+    }
+  ],
+  "audioAssetAudit": [
+    {
+      "id": "d-a2-04",
+      "file": "/audio/dialog/d-a2-04.mp3",
+      "metadataBytes": 108757,
+      "actualBytes": 108757,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "وجود الملف الفعلي ومطابقة الحجم بالبايت فقط؛ لم يُشغّل ولم يُستمع إليه."
+    },
+    {
+      "id": "d-a2-05",
+      "file": "/audio/dialog/d-a2-05.mp3",
+      "metadataBytes": 119433,
+      "actualBytes": 119433,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "وجود الملف الفعلي ومطابقة الحجم بالبايت فقط؛ لم يُشغّل ولم يُستمع إليه."
+    },
+    {
+      "id": "d-a2-06",
+      "file": "/audio/dialog/d-a2-06.mp3",
+      "metadataBytes": 129655,
+      "actualBytes": 129655,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "وجود الملف الفعلي ومطابقة الحجم بالبايت فقط؛ لم يُشغّل ولم يُستمع إليه."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "PONS: Platz",
+      "url": "https://en.pons.com/translate/german-arabic/Platz",
+      "supports": "يورد Platz في معنى Sitz مقابل «مقعد»، وهو المقصود في سؤال خلوّ المقعد."
+    },
+    {
+      "id": "S02",
+      "title": "PONS: frei",
+      "url": "https://en.pons.com/translate/german-arabic/frei",
+      "supports": "يعرض frei بمعنى unbesetzt؛ يدعم معنى المقعد المتاح/الشاغر في هذا السياق."
+    },
+    {
+      "id": "S03",
+      "title": "PONS: bitte",
+      "url": "https://en.pons.com/translate/german-arabic/bitte",
+      "supports": "يفصل معنى bitte عند العرض/الإتاحة ويترجمه «تفضل»، لا يقتصر على طلب «من فضلك»."
+    },
+    {
+      "id": "S04",
+      "title": "PONS: Zug",
+      "url": "https://en.pons.com/translate/german-arabic/Zug",
+      "supports": "يسجل معنى Zug في سياق Bahn مقابل «قطار»."
+    },
+    {
+      "id": "S05",
+      "title": "PONS: umsteigen",
+      "url": "https://en.pons.com/translate/german-arabic/umsteigen",
+      "supports": "يترجم umsteigen في السفر بتغيير القطار/وسيلة النقل؛ يدعم معنى التبديل في فرانكفورت."
+    },
+    {
+      "id": "S06",
+      "title": "Duden: umsteigen",
+      "url": "https://www.duden.de/rechtschreibung/umsteigen",
+      "supports": "يعرف umsteigen بالانتقال من مركبة إلى أخرى ويورد مثال تغيير القطار في مدينة وسيطة."
+    },
+    {
+      "id": "S07",
+      "title": "PONS: Fahrt",
+      "url": "https://en.pons.com/translate/german-arabic/Fahrt",
+      "supports": "يعرض Fahrt بمعاني «سفر/رحلة/سير» بحسب السياق."
+    },
+    {
+      "id": "S08",
+      "title": "PONS: dauern",
+      "url": "https://en.pons.com/translate/german-arabic/dauern",
+      "supports": "يعرض dauern مقابل «دام/استغرق»، كما في السؤال عن مدة الرحلة."
+    },
+    {
+      "id": "S09",
+      "title": "PONS: ungefähr",
+      "url": "https://en.pons.com/translate/german-arabic/ungef%C3%A4hr",
+      "supports": "يعرض ungefähr ظرفاً بمعنى «تقريباً/حوالي»."
+    },
+    {
+      "id": "S10",
+      "title": "PONS: Stunde",
+      "url": "https://en.pons.com/translate/german-arabic/Stunde",
+      "supports": "يعرض Stunde بمعنى «ساعة» الزمنية؛ يدعم إجابة أربع ساعات."
+    },
+    {
+      "id": "S11",
+      "title": "PONS: schade",
+      "url": "https://en.pons.com/translate/german-arabic/schade",
+      "supports": "يسجل الاستعمال التعجبي schade! بمعنى «يا خسارة»؛ «للأسف» في الترجمة تعبير عربي مقابل للسياق لا ترجمة حرفية وحيدة."
+    },
+    {
+      "id": "S12",
+      "title": "PONS: Entschuldigung",
+      "url": "https://en.pons.com/translate/german-arabic/Entschuldigung",
+      "supports": "يعرض Entschuldigung بمعنى «اعتذار»، وهو عنوان الحوار ومضمونه."
+    },
+    {
+      "id": "S13",
+      "title": "PONS: entschuldigen",
+      "url": "https://en.pons.com/translate/german-arabic/entschuldigen",
+      "supports": "يعرض sich entschuldigen بمعنى «اعتذر»؛ يدعم السؤال والتمرين ذي الفراغ."
+    },
+    {
+      "id": "S14",
+      "title": "PONS: Termin",
+      "url": "https://en.pons.com/translate/german-arabic/Termin",
+      "supports": "يعرض Termin بمعنى «موعد»، إضافة إلى معنى الأجل في سياقات أخرى."
+    },
+    {
+      "id": "S15",
+      "title": "Duden: Termin",
+      "url": "https://www.duden.de/rechtschreibung/Termin",
+      "supports": "يعرف Termin كنقطة/موعد محدد ويورد استعمال einen Termin haben/versäumen."
+    },
+    {
+      "id": "S16",
+      "title": "PONS: vergessen",
+      "url": "https://en.pons.com/translate/german-arabic/vergessen",
+      "supports": "يعرض vergessen بمعنى «نسي» ويبين تصريف Perfekt hat vergessen."
+    },
+    {
+      "id": "S17",
+      "title": "Duden: vergessen",
+      "url": "https://www.duden.de/rechtschreibung/vergessen_Verb_nicht_erinnern",
+      "supports": "يعرّف vergessen بمعنى عدم التذكر/النسيان ويورد تصريف Perfekt hat vergessen؛ لا يُستخدم منفرداً لإثبات تركيب مصدر zu."
+    },
+    {
+      "id": "S18",
+      "title": "Duden: Konjugation vergessen",
+      "url": "https://www.duden.de/konjugation/vergessen_Verb_nicht_erinnern",
+      "supports": "يسجل صيغة Infinitiv mit zu: zu vergessen، وتصريف Perfekt hat vergessen."
+    },
+    {
+      "id": "S19",
+      "title": "PONS: kommen",
+      "url": "https://en.pons.com/translate/german-arabic/kommen",
+      "supports": "يعرض kommen بمعنى «جاء/أتى»؛ يدعم zum Termin zu kommen وترجمته «أن آتي إلى الموعد»."
+    },
+    {
+      "id": "S20",
+      "title": "PONS: gestern",
+      "url": "https://en.pons.com/translate/german-arabic/gestern",
+      "supports": "يعرض gestern بمعنى «أمس/البارحة»."
+    },
+    {
+      "id": "S21",
+      "title": "PONS: müssen",
+      "url": "https://en.pons.com/translate/german-arabic/m%C3%BCssen",
+      "supports": "يعرض ich muss بمعنى «يجب عليّ/عليّ أن»، ويدعم الترجمة العربية للوجوب."
+    },
+    {
+      "id": "S22",
+      "title": "PONS: passieren",
+      "url": "https://en.pons.com/translate/german-arabic/passieren",
+      "supports": "يعرض passieren في معنى geschehen مقابل «حدث/حصل»."
+    },
+    {
+      "id": "S23",
+      "title": "PONS: krank",
+      "url": "https://en.pons.com/translate/german-arabic/krank",
+      "supports": "يعرض معنى krank «مريض»؛ يثبت المعنى المعجمي لا جنس المخاطَب."
+    },
+    {
+      "id": "S24",
+      "title": "PONS: sie",
+      "url": "https://en.pons.com/translate/german-arabic/sie",
+      "supports": "يفصل sie للمفرد المؤنث مقابل «هي» عن sie للجمع وعن Sie الرسمية؛ يدعم تحديد Sara مؤنثاً من Sie hat في صيغة الغائب المفرد."
+    },
+    {
+      "id": "S25",
+      "title": "Wiktionary: مريضة",
+      "url": "https://en.wiktionary.org/wiki/%D9%85%D8%B1%D9%8A%D8%B6%D8%A9",
+      "supports": "يصنف مريضة صراحةً صيغة مؤنث مفرد من مريض؛ مصدر صرفي للكلمة المصححة."
+    },
+    {
+      "id": "S26",
+      "title": "LibreTexts Humanities: كان في الماضي",
+      "url": "https://human.libretexts.org/Bookshelves/Languages/Arabic/Arabic_Level_Three/06:_Story_From_the_Past/6.01:_Explanation_of__in_Present_and_Past_Tense",
+      "supports": "يعرض كُنتِ مع أنتِ في المخاطبة المؤنثة، ومثال كنتِ متعبة؛ يثبت مطابقة الفعل والوصف لصيغة المخاطبة المؤنثة."
+    },
+    {
+      "id": "S27",
+      "title": "PONS: Arbeit",
+      "url": "https://en.pons.com/translate/german-arabic/Arbeit",
+      "supports": "يعرض Arbeit بمعنى «عمل»، ويورد أن arbeiten beschäftigt sein يعبّر عن الانشغال بالعمل."
+    },
+    {
+      "id": "S28",
+      "title": "PONS: viel",
+      "url": "https://en.pons.com/translate/german-arabic/viel",
+      "supports": "يعرض viel بمعنى «كثير»، وviel beschäftigt بمعنى «مشغول جداً»؛ يساند معنى viel Arbeit دون ادعاء حرفية واحدة."
+    },
+    {
+      "id": "S29",
+      "title": "PONS: macht nichts",
+      "url": "https://en.pons.com/translate/german-arabic/macht+nichts",
+      "supports": "يعرض es macht nichts مقابل «لا بأس/لا يهم»، وهو معنى التطمين في الحوار."
+    },
+    {
+      "id": "S30",
+      "title": "PONS: morgen",
+      "url": "https://en.pons.com/translate/german-arabic/morgen",
+      "supports": "يعرض ظرف morgen بمعنى «غداً»."
+    },
+    {
+      "id": "S31",
+      "title": "PONS: treffen",
+      "url": "https://en.pons.com/translate/german-arabic/treffen",
+      "supports": "يعرض sich treffen مقابل «تلاقى/تقابل/اجتمع»."
+    },
+    {
+      "id": "S32",
+      "title": "PONS: ach so",
+      "url": "https://en.pons.com/translate/german-arabic/ach+so",
+      "supports": "يعرض ach so! في معنى الاستيعاب/«هكذا إذاً»، بما يساند «أوه!» في الرد."
+    },
+    {
+      "id": "S33",
+      "title": "PONS: Umtausch",
+      "url": "https://en.pons.com/translate/german-arabic/Umtausch",
+      "supports": "يعرض Umtausch بمعنى «تبديل»، ويدعم سياق عنوان الحوار دون إثبات كل تفصيل غير منطوق."
+    },
+    {
+      "id": "S34",
+      "title": "PONS: Geschäft",
+      "url": "https://en.pons.com/translate/german-arabic/Gesch%C3%A4ft",
+      "supports": "يعرض Geschäft بمعنى «متجر/دكان» في معنى Laden."
+    },
+    {
+      "id": "S35",
+      "title": "PONS: Pullover",
+      "url": "https://en.pons.com/translate/german-arabic/Pullover",
+      "supports": "يعامل Pullover مع مرادف Pulli ويورد المقابلين العربيين «بلوفر» و«كنزة»."
+    },
+    {
+      "id": "S36",
+      "title": "Duden: Pullover",
+      "url": "https://www.duden.de/rechtschreibung/Pullover",
+      "supports": "يعرف Pullover لباساً محبوكاً/منسوجاً للجزء العلوي يُلبس عبر الرأس؛ يحدد المرجع المقصود، ولا يفرض مقابلاً عربياً وحيداً."
+    },
+    {
+      "id": "S37",
+      "title": "PONS: kaufen",
+      "url": "https://en.pons.com/translate/german-arabic/kaufen",
+      "supports": "يعرض kaufen بمعنى «اشترى» ويبين Partizip II gekauft في Perfekt."
+    },
+    {
+      "id": "S38",
+      "title": "PONS: Größe",
+      "url": "https://en.pons.com/translate/german-arabic/Gr%C3%B6%C3%9Fe",
+      "supports": "يعرض Größe eines Kleidungsstücks مقابل «مقاس/قياس»."
+    },
+    {
+      "id": "S39",
+      "title": "PONS: Kassenzettel",
+      "url": "https://en.pons.com/translate/german-arabic/Kassenzettel",
+      "supports": "يعرض Kassenzettel مقابلاً لسند/قسيمة الدفع، أي إيصال الشراء في سياق المتجر."
+    },
+    {
+      "id": "S40",
+      "title": "PONS: dabei",
+      "url": "https://en.pons.com/translate/german-arabic/dabei",
+      "supports": "يورد er hatte es dabei = «كان معه»، وهو معنى حمل الإيصال."
+    },
+    {
+      "id": "S41",
+      "title": "PONS: zu (Gradadverb)",
+      "url": "https://en.pons.com/translate/german-arabic/zu",
+      "supports": "يعرض zu lang بمعنى «أطول من اللازم» وzu viel بمعنى «أكثر من اللازم»؛ يثبت دلالة تجاوز الحد في zu klein بالقياس التركيبي."
+    },
+    {
+      "id": "S42",
+      "title": "PONS: klein",
+      "url": "https://en.pons.com/translate/german-arabic/klein",
+      "supports": "يعرض klein بمعنى «صغير»؛ عند جمعه مع zu تكون الدلالة «أصغر من اللازم»، لا مجرد صغير."
+    },
+    {
+      "id": "S43",
+      "title": "PONS: groß",
+      "url": "https://en.pons.com/translate/german-arabic/gro%C3%9F",
+      "supports": "يعرض groß <größer> بمعنى كبير؛ يدعم المقارنة/الطلب um eine größere Größe.»"
+    },
+    {
+      "id": "S44",
+      "title": "PONS: da",
+      "url": "https://en.pons.com/translate/german-arabic/da",
+      "supports": "يعرض da بمعنى vorhanden/anwesend = «موجود/متوفر»، وهو معنى Größe M ist da."
+    },
+    {
+      "id": "S45",
+      "title": "PONS: hier",
+      "url": "https://en.pons.com/translate/german-arabic/hier",
+      "supports": "يعرض hier بمعنى «هنا»، وهو المقصود في تسليم الإيصال: Ja, hier."
+    },
+    {
+      "id": "S46",
+      "title": "PONS: nachschauen",
+      "url": "https://en.pons.com/translate/german-arabic/nachschauen",
+      "supports": "يعرض nachschauen بمعنى البحث/التفقّد، ويبين انفصال schauen ... nach."
+    },
+    {
+      "id": "S47",
+      "title": "PONS: wunderbar",
+      "url": "https://en.pons.com/translate/german-arabic/wunderbar",
+      "supports": "يعرض wunderbar بمعنى «رائع»."
+    },
+    {
+      "id": "S48",
+      "title": "PONS: vielen Dank",
+      "url": "https://en.pons.com/translate/german-arabic/vielen+dank?q=vielen+Dank",
+      "supports": "يعرض vielen Dank مقابل «شكراً جزيلاً»."
+    },
+    {
+      "id": "S49",
+      "title": "PONS: Kundin",
+      "url": "https://en.pons.com/translate/german-arabic/Kundin",
+      "supports": "يعرض Kundin بمعنى «زبونة/عميلة»؛ يثبت تأنيث شخصية الحوار d-a2-06."
+    },
+    {
+      "id": "S50",
+      "title": "PONS: nach",
+      "url": "https://en.pons.com/translate/german-arabic/nach",
+      "supports": "يعرض nach في معنى الاتجاه مقابل «إلى/نحو»، كما في قطار إلى كولونيا."
+    },
+    {
+      "id": "S51",
+      "title": "Duden: Komma beim Infinitiv mit zu",
+      "url": "https://www.duden.de/sprachwissen/sprachratgeber/Das-Komma-beim-Infinitiv-mit-%E2%80%9Ezu%E2%80%9C",
+      "supports": "يوضح مواضع الفاصلة مع مجموعة المصدر zu؛ يدعم كتابة الفاصلة في جملة Infinitivgruppe الموسعة، ولا يغني عن فحص مفردات الجملة."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a2-04",
+      "kind": "بيانات الحوار/العنوان",
+      "status": "سليم",
+      "sources": [
+        "S04"
+      ],
+      "finding": "عنوان Im Zug وترجمته وسياقه يعكسان حوار السفر بالقطار؛ عدد الأسطر والأسئلة والإملاء سليم في اللقطة الحية.",
+      "action": "لا تغيير؛ البيانات الحية مثبتة في اللقطة، ولا يُستنتج منها حكم جديد على CEFR.",
+      "reviewed": {
+        "titleDe": "Im Zug",
+        "titleAr": "في القطار",
+        "level": "A2",
+        "lineCount": 5,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a2-04.lines[0]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "finding": "Platz بمعنى مقعد وfrei بمعنى غير مشغول/متاح؛ «المقعد شاغر» ينقل معنى السؤال دون نقص.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Reisende",
+        "de": "Entschuldigung, ist dieser Platz frei?",
+        "ar": "عفواً، هل هذا المقعد شاغر؟"
+      }
+    },
+    {
+      "id": "d-a2-04.lines[1]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S03",
+        "S04",
+        "S50"
+      ],
+      "finding": "Zug هو القطار؛ nach Köln اتجاهٌ إلى كولونيا. وJa, bitte في جواب إتاحة المقعد هنا إذنٌ/عرضٌ: «نعم، تفضّل»، لا ترجمة آلية لـbitte بمعزل عن المقام.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Mann",
+        "de": "Ja, bitte. Fährt dieser Zug nach Köln?",
+        "ar": "نعم، تفضّل. هل هذا القطار يذهب إلى كولونيا؟"
+      }
+    },
+    {
+      "id": "d-a2-04.lines[2]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S05",
+        "S06",
+        "S21"
+      ],
+      "finding": "umsteigen هو تغيير وسيلة النقل، وDuden يورد تغيير القطار في محطة وسيطة؛ «في فرانكفورت عليكم تبديل القطار» يحفظ المعلومة. صيغة الجمع العربية قد تُقرأ للتوقير ولا تثبت خطأً في مخاطبة Sie.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Reisende",
+        "de": "Ja, aber in Frankfurt müssen Sie umsteigen.",
+        "ar": "نعم، لكن في فرانكفورت عليكم تبديل القطار."
+      }
+    },
+    {
+      "id": "d-a2-04.lines[3]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S07",
+        "S08",
+        "S11"
+      ],
+      "finding": "Fahrt رحلة، وdauern استغرق؛ «للأسف» ترجمة سياقية مقبولة لـSchade ولا يوجد ما يثبت خطأها.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Mann",
+        "de": "Schade! Wie lange dauert die Fahrt?",
+        "ar": "للأسف! كم يستغرق السفر؟"
+      }
+    },
+    {
+      "id": "d-a2-04.lines[4]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S10"
+      ],
+      "finding": "ungefähr = حوالي/تقريباً، وStunden = ساعات؛ العدد والترجمة متطابقان.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Reisende",
+        "de": "Ungefähr vier Stunden.",
+        "ar": "حوالي أربع ساعات."
+      }
+    },
+    {
+      "id": "d-a2-04-q1",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S05",
+        "S06",
+        "S21"
+      ],
+      "finding": "السؤال يسأل عن محطة التبديل؛ العبارة الصريحة in Frankfurt müssen Sie umsteigen تثبت المفتاح. كولن الوجهة وأربع ساعات مدة الرحلة لا المحطة.",
+      "action": "لا تغيير؛ المفتاح والشرح محفوظان بعد فحص نص الحوار والخيارات.",
+      "reviewed": {
+        "id": "d-a2-04-q1",
+        "type": "mc",
+        "promptDe": "Wo muss der Mann umsteigen?",
+        "options": [
+          "in Köln",
+          "nach vier Stunden",
+          "in Frankfurt"
+        ],
+        "answer": "in Frankfurt",
+        "explanationAr": "الدليل: «in Frankfurt müssen Sie umsteigen». الفخّ 1: كولن الوجهة. الفخّ 2: أربع ساعات مدّة الرحلة.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-04-q2",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S07",
+        "S08",
+        "S09",
+        "S10"
+      ],
+      "finding": "Die Fahrt dauert ungefähr vier Stunden؛ الفراغ يقبل Stunden ويطابق الترجمة «ساعات». لا تعارض مع المفتاح.",
+      "action": "لا تغيير؛ المفتاح والشرح محفوظان بعد فحص نص الحوار والخيارات.",
+      "reviewed": {
+        "id": "d-a2-04-q2",
+        "type": "fill",
+        "promptDe": "Die Fahrt dauert ungefähr vier ___.",
+        "answer": [
+          "Stunden"
+        ],
+        "explanationAr": "ساعات.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-04.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "finding": "الجملة القصيرة تطابق سؤال المقعد: هذا Platz شاغر أم لا؛ لا إضافة/حذف في الإملاء.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "Ist dieser Platz frei?"
+      }
+    },
+    {
+      "id": "d-a2-04.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S05",
+        "S06",
+        "S21"
+      ],
+      "finding": "الجملة تطابق سطر التبديل في فرانكفورت كلمةً ومعنىً.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "In Frankfurt müssen Sie umsteigen."
+      }
+    },
+    {
+      "id": "d-a2-04.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S10"
+      ],
+      "finding": "العبارة تطابق ungefähr vier Stunden؛ «حوالي أربع ساعات» دقيقة.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "Ungefähr vier Stunden."
+      }
+    },
+    {
+      "id": "d-a2-05",
+      "kind": "بيانات الحوار/العنوان",
+      "status": "سليم",
+      "sources": [
+        "S12"
+      ],
+      "finding": "عنوان الاعتذار وسياقه متسقان؛ راجعت اللقطة الحية بما فيها سؤالا السبب والفراغين، دون نقل أي قيمة تاريخية إلى المحتوى.",
+      "action": "لا تغيير؛ البيانات الحية مثبتة في اللقطة، ولا يُستنتج منها حكم جديد على CEFR.",
+      "reviewed": {
+        "titleDe": "Eine Entschuldigung",
+        "titleAr": "اعتذار",
+        "level": "A2",
+        "lineCount": 6,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a2-05.lines[0]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S13",
+        "S21"
+      ],
+      "finding": "müssen + sich entschuldigen تعني وجوب الاعتذار؛ الترجمة «عليّ أن أعتذر» تحفظ الفاعل والمعنى.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Sara",
+        "de": "Hassan, ich muss mich entschuldigen.",
+        "ar": "حسان، عليّ أن أعتذر."
+      }
+    },
+    {
+      "id": "d-a2-05.lines[1]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S22"
+      ],
+      "finding": "passieren بمعنى يحدث؛ «ماذا حدث؟» مطابق للسؤال.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Hassan",
+        "de": "Warum? Was ist passiert?",
+        "ar": "لماذا؟ ماذا حدث؟"
+      }
+    },
+    {
+      "id": "d-a2-05.lines[2]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S51"
+      ],
+      "finding": "gestern = أمس، vergessen = نسي، Termin = موعد، kommen = أتى؛ المفعول المصدر zu kommen مرتبط بالموعد. صيغة Perfekt والمحتوى متسقان، والفاصلة مع Infinitivgruppe ظاهرة.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Sara",
+        "de": "Gestern habe ich vergessen, zum Termin zu kommen.",
+        "ar": "أمس نسيت أن آتي إلى الموعد."
+      }
+    },
+    {
+      "id": "d-a2-05.lines[3]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "مُصحح",
+      "sources": [
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S32"
+      ],
+      "finding": "تصحيح مؤكد: Sara هي مرجع Sie المؤنثة في جواب d-a2-05-q1 (Sie hat… بصيغة الغائب المفرد). الترجمة السابقة خاطبتها بالمذكر «كنتَ/مريضاً»؛ LibreTexts يثبت كنتِ للمخاطبة المؤنثة، وWiktionary يثبت مريضة مؤنث مريض.",
+      "action": "عُدلت العربية إلى «أوه! لا مشكلة. هل كنتِ مريضة؟» لتوافق Sara المؤنثة؛ لم تتغير الجملة الألمانية أو جواب السؤال.",
+      "reviewed": {
+        "who": "Hassan",
+        "de": "Ach so! Kein Problem. Warst du krank?",
+        "ar": "أوه! لا مشكلة. هل كنتِ مريضة؟"
+      },
+      "before": {
+        "who": "Hassan",
+        "de": "Ach so! Kein Problem. Warst du krank?",
+        "ar": "أوه! لا مشكلة. هل كنت مريضاً؟"
+      }
+    },
+    {
+      "id": "d-a2-05.lines[4]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S27",
+        "S28"
+      ],
+      "finding": "Arbeit تعني العمل وviel الكثرة؛ «كان لديّ عمل كثير فحسب» ينقل الجملة، دون استنتاج مرض أو سبب طبي.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Sara",
+        "de": "Nein, ich hatte einfach viel Arbeit.",
+        "ar": "لا، كان لديّ عمل كثير فحسب."
+      }
+    },
+    {
+      "id": "d-a2-05.lines[5]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S29",
+        "S30",
+        "S31"
+      ],
+      "finding": "Macht nichts تعني لا بأس/لا يهم؛ morgen = غداً وsich treffen = يلتقيان. «لا عليك. نلتقي غداً؟» مقابل عربي طبيعي للسياق.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Hassan",
+        "de": "Macht nichts. Treffen wir uns morgen?",
+        "ar": "لا عليك. نلتقي غداً؟"
+      }
+    },
+    {
+      "id": "d-a2-05-q1",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S14",
+        "S16",
+        "S17",
+        "S18",
+        "S20",
+        "S21",
+        "S30"
+      ],
+      "finding": "النص يقول صراحةً: Gestern habe ich vergessen, zum Termin zu kommen. مفتاح النسيان عن الموعد مباشر؛ المرض سؤال نفته Sara والغد اقتراح لاحق.",
+      "action": "لا تغيير؛ المفتاح والشرح محفوظان بعد فحص نص الحوار والخيارات.",
+      "reviewed": {
+        "id": "d-a2-05-q1",
+        "type": "mc",
+        "promptDe": "Warum entschuldigt sich Sara?",
+        "options": [
+          "Sie hat vergessen, zum Termin zu kommen.",
+          "Sie war krank.",
+          "Sie kann morgen nicht kommen."
+        ],
+        "answer": "Sie hat vergessen, zum Termin zu kommen.",
+        "explanationAr": "الدليل: «Gestern habe ich vergessen, zum Termin zu kommen». الفخّ 1: المرض سأل عنه حسن ونفته سارة. الفخّ 2: الغد اقتراح حسن للقاء.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-05-q2",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S13",
+        "S21"
+      ],
+      "finding": "تقول Sara: Ich muss mich entschuldigen؛ الفعل المنعكس entschuldigen هو الكلمة الناقصة، وشرح المعنى مطابق.",
+      "action": "لا تغيير؛ المفتاح والشرح محفوظان بعد فحص نص الحوار والخيارات.",
+      "reviewed": {
+        "id": "d-a2-05-q2",
+        "type": "fill",
+        "promptDe": "Ich muss mich ___.",
+        "answer": [
+          "entschuldigen"
+        ],
+        "explanationAr": "sich entschuldigen = يعتذر.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-05.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S13",
+        "S21"
+      ],
+      "finding": "إملاء مطابق للسطر الأول من الحوار، بما فيه الفعل المنعكس.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "Ich muss mich entschuldigen."
+      }
+    },
+    {
+      "id": "d-a2-05.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S14",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S51"
+      ],
+      "finding": "إملاء مطابق لجملة النسيان والموعد؛ يحفظ gestern، Perfekt، والفاصلة قبل Infinitivgruppe.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "Gestern habe ich vergessen, zum Termin zu kommen."
+      }
+    },
+    {
+      "id": "d-a2-05.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S30",
+        "S31"
+      ],
+      "finding": "إملاء مطابق لسؤال اقتراح اللقاء غداً.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "Treffen wir uns morgen?"
+      }
+    },
+    {
+      "id": "d-a2-06",
+      "kind": "بيانات الحوار/العنوان",
+      "status": "سليم",
+      "sources": [
+        "S33",
+        "S34",
+        "S49"
+      ],
+      "finding": "عنوان الاستبدال في المتجر وسياقه متسقان؛ راجعت اللقطة الحية بما فيها طلب إيصال الشراء وتوفر المقاس M.",
+      "action": "لا تغيير؛ البيانات الحية مثبتة في اللقطة، ولا يُستنتج منها حكم جديد على CEFR.",
+      "reviewed": {
+        "titleDe": "Umtausch im Geschäft",
+        "titleAr": "الاستبدال في المتجر",
+        "level": "A2",
+        "lineCount": 5,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a2-06.lines[0]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "مُصحح",
+      "sources": [
+        "S20",
+        "S33",
+        "S35",
+        "S36",
+        "S37",
+        "S41",
+        "S42"
+      ],
+      "finding": "تصحيح مؤكد في موضعين: PONS يقابل Pullover/Pulli بـ«بلوفر/كنزة»، لذا «كنزة» أدق من «سترة» العامة؛ zu lang عند PONS = أطول من اللازم وzu viel = أكثر من اللازم، فـzu klein تعني أصغر من اللازم لا صغيرة فقط.",
+      "action": "عُدلت العربية إلى «طاب يومكم. اشتريت هذه الكنزة أمس، لكنها أصغر من اللازم.» لتسمية Pullover بدقة وإظهار معنى zu؛ لم تتغير الألمانية.",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Guten Tag. Ich habe diesen Pullover gestern gekauft, aber er ist zu klein.",
+        "ar": "طاب يومكم. اشتريت هذه الكنزة أمس، لكنها أصغر من اللازم."
+      },
+      "before": {
+        "who": "Kundin",
+        "de": "Guten Tag. Ich habe diesen Pullover gestern gekauft, aber er ist zu klein.",
+        "ar": "طاب يومكم. اشتريت هذه السترة أمس لكنها صغيرة."
+      }
+    },
+    {
+      "id": "d-a2-06.lines[1]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S39",
+        "S40"
+      ],
+      "finding": "Kassenzettel هو إيصال/قسيمة الدفع، وdabei في haben … dabei بمعنى «كان معه»؛ «هل معك الوصل؟» ينقل السؤال، والكتابة غير المشكولة لا تحسم جنس المخاطَب.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Verkäufer",
+        "de": "Haben Sie den Kassenzettel dabei?",
+        "ar": "هل معك الوصل؟"
+      }
+    },
+    {
+      "id": "d-a2-06.lines[2]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S35",
+        "S38",
+        "S39",
+        "S40",
+        "S43",
+        "S45"
+      ],
+      "finding": "Größe للملابس = مقاس، وgrößer أكبر. Ja, hier تعني «نعم، هنا» في جواب سؤال الإيصال؛ «تفضّل» تعبير عربي سياقي عند مناولة الإيصال. لا يثبت الدليل خطأً يستدعي تغييرها.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Ja, hier. Kann ich eine größere Größe haben?",
+        "ar": "نعم، تفضّل. هل يمكنني الحصول على مقاس أكبر؟"
+      }
+    },
+    {
+      "id": "d-a2-06.lines[3]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S38",
+        "S44",
+        "S46"
+      ],
+      "finding": "schauen … nach تفقّد، وGröße M ist da تعني أن المقاس M موجود/متوفر؛ الترجمة تحافظ على ذلك.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Verkäufer",
+        "de": "Moment, ich schaue nach. Ja, Größe M ist da.",
+        "ar": "لحظة، أتفقّد. نعم، المقاس M متوفر."
+      }
+    },
+    {
+      "id": "d-a2-06.lines[4]",
+      "kind": "سطر حوار ألماني/عربي",
+      "status": "سليم",
+      "sources": [
+        "S47",
+        "S48"
+      ],
+      "finding": "wunderbar = رائع وvielen Dank = شكراً جزيلاً؛ العبارة سليمة.",
+      "action": "لا تغيير؛ حُفظ الزوج الألماني/العربي كما هو بعد المراجعة.",
+      "reviewed": {
+        "who": "Kundin",
+        "de": "Wunderbar, vielen Dank!",
+        "ar": "رائع، شكراً جزيلاً!"
+      }
+    },
+    {
+      "id": "d-a2-06-q1",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S35",
+        "S37"
+      ],
+      "finding": "gekauft هي Partizip II الصحيح لـkaufen؛ الجملة تسأل عما اشترته الزبونة أمس، والجواب محفوظ.",
+      "action": "لا تغيير؛ المفتاح والشرح محفوظان بعد فحص نص الحوار والخيارات.",
+      "reviewed": {
+        "id": "d-a2-06-q1",
+        "type": "fill",
+        "promptDe": "Sie hat den Pullover gestern ___.",
+        "answer": [
+          "gekauft"
+        ],
+        "explanationAr": "Perfekt لفعل منتظم: ge-kauf-t.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-06-q2",
+      "kind": "سؤال/مفتاح/شرح",
+      "status": "غير محسوم",
+      "sources": [
+        "S33",
+        "S35",
+        "S38",
+        "S39",
+        "S49"
+      ],
+      "finding": "البائع يطلب Kassenzettel صراحةً؛ المقاس M هو المقاس المتوفر لا الشيء الذي طلبه. الشرح يصف إرجاع المقاس الأصغر: عنوان Umtausch يجعل هذا التصور معقولاً، لكن الحوار لا يصرّح بفعل الإرجاع. لذلك لا أعدّه خطأً مؤكداً ولا أعدّل الشرح؛ تبقى دقة هذا التلميح غير محسومة تربوياً.",
+      "action": "لا تعديل؛ احتُفظ بالمفتاح الصحيح، وسُجلت دقة جملة الفخ بوصفها غير محسومة لا خطأً مؤكداً.",
+      "reviewed": {
+        "id": "d-a2-06-q2",
+        "type": "mc",
+        "promptDe": "Was braucht der Verkäufer?",
+        "options": [
+          "den Kassenzettel",
+          "Größe M",
+          "die kleinere Größe zurück"
+        ],
+        "answer": "den Kassenzettel",
+        "explanationAr": "الدليل: «Haben Sie den Kassenzettel dabei?». الفخّ 1: المقاس M هو ما تحصل عليه الزبونة. الفخّ 2: البلوفر الصغير تعيده هي، لكن البائع طلب الإيصال.",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-06.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S35",
+        "S37"
+      ],
+      "finding": "الإملاء يطابق شراء Pullover أمس؛ لا تغيير في الألمانية أو المفتاح.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "Ich habe diesen Pullover gestern gekauft."
+      }
+    },
+    {
+      "id": "d-a2-06.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S39",
+        "S40"
+      ],
+      "finding": "الإملاء يطابق سؤال البائع المباشر عن إيصال الشراء ووجوده مع الزبونة.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "Haben Sie den Kassenzettel dabei?"
+      }
+    },
+    {
+      "id": "d-a2-06.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S35",
+        "S38",
+        "S43"
+      ],
+      "finding": "الإملاء يطابق طلب مقاس أكبر؛ أكبر من groß في المقارنة، ولا يضيف مقاساً غير مذكور.",
+      "action": "لا تغيير؛ طوبقت جملة الإملاء بالنص الألماني الحي.",
+      "reviewed": {
+        "sentence": "Kann ich eine größere Größe haben?"
+      }
+    }
+  ]
+}

@@ -175,7 +175,7 @@ export function InterviewArena({ progress }: { progress: Progress }) {
         <div style={{ display: "grid", gap: "0.7rem" }}>
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
             {ARENEN.map((x) => (
-              <button key={x.id} className="chip" style={{ cursor: "pointer", background: x.id === arena ? "var(--color-cola)" : "white", color: x.id === arena ? "white" : undefined }} onClick={() => { setArena(x.id); setQi(0); setText(""); setResult(null); }}>
+              <button key={x.id} className="chip" style={{ cursor: "pointer", background: x.id === arena ? "var(--color-cola)" : "var(--ui-surface-raised)", color: x.id === arena ? "var(--ui-on-accent)" : undefined }} onClick={() => { setArena(x.id); setQi(0); setText(""); setResult(null); }}>
                 {x.emoji} {x.de}
               </button>
             ))}

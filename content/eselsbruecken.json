@@ -972,7 +972,7 @@
     "sektion": "b2",
     "level": "A2",
     "titleAr": "فخُّ جمعِ المؤنثِ الوظيفي ➔ شفرةُ «الـ nen»",
-    "storyAr": "كلُّ مؤنثٍ وظيفيٍّ ينتهي بـ -in يُضاعِفُ النونَ أولاً قبلَ الجمع؛ نسيانُ النونِ الثانيةِ من أكثرِ أخطاءِ العربِ ظهوراً في الكتابة.",
+    "storyAr": "كلُّ مؤنثٍ وظيفيٍّ ينتهي بـ -in يُضاعِفُ النونَ أولاً قبلَ الجمع؛ تذكّرْ كتابةَ النونِ مرتين في صيغةِ الجمع.",
     "zeilen": [
       {
         "code": "القاعدة",
@@ -1959,7 +1959,7 @@
       }
     ],
     "gramIds": [
-      "b2-verschmolzene"
+      "a2-verschmolzene"
     ],
     "warnung": "zum لا يُكتَبُ طويلاً في الكلامِ اليوميِّ «zu dem» — النَّثْرُ الألمانيُّ يلغيها إلا في التوكيدِ."
   },
@@ -1991,5 +1991,246 @@
       "b2-redew"
     ],
     "warnung": "الاصطلاحُ لا يُرجمُ بالحَرْف: «يدٌ مضغوطتان» وحدها لا معنى لها عندَ الألمانيِّ إلا بسياقِ التوفيقِ."
+  },
+  {
+    "id": "e-plural-sir",
+    "emoji": "🔢",
+    "sektion": "genus",
+    "level": "A1",
+    "titleAr": "الجمع: شفرة «سِرْ ناس»",
+    "storyAr": "تاجرٌ في السوق ينادي زبائنه: «سِرْ ناس! سِرْ!» — سِرْ للنهايات ‎-e و‎-er (Stühle/Kinder) وناس للناس ‎-(e)n (Frauen) والدخيل ‎-s (Autos) الذي جاء من الخارج.",
+    "zeilen": [
+      {
+        "code": "سِرْ → -e/-er",
+        "de": "die Stühle, die Kinder",
+        "ar": "الإمالة علامة الجمع الألماني الأصيل"
+      },
+      {
+        "code": "ناس → -(e)n",
+        "de": "die Frauen, die Taschen",
+        "ar": "المؤنث يجمع بالنون almost دائماً"
+      },
+      {
+        "code": "دخيل → -s",
+        "de": "die Autos, die Hobbys",
+        "ar": "ما جاء من الخارج حافظ على سينه"
+      }
+    ],
+    "gramIds": [
+      "a1-plural"
+    ],
+    "warnung": "لا تخلط: Kind ← Kinder لا Kinds!"
+  },
+  {
+    "id": "e-zeit-am-um",
+    "emoji": "🕰",
+    "sektion": "praeposition",
+    "level": "A1",
+    "titleAr": "الوقت: ساعة «أَمْ عِمْ»",
+    "storyAr": "جدةٌ تونسية تنظم يوم حفيدها: «أَمْ (am) للأيام يا وليدي، وعِمْ (um) للساعة بالضبط، وإِمْ (im) للشهر والفصل» — وقبل الأكل وبعده (vor/nach) اغسل يديك بالجر!",
+    "zeilen": [
+      {
+        "code": "أَمْ → am",
+        "de": "am Montag, am Morgen",
+        "ar": "الأيام وأجزاؤها"
+      },
+      {
+        "code": "عِمْ → um",
+        "de": "um 8 Uhr",
+        "ar": "الساعة المحددة فقط"
+      },
+      {
+        "code": "إِمْ → im",
+        "de": "im Mai, im Sommer",
+        "ar": "الشهور والفصول"
+      }
+    ],
+    "gramIds": [
+      "a1-zeitpraep"
+    ]
+  },
+  {
+    "id": "e-neben-null",
+    "emoji": "🔗",
+    "sektion": "satzbau",
+    "level": "A2",
+    "titleAr": "الروابط الصفرية: شفرة «الصفر الشجاع»",
+    "storyAr": "خمسة روابط تقف في الصفر ولا تزاحم الفعل على كرسيه الثاني: und/or/aber العائلة، وdenn السبب العاقل (عكس weil المقلوب)، وsondern المصحح الذي لا يظهر إلا بعد النفي.",
+    "zeilen": [
+      {
+        "code": "0 → aber",
+        "de": "Ich lerne, aber er spielt.",
+        "ar": "التضاد والفعل ثانٍ"
+      },
+      {
+        "code": "0 → denn",
+        "de": "Ich bleibe, denn ich bin krank.",
+        "ar": "السبب بترتيب عادٍ"
+      },
+      {
+        "code": "¬ → sondern",
+        "de": "Nicht heute, sondern morgen.",
+        "ar": "التصحيح بعد النفي"
+      }
+    ],
+    "gramIds": [
+      "a2-neben"
+    ]
+  },
+  {
+    "id": "e-dieser-der",
+    "emoji": "👉",
+    "sektion": "adjektiv",
+    "level": "A2",
+    "titleAr": "dieser يلبس لبوس der",
+    "storyAr": "كلمة dieser فقيرة لا تملك ثياباً فتستعيرها من der: هذا الرجل Dieser Mann، ورأيتُ هذا الرجل diesen Mann — وjeder يحب الوحدة (مفرد!) وalle تحب الزحمة (جمع!).",
+    "zeilen": [
+      {
+        "code": "dieser ≈ der",
+        "de": "Dieser Mann, diesen Mann",
+        "ar": "نفس نهايات أداة التعريف"
+      },
+      {
+        "code": "jeder + Sg",
+        "de": "Jedes Kind bekommt ein Buch.",
+        "ar": "كلٌّ مع المفرد دائماً"
+      },
+      {
+        "code": "alle + Pl",
+        "de": "Alle Kinder spielen.",
+        "ar": "alle مع الجمع دائماً"
+      }
+    ],
+    "gramIds": [
+      "a2-demo"
+    ]
+  },
+  {
+    "id": "e-um-zu-spiegel",
+    "emoji": "🎯",
+    "sektion": "satzbau",
+    "level": "B1",
+    "titleAr": "مرآة um…zu الواحدة",
+    "storyAr": "قف أمام المرآة: إن رأيتَ وجهاً واحداً (فاعل واحد) فقل um…zu، وإن رأيتَ وجهين (فاعلان) فقل damit — والفعل المنفصل يقفز فوق zu في الوسط (anzufangen).",
+    "zeilen": [
+      {
+        "code": "1 وجه → um…zu",
+        "de": "Ich lerne, um zu bestehen.",
+        "ar": "الفاعل نفسه"
+      },
+      {
+        "code": "2 وجه → damit",
+        "de": "Ich helfe dir, damit du bestehst.",
+        "ar": "فاعلان مختلفان"
+      },
+      {
+        "code": "قفزة zu",
+        "de": "um anzufangen",
+        "ar": "المنفصل ينقسم حول zu"
+      }
+    ],
+    "gramIds": [
+      "b1-absicht"
+    ]
+  },
+  {
+    "id": "e-haette-maschine",
+    "emoji": "⏳",
+    "sektion": "verb",
+    "level": "B1",
+    "titleAr": "آلة الزمن hätte/wäre",
+    "storyAr": "آلة زمن لها مفتاحان: hätte يعيدك لأفعال haben (تعلمتَ؟) وwäre يطير بك لأفعال sein (ذهبتَ؟) — وكل رحلة تنتهي بالتصريف الثالث، والندم وقودها (Hätte ich doch…!).",
+    "zeilen": [
+      {
+        "code": "hätte + PII",
+        "de": "Ich hätte gelernt.",
+        "ar": "أفعال haben"
+      },
+      {
+        "code": "wäre + PII",
+        "de": "Ich wäre gegangen.",
+        "ar": "أفعال sein"
+      },
+      {
+        "code": "Hätte ich doch…!",
+        "de": "Wärst du nur gekommen!",
+        "ar": "الندم واللوم"
+      }
+    ],
+    "gramIds": [
+      "b1-konj2-vergangenheit"
+    ]
+  },
+  {
+    "id": "e-hingegen-seil",
+    "emoji": "🎪",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "hingegen البهلوان على الحبل",
+    "storyAr": "في سيرك B2 يمشي hingegen على الحبل فيتمايل بين الموضع الأول والثالث (Hingegen blieb er / Er hingegen blieb) — وwenngleich العجوز الراقي يجلس في الخلف (الفعل في النهاية) وfolglich يعلن النتيجة في المقدمة.",
+    "zeilen": [
+      {
+        "code": "بهلوان 1/3",
+        "de": "Er hingegen blieb.",
+        "ar": "hingegen بموضع حر"
+      },
+      {
+        "code": "العجوز الراقي",
+        "de": "Wenngleich es regnete, gingen wir.",
+        "ar": "الفعل في النهاية"
+      },
+      {
+        "code": "المعلن",
+        "de": "Folglich blieb er.",
+        "ar": "النتيجة في المقدمة"
+      }
+    ],
+    "gramIds": [
+      "b2-textkonnektoren"
+    ]
+  },
+  {
+    "id": "e-wasfuer",
+    "emoji": "🧭",
+    "sektion": "satzbau",
+    "level": "A2",
+    "titleAr": "بوابتان: نوعٌ مفتوح أم اختيارٌ معلوم؟",
+    "storyAr": "عند مدخل السؤال بوابتان: Was für تسأل عمّا تريد من نوعٍ من غير قائمة جاهزة، وwelcher تشير إلى واحدٍ من أشياء معروفة. عامل was für كقطعة استفهامية ثابتة، ثم بدّل ein مثل أداة النكرة بحسب الاسم والحالة: Was für ein Film gefällt dir؟ لكن Was für einen Film suchst du؟ ومع الجمع يسقط ein؛ ومع mit يأتي Dativ. ولا تخلط البوابة المركّبة بحرف الجر المستقل für في für einen Freund.",
+    "zeilen": [
+      {
+        "code": "النوع المفتوح",
+        "de": "Was für ein Buch liest du?",
+        "ar": "ما نوع الكتاب؟ لا اختياراً من قائمة."
+      },
+      {
+        "code": "اختيار معلوم",
+        "de": "Welcher Bus fährt zum Bahnhof — Bus 3 oder Bus 5?",
+        "ar": "أيُّ حافلةٍ تختار من الخيارين المعلومين؟"
+      },
+      {
+        "code": "Nominativ",
+        "de": "Was für ein Film gefällt dir?",
+        "ar": "Film فاعل مع gefällt: ein."
+      },
+      {
+        "code": "Akkusativ",
+        "de": "Was für einen Film suchst du?",
+        "ar": "Film مفعول مع suchst: einen."
+      },
+      {
+        "code": "الجمع",
+        "de": "Was für Bücher liest du?",
+        "ar": "في الجمع يسقط ein."
+      },
+      {
+        "code": "mit + Dativ",
+        "de": "Mit was für einem Bus fährst du?",
+        "ar": "mit يطلب Dativ: einem."
+      }
+    ],
+    "gramIds": [
+      "a2-wasfuer"
+    ],
+    "warnung": "في Was für ein تُعامل was für كوحدة استفهامية؛ في für einen Freund يكون für حرف جر مستقلاً."
   }
 ]

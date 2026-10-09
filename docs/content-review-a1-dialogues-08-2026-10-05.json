@@ -1,0 +1,1331 @@
+{
+  "date": "2026-10-05",
+  "batch": "A1-dialogues-08",
+  "scope": "مراجعة مصدرية فردية للحوارات الحية d-a1-22 وd-a1-23 وd-a1-24: بيانات كل حوار، 24 سطراً مع الترجمة والمتحدث، 9 أسئلة بجميع الحقول، و6 جمل إملاء؛ 42 معرّفاً. قورنت المسودة التاريخية فقط بعد العثور على تطابق المعرّفات.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictationSentences": 6,
+    "unresolvedLevelNotes": 0,
+    "unresolvedContextNotes": 3,
+    "totalTrackedItems": 42
+  },
+  "statusCounts": {
+    "سليم": 35,
+    "مُصحح": 4,
+    "غير محسوم": 3
+  },
+  "method": "قُرئ كل سجل حي قبل أي كتابة، ثم سُجل لكل بيانات حوار وسطر وسؤال وإملاء معرّف ودليل وحكم ومصدر منشور وإجراء. فُحصت الأسطر الألمانية وترجماتها والمتحدثون، العناوين ومرتكزات waisen، أنواع الأسئلة وموجهاتها وخياراتها ومفاتيحها وشروحها وعلامة falle، ومطابقة الإملاء. استُخدمت المعاجم لتثبيت المقابلات فقط؛ ولم يُستنتج عيب من فحص آلي وحده. قورنت المعرفات التاريخية الثلاثة بالمقطع المطابق في dialoge_a1_neu2.py، مع جعل البيانات الحية هي المرجع. التعديلات الأربعة محصورة في الترجمات العربية المؤكدة؛ بقيت الملاحظات السياقية الثلاث بلا تخمين.",
+  "statusDefinitions": {
+    "سليم": "لم يثبت خطأ في الحقل ضمن الأدلة المنشورة والسياق المتاح؛ وقد يُسجل قيداً لا يستلزم تغييراً.",
+    "مُصحح": "ثبت خلل محدد في هذا الحقل بدليل مناسب وطُبق تعديل موثق ومحدود.",
+    "غير محسوم": "الملاحظة ليست خطأً مثبتاً؛ لا يحسم الدليل/السياق حكماً أو إصلاحاً وحيداً، لذلك بقي الحقل كما هو."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة، وليست مراجعة بشرية أو اعتماداً لغوياً أو تربوياً أو مهنياً.",
+    "وسم A1 محفوظ كما هو في البيانات؛ مراجعة CEFR والنسبة وحساب المستوى مؤجلة.",
+    "في d-a1-23.lines[0] لم يُخترع اسم بلدة لعنوان Gartenstraße 8؛ اكتمال الموقع يتوقف على سياق مركز الاتصال.",
+    "الزمن «خمس دقائق» في d-a1-23.lines[3] تقدير داخل القصة؛ لم يُتحقق من زمن خدمة حقيقي، ولا يُعمم.",
+    "الانتقال إلى الجهة الأخرى من الشارع في d-a1-23.lines[7] ليس قاعدة عامة تثبتها إرشادات BBK؛ الصفحة التي تتناول انتظار الجهة المقابلة في سياق تسرب الغاز لا تُستخدم دليلاً لحريق.",
+    "فاصلة im Park في d-a1-24.lines[2] قابلة لقراءة الإضافة اللاحقة وفق §72؛ لا تُسجل خطأً مؤكداً.",
+    "بوابات الشكل والتزامن والواجهة تختبر بيانات/سلوكاً برمجياً ولا تعني تصديقاً لغوياً بشرياً أو إثبات نتائج تعلم."
+  ],
+  "historicalPatchReview": {
+    "file": "scripts/patches/dialoge_a1_neu2.py",
+    "role": "ملف تأليف تاريخي؛ يُفحص للمقارنة فقط ولا يُعامل كمرجع لغوي معتمد أو كمصدر حي.",
+    "usageCheck": "وُجدت المعرفات d-a1-22 إلى d-a1-24 في dialoge_a1_neu2.py فقط ضمن scripts/patches؛ لم تظهر في dialoge_a1_neu1.py. قورنت القيم الأساسية السابقة للتصحيح؛ لا يُنقل شيء من المسودة إلى الملف الحي تلقائياً.",
+    "comparisons": [
+      {
+        "dialogueId": "d-a1-22",
+        "baselineMatch": "عند مقارنة اللقطات السابقة للتصحيح: العنوانين، waisen، المتحدثين والأسطر الألمانية/العربية الثمانية، prompts الألمانية، الإجابات والشروح وجمل الإملاء مطابقة للمقطع التاريخي؛ لم تُعتمد المسودة بديلاً عن الحي.",
+        "optionOrderChanges": [
+          {
+            "questionId": "d-a1-22-q1",
+            "historicalOptions": [
+              "der Ehemann von Salma",
+              "die Schwester von Salma",
+              "die Großmutter selbst"
+            ],
+            "liveOptions": [
+              "die Schwester von Salma",
+              "die Großmutter selbst",
+              "der Ehemann von Salma"
+            ],
+            "answerUnchanged": "der Ehemann von Salma"
+          }
+        ],
+        "unchangedAnswerAndExplanation": true,
+        "fieldsAbsentFromHistory": [
+          "question.id",
+          "question.promptAr",
+          "question.falle"
+        ]
+      },
+      {
+        "dialogueId": "d-a1-23",
+        "baselineMatch": "عند مقارنة اللقطات السابقة للتصحيح: العنوانين، waisen، المتحدثين والأسطر الألمانية/العربية الثمانية، prompts الألمانية، الإجابات والشروح وجمل الإملاء مطابقة للمقطع التاريخي؛ لم تُعتمد المسودة بديلاً عن الحي.",
+        "optionOrderChanges": [
+          {
+            "questionId": "d-a1-23-q2",
+            "historicalOptions": [
+              "in fünf Minuten",
+              "in acht Minuten",
+              "sie ist schon da"
+            ],
+            "liveOptions": [
+              "in acht Minuten",
+              "in fünf Minuten",
+              "sie ist schon da"
+            ],
+            "answerUnchanged": "in fünf Minuten"
+          }
+        ],
+        "unchangedAnswerAndExplanation": true,
+        "fieldsAbsentFromHistory": [
+          "question.id",
+          "question.promptAr",
+          "question.falle"
+        ]
+      },
+      {
+        "dialogueId": "d-a1-24",
+        "baselineMatch": "عند مقارنة اللقطات السابقة للتصحيح: العنوانين، waisen، المتحدثين والأسطر الألمانية/العربية الثمانية، prompts الألمانية، الإجابات والشروح وجمل الإملاء مطابقة للمقطع التاريخي؛ لم تُعتمد المسودة بديلاً عن الحي.",
+        "optionOrderChanges": [
+          {
+            "questionId": "d-a1-24-q1",
+            "historicalOptions": [
+              "täglich, morgens um sieben",
+              "am Samstag mit Freundinnen",
+              "später im Park"
+            ],
+            "liveOptions": [
+              "am Samstag mit Freundinnen",
+              "täglich, morgens um sieben",
+              "später im Park"
+            ],
+            "answerUnchanged": "täglich, morgens um sieben"
+          },
+          {
+            "questionId": "d-a1-24-q2",
+            "historicalOptions": [
+              "ein Foto vom Chor",
+              "ein Lied im Buch",
+              "den Park"
+            ],
+            "liveOptions": [
+              "ein Lied im Buch",
+              "den Park",
+              "ein Foto vom Chor"
+            ],
+            "answerUnchanged": "ein Foto vom Chor"
+          }
+        ],
+        "unchangedAnswerAndExplanation": true,
+        "fieldsAbsentFromHistory": [
+          "question.id",
+          "question.promptAr",
+          "question.falle"
+        ]
+      }
+    ]
+  },
+  "patch": {
+    "file": "scripts/patches/review_a1_dialogues_08.py",
+    "preflight": "فحص السكربت البنية والقيم السابقة الدقيقة للحقول العربية الأربعة، ثم جرّب التعديلات في الذاكرة وتحقق أن بقية البيانات لم تتغير. dry-run نجح؛ طُبقت الحقول الأربعة فقط؛ أعيدت قراءة JSON المحفوظة وفُحصت. يرفض السكربت قيمة غير متوقعة أو حالة مختلطة، ويحمي تفاصيل الحريق غير المحسومة والفاصلة من التغيير التخمينّي.",
+    "fieldsChanged": 4,
+    "correctedItemIds": [
+      "d-a1-22.lines[2]",
+      "d-a1-22.lines[4]",
+      "d-a1-22.lines[7]",
+      "d-a1-24.lines[1]"
+    ],
+    "changes": [
+      "d-a1-22.lines[2]: «في الثانية» ← «في الساعة الثانية بعد الظهر» لحفظ معنى 14 Uhr، و«يأخذهما» ← «سيذهب زوجي لاستقبالهما» لنقل معنى abholen.",
+      "d-a1-22.lines[4]: أُضيفت «حينها» لنقل dann المحذوفة؛ لم يتغير باقي الجواب.",
+      "d-a1-22.lines[7]: «تفرح بالرضيعة» ← «تتطلع بالتأكيد إلى قدوم الطفلة» لنقل freuen sich auf ذي الدلالة المستقبلية.",
+      "d-a1-24.lines[1]: «أمارس رياضة كثيرة» ← «أمارس الرياضة كثيراً» لمقابلة Ich mache viel Sport بصياغة عربية سليمة."
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "PONS — Großeltern (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Gro%C3%9Feltern",
+      "supports": "يورد Großeltern = الجدّان؛ يسند معنى العنوان العربي."
+    },
+    {
+      "id": "S2",
+      "title": "PONS — Großvater (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Gro%C3%9Fvater",
+      "supports": "يسند Großvater = الجد، ويعرض مدخل Großmutter؛ يستخدم للتحقق من الجد والجدة في الحوار."
+    },
+    {
+      "id": "S3",
+      "title": "PONS — Ehemann (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Ehemann",
+      "supports": "يعطي Ehemann = زوج؛ يسند ترجمة «زوجي»."
+    },
+    {
+      "id": "S4",
+      "title": "PONS — Geschwister (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Geschwister",
+      "supports": "يعطي Geschwister = إخوة وأخوات؛ يسند ذكر إخوة سلمى وسؤال عددهم."
+    },
+    {
+      "id": "S5",
+      "title": "PONS — Flugzeug (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Flugzeug",
+      "supports": "يعطي Flugzeug = طائرة؛ يسند السطر المتعلق بالوصول جواً."
+    },
+    {
+      "id": "S6",
+      "title": "PONS — ankommen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/ankommen",
+      "supports": "يعطي معنى الوصول ويعرض الفعل المنفصل في تصريف مثل kommt ... an؛ يسند السطر وسؤال ملء الفراغ."
+    },
+    {
+      "id": "S7",
+      "title": "PONS — fliegen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/fliegen",
+      "supports": "يسند معنى الطيران في سؤال Nina."
+    },
+    {
+      "id": "S8",
+      "title": "PONS — Samstag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Samstag",
+      "supports": "يعطي Samstag = السبت؛ يسند توقيت الزيارة."
+    },
+    {
+      "id": "S9",
+      "title": "PONS — abholen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/abholen",
+      "supports": "يعرض abholen مع الأشخاص بمعنى أخذهم أو استقبالهم؛ يفيد مقابلة فعل الوصول."
+    },
+    {
+      "id": "S10",
+      "title": "Duden — abholen",
+      "url": "https://www.duden.de/rechtschreibung/abholen",
+      "supports": "المعنى 2: لقاء شخص في مكان متفق عليه والذهاب معه؛ يسند أن «يأخذهما» وحدها لا تصرّح بفعل الاستقبال/الالتقاط."
+    },
+    {
+      "id": "S11",
+      "title": "Duden — Schreibung von Uhrzeitangaben",
+      "url": "https://www.duden.de/sprachwissen/sprachratgeber/Uhrzeitangaben",
+      "supports": "يذكر استعمال «drei Uhr» و«fünfzehn Uhr» ويعرض نظام كتابة الوقت؛ يسند حفظ دلالة 14 Uhr بوصفها الثانية بعد الظهر، لا «الثانية» الملتبسة."
+    },
+    {
+      "id": "S12",
+      "title": "PONS — wohnen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/wohnen",
+      "supports": "يعطي wohnen = يسكن؛ يسند السؤال عن السكن عند العائلة."
+    },
+    {
+      "id": "S13",
+      "title": "PONS — Woche (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Woche",
+      "supports": "يعطي Woche = أسبوع؛ يسند مدة إقامة الجدين ومفتاح السؤال الثاني."
+    },
+    {
+      "id": "S14",
+      "title": "PONS — dann (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/dann",
+      "supports": "يعطي dann = ثم/بعد ذلك، وفي السياق «حينها»؛ يسند الإشارة الزمنية المحذوفة سابقاً في السطر الرابع."
+    },
+    {
+      "id": "S15",
+      "title": "PONS — mitbringen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/mitbringen",
+      "supports": "يسند معنى إحضار شيء أو شخص معه؛ يظهر الفعل في حديث الأخت عن الطفلة."
+    },
+    {
+      "id": "S16",
+      "title": "PONS — Baby (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Baby",
+      "supports": "يسند معنى Baby = رضيع/طفل صغير في خبر إحضار الطفلة."
+    },
+    {
+      "id": "S17",
+      "title": "PONS — Mädchen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/M%C3%A4dchen",
+      "supports": "يعطي Mädchen = بنت/فتاة؛ يسند التوضيح اللاحق لجنس الطفلة."
+    },
+    {
+      "id": "S18",
+      "title": "DWDS — freuen",
+      "url": "https://www.dwds.de/wb/freuen",
+      "supports": "يفصل بين sich freuen über وبين sich freuen auf؛ ويعرّف الأخير بأنه تعبير عن أمر مستقبلي، ما يسند «تتطلع إلى قدوم» بدل «تفرح بالرضيعة»."
+    },
+    {
+      "id": "S19",
+      "title": "PONS — voll (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/voll",
+      "supports": "يعطي voll = ممتلئ؛ يسند الجملة عن امتلاء البيت، التي لم تُعدّل لأن السياق قد يحمل معناها المستقبلي."
+    },
+    {
+      "id": "S20",
+      "title": "PONS — Notruf (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Notruf",
+      "supports": "يعطي Notruf = نداء/رقم النجدة؛ يسند عنوان الحوار وموضوع الاتصال."
+    },
+    {
+      "id": "S21",
+      "title": "PONS — Feuer (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Feuer",
+      "supports": "يعرض معنى الحريق؛ يسند عنوان الحوار وسؤال حالة الأشخاص."
+    },
+    {
+      "id": "S22",
+      "title": "PONS — Feuerwehr (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Feuerwehr",
+      "supports": "يعطي Feuerwehr = فرقة/رجال المطافئ؛ يسند أسطر وصول فرق الإطفاء وأسئلة الفهم."
+    },
+    {
+      "id": "S23",
+      "title": "PONS — Eingang (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Eingang",
+      "supports": "يعطي Eingang = مدخل؛ يسند ترجمة الموقع خارج المدخل."
+    },
+    {
+      "id": "S24",
+      "title": "PONS — Ausgang (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Ausgang",
+      "supports": "يعطي Ausgang المكاني = مخرج؛ يسند المخرج إلى الحديقة."
+    },
+    {
+      "id": "S25",
+      "title": "PONS — Treppe (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Treppe",
+      "supports": "يعطي Treppe = سلم/درج؛ يسند وصف الدرج بأنه خالٍ."
+    },
+    {
+      "id": "S26",
+      "title": "PONS — Richtung (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Richtung",
+      "supports": "يعطي Richtung = اتجاه/جهة؛ يسند السؤال عن الطريق والتوجيه."
+    },
+    {
+      "id": "S27",
+      "title": "PONS — ruhig (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/ruhig",
+      "supports": "يعطي ruhig = هادئ/بهدوء؛ يسند «ابقي هادئة»."
+    },
+    {
+      "id": "S28",
+      "title": "PONS — drinnen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/drinnen",
+      "supports": "يعطي drinnen = في الداخل؛ يسند سؤال المشغّل."
+    },
+    {
+      "id": "S29",
+      "title": "PONS — jemand (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/jemand",
+      "supports": "يعطي jemand = شخص/أحد؛ يسند الاستفهام عما إذا بقي شخص في الداخل."
+    },
+    {
+      "id": "S30",
+      "title": "PONS — niemand (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/niemand",
+      "supports": "يعطي niemand = لا أحد؛ يسند جواب السيدة ومفتاح السؤال الأول."
+    },
+    {
+      "id": "S31",
+      "title": "PONS — schnell (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/schnell",
+      "supports": "يعطي schnell = سريع/بسرعة؛ يسجل معنى مرتكز المفردات الذي لا يظهر في نص الأسطر، دون اعتباره وحده عيباً."
+    },
+    {
+      "id": "S32",
+      "title": "PONS — unterwegs (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/unterwegs",
+      "supports": "يعطي unterwegs = في الطريق؛ يسند معنى أن الإطفاء في الطريق لا أنه وصل."
+    },
+    {
+      "id": "S33",
+      "title": "PONS — draußen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/drau%C3%9Fen",
+      "supports": "يعطي draußen = في الخارج؛ يسند ترجمة خروج جميع أفراد المنزل."
+    },
+    {
+      "id": "S34",
+      "title": "BBK — Was tun, wenn es brennt?",
+      "url": "https://www.bbk.bund.de/DE/Warnung-Vorsorge/Vorsorge/Brandschutz/_documents/feuer-verhalten_dossier2.html",
+      "supports": "إرشاد رسمي: الاتصال بـ112، ذكر أين/ماذا/من، مغادرة المبنى، التحقق من سلامة الجميع، وانتظار الإطفاء في مكان واضح الرؤية. لا يحدد زمناً لوصولها ولا يفرض عبور الشارع."
+    },
+    {
+      "id": "S35",
+      "title": "Berliner Feuerwehr — Verhalten im Brandfall",
+      "url": "https://www.berliner-feuerwehr.de/ihre-sicherheit/im-notfall/verhalten-im-brandfall/",
+      "supports": "إرشاد رسمي من إدارة إطفاء برلين بشأن الاتصال بـ112 وانتظار فرق الإطفاء وإظهار المداخل؛ لا يقرر قاعدة عامة لعبور الجهة الأخرى من الشارع."
+    },
+    {
+      "id": "S36",
+      "title": "PONS — Garten (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Garten",
+      "supports": "يسند معنى الحديقة في مخرج الحوار."
+    },
+    {
+      "id": "S37",
+      "title": "PONS — Straße (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Stra%C3%9Fe",
+      "supports": "يسند ترجمة Straßenname إلى «شارع»؛ لا يثبت أن العنوان الوارد مكتمل جغرافياً."
+    },
+    {
+      "id": "S38",
+      "title": "PONS — Freizeit (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Freizeit",
+      "supports": "يعطي Freizeit = وقت الفراغ؛ يسند عنوان الحوار والسؤال الافتتاحي."
+    },
+    {
+      "id": "S39",
+      "title": "PONS — Sport (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Sport",
+      "supports": "يعطي Sport = رياضة؛ يسند موضوع النشاط في السطر الأول."
+    },
+    {
+      "id": "S40",
+      "title": "Arabdict — Sport (German–Arabic)",
+      "url": "https://www.arabdict.com/en/deutsch-arabisch/Sport",
+      "supports": "يعرض Sport machen = مارس الرياضة؛ يدعم التركيب العربي «أمارس الرياضة» دون تحويل sport إلى رياضات معدودة."
+    },
+    {
+      "id": "S41",
+      "title": "PONS — viel (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/viel",
+      "supports": "يعرض viel بوصفه محدداً/ظرفاً بمعنى كثير؛ يسند نقل مقدار النشاط بصيغة عربية سليمة."
+    },
+    {
+      "id": "S42",
+      "title": "Goethe-Institut — Goethe-Zertifikat A1 Start Deutsch 1 Wortliste",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "supports": "تورد القائمة المثال الحرفي «Ich mache viel Sport»؛ يُستخدم المثال لمراجعة معنى العبارة فقط، لا لإعادة تقييم وسم المستوى المخزّن."
+    },
+    {
+      "id": "S43",
+      "title": "PONS — schwimmen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/schwimmen",
+      "supports": "يعطي schwimmen = يسبح؛ يسند السطر وسؤال الفهم الأول."
+    },
+    {
+      "id": "S44",
+      "title": "PONS — täglich (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/t%C3%A4glich",
+      "supports": "يعطي täglich = يومياً؛ يسند الوقت المتكرر في السطر والسؤال."
+    },
+    {
+      "id": "S45",
+      "title": "PONS — spazieren (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/spazieren",
+      "supports": "يعرض spazieren gehen = يتنزه/يتمشى؛ يسند التنزه في الحديقة."
+    },
+    {
+      "id": "S46",
+      "title": "PONS — Park (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Park",
+      "supports": "يسند معنى Park = حديقة عامة/منتزه؛ يحدد مكان التنزه ومشتت السؤال."
+    },
+    {
+      "id": "S47",
+      "title": "IDS Grammis — 2.2 Komma bei Zusätzen, §72",
+      "url": "https://grammis.ids-mannheim.de/rechtschreibung/6202",
+      "supports": "القاعدة تتيح الفصل بالفاصلة لملحق غير مدمج نحوياً/إضافة لاحقة؛ تدعم قراءة «im Park» كإضافة بعد اكتمال الجملة، ولا تفرض أن هذه هي القراءة الوحيدة."
+    },
+    {
+      "id": "S48",
+      "title": "PONS — mögen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/m%C3%B6gen",
+      "supports": "يعرض mögen بمعنى يحب؛ يسند «Das mag ich auch»."
+    },
+    {
+      "id": "S49",
+      "title": "PONS — tanzen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/tanzen",
+      "supports": "يعطي tanzen = يرقص؛ يسند نشاط السبت وسؤال المشتت."
+    },
+    {
+      "id": "S50",
+      "title": "PONS — singen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/singen",
+      "supports": "يعطي singen = يغني؛ يسند حوار الأغنية وسؤالها."
+    },
+    {
+      "id": "S51",
+      "title": "PONS — Lied (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Lied",
+      "supports": "يعطي Lied = أغنية؛ يسند ذكر الأغنية في الحوار والسؤال الثالث."
+    },
+    {
+      "id": "S52",
+      "title": "PONS — Foto (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Foto",
+      "supports": "يعطي Foto = صورة؛ يسند ما يعرضه Tom ومفتاح السؤال الثاني."
+    },
+    {
+      "id": "S53",
+      "title": "PONS — Chor (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Chor",
+      "supports": "يعطي Chor = جوقة/جوقة منشدين؛ يسند الصورة ومفتاح السؤال."
+    },
+    {
+      "id": "S54",
+      "title": "PONS — zufrieden (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/zufrieden",
+      "supports": "يعطي zufrieden = راضٍ/مرتاح؛ يسند وصف مظهر Tom وجملة الإملاء."
+    },
+    {
+      "id": "S55",
+      "title": "PONS — Freundin (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Freundin",
+      "supports": "يسند معنى Freundin بوصفها صديقة؛ في صيغة الجمع Freundinnen في السطر."
+    },
+    {
+      "id": "S56",
+      "title": "PONS — lieber (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/lieber",
+      "supports": "يسند lieber بمعنى يفضّل؛ يدعم ترجمة تفضيل التنزه لا نفي ممارسة غيره."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a1-22",
+      "kind": "بيانات الحوار: العنوان والسياق ومرتكزات المفردات",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6",
+        "S7",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "finding": "العنوانان «Die Großeltern kommen» و«الجدّان يأتيان» متوافقان مع معنى grandparents. تظهر مرتكزات waisen التسعة في الأسطر (ankommen بصيغته المنفصلة، fliegen، mitbringen وغيرها). يُحفظ A1 كما هو؛ لا إعادة حساب CEFR أو النسبة.",
+      "action": "لا تعديل؛ تُحفظ البيانات والوسم المسجل.",
+      "reviewed": {
+        "titleDe": "Die Großeltern kommen",
+        "titleAr": "الجدّان يأتيان",
+        "level": "A1",
+        "waisen": [
+          "die Großmutter",
+          "der Großvater",
+          "der Ehemann",
+          "die Geschwister",
+          "das Mädchen",
+          "das Baby",
+          "mitbringen",
+          "fliegen",
+          "ankommen"
+        ]
+      }
+    },
+    {
+      "id": "d-a1-22.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S2",
+        "S8"
+      ],
+      "finding": "يذكر السطر الجدة والجد، ومجيئهما السبت من تونس؛ العربية تحفظ الأشخاص والموعد والجهة.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Salma",
+        "de": "Meine Großmutter und mein Großvater kommen am Samstag aus Tunis.",
+        "ar": "جدتي وجدي يأتيان يوم السبت من تونس."
+      }
+    },
+    {
+      "id": "d-a1-22.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "finding": "السؤال عن سفرهما بالطائرة وموعد الوصول محفوظ في الترجمة؛ PONS يثبت fliegen وankommen، ويبيّن فصل an في التصريف.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Nina",
+        "de": "Fliegen sie? Wann sollen sie ankommen?",
+        "ar": "هل يطيران؟ متى يُفترض أن يصلا؟"
+      }
+    },
+    {
+      "id": "d-a1-22.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S3",
+        "S5",
+        "S6",
+        "S9",
+        "S10",
+        "S11"
+      ],
+      "finding": "ترجمت «14 Uhr» بـ«في الثانية» فحُذف كونها الثانية بعد الظهر، وترجمت abholen بـ«يأخذهما» من دون دلالة الاستقبال/الالتقاط. Duden يذكر المقابلة بين «drei Uhr» و«fünfzehn Uhr»؛ ومعنى abholen هنا لقاء الشخص في موضع والذهاب معه.",
+      "action": "عُدلت العربية فقط إلى «نعم، تصل الطائرة في الساعة الثانية بعد الظهر. سيذهب زوجي لاستقبالهما.»؛ بقي الألماني والأسئلة كما هما.",
+      "reviewed": {
+        "who": "Salma",
+        "de": "Ja, das Flugzeug kommt um 14 Uhr an. Mein Ehemann holt sie ab.",
+        "ar": "نعم، تصل الطائرة في الساعة الثانية بعد الظهر. سيذهب زوجي لاستقبالهما."
+      },
+      "before": {
+        "ar": "نعم، الطائرة تصل في الثانية. زوجي يأخذهما."
+      }
+    },
+    {
+      "id": "d-a1-22.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S12"
+      ],
+      "finding": "Wohnen sie bei euch? يسأل هل يسكنان عندكم؛ الترجمة تحفظ معنى السكن والمخاطب الجمع.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Nina",
+        "de": "Wohnen sie bei euch?",
+        "ar": "هل يسكنان عندكم؟"
+      }
+    },
+    {
+      "id": "d-a1-22.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S4",
+        "S13",
+        "S14"
+      ],
+      "finding": "الترجمة تنقل أسبوعين والإخوة والزيارة، لكنها أسقطت dann «حينها/في ذلك الوقت» الذي يربط زيارة الإخوة بمدة زيارة الجدين.",
+      "action": "أُضيفت «حينها» فقط: «إخوتي يأتون للزيارة حينها أيضاً»؛ لم تُغيّر صيغة الجواب المختصر «نعم، أسبوعين».",
+      "reviewed": {
+        "who": "Salma",
+        "de": "Ja, zwei Wochen. Meine Geschwister kommen dann auch zu Besuch.",
+        "ar": "نعم، أسبوعين. إخوتي يأتون للزيارة حينها أيضاً."
+      },
+      "before": {
+        "ar": "نعم، أسبوعين. إخوتي يأتون للزيارة أيضاً."
+      }
+    },
+    {
+      "id": "d-a1-22.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S4"
+      ],
+      "finding": "يسأل عن عدد الإخوة والأخوات؛ «كم أخاً وأختاً لديك؟» تحفظ السؤال والجمع.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Nina",
+        "de": "Wie viele Geschwister hast du?",
+        "ar": "كم أخاً وأختاً لديك؟"
+      }
+    },
+    {
+      "id": "d-a1-22.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S4",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "finding": "العدد اثنان، أحدهما أخ والأخرى أخت؛ ثم تقول الأخت إنها تريد إحضار رضيعها، وهي بنت. تقابل المفردات والمعنى موجودة في الترجمة.",
+      "action": "لا تعديل؛ «بنت» إضافة تفسيرية قصيرة لـein Mädchen وليست تناقضاً.",
+      "reviewed": {
+        "who": "Salma",
+        "de": "Zwei: einen Bruder und eine Schwester. Meine Schwester möchte ihr Baby mitbringen, ein Mädchen.",
+        "ar": "اثنان: أخ وأخت. أختي تريد إحضار طفلتها، بنت."
+      }
+    },
+    {
+      "id": "d-a1-22.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S2",
+        "S14",
+        "S18",
+        "S19"
+      ],
+      "finding": "في freuen sich auf das Baby، حرف الجر auf يعبر عن التطلع إلى حدث/شخص قادم؛ «تفرح بالرضيعة» أقرب إلى فرح قائم بها ولا يصرّح بالتطلع. أُبقي «البيت ممتلئ» لأن السياق يسمح بقراءة مستقبلية ولا يثبت خطأً مستقلاً.",
+      "action": "صُحح الجزء إلى «جدتك تتطلع بالتأكيد إلى قدوم الطفلة»؛ لم يُعدّل النص الألماني ولا بقية الجملة.",
+      "reviewed": {
+        "who": "Nina",
+        "de": "Wie schön! Dann ist das Haus voll. Deine Großmutter freut sich sicher auf das Baby.",
+        "ar": "ما أجمل! إذن البيت ممتلئ. جدتك تتطلع بالتأكيد إلى قدوم الطفلة."
+      },
+      "before": {
+        "ar": "ما أجمل! إذن البيت ممتلئ. جدتك تفرح بالرضيعة بالتأكيد."
+      }
+    },
+    {
+      "id": "d-a1-22-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S3",
+        "S9",
+        "S10"
+      ],
+      "finding": "المفتاح «der Ehemann von Salma» يسنده السطر 2 حرفياً. الأخت مرتبطة بإحضار الرضيعة والجدة هي القادمة، وهما مشتتان مسموعان في الحوار؛ شرح الفخاخ صحيح.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-22-q1",
+        "type": "mc",
+        "promptDe": "Wer holt die Großeltern ab?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "options": [
+          "die Schwester von Salma",
+          "die Großmutter selbst",
+          "der Ehemann von Salma"
+        ],
+        "answer": "der Ehemann von Salma",
+        "explanationAr": "الدليل: «Mein Ehemann holt sie ab». الفخّ 1: الأخت تحضر الرضيعة. الفخّ 2: الجدة هي القادمة.",
+        "falle": true
+      }
+    },
+    {
+      "id": "d-a1-22-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S13"
+      ],
+      "finding": "السطر «Ja, zwei Wochen» يحدد مدة الإقامة؛ المفتاح مطابق. التفسير يميّز بين رقم 14 كموعد وصول ووحدة مدة البقاء.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-22-q2",
+        "type": "mc",
+        "promptDe": "Wie lange bleiben die Großeltern?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "options": [
+          "zwei Wochen",
+          "zwei Tage",
+          "zwei Stunden"
+        ],
+        "answer": "zwei Wochen",
+        "explanationAr": "الدليل: «Ja, zwei Wochen». الفخّ 1: الرقم صحيح والوحدة خاطئة. الفخّ 2: ساعتان لم تُذكرا، 14 Uhr موعد الوصول.",
+        "falle": true
+      }
+    },
+    {
+      "id": "d-a1-22-q3",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S5",
+        "S6"
+      ],
+      "finding": "الفراغ يطلب الجزء المنفصل من ankommen في «Das Flugzeug kommt um 14 Uhr an»؛ الإجابة [an] صحيحة والشرح يذكر الانفصال.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-22-q3",
+        "type": "fill",
+        "promptDe": "Das Flugzeug kommt um 14 Uhr ___.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+        "answer": [
+          "an"
+        ],
+        "explanationAr": "الدليل: «das Flugzeug kommt um 14 Uhr an» — ankommen فعل منفصل."
+      }
+    },
+    {
+      "id": "d-a1-22.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "finding": "جملة الإملاء منقولة حرفياً من السطر 1؛ تحقق الهدف اللغوي ankommen دون تغيير النص.",
+      "action": "لا تعديل؛ إملاء مطابق للسطر الحواري.",
+      "reviewed": {
+        "sentence": "Fliegen sie? Wann sollen sie ankommen?"
+      }
+    },
+    {
+      "id": "d-a1-22.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "finding": "الجملة منقولة حرفياً من السطر 6؛ المقابلات Baby وMädchen وmitbringen مسنودة.",
+      "action": "لا تعديل؛ إملاء مطابق للسطر الحواري.",
+      "reviewed": {
+        "sentence": "Meine Schwester möchte ihr Baby mitbringen, ein Mädchen."
+      }
+    },
+    {
+      "id": "d-a1-23",
+      "kind": "بيانات الحوار: العنوان والسياق ومرتكزات المفردات",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S28",
+        "S29",
+        "S30",
+        "S31"
+      ],
+      "finding": "العنوان يصف مكالمة طوارئ عن حريق مطبخ. من المرتكزات العشرة تظهر ثمانية في النص الألماني للأسطر، بينما Notruf يظهر في العنوان/وسم المتحدث وschnell لا يظهر في الأسطر. K82c يطلب ثمانية على الأقل؛ عدم ظهور schnell وحده لا يثبت عيباً. وسم A1 محفوظ ولا يعاد تقييمه.",
+      "action": "لا تعديل للعنوان أو waisen؛ لا يُستنتج خطأ من عدم ظهور مرساة واحدة مع تحقق حد التغطية.",
+      "reviewed": {
+        "titleDe": "Notruf: Feuer in der Küche",
+        "titleAr": "اتصال طوارئ: حريق في المطبخ",
+        "level": "A1",
+        "waisen": [
+          "der Notruf",
+          "die Feuerwehr",
+          "der Eingang",
+          "der Ausgang",
+          "die Treppe",
+          "drinnen",
+          "niemand",
+          "jemand",
+          "die Richtung",
+          "schnell"
+        ]
+      }
+    },
+    {
+      "id": "d-a1-23.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S21",
+        "S34",
+        "S37"
+      ],
+      "finding": "الترجمة تنقل الاسم والشارع والرقم والحريق في المطبخ. لكن العنوان لا يتضمن بلدة؛ BBK يطلب تحديد مكان الطوارئ، ولا تكفي المعطيات لمعرفة هل يعرفها مركز الاتصال سياقياً أو هل هذا مثال كامل للموقع. ليس هذا خطأ ترجمة مثبتاً.",
+      "action": "تُترك كما هي؛ لا أختلق مدينة أو أصف العنوان بأنه غير صحيح. يلزم توضيح المؤلف إن أُريد اعتماد السطر نموذجاً مكتملاً لبيانات موقع مكالمة 112.",
+      "reviewed": {
+        "who": "Frau Weber",
+        "de": "Hallo, hier Weber, Gartenstraße 8. In der Küche ist Feuer!",
+        "ar": "مرحباً، معك فيبر، شارع غارتن 8. في المطبخ حريق!"
+      }
+    },
+    {
+      "id": "d-a1-23.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S27",
+        "S28",
+        "S29",
+        "S34"
+      ],
+      "finding": "«Bleiben Sie ruhig» تقابل «ابقي هادئة»، ثم يسأل إن كان لا يزال أحد بالداخل؛ التطابق الدلالي مدعوم بالمفردات وبإرشاد BBK العام للهدوء والتحقق من الموجودين.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Notruf",
+        "de": "Bleiben Sie ruhig. Ist noch jemand drinnen?",
+        "ar": "ابقي هادئة. هل ما زال أحد في الداخل؟"
+      }
+    },
+    {
+      "id": "d-a1-23.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S23",
+        "S30",
+        "S33",
+        "S34"
+      ],
+      "finding": "الجواب يقول لا أحد بالداخل وأن الجميع في الخارج أمام المدخل؛ الضمائر والمكان محفوظة. BBK يوصي بالتحقق بعد الإخلاء من وجود الجميع في الخارج.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Frau Weber",
+        "de": "Nein, niemand. Wir sind alle draußen, vor dem Eingang.",
+        "ar": "لا، لا أحد. كلنا في الخارج أمام المدخل."
+      }
+    },
+    {
+      "id": "d-a1-23.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S22",
+        "S32",
+        "S34"
+      ],
+      "finding": "المعنى العربي ينقل أن الإطفاء في الطريق وتقدير «خمس دقائق». المعاجم تسند Feuerwehr وunterwegs، لكن الإرشاد الرسمي لا يثبت موعد وصول محدداً؛ لذلك يبقى الرقم تقديراً قصصياً لا معلومة عامة قابلة للتعميم.",
+      "action": "لا تعديل تخمينياً؛ يبقى التقدير كما قالته شخصية الحوار، ولا يُقدّم في التقرير قاعدةً لزمن الاستجابة.",
+      "reviewed": {
+        "who": "Notruf",
+        "de": "Gut. Die Feuerwehr ist schon unterwegs, fünf Minuten.",
+        "ar": "حسناً. الإطفاء في الطريق، خمس دقائق."
+      }
+    },
+    {
+      "id": "d-a1-23.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S24",
+        "S25",
+        "S34",
+        "S35",
+        "S36"
+      ],
+      "finding": "المخرج إلى الحديقة مفتوح والدرج خالٍ؛ الترجمة تنقل المخرج والدرج والصفة. BBK يحذر من سلالم مملوءة بالدخان، لكن السطر يصف السلم بأنه خالٍ ولا يطلب استعماله؛ لا تناقض مثبت.",
+      "action": "لا تعديل؛ لا أستنتج أن السلم آمن في كل حالة أو أن الحوار يأمر باستخدامه.",
+      "reviewed": {
+        "who": "Frau Weber",
+        "de": "Der Ausgang zum Garten ist offen, die Treppe ist frei.",
+        "ar": "المخرج إلى الحديقة مفتوح، والدرج خالٍ."
+      }
+    },
+    {
+      "id": "d-a1-23.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S34",
+        "S35"
+      ],
+      "finding": "التوجيه «لا تعودي إلى البيت» يطابق Gehen Sie nicht zurück ins Haus. BBK يشترط عدم العودة إلى المبنى إلا بعد تأكيد الجهات المختصة سلامته.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Notruf",
+        "de": "Sehr gut. Gehen Sie nicht zurück ins Haus.",
+        "ar": "ممتاز. لا تعودي إلى البيت."
+      }
+    },
+    {
+      "id": "d-a1-23.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S26",
+        "S34"
+      ],
+      "finding": "السائلة تستفسر عن الاتجاه الذي ينبغي أن تسلكه المجموعة؛ الترجمة تحفظ Frage nach der Richtung.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Frau Weber",
+        "de": "In welche Richtung sollen wir gehen?",
+        "ar": "في أي اتجاه نذهب؟"
+      }
+    },
+    {
+      "id": "d-a1-23.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S22",
+        "S26",
+        "S34",
+        "S35"
+      ],
+      "finding": "المعنى العربي يطابق طلب الانتقال إلى الجهة المقابلة والانتظار. BBK يوصي بالانتظار في موضع واضح الرؤية والتنبيه عند وصول الإطفاء، لكنه لا يقرر قاعدة عامة لعبور الشارع؛ اختيار الجهة يعتمد على المشهد وسلامة الطريق. لم أستخدم نصيحةً عن تسرب الغاز كدليل لحريق.",
+      "action": "لا تعديل قبل توضيح سياق المشهد؛ لا أعمم العبور إلى الجهة الأخرى ولا أحكم بأن التوجيه خاطئ دائماً.",
+      "reviewed": {
+        "who": "Notruf",
+        "de": "Auf die andere Straßenseite. Warten Sie dort auf die Feuerwehr.",
+        "ar": "إلى الجهة الأخرى من الشارع. انتظروا هناك الإطفاء."
+      }
+    },
+    {
+      "id": "d-a1-23-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S21",
+        "S23",
+        "S25",
+        "S28",
+        "S30",
+        "S34"
+      ],
+      "finding": "الإجابة «Nein, alle sind draußen vor dem Eingang» تلخص جواب السطر 2. المشتتان يعيدان مكان النار والدرج المذكور، والشرح يميز بين موضع الخطر وبين حالة الإخلاء.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-23-q1",
+        "type": "mc",
+        "promptDe": "Ist noch jemand im Haus?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "options": [
+          "Nein, alle sind draußen vor dem Eingang.",
+          "Ja, jemand ist in der Küche.",
+          "Ja, jemand ist auf der Treppe."
+        ],
+        "answer": "Nein, alle sind draußen vor dem Eingang.",
+        "explanationAr": "الدليل: «Nein, niemand. Wir sind alle draußen, vor dem Eingang». الفخّ 1: المطبخ مكان النار. الفخّ 2: الدرج «frei».",
+        "falle": true
+      }
+    },
+    {
+      "id": "d-a1-23-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S22",
+        "S32",
+        "S34"
+      ],
+      "finding": "المفتاح «in fünf Minuten» مستند إلى تقدير شخصية المكالمة «fünf Minuten». هذا سؤال فهم لما يقوله الحوار، لا تحققٌ من زمن استجابة عام؛ شرح المشتتات يفرق بين الرقم 8 في العنوان الزمني وكون الإطفاء ما زال في الطريق.",
+      "action": "لا تعديل؛ يُحصر المفتاح في السيناريو ولا يُعمم التقدير الواقعي.",
+      "reviewed": {
+        "id": "d-a1-23-q2",
+        "type": "mc",
+        "promptDe": "Wann kommt die Feuerwehr?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "options": [
+          "in acht Minuten",
+          "in fünf Minuten",
+          "sie ist schon da"
+        ],
+        "answer": "in fünf Minuten",
+        "explanationAr": "الدليل: «Die Feuerwehr ist schon unterwegs, fünf Minuten». الفخّ 1: 8 رقم البيت. الفخّ 2: «unterwegs» في الطريق لا وصلت.",
+        "falle": true
+      }
+    },
+    {
+      "id": "d-a1-23-q3",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S34",
+        "S35"
+      ],
+      "finding": "العبارة تقول إن Frau Weber ينبغي أن تعود؛ الإجابة falsch لأن المشغّل قال صراحةً ألا تعود. إرشاد BBK يؤكد انتظار التصريح قبل دخول المبنى بعد الحريق.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-23-q3",
+        "type": "truefalse",
+        "promptDe": "Frau Weber soll ins Haus zurückgehen.",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Gehen Sie nicht zurück ins Haus»."
+      }
+    },
+    {
+      "id": "d-a1-23.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S28",
+        "S29"
+      ],
+      "finding": "«Ist noch jemand drinnen?» منقولة حرفياً من السطر 1؛ السؤال ومفردتاه jemand/drinnen متطابقتان.",
+      "action": "لا تعديل؛ إملاء مطابق للسطر الحواري.",
+      "reviewed": {
+        "sentence": "Ist noch jemand drinnen?"
+      }
+    },
+    {
+      "id": "d-a1-23.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S34",
+        "S35"
+      ],
+      "finding": "«Gehen Sie nicht zurück ins Haus.» منقولة حرفياً من السطر 5؛ النهي واضح ومتسق مع الإرشاد العام بعدم دخول مبنى متضرر حتى يُصرح بذلك.",
+      "action": "لا تعديل؛ إملاء مطابق للسطر الحواري.",
+      "reviewed": {
+        "sentence": "Gehen Sie nicht zurück ins Haus."
+      }
+    },
+    {
+      "id": "d-a1-24",
+      "kind": "بيانات الحوار: العنوان والسياق ومرتكزات المفردات",
+      "status": "سليم",
+      "sources": [
+        "S38",
+        "S39",
+        "S43",
+        "S44",
+        "S45",
+        "S48",
+        "S49",
+        "S51",
+        "S52",
+        "S54"
+      ],
+      "finding": "العنوان يطابق سؤال وقت الفراغ. كل مرتكزات waisen العشرة ممثلة في النص (Freizeit، Sport، schwimmen، tanzen، Lied، Foto، spazieren gehen، zufrieden، mag من mögen، täglich). A1 مخزّن فقط؛ لا مراجعة CEFR/نسبة.",
+      "action": "لا تعديل للبيانات؛ لا إعادة حساب المستوى.",
+      "reviewed": {
+        "titleDe": "Was machst du in der Freizeit?",
+        "titleAr": "ماذا تفعل في وقت الفراغ؟",
+        "level": "A1",
+        "waisen": [
+          "die Freizeit",
+          "der Sport",
+          "schwimmen",
+          "tanzen",
+          "das Lied",
+          "das Foto",
+          "spazieren gehen",
+          "zufrieden",
+          "mögen",
+          "täglich"
+        ]
+      }
+    },
+    {
+      "id": "d-a1-24.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S38"
+      ],
+      "finding": "السؤال إلى Leila عن نشاط وقت الفراغ مؤنث في العربية («تفعلين») ويحفظ المخاطبة والموضوع.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Tom",
+        "de": "Was machst du in der Freizeit, Leila?",
+        "ar": "ماذا تفعلين في وقت فراغك يا ليلى؟"
+      }
+    },
+    {
+      "id": "d-a1-24.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S39",
+        "S40",
+        "S41",
+        "S42",
+        "S43",
+        "S44"
+      ],
+      "finding": "«Ich mache viel Sport» تعني ممارسة الرياضة بكثرة، لا «رياضة كثيرة» بوصفها اسماً مفرداً مؤنثاً معدوداً. Goethe يورد الجملة الألمانية نفسها؛ وPONS/Arabdict يسندان Sport = رياضة وSport machen = ممارسة الرياضة.",
+      "action": "عُدلت العبارة إلى «أمارس الرياضة كثيراً»؛ بقيت جملة السباحة والتوقيت كما هما.",
+      "reviewed": {
+        "who": "Leila",
+        "de": "Ich mache viel Sport. Ich schwimme täglich, morgens um sieben.",
+        "ar": "أمارس الرياضة كثيراً. أسبح يومياً في السابعة صباحاً."
+      },
+      "before": {
+        "ar": "أمارس رياضة كثيرة. أسبح يومياً في السابعة صباحاً."
+      }
+    },
+    {
+      "id": "d-a1-24.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S45",
+        "S46",
+        "S47",
+        "S56"
+      ],
+      "finding": "المعنى «كل يوم؟ أفضل التنزه، في الحديقة» محفوظ. الفاصلة قبل im Park مقروءة كإضافة/ملحق بعد جملة مكتملة؛ §72 يجيز فصل الإضافات، مع أن الصياغة ذات وقفة بعدية ومعلّمة. لا يثبت المصدر أن الفاصلة خطأ.",
+      "action": "لا تعديل؛ تُحفظ الفاصلة ولا تُحوّل الملاحظة الأسلوبية إلى خطأ مؤكد.",
+      "reviewed": {
+        "who": "Tom",
+        "de": "Jeden Tag? Ich gehe lieber spazieren, im Park.",
+        "ar": "كل يوم؟ أنا أفضّل التنزّه مشياً في الحديقة."
+      }
+    },
+    {
+      "id": "d-a1-24.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S48",
+        "S49",
+        "S55"
+      ],
+      "finding": "المتحدث يقول إنه يحب ذلك أيضاً، ثم يذكر الرقص مع الصديقات يوم السبت؛ الترجمة تحفظ الإضافة والموعد والنشاط.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Leila",
+        "de": "Das mag ich auch. Und am Samstag tanze ich mit Freundinnen.",
+        "ar": "أحب ذلك أيضاً. ويوم السبت أرقص مع صديقاتي."
+      }
+    },
+    {
+      "id": "d-a1-24.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S50",
+        "S51"
+      ],
+      "finding": "«Ich singe gern» و«Kennst du das Lied ...?» تقابلهما محبة الغناء والسؤال عن الأغنية؛ عنوان الأغنية محفوظ بلغته الأصلية.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Tom",
+        "de": "Ich singe gern. Kennst du das Lied „Die Gedanken sind frei“?",
+        "ar": "أحب الغناء. هل تعرفين أغنية «Die Gedanken sind frei»؟"
+      }
+    },
+    {
+      "id": "d-a1-24.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S50",
+        "S51"
+      ],
+      "finding": "Leila تنفي معرفة الأغنية ثم تطلب من Tom أن يغنيها لها؛ الضمير «ها» في العربية يعود إلى Lied المؤنثة.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Leila",
+        "de": "Nein. Singst du es mir vor?",
+        "ar": "لا. هل تغنّيها لي؟"
+      }
+    },
+    {
+      "id": "d-a1-24.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S52",
+        "S53"
+      ],
+      "finding": "Tom يؤجل ثم يلفت نظر Leila إلى صورة للجوقة؛ الترجمة تحفظ later والنداء والصورة والجوقة.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Tom",
+        "de": "Später. Schau, hier ist ein Foto vom Chor.",
+        "ar": "لاحقاً. انظري، هذه صورة الجوقة."
+      }
+    },
+    {
+      "id": "d-a1-24.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S54"
+      ],
+      "finding": "Leila تقول إن المشهد جميل وتصف Tom بأنه يبدو راضياً؛ الصفة المذكرة في العربية توافق المتلقي Tom.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Leila",
+        "de": "Schön! Du siehst sehr zufrieden aus.",
+        "ar": "جميل! تبدو راضياً جداً."
+      }
+    },
+    {
+      "id": "d-a1-24-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S43",
+        "S44",
+        "S46",
+        "S49"
+      ],
+      "finding": "الإجابة «täglich, morgens um sieben» اقتباس من السطر 1؛ السبت مرتبط بالرقص والحديقة بالتنزه، كما يشرح الفخّان.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-24-q1",
+        "type": "mc",
+        "promptDe": "Wann schwimmt Leila?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "options": [
+          "am Samstag mit Freundinnen",
+          "täglich, morgens um sieben",
+          "später im Park"
+        ],
+        "answer": "täglich, morgens um sieben",
+        "explanationAr": "الدليل: «Ich schwimme täglich, morgens um sieben». الفخّ 1: السبت للرقص. الفخّ 2: الحديقة للتنزّه.",
+        "falle": true
+      }
+    },
+    {
+      "id": "d-a1-24-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S46",
+        "S51",
+        "S52",
+        "S53"
+      ],
+      "finding": "ما يعرضه Tom هو «ein Foto vom Chor» حرفياً في السطر 6؛ الأغنية والحديقة مشتتان مذكوران في أدوار أخرى.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-24-q2",
+        "type": "mc",
+        "promptDe": "Was zeigt Tom?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "options": [
+          "ein Lied im Buch",
+          "den Park",
+          "ein Foto vom Chor"
+        ],
+        "answer": "ein Foto vom Chor",
+        "explanationAr": "الدليل: «hier ist ein Foto vom Chor». الفخّ 1: الأغنية يغنّيها لاحقاً. الفخّ 2: الحديقة مكان تنزّهه.",
+        "falle": true
+      }
+    },
+    {
+      "id": "d-a1-24-q3",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "sources": [
+        "S50",
+        "S51"
+      ],
+      "finding": "عبارة معرفة Leila للأغنية خاطئة؛ ردها «Nein» ثم طلبها أن يغنيها Tom لها يثبت ذلك، والمفتاح والشرح متطابقان.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-24-q3",
+        "type": "truefalse",
+        "promptDe": "Leila kennt das Lied.",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Nein. Singst du es mir vor?»."
+      }
+    },
+    {
+      "id": "d-a1-24.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S39",
+        "S40",
+        "S41",
+        "S42"
+      ],
+      "finding": "الجملة مطابقة حرفياً لأول جملة من السطر 1؛ الترجمة العربية عُدلت مع السطر نفسه لا مع نص الإملاء الألماني.",
+      "action": "لا تعديل؛ إملاء مطابق للسطر الحواري.",
+      "reviewed": {
+        "sentence": "Ich mache viel Sport."
+      }
+    },
+    {
+      "id": "d-a1-24.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S54"
+      ],
+      "finding": "الجملة منقولة حرفياً من السطر 7؛ معنى zufrieden بوصفه راضياً/مرتاحاً محفوظ.",
+      "action": "لا تعديل؛ إملاء مطابق للسطر الحواري.",
+      "reviewed": {
+        "sentence": "Du siehst sehr zufrieden aus."
+      }
+    }
+  ]
+}

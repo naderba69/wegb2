@@ -1,0 +1,205 @@
+#!/usr/bin/env python3
+"""R120 — review report for seventh B1 batch d-b1-22..d-b1-24."""
+from __future__ import annotations
+import json, glob
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[2]
+D=json.loads((ROOT/"content/dialogues.json").read_text(encoding="utf-8"))
+AUDIO=json.loads((ROOT/"content/dialog-audio.json").read_text(encoding="utf-8"))
+SCOPE=["d-b1-22","d-b1-23","d-b1-24"]
+OUT_JSON=ROOT/"docs/content-review-b1-dialogues-07-2026-10-08.json"
+OUT_MD=ROOT/"docs/content-review-b1-dialogues-07-2026-10-08.md"
+
+CORRECTIONS=[
+ {"unit":"d-b1-22.lines[1].ar","old":"أُراجِعُ النظام… لكِ الحق، إنها الطاولةُ المجاورة.","new":"أُراجِعُ النظام… لكم الحق — الصنفُ يخصُّ الطاولةَ المجاورة.",
+  "rationale":"(أ) «Sie haben recht» ضمير رسمي صريح (ويؤكده L2 «Bitte korrigieren Sie») → الجمع «لكم» لا مفرد المخاطَبة المؤنث «لكِ»؛ ليلى تخاطب النادل بـSie. (ب) «das ging an den Nebentisch» فاعلُه الصنف لا الطاولة؛ «إنها الطاولة المجاورة» تُسند الحكمَ إلى الطاولة وتخالف شرح Q1 نفسه («الطاولة المجاورة صاحبة الماء» أي أن الصنف لها)."},
+ {"unit":"d-b1-22.lines[2].ar","old":"أصلِحوا المجموعَ من فضلكم قبلَ الدفع.","new":"أصلِحوا المبلغَ من فضلكم قبلَ الدفع.",
+  "rationale":"«Betrag» = المبلغ (وهو لفظ شرح Q3: «38 المبلغ الخاطئ»)؛ و«المجموع» حاصلُ الجمع لا المبلغ المطالَب به."},
+ {"unit":"d-b1-22.lines[5].ar","old":"الحلوى من حسابِ الدار، والمطبخُ أُبلِغَ رسمياً.","new":"الحلوى من حسابِ الدار، والمطبخُ أُبلِغَ داخلياً.",
+  "rationale":"«intern gemeldet» = أُبلِغَ داخلياً؛ و«رسمياً» (officially) تعكس المعنى، فالتنبيه إجراءٌ داخلي لا رسمي."},
+ {"unit":"d-b1-22.lines[6].ar","old":"بالإنصافِ نعودُ غداً — شكراً.","new":"بالإنصافِ نعودُ — شكراً.",
+  "rationale":"«Mit Fairness kommt man wieder» لا يذكر موعداً؛ و«غداً» إضافة زمنية غير موجودة في الألماني فحُذفت."},
+ {"unit":"d-b1-22.lines[7].ar","old":"وإلى اللقاء، وسهرةً طيبة!","new":"وإلى اللقاء، وليلةً سعيدة!",
+  "rationale":"«gute Nacht» تحية وداعٍ ليلية (ليلة سعيدة/تصبح على خير)؛ و«سهرة طيبة» تعني أمسيةً ممتعة (schönen Abend) لا تحية النوم."},
+ {"unit":"d-b1-23.lines[0].ar","old":"أُعيدُ صياغةَ جدولٍ ضاقَ عن موعدين.","new":"عليَّ إعادةُ ترتيبِ جدولِ المحاضرات: المحاضرةُ مقابلَ التدريبِ العمليّ.",
+  "rationale":"(أ) «Stundenplan umbauen» = إعادة ترتيب الجدول لا «إعادة صياغة» نصية. (ب) «ضاقَ عن موعدين» اختراعٌ لا مقابل له في الألماني؛ والنص يسمّي التعارض صراحةً «Vorlesung gegen Praktikum» وهو مفتاح Q0."},
+ {"unit":"d-b1-23.lines[1].ar","old":"ما ساعاتُ تدريبِكِ العمليّ؟","new":"متى يقعُ تدريبُكِ العمليُّ؟",
+  "rationale":"«Wann liegt das Praktikum?» سؤالٌ عن وقت التدريب لا عن عدد ساعاته، وجواب مها زمنيّ: «يومياً من الثامنة إلى الثانية عشرة»."},
+ {"unit":"d-b1-23.lines[3].ar","old":"محاضرتُك تُنزَّلُ مسجَّلة — فنحوِّلُك إلى القسمِ باء.","new":"المحاضرةُ متوفّرةٌ كتسجيلٍ — وسنسجِّلُك في الدورةِ باء.",
+  "rationale":"(أ) «gibt es als Aufzeichnung» = متوفّرة كتسجيل لا «تُنزَّلُ» (تحميل). (ب) «wir buchen Kurs B» = نسجِّلك في الدورة (وشرح Q0: «Kurs B والتسجيل هما الحلّ») لا «نحوِّلُك إلى القسم» نقلٌ إداري؛ والملف يترجم Kurs بـ«دورة» في d-b1-10 وd-b1-27."},
+ {"unit":"d-b1-23.lines[4].ar","old":"أالمنشأةُ معترفٌ بتدريبِها عندكم؟","new":"وهل يجبُ على الجامعةِ أن تعترفَ بالتدريبِ العمليّ؟",
+  "rationale":"(أ) «die Uni» = الجامعة لا «المنشأة» (التي تقابل Firma في L5–L6) — انقلاب فاعل. (ب) البناء القديم مبنٍ للمجهول بمعنى اعتماد المنشأة عند «كم»، والمعنى الصحيح: هل يجب على الجامعة أن تعترف بالتدريب."},
+ {"unit":"d-b1-23.lines[5].ar","old":"نعم: رسالةُ اعتمادٍ بالمواعيد، وحدُّها ثلاثونَ ساعةً أسبوعياً.","new":"نعم: تأكيدٌ من الشركةِ بالمواعيد، بحدٍّ أقصى ثلاثونَ ساعةً أسبوعياً.",
+  "rationale":"(أ) «Bestätigung» = تأكيد (وهو لفظ شرح Q3: «التأكيد بالأوقات هو الأصل المفقود») لا «رسالة اعتماد». (ب) «der Firma» سقطت من الصياغة القديمة، والملف يترجم Firma بـ«الشركة» (d-b1-01، d-a2-13، d-b2-09). (ج) «maximal» = بحدٍّ أقصى."},
+ {"unit":"d-b1-23.lines[6].ar","old":"وإن لم تُصدِرِ المنشأةُ كتاباً؟","new":"وإن لم تُصدِرِ الشركةُ خطاباً؟",
+  "rationale":"(أ) Firma = الشركة على اتساق الملف، وهو الاتساق نفسه بين L5 وL6. (ب) «Schreiben» = خطاب/رسالة؛ و«كتاباً» تعني book في الاستعمال الحديث فتلتبس."},
+ {"unit":"d-b1-23.lines[7].ar","old":"بريدُ المديرةِ بموضوعٍ وساعاتٍ يكفيه غيرُ مُختم.","new":"بريدُ المديرةِ الإلكترونيُّ — بلا صيغةٍ رسمية، لكن خطّيّ — يكفي.",
+  "rationale":"(أ) «formlos» = بلا صيغة/شكل مفروض لا «غيرُ مُختم». (ب) «بموضوعٍ وساعاتٍ» مضمونٌ مخترع لا يذكره الألماني. (ج) «schriftlich» يلزم إبرازها لأنها فخّ Q3 («يجب أن يكون schriftlich»)، والفاعل البريد → «يكفي»."},
+ {"unit":"d-b1-24.lines[0].ar","old":"أمسَ أضعتُ في الحافلةِ حقيبةً وفيها حاسوبي.","new":"أمسِ مساءً أضعتُ في الحافلةِ حقيبةَ الحاسوبِ.",
+  "rationale":"(أ) «Gestern Abend» = أمس مساءً؛ و«مساءً» كانت محذوفة. (ب) «وفيها حاسوبي» تفصيل غير موجود في الألماني (Laptoptasche فقط)."},
+ {"unit":"d-b1-24.lines[1].ar","old":"الرقمُ والمحطة — بدقّةٍ رجاءً.","new":"الخطُّ والمحطة — بدقّةٍ، رجاءً.",
+  "rationale":"«Linie» = الخط لا «الرقم» (وL2 نفسه: «الخطُّ ستةٌ وعشرون» فالتعارض داخلي)، والملف يترجمها «الخط» في d-a1-06."},
+ {"unit":"d-b1-24.lines[3].ar","old":"وِجادةٌ أُبلِغَ عنها العشرينُ والعشرون، فوافقَها وصفُك.","new":"غرضٌ معثورٌ عليه أُبلِغَ عنه الساعةَ الثامنةَ وعشرينَ دقيقةً مساءً — والوصفُ مطابق.",
+  "rationale":"(أ) «Ein Fund» = غرضٌ معثور عليه؛ و«وِجادة» ليست مصطلحاً مألوفاً للمعثورات. (ب) «gemeldet um zwanzig zwanzig» = 20:20 → الساعة الثامنة وعشرين دقيقة مساءً على نمط d-a2-09؛ و«العشرينُ والعشرون» ليست تعبيراً سليماً عن وقت. (ج) «Beschreibung passt» = الوصف مطابق؛ «فوافقَها وصفُك» ركيكة وتضيف ضميراً غير موجود."},
+ {"unit":"d-b1-24.lines[5].ar","old":"التاسعة: الهويّةُ وإثباتُ ملكية: فاتورةٌ أو صور.","new":"من التاسعة — الهويّةُ وإثباتُ الملكية: فاتورةٌ أو صور.",
+  "rationale":"(أ) «Ab neun» = من التاسعة (بداية الاستلام) لا «التاسعة» وحدها — وشرح Q3 نفسه يسمّيها «الفخّ 1: التاسعة بداية الاستلام». (ب) «إثباتُ الملكية» بتعريف أدقّ."},
+ {"unit":"d-b1-24.lines[6].ar","old":"سأجيءُ بالفاتورةِ ولقطاتٍ من حاسوبي.","new":"سأجيءُ بالفاتورةِ ولقطاتٍ للجهاز.",
+  "rationale":"«Screenshots des Geräts» = لقطاتٌ للجهاز؛ و«من حاسوبي» تضميرٌ مخترع ولا ينقل «des Geräts»، واللقطات شكلٌ من إثبات الملكية تذكره أدلة مكتب المفقودات (freiburg.de: الفواتير/الصور)."},
+ {"unit":"d-b1-24.lines[7].ar","old":"أسبوعانِ في خزانتِنا ثم مزاد — فلتأتِ باكراً.","new":"أربعةَ عشرَ يوماً للحفظ، ثم مخزنُ المزادِ — فلتحضروا في الموعد.",
+  "rationale":"(أ) «Vierzehn Tage» = أربعة عشر يوماً (الرقم محور فخّ Q3) على اتساق d-a1-15/d-a2-26/d-a2-31 وd-b1-21 (R119). (ب) «خزانتِنا» تفصيلٌ مخترع؛ و«Aufbewahrung» = حفظ. (ج) «Versteigerungslager» = مخزن المزاد لا «مزاد» وحدها. (د) «kommen Sie pünktlich» صيغة Sie صريحة → «فلتحضروا في الموعد» على نمط d-b1-06 («Bitte kommen Sie pünktlich» → «حضروا في الموعد»)؛ و«باكراً» ليست «pünktlich»."},
+]
+
+CONTEXT_NOTES={
+ "d-b1-22":[
+  {"note":"«Küche ist intern gemeldet» صياغةٌ ألمانية مختصرة (Partizip/elliptisch) ومعناها أُبلِغَ المطبخُ داخلياً؛ النص الألماني مقفل لم يُعدَّل، والترقيع العربي جعله «أُبلِغَ داخلياً».","source":"مقارنة داخلية بالنص الألماني المقفل + قاعدة المراجعة R120."},
+  {"note":"حقوق الضيف: الطبقُ الرئيسي البارد مبرِّرُ شكوى فورية (ويشترط الاعتراض فوراً لا بعد الأكل)، والحلوى على حساب المطعم ممارسةُ كرَمٍ (Kulanz) واقعية في السيناريو.","source":"rp-online.de (Verbraucherzentrale/Dehoga: Reklamation sofort) · ruhr24.de (LG Karlsruhe: 30% عند انتظار 90 دقيقة، كال طعام = Sachmangel)."},
+  {"note":"تحية الوداع «gute Nacht» عند باب المطعم غير معتادة (الشائع «Auf Wiedersehen» أو «schönen Abend»)، لكنها واردة عند الوداع ليلاً؛ أُبقيت مقابلها العربي «ليلة سعيدة» بدل «سهرة طيبة».","source":"استعمال لغوي عام + حفظ البند الألماني المقفل L7."},
+  {"note":"دور الوصف: شرحا Q1/Q2 يسمّيان «الطاولة المجاورة صاحبة الماء»، والترقيع في L1 صار يطابقهما (الصنفُ يخصّ الطاولة المجاورة لا أنها هي الخطأ).","source":"فحص اتساق داخلي (شرحا Q1/Q2 في content/dialogues.json)."},
+ ],
+ "d-b1-23":[
+  {"note":"الحدّ الأسبوعي: العمل الجانبي العادي أثناء الفصل الدراسي محدود بـ20 ساعة للحفاظ على Werkstudentenprivileg (ويجوز أكثر في العطل أو أثناء تدريب إلزامي بحدّ 26 أسبوعاً/سنة)؛ و«ثلاثون ساعة» في الحوار تستقيم ضمن تدريب إلزامي (Pflichtpraktikum) وهو ما يوافق طلب الاعتراف بالتدريب.","source":"studierenplus.de (max. 20 Std./Woche, 26-Wochen-Regel) · praktikum.info (20-Stunden-Regel) · jobruf.de (Pflichtpraktika-Ausnahme)."},
+  {"note":"الاعتراف بالتدريب تتولاه الجامعة وفق نظامها (Praktikumsordnung) وتطلبه عادةً بتأكيد من الشركة بالأوقات — وهو ما يعكسه L5؛ والحد الأقصى «ثلاثون ساعة أسبوعياً» شرط برنامجي شائع لا نصّاً اتحادياً.","source":"praktikum.info (rechtliches: Werkstudent/Bedingungen) + سياق تعليمي (لا فتوى جامعية)."},
+  {"note":"«formlos, aber schriftlich» مفارقةٌ ظاهرية: المقصود لا صيغة رسمية مختومة لكن بشكل مكتوب قابل للإثبات (بريد إلكتروني)؛ و«Textform» تكفي في مثل هذه الإقرارات وفق المنطق نفسه المذكور في R119 (§ 309 Nr. 13 BGB، منذ 1.10.2016).","source":"مراجعة R119 (monsterdealz.de/finanda.de: Textform genügt) + التمييز Textform/Schriftform."},
+  {"note":"«Kurs B»: الملف يترجم Kurs بـ«دورة» (d-b1-10 وd-b1-27)؛ رُقِّع L3 من «القسم باء» إلى «الدورة باء» اتساقاً ومعنىً، و«تُنزَّلُ مسجَّلة» كانت لبساً بين Aufzeichnung (تسجيل) وHerunterladen (تنزيل).","source":"فحص اتساق داخلي (Kurs في d-b1-10/d-b1-27)."},
+ ],
+ "d-b1-24":[
+  {"note":"واجب الإبلاغ: من يجد شيئاً ويمسكه يلتزم بالإبلاغ (§ 965 BGB)، والإنابة تصل إلى الشرطة/مكتب المفقودات؛ و«Fundstelle auf dem Revier» جهة استلام واقعية في السيناريو.","source":"amtsdeutschland.de: Fundbüro — Fund melden (§ 965 BGB), Verlust melden."},
+  {"note":"مستندات الاستلام: هوية + إثبات ملكية (فاتورة/عقد شراء/صور) مطابقة للقوائم الرسمية، والاستلام «ab neun» أوقات فعلية؛ العبارة الألمانية تبيّن أن التاسعة بدايةٌ لا موعدٌ وحيد.","source":"freiburg.de: Fundsache abholen (Personalausweis; Eigentumsnachweis: Kaufvertrag, Kassenbeleg, Fotos) · stadt-fuessen.de (Benötigte Unterlagen)."},
+  {"note":"«Versteigerungslager» = مخزن المزاد، والبيع العلني لا يقع إلا بعد انتهاء المهلة النظامية (ستة أشهر كحدّ أدنى للحفظ، § 973 BGB، ثم §§ 979–980 BGB بعد إعلان)؛ ولذلك سُجّل W2 حول قراءة «أربعة عشر يوماً» حدّاً للاسترداد.","source":"amtsdeutschland.de (§ 973/§§ 979–980 BGB) · kommunalportal.nrw: Fundsachen — Aufbewahrung und Versteigerung."},
+  {"note":"«Linie»: رُقِّع L1 «الرقم»→«الخطّ» اتساقاً مع d-a1-06 ومع L2 نفسه («الخطُّ ستةٌ وعشرون»)؛ و«Haltestelle» = المحطة، و«Endhaltestelle» وردت في L2.","source":"فحص اتساق داخلي (d-a1-06 وL2 من الحوار نفسه)."},
+ ],
+}
+
+STYLE_ALTERNATIVES={
+ "d-b1-22":[
+  {"phrase":"والصنفُ يخصُّ الطاولةَ المجاورة.","alternative":"والصنفُ للطاولةِ المجاورة.","note":"das ging an den Nebentisch — الصياغتان تؤديان المعنى، والثانية أقرب حرفيّاً."},
+  {"phrase":"أصلِحوا المبلغَ من فضلكم","alternative":"صحِّحوا المبلغَ من فضلكم","note":"korrigieren = أصلِح/صحِّح؛ «صحِّح» أدقّ في سياق الفواتير."},
+  {"phrase":"الحلوى من حسابِ الدار","alternative":"الحلوى على حسابِ المطعم","note":"aufs Haus — «الدار» ترجمة حرفية؛ والشائع «على حساب المطعم»."},
+ ],
+ "d-b1-23":[
+  {"phrase":"عليَّ إعادةُ ترتيبِ جدولِ المحاضرات","alternative":"يجب أن أُعيدَ ترتيبَ جدولِ المحاضرات","note":"umbauen = إعادة بناء/ترتيب؛ والصيغة الفعلية أخفّ في الكلام اليومي."},
+  {"phrase":"المحاضرةُ متوفّرةٌ كتسجيلٍ","alternative":"المحاضرةُ متاحةٌ مسجَّلةً","note":"gibt es als Aufzeichnung — التسجيل هو المقصود في الحالتين."},
+  {"phrase":"تأكيدٌ من الشركةِ بالمواعيد","alternative":"شهادةٌ من الشركةِ بالأوقات","note":"Bestätigung — «شهادة» مألوفة في شهادات التدريب، و«تأكيد» أوسع ويطابق شرح Q3."},
+ ],
+ "d-b1-24":[
+  {"phrase":"غرضٌ معثورٌ عليه","alternative":"لقطةٌ","note":"Fund — «لقطة» شائعة في الاستعمال الإداري العربي؛ و«معثور عليه» أوضح للمتعلّم."},
+  {"phrase":"والوصفُ مطابق.","alternative":"والوصفُ يطابقه.","note":"Beschreibung passt — الفعل يوضّح الفاعلية، والاسمية أخفّ."},
+  {"phrase":"ثم مخزنُ المزادِ","alternative":"ثم يُحالُ إلى مخزنِ المزاد","note":"Versteigerungslager — صيغة الإحالة توضح انتقال الحفظ من القسم إلى المخزن."},
+ ],
+}
+
+SOURCES={
+ "d-b1-22":[
+  {"id":"S1","citation":"rp-online.de: Diese Rechte haben Sie im Restaurant — Reklamation sofort, Nachbesserung/Preisminderung","url":"https://rp-online.de/leben/ratgeber/verbraucher/diese-rechte-haben-sie-im-restaurant_aid-14160369"},
+  {"id":"S2","citation":"ruhr24.de: Essen kommt zu spät — Verbraucherzentralen, LG Karlsruhe (30% nach 90 Minuten), kaltes Essen = Sachmangel","url":"https://www.ruhr24.de/service/essen-kommt-zu-spaet-restaurant-reklamieren-rechte-gaeste-rechnung-bezahlen-preisminderung-92825332.html"},
+  {"id":"S3","citation":"bz-berlin.de: Das ist Ihr gutes Recht im Restaurant — Mangelrüge sofort, kaltes Essen","url":"https://bz-berlin.de/artikel-archiv/das-ist-ihr-gutes-recht-im-restaurant"},
+  {"id":"S4","citation":"kuechenfibel.de: Kann ich eine Rückerstattung erhalten, wenn das Essen kalt ist? — Mangel und Lösungsanspruch","url":"https://www.kuechenfibel.de/faq/kann-ich-eine-ruckerstattung-erhalten-wenn-das-essen-kalt-ist"},
+ ],
+ "d-b1-23":[
+  {"id":"S5","citation":"studierenplus.de: Werkstudent — max. 20 Std./Woche in der Vorlesungszeit, 26-Wochen-Regel, Pflichtpraktikum","url":"https://www.studierenplus.de/bildung-finanzieren/werkstudent"},
+  {"id":"S6","citation":"praktikum.info: Rechtliche Regelungen für Werkstudenten — 20-Stunden-Regel und Ausnahmen","url":"https://www.praktikum.info/karrieremagazin/rechtliches/werkstudent"},
+  {"id":"S7","citation":"jobruf.de: Werkstudentenprivileg — Voraussetzungen, Pflichtpraktika erlauben mehr als 20 Std./Woche","url":"https://www.jobruf.de/werkstudent/werkstudentenprivileg_voraussetzungen.html"},
+  {"id":"S8","citation":"haufe-akademie.de: Werkstudenten richtig abrechnen — 20 Std./Woche in der Vorlesungszeit, Jobs zusammengerechnet","url":"https://www.haufe-akademie.de/blog/themen/entgeltabrechnung/werkstudenten-richtig-abrechnen/"},
+ ],
+ "d-b1-24":[
+  {"id":"S9","citation":"amtsdeutschland.de: Fundbüro — Anzeige (§ 965 BGB), Aufbewahrung mindestens sechs Monate (§ 973 BGB), Versteigerung (§§ 979–980 BGB)","url":"https://amtsdeutschland.de/buergeramt/fundbuero/"},
+  {"id":"S10","citation":"freiburg.de: Fundsache abgeben oder nachfragen — Aufbewahrfrist sechs Monate; Unterlagen: Ausweis, Eigentumsnachweis (Kaufvertrag/Kassenbeleg/Fotos)","url":"https://www.freiburg.de/pb/,Lde/-/205332/;vbid6000959"},
+  {"id":"S11","citation":"stadt-fuessen.de: Fundbüro — Aufbewahrung sechs Monate (geringwertige vier Wochen), benötigte Unterlagen","url":"https://www.stadt-fuessen.de/Rathaus/Buergerservice/Fundbuero"},
+  {"id":"S12","citation":"kommunalportal.nrw: Fundsachen — Fundanzeige, Aufbewahrung und Versteigerung (sechs Monate)","url":"https://kdn-testkommune.kommunalportal.nrw/detail/-/vr-bis-detail/dienstleistung/11056/show"},
+ ],
+}
+
+CONTENT_WARNINGS=[
+ {"id":"W2","dialogue":"d-b1-24","field":"lines[7].de + questions[2].answer + dictation[1]",
+  "statement":"«Vierzehn Tage Aufbewahrung, dann Versteigerungslager»: قراءةُ «أربعة عشر يوماً» مدةً نهائية للحفظ قبل التملّك/البيع العلني تخالف المدة النظامية (ستة أشهر كحدٍّ أدنى للحفظ قبل انقضاء حقوق المالك، § 973 BGB، ثم §§ 979–980 BGB للبيع العلني بعد إعلان)؛ وتستقيم الجملة فقط بقراءة النقل الداخلي إلى مخزن المزاد مع استمرار المهلة القانونية هناك.",
+  "evidence":"amtsdeutschland.de (S9) · freiburg.de (S10) · stadt-fuessen.de (S11) · kommunalportal.nrw (S12): Aufbewahrfrist sechs Monate, danach Versteigerung.",
+  "modified":False,
+  "whyNotModified":"الألماني والأسئلة والمفاتيح والإملاءات محمية في هذه الدفعة (مراجعة عربية)؛ و«vierzehn Tage» جزء من فخّ Q3 ومن الإملاء L8 ومن الحوار نفسه، وتعديله يستلزم قرار محتوى مستقلاً.",
+  "recommendation":"مهمة محتوى منفصلة: توضيح الجملة الألمانية (مثل «vierzehn Tage hier, dann ins Versteigerungslager der Stadt» مع بيان الحفظ النظامي)، أو مواءمة الرقم مع المهلة القانونية، مع تحديث explanationAr عند التعديل."},
+]
+CONTENT_CHECKS=[
+ "الأرقام الداخلية d-b1-22: 38 − 12 = 26 متسقة بين L3 والخيارات والإملاء وشرح Q3.",
+ "زمن d-b1-24: 20:20 مُترجم على صيغة الملف (d-a2-09: 14:30 = الثانية والنصف بعد الظهر) و«من التاسعة» بداية استلام فعلية.",
+ "d-b1-24: مستندات الاستلام (هوية + إثبات ملكية: فاتورة أو صور) تطابق قوائم مكتب المفقودات الرسمية (freiburg.de/stadt-fuessen.de).",
+ "d-b1-23: «ثلاثون ساعة أسبوعياً» تستقيم كحدّ تدريب إلزامي (Pflichtpraktikum)؛ وحدّ العشرين ساعة Werkstudentenprivileg يخصّ العمل الجانبي العادي — لا تعارض.",
+]
+
+by={d["id"]:d for d in D}
+scope=[];units=lt=qt=dt=0
+for did in SCOPE:
+    dlg=by[did];lines=dlg["lines"];qs=dlg["questions"];dc=dlg.get("dictation") or []
+    lu=sum(len([k for k in ln if k in ("who","de","ar")]) for ln in lines)
+    qu=sum(len(q) for q in qs);u=4+lu+qu+len(dc)
+    units+=u;lt+=len(lines);qt+=len(qs);dt+=len(dc)
+    scope.append({"id":did,"level":dlg["level"],"titleDe":dlg["titleDe"],"titleAr":dlg["titleAr"],"lines":len(lines),"questions":len(qs),"dictation":len(dc),"units":u,"hasWaisenField":"waisen" in dlg,"who":sorted({ln["who"] for ln in lines})})
+
+ah=[]
+def walk(n):
+    if isinstance(n,dict):
+        if isinstance(n.get("id"),str) and n["id"] in SCOPE: ah.append(n["id"])
+        for v in n.values(): walk(v)
+    elif isinstance(n,list):
+        for v in n: walk(v)
+walk(AUDIO)
+mh=[]
+for tid in SCOPE: mh.extend(glob.glob(str(ROOT/"public"/"audio"/"**"/f"*{tid}*.mp3"),recursive=True))
+
+rep={
+ "reviewRule":"R120","date":"2026-10-08",
+ "scope":"الدفعة B1 السابعة d-b1-22..24 (اعتراض في المطعم، الإرشاد الجامعي: جدول المحاضرات، مكتب المفقودات في القسم) — حوارات قصيرة بلا waisen.",
+ "dialogues":scope,
+ "totals":{"dialogues":3,"lines":lt,"questions":qt,"dictation":dt,"approximateUnits":units},
+ "corrections":CORRECTIONS,"contextNotes":CONTEXT_NOTES,"styleAlternatives":STYLE_ALTERNATIVES,"sources":SOURCES,
+ "contentWarnings":CONTENT_WARNINGS,"contentChecks":CONTENT_CHECKS,
+ "audio":{"manifestEntries":ah,"mp3Files":mh,"note":"لا استماع ولا ادعاء صوتي."},
+ "waisen":{"present":False,"note":"الحوارات الثلاثة بلا حقل waisen (فحص صريح لكل كائن)."},
+ "judgement":{"correct":units-len(CORRECTIONS),"corrected":len(CORRECTIONS),"unresolved":0,
+  "note":"ثمانية عشر تصحيحاً عربياً مؤكداً: اتفاق ضمير Sie الصريح (لكم في d-b1-22، فلتحضروا في d-b1-24)، وتصحيح معانٍ (intern=داخلياً لا رسمياً، Betrag=المبلغ لا المجموع، Linie=الخط لا الرقم، Fund=معثور عليه، Beschreibung passt=الوصف مطابق، Rezeption der Uni=الجامعة لا المنشأة، buchen Kurs=تسجيل في الدورة لا تحويل قسم، Bestätigung=تأكيد، Schreiben=خطاب، formlos=بلا صيغة لا غير مختم، Aufzeichnung=تسجيل لا تنزيل)، وحذف إضافات غير موجودة (غداً، ضاق عن موعدين، بموضوع وساعات، وفيها حاسوبي، خزانتنا)، وتصحيح أرقام (20:20، Vierzehn Tage=أربعة عشر يوماً، Ab neun=من التاسعة)، وإصلاح تحيات ومصطلحات (gute Nacht=ليلة سعيدة، إثبات الملكية، لقطات للجهاز). الألماني/who/الأسئلة/المفاتيح/الإملاءات/الخيارات/الشرح مقفلة لم تُعدَّل."},
+ "limits":{"cefr":"لم يُعد تقييم CEFR أو النسبة.","audio":"لا استماع ولا توليد صوتي.","human":"ليست مراجعة بشرية.","legal":"حساب المطعم وإجراءات مكتب المفقودات سياق تعليمي ولا يُعدّان مشورة قانونية.","medical":"لا مضمون طبي في هذه الدفعة (لا أدوية ولا جرعات).","professional":"شروط الاعتراف بالتدريب تتبع نظام الجامعة المعنية، والمهل والمستندات أمثلة عامة."},
+ "gates":{"planned":"K194a–j"},
+}
+OUT_JSON.parent.mkdir(parents=True,exist_ok=True)
+OUT_JSON.write_text(json.dumps(rep,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+md=[]
+md.append("# مراجعة حوارات B1 دفعة 07: d-b1-22–d-b1-24\n\n")
+md.append("**التاريخ:** 2026-10-08 · **القاعدة:** R120 · **البوابات:** K194a–j\n\n")
+md.append("## النطاق\n\n");md.append(f"{rep['scope']}\n\n")
+md.append("## الإجمالي\n\n");t=rep["totals"]
+md.append(f"- حوارات: **{t['dialogues']}** · أسطر: **{t['lines']}** · أسئلة: **{t['questions']}** · إملاءات: **{t['dictation']}** · وحدات≈**{t['approximateUnits']}**\n\n")
+md.append("## الحكم\n\n");j=rep["judgement"]
+md.append(f"- **سليمة:** {j['correct']} · **مصححة:** {j['corrected']} · **غير محسومة:** {j['unresolved']}\n- {j['note']}\n\n")
+md.append("## التصحيحات المطبقة\n\n")
+for c in rep["corrections"]: md.append(f"- `{c['unit']}`: من «{c['old']}» إلى «{c['new']}» — {c['rationale']}\n")
+md.append("\n## تحذيرات محتوى (غير معدّلة)\n\n")
+if rep["contentWarnings"]:
+    for w in rep["contentWarnings"]:
+        md.append(f"### {w['id']} — {w['dialogue']} · `{w['field']}`\n")
+        md.append(f"- **الملاحظة:** {w['statement']}\n- **الأدلة:** {w['evidence']}\n")
+        md.append(f"- **معدّلة؟:** {'نعم' if w['modified'] else 'لا'} — {w['whyNotModified']}\n- **التوصية:** {w['recommendation']}\n")
+md.append("\n## فحوص المحتوى\n\n")
+for chk in rep["contentChecks"]: md.append(f"- {chk}\n")
+md.append("\n## ملاحظات سياقية (غير معدّلة)\n\n")
+for did,ns in rep["contextNotes"].items():
+    md.append(f"### {did}\n")
+    for n in ns: md.append(f"- {n['note']}\n  - المصدر: {n['source']}\n")
+md.append("\n## بدائل أسلوبية (غير معدّلة)\n\n")
+for did,al in rep["styleAlternatives"].items():
+    md.append(f"### {did}\n")
+    for a in al: md.append(f"- `{a['phrase']}` — بديل: `{a['alternative']}` — {a['note']}\n")
+md.append("\n## المصادر\n\n");ts=0
+for did,sl in rep["sources"].items():
+    md.append(f"### {did}\n")
+    for s in sl: md.append(f"- [{s['id']}] {s['citation']} — {s['url']}\n");ts+=1
+md.append(f"\n(مجموع المراجع: {ts}.)\n\n")
+md.append("## الصوت\n\n")
+md.append(f"- إدخالات بيان صوتي: {rep['audio']['manifestEntries'] or 'لا يوجد'}.\n- ملفات mp3: {rep['audio']['mp3Files'] or 'لا يوجد'}.\n- {rep['audio']['note']}\n\n")
+md.append("## البطاقات اليتيمة\n\n- "+rep["waisen"]["note"]+"\n\n")
+md.append("## الحدود\n\n")
+for k,v in rep["limits"].items(): md.append(f"- **{k}:** {v}\n")
+OUT_MD.write_text("".join(md),encoding="utf-8")
+print(f"Wrote {OUT_JSON.name} and {OUT_MD.name}")
+print(f"  lines={lt} q={qt} dict={dt} ≈units={units} corrections={len(CORRECTIONS)} warnings={len(CONTENT_WARNINGS)}")
+print(f"  sources={ts} audio={len(ah)}/{len(mh)}")
+
+if __name__=="__main__": pass

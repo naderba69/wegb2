@@ -127,7 +127,7 @@ export function GesundheitsWache({ progress }: { progress: Progress }) {
                 <button
                   key={i}
                   className="card"
-                  style={{ display: "flex", gap: "0.5rem", width: "100%", textAlign: "start", padding: "0.5rem 0.8rem", marginBottom: "0.35rem", cursor: "pointer", background: schritte[i] ? "rgba(53,94,59,.08)" : "white", border: "1px solid var(--color-line)" }}
+                  style={{ display: "flex", gap: "0.5rem", width: "100%", textAlign: "start", padding: "0.5rem 0.8rem", marginBottom: "0.35rem", cursor: "pointer", background: schritte[i] ? "var(--ui-green-soft)" : "var(--ui-surface-raised)", border: "1px solid var(--ui-border)" }}
                   onClick={() => setSchritte((x) => ({ ...x, [i]: !x[i] }))}
                 >
                   <span>{schritte[i] ? "✅" : s.emoji}</span>

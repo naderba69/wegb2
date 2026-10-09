@@ -89,7 +89,7 @@ A2_WOHNEN_VERTRAG = [
  ("der Handwerker","الحرفي","der","die Handwerker","Der Handwerker kommt morgen.","الحرفيُّ يأتي غداً","wohnen"),
  ("die Hausratversicherung","تأمينُ محتوياتِ المنزل","die","","Eine Hausratversicherung ist sinnvoll.","تأمينُ المحتوياتِ معقول","wohnen"),
  ("kündigen zum Monatsende","يُنهي آخرَ الشهر","","","Ich kündige zum Monatsende.","أُنهي العقدَ آخرَ الشهر","wohnen"),
- ("die Nachmieter suchen","يبحثُ عن مستأجرٍ بديل","","","Ich suche Nachmieter für die Wohnung.","أبحثُ عن مستأجرٍ بديل","wohnen"),
+ ("der Nachmieter","المستأجرُ البديلُ","der","die Nachmieter","Ich suche einen Nachmieter für die Wohnung.","أبحثُ عن مستأجرٍ بديلٍ للشقة.","wohnen"),
  ("der Anmeldung beim Amt","التسجيلُ لدى البلدية","","","Nach dem Umzug ist eine Anmeldung beim Amt nötig.","بعدَ الانتقالِ يلزمُ التسجيلُ لدى البلدية","wohnen"),
  ("die Ruhezeit","وقتُ الهدوء","die","die Ruhezeiten","Ab zweiundzwanzig Uhr gilt die Ruhezeit.","بعدَ العاشرةِ مساءً يبدأُ وقتُ الهدوء","wohnen"),
  ("die Treppenreinigung","تنظيفُ الدَّرَج","die","","Die Treppenreinigung machen alle Mieter.","تنظيفُ الدَّرَجِ على كلِّ المستأجرين","wohnen"),

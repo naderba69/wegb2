@@ -1,0 +1,1263 @@
+{
+  "date": "2026-10-05",
+  "batch": "A1-dialogues-06",
+  "scope": "تدقيق فردي للبيانات الحية d-a1-16 وd-a1-17 وd-a1-18 في content/dialogues.json: بيانات العنوان والسياق والمستوى المسجل وwaisen، كل سطر ألماني وترجمته والمتحدث، كل سؤال مع النوع والنص والخيارات والمفتاح والشرح والتعليمات، وكل جملة إملاء. قورنت الحقول بالسكريبت التاريخي scripts/patches/dialoge_a1_neu1.py دون اعتباره مرجعاً تلقائياً. لا يشمل السجل حوارات أخرى.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictationSentences": 6,
+    "unresolvedLevelNotes": 0,
+    "unresolvedContextNotes": 2,
+    "totalTrackedItems": 42
+  },
+  "statusCounts": {
+    "سليم": 36,
+    "مُصحح": 4,
+    "غير محسوم": 2
+  },
+  "method": "قُرئت النصوص الحية كاملة قبل التعديل، ثم سُجل معرّف ودليل وحكم وإجراء ومصدر منشور لكل وحدة من الوحدات الـ42. فُحصت الألمانية والعربية والمتحدث والأسئلة والخيارات والمفاتيح والشروح والتعليمات والإملاء ومفردات waisen. استُخدمت Goethe للسياق الموضوعي وDuden/PONS للتهجئة والمعاني والاستعمال، لا لإثبات طبيعية كل جملة. قورنت النسخة التاريخية بعد قراءة JSON الحي، ولم تُمنح أولوية. التقييم الكمي لـCEFR ونسبة المحتوى وحساب المستوى مؤجل؛ وسم A1 سُجل كما هو ولم يُعاد حسابه.",
+  "statusDefinitions": {
+    "سليم": "لم يثبت خطأ ضمن الأدلة والنطاق؛ قد يسجل الصف ملاحظة أسلوبية أو حدّاً للمصدر لا يوجب التعديل.",
+    "مُصحح": "ثبتت مشكلة محددة بدليل مناسب وطُبق تصحيح في النص/السؤال أو الشرح المرتبط به.",
+    "غير محسوم": "السياق أو الدليل غير كافٍ لحسم المسألة؛ لم يُعلن الخطأ ولم يجر تعديل تخميني."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة؛ ليست مراجعة بشرية أو اعتماداً لغوياً أو مدرسياً أو مهنياً.",
+    "مراجعة CEFR ونسبة المستوى وحساب المستوى الممكن مؤجلة عمداً؛ قائمة Goethe والسجلات المعجمية هنا سياق لغوي فقط ولا تنتج حكماً على المستوى.",
+    "عنوان d-a1-18 غير الرسمي مقابل الحوار الرسمي ملاحظة سجل تحريرية محتملة؛ العنوان قد يكون تسمية موضوع لا اقتباساً، لذلك لم يُغيّر.",
+    "Duden يقيد تحذير Ausländer بذوي الأصل الأجنبي المقيمين في بلد المتكلم. موقع الدورة ومرجع الكلمة غير محددين، والعبارة عن الحالة الاجتماعية في صف خيالي لا تقدم بيانات واقعية؛ لم تُعمم دلالة التحذير ولم تُصحح العبارة تخمينياً.",
+    "الوقائع الشخصية في d-a1-18 ووقائع مشهد النزهة/الأعمال المنزلية جزء من حوارات تعليمية تمثيلية؛ القواميس تثبت مقابلات الكلمات ولا تصدق سيرة شخصية أو واقعة واقعية.",
+    "لا يعني فحص 42 وحدة مراجعة بقية الحوارات أو الدروس أو المشروع، ولا تثبت بوابات الشيفرة صحة لغوية شاملة."
+  ],
+  "historicalPatchReview": {
+    "file": "scripts/patches/dialoge_a1_neu1.py",
+    "role": "سكربت تأليف تاريخي؛ ليس ملف التطبيق الحي ولا مرجعاً معتمداً للصحة اللغوية أو التحريرية. قورنت اقتراحاته بالنص الحي بعد قراءته.",
+    "usageCheck": "البحث في app/components/lib لا يظهر استيراداً إنتاجياً للسكريبت؛ مراجعته في scripts تاريخية/اختبار مقارنة. لا تُعامل مطابقة السكريبت مع الحي دليلاً مستقلاً على الصحة.",
+    "comparisons": [
+      {
+        "id": "d-a1-16",
+        "patchOptions": [
+          "am Fluss",
+          "auf dem Baum",
+          "im Wald",
+          "vom Bauernhof",
+          "aus dem Wald",
+          "vom Fluss",
+          "richtig",
+          "falsch"
+        ],
+        "patchAnswer": [
+          "am Fluss",
+          "vom Bauernhof",
+          "richtig"
+        ],
+        "patchLines": [
+          "Schau, ein Vogel auf dem Baum! Er singt.",
+          "Können wir morgen wieder kommen?"
+        ],
+        "liveAssessment": "قبل التصحيح تطابقت العناوين والأسطر الثنائية والمفردات والإملاء والأسئلة ومفاتيحها دلالياً؛ اختلف ترتيب خيارات q1 بين JSON والسكريبت فقط. كلاهما احتوى `wieder kommen` و«عصفور» للفظ Vogel. المقارنة التاريخية لم تصحح الخطأ: Duden وPONS سندا الكتابة المتصلة، وPONS يفرق بين Vogel العام وSperling/عصفور.",
+        "decision": "صُححت نقطتا الدقة في السجل الحي بمصدريهما؛ بقي ترتيب الخيارات الحي كما هو، ولم يُنسخ من السكريبت.",
+        "sources": [
+          "S2",
+          "S3",
+          "S4",
+          "S9",
+          "S10",
+          "S11"
+        ]
+      },
+      {
+        "id": "d-a1-17",
+        "patchOptions": [
+          "Er kehrt die Küche.",
+          "Er wäscht den Topf.",
+          "Er bügelt die Hemden.",
+          "der Schrank",
+          "der Mülleimer",
+          "der Korb mit der Wäsche",
+          "Seife"
+        ],
+        "patchAnswer": [
+          "Er kehrt die Küche.",
+          "der Schrank",
+          "Seife"
+        ],
+        "patchLines": [
+          "Du kehrst die Küche. Da ist viel Schmutz auf dem Boden.",
+          "Die Wäsche wasche ich, du bügelst danach die Hemden."
+        ],
+        "liveAssessment": "كان النص الحي والسكريبت متطابقين دلالياً قبل التدقيق، باستثناء ترتيب خيارات q2. كلاهما يسأل `Was macht der Sohn zuerst?` مع أن الحوار يذكر مهمة أولى ولا يصرح بترتيب الإنجاز؛ كما أن الكيّ مهمة مسندة للابن لاحقاً.",
+        "decision": "عُدّل سؤال الحي إلى «Welche Aufgabe nennt die Mutter zuerst?» لقياس ترتيب ذكر المهمة المحددة، لا ترتيب تنفيذها؛ بقيت الإجابة والخيارات. لم يمنح وجود السؤال في السكريبت التاريخي أي سلطة.",
+        "sources": [
+          "S17",
+          "S27",
+          "S31",
+          "S32",
+          "S33"
+        ]
+      },
+      {
+        "id": "d-a1-18",
+        "patchOptions": [
+          "Deutsch",
+          "Französisch",
+          "Arabisch",
+          "Nein, er ist ledig.",
+          "Ja, seine Frau ist in Sfax.",
+          "Ja, er ist verheiratet.",
+          "richtig",
+          "falsch"
+        ],
+        "patchAnswer": [
+          "Deutsch",
+          "Nein, er ist ledig.",
+          "richtig"
+        ],
+        "patchLines": [
+          "Herr Haddad, welche Nationalität haben Sie?",
+          "Nein, ich bin ledig. Viele Ausländer im Kurs sind auch ledig."
+        ],
+        "liveAssessment": "العنوان والأسطر والمفردات والأسئلة متطابقة دلالياً؛ اختلف ترتيب خيارات q1 وq2 بين JSON والسكريبت فقط. اختلاف du في العنوان عن Sie في الحوار والتحذير السياقي لكلمة Ausländer قائمان في النسختين؛ وجودهما تاريخياً لا يحسم ملاءمتهما.",
+        "decision": "لم يُنسخ أي تعديل تاريخي. سُجل تفاوت السجل وتحذير Ausländer كملاحظتين غير محسومتين، ولم تُستبدل المفردة دون معرفة المقصود ومكان الدورة.",
+        "sources": [
+          "S1",
+          "S43",
+          "S44",
+          "S45"
+        ]
+      }
+    ]
+  },
+  "patch": {
+    "file": "scripts/patches/review_a1_dialogues_06.py",
+    "preflight": "تحققت الأداة أولاً من بنية الحوارات الثلاثة، ثم قارنت القيم الحية الخمس الدقيقة بالقيم السابقة أو المصححة. نجح dry-run بلا كتابة؛ طُبقت التصويبات بعده، وأعيدت قراءة JSON المحفوظ والتحقق من الخيارات والمفاتيح والشرح. السكربت يرفض الحالة المختلطة أو أي قيمة غير متوقعة، وهو قابل لإعادة التشغيل دون كتابة إذا كانت التصويبات مطبقة.",
+    "fieldsChanged": 5,
+    "correctedItemIds": [
+      "d-a1-16.lines[1]",
+      "d-a1-16.lines[7]",
+      "d-a1-16-q1",
+      "d-a1-17-q1"
+    ],
+    "changes": [
+      "d-a1-16.lines[1] وd-a1-16-q1: استبدال «عصفور» بـ«طائر» لأن Vogel غير محدد النوع؛ تزامن اللفظ في شرح المشتت مع السطر.",
+      "d-a1-16.lines[7]: وصل wiederkommen وفق مدخل Duden لمعنى المجيء مجدداً.",
+      "d-a1-17-q1: استبدال سؤال تنفيذ الابن «أولاً» بسؤال أول مهمة محددة تذكرها الأم، وتحديث الشرح لئلا يدعي ترتيب تنفيذ غير منصوص عليه."
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Goethe-Institut — Goethe-Zertifikat A1 Start Deutsch 1 Wortliste",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "supports": "يحدد موضوعات A1 ذات الصلة هنا (الشخص، الجنسية/الأصل، البيئة والحيوانات، المنزل، تعلّم اللغات) تُستخدم هنا لمطابقة المجال الموضوعي فقط، لا لإعادة حساب المستوى."
+    },
+    {
+      "id": "S2",
+      "title": "Duden — wiederkommen",
+      "url": "https://www.duden.de/rechtschreibung/wiederkommen",
+      "supports": "يفصل بين العودة/المجيء مرة أخرى، ويعرض الكتابة المتصلة `wiederkommen` في معنى «noch einmal kommen» مع مثال وتصريف؛ يسند إصلاح تهجئة السطر."
+    },
+    {
+      "id": "S3",
+      "title": "PONS — Vogel (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Vogel",
+      "supports": "يعطي للمفردة العامة `Vogel` المقابلين العربيين `طائر` و`طير`؛ يسند إبقاء النوع عاماً."
+    },
+    {
+      "id": "S4",
+      "title": "PONS — Sperling (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Sperling",
+      "supports": "يربط `Sperling` بـ`عصفور/دوري`؛ مع S3 يبين أن `عصفور` أخص من `Vogel` في القاموس."
+    },
+    {
+      "id": "S5",
+      "title": "Duden — Spaziergang",
+      "url": "https://www.duden.de/rechtschreibung/Spaziergang",
+      "supports": "يعرّف Spaziergang بأنه مشي/جولة للنزهة أو الاستجمام؛ يسند معنى العنوان فقط، لا حكم مستوى."
+    },
+    {
+      "id": "S6",
+      "title": "PONS — Natur (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Natur",
+      "supports": "يعطي معنى Natur = طبيعة، بما يساند ترجمة العنوان والسطر."
+    },
+    {
+      "id": "S7",
+      "title": "PONS — Wald (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Wald",
+      "supports": "يعطي معنى Wald = غابة، بما يساند الأسطر ذات الصلة."
+    },
+    {
+      "id": "S8",
+      "title": "PONS — Luft (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Luft",
+      "supports": "يعطي Luft = هواء/جو؛ لم تُستنتج منه طبيعية كل تركيب مع gut."
+    },
+    {
+      "id": "S9",
+      "title": "PONS — Baum (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Baum",
+      "supports": "يعطي Baum = شجرة، ويدعم مرجع المشتت على الشجرة."
+    },
+    {
+      "id": "S10",
+      "title": "PONS — Fluss (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Fluss",
+      "supports": "يعطي Fluss (المجرى المائي) = نهر، ويدعم سؤال موضع الخيل."
+    },
+    {
+      "id": "S11",
+      "title": "PONS — Pferd (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Pferd",
+      "supports": "يعطي Pferd = حصان/فرس/خيل وفق السياق؛ الزوجان في الحوار حصانان."
+    },
+    {
+      "id": "S12",
+      "title": "PONS — Kuh (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Kuh",
+      "supports": "يعطي Kuh = بقرة."
+    },
+    {
+      "id": "S13",
+      "title": "PONS — Bauernhof (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Bauernhof",
+      "supports": "يعطي Bauernhof = مزرعة؛ يسند جواب سؤال البقرة وترجمته."
+    },
+    {
+      "id": "S14",
+      "title": "PONS — Himmel (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Himmel",
+      "supports": "يعطي Himmel = سماء."
+    },
+    {
+      "id": "S15",
+      "title": "PONS — Mond (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Mond",
+      "supports": "يعطي Mond = قمر."
+    },
+    {
+      "id": "S16",
+      "title": "PONS — Tier (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Tier",
+      "supports": "يعطي Tier = حيوان."
+    },
+    {
+      "id": "S17",
+      "title": "PONS — kehren (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/kehren",
+      "supports": "يميز معنى `kehren` بمعنى `fegen` ويعطي المقابل `كنس`، ويعرض تصريف `du kehrst`؛ يسند معنى الفعل في المهمة."
+    },
+    {
+      "id": "S18",
+      "title": "PONS — Schmutz (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Schmutz",
+      "supports": "يعطي Schmutz = وسخ/قذر، بما يساند ترجمة سطر الأرضية والإملاء."
+    },
+    {
+      "id": "S19",
+      "title": "PONS — Hausarbeit (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Hausarbeit",
+      "supports": "يعطي معنى العمل المنزلي، ويسند عنوان الحوار وترجمته."
+    },
+    {
+      "id": "S20",
+      "title": "PONS — Herd (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Herd",
+      "supports": "يعطي Herd = موقد في معنى جهاز الطهي."
+    },
+    {
+      "id": "S21",
+      "title": "PONS — Topf (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Topf",
+      "supports": "يعطي Topf = قدر/طنجرة."
+    },
+    {
+      "id": "S22",
+      "title": "PONS — Pfanne (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Pfanne",
+      "supports": "يعطي Pfanne = مقلاة."
+    },
+    {
+      "id": "S23",
+      "title": "PONS — Seife (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Seife",
+      "supports": "يعطي Seife = صابون."
+    },
+    {
+      "id": "S24",
+      "title": "PONS — Mülleimer (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/M%C3%BClleimer",
+      "supports": "يعطي معنى سلة/صندوق القمامة؛ يسند السطر والمشتت."
+    },
+    {
+      "id": "S25",
+      "title": "PONS — Wäsche (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/W%C3%A4sche",
+      "supports": "يفصل استعمال Wäsche بمعنى الغسيل/المغسولات عن معاني أخرى؛ يساند سياق السلة والغسل."
+    },
+    {
+      "id": "S26",
+      "title": "PONS — waschen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/waschen",
+      "supports": "يعطي waschen = غسل ويعرض تصريف الفعل؛ يسند الجملة والفراغ."
+    },
+    {
+      "id": "S27",
+      "title": "PONS — bügeln (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/b%C3%BCgeln",
+      "supports": "يعطي bügeln = كوى ويعرض تصريفه؛ يسند مهمة القمصان."
+    },
+    {
+      "id": "S28",
+      "title": "PONS — Handtuch (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Handtuch",
+      "supports": "يعطي Handtuch = منشفة؛ صيغة الحوار جمع Handtücher."
+    },
+    {
+      "id": "S29",
+      "title": "PONS — Korb (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Korb",
+      "supports": "يعطي Korb = سلة."
+    },
+    {
+      "id": "S30",
+      "title": "PONS — Schrank (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Schrank",
+      "supports": "يعطي Schrank = خزانة/دولاب."
+    },
+    {
+      "id": "S31",
+      "title": "Duden — zuerst",
+      "url": "https://www.duden.de/rechtschreibung/zuerst",
+      "supports": "يشرح «als Erstes» في ترتيب النشاط، ويورد أيضًا مثال «der zuerst genannte Verfasser» (الأول المذكور)؛ يسند تضييق السؤال إلى أول مهمة تذكرها الأم، لا أول مهمة ينفذها الابن."
+    },
+    {
+      "id": "S32",
+      "title": "PONS — Aufgabe (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Aufgabe",
+      "supports": "يعطي Aufgabe في معنى task = مهمة/واجب؛ يسند صياغة سؤال المهمة."
+    },
+    {
+      "id": "S33",
+      "title": "PONS — nennen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/nennen",
+      "supports": "يعطي nennen بمعنى يسمّي/يذكر، ويعرض التصريف؛ يسند سؤال «أي مهمة تذكرها الأم؟»."
+    },
+    {
+      "id": "S34",
+      "title": "PONS — Tunesier (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Tunesier",
+      "supports": "يعطي Tunesier = تونسي؛ لا يثبت هوية المتحدث الخيالي."
+    },
+    {
+      "id": "S35",
+      "title": "PONS — Heimat (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Heimat",
+      "supports": "يعطي Heimat = الوطن؛ يسند الترجمة، ولا يثبت مكان إقامة شخصية خيالية."
+    },
+    {
+      "id": "S36",
+      "title": "PONS — Nationalität (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Nationalit%C3%A4t",
+      "supports": "يعطي Nationalität = جنسية."
+    },
+    {
+      "id": "S37",
+      "title": "PONS — Muttersprache (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Muttersprache",
+      "supports": "يعطي Muttersprache = اللغة الأم؛ يسند السؤال والشرح."
+    },
+    {
+      "id": "S38",
+      "title": "PONS — Nachname (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Nachname",
+      "supports": "يعطي Nachname = اسم العائلة/اللقب."
+    },
+    {
+      "id": "S39",
+      "title": "PONS — Wörterbuch (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/W%C3%B6rterbuch",
+      "supports": "يعطي Wörterbuch = معجم/قاموس."
+    },
+    {
+      "id": "S40",
+      "title": "PONS — übersetzen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/%C3%BCbersetzen",
+      "supports": "يميز معنى «يترجم» ويعرض تصريف übersetzen؛ يسند تحذير المعلم والشرح."
+    },
+    {
+      "id": "S41",
+      "title": "PONS — ledig (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/ledig",
+      "supports": "يعطي ledig = أعزب/عازب؛ لا يثبت الحالة الاجتماعية لشخص حقيقي."
+    },
+    {
+      "id": "S42",
+      "title": "PONS — verheiratet (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/verheiratet",
+      "supports": "يعطي verheiratet = متزوج."
+    },
+    {
+      "id": "S43",
+      "title": "Duden — Ausländer",
+      "url": "https://www.duden.de/rechtschreibung/Auslaender",
+      "supports": "يعرف اللفظ بأنه مواطن دولة أجنبية، وينبه تحديدًا إلى أن وصف ذوي الأصل الأجنبي المقيمين في بلد المتكلم به يُعدّ على نحو متزايد تمييزيًا؛ هذا التحذير مشروط بالسياق ولا يثبت وحده حكمًا على حوار موقعه غير محدد."
+    },
+    {
+      "id": "S44",
+      "title": "Duden — duzen",
+      "url": "https://www.duden.de/rechtschreibung/duzen",
+      "supports": "يعرف duzen بأنه مخاطبة شخص بصيغة Du؛ يسند ملاحظة اختلاف سجل العنوان عن الحوار."
+    },
+    {
+      "id": "S45",
+      "title": "Duden — siezen",
+      "url": "https://www.duden.de/rechtschreibung/siezen",
+      "supports": "يعرف siezen بأنه مخاطبة شخص بصيغة Sie؛ يسند ملاحظة اختلاف سجل العنوان عن الحوار."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a1-16",
+      "kind": "بيانات الحوار: العنوان والسياق ومرساة المفردات",
+      "status": "سليم",
+      "reviewed": {
+        "titleDe": "Ein Spaziergang in der Natur",
+        "titleAr": "نزهة في الطبيعة",
+        "level": "A1",
+        "waisen": [
+          "die Natur",
+          "der Baum",
+          "der Fluss",
+          "der Wald",
+          "der Himmel",
+          "die Luft",
+          "das Tier",
+          "der Vogel",
+          "das Pferd",
+          "die Kuh",
+          "der Mond"
+        ]
+      },
+      "finding": "العنوان الألماني «Ein Spaziergang in der Natur» والعربي «نزهة في الطبيعة» يصفان المشهد؛ المشي للترفيه والطبيعة والغابة والحيوانات تظهر في النص. راجعت عناصر waisen الأحد عشر (Natur, Baum, Fluss, Wald, Himmel, Luft, Tier, Vogel, Pferd, Kuh, Mond) ووجدتها مستخدمة في الحوار أو مصروفة. هذا فحص لموضوعات وحقول السجل، لا إعادة تقييم لمستوى CEFR المسجل A1.",
+      "action": "أُبقي العنوان والمستوى المسجل وwaisen دون تغيير؛ تقييم CEFR والنسبة وحساب المستوى مؤجلة.",
+      "sources": [
+        "S1",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S14",
+        "S15",
+        "S16"
+      ]
+    },
+    {
+      "id": "d-a1-16.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Vater",
+        "de": "Komm, wir gehen in den Wald. Die Luft ist heute gut.",
+        "ar": "تعال، نذهب إلى الغابة. الهواء اليوم جيد."
+      },
+      "finding": "«Komm, wir gehen in den Wald» دعوة إلى الذهاب للغابة، والترجمة «تعال، نذهب إلى الغابة» تحفظها. PONS يطابق Wald بالغابة وLuft بالهواء؛ «الهواء اليوم جيد» ترجمة مباشرة مفهومة، ولا تكفي ملاحظة أن «نقي» أشيع لتصحيحها.",
+      "action": "لا تعديل؛ لم أستبدل gut بـ«نقي» لأن ذلك سيضيف معنى لا يفرضه النص.",
+      "sources": [
+        "S1",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "d-a1-16.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "reviewed": {
+        "who": "Kind",
+        "de": "Schau, ein Vogel auf dem Baum! Er singt.",
+        "ar": "انظر، طائر على الشجرة! يغرّد."
+      },
+      "finding": "الجملة الألمانية تقدم `ein Vogel` غير محدد النوع. PONS يعطي `Vogel` = طائر/طير، فيما يربط `Sperling` بـعصفور/دوري؛ لذلك كانت «عصفور» أضيق من النص، فاستبدلتها بـ«طائر». الإسناد `auf dem Baum` والغناء محفوظان.",
+      "action": "صُوّبت الترجمة العربية إلى «طائر» مع إبقاء الجملة الألمانية كما هي؛ عُدّل شرح q1 المتصل للمصطلح نفسه.",
+      "sources": [
+        "S3",
+        "S4",
+        "S9"
+      ],
+      "before": {
+        "who": "Kind",
+        "de": "Schau, ein Vogel auf dem Baum! Er singt.",
+        "ar": "انظر، عصفور على الشجرة! يغرّد."
+      }
+    },
+    {
+      "id": "d-a1-16.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Vater",
+        "de": "Ja. Und dort am Fluss stehen zwei Pferde.",
+        "ar": "نعم. وهناك عند النهر يقف حصانان."
+      },
+      "finding": "`am Fluss` يطابق «عند النهر»، و`zwei Pferde` يطابق «حصانان». ترتيب الفعل المفرد قبل الفاعل المثنى في «يقف حصانان» صحيح في العربية الفصحى.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S10",
+        "S11"
+      ]
+    },
+    {
+      "id": "d-a1-16.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Kind",
+        "de": "Ich sehe auch eine Kuh. Ist die Kuh ein Tier aus dem Wald?",
+        "ar": "أرى بقرة أيضاً. هل البقرة حيوان من الغابة؟"
+      },
+      "finding": "`Kuh` = بقرة و`Tier` = حيوان، و`aus dem Wald` = من الغابة. السؤال عن كون البقرة حيوانًا من الغابة مفهوم بوصفه سؤال الطفل في الحوار، لا دعوى علمية خارج المشهد.",
+      "action": "لا تعديل؛ تُقرأ العبارة سؤالًا حواريًا لا حقيقة يقررها النص.",
+      "sources": [
+        "S1",
+        "S7",
+        "S12",
+        "S16"
+      ]
+    },
+    {
+      "id": "d-a1-16.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Vater",
+        "de": "Nein, die Kuh kommt vom Bauernhof. Im Wald leben andere Tiere.",
+        "ar": "لا، البقرة من المزرعة. في الغابة تعيش حيوانات أخرى."
+      },
+      "finding": "الجواب «لا، البقرة من المزرعة» يقابل `Nein, die Kuh kommt vom Bauernhof`؛ والجملة التالية تطابق «في الغابة تعيش حيوانات أخرى». الترجمات المعجمية لـKuh/Bauernhof/Wald موافقة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S7",
+        "S12",
+        "S13",
+        "S16"
+      ]
+    },
+    {
+      "id": "d-a1-16.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Kind",
+        "de": "Der Himmel ist so blau. Ich liebe die Natur.",
+        "ar": "السماء زرقاء جداً. أحب الطبيعة."
+      },
+      "finding": "`Himmel` = السماء و`Natur` = الطبيعة؛ «زرقاء جداً» تنقل `so blau` في هذا السياق، ثم «أحب الطبيعة» تطابق `Ich liebe die Natur`.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S6",
+        "S14"
+      ]
+    },
+    {
+      "id": "d-a1-16.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Vater",
+        "de": "Ich auch. Am Abend sehen wir dann den Mond.",
+        "ar": "وأنا أيضاً. في المساء نرى القمر."
+      },
+      "finding": "`Am Abend` = في المساء و`Mond` = القمر؛ «وأنا أيضاً» تستعيد كلام الطفل، وحذف `dann` في العربية لا يغير العلاقة الزمنية الأساسية.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S15"
+      ]
+    },
+    {
+      "id": "d-a1-16.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "reviewed": {
+        "who": "Kind",
+        "de": "Können wir morgen wiederkommen?",
+        "ar": "هل نأتي مجدداً غداً؟"
+      },
+      "finding": "المعنى العربي «هل نأتي مجدداً غداً؟» يطابق المجيء مرة أخرى. Duden يورد `wiederkommen` متصلة بهذا المعنى (noch einmal kommen)، لذا فالفصل في الألمانية هنا تهجئة غير معيارية.",
+      "action": "صُححت كتابة الفعل الألماني إلى `wiederkommen`؛ لم تتغير الترجمة لأنها كانت مطابقة للمعنى.",
+      "sources": [
+        "S2"
+      ],
+      "before": {
+        "who": "Kind",
+        "de": "Können wir morgen wieder kommen?",
+        "ar": "هل نأتي مجدداً غداً؟"
+      }
+    },
+    {
+      "id": "d-a1-16-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "مُصحح",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wo stehen die Pferde?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "am Fluss",
+        "explanationAr": "الدليل: «dort am Fluss stehen zwei Pferde». الفخّ 1: الطائر على الشجرة. الفخّ 2: الغابة هدف النزهة.",
+        "options": [
+          "auf dem Baum",
+          "im Wald",
+          "am Fluss"
+        ],
+        "falle": true
+      },
+      "finding": "السطر يحدد الخيل عند النهر، لذلك `am Fluss` هو المفتاح الوحيد؛ المشتتان على الشجرة وفي الغابة لا يطابقان الموضع. اقتباس الشرح صحيح. عُدّل فقط «العصفور» إلى «الطائر» ليطابق المعنى العام لـVogel في السطر العربي؛ بقيت التعليمات العربية والخيارات والمفتاح كما هي.",
+      "action": "صُحّح لفظ المشتت في الشرح إلى «الطائر» اتساقاً مع تصحيح ترجمة السطر؛ لم يتغير المفتاح أو الخيارات.",
+      "sources": [
+        "S3",
+        "S4",
+        "S9",
+        "S10",
+        "S11"
+      ],
+      "before": {
+        "type": "mc",
+        "promptDe": "Wo stehen die Pferde?",
+        "options": [
+          "auf dem Baum",
+          "im Wald",
+          "am Fluss"
+        ],
+        "answer": "am Fluss",
+        "explanationAr": "الدليل: «dort am Fluss stehen zwei Pferde». الفخّ 1: العصفور على الشجرة. الفخّ 2: الغابة هدف النزهة.",
+        "id": "d-a1-16-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a1-16-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Woher kommt die Kuh?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "vom Bauernhof",
+        "explanationAr": "الدليل: «die Kuh kommt vom Bauernhof». الفخّ 1: «Nein» على سؤال الغابة.",
+        "options": [
+          "vom Bauernhof",
+          "aus dem Wald",
+          "vom Fluss"
+        ],
+        "falle": true
+      },
+      "finding": "السؤال `Woher kommt die Kuh?` يطلب مصدر البقرة، والنص يقول صراحة `vom Bauernhof`؛ المفتاح موجود بين الخيارات والشرح يقتبس الدليل ويفسر فخ سؤال الغابة.",
+      "action": "لا تعديل؛ الخيارات والمفتاح والشرح والتعليمات متسقة.",
+      "sources": [
+        "S12",
+        "S13",
+        "S7"
+      ]
+    },
+    {
+      "id": "d-a1-16-q3",
+      "kind": "صواب/خطأ: العبارة والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Der Vogel singt auf dem Baum.",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "answer": "richtig",
+        "explanationAr": "الدليل: «ein Vogel auf dem Baum! Er singt».",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
+      },
+      "finding": "`Der Vogel singt auf dem Baum` يركّب معلومتين من السطر نفسه: Vogel على الشجرة، ثم `Er singt`. مفتاح `richtig` والاقتباس العربي للألمانية يدعمانه؛ لا توجد ترجمة عربية مستقلة للعبارة غير التعليمات.",
+      "action": "لا تعديل؛ العبارة مدعومة مباشرة بالنص.",
+      "sources": [
+        "S3",
+        "S9"
+      ]
+    },
+    {
+      "id": "d-a1-16.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Die Luft ist heute gut."
+      },
+      "finding": "الجملة `Die Luft ist heute gut.` واردة حرفياً في السطر الأول؛ ترجمة السطر تعكس Luft = هواء.",
+      "action": "لا تعديل؛ الإملاء منقول حرفياً من الحوار.",
+      "sources": [
+        "S8"
+      ]
+    },
+    {
+      "id": "d-a1-16.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Der Himmel ist so blau."
+      },
+      "finding": "الجملة `Der Himmel ist so blau.` واردة حرفياً في السطر السادس؛ Himmel = سماء.",
+      "action": "لا تعديل؛ الإملاء منقول حرفياً من الحوار.",
+      "sources": [
+        "S14"
+      ]
+    },
+    {
+      "id": "d-a1-17",
+      "kind": "بيانات الحوار: العنوان والسياق ومرساة المفردات",
+      "status": "سليم",
+      "reviewed": {
+        "titleDe": "Hausarbeit am Samstag",
+        "titleAr": "أعمال البيت يوم السبت",
+        "level": "A1",
+        "waisen": [
+          "die Wäsche",
+          "bügeln",
+          "kehren",
+          "die Seife",
+          "das Handtuch",
+          "der Herd",
+          "der Topf",
+          "die Pfanne",
+          "voll",
+          "leer",
+          "der Schmutz"
+        ]
+      },
+      "finding": "عنوان «Hausarbeit am Samstag» وترجمته «أعمال البيت يوم السبت» يصفان المهام المنزلية التي يسندها الحوار. راجعت عناصر waisen الإحدى عشرة (Wäsche, bügeln, kehren, Seife, Handtuch, Herd, Topf, Pfanne, voll, leer, Schmutz) ووجدت كل عنصر مستخدماً في النص بصيغته أو تصريفه. لا يُستنتج من هذا حكم جديد على CEFR.",
+      "action": "أُبقي العنوان والمرساة والمستوى المسجل؛ لا حساب أو تصنيف مستوى في هذه الدفعة.",
+      "sources": [
+        "S1",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S25",
+        "S27",
+        "S28",
+        "S30"
+      ]
+    },
+    {
+      "id": "d-a1-17.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Mutter",
+        "de": "Heute ist Samstag. Wir machen zusammen die Hausarbeit.",
+        "ar": "اليوم السبت. نقوم بأعمال البيت معاً."
+      },
+      "finding": "`Heute ist Samstag` يقابل «اليوم السبت»، و`zusammen die Hausarbeit machen` يقابل القيام بأعمال البيت معاً. PONS يطابق Hausarbeit بمعنى العمل المنزلي.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S19"
+      ]
+    },
+    {
+      "id": "d-a1-17.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Sohn",
+        "de": "Okay. Was mache ich?",
+        "ar": "حسناً. ماذا أفعل؟"
+      },
+      "finding": "`Okay. Was mache ich?` سؤال الابن عمّا سيفعله، وترجمته «حسناً. ماذا أفعل؟» تحفظه دون حذف معلومة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1"
+      ]
+    },
+    {
+      "id": "d-a1-17.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Mutter",
+        "de": "Du kehrst die Küche. Da ist viel Schmutz auf dem Boden.",
+        "ar": "تكنس المطبخ. هناك وسخ كثير على الأرض."
+      },
+      "finding": "PONS يثبت معنى `kehren` في معنى الكنس ويعرض تصريف `du kehrst`؛ `Schmutz` = وسخ، فالمقابل «تكنس المطبخ. هناك وسخ كثير على الأرض» صحيح المعنى. لم أفرض `fegen` بديلاً لأن مصدر الكنس يؤيد الفعل الموجود.",
+      "action": "لا تعديل؛ لا دليل على أن اختيار kehren هنا خطأ.",
+      "sources": [
+        "S17",
+        "S18"
+      ]
+    },
+    {
+      "id": "d-a1-17.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Sohn",
+        "de": "Und der Herd? Der Topf und die Pfanne sind noch schmutzig.",
+        "ar": "والموقد؟ القدر والمقلاة ما زالا متّسخين."
+      },
+      "finding": "`Herd/Topf/Pfanne` تطابق موقداً وقدراً ومقلاة؛ `noch schmutzig` = ما زالت متسخة. المثنى العربي «ما زالا متّسخين» يعود إلى القدر والمقلاة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S18",
+        "S20",
+        "S21",
+        "S22"
+      ]
+    },
+    {
+      "id": "d-a1-17.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Mutter",
+        "de": "Die wasche ich mit Seife. Der Mülleimer ist voll, bring ihn bitte raus.",
+        "ar": "أغسلهما بالصابون. سلة القمامة ممتلئة، أخرجها من فضلك."
+      },
+      "finding": "`Die` تعود على القدر والمقلاة المذكورين معاً؛ لذلك «أغسلهما» مطابق للمثنى العربي، و`mit Seife` = بالصابون. `Mülleimer ist voll` و`bring ihn ... raus` نُقلا إلى سلة القمامة الممتلئة وطلب إخراجها؛ تأنيث الضمير العربي يطابق «السلة».",
+      "action": "لا تعديل؛ مرجع Die والضمير العربي واضحان من السياق.",
+      "sources": [
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S26"
+      ]
+    },
+    {
+      "id": "d-a1-17.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Sohn",
+        "de": "Gut. Und die Wäsche? Der Korb ist auch voll.",
+        "ar": "حسناً. والغسيل؟ السلة ممتلئة أيضاً."
+      },
+      "finding": "`Wäsche` هنا الغسيل، و`Korb` السلة؛ «السلة ممتلئة أيضاً» مفهومة من سياق سلة الغسيل. حذف تحديد «الغسيل» بعد كلمة السلة لا يسبب التباساً في هذا السياق.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S24",
+        "S25",
+        "S29"
+      ]
+    },
+    {
+      "id": "d-a1-17.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Mutter",
+        "de": "Die Wäsche wasche ich, du bügelst danach die Hemden.",
+        "ar": "الغسيل أغسله أنا، وأنت تكوي القمصان بعده."
+      },
+      "finding": "التركيب `Die Wäsche wasche ich` يقدّم الغسيل ثم يصرّف الفعل مع ich؛ وبعدها `du bügelst ... danach` يسند الكيّ للابن لاحقاً. العربية تحفظ فصل المهمتين وتوقيتهما، وPONS يطابق Wäsche/waschen/bügeln بالمعاني المستخدمة.",
+      "action": "لا تعديل؛ `danach` واضح في الترجمة «بعده».",
+      "sources": [
+        "S25",
+        "S26",
+        "S27"
+      ]
+    },
+    {
+      "id": "d-a1-17.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Sohn",
+        "de": "Und die Handtücher? Der Schrank ist leer.",
+        "ar": "والمناشف؟ الخزانة فارغة."
+      },
+      "finding": "`Handtücher` جمع Handtuch (مناشف)، و`Schrank` خزانة؛ الترجمة تحفظ الاسمين وحالة الخزانة الفارغة. الربط الحواري مقتضب لكنه غير متناقض بما يوجب تغييراً.",
+      "action": "لا تعديل؛ لا أضيف جواباً أو تفسيراً غير موجودين في الحوار.",
+      "sources": [
+        "S28",
+        "S30"
+      ]
+    },
+    {
+      "id": "d-a1-17-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "مُصحح",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Welche Aufgabe nennt die Mutter zuerst?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "Er kehrt die Küche.",
+        "explanationAr": "الدليل: «Du kehrst die Küche»؛ هذه أول مهمة محددة تذكرها الأم، لا دليلاً على ترتيب تنفيذ الأعمال. الفخّ 1: الأم تغسل القدر. الفخّ 2: الكيّ ذُكر «danach».",
+        "options": [
+          "Er kehrt die Küche.",
+          "Er wäscht den Topf.",
+          "Er bügelt die Hemden."
+        ],
+        "falle": true
+      },
+      "finding": "الصيغة القديمة «Was macht der Sohn zuerst?» تسأل عمّا ينفذه الابن أولاً، لكن الحوار يذكر له مهمة الكنس ولا يصرح بترتيب التنفيذ؛ والكيّ مسند إليه أيضاً لاحقاً (`danach`). صيغ السؤال الآن عن المهمة التي تذكرها الأم أولاً؛ أول مهمة محددة هي كنس المطبخ، فيبقى المفتاح وحيداً وتظل بقية الخيارات مشتتات مناسبة. Duden يثبت دلالة «zuerst» في الترتيب، ويعطي مثال «der zuerst genannte»؛ PONS يساند Aufgabe/nennen.",
+      "action": "استُبدل سؤال ترتيب التنفيذ بسؤال ترتيب ذكر المهمة، وحُدّث الشرح كي لا يوحي بأن الحوار يحدد ترتيب إنجاز الأعمال. بقيت الخيارات والمفتاح والتعليمات كما هي.",
+      "sources": [
+        "S17",
+        "S27",
+        "S31",
+        "S32",
+        "S33"
+      ],
+      "before": {
+        "type": "mc",
+        "promptDe": "Was macht der Sohn zuerst?",
+        "options": [
+          "Er kehrt die Küche.",
+          "Er wäscht den Topf.",
+          "Er bügelt die Hemden."
+        ],
+        "answer": "Er kehrt die Küche.",
+        "explanationAr": "الدليل: «Du kehrst die Küche». الفخّ 1: القدر تغسله الأم. الفخّ 2: الكيّ «danach».",
+        "id": "d-a1-17-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a1-17-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was ist leer?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "der Schrank",
+        "explanationAr": "الدليل: «Der Schrank ist leer». الفخّ: سلة القمامة وسلة الغسيل «voll».",
+        "options": [
+          "der Mülleimer",
+          "der Schrank",
+          "der Korb mit der Wäsche"
+        ],
+        "falle": true
+      },
+      "finding": "النص يقول حرفياً `Der Schrank ist leer`؛ المفتاح `der Schrank` موجود بين الخيارات. الشرح يميّز بوضوح بين السلتين الممتلئتين والخزانة الفارغة.",
+      "action": "لا تعديل؛ المفتاح والخيارات والشرح متطابقة مع الحوار.",
+      "sources": [
+        "S24",
+        "S29",
+        "S30"
+      ]
+    },
+    {
+      "id": "d-a1-17-q3",
+      "kind": "ملء فراغ: النص والإجابة والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "fill",
+        "promptDe": "Die wasche ich mit ___.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+        "answer": [
+          "Seife"
+        ],
+        "explanationAr": "الدليل: «Die wasche ich mit Seife»."
+      },
+      "finding": "`Die wasche ich mit ___.` يستعيد تتمة الجملة `mit Seife`؛ الإجابة الوحيدة المقصودة `Seife`، والشرح يقتبس النص حرفياً.",
+      "action": "لا تعديل؛ المفتاح يطابق التركيب المنقول.",
+      "sources": [
+        "S23",
+        "S26"
+      ]
+    },
+    {
+      "id": "d-a1-17.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Da ist viel Schmutz auf dem Boden."
+      },
+      "finding": "الجملة `Da ist viel Schmutz auf dem Boden.` موجودة حرفياً في السطر الثالث، وSchmutz = وسخ.",
+      "action": "لا تعديل؛ الإملاء منقول حرفياً من الحوار.",
+      "sources": [
+        "S18"
+      ]
+    },
+    {
+      "id": "d-a1-17.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Der Mülleimer ist voll, bring ihn bitte raus."
+      },
+      "finding": "الجملة `Der Mülleimer ist voll, bring ihn bitte raus.` موجودة حرفياً في السطر الخامس، والترجمة تميز سلة القمامة عن سلة الغسيل.",
+      "action": "لا تعديل؛ الإملاء منقول حرفياً من الحوار.",
+      "sources": [
+        "S24"
+      ]
+    },
+    {
+      "id": "d-a1-18",
+      "kind": "بيانات الحوار: العنوان والسياق ومرساة المفردات",
+      "status": "غير محسوم",
+      "reviewed": {
+        "titleDe": "Woher kommst du?",
+        "titleAr": "من أين أنت؟",
+        "level": "A1",
+        "waisen": [
+          "die Heimat",
+          "der Ausländer",
+          "die Nationalität",
+          "die Muttersprache",
+          "das Wörterbuch",
+          "übersetzen",
+          "die Sprache",
+          "der Nachname",
+          "ledig",
+          "verheiratet"
+        ]
+      },
+      "finding": "العنوان `Woher kommst du?` يختار المخاطبة غير الرسمية، بينما يبدأ النص بـ`Herr Haddad` ويستخدم Sie/Ihre الرسمية؛ Duden يميز duzen عن siezen. قد يكون العنوان تسمية موضوع عامة لا اقتباساً من هذا الحوار، لذلك أسجل تفاوت سجل تحريري ولا أعدّه خطأً مؤكداً. عناصر waisen العشرة تظهر في النص أو بتصريفها؛ لم يُجرَ تقييم CEFR أو حساب مستوى.",
+      "action": "لا تعديل تخمينياً للعنوان أو المستوى؛ يُترك تفاوت السجل ملاحظة تحريرية غير محسومة.",
+      "sources": [
+        "S1",
+        "S35",
+        "S43",
+        "S44",
+        "S45"
+      ]
+    },
+    {
+      "id": "d-a1-18.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Lehrer",
+        "de": "Herr Haddad, welche Nationalität haben Sie?",
+        "ar": "سيد حدّاد، ما جنسيتك؟"
+      },
+      "finding": "`Herr Haddad` مع `Sie` صيغة رسمية؛ و`Nationalität` = الجنسية. الترجمة «سيد حدّاد، ما جنسيتك؟» تنقل السؤال، مع ملاحظة أن العربية لا تملك مقابلاً صرفياً مباشراً لتمييز Sie/du في الضمير المستعمل هنا.",
+      "action": "لا تعديل؛ فرق السجل في اللغتين لا يثبت خطأً في نقل معنى السؤال.",
+      "sources": [
+        "S36",
+        "S45"
+      ]
+    },
+    {
+      "id": "d-a1-18.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Haddad",
+        "de": "Ich bin Tunesier. Meine Heimat ist Sfax.",
+        "ar": "أنا تونسي. وطني صفاقس."
+      },
+      "finding": "`Tunesier` يطابق «تونسي»، و`Heimat` يطابق «الوطن»؛ «وطني صفاقس» ينقل أن صفاقس وطن المتحدث الخيالي، لكنه لا يثبت حقيقة سيرة شخص بعينه.",
+      "action": "لا تعديل؛ هذه معلومة شخصية داخل مشهد تعليمي خيالي.",
+      "sources": [
+        "S34",
+        "S35"
+      ]
+    },
+    {
+      "id": "d-a1-18.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Lehrer",
+        "de": "Und Ihre Muttersprache ist Arabisch?",
+        "ar": "ولغتك الأم العربية؟"
+      },
+      "finding": "السؤال التأكيدي `Und Ihre Muttersprache ist Arabisch?` يقابل «ولغتك الأم العربية؟»؛ Muttersprache = اللغة الأم، وعلامة الاستفهام محفوظة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S37",
+        "S45"
+      ]
+    },
+    {
+      "id": "d-a1-18.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Haddad",
+        "de": "Ja. Ich spreche auch Französisch. Deutsch ist meine dritte Sprache.",
+        "ar": "نعم. أتكلم الفرنسية أيضاً. الألمانية لغتي الثالثة."
+      },
+      "finding": "الجواب يذكر الفرنسية ثم يصرح بأن الألمانية اللغة الثالثة؛ العربية تحفظ `auch` و`dritte Sprache`. السؤال/الجواب لا يخلطان بين اللغة الأم واللغة الثالثة.",
+      "action": "لا تعديل؛ العبارة وصف ذاتي خيالي لا يُتحقق من صدقه خارج النص.",
+      "sources": [
+        "S1",
+        "S37"
+      ]
+    },
+    {
+      "id": "d-a1-18.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Lehrer",
+        "de": "Sehr gut. Wie schreibt man Ihren Nachnamen?",
+        "ar": "ممتاز. كيف يُكتب اسم عائلتك؟"
+      },
+      "finding": "`Wie schreibt man Ihren Nachnamen?` يسأل عن تهجئة اسم العائلة، والعربية «كيف يُكتب اسم عائلتك؟» تحفظ المعنى بصيغة مبنية للمجهول. الصيغة `Ihren` رسمها الرسمي محفوظ في الألمانية.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S38",
+        "S45"
+      ]
+    },
+    {
+      "id": "d-a1-18.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Haddad",
+        "de": "H-A-D-D-A-D. Darf ich im Kurs ein Wörterbuch benutzen?",
+        "ar": "H-A-D-D-A-D. هل يمكنني استعمال قاموس في الدورة؟"
+      },
+      "finding": "حروف الاسم المنقولة حرفياً تتبعها إمكانية استعمال قاموس في الدورة؛ Wörterbuch = قاموس/معجم. تكرار الحروف اللاتينية في العربية مقصود لإملاء اسم Haddad.",
+      "action": "لا تعديل؛ لا أستبدل اسم الشخص أو أتحقق من هوية واقعية غير موجودة.",
+      "sources": [
+        "S1",
+        "S39"
+      ]
+    },
+    {
+      "id": "d-a1-18.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Lehrer",
+        "de": "Ja, aber übersetzen Sie nicht jedes Wort. Sind Sie verheiratet?",
+        "ar": "نعم، لكن لا تترجم كل كلمة. هل أنت متزوج؟"
+      },
+      "finding": "`übersetzen Sie nicht jedes Wort` نهي رسمي عن ترجمة كل كلمة، يتبعه سؤال رسمي عن الزواج؛ PONS يميز معنى übersetzen = يترجم، وverheiratet = متزوج. الصيغة العربية مفهومة مع أن نظام الأدب فيها غير مطابق صرفياً لـSie.",
+      "action": "لا تعديل؛ تُسجل ملاحظة اختلاف نظام المخاطبة لا خطأ ترجمة مؤكداً.",
+      "sources": [
+        "S40",
+        "S42",
+        "S45"
+      ]
+    },
+    {
+      "id": "d-a1-18.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "reviewed": {
+        "who": "Haddad",
+        "de": "Nein, ich bin ledig. Viele Ausländer im Kurs sind auch ledig.",
+        "ar": "لا، أنا أعزب. كثير من الأجانب في الدورة عزّاب أيضاً."
+      },
+      "finding": "PONS يطابق ledig بـ«أعزب»، والترجمة الأولى صحيحة. Duden يعرّف Ausländer بمواطن دولة أجنبية، ويخص تحذيره من التمييز بوصف ذوي الأصل الأجنبي المقيمين في بلد المتكلم؛ الحوار لا يحدد موقع الدورة ولا مرجع الكلمة. كما أن دعوى «كثير من ... في الدورة عزّاب» تخص مشهداً خيالياً ولا تقدم بيانات سكانية. لا تكفي هذه المعطيات لتصحيح الكلمة تلقائياً أو تعميم حكم على جماعة.",
+      "action": "أُبقي النص كما هو مع تسجيل تحفظ سياقي فقط؛ لا استبدال تخمينياً بـMigrant/Teilnehmer ولا اعتماد وصف تمييزي دون تحديد المقصود والبلد.",
+      "sources": [
+        "S1",
+        "S41",
+        "S43"
+      ]
+    },
+    {
+      "id": "d-a1-18-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Welche Sprache ist die dritte Sprache von Herrn Haddad?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "Deutsch",
+        "explanationAr": "الدليل: «Deutsch ist meine dritte Sprache». الفخّ 1: الفرنسية الثانية. الفخّ 2: العربية الأم.",
+        "options": [
+          "Französisch",
+          "Deutsch",
+          "Arabisch"
+        ],
+        "falle": true
+      },
+      "finding": "السطر يصرح `Deutsch ist meine dritte Sprache`; لذا `Deutsch` هو المفتاح، بينما يذكر أن الفرنسية تُتحدث أيضاً وأن العربية الأم. الخيارات الثلاثة مختلفة والشرح يقتبس الدليل.",
+      "action": "لا تعديل؛ المفتاح والشرح يطابقان ترتيب اللغات المصرح به في الحوار.",
+      "sources": [
+        "S34",
+        "S37",
+        "S1"
+      ]
+    },
+    {
+      "id": "d-a1-18-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Ist Herr Haddad verheiratet?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "Nein, er ist ledig.",
+        "explanationAr": "الدليل: «Nein, ich bin ledig». الفخّ: صفاقس هي الوطن لا مكان الزوجة.",
+        "options": [
+          "Ja, seine Frau ist in Sfax.",
+          "Ja, er ist verheiratet.",
+          "Nein, er ist ledig."
+        ],
+        "falle": true
+      },
+      "finding": "الإجابة `Nein, ich bin ledig` تنفي الزواج وتؤيد `Nein, er ist ledig`. الخيار عن زوجة في صفاقس مشتت لا يسنده النص، والشرح يميز الوطن عن مكان الزوجة.",
+      "action": "لا تعديل؛ المفاتيح والخيارات والشرح متسقة مع الحوار الخيالي.",
+      "sources": [
+        "S35",
+        "S41",
+        "S42"
+      ]
+    },
+    {
+      "id": "d-a1-18-q3",
+      "kind": "صواب/خطأ: العبارة والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Er darf im Kurs ein Wörterbuch benutzen.",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "answer": "richtig",
+        "explanationAr": "الدليل: «Ja, aber übersetzen Sie nicht jedes Wort».",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
+      },
+      "finding": "المعلم يجيب `Ja, aber übersetzen Sie nicht jedes Wort` بعد سؤال الإذن باستعمال قاموس؛ لذلك العبارة `Er darf ... ein Wörterbuch benutzen` صحيحة مع القيد المذكور. الشرح يقتبس جواب المعلم.",
+      "action": "لا تعديل؛ الشرح يورد القيد بدلاً من إسقاطه.",
+      "sources": [
+        "S39",
+        "S40"
+      ]
+    },
+    {
+      "id": "d-a1-18.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Meine Heimat ist Sfax."
+      },
+      "finding": "الجملة `Meine Heimat ist Sfax.` منقولة حرفياً من السطر الثاني؛ الترجمة المقابلة «وطني صفاقس» محفوظة في الحوار.",
+      "action": "لا تعديل؛ لا أتحقق من هوية المتحدث الخيالي أو مسقط رأسه.",
+      "sources": [
+        "S35"
+      ]
+    },
+    {
+      "id": "d-a1-18.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Deutsch ist meine dritte Sprache."
+      },
+      "finding": "الجملة `Deutsch ist meine dritte Sprache.` منقولة حرفياً من السطر الرابع، وتطابق «الألمانية لغتي الثالثة».",
+      "action": "لا تعديل.",
+      "sources": [
+        "S1",
+        "S37"
+      ]
+    }
+  ]
+}

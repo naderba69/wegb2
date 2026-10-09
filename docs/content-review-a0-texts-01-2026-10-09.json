@@ -1,0 +1,432 @@
+{
+  "reviewRule": "R135",
+  "batchLabel": "أول دفعة نصوص A0",
+  "targetIds": [
+    "t-a0-01",
+    "t-a0-02",
+    "t-a0-03",
+    "t-a0-04",
+    "t-a0-05"
+  ],
+  "totals": {
+    "texts": 5,
+    "questions": 15,
+    "approximateUnits": 35
+  },
+  "snapshots": {
+    "t-a0-01": {
+      "id": "t-a0-01",
+      "level": "A0",
+      "titleDe": "Das Alphabet",
+      "titleAr": "الأبجدية",
+      "de": "A, B, C, D, E, F, G. H, I, J, K, L, M, N. O, P, Q, R, S, T. U, V, W, X, Y, Z. Ä, Ö, Ü, ß. Das ist das deutsche Alphabet.",
+      "ar": "أسماء الحروف تقريباً بالكتابة اللاتينية: A (ah)، B (beh)، C (tseh)، D (deh)، E (eh)، F (eff)، G (geh). H (hah)، I (ih)، J (jott)، K (kah)، L (ell)، M (emm)، N (enn). O (oh)، P (peh)، Q (kuh)، R (err)، S (ess)، T (teh). U (uh)، V (fau)، W (weh)، X (iks)، Y (ypsilon)، Z (tset). Ä (A-Umlaut)، Ö (O-Umlaut)، Ü (U-Umlaut)، ß (Eszett). هذه أسماء الحروف الألمانية.",
+      "questions": [
+        {
+          "options": [
+            "eins",
+            "zwei",
+            "drei",
+            "vier"
+          ],
+          "answer": "drei",
+          "id": "t-a0-01-q1",
+          "type": "mc",
+          "promptDe": "Wie viele Buchstaben mit Umlaut gibt es?",
+          "promptAr": "كم حرفاً مع أوملاوت؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "options": [
+            "eine Zahl",
+            "ein Buchstabe",
+            "ein Wort",
+            "ein Name"
+          ],
+          "answer": "ein Buchstabe",
+          "id": "t-a0-01-q2",
+          "type": "mc",
+          "promptDe": "Was ist ß?",
+          "promptAr": "ما هو ß؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "id": "t-a0-01-q3",
+          "type": "fill",
+          "promptDe": "Welcher Buchstabe steht direkt vor ß im Text?",
+          "promptAr": "أي حرف يسبق ß مباشرةً في النص؟",
+          "answer": "Ü",
+          "explanationAr": "ترتيب نهاية النص هو Ä، Ö، Ü، ß؛ لذلك يسبق Ü حرف ß مباشرةً."
+        }
+      ]
+    },
+    "t-a0-02": {
+      "id": "t-a0-02",
+      "level": "A0",
+      "titleDe": "Hallo!",
+      "titleAr": "مرحباً!",
+      "de": "Hallo! Ich heiße Ali. Ich komme aus Tunesien. Guten Tag! Wie heißt du? Ich heiße Sara. Freut mich! Auf Wiedersehen!",
+      "ar": "مرحباً! اسمي علي. أنا من تونس. نهارك سعيد! ما اسمكِ؟ اسمي سارة. سعيدة بلقائك! إلى اللقاء!",
+      "questions": [
+        {
+          "options": [
+            "Sara",
+            "Ali",
+            "Anna",
+            "Max"
+          ],
+          "answer": "Ali",
+          "id": "t-a0-02-q1",
+          "type": "mc",
+          "promptDe": "Wie heißt der Mann?",
+          "promptAr": "ما اسم الرجل؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "options": [
+            "Deutschland",
+            "Marokko",
+            "Tunesien",
+            "Ägypten"
+          ],
+          "answer": "Tunesien",
+          "id": "t-a0-02-q2",
+          "type": "mc",
+          "promptDe": "Woher kommt er?",
+          "promptAr": "من أين هو؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "id": "t-a0-02-q3",
+          "type": "mc",
+          "promptDe": "Welche Begrüßung folgt auf «Ich komme aus Tunesien»?",
+          "promptAr": "أي تحية تأتي بعد «Ich komme aus Tunesien»؟",
+          "options": [
+            "Hallo!",
+            "Guten Tag!",
+            "Auf Wiedersehen!",
+            "Danke!"
+          ],
+          "answer": "Guten Tag!",
+          "explanationAr": "قبل سؤال «Wie heißt du?» مباشرةً يقول النص «Guten Tag!»."
+        }
+      ]
+    },
+    "t-a0-03": {
+      "id": "t-a0-03",
+      "level": "A0",
+      "titleDe": "Zahlen 1 bis 10",
+      "titleAr": "الأرقام من 1 إلى 10",
+      "de": "Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn. Das sind Zahlen. Null ist eine Zahl. Ich bin dreißig Jahre alt.",
+      "ar": "واحد، اثنان، ثلاثة، أربعة، خمسة، ستة، سبعة، ثمانية، تسعة، عشرة. هذه أرقام. الصفر عددٌ. عمري ثلاثون سنة.",
+      "questions": [
+        {
+          "options": [
+            "drei",
+            "fünf",
+            "sechs",
+            "sieben"
+          ],
+          "answer": "sechs",
+          "id": "t-a0-03-q1",
+          "type": "mc",
+          "promptDe": "Wie viel ist fünf plus eins?",
+          "promptAr": "كم يساوي خمسة زائد واحد؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "options": [
+            "1",
+            "10",
+            "100",
+            "0"
+          ],
+          "answer": "10",
+          "id": "t-a0-03-q2",
+          "type": "mc",
+          "promptDe": "Was bedeutet \"zehn\"?",
+          "promptAr": "ماذا تعني zehn؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "id": "t-a0-03-q3",
+          "type": "mc",
+          "promptDe": "Wie alt ist die Person im Text?",
+          "options": [
+            "zwanzig",
+            "dreißig",
+            "vierzig",
+            "fünfzig"
+          ],
+          "answer": "dreißig",
+          "explanationAr": "«Ich bin dreißig Jahre alt.» — عمري ثلاثون سنة.",
+          "promptAr": "كم عمر الشخص في النص؟"
+        }
+      ]
+    },
+    "t-a0-04": {
+      "id": "t-a0-04",
+      "level": "A0",
+      "titleDe": "Die Tage",
+      "titleAr": "الأيام",
+      "de": "Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag. Eine Woche hat sieben Tage. Samstag und Sonntag sind das Wochenende. Heute ist Montag.",
+      "ar": "الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة، السبت، الأحد. الأسبوع فيه سبعة أيام. السبت والأحد هما عطلة نهاية الأسبوع. اليوم هو الاثنين.",
+      "questions": [
+        {
+          "options": [
+            "fünf",
+            "sechs",
+            "sieben",
+            "acht"
+          ],
+          "answer": "sieben",
+          "id": "t-a0-04-q1",
+          "type": "mc",
+          "promptDe": "Wie viele Tage hat eine Woche?",
+          "promptAr": "كم يوماً في الأسبوع؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "options": [
+            "das Wochenende",
+            "eine Woche",
+            "ein Monat",
+            "ein Jahr"
+          ],
+          "answer": "das Wochenende",
+          "id": "t-a0-04-q2",
+          "type": "mc",
+          "promptDe": "Was sind Samstag und Sonntag?",
+          "promptAr": "ماذا يمثّل السبت والأحد؟",
+          "explanationAr": "الدليل في النص: «Samstag und Sonntag sind das Wochenende.» — السبت والأحد هما عطلة نهاية الأسبوع."
+        },
+        {
+          "id": "t-a0-04-q3",
+          "type": "mc",
+          "promptDe": "Welcher Tag ist heute im Text?",
+          "options": [
+            "Freitag",
+            "Samstag",
+            "Montag",
+            "Sonntag"
+          ],
+          "answer": "Montag",
+          "explanationAr": "«Heute ist Montag.» — اليوم اثنين (Montag).",
+          "promptAr": "ما يوم اليوم في النص؟"
+        }
+      ]
+    },
+    "t-a0-05": {
+      "id": "t-a0-05",
+      "level": "A0",
+      "titleDe": "Ich bin da",
+      "titleAr": "أنا هنا",
+      "de": "Ich bin hier. Du bist da. Er ist da. Sie ist da. Wir sind hier. Ihr seid da. Sie sind da. Das ist mein Name.",
+      "ar": "أنا هنا. أنتَ هناك. هو هناك. هي هناك. نحن هنا. أنتم هناك. هم هناك (وتُستعمل Sie أيضاً للمخاطَب الرسمي بحسب السياق). هذا اسمي.",
+      "questions": [
+        {
+          "options": [
+            "أنا هنا",
+            "نحن هنا",
+            "هم هنا",
+            "أنت هناك"
+          ],
+          "answer": "نحن هنا",
+          "id": "t-a0-05-q1",
+          "type": "mc",
+          "promptDe": "Was bedeutet \"Wir sind hier\"?",
+          "promptAr": "ماذا تعني Wir sind hier؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "options": [
+            "أنا",
+            "هي",
+            "هو",
+            "نحن"
+          ],
+          "answer": "هو",
+          "id": "t-a0-05-q2",
+          "type": "mc",
+          "promptDe": "Welches Pronomen ist \"er\"?",
+          "promptAr": "أي ضمير هو er؟",
+          "explanationAr": "الإجابة الصحيحة محدّدة بالأزرار — اختر ما يطابق النص."
+        },
+        {
+          "id": "t-a0-05-q3",
+          "type": "mc",
+          "promptDe": "Welches Pronomen steht am Anfang des Textes?",
+          "promptAr": "أي ضمير يرد في بداية النص؟",
+          "options": [
+            "du",
+            "ich",
+            "er",
+            "ihr"
+          ],
+          "answer": "ich",
+          "explanationAr": "الضمير في أول جملة هو ich: «Ich bin hier.»"
+        }
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "unit": "t-a0-03.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "كم عمر الشخص في النص؟",
+      "reason": "استكمال حقل promptAr فارغ لسؤال «Wie alt ist die Person im Text؟» (ثلاثون سنة) مطابقة الألماني ونمط بقية الأسئلة في النص."
+    },
+    {
+      "unit": "t-a0-04.questions[2].promptAr",
+      "field": "promptAr",
+      "before": "",
+      "after": "ما يوم اليوم في النص؟",
+      "reason": "استكمال حقل promptAr فارغ لسؤال «Welcher Tag ist heute im Text؟» (Montag = الاثنين) مطابقة الألماني والنمط."
+    }
+  ],
+  "contextNotes": {
+    "t-a0-01": [
+      {
+        "note": "نص الأبجدية: سرد الحروف مع لفظ تقريبي؛ العربية لا تنقل لفظ J/V/W (jott/fau/weh) وX/Y (iks/üpsilon) بل تذكر طريقة اللفظ في نظام التهجئة الألمانية — النقل صحيح."
+      },
+      {
+        "note": "ß كلمة إيتسيست (Eszett / scharfes S) يُعرَّف «حرفاً» (ein Buchstabe) وهو الجواب الصحيح في Q2."
+      },
+      {
+        "note": "الأوملاوت Ä/Ö/Ü ثلاثة أحرف (Umlaute)؛ السؤال Q1 يجيب «drei» مطابقة النص."
+      }
+    ],
+    "t-a0-02": [
+      {
+        "note": "تحية «Guten Tag!» تلي «Ich komme aus Tunesien»؛ هي جواب Q3 الرسمي."
+      },
+      {
+        "note": "العربية تستعمل «نهارك سعيد» لـGuten Tag و«سعيدة بلقائك» لـFreut mich و«إلى اللقاء» لـAuf Wiedersehen، صياغ سليمة."
+      }
+    ],
+    "t-a0-03": [
+      {
+        "note": "الأرقام 1–10 مع الصفر؛ «Ich bin dreißig Jahre alt» يحدد العمر ثلاثين سنة (جواب Q3)."
+      },
+      {
+        "note": "خمسة زائد واحد = ستة (sechs)؛ تعني zehn=10."
+      }
+    ],
+    "t-a0-04": [
+      {
+        "note": "أيام الأسبوع السبعة؛ نهاية الأسبوع السبت والأحد؛ اليوم الاثنين (جواب Q3 المُستكمل)."
+      },
+      {
+        "note": "العربية تذكر «السبت والأحد هما عطلة نهاية الأسبوع» لـWochenende، مطابقة صحيحة."
+      }
+    ],
+    "t-a0-05": [
+      {
+        "note": "ضمائر الفصل (ich/du/er/sie/wir/ihr/Sie) و«هذا اسمي»؛ العربية تضيف ملاحظة «وتُستعمل Sie أيضاً للمخاطَب الرسمي» وهي توضيح مفيد لا ترجمة حرفية مضافة."
+      },
+      {
+        "note": "أسئلة النص تختبر ضمائر الفصل؛ المفاتيح مطابقة."
+      }
+    ]
+  },
+  "styleAlternatives": {
+    "t-a0-02": [
+      {
+        "note": "يمكن قول «تشرفنا» بدل «سعيدة بلقائك» لكن الصياغ الحالي معياري لـFreut mich في A0."
+      }
+    ],
+    "t-a0-03": [
+      {
+        "note": "«ثلاثون/ثلاثين» كلتاهما صحيحة في العربية الفصحى؛ الاستعمال «عمري ثلاثون سنة» صحيح (خبر مرفوع)."
+      }
+    ],
+    "t-a0-04": [
+      {
+        "note": "«اليوم هو الاثنين» و«اليوم الاثنين» كلتاهما صحيحة؛ الصياغة الحالية مع «هو» أوضح للمتعلم المبتدئ."
+      }
+    ],
+    "t-a0-05": [],
+    "t-a0-01": []
+  },
+  "sources": {
+    "t-a0-01": [
+      {
+        "cite": "Goethe A1 Starter — Alphabet und Buchstabieren.",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "محتوى A0 للأبجدية وطريقة لفظ الحروف."
+      }
+    ],
+    "t-a0-02": [
+      {
+        "cite": "Goethe A1 — Begrüßungen und Vorstellung.",
+        "url": "https://www.goethe.de/de/spr/ueb/fer.html",
+        "supports": "Hallo/Guten Tag/Freut mich/Auf Wiedersehen تحيات مستوى A0."
+      }
+    ],
+    "t-a0-03": [
+      {
+        "cite": "Goethe A1 — Zahlen 1 bis 10 und Alter.",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "الأرقام الأساسية وذكر العمر بـIch bin … Jahre alt."
+      }
+    ],
+    "t-a0-04": [
+      {
+        "cite": "Goethe A1 — Wochentage.",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "أيام الأسبوع السبعة وWochenende."
+      }
+    ],
+    "t-a0-05": [
+      {
+        "cite": "Goethe A1 — Personalpronomen (ich/du/er/sie/wir/ihr/Sie).",
+        "url": "https://www.goethe.de/de/spr/ueb.html",
+        "supports": "الضمائر ومخاطبة Sie الرسمية."
+      }
+    ]
+  },
+  "contentChecks": [
+    {
+      "id": "CHK-R135-01",
+      "check": "حقولا promptAr الفارغان (t-a0-03 Q3 وt-a0-04 Q3) مملوآن.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R135-02",
+      "check": "لا توجد حقول promptAr فارغة في نصوص A0 الخمسة بعد التصحيح.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R135-03",
+      "check": "كل الأسطر الألمانية والعناوين والخيارات والمفاتيح والشرح مقفلة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R135-04",
+      "check": "الإجابات مطابقة للنص (dreißig/Montag/drei).",
+      "status": "pass"
+    }
+  ],
+  "contentWarnings": [],
+  "judgement": {
+    "corrected": 2,
+    "unresolved": 0,
+    "note": "تصحيحان عربيان فقط: استكمال حقلَي promptAr فارغَين في t-a0-03 Q3 وt-a0-04 Q3 (سؤال العمر وسؤال يوم اليوم). روجعت النصوص الخمسة كاملة؛ العربية مطابقة للألماني في التراكيب الأساسية (التحيات، الأرقام، أيام الأسبوع، الضمائر). لا تعديل للألماني أو المفاتيح. لا تحذيرات محتوى جديدة. W1–W4/W6 تبقى مفتوحة، ولا صوت لهذه النصوص."
+  },
+  "limits": {
+    "human": "لا اعتماد لغوي بشري؛ المراجعة مصدرية على النص الحي.",
+    "legal": "لا محتوى قانوني في نصوص A0.",
+    "medical": "لا محتوى طبي.",
+    "cefr": "لا إعادة حساب CEFR."
+  },
+  "gates": {
+    "patch": "scripts/patches/review_a0_texts_01.py",
+    "report": "scripts/patches/report_a0_texts_01.py",
+    "smoke": "K209a–j"
+  },
+  "audio": {
+    "mp3Files": 0,
+    "note": "لا استماع للصوت."
+  }
+}

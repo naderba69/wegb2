@@ -1,0 +1,1601 @@
+{
+  "id": "R110",
+  "reportKey": "content-review-a2-dialogues-08",
+  "date": "2026-10-07",
+  "batch": "a2-dialogues-08",
+  "reviewRule": "عنصراً بعنصر بمصدر منشور؛ لا تعديل بلا دليل؛ لا توسّع إلى سياق غير محسوم",
+  "scope": {
+    "dialogues": [
+      "d-a2-19",
+      "d-a2-20",
+      "d-a2-21"
+    ],
+    "itemsTracked": 42,
+    "expectedDialogueShape": "3 Dialoge × (1 meta + 8 Zeilen + 3 Fragen + 2 Diktate) = 42 Einheiten"
+  },
+  "coverage": {
+    "dialogues": 3,
+    "items": 42,
+    "waisen": 28
+  },
+  "method": "بثت الحقول الحية في content/dialogues.json قبل الكتابة، وقورنت بمصادر منشورة لكل نقطة معجمية/وقائعية. الرقعة محروسة وفقط الحقل المؤكد عُدّل.",
+  "statusCounts": {
+    "سليم": 41,
+    "مصحح": 1,
+    "غير محسوم": 0
+  },
+  "statusDefinitions": {
+    "سليم": "لا خطأ مؤكد في الألماني أو العربية أو المفتاح أو الخيارات أو الشرح أو الإملاء.",
+    "مصحح": "خضع لتعديل مؤكد مسند إلى دليل منشور، مع بقاء المعنى والألماني.",
+    "غير محسوم": "سياقي/أسلوبي لا يثبته دليل؛ لم يُعدّل."
+  },
+  "totals": {
+    "dialogues": 3,
+    "itemsTracked": 42,
+    "سليم": 41,
+    "مصحح": 1,
+    "غير محسوم": 0,
+    "sources": 28,
+    "waisenAudited": 28
+  },
+  "items": [
+    {
+      "id": "d-a2-19",
+      "kind": "dialogue",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "finding": "في مكتب المواطنين: تمديد البطاقة",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "titleDe": "Im Bürgeramt: Ausweis verlängern",
+        "titleAr": "في مكتب المواطنين: تمديد البطاقة",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "der Personalausweis",
+          "verlängern",
+          "die Bearbeitungszeit",
+          "vollständig",
+          "unvollständig",
+          "die Unterschrift",
+          "die Vollmacht",
+          "der Ansprechpartner",
+          "die Auskunft"
+        ]
+      },
+      "snapshotDe": "Im Bürgeramt: Ausweis verlängern",
+      "snapshotAr": "في مكتب المواطنين: تمديد البطاقة"
+    },
+    {
+      "id": "d-a2-19.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "finding": "طاب يومك. تريد تمديد بطاقة الهوية؟",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Sachbearbeiterin",
+        "de": "Guten Tag. Sie möchten den Personalausweis verlängern?",
+        "ar": "طاب يومك. تريد تمديد بطاقة الهوية؟"
+      },
+      "snapshotDe": "Guten Tag. Sie möchten den Personalausweis verlängern?",
+      "snapshotAr": "طاب يومك. تريد تمديد بطاقة الهوية؟",
+      "before": {
+        "de": "Guten Tag. Sie möchten den Personalausweis verlängern?",
+        "ar": "طاب يومك. تريد تمديد بطاقة الهوية؟"
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-19.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "finding": "نعم، تنتهي صلاحيتها الشهر القادم. هل أوراقي كاملة؟",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Amir",
+        "de": "Ja, er läuft nächsten Monat ab. Sind meine Unterlagen vollständig?",
+        "ar": "نعم، تنتهي صلاحيتها الشهر القادم. هل أوراقي كاملة؟"
+      },
+      "snapshotDe": "Ja, er läuft nächsten Monat ab. Sind meine Unterlagen vollständig?",
+      "snapshotAr": "نعم، تنتهي صلاحيتها الشهر القادم. هل أوراقي كاملة؟",
+      "before": {
+        "de": "Ja, er läuft nächsten Monat ab. Sind meine Unterlagen vollständig?",
+        "ar": "نعم، تنتهي صلاحيتها الشهر القادم. هل أوراقي كاملة؟"
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-19.lines[2]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S03",
+        "S16"
+      ],
+      "finding": "تقريباً. الصورة موجودة لكن التوقيع على الاستمارة ناقص. هكذا الطلب غير مكتمل.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Sachbearbeiterin",
+        "de": "Fast. Das Foto ist da, aber die Unterschrift auf dem Formular fehlt. So ist der Antrag unvollständig.",
+        "ar": "تقريباً. الصورة موجودة لكن التوقيع على الاستمارة ناقص. هكذا الطلب غير مكتمل."
+      },
+      "snapshotDe": "Fast. Das Foto ist da, aber die Unterschrift auf dem Formular fehlt. So ist der Antrag unvollständig.",
+      "snapshotAr": "تقريباً. الصورة موجودة لكن التوقيع على الاستمارة ناقص. هكذا الطلب غير مكتمل.",
+      "before": {
+        "de": "Fast. Das Foto ist da, aber die Unterschrift auf dem Formular fehlt. So ist der Antrag unvollständig.",
+        "ar": "تقريباً. الصورة موجودة لكن التوقيع على الاستمارة ناقص. هكذا الطلب غير مكتمل."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-19.lines[3]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S15"
+      ],
+      "finding": "عذراً. تفضّلي. كم مدة المعالجة؟",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Amir",
+        "de": "Oh, Entschuldigung. Hier, bitte. Wie lange ist die Bearbeitungszeit?",
+        "ar": "عذراً. تفضّلي. كم مدة المعالجة؟"
+      },
+      "snapshotDe": "Oh, Entschuldigung. Hier, bitte. Wie lange ist die Bearbeitungszeit?",
+      "snapshotAr": "عذراً. تفضّلي. كم مدة المعالجة؟",
+      "before": {
+        "de": "Oh, Entschuldigung. Hier, bitte. Wie lange ist die Bearbeitungszeit?",
+        "ar": "عذراً. تفضّلي. كم مدة المعالجة؟"
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-19.lines[4]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S15"
+      ],
+      "finding": "حوالي ثلاثة أسابيع. ستصلك رسالة بعدها.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Sachbearbeiterin",
+        "de": "Etwa drei Wochen. Sie bekommen dann einen Brief.",
+        "ar": "حوالي ثلاثة أسابيع. ستصلك رسالة بعدها."
+      },
+      "snapshotDe": "Etwa drei Wochen. Sie bekommen dann einen Brief.",
+      "snapshotAr": "حوالي ثلاثة أسابيع. ستصلك رسالة بعدها.",
+      "before": {
+        "de": "Etwa drei Wochen. Sie bekommen dann einen Brief.",
+        "ar": "حوالي ثلاثة أسابيع. ستصلك رسالة بعدها."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-19.lines[5]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S02",
+        "S04"
+      ],
+      "finding": "هل تستطيع زوجتي استلام البطاقة؟ أنا أعمل نهاراً.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Amir",
+        "de": "Kann meine Frau den Ausweis abholen? Ich arbeite tagsüber.",
+        "ar": "هل تستطيع زوجتي استلام البطاقة؟ أنا أعمل نهاراً."
+      },
+      "snapshotDe": "Kann meine Frau den Ausweis abholen? Ich arbeite tagsüber.",
+      "snapshotAr": "هل تستطيع زوجتي استلام البطاقة؟ أنا أعمل نهاراً.",
+      "before": {
+        "de": "Kann meine Frau den Ausweis abholen? Ich arbeite tagsüber.",
+        "ar": "هل تستطيع زوجتي استلام البطاقة؟ أنا أعمل نهاراً."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-19.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S02",
+        "S03",
+        "S04",
+        "S17"
+      ],
+      "finding": "نعم، بتوكيل منك وبطاقتها الشخصية.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Sachbearbeiterin",
+        "de": "Ja, mit einer Vollmacht von Ihnen und ihrem eigenen Ausweis.",
+        "ar": "نعم، بتوكيل منك وبطاقتها الشخصية."
+      },
+      "snapshotDe": "Ja, mit einer Vollmacht von Ihnen und ihrem eigenen Ausweis.",
+      "snapshotAr": "نعم، بتوكيل منك وبطاقتها الشخصية.",
+      "before": {
+        "de": "Ja, mit einer Vollmacht von Ihnen und ihrem eigenen Ausweis.",
+        "ar": "نعم، بتوكيل منك وبطاقتها الشخصية."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-19.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S13",
+        "S14"
+      ],
+      "finding": "ومن هو الشخص المسؤول إذا احتجت معلومة؟",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Amir",
+        "de": "Und wer ist mein Ansprechpartner, wenn ich eine Auskunft brauche?",
+        "ar": "ومن هو الشخص المسؤول إذا احتجت معلومة؟"
+      },
+      "snapshotDe": "Und wer ist mein Ansprechpartner, wenn ich eine Auskunft brauche?",
+      "snapshotAr": "ومن هو الشخص المسؤول إذا احتجت معلومة؟",
+      "before": {
+        "de": "Und wer ist mein Ansprechpartner, wenn ich eine Auskunft brauche?",
+        "ar": "ومن هو الشخص المسؤول إذا احتجت معلومة؟"
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-19-q1",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S03",
+        "S16",
+        "S04"
+      ],
+      "finding": "اختر الإجابة الصحيحة حسب الحوار.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Warum ist der Antrag zuerst unvollständig?",
+        "options": [
+          "Das Foto fehlt.",
+          "Die Vollmacht fehlt.",
+          "Die Unterschrift auf dem Formular fehlt."
+        ],
+        "answer": "Die Unterschrift auf dem Formular fehlt.",
+        "explanationAr": "الدليل: «Das Foto ist da, aber die Unterschrift auf dem Formular fehlt». الفخّ 1: الصورة موجودة. الفخّ 2: التوكيل يخصّ استلام الزوجة.",
+        "id": "d-a2-19-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "snapshotDe": "Warum ist der Antrag zuerst unvollständig?",
+      "snapshotAr": "اختر الإجابة الصحيحة حسب الحوار."
+    },
+    {
+      "id": "d-a2-19-q2",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S02",
+        "S04",
+        "S17"
+      ],
+      "finding": "اختر الإجابة الصحيحة حسب الحوار.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was braucht die Frau von Amir zum Abholen?",
+        "options": [
+          "eine Vollmacht und ihren eigenen Ausweis",
+          "nur den Brief vom Amt",
+          "das Foto und das Formular"
+        ],
+        "answer": "eine Vollmacht und ihren eigenen Ausweis",
+        "explanationAr": "الدليل: «mit einer Vollmacht von Ihnen und ihrem eigenen Ausweis». الفخّ 1: الرسالة تُعلم بالجاهزية فقط. الفخّ 2: الصورة والاستمارة للطلب.",
+        "id": "d-a2-19-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "snapshotDe": "Was braucht die Frau von Amir zum Abholen?",
+      "snapshotAr": "اختر الإجابة الصحيحة حسب الحوار."
+    },
+    {
+      "id": "d-a2-19-q3",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S15"
+      ],
+      "finding": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Die Bearbeitungszeit beträgt etwa drei Tage.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Etwa drei Wochen. Sie bekommen dann einen Brief» — أسابيع لا أيام.",
+        "id": "d-a2-19-q3",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+      },
+      "snapshotDe": "Die Bearbeitungszeit beträgt etwa drei Tage.",
+      "snapshotAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+    },
+    {
+      "id": "d-a2-19.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "sources": [
+        "S01"
+      ],
+      "finding": "Sie möchten den Personalausweis verlängern?",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "sentence": "Sie möchten den Personalausweis verlängern?"
+      },
+      "snapshotDe": "Sie möchten den Personalausweis verlängern?",
+      "snapshotAr": null
+    },
+    {
+      "id": "d-a2-19.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02",
+        "S15"
+      ],
+      "finding": "Etwa drei Wochen. Sie bekommen dann einen Brief.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "sentence": "Etwa drei Wochen. Sie bekommen dann einen Brief."
+      },
+      "snapshotDe": "Etwa drei Wochen. Sie bekommen dann einen Brief.",
+      "snapshotAr": null
+    },
+    {
+      "id": "d-a2-20",
+      "kind": "dialogue",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S18",
+        "S19"
+      ],
+      "finding": "خلاف في السكن المشترك",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "titleDe": "Streit in der WG",
+        "titleAr": "خلاف في السكن المشترك",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "die Wohngemeinschaft",
+          "aufräumen",
+          "die Spülmaschine",
+          "abwaschen",
+          "die Essensreste",
+          "die Rücksicht",
+          "die Absprache",
+          "ordentlich",
+          "chaotisch",
+          "zuhören"
+        ]
+      },
+      "snapshotDe": "Streit in der WG",
+      "snapshotAr": "خلاف في السكن المشترك"
+    },
+    {
+      "id": "d-a2-20.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S10",
+        "S18",
+        "S19"
+      ],
+      "finding": "يوناس، يجب أن نتكلم. المطبخ فوضوي منذ ثلاثة أيام.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Nadia",
+        "de": "Jonas, wir müssen reden. Die Küche ist seit drei Tagen chaotisch.",
+        "ar": "يوناس، يجب أن نتكلم. المطبخ فوضوي منذ ثلاثة أيام."
+      },
+      "snapshotDe": "Jonas, wir müssen reden. Die Küche ist seit drei Tagen chaotisch.",
+      "snapshotAr": "يوناس، يجب أن نتكلم. المطبخ فوضوي منذ ثلاثة أيام.",
+      "before": {
+        "de": "Jonas, wir müssen reden. Die Küche ist seit drei Tagen chaotisch.",
+        "ar": "يوناس، يجب أن نتكلم. المطبخ فوضوي منذ ثلاثة أيام."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-20.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S09"
+      ],
+      "finding": "أعرف، آسف. كان عندي ضغط كبير هذا الأسبوع.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Jonas",
+        "de": "Ich weiß, tut mir leid. Ich hatte diese Woche viel Stress.",
+        "ar": "أعرف، آسف. كان عندي ضغط كبير هذا الأسبوع."
+      },
+      "snapshotDe": "Ich weiß, tut mir leid. Ich hatte diese Woche viel Stress.",
+      "snapshotAr": "أعرف، آسف. كان عندي ضغط كبير هذا الأسبوع.",
+      "before": {
+        "de": "Ich weiß, tut mir leid. Ich hatte diese Woche viel Stress.",
+        "ar": "أعرف، آسف. كان عندي ضغط كبير هذا الأسبوع."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-20.lines[2]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S10"
+      ],
+      "finding": "بقايا الطعام على الموقد، وغسّالة الصحون ممتلئة ولا أحد يشغّلها.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Nadia",
+        "de": "Die Essensreste stehen auf dem Herd, und die Spülmaschine ist voll, aber niemand macht sie an.",
+        "ar": "بقايا الطعام على الموقد، وغسّالة الصحون ممتلئة ولا أحد يشغّلها."
+      },
+      "snapshotDe": "Die Essensreste stehen auf dem Herd, und die Spülmaschine ist voll, aber niemand macht sie an.",
+      "snapshotAr": "بقايا الطعام على الموقد، وغسّالة الصحون ممتلئة ولا أحد يشغّلها.",
+      "before": {
+        "de": "Die Essensreste stehen auf dem Herd, und die Spülmaschine ist voll, aber niemand macht sie an.",
+        "ar": "بقايا الطعام على الموقد، وغسّالة الصحون ممتلئة ولا أحد يشغّلها."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-20.lines[3]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S10"
+      ],
+      "finding": "حسناً. سأغسل كل شيء الليلة وأرتّب.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Jonas",
+        "de": "Okay. Ich wasche heute Abend alles ab und räume auf.",
+        "ar": "حسناً. سأغسل كل شيء الليلة وأرتّب."
+      },
+      "snapshotDe": "Okay. Ich wasche heute Abend alles ab und räume auf.",
+      "snapshotAr": "حسناً. سأغسل كل شيء الليلة وأرتّب.",
+      "before": {
+        "de": "Okay. Ich wasche heute Abend alles ab und räume auf.",
+        "ar": "حسناً. سأغسل كل شيء الليلة وأرتّب."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-20.lines[4]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S19",
+        "S18"
+      ],
+      "finding": "شكراً. في السكن المشترك نحتاج مراعاة وإلا لا ينجح الأمر.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Nadia",
+        "de": "Danke. In einer Wohngemeinschaft braucht man Rücksicht, sonst funktioniert es nicht.",
+        "ar": "شكراً. في السكن المشترك نحتاج مراعاة وإلا لا ينجح الأمر."
+      },
+      "snapshotDe": "Danke. In einer Wohngemeinschaft braucht man Rücksicht, sonst funktioniert es nicht.",
+      "snapshotAr": "شكراً. في السكن المشترك نحتاج مراعاة وإلا لا ينجح الأمر.",
+      "before": {
+        "de": "Danke. In einer Wohngemeinschaft braucht man Rücksicht, sonst funktioniert es nicht.",
+        "ar": "شكراً. في السكن المشترك نحتاج مراعاة وإلا لا ينجح الأمر."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-20.lines[5]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S18"
+      ],
+      "finding": "معك حق. لنتّفق اتفاقاً ثابتاً: أنا مرتّب في المطبخ، وأنتِ تهتمّين بالحمّام؟",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Jonas",
+        "de": "Du hast recht. Machen wir eine feste Absprache: Ich bin ordentlich in der Küche, du kümmerst dich ums Bad?",
+        "ar": "معك حق. لنتّفق اتفاقاً ثابتاً: أنا مرتّب في المطبخ، وأنتِ تهتمّين بالحمّام؟"
+      },
+      "snapshotDe": "Du hast recht. Machen wir eine feste Absprache: Ich bin ordentlich in der Küche, du kümmerst dich ums Bad?",
+      "snapshotAr": "معك حق. لنتّفق اتفاقاً ثابتاً: أنا مرتّب في المطبخ، وأنتِ تهتمّين بالحمّام؟",
+      "before": {
+        "de": "Du hast recht. Machen wir eine feste Absprache: Ich bin ordentlich in der Küche, du kümmerst dich ums Bad?",
+        "ar": "معك حق. لنتّفق اتفاقاً ثابتاً: أنا مرتّب في المطبخ، وأنتِ تهتمّين بالحمّام؟"
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-20.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S19"
+      ],
+      "finding": "موافقة. وعند المشكلة القادمة: نستمع أولاً ثم نتخاصم.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Nadia",
+        "de": "Einverstanden. Und beim nächsten Problem: erst zuhören, dann streiten.",
+        "ar": "موافقة. وعند المشكلة القادمة: نستمع أولاً ثم نتخاصم."
+      },
+      "snapshotDe": "Einverstanden. Und beim nächsten Problem: erst zuhören, dann streiten.",
+      "snapshotAr": "موافقة. وعند المشكلة القادمة: نستمع أولاً ثم نتخاصم.",
+      "before": {
+        "de": "Einverstanden. Und beim nächsten Problem: erst zuhören, dann streiten.",
+        "ar": "موافقة. وعند المشكلة القادمة: نستمع أولاً ثم نتخاصم."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-20.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S19"
+      ],
+      "finding": "بل الأفضل ألا نتخاصم أصلاً.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Jonas",
+        "de": "Lieber gar nicht streiten.",
+        "ar": "بل الأفضل ألا نتخاصم أصلاً."
+      },
+      "snapshotDe": "Lieber gar nicht streiten.",
+      "snapshotAr": "بل الأفضل ألا نتخاصم أصلاً.",
+      "before": {
+        "de": "Lieber gar nicht streiten.",
+        "ar": "بل الأفضل ألا نتخاصم أصلاً."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-20-q1",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S10"
+      ],
+      "finding": "اختر الإجابة الصحيحة حسب الحوار.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was ist das Problem mit der Spülmaschine?",
+        "options": [
+          "Sie ist voll, aber niemand macht sie an.",
+          "Sie steht voll mit Essensresten auf dem Herd.",
+          "Jonas hat sie heute Abend angemacht."
+        ],
+        "answer": "Sie ist voll, aber niemand macht sie an.",
+        "explanationAr": "الدليل: «die Spülmaschine ist voll, aber niemand macht sie an». الفخّ 1: بقايا الطعام على الموقد لا في الغسّالة. الفخّ 2: «heute Abend» وعد يوناس بالغسل باليد.",
+        "id": "d-a2-20-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "snapshotDe": "Was ist das Problem mit der Spülmaschine?",
+      "snapshotAr": "اختر الإجابة الصحيحة حسب الحوار."
+    },
+    {
+      "id": "d-a2-20-q2",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S18"
+      ],
+      "finding": "اختر الإجابة الصحيحة حسب الحوار.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Welche Absprache schlägt Jonas vor?",
+        "options": [
+          "Beide räumen die Küche zusammen auf.",
+          "Er macht die Küche, Nadia das Bad.",
+          "Nadia macht die Küche, er das Bad."
+        ],
+        "answer": "Er macht die Küche, Nadia das Bad.",
+        "explanationAr": "الدليل: «Ich bin ordentlich in der Küche, du kümmerst dich ums Bad?». الفخّ: قلب الأدوار.",
+        "id": "d-a2-20-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "snapshotDe": "Welche Absprache schlägt Jonas vor?",
+      "snapshotAr": "اختر الإجابة الصحيحة حسب الحوار."
+    },
+    {
+      "id": "d-a2-20-q3",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S19"
+      ],
+      "finding": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "fill",
+        "promptDe": "In einer Wohngemeinschaft braucht man ___, sonst funktioniert es nicht.",
+        "answer": [
+          "Rücksicht"
+        ],
+        "explanationAr": "الدليل: «In einer Wohngemeinschaft braucht man Rücksicht, sonst funktioniert es nicht».",
+        "id": "d-a2-20-q3",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      "snapshotDe": "In einer Wohngemeinschaft braucht man ___, sonst funktioniert es nicht.",
+      "snapshotAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+    },
+    {
+      "id": "d-a2-20.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S18"
+      ],
+      "finding": "Die Küche ist seit drei Tagen chaotisch.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "sentence": "Die Küche ist seit drei Tagen chaotisch."
+      },
+      "snapshotDe": "Die Küche ist seit drei Tagen chaotisch.",
+      "snapshotAr": null
+    },
+    {
+      "id": "d-a2-20.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S10"
+      ],
+      "finding": "Ich wasche heute Abend alles ab und räume auf.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "sentence": "Ich wasche heute Abend alles ab und räume auf."
+      },
+      "snapshotDe": "Ich wasche heute Abend alles ab und räume auf.",
+      "snapshotAr": null
+    },
+    {
+      "id": "d-a2-21",
+      "kind": "dialogue",
+      "status": "سليم",
+      "sources": [
+        "S12",
+        "S20"
+      ],
+      "finding": "بعد مباراة كرة القدم",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "titleDe": "Nach dem Fußballspiel",
+        "titleAr": "بعد مباراة كرة القدم",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "die Mannschaft",
+          "gewinnen",
+          "verlieren",
+          "die Verletzung",
+          "sich verletzen",
+          "der Facharzt",
+          "die Beschwerden",
+          "trösten",
+          "hilfsbereit"
+        ]
+      },
+      "snapshotDe": "Nach dem Fußballspiel",
+      "snapshotAr": "بعد مباراة كرة القدم"
+    },
+    {
+      "id": "d-a2-21.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S23"
+      ],
+      "finding": "ارفعوا رؤوسكم يا شباب. خسرنا لكن الفريق لعب جيداً.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Trainer",
+        "de": "Kopf hoch, Leute. Wir haben verloren, aber die Mannschaft hat gut gespielt.",
+        "ar": "ارفعوا رؤوسكم يا شباب. خسرنا لكن الفريق لعب جيداً."
+      },
+      "snapshotDe": "Kopf hoch, Leute. Wir haben verloren, aber die Mannschaft hat gut gespielt.",
+      "snapshotAr": "ارفعوا رؤوسكم يا شباب. خسرنا لكن الفريق لعب جيداً.",
+      "before": {
+        "de": "Kopf hoch, Leute. Wir haben verloren, aber die Mannschaft hat gut gespielt.",
+        "ar": "ارفعوا رؤوسكم يا شباب. خسرنا لكن الفريق لعب جيداً."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-21.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S11",
+        "S12",
+        "S21"
+      ],
+      "finding": "اثنان لثلاثة. لولا إصابة علي لكنّا فزنا.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Selim",
+        "de": "Zwei zu drei. Ohne die Verletzung von Ali hätten wir gewonnen.",
+        "ar": "اثنان لثلاثة. لولا إصابة علي لكنّا فزنا."
+      },
+      "snapshotDe": "Zwei zu drei. Ohne die Verletzung von Ali hätten wir gewonnen.",
+      "snapshotAr": "اثنان لثلاثة. لولا إصابة علي لكنّا فزنا.",
+      "before": {
+        "de": "Zwei zu drei. Ohne die Verletzung von Ali hätten wir gewonnen.",
+        "ar": "اثنان لثلاثة. لولا إصابة علي لكنّا فزنا."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-21.lines[2]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S21"
+      ],
+      "finding": "كيف حاله؟ هل أُصيب بشدة؟",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Trainer",
+        "de": "Wie geht es ihm? Hat er sich schlimm verletzt?",
+        "ar": "كيف حاله؟ هل أُصيب بشدة؟"
+      },
+      "snapshotDe": "Wie geht es ihm? Hat er sich schlimm verletzt?",
+      "snapshotAr": "كيف حاله؟ هل أُصيب بشدة؟",
+      "before": {
+        "de": "Wie geht es ihm? Hat er sich schlimm verletzt?",
+        "ar": "كيف حاله؟ هل أُصيب بشدة؟"
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-21.lines[3]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S22"
+      ],
+      "finding": "الركبة تؤلمه. عنده آلام شديدة عند المشي.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Selim",
+        "de": "Das Knie tut weh. Er hat starke Beschwerden beim Gehen.",
+        "ar": "الركبة تؤلمه. عنده آلام شديدة عند المشي."
+      },
+      "snapshotDe": "Das Knie tut weh. Er hat starke Beschwerden beim Gehen.",
+      "snapshotAr": "الركبة تؤلمه. عنده آلام شديدة عند المشي.",
+      "before": {
+        "de": "Das Knie tut weh. Er hat starke Beschwerden beim Gehen.",
+        "ar": "الركبة تؤلمه. عنده آلام شديدة عند المشي."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-21.lines[4]",
+      "kind": "line",
+      "status": "مصحح",
+      "sources": [
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "finding": "إذن عليه غداً الذهاب إلى الطبيب المختص لا إلى طبيب العائلة فقط.",
+      "action": "صُحح التوازن النحوي بإعادة حرف الجر «إلى» قبل «طبيب العائلة» لتطابق «إلى الطبيب المختص».",
+      "reviewed": {
+        "who": "Trainer",
+        "de": "Dann muss er morgen zum Facharzt, nicht nur zum Hausarzt.",
+        "ar": "إذن عليه غداً الذهاب إلى الطبيب المختص لا إلى طبيب العائلة فقط."
+      },
+      "snapshotDe": "Dann muss er morgen zum Facharzt, nicht nur zum Hausarzt.",
+      "snapshotAr": "إذن عليه غداً الذهاب إلى الطبيب المختص لا طبيب العائلة فقط.",
+      "before": {
+        "de": "Dann muss er morgen zum Facharzt, nicht nur zum Hausarzt.",
+        "ar": "إذن عليه غداً الذهاب إلى الطبيب المختص لا طبيب العائلة فقط."
+      },
+      "after": {
+        "de": "Dann muss er morgen zum Facharzt, nicht nur zum Hausarzt.",
+        "ar": "إذن عليه غداً الذهاب إلى الطبيب المختص لا إلى طبيب العائلة فقط."
+      }
+    },
+    {
+      "id": "d-a2-21.lines[5]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S24"
+      ],
+      "finding": "سأوصله. والليلة نذهب جميعاً إليه لنواسيه.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Selim",
+        "de": "Ich fahre ihn hin. Und heute Abend gehen wir alle zu ihm, um ihn zu trösten.",
+        "ar": "سأوصله. والليلة نذهب جميعاً إليه لنواسيه."
+      },
+      "snapshotDe": "Ich fahre ihn hin. Und heute Abend gehen wir alle zu ihm, um ihn zu trösten.",
+      "snapshotAr": "سأوصله. والليلة نذهب جميعاً إليه لنواسيه.",
+      "before": {
+        "de": "Ich fahre ihn hin. Und heute Abend gehen wir alle zu ihm, um ihn zu trösten.",
+        "ar": "سأوصله. والليلة نذهب جميعاً إليه لنواسيه."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-21.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S23"
+      ],
+      "finding": "هذا تعاون طيب منكم. هكذا يفوز المرء حتى بعد الخسارة.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Trainer",
+        "de": "Das ist hilfsbereit von euch. So gewinnt man auch nach einer Niederlage.",
+        "ar": "هذا تعاون طيب منكم. هكذا يفوز المرء حتى بعد الخسارة."
+      },
+      "snapshotDe": "Das ist hilfsbereit von euch. So gewinnt man auch nach einer Niederlage.",
+      "snapshotAr": "هذا تعاون طيب منكم. هكذا يفوز المرء حتى بعد الخسارة.",
+      "before": {
+        "de": "Das ist hilfsbereit von euch. So gewinnt man auch nach einer Niederlage.",
+        "ar": "هذا تعاون طيب منكم. هكذا يفوز المرء حتى بعد الخسارة."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-21.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "sources": [
+        "S11",
+        "S20"
+      ],
+      "finding": "الأسبوع القادم نفوز فعلاً.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "who": "Selim",
+        "de": "Nächste Woche gewinnen wir dann richtig.",
+        "ar": "الأسبوع القادم نفوز فعلاً."
+      },
+      "snapshotDe": "Nächste Woche gewinnen wir dann richtig.",
+      "snapshotAr": "الأسبوع القادم نفوز فعلاً.",
+      "before": {
+        "de": "Nächste Woche gewinnen wir dann richtig.",
+        "ar": "الأسبوع القادم نفوز فعلاً."
+      },
+      "after": null
+    },
+    {
+      "id": "d-a2-21-q1",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S12",
+        "S20",
+        "S21"
+      ],
+      "finding": "اختر الإجابة الصحيحة حسب الحوار.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wie ist das Spiel ausgegangen?",
+        "options": [
+          "Die Mannschaft hat drei zu zwei gewonnen.",
+          "Die Mannschaft hat zwei zu drei verloren.",
+          "Das Spiel wurde wegen der Verletzung abgebrochen."
+        ],
+        "answer": "Die Mannschaft hat zwei zu drei verloren.",
+        "explanationAr": "الدليل: «Wir haben verloren» و«Zwei zu drei». الفخّ 1: قلب النتيجة. الفخّ 2: الإصابة لم توقف المباراة.",
+        "id": "d-a2-21-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "snapshotDe": "Wie ist das Spiel ausgegangen?",
+      "snapshotAr": "اختر الإجابة الصحيحة حسب الحوار."
+    },
+    {
+      "id": "d-a2-21-q2",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "finding": "اختر الإجابة الصحيحة حسب الحوار.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wohin soll Ali morgen gehen?",
+        "options": [
+          "nur zum Hausarzt",
+          "zu Ali nach Hause",
+          "zum Facharzt"
+        ],
+        "answer": "zum Facharzt",
+        "explanationAr": "الدليل: «Dann muss er morgen zum Facharzt, nicht nur zum Hausarzt». الفخّ 1: «nicht nur zum Hausarzt» منفيّ صراحة. الفخّ 2: بيت علي يزوره الأصدقاء مساءً.",
+        "id": "d-a2-21-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "snapshotDe": "Wohin soll Ali morgen gehen?",
+      "snapshotAr": "اختر الإجابة الصحيحة حسب الحوار."
+    },
+    {
+      "id": "d-a2-21-q3",
+      "kind": "question",
+      "status": "سليم",
+      "sources": [
+        "S24"
+      ],
+      "finding": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Die Freunde besuchen Ali heute Abend.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل: «heute Abend gehen wir alle zu ihm, um ihn zu trösten».",
+        "id": "d-a2-21-q3",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+      },
+      "snapshotDe": "Die Freunde besuchen Ali heute Abend.",
+      "snapshotAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+    },
+    {
+      "id": "d-a2-21.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "sources": [
+        "S20"
+      ],
+      "finding": "Wir haben verloren, aber die Mannschaft hat gut gespielt.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "sentence": "Wir haben verloren, aber die Mannschaft hat gut gespielt."
+      },
+      "snapshotDe": "Wir haben verloren, aber die Mannschaft hat gut gespielt.",
+      "snapshotAr": null
+    },
+    {
+      "id": "d-a2-21.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S22"
+      ],
+      "finding": "Er hat starke Beschwerden beim Gehen.",
+      "action": "بقي كما هو.",
+      "reviewed": {
+        "sentence": "Er hat starke Beschwerden beim Gehen."
+      },
+      "snapshotDe": "Er hat starke Beschwerden beim Gehen.",
+      "snapshotAr": null
+    }
+  ],
+  "waisen": [
+    {
+      "term": "der Personalausweis",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vf-kultd-328",
+      "level": "A2",
+      "sources": [
+        "S01",
+        "S02",
+        "S03"
+      ]
+    },
+    {
+      "term": "verlängern",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vf-kultd-329",
+      "level": "A2",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "term": "die Bearbeitungszeit",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vf-kultd-330",
+      "level": "A2",
+      "sources": [
+        "S02",
+        "S15"
+      ]
+    },
+    {
+      "term": "vollständig",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vf-kultd-335",
+      "level": "A2",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "term": "unvollständig",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vf-kultd-336",
+      "level": "A2",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "term": "die Unterschrift",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vz-schr-904",
+      "level": "A2",
+      "sources": [
+        "S03",
+        "S16"
+      ]
+    },
+    {
+      "term": "die Vollmacht",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vz-schr-905",
+      "level": "A2",
+      "sources": [
+        "S02",
+        "S04",
+        "S17"
+      ]
+    },
+    {
+      "term": "der Ansprechpartner",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vf-kultd-333",
+      "level": "A2",
+      "sources": [
+        "S13"
+      ]
+    },
+    {
+      "term": "die Auskunft",
+      "dialogueId": "d-a2-19",
+      "hasCard": true,
+      "cardId": "vy-leben-058",
+      "level": "A2",
+      "sources": [
+        "S14"
+      ]
+    },
+    {
+      "term": "die Wohngemeinschaft",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "vd-wohnv-802",
+      "level": "A2",
+      "sources": [
+        "S18"
+      ]
+    },
+    {
+      "term": "aufräumen",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "vw-a2all-013",
+      "level": "A2",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "term": "die Spülmaschine",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "ve-kueche--014",
+      "level": "A2",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "term": "abwaschen",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "ve-kueche--015",
+      "level": "A2",
+      "sources": [
+        "S09",
+        "S10"
+      ]
+    },
+    {
+      "term": "die Essensreste",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "ve-kueche--024",
+      "level": "A2",
+      "sources": [
+        "S09"
+      ]
+    },
+    {
+      "term": "die Rücksicht",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "vw-a2all-081",
+      "level": "A2",
+      "sources": [
+        "S19"
+      ]
+    },
+    {
+      "term": "die Absprache",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "vc-mensc-880",
+      "level": "A2",
+      "sources": [
+        "S25"
+      ]
+    },
+    {
+      "term": "ordentlich",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "vc-mensch-007",
+      "level": "A2",
+      "sources": [
+        "S26"
+      ]
+    },
+    {
+      "term": "chaotisch",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "vc-mensch-008",
+      "level": "A2",
+      "sources": [
+        "S27"
+      ]
+    },
+    {
+      "term": "zuhören",
+      "dialogueId": "d-a2-20",
+      "hasCard": true,
+      "cardId": "vc-mensc-810",
+      "level": "A2",
+      "sources": [
+        "S28"
+      ]
+    },
+    {
+      "term": "die Mannschaft",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vd-gesund-005",
+      "level": "A2",
+      "sources": [
+        "S20"
+      ]
+    },
+    {
+      "term": "gewinnen",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vd-gesund-006",
+      "level": "A2",
+      "sources": [
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "term": "verlieren",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vd-gesund-007",
+      "level": "A2",
+      "sources": [
+        "S12"
+      ]
+    },
+    {
+      "term": "die Verletzung",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vd-gesund-008",
+      "level": "A2",
+      "sources": [
+        "S21"
+      ]
+    },
+    {
+      "term": "sich verletzen",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vd-gesund-009",
+      "level": "A2",
+      "sources": [
+        "S21"
+      ]
+    },
+    {
+      "term": "der Facharzt",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vd-gesund-022",
+      "level": "A2",
+      "sources": [
+        "S06",
+        "S07"
+      ]
+    },
+    {
+      "term": "die Beschwerden",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vy-leben-041",
+      "level": "A2",
+      "sources": [
+        "S08",
+        "S22"
+      ]
+    },
+    {
+      "term": "trösten",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vc-mensc-807",
+      "level": "A2",
+      "sources": [
+        "S24"
+      ]
+    },
+    {
+      "term": "hilfsbereit",
+      "dialogueId": "d-a2-21",
+      "hasCard": true,
+      "cardId": "vc-mensch-013",
+      "level": "A2",
+      "sources": [
+        "S23"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Bürgerservice.info: Personalausweis verlängern",
+      "url": "https://www.buergerservice.info/personalausweis-verlaengern/",
+      "supports": "يشرح أن التمديد الفني للهوية غير موجود قانونياً؛ المتداول «verlängern» هو طلب جديد، ويذكر مدة الإصدار 3–4 أسابيع وإمكانية التوكيل للاستلام.",
+      "limits": "الاستعمال العامي «verlängern» مقبول في الحوار اليومي، ولا يثبت تفاصيل مكتب بعينه."
+    },
+    {
+      "id": "S02",
+      "title": "Rathausnachrichten: Personalausweis beantragen 2026",
+      "url": "https://rathausnachrichten.de/personalausweis-beantragen-kosten-dauer/",
+      "supports": "يسند مدة الإصدار العادية 2–3 أسابيع وإمكانية إعطاء توكيل كتابي غير رسمي للاستلام مع إحضار بطاقة المُوَكَّل.",
+      "limits": "لا يحدد مهلة موحدة لكل مدينة؛ لا يثبت تفاصيل الرسالة التي تصل بالبريد."
+    },
+    {
+      "id": "S03",
+      "title": "Landeshauptstadt Saarbrücken: Bundespersonalausweis",
+      "url": "https://www.saarbruecken.de/rathaus/buergerservice/ausweis_und_paesse/bundespersonalausweis",
+      "supports": "يؤكد أن التقديم يتطلب الحضور الشخصي للتوقيع، أما الاستلام فيجوز بتوكيل، ومدة الإصدار نحو 2–3 أسابيع.",
+      "limits": "لا يصف مكتباً بعينه."
+    },
+    {
+      "id": "S04",
+      "title": "Vollmacht-Service: Vollmacht Personalausweis",
+      "url": "https://vollmachtservice.com/personalausweis-beantragen-erwachsene/",
+      "supports": "يذكر أن الاستلام يمكن بتوكيل كتابي غير رسمي مع إثبات هوية المستلم.",
+      "limits": "لا يثبت صياغة محددة أو وجوب نسخة من بطاقة المُوَكِّل في كل مكتب."
+    },
+    {
+      "id": "S05",
+      "title": "Duden: Hausarzt",
+      "url": "https://www.duden.de/rechtschreibung/Hausarzt",
+      "supports": "يعرّف طبيب الأسرة بأنه الطبيب الأول الذي تُراجعه الأسرة، ويورد جمع Hausärzte والتركيب «zum Hausarzt gehen».",
+      "limits": "لا يحدد مسار الإحالة في كل حالة."
+    },
+    {
+      "id": "S06",
+      "title": "Stiftung Gesundheitswissen: Was macht welcher Arzt?",
+      "url": "https://www.stiftung-gesundheitswissen.de/hilfe-und-ansprechpartner/arzt",
+      "supports": "يشرح أن Facharzt طبيب ذي تأهيل خاص بعد الدراسة، وأن Hausarzt (أخصائي طب الأسرة) هو نقطة الاتصال الأولى ويمكنه الإحالة عند اللزوم.",
+      "limits": "لا يوصي بتخصص معين لإصابة ركبة خيالية."
+    },
+    {
+      "id": "S07",
+      "title": "SBK: Einfach erklärt: alles Wichtige zum Facharztbesuch",
+      "url": "https://www.sbk.org/magazin/einfach-erklaert-alles-wichtige-zum-facharztbesuch/",
+      "supports": "يذكر حرية اختيار الطبيب في ألمانيا وإمكان الذهاب مباشرة إلى الطبيب المختص في الغالب، مع استثناءات محدودة.",
+      "limits": "لا يحدد تشخيصاً."
+    },
+    {
+      "id": "S08",
+      "title": "Lumedis: Knieschmerzen beim Gehen",
+      "url": "https://www.lumedis.de/knieschmerzen-gehen.html",
+      "supports": "يستعمل تعبير «erhebliche Beschwerden beim Gehen» في سياق آلام الركبة، مسنداً صحة التعبير الألماني.",
+      "limits": "لا يشخّص إصابة علي أو يحدد مسارها العلاجي."
+    },
+    {
+      "id": "S09",
+      "title": "e-Sprachlingua: German Verbs for To Clean",
+      "url": "https://e-sprachlingua.com/Blog/German/A2_reinigen.html",
+      "supports": "يشرح aufräumen بمعنى الترتيب/التنظيم وabwaschen لغسل الصحون يدوياً وSpülmaschine لغسّالة الصحون، ويدعم استعمالها في نص السكن المشترك.",
+      "limits": "لا يقيم حل النزاع في الحوار."
+    },
+    {
+      "id": "S10",
+      "title": "German Stack Exchange: abwaschen vs. aufwaschen",
+      "url": "https://german.stackexchange.com/questions/5218/abwaschen-vs-aufwaschen/5227",
+      "supports": "يؤكد أن abwaschen فصيح لغسل الأطباق، وaufwaschen محدود إقليمياً.",
+      "limits": "لا يصحح أسلوب الحوار اليومي."
+    },
+    {
+      "id": "S11",
+      "title": "Online-translator / mein-deutschbuch.de: Konjunktiv II zu gewinnen",
+      "url": "https://www.online-translator.com/conjugation%20and%20declension/german/gewinnen",
+      "supports": "يؤكد صيغة «hätten wir gewonnen» بصفتها Konjunktiv II ماضٍ للفوز (شرط غير واقعي).",
+      "limits": "لا يحكم على نتيجة المباراة الخيالية."
+    },
+    {
+      "id": "S12",
+      "title": "Sportschau: Spiel um Platz drei (Beispiele 2:3, 3:2)",
+      "url": "https://www.sportschau.de/fussball/fifa-wm-2026/spiel-um-platz-drei-viel-historie-wenig-bedeutung,spiel-um-platz-drei-118.html",
+      "supports": "تستعمل أمثلة نتائج كرة قدم بصيغة «2:3» و«3:2»، مسندة صحة التعبير بالأرقام للمباريات.",
+      "limits": "لا يخص نتيجة مباراة خيالية."
+    },
+    {
+      "id": "S13",
+      "title": "Duden: Ansprechpartner",
+      "url": "https://www.duden.de/rechtschreibung/Ansprechpartner",
+      "supports": "يعرّف Ansprechpartner بأنه الشخص المسؤول/المختص الذي يُرجع إليه في موضوع ما.",
+      "limits": "لا يحدد شخصاً بعينه."
+    },
+    {
+      "id": "S14",
+      "title": "Duden: Auskunft",
+      "url": "https://www.duden.de/rechtschreibung/Auskunft",
+      "supports": "يسند معنى المعلومة/الإفادة المطلوبة من جهة رسمية.",
+      "limits": "لا يحدد موظفاً."
+    },
+    {
+      "id": "S15",
+      "title": "Duden: Bearbeitungszeit",
+      "url": "https://www.duden.de/rechtschreibung/Bearbeitungszeit",
+      "supports": "يسند كلمة Bearbeitungszeit (مدة المعالجة/الإنجاز).",
+      "limits": "لا يثبت مهلة كل طلب."
+    },
+    {
+      "id": "S16",
+      "title": "Duden: Unterschrift",
+      "url": "https://www.duden.de/rechtschreibung/Unterschrift",
+      "supports": "يعرّف التوقيع بأنه التوقيع الخطي اللازم للاستمارات الرسمية.",
+      "limits": "لا يصف استمارة بعينها."
+    },
+    {
+      "id": "S17",
+      "title": "Duden: Vollmacht",
+      "url": "https://www.duden.de/rechtschreibung/Vollmacht",
+      "supports": "يعرّف التوكيل/التفويض لتمثيل شخص آخر.",
+      "limits": "لا يحسم شكل التوكيل المطلوب في كل مكتب."
+    },
+    {
+      "id": "S18",
+      "title": "Duden: Wohngemeinschaft",
+      "url": "https://www.duden.de/rechtschreibung/Wohngemeinschaft",
+      "supports": "يعرّف Wohngemeinschaft (السكن المشترك).",
+      "limits": "لا يقيّم قواعد السكن."
+    },
+    {
+      "id": "S19",
+      "title": "Duden: Rücksicht",
+      "url": "https://www.duden.de/rechtschreibung/Ruecksicht",
+      "supports": "يسند معنى المراعاة/الانتباه للغير، ويسند التركيب «Rücksicht nehmen/brauchen».",
+      "limits": "لا يحكم على الحل في الحوار."
+    },
+    {
+      "id": "S20",
+      "title": "Duden: Mannschaft",
+      "url": "https://www.duden.de/rechtschreibung/Mannschaft",
+      "supports": "يعرّف الفريق في الرياضة.",
+      "limits": "لا يقيّم أداء الفريق الخيالي."
+    },
+    {
+      "id": "S21",
+      "title": "Duden: Verletzung",
+      "url": "https://www.duden.de/rechtschreibung/Verletzung",
+      "supports": "يسند معنى الإصابة الجسدية.",
+      "limits": "لا يشخّص."
+    },
+    {
+      "id": "S22",
+      "title": "Duden: Beschwerde, Beschwerden",
+      "url": "https://www.duden.de/rechtschreibung/Beschwerde",
+      "supports": "يسند استعمال Beschwerden بمعنى آلام/شكاوى صحية.",
+      "limits": "لا يحدد تشخيصاً."
+    },
+    {
+      "id": "S23",
+      "title": "Duden: hilfsbereit",
+      "url": "https://www.duden.de/rechtschreibung/hilfsbereit",
+      "supports": "يعرّفها بأنها صفة المتعاون/المستعد للمساعدة.",
+      "limits": "لا يقيم سلوك الشخصيات."
+    },
+    {
+      "id": "S24",
+      "title": "Duden: trösten",
+      "url": "https://www.duden.de/rechtschreibung/troesten",
+      "supports": "يعرّف المواساة/تعزية شخص حزين.",
+      "limits": "لا يقيّم المسار العاطفي في الحوار."
+    },
+    {
+      "id": "S25",
+      "title": "Duden: Absprache",
+      "url": "https://www.duden.de/rechtschreibung/Absprache",
+      "supports": "يعرّف Absprache بأنها اتفاق/ترتيب بين طرفين (فeste Absprache = اتفاق ثابت).",
+      "limits": "لا يحسم نموذج التقسيم في الحوار."
+    },
+    {
+      "id": "S26",
+      "title": "Duden: ordentlich",
+      "url": "https://www.duden.de/rechtschreibung/ordentlich",
+      "supports": "يسند معنى ordentlich بمعنى مرتّب/نظيف/منظم.",
+      "limits": "لا يقيّم أسلوب الحياة."
+    },
+    {
+      "id": "S27",
+      "title": "Duden: chaotisch",
+      "url": "https://www.duden.de/rechtschreibung/chaotisch",
+      "supports": "يعرّفها بالفوضوية/غير المنظمة.",
+      "limits": "لا يقيّم درجة الفوضى."
+    },
+    {
+      "id": "S28",
+      "title": "Duden: zuhören",
+      "url": "https://www.duden.de/rechtschreibung/zuhoeren",
+      "supports": "يسند الفعل zuhören بمعنى الإصغاء/الاستماع.",
+      "limits": "لا يحكم على أسلوب حل النزاع."
+    }
+  ],
+  "audioAudit": {
+    "d-a2-19": {
+      "inManifest": false,
+      "mp3OnDisk": false,
+      "sizeBytes": null
+    },
+    "d-a2-20": {
+      "inManifest": false,
+      "mp3OnDisk": false,
+      "sizeBytes": null
+    },
+    "d-a2-21": {
+      "inManifest": false,
+      "mp3OnDisk": false,
+      "sizeBytes": null
+    }
+  },
+  "correction": {
+    "onlyFieldChanged": "d-a2-21.lines[4].ar",
+    "beforeAr": "إذن عليه غداً الذهاب إلى الطبيب المختص لا طبيب العائلة فقط.",
+    "afterAr": "إذن عليه غداً الذهاب إلى الطبيب المختص لا إلى طبيب العائلة فقط.",
+    "rationale": "التوازن النحوي يتطلب تكرار حرف الجر «إلى» ليتناسب مع «إلى الطبيب المختص»؛ لم يتغير الألماني أو الأسئلة أو المفاتيح."
+  },
+  "contextNotes": [
+    {
+      "topic": "Personalausweis-Verlängerung (d-a2-19)",
+      "note": "الاستعمال العامي «Ausweis verlängern» مقبول في المحادثة اليومية رغم أن الإجراء الرسمي هو طلب بطاقة جديدة (S01). لا تعديل."
+    },
+    {
+      "topic": "Bearbeitungszeit drei Wochen (d-a2-19)",
+      "note": "المدة «نحو ثلاثة أسابيع» في نطاق ما تسنده المصادر الرسمية (2–4 أسابيع حسب المدينة، S01–S03). لا تعديل."
+    },
+    {
+      "topic": "Vollmacht zur Abholung (d-a2-19)",
+      "note": "إمكانية الاستلام بتوكيل مع بطاقة المستلم واردة في مصادر الخدمة المدنية (S02–S04). لا تعديل."
+    },
+    {
+      "topic": "Facharzt/Hausarzt (d-a2-21)",
+      "note": "التمييز بين الطبيب المختص وطبيب الأسرة وحرية اختيار الطبيب وارد في المصادر (S05–S07). لا تعديل لعدم تحديد التخصص؛ هو أخصائي تقرّره الإحابة/الحالة."
+    },
+    {
+      "topic": "Ohne … hätten wir gewonnen (d-a2-21)",
+      "note": "صيغة Konjunktiv II الماضية «hätten wir gewonnen» صحيية نحوياً (S11). لا تعديل."
+    },
+    {
+      "topic": "Ich fahre ihn hin (d-a2-21)",
+      "note": "تعبير «ich fahre ihn hin» صحيح في العامية الألمانية بمعنى أوصله بالسيارة، ولا يحتاج «zum Arzt» مكرراً بعد «muss er morgen zum Facharzt». لا تعديل."
+    }
+  ],
+  "styleAlternatives": [
+    {
+      "where": "d-a2-20.lines[6].ar",
+      "alternative": "نتشاور قبل النزاع",
+      "note": "«نستمع أولاً ثم نتخاصم» ترجمة أمينة لـ«erst zuhören, dann streiten»، والبديل ليس خطأً مؤكداً ولا نعدّله."
+    }
+  ],
+  "unresolved": [],
+  "audio": {
+    "present": false,
+    "note": "لا توجد إدخالات للمعرفات الثلاثة في content/dialog-audio.json ولا ملفات mp3 مقابلة تحت public/audio/dialog. الحوارات موسومة neu وتستعمل نطق المتصفح. لم يحدث تشغيل أو استماع."
+  },
+  "history": {
+    "creationScriptMentioned": "scripts/patches/dialoge_a2_neu1.py",
+    "historyUsedFor": "لا يوجد سجل تاريخي منفصل لهذه المعرفات في a_dialog_fallen.py التي تغطي أسئلة محدودة من دفعات سابقة؛ لم تُجرَ مقارنة تاريخية لهذه الدفعة لغياب مصدر مطابق في السكربت المفحوص.",
+    "note": "لا ادعاء باستعادة تاريخ Git غير المتاح، ولا مقارنة خارج السجلات المتاحة."
+  },
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو نسبة المحتوى أو حساب المستوى.",
+    "audio": "لم يحدث تشغيل/استماع لأي ملف صوتي.",
+    "human": "المراجعة مؤازرة بمصادر منشورة وليست مراجعة بشرية أو اعتماداً مهنياً.",
+    "medical": "المعلومات الطبية في الحوار عامة ولا تعدّ تشخيصاً أو نصيحة سريرية؛ لا حكم على ملاءمة تصرف المدرب أو سياق الإصابة.",
+    "legal": "معلومات بطاقة الهوية والتوكيل عامة ولا تُغني عن استشارة رسمية؛ لا تحسم الإجراءات في مكتب محدد."
+  },
+  "patch": "scripts/patches/review_a2_dialogues_08.py",
+  "reportScript": "scripts/patches/report_a2_dialogues_08.py",
+  "gates": "K184a–j"
+}

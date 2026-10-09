@@ -1,0 +1,1560 @@
+{
+  "date": "2026-10-05",
+  "batch": "A2-dialogues-05",
+  "scope": "مراجعة مصدرية فردية للحوارات الحية d-a2-10 إلى d-a2-12: 3 بيانات حوار، 24 سطراً، 9 أسئلة بكل خياراتها ومفاتيحها وشروحها، و6 جمل إملاء؛ 42 وحدة إجمالاً، مع فحص 25 مدخلاً من وسوم waisen ضمن بيانات الحوار لا كوحدات إضافية. فُحص سجل الصوت والتاريخ كلٌّ ضمن حدوده.",
+  "method": "استُخرج الترتيب واللقطات من content/dialogues.json بعد مراجعة حالتي Git والتقارير. فُحص كل معرّف على حدة بسياقه وبصفحة إنترنت منشورة تسند النقطة المحددة، ثم سُجل الدليل والحكم والإجراء واللقطة. استُخدم المعجم لإسناد المعاني لا لإثبات طبيعية كل جملة. صُحح فقط إسقاط معنى steigen؛ وفُصل عدم حسم السببية القانونية والطقس عن الأخطاء اللغوية.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictationSentences": 6,
+    "audioAssets": 0,
+    "unresolvedContextNotes": 2,
+    "totalTrackedItems": 42,
+    "waisenTermsReviewed": 25
+  },
+  "statusCounts": {
+    "سليم": 35,
+    "مُصحح": 1,
+    "غير محسوم": 6
+  },
+  "statusDefinitions": {
+    "سليم": "فُحصت الوحدة بسياقها ومصدرها؛ لم يثبت فيها خطأ ترجمي/لغوي مؤكد يستلزم التعديل. قد تُسجّل ملاحظة أسلوبية دون تحويلها إلى عيب.",
+    "مُصحح": "ثبت نقص/خطأ محدد في الحقل بمقابلته مع النص ومصدر منشور، وعُدّل الحقل المحدد في البيانات الحية مع حفظ before.",
+    "غير محسوم": "المعنى أو السؤال قد يكون سليماً لغوياً، لكن حقيقة سياقية/سببية لا يحسمها النص أو المرجع؛ لا تعديل تخمينياً."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة؛ ليست مراجعة بشرية أو اعتماداً لغوياً/قانونياً/مهنياً.",
+    "لا توجد إدخالات لهذه الحوارات في content/dialog-audio.json، ولم يعثر مسح أسماء الملفات في public على أصول باسم d-a2-10 أو d-a2-11 أو d-a2-12؛ لذلك audioAssetAudit فارغ. لم يُشغّل متصفح TTS ولم يحدث استماع أو فحص صوت.",
+    "ملف scripts/patches/dialoge_a2_neu1.py مصدر إنشاء أولي يقارن به الحقل المصحح فقط، وليس مرجعاً لغوياً أو تاريخاً كاملاً. ملف scripts/patches/a_dialog_fallen.py لم يتضمن سجلات للأسئلة المستهدفة؛ لا يُستنتج من ذلك غياب تاريخ في مواضع أخرى أو فروع غير مفحوصة.",
+    "لم يُعَد تقييم A2/CEFR أو النسبة أو حساب المستوى الممكن؛ وسم المستوى ليس نتيجة هذه المراجعة.",
+    "الملاحظة القانونية في d-a2-10 تعليمية؛ لم تُقدّم فتوى أو نتيجة قانونية بشأن مستأجر أو مبنى حقيقي.",
+    "وقائع النشرة الجوية في d-a2-12 بلا موقع/تاريخ/عام محدد، لذلك لم تُطابق مع رصد أو توقع حقيقي؛ لا تُصنّف خاطئة لمجرد غياب السياق.",
+    "المداخل المعجمية تسند معاني مفردات بعينها، ولا تحسم بمفردها سلاسة كل جملة عربية أو أثراً تعليمياً."
+  ],
+  "historicalPatchReview": {
+    "sources": [
+      "scripts/patches/dialoge_a2_neu1.py",
+      "scripts/patches/a_dialog_fallen.py"
+    ],
+    "role": "يحتوي dialoge_a2_neu1.py النص الإنشائي القديم نفسه لترجمة d-a2-12.lines[3]؛ استُخدم لمقارنة before فقط، لا كحكم لغوي. بحثنا في a_dialog_fallen.py ولم نجد معرفات d-a2-10 إلى d-a2-12، لذلك لا توجد مقارنة تاريخية لخيارات أسئلتها من ذلك الملف. المقارنة لا تعيد بناء كل تاريخ التعديل.",
+    "unavailableHistoricalFields": [
+      "التسلسل الكامل لتعديلات النص بعد ملف الإنشاء",
+      "سجل تاريخي مستقل لأسئلة هذه المعرفات في a_dialog_fallen.py",
+      "أصول صوت تاريخية",
+      "تاريخ فروع/أرشيفات غير مفحوصة"
+    ],
+    "comparisons": [
+      {
+        "id": "d-a2-12.lines[3].ar",
+        "historicalText": "تصل الحرارة إلى 27 درجة. ليس حرّاً شديداً لكنه دافئ جداً لشهر أبريل.",
+        "liveText": "ترتفع درجة الحرارة إلى 27 درجة. ليس حرّاً شديداً لكنه دافئ جداً لشهر أبريل.",
+        "observation": "ملف الإنشاء dialoge_a2_neu1.py يحمل النص العربي السابق نفسه؛ رقعة R107 تغيّر نقل فعل الارتفاع فقط، ولا تؤرخ مراحل سابقة أو تثبت واقعية النشرة."
+      }
+    ]
+  },
+  "contentPatch": {
+    "fieldsChanged": 1,
+    "changedFields": [
+      "d-a2-12.lines[3].ar"
+    ],
+    "reason": "أُعيد معنى steigen auf إلى «ترتفع ... إلى» بدلاً من «تصل ... إلى». لم يتغير الألماني أو الرقم 27 أو أبريل أو الأسئلة؛ هذه الوقائع الجوية ما زالت غير محسومة لغياب الموقع والتاريخ.",
+    "protectedUnresolvedItemIds": [
+      "d-a2-10.lines[3]",
+      "d-a2-12.lines[0]",
+      "d-a2-12.lines[1]",
+      "d-a2-12.lines[3]",
+      "d-a2-12.lines[5]",
+      "d-a2-12.lines[6]",
+      "d-a2-12.lines[7]"
+    ]
+  },
+  "openNotes": [
+    {
+      "id": "d-a2-10.lines[3]",
+      "status": "غير محسوم",
+      "sources": [
+        "S15",
+        "S16",
+        "S17",
+        "S18"
+      ],
+      "relatedItemIds": [
+        "d-a2-10.lines[3]"
+      ],
+      "finding": "لا تكفي جملة المستأجرة عن التهوية اليومية وصغر النافذة لإثبات أن العفن عيب في المبنى أو أنه ليس من مسؤوليتها. يقول UBA إن أسباب الرطوبة قد تكون من الاستعمال أو من بنية المبنى، بينما §536 BGB يربط تخفيض الإيجار بعيب يؤثر في الاستعمال التعاقدي. هذا لا يحدد سبب هذه الحالة الخيالية أو مسؤوليتها القانونية.",
+      "action": "أُبقي السطر والسؤال الذي ينسب التفسير إلى الحارس دون تعديل تخميني؛ لا يُعرض كمشورة قانونية. إذا أريد تقريره كحقيقة عامة فيلزم تحرير يوضح أن السبب يحتاج فحصاً."
+    },
+    {
+      "id": "d-a2-12.lines[0]",
+      "status": "غير محسوم",
+      "sources": [
+        "S82"
+      ],
+      "relatedItemIds": [
+        "d-a2-12.lines[0]",
+        "d-a2-12.lines[1]",
+        "d-a2-12.lines[3]",
+        "d-a2-12.lines[5]",
+        "d-a2-12.lines[6]",
+        "d-a2-12.lines[7]"
+      ],
+      "finding": "تضم النشرة توقعات محددة للغد (ضباباً قرب الأنهار، غيوماً حتى العاشرة، 27 درجة في أبريل، رياحاً غربية وعاصفة رعدية في الجبال، وعدم صقيع ليلاً)، لكن لا تحدد مدينة أو منطقة أو تاريخاً/عاماً. يوضح DWD أن تقييم توقع الطقس يقتضي تحديد الظاهرة والأفق الزمني والمكان/المنطقة؛ لذا لا تثبت المصادر المعجمية أن هذه القيم الجوية صحيحة أو خاطئة. ترجمة steigen صُححت منفصلاً ولا تصادق على القيمة.",
+      "action": "لا تعديل للوقائع الجوية أو الأسئلة التي تقيس النص؛ تبقى صحة التنبؤ غير محسومة حتى يحدد المؤلف مكاناً وفترة قابلة للتحقق أو يصرح صراحةً بأنه مثال لغوي افتراضي."
+    }
+  ],
+  "audioAssetAudit": [],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "PONS: Schimmel",
+      "url": "https://en.pons.com/translate/german-arabic/Schimmel",
+      "supports": "يعرض Schimmel في معنى الغطاء الفطري مقابلاً عربياً هو «عفن»؛ سياق الجدار يعيّن هذا المعنى، لا معنى الحصان الأبيض homonym."
+    },
+    {
+      "id": "S02",
+      "title": "PONS: Bad",
+      "url": "https://en.pons.com/translate/german-arabic/Bad",
+      "supports": "يعرض Bad بمعنى الحمّام عند استعماله للمكان؛ يسند عنوان Schimmel im Bad."
+    },
+    {
+      "id": "S03",
+      "title": "PONS: Guten Tag",
+      "url": "https://en.pons.com/translate/german-arabic/guten+Tag?q=Guten+Tag",
+      "supports": "يعرض مقابلات تحية عربية من بينها «مرحباً» و«نهارك سعيد»؛ لا يفرض مقابلاً واحداً لكل سياق."
+    },
+    {
+      "id": "S04",
+      "title": "PONS: Wand",
+      "url": "https://en.pons.com/translate/german-arabic/Wand",
+      "supports": "يعرض Wand بمعنى جدار/حائط."
+    },
+    {
+      "id": "S05",
+      "title": "PONS: Ecke",
+      "url": "https://en.pons.com/translate/german-arabic/Ecke",
+      "supports": "يعرض Ecke بمعنى زاوية/ركن."
+    },
+    {
+      "id": "S06",
+      "title": "PONS: Hausmeister",
+      "url": "https://en.pons.com/translate/german-arabic/Hausmeister",
+      "supports": "يعرض Hausmeister بمعنى بوّاب/حارس في سياق إدارة المبنى."
+    },
+    {
+      "id": "S07",
+      "title": "PONS: lüften",
+      "url": "https://en.pons.com/translate/german-arabic/l%C3%BCften",
+      "supports": "يعرض lüften (Zimmer) بمعنى تهوية الغرفة."
+    },
+    {
+      "id": "S08",
+      "title": "PONS: regelmäßig",
+      "url": "https://en.pons.com/translate/german-arabic/regelm%C3%A4%C3%9Fig",
+      "supports": "يعرض regelmäßig بمعنى بانتظام/منتظم."
+    },
+    {
+      "id": "S09",
+      "title": "Umweltbundesamt: Wie lüfte ich richtig?",
+      "url": "https://www.umweltbundesamt.de/themen/gesundheit/umwelteinfluesse-auf-den-menschen/schimmel/wie-luefte-ich-richtig-tipps-tricks-zur",
+      "supports": "يوصي بإزالة ذروة الرطوبة في الحمّام بعد الاستحمام بالتهوية المكثفة؛ يذكر فتح النوافذ على اتساعها 5–10 دقائق بعد الاستحمام، مع إيضاح أن المدة تتأثر بالغرفة والحرارة والرياح."
+    },
+    {
+      "id": "S10",
+      "title": "PONS: Dusche",
+      "url": "https://en.pons.com/translate/german-arabic/Dusche",
+      "supports": "يعرض Dusche بمعنى الدش/الاستحمام، ويدعم سياق ما بعد الاستحمام."
+    },
+    {
+      "id": "S11",
+      "title": "PONS: Fenster",
+      "url": "https://en.pons.com/translate/german-arabic/Fenster",
+      "supports": "يعرض Fenster بمعنى نافذة/شباك."
+    },
+    {
+      "id": "S12",
+      "title": "PONS: Feuchtigkeit",
+      "url": "https://en.pons.com/translate/german-arabic/Feuchtigkeit",
+      "supports": "يعرض Feuchtigkeit بمعنى الرطوبة."
+    },
+    {
+      "id": "S13",
+      "title": "PONS: bleiben",
+      "url": "https://en.pons.com/translate/german-arabic/bleiben",
+      "supports": "يعرض bleiben بمعنى بقي/ظلّ؛ يسند «تبقى الرطوبة»."
+    },
+    {
+      "id": "S14",
+      "title": "PONS: klein",
+      "url": "https://en.pons.com/translate/german-arabic/klein",
+      "supports": "يعرض klein بمعنى صغير؛ يسند وصف النافذة."
+    },
+    {
+      "id": "S15",
+      "title": "PONS: Mangel",
+      "url": "https://en.pons.com/translate/german-arabic/Mangel",
+      "supports": "يعرض Mangel بمعنى نقص، وفي تركيب Fehler أيضاً «عيب»؛ يسند المعنى المعجمي ولا يثبت سبب العيب أو مسؤوليته."
+    },
+    {
+      "id": "S16",
+      "title": "Umweltbundesamt: Häufige Fragen bei Schimmelbefall",
+      "url": "https://www.umweltbundesamt.de/themen/gesundheit/umwelteinfluesse-auf-den-menschen/schimmel/haeufige-fragen-bei-schimmelbefall",
+      "supports": "يذكر أهمية سلامة المبنى ومنع دخول الرطوبة، والتدفئة والتهوية المنتظمة؛ لا يحسم سبب حالة سكنية بلا فحص."
+    },
+    {
+      "id": "S17",
+      "title": "Umweltbundesamt: Schimmel in der Wohnung oder im Büro?",
+      "url": "https://www.umweltbundesamt.de/schimmel-in-der-wohnung-im-buero",
+      "supports": "يذكر أن أسباب العفن قد تشمل رطوبة ينتجها السكان ولا تخرج بالتهوية، أو رطوبة في المبنى؛ وينبه إلى أن سوء التهوية ليس غالباً السبب الوحيد وأن تحديد السبب يحتاج مختصين."
+    },
+    {
+      "id": "S18",
+      "title": "§ 536 BGB — Mietminderung bei Sach- und Rechtsmängeln",
+      "url": "https://www.gesetze-im-internet.de/bgb/__536.html",
+      "supports": "النص الرسمي يربط خفض الأجرة بعيب يؤثر في صلاحية المأجور للاستعمال التعاقدي وبمقدار مناسب؛ لا يحكم وحده على سبب العفن أو المسؤول في هذا السيناريو."
+    },
+    {
+      "id": "S19",
+      "title": "PONS: Hausverwaltung",
+      "url": "https://en.pons.com/translate/german-arabic/Hausverwaltung",
+      "supports": "يعرض Hausverwaltung بمعنى مكتب/إدارة عقارية."
+    },
+    {
+      "id": "S20",
+      "title": "PONS: sich beschweren",
+      "url": "https://en.pons.com/translate/german-arabic/beschweren?q=sich+beschweren",
+      "supports": "يعرض sich beschweren (bei jemandem über etwas) بمعنى اشتكى؛ يسند فعل تقديم الشكوى."
+    },
+    {
+      "id": "S21",
+      "title": "PONS: schriftlich",
+      "url": "https://en.pons.com/translate/german-arabic/schriftlich",
+      "supports": "يعرض schriftlich بمعنى كتابيّاً/تحريرياً."
+    },
+    {
+      "id": "S22",
+      "title": "PONS: schreiben",
+      "url": "https://en.pons.com/translate/german-arabic/schreiben",
+      "supports": "يعرض schreiben بمعنى كتب؛ يسند «سأكتب ذلك لإدارة العقار»."
+    },
+    {
+      "id": "S23",
+      "title": "PONS: Foto",
+      "url": "https://en.pons.com/translate/german-arabic/Foto",
+      "supports": "يعرض Foto بمعنى صورة فوتوغرافية."
+    },
+    {
+      "id": "S24",
+      "title": "PONS: Datum",
+      "url": "https://en.pons.com/translate/german-arabic/Datum",
+      "supports": "يعرض Datum بمعنى تاريخ."
+    },
+    {
+      "id": "S25",
+      "title": "Duden: Mietminderung",
+      "url": "https://www.duden.de/rechtschreibung/Mietminderung",
+      "supports": "يعرّف المصطلح قانونياً بأنه خفض سعر الإيجار بسبب عيب في المأجور؛ لا يثبت استحقاقاً في الحالة الحوارية."
+    },
+    {
+      "id": "S26",
+      "title": "PONS: Minderung",
+      "url": "https://en.pons.com/translate/german-arabic/Minderung",
+      "supports": "يعرض Minderung بمعنى تقليل/إنقاص، دعماً لمكوّن «تخفيض» في المصطلح المركب."
+    },
+    {
+      "id": "S27",
+      "title": "PONS: Miete",
+      "url": "https://en.pons.com/translate/german-arabic/Miete",
+      "supports": "يعرض Miete بمعنى الإيجار/الأجرة."
+    },
+    {
+      "id": "S28",
+      "title": "PONS: prüfen",
+      "url": "https://en.pons.com/translate/german-arabic/pr%C3%BCfen",
+      "supports": "يعرض prüfen بمعنى فحص/تحقق؛ يدعم أن الإدارة «تنظر في» التخفيض لا أنها تضمنه."
+    },
+    {
+      "id": "S29",
+      "title": "PONS: Handwerker",
+      "url": "https://en.pons.com/translate/german-arabic/Handwerker",
+      "supports": "يعرض Handwerker بمعنى صاحب حرفة/حرفي."
+    },
+    {
+      "id": "S30",
+      "title": "PONS: kommen",
+      "url": "https://en.pons.com/translate/german-arabic/kommen",
+      "supports": "يعرض kommen بمعنى جاء/أتى."
+    },
+    {
+      "id": "S31",
+      "title": "PONS: Woche",
+      "url": "https://en.pons.com/translate/german-arabic/Woche",
+      "supports": "يعرض Woche بمعنى أسبوع، ويذكر nächste Woche بمقابل «الأسبوع القادم»."
+    },
+    {
+      "id": "S32",
+      "title": "PONS: Dienstag",
+      "url": "https://en.pons.com/translate/german-arabic/Dienstag",
+      "supports": "يعرض Dienstag بمعنى يوم الثلاثاء."
+    },
+    {
+      "id": "S33",
+      "title": "PONS: neun",
+      "url": "https://en.pons.com/translate/german-arabic/neun",
+      "supports": "يعرض neun بمعنى تسعة؛ يدعم قراءة الموعد عند التاسعة."
+    },
+    {
+      "id": "S34",
+      "title": "PONS: Firma",
+      "url": "https://en.pons.com/translate/german-arabic/Firma",
+      "supports": "يعرض Firma بمعنى شركة/مؤسسة."
+    },
+    {
+      "id": "S35",
+      "title": "PONS: Büro",
+      "url": "https://en.pons.com/translate/german-arabic/B%C3%BCro",
+      "supports": "يعرض Büro بمعنى مكتب."
+    },
+    {
+      "id": "S36",
+      "title": "PONS: Business Englisch — Telefonphrasen",
+      "url": "https://de.pons.com/p/wissensecke/wortschatz-to-go/business-englisch",
+      "supports": "يعرض تحية مكتب هاتفية وعبارة How can I help you? مع مقابلها الألماني Wie kann ich Ihnen helfen?؛ شاهد وظيفي لعبارة خدمة المتصل، لا ترجمة عربية حرفية للجملة."
+    },
+    {
+      "id": "S37",
+      "title": "PONS: tun",
+      "url": "https://en.pons.com/translate/german-arabic/tun",
+      "supports": "يعرض معنى tun «فعل/عمل»؛ يُستكمل الحكم على الجملة بوظيفتها الهاتفية في مصدر PONS السابق لا بهذا المدخل المفرد وحده."
+    },
+    {
+      "id": "S38",
+      "title": "PONS: Anruf",
+      "url": "https://en.pons.com/translate/german-arabic/Anruf",
+      "supports": "يعرض Anruf بمعنى مكالمة/اتصال."
+    },
+    {
+      "id": "S39",
+      "title": "PONS: erreichen",
+      "url": "https://en.pons.com/translate/german-arabic/erreichen",
+      "supports": "يعرض erreichen بمعنى بلغ/وصل إلى/تمكّن من الاتصال؛ يسند المقصود في طلب الحديث هاتفياً."
+    },
+    {
+      "id": "S40",
+      "title": "PONS: besetzt",
+      "url": "https://en.pons.com/translate/german-arabic/besetzt",
+      "supports": "يعرض besetzt بمعنى مشغول/محجوز؛ يتفق مع عدم إتاحة الاتصال الآن."
+    },
+    {
+      "id": "S41",
+      "title": "PONS: weiterleiten",
+      "url": "https://en.pons.com/translate/german-arabic/weiterleiten",
+      "supports": "يعرض weiterleiten بمعنى نقل/تحويل إلى؛ يسند تحويل المكالمة."
+    },
+    {
+      "id": "S42",
+      "title": "PONS: Kollege",
+      "url": "https://en.pons.com/translate/german-arabic/Kollege",
+      "supports": "يعرض Kollege بمعنى زميل."
+    },
+    {
+      "id": "S43",
+      "title": "PONS: nachfragen",
+      "url": "https://en.pons.com/translate/german-arabic/nachfragen",
+      "supports": "يعرض nachfragen بمعنى سأل للاستفسار/استفسر."
+    },
+    {
+      "id": "S44",
+      "title": "PONS: Bestätigung",
+      "url": "https://en.pons.com/translate/german-arabic/Best%C3%A4tigung",
+      "supports": "يعرض Bestätigung بمعنى تأكيد."
+    },
+    {
+      "id": "S45",
+      "title": "PONS: ankommen",
+      "url": "https://en.pons.com/translate/german-arabic/ankommen",
+      "supports": "يعرض ankommen بمعنى وصل؛ يسند سؤال وصول التأكيد."
+    },
+    {
+      "id": "S46",
+      "title": "PONS: E-Mail",
+      "url": "https://en.pons.com/translate/german-arabic/E-Mail",
+      "supports": "يعرض E-Mail بمعنى بريد إلكتروني/إيميل."
+    },
+    {
+      "id": "S47",
+      "title": "PONS: gestern",
+      "url": "https://en.pons.com/translate/german-arabic/gestern",
+      "supports": "يعرض gestern بمعنى أمس."
+    },
+    {
+      "id": "S48",
+      "title": "Duden: Sprachnachricht",
+      "url": "https://www.duden.de/rechtschreibung/Sprachnachricht",
+      "supports": "يعرّف Sprachnachricht بأنها رسالة منطوقة تُنقل هاتفياً أو عبر خدمة مراسلة، ويورد مثالاً على تركها؛ يسند «رسالة صوتية»."
+    },
+    {
+      "id": "S49",
+      "title": "PONS: hinterlassen",
+      "url": "https://en.pons.com/translate/german-arabic/hinterlassen",
+      "supports": "يعرض hinterlassen في معنى ترك/خلّف؛ يسند ترك رسالة صوتية."
+    },
+    {
+      "id": "S50",
+      "title": "PONS: Ansage",
+      "url": "https://en.pons.com/translate/german-arabic/Ansage",
+      "supports": "يعرض Ansage بمعنى إعلان/إفادة مسموعة؛ في سياق البريد الصوتي «الإعلان» مفهوم، و«التعليمات المسجلة» بديل أوضح أسلوبياً لا تصحيح ملزم."
+    },
+    {
+      "id": "S51",
+      "title": "PONS: sprechen",
+      "url": "https://en.pons.com/translate/german-arabic/sprechen",
+      "supports": "يعرض sprechen بمعنى تكلّم/تحدث؛ يسند طلب ذكر الاسم والرقم."
+    },
+    {
+      "id": "S52",
+      "title": "PONS: Name",
+      "url": "https://en.pons.com/translate/german-arabic/Name",
+      "supports": "يعرض Name بمعنى اسم."
+    },
+    {
+      "id": "S53",
+      "title": "PONS: Nummer",
+      "url": "https://en.pons.com/translate/german-arabic/Nummer",
+      "supports": "يعرض Nummer بمعنى رقم."
+    },
+    {
+      "id": "S54",
+      "title": "PONS: zurückrufen",
+      "url": "https://en.pons.com/translate/german-arabic/zur%C3%BCckrufen",
+      "supports": "يعرض zurückrufen بمعنى اتصل مجدداً/أعاد الاتصال."
+    },
+    {
+      "id": "S55",
+      "title": "Collins German Grammar: Modal verbs",
+      "url": "https://grammar.collinsdictionary.com/german-easy-learning/how-are-modal-verbs-formed-in-german",
+      "supports": "يقرر أن مصدر الفعل المستعمل مع الفعل الناقص يأتي في نهاية الجملة/العبارة في البنية المستهدفة؛ يسند فراغ weiterleiten بعد soll."
+    },
+    {
+      "id": "S56",
+      "title": "PONS: Wetterbericht",
+      "url": "https://en.pons.com/translate/german-arabic/Wetterbericht",
+      "supports": "يعرض Wetterbericht بمعنى تقرير/نشرة الطقس."
+    },
+    {
+      "id": "S57",
+      "title": "PONS: Radio",
+      "url": "https://en.pons.com/translate/german-arabic/Radio",
+      "supports": "يعرض Radio بمعنى راديو/إذاعة."
+    },
+    {
+      "id": "S58",
+      "title": "PONS: Vorhersage",
+      "url": "https://en.pons.com/translate/german-arabic/Vorhersage",
+      "supports": "يعرض Vorhersage بمعنى توقع/تنبؤ."
+    },
+    {
+      "id": "S59",
+      "title": "PONS: morgen",
+      "url": "https://en.pons.com/translate/german-arabic/morgen",
+      "supports": "يعرض morgen بمعنى غداً عند استعماله ظرفاً زمنياً."
+    },
+    {
+      "id": "S60",
+      "title": "PONS: neblig",
+      "url": "https://en.pons.com/translate/german-arabic/neblig",
+      "supports": "يعرض neblig بمعنى ضبابي؛ لا يثبت وقوع الضباب الفعلي."
+    },
+    {
+      "id": "S61",
+      "title": "PONS: Fluss",
+      "url": "https://en.pons.com/translate/german-arabic/Fluss",
+      "supports": "يعرض Fluss بمعنى نهر؛ يسند «قرب الأنهار» في سياق المكان."
+    },
+    {
+      "id": "S62",
+      "title": "PONS: bewölkt",
+      "url": "https://en.pons.com/translate/german-arabic/bew%C3%B6lkt",
+      "supports": "يعرض bewölkt بمعنى غائم/مغطى بالغيوم."
+    },
+    {
+      "id": "S63",
+      "title": "PONS: Sonne",
+      "url": "https://en.pons.com/translate/german-arabic/Sonne",
+      "supports": "يعرض Sonne بمعنى الشمس؛ وفي الجملة «تظهر الشمس»."
+    },
+    {
+      "id": "S64",
+      "title": "PONS: zehn",
+      "url": "https://en.pons.com/translate/german-arabic/zehn",
+      "supports": "يعرض zehn بمعنى عشرة؛ يسند وقت العاشرة."
+    },
+    {
+      "id": "S65",
+      "title": "PONS: Temperatur",
+      "url": "https://en.pons.com/translate/german-arabic/Temperatur",
+      "supports": "يعرض Temperatur بمعنى درجة الحرارة."
+    },
+    {
+      "id": "S66",
+      "title": "PONS: steigen",
+      "url": "https://en.pons.com/translate/german-arabic/steigen",
+      "supports": "يعرض steigen بمعنى صعد، وansteigen بمعنى ارتفع/زاد؛ يسند ضرورة حفظ معنى الارتفاع في الترجمة."
+    },
+    {
+      "id": "S67",
+      "title": "PONS: Grad",
+      "url": "https://en.pons.com/translate/german-arabic/Grad",
+      "supports": "يعرض Grad بمعنى درجة؛ لا يثبت واقعية القيمة الجوية."
+    },
+    {
+      "id": "S68",
+      "title": "PONS: Hitze",
+      "url": "https://en.pons.com/translate/german-arabic/Hitze",
+      "supports": "يعرض Hitze بمعنى الحر/الحرارة الشديدة؛ لا يحدد عتبة رقمية ثابتة لكلمة «حر»."
+    },
+    {
+      "id": "S69",
+      "title": "PONS: warm",
+      "url": "https://en.pons.com/translate/german-arabic/warm",
+      "supports": "يعرض warm بمعنى دافئ/حار بحسب السياق."
+    },
+    {
+      "id": "S70",
+      "title": "PONS: April",
+      "url": "https://en.pons.com/translate/german-arabic/April",
+      "supports": "يعرض April بمعنى أبريل."
+    },
+    {
+      "id": "S71",
+      "title": "PONS: Abend",
+      "url": "https://en.pons.com/translate/german-arabic/Abend",
+      "supports": "يعرض Abend بمعنى المساء."
+    },
+    {
+      "id": "S72",
+      "title": "PONS: stark",
+      "url": "https://en.pons.com/translate/german-arabic/stark",
+      "supports": "يعرض stark بمعنى قوي؛ يسند وصف الرياح."
+    },
+    {
+      "id": "S73",
+      "title": "PONS: Wind",
+      "url": "https://en.pons.com/translate/german-arabic/Wind",
+      "supports": "يعرض Wind بمعنى ريح/رياح."
+    },
+    {
+      "id": "S74",
+      "title": "PONS: Westen",
+      "url": "https://en.pons.com/translate/german-arabic/Westen",
+      "supports": "يعرض Westen بمعنى الغرب."
+    },
+    {
+      "id": "S75",
+      "title": "PONS: Berg",
+      "url": "https://en.pons.com/translate/german-arabic/Berg",
+      "supports": "يعرض Berg بمعنى جبل؛ جمعه في النص «الجبال»."
+    },
+    {
+      "id": "S76",
+      "title": "PONS: Gewitter",
+      "url": "https://en.pons.com/translate/german-arabic/Gewitter",
+      "supports": "يعرض Gewitter بمعنى عاصفة رعدية."
+    },
+    {
+      "id": "S77",
+      "title": "PONS: Frost",
+      "url": "https://en.pons.com/translate/german-arabic/Frost",
+      "supports": "يعرض Frost بمعنى صقيع."
+    },
+    {
+      "id": "S78",
+      "title": "PONS: Nacht",
+      "url": "https://en.pons.com/translate/german-arabic/Nacht",
+      "supports": "يعرض Nacht بمعنى الليل."
+    },
+    {
+      "id": "S79",
+      "title": "PONS: Jacke",
+      "url": "https://en.pons.com/translate/german-arabic/Jacke",
+      "supports": "يعرض Jacke بمعنى سترة/جاكيت."
+    },
+    {
+      "id": "S80",
+      "title": "PONS: mitnehmen",
+      "url": "https://en.pons.com/translate/german-arabic/mitnehmen",
+      "supports": "يعرض mitnehmen بمعنى أخذ الشيء مع المرء."
+    },
+    {
+      "id": "S81",
+      "title": "PONS: kalt",
+      "url": "https://en.pons.com/translate/german-arabic/kalt",
+      "supports": "يعرض kalt بمعنى بارد."
+    },
+    {
+      "id": "S82",
+      "title": "Deutscher Wetterdienst: Qualität unserer Wettervorhersagen",
+      "url": "https://www.dwd.de/DE/wetter/schon_gewusst/qualitaetvorhersage/qualitaetvorhersage_node.html",
+      "supports": "يشرح DWD أن تقييم التنبؤ يحدد الظاهرة والفترة/الأفق الزمني والمكان أو المنطقة، وأن التوقع الموضعي وبعض الظواهر يحملان عدم يقين؛ لا يقدّم تحققاً لنشرة بلا موقع وتاريخ محددين."
+    },
+    {
+      "id": "S83",
+      "title": "PONS: Wolke",
+      "url": "https://en.pons.com/translate/german-arabic/Wolke",
+      "supports": "يعرض die Wolke بمعنى سحابة/غيمة؛ يسند وسم المفردة اليتيمة في بيانات d-a2-12 لا تنبؤاً جوياً."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a2-10",
+      "kind": "بيانات الحوار/العنوان/وسوم waisen",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02",
+        "S06",
+        "S07",
+        "S12",
+        "S15",
+        "S19",
+        "S20",
+        "S25"
+      ],
+      "finding": "العنوان «Schimmel im Bad / عفن في الحمّام» يطابق معنى Schimmel بوصفه عفناً في سياق الجدار وBad بمعنى الحمّام. وفُحصت مدخلات waisen الثمانية كلمةً كلمةً: Hausmeister، lüften، Schimmel، Feuchtigkeit، Mangel، Mietminderung، sich beschweren، Hausverwaltung؛ تسندها مداخل PONS/تعريف Duden المدرجة هنا. اللقطة الحية: A2، 8 أسطر، 3 أسئلة، جملتا إملاء. لم يُعَد تقييم CEFR.",
+      "action": "لا تغيير؛ حُفظت بيانات الحوار والوسوم كما هي، ولم يُعد تقييم مستوى CEFR.",
+      "reviewed": {
+        "titleDe": "Schimmel im Bad",
+        "titleAr": "عفن في الحمّام",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "der Hausmeister",
+          "lüften",
+          "der Schimmel",
+          "die Feuchtigkeit",
+          "der Mangel",
+          "die Mietminderung",
+          "sich beschweren",
+          "die Hausverwaltung"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-10.lines[0]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S03",
+        "S01",
+        "S02",
+        "S04",
+        "S05"
+      ],
+      "finding": "التحية ومفردات العفن والحمّام والجدار والزاوية متوافقة مع المداخل المعجمية والسياق. «طاب يومك» مفهوم ورسمي، وقد يبدو أدبياً أكثر من «مرحباً»؛ هذه ملاحظة أسلوبية لا خطأ معنى مؤكداً.",
+      "action": "لا تغيير؛ لا تُفرض صيغة عربية واحدة للتحية.",
+      "reviewed": {
+        "who": "Mieterin",
+        "de": "Guten Tag, Herr Kaya. Im Bad ist Schimmel an der Wand, oben in der Ecke.",
+        "ar": "طاب يومك سيد كايا. في الحمّام عفن على الجدار، في الزاوية العليا."
+      }
+    },
+    {
+      "id": "d-a2-10.lines[1]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "finding": "lüften regelmäßig تقابل التهوية بانتظام، وUBA يوصي بتهوية مكثفة بعد الاستحمام ويذكر 5–10 دقائق في الحمّام؛ عشر دقائق تقع ضمن المجال المنشور. المصدر يقيّد المدة بالظروف، لذا لا أعمّمها كقاعدة ثابتة لكل مبنى. muss/«يجب» متطابقان في درجة الإلزام بوصفهما كلام الشخصية.",
+      "action": "لا تغيير؛ يبقى النص حواراً تعليمياً لا إرشاداً عاماً مستقلاً عن الظروف.",
+      "reviewed": {
+        "who": "Hausmeister",
+        "de": "Lüften Sie regelmäßig? Nach dem Duschen muss das Fenster zehn Minuten offen sein.",
+        "ar": "هل تهوّين بانتظام؟ بعد الاستحمام يجب أن تبقى النافذة مفتوحة عشر دقائق."
+      }
+    },
+    {
+      "id": "d-a2-10.lines[2]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "finding": "المقابلات المعجمية Fenster=نافذة، Feuchtigkeit=رطوبة، bleiben=بقي، klein=صغير؛ الترجمة العربية تحفظ معنى بقاء الرطوبة وصغر النافذة.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Mieterin",
+        "de": "Ja, jeden Tag. Aber die Feuchtigkeit bleibt, das Fenster ist sehr klein.",
+        "ar": "نعم، كل يوم. لكن الرطوبة تبقى، فالنافذة صغيرة جداً."
+      }
+    },
+    {
+      "id": "d-a2-10.lines[3]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S15",
+        "S16",
+        "S17",
+        "S18",
+        "S19",
+        "S22"
+      ],
+      "finding": "Mangel يقابل عيباً، لكن الجزم «ليس خطأك» لا يُستنتج من مجرد بقاء الرطوبة وصغر النافذة: يذكر UBA أسباباً من رطوبة الاستعمال وأسباباً في المبنى، ويقيّد §536 BGB الأثر القانوني بعيب يؤثر في الاستعمال التعاقدي. لا توجد معاينة أو وقائع كافية لتحديد السبب أو المسؤولية. عربياً «لا خطؤك» مفهومة لكنها أقل سلاسة من «وليس خطأك»؛ هذه ملاحظة أسلوبية منفصلة عن عدم الحسم الموضوعي.",
+      "action": "أُبقي الحقل بلا تعديل تخميني، ولا أقدّم حكماً قانونياً؛ يلزم سياق/تحرير يخفف الجزم إذا أريد عرضها كقاعدة واقعية.",
+      "reviewed": {
+        "who": "Hausmeister",
+        "de": "Dann ist es ein Mangel an der Wohnung, nicht Ihr Fehler. Ich schreibe das der Hausverwaltung.",
+        "ar": "إذن هو عيب في الشقة لا خطؤك. سأكتب ذلك لإدارة العقار."
+      }
+    },
+    {
+      "id": "d-a2-10.lines[4]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S06"
+      ],
+      "finding": "sich beschweren يعني تقديم شكوى؛ والترجمة تسأل بوضوح إن كان على المستأجرة أن تشتكي بنفسها أم يكفي بلاغ الحارس.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Mieterin",
+        "de": "Muss ich mich auch selbst beschweren, oder reicht es, wenn der Hausmeister das meldet?",
+        "ar": "هل يجب أن أشتكي بنفسي أيضاً، أم يكفي أن يبلّغ الحارس؟"
+      }
+    },
+    {
+      "id": "d-a2-10.lines[5]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28",
+        "S18",
+        "S19"
+      ],
+      "finding": "schriftlich/Foto/Datum تقابل كتابياً/صورة/تاريخ. Duden يعرّف Mietminderung بخفض الإيجار لعيب في المأجور، و§536 يشرح شرط تأثير العيب؛ صيغة kann ... prüfen/«تستطيع ... النظر في» لا تعد المتعلّمة باستحقاق أو نتيجة حتمية.",
+      "action": "لا تغيير؛ أبقيت الصياغة الاحتمالية، ولم تُقدّم كنصيحة قانونية.",
+      "reviewed": {
+        "who": "Hausmeister",
+        "de": "Ja, bitte schriftlich, mit Foto und Datum. Dann kann die Verwaltung eine Mietminderung prüfen.",
+        "ar": "نعم، كتابياً من فضلك، مع صورة وتاريخ. عندها تستطيع الإدارة النظر في تخفيض الإيجار."
+      }
+    },
+    {
+      "id": "d-a2-10.lines[6]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S30"
+      ],
+      "finding": "السؤال عن موعد مجيء شخص، والترجمة العربية تؤدي المعنى. استعمال المضارع الألماني لموعد قريب لا يتطلب مستقبلاً صريحاً في العربية هنا.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Mieterin",
+        "de": "Und wann kommt jemand?",
+        "ar": "ومتى يأتي أحد؟"
+      }
+    },
+    {
+      "id": "d-a2-10.lines[7]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S29",
+        "S30",
+        "S31",
+        "S32",
+        "S33"
+      ],
+      "finding": "Handwerker=حرفي/صاحب حرفة، nächste Woche=الأسبوع القادم، Dienstag=الثلاثاء، um neun=في التاسعة؛ الترجمة تحفظ الموعد.",
+      "action": "لا تغيير؛ صحة الموعد داخل الحوار لا تثبت موعداً واقعياً.",
+      "reviewed": {
+        "who": "Hausmeister",
+        "de": "Der Handwerker kommt nächste Woche, am Dienstag um neun.",
+        "ar": "الحرفيّ يأتي الأسبوع القادم، الثلاثاء في التاسعة."
+      }
+    },
+    {
+      "id": "d-a2-10-q1",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S12",
+        "S14",
+        "S16",
+        "S17"
+      ],
+      "finding": "المفتاح يطابق تعليل الحارس في الحوار: بقاء الرطوبة وصغر النافذة. عبارة «laut Hausmeister» تقصر السؤال على ما يقوله النص؛ لا تثبت صحة الاستنتاج الواقعي/القانوني المفتوح في السطر d-a2-10.lines[3].",
+      "action": "لا تغيير للمفتاح أو الخيارات؛ يُقرأ كفهم للحوار فقط.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Warum ist der Schimmel laut Hausmeister nicht der Fehler der Mieterin?",
+        "options": [
+          "Weil sie nicht lüftet.",
+          "Weil der Handwerker zu spät kommt.",
+          "Weil das Fenster sehr klein ist und die Feuchtigkeit bleibt."
+        ],
+        "answer": "Weil das Fenster sehr klein ist und die Feuchtigkeit bleibt.",
+        "explanationAr": "الدليل: «die Feuchtigkeit bleibt, das Fenster ist sehr klein» ثم «Dann ist es ein Mangel an der Wohnung, nicht Ihr Fehler». الفخّ 1: التهوية سأل عنها وهي تهوّي يومياً. الفخّ 2: الحرفيّ موعد لا سبب.",
+        "id": "d-a2-10-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-10-q2",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24"
+      ],
+      "finding": "المفتاح «schriftlich, mit Foto und Datum» منقول حرفياً من السطر؛ المشتتان الهاتف/مقابلة الحرفي لا يناقضان النص.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wie soll sich die Mieterin beschweren?",
+        "options": [
+          "schriftlich, mit Foto und Datum",
+          "telefonisch beim Hausmeister",
+          "persönlich beim Handwerker"
+        ],
+        "answer": "schriftlich, mit Foto und Datum",
+        "explanationAr": "الدليل: «Ja, bitte schriftlich, mit Foto und Datum». الفخّ 1: الحارس هو من تكلّمه الآن. الفخّ 2: الحرفيّ يأتي للإصلاح.",
+        "id": "d-a2-10-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-10-q3",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S29",
+        "S31",
+        "S32",
+        "S33"
+      ],
+      "finding": "العبارة صحيحة بحسب الموعد المنصوص عليه «nächste Woche, am Dienstag um neun»؛ الحكم هنا على اتساق السؤال مع الحوار لا على موعد فعلي.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Der Handwerker kommt am Dienstag um neun.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل: «Der Handwerker kommt nächste Woche, am Dienstag um neun».",
+        "id": "d-a2-10-q3",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+      }
+    },
+    {
+      "id": "d-a2-10.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02",
+        "S04",
+        "S05"
+      ],
+      "finding": "جملة الإملاء نسخة حرفية من d-a2-10.lines[0].de؛ مفردات العفن والحمّام والجدار والزاوية مسندة معجمياً.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Im Bad ist Schimmel an der Wand, oben in der Ecke."
+      }
+    },
+    {
+      "id": "d-a2-10.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S18",
+        "S19",
+        "S25",
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "finding": "جملة الإملاء تطابق حرفياً الجملة الثانية من d-a2-10.lines[5].de؛ Mietminderung مصطلح خفض إيجار، وprüfen تعني فحص/النظر، لا ضمان النتيجة.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Dann kann die Verwaltung eine Mietminderung prüfen."
+      }
+    },
+    {
+      "id": "d-a2-11",
+      "kind": "بيانات الحوار/العنوان/وسوم waisen",
+      "status": "سليم",
+      "sources": [
+        "S34",
+        "S35",
+        "S38",
+        "S39",
+        "S40",
+        "S41",
+        "S43",
+        "S44",
+        "S48",
+        "S50"
+      ],
+      "finding": "العنوان «Anruf im Büro / مكالمة في المكتب» يطابق الموضوع والمكان. وفُحصت مدخلات waisen الثمانية كلمةً كلمةً: Anruf، besetzt، weiterleiten، Sprachnachricht، Ansage، nachfragen، erreichen، Bestätigung؛ تسندها مداخل PONS وتعريف Duden المدرجة هنا. اللقطة الحية: A2، 8 أسطر، 3 أسئلة، جملتا إملاء. لم يُستنتج مستوى جديد من الوسم.",
+      "action": "لا تغيير؛ حُفظت بيانات الحوار والوسوم كما هي، ولم يُعد تقييم مستوى CEFR.",
+      "reviewed": {
+        "titleDe": "Anruf im Büro",
+        "titleAr": "مكالمة في المكتب",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "der Anruf",
+          "besetzt",
+          "weiterleiten",
+          "die Sprachnachricht",
+          "die Ansage",
+          "nachfragen",
+          "erreichen",
+          "die Bestätigung"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-11.lines[0]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S34",
+        "S35",
+        "S03",
+        "S36",
+        "S37"
+      ],
+      "finding": "Firma Neumann هي شركة نويمان، والتحية ووظيفة سؤال الخدمة متسقان مع تحية هاتفية؛ PONS يعرض نظيراً وظيفياً «Wie kann ich Ihnen helfen?». «بمَ أخدمك؟» عربية سليمة رسمية، وإن كان «كيف أساعدك؟» خياراً أسلوبياً آخر.",
+      "action": "لا تغيير؛ لا أتعامل مع البديل الأسلوبي كخطأ ترجمة.",
+      "reviewed": {
+        "who": "Sekretärin",
+        "de": "Firma Neumann, guten Tag. Was kann ich für Sie tun?",
+        "ar": "شركة نويمان، طاب يومك. بمَ أخدمك؟"
+      }
+    },
+    {
+      "id": "d-a2-11.lines[1]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S03",
+        "S39",
+        "S52"
+      ],
+      "finding": "المتصل يعرّف بنفسه، وerreichen في سياق الاتصال يعني الوصول إلى الشخص/الاتصال به؛ «أريد الوصول إلى السيدة لانغ» دقيقة حرفياً ومفهومة. «أود التحدث إلى السيدة لانغ» أكثر تداولاً هاتفياً، لكنه بديل أسلوبي لا إصلاح لازم.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Karim",
+        "de": "Guten Tag, hier Karim Saidi. Ich möchte Frau Lang erreichen.",
+        "ar": "طاب يومك، معك كريم السعيدي. أريد الوصول إلى السيدة لانغ."
+      }
+    },
+    {
+      "id": "d-a2-11.lines[2]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S38",
+        "S40",
+        "S41",
+        "S42"
+      ],
+      "finding": "Anruf=مكالمة، besetzt=مشغولة/مشغول، weiterleiten=تحويل، Kollege=زميل؛ الترجمة تحفظ انشغال السيدة وعرض تحويل المكالمة إلى زميلها.",
+      "action": "لا تغيير؛ المعجم يدعم الكلمة ولا يفرض أن «الشخص» لا «الخط» هو المشغول.",
+      "reviewed": {
+        "who": "Sekretärin",
+        "de": "Frau Lang ist gerade besetzt. Soll ich den Anruf an ihren Kollegen weiterleiten?",
+        "ar": "السيدة لانغ مشغولة الآن. هل أحوّل المكالمة إلى زميلها؟"
+      }
+    },
+    {
+      "id": "d-a2-11.lines[3]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S43",
+        "S44",
+        "S45"
+      ],
+      "finding": "nachfragen=استفسر، Bestätigung=تأكيد، angekommen=وصل؛ الترجمة تحافظ على نية الاستفسار والسؤال عن وصول التأكيد.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Karim",
+        "de": "Nein danke. Ich wollte nur nachfragen: Ist meine Bestätigung angekommen?",
+        "ar": "لا شكراً. أردت فقط الاستفسار: هل وصل تأكيدي؟"
+      }
+    },
+    {
+      "id": "d-a2-11.lines[4]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S46",
+        "S47",
+        "S44"
+      ],
+      "finding": "E-Mail من gestern تعني رسالة من أمس، وdie Bestätigung ist da تفيد أن التأكيد حاضر/وصل. «التأكيد موجود» مفهومة؛ «وصل التأكيد» بديل أسلوبي أوضح في بعض السياقات لا خطأ مثبت.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Sekretärin",
+        "de": "Ich sehe hier eine E-Mail von gestern. Ja, die Bestätigung ist da.",
+        "ar": "أرى هنا إيميلاً من أمس. نعم، التأكيد موجود."
+      }
+    },
+    {
+      "id": "d-a2-11.lines[5]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S48",
+        "S49"
+      ],
+      "finding": "Duden يعرّف Sprachnachricht رسالة منطوقة عبر الهاتف/خدمة مراسلة ويورد مثال تركها؛ hinterlassen=ترك. «رسالة صوتية» مقابلة سليمة في السياق.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Karim",
+        "de": "Sehr gut. Kann ich Frau Lang eine Sprachnachricht hinterlassen?",
+        "ar": "ممتاز. هل يمكنني ترك رسالة صوتية للسيدة لانغ؟"
+      }
+    },
+    {
+      "id": "d-a2-11.lines[6]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S50",
+        "S51",
+        "S52",
+        "S53"
+      ],
+      "finding": "Ansage=إعلان/إفادة مسموعة، وبعدها يُطلب ذكر الاسم والرقم؛ العربية تنقل التعليمات. في سياق البريد الصوتي «بعد الإعلان» أقل تحديداً من «بعد سماع التعليمات المسجلة»، لكنه مفهوم ومسنود بالمعنى المعجمي، فهذه ملاحظة وضوح لا خطأ مؤكد.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Sekretärin",
+        "de": "Ja. Nach der Ansage sprechen Sie bitte Ihren Namen und Ihre Nummer.",
+        "ar": "نعم. بعد الإعلان قل اسمك ورقمك من فضلك."
+      }
+    },
+    {
+      "id": "d-a2-11.lines[7]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S54"
+      ],
+      "finding": "zurückrufen تعني إعادة الاتصال؛ الترجمة تسأل إن كانت السيدة ستتصل به مجدداً اليوم.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Karim",
+        "de": "Danke. Und sie ruft heute noch zurück?",
+        "ar": "شكراً. وهل تعاود الاتصال اليوم؟"
+      }
+    },
+    {
+      "id": "d-a2-11-q1",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S38",
+        "S40"
+      ],
+      "finding": "الاختيار «Sie ist gerade besetzt» يطابق سبب عدم الحديث المذكور؛ البدائل عن الزميل والبريد لا يقولها الحوار سبباً.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Warum kann Karim Frau Lang nicht sprechen?",
+        "options": [
+          "Sie ist gerade besetzt.",
+          "Sie ist bei ihrem Kollegen.",
+          "Ihre E-Mail ist nicht angekommen."
+        ],
+        "answer": "Sie ist gerade besetzt.",
+        "explanationAr": "الدليل: «Frau Lang ist gerade besetzt». الفخّ 1: الزميل هو من عُرض تحويل المكالمة إليه. الفخّ 2: الإيميل وصل («die Bestätigung ist da»).",
+        "id": "d-a2-11-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-11-q2",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S50",
+        "S51",
+        "S52",
+        "S53"
+      ],
+      "finding": "بعد Ansage يطلب النص ذكر الاسم والرقم؛ الخيار الصحيح مطابق، والمشتتان عن كتابة رقم السكرتيرة/إرسال بريد غير واردين في التعليمات.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was soll Karim nach der Ansage tun?",
+        "options": [
+          "die Nummer der Sekretärin aufschreiben",
+          "seinen Namen und seine Nummer sprechen",
+          "eine E-Mail an den Kollegen schicken"
+        ],
+        "answer": "seinen Namen und seine Nummer sprechen",
+        "explanationAr": "الدليل: «Nach der Ansage sprechen Sie bitte Ihren Namen und Ihre Nummer». الفخّ 1: رقمه هو لا رقم السكرتيرة. الفخّ 2: الإيميل كان أمس ووصل.",
+        "id": "d-a2-11-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-11-q3",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S38",
+        "S41",
+        "S42",
+        "S55"
+      ],
+      "finding": "الفراغ يستلزم weiterleiten من الحوار. مع الفعل الناقص soll يأتي المصدر في نهاية العبارة، وweiterleiten يكتب مصدراً واحداً؛ يدعم Collins ترتيب الفعل الناقص.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "fill",
+        "promptDe": "Soll ich den Anruf an ihren Kollegen ___?",
+        "answer": [
+          "weiterleiten"
+        ],
+        "explanationAr": "الدليل: «Soll ich den Anruf an ihren Kollegen weiterleiten?» — فعل منفصل في المصدر بعد soll.",
+        "id": "d-a2-11-q3",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-11.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S40"
+      ],
+      "finding": "جملة الإملاء نسخة حرفية من d-a2-11.lines[2].de؛ besetzt يوافق معنى مشغول.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Frau Lang ist gerade besetzt."
+      }
+    },
+    {
+      "id": "d-a2-11.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S44",
+        "S45"
+      ],
+      "finding": "السؤال الإملائي منقول حرفياً من d-a2-11.lines[3].de؛ Bestätigung=تأكيد وankommen=وصل.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Ist meine Bestätigung angekommen?"
+      }
+    },
+    {
+      "id": "d-a2-12",
+      "kind": "بيانات الحوار/العنوان/وسوم waisen",
+      "status": "سليم",
+      "sources": [
+        "S56",
+        "S57",
+        "S58",
+        "S60",
+        "S62",
+        "S65",
+        "S68",
+        "S73",
+        "S76",
+        "S77",
+        "S83"
+      ],
+      "finding": "العنوان «Der Wetterbericht im Radio / نشرة الطقس في الراديو» يطابق الموضوع والوسيط. وفُحصت مدخلات waisen التسعة كلمةً كلمةً: Gewitter، Wolke، Wind، Temperatur، Vorhersage، Frost، Hitze، bewölkt، neblig؛ تسندها مداخل PONS المدرجة هنا. اللقطة الحية: A2، 8 أسطر، 3 أسئلة، جملتا إملاء. لا يحدد النص مدينة أو تاريخاً/عاماً للنشرة.",
+      "action": "لا تغيير؛ حُفظت بيانات الحوار والوسوم كما هي، ولم يُعد تقييم مستوى CEFR.",
+      "reviewed": {
+        "titleDe": "Der Wetterbericht im Radio",
+        "titleAr": "نشرة الطقس في الراديو",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "das Gewitter",
+          "die Wolke",
+          "der Wind",
+          "die Temperatur",
+          "die Vorhersage",
+          "der Frost",
+          "die Hitze",
+          "bewölkt",
+          "neblig"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-12.lines[0]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S58",
+        "S59",
+        "S60",
+        "S61",
+        "S82"
+      ],
+      "finding": "لغوياً: Vorhersage=توقعات، morgen=غداً، neblig=ضبابي، Flüsse=أنهار؛ العربية مفهومة، و«صباحاً ضباب» حذفٌ برقي لـ«يكون الجو ضبابياً» يمكن قبوله في نشرة مختصرة، لا خطأ معنى قاطع. أما صدق توقع الضباب قرب الأنهار فلا يُتحقق منه لأن المكان والتاريخ غير محددين؛ DWD يعدّ الظاهرة والفترة والموقع/المنطقة عناصر لازمة لتقييم التنبؤ.",
+      "action": "لا تغيير؛ سُجل الادعاء الجوي غير المتحقق منفصلاً عن سلامة الترجمة.",
+      "reviewed": {
+        "who": "Moderator",
+        "de": "Und jetzt die Vorhersage für morgen. Am Morgen ist es neblig, besonders an den Flüssen.",
+        "ar": "والآن التوقعات ليوم غد. صباحاً ضباب، خصوصاً قرب الأنهار."
+      }
+    },
+    {
+      "id": "d-a2-12.lines[1]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S62",
+        "S13",
+        "S63",
+        "S64",
+        "S82"
+      ],
+      "finding": "ترجمة bewölkt/bleibt/bis zehn Uhr ثم الشمس مطابقة لغوياً. لكن التنبؤ المحدد بغيوم حتى العاشرة لا يمكن مطابقته مع رصد أو نشرة حقيقية دون موقع وتاريخ/عام؛ هذا عدم تحقق سياقي لا خطأ لغوياً مثبتاً.",
+      "action": "لا تغيير؛ لا أصف التوقع بالصحيح أو الخاطئ واقعياً.",
+      "reviewed": {
+        "who": "Meteorologin",
+        "de": "Richtig. Bis zehn Uhr bleibt es bewölkt, dann kommt die Sonne.",
+        "ar": "صحيح. حتى العاشرة يبقى الجو غائماً ثم تظهر الشمس."
+      }
+    },
+    {
+      "id": "d-a2-12.lines[2]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S65",
+        "S69"
+      ],
+      "finding": "Wie warm wird es? يسأل عن درجة الدفء، و«كم ستكون الحرارة؟» صياغة عربية طبيعية في سياق نشرة الطقس. إنه سؤال لغوي في الحوار لا تقرير عن قيمة فعلية.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Moderator",
+        "de": "Wie warm wird es?",
+        "ar": "كم ستكون الحرارة؟"
+      }
+    },
+    {
+      "id": "d-a2-12.lines[3]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S65",
+        "S66",
+        "S67",
+        "S68",
+        "S69",
+        "S70",
+        "S82"
+      ],
+      "finding": "PONS يسند steigen/ansteigen إلى الصعود أو الارتفاع. الترجمة السابقة «تصل الحرارة» تحفظ بلوغ القيمة لكنها تسقط معنى الارتفاع الصريح في steigt auf؛ عُدّلت إلى «ترتفع درجة الحرارة إلى 27 درجة». تظل صحة 27 درجة في أبريل غير قابلة للتحقق دون موقع وتاريخ/عام (الملاحظة الجوية المفتوحة)، ولم يُغيّر الرقم أو الادعاء الألماني.",
+      "action": "عُدّل الحقل العربي وحده عبر رقعة مشروطة؛ لا يعني التصحيح أن التنبؤ واقعي أو متحقق.",
+      "reviewed": {
+        "who": "Meteorologin",
+        "de": "Die Temperatur steigt auf 27 Grad. Das ist keine Hitze, aber sehr warm für April.",
+        "ar": "ترتفع درجة الحرارة إلى 27 درجة. ليس حرّاً شديداً لكنه دافئ جداً لشهر أبريل."
+      },
+      "before": {
+        "who": "Meteorologin",
+        "de": "Die Temperatur steigt auf 27 Grad. Das ist keine Hitze, aber sehr warm für April.",
+        "ar": "تصل الحرارة إلى 27 درجة. ليس حرّاً شديداً لكنه دافئ جداً لشهر أبريل."
+      }
+    },
+    {
+      "id": "d-a2-12.lines[4]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S71"
+      ],
+      "finding": "Und am Abend? تقابل «وفي المساء؟» مباشرةً؛ لا يحتوي السطر وحده على دعوى جوية.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Moderator",
+        "de": "Und am Abend?",
+        "ar": "وفي المساء؟"
+      }
+    },
+    {
+      "id": "d-a2-12.lines[5]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S71",
+        "S72",
+        "S73",
+        "S74",
+        "S75",
+        "S76",
+        "S82"
+      ],
+      "finding": "المفردات والترجمة متوافقتان: مساءً، رياح قوية من الغرب، وعاصفة رعدية في الجبال. التوقع المحدد غير قابل للتحقق دون موقع وفترة معرّفين؛ DWD يذكر صعوبة بعض الظواهر الموضعية.",
+      "action": "لا تغيير؛ لا تُعد الملاحظة دليلاً على أن النشرة خاطئة.",
+      "reviewed": {
+        "who": "Meteorologin",
+        "de": "Am Abend kommt starker Wind aus dem Westen, und in den Bergen gibt es ein Gewitter.",
+        "ar": "في المساء تأتي رياح قوية من الغرب، وفي الجبال عاصفة رعدية."
+      }
+    },
+    {
+      "id": "d-a2-12.lines[6]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S77",
+        "S78",
+        "S82"
+      ],
+      "finding": "ترجمة سؤال عدم وجود الصقيع في الليل سليمة. وجود/عدم وجود الصقيع نفسه ادعاء جوي محلي غير قابل للتحقق من دون الموقع والتاريخ.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Moderator",
+        "de": "Also kein Frost mehr in der Nacht?",
+        "ar": "إذن لا صقيع بعد الآن في الليل؟"
+      }
+    },
+    {
+      "id": "d-a2-12.lines[7]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S77",
+        "S79",
+        "S80",
+        "S81",
+        "S82"
+      ],
+      "finding": "المعاني: لا صقيع، خذوا سترة معكم، والريح باردة؛ الترجمة تحفظها. لكن واقع عدم الصقيع وبرودة الريح في النشرة لا يمكن التحقق منهما بلا مكان/تاريخ؛ لا يصنّف ذلك خطأ ترجمة.",
+      "action": "لا تغيير؛ تُفصل صحة الادعاء الجوي عن الترجمة.",
+      "reviewed": {
+        "who": "Meteorologin",
+        "de": "Nein, kein Frost. Aber nehmen Sie eine Jacke mit, der Wind ist kalt.",
+        "ar": "لا، لا صقيع. لكن خذوا سترة معكم، فالرياح باردة."
+      }
+    },
+    {
+      "id": "d-a2-12-q1",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S58",
+        "S59",
+        "S60",
+        "S61",
+        "S82"
+      ],
+      "finding": "الخيار neblig, besonders an den Flüssen يطابق حرفياً ما يقوله الحوار عن الصباح؛ الخيارات الأخرى تخص الشمس بعد العاشرة والعاصفة مساءً. هذا تحقق نصي، لا تصديق لنشرة حقيقية.",
+      "action": "لا تغيير؛ يبقى الادعاء الجوي غير متحقق.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wie ist das Wetter morgen früh?",
+        "options": [
+          "sonnig ab dem Morgen",
+          "neblig, besonders an den Flüssen",
+          "ein Gewitter in den Bergen"
+        ],
+        "answer": "neblig, besonders an den Flüssen",
+        "explanationAr": "الدليل: «Am Morgen ist es neblig, besonders an den Flüssen». الفخّ 1: الشمس بعد العاشرة. الفخّ 2: العاصفة في المساء.",
+        "id": "d-a2-12-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-12-q2",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S71",
+        "S74",
+        "S75",
+        "S76",
+        "S82"
+      ],
+      "finding": "النص يحدد مكان Gewitter am Abend بأنه in den Bergen؛ الغرب مصدر الرياح والأنهار موضع الضباب، لذا المفتاح منفرد داخل الحوار.",
+      "action": "لا تغيير؛ لا تحقق خارجي من الطقس.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wo gibt es am Abend ein Gewitter?",
+        "options": [
+          "an den Flüssen",
+          "im Westen",
+          "in den Bergen"
+        ],
+        "answer": "in den Bergen",
+        "explanationAr": "الدليل: «in den Bergen gibt es ein Gewitter». الفخّ 1: الأنهار مكان الضباب. الفخّ 2: الغرب مصدر الرياح.",
+        "id": "d-a2-12-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-12-q3",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S77",
+        "S78",
+        "S82"
+      ],
+      "finding": "العبارة «In der Nacht gibt es Frost» خاطئة بحسب جواب الشخصية «Nein, kein Frost»؛ لا يثبت ذلك واقع الطقس خارج النص.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "In der Nacht gibt es Frost.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Nein, kein Frost».",
+        "id": "d-a2-12-q3",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+      }
+    },
+    {
+      "id": "d-a2-12.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S62",
+        "S13",
+        "S63",
+        "S64"
+      ],
+      "finding": "جملة الإملاء نسخة حرفية من d-a2-12.lines[1].de؛ cloudiness until zehn Uhr then Sonne. تطابقها النصي سليم مع بقاء صحة التوقع الواقعية غير متحققة.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Bis zehn Uhr bleibt es bewölkt, dann kommt die Sonne."
+      }
+    },
+    {
+      "id": "d-a2-12.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S71",
+        "S72",
+        "S73",
+        "S74",
+        "S75",
+        "S76"
+      ],
+      "finding": "جملة الإملاء نسخة حرفية من d-a2-12.lines[5].de؛ مفردات الريح والغرب والجبل والعاصفة الرعدية مدعومة معجمياً.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Am Abend kommt starker Wind aus dem Westen, und in den Bergen gibt es ein Gewitter."
+      }
+    }
+  ],
+  "verification": {
+    "typescript": {
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "result": "passed"
+    },
+    "smoke": {
+      "command": "npm run smoke",
+      "passed": 1130,
+      "failed": 0,
+      "gates": "K181a–h + existing gates including K120b"
+    },
+    "interaktiv": {
+      "command": "npm run interaktiv",
+      "passed": 699,
+      "failed": 0,
+      "note": "رسائل HTMLMediaElement.play/pause من jsdom؛ لا تثبت تشغيل الصوت."
+    },
+    "contentAudit": {
+      "command": "npm run audit:content",
+      "confirmedStructuralDefects": 0,
+      "note": "الإشارات البشرية/التربوية المطبوعة ليست عيوباً مؤكدة."
+    },
+    "build": {
+      "command": "npm run build",
+      "result": "passed",
+      "staticPages": 11
+    },
+    "npmAudit": {
+      "command": "npm audit --no-fund",
+      "vulnerabilities": 0
+    },
+    "patchIdempotence": {
+      "command": "python scripts/patches/review_a2_dialogues_05.py",
+      "result": "already applied; no additional data changed"
+    },
+    "gitDiffCheck": {
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    "initialFailures": [
+      {
+        "command": "npm run smoke",
+        "failure": "node_modules was absent (esbuild: not found)",
+        "resolution": "npm ci installed 95 packages; reran smoke."
+      },
+      {
+        "command": "npm run smoke",
+        "failure": "K181h exact-literal assertion expected «ولا تحل» while the then-current report said «لا يحل محل»",
+        "resolution": "Updated the assertion to the report wording; no reduction in coverage."
+      },
+      {
+        "command": "npm run smoke",
+        "failure": "K120b rejected a RULES.md JSON anchor containing an escaped quote",
+        "resolution": "Changed the anchor to the literal JSON text and reran smoke."
+      },
+      {
+        "command": "npm run smoke",
+        "failure": "After adding the final verification table, K181h still expected the previous report phrase instead of «لا تحل هذه البوابات محل مراجعة بشرية»",
+        "resolution": "Updated the assertion to the final report sentence; reran all gates, 1130/1130."
+      }
+    ]
+  }
+}

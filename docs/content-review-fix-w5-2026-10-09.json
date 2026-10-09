@@ -1,0 +1,206 @@
+{
+  "reviewRule": "R134",
+  "batchLabel": "إصلاح تحذير نصي W5",
+  "targetIds": [
+    "d-b2-02"
+  ],
+  "totals": {
+    "dialogues": 1,
+    "lines": 0,
+    "questions": 1,
+    "dictation": 0,
+    "approximateUnits": 1
+  },
+  "snapshots": {
+    "d-b2-02": {
+      "id": "d-b2-02",
+      "level": "B2",
+      "title": "",
+      "lines": [
+        {
+          "who": "Projektleiter",
+          "de": "Wo sehen Sie die größte Herausforderung?",
+          "ar": "أين ترون أكبر تحدٍّ؟"
+        },
+        {
+          "who": "Beraterin",
+          "de": "Die Digitalisierung setzt eine Infrastruktur voraus, die viele Kommunen noch nicht haben.",
+          "ar": "الرقمنة تستلزم بنية تحتية ليست لدى كثير من البلديات بعد."
+        },
+        {
+          "who": "Projektleiter",
+          "de": "Gleichwohl müssen wir anfangen.",
+          "ar": "مع ذلك يجب أن نبدأ."
+        },
+        {
+          "who": "Beraterin",
+          "de": "Natürlich. Entscheidend ist, dass die von uns geplanten Schulungen begleitend stattfinden.",
+          "ar": "بالطبع. الحاسم أن الدورات التدريبية التي خططنا لها تجري بالتوازي."
+        },
+        {
+          "who": "Projektleiter",
+          "de": "Einverstanden. Dann machen wir weiter mit dem Zeitplan.",
+          "ar": "متفقون. إذن نواصل مع الجدول الزمني."
+        }
+      ],
+      "questions": [
+        {
+          "id": "d-b2-02-q1",
+          "type": "fill",
+          "promptDe": "Die Digitalisierung setzt eine Infrastruktur ___.",
+          "answer": [
+            "voraus"
+          ],
+          "explanationAr": "etwas voraussetzen = يستلزم.",
+          "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+        },
+        {
+          "id": "d-b2-02-q2",
+          "type": "mc",
+          "promptDe": "Was ist entscheidend?",
+          "options": [
+            "dass die Kommunen zuerst die Infrastruktur bauen",
+            "dass die Schulungen begleitend stattfinden",
+            "dass der Zeitplan eingehalten wird"
+          ],
+          "answer": "dass die Schulungen begleitend stattfinden",
+          "explanationAr": "الدليل: «Entscheidend ist, dass die … Schulungen begleitend stattfinden». الفخّ 1: البنية التحتية ذُكرت كشرط ناقص لا كالأمر الحاسم. الفخّ 2: الجدول الزمني ذكره قائد المشروع في الختام فقط.",
+          "falle": true,
+          "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        }
+      ],
+      "dictation": [
+        "Die Digitalisierung setzt eine Infrastruktur voraus.",
+        "Gleichwohl müssen wir anfangen.",
+        "Die von uns geplanten Schulungen finden begleitend statt."
+      ]
+    }
+  },
+  "corrections": [
+    {
+      "unit": "d-b2-02.questions[0].promptDe",
+      "field": "promptDe",
+      "before": "Die Digitalisung setzt eine Infrastruktur ___.",
+      "after": "Die Digitalisierung setzt eine Infrastruktur ___.",
+      "reason": "إصلاح خطأ إملائي ألماني في نص السؤال (كلمة Digitalisierung كان ينقصها المقطع «ier» فصارت «Digitalisung»؛ هو التحذير النصي W5 الموثق في R123 ومفتوح حتى هذه المهمة). الترجمة العربية «تتطلب الرقمنة بنيةً تحتية ___» كانت صحيحة (الرقمنة تقابل Digitalisierung) فبقيت بلا تعديل."
+    }
+  ],
+  "contextNotes": {
+    "d-b2-02": [
+      {
+        "note": "خطأ إملائي بحت: الصياغة القياسية في الألمانية هي «Digitalisierung» (Duden)، ولا وجود لـ»Digitalisung» كلمة مستقلة."
+      },
+      {
+        "note": "السياق التعليمي باقٍ؛ سؤال ملء فراغ عن البنية التحتية الرقمية، الخيارات والمفاتيح والشرح تظل مطابقة للمعنى المصحَّح (تطابق كلمة Digitalisierung التي تقابلها العربية «الرقمنة»)."
+      },
+      {
+        "note": "حقل promptAr «تتطلب الرقمنة بنيةً تحتية ___» ترجمة صحيحة للصيغة المصحَّحة؛ لم يحتج لتعديل."
+      }
+    ]
+  },
+  "styleAlternatives": {
+    "d-b2-02": [
+      {
+        "note": "لا بدائل أسلوبية هنا؛ الإصلاح إملائي بحت في كلمة واحدة."
+      }
+    ]
+  },
+  "sources": {
+    "d-b2-02": [
+      {
+        "cite": "Duden — Digitalisierung (Rechtschreibung und Bedeutung)",
+        "url": "https://www.duden.de/rechtschreibung/Digitalisierung",
+        "supports": "الصياغة القياسية «Digitalisierung»؛ «Digitalisung» خطأ إملائي ناقص «ier»."
+      }
+    ]
+  },
+  "contentChecks": [
+    {
+      "id": "CHK-W5-01",
+      "check": "لا وجود لـ»Digitalisung» في كامل content/dialogues.json بعد الإصلاح.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W5-02",
+      "check": "الصيغة الصحيحة «Digitalisierung» موجودة في d-b2-02.questions[0].promptDe.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W5-03",
+      "check": "العربية promptAr لم تُمسّ؛ مطابقتها للصياغة الألمانية المصحَّحة قائمة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W5-04",
+      "check": "كل الأسطر الألمانية والأسئلة والإملاءات الأخرى مقفلة.",
+      "status": "pass"
+    }
+  ],
+  "contentWarnings": [
+    {
+      "id": "W1",
+      "dialogue": "d-b1-16",
+      "status": "open",
+      "note": "«15% عند 50 دقيقة» يخالف VO (EU) 2021/782 (25% عند ≥60 دقيقة). مفتوح لمهمة محتوى مقبلة."
+    },
+    {
+      "id": "W2",
+      "dialogue": "d-b1-24",
+      "status": "open",
+      "note": "«Vierzehn Tage Aufbewahrung» مقابل الحفظ النظامي ستة أشهر (§ 973 BGB). مفتوح."
+    },
+    {
+      "id": "W3",
+      "dialogue": "d-b1-25",
+      "status": "open",
+      "note": "eID بستة يورو مقابل المجانية الرسمية (W3). مفتوح."
+    },
+    {
+      "id": "W4",
+      "dialogue": "d-b1-27",
+      "status": "open",
+      "note": "الرسوم تبقى نافذة مقابل رسوم لكل محاولة (W4). مفتوح."
+    },
+    {
+      "id": "W5",
+      "dialogue": "d-b2-02",
+      "status": "fixed-R134",
+      "note": "خطأ إملائي «Digitalisung» → «Digitalisierung»؛ مغلق في R134."
+    },
+    {
+      "id": "W6",
+      "dialogue": "d-b2-11",
+      "status": "open",
+      "note": "«Kappungsgrenze bei elf Prozent» مقابل 20٪/15٪ في § 558 BGB ومؤشر § 558c. مفتوح."
+    }
+  ],
+  "judgement": {
+    "correct": 0,
+    "corrected": 1,
+    "unresolved": 0,
+    "note": "تصحيح إملائي ألماني واحد في d-b2-02.questions[0].promptDe: «Digitalisung» → «Digitalisierung» (إغلاق تحذير المحتوى W5 الموثق في R123؛ R134 هو مهمة المحتوى المنفصلة الموعودة). العربية كانت وتبقى صحيحة (الرقمنة). لا مساس ببنية السؤال أو خياراته أو مفتاحه أو شرحه أو إملاءات الحوار. بقي W1/W2/W3/W4/W6 مفتوحاً لمهمات محتوى مقبلة. لا استماع لملفات صوت."
+  },
+  "limits": {
+    "human": "لا اعتماد لغوي بشري؛ المصدر المعجمي الوحيد Duden لتدقيق الإملاء.",
+    "professional": "لا استشارة مهنية قانونية/تقنية/تربوية في الإصلاح؛ سجلات W6/W1/W2/W3/W4 مفتوحة وتحتاج مهمة محتوى قانونية/إدارية.",
+    "legal": "لا تعديل للبنود القانونية في W1/W2/W3/W4/W6؛ إصلاح W5 إملائي فقط.",
+    "medical": "لا محتوى طبي.",
+    "cefr": "لا إعادة حساب CEFR."
+  },
+  "gates": {
+    "patch": "scripts/patches/review_fix_w5.py",
+    "report": "scripts/patches/report_fix_w5.py",
+    "smoke": "K208a–j"
+  },
+  "waisen": {
+    "present": false,
+    "count": 0,
+    "unlinked": 0,
+    "note": "d-b2-02 لا يحتوي على حقل waisen (عدد الوصلات: 0)."
+  },
+  "audio": {
+    "manifestEntries": 0,
+    "mp3Files": 0,
+    "note": "لا استماع (لا مداخل/ملفات صوت لهذا الحوار في هذا النطاق)."
+  }
+}

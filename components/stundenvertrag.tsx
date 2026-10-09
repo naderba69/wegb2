@@ -37,9 +37,8 @@ export function urteilZeile(u: ReturnType<typeof vergleichePlan>[number]): strin
 
 export function StundenVertrag({ progress }: { progress: Progress }) {
   const [eingabe, setEingabe] = useState("");
-  /* الحجزُ يُغيِّر الحالةَ مباشرةً عبر bucheMinuten، والأبُ لا يُمرِّرُ prop جديدة —
-     فاللوحةُ تشتركُ في حدثِ الحالةِ نفسه الذي يشتركُ فيه useProgress، وإلّا
-     عرضت رقماً قديماً بعد الحجز (وهذا عطلٌ ظهر في XLVI18 وأُصلِح هنا). */
+  /* الإدخالُ اليدويُّ يُحدِّث السجل المنفصل مباشرةً عبر bucheMinuten؛ والأبُ لا يُمرِّر prop جديدة.
+     لذلك تشتركُ اللوحةُ في حدث الحالة لتعرض آخر رقمٍ مُبلَّغ عنه من دون لمس قياس المؤقّت. */
   const [live, setLive] = useState<Progress | null>(null);
   useEffect(() => {
     const onChange = () => setLive(loadProgress());
@@ -57,10 +56,12 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
   const stdBisher = planStundenBis(tag);
   const effektiv = minutenEffektiv(stand);
   const stdEffektiv = minutenZuStunden(effektiv);
+  const manuell = Math.max(0, stand.plan.minutenManuell ?? 0);
+  const stdManuell = minutenZuStunden(manuell);
   const quote = stdBisher > 0 ? Math.round((stdEffektiv / stdBisher) * 100) : 0;
 
   const buchen = () => {
-    const z = bucheMinuten(Number(eingabe));
+    const z = bucheMinuten(Number(eingabe), tag);
     if (z > 0) setEingabe("");
   };
 
@@ -68,8 +69,7 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
     <section className="card" style={{ padding: "1.1rem 1.2rem" }} data-testid="stundenvertrag">
       <h2 style={{ fontWeight: 800, marginBottom: "0.35rem" }}>⏱️ عقد الساعات — Stundenvertrag</h2>
       <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", marginBottom: "0.8rem" }}>
-        كلُّ رقمٍ هنا محسوبٌ من الخطةِ نفسِها ومن مرجعِ CEFR — لا مكتوبٌ يدوياً ولا مُقدَّر.
-        ما لا يُقاس لا يُدَّعى.
+        مجموعُ الخطة هو تقديرُ مهامها، أمّا الوقتُ الفعلي فيُسجّله مؤقّتُ الجلسة. أيُّ إدخالٍ يدويّ يُحفظُ منفصلاً ولا يُعرَض كوقتٍ مقاس.
       </p>
 
       {/* ── الأرقام الثلاثة ── */}
@@ -79,8 +79,11 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
           <div style={{ fontSize: "1.5rem", fontWeight: 800 }} className="rtl-num" data-testid="stunden-plan">{gesamt.toFixed(1)} س</div>
         </div>
         <div style={{ background: "var(--color-paper2)", borderRadius: "8px", padding: "0.7rem 0.85rem" }}>
-          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>ما قضيتَه فعلاً (محجوزٌ بيدك)</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>وقتٌ قاسه مؤقّت الجلسة</div>
           <div style={{ fontSize: "1.5rem", fontWeight: 800 }} className="rtl-num" data-testid="stunden-effektiv">{stdEffektiv.toFixed(1)} س</div>
+          <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
+            وقتٌ أُبلغ عنه يدوياً، غيرُ مقاس: <span className="rtl-num" data-testid="stunden-manuell">{stdManuell.toFixed(1)} س</span>
+          </div>
         </div>
       </div>
 
@@ -186,9 +189,9 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
         </div>
       </div>
 
-      {/* ── حجز الوقت ── */}
-      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap", paddingTop: "0.6rem", borderTop: "1px solid var(--color-line)" }}>
-        <label htmlFor="minuten-buchen" style={{ fontSize: "0.85rem", fontWeight: 700 }}>احجِز ما قضيتَه اليوم:</label>
+      {/* ── إدخال يدوي منفصل عن القياس ── */}
+      <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap", paddingTop: "0.6rem", borderTop: "1px solid var(--color-line)" }} data-testid="stunden-manual-entry">
+        <label htmlFor="minuten-buchen" style={{ fontSize: "0.85rem", fontWeight: 700 }}>أدخل وقتاً أبلغتَ عنه اليوم (غير مقاس):</label>
         <input
           id="minuten-buchen"
           className="field"
@@ -200,17 +203,17 @@ export function StundenVertrag({ progress }: { progress: Progress }) {
           placeholder="دقائق"
           style={{ width: "7rem", minHeight: "44px" }}
         />
-        <button className="btn btn-primary" onClick={buchen} disabled={!(Number(eingabe) > 0)} style={{ minHeight: "44px" }}>
-          ⏱️ احجِز
+        <button className="btn btn-primary" data-testid="manual-time-add" onClick={buchen} disabled={!(Number(eingabe) > 0)} style={{ minHeight: "44px" }}>
+          أضِف إلى الإدخال اليدوي
         </button>
         <span style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>
-          الحدُّ {MAX_MIN_PRO_TASK} دقيقةً في الحجزِ الواحد — تبويبٌ مفتوحٌ ومنسيٌّ ليس ساعةَ دراسة.
+          الحدُّ {MAX_MIN_PRO_TASK} دقيقةً في الإدخال الواحد؛ لن يزيدَ وقتَ المؤقّت أو ساعاتِ القياس.
         </span>
       </div>
 
       <p style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.7rem" }}>
         مرجعُ الساعات: نطاقاتُ Goethe-Institut / telc التراكمية من الصفر. وهي <strong>نطاقات</strong> لا أرقامٌ حاسمة،
-        تختلفُ باختلافِ اللغةِ الأمِّ والخبرةِ السابقةِ بالتعلّم — والعربيةُ أبعدُ عن الألمانيةِ من جاراتِها، فالحدُّ الأعلى أقربُ إليك من الأدنى.
+        تختلفُ باختلافِ خلفيةِ كلِّ متعلّم وخبرتهِ ووقتِ الممارسة؛ ولا يُستنتجُ ذلك من اللغةِ الأمِّ وحدها.
       </p>
     </section>
   );

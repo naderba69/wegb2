@@ -4,19 +4,19 @@
     "level": "A0",
     "titleDe": "Das Alphabet schreiben",
     "titleAr": "كتابة الأبجدية الألمانية",
-    "taskDe": "Schreibe die 26 Buchstaben des Alphabets und die drei Umlaute (ä, ö, ü) sowie ß. Schreibe zu jedem Buchstaben ein Wort.",
-    "taskAr": "اكتب حروف الأبجدية الألمانية الستة وعشرين، مع ثلاثة حروف أوملاوت (ä, ö, ü) وحرف ß، واكتب كلمة واحدة بجانب كل حرف.",
+    "taskDe": "Schreibe die 26 Buchstaben des Alphabets, die drei Umlaute (ä, ö, ü) und ß. Finde zu jedem Zeichen ein Beispielwort: Bei A–Z und ä/ö/ü beginnt es damit; das Beispiel zu ß enthält ß, zum Beispiel Straße.",
+    "taskAr": "اكتب حروف الأبجدية الألمانية الستة والعشرين، والأوملاوت الثلاثة (ä, ö, ü)، وß. أعطِ لكل علامة كلمة مثال: تبدأ الكلمة بالحرف المقصود، أما مثال ß فيحتوي عليه مثل Straße.",
     "criteria": [
       "جميع الحروف الـ26 موجودة",
       "حروف الأوملاوت ä/ö/ü مكتوبة",
       "ß مكتوب",
-      "كلمة واحدة صحيحة على الأقل بجانب كل حرف"
+      "كلمة مثال صحيحة تبدأ بالحرف المقصود؛ أما ß فيكفي أن يرد داخل الكلمة مثل Straße"
     ],
     "sample": "A – Apfel, B – Buch, C – Computer, D – Deutschland, E – Esel, F – Fisch, G – Geld, H – Haus, I – Insel, J – Jahr, K – Kaffee, L – Land, M – Mann, N – Name, O – Oma, P – Park, Q – Quelle, R – Radio, S – Schule, T – Tag, U – Uhr, V – Vater, W – Wasser, X – Xylofon, Y – Yoga, Z – Zug · ä – Ärzte, ö – Öl, ü – Übung, ß – Straße.",
     "noteAr": [
       "في A0 نكتفي بكتابة الحروف وكلمة واحدة: لا جُمَل مركَّبة ولا تصريف.",
-      "ß يُلفظ كـ s مشدودة.",
-      "ä/ö/ü لا تُكتب ae/oe/ue في الامتحان الرسمي — لكن كتابتها مقبولة في الرسائل."
+      "ß يُنطق صوت /s/ مهموساً؛ و«s الحادّة» اسمٌ آخر للحرف، ولا يعني تضعيف الصوت.",
+      "إذا تعذّر إدخال ä/ö/ü/ß، أو سمحت المهمة، فقد تُقبل ae/oe/ue/ss. ورقة حلول Goethe-Test PRO تقبل هذه البدائل في نوع إدخال محدد؛ لا نعمّم ذلك على كل اختبار، واتبع تعليماته."
     ]
   },
   {
@@ -653,8 +653,8 @@
   {
     "id": "w-a1-09",
     "level": "A1",
-    "titleDe": "Postkarte aus dem Urlaub",
-    "titleAr": "بطاقة بريدية من العطلة",
+    "titleDe": "Postkarte an einen Freund",
+    "titleAr": "بطاقة بريدية إلى صديق",
     "taskDe": "Schreibe eine Postkarte an einen Freund (4–5 Sätze): Wo bist du? Wie ist das Wetter? Was machst du? Wann kommst du zurück?",
     "taskAr": "اكتب بطاقة بريدية لصديق (4–5 جمل): أين أنت؟ كيف الطقس؟ ماذا تفعل؟ متى تعود؟",
     "criteria": [
