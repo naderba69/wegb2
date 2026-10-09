@@ -307,8 +307,8 @@ export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise
     promptDe: "🎧 Hören (▶ اضغط 🔊): „Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.“ — Aussage: Die Person spielt jeden Tag Klavier. Richtig oder falsch?",
     promptAr: "🎧 استماع (مستوى B2): الجملة تتحدث عن أمنية بلا تحقق. العبارة: «الشخص يعزف البيانو كل يوم» — هل هي صحيحة؟",
     text: "Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.",
-    options: ["Richtig", "Falsch"],
-    answer: "Falsch",
+    options: ["richtig", "falsch"],
+    answer: "falsch",
     explanationAr: "«Wenn ich mehr Zeit hätte, würde ich …» = أمنية (Konjunktiv II) لا تتحقق فعلياً؛ الدراسة تشغل كل يومها، إذاً العبارة خاطئة.",
     hint: "🔊 استمع ثم اختر",
   });

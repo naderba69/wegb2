@@ -13,7 +13,12 @@ import { De } from "./De";
 
 function gradeItem(ex: Exercise, resp: string): boolean {
   if (!resp.trim()) return false;
-  if (ex.type === "mc") return resp === ex.answer;
+  if (ex.type === "mc" || ex.type === "truefalse") {
+    const norm: Record<string, string> = { richtig: "richtig", wahr: "richtig", true: "richtig", "1": "richtig", falsch: "falsch", false: "falsch", "0": "falsch" };
+    const exp = String(Array.isArray(ex.answer) ? ex.answer[0] : ex.answer).trim().toLowerCase();
+    const e = norm[exp] ?? exp;
+    return resp.trim().toLowerCase() === e;
+  }
   const n = normalize(resp);
   const answers = Array.isArray(ex.answer) ? ex.answer : [ex.answer];
   return answers.some((a) => normalize(String(a)) === n);

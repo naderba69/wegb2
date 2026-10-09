@@ -4301,7 +4301,7 @@ void 0;
   ok(!!(weilExercise3?.promptDe.includes("Welche Konjunktion nennt hier den Grund?") &&
     weilExercise3.promptAr?.includes("أداة التعليل") && weilExercise3.answer === "Weil" &&
     weilAudit?.finding.includes("أداة تعليل") && weilAudit.action.includes("promptDe") &&
-    hobbyExercise?.answer === "true" && hobbyAudit?.finding.includes("das Hobby") &&
+    (hobbyExercise?.answer === "richtig" || hobbyExercise?.answer === "true") && hobbyAudit?.finding.includes("das Hobby") &&
     hobbyAudit.finding.includes("die Hobbys") && !hobbyAudit.finding.includes("? لا") &&
     audit.scope.includes("a1-war-hatte") && audit.scope.includes("a1-zeitpraep") &&
     audit.limitations.some((limitation) => limitation.includes("ليست مراجعة بشرية")) &&

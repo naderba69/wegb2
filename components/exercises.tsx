@@ -245,9 +245,9 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
               </div>
             )}
 
-            {ex.type === "truefalse" && ex.options && (
+            {ex.type === "truefalse" && (
               <div style={{ display: "flex", gap: "0.5rem" }}>
-                {ex.options.map((opt) => {
+                {(ex.options && ex.options.length === 2 ? ex.options : ["richtig", "falsch"]).map((opt) => {
                   const selected = st?.response === opt;
                   return (
                     <button

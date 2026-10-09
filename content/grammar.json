@@ -1575,8 +1575,12 @@
         "id": "a2-praeteritum-e7",
         "type": "truefalse",
         "promptDe": "„ich machte“ und „er machte“ sind identisch.",
-        "answer": "true",
-        "explanationAr": "صحيح — في Präteritum الشخص الأول والثالث المفرد متطابقان. هذه ميزة تُخفّف الحفظ."
+        "answer": "richtig",
+        "explanationAr": "صحيح — في Präteritum الشخص الأول والثالث المفرد متطابقان. هذه ميزة تُخفّف الحفظ.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       },
       {
         "id": "a2-praeteritum-e8",
@@ -2990,8 +2994,12 @@
         "id": "g14e5",
         "type": "truefalse",
         "promptDe": "„Ich hatte gegessen“ ist Plusquamperfekt.",
-        "answer": "true",
-        "explanationAr": "hatte/war + اسم المفعول = Plusquamperfekt."
+        "answer": "richtig",
+        "explanationAr": "hatte/war + اسم المفعول = Plusquamperfekt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       }
     ]
   },
@@ -5933,8 +5941,12 @@
         "id": "b1-wortbildung-e9",
         "type": "truefalse",
         "promptDe": "„die Haustür“: Das Genus kommt von „Haus“.",
-        "answer": "false",
-        "explanationAr": "خطأ — الجنس من Tür (die). Haus محايد ولا علاقة له بجنس المركّب."
+        "answer": "falsch",
+        "explanationAr": "خطأ — الجنس من Tür (die). Haus محايد ولا علاقة له بجنس المركّب.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       },
       {
         "id": "b1-wortbildung-u1",
@@ -9193,8 +9205,12 @@
         "id": "a2-prae-grund-e7",
         "type": "truefalse",
         "promptDe": "„Ich hatte keine Zeit“ steht im Präteritum von haben.",
-        "answer": "true",
-        "explanationAr": "صحيح — hatte هو ماضي haben في صيغة Präteritum، ومعنى الجملة: لم يكن لديّ وقت."
+        "answer": "richtig",
+        "explanationAr": "صحيح — hatte هو ماضي haben في صيغة Präteritum، ومعنى الجملة: لم يكن لديّ وقت.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       },
       {
         "id": "a1-war-hatte-u1",
@@ -10133,10 +10149,10 @@
         "promptDe": "Richtig oder falsch? „eine Entscheidung machen“ ist korrektes Deutsch.",
         "promptAr": "صح أم خطأ: عبارة «eine Entscheidung machen» صحيحة بالألمانية؟",
         "options": [
-          "Richtig",
-          "Falsch"
+          "richtig",
+          "falsch"
         ],
-        "answer": "Falsch",
+        "answer": "falsch",
         "explanationAr": "خطأ: الصحيح eine Entscheidung treffen."
       },
       {
@@ -11607,8 +11623,12 @@
         "id": "a1-plural-n7",
         "type": "truefalse",
         "promptDe": "„die Hobbys“ ist der richtige Plural von „das Hobby“.",
-        "answer": "true",
-        "explanationAr": "صحيح — الدخيل يأخذ ‎-s: die Hobbys."
+        "answer": "richtig",
+        "explanationAr": "صحيح — الدخيل يأخذ ‎-s: die Hobbys.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       }
     ],
     "verify": [
@@ -11807,8 +11827,12 @@
         "id": "a1-zeitpraep-n7",
         "type": "truefalse",
         "promptDe": "„am Mai“ ist richtig.",
-        "answer": "false",
-        "explanationAr": "خطأ — الشهور ← ‎im: im Mai."
+        "answer": "falsch",
+        "explanationAr": "خطأ — الشهور ← ‎im: im Mai.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       }
     ],
     "verify": [
@@ -12003,8 +12027,12 @@
         "id": "a2-neben-n7",
         "type": "truefalse",
         "promptDe": "Nach „denn“ steht das Verb am Ende.",
-        "answer": "false",
-        "explanationAr": "خطأ — ‎denn موضع صفر: الفعل ثانٍ (denn ich bin krank)."
+        "answer": "falsch",
+        "explanationAr": "خطأ — ‎denn موضع صفر: الفعل ثانٍ (denn ich bin krank).",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       }
     ],
     "verify": [
@@ -12197,8 +12225,12 @@
         "id": "a2-demo-n7",
         "type": "truefalse",
         "promptDe": "„Alle Kinder spielt“ ist richtig.",
-        "answer": "false",
-        "explanationAr": "خطأ — ‎alle + جمع: spielen لا spielt."
+        "answer": "falsch",
+        "explanationAr": "خطأ — ‎alle + جمع: spielen لا spielt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       }
     ],
     "verify": [
@@ -12644,8 +12676,12 @@
         "id": "b1-absicht-n7",
         "type": "truefalse",
         "promptDe": "„um dass“ ist möglich.",
-        "answer": "false",
-        "explanationAr": "خطأ — ‎um…zu أو ‎damit، لا يجتمعان أبداً."
+        "answer": "falsch",
+        "explanationAr": "خطأ — ‎um…zu أو ‎damit، لا يجتمعان أبداً.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       }
     ],
     "verify": [
@@ -12841,8 +12877,12 @@
         "id": "b1-konj2-vergangenheit-n7",
         "type": "truefalse",
         "promptDe": "„Ich würde gegangen sein“ ist Standard.",
-        "answer": "false",
-        "explanationAr": "خطأ — المعيار: Ich wäre gegangen."
+        "answer": "falsch",
+        "explanationAr": "خطأ — المعيار: Ich wäre gegangen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       }
     ],
     "verify": [
@@ -13034,8 +13074,12 @@
         "id": "b2-textkonnektoren-n7",
         "type": "truefalse",
         "promptDe": "In „Er hingegen blieb“ steht das Verb an Position 2.",
-        "answer": "false",
-        "explanationAr": "خطأ — الفعل ثالث (er/hingegen/blieb): ‎hingegen موضع 1 أو 3."
+        "answer": "falsch",
+        "explanationAr": "خطأ — الفعل ثالث (er/hingegen/blieb): ‎hingegen موضع 1 أو 3.",
+        "options": [
+          "richtig",
+          "falsch"
+        ]
       }
     ],
     "verify": [

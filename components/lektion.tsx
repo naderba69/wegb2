@@ -19,7 +19,12 @@ import { De } from "./De";
 
 function gradeItem(ex: Exercise, resp: string): boolean {
   if (!resp.trim()) return false;
-  if (ex.type === "mc") return resp === String(Array.isArray(ex.answer) ? ex.answer[0] : ex.answer);
+  if (ex.type === "mc" || ex.type === "truefalse") {
+    const expected = String(Array.isArray(ex.answer) ? ex.answer[0] : ex.answer).trim().toLowerCase();
+    const normalized = { richtig: "richtig", wahr: "richtig", true: "richtig", "1": "richtig", falsch: "falsch", false: "falsch", "0": "falsch" } as Record<string, string>;
+    const e = normalized[expected] ?? expected;
+    return resp.trim().toLowerCase() === e;
+  }
   const n = normalize(resp);
   const answers = Array.isArray(ex.answer) ? ex.answer : [ex.answer];
   return answers.some((a) => normalize(String(a)) === n);
