@@ -36,6 +36,8 @@ const TASK_LABEL: Record<TaskKind, string> = {
   schreiben: "كتابة",
   sprechen: "تحدّث",
   aussprache: "نطق",
+  schulsim: "محاكاة",
+  briefe: "رسائل",
   check: "فحص",
 };
 const DAY_TYPE_LABEL = {

@@ -67,6 +67,18 @@ const KIND_PATH: Record<TaskKind, React.ReactNode> = {
       <path d="M20 3.5v5.3h-5.3M4 20.5v-5.3h5.3" />
     </>
   ),
+  briefe: (
+    <>
+      <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" />
+      <path d="M4 7l8 6 8-6" />
+    </>
+  ),
+  schulsim: (
+    <>
+      <path d="M3 19V8l9-5 9 5v11" />
+      <path d="M9 19v-6h6v6" />
+    </>
+  ),
   check: (
     <>
       <circle cx="12" cy="12" r="8.6" />

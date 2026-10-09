@@ -11,6 +11,8 @@ export type TaskKind =
   | "schreiben"
   | "sprechen"
   | "aussprache"
+  | "schulsim"  // R138/P-16: Schulsimulator (Prüfungs-Simulation)
+  | "briefe"    // R138/P-16: Briefe / formelle E-Mails
   | "check";
 export type DayType = "lerntag" | "festigung" | "wochencheck" | "abschluss";
 

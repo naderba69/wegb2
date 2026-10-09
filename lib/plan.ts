@@ -536,6 +536,10 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   const type = dayType(day);
   const rand = rng(day * 7919);
   const tasks: DayTask[] = [];
+  // رقم الأسبوع داخل المرحلة (لبثّ المحتوى الأسبوعي مثل Schulsim/Briefe كل 4 أسابيع — P-16/P-17)
+  const phaseStart = PHASE_RANGES.find((p) => p.phase === phase)?.from ?? 1;
+  const wocheInPhase = Math.max(1, Math.ceil((day - phaseStart + 1) / 7));
+  const level = levelOf(day);
 
   // (1) التعويضات الإلزامية أولاً — «ما لم يُنجز أمس يُنجز اليوم»
   progress.plan.debt.forEach((d, i) => {
@@ -581,7 +585,6 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   const phaseDecks = PHASE_DECKS[phase];
   const phaseDeckA = phaseDecks[((week - 1) * 2) % Math.max(phaseDecks.length, 1)];
   const phaseDeckB = phaseDecks[((week - 1) * 2 + 1) % Math.max(phaseDecks.length, 1)];
-  const level = levelOf(day);
 
   const textsOfLevel = texts.filter((t) => t.level === level);
   const dialogsOfLevel = dialogues.filter((d) => d.level === level);
@@ -901,6 +904,26 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         minutes: 15,
         sentenceIds: pickN(satzOfLevel, 4, rand).map((s) => s.id),
       });
+    }
+    // R138/P-16: محاكاة المدرسة (Schulsim) وكتابة الرسائل (Briefe) كل 4 أسابيع بدءاً من A2 في يوم التثبيت
+    if (level !== "A0" && level !== "A1" && wocheInPhase % 4 === 0) {
+      tasks.push({
+        id: tid(14),
+        kind: "briefe",
+        titleDe: "Brief/E-Mail der Woche",
+        titleAr: "رسالة رسمية قصيرة (تدريب كتابة)",
+        minutes: 15,
+        writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+      });
+      if (level === "B1" || level === "B2") {
+        tasks.push({
+          id: tid(15),
+          kind: "schulsim",
+          titleDe: "Schul-Simulator",
+          titleAr: "محاكاة موقف امتحاني (تدريب سريع)",
+          minutes: 10,
+        });
+      }
     }
     tasks.push({
       id: tid(4),
