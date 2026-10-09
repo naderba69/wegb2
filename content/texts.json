@@ -1092,7 +1092,8 @@
           "Koch"
         ],
         "answer": "Taxifahrer",
-        "explanationAr": "الدليل حرفياً: «Amir ist Taxifahrer.» — سائق أجرة."
+        "explanationAr": "الدليل حرفياً: «Amir ist Taxifahrer.» — سائق أجرة.",
+        "promptAr": "ماذا يعمل أمير؟"
       },
       {
         "id": "t-a1-07-q2",
@@ -1103,7 +1104,8 @@
           "funf",
           "5"
         ],
-        "explanationAr": "الدليل حرفياً: «Er steht um fünf Uhr auf, denn seine Arbeit beginnt früh.» — الخامسة."
+        "explanationAr": "الدليل حرفياً: «Er steht um fünf Uhr auf, denn seine Arbeit beginnt früh.» — الخامسة.",
+        "promptAr": "يقوم في الساعة ___ صباحاً."
       },
       {
         "id": "t-a1-07-q3",
@@ -1115,7 +1117,8 @@
           "um 21:00"
         ],
         "answer": "um 22:30",
-        "explanationAr": "الدليل حرفياً: «Um halb elf geht er schlafen.» — halb elf = 22:30."
+        "explanationAr": "الدليل حرفياً: «Um halb elf geht er schlafen.» — halb elf = 22:30.",
+        "promptAr": "متى ينام؟"
       },
       {
         "id": "t-a1-07-q4",
@@ -1124,7 +1127,8 @@
         "answer": [
           "Taxifahrer"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Amir ist Taxifahrer»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Amir ist Taxifahrer».",
+        "promptAr": "أمير ___ مهنياً."
       }
     ]
   },
@@ -1441,7 +1445,8 @@
           "Um neun Uhr"
         ],
         "answer": "Um sieben Uhr",
-        "explanationAr": "الدليل حرفياً: «Ich stehe jeden Tag um sieben Uhr auf.» — يستيقظ في السابعة صباحاً (um sieben Uhr)."
+        "explanationAr": "الدليل حرفياً: «Ich stehe jeden Tag um sieben Uhr auf.» — يستيقظ في السابعة صباحاً (um sieben Uhr).",
+        "promptAr": "متى يستيقظ؟"
       },
       {
         "id": "t-a1-08-q2",
@@ -1454,7 +1459,8 @@
           "Mit dem Rad"
         ],
         "answer": "Mit dem Bus",
-        "explanationAr": "الدليل حرفياً: «Um acht Uhr fahre ich mit dem Bus zur Arbeit.» — تذهب بالحافلة (mit dem Bus) والرحلة عشرون دقيقة."
+        "explanationAr": "الدليل حرفياً: «Um acht Uhr fahre ich mit dem Bus zur Arbeit.» — تذهب بالحافلة (mit dem Bus) والرحلة عشرون دقيقة.",
+        "promptAr": "كيف يذهب إلى العمل؟"
       },
       {
         "id": "t-a1-08-q3",
@@ -1466,7 +1472,8 @@
           "Eine halbe Stunde"
         ],
         "answer": "Zwanzig Minuten",
-        "explanationAr": "«Die Fahrt dauert zwanzig Minuten.» — من السابعةِ إلى الثامنةِ ساعةٌ كاملة لكن الطريقَ وحدَه عشرون."
+        "explanationAr": "«Die Fahrt dauert zwanzig Minuten.» — من السابعةِ إلى الثامنةِ ساعةٌ كاملة لكن الطريقَ وحدَه عشرون.",
+        "promptAr": "كم تستغرق الرحلة إلى العمل؟"
       },
       {
         "id": "t-a1-08-q4",
@@ -1476,7 +1483,8 @@
           "zwanzig",
           "20"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Die Fahrt dauert zwanzig Minuten»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Die Fahrt dauert zwanzig Minuten».",
+        "promptAr": "تستغرق الرحلة ___ دقيقة."
       }
     ]
   },
@@ -1499,7 +1507,8 @@
           "Kuchen und Kaffee"
         ],
         "answer": "Brot, Milch, Äpfel, Käse und Eier",
-        "explanationAr": "الدليل حرفياً: «Ich schreibe eine Liste: Brot, Milch, Äpfel, Käse und Eier.» — القائمة: خبز وحليب وتفاح وجبن وبيض."
+        "explanationAr": "الدليل حرفياً: «Ich schreibe eine Liste: Brot, Milch, Äpfel, Käse und Eier.» — القائمة: خبز وحليب وتفاح وجبن وبيض.",
+        "promptAr": "ماذا في قائمة المشتريات؟"
       },
       {
         "id": "t-a1-09-q2",
@@ -1512,7 +1521,8 @@
           "Auf Rechnung"
         ],
         "answer": "Mit Karte",
-        "explanationAr": "الدليل حرفياً: «An der Kasse bezahle ich mit Karte.» — يدفع بالبطاقة البنكية (mit Karte)."
+        "explanationAr": "الدليل حرفياً: «An der Kasse bezahle ich mit Karte.» — يدفع بالبطاقة البنكية (mit Karte).",
+        "promptAr": "كيف يدفع عند الصندوق؟"
       },
       {
         "id": "t-a1-09-q3",
@@ -1524,7 +1534,8 @@
           "Sie sucht einen Wagen"
         ],
         "answer": "Sie räumt alles in den Kühlschrank",
-        "explanationAr": "آخرُ جملةٍ: «Zu Hause räume ich alles in den Kühlschrank.» والكتابةُ والسيارةُ سبقتاه."
+        "explanationAr": "آخرُ جملةٍ: «Zu Hause räume ich alles in den Kühlschrank.» والكتابةُ والسيارةُ سبقتاه.",
+        "promptAr": "ماذا يفعل في آخر الأمر؟"
       },
       {
         "id": "t-a1-09-q4",
@@ -1533,7 +1544,8 @@
         "answer": [
           "Karte"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «An der Kasse bezahle ich mit Karte»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «An der Kasse bezahle ich mit Karte».",
+        "promptAr": "عند الصندوق أدفع ب___."
       }
     ]
   },
@@ -1884,7 +1896,8 @@
           "ein Brot"
         ],
         "answer": "einen Kaffee und ein Stück Kuchen",
-        "explanationAr": "في النصِّ حرفياً: «Er bestellt einen Kaffee und ein Stück Kuchen.»"
+        "explanationAr": "في النصِّ حرفياً: «Er bestellt einen Kaffee und ein Stück Kuchen.»",
+        "promptAr": "ماذا يطلب عمر؟"
       },
       {
         "id": "t-a1-10-q2",
@@ -1896,7 +1909,8 @@
           "einen Euro"
         ],
         "answer": "zwei Euro fünfzig",
-        "explanationAr": "الدليل حرفياً: «Der Kaffee kostet zwei Euro fünfzig, der Kuchen drei Euro.» — رقم السعر في النص حرفياً."
+        "explanationAr": "الدليل حرفياً: «Der Kaffee kostet zwei Euro fünfzig, der Kuchen drei Euro.» — رقم السعر في النص حرفياً.",
+        "promptAr": "كم تكلف القهوة؟"
       },
       {
         "id": "t-a1-10-q3",
@@ -1908,7 +1922,8 @@
           "in der Nähe vom Bahnhof"
         ],
         "answer": "in der Nähe vom Bahnhof",
-        "explanationAr": "في النصِّ حرفياً: «in der Nähe vom Bahnhof»."
+        "explanationAr": "في النصِّ حرفياً: «in der Nähe vom Bahnhof».",
+        "promptAr": "أين المقهى؟"
       },
       {
         "id": "t-a1-10-q4",
@@ -1917,7 +1932,8 @@
         "answer": [
           "kostenlos"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Das WLAN ist kostenlos»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Das WLAN ist kostenlos».",
+        "promptAr": "اللاسلكي في المقهى ___."
       }
     ]
   },
@@ -1939,7 +1955,8 @@
           "einen Kaffee"
         ],
         "answer": "Äpfel, Tomaten und Brot",
-        "explanationAr": "الدليل حرفياً: «Ich kaufe Äpfel, Tomaten und Brot.» — قائمة المشتريات ثلاثية."
+        "explanationAr": "الدليل حرفياً: «Ich kaufe Äpfel, Tomaten und Brot.» — قائمة المشتريات ثلاثية.",
+        "promptAr": "ماذا أشتري يوم السبت؟"
       },
       {
         "id": "t-a1-11-q2",
@@ -1951,7 +1968,8 @@
           "zum Bahnhof"
         ],
         "answer": "in den Stadtpark",
-        "explanationAr": "«in den Stadtpark» مع الحافلة."
+        "explanationAr": "«in den Stadtpark» مع الحافلة.",
+        "promptAr": "إلى أين أذهب يوم الأحد؟"
       },
       {
         "id": "t-a1-11-q3",
@@ -1963,7 +1981,8 @@
           "Einkäufe erledigen"
         ],
         "answer": "kochen und einen Film sehen",
-        "explanationAr": "في النصِّ حرفياً: «koche ich mit meinen Freunden und wir sehen einen Film an»."
+        "explanationAr": "في النصِّ حرفياً: «koche ich mit meinen Freunden und wir sehen einen Film an».",
+        "promptAr": "ماذا أفعل مساءً؟"
       },
       {
         "id": "t-a1-11-q4",
@@ -1972,7 +1991,8 @@
         "answer": [
           "Stadtpark"
         ],
-        "explanationAr": "«Ich fahre mit dem Bus in den Stadtpark» — in + أكوزاتيف لأنَّهُ اتّجاه."
+        "explanationAr": "«Ich fahre mit dem Bus in den Stadtpark» — in + أكوزاتيف لأنَّهُ اتّجاه.",
+        "promptAr": "يوم الأحد أذهب بالحافلة إلى ___."
       }
     ]
   },
@@ -1994,7 +2014,8 @@
           "warm"
         ],
         "answer": "kalt und nass",
-        "explanationAr": "الدليل حرفياً: «Es regnet und es ist windig. Die Temperatur ist nur acht Grad.» — مطر ورياح وثمانية درجات: بارد ومبلل."
+        "explanationAr": "الدليل حرفياً: «Es regnet und es ist windig. Die Temperatur ist nur acht Grad.» — مطر ورياح وثمانية درجات: بارد ومبلل.",
+        "promptAr": "كيف الجو اليوم؟"
       },
       {
         "id": "t-a1-12-q2",
@@ -2006,7 +2027,8 @@
           "zwei Grad"
         ],
         "answer": "sechzehn Grad",
-        "explanationAr": "في النصِّ حرفياً: «es wird sechzehn Grad warm»."
+        "explanationAr": "في النصِّ حرفياً: «es wird sechzehn Grad warm».",
+        "promptAr": "كم درجة الحرارة غداً؟"
       },
       {
         "id": "t-a1-12-q3",
@@ -2018,7 +2040,8 @@
           "einen Kuchen"
         ],
         "answer": "einen Schirm",
-        "explanationAr": "في النصِّ حرفياً: «nimm einen Schirm mit!»."
+        "explanationAr": "في النصِّ حرفياً: «nimm einen Schirm mit!».",
+        "promptAr": "ماذا يُنصح بأخذه؟"
       },
       {
         "id": "t-a1-12-q4",
@@ -2028,7 +2051,8 @@
           "acht",
           "8"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Die Temperatur ist nur acht Grad»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Die Temperatur ist nur acht Grad».",
+        "promptAr": "درجة الحرارة اليوم ___ درجات فقط."
       }
     ]
   },
@@ -2050,7 +2074,8 @@
           "ein Auto"
         ],
         "answer": "eine Wohnung",
-        "explanationAr": "في النصِّ حرفياً: «Sie ist neu in Nürnberg und sucht eine Wohnung»."
+        "explanationAr": "في النصِّ حرفياً: «Sie ist neu in Nürnberg und sucht eine Wohnung».",
+        "promptAr": "عمّا تبحث سارة؟"
       },
       {
         "id": "t-a1-13-q2",
@@ -2062,7 +2087,8 @@
           "eins"
         ],
         "answer": "zwei",
-        "explanationAr": "في النصِّ حرفياً: «Sie hat zwei Zimmer und eine Küche»."
+        "explanationAr": "في النصِّ حرفياً: «Sie hat zwei Zimmer und eine Küche».",
+        "promptAr": "كم غرفة في الشقة؟"
       },
       {
         "id": "t-a1-13-q3",
@@ -2074,7 +2100,8 @@
           "heute Abend"
         ],
         "answer": "am Samstag um zehn",
-        "explanationAr": "في النصِّ حرفياً: «Am Samstag um zehn»."
+        "explanationAr": "في النصِّ حرفياً: «Am Samstag um zehn».",
+        "promptAr": "متى يتقابلون؟"
       },
       {
         "id": "t-a1-13-q4",
@@ -2083,7 +2110,8 @@
         "answer": [
           "Küche"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Sie hat zwei Zimmer und eine Küche»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Sie hat zwei Zimmer und eine Küche».",
+        "promptAr": "في الشقة غرفتان و___."
       }
     ]
   },
@@ -2105,7 +2133,8 @@
           "hinter dem Krankenhaus"
         ],
         "answer": "neben dem Bahnhof",
-        "explanationAr": "في النصِّ حرفياً: «Die Bibliothek ist neben dem Bahnhof»."
+        "explanationAr": "في النصِّ حرفياً: «Die Bibliothek ist neben dem Bahnhof».",
+        "promptAr": "أين المكتبة؟"
       },
       {
         "id": "t-a1-14-q2",
@@ -2117,7 +2146,8 @@
           "die Bedienung ist langsam"
         ],
         "answer": "die Brezeln sind lecker",
-        "explanationAr": "في النصِّ حرفياً: «weil die Brezeln dort sehr lecker sind»."
+        "explanationAr": "في النصِّ حرفياً: «weil die Brezeln dort sehr lecker sind».",
+        "promptAr": "لماذا الصف أمام المخبز؟"
       },
       {
         "id": "t-a1-14-q3",
@@ -2129,7 +2159,8 @@
           "mit dem Auto"
         ],
         "answer": "zu Fuß",
-        "explanationAr": "في النصِّ حرفياً: «Ich gehe oft zu Fuß … ich brauche kein Auto»."
+        "explanationAr": "في النصِّ حرفياً: «Ich gehe oft zu Fuß … ich brauche kein Auto».",
+        "promptAr": "كيف يتنقل في كل مكان؟"
       },
       {
         "id": "t-a1-14-q4",
@@ -2138,7 +2169,8 @@
         "answer": [
           "Krankenhaus"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «die Post ist gegenüber vom Krankenhaus»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «die Post ist gegenüber vom Krankenhaus».",
+        "promptAr": "مكتب البريد مقابل ___."
       }
     ]
   },
@@ -2160,7 +2192,8 @@
           "jeden Tag"
         ],
         "answer": "am Dienstag und am Freitag",
-        "explanationAr": "في النصِّ حرفياً: «zweimal pro Woche, am Dienstag und am Freitag»."
+        "explanationAr": "في النصِّ حرفياً: «zweimal pro Woche, am Dienstag und am Freitag».",
+        "promptAr": "متى يتدرّب الفريق؟"
       },
       {
         "id": "t-a1-15-q2",
@@ -2172,7 +2205,8 @@
           "fünf"
         ],
         "answer": "fünf",
-        "explanationAr": "في النصِّ حرفياً: «hat fünf Spiele gewonnen»."
+        "explanationAr": "في النصِّ حرفياً: «hat fünf Spiele gewonnen».",
+        "promptAr": "كم مباراة فاز الفريق؟"
       },
       {
         "id": "t-a1-15-q3",
@@ -2184,7 +2218,8 @@
           "seit einem Monat"
         ],
         "answer": "seit drei Jahren",
-        "explanationAr": "في النصِّ حرفياً: «Ich spiele seit drei Jahren»."
+        "explanationAr": "في النصِّ حرفياً: «Ich spiele seit drei Jahren».",
+        "promptAr": "منذ متى يلعب كرة القدم؟"
       },
       {
         "id": "t-a1-15-q4",
@@ -2194,7 +2229,8 @@
           "zweimal",
           "2-mal"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Wir trainieren zweimal pro Woche»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Wir trainieren zweimal pro Woche».",
+        "promptAr": "نتدرّب ___ في الأسبوع."
       }
     ]
   },
@@ -2216,7 +2252,8 @@
           "Saras"
         ],
         "answer": "Karims",
-        "explanationAr": "في النصِّ حرفياً: «Heute ist Karims Geburtstag»."
+        "explanationAr": "في النصِّ حرفياً: «Heute ist Karims Geburtstag».",
+        "promptAr": "عيد ميلاد من اليوم؟"
       },
       {
         "id": "t-a1-16-q2",
@@ -2228,7 +2265,8 @@
           "zwei Euro"
         ],
         "answer": "fünfundzwanzig Euro",
-        "explanationAr": "في النصِّ حرفياً: «kostet alles zusammen fünfundzwanzig Euro»."
+        "explanationAr": "في النصِّ حرفياً: «kostet alles zusammen fünfundzwanzig Euro».",
+        "promptAr": "كم تكلف كل الأشياء معاً؟"
       },
       {
         "id": "t-a1-16-q3",
@@ -2240,7 +2278,8 @@
           "zu Fuß"
         ],
         "answer": "mit der U-Bahn",
-        "explanationAr": "في النصِّ حرفياً: «fahren wir mit der U-Bahn zu ihm»."
+        "explanationAr": "في النصِّ حرفياً: «fahren wir mit der U-Bahn zu ihm».",
+        "promptAr": "كيف يتنقلون مساءً؟"
       },
       {
         "id": "t-a1-16-q4",
@@ -2250,7 +2289,8 @@
           "fünfundzwanzig",
           "25"
         ],
-        "explanationAr": "«fünfundzwanzig Euro» — والرقمُ يُنطَقُ من الآحادِ ثمَّ العشرات."
+        "explanationAr": "«fünfundzwanzig Euro» — والرقمُ يُنطَقُ من الآحادِ ثمَّ العشرات.",
+        "promptAr": "في المتوسط يكلف كل شيء معاً ___ يورو."
       }
     ]
   },
@@ -2272,7 +2312,8 @@
           "die Polizei"
         ],
         "answer": "sein Onkel",
-        "explanationAr": "في النصِّ حرفياً: «hat mich mein Onkel abgeholt»."
+        "explanationAr": "في النصِّ حرفياً: «hat mich mein Onkel abgeholt».",
+        "promptAr": "من استقبله في المطار؟"
       },
       {
         "id": "t-a1-17-q2",
@@ -2284,7 +2325,8 @@
           "gestern"
         ],
         "answer": "im September",
-        "explanationAr": "في النصِّ حرفياً: «war im September»."
+        "explanationAr": "في النصِّ حرفياً: «war im September».",
+        "promptAr": "متى كان يومه الأول هناك؟"
       },
       {
         "id": "t-a1-17-q3",
@@ -2296,7 +2338,8 @@
           "glücklich"
         ],
         "answer": "müde und aufgeregt",
-        "explanationAr": "في النصِّ حرفياً: «Ich war müde und aufgeregt»."
+        "explanationAr": "في النصِّ حرفياً: «Ich war müde und aufgeregt».",
+        "promptAr": "كيف شعر؟"
       },
       {
         "id": "t-a1-17-q4",
@@ -2305,7 +2348,8 @@
         "answer": [
           "Onkel"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «hat mich mein Onkel abgeholt»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «hat mich mein Onkel abgeholt».",
+        "promptAr": "في المطار استقبلني ___."
       }
     ]
   },
@@ -2327,7 +2371,8 @@
           "seit dem Umzug"
         ],
         "answer": "seit der Schulzeit",
-        "explanationAr": "في النصِّ حرفياً: «Wir kennen uns seit der Schulzeit in Sfax»."
+        "explanationAr": "في النصِّ حرفياً: «Wir kennen uns seit der Schulzeit in Sfax».",
+        "promptAr": "منذ متى يعرفان بعضهما؟"
       },
       {
         "id": "t-a1-18-q2",
@@ -2339,7 +2384,8 @@
           "Kellner"
         ],
         "answer": "Ingenieur",
-        "explanationAr": "في النصِّ حرفياً: «Er ist Ingenieur und arbeitet in einer großen Fabrik»."
+        "explanationAr": "في النصِّ حرفياً: «Er ist Ingenieur und arbeitet in einer großen Fabrik».",
+        "promptAr": "ماذا يعمل كريم مهنياً؟"
       },
       {
         "id": "t-a1-18-q3",
@@ -2351,7 +2397,8 @@
           "nach Tunis"
         ],
         "answer": "an die Ostsee",
-        "explanationAr": "في النصِّ حرفياً: «Urlaub an der Ostsee»."
+        "explanationAr": "في النصِّ حرفياً: «Urlaub an der Ostsee».",
+        "promptAr": "إلى أين يسافران الصيف القادم؟"
       },
       {
         "id": "t-a1-18-q4",
@@ -2360,7 +2407,8 @@
         "answer": [
           "B2"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Am Abend lernt er Deutsch für die B2-Prüfung»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Am Abend lernt er Deutsch für die B2-Prüfung».",
+        "promptAr": "يتعلّم كريم الألمانية لامتحان ___."
       }
     ]
   },
@@ -3812,7 +3860,8 @@
           "Er schläft"
         ],
         "answer": "Er besucht seinen Freund",
-        "explanationAr": "في النصِّ حرفياً: «Am Nachmittag besuche ich meinen Freund Karim.»"
+        "explanationAr": "في النصِّ حرفياً: «Am Nachmittag besuche ich meinen Freund Karim.»",
+        "promptAr": "ماذا يفعل بعد ظهر السبت؟"
       },
       {
         "id": "t-a1-19-q2",
@@ -3822,7 +3871,8 @@
           "zwei",
           "2"
         ],
-        "explanationAr": "في النصّ: «Am Sonntag lerne ich zwei Stunden Deutsch»."
+        "explanationAr": "في النصّ: «Am Sonntag lerne ich zwei Stunden Deutsch».",
+        "promptAr": "كم ساعة يتعلّم الألمانية يوم الأحد؟"
       },
       {
         "id": "t-a1-19-q3",
@@ -3834,7 +3884,8 @@
           "zu Hause"
         ],
         "answer": "im Park",
-        "explanationAr": "«Wir spielen Fußball im Park.» — im Park حالةُ داتيف لأنَّ السؤالَ «أين»."
+        "explanationAr": "«Wir spielen Fußball im Park.» — im Park حالةُ داتيف لأنَّ السؤالَ «أين».",
+        "promptAr": "أين يلعبون كرة القدم؟"
       },
       {
         "id": "t-a1-19-q4",
@@ -3843,7 +3894,8 @@
         "answer": [
           "Karim"
         ],
-        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Am Nachmittag besuche ich meinen Freund Karim»."
+        "explanationAr": "الجوابُ منقولٌ حرفياً من النصّ: «Am Nachmittag besuche ich meinen Freund Karim».",
+        "promptAr": "بعد الظهر أزور صديقي ___."
       }
     ]
   },
@@ -3865,7 +3917,8 @@
           "einen Unfall"
         ],
         "answer": "eine Erkältung",
-        "explanationAr": "في النصِّ حرفياً: «Sie haben eine Erkältung.»"
+        "explanationAr": "في النصِّ حرفياً: «Sie haben eine Erkältung.»",
+        "promptAr": "بماذا يشكو؟"
       },
       {
         "id": "t-a1-20-q2",
@@ -3875,7 +3928,8 @@
           "Versichertenkarte",
           "die Versichertenkarte"
         ],
-        "explanationAr": "الدليل حرفياً: «An der Rezeption zeige ich meine Versichertenkarte.» — بطاقةُ التأمينِ الصحّيِّ تُطلَبُ في كلِّ عيادةٍ ألمانية."
+        "explanationAr": "الدليل حرفياً: «An der Rezeption zeige ich meine Versichertenkarte.» — بطاقةُ التأمينِ الصحّيِّ تُطلَبُ في كلِّ عيادةٍ ألمانية.",
+        "promptAr": "يُظهر في الاستقبال ___ الخاصة به."
       },
       {
         "id": "t-a1-20-q3",
@@ -3887,7 +3941,8 @@
           "acht Minuten"
         ],
         "answer": "zwanzig Minuten",
-        "explanationAr": "في النصِّ حرفياً: «Ich warte zwanzig Minuten.»"
+        "explanationAr": "في النصِّ حرفياً: «Ich warte zwanzig Minuten.»",
+        "promptAr": "كم ينتظر؟"
       },
       {
         "id": "t-a1-20-q4",
@@ -3896,7 +3951,8 @@
         "answer": [
           "Rezept"
         ],
-        "explanationAr": "«Er schreibt ein Rezept» — الوصفةُ الطبية."
+        "explanationAr": "«Er schreibt ein Rezept» — الوصفةُ الطبية.",
+        "promptAr": "يكتب الطبيب ___."
       }
     ]
   },
