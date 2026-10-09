@@ -894,7 +894,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(3),
         kind: "aussprache",
         titleDe: "Aussprache & Shadowing",
-        titleAr: "نطظ وترديد (فترة الصمت)",
+        titleAr: "نُطق وترديد (فترة الصمت)",
         minutes: 15,
         sentenceIds: pickN(satzOfLevel, 4, rand).map((s) => s.id),
       });
