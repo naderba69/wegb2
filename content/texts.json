@@ -6659,5 +6659,155 @@
         "explanationAr": "الضمير في أول جملة هو ich: «Ich bin hier.»"
       }
     ]
+  },
+  {
+    "id": "t-a1-021",
+    "level": "A1",
+    "titleDe": "Meine Familie",
+    "titleAr": "Meine Familie",
+    "de": "Ich heiße Karim und bin 28 Jahre alt. Ich wohne in Köln mit meiner Frau Amina und unserer Tochter Sara, die drei Jahre alt ist. Mein Vater wohnt in Tunesien, aber er besucht uns jedes Jahr im Sommer. Am Freitag essen wir zusammen Couscous und trinken Minztee. Ich liebe meine Familie sehr.",
+    "ar": "اسمي كريم وعمري 28 سنة. أسكن في كولونيا مع زوجتي أمينة وابنتنا سارة التي تبلغ من العمر ثلاث سنوات. والدي يسكن في تونس لكنه يزورنا كل صيف. يوم الجمعة نأكل معاً الكسكس ونشرب الشاي بالنعناع. أحب عائلتي جداً.",
+    "wordCountDe": 52,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-022",
+    "level": "A1",
+    "titleDe": "Mein Morgen",
+    "titleAr": "Mein Morgen",
+    "de": "Ich stehe jeden Tag um halb sieben auf. Zuerst trinke ich einen Kaffee, dann dusche ich und ziehe mich an. Um acht Uhr frühstücke ich mit meiner Frau: Brot mit Käse und ein Ei. Um halb neun gehe ich zur Arbeit. Mein Morgen ist immer ein bisschen stressig, aber ich mag meine Routine.",
+    "ar": "أستيقظ كل يوم في السادسة والنصف. أولاً أشرب قهوة، ثم أستحم وأرتدي ملابسي. في الثامنة أفطر مع زوجتي: خبزاً بالجبن وبيضة. في الثامنة والنصف أذهب إلى العمل. صباحي مُجهد قليلاً لكنني أحب روتيني.",
+    "wordCountDe": 53,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-023",
+    "level": "A1",
+    "titleDe": "Meine Wohnung",
+    "titleAr": "Meine Wohnung",
+    "de": "Meine Wohnung ist nicht groß, aber sehr hell. Sie hat zwei Zimmer, eine Küche, ein Bad und einen kleinen Balkon. Im Wohnzimmer stehen ein Sofa, ein Tisch und ein Fernseher. In der Küche koche ich jeden Abend. Die Miete ist sechshundert Euro warm. Ich bin sehr zufrieden mit meiner Wohnung.",
+    "ar": "شقتي ليست كبيرة لكنها مشرقة جداً. فيها غرفتان ومطبخ وحمّام وشرفة صغيرة. في غرفة المعيشة أريكة وطاولة وتلفاز. في المطبخ أطبخ كل مساء. الإيجار ستمائة يورو شامل التدفئة. أنا سعيد جداً بشقتي.",
+    "wordCountDe": 50,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-024",
+    "level": "A1",
+    "titleDe": "In der Stadt",
+    "titleAr": "In der Stadt",
+    "de": "Ich wohne in Leipzig, einer Stadt im Osten von Deutschland. In der Stadt gibt es viele Parks, Cafés und Geschäfte. Am Wochenende gehe ich gern in die Innenstadt und trinke einen Kaffee mit Freunden. Die Straßenbahn fährt direkt vor meiner Haustür, das ist sehr praktisch.",
+    "ar": "أسكن في لايبزيغ، مدينة في شرق ألمانيا. في المدينة حدائق كثيرة ومقاهٍ ومحلات. في عطلة نهاية الأسبوع أذهب إلى وسط المدينة وأشرب القهوة مع الأصدقاء. الترام يمر مباشرة أمام بيتي، وهذا مريح جداً.",
+    "wordCountDe": 45,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-025",
+    "level": "A1",
+    "titleDe": "Im Supermarkt",
+    "titleAr": "Im Supermarkt",
+    "de": "Heute gehe ich zum Supermarkt. Ich brauche Milch, Brot, Eier, Äpfel und Käse. Der Supermarkt ist groß und hat viele Produkte. Zuerst suche ich die Milch, dann hole ich Brot und Eier. An der Kasse bezahle ich mit Karte. Alles kostet zusammen zwölf Euro.",
+    "ar": "اليوم أذهب إلى السوبرماركت. أحتاج حليباً وخبزاً وبيضاً وتفاحاً وجبناً. السوبرماركت كبير وبه منتجات كثيرة. أولاً أبحث عن الحليب، ثم آخذ الخبز والبيض. عند الكاش أدفع بالبطاقة. كل شيء يكلف اثني عشر يورو.",
+    "wordCountDe": 44,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-026",
+    "level": "A1",
+    "titleDe": "Das Wetter heute",
+    "titleAr": "Das Wetter heute",
+    "de": "Heute ist das Wetter sehr schön. Die Sonne scheint und der Himmel ist blau. Es ist nicht zu kalt und nicht zu heiß, etwa zwanzig Grad. Am Nachmittag gehe ich spazieren und höre Musik. Am Abend koche ich zu Hause. So ein Tag gefällt mir sehr.",
+    "ar": "الطقس اليوم جميل جداً. الشمس مشرقة والسماء زرقاء. الجو ليس بارداً ولا حاراً، حوالي عشرين درجة. بعد الظهر أتمشى وأستمع للموسيقى. في المساء أطبخ في البيت. يعجبني يوم مثل هذا.",
+    "wordCountDe": 46,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-027",
+    "level": "A1",
+    "titleDe": "Mein Hobby",
+    "titleAr": "Mein Hobby",
+    "de": "Mein Hobby ist Fußball. Jeden Freitagabend spiele ich mit meinen Kollegen. Wir spielen in einer Halle in der Nähe meiner Wohnung. Nach dem Spiel trinken wir zusammen ein Bier. Fußball macht Spaß und hält mich fit. Ich bin nicht sehr gut, aber ich spiele gern.",
+    "ar": "هوايتي كرة القدم. كل مساء جمعة ألعب مع زملائي. نلعب في قاعة قريبة من شقتي. بعد المباراة نشرب معاً جعة واحدة. كرة القدم ممتعة وتبقيني لائقاً بدنياً. أنا لست ماهراً جداً لكنني ألعب بحب.",
+    "wordCountDe": 45,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-028",
+    "level": "A1",
+    "titleDe": "Mein Beruf",
+    "titleAr": "Mein Beruf",
+    "de": "Ich arbeite als Ingenieur in einer kleinen Firma in der Stadt. Die Firma macht Maschinen für Autos. Jeden Tag stehe ich um halb sieben auf und fahre mit dem Bus zur Arbeit. Meine Kollegen sind sehr nett. Das Arbeitspensum ist manchmal hoch, aber ich mag meinen Beruf.",
+    "ar": "أعمل مهندساً في شركة صغيرة في المدينة. الشركة تصنع آلات للسيارات. كل يوم أستيقظ في السادسة والنصف وأذهب بالحافلة إلى العمل. زملائي لطفاء جداً. ضغط العمل أحياناً كبير لكنني أحب مهنتي.",
+    "wordCountDe": 47,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-029",
+    "level": "A1",
+    "titleDe": "Meine Kleidung",
+    "titleAr": "Meine Kleidung",
+    "de": "Heute trage ich eine blaue Jeans, ein weißes T-Shirt und schwarze Schuhe. Im Winter ziehe ich eine warme Jacke an, manchmal auch einen Schal und Handschuhe. Im Sommer trage ich kurze Hosen und T-Shirts. Ich kaufe meine Kleidung meistens in der Stadt.",
+    "ar": "ألبس اليوم جينزاً أزرق وقميصاً أبيض وحذاءً أسود. في الشتاء أرتدي سترة دافئة وأحياناً وشاحاً وقفازات. في الصيف ألبس بنطالاً قصيراً وقمصاناً قصيرة الأكمام. أشتري ملابسي غالباً من وسط المدينة.",
+    "wordCountDe": 42,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-030",
+    "level": "A1",
+    "titleDe": "Beim Arzt",
+    "titleAr": "Beim Arzt",
+    "de": "Heute bin ich beim Arzt, weil ich seit zwei Tagen Kopfschmerzen habe. Die Ärztin fragt: »Was tut weh?« Ich antworte: »Mein Kopf tut weh und ich habe ein bisschen Fieber.« Sie untersucht mich und sagt: »Das ist eine Erkältung. Trinken Sie viel Wasser und ruhen Sie sich aus.« Ich nehme Tabletten und trinke Tee.",
+    "ar": "اليوم أنا عند الطبيب لأنني أعاني من الصداع منذ يومين. الطبيبة تسأل: «ماذا يؤلمك؟» أجيب: «رأسي يؤلمني وعندي حمى بسيطة». تفحصني وتقول: «هذا زكام. اشرب ماءً كثيراً واسترح». أتناول الحبوب وأشرب الشاي.",
+    "wordCountDe": 54,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-031",
+    "level": "A1",
+    "titleDe": "Mein Haustier",
+    "titleAr": "Mein Haustier",
+    "de": "Ich habe eine kleine Katze. Sie heißt Mimi und ist zwei Jahre alt. Sie ist schwarz-weiß und sehr süß. Jeden Morgen gibt ich ihr Futter und frisches Wasser. Am Abend spielt sie gern mit einem roten Ball. Wenn ich nach Hause komme, wartet sie schon vor der Tür.",
+    "ar": "عندي قطة صغيرة. اسمها ميمي وعمرها سنتان. هي سوداء بيضاء ولطيفة جداً. كل صباح أعطيها طعاماً وماء عذباً. في المساء تحب اللعب بكرة حمراء. عندما أعود إلى البيت، تكون بانتظاري أمام الباب.",
+    "wordCountDe": 48,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-032",
+    "level": "A1",
+    "titleDe": "Am Wochenende",
+    "titleAr": "Am Wochenende",
+    "de": "Am Wochenende schlafe ich länger als in der Woche. Am Samstag putze ich die Wohnung und kaufe ein. Am Sonntag treffe ich meine Freunde oder besuche meine Familie. Manchmal schaue ich einen Film zu Hause. Am Sonntagabend koche ich etwas Leckeres und bereite mich auf die neue Woche vor.",
+    "ar": "في عطلة نهاية الأسبوع أنام أطول من أيام الأسبوع. يوم السبت أنظف الشقة وأتسوق. يوم الأحد أقابل أصدقائي أو أزور عائلتي. أحياناً أشاهد فيلماً في البيت. مساء الأحد أطبخ شيئاً لذيذاً وأستعد للأسبوع الجديد.",
+    "wordCountDe": 49,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-033",
+    "level": "A1",
+    "titleDe": "Essen und Trinken",
+    "titleAr": "Essen und Trinken",
+    "de": "Zum Frühstück esse ich gern Brot mit Marmelade und trinke Kaffee. Zum Mittagessen gehe ich in die Kantine: es gibt Fleisch mit Kartoffeln und Gemüse. Zum Abendessen koche ich zu Hause: Nudeln mit Tomatensauce oder Reis mit Gemüse. Ich trinke viel Wasser und manchmal Apfelsaft.",
+    "ar": "في الفطور أحب الخبز بالمربى وأشرب القهوة. في الغداء أذهب إلى الكافتيريا: هناك لحم مع البطاطس والخضار. في العشاء أطبخ في البيت: معكرونة بصلصة الطماطم أو رز بالخضار. أشرب ماء كثيراً وأحياناً عصير تفاح.",
+    "wordCountDe": 45,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-034",
+    "level": "A1",
+    "titleDe": "Weg zum Bahnhof",
+    "titleAr": "Weg zum Bahnhof",
+    "de": "Entschuldigung, wo ist der Bahnhof? – Gehen Sie geradeaus bis zur Ampel, dann biegen Sie links ab. Nach zweihundert Metern sehen Sie den Bahnhof auf der rechten Seite. Gehen Sie zu Fuß fünf Minuten, oder nehmen Sie die Buslinie drei. – Vielen Dank! – Bitte schön.",
+    "ar": "عفواً، أين محطة القطار؟ – اذهب مباشرة حتى الإشارة الضوئية، ثم انعطف يساراً. بعد مئتي متر ترى المحطة على اليمين. امشِ خمس دقائق، أو استقل الحافلة رقم ثلاثة. – شكراً جزيلاً! – عفواً.",
+    "wordCountDe": 46,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+  },
+  {
+    "id": "t-a1-035",
+    "level": "A1",
+    "titleDe": "Geburtstag",
+    "titleAr": "Geburtstag",
+    "de": "Heute habe ich Geburtstag und bin dreißig Jahre alt. Meine Freunde kommen zu mir und bringen Geschenke: ein Buch, eine Flasche Wein und eine Karte. Meine Frau hat einen Kuchen gemacht. Wir essen zusammen Kuchen und trinken Kaffee. Es ist ein schöner Tag und ich bin sehr glücklich.",
+    "ar": "اليوم عيد ميلادي وأنا في الثلاثين. أصدقائي يأتون إليّ ويجلبون الهدايا: كتاباً، قنينة خمر، وبطاقة. زوجتي صنعت كعكة. نأكل معاً الكعكة ونشرب القهوة. إنه يوم جميل وأنا سعيد جداً.",
+    "wordCountDe": 48,
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
   }
 ]
