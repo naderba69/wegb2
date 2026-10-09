@@ -6151,7 +6151,8 @@
           "fünfzig"
         ],
         "answer": "dreißig",
-        "explanationAr": "«Ich bin dreißig Jahre alt.» — عمري ثلاثون سنة."
+        "explanationAr": "«Ich bin dreißig Jahre alt.» — عمري ثلاثون سنة.",
+        "promptAr": "كم عمر الشخص في النص؟"
       }
     ]
   },
@@ -6202,7 +6203,8 @@
           "Sonntag"
         ],
         "answer": "Montag",
-        "explanationAr": "«Heute ist Montag.» — اليوم اثنين (Montag)."
+        "explanationAr": "«Heute ist Montag.» — اليوم اثنين (Montag).",
+        "promptAr": "ما يوم اليوم في النص؟"
       }
     ]
   },

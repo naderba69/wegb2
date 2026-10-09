@@ -9706,6 +9706,8 @@ void 0;
   const reviewB209 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-09-2026-10-08.json", "utf8")) as any;
   const reviewB210 = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-08.json", "utf8")) as any;
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
+  const reviewA0T1 = JSON.parse(readFileSync("docs/content-review-a0-texts-01-2026-10-09.json", "utf8")) as any;
+  const reviewA0T1Md = readFileSync("docs/content-review-a0-texts-01-2026-10-09.md", "utf8");
   const reviewFixW5Md = readFileSync("docs/content-review-fix-w5-2026-10-09.md", "utf8");
   const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
   const reviewA001Md = readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.md", "utf8");
@@ -9942,6 +9944,38 @@ void 0;
     "K208i W5 مغلق رسمياً بموجب R134 وبقية W1–W4/W6 ما زالت مفتوحة");
   ok(db202.questions[0].answer && db202.lines.length>0 && db202.dictation.length>0,
     "K208j بقية الأسطر/المفتاح/الإملاءات مقفلة وبلا تغيير");
+/* ═══ K209 — أول دفعة نصوص A0 t-a0-01..05 (R135). ═══ */
+{
+  const reviewA0T1 = JSON.parse(readFileSync("docs/content-review-a0-texts-01-2026-10-09.json", "utf8")) as any;
+  const patchA0T1Src = readFileSync("scripts/patches/review_a0_texts_01.py", "utf8");
+  const reviewA0T1Md = readFileSync("docs/content-review-a0-texts-01-2026-10-09.md", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json","utf8")) as any[];
+  const a0t = textsArr.filter((t:any)=>t.id && t.id.startsWith("t-a0-") && ["t-a0-01","t-a0-02","t-a0-03","t-a0-04","t-a0-05"].includes(t.id));
+  ok(reviewA0T1.reviewRule === "R135" && a0t.length === 5 && reviewA0T1.totals.texts === 5,
+    "K209a خمسة نصوص A0 موثقة في التقرير");
+  const emptyAr = a0t.flatMap((t:any)=>t.questions).filter((q:any)=>!q.promptAr || !q.promptAr.trim()).length;
+  ok(emptyAr === 0, `K209b لا حقول promptAr فارغة في نصوص A0 (فعلياً ${emptyAr})`);
+  ok(reviewA0T1.corrections.length === 2 && reviewA0T1.judgement.corrected === 2 && reviewA0T1.judgement.unresolved === 0,
+    "K209c تصحيحان مؤكَّدان بلا غير محسوم");
+  const t03 = a0t.find((t:any)=>t.id==="t-a0-03");
+  const t04 = a0t.find((t:any)=>t.id==="t-a0-04");
+  ok(t03.questions[2].promptAr === "كم عمر الشخص في النص؟" && t04.questions[2].promptAr === "ما يوم اليوم في النص؟",
+    "K209d استكمال حقلي promptAr الفارغَين بالصيغة الصحيحة");
+  ok(reviewA0T1.contextNotes["t-a0-01"]?.length>=3 && reviewA0T1.contextNotes["t-a0-03"]?.length>=2 && reviewA0T1.contextNotes["t-a0-05"]?.length>=2,
+    "K209e ملاحظات سياقية لكل نص");
+  ok(patchA0T1Src.includes("<R135> patch complete") && patchA0T1Src.includes("locked titles:"),
+    "K209f الرقعة تطبّق التصحيحين وتطبع سطر النهاية");
+  ok(reviewA0T1Md.includes("## الحكم") && reviewA0T1Md.includes("## التصحيحات") && reviewA0T1Md.includes("K209"),
+    "K209g التقرير العربي بصيغه الصحيحة ويذكر K209");
+  ok(reviewA0T1.limits.human && reviewA0T1.audio.note.includes("لا استماع"),
+    "K209h الحدود معلَنة والصوت بلا استماع");
+  ok(Array.isArray(reviewA0T1.contentChecks) && reviewA0T1.contentChecks.length >= 4,
+    "K209i فحوص محتوى لا تقل عن أربعة");
+  ok(a0t.every((t:any)=>t.de && t.ar && t.titleDe && t.titleAr && Array.isArray(t.questions) && t.questions.length>=3),
+    "K209j كل نص A0 له عنوان ونص ألماني/عربي وأسئلة، وجميع الحقول مقفلة");
+}
+
+
 }
 
 
