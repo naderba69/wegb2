@@ -867,25 +867,40 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       });
     }
   } else if (type === "festigung") {
+    // R138/P-17: يوم مراجعة خفيف كل 4 أسابيع — مدة مخفّضة ومراجعة ذهنية + كبسولة فقط (no quiz/writing pressure)
+    const lightReview = wocheInPhase > 0 && wocheInPhase % 4 === 0;
     tasks.push({
       id: tid(1),
       kind: "wiederholen",
-      titleDe: "Wochen-Wiederholung",
-      titleAr: "مراجعة الأسبوع كاملاً (كبسولة متباعدة)",
-      minutes: 30,
+      titleDe: lightReview ? "Leichte Wiederholung" : "Wochen-Wiederholung",
+      titleAr: lightReview ? "مراجعة خفيفة (خريطة ذهنية)" : "مراجعة الأسبوع كاملاً (كبسولة متباعدة)",
+      minutes: lightReview ? 15 : 30,
       sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة 1/7/30
-      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 5, progress, "wdfest")],
+      quiz: [...kapselQuiz(day), ...(lightReview ? [] : buildQuiz(day - 2, phase, 5, progress, "wdfest"))],
     });
-    tasks.push({
-      id: tid(2),
-      kind: "schreiben",
-      titleDe: "Langer Text",
-      titleAr: level === "A0" || level === "A1"
-        ? "كتابة جمل بسيطة (تعبير موجّه)"
-        : "كتابة نصّ كامل (المعيار: معايير التقييم)",
-      minutes: level === "A0" ? 15 : 40,
-      writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
-    });
+    if (lightReview) {
+      // في اليوم الخفيف: خريطة ذهنية للمفردات بدل الكتابة
+      tasks.push({
+        id: tid(2),
+        kind: "wortschatz",
+        titleDe: "Wortschatz-Mindmap",
+        titleAr: "خريطة ذهنية للمفردات (دون كتابة)",
+        minutes: 10,
+        deckId: phaseDeckA,
+        sentenceIds: [],
+      });
+    } else {
+      tasks.push({
+        id: tid(2),
+        kind: "schreiben",
+        titleDe: "Langer Text",
+        titleAr: level === "A0" || level === "A1"
+          ? "كتابة جمل بسيطة (تعبير موجّه)"
+          : "كتابة نصّ كامل (المعيار: معايير التقييم)",
+        minutes: level === "A0" ? 15 : 40,
+        writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+      });
+    }
     // K-SilentPeriod: لا تحدّث حر قبل أواخر A2
     if (level === "B1" || level === "B2" || day >= PHASEN.A2.bis - 7) {
       tasks.push({
