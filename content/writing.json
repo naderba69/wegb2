@@ -17,7 +17,8 @@
       "في A0 نكتفي بكتابة الحروف وكلمة واحدة: لا جُمَل مركَّبة ولا تصريف.",
       "ß يُنطق صوت /s/ مهموساً؛ و«s الحادّة» اسمٌ آخر للحرف، ولا يعني تضعيف الصوت.",
       "إذا تعذّر إدخال ä/ö/ü/ß، أو سمحت المهمة، فقد تُقبل ae/oe/ue/ss. ورقة حلول Goethe-Test PRO تقبل هذه البدائل في نوع إدخال محدد؛ لا نعمّم ذلك على كل اختبار، واتبع تعليماته."
-    ]
+    ],
+    "zielWort": 20
   },
   {
     "id": "w-a0-02",
@@ -25,7 +26,7 @@
     "titleDe": "Hallo! Ich heiße …",
     "titleAr": "مرحباً! اسمي …",
     "taskDe": "Schreibe 3 einfache Sätze über dich: Name, Herkunft, Sprache.",
-    "taskAr": "اكتب 3 جمل بسيطة عن نفسك: الاسم، البلد، اللغة.",
+    "taskAr": "اكتب 3 جمل بسيطة عن نفسك: الاسم، البلد، اللغة. (الهدف: 23 كلمة تقريباً).",
     "criteria": [
       "جملة اسمك (ich heiße …)",
       "جملة بلدك (ich komme aus …)",
@@ -36,7 +37,8 @@
       "في A0 الجمل بسيطة جداً: فاعل + فعل + مكمّل، بلا روابط.",
       "«aus Tunesien» بلا أداة.",
       "«ein bisschen Deutsch» = قليل من الألمانية — عبارة تحية متوقعة في اليوم الأول."
-    ]
+    ],
+    "zielWort": 23
   },
   {
     "id": "w-a1-01",
@@ -44,7 +46,7 @@
     "titleDe": "Stell dich vor!",
     "titleAr": "قدّم نفسك",
     "taskDe": "Schreibe 4–5 Sätze über dich: Name, Alter, Land, Stadt, Beruf/Schule, Sprachen.",
-    "taskAr": "اكتب 4–5 جمل عن نفسك: الاسم، العمر، البلد، المدينة، المهنة/الدراسة، اللغات.",
+    "taskAr": "اكتب 4–5 جمل عن نفسك: الاسم، العمر، البلد، المدينة، المهنة/الدراسة، اللغات. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "الفعل في الموضع الثاني (ich heiße, ich komme, ich wohne)",
       "sein و haben مصرّفَين بشكل صحيح",
@@ -56,7 +58,8 @@
       "الفعل الثاني محروس في كل جملة: heiße / bin / komme…wohne / bin…arbeite / spreche / lerne — ست فقرات، ست إجابات عن الامتحان نفسه",
       "«aus Tunesien» بلا أداة: قاعدةُ الأصل معلَّمةٌ بالمثال لا بالوعظ",
       "الجملة الختامية بسببٍ (weil) ترفع النصَّ من قائمةٍ إلى فقرة — حيلةٌ تصلح لغير الألفيين أيضًا"
-    ]
+    ],
+    "zielWort": 30
   },
   {
     "id": "w-a1-02",
@@ -64,7 +67,7 @@
     "titleDe": "Formular ausfüllen",
     "titleAr": "املأ استمارة",
     "taskDe": "Schreibe deine Personalien als Formular: Vorname, Familienname, Alter, Geburtsdatum, Land, Adresse, Telefonnummer.",
-    "taskAr": "اكتب بياناتك الشخصية كاستمارة: الاسم، اسم العائلة، العمر، تاريخ الميلاد، البلد، العنوان، الهاتف.",
+    "taskAr": "اكتب بياناتك الشخصية كاستمارة: الاسم، اسم العائلة، العمر، تاريخ الميلاد، البلد، العنوان، الهاتف. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "الأرقام مكتوبة بالألمانية",
       "تاريخ الميلاد بصيغة: der 3. Mai 1998",
@@ -75,7 +78,8 @@
       "التاريخ بصيغة «der 3. Mai 1998» حرفياً كما تطلب المعايير — صيغةٌ يخطئ فيها حتى B1",
       "الأرقام مفصولة (0 71 234 567) كما في النماذج الرسمية لا متلاصقة",
       "كل حقلٍ عنوانٌ ونقطةٌ وقيمة — لا جُمل: التنسيقُ نصفُ المهمة"
-    ]
+    ],
+    "zielWort": 30
   },
   {
     "id": "w-a1-03",
@@ -83,7 +87,7 @@
     "titleDe": "Meine Familie",
     "titleAr": "عائلتي",
     "taskDe": "Schreibe 5 Sätze über deine Familie (Vater, Mutter, Geschwister) mit Possessivartikeln.",
-    "taskAr": "اكتب 5 جمل عن عائلتك (أب، أم، إخوة) مع أدلة الملكية.",
+    "taskAr": "اكتب 5 جمل عن عائلتك (أب، أم، إخوة) مع أدلة الملكية. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "mein/dein/sein… مع الجنس الصحيح",
       "الفعل ثانياً: Mein Vater heißt…",
@@ -94,7 +98,8 @@
       "ملكيةٌ صحيحة الجنس مع كل موصوف: Mein Vater / Meine Mutter — العمود الذي تُبنى عليه الألفية الثانية",
       "الفعل ثانياً حتى في جملة UND: heißt…und ist Lehrer — صيغةٌ واحدة وأمانٌ كامل",
       "خاتمةُ الجمعة تُدفّئ القائمة الجافة — معيارُ «جملة عن سكن/عمل» مُنجَزٌ ومربوطٌ بعاطفة"
-    ]
+    ],
+    "zielWort": 30
   },
   {
     "id": "w-a1-04",
@@ -102,7 +107,7 @@
     "titleDe": "Mein Tagesablauf",
     "titleAr": "جدولي اليومي",
     "taskDe": "Schreibe 6 Sätze über deinen Tag: Aufstehen, Arbeit, Mittag, Abend, Schlafen. Nutze trennbare Verben!",
-    "taskAr": "اكتب 6 جمل عن يومك: الاستيقاظ، العمل، الظهيرة، المساء، النوم. استعمل الأفعال المنفصلة!",
+    "taskAr": "اكتب 6 جمل عن يومك: الاستيقاظ، العمل، الظهيرة، المساء، النوم. استعمل الأفعال المنفصلة! (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "3 أفعال منفصلة على الأقل (aufstehen, einkaufen, anrufen…)",
       "ظروف الزمن: morgens, dann, abends",
@@ -113,7 +118,8 @@
       "ثلاثة أفعالٍ منفصلة في مكانها الصحيح: stehe…auf / kaufe…ein — البادئة تُرمى للمؤخرة كما تُلْمَز",
       "مؤشرات الزمن تُفتَتَح بها الجمل (Dann / Am Mittag / Abends) والقلبُ بعدها مباشرة — inversionٌ مُبَكِّرٌ مضمون",
       "ست جمل لا أكثر: الوفاءُ بالعدد فضيلةُ A1 الأولى"
-    ]
+    ],
+    "zielWort": 30
   },
   {
     "id": "w-a1-05",
@@ -121,7 +127,7 @@
     "titleDe": "Eine kurze Nachricht",
     "titleAr": "رسالة قصيرة",
     "taskDe": "Schreibe eine kurze Nachricht an einen Freund: Termin am Freitag, Uhrzeit, Ort.",
-    "taskAr": "اكتب رسالة قصيرة لصديق: موعد يوم الجمعة، الساعة، المكان.",
+    "taskAr": "اكتب رسالة قصيرة لصديق: موعد يوم الجمعة، الساعة، المكان. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "تحية وختام مناسبان (Hallo … Tschüss)",
       "الوقت والمكان بدقة",
@@ -132,7 +138,8 @@
       "رسالة كاملة بأربع جمل: تحية، سؤالُ لقاءٍ بـ wir, معلومتا وقتٍ ومكان، خاتمة — كل معيارٍ في سطره",
       "«um achtzehn Uhr» منطوقةً بالألفاظ لا بالأرقام — كما في كتاب A1: الالتزامُ بالسياق مقدَّمٌ على الأناقة",
       "جملة الدعوة صريحة (Möchtest du…?) لا تلويحاً — في A1 تُكافأ الصراحة"
-    ]
+    ],
+    "zielWort": 30
   },
   {
     "id": "w-a2-01",
@@ -140,7 +147,7 @@
     "titleDe": "Mein gestriger Tag",
     "titleAr": "يومي أمس",
     "taskDe": "Schreibe 6 Sätze über gestern – benutze mindestens 5× Perfekt (3× haben, 2× sein).",
-    "taskAr": "اكتب 6 جمل عن أمس — استعمل الماضي التام 5 مرات على الأقل (3 مع haben و2 مع sein).",
+    "taskAr": "اكتب 6 جمل عن أمس — استعمل الماضي التام 5 مرات على الأقل (3 مع haben و2 مع sein). (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "hat/ist في الموضع الثاني والتصريف الثالث للنهاية",
       "تباين صحيح بين haben و sein",
@@ -152,7 +159,8 @@
       "ست جمل، خمسة Perfekt، وتناوبُ haben/sein مُطبَقٌ بلا شذوذ: bin…aufgestanden / habe…gegessen",
       "الفعل المنفصل في التام: aufgestanden — البادئة ge في منتصفها، الدرسُ كله في كلمة",
       "الترتيب الزمني ظاهريٌّ بظرفٍ في صدر كل جملة — Gestern / Am Mittag / Am Abend: لا تحتاج حينها روابط"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-a2-02",
@@ -160,7 +168,7 @@
     "titleDe": "Warum ich Deutsch lerne",
     "titleAr": "لماذا أتعلّم الألمانية",
     "taskDe": "Schreibe einen Absatz (5–6 Sätze) mit 2× „weil“ und 1× „dass“. Denk an die Wortstellung!",
-    "taskAr": "اكتب فقرة (5–6 جمل) مع weil مرتين و dass مرة. انتبه لموضع الفعل!",
+    "taskAr": "اكتب فقرة (5–6 جمل) مع weil مرتين و dass مرة. انتبه لموضع الفعل! (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "weil/dass + فعل للنهاية",
       "رأي شخصي واحد على الأقل",
@@ -171,7 +179,8 @@
       "weil و dass في مواضعها، والفعلُ في القعر كل مرة — المعيارُ الذي يفصل A2 عن A1",
       "رأيٌ صريح واحد (Ich finde sie aber interessant) كما يطلب المعيار — لا نصيحةٌ بلا «أنا»",
       "رأيٌ شخصي بـ aber ثم ختامٌ بـ trotzdem في جملةٍ مستقلة — ثلاثُ أدواتٍ في خمسة أسطر، كلٌّ في حجمها"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-a2-03",
@@ -179,7 +188,7 @@
     "titleDe": "Reise-E-Mail",
     "titleAr": "بريد رحلة",
     "taskDe": "Schreibe eine E-Mail an eine Freundin über deine Reise: Wohin, wann, wie (Zug/Flug), Hotel.",
-    "taskAr": "اكتب بريداً إلى صديقة عن رحلتك: إلى أين، متى، كيف (قطار/طائرة)، الفندق.",
+    "taskAr": "اكتب بريداً إلى صديقة عن رحلتك: إلى أين، متى، كيف (قطار/طائرة)، الفندق. (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "بنية البريد: ترحيب + محتوى + خاتمة",
       "Perfekt أو Futur I مرة واحدة",
@@ -190,7 +199,8 @@
       "بريدٌ كامل: Liebe… / محتوى / Schreib mir bald! / Viele Grüße — الهيكلُ يُدرَّس بالبنيان لا بالقوائم",
       "مرتان Perfekt (bin…gefahren / war) وجملة حاضرةٍ بالمستقبل الدلالي — توازنُ أزمنةٍ صغير لكنه مسجَّل",
       "معلوماتُ السفر الأربع كلها: وجهةٌ وموعدٌ ووسيلةٌ ونُزل — لا تُعَفَّ عن واحدةٍ لأنها «بديهية»"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-a2-04",
@@ -198,7 +208,7 @@
     "titleDe": "Beim Arzt – eine Erklärung",
     "titleAr": "شرح للطبيب",
     "taskDe": "Schreibe, was du dem Arzt sagst: Symptome seit wann, Schmerzen, Medizin.",
-    "taskAr": "اكتب ما ستقوله للطبيب: الأعراض منذ متى، الآلام، الدواء.",
+    "taskAr": "اكتب ما ستقوله للطبيب: الأعراض منذ متى، الآلام، الدواء. (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "seit + Dativ (seit drei Tagen)",
       "weh tun مع الجسم",
@@ -209,7 +219,8 @@
       "seit + داتيف حيّة: Seit drei Tagen — حرفٌ واحد يُصلح ما يفسده الجميع",
       "جسمٌ مرفوعٌ مع weh tun: tut mir der Hals weh — الصيغةُ لا تُختَرع",
       "سؤالٌ مهذب في الختام (Was soll ich tun, Herr Doktor?) — مريضٌ يسلم قيادته بأدب فيُكافأ"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-a2-05",
@@ -217,7 +228,7 @@
     "titleDe": "Einladung schreiben",
     "titleAr": "كتابة دعوة",
     "taskDe": "Schreibe eine Einladung zu einer Feier: Anlass, Tag, Uhrzeit, Ort, was mitbringen.",
-    "taskAr": "اكتب دعوة لحفلة: المناسبة، اليوم، الساعة، المكان، ماذا يحضر الضيوف.",
+    "taskAr": "اكتب دعوة لحفلة: المناسبة، اليوم، الساعة، المكان، ماذا يحضر الضيوف. (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "فعل أمر أو دعوة مهذّبة (Komm vorbei! / Kannst du kommen?)",
       "كل المعلومات الخمس",
@@ -228,7 +239,8 @@
       "خمس معلومات كاملة: مناسبة ويومٌ وساعةٌ ومكانٌ وما يُجلَب — لا تُرْمَز واحدةٌ بقرينة",
       "فعل أمرٌ ودعوة معاً: feiere…! / Bring bitte… — الأمرُ بالألمانية مهذبٌ بحرفٍ واحد",
       "«Ich freue mich auf dich» — جملةُ ودٍّ ختامية تُنقِذ قائمة المعلومات من الجفاف"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b1-01",
@@ -248,7 +260,8 @@
       "كل أدوات المعيار في مواضعها: meiner Meinung nach / weil / obwohl / deshalb + würde — أربعُ علاماتِ تصريفٍ يقرأها المصححُ كأنه يمسحُ بطاقات",
       "«Könnten Lehrkräfte zudem…» — جملةُ شرطٍ بلا wenn بقلب الفعل أولاً: ترفٌ في B1 يستحق الإشادة",
       "الإطار دائري: يبدأ باليد كالمُزعج ويختم بها كالمُعين — بنيةٌ تُدرِّسُ البلاغة قبل اسمها"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b1-02",
@@ -268,7 +281,8 @@
       "أربعةُ أوصال موصولة (die/der/das/was/in dem) — اثنان يكفيان، والزيادةُ بلا خطأ تُحسب لا تُخصم",
       "ضميرُ العمل بصيغة المتكلم الفخري بلا تباهٍ: Ich bin Ingenieurin, die… — المعيارُ الذاتي بدقة",
       "الخاتمة بدعوة مقابلةٍ بصيغة Konjunktiv (würde mich freuen) — البروتوكولُ الرسمي مُنجَزٌ حتى الحرف الأخير"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b1-03",
@@ -288,7 +302,8 @@
       "war/hatte ليستا تزييناً: السردُ الألمانيُّ لا يقول «ist gewesen» في الكتابة — وهذه كانت فجوةَ المنهجِ حتى أُغلِقَت بدرسَي a1-war-hatte و a2-praeteritum",
       "Plusquamperfekt مُثبَّتٌ في صدر «Bevor…» مرتين ثم مفارِقٌ عند الشعور — استخدامٌ وظيفي لا استعراضي",
       "Perfekt مزدوج للحليف (hat geholfen / hat ermutigt) ثم رجوعٌ للحاضر (Heute… denke) — الزمنُ يُديرُ الحكاية"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b1-04",
@@ -307,7 +322,8 @@
       "البناء الثلاثي ظاهرٌ بلا عنوان: قضية ← حجتان ← موقف — حتى المصحح المتعجّل يراه",
       "رقمٌ مُدَّعًى لا مُوهَمًا: 70 Prozent + «würden…stehen lassen» شرطية — أرقامُ التعليقات أسلحةٌ لا حلي",
       "الإجابة عن اعتراضِ الأنوار (Trotzdem fordern Anwohner…) قبل التوصية — فنُّ «خذِ الخصمَ على محمل الجد» مذكورٌ باسمه"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b1-05",
@@ -326,7 +342,8 @@
       "نبرتا نصيحةٍ متدرجتان: würde raten / würde empfehlen — بين اللياقةِ والإلحاحِ خيطٌ لا يُرى ويُحفَظ",
       "جملةُ «Wenn ich an deiner Stelle wäre, hätte ich…» — النموذجُ المدرسيُّ للشرط غير الواقع، موضوعةٌ في فم الصديق لا الكتاب",
       "«Entscheiden musst du» — تسليمُ القرار للمُوجَّه إليه: المعيارُ الرابع (احترامُ الاختيار) مُنجَزٌ في سطرٍ واحد"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b2-01",
@@ -347,7 +364,8 @@
       "منقولٌ بـ Konjunktiv I حيّ: führe… / bewerte… — لا تجميلٌ بل نقلُ أمانة",
       "الفعلُ الوظيفي مُزدوج: eine Rolle spielen + infrage stellen — المعيارُ مُنجَزٌ في أول سطرين",
       "خاتمةٌ بسؤالٍ مفتوح (Ob uns das… steht dahin) — قالبُ التعليق الصحفيّ يُغلَق ولا يُغلِق"
-    ]
+    ],
+    "zielWort": 150
   },
   {
     "id": "w-b2-02",
@@ -367,7 +385,8 @@
       "ثلاثيةُ um zu / ohne… / statt zu في مواضعها النحوية الصحيحة — معيارٌ لا ينجو منه إلا من درَّب",
       "Funktionsverbgefüge ×2: einbringen + zur Entlastung verhelfen (وتَنجَز «den Beweis antreten») — ثلاثٌ إن حسبت",
       "طلبُ موعدٍ بإطار زمني محدد (binnen zwei Wochen) — الرسميةُ لا تعني الضبابية"
-    ]
+    ],
+    "zielWort": 150
   },
   {
     "id": "w-b2-03",
@@ -387,7 +406,8 @@
       "تلخيصٌ بلا نهاية: «passt in eine Bahnhofsdurchsage — mehr sei nicht verraten» — الهمزُ بذكاء بدلَ الحرق",
       "زوايا الربط الرفيعة كلها: zwar…doch / obgleich / im Hinblick auf / zugegeben / insgesamt — المعيارُ مُستنفَدٌ حرفياً",
       "نقدٌ متزن حتى في الجملة الواحدة: قوةُ التفاصيل، ضعفُ الشخصيات — الميزانُ لا المجاملة"
-    ]
+    ],
+    "zielWort": 150
   },
   {
     "id": "w-b2-04",
@@ -407,7 +427,8 @@
       "فصلٌ معماري: proponents → critics → «كلٌّ صادقٌ في نصفه» → موقف — نمطُ Erörterung المصدَّق",
       "شرطيتان نظاميتان: sofern / unter der Bedingung dass — و«vorausgesetzt» الثالثة مكافأة",
       "النبرة بلا «أنا» حتى الجملةِ الموقعية الأخيرة (Meines Erachtens) — المعيارُ الموضوعيُّ مُطبَّقٌ بصيغته الرسمية"
-    ]
+    ],
+    "zielWort": 150
   },
   {
     "id": "w-b2-05",
@@ -427,7 +448,8 @@
       "Partizipialattribute أربعةٌ سالمة: von mir… gesammelten / in Tunesien ausgebildete / an Ihrer Fakultät erworbenes / von Ihnen vergebene — المعيارُ مضاعَف",
       "هدفٌ ملموسٌ مضاعف: Lastmanagement لقرية + تصميمٌ لذوي الجيوب الخفيفة — لا جملةُ «أحب البيئة» الفارغة",
       "صلةُ الخبرة بالفرصة صريحة: ما نَقَصَكَ من تمويلٍ هنا هو ما اكتمل هناك"
-    ]
+    ],
+    "zielWort": 150
   },
   {
     "id": "w-a1-06",
@@ -435,7 +457,7 @@
     "titleDe": "Postkarte aus dem Urlaub",
     "titleAr": "بطاقة بريدية من العطلة",
     "taskDe": "Schreibe eine kurze Postkarte (4–5 Sätze) aus dem Urlaub: Wo bist du? Wie ist das Wetter? Was machst du?",
-    "taskAr": "اكتب بطاقة بريدية قصيرة (4–5 جمل) من العطلة: أين أنت؟ كيف الطقس؟ ماذا تفعل؟",
+    "taskAr": "اكتب بطاقة بريدية قصيرة (4–5 جمل) من العطلة: أين أنت؟ كيف الطقس؟ ماذا تفعل؟ (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "تحية ومقصود (Hallo … hier bin ich)",
       "الطقس بجملة واحدة",
@@ -447,7 +469,8 @@
       "بطاقةُ بريده صغيرةٌ كعنوانها: خمسُ جمل لا تتزاحم",
       "الطقسُ جملة، النشاطُ جملة — معيارُ «واحدٌ على الأقل» مُنجَزٌ بالضبط، لا بالإفراط",
       "Viele Grüße + اسم — خاتمةُ البطاقة قارةٌ لا تُساوَم"
-    ]
+    ],
+    "zielWort": 30
   },
   {
     "id": "w-a2-06",
@@ -455,7 +478,7 @@
     "titleDe": "Beschwerde-E-Mail ans Hotel",
     "titleAr": "بريد شكوى إلى الفندق",
     "taskDe": "Schreibe eine kurze Beschwerde-E-Mail (6 Sätze) an ein Hotel: Problem (Zimmer/Lärm), Bitte um Lösung, Perfekt nutzen.",
-    "taskAr": "اكتب بريداً قصيراً للشكوى (6 جمل) إلى فندق: مشكلة (غرفة/ضجيج)، طلب حل، استعمل الماضي التام.",
+    "taskAr": "اكتب بريداً قصيراً للشكوى (6 جمل) إلى فندق: مشكلة (غرفة/ضجيج)، طلب حل، استعمل الماضي التام. (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "وصف الحدث بالـ Perfekt",
       "شكوى مهذّبة بلا غضب",
@@ -467,7 +490,8 @@
       "شكوى بلا غضب: leider + وصفٌ هادئ — النبرةُ تُقرَأ قبل الحجج",
       "Perfekt في صدر الوقائع: habe…übernachtet / hat…gemacht — الماضي المُنجَز لا المستمر",
       "طلبٌ محدد واحد (Teil erstatten) — من يطلب الكثير في A2 لا يُعطى شيئاً"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b1-06",
@@ -487,7 +511,8 @@
       "تجربةٌ رقمية شخصية: «نصف ما درستُ تبخّر في أسبوع، قِسْتُ ذلك» — لا عامّيةُ النصائح إلا بعدها",
       "ثلاثُ نصائح مُسَمَّاة (erster / zweiter / unbequemster) — التعدادُ المرقَّمُ أمانةٌ لدى المصححين",
       "«ohne dass ihr müsst» — subordinateٌ خفيفةٌ تنهي جملةً طويلة بأنفاسٍ كاملة: إيقاعٌ مقصودٌ لا سهو"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b2-06",
@@ -508,7 +533,8 @@
       "Konjunktiv I أربعُ مرات في المنقول (bleibe / sei / begreife / konsumiere / verlerne) — النقلُ الصحفيُّ أمانةٌ تصرفية",
       "الأدوات الثلاث نظامية: laut / …zufolge / demzufolge — توزيعُ المصدرية كما يُلزِم التقرير",
       "فصلٌ أخيرٌ بفعل التوازن: «تقنية نعم… لكن» بعد أن عُرِضَ الطرفان بلا رجَّةِ مرجَّح — ثم استشرافُ العشرِ سنوات: ختامُ التقارير الكبار"
-    ]
+    ],
+    "zielWort": 150
   },
   {
     "id": "w-a1-07",
@@ -516,7 +542,7 @@
     "titleDe": "Nachricht an einen Freund",
     "titleAr": "رسالة قصيرة إلى صديق",
     "taskDe": "Schreibe eine kurze Nachricht (3–5 Sätze) an einen Freund: Wie geht es dir? Was machst du heute Abend? Treffen wir uns?",
-    "taskAr": "اكتب رسالة قصيرة (3-5 جمل) لصديق: كيف حالك؟ ماذا تفعل هذا المساء؟ هل نلتقي؟",
+    "taskAr": "اكتب رسالة قصيرة (3-5 جمل) لصديق: كيف حالك؟ ماذا تفعل هذا المساء؟ هل نلتقي؟ (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "3-5 جمل مفهومة",
       "تحية وسؤال عن الحال",
@@ -528,7 +554,8 @@
       "سؤالُ حالٍ ثم عرضُ لقاءٍ بموعدٍ محدد — ثلاثيةُ الرسالة القصيرة",
       "Möchtest du…? صيغةُ عرضٍ مهذبة تُحفَظ وتُستعمل",
       "خمس جمل، كلٌّ في خدمة: لا حشو معفى في A1"
-    ]
+    ],
+    "zielWort": 30
   },
   {
     "id": "w-a2-07",
@@ -536,7 +563,7 @@
     "titleDe": "E-Mail an den Vermieter",
     "titleAr": "بريد إلى صاحب الشقة",
     "taskDe": "Schreibe eine E-Mail an deinen Vermieter: In deiner Wohnung ist etwas kaputt (z. B. der Wasserhahn). Beschreibe das Problem und schlage einen Termin vor.",
-    "taskAr": "اكتب بريداً إلى صاحب شقتك: شيء معطّل لديك (مثلاً صنبور الماء). صف المشكلة واقترح موعداً.",
+    "taskAr": "اكتب بريداً إلى صاحب شقتك: شيء معطّل لديك (مثلاً صنبور الماء). صف المشكلة واقترح موعداً. (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "مقدمة وشرح واضح للمشكلة",
       "طلب مهذب",
@@ -548,7 +575,8 @@
       "مقدمة ووصف وموعدٌ مقترح وتوقيع: أربعُ ركائز لا تضطرب",
       "Das Wasser läuft ständig — واقعةٌ واحدة بدقةٍ أفضل من فقرةِ انفعال",
       "Passt Ihnen Donnerstag…? اقتراحُ موعدٍ بسؤال — لباقَةٌ تُسَرّع الصلاح"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-a2-08",
@@ -556,7 +584,7 @@
     "titleDe": "Mein Tagesplan",
     "titleAr": "جدولي اليومي",
     "taskDe": "Schreibe über deinen Tagesplan: Wann stehst du auf? Was machst du am Vormittag, am Nachmittag und am Abend?",
-    "taskAr": "اكتب عن جدولك اليومي: متى تستيقظ؟ ماذا تفعل صباحاً وعصراً ومساءً؟",
+    "taskAr": "اكتب عن جدولك اليومي: متى تستيقظ؟ ماذا تفعل صباحاً وعصراً ومساءً؟ (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "استخدام أوقات (Uhr)",
       "فترة الصباح والمساء",
@@ -568,7 +596,8 @@
       "نصف يومٍ موزون: Kurs/ Arbeit / Kochen — لا جملة أطول من أختها",
       "أفعال منفصلة في يومه (stehe…auf / rufe…an) — إعادةُ استعمالٍ ذكية لا حفظٌ منبري",
       "Um elf Uhr schlafe ich ein — خاتمةٌ بزمن: انسجامُ قالبٍ حتى في النوم"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b1-07",
@@ -588,7 +617,8 @@
       "رأيٌ في السطر الأول قبل أي تمهيد — في B1 لا تُكافأ المقدمةُ الدائرية",
       "حجتان مشروحتان لا مرميتان: Erstens… (وقائع) / Zweitens… (مبررٌ معياريٌّ) — كل حجةٍ جملةٌ إضافية تُدافِع عنها",
       "استثناءٌ مذكورٌ ومُؤطَّر («Natürlich… außer…» — لا: «außer die Lehrkraft erlaubt») — قوةُ موقفٍ تُظهِرُ حدودَه"
-    ]
+    ],
+    "zielWort": 100
   },
   {
     "id": "w-b2-07",
@@ -608,7 +638,8 @@
       "أرقام وأرقامٌ عكسية: طلب + أجل محدد (bis Freitag) ثم شرطان (Rücktritt / Erstattung binnen vierzehn Tagen) — الشكوىُ قانونٌ مُهذَّب",
       "دقة الوقائع: رقم طلب، رقم فاتورة، رسالة الخطأ حرفياً — لا «الوصولُ لا يعمل» بلا جثة دليل",
       "«Belege halte ich bereit» — ورقةُ القوة الأخيرة تُلْمَح ولا تُلَوَّح: آدابُ الضغط الرسمي"
-    ]
+    ],
+    "zielWort": 150
   },
   {
     "id": "w-b2-08",
@@ -628,7 +659,8 @@
       "je…desto مزدوجةٌ في صلب السؤال لا للزينة — قالبُ المقارنة كما يُطلَب",
       "Konjunktiv II في خدمة الحُجَّة لا الحفظ: hätte… nie gelernt / wäre — شرطيّةُ تجربةٍ لا شرطيّةُ كتاب",
       "قلبُ حجةِ التكلفة: الأغلى ليس الرحلةَ بل زمنُ الشكّ — تقنيةُ الردِّ الصفوة: ماثلةٌ في النص لا مسمّاةٌ في الحاشية"
-    ]
+    ],
+    "zielWort": 150
   },
   {
     "id": "w-a1-08",
@@ -636,7 +668,7 @@
     "titleDe": "Eine SMS an die Lehrerin",
     "titleAr": "رسالة قصيرة إلى المعلّمة",
     "taskDe": "Du bist krank und kannst nicht zum Kurs kommen. Schreibe eine kurze Nachricht (3–4 Sätze): Grund, wie lange, eine Frage zu den Hausaufgaben.",
-    "taskAr": "أنت مريض ولا تستطيع الحضور إلى الدورة. اكتب رسالة قصيرة (3–4 جمل): السبب، المدة، وسؤال عن الواجبات.",
+    "taskAr": "أنت مريض ولا تستطيع الحضور إلى الدورة. اكتب رسالة قصيرة (3–4 جمل): السبب، المدة، وسؤال عن الواجبات. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "تحية ووداع مناسبان (Liebe Frau … / Viele Grüße)",
       "الفعل في الموضع الثاني",
@@ -648,7 +680,8 @@
       "«kann … kommen»: قوس الفعل المساعد والمصدر — أهمّ بنية في رسائل A1",
       "السؤال في النهاية يجعل الرسالة تواصلاً لا إعلاناً"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 30
   },
   {
     "id": "w-a1-09",
@@ -656,7 +689,7 @@
     "titleDe": "Postkarte an einen Freund",
     "titleAr": "بطاقة بريدية إلى صديق",
     "taskDe": "Schreibe eine Postkarte an einen Freund (4–5 Sätze): Wo bist du? Wie ist das Wetter? Was machst du? Wann kommst du zurück?",
-    "taskAr": "اكتب بطاقة بريدية لصديق (4–5 جمل): أين أنت؟ كيف الطقس؟ ماذا تفعل؟ متى تعود؟",
+    "taskAr": "اكتب بطاقة بريدية لصديق (4–5 جمل): أين أنت؟ كيف الطقس؟ ماذا تفعل؟ متى تعود؟ (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "الإجابة عن الأسئلة الأربعة",
       "جملة عن الطقس بـ«es ist / es regnet»",
@@ -668,7 +701,8 @@
       "«komme … zurück»: الفعل المنفصل في الحاضر — الجزء الثاني في نهاية الجملة",
       "البطاقة تحتاج مخاطَباً وتوقيعاً — يُفحصان في الامتحان"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 30
   },
   {
     "id": "w-a1-10",
@@ -676,7 +710,7 @@
     "titleDe": "Ein Formular im Amt",
     "titleAr": "استمارة في الدائرة",
     "taskDe": "Fülle das Formular für die Anmeldung im Sprachkurs aus: Vorname, Nachname, Geburtsdatum, Adresse mit Postleitzahl, Telefon, Muttersprache, Kurs (A1/A2).",
-    "taskAr": "املأ استمارة التسجيل في دورة اللغة: الاسم، اسم العائلة، تاريخ الميلاد، العنوان مع الرمز البريدي، الهاتف، اللغة الأم، الدورة.",
+    "taskAr": "املأ استمارة التسجيل في دورة اللغة: الاسم، اسم العائلة، تاريخ الميلاد، العنوان مع الرمز البريدي، الهاتف، اللغة الأم، الدورة. (الهدف: 30 كلمة تقريباً).",
     "criteria": [
       "كل الحقول معبّأة",
       "تاريخ الميلاد بصيغة يوم.شهر.سنة",
@@ -688,7 +722,8 @@
       "الاستمارة جزء ثابت من امتحان A1: لا جمل، بل حقول صحيحة",
       "الرمز البريدي قبل المدينة — ترتيب ألماني يُخطئ فيه كثيرون"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 30
   },
   {
     "id": "w-a2-09",
@@ -696,7 +731,7 @@
     "titleDe": "Absage einer Einladung",
     "titleAr": "الاعتذار عن دعوة",
     "taskDe": "Eine Freundin lädt dich zu ihrer Hochzeit ein, aber du kannst nicht kommen. Schreibe eine E-Mail (6–8 Sätze): Dank, Grund, Entschuldigung, Vorschlag für ein Treffen.",
-    "taskAr": "صديقة تدعوك إلى زفافها لكنك لا تستطيع الحضور. اكتب إيميلاً (6–8 جمل): شكر، سبب، اعتذار، اقتراح لقاء.",
+    "taskAr": "صديقة تدعوك إلى زفافها لكنك لا تستطيع الحضور. اكتب إيميلاً (6–8 جمل): شكر، سبب، اعتذار، اقتراح لقاء. (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "شكر على الدعوة في البداية",
       "سبب بـweil (الفعل في النهاية)",
@@ -708,7 +743,8 @@
       "Absage = اعتذار عن دعوة: البنية شكر ← سبب ← أسف ← بديل",
       "«weil … habe»: الفعل في النهاية — يُقيَّم مباشرة"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 100
   },
   {
     "id": "w-a2-10",
@@ -716,7 +752,7 @@
     "titleDe": "Beschwerde beim Hausmeister",
     "titleAr": "شكوى إلى حارس البناية",
     "taskDe": "Die Heizung in deiner Wohnung funktioniert seit drei Tagen nicht. Schreibe eine kurze Nachricht an den Hausmeister (6–8 Sätze): Problem, seit wann, was du schon gemacht hast, Bitte um Termin.",
-    "taskAr": "التدفئة في شقتك لا تعمل منذ ثلاثة أيام. اكتب رسالة قصيرة إلى الحارس (6–8 جمل): المشكلة، منذ متى، ما فعلته، طلب موعد.",
+    "taskAr": "التدفئة في شقتك لا تعمل منذ ثلاثة أيام. اكتب رسالة قصيرة إلى الحارس (6–8 جمل): المشكلة، منذ متى، ما فعلته، طلب موعد. (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "مخاطبة رسمية (Sehr geehrter Herr …)",
       "«seit» + Dativ للمدة",
@@ -728,7 +764,8 @@
       "الشكوى المهذّبة تنجح بالحقائق: منذ متى، ماذا جرّبت، متى أنت متاح",
       "«Könnten Sie» أهذب من «Können Sie» — Konjunktiv II الأول في A2"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 100
   },
   {
     "id": "w-a2-11",
@@ -736,7 +773,7 @@
     "titleDe": "Ein Erlebnis erzählen",
     "titleAr": "سرد تجربة",
     "taskDe": "Erzähle von einem Tag, an dem etwas nicht geklappt hat (7–9 Sätze): Was war der Plan? Was ist passiert? Wie ist es ausgegangen? Benutze das Perfekt.",
-    "taskAr": "احكِ عن يوم لم تسر فيه الأمور كما يجب (7–9 جمل): ما الخطة؟ ماذا حدث؟ كيف انتهى؟ استعمل الـPerfekt.",
+    "taskAr": "احكِ عن يوم لم تسر فيه الأمور كما يجب (7–9 جمل): ما الخطة؟ ماذا حدث؟ كيف انتهى؟ استعمل الـPerfekt. (الهدف: 100 كلمة تقريباً).",
     "criteria": [
       "Perfekt مع haben وsein بشكل صحيح",
       "روابط زمنية (zuerst, dann, danach, schließlich)",
@@ -748,7 +785,8 @@
       "sein مع أفعال الحركة: bin gelaufen / bin angekommen — الخطأ الأكثر شيوعاً في A2",
       "الروابط الزمنية تحوّل قائمة أحداث إلى قصة"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 100
   },
   {
     "id": "w-b1-08",
@@ -768,7 +806,8 @@
       "نموذج امتحان B1 الكتابي: مشاركة منتدى بأربعة عناصر — يُقيَّم كلٌّ منها على حدة",
       "«Obwohl … schätze, glaube ich nicht, dass …»: جملتان ثانويتان في جملة واحدة — علامة B1 ناضج"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 100
   },
   {
     "id": "w-b1-09",
@@ -788,7 +827,8 @@
       "Konjunktiv II للتهذيب: wäre es möglich / würden mir passen / wäre ich dankbar — ثلاث صيغ في نصّ واحد",
       "المعلومة الإدارية (رقم الحجز) تجعل الرسالة قابلة للمعالجة — يُحتسب في التقييم"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 100
   },
   {
     "id": "w-b1-10",
@@ -808,7 +848,8 @@
       "التقرير الحيادي: لا «الألمان صارمون» بل «الوقت جزء من الاتفاق»",
       "مزج Präteritum وPerfekt في السرد المكتوب طبيعي في B1"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 100
   },
   {
     "id": "w-b2-09",
@@ -829,7 +870,8 @@
       "الدحض بـ«Zwar … doch» هو المهارة الفاصلة بين B1 وB2",
       "الأرقام في النموذج عامة (Minuten) بلا إحصاء مختلَق — قاعدة المشروع"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 150
   },
   {
     "id": "w-b2-10",
@@ -849,7 +891,8 @@
       "الشكوى الرسمية تُبنى على تواريخ: كل خطوة بتاريخها — هذا ما يجعلها قابلة للتنفيذ",
       "«Sollte ich … erhalten, werde ich …»: شرط بلا wenn + مستقبل — بنية B2 نموذجية للإنذار المهذّب"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 150
   },
   {
     "id": "w-b2-11",
@@ -870,6 +913,7 @@
       "«Kann Freiwilligkeit verordnet werden?» سؤال بلاغي في المقدمة — أداة أسلوبية تُحتسب في B2",
       "صيغ B2: Passiv (verordnet werden)، Nominalisierung (Freiwilligkeit، Engagement)، Konjunktiv II (bliebe)"
     ],
-    "neu": true
+    "neu": true,
+    "zielWort": 150
   }
 ]
