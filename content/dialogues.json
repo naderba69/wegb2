@@ -3013,8 +3013,8 @@
       },
       {
         "who": "Schaffnerin Weiß",
-        "de": "Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu.",
-        "ar": "عند ستّين دقيقة يحقّ لكم خمسةٌ وعشرون بالمئةِ من الثمن."
+        "de": "Bei fünfzig Minuten stehen Ihnen fünfzehn Prozent des Preises zu.",
+        "ar": "عند خمسين دقيقة يحقّ لكم خمسةَ عشرَ بالمئةِ من الثمن."
       },
       {
         "who": "Amir",
@@ -3782,8 +3782,8 @@
       },
       {
         "who": "Polizist",
-        "de": "Sechs Monate Aufbewahrung nach Anzeige — dann geht er in die Versteigerung; kommen Sie pünktlich.",
-        "ar": "ستةُ أشهرِ حفظٍ بعد الإبلاغ، ثم تُطرح للمزاد العلني — فلتحضروا في الموعد."
+        "de": "Vierzehn Tage Aufbewahrung, dann Versteigerungslager — kommen Sie pünktlich.",
+        "ar": "أربعةَ عشرَ يوماً للحفظ، ثم مخزنُ المزادِ — فلتحضروا في الموعد."
       }
     ],
     "questions": [
@@ -3875,8 +3875,8 @@
       },
       {
         "who": "Amtsfrau Berg",
-        "de": "Anmeldung und Adressänderung sind gebührenfrei, und die eID-Funktion ist bereits aktiviert.",
-        "ar": "التسجيلُ وتغييرُ العنوان مجّانيّان، وخاصيةُ الهوية الإلكترونية مُفعَّلة بالفعل."
+        "de": "Anmeldung gratis; die eID-Funktion kostet sechs Euro.",
+        "ar": "التسجيلُ مجاناً، وستةُ يورو لخاصيةِ الهويةِ الإلكترونية."
       }
     ],
     "questions": [
@@ -4061,8 +4061,8 @@
       },
       {
         "who": "Fahrlehrer",
-        "de": "Vierzehn Tage Sperre — der Antrag bleibt gültig, die Prüfgebühr wird pro Versuch neu fällig.",
-        "ar": "حظرُ أربعةَ عشرَ يوماً — الطلبُ يبقى سارياً، ورسمُ الامتحان يُدفَع عن كلِّ محاولة."
+        "de": "Vierzehn Tage Sperre — die Gebühr bleibt gültig, keine Neuanmeldung.",
+        "ar": "حظرُ أربعةَ عشرَ يوماً — والرسومُ نافذة، ولا إعادةَ تسجيل."
       }
     ],
     "questions": [
@@ -4230,8 +4230,8 @@
       },
       {
         "who": "Hausverwaltung",
-        "de": "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf vierzehn Komma sieben Prozent.",
-        "ar": "صحيح — حسابُ رسالتكم سليم؛ فنُصحِّحُ إلى أربعةَ عشرَ فاصلةَ سبعة بالمئة."
+        "de": "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent.",
+        "ar": "صحيح — حسابُ رسالتكم سليم؛ فنُصحِّحُ إلى تسعةٍ فاصلةَ ثمانية بالمئة."
       },
       {
         "who": "Amel",
