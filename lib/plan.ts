@@ -405,6 +405,7 @@ function mcFromCards(cards: VocabCard[], idx: number, rand: () => number): Exerc
     id: `${correct.id}-mc${idx}`,
     type: "mc",
     promptDe: `Was bedeutet: „${correct.de}“?`,
+    promptAr: `ما معنى الكلمة الألمانية: «${correct.de}»؟`,
     options,
     answer: correct.ar,
     explanationAr: correct.exampleDe

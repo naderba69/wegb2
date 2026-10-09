@@ -143,7 +143,8 @@
           "habe"
         ],
         "answer": "bin",
-        "explanationAr": "مع المهنة/الهوية نستعمل sein: ich bin."
+        "explanationAr": "مع المهنة/الهوية نستعمل sein: ich bin.",
+        "promptAr": "اختر الصيغة الصحيحة لـ sein (أنا مُعلّمة)."
       },
       {
         "id": "g1e2",
@@ -155,7 +156,8 @@
           "ist"
         ],
         "answer": "hast",
-        "explanationAr": "الامتلاك ← haben: du hast."
+        "explanationAr": "الامتلاك ← haben: du hast.",
+        "promptAr": "اختر الصيغة الصحيحة لـ haben (أنت تمتلك سيارة)."
       },
       {
         "id": "g1e3",
@@ -187,7 +189,8 @@
           "Sprechen"
         ],
         "answer": "Sprechen",
-        "explanationAr": "اللغات مع sprechen وليس مع haben!"
+        "explanationAr": "اللغات مع sprechen وليس مع haben!",
+        "promptAr": "صيغة المخاطب الرسمي Sie في السؤال."
       },
       {
         "id": "a1-sein-haben-u1",
@@ -327,7 +330,8 @@
           "Du"
         ],
         "answer": "Ich",
-        "explanationAr": "ich = أنا."
+        "explanationAr": "ich = أنا.",
+        "promptAr": "اختر ضمير الرفع المناسب (أنا من سوريا)."
       },
       {
         "id": "g2e2",
@@ -339,7 +343,8 @@
           "Sie"
         ],
         "answer": "Es",
-        "explanationAr": "das Buch ← الضمير es."
+        "explanationAr": "das Buch ← الضمير es.",
+        "promptAr": "اختر ضمير الإشارة للمحايد (الكتاب → es)."
       },
       {
         "id": "g2e3",
@@ -351,7 +356,8 @@
           "es"
         ],
         "answer": "Sie",
-        "explanationAr": "صيغة الاحترام: فعل بصيغة الجمع + Sie."
+        "explanationAr": "صيغة الاحترام: فعل بصيغة الجمع + Sie.",
+        "promptAr": "صيغة المخاطب الرسمي في السؤال."
       },
       {
         "id": "a1-pronomen-u1",
@@ -810,7 +816,8 @@
           "kaufen ein …"
         ],
         "answer": "kaufen … ein",
-        "explanationAr": "einkaufen ينفصل في المنتصف/النهاية."
+        "explanationAr": "einkaufen ينفصل في المنتصف/النهاية.",
+        "promptAr": "ضع الفعل المنفصل في مكانه الصحيح."
       },
       {
         "id": "g4e3",
@@ -969,7 +976,8 @@
           "8:00"
         ],
         "answer": "7:30",
-        "explanationAr": "halb acht = قبل الثامنة بنصف ساعة."
+        "explanationAr": "halb acht = قبل الثامنة بنصف ساعة.",
+        "promptAr": "كم الساعة على «الثامنة والنصف»؟"
       },
       {
         "id": "g5e4",
@@ -1147,7 +1155,8 @@
           "eine"
         ],
         "answer": "einen",
-        "explanationAr": "der Kaffee (مذكّر) ← einen Kaffee."
+        "explanationAr": "der Kaffee (مذكّر) ← einen Kaffee.",
+        "promptAr": "اختر المفعول به المباشر (أشتري قهوة)."
       },
       {
         "id": "g6e2",
@@ -1159,7 +1168,8 @@
           "ein"
         ],
         "answer": "eine",
-        "explanationAr": "die Wohnung ← eine (بدون تغيير)."
+        "explanationAr": "die Wohnung ← eine (بدون تغيير).",
+        "promptAr": "اختر شكل المفعول به المذكر بعد suchen."
       },
       {
         "id": "g6e3",
@@ -1545,7 +1555,8 @@
           "Ich gehe zum Bahnhof und kaufe eine Fahrkarte."
         ],
         "answer": "Ich ging zum Bahnhof und kaufte eine Fahrkarte.",
-        "explanationAr": "السرد المكتوب يستعمل Präteritum. الثاني شفوي صحيح لكنه ليس أسلوب الحكاية، والثالث مضارع."
+        "explanationAr": "السرد المكتوب يستعمل Präteritum. الثاني شفوي صحيح لكنه ليس أسلوب الحكاية، والثالث مضارع.",
+        "promptAr": "أي جملة تناسب السرد المكتوب؟"
       },
       {
         "id": "a2-praeteritum-e5",
@@ -1558,7 +1569,8 @@
           "wusste nicht"
         ],
         "answer": "wusste",
-        "explanationAr": "wissen من الشاذّ-المنتظم: wusste. weißte غير موجودة، وgewusst هي Partizip II."
+        "explanationAr": "wissen من الشاذّ-المنتظم: wusste. weißte غير موجودة، وgewusst هي Partizip II.",
+        "promptAr": "ما صيغة Präteritum لـ wissen؟"
       },
       {
         "id": "a2-praeteritum-e6",
@@ -1580,7 +1592,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل صيغتا ich/er machte متطابقتان؟"
       },
       {
         "id": "a2-praeteritum-e8",
@@ -1795,7 +1808,8 @@
           "hatte"
         ],
         "answer": "ist",
-        "explanationAr": "gehen حركة ← sein."
+        "explanationAr": "gehen حركة ← sein.",
+        "promptAr": "اختر الجزء المساعد المناسب (هي ذهبت)."
       },
       {
         "id": "g7e3",
@@ -1986,7 +2000,8 @@
           "hast"
         ],
         "answer": "habe",
-        "explanationAr": "habe في نهاية الجملة التابعة."
+        "explanationAr": "habe في نهاية الجملة التابعة.",
+        "promptAr": "أكمل بمساعدة weil."
       },
       {
         "id": "a2-weil-dass-u1",
@@ -2131,7 +2146,8 @@
           "der"
         ],
         "answer": "die",
-        "explanationAr": "اتجاه (أين يعلّق؟) ← Akkusativ: an die Wand."
+        "explanationAr": "اتجاه (أين يعلّق؟) ← Akkusativ: an die Wand.",
+        "promptAr": "اختر حالة Dativ/أكوزاتيف معلقة (حركة)."
       },
       {
         "id": "g9e2",
@@ -2143,7 +2159,8 @@
           "dem"
         ],
         "answer": "der",
-        "explanationAr": "مكان (أين يعلق؟) ← Dativ: an der Wand."
+        "explanationAr": "مكان (أين يعلق؟) ← Dativ: an der Wand.",
+        "promptAr": "اختر حالة Dativ لوصف الحالة الثابتة (الصورة معلّقة على الحائط)."
       },
       {
         "id": "g9e3",
@@ -2306,7 +2323,8 @@
           "gekonnt"
         ],
         "answer": "konnte",
-        "explanationAr": "ماضي können الشائع: konnte."
+        "explanationAr": "ماضي können الشائع: konnte.",
+        "promptAr": "Präteritum لـ können في الجملة."
       },
       {
         "id": "g10e3",
@@ -2318,7 +2336,8 @@
           "Soll"
         ],
         "answer": "Darf",
-        "explanationAr": "طلب إذن ← dürfen."
+        "explanationAr": "طلب إذن ← dürfen.",
+        "promptAr": "صيغة السؤال بـ dürfen."
       },
       {
         "id": "a2-modal-u1",
@@ -2445,7 +2464,8 @@
           "wurde"
         ],
         "answer": "würde",
-        "explanationAr": "شرط غير واقعي ← Konjunktiv II."
+        "explanationAr": "شرط غير واقعي ← Konjunktiv II.",
+        "promptAr": "صيغة Konjunktiv II للودّ (لو كنت غنياً لسافرت)."
       },
       {
         "id": "g11e2",
@@ -2480,7 +2500,8 @@
           "hatte"
         ],
         "answer": "hätte",
-        "explanationAr": "hätte (وليس habe) في الشرط غير الواقعي."
+        "explanationAr": "hätte (وليس habe) في الشرط غير الواقعي.",
+        "promptAr": "أكمل بجملة شرط غير واقعي."
       },
       {
         "id": "b1-konj2-u1",
@@ -2624,7 +2645,8 @@
           "das"
         ],
         "answer": "der",
-        "explanationAr": "der Mann ← der (فاعل)."
+        "explanationAr": "der Mann ← der (فاعل).",
+        "promptAr": "اختر أداة الموصول للعاقل المذكر."
       },
       {
         "id": "g12e2",
@@ -2636,7 +2658,8 @@
           "das"
         ],
         "answer": "die",
-        "explanationAr": "die Stadt ← die (مفعول به: wir haben die Stadt besucht)."
+        "explanationAr": "die Stadt ← die (مفعول به: wir haben die Stadt besucht).",
+        "promptAr": "أداة الموصول للمؤنث في حالة المفعول به."
       },
       {
         "id": "g12e3",
@@ -2771,7 +2794,8 @@
           "Deshalb"
         ],
         "answer": "Obwohl",
-        "explanationAr": "في بداية الجملة للتناقض ← obwohl (فعل للنهاية)."
+        "explanationAr": "في بداية الجملة للتناقض ← obwohl (فعل للنهاية).",
+        "promptAr": "أداة ربط للسبب/التناقض بحسب المعنى."
       },
       {
         "id": "g13e2",
@@ -2918,7 +2942,8 @@
           "aß"
         ],
         "answer": "gegessen",
-        "explanationAr": "nachdem يستدعي Plusquamperfekt في التابعة: hatte gegessen. (nachdem + Plusquamperfekt: hatte gegessen.)"
+        "explanationAr": "nachdem يستدعي Plusquamperfekt في التابعة: hatte gegessen. (nachdem + Plusquamperfekt: hatte gegessen.)",
+        "promptAr": "Plusquamperfekt: كان قد فَعَل."
       },
       {
         "id": "g14e2",
@@ -2988,7 +3013,8 @@
           "ist"
         ],
         "answer": "hatte",
-        "explanationAr": "النجاح سبق الحصول على الوظيفة → hatte bestanden."
+        "explanationAr": "النجاح سبق الحصول على الوظيفة → hatte bestanden.",
+        "promptAr": "استعمل صيغة المصدر الناقص في Plusquamperfekt."
       },
       {
         "id": "g14e5",
@@ -2999,7 +3025,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل هذه الجملة Plusquamperfekt؟"
       }
     ]
   },
@@ -3122,7 +3149,8 @@
           "wäre"
         ],
         "answer": "sei",
-        "explanationAr": "المنقول الرسمي/الصحافي: sei."
+        "explanationAr": "المنقول الرسمي/الصحافي: sei.",
+        "promptAr": "صيغة الكلام غير المباشر (Konjunktiv I)."
       },
       {
         "id": "g15e4",
@@ -3279,7 +3307,8 @@
           "beschließen"
         ],
         "answer": "beschlossenen",
-        "explanationAr": "Partizip II مطوّل يتطابق مع الجمع."
+        "explanationAr": "Partizip II مطوّل يتطابق مع الجمع.",
+        "promptAr": "النعت كصفة من الفعل beschließen."
       },
       {
         "id": "g16e3",
@@ -3441,7 +3470,8 @@
           "Trotzdem"
         ],
         "answer": "Falls",
-        "explanationAr": "falls = شرط مهذّب/احتمال."
+        "explanationAr": "falls = شرط مهذّب/احتمال.",
+        "promptAr": "أداة شرط (إذا)."
       },
       {
         "id": "b2-bedingung-u1",
@@ -3611,7 +3641,8 @@
           "geben"
         ],
         "answer": "treffen",
-        "explanationAr": "eine Entscheidung treffen تثبيت."
+        "explanationAr": "eine Entscheidung treffen تثبيت.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "g18e2",
@@ -3633,7 +3664,8 @@
           "machen"
         ],
         "answer": "stellen",
-        "explanationAr": "in Frage stellen = يشكّك في."
+        "explanationAr": "in Frage stellen = يشكّك في.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-funktionsverben-u1",
@@ -3796,7 +3828,8 @@
           "statt"
         ],
         "answer": "um",
-        "explanationAr": "um zu = للغاية."
+        "explanationAr": "um zu = للغاية.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-infinitiv-u1",
@@ -4028,7 +4061,8 @@
           "mir",
           "mich",
           "ich"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-dativ-e4",
@@ -4227,7 +4261,8 @@
           "keine",
           "nicht",
           "kein"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-neg-e2",
@@ -4239,7 +4274,8 @@
           "nicht",
           "kein",
           "keinen"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-neg-e3",
@@ -4453,7 +4489,8 @@
           "Sprechen",
           "Sprecht",
           "Sprich"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-imp-e3",
@@ -4681,7 +4718,8 @@
           "für",
           "auf",
           "über"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-ref-e4",
@@ -4888,7 +4926,8 @@
           "als",
           "wie",
           "danach"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-stg-e3",
@@ -5113,7 +5152,8 @@
           "wird",
           "wird sein",
           "hat"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-fut-e4",
@@ -5326,7 +5366,8 @@
           "des",
           "dem",
           "der"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-gen-e4",
@@ -5577,7 +5618,8 @@
           "n",
           "s",
           "en"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-adj-e5",
@@ -5868,7 +5910,8 @@
           "das"
         ],
         "answer": "die",
-        "explanationAr": "جنس المركّب من كلمته الأخيرة (Grundwort): die Bewegung → die Klimabewegung. (Grundwort = die Bewegung.)"
+        "explanationAr": "جنس المركّب من كلمته الأخيرة (Grundwort): die Bewegung → die Klimabewegung. (Grundwort = die Bewegung.)",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-wortbildung-e2",
@@ -5880,7 +5923,8 @@
           "das"
         ],
         "answer": "das",
-        "explanationAr": "الأخيرة Schloss محايد. لا تنخدع بـ die Tür."
+        "explanationAr": "الأخيرة Schloss محايد. لا تنخدع بـ die Tür.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-wortbildung-e3",
@@ -5913,7 +5957,8 @@
           "Anspruch"
         ],
         "answer": "Anspruch",
-        "explanationAr": "اقرأ من اليمين: آخر كلمة هي Anspruch (استحقاق) — وهي التي تعطي الجنس der."
+        "explanationAr": "اقرأ من اليمين: آخر كلمة هي Anspruch (استحقاق) — وهي التي تعطي الجنس der.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-wortbildung-e7",
@@ -5925,7 +5970,8 @@
           "Schulenhof"
         ],
         "answer": "Schulhof",
-        "explanationAr": "الـe الختامية تسقط: Schul-hof."
+        "explanationAr": "الـe الختامية تسقط: Schul-hof.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-wortbildung-e8",
@@ -5946,7 +5992,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       },
       {
         "id": "b1-wortbildung-u1",
@@ -6149,7 +6196,8 @@
           "nichts",
           "kein",
           "nicht"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-unb-e4",
@@ -6384,7 +6432,8 @@
           "für",
           "auf",
           "an"
-        ]
+        ],
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-vp-e4",
@@ -6612,7 +6661,8 @@
           "der",
           "die",
           "dem"
-        ]
+        ],
+        "promptAr": "Passiv مع Dativ (من قِبَل مَن؟)."
       },
       {
         "id": "b1-pas-e4",
@@ -7062,7 +7112,8 @@
           "hat verpasst werden"
         ],
         "answer": "wird verpasst haben",
-        "explanationAr": "ترجيح ماضٍ بـ Futur II: wird + Partizip + haben."
+        "explanationAr": "ترجيح ماضٍ بـ Futur II: wird + Partizip + haben.",
+        "promptAr": "املأ الفراغات لجملة صحيحة."
       },
       {
         "id": "gf2e3",
@@ -7101,7 +7152,8 @@
           "ist eingetroffen haben"
         ],
         "answer": "wird eingetroffen sein",
-        "explanationAr": "eintreffen حركة ووصول ← sein."
+        "explanationAr": "eintreffen حركة ووصول ← sein.",
+        "promptAr": "اختر الإجابة الصحيحة للسؤال."
       },
       {
         "id": "b2-futur-ii-u1",
@@ -7251,7 +7303,8 @@
           "welches"
         ],
         "answer": "was",
-        "explanationAr": "بعد alles ← was أبداً."
+        "explanationAr": "بعد alles ← was أبداً.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "grge2",
@@ -7273,7 +7326,8 @@
           "worauf"
         ],
         "answer": "was",
-        "explanationAr": "الإشارة إلى الواقعة كلها بـ was."
+        "explanationAr": "الإشارة إلى الواقعة كلها بـ was.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "grge4",
@@ -7302,7 +7356,8 @@
           "wie"
         ],
         "answer": "was",
-        "explanationAr": "نفس القاعدة بعد nichts."
+        "explanationAr": "نفس القاعدة بعد nichts.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-relativ-generalisierend-u1",
@@ -7451,7 +7506,8 @@
           "wie"
         ],
         "answer": "desto",
-        "explanationAr": "الزوج الأبدي je…desto؛ umso بديل مقبول."
+        "explanationAr": "الزوج الأبدي je…desto؛ umso بديل مقبول.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "gdke2",
@@ -7492,7 +7548,8 @@
           "auch nicht"
         ],
         "answer": "noch",
-        "explanationAr": "weder…noch — بلا nicht إضافية."
+        "explanationAr": "weder…noch — بلا nicht إضافية.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "gdke5",
@@ -7739,7 +7796,8 @@
           "Es regnete, deshalb blieben wir zu Hause."
         ],
         "answer": "Wegen des Regens blieben wir zu Hause.",
-        "explanationAr": "wegen + Genitiv بدل جملة weil — هذه علامة الأسلوب الاسمي."
+        "explanationAr": "wegen + Genitiv بدل جملة weil — هذه علامة الأسلوب الاسمي.",
+        "promptAr": "اختر الإجابة الصحيحة للسؤال."
       },
       {
         "id": "b2-nominalstil-2",
@@ -7752,7 +7810,8 @@
           "durch"
         ],
         "answer": "trotz",
-        "explanationAr": "obwohl (تناقض) → trotz + Genitiv."
+        "explanationAr": "obwohl (تناقض) → trotz + Genitiv.",
+        "promptAr": "اختر الإجابة الصحيحة للسؤال."
       },
       {
         "id": "b2-nominalstil-3",
@@ -7905,7 +7964,8 @@
           "bin heißen"
         ],
         "answer": "heiße",
-        "explanationAr": "ich → الفعل ينتهي بـ e."
+        "explanationAr": "ich → الفعل ينتهي بـ e.",
+        "promptAr": "قدّم نفسك بـ heißen."
       },
       {
         "id": "a0-begrussung-ex02",
@@ -7917,7 +7977,8 @@
           "kommt"
         ],
         "answer": "komme",
-        "explanationAr": "«آتي» = ich komme (الفعل kommen في المضارع مع ich)."
+        "explanationAr": "«آتي» = ich komme (الفعل kommen في المضارع مع ich).",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a0-begrussung-ex03",
@@ -7929,7 +7990,8 @@
           "dich"
         ],
         "answer": "dir",
-        "explanationAr": "بعد wie geht es نستخدم Dativ: dir."
+        "explanationAr": "بعد wie geht es نستخدم Dativ: dir.",
+        "promptAr": "ما التحية/السؤال المناسب هنا؟"
       },
       {
         "id": "a0-begrussung-ex04",
@@ -8142,7 +8204,8 @@
           "wollt"
         ],
         "answer": "wollen",
-        "explanationAr": "مع نحن (wir) يبقى الفعل الناقص wollen دون إضافة في النهاية."
+        "explanationAr": "مع نحن (wir) يبقى الفعل الناقص wollen دون إضافة في النهاية.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-modalverben-ex04",
@@ -8299,7 +8362,8 @@
           "mich"
         ],
         "answer": "mir",
-        "explanationAr": "gefallen يأخذ Dativ."
+        "explanationAr": "gefallen يأخذ Dativ.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-dativ-ex03",
@@ -8321,7 +8385,8 @@
           "der"
         ],
         "answer": "dem",
-        "explanationAr": "المذكر dem في Dativ."
+        "explanationAr": "المذكر dem في Dativ.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       }
     ],
     "pitfalls": [
@@ -8450,7 +8515,8 @@
           "den"
         ],
         "answer": "die",
-        "explanationAr": "الاتجاه (Wohin / إلى أين) يأخذ Akkusativ: an die Wand (إلى الحائط)."
+        "explanationAr": "الاتجاه (Wohin / إلى أين) يأخذ Akkusativ: an die Wand (إلى الحائط).",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-wechsel-ex02",
@@ -8462,7 +8528,8 @@
           "dem"
         ],
         "answer": "der",
-        "explanationAr": "المكان الثابت (Wo / أين) يأخذ Dativ: an der Wand (على الحائط)."
+        "explanationAr": "المكان الثابت (Wo / أين) يأخذ Dativ: an der Wand (على الحائط).",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-wechsel-ex03",
@@ -8594,7 +8661,8 @@
           "Machen"
         ],
         "answer": "Mach",
-        "explanationAr": "du-Imperativ = جذر فقط."
+        "explanationAr": "du-Imperativ = جذر فقط.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-imperativ-ex03",
@@ -8616,7 +8684,8 @@
           "Nehmt"
         ],
         "answer": "Nehmen",
-        "explanationAr": "أمر الرسمي (Sie) = المصدر + Sie: Nehmen Sie Platz!"
+        "explanationAr": "أمر الرسمي (Sie) = المصدر + Sie: Nehmen Sie Platz!",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-imp-n2",
@@ -8758,7 +8827,8 @@
           "spielen"
         ],
         "answer": "gespielt",
-        "explanationAr": "Partizip II للمنتظم: spielen → ge + spiel + t = gespielt."
+        "explanationAr": "Partizip II للمنتظم: spielen → ge + spiel + t = gespielt.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-perf-n1",
@@ -8915,7 +8985,8 @@
           "werdet"
         ],
         "answer": "werden",
-        "explanationAr": "المستقبل مع wir نستعمل werden دون تغيير."
+        "explanationAr": "المستقبل مع wir نستعمل werden دون تغيير.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-futur-einf-ex03",
@@ -9187,7 +9258,8 @@
           "Wie hast du dein Wochenende?"
         ],
         "answer": "Wie war dein Wochenende?",
-        "explanationAr": "الألماني يسأل بـwar مباشرة. الصيغة الثانية صحيحة نحوياً لكنها ثقيلة، والثالثة خاطئة لأن الزمن حاضر."
+        "explanationAr": "الألماني يسأل بـwar مباشرة. الصيغة الثانية صحيحة نحوياً لكنها ثقيلة، والثالثة خاطئة لأن الزمن حاضر.",
+        "promptAr": "أي سؤال عن نهاية الأسبوع طبيعي؟"
       },
       {
         "id": "a2-prae-grund-e6",
@@ -9199,7 +9271,8 @@
           "Ich bin gestern müde."
         ],
         "answer": "Ich war gestern müde.",
-        "explanationAr": "الصفات مع sein، وفي الماضي مع war. الخيار الثاني ترجمة حرفية عربية خاطئة، والثالث زمنه حاضر."
+        "explanationAr": "الصفات مع sein، وفي الماضي مع war. الخيار الثاني ترجمة حرفية عربية خاطئة، والثالث زمنه حاضر.",
+        "promptAr": "أي جملة صحيحة؟"
       },
       {
         "id": "a2-prae-grund-e7",
@@ -9210,7 +9283,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       },
       {
         "id": "a1-war-hatte-u1",
@@ -9349,7 +9423,8 @@
           "heißes"
         ],
         "answer": "heißen",
-        "explanationAr": "صفة بدون أداة أمام Akkusativ مذكر (Tee لا — الشاي مذكر في الألمانية: der Tee) ⇒ heißen."
+        "explanationAr": "صفة بدون أداة أمام Akkusativ مذكر (Tee لا — الشاي مذكر في الألمانية: der Tee) ⇒ heißen.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-partizip1-f2",
@@ -9498,7 +9573,8 @@
           "dass"
         ],
         "answer": "wie",
-        "explanationAr": "السؤال عن الكيفية (اسمه؟) ← wie + الفعل في النهاية."
+        "explanationAr": "السؤال عن الكيفية (اسمه؟) ← wie + الفعل في النهاية.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-indir-n2",
@@ -9732,7 +9808,8 @@
           "Katze"
         ],
         "answer": "Kater",
-        "explanationAr": "einen Kater haben = صداع/ثقل الكحول."
+        "explanationAr": "einen Kater haben = صداع/ثقل الكحول.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-redew-f2",
@@ -9814,7 +9891,8 @@
           "Kater"
         ],
         "answer": "Wurst",
-        "explanationAr": "Das ist mir Wurst = لا يهمّني إطلاقاً (وليس: نقراً!)."
+        "explanationAr": "Das ist mir Wurst = لا يهمّني إطلاقاً (وليس: نقراً!).",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-redew-m3",
@@ -9826,7 +9904,8 @@
           "Farben"
         ],
         "answer": "Rätseln",
-        "explanationAr": "in Rätseln sprechen = يتكلّم بلغز يصعب فهمه."
+        "explanationAr": "in Rätseln sprechen = يتكلّم بلغز يصعب فهمه.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-redew-t1",
@@ -10300,7 +10379,8 @@
           "Z"
         ],
         "answer": "Ö",
-        "explanationAr": "Ö (مثل öffnen) أحدُ الثلاثة Umlaute. «B» و«Z» حرفان عاديّان، و«ß» إس-تسيت لا علامتا نقط عليه."
+        "explanationAr": "Ö (مثل öffnen) أحدُ الثلاثة Umlaute. «B» و«Z» حرفان عاديّان، و«ß» إس-تسيت لا علامتا نقط عليه.",
+        "promptAr": "اختر الإجابة الصحيحة للسؤال."
       },
       {
         "id": "a0-buchstaben-q2",
@@ -10322,7 +10402,8 @@
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "W الألمانية تُنطق /v/ مثل v الإنجليزية؛ تبدأ Wasser بهذا الصوت، لا بصوت w الإنجليزية. أما الحرف V الألماني فيختلف نطقه بحسب الكلمة."
+        "explanationAr": "W الألمانية تُنطق /v/ مثل v الإنجليزية؛ تبدأ Wasser بهذا الصوت، لا بصوت w الإنجليزية. أما الحرف V الألماني فيختلف نطقه بحسب الكلمة.",
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       },
       {
         "id": "a0-buchstaben-q4",
@@ -10439,7 +10520,8 @@
           "neun"
         ],
         "answer": "acht",
-        "explanationAr": "5 + 3 = 8 acht (آخت)."
+        "explanationAr": "5 + 3 = 8 acht (آخت).",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a0-zahlen-q2",
@@ -10464,7 +10546,8 @@
           "Guten Tag."
         ],
         "answer": "Ich bin dreißig Jahre alt.",
-        "explanationAr": "السؤال عن العمر تُجيب بـ«Ich bin … Jahre alt»، لا بالاسم ولا بلد المنشأ."
+        "explanationAr": "السؤال عن العمر تُجيب بـ«Ich bin … Jahre alt»، لا بالاسم ولا بلد المنشأ.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a0-zahlen-q4",
@@ -10590,7 +10673,8 @@
           "Kannst"
         ],
         "answer": "Könnten",
-        "explanationAr": "طلب مهذّب من شخص غريب = Konjunktiv II: könnten."
+        "explanationAr": "طلب مهذّب من شخص غريب = Konjunktiv II: könnten.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-konj2-hoflich-q2",
@@ -10752,7 +10836,8 @@
           "nach"
         ],
         "answer": "auf",
-        "explanationAr": "warten auf + Akk = ينتظر."
+        "explanationAr": "warten auf + Akk = ينتظر.",
+        "promptAr": "حرف الجر بعد warten هو auf."
       },
       {
         "id": "a2-verb-praep-q2",
@@ -10978,7 +11063,8 @@
           "den rot"
         ],
         "answer": "den roten",
-        "explanationAr": "Akkusativ مذكر: den roten."
+        "explanationAr": "Akkusativ مذكر: den roten.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       }
     ]
   },
@@ -11142,7 +11228,8 @@
           "Wichtigste"
         ],
         "answer": "Das Wichtigste",
-        "explanationAr": "الصفة المحوَّلة إلى اسم تُكتب كبيرة وتأخذ نهاية الصفة: das Wichtigste."
+        "explanationAr": "الصفة المحوَّلة إلى اسم تُكتب كبيرة وتأخذ نهاية الصفة: das Wichtigste.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-adj-p6",
@@ -11407,7 +11494,8 @@
           "zu den"
         ],
         "answer": "zum",
-        "explanationAr": "Bahnhof مذكر: zu+dem = zum."
+        "explanationAr": "Bahnhof مذكر: zu+dem = zum.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-versch-n1",
@@ -11419,7 +11507,8 @@
           "im"
         ],
         "answer": "am",
-        "explanationAr": "an + dem ← am: التعبير الزمني الثابت."
+        "explanationAr": "an + dem ← am: التعبير الزمني الثابت.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-versch-n2",
@@ -11553,7 +11642,8 @@
           "die Stühler"
         ],
         "answer": "die Stühle",
-        "explanationAr": "‎-e مع إمالة u ← ü: die Stühle."
+        "explanationAr": "‎-e مع إمالة u ← ü: die Stühle.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-plural-n2",
@@ -11617,7 +11707,8 @@
           "die Fräuen"
         ],
         "answer": "die Frauen",
-        "explanationAr": "المؤنث ‎-(e)n بلا إمالة: die Frauen."
+        "explanationAr": "المؤنث ‎-(e)n بلا إمالة: die Frauen.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-plural-n7",
@@ -11628,7 +11719,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       }
     ],
     "verify": [
@@ -11760,7 +11852,8 @@
           "im"
         ],
         "answer": "am",
-        "explanationAr": "الأيام ← ‎am: am Montag."
+        "explanationAr": "الأيام ← ‎am: am Montag.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a1-zeitpraep-n2",
@@ -11832,7 +11925,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       }
     ],
     "verify": [
@@ -11960,7 +12054,8 @@
           "dass"
         ],
         "answer": "aber",
-        "explanationAr": "تضاد مع فعل ثانٍ ← ‎aber (لا ‎weil!)."
+        "explanationAr": "تضاد مع فعل ثانٍ ← ‎aber (لا ‎weil!).",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-neben-n2",
@@ -12032,7 +12127,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       }
     ],
     "verify": [
@@ -12157,7 +12253,8 @@
           "Dieses"
         ],
         "answer": "Dieser",
-        "explanationAr": "فاعل مذكر ← ‎Dieser."
+        "explanationAr": "فاعل مذكر ← ‎Dieser.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-demo-n2",
@@ -12179,7 +12276,8 @@
           "Jeden"
         ],
         "answer": "Jedes",
-        "explanationAr": "Kind محايد + مفرد ← ‎Jedes."
+        "explanationAr": "Kind محايد + مفرد ← ‎Jedes.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "a2-demo-n4",
@@ -12230,7 +12328,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       }
     ],
     "verify": [
@@ -12606,7 +12705,8 @@
           "dass"
         ],
         "answer": "um",
-        "explanationAr": "الفاعل نفسه ← ‎um…zu."
+        "explanationAr": "الفاعل نفسه ← ‎um…zu.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-absicht-n2",
@@ -12670,7 +12770,8 @@
           "zu anfangen"
         ],
         "answer": "anzufangen",
-        "explanationAr": "المنفصل ينقسم حول ‎zu: an|zu|fangen."
+        "explanationAr": "المنفصل ينقسم حول ‎zu: an|zu|fangen.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-absicht-n7",
@@ -12681,7 +12782,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       }
     ],
     "verify": [
@@ -12809,7 +12911,8 @@
           "würde"
         ],
         "answer": "hätte",
-        "explanationAr": "‎lernen من أفعال ‎haben ← ‎hätte."
+        "explanationAr": "‎lernen من أفعال ‎haben ← ‎hätte.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-konj2-vergangenheit-n2",
@@ -12821,7 +12924,8 @@
           "würde"
         ],
         "answer": "wäre",
-        "explanationAr": "‎gehen من أفعال ‎sein ← ‎wäre."
+        "explanationAr": "‎gehen من أفعال ‎sein ← ‎wäre.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b1-konj2-vergangenheit-n3",
@@ -12882,7 +12986,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       }
     ],
     "verify": [
@@ -13005,7 +13110,8 @@
           "Denn"
         ],
         "answer": "Wenngleich",
-        "explanationAr": "‎obwohl الراقية ← ‎wenngleich + فعل في النهاية."
+        "explanationAr": "‎obwohl الراقية ← ‎wenngleich + فعل في النهاية.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-textkonnektoren-n2",
@@ -13068,7 +13174,8 @@
           "Hingegen"
         ],
         "answer": "Zwar",
-        "explanationAr": "‎zwar…aber للإقرار مع التضاد."
+        "explanationAr": "‎zwar…aber للإقرار مع التضاد.",
+        "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
         "id": "b2-textkonnektoren-n7",
@@ -13079,7 +13186,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
       }
     ],
     "verify": [

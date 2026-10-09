@@ -202,9 +202,13 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
                 {i + 1}.
               </span>{" "}
               <De>{ex.promptDe}</De>
-              {ex.promptAr && (
+              {ex.promptAr ? (
                 <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
                   {ex.promptAr}
+                </div>
+              ) : (
+                <div style={{ fontSize: "0.8rem", color: "var(--color-ink3)", marginTop: "0.2rem" }}>
+                  {ex.type === "mc" ? "اختر الإجابة الصحيحة." : ex.type === "fill" ? "اكتب الكلمة الناقصة." : ex.type === "translate" ? "ترجم إلى الألمانية." : ex.type === "truefalse" ? "هل الجملة صحيحة؟" : ex.type === "dictation" ? "اسمع واكتب ما سمعته." : ex.type === "umformung" ? "حوّل/صُغ الجملة حسب المطلوب." : ex.type === "order" ? "رتّب الكلمات لتكوين جملة صحيحة." : ""}
                 </div>
               )}
             </div>

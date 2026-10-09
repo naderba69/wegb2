@@ -2,10 +2,12 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navigation from "@/components/akademie/Navigation";
 import { UiAppShell } from "@/components/dirb/DesignSystem";
+import RegisterSW from "@/components/RegisterSW";
 
 export const metadata: Metadata = {
   title: "طريقي إلى B2 — Mein Weg bis B2",
   description: "خطة عربية تفاعلية لتعلّم الألمانية من A0 إلى B2، مع حفظ التقدّم في متصفحك.",
+  manifest: "/manifest.webmanifest",
 };
 
 export const viewport: Viewport = {
@@ -27,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             طريقي إلى B2 · خطتك وتقدّمك محفوظان في هذا المتصفح.
           </footer>
         </UiAppShell>
+        <RegisterSW />
       </body>
     </html>
   );
