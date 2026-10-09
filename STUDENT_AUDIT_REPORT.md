@@ -108,7 +108,15 @@
 
 ---
 
-## 7. فحص وضع الإنتاج (SSR)
+## 7. إضافات PWA والـ metadata
+
+- أُضيف `app/manifest.ts` (Web App Manifest) باسم «طريقي إلى B2 — Mein Weg bis B2» مع أيقونة SVG، لغة عربية، اتجاه RTL، شاشة مستقلة، ألوان الموقع.
+- أُضيف `app/robots.ts` للسماح بالفهرسة.
+- البناء يُصدِر الآن `/manifest.webmanifest` و`/robots.txt` ثابتين (200 OK).
+
+---
+
+## 8. فحص وضع الإنتاج (SSR)
 
 بعد بناء نظيف (`rm -rf .next && npm run build`)، شُغّل `next start` على المنفذ 3001 وفُحِصَت جميع المسارات:
 
