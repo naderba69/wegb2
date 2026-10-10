@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 D_PATH = ROOT / "content/dialogues.json"
 D = json.loads(D_PATH.read_text(encoding="utf-8"))
 
-# Note: A0 dialogues use "sp" for speaker, not "who". Locked.
+# A0 dialogue lines follow the application DialogLine schema: who/de/ar. The transcript is locked.
 FIXES: dict[str, dict[int, str]] = {
     "d-a0-01": {
         2: "مَنْ يَقول «سعيدة بلقائك»؟",  # Wer sagt «Freut mich»?
@@ -48,7 +48,7 @@ if applied > EXPECTED_FIXES:
 for did in FIXES:
     dlg = by_id[did]
     for ln in dlg["lines"]:
-        assert "de" in ln and "ar" in ln and "sp" in ln and "who" not in ln
+        assert set(ln) == {"who", "de", "ar"} and ln["who"] in {"A", "B"}
     for q in dlg["questions"]:
         assert q.get("promptDe") and q.get("answer") and isinstance(q.get("options"), list)
 

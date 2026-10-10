@@ -196,12 +196,12 @@ scope = []
 units = lt = qt = dt = 0
 for did in SCOPE:
     dlg = by[did]; lines = dlg["lines"]; qs = dlg["questions"]; dc = dlg.get("dictation") or []
-    lu = sum(len([k for k in ln if k in ("sp", "de", "ar")]) for ln in lines)
+    lu = sum(len([k for k in ln if k in ("who", "de", "ar")]) for ln in lines)
     qu = sum(len(q) for q in qs); u = 4 + lu + qu + len(dc)
     units += u; lt += len(lines); qt += len(qs); dt += len(dc)
     scope.append({"id": did, "level": dlg["level"], "titleDe": dlg["titleDe"], "titleAr": dlg["titleAr"],
                   "lines": len(lines), "questions": len(qs), "dictation": len(dc), "units": u,
-                  "hasWaisenField": "waisen" in dlg, "speakers": sorted({ln["sp"] for ln in lines})})
+                  "hasWaisenField": "waisen" in dlg, "speakers": sorted({ln["who"] for ln in lines})})
 
 ah = []
 def walk(n):
