@@ -51,7 +51,7 @@ export interface VocabCard {
   de: string;
   ar: string;
   pos?: string;
-  /** تفصيل النوع المحفوظ من الوسم القديم (unregelmäßig، ‏+Dativ …) — يعرض ولا يصفَّى به */
+  /** تفصيل النوع المحفوظ من الوسم القديم (unregelmäßig، +Dativ …) — يعرض ولا يصفَّى به */
   posInfo?: string;
   /** مرادفات مدققة (R29) */
   syn?: string[];

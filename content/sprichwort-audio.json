@@ -1,66 +1,66 @@
 {
- "spr-morgenstunde": {
-  "id": "spr-morgenstunde",
-  "file": "/audio/sprichwort/s-morgenstunde.mp3",
-  "bytes": 15482,
-  "voice": "voice-01",
-  "de": "Morgenstunde hat Gold im Munde",
-  "ar": "الصباحُ شاحذٌ للهمم"
- },
- "spr-grube": {
-  "id": "spr-grube",
-  "file": "/audio/sprichwort/s-grube.mp3",
-  "bytes": 25513,
-  "voice": "voice-01",
-  "de": "Wer anderen eine Grube gräbt, fällt selbst hinein",
-  "ar": "من حفرَ حفرةً لأخيهِ وقعَ فيها"
- },
- "spr-regen": {
-  "id": "spr-regen",
-  "file": "/audio/sprichwort/s-regen.mp3",
-  "bytes": 16318,
-  "voice": "voice-01",
-  "de": "Nach dem Regen scheint die Sonne",
-  "ar": "بعدَ الضيقِ الفرج"
- },
- "spr-fleiss": {
-  "id": "spr-fleiss",
-  "file": "/audio/sprichwort/s-fleiss.mp3",
-  "bytes": 13810,
-  "voice": "voice-01",
-  "de": "Ohne Fleiß kein Preis",
-  "ar": "من طلبَ العُلا سهرَ الليالي"
- },
- "spr-brot": {
-  "id": "spr-brot",
-  "file": "/audio/sprichwort/s-brot.mp3",
-  "bytes": 13810,
-  "voice": "voice-01",
-  "de": "Altes Brot ist nicht hart",
-  "ar": "الخبزُ الجافُّ نعمة"
- },
- "spr-spaet": {
-  "id": "spr-spaet",
-  "file": "/audio/sprichwort/s-spaet.mp3",
-  "bytes": 10675,
-  "voice": "voice-01",
-  "de": "Besser spät als nie",
-  "ar": "أن تصلَ متأخراً خيرٌ من ألّا تصلَ أبداً"
- },
- "spr-rom": {
-  "id": "spr-rom",
-  "file": "/audio/sprichwort/s-rom.mp3",
-  "bytes": 18199,
-  "voice": "voice-01",
-  "de": "Rom wurde nicht an einem Tag gebaut",
-  "ar": "روما لم تُبنَ في يوم"
- },
- "spr-reden": {
-  "id": "spr-reden",
-  "file": "/audio/sprichwort/s-reden.mp3",
-  "bytes": 20498,
-  "voice": "voice-01",
-  "de": "Reden ist Silber, Schweigen ist Gold",
-  "ar": "إذا كانَ الكلامُ من فضةٍ فالسكوتُ من ذهب"
- }
+  "spr-morgenstunde": {
+    "id": "spr-morgenstunde",
+    "file": "/audio/sprichwort/s-morgenstunde.mp3",
+    "bytes": 15482,
+    "voice": "voice-01",
+    "de": "Morgenstunde hat Gold im Munde",
+    "ar": "الصباحُ شاحذٌ للهمم"
+  },
+  "spr-grube": {
+    "id": "spr-grube",
+    "file": "/audio/sprichwort/s-grube.mp3",
+    "bytes": 25513,
+    "voice": "voice-01",
+    "de": "Wer anderen eine Grube gräbt, fällt selbst hinein",
+    "ar": "من حفرَ حفرةً لأخيهِ وقعَ فيها"
+  },
+  "spr-regen": {
+    "id": "spr-regen",
+    "file": "/audio/sprichwort/s-regen.mp3",
+    "bytes": 16318,
+    "voice": "voice-01",
+    "de": "Nach dem Regen scheint die Sonne",
+    "ar": "بعدَ الضيقِ الفرج"
+  },
+  "spr-fleiss": {
+    "id": "spr-fleiss",
+    "file": "/audio/sprichwort/s-fleiss.mp3",
+    "bytes": 13810,
+    "voice": "voice-01",
+    "de": "Ohne Fleiß kein Preis",
+    "ar": "من طلبَ العُلا سهرَ الليالي"
+  },
+  "spr-brot": {
+    "id": "spr-brot",
+    "file": "/audio/sprichwort/s-brot.mp3",
+    "bytes": 13810,
+    "voice": "voice-01",
+    "de": "Altes Brot ist nicht hart",
+    "ar": "الخبزُ الجافُّ نعمة"
+  },
+  "spr-spaet": {
+    "id": "spr-spaet",
+    "file": "/audio/sprichwort/s-spaet.mp3",
+    "bytes": 10675,
+    "voice": "voice-01",
+    "de": "Besser spät als nie",
+    "ar": "أن تصلَ متأخراً خيرٌ من ألّا تصلَ أبداً"
+  },
+  "spr-rom": {
+    "id": "spr-rom",
+    "file": "/audio/sprichwort/s-rom.mp3",
+    "bytes": 18199,
+    "voice": "voice-01",
+    "de": "Rom wurde nicht an einem Tag gebaut",
+    "ar": "روما لم تُبنَ في يوم"
+  },
+  "spr-reden": {
+    "id": "spr-reden",
+    "file": "/audio/sprichwort/s-reden.mp3",
+    "bytes": 20498,
+    "voice": "voice-01",
+    "de": "Reden ist Silber, Schweigen ist Gold",
+    "ar": "إذا كانَ الكلامُ من فضةٍ فالسكوتُ من ذهب"
+  }
 }

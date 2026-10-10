@@ -1,482 +1,482 @@
 {
- "Hose": {
-  "art": "schluessel",
-  "tipp": "«حوزة»: البنطال حوزتي الواسعة"
- },
- "Kuchen": {
-  "art": "arabisch",
-  "tipp": "«كعكة» — نفسها في العربية تقريباً"
- },
- "Zucker": {
-  "art": "arabisch",
-  "tipp": "«سكر» — استعارتها العربية من جذور أوروبية/فارسية"
- },
- "Semmel": {
-  "art": "schluessel",
-  "tipp": "«سمّة»: الرغيف يشبه السموسة"
- },
- "Milch": {
-  "art": "schluessel",
-  "tipp": "تُنطق «ميلِش» = مليح أن تشرب الحليب"
- },
- "Tisch": {
-  "art": "schluessel",
-  "tipp": "«طشت» على الطاولة"
- },
- "Schule": {
-  "art": "schluessel",
-  "tipp": "«شولة»: المدرسة تبدأ بشولة من الواجبات"
- },
- "Arbeit": {
-  "art": "schluessel",
-  "tipp": "«أرْبايت» فيها «أربط» — العمل يربطني"
- },
- "Freund": {
-  "art": "schluessel",
-  "tipp": "«فروند» قريبة من friend"
- },
- "Butter": {
-  "art": "arabisch",
-  "tipp": "«زبدة/بتر» — Butter على الخبز صباحاً"
- },
- "Kaffee": {
-  "art": "arabisch",
-  "tipp": "«قهوة» — أصل الكلمة عربي عالمي"
- },
- "Karte": {
-  "art": "schluessel",
-  "tipp": "«كارتة»: تفتح الطريق (خريطة/بطاقة)"
- },
- "Name": {
-  "art": "schluessel",
-  "tipp": "قريبة من name/name — نفس الجذر"
- },
- "Frage": {
-  "art": "schluessel",
-  "tipp": "كل سؤال فيه «فراغ» يحتاج جواباً"
- },
- "Antwort": {
-  "art": "schluessel",
-  "tipp": "تنتهي بـ wort: الجواب كلمة"
- },
- "Straße": {
-  "art": "schluessel",
-  "tipp": "«شطارة» في الشارع Straße"
- },
- "Wasser": {
-  "art": "schluessel",
-  "tipp": "«واصر» يشبه «وَسَع» — الماء يتمدد بالتجمد"
- },
- "Feuer": {
-  "art": "schluessel",
-  "tipp": "«فوير» قريبة من fire"
- },
- "Freiheit": {
-  "art": "schluessel",
-  "tipp": "frei+heit: heit = نهاية الحرية المؤنثة"
- },
- "Gesundheit": {
-  "art": "schluessel",
-  "tipp": "يقولونها عند العطاس: صحة!"
- },
- "Wohnung": {
-  "art": "schluessel",
-  "tipp": "-ung مؤنثة: الشقة «فوق» المنزل"
- },
- "Küche": {
-  "art": "schluessel",
-  "tipp": "«كوخة»: الكوخة فيها المطبخ"
- },
- "Schlafzimmer": {
-  "art": "geschichte",
-  "tipp": "schlafen+zimmer = زمرة النوم"
- },
- "Bahnhof": {
-  "art": "geschichte",
-  "tipp": "«با-هن-هوف»: فناء القطار (hof=فناء)"
- },
- "Fahrkarte": {
-  "art": "geschichte",
-  "tipp": "fahren+karte = كارطة السفر"
- },
- "Gepäck": {
-  "art": "schluessel",
-  "tipp": "كل الحقائب «قفّة» واحدة"
- },
- "Reservierung": {
-  "art": "schluessel",
-  "tipp": "-ung die: الحجز مؤنث حتى لو حجزتَ أنت"
- },
- "Verspätung": {
-  "art": "schluessel",
-  "tipp": "-ung die: التأخير أنثى منظّمة"
- },
- "Abendessen": {
-  "art": "geschichte",
-  "tipp": "abend+essen = أكل المساء"
- },
- "Frühstück": {
-  "art": "geschichte",
-  "tipp": "früh+stück = القطعة الباكرة"
- },
- "Wochenende": {
-  "art": "geschichte",
-  "tipp": "wochen+ende = نهاية الأسبوع"
- },
- "Familie": {
-  "art": "schluessel",
-  "tipp": "-ie مؤنث: العائلة أولاً"
- },
- "Geschwister": {
-  "art": "schluessel",
-  "tipp": "ge-…-er جمع جماعي: الإخوة سوية"
- },
- "Kind": {
-  "art": "schluessel",
-  "tipp": "kind/kid — طفل بالجذر نفسه"
- },
- "Lehrer": {
-  "art": "schluessel",
-  "tipp": "-er للمؤنث Lehrerin: مدرّس ومدرّسة"
- },
- "Schwester": {
-  "art": "schluessel",
-  "tipp": "«شفتة» بالكسر: الأخت تشفّ على الطعام"
- },
- "Bruder": {
-  "art": "schluessel",
-  "tipp": "«برودر» قريبة من brother"
- },
- "Krankenhaus": {
-  "art": "geschichte",
-  "tipp": "krank(مريض)+haus = بيت المرضى"
- },
- "Arzt": {
-  "art": "schluessel",
-  "tipp": "«أرْصَت»: الطبيب يرصّ العظام"
- },
- "Zahnarzt": {
-  "art": "geschichte",
-  "tipp": "Zahn(سنّ)+arzt = طبيب الأسنان"
- },
- "Medizin": {
-  "art": "schluessel",
-  "tipp": "-in مؤنثة: الدواء/الطب"
- },
- "Apotheke": {
-  "art": "schluessel",
-  "tipp": "-e غالباً مؤنث: العطّارة الأوروبية"
- },
- "Rechnung": {
-  "art": "schluessel",
-  "tipp": "-ung die: الفاتورة تُنذر (مؤنثة)"
- },
- "Angebot": {
-  "art": "schluessel",
-  "tipp": "Ge-…-t: العرض مطروح على الرفّ"
- },
- "Geschäft": {
-  "art": "schluessel",
-  "tipp": "-t: المحلّ وGeschäfte جمعه"
- },
- "Umwelt": {
-  "art": "geschichte",
-  "tipp": "um(حول)+welt(عالم) = ما حول العالم"
- },
- "Wetter": {
-  "art": "schluessel",
-  "tipp": "«وتر»: الجوّ وتر ينغرز ويتحوّل"
- },
- "Frühling": {
-  "art": "schluessel",
-  "tipp": "früh(باكر)+ling = البادر = الربيع"
- },
- "Sommer": {
-  "art": "schluessel",
-  "tipp": "قريبة من summer: حرّ سومّر"
- },
- "Herbst": {
-  "art": "schluessel",
-  "tipp": "«هربست»: من يحصد يهرب بالحبوب"
- },
- "Winter": {
-  "art": "schluessel",
-  "tipp": "قريبة من winter"
- },
- "Urlaub": {
-  "art": "schluessel",
-  "tipp": "«أورلوب»: الإجازة تُعطى lob (مديحاً)"
- },
- "Reise": {
-  "art": "schluessel",
-  "tipp": "«رايزة»: الرائعة هي الرحلة"
- },
- "Hotel": {
-  "art": "schluessel",
-  "tipp": "عالمية hotel"
- },
- "Stadt": {
-  "art": "schluessel",
-  "tipp": "«شتات»: المدينة تشتّت الناس في أحيائها"
- },
- "Land": {
-  "art": "schluessel",
-  "tipp": "land = أرض ودولة معاً"
- },
- "Bibliothek": {
-  "art": "schluessel",
-  "tipp": "-thek مؤنثة: المكتبة"
- },
- "Universität": {
-  "art": "schluessel",
-  "tipp": "-tät مؤنثة دائماً"
- },
- "Studium": {
-  "art": "schluessel",
-  "tipp": "-um محايد كـ Studium/Büro"
- },
- "Prüfung": {
-  "art": "schluessel",
-  "tipp": "-ung die: الامتحان محاكمة مؤنثة"
- },
- "Zeugnis": {
-  "art": "schluessel",
-  "tipp": "zeug(أداة/شهادة)+nis: الشهادة سلاحك"
- },
- "Lebenslauf": {
-  "art": "geschichte",
-  "tipp": "leben(حياة)+lauf(جري) = جري الحياة"
- },
- "Bewerbung": {
-  "art": "schluessel",
-  "tipp": "-ung die: طلب التوظيف مكتوب مؤنث"
- },
- "Arbeitgeber": {
-  "art": "geschichte",
-  "tipp": "arbeit+geber = بائع العمل = صاحب العمل"
- },
- "Arbeitnehmer": {
-  "art": "geschichte",
-  "tipp": "arbeit+nehmer = آخذ العمل = الموظّف"
- },
- "Gehalt": {
-  "art": "schluessel",
-  "tipp": "من halten = ما يُمسكك = الراتب"
- },
- "Vertrag": {
-  "art": "schluessel",
-  "tipp": "Ver+trag = ينقل الحقوق = عقد"
- },
- "Kündigung": {
-  "art": "schluessel",
-  "tipp": "-ung die: الإنذار بالإنهاء مكتوب"
- },
- "Erfahrung": {
-  "art": "schluessel",
-  "tipp": "-ung die: الخبرة مؤنثة تتراكم"
- },
- "Fähigkeit": {
-  "art": "schluessel",
-  "tipp": "-keit die: القدرة موهبة مؤنثة"
- },
- "Kenntnis": {
-  "art": "schluessel",
-  "tipp": "-nis مؤنثة (كل -nis!): المعرفة"
- },
- "Wissen": {
-  "art": "schluessel",
-  "tipp": "wissen = علم (اسم محايد)"
- },
- "Meinung": {
-  "art": "schluessel",
-  "tipp": "-ung die: الرأي مُعلن مؤنث"
- },
- "Entscheidung": {
-  "art": "schluessel",
-  "tipp": "-ung die: القرار يُتّخذ كتابةً"
- },
- "Verantwortung": {
-  "art": "schluessel",
-  "tipp": "-ung die: المسؤولية تُحتمل"
- },
- "Regierung": {
-  "art": "schluessel",
-  "tipp": "-ung die: الحكومة كراسي مؤنثة"
- },
- "Gesellschaft": {
-  "art": "schluessel",
-  "tipp": "-schaft die: كل -schaft مؤنثة"
- },
- "Wirtschaft": {
-  "art": "schluessel",
-  "tipp": "-schaft: الاقتصاد بيت مؤنث كامل"
- },
- "Umweltverschmutzung": {
-  "art": "geschichte",
-  "tipp": "umwelt+schmutz(وسخ)+ung = تلّوث البيئة"
- },
- "Klimawandel": {
-  "art": "geschichte",
-  "tipp": "klima+wandel(تحوّل) = تغيّر المناخ"
- },
- "Krankenkasse": {
-  "art": "geschichte",
-  "tipp": "kranken+kasse = خزينة المرضى = تأمين صحي"
- },
- "Behandlung": {
-  "art": "schluessel",
-  "tipp": "-ung: العلاج مُسطَّر خطوة بخطوة"
- },
- "Vorschlag": {
-  "art": "geschichte",
-  "tipp": "vor(أمام)+schlag(ضربة) = ضربة مقترحة"
- },
- "Nachteil": {
-  "art": "geschichte",
-  "tipp": "nach(بعد)+teil = الجزء المتأخر = ميزة سلبية"
- },
- "Vorteil": {
-  "art": "geschichte",
-  "tipp": "vor(أمام)+teil = الجزء المتقدّم = ميزة"
- },
- "Chance": {
-  "art": "schluessel",
-  "tipp": "فرنسية مألوفة — الفرصة تُلتقط"
- },
- "Herausforderung": {
-  "art": "geschichte",
-  "tipp": "heraus(للخارج)+forderung(مطالبة) = تحدٍّ يُنتزع"
- },
- "Fortschritt": {
-  "art": "geschichte",
-  "tipp": "fort(بعيد)+schritt(خطوة) = خطوة إلى الأمام"
- },
- "Forschung": {
-  "art": "schluessel",
-  "tipp": "-ung: البحث مؤنث جادّ"
- },
- "Konsequenz": {
-  "art": "schluessel",
-  "tipp": "-enz die: النتيجة المنطقية مؤنثة"
- },
- "Zusammenhang": {
-  "art": "geschichte",
-  "tipp": "zusammen(معاً)+hang(تعلّق) = ارتباط"
- },
- "Maßstab": {
-  "art": "geschichte",
-  "tipp": "maß(مقياس)+stab(عصا) = عصا القياس"
- },
- "Urteilskraft": {
-  "art": "geschichte",
-  "tipp": "urteil(حكم)+kraft(قوة) = قوة الحكم"
- },
- "Voraussetzung": {
-  "art": "schluessel",
-  "tipp": "-ung: الشرط المسبق مؤنث"
- },
- "Schlussfolgerung": {
-  "art": "geschichte",
-  "tipp": "schluss(نهاية)+folgerung(نتيجة) = استنتاج"
- },
- "Prävention": {
-  "art": "schluessel",
-  "tipp": "-ion die: الوقاية مؤنثة دائمة"
- },
- "Quelle": {
-  "art": "schluessel",
-  "tipp": "-e غالباً die: العين تنبع"
- },
- "Schlagzeile": {
-  "art": "geschichte",
-  "tipp": "schlag(ضربة)+zeile(سطر) = السطر الصاعق"
- },
- "Kommentar": {
-  "art": "schluessel",
-  "tipp": "-ar غالباً der: التعليق معلَّق مذكّر"
- },
- "Umfrage": {
-  "art": "geschichte",
-  "tipp": "um(حول)+frage = سؤال يدار = استفتاء"
- },
- "Zeitung": {
-  "art": "schluessel",
-  "tipp": "-ung die: الجريدة مؤنثة الصباح"
- },
- "Internet": {
-  "art": "schluessel",
-  "tipp": "net = شبكة: الإنترنت شبكة عالمية (das)"
- },
- "Mädchen": {
-  "art": "schluessel",
-  "tipp": "das Mädchen — صيغةُ التصغيرِ -chen/-lein محايدةٌ دائمًا مهما كانَ المعنى: das Brötchen، das Häuschen. الجنسُ يحكمُهُ الختمُ لا صاحبُهُ."
- },
- "Militär": {
-  "art": "geschichte",
-  "tipp": "das Militär — الخواتمُ اللاتينيةُ -är/-ment/-at محايدة: das Experiment، das Parlament، das Militär؛ ومؤنَّثُ العائلةِ ما خُتِمَ بـ-tät: die Universität."
- },
- "Polizei": {
-  "art": "arabisch",
-  "tipp": "die Polizei — كلُّ خاتمةِ -ei مؤنَّثٌ استثناءهُ الوحيدُ المعروفُ der Brei (العصيدة): die Polizei، die Bastelei. احفظِ القاعدةَ واحفظِ العصيدةَ معها."
- },
- "Löffel": {
-  "art": "farbe",
-  "tipp": "der Löffel — -el الغالبةُ ذكر: der Löffel، der Apfel، der Vogel (وبالجمعِ die Vögel بنقلةٍ صوتية)؛ الأنثى في -el حالاتٌ محفوظة: die Gabel، die Gabel، die Schüssel."
- },
- "Gericht": {
-  "art": "geschichte",
-  "tipp": "das Gericht — كلمةٌ واحدةٌ وجهان: الطبقُ والقاعةُ معًا محايدان: das Gericht kommt aus der Küche und aus dem Recht؛ الجمعُ die Gerichte بـ-e بلا نقلة."
- },
- "Gebäude": {
-  "art": "schluessel",
-  "tipp": "das Gebäude — إطارُ ge- … -e محايد: das Gemüse، das Gefühl، das Gebäude؛ والجمعُ لا يزيدُ شيئًا على المفرد: die Gebäude كما هي — لا «Gebäuden»."
- },
- "Geschichte": {
-  "art": "arabisch",
-  "tipp": "die Geschichte — مؤنَّثٌ وإن بدا حكايةً تُروى، والجمعُ بـ-en: die Geschichten؛ اللاحقةُ -e لا تحذفُ أبدًا من اللفظ: « zwei Geschichte» خطأ فادح."
- },
- "Kühlschrank": {
-  "art": "geschichte",
-  "tipp": "der Kühlschrank — ليس «kalt» الباردَ بل kühl المائلَ للبرودة: kühl + der Schrank؛ والجنسُ لآخرِ عنصرٍ من المركَّب؛ الجمعُ ينقلُ الشقَّ الثاني: die Kühlschränke."
- },
- "Handschuh": {
-  "art": "farbe",
-  "tipp": "der Handschuh — حذاءُ اليد: der Schuh يحكمُ der؛ لكنَّ الجمعَ -e بلا نقلةٍ صوتيةٍ رغم ما يوحي: die Handschuhe — لا أُمlaut فيه ولا نون."
- },
- "Flugzeug": {
-  "art": "schluessel",
-  "tipp": "das Flugzeug — ختمُ -zeug لآلاتِ الصُّنعِ محايد: das Werkzeug، das Feuerzeug، das Flugzeug؛ والجمعُ die Flugzeuge بـ-e صريح."
- },
- "Student": {
-  "art": "arabisch",
-  "tipp": "der Student — عائلةُ -ent/-ant تنحني بالنونِ في كلِّ حالٍ غيرِ الرفعِ المفرد: den Studenten، dem Studenten، die Studenten؛ الطالبُ لا يسقطُ نونَهُ أبدًا إلا في «der Student» الأولى."
- },
- "Herz": {
-  "art": "geschichte",
-  "tipp": "das Herz — قلبٌ لا يسلمُ من النونِ إلا في الرفعِ الواحد: des Herzens، dem Herzen، die Herzen؛ أي: -ens للإضافةِ المفردةِ و-n لجمعِ الداتيفِ لا غير."
- },
- "Staat": {
-  "art": "farbe",
-  "tipp": "der Staat — في الإضافةِ يلحقُهُ es وحده: des Staates؛ والمنصوبُ المفردُ عارٍ: den Staat بلا نونٍ ولا سين؛ والجمعُ -en صريحٌ: die Staaten وليس die Staate."
- },
- "Gift": {
-  "art": "arabisch",
-  "tipp": "das Gift — الصديقُ المزيفُ القاتل: Gift بالألمانيةِ سُمٌّ لا هدية؛ إن أردتَ العطاءَ فdie Gabe أو das Geschenk، وGiftُ وحدهُ يمضي إلى المحكمة: «Vergiftung»."
- },
- "Steuer": {
-  "art": "schluessel",
-  "tipp": "die Steuer — الضريبةُ أنثى أبدًا؛ لكنْ لنفسِ اللفظِ وجهٌ محايدٌ في السيارة: das Steuer (عجلةُ القيادة). ادفعْ die واقُدْ das، وأما الفرملُ فلهُ اسمٌ آخر: die Bremse."
- },
- "Frist": {
-  "art": "geschichte",
-  "tipp": "die Frist — المهلةُ أنثى كـ«المُدَّة»: die Frist، plural die Fristen؛ انقضتْ تقول: Die Frist ist abgelaufen — ولا تُذَكَّرُ abgelaufen مع أنثاها: Die Frist ist abgelaufen."
- },
- "Bescheinigung": {
-  "art": "arabisch",
-  "tipp": "die Bescheinigung — ختمُ -ung أنثى بالمطلقِ بلا استثناءٍ واحد: die Anmeldung، die Kündigung، die Bescheinigung؛ كلُّ ورقةٍ إداريةٍ تقريبًا -ung فضعِ التاجَ die على جبينِها."
- },
- "Macht": {
-  "art": "farbe",
-  "tipp": "die Macht — خواتمُ -cht مؤنَّثٌ غالبًا: die Nacht، die Schacht، die Macht؛ وجمعُها بنقلة: die Mächte. استثناءٌ حائرٌ يجبُ حفظُهُ: der Bericht مذكرٌ رغم -cht — لأنَّهُ من « berichten » المشتقِّ بـge-."
- }
+  "Hose": {
+    "art": "schluessel",
+    "tipp": "«حوزة»: البنطال حوزتي الواسعة"
+  },
+  "Kuchen": {
+    "art": "arabisch",
+    "tipp": "«كعكة» — نفسها في العربية تقريباً"
+  },
+  "Zucker": {
+    "art": "arabisch",
+    "tipp": "«سكر» — استعارتها العربية من جذور أوروبية/فارسية"
+  },
+  "Semmel": {
+    "art": "schluessel",
+    "tipp": "«سمّة»: الرغيف يشبه السموسة"
+  },
+  "Milch": {
+    "art": "schluessel",
+    "tipp": "تُنطق «ميلِش» = مليح أن تشرب الحليب"
+  },
+  "Tisch": {
+    "art": "schluessel",
+    "tipp": "«طشت» على الطاولة"
+  },
+  "Schule": {
+    "art": "schluessel",
+    "tipp": "«شولة»: المدرسة تبدأ بشولة من الواجبات"
+  },
+  "Arbeit": {
+    "art": "schluessel",
+    "tipp": "«أرْبايت» فيها «أربط» — العمل يربطني"
+  },
+  "Freund": {
+    "art": "schluessel",
+    "tipp": "«فروند» قريبة من friend"
+  },
+  "Butter": {
+    "art": "arabisch",
+    "tipp": "«زبدة/بتر» — Butter على الخبز صباحاً"
+  },
+  "Kaffee": {
+    "art": "arabisch",
+    "tipp": "«قهوة» — أصل الكلمة عربي عالمي"
+  },
+  "Karte": {
+    "art": "schluessel",
+    "tipp": "«كارتة»: تفتح الطريق (خريطة/بطاقة)"
+  },
+  "Name": {
+    "art": "schluessel",
+    "tipp": "قريبة من name/name — نفس الجذر"
+  },
+  "Frage": {
+    "art": "schluessel",
+    "tipp": "كل سؤال فيه «فراغ» يحتاج جواباً"
+  },
+  "Antwort": {
+    "art": "schluessel",
+    "tipp": "تنتهي بـ wort: الجواب كلمة"
+  },
+  "Straße": {
+    "art": "schluessel",
+    "tipp": "«شطارة» في الشارع Straße"
+  },
+  "Wasser": {
+    "art": "schluessel",
+    "tipp": "«واصر» يشبه «وَسَع» — الماء يتمدد بالتجمد"
+  },
+  "Feuer": {
+    "art": "schluessel",
+    "tipp": "«فوير» قريبة من fire"
+  },
+  "Freiheit": {
+    "art": "schluessel",
+    "tipp": "frei+heit: heit = نهاية الحرية المؤنثة"
+  },
+  "Gesundheit": {
+    "art": "schluessel",
+    "tipp": "يقولونها عند العطاس: صحة!"
+  },
+  "Wohnung": {
+    "art": "schluessel",
+    "tipp": "-ung مؤنثة: الشقة «فوق» المنزل"
+  },
+  "Küche": {
+    "art": "schluessel",
+    "tipp": "«كوخة»: الكوخة فيها المطبخ"
+  },
+  "Schlafzimmer": {
+    "art": "geschichte",
+    "tipp": "schlafen+zimmer = زمرة النوم"
+  },
+  "Bahnhof": {
+    "art": "geschichte",
+    "tipp": "«با-هن-هوف»: فناء القطار (hof=فناء)"
+  },
+  "Fahrkarte": {
+    "art": "geschichte",
+    "tipp": "fahren+karte = كارطة السفر"
+  },
+  "Gepäck": {
+    "art": "schluessel",
+    "tipp": "كل الحقائب «قفّة» واحدة"
+  },
+  "Reservierung": {
+    "art": "schluessel",
+    "tipp": "-ung die: الحجز مؤنث حتى لو حجزتَ أنت"
+  },
+  "Verspätung": {
+    "art": "schluessel",
+    "tipp": "-ung die: التأخير أنثى منظّمة"
+  },
+  "Abendessen": {
+    "art": "geschichte",
+    "tipp": "abend+essen = أكل المساء"
+  },
+  "Frühstück": {
+    "art": "geschichte",
+    "tipp": "früh+stück = القطعة الباكرة"
+  },
+  "Wochenende": {
+    "art": "geschichte",
+    "tipp": "wochen+ende = نهاية الأسبوع"
+  },
+  "Familie": {
+    "art": "schluessel",
+    "tipp": "-ie مؤنث: العائلة أولاً"
+  },
+  "Geschwister": {
+    "art": "schluessel",
+    "tipp": "ge-…-er جمع جماعي: الإخوة سوية"
+  },
+  "Kind": {
+    "art": "schluessel",
+    "tipp": "kind/kid — طفل بالجذر نفسه"
+  },
+  "Lehrer": {
+    "art": "schluessel",
+    "tipp": "-er للمؤنث Lehrerin: مدرّس ومدرّسة"
+  },
+  "Schwester": {
+    "art": "schluessel",
+    "tipp": "«شفتة» بالكسر: الأخت تشفّ على الطعام"
+  },
+  "Bruder": {
+    "art": "schluessel",
+    "tipp": "«برودر» قريبة من brother"
+  },
+  "Krankenhaus": {
+    "art": "geschichte",
+    "tipp": "krank(مريض)+haus = بيت المرضى"
+  },
+  "Arzt": {
+    "art": "schluessel",
+    "tipp": "«أرْصَت»: الطبيب يرصّ العظام"
+  },
+  "Zahnarzt": {
+    "art": "geschichte",
+    "tipp": "Zahn(سنّ)+arzt = طبيب الأسنان"
+  },
+  "Medizin": {
+    "art": "schluessel",
+    "tipp": "-in مؤنثة: الدواء/الطب"
+  },
+  "Apotheke": {
+    "art": "schluessel",
+    "tipp": "-e غالباً مؤنث: العطّارة الأوروبية"
+  },
+  "Rechnung": {
+    "art": "schluessel",
+    "tipp": "-ung die: الفاتورة تُنذر (مؤنثة)"
+  },
+  "Angebot": {
+    "art": "schluessel",
+    "tipp": "Ge-…-t: العرض مطروح على الرفّ"
+  },
+  "Geschäft": {
+    "art": "schluessel",
+    "tipp": "-t: المحلّ وGeschäfte جمعه"
+  },
+  "Umwelt": {
+    "art": "geschichte",
+    "tipp": "um(حول)+welt(عالم) = ما حول العالم"
+  },
+  "Wetter": {
+    "art": "schluessel",
+    "tipp": "«وتر»: الجوّ وتر ينغرز ويتحوّل"
+  },
+  "Frühling": {
+    "art": "schluessel",
+    "tipp": "früh(باكر)+ling = البادر = الربيع"
+  },
+  "Sommer": {
+    "art": "schluessel",
+    "tipp": "قريبة من summer: حرّ سومّر"
+  },
+  "Herbst": {
+    "art": "schluessel",
+    "tipp": "«هربست»: من يحصد يهرب بالحبوب"
+  },
+  "Winter": {
+    "art": "schluessel",
+    "tipp": "قريبة من winter"
+  },
+  "Urlaub": {
+    "art": "schluessel",
+    "tipp": "«أورلوب»: الإجازة تُعطى lob (مديحاً)"
+  },
+  "Reise": {
+    "art": "schluessel",
+    "tipp": "«رايزة»: الرائعة هي الرحلة"
+  },
+  "Hotel": {
+    "art": "schluessel",
+    "tipp": "عالمية hotel"
+  },
+  "Stadt": {
+    "art": "schluessel",
+    "tipp": "«شتات»: المدينة تشتّت الناس في أحيائها"
+  },
+  "Land": {
+    "art": "schluessel",
+    "tipp": "land = أرض ودولة معاً"
+  },
+  "Bibliothek": {
+    "art": "schluessel",
+    "tipp": "-thek مؤنثة: المكتبة"
+  },
+  "Universität": {
+    "art": "schluessel",
+    "tipp": "-tät مؤنثة دائماً"
+  },
+  "Studium": {
+    "art": "schluessel",
+    "tipp": "-um محايد كـ Studium/Büro"
+  },
+  "Prüfung": {
+    "art": "schluessel",
+    "tipp": "-ung die: الامتحان محاكمة مؤنثة"
+  },
+  "Zeugnis": {
+    "art": "schluessel",
+    "tipp": "zeug(أداة/شهادة)+nis: الشهادة سلاحك"
+  },
+  "Lebenslauf": {
+    "art": "geschichte",
+    "tipp": "leben(حياة)+lauf(جري) = جري الحياة"
+  },
+  "Bewerbung": {
+    "art": "schluessel",
+    "tipp": "-ung die: طلب التوظيف مكتوب مؤنث"
+  },
+  "Arbeitgeber": {
+    "art": "geschichte",
+    "tipp": "arbeit+geber = بائع العمل = صاحب العمل"
+  },
+  "Arbeitnehmer": {
+    "art": "geschichte",
+    "tipp": "arbeit+nehmer = آخذ العمل = الموظّف"
+  },
+  "Gehalt": {
+    "art": "schluessel",
+    "tipp": "من halten = ما يُمسكك = الراتب"
+  },
+  "Vertrag": {
+    "art": "schluessel",
+    "tipp": "Ver+trag = ينقل الحقوق = عقد"
+  },
+  "Kündigung": {
+    "art": "schluessel",
+    "tipp": "-ung die: الإنذار بالإنهاء مكتوب"
+  },
+  "Erfahrung": {
+    "art": "schluessel",
+    "tipp": "-ung die: الخبرة مؤنثة تتراكم"
+  },
+  "Fähigkeit": {
+    "art": "schluessel",
+    "tipp": "-keit die: القدرة موهبة مؤنثة"
+  },
+  "Kenntnis": {
+    "art": "schluessel",
+    "tipp": "-nis مؤنثة (كل -nis!): المعرفة"
+  },
+  "Wissen": {
+    "art": "schluessel",
+    "tipp": "wissen = علم (اسم محايد)"
+  },
+  "Meinung": {
+    "art": "schluessel",
+    "tipp": "-ung die: الرأي مُعلن مؤنث"
+  },
+  "Entscheidung": {
+    "art": "schluessel",
+    "tipp": "-ung die: القرار يُتّخذ كتابةً"
+  },
+  "Verantwortung": {
+    "art": "schluessel",
+    "tipp": "-ung die: المسؤولية تُحتمل"
+  },
+  "Regierung": {
+    "art": "schluessel",
+    "tipp": "-ung die: الحكومة كراسي مؤنثة"
+  },
+  "Gesellschaft": {
+    "art": "schluessel",
+    "tipp": "-schaft die: كل -schaft مؤنثة"
+  },
+  "Wirtschaft": {
+    "art": "schluessel",
+    "tipp": "-schaft: الاقتصاد بيت مؤنث كامل"
+  },
+  "Umweltverschmutzung": {
+    "art": "geschichte",
+    "tipp": "umwelt+schmutz(وسخ)+ung = تلّوث البيئة"
+  },
+  "Klimawandel": {
+    "art": "geschichte",
+    "tipp": "klima+wandel(تحوّل) = تغيّر المناخ"
+  },
+  "Krankenkasse": {
+    "art": "geschichte",
+    "tipp": "kranken+kasse = خزينة المرضى = تأمين صحي"
+  },
+  "Behandlung": {
+    "art": "schluessel",
+    "tipp": "-ung: العلاج مُسطَّر خطوة بخطوة"
+  },
+  "Vorschlag": {
+    "art": "geschichte",
+    "tipp": "vor(أمام)+schlag(ضربة) = ضربة مقترحة"
+  },
+  "Nachteil": {
+    "art": "geschichte",
+    "tipp": "nach(بعد)+teil = الجزء المتأخر = ميزة سلبية"
+  },
+  "Vorteil": {
+    "art": "geschichte",
+    "tipp": "vor(أمام)+teil = الجزء المتقدّم = ميزة"
+  },
+  "Chance": {
+    "art": "schluessel",
+    "tipp": "فرنسية مألوفة — الفرصة تُلتقط"
+  },
+  "Herausforderung": {
+    "art": "geschichte",
+    "tipp": "heraus(للخارج)+forderung(مطالبة) = تحدٍّ يُنتزع"
+  },
+  "Fortschritt": {
+    "art": "geschichte",
+    "tipp": "fort(بعيد)+schritt(خطوة) = خطوة إلى الأمام"
+  },
+  "Forschung": {
+    "art": "schluessel",
+    "tipp": "-ung: البحث مؤنث جادّ"
+  },
+  "Konsequenz": {
+    "art": "schluessel",
+    "tipp": "-enz die: النتيجة المنطقية مؤنثة"
+  },
+  "Zusammenhang": {
+    "art": "geschichte",
+    "tipp": "zusammen(معاً)+hang(تعلّق) = ارتباط"
+  },
+  "Maßstab": {
+    "art": "geschichte",
+    "tipp": "maß(مقياس)+stab(عصا) = عصا القياس"
+  },
+  "Urteilskraft": {
+    "art": "geschichte",
+    "tipp": "urteil(حكم)+kraft(قوة) = قوة الحكم"
+  },
+  "Voraussetzung": {
+    "art": "schluessel",
+    "tipp": "-ung: الشرط المسبق مؤنث"
+  },
+  "Schlussfolgerung": {
+    "art": "geschichte",
+    "tipp": "schluss(نهاية)+folgerung(نتيجة) = استنتاج"
+  },
+  "Prävention": {
+    "art": "schluessel",
+    "tipp": "-ion die: الوقاية مؤنثة دائمة"
+  },
+  "Quelle": {
+    "art": "schluessel",
+    "tipp": "-e غالباً die: العين تنبع"
+  },
+  "Schlagzeile": {
+    "art": "geschichte",
+    "tipp": "schlag(ضربة)+zeile(سطر) = السطر الصاعق"
+  },
+  "Kommentar": {
+    "art": "schluessel",
+    "tipp": "-ar غالباً der: التعليق معلَّق مذكّر"
+  },
+  "Umfrage": {
+    "art": "geschichte",
+    "tipp": "um(حول)+frage = سؤال يدار = استفتاء"
+  },
+  "Zeitung": {
+    "art": "schluessel",
+    "tipp": "-ung die: الجريدة مؤنثة الصباح"
+  },
+  "Internet": {
+    "art": "schluessel",
+    "tipp": "net = شبكة: الإنترنت شبكة عالمية (das)"
+  },
+  "Mädchen": {
+    "art": "schluessel",
+    "tipp": "das Mädchen — صيغةُ التصغيرِ -chen/-lein محايدةٌ دائمًا مهما كانَ المعنى: das Brötchen، das Häuschen. الجنسُ يحكمُهُ الختمُ لا صاحبُهُ."
+  },
+  "Militär": {
+    "art": "geschichte",
+    "tipp": "das Militär — الخواتمُ اللاتينيةُ -är/-ment/-at محايدة: das Experiment، das Parlament، das Militär؛ ومؤنَّثُ العائلةِ ما خُتِمَ بـ-tät: die Universität."
+  },
+  "Polizei": {
+    "art": "arabisch",
+    "tipp": "die Polizei — كلُّ خاتمةِ -ei مؤنَّثٌ استثناءهُ الوحيدُ المعروفُ der Brei (العصيدة): die Polizei، die Bastelei. احفظِ القاعدةَ واحفظِ العصيدةَ معها."
+  },
+  "Löffel": {
+    "art": "farbe",
+    "tipp": "der Löffel — -el الغالبةُ ذكر: der Löffel، der Apfel، der Vogel (وبالجمعِ die Vögel بنقلةٍ صوتية)؛ الأنثى في -el حالاتٌ محفوظة: die Gabel، die Gabel، die Schüssel."
+  },
+  "Gericht": {
+    "art": "geschichte",
+    "tipp": "das Gericht — كلمةٌ واحدةٌ وجهان: الطبقُ والقاعةُ معًا محايدان: das Gericht kommt aus der Küche und aus dem Recht؛ الجمعُ die Gerichte بـ-e بلا نقلة."
+  },
+  "Gebäude": {
+    "art": "schluessel",
+    "tipp": "das Gebäude — إطارُ ge- … -e محايد: das Gemüse، das Gefühl، das Gebäude؛ والجمعُ لا يزيدُ شيئًا على المفرد: die Gebäude كما هي — لا «Gebäuden»."
+  },
+  "Geschichte": {
+    "art": "arabisch",
+    "tipp": "die Geschichte — مؤنَّثٌ وإن بدا حكايةً تُروى، والجمعُ بـ-en: die Geschichten؛ اللاحقةُ -e لا تحذفُ أبدًا من اللفظ: « zwei Geschichte» خطأ فادح."
+  },
+  "Kühlschrank": {
+    "art": "geschichte",
+    "tipp": "der Kühlschrank — ليس «kalt» الباردَ بل kühl المائلَ للبرودة: kühl + der Schrank؛ والجنسُ لآخرِ عنصرٍ من المركَّب؛ الجمعُ ينقلُ الشقَّ الثاني: die Kühlschränke."
+  },
+  "Handschuh": {
+    "art": "farbe",
+    "tipp": "der Handschuh — حذاءُ اليد: der Schuh يحكمُ der؛ لكنَّ الجمعَ -e بلا نقلةٍ صوتيةٍ رغم ما يوحي: die Handschuhe — لا أُمlaut فيه ولا نون."
+  },
+  "Flugzeug": {
+    "art": "schluessel",
+    "tipp": "das Flugzeug — ختمُ -zeug لآلاتِ الصُّنعِ محايد: das Werkzeug، das Feuerzeug، das Flugzeug؛ والجمعُ die Flugzeuge بـ-e صريح."
+  },
+  "Student": {
+    "art": "arabisch",
+    "tipp": "der Student — عائلةُ -ent/-ant تنحني بالنونِ في كلِّ حالٍ غيرِ الرفعِ المفرد: den Studenten، dem Studenten، die Studenten؛ الطالبُ لا يسقطُ نونَهُ أبدًا إلا في «der Student» الأولى."
+  },
+  "Herz": {
+    "art": "geschichte",
+    "tipp": "das Herz — قلبٌ لا يسلمُ من النونِ إلا في الرفعِ الواحد: des Herzens، dem Herzen، die Herzen؛ أي: -ens للإضافةِ المفردةِ و-n لجمعِ الداتيفِ لا غير."
+  },
+  "Staat": {
+    "art": "farbe",
+    "tipp": "der Staat — في الإضافةِ يلحقُهُ es وحده: des Staates؛ والمنصوبُ المفردُ عارٍ: den Staat بلا نونٍ ولا سين؛ والجمعُ -en صريحٌ: die Staaten وليس die Staate."
+  },
+  "Gift": {
+    "art": "arabisch",
+    "tipp": "das Gift — الصديقُ المزيفُ القاتل: Gift بالألمانيةِ سُمٌّ لا هدية؛ إن أردتَ العطاءَ فdie Gabe أو das Geschenk، وGiftُ وحدهُ يمضي إلى المحكمة: «Vergiftung»."
+  },
+  "Steuer": {
+    "art": "schluessel",
+    "tipp": "die Steuer — الضريبةُ أنثى أبدًا؛ لكنْ لنفسِ اللفظِ وجهٌ محايدٌ في السيارة: das Steuer (عجلةُ القيادة). ادفعْ die واقُدْ das، وأما الفرملُ فلهُ اسمٌ آخر: die Bremse."
+  },
+  "Frist": {
+    "art": "geschichte",
+    "tipp": "die Frist — المهلةُ أنثى كـ«المُدَّة»: die Frist، plural die Fristen؛ انقضتْ تقول: Die Frist ist abgelaufen — ولا تُذَكَّرُ abgelaufen مع أنثاها: Die Frist ist abgelaufen."
+  },
+  "Bescheinigung": {
+    "art": "arabisch",
+    "tipp": "die Bescheinigung — ختمُ -ung أنثى بالمطلقِ بلا استثناءٍ واحد: die Anmeldung، die Kündigung، die Bescheinigung؛ كلُّ ورقةٍ إداريةٍ تقريبًا -ung فضعِ التاجَ die على جبينِها."
+  },
+  "Macht": {
+    "art": "farbe",
+    "tipp": "die Macht — خواتمُ -cht مؤنَّثٌ غالبًا: die Nacht، die Schacht، die Macht؛ وجمعُها بنقلة: die Mächte. استثناءٌ حائرٌ يجبُ حفظُهُ: der Bericht مذكرٌ رغم -cht — لأنَّهُ من « berichten » المشتقِّ بـge-."
+  }
 }

@@ -14,7 +14,7 @@
         "exampleAr": "مرحباً! كيف حالك؟",
         "level": "A1",
         "tags": [
-          "gruß"
+          "Gruß"
         ],
         "img": "/cards/hallo.png"
       },
@@ -27,7 +27,7 @@
         "exampleAr": "طاب يومك يا سيدة مولر!",
         "level": "A1",
         "tags": [
-          "gruß"
+          "Gruß"
         ],
         "img": "/cards/guten-tag.png"
       },
@@ -40,7 +40,7 @@
         "exampleAr": "إلى اللقاء، حتى الغد!",
         "level": "A1",
         "tags": [
-          "gruß"
+          "Gruß"
         ],
         "img": "/cards/tschuess.png",
         "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
@@ -54,7 +54,7 @@
         "exampleAr": "شكراً على المساعدة!",
         "level": "A1",
         "tags": [
-          "gruß"
+          "Gruß"
         ],
         "img": "/cards/danke.png"
       },
@@ -67,7 +67,7 @@
         "exampleAr": "ماء من فضلك.",
         "level": "A1",
         "tags": [
-          "gruß"
+          "Gruß"
         ],
         "img": "/cards/bitte.png"
       },
@@ -297,7 +297,7 @@
         ],
         "img": "/cards/telefonnummer.png",
         "farbe": "ROT",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Kannst du mir bitte deine Telefonnummer geben?",
         "exampleAr": "هل يمكنك إعطائي رقم هاتفك من فضلك؟",
         "plural": "die Telefonnummern"
@@ -354,7 +354,7 @@
           "zahl"
         ],
         "img": "/cards/zwanzig.png",
-        "aussprache": "w = «ڤ» · z = «تس» · ‏-ig في الآخر = «إش»",
+        "aussprache": "w = «ڤ» · z = «تس» · -ig في الآخر = «إش»",
         "exampleDe": "Die Fahrt dauert zwanzig Minuten mit dem Bus.",
         "exampleAr": "الرحلة تستغرق عشرين دقيقة بالحافلة."
       },
@@ -378,11 +378,11 @@
         "pos": "Wendung",
         "level": "A1",
         "tags": [
-          "gruß"
+          "Gruß"
         ],
         "img": "/cards/wiedersehen.png",
         "aussprache": "ie = «إي» ممدودة · w = «ڤ»",
-        "exampleDe": "Danke für das Gespräch, auf Wiedersehen, Frau Müller!",
+        "exampleDe": "Danke für das Gespräch, Auf Wiedersehen, Frau Müller!",
         "exampleAr": "شكراً على الحديث، إلى اللقاء سيدة مولر!"
       },
       {
@@ -394,7 +394,7 @@
         "pos": "Nomen",
         "level": "A1",
         "tags": [
-          "gruß"
+          "Gruß"
         ],
         "img": "/cards/entschuldigung.png",
         "aussprache": "sch = «ش»",
@@ -504,7 +504,7 @@
         ],
         "img": "/cards/mutter.png",
         "farbe": "ROT",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Meine Mutter kocht sehr gut, besonders Couscous.",
         "exampleAr": "أمي تطبخ جيداً جداً، خاصة الكسكسي."
       },
@@ -521,7 +521,7 @@
         ],
         "img": "/cards/vater.png",
         "farbe": "BLAU",
-        "aussprache": "v = «ف» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "v = «ف» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Mein Vater ist Lehrer und arbeitet in Sfax.",
         "exampleAr": "أبي معلّم ويعمل في صفاقس."
       },
@@ -538,7 +538,7 @@
         ],
         "img": "/cards/bruder.png",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Mein Bruder wohnt noch bei meinen Eltern.",
         "exampleAr": "أخي ما زال يسكن عند والديّ."
       },
@@ -555,7 +555,7 @@
         ],
         "img": "/cards/schwester.png",
         "farbe": "ROT",
-        "aussprache": "sch = «ش» · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "sch = «ش» · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Meine Schwester ist siebzehn und geht in die Schule.",
         "exampleAr": "أختي في السابعة عشرة وتذهب إلى المدرسة."
       },
@@ -571,7 +571,7 @@
         ],
         "img": "/cards/geschwister.png",
         "farbe": "ROT",
-        "aussprache": "sch = «ش» · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "sch = «ش» · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Hast du Geschwister? – Ja, einen Bruder und zwei Schwestern.",
         "exampleAr": "هل لديك إخوة؟ – نعم، أخ وأختان."
       },
@@ -641,7 +641,7 @@
         ],
         "img": "/cards/zimmer.png",
         "farbe": "GRÜN",
-        "aussprache": "z = «تس» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Mein Zimmer ist klein, aber sehr ruhig.",
         "exampleAr": "غرفتي صغيرة لكنها هادئة جداً."
       },
@@ -1027,7 +1027,7 @@
         "exampleDe": "Ohne Zucker, bitte — der Arzt hat es verboten.",
         "exampleAr": "بلا سكرٍ من فضلك — منعه الطبيب.",
         "farbe": "BLAU",
-        "aussprache": "z = «تس» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "v1418",
@@ -1073,7 +1073,7 @@
         "exampleDe": "Ein Stück Butter für das Frühstück.",
         "exampleAr": "قطعةُ زبدةٍ للفطور.",
         "farbe": "ROT",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "v1422",
@@ -1088,7 +1088,7 @@
         "exampleDe": "Zwei Liter Wasser am Tag sind Pflicht.",
         "exampleAr": "لترانِ من الماءِ يوميًّا ضرورةٌ ملزِمة.",
         "farbe": "GRÜN",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       }
     ]
   },
@@ -1335,7 +1335,7 @@
         ],
         "img": "/cards/wetter.png",
         "farbe": "GRÜN",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Wetter ist heute schlecht: Regen und nur acht Grad.",
         "exampleAr": "الطقس اليوم سيّئ: مطر وثماني درجات فقط."
       },
@@ -1382,7 +1382,7 @@
         ],
         "img": "/cards/sommer.png",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Im Sommer fahren wir zwei Wochen an die Ostsee.",
         "exampleAr": "في الصيف نسافر أسبوعين إلى بحر البلطيق.",
         "plural": "die Sommer"
@@ -1415,7 +1415,7 @@
         ],
         "img": "/cards/winter.png",
         "farbe": "BLAU",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Im Winter trainieren wir in der Halle, draußen ist es zu kalt.",
         "exampleAr": "في الشتاء نتدرّب في القاعة، فالخارج بارد جداً.",
         "plural": "die Winter"
@@ -1672,7 +1672,7 @@
         "exampleDe": "Feuer! Rufen Sie die Feuerwehr!",
         "exampleAr": "حريق! نادوا المطافئ فورًا!",
         "farbe": "GRÜN",
-        "aussprache": "eu/äu = «أوي» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "eu/äu = «أوي» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "v1425",
@@ -1688,7 +1688,7 @@
         "exampleDe": "Das Schlafzimmer liegt nach Süden.",
         "exampleAr": "غرفةُ النومِ جنوبيةُ الاتجاه.",
         "farbe": "GRÜN",
-        "aussprache": "sch = «ش» · z = «تس» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "sch = «ش» · z = «تس» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "v1426",
@@ -1704,7 +1704,7 @@
         "exampleDe": "Unser Lehrer erklärt langsam und deutlich.",
         "exampleAr": "معلمُنا يشرحُ ببطءٍ ووضوح.",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "v1427",
@@ -2409,7 +2409,7 @@
         ],
         "img": "/cards/arbeitgeber.png",
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ei = «آي» لا «إي» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Mein Arbeitgeber bezahlt einen Teil der Weiterbildung.",
         "exampleAr": "صاحب عملي يدفع جزءاً من التكوين المستمر.",
         "plural": "die Arbeitgeber"
@@ -2866,7 +2866,7 @@
           "umwelt"
         ],
         "img": "/cards/nachhaltig.png",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-ig في الآخر = «إش»",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -ig في الآخر = «إش»",
         "exampleDe": "Nachhaltig bauen heißt, an die Kosten in dreißig Jahren zu denken.",
         "exampleAr": "البناء المستدام يعني التفكير في تكاليف ثلاثين سنة قادمة.",
         "ant": [
@@ -3305,7 +3305,7 @@
         "article": "der",
         "plural": "die Partner",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Mein Partner und ich teilen uns die Hausarbeit.",
         "exampleAr": "أنا وشريكي نتقاسم أعمال البيت."
       },
@@ -3391,7 +3391,7 @@
         "tags": [
           "beziehungen"
         ],
-        "aussprache": "v = «ف» · z = «تس» · ‏-ig في الآخر = «إش»",
+        "aussprache": "v = «ف» · z = «تس» · -ig في الآخر = «إش»",
         "exampleDe": "Tarek gilt im Team als zuverlässig, weil er Fristen still einhält.",
         "exampleAr": "طارق يُعتبر في الفريق جديراً بالثقة لأنه يلتزم بالمهل بصمت.",
         "ant": [
@@ -3644,7 +3644,7 @@
         "tags": [
           "beziehungen"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Wir haben uns lange über den Film unterhalten.",
         "exampleAr": "تحدثنا طويلاً عن الفيلم."
       },
@@ -4006,7 +4006,7 @@
         ],
         "article": "das",
         "farbe": "GRÜN",
-        "aussprache": "ie = «إي» ممدودة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Bei Fieber ist Sport gefährlich, warten Sie, bis Sie gesund sind.",
         "exampleAr": "مع الحمّى الرياضة خطيرة، انتظر حتى تتعافى."
       },
@@ -4280,7 +4280,7 @@
         "tags": [
           "gesundheit"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "exampleDe": "Er merkte erst spät, wie süchtig er nach Anerkennung war.",
         "exampleAr": "لم يدرك إلا متأخراً كم كان مدمناً على التقدير.",
         "ant": [
@@ -4915,7 +4915,7 @@
         "article": "der",
         "plural": "die Wähler",
         "farbe": "BLAU",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Jeder Wähler bekommt die Unterlagen per Post.",
         "exampleAr": "كل ناخب يتلقى الوثائق بالبريد."
       },
@@ -5006,7 +5006,7 @@
         "tags": [
           "gesellschaft"
         ],
-        "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · ‏-ig في الآخر = «إش»",
+        "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · -ig في الآخر = «إش»",
         "exampleDe": "Der Kurs ist freiwillig, aber ich empfehle ihn.",
         "exampleAr": "الدورة طوعية، لكنني أنصح بها.",
         "ant": [
@@ -5240,7 +5240,7 @@
         "article": "der",
         "plural": "die Vermieter",
         "farbe": "BLAU",
-        "aussprache": "ie = «إي» ممدودة · v = «ف» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ie = «إي» ممدودة · v = «ف» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Vermieter muss den Mangel innerhalb einer angemessenen Frist beheben.",
         "exampleAr": "على المؤجّر إصلاح العيب خلال مهلة معقولة."
       },
@@ -5256,7 +5256,7 @@
         "article": "der",
         "plural": "die Mieter",
         "farbe": "BLAU",
-        "aussprache": "ie = «إي» ممدودة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Als Mieter darf man die Miete bei Schimmel mindern.",
         "exampleAr": "كمستأجر يحقّ لك تخفيض الإيجار عند وجود عفن."
       },
@@ -5567,7 +5567,7 @@
         "article": "der",
         "plural": "die Makler",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Makler verlangt zwei Kaltmieten Provision vom Vermieter.",
         "exampleAr": "الوسيط العقاري يطلب عمولة شهرين إيجار بارد من المؤجّر."
       },
@@ -5863,7 +5863,7 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ich möchte mich über den Lärm der Baustelle beschweren.",
         "exampleAr": "أريد أن أشتكي من ضجيج الورشة.",
         "plural": "die Debatten"
@@ -6200,7 +6200,7 @@
         "article": "der",
         "plural": "die Roboter",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "In der Fabrik arbeitet ein Roboter neben den Menschen.",
         "exampleAr": "في المصنع يعمل روبوت بجانب البشر."
       },
@@ -6246,7 +6246,7 @@
         "article": "der",
         "plural": "die Influencer",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Influencer erwähnt die Bezahlung erst am Ende des Videos.",
         "exampleAr": "المؤثّر لا يذكر الأجر إلا في نهاية الفيديو."
       },
@@ -6453,7 +6453,7 @@
         "article": "der",
         "plural": "die Verhandlungen",
         "farbe": "BLAU",
-        "aussprache": "z = «تس» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Jeder Nutzer braucht ein eigenes Passwort.",
         "exampleAr": "كل مستخدم يحتاج كلمة سر خاصة به."
       },
@@ -6730,7 +6730,7 @@
         "article": "der",
         "plural": "die Forscher",
         "farbe": "BLAU",
-        "aussprache": "sch = «ش» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "sch = «ش» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Forscher arbeitet seit Jahren an diesem Thema.",
         "exampleAr": "الباحث يعمل على هذا الموضوع منذ سنوات."
       },
@@ -7177,7 +7177,7 @@
         "tags": [
           "wissenschaft"
         ],
-        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "exampleDe": "Ein glaubwürdiger Zeuge widerspricht sich nicht bei den Details.",
         "exampleAr": "الشاهد الموثوق لا يناقض نفسه في التفاصيل.",
         "ant": [
@@ -7414,7 +7414,7 @@
         ],
         "article": "das",
         "farbe": "GRÜN",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Im Alter braucht man mehr Zeit für den Alltag.",
         "exampleAr": "في الكِبَر يحتاج المرء وقتاً أطول لشؤونه اليومية.",
         "plural": "die Gutachten"
@@ -7921,7 +7921,7 @@
         "article": "der",
         "plural": "die Künstler",
         "farbe": "BLAU",
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Künstler malt vor allem Straßen bei Nacht.",
         "exampleAr": "الفنان يرسم خصوصاً الشوارع ليلاً."
       },
@@ -8055,7 +8055,7 @@
         ],
         "article": "das",
         "farbe": "GRÜN",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Wir haben Karten fürs Theater am Samstagabend.",
         "exampleAr": "لدينا تذاكر للمسرح مساء السبت."
       },
@@ -8103,7 +8103,7 @@
         "article": "die",
         "plural": "die Auflagen",
         "farbe": "ROT",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "In der Oper habe ich zum ersten Mal Mozart gehört.",
         "exampleAr": "في الأوبرا سمعت موتسارت لأول مرة."
       },
@@ -8118,7 +8118,7 @@
         ],
         "article": "das",
         "farbe": "GRÜN",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Orchester probt jeden Dienstag in der Stadthalle.",
         "exampleAr": "الأوركسترا تتدرّب كل ثلاثاء في قاعة المدينة."
       },
@@ -8238,7 +8238,7 @@
         "article": "der",
         "plural": "die Darsteller",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Darsteller spricht im Film Deutsch mit tunesischem Akzent.",
         "exampleAr": "الممثل يتكلم في الفيلم ألمانية بلكنة تونسية."
       },
@@ -8448,7 +8448,7 @@
         "article": "der",
         "plural": "die Schriftsteller",
         "farbe": "BLAU",
-        "aussprache": "sch = «ش» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "sch = «ش» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Schriftsteller lebt seit zwanzig Jahren in Hamburg.",
         "exampleAr": "الأديب يعيش في هامبورغ منذ عشرين سنة."
       },
@@ -8672,7 +8672,7 @@
         "article": "der",
         "plural": "die Arbeitnehmer",
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ei = «آي» لا «إي» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Als Arbeitnehmer haben Sie Anspruch auf bezahlten Urlaub.",
         "exampleAr": "كأجير لك الحق في إجازة مدفوعة."
       },
@@ -8967,7 +8967,7 @@
         "tags": [
           "arbeit-beruf"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ß = «س» مشدَّدة · ‏-ig في الآخر = «إش»",
+        "aussprache": "ei = «آي» لا «إي» · ß = «س» مشدَّدة · -ig في الآخر = «إش»",
         "exampleDe": "Sie ist sehr fleißig und lernt jeden Abend zwei Stunden.",
         "exampleAr": "هي مجتهدة جداً وتدرس كل مساء ساعتين.",
         "ant": [
@@ -9121,7 +9121,7 @@
         "article": "die",
         "plural": "die Steuern",
         "farbe": "ROT",
-        "aussprache": "eu/äu = «أوي» · sp/st في البداية = «شب/شت» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "eu/äu = «أوي» · sp/st في البداية = «شب/شت» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Die Steuer wird automatisch vom Gehalt abgezogen.",
         "exampleAr": "الضريبة تُخصم تلقائياً من الراتب."
       },
@@ -9257,7 +9257,7 @@
         "article": "der",
         "plural": "die Synthesen",
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ei = «آي» لا «إي» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Als Quereinsteiger aus der Gastronomie kam er in die Pflege.",
         "exampleAr": "كداخل من تخصص آخر جاء من المطاعم إلى التمريض."
       },
@@ -9966,7 +9966,7 @@
         ],
         "article": "das",
         "farbe": "GRÜN",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Grundwasser ist in trockenen Sommern deutlich gesunken.",
         "exampleAr": "المياه الجوفية انخفضت بوضوح في الصيوف الجافة."
       },
@@ -9982,7 +9982,7 @@
         "article": "das",
         "plural": "die Hochwasser",
         "farbe": "GRÜN",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Beim Hochwasser stand das Wasser einen Meter hoch im Keller.",
         "exampleAr": "في الفيضان بلغ الماء متراً في القبو."
       },
@@ -10061,7 +10061,7 @@
         "article": "der",
         "plural": "die Gletscher",
         "farbe": "BLAU",
-        "aussprache": "sch = «ش» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "sch = «ش» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Gletscher hat in zwanzig Jahren die Hälfte seiner Länge verloren.",
         "exampleAr": "النهر الجليدي فقد نصف طوله في عشرين سنة."
       },
@@ -10354,7 +10354,7 @@
         "tags": [
           "konsum-geld"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "exampleDe": "Das Zimmer war günstig: nur vierzig Euro pro Nacht.",
         "exampleAr": "الغرفة كانت مناسبة الثمن: أربعون يورو فقط لليلة.",
         "ant": [
@@ -10417,7 +10417,7 @@
         ],
         "article": "die",
         "farbe": "ROT",
-        "aussprache": "eu/äu = «أوي» · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "eu/äu = «أوي» · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Die Mehrwertsteuer auf Lebensmittel ist niedriger als auf Kleidung.",
         "exampleAr": "ضريبة القيمة المضافة على الغذاء أقل منها على الملابس."
       },
@@ -10591,7 +10591,7 @@
         "article": "der",
         "plural": "die Käufer",
         "farbe": "BLAU",
-        "aussprache": "eu/äu = «أوي» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "eu/äu = «أوي» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Käufer hat vierzehn Tage Zeit für die Rückgabe.",
         "exampleAr": "للمشتري أربعة عشر يوماً للإرجاع."
       },
@@ -10742,7 +10742,7 @@
         "tags": [
           "konsum-geld"
         ],
-        "aussprache": "w = «ڤ» · ‏-ig في الآخر = «إش»",
+        "aussprache": "w = «ڤ» · -ig في الآخر = «إش»",
         "exampleDe": "Die Ware war minderwertig, die Nähte lösten sich nach einer Woche.",
         "exampleAr": "البضاعة كانت رديئة الصنع، وانفكّت الخياطة بعد أسبوع.",
         "ant": [
@@ -10758,7 +10758,7 @@
         "tags": [
           "konsum-geld"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · ‏-ig في الآخر = «إش»",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · -ig في الآخر = «إش»",
         "exampleDe": "Ein hochwertiger Rucksack hält zehn Jahre, ein billiger zwei.",
         "exampleAr": "حقيبة الظهر عالية الجودة تدوم عشر سنوات، والرخيصة سنتين.",
         "ant": [
@@ -11127,7 +11127,7 @@
         "tags": [
           "konsum-geld"
         ],
-        "aussprache": "z = «تس» · ‏-ig في الآخر = «إش»",
+        "aussprache": "z = «تس» · -ig في الآخر = «إش»",
         "exampleDe": "Die Firma war zahlungsunfähig, die Löhne kamen zu spät.",
         "exampleAr": "الشركة كانت معسرة عن السداد، والأجور تأخّرت.",
         "ant": [
@@ -11469,7 +11469,7 @@
         "article": "der",
         "plural": "die Fußgänger",
         "farbe": "BLAU",
-        "aussprache": "ß = «س» مشدَّدة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ß = «س» مشدَّدة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Als Fußgänger hat man am Zebrastreifen Vorrang.",
         "exampleAr": "المارّ على قدميه له الأولوية على ممر المشاة."
       },
@@ -12437,7 +12437,7 @@
         "article": "der",
         "plural": "die Prämissen",
         "farbe": "BLAU",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Richter hat den Vergleich mit einer Frist bestätigt.",
         "exampleAr": "القاضي صادق على التسوية بمهلة."
       },
@@ -12850,7 +12850,7 @@
         "article": "der",
         "plural": "die Verbrecher",
         "farbe": "BLAU",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Verbrecher wurde nach zwei Tagen gefasst.",
         "exampleAr": "مرتكب الجريمة قُبض عليه بعد يومين."
       },
@@ -13185,7 +13185,7 @@
         "article": "das",
         "plural": "die Semester",
         "farbe": "GRÜN",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Im dritten Semester wechselt Maha in Kurs B.",
         "exampleAr": "في الفصل الجامعي الثالث تنتقل مها إلى المجموعة B."
       },
@@ -13859,7 +13859,7 @@
         "article": "der",
         "plural": "die Tippfehler",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ein Tippfehler in der E-Mail-Adresse, und die Bestätigung kam nie an.",
         "exampleAr": "خطأ مطبعي في عنوان الإيميل، ولم يصل التأكيد أبداً."
       },
@@ -14012,7 +14012,7 @@
         "article": "der",
         "plural": "die Betreuer",
         "farbe": "BLAU",
-        "aussprache": "eu/äu = «أوي» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "eu/äu = «أوي» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Mein Betreuer antwortet auf Mails meist innerhalb eines Tages.",
         "exampleAr": "مشرفي يجيب على الإيميلات خلال يوم غالباً."
       },
@@ -14158,7 +14158,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ich ärgere mich über den Chat statt einer klaren Mail.",
         "exampleAr": "يغيظني الشات بدل إيميل واضح."
       },
@@ -14173,7 +14173,7 @@
         ],
         "article": "der",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Nach dem Ärger mit dem Vermieter blieb sie sachlich.",
         "exampleAr": "بعد الغضب مع المؤجّر بقيت موضوعية."
       },
@@ -14338,7 +14338,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Am Anfang war ich unsicher, ob mein Deutsch reicht.",
         "exampleAr": "في البداية كنت متردداً هل تكفي ألمانيتي.",
         "plural": "die Ursachen",
@@ -14442,7 +14442,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "exampleDe": "Vor dem Gespräch war er unruhig und konnte nicht sitzen.",
         "exampleAr": "قبل المقابلة كان قلقاً ولم يستطع الجلوس.",
         "ant": [
@@ -14529,7 +14529,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "exampleDe": "Es war mutig, im Kurs als Erste zu sprechen.",
         "exampleAr": "كان من الشجاعة أن تتكلّم أولاً في الدورة.",
         "ant": [
@@ -14812,7 +14812,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "aussprache": "ie = «إي» ممدودة · eu/äu = «أوي» · ‏-ig في الآخر = «إش»",
+        "aussprache": "ie = «إي» ممدودة · eu/äu = «أوي» · -ig في الآخر = «إش»",
         "exampleDe": "Kinder sind neugierig und fragen den ganzen Tag „Warum?“.",
         "exampleAr": "الأطفال فضوليون ويسألون طوال اليوم «لماذا؟».",
         "ant": [
@@ -14830,7 +14830,7 @@
         ],
         "article": "die",
         "farbe": "ROT",
-        "aussprache": "ie = «إي» ممدودة · eu/äu = «أوي» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ie = «إي» ممدودة · eu/äu = «أوي» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Neugier auf die neue Sprache ist der beste Motor beim Lernen.",
         "exampleAr": "شغف الاستطلاع تجاه اللغة الجديدة أفضل محرّك للتعلّم."
       },
@@ -14966,7 +14966,7 @@
         "tags": [
           "gefuehle-psyche"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "exampleDe": "Die Tafel gibt Lebensmittel nur an bedürftige Haushalte aus.",
         "exampleAr": "مائدة المتطوعين تعطي الغذاء للأسر المحتاجة فقط.",
         "ant": [
@@ -15123,7 +15123,7 @@
         ],
         "article": "der",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ihren Kummer erzählte sie nur der Schwester am Telefon.",
         "exampleAr": "همّها لم تحكِه إلا لأختها على الهاتف."
       },
@@ -15555,7 +15555,7 @@
         "article": "das",
         "plural": "die Turniere",
         "farbe": "GRÜN",
-        "aussprache": "ie = «إي» ممدودة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Turnier findet an zwei Wochenenden im Juni statt.",
         "exampleAr": "البطولة تُقام في نهايتي أسبوع في يونيو."
       },
@@ -15672,7 +15672,7 @@
         "article": "der",
         "plural": "die Elfmeter",
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Elfmeter in der letzten Minute entschied das Spiel.",
         "exampleAr": "ركلة الجزاء في الدقيقة الأخيرة حسمت المباراة."
       },
@@ -15688,7 +15688,7 @@
         "article": "der",
         "plural": "die Schiedsrichter",
         "farbe": "BLAU",
-        "aussprache": "ie = «إي» ممدودة · sch = «ش» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ie = «إي» ممدودة · sch = «ش» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Schiedsrichter hat das Tor nach Videobeweis nicht anerkannt.",
         "exampleAr": "الحكم لم يحتسب الهدف بعد الفيديو."
       },
@@ -16312,7 +16312,7 @@
         "article": "die",
         "plural": "die Echokammern",
         "farbe": "ROT",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Eine Echokammer fühlt sich wie Zustimmung an, ist aber nur Wiederholung.",
         "exampleAr": "غرفة الصدى تبدو موافقة، لكنها مجرد تكرار."
       },
@@ -16681,7 +16681,7 @@
         "article": "der",
         "plural": "die Nachrichtenticker",
         "farbe": "BLAU",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Der Nachrichtenticker meldete den Streik, bevor die Bahn informierte.",
         "exampleAr": "الشريط الإخباري أعلن الإضراب قبل أن تُبلغ السكك الحديدية."
       },
@@ -17046,7 +17046,7 @@
         "article": "der",
         "plural": "die Wiederholer",
         "farbe": "BLAU",
-        "aussprache": "ie = «إي» ممدودة · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ie = «إي» ممدودة · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Als Wiederholer kannte er den Stoff, aber nicht die neue Klasse.",
         "exampleAr": "كمُعيد كان يعرف المادة لكن لا الصف الجديد."
       },
@@ -17062,7 +17062,7 @@
         "article": "der",
         "plural": "die Sitzenbleiber",
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · z = «تس» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ei = «آي» لا «إي» · z = «تس» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Wort Sitzenbleiber hört man in der Schule kaum noch.",
         "exampleAr": "كلمة «قابع المقعد» بالكاد تُسمع في المدرسة اليوم."
       },
@@ -18195,7 +18195,7 @@
         "article": "das",
         "plural": "die Jobcenter",
         "farbe": "GRÜN",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Das Jobcenter zahlt den Kurs, wenn man den Antrag rechtzeitig stellt.",
         "exampleAr": "مكتب العمل يدفع الدورة إذا قُدّم الطلب في وقته."
       },
@@ -18311,7 +18311,7 @@
         "article": "das",
         "plural": "die Endlager",
         "farbe": "GRÜN",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ein Endlager muss für Jahrtausende sicher sein.",
         "exampleAr": "موقع الدفن النهائي يجب أن يكون آمناً لآلاف السنين."
       },
@@ -18467,7 +18467,7 @@
         "article": "der",
         "plural": "die Grundversorger",
         "farbe": "BLAU",
-        "aussprache": "v = «ف» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "v = «ف» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Wenn der Anbieter pleitegeht, springt der Grundversorger ein.",
         "exampleAr": "إذا أفلس المورّد يتدخل المورّد الأساسي."
       },
@@ -18918,7 +18918,7 @@
         "tags": [
           "energie-wende"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "exampleDe": "Wasserkraft gilt als grundlastfähig, Solar nicht.",
         "exampleAr": "الطاقة المائية تُعتبر قادرة على الحمل القاعدي، أما الشمسية فلا.",
         "ant": [
@@ -18984,7 +18984,7 @@
         "article": "der",
         "plural": "die Gasspeicher",
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Die Gasspeicher waren im November zu neunzig Prozent gefüllt.",
         "exampleAr": "خزانات الغاز كانت في نوفمبر ممتلئة بنسبة تسعين بالمائة."
       },
@@ -19099,7 +19099,7 @@
         "article": "der",
         "plural": "die Geschmacksverstärker",
         "farbe": "BLAU",
-        "aussprache": "sch = «ش» · v = «ف» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "sch = «ش» · v = «ف» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ein Geschmacksverstärker lässt billige Suppen intensiver schmecken.",
         "exampleAr": "معزّز النكهة يجعل الحساء الرخيص أقوى طعماً."
       },
@@ -19131,7 +19131,7 @@
         "article": "die",
         "plural": "die E-Nummern",
         "farbe": "ROT",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "exampleDe": "Hinter jeder E-Nummer steckt ein geprüfter Zusatzstoff.",
         "exampleAr": "وراء كل رقم E مُضاف مفحوص."
       },
@@ -21260,7 +21260,7 @@
         "article": "der",
         "plural": "die Mitläufer",
         "farbe": "BLAU",
-        "aussprache": "eu/äu = «أوي» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "eu/äu = «أوي» · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Als Mitläufer galt, wer mitmachte, ohne selbst zu entscheiden.",
         "exampleAr": "المنساق هو من شارك دون أن يقرر بنفسه."
       },
@@ -22082,7 +22082,7 @@
           "essen"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a1ess-033",
@@ -22193,7 +22193,7 @@
           "essen"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a1ess-045",
@@ -22209,7 +22209,7 @@
           "essen"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a1ess-046",
@@ -22270,7 +22270,7 @@
           "essen"
         ],
         "farbe": "GRÜN",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a1ess-051",
@@ -22346,7 +22346,7 @@
         "tags": [
           "essen"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "ant": [
           "fad"
         ]
@@ -22393,7 +22393,7 @@
         "tags": [
           "essen"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "satt"
         ]
@@ -22434,7 +22434,7 @@
           "koerper"
         ],
         "farbe": "BLAU",
-        "aussprache": "ö = بينَ الضمّةِ والكسرة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a1koe-001",
@@ -22619,7 +22619,7 @@
           "koerper"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a1koe-013",
@@ -22885,7 +22885,7 @@
         "tags": [
           "kleidung"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "teuer"
         ],
@@ -22904,7 +22904,7 @@
         "tags": [
           "kleidung"
         ],
-        "aussprache": "eu/äu = «أوي» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "eu/äu = «أوي» · -er في الآخر = «أَ» خفيفة",
         "ant": [
           "billig"
         ],
@@ -23066,7 +23066,7 @@
         "tags": [
           "kleidung"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "ant": [
           "schmutzig"
         ],
@@ -23085,7 +23085,7 @@
         "tags": [
           "kleidung"
         ],
-        "aussprache": "sch = «ش» · z = «تس» · ‏-ig في الآخر = «إش»",
+        "aussprache": "sch = «ش» · z = «تس» · -ig في الآخر = «إش»",
         "ant": [
           "sauber"
         ],
@@ -23740,7 +23740,7 @@
           "stadt"
         ],
         "farbe": "ROT",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a1sta-055",
@@ -23753,7 +23753,7 @@
         "tags": [
           "weg"
         ],
-        "aussprache": "ie = «إي» ممدودة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a1sta-056",
@@ -24060,7 +24060,7 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "abhängig"
         ]
@@ -24116,7 +24116,7 @@
           "arbeit"
         ],
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ei = «آي» لا «إي» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a2arb-057",
@@ -24147,7 +24147,7 @@
           "arbeit"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a2arb-064",
@@ -24193,7 +24193,7 @@
           "buero"
         ],
         "farbe": "BLAU",
-        "aussprache": "sch = «ش» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "sch = «ش» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a2arb-069",
@@ -24754,7 +24754,7 @@
           "wetter"
         ],
         "farbe": "GRÜN",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a2all-043",
@@ -24782,7 +24782,7 @@
         "tags": [
           "wetter"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "bewölkt"
         ]
@@ -24814,7 +24814,7 @@
         "tags": [
           "wetter"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "klar"
         ]
@@ -24846,7 +24846,7 @@
           "freizeit"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a2all-052",
@@ -24902,7 +24902,7 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "ant": [
           "ungültig"
         ]
@@ -24921,7 +24921,7 @@
           "wohnen"
         ],
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ei = «آي» لا «إي» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a2all-063",
@@ -24953,7 +24953,7 @@
           "wohnen"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-a2all-066",
@@ -25645,7 +25645,7 @@
           "zeit"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-zeit--028",
@@ -25660,7 +25660,7 @@
           "zeit"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-zeit--029",
@@ -25675,7 +25675,7 @@
           "zeit"
         ],
         "farbe": "BLAU",
-        "aussprache": "v = «ف» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "v = «ف» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-zeit--030",
@@ -25690,7 +25690,7 @@
           "zeit"
         ],
         "farbe": "BLAU",
-        "aussprache": "z = «تس» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-zeit--031",
@@ -25774,7 +25774,7 @@
         "tags": [
           "zeit"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "syn": [
           "stets"
         ]
@@ -25937,7 +25937,7 @@
         "tags": [
           "zahl"
         ],
-        "aussprache": "ie = «إي» ممدودة · v = «ف» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ie = «إي» ممدودة · v = «ف» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-zeit--049",
@@ -26002,7 +26002,7 @@
         "tags": [
           "zahl"
         ],
-        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»"
+        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»"
       },
       {
         "id": "vx-zeit--056",
@@ -26080,7 +26080,7 @@
           "haus"
         ],
         "farbe": "GRÜN",
-        "aussprache": "w = «ڤ» · z = «تس» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · z = «تس» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--001",
@@ -26096,7 +26096,7 @@
           "haus"
         ],
         "farbe": "GRÜN",
-        "aussprache": "z = «تس» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--002",
@@ -26158,7 +26158,7 @@
           "haus"
         ],
         "farbe": "GRÜN",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--006",
@@ -26357,7 +26357,7 @@
           "schule"
         ],
         "farbe": "GRÜN",
-        "aussprache": "ie = «إي» ممدودة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--021",
@@ -26388,7 +26388,7 @@
           "schule"
         ],
         "farbe": "BLAU",
-        "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--023",
@@ -26800,7 +26800,7 @@
         "tags": [
           "frage"
         ],
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--053",
@@ -26852,7 +26852,7 @@
         "tags": [
           "frage"
         ],
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--057",
@@ -26917,7 +26917,7 @@
         "tags": [
           "frage"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--062",
@@ -26948,7 +26948,7 @@
           "familie"
         ],
         "farbe": "ROT",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--064",
@@ -26994,7 +26994,7 @@
           "familie"
         ],
         "farbe": "ROT",
-        "aussprache": "ß = «س» مشدَّدة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ß = «س» مشدَّدة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--067",
@@ -27010,7 +27010,7 @@
           "familie"
         ],
         "farbe": "BLAU",
-        "aussprache": "v = «ف» · ß = «س» مشدَّدة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "v = «ف» · ß = «س» مشدَّدة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--068",
@@ -27069,7 +27069,7 @@
         "tags": [
           "familie"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "verheiratet"
         ]
@@ -27149,7 +27149,7 @@
         "tags": [
           "eigenschaft"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-ig في الآخر = «إش»",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -ig في الآخر = «إش»",
         "ant": [
           "falsch"
         ],
@@ -27187,7 +27187,7 @@
         "tags": [
           "eigenschaft"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "sch = «ش» · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "ant": [
           "leicht"
         ]
@@ -27222,7 +27222,7 @@
         "tags": [
           "eigenschaft"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · ‏-ig في الآخر = «إش»",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ» · -ig في الآخر = «إش»",
         "ant": [
           "unwichtig"
         ],
@@ -27241,7 +27241,7 @@
         "tags": [
           "eigenschaft"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "unruhig"
         ]
@@ -27322,7 +27322,7 @@
         "tags": [
           "eigenschaft"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "-er في الآخر = «أَ» خفيفة",
         "ant": [
           "voll"
         ]
@@ -27402,7 +27402,7 @@
         "tags": [
           "eigenschaft"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ei = «آي» لا «إي» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vx-haus--095",
@@ -27510,7 +27510,7 @@
           "natur"
         ],
         "farbe": "GRÜN",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vy-natur-006",
@@ -27661,7 +27661,7 @@
           "tier"
         ],
         "farbe": "GRÜN",
-        "aussprache": "ie = «إي» ممدودة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vy-natur-016",
@@ -28004,7 +28004,7 @@
         "tags": [
           "gefuehl"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "froh"
         ],
@@ -28760,7 +28760,7 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "z = «تس» · ‏-ig في الآخر = «إش»",
+        "aussprache": "z = «تس» · -ig في الآخر = «إش»",
         "ant": [
           "unzuständig"
         ]
@@ -28959,7 +28959,7 @@
           "land"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-009",
@@ -29101,7 +29101,7 @@
           "beruf"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-019",
@@ -29117,7 +29117,7 @@
           "beruf"
         ],
         "farbe": "BLAU",
-        "aussprache": "eu/äu = «أوي» · v = «ف» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "eu/äu = «أوي» · v = «ف» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-020",
@@ -29133,7 +29133,7 @@
           "beruf"
         ],
         "farbe": "ROT",
-        "aussprache": "sch = «ش» · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "sch = «ش» · w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-021",
@@ -29165,7 +29165,7 @@
           "beruf"
         ],
         "farbe": "BLAU",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-023",
@@ -29181,7 +29181,7 @@
           "beruf"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-024",
@@ -29450,7 +29450,7 @@
         "tags": [
           "verbindung"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-046",
@@ -29463,7 +29463,7 @@
         "tags": [
           "verbindung"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-047",
@@ -29591,7 +29591,7 @@
         "tags": [
           "verbindung"
         ],
-        "aussprache": "ie = «إي» ممدودة · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ie = «إي» ممدودة · w = «ڤ» · -er في الآخر = «أَ» خفيفة",
         "syn": [
           "erneut"
         ]
@@ -29718,7 +29718,7 @@
         "tags": [
           "phrase"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "sp/st في البداية = «شب/شت» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vz-welt-b-067",
@@ -29782,7 +29782,7 @@
         "tags": [
           "zahl"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ß = «س» مشدَّدة · ‏-ig في الآخر = «إش»"
+        "aussprache": "ei = «آي» لا «إي» · ß = «س» مشدَّدة · -ig في الآخر = «إش»"
       },
       {
         "id": "vz-welt-b-072",
@@ -29795,7 +29795,7 @@
         "tags": [
           "zahl"
         ],
-        "aussprache": "w = «ڤ» · z = «تس» · ‏-ig في الآخر = «إش»"
+        "aussprache": "w = «ڤ» · z = «تس» · -ig في الآخر = «إش»"
       },
       {
         "id": "vz-welt-b-073",
@@ -30455,7 +30455,7 @@
         "tags": [
           "einkauf"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "ant": [
           "ungünstiger"
         ]
@@ -30740,7 +30740,7 @@
         "tags": [
           "ort"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "va-modort-012",
@@ -30753,7 +30753,7 @@
         "tags": [
           "ort"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "va-modort-013",
@@ -30791,7 +30791,7 @@
         "tags": [
           "ort"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "va-modort-016",
@@ -30804,7 +30804,7 @@
         "tags": [
           "ort"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "va-modort-017",
@@ -31116,7 +31116,7 @@
           "menge"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "va-modort-041",
@@ -31172,7 +31172,7 @@
         "tags": [
           "menge"
         ],
-        "aussprache": "w = «ڤ» · ‏-ig في الآخر = «إش»"
+        "aussprache": "w = «ڤ» · -ig في الآخر = «إش»"
       },
       {
         "id": "va-modort-045",
@@ -31275,7 +31275,7 @@
           "digital"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "va-modort-053",
@@ -31614,7 +31614,7 @@
           "wohnen"
         ],
         "farbe": "BLAU",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "va-modort-084",
@@ -31782,7 +31782,7 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة",
         "ant": [
           "unsicher"
         ]
@@ -31830,7 +31830,7 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "unfertig"
         ]
@@ -31934,7 +31934,7 @@
         "tags": [
           "uhr"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vb-abschl-004",
@@ -32676,7 +32676,7 @@
           "person"
         ],
         "farbe": "BLAU",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vc-mensch-001",
@@ -32705,7 +32705,7 @@
         "tags": [
           "person"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "ungeduldig"
         ]
@@ -32721,7 +32721,7 @@
         "tags": [
           "person"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "geduldig"
         ]
@@ -33266,7 +33266,7 @@
           "reise"
         ],
         "farbe": "GRÜN",
-        "aussprache": "z = «تس» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vc-reise--008",
@@ -33282,7 +33282,7 @@
           "reise"
         ],
         "farbe": "GRÜN",
-        "aussprache": "z = «تس» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "z = «تس» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vc-reise--009",
@@ -33358,7 +33358,7 @@
           "reise"
         ],
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vc-reise--014",
@@ -34045,7 +34045,7 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vc-medien-031",
@@ -34070,7 +34070,7 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vc-medien-034",
@@ -34241,7 +34241,7 @@
           "wohnen"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vd-wohnen-005",
@@ -34439,7 +34439,7 @@
           "wohnen"
         ],
         "farbe": "BLAU",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vd-wohnen-019",
@@ -34542,7 +34542,7 @@
           "wohnen"
         ],
         "farbe": "BLAU",
-        "aussprache": "ie = «إي» ممدودة · sp/st في البداية = «شب/شت» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ie = «إي» ممدودة · sp/st في البداية = «شب/شت» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vd-wohnen-026",
@@ -34862,7 +34862,7 @@
           "geld"
         ],
         "farbe": "BLAU",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vd-geld-k-016",
@@ -35048,7 +35048,7 @@
         "tags": [
           "sport"
         ],
-        "aussprache": "ß = «س» مشدَّدة · ‏-ig في الآخر = «إش»",
+        "aussprache": "ß = «س» مشدَّدة · -ig في الآخر = «إش»",
         "ant": [
           "unregelmäßig"
         ]
@@ -35378,7 +35378,7 @@
           "kueche"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "ve-kueche--009",
@@ -35795,7 +35795,7 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "ve-erzaehl-002",
@@ -36683,7 +36683,7 @@
           "umwelt"
         ],
         "farbe": "GRÜN",
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "ve-umwelt--019",
@@ -36699,7 +36699,7 @@
           "umwelt"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "ve-umwelt--020",
@@ -36863,7 +36863,7 @@
         "tags": [
           "rede"
         ],
-        "aussprache": "ie = «إي» ممدودة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vf-redemi-008",
@@ -36967,7 +36967,7 @@
         "tags": [
           "rede"
         ],
-        "aussprache": "eu/äu = «أوي» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "eu/äu = «أوي» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vf-redemi-016",
@@ -36980,7 +36980,7 @@
         "tags": [
           "rede"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-ig في الآخر = «إش»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -ig في الآخر = «إش»"
       },
       {
         "id": "vf-redemi-017",
@@ -37073,7 +37073,7 @@
         "tags": [
           "rede"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vf-redemi-024",
@@ -37099,7 +37099,7 @@
         "tags": [
           "rede"
         ],
-        "aussprache": "w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vf-redemi-026",
@@ -37188,7 +37188,7 @@
         "tags": [
           "rede"
         ],
-        "aussprache": "ie = «إي» ممدودة · w = «ڤ» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ie = «إي» ممدودة · w = «ڤ» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vf-redemi-033",
@@ -37250,7 +37250,7 @@
         "tags": [
           "aussehen"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "schwach"
         ],
@@ -37299,7 +37299,7 @@
         "tags": [
           "aussehen"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "glatt"
         ]
@@ -37663,7 +37663,7 @@
           "bildung"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vf-kultd-308",
@@ -38036,7 +38036,7 @@
           "behoerde"
         ],
         "farbe": "BLAU",
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vf-kultd-334",
@@ -38062,7 +38062,7 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "v = «ف» · ‏-ig في الآخر = «إش»",
+        "aussprache": "v = «ف» · -ig في الآخر = «إش»",
         "ant": [
           "unvollständig"
         ]
@@ -38078,7 +38078,7 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "v = «ف» · ‏-ig في الآخر = «إش»",
+        "aussprache": "v = «ف» · -ig في الآخر = «إش»",
         "ant": [
           "vollständig"
         ]
@@ -38531,7 +38531,7 @@
         "tags": [
           "argum"
         ],
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vg-argumen-018",
@@ -39983,7 +39983,7 @@
           "leben"
         ],
         "farbe": "ROT",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vh-gesundh-014",
@@ -40751,7 +40751,7 @@
         "tags": [
           "recht"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-ig في الآخر = «إش»",
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -ig في الآخر = «إش»",
         "ant": [
           "kostenlos"
         ]
@@ -41027,7 +41027,7 @@
         "tags": [
           "verb1"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vi-funktio-011",
@@ -42875,7 +42875,7 @@
         "tags": [
           "urteil"
         ],
-        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "ant": [
           "unfraglich"
         ]
@@ -42906,7 +42906,7 @@
         "tags": [
           "urteil"
         ],
-        "aussprache": "ei = «آي» لا «إي» · eu/äu = «أوي» · ‏-ig في الآخر = «إش»",
+        "aussprache": "ei = «آي» لا «إي» · eu/äu = «أوي» · -ig في الآخر = «إش»",
         "ant": [
           "mehrdeutig"
         ]
@@ -42922,7 +42922,7 @@
         "tags": [
           "urteil"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف» · ‏-ig في الآخر = «إش»",
+        "aussprache": "ei = «آي» لا «إي» · v = «ف» · -ig في الآخر = «إش»",
         "ant": [
           "besonnen"
         ]
@@ -42986,7 +42986,7 @@
         "tags": [
           "urteil"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "ant": [
           "erheblich"
         ]
@@ -43002,7 +43002,7 @@
         "tags": [
           "urteil"
         ],
-        "aussprache": "eu/äu = «أوي» · v = «ف» · ‏-ig في الآخر = «إش»",
+        "aussprache": "eu/äu = «أوي» · v = «ف» · -ig في الآخر = «إش»",
         "ant": [
           "endgültig"
         ]
@@ -43018,7 +43018,7 @@
         "tags": [
           "urteil"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "ant": [
           "vorläufig"
         ]
@@ -46691,7 +46691,7 @@
           "sport2"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vt-b1q-014",
@@ -46916,7 +46916,7 @@
         "tags": [
           "adj3"
         ],
-        "aussprache": "v = «ف» · ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-ig في الآخر = «إش»",
+        "aussprache": "v = «ف» · ü = ضمّةٌ بشفتَينِ مستديرتَين · -ig في الآخر = «إش»",
         "ant": [
           "verkehrsungünstig"
         ]
@@ -46995,7 +46995,7 @@
         "tags": [
           "adj3"
         ],
-        "aussprache": "‏-ig في الآخر = «إش»",
+        "aussprache": "-ig في الآخر = «إش»",
         "ant": [
           "einzelgängerisch"
         ]
@@ -47096,7 +47096,7 @@
         "tags": [
           "med2"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ‏-ig في الآخر = «إش»",
+        "aussprache": "ei = «آي» لا «إي» · -ig في الآخر = «إش»",
         "ant": [
           "vielseitig"
         ]
@@ -47573,7 +47573,7 @@
           "verw"
         ],
         "farbe": "BLAU",
-        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vv-verwal-002",
@@ -47731,7 +47731,7 @@
         "tags": [
           "verw"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vv-verwal-013",
@@ -47920,7 +47920,7 @@
           "hand"
         ],
         "farbe": "ROT",
-        "aussprache": "ei = «آي» لا «إي» · ‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "ei = «آي» لا «إي» · -er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vv-handwe-006",
@@ -48430,7 +48430,7 @@
           "b1x"
         ],
         "farbe": "BLAU",
-        "aussprache": "‏-er في الآخر = «أَ» خفيفة"
+        "aussprache": "-er في الآخر = «أَ» خفيفة"
       },
       {
         "id": "vw-b1n-009",

@@ -244,7 +244,7 @@
   "a1-pronomen": {
     "id": "a1-pronomen",
     "titleDe": "Personalpronomen & Possessivartikel",
-    "titleAr": "ضمائر الفاعل وأدوات الملكية (mein, dein ...)",
+    "titleAr": "ضمائر الفاعل وأدوات الملكية (mein, dein…)",
     "level": "A1",
     "ziel": "تستخدم ضمائر الفاعل وأدوات الملكية (mein/dein/sein) مع الاسم الصحيح.",
     "voraus": [
@@ -2000,7 +2000,7 @@
         "promptDe": "„Ich helfe dir, weil ich Zeit ___.“",
         "options": [
           "habe",
-          "habe … ",
+          "habe …",
           "hast"
         ],
         "answer": "habe",
@@ -2442,8 +2442,8 @@
         "ar": "احفظ هذه الأربعة عن ظهر قلب — hätte (كان سيكون لدي), wäre (كان سيكون), könnte (كان سيستطيع), müsste (كان سيضطر)"
       },
       {
-        "de": "Wenn + Konjunktiv II … , würde + Infinitiv",
-        "ar": "«لو كان … لكانت» — Wenn + Konjunktiv II … , würde + Infinitiv (الشرط غير الواقعي)"
+        "de": "Wenn + Konjunktiv II …, würde + Infinitiv",
+        "ar": "«لو كان … لكانت» — Wenn + Konjunktiv II …, würde + Infinitiv (الشرط غير الواقعي)"
       }
     ],
     "examples": [
@@ -3267,11 +3267,11 @@
     "summaryAr": "لتحويل الجمل الطويلة إلى عبارات مكثّفة: «Das ist ein von vielen Experten kritisierter Plan» (خطة ينتقدها خبراء كثيرون). النمط: ge…t (منفّذ) / ge…en (متلقّى) / d/end (كائن في حالة). الأسلوب الاسمي (Nominalstil) سمة النصوص الأكاديمية B2: statt zu sprechen ← statt einer Rede.",
     "rules": [
       {
-        "de": "Partizip I (=d) : das lesende Kind",
+        "de": "Partizip I (=d): das lesende Kind",
         "ar": "الطفل القارئ — Partizip I (=d) كصفة موصوفة: das lesende Kind"
       },
       {
-        "de": "Partizip II (=ge…t/en) : das gelesene Buch",
+        "de": "Partizip II (=ge…t/en): das gelesene Buch",
         "ar": "الكتاب المقروء — Partizip II (=ge…t/en) كصفة: das gelesene Buch"
       },
       {
@@ -3347,7 +3347,7 @@
         ],
         "darfNicht": [
           "beschlossene maßnahmen",
-          "die "
+          "die"
         ],
         "explanationAr": "Partizip II قبل الاسم بنهاية الصفة -en.",
         "points": 2
@@ -3545,8 +3545,8 @@
       {
         "id": "b2-funktionsverben-v1",
         "type": "fill",
-        "promptDe": "Ich stehe Ihnen gern zur ___ .",
-        "text": "Ich stehe Ihnen gern zur ___ .",
+        "promptDe": "Ich stehe Ihnen gern zur ___.",
+        "text": "Ich stehe Ihnen gern zur ___.",
         "answer": [
           "Verfügung"
         ],
@@ -3914,8 +3914,8 @@
       {
         "id": "a2-dativ-v1",
         "type": "fill",
-        "promptDe": "Dieses Buch gehört ___ . (ich)",
-        "text": "Dieses Buch gehört ___ . (ich)",
+        "promptDe": "Dieses Buch gehört ___. (ich)",
+        "text": "Dieses Buch gehört ___. (ich)",
         "answer": [
           "mir"
         ],
@@ -4196,7 +4196,7 @@
     "summaryAr": "kein تنفي الأسماء غير المحددة (مثل a/an في الإنجليزية): Ich habe kein Auto. أما nicht فتنفي كل ما عدا ذلك: الأفعال، الصفات، الأسماء المعرّفة، الظروف. وموقع nicht في آخر الجملة الفعلية أو قبل الجزء المنفي بدقة.",
     "rules": [
       {
-        "de": "kein + : Ich trinke keinen Kaffee.",
+        "de": "kein +: Ich trinke keinen Kaffee.",
         "ar": "نفي «شيء ما» غير معرّف ← kein (تصريفه ك ein) — kein + اسم بلا أداة: Ich trinke keinen Kaffee."
       },
       {
@@ -5009,7 +5009,7 @@
           "am teuersten"
         ],
         "darfNicht": [
-          "teuerste ",
+          "teuerste",
           "meist"
         ],
         "explanationAr": "التفضيل الخبري بعد sein: am + الصفة + -sten.",
@@ -5688,7 +5688,7 @@
         ],
         "darfNicht": [
           "alter",
-          "alte "
+          "alte"
         ],
         "explanationAr": "بعد einen (مفعول مذكر): -en.",
         "points": 2
@@ -7266,7 +7266,7 @@
     "summaryAr": "بدل «الطلاب الذين…» يعمّم B2 بصيغة مبرمة: «Wer lernen will, findet Wege». وبعد alles/nichts/das تأتي was وحدها، وللتعليق على جملة كاملة جاء was أسلوب ضغط الحجة.",
     "rules": [
       {
-        "de": "wer … , der/die/das … — Verallgemeinerung",
+        "de": "wer …, der/die/das … — Verallgemeinerung",
         "ar": "من… فذلك… — تعميم على الأشخاص والجملة الثانية تبدأ بمرجع"
       },
       {
@@ -7291,8 +7291,8 @@
         ],
         "rows": [
           [
-            "wer … , der …",
-            "wer … , die …"
+            "wer …, der …",
+            "wer …, die …"
           ]
         ]
       }
@@ -7362,7 +7362,7 @@
       {
         "id": "grge4",
         "type": "order",
-        "promptDe": "Bilde einen Satz: (Wer / nicht / lernt / , / der / verliert / die Zukunft)",
+        "promptDe": "Bilde einen Satz: (Wer / nicht / lernt /, / der / verliert / die Zukunft)",
         "answer": [
           "Wer",
           "nicht",
@@ -7469,11 +7469,11 @@
         "ar": "كل نصف جملة رئيسية بقواعدها — لا قلب بعد sowohl ونظائرها"
       },
       {
-        "de": "je + Komparativ (Verb am Ende!) , desto/umso + Komparativ + Verb",
+        "de": "je + Komparativ (Verb am Ende!), desto/umso + Komparativ + Verb",
         "ar": "كلّما…ازداد: je جملة تابعة فعلها للآخر، وdesto مع المقارن ثم الفعل"
       },
       {
-        "de": "nicht nur … , sondern auch … — das Gegenstück muss parallel sein",
+        "de": "nicht nur …, sondern auch … — das Gegenstück muss parallel sein",
         "ar": "البنية المتقابلة تلزم: اسم مقابل اسم، فعل مقابل فعل"
       }
     ],
@@ -7490,7 +7490,7 @@
             "sowohl A als auch B"
           ],
           [
-            "je … , desto …",
+            "je …, desto …",
             "je mehr du übst, desto leichter wird es"
           ]
         ]
@@ -7553,7 +7553,7 @@
       {
         "id": "gdke3",
         "type": "order",
-        "promptDe": "Bilde einen Satz: (Entweder / übst / du / , / oder / das / Zertifikat / wartet / nicht)",
+        "promptDe": "Bilde einen Satz: (Entweder / übst / du /, / oder / das / Zertifikat / wartet / nicht)",
         "answer": [
           "Entweder",
           "übst",
@@ -8310,7 +8310,7 @@
         "ar": "تغيرات أدوات التعريف في حالة الجر."
       },
       {
-        "de": "mit · bei · zu · aus · nach · von · seit  → immer Dativ!",
+        "de": "mit · bei · zu · aus · nach · von · seit → immer Dativ!",
         "ar": "هذه الأدوات تأخذ الجر دائماً."
       },
       {
@@ -9418,7 +9418,7 @@
         "ar": "كيف يتكوّن Partizip I."
       },
       {
-        "de": "guter Wein · kaltes Wasser · frische Milch  (ohne Artikel: Endung wie bestimmter Artikel)",
+        "de": "guter Wein · kaltes Wasser · frische Milch (ohne Artikel: Endung wie bestimmter Artikel)",
         "ar": "نهايات الصفات بدون أداة."
       }
     ],
@@ -10192,8 +10192,8 @@
       {
         "id": "b1-funktionsverben-v1",
         "type": "fill",
-        "promptDe": "Der Präsident trifft eine ___ .",
-        "text": "Der Präsident trifft eine ___ .",
+        "promptDe": "Der Präsident trifft eine ___.",
+        "text": "Der Präsident trifft eine ___.",
         "answer": [
           "Entscheidung"
         ],
@@ -10364,7 +10364,7 @@
           "ß"
         ],
         "strictEszett": true,
-        "explanationAr": "في الإملاء القياسي بألمانيا: Straße. وفي سويسرا تُكتب Strasse؛ لذا يحدّد السؤال النمط المقصود."
+        "explanationAr": "في الإملاء القياسي بألمانيا: Straße. وفي سويسرا تُكتب Straße؛ لذا يحدّد السؤال النمط المقصود."
       }
     ],
     "summaryAr": "ستة وعشرون حرفاً لاتينياً + ثلاثة Umlaute (ä, ö, ü) وحرف ß إس-تسيت. تعلم نطق الحروف ونطق أسماء الناس بالتهجئة.",
@@ -11676,7 +11676,7 @@
           "die Stühler"
         ],
         "answer": "die Stühle",
-        "explanationAr": "‎-e مع إمالة u ← ü: die Stühle.",
+        "explanationAr": "-e مع إمالة u ← ü: die Stühle.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -11699,7 +11699,7 @@
           "kaufen",
           "Brot."
         ],
-        "explanationAr": "Frau ← Frauen بـ‎-en، والفعل ثانياً."
+        "explanationAr": "Frau ← Frauen بـ-en، والفعل ثانياً."
       },
       {
         "id": "a1-plural-n4",
@@ -11717,7 +11717,7 @@
           "liest",
           "ein"
         ],
-        "explanationAr": "Mann ← Männer (إمالة + ‎-er) وliest ← lesen وBuch ← Bücher.",
+        "explanationAr": "Mann ← Männer (إمالة + -er) وliest ← lesen وBuch ← Bücher.",
         "points": 2
       },
       {
@@ -11729,7 +11729,7 @@
           "autos",
           "schnell"
         ],
-        "explanationAr": "Auto دخيل ← ‎-s: Die Autos sind schnell."
+        "explanationAr": "Auto دخيل ← -s: Die Autos sind schnell."
       },
       {
         "id": "a1-plural-n6",
@@ -11741,7 +11741,7 @@
           "die Fräuen"
         ],
         "answer": "die Frauen",
-        "explanationAr": "المؤنث ‎-(e)n بلا إمالة: die Frauen.",
+        "explanationAr": "المؤنث -(e)n بلا إمالة: die Frauen.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -11749,7 +11749,7 @@
         "type": "truefalse",
         "promptDe": "„die Hobbys“ ist der richtige Plural von „das Hobby“.",
         "answer": "richtig",
-        "explanationAr": "صحيح — الدخيل يأخذ ‎-s: die Hobbys.",
+        "explanationAr": "صحيح — الدخيل يأخذ -s: die Hobbys.",
         "options": [
           "richtig",
           "falsch"
@@ -11778,7 +11778,7 @@
           "die Täsche"
         ],
         "answer": "die Taschen",
-        "explanationAr": "مؤنث ← ‎-n: die Taschen."
+        "explanationAr": "مؤنث ← -n: die Taschen."
       }
     ],
     "pitfalls": [
@@ -11788,7 +11788,7 @@
       },
       {
         "de": "✗ die Kinds → ✓ die Kinder",
-        "ar": "Kind ليست دخيلة: ‎-er لا ‎-s!"
+        "ar": "Kind ليست دخيلة: -er لا -s!"
       },
       {
         "de": "✗ ein Frauen → ✓ eine Frau",
@@ -11822,11 +11822,11 @@
       },
       {
         "de": "im + Monat/Jahreszeit: im Mai · im Sommer",
-        "ar": "‎im للشهور والفصول."
+        "ar": "im للشهور والفصول."
       },
       {
         "de": "vor/nach + Dativ: vor dem Essen · nach der Schule",
-        "ar": "‎vor/nach بمعنى قبل/بعد + حالة الجر: dem Essen / der Schule."
+        "ar": "vor/nach بمعنى قبل/بعد + حالة الجر: dem Essen / der Schule."
       }
     ],
     "tables": [
@@ -11886,7 +11886,7 @@
           "im"
         ],
         "answer": "am",
-        "explanationAr": "الأيام ← ‎am: am Montag.",
+        "explanationAr": "الأيام ← am: am Montag.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -11897,7 +11897,7 @@
         "answer": [
           "um"
         ],
-        "explanationAr": "الساعة المحددة ← ‎um."
+        "explanationAr": "الساعة المحددة ← um."
       },
       {
         "id": "a1-zeitpraep-n3",
@@ -11907,7 +11907,7 @@
         "answer": [
           "Im"
         ],
-        "explanationAr": "الفصول ← ‎im: Im Sommer."
+        "explanationAr": "الفصول ← im: Im Sommer."
       },
       {
         "id": "a1-zeitpraep-n4",
@@ -11935,7 +11935,7 @@
         "darfNicht": [
           "ist"
         ],
-        "explanationAr": "ادمج الجملتين: ‎um + الساعة.",
+        "explanationAr": "ادمج الجملتين: um + الساعة.",
         "points": 2
       },
       {
@@ -11948,14 +11948,14 @@
           "nach",
           "schule"
         ],
-        "explanationAr": "بعد = ‎nach + الجر: nach der Schule."
+        "explanationAr": "بعد = nach + الجر: nach der Schule."
       },
       {
         "id": "a1-zeitpraep-n7",
         "type": "truefalse",
         "promptDe": "„am Mai“ ist richtig.",
         "answer": "falsch",
-        "explanationAr": "خطأ — الشهور ← ‎im: im Mai.",
+        "explanationAr": "خطأ — الشهور ← im: im Mai.",
         "options": [
           "richtig",
           "falsch"
@@ -11972,7 +11972,7 @@
         "answer": [
           "am"
         ],
-        "explanationAr": "أجزاء اليوم ← ‎am."
+        "explanationAr": "أجزاء اليوم ← am."
       },
       {
         "id": "a1-zeitpraep-v2",
@@ -11994,11 +11994,11 @@
       },
       {
         "de": "✗ in Montag → ✓ am Montag",
-        "ar": "الأيام ‎am لا ‎in."
+        "ar": "الأيام am لا in."
       },
       {
         "de": "✗ nach die Schule → ✓ nach der Schule",
-        "ar": "‎nach + الجر: die ← der!"
+        "ar": "nach + الجر: die ← der!"
       }
     ]
   },
@@ -12016,19 +12016,19 @@
       "de": "Schreibe einen Absatz mit fünf verbundenen Sätzen.",
       "candoIds": []
     },
-    "summaryAr": "روابط التنسيق (und/oder/aber/denn/sondern) موضعها صفر: الفعل يبقى ثانياً — و‎denn سببٌ بترتيب عادٍ (عكس ‎weil) و‎sondern تصحيحٌ بعد النفي.",
+    "summaryAr": "روابط التنسيق (und/oder/aber/denn/sondern) موضعها صفر: الفعل يبقى ثانياً — وdenn سببٌ بترتيب عادٍ (عكس weil) وsondern تصحيحٌ بعد النفي.",
     "rules": [
       {
         "de": "und · oder · aber: Position 0 — Ich lerne, aber er spielt.",
-        "ar": "‎und/oder/aber لا تُحسب: الفعل يبقى ثانياً بعدهما."
+        "ar": "und/oder/aber لا تُحسب: الفعل يبقى ثانياً بعدهما."
       },
       {
         "de": "denn = Grund: Ich bleibe, denn ich bin krank.",
-        "ar": "‎denn للسبب مع ترتيب عادٍ (الفعل ثانياً) — عكس ‎weil تماماً!"
+        "ar": "denn للسبب مع ترتيب عادٍ (الفعل ثانياً) — عكس weil تماماً!"
       },
       {
         "de": "nicht … sondern: Nicht heute, sondern morgen.",
-        "ar": "التصحيح بعد النفي ← ‎sondern لا ‎aber."
+        "ar": "التصحيح بعد النفي ← sondern لا aber."
       }
     ],
     "tables": [
@@ -12088,7 +12088,7 @@
           "dass"
         ],
         "answer": "aber",
-        "explanationAr": "تضاد مع فعل ثانٍ ← ‎aber (لا ‎weil!).",
+        "explanationAr": "تضاد مع فعل ثانٍ ← aber (لا weil!).",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -12099,7 +12099,7 @@
         "answer": [
           "denn"
         ],
-        "explanationAr": "سبب بترتيب عادٍ ← ‎denn."
+        "explanationAr": "سبب بترتيب عادٍ ← denn."
       },
       {
         "id": "a2-neben-n3",
@@ -12111,7 +12111,7 @@
           "sondern",
           "morgen."
         ],
-        "explanationAr": "تصحيح بعد نفي ← ‎sondern."
+        "explanationAr": "تصحيح بعد نفي ← sondern."
       },
       {
         "id": "a2-neben-n4",
@@ -12127,7 +12127,7 @@
         "darfNicht": [
           "weil"
         ],
-        "explanationAr": "السبب بترتيب عادٍ ← ‎denn (لا ‎weil!).",
+        "explanationAr": "السبب بترتيب عادٍ ← denn (لا weil!).",
         "points": 2
       },
       {
@@ -12140,7 +12140,7 @@
           "aber",
           "trinkt"
         ],
-        "explanationAr": "تضاد ← ‎aber والفعل ثانٍ في الجملتين."
+        "explanationAr": "تضاد ← aber والفعل ثانٍ في الجملتين."
       },
       {
         "id": "a2-neben-n6",
@@ -12150,14 +12150,14 @@
         "answer": [
           "aber"
         ],
-        "explanationAr": "تضاد ← ‎aber."
+        "explanationAr": "تضاد ← aber."
       },
       {
         "id": "a2-neben-n7",
         "type": "truefalse",
         "promptDe": "Nach „denn“ steht das Verb am Ende.",
         "answer": "falsch",
-        "explanationAr": "خطأ — ‎denn موضع صفر: الفعل ثانٍ (denn ich bin krank).",
+        "explanationAr": "خطأ — denn موضع صفر: الفعل ثانٍ (denn ich bin krank).",
         "options": [
           "richtig",
           "falsch"
@@ -12176,7 +12176,7 @@
           "denn"
         ],
         "answer": "sondern",
-        "explanationAr": "تصحيح بعد نفي ← ‎sondern."
+        "explanationAr": "تصحيح بعد نفي ← sondern."
       },
       {
         "id": "a2-neben-v2",
@@ -12186,21 +12186,21 @@
         "answer": [
           "denn"
         ],
-        "explanationAr": "سبب بترتيب عادٍ ← ‎denn."
+        "explanationAr": "سبب بترتيب عادٍ ← denn."
       }
     ],
     "pitfalls": [
       {
         "de": "✗ …, denn ich krank bin → ✓ …, denn ich bin krank",
-        "ar": "‎denn مع فعل ثانٍ — الفعل في النهاية خطأ ‎weil!"
+        "ar": "denn مع فعل ثانٍ — الفعل في النهاية خطأ weil!"
       },
       {
         "de": "✗ nicht heute, aber morgen → ✓ …, sondern morgen",
-        "ar": "بعد النفي ‎sondern لا ‎aber."
+        "ar": "بعد النفي sondern لا aber."
       },
       {
         "de": "✗ Aber ich habe kein Zeit → ✓ keine Zeit",
-        "ar": "الرابط لا يغيّر الحالة: Zeit مؤنث ← ‎keine."
+        "ar": "الرابط لا يغيّر الحالة: Zeit مؤنث ← keine."
       }
     ]
   },
@@ -12218,23 +12218,23 @@
       "de": "Vergleiche zwei Handys mit sechs Sätzen.",
       "candoIds": []
     },
-    "summaryAr": "‎dieser للإشارة القريبة (هذا) و‎jeder للتعميم مع المفرد (كلُّ) و‎alle للتعميم مع الجمع — والنهايات كأداة التعريف (diesen في المنصوب!).",
+    "summaryAr": "dieser للإشارة القريبة (هذا) وjeder للتعميم مع المفرد (كلُّ) وalle للتعميم مع الجمع — والنهايات كأداة التعريف (diesen في المنصوب!).",
     "rules": [
       {
         "de": "dieser/diese/dieses + Nomen: Dieser Mann · diese Frau · dieses Kind",
-        "ar": "‎dieser للإشارة القريبة (هذا) ويتصرف كأداة التعريف."
+        "ar": "dieser للإشارة القريبة (هذا) ويتصرف كأداة التعريف."
       },
       {
         "de": "jeder/jede/jedes + Singular: Jedes Kind bekommt ein Buch.",
-        "ar": "‎jeder بمعنى كلّ + مفرد دائماً (Jedes Kind لا Alle Kind!)."
+        "ar": "jeder بمعنى كلّ + مفرد دائماً (Jedes Kind لا Alle Kind!)."
       },
       {
         "de": "alle + Plural: Alle Kinder spielen.",
-        "ar": "‎alle للجمع: Alle Kinder (كل الأطفال)."
+        "ar": "alle للجمع: Alle Kinder (كل الأطفال)."
       },
       {
         "de": "Endungen wie der-Artikel: diesen Mann (Akk!) · dieses Buch",
-        "ar": "النهايات كأداة التعريف: ‎diesen في المنصوب المذكر!"
+        "ar": "النهايات كأداة التعريف: diesen في المنصوب المذكر!"
       }
     ],
     "tables": [
@@ -12287,7 +12287,7 @@
           "Dieses"
         ],
         "answer": "Dieser",
-        "explanationAr": "فاعل مذكر ← ‎Dieser.",
+        "explanationAr": "فاعل مذكر ← Dieser.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -12298,7 +12298,7 @@
         "answer": [
           "diesen"
         ],
-        "explanationAr": "منصوب مذكر ← ‎diesen."
+        "explanationAr": "منصوب مذكر ← diesen."
       },
       {
         "id": "a2-demo-n3",
@@ -12310,7 +12310,7 @@
           "Jeden"
         ],
         "answer": "Jedes",
-        "explanationAr": "Kind محايد + مفرد ← ‎Jedes.",
+        "explanationAr": "Kind محايد + مفرد ← Jedes.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -12323,7 +12323,7 @@
           "spielen",
           "gern."
         ],
-        "explanationAr": "‎alle + جمع: Alle Kinder spielen."
+        "explanationAr": "alle + جمع: Alle Kinder spielen."
       },
       {
         "id": "a2-demo-n5",
@@ -12338,7 +12338,7 @@
         "darfNicht": [
           "den"
         ],
-        "explanationAr": "‎den Kaffee ← ‎diesen Kaffee (إشارة للقريب).",
+        "explanationAr": "den Kaffee ← diesen Kaffee (إشارة للقريب).",
         "points": 2
       },
       {
@@ -12358,7 +12358,7 @@
         "type": "truefalse",
         "promptDe": "„Alle Kinder spielt“ ist richtig.",
         "answer": "falsch",
-        "explanationAr": "خطأ — ‎alle + جمع: spielen لا spielt.",
+        "explanationAr": "خطأ — alle + جمع: spielen لا spielt.",
         "options": [
           "richtig",
           "falsch"
@@ -12375,7 +12375,7 @@
         "answer": [
           "Diese"
         ],
-        "explanationAr": "فاعل مؤنث ← ‎Diese."
+        "explanationAr": "فاعل مؤنث ← Diese."
       },
       {
         "id": "a2-demo-v2",
@@ -12387,21 +12387,21 @@
           "dieser"
         ],
         "answer": "dieses",
-        "explanationAr": "محايد منصوب ← ‎dieses (كالرفع)."
+        "explanationAr": "محايد منصوب ← dieses (كالرفع)."
       }
     ],
     "pitfalls": [
       {
         "de": "✗ Jeden Tag gehe ich → ✓ Jeder Tag …",
-        "ar": "‎jeden منصوب! الفاعل ← ‎jeder."
+        "ar": "jeden منصوب! الفاعل ← jeder."
       },
       {
         "de": "✗ alle Kind → ✓ alle Kinder",
-        "ar": "‎alle + جمع دائماً!"
+        "ar": "alle + جمع دائماً!"
       },
       {
         "de": "✗ dieses Bücher → ✓ diese Bücher",
-        "ar": "جمع ← ‎diese لا ‎dieses!"
+        "ar": "جمع ← diese لا dieses!"
       }
     ]
   },
@@ -12677,19 +12677,19 @@
       "de": "Schreibe vier persönliche Ziele mit um…zu/damit.",
       "candoIds": []
     },
-    "summaryAr": "الهدف بالفاعل نفسه ← ‎um…zu + مصدر في النهاية، وبالفاعلين المختلفين ← ‎damit + فعل مصرف في النهاية — والمنفصل ينقسم حول ‎zu (anzufangen).",
+    "summaryAr": "الهدف بالفاعل نفسه ← um…zu + مصدر في النهاية، وبالفاعلين المختلفين ← damit + فعل مصرف في النهاية — والمنفصل ينقسم حول zu (anzufangen).",
     "rules": [
       {
         "de": "um … zu: gleiches Subjekt — Ich lerne, um zu bestehen.",
-        "ar": "الفاعل نفسه في الجملتين ← ‎um…zu + مصدر في النهاية."
+        "ar": "الفاعل نفسه في الجملتين ← um…zu + مصدر في النهاية."
       },
       {
         "de": "damit: verschiedene Subjekte — Ich helfe dir, damit du bestehst.",
-        "ar": "فاعلان مختلفان ← ‎damit + فعل مصرف في النهاية."
+        "ar": "فاعلان مختلفان ← damit + فعل مصرف في النهاية."
       },
       {
         "de": "Trennbar mittendrin: …, um in Berlin zu studieren · anzufangen",
-        "ar": "المنفصل ينقسم حول ‎zu: an|zu|fangen ← anzufangen."
+        "ar": "المنفصل ينقسم حول zu: an|zu|fangen ← anzufangen."
       }
     ],
     "tables": [
@@ -12739,7 +12739,7 @@
           "dass"
         ],
         "answer": "um",
-        "explanationAr": "الفاعل نفسه ← ‎um…zu.",
+        "explanationAr": "الفاعل نفسه ← um…zu.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -12750,7 +12750,7 @@
         "answer": [
           "damit"
         ],
-        "explanationAr": "فاعلان مختلفان ← ‎damit."
+        "explanationAr": "فاعلان مختلفان ← damit."
       },
       {
         "id": "b1-absicht-n3",
@@ -12763,7 +12763,7 @@
           "zu",
           "reisen."
         ],
-        "explanationAr": "‎um…zu + المصدر في النهاية."
+        "explanationAr": "um…zu + المصدر في النهاية."
       },
       {
         "id": "b1-absicht-n4",
@@ -12779,7 +12779,7 @@
         "darfNicht": [
           "will"
         ],
-        "explanationAr": "الهدف بالفاعل نفسه ← ‎um…zu.",
+        "explanationAr": "الهدف بالفاعل نفسه ← um…zu.",
         "points": 2
       },
       {
@@ -12792,7 +12792,7 @@
           "damit",
           "bestehst"
         ],
-        "explanationAr": "فاعلان مختلفان ← ‎damit + فعل مصرف."
+        "explanationAr": "فاعلان مختلفان ← damit + فعل مصرف."
       },
       {
         "id": "b1-absicht-n6",
@@ -12804,7 +12804,7 @@
           "zu anfangen"
         ],
         "answer": "anzufangen",
-        "explanationAr": "المنفصل ينقسم حول ‎zu: an|zu|fangen.",
+        "explanationAr": "المنفصل ينقسم حول zu: an|zu|fangen.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -12812,7 +12812,7 @@
         "type": "truefalse",
         "promptDe": "„um dass“ ist möglich.",
         "answer": "falsch",
-        "explanationAr": "خطأ — ‎um…zu أو ‎damit، لا يجتمعان أبداً.",
+        "explanationAr": "خطأ — um…zu أو damit، لا يجتمعان أبداً.",
         "options": [
           "richtig",
           "falsch"
@@ -12829,7 +12829,7 @@
         "answer": [
           "damit"
         ],
-        "explanationAr": "فاعلان مختلفان ← ‎damit."
+        "explanationAr": "فاعلان مختلفان ← damit."
       },
       {
         "id": "b1-absicht-v2",
@@ -12841,21 +12841,21 @@
           "weil"
         ],
         "answer": "um",
-        "explanationAr": "الفاعل نفسه ← ‎um."
+        "explanationAr": "الفاعل نفسه ← um."
       }
     ],
     "pitfalls": [
       {
         "de": "✗ um dass ich bestehe → ✓ um zu bestehen",
-        "ar": "‎um و‎dass لا يجتمعان أبداً!"
+        "ar": "um وdass لا يجتمعان أبداً!"
       },
       {
         "de": "✗ damit ich zu bestehen → ✓ damit ich bestehe",
-        "ar": "‎damit + فعل مصرف لا مصدر!"
+        "ar": "damit + فعل مصرف لا مصدر!"
       },
       {
         "de": "✗ Ich helfe dir, um du bestehst → ✓ …, damit du bestehst",
-        "ar": "فاعلان مختلفان ← ‎damit!"
+        "ar": "فاعلان مختلفان ← damit!"
       }
     ]
   },
@@ -12873,15 +12873,15 @@
       "de": "Schreibe drei Bedauern-Sätze.",
       "candoIds": []
     },
-    "summaryAr": "الماضي التخيلي = ‎hätte/wäre + التصريف الثالث: ‎hätte لأفعال ‎haben و‎wäre لأفعال ‎sein (نفس تقسيم ‎Perfekt) — للندم واللوم.",
+    "summaryAr": "الماضي التخيلي = hätte/wäre + التصريف الثالث: hätte لأفعال haben وwäre لأفعال sein (نفس تقسيم Perfekt) — للندم واللوم.",
     "rules": [
       {
         "de": "hätte/wäre + Partizip II: Ich hätte gelernt · Ich wäre gegangen.",
-        "ar": "الماضي التخيلي: ‎hätte/wäre + التصريف الثالث."
+        "ar": "الماضي التخيلي: hätte/wäre + التصريف الثالث."
       },
       {
         "de": "hätte (haben-Verben) ↔ wäre (sein-Verben): hätte gemacht · wäre geblieben",
-        "ar": "نفس تقسيم ‎Perfekt: الحركة والتغيّر ← ‎wäre."
+        "ar": "نفس تقسيم Perfekt: الحركة والتغيّر ← wäre."
       },
       {
         "de": "Bedauern & Vorwurf: Hätte ich doch gelernt! · Wärst du nur gekommen!",
@@ -12945,7 +12945,7 @@
           "würde"
         ],
         "answer": "hätte",
-        "explanationAr": "‎lernen من أفعال ‎haben ← ‎hätte.",
+        "explanationAr": "lernen من أفعال haben ← hätte.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -12958,7 +12958,7 @@
           "würde"
         ],
         "answer": "wäre",
-        "explanationAr": "‎gehen من أفعال ‎sein ← ‎wäre.",
+        "explanationAr": "gehen من أفعال sein ← wäre.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -12969,7 +12969,7 @@
         "answer": [
           "gelernt"
         ],
-        "explanationAr": "‎hätte + التصريف الثالث: gelernt."
+        "explanationAr": "hätte + التصريف الثالث: gelernt."
       },
       {
         "id": "b1-konj2-vergangenheit-n4",
@@ -13033,7 +13033,7 @@
         "answer": [
           "hätte"
         ],
-        "explanationAr": "‎versagen من أفعال ‎haben ← ‎hätte."
+        "explanationAr": "versagen من أفعال haben ← hätte."
       },
       {
         "id": "b1-konj2-vergangenheit-v2",
@@ -13045,21 +13045,21 @@
           "Würdest"
         ],
         "answer": "Wärst",
-        "explanationAr": "‎kommen من أفعال ‎sein ← ‎Wärst."
+        "explanationAr": "kommen من أفعال sein ← Wärst."
       }
     ],
     "pitfalls": [
       {
         "de": "✗ Ich würde gelernt haben → ✓ Ich hätte gelernt",
-        "ar": "‎würde+II محكي؛ المعيار ‎hätte!"
+        "ar": "würde+II محكي؛ المعيار hätte!"
       },
       {
         "de": "✗ Ich hätte gegangen → ✓ Ich wäre gegangen",
-        "ar": "‎gehen فعل ‎sein ← ‎wäre!"
+        "ar": "gehen فعل sein ← wäre!"
       },
       {
         "de": "✗ …, weil ich hätte nicht gelernt → ✓ …, weil ich nicht gelernt hätte",
-        "ar": "‎hätte في نهاية التابع!"
+        "ar": "hätte في نهاية التابع!"
       }
     ]
   },
@@ -13077,19 +13077,19 @@
       "de": "Schreibe einen Meinungsabsatz mit drei Textkonnektoren.",
       "candoIds": []
     },
-    "summaryAr": "سجل ‎B2 الكتابي: ‎wenngleich/obgleich للإقرار الراقي (فعل في النهاية) و‎hingegen للتضاد بموضع حر (1 أو 3) و‎folglich/des Weiteren/zwar…aber للبناء النصي.",
+    "summaryAr": "سجل B2 الكتابي: wenngleich/obgleich للإقرار الراقي (فعل في النهاية) وhingegen للتضاد بموضع حر (1 أو 3) وfolglich/des Weiteren/zwar…aber للبناء النصي.",
     "rules": [
       {
         "de": "wenngleich/obgleich (= obwohl, gehoben) + Verb-Ende: Wenngleich es regnete, gingen wir.",
-        "ar": "مرادف ‎obwohl الراقي + فعل في النهاية حتماً."
+        "ar": "مرادف obwohl الراقي + فعل في النهاية حتماً."
       },
       {
         "de": "hingegen (flexibel): Er hingegen blieb. / Hingegen blieb er.",
-        "ar": "‎hingegen للتضاد بموضع حر (1 أو 3) — ليست رابطاً صفرياً كـ‎aber!"
+        "ar": "hingegen للتضاد بموضع حر (1 أو 3) — ليست رابطاً صفرياً كـaber!"
       },
       {
         "de": "folglich/des Weiteren/zwar … aber: Folglich blieb er. · Des Weiteren gilt: …",
-        "ar": "سجل ‎B2 الكتابي: ‎folglich (وبالتالي) و‎des Weiteren (وعلاوةً) و‎zwar…aber."
+        "ar": "سجل B2 الكتابي: folglich (وبالتالي) وdes Weiteren (وعلاوةً) وzwar…aber."
       }
     ],
     "tables": [
@@ -13144,7 +13144,7 @@
           "Denn"
         ],
         "answer": "Wenngleich",
-        "explanationAr": "‎obwohl الراقية ← ‎wenngleich + فعل في النهاية.",
+        "explanationAr": "obwohl الراقية ← wenngleich + فعل في النهاية.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -13168,7 +13168,7 @@
           "zu",
           "Hause."
         ],
-        "explanationAr": "‎folglich أولاً + فعل ثانٍ."
+        "explanationAr": "folglich أولاً + فعل ثانٍ."
       },
       {
         "id": "b2-textkonnektoren-n4",
@@ -13184,7 +13184,7 @@
         "darfNicht": [
           "aber"
         ],
-        "explanationAr": "الإقرار الراقي: Wenngleich…, gingen wir — لا ‎aber السهلة!",
+        "explanationAr": "الإقرار الراقي: Wenngleich…, gingen wir — لا aber السهلة!",
         "points": 2
       },
       {
@@ -13196,7 +13196,7 @@
           "weiteren",
           "bleibt"
         ],
-        "explanationAr": "‎des Weiteren: كبير ومنفصل دائماً."
+        "explanationAr": "des Weiteren: كبير ومنفصل دائماً."
       },
       {
         "id": "b2-textkonnektoren-n6",
@@ -13208,7 +13208,7 @@
           "Hingegen"
         ],
         "answer": "Zwar",
-        "explanationAr": "‎zwar…aber للإقرار مع التضاد.",
+        "explanationAr": "zwar…aber للإقرار مع التضاد.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
       },
       {
@@ -13216,7 +13216,7 @@
         "type": "truefalse",
         "promptDe": "In „Er hingegen blieb“ steht das Verb an Position 2.",
         "answer": "falsch",
-        "explanationAr": "خطأ — الفعل ثالث (er/hingegen/blieb): ‎hingegen موضع 1 أو 3.",
+        "explanationAr": "خطأ — الفعل ثالث (er/hingegen/blieb): hingegen موضع 1 أو 3.",
         "options": [
           "richtig",
           "falsch"
@@ -13233,7 +13233,7 @@
         "answer": [
           "Obgleich"
         ],
-        "explanationAr": "إقرار راقٍ ← ‎Obgleich."
+        "explanationAr": "إقرار راقٍ ← Obgleich."
       },
       {
         "id": "b2-textkonnektoren-v2",
@@ -13245,7 +13245,7 @@
           "folglich"
         ],
         "answer": "hingegen",
-        "explanationAr": "تضاد بين جملتين ← ‎hingegen."
+        "explanationAr": "تضاد بين جملتين ← hingegen."
       }
     ],
     "pitfalls": [
@@ -13255,7 +13255,7 @@
       },
       {
         "de": "✗ …, hingegen er blieb → ✓ …, er hingegen blieb",
-        "ar": "‎hingegen ليست ‎aber — موضعها 1 أو 3!"
+        "ar": "hingegen ليست aber — موضعها 1 أو 3!"
       },
       {
         "de": "✗ desweiteren → ✓ des Weiteren",
