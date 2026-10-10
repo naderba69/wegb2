@@ -11030,8 +11030,8 @@
   {
     "id": "d-a0-05",
     "level": "A0",
-    "titleDe": "Telefonnummer buchstabieren",
-    "titleAr": "تهجئة الاسم ورقم الهاتف",
+    "titleDe": "Namen buchstabieren und Telefonnummer nennen",
+    "titleAr": "تهجئة الاسم وذكر رقم الهاتف",
     "ort": "Am Empfang",
     "lines": [
       {
@@ -11061,8 +11061,8 @@
       },
       {
         "who": "Kunde",
-        "de": "Null eins sieben sechs, dreiundvierzig fünfundneunzig.",
-        "ar": "صفر واحد سبعة ستة، ثلاثة وأربعون خمسة وتسعون."
+        "de": "Null eins sieben sechs, vier zwei drei, acht acht null, eins zwei.",
+        "ar": "صفر واحد سبعة ستة، أربعة اثنان ثلاثة، ثمانية ثمانية صفر، واحد اثنان."
       }
     ],
     "questions": [
@@ -11079,6 +11079,20 @@
         "answer": "H-U-B-E-R",
         "explanationAr": "العميل هجّاها H–U–B–E–R.",
         "id": "d-a0-05-q1"
+      },
+      {
+        "id": "d-a0-05-q2",
+        "type": "mc",
+        "promptDe": "Was bittet die Mitarbeiterin den Kunden zuerst zu tun?",
+        "promptAr": "ماذا تطلب الموظفة من العميل أن يفعل أولاً؟",
+        "options": [
+          "Seinen Namen zu buchstabieren",
+          "Seine Telefonnummer aufzuschreiben",
+          "Einen Kaffee zu bestellen",
+          "Seinen Ausweis zu zeigen"
+        ],
+        "answer": "Seinen Namen zu buchstabieren",
+        "explanationAr": "«Buchstabieren Sie bitte!» — تطلب منه تهجئة اسمه."
       }
     ],
     "dictation": [
@@ -11109,8 +11123,8 @@
       },
       {
         "who": "Gast",
-        "de": "Mit Milch, bitte. Und ein Wasser.",
-        "ar": "مع حليب من فضلك. وماء."
+        "de": "Mit Milch, bitte. Und ein Glas Wasser.",
+        "ar": "مع حليب من فضلك. وكأس ماء."
       },
       {
         "who": "Kellner",
@@ -11130,13 +11144,27 @@
         "promptAr": "ماذا طلب الزبون؟",
         "options": [
           "Tee und Kuchen",
-          "Kaffee mit Milch und ein Wasser",
+          "Kaffee mit Milch und ein Glas Wasser",
           "Nur ein Bier",
           "Wein und Käse"
         ],
-        "answer": "Kaffee mit Milch und ein Wasser",
+        "answer": "Kaffee mit Milch und ein Glas Wasser",
         "explanationAr": "قهوة بالحليب وماء.",
         "id": "d-a0-06-q1"
+      },
+      {
+        "id": "d-a0-06-q2",
+        "type": "mc",
+        "promptDe": "Was möchte der Gast zusätzlich zum Kaffee?",
+        "promptAr": "ماذا يريد الضيف إضافةً إلى القهوة؟",
+        "options": [
+          "Ein Glas Wasser",
+          "Einen Kuchen",
+          "Einen Tee",
+          "Ein Sandwich"
+        ],
+        "answer": "Ein Glas Wasser",
+        "explanationAr": "«Und ein Glas Wasser.» — يريد كأساً من الماء أيضاً."
       }
     ],
     "dictation": [
@@ -11253,6 +11281,20 @@
         "answer": "Morgen",
         "explanationAr": "قال A: Bis morgen! أي إلى الغد.",
         "id": "d-a0-08-q1"
+      },
+      {
+        "id": "d-a0-08-q2",
+        "type": "mc",
+        "promptDe": "Was wünscht A der anderen Person?",
+        "promptAr": "ماذا يتمنى A للشخص الآخر؟",
+        "options": [
+          "Schönen Tag noch",
+          "Gute Nacht",
+          "Guten Morgen",
+          "Viel Glück"
+        ],
+        "answer": "Schönen Tag noch",
+        "explanationAr": "«Schönen Tag noch!» — يتمنى A للشخص الآخر يوماً سعيداً."
       }
     ],
     "dictation": [
@@ -11595,6 +11637,20 @@
         "answer": "2,50",
         "explanationAr": "2.50 يورو.",
         "id": "d-a0-09-q1"
+      },
+      {
+        "id": "d-a0-09-q2",
+        "type": "mc",
+        "promptDe": "Wie viel Geld gibt der Kunde?",
+        "promptAr": "كم من المال يعطي العميل؟",
+        "options": [
+          "3,40 Euro",
+          "4 Euro",
+          "5 Euro",
+          "2,50 Euro"
+        ],
+        "answer": "5 Euro",
+        "explanationAr": "«Hier sind 5 Euro.» — يعطي العميل خمسة يورو."
       }
     ],
     "dictation": [
@@ -11616,7 +11672,7 @@
       {
         "who": "B",
         "de": "Es ist halb drei.",
-        "ar": "الساعة الثالثة والنصف."
+        "ar": "الساعة الثانية والنصف."
       },
       {
         "who": "A",
@@ -11643,6 +11699,20 @@
         "answer": "Viertel nach drei",
         "explanationAr": "الثالثة والربع.",
         "id": "d-a0-10-q1"
+      },
+      {
+        "id": "d-a0-10-q2",
+        "type": "mc",
+        "promptDe": "Wie spät ist es?",
+        "promptAr": "كم الساعة؟",
+        "options": [
+          "Halb drei",
+          "Viertel nach drei",
+          "Drei Uhr",
+          "Viertel vor drei"
+        ],
+        "answer": "Halb drei",
+        "explanationAr": "«Es ist halb drei.» — الساعة الثانية والنصف (2:30)."
       }
     ],
     "dictation": [
@@ -11696,6 +11766,20 @@
         "answer": "Kopfschmerzen und Fieber",
         "explanationAr": "صداع وحرارة.",
         "id": "d-a0-11-q1"
+      },
+      {
+        "id": "d-a0-11-q2",
+        "type": "mc",
+        "promptDe": "Hat der Patient Husten?",
+        "promptAr": "هل لدى المريض سعال؟",
+        "options": [
+          "Ja, er hat Husten",
+          "Nein, er hat keinen Husten",
+          "Die Ärztin weiß es nicht",
+          "Nur am Morgen"
+        ],
+        "answer": "Nein, er hat keinen Husten",
+        "explanationAr": "«Nein, kein Husten.» — يؤكد المريض أنه لا يسعل."
       }
     ],
     "dictation": [
@@ -11744,6 +11828,20 @@
         "answer": "Drei: einen Bruder und zwei Schwestern",
         "explanationAr": "أخ وأختان = ثلاثة.",
         "id": "d-a0-12-q1"
+      },
+      {
+        "id": "d-a0-12-q2",
+        "type": "mc",
+        "promptDe": "Wie alt ist der Bruder?",
+        "promptAr": "كم عمر الأخ؟",
+        "options": [
+          "15 Jahre",
+          "20 Jahre",
+          "10 Jahre",
+          "30 Jahre"
+        ],
+        "answer": "20 Jahre",
+        "explanationAr": "«Mein Bruder ist 20» — عمر الأخ عشرون عاماً."
       }
     ],
     "dictation": [
@@ -11769,8 +11867,8 @@
       },
       {
         "who": "Tourist",
-        "de": "Weit?",
-        "ar": "بعيد؟"
+        "de": "Ist es weit?",
+        "ar": "هل هي بعيدة؟"
       },
       {
         "who": "Passant",
@@ -11792,6 +11890,20 @@
         "answer": "5 Minuten",
         "explanationAr": "خمس دقائق.",
         "id": "d-a0-13-q1"
+      },
+      {
+        "id": "d-a0-13-q2",
+        "type": "mc",
+        "promptDe": "Wohin soll der Tourist gehen?",
+        "promptAr": "إلى أين ينبغي أن يذهب السائح؟",
+        "options": [
+          "Geradeaus, dann rechts",
+          "Links und dann zurück",
+          "Sofort zum Flughafen",
+          "Nur nach links"
+        ],
+        "answer": "Geradeaus, dann rechts",
+        "explanationAr": "«Gehen Sie geradeaus, dann rechts.» — يمشي مستقيماً ثم ينعطف يميناً."
       }
     ],
     "dictation": [
@@ -11831,6 +11943,19 @@
         ],
         "answer": "zehn Minuten",
         "explanationAr": "الإعلان يقول: zehn Minuten später (عشر دقائق)."
+      },
+      {
+        "id": "d-a0-ht01-q2",
+        "type": "mc",
+        "promptDe": "Welche Nummer hat das Gleis?",
+        "promptAr": "ما رقم الرصيف؟",
+        "options": [
+          "Gleis 1",
+          "Gleis 2",
+          "Gleis 3"
+        ],
+        "answer": "Gleis 3",
+        "explanationAr": "«Achtung, Gleis 3!» — الإعلان عن الرصيف رقم ثلاثة."
       }
     ],
     "dictation": [
@@ -12138,6 +12263,19 @@
         ],
         "answer": "ein Euro",
         "explanationAr": "الإعلان يقول 1€."
+      },
+      {
+        "id": "d-a0-ht02-q2",
+        "type": "mc",
+        "promptDe": "Wo sollen die Kunden bezahlen?",
+        "promptAr": "أين ينبغي للزبائن أن يدفعوا؟",
+        "options": [
+          "An der Kasse",
+          "Im Café",
+          "Am Eingang"
+        ],
+        "answer": "An der Kasse",
+        "explanationAr": "«Bitte bezahlen Sie an der Kasse.» — يُرجى الدفع عند الصندوق."
       }
     ],
     "dictation": [
@@ -12187,6 +12325,19 @@
         ],
         "answer": "Kaffee mit Milch und Zucker",
         "explanationAr": "الزبون طلب Kaffee mit Milch und Zucker."
+      },
+      {
+        "id": "d-a0-ht03-q2",
+        "type": "mc",
+        "promptDe": "Was möchte der Gast in seinem Kaffee?",
+        "promptAr": "ماذا يريد الضيف في قهوته؟",
+        "options": [
+          "Milch und Zucker",
+          "Zitrone und Honig",
+          "Nur Wasser"
+        ],
+        "answer": "Milch und Zucker",
+        "explanationAr": "«Mit Milch und Zucker.» — يريد الحليب والسكر."
       }
     ],
     "dictation": [

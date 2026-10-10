@@ -587,19 +587,22 @@ const empty = () => loadProgress();
         return true;
       }));
       ok(badSchema.length === 0, `K34c بنيةُ أسئلةِ القراءةِ مطابقةٌ للمخطط (mc/truefalse/fill/order/translate/umformung) — مخالف: ${badSchema.map((q) => q.id).join(",")}`);
-      // K34d: شروحٌ عربية، خياراتٌ غير متطابقة مع الجواب صراحة، ولا جوابٌ يساوي نصّه الخام من خيارٍ سهل التخمين.
+      // K34d: شروحٌ عربية وخياراتٌ فريدة؛ تُستثنى إجابةُ حرفٍ مفردٍ فقط في سؤال الأبجدية المحدّد.
       const schema2 = tx.flatMap((t) => t.questions.filter((q) => {
         if (!/[\u0600-\u06FF]/.test(q.explanationAr ?? "")) return true;
         if (q.type === "mc") {
           const opts = q.options as string[];
           if (new Set(opts).size !== opts.length) return true;
-          if (opts.some((o) => o === q.answer && o.length < 2)) return true;
+          const alphabetException = q.id === "t-a0-03-q2" && q.promptDe === "Welcher Buchstabe kommt nach D?";
+          if (opts.some((o) => o === q.answer && o.length < 2) && !alphabetException) return true;
         }
         if (q.type === "truefalse" && q.answer !== "richtig" && q.answer !== "falsch") return true;
         if (!q.id || !q.promptDe) return true;
         return false;
       }));
-      ok(schema2.length === 0, `K34d بنيةٌ ثانويةٌ سليمة: شرحٌ عربي، خياراتٌ فريدة، معرفٌ ونصٌّ موجودان، ولا قيمةٌ وضيعةٌ (مخالف: ${schema2.map((q) => q.id).join(",")})`);
+      ok(schema2.length === 0, `K34d بنيةٌ ثانويةٌ سليمة: شرحٌ عربي وخياراتٌ فريدة، واستثناءٌ محدّدٌ لحرف سؤال الأبجدية (مخالف: ${schema2.map((q) => q.id).join(",")})`);
+      const alphabetQuestion = tx.find((t) => t.id === "t-a0-03")?.questions.find((q) => q.id === "t-a0-03-q2");
+      ok(alphabetQuestion?.promptDe === "Welcher Buchstabe kommt nach D?" && alphabetQuestion.answer === "E" && Boolean(alphabetQuestion.options?.includes("E")), "K34f سؤالُ الأبجدية يتحقق من تعاقب الحروف بخياراتٍ صحيحةٍ لا بتخمينٍ شكليٍّ");
       ok(tx.every((t) => t.questions.every((q) => q.id.startsWith(t.id + "-q"))), "K34e هويّةُ السؤالِ تُشتقُّ من أبِيه — لا يتيمَ في البنك");
     }
     {
@@ -1374,7 +1377,7 @@ const empty = () => loadProgress();
     }
     ok(readFileSync("components/diktat.tsx", "utf8").includes("diktatSrc(it.id)") && readFileSync("components/diktat.tsx", "utf8").includes("playbackRate") && readFileSync("components/diktat.tsx", "utf8").includes("speakAny("), "K27g معسكر الإملاء صوتي-first: ملفٌ إن وُجد، واحتياطٌ معلنٌ إن غاب");
   }
-  ok(texts.every((t) => Array.isArray(t.questions) && t.questions.length >= 2), "K12 أربعةُ أسئلةٍ لكلِّ نصٍّ في A1/A2/B2 وثلاثةٌ في B1 القديمة؛ الجديدةُ كلُّها بأربعة");
+  ok(texts.every((t) => Array.isArray(t.questions) && t.questions.length >= 2), "K12 لكلِّ نصِّ قراءةٍ سؤالا فهمٍ على الأقلّ");
   ok(sentences.every((sx) => sx.de && sx.ar), "K13 كل جملة لها وجهان");
   ok(alleVokabeln.every((v) => ["A0", "A1", "A2", "B1", "B2"].includes(v.level)), "K14 مستويات المفردات نظامية");
 }

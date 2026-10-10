@@ -1277,6 +1277,43 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     tasks.push(...(finals[day] ?? finals[378]));
   }
 
+  // R143/A0: المرحلة أقصر من البنك؛ نضيف خانة قراءة واحدة كل يوم،
+  // وخانة استماع لكل يوم (مع خانتين في يوم التثبيت) كي لا يبقى 10 نصوص و11 حواراً خارج الخطة.
+  if (phase === "A0") {
+    const a0Day = day - PHASEN.A0.von;
+    const a0ExtraTexts = [
+      "t-a0-06", "t-a0-07", "t-a0-08", "t-a0-09", "t-a0-10",
+      "t-a0-011", "t-a0-012", "t-a0-013", "t-a0-014", "t-a0-015",
+    ];
+    const a0ExtraDialogues = [
+      ["d-a0-06"], ["d-a0-07"], ["d-a0-08"], ["d-a0-09"], ["d-a0-10"],
+      ["d-a0-11", "d-a0-ht01"], ["d-a0-12"], ["d-a0-13"], ["d-a0-ht02"], ["d-a0-ht03"],
+    ];
+    const extraText = textsOfLevel.find((text) => text.id === a0ExtraTexts[a0Day]);
+    if (extraText) {
+      tasks.push({
+        id: tid(90),
+        kind: "lesen",
+        titleDe: `A0-Lesetext: ${extraText.titleDe}`,
+        titleAr: `قراءة إضافية: ${extraText.titleAr}`,
+        minutes: 10,
+        textId: extraText.id,
+      });
+    }
+    for (const [index, dialogueId] of (a0ExtraDialogues[a0Day] ?? []).entries()) {
+      const extraDialogue = dialogsOfLevel.find((dialogue) => dialogue.id === dialogueId);
+      if (!extraDialogue) continue;
+      tasks.push({
+        id: tid(91 + index),
+        kind: "hoeren",
+        titleDe: `A0-Hörtraining: ${extraDialogue.titleDe}`,
+        titleAr: `استماع إضافي: ${extraDialogue.titleAr}`,
+        minutes: 10,
+        dialogueId: extraDialogue.id,
+      });
+    }
+  }
+
   // ── محرّكات التعلّم الذكي ──────────────────────────────────────────
   // (1) التكيّف: تمييز النقاط الضعيفة داخل فحوصات اليوم
   const wt = weakTopics(progress, 2);

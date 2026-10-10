@@ -147,6 +147,18 @@ for t in texts:
     for index, question in enumerate(t.get('questions', []), start=1):
         question.setdefault('id', f"{t['id']}-q{index}")
 reading_evidence = {
+    't-a0-02-q2': 'Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn.',
+    't-a0-06-q2': 'Wir sprechen zusammen Deutsch.',
+    't-a0-07-q2': 'Am Sonntag besuche ich meine Familie.',
+    't-a0-08-q2': 'Zum Abendbrot trinke ich Tee und esse Obst.',
+    't-a0-09-q2': 'Um 17 Uhr gehe ich nach Hause.',
+    't-a0-10-q2': 'Ich trage eine dicke Jacke.',
+    't-a0-011-q2': 'Ich nehme sie jeden Morgen in die Schule.',
+    't-a0-012-q2': 'Am Nachmittag gehe ich mit meinem Hund im Park spazieren.',
+    't-a0-013-q2': 'Ich ziehe ein T-Shirt und eine Jeans an.',
+    't-a0-014-q1': 'Dazu trinke ich ein Glas Wasser.',
+    't-a0-014-q2': 'Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln.',
+    't-a0-015-q2': 'Im Wohnzimmer steht ein Sofa vor dem Fernseher.',
     't-a1-021-q1': 'Ich wohne in Köln mit meiner Frau Amina. Unsere Tochter Sara ist drei Jahre alt.',
     't-a1-021-q2': 'Mein Vater wohnt in Tunesien, aber er besucht uns jedes Jahr im Sommer.',
     't-a1-022-q1': 'Ich stehe jeden Tag um halb sieben auf.',
