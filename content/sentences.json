@@ -8509,5 +8509,143 @@
       "wohnen",
       "der Vater"
     ]
+  },
+  {
+    "id": "s-a0-16",
+    "level": "A0",
+    "de": "Hallo! Wie geht es dir?",
+    "ar": "مرحباً! كيف حالك؟",
+    "tags": [
+      "begrüßung"
+    ]
+  },
+  {
+    "id": "s-a0-17",
+    "level": "A0",
+    "de": "Danke, es geht mir gut.",
+    "ar": "شكراً، أنا بخير.",
+    "tags": [
+      "begrüßung"
+    ]
+  },
+  {
+    "id": "s-a0-18",
+    "level": "A0",
+    "de": "Entschuldigung, wo ist die Toilette?",
+    "ar": "عفواً، أين دورة المياه؟",
+    "tags": [
+      "fragen",
+      "ort"
+    ]
+  },
+  {
+    "id": "s-a0-19",
+    "level": "A0",
+    "de": "Ich verstehe nicht. Langsamer bitte!",
+    "ar": "لا أفهم. أبطأ من فضلك!",
+    "tags": [
+      "kommunikation"
+    ]
+  },
+  {
+    "id": "s-a0-20",
+    "level": "A0",
+    "de": "Wie bitte? Können Sie das wiederholen?",
+    "ar": "عفواً؟ هل يمكنك إعادة ذلك؟",
+    "tags": [
+      "kommunikation"
+    ]
+  },
+  {
+    "id": "s-a0-21",
+    "level": "A0",
+    "de": "Ich habe Hunger und Durst.",
+    "ar": "أنا جائع وعطشان.",
+    "tags": [
+      "bedürfnisse"
+    ]
+  },
+  {
+    "id": "s-a0-22",
+    "level": "A0",
+    "de": "Wie viel kostet das?",
+    "ar": "كم يكلف هذا؟",
+    "tags": [
+      "einkauf"
+    ]
+  },
+  {
+    "id": "s-a0-23",
+    "level": "A0",
+    "de": "Ich möchte bitte einen Kaffee.",
+    "ar": "أريد قهوة من فضلك.",
+    "tags": [
+      "bestellen"
+    ]
+  },
+  {
+    "id": "s-a0-24",
+    "level": "A0",
+    "de": "Wo wohnst du?",
+    "ar": "أين تسكن؟",
+    "tags": [
+      "wohnen",
+      "fragen"
+    ]
+  },
+  {
+    "id": "s-a0-25",
+    "level": "A0",
+    "de": "Ich wohne in Berlin.",
+    "ar": "أسكن في برلين.",
+    "tags": [
+      "wohnen"
+    ]
+  },
+  {
+    "id": "s-a0-26",
+    "level": "A0",
+    "de": "Welche Sprachen sprichst du?",
+    "ar": "أي لغات تتكلم؟",
+    "tags": [
+      "sprachen",
+      "fragen"
+    ]
+  },
+  {
+    "id": "s-a0-27",
+    "level": "A0",
+    "de": "Ich spreche Arabisch, Französisch und ein bisschen Deutsch.",
+    "ar": "أتكلم العربية والفرنسية وقليلاً من الألمانية.",
+    "tags": [
+      "sprachen"
+    ]
+  },
+  {
+    "id": "s-a0-28",
+    "level": "A0",
+    "de": "Heute ist Montag.",
+    "ar": "اليوم هو الاثنين.",
+    "tags": [
+      "tage"
+    ]
+  },
+  {
+    "id": "s-a0-29",
+    "level": "A0",
+    "de": "Morgen habe ich Deutschunterricht.",
+    "ar": "غداً لدي درس ألمانية.",
+    "tags": [
+      "lernen"
+    ]
+  },
+  {
+    "id": "s-a0-30",
+    "level": "A0",
+    "de": "Auf Wiedersehen und einen schönen Tag!",
+    "ar": "إلى اللقاء ويوماً سعيداً!",
+    "tags": [
+      "verabschiedung"
+    ]
   }
 ]

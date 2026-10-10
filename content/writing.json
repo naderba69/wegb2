@@ -915,5 +915,55 @@
     ],
     "neu": true,
     "zielWort": 150
+  },
+  {
+    "id": "w-a0-03",
+    "level": "A0",
+    "titleDe": "Mich vorstellen (5 Sätze)",
+    "titleAr": "تقديم نفسي (5 جمل)",
+    "taskDe": "Schreibe 5 einfache Sätze über dich: Name, Alter, Herkunft, Wohnort, Beruf/Studium. Nutze \"ich heiße\", \"ich bin\", \"ich komme aus\", \"ich wohne in\", \"ich bin (Beruf)\".",
+    "taskAr": "اكتب 5 جمل بسيطة عن نفسك: الاسم، العمر، البلد، السكن، المهنة/الدراسة. استخدم «اسمي»، «عمري»، «أنا من»، «أسكن في»، «أعمل/أدرس».",
+    "criteria": [
+      "5 جمل بسيطة",
+      "استخدام sein/heißen/kommen/wohnen",
+      "جندر واضح للأسماء",
+      "علامات ترقيم صحيحة"
+    ],
+    "sample": "Ich heiße Layla. Ich bin 24 Jahre alt. Ich komme aus Syrien. Ich wohne in Köln. Ich bin Studentin.",
+    "noteAr": "لا داعي لجمل طويلة. جملة واحدة قصيرة لكل نقطة كافية.",
+    "zielWort": 25
+  },
+  {
+    "id": "w-a0-04",
+    "level": "A0",
+    "titleDe": "Meine Familie",
+    "titleAr": "عائلتي",
+    "taskDe": "Schreibe 4–6 Sätze über deine Familie: Wie viele Personen? Wie heißen sie? Wie alt sind sie? Was machen sie beruflich?",
+    "taskAr": "اكتب 4–6 جمل عن عائلتك: كم فرداً؟ أسماؤهم؟ أعمارهم؟ مهنهم؟",
+    "criteria": [
+      "4 جمل على الأقل",
+      "استخدام mein/meine",
+      "مهن مذكورة",
+      "أفعال بسيطة في زمن المضارع"
+    ],
+    "sample": "Meine Familie hat vier Personen. Das ist mein Vater, meine Mutter, mein Bruder und ich. Mein Vater ist Arzt. Meine Mutter ist Hausfrau.",
+    "noteAr": "استعمل «das ist» أو «mein/meine».",
+    "zielWort": 30
+  },
+  {
+    "id": "w-a0-05",
+    "level": "A0",
+    "titleDe": "Zahlen und Farben",
+    "titleAr": "الأرقام والألوان",
+    "taskDe": "Schreibe die Zahlen von 1 bis 20 auf Deutsch und nenne zu 5 Farben ein Beispiel (der Himmel ist blau usw.).",
+    "taskAr": "اكتب الأرقام من 1 إلى 20 بالألمانية، ثم اذكر 5 ألوان مع مثال لكل لون (السماء زرقاء…).",
+    "criteria": [
+      "الأرقام 1–20 صحيحة",
+      "5 ألوان مع مثال",
+      "جنس الاسم في المثال صحيح"
+    ],
+    "sample": "eins, zwei, drei … zwanzig. Das Gras ist grün. Der Himmel ist blau.",
+    "noteAr": "انتبه إلى جنس الأسماء: der/die/das في الأمثلة.",
+    "zielWort": 30
   }
 ]
