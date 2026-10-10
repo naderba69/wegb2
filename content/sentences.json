@@ -8653,8 +8653,8 @@
   {
     "id": "s-a0-27",
     "level": "A0",
-    "de": "Ich spreche Arabisch, Französisch und ein bisschen Deutsch.",
-    "ar": "أتكلم العربية والفرنسية وقليلاً من الألمانية.",
+    "de": "Ich spreche Deutsch und ein bisschen Französisch.",
+    "ar": "أتحدث الألمانية وقليلاً من الفرنسية.",
     "tags": [
       "sprachen"
     ]
@@ -8902,8 +8902,8 @@
   {
     "id": "sat-a0-031",
     "level": "A0",
-    "de": "Wie viel kostet das?",
-    "ar": "بكم هذا؟"
+    "de": "Was kostet der Kaffee?",
+    "ar": "كم سعر القهوة؟"
   },
   {
     "id": "sat-a0-032",
