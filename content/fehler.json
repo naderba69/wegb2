@@ -1326,5 +1326,245 @@
     "regelAr": "sich verbessern يعود على الفاعل، وإن كان الفاعل Deutsch حيادياً لكن الفاعل الصحيح هو ich في صيغة aktive، أو: mein Deutsch verbessert sich.",
     "level": "B2",
     "kategorie": "Reflexiv"
+  },
+  {
+    "id": "f-a1-032",
+    "falsch": "*ich gehe zu Hause",
+    "richtig": "ich gehe nach Hause",
+    "regelAr": "نستخدم nach Hause للذهاب إلى البيت (حركة)، و zu Hause للوجود فيه (استقرار).",
+    "level": "A1",
+    "kategorie": "Präposition / Haus"
+  },
+  {
+    "id": "f-a1-033",
+    "falsch": "*ich habe 25 Jahre alt",
+    "richtig": "ich bin 25 Jahre alt",
+    "regelAr": "العمر يأتي مع فعل sein، لا haben.",
+    "level": "A1",
+    "kategorie": "Alter / sein"
+  },
+  {
+    "id": "f-a1-034",
+    "falsch": "*Mein Bruder wohnt in Berlin seit drei Jahren.",
+    "richtig": "Mein Bruder wohnt seit drei Jahren in Berlin.",
+    "regelAr": "حسب قاعدة TeKaMoLo يأتي الزمان (seit …) قبل المكان عادة.",
+    "level": "A1",
+    "kategorie": "Wortstellung"
+  },
+  {
+    "id": "f-a1-035",
+    "falsch": "*Ich möchte trinken ein Wasser.",
+    "richtig": "Ich möchte ein Wasser trinken.",
+    "regelAr": "الفعل المصرف (möchte) في المرتبة الثانية، والمصدر في النهاية.",
+    "level": "A1",
+    "kategorie": "Modalverb + Infinitiv"
+  },
+  {
+    "id": "f-a1-036",
+    "falsch": "*Das Buch ist gut, aber ich nicht lese es.",
+    "richtig": "Das Buch ist gut, aber ich lese es nicht.",
+    "regelAr": "الفعل يأتي بعد الفاعل في الجملة المستقلة بعد aber، و nicht في النهاية.",
+    "level": "A1",
+    "kategorie": "Negation / Satzbau"
+  },
+  {
+    "id": "f-a1-037",
+    "falsch": "*Ich habe ein Apfel.",
+    "richtig": "Ich habe einen Apfel.",
+    "regelAr": "Apfel مذكّر؛ المفعول به المذكر النكرة يأخذ einen. Akkusativ: der → den / ein → einen.",
+    "level": "A1",
+    "kategorie": "Akkusativ"
+  },
+  {
+    "id": "f-a1-038",
+    "falsch": "*Ich komme aus Türkei.",
+    "richtig": "Ich komme aus der Türkei.",
+    "regelAr": "أسماء الدول المؤنثة أو المذكّرة (معظمها مؤنثة مثل die Türkei, die Schweiz, die USA) تأخذ أداة بعد aus/in.",
+    "level": "A1",
+    "kategorie": "Artikel / Länder"
+  },
+  {
+    "id": "f-a1-039",
+    "falsch": "*Gestern ich gehe ins Kino.",
+    "richtig": "Gestern bin ich ins Kino gegangen.",
+    "regelAr": "في زمن الماضي نستخدم Perfekt: sein + gegangen. وفي بداية الجملة بعنصر زمني يأتي الفعل في المرتبة الثانية مباشرة.",
+    "level": "A1",
+    "kategorie": "Perfekt / Satzbau"
+  },
+  {
+    "id": "f-a1-040",
+    "falsch": "*Ich habe gegessen gestern einen Apfel.",
+    "richtig": "Gestern habe ich einen Apfel gegessen.",
+    "regelAr": "الترتيب: الزمان أولاً، ثم الفعل المساعد، الفاعل، بقية الجملة، ثم Partizip II في النهاية.",
+    "level": "A1",
+    "kategorie": "Perfekt / Satzbau"
+  },
+  {
+    "id": "f-a1-041",
+    "falsch": "*Meine Schwester hat ein Auto neu.",
+    "richtig": "Meine Schwester hat ein neues Auto.",
+    "regelAr": "الصفة تأتي قبل الاسم وتتطابق معه في النوع والحالة.",
+    "level": "A1",
+    "kategorie": "Adjektivdeklination"
+  },
+  {
+    "id": "f-b1-046",
+    "falsch": "*Wenn ich viel Geld habe, würde ich eine Reise machen.",
+    "richtig": "Wenn ich viel Geld hätte, würde ich eine Reise machen.",
+    "regelAr": "شرط غير واقعي في الحاضر: Konjunktiv II في جملة الشرط، وwürde + Infinitiv في الجواب.",
+    "level": "B1",
+    "kategorie": "Konjunktiv II"
+  },
+  {
+    "id": "f-b1-047",
+    "falsch": "*Ich freue mich auf den Urlaub, weil ich will mich ausruhen.",
+    "richtig": "Ich freue mich auf den Urlaub, weil ich mich ausruhen will.",
+    "regelAr": "في weil-Satz يذهب الفعل المُصرف إلى النهاية.",
+    "level": "B1",
+    "kategorie": "Nebensatz Wortstellung"
+  },
+  {
+    "id": "f-b1-048",
+    "falsch": "*Der Mann, der ich ihn getroffen habe.",
+    "richtig": "Der Mann, den ich getroffen habe.",
+    "regelAr": "في جملة Relativ للمفعول به المذكر: den ولا نعيد الضمير ihn.",
+    "level": "B1",
+    "kategorie": "Relativsatz Akkusativ"
+  },
+  {
+    "id": "f-b1-049",
+    "falsch": "*Trotz dem Regen gehen wir spazieren.",
+    "richtig": "Trotz des Regens gehen wir spazieren.",
+    "regelAr": "trotz + Genitiv (des Regens).",
+    "level": "B1",
+    "kategorie": "Genitiv / trotz"
+  },
+  {
+    "id": "f-b1-050",
+    "falsch": "*Während ich ferngesehen habe, hat das Telefon geläutet.",
+    "richtig": "Während ich ferngesehen habe, hat das Telefon geläutet. / Während ich fernsah, klingelte das Telefon.",
+    "regelAr": "الصيغة صحيحة لغوياً لكن في السرد المكتوب يُفضّل Präteritum للخلفية (klingelte / sah fern).",
+    "level": "B1",
+    "kategorie": "Tempus"
+  },
+  {
+    "id": "f-b1-051",
+    "falsch": "*Ich habe mein Handy zu Hause vergisst.",
+    "richtig": "Ich habe mein Handy zu Hause vergessen.",
+    "regelAr": "Partizip II من vergessen هو vergessen (لا vergisst).",
+    "level": "B1",
+    "kategorie": "Perfekt starke Verben"
+  },
+  {
+    "id": "f-b1-052",
+    "falsch": "*Am besten lernst du Deutsch mit viel sprechen.",
+    "richtig": "Am besten lernst du Deutsch, indem du viel sprichst.",
+    "regelAr": "تُستخدم indem-Satz أو Infinitiv mit zu (durch vieles Sprechen)، لا mit + Infinitiv بهذا المعنى.",
+    "level": "B1",
+    "kategorie": "indem-Satz"
+  },
+  {
+    "id": "f-b1-053",
+    "falsch": "*Das Buch ist langweilig, oder?",
+    "richtig": "Das Buch ist langweilig, nicht wahr? / …, findest du nicht?",
+    "regelAr": "«oder» تستخدم علامة استفهام لكنها ليست سؤالاً مؤكداً بقدر nicht wahr/findest du nicht. مقبولة شفاهياً لكن الكتابة الرسمية تفضّل البدائل.",
+    "level": "B1",
+    "kategorie": "Gesprächspartikel"
+  },
+  {
+    "id": "f-b1-054",
+    "falsch": "*Ich bin langweilig.",
+    "richtig": "Mir ist langweilig.",
+    "regelAr": "للتعبير عن الشعور بالملل نستخدم Dativ + sein + langweilig: mir ist langweilig. Ich bin langweilig تعني أنا شخص ممل.",
+    "level": "B1",
+    "kategorie": "Dativ / Adjektiv"
+  },
+  {
+    "id": "f-b1-055",
+    "falsch": "*Entweder du kommst mit, und du bleibst zu Hause.",
+    "richtig": "Entweder du kommst mit, oder du bleibst zu Hause.",
+    "regelAr": "entweder … oder رابطان مزدوجان لا يأتي معهما und.",
+    "level": "B1",
+    "kategorie": "Doppelkonnektor"
+  },
+  {
+    "id": "f-b2-036",
+    "falsch": "*Im Vergleich zu dem letzten Jahr ist die Zahl gestiegen.",
+    "richtig": "Im Vergleich zum letzten Jahr ist die Zahl gestiegen.",
+    "regelAr": "Vergleich zu + Dativ، و zum آخر اختصار شائع؛ الأكثر فصاحة: im Vergleich zu dem مقبول لكن يُفضّل «verglichen mit» أو «gegenüber dem Vorjahr» في الرسمية.",
+    "level": "B2",
+    "kategorie": "Präpositionalgebrauch"
+  },
+  {
+    "id": "f-b2-037",
+    "falsch": "*Indem er hart arbeitete, konnte er die Prüfung bestehen.",
+    "richtig": "Weil er hart arbeitete, konnte er die Prüfung bestehen / Durch harte Arbeit bestand er die Prüfung.",
+    "regelAr": "indem تشرح الوسيلة/الكيفية لا السبب. هنا السببية بweil oder durch أفضل.",
+    "level": "B2",
+    "kategorie": "indem vs. weil"
+  },
+  {
+    "id": "f-b2-038",
+    "falsch": "*Dies ist ein Grund, warum ich dagegen bin.",
+    "richtig": "Dies ist ein Grund, weshalb / aus dem ich dagegen bin.",
+    "regelAr": "لماذا في الجملة النسبية: weshalb/weswegen أو aus dem أكثر فصاحة من warum.",
+    "kategorie": "",
+    "level": "B2"
+  },
+  {
+    "id": "f-b2-039",
+    "falsch": "*Es besteht kein Zweifel daran, dass er hat Recht.",
+    "richtig": "Es besteht kein Zweifel daran, dass er Recht hat.",
+    "regelAr": "بعد dass الفعل في آخر الجملة الثانوية.",
+    "kategorie": "",
+    "level": "B2"
+  },
+  {
+    "id": "f-b2-040",
+    "falsch": "*Die Frage, die sich stellt, ist ob das Projekt finanzierbar ist.",
+    "richtig": "Die Frage, die sich stellt, ist, ob das Projekt finanzierbar ist.",
+    "regelAr": "قبل ob جملة ثانوية تُفصل بفاصلة بعد فعل الكينونة.",
+    "kategorie": "",
+    "level": "B2"
+  },
+  {
+    "id": "f-b2-041",
+    "falsch": "*Er sagte, dass er morgen kommt und er den Bericht mitbringt.",
+    "richtig": "Er sagte, dass er morgen kommt und den Bericht mitbringt.",
+    "regelAr": "عند اشتراك dass-سات لا يُعاد dass قبل الفعل الثاني، ويتشارك الفاعل بينهما.",
+    "kategorie": "",
+    "level": "B2"
+  },
+  {
+    "id": "f-b2-042",
+    "falsch": "*Nachdem er die Prüfung bestanden hat, kann er jetzt arbeiten.",
+    "richtig": "Nachdem er die Prüfung bestanden hatte, konnte er arbeiten.",
+    "regelAr": "nachdem في الماضي تتطلب Plusquamperfekt في الجملة الأولى وPräteritum في الثانية (سبق ماضٍ).",
+    "kategorie": "",
+    "level": "B2"
+  },
+  {
+    "id": "f-b2-043",
+    "falsch": "*Je schneller, desto gut.",
+    "richtig": "Je schneller, desto besser.",
+    "regelAr": "بعد je … desto يأتي الصفة بصيغة المقارنة في الجزأين (Kompärativ).",
+    "kategorie": "",
+    "level": "B2"
+  },
+  {
+    "id": "f-b2-044",
+    "falsch": "*Ich bin daran interessiert an dem Projekt mitzuarbeiten.",
+    "richtig": "Ich bin daran interessiert, an dem Projekt mitzuarbeiten / Ich bin interessiert an der Mitarbeit an dem Projekt.",
+    "regelAr": "interessiert an + Dat./an … mitzuarbeiten يتطلب فاصلة و zu؛ لا تُخلط بين daran und an.",
+    "kategorie": "",
+    "level": "B2"
+  },
+  {
+    "id": "f-b2-045",
+    "falsch": "*Das ist besser als letztes Jahr.",
+    "richtig": "Das ist besser als im letzten Jahr.",
+    "regelAr": "عند المقارنة بفترة زمنية نستخدم في (im letzten Jahr) كظرف لا كاسم مجرد.",
+    "kategorie": "",
+    "level": "B2"
   }
 ]

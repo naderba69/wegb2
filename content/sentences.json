@@ -8860,5 +8860,185 @@
     "tags": [
       "redewendung"
     ]
+  },
+  {
+    "id": "sat-a0-031",
+    "level": "A0",
+    "de": "Wie viel kostet das?",
+    "ar": "بكم هذا؟"
+  },
+  {
+    "id": "sat-a0-032",
+    "level": "A0",
+    "de": "Ich hätte gerne ein Wasser, bitte.",
+    "ar": "أريد ماءً من فضلك."
+  },
+  {
+    "id": "sat-a0-033",
+    "level": "A0",
+    "de": "Das schmeckt gut.",
+    "ar": "هذا لذيذ."
+  },
+  {
+    "id": "sat-a0-034",
+    "level": "A0",
+    "de": "Wo ist die Toilette?",
+    "ar": "أين الحمام؟"
+  },
+  {
+    "id": "sat-a0-035",
+    "level": "A0",
+    "de": "Ich verstehe nicht.",
+    "ar": "لا أفهم."
+  },
+  {
+    "id": "sat-a0-036",
+    "level": "A0",
+    "de": "Sprechen Sie bitte langsamer.",
+    "ar": "تكلم ببطء من فضلك."
+  },
+  {
+    "id": "sat-a0-037",
+    "level": "A0",
+    "de": "Heute ist das Wetter schön.",
+    "ar": "الجو جميل اليوم."
+  },
+  {
+    "id": "sat-a0-038",
+    "level": "A0",
+    "de": "Ich bin müde.",
+    "ar": "أنا متعب."
+  },
+  {
+    "id": "sat-a0-039",
+    "level": "A0",
+    "de": "Hast du morgen Zeit?",
+    "ar": "هل لديك وقت غداً؟"
+  },
+  {
+    "id": "sat-a0-040",
+    "level": "A0",
+    "de": "Der Kaffee ist zu heiß.",
+    "ar": "القهوة حارة جداً."
+  },
+  {
+    "id": "sat-a0-041",
+    "level": "A0",
+    "de": "Das Buch ist auf dem Tisch.",
+    "ar": "الكتاب على الطاولة."
+  },
+  {
+    "id": "sat-a0-042",
+    "level": "A0",
+    "de": "Meine Schwester wohnt in Hamburg.",
+    "ar": "أختي تسكن في هامبورغ."
+  },
+  {
+    "id": "sat-a0-043",
+    "level": "A0",
+    "de": "Was ist dein Hobby?",
+    "ar": "ما هوايتك؟"
+  },
+  {
+    "id": "sat-a0-044",
+    "level": "A0",
+    "de": "Ich spiele gern Fußball.",
+    "ar": "أحب لعب كرة القدم."
+  },
+  {
+    "id": "sat-a0-045",
+    "level": "A0",
+    "de": "Wie alt bist du?",
+    "ar": "كم عمرك؟"
+  },
+  {
+    "id": "sat-a0-046",
+    "level": "A0",
+    "de": "Der Unterricht beginnt um neun Uhr.",
+    "ar": "يبدأ الدرس الساعة التاسعة."
+  },
+  {
+    "id": "sat-a0-047",
+    "level": "A0",
+    "de": "Ich habe keinen Hunger.",
+    "ar": "لست جائعاً."
+  },
+  {
+    "id": "sat-a0-048",
+    "level": "A0",
+    "de": "Gute Besserung!",
+    "ar": "شفاءً عاجلاً!"
+  },
+  {
+    "id": "sat-a0-049",
+    "level": "A0",
+    "de": "Die Katze schläft auf dem Sofa.",
+    "ar": "القطة نائمة على الكنبة."
+  },
+  {
+    "id": "sat-a0-050",
+    "level": "A0",
+    "de": "Bis morgen!",
+    "ar": "إلى غدٍ!"
+  },
+  {
+    "id": "sat-a1-103",
+    "level": "A1",
+    "de": "Könnten Sie mir bitte helfen?",
+    "ar": "هل يمكنك مساعدتي من فضلك؟"
+  },
+  {
+    "id": "sat-a1-104",
+    "level": "A1",
+    "de": "Ich suche einen Schlüssel.",
+    "ar": "أنا أبحث عن مفتاح."
+  },
+  {
+    "id": "sat-a1-105",
+    "level": "A1",
+    "de": "Das Konzert beginnt um 20 Uhr.",
+    "ar": "تبدأ الحفلة الساعة 20."
+  },
+  {
+    "id": "sat-a1-106",
+    "level": "A1",
+    "de": "Ich habe mein Portemonnaie zu Hause vergessen.",
+    "ar": "نسيت محفظتي في البيت."
+  },
+  {
+    "id": "sat-a1-107",
+    "level": "A1",
+    "de": "Der Unterricht fällt heute aus.",
+    "ar": "الحصة ملغاة اليوم."
+  },
+  {
+    "id": "sat-a2-111",
+    "level": "A2",
+    "de": "Könnten Sie mir bitte das Salz reichen?",
+    "ar": "هل من الممكن أن تناولني الملح؟"
+  },
+  {
+    "id": "sat-a2-112",
+    "level": "A2",
+    "de": "Ich habe mich gestern beim Joggen verletzt.",
+    "ar": "أُصبتُ نفسي أمس أثناء الجري."
+  },
+  {
+    "id": "sat-a2-113",
+    "level": "A2",
+    "de": "Der Bus kommt in fünf Minuten an.",
+    "ar": "تصل الحافلة بعد خمس دقائق."
+  },
+  {
+    "id": "sat-a2-114",
+    "level": "A2",
+    "de": "Ich möchte einen Termin bei Herrn Dr. Schmidt vereinbaren.",
+    "ar": "أودّ حجز موعد لدى الدكتور شميت."
+  },
+  {
+    "id": "sat-a2-115",
+    "level": "A2",
+    "de": "Die Party hat mir viel Spaß gemacht.",
+    "ar": "استمتعت كثيراً في الحفلة."
   }
 ]

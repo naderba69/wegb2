@@ -11810,5 +11810,229 @@
         "erklaerung_ar": "المذكور: 0228-900 100."
       }
     ]
+  },
+  {
+    "id": "d-a0-ht02",
+    "level": "A0",
+    "type": "hoer",
+    "situationDe": "Im Supermarkt: Ansage",
+    "situationAr": "إعلان داخل السوبرماركت",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "de": "Liebe Kunden! Heute sind die Bananen im Angebot: ein Kilo für einen Euro. Bitte bezahlen Sie an der Kasse.",
+        "ar": "أيها الزبائن! الموز اليوم في العرض: كيلو بيورو واحد. الرجاء الدفع عند الصندوق."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Was kostet ein Kilo Bananen heute?",
+        "frage_ar": "كم سعر كيلو الموز اليوم؟",
+        "options": [
+          "zwei Euro",
+          "ein Euro",
+          "fünfzig Cent"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "الإعلان يقول 1€."
+      }
+    ]
+  },
+  {
+    "id": "d-a0-ht03",
+    "level": "A0",
+    "type": "hoer",
+    "situationDe": "Im Café: Bestellung",
+    "situationAr": "طلب في المقهى",
+    "lines": [
+      {
+        "speaker": "Kellner",
+        "de": "Guten Tag! Was möchten Sie?",
+        "ar": "نهاركم سعيد، ماذا تريدون؟"
+      },
+      {
+        "speaker": "Gast",
+        "de": "Einen Kaffee, bitte. Mit Milch und Zucker.",
+        "ar": "قهوة من فضلك، مع حليب وسكر."
+      },
+      {
+        "speaker": "Kellner",
+        "de": "Sonst noch etwas?",
+        "ar": "أي شيء آخر؟"
+      },
+      {
+        "speaker": "Gast",
+        "de": "Nein, danke.",
+        "ar": "لا، شكراً."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Was bestellt der Gast?",
+        "frage_ar": "ماذا طلب الزبون؟",
+        "options": [
+          "Tee",
+          "Kaffee mit Milch und Zucker",
+          "Wasser"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "الزبون طلب Kaffee mit Milch und Zucker."
+      }
+    ]
+  },
+  {
+    "id": "d-a1-ht03",
+    "level": "A1",
+    "type": "hoer",
+    "situationDe": "Ansage am Bahnsteig: Zug fährt ab",
+    "situationAr": "إعلان على رصيف القطار",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "de": "Achtung, Gleis 5! Der ICE 621 nach Frankfurt fährt in 5 Minuten ab. Wagen 15 bis 21 stehen im hinteren Bereich. Vorsicht bei der Einfahrt!",
+        "ar": "انتباه، الرصيف 5! قطار ICE 621 إلى فرانكفورت سينطلق بعد 5 دقائق. العربات 15–21 في الخلف. انتبهوا عند دخول القطار."
+      },
+      {
+        "speaker": "Ansage",
+        "de": "Wir wünschen Ihnen eine angenehme Reise.",
+        "ar": "نتمنى لكم رحلة سعيدة."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Auf welchem Gleis fährt der ICE ab?",
+        "frage_ar": "على أي رصيف ينطلق القطار؟",
+        "options": [
+          "Gleis 1",
+          "Gleis 5",
+          "Gleis 15"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "الإعلان يقول Gleis 5."
+      }
+    ]
+  },
+  {
+    "id": "d-a2-ht02",
+    "level": "A2",
+    "type": "hoer",
+    "situationDe": "Anrufbeantworter: Nachricht von der VHS",
+    "situationAr": "رسالة من مركز تعليم الكبار",
+    "lines": [
+      {
+        "speaker": "Frau Becker",
+        "de": "Hallo Ahmed, hier ist Sabine Becker von der Volkshochschule. Ihr Kurs beginnt am kommenden Montag um 18 Uhr in Raum 304. Bitte bringen Sie Ihr Buch und einen Stift mit. Rückfragen unter 0221-4711.",
+        "ar": "مرحباً أحمد، معكِ زابينه بيكر من مركز تعليم الكبار. دورتك تبدأ الإثنين القادم الساعة 18 في القاعة 304. أحضر كتابك وقلم. للأسئلة اتصل على 0221-4711."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Was soll Ahmed mitbringen?",
+        "frage_ar": "ماذا يجب أن يحضر أحمد؟",
+        "options": [
+          "Seinen Pass",
+          "Buch und Stift",
+          "Nur Geld"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "الرسالة: Buch und Stift."
+      }
+    ]
+  },
+  {
+    "id": "d-a2-ht03",
+    "level": "A2",
+    "type": "hoer",
+    "situationDe": "Radiomeldung: Unfall auf der A3",
+    "situationAr": "خبر: حادث على الطريق السريع A3",
+    "lines": [
+      {
+        "speaker": "Sprecher",
+        "de": "Die Polizei meldet einen Unfall auf der A3 zwischen Köln und Bonn in Fahrtrichtung Süden. Drei Fahrzeuge sind beteiligt, die linke Spur ist gesperrt. Es gibt zur Zeit einen Stau von acht Kilometern. Autofahrer werden gebeten, bei Lohmar auszufahren.",
+        "ar": "تُبلغ الشرطة عن حادث على A3 بين كولونيا وبون باتجاه الجنوب. اشتركت فيه 3 سيارات، المسار الأيسر مغلق، والازدحام 8 كم. يُرجى الخروج عند لومار."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Warum sollen Autofahrer bei Lohmar ausfahren?",
+        "frage_ar": "لماذا الخروج عند لومار؟",
+        "options": [
+          "Wegen Stau nach Unfall",
+          "Wegen Baustelle",
+          "Wegen Kontrolle"
+        ],
+        "answer": 0,
+        "erklaerung_ar": "بسبب الحادث والازدحام."
+      }
+    ]
+  },
+  {
+    "id": "d-b1-ht03",
+    "level": "B1",
+    "type": "hoer",
+    "situationDe": "Interview mit Umweltschützerin",
+    "situationAr": "مقابلة مع ناشطة بيئية",
+    "lines": [
+      {
+        "speaker": "Moderator",
+        "de": "Frau Neumann, Sie protestieren gegen die neue Autobahn durch den Wald. Warum?",
+        "ar": "السيدة نويمان، لماذا تحتجين على الطريق السريع الجديد عبر الغابة؟"
+      },
+      {
+        "speaker": "Frau Neumann",
+        "de": "Der Wald ist ein wichtiger CO₂-Speicher und Lebensraum für viele Tiere. Statt neuer Autobahnen brauchen wir mehr Bus und Bahn. Die Regierung sollte in den ÖPNV investieren.",
+        "ar": "الغابة مخزن مهم لثاني أكسيد الكربون ومسكن للحيوانات. نحتاج حافلات وقطارات أكثر لا طرقاً جديدة. على الحكومة الاستثمار في النقل العام."
+      },
+      {
+        "speaker": "Moderator",
+        "de": "Aber die Autobahn würde den Verkehr entlasten.",
+        "ar": "لكن الطريق سيُخفف الزحام."
+      },
+      {
+        "speaker": "Frau Neumann",
+        "de": "Studien zeigen: Neue Straßen ziehen mehr Autos an – nach fünf Jahren ist der Stau zurück. Nur öffentlicher Verkehr hilft dauerhaft.",
+        "ar": "الطرق الجديدة تجذب سيارات أكثر فيعود الازدحام بعد 5 سنوات. النقل العام وحده هو الحل الدائم."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Was schlägt Frau Neumann vor?",
+        "frage_ar": "ماذا تقترح نويمان؟",
+        "options": [
+          "Mehr Autobahnen",
+          "Mehr ÖPNV",
+          "Weniger Radwege"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "تقترح الاستثمار في النقل العام."
+      }
+    ]
+  },
+  {
+    "id": "d-b2-ht03",
+    "level": "B2",
+    "type": "hoer",
+    "situationDe": "Wissenschaftsmeldung: KI am Arbeitsmarkt",
+    "situationAr": "خبر علمي: الذكاء الاصطناعي وسوق العمل",
+    "lines": [
+      {
+        "speaker": "Sprecher",
+        "de": "Laut einer IAB-Studie wird KI bis 2030 etwa 1,5 Millionen Arbeitsplätze in Deutschland verändern. Wegfallen werden davon nur rund 300.000; neue Stellen entstehen vor allem in Datenanalyse und Softwareentwicklung. Besonders betroffen sind Büroberufe und einfache Verwaltungsaufgaben. Die Forscher empfehlen mehr Weiterbildung für Beschäftigte über 45.",
+        "ar": "وفقاً لدراسة معهد IAB، سيُغيّر الذكاء الاصطناعي حتى 2030 نحو 1.5 مليون وظيفة في ألمانيا. منها 300 ألف ستفقد، ووظائف جديدة في تحليل البيانات والبرمجة. الأكثر تضرراً وظائف المكاتب والمهام الإدارية. يُنصح بتدريب العاملين فوق 45 عاماً."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Wie viele Jobs werden laut Studie BIS 2030 WEGFALLEN?",
+        "frage_ar": "كم وظيفة ستفقد حتى 2030؟",
+        "options": [
+          "1,5 Millionen",
+          "ca. 300.000",
+          "keine"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "300 ألف فقط، أما 1.5 مليون فالمتغير لا الفاقد."
+      }
+    ]
   }
 ]

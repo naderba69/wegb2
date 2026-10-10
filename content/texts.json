@@ -7349,5 +7349,306 @@
         "explanationAr": "الربيع."
       }
     ]
+  },
+  {
+    "id": "t-a0-011",
+    "level": "A0",
+    "titleDe": "Meine Schultasche",
+    "titleAr": "حقيبتي المدرسية",
+    "bodyDe": "Ich habe eine Schultasche. Sie ist blau und rot. In der Tasche sind drei Hefte, ein Kugelschreiber, ein Bleistift und ein Radiergummi. Ich habe auch ein Buch für Deutsch. Die Tasche ist nicht schwer. Ich nehme sie jeden Morgen in die Schule.",
+    "bodyAr": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاث دفاتر وقلم حبر وقلم رصاص وممحاة. عندي أيضاً كتاب للألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
+    "gloss": [
+      [
+        "die Schultasche",
+        "الحقيبة المدرسية"
+      ],
+      [
+        "das Heft,-e",
+        "الدفتر"
+      ],
+      [
+        "der Kugelschreiber",
+        "قلم الحبر"
+      ],
+      [
+        "das Radiergummi",
+        "الممحاة"
+      ],
+      [
+        "schwer",
+        "ثقيل"
+      ]
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Was ist in der Schultasche?",
+        "frage_ar": "ماذا يوجد في الحقيبة؟",
+        "options": [
+          "Ein Apfel",
+          "Drei Hefte und Stifte",
+          "Ein Telefon"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "في النص: drei Hefte, Kugelschreiber, Bleistift."
+      }
+    ]
+  },
+  {
+    "id": "t-a0-012",
+    "level": "A0",
+    "titleDe": "Am Wochenende",
+    "titleAr": "في نهاية الأسبوع",
+    "bodyDe": "Am Samstag stehe ich spät auf. Ich trinke Kaffee und lese die Zeitung. Am Nachmittag gehe ich mit meinem Hund im Park spazieren. Am Sonntag besuche ich meine Mutter. Wir essen zusammen Kuchen und trinken Tee. Das Wochenende ist schön.",
+    "bodyAr": "يوم السبت أستيقظ متأخراً. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نأكل الكيك معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
+    "gloss": [
+      [
+        "spät aufstehen",
+        "يستيقظ متأخراً"
+      ],
+      [
+        "der Hund,-e",
+        "الكلب"
+      ],
+      [
+        "spazieren gehen",
+        "يتنزه"
+      ],
+      [
+        "der Kuchen",
+        "الكيك/الكعك"
+      ]
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Was macht er am Sonntag?",
+        "frage_ar": "ماذا يفعل يوم الأحد؟",
+        "options": [
+          "Er geht arbeiten",
+          "Er besucht seine Mutter",
+          "Er schläft den ganzen Tag"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "النص يقول: Am Sonntag besuche ich meine Mutter."
+      }
+    ]
+  },
+  {
+    "id": "t-a0-013",
+    "level": "A0",
+    "titleDe": "Das Wetter heute",
+    "titleAr": "الطقس اليوم",
+    "bodyDe": "Heute ist Montag. Der Himmel ist blau und die Sonne scheint. Es ist warm, etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
+    "bodyAr": "اليوم الإثنين. السماء زرقاء والشمس مشرقة. الجو دافئ، حوالي ٢٠ درجة. ألبس قميصاً وبنطلون جينز. لا أحتاج إلى سترة. أنا متشوق لقضاء بعد الظهر في الحديقة.",
+    "gloss": [
+      [
+        "der Himmel",
+        "السماء"
+      ],
+      [
+        "scheinen",
+        "تشرق/تسطع"
+      ],
+      [
+        "anziehen",
+        "يلبس"
+      ],
+      [
+        "die Jacke",
+        "السترة"
+      ],
+      [
+        "sich freuen auf",
+        "يتشوق لـ"
+      ]
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Welche Temperatur hat es heute?",
+        "frage_ar": "كم درجة الحرارة اليوم؟",
+        "options": [
+          "10 Grad",
+          "20 Grad",
+          "30 Grad"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "النص: etwa 20 Grad."
+      }
+    ]
+  },
+  {
+    "id": "t-a0-014",
+    "level": "A0",
+    "titleDe": "Im Restaurant",
+    "titleAr": "في المطعم",
+    "bodyDe": "Ich gehe gern ins Restaurant. Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln. Dazu trinke ich ein Wasser. Der Kellner ist freundlich. Das Essen schmeckt sehr gut. Ich bezahle und gehe nach Hause.",
+    "bodyAr": "أحب الذهاب إلى المطعم. اليوم أطلب شوربة وشريحة لحم مع بطاطس. وأشرب معها ماءً. النادل لطيف. الأكل لذيذ جداً. أدفع وأذهب إلى البيت.",
+    "gloss": [
+      [
+        "bestellen",
+        "يطلب"
+      ],
+      [
+        "die Suppe",
+        "الشوربة"
+      ],
+      [
+        "das Schnitzel",
+        "شريحة لحم مقلية"
+      ],
+      [
+        "freundlich",
+        "لطيف"
+      ],
+      [
+        "schmecken",
+        "يكون لذيذاً"
+      ]
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Was trinkt er?",
+        "frage_ar": "ماذا يشرب؟",
+        "options": [
+          "Bier",
+          "Wasser",
+          "Cola"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "النص: Dazu trinke ich ein Wasser."
+      }
+    ]
+  },
+  {
+    "id": "t-a0-015",
+    "level": "A0",
+    "titleDe": "Meine Wohnung",
+    "titleAr": "شقتي",
+    "bodyDe": "Ich wohne in einer kleinen Wohnung in der Stadt. Die Wohnung hat ein Wohnzimmer, ein Schlafzimmer, eine Küche und ein Bad. Im Wohnzimmer steht ein Sofa vor dem Fernseher. In der Küche mache ich Kaffee. Die Wohnung ist ruhig und hell.",
+    "bodyAr": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمّام. في غرفة المعيشة كنبة أمام التلفاز. في المطبخ أصنع القهوة. الشقة هادئة ومشرقة.",
+    "gloss": [
+      [
+        "das Wohnzimmer",
+        "غرفة المعيشة"
+      ],
+      [
+        "das Schlafzimmer",
+        "غرفة النوم"
+      ],
+      [
+        "das Sofa",
+        "الكنبة"
+      ],
+      [
+        "ruhig",
+        "هادئ"
+      ],
+      [
+        "hell",
+        "مشرق"
+      ]
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Wie ist die Wohnung?",
+        "frage_ar": "كيف هي الشقة؟",
+        "options": [
+          "Groß und laut",
+          "Klein, ruhig und hell",
+          "Dunkel und alt"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "النص: kleine Wohnung, ruhig und hell."
+      }
+    ]
+  },
+  {
+    "id": "t-a2-031",
+    "level": "A2",
+    "titleDe": "Ein Umzug nach Leipzig",
+    "titleAr": "انتقال إلى لايبزيغ",
+    "bodyDe": "Letzten Monat ist Sara von München nach Leipzig gezogen. Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch, deshalb suchte sie eine Wohnung im Osten. In Leipzig fand sie eine schöne Altbauwohnung mit drei Zimmern und Balkon für 650 Euro warm. Am Anfang vermisste sie ihre Freunde in München, aber sie hat schnell neue Kollegen kennengelernt. Jetzt gefällt ihr Leipzig gut: Die Stadt ist grün, die Menschen sind freundlich und die Mieten sind bezahlbar. Am Wochenende erkundet sie mit dem Fahrrad die Viertel und probiert neue Cafés aus.",
+    "bodyAr": "انتقلت سارة الشهر الماضي من ميونخ إلى لايبزيغ. وجدت وظيفة جديدة كمصممة جرافيك. كانت الإيجارات في ميونخ مرتفعة جدًا، فبحثت عن شقة في الشرق. وجدت في لايبزيغ شقة جميلة في مبنى قديم بثلاث غرف وشرفة بـ 650 يورو شاملة التدفئة. في البداية افتقدت أصدقائها في ميونخ، لكنها سرعان ما تعرفت على زملاء جدد. والآن تعجبها لايبزيغ: المدينة خضراء، الناس لطفاء، والإيجارات معقولة. في نهاية الأسبوع تستكشف الأحياء بالدراجة وتجرب مقاهي جديدة.",
+    "gloss": [
+      [
+        "umziehen",
+        "ينتقل"
+      ],
+      [
+        "die Stelle,-n",
+        "الوظيفة"
+      ],
+      [
+        "die Altbauwohnung,-en",
+        "شقة في مبنى قديم"
+      ],
+      [
+        "warm",
+        "شاملة التدفئة"
+      ],
+      [
+        "bezahlbar",
+        "يمكن دفعه/معقول"
+      ],
+      [
+        "erkunden",
+        "يستكشف"
+      ]
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Warum ist Sara nach Leipzig gezogen?",
+        "frage_ar": "لماذا انتقلت إلى لايبزيغ؟",
+        "options": [
+          "Wegen einer neuen Stelle und niedrigeren Mieten",
+          "Wegen des Wetters",
+          "Weil ihre Familie dort wohnt"
+        ],
+        "answer": 0,
+        "erklaerung_ar": "وجدت وظيفة جديدة وكانت إيجارات ميونخ عالية."
+      }
+    ]
+  },
+  {
+    "id": "t-a2-032",
+    "level": "A2",
+    "titleDe": "Ein gesunder Tagesablauf",
+    "titleAr": "يوم صحي",
+    "bodyDe": "Lukas hat seinen Tagesablauf in den letzten Monaten stark verändert. Früher stand er spät auf, trank drei Tassen Kaffee zum Frühstück und aß mittags oft Fast Food. Abends saß er stundenlang vor dem Fernseher. Jetzt steht er um sieben Uhr auf, macht zwanzig Minuten Yoga und frühstückt Müsli mit Obst. Mittags kocht er selbst Gemüse mit Reis. Er geht dreimal pro Woche laufen und schläft vor Mitternacht. Seitdem fühlt er sich viel fitter und ist in der Arbeit konzentrierter. Er sagt, die größte Schwierigkeit war, abends keine Schokolade zu essen.",
+    "bodyAr": "غيّر لوكاس روتينه اليومي في الأشهر الماضية بشكل كبير. سابقاً كان يستيقظ متأخراً، يشرب ثلاثة فناجين قهوة على الفطور، ويأكل وجبات سريعة في الغداء. في المساء يجلس ساعات أمام التلفاز. الآن يستيقظ السابعة، يمارس اليوغا عشرين دقيقة، ويفطر موسلي بالفاكهة. يطبخ في الغداء خضاراً مع الأرز، يركض ثلاث مرات أسبوعياً، وينام قبل منتصف الليل. منذ ذلك يشعر بأكثر نشاطاً وأعلى تركيزاً في العمل. ويقول إن الصعوبة الأكبر كانت عدم أكل الشوكولاتة مساءً.",
+    "gloss": [
+      [
+        "der Tagesablauf",
+        "الروتين اليومي"
+      ],
+      [
+        "verändern",
+        "يغيّر"
+      ],
+      [
+        "das Fast Food",
+        "الوجبات السريعة"
+      ],
+      [
+        "fitter",
+        "أكثر نشاطاً/لياقة"
+      ],
+      [
+        "konzentriert",
+        "مُركِّز"
+      ]
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Was war Lukas' größte Schwierigkeit bei der Umstellung?",
+        "frage_ar": "ما كانت أكبر صعوبة؟",
+        "options": [
+          "Früher aufzustehen",
+          "Keine Schokolade abends zu essen",
+          "Täglich Sport zu machen"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "النص يقول إن أصعب شيء كان عدم أكل الشوكولاتة مساءً."
+      }
+    ]
   }
 ]

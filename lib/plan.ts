@@ -141,7 +141,7 @@ export const COURSE_TOPIC_ORDER: Record<Level, string[]> = {
 };
 
 export const PHASE_DECKS: Record<Phase, string[]> = {
-  A0: ["a0-start", "a0-zahlen", "a0-farben", "a0-obst-gemuese"],
+  A0: ["a0-start", "a0-zahlen", "a0-farben", "a0-obst-gemuese", "a0-klassenzimmer"],
   A1: ["a1-start", "a1-familie-alltag", "a1-zeit-zahlen", "a1-essen-trinken", "a1-koerper-kleidung", "a1-stadt-wege", "a1-haus-schule", "a1-natur-freizeit", "a1-welt-beruf", "a1-modal-ort", "a1-menschen-abschluss"],
   A2: ["a2-komplett", "a2-arbeit-buero", "a2-alltag-dienste", "a2-leben-technik", "a2-schreiben-dienste", "a2-mensch-beziehung", "a2-reise-feste", "a2-medien-bildung", "a2-geld-gesundheit", "a2-wohnen-vertrag", "a2-arbeit-umwelt", "a2-kueche-haushalt", "a2-erzaehlen-zeit", "a2-redemittel", "a2-kultur-digital", "a2-b1-bruecke"],
   B1: ["b1-gesellschaft", "b1-staat-argument", "b1-karriere-psyche", "b1-gesundheit-technik", "b1-projekt-rede", "b1-stadt-recht", "b1-funktionsverben", "b1-bildung-migration-familie", "b1-dienst-natur-bild", "b1-brief-wirtschaft", "b1-wissen-zeit-wendungen", "b1-essen-kunst-hoeflichkeit", "b1-gesund-wohnen-praep", "b1-job-auto-praefix", "b1-geld-gemeinschaft-adj", "b1-digital-kauf-nomen", "b1-pruefung-text-reflexiv", "b1-klima-sport-komposita", "b1-medien-reise-verben", "b1-verwaltung-handwerk", "b1-arbeit-familie-geld", "a2-b1-bruecke"],

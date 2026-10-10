@@ -50425,5 +50425,93 @@
         "ar": "الحد الأدنى للأجور"
       }
     ]
+  },
+  "a0-klassenzimmer": {
+    "id": "a0-klassenzimmer",
+    "titelDe": "Im Klassenzimmer",
+    "titelAr": "في غرفة الصف",
+    "level": "A0",
+    "cards": [
+      {
+        "de": "der Stuhl, -ühe",
+        "ar": "كرسي"
+      },
+      {
+        "de": "der Tisch, -e",
+        "ar": "طاولة"
+      },
+      {
+        "de": "die Tafel, -n",
+        "ar": "سبورة"
+      },
+      {
+        "de": "die Kreide, -n",
+        "ar": "طبشور"
+      },
+      {
+        "de": "der Kugelschreiber, -",
+        "ar": "قلم حبر"
+      },
+      {
+        "de": "das Heft, -e",
+        "ar": "دفتر"
+      },
+      {
+        "de": "das Buch, -ücher",
+        "ar": "كتاب"
+      },
+      {
+        "de": "der Lehrer/die Lehrerin, -",
+        "ar": "المعلم/ة"
+      },
+      {
+        "de": "der Schüler/die Schülerin, -",
+        "ar": "التلميذ/ة"
+      },
+      {
+        "de": "die Tür, -en",
+        "ar": "باب"
+      },
+      {
+        "de": "das Fenster, -",
+        "ar": "نافذة"
+      },
+      {
+        "de": "die Lampe, -n",
+        "ar": "مصباح"
+      },
+      {
+        "de": "die Tasche, -n",
+        "ar": "حقيبة"
+      },
+      {
+        "de": "der Bleistift, -e",
+        "ar": "قلم رصاص"
+      },
+      {
+        "de": "das Papier, -e",
+        "ar": "ورقة"
+      },
+      {
+        "de": "öffnen",
+        "ar": "يفتح"
+      },
+      {
+        "de": "schließen",
+        "ar": "يغلق"
+      },
+      {
+        "de": "schreiben",
+        "ar": "يكتب"
+      },
+      {
+        "de": "lesen",
+        "ar": "يقرأ"
+      },
+      {
+        "de": "hören",
+        "ar": "يسمع"
+      }
+    ]
   }
 }
