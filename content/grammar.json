@@ -15071,5 +15071,87 @@
     "pitfalls": [],
     "eselsbrueckeAr": "في B2 يُقيّم التعقيد المناسب (Konjunktiv II، Nominalstil، Doppelkonnektoren) — لا تكتب جملاً أبسط من مستوى B2.",
     "pronTippAr": ""
+  },
+  "a0-satzbau": {
+    "id": "a0-satzbau",
+    "level": "A0",
+    "titleDe": "Der einfache Satz: Wer → Verb → Was?",
+    "titleAr": "الجملة البسيطة: مَن → فِعل → ماذا؟",
+    "ziel": "تُكوِّن جملةً ألمانية قصيرة صحيحة الترتيب: الفعل في الموقع الثاني.",
+    "voraus": [
+      "a0-begrussung",
+      "a0-artikel"
+    ],
+    "summaryDe": "Im deutschen Hauptsatz steht das konjugierte Verb an zweiter Stelle. Subjekt, Verb, Rest.",
+    "summaryAr": "في الجملة الألمانية الرئيسية، الفعل المُصرَّف في الموقع الثاني: فاعل → فعل → بقية.",
+    "rules": [
+      {
+        "de": "Ich heiße Ali.",
+        "ar": "اسمي علي (فاعل → فعل → تكملة)."
+      },
+      {
+        "de": "Ich wohne in Berlin.",
+        "ar": "أسكن في برلين (مكان)."
+      },
+      {
+        "de": "Heute trinke ich Kaffee.",
+        "ar": "اليوم أشرب قهوة — بعد «Heute» يأتي الفعل مباشرة ثم الفاعل."
+      },
+      {
+        "de": "Mein Vater ist Arzt.",
+        "ar": "أبي طبيب."
+      }
+    ],
+    "exercises": [
+      {
+        "type": "mc",
+        "promptDe": "Welcher Satz ist richtig?",
+        "promptAr": "أي الجمل صحيحة؟",
+        "options": [
+          "Ich wohne in Berlin.",
+          "Ich in Berlin wohne.",
+          "Wohne ich in Berlin.",
+          "In Berlin ich wohne."
+        ],
+        "answer": 0,
+        "explanationAr": "الفاعل أولاً ثم الفعل ثم المكان."
+      },
+      {
+        "type": "mc",
+        "promptDe": "___ trinke ich Tee.",
+        "promptAr": "أكمِل: … أشرب شاياً.",
+        "options": [
+          "Ich",
+          "Heute",
+          "Tee",
+          "Bin"
+        ],
+        "answer": 1,
+        "explanationAr": "Heute trinke ich Tee — الفعل في المرتبة الثانية."
+      }
+    ],
+    "commonErrors": [
+      {
+        "falsch": "*Heute ich trinke Kaffee.",
+        "richtig": "Heute trinke ich Kaffee.",
+        "ar": "عند البدء بظرف، الفعل يبقى في الموقع الثاني."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "Der häufigste Anfängerfehler: Verb an letzter Stelle oder nach dem Subjekt nach einem Adverb.",
+        "ar": "الأكثر شيوعاً: وضع الفعل في غير المرتبة الثانية."
+      }
+    ],
+    "anwendung": {
+      "de": "Schreibe 3 Sätze über dich.",
+      "ar": "اكتب 3 جمل عن نفسك."
+    },
+    "redemittel": [
+      "Ich heiße …",
+      "Ich bin … Jahre alt.",
+      "Ich wohne in …",
+      "Ich komme aus …"
+    ]
   }
 }
