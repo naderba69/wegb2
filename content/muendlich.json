@@ -921,6 +921,244 @@
         }
       ],
       "zeit_s": 240
+    },
+    {
+      "id": "mm-a1-05",
+      "level": "A1",
+      "teil": 2,
+      "titel_de": "Meine Familie",
+      "titel_ar": "عائلتي",
+      "auftrag_de": "Stellen Sie Ihre Familie kurz vor: Wie viele Personen? Wer sind sie? Was machen sie?",
+      "auftrag_ar": "قدّم عائلتك باختصار: كم فرداً؟ مَن هم؟ ماذا يعملون؟",
+      "stuetzen": [
+        "Meine Familie besteht aus … Personen.",
+        "Mein/Meine … ist …",
+        "Er/Sie arbeitet/lernt …",
+        "Wir wohnen in …"
+      ],
+      "kriterien": [
+        {
+          "de": "Verständlichkeit",
+          "ar": "الفهم"
+        },
+        {
+          "de": "Wortschatz Familie/Beruf",
+          "ar": "مفردات الأسرة والعمل"
+        },
+        {
+          "de": "Grammatik (Possessivartikel)",
+          "ar": "القواعد (أدوات الملكية)"
+        },
+        {
+          "de": "Flüssigkeit",
+          "ar": "الطلاقة"
+        }
+      ],
+      "zeit_s": 120
+    },
+    {
+      "id": "mm-a2-05",
+      "level": "A2",
+      "teil": 2,
+      "titel_de": "Mein letzter Urlaub",
+      "titel_ar": "عطلتي الأخيرة",
+      "auftrag_de": "Erzählen Sie von Ihrem letzten Urlaub: Wohin sind Sie gefahren? Was haben Sie gemacht?",
+      "auftrag_ar": "احكِ عن عطلتك الأخيرة: إلى أين سافرت؟ ماذا فعلت؟",
+      "stuetzen": [
+        "Im letzten Urlaub war ich in …",
+        "Ich bin mit … gefahren.",
+        "Wir haben … besucht.",
+        "Das Wetter war …"
+      ],
+      "kriterien": [
+        {
+          "de": "Perfekt angewendet",
+          "ar": "استخدام الماضي التام"
+        },
+        {
+          "de": "Reisewortschatz",
+          "ar": "مفردات السفر"
+        },
+        {
+          "de": "Verständlichkeit",
+          "ar": "الفهم"
+        },
+        {
+          "de": "Zeitmanagement",
+          "ar": "إدارة الزمن"
+        }
+      ],
+      "zeit_s": 150
+    },
+    {
+      "id": "mm-b1-05",
+      "level": "B1",
+      "teil": 2,
+      "titel_de": "Vor- und Nachteile des Online-Lernens",
+      "titel_ar": "إيجابيات وسلبيات التعلم عبر الإنترنت",
+      "auftrag_de": "Sprechen Sie über das Lernen im Internet: Welche Vorteile und Nachteile gibt es? Nennen Sie eigene Erfahrungen.",
+      "auftrag_ar": "تحدث عن التعلم عبر الإنترنت: ما الإيجابيات والسلبيات؟ اذكر تجربتك الشخصية.",
+      "stuetzen": [
+        "Ein Vorteil ist … / Ein Nachteil ist …",
+        "Ich habe die Erfahrung gemacht, dass …",
+        "Meiner Meinung nach …",
+        "Im Vergleich zum Präsenzunterricht …"
+      ],
+      "kriterien": [
+        {
+          "de": "Argumentationsaufbau",
+          "ar": "بناء الحجة"
+        },
+        {
+          "de": "Wortschatz Lernen/Digitales",
+          "ar": "مفردات التعلم والرقمنة"
+        },
+        {
+          "de": "Konnektoren (jedoch, außerdem)",
+          "ar": "أدوات الربط"
+        },
+        {
+          "de": "Eigene Meinung erkennbar",
+          "ar": "وضوح الرأي الشخصي"
+        }
+      ],
+      "zeit_s": 180
+    },
+    {
+      "id": "mm-b2-05",
+      "level": "B2",
+      "teil": 2,
+      "titel_de": "Soll das Rauchen in der Öffentlichkeit verboten werden?",
+      "titel_ar": "هل يُمنع التدخين في الأماكن العامة؟",
+      "auftrag_de": "Nehmen Sie Stellung: Nennen Sie Argumente für und gegen ein Rauchverbot in öffentlichen Räumen und begründen Sie Ihre Meinung.",
+      "auftrag_ar": "عبّر عن موقفك: اذكر حججاً مع وضد منع التدخين في الأماكن العامة وبرر رأيك.",
+      "stuetzen": [
+        "Pro: Gesundheitsschutz / Passivrauchen",
+        "Contra: Persönliche Freiheit",
+        "Ein überzeugendes Argument ist …",
+        "Aus meiner Sicht überwiegt …"
+      ],
+      "kriterien": [
+        {
+          "de": "Pro- und Contra-Argumente",
+          "ar": "الحجج المع والمضاد"
+        },
+        {
+          "de": "Abstrakter Wortschatz",
+          "ar": "مفردات مجردة"
+        },
+        {
+          "de": "Konditional- und Konzessivsätze",
+          "ar": "جمل الشرط والتنازع"
+        },
+        {
+          "de": "Schlüssige Begründung",
+          "ar": "الاستدلال المنطقي"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm-a1-06",
+      "level": "A1",
+      "teil": 3,
+      "titel_de": "Kino oder Fernsehen?",
+      "titel_ar": "السينما أم التلفاز؟",
+      "auftrag_de": "Diskutieren Sie mit Ihrem Partner: Was finden Sie besser – ins Kino gehen oder fernsehen? Warum?",
+      "auftrag_ar": "ناقش مع شريكك: أيهما تفضل الذهاب للسينما أم مشاهدة التلفاز؟ لماذا؟",
+      "stuetzen": [
+        "Ich finde … besser, weil …",
+        "Was denkst du?",
+        "Ich bin anderer Meinung.",
+        "Einverstanden."
+      ],
+      "kriterien": [
+        {
+          "de": "Einfache Meinungsäußerung",
+          "ar": "إبداء الرأي البسيط"
+        },
+        {
+          "de": "Begründung mit weil",
+          "ar": "التعليل بـ weil"
+        },
+        {
+          "de": "Frage an den Partner",
+          "ar": "سؤال للشريك"
+        },
+        {
+          "de": "Reaktion auf Partner",
+          "ar": "التفاعل مع الشريك"
+        }
+      ],
+      "zeit_s": 120
+    },
+    {
+      "id": "mm-a2-06",
+      "level": "A2",
+      "teil": 3,
+      "titel_de": "Geschenk für Freundin",
+      "titel_ar": "هدية لصديقة",
+      "auftrag_de": "Sie wollen einer Freundin zum Geburtstag ein Geschenk machen. Diskutieren Sie zwei Vorschläge und einigen Sie sich.",
+      "auftrag_ar": "تريد إحضار هدية عيد ميلاد لصديقة. ناقش مقترحين وتوصّلا إلى اتفاق.",
+      "stuetzen": [
+        "Ich schlage vor, wir schenken ihr …",
+        "Das ist zu teuer / nicht praktisch.",
+        "Was hältst du von …?",
+        "Dann nehmen wir …"
+      ],
+      "kriterien": [
+        {
+          "de": "Vorschläge machen",
+          "ar": "تقديم الاقتراحات"
+        },
+        {
+          "de": "Vor- und Nachteile nennen",
+          "ar": "ذكر الإيجابيات والسلبيات"
+        },
+        {
+          "de": "Einigung erzielen",
+          "ar": "التوصل لاتفاق"
+        },
+        {
+          "de": "A2-Wortschatz Einkauf",
+          "ar": "مفردات A2 الشراء"
+        }
+      ],
+      "zeit_s": 180
+    },
+    {
+      "id": "mm-b1-06",
+      "level": "B1",
+      "teil": 3,
+      "titel_de": "Klassenausflug wählen",
+      "titel_ar": "اختيار رحلة الصف",
+      "auftrag_de": "Ihre Klasse will einen Ausflug machen. Entscheiden Sie zwischen Museum und Tierpark: planen Sie Termin, Kosten und Treffpunkt.",
+      "auftrag_ar": "صفكم يريد القيام برحلة. اختاروا بين المتحف وحديقة الحيوان: خططوا الموعد والتكلفة ونقطة اللقاء.",
+      "stuetzen": [
+        "Lieber ins Museum, denn …",
+        "Wann treffen wir uns?",
+        "Der Eintritt kostet …",
+        "Ich bin dafür, am … zu fahren."
+      ],
+      "kriterien": [
+        {
+          "de": "Argumentation",
+          "ar": "الحجج"
+        },
+        {
+          "de": "Konkrete Planung (Zeit/Kosten)",
+          "ar": "تخطيط عملي (وقت/تكلفة)"
+        },
+        {
+          "de": "Kompromiss finden",
+          "ar": "إيجاد حل وسط"
+        },
+        {
+          "de": "Interaktion mit Fragen",
+          "ar": "التفاعل بالأسئلة"
+        }
+      ],
+      "zeit_s": 240
     }
   ],
   "partner": [
@@ -1255,6 +1493,142 @@
         {
           "de": "Füllphrasen bei Stockung",
           "ar": "عبارات ملء عند التوقف"
+        }
+      ],
+      "zeit_s": 180
+    },
+    {
+      "id": "kt-a1-03",
+      "level": "A1",
+      "teil": 1,
+      "titel_de": "Nach dem Weg fragen",
+      "titel_ar": "السؤال عن الطريق",
+      "auftrag_de": "Fragen Sie eine Passantin / einen Passanten nach dem Weg zum Hauptbahnhof.",
+      "auftrag_ar": "اسأل أحد المارّة عن الطريق إلى المحطة المركزية.",
+      "stuetzen": [
+        "Entschuldigung, ich suche den Hauptbahnhof.",
+        "Wie komme ich dorthin?",
+        "Gehe ich links oder rechts?",
+        "Vielen Dank!"
+      ],
+      "kriterien": [
+        {
+          "de": "Höfliche Anrede",
+          "ar": "المناداة المهذبة"
+        },
+        {
+          "de": "Richtungsangaben verstehen",
+          "ar": "فهم اتجاهات الطريق"
+        },
+        {
+          "de": "W-Fragen",
+          "ar": "أسئلة W"
+        },
+        {
+          "de": "Danken",
+          "ar": "الشكر"
+        }
+      ],
+      "zeit_s": 90
+    },
+    {
+      "id": "kt-a2-03",
+      "level": "A2",
+      "teil": 1,
+      "titel_de": "Einen Arzttermin vereinbaren",
+      "titel_ar": "حجز موعد عند الطبيب",
+      "auftrag_de": "Rufen Sie die Arztpraxis an und vereinbaren Sie einen Termin. Sagen Sie, warum Sie kommen.",
+      "auftrag_ar": "اتصل بالعيادة واحجز موعداً واذكر سبب الزيارة.",
+      "stuetzen": [
+        "Guten Tag, ich möchte einen Termin.",
+        "Ich habe Schmerzen im … / Ich habe … seit …",
+        "Haben Sie am … um … Uhr frei?",
+        "Mein Name ist …"
+      ],
+      "kriterien": [
+        {
+          "de": "Terminwunsch klar formulieren",
+          "ar": "تحديد طلب الموعد"
+        },
+        {
+          "de": "Symptome nennen",
+          "ar": "ذكر الأعراض"
+        },
+        {
+          "de": "Zeit-/Datumsangaben",
+          "ar": "التاريخ والوقت"
+        },
+        {
+          "de": "Telefonische Höflichkeit",
+          "ar": "آداب المكالمة"
+        }
+      ],
+      "zeit_s": 120
+    },
+    {
+      "id": "kt-b1-03",
+      "level": "B1",
+      "teil": 1,
+      "titel_de": "Eine Wohnung besichtigen (Fragen an den Vermieter)",
+      "titel_ar": "معاينة شقة: أسئلة للمؤجر",
+      "auftrag_de": "Sie besichtigen eine Mietwohnung. Fragen Sie den Vermieter nach Miete, Nebenkosten, Kaution und Haustieren.",
+      "auftrag_ar": "أنت تعاين شقة للإيجار؛ اسأل المؤجر عن الإيجار والتكاليف الإضافية والتأمين وحيازة الحيوانات الأليفة.",
+      "stuetzen": [
+        "Wie hoch ist die Kaltmiete und die Nebenkosten?",
+        "Ist die Kaution drei Kaltmieten?",
+        "Sind Haustiere erlaubt?",
+        "Wie ist die Anbindung an die Öffis?"
+      ],
+      "kriterien": [
+        {
+          "de": "Wohnungswortschatz",
+          "ar": "مفردات السكن"
+        },
+        {
+          "de": "Präzise Fragen",
+          "ar": "أسئلة دقيقة"
+        },
+        {
+          "de": "Höflicher Umgangston",
+          "ar": "اللهجة المهذبة"
+        },
+        {
+          "de": "Verstehen der Antworten",
+          "ar": "فهم الأجوبة"
+        }
+      ],
+      "zeit_s": 180
+    },
+    {
+      "id": "kt-b2-03",
+      "level": "B2",
+      "teil": 1,
+      "titel_de": "Feedback-Gespräch mit dem Chef",
+      "titel_ar": "محادثة تقييم مع المدير",
+      "auftrag_de": "Führen Sie ein Feedback-Gespräch mit Ihrem Vorgesetzten. Sprechen Sie über Ihre Stärken, Wünsche und nächste Schritte.",
+      "auftrag_ar": "أجرِ محادثة تقييم مع مديرك: تحدث عن نقاط قوتك ورغباتك والخطوات التالية.",
+      "stuetzen": [
+        "In den letzten Monaten habe ich … erreicht.",
+        "Ich wünsche mir mehr Verantwortung für …",
+        "Wo sehen Sie noch Entwicklungspotenzial?",
+        "Wichtig ist mir auch …"
+      ],
+      "kriterien": [
+        {
+          "de": "Arbeitsweltwortschatz",
+          "ar": "مفردات عالم العمل"
+        },
+        {
+          "de": "Konstruktive Selbstreflexion",
+          "ar": "تأمل ذاتي بنّاء"
+        },
+        {
+          "de": "Höfliche, aber bestimmte Formulierungen",
+          "ar": "صياغات مهذبة وحازمة"
+        },
+        {
+          "de": "Gesprächssteuerung",
+          "ar": "إدارة الحوار"
         }
       ],
       "zeit_s": 180
