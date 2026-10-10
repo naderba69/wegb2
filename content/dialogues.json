@@ -10734,5 +10734,304 @@
       "Die Kaltmiete beträgt 720 Euro, die Nebenkosten liegen bei 180 Euro warm.",
       "In den ersten zwei Jahren gibt es eine Staffelmiete von zwei Prozent pro Jahr."
     ]
+  },
+  {
+    "id": "d-a0-04",
+    "level": "A0",
+    "titleDe": "Woher kommst du?",
+    "titleAr": "من أين أنت؟",
+    "ort": "Kennenlernen",
+    "lines": [
+      {
+        "who": "A",
+        "de": "Hallo! Wie heißt du?",
+        "ar": "مرحباً! ما اسمك؟"
+      },
+      {
+        "who": "B",
+        "de": "Ich heiße Layla. Und du?",
+        "ar": "اسمي ليلى. وأنت؟"
+      },
+      {
+        "who": "A",
+        "de": "Ich heiße Omar. Woher kommst du?",
+        "ar": "اسمي عمر. من أين أنت؟"
+      },
+      {
+        "who": "B",
+        "de": "Ich komme aus Syrien. Und du?",
+        "ar": "أنا من سوريا. وأنت؟"
+      },
+      {
+        "who": "A",
+        "de": "Ich komme aus Tunesien. Wo wohnst du?",
+        "ar": "أنا من تونس. أين تسكنين؟"
+      },
+      {
+        "who": "B",
+        "de": "Ich wohne in Hamburg.",
+        "ar": "أسكن في هامبورغ."
+      }
+    ],
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Woher kommt Layla?",
+        "promptAr": "من أين ليلى؟",
+        "options": [
+          "Aus Tunesien",
+          "Aus Syrien",
+          "Aus der Türkei",
+          "Aus Ägypten"
+        ],
+        "answer": 1,
+        "explanationAr": "ليلى من سوريا."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wo wohnt Layla?",
+        "promptAr": "أين تسكن ليلى؟",
+        "options": [
+          "In Berlin",
+          "In München",
+          "In Hamburg",
+          "In Köln"
+        ],
+        "answer": 2,
+        "explanationAr": "تسكن في هامبورغ."
+      }
+    ],
+    "dictation": [
+      "Ich heiße Layla.",
+      "Ich komme aus Syrien."
+    ]
+  },
+  {
+    "id": "d-a0-05",
+    "level": "A0",
+    "titleDe": "Telefonnummer buchstabieren",
+    "titleAr": "تهجئة الاسم ورقم الهاتف",
+    "ort": "Am Empfang",
+    "lines": [
+      {
+        "who": "Mitarbeiterin",
+        "de": "Guten Tag! Ihr Name, bitte?",
+        "ar": "نهارك سعيد! اسمك من فضلك؟"
+      },
+      {
+        "who": "Kunde",
+        "de": "Mein Name ist Huber.",
+        "ar": "اسمي هوبر."
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Buchstabieren Sie bitte!",
+        "ar": "اهجُ من فضلك!"
+      },
+      {
+        "who": "Kunde",
+        "de": "H – U – B – E – R.",
+        "ar": "H – U – B – E – R."
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Danke. Und Ihre Telefonnummer?",
+        "ar": "شكراً. ورقم هاتفك؟"
+      },
+      {
+        "who": "Kunde",
+        "de": "Null eins sieben sechs, dreiundvierzig fünfundneunzig.",
+        "ar": "صفر واحد سبعة ستة، ثلاثة وأربعون خمسة وتسعون."
+      }
+    ],
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Wie buchstabiert man Huber?",
+        "promptAr": "كيف تُتَهجَّأ Huber؟",
+        "options": [
+          "H-U-P-E-R",
+          "H-U-B-E-R",
+          "U-H-B-E-R",
+          "H-A-B-E-R"
+        ],
+        "answer": 1,
+        "explanationAr": "العميل هجّاها H–U–B–E–R."
+      }
+    ],
+    "dictation": [
+      "Buchstabieren Sie bitte!"
+    ]
+  },
+  {
+    "id": "d-a0-06",
+    "level": "A0",
+    "titleDe": "Im Café — bestellen",
+    "titleAr": "في المقهى — الطلب",
+    "ort": "Café",
+    "lines": [
+      {
+        "who": "Kellner",
+        "de": "Guten Tag! Was möchten Sie?",
+        "ar": "نهارك سعيد! ماذا تريد؟"
+      },
+      {
+        "who": "Gast",
+        "de": "Einen Kaffee, bitte!",
+        "ar": "قهوة من فضلك!"
+      },
+      {
+        "who": "Kellner",
+        "de": "Mit Milch oder ohne?",
+        "ar": "مع حليب أو بدون؟"
+      },
+      {
+        "who": "Gast",
+        "de": "Mit Milch, bitte. Und ein Wasser.",
+        "ar": "مع حليب من فضلك. وماء."
+      },
+      {
+        "who": "Kellner",
+        "de": "Sonst noch etwas?",
+        "ar": "أي شيء آخر؟"
+      },
+      {
+        "who": "Gast",
+        "de": "Nein, danke!",
+        "ar": "لا، شكراً!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Was bestellt der Gast?",
+        "promptAr": "ماذا طلب الزبون؟",
+        "options": [
+          "Tee und Kuchen",
+          "Kaffee mit Milch und ein Wasser",
+          "Nur ein Bier",
+          "Wein und Käse"
+        ],
+        "answer": 1,
+        "explanationAr": "قهوة بالحليب وماء."
+      }
+    ],
+    "dictation": [
+      "Einen Kaffee, bitte!",
+      "Mit Milch, bitte."
+    ]
+  },
+  {
+    "id": "d-a0-07",
+    "level": "A0",
+    "titleDe": "Wie alt bist du?",
+    "titleAr": "كم عمرك؟",
+    "ort": "In der Klasse",
+    "lines": [
+      {
+        "who": "A",
+        "de": "Hallo! Ich bin Sara. Ich bin 22 Jahre alt.",
+        "ar": "مرحباً! أنا سارة. عمري 22 سنة."
+      },
+      {
+        "who": "B",
+        "de": "Ich heiße Tim. Ich bin 25.",
+        "ar": "اسمي تيم. عمري 25."
+      },
+      {
+        "who": "A",
+        "de": "Wo wohnst du, Tim?",
+        "ar": "أين تسكن يا تيم؟"
+      },
+      {
+        "who": "B",
+        "de": "Ich wohne in München.",
+        "ar": "أسكن في ميونخ."
+      },
+      {
+        "who": "A",
+        "de": "Ich wohne auch in München!",
+        "ar": "أسكن في ميونخ أيضاً!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Wie alt ist Sara?",
+        "promptAr": "كم عمر سارة؟",
+        "options": [
+          "22",
+          "25",
+          "30",
+          "18"
+        ],
+        "answer": 0,
+        "explanationAr": "سارة في الـ22."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wo wohnt Tim?",
+        "promptAr": "أين يسكن تيم؟",
+        "options": [
+          "In Berlin",
+          "In Hamburg",
+          "In München",
+          "In Köln"
+        ],
+        "answer": 2,
+        "explanationAr": "يسكن في ميونخ."
+      }
+    ],
+    "dictation": [
+      "Ich bin 22 Jahre alt."
+    ]
+  },
+  {
+    "id": "d-a0-08",
+    "level": "A0",
+    "titleDe": "Auf Wiedersehen!",
+    "titleAr": "إلى اللقاء!",
+    "ort": "Nach dem Unterricht",
+    "lines": [
+      {
+        "who": "A",
+        "de": "Tschüss! Bis morgen!",
+        "ar": "مع السلامة! إلى غدٍ!"
+      },
+      {
+        "who": "B",
+        "de": "Auf Wiedersehen! Bis später!",
+        "ar": "إلى اللقاء! إلى اللاحق!"
+      },
+      {
+        "who": "A",
+        "de": "Schönen Tag noch!",
+        "ar": "يوماً سعيداً!"
+      },
+      {
+        "who": "B",
+        "de": "Danke, gleichfalls!",
+        "ar": "شكراً، وأنت أيضاً!"
+      }
+    ],
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Wann sehen sie sich wieder?",
+        "promptAr": "متى سيتقابلان مجدداً؟",
+        "options": [
+          "Nächste Woche",
+          "Morgen",
+          "Nie",
+          "Heute Abend"
+        ],
+        "answer": 1,
+        "explanationAr": "قال A: Bis morgen! أي إلى الغد."
+      }
+    ],
+    "dictation": [
+      "Auf Wiedersehen!",
+      "Schönen Tag noch!"
+    ]
   }
 ]
