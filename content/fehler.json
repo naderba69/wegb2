@@ -1198,5 +1198,69 @@
     "falsch": "*Das Buch ist besser wie der Film.",
     "richtig": "Das Buch ist besser als der Film.",
     "ar": "بعد المقارنة (besser/schöner/größer …) تستخدم «als» لا «wie»."
+  },
+  {
+    "id": "f-a0-001",
+    "falsch": "*ich bin gehen",
+    "richtig": "ich gehe",
+    "regelAr": "الفعل يصرف للمتكلم: gehen → ich gehe (لا نستخدم bin مع الفعل الرئيسي).",
+    "level": "A0",
+    "kategorie": "Verbkonjugation"
+  },
+  {
+    "id": "f-a0-002",
+    "falsch": "*ich habe 30 Jahr alt",
+    "richtig": "ich bin 30 Jahre alt",
+    "regelAr": "العمر يأتي مع فعل sein، والاسم Jahre بالجمع بعد رقم غير الواحد.",
+    "level": "A0",
+    "kategorie": "Alter / sein"
+  },
+  {
+    "id": "f-a0-003",
+    "falsch": "*ich heiße Ali bin",
+    "richtig": "ich heiße Ali",
+    "regelAr": "heißen وحده يكفي لذكر الاسم؛ لا داعي لكلمة bin.",
+    "level": "A0",
+    "kategorie": "heißen"
+  },
+  {
+    "id": "f-a0-004",
+    "falsch": "*ich bin ein Mann aus Syrien heiße Karim",
+    "richtig": "ich heiße Karim und komme aus Syrien",
+    "regelAr": "جملتان مستقلتان تربطهما und؛ لا تُجعل جملة واحدة بلا فعل رابط.",
+    "level": "A0",
+    "kategorie": "Satzbau"
+  },
+  {
+    "id": "f-a0-005",
+    "falsch": "*ich wohne in Berlin seit 2022",
+    "richtig": "ich wohne seit 2022 in Berlin",
+    "regelAr": "الزمن/المدة (seit …) غالباً قبل المكان في الجملة البسيطة (حسب قواعد TeKaMoLo تمهيداً للA1).",
+    "level": "A0",
+    "kategorie": "Wortstellung"
+  },
+  {
+    "id": "f-a0-006",
+    "falsch": "*das ist ein Buch rot",
+    "richtig": "das ist ein rotes Buch",
+    "regelAr": "الصفة تأتي قبل الاسم في الألمانية، لا بعده.",
+    "level": "A0",
+    "kategorie": "Adjektivstellung"
+  },
+  {
+    "id": "f-a0-007",
+    "falsch": "*ich nicht verstehe",
+    "richtig": "ich verstehe nicht",
+    "regelAr": "nicht في نهاية الجملة بعد الفعل المصرف في جملة بسيطة.",
+    "level": "A0",
+    "kategorie": "Negation"
+  },
+  {
+    "id": "f-a0-008",
+    "falsch": "*ein Frau",
+    "richtig": "eine Frau",
+    "regelAr": "Frau اسم مؤنث → المُنكّر eine، der → ein، die → eine، das → ein.",
+    "level": "A0",
+    "kategorie": "Artikel"
   }
 ]

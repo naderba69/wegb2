@@ -13794,6 +13794,19 @@
         ],
         "explanationAr": "bin i قصيرة (أنا)؛ ihm/ihn بـ ih طويلة.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welcher Vokal ist kurz?",
+        "promptAr": "أي حرف علة قصير؟",
+        "options": [
+          "der Bann",
+          "der Bahn",
+          "der Sohn",
+          "die Uhr"
+        ],
+        "answer": 0,
+        "explanationAr": "في Bann الحرف a قصير (متبوع بحرفين ساكنين)، أما Bahn فالـa طويل."
       }
     ],
     "pitfalls": [],
@@ -13895,6 +13908,32 @@
         ],
         "answer": 1,
         "explanationAr": "Männer = مِنَر، فيها ä."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welches Wort enthält ö?",
+        "promptAr": "أي كلمة تحتوي على ö؟",
+        "options": [
+          "Glück",
+          "schön",
+          "Haus",
+          "Tür"
+        ],
+        "answer": 1,
+        "explanationAr": "schön فيها ö."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welches Wort enthält ü?",
+        "promptAr": "أي كلمة تحتوي على ü؟",
+        "options": [
+          "schön",
+          "Männer",
+          "Tür",
+          "Heft"
+        ],
+        "answer": 2,
+        "explanationAr": "Tür فيها ü."
       }
     ],
     "pitfalls": [],
@@ -14038,6 +14077,19 @@
         ],
         "answer": 1,
         "explanationAr": "بعد حروف e/i/ä/ö/ü/ei/eu يُنطَق ch ناعماً."
+      },
+      {
+        "type": "mc",
+        "promptDe": "In welchem Wort klingt ch «weich» (ich-Laut)?",
+        "promptAr": "في أي كلمة ينطق ch ناعماً (ich-Laut)؟",
+        "options": [
+          "Buch",
+          "ich",
+          "Nacht",
+          "Kuchen"
+        ],
+        "answer": 1,
+        "explanationAr": "بعد i/e/ä/ö/ü/ei/eu ينطق ch ناعماً."
       }
     ],
     "pitfalls": [],
@@ -14121,6 +14173,19 @@
         ],
         "answer": 1,
         "explanationAr": "نهاية المقطع r تنطق كصوت حرف علة داكن شبيه بـa، مثل «Vater»."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie klingt r am Silbenende (Vater) oft?",
+        "promptAr": "كيف يُنطَق r في نهاية المقطع (Vater)؟",
+        "options": [
+          "Gerollt (wie im Italienischen)",
+          "Dunkles a (Vokal)",
+          "Wie l",
+          "Wie ch"
+        ],
+        "answer": 1,
+        "explanationAr": "في نهاية المقطع يُنطَق r كحرف علة داكن."
       }
     ],
     "pitfalls": [],
@@ -14765,6 +14830,19 @@
         ],
         "explanationAr": "Trotzdem ظرف يربط جملتين مستقلتين (لا يغيّر ترتيب الفعل).",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welche Konjunktion leitet einen Konzessivsatz ein?",
+        "promptAr": "أي أداة تُدخل جملة تنازعية؟",
+        "options": [
+          "weil",
+          "obwohl",
+          "wenn",
+          "dass"
+        ],
+        "answer": 1,
+        "explanationAr": "obwohl / obgleich / auch wenn كلها أدوات تنازع."
       }
     ],
     "pitfalls": [],
@@ -14896,6 +14974,19 @@
         ],
         "explanationAr": "deren للمؤنث والجمع: die Frau, deren Kinder …",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welcher Relativsatz ist richtig?",
+        "promptAr": "أي جملة نسب صحيحة؟",
+        "options": [
+          "Der Mann, dessen Auto rot ist, fährt weg.",
+          "Der Mann, sein Auto rot ist, fährt weg.",
+          "Der Mann, das Auto rot ist, fährt weg.",
+          "Der Mann, denen Auto rot ist, fährt weg."
+        ],
+        "answer": 0,
+        "explanationAr": "dessen لملكية المذكر/المحايد، deren للمؤنث والجمع."
       }
     ],
     "pitfalls": [],
@@ -14999,6 +15090,19 @@
         ],
         "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث عن الجواب في النص؛ هذا يوفر وقتاً كبيراً.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie lesen Sie lange Texte in der Prüfung am besten?",
+        "promptAr": "ما أفضل طريقة لقراءة النصوص الطويلة في الامتحان؟",
+        "options": [
+          "Jedes Wort übersetzen",
+          "Erst Aufgaben lesen, dann Text gezielt durchsuchen",
+          "Den Text auswendig lernen",
+          "Schnell einmal lesen ohne Aufgaben"
+        ],
+        "answer": 1,
+        "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث في النص عن الجواب."
       }
     ],
     "pitfalls": [],
@@ -15056,6 +15160,32 @@
         ],
         "explanationAr": "في A2: رسالة خاصة 100 كلمة ورسالة رسمية 100 كلمة.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie viel Zeit sollten Sie sich pro Aufgabe in der Prüfung ungefähr nehmen?",
+        "promptAr": "كم من الوقت ينبغي أن تأخذ لكل تمرين في الامتحان تقريباً؟",
+        "options": [
+          "So viel Zeit wie nötig",
+          "Pro Aufgabe im Verhältnis zur Punktzahl",
+          "Immer 5 Minuten",
+          "Nur die schwierigen Aufgaben zuerst"
+        ],
+        "answer": 1,
+        "explanationAr": "وزّع الوقت على التمارين بحسب الدرجات، لا تحبس نفسك على سؤال واحد."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Worauf sollten Sie im Hörverstehen A2 zuerst achten?",
+        "promptAr": "على ماذا تركز أولاً في فهم المسموع A2؟",
+        "options": [
+          "Auf jedes einzelne Wort",
+          "Auf Schlüsselwörter (Wer? Wo? Wann? Warum?)",
+          "Auf die Grammatik",
+          "Auf die Aussprache"
+        ],
+        "answer": 1,
+        "explanationAr": "الكلمات المفتاحية كافية للإجابة، لا تحاول فهم كل كلمة."
       }
     ],
     "pitfalls": [],
@@ -15113,6 +15243,32 @@
         ],
         "explanationAr": "بنية المقال: مقدمة + 2-3 حجج + خاتمة.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie viele Wörter brauchen Sie im Schreiben-Teil B1 Goethe ungefähr?",
+        "promptAr": "كم كلمة يجب أن تكتب في جزء الكتابة B1 Goethe تقريباً؟",
+        "options": [
+          "ca. 30 Wörter",
+          "ca. 80 Wörter",
+          "ca. 100–120 Wörter",
+          "ca. 300 Wörter"
+        ],
+        "answer": 2,
+        "explanationAr": "المطلوب B1 حوالي 100 كلمة (بريد إلكتروني 40 + رسالة 80 تقريباً)."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wenn Sie im Sprechen Teil 1 (Kontakt) ein Wort nicht wissen, was tun Sie?",
+        "promptAr": "إذا لم تعرف كلمة في المحادثة الجزء 1، ماذا تفعل؟",
+        "options": [
+          "Schweigen",
+          "Auf Arabisch sagen",
+          "Umschreiben (Paraphrase)",
+          "Den Satz abbrechen"
+        ],
+        "answer": 2,
+        "explanationAr": "عُبّر عنها بكلمات أخرى؛ التفاهم يُقاس لا الكلمة."
       }
     ],
     "pitfalls": [],
@@ -15170,6 +15326,32 @@
         ],
         "explanationAr": "مقال الرأي في B2 بين 120 و180 كلمة.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Was ist im B2-Sprechen Teil 2 verlangt?",
+        "promptAr": "ماذا يُطلب في جزء الكلام B2 Teil 2؟",
+        "options": [
+          "Nur Begrüßung",
+          "Präsentation (Monolog) mit Begründung",
+          "Vorlesen eines Textes",
+          "Wortschatztest"
+        ],
+        "answer": 1,
+        "explanationAr": "عرض (مونولوج) مدعّم بالحجج."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie lang soll die Vorbereitung auf die Präsentation (Teil 2) sein?",
+        "promptAr": "كم طول وقت التحضير للعرض؟",
+        "options": [
+          "1 Minute",
+          "3 Minuten",
+          "10 Minuten",
+          "Keine Vorbereitung"
+        ],
+        "answer": 1,
+        "explanationAr": "في Goethe B2 ثلاث دقائق للتحضير."
       }
     ],
     "pitfalls": [],
@@ -15258,6 +15440,19 @@
         ],
         "answer": 1,
         "explanationAr": "بعد ظرف الزمان Morgen يأتي الفعل في الموقع الثاني."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wo steht das Verb im deutschen Satz?",
+        "promptAr": "أين يقع الفعل المصرف في الجملة الألمانية الرئيسية؟",
+        "options": [
+          "Am Anfang",
+          "An zweiter Stelle",
+          "Am Ende",
+          "Vor dem Subjekt"
+        ],
+        "answer": 1,
+        "explanationAr": "الفعل في المرتبة الثانية دائماً في الجملة الخبرية."
       }
     ],
     "commonErrors": [

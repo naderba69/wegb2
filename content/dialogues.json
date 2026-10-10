@@ -11554,5 +11554,261 @@
     "dictation": [
       "Fünf Minuten zu Fuß."
     ]
+  },
+  {
+    "id": "d-a0-ht01",
+    "level": "A0",
+    "type": "hoer",
+    "situationDe": "Ansage am Bahnhof (Zugverspätung)",
+    "situationAr": "إعلان في محطة القطار عن تأخير",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "de": "Achtung, Gleis 3! Der Regionalzug nach Bonn fährt heute zehn Minuten später.",
+        "ar": "انتباه، الرصيف ٣! القطار الإقليمي إلى بون يتأخر اليوم عشر دقائق."
+      },
+      {
+        "speaker": "Ansage",
+        "de": "Der Zug hält auch in Köln-Süd. Bitte steigen Sie erst ein, wenn der Zug steht.",
+        "ar": "القطار يتوقف أيضاً في كولونيا-جنوب. الرجاء الصعود فقط بعد توقف القطار."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Wie viele Minuten hat der Zug Verspätung?",
+        "frage_ar": "كم دقيقة تأخير القطار؟",
+        "options": [
+          "zwei Minuten",
+          "fünf Minuten",
+          "zehn Minuten"
+        ],
+        "answer": 2,
+        "erklaerung_ar": "الإعلان يقول: zehn Minuten später (عشر دقائق)."
+      }
+    ]
+  },
+  {
+    "id": "d-a1-ht01",
+    "level": "A1",
+    "type": "hoer",
+    "situationDe": "Anrufbeantworter: Arztpraxis Dr. Lehmann",
+    "situationAr": "جهاز الرد الآلي في عيادة الدكتورة ليمان",
+    "lines": [
+      {
+        "speaker": "Anrufbeantworter",
+        "de": "Sie haben die Praxis von Dr. Lehmann erreicht. Unsere Öffnungszeiten sind Montag bis Freitag von 8 bis 12 Uhr und Dienstag und Donnerstag von 15 bis 18 Uhr.",
+        "ar": "اتصلت بعيادة د. ليمان. ساعات العمل من الإثنين إلى الجمعة ٨–١٢، الثلاثاء والخميس ١٥–١٨."
+      },
+      {
+        "speaker": "Anrufbeantworter",
+        "de": "Bei akuten Schmerzen rufen Sie bitte den Notdienst unter der Nummer 116 117 an. Vielen Dank.",
+        "ar": "في حال الألم الحاد اتصل بالطوارئ على ١١٦١١٧. شكراً."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Wann ist die Praxis Dienstag Nachmittag geöffnet?",
+        "frage_ar": "متى تفتح العيادة الثلاثاء بعد الظهر؟",
+        "options": [
+          "8–12 Uhr",
+          "15–18 Uhr",
+          "geschlossen"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "الإعلان: Dienstag und Donnerstag 15–18 Uhr."
+      }
+    ]
+  },
+  {
+    "id": "d-a1-ht02",
+    "level": "A1",
+    "type": "hoer",
+    "situationDe": "Radiomeldung: Wetter",
+    "situationAr": "نشرة الأحوال الجوية في الراديو",
+    "lines": [
+      {
+        "speaker": "Sprecherin",
+        "de": "Guten Morgen, liebe Hörerinnen und Hörer! Heute bleibt es im Norden bewölkt mit etwas Regen bei 12 Grad.",
+        "ar": "صباح الخير أيها المستمعون! الجو اليوم غائم مع مطر خفيف في الشمال ١٢ درجة."
+      },
+      {
+        "speaker": "Sprecherin",
+        "de": "Im Süden scheint die Sonne bei bis zu 22 Grad. Am Wochenende gibt es überall Sonnenschein.",
+        "ar": "في الجنوب تشرق الشمس وتصل الحرارة إلى ٢٢ درجة. عطلة نهاية الأسبوع مشمسة في كل المناطق."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Wie ist das Wetter am Wochenende?",
+        "frage_ar": "كيف الجو في نهاية الأسبوع؟",
+        "options": [
+          "Regen",
+          "Sonnenschein",
+          "Schnee"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "النشرة: Am Wochenende gibt es überall Sonnenschein."
+      }
+    ]
+  },
+  {
+    "id": "d-a2-ht01",
+    "level": "A2",
+    "type": "hoer",
+    "situationDe": "Ansage im Kaufhaus: Sonderangebot",
+    "situationAr": "إعلان داخل متجر عن عرض خاص",
+    "lines": [
+      {
+        "speaker": "Ansage",
+        "de": "Sehr geehrte Kundinnen und Kunden! Heute erhalten Sie auf alle Winterjacken 30 Prozent Rabatt.",
+        "ar": "أيها الزبائن الكرام! اليوم خصم ٣٠٪ على جميع معاطف الشتاء."
+      },
+      {
+        "speaker": "Ansage",
+        "de": "Das Angebot gilt nur heute bis Ladenschluss um 20 Uhr. Bitte beachten Sie auch unsere neue Damenabteilung im ersten Stock.",
+        "ar": "العرض ساري اليوم فقط حتى إغلاق المتجر الساعة ٢٠. زوروا قسم النساء الجديد في الطابق الأول."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Wie viel Rabatt gibt es auf Winterjacken?",
+        "frage_ar": "كم الخصم على معاطف الشتاء؟",
+        "options": [
+          "10 Prozent",
+          "20 Prozent",
+          "30 Prozent"
+        ],
+        "answer": 2,
+        "erklaerung_ar": "الإعلان: 30 Prozent Rabatt."
+      }
+    ]
+  },
+  {
+    "id": "d-b1-ht01",
+    "level": "B1",
+    "type": "hoer",
+    "situationDe": "Radiomeldung: Streik im ÖPNV",
+    "situationAr": "خبر في الراديو: إضراب النقل العام",
+    "lines": [
+      {
+        "speaker": "Moderator",
+        "de": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks der Gewerkschaft Verdi nur eingeschränkt fahren.",
+        "ar": "غداً الثلاثاء، ستسير الحافلات والقطارات في المدينة بشكل محدود بسبب إضراب تحذيري لنقابة فيردي."
+      },
+      {
+        "speaker": "Moderator",
+        "de": "Besonders die U-Bahn-Linien U1 und U3 sind betroffen. Die S-Bahn soll nach Angaben der Deutschen Bahn fast vollständig fahren. Der Streik dauert von 4 bis 10 Uhr.",
+        "ar": "خطوط المترو U1 وU3 هي الأكثر تأثراً، بينما قطارات الـS-Bahn تسير شبه كاملة حسب تصريحات دويتشه بان. الإضراب من الساعة ٤ حتى ١٠ صباحاً."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Wie lange dauert der Streik?",
+        "frage_ar": "كم يستمر الإضراب؟",
+        "options": [
+          "Eine Stunde",
+          "Sechs Stunden",
+          "Zwölf Stunden"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "من ٤ إلى ١٠ = ٦ ساعات."
+      }
+    ]
+  },
+  {
+    "id": "d-b1-ht02",
+    "level": "B1",
+    "type": "hoer",
+    "situationDe": "Ansage im Zug: Verspätung wegen Personen auf der Strecke",
+    "situationAr": "إعلان في القطار: تأخير بسبب أشخاص على السكة",
+    "lines": [
+      {
+        "speaker": "Zugführer",
+        "de": "Sehr geehrte Fahrgäste, wir bitten die Verspätung von etwa 15 Minuten zu entschuldigen. Grund sind Personen auf der Strecke, die die Bundespolizei gerade wegschickt.",
+        "ar": "أيها الركاب، نعتذر عن التأخير بنحو ١٥ دقيقة بسبب أشخاص على السكة وتقوم الشرطة الاتحادية بإبعادهم."
+      },
+      {
+        "speaker": "Zugführer",
+        "de": "Wir erreichen den Hauptbahaussichtlich um 17:45 Uhr. Der Anschluss nach Hamburg ist dadurch gefährdet.",
+        "ar": "سنصل المحطة الرئيسية حوالي ١٧:٤٥. ربط هامبورغ مهدد بسبب التأخير."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Warum verspätet sich der Zug?",
+        "frage_ar": "لماذا القطار متأخر؟",
+        "options": [
+          "Wegen einer technischen Störung",
+          "Wegen Personen auf der Strecke",
+          "Wegen schlechten Wetters"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "المذكور: Personen auf der Strecke."
+      }
+    ]
+  },
+  {
+    "id": "d-b2-ht01",
+    "level": "B2",
+    "type": "hoer",
+    "situationDe": "Radiomeldung: Klimaprotest blockiert Autobahn",
+    "situationAr": "خبر في الراديو: احتجاج مناخي يغلق طريقاً سريعاً",
+    "lines": [
+      {
+        "speaker": "Nachrichtensprecher",
+        "de": "Aktivisten der Gruppe «Letzte Generation» haben heute Morgen die A100 in Berlin blockiert, indem sie sich auf der Fahrbahn festklebten.",
+        "ar": "ناشطون من مجموعة «الجيل الأخير» أغلقوا الطريق السريع A100 في برلين صباحاً بلصق أنفسهم على الطريق."
+      },
+      {
+        "speaker": "Nachrichtensprecher",
+        "de": "Die Polizei hat mit der Räumung begonnen. Bislang kam es zu einem Stau von etwa 14 Kilometern. Die A100 ist stadteinwärts seit 7 Uhr gesperrt, die Räumung wird voraussichtlich bis zum Mittag dauern.",
+        "ar": "بدأت الشرطة بالإخلاء. الازدحام يبلغ ١٤ كيلومتراً. الطريق مغلق باتجاه المدينة منذ الساعة ٧ ومن المتوقع أن يستمر الإخلاء حتى الظهيرة."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Wie lange wird die Räumung voraussichtlich dauern?",
+        "frage_ar": "متى يتوقع انتهاء الإخلاء؟",
+        "options": [
+          "Bis 8 Uhr",
+          "Bis zum Mittag",
+          "Bis zum Abend"
+        ],
+        "answer": 1,
+        "erklaerung_ar": "المذكور: bis zum Mittag."
+      }
+    ]
+  },
+  {
+    "id": "d-b2-ht02",
+    "level": "B2",
+    "type": "hoer",
+    "situationDe": "Anrufbeantworter: Firma Müller & Söhne (Kundenrückruf)",
+    "situationAr": "جهاز الرد الآلي لشركة مولر وأبناء (ردّ مكالمة عميل)",
+    "lines": [
+      {
+        "speaker": "Anrufbeantworter",
+        "de": "Guten Tag, Sie haben die Firma Müller & Söhne erreicht. Heute ist Freitag, der 10. Oktober, unser Büro ist bereits geschlossen.",
+        "ar": "نهاركم سعيد، لقد اتصلتم بشركة مولر وأبناء. اليوم الجمعة ١٠ تشرين الأول ومكتبنا مغلق."
+      },
+      {
+        "speaker": "Anrufbeantworter",
+        "de": "Unsere Öffnungszeiten am Montag sind 8 bis 17 Uhr. In dringenden Fällen erreichen Sie unseren Notdienst unter der 0228-900 100. Vielen Dank für Ihr Verständnis.",
+        "ar": "ساعات العمل الإثنين من ٨ حتى ١٧. في الحالات الطارئة اتصل بخدمة الطوارئ على ٠٢٢٨-٩٠٠١٠٠. شكراً لتفهمكم."
+      }
+    ],
+    "comprehension": [
+      {
+        "frage_de": "Welche Nummer wählt man in dringenden Fällen?",
+        "frage_ar": "ما الرقم المطلوب في الحالات الطارئة؟",
+        "options": [
+          "0228-900 100",
+          "110",
+          "112"
+        ],
+        "answer": 0,
+        "erklaerung_ar": "المذكور: 0228-900 100."
+      }
+    ]
   }
 ]

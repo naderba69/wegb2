@@ -3237,6 +3237,66 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Gute Urteilskraft zeigt sich, wenn zwei Quellen einander widersprechen.",
         "exampleAr": "القدرة على الحكم تظهر حين يتناقض مصدران."
+      },
+      {
+        "de": "der Kommentar, -e",
+        "ar": "تعليق (رأي صحفي)"
+      },
+      {
+        "de": "die Berichterstattung",
+        "ar": "التغطية الإخبارية"
+      },
+      {
+        "de": "die Quelle, -n",
+        "ar": "مصدر"
+      },
+      {
+        "de": "die Nachrichtensendung, -en",
+        "ar": "نشرة الأخبار"
+      },
+      {
+        "de": "die Talkshow, -s",
+        "ar": "برنامج حواري"
+      },
+      {
+        "de": "die Schlagzeile, -n",
+        "ar": "عنوان بارز"
+      },
+      {
+        "de": "das Boulevardblatt, -äer",
+        "ar": "صحيفة شعبية"
+      },
+      {
+        "de": "die Medienkompetenz",
+        "ar": "الإعلامية التربوية (مهارة التعامل مع الإعلام)"
+      },
+      {
+        "de": "der Schulabschluss, -schlüsse",
+        "ar": "شهادة إنهاء المدرسة"
+      },
+      {
+        "de": "das Abitur",
+        "ar": "الشهادة الثانوية المؤهلة للجامعة"
+      },
+      {
+        "de": "die Klassenarbeit, -en",
+        "ar": "امتحان فصل"
+      },
+      {
+        "de": "die Note, -n",
+        "ar": "علامة / درجة"
+      },
+      {
+        "de": "das Zeugnis, -se",
+        "ar": "كشف علامات"
+      },
+      {
+        "de": "der Lehrplan, -pläne",
+        "ar": "المنهاج الدراسي"
+      },
+      {
+        "de": "das Schulsystem, -e",
+        "ar": "النظام المدرسي"
       }
     ]
   },
@@ -49999,6 +50059,370 @@
         "farbe": "BLAU",
         "exampleDe": "Es gibt keine einfache Lösung für dieses Problem.",
         "exampleAr": "لا يوجد حل بسيط لهذه المشكلة."
+      }
+    ]
+  },
+  "a0-zahlen": {
+    "id": "a0-zahlen",
+    "titelDe": "Zahlen 0–20 + Zehner",
+    "titelAr": "الأرقام من 0 إلى 20 والعشرات",
+    "level": "A0",
+    "cards": [
+      {
+        "de": "null",
+        "ar": "٠"
+      },
+      {
+        "de": "eins",
+        "ar": "١"
+      },
+      {
+        "de": "zwei",
+        "ar": "٢"
+      },
+      {
+        "de": "drei",
+        "ar": "٣"
+      },
+      {
+        "de": "vier",
+        "ar": "٤"
+      },
+      {
+        "de": "fünf",
+        "ar": "٥"
+      },
+      {
+        "de": "sechs",
+        "ar": "٦"
+      },
+      {
+        "de": "sieben",
+        "ar": "٧"
+      },
+      {
+        "de": "acht",
+        "ar": "٨"
+      },
+      {
+        "de": "neun",
+        "ar": "٩"
+      },
+      {
+        "de": "zehn",
+        "ar": "١٠"
+      },
+      {
+        "de": "elf",
+        "ar": "١١"
+      },
+      {
+        "de": "zwölf",
+        "ar": "١٢"
+      },
+      {
+        "de": "dreizehn",
+        "ar": "١٣"
+      },
+      {
+        "de": "zwanzig",
+        "ar": "٢٠"
+      },
+      {
+        "de": "dreißig",
+        "ar": "٣٠"
+      },
+      {
+        "de": "hundert",
+        "ar": "١٠٠"
+      },
+      {
+        "de": "einhundert",
+        "ar": "مئة"
+      }
+    ]
+  },
+  "a0-farben": {
+    "id": "a0-farben",
+    "titelDe": "Farben",
+    "titelAr": "الألوان",
+    "level": "A0",
+    "cards": [
+      {
+        "de": "rot",
+        "ar": "أحمر"
+      },
+      {
+        "de": "blau",
+        "ar": "أزرق"
+      },
+      {
+        "de": "grün",
+        "ar": "أخضر"
+      },
+      {
+        "de": "gelb",
+        "ar": "أصفر"
+      },
+      {
+        "de": "schwarz",
+        "ar": "أسود"
+      },
+      {
+        "de": "weiß",
+        "ar": "أبيض"
+      },
+      {
+        "de": "orange",
+        "ar": "برتقالي"
+      },
+      {
+        "de": "lila",
+        "ar": "بنفسجي"
+      },
+      {
+        "de": "braun",
+        "ar": "بني"
+      },
+      {
+        "de": "grau",
+        "ar": "رمادي"
+      },
+      {
+        "de": "rosa",
+        "ar": "وردي"
+      },
+      {
+        "de": "dunkelblau",
+        "ar": "أزرق داكن"
+      },
+      {
+        "de": "hellgrün",
+        "ar": "أخضر فاتح"
+      }
+    ]
+  },
+  "a0-obst-gemuese": {
+    "id": "a0-obst-gemuese",
+    "titelDe": "Obst und Gemüse",
+    "titelAr": "الفاكهة والخضار",
+    "level": "A0",
+    "cards": [
+      {
+        "de": "der Apfel, Äpfel",
+        "ar": "تفاحة"
+      },
+      {
+        "de": "die Banane, -n",
+        "ar": "موزة"
+      },
+      {
+        "de": "die Orange, -n",
+        "ar": "برتقالة"
+      },
+      {
+        "de": "die Tomate, -n",
+        "ar": "طماطم"
+      },
+      {
+        "de": "die Kartoffel, -n",
+        "ar": "بطاطس"
+      },
+      {
+        "de": "der Salat, -e",
+        "ar": "خسّ / سلطة"
+      },
+      {
+        "de": "die Möhre, -n",
+        "ar": "جزر"
+      },
+      {
+        "de": "die Zwiebel, -n",
+        "ar": "بصل"
+      },
+      {
+        "de": "der Apfelsinensaft",
+        "ar": "عصير البرتقال"
+      },
+      {
+        "de": "die Gurke, -n",
+        "ar": "خيار"
+      },
+      {
+        "de": "die Erdbeere, -n",
+        "ar": "فراولة"
+      },
+      {
+        "de": "der Apfelstrudel",
+        "ar": "سترودل التفاح"
+      },
+      {
+        "de": "die Zitrone, -n",
+        "ar": "ليمون"
+      },
+      {
+        "de": "das Obst",
+        "ar": "الفاكهة"
+      },
+      {
+        "de": "das Gemüse",
+        "ar": "الخضار"
+      },
+      {
+        "de": "der Reis",
+        "ar": "الأرز"
+      },
+      {
+        "de": "das Brot, -e",
+        "ar": "الخبز"
+      }
+    ]
+  },
+  "b2-politik-demokratie": {
+    "id": "b2-politik-demokratie",
+    "titelDe": "Politik und Demokratie",
+    "titelAr": "السياسة والديمقراطية",
+    "level": "B2",
+    "cards": [
+      {
+        "de": "die Demokratie, -n",
+        "ar": "الديمقراطية"
+      },
+      {
+        "de": "die Wahl, -en",
+        "ar": "الانتخاب"
+      },
+      {
+        "de": "der Wähler/die Wählerin, -",
+        "ar": "الناخب/ة"
+      },
+      {
+        "de": "die Partei, -en",
+        "ar": "الحزب"
+      },
+      {
+        "de": "die Regierung, -en",
+        "ar": "الحكومة"
+      },
+      {
+        "de": "der Bundestag",
+        "ar": "البوندستاغ"
+      },
+      {
+        "de": "der Bundesrat",
+        "ar": "البوندسرات"
+      },
+      {
+        "de": "das Grundgesetz",
+        "ar": "القانون الأساسي"
+      },
+      {
+        "de": "der Bundeskanzler/die Bundeskanzlerin, -",
+        "ar": "المستشار/ة الاتحادي/ة"
+      },
+      {
+        "de": "der Bundespräsident/die Bundespräsidentin, -en",
+        "ar": "الرئيس الاتحادي"
+      },
+      {
+        "de": "die Koalition, -en",
+        "ar": "الائتلاف"
+      },
+      {
+        "de": "die Opposition",
+        "ar": "المعارضة"
+      },
+      {
+        "de": "das Wahlrecht",
+        "ar": "حق الانتخاب"
+      },
+      {
+        "de": "die Meinungsfreiheit",
+        "ar": "حرية الرأي"
+      },
+      {
+        "de": "die Pressefreiheit",
+        "ar": "حرية الصحافة"
+      },
+      {
+        "de": "das Gesetz, -e",
+        "ar": "القانون"
+      },
+      {
+        "de": "der Beschluss, -schlüsse",
+        "ar": "قرار"
+      },
+      {
+        "de": "die Abstimmung, -en",
+        "ar": "تصويت"
+      },
+      {
+        "de": "die Mehrheit, -en",
+        "ar": "الأكثرية"
+      },
+      {
+        "de": "die Minderheit, -en",
+        "ar": "الأقلية"
+      },
+      {
+        "de": "das Mitglied, -er",
+        "ar": "عضو"
+      },
+      {
+        "de": "der Abgeordnete/die Abgeordnete, -n",
+        "ar": "النائب/ة"
+      },
+      {
+        "de": "die Verfassung, -en",
+        "ar": "الدستور"
+      },
+      {
+        "de": "die Sozialversicherung, -en",
+        "ar": "التأمين الاجتماعي"
+      },
+      {
+        "de": "der Sozialstaat, -en",
+        "ar": "دولة الرعاية"
+      },
+      {
+        "de": "die Globalisierung",
+        "ar": "العولمة"
+      },
+      {
+        "de": "die EU (Europäische Union)",
+        "ar": "الاتحاد الأوروبي"
+      },
+      {
+        "de": "die Nachhaltigkeit",
+        "ar": "الاستدامة"
+      },
+      {
+        "de": "der Protest, -e",
+        "ar": "احتجاج"
+      },
+      {
+        "de": "die Demonstration, -en",
+        "ar": "مظاهرة"
+      },
+      {
+        "de": "die Rente, -n",
+        "ar": "التقاعد"
+      },
+      {
+        "de": "das Steuersystem, -e",
+        "ar": "النظام الضريبي"
+      },
+      {
+        "de": "die Inflation",
+        "ar": "التضخم"
+      },
+      {
+        "de": "die Arbeitslosigkeit",
+        "ar": "البطالة"
+      },
+      {
+        "de": "der Mindestlohn, -löhne",
+        "ar": "الحد الأدنى للأجور"
       }
     ]
   }
