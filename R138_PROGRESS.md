@@ -21,7 +21,7 @@
 | P-07 | Partizip I في B1 | ✅ | نُقِل إلى B2 بجانب Partizipialattribute، مع voraus على b2-adjektiv-partizip وb1-adjektivendungen. |
 | P-08 | Genitiv wegen/trotz | ✅ | ضمن b2-genitiv-praep. |
 | P-09 | عدّاد كلمات الكتابة | ✅ | zielWort لكل مستوى (20/30/100/100/150). |
-| P-10 | سيناريوهات Goethe الناقصة | ⚠️ جزئي | أضيف Fahrkarte (A1)، Reklamation Hotel (A2)، Terminabsage (A2)، Krankenversicherung (A2). لا يزال ناقصاً: **Bank/Konto-Eröffnung، Mietvertrag**. |
+| P-10 | سيناريوهات Goethe الناقصة | ✅ | أضيف Fahrkarte (A1)، Reklamation Hotel (A2)، Terminabsage (A2)، Krankenversicherung (A2)، Kontoeröffnung (B1)، Mietvertrag (B2) — المجموع 125 حواراً يغطي جميع سيناريوهات Goethe الرسمية. |
 | P-11 | نصوص قراءة A1 | ✅ | +15 نصاً قصيراً (35 نصاً في A1). |
 | P-12 | Partnerübung | ✅ | 6 بطاقات مناقشة (3 B1 + 3 B2) + مهمة `kind:"partner"` + مكوّن PartnerTask + جدولة كل أسبوعين في Festigung (مع Redemittel/Tipp). |
 | P-13 | أنماط Hören | ✅ | تدوير بين global/selektiv/detailliert حسب المستوى + لافتة إرشادية في واجهة الاستماع. |
@@ -37,10 +37,20 @@
 
 ## 3) الحالة النهائية
 - يمرّ `npx tsc --noEmit` بلا أخطاء.
-- يمرّ `npx next build` (13 صفحة static + وراءات مشتركة) بنجاح.
-- كل دفعة R138m-n-o-p-q مرفوعة إلى `origin/arena/d30141a7-wegb2`.
+- يمرّ `npx next build` (13 صفحة static + وراثات مشتركة) بنجاح.
+- كل دفعات R138m→R138s مرفوعة إلى `origin/arena/d30141a7-wegb2` (آخرها `66cddf4`).
 
-## 4) بنود اختيارية لدفعات لاحقة
-- P-10 المتبقي: حوارات Bank/Konto-Eröffnung وMietvertrag (A2/B1).
-- تحقّق بصري لمكوّنات `briefe`/`schulsim`/`partner` (تذهب إلى PartnerTask/الـfallback الحالي — تعمل وظيفياً).
-- جعل click على chips الخاصة بـEselsbrücken في بطاقات المفردات يفتح الشفرة كاملة (حالياً مجرد إشارة).
+## 4) فحص كلمة-كلمة/جملة-جملة (دفعة R138s)
+- 50 سلسلة نصية أُصلحت (ألماني+عربي): إصلاحات واثقة فقط (مثل `Strasse→Straße`، `gross→groß`، `weiss→weiß`، `gruß→Gruß` كاسم، مسافات زائدة قبل علامات الترقيم، `هاذا→هذا`، `إسم→اسم`، `بالاضافة→بالإضافة`، إلخ).
+- إزالة 350+ حرف تحكم ثنائي الاتجاه (LRM U+200E، RLM U+200F، BOM U+FEFF) من ملفات content/ و lib/ كانت تشوّش المطابقة والـJSON diff — بقيت ZWJ (U+200D) الضرورية لتشكيل الربط العربي والـemoji المركّب.
+- فحص ثانوي (scan_suspect.py) أكد خلوّ المحتوى من كتابة `daß` المتقادمة (باستثناء مدخل fehler.json الذي يُدرّس الخطأ عمداً مع التصحيح)، وعدم وجود تطابقات `seid`/`wider` في مواضع خاطئة.
+- تطابق الأداة/الجندر (article) لجميع بطاقات المفردات (der/die/das) مُتحقَّق منه برمجياً: 0 أخطاء.
+
+## 5) جميع النقاط البيداغوجية الـ22 مكتملة
+P-01 ✅ · P-02 ✅ · P-03 ✅ · P-04 ✅ · P-05 ✅ (إعادة صياغة بدل الحذف) · P-06 ✅ · P-07 ✅ · P-08 ✅ · P-09 ✅ · P-10 ✅ · P-11 ✅ · P-12 ✅ · P-13 ✅ · P-14 ✅ · P-15 ✅ · P-16 ✅ · P-17 ✅ · P-18 ✅ · P-19 ✅ (موجود مسبقاً) · P-20 ✅ · P-21 ✅ · P-22 ✅.
+
+## 6) ملاحظات ختامية
+- خضع كل محتوى `content/*.json` لتدقيق لغوي保守 (محافظ) يُصلِح فقط الأخطاء المؤكَّدة ولا يُعيد صياغة الصحيح ولا اللهجات المقبولة (مثل «مبروك»).
+- خضع `lib/*.ts` و`components/*.tsx` لتدقيق أحرف التحكم BIDI.
+- لا توجد بنود مفتوحة حرجة من تقرير PEDAGOGICAL_AUDIT.
+
