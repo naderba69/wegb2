@@ -21,7 +21,12 @@ import { De } from "./De";
 
 function gradeItem(ex: Exercise, resp: string): boolean {
   if (!resp.trim()) return false;
-  if (ex.type === "mc") return resp === ex.answer;
+  if (ex.type === "mc" || ex.type === "truefalse") {
+    const norm: Record<string, string> = { richtig: "richtig", wahr: "richtig", true: "richtig", "1": "richtig", falsch: "falsch", false: "falsch", "0": "falsch" };
+    const exp = String(Array.isArray(ex.answer) ? ex.answer[0] : ex.answer).trim().toLowerCase();
+    const e = norm[exp] ?? exp;
+    return resp.trim().toLowerCase() === e;
+  }
   const n = normalize(resp);
   const answers = Array.isArray(ex.answer) ? ex.answer : [ex.answer];
   return answers.some((a) => normalize(String(a)) === n);
@@ -357,7 +362,7 @@ function WochenTest({ level, woche, onFertig }: { level: Level; woche: number; o
                   <button
                     key={o}
                     className="chip"
-                    style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "white", color: richtig || gewaehlt ? "white" : undefined }}
+                    style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "var(--ui-surface-raised)", color: richtig || gewaehlt ? "var(--ui-on-accent)" : undefined }}
                     disabled={done}
                     onClick={() => setAntworten((a) => ({ ...a, [q.ex.id]: o }))}
                   >
@@ -531,7 +536,7 @@ function MonatsMock({ level, tag }: { level: Level; tag: number }) {
                         <button
                           key={o}
                           className="chip"
-                          style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "white", color: richtig || gewaehlt ? "white" : undefined }}
+                          style={{ cursor: done ? "default" : "pointer", background: richtig ? "var(--color-a1)" : gewaehlt ? "var(--color-cola)" : "var(--ui-surface-raised)", color: richtig || gewaehlt ? "var(--ui-on-accent)" : undefined }}
                           disabled={done}
                           onClick={() => setAntworten((a) => ({ ...a, [q.ex.id]: o }))}
                         >
@@ -621,7 +626,7 @@ export function PruefungsZentrum({ progress }: { progress: Progress }) {
               <button
                 key={t.id}
                 className="chip"
-                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "white", color: tab === t.id ? "white" : undefined }}
+                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === t.id ? "var(--ui-on-accent)" : undefined }}
                 onClick={() => setTab(t.id)}
                 title={t.unter}
               >

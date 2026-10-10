@@ -1,0 +1,1303 @@
+{
+  "date": "2026-10-05",
+  "batch": "A1-dialogues-07",
+  "scope": "تدقيق مصدرِيّ فردي للحوارات الحية d-a1-19 وd-a1-20 وd-a1-21: بيانات كل حوار، 24 سطراً مع ترجمتها، 9 أسئلة بكامل حقولها، و6 جمل إملاء؛ 42 معرّفاً. قورنت المادة التاريخية فقط عند وجود تطابق؛ لم يظهر تطابق لهذه المعرفات في السكربت المفحوص. أُصلح المؤكد فقط وفُصلت الملاحظات غير المحسومة.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictationSentences": 6,
+    "unresolvedLevelNotes": 0,
+    "unresolvedContextNotes": 3,
+    "totalTrackedItems": 42
+  },
+  "statusCounts": {
+    "سليم": 38,
+    "مُصحح": 1,
+    "غير محسوم": 3
+  },
+  "method": "قُرئت السجلات الحية كاملة قبل التحرير، وأنشئ سجل مستقل لكل بيانات حوار وسطر وسؤال وإملاء. فُحصت الألمانية وترجمتها، الوسوم والعناوين ومراسي waisen، خيارات الأسئلة ومفاتيحها وشروحها وتعليماتها، ومطابقة الإملاء. استُخدمت صفحات PONS للتحقق المعجمي، وDuden لمعاني الظروف الزمنية وPunkt؛ واستُخدمت قاعدتان منشورتان لمطابقة الفعل الوجودي العربي مع جنس فاكهة. لا يثبت المعجم وحده طبيعية كل تركيب. فُحص السكربت التاريخي بعد قراءة الحي؛ لم تُنقل منه صيغة إلى التطبيق ولم تُقارن بيانات غير موجودة فيه. عند تناقض الزمن ذي الإصلاحين المحتملين، حُفظ النص لأن الأدلة لا تحدد قصد المؤلف.",
+  "statusDefinitions": {
+    "سليم": "لم يثبت خطأ في الحقل الجاري مراجعته ضمن الأدلة؛ وقد يذكر الإجراء قيداً لا يستدعي تغييراً.",
+    "مُصحح": "ثبتت مشكلة محددة بدليل مناسب وطُبق تعديل محلي موثّق في الحقل.",
+    "غير محسوم": "الملاحظة أو احتمال الخطأ قائم لكن المصدر/السياق لا يحدد حكماً أو إصلاحاً وحيداً؛ لم تُعدّ خطأً مؤكداً ولم تُعدّل."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر منشورة، وليست مراجعة بشرية أو اعتماداً لغوياً/مدرسياً/مهنياً.",
+    "وسم A1 محفوظ كما هو في البيانات؛ مراجعة CEFR والنسبة وحساب المستوى مؤجلة. قائمة Goethe استُخدمت لمطابقة الموضوع فقط.",
+    "لا يمكن التحقق من موافقة الخميس لـ28 مارس في d-a1-20 دون سنة؛ لا تُستنتج سنة من الحوار.",
+    "تناقض übermorgen/vorgestern في d-a1-20 مثبت دلالياً، لكن إصلاحه غير متعين: يتغير الموعد النسبي أو مرجع الموعد السابق بحسب اليوم المقصود؛ تُرك بلا تعديل.",
+    "في d-a1-21.lines[1] تميز المعاجم معنى Papier المادي عن Blatt Papier، لكنها لا تحسم استعمال ein Papier في هذا المقام المدرسي؛ تُركت ملاحظة أسلوبية غير محسومة.",
+    "المقارنة التاريخية فارغة لعدم وجود معرّفات d-a1-19–21 في scripts/patches/dialoge_a1_neu1.py؛ لا يعني ذلك مراجعة مصادر تأليف أخرى خارج هذا النطاق."
+  ],
+  "historicalPatchReview": {
+    "file": "scripts/patches/dialoge_a1_neu1.py",
+    "role": "ملف تأليف تاريخي؛ لا يُعامل كمرجع لغوي معتمد ولا كمصدر بيانات حي.",
+    "usageCheck": "بحثت أسماء d-a1-19 وd-a1-20 وd-a1-21 نصياً في الملف؛ لم يظهر أي تطابق أو مقطع يمكن مطابقته. لذلك لا توجد مقارنة تاريخية لهذه الدفعة، ولم يُنشأ صف مقارنة افتراضي.",
+    "comparisons": []
+  },
+  "patch": {
+    "file": "scripts/patches/review_a1_dialogues_07.py",
+    "preflight": "تحقق السكربت من بنية الحوارات الثلاثة ومن القيمة السابقة الدقيقة للحقل العربي المستهدف، ثم جرب التصحيح في الذاكرة وأعاد فحص البنية ومطابقة الإملاء. نجح dry-run بلا كتابة، طُبق تعديل واحد فقط، ثم أعيدت قراءة JSON المحفوظ والتحقق. السكربت يرفض القيمة غير المتوقعة ويُظهر أن تناقض d-a1-20 باقٍ عمداً بلا إصلاح تخميني؛ إعادة التشغيل لا تكتب بعد التطبيق.",
+    "fieldsChanged": 1,
+    "correctedItemIds": [
+      "d-a1-19.lines[1]"
+    ],
+    "changes": [
+      "d-a1-19.lines[1]: تغيير الفعل الوجودي العربي من «يوجد» إلى «توجد» لمطابقة الاسم المؤنث «فاكهة» في الفصحى المعيارية؛ لا تغيير للألمانية."
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Goethe-Institut — Goethe-Zertifikat A1 Start Deutsch 1 Wortliste",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "supports": "يحدد موضوعات عامة تشمل الوجبات والأسرة والعمل/التعليم والمدرسة؛ أُحيل إليه لمطابقة مجال الموضوع فقط، لا لإعادة فحص أو إثبات المستوى الفردي المخزّن."
+    },
+    {
+      "id": "S2",
+      "title": "Humanities LibreTexts — There is/There are (Arabic Level Three)",
+      "url": "https://human.libretexts.org/Bookshelves/Languages/Arabic/Arabic_Level_Three/02:_Getting_Around_Town/2.02:_There_is_There_are",
+      "supports": "يشرح اختيار يوجد للمذكر وتوجد للمؤنث في التعبير الوجودي، ويعرض أمثلة مؤنثة؛ يسند «توجد فاكهة» وفق جنس فاكهة."
+    },
+    {
+      "id": "S3",
+      "title": "Transparent Arabic — The expression “There is” in Arabic",
+      "url": "https://blogs.transparent.com/arabic/there-is-in-arabic/",
+      "supports": "يقرر أن يوجد/توجد توافق جنس الاسم، ويعرض مثال «توجد مشكلة»؛ مصدر مستقل داعم للتصحيح العربي."
+    },
+    {
+      "id": "S4",
+      "title": "PONS — Frühstück (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Frühstück",
+      "supports": "يعطي معنى وجبة الإفطار/الفطور، فيساند عنوان الحوار وافتتاحه."
+    },
+    {
+      "id": "S5",
+      "title": "PONS — Familie (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Familie",
+      "supports": "يعطي Familie = عائلة/أسرة، فيساند معنى عنوان «فطور في العائلة»."
+    },
+    {
+      "id": "S6",
+      "title": "PONS — Brot (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Brot",
+      "supports": "يعطي Brot = خبز؛ يسند السطر والخيارات التي تذكر الخبز."
+    },
+    {
+      "id": "S7",
+      "title": "PONS — Butter (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Butter",
+      "supports": "يعطي Butter = زبدة؛ يسند السطر ومرساة المفردات."
+    },
+    {
+      "id": "S8",
+      "title": "PONS — Käse (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Käse",
+      "supports": "يعطي Käse = جبن؛ يسند قائمة الفطور ومشتت السؤال الأول."
+    },
+    {
+      "id": "S9",
+      "title": "PONS — Obst (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Obst",
+      "supports": "يعطي Obst بمعنى الفاكهة؛ يسند سؤال وجود الفاكهة، لا قاعدة المطابقة العربية."
+    },
+    {
+      "id": "S10",
+      "title": "PONS — Banane (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Banane",
+      "supports": "يعطي Banane = موزة/موز؛ يسند طلب موزة في السطر."
+    },
+    {
+      "id": "S11",
+      "title": "PONS — Orange (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Orange",
+      "supports": "يعطي Orange = برتقالة؛ يسند جواب الأم."
+    },
+    {
+      "id": "S12",
+      "title": "PONS — Messer (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Messer",
+      "supports": "يعطي Messer = سكين؛ يسند ترجمة أداة الخبز."
+    },
+    {
+      "id": "S13",
+      "title": "PONS — Löffel (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Löffel",
+      "supports": "يعطي Löffel = ملعقة؛ يسند السؤال عن ملعقة البيض."
+    },
+    {
+      "id": "S14",
+      "title": "PONS — Ei (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Ei",
+      "supports": "يعطي Ei = بيضة؛ يسند سياق استعمال الملعقة والمشتت."
+    },
+    {
+      "id": "S15",
+      "title": "PONS — Salz (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Salz",
+      "supports": "يعطي Salz = ملح؛ يسند سؤال مكان الملح."
+    },
+    {
+      "id": "S16",
+      "title": "PONS — Katze (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Katze",
+      "supports": "يعطي Katze = قطة؛ يسند ذكر القطة في موضع الملح."
+    },
+    {
+      "id": "S17",
+      "title": "PONS — Tisch (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Tisch",
+      "supports": "يعطي Tisch = طاولة؛ يسند جواب الموضع وخياراته."
+    },
+    {
+      "id": "S18",
+      "title": "PONS — Mittagessen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Mittagessen",
+      "supports": "يعطي Mittagessen = وجبة الغداء؛ يسند سؤال الغداء وإجابته."
+    },
+    {
+      "id": "S19",
+      "title": "PONS — Reis (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Reis",
+      "supports": "يعطي Reis = أرز؛ يسند وجبة الغداء ومفتاح السؤال."
+    },
+    {
+      "id": "S20",
+      "title": "PONS — Gemüse (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Gemüse",
+      "supports": "يعطي Gemüse = خضار/خضروات؛ يسند تركيب Reis mit Gemüse."
+    },
+    {
+      "id": "S21",
+      "title": "PONS — Abendessen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Abendessen",
+      "supports": "يعطي Abendessen = وجبة العشاء؛ يسند السطر الأخير."
+    },
+    {
+      "id": "S22",
+      "title": "PONS — backen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/backen",
+      "supports": "يعطي فعل الخَبز؛ يسند وعد إعداد كعكة مساءً."
+    },
+    {
+      "id": "S23",
+      "title": "PONS — Kuchen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Kuchen",
+      "supports": "يعطي مقابلات «كعك/كعكة» بحسب السياق؛ لا يثبت خطأ استعمال الجمع العربي «كعكاً» هنا."
+    },
+    {
+      "id": "S24",
+      "title": "PONS — Oma (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Oma",
+      "supports": "يعطي Oma = الجدة؛ يسند جهة إهداء الكعكة."
+    },
+    {
+      "id": "S25",
+      "title": "PONS — Termin (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Termin",
+      "supports": "يعطي معنى موعد/تعيين؛ يسند حوار المواعيد وأسئلته."
+    },
+    {
+      "id": "S26",
+      "title": "PONS — Firma (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Firma",
+      "supports": "يعطي Firma = شركة؛ يسند «شركة بيرغر»."
+    },
+    {
+      "id": "S27",
+      "title": "PONS — Datum (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Datum",
+      "supports": "يعطي Datum = تاريخ؛ يسند جملة التاريخ وسؤال الفراغ."
+    },
+    {
+      "id": "S28",
+      "title": "PONS — Donnerstag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Donnerstag",
+      "supports": "يعطي Donnerstag = الخميس؛ يسند اسم يوم الموعد، ولا يثبت تاريخاً تقويمياً بلا سنة."
+    },
+    {
+      "id": "S29",
+      "title": "PONS — März (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/März",
+      "supports": "يعطي März = مارس؛ يسند كتابة الشهر في التاريخ."
+    },
+    {
+      "id": "S30",
+      "title": "PONS — April (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/April",
+      "supports": "يعطي April = أبريل؛ يسند الموعد الثاني وتاريخه."
+    },
+    {
+      "id": "S31",
+      "title": "PONS — Montag (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Montag",
+      "supports": "يعطي Montag = يوم الاثنين؛ يستخدم مع vorgestern في فحص الاتساق."
+    },
+    {
+      "id": "S32",
+      "title": "PONS — Uhrzeit (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Uhrzeit",
+      "supports": "يعطي Uhrzeit = وقت/توقيت؛ يسند سؤال الوقت وإجابة الساعة."
+    },
+    {
+      "id": "S33",
+      "title": "PONS — Kalender (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Kalender",
+      "supports": "يعطي Kalender = تقويم؛ يسند كتابة الموعد في التقويم."
+    },
+    {
+      "id": "S34",
+      "title": "PONS — bald (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/bald",
+      "supports": "يعطي bald بمعنى قريباً؛ يسند الإشارة إلى الموعد القريب."
+    },
+    {
+      "id": "S35",
+      "title": "PONS — zuletzt (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/zuletzt",
+      "supports": "يعطي zuletzt بمعنى أخيراً/آخر مرة بحسب السياق؛ يسند السؤال عن الموعد السابق."
+    },
+    {
+      "id": "S36",
+      "title": "PONS — Stunde (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Stunde",
+      "supports": "يعطي Stunde = ساعة (وحدة زمنية)؛ يسند مدة الموعد السابق."
+    },
+    {
+      "id": "S37",
+      "title": "PONS — Schule (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Schule",
+      "supports": "يعطي Schule = مدرسة؛ يسند سياق عنوان حوار المدرسة."
+    },
+    {
+      "id": "S38",
+      "title": "PONS — Schüler (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Schüler",
+      "supports": "يعطي Schüler = تلميذ/طالب؛ يسند وسم دور المتحدث ومرساة المفردات."
+    },
+    {
+      "id": "S39",
+      "title": "PONS — Klasse (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Klasse",
+      "supports": "يعطي Klasse بمعنى صف/فصل مدرسي؛ يسند نداء المعلمة."
+    },
+    {
+      "id": "S40",
+      "title": "PONS — Diktat (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Diktat",
+      "supports": "يعطي Diktat = إملاء؛ يسند إعلان التمرين وأسئلة الحوار."
+    },
+    {
+      "id": "S41",
+      "title": "PONS — Heft (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Heft",
+      "supports": "يعطي Heft = دفتر/كراسة؛ يسند سؤال المتعلم وطلب المعلمة."
+    },
+    {
+      "id": "S42",
+      "title": "PONS — Papier (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Papier",
+      "supports": "يفرق بين Papier بمعنى المادة وبين Papier (Blatt) = ورقة؛ يثبت مجال المعنى لكنه لا يحسم طبيعية «ein Papier» في سؤال مدرسي."
+    },
+    {
+      "id": "S43",
+      "title": "PONS — Stift (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Stift",
+      "supports": "يعطي Stift في سياق أداة الكتابة = قلم؛ يسند تعليمات اللون والأداة."
+    },
+    {
+      "id": "S44",
+      "title": "PONS — Bleistift (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Bleistift",
+      "supports": "يعطي Bleistift = قلم رصاص؛ يسند النفي في التعليمات ومشتت السؤال."
+    },
+    {
+      "id": "S45",
+      "title": "PONS — Satz (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Satz",
+      "supports": "يعطي Satz = جملة؛ يسند سؤال عدد الجمل وقراءتها."
+    },
+    {
+      "id": "S46",
+      "title": "PONS — antworten (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/antworten",
+      "supports": "يعطي antworten = يجيب؛ يسند الجملة والأسئلة."
+    },
+    {
+      "id": "S47",
+      "title": "PONS — Pause (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Pause",
+      "supports": "يعطي Pause = استراحة/فسحة؛ يسند سؤال الاستراحة ومرساة المفردات."
+    },
+    {
+      "id": "S48",
+      "title": "PONS — Minute (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Minute",
+      "supports": "يعطي Minute = دقيقة؛ يسند مدة الاستراحة."
+    },
+    {
+      "id": "S49",
+      "title": "PONS — Gedicht (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Gedicht",
+      "supports": "يعطي Gedicht = قصيدة؛ يسند تدريب الحفظ."
+    },
+    {
+      "id": "S50",
+      "title": "PONS — lernen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/lernen",
+      "supports": "يعطي lernen = يتعلم/يدرس؛ وفي التركيب auswendig lernen يسند معنى الحفظ."
+    },
+    {
+      "id": "S51",
+      "title": "PONS — Hälfte (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Hälfte",
+      "supports": "يعطي Hälfte = النصف؛ يسند طلب حفظ نصف القصيدة."
+    },
+    {
+      "id": "S52",
+      "title": "PONS — schreiben (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/schreiben",
+      "supports": "يعطي schreiben = يكتب؛ يسند إعلان كتابة الإملاء وإدخاله في التقويم."
+    },
+    {
+      "id": "S53",
+      "title": "PONS — lesen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/lesen",
+      "supports": "يعطي lesen = يقرأ؛ يسند جملة قراءة كل سطر."
+    },
+    {
+      "id": "S54",
+      "title": "PONS — schlafen (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/schlafen",
+      "supports": "يعطي schlafen = ينام، ويعرض صيغة sie schläft؛ يسند «تنام» عن القطة."
+    },
+    {
+      "id": "S55",
+      "title": "PONS — wieder (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/wieder",
+      "supports": "يعطي wieder بمعنى من جديد/مرة أخرى؛ يسند المقابل العربي لحدوث النوم مرة أخرى."
+    },
+    {
+      "id": "S56",
+      "title": "PONS — lang (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/lang",
+      "supports": "يعطي lang = طويل؛ يسند وصف القصيدة بالطول."
+    },
+    {
+      "id": "S57",
+      "title": "PONS — Raum (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Raum",
+      "supports": "يعطي Raum (Zimmer) = غرفة؛ يسند «في القاعة/الغرفة الكبيرة»."
+    },
+    {
+      "id": "S58",
+      "title": "Duden — übermorgen",
+      "url": "https://www.duden.de/rechtschreibung/uebermorgen",
+      "supports": "يعرف übermorgen بأنه اليوم الواقع بعد يومين؛ يثبت معناه في التناقض الزمني دون أن يحدد أي كلمة قصد المؤلف تصحيحها."
+    },
+    {
+      "id": "S59",
+      "title": "Duden — vorgestern",
+      "url": "https://www.duden.de/rechtschreibung/vorgestern",
+      "supports": "يعرف vorgestern بأنه اليوم السابق بيومين؛ مع am Montag يجعل اليوم المرجعي الأربعاء."
+    },
+    {
+      "id": "S60",
+      "title": "Duden — gestern",
+      "url": "https://www.duden.de/rechtschreibung/gestern",
+      "supports": "يعرف gestern بأنه اليوم السابق مباشرة؛ يبيّن أن تعديل vorgestern إلى gestern خيار متّسق إذا أُبقي übermorgen، لكنه لا يثبت أن هذا هو المقصود."
+    },
+    {
+      "id": "S61",
+      "title": "Duden — morgen",
+      "url": "https://www.duden.de/rechtschreibung/morgen",
+      "supports": "يعرف morgen بأنه اليوم التالي مباشرة؛ يبيّن أن تعديل übermorgen إلى morgen خيار متّسق إذا أُبقي vorgestern am Montag، لكنه لا يثبت أن هذا هو المقصود."
+    },
+    {
+      "id": "S62",
+      "title": "Duden — Punkt",
+      "url": "https://www.duden.de/rechtschreibung/Punkt",
+      "supports": "يعرض Punkt مع توقيت الساعة بمعنى genau (تماماً)؛ يسند «Punkt zwölf» وترجمتها «الثانية عشرة تماماً»."
+    },
+    {
+      "id": "S63",
+      "title": "Duden — auswendig",
+      "url": "https://www.duden.de/rechtschreibung/auswendig",
+      "supports": "يعرف auswendig بمعنى من الذاكرة/من دون الرجوع إلى أصل؛ يسند «عن ظهر قلب»."
+    },
+    {
+      "id": "S64",
+      "title": "Duden — zweimal",
+      "url": "https://www.duden.de/rechtschreibung/zweimal",
+      "supports": "يعرف zweimal بأنها مرتان؛ يسند مفتاح سؤال عدد مرات قراءة كل جملة."
+    },
+    {
+      "id": "S65",
+      "title": "Duden — Papier",
+      "url": "https://www.duden.de/rechtschreibung/Papier",
+      "supports": "يعرض المعنى المادي للمادة وأمثلة مثل ein Blatt Papier، ومعنى منفصلاً لوثيقة/محرر؛ هذا لا يكفي وحده لإثبات خطأ ein Papier في سياق سؤال مدرسي، لذلك تُترك الملاحظة أسلوبية غير محسومة."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a1-19",
+      "kind": "بيانات الحوار: العنوان والسياق ومرساة المفردات",
+      "status": "سليم",
+      "reviewed": {
+        "titleDe": "Frühstück in der Familie",
+        "titleAr": "فطور في العائلة",
+        "level": "A1",
+        "waisen": [
+          "die Butter",
+          "das Salz",
+          "die Banane",
+          "die Orange",
+          "der Löffel",
+          "das Messer",
+          "das Mittagessen",
+          "das Abendessen",
+          "die Katze",
+          "backen"
+        ]
+      },
+      "finding": "عنوان «Frühstück in der Familie» و«فطور في العائلة» متوافقان مع مشهد الفطور ومع ذكر الجدة والأسرة. راجعت مراسي waisen العشر: Butter, Salz, Banane, Orange, Löffel, Messer, Mittagessen, Abendessen, Katze, backen؛ لكل منها استعمال في السطور. يُسجل A1 كما في الملف ولا يعاد حساب CEFR.",
+      "action": "أُبقي العنوان والمرتكزات والمستوى المسجل؛ تقييم CEFR والنسبة وحساب المستوى مؤجلة.",
+      "sources": [
+        "S1",
+        "S4",
+        "S5",
+        "S7",
+        "S15",
+        "S10",
+        "S11",
+        "S13",
+        "S12",
+        "S18",
+        "S21",
+        "S16",
+        "S22"
+      ]
+    },
+    {
+      "id": "d-a1-19.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Mutter",
+        "de": "Guten Morgen! Das Frühstück ist fertig. Brot, Butter und Käse.",
+        "ar": "صباح الخير! الفطور جاهز. خبز وزبدة وجبن."
+      },
+      "finding": "يفتتح الحوار بتحية صباحية وإعلان جاهزية الفطور، ثم يسرد Brot وButter وKäse؛ المقابلات العربية «الخبز والزبدة والجبن» تحفظ العناصر المذكورة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S4",
+        "S6",
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "d-a1-19.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "مُصحح",
+      "reviewed": {
+        "who": "Tochter",
+        "de": "Gibt es auch Obst? Ich möchte eine Banane.",
+        "ar": "هل توجد فاكهة أيضاً؟ أريد موزة."
+      },
+      "finding": "`Obst` = فاكهة و`eine Banane` = موزة، والمعنى محفوظ. في العربية المعيارية الاسم «فاكهة» مؤنث مفرد؛ يشرح LibreTexts وTransparent Arabic اختيار «توجد» مع المؤنث، لذلك «هل يوجد فاكهة» تحتاج مطابقة إلى «هل توجد فاكهة».",
+      "action": "صُححت المطابقة في الترجمة العربية فقط؛ بقي النص الألماني كما هو.",
+      "sources": [
+        "S2",
+        "S3",
+        "S9",
+        "S10"
+      ],
+      "before": {
+        "who": "Tochter",
+        "de": "Gibt es auch Obst? Ich möchte eine Banane.",
+        "ar": "هل يوجد فاكهة أيضاً؟ أريد موزة."
+      }
+    },
+    {
+      "id": "d-a1-19.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Mutter",
+        "de": "Ja, und eine Orange. Hier ist ein Messer für das Brot.",
+        "ar": "نعم، وبرتقالة. هذا سكين للخبز."
+      },
+      "finding": "`Orange` = برتقالة و`Messer` = سكين و`Brot` = خبز؛ الترجمة تنقل عرض البرتقالة والسكين المخصص للخبز.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S6",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "id": "d-a1-19.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Tochter",
+        "de": "Danke. Wo ist der Löffel für das Ei? Und das Salz?",
+        "ar": "شكراً. أين ملعقة البيض؟ والملح؟"
+      },
+      "finding": "`Löffel` = ملعقة و`Ei` = بيضة و`Salz` = ملح؛ السؤال عن ملعقة البيض ثم الملح مفهوم، ولا يُحمّل السؤال دعوى عن طريقة أكل البيض.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S13",
+        "S14",
+        "S15"
+      ]
+    },
+    {
+      "id": "d-a1-19.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Mutter",
+        "de": "Auf dem Tisch, neben der Katze. Sie schläft schon wieder.",
+        "ar": "على الطاولة، بجانب القطة. تنام مرة أخرى."
+      },
+      "finding": "`Tisch` و`Katze` يطابقان الطاولة والقطة، و`schläft` صيغة «تنام» و`wieder` تسند «مرة أخرى»؛ الضمير المحذوف في العربية مفهوم من مرجع القطة السابق.",
+      "action": "لا تعديل؛ لم يُستنتج من موقع القطة ادعاء واقعي خارج الحوار.",
+      "sources": [
+        "S16",
+        "S17",
+        "S61",
+        "S62"
+      ]
+    },
+    {
+      "id": "d-a1-19.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Tochter",
+        "de": "Was gibt es zum Mittagessen?",
+        "ar": "ماذا يوجد على الغداء؟"
+      },
+      "finding": "`Mittagessen` هو وجبة الغداء؛ السؤال والترجمة يحافظان على الاستفسار عن وجبة الظهر.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S18"
+      ]
+    },
+    {
+      "id": "d-a1-19.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Mutter",
+        "de": "Reis mit Gemüse. Und heute Abend backen wir einen Kuchen für Oma.",
+        "ar": "أرز مع خضار. ومساء اليوم نخبز كعكة للجدة."
+      },
+      "finding": "`Reis mit Gemüse` يطابق الأرز والخضار، و`backen einen Kuchen für Oma` يطابق خبز كعكة للجدة مساءً.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S19",
+        "S20",
+        "S22",
+        "S23",
+        "S24"
+      ]
+    },
+    {
+      "id": "d-a1-19.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Tochter",
+        "de": "Super! Dann esse ich zum Abendessen nur Kuchen.",
+        "ar": "رائع! إذن آكل على العشاء كعكاً فقط."
+      },
+      "finding": "`zum Abendessen` = للعشاء و`Kuchen` يقبل مقابلاً عربياً مفرداً أو جمعاً بحسب السياق؛ «كعكاً فقط» لا يثبت خطأ، ولا أفرض المفرد على ترجمة عربية مقبولة.",
+      "action": "لا تعديل؛ لا دليل معجمي كافياً لتصنيف «كعكاً» خطأً.",
+      "sources": [
+        "S21",
+        "S23"
+      ]
+    },
+    {
+      "id": "d-a1-19-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was gibt es zum Mittagessen?",
+        "options": [
+          "Brot, Butter und Käse",
+          "Kuchen",
+          "Reis mit Gemüse"
+        ],
+        "answer": "Reis mit Gemüse",
+        "explanationAr": "الدليل: «Was gibt es zum Mittagessen?» … «Reis mit Gemüse». الفخّ 1: الخبز والزبدة للفطور. الفخّ 2: الكعك مساءً للجدة.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "finding": "السؤال يطلب وجبة الغداء؛ السطر يجيب `Reis mit Gemüse`، بينما الخبز والجبن للفطور والكعكة للمساء، لذلك المفتاح والفخاخ المذكورة في الشرح مسنودة.",
+      "action": "لا تعديل؛ المفتاح والشرح والتعليمة العربية متسقة مع الحوار.",
+      "sources": [
+        "S6",
+        "S7",
+        "S8",
+        "S17",
+        "S18",
+        "S19",
+        "S20",
+        "S23"
+      ]
+    },
+    {
+      "id": "d-a1-19-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wo ist das Salz?",
+        "options": [
+          "auf dem Tisch, neben der Katze",
+          "neben dem Ei",
+          "neben dem Kuchen"
+        ],
+        "answer": "auf dem Tisch, neben der Katze",
+        "explanationAr": "الدليل: «Auf dem Tisch, neben der Katze». الفخّ 1: الملعقة للبيض. الفخّ 2: الكعكة تُخبز مساءً.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "finding": "جواب موضع الملح هو `Auf dem Tisch, neben der Katze` حرفياً. البيض مرتبط بالملعقة في السؤال السابق، والكعكة بموعد الخَبز المسائي، وهما مشتتان لا يغيّران الدليل.",
+      "action": "لا تعديل؛ الجواب والخيارات والشرح متسقة.",
+      "sources": [
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S23"
+      ]
+    },
+    {
+      "id": "d-a1-19-q3",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Die Familie backt heute Abend einen Kuchen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل: «heute Abend backen wir einen Kuchen für Oma».",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+      },
+      "finding": "العبارة تسأل إن كانت الأسرة ستخبز كعكة مساء اليوم، والسطر السادس يصرّح بذلك للجدة؛ مفتاح richtig والشرح مستندان إلى اقتباس مباشر.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S22",
+        "S23",
+        "S24"
+      ]
+    },
+    {
+      "id": "d-a1-19.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Das Frühstück ist fertig."
+      },
+      "finding": "جملة الإملاء `Das Frühstück ist fertig.` منقولة حرفياً من أول سطر، ولا تضيف ادعاءً جديداً؛ ترجمة الافتتاح تسند معنى الفطور الجاهز.",
+      "action": "لا تعديل؛ تم التحقق من مطابقة جملة الإملاء للسطر الحواري.",
+      "sources": [
+        "S4"
+      ]
+    },
+    {
+      "id": "d-a1-19.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Was gibt es zum Mittagessen?"
+      },
+      "finding": "الجملة `Was gibt es zum Mittagessen?` مقتبسة من السطر الخامس حرفياً، والترجمة تسأل عن وجبة الغداء.",
+      "action": "لا تعديل؛ تم التحقق من مطابقة جملة الإملاء للسطر الحواري.",
+      "sources": [
+        "S18"
+      ]
+    },
+    {
+      "id": "d-a1-20",
+      "kind": "بيانات الحوار: العنوان والسياق ومرساة المفردات",
+      "status": "سليم",
+      "reviewed": {
+        "titleDe": "Ein Termin im Kalender",
+        "titleAr": "موعد في التقويم",
+        "level": "A1",
+        "waisen": [
+          "das Datum",
+          "der Donnerstag",
+          "der März",
+          "der April",
+          "übermorgen",
+          "vorgestern",
+          "bald",
+          "die Uhrzeit",
+          "zuletzt",
+          "Punkt zwölf"
+        ]
+      },
+      "finding": "العنوان الألماني والعربي يصفان موعداً في التقويم. عناصر waisen العشرة (Datum, Donnerstag, März, April, übermorgen, vorgestern, bald, Uhrzeit, zuletzt, Punkt zwölf) ظاهرة في النص أو صيغته؛ بقي التناقض بين العبارتين النسبيتين غير محسوم في السطر d-a1-20.lines[2]. لا سنة في البيانات، ولا يعاد حساب A1/CEFR.",
+      "action": "أُبقي العنوان والمرتكزات والمستوى المسجل؛ تقييم CEFR والنسبة وحساب المستوى مؤجلة.",
+      "sources": [
+        "S1",
+        "S25",
+        "S26",
+        "S27",
+        "S28",
+        "S29",
+        "S30",
+        "S31",
+        "S32",
+        "S33",
+        "S34",
+        "S35",
+        "S36",
+        "S37",
+        "S38",
+        "S39",
+        "S40",
+        "S41"
+      ]
+    },
+    {
+      "id": "d-a1-20.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Chef",
+        "de": "Frau Amri, wann ist der Termin mit der Firma Berger?",
+        "ar": "سيدة عمري، متى الموعد مع شركة بيرغر؟"
+      },
+      "finding": "سؤال الموظف عن موعد `Firma Berger` يُقابله سؤال الموعد مع شركة بيرغر؛ `Termin` و`Firma` يؤيدان المقابلين.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S25",
+        "S26"
+      ]
+    },
+    {
+      "id": "d-a1-20.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "reviewed": {
+        "who": "Frau Amri",
+        "de": "Am Donnerstag. Das Datum ist der 28. März.",
+        "ar": "يوم الخميس. التاريخ 28 مارس."
+      },
+      "finding": "`Donnerstag` = الخميس و`März` = مارس، والترجمة تنقل اليوم والتاريخ. لكن السجل لا يذكر سنة؛ لذلك لا يمكن التحقق من كون 28 مارس يوم خميس في التاريخ المقصود. لا أصف العبارة بخطأ تقويمي ولا أختلق سنة.",
+      "action": "تُترك العبارة كما هي؛ يلزم تحديد السنة للتحقق من توافق يوم الأسبوع والتاريخ.",
+      "sources": [
+        "S27",
+        "S28",
+        "S29"
+      ]
+    },
+    {
+      "id": "d-a1-20.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "reviewed": {
+        "who": "Chef",
+        "de": "Also übermorgen. Und die Uhrzeit?",
+        "ar": "إذن بعد غد. والساعة؟"
+      },
+      "finding": "هنا تناقض زمني داخلي مثبت: `übermorgen` يعني بعد يومين، بينما `vorgestern, am Montag` يجعل اليوم المرجعي الأربعاء، وعندئذ يكون موعد الخميس غداً. يوجد إصلاحان محتملان متساويان من النص المتاح: الإبقاء على الاثنين/`vorgestern` وتغيير `übermorgen` إلى `morgen`؛ أو الإبقاء على `übermorgen` وتغيير `vorgestern` إلى `gestern`. لا يحدد الحوار أي كلمة قصد المؤلف، فلا أختار تخميناً.",
+      "action": "لم أعدّل السطر الألماني أو ترجمته؛ تُطلب معلومة من المؤلف أو تحديد اليوم المرجعي قبل اختيار أحد الإصلاحين.",
+      "sources": [
+        "S28",
+        "S31",
+        "S37",
+        "S38",
+        "S39",
+        "S40"
+      ]
+    },
+    {
+      "id": "d-a1-20.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Frau Amri",
+        "de": "Punkt zwölf, im großen Raum.",
+        "ar": "الثانية عشرة تماماً، في القاعة الكبيرة."
+      },
+      "finding": "`Punkt zwölf` تعني الثانية عشرة تماماً وفق استعمال Punkt مع وقت محدد، و`Raum` يساند «القاعة/الغرفة»؛ لا تُضاف دلالة صباح/مساء غير موجودة في النص.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S32",
+        "S41",
+        "S64"
+      ]
+    },
+    {
+      "id": "d-a1-20.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Chef",
+        "de": "Gut. Wann hatten wir zuletzt einen Termin mit ihnen?",
+        "ar": "حسناً. متى كان آخر موعد معهم؟"
+      },
+      "finding": "`zuletzt` في السؤال عن آخر موعد مع الشركة مفهوم في السياق؛ الترجمة «متى كان آخر موعد معهم؟» تنقل السؤال.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S25",
+        "S35"
+      ]
+    },
+    {
+      "id": "d-a1-20.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Frau Amri",
+        "de": "Vorgestern, am Montag. Das war kurz, nur eine Stunde.",
+        "ar": "أول أمس، يوم الاثنين. كان قصيراً، ساعة واحدة فقط."
+      },
+      "finding": "`Vorgestern, am Montag` يذكر اليوم السابق بيومين والاثنين، ثم يصرّح أن الموعد دام ساعة واحدة؛ الترجمة تحفظ الزمن والمدة. تناقضه مع `übermorgen` مسجل في السطر السابق لا يُحسم هنا.",
+      "action": "لا تعديل في هذا السطر؛ إبقاءه ممكناً شرط عدم اختيار بديل زمني بلا دليل.",
+      "sources": [
+        "S31",
+        "S36",
+        "S38"
+      ]
+    },
+    {
+      "id": "d-a1-20.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Chef",
+        "de": "Und im April kommt der zweite Termin?",
+        "ar": "وفي أبريل يأتي الموعد الثاني؟"
+      },
+      "finding": "`im April` و`der zweite Termin` يطابقان موعداً ثانياً في أبريل؛ لا ادعاء بأن يومه هو الموعد الأول.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S25",
+        "S30"
+      ]
+    },
+    {
+      "id": "d-a1-20.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Frau Amri",
+        "de": "Ja, bald, am 5. April. Ich schreibe es in den Kalender.",
+        "ar": "نعم، قريباً، في 5 أبريل. أكتبه في التقويم."
+      },
+      "finding": "`bald`, `am 5. April`, و`Kalender` تقابل قريباً والتاريخ والتقويم؛ `schreibe es` ترجمتها بضمير مفعول مفهوم من الموعد.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S30",
+        "S33",
+        "S34",
+        "S57"
+      ]
+    },
+    {
+      "id": "d-a1-20-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wann ist der Termin mit der Firma Berger?",
+        "options": [
+          "am Donnerstag um Punkt zwölf",
+          "am Montag um zwölf",
+          "am 5. April"
+        ],
+        "answer": "am Donnerstag um Punkt zwölf",
+        "explanationAr": "الدليل: «Am Donnerstag» و«Punkt zwölf». الفخّ 1: الاثنين كان الموعد الأخير. الفخّ 2: 5 أبريل الموعد الثاني.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "finding": "الإجابة `am Donnerstag um Punkt zwölf` تجمع يوم الموعد من السطر الأول والوقت من السطر الرابع. الاثنين يخص الموعد السابق و5 أبريل الموعد الثاني، كما يوضح الشرح.",
+      "action": "لا تعديل؛ السؤال عن ما يقوله الحوار لا عن تقويم سنة غير مذكورة.",
+      "sources": [
+        "S25",
+        "S26",
+        "S28",
+        "S30",
+        "S31",
+        "S32",
+        "S41"
+      ]
+    },
+    {
+      "id": "d-a1-20-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wie lange war der letzte Termin?",
+        "options": [
+          "zwei Stunden",
+          "nur eine Stunde",
+          "den ganzen Montag"
+        ],
+        "answer": "nur eine Stunde",
+        "explanationAr": "الدليل: «Das war kurz, nur eine Stunde». الفخّ: الاثنين هو اليوم لا المدة.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "finding": "السطر يحدد مدة الموعد الأخير `nur eine Stunde`؛ مفتاح الاختيار مطابق. الخيار `den ganzen Montag` يبدّل مدة الساعة باسم يوم، والشرح يوضح ذلك.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S31",
+        "S35",
+        "S36",
+        "S38"
+      ]
+    },
+    {
+      "id": "d-a1-20-q3",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "fill",
+        "promptDe": "Das Datum ist der 28. ___.",
+        "answer": [
+          "März"
+        ],
+        "explanationAr": "الدليل: «Das Datum ist der 28. März».",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      },
+      "finding": "الفراغ بعد `28.` يطلب اسم الشهر، والنص يذكر `28. März`؛ الإجابة `März` ضمن المقبول وترد حرفياً.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S27",
+        "S29"
+      ]
+    },
+    {
+      "id": "d-a1-20.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Also übermorgen. Und die Uhrzeit?"
+      },
+      "finding": "الجملة منقولة حرفياً من d-a1-20.lines[2]؛ هذا يثبت تطابق الإملاء مع السطر لا صحة اختيار الظرف الزمني. التناقض نفسه غير محسوم ومسجل في d-a1-20.lines[2]، لذلك لا يُنشأ تصحيح منفصل للإملاء.",
+      "action": "لا تعديل؛ تم التحقق من مطابقة جملة الإملاء للسطر الحواري.",
+      "sources": [
+        "S37",
+        "S38",
+        "S39",
+        "S40"
+      ]
+    },
+    {
+      "id": "d-a1-20.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Ja, bald, am 5. April."
+      },
+      "finding": "الجملة `Ja, bald, am 5. April.` منقولة حرفياً من السطر الثامن؛ معاني bald وApril محفوظة في الترجمة.",
+      "action": "لا تعديل؛ تم التحقق من مطابقة جملة الإملاء للسطر الحواري.",
+      "sources": [
+        "S30",
+        "S33",
+        "S34"
+      ]
+    },
+    {
+      "id": "d-a1-21",
+      "kind": "بيانات الحوار: العنوان والسياق ومرساة المفردات",
+      "status": "سليم",
+      "reviewed": {
+        "titleDe": "In der Schule",
+        "titleAr": "في المدرسة",
+        "level": "A1",
+        "waisen": [
+          "der Schüler",
+          "die Klasse",
+          "das Heft",
+          "der Stift",
+          "das Papier",
+          "der Satz",
+          "das Diktat",
+          "auswendig lernen",
+          "antworten",
+          "die Pause machen"
+        ]
+      },
+      "finding": "العنوانان «In der Schule» و«في المدرسة» متوافقان مع مشهد المعلمة والصف والإملاء. راجعت مراسي waisen العشرة (Schüler, Klasse, Heft, Stift, Papier, Satz, Diktat, auswendig lernen, antworten, Pause machen)؛ تظهر في الحوار أو في وسم دور المتحدث، وder Schüler في الوسم لا في كلام منطوق. يُحفظ A1 المخزّن دون إعادة حساب.",
+      "action": "أُبقي العنوان والمرتكزات والمستوى المسجل؛ تقييم CEFR والنسبة وحساب المستوى مؤجلة.",
+      "sources": [
+        "S1",
+        "S42",
+        "S43",
+        "S44",
+        "S46",
+        "S47",
+        "S48",
+        "S50",
+        "S45",
+        "S55",
+        "S59",
+        "S51",
+        "S52"
+      ]
+    },
+    {
+      "id": "d-a1-21.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Lehrerin",
+        "de": "Guten Morgen, Klasse! Heute schreiben wir ein Diktat.",
+        "ar": "صباح الخير أيها الصف! اليوم نكتب إملاءً."
+      },
+      "finding": "المعلمة تحيي الصف وتعلن كتابة إملاء اليوم؛ `Klasse` و`Diktat` و`schreiben` تسند مفردات السطر، والترجمة تحفظ المتحدث والمهمة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S42",
+        "S44",
+        "S45",
+        "S57"
+      ]
+    },
+    {
+      "id": "d-a1-21.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "reviewed": {
+        "who": "Schüler",
+        "de": "Brauchen wir das Heft oder ein Papier?",
+        "ar": "هل نحتاج الدفتر أم ورقة؟"
+      },
+      "finding": "`Heft` واضح بمعنى دفتر، و`Papier` له معنى المادة، وتعرض المعاجم صيغة `ein Blatt Papier` للورقة. لكن المصادر المعجمية وحدها لا تثبت أن `ein Papier` مستحيل أو غير طبيعي في هذا السياق المدرسي؛ وقد يُقصد به ورقة مفهومة من المقام. هذه ملاحظة استعمال/أسلوب غير محسومة وليست خطأً مؤكداً.",
+      "action": "لا تغيير حتى يتوفر دليل استعمال مدرسي/مدوّني أدق؛ لا أستبدلها تخميناً بـ`ein Blatt Papier`.",
+      "sources": [
+        "S43",
+        "S46",
+        "S47",
+        "S65"
+      ]
+    },
+    {
+      "id": "d-a1-21.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Lehrerin",
+        "de": "Das Heft, bitte. Und einen blauen Stift, keinen Bleistift.",
+        "ar": "الدفتر من فضلكم. وقلماً أزرق، لا قلم رصاص."
+      },
+      "finding": "`Heft` = دفتر، و`Stift` = قلم، و`Bleistift` = قلم رصاص؛ المعلمة تطلب دفتراً وقلماً أزرق وتنفي قلم الرصاص، والترجمة تحفظ المقابلة.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S46",
+        "S48",
+        "S49"
+      ]
+    },
+    {
+      "id": "d-a1-21.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Schüler",
+        "de": "Wie viele Sätze sind es?",
+        "ar": "كم جملة؟"
+      },
+      "finding": "`Sätze` جمع `Satz` = جمل؛ السؤال عن عدد الجمل مترجم مباشرة، ولا تعارض مع إجابة «ست جمل» في السطر التالي.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S50"
+      ]
+    },
+    {
+      "id": "d-a1-21.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Lehrerin",
+        "de": "Sechs Sätze. Ich lese jeden Satz zweimal. Dann antwortet ihr auf zwei Fragen.",
+        "ar": "ست جمل. أقرأ كل جملة مرتين. ثم تجيبون عن سؤالين."
+      },
+      "finding": "`jeden Satz zweimal` = كل جملة مرتين؛ و`antwortet ihr auf zwei Fragen` = تجيبون عن سؤالين. العددان ستة ومرتان وسؤالان لم تُخلط في الترجمة أو الشرح.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S50",
+        "S51",
+        "S58",
+        "S60"
+      ]
+    },
+    {
+      "id": "d-a1-21.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Schüler",
+        "de": "Und danach machen wir eine Pause?",
+        "ar": "وبعدها نأخذ استراحة؟"
+      },
+      "finding": "`Pause machen` استعمال مفهوم للاستراحة؛ سؤال المتعلم عن الاستراحة بعد النشاط مطابق لترجمته.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S52"
+      ]
+    },
+    {
+      "id": "d-a1-21.lines[6]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Lehrerin",
+        "de": "Ja, zehn Minuten. Nach der Pause lernen wir das Gedicht auswendig.",
+        "ar": "نعم، عشر دقائق. بعد الاستراحة نحفظ القصيدة عن ظهر قلب."
+      },
+      "finding": "`zehn Minuten` = عشر دقائق؛ و`das Gedicht auswendig lernen` = حفظ القصيدة عن ظهر قلب. الترجمة تحفظ الاستراحة ثم الحفظ.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S52",
+        "S53",
+        "S54",
+        "S55",
+        "S59"
+      ]
+    },
+    {
+      "id": "d-a1-21.lines[7]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "reviewed": {
+        "who": "Schüler",
+        "de": "Das Gedicht ist lang! Können wir nur die Hälfte lernen?",
+        "ar": "القصيدة طويلة! هل يمكن أن نحفظ النصف فقط؟"
+      },
+      "finding": "`lang` = طويل، و`die Hälfte` = النصف، و`lernen` = يتعلم/يحفظ بحسب التركيب؛ سؤال المتعلم يطلب حفظ نصف القصيدة فقط، والترجمة تحفظ الطلب.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S54",
+        "S55",
+        "S56",
+        "S63"
+      ]
+    },
+    {
+      "id": "d-a1-21-q1",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Womit schreiben die Schüler das Diktat?",
+        "options": [
+          "mit einem Bleistift auf Papier",
+          "mit einem blauen Stift ins Heft",
+          "mit einem blauen Stift auf Papier"
+        ],
+        "answer": "mit einem blauen Stift ins Heft",
+        "explanationAr": "الدليل: «Das Heft, bitte. Und einen blauen Stift, keinen Bleistift». الفخّ 1: قلم الرصاص منفيّ. الفخّ 2: الورقة لا الدفتر.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "finding": "المعلمة تطلب الدفتر (`Das Heft, bitte`) وقلمًا أزرق وتنفي قلم الرصاص. الجواب يركّب الأداة والسطح من التعليمات؛ الملاحظة غير المحسومة عن `ein Papier` تخص صياغة سطر المتعلم، ولا تقلب المفتاح المسنود.",
+      "action": "لا تعديل؛ المفتاح يطابق توجيهي المعلمة، والشرح يقتبس كليهما.",
+      "sources": [
+        "S46",
+        "S47",
+        "S48",
+        "S49",
+        "S65"
+      ]
+    },
+    {
+      "id": "d-a1-21-q2",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wie oft liest die Lehrerin jeden Satz?",
+        "options": [
+          "sechs Mal",
+          "zehn Mal",
+          "zweimal"
+        ],
+        "answer": "zweimal",
+        "explanationAr": "الدليل: «Ich lese jeden Satz zweimal». الفخّ 1: ستة عدد الجمل. الفخّ 2: عشرة دقائق الاستراحة.",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      },
+      "finding": "السؤال `Wie oft` عن التكرار، ويقول السطر `zweimal`; ستة هو عدد الجمل وعشرة عدد دقائق الاستراحة، وهما مشتتان مأخوذان من النص بوظيفة أخرى.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S50",
+        "S52",
+        "S53",
+        "S58",
+        "S60"
+      ]
+    },
+    {
+      "id": "d-a1-21-q3",
+      "kind": "سؤال فهم: النص والخيارات والمفتاح والشرح والتعليمات",
+      "status": "سليم",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Die Pause dauert zehn Minuten.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل: «Ja, zehn Minuten».",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+      },
+      "finding": "المعلمة تجيب `Ja, zehn Minuten` عن مدة الاستراحة؛ لذلك العبارة صحيحة والشرح يقتبس دليلاً مباشراً.",
+      "action": "لا تعديل.",
+      "sources": [
+        "S52",
+        "S53"
+      ]
+    },
+    {
+      "id": "d-a1-21.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Heute schreiben wir ein Diktat."
+      },
+      "finding": "`Heute schreiben wir ein Diktat.` منقولة حرفياً من سطر المعلمة الأول، وتدعمها مفردتا الكتابة والإملاء.",
+      "action": "لا تعديل؛ تم التحقق من مطابقة جملة الإملاء للسطر الحواري.",
+      "sources": [
+        "S45",
+        "S57"
+      ]
+    },
+    {
+      "id": "d-a1-21.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "reviewed": {
+        "sentence": "Ich lese jeden Satz zweimal."
+      },
+      "finding": "`Ich lese jeden Satz zweimal.` منقولة حرفياً من السطر الخامس؛ جملة القراءة والتكرار مطابقة.",
+      "action": "لا تعديل؛ تم التحقق من مطابقة جملة الإملاء للسطر الحواري.",
+      "sources": [
+        "S50",
+        "S58",
+        "S60"
+      ]
+    }
+  ]
+}

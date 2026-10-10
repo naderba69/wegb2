@@ -40,6 +40,7 @@ PLURAL_MAP = {
     "vd-wohnen-005": "die Warmmieten",
     "vd-wohnen-006": "die Kaltmieten",
     "vd-wohnen-019": "die Hausratversicherungen",
+    "vd-wohnen-021": "die Nachmieter",
     "vd-wohnv-801": "die Wohnungsmärkte",
     "ve-arbeits-011": "die Erste-Hilfe-Kästen",
     "ve-arbeits-019": "die Haftungen",

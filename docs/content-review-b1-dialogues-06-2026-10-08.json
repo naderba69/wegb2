@@ -1,0 +1,395 @@
+{
+  "reviewRule": "R119",
+  "date": "2026-10-08",
+  "scope": "الدفعة B1 السادسة d-b1-19..21 (تأجيل موعد مكتب الأجانب، صيدلية المناوبة الليلية، إنهاء عقد النادي الرياضي) — حوارات قصيرة بلا waisen.",
+  "dialogues": [
+    {
+      "id": "d-b1-19",
+      "level": "B1",
+      "titleDe": "Termin bei der Ausländerbehörde verschieben",
+      "titleAr": "تأجيلُ موعدِ مكتبِ الأجانب",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 51,
+      "hasWaisenField": false,
+      "who": [
+        "Amira",
+        "Hedi"
+      ]
+    },
+    {
+      "id": "d-b1-20",
+      "level": "B1",
+      "titleDe": "Apotheke: Notdienst",
+      "titleAr": "الصيدلية: خدمةُ الطوارئ",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 51,
+      "hasWaisenField": false,
+      "who": [
+        "Firas",
+        "Frau Seidl"
+      ]
+    },
+    {
+      "id": "d-b1-21",
+      "level": "B1",
+      "titleDe": "Studiovertrag kündigen",
+      "titleAr": "فسخُ عقدِ الناديِ الرياضي",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 51,
+      "hasWaisenField": false,
+      "who": [
+        "Riadh",
+        "Studioleiter"
+      ]
+    }
+  ],
+  "totals": {
+    "dialogues": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictation": 6,
+    "approximateUnits": 153
+  },
+  "corrections": [
+    {
+      "unit": "d-b1-19.lines[0].ar",
+      "old": "موعدي الجمعةَ يتصادمُ مع امتحاني — أبعدَه شهراً؟",
+      "new": "موعدي يومَ الجمعةِ يتعارضُ مع امتحاني — هل يمكنُ تأجيلُه شهراً؟",
+      "rationale": "«ein Monat später?» سؤال عن إمكان التأجيل؛ و«أبعدَه» ليست صيغة فصيحة للتأجيل، و«يتصادم» يُستحسن «يتعارض» في تعارض المواعيد."
+    },
+    {
+      "unit": "d-b1-19.lines[1].ar",
+      "old": "التأجيلُ خطّيٌّ فقط، والهاتِ دليلَ العذر.",
+      "new": "التأجيلُ خطّيٌّ فقط، مع إثباتِ السبب.",
+      "rationale": "(أ) الأمر «الهاتِ» يخاطب مؤنثاً بصيغة المذكر (أميرة)، والألماني غير شخصي أصلاً (den Grund bitte nachweisen). (ب) Grund=السبب لا «العذر»، وnachweisen=إثبات."
+    },
+    {
+      "unit": "d-b1-19.lines[2].ar",
+      "old": "تفضَّلي إشعارَ امتحانِ الجامعةِ مطبوعاً.",
+      "new": "هذا إشعارُ تسجيلِ امتحانِ الجامعةِ.",
+      "rationale": "(أ) «تفضَّلي» أمر مؤنث يخاطب هادي، وهو مذكّر في بيانات المشروع (content/vocab.json: «Hedi kümmert sich um seinen Vater…»). (ب) «Hier ist …» تقديمٌ لا أمر. (ج) «مطبوعاً» إضافة غير موجودة في الألماني، وPrüfungsanmeldung=إشعار تسجيل الامتحان."
+    },
+    {
+      "unit": "d-b1-19.lines[3].ar",
+      "old": "الجديد: أولَ الشهرِ التالي، الثانيةَ عشرةَ والنصف — وبهذه الرسالةِ يدخلُ صاحبُها.",
+      "new": "الموعدُ الجديد: أولَ الشهرِ التالي، الساعةَ الثانيةَ والنصفَ بعدَ الظهر — وبهذه الرسالةِ يدخلُ صاحبُها.",
+      "rationale": "(أ) «الجديد:» بترٌ لعنوان Neuer Termin: → «الموعد الجديد:». (ب) vierzehn Uhr dreißig = الثانية والنصف بعد الظهر لا «الثانية عشرة والنصف»؛ والملف نفسه يتبع ذلك في d-a2-09 («Um vierzehn Uhr dreißig» → «الساعة الثانية والنصف بعد الظهر»)."
+    },
+    {
+      "unit": "d-b1-19.lines[4].ar",
+      "old": "أأُعيدُ كلَّ الوثائق؟",
+      "new": "أأُحضرُ الوثائقَ كلَّها مرةً أخرى؟",
+      "rationale": "الوثائق تُحضَر من جديد لا «تُعاد» من الموظّف، وin voller Zahl=العدد الكامل، وwieder=مرة أخرى."
+    },
+    {
+      "unit": "d-b1-19.lines[5].ar",
+      "old": "جوازٌ وإقامةٌ وعقدُ إيجارٍ وتأمين — كما في الزيارةِ الأولى.",
+      "new": "جوازُ سفرٍ وتصريحُ إقامةٍ وعقدُ إيجارٍ وإثباتُ تأمينٍ — كما في المرةِ الأولى.",
+      "rationale": "(أ) Aufenthaltstitel مصطلح إداري=تصريح الإقامة لا «إقامة» مجرّدة. (ب) Versicherungsnachweis=إثبات تأمين (Nachweis=إثبات) لا «تأمين» وحده. (ج) beim ersten Mal=المرة الأولى لا «الزيارة الأولى»."
+    },
+    {
+      "unit": "d-b1-20.lines[0].ar",
+      "old": "أنوبتُكم الليلة؟ طبيبُ الأطفالِ وجَّهني إليكم.",
+      "new": "هل تقدّمون خدمةَ الطوارئِ الليلة؟ طبيبُ الأطفالِ وجَّهني إليكم.",
+      "rationale": "«Ist heute Nacht Notdienst?» سؤالٌ عن وجود مناوبة/خدمة طوارئ الليلة؛ و«أنوبتُكم» ليست صيغة عربية سليمة."
+    },
+    {
+      "unit": "d-b1-20.lines[1].ar",
+      "old": "نعم — حتى الثامنةِ فجراً. ما مطلوبُك؟",
+      "new": "نعم — حتى الثامنةِ صباحاً. ماذا تحتاجون؟",
+      "rationale": "(أ) acht Uhr früh=الثامنة صباحاً؛ «فجراً» ليست الثامنة، وشرح Q0 نفسه يقول «المناوبة تنتهي في الثامنة صباحاً». (ب) Was benötigen Sie? يحمل ضمير Sie صراحةً → جمع «تحتاجون»، و«ما مطلوبُك» ملتبسة."
+    },
+    {
+      "unit": "d-b1-20.lines[2].ar",
+      "old": "خافِضُ حرارةٍ لعاشرةِ أعوامٍ — بلا وصفة؟",
+      "new": "خافضُ حرارةٍ لطفلةٍ في العاشرةِ من عمرها — بلا وصفة؟",
+      "rationale": "die Kleine في L7 مؤنثة، فالطفلة بنت؛ و«لعاشرة أعوام» تُفهم لامرأةٍ في العشرين لا لطفلةٍ في العاشرة."
+    },
+    {
+      "unit": "d-b1-20.lines[3].ar",
+      "old": "ثمانيةٌ ونصفٌ باليورو — واقرأ نشرةَ العبوةِ بدقة.",
+      "new": "ثمانيةٌ وخمسون يورو — مع قراءةِ النشرةِ الداخليةِ بعناية، من فضلك.",
+      "rationale": "(أ) «acht Euro fünfzig»=ثمانية وخمسون يورو؛ الرقم كان محذوفاً كلياً. (ب) die Beilage في الصيدلية=النشرة الداخلية (Beipackzettel) لا «نشرة العبوة». (ج) الأمر «واقرأ» مذكّر والمخاطَبة مؤنثة، والألماني غير شخصي (durchlesen) → صيغة محايدة."
+    },
+    {
+      "unit": "d-b1-20.lines[6].ar",
+      "old": "أَأُتمُّ وصفةَ الطفلِ غداً؟",
+      "new": "هل يمكنني إحضارُ وصفةِ الطفلِ غداً؟",
+      "rationale": "bringen=إحضار؛ و«أُتمُّ الوصفة» تعني استكمالها لا إحضارها، فيختلط المعنى مع جواب الصيدلي «Rezepte gelten bundesweit»."
+    },
+    {
+      "unit": "d-b1-20.lines[7].ar",
+      "old": "وصفاتُ الأطباءِ نافذةٌ في البلادِ كلها — وفي الصغيرِ عافية.",
+      "new": "وصفاتُ الأطباءِ نافذةٌ في البلادِ كلها — وألفُ عافيةٍ للصغيرة!",
+      "rationale": "(أ) die Kleine مؤنثة (الطفلة) لا «الصغير» مذكراً. (ب) gute Besserung دعاءُ شفاء، وأُبقيت الصيغة نفسها المستعملة في الملف (d-b1-14: «ألف عافية»)."
+    },
+    {
+      "unit": "d-b1-21.lines[1].ar",
+      "old": "ستةُ أسابيع خطيّاً كما وردَ في العقد.",
+      "new": "المهلةُ ستةُ أسابيع، والإنهاءُ خطّيٌّ — كما في العقد.",
+      "rationale": "(أ) «Die Frist beträgt …» جملة اسمية كاملة بالمبتدأ والخبر. (ب) schriftlich صفةٌ للإنهاء (Schriftform بحسب Q0) لا حالٌ للزمن، وsiehe Vertrag=كما في العقد."
+    },
+    {
+      "unit": "d-b1-21.lines[2].ar",
+      "old": "اتصلتُ قبلَ أسبوعَين، ولم تصلني بطاقةُ تأكيد.",
+      "new": "اتصلتُ قبلَ أسبوعَين، ولم يصلني أيُّ تأكيدٍ.",
+      "rationale": "keine Bestätigung kam=لم يصل أيُّ تأكيد؛ و«بطاقة تأكيد» (a confirmation card) إضافة غير موجودة في الألماني."
+    },
+    {
+      "unit": "d-b1-21.lines[3].ar",
+      "old": "الهاتفُ وحدَه لا يُعتَدّ. أختمُ بريدَك بالاستلامِ ختماً.",
+      "new": "الاتصالُ الهاتفيُّ وحدَه لا يكفي — لا بدَّ أن يكونَ خطّيّاً، وعندها يُعتَدُّ به.",
+      "rationale": "(أ) Telefon allein genügt nicht=لا يكفي. (ب) schriftlich muss es vorliegen, dann zählt es=لا بد أن يكون مُقدَّماً خطيّاً وعندها يُعتَدّ به؛ وجملة «أختمُ بريدَك بالاستلام ختماً» مشهد ختمٍ عند الاستقبال غير موجود في الألماني فحُذف."
+    },
+    {
+      "unit": "d-b1-21.lines[4].ar",
+      "old": "ولم خصمتم بعدُ وقد أعلمت؟",
+      "new": "ولماذا خصمتم المبلغَ مسبقاً وقد أنهيتُ العقدَ؟",
+      "rationale": "(أ) «لم خصمتم» خطأ نحوي (لم تلزم المضارع المجزوم) → «ولماذا خصمتم». (ب) schon=مسبقاً لا «بعدُ» التي تخص النفي. (ج) kündigte=أنهيتُ العقد لا «أعلمت» العامّة."
+    },
+    {
+      "unit": "d-b1-21.lines[5].ar",
+      "old": "نوقفُ بانتهاءِ المدة، والمُدفَعُ فوقَها يُعادُ إليك.",
+      "new": "نوقفُ الخصمَ عندَ انتهاءِ المهلة، وما دُفِعَ زيادةً يُرَدُّ.",
+      "rationale": "(أ) mit Fristablauf=عند انتهاء المهلة، وبقيت «المهلة» موحّدة مع L1. (ب) الألماني غير شخصي (wird erstattet) فحُوّل إلى «يُرَدُّ» بلا ضمير مفرد «إليك» إذ لا يحمل الحوار مؤشر Sie/du. (ج) zu viel Gezahltes=ما دُفع زيادةً."
+    },
+    {
+      "unit": "d-b1-21.lines[7].ar",
+      "old": "خمسةَ عشرَ تُرَدُّ خلالَ أسبوعَين من التسليم.",
+      "new": "خمسةَ عشرَ يورو تُرَدُّ خلالَ أربعةَ عشرَ يوماً من التسليم.",
+      "rationale": "(أ) Fünfzehn Euro نصّ على العملة فتُذكر «يورو» (كما في d-b1-15). (ب) vierzehn Tagen=أربعة عشر يوماً، والعدد 14 محور فخّ Q2 («vierzehn Euro»)، و«أسبوعَين» تُخفيه؛ والملف يتبع «أربعة عشر يوماً» في d-a1-15/d-a2-26/d-a2-31."
+    }
+  ],
+  "contextNotes": {
+    "d-b1-19": [
+      {
+        "note": "لا قاعدة اتحادية واحدة لـ«Verschiebung» موعد مكتب الأجانب؛ كل سلطة تنظم طريقتها (نموذج تغيير موعد أو مراسلة)، والطلب الخطي مع إثبات السبب ممارسةٌ شائعة وموثقة في أدلة الخدمة.",
+        "source": "einbuergerungsservice.de: Termin Aufenthaltserlaubnis/Verlängerung · 123recht: Termin verschieben und ändern (حالة موثقة)."
+      },
+      {
+        "note": "قائمة الوثائق في L5 تطابق قوائم الإجراءات المعتادة: جواز سفر سارٍ، وثيقة إقامة، إثبات سكن/عقد إيجار، وإثبات تأمين صحي؛ والقانون يخوّل السلطة طلب البيانات والمستندات اللازمة (§ 82 AufenthG).",
+        "source": "einbuergerungsservice.de (Unterlagen-Checkliste) · juraforum.de: Aufenthaltstitel verlängern (Nachweise)."
+      },
+      {
+        "note": "«Neuer Termin: Erster des Folgemonats» — موعدٌ بديل بعد نحو شهر: ممارسة معتادة عند تزاحم المواعيد، ومدة الانتظار تختلف من بلديةٍ لأخرى.",
+        "source": "einbuergerungsservice.de: Wartezeiten unterscheiden sich je nach Kommune."
+      },
+      {
+        "note": "أثر التخلّف الثاني («Ablehnung, neue Gebühr») أثرٌ إداري محتمل في السيناريو التعليمي وليس نصاً قانونياً موحداً؛ والرسوم الإدارية نفسها منظّمة في AufenthV. لا ادّعاء استشاري/قانوني.",
+        "source": "buzer.de: Aufenthaltsverordnung (AufenthV) — Kapitel Gebühren · صيغة الحوار تعليمية."
+      },
+      {
+        "note": "سجل المخاطبة: الألماني في هذا الحوار غير شخصي بالكامل (Infinitiv/Nominalstil) ولا يحمل أي ضمير Sie/du، لذا أُبقيت العربية محايدة بلا فرض سجلٍّ بعينه.",
+        "source": "قاعدة المراجعة R119 (لا تعديل إلا لخطأ مؤكد) وحفظ النص الألماني."
+      }
+    ],
+    "d-b1-20": [
+      {
+        "note": "المناوبة الليلية للصيدليات في ألمانيا نظام تناوب يتغيّر يومياً نحو الثامنة–التاسعة صباحاً، فـ«حتى الثامنة صباحاً» في الحوار واقعي.",
+        "source": "meineapotheke.de: Apotheken-Notdienst (Wechsel 8:00–9:00)."
+      },
+      {
+        "note": "رسوم المناوبة القانونية 2.50 يورو تُضاف مرةً واحدة لكل زيارة (Arzneimittelpreisverordnung، بين 20:00 و6:00)؛ فـ«ثمانية وخمسون يورو» تُقرأ سعراً إجمالياً يشمل الرسوم في سياق تعليمي، والأسعار الفعلية تختلف.",
+        "source": "de.wikipedia.org: Apothekennotdienst · ihreapotheken.de: Notdienstgebühr 2,50 €."
+      },
+      {
+        "note": "في المناوبة لا تُصرف أدوية الوصفة دون وصفة، والطلب «rezeptfrei» (خافض حرارة) متاح؛ وهذا يسند وظيفة جملة «Das Rezept fürs Kind kann ich morgen bringen?» في الحوار.",
+        "source": "ihreapotheken.de: Notdienst-Apotheke (keine rezeptpflichtigen Mittel ohne Rezept)."
+      },
+      {
+        "note": "«Rezepte gelten bundesweit» مدعوم: وصفة الكنز (Kassenrezept) تُصرف في أي صيدلية في ألمانيا بلا ارتباط بمكان، وصلاحيتها النظامية 28 يوماً (النص لا يذكر المدة — تبسيط دراسي).",
+        "source": "park-apotheke-muenster.de: Rezept einlösen (jede deutsche Apotheke, 28 Tage) · support.teleclinic.com."
+      },
+      {
+        "note": "«die Beilage» في الصيدلية = النشرة الداخلية (Beipackzettel) وهي معلومة دوائية عامة؛ و«Nicht kombinieren … nur ein Mittel zur Zeit» عبارة الصيدلي في الحوار وسياق تعليمي، والتطبيق لا يقدّم مشورة طبية.",
+        "source": "سياق دوائي عامّ · قاعدة المراجعة (حدود طبية معلنة)."
+      }
+    ],
+    "d-b1-21": [
+      {
+        "note": "الشكل المطلوب للإنهاء: AGB لا يجوز أن تشترط أكثر من «Textform» لإقرارات المستهلك منذ 1.10.2016 (§ 309 Nr. 13 BGB) — البريد الإلكتروني يكفي قانوناً؛ وجملة الحوار «schriftlich muss es vorliegen» تمثّل موقف النادي وتُقرأ بمعنى «بصيغةٍ قابلة للإثبات».",
+        "source": "monsterdealz.de: Fitnessstudio kündigen (Verbraucherzentrale/§ 309 Nr. 13 BGB) · umziehen.de · finanda.de."
+      },
+      {
+        "note": "«sechs Wochen» بندٌ تعاقدي محتمل (تختلف المهل من نادٍ لآخر و6 أسابيع موجودة فعلاً في نماذج)، أما العقود المبرمة من 1.3.2022 فبعد مدة الالتزام الأساسي أقصى مهلة شهر واحد (§ 309 Nr. 9 BGB)، والعقود الأقدم حتى 3 أشهر.",
+        "source": "monsterdealz.de (Verbraucherzentrale) · finanda.de: جدول المهل (Bodystreet: teils 6 Wochen)."
+      },
+      {
+        "note": "توقّف الخصم عند انتهاء العقد ممارسةٌ صحيحة، وحماية السحب المباشر تتيح الاعتراض على الخصم غير المصرّح به خلال ثمانية أسابيع.",
+        "source": "finanda.de: Fitnessstudio kündigen (Lastschrift, 8 Wochen)."
+      },
+      {
+        "note": "«Schlüsselkaution 15 يورو تُرد خلال 14 يوماً» سياق تعليمي وأرقام الحوار؛ لا ادّعاء استشاري أو قانوني، والمراجعة بالمصادر المنشورة لا الحالة الفردية.",
+        "source": "قاعدة المراجعة R119 (حدود معلنة) + ممارسة الكفالات الشائعة في العقود الرياضية."
+      }
+    ]
+  },
+  "styleAlternatives": {
+    "d-b1-19": [
+      {
+        "phrase": "هذا إشعارُ تسجيلِ امتحانِ الجامعةِ.",
+        "alternative": "هذا تسجيلُ امتحانِ الجامعة.",
+        "note": "Prüfungsanmeldung — «إشعار تسجيل» أوضح كوثيقة."
+      },
+      {
+        "phrase": "وبهذه الرسالةِ يدخلُ صاحبُها.",
+        "alternative": "ولا يُقبَلُ الدخولُ إلا بهذه الرسالة.",
+        "note": "nur mit diesem Brief — الصياغتان تؤديان المعنى، والثانية أقرب حرفيّاً."
+      },
+      {
+        "phrase": "التأجيلُ خطّيٌّ فقط.",
+        "alternative": "التأجيلُ بالكتابةِ فقط.",
+        "note": "schriftlich — «خطيّ» و«كتابي» كلاهما مستعمل في الملف."
+      }
+    ],
+    "d-b1-20": [
+      {
+        "phrase": "هل تقدّمون خدمةَ الطوارئِ الليلة؟",
+        "alternative": "هل الليلةَ مناوبتكم؟",
+        "note": "Notdienst — «مناوبة» أدقّ اصطلاحاً صيدلانياً."
+      },
+      {
+        "phrase": "ثمانيةٌ وخمسون يورو",
+        "alternative": "ثمانيةُ يورو وخمسون سنتاً",
+        "note": "acht Euro fünfzig — الصياغة الثانية أدقّ صرفاً، والأولى شائعة."
+      },
+      {
+        "phrase": "مع قراءةِ النشرةِ الداخليةِ بعناية، من فضلك.",
+        "alternative": "واقرئي النشرةَ الداخليةَ بعناية، من فضلك.",
+        "note": "الألماني أمرٌ غير شخصي؛ يجوز توجيهه لمفردة مؤنثة (Frau Seidl)، وبقيت الصيغة محايدة."
+      }
+    ],
+    "d-b1-21": [
+      {
+        "phrase": "ولماذا خصمتم المبلغَ مسبقاً",
+        "alternative": "ولماذا خُصِمَ المبلغُ مسبقاً",
+        "note": "الألماني مبني للمجهول (wurde abgebucht)؛ صيغة الجمع مألوفة في الشكوى."
+      },
+      {
+        "phrase": "وتأمينُ المفتاح؟",
+        "alternative": "وديعةُ المفتاح؟",
+        "note": "Schlüsselkaution — «تأمين» متسق مع d-b1-11، و«وديعة» أدقّ اصطلاحاً."
+      },
+      {
+        "phrase": "أُنهي عقدي مع نهايةِ هذا الشهر.",
+        "alternative": "أُبلِغُ بإنهاءِ عقدي اعتباراً من نهايةِ الشهر.",
+        "note": "kündigen إشعارٌ بالإنهاء؛ الصياغة الحالية مفهومة ولم تُعدّل."
+      }
+    ]
+  },
+  "sources": {
+    "d-b1-19": [
+      {
+        "id": "S1",
+        "citation": "einbuergerungsservice.de: Termin Ausländerbehörde — Verlängerung, Unterlagen, Wartezeiten",
+        "url": "https://einbuergerungsservice.de/ratgeber/aufenthaltstitel-verlaengerung-termin"
+      },
+      {
+        "id": "S2",
+        "citation": "juraforum.de: Aufenthaltstitel bei der Ausländerbehörde verlängern — Nachweise (§ 82 AufenthG), Gebühren (AufenthV)",
+        "url": "https://www.juraforum.de/lexikon/auslaenderbehoerde-aufenthaltstitel-verlaengern"
+      },
+      {
+        "id": "S3",
+        "citation": "buzer.de: Aufenthaltsverordnung (AufenthV) — Kapitel 3 Gebühren (§ 51 Widerspruchsgebühr)",
+        "url": "https://www.buzer.de/gesetz/949/b2693.htm"
+      },
+      {
+        "id": "S4",
+        "citation": "einbuergerungsservice.de: Termin bei der Ausländerbehörde bekommen — fristwahrender schriftlicher Antrag, Bestätigungen",
+        "url": "https://einbuergerungsservice.de/ratgeber/auslaenderbehoerde-termin-bekommen"
+      }
+    ],
+    "d-b1-20": [
+      {
+        "id": "S5",
+        "citation": "meineapotheke.de: Apotheken-Notdienst — Wechsel 8:00–9:00, Notdienstgebühr 2,50 €",
+        "url": "https://www.meineapotheke.de/apotheken-notdienst/"
+      },
+      {
+        "id": "S6",
+        "citation": "de.wikipedia.org: Apothekennotdienst — Arzneimittelpreisverordnung, Notdienstgebühr 2,50 € (20–6 Uhr)",
+        "url": "https://de.wikipedia.org/wiki/Apothekennotdienst"
+      },
+      {
+        "id": "S7",
+        "citation": "ihreapotheken.de: Notdienst-Apotheke — keine rezeptpflichtigen Medikamente ohne Rezept im Notdienst",
+        "url": "https://ihreapotheken.de/themenuebersicht/notdienst-apotheke"
+      },
+      {
+        "id": "S8",
+        "citation": "park-apotheke-muenster.de: Rezept einlösen — Kassenrezept in jeder deutschen Apotheke, 28 Tage Gültigkeit",
+        "url": "https://www.park-apotheke-muenster.de/blog/rezept-in-der-apotheke-einloesen/"
+      }
+    ],
+    "d-b1-21": [
+      {
+        "id": "S9",
+        "citation": "monsterdealz.de: Fitnessstudio kündigen — § 309 Nr. 13 BGB (Textform), 1 Monat ab 1.3.2022 (Verbraucherzentrale)",
+        "url": "https://www.monsterdealz.de/magazin/fitnessstudio-kuendigen"
+      },
+      {
+        "id": "S10",
+        "citation": "finanda.de: Fitnessstudio kündigen — Musterfristen je Studio, Lastschrift-Widerspruch 8 Wochen",
+        "url": "https://finanda.de/sparen/kuendigen/fitnessstudio-kuendigen/"
+      },
+      {
+        "id": "S11",
+        "citation": "umziehen.de: Fitnessstudio-Vertrag kündigen — Schriftform/Textform und Fristen",
+        "url": "https://umziehen.de/suche-planung/fitnessstudio-kuendigen-wegen-umzug-ihre-rechte-12157"
+      },
+      {
+        "id": "S12",
+        "citation": "dahag.de: Fitnessvertrag kündigen — Form und Frist hängen vom Vertrag ab",
+        "url": "https://www.dahag.de/c/ratgeber/zivilrecht/abonnementvertrag/fitnesstudio-kuendigen"
+      }
+    ]
+  },
+  "contentWarnings": [],
+  "contentChecks": [
+    "Notdienst-Zeiten (bis acht Uhr früh): مطابق لنظام التناوب الألماني (Wechsel 8:00–9:00).",
+    "Notdienstgebühr 2,50 € والوصفة 28 يوماً وصلاحية «bundesweit»: متوافقة؛ الاختلافات أرقام تعليمية لا تعارض.",
+    "sechs Wochen Frist: بند تعاقدي محتمل (لا يخالف القانون الذي يحدّ المهلة القصوى بعد الالتزام الأساسي بعقدٍ واحد لعقود ما بعد 1.3.2022) — سُجّل سياقياً.",
+    "لا عناصر أخرى قابلة للتحقق والتفنيد في هذه الدفعة (لا نسب، لا رسوم إدارية رقمية، لا مدد إلزامية)."
+  ],
+  "audio": {
+    "manifestEntries": [
+      "d-b1-19",
+      "d-b1-20",
+      "d-b1-21"
+    ],
+    "mp3Files": [
+      "/home/user/wegb2/public/audio/dialog/d-b1-19.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-20.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-21.mp3"
+    ],
+    "note": "لا استماع ولا ادعاء صوتي."
+  },
+  "waisen": {
+    "present": false,
+    "note": "الحوارات الثلاثة بلا حقل waisen (فحص صريح لكل كائن)."
+  },
+  "judgement": {
+    "correct": 135,
+    "corrected": 18,
+    "unresolved": 0,
+    "note": "ثمانية عشر تصحيحاً عربياً مؤكداً: تصحيح رقم محذوف (ثمانية وخمسون يورو)، ورقم مترجم خطأ (14:30 = الثانية والنصف بعد الظهر)، وجنس المخاطَب/المخاطَبة (تفضَّلي لهادي، واقرأ لفرو زايدل (Frau Seidl)، الصغير→الصغيرة، لعاشرة أعوام→لطفلة في العاشرة)، واتفاق ضمير Sie الصريح (Was benötigen Sie → تحتاجون)، وخطأ نحوي (لم خصمتم)، وحذف مشهد ختمٍ غير موجود وإضافة «مطبوعاً»، وتصحيح مصطلحات (Aufenthaltstitel=تصريح إقامة، Versicherungsnachweis=إثبات تأمين، Beilage=النشرة الداخلية، bringen=إحضار)، وتوحيد الأرقام المختبرة (14 يوماً في فخّ Q2). الألماني/who/الأسئلة/المفاتيح/الإملاءات/الخيارات/الشرح مقفلة."
+  },
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو النسبة.",
+    "audio": "لا استماع ولا توليد صوتي.",
+    "human": "ليست مراجعة بشرية.",
+    "legal": "إجراءات مكتب الأجانب وإنهاء عقود النوادي سياق تعليمي ولا يُعدّان مشورة قانونية.",
+    "medical": "المناوبة الصيدلانية والأدوية سياق تعليمي ولا يُعدّ مشورة طبية.",
+    "professional": "الوثائق الإدارية المذكورة أمثلة عامة تابعة للسلطة المختصة."
+  },
+  "gates": {
+    "planned": "K193a–j"
+  }
+}

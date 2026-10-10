@@ -13,7 +13,12 @@ import { De } from "./De";
 
 function gradeItem(ex: Exercise, resp: string): boolean {
   if (!resp.trim()) return false;
-  if (ex.type === "mc") return resp === ex.answer;
+  if (ex.type === "mc" || ex.type === "truefalse") {
+    const norm: Record<string, string> = { richtig: "richtig", wahr: "richtig", true: "richtig", "1": "richtig", falsch: "falsch", false: "falsch", "0": "falsch" };
+    const exp = String(Array.isArray(ex.answer) ? ex.answer[0] : ex.answer).trim().toLowerCase();
+    const e = norm[exp] ?? exp;
+    return resp.trim().toLowerCase() === e;
+  }
   const n = normalize(resp);
   const answers = Array.isArray(ex.answer) ? ex.answer : [ex.answer];
   return answers.some((a) => normalize(String(a)) === n);
@@ -177,7 +182,7 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
   const mmss = `${String(Math.floor(left / 60)).padStart(2, "0")}:${String(left % 60).padStart(2, "0")}`;
 
   return (
-    <div style={{ position: "fixed", inset: 0, background: "#f5f0e1", zIndex: 60, overflow: "auto", padding: "1rem" }}>
+    <div style={{ position: "fixed", inset: 0, background: "var(--ui-bg)", color: "var(--ui-text)", zIndex: 60, overflow: "auto", padding: "1rem" }}>
       <div style={{ maxWidth: "46rem", margin: "0 auto" }}>
         {/* شريط المؤقّت */}
         {!done && (
@@ -191,7 +196,7 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
               position: "sticky",
               top: 0,
               zIndex: 5,
-              background: left < 300 ? "var(--color-cola-soft)" : "white",
+              background: left < 300 ? "var(--color-cola-soft)" : "var(--ui-surface-raised)",
             }}
           >
             <strong>
@@ -234,7 +239,7 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
             )}
 
             {sec.items.map((ex, i) => (
-              <div key={ex.id} style={{ margin: "0.9rem 0", padding: "0.7rem 0.9rem", background: "white", borderRadius: "0.6rem", border: "1px solid var(--color-line)" }}>
+              <div key={ex.id} style={{ margin: "0.9rem 0", padding: "0.7rem 0.9rem", background: "var(--ui-surface-raised)", borderRadius: "0.8rem", border: "1px solid var(--ui-border)" }}>
                 <div style={{ fontWeight: 700, marginBottom: "0.35rem" }}>
                   <span className="rtl-num">{i + 1}.</span> <De>{ex.promptDe}</De>
                   {ex.promptAr && <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", fontWeight: 400 }}>{ex.promptAr}</div>}
@@ -368,9 +373,9 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
                 style={{
                   margin: "1.2rem auto",
                   padding: "1rem",
-                  background: "white",
-                  borderRadius: "0.8rem",
-                  border: "1px solid #ddd",
+                  background: "var(--ui-surface-raised)",
+                  borderRadius: "0.9rem",
+                  border: "1px solid var(--ui-border)",
                   textAlign: "start",
                 }}
               >

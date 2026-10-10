@@ -5,7 +5,7 @@
     "de": "Hallo! Ich heiße Omar. Wie heißt du?",
     "ar": "مرحباً! اسمي عمر. ما اسمك؟",
     "tags": [
-      "gruß"
+      "Gruß"
     ]
   },
   {
@@ -32,7 +32,7 @@
     "de": "Guten Tag! Wie geht es Ihnen?",
     "ar": "طاب يومكم! كيف حال حضرتك؟",
     "tags": [
-      "gruß"
+      "Gruß"
     ]
   },
   {
@@ -41,7 +41,7 @@
     "de": "Danke, gut! Und dir?",
     "ar": "شكراً، بخير! وأنت؟",
     "tags": [
-      "gruß"
+      "Gruß"
     ]
   },
   {
@@ -1157,7 +1157,7 @@
     "de": "Bis morgen! Schlaf gut!",
     "ar": "إلى الغد! نُم جيداً!",
     "tags": [
-      "gruß"
+      "Gruß"
     ]
   },
   {
@@ -1491,7 +1491,7 @@
     "de": "Obwohl es geregnet hat, sind wir spazieren gegangen.",
     "ar": "رغم أنها أمطرت مشينا في نزهة.",
     "tags": [
-      "konjunktor",
+      "konnektor",
       "perfekt"
     ]
   },
@@ -1551,7 +1551,7 @@
     "ar": "رغم سوء الطقس أقمنا الرحلة.",
     "tags": [
       "genitiv",
-      "konjunktor"
+      "konnektor"
     ]
   },
   {
@@ -1895,8 +1895,8 @@
   {
     "id": "s-b2-51",
     "level": "B2",
-    "de": "Der Algorithmus bevorzugt Beiträge von Influencern, die Empörung auslösen, weshalb die Bildschirmzeit vieler Nutzer steigt.",
-    "ar": "الخوارزمية تفضّل منشورات المؤثّرين التي تثير الاستنكار، ولذلك يرتفع زمن الشاشة لدى كثير من المستخدمين.",
+    "de": "Der Algorithmus bevorzugt Beiträge von Influencern, die Empörung auslösen, weshalb die Bildschirmzeit vieler Nutzer steigt. Verfahren des maschinellen Lernens können große Datenmengen auswerten; eine sorgfältige Datenverarbeitung trägt dabei zum Schutz personenbezogener Informationen bei.",
+    "ar": "تفضّل الخوارزمية منشورات المؤثّرين التي تثير السخط، ولذلك يزداد وقت الشاشة لدى كثير من المستخدمين. ويمكن لأساليب التعلّم الآلي تحليل كميات كبيرة من البيانات؛ كما تسهم معالجة البيانات بعناية في حماية المعلومات الشخصية.",
     "tags": [
       "relativsatz",
       "weshalb"
@@ -1905,14 +1905,16 @@
     "waisen": [
       "der Algorithmus",
       "der Influencer",
-      "die Bildschirmzeit"
+      "die Bildschirmzeit",
+      "das maschinelle Lernen",
+      "die Datenverarbeitung"
     ]
   },
   {
     "id": "s-b2-52",
     "level": "B2",
-    "de": "Bevor die Hypothese publiziert wird, muss der Datensatz erneut ausgewertet werden.",
-    "ar": "قبل نشر الفرضية يجب إعادة تحليل مجموعة البيانات.",
+    "de": "Bevor die Hypothese publiziert wird, muss der Datensatz erneut ausgewertet werden. Im Forschungsvorhaben werden zudem die zugrunde liegende Prämisse und mögliche Folgewirkungen geprüft, bevor die Forschenden die Ergebnisse interpretieren. Die Ergebnisse können die zentrale These untermauern.",
+    "ar": "قبل نشر الفرضية، يجب إعادة تحليل مجموعة البيانات. وفي المشروع البحثي، تُفحَص أيضاً المسلّمة التي يستند إليها البحث والآثار اللاحقة المحتملة قبل أن يفسّر الباحثون النتائج. ويمكن للنتائج أن تدعم الأطروحة الأساسية بالأدلة.",
     "tags": [
       "passiv",
       "modalverb"
@@ -1922,7 +1924,12 @@
       "die Hypothese",
       "publizieren",
       "der Datensatz",
-      "auswerten"
+      "auswerten",
+      "das Forschungsvorhaben",
+      "die Prämisse",
+      "die Folgewirkung",
+      "interpretieren",
+      "untermauern"
     ]
   },
   {
@@ -3320,8 +3327,8 @@
   {
     "id": "s-b2-68",
     "level": "B2",
-    "de": "Man muss die Folgen der Automatisierung differenziert beurteilen, damit technische Kontrollen nicht zu einer ständigen Belästigung führen.",
-    "ar": "يجب على المرء تقييم عواقب الأتمتة بشكل متمايز، حتى لا تؤدي الرقابة التقنية إلى إزعاج مستمر.",
+    "de": "Man muss die Folgen der Automatisierung differenziert beurteilen, damit technische Kontrollen nicht zu einer ständigen Belästigung führen. Zugleich kann die Prozessautomatisierung wiederkehrende Arbeitsschritte vereinfachen.",
+    "ar": "ينبغي تقييم عواقب الأتمتة بتروٍّ حتى لا تتحول الضوابط التقنية إلى مصدر إزعاج دائم. وفي الوقت نفسه، يمكن لأتمتة العمليات أن تبسّط خطوات العمل المتكررة.",
     "tags": [
       "technik",
       "arbeit"
@@ -3330,7 +3337,8 @@
     "waisen": [
       "die Automatisierung",
       "beurteilen",
-      "die Belästigung"
+      "die Belästigung",
+      "die Prozessautomatisierung"
     ]
   },
   {
@@ -3480,8 +3488,8 @@
   {
     "id": "s-b2-78",
     "level": "B2",
-    "de": "Nach dem verheerenden Hochwasser einigten sich die Politiker auf verbindliche Treibhausgase und ein klares nationales Klimaziel.",
-    "ar": "بعد الفيضان المدمر اتفق السياسيون على خفض ملزم لغازات الاحتباس الحراري وهدف مناخي وطني واضح.",
+    "de": "Nach dem verheerenden Hochwasser einigten sich die Politiker auf verbindliche Ziele zur Senkung der Treibhausgasemissionen und ein klares nationales Klimaziel. Der Strukturwandel soll die Zukunftsfähigkeit der Region sichern und zugleich die Ressourcenschonung voranbringen.",
+    "ar": "بعد الفيضان المدمّر، اتفق السياسيون على أهداف ملزمة لخفض انبعاثات غازات الاحتباس الحراري، وعلى هدف مناخي وطني واضح. وينبغي للتحول الهيكلي أن يعزز قدرة المنطقة على الاستمرار مستقبلاً، وأن يدعم ترشيد الموارد في الوقت نفسه.",
     "tags": [
       "klima",
       "umwelt"
@@ -3490,7 +3498,10 @@
     "waisen": [
       "das Hochwasser",
       "das Treibhausgas",
-      "das Klimaziel"
+      "das Klimaziel",
+      "der Strukturwandel",
+      "die Zukunftsfähigkeit",
+      "die Ressourcenschonung"
     ]
   },
   {
@@ -3881,8 +3892,8 @@
   {
     "id": "s-b2-83",
     "level": "B2",
-    "de": "Seriöse Journalisten widerlegen reißerische Behauptungen und warnen vor tendenziösen Berichten in ungeprüften Online-Quellen.",
-    "ar": "يدحض الصحفيون الرصينون الادعاءات الفضائحية ويحذرون من التقارير المنحازة في المصادر غير المدققة.",
+    "de": "Seriöse Journalisten widerlegen reißerische Behauptungen und warnen vor tendenziösen Berichten in ungeprüften Online-Quellen. Auch Nachrichtensendungen und Talkshows sollten ihre Quellenangaben offenlegen, damit sich Aussagen überprüfen lassen; eine reißerische Titelseite eines Boulevardblatts ersetzt keine Medienkompetenz.",
+    "ar": "يفنّد الصحفيون المهنيون الادعاءات المثيرة ويحذّرون من التقارير المتحيزة في المصادر الإلكترونية غير المتحقق منها. وينبغي لنشرات الأخبار والحوارات التلفزيونية أيضاً الإفصاح عن مصادرها كي يتسنى التحقق من التصريحات؛ فالصفحة الأولى الصاخبة لصحيفة شعبية لا تغني عن الثقافة الإعلامية.",
     "tags": [
       "medien",
       "beruf"
@@ -3891,7 +3902,13 @@
     "waisen": [
       "widerlegen",
       "reißerisch",
-      "tendenziös"
+      "tendenziös",
+      "die Quellenangabe, -n",
+      "die Nachrichtensendung, -en",
+      "die Talkshow, -s",
+      "die Titelseite, -n",
+      "das Boulevardblatt, die Boulevardblätter",
+      "die Medienkompetenz"
     ]
   },
   {
@@ -3945,8 +3962,8 @@
   {
     "id": "s-b2-87",
     "level": "B2",
-    "de": "Auf dem turbulenten Elternabend debattierte die Klassenkonferenz über die gefährdete Versetzung mehrerer Schüler.",
-    "ar": "في لقاء الأولياء المسائي المليء بالنقاشات، تداولت مؤتمر الصف بشأن انتقال عدة تلاميذ المعرّض للخطر.",
+    "de": "Auf dem turbulenten Elternabend debattierte die Klassenkonferenz über die gefährdete Versetzung mehrerer Schülerinnen und Schüler, nachdem eine Klassenarbeit deutliche Lernlücken gezeigt hatte.",
+    "ar": "في اجتماع أولياء الأمور المليء بالنقاش، تداول مجلس الصف خطر عدم انتقال عدة تلاميذ إلى الصف التالي، بعدما كشف اختبار صفي عن فجوات واضحة في التعلم.",
     "tags": [
       "schule",
       "alltag"
@@ -3955,14 +3972,15 @@
     "waisen": [
       "der Elternabend",
       "die Klassenkonferenz",
-      "die Versetzung"
+      "die Versetzung",
+      "die Klassenarbeit, -en"
     ]
   },
   {
     "id": "s-b2-88",
     "level": "B2",
-    "de": "Schon lange vor der Wahl zwischen Leistungskurs und Grundkurs prägt die verbindliche Grundschulempfehlung den schulischen Werdegang.",
-    "ar": "قبل وقت طويل من الاختيار بين المادة المكثفة والمادة الأساسية، تحدد توصية المرحلة الابتدائية المسار الدراسي.",
+    "de": "Die Grundschulempfehlung beeinflusst den schulischen Werdegang, ist aber nicht in jedem Bundesland verbindlich. Am Ende der Schullaufbahn hängt der Schulabschluss vom jeweiligen Schulsystem ab; wer das Abitur anstrebt, kann Inhalte im Leistungskurs vertiefen, die im Grundkurs nur grundlegend behandelt werden.",
+    "ar": "تؤثر توصية المدرسة الابتدائية في المسار الدراسي، لكنها ليست ملزمة في كل ولاية اتحادية. وفي نهاية المسار يتحدد المؤهل المدرسي بحسب النظام التعليمي؛ ويمكن لمن يسعى إلى شهادة الأبيتور تعميق موضوعات في المساق المتقدم تُدرّس بصورة أساسية في المساق العادي.",
     "tags": [
       "schule",
       "bildung"
@@ -3971,7 +3989,10 @@
     "waisen": [
       "der Leistungskurs",
       "der Grundkurs",
-      "die Grundschulempfehlung"
+      "die Grundschulempfehlung",
+      "der Schulabschluss, -schlüsse",
+      "das Schulsystem, -e",
+      "das Abitur"
     ]
   },
   {
@@ -4041,8 +4062,8 @@
   {
     "id": "s-b2-93",
     "level": "B2",
-    "de": "In unserer föderalen Ordnung müssen sowohl der Bundestag als auch der Bundesrat einem neuen Gesetzentwurf zustimmen.",
-    "ar": "في نظامنا الاتحادي، يجب أن يوافق كل من مجلس النواب ومجلس الولايات على مشروع القانون الجديد.",
+    "de": "In unserer föderalen Ordnung verabschiedet der Bundestag Gesetze; bei Zustimmungsgesetzen muss auch der Bundesrat zustimmen, der als Ländervertretung an der Gesetzgebung auf Bundesebene mitwirkt. Nach einer Bundestagswahl bilden Parteien oft eine Koalition; der Bundeskanzler wird vom Bundestag gewählt, während der Bundespräsident von der Bundesversammlung gewählt wird. Im Parlament können Abgeordnete auch die Anliegen politischer Minderheiten einbringen.",
+    "ar": "في نظامنا الاتحادي، يسنّ البوندستاغ القوانين؛ وفي القوانين التي تتطلب موافقة البوندسرات، يجب أن يوافق المجلس أيضاً، إذ يمثّل الولايات على المستوى الاتحادي ويشارك في سنّ القوانين. وبعد انتخابات البوندستاغ، تشكّل الأحزاب ائتلافاً في كثير من الأحيان؛ وينتخب البوندستاغ المستشار الاتحادي، بينما تنتخب الجمعية الاتحادية الرئيس الاتحادي. ويمكن للنواب أيضاً عرض قضايا الأقليات السياسية في البرلمان.",
     "tags": [
       "politik",
       "staat"
@@ -4051,14 +4072,21 @@
     "waisen": [
       "föderal",
       "der Bundestag",
-      "der Bundesrat"
+      "der Bundesrat",
+      "die Ländervertretung",
+      "die Gesetzgebung",
+      "der Bundeskanzler / die Bundeskanzlerin",
+      "der Bundespräsident / die Bundespräsidentin; Plural: die Bundespräsidenten / die Bundespräsidentinnen",
+      "die Koalition, -en",
+      "die Minderheit, -en",
+      "der Abgeordnete / die Abgeordnete; Plural: die Abgeordneten"
     ]
   },
   {
     "id": "s-b2-94",
     "level": "B2",
-    "de": "Staatliche Hilfen wie das Bürgergeld, ein zusätzliches Wohngeld und das monatliche Kindergeld sichern das familiäre Existenzminimum.",
-    "ar": "تؤمّن المساعدات الحكومية مثل بدل المواطن وبدل السكن الإضافي وإعانة الطفل الشهرية الحد الأدنى للمعيشة الأسرية.",
+    "de": "Staatliche Hilfen wie das Bürgergeld, ein zusätzliches Wohngeld und das monatliche Kindergeld sichern das familiäre Existenzminimum. Die Sozialversicherung schützt vor bestimmten Lebensrisiken; bei Arbeitslosigkeit können Ansprüche aus der Arbeitslosenversicherung greifen, während der Mindestlohn und das Steuersystem das verfügbare Einkommen beeinflussen.",
+    "ar": "تسهم مساعدات الدولة، مثل إعانة المواطن وبدل السكن الإضافي وإعانة الطفل الشهرية، في ضمان الحد الأدنى للمعيشة للأسرة. ويحمي التأمين الاجتماعي من مخاطر حياتية معينة؛ فعند التعطل عن العمل قد تنطبق استحقاقات تأمين البطالة، بينما يؤثر الحد الأدنى للأجور والنظام الضريبي في الدخل المتاح.",
     "tags": [
       "soziales",
       "finanzen"
@@ -4067,7 +4095,11 @@
     "waisen": [
       "das Bürgergeld",
       "das Wohngeld",
-      "das Kindergeld"
+      "das Kindergeld",
+      "die Sozialversicherung, -en",
+      "die Arbeitslosigkeit",
+      "der Mindestlohn, -löhne",
+      "das Steuersystem, -e"
     ]
   },
   {
@@ -4603,8 +4635,8 @@
   {
     "id": "s-b2-106",
     "level": "B2",
-    "de": "Eine wehrhafte Demokratie schützt das allgemeine Wahlrecht, garantiert freie Pressefreiheit und verbietet jede gesellschaftliche Diskriminierung.",
-    "ar": "تحمي الديمقراطية القوية حق الاقتراع العام وتضمن حرية الصحافة وتحظر كل تمييز مجتمعي.",
+    "de": "Eine wehrhafte Demokratie schützt das Wahlrecht und die Pressefreiheit und verbietet gesellschaftliche Diskriminierung. Im Verfassungsstaat achtet eine unabhängige Medienaufsicht auf die Einhaltung einschlägiger Regeln; sachliche Berichterstattung kann die Wahlbeteiligung fördern.",
+    "ar": "تحمي الديمقراطية الحصينة حق الانتخاب وحرية الصحافة، وتحظر التمييز المجتمعي. وفي الدولة الدستورية، تراقب جهة مستقلة للإشراف على الإعلام الالتزام بالقواعد ذات الصلة؛ ويمكن للتغطية الصحفية الموضوعية أن تعزز المشاركة في الانتخابات.",
     "tags": [
       "politik",
       "gesellschaft"
@@ -4613,7 +4645,10 @@
     "waisen": [
       "die Pressefreiheit",
       "das Wahlrecht",
-      "die Diskriminierung"
+      "die Diskriminierung",
+      "der Verfassungsstaat",
+      "die Medienaufsicht",
+      "die Wahlbeteiligung"
     ]
   },
   {
@@ -6877,8 +6912,8 @@
   {
     "id": "s-b2-155",
     "level": "B2",
-    "de": "Im modernen Online-Handel entlastet flexible Arbeitszeit die Work-Life-Balance der Mitarbeiter, ohne dass Händler ihre Gutscheine entwerten.",
-    "ar": "في التجارة الإلكترونية الحديثة تخفف ساعات العمل المرنة التوازن بين العمل والحياة للموظفين، دون أن يقوم التجار بإلغاء صلاحية قسائمهم.",
+    "de": "Durch die Globalisierung ist der moderne Online-Handel eng mit dem Welthandel verknüpft; Preissteigerungen auf internationalen Märkten erhöhen die Einkaufskosten. Flexible Arbeitszeiten können zugleich die Work-Life-Balance der Beschäftigten verbessern, ohne dass Händler Gutscheine entwerten.",
+    "ar": "في ظل العولمة، ترتبط التجارة الإلكترونية الحديثة ارتباطاً وثيقاً بالتجارة العالمية؛ وتؤدي الزيادات السعرية في الأسواق الدولية إلى رفع تكاليف الشراء. ويمكن لساعات العمل المرنة أيضاً أن تحسّن التوازن بين العمل والحياة لدى العاملين، دون أن يُبطل التجار صلاحية قسائمهم.",
     "tags": [
       "digital",
       "arbeit"
@@ -6887,7 +6922,10 @@
     "waisen": [
       "der Online-Handel",
       "die Work-Life-Balance",
-      "entwerten"
+      "entwerten",
+      "die Preissteigerung",
+      "der Welthandel",
+      "die Globalisierung"
     ]
   },
   {
@@ -7728,7 +7766,7 @@
       "a0"
     ],
     "de": "A wie Apfel.",
-    "ar": "ألف مثل تفاحة.",
+    "ar": "الحرف A كما في كلمة Apfel (تفاحة).",
     "neu": true,
     "waisen": [
       "A",
@@ -7840,7 +7878,7 @@
   {
     "id": "s-a0-12",
     "de": "A, B, C – das Alphabet habe ich gelernt.",
-    "ar": "أ، ب، ت — تعلّمتُ الأبجدية.",
+    "ar": "A، B، C — تعلّمتُ الأبجدية.",
     "level": "A0",
     "tags": [
       "waisen",
@@ -7880,5 +7918,1165 @@
       "uhrzeit"
     ],
     "neu": true
+  },
+  {
+    "id": "s-a1-63",
+    "level": "A1",
+    "de": "Meine Mutter kocht heute das Mittagessen.",
+    "ar": "أمي تطبخ الغداء اليوم.",
+    "tags": [
+      "familie",
+      "essen"
+    ],
+    "neu": true,
+    "waisen": [
+      "die Mutter",
+      "heute",
+      "das Mittagessen"
+    ]
+  },
+  {
+    "id": "s-a1-64",
+    "level": "A1",
+    "de": "Mein Vater trinkt morgens gern Kaffee.",
+    "ar": "أبي يشرب القهوة صباحاً بسرور.",
+    "tags": [
+      "familie",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "der Vater",
+      "trinken",
+      "der Kaffee"
+    ]
+  },
+  {
+    "id": "s-a1-65",
+    "level": "A1",
+    "de": "Die Kinder spielen nach der Schule Fußball.",
+    "ar": "الأطفال يلعبون كرة القدم بعد المدرسة.",
+    "tags": [
+      "freizeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "das Kind",
+      "die Schule",
+      "der Fußball"
+    ]
+  },
+  {
+    "id": "s-a1-66",
+    "level": "A1",
+    "de": "Ich lerne jeden Abend ein neues Wort.",
+    "ar": "أتعلم كل مساء كلمة جديدة.",
+    "tags": [
+      "alltag",
+      "zeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "lernen",
+      "der Abend",
+      "das Wort"
+    ]
+  },
+  {
+    "id": "s-a1-67",
+    "level": "A1",
+    "de": "Meine Schwester wohnt in einer großen Stadt.",
+    "ar": "أختي تسكن في مدينة كبيرة.",
+    "tags": [
+      "familie",
+      "wohnen"
+    ],
+    "neu": true,
+    "waisen": [
+      "die Schwester",
+      "wohnen",
+      "die Stadt"
+    ]
+  },
+  {
+    "id": "s-a1-68",
+    "level": "A1",
+    "de": "Wir essen am Sonntag Kuchen zu Hause.",
+    "ar": "نأكل الكيك يوم الأحد في البيت.",
+    "tags": [
+      "essen",
+      "familie"
+    ],
+    "neu": true,
+    "waisen": [
+      "essen",
+      "der Kuchen",
+      "das Haus"
+    ]
+  },
+  {
+    "id": "s-a1-69",
+    "level": "A1",
+    "de": "Der Hund will auf dem Sofa schlafen.",
+    "ar": "الكلب يريد النوم على الأريكة.",
+    "tags": [
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "der Hund",
+      "das Sofa",
+      "schlafen"
+    ]
+  },
+  {
+    "id": "s-a1-70",
+    "level": "A1",
+    "de": "Die Katze trinkt frische Milch.",
+    "ar": "القطة تشرب حليباً طازجاً.",
+    "tags": [
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "die Katze",
+      "trinken",
+      "die Milch"
+    ]
+  },
+  {
+    "id": "s-a1-71",
+    "level": "A1",
+    "de": "Ich esse gern Brot vom Bäcker.",
+    "ar": "أحب أكل خبز الفرّان.",
+    "tags": [
+      "essen",
+      "einkaufen"
+    ],
+    "neu": true,
+    "waisen": [
+      "essen",
+      "das Brot",
+      "der Bäcker"
+    ]
+  },
+  {
+    "id": "s-a1-72",
+    "level": "A1",
+    "de": "Mein Bruder kommt morgen nach Hause.",
+    "ar": "أخي يأتي غداً إلى البيت.",
+    "tags": [
+      "familie",
+      "zeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "der Bruder",
+      "kommen",
+      "morgen"
+    ]
+  },
+  {
+    "id": "s-a1-73",
+    "level": "A1",
+    "de": "Ich lerne heute die deutsche Sprache.",
+    "ar": "أتعلم اللغة الألمانية اليوم.",
+    "tags": [
+      "sprache"
+    ],
+    "neu": true,
+    "waisen": [
+      "lernen",
+      "heute",
+      "die Sprache"
+    ]
+  },
+  {
+    "id": "s-a1-74",
+    "level": "A1",
+    "de": "Ich wohne mit meiner Familie in der Stadt.",
+    "ar": "أسكن مع عائلتي في المدينة.",
+    "tags": [
+      "wohnen",
+      "familie"
+    ],
+    "neu": true,
+    "waisen": [
+      "wohnen",
+      "die Familie",
+      "die Stadt"
+    ]
+  },
+  {
+    "id": "s-a1-75",
+    "level": "A1",
+    "de": "Mein Freund lernt heute gern Deutsch.",
+    "ar": "صديقي يتعلم الألمانية اليوم بسرور.",
+    "tags": [
+      "sprache",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "der Freund",
+      "lernen",
+      "heute"
+    ]
+  },
+  {
+    "id": "s-a1-76",
+    "level": "A1",
+    "de": "Ich arbeite von Montag bis Freitag im Büro.",
+    "ar": "أعمل من الاثنين إلى الجمعة في المكتب.",
+    "tags": [
+      "alltag",
+      "zeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "arbeiten",
+      "der Freitag",
+      "das Büro"
+    ]
+  },
+  {
+    "id": "s-a1-77",
+    "level": "A1",
+    "de": "Die Kinder schlafen am Wochenende lange.",
+    "ar": "الأطفال ينامون طويلاً في عطلة الأسبوع.",
+    "tags": [
+      "familie",
+      "zeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "das Kind",
+      "schlafen",
+      "das Wochenende"
+    ]
+  },
+  {
+    "id": "s-a1-78",
+    "level": "A1",
+    "de": "Ich muss morgen früh aufstehen.",
+    "ar": "يجب أن أستيقظ باكراً غداً.",
+    "tags": [
+      "alltag",
+      "zeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "aufstehen",
+      "früh",
+      "morgen"
+    ]
+  },
+  {
+    "id": "s-a1-79",
+    "level": "A1",
+    "de": "Zum Frühstück trinke ich Kaffee mit Milch.",
+    "ar": "على الفطور أشرب القهوة بالحليب.",
+    "tags": [
+      "essen"
+    ],
+    "neu": true,
+    "waisen": [
+      "das Frühstück",
+      "der Kaffee",
+      "die Milch"
+    ]
+  },
+  {
+    "id": "s-a1-80",
+    "level": "A1",
+    "de": "Wir essen heute das Abendessen kalt.",
+    "ar": "نأكل العشاء اليوم بارداً.",
+    "tags": [
+      "essen"
+    ],
+    "neu": true,
+    "waisen": [
+      "essen",
+      "heute",
+      "das Abendessen"
+    ]
+  },
+  {
+    "id": "s-a1-81",
+    "level": "A1",
+    "de": "Ich verstehe diese Frage heute nicht.",
+    "ar": "لا أفهم هذا السؤال اليوم.",
+    "tags": [
+      "sprache",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "verstehen",
+      "die Frage",
+      "heute"
+    ]
+  },
+  {
+    "id": "s-a1-82",
+    "level": "A1",
+    "de": "Kannst du heute bitte Deutsch sprechen?",
+    "ar": "هل يمكنك أن تتكلم الألمانية اليوم من فضلك؟",
+    "tags": [
+      "sprache"
+    ],
+    "neu": true,
+    "waisen": [
+      "bitte",
+      "heute",
+      "sprechen"
+    ]
+  },
+  {
+    "id": "s-a1-83",
+    "level": "A1",
+    "de": "Entschuldigung, ich verstehe dich heute nicht.",
+    "ar": "عذراً، لا أفهمك اليوم.",
+    "tags": [
+      "Gruß",
+      "sprache"
+    ],
+    "neu": true,
+    "waisen": [
+      "die Entschuldigung",
+      "verstehen",
+      "heute"
+    ]
+  },
+  {
+    "id": "s-a1-84",
+    "level": "A1",
+    "de": "Tschüss! Bis morgen früh.",
+    "ar": "وداعاً! إلى صباح الغد.",
+    "tags": [
+      "Gruß",
+      "zeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "tschüss",
+      "morgen",
+      "früh"
+    ]
+  },
+  {
+    "id": "s-a1-85",
+    "level": "A1",
+    "de": "Guten Tag! Ich lerne heute Deutsch.",
+    "ar": "نهارك سعيد! أتعلم الألمانية اليوم.",
+    "tags": [
+      "Gruß",
+      "sprache"
+    ],
+    "neu": true,
+    "waisen": [
+      "Guten Tag",
+      "lernen",
+      "heute"
+    ]
+  },
+  {
+    "id": "s-a1-86",
+    "level": "A1",
+    "de": "Danke, ich trinke heute Tee.",
+    "ar": "شكراً، أشرب الشاي اليوم.",
+    "tags": [
+      "Gruß",
+      "essen"
+    ],
+    "neu": true,
+    "waisen": [
+      "danke",
+      "trinken",
+      "der Tee"
+    ]
+  },
+  {
+    "id": "s-a1-87",
+    "level": "A1",
+    "de": "Trinkst du heute Kaffee mit mir?",
+    "ar": "هل تشرب القهوة معي اليوم؟",
+    "tags": [
+      "essen",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "trinken",
+      "heute",
+      "der Kaffee"
+    ]
+  },
+  {
+    "id": "s-a1-88",
+    "level": "A1",
+    "de": "Mein Kind trinkt gern Wasser.",
+    "ar": "طفلي يشرب الماء بسرور.",
+    "tags": [
+      "familie",
+      "essen"
+    ],
+    "neu": true,
+    "waisen": [
+      "das Kind",
+      "trinken",
+      "das Wasser"
+    ]
+  },
+  {
+    "id": "s-a1-89",
+    "level": "A1",
+    "de": "Ich esse heute einen Apfel.",
+    "ar": "آكل تفاحة اليوم.",
+    "tags": [
+      "essen"
+    ],
+    "neu": true,
+    "waisen": [
+      "essen",
+      "heute",
+      "der Apfel"
+    ]
+  },
+  {
+    "id": "s-a1-90",
+    "level": "A1",
+    "de": "Ich esse Brot mit Butter.",
+    "ar": "آكل الخبز بالزبدة.",
+    "tags": [
+      "essen"
+    ],
+    "neu": true,
+    "waisen": [
+      "essen",
+      "das Brot",
+      "die Butter"
+    ]
+  },
+  {
+    "id": "s-a1-91",
+    "level": "A1",
+    "de": "Die Milch kommt aus dem Kühlschrank.",
+    "ar": "الحليب يأتي من الثلاجة.",
+    "tags": [
+      "essen",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "die Milch",
+      "kommen",
+      "der Kühlschrank"
+    ]
+  },
+  {
+    "id": "s-a1-92",
+    "level": "A1",
+    "de": "Der Zucker und die Milch stehen auf dem Tisch.",
+    "ar": "السكر والحليب على الطاولة.",
+    "tags": [
+      "essen"
+    ],
+    "neu": true,
+    "waisen": [
+      "der Zucker",
+      "die Milch",
+      "der Tisch"
+    ]
+  },
+  {
+    "id": "s-a1-93",
+    "level": "A1",
+    "de": "Ich schlafe heute in meinem Zimmer.",
+    "ar": "أنام اليوم في غرفتي.",
+    "tags": [
+      "wohnen",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "schlafen",
+      "heute",
+      "das Zimmer"
+    ]
+  },
+  {
+    "id": "s-a1-94",
+    "level": "A1",
+    "de": "Meine Mutter ist heute in der Küche.",
+    "ar": "أمي اليوم في المطبخ.",
+    "tags": [
+      "familie",
+      "wohnen"
+    ],
+    "neu": true,
+    "waisen": [
+      "die Mutter",
+      "heute",
+      "die Küche"
+    ]
+  },
+  {
+    "id": "s-a1-95",
+    "level": "A1",
+    "de": "Ich bin heute noch im Badezimmer.",
+    "ar": "ما زلت في الحمام اليوم.",
+    "tags": [
+      "wohnen",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "heute",
+      "noch",
+      "das Badezimmer"
+    ]
+  },
+  {
+    "id": "s-a1-96",
+    "level": "A1",
+    "de": "Ich mache heute das Fenster auf.",
+    "ar": "أفتح النافذة اليوم.",
+    "tags": [
+      "wohnen",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "machen",
+      "heute",
+      "das Fenster"
+    ]
+  },
+  {
+    "id": "s-a1-97",
+    "level": "A1",
+    "de": "Der Bus kommt heute spät.",
+    "ar": "الحافلة تأتي اليوم متأخرة.",
+    "tags": [
+      "alltag",
+      "zeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "der Bus",
+      "kommen",
+      "heute"
+    ]
+  },
+  {
+    "id": "s-a1-98",
+    "level": "A1",
+    "de": "Ich bezahle heute mit der Karte.",
+    "ar": "أدفع اليوم بالبطاقة.",
+    "tags": [
+      "einkaufen"
+    ],
+    "neu": true,
+    "waisen": [
+      "bezahlen",
+      "heute",
+      "die Karte"
+    ]
+  },
+  {
+    "id": "s-a1-99",
+    "level": "A1",
+    "de": "Das Geld kommt heute von der Bank.",
+    "ar": "المال يأتي اليوم من البنك.",
+    "tags": [
+      "einkaufen",
+      "alltag"
+    ],
+    "neu": true,
+    "waisen": [
+      "das Geld",
+      "kommen",
+      "heute"
+    ]
+  },
+  {
+    "id": "s-a1-100",
+    "level": "A1",
+    "de": "Meine Familie ist heute auf dem Foto.",
+    "ar": "عائلتي اليوم في الصورة.",
+    "tags": [
+      "familie",
+      "freizeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "die Familie",
+      "heute",
+      "das Foto"
+    ]
+  },
+  {
+    "id": "s-a1-101",
+    "level": "A1",
+    "de": "Das Kind ist heute im Garten.",
+    "ar": "الطفل اليوم في الحديقة.",
+    "tags": [
+      "familie",
+      "freizeit"
+    ],
+    "neu": true,
+    "waisen": [
+      "das Kind",
+      "heute",
+      "der Garten"
+    ]
+  },
+  {
+    "id": "s-a1-102",
+    "level": "A1",
+    "de": "Mein Großvater wohnt bei meinem Vater.",
+    "ar": "جدي يسكن عند أبي.",
+    "tags": [
+      "familie",
+      "wohnen"
+    ],
+    "neu": true,
+    "waisen": [
+      "der Großvater",
+      "wohnen",
+      "der Vater"
+    ]
+  },
+  {
+    "id": "s-a0-16",
+    "level": "A0",
+    "de": "Hallo! Wie geht es dir?",
+    "ar": "مرحباً! كيف حالك؟",
+    "tags": [
+      "begrüßung"
+    ]
+  },
+  {
+    "id": "s-a0-17",
+    "level": "A0",
+    "de": "Danke, es geht mir gut.",
+    "ar": "شكراً، أنا بخير.",
+    "tags": [
+      "begrüßung"
+    ]
+  },
+  {
+    "id": "s-a0-18",
+    "level": "A0",
+    "de": "Entschuldigung, wo ist die Toilette?",
+    "ar": "عفواً، أين دورة المياه؟",
+    "tags": [
+      "fragen",
+      "ort"
+    ]
+  },
+  {
+    "id": "s-a0-19",
+    "level": "A0",
+    "de": "Ich verstehe nicht. Langsamer bitte!",
+    "ar": "لا أفهم. أبطأ من فضلك!",
+    "tags": [
+      "kommunikation"
+    ]
+  },
+  {
+    "id": "s-a0-20",
+    "level": "A0",
+    "de": "Wie bitte? Können Sie das wiederholen?",
+    "ar": "عفواً؟ هل يمكنك إعادة ذلك؟",
+    "tags": [
+      "kommunikation"
+    ]
+  },
+  {
+    "id": "s-a0-21",
+    "level": "A0",
+    "de": "Ich habe Hunger und Durst.",
+    "ar": "أنا جائع وعطشان.",
+    "tags": [
+      "bedürfnisse"
+    ]
+  },
+  {
+    "id": "s-a0-22",
+    "level": "A0",
+    "de": "Wie viel kostet das?",
+    "ar": "كم يكلف هذا؟",
+    "tags": [
+      "einkauf"
+    ]
+  },
+  {
+    "id": "s-a0-23",
+    "level": "A0",
+    "de": "Ich möchte bitte einen Kaffee.",
+    "ar": "أريد قهوة من فضلك.",
+    "tags": [
+      "bestellen"
+    ]
+  },
+  {
+    "id": "s-a0-24",
+    "level": "A0",
+    "de": "Wo wohnst du?",
+    "ar": "أين تسكن؟",
+    "tags": [
+      "wohnen",
+      "fragen"
+    ]
+  },
+  {
+    "id": "s-a0-25",
+    "level": "A0",
+    "de": "Ich wohne in Berlin.",
+    "ar": "أسكن في برلين.",
+    "tags": [
+      "wohnen"
+    ]
+  },
+  {
+    "id": "s-a0-26",
+    "level": "A0",
+    "de": "Welche Sprachen sprichst du?",
+    "ar": "أي لغات تتكلم؟",
+    "tags": [
+      "sprachen",
+      "fragen"
+    ]
+  },
+  {
+    "id": "s-a0-27",
+    "level": "A0",
+    "de": "Ich spreche Deutsch und ein bisschen Französisch.",
+    "ar": "أتحدث الألمانية وقليلاً من الفرنسية.",
+    "tags": [
+      "sprachen"
+    ]
+  },
+  {
+    "id": "s-a0-28",
+    "level": "A0",
+    "de": "Heute ist Montag.",
+    "ar": "اليوم هو الاثنين.",
+    "tags": [
+      "tage"
+    ]
+  },
+  {
+    "id": "s-a0-29",
+    "level": "A0",
+    "de": "Morgen habe ich Deutschunterricht.",
+    "ar": "غداً لدي درس ألمانية.",
+    "tags": [
+      "lernen"
+    ]
+  },
+  {
+    "id": "s-a0-30",
+    "level": "A0",
+    "de": "Auf Wiedersehen und einen schönen Tag!",
+    "ar": "إلى اللقاء ويوماً سعيداً!",
+    "tags": [
+      "verabschiedung"
+    ]
+  },
+  {
+    "id": "s-b1-200",
+    "level": "B1",
+    "de": "Das ist mir egal.",
+    "ar": "هذا لا يهمني (عامّي).",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b1-201",
+    "level": "B1",
+    "de": "Keine Sorge, das schaffen wir!",
+    "ar": "لا تقلق، سننجز ذلك!",
+    "tags": [
+      "umgang",
+      "ermutigung"
+    ]
+  },
+  {
+    "id": "s-b1-202",
+    "level": "B1",
+    "de": "Das kannst du laut sagen!",
+    "ar": "يمكنك قول ذلك بصوت عالٍ (أي: أنا أتفق تماماً).",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b1-203",
+    "level": "B1",
+    "de": "Ich glaube, ich spinne!",
+    "ar": "أظنني أُجنّ! (للتعبير عن الذهول).",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b1-204",
+    "level": "B1",
+    "de": "Mensch, das habe ich total vergessen!",
+    "ar": "يا إلهي، لقد نسيت ذلك تماماً!",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b1-205",
+    "level": "B1",
+    "de": "Na also, geht doch!",
+    "ar": "هيا بنا، يُحَلُّ الأمر! (عند إصلاح مشكلة).",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b1-206",
+    "level": "B1",
+    "de": "Schauen wir mal!",
+    "ar": "لنرَ!",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b1-207",
+    "level": "B1",
+    "de": "Da kann man nichts machen.",
+    "ar": "لا يمكن فعل شيء حيال ذلك.",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b1-208",
+    "level": "B1",
+    "de": "Ich habe die Nase voll.",
+    "ar": "لقد طفح بي الكيل.",
+    "tags": [
+      "umgang",
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b1-209",
+    "level": "B1",
+    "de": "Das ist doch kein Weltuntergang.",
+    "ar": "هذه ليست نهاية العالم.",
+    "tags": [
+      "umgang",
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b1-210",
+    "level": "B1",
+    "de": "Kopf hoch!",
+    "ar": "ارفع رأسك! (تشجيع).",
+    "tags": [
+      "umgang",
+      "ermutigung"
+    ]
+  },
+  {
+    "id": "s-b1-211",
+    "level": "B1",
+    "de": "Es ist höchste Eisenbahn.",
+    "ar": "حان الوقت تماماً (لم يعد هناك وقت).",
+    "tags": [
+      "umgang",
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-200",
+    "level": "B2",
+    "de": "Das ist weder Fisch noch Fleisch.",
+    "ar": "لا سمك ولا لحم (لا هو هذا ولا ذاك).",
+    "tags": [
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-201",
+    "level": "B2",
+    "de": "Ich bin fix und fertig.",
+    "ar": "أنا مُنهَك تماماً.",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b2-202",
+    "level": "B2",
+    "de": "Na klar, kein Problem!",
+    "ar": "طبعاً، لا مشكلة!",
+    "tags": [
+      "umgang"
+    ]
+  },
+  {
+    "id": "s-b2-203",
+    "level": "B2",
+    "de": "Das schlägt dem Fass den Boden aus!",
+    "ar": "هذا يُفجّر البرميل (تجاوز كل الحدود).",
+    "tags": [
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-204",
+    "level": "B2",
+    "de": "Das ist ein Katzensprung.",
+    "ar": "على قفزة قطة (مسافة قصيرة جداً).",
+    "tags": [
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-205",
+    "level": "B2",
+    "de": "Tomaten auf den Augen haben.",
+    "ar": "أن يكون لديك طماطم على عينيك (لا ترى الواضح).",
+    "tags": [
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-206",
+    "level": "B2",
+    "de": "Da liegt der Hase im Pfeffer.",
+    "ar": "هنا يكمن الأرنب في الفلفل (هنا بيت القصيد/المشكلة).",
+    "tags": [
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-207",
+    "level": "B2",
+    "de": "Das ist nicht mein Bier.",
+    "ar": "هذا ليس شأني/ليست بيرتي.",
+    "tags": [
+      "umgang",
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-208",
+    "level": "B2",
+    "de": "Hals- und Beinbruch!",
+    "ar": "كسراً للعنق والرجل (كناية بالتوفيق قبل مهمة/امتحان).",
+    "tags": [
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-209",
+    "level": "B2",
+    "de": "Ich drücke dir die Daumen!",
+    "ar": "أعصر إبهامي لك (أتمنى لك الحظ).",
+    "tags": [
+      "redewendung"
+    ]
+  },
+  {
+    "id": "s-b2-210",
+    "level": "B2",
+    "de": "Jetzt mal Butter bei die Fische!",
+    "ar": "الآن نضع الزبد على السمك (لنتكلم بصراحة/بجد).",
+    "tags": [
+      "redewendung"
+    ]
+  },
+  {
+    "id": "sat-a0-031",
+    "level": "A0",
+    "de": "Was kostet der Kaffee?",
+    "ar": "كم سعر القهوة؟"
+  },
+  {
+    "id": "sat-a0-032",
+    "level": "A0",
+    "de": "Ich hätte gerne ein Wasser, bitte.",
+    "ar": "أريد ماءً من فضلك."
+  },
+  {
+    "id": "sat-a0-033",
+    "level": "A0",
+    "de": "Das schmeckt gut.",
+    "ar": "هذا لذيذ."
+  },
+  {
+    "id": "sat-a0-034",
+    "level": "A0",
+    "de": "Wo ist die Toilette?",
+    "ar": "أين الحمام؟"
+  },
+  {
+    "id": "sat-a0-035",
+    "level": "A0",
+    "de": "Ich verstehe nicht.",
+    "ar": "لا أفهم."
+  },
+  {
+    "id": "sat-a0-036",
+    "level": "A0",
+    "de": "Sprechen Sie bitte langsamer.",
+    "ar": "تكلم ببطء من فضلك."
+  },
+  {
+    "id": "sat-a0-037",
+    "level": "A0",
+    "de": "Heute ist das Wetter schön.",
+    "ar": "الجو جميل اليوم."
+  },
+  {
+    "id": "sat-a0-038",
+    "level": "A0",
+    "de": "Ich bin müde.",
+    "ar": "أنا متعب."
+  },
+  {
+    "id": "sat-a0-039",
+    "level": "A0",
+    "de": "Hast du morgen Zeit?",
+    "ar": "هل لديك وقت غداً؟"
+  },
+  {
+    "id": "sat-a0-040",
+    "level": "A0",
+    "de": "Der Kaffee ist zu heiß.",
+    "ar": "القهوة حارة جداً."
+  },
+  {
+    "id": "sat-a0-041",
+    "level": "A0",
+    "de": "Das Buch ist auf dem Tisch.",
+    "ar": "الكتاب على الطاولة."
+  },
+  {
+    "id": "sat-a0-042",
+    "level": "A0",
+    "de": "Meine Schwester wohnt in Hamburg.",
+    "ar": "أختي تسكن في هامبورغ."
+  },
+  {
+    "id": "sat-a0-043",
+    "level": "A0",
+    "de": "Was ist dein Hobby?",
+    "ar": "ما هوايتك؟"
+  },
+  {
+    "id": "sat-a0-044",
+    "level": "A0",
+    "de": "Ich spiele gern Fußball.",
+    "ar": "أحب لعب كرة القدم."
+  },
+  {
+    "id": "sat-a0-045",
+    "level": "A0",
+    "de": "Wie alt bist du?",
+    "ar": "كم عمرك؟"
+  },
+  {
+    "id": "sat-a0-046",
+    "level": "A0",
+    "de": "Der Unterricht beginnt um neun Uhr.",
+    "ar": "يبدأ الدرس الساعة التاسعة."
+  },
+  {
+    "id": "sat-a0-047",
+    "level": "A0",
+    "de": "Ich habe keinen Hunger.",
+    "ar": "لست جائعاً."
+  },
+  {
+    "id": "sat-a0-048",
+    "level": "A0",
+    "de": "Gute Besserung!",
+    "ar": "شفاءً عاجلاً!"
+  },
+  {
+    "id": "sat-a0-049",
+    "level": "A0",
+    "de": "Die Katze schläft auf dem Sofa.",
+    "ar": "القطة نائمة على الكنبة."
+  },
+  {
+    "id": "sat-a0-050",
+    "level": "A0",
+    "de": "Bis morgen!",
+    "ar": "إلى غدٍ!"
+  },
+  {
+    "id": "sat-a1-103",
+    "level": "A1",
+    "de": "Könnten Sie mir bitte helfen?",
+    "ar": "هل يمكنك مساعدتي من فضلك؟"
+  },
+  {
+    "id": "sat-a1-104",
+    "level": "A1",
+    "de": "Ich suche einen Schlüssel.",
+    "ar": "أنا أبحث عن مفتاح."
+  },
+  {
+    "id": "sat-a1-105",
+    "level": "A1",
+    "de": "Das Konzert beginnt um 20 Uhr.",
+    "ar": "تبدأ الحفلة الساعة 20."
+  },
+  {
+    "id": "sat-a1-106",
+    "level": "A1",
+    "de": "Ich habe mein Portemonnaie zu Hause vergessen.",
+    "ar": "نسيت محفظتي في البيت."
+  },
+  {
+    "id": "sat-a1-107",
+    "level": "A1",
+    "de": "Der Unterricht fällt heute aus.",
+    "ar": "الحصة ملغاة اليوم."
+  },
+  {
+    "id": "sat-a2-111",
+    "level": "A2",
+    "de": "Könnten Sie mir bitte das Salz reichen?",
+    "ar": "هل من الممكن أن تناولني الملح؟"
+  },
+  {
+    "id": "sat-a2-112",
+    "level": "A2",
+    "de": "Ich habe mich gestern beim Joggen verletzt.",
+    "ar": "أُصبتُ نفسي أمس أثناء الجري."
+  },
+  {
+    "id": "sat-a2-113",
+    "level": "A2",
+    "de": "Der Bus kommt in fünf Minuten an.",
+    "ar": "تصل الحافلة بعد خمس دقائق."
+  },
+  {
+    "id": "sat-a2-114",
+    "level": "A2",
+    "de": "Ich möchte einen Termin bei Herrn Dr. Schmidt vereinbaren.",
+    "ar": "أودّ حجز موعد لدى الدكتور شميت."
+  },
+  {
+    "id": "sat-a2-115",
+    "level": "A2",
+    "de": "Die Party hat mir viel Spaß gemacht.",
+    "ar": "استمتعت كثيراً في الحفلة."
   }
 ]

@@ -1,0 +1,412 @@
+{
+  "Angst haben": [
+    "sich fürchten",
+    "Angst empfinden",
+    "Bammel haben (umg.)"
+  ],
+  "altmodisch": [
+    "veraltet"
+  ],
+  "anfangen": [
+    "beginnen",
+    "starten",
+    "loslegen (umg.)"
+  ],
+  "antworten": [
+    "beantworten"
+  ],
+  "arbeiten": [
+    "tätig sein",
+    "schaffen",
+    "berufstätig sein"
+  ],
+  "aufhören": [
+    "beenden",
+    "stoppen",
+    "enden",
+    "einstellen"
+  ],
+  "beenden": [
+    "abschließen",
+    "fertigstellen",
+    "zu Ende führen"
+  ],
+  "benutzen": [
+    "verwenden",
+    "nutzen",
+    "gebrauchen",
+    "einsetzen"
+  ],
+  "besuchen": [
+    "aufsuchen"
+  ],
+  "bezahlen": [
+    "begleichen",
+    "zahlen",
+    "entrichten"
+  ],
+  "billig": [
+    "preiswert"
+  ],
+  "danken": [
+    "sich bedanken",
+    "Dank sagen"
+  ],
+  "das Auto": [
+    "der Wagen"
+  ],
+  "das Gehalt": [
+    "der Lohn"
+  ],
+  "das Mittagessen": [
+    "das Mittagsmahl"
+  ],
+  "das Problem": [
+    "die Schwierigkeit"
+  ],
+  "das Wort": [
+    "der Ausdruck"
+  ],
+  "denken": [
+    "glauben",
+    "meinen",
+    "überlegen",
+    "finden"
+  ],
+  "der Brief": [
+    "das Schreiben"
+  ],
+  "der Chef": [
+    "der Vorgesetzte"
+  ],
+  "der Kollege": [
+    "der Mitarbeiter"
+  ],
+  "der Urlaub": [
+    "die Ferien"
+  ],
+  "die Arbeit": [
+    "der Job"
+  ],
+  "die Firma": [
+    "das Unternehmen"
+  ],
+  "die Idee": [
+    "der Gedanke"
+  ],
+  "die Rente": [
+    "die Pension"
+  ],
+  "die Universität": [
+    "die Hochschule"
+  ],
+  "die Wohnung": [
+    "das Appartement"
+  ],
+  "einfach": [
+    "leicht",
+    "unkompliziert",
+    "simpel"
+  ],
+  "erklären": [
+    "erläutern",
+    "darlegen",
+    "verdeutlichen",
+    "begründen"
+  ],
+  "erreichen": [
+    "erzielen",
+    "gelangen zu",
+    "schaffen"
+  ],
+  "erzählen": [
+    "berichten"
+  ],
+  "essen": [
+    "speisen",
+    "verzehren",
+    "zu sich nehmen"
+  ],
+  "falsch": [
+    "inkorrekt"
+  ],
+  "finden": [
+    "entdecken"
+  ],
+  "fragen": [
+    "befragen",
+    "nachfragen",
+    "sich erkundigen nach"
+  ],
+  "freundlich": [
+    "nett",
+    "liebenswürdig",
+    "sympathisch"
+  ],
+  "froh": [
+    "glücklich"
+  ],
+  "gehen": [
+    "laufen",
+    "sich bewegen",
+    "spazieren gehen"
+  ],
+  "gewinnen": [
+    "siegen"
+  ],
+  "glauben": [
+    "meinen"
+  ],
+  "glücklich": [
+    "froh",
+    "zufrieden",
+    "erfreut"
+  ],
+  "groß": [
+    "riesig",
+    "enorm",
+    "gewaltig"
+  ],
+  "gut": [
+    "schön",
+    "toll",
+    "prima",
+    "hervorragend",
+    "ausgezeichnet"
+  ],
+  "hassen": [
+    "verabscheuen",
+    "ablehnen",
+    "nicht leiden können"
+  ],
+  "helfen": [
+    "unterstützen",
+    "beistehen",
+    "Hilfe leisten"
+  ],
+  "holen": [
+    "abholen"
+  ],
+  "höflich": [
+    "zuvorkommend"
+  ],
+  "immer": [
+    "stets"
+  ],
+  "jetzt": [
+    "nun"
+  ],
+  "kaufen": [
+    "erwerben",
+    "erstehen",
+    "anschaffen"
+  ],
+  "klein": [
+    "winzig",
+    "gering"
+  ],
+  "kommen": [
+    "ankommen"
+  ],
+  "kräftig": [
+    "muskulös"
+  ],
+  "langsam": [
+    "allmählich",
+    "gemächlich",
+    "bedächtig"
+  ],
+  "leicht": [
+    "einfach"
+  ],
+  "lesen": [
+    "durchlesen",
+    "studieren",
+    "verschlingen"
+  ],
+  "lieben": [
+    "liebhaben",
+    "mögen",
+    "gernhaben",
+    "verehren"
+  ],
+  "machen": [
+    "tun",
+    "erledigen",
+    "ausführen",
+    "herstellen"
+  ],
+  "modisch": [
+    "modern"
+  ],
+  "mögen": [
+    "gern haben"
+  ],
+  "müde": [
+    "schläfrig"
+  ],
+  "nett": [
+    "freundlich"
+  ],
+  "nie": [
+    "niemals"
+  ],
+  "oft": [
+    "häufig"
+  ],
+  "reisen": [
+    "verreisen"
+  ],
+  "richtig": [
+    "korrekt"
+  ],
+  "sagen": [
+    "mitteilen",
+    "äußern",
+    "erklären",
+    "bemerken",
+    "meinen"
+  ],
+  "sauber": [
+    "rein"
+  ],
+  "schlecht": [
+    "mies",
+    "übel",
+    "schlimm"
+  ],
+  "schmutzig": [
+    "dreckig"
+  ],
+  "schnell": [
+    "rasch",
+    "zügig",
+    "flink"
+  ],
+  "schon": [
+    "bereits"
+  ],
+  "schreiben": [
+    "verfassen",
+    "notieren",
+    "aufschreiben"
+  ],
+  "schwierig": [
+    "schwer",
+    "kompliziert",
+    "anspruchsvoll"
+  ],
+  "schön": [
+    "hübsch",
+    "wunderschön",
+    "attraktiv",
+    "reizvoll"
+  ],
+  "sehen": [
+    "schauen",
+    "erblicken",
+    "betrachten",
+    "beobachten",
+    "wahrnehmen"
+  ],
+  "sparen": [
+    "ansparen"
+  ],
+  "sprechen": [
+    "reden"
+  ],
+  "sterben": [
+    "versterben",
+    "ums Leben kommen",
+    "ableben"
+  ],
+  "teuer": [
+    "kostspielig"
+  ],
+  "traurig": [
+    "betrübt",
+    "bedrückt",
+    "niedergeschlagen"
+  ],
+  "treffen": [
+    "begegnen",
+    "sich treffen",
+    "treffen mit"
+  ],
+  "trinken": [
+    "schlürfen",
+    "genießen"
+  ],
+  "verbessern": [
+    "optimieren",
+    "steigern",
+    "veredeln"
+  ],
+  "verdienen": [
+    "erwerben",
+    "beziehen",
+    "erwirtschaften"
+  ],
+  "verkaufen": [
+    "veräußern",
+    "absetzen",
+    "vertreiben"
+  ],
+  "verstehen": [
+    "begreifen",
+    "kapieren (umg.)",
+    "nachvollziehen"
+  ],
+  "versuchen": [
+    "probieren",
+    "sich bemühen",
+    "anstreben"
+  ],
+  "verändern": [
+    "wandeln",
+    "modifizieren",
+    "umgestalten"
+  ],
+  "vielleicht": [
+    "möglicherweise"
+  ],
+  "vorschlagen": [
+    "anregen",
+    "empfehlen",
+    "unterbreiten"
+  ],
+  "weit": [
+    "entfernt"
+  ],
+  "wichtig": [
+    "bedeutsam",
+    "bedeutend",
+    "wesentlich",
+    "zentral",
+    "relevant"
+  ],
+  "wieder": [
+    "erneut"
+  ],
+  "wissen": [
+    "kennen",
+    "Bescheid wissen",
+    "sich auskennen"
+  ],
+  "wohnen": [
+    "leben",
+    "residieren",
+    "sich aufhalten"
+  ],
+  "wählen": [
+    "auswählen",
+    "aussuchen",
+    "sich entscheiden für"
+  ],
+  "zufrieden": [
+    "befriedigt"
+  ],
+  "zusammen": [
+    "gemeinsam"
+  ]
+}

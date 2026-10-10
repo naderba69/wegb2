@@ -1,1624 +1,1624 @@
 {
- "items": [
-  {
-   "id": "lk-b1-01",
-   "textId": "t-b1-01",
-   "level": "B1",
-   "titleDe": "Handys in der Schule?",
-   "titleAr": "الهواتف في المدرسة؟",
-   "gaps": [
+  "items": [
     {
-     "id": "lk-b1-01-g1",
-     "sent": "Einerseits sind Handys nützlich, weil Schüler schnell Informationen finden.",
-     "blanked": "Einerseits sind Handys nützlich, ____ Schüler schnell Informationen finden.",
-     "answer": "weil"
+      "id": "lk-b1-01",
+      "textId": "t-b1-01",
+      "level": "B1",
+      "titleDe": "Handys in der Schule?",
+      "titleAr": "الهواتف في المدرسة؟",
+      "gaps": [
+        {
+          "id": "lk-b1-01-g1",
+          "sent": "Einerseits sind Handys nützlich, weil Schüler schnell Informationen finden.",
+          "blanked": "Einerseits sind Handys nützlich, ____ Schüler schnell Informationen finden.",
+          "answer": "weil"
+        },
+        {
+          "id": "lk-b1-01-g2",
+          "sent": "Meiner Meinung nach sollten Schulen klare Regeln einführen: Handys ja, aber nur in der Pause.",
+          "blanked": "Meiner Meinung nach ____ Schulen klare Regeln einführen: Handys ja, aber nur in der Pause.",
+          "answer": "sollten"
+        },
+        {
+          "id": "lk-b1-01-g3",
+          "sent": "So können sich alle besser konzentrieren, trotzdem bleibt die digitale Kompetenz erhalten.",
+          "blanked": "So können sich alle besser konzentrieren, ____ bleibt die digitale Kompetenz erhalten.",
+          "answer": "trotzdem"
+        },
+        {
+          "id": "lk-b1-01-g4",
+          "sent": "Einerseits sind Handys nützlich, weil Schüler schnell Informationen finden.",
+          "blanked": "Einerseits sind Handys nützlich, weil Schüler schnell ____ finden.",
+          "answer": "Informationen"
+        },
+        {
+          "id": "lk-b1-01-g5",
+          "sent": "So können sich alle besser konzentrieren, trotzdem bleibt die digitale Kompetenz erhalten.",
+          "blanked": "So können sich alle besser ____, trotzdem bleibt die digitale Kompetenz erhalten.",
+          "answer": "konzentrieren"
+        },
+        {
+          "id": "lk-b1-01-g6",
+          "sent": "Andererseits stören sie oft den Unterricht.",
+          "blanked": "____ stören sie oft den Unterricht.",
+          "answer": "Andererseits"
+        }
+      ]
     },
     {
-     "id": "lk-b1-01-g2",
-     "sent": "Meiner Meinung nach sollten Schulen klare Regeln einführen: Handys ja, aber nur in der Pause.",
-     "blanked": "Meiner Meinung nach ____ Schulen klare Regeln einführen: Handys ja, aber nur in der Pause.",
-     "answer": "sollten"
+      "id": "lk-b1-02",
+      "textId": "t-b1-02",
+      "level": "B1",
+      "titleDe": "Mein Weg nach Deutschland",
+      "titleAr": "طريقي إلى ألمانيا",
+      "gaps": [
+        {
+          "id": "lk-b1-02-g1",
+          "sent": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.",
+          "blanked": "____ ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.",
+          "answer": "Bevor"
+        },
+        {
+          "id": "lk-b1-02-g2",
+          "sent": "Trotzdem war der Anfang schwer: Die Leute sprachen sehr schnell, und ich hatte Angst, Fehler zu machen.",
+          "blanked": "____ war der Anfang schwer: Die Leute sprachen sehr schnell, und ich hatte Angst, Fehler zu machen.",
+          "answer": "Trotzdem"
+        },
+        {
+          "id": "lk-b1-02-g3",
+          "sent": "Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.",
+          "blanked": "Heute bin ich ihm sehr dankbar, denn ohne ihn ____ ich nicht so schnell Fortschritte gemacht.",
+          "answer": "hätte"
+        },
+        {
+          "id": "lk-b1-02-g4",
+          "sent": "Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.",
+          "blanked": "Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell ____ gemacht.",
+          "answer": "Fortschritte"
+        },
+        {
+          "id": "lk-b1-02-g5",
+          "sent": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.",
+          "blanked": "Bevor ich nach ____ gekommen war, hatte ich drei Jahre Deutsch gelernt.",
+          "answer": "Deutschland"
+        },
+        {
+          "id": "lk-b1-02-g6",
+          "sent": "Ein Kollege, der neben mir arbeitete, hat mir sehr geholfen.",
+          "blanked": "Ein Kollege, der neben mir ____, hat mir sehr geholfen.",
+          "answer": "arbeitete"
+        }
+      ]
     },
     {
-     "id": "lk-b1-01-g3",
-     "sent": "So können sich alle besser konzentrieren, trotzdem bleibt die digitale Kompetenz erhalten.",
-     "blanked": "So können sich alle besser konzentrieren, ____ bleibt die digitale Kompetenz erhalten.",
-     "answer": "trotzdem"
+      "id": "lk-b1-03",
+      "textId": "t-b1-03",
+      "level": "B1",
+      "titleDe": "Umwelt und Verkehr",
+      "titleAr": "البيئة والمواصلات",
+      "gaps": [
+        {
+          "id": "lk-b1-03-g1",
+          "sent": "Die Luft in unserer Stadt ist immer schlechter geworden, obwohl die Regierung neue Maßnahmen beschlossen hat.",
+          "blanked": "Die Luft in unserer Stadt ist immer schlechter geworden, ____ die Regierung neue Maßnahmen beschlossen hat.",
+          "answer": "obwohl"
+        },
+        {
+          "id": "lk-b1-03-g2",
+          "sent": "Viele Bürger fordern deshalb mehr Radwege und bessere Busse.",
+          "blanked": "Viele Bürger fordern ____ mehr Radwege und bessere Busse.",
+          "answer": "deshalb"
+        },
+        {
+          "id": "lk-b1-03-g3",
+          "sent": "Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn der Nahverkehr besser wäre.",
+          "blanked": "Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, ____ der Nahverkehr besser wäre.",
+          "answer": "wenn"
+        },
+        {
+          "id": "lk-b1-03-g4",
+          "sent": "Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn der Nahverkehr besser wäre.",
+          "blanked": "Eine Umfrage zeigt: 70 Prozent ____ das Auto stehen lassen, wenn der Nahverkehr besser wäre.",
+          "answer": "würden"
+        },
+        {
+          "id": "lk-b1-03-g5",
+          "sent": "Die Lösung ist also nicht ein einzelnes Projekt, sondern ein Gesamtkonzept, das alle Bereiche verbindet.",
+          "blanked": "Die Lösung ist also nicht ein einzelnes Projekt, ____ ein Gesamtkonzept, das alle Bereiche verbindet.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b1-03-g6",
+          "sent": "Die Lösung ist also nicht ein einzelnes Projekt, sondern ein Gesamtkonzept, das alle Bereiche verbindet.",
+          "blanked": "Die Lösung ist also nicht ein einzelnes Projekt, sondern ein ____, das alle Bereiche verbindet.",
+          "answer": "Gesamtkonzept"
+        }
+      ]
     },
     {
-     "id": "lk-b1-01-g4",
-     "sent": "Einerseits sind Handys nützlich, weil Schüler schnell Informationen finden.",
-     "blanked": "Einerseits sind Handys nützlich, weil Schüler schnell ____ finden.",
-     "answer": "Informationen"
+      "id": "lk-b1-04",
+      "textId": "t-b1-04",
+      "level": "B1",
+      "titleDe": "Ein Brief aus der Heimat",
+      "titleAr": "رسالة من الوطن",
+      "gaps": [
+        {
+          "id": "lk-b1-04-g1",
+          "sent": "Letztes Wochenende war ich im Park und habe Leute kennengelernt, die auch aus Tunesien kommen.",
+          "blanked": "Letztes Wochenende war ich im Park und habe Leute ____, die auch aus Tunesien kommen.",
+          "answer": "kennengelernt"
+        },
+        {
+          "id": "lk-b1-04-g2",
+          "sent": "Letztes Wochenende war ich im Park und habe Leute kennengelernt, die auch aus Tunesien kommen.",
+          "blanked": "Letztes ____ war ich im Park und habe Leute kennengelernt, die auch aus Tunesien kommen.",
+          "answer": "Wochenende"
+        },
+        {
+          "id": "lk-b1-04-g3",
+          "sent": "Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten.",
+          "blanked": "Sie liegt am ____, aber der Weg zur Arbeit dauert nur 20 Minuten.",
+          "answer": "Stadtrand"
+        },
+        {
+          "id": "lk-b1-04-g4",
+          "sent": "Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten.",
+          "blanked": "Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 ____.",
+          "answer": "Minuten"
+        },
+        {
+          "id": "lk-b1-04-g5",
+          "sent": "Ich habe endlich eine Wohnung gefunden, die nicht zu teuer ist.",
+          "blanked": "Ich habe endlich eine Wohnung ____, die nicht zu teuer ist.",
+          "answer": "gefunden"
+        },
+        {
+          "id": "lk-b1-04-g6",
+          "sent": "Ich habe endlich eine Wohnung gefunden, die nicht zu teuer ist.",
+          "blanked": "Ich habe endlich eine ____ gefunden, die nicht zu teuer ist.",
+          "answer": "Wohnung"
+        }
+      ]
     },
     {
-     "id": "lk-b1-01-g5",
-     "sent": "So können sich alle besser konzentrieren, trotzdem bleibt die digitale Kompetenz erhalten.",
-     "blanked": "So können sich alle besser ____, trotzdem bleibt die digitale Kompetenz erhalten.",
-     "answer": "konzentrieren"
+      "id": "lk-b1-05",
+      "textId": "t-b1-05",
+      "level": "B1",
+      "titleDe": "Ratgeber-Kolumne",
+      "titleAr": "عمود النصائح",
+      "gaps": [
+        {
+          "id": "lk-b1-05-g1",
+          "sent": "Ich habe ein Problem: Mein Freund möchte seinen Job kündigen, obwohl er dort gut verdient.",
+          "blanked": "Ich habe ein Problem: Mein Freund möchte seinen Job kündigen, ____ er dort gut verdient.",
+          "answer": "obwohl"
+        },
+        {
+          "id": "lk-b1-05-g2",
+          "sent": "Ich würde Ihnen raten, erst einmal über die Gründe zu sprechen.",
+          "blanked": "Ich ____ Ihnen raten, erst einmal über die Gründe zu sprechen.",
+          "answer": "würde"
+        },
+        {
+          "id": "lk-b1-05-g3",
+          "sent": "Wenn ich an seiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef.",
+          "blanked": "____ ich an seiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef.",
+          "answer": "Wenn"
+        },
+        {
+          "id": "lk-b1-05-g4",
+          "sent": "Wenn ich an seiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef.",
+          "blanked": "Wenn ich an seiner Stelle wäre, ____ ich zuerst ein Gespräch mit dem Chef.",
+          "answer": "hätte"
+        },
+        {
+          "id": "lk-b1-05-g5",
+          "sent": "Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.",
+          "blanked": "Falls er wirklich kündigen möchte, würde ich ____, vorher eine neue Stelle zu suchen.",
+          "answer": "empfehlen"
+        },
+        {
+          "id": "lk-b1-05-g6",
+          "sent": "Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.",
+          "blanked": "Falls er ____ kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.",
+          "answer": "wirklich"
+        }
+      ]
     },
     {
-     "id": "lk-b1-01-g6",
-     "sent": "Andererseits stören sie oft den Unterricht.",
-     "blanked": "____ stören sie oft den Unterricht.",
-     "answer": "Andererseits"
+      "id": "lk-b1-06",
+      "textId": "t-b1-06",
+      "level": "B1",
+      "titleDe": "Eine Stellenanzeige",
+      "titleAr": "إعلان وظيفة",
+      "gaps": [
+        {
+          "id": "lk-b1-06-g1",
+          "sent": "Bewerbungsschluss ist der 30. Juni.",
+          "blanked": "____ ist der 30. Juni.",
+          "answer": "Bewerbungsschluss"
+        },
+        {
+          "id": "lk-b1-06-g2",
+          "sent": "Wir bieten eine Stelle, die viel Verantwortung und eigenständiges Arbeiten ermöglicht.",
+          "blanked": "Wir bieten eine Stelle, die viel Verantwortung und ____ Arbeiten ermöglicht.",
+          "answer": "eigenständiges"
+        },
+        {
+          "id": "lk-b1-06-g3",
+          "sent": "Wir bieten eine Stelle, die viel Verantwortung und eigenständiges Arbeiten ermöglicht.",
+          "blanked": "Wir bieten eine Stelle, die viel ____ und eigenständiges Arbeiten ermöglicht.",
+          "answer": "Verantwortung"
+        },
+        {
+          "id": "lk-b1-06-g4",
+          "sent": "Zu den Aufgaben, die Sie übernehmen, gehören Planung und Kontrolle der Lieferketten.",
+          "blanked": "Zu den Aufgaben, die Sie übernehmen, gehören Planung und Kontrolle der ____.",
+          "answer": "Lieferketten"
+        },
+        {
+          "id": "lk-b1-06-g5",
+          "sent": "Zu den Aufgaben, die Sie übernehmen, gehören Planung und Kontrolle der Lieferketten.",
+          "blanked": "Zu den Aufgaben, die Sie ____, gehören Planung und Kontrolle der Lieferketten.",
+          "answer": "übernehmen"
+        },
+        {
+          "id": "lk-b1-06-g6",
+          "sent": "Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein Anschreiben enthalten.",
+          "blanked": "Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein ____ enthalten.",
+          "answer": "Anschreiben"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-07",
+      "textId": "t-b1-07",
+      "level": "B1",
+      "titleDe": "Ausbildung oder Studium?",
+      "titleAr": "تكوين مهني أم دراسة جامعية؟",
+      "gaps": [
+        {
+          "id": "lk-b1-07-g1",
+          "sent": "Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.",
+          "blanked": "Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent ____ heute eine Ausbildung einem Studium vorziehen.",
+          "answer": "würden"
+        },
+        {
+          "id": "lk-b1-07-g2",
+          "sent": "Trotzdem bleibt das Studium bei denjenigen beliebt, die später forschen wollen.",
+          "blanked": "____ bleibt das Studium bei denjenigen beliebt, die später forschen wollen.",
+          "answer": "Trotzdem"
+        },
+        {
+          "id": "lk-b1-07-g3",
+          "sent": "Experten raten dazu, zuerst Praktika zu machen: Nur so findet man heraus, was zu einem passt.",
+          "blanked": "Experten raten dazu, ____ Praktika zu machen: Nur so findet man heraus, was zu einem passt.",
+          "answer": "zuerst"
+        },
+        {
+          "id": "lk-b1-07-g4",
+          "sent": "Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.",
+          "blanked": "Eine Umfrage unter 500 Jugendlichen zeigt ein ____ Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.",
+          "answer": "überraschendes"
+        },
+        {
+          "id": "lk-b1-07-g5",
+          "sent": "Als Hauptgrund nennen sie die Praxisnähe.",
+          "blanked": "Als ____ nennen sie die Praxisnähe.",
+          "answer": "Hauptgrund"
+        },
+        {
+          "id": "lk-b1-07-g6",
+          "sent": "Als Hauptgrund nennen sie die Praxisnähe.",
+          "blanked": "Als Hauptgrund nennen sie die ____.",
+          "answer": "Praxisnähe"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-08",
+      "textId": "t-b1-08",
+      "level": "B1",
+      "titleDe": "Wohnen in der Stadt",
+      "titleAr": "السكن في المدينة",
+      "gaps": [
+        {
+          "id": "lk-b1-08-g1",
+          "sent": "Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.",
+          "blanked": "Viele junge Leute teilen sich ____ eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.",
+          "answer": "deshalb"
+        },
+        {
+          "id": "lk-b1-08-g2",
+          "sent": "Das hat Vorteile – man ist nicht allein –, aber auch Nachteile: Lärm und wenig Privatsphäre.",
+          "blanked": "Das hat Vorteile – man ist nicht allein –, aber auch Nachteile: Lärm und wenig ____.",
+          "answer": "Privatsphäre"
+        },
+        {
+          "id": "lk-b1-08-g3",
+          "sent": "Das hat Vorteile – man ist nicht allein –, aber auch Nachteile: Lärm und wenig Privatsphäre.",
+          "blanked": "Das hat Vorteile – man ist nicht allein –, aber auch ____: Lärm und wenig Privatsphäre.",
+          "answer": "Nachteile"
+        },
+        {
+          "id": "lk-b1-08-g4",
+          "sent": "Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.",
+          "blanked": "Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind ____.",
+          "answer": "gemeinsam"
+        },
+        {
+          "id": "lk-b1-08-g5",
+          "sent": "Wer ruhig wohnen will, sucht am besten am Stadtrand.",
+          "blanked": "Wer ruhig wohnen will, sucht am besten am ____.",
+          "answer": "Stadtrand"
+        },
+        {
+          "id": "lk-b1-08-g6",
+          "sent": "Wer ruhig wohnen will, sucht am besten am Stadtrand.",
+          "blanked": "Wer ruhig ____ will, sucht am besten am Stadtrand.",
+          "answer": "wohnen"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-09",
+      "textId": "t-b1-09",
+      "level": "B1",
+      "titleDe": "Umwelt im Alltag",
+      "titleAr": "البيئة في الحياة اليومية",
+      "gaps": [
+        {
+          "id": "lk-b1-09-g1",
+          "sent": "Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ausschalten und Müll trennen.",
+          "blanked": "Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ____ und Müll trennen.",
+          "answer": "ausschalten"
+        },
+        {
+          "id": "lk-b1-09-g2",
+          "sent": "Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ausschalten und Müll trennen.",
+          "blanked": "Zum ____ mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ausschalten und Müll trennen.",
+          "answer": "Beispiel"
+        },
+        {
+          "id": "lk-b1-09-g3",
+          "sent": "In Deutschland werden Papier, Glas und Plastik getrennt gesammelt.",
+          "blanked": "In ____ werden Papier, Glas und Plastik getrennt gesammelt.",
+          "answer": "Deutschland"
+        },
+        {
+          "id": "lk-b1-09-g4",
+          "sent": "In Deutschland werden Papier, Glas und Plastik getrennt gesammelt.",
+          "blanked": "In Deutschland werden Papier, Glas und Plastik getrennt ____.",
+          "answer": "gesammelt"
+        },
+        {
+          "id": "lk-b1-09-g5",
+          "sent": "Auch beim Einkaufen hilft eine Stofftasche.",
+          "blanked": "Auch beim Einkaufen hilft eine ____.",
+          "answer": "Stofftasche"
+        },
+        {
+          "id": "lk-b1-09-g6",
+          "sent": "Auch beim Einkaufen hilft eine Stofftasche.",
+          "blanked": "Auch beim ____ hilft eine Stofftasche.",
+          "answer": "Einkaufen"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-10",
+      "textId": "t-b1-10",
+      "level": "B1",
+      "titleDe": "Ein Streit im Büro",
+      "titleAr": "خلافٌ في المكتب",
+      "gaps": [
+        {
+          "id": "lk-b1-10-g1",
+          "sent": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, weil er meine Ideen in der Besprechung als seine ausgegeben hatte.",
+          "blanked": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, ____ er meine Ideen in der Besprechung als seine ausgegeben hatte.",
+          "answer": "weil"
+        },
+        {
+          "id": "lk-b1-10-g2",
+          "sent": "Ich war zuerst so wütend, dass ich am liebsten laut geworden wäre.",
+          "blanked": "Ich war zuerst so wütend, ____ ich am liebsten laut geworden wäre.",
+          "answer": "dass"
+        },
+        {
+          "id": "lk-b1-10-g3",
+          "sent": "Ich war zuerst so wütend, dass ich am liebsten laut geworden wäre.",
+          "blanked": "Ich war ____ so wütend, dass ich am liebsten laut geworden wäre.",
+          "answer": "zuerst"
+        },
+        {
+          "id": "lk-b1-10-g4",
+          "sent": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, weil er meine Ideen in der Besprechung als seine ausgegeben hatte.",
+          "blanked": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, weil er meine Ideen in der ____ als seine ausgegeben hatte.",
+          "answer": "Besprechung"
+        },
+        {
+          "id": "lk-b1-10-g5",
+          "sent": "Stattdessen habe ich ihn ruhig unter vier Augen gefragt, warum er das gemacht hat.",
+          "blanked": "____ habe ich ihn ruhig unter vier Augen gefragt, warum er das gemacht hat.",
+          "answer": "Stattdessen"
+        },
+        {
+          "id": "lk-b1-10-g6",
+          "sent": "Stattdessen habe ich ihn ruhig unter vier Augen gefragt, warum er das gemacht hat.",
+          "blanked": "Stattdessen habe ich ihn ruhig unter vier Augen gefragt, warum er das ____ hat.",
+          "answer": "gemacht"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-11",
+      "textId": "t-b1-11",
+      "level": "B1",
+      "titleDe": "Ehrenamt bei der Tafel",
+      "titleAr": "تطوّعٌ في «مأدبة الطعام»",
+      "gaps": [
+        {
+          "id": "lk-b1-11-g1",
+          "sent": "Seit einem Monat helfe ich jeden Samstag bei der Tafel aus, die Lebensmittel an Bedürftige verteilt.",
+          "blanked": "____ einem Monat helfe ich jeden Samstag bei der Tafel aus, die Lebensmittel an Bedürftige verteilt.",
+          "answer": "Seit"
+        },
+        {
+          "id": "lk-b1-11-g2",
+          "sent": "Inzwischen weiß ich, dass das Gespräch mit den Menschen mindestens genauso wichtig ist.",
+          "blanked": "Inzwischen weiß ich, ____ das Gespräch mit den Menschen mindestens genauso wichtig ist.",
+          "answer": "dass"
+        },
+        {
+          "id": "lk-b1-11-g3",
+          "sent": "Die Arbeit kostet mich keine fünf Stunden, aber sie gibt mir mehr zurück, als ich je erwartet hätte.",
+          "blanked": "Die Arbeit kostet mich keine fünf Stunden, aber sie gibt mir mehr zurück, als ich je erwartet ____.",
+          "answer": "hätte"
+        },
+        {
+          "id": "lk-b1-11-g4",
+          "sent": "Seit einem Monat helfe ich jeden Samstag bei der Tafel aus, die Lebensmittel an Bedürftige verteilt.",
+          "blanked": "Seit einem Monat helfe ich jeden Samstag bei der Tafel aus, die ____ an Bedürftige verteilt.",
+          "answer": "Lebensmittel"
+        },
+        {
+          "id": "lk-b1-11-g5",
+          "sent": "Anfänglich dachte ich, es gehe nur ums Kisten Schleppen.",
+          "blanked": "____ dachte ich, es gehe nur ums Kisten Schleppen.",
+          "answer": "Anfänglich"
+        },
+        {
+          "id": "lk-b1-11-g6",
+          "sent": "Anfänglich dachte ich, es gehe nur ums Kisten Schleppen.",
+          "blanked": "Anfänglich dachte ich, es gehe nur ums Kisten ____.",
+          "answer": "Schleppen"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-12",
+      "textId": "t-b1-12",
+      "level": "B1",
+      "titleDe": "Vokabeln: App oder Karteikarten?",
+      "titleAr": "مفردات: تطبيقٌ أم بطاقات؟",
+      "gaps": [
+        {
+          "id": "lk-b1-12-g1",
+          "sent": "Entscheidend ist nicht das Werkzeug, sondern dass man regelmäßig wiederholt – ganz egal womit.",
+          "blanked": "Entscheidend ist nicht das Werkzeug, sondern ____ man regelmäßig wiederholt – ganz egal womit.",
+          "answer": "dass"
+        },
+        {
+          "id": "lk-b1-12-g2",
+          "sent": "Entscheidend ist nicht das Werkzeug, sondern dass man regelmäßig wiederholt – ganz egal womit.",
+          "blanked": "Entscheidend ist nicht das Werkzeug, ____ dass man regelmäßig wiederholt – ganz egal womit.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b1-12-g3",
+          "sent": "Mein Kurskollege lernt nur mit einer App, ich schwöre dagegen auf Karteikarten von Hand.",
+          "blanked": "Mein Kurskollege lernt nur mit einer App, ich schwöre dagegen auf ____ von Hand.",
+          "answer": "Karteikarten"
+        },
+        {
+          "id": "lk-b1-12-g4",
+          "sent": "Mein Kurskollege lernt nur mit einer App, ich schwöre dagegen auf Karteikarten von Hand.",
+          "blanked": "Mein ____ lernt nur mit einer App, ich schwöre dagegen auf Karteikarten von Hand.",
+          "answer": "Kurskollege"
+        },
+        {
+          "id": "lk-b1-12-g5",
+          "sent": "Neulich haben wir nachgemessen: Nach zwei Wochen wussten wir beide gleich viel.",
+          "blanked": "Neulich haben wir ____: Nach zwei Wochen wussten wir beide gleich viel.",
+          "answer": "nachgemessen"
+        },
+        {
+          "id": "lk-b1-12-g6",
+          "sent": "Neulich haben wir nachgemessen: Nach zwei Wochen wussten wir beide gleich viel.",
+          "blanked": "____ haben wir nachgemessen: Nach zwei Wochen wussten wir beide gleich viel.",
+          "answer": "Neulich"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-13",
+      "textId": "t-b1-13",
+      "level": "B1",
+      "titleDe": "Ein Vorstellungsgespräch üben",
+      "titleAr": "تمرينُ مقابلةِ عمل",
+      "gaps": [
+        {
+          "id": "lk-b1-13-g1",
+          "sent": "Bevor ich mich bei der Firma bewarb, habe ich das Vorstellungsgespräch mit meiner Freundin Lena durchgespielt.",
+          "blanked": "____ ich mich bei der Firma bewarb, habe ich das Vorstellungsgespräch mit meiner Freundin Lena durchgespielt.",
+          "answer": "Bevor"
+        },
+        {
+          "id": "lk-b1-13-g2",
+          "sent": "Zuerst war mir das peinlich, doch genau das war der Nutzen.",
+          "blanked": "____ war mir das peinlich, doch genau das war der Nutzen.",
+          "answer": "Zuerst"
+        },
+        {
+          "id": "lk-b1-13-g3",
+          "sent": "Bevor ich mich bei der Firma bewarb, habe ich das Vorstellungsgespräch mit meiner Freundin Lena durchgespielt.",
+          "blanked": "Bevor ich mich bei der Firma bewarb, habe ich das ____ mit meiner Freundin Lena durchgespielt.",
+          "answer": "Vorstellungsgespräch"
+        },
+        {
+          "id": "lk-b1-13-g4",
+          "sent": "Sie stellte absichtlich unangenehme Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen.",
+          "blanked": "Sie stellte ____ unangenehme Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen.",
+          "answer": "absichtlich"
+        },
+        {
+          "id": "lk-b1-13-g5",
+          "sent": "Sie stellte absichtlich unangenehme Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen.",
+          "blanked": "Sie stellte absichtlich ____ Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen.",
+          "answer": "unangenehme"
+        },
+        {
+          "id": "lk-b1-13-g6",
+          "sent": "Im echten Gespräch habe ich dann ruhiger geantwortet als beim ersten Probelauf.",
+          "blanked": "Im echten Gespräch habe ich dann ruhiger ____ als beim ersten Probelauf.",
+          "answer": "geantwortet"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-14",
+      "textId": "t-b1-14",
+      "level": "B1",
+      "titleDe": "Die Bibliothek als Lernort",
+      "titleAr": "المكتبةُ مطرحًا للدراسة",
+      "gaps": [
+        {
+          "id": "lk-b1-14-g1",
+          "sent": "Zum Lernen gehe ich am liebsten in die Universitätsbibliothek, obwohl der Weg dorthin eine halbe Stunde dauert.",
+          "blanked": "Zum Lernen gehe ich am liebsten in die Universitätsbibliothek, ____ der Weg dorthin eine halbe Stunde dauert.",
+          "answer": "obwohl"
+        },
+        {
+          "id": "lk-b1-14-g2",
+          "sent": "In der Bibliothek dagegen arbeitet es sich konzentriert, weil ringsum alle schweigen und alle dasselbe Ziel haben.",
+          "blanked": "In der Bibliothek dagegen arbeitet es sich konzentriert, ____ ringsum alle schweigen und alle dasselbe Ziel haben.",
+          "answer": "weil"
+        },
+        {
+          "id": "lk-b1-14-g3",
+          "sent": "Seit dem Semesterende bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
+          "blanked": "____ dem Semesterende bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
+          "answer": "Seit"
+        },
+        {
+          "id": "lk-b1-14-g4",
+          "sent": "Zum Lernen gehe ich am liebsten in die Universitätsbibliothek, obwohl der Weg dorthin eine halbe Stunde dauert.",
+          "blanked": "Zum Lernen gehe ich am liebsten in die ____, obwohl der Weg dorthin eine halbe Stunde dauert.",
+          "answer": "Universitätsbibliothek"
+        },
+        {
+          "id": "lk-b1-14-g5",
+          "sent": "In der Bibliothek dagegen arbeitet es sich konzentriert, weil ringsum alle schweigen und alle dasselbe Ziel haben.",
+          "blanked": "In der Bibliothek dagegen arbeitet es sich ____, weil ringsum alle schweigen und alle dasselbe Ziel haben.",
+          "answer": "konzentriert"
+        },
+        {
+          "id": "lk-b1-14-g6",
+          "sent": "Seit dem Semesterende bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
+          "blanked": "Seit dem ____ bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
+          "answer": "Semesterende"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-15",
+      "textId": "t-b1-15",
+      "level": "B1",
+      "titleDe": "Online bestellen oder im Laden kaufen?",
+      "titleAr": "طلبٌ إلكترونيٌّ أم من المتجر؟",
+      "gaps": [
+        {
+          "id": "lk-b1-15-g1",
+          "sent": "Früher habe ich alles im Internet bestellt, weil es bequemer schien.",
+          "blanked": "Früher habe ich alles im Internet bestellt, ____ es bequemer schien.",
+          "answer": "weil"
+        },
+        {
+          "id": "lk-b1-15-g2",
+          "sent": "Bequemlichkeit ist kein Argument – entscheidend ist, was man kauft.",
+          "blanked": "____ ist kein Argument – entscheidend ist, was man kauft.",
+          "answer": "Bequemlichkeit"
+        },
+        {
+          "id": "lk-b1-15-g3",
+          "sent": "Bequemlichkeit ist kein Argument – entscheidend ist, was man kauft.",
+          "blanked": "Bequemlichkeit ist kein Argument – ____ ist, was man kauft.",
+          "answer": "entscheidend"
+        },
+        {
+          "id": "lk-b1-15-g4",
+          "sent": "Nach dem Ärger mit Rücksendungen und falschen Größen habe ich meine Gewohnheit überdacht.",
+          "blanked": "Nach dem Ärger mit ____ und falschen Größen habe ich meine Gewohnheit überdacht.",
+          "answer": "Rücksendungen"
+        },
+        {
+          "id": "lk-b1-15-g5",
+          "sent": "Nach dem Ärger mit Rücksendungen und falschen Größen habe ich meine Gewohnheit überdacht.",
+          "blanked": "Nach dem Ärger mit Rücksendungen und falschen Größen habe ich meine ____ überdacht.",
+          "answer": "Gewohnheit"
+        },
+        {
+          "id": "lk-b1-15-g6",
+          "sent": "Heute kaufe ich Schuhe wieder im Geschäft, denn dort kann ich anprobieren und sofort umtauschen.",
+          "blanked": "Heute kaufe ich Schuhe wieder im Geschäft, denn dort kann ich ____ und sofort umtauschen.",
+          "answer": "anprobieren"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-16",
+      "textId": "t-b1-16",
+      "level": "B1",
+      "titleDe": "Ein Missverständnis",
+      "titleAr": "سوءُ فهم",
+      "gaps": [
+        {
+          "id": "lk-b1-16-g1",
+          "sent": "Missverständnisse dieser Art gehören zum Deutschlernen dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
+          "blanked": "____ dieser Art gehören zum Deutschlernen dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
+          "answer": "Missverständnisse"
+        },
+        {
+          "id": "lk-b1-16-g2",
+          "sent": "Missverständnisse dieser Art gehören zum Deutschlernen dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
+          "blanked": "Missverständnisse dieser Art gehören zum ____ dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
+          "answer": "Deutschlernen"
+        },
+        {
+          "id": "lk-b1-16-g3",
+          "sent": "Als mir meine Nachbarin sagte, ich solle «mal vorbeikommen», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im Schlafanzug beim Frühstück.",
+          "blanked": "Als mir meine Nachbarin sagte, ich solle «mal ____», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im Schlafanzug beim Frühstück.",
+          "answer": "vorbeikommen"
+        },
+        {
+          "id": "lk-b1-16-g4",
+          "sent": "Als mir meine Nachbarin sagte, ich solle «mal vorbeikommen», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im Schlafanzug beim Frühstück.",
+          "blanked": "Als mir meine Nachbarin sagte, ich solle «mal vorbeikommen», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im ____ beim Frühstück.",
+          "answer": "Schlafanzug"
+        },
+        {
+          "id": "lk-b1-16-g5",
+          "sent": "Erst verstand ich die Wendung nicht, doch inzwischen kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine Einladung, kein Termin.",
+          "blanked": "Erst verstand ich die Wendung nicht, doch ____ kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine Einladung, kein Termin.",
+          "answer": "inzwischen"
+        },
+        {
+          "id": "lk-b1-16-g6",
+          "sent": "Erst verstand ich die Wendung nicht, doch inzwischen kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine Einladung, kein Termin.",
+          "blanked": "Erst verstand ich die Wendung nicht, doch inzwischen kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine ____, kein Termin.",
+          "answer": "Einladung"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-17",
+      "textId": "t-b1-17",
+      "level": "B1",
+      "titleDe": "Den Platten selbst geflickt",
+      "titleAr": "إصلاحُ الإطارِ بيدَيَّ",
+      "gaps": [
+        {
+          "id": "lk-b1-17-g1",
+          "sent": "Statt zwanzig Euro für die Werkstatt zu zahlen, erinnerte ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat.",
+          "blanked": "Statt zwanzig Euro für die ____ zu zahlen, erinnerte ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat.",
+          "answer": "Werkstatt"
+        },
+        {
+          "id": "lk-b1-17-g2",
+          "sent": "Statt zwanzig Euro für die Werkstatt zu zahlen, erinnerte ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat.",
+          "blanked": "Statt zwanzig Euro für die Werkstatt zu zahlen, ____ ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat.",
+          "answer": "erinnerte"
+        },
+        {
+          "id": "lk-b1-17-g3",
+          "sent": "Zu Hause holte ich die Hebel, den Flicken und die Luftpumpe hervor und legte los.",
+          "blanked": "Zu Hause holte ich die Hebel, den Flicken und die ____ hervor und legte los.",
+          "answer": "Luftpumpe"
+        },
+        {
+          "id": "lk-b1-17-g4",
+          "sent": "Zu Hause holte ich die Hebel, den Flicken und die Luftpumpe hervor und legte los.",
+          "blanked": "Zu Hause holte ich die Hebel, den ____ und die Luftpumpe hervor und legte los.",
+          "answer": "Flicken"
+        },
+        {
+          "id": "lk-b1-17-g5",
+          "sent": "Es dauerte eine Stunde, schmutzig war es auch – aber als das Rad wieder stand, war der Stolz größer als jede Ersparnis von achtzehn Euro.",
+          "blanked": "Es dauerte eine Stunde, schmutzig war es auch – aber als das Rad wieder stand, war der Stolz größer als jede ____ von achtzehn Euro.",
+          "answer": "Ersparnis"
+        },
+        {
+          "id": "lk-b1-17-g6",
+          "sent": "Es dauerte eine Stunde, schmutzig war es auch – aber als das Rad wieder stand, war der Stolz größer als jede Ersparnis von achtzehn Euro.",
+          "blanked": "Es dauerte eine Stunde, ____ war es auch – aber als das Rad wieder stand, war der Stolz größer als jede Ersparnis von achtzehn Euro.",
+          "answer": "schmutzig"
+        }
+      ]
+    },
+    {
+      "id": "lk-b1-18",
+      "textId": "t-b1-18",
+      "level": "B1",
+      "titleDe": "Schlaflos in der Fremde",
+      "titleAr": "سهرٌ في الغربة",
+      "gaps": [
+        {
+          "id": "lk-b1-18-g1",
+          "sent": "Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im Prüfungsraum auf, dass der gefürchtete Text gar nicht drankam.",
+          "blanked": "Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im Prüfungsraum auf, ____ der gefürchtete Text gar nicht drankam.",
+          "answer": "dass"
+        },
+        {
+          "id": "lk-b1-18-g2",
+          "sent": "Seltsamerweise wurde ich danach müde.",
+          "blanked": "____ wurde ich danach müde.",
+          "answer": "Seltsamerweise"
+        },
+        {
+          "id": "lk-b1-18-g3",
+          "sent": "Seltsamerweise wurde ich danach müde.",
+          "blanked": "Seltsamerweise wurde ich ____ müde.",
+          "answer": "danach"
+        },
+        {
+          "id": "lk-b1-18-g4",
+          "sent": "Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im Prüfungsraum auf, dass der gefürchtete Text gar nicht drankam.",
+          "blanked": "Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im ____ auf, dass der gefürchtete Text gar nicht drankam.",
+          "answer": "Prüfungsraum"
+        },
+        {
+          "id": "lk-b1-18-g5",
+          "sent": "In der Nacht vor meiner B1-Prüfung konnte ich nicht einschlafen.",
+          "blanked": "In der Nacht vor meiner B1-Prüfung konnte ich nicht ____.",
+          "answer": "einschlafen"
+        },
+        {
+          "id": "lk-b1-18-g6",
+          "sent": "In der Nacht vor meiner B1-Prüfung konnte ich nicht einschlafen.",
+          "blanked": "In der Nacht vor meiner B1-Prüfung ____ ich nicht einschlafen.",
+          "answer": "konnte"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-01",
+      "textId": "t-b2-01",
+      "level": "B2",
+      "titleDe": "Die Digitalisierung der Bildung",
+      "titleAr": "رقمنة التعليم",
+      "gaps": [
+        {
+          "id": "lk-b2-01-g1",
+          "sent": "Eine kürzlich veröffentlichte Untersuchung zeigt, dass die von Lehrern begleitete Nutzung die besten Ergebnisse liefert.",
+          "blanked": "Eine kürzlich veröffentlichte Untersuchung zeigt, ____ die von Lehrern begleitete Nutzung die besten Ergebnisse liefert.",
+          "answer": "dass"
+        },
+        {
+          "id": "lk-b2-01-g2",
+          "sent": "Es geht also nicht um Technik um ihrer selbst willen, sondern um nachhaltige Didaktik.",
+          "blanked": "Es geht also nicht um Technik um ihrer selbst willen, ____ um nachhaltige Didaktik.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b2-01-g3",
+          "sent": "Die Digitalisierung spielt in der Bildung eine zentrale Rolle.",
+          "blanked": "Die ____ spielt in der Bildung eine zentrale Rolle.",
+          "answer": "Digitalisierung"
+        },
+        {
+          "id": "lk-b2-01-g4",
+          "sent": "Die Digitalisierung spielt in der Bildung eine zentrale Rolle.",
+          "blanked": "Die Digitalisierung spielt in der Bildung eine ____ Rolle.",
+          "answer": "zentrale"
+        },
+        {
+          "id": "lk-b2-01-g5",
+          "sent": "Eine kürzlich veröffentlichte Untersuchung zeigt, dass die von Lehrern begleitete Nutzung die besten Ergebnisse liefert.",
+          "blanked": "Eine kürzlich ____ Untersuchung zeigt, dass die von Lehrern begleitete Nutzung die besten Ergebnisse liefert.",
+          "answer": "veröffentlichte"
+        },
+        {
+          "id": "lk-b2-01-g6",
+          "sent": "Einerseits ermöglichen neue Medien individuelles Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage.",
+          "blanked": "Einerseits ermöglichen neue Medien ____ Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage.",
+          "answer": "individuelles"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-02",
+      "textId": "t-b2-02",
+      "level": "B2",
+      "titleDe": "Aus der Tageszeitung",
+      "titleAr": "من اليومية",
+      "gaps": [
+        {
+          "id": "lk-b2-02-g1",
+          "sent": "Die Bürgermeisterin der Region sagte jedoch, die Anwohner hätten andere Erfahrungen gemacht.",
+          "blanked": "Die Bürgermeisterin der Region sagte ____, die Anwohner hätten andere Erfahrungen gemacht.",
+          "answer": "jedoch"
+        },
+        {
+          "id": "lk-b2-02-g2",
+          "sent": "Die Bürgermeisterin der Region sagte jedoch, die Anwohner hätten andere Erfahrungen gemacht.",
+          "blanked": "Die Bürgermeisterin der Region sagte jedoch, die Anwohner ____ andere Erfahrungen gemacht.",
+          "answer": "hätten"
+        },
+        {
+          "id": "lk-b2-02-g3",
+          "sent": "Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.",
+          "blanked": "Der ____ hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.",
+          "answer": "Verkehrsminister"
+        },
+        {
+          "id": "lk-b2-02-g4",
+          "sent": "Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.",
+          "blanked": "Der Verkehrsminister hat gestern erklärt, die neue ____ sei pünktlich und zuverlässig.",
+          "answer": "Bahnverbindung"
+        },
+        {
+          "id": "lk-b2-02-g5",
+          "sent": "Die Opposition stellte die Zahlen in Frage und forderte, die Anforderungen an den Betreiber zu erhöhen.",
+          "blanked": "Die Opposition stellte die Zahlen in Frage und forderte, die ____ an den Betreiber zu erhöhen.",
+          "answer": "Anforderungen"
+        },
+        {
+          "id": "lk-b2-02-g6",
+          "sent": "Die Opposition stellte die Zahlen in Frage und forderte, die Anforderungen an den Betreiber zu erhöhen.",
+          "blanked": "Die ____ stellte die Zahlen in Frage und forderte, die Anforderungen an den Betreiber zu erhöhen.",
+          "answer": "Opposition"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-03",
+      "textId": "t-b2-03",
+      "level": "B2",
+      "titleDe": "Klimawandel: Zahlen und Zweifel",
+      "titleAr": "التغيّر المناخي: أرقام وشكوك",
+      "gaps": [
+        {
+          "id": "lk-b2-03-g1",
+          "sent": "Die Auswirkungen des Klimawandels sind kaum noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle.",
+          "blanked": "Die Auswirkungen des Klimawandels sind ____ noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle.",
+          "answer": "kaum"
+        },
+        {
+          "id": "lk-b2-03-g2",
+          "sent": "Dennoch gibt es Stimmen, die angeblich fehlende Daten beklagen.",
+          "blanked": "____ gibt es Stimmen, die angeblich fehlende Daten beklagen.",
+          "answer": "Dennoch"
+        },
+        {
+          "id": "lk-b2-03-g3",
+          "sent": "Wissenschaftlerinnen entgegnen, der Konsens sei breit genug für entschlossenes Handeln.",
+          "blanked": "____ entgegnen, der Konsens sei breit genug für entschlossenes Handeln.",
+          "answer": "Wissenschaftlerinnen"
+        },
+        {
+          "id": "lk-b2-03-g4",
+          "sent": "Wissenschaftlerinnen entgegnen, der Konsens sei breit genug für entschlossenes Handeln.",
+          "blanked": "Wissenschaftlerinnen entgegnen, der Konsens sei breit genug für ____ Handeln.",
+          "answer": "entschlossenes"
+        },
+        {
+          "id": "lk-b2-03-g5",
+          "sent": "Eine in Nature veröffentlichte Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und Temperaturanstieg.",
+          "blanked": "Eine in Nature veröffentlichte Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und ____.",
+          "answer": "Temperaturanstieg"
+        },
+        {
+          "id": "lk-b2-03-g6",
+          "sent": "Eine in Nature veröffentlichte Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und Temperaturanstieg.",
+          "blanked": "Eine in Nature ____ Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und Temperaturanstieg.",
+          "answer": "veröffentlichte"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-04",
+      "textId": "t-b2-04",
+      "level": "B2",
+      "titleDe": "Rezension: ein bemerkenswerter Roman",
+      "titleAr": "مراجعة: رواية تستحق",
+      "gaps": [
+        {
+          "id": "lk-b2-04-g1",
+          "sent": "Wer einen Roman sucht, der nicht nur unterhält, sondern auch zum Denken anregt, liegt mit diesem Buch genau richtig.",
+          "blanked": "Wer einen Roman sucht, der nicht nur unterhält, ____ auch zum Denken anregt, liegt mit diesem Buch genau richtig.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b2-04-g2",
+          "sent": "Die Autorin zeichnet ein Bild der Gesellschaft, das trotz mancher Übertreibung überzeugend wirkt.",
+          "blanked": "Die Autorin zeichnet ein Bild der Gesellschaft, das ____ mancher Übertreibung überzeugend wirkt.",
+          "answer": "trotz"
+        },
+        {
+          "id": "lk-b2-04-g3",
+          "sent": "Zwar ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt der Plot eine enorme Spannung.",
+          "blanked": "____ ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt der Plot eine enorme Spannung.",
+          "answer": "Zwar"
+        },
+        {
+          "id": "lk-b2-04-g4",
+          "sent": "Insgesamt: eine klare Empfehlung für alle, die anspruchsvolle Literatur schätzen.",
+          "blanked": "Insgesamt: eine klare Empfehlung für alle, die ____ Literatur schätzen.",
+          "answer": "anspruchsvolle"
+        },
+        {
+          "id": "lk-b2-04-g5",
+          "sent": "Insgesamt: eine klare Empfehlung für alle, die anspruchsvolle Literatur schätzen.",
+          "blanked": "Insgesamt: eine klare ____ für alle, die anspruchsvolle Literatur schätzen.",
+          "answer": "Empfehlung"
+        },
+        {
+          "id": "lk-b2-04-g6",
+          "sent": "Die Autorin zeichnet ein Bild der Gesellschaft, das trotz mancher Übertreibung überzeugend wirkt.",
+          "blanked": "Die Autorin zeichnet ein Bild der Gesellschaft, das trotz mancher ____ überzeugend wirkt.",
+          "answer": "Übertreibung"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-05",
+      "textId": "t-b2-05",
+      "level": "B2",
+      "titleDe": "Bewerbung und Arbeitsmarkt",
+      "titleAr": "التقديم وسوق العمل",
+      "gaps": [
+        {
+          "id": "lk-b2-05-g1",
+          "sent": "Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.",
+          "blanked": "Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, ____ auch, welche Konsequenzen ihr Handeln hatte.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b2-05-g2",
+          "sent": "Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.",
+          "blanked": "Bewerberinnen ____ im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.",
+          "answer": "sollten"
+        },
+        {
+          "id": "lk-b2-05-g3",
+          "sent": "Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.",
+          "blanked": "Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen ____.",
+          "answer": "Voraussetzungen"
+        },
+        {
+          "id": "lk-b2-05-g4",
+          "sent": "Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.",
+          "blanked": "Wer diese ____ plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.",
+          "answer": "Zusammenhänge"
+        },
+        {
+          "id": "lk-b2-05-g5",
+          "sent": "Die Anforderungen an moderne Berufe sind in den letzten Jahren deutlich gestiegen.",
+          "blanked": "Die ____ an moderne Berufe sind in den letzten Jahren deutlich gestiegen.",
+          "answer": "Anforderungen"
+        },
+        {
+          "id": "lk-b2-05-g6",
+          "sent": "Die Anforderungen an moderne Berufe sind in den letzten Jahren deutlich gestiegen.",
+          "blanked": "Die Anforderungen an moderne Berufe sind in den letzten Jahren deutlich ____.",
+          "answer": "gestiegen"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-06",
+      "textId": "t-b2-06",
+      "level": "B2",
+      "titleDe": "Schlaf und Lernen",
+      "titleAr": "النوم والتعلّم",
+      "gaps": [
+        {
+          "id": "lk-b2-06-g1",
+          "sent": "Die Schlussfolgerung liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, sondern Verbündete.",
+          "blanked": "Die Schlussfolgerung liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, ____ Verbündete.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b2-06-g2",
+          "sent": "Mehrere Studien belegen den Zusammenhang zwischen ausreichendem Schlaf und besseren Prüfungsergebnissen.",
+          "blanked": "Mehrere Studien belegen den Zusammenhang zwischen ausreichendem Schlaf und besseren ____.",
+          "answer": "Prüfungsergebnissen"
+        },
+        {
+          "id": "lk-b2-06-g3",
+          "sent": "Mehrere Studien belegen den Zusammenhang zwischen ausreichendem Schlaf und besseren Prüfungsergebnissen.",
+          "blanked": "Mehrere Studien belegen den Zusammenhang zwischen ____ Schlaf und besseren Prüfungsergebnissen.",
+          "answer": "ausreichendem"
+        },
+        {
+          "id": "lk-b2-06-g4",
+          "sent": "Die Schlussfolgerung liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, sondern Verbündete.",
+          "blanked": "Die ____ liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, sondern Verbündete.",
+          "answer": "Schlussfolgerung"
+        },
+        {
+          "id": "lk-b2-06-g5",
+          "sent": "Die im Schlaf stattfindende Festigung von Erlerntem ist gut erforscht.",
+          "blanked": "Die im Schlaf ____ Festigung von Erlerntem ist gut erforscht.",
+          "answer": "stattfindende"
+        },
+        {
+          "id": "lk-b2-06-g6",
+          "sent": "Die im Schlaf stattfindende Festigung von Erlerntem ist gut erforscht.",
+          "blanked": "Die im Schlaf stattfindende ____ von Erlerntem ist gut erforscht.",
+          "answer": "Festigung"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-07",
+      "textId": "t-b2-07",
+      "level": "B2",
+      "titleDe": "Kommentar: Tempo der Digitalisierung",
+      "titleAr": "تعليق: وتيرة الرقمنة",
+      "gaps": [
+        {
+          "id": "lk-b2-07-g1",
+          "sent": "Alle reden von Tempo, kaum jemand von Richtung.",
+          "blanked": "Alle reden von Tempo, ____ jemand von Richtung.",
+          "answer": "kaum"
+        },
+        {
+          "id": "lk-b2-07-g2",
+          "sent": "Es geht nicht darum, Bremsen zu legen, sondern darum, Ziele zu definieren.",
+          "blanked": "Es geht nicht darum, Bremsen zu legen, ____ darum, Ziele zu definieren.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b2-07-g3",
+          "sent": "Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck.",
+          "blanked": "Die forcierte ____ wird gefeiert, als sei sie Selbstzweck.",
+          "answer": "Digitalisierung"
+        },
+        {
+          "id": "lk-b2-07-g4",
+          "sent": "Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck.",
+          "blanked": "Die forcierte Digitalisierung wird gefeiert, als sei sie ____.",
+          "answer": "Selbstzweck"
+        },
+        {
+          "id": "lk-b2-07-g5",
+          "sent": "Dabei zeigt die Praxis: Wo technische Lösungen ohne pädagogische Konzepte eingeführt werden, bleibt die Wirkung gering.",
+          "blanked": "Dabei zeigt die Praxis: Wo technische Lösungen ohne ____ Konzepte eingeführt werden, bleibt die Wirkung gering.",
+          "answer": "pädagogische"
+        },
+        {
+          "id": "lk-b2-07-g6",
+          "sent": "Dabei zeigt die Praxis: Wo technische Lösungen ohne pädagogische Konzepte eingeführt werden, bleibt die Wirkung gering.",
+          "blanked": "Dabei zeigt die Praxis: Wo ____ Lösungen ohne pädagogische Konzepte eingeführt werden, bleibt die Wirkung gering.",
+          "answer": "technische"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-08",
+      "textId": "t-b2-08",
+      "level": "B2",
+      "titleDe": "Medien und Wahrheit",
+      "titleAr": "الإعلام والحقيقة",
+      "gaps": [
+        {
+          "id": "lk-b2-08-g1",
+          "sent": "Heute erreichen uns Nachrichten in Sekunden – aber nicht jede Information ist wahr.",
+          "blanked": "Heute erreichen uns Nachrichten in Sekunden – aber nicht jede ____ ist wahr.",
+          "answer": "Information"
+        },
+        {
+          "id": "lk-b2-08-g2",
+          "sent": "Heute erreichen uns Nachrichten in Sekunden – aber nicht jede Information ist wahr.",
+          "blanked": "Heute erreichen uns ____ in Sekunden – aber nicht jede Information ist wahr.",
+          "answer": "Nachrichten"
+        },
+        {
+          "id": "lk-b2-08-g3",
+          "sent": "Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.",
+          "blanked": "Wer diese ____ übt, erkennt schneller, was seriös ist und was nur laut ist.",
+          "answer": "Gewohnheit"
+        },
+        {
+          "id": "lk-b2-08-g4",
+          "sent": "Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.",
+          "blanked": "Wer diese Gewohnheit übt, erkennt ____, was seriös ist und was nur laut ist.",
+          "answer": "schneller"
+        },
+        {
+          "id": "lk-b2-08-g5",
+          "sent": "Experten empfehlen, drei Fragen zu stellen: Wer schreibt das?",
+          "blanked": "Experten ____, drei Fragen zu stellen: Wer schreibt das?",
+          "answer": "empfehlen"
+        },
+        {
+          "id": "lk-b2-08-g6",
+          "sent": "Experten empfehlen, drei Fragen zu stellen: Wer schreibt das?",
+          "blanked": "Experten empfehlen, drei Fragen zu stellen: Wer ____ das?",
+          "answer": "schreibt"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-09",
+      "textId": "t-b2-09",
+      "level": "B2",
+      "titleDe": "Lebenslanges Lernen",
+      "titleAr": "التعلّم مدى الحياة",
+      "gaps": [
+        {
+          "id": "lk-b2-09-g1",
+          "sent": "Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.",
+          "blanked": "Bildung ist ____ keine Phase, sondern eine Begleiterin fürs ganze Leben.",
+          "answer": "damit"
+        },
+        {
+          "id": "lk-b2-09-g2",
+          "sent": "Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.",
+          "blanked": "Bildung ist damit keine Phase, ____ eine Begleiterin fürs ganze Leben.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b2-09-g3",
+          "sent": "Wer beruflich erfolgreich bleiben will, muss sich regelmäßig weiterbilden: Kurse, Seminare, Online-Lernen.",
+          "blanked": "Wer beruflich erfolgreich bleiben will, muss sich regelmäßig ____: Kurse, Seminare, Online-Lernen.",
+          "answer": "weiterbilden"
+        },
+        {
+          "id": "lk-b2-09-g4",
+          "sent": "Wer beruflich erfolgreich bleiben will, muss sich regelmäßig weiterbilden: Kurse, Seminare, Online-Lernen.",
+          "blanked": "Wer beruflich ____ bleiben will, muss sich regelmäßig weiterbilden: Kurse, Seminare, Online-Lernen.",
+          "answer": "erfolgreich"
+        },
+        {
+          "id": "lk-b2-09-g5",
+          "sent": "Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.",
+          "blanked": "____ verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.",
+          "answer": "Gleichzeitig"
+        },
+        {
+          "id": "lk-b2-09-g6",
+          "sent": "Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.",
+          "blanked": "Gleichzeitig verbessert das Lernen einer ____ das Gedächtnis im Alter.",
+          "answer": "Fremdsprache"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-10",
+      "textId": "t-b2-10",
+      "level": "B2",
+      "titleDe": "Vier-Tage-Woche: Chance oder Risiko?",
+      "titleAr": "أسبوعٌ بأربعة أيام: فرصةٌ أم مخاطرة؟",
+      "gaps": [
+        {
+          "id": "lk-b2-10-g1",
+          "sent": "Die Debatte um die Vier-Tage-Woche wird hitziger, seit ein britischer Versuch positive Ergebnisse meldete: gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen.",
+          "blanked": "Die Debatte um die Vier-Tage-Woche wird hitziger, ____ ein britischer Versuch positive Ergebnisse meldete: gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen.",
+          "answer": "seit"
+        },
+        {
+          "id": "lk-b2-10-g2",
+          "sent": "Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen.",
+          "blanked": "Kritikerinnen wenden ein, ____ solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen.",
+          "answer": "dass"
+        },
+        {
+          "id": "lk-b2-10-g3",
+          "sent": "Die Debatte um die Vier-Tage-Woche wird hitziger, seit ein britischer Versuch positive Ergebnisse meldete: gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen.",
+          "blanked": "Die Debatte um die Vier-Tage-Woche wird hitziger, seit ein britischer Versuch positive Ergebnisse meldete: ____ Produktivität bei spürbar weniger Burnout-Symptomen.",
+          "answer": "gleichbleibende"
+        },
+        {
+          "id": "lk-b2-10-g4",
+          "sent": "Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen.",
+          "blanked": "Kritikerinnen wenden ein, dass solche Versuche nur für ____ galten und sich nicht auf Fabriken übertragen ließen.",
+          "answer": "Wissensarbeit"
+        },
+        {
+          "id": "lk-b2-10-g5",
+          "sent": "Beides stimmt, und genau darin liegt die Schwierigkeit: Wer über Arbeitszeit spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
+          "blanked": "Beides stimmt, und genau darin liegt die ____: Wer über Arbeitszeit spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
+          "answer": "Schwierigkeit"
+        },
+        {
+          "id": "lk-b2-10-g6",
+          "sent": "Beides stimmt, und genau darin liegt die Schwierigkeit: Wer über Arbeitszeit spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
+          "blanked": "Beides stimmt, und genau darin liegt die Schwierigkeit: Wer über ____ spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
+          "answer": "Arbeitszeit"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-11",
+      "textId": "t-b2-11",
+      "level": "B2",
+      "titleDe": "Grüne Dächer für graue Städte",
+      "titleAr": "أسقفٌ خضراء لمدنٍ رمادية",
+      "gaps": [
+        {
+          "id": "lk-b2-11-g1",
+          "sent": "Wer Stadtklima will, muss daher weniger Appelle drucken als Förderprogramme rechnen.",
+          "blanked": "Wer Stadtklima will, muss ____ weniger Appelle drucken als Förderprogramme rechnen.",
+          "answer": "daher"
+        },
+        {
+          "id": "lk-b2-11-g2",
+          "sent": "Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten und Eigentümerinteressen.",
+          "blanked": "Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten und ____.",
+          "answer": "Eigentümerinteressen"
+        },
+        {
+          "id": "lk-b2-11-g3",
+          "sent": "Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten und Eigentümerinteressen.",
+          "blanked": "Eingeweihte schweigen die Kehrseite nicht tot: Statik, ____ und Eigentümerinteressen.",
+          "answer": "Pflegekosten"
+        },
+        {
+          "id": "lk-b2-11-g4",
+          "sent": "Wer Stadtklima will, muss daher weniger Appelle drucken als Förderprogramme rechnen.",
+          "blanked": "Wer Stadtklima will, muss daher weniger Appelle drucken als ____ rechnen.",
+          "answer": "Förderprogramme"
+        },
+        {
+          "id": "lk-b2-11-g5",
+          "sent": "Stuttgart erprobt es, Kopenhagen verlangt es inzwischen bei Neubauten: die Begrünung von Flachdächern.",
+          "blanked": "Stuttgart erprobt es, Kopenhagen verlangt es inzwischen bei Neubauten: die Begrünung von ____.",
+          "answer": "Flachdächern"
+        },
+        {
+          "id": "lk-b2-11-g6",
+          "sent": "Stuttgart erprobt es, Kopenhagen verlangt es inzwischen bei Neubauten: die Begrünung von Flachdächern.",
+          "blanked": "Stuttgart erprobt es, Kopenhagen verlangt es ____ bei Neubauten: die Begrünung von Flachdächern.",
+          "answer": "inzwischen"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-12",
+      "textId": "t-b2-12",
+      "level": "B2",
+      "titleDe": "Lesen im Zeitalter des Kurzvideos",
+      "titleAr": "القراءةُ في زمنِ المقطعِ القصير",
+      "gaps": [
+        {
+          "id": "lk-b2-12-g1",
+          "sent": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, dass nie so viel gelesen wurde wie heute: Untertitel, Threads, Kommentare.",
+          "blanked": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, ____ nie so viel gelesen wurde wie heute: Untertitel, Threads, Kommentare.",
+          "answer": "dass"
+        },
+        {
+          "id": "lk-b2-12-g2",
+          "sent": "Beobachterinnen widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen verschachtelter Gedanken.",
+          "blanked": "Beobachterinnen widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen ____ Gedanken.",
+          "answer": "verschachtelter"
+        },
+        {
+          "id": "lk-b2-12-g3",
+          "sent": "Beobachterinnen widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen verschachtelter Gedanken.",
+          "blanked": "____ widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen verschachtelter Gedanken.",
+          "answer": "Beobachterinnen"
+        },
+        {
+          "id": "lk-b2-12-g4",
+          "sent": "Beides ist nicht gleich; wer die Debatte ernst nimmt, hört auf, sie als Kulturkampf zu führen.",
+          "blanked": "Beides ist nicht gleich; wer die Debatte ernst nimmt, hört auf, sie als ____ zu führen.",
+          "answer": "Kulturkampf"
+        },
+        {
+          "id": "lk-b2-12-g5",
+          "sent": "Beides ist nicht gleich; wer die Debatte ernst nimmt, hört auf, sie als Kulturkampf zu führen.",
+          "blanked": "Beides ist nicht gleich; wer die ____ ernst nimmt, hört auf, sie als Kulturkampf zu führen.",
+          "answer": "Debatte"
+        },
+        {
+          "id": "lk-b2-12-g6",
+          "sent": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, dass nie so viel gelesen wurde wie heute: Untertitel, Threads, Kommentare.",
+          "blanked": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, dass nie so viel gelesen wurde wie heute: ____, Threads, Kommentare.",
+          "answer": "Untertitel"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-13",
+      "textId": "t-b2-13",
+      "level": "B2",
+      "titleDe": "Soll Studium kostenlos sein?",
+      "titleAr": "أيجبُ أن تكونَ الجامعةُ مجانية؟",
+      "gaps": [
+        {
+          "id": "lk-b2-13-g1",
+          "sent": "Ökonomen aus dem angelsächsischen Raum prophezeien deshalb Überkonsum von Bildung und Unterfinanzierung der Hochschulen.",
+          "blanked": "Ökonomen aus dem angelsächsischen Raum prophezeien ____ Überkonsum von Bildung und Unterfinanzierung der Hochschulen.",
+          "answer": "deshalb"
+        },
+        {
+          "id": "lk-b2-13-g2",
+          "sent": "Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional.",
+          "blanked": "Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit ____.",
+          "answer": "überproportional"
+        },
+        {
+          "id": "lk-b2-13-g3",
+          "sent": "Wer Chancengerechtigkeit will, muss am Verteilungsmechanismus drehen, nicht bloß am Preisschild.",
+          "blanked": "Wer Chancengerechtigkeit will, muss am ____ drehen, nicht bloß am Preisschild.",
+          "answer": "Verteilungsmechanismus"
+        },
+        {
+          "id": "lk-b2-13-g4",
+          "sent": "Wer Chancengerechtigkeit will, muss am Verteilungsmechanismus drehen, nicht bloß am Preisschild.",
+          "blanked": "Wer ____ will, muss am Verteilungsmechanismus drehen, nicht bloß am Preisschild.",
+          "answer": "Chancengerechtigkeit"
+        },
+        {
+          "id": "lk-b2-13-g5",
+          "sent": "Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional.",
+          "blanked": "Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus ____ nutzen die Gebührenfreiheit überproportional.",
+          "answer": "Akademikerhaushalten"
+        },
+        {
+          "id": "lk-b2-13-g6",
+          "sent": "Ökonomen aus dem angelsächsischen Raum prophezeien deshalb Überkonsum von Bildung und Unterfinanzierung der Hochschulen.",
+          "blanked": "Ökonomen aus dem angelsächsischen Raum prophezeien deshalb Überkonsum von Bildung und ____ der Hochschulen.",
+          "answer": "Unterfinanzierung"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-14",
+      "textId": "t-b2-14",
+      "level": "B2",
+      "titleDe": "Lärm: der unterschätzte Risikofaktor",
+      "titleAr": "الضجيج: عاملُ خطرٍ يُستهانُ به",
+      "gaps": [
+        {
+          "id": "lk-b2-14-g1",
+          "sent": "Medizinisch ist das fatal: Die WHO schätzt, dass westeuropäische Dauerbeschallung jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone.",
+          "blanked": "Medizinisch ist das fatal: Die WHO schätzt, ____ westeuropäische Dauerbeschallung jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone.",
+          "answer": "dass"
+        },
+        {
+          "id": "lk-b2-14-g2",
+          "sent": "Wer Stadt plant, misst auch Dezibel: nicht als Anwalt der Ruhe, sondern der Gesundheit.",
+          "blanked": "Wer Stadt plant, misst auch Dezibel: nicht als Anwalt der Ruhe, ____ der Gesundheit.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b2-14-g3",
+          "sent": "Medizinisch ist das fatal: Die WHO schätzt, dass westeuropäische Dauerbeschallung jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone.",
+          "blanked": "Medizinisch ist das fatal: Die WHO schätzt, dass westeuropäische ____ jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone.",
+          "answer": "Dauerbeschallung"
+        },
+        {
+          "id": "lk-b2-14-g4",
+          "sent": "Über Lärm wird geschimpft, als gehöre er zum Stadtleben wie das Wetter.",
+          "blanked": "Über Lärm wird geschimpft, als gehöre er zum ____ wie das Wetter.",
+          "answer": "Stadtleben"
+        },
+        {
+          "id": "lk-b2-14-g5",
+          "sent": "Über Lärm wird geschimpft, als gehöre er zum Stadtleben wie das Wetter.",
+          "blanked": "Über Lärm wird ____, als gehöre er zum Stadtleben wie das Wetter.",
+          "answer": "geschimpft"
+        },
+        {
+          "id": "lk-b2-14-g6",
+          "sent": "Das Paradoxe: Gegen Feinstaub gibt es Grenzwerte und Messnetze, gegen Schall fast nichts – er gehört niemandem, jeder macht ihn.",
+          "blanked": "Das Paradoxe: Gegen Feinstaub gibt es ____ und Messnetze, gegen Schall fast nichts – er gehört niemandem, jeder macht ihn.",
+          "answer": "Grenzwerte"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-15",
+      "textId": "t-b2-15",
+      "level": "B2",
+      "titleDe": "Vom Wert der Fehlerkultur",
+      "titleAr": "من قيمةِ ثقافةِ الخطأ",
+      "gaps": [
+        {
+          "id": "lk-b2-15-g1",
+          "sent": "Dabei zeigt die Forschung Banales: Nicht die Fehlerquote unterscheidet gute von schlechten Teams, sondern was danach passiert – Schweigen oder Melderegister.",
+          "blanked": "Dabei zeigt die Forschung Banales: Nicht die Fehlerquote unterscheidet gute von schlechten Teams, ____ was danach passiert – Schweigen oder Melderegister.",
+          "answer": "sondern"
+        },
+        {
+          "id": "lk-b2-15-g2",
+          "sent": "Das ist der Kern aller Lernorganisation: Transparenz kostet Überwindung, Intransparenz am Ende mehr.",
+          "blanked": "Das ist der Kern aller ____: Transparenz kostet Überwindung, Intransparenz am Ende mehr.",
+          "answer": "Lernorganisation"
+        },
+        {
+          "id": "lk-b2-15-g3",
+          "sent": "Das ist der Kern aller Lernorganisation: Transparenz kostet Überwindung, Intransparenz am Ende mehr.",
+          "blanked": "Das ist der Kern aller Lernorganisation: Transparenz kostet Überwindung, ____ am Ende mehr.",
+          "answer": "Intransparenz"
+        },
+        {
+          "id": "lk-b2-15-g4",
+          "sent": "Amerikanische Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne Gesichtsverlust melden zu dürfen.",
+          "blanked": "Amerikanische Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne ____ melden zu dürfen.",
+          "answer": "Gesichtsverlust"
+        },
+        {
+          "id": "lk-b2-15-g5",
+          "sent": "Amerikanische Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne Gesichtsverlust melden zu dürfen.",
+          "blanked": "____ Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne Gesichtsverlust melden zu dürfen.",
+          "answer": "Amerikanische"
+        },
+        {
+          "id": "lk-b2-15-g6",
+          "sent": "Dabei zeigt die Forschung Banales: Nicht die Fehlerquote unterscheidet gute von schlechten Teams, sondern was danach passiert – Schweigen oder Melderegister.",
+          "blanked": "Dabei zeigt die Forschung Banales: Nicht die Fehlerquote ____ gute von schlechten Teams, sondern was danach passiert – Schweigen oder Melderegister.",
+          "answer": "unterscheidet"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-16",
+      "textId": "t-b2-16",
+      "level": "B2",
+      "titleDe": "Das 49-Euro-Ticket: Erfolg?",
+      "titleAr": "تذكرةُ التاسعةِ والأربعين: نجاح؟",
+      "gaps": [
+        {
+          "id": "lk-b2-16-g1",
+          "sent": "Die Verkaufszahlen sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten verschlechterte sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht.",
+          "blanked": "Die Verkaufszahlen sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten ____ sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht.",
+          "answer": "verschlechterte"
+        },
+        {
+          "id": "lk-b2-16-g2",
+          "sent": "Die Verkaufszahlen sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten verschlechterte sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht.",
+          "blanked": "Die ____ sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten verschlechterte sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht.",
+          "answer": "Verkaufszahlen"
+        },
+        {
+          "id": "lk-b2-16-g3",
+          "sent": "Der Vorwurf der Verbände: Die Politik habe den Nachfrageeffekt unterschätzt.",
+          "blanked": "Der Vorwurf der Verbände: Die Politik habe den ____ unterschätzt.",
+          "answer": "Nachfrageeffekt"
+        },
+        {
+          "id": "lk-b2-16-g4",
+          "sent": "Der Vorwurf der Verbände: Die Politik habe den Nachfrageeffekt unterschätzt.",
+          "blanked": "Der Vorwurf der Verbände: Die Politik habe den Nachfrageeffekt ____.",
+          "answer": "unterschätzt"
+        },
+        {
+          "id": "lk-b2-16-g5",
+          "sent": "Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – Mobilitätswende oder Umverteilung von Platz?",
+          "blanked": "Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – ____ oder Umverteilung von Platz?",
+          "answer": "Mobilitätswende"
+        },
+        {
+          "id": "lk-b2-16-g6",
+          "sent": "Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – Mobilitätswende oder Umverteilung von Platz?",
+          "blanked": "Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – Mobilitätswende oder ____ von Platz?",
+          "answer": "Umverteilung"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-17",
+      "textId": "t-b2-17",
+      "level": "B2",
+      "titleDe": "Reklame im öffentlichen Raum",
+      "titleAr": "إعلانٌ في الفضاءِ العام",
+      "gaps": [
+        {
+          "id": "lk-b2-17-g1",
+          "sent": "Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige seit Jahrzehnten dasselbe Bild – Aufmerksamkeitsdiebstahl ohne Zustimmung.",
+          "blanked": "Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige ____ Jahrzehnten dasselbe Bild – Aufmerksamkeitsdiebstahl ohne Zustimmung.",
+          "answer": "seit"
+        },
+        {
+          "id": "lk-b2-17-g2",
+          "sent": "Ehrlicher wäre der Kompromiss, wenn Städte Werbefläche wie Infrastruktur behandelten: verpachten, limitieren, messen lassen.",
+          "blanked": "Ehrlicher wäre der Kompromiss, ____ Städte Werbefläche wie Infrastruktur behandelten: verpachten, limitieren, messen lassen.",
+          "answer": "wenn"
+        },
+        {
+          "id": "lk-b2-17-g3",
+          "sent": "Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige seit Jahrzehnten dasselbe Bild – Aufmerksamkeitsdiebstahl ohne Zustimmung.",
+          "blanked": "Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige seit Jahrzehnten dasselbe Bild – ____ ohne Zustimmung.",
+          "answer": "Aufmerksamkeitsdiebstahl"
+        },
+        {
+          "id": "lk-b2-17-g4",
+          "sent": "Ehrlicher wäre der Kompromiss, wenn Städte Werbefläche wie Infrastruktur behandelten: verpachten, limitieren, messen lassen.",
+          "blanked": "Ehrlicher wäre der Kompromiss, wenn Städte Werbefläche wie ____ behandelten: verpachten, limitieren, messen lassen.",
+          "answer": "Infrastruktur"
+        },
+        {
+          "id": "lk-b2-17-g5",
+          "sent": "Plakatwände an Haltestellen finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft.",
+          "blanked": "Plakatwände an ____ finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft.",
+          "answer": "Haltestellen"
+        },
+        {
+          "id": "lk-b2-17-g6",
+          "sent": "Plakatwände an Haltestellen finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft.",
+          "blanked": "____ an Haltestellen finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft.",
+          "answer": "Plakatwände"
+        }
+      ]
+    },
+    {
+      "id": "lk-b2-18",
+      "textId": "t-b2-18",
+      "level": "B2",
+      "titleDe": "Warum der Antrag drei Wochen braucht",
+      "titleAr": "لماذا يستغرقُ الطلبُ ثلاثةَ أسابيع",
+      "gaps": [
+        {
+          "id": "lk-b2-18-g1",
+          "sent": "Digitalisierung auf ein altes Verfahren gepflastert, beschleunigt den Postweg, nicht den Vorgang.",
+          "blanked": "____ auf ein altes Verfahren gepflastert, beschleunigt den Postweg, nicht den Vorgang.",
+          "answer": "Digitalisierung"
+        },
+        {
+          "id": "lk-b2-18-g2",
+          "sent": "Digitalisierung auf ein altes Verfahren gepflastert, beschleunigt den Postweg, nicht den Vorgang.",
+          "blanked": "Digitalisierung auf ein altes Verfahren gepflastert, ____ den Postweg, nicht den Vorgang.",
+          "answer": "beschleunigt"
+        },
+        {
+          "id": "lk-b2-18-g3",
+          "sent": "Digitale Verwaltung, so das Versprechen, halbiere die Welt in Klicks statt Fristen.",
+          "blanked": "Digitale Verwaltung, so das ____, halbiere die Welt in Klicks statt Fristen.",
+          "answer": "Versprechen"
+        },
+        {
+          "id": "lk-b2-18-g4",
+          "sent": "Digitale Verwaltung, so das Versprechen, halbiere die Welt in Klicks statt Fristen.",
+          "blanked": "Digitale ____, so das Versprechen, halbiere die Welt in Klicks statt Fristen.",
+          "answer": "Verwaltung"
+        },
+        {
+          "id": "lk-b2-18-g5",
+          "sent": "Wer Fristen ernst nimmt, muss Prozesse erfinden, nicht Formulare scannen.",
+          "blanked": "Wer Fristen ernst nimmt, muss Prozesse erfinden, nicht ____ scannen.",
+          "answer": "Formulare"
+        },
+        {
+          "id": "lk-b2-18-g6",
+          "sent": "Wer Fristen ernst nimmt, muss Prozesse erfinden, nicht Formulare scannen.",
+          "blanked": "Wer Fristen ernst nimmt, muss Prozesse ____, nicht Formulare scannen.",
+          "answer": "erfinden"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "lk-b1-02",
-   "textId": "t-b1-02",
-   "level": "B1",
-   "titleDe": "Mein Weg nach Deutschland",
-   "titleAr": "طريقي إلى ألمانيا",
-   "gaps": [
-    {
-     "id": "lk-b1-02-g1",
-     "sent": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.",
-     "blanked": "____ ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.",
-     "answer": "Bevor"
-    },
-    {
-     "id": "lk-b1-02-g2",
-     "sent": "Trotzdem war der Anfang schwer: Die Leute sprachen sehr schnell, und ich hatte Angst, Fehler zu machen.",
-     "blanked": "____ war der Anfang schwer: Die Leute sprachen sehr schnell, und ich hatte Angst, Fehler zu machen.",
-     "answer": "Trotzdem"
-    },
-    {
-     "id": "lk-b1-02-g3",
-     "sent": "Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.",
-     "blanked": "Heute bin ich ihm sehr dankbar, denn ohne ihn ____ ich nicht so schnell Fortschritte gemacht.",
-     "answer": "hätte"
-    },
-    {
-     "id": "lk-b1-02-g4",
-     "sent": "Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell Fortschritte gemacht.",
-     "blanked": "Heute bin ich ihm sehr dankbar, denn ohne ihn hätte ich nicht so schnell ____ gemacht.",
-     "answer": "Fortschritte"
-    },
-    {
-     "id": "lk-b1-02-g5",
-     "sent": "Bevor ich nach Deutschland gekommen war, hatte ich drei Jahre Deutsch gelernt.",
-     "blanked": "Bevor ich nach ____ gekommen war, hatte ich drei Jahre Deutsch gelernt.",
-     "answer": "Deutschland"
-    },
-    {
-     "id": "lk-b1-02-g6",
-     "sent": "Ein Kollege, der neben mir arbeitete, hat mir sehr geholfen.",
-     "blanked": "Ein Kollege, der neben mir ____, hat mir sehr geholfen.",
-     "answer": "arbeitete"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-03",
-   "textId": "t-b1-03",
-   "level": "B1",
-   "titleDe": "Umwelt und Verkehr",
-   "titleAr": "البيئة والمواصلات",
-   "gaps": [
-    {
-     "id": "lk-b1-03-g1",
-     "sent": "Die Luft in unserer Stadt ist immer schlechter geworden, obwohl die Regierung neue Maßnahmen beschlossen hat.",
-     "blanked": "Die Luft in unserer Stadt ist immer schlechter geworden, ____ die Regierung neue Maßnahmen beschlossen hat.",
-     "answer": "obwohl"
-    },
-    {
-     "id": "lk-b1-03-g2",
-     "sent": "Viele Bürger fordern deshalb mehr Radwege und bessere Busse.",
-     "blanked": "Viele Bürger fordern ____ mehr Radwege und bessere Busse.",
-     "answer": "deshalb"
-    },
-    {
-     "id": "lk-b1-03-g3",
-     "sent": "Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn der Nahverkehr besser wäre.",
-     "blanked": "Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, ____ der Nahverkehr besser wäre.",
-     "answer": "wenn"
-    },
-    {
-     "id": "lk-b1-03-g4",
-     "sent": "Eine Umfrage zeigt: 70 Prozent würden das Auto stehen lassen, wenn der Nahverkehr besser wäre.",
-     "blanked": "Eine Umfrage zeigt: 70 Prozent ____ das Auto stehen lassen, wenn der Nahverkehr besser wäre.",
-     "answer": "würden"
-    },
-    {
-     "id": "lk-b1-03-g5",
-     "sent": "Die Lösung ist also nicht ein einzelnes Projekt, sondern ein Gesamtkonzept, das alle Bereiche verbindet.",
-     "blanked": "Die Lösung ist also nicht ein einzelnes Projekt, ____ ein Gesamtkonzept, das alle Bereiche verbindet.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b1-03-g6",
-     "sent": "Die Lösung ist also nicht ein einzelnes Projekt, sondern ein Gesamtkonzept, das alle Bereiche verbindet.",
-     "blanked": "Die Lösung ist also nicht ein einzelnes Projekt, sondern ein ____, das alle Bereiche verbindet.",
-     "answer": "Gesamtkonzept"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-04",
-   "textId": "t-b1-04",
-   "level": "B1",
-   "titleDe": "Ein Brief aus der Heimat",
-   "titleAr": "رسالة من الوطن",
-   "gaps": [
-    {
-     "id": "lk-b1-04-g1",
-     "sent": "Letztes Wochenende war ich im Park und habe Leute kennengelernt, die auch aus Tunesien kommen.",
-     "blanked": "Letztes Wochenende war ich im Park und habe Leute ____, die auch aus Tunesien kommen.",
-     "answer": "kennengelernt"
-    },
-    {
-     "id": "lk-b1-04-g2",
-     "sent": "Letztes Wochenende war ich im Park und habe Leute kennengelernt, die auch aus Tunesien kommen.",
-     "blanked": "Letztes ____ war ich im Park und habe Leute kennengelernt, die auch aus Tunesien kommen.",
-     "answer": "Wochenende"
-    },
-    {
-     "id": "lk-b1-04-g3",
-     "sent": "Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten.",
-     "blanked": "Sie liegt am ____, aber der Weg zur Arbeit dauert nur 20 Minuten.",
-     "answer": "Stadtrand"
-    },
-    {
-     "id": "lk-b1-04-g4",
-     "sent": "Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 Minuten.",
-     "blanked": "Sie liegt am Stadtrand, aber der Weg zur Arbeit dauert nur 20 ____.",
-     "answer": "Minuten"
-    },
-    {
-     "id": "lk-b1-04-g5",
-     "sent": "Ich habe endlich eine Wohnung gefunden, die nicht zu teuer ist.",
-     "blanked": "Ich habe endlich eine Wohnung ____, die nicht zu teuer ist.",
-     "answer": "gefunden"
-    },
-    {
-     "id": "lk-b1-04-g6",
-     "sent": "Ich habe endlich eine Wohnung gefunden, die nicht zu teuer ist.",
-     "blanked": "Ich habe endlich eine ____ gefunden, die nicht zu teuer ist.",
-     "answer": "Wohnung"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-05",
-   "textId": "t-b1-05",
-   "level": "B1",
-   "titleDe": "Ratgeber-Kolumne",
-   "titleAr": "عمود النصائح",
-   "gaps": [
-    {
-     "id": "lk-b1-05-g1",
-     "sent": "Ich habe ein Problem: Mein Freund möchte seinen Job kündigen, obwohl er dort gut verdient.",
-     "blanked": "Ich habe ein Problem: Mein Freund möchte seinen Job kündigen, ____ er dort gut verdient.",
-     "answer": "obwohl"
-    },
-    {
-     "id": "lk-b1-05-g2",
-     "sent": "Ich würde Ihnen raten, erst einmal über die Gründe zu sprechen.",
-     "blanked": "Ich ____ Ihnen raten, erst einmal über die Gründe zu sprechen.",
-     "answer": "würde"
-    },
-    {
-     "id": "lk-b1-05-g3",
-     "sent": "Wenn ich an seiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef.",
-     "blanked": "____ ich an seiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef.",
-     "answer": "Wenn"
-    },
-    {
-     "id": "lk-b1-05-g4",
-     "sent": "Wenn ich an seiner Stelle wäre, hätte ich zuerst ein Gespräch mit dem Chef.",
-     "blanked": "Wenn ich an seiner Stelle wäre, ____ ich zuerst ein Gespräch mit dem Chef.",
-     "answer": "hätte"
-    },
-    {
-     "id": "lk-b1-05-g5",
-     "sent": "Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.",
-     "blanked": "Falls er wirklich kündigen möchte, würde ich ____, vorher eine neue Stelle zu suchen.",
-     "answer": "empfehlen"
-    },
-    {
-     "id": "lk-b1-05-g6",
-     "sent": "Falls er wirklich kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.",
-     "blanked": "Falls er ____ kündigen möchte, würde ich empfehlen, vorher eine neue Stelle zu suchen.",
-     "answer": "wirklich"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-06",
-   "textId": "t-b1-06",
-   "level": "B1",
-   "titleDe": "Eine Stellenanzeige",
-   "titleAr": "إعلان وظيفة",
-   "gaps": [
-    {
-     "id": "lk-b1-06-g1",
-     "sent": "Bewerbungsschluss ist der 30. Juni.",
-     "blanked": "____ ist der 30. Juni.",
-     "answer": "Bewerbungsschluss"
-    },
-    {
-     "id": "lk-b1-06-g2",
-     "sent": "Wir bieten eine Stelle, die viel Verantwortung und eigenständiges Arbeiten ermöglicht.",
-     "blanked": "Wir bieten eine Stelle, die viel Verantwortung und ____ Arbeiten ermöglicht.",
-     "answer": "eigenständiges"
-    },
-    {
-     "id": "lk-b1-06-g3",
-     "sent": "Wir bieten eine Stelle, die viel Verantwortung und eigenständiges Arbeiten ermöglicht.",
-     "blanked": "Wir bieten eine Stelle, die viel ____ und eigenständiges Arbeiten ermöglicht.",
-     "answer": "Verantwortung"
-    },
-    {
-     "id": "lk-b1-06-g4",
-     "sent": "Zu den Aufgaben, die Sie übernehmen, gehören Planung und Kontrolle der Lieferketten.",
-     "blanked": "Zu den Aufgaben, die Sie übernehmen, gehören Planung und Kontrolle der ____.",
-     "answer": "Lieferketten"
-    },
-    {
-     "id": "lk-b1-06-g5",
-     "sent": "Zu den Aufgaben, die Sie übernehmen, gehören Planung und Kontrolle der Lieferketten.",
-     "blanked": "Zu den Aufgaben, die Sie ____, gehören Planung und Kontrolle der Lieferketten.",
-     "answer": "übernehmen"
-    },
-    {
-     "id": "lk-b1-06-g6",
-     "sent": "Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein Anschreiben enthalten.",
-     "blanked": "Bewerben Sie sich mit Unterlagen, die Ihren Lebenslauf und ein ____ enthalten.",
-     "answer": "Anschreiben"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-07",
-   "textId": "t-b1-07",
-   "level": "B1",
-   "titleDe": "Ausbildung oder Studium?",
-   "titleAr": "تكوين مهني أم دراسة جامعية؟",
-   "gaps": [
-    {
-     "id": "lk-b1-07-g1",
-     "sent": "Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.",
-     "blanked": "Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent ____ heute eine Ausbildung einem Studium vorziehen.",
-     "answer": "würden"
-    },
-    {
-     "id": "lk-b1-07-g2",
-     "sent": "Trotzdem bleibt das Studium bei denjenigen beliebt, die später forschen wollen.",
-     "blanked": "____ bleibt das Studium bei denjenigen beliebt, die später forschen wollen.",
-     "answer": "Trotzdem"
-    },
-    {
-     "id": "lk-b1-07-g3",
-     "sent": "Experten raten dazu, zuerst Praktika zu machen: Nur so findet man heraus, was zu einem passt.",
-     "blanked": "Experten raten dazu, ____ Praktika zu machen: Nur so findet man heraus, was zu einem passt.",
-     "answer": "zuerst"
-    },
-    {
-     "id": "lk-b1-07-g4",
-     "sent": "Eine Umfrage unter 500 Jugendlichen zeigt ein überraschendes Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.",
-     "blanked": "Eine Umfrage unter 500 Jugendlichen zeigt ein ____ Bild: 45 Prozent würden heute eine Ausbildung einem Studium vorziehen.",
-     "answer": "überraschendes"
-    },
-    {
-     "id": "lk-b1-07-g5",
-     "sent": "Als Hauptgrund nennen sie die Praxisnähe.",
-     "blanked": "Als ____ nennen sie die Praxisnähe.",
-     "answer": "Hauptgrund"
-    },
-    {
-     "id": "lk-b1-07-g6",
-     "sent": "Als Hauptgrund nennen sie die Praxisnähe.",
-     "blanked": "Als Hauptgrund nennen sie die ____.",
-     "answer": "Praxisnähe"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-08",
-   "textId": "t-b1-08",
-   "level": "B1",
-   "titleDe": "Wohnen in der Stadt",
-   "titleAr": "السكن في المدينة",
-   "gaps": [
-    {
-     "id": "lk-b1-08-g1",
-     "sent": "Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.",
-     "blanked": "Viele junge Leute teilen sich ____ eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.",
-     "answer": "deshalb"
-    },
-    {
-     "id": "lk-b1-08-g2",
-     "sent": "Das hat Vorteile – man ist nicht allein –, aber auch Nachteile: Lärm und wenig Privatsphäre.",
-     "blanked": "Das hat Vorteile – man ist nicht allein –, aber auch Nachteile: Lärm und wenig ____.",
-     "answer": "Privatsphäre"
-    },
-    {
-     "id": "lk-b1-08-g3",
-     "sent": "Das hat Vorteile – man ist nicht allein –, aber auch Nachteile: Lärm und wenig Privatsphäre.",
-     "blanked": "Das hat Vorteile – man ist nicht allein –, aber auch ____: Lärm und wenig Privatsphäre.",
-     "answer": "Nachteile"
-    },
-    {
-     "id": "lk-b1-08-g4",
-     "sent": "Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind gemeinsam.",
-     "blanked": "Viele junge Leute teilen sich deshalb eine WG: Jeder hat ein eigenes Zimmer, aber Küche und Bad sind ____.",
-     "answer": "gemeinsam"
-    },
-    {
-     "id": "lk-b1-08-g5",
-     "sent": "Wer ruhig wohnen will, sucht am besten am Stadtrand.",
-     "blanked": "Wer ruhig wohnen will, sucht am besten am ____.",
-     "answer": "Stadtrand"
-    },
-    {
-     "id": "lk-b1-08-g6",
-     "sent": "Wer ruhig wohnen will, sucht am besten am Stadtrand.",
-     "blanked": "Wer ruhig ____ will, sucht am besten am Stadtrand.",
-     "answer": "wohnen"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-09",
-   "textId": "t-b1-09",
-   "level": "B1",
-   "titleDe": "Umwelt im Alltag",
-   "titleAr": "البيئة في الحياة اليومية",
-   "gaps": [
-    {
-     "id": "lk-b1-09-g1",
-     "sent": "Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ausschalten und Müll trennen.",
-     "blanked": "Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ____ und Müll trennen.",
-     "answer": "ausschalten"
-    },
-    {
-     "id": "lk-b1-09-g2",
-     "sent": "Zum Beispiel mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ausschalten und Müll trennen.",
-     "blanked": "Zum ____ mit dem Rad zur Arbeit fahren statt mit dem Auto, das Licht ausschalten und Müll trennen.",
-     "answer": "Beispiel"
-    },
-    {
-     "id": "lk-b1-09-g3",
-     "sent": "In Deutschland werden Papier, Glas und Plastik getrennt gesammelt.",
-     "blanked": "In ____ werden Papier, Glas und Plastik getrennt gesammelt.",
-     "answer": "Deutschland"
-    },
-    {
-     "id": "lk-b1-09-g4",
-     "sent": "In Deutschland werden Papier, Glas und Plastik getrennt gesammelt.",
-     "blanked": "In Deutschland werden Papier, Glas und Plastik getrennt ____.",
-     "answer": "gesammelt"
-    },
-    {
-     "id": "lk-b1-09-g5",
-     "sent": "Auch beim Einkaufen hilft eine Stofftasche.",
-     "blanked": "Auch beim Einkaufen hilft eine ____.",
-     "answer": "Stofftasche"
-    },
-    {
-     "id": "lk-b1-09-g6",
-     "sent": "Auch beim Einkaufen hilft eine Stofftasche.",
-     "blanked": "Auch beim ____ hilft eine Stofftasche.",
-     "answer": "Einkaufen"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-10",
-   "textId": "t-b1-10",
-   "level": "B1",
-   "titleDe": "Ein Streit im Büro",
-   "titleAr": "خلافٌ في المكتب",
-   "gaps": [
-    {
-     "id": "lk-b1-10-g1",
-     "sent": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, weil er meine Ideen in der Besprechung als seine ausgegeben hatte.",
-     "blanked": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, ____ er meine Ideen in der Besprechung als seine ausgegeben hatte.",
-     "answer": "weil"
-    },
-    {
-     "id": "lk-b1-10-g2",
-     "sent": "Ich war zuerst so wütend, dass ich am liebsten laut geworden wäre.",
-     "blanked": "Ich war zuerst so wütend, ____ ich am liebsten laut geworden wäre.",
-     "answer": "dass"
-    },
-    {
-     "id": "lk-b1-10-g3",
-     "sent": "Ich war zuerst so wütend, dass ich am liebsten laut geworden wäre.",
-     "blanked": "Ich war ____ so wütend, dass ich am liebsten laut geworden wäre.",
-     "answer": "zuerst"
-    },
-    {
-     "id": "lk-b1-10-g4",
-     "sent": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, weil er meine Ideen in der Besprechung als seine ausgegeben hatte.",
-     "blanked": "Neulich gab es einen Streit zwischen meinem Kollegen Tobias und mir, weil er meine Ideen in der ____ als seine ausgegeben hatte.",
-     "answer": "Besprechung"
-    },
-    {
-     "id": "lk-b1-10-g5",
-     "sent": "Stattdessen habe ich ihn ruhig unter vier Augen gefragt, warum er das gemacht hat.",
-     "blanked": "____ habe ich ihn ruhig unter vier Augen gefragt, warum er das gemacht hat.",
-     "answer": "Stattdessen"
-    },
-    {
-     "id": "lk-b1-10-g6",
-     "sent": "Stattdessen habe ich ihn ruhig unter vier Augen gefragt, warum er das gemacht hat.",
-     "blanked": "Stattdessen habe ich ihn ruhig unter vier Augen gefragt, warum er das ____ hat.",
-     "answer": "gemacht"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-11",
-   "textId": "t-b1-11",
-   "level": "B1",
-   "titleDe": "Ehrenamt bei der Tafel",
-   "titleAr": "تطوّعٌ في «مأدبة الطعام»",
-   "gaps": [
-    {
-     "id": "lk-b1-11-g1",
-     "sent": "Seit einem Monat helfe ich jeden Samstag bei der Tafel aus, die Lebensmittel an Bedürftige verteilt.",
-     "blanked": "____ einem Monat helfe ich jeden Samstag bei der Tafel aus, die Lebensmittel an Bedürftige verteilt.",
-     "answer": "Seit"
-    },
-    {
-     "id": "lk-b1-11-g2",
-     "sent": "Inzwischen weiß ich, dass das Gespräch mit den Menschen mindestens genauso wichtig ist.",
-     "blanked": "Inzwischen weiß ich, ____ das Gespräch mit den Menschen mindestens genauso wichtig ist.",
-     "answer": "dass"
-    },
-    {
-     "id": "lk-b1-11-g3",
-     "sent": "Die Arbeit kostet mich keine fünf Stunden, aber sie gibt mir mehr zurück, als ich je erwartet hätte.",
-     "blanked": "Die Arbeit kostet mich keine fünf Stunden, aber sie gibt mir mehr zurück, als ich je erwartet ____.",
-     "answer": "hätte"
-    },
-    {
-     "id": "lk-b1-11-g4",
-     "sent": "Seit einem Monat helfe ich jeden Samstag bei der Tafel aus, die Lebensmittel an Bedürftige verteilt.",
-     "blanked": "Seit einem Monat helfe ich jeden Samstag bei der Tafel aus, die ____ an Bedürftige verteilt.",
-     "answer": "Lebensmittel"
-    },
-    {
-     "id": "lk-b1-11-g5",
-     "sent": "Anfänglich dachte ich, es gehe nur ums Kisten Schleppen.",
-     "blanked": "____ dachte ich, es gehe nur ums Kisten Schleppen.",
-     "answer": "Anfänglich"
-    },
-    {
-     "id": "lk-b1-11-g6",
-     "sent": "Anfänglich dachte ich, es gehe nur ums Kisten Schleppen.",
-     "blanked": "Anfänglich dachte ich, es gehe nur ums Kisten ____.",
-     "answer": "Schleppen"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-12",
-   "textId": "t-b1-12",
-   "level": "B1",
-   "titleDe": "Vokabeln: App oder Karteikarten?",
-   "titleAr": "مفردات: تطبيقٌ أم بطاقات؟",
-   "gaps": [
-    {
-     "id": "lk-b1-12-g1",
-     "sent": "Entscheidend ist nicht das Werkzeug, sondern dass man regelmäßig wiederholt – ganz egal womit.",
-     "blanked": "Entscheidend ist nicht das Werkzeug, sondern ____ man regelmäßig wiederholt – ganz egal womit.",
-     "answer": "dass"
-    },
-    {
-     "id": "lk-b1-12-g2",
-     "sent": "Entscheidend ist nicht das Werkzeug, sondern dass man regelmäßig wiederholt – ganz egal womit.",
-     "blanked": "Entscheidend ist nicht das Werkzeug, ____ dass man regelmäßig wiederholt – ganz egal womit.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b1-12-g3",
-     "sent": "Mein Kurskollege lernt nur mit einer App, ich schwöre dagegen auf Karteikarten von Hand.",
-     "blanked": "Mein Kurskollege lernt nur mit einer App, ich schwöre dagegen auf ____ von Hand.",
-     "answer": "Karteikarten"
-    },
-    {
-     "id": "lk-b1-12-g4",
-     "sent": "Mein Kurskollege lernt nur mit einer App, ich schwöre dagegen auf Karteikarten von Hand.",
-     "blanked": "Mein ____ lernt nur mit einer App, ich schwöre dagegen auf Karteikarten von Hand.",
-     "answer": "Kurskollege"
-    },
-    {
-     "id": "lk-b1-12-g5",
-     "sent": "Neulich haben wir nachgemessen: Nach zwei Wochen wussten wir beide gleich viel.",
-     "blanked": "Neulich haben wir ____: Nach zwei Wochen wussten wir beide gleich viel.",
-     "answer": "nachgemessen"
-    },
-    {
-     "id": "lk-b1-12-g6",
-     "sent": "Neulich haben wir nachgemessen: Nach zwei Wochen wussten wir beide gleich viel.",
-     "blanked": "____ haben wir nachgemessen: Nach zwei Wochen wussten wir beide gleich viel.",
-     "answer": "Neulich"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-13",
-   "textId": "t-b1-13",
-   "level": "B1",
-   "titleDe": "Ein Vorstellungsgespräch üben",
-   "titleAr": "تمرينُ مقابلةِ عمل",
-   "gaps": [
-    {
-     "id": "lk-b1-13-g1",
-     "sent": "Bevor ich mich bei der Firma bewarb, habe ich das Vorstellungsgespräch mit meiner Freundin Lena durchgespielt.",
-     "blanked": "____ ich mich bei der Firma bewarb, habe ich das Vorstellungsgespräch mit meiner Freundin Lena durchgespielt.",
-     "answer": "Bevor"
-    },
-    {
-     "id": "lk-b1-13-g2",
-     "sent": "Zuerst war mir das peinlich, doch genau das war der Nutzen.",
-     "blanked": "____ war mir das peinlich, doch genau das war der Nutzen.",
-     "answer": "Zuerst"
-    },
-    {
-     "id": "lk-b1-13-g3",
-     "sent": "Bevor ich mich bei der Firma bewarb, habe ich das Vorstellungsgespräch mit meiner Freundin Lena durchgespielt.",
-     "blanked": "Bevor ich mich bei der Firma bewarb, habe ich das ____ mit meiner Freundin Lena durchgespielt.",
-     "answer": "Vorstellungsgespräch"
-    },
-    {
-     "id": "lk-b1-13-g4",
-     "sent": "Sie stellte absichtlich unangenehme Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen.",
-     "blanked": "Sie stellte ____ unangenehme Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen.",
-     "answer": "absichtlich"
-    },
-    {
-     "id": "lk-b1-13-g5",
-     "sent": "Sie stellte absichtlich unangenehme Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen.",
-     "blanked": "Sie stellte absichtlich ____ Fragen: nach meiner Lücke im Lebenslauf und nach meinen Schwächen.",
-     "answer": "unangenehme"
-    },
-    {
-     "id": "lk-b1-13-g6",
-     "sent": "Im echten Gespräch habe ich dann ruhiger geantwortet als beim ersten Probelauf.",
-     "blanked": "Im echten Gespräch habe ich dann ruhiger ____ als beim ersten Probelauf.",
-     "answer": "geantwortet"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-14",
-   "textId": "t-b1-14",
-   "level": "B1",
-   "titleDe": "Die Bibliothek als Lernort",
-   "titleAr": "المكتبةُ مطرحًا للدراسة",
-   "gaps": [
-    {
-     "id": "lk-b1-14-g1",
-     "sent": "Zum Lernen gehe ich am liebsten in die Universitätsbibliothek, obwohl der Weg dorthin eine halbe Stunde dauert.",
-     "blanked": "Zum Lernen gehe ich am liebsten in die Universitätsbibliothek, ____ der Weg dorthin eine halbe Stunde dauert.",
-     "answer": "obwohl"
-    },
-    {
-     "id": "lk-b1-14-g2",
-     "sent": "In der Bibliothek dagegen arbeitet es sich konzentriert, weil ringsum alle schweigen und alle dasselbe Ziel haben.",
-     "blanked": "In der Bibliothek dagegen arbeitet es sich konzentriert, ____ ringsum alle schweigen und alle dasselbe Ziel haben.",
-     "answer": "weil"
-    },
-    {
-     "id": "lk-b1-14-g3",
-     "sent": "Seit dem Semesterende bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
-     "blanked": "____ dem Semesterende bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
-     "answer": "Seit"
-    },
-    {
-     "id": "lk-b1-14-g4",
-     "sent": "Zum Lernen gehe ich am liebsten in die Universitätsbibliothek, obwohl der Weg dorthin eine halbe Stunde dauert.",
-     "blanked": "Zum Lernen gehe ich am liebsten in die ____, obwohl der Weg dorthin eine halbe Stunde dauert.",
-     "answer": "Universitätsbibliothek"
-    },
-    {
-     "id": "lk-b1-14-g5",
-     "sent": "In der Bibliothek dagegen arbeitet es sich konzentriert, weil ringsum alle schweigen und alle dasselbe Ziel haben.",
-     "blanked": "In der Bibliothek dagegen arbeitet es sich ____, weil ringsum alle schweigen und alle dasselbe Ziel haben.",
-     "answer": "konzentriert"
-    },
-    {
-     "id": "lk-b1-14-g6",
-     "sent": "Seit dem Semesterende bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
-     "blanked": "Seit dem ____ bin ich übrigens Mitglied: vierzehn Euro im Jahr – billiger als ein Monat Handyvertrag, und wirksamer.",
-     "answer": "Semesterende"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-15",
-   "textId": "t-b1-15",
-   "level": "B1",
-   "titleDe": "Online bestellen oder im Laden kaufen?",
-   "titleAr": "طلبٌ إلكترونيٌّ أم من المتجر؟",
-   "gaps": [
-    {
-     "id": "lk-b1-15-g1",
-     "sent": "Früher habe ich alles im Internet bestellt, weil es bequemer schien.",
-     "blanked": "Früher habe ich alles im Internet bestellt, ____ es bequemer schien.",
-     "answer": "weil"
-    },
-    {
-     "id": "lk-b1-15-g2",
-     "sent": "Bequemlichkeit ist kein Argument – entscheidend ist, was man kauft.",
-     "blanked": "____ ist kein Argument – entscheidend ist, was man kauft.",
-     "answer": "Bequemlichkeit"
-    },
-    {
-     "id": "lk-b1-15-g3",
-     "sent": "Bequemlichkeit ist kein Argument – entscheidend ist, was man kauft.",
-     "blanked": "Bequemlichkeit ist kein Argument – ____ ist, was man kauft.",
-     "answer": "entscheidend"
-    },
-    {
-     "id": "lk-b1-15-g4",
-     "sent": "Nach dem Ärger mit Rücksendungen und falschen Größen habe ich meine Gewohnheit überdacht.",
-     "blanked": "Nach dem Ärger mit ____ und falschen Größen habe ich meine Gewohnheit überdacht.",
-     "answer": "Rücksendungen"
-    },
-    {
-     "id": "lk-b1-15-g5",
-     "sent": "Nach dem Ärger mit Rücksendungen und falschen Größen habe ich meine Gewohnheit überdacht.",
-     "blanked": "Nach dem Ärger mit Rücksendungen und falschen Größen habe ich meine ____ überdacht.",
-     "answer": "Gewohnheit"
-    },
-    {
-     "id": "lk-b1-15-g6",
-     "sent": "Heute kaufe ich Schuhe wieder im Geschäft, denn dort kann ich anprobieren und sofort umtauschen.",
-     "blanked": "Heute kaufe ich Schuhe wieder im Geschäft, denn dort kann ich ____ und sofort umtauschen.",
-     "answer": "anprobieren"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-16",
-   "textId": "t-b1-16",
-   "level": "B1",
-   "titleDe": "Ein Missverständnis",
-   "titleAr": "سوءُ فهم",
-   "gaps": [
-    {
-     "id": "lk-b1-16-g1",
-     "sent": "Missverständnisse dieser Art gehören zum Deutschlernen dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
-     "blanked": "____ dieser Art gehören zum Deutschlernen dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
-     "answer": "Missverständnisse"
-    },
-    {
-     "id": "lk-b1-16-g2",
-     "sent": "Missverständnisse dieser Art gehören zum Deutschlernen dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
-     "blanked": "Missverständnisse dieser Art gehören zum ____ dazu – sie sind ärgerlich, aber lehrreicher als jedes Lehrbuch.",
-     "answer": "Deutschlernen"
-    },
-    {
-     "id": "lk-b1-16-g3",
-     "sent": "Als mir meine Nachbarin sagte, ich solle «mal vorbeikommen», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im Schlafanzug beim Frühstück.",
-     "blanked": "Als mir meine Nachbarin sagte, ich solle «mal ____», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im Schlafanzug beim Frühstück.",
-     "answer": "vorbeikommen"
-    },
-    {
-     "id": "lk-b1-16-g4",
-     "sent": "Als mir meine Nachbarin sagte, ich solle «mal vorbeikommen», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im Schlafanzug beim Frühstück.",
-     "blanked": "Als mir meine Nachbarin sagte, ich solle «mal vorbeikommen», stand ich am nächsten Tag pünktlich um zehn vor ihrer Tür – und traf sie im ____ beim Frühstück.",
-     "answer": "Schlafanzug"
-    },
-    {
-     "id": "lk-b1-16-g5",
-     "sent": "Erst verstand ich die Wendung nicht, doch inzwischen kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine Einladung, kein Termin.",
-     "blanked": "Erst verstand ich die Wendung nicht, doch ____ kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine Einladung, kein Termin.",
-     "answer": "inzwischen"
-    },
-    {
-     "id": "lk-b1-16-g6",
-     "sent": "Erst verstand ich die Wendung nicht, doch inzwischen kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine Einladung, kein Termin.",
-     "blanked": "Erst verstand ich die Wendung nicht, doch inzwischen kenne ich ihren Ton: Bei ihr ist «Vorbeikommen» eine ____, kein Termin.",
-     "answer": "Einladung"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-17",
-   "textId": "t-b1-17",
-   "level": "B1",
-   "titleDe": "Den Platten selbst geflickt",
-   "titleAr": "إصلاحُ الإطارِ بيدَيَّ",
-   "gaps": [
-    {
-     "id": "lk-b1-17-g1",
-     "sent": "Statt zwanzig Euro für die Werkstatt zu zahlen, erinnerte ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat.",
-     "blanked": "Statt zwanzig Euro für die ____ zu zahlen, erinnerte ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat.",
-     "answer": "Werkstatt"
-    },
-    {
-     "id": "lk-b1-17-g2",
-     "sent": "Statt zwanzig Euro für die Werkstatt zu zahlen, erinnerte ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat.",
-     "blanked": "Statt zwanzig Euro für die Werkstatt zu zahlen, ____ ich mich an meinen Vater, der mir als Kind das Flicken gezeigt hat.",
-     "answer": "erinnerte"
-    },
-    {
-     "id": "lk-b1-17-g3",
-     "sent": "Zu Hause holte ich die Hebel, den Flicken und die Luftpumpe hervor und legte los.",
-     "blanked": "Zu Hause holte ich die Hebel, den Flicken und die ____ hervor und legte los.",
-     "answer": "Luftpumpe"
-    },
-    {
-     "id": "lk-b1-17-g4",
-     "sent": "Zu Hause holte ich die Hebel, den Flicken und die Luftpumpe hervor und legte los.",
-     "blanked": "Zu Hause holte ich die Hebel, den ____ und die Luftpumpe hervor und legte los.",
-     "answer": "Flicken"
-    },
-    {
-     "id": "lk-b1-17-g5",
-     "sent": "Es dauerte eine Stunde, schmutzig war es auch – aber als das Rad wieder stand, war der Stolz größer als jede Ersparnis von achtzehn Euro.",
-     "blanked": "Es dauerte eine Stunde, schmutzig war es auch – aber als das Rad wieder stand, war der Stolz größer als jede ____ von achtzehn Euro.",
-     "answer": "Ersparnis"
-    },
-    {
-     "id": "lk-b1-17-g6",
-     "sent": "Es dauerte eine Stunde, schmutzig war es auch – aber als das Rad wieder stand, war der Stolz größer als jede Ersparnis von achtzehn Euro.",
-     "blanked": "Es dauerte eine Stunde, ____ war es auch – aber als das Rad wieder stand, war der Stolz größer als jede Ersparnis von achtzehn Euro.",
-     "answer": "schmutzig"
-    }
-   ]
-  },
-  {
-   "id": "lk-b1-18",
-   "textId": "t-b1-18",
-   "level": "B1",
-   "titleDe": "Schlaflos in der Fremde",
-   "titleAr": "سهرٌ في الغربة",
-   "gaps": [
-    {
-     "id": "lk-b1-18-g1",
-     "sent": "Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im Prüfungsraum auf, dass der gefürchtete Text gar nicht drankam.",
-     "blanked": "Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im Prüfungsraum auf, ____ der gefürchtete Text gar nicht drankam.",
-     "answer": "dass"
-    },
-    {
-     "id": "lk-b1-18-g2",
-     "sent": "Seltsamerweise wurde ich danach müde.",
-     "blanked": "____ wurde ich danach müde.",
-     "answer": "Seltsamerweise"
-    },
-    {
-     "id": "lk-b1-18-g3",
-     "sent": "Seltsamerweise wurde ich danach müde.",
-     "blanked": "Seltsamerweise wurde ich ____ müde.",
-     "answer": "danach"
-    },
-    {
-     "id": "lk-b1-18-g4",
-     "sent": "Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im Prüfungsraum auf, dass der gefürchtete Text gar nicht drankam.",
-     "blanked": "Gegen halb zwei schlief ich ein – und am nächsten Morgen fiel mir im ____ auf, dass der gefürchtete Text gar nicht drankam.",
-     "answer": "Prüfungsraum"
-    },
-    {
-     "id": "lk-b1-18-g5",
-     "sent": "In der Nacht vor meiner B1-Prüfung konnte ich nicht einschlafen.",
-     "blanked": "In der Nacht vor meiner B1-Prüfung konnte ich nicht ____.",
-     "answer": "einschlafen"
-    },
-    {
-     "id": "lk-b1-18-g6",
-     "sent": "In der Nacht vor meiner B1-Prüfung konnte ich nicht einschlafen.",
-     "blanked": "In der Nacht vor meiner B1-Prüfung ____ ich nicht einschlafen.",
-     "answer": "konnte"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-01",
-   "textId": "t-b2-01",
-   "level": "B2",
-   "titleDe": "Die Digitalisierung der Bildung",
-   "titleAr": "رقمنة التعليم",
-   "gaps": [
-    {
-     "id": "lk-b2-01-g1",
-     "sent": "Eine kürzlich veröffentlichte Untersuchung zeigt, dass die von Lehrern begleitete Nutzung die besten Ergebnisse liefert.",
-     "blanked": "Eine kürzlich veröffentlichte Untersuchung zeigt, ____ die von Lehrern begleitete Nutzung die besten Ergebnisse liefert.",
-     "answer": "dass"
-    },
-    {
-     "id": "lk-b2-01-g2",
-     "sent": "Es geht also nicht um Technik um ihrer selbst willen, sondern um nachhaltige Didaktik.",
-     "blanked": "Es geht also nicht um Technik um ihrer selbst willen, ____ um nachhaltige Didaktik.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b2-01-g3",
-     "sent": "Die Digitalisierung spielt in der Bildung eine zentrale Rolle.",
-     "blanked": "Die ____ spielt in der Bildung eine zentrale Rolle.",
-     "answer": "Digitalisierung"
-    },
-    {
-     "id": "lk-b2-01-g4",
-     "sent": "Die Digitalisierung spielt in der Bildung eine zentrale Rolle.",
-     "blanked": "Die Digitalisierung spielt in der Bildung eine ____ Rolle.",
-     "answer": "zentrale"
-    },
-    {
-     "id": "lk-b2-01-g5",
-     "sent": "Eine kürzlich veröffentlichte Untersuchung zeigt, dass die von Lehrern begleitete Nutzung die besten Ergebnisse liefert.",
-     "blanked": "Eine kürzlich ____ Untersuchung zeigt, dass die von Lehrern begleitete Nutzung die besten Ergebnisse liefert.",
-     "answer": "veröffentlichte"
-    },
-    {
-     "id": "lk-b2-01-g6",
-     "sent": "Einerseits ermöglichen neue Medien individuelles Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage.",
-     "blanked": "Einerseits ermöglichen neue Medien ____ Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage.",
-     "answer": "individuelles"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-02",
-   "textId": "t-b2-02",
-   "level": "B2",
-   "titleDe": "Aus der Tageszeitung",
-   "titleAr": "من اليومية",
-   "gaps": [
-    {
-     "id": "lk-b2-02-g1",
-     "sent": "Die Bürgermeisterin der Region sagte jedoch, die Anwohner hätten andere Erfahrungen gemacht.",
-     "blanked": "Die Bürgermeisterin der Region sagte ____, die Anwohner hätten andere Erfahrungen gemacht.",
-     "answer": "jedoch"
-    },
-    {
-     "id": "lk-b2-02-g2",
-     "sent": "Die Bürgermeisterin der Region sagte jedoch, die Anwohner hätten andere Erfahrungen gemacht.",
-     "blanked": "Die Bürgermeisterin der Region sagte jedoch, die Anwohner ____ andere Erfahrungen gemacht.",
-     "answer": "hätten"
-    },
-    {
-     "id": "lk-b2-02-g3",
-     "sent": "Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.",
-     "blanked": "Der ____ hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.",
-     "answer": "Verkehrsminister"
-    },
-    {
-     "id": "lk-b2-02-g4",
-     "sent": "Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.",
-     "blanked": "Der Verkehrsminister hat gestern erklärt, die neue ____ sei pünktlich und zuverlässig.",
-     "answer": "Bahnverbindung"
-    },
-    {
-     "id": "lk-b2-02-g5",
-     "sent": "Die Opposition stellte die Zahlen in Frage und forderte, die Anforderungen an den Betreiber zu erhöhen.",
-     "blanked": "Die Opposition stellte die Zahlen in Frage und forderte, die ____ an den Betreiber zu erhöhen.",
-     "answer": "Anforderungen"
-    },
-    {
-     "id": "lk-b2-02-g6",
-     "sent": "Die Opposition stellte die Zahlen in Frage und forderte, die Anforderungen an den Betreiber zu erhöhen.",
-     "blanked": "Die ____ stellte die Zahlen in Frage und forderte, die Anforderungen an den Betreiber zu erhöhen.",
-     "answer": "Opposition"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-03",
-   "textId": "t-b2-03",
-   "level": "B2",
-   "titleDe": "Klimawandel: Zahlen und Zweifel",
-   "titleAr": "التغيّر المناخي: أرقام وشكوك",
-   "gaps": [
-    {
-     "id": "lk-b2-03-g1",
-     "sent": "Die Auswirkungen des Klimawandels sind kaum noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle.",
-     "blanked": "Die Auswirkungen des Klimawandels sind ____ noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle.",
-     "answer": "kaum"
-    },
-    {
-     "id": "lk-b2-03-g2",
-     "sent": "Dennoch gibt es Stimmen, die angeblich fehlende Daten beklagen.",
-     "blanked": "____ gibt es Stimmen, die angeblich fehlende Daten beklagen.",
-     "answer": "Dennoch"
-    },
-    {
-     "id": "lk-b2-03-g3",
-     "sent": "Wissenschaftlerinnen entgegnen, der Konsens sei breit genug für entschlossenes Handeln.",
-     "blanked": "____ entgegnen, der Konsens sei breit genug für entschlossenes Handeln.",
-     "answer": "Wissenschaftlerinnen"
-    },
-    {
-     "id": "lk-b2-03-g4",
-     "sent": "Wissenschaftlerinnen entgegnen, der Konsens sei breit genug für entschlossenes Handeln.",
-     "blanked": "Wissenschaftlerinnen entgegnen, der Konsens sei breit genug für ____ Handeln.",
-     "answer": "entschlossenes"
-    },
-    {
-     "id": "lk-b2-03-g5",
-     "sent": "Eine in Nature veröffentlichte Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und Temperaturanstieg.",
-     "blanked": "Eine in Nature veröffentlichte Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und ____.",
-     "answer": "Temperaturanstieg"
-    },
-    {
-     "id": "lk-b2-03-g6",
-     "sent": "Eine in Nature veröffentlichte Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und Temperaturanstieg.",
-     "blanked": "Eine in Nature ____ Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und Temperaturanstieg.",
-     "answer": "veröffentlichte"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-04",
-   "textId": "t-b2-04",
-   "level": "B2",
-   "titleDe": "Rezension: ein bemerkenswerter Roman",
-   "titleAr": "مراجعة: رواية تستحق",
-   "gaps": [
-    {
-     "id": "lk-b2-04-g1",
-     "sent": "Wer einen Roman sucht, der nicht nur unterhält, sondern auch zum Denken anregt, liegt mit diesem Buch genau richtig.",
-     "blanked": "Wer einen Roman sucht, der nicht nur unterhält, ____ auch zum Denken anregt, liegt mit diesem Buch genau richtig.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b2-04-g2",
-     "sent": "Die Autorin zeichnet ein Bild der Gesellschaft, das trotz mancher Übertreibung überzeugend wirkt.",
-     "blanked": "Die Autorin zeichnet ein Bild der Gesellschaft, das ____ mancher Übertreibung überzeugend wirkt.",
-     "answer": "trotz"
-    },
-    {
-     "id": "lk-b2-04-g3",
-     "sent": "Zwar ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt der Plot eine enorme Spannung.",
-     "blanked": "____ ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt der Plot eine enorme Spannung.",
-     "answer": "Zwar"
-    },
-    {
-     "id": "lk-b2-04-g4",
-     "sent": "Insgesamt: eine klare Empfehlung für alle, die anspruchsvolle Literatur schätzen.",
-     "blanked": "Insgesamt: eine klare Empfehlung für alle, die ____ Literatur schätzen.",
-     "answer": "anspruchsvolle"
-    },
-    {
-     "id": "lk-b2-04-g5",
-     "sent": "Insgesamt: eine klare Empfehlung für alle, die anspruchsvolle Literatur schätzen.",
-     "blanked": "Insgesamt: eine klare ____ für alle, die anspruchsvolle Literatur schätzen.",
-     "answer": "Empfehlung"
-    },
-    {
-     "id": "lk-b2-04-g6",
-     "sent": "Die Autorin zeichnet ein Bild der Gesellschaft, das trotz mancher Übertreibung überzeugend wirkt.",
-     "blanked": "Die Autorin zeichnet ein Bild der Gesellschaft, das trotz mancher ____ überzeugend wirkt.",
-     "answer": "Übertreibung"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-05",
-   "textId": "t-b2-05",
-   "level": "B2",
-   "titleDe": "Bewerbung und Arbeitsmarkt",
-   "titleAr": "التقديم وسوق العمل",
-   "gaps": [
-    {
-     "id": "lk-b2-05-g1",
-     "sent": "Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.",
-     "blanked": "Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, ____ auch, welche Konsequenzen ihr Handeln hatte.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b2-05-g2",
-     "sent": "Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.",
-     "blanked": "Bewerberinnen ____ im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.",
-     "answer": "sollten"
-    },
-    {
-     "id": "lk-b2-05-g3",
-     "sent": "Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.",
-     "blanked": "Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen ____.",
-     "answer": "Voraussetzungen"
-    },
-    {
-     "id": "lk-b2-05-g4",
-     "sent": "Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.",
-     "blanked": "Wer diese ____ plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.",
-     "answer": "Zusammenhänge"
-    },
-    {
-     "id": "lk-b2-05-g5",
-     "sent": "Die Anforderungen an moderne Berufe sind in den letzten Jahren deutlich gestiegen.",
-     "blanked": "Die ____ an moderne Berufe sind in den letzten Jahren deutlich gestiegen.",
-     "answer": "Anforderungen"
-    },
-    {
-     "id": "lk-b2-05-g6",
-     "sent": "Die Anforderungen an moderne Berufe sind in den letzten Jahren deutlich gestiegen.",
-     "blanked": "Die Anforderungen an moderne Berufe sind in den letzten Jahren deutlich ____.",
-     "answer": "gestiegen"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-06",
-   "textId": "t-b2-06",
-   "level": "B2",
-   "titleDe": "Schlaf und Lernen",
-   "titleAr": "النوم والتعلّم",
-   "gaps": [
-    {
-     "id": "lk-b2-06-g1",
-     "sent": "Die Schlussfolgerung liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, sondern Verbündete.",
-     "blanked": "Die Schlussfolgerung liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, ____ Verbündete.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b2-06-g2",
-     "sent": "Mehrere Studien belegen den Zusammenhang zwischen ausreichendem Schlaf und besseren Prüfungsergebnissen.",
-     "blanked": "Mehrere Studien belegen den Zusammenhang zwischen ausreichendem Schlaf und besseren ____.",
-     "answer": "Prüfungsergebnissen"
-    },
-    {
-     "id": "lk-b2-06-g3",
-     "sent": "Mehrere Studien belegen den Zusammenhang zwischen ausreichendem Schlaf und besseren Prüfungsergebnissen.",
-     "blanked": "Mehrere Studien belegen den Zusammenhang zwischen ____ Schlaf und besseren Prüfungsergebnissen.",
-     "answer": "ausreichendem"
-    },
-    {
-     "id": "lk-b2-06-g4",
-     "sent": "Die Schlussfolgerung liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, sondern Verbündete.",
-     "blanked": "Die ____ liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, sondern Verbündete.",
-     "answer": "Schlussfolgerung"
-    },
-    {
-     "id": "lk-b2-06-g5",
-     "sent": "Die im Schlaf stattfindende Festigung von Erlerntem ist gut erforscht.",
-     "blanked": "Die im Schlaf ____ Festigung von Erlerntem ist gut erforscht.",
-     "answer": "stattfindende"
-    },
-    {
-     "id": "lk-b2-06-g6",
-     "sent": "Die im Schlaf stattfindende Festigung von Erlerntem ist gut erforscht.",
-     "blanked": "Die im Schlaf stattfindende ____ von Erlerntem ist gut erforscht.",
-     "answer": "Festigung"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-07",
-   "textId": "t-b2-07",
-   "level": "B2",
-   "titleDe": "Kommentar: Tempo der Digitalisierung",
-   "titleAr": "تعليق: وتيرة الرقمنة",
-   "gaps": [
-    {
-     "id": "lk-b2-07-g1",
-     "sent": "Alle reden von Tempo, kaum jemand von Richtung.",
-     "blanked": "Alle reden von Tempo, ____ jemand von Richtung.",
-     "answer": "kaum"
-    },
-    {
-     "id": "lk-b2-07-g2",
-     "sent": "Es geht nicht darum, Bremsen zu legen, sondern darum, Ziele zu definieren.",
-     "blanked": "Es geht nicht darum, Bremsen zu legen, ____ darum, Ziele zu definieren.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b2-07-g3",
-     "sent": "Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck.",
-     "blanked": "Die forcierte ____ wird gefeiert, als sei sie Selbstzweck.",
-     "answer": "Digitalisierung"
-    },
-    {
-     "id": "lk-b2-07-g4",
-     "sent": "Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck.",
-     "blanked": "Die forcierte Digitalisierung wird gefeiert, als sei sie ____.",
-     "answer": "Selbstzweck"
-    },
-    {
-     "id": "lk-b2-07-g5",
-     "sent": "Dabei zeigt die Praxis: Wo technische Lösungen ohne pädagogische Konzepte eingeführt werden, bleibt die Wirkung gering.",
-     "blanked": "Dabei zeigt die Praxis: Wo technische Lösungen ohne ____ Konzepte eingeführt werden, bleibt die Wirkung gering.",
-     "answer": "pädagogische"
-    },
-    {
-     "id": "lk-b2-07-g6",
-     "sent": "Dabei zeigt die Praxis: Wo technische Lösungen ohne pädagogische Konzepte eingeführt werden, bleibt die Wirkung gering.",
-     "blanked": "Dabei zeigt die Praxis: Wo ____ Lösungen ohne pädagogische Konzepte eingeführt werden, bleibt die Wirkung gering.",
-     "answer": "technische"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-08",
-   "textId": "t-b2-08",
-   "level": "B2",
-   "titleDe": "Medien und Wahrheit",
-   "titleAr": "الإعلام والحقيقة",
-   "gaps": [
-    {
-     "id": "lk-b2-08-g1",
-     "sent": "Heute erreichen uns Nachrichten in Sekunden – aber nicht jede Information ist wahr.",
-     "blanked": "Heute erreichen uns Nachrichten in Sekunden – aber nicht jede ____ ist wahr.",
-     "answer": "Information"
-    },
-    {
-     "id": "lk-b2-08-g2",
-     "sent": "Heute erreichen uns Nachrichten in Sekunden – aber nicht jede Information ist wahr.",
-     "blanked": "Heute erreichen uns ____ in Sekunden – aber nicht jede Information ist wahr.",
-     "answer": "Nachrichten"
-    },
-    {
-     "id": "lk-b2-08-g3",
-     "sent": "Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.",
-     "blanked": "Wer diese ____ übt, erkennt schneller, was seriös ist und was nur laut ist.",
-     "answer": "Gewohnheit"
-    },
-    {
-     "id": "lk-b2-08-g4",
-     "sent": "Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.",
-     "blanked": "Wer diese Gewohnheit übt, erkennt ____, was seriös ist und was nur laut ist.",
-     "answer": "schneller"
-    },
-    {
-     "id": "lk-b2-08-g5",
-     "sent": "Experten empfehlen, drei Fragen zu stellen: Wer schreibt das?",
-     "blanked": "Experten ____, drei Fragen zu stellen: Wer schreibt das?",
-     "answer": "empfehlen"
-    },
-    {
-     "id": "lk-b2-08-g6",
-     "sent": "Experten empfehlen, drei Fragen zu stellen: Wer schreibt das?",
-     "blanked": "Experten empfehlen, drei Fragen zu stellen: Wer ____ das?",
-     "answer": "schreibt"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-09",
-   "textId": "t-b2-09",
-   "level": "B2",
-   "titleDe": "Lebenslanges Lernen",
-   "titleAr": "التعلّم مدى الحياة",
-   "gaps": [
-    {
-     "id": "lk-b2-09-g1",
-     "sent": "Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.",
-     "blanked": "Bildung ist ____ keine Phase, sondern eine Begleiterin fürs ganze Leben.",
-     "answer": "damit"
-    },
-    {
-     "id": "lk-b2-09-g2",
-     "sent": "Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.",
-     "blanked": "Bildung ist damit keine Phase, ____ eine Begleiterin fürs ganze Leben.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b2-09-g3",
-     "sent": "Wer beruflich erfolgreich bleiben will, muss sich regelmäßig weiterbilden: Kurse, Seminare, Online-Lernen.",
-     "blanked": "Wer beruflich erfolgreich bleiben will, muss sich regelmäßig ____: Kurse, Seminare, Online-Lernen.",
-     "answer": "weiterbilden"
-    },
-    {
-     "id": "lk-b2-09-g4",
-     "sent": "Wer beruflich erfolgreich bleiben will, muss sich regelmäßig weiterbilden: Kurse, Seminare, Online-Lernen.",
-     "blanked": "Wer beruflich ____ bleiben will, muss sich regelmäßig weiterbilden: Kurse, Seminare, Online-Lernen.",
-     "answer": "erfolgreich"
-    },
-    {
-     "id": "lk-b2-09-g5",
-     "sent": "Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.",
-     "blanked": "____ verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.",
-     "answer": "Gleichzeitig"
-    },
-    {
-     "id": "lk-b2-09-g6",
-     "sent": "Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.",
-     "blanked": "Gleichzeitig verbessert das Lernen einer ____ das Gedächtnis im Alter.",
-     "answer": "Fremdsprache"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-10",
-   "textId": "t-b2-10",
-   "level": "B2",
-   "titleDe": "Vier-Tage-Woche: Chance oder Risiko?",
-   "titleAr": "أسبوعٌ بأربعة أيام: فرصةٌ أم مخاطرة؟",
-   "gaps": [
-    {
-     "id": "lk-b2-10-g1",
-     "sent": "Die Debatte um die Vier-Tage-Woche wird hitziger, seit ein britischer Versuch positive Ergebnisse meldete: gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen.",
-     "blanked": "Die Debatte um die Vier-Tage-Woche wird hitziger, ____ ein britischer Versuch positive Ergebnisse meldete: gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen.",
-     "answer": "seit"
-    },
-    {
-     "id": "lk-b2-10-g2",
-     "sent": "Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen.",
-     "blanked": "Kritikerinnen wenden ein, ____ solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen.",
-     "answer": "dass"
-    },
-    {
-     "id": "lk-b2-10-g3",
-     "sent": "Die Debatte um die Vier-Tage-Woche wird hitziger, seit ein britischer Versuch positive Ergebnisse meldete: gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen.",
-     "blanked": "Die Debatte um die Vier-Tage-Woche wird hitziger, seit ein britischer Versuch positive Ergebnisse meldete: ____ Produktivität bei spürbar weniger Burnout-Symptomen.",
-     "answer": "gleichbleibende"
-    },
-    {
-     "id": "lk-b2-10-g4",
-     "sent": "Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen.",
-     "blanked": "Kritikerinnen wenden ein, dass solche Versuche nur für ____ galten und sich nicht auf Fabriken übertragen ließen.",
-     "answer": "Wissensarbeit"
-    },
-    {
-     "id": "lk-b2-10-g5",
-     "sent": "Beides stimmt, und genau darin liegt die Schwierigkeit: Wer über Arbeitszeit spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
-     "blanked": "Beides stimmt, und genau darin liegt die ____: Wer über Arbeitszeit spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
-     "answer": "Schwierigkeit"
-    },
-    {
-     "id": "lk-b2-10-g6",
-     "sent": "Beides stimmt, und genau darin liegt die Schwierigkeit: Wer über Arbeitszeit spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
-     "blanked": "Beides stimmt, und genau darin liegt die Schwierigkeit: Wer über ____ spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.",
-     "answer": "Arbeitszeit"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-11",
-   "textId": "t-b2-11",
-   "level": "B2",
-   "titleDe": "Grüne Dächer für graue Städte",
-   "titleAr": "أسقفٌ خضراء لمدنٍ رمادية",
-   "gaps": [
-    {
-     "id": "lk-b2-11-g1",
-     "sent": "Wer Stadtklima will, muss daher weniger Appelle drucken als Förderprogramme rechnen.",
-     "blanked": "Wer Stadtklima will, muss ____ weniger Appelle drucken als Förderprogramme rechnen.",
-     "answer": "daher"
-    },
-    {
-     "id": "lk-b2-11-g2",
-     "sent": "Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten und Eigentümerinteressen.",
-     "blanked": "Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten und ____.",
-     "answer": "Eigentümerinteressen"
-    },
-    {
-     "id": "lk-b2-11-g3",
-     "sent": "Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten und Eigentümerinteressen.",
-     "blanked": "Eingeweihte schweigen die Kehrseite nicht tot: Statik, ____ und Eigentümerinteressen.",
-     "answer": "Pflegekosten"
-    },
-    {
-     "id": "lk-b2-11-g4",
-     "sent": "Wer Stadtklima will, muss daher weniger Appelle drucken als Förderprogramme rechnen.",
-     "blanked": "Wer Stadtklima will, muss daher weniger Appelle drucken als ____ rechnen.",
-     "answer": "Förderprogramme"
-    },
-    {
-     "id": "lk-b2-11-g5",
-     "sent": "Stuttgart erprobt es, Kopenhagen verlangt es inzwischen bei Neubauten: die Begrünung von Flachdächern.",
-     "blanked": "Stuttgart erprobt es, Kopenhagen verlangt es inzwischen bei Neubauten: die Begrünung von ____.",
-     "answer": "Flachdächern"
-    },
-    {
-     "id": "lk-b2-11-g6",
-     "sent": "Stuttgart erprobt es, Kopenhagen verlangt es inzwischen bei Neubauten: die Begrünung von Flachdächern.",
-     "blanked": "Stuttgart erprobt es, Kopenhagen verlangt es ____ bei Neubauten: die Begrünung von Flachdächern.",
-     "answer": "inzwischen"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-12",
-   "textId": "t-b2-12",
-   "level": "B2",
-   "titleDe": "Lesen im Zeitalter des Kurzvideos",
-   "titleAr": "القراءةُ في زمنِ المقطعِ القصير",
-   "gaps": [
-    {
-     "id": "lk-b2-12-g1",
-     "sent": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, dass nie so viel gelesen wurde wie heute: Untertitel, Threads, Kommentare.",
-     "blanked": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, ____ nie so viel gelesen wurde wie heute: Untertitel, Threads, Kommentare.",
-     "answer": "dass"
-    },
-    {
-     "id": "lk-b2-12-g2",
-     "sent": "Beobachterinnen widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen verschachtelter Gedanken.",
-     "blanked": "Beobachterinnen widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen ____ Gedanken.",
-     "answer": "verschachtelter"
-    },
-    {
-     "id": "lk-b2-12-g3",
-     "sent": "Beobachterinnen widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen verschachtelter Gedanken.",
-     "blanked": "____ widersprechen: Wer täglich dreihundert Wörter in Häppchen lese, trainiere genau das nicht, was langes Lesen verlangt – das Aushalten von Langeweile, das Folgen verschachtelter Gedanken.",
-     "answer": "Beobachterinnen"
-    },
-    {
-     "id": "lk-b2-12-g4",
-     "sent": "Beides ist nicht gleich; wer die Debatte ernst nimmt, hört auf, sie als Kulturkampf zu führen.",
-     "blanked": "Beides ist nicht gleich; wer die Debatte ernst nimmt, hört auf, sie als ____ zu führen.",
-     "answer": "Kulturkampf"
-    },
-    {
-     "id": "lk-b2-12-g5",
-     "sent": "Beides ist nicht gleich; wer die Debatte ernst nimmt, hört auf, sie als Kulturkampf zu führen.",
-     "blanked": "Beides ist nicht gleich; wer die ____ ernst nimmt, hört auf, sie als Kulturkampf zu führen.",
-     "answer": "Debatte"
-    },
-    {
-     "id": "lk-b2-12-g6",
-     "sent": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, dass nie so viel gelesen wurde wie heute: Untertitel, Threads, Kommentare.",
-     "blanked": "«Die Jugend liest nicht mehr» – dieser Klage hält eine Studie entgegen, dass nie so viel gelesen wurde wie heute: ____, Threads, Kommentare.",
-     "answer": "Untertitel"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-13",
-   "textId": "t-b2-13",
-   "level": "B2",
-   "titleDe": "Soll Studium kostenlos sein?",
-   "titleAr": "أيجبُ أن تكونَ الجامعةُ مجانية؟",
-   "gaps": [
-    {
-     "id": "lk-b2-13-g1",
-     "sent": "Ökonomen aus dem angelsächsischen Raum prophezeien deshalb Überkonsum von Bildung und Unterfinanzierung der Hochschulen.",
-     "blanked": "Ökonomen aus dem angelsächsischen Raum prophezeien ____ Überkonsum von Bildung und Unterfinanzierung der Hochschulen.",
-     "answer": "deshalb"
-    },
-    {
-     "id": "lk-b2-13-g2",
-     "sent": "Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional.",
-     "blanked": "Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit ____.",
-     "answer": "überproportional"
-    },
-    {
-     "id": "lk-b2-13-g3",
-     "sent": "Wer Chancengerechtigkeit will, muss am Verteilungsmechanismus drehen, nicht bloß am Preisschild.",
-     "blanked": "Wer Chancengerechtigkeit will, muss am ____ drehen, nicht bloß am Preisschild.",
-     "answer": "Verteilungsmechanismus"
-    },
-    {
-     "id": "lk-b2-13-g4",
-     "sent": "Wer Chancengerechtigkeit will, muss am Verteilungsmechanismus drehen, nicht bloß am Preisschild.",
-     "blanked": "Wer ____ will, muss am Verteilungsmechanismus drehen, nicht bloß am Preisschild.",
-     "answer": "Chancengerechtigkeit"
-    },
-    {
-     "id": "lk-b2-13-g5",
-     "sent": "Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional.",
-     "blanked": "Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus ____ nutzen die Gebührenfreiheit überproportional.",
-     "answer": "Akademikerhaushalten"
-    },
-    {
-     "id": "lk-b2-13-g6",
-     "sent": "Ökonomen aus dem angelsächsischen Raum prophezeien deshalb Überkonsum von Bildung und Unterfinanzierung der Hochschulen.",
-     "blanked": "Ökonomen aus dem angelsächsischen Raum prophezeien deshalb Überkonsum von Bildung und ____ der Hochschulen.",
-     "answer": "Unterfinanzierung"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-14",
-   "textId": "t-b2-14",
-   "level": "B2",
-   "titleDe": "Lärm: der unterschätzte Risikofaktor",
-   "titleAr": "الضجيج: عاملُ خطرٍ يُستهانُ به",
-   "gaps": [
-    {
-     "id": "lk-b2-14-g1",
-     "sent": "Medizinisch ist das fatal: Die WHO schätzt, dass westeuropäische Dauerbeschallung jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone.",
-     "blanked": "Medizinisch ist das fatal: Die WHO schätzt, ____ westeuropäische Dauerbeschallung jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone.",
-     "answer": "dass"
-    },
-    {
-     "id": "lk-b2-14-g2",
-     "sent": "Wer Stadt plant, misst auch Dezibel: nicht als Anwalt der Ruhe, sondern der Gesundheit.",
-     "blanked": "Wer Stadt plant, misst auch Dezibel: nicht als Anwalt der Ruhe, ____ der Gesundheit.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b2-14-g3",
-     "sent": "Medizinisch ist das fatal: Die WHO schätzt, dass westeuropäische Dauerbeschallung jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone.",
-     "blanked": "Medizinisch ist das fatal: Die WHO schätzt, dass westeuropäische ____ jährlich hunderttausende gesunde Lebensjahre kostet – über Herz-Kreislauf-Erkrankungen, Schlafstörungen, Stresshormone.",
-     "answer": "Dauerbeschallung"
-    },
-    {
-     "id": "lk-b2-14-g4",
-     "sent": "Über Lärm wird geschimpft, als gehöre er zum Stadtleben wie das Wetter.",
-     "blanked": "Über Lärm wird geschimpft, als gehöre er zum ____ wie das Wetter.",
-     "answer": "Stadtleben"
-    },
-    {
-     "id": "lk-b2-14-g5",
-     "sent": "Über Lärm wird geschimpft, als gehöre er zum Stadtleben wie das Wetter.",
-     "blanked": "Über Lärm wird ____, als gehöre er zum Stadtleben wie das Wetter.",
-     "answer": "geschimpft"
-    },
-    {
-     "id": "lk-b2-14-g6",
-     "sent": "Das Paradoxe: Gegen Feinstaub gibt es Grenzwerte und Messnetze, gegen Schall fast nichts – er gehört niemandem, jeder macht ihn.",
-     "blanked": "Das Paradoxe: Gegen Feinstaub gibt es ____ und Messnetze, gegen Schall fast nichts – er gehört niemandem, jeder macht ihn.",
-     "answer": "Grenzwerte"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-15",
-   "textId": "t-b2-15",
-   "level": "B2",
-   "titleDe": "Vom Wert der Fehlerkultur",
-   "titleAr": "من قيمةِ ثقافةِ الخطأ",
-   "gaps": [
-    {
-     "id": "lk-b2-15-g1",
-     "sent": "Dabei zeigt die Forschung Banales: Nicht die Fehlerquote unterscheidet gute von schlechten Teams, sondern was danach passiert – Schweigen oder Melderegister.",
-     "blanked": "Dabei zeigt die Forschung Banales: Nicht die Fehlerquote unterscheidet gute von schlechten Teams, ____ was danach passiert – Schweigen oder Melderegister.",
-     "answer": "sondern"
-    },
-    {
-     "id": "lk-b2-15-g2",
-     "sent": "Das ist der Kern aller Lernorganisation: Transparenz kostet Überwindung, Intransparenz am Ende mehr.",
-     "blanked": "Das ist der Kern aller ____: Transparenz kostet Überwindung, Intransparenz am Ende mehr.",
-     "answer": "Lernorganisation"
-    },
-    {
-     "id": "lk-b2-15-g3",
-     "sent": "Das ist der Kern aller Lernorganisation: Transparenz kostet Überwindung, Intransparenz am Ende mehr.",
-     "blanked": "Das ist der Kern aller Lernorganisation: Transparenz kostet Überwindung, ____ am Ende mehr.",
-     "answer": "Intransparenz"
-    },
-    {
-     "id": "lk-b2-15-g4",
-     "sent": "Amerikanische Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne Gesichtsverlust melden zu dürfen.",
-     "blanked": "Amerikanische Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne ____ melden zu dürfen.",
-     "answer": "Gesichtsverlust"
-    },
-    {
-     "id": "lk-b2-15-g5",
-     "sent": "Amerikanische Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne Gesichtsverlust melden zu dürfen.",
-     "blanked": "____ Forschung nennt es «psychological safety»: das Gefühl, Fehler ohne Gesichtsverlust melden zu dürfen.",
-     "answer": "Amerikanische"
-    },
-    {
-     "id": "lk-b2-15-g6",
-     "sent": "Dabei zeigt die Forschung Banales: Nicht die Fehlerquote unterscheidet gute von schlechten Teams, sondern was danach passiert – Schweigen oder Melderegister.",
-     "blanked": "Dabei zeigt die Forschung Banales: Nicht die Fehlerquote ____ gute von schlechten Teams, sondern was danach passiert – Schweigen oder Melderegister.",
-     "answer": "unterscheidet"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-16",
-   "textId": "t-b2-16",
-   "level": "B2",
-   "titleDe": "Das 49-Euro-Ticket: Erfolg?",
-   "titleAr": "تذكرةُ التاسعةِ والأربعين: نجاح؟",
-   "gaps": [
-    {
-     "id": "lk-b2-16-g1",
-     "sent": "Die Verkaufszahlen sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten verschlechterte sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht.",
-     "blanked": "Die Verkaufszahlen sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten ____ sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht.",
-     "answer": "verschlechterte"
-    },
-    {
-     "id": "lk-b2-16-g2",
-     "sent": "Die Verkaufszahlen sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten verschlechterte sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht.",
-     "blanked": "Die ____ sind beachtlich, die Entlastung für Berufpendler real – doch die Auslastung zu Stoßzeiten verschlechterte sich vielerorts: Neue Fahrgäste trafen auf alte Züge, zusätzliche rollten nicht.",
-     "answer": "Verkaufszahlen"
-    },
-    {
-     "id": "lk-b2-16-g3",
-     "sent": "Der Vorwurf der Verbände: Die Politik habe den Nachfrageeffekt unterschätzt.",
-     "blanked": "Der Vorwurf der Verbände: Die Politik habe den ____ unterschätzt.",
-     "answer": "Nachfrageeffekt"
-    },
-    {
-     "id": "lk-b2-16-g4",
-     "sent": "Der Vorwurf der Verbände: Die Politik habe den Nachfrageeffekt unterschätzt.",
-     "blanked": "Der Vorwurf der Verbände: Die Politik habe den Nachfrageeffekt ____.",
-     "answer": "unterschätzt"
-    },
-    {
-     "id": "lk-b2-16-g5",
-     "sent": "Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – Mobilitätswende oder Umverteilung von Platz?",
-     "blanked": "Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – ____ oder Umverteilung von Platz?",
-     "answer": "Mobilitätswende"
-    },
-    {
-     "id": "lk-b2-16-g6",
-     "sent": "Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – Mobilitätswende oder Umverteilung von Platz?",
-     "blanked": "Offen bleibt die Kernfrage: Ein Ticket, das fahren lässt, aber nicht atmen – Mobilitätswende oder ____ von Platz?",
-     "answer": "Umverteilung"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-17",
-   "textId": "t-b2-17",
-   "level": "B2",
-   "titleDe": "Reklame im öffentlichen Raum",
-   "titleAr": "إعلانٌ في الفضاءِ العام",
-   "gaps": [
-    {
-     "id": "lk-b2-17-g1",
-     "sent": "Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige seit Jahrzehnten dasselbe Bild – Aufmerksamkeitsdiebstahl ohne Zustimmung.",
-     "blanked": "Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige ____ Jahrzehnten dasselbe Bild – Aufmerksamkeitsdiebstahl ohne Zustimmung.",
-     "answer": "seit"
-    },
-    {
-     "id": "lk-b2-17-g2",
-     "sent": "Ehrlicher wäre der Kompromiss, wenn Städte Werbefläche wie Infrastruktur behandelten: verpachten, limitieren, messen lassen.",
-     "blanked": "Ehrlicher wäre der Kompromiss, ____ Städte Werbefläche wie Infrastruktur behandelten: verpachten, limitieren, messen lassen.",
-     "answer": "wenn"
-    },
-    {
-     "id": "lk-b2-17-g3",
-     "sent": "Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige seit Jahrzehnten dasselbe Bild – Aufmerksamkeitsdiebstahl ohne Zustimmung.",
-     "blanked": "Analystinnen halten dagegen: Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen; die Wirkung der Dauerbeschallung aber zeige seit Jahrzehnten dasselbe Bild – ____ ohne Zustimmung.",
-     "answer": "Aufmerksamkeitsdiebstahl"
-    },
-    {
-     "id": "lk-b2-17-g4",
-     "sent": "Ehrlicher wäre der Kompromiss, wenn Städte Werbefläche wie Infrastruktur behandelten: verpachten, limitieren, messen lassen.",
-     "blanked": "Ehrlicher wäre der Kompromiss, wenn Städte Werbefläche wie ____ behandelten: verpachten, limitieren, messen lassen.",
-     "answer": "Infrastruktur"
-    },
-    {
-     "id": "lk-b2-17-g5",
-     "sent": "Plakatwände an Haltestellen finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft.",
-     "blanked": "Plakatwände an ____ finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft.",
-     "answer": "Haltestellen"
-    },
-    {
-     "id": "lk-b2-17-g6",
-     "sent": "Plakatwände an Haltestellen finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft.",
-     "blanked": "____ an Haltestellen finanzieren deren Unterhalt – so verteidigen Werber und Kommunen das Geschäft.",
-     "answer": "Plakatwände"
-    }
-   ]
-  },
-  {
-   "id": "lk-b2-18",
-   "textId": "t-b2-18",
-   "level": "B2",
-   "titleDe": "Warum der Antrag drei Wochen braucht",
-   "titleAr": "لماذا يستغرقُ الطلبُ ثلاثةَ أسابيع",
-   "gaps": [
-    {
-     "id": "lk-b2-18-g1",
-     "sent": "Digitalisierung auf ein altes Verfahren gepflastert, beschleunigt den Postweg, nicht den Vorgang.",
-     "blanked": "____ auf ein altes Verfahren gepflastert, beschleunigt den Postweg, nicht den Vorgang.",
-     "answer": "Digitalisierung"
-    },
-    {
-     "id": "lk-b2-18-g2",
-     "sent": "Digitalisierung auf ein altes Verfahren gepflastert, beschleunigt den Postweg, nicht den Vorgang.",
-     "blanked": "Digitalisierung auf ein altes Verfahren gepflastert, ____ den Postweg, nicht den Vorgang.",
-     "answer": "beschleunigt"
-    },
-    {
-     "id": "lk-b2-18-g3",
-     "sent": "Digitale Verwaltung, so das Versprechen, halbiere die Welt in Klicks statt Fristen.",
-     "blanked": "Digitale Verwaltung, so das ____, halbiere die Welt in Klicks statt Fristen.",
-     "answer": "Versprechen"
-    },
-    {
-     "id": "lk-b2-18-g4",
-     "sent": "Digitale Verwaltung, so das Versprechen, halbiere die Welt in Klicks statt Fristen.",
-     "blanked": "Digitale ____, so das Versprechen, halbiere die Welt in Klicks statt Fristen.",
-     "answer": "Verwaltung"
-    },
-    {
-     "id": "lk-b2-18-g5",
-     "sent": "Wer Fristen ernst nimmt, muss Prozesse erfinden, nicht Formulare scannen.",
-     "blanked": "Wer Fristen ernst nimmt, muss Prozesse erfinden, nicht ____ scannen.",
-     "answer": "Formulare"
-    },
-    {
-     "id": "lk-b2-18-g6",
-     "sent": "Wer Fristen ernst nimmt, muss Prozesse erfinden, nicht Formulare scannen.",
-     "blanked": "Wer Fristen ernst nimmt, muss Prozesse ____, nicht Formulare scannen.",
-     "answer": "erfinden"
-    }
-   ]
-  }
- ]
+  ]
 }

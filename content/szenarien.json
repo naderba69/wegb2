@@ -1,1708 +1,1768 @@
 {
- "szenarien": [
-  {
-   "id": "notfall",
-   "emoji": "🚑",
-   "nameDe": "Notfall & Arzt",
-   "nameAr": "الطوارئ والطبيب",
-   "kontext": "حادث مفاجئ أو مرض: نداء إسعاف، عيادة طوارئ، صيدلية — اللغة التي تنقذ يومك.",
-   "saetze": [
+  "szenarien": [
     {
-     "de": "Hilfe! Bitte rufen Sie einen Krankenwagen!",
-     "ar": "النجدة! من فضلكم نادوا سيارة إسعاف!"
-    },
-    {
-     "de": "Mir ist schwindelig, und mir tut der Bauch weh.",
-     "ar": "أشعر بدوار ووجع في بطني."
-    },
-    {
-     "de": "Ich habe eine starke Allergie gegen Penicillin.",
-     "ar": "لديّ حساسية شديدة من البنسلين."
-    },
-    {
-     "de": "Seit drei Tagen habe ich hohes Fieber.",
-     "ar": "منذ ثلاثة أيام عندي حمّى عالية."
-    },
-    {
-     "de": "Wo ist die nächste Apotheke?",
-     "ar": "أين أقرب صيدلية؟"
-    },
-    {
-     "de": "Ich brauche ein Rezept für dieses Medikament.",
-     "ar": "أحتاج وصفة طبية لهذا الدواء."
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "نداء الطوارئ (Notruf)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "الناجي",
-       "de": "Hilfe! Mein Mann ist zusammengebrochen!",
-       "ar": "النجدة! زوجي انهار!"
+      "id": "notfall",
+      "emoji": "🚑",
+      "nameDe": "Notfall & Arzt",
+      "nameAr": "الطوارئ والطبيب",
+      "kontext": "حادث مفاجئ أو مرض: نداء إسعاف، عيادة طوارئ، صيدلية — اللغة التي تنقذ يومك.",
+      "lektionen": [
+        "a1-imperativ",
+        "a1-dativ",
+        "a1-praesens"
+      ],
+      "saetze": [
+        {
+          "de": "Hilfe! Bitte rufen Sie einen Krankenwagen!",
+          "ar": "النجدة! من فضلكم نادوا سيارة إسعاف!"
+        },
+        {
+          "de": "Mir ist schwindelig, und mir tut der Bauch weh.",
+          "ar": "أشعر بدوار ووجع في بطني."
+        },
+        {
+          "de": "Ich habe eine starke Allergie gegen Penicillin.",
+          "ar": "لديّ حساسية شديدة من البنسلين."
+        },
+        {
+          "de": "Seit drei Tagen habe ich hohes Fieber.",
+          "ar": "منذ ثلاثة أيام عندي حمّى عالية."
+        },
+        {
+          "de": "Wo ist die nächste Apotheke?",
+          "ar": "أين أقرب صيدلية؟"
+        },
+        {
+          "de": "Ich brauche ein Rezept für dieses Medikament.",
+          "ar": "أحتاج وصفة طبية لهذا الدواء."
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "نداء الطوارئ (Notruf)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "الناجي",
+              "de": "Hilfe! Mein Mann ist zusammengebrochen!",
+              "ar": "النجدة! زوجي انهار!"
+            },
+            {
+              "who": "B",
+              "role": "غرفة العمليات",
+              "de": "Notrufleitstelle. Was ist passiert?",
+              "ar": "غرفة الطوارئ. ماذا حدث؟"
+            },
+            {
+              "who": "A",
+              "role": "الناجي",
+              "de": "Er ist bewusstlos und atmet kaum noch.",
+              "ar": "فاقد الوعي وبالكاد يتنفس."
+            },
+            {
+              "who": "B",
+              "role": "غرفة العمليات",
+              "de": "Bleiben Sie ruhig. Wie lautet Ihre Adresse?",
+              "ar": "ابقوا هادئين. ما عنوانكم؟"
+            },
+            {
+              "who": "A",
+              "role": "الناجي",
+              "de": "Goethestraße 12, dritter Stock.",
+              "ar": "غوته شتراسه 12، الطابق الثالث."
+            },
+            {
+              "who": "B",
+              "role": "غرفة العمليات",
+              "de": "Ein Krankenwagen ist unterwegs. Bleiben Sie am Apparat!",
+              "ar": "الإسعاف في الطريق. ابقوا على الخط!"
+            }
+          ]
+        },
+        {
+          "titel": "في العيادة (Beim Arzt)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "مريض",
+              "de": "Guten Tag, ich habe seit gestern starke Kopfschmerzen.",
+              "ar": "مرحباً، عندي صداع شديد منذ الأمس."
+            },
+            {
+              "who": "B",
+              "role": "طبيب",
+              "de": "Haben Sie noch andere Beschwerden?",
+              "ar": "هل من أعراض أخرى؟"
+            },
+            {
+              "who": "A",
+              "role": "مريض",
+              "de": "Ja, mir ist übel, und ich bin sehr müde.",
+              "ar": "نعم، يأتيني غثيان وتعب شديد."
+            },
+            {
+              "who": "B",
+              "role": "طبيب",
+              "de": "Ich untersuche Sie kurz. Atmen Sie tief ein…",
+              "ar": "سأفحصكم قليلاً. تنفسوا بعمق…"
+            },
+            {
+              "who": "A",
+              "role": "مريض",
+              "de": "Ist es etwas Schlimmes?",
+              "ar": "هل الأمر خطير؟"
+            },
+            {
+              "who": "B",
+              "role": "طبيب",
+              "de": "Eine Grippe. Ich verschreibe Ihnen Ruhe und Tabletten.",
+              "ar": "إنفلونزا. سأصف لكم راحة وحبوباً."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Krankmeldung an den Arbeitgeber — إشعار مرض لصاحب العمل",
+        "zeilen": [
+          "Betreff: Krankmeldung ab dem 12.05.",
+          "Sehr geehrte Frau Weber,",
+          "leider bin ich seit dem 12.05. krankgeschrieben.",
+          "Anbei finden Sie das ärztliche Attest.",
+          "Voraussichtlich bin ich ab dem 16.05. wieder im Büro.",
+          "Mit freundlichen Grüßen\nSami Ben Salah"
+        ]
       },
-      {
-       "who": "B",
-       "role": "غرفة العمليات",
-       "de": "Notrufleitstelle. Was ist passiert?",
-       "ar": "غرفة الطوارئ. ماذا حدث؟"
-      },
-      {
-       "who": "A",
-       "role": "الناجي",
-       "de": "Er ist bewusstlos und atmet kaum noch.",
-       "ar": "فاقد الوعي وبالكاد يتنفس."
-      },
-      {
-       "who": "B",
-       "role": "غرفة العمليات",
-       "de": "Bleiben Sie ruhig. Wie lautet Ihre Adresse?",
-       "ar": "ابقوا هادئين. ما عنوانكم؟"
-      },
-      {
-       "who": "A",
-       "role": "الناجي",
-       "de": "Goethestraße 12, dritter Stock.",
-       "ar": "غوته شتراسه 12، الطابق الثالث."
-      },
-      {
-       "who": "B",
-       "role": "غرفة العمليات",
-       "de": "Ein Krankenwagen ist unterwegs. Bleiben Sie am Apparat!",
-       "ar": "الإسعاف في الطريق. ابقوا على الخط!"
+      "rolle": {
+        "sitter": "A: نزيل في عيادة طوارئ",
+        "partner": "B: طبيب/ممرّضة",
+        "stichworte": [
+          "Schmerzen sagen",
+          "Allergie erwähnen",
+          "Rezept brauchen"
+        ],
+        "plan": [
+          "السلام + سبب الزيارة في جملة",
+          "صف الأعراض: منذ متى؟ وما شدّتها؟",
+          "اطلب: وصفة / إجازة مرض / موعد متابعة"
+        ]
       }
-     ]
     },
     {
-     "titel": "في العيادة (Beim Arzt)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "مريض",
-       "de": "Guten Tag, ich habe seit gestern starke Kopfschmerzen.",
-       "ar": "مرحباً، عندي صداع شديد منذ الأمس."
+      "id": "buergeramt",
+      "emoji": "🏛️",
+      "nameDe": "Bürgeramt",
+      "nameAr": "البلدية والإجراءات",
+      "kontext": "الانضمام الرسمي إلى المدينة: تسجيل الإقامة، المواعيد، الشهادات — بيروقراطية بألمانية بسيطة.",
+      "lektionen": [
+        "a2-konj2-hoflich",
+        "a2-reflexiv",
+        "a1-modalverben"
+      ],
+      "saetze": [
+        {
+          "de": "Ich möchte mich bitte anmelden.",
+          "ar": "أريد تسجيل إقامتي من فضلك."
+        },
+        {
+          "de": "Haben Sie einen Termin für die Anmeldung?",
+          "ar": "هل لديكم موعد للتسجيل؟"
+        },
+        {
+          "de": "Ich brauche eine Meldebescheinigung.",
+          "ar": "أحتاج شهادة تسجيل."
+        },
+        {
+          "de": "Welche Unterlagen muss ich mitbringen?",
+          "ar": "ما الأوراق التي يجب أن أحضرها؟"
+        },
+        {
+          "de": "Der Pass und der Mietvertrag sind dabei.",
+          "ar": "الجواز وعقد الإيجار معي."
+        },
+        {
+          "de": "Wann bekomme ich die Bescheinigung?",
+          "ar": "متى أحصل على الشهادة؟"
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "موعد التسجيل (Termin)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "قادم جديد",
+              "de": "Guten Tag, ich habe einen Termin um zehn Uhr.",
+              "ar": "مرحباً، عندي موعد الساعة العاشرة."
+            },
+            {
+              "who": "B",
+              "role": "موظفة",
+              "de": "Ihr Name bitte? … Ja, für die Anmeldung?",
+              "ar": "الاسم من فضلك؟… أجل، للتسجيل؟"
+            },
+            {
+              "who": "A",
+              "role": "قادم جديد",
+              "de": "Genau. Hier sind mein Pass und der Mietvertrag.",
+              "ar": "بالضبط. ها هو جوازي وعقد إيجاري."
+            },
+            {
+              "who": "B",
+              "role": "موظفة",
+              "de": "Gut. Füllen Sie bitte dieses Formular aus.",
+              "ar": "جيد. املؤوا هذه الاستمارة من فضلكم."
+            },
+            {
+              "who": "A",
+              "role": "قادم جديد",
+              "de": "Soll ich hier unterschreiben?",
+              "ar": "هل أوقّع هنا؟"
+            },
+            {
+              "who": "B",
+              "role": "موظفة",
+              "de": "Genau dort. Das dauert nur fünf Minuten.",
+              "ar": "هناك بالضبط. الأمر يستغرق خمس دقائق."
+            }
+          ]
+        },
+        {
+          "titel": "عن المهلة (Nach der Frist)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "قادم جديد",
+              "de": "Wie lange habe ich Zeit für die Anmeldung?",
+              "ar": "كم من الوقت عندي للتسجيل؟"
+            },
+            {
+              "who": "B",
+              "role": "موظفة",
+              "de": "Zwei Wochen nach dem Einzug.",
+              "ar": "أسبوعان بعد الانتقال."
+            },
+            {
+              "who": "A",
+              "role": "قادم جديد",
+              "de": "Und was kostet das?",
+              "ar": "وكم يكلف ذلك؟"
+            },
+            {
+              "who": "B",
+              "role": "موظفة",
+              "de": "Nichts. Aber ohne Termin geht es nicht.",
+              "ar": "مجاني. لكن لا يتمّ دون موعد."
+            },
+            {
+              "who": "A",
+              "role": "قادم جديد",
+              "de": "Kann ich den Termin online buchen?",
+              "ar": "هل أحجز الموعد عبر الإنترنت؟"
+            },
+            {
+              "who": "B",
+              "role": "موظفة",
+              "de": "Ja, auf der Website der Stadt.",
+              "ar": "نعم، على موقع المدينة."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Terminanfrage per E-Mail — طلب موعد بالبريد",
+        "zeilen": [
+          "Betreff: Terminanfrage – Anmeldung",
+          "Sehr geehrte Damen und Herren,",
+          "ich möchte mich anmelden (Einzug am 01.06.).",
+          "Bitte um einen Termin in der nächsten Woche.",
+          "Anlagen: Passkopie, Mietvertrag.",
+          "Mit freundlichen Grüßen\nSami Ben Salah"
+        ]
       },
-      {
-       "who": "B",
-       "role": "طبيب",
-       "de": "Haben Sie noch andere Beschwerden?",
-       "ar": "هل من أعراض أخرى؟"
-      },
-      {
-       "who": "A",
-       "role": "مريض",
-       "de": "Ja, mir ist übel, und ich bin sehr müde.",
-       "ar": "نعم، يأتيني غثيان وتعب شديد."
-      },
-      {
-       "who": "B",
-       "role": "طبيب",
-       "de": "Ich untersuche Sie kurz. Atmen Sie tief ein…",
-       "ar": "سأفحصكم قليلاً. تنفسوا بعمق…"
-      },
-      {
-       "who": "A",
-       "role": "مريض",
-       "de": "Ist es etwas Schlimmes?",
-       "ar": "هل الأمر خطير؟"
-      },
-      {
-       "who": "B",
-       "role": "طبيب",
-       "de": "Eine Grippe. Ich verschreibe Ihnen Ruhe und Tabletten.",
-       "ar": "إنفلونزا. سأصف لكم راحة وحبوباً."
+      "rolle": {
+        "sitter": "A: وافد جديد على المدينة",
+        "partner": "B: موظفة البلدية",
+        "stichworte": [
+          "Anmeldung",
+          "Unterlagen",
+          "Frist"
+        ],
+        "plan": [
+          "عرّف نفسك + طلبك (Anmeldung)",
+          "سلّم الأوراق وأجب عن الأسئلة",
+          "اسأل عن: الموعد · المهلة · موعد استلام الشهادة"
+        ]
       }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Krankmeldung an den Arbeitgeber — إشعار مرض لصاحب العمل",
-    "zeilen": [
-     "Betreff: Krankmeldung ab dem 12.05.",
-     "Sehr geehrte Frau Weber,",
-     "leider bin ich seit dem 12.05. krankgeschrieben.",
-     "Anbei finden Sie das ärztliche Attest.",
-     "Voraussichtlich bin ich ab dem 16.05. wieder im Büro.",
-     "Mit freundlichen Grüßen\nSami Ben Salah"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: نزيل في عيادة طوارئ",
-    "partner": "B: طبيب/ممرّضة",
-    "stichworte": [
-     "Schmerzen sagen",
-     "Allergie erwähnen",
-     "Rezept brauchen"
-    ],
-    "plan": [
-     "السلام + سبب الزيارة في جملة",
-     "صف الأعراض: منذ متى؟ وما شدّتها؟",
-     "اطلب: وصفة / إجازة مرض / موعد متابعة"
-    ]
-   }
-  },
-  {
-   "id": "buergeramt",
-   "emoji": "🏛️",
-   "nameDe": "Bürgeramt",
-   "nameAr": "البلدية والإجراءات",
-   "kontext": "الانضمام الرسمي إلى المدينة: تسجيل الإقامة، المواعيد، الشهادات — بيروقراطية بألمانية بسيطة.",
-   "saetze": [
-    {
-     "de": "Ich möchte mich bitte anmelden.",
-     "ar": "أريد تسجيل إقامتي من فضلك."
     },
     {
-     "de": "Haben Sie einen Termin für die Anmeldung?",
-     "ar": "هل لديكم موعد للتسجيل؟"
-    },
-    {
-     "de": "Ich brauche eine Meldebescheinigung.",
-     "ar": "أحتاج شهادة تسجيل."
-    },
-    {
-     "de": "Welche Unterlagen muss ich mitbringen?",
-     "ar": "ما الأوراق التي يجب أن أحضرها؟"
-    },
-    {
-     "de": "Der Pass und der Mietvertrag sind dabei.",
-     "ar": "الجواز وعقد الإيجار معي."
-    },
-    {
-     "de": "Wann bekomme ich die Bescheinigung?",
-     "ar": "متى أحصل على الشهادة؟"
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "موعد التسجيل (Termin)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "قادم جديد",
-       "de": "Guten Tag, ich habe einen Termin um zehn Uhr.",
-       "ar": "مرحباً، عندي موعد الساعة العاشرة."
+      "id": "bank",
+      "emoji": "🏦",
+      "nameDe": "Bank",
+      "nameAr": "البنك والمال",
+      "kontext": "فتح حساب، تحويل، حظر بطاقة مسروقة — عبارات مالية تحميك في أول شهر.",
+      "lektionen": [
+        "a2-konj2-hoflich",
+        "b1-passiv",
+        "a1-perfekt-einf"
+      ],
+      "saetze": [
+        {
+          "de": "Ich möchte ein Girokonto eröffnen.",
+          "ar": "أريد فتح حساب جارٍ."
+        },
+        {
+          "de": "Meine Karte ist gestohlen worden — bitte sperren Sie sie.",
+          "ar": "بطاقتي سُرقت — أغلقوها من فضلكم."
+        },
+        {
+          "de": "Ich möchte 200 Euro auf mein Konto überweisen.",
+          "ar": "أريد تحويل 200 يورو إلى حسابي."
+        },
+        {
+          "de": "Wie hoch sind die Kontoführungsgebühren?",
+          "ar": "كم رسم صيانة الحساب؟"
+        },
+        {
+          "de": "Ich habe die Überweisung nicht erhalten.",
+          "ar": "لم يصلني التحويل."
+        },
+        {
+          "de": "Können Sie mir einen Kontoauszug ausdrucken?",
+          "ar": "هل تطبعون لي كشف حساب؟"
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "فتح حساب (Konto eröffnen)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "زبون",
+              "de": "Ich möchte ein Girokonto eröffnen.",
+              "ar": "أريد فتح حساب جارٍ."
+            },
+            {
+              "who": "B",
+              "role": "مستشار",
+              "de": "Haben Sie Pass und Meldebescheinigung dabei?",
+              "ar": "هل معك الجواز وشهادة التسجيل؟"
+            },
+            {
+              "who": "A",
+              "role": "زبون",
+              "de": "Ja. Muss ich einen Mindestbetrag einzahlen?",
+              "ar": "نعم. هل يجب أن أودع مبلغاً أدنى؟"
+            },
+            {
+              "who": "B",
+              "role": "مستشار",
+              "de": "Nein, das Konto ist kostenlos im ersten Jahr.",
+              "ar": "لا، الحساب مجاني في السنة الأولى."
+            },
+            {
+              "who": "A",
+              "role": "زبون",
+              "de": "Wann bekomme ich meine Karte?",
+              "ar": "متى أحصل على بطاقتي؟"
+            },
+            {
+              "who": "B",
+              "role": "مستشار",
+              "de": "In etwa einer Woche per Post.",
+              "ar": "في نحو أسبوع عبر البريد."
+            }
+          ]
+        },
+        {
+          "titel": "بطاقة مسروقة (Karte sperren)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "زبون",
+              "de": "Meine Kreditkarte ist weg! Ich glaube, sie wurde gestohlen.",
+              "ar": "بطاقتي الائتمانية ضاعت! أظنها سُرقت."
+            },
+            {
+              "who": "B",
+              "role": "الخط الساخن",
+              "de": "Keine Panik. Ich sperre sie sofort. Ihre Kontonummer?",
+              "ar": "لا داعي للذعر. سأغلقها فوراً. رقم حسابك؟"
+            },
+            {
+              "who": "A",
+              "role": "زبون",
+              "de": "… Und kann ich eine neue Karte bekommen?",
+              "ar": "… وهل أحصل على بطاقة جديدة؟"
+            },
+            {
+              "who": "B",
+              "role": "الخط الساخن",
+              "de": "Ja, die kommt in drei Tagen.",
+              "ar": "نعم، تصل خلال ثلاثة أيام."
+            },
+            {
+              "who": "A",
+              "role": "زبون",
+              "de": "Was passiert mit dem Geld auf dem Konto?",
+              "ar": "ماذا يحدث للمال في الحساب؟"
+            },
+            {
+              "who": "B",
+              "role": "الخط الساخن",
+              "de": "Das ist sicher. Ohne Karte kommt niemand daran.",
+              "ar": "المال آمن. لا أحد يصله دون بطاقة."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "E-Mail an die Bank — تحويل لم يصل",
+        "zeilen": [
+          "Betreff: Fehlende Überweisung vom 03.06.",
+          "Guten Tag,",
+          "am 03.06. sollte eine Überweisung über 200 Euro",
+          "auf mein Konto (IBAN …) eingehen.",
+          "Bisher ist nichts angekommen. Bitte prüfen Sie den Vorgang.",
+          "Mit freundlichen Grüßen\nSami Ben Salah"
+        ]
       },
-      {
-       "who": "B",
-       "role": "موظفة",
-       "de": "Ihr Name bitte? … Ja, für die Anmeldung?",
-       "ar": "الاسم من فضلك؟… أجل، للتسجيل؟"
-      },
-      {
-       "who": "A",
-       "role": "قادم جديد",
-       "de": "Genau. Hier sind mein Pass und der Mietvertrag.",
-       "ar": "بالضبط. ها هو جوازي وعقد إيجاري."
-      },
-      {
-       "who": "B",
-       "role": "موظفة",
-       "de": "Gut. Füllen Sie bitte dieses Formular aus.",
-       "ar": "جيد. املؤوا هذه الاستمارة من فضلكم."
-      },
-      {
-       "who": "A",
-       "role": "قادم جديد",
-       "de": "Soll ich hier unterschreiben?",
-       "ar": "هل أوقّع هنا؟"
-      },
-      {
-       "who": "B",
-       "role": "موظفة",
-       "de": "Genau dort. Das dauert nur fünf Minuten.",
-       "ar": "هناك بالضبط. الأمر يستغرق خمس دقائق."
+      "rolle": {
+        "sitter": "A: زبون",
+        "partner": "B: مستشار البنك",
+        "stichworte": [
+          "Konto eröffnen",
+          "Gebühren",
+          "Karte sperren"
+        ],
+        "plan": [
+          "اطلب الخدمة بجملة واحدة واضحة",
+          "اسأل عن الشروط والرسوم والمدد",
+          "اطلب ورقة تأكيد أو رقم مرجع"
+        ]
       }
-     ]
     },
     {
-     "titel": "عن المهلة (Nach der Frist)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "قادم جديد",
-       "de": "Wie lange habe ich Zeit für die Anmeldung?",
-       "ar": "كم من الوقت عندي للتسجيل؟"
+      "id": "wohnung",
+      "emoji": "🏠",
+      "nameDe": "Wohnung & Miete",
+      "nameAr": "السكن والإيجار",
+      "kontext": "معاينة شقة، عطب في التدفئة، إنهاء العقد — حقوقك ولغتك تحت سقف واحد.",
+      "lektionen": [
+        "a2-reflexiv",
+        "a2-verb-praep",
+        "a1-wechsel"
+      ],
+      "saetze": [
+        {
+          "de": "Ich interessiere mich für die Wohnung in der Parkstraße.",
+          "ar": "أنا مهتمّ بالشقة في شارع الحديقة."
+        },
+        {
+          "de": "Wann kann ich die Wohnung besichtigen?",
+          "ar": "متى أستطيع معاينة الشقة؟"
+        },
+        {
+          "de": "Die Heizung funktioniert seit gestern nicht.",
+          "ar": "التدفئة لا تعمل منذ الأمس."
+        },
+        {
+          "de": "Ich möchte den Mangel schriftlich melden.",
+          "ar": "أريد الإبلاغ عن العطب كتابياً."
+        },
+        {
+          "de": "Die Miete ist am dritten Werktag fällig.",
+          "ar": "الإيجار يستحقّ في اليوم الثالث من أيام العمل."
+        },
+        {
+          "de": "Ich möchte zum Monatsende kündigen.",
+          "ar": "أريد إنهاء العقد بنهاية الشهر."
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "معاينة الشقة (Besichtigung)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "باحث عن سكن",
+              "de": "Ich habe die Anzeige gesehen. Ist die Wohnung noch frei?",
+              "ar": "رأيت الإعلان. هل الشقة ما زالت شاغرة؟"
+            },
+            {
+              "who": "B",
+              "role": "صاحب العقار",
+              "de": "Ja. Möchten Sie sie heute besichtigen?",
+              "ar": "نعم. هل تريد معاينتها اليوم؟"
+            },
+            {
+              "who": "A",
+              "role": "باحث عن سكن",
+              "de": "Gern. Wie hoch ist die Kaution?",
+              "ar": "بكل سرور. كم مبلغ الضمان؟"
+            },
+            {
+              "who": "B",
+              "role": "صاحب العقار",
+              "de": "Zwei Kaltmieten. Warm sind es 780 Euro.",
+              "ar": "إيجاران بارداً. دافئاً 780 يورو."
+            },
+            {
+              "who": "A",
+              "role": "باحث عن سكن",
+              "de": "Ist ein Balkon dabei?",
+              "ar": "هل تشمل شرفة؟"
+            },
+            {
+              "who": "B",
+              "role": "صاحب العقار",
+              "de": "Ja, ein kleiner zum Hof hin.",
+              "ar": "نعم، صغيرة تطلّ على الفناء."
+            }
+          ]
+        },
+        {
+          "titel": "الإبلاغ عن عطب (Mangel melden)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "مستأجر",
+              "de": "Guten Tag, es geht um die Heizung in meiner Wohnung.",
+              "ar": "مرحباً، بخصوص تدفئة شقتي."
+            },
+            {
+              "who": "B",
+              "role": "إدارة",
+              "de": "Was ist das Problem genau?",
+              "ar": "ما المشكلة بالضبط؟"
+            },
+            {
+              "who": "A",
+              "role": "مستأجر",
+              "de": "Seit gestern kommt nur kaltes Wasser aus der Heizung.",
+              "ar": "منذ الأمس لا يأتي إلا ماء بارد من التدفئة."
+            },
+            {
+              "who": "B",
+              "role": "إدارة",
+              "de": "Ich schicke morgen den Handwerker.",
+              "ar": "سأرسل الفنيّ غداً."
+            },
+            {
+              "who": "A",
+              "role": "مستأجر",
+              "de": "Bitte um zwölf Uhr — ich arbeite ab zwei.",
+              "ar": "من فضلك الساعة الثانية عشرة — أعمل من الثانية."
+            },
+            {
+              "who": "B",
+              "role": "إدارة",
+              "de": "In Ordnung. Sie bekommen Bescheid.",
+              "ar": "حسنًا. ستصلكم المعلومة."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Mängelmeldung an den Vermieter — إبلاغ عطب للمالك",
+        "zeilen": [
+          "Betreff: Mängelmeldung – Heizung (Wohnung 3. OG links)",
+          "Sehr geehrte(r) Frau/Herr Albrecht,",
+          "seit dem 11.05. funktioniert die Heizung nicht.",
+          "Die Temperatur fällt unter 16 Grad.",
+          "Bitte beheben Sie den Mangel bis zum 18.05.",
+          "Mit freundlichen Grüßen\nSami Ben Salah"
+        ]
       },
-      {
-       "who": "B",
-       "role": "موظفة",
-       "de": "Zwei Wochen nach dem Einzug.",
-       "ar": "أسبوعان بعد الانتقال."
-      },
-      {
-       "who": "A",
-       "role": "قادم جديد",
-       "de": "Und was kostet das?",
-       "ar": "وكم يكلف ذلك؟"
-      },
-      {
-       "who": "B",
-       "role": "موظفة",
-       "de": "Nichts. Aber ohne Termin geht es nicht.",
-       "ar": "مجاني. لكن لا يتمّ دون موعد."
-      },
-      {
-       "who": "A",
-       "role": "قادم جديد",
-       "de": "Kann ich den Termin online buchen?",
-       "ar": "هل أحجز الموعد عبر الإنترنت؟"
-      },
-      {
-       "who": "B",
-       "role": "موظفة",
-       "de": "Ja, auf der Website der Stadt.",
-       "ar": "نعم، على موقع المدينة."
+      "rolle": {
+        "sitter": "A: مستأجر",
+        "partner": "B: مالك/إدارة عقار",
+        "stichworte": [
+          "Mangel erklären",
+          "Frist setzen",
+          "Lösung vereinbaren"
+        ],
+        "plan": [
+          "صف المشكلة: ماذا؟ ومتى بدأ؟",
+          "اطلب الإصلاح بمهلة محدّدة",
+          "اتّفق على موعد الفني وتأكيد الخطّي"
+        ]
       }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Terminanfrage per E-Mail — طلب موعد بالبريد",
-    "zeilen": [
-     "Betreff: Terminanfrage – Anmeldung",
-     "Sehr geehrte Damen und Herren,",
-     "ich möchte mich anmelden (Einzug am 01.06.).",
-     "Bitte um einen Termin in der nächsten Woche.",
-     "Anlagen: Passkopie, Mietvertrag.",
-     "Mit freundlichen Grüßen\nSami Ben Salah"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: وافد جديد على المدينة",
-    "partner": "B: موظفة البلدية",
-    "stichworte": [
-     "Anmeldung",
-     "Unterlagen",
-     "Frist"
-    ],
-    "plan": [
-     "عرّف نفسك + طلبك (Anmeldung)",
-     "سلّم الأوراق وأجب عن الأسئلة",
-     "اسأل عن: الموعد · المهلة · موعد استلام الشهادة"
-    ]
-   }
-  },
-  {
-   "id": "bank",
-   "emoji": "🏦",
-   "nameDe": "Bank",
-   "nameAr": "البنك والمال",
-   "kontext": "فتح حساب، تحويل، حظر بطاقة مسروقة — عبارات مالية تحميك في أول شهر.",
-   "saetze": [
-    {
-     "de": "Ich möchte ein Girokonto eröffnen.",
-     "ar": "أريد فتح حساب جارٍ."
     },
     {
-     "de": "Meine Karte ist gestohlen worden — bitte sperren Sie sie.",
-     "ar": "بطاقتي سُرقت — أغلقوها من فضلكم."
-    },
-    {
-     "de": "Ich möchte 200 Euro auf mein Konto überweisen.",
-     "ar": "أريد تحويل 200 يورو إلى حسابي."
-    },
-    {
-     "de": "Wie hoch sind die Kontoführungsgebühren?",
-     "ar": "كم رسم صيانة الحساب؟"
-    },
-    {
-     "de": "Ich habe die Überweisung nicht erhalten.",
-     "ar": "لم يصلني التحويل."
-    },
-    {
-     "de": "Können Sie mir einen Kontoauszug ausdrucken?",
-     "ar": "هل تطبعون لي كشف حساب؟"
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "فتح حساب (Konto eröffnen)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "زبون",
-       "de": "Ich möchte ein Girokonto eröffnen.",
-       "ar": "أريد فتح حساب جارٍ."
+      "id": "arbeit",
+      "emoji": "💼",
+      "nameDe": "Arbeit & Bewerbung",
+      "nameAr": "العمل والتقديم",
+      "kontext": "طلب عمل، مقابلة، إشعار مرض — البوّابة إلى الاستقرار في ألمانيا.",
+      "lektionen": [
+        "a2-reflexiv",
+        "a2-verb-praep",
+        "a2-konj2-hoflich"
+      ],
+      "saetze": [
+        {
+          "de": "Hiermit bewerbe ich mich um die Stelle als Verkäufer.",
+          "ar": "أتقدّم بهذه للوظيفة كبائع."
+        },
+        {
+          "de": "Ich bin ab dem ersten März verfügbar.",
+          "ar": "أنا متاح من الأول من مارس."
+        },
+        {
+          "de": "Leider bin ich heute krank — ich bleibe zu Hause.",
+          "ar": "للأسف أنا مريض اليوم — سأبقى في البيت."
+        },
+        {
+          "de": "Ich hätte gern einen Termin für ein Vorstellungsgespräch.",
+          "ar": "أودّ موعداً لمقابلة تعريفية."
+        },
+        {
+          "de": "Meine Stärken sind Pünktlichkeit und Teamarbeit.",
+          "ar": "نقاط قوتي الالتزام بالوقت والعمل الجماعي."
+        },
+        {
+          "de": "Wie sind die Arbeitszeiten im Team?",
+          "ar": "كيف هي ساعات العمل في الفريق؟"
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "إشعار مرض (Krankmeldung)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "موظّف",
+              "de": "Guten Tag, hier ist Sami aus dem Verkauf. Ich bin heute krank.",
+              "ar": "مرحباً، سامي من قسم البيع. أنا مريض اليوم."
+            },
+            {
+              "who": "B",
+              "role": "سكرتارية",
+              "de": "Schade. Geht es Ihnen schlimm?",
+              "ar": "مؤسف. هل حالتك سيئة؟"
+            },
+            {
+              "who": "A",
+              "role": "موظّف",
+              "de": "Eine Erkältung. Ich schicke Ihnen das Attest.",
+              "ar": "نزلة برد. سأرسل لكم الشهادة الطبية."
+            },
+            {
+              "who": "B",
+              "role": "سكرتارية",
+              "de": "Gute Besserung! Bis wann bleiben Sie zu Hause?",
+              "ar": "شفاك الله! حتى متى تبقى في البيت؟"
+            },
+            {
+              "who": "A",
+              "role": "موظّف",
+              "de": "Bis einschließlich Freitag, vermutlich.",
+              "ar": "حتى يوم الجمعة على الأرجح."
+            },
+            {
+              "who": "B",
+              "role": "سكرتارية",
+              "de": "Gut. Melden Sie sich bitte am Montag.",
+              "ar": "جيد. سجّل حضورك يوم الاثنين."
+            }
+          ]
+        },
+        {
+          "titel": "مقابلة تعريفية (Vorstellungsgespräch)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "مسؤول توظيف",
+              "de": "Erzählen Sie kurz etwas über sich.",
+              "ar": "احكِ عن نفسك باختصار."
+            },
+            {
+              "who": "B",
+              "role": "متقدّم",
+              "de": "Ich habe zwei Jahre als Verkäufer gearbeitet und mag den Kundenkontakt.",
+              "ar": "عملت سنتين بائعاً وأحبّ الاتصال بالزبائن."
+            },
+            {
+              "who": "A",
+              "role": "مسؤول توظيف",
+              "de": "Warum haben Sie die letzte Stelle verlassen?",
+              "ar": "لماذا غادرت آخر وظيفة؟"
+            },
+            {
+              "who": "B",
+              "role": "متقدّم",
+              "de": "Die Filiale wurde geschlossen — nicht wegen mir.",
+              "ar": "أُغلق الفرع — لا لسببي."
+            },
+            {
+              "who": "A",
+              "role": "مسؤول توظيف",
+              "de": "Was sind Ihre Stärken?",
+              "ar": "ما نقاط قوتك؟"
+            },
+            {
+              "who": "B",
+              "role": "متقدّم",
+              "de": "Ich bin pünktlich, freundlich und lerne schnell.",
+              "ar": "ألتزم بالوقت، ودود، وأتعلّم بسرعة."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Bewerbungs-E-Mail — بريد التقديم",
+        "zeilen": [
+          "Betreff: Bewerbung als Verkäufer – Sami Ben Salah",
+          "Sehr geehrte Damen und Herren,",
+          "anbei finden Sie meine Unterlagen für die Stelle als Verkäufer.",
+          "Ich bin ab dem 01.03. verfügbar.",
+          "Über eine Einladung freue ich mich.",
+          "Mit freundlichen Grüßen\nSami Ben Salah\nAnlagen: Lebenslauf, Zeugnisse"
+        ]
       },
-      {
-       "who": "B",
-       "role": "مستشار",
-       "de": "Haben Sie Pass und Meldebescheinigung dabei?",
-       "ar": "هل معك الجواز وشهادة التسجيل؟"
-      },
-      {
-       "who": "A",
-       "role": "زبون",
-       "de": "Ja. Muss ich einen Mindestbetrag einzahlen?",
-       "ar": "نعم. هل يجب أن أودع مبلغاً أدنى؟"
-      },
-      {
-       "who": "B",
-       "role": "مستشار",
-       "de": "Nein, das Konto ist kostenlos im ersten Jahr.",
-       "ar": "لا، الحساب مجاني في السنة الأولى."
-      },
-      {
-       "who": "A",
-       "role": "زبون",
-       "de": "Wann bekomme ich meine Karte?",
-       "ar": "متى أحصل على بطاقتي؟"
-      },
-      {
-       "who": "B",
-       "role": "مستشار",
-       "de": "In etwa einer Woche per Post.",
-       "ar": "في نحو أسبوع عبر البريد."
+      "rolle": {
+        "sitter": "A: متقدّم لمقابلة",
+        "partner": "B: مسؤول التوظيف",
+        "stichworte": [
+          "Vorstellen",
+          "Stärken",
+          "Fragen stellen"
+        ],
+        "plan": [
+          "عرّف نفسك في ثلاث جُمل",
+          "أجب عن: لماذا تقدّمت؟ ولماذا غادرت؟",
+          "اسأل عن: المهام · الساعات · بداية العمل"
+        ]
       }
-     ]
     },
     {
-     "titel": "بطاقة مسروقة (Karte sperren)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "زبون",
-       "de": "Meine Kreditkarte ist weg! Ich glaube, sie wurde gestohlen.",
-       "ar": "بطاقتي الائتمانية ضاعت! أظنها سُرقت."
+      "id": "uni",
+      "emoji": "🎓",
+      "nameDe": "Universität",
+      "nameAr": "الجامعة",
+      "kontext": "تسجيل سمينار، تمديد مهلة ورقة، ساعة استقبال الأستاذ — لغة الدراسة الجامعية.",
+      "lektionen": [
+        "a1-trennbar",
+        "a2-reflexiv",
+        "a1-modalverben"
+      ],
+      "saetze": [
+        {
+          "de": "Ich möchte mich für das Seminar anmelden.",
+          "ar": "أريد التسجيل في السمينار."
+        },
+        {
+          "de": "Bis wann muss ich die Hausarbeit abgeben?",
+          "ar": "حتى متى أسلّم الورقة البحثية؟"
+        },
+        {
+          "de": "Ich habe die Vorlesung leider verpasst.",
+          "ar": "فاتتني المحاضرة للأسف."
+        },
+        {
+          "de": "Können Sie mir das Thema für die Klausur nennen?",
+          "ar": "هل تذكّرون لي موضوع الامتحان؟"
+        },
+        {
+          "de": "Ich brauche eine Bescheinigung fürs BAföG.",
+          "ar": "أحتاج شهادة للمنحة الدراسية."
+        },
+        {
+          "de": "Wann sind Ihre Sprechstunden?",
+          "ar": "متى ساعات استقبالكم؟"
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "التسجيل في مكتب الأقسام (Sekretariat)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "طالب",
+              "de": "Ich möchte mich für den Deutschkurs anmelden.",
+              "ar": "أريد التسجيل في دورة الألمانية."
+            },
+            {
+              "who": "B",
+              "role": "سكرتارية",
+              "de": "Haben Sie das Zertifikat B1?",
+              "ar": "هل معك شهادة B1؟"
+            },
+            {
+              "who": "A",
+              "role": "طالب",
+              "de": "Ja, hier ist es. Wann beginnt der Kurs?",
+              "ar": "نعم، ها هي. متى تبدأ الدورة؟"
+            },
+            {
+              "who": "B",
+              "role": "سكرتارية",
+              "de": "Am 5. Oktober, montags und mittwochs.",
+              "ar": "الخامس من أكتوبر، الاثنين والأربعاء."
+            },
+            {
+              "who": "A",
+              "role": "طالب",
+              "de": "Wie viele Plätze sind noch frei?",
+              "ar": "كم مقعداً شاغراً بقي؟"
+            },
+            {
+              "who": "B",
+              "role": "سكرتارية",
+              "de": "Nur noch drei. Melden Sie sich heute noch an.",
+              "ar": "ثلاثة فقط. سجّل اليوم."
+            }
+          ]
+        },
+        {
+          "titel": "ساعة الاستقبال (Sprechstunde)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "طالب",
+              "de": "Entschuldigung, ich habe eine Frage zur Hausarbeit.",
+              "ar": "عندي سؤال عن الورقة البحثية."
+            },
+            {
+              "who": "B",
+              "role": "أستاذ",
+              "de": "Ja, worum geht es?",
+              "ar": "نعم، عن ماذا؟"
+            },
+            {
+              "who": "A",
+              "role": "طالب",
+              "de": "Darf ich eigene Interviews als Quelle benutzen?",
+              "ar": "هل أستعمل مقابلاتي الخاصة كمصدر؟"
+            },
+            {
+              "who": "B",
+              "role": "أستاذ",
+              "de": "Ja, aber mit Transkript und Einverständnis.",
+              "ar": "نعم، لكن بتفريغ وبموافقة."
+            },
+            {
+              "who": "A",
+              "role": "طالب",
+              "de": "Und wie lang soll die Arbeit sein?",
+              "ar": "وكم يجب أن يكون طول الورقة؟"
+            },
+            {
+              "who": "B",
+              "role": "أستاذ",
+              "de": "Zwölf bis fünfzehn Seiten, Schriftgröße 12.",
+              "ar": "اثنتا عشرة إلى خمس عشرة صفحة، حجم 12."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "E-Mail: Fristverlängerung — طلب تمديد مهلة",
+        "zeilen": [
+          "Betreff: Bitte um Fristverlängerung – Hausarbeit",
+          "Sehr geehrte Frau Dr. Keller,",
+          "aus gesundheitlichen Gründen kann ich die Hausarbeit",
+          "nicht bis zum 20.06. abgeben.",
+          "Ich bitte um eine Verlängerung bis zum 04.07. Ein Attest liegt bei.",
+          "Mit freundlichen Grüßen\nSami Ben Salah"
+        ]
       },
-      {
-       "who": "B",
-       "role": "الخط الساخن",
-       "de": "Keine Panik. Ich sperre sie sofort. Ihre Kontonummer?",
-       "ar": "لا داعي للذعر. سأغلقها فوراً. رقم حسابك؟"
-      },
-      {
-       "who": "A",
-       "role": "زبون",
-       "de": "… Und kann ich eine neue Karte bekommen?",
-       "ar": "… وهل أحصل على بطاقة جديدة؟"
-      },
-      {
-       "who": "B",
-       "role": "الخط الساخن",
-       "de": "Ja, die kommt in drei Tagen.",
-       "ar": "نعم، تصل خلال ثلاثة أيام."
-      },
-      {
-       "who": "A",
-       "role": "زبون",
-       "de": "Was passiert mit dem Geld auf dem Konto?",
-       "ar": "ماذا يحدث للمال في الحساب؟"
-      },
-      {
-       "who": "B",
-       "role": "الخط الساخن",
-       "de": "Das ist sicher. Ohne Karte kommt niemand daran.",
-       "ar": "المال آمن. لا أحد يصله دون بطاقة."
+      "rolle": {
+        "sitter": "A: طالب",
+        "partner": "B: أستاذ/سكرتارية قسم",
+        "stichworte": [
+          "Anmelden",
+          "Frist",
+          "Bescheinigung"
+        ],
+        "plan": [
+          "عرّف نفسك وطلبك في جملة",
+          "اذكر السبب والتواريخ بدقة",
+          "اطلب التأكيد أو البديل (موعد آخر/تمديد)"
+        ]
       }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "E-Mail an die Bank — تحويل لم يصل",
-    "zeilen": [
-     "Betreff: Fehlende Überweisung vom 03.06.",
-     "Guten Tag,",
-     "am 03.06. sollte eine Überweisung über 200 Euro",
-     "auf mein Konto (IBAN …) eingehen.",
-     "Bisher ist nichts angekommen. Bitte prüfen Sie den Vorgang.",
-     "Mit freundlichen Grüßen\nSami Ben Salah"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: زبون",
-    "partner": "B: مستشار البنك",
-    "stichworte": [
-     "Konto eröffnen",
-     "Gebühren",
-     "Karte sperren"
-    ],
-    "plan": [
-     "اطلب الخدمة بجملة واحدة واضحة",
-     "اسأل عن الشروط والرسوم والمدد",
-     "اطلب ورقة تأكيد أو رقم مرجع"
-    ]
-   }
-  },
-  {
-   "id": "wohnung",
-   "emoji": "🏠",
-   "nameDe": "Wohnung & Miete",
-   "nameAr": "السكن والإيجار",
-   "kontext": "معاينة شقة، عطب في التدفئة، إنهاء العقد — حقوقك ولغتك تحت سقف واحد.",
-   "saetze": [
-    {
-     "de": "Ich interessiere mich für die Wohnung in der Parkstraße.",
-     "ar": "أنا مهتمّ بالشقة في شارع الحديقة."
     },
     {
-     "de": "Wann kann ich die Wohnung besichtigen?",
-     "ar": "متى أستطيع معاينة الشقة؟"
-    },
-    {
-     "de": "Die Heizung funktioniert seit gestern nicht.",
-     "ar": "التدفئة لا تعمل منذ الأمس."
-    },
-    {
-     "de": "Ich möchte den Mangel schriftlich melden.",
-     "ar": "أريد الإبلاغ عن العطب كتابياً."
-    },
-    {
-     "de": "Die Miete ist am dritten Werktag fällig.",
-     "ar": "الإيجار يستحقّ في اليوم الثالث من أيام العمل."
-    },
-    {
-     "de": "Ich möchte zum Monatsende kündigen.",
-     "ar": "أريد إنهاء العقد بنهاية الشهر."
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "معاينة الشقة (Besichtigung)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "باحث عن سكن",
-       "de": "Ich habe die Anzeige gesehen. Ist die Wohnung noch frei?",
-       "ar": "رأيت الإعلان. هل الشقة ما زالت شاغرة؟"
+      "id": "jobcenter",
+      "emoji": "🧾",
+      "nameDe": "Bürgergeld & Mitwirkung",
+      "nameAr": "عِوَضُ المواطنةِ وواجبُ التعاون",
+      "kontext": "تسجيلٌ كعاطلٍ، طلبُ Bürgergeld، ودعوتُ Integration: الوثائقُ غلافُ الأمر، والصمتُ عن الدعوةِ يُكلِّفُ المال.",
+      "lektionen": [
+        "a2-praeteritum",
+        "a2-negation",
+        "b1-genitiv"
+      ],
+      "saetze": [
+        {
+          "de": "Ich möchte mich arbeitslos melden — mein Vertrag endete zum Monatsende.",
+          "ar": "أريدُ التصريحَ ببطالتي — انتهى عقدي آخرَ الشهر."
+        },
+        {
+          "de": "Ohne Arbeitsbescheinigung des Arbeitgebers keine Bearbeitung.",
+          "ar": "بدونِ شهادةِ عملٍ من المُشغِّل لا معالجةَ للطلب."
+        },
+        {
+          "de": "Der Bewilligungsbescheid liegt abholbereit in Ihrem Postfach.",
+          "ar": "قرارُ المنحةِ جاهزٌ للسحبِ في صندوقِ رسائلك."
+        },
+        {
+          "de": "Bei einer Sanktion kann ich innerhalb eines Monats widersprechen.",
+          "ar": "عندَ العقوبةِ يحقُّ لي الاعتراضُ خلالَ شهرٍ واحد."
+        },
+        {
+          "de": "Das Jobcenter erstattet die Fahrtkosten zum Bewerbungsgespräch.",
+          "ar": "صندوقُ التعليمِ يغطي مصاريفَ التنقلِ لمقابلةِ العمل."
+        },
+        {
+          "de": "Ich brauche einen Bildungsgutschein für die Umschulung.",
+          "ar": "أحتاجُ قسيمةَ تأهيلٍ لإعادةِ التكوين."
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "Erstmeldung (التسجيلُ الأول)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Youssef",
+              "de": "Guten Tag — mein Arbeitgeber meldet mich erst nächste Woche. Gelte ich schon als arbeitslos?",
+              "ar": "مرحبًا — مشغِّلي لن يُصرِّحَ بي إلا الأسبوعَ القادم. هل أُعَدُّ عاطلاً الآن؟"
+            },
+            {
+              "who": "B",
+              "role": "Beraterin",
+              "de": "Nein — melden Sie sich erst, wenn das Arbeitsverhältnis endet. Dann ist der Tag maßgeblich.",
+              "ar": "لا — صرِّحْ فقط حين ينتهي العقد. وحينها يُعتدُّ باليوم."
+            },
+            {
+              "who": "A",
+              "role": "Youssef",
+              "de": "Welche Papiere soll ich zum Termin mitbringen?",
+              "ar": "ما الوثائقُ التي أحضرُها للميعاد؟"
+            },
+            {
+              "who": "B",
+              "role": "Beraterin",
+              "de": "Personalausweis, Kündigung, Arbeitsbescheinigung und Kontoauszug der letzten drei Monate.",
+              "ar": "هوية، رسالةُ إنهاء، شهادةُ عمل، وكشوفُ حسابٍ لثلاثةِ أشهر."
+            },
+            {
+              "who": "A",
+              "role": "Youssef",
+              "de": "Meine Frau arbeitet Teilzeit — muss ihr Gehalt auch rein?",
+              "ar": "زوجتي تعمل جزئيًّا — هل يدخلُ راتبُها أيضًا؟"
+            },
+            {
+              "who": "B",
+              "role": "Beraterin",
+              "de": "Ja, zur Bedarfsgemeinschaft — aber ein Teilzeitbonus bleibt anrechnungsfrei.",
+              "ar": "نعم، كوحدةِ حاجة — لكن علاوةَ العملِ الجزئيِّ معفاةٌ من الاحتساب."
+            }
+          ]
+        },
+        {
+          "titel": "Einladung ohne Antwort (دعوةٌ بلا جواب)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Sonia",
+              "de": "Ich habe den Brief vom 3. verpasst — ich war im Krankenhaus.",
+              "ar": "فاتَني خطابُ الثالثِ من الشهر — كنتُ في المستشفى."
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Ohne Entschuldigung gilt das als Mitwirkungsverweigerung: eine Minderung.",
+              "ar": "بلا عذرٍ يُعَدُّ امتناعًا عن التعاون: خفضٌ في المنحة."
+            },
+            {
+              "who": "A",
+              "role": "Sonia",
+              "de": "Hier ist die Klinikbestätigung samt Datum und Unterschrift.",
+              "ar": "هذه شهادةُ المستشفى بالتاريخِ والتوقيع."
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Danach hebe ich die Minderung auf — neuer Termin am Donnerstag.",
+              "ar": "وعندها أرفعُ الخفض — ميعادٌ جديدٌ الخميس."
+            },
+            {
+              "who": "A",
+              "role": "Sonia",
+              "de": "Darf ich künftig Einladungen per E-Mail mit Lesebestätigung?",
+              "ar": "أأستقبلُ الدعواتِ مستقبلًا بالبريدِ مع إشعارِ القراءة؟"
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Ja — tragen Sie die Adresse im Portal ein; dort erscheinen auch die Bescheide.",
+              "ar": "نعم — أدخلي العنوانَ في البوابة؛ حيث تظهرُ القراراتُ أيضًا."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Antrag auf Arbeitslosengeld — أهمُّ الخاناتِ في نموذجِ الطلب",
+        "zeilen": [
+          "Angaben zur Person: Name, Anschrift, Steuernummer",
+          "Letzter Arbeitgeber und Enddatum des Arbeitsvertrags",
+          "Verfügbarkeit: Vermittlungsvorschläge, Mobilität ja/nein",
+          "Bedarfsgemeinschaft: Partner, Kinder, Einkommen",
+          "Anlagen: Arbeitsbescheinigung, Kündigung, Kontoauszüge",
+          "Ort, Datum, eigenhändige Unterschrift"
+        ]
       },
-      {
-       "who": "B",
-       "role": "صاحب العقار",
-       "de": "Ja. Möchten Sie sie heute besichtigen?",
-       "ar": "نعم. هل تريد معاينتها اليوم؟"
-      },
-      {
-       "who": "A",
-       "role": "باحث عن سكن",
-       "de": "Gern. Wie hoch ist die Kaution?",
-       "ar": "بكل سرور. كم مبلغ الضمان؟"
-      },
-      {
-       "who": "B",
-       "role": "صاحب العقار",
-       "de": "Zwei Kaltmieten. Warm sind es 780 Euro.",
-       "ar": "إيجاران بارداً. دافئاً 780 يورو."
-      },
-      {
-       "who": "A",
-       "role": "باحث عن سكن",
-       "de": "Ist ein Balkon dabei?",
-       "ar": "هل تشمل شرفة؟"
-      },
-      {
-       "who": "B",
-       "role": "صاحب العقار",
-       "de": "Ja, ein kleiner zum Hof hin.",
-       "ar": "نعم، صغيرة تطلّ على الفناء."
+      "rolle": {
+        "sitter": "A: عاطلٌ Seeking-first-Job بعدَ تسريح",
+        "partner": "B: مستشارةُ Agentur für Arbeit",
+        "stichworte": [
+          "Meldezeitpunkt klären",
+          "Anlagen benennen",
+          "Einkommen der Partnerin erklären"
+        ],
+        "plan": [
+          "اسألْ عن يومِ السَّريان لا عن الوعد",
+          "اذكر كلَّ مرفقٍ باسمه الدقيق",
+          "اطلبْ بدائلَ مكتوبةً للإشعارات"
+        ]
       }
-     ]
     },
     {
-     "titel": "الإبلاغ عن عطب (Mangel melden)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "مستأجر",
-       "de": "Guten Tag, es geht um die Heizung in meiner Wohnung.",
-       "ar": "مرحباً، بخصوص تدفئة شقتي."
+      "id": "wohngeld",
+      "emoji": "🏠",
+      "nameDe": "Wohngeld — Mietzuschuss",
+      "nameAr": "بدلُ السكنِ — إعانةُ الإيجار",
+      "kontext": "دخلٌ لا يكفي والإيجارُ ثابت: Wohngeld يردُّ الفارق — إن عرفتَ كيف تُثبِتُ الدخلَ والسكنَ معًا.",
+      "lektionen": [
+        "a1-dativ",
+        "a1-akkusativ",
+        "a1-wechsel"
+      ],
+      "saetze": [
+        {
+          "de": "Ich beantrage Wohngeld für eine Zweizimmerwohnung.",
+          "ar": "أطلبُ بدلَ سكنٍ لشقةٍ من غرفتين."
+        },
+        {
+          "de": "Der Mietzuschuss beginnt mit dem Monat der Antragstellung.",
+          "ar": "تبدأ الإعانةُ من شهرِ تقديمِ الطلب."
+        },
+        {
+          "de": "Die Kaltmiete gehört in die Anlage Miete, Nebenkosten nicht.",
+          "ar": "الإيجارُ الجافُّ في ملحقِ الإيجار — والنفقاتُ الجانبية خارجَه."
+        },
+        {
+          "de": "Als Einkommen zählen Lohn, Kindergeld und Unterhalt.",
+          "ar": "الدخلُ يشملُ الأجرَ وبدلَ الأطفالِ والنفقة."
+        },
+        {
+          "de": "Der Bescheid gilt zwölf Monate — danach ein Neuer mit frischen Nachweisen.",
+          "ar": "القرارُ سارٍ اثني عشرَ شهرًا ثم يُجدَّدُ بإثباتاتٍ جديدةٍ."
+        },
+        {
+          "de": "Bei Widerspruch bitte den Bewilligungsbescheid im Original beilegen.",
+          "ar": "وعندَ الاعتراضِ يُرفَقُ قرارُ المنحةِ بالأصل."
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "Antrag mit Lücken (طلبٌ بنواقص)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Amel",
+              "de": "Mein Antrag wurde abgelehnt — die Einkommensnachweise fehlen.",
+              "ar": "رُفِضَ طلبي — تنقصني إثباتاتُ الدخل."
+            },
+            {
+              "who": "B",
+              "role": "Amtsfrau",
+              "de": "Es genügen die letzten drei Gehaltsabrechnungen und der Kindergeldbescheid.",
+              "ar": "تكفي كشوفُ الرواتبِ الثلاثةِ الأخيرة وقرارُ بدلِ الأطفال."
+            },
+            {
+              "who": "A",
+              "role": "Amel",
+              "de": "Mein Chef stellt eine Bescheinigung aus — reicht das?",
+              "ar": "يُصدرُ مديري شهادة — أتكفي؟"
+            },
+            {
+              "who": "B",
+              "role": "Amtsfrau",
+              "de": "Nur mit Stempel und Bruttobetrag; eine Kopie der Abrechnung wirkt sicherer.",
+              "ar": "بالختمِ والمبلغِ الإجماليّ فقط؛ ونسخةُ الكشفِ أوثق."
+            },
+            {
+              "who": "A",
+              "role": "Amel",
+              "de": "Und die Nebenkosten — muss ich sie angeben?",
+              "ar": "والنفقاتُ الجانبية — أُصرِّحُ بها؟"
+            },
+            {
+              "who": "B",
+              "role": "Amtsfrau",
+              "de": "Nein, aber die kalte Miete und der Mietvertrag müssen vollständig sein.",
+              "ar": "لا — لكنَّ الجافَّ والعقدَ يجبُ أن يكونا كاملين."
+            }
+          ]
+        },
+        {
+          "titel": "Nachzahlung nach Umzug (تسويةٌ بعد الانتقال)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Karim",
+              "de": "Ich bin im März umgezogen — zahlt das Amt die Zeit bis dahin?",
+              "ar": "انتقلتُ في مارس — أيدفعُ المكتبُ عن المدةِ السابقة؟"
+            },
+            {
+              "who": "B",
+              "role": "Berater",
+              "de": "Neue Wohnung, neuer Antrag: Zuschuss ab Monat des Eingangs.",
+              "ar": "شقةٌ جديدةٌ وطلبٌ جديد: الإعانةُ من شهرِ الوصول."
+            },
+            {
+              "who": "A",
+              "role": "Karim",
+              "de": "Warum sank mein Bescheid trotz gleicher Miete?",
+              "ar": "ولماذا نقصَ قراري مع أنَّ الإيجارَ ثابت؟"
+            },
+            {
+              "who": "B",
+              "role": "Berater",
+              "de": "Das Kindergeld wurde auf die Bedarfsgemeinschaft angerechnet — Widerspruch ist möglich.",
+              "ar": "احتُسِبَ بدلُ الأطفالِ على وحدةِ الحاجة — والاعتراضُ جائز."
+            },
+            {
+              "who": "A",
+              "role": "Karim",
+              "de": "Wie hoch bleibt der monatliche Zuschuss dann?",
+              "ar": "فكم يبقى البدلُ الشهري؟"
+            },
+            {
+              "who": "B",
+              "role": "Berater",
+              "de": "Nach Korrektur sechzig Euro statt vierzig — die Nachzahlung folgt gesondert.",
+              "ar": "بعد التصحيح ستون بدلَ أربعين، والتسويةُ اللاحقةُ مُنفصلة."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Wohngeldantrag — ما يُملأُ في نموذجِ بدلِ السكن",
+        "zeilen": [
+          "Angaben zum Haushalt: Mitglieder, Geburtsdaten",
+          "Wohnung: Anschrift, Mietart, Bezugsdatum",
+          "Miete: Kaltmiete, Betriebskosten laut Anlage Miete",
+          "Einkommen aller Mitglieder mit Anlage E",
+          "Kinder: Schul-/Ausbildungsbescheinigung beifügen",
+          "Versicherung: keine parallele Leistung (z.B. Bürgergeld)"
+        ]
       },
-      {
-       "who": "B",
-       "role": "إدارة",
-       "de": "Was ist das Problem genau?",
-       "ar": "ما المشكلة بالضبط؟"
-      },
-      {
-       "who": "A",
-       "role": "مستأجر",
-       "de": "Seit gestern kommt nur kaltes Wasser aus der Heizung.",
-       "ar": "منذ الأمس لا يأتي إلا ماء بارد من التدفئة."
-      },
-      {
-       "who": "B",
-       "role": "إدارة",
-       "de": "Ich schicke morgen den Handwerker.",
-       "ar": "سأرسل الفنيّ غداً."
-      },
-      {
-       "who": "A",
-       "role": "مستأجر",
-       "de": "Bitte um zwölf Uhr — ich arbeite ab zwei.",
-       "ar": "من فضلك الساعة الثانية عشرة — أعمل من الثانية."
-      },
-      {
-       "who": "B",
-       "role": "إدارة",
-       "de": "In Ordnung. Sie bekommen Bescheid.",
-       "ar": "حسنًا. ستصلكم المعلومة."
+      "rolle": {
+        "sitter": "A: موظفٌ جزئيٌّ إيجارُه يلتهمُ الراتب",
+        "partner": "B: موظفةُ Wohngeldstelle",
+        "stichworte": [
+          "Einkommen lückenlos nennen",
+          "falsche Anrechnung beanstanden",
+          "Fristen für Nachforderung klären"
+        ],
+        "plan": [
+          "افتحْ بالوضعِ الماليِّ لا بالعاطفة",
+          "سَمِّ كلَّ ملحقٍ برقمِه",
+          "اختتمْ بموعدِ الصرفِ لا بالوعدِ الشفهي"
+        ]
       }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Mängelmeldung an den Vermieter — إبلاغ عطب للمالك",
-    "zeilen": [
-     "Betreff: Mängelmeldung – Heizung (Wohnung 3. OG links)",
-     "Sehr geehrte(r) Frau/Herr Albrecht,",
-     "seit dem 11.05. funktioniert die Heizung nicht.",
-     "Die Temperatur fällt unter 16 Grad.",
-     "Bitte beheben Sie den Mangel bis zum 18.05.",
-     "Mit freundlichen Grüßen\nSami Ben Salah"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: مستأجر",
-    "partner": "B: مالك/إدارة عقار",
-    "stichworte": [
-     "Mangel erklären",
-     "Frist setzen",
-     "Lösung vereinbaren"
-    ],
-    "plan": [
-     "صف المشكلة: ماذا؟ ومتى بدأ؟",
-     "اطلب الإصلاح بمهلة محدّدة",
-     "اتّفق على موعد الفني وتأكيد الخطّي"
-    ]
-   }
-  },
-  {
-   "id": "arbeit",
-   "emoji": "💼",
-   "nameDe": "Arbeit & Bewerbung",
-   "nameAr": "العمل والتقديم",
-   "kontext": "طلب عمل، مقابلة، إشعار مرض — البوّابة إلى الاستقرار في ألمانيا.",
-   "saetze": [
-    {
-     "de": "Hiermit bewerbe ich mich um die Stelle als Verkäufer.",
-     "ar": "أتقدّم بهذه للوظيفة كبائع."
     },
     {
-     "de": "Ich bin ab dem ersten März verfügbar.",
-     "ar": "أنا متاح من الأول من مارس."
-    },
-    {
-     "de": "Leider bin ich heute krank — ich bleibe zu Hause.",
-     "ar": "للأسف أنا مريض اليوم — سأبقى في البيت."
-    },
-    {
-     "de": "Ich hätte gern einen Termin für ein Vorstellungsgespräch.",
-     "ar": "أودّ موعداً لمقابلة تعريفية."
-    },
-    {
-     "de": "Meine Stärken sind Pünktlichkeit und Teamarbeit.",
-     "ar": "نقاط قوتي الالتزام بالوقت والعمل الجماعي."
-    },
-    {
-     "de": "Wie sind die Arbeitszeiten im Team?",
-     "ar": "كيف هي ساعات العمل في الفريق؟"
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "إشعار مرض (Krankmeldung)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "موظّف",
-       "de": "Guten Tag, hier ist Sami aus dem Verkauf. Ich bin heute krank.",
-       "ar": "مرحباً، سامي من قسم البيع. أنا مريض اليوم."
+      "id": "kindergeld",
+      "emoji": "👶",
+      "nameDe": "Kindergeld & Familienkasse",
+      "nameAr": "بدلُ الأطفالِ وصندوقُ الأسرة",
+      "kontext": "أطفالٌ في تونس أو في ألمانيا والمبلغُ يُدفَعُ في الحالتين — لمن عرفَ الرقمَ الخاصَّ والأوراقَ المُصدَّقة.",
+      "lektionen": [
+        "a1-modalverben",
+        "b1-passiv",
+        "b1-partizip1"
+      ],
+      "saetze": [
+        {
+          "de": "Für meine Kinder in Tunesien beantrage ich Kindergeld.",
+          "ar": "أطلبُ بدلَ الأطفالِ لأولادي في تونس."
+        },
+        {
+          "de": "Die Kindergeldnummer muss in jedem neuen Antrag stehen.",
+          "ar": "رقمُ البدلِ لازمٌ في كلِّ طلبٍ جديد."
+        },
+        {
+          "de": "Die ausländische Geburtsurkunde braucht eine beglaubigte Übersetzung.",
+          "ar": "شهادةُ الميلادِ الأجنبيةُ تحتاجُ ترجمةً مُصدَّقًا عليها."
+        },
+        {
+          "de": "Der Nachzahlungsbetrag wird rückwirkend bis sechs Monate gewährt.",
+          "ar": "المبلغُ المؤجَّلُ يُصرَفُ بأثرٍ رجعيٍّ لستةِ أشهر."
+        },
+        {
+          "de": "Mein Kind macht eine Ausbildung — die Bescheinigung reicht der Kasse.",
+          "ar": "ابني في تكوينٍ مهني — تكفي الشهادةُ الصندوقَ."
+        },
+        {
+          "de": "Bei Streit hilft der Einspruch innerhalb eines Monats.",
+          "ar": "عندَ الخلافِ ينفعُ التظلُّمُ خلالَ شهرٍ واحد."
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "Erstantrag mit Kindern im Ausland (طلبٌ أولُ وأطفالٌ في الوطن)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Leïla",
+              "de": "Ich arbeite seit Februar hier — meine Kinder blieben in Tunis.",
+              "ar": "أعملُ هنا منذ فيفري — وأطفالي بقوا في تونس."
+            },
+            {
+              "who": "B",
+              "role": "Familienkasse",
+              "de": "Das Kindergeld steht EU-Ausländern und etlichen Verträgen zu — Antrag genügt.",
+              "ar": "البدلُ مستحقٌّ لمواطني الاتحادِ وللاتفاقيات — ويكفي الطلب."
+            },
+            {
+              "who": "A",
+              "role": "Leïla",
+              "de": "Welche Papiere brauchen Sie von der Botschaft?",
+              "ar": "ما وثائقُ السفارةِ لديكم؟"
+            },
+            {
+              "who": "B",
+              "role": "Familienkasse",
+              "de": "Geburtsurkunden, Schulbescheinigungen und die Meldebestätigung beider Eltern.",
+              "ar": "شهاداتُ الميلاد، التلميذيات، وشهادةُ ربِّ الأسرةِ المعيشيةِ مُصدَّقةً من السفارة."
+            },
+            {
+              "who": "A",
+              "role": "Leïla",
+              "de": "Und die Übersetzung — reicht eine beglaubigte Kopie?",
+              "ar": "والترجمة — تنسخةٌ مصدَّقة؟"
+            },
+            {
+              "who": "B",
+              "role": "Familienkasse",
+              "de": "Nur vereidigte Übersetzer — andernfalls geht der Antrag zurück.",
+              "ar": "عندَ المترجمين المحلَّفين فقط — وإلا رُدَّ الطلب."
+            }
+          ]
+        },
+        {
+          "titel": "Ausbildungsende und Weiterzahlung (انتهاءُ التكوين)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Hedi",
+              "de": "Meine Tochter endet die Ausbildung im Juni — fällt das Geld sofort?",
+              "ar": "ابنتي تُنهي التكوينَ في جوان — يسقُطُ المالُ فورًا؟"
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Nein: bis zur Abschlussprüfung und dann bei Anmeldung zur Arbeitslosigkeit weiter.",
+              "ar": "لا — إلى امتحانِ النهاية ثم بتسجيلِ البطالة يستمر."
+            },
+            {
+              "who": "A",
+              "role": "Hedi",
+              "de": "Sie will danach studieren — braucht ihr einen neuen Nachweis?",
+              "ar": "ستدرسُ بعدها — أيلزمُكم إثباتٌ جديد؟"
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Die Immatrikulationsbescheinigung genügt, digital hochladen.",
+              "ar": "شهادةُ التسجيلِ تكفي — تُرفَعُ رقميًا."
+            },
+            {
+              "who": "A",
+              "role": "Hedi",
+              "de": "Und wenn ich die Frist versäume — Rückforderung?",
+              "ar": "وإن فاتَني الميعاد — استرجاع؟"
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Dann fordern wir zurück; die Korrektur binnen Monatsfrist heilt das Meiste.",
+              "ar": "نستردُّ حينها؛ والتصحيحُ خلالَ شهرٍ يُرمِّمُ أكثرَه."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Kindergeldantrag — خاناتُ الطلبِ الأساس",
+        "zeilen": [
+          "Kindergeldnummer (falls vorhanden)",
+          "Kinder: Name, Geburtsdatum, Staatsangehörigkeit",
+          "Wohnsitz der Kinder im Ausland mit Anschrift",
+          "Schul- oder Ausbildungsbescheinigung anhängen",
+          "Bankverbindung (IBAN) für Auszahlung",
+          "Erklärung zu sonstigem Kindergeld im Ausland"
+        ]
       },
-      {
-       "who": "B",
-       "role": "سكرتارية",
-       "de": "Schade. Geht es Ihnen schlimm?",
-       "ar": "مؤسف. هل حالتك سيئة؟"
-      },
-      {
-       "who": "A",
-       "role": "موظّف",
-       "de": "Eine Erkältung. Ich schicke Ihnen das Attest.",
-       "ar": "نزلة برد. سأرسل لكم الشهادة الطبية."
-      },
-      {
-       "who": "B",
-       "role": "سكرتارية",
-       "de": "Gute Besserung! Bis wann bleiben Sie zu Hause?",
-       "ar": "شفاك الله! حتى متى تبقى في البيت؟"
-      },
-      {
-       "who": "A",
-       "role": "موظّف",
-       "de": "Bis einschließlich Freitag, vermutlich.",
-       "ar": "حتى يوم الجمعة على الأرجح."
-      },
-      {
-       "who": "B",
-       "role": "سكرتارية",
-       "de": "Gut. Melden Sie sich bitte am Montag.",
-       "ar": "جيد. سجّل حضورك يوم الاثنين."
+      "rolle": {
+        "sitter": "A: أبٌ جديدٌ في العملِ وأطفالُه بالخارج",
+        "partner": "B: موظفةُ Familienkasse",
+        "stichworte": [
+          "Kinder und Geburt nachweisen",
+          "Übersetzungsregeln fragen",
+          "Nachzahlung beantragen"
+        ],
+        "plan": [
+          "اذكر وضعَ كلِّ طفلٍ بسنِّه ودراسته",
+          "سألْ عن الصيغةِ المقبولةِ للوثيقةِ الأجنبية",
+          "اطلبْ تاريخَ بدءِ الصرفِ مكتوبًا"
+        ]
       }
-     ]
     },
     {
-     "titel": "مقابلة تعريفية (Vorstellungsgespräch)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "مسؤول توظيف",
-       "de": "Erzählen Sie kurz etwas über sich.",
-       "ar": "احكِ عن نفسك باختصار."
+      "id": "versicherung",
+      "emoji": "🩺",
+      "nameDe": "Krankenkasse: Familie & Beitrag",
+      "nameAr": "صندوقُ المرض: الأسرةُ والاشتراك",
+      "kontext": "زوجةٌ بلا عملٍ وأبناءٌ صِغار: التأمينُ العائليُّ المجانيُّ يحميهم — بحدِّ دخلٍ دقيقٍ وشروطِ إقامة.",
+      "lektionen": [
+        "a1-akkusativ",
+        "b1-passiv",
+        "a1-dativ"
+      ],
+      "saetze": [
+        {
+          "de": "Ich möchte meine Familie familienversichern lassen.",
+          "ar": "أريدُ تأمينَ أسرتي التأمينَ العائليَّ المجانيّ."
+        },
+        {
+          "de": "Die Familienversicherung ist beitragsfrei bis zu einem Minijob-Gehalt.",
+          "ar": "التأمينُ العائليُّ بلا اشتراكٍ حتى أجرِ العملِ الصغير."
+        },
+        {
+          "de": "Der Zusatzbeitrag ist je nach Kasse unterschiedlich hoch.",
+          "ar": "الاشتراكُ الإضافيُّ يختلفُ من صندوقٍ إلى آخر."
+        },
+        {
+          "de": "Bei Heirat melde ich die Ehepartnerin innerhalb einer Woche.",
+          "ar": "عندَ الزواجِ أُبلِّغُ عن زوجتي خلالَ أسبوع."
+        },
+        {
+          "de": "Der Beitrag wird vom Lohn einbehalten, der Arbeitgeber zahlt die Hälfte.",
+          "ar": "يُقتطَعُ الاشتراكُ من الأجر، والمشغِّلُ يدفعُ النصف."
+        },
+        {
+          "de": "Die elektronische Gesundheitskarte kommt nach vier Wochen per Post.",
+          "ar": "بطاقةُ الصحةِ الإلكترونية تصلُ بالبريدِ بعدَ أربعةِ أسابيع."
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "Familienversicherung beantragen",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Sami",
+              "de": "Meine Frau ist seit Mai hier und arbeitet nicht — kann sie mitversichert werden?",
+              "ar": "زوجتي هنا منذ ماي ولا تعمل — أتُؤمَّنُ معي؟"
+            },
+            {
+              "who": "B",
+              "role": "Kassenfrau",
+              "de": "Ja — heiratsurkunde, Aufenthaltstitel und Einkommenserklärung.",
+              "ar": "نعم — عقدُ زواج، إقامة، وإقرارُ دخل."
+            },
+            {
+              "who": "A",
+              "role": "Sami",
+              "de": "Sie lernt Deutsch mit Bürgergeld — ändert das etwas?",
+              "ar": "تتعلَّمُ الألمانيةَ بعِوَضٍ — أيتغيِّرُ شيء؟"
+            },
+            {
+              "who": "B",
+              "role": "Kassenfrau",
+              "de": "Bei eigenem Anspruch ruht die Familienversicherung — prüfen wir die Reihenfolge.",
+              "ar": "إن استحقَّتْ وحدها توقَّفَ العائلي — نفحصُ الأسبقية."
+            },
+            {
+              "who": "A",
+              "role": "Sami",
+              "de": "Und unsere Kinder brauchen eine eigene Geburtsurkunde?",
+              "ar": "وأطفالي — شهاداتُ ميلادَ خاصة؟"
+            },
+            {
+              "who": "B",
+              "role": "Kassenfrau",
+              "de": "Ja, mit Übersetzung; Karten schicken wir allen nach vier Wochen.",
+              "ar": "نعم بالترجمة؛ ونُرسِلُ البطاقاتِ جميعَها بعدَ أربعةِ أسابيع."
+            }
+          ]
+        },
+        {
+          "titel": "Beitrag und Zusatzbeitrag (اشتراكٌ وإضافيٌّ)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Nadia",
+              "de": "Warum stieg mein Beitrag um 0,9 Punkte?",
+              "ar": "لماذا ارتفعَ اشتراكي نقطةً وتسعةَ أعشارِ النقطة؟"
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Der Zusatzbeitrag der Kasse wurde erhöht — das Gesetz schreibt die Mitteilung vor.",
+              "ar": "زادَ الاشتراكُ الإضافيُّ للصندوق — والقانونُ يُلزِمُ بالإخطار."
+            },
+            {
+              "who": "A",
+              "role": "Nadia",
+              "de": "Darf ich wechseln, ohne dass der Beitrag springt?",
+              "ar": "أأنتقِلُ بلا قفزةِ اشتراك؟"
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Ja — die neue Kasse kündigt fristlos zum Monatsende für Sie.",
+              "ar": "نعم — الصندوقُ الجديدُ يُنهي عنك العقدَ بنهايةِ الشهر."
+            },
+            {
+              "who": "A",
+              "role": "Nadia",
+              "de": "Und während des Wechsels: Versicherungsschutz?",
+              "ar": "وبينَ الصندوقَين: أأبقى مغطاة؟"
+            },
+            {
+              "who": "B",
+              "role": "Sachbearbeiter",
+              "de": "Lückenlos geschützt — die Meldung läuft automatisch über den Arbeitgeber.",
+              "ar": "تغطيةٌ متصلة — والإبلاغُ آليٌّ عبرَ المشغِّل."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Mitgliedsantrag — خاناتُ طلبِ العضوية",
+        "zeilen": [
+          "Mitglied: Name, Geburtsdatum, Anschrift, Steuer-ID",
+          "Familienangehörige mit Verwandtschaftsgrad",
+          "Einkommensgrenze bei Partner: Minijob ja/nein",
+          "Erstmitgliedschaft oder Wechsel mit Kündigungsdatum",
+          "Konto für Beitrag: IBAN des Arbeitgebers angeben",
+          "Anlagen: Heiratsurkunde, Geburtsurkunden, Aufenthaltstitel"
+        ]
       },
-      {
-       "who": "B",
-       "role": "متقدّم",
-       "de": "Ich habe zwei Jahre als Verkäufer gearbeitet und mag den Kundenkontakt.",
-       "ar": "عملت سنتين بائعاً وأحبّ الاتصال بالزبائن."
-      },
-      {
-       "who": "A",
-       "role": "مسؤول توظيف",
-       "de": "Warum haben Sie die letzte Stelle verlassen?",
-       "ar": "لماذا غادرت آخر وظيفة؟"
-      },
-      {
-       "who": "B",
-       "role": "متقدّم",
-       "de": "Die Filiale wurde geschlossen — nicht wegen mir.",
-       "ar": "أُغلق الفرع — لا لسببي."
-      },
-      {
-       "who": "A",
-       "role": "مسؤول توظيف",
-       "de": "Was sind Ihre Stärken?",
-       "ar": "ما نقاط قوتك؟"
-      },
-      {
-       "who": "B",
-       "role": "متقدّم",
-       "de": "Ich bin pünktlich, freundlich und lerne schnell.",
-       "ar": "ألتزم بالوقت، ودود، وأتعلّم بسرعة."
+      "rolle": {
+        "sitter": "A: عاملٌ جديدٌ يريدُ إلحاقَ أسرته",
+        "partner": "B: موظفةُ صندوقِ المرضى",
+        "stichworte": [
+          "Ehe und Kinder melden",
+          "Einkommensgrenze nennen",
+          "Zusatzbeitrag vergleichen"
+        ],
+        "plan": [
+          "ابدأ بعددِ الأفرادِ وأعمارِهم",
+          "وضِّحْ دخلَ كلِّ بالغٍ وحدَّ الإعفاء",
+          "اختمْ بموعدِ البطاقاتِ وتاريخِ سريانِ الحماية"
+        ]
       }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Bewerbungs-E-Mail — بريد التقديم",
-    "zeilen": [
-     "Betreff: Bewerbung als Verkäufer – Sami Ben Salah",
-     "Sehr geehrte Damen und Herren,",
-     "anbei finden Sie meine Unterlagen für die Stelle als Verkäufer.",
-     "Ich bin ab dem 01.03. verfügbar.",
-     "Über eine Einladung freue ich mich.",
-     "Mit freundlichen Grüßen\nSami Ben Salah\nAnlagen: Lebenslauf, Zeugnisse"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: متقدّم لمقابلة",
-    "partner": "B: مسؤول التوظيف",
-    "stichworte": [
-     "Vorstellen",
-     "Stärken",
-     "Fragen stellen"
-    ],
-    "plan": [
-     "عرّف نفسك في ثلاث جُمل",
-     "أجب عن: لماذا تقدّمت؟ ولماذا غادرت؟",
-     "اسأل عن: المهام · الساعات · بداية العمل"
-    ]
-   }
-  },
-  {
-   "id": "uni",
-   "emoji": "🎓",
-   "nameDe": "Universität",
-   "nameAr": "الجامعة",
-   "kontext": "تسجيل سمينار، تمديد مهلة ورقة، ساعة استقبال الأستاذ — لغة الدراسة الجامعية.",
-   "saetze": [
-    {
-     "de": "Ich möchte mich für das Seminar anmelden.",
-     "ar": "أريد التسجيل في السمينار."
     },
     {
-     "de": "Bis wann muss ich die Hausarbeit abgeben?",
-     "ar": "حتى متى أسلّم الورقة البحثية؟"
-    },
-    {
-     "de": "Ich habe die Vorlesung leider verpasst.",
-     "ar": "فاتتني المحاضرة للأسف."
-    },
-    {
-     "de": "Können Sie mir das Thema für die Klausur nennen?",
-     "ar": "هل تذكّرون لي موضوع الامتحان؟"
-    },
-    {
-     "de": "Ich brauche eine Bescheinigung fürs BAföG.",
-     "ar": "أحتاج شهادة للمنحة الدراسية."
-    },
-    {
-     "de": "Wann sind Ihre Sprechstunden?",
-     "ar": "متى ساعات استقبالكم؟"
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "التسجيل في مكتب الأقسام (Sekretariat)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "طالب",
-       "de": "Ich möchte mich für den Deutschkurs anmelden.",
-       "ar": "أريد التسجيل في دورة الألمانية."
+      "id": "studienfinanz",
+      "emoji": "🎓",
+      "nameDe": "BAföG & Rückmeldung",
+      "nameAr": "دعمُ الدراسةِ وإعادةُ التسجيل",
+      "kontext": "جامعَةٌ وراتبُ والدينٍ بالخارج: BAföG يُحتسَبُ بالدخلِ المُترجَم، والتسجيلُ الجامعيُّ له سقوفٌ لا ترحم.",
+      "lektionen": [
+        "b1-funktionsverben",
+        "a1-akkusativ",
+        "a1-wechsel"
+      ],
+      "saetze": [
+        {
+          "de": "Ich brauche das Formblatt über das ausländische Elterneinkommen.",
+          "ar": "أحتاجُ الاستمارةَ عن دخلِ الوالدين الأجنبيّ."
+        },
+        {
+          "de": "Der Ausländervorbehalt prüft Aufenthalt und Fachrichtung.",
+          "ar": "تفحصُ سلطةُ الأجانبِ الإقامةَ والتخصص."
+        },
+        {
+          "de": "Ohne Rückmeldung bis Fristende verliere ich den Studienplatz.",
+          "ar": "بلا إعادةِ تسجيلٍ حتى نهايةِ الميعاد أفقدُ مقعدي."
+        },
+        {
+          "de": "Das Semesterticket gilt als Fahrausweis und Studienausweis zugleich.",
+          "ar": "تذكرةُ الفصلِ بطاقةُ تنقُّلٍ وبطاقةُ دراسةٍ معًا."
+        },
+        {
+          "de": "Für das Urlaubssemester zahlt man nur den Verwaltungsbetrag.",
+          "ar": "في فصلِ الراحةِ لا يُدفَعُ سوى الرسمِ الإداري."
+        },
+        {
+          "de": "Die Rückzahlung beginnt fünf Jahre nach dem Examen — zinsfrei.",
+          "ar": "يبدأُ سدادُ الدعمِ بعدَ خمسِ سنواتٍ من الامتحان — بلا فائدة."
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "BAföG mit Eltern im Ausland",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Rania",
+              "de": "Meine Eltern verdienen in Tunesien — wie soll das Amt das prüfen?",
+              "ar": "أهلي يدخلانِ من تونس — كيف يتحققُ المكتب؟"
+            },
+            {
+              "who": "B",
+              "role": "BAföG-Amt",
+              "de": "Formblatt ausländisches Einkommen, übersetzt, mit Stempel der Behörden.",
+              "ar": "استمارةُ الدخلِ الأجنبيّ مترجمةً ومختمَةً من سلطاتكم."
+            },
+            {
+              "who": "A",
+              "role": "Rania",
+              "de": "Reicht die Steuerbescheinigung von dort?",
+              "ar": "أتكفي الشهادةُ الضريبيةُ هناك؟"
+            },
+            {
+              "who": "B",
+              "role": "BAföG-Amt",
+              "de": "Ja, wenn es einen Steuerbescheid für ein Kalenderjahr gibt.",
+              "ar": "نعم — إن شملت عامًا ميلاديًا كاملًا."
+            },
+            {
+              "who": "A",
+              "role": "Rania",
+              "de": "Und mein BAföG-Amt zahlt ab wann?",
+              "ar": "فمن متى يدفعون؟"
+            },
+            {
+              "who": "B",
+              "role": "BAföG-Amt",
+              "de": "Ab dem Monat, in dem die Vorlesungen beginnen — der Antrag vor dem Ersten genügt.",
+              "ar": "من شهرِ المحاضرات — إن وصلَ طلبُك مع أولِ يومِ دراسة."
+            }
+          ]
+        },
+        {
+          "titel": "Rückmeldung mit Engpass (إعادةُ تسجيلٍ في لحظةِ عسر)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Firas",
+              "de": "Mein Überweisungstermin ist Freitag, die Rückmeldefrist Montag.",
+              "ar": "تحويلُ يومِ الجمعة، وميعادُ التسجيلِ الاثنين."
+            },
+            {
+              "who": "B",
+              "role": "Studierendensekretariat",
+              "de": "Der Zahlungsnachweis zählt erst am Konto der Uni, nicht am Beleg.",
+              "ar": "يُعَدُّ الإيصالُ بتاريخِ وصولِه لا بتاريخِ ورقةِ الصرَّاف."
+            },
+            {
+              "who": "A",
+              "role": "Firas",
+              "de": "Kann die Frist gegen eine Gebühr verlängert werden?",
+              "ar": "أتُمَدَّدُ برسوم؟"
+            },
+            {
+              "who": "B",
+              "role": "Studierendensekretariat",
+              "de": "Nur bei Urlaubssemester oder Elternzeit — sonst Exmatrikulation zum Fristende.",
+              "ar": "لفصلِ راحةٍ أو والديةٍ فقط — وإلا فالشطبُ بنهايةِ الميعاد."
+            },
+            {
+              "who": "A",
+              "role": "Firas",
+              "de": "Dann bitte das Urlaubssemester mit Verwaltungsgebühr.",
+              "ar": "إذن فصلُ راحةٍ مع الرسمِ الإداري."
+            },
+            {
+              "who": "B",
+              "role": "Studierendensekretariat",
+              "de": "Antrag bis morgen, dann bleibt Ihr Platz bis zum Winter gesichert.",
+              "ar": "غدًا الطلب — ويبقى مقعدُك إلى الشتاءِ محفوظًا."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "BAföG-Antrag — أهمُّ حقولِ النموذج",
+        "zeilen": [
+          "Hochschule, Studienfach und Fachsemester",
+          "Staatsangehörigkeit und Aufenthaltsstatus",
+          "Elterneinkommen: ausländisches Formblatt beifügen",
+          "Vermögen und eigene Einkünfte über 450 Euro angeben",
+          "Kontodaten für monatliche Vorauszahlung",
+          "Unterschrift beider Eltern, falls unter 30"
+        ]
       },
-      {
-       "who": "B",
-       "role": "سكرتارية",
-       "de": "Haben Sie das Zertifikat B1?",
-       "ar": "هل معك شهادة B1؟"
-      },
-      {
-       "who": "A",
-       "role": "طالب",
-       "de": "Ja, hier ist es. Wann beginnt der Kurs?",
-       "ar": "نعم، ها هي. متى تبدأ الدورة؟"
-      },
-      {
-       "who": "B",
-       "role": "سكرتارية",
-       "de": "Am 5. Oktober, montags und mittwochs.",
-       "ar": "الخامس من أكتوبر، الاثنين والأربعاء."
-      },
-      {
-       "who": "A",
-       "role": "طالب",
-       "de": "Wie viele Plätze sind noch frei?",
-       "ar": "كم مقعداً شاغراً بقي؟"
-      },
-      {
-       "who": "B",
-       "role": "سكرتارية",
-       "de": "Nur noch drei. Melden Sie sich heute noch an.",
-       "ar": "ثلاثة فقط. سجّل اليوم."
+      "rolle": {
+        "sitter": "A: طالبةٌ في السنةِ الثالثة ودخلُ والديها أجنبي",
+        "partner": "B: مستشارُ BAföG",
+        "stichworte": [
+          "Ausländisches Einkommen belegen",
+          "Fristen der Rückmeldung nennen",
+          "Urlaubssemester erwägen"
+        ],
+        "plan": [
+          "اعرضْ سنتَك الدراسيةَ وتخصصَك أولًا",
+          "ثبِّتِ الدخلَ بأوراقِه وبمترجمِه",
+          "اختمْ بميعادِ أولِ دفعةٍ خطيًّا"
+        ]
       }
-     ]
     },
     {
-     "titel": "ساعة الاستقبال (Sprechstunde)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "طالب",
-       "de": "Entschuldigung, ich habe eine Frage zur Hausarbeit.",
-       "ar": "عندي سؤال عن الورقة البحثية."
+      "id": "steuerid",
+      "emoji": "🧮",
+      "nameDe": "Steuer-ID & Lohnsteuer",
+      "nameAr": "الرقمُ الضريبيُّ وضريبةُ الأجر",
+      "kontext": "مفاتيحُ النظام: Steuer-ID في كلِّ عقدٍ، وLohnsteuererklärung قد تردُّ ما دفعَه صاحبُ العملِ عنك في غيرِ محلِّه.",
+      "lektionen": [
+        "a1-akkusativ",
+        "a1-dativ",
+        "a1-modalverben"
+      ],
+      "saetze": [
+        {
+          "de": "Ich brauche meine Steuer-Identifikationsnummer für den Arbeitsvertrag.",
+          "ar": "أحتاجُ رقمي الضريبيَّ لعقدِ العمل."
+        },
+        {
+          "de": "Die ID kommt per Post — innerhalb von zwei Wochen nach der Anmeldung.",
+          "ar": "يصلُ الرقمُ بالبريدِ خلالَ أسبوعَين من التسجيلِ السكني."
+        },
+        {
+          "de": "Ohne Steuer-ID behält der Arbeitgeber die Steuerklasse sechs ein.",
+          "ar": "بلا رقمٍ يخصمُ المشغِّلُ بدرجةِ الضريبةِ السادسة."
+        },
+        {
+          "de": "Die Erklärung für 2024 muss bis Juli des Folgejahres raus.",
+          "ar": "إقرارُ 2024 يجبُ أن يخرجَ إلى يولية من العامِ التالي."
+        },
+        {
+          "de": "Werbungskosten mindern — Fahrt, Werkzeug, Fachbücher.",
+          "ar": "نفقاتُ المهنةِ تُنقِصُ الوعاء: تنقُّلٌ وعُدَّةٌ وكتب."
+        },
+        {
+          "de": "Die Steuerklasse wechselt nur zum Ersten des Folgemonats.",
+          "ar": "ولا تتبدَّلُ درجةُ الضريبةِ إلا أولَ الشهرِ الموالي."
+        }
+      ],
+      "dialoge": [
+        {
+          "titel": "ID verloren — was nun?",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Tarek",
+              "de": "Mein Brief mit der Steuer-ID ist verschwunden — wer stellt ihn neu aus?",
+              "ar": "اختفت رسالةُ رقمي الضريبي — مَن يُعيدُ إصدارَها؟"
+            },
+            {
+              "who": "B",
+              "role": "Finanzamt-Hotline",
+              "de": "Eine Mail mit Ausweisdaten genügt; die ID kommt digital im Portal.",
+              "ar": "بريدٌ ببياناتِ الهوية يكفي؛ والرقمُ يصلُ رقميًا في البوابة."
+            },
+            {
+              "who": "A",
+              "role": "Tarek",
+              "de": "Wie lange dauert das — ich muss morgen unterschreiben?",
+              "ar": "كم يستغرق — وغدًا أوقِّعُ عقدي؟"
+            },
+            {
+              "who": "B",
+              "role": "Hotline",
+              "de": "In der Regel zwei Werktage; im Notfall hilft die Bundesdruckerei-Hotline nicht.",
+              "ar": "يومانِ عملِيَّان غالبًا؛ ولا تُجدي هنا مطبعةُ الأوراقِ الرسمية."
+            },
+            {
+              "who": "A",
+              "role": "Tarek",
+              "de": "Kann der Arbeitgeber die Klasse sechs sofort wechseln lassen?",
+              "ar": "أيوافقُ المشغِّلُ فورًا على تغييرِ الدرجةِ السادسة؟"
+            },
+            {
+              "who": "B",
+              "role": "Hotline",
+              "de": "Er meldet elektronisch — wir stellen die neue Klasse bis Monatsende frei.",
+              "ar": "يُبلِّغُ إلكترونيًا، ونحن نُطلِقُ الدرجةَ الجديدةَ حتى نهايةِ الشهر."
+            }
+          ]
+        },
+        {
+          "titel": "Erklärung mit Pendlerpauschale (إقرارٌ وبدلُ التنقُّل)",
+          "lines": [
+            {
+              "who": "A",
+              "role": "Salma",
+              "de": "Zwanzig Kilometer täglich zur Arbeit — was bringt die Anlage N?",
+              "ar": "عشرونَ كلم يوميًّا إلى العمل — ماذا يُفيدُ الملحقُ N؟"
+            },
+            {
+              "who": "B",
+              "role": "Steuerhilfe",
+              "de": "Dreißig Cent pro Kilometer für die Hinwege, bei Behinderung auch das Werkzeug.",
+              "ar": "ثلاثونَ سنتيمًا لكلِّ كيلومترٍ ذهابًا؛ وللمُعطَّلِ عُدَّتُه أيضًا."
+            },
+            {
+              "who": "A",
+              "role": "Salma",
+              "de": "Mein Chef zahlte Überstunden bar ohne Beleg — muss ich das eintragen?",
+              "ar": "دفعَ مشغِّلي ساعاتٍ إضافيةً نقدًا — أأُدرِجُها؟"
+            },
+            {
+              "who": "B",
+              "role": "Steuerhilfe",
+              "de": "Ja, als steuerpflichtiger Arbeitslohn — sonst droht eine Nachzahlung mit Zinsen.",
+              "ar": "نعم أجرًا خاضعًا وإلا جاءَ الاسترجاعُ بفائدةِ التأخير."
+            },
+            {
+              "who": "A",
+              "role": "Salma",
+              "de": "Und die Erstattung — auf welches Konto kommt sie?",
+              "ar": "والاسترجاع — إلى أيِّ حساب؟"
+            },
+            {
+              "who": "B",
+              "role": "Steuerhilfe",
+              "de": "Zum in ELSTER hinterlegten — eine Änderung dauert nur bis zum nächsten Bescheid.",
+              "ar": "إلى المسجَّلِ في ELSTER؛ وتعديلُه نافذٌ من القرارِ التالي."
+            }
+          ]
+        }
+      ],
+      "formular": {
+        "titel": "Mantelbogen der Steuererklärung — خاناتُ الصفحةِ الأولى",
+        "zeilen": [
+          "Steuernummer / Steuer-ID des Steuerpflichtigen",
+          "Anschrift, Konto (IBAN) und Bankleitzahl",
+          "Einkunftsarten ankreuzen: nichtselbständige Arbeit",
+          "Anlagen: N, Vorsorgeaufwand, außergewöhnliche Belastung",
+          "Summe der Steuerabzugsbeträge aus der Lohnsteuerbescheinigung",
+          "Ort, Datum, Unterschrift (beider Ehegatten bei Zusammenveranlagung)"
+        ]
       },
-      {
-       "who": "B",
-       "role": "أستاذ",
-       "de": "Ja, worum geht es?",
-       "ar": "نعم، عن ماذا؟"
-      },
-      {
-       "who": "A",
-       "role": "طالب",
-       "de": "Darf ich eigene Interviews als Quelle benutzen?",
-       "ar": "هل أستعمل مقابلاتي الخاصة كمصدر؟"
-      },
-      {
-       "who": "B",
-       "role": "أستاذ",
-       "de": "Ja, aber mit Transkript und Einverständnis.",
-       "ar": "نعم، لكن بتفريغ وبموافقة."
-      },
-      {
-       "who": "A",
-       "role": "طالب",
-       "de": "Und wie lang soll die Arbeit sein?",
-       "ar": "وكم يجب أن يكون طول الورقة؟"
-      },
-      {
-       "who": "B",
-       "role": "أستاذ",
-       "de": "Zwölf bis fünfzehn Seiten, Schriftgröße 12.",
-       "ar": "اثنتا عشرة إلى خمس عشرة صفحة، حجم 12."
+      "rolle": {
+        "sitter": "A: موظفٌ جديدٌ بلا رقمٍ ضريبيّ ويومُ عملِه طويل",
+        "partner": "B: مستشارُ Finanzamt/Steuerhilfe",
+        "stichworte": [
+          "Steuer-ID und Klasse klären",
+          "Werbungskosten listen",
+          "Erstattungstermin vereinbaren"
+        ],
+        "plan": [
+          "ابدأ بالحالةِ الضريبيةِ الحالية",
+          "اذكر مصاريفَكَ برقمِ المسافةِ والإيصال",
+          "اختمْ بموعدِ القرارِ وطريقِ التعديل"
+        ]
       }
-     ]
     }
-   ],
-   "formular": {
-    "titel": "E-Mail: Fristverlängerung — طلب تمديد مهلة",
-    "zeilen": [
-     "Betreff: Bitte um Fristverlängerung – Hausarbeit",
-     "Sehr geehrte Frau Dr. Keller,",
-     "aus gesundheitlichen Gründen kann ich die Hausarbeit",
-     "nicht bis zum 20.06. abgeben.",
-     "Ich bitte um eine Verlängerung bis zum 04.07. Ein Attest liegt bei.",
-     "Mit freundlichen Grüßen\nSami Ben Salah"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: طالب",
-    "partner": "B: أستاذ/سكرتارية قسم",
-    "stichworte": [
-     "Anmelden",
-     "Frist",
-     "Bescheinigung"
-    ],
-    "plan": [
-     "عرّف نفسك وطلبك في جملة",
-     "اذكر السبب والتواريخ بدقة",
-     "اطلب التأكيد أو البديل (موعد آخر/تمديد)"
-    ]
-   }
-  },
-  {
-   "id": "jobcenter",
-   "emoji": "🧾",
-   "nameDe": "Bürgergeld & Mitwirkung",
-   "nameAr": "عِوَضُ المواطنةِ وواجبُ التعاون",
-   "kontext": "تسجيلٌ كعاطلٍ، طلبُ Bürgergeld، ودعوتُ Integration: الوثائقُ غلافُ الأمر، والصمتُ عن الدعوةِ يُكلِّفُ المال.",
-   "saetze": [
-    {
-     "de": "Ich möchte mich arbeitslos melden — mein Vertrag endete zum Monatsende.",
-     "ar": "أريدُ التصريحَ ببطالتي — انتهى عقدي آخرَ الشهر."
-    },
-    {
-     "de": "Ohne Arbeitsbescheinigung des Arbeitgebers keine Bearbeitung.",
-     "ar": "بدونِ شهادةِ عملٍ من المُشغِّل لا معالجةَ للطلب."
-    },
-    {
-     "de": "Der Bewilligungsbescheid liegt abholbereit in Ihrem Postfach.",
-     "ar": "قرارُ المنحةِ جاهزٌ للسحبِ في صندوقِ رسائلك."
-    },
-    {
-     "de": "Bei einer Sanktion kann ich innerhalb eines Monats widersprechen.",
-     "ar": "عندَ العقوبةِ يحقُّ لي الاعتراضُ خلالَ شهرٍ واحد."
-    },
-    {
-     "de": "Das Jobcenter erstattet die Fahrtkosten zum Bewerbungsgespräch.",
-     "ar": "صندوقُ التعليمِ يغطي مصاريفَ التنقلِ لمقابلةِ العمل."
-    },
-    {
-     "de": "Ich brauche einen Bildungsgutschein für die Umschulung.",
-     "ar": "أحتاجُ قسيمةَ تأهيلٍ لإعادةِ التكوين."
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "Erstmeldung (التسجيلُ الأول)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Youssef",
-       "de": "Guten Tag — mein Arbeitgeber meldet mich erst nächste Woche. Gelte ich schon als arbeitslos?",
-       "ar": "مرحبًا — مشغِّلي لن يُصرِّحَ بي إلا الأسبوعَ القادم. هل أُعَدُّ عاطلاً الآن؟"
-      },
-      {
-       "who": "B",
-       "role": "Beraterin",
-       "de": "Nein — melden Sie sich erst, wenn das Arbeitsverhältnis endet. Dann ist der Tag maßgeblich.",
-       "ar": "لا — صرِّحْ فقط حين ينتهي العقد. وحينها يُعتدُّ باليوم."
-      },
-      {
-       "who": "A",
-       "role": "Youssef",
-       "de": "Welche Papiere soll ich zum Termin mitbringen?",
-       "ar": "ما الوثائقُ التي أحضرُها للميعاد؟"
-      },
-      {
-       "who": "B",
-       "role": "Beraterin",
-       "de": "Personalausweis, Kündigung, Arbeitsbescheinigung und Kontoauszug der letzten drei Monate.",
-       "ar": "هوية، رسالةُ إنهاء، شهادةُ عمل، وكشوفُ حسابٍ لثلاثةِ أشهر."
-      },
-      {
-       "who": "A",
-       "role": "Youssef",
-       "de": "Meine Frau arbeitet Teilzeit — muss ihr Gehalt auch rein?",
-       "ar": "زوجتي تعمل جزئيًّا — هل يدخلُ راتبُها أيضًا؟"
-      },
-      {
-       "who": "B",
-       "role": "Beraterin",
-       "de": "Ja, zur Bedarfsgemeinschaft — aber ein Teilzeitbonus bleibt anrechnungsfrei.",
-       "ar": "نعم، كوحدةِ حاجة — لكن علاوةَ العملِ الجزئيِّ معفاةٌ من الاحتساب."
-      }
-     ]
-    },
-    {
-     "titel": "Einladung ohne Antwort (دعوةٌ بلا جواب)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Sonia",
-       "de": "Ich habe den Brief vom 3. verpasst — ich war im Krankenhaus.",
-       "ar": "فاتَني خطابُ الثالثِ من الشهر — كنتُ في المستشفى."
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Ohne Entschuldigung gilt das als Mitwirkungsverweigerung: eine Minderung.",
-       "ar": "بلا عذرٍ يُعَدُّ امتناعًا عن التعاون: خفضٌ في المنحة."
-      },
-      {
-       "who": "A",
-       "role": "Sonia",
-       "de": "Hier ist die Klinikbestätigung samt Datum und Unterschrift.",
-       "ar": "هذه شهادةُ المستشفى بالتاريخِ والتوقيع."
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Danach hebe ich die Minderung auf — neuer Termin am Donnerstag.",
-       "ar": "وعندها أرفعُ الخفض — ميعادٌ جديدٌ الخميس."
-      },
-      {
-       "who": "A",
-       "role": "Sonia",
-       "de": "Darf ich künftig Einladungen per E-Mail mit Lesebestätigung?",
-       "ar": "أأستقبلُ الدعواتِ مستقبلًا بالبريدِ مع إشعارِ القراءة؟"
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Ja — tragen Sie die Adresse im Portal ein; dort erscheinen auch die Bescheide.",
-       "ar": "نعم — أدخلي العنوانَ في البوابة؛ حيث تظهرُ القراراتُ أيضًا."
-      }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Antrag auf Arbeitslosengeld — أهمُّ الخاناتِ في نموذجِ الطلب",
-    "zeilen": [
-     "Angaben zur Person: Name, Anschrift, Steuernummer",
-     "Letzter Arbeitgeber und Enddatum des Arbeitsvertrags",
-     "Verfügbarkeit: Vermittlungsvorschläge, Mobilität ja/nein",
-     "Bedarfsgemeinschaft: Partner, Kinder, Einkommen",
-     "Anlagen: Arbeitsbescheinigung, Kündigung, Kontoauszüge",
-     "Ort, Datum, eigenhändige Unterschrift"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: عاطلٌ Seeking-first-Job بعدَ تسريح",
-    "partner": "B: مستشارةُ Agentur für Arbeit",
-    "stichworte": [
-     "Meldezeitpunkt klären",
-     "Anlagen benennen",
-     "Einkommen der Partnerin erklären"
-    ],
-    "plan": [
-     "اسألْ عن يومِ السَّريان لا عن الوعد",
-     "اذكر كلَّ مرفقٍ باسمه الدقيق",
-     "اطلبْ بدائلَ مكتوبةً للإشعارات"
-    ]
-   }
-  },
-  {
-   "id": "wohngeld",
-   "emoji": "🏠",
-   "nameDe": "Wohngeld — Mietzuschuss",
-   "nameAr": "بدلُ السكنِ — إعانةُ الإيجار",
-   "kontext": "دخلٌ لا يكفي والإيجارُ ثابت: Wohngeld يردُّ الفارق — إن عرفتَ كيف تُثبِتُ الدخلَ والسكنَ معًا.",
-   "saetze": [
-    {
-     "de": "Ich beantrage Wohngeld für eine Zweizimmerwohnung.",
-     "ar": "أطلبُ بدلَ سكنٍ لشقةٍ من غرفتين."
-    },
-    {
-     "de": "Der Mietzuschuss beginnt mit dem Monat der Antragstellung.",
-     "ar": "تبدأ الإعانةُ من شهرِ تقديمِ الطلب."
-    },
-    {
-     "de": "Die Kaltmiete gehört in die Anlage Miete, Nebenkosten nicht.",
-     "ar": "الإيجارُ الجافُّ في ملحقِ الإيجار — والنفقاتُ الجانبية خارجَه."
-    },
-    {
-     "de": "Als Einkommen zählen Lohn, Kindergeld und Unterhalt.",
-     "ar": "الدخلُ يشملُ الأجرَ وبدلَ الأطفالِ والنفقة."
-    },
-    {
-     "de": "Der Bescheid gilt zwölf Monate — danach ein Neuer mit frischen Nachweisen.",
-     "ar": "القرارُ سارٍ اثني عشرَ شهرًا ثم يُجدَّدُ بإثباتاتٍ جديدةٍ."
-    },
-    {
-     "de": "Bei Widerspruch bitte den Bewilligungsbescheid im Original beilegen.",
-     "ar": "وعندَ الاعتراضِ يُرفَقُ قرارُ المنحةِ بالأصل."
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "Antrag mit Lücken (طلبٌ بنواقص)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Amel",
-       "de": "Mein Antrag wurde abgelehnt — die Einkommensnachweise fehlen.",
-       "ar": "رُفِضَ طلبي — تنقصني إثباتاتُ الدخل."
-      },
-      {
-       "who": "B",
-       "role": "Amtsfrau",
-       "de": "Es genügen die letzten drei Gehaltsabrechnungen und der Kindergeldbescheid.",
-       "ar": "تكفي كشوفُ الرواتبِ الثلاثةِ الأخيرة وقرارُ بدلِ الأطفال."
-      },
-      {
-       "who": "A",
-       "role": "Amel",
-       "de": "Mein Chef stellt eine Bescheinigung aus — reicht das?",
-       "ar": "يُصدرُ مديري شهادة — أتكفي؟"
-      },
-      {
-       "who": "B",
-       "role": "Amtsfrau",
-       "de": "Nur mit Stempel und Bruttobetrag; eine Kopie der Abrechnung wirkt sicherer.",
-       "ar": "بالختمِ والمبلغِ الإجماليّ فقط؛ ونسخةُ الكشفِ أوثق."
-      },
-      {
-       "who": "A",
-       "role": "Amel",
-       "de": "Und die Nebenkosten — muss ich sie angeben?",
-       "ar": "والنفقاتُ الجانبية — أُصرِّحُ بها؟"
-      },
-      {
-       "who": "B",
-       "role": "Amtsfrau",
-       "de": "Nein, aber die kalte Miete und der Mietvertrag müssen vollständig sein.",
-       "ar": "لا — لكنَّ الجافَّ والعقدَ يجبُ أن يكونا كاملين."
-      }
-     ]
-    },
-    {
-     "titel": "Nachzahlung nach Umzug (تسويةٌ بعد الانتقال)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Karim",
-       "de": "Ich bin im März umgezogen — zahlt das Amt die Zeit bis dahin?",
-       "ar": "انتقلتُ في مارس — أيدفعُ المكتبُ عن المدةِ السابقة؟"
-      },
-      {
-       "who": "B",
-       "role": "Berater",
-       "de": "Neue Wohnung, neuer Antrag: Zuschuss ab Monat des Eingangs.",
-       "ar": "شقةٌ جديدةٌ وطلبٌ جديد: الإعانةُ من شهرِ الوصول."
-      },
-      {
-       "who": "A",
-       "role": "Karim",
-       "de": "Warum sank mein Bescheid trotz gleicher Miete?",
-       "ar": "ولماذا نقصَ قراري مع أنَّ الإيجارَ ثابت؟"
-      },
-      {
-       "who": "B",
-       "role": "Berater",
-       "de": "Das Kindergeld wurde auf die Bedarfsgemeinschaft angerechnet — Widerspruch ist möglich.",
-       "ar": "احتُسِبَ بدلُ الأطفالِ على وحدةِ الحاجة — والاعتراضُ جائز."
-      },
-      {
-       "who": "A",
-       "role": "Karim",
-       "de": "Wie hoch bleibt der monatliche Zuschuss dann?",
-       "ar": "فكم يبقى البدلُ الشهري؟"
-      },
-      {
-       "who": "B",
-       "role": "Berater",
-       "de": "Nach Korrektur sechzig Euro statt vierzig — die Nachzahlung folgt gesondert.",
-       "ar": "بعد التصحيح ستون بدلَ أربعين، والتسويةُ اللاحقةُ مُنفصلة."
-      }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Wohngeldantrag — ما يُملأُ في نموذجِ بدلِ السكن",
-    "zeilen": [
-     "Angaben zum Haushalt: Mitglieder, Geburtsdaten",
-     "Wohnung: Anschrift, Mietart, Bezugsdatum",
-     "Miete: Kaltmiete, Betriebskosten laut Anlage Miete",
-     "Einkommen aller Mitglieder mit Anlage E",
-     "Kinder: Schul-/Ausbildungsbescheinigung beifügen",
-     "Versicherung: keine parallele Leistung (z.B. Bürgergeld)"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: موظفٌ جزئيٌّ إيجارُه يلتهمُ الراتب",
-    "partner": "B: موظفةُ Wohngeldstelle",
-    "stichworte": [
-     "Einkommen lückenlos nennen",
-     "falsche Anrechnung beanstanden",
-     "Fristen für Nachforderung klären"
-    ],
-    "plan": [
-     "افتحْ بالوضعِ الماليِّ لا بالعاطفة",
-     "سَمِّ كلَّ ملحقٍ برقمِه",
-     "اختتمْ بموعدِ الصرفِ لا بالوعدِ الشفهي"
-    ]
-   }
-  },
-  {
-   "id": "kindergeld",
-   "emoji": "👶",
-   "nameDe": "Kindergeld & Familienkasse",
-   "nameAr": "بدلُ الأطفالِ وصندوقُ الأسرة",
-   "kontext": "أطفالٌ في تونس أو في ألمانيا والمبلغُ يُدفَعُ في الحالتين — لمن عرفَ الرقمَ الخاصَّ والأوراقَ المُصدَّقة.",
-   "saetze": [
-    {
-     "de": "Für meine Kinder in Tunesien beantrage ich Kindergeld.",
-     "ar": "أطلبُ بدلَ الأطفالِ لأولادي في تونس."
-    },
-    {
-     "de": "Die Kindergeldnummer muss in jedem neuen Antrag stehen.",
-     "ar": "رقمُ البدلِ لازمٌ في كلِّ طلبٍ جديد."
-    },
-    {
-     "de": "Die ausländische Geburtsurkunde braucht eine beglaubigte Übersetzung.",
-     "ar": "شهادةُ الميلادِ الأجنبيةُ تحتاجُ ترجمةً مُصدَّقًا عليها."
-    },
-    {
-     "de": "Der Nachzahlungsbetrag wird rückwirkend bis sechs Monate gewährt.",
-     "ar": "المبلغُ المؤجَّلُ يُصرَفُ بأثرٍ رجعيٍّ لستةِ أشهر."
-    },
-    {
-     "de": "Mein Kind macht eine Ausbildung — die Bescheinigung reicht der Kasse.",
-     "ar": "ابني في تكوينٍ مهني — تكفي الشهادةُ الصندوقَ."
-    },
-    {
-     "de": "Bei Streit hilft der Einspruch innerhalb eines Monats.",
-     "ar": "عندَ الخلافِ ينفعُ التظلُّمُ خلالَ شهرٍ واحد."
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "Erstantrag mit Kindern im Ausland (طلبٌ أولُ وأطفالٌ في الوطن)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Leïla",
-       "de": "Ich arbeite seit Februar hier — meine Kinder blieben in Tunis.",
-       "ar": "أعملُ هنا منذ فيفري — وأطفالي بقوا في تونس."
-      },
-      {
-       "who": "B",
-       "role": "Familienkasse",
-       "de": "Das Kindergeld steht EU-Ausländern und etlichen Verträgen zu — Antrag genügt.",
-       "ar": "البدلُ مستحقٌّ لمواطني الاتحادِ وللاتفاقيات — ويكفي الطلب."
-      },
-      {
-       "who": "A",
-       "role": "Leïla",
-       "de": "Welche Papiere brauchen Sie von der Botschaft?",
-       "ar": "ما وثائقُ السفارةِ لديكم؟"
-      },
-      {
-       "who": "B",
-       "role": "Familienkasse",
-       "de": "Geburtsurkunden, Schulbescheinigungen und die Meldebestätigung beider Eltern.",
-       "ar": "شهاداتُ الميلاد، التلميذيات، وشهادةُ ربِّ الأسرةِ المعيشيةِ مُصدَّقةً من السفارة."
-      },
-      {
-       "who": "A",
-       "role": "Leïla",
-       "de": "Und die Übersetzung — reicht eine beglaubigte Kopie?",
-       "ar": "والترجمة — تنسخةٌ مصدَّقة؟"
-      },
-      {
-       "who": "B",
-       "role": "Familienkasse",
-       "de": "Nur vereidigte Übersetzer — andernfalls geht der Antrag zurück.",
-       "ar": "عندَ المترجمين المحلَّفين فقط — وإلا رُدَّ الطلب."
-      }
-     ]
-    },
-    {
-     "titel": "Ausbildungsende und Weiterzahlung (انتهاءُ التكوين)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Hedi",
-       "de": "Meine Tochter endet die Ausbildung im Juni — fällt das Geld sofort?",
-       "ar": "ابنتي تُنهي التكوينَ في جوان — يسقُطُ المالُ فورًا؟"
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Nein: bis zur Abschlussprüfung und dann bei Anmeldung zur Arbeitslosigkeit weiter.",
-       "ar": "لا — إلى امتحانِ النهاية ثم بتسجيلِ البطالة يستمر."
-      },
-      {
-       "who": "A",
-       "role": "Hedi",
-       "de": "Sie will danach studieren — braucht ihr einen neuen Nachweis?",
-       "ar": "ستدرسُ بعدها — أيلزمُكم إثباتٌ جديد؟"
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Die Immatrikulationsbescheinigung genügt, digital hochladen.",
-       "ar": "شهادةُ التسجيلِ تكفي — تُرفَعُ رقميًا."
-      },
-      {
-       "who": "A",
-       "role": "Hedi",
-       "de": "Und wenn ich die Frist versäume — Rückforderung?",
-       "ar": "وإن فاتَني الميعاد — استرجاع؟"
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Dann fordern wir zurück; die Korrektur binnen Monatsfrist heilt das Meiste.",
-       "ar": "نستردُّ حينها؛ والتصحيحُ خلالَ شهرٍ يُرمِّمُ أكثرَه."
-      }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Kindergeldantrag — خاناتُ الطلبِ الأساس",
-    "zeilen": [
-     "Kindergeldnummer (falls vorhanden)",
-     "Kinder: Name, Geburtsdatum, Staatsangehörigkeit",
-     "Wohnsitz der Kinder im Ausland mit Anschrift",
-     "Schul- oder Ausbildungsbescheinigung anhängen",
-     "Bankverbindung (IBAN) für Auszahlung",
-     "Erklärung zu sonstigem Kindergeld im Ausland"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: أبٌ جديدٌ في العملِ وأطفالُه بالخارج",
-    "partner": "B: موظفةُ Familienkasse",
-    "stichworte": [
-     "Kinder und Geburt nachweisen",
-     "Übersetzungsregeln fragen",
-     "Nachzahlung beantragen"
-    ],
-    "plan": [
-     "اذكر وضعَ كلِّ طفلٍ بسنِّه ودراسته",
-     "سألْ عن الصيغةِ المقبولةِ للوثيقةِ الأجنبية",
-     "اطلبْ تاريخَ بدءِ الصرفِ مكتوبًا"
-    ]
-   }
-  },
-  {
-   "id": "versicherung",
-   "emoji": "🩺",
-   "nameDe": "Krankenkasse: Familie & Beitrag",
-   "nameAr": "صندوقُ المرض: الأسرةُ والاشتراك",
-   "kontext": "زوجةٌ بلا عملٍ وأبناءٌ صِغار: التأمينُ العائليُّ المجانيُّ يحميهم — بحدِّ دخلٍ دقيقٍ وشروطِ إقامة.",
-   "saetze": [
-    {
-     "de": "Ich möchte meine Familie familienversichern lassen.",
-     "ar": "أريدُ تأمينَ أسرتي التأمينَ العائليَّ المجانيّ."
-    },
-    {
-     "de": "Die Familienversicherung ist beitragsfrei bis zu einem Minijob-Gehalt.",
-     "ar": "التأمينُ العائليُّ بلا اشتراكٍ حتى أجرِ العملِ الصغير."
-    },
-    {
-     "de": "Der Zusatzbeitrag ist je nach Kasse unterschiedlich hoch.",
-     "ar": "الاشتراكُ الإضافيُّ يختلفُ من صندوقٍ إلى آخر."
-    },
-    {
-     "de": "Bei Heirat melde ich die Ehepartnerin innerhalb einer Woche.",
-     "ar": "عندَ الزواجِ أُبلِّغُ عن زوجتي خلالَ أسبوع."
-    },
-    {
-     "de": "Der Beitrag wird vom Lohn einbehalten, der Arbeitgeber zahlt die Hälfte.",
-     "ar": "يُقتطَعُ الاشتراكُ من الأجر، والمشغِّلُ يدفعُ النصف."
-    },
-    {
-     "de": "Die elektronische Gesundheitskarte kommt nach vier Wochen per Post.",
-     "ar": "بطاقةُ الصحةِ الإلكترونية تصلُ بالبريدِ بعدَ أربعةِ أسابيع."
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "Familienversicherung beantragen",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Sami",
-       "de": "Meine Frau ist seit Mai hier und arbeitet nicht — kann sie mitversichert werden?",
-       "ar": "زوجتي هنا منذ ماي ولا تعمل — أتُؤمَّنُ معي؟"
-      },
-      {
-       "who": "B",
-       "role": "Kassenfrau",
-       "de": "Ja — heiratsurkunde, Aufenthaltstitel und Einkommenserklärung.",
-       "ar": "نعم — عقدُ زواج، إقامة، وإقرارُ دخل."
-      },
-      {
-       "who": "A",
-       "role": "Sami",
-       "de": "Sie lernt Deutsch mit Bürgergeld — ändert das etwas?",
-       "ar": "تتعلَّمُ الألمانيةَ بعِوَضٍ — أيتغيِّرُ شيء؟"
-      },
-      {
-       "who": "B",
-       "role": "Kassenfrau",
-       "de": "Bei eigenem Anspruch ruht die Familienversicherung — prüfen wir die Reihenfolge.",
-       "ar": "إن استحقَّتْ وحدها توقَّفَ العائلي — نفحصُ الأسبقية."
-      },
-      {
-       "who": "A",
-       "role": "Sami",
-       "de": "Und unsere Kinder brauchen eine eigene Geburtsurkunde?",
-       "ar": "وأطفالي — شهاداتُ ميلادَ خاصة؟"
-      },
-      {
-       "who": "B",
-       "role": "Kassenfrau",
-       "de": "Ja, mit Übersetzung; Karten schicken wir allen nach vier Wochen.",
-       "ar": "نعم بالترجمة؛ ونُرسِلُ البطاقاتِ جميعَها بعدَ أربعةِ أسابيع."
-      }
-     ]
-    },
-    {
-     "titel": "Beitrag und Zusatzbeitrag (اشتراكٌ وإضافيٌّ)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Nadia",
-       "de": "Warum stieg mein Beitrag um 0,9 Punkte?",
-       "ar": "لماذا ارتفعَ اشتراكي نقطةً وتسعةَ أعشارِ النقطة؟"
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Der Zusatzbeitrag der Kasse wurde erhöht — das Gesetz schreibt die Mitteilung vor.",
-       "ar": "زادَ الاشتراكُ الإضافيُّ للصندوق — والقانونُ يُلزِمُ بالإخطار."
-      },
-      {
-       "who": "A",
-       "role": "Nadia",
-       "de": "Darf ich wechseln, ohne dass der Beitrag springt?",
-       "ar": "أأنتقِلُ بلا قفزةِ اشتراك؟"
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Ja — die neue Kasse kündigt fristlos zum Monatsende für Sie.",
-       "ar": "نعم — الصندوقُ الجديدُ يُنهي عنك العقدَ بنهايةِ الشهر."
-      },
-      {
-       "who": "A",
-       "role": "Nadia",
-       "de": "Und während des Wechsels: Versicherungsschutz?",
-       "ar": "وبينَ الصندوقَين: أأبقى مغطاة؟"
-      },
-      {
-       "who": "B",
-       "role": "Sachbearbeiter",
-       "de": "Lückenlos geschützt — die Meldung läuft automatisch über den Arbeitgeber.",
-       "ar": "تغطيةٌ متصلة — والإبلاغُ آليٌّ عبرَ المشغِّل."
-      }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Mitgliedsantrag — خاناتُ طلبِ العضوية",
-    "zeilen": [
-     "Mitglied: Name, Geburtsdatum, Anschrift, Steuer-ID",
-     "Familienangehörige mit Verwandtschaftsgrad",
-     "Einkommensgrenze bei Partner: Minijob ja/nein",
-     "Erstmitgliedschaft oder Wechsel mit Kündigungsdatum",
-     "Konto für Beitrag: IBAN des Arbeitgebers angeben",
-     "Anlagen: Heiratsurkunde, Geburtsurkunden, Aufenthaltstitel"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: عاملٌ جديدٌ يريدُ إلحاقَ أسرته",
-    "partner": "B: موظفةُ صندوقِ المرضى",
-    "stichworte": [
-     "Ehe und Kinder melden",
-     "Einkommensgrenze nennen",
-     "Zusatzbeitrag vergleichen"
-    ],
-    "plan": [
-     "ابدأ بعددِ الأفرادِ وأعمارِهم",
-     "وضِّحْ دخلَ كلِّ بالغٍ وحدَّ الإعفاء",
-     "اختمْ بموعدِ البطاقاتِ وتاريخِ سريانِ الحماية"
-    ]
-   }
-  },
-  {
-   "id": "studienfinanz",
-   "emoji": "🎓",
-   "nameDe": "BAföG & Rückmeldung",
-   "nameAr": "دعمُ الدراسةِ وإعادةُ التسجيل",
-   "kontext": "جامعَةٌ وراتبُ والدينٍ بالخارج: BAföG يُحتسَبُ بالدخلِ المُترجَم، والتسجيلُ الجامعيُّ له سقوفٌ لا ترحم.",
-   "saetze": [
-    {
-     "de": "Ich brauche das Formblatt über das ausländische Elterneinkommen.",
-     "ar": "أحتاجُ الاستمارةَ عن دخلِ الوالدين الأجنبيّ."
-    },
-    {
-     "de": "Der Ausländervorbehalt prüft Aufenthalt und Fachrichtung.",
-     "ar": "تفحصُ سلطةُ الأجانبِ الإقامةَ والتخصص."
-    },
-    {
-     "de": "Ohne Rückmeldung bis Fristende verliere ich den Studienplatz.",
-     "ar": "بلا إعادةِ تسجيلٍ حتى نهايةِ الميعاد أفقدُ مقعدي."
-    },
-    {
-     "de": "Das Semesterticket gilt als Fahrausweis und Studienausweis zugleich.",
-     "ar": "تذكرةُ الفصلِ بطاقةُ تنقُّلٍ وبطاقةُ دراسةٍ معًا."
-    },
-    {
-     "de": "Für das Urlaubssemester zahlt man nur den Verwaltungsbetrag.",
-     "ar": "في فصلِ الراحةِ لا يُدفَعُ سوى الرسمِ الإداري."
-    },
-    {
-     "de": "Die Rückzahlung beginnt fünf Jahre nach dem Examen — zinsfrei.",
-     "ar": "يبدأُ سدادُ الدعمِ بعدَ خمسِ سنواتٍ من الامتحان — بلا فائدة."
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "BAföG mit Eltern im Ausland",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Rania",
-       "de": "Meine Eltern verdienen in Tunesien — wie soll das Amt das prüfen?",
-       "ar": "أهلي يدخلانِ من تونس — كيف يتحققُ المكتب؟"
-      },
-      {
-       "who": "B",
-       "role": "BAföG-Amt",
-       "de": "Formblatt ausländisches Einkommen, übersetzt, mit Stempel der Behörden.",
-       "ar": "استمارةُ الدخلِ الأجنبيّ مترجمةً ومختمَةً من سلطاتكم."
-      },
-      {
-       "who": "A",
-       "role": "Rania",
-       "de": "Reicht die Steuerbescheinigung von dort?",
-       "ar": "أتكفي الشهادةُ الضريبيةُ هناك؟"
-      },
-      {
-       "who": "B",
-       "role": "BAföG-Amt",
-       "de": "Ja, wenn es einen Steuerbescheid für ein Kalenderjahr gibt.",
-       "ar": "نعم — إن شملت عامًا ميلاديًا كاملًا."
-      },
-      {
-       "who": "A",
-       "role": "Rania",
-       "de": "Und mein BAföG-Amt zahlt ab wann?",
-       "ar": "فمن متى يدفعون؟"
-      },
-      {
-       "who": "B",
-       "role": "BAföG-Amt",
-       "de": "Ab dem Monat, in dem die Vorlesungen beginnen — der Antrag vor dem Ersten genügt.",
-       "ar": "من شهرِ المحاضرات — إن وصلَ طلبُك مع أولِ يومِ دراسة."
-      }
-     ]
-    },
-    {
-     "titel": "Rückmeldung mit Engpass (إعادةُ تسجيلٍ في لحظةِ عسر)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Firas",
-       "de": "Mein Überweisungstermin ist Freitag, die Rückmeldefrist Montag.",
-       "ar": "تحويلُ يومِ الجمعة، وميعادُ التسجيلِ الاثنين."
-      },
-      {
-       "who": "B",
-       "role": "Studierendensekretariat",
-       "de": "Der Zahlungsnachweis zählt erst am Konto der Uni, nicht am Beleg.",
-       "ar": "يُعَدُّ الإيصالُ بتاريخِ وصولِه لا بتاريخِ ورقةِ الصرَّاف."
-      },
-      {
-       "who": "A",
-       "role": "Firas",
-       "de": "Kann die Frist gegen eine Gebühr verlängert werden?",
-       "ar": "أتُمَدَّدُ برسوم؟"
-      },
-      {
-       "who": "B",
-       "role": "Studierendensekretariat",
-       "de": "Nur bei Urlaubssemester oder Elternzeit — sonst Exmatrikulation zum Fristende.",
-       "ar": "لفصلِ راحةٍ أو والديةٍ فقط — وإلا فالشطبُ بنهايةِ الميعاد."
-      },
-      {
-       "who": "A",
-       "role": "Firas",
-       "de": "Dann bitte das Urlaubssemester mit Verwaltungsgebühr.",
-       "ar": "إذن فصلُ راحةٍ مع الرسمِ الإداري."
-      },
-      {
-       "who": "B",
-       "role": "Studierendensekretariat",
-       "de": "Antrag bis morgen, dann bleibt Ihr Platz bis zum Winter gesichert.",
-       "ar": "غدًا الطلب — ويبقى مقعدُك إلى الشتاءِ محفوظًا."
-      }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "BAföG-Antrag — أهمُّ حقولِ النموذج",
-    "zeilen": [
-     "Hochschule, Studienfach und Fachsemester",
-     "Staatsangehörigkeit und Aufenthaltsstatus",
-     "Elterneinkommen: ausländisches Formblatt beifügen",
-     "Vermögen und eigene Einkünfte über 450 Euro angeben",
-     "Kontodaten für monatliche Vorauszahlung",
-     "Unterschrift beider Eltern, falls unter 30"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: طالبةٌ في السنةِ الثالثة ودخلُ والديها أجنبي",
-    "partner": "B: مستشارُ BAföG",
-    "stichworte": [
-     "Ausländisches Einkommen belegen",
-     "Fristen der Rückmeldung nennen",
-     "Urlaubssemester erwägen"
-    ],
-    "plan": [
-     "اعرضْ سنتَك الدراسيةَ وتخصصَك أولًا",
-     "ثبِّتِ الدخلَ بأوراقِه وبمترجمِه",
-     "اختمْ بميعادِ أولِ دفعةٍ خطيًّا"
-    ]
-   }
-  },
-  {
-   "id": "steuerid",
-   "emoji": "🧮",
-   "nameDe": "Steuer-ID & Lohnsteuer",
-   "nameAr": "الرقمُ الضريبيُّ وضريبةُ الأجر",
-   "kontext": "مفاتيحُ النظام: Steuer-ID في كلِّ عقدٍ، وLohnsteuererklärung قد تردُّ ما دفعَه صاحبُ العملِ عنك في غيرِ محلِّه.",
-   "saetze": [
-    {
-     "de": "Ich brauche meine Steuer-Identifikationsnummer für den Arbeitsvertrag.",
-     "ar": "أحتاجُ رقمي الضريبيَّ لعقدِ العمل."
-    },
-    {
-     "de": "Die ID kommt per Post — innerhalb von zwei Wochen nach der Anmeldung.",
-     "ar": "يصلُ الرقمُ بالبريدِ خلالَ أسبوعَين من التسجيلِ السكني."
-    },
-    {
-     "de": "Ohne Steuer-ID behält der Arbeitgeber die Steuerklasse sechs ein.",
-     "ar": "بلا رقمٍ يخصمُ المشغِّلُ بدرجةِ الضريبةِ السادسة."
-    },
-    {
-     "de": "Die Erklärung für 2024 muss bis Juli des Folgejahres raus.",
-     "ar": "إقرارُ 2024 يجبُ أن يخرجَ إلى يولية من العامِ التالي."
-    },
-    {
-     "de": "Werbungskosten mindern — Fahrt, Werkzeug, Fachbücher.",
-     "ar": "نفقاتُ المهنةِ تُنقِصُ الوعاء: تنقُّلٌ وعُدَّةٌ وكتب."
-    },
-    {
-     "de": "Die Steuerklasse wechselt nur zum Ersten des Folgemonats.",
-     "ar": "ولا تتبدَّلُ درجةُ الضريبةِ إلا أولَ الشهرِ الموالي."
-    }
-   ],
-   "dialoge": [
-    {
-     "titel": "ID verloren — was nun?",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Tarek",
-       "de": "Mein Brief mit der Steuer-ID ist verschwunden — wer stellt ihn neu aus?",
-       "ar": "اختفت رسالةُ رقمي الضريبي — مَن يُعيدُ إصدارَها؟"
-      },
-      {
-       "who": "B",
-       "role": "Finanzamt-Hotline",
-       "de": "Eine Mail mit Ausweisdaten genügt; die ID kommt digital im Portal.",
-       "ar": "بريدٌ ببياناتِ الهوية يكفي؛ والرقمُ يصلُ رقميًا في البوابة."
-      },
-      {
-       "who": "A",
-       "role": "Tarek",
-       "de": "Wie lange dauert das — ich muss morgen unterschreiben?",
-       "ar": "كم يستغرق — وغدًا أوقِّعُ عقدي؟"
-      },
-      {
-       "who": "B",
-       "role": "Hotline",
-       "de": "In der Regel zwei Werktage; im Notfall hilft die Bundesdruckerei-Hotline nicht.",
-       "ar": "يومانِ عملِيَّان غالبًا؛ ولا تُجدي هنا مطبعةُ الأوراقِ الرسمية."
-      },
-      {
-       "who": "A",
-       "role": "Tarek",
-       "de": "Kann der Arbeitgeber die Klasse sechs sofort wechseln lassen?",
-       "ar": "أيوافقُ المشغِّلُ فورًا على تغييرِ الدرجةِ السادسة؟"
-      },
-      {
-       "who": "B",
-       "role": "Hotline",
-       "de": "Er meldet elektronisch — wir stellen die neue Klasse bis Monatsende frei.",
-       "ar": "يُبلِّغُ إلكترونيًا، ونحن نُطلِقُ الدرجةَ الجديدةَ حتى نهايةِ الشهر."
-      }
-     ]
-    },
-    {
-     "titel": "Erklärung mit Pendlerpauschale (إقرارٌ وبدلُ التنقُّل)",
-     "lines": [
-      {
-       "who": "A",
-       "role": "Salma",
-       "de": "Zwanzig Kilometer täglich zur Arbeit — was bringt die Anlage N?",
-       "ar": "عشرونَ كلم يوميًّا إلى العمل — ماذا يُفيدُ الملحقُ N؟"
-      },
-      {
-       "who": "B",
-       "role": "Steuerhilfe",
-       "de": "Dreißig Cent pro Kilometer für die Hinwege, bei Behinderung auch das Werkzeug.",
-       "ar": "ثلاثونَ سنتيمًا لكلِّ كيلومترٍ ذهابًا؛ وللمُعطَّلِ عُدَّتُه أيضًا."
-      },
-      {
-       "who": "A",
-       "role": "Salma",
-       "de": "Mein Chef zahlte Überstunden bar ohne Beleg — muss ich das eintragen?",
-       "ar": "دفعَ مشغِّلي ساعاتٍ إضافيةً نقدًا — أأُدرِجُها؟"
-      },
-      {
-       "who": "B",
-       "role": "Steuerhilfe",
-       "de": "Ja, als steuerpflichtiger Arbeitslohn — sonst droht eine Nachzahlung mit Zinsen.",
-       "ar": "نعم أجرًا خاضعًا وإلا جاءَ الاسترجاعُ بفائدةِ التأخير."
-      },
-      {
-       "who": "A",
-       "role": "Salma",
-       "de": "Und die Erstattung — auf welches Konto kommt sie?",
-       "ar": "والاسترجاع — إلى أيِّ حساب؟"
-      },
-      {
-       "who": "B",
-       "role": "Steuerhilfe",
-       "de": "Zum in ELSTER hinterlegten — eine Änderung dauert nur bis zum nächsten Bescheid.",
-       "ar": "إلى المسجَّلِ في ELSTER؛ وتعديلُه نافذٌ من القرارِ التالي."
-      }
-     ]
-    }
-   ],
-   "formular": {
-    "titel": "Mantelbogen der Steuererklärung — خاناتُ الصفحةِ الأولى",
-    "zeilen": [
-     "Steuernummer / Steuer-ID des Steuerpflichtigen",
-     "Anschrift, Konto (IBAN) und Bankleitzahl",
-     "Einkunftsarten ankreuzen: nichtselbständige Arbeit",
-     "Anlagen: N, Vorsorgeaufwand, außergewöhnliche Belastung",
-     "Summe der Steuerabzugsbeträge aus der Lohnsteuerbescheinigung",
-     "Ort, Datum, Unterschrift (beider Ehegatten bei Zusammenveranlagung)"
-    ]
-   },
-   "rolle": {
-    "sitter": "A: موظفٌ جديدٌ بلا رقمٍ ضريبيّ ويومُ عملِه طويل",
-    "partner": "B: مستشارُ Finanzamt/Steuerhilfe",
-    "stichworte": [
-     "Steuer-ID und Klasse klären",
-     "Werbungskosten listen",
-     "Erstattungstermin vereinbaren"
-    ],
-    "plan": [
-     "ابدأ بالحالةِ الضريبيةِ الحالية",
-     "اذكر مصاريفَكَ برقمِ المسافةِ والإيصال",
-     "اختمْ بموعدِ القرارِ وطريقِ التعديل"
-    ]
-   }
-  }
- ]
+  ]
 }

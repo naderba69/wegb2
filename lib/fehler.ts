@@ -307,8 +307,8 @@ export function platzierungsFragen(gmap: Record<string, GrammarTopic>): Exercise
     promptDe: "🎧 Hören (▶ اضغط 🔊): „Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.“ — Aussage: Die Person spielt jeden Tag Klavier. Richtig oder falsch?",
     promptAr: "🎧 استماع (مستوى B2): الجملة تتحدث عن أمنية بلا تحقق. العبارة: «الشخص يعزف البيانو كل يوم» — هل هي صحيحة؟",
     text: "Wenn ich mehr Zeit hätte, würde ich jeden Tag Klavier spielen, aber mein Studium nimmt fast den ganzen Tag in Anspruch.",
-    options: ["Richtig", "Falsch"],
-    answer: "Falsch",
+    options: ["richtig", "falsch"],
+    answer: "falsch",
     explanationAr: "«Wenn ich mehr Zeit hätte, würde ich …» = أمنية (Konjunktiv II) لا تتحقق فعلياً؛ الدراسة تشغل كل يومها، إذاً العبارة خاطئة.",
     hint: "🔊 استمع ثم اختر",
   });
@@ -329,10 +329,10 @@ export function vorschlagTag(gruppen: Record<string, number>): number {
 export function elternBrief(p: Progress): { de: string[]; ar: string[] } {
   const de: string[] = [];
   const ar: string[] = [];
-  const day = Math.min(p.plan.day, 270);
+  const day = Math.min(p.plan.day, TOTAL_DAYS);
   const phase = levelAmTag(day);
   de.push(`Ihr Kind ist bei Tag ${day} von 378 (Phase ${phase}) auf dem Weg bis B2.`);
-  ar.push(`طفلك في اليوم ${day} من 270 (مرحلة ${phase}) على الطريق نحو B2.`);
+  ar.push(`طفلك في اليوم ${day} من ${TOTAL_DAYS} (مرحلة ${phase}) على الطريق نحو B2.`);
   const days = Object.entries(p.plan.days)
     .map(([d, r]) => [Number(d), r] as const)
     .sort((a, b) => a[0] - b[0]);

@@ -11,11 +11,13 @@ const SEKTIONEN: { key: string; titel: string }[] = [
   { key: "adjektiv", titel: "⑤ الصفاتُ والنفي" },
   { key: "b2", titel: "⑥ تركيباتُ B2" },
   { key: "sprichwort", titel: "⑦ أمثالٌ بقاعدةٍ مدمجة" },
+  { key: "aussprache", titel: "⑧ النطق والأصوات" },
+  { key: "pruefung", titel: "⑨ استراتيجيات الامتحان" },
 ];
 
 export default function DruckSeite() {
   return (
-    <main className="druckblatt" dir="rtl">
+    <section className="druckblatt ui-page ui-page--print" dir="rtl">
       <div className="no-print" style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", padding: "1rem", alignItems: "center" }}>
         <Link href="/" className="btn btn-ghost" style={{ textDecoration: "none", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
           ← عودةٌ إلى المسار
@@ -70,6 +72,6 @@ export default function DruckSeite() {
       <footer style={{ marginTop: "0.8rem", fontSize: "0.72rem", color: "#666", textAlign: "center" }}>
         وُلِّدَت من بنكِ الشفراتِ داخلَ التطبيق — لا مصدرَ خارجيّ.
       </footer>
-    </main>
+    </section>
   );
 }

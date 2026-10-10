@@ -7,28 +7,94 @@
       "nameAr": "السفر",
       "nutzung": "مطار · قطار · فندق · مطعم — حزمة العبور الآمن.",
       "saetze": [
-        { "de": "Wo ist der Check-in für den Flug nach Berlin?", "ar": "أين تسجيل الوصول لرحلة برلين؟" },
-        { "de": "Ich hätte gern einen Fensterplatz.", "ar": "أودّ مقعداً عند النافذة." },
-        { "de": "Das Gepäck ist leider nicht angekommen.", "ar": "الأمتعة لم تصل للأسف." },
-        { "de": "Ein Einzelzimmer mit Frühstück, bitte.", "ar": "غرفة فردية مع إفطار، من فضلك." },
-        { "de": "Wann fährt der nächste Zug nach München?", "ar": "متى ينطلق القطار القادم إلى ميونخ؟" },
-        { "de": "Ich möchte dieses Zimmer für zwei Nächte buchen.", "ar": "أريد حجز هذه الغرفة لليلتين." },
-        { "de": "Die Rechnung, bitte — getrennt.", "ar": "الحساب من فضلك — منفصل." },
-        { "de": "Haben Sie vegetarische Gerichte?", "ar": "هل لديكم أطباق نباتية؟" },
-        { "de": "Mein Flug wurde gestrichen — was soll ich tun?", "ar": "رحلتي أُلغيت — ماذا أفعل؟" },
-        { "de": "Ich brauche ein Taxi zum Hauptbahnhof.", "ar": "أحتاج سيارة أجرة إلى المحطة الرئيسية." },
-        { "de": "Können Sie das bitte aufschreiben?", "ar": "هل يمكنكم كتابة هذا؟" },
-        { "de": "Ist WLAN im Zimmer inklusive?", "ar": "هل الواي فاي مشمول في الغرفة؟" }
+        {
+          "de": "Wo ist der Check-in für den Flug nach Berlin?",
+          "ar": "أين تسجيل الوصول لرحلة برلين؟"
+        },
+        {
+          "de": "Ich hätte gern einen Fensterplatz.",
+          "ar": "أودّ مقعداً عند النافذة."
+        },
+        {
+          "de": "Das Gepäck ist leider nicht angekommen.",
+          "ar": "الأمتعة لم تصل للأسف."
+        },
+        {
+          "de": "Ein Einzelzimmer mit Frühstück, bitte.",
+          "ar": "غرفة فردية مع إفطار، من فضلك."
+        },
+        {
+          "de": "Wann fährt der nächste Zug nach München?",
+          "ar": "متى ينطلق القطار القادم إلى ميونخ؟"
+        },
+        {
+          "de": "Ich möchte dieses Zimmer für zwei Nächte buchen.",
+          "ar": "أريد حجز هذه الغرفة لليلتين."
+        },
+        {
+          "de": "Die Rechnung, bitte — getrennt.",
+          "ar": "الحساب من فضلك — منفصل."
+        },
+        {
+          "de": "Haben Sie vegetarische Gerichte?",
+          "ar": "هل لديكم أطباق نباتية؟"
+        },
+        {
+          "de": "Mein Flug wurde gestrichen — was soll ich tun?",
+          "ar": "رحلتي أُلغيت — ماذا أفعل؟"
+        },
+        {
+          "de": "Ich brauche ein Taxi zum Hauptbahnhof.",
+          "ar": "أحتاج سيارة أجرة إلى المحطة الرئيسية."
+        },
+        {
+          "de": "Können Sie das bitte aufschreiben?",
+          "ar": "هل يمكنكم كتابة هذا؟"
+        },
+        {
+          "de": "Ist WLAN im Zimmer inklusive?",
+          "ar": "هل الواي فاي مشمول في الغرفة؟"
+        }
       ],
       "dialog": {
         "titel": "في المطار (Am Flughafen)",
         "lines": [
-          { "who": "A", "role": "مسافر", "de": "Entschuldigung, mein Flug LH 234 — wo ist Gate B 12?", "ar": "عندي رحلة LH 234 — أين بوابة B 12؟" },
-          { "who": "B", "role": "موظف", "de": "Gehen Sie geradeaus, dann links. Boarding beginnt um 14:20.", "ar": "امشوا مستقيماً ثم يساراً. الصعود يبدأ 14:20." },
-          { "who": "A", "role": "مسافر", "de": "Kann ich den kleinen Koffer mitnehmen?", "ar": "هل أخذ الحقيبة الصغيرة معي؟" },
-          { "who": "B", "role": "موظف", "de": "Ja, als Handgepäck. Er passt in die Gepäckablage.", "ar": "نعم، كأمتعة يد. تتّسع في رفّ الأمتعة." },
-          { "who": "A", "role": "مسافر", "de": "Und wenn das Gepäck in Tunis bleibt?", "ar": "وإذا بقيت الأمتعة في تونس؟" },
-          { "who": "B", "role": "موظف", "de": "Dann füllen Sie am Schalter „Gepäckverlust“ diesen Zettel aus.", "ar": "ثم املؤوا هذه الورقة عند مكتب «فقد الأمتعة»." }
+          {
+            "who": "A",
+            "role": "مسافر",
+            "de": "Entschuldigung, mein Flug LH 234 — wo ist Gate B 12?",
+            "ar": "عندي رحلة LH 234 — أين بوابة B 12؟"
+          },
+          {
+            "who": "B",
+            "role": "موظف",
+            "de": "Gehen Sie geradeaus, dann links. Boarding beginnt um 14:20.",
+            "ar": "امشوا مستقيماً ثم يساراً. الصعود يبدأ 14:20."
+          },
+          {
+            "who": "A",
+            "role": "مسافر",
+            "de": "Kann ich den kleinen Koffer mitnehmen?",
+            "ar": "هل أخذ الحقيبة الصغيرة معي؟"
+          },
+          {
+            "who": "B",
+            "role": "موظف",
+            "de": "Ja, als Handgepäck. Er passt in die Gepäckablage.",
+            "ar": "نعم، كأمتعة يد. تتّسع في رفّ الأمتعة."
+          },
+          {
+            "who": "A",
+            "role": "مسافر",
+            "de": "Und wenn das Gepäck in Tunis bleibt?",
+            "ar": "وإذا بقيت الأمتعة في تونس؟"
+          },
+          {
+            "who": "B",
+            "role": "موظف",
+            "de": "Dann füllen Sie am Schalter „Gepäckverlust“ diesen Zettel aus.",
+            "ar": "ثم املؤوا هذه الورقة عند مكتب «فقد الأمتعة»."
+          }
         ]
       },
       "modelle": [
@@ -62,28 +128,94 @@
       "nameAr": "مقابلة العمل",
       "nutzung": "العمق الثاني للتقديم: أسئلة المرشّح · الراتب والعقد · ما بعد المقابلة.",
       "saetze": [
-        { "de": "Vielen Dank für die Einladung zum Gespräch.", "ar": "شكراً على الدعوة إلى اللقاء." },
-        { "de": "Können Sie mir den Arbeitsalltag im Team beschreiben?", "ar": "هل تصفون لي يوم العمل في الفريق؟" },
-        { "de": "Wie lang ist die Probezeit?", "ar": "كم مدّة فترة التجربة؟" },
-        { "de": "Wie ist die Gehaltsstruktur — gibt es Urlaubsgeld?", "ar": "كيف بنية الراتب — هل يوجد علاوة إجازة؟" },
-        { "de": "Ich habe drei Monate Kündigungsfrist in der alten Firma.", "ar": "عندي مهلة إنهاء ثلاثة أشهر في الشركة القديمة." },
-        { "de": "Was sind die nächsten Schritte im Verfahren?", "ar": "ما الخطوات التالية في الإجراء؟" },
-        { "de": "Darf ich noch eine Frage zur Arbeitszeit stellen?", "ar": "هل لي أن أسأل عن ساعات العمل؟" },
-        { "de": "Ich arbeite gern im Team, kann aber auch selbständig arbeiten.", "ar": "أحبّ العمل الجماعي وأستطيع أيضاً العمل باستقلالية." },
-        { "de": "Haben Sie ein Beispiel für eine typische Aufgabe?", "ar": "هل لديكم مثال على مهمة نموذجية؟" },
-        { "de": "Gibt es Fortbildungen im Unternehmen?", "ar": "هل توجد دورات تطوير في المؤسسة؟" },
-        { "de": "Ab wann könnte ich anfangen?", "ar": "متى أستطيع البدء؟" },
-        { "de": "Vielen Dank — ich freue mich auf Ihre Rückmeldung.", "ar": "شكراً — أتطلّع ردّكم." }
+        {
+          "de": "Vielen Dank für die Einladung zum Gespräch.",
+          "ar": "شكراً على الدعوة إلى اللقاء."
+        },
+        {
+          "de": "Können Sie mir den Arbeitsalltag im Team beschreiben?",
+          "ar": "هل تصفون لي يوم العمل في الفريق؟"
+        },
+        {
+          "de": "Wie lang ist die Probezeit?",
+          "ar": "كم مدّة فترة التجربة؟"
+        },
+        {
+          "de": "Wie ist die Gehaltsstruktur — gibt es Urlaubsgeld?",
+          "ar": "كيف بنية الراتب — هل يوجد علاوة إجازة؟"
+        },
+        {
+          "de": "Ich habe drei Monate Kündigungsfrist in der alten Firma.",
+          "ar": "عندي مهلة إنهاء ثلاثة أشهر في الشركة القديمة."
+        },
+        {
+          "de": "Was sind die nächsten Schritte im Verfahren?",
+          "ar": "ما الخطوات التالية في الإجراء؟"
+        },
+        {
+          "de": "Darf ich noch eine Frage zur Arbeitszeit stellen?",
+          "ar": "هل لي أن أسأل عن ساعات العمل؟"
+        },
+        {
+          "de": "Ich arbeite gern im Team, kann aber auch selbständig arbeiten.",
+          "ar": "أحبّ العمل الجماعي وأستطيع أيضاً العمل باستقلالية."
+        },
+        {
+          "de": "Haben Sie ein Beispiel für eine typische Aufgabe?",
+          "ar": "هل لديكم مثال على مهمة نموذجية؟"
+        },
+        {
+          "de": "Gibt es Fortbildungen im Unternehmen?",
+          "ar": "هل توجد دورات تطوير في المؤسسة؟"
+        },
+        {
+          "de": "Ab wann könnte ich anfangen?",
+          "ar": "متى أستطيع البدء؟"
+        },
+        {
+          "de": "Vielen Dank — ich freue mich auf Ihre Rückmeldung.",
+          "ar": "شكراً — أتطلّع ردّكم."
+        }
       ],
       "dialog": {
         "titel": "شروط العقد (Vertragsfragen)",
         "lines": [
-          { "who": "A", "role": "مدير", "de": "Wir möchten Ihnen die Stelle anbieten.", "ar": "نودّ أن نعرض عليكم الوظيفة." },
-          { "who": "B", "role": "مرشّح", "de": "Das freut mich sehr! Wie sind die Konditionen?", "ar": "يسعدني ذلك! ما الشروط؟" },
-          { "who": "A", "role": "مدير", "de": "2.600 Euro brutto, 30 Tage Urlaub, Probezeit drei Monate.", "ar": "2600 يورو إجمالاً، 30 يوم إجازة، تجربة ثلاثة أشهر." },
-          { "who": "B", "role": "مرشّح", "de": "Und die Arbeitszeiten? Ich hätte gern 80 Prozent.", "ar": "وساعات العمل؟ أفضّل 80 بالمئة." },
-          { "who": "A", "role": "مدير", "de": "Das ist möglich — dann 32 Stunden pro Woche.", "ar": "ممكن — إذن 32 ساعة أسبوعياً." },
-          { "who": "B", "role": "مرشّح", "de": "Wann soll ich den Vertrag unterschreiben?", "ar": "متى أوقّع العقد؟" }
+          {
+            "who": "A",
+            "role": "مدير",
+            "de": "Wir möchten Ihnen die Stelle anbieten.",
+            "ar": "نودّ أن نعرض عليكم الوظيفة."
+          },
+          {
+            "who": "B",
+            "role": "مرشّح",
+            "de": "Das freut mich sehr! Wie sind die Konditionen?",
+            "ar": "يسعدني ذلك! ما الشروط؟"
+          },
+          {
+            "who": "A",
+            "role": "مدير",
+            "de": "2.600 Euro brutto, 30 Tage Urlaub, Probezeit drei Monate.",
+            "ar": "2600 يورو إجمالاً، 30 يوم إجازة، تجربة ثلاثة أشهر."
+          },
+          {
+            "who": "B",
+            "role": "مرشّح",
+            "de": "Und die Arbeitszeiten? Ich hätte gern 80 Prozent.",
+            "ar": "وساعات العمل؟ أفضّل 80 بالمئة."
+          },
+          {
+            "who": "A",
+            "role": "مدير",
+            "de": "Das ist möglich — dann 32 Stunden pro Woche.",
+            "ar": "ممكن — إذن 32 ساعة أسبوعياً."
+          },
+          {
+            "who": "B",
+            "role": "مرشّح",
+            "de": "Wann soll ich den Vertrag unterschreiben?",
+            "ar": "متى أوقّع العقد؟"
+          }
         ]
       },
       "modelle": [
@@ -118,28 +250,94 @@
       "nameAr": "البحث عن سكن",
       "nutzung": "مرحلة الصيد: الإعلانات · المكالمات · ملف المرشّح — قبل سيناريو «السكن» وبعده.",
       "saetze": [
-        { "de": "Ich interessiere mich für Ihre Anzeige vom Sonntag.", "ar": "أنا مهتمّ بإعلانكم يوم الأحد." },
-        { "de": "Ist die Wohnung noch zu haben?", "ar": "هل الشقة ما زالت متاحة؟" },
-        { "de": "Wie hoch ist die Warmmiete inklusive Nebenkosten?", "ar": "كم الإيجار الدافئ شاملاً الخدمات؟" },
-        { "de": "Gibt es eine Küche im Angebot?", "ar": "هل المطبخ مشمول في العرض؟" },
-        { "de": "Ich bin Nichtraucher und habe keine Haustiere.", "ar": "أنا غير مدخن ولا أملك حيوانات." },
-        { "de": "Wann ist die Besichtigung möglich?", "ar": "متى تكون المعاينة ممكنة؟" },
-        { "de": "Ich brauche die Wohnung ab dem ersten September.", "ar": "أحتاج الشقة من الأول من سبتمبر." },
-        { "de": "Gibt es einen Keller oder einen Stellplatz?", "ar": "هل يوجد قبو أو موقف سيارة؟" },
-        { "de": "Ich bin unbefristet angestellt und kann Schufa vorweisen.", "ar": "عندي عقد دائم وأستطيع إبراز كشف Schufa." },
-        { "de": "Wie viele Interessenten gibt es noch?", "ar": "كم مرشحاً آخر يوجد؟" },
-        { "de": "Kann ich die Miete per Lastschrift bezahlen?", "ar": "هل أدفع الإيجار بالخصم الآلي؟" },
-        { "de": "Danke für die Besichtigung — ich melde mich morgen.", "ar": "شكراً على المعاينة — أتواصل غداً." }
+        {
+          "de": "Ich interessiere mich für Ihre Anzeige vom Sonntag.",
+          "ar": "أنا مهتمّ بإعلانكم يوم الأحد."
+        },
+        {
+          "de": "Ist die Wohnung noch zu haben?",
+          "ar": "هل الشقة ما زالت متاحة؟"
+        },
+        {
+          "de": "Wie hoch ist die Warmmiete inklusive Nebenkosten?",
+          "ar": "كم الإيجار الدافئ شاملاً الخدمات؟"
+        },
+        {
+          "de": "Gibt es eine Küche im Angebot?",
+          "ar": "هل المطبخ مشمول في العرض؟"
+        },
+        {
+          "de": "Ich bin Nichtraucher und habe keine Haustiere.",
+          "ar": "أنا غير مدخن ولا أملك حيوانات."
+        },
+        {
+          "de": "Wann ist die Besichtigung möglich?",
+          "ar": "متى تكون المعاينة ممكنة؟"
+        },
+        {
+          "de": "Ich brauche die Wohnung ab dem ersten September.",
+          "ar": "أحتاج الشقة من الأول من سبتمبر."
+        },
+        {
+          "de": "Gibt es einen Keller oder einen Stellplatz?",
+          "ar": "هل يوجد قبو أو موقف سيارة؟"
+        },
+        {
+          "de": "Ich bin unbefristet angestellt und kann Schufa vorweisen.",
+          "ar": "عندي عقد دائم وأستطيع إبراز كشف Schufa."
+        },
+        {
+          "de": "Wie viele Interessenten gibt es noch?",
+          "ar": "كم مرشحاً آخر يوجد؟"
+        },
+        {
+          "de": "Kann ich die Miete per Lastschrift bezahlen?",
+          "ar": "هل أدفع الإيجار بالخصم الآلي؟"
+        },
+        {
+          "de": "Danke für die Besichtigung — ich melde mich morgen.",
+          "ar": "شكراً على المعاينة — أتواصل غداً."
+        }
       ],
       "dialog": {
         "titel": "مكالمة حول الإعلون (Telefon zur Anzeige)",
         "lines": [
-          { "who": "A", "role": "باحث", "de": "Guten Tag, ich rufe wegen der Wohnung in der Lessingstraße an.", "ar": "مرحباً، أتصل بشأن الشقة في شارع ليسينغ." },
-          { "who": "B", "role": "مالك", "de": "Ja, sie ist noch frei. Suchen Sie für sich allein?", "ar": "نعم، ما زالت شاغرة. تبحث لنفسك وحدك؟" },
-          { "who": "A", "role": "باحث", "de": "Zu zweit. Beide arbeiten wir unbefristet.", "ar": "اثنان. كلا لنا عقد دائم." },
-          { "who": "B", "role": "مالك", "de": "Gut. Besichtigung morgen um 17 Uhr?", "ar": "جيد. معاينة غداً الساعة 17؟" },
-          { "who": "A", "role": "باحث", "de": "Passt. Brauchen Sie Unterlagen von mir?", "ar": "يناسب. هل تحتاجون أوراقي؟" },
-          { "who": "B", "role": "مالك", "de": "Schufa und die letzten drei Gehaltszettel, bitte.", "ar": "كشف Schufa وآخر ثلاث كشوف راتب، من فضلك." }
+          {
+            "who": "A",
+            "role": "باحث",
+            "de": "Guten Tag, ich rufe wegen der Wohnung in der Lessingstraße an.",
+            "ar": "مرحباً، أتصل بشأن الشقة في شارع ليسينغ."
+          },
+          {
+            "who": "B",
+            "role": "مالك",
+            "de": "Ja, sie ist noch frei. Suchen Sie für sich allein?",
+            "ar": "نعم، ما زالت شاغرة. تبحث لنفسك وحدك؟"
+          },
+          {
+            "who": "A",
+            "role": "باحث",
+            "de": "Zu zweit. Beide arbeiten wir unbefristet.",
+            "ar": "اثنان. كلا لنا عقد دائم."
+          },
+          {
+            "who": "B",
+            "role": "مالك",
+            "de": "Gut. Besichtigung morgen um 17 Uhr?",
+            "ar": "جيد. معاينة غداً الساعة 17؟"
+          },
+          {
+            "who": "A",
+            "role": "باحث",
+            "de": "Passt. Brauchen Sie Unterlagen von mir?",
+            "ar": "يناسب. هل تحتاجون أوراقي؟"
+          },
+          {
+            "who": "B",
+            "role": "مالك",
+            "de": "Schufa und die letzten drei Gehaltszettel, bitte.",
+            "ar": "كشف Schufa وآخر ثلاث كشوف راتب، من فضلك."
+          }
         ]
       },
       "modelle": [

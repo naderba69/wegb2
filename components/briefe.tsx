@@ -205,7 +205,7 @@ ${res.pct >= 60 ? "BESTANDEN ✓" : "Nicht bestanden — nach 4-Punkte-Regel üb
         <div style={{ display: "grid", gap: "0.7rem" }}>
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
             {BRIEFE.map((x) => (
-              <button key={x.id} className="chip" style={{ cursor: "pointer", background: x.id === sel ? "var(--color-cola)" : "white", color: x.id === sel ? "white" : undefined }} onClick={() => { setSel(x.id); setText(""); setRes(null); }}>
+              <button key={x.id} className="chip" style={{ cursor: "pointer", background: x.id === sel ? "var(--color-cola)" : "var(--ui-surface-raised)", color: x.id === sel ? "var(--ui-on-accent)" : undefined }} onClick={() => { setSel(x.id); setText(""); setRes(null); }}>
                 {x.emoji} {x.ar.split("—")[0]}
               </button>
             ))}
@@ -235,7 +235,7 @@ ${res.pct >= 60 ? "BESTANDEN ✓" : "Nicht bestanden — nach 4-Punkte-Regel üb
                 <span style={{ fontSize: "1.7rem", fontWeight: 900, color: res.pct >= 60 ? "var(--color-a1)" : "#b91c1c" }}>
                   Note {res.note}
                 </span>
-                <span className="chip" style={{ background: res.pct >= 60 ? "var(--color-a1)" : "#b91c1c", color: "white", border: 0 }}>
+                <span className="chip" style={{ background: res.pct >= 60 ? "var(--color-a1)" : "#b91c1c", color: res.pct >= 60 ? "var(--ui-on-accent)" : "white", border: 0 }}>
                   {res.pct}٪ — {NOTE_TEXT[res.note]}{res.pct >= 60 ? " · bestanden ✓" : " · nicht bestanden"}
                 </span>
                 {!res.laengeOk && <span style={{ fontSize: "0.7rem", color: "var(--color-gold)" }} dir="rtl">⚠️ خارج نطاق الطول — يُخصم من Ausdruck</span>}

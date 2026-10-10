@@ -1,0 +1,709 @@
+{
+  "date": "2026-10-05",
+  "batch": "A1-dialogues-10",
+  "scope": "الدفعة التالية الموجودة فعلياً في السجل بعد d-a1-25–27 هي d-a1-31 وd-a1-32؛ لا توجد سجلات d-a1-28 أو d-a1-29 أو d-a1-30 في content/dialogues.json. فُحصت 23 وحدة: بياناتا الحوار، 11 سطراً، 4 أسئلة بكل الحقول، و6 جمل إملاء.",
+  "coverage": {
+    "dialogues": 2,
+    "dialogueMetadata": 2,
+    "lines": 11,
+    "questions": 4,
+    "dictationSentences": 6,
+    "audioAssets": 2,
+    "unresolvedContextNotes": 1,
+    "totalTrackedItems": 23
+  },
+  "statusCounts": {
+    "سليم": 22,
+    "مُصحح": 0,
+    "غير محسوم": 1
+  },
+  "method": "تمت قراءة السجل الحي ومراجعته بنداً بنداً: العنوان والمستوى المخزن وبنية الأسطر والمتحدثين والترجمات، كل أسئلة الاختيار والإكمال بخياراتها ومفاتيحها وشروحها وتعليماتها، وجمل الإملاء ومطابقتها. رُبط كل بند بمصدر إنترنت ودليل وحكم وإجراء. قورنت الصياغة بمصدر التأليف التأسيسي وملف تحرير المشتتات. فُحص وجود ملفي الصوت وحجمهما المسجل فقط؛ لم يُدّعَ اختبار مطابقة الصوت أو مراجعة نطق بشرية.",
+  "statusDefinitions": {
+    "سليم": "لا يوجد خطأ مثبت يتطلب إصلاحاً؛ قد يرد توضيح أسلوبي لا يبرر التغيير.",
+    "مُصحح": "خلل مؤكد طُبق إصلاح محدد له.",
+    "غير محسوم": "يتوقف الحكم على غرض تعليمي/سياق غير محدد؛ يُسجل ولا يُعدّل تخميناً."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي مدعومة بمصادر؛ ليست مراجعة بشرية أو اعتماداً لغوياً أو تربوياً أو مهنياً.",
+    "وُسم A1 كما هو في البيانات؛ لم أعد تقييم CEFR أو النسبة أو حساب المستوى.",
+    "لا تظهر المعرفات d-a1-28 وd-a1-29 وd-a1-30 في السجل الحالي، لذلك لم أختلق محتوى لها؛ راجعت أقرب حوارين موجودين بعد الدفعة السابقة، 31 و32.",
+    "في d-a1-31.lines[3] لا يوضح المشروع هل التعريب ينقل معنى فعل التهجئة فقط أم أسماء الحروف الألمانية صوتياً؛ بقيت الصياغة غير محسومة دون تعديل.",
+    "«الإشارة» مقابل «إشارة المرور» في d-a1-32.lines[1] ملاحظة وضوح: السياق يحدد Ampel ولا يثبت خطأً.",
+    "فحص ملفات MP3 محلياً يثبت وجودها ومطابقة الحجم المعلن، ولا يثبت مطابقة الصوت للكلام أو جودة النطق."
+  ],
+  "historicalPatchReview": {
+    "sources": [
+      "scripts/dialoge_welle.py",
+      "scripts/patches/a_dialog_fallen.py"
+    ],
+    "role": "dialoge_welle.py مصدر تأليف تأسيسي تاريخي، وa_dialog_fallen.py سجل تحرير لاحق للمشتتات؛ لا يُعامل أي منهما كمرجع لغوي أعلى من المصادر المنشورة أو كبيانات حيّة.",
+    "comparisons": [
+      {
+        "dialogueId": "d-a1-31",
+        "baseline": "scripts/dialoge_welle.py",
+        "postEdit": "scripts/patches/a_dialog_fallen.py",
+        "linesAndTitles": "العنوان وحقول المتحدث/النص الألماني/الترجمة العربية الخمسة مطابقة للمصدر التأسيسي. لا توجد waisen في المصدر أو السجل الحالي.",
+        "questions": [
+          {
+            "id": "d-a1-31-q1",
+            "initialOptions": [
+              "um acht Uhr",
+              "um neun Uhr",
+              "um zehn Uhr"
+            ],
+            "postEditOptions": [
+              "um neun Uhr bei Frau Bauer",
+              "um neun Uhr bei Herrn Haddad",
+              "um zehn Uhr bei Frau Bauer"
+            ],
+            "liveOptions": [
+              "um neun Uhr bei Herrn Haddad",
+              "um neun Uhr bei Frau Bauer",
+              "um zehn Uhr bei Frau Bauer"
+            ],
+            "initialAnswer": "um neun Uhr",
+            "postEditAnswer": "um neun Uhr bei Frau Bauer",
+            "liveAnswer": "um neun Uhr bei Frau Bauer",
+            "note": "زاد التفصيل ليحدد Frau Bauer، والمفتاح الحالي هو نفسه المفتاح بعد تحرير المشتتات. ترتيب الإجابة الحية انتقل من الموضع الأول في a_dialog_fallen إلى الثاني؛ لا يغير صحة المفتاح."
+          },
+          {
+            "id": "d-a1-31-q2",
+            "initialPrompt": "Nehmen Sie bitte im ___ Platz.",
+            "livePrompt": "Nehmen Sie bitte im ___ Platz.",
+            "answer": "Wartezimmer",
+            "note": "بقي السؤال والمفتاح؛ خُفف الشرح من تعميم «في كل عيادة» إلى عبارة ذات شاهد مباشر من الحوار."
+          }
+        ],
+        "dictationChanges": [
+          {
+            "initial": [
+              "Haben Sie einen Termin?",
+              "Wie ist Ihr Name, bitte?",
+              "Nehmen Sie bitte Platz."
+            ],
+            "live": [
+              "Guten Morgen! Haben Sie einen Termin?",
+              "Ja, um neun Uhr bei Frau Bauer.",
+              "Wie ist Ihr Name, bitte?"
+            ],
+            "note": "أصبحت الجمل الثلاث كاملة ومقتبسة حرفياً من ثلاثة أسطر متتالية؛ الإملاء الثالث التاريخي كان مقتطفاً أقصر من السطر."
+          }
+        ],
+        "unavailableHistoricalFields": [
+          "question.promptAr"
+        ]
+      },
+      {
+        "dialogueId": "d-a1-32",
+        "baseline": "scripts/dialoge_welle.py",
+        "postEdit": "scripts/patches/a_dialog_fallen.py",
+        "linesAndTitles": "العنوان وحقول المتحدث/النص الألماني/الترجمة العربية الستة مطابقة للمصدر التأسيسي.",
+        "questions": [
+          {
+            "id": "d-a1-32-q1",
+            "initialOptions": [
+              "neben der Bank",
+              "hinter der Schule",
+              "vor dem Kino"
+            ],
+            "postEditOptions": [
+              "neben der Bank",
+              "an der Ampel",
+              "fünf Minuten geradeaus, dann links"
+            ],
+            "liveOptions": [
+              "an der Ampel",
+              "fünf Minuten geradeaus, dann links",
+              "neben der Bank"
+            ],
+            "answer": "neben der Bank",
+            "note": "استبدلت المشتتات العامة بمعلومات مسموعة لكن موضوعة في دور خاطئ؛ مفتاح الإجابة ثابت، وترتيبه الحي انتقل من الأول إلى الثالث."
+          },
+          {
+            "id": "d-a1-32-q2",
+            "initialPrompt": "Gehen Sie ___ bis zur Ampel.",
+            "livePrompt": "Gehen Sie ___ bis zur Ampel.",
+            "answer": "geradeaus",
+            "note": "الموجه والمفتاح والشرح الأساسي بقوا."
+          }
+        ],
+        "dictationChanges": [
+          {
+            "initial": [
+              "Wo ist die Post?",
+              "Gehen Sie geradeaus.",
+              "Es sind fünf Minuten zu Fuß."
+            ],
+            "live": [
+              "Entschuldigung, wo ist die Post?",
+              "Gehen Sie geradeaus bis zur Ampel.",
+              "Dann rechts. Die Post ist neben der Bank."
+            ],
+            "note": "استبدلت المقتطفات بجمل كاملة من السطور الحية؛ الثلاث كلها مطابقة حرفياً للحوار الحالي."
+          }
+        ],
+        "unavailableHistoricalFields": [
+          "question.promptAr"
+        ]
+      }
+    ]
+  },
+  "contentPatch": {
+    "fieldsChanged": 0,
+    "reason": "لم يثبت خطأ مؤكد في البيانات الحية يستلزم تعديلها. الملاحظة غير المحسومة في التهجئة لا تُغيّر دون معرفة الهدف التعليمي.",
+    "protectedUnresolvedItemIds": [
+      "d-a1-31.lines[3]"
+    ]
+  },
+  "audioAssetAudit": [
+    {
+      "id": "d-a1-31",
+      "file": "/audio/dialog/d-a1-31.mp3",
+      "metadataBytes": 134670,
+      "actualBytes": 134670,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "فحص وجود الملف وتطابق الحجم فقط؛ لم تُختبر مطابقة النطق/المحتوى الصوتي سطراً بسطور."
+    },
+    {
+      "id": "d-a1-32",
+      "file": "/audio/dialog/d-a1-32.mp3",
+      "metadataBytes": 94773,
+      "actualBytes": 94773,
+      "exists": true,
+      "voices": 2,
+      "voice": "voice-01+voice-02",
+      "check": "فحص وجود الملف وتطابق الحجم فقط؛ لم تُختبر مطابقة النطق/المحتوى الصوتي سطراً بسطور."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "PONS — Termin (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Termin",
+      "supports": "يعطي Termin = موعد؛ يثبت معنى موعد Rami واسم الموعد في السؤال."
+    },
+    {
+      "id": "S2",
+      "title": "Duden — Schreibung von Uhrzeitangaben",
+      "url": "https://www.duden.de/sprachwissen/sprachratgeber/Uhrzeitangaben",
+      "supports": "يذكر um drei Uhr أو um fünfzehn Uhr؛ يوضح أن الساعة المفردة لا تصرح صباحاً/مساءً بذاتها."
+    },
+    {
+      "id": "S3",
+      "title": "PONS — Name (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Name",
+      "supports": "يعطي Name = اسم؛ يسند السؤال عن اسم Rami."
+    },
+    {
+      "id": "S4",
+      "title": "Duden — buchstabieren",
+      "url": "https://www.duden.de/rechtschreibung/buchstabieren",
+      "supports": "يعرف buchstabieren بأنه ذكر أحرف الكلمة واحداً واحداً وبالترتيب، ويعطي مثالاً على تهجئة الاسم؛ لا يحدد أسلوب نقله الصوتي إلى العربية."
+    },
+    {
+      "id": "S5",
+      "title": "PONS — Wartezimmer (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Wartezimmer",
+      "supports": "يعطي Wartezimmer = غرفة الانتظار."
+    },
+    {
+      "id": "S6",
+      "title": "PONS — Platz nehmen (German spelling dictionary)",
+      "url": "https://en.pons.com/translate/dictionary-of-german-spelling/Platz+nehmen",
+      "supports": "يشرح Nehmen Sie bitte Platz = Setzen Sie sich bitte، ويورد مثال «Bitte nehmen Sie im Wartezimmer Platz»."
+    },
+    {
+      "id": "S7",
+      "title": "Langenscheidt — Ampel (German–Arabic)",
+      "url": "https://en.langenscheidt.com/german-arabic/ampel",
+      "supports": "يعطي Ampel = إشارة ضوئية؛ يدعم قراءة نقطة الطريق على أنها إشارة مرور."
+    },
+    {
+      "id": "S8",
+      "title": "PONS — geradeaus (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/geradeaus",
+      "supports": "يعطي geradeaus = إلى الأمام؛ يسند الاتجاه المستقيم في السطر وخيار الإكمال."
+    },
+    {
+      "id": "S9",
+      "title": "Goethe-Institut — Köln: Wegbeschreibung (Arbeitsblätter)",
+      "url": "https://lernen.goethe.de/media/iwb/Arbeitsblaetter_Koeln_Wegbeschreibung.pdf",
+      "supports": "نموذج رسمي لتوجيهات الطريق: geradeaus ثم شارع إلى اليسار/اليمين؛ يسند تسلسل الاتجاهات والسياق لا حقيقة مكانية."
+    },
+    {
+      "id": "S10",
+      "title": "PONS — rechts (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/rechts",
+      "supports": "يعطي rechts = يميناً/إلى اليمين؛ يثبت تعليمات الاتجاه."
+    },
+    {
+      "id": "S11",
+      "title": "PONS — Postamt (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Postamt",
+      "supports": "يعطي Postamt = مكتب بريد؛ مع سياق السؤال عن موقع die Post يدعم «مكتب البريد»."
+    },
+    {
+      "id": "S12",
+      "title": "PONS — Bank (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Bank",
+      "supports": "يفصل Bank بمعنى المؤسسة المالية عن Bank بمعنى مقعد؛ سياق مكان البريد والترجمة «البنك» يرجح المعنى المالي."
+    },
+    {
+      "id": "S13",
+      "title": "PONS — neben (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/neben",
+      "supports": "يعطي neben (örtlich) = بجانب؛ يسند تحديد موقع مكتب البريد."
+    },
+    {
+      "id": "S14",
+      "title": "Deutsche Grammatik 2.0 — lokale Bedeutung von neben",
+      "url": "https://deutschegrammatik20.de/praepositionen/die-bedeutung-der-prapositionen-ubersicht/die-bedeutung-der-prapositionen-neben/",
+      "supports": "يفرق بين موقع wo مع neben + Dativ واتجاه wohin مع neben + Akkusativ؛ في «neben der Bank» وصف لموقع ثابت."
+    },
+    {
+      "id": "S15",
+      "title": "PONS — weit (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/weit",
+      "supports": "يعطي weit بمعنى entfernt = بعيد؛ يسند سؤال هل المكان بعيد."
+    },
+    {
+      "id": "S16",
+      "title": "PONS — zu Fuß (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/zu+Fu%C3%9F",
+      "supports": "يعطي zu Fuß = على القدمين/مشياً؛ يسند تقدير زمن المسير."
+    },
+    {
+      "id": "S17",
+      "title": "PONS — Minute (German–Arabic)",
+      "url": "https://en.pons.com/translate/german-arabic/Minute",
+      "supports": "يعطي Minute = دقيقة؛ يسند «خمس دقائق»."
+    },
+    {
+      "id": "S18",
+      "title": "Goethe-Institut — Goethe-Zertifikat A1 Start Deutsch 1 Wortliste (PDF)",
+      "url": "https://www.goethe.de/pro/relaunch/prf/de/A1_SD1_Wortliste_02.pdf",
+      "supports": "قائمة مفردات رسمية تتضمن Termin وPost والوقت ومفردات الاتجاه؛ تستخدم هنا مرجعاً للكلمات الواردة فقط، لا لإعادة تقييم CEFR أو اعتماد المستوى."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a1-31",
+      "kind": "بيانات الحوار: العنوان والمستوى والبنية",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S5",
+        "S18"
+      ],
+      "finding": "عنوان «An der Rezeption» يقابل «في الاستقبال»، والسياق هو تسجيل صاحب موعد وانتظاره. لا تحتوي بيانات هذا السجل على waisen/مرتكزات مفردات، لذلك لم أفترضها ولم أضفها. وسم A1 هو القيمة المخزنة فقط ولا يعاد تقييمه هنا.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "titleDe": "An der Rezeption",
+        "titleAr": "في الاستقبال",
+        "level": "A1",
+        "lineCount": 5,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a1-31.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S18"
+      ],
+      "finding": "التحية والسؤال عن وجود موعد محفوظان. صيغة Sie رسمية؛ «ألديكَ» تخاطب رامي بصيغة المذكر، ولا يوجد تعارض مع السياق.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Empfang",
+        "de": "Guten Morgen! Haben Sie einen Termin?",
+        "ar": "صباحَ الخير! ألديكَ موعد؟"
+      }
+    },
+    {
+      "id": "d-a1-31.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "الجواب يحدد التاسعة وFrau Bauer؛ ترجمة «التاسعة عند السيدة باور» تنقل الموعد. لا يحدد الألماني صباحاً أو مساءً، والعربية لا تضيف ذلك.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Rami",
+        "de": "Ja, um neun Uhr bei Frau Bauer.",
+        "ar": "نعم، التاسعةَ عندَ السيدةِ باور."
+      }
+    },
+    {
+      "id": "d-a1-31.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S3"
+      ],
+      "finding": "Wie ist Ihr Name تسأل عن الاسم، والترجمة «ما اسمك» مطابقة للمقصود.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Empfang",
+        "de": "Wie ist Ihr Name, bitte?",
+        "ar": "ما اسمُكَ من فضلك؟"
+      }
+    },
+    {
+      "id": "d-a1-31.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S4"
+      ],
+      "finding": "Duden يعرّف buchstabieren بأنه نطق أحرف الكلمة بالتتابع. الترجمة العربية تسمي الحروف المكافئة بالعربية «ها-ألف-دال...» ولا تنقل النطق الألماني للأحرف حرفاً بحرف. إن كان الهدف تعريف معنى التهجئة فالصياغة مفهومة؛ وإن كان الهدف تدريب نطق أسماء الحروف الألمانية فقد يلزم إبقاء H-A-D-D-A-D أو إضافة نقل صوتي. لا يحدد السجل أي الهدفين.",
+      "action": "تُترك كما هي إلى أن يتحدد هدف هذا السطر؛ لا أستبدل تمثيل الحروف تخميناً.",
+      "reviewed": {
+        "who": "Rami",
+        "de": "Rami Haddad. Ich buchstabiere: H-A-D-D-A-D.",
+        "ar": "رامي حدّاد. أتهجّى: ها-ألف-دال-دال-ألف-دال."
+      }
+    },
+    {
+      "id": "d-a1-31.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S5",
+        "S6"
+      ],
+      "finding": "Nehmen Sie bitte im Wartezimmer Platz تعني الجلوس/أخذ مقعد في غرفة الانتظار. الترجمة تحفظ طلب الجلوس والمكان والمخاطب المذكر.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Empfang",
+        "de": "Danke. Nehmen Sie bitte im Wartezimmer Platz.",
+        "ar": "شكراً. تفضَّلْ بالجلوسِ في غرفةِ الانتظار."
+      }
+    },
+    {
+      "id": "d-a1-31-q1",
+      "kind": "سؤال فهم: الموجه والخيارات والمفتاح والشرح",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "الإجابة الحالية «um neun Uhr bei Frau Bauer» تجمع الوقت والطبيبة كما في السطر 1. المشتت «bei Herrn Haddad» يخلط المريض Rami بمقدم الموعد، ومشتت العاشرة يبدل الوقت.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-31-q1",
+        "type": "mc",
+        "promptDe": "Wann ist der Termin?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "options": [
+          "um neun Uhr bei Herrn Haddad",
+          "um neun Uhr bei Frau Bauer",
+          "um zehn Uhr bei Frau Bauer"
+        ],
+        "answer": "um neun Uhr bei Frau Bauer",
+        "explanationAr": "الدليل: «Ja, um neun Uhr bei Frau Bauer». الفخّ 1: حدّاد هو المريض رامي. الفخّ 2: neun/zehn."
+      }
+    },
+    {
+      "id": "d-a1-31-q2",
+      "kind": "سؤال إكمال: الموجه والإجابة والشرح",
+      "status": "سليم",
+      "sources": [
+        "S5",
+        "S6"
+      ],
+      "finding": "بعد «im ___ Platz» الكلمة المنقولة حرفياً هي Wartezimmer؛ تركيب Platz nehmen تؤيده أمثلة PONS نفسها.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-31-q2",
+        "type": "fill",
+        "promptDe": "Nehmen Sie bitte im ___ Platz.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+        "answer": [
+          "Wartezimmer"
+        ],
+        "explanationAr": "الدليل في الحوار: «Nehmen Sie bitte im Wartezimmer Platz» — والعبارة الثابتة: Platz nehmen = يجلس."
+      }
+    },
+    {
+      "id": "d-a1-31.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S18"
+      ],
+      "finding": "جملة كاملة مطابقة لبداية السطر الحواري الأول.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Guten Morgen! Haben Sie einen Termin?"
+      }
+    },
+    {
+      "id": "d-a1-31.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "جملة كاملة مطابقة للسطر الحواري الثاني؛ الوقت لا يضيف فترة يوم غير مذكورة.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Ja, um neun Uhr bei Frau Bauer."
+      }
+    },
+    {
+      "id": "d-a1-31.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S3"
+      ],
+      "finding": "جملة كاملة مطابقة لسؤال الاسم في السطر الحواري الثالث.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Wie ist Ihr Name, bitte?"
+      }
+    },
+    {
+      "id": "d-a1-32",
+      "kind": "بيانات الحوار: العنوان والمستوى والبنية",
+      "status": "سليم",
+      "sources": [
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S18"
+      ],
+      "finding": "عنوان «Nach dem Weg fragen» يقابل «السؤال عن الطريق». يسير النص من طلب موقع البريد إلى إرشادات يميناً ثم تقدير المسافة سيراً. لا توجد waisen في السجل؛ وسم A1 محفوظ كما هو دون إعادة تقييم.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "titleDe": "Nach dem Weg fragen",
+        "titleAr": "السؤالُ عن الطريق",
+        "level": "A1",
+        "lineCount": 6,
+        "questionCount": 2,
+        "dictationCount": 3,
+        "hasWaisen": false
+      }
+    },
+    {
+      "id": "d-a1-32.lines[0]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S11",
+        "S18"
+      ],
+      "finding": "السؤال يطلب موقع die Post، وترجمة مكتب البريد تحدد المؤسسة لا البريد المرسل؛ القراءة السياقية مناسبة للطريق.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Lena",
+        "de": "Entschuldigung, wo ist die Post?",
+        "ar": "معذرةً، أينَ مكتبُ البريد؟"
+      }
+    },
+    {
+      "id": "d-a1-32.lines[1]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "finding": "التوجيه مستقيم حتى Ampel. «الإشارة» مختصر مفهوم في سياق الاتجاهات؛ «إشارة المرور» أوضح، لكن لا يثبت أن الترجمة الحالية خاطئة.",
+      "action": "لا تعديل؛ تُسجل الوضوح ملاحظة لا خطأ مؤكداً.",
+      "reviewed": {
+        "who": "Passant",
+        "de": "Gehen Sie geradeaus bis zur Ampel.",
+        "ar": "امشِ مباشرةً حتى الإشارة."
+      }
+    },
+    {
+      "id": "d-a1-32.lines[2]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S9"
+      ],
+      "finding": "Und dann? جواب متابعة قصير بعد تعليمات الطريق، وترجمة «ثم؟» تؤدي الوظيفة نفسها.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Lena",
+        "de": "Und dann?",
+        "ar": "ثمَّ؟"
+      }
+    },
+    {
+      "id": "d-a1-32.lines[3]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "finding": "Dann rechts تقابل «ثم يميناً»، وneben der Bank تقابل «بجانب البنك». استعمال Dativ بعد neben هنا صحيح لأنه يصف موقعاً ثابتاً لا حركة إلى جوار البنك.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Passant",
+        "de": "Dann rechts. Die Post ist neben der Bank.",
+        "ar": "ثمَّ يميناً. البريدُ بجانبِ البنك."
+      }
+    },
+    {
+      "id": "d-a1-32.lines[4]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S15"
+      ],
+      "finding": "Ist das weit سؤال عن البعد؛ «أهو بعيد؟» يحفظ المعنى.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Lena",
+        "de": "Ist das weit?",
+        "ar": "أهوَ بعيد؟"
+      }
+    },
+    {
+      "id": "d-a1-32.lines[5]",
+      "kind": "سطر حوار ألماني وترجمته",
+      "status": "سليم",
+      "sources": [
+        "S16",
+        "S17"
+      ],
+      "finding": "fünf Minuten zu Fuß تعني خمس دقائق مشياً؛ الترجمة لا تضيف وسيلة نقل أو نقطة بداية غير مذكورة.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "who": "Passant",
+        "de": "Nein, fünf Minuten zu Fuß.",
+        "ar": "لا، خمسُ دقائقَ مشياً."
+      }
+    },
+    {
+      "id": "d-a1-32-q1",
+      "kind": "سؤال فهم: الموجه والخيارات والمفتاح والشرح",
+      "status": "سليم",
+      "sources": [
+        "S7",
+        "S8",
+        "S9",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15"
+      ],
+      "finding": "المفتاح «neben der Bank» يقتبس المعلومة الصريحة. الإشارة نقطة انعطاف لا موقع البريد؛ والخيار الثالث يبدل الاتجاه إلى links رغم أن النص يقول rechts. التفسير يوافق الحوار.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-32-q1",
+        "type": "mc",
+        "promptDe": "Wo ist die Post?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "options": [
+          "an der Ampel",
+          "fünf Minuten geradeaus, dann links",
+          "neben der Bank"
+        ],
+        "answer": "neben der Bank",
+        "explanationAr": "الدليل: «Die Post ist neben der Bank». الفخّ 1: الإشارة نقطة الانعطاف. الفخّ 2: «rechts» لا «links»."
+      }
+    },
+    {
+      "id": "d-a1-32-q2",
+      "kind": "سؤال إكمال: الموجه والإجابة والشرح",
+      "status": "سليم",
+      "sources": [
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "finding": "الفراغ في «Gehen Sie ___ bis zur Ampel» يتطلب geradeaus؛ المفردة واردة في السطر ومطابقة للترجمة «إلى الأمام».",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "id": "d-a1-32-q2",
+        "type": "fill",
+        "promptDe": "Gehen Sie ___ bis zur Ampel.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+        "answer": [
+          "geradeaus"
+        ],
+        "explanationAr": "geradeaus = إلى الأمامِ مباشرة."
+      }
+    },
+    {
+      "id": "d-a1-32.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S11",
+        "S18"
+      ],
+      "finding": "جملة كاملة مطابقة للسطر الحواري الأول.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Entschuldigung, wo ist die Post?"
+      }
+    },
+    {
+      "id": "d-a1-32.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "finding": "جملة كاملة مطابقة لتعليمة الاتجاه في السطر الثاني.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Gehen Sie geradeaus bis zur Ampel."
+      }
+    },
+    {
+      "id": "d-a1-32.dictation[2]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "finding": "جملة كاملة مطابقة للسطر الرابع، وتحفظ يميناً وموقع البريد بجانب البنك.",
+      "action": "لا تعديل.",
+      "reviewed": {
+        "sentence": "Dann rechts. Die Post ist neben der Bank."
+      }
+    }
+  ],
+  "adjacentIdTrace": {
+    "file": "docs/content-gap-a1-dialogues-28-30-2026-10-05.md",
+    "jsonFile": "docs/content-gap-a1-dialogues-28-30-2026-10-05.json",
+    "conclusion": "المعرّفات 28–30 غير موجودة في النسخة الحية أو أشجار Git المتاحة، لكن النسخة shallow؛ غيابها التاريخي قبل commit الأساس لا يمكن حسمه. التتبّع لا يعد مراجعة لغوية لتلك الحوارات."
+  }
+}

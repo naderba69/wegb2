@@ -7,11 +7,12 @@
     "dev": "next dev",
     "interaktiv": "esbuild scripts/interaktiv_test.tsx --bundle --platform=node --format=cjs --external:jsdom --jsx=automatic --outfile=node_modules/.cache/interaktiv.cjs --log-level=error && node node_modules/.cache/interaktiv.cjs",
     "smoke": "esbuild scripts/engine_smoke.ts --bundle --platform=node --format=cjs --jsx=transform --tsconfig=tsconfig.json --outfile=.cache/smoke.cjs --log-level=warning && node .cache/smoke.cjs",
+    "audit:content": "esbuild scripts/audit_inhalt.ts --bundle --platform=node --format=cjs --tsconfig=tsconfig.json --outfile=.cache/audit.cjs --log-level=warning && node .cache/audit.cjs",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "next": "^15.1.0",
+    "next": "^15.5.27",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -23,8 +24,12 @@
     "@types/react-dom": "^19.0.0",
     "esbuild": "^0.28.2",
     "jsdom": "^29.1.1",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.28",
     "tailwindcss": "^4.0.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.7.0"
+  },
+  "overrides": {
+    "postcss": "$postcss"
   }
 }

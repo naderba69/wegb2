@@ -1,0 +1,422 @@
+{
+  "reviewRule": "R121",
+  "date": "2026-10-08",
+  "scope": "الدفعة B1 الثامنة d-b1-25..27 (تسجيل السكن بعد الانتقال، تبديل مورّد الكهرباء، رخصة السياقة: نظريّ وتطبيقي) — حوارات قصيرة بلا waisen.",
+  "dialogues": [
+    {
+      "id": "d-b1-25",
+      "level": "B1",
+      "titleDe": "Ummeldung nach dem Umzug",
+      "titleAr": "تحديثُ الإقامةِ بعدَ الانتقال",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 51,
+      "hasWaisenField": false,
+      "who": [
+        "Amtsfrau Berg",
+        "Toufik"
+      ]
+    },
+    {
+      "id": "d-b1-26",
+      "level": "B1",
+      "titleDe": "Stromanbieter wechseln",
+      "titleAr": "تبديلُ مورِّدِ الكهرباء",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 51,
+      "hasWaisenField": false,
+      "who": [
+        "Fatma",
+        "Hotline"
+      ]
+    },
+    {
+      "id": "d-b1-27",
+      "level": "B1",
+      "titleDe": "Führerschein: Theorie und Übung",
+      "titleAr": "رخصةُ السياقة: نظريٌّ وتطبيقي",
+      "lines": 8,
+      "questions": 3,
+      "dictation": 2,
+      "units": 51,
+      "hasWaisenField": false,
+      "who": [
+        "Fahrlehrer",
+        "Sonda"
+      ]
+    }
+  ],
+  "totals": {
+    "dialogues": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictation": 6,
+    "approximateUnits": 153
+  },
+  "corrections": [
+    {
+      "unit": "d-b1-25.lines[0].ar",
+      "old": "قبلَ أسبوعَين انتقلتُ، فأريدُ تحديثَ إقامتي.",
+      "new": "قبلَ أسبوعَين انتقلتُ، فأريدُ تسجيلَ العنوانِ الجديد.",
+      "rationale": "Ummeldung (meldeamtlich) = تسجيل العنوان الجديد وفق § 17 BMG؛ و«تحديث الإقامة» تُلبِس مع تصريح الإقامة (Aufenthaltstitel كما في d-b1-19)."
+    },
+    {
+      "unit": "d-b1-25.lines[1].ar",
+      "old": "الأسبوعان هما الميعاد تماماً — حانَ فيهما. النموذجُ والهويّةُ وشهادةُ المؤجِّر.",
+      "new": "المهلةُ أسبوعان بالضبط — وفي الوقت. النموذجُ والهويّةُ وشهادةُ المؤجِّر.",
+      "rationale": "(أ) «Genau zwei Wochen Frist» جملة اسمية: Frist = المهلة (نمط d-b1-21)؛ و«الأسبوعان هما الميعاد» قلبٌ للمعنى و«حانَ فيهما» غير فصيحة. (ب) rechtzeitig = في الوقت."
+    },
+    {
+      "unit": "d-b1-25.lines[3].ar",
+      "old": "ورقةٌ يوقِّعُها المؤجِّرُ ويُثبِتُ فيها بدءَ سُكنانا.",
+      "new": "ورقةٌ يوقِّعُها المؤجِّرُ ويُثبِتُ فيها الانتقالَ إلى المسكن.",
+      "rationale": "(أ) «über den Einzug» = عن الانتقال/الانتقال إلى المسكن. (ب) «بدء سُكنانا» إضافة بضمير جمع لا مقابل لها في الألماني."
+    },
+    {
+      "unit": "d-b1-25.lines[5].ar",
+      "old": "بلا شهادةٍ لا تسجيل — لكنْ خُذ مني الآنَ ورقةً مؤقَّتة.",
+      "new": "بدونها لا تسجيل — سأُعطيكم شهادةً مؤقَّتة.",
+      "rationale": "(أ) «ich gebe Ihnen» ضمير Sie صريح → «سأُعطيكم» لا أمرَ مفرد «خُذ مني». (ب) «لكنْ» زائدة لا مقابل لها. (ج) Bescheinigung = شهادة (نمط d-b1-06 «شهادة تسجيل»)، و«ورقة» عامية الترجمة."
+    },
+    {
+      "unit": "d-b1-25.lines[6].ar",
+      "old": "وبكم هي؟",
+      "new": "وكم تكلِّفُ؟",
+      "rationale": "«Was kostet sie?» سؤالٌ عن الكلفة؛ و«وبكم هي؟» ركيكة بلا مرجع واضح لضمير المؤنث."
+    },
+    {
+      "unit": "d-b1-25.lines[7].ar",
+      "old": "التسجيلُ مجاناً، وستةٌ لخاصيةِ الهويّةِ الإلكترونية.",
+      "new": "التسجيلُ مجاناً، وستةُ يورو لخاصيةِ الهويةِ الإلكترونية.",
+      "rationale": "«sechs Euro» نصّ على العملة فتُذكر «يورو» ولا تُترك مجرّدة (نمط R119/R120: Fünfzehn Euro/acht Euro fünfzig)؛ وشرح Q0 يعتمد الرقم. ويُسجَّل W3 حول مبلغ الستة يورو نفسه مقابل المصادر (التفعيل مجاني رسمياً)."
+    },
+    {
+      "unit": "d-b1-26.lines[0].ar",
+      "old": "أُنهي عقدي أولَ الشهرِ المقبل وأنتقلُ إليكم.",
+      "new": "أُنهي عقدي اعتباراً من أولِ الشهر — وأريدُ كهرباءَكم.",
+      "rationale": "(أ) «zum Monatsersten» = اعتباراً من أول الشهر؛ و«المقبل» إضافة غير موجودة في الألماني. (ب) «will Ihren Strom» = أريد كهرباءكم، لا «أنتقل إليكم» (إضافة معنى)."
+    },
+    {
+      "unit": "d-b1-26.lines[1].ar",
+      "old": "مدةُ عقدِك العتيقِ أربعةُ أسابيع، ونحن نتولّى كلَّ إجراء.",
+      "new": "مهلةُ إنهاءِ عقدِك القديم أربعةُ أسابيع — ونحن نتولّى كلَّ الإجراءات.",
+      "rationale": "(أ) Altvertragsfrist = مهلة العقد القديم (Frist = مهلة)؛ و«مدة العقد» تُلغي الإنهاء. (ب) «عتيق» للمهترئ لا للقديم. (ج) «كلَّ إجراء» مفردة ركيكة → «كلَّ الإجراءات»."
+    },
+    {
+      "unit": "d-b1-26.lines[2].ar",
+      "old": "وكيف أُعلِنُ قراءةَ العدّادِ يومَ التبديل؟",
+      "new": "وكيف أُبلِغُ قراءةَ العدّادِ يومَ التبديل؟",
+      "rationale": "Zählerstand melden = إبلاغ القراءة (melden = إبلاغ، نمط d-b1-19)؛ و«أُعلِن» إعلانٌ عام."
+    },
+    {
+      "unit": "d-b1-26.lines[3].ar",
+      "old": "صورةٌ بالنموذجِ الشبكيّ، أقصاها العاشرةُ ليلاً.",
+      "new": "صورةٌ بالنموذجِ الإلكترونيّ، في موعدٍ أقصاه العاشرةُ مساءً.",
+      "rationale": "(أ) Onlineformular = النموذج الإلكتروني؛ و«الشبكيّ» خطأ مفرداتي (شبكي ≠ online). (ب) «spätestens zweiundzwanzig Uhr» = في موعد أقصاه العاشرة مساءً (نمط أوقات الملف)."
+    },
+    {
+      "unit": "d-b1-26.lines[4].ar",
+      "old": "أنُقطَعُ عن الإمداد؟",
+      "new": "وهل ينقطعُ الإمداد؟",
+      "rationale": "«Wird die Versorgung unterbrochen?» مبني للمجهول عن الإمداد؛ و«أنُقطَعُ» تجعل المتكلّم مفعولاً وتُشوّه الفاعل."
+    },
+    {
+      "unit": "d-b1-26.lines[5].ar",
+      "old": "أبداً — فالمِلكيةُ العامةُ تسدُّ الفجوةَ بلا ثانيةٍ واحدة.",
+      "new": "أبداً — التزويدُ الأساسيُّ يتدخّلُ دون ثانيةِ انقطاعٍ واحدة.",
+      "rationale": "(أ) Grundversorgung = التزويد الأساسي (تعريفة المزوّد الأساسي، § 36 EnWG) لا «الملكية العامة» — خطأ معنى صريح؛ وErsatzversorgung (§ 38 EnWG) هي التي تهبّ عند الثغرة. (ب) «springt ein» = يتدخّل؛ و«تسد الفجوة» تفسيرية أُبدلت بالمعنى المباشر."
+    },
+    {
+      "unit": "d-b1-26.lines[7].ar",
+      "old": "مكافأتُنا لمن يلبثُ سنة — وضمانُ السعرِ مشروطٌ بثباتِه.",
+      "new": "المكافأةُ فقط عندَ ارتباطِ اثني عشرَ شهراً — وضمانُ السعرِ مشروطٌ بتثبيتِ السعر.",
+      "rationale": "(أ) «zwölf Monate» = اثنا عشر شهراً، والرقم محور فخّ Q2 («an zwölf Monaten Preisbindung») فلا تُخفيه «سنة» (نمط R119/R120). (ب) Bindung = ارتباط/التزام بالمدة، وPreisbindung = تثبيت السعر لا «ثباته»."
+    },
+    {
+      "unit": "d-b1-27.lines[0].ar",
+      "old": "متى يحينُ نظريُّ الامتحان؟ وقد أتمتُ أربعينَ ساعة.",
+      "new": "متى يمكنني التقدّمُ للامتحانِ النظريّ — وقد أتممتُ أربعينَ ساعةَ تدريب؟",
+      "rationale": "(أ) «Wann kann ich zur Theorieprüfung» = متى يمكنني التقدّم للامتحان النظري؛ و«نظريُّ الامتحان» تركيب ركيك. (ب) Übungsstunden = ساعات تدريب، والرقم 40 طرف فخّ Q0."
+    },
+    {
+      "unit": "d-b1-27.lines[1].ar",
+      "old": "بعدَ أسبوعَين على الأقلّ — ومعه دورةُ الإسعافِ شرطٌ سابق.",
+      "new": "في أقربِ الأحوال بعد أسبوعَين — ودورةُ الإسعافِ مطلوبةٌ قبلَ الامتحان.",
+      "rationale": "(أ) «Frühestens in zwei Wochen» = في أقرب الأحوال بعد أسبوعين. (ب) «Erste-Hilfe-Kurs vorher nötig» = دورة الإسعاف مطلوبة قبل الامتحان؛ و«ومعه… شرطٌ سابق» ركيكة وملتبسة."
+    },
+    {
+      "unit": "d-b1-27.lines[2].ar",
+      "old": "وكم تعيشُ شهادةُ الإسعاف؟",
+      "new": "وما مدةُ صلاحيةِ شهادةِ الإسعاف؟",
+      "rationale": "«Wie lange ist diese Bescheinigung gültig?» سؤال عن مدة الصلاحية؛ و«كم تعيشُ» ترجمة حرفية غير فصيحة."
+    },
+    {
+      "unit": "d-b1-27.lines[4].ar",
+      "old": "وما الوثائقُ عندَ المُمتحِن؟",
+      "new": "وما الوثائقُ التي يطلبُها الممتحِن؟",
+      "rationale": "«verlangt» = يطلب؛ و«عند الممتحن» تُلغي الفعل وتغيّر المعنى."
+    },
+    {
+      "unit": "d-b1-27.lines[5].ar",
+      "old": "هويّة، نظارةُ قياس، إسعاف، سجلُّ التدريب، صورةٌ شمسية — والرسومُ في المكان.",
+      "new": "هويّة، اختبارُ نظر، إسعاف، سجلُّ التدريب، صورةٌ شخصية — والرسومُ في المكان.",
+      "rationale": "(أ) Sehtest = اختبار/فحص النظر لا «نظارة قياس». (ب) Passfoto = صورة شخصية/جواز؛ و«صورة شمسية» تعبير مهجور ملتبس."
+    },
+    {
+      "unit": "d-b1-27.lines[7].ar",
+      "old": "أسبوعان انتظاراً والرسومُ نافذة — لا إعادةَ تسجيل.",
+      "new": "حظرُ أربعةَ عشرَ يوماً — والرسومُ نافذة، ولا إعادةَ تسجيل.",
+      "rationale": "(أ) «Vierzehn Tage» = أربعة عشر يوماً (والرقم فخّ Q2) لا «أسبوعان» (نمط R119/R120). (ب) Sperre = حظر/منع مؤقّت لا «انتظار». ويُسجَّل W4 حول «الرسوم تبقى نافذة»: تُعاد الرسوم لكل محاولة، والساري هو الطلب/Prüfauftrag."
+    }
+  ],
+  "contextNotes": {
+    "d-b1-25": [
+      {
+        "note": "§ 17 Abs. 1 BMG: تسجيل السكن خلال أسبوعين (14 يوماً) من الانتقال الفعلي — الحوار مطابق؛ والتأخّر مخالفة قد تُغرَّم (حتى 1000 يورو).",
+        "source": "umzugshessen.de: Ummeldefrist (§ 17 BMG) · buergerservice.info: Anmeldung/Zweitwohnsitz."
+      },
+      {
+        "note": "Wohnungsgeberbestätigung (§ 19 BMG): يلتزم المؤجّر بإصدار تأكيد الانتقال خلال أسبوعين مجاناً، ويجب أن يحمل الاسم والعنوان وتاريخ الانتقال وأسماء المنتقلين؛ وعقد الإيجار لا يغني عنها — الحوار مطابق.",
+        "source": "amtsdeutschland.de: Wohnsitz anmelden (Wohnungsgeberbestätigung § 19) · checkumzug.de: Ummelden nach dem Umzug."
+      },
+      {
+        "note": "إذا غابت البطاقة: الأدلة الإدارية تذكر قبول التسجيل مع المطالبة بالاستكمال لاحقاً («Fehlt sie, muss sie nachgereicht werden»)؛ فجملة «Ohne sie keine Anmeldung» تبسيطٌ درامي في السيناريو.",
+        "source": "amtsdeutschland.de: Wohnsitz anmelden (Nachreichung) — سياق تعليمي."
+      },
+      {
+        "note": "التسجيل مجاني، وتغيير العنوان على البطاقة مجاني (§ 1 Abs. 5 PersAuswGebV)؛ أما «ستة يورو» فوُثّقت في W3 مقابل المصادر البلدية (مجانية تفعيل eID).",
+        "source": "umzugshessen.de (gebührenfrei; Adressänderung kostenlos) + W3."
+      },
+      {
+        "note": "سجل المخاطبة: الموظفة تستعمل Sie صراحةً في L5 («ich gebe Ihnen») وضمير المخاطب في L2/L6، فرُقِّعت العربية إلى الجمع؛ والألماني المقفل بقي على حاله.",
+        "source": "قاعدة المراجعة R121 + النص الألماني المقفل."
+      }
+    ],
+    "d-b1-26": [
+      {
+        "note": "المهل: في التزويد الأساسي أسبوعان (§ 20 StromGVV)، والعقود من 1.3.2022 حتى شهر واحد بعد المدة الأولى (§ 309 Nr. 9 BGB)، والقديمة حتى 3 أشهر؛ و«أربعة أسابيع» مهلة شائعة تعاقدياً في Sonderverträgen — لا تعارض.",
+        "source": "maxstrom.de: Anbieterwechsel (Fristentabelle) · tarifoptimum.de: Stromanbieter wechseln."
+      },
+      {
+        "note": "لا انقطاع أثناء التبديل: المزوّد الجديد يتولّى الإنهاء والإجراءات، وعند أي ثغرة يتولّاها المزوّد الأساسي عبر Ersatzversorgung (§ 38 EnWG) بلا انقطاع (حتى ثلاثة أشهر)؛ و«التزويد الأساسي يتدخّل» يطابق ذلك تبسيطياً (§ 36 Grundversorgung).",
+        "source": "maxstrom.de (§§ 36/38 EnWG) · wattline.de: Ersatzversorgung nahtlos · sauberenergie.de: Grundversorgung."
+      },
+      {
+        "note": "إبلاغ قراءة العدّاد بصورة عبر النموذج الإلكتروني ممارسة شائعة؛ و«22:00» موعد تعاقدي محتمل وليس قاعدة عامة.",
+        "source": "tarifoptimum.de (Wechsel-Ablauf, Zählerstand) + سياق تعاقدي."
+      },
+      {
+        "note": "المصطلحات: Grundversorgung = التزويد الأساسي (تعريفة المزوّد الأساسي) لا «الملكية العامة»؛ وErsatzversorgung = التزويد البديل عند سقوط المورّد أو غموض الوضع.",
+        "source": "maxstrom.de / wattline.de (تعريفا Grund- وErsatzversorgung)."
+      }
+    ],
+    "d-b1-27": [
+      {
+        "note": "§ 18 FeV: إعادة المحاولة «في أقرب الأحوال بعد أسبوعين» و«حظر 14 يوماً» — الحوار مطابق؛ ولا سقف لعدد المحاولات.",
+        "source": "theoriecoach.app: Theorieprüfung nicht bestanden (14 Tage § 18 FeV) · bussgeldkatalog.org: Theorieprüfung (Sperrfrist)."
+      },
+      {
+        "note": "الرسوم: كل محاولة جديدة تُسدَّد رسومها (TÜV/DEKRA نحو 22,49–24,99 يورو للفئة B)، ولذلك سُجّل W4 حول «الرسوم تبقى نافذة»؛ والساري هو الطلب/Prüfauftrag (سنة) لا الرسوم.",
+        "source": "bussgeldkatalog.org (Gebühr bei jedem Versuch erneut) · theoriecoach.app (24,99 €؛ «Antrag bleibt gültig») · be-fahrschule.de: Theorieprüfung."
+      },
+      {
+        "note": "شهادة الإسعاف غير محدودة المدة للرخصة (§ 19 FeV؛ تسع وحدات، 20–40 يورو) — مطابق L3؛ والـSehtest صالح سنتين عند السلطات (لا يمسّه الحوار).",
+        "source": "bussgeldkatalog.org: Erste-Hilfe-Kurs (unbegrenzt gültig) · pro-drive-fahrschule.de (Sehtest 2 Jahre) · erstehilfe.de."
+      },
+      {
+        "note": "«أربعون ساعة تدريب» ليست شرطاً قانونياً اتحادياً؛ الشرط المذكور في الحوار هو دورة الإسعاف، وعدد الحصص عمليٌّ يتبع تقدّم المتعلّم — وشرح Q0 نفسه يسمّيها دعوى سُندس.",
+        "source": "مقارنة داخلية (شرح Q0 في content/dialogues.json) + bussgeldkatalog.org (شروط القبول)."
+      },
+      {
+        "note": "قائمة L5 تخلط مستندات الطلب (Sehtest/Erste-Hilfe/Passfoto عند السلطة) بمستندات يوم الامتحان (Ausweis/Ausbildungsbescheinigung/الرسوم) — تبسيط تعليمي مقبول مع تصحيح الترجمة.",
+        "source": "be-fahrschule.de (Mitzubringen: Ausbildungsbescheinigung + Prüfungsgebühr) · bussgeldkatalog.org."
+      }
+    ]
+  },
+  "styleAlternatives": {
+    "d-b1-25": [
+      {
+        "phrase": "فأريدُ تسجيلَ العنوانِ الجديد",
+        "alternative": "فأريدُ تحديثَ بياناتِ سكني",
+        "note": "Ummeldung — الصياغتان صحيحتان؛ الثانية تحافظ على «تحديث» بلا لبس الإقامة."
+      },
+      {
+        "phrase": "المهلةُ أسبوعان بالضبط",
+        "alternative": "المهلةُ أسبوعان تماماً",
+        "note": "genau zwei Wochen — «بالضبط/تماماً» متكافئتان."
+      },
+      {
+        "phrase": "سأُعطيكم شهادةً مؤقَّتة",
+        "alternative": "سأصدرُ لكم إفادةً مؤقتة",
+        "note": "vorläufig eine Bescheinigung — «شهادة» نمط الملف، و«إفادة» مألوفة إدارياً."
+      }
+    ],
+    "d-b1-26": [
+      {
+        "phrase": "صورةٌ بالنموذجِ الإلكترونيّ",
+        "alternative": "صورةٌ عبر الاستمارةِ على الشبكة",
+        "note": "Onlineformular — «الاستمارة» مستعملة في d-a2-19."
+      },
+      {
+        "phrase": "التزويدُ الأساسيُّ يتدخّلُ دون ثانيةِ انقطاعٍ واحدة",
+        "alternative": "المزوّدُ الأساسيُّ يهبُّ فوراً بلا انقطاع",
+        "note": "Grundversorgung — اسم التزويد واسم المزوّد كلاهما مقبول."
+      },
+      {
+        "phrase": "وضمانُ السعرِ مشروطٌ بتثبيتِ السعر",
+        "alternative": "وضمانُ السعرِ لازمُه التزامٌ بالسعر",
+        "note": "Preisbindung — «تثبيت/التزام» أدقّ من «ثبات»."
+      }
+    ],
+    "d-b1-27": [
+      {
+        "phrase": "في أقربِ الأحوال بعد أسبوعَين",
+        "alternative": "في أقربِ تقديرٍ بعد أسبوعين",
+        "note": "frühestens — الصياغتان تؤديان المعنى."
+      },
+      {
+        "phrase": "وما مدةُ صلاحيةِ شهادةِ الإسعاف؟",
+        "alternative": "وإلى متى شهادةُ الإسعاف صالحة؟",
+        "note": "gültig — الاستفهام الاسمي أخفّ."
+      },
+      {
+        "phrase": "حظرُ أربعةَ عشرَ يوماً",
+        "alternative": "انتظارُ أربعةَ عشرَ يوماً إجبارياً",
+        "note": "Sperre — «حظر» أدقّ؛ و«انتظار إجباري» تفسير ميسّر للمتعلّم."
+      }
+    ]
+  },
+  "sources": {
+    "d-b1-25": [
+      {
+        "id": "S1",
+        "citation": "umzugshessen.de: Ummeldefrist nach dem Umzug — zwei Wochen nach § 17 BMG, gebührenfrei, Bußgeld bis 1000 €",
+        "url": "https://umzugshessen.de/ratgeber/ummeldung/"
+      },
+      {
+        "id": "S2",
+        "citation": "amtsdeutschland.de: Wohnsitz ummelden/anmelden — § 17 BMG, Wohnungsgeberbestätigung § 19 BMG, Meldebestätigung gebührenfrei",
+        "url": "https://amtsdeutschland.de/buergeramt/ummeldung/"
+      },
+      {
+        "id": "S3",
+        "citation": "checkumzug.de: Ummelden nach dem Umzug — Wohnungsgeberbestätigung Pflicht vom Vermieter, ohne sie keine Anmeldung",
+        "url": "https://www.checkumzug.de/ratgeber-ummelden-nach-umzug"
+      },
+      {
+        "id": "S4",
+        "citation": "frankfurt.de: PIN-Rücksetzung und Aktivierung der Online-Ausweisfunktion (eID) — gebührenfrei; Aktivierung u. PIN kostenfrei (auch München/Leipzig)",
+        "url": "https://frankfurt.de/leistungen/Ausweis-und-Pass-8958304/PIN-Ruecksetzung-und-Aktivierung-der-Online-Ausweisfunktion-eID-Funktion"
+      }
+    ],
+    "d-b1-26": [
+      {
+        "id": "S5",
+        "citation": "maxstrom.de: Stromanbieter wechseln — Fristentabelle (Grundversorgung 2 Wochen § 20 StromGVV; § 309 Nr. 9 BGB), Ersatzversorgung § 38 EnWG",
+        "url": "https://www.maxstrom.de/anbieterwechsel/"
+      },
+      {
+        "id": "S6",
+        "citation": "tarifoptimum.de: Stromanbieter wechseln — Versorgung läuft ununterbrochen weiter (§ 38 EnWG), vier Wochen übliche Frist in Sonderverträgen",
+        "url": "https://www.tarifoptimum.de/ratgeber/stromanbieter-wechseln"
+      },
+      {
+        "id": "S7",
+        "citation": "wattline.de: Kündigung durch Energieversorger — Ersatzversorgung durch den Grundversorger nahtlos, max. drei Monate",
+        "url": "https://www.wattline.de/energiewissen/kuendigung-durch-energieversorger/"
+      },
+      {
+        "id": "S8",
+        "citation": "sauberenergie.de: Aus der Grundversorgung wechseln — Versorgung ohne Unterbrechung, Kündigungsfrist zwei Wochen",
+        "url": "https://www.sauberenergie.de/wissen/strom-sparen/aus-grundversorgung-wechseln"
+      }
+    ],
+    "d-b1-27": [
+      {
+        "id": "S9",
+        "citation": "bussgeldkatalog.org: Theorieprüfung — Sperrfrist 14 Tage; Prüfungsgebühr (22,49 €) bei jedem weiteren Versuch erneut",
+        "url": "https://www.bussgeldkatalog.org/fahrschule-theoriepruefung/"
+      },
+      {
+        "id": "S10",
+        "citation": "theoriecoach.app: Theorieprüfung nicht bestanden — frühestens nach 14 Tagen (§ 18 FeV); 24,99 € pro Versuch; «Antrag bleibt gültig»",
+        "url": "https://theoriecoach.app/theoriepruefung-nicht-bestanden"
+      },
+      {
+        "id": "S11",
+        "citation": "bussgeldkatalog.org: Erste-Hilfe-Kurs für den Führerschein — unbegrenzt gültig, neun Unterrichtseinheiten, 20–40 €",
+        "url": "https://www.bussgeldkatalog.org/erste-hilfe-kurs/"
+      },
+      {
+        "id": "S12",
+        "citation": "be-fahrschule.de: Theoretische Prüfung — Mitzubringen: Ausbildungsbescheinigung + Prüfungsgebühr; Prüfauftrag ein Jahr; Gebühren bei Wiederholung erneut",
+        "url": "https://www.be-fahrschule.de/fahrschule/fuehrerschein/theoriepruefung.htm"
+      }
+    ]
+  },
+  "contentWarnings": [
+    {
+      "id": "W3",
+      "dialogue": "d-b1-25",
+      "field": "lines[7].de + questions[0].explanationAr",
+      "statement": "«die eID-Funktion kostet sechs Euro»: المصادر الرسمية البلدية (فرانكفورت، ميونخ، لايبزيغ، وأدلة Bürgeramt) تذكر أن تفعيل وظيفة eID وإعادة تعيين الـPIN مجانيان تماماً (gebührenfrei)، وأن البطاقات تُسلَّم منذ منتصف 2017 والوظيفة مفعَّلة افتراضياً؛ فلا يبقى للـ«ستة يورو» مقابل رسمي حالي (قد تعكس ممارسة ما قبل 2017 أو رسماً محلياً خاصاً).",
+      "evidence": "frankfurt.de (gebührenfrei) · stadt.muenchen.de: Einschalten eID-Funktion (gebührenfrei) · leipzig.de (kostenfrei seit 2017) · buerger-amt.de: Aktivierung kostenfrei.",
+      "modified": false,
+      "whyNotModified": "الألماني والسؤال Q1 والخيار «die eID-Funktion gratis» والشرح محمية في هذه الدفعة (مراجعة عربية)؛ وتعديل الرقم يمسّ L7 وشرح Q0 والخيارات معاً.",
+      "recommendation": "مهمة محتوى منفصلة: حذف الرقم أو إحلال المعلومة الصحيحة (التسجيل مجاني، والـeID مفعَّل افتراضياً/تفعيله مجاني) مع تحديث شرح Q0."
+    },
+    {
+      "id": "W4",
+      "dialogue": "d-b1-27",
+      "field": "lines[7].de + questions[2].answer + dictation[1]",
+      "statement": "«die Gebühr bleibt gültig»: المصادر المتخصصة تذكر أن رسوم الامتحان (TÜV/DEKRA نحو 22,49–24,99 يورو للفئة B) تُسدَّد من جديد عند كل محاولة؛ والذي يبقى سارياً هو الطلب/الـPrüfauftrag (سنة)، أي أن «keine Neuanmeldung» صحيحة بهذا المعنى فقط.",
+      "evidence": "bussgeldkatalog.org (Gebühr bei jedem weiteren Versuch erneut) · theoriecoach.app (24,99 €؛ «Antrag bleibt gültig») · kuechenfibel.de (Prüfungsgebühr erneut bezahlen) · be-fahrschule.de (Gebühren bei Wiederholungsprüfung erneut).",
+      "modified": false,
+      "whyNotModified": "الألماني والسؤال Q3 والإملاء L8 محمية (مراجعة عربية)؛ وتعديل الجملة يستلزم تحديث المفتاح والإملاء والشرح معاً.",
+      "recommendation": "مهمة محتوى منفصلة: توضيح الجملة (مثل «die Prüfgebühr ist erneut zu zahlen; der Antrag bleibt gültig») مع تحديث الـQ3 والإملاء والشرح."
+    }
+  ],
+  "contentChecks": [
+    "d-b1-25: «أسبوعان» و«مجاناً» وشهادة المؤجّر مطابقة للـ§§ 17/19 BMG، وقائمة النموذج/الهوية/الشهادة مطابقة أيضاً.",
+    "d-b1-26: «أربعة أسابيع» مهلة تعاقدية شائعة (Sondervertrag)، والانقطاع مستبعد بنيوياً (§§ 36/38 EnWG) — لا تعارض.",
+    "d-b1-27: «14 يوماً» مطابقة § 18 FeV، وشهادة الإسعاف بلا انتهاء مطابقة § 19 FeV؛ والرسوم وُثّقت في W4.",
+    "d-b1-26: «22:00» ووسيلة الصورة موعد/وسيلة تعاقدية محتملة لا قاعدة عامة (نصّ تعليمي)."
+  ],
+  "audio": {
+    "manifestEntries": [
+      "d-b1-25",
+      "d-b1-26",
+      "d-b1-27"
+    ],
+    "mp3Files": [
+      "/home/user/wegb2/public/audio/dialog/d-b1-25.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-26.mp3",
+      "/home/user/wegb2/public/audio/dialog/d-b1-27.mp3"
+    ],
+    "note": "لا استماع ولا ادعاء صوتي."
+  },
+  "waisen": {
+    "present": false,
+    "note": "الحوارات الثلاثة بلا حقل waisen (فحص صريح لكل كائن)."
+  },
+  "judgement": {
+    "correct": 134,
+    "corrected": 19,
+    "unresolved": 0,
+    "note": "تسعة عشر تصحيحاً عربياً مؤكداً: اتفاق ضمير Sie الصريح (سأُعطيكم في d-b1-25)، وتصحيح معانٍ ومصطلحات (Ummeldung=تسجيل العنوان الجديد لا تحديث الإقامة، Bescheinigung=شهادة، Zählerstand melden=إبلاغ القراءة لا الإعلان، Onlineformular=النموذج الإلكتروني لا «الشبكي»، Grundversorgung=التزويد الأساسي لا الملكية العامة، Sperre=حظر لا انتظار، Sehtest=اختبار النظر لا نظارة قياس، Passfoto=صورة شخصية لا شمسية)، وكشف أرقام الفخاخ المخفية (zwölf Monate=اثنا عشر شهراً لا سنة، Vierzehn Tage=أربعة عشر يوماً لا أسبوعان)، وإضافة العملة المحذوفة (ستة يورو)، وحذف إضافات (المقبل، بدء سُكنانا، لكنْ، الشبكي)، وإصلاح تراكيب ركيكة (الأسبوعان هما الميعاد… حانَ فيهما، وكم تعيشُ، وما الوثائق عند الممتحن، أنُقطَعُ عن الإمداد). الألماني/who/الأسئلة/المفاتيح/الإملاءات/الخيارات/الشرح مقفلة لم تُعدَّل."
+  },
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو النسبة.",
+    "audio": "لا استماع ولا توليد صوتي.",
+    "human": "ليست مراجعة بشرية.",
+    "legal": "إجراءات السكن وتبديل الكهرباء ورخصة السياقة سياق تعليمي ولا يُعدّ أيٌّ منها مشورة قانونية.",
+    "medical": "دورة الإسعاف معلومة تنظيمية عامة لا مشورة طبية.",
+    "professional": "شروط الطلب والرسوم والمهل تتبع السلطة المحلية وتُوثَّق في W3/W4."
+  },
+  "gates": {
+    "planned": "K195a–j"
+  }
+}

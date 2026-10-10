@@ -112,10 +112,9 @@ export function kapselQuiz(day: number): Exercise[] {
   ids.forEach((id, i) => {
     const s = getSatz(id);
     if (!s) return;
-    // كل جملة: إمّا cloze أو translate بالتناوب + تبديل بالبذرة
     const rolle = (Math.floor(rand() * 1000) + i) % 2;
-    if (rolle === 0) out.push(clozeFromSatz(s, i, rand));
-    else out.push(translateFromSatz(s, i));
+    const base = rolle === 0 ? clozeFromSatz(s, i, rand) : translateFromSatz(s, i);
+    out.push({ ...base, id: `q${day}-k-${i}-${base.id}` });
   });
   return out;
 }

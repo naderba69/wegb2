@@ -232,7 +232,7 @@ export function TiefenLexikon({ progress }: { progress: Progress }) {
               <button
                 key={t.id}
                 className="chip"
-                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "white", color: tab === t.id ? "white" : undefined }}
+                style={{ cursor: "pointer", background: tab === t.id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === t.id ? "var(--ui-on-accent)" : undefined }}
                 onClick={() => { setTab(t.id); setRunde((r) => r + 1); }}
                 title={t.unter}
               >

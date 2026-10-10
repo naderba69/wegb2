@@ -1,468 +1,468 @@
 {
- "themen": [
-  {
-   "id": "vt01",
-   "unit": "Beziehungen",
-   "titel_de": "Freundschaft im digitalen Zeitalter",
-   "titel_ar": "الصداقة في العصر الرقمي",
-   "auftrag_de": "Präsentieren Sie das Thema: Kann man online wirklich Freunde finden? Beschreiben Sie zunächst die Situation, nennen Sie Vor- und Nachteile und schließen Sie mit Ihrer eigenen begründeten Meinung.",
-   "aspekte": [
-    "Situation: Wie Jugendliche heute Freundschaften schließen",
-    "Vorteile: Reichweite, Niederschwelligkeit, Gemeinschaft über Grenzen",
-    "Nachteile: Oberflächlichkeit, Suchtdruck, Mobbingrisiko",
-    "Beispiel/Statistik aus Ihrem Umfeld oder einer Studie"
-   ],
-   "redemittel": [
-    "Ich möchte heute über … sprechen",
-    "Zunächst möchte ich die Situation beschreiben: …",
-    "Ein wesentlicher Vorteil besteht darin, dass …",
-    "Dem steht gegenüber, dass …",
-    "Nach meiner Erfahrung würde ich sagen, dass …",
-    "Abschließend möchte ich festhalten, dass …"
-   ],
-   "partnerFragen": [
-    "Welche Erfahrung hast du selbst mit Online-Freundschaften?",
-    "Wo ziehst du die Grenze zwischen Chat und echtem Treffen?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt02",
-   "unit": "Beziehungen",
-   "titel_de": "Soll man mit den Eltern zusammenwohnen, bis man arbeitet?",
-   "titel_ar": "هل يسكن الشاب مع والديه حتى يعمل؟",
-   "auftrag_de": "Präsentieren Sie das Thema mit Bildern: Welche Rollen spielen Familie und Selbstständigkeit in Ihrem Land? Nennen Sie Gründe dafür und dagegen, und begründen Sie Ihre eigene Position.",
-   "aspekte": [
-    "Situation: Wohnkosten vs. Nesthocker-Debatte",
-    "Vorteile: finanzielle Sicherheit, Familienbande",
-    "Nachteile: verzögerte Selbstständigkeit, Konflikte",
-    "Vergleich: Situation in Ihrem Heimatland vs. Deutschland"
-   ],
-   "redemittel": [
-    "Das Thema, über das ich spreche, ist …",
-    "In meinem Heimatland ist es üblich, dass …",
-    "Befürworter argumentieren, dass …",
-    "Kritiker wenden ein, dass …",
-    "Ich persönlich vertrete die Auffassung, dass …",
-    "Zusammenfassend lässt sich sagen: …"
-   ],
-   "partnerFragen": [
-    "Ab welchem Alter wären Sie bereit, aus dem Elternhaus auszuziehen?",
-    "Welchen Rat geben Sie einem 25-Jährigen, der zu Hause wohnt?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt03",
-   "unit": "Gesundheit",
-   "titel_de": "Digitale Gesundheitsangebote — Segen oder Risiko?",
-   "titel_ar": "العروض الصحية الرقمية — نعمة أم مخاطرة؟",
-   "auftrag_de": "Präsentieren Sie: Gesundheits-Apps, Wearables und Online-Arztbesuche. Was versprechen sie, was können sie wirklich, und wo sehen Sie Gefahren für Datenschutz und Arzt-Patienten-Beziehung?",
-   "aspekte": [
-    "Situation: Boom der Gesundheits-Apps und Smartwatches",
-    "Chance: Früherkennung, Motivation, Versorgung auf dem Land",
-    "Risiko: Datenmissbrauch, Fehldiagnosen durch Laien",
-    "eigene Bewertung mit klarem Kriterium"
-   ],
-   "redemittel": [
-    "Laut einer Studie nutzen bereits …",
-    "Der entscheidende Vorteil aus Nutzersicht ist …",
-    "Allerdings darf man nicht vergessen, dass …",
-    "Besonders bedenklich finde ich, dass …",
-    "Deshalb plädiere ich dafür, …",
-    "Mein Fazit lautet: …"
-   ],
-   "partnerFragen": [
-    "Würden Sie Ihre Gesundheitsdaten an eine App weitergeben?",
-    "Ersetzen Online-Sprechstunden Ihrer Meinung nach den Hausarzt?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt04",
-   "unit": "Gesundheit",
-   "titel_de": "Mobbing bei der Arbeit",
-   "titel_ar": "التنمّر في مكان العمل",
-   "auftrag_de": "Präsentieren Sie das Thema: Wie entsteht Mobbing in Teams, welche Folgen hat es für Betroffene und Betriebe, und was kann — was muss man dagegen tun?",
-   "aspekte": [
-    "Situation: Verbreitung und typische Formen (Ausschluss, Gerüchte, Entwertung)",
-    "Ursachen: Konkurrenzdruck, Führungskultur",
-    "Folgen: Krankheit, Fluktuation, Schweigespirale",
-    "Maßnahmen: Ansprechen, Dokumentation, Betriebsrat"
-   ],
-   "redemittel": [
-    "Unter Mobbing versteht man …",
-    "Statistiken zufolge leidet etwa …",
-    "Die Folgen sind sowohl für die Person als auch für das Unternehmen …",
-    "Ein erster Schritt wäre, …",
-    "Entscheidend ist für mich, dass …",
-    "Zum Abschluss möchte ich betonen: …"
-   ],
-   "partnerFragen": [
-    "Was würden Sie tun, wenn ein Kollege Sie systematisch ausschließt?",
-    "Ist Mobbing Ihrer Meinung nach ein Führungsproblem?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt05",
-   "unit": "Gesellschaft",
-   "titel_de": "Soll Konsumverzicht Pflicht werden?",
-   "titel_ar": "هل يصبح ترشيد الاستهلاك إلزامياً؟",
-   "auftrag_de": "Präsentieren Sie: Kann die Gesellschaft ihre Probleme lösen, wenn jeder weniger kauft? Diskutieren Sie Verantwortung des Einzelnen vs. Strukturpolitik und beziehen Sie klar Stellung.",
-   "aspekte": [
-    "Situation: Wegwerfmentalität, Siegel-Wildwuchs, Rebound-Effekt",
-    "Pro: Bewusstseinswandel beginnt beim Einzelnen",
-    "Contra: ohne Regulierung bleibt Verzicht symbolisch",
-    "Beispiel: Repair-Cafés, Leihstädte, Verpackungspfand"
-   ],
-   "redemittel": [
-    "Ich möchte heute erörtern, ob …",
-    "Auf den ersten Blick scheint …, doch bei genauerem Hinsehen …",
-    "Sowohl … als auch … spielen eine Rolle",
-    "Aus meiner Sicht greift das Argument zu kurz, dass …",
-    "Daher komme ich zu dem Schluss, dass …",
-    "Ich danke Ihnen für die Aufmerksamkeit."
-   ],
-   "partnerFragen": [
-    "Welchen Verzicht wären Sie selbst bereit zu leisten?",
-    "Braucht es Verbote statt Appelle?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt06",
-   "unit": "Gesellschaft",
-   "titel_de": "Engagement junger Menschen — ist es weniger geworden?",
-   "titel_ar": "انخراط الشباب — هل تراجع فعلاً؟",
-   "auftrag_de": "Präsentieren Sie die These, dass sich junge Menschen weniger engagieren: Halten Sie sie für richtig? Vergleichen Sie Vereinsmeierei mit Fridays-for-Future-artigen Formen.",
-   "aspekte": [
-    "Situation: schwindende Mitgliederzahlen in Vereinen",
-    "Gegenbild: zeitlich begrenzte, digitale Aktionsformen",
-    "Ursachen: Bindungsmüdigkeit vs. neue Themen",
-    "Lösung: niedrigschwellige Einstiege, Anerkennungskultur"
-   ],
-   "redemittel": [
-    "Die These lautet: …, und ich frage mich, ob …",
-    "Ein Blick in die Statistik zeigt …",
-    "Dagegen spricht allerdings, dass …",
-    "Wenn ich mein eigenes Umfeld betrachte, …",
-    "Insgesamt bin ich der Überzeugung, dass …",
-    "Gerne beantworte ich anschließend Ihre Fragen."
-   ],
-   "partnerFragen": [
-    "Engagieren Sie sich selbst? In welcher Form?",
-    "Welche Themen bringen Ihrer Meinung nach junge Menschen auf die Straße?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt07",
-   "unit": "Wohnen",
-   "titel_de": "Wohnraum ist knapp — wer soll bauen, wer soll zahlen?",
-   "titel_ar": "السكن نادر — من يبني ومن يدفع؟",
-   "auftrag_de": "Präsentieren Sie die Wohnungsnot: Wer ist schuld, wer zahlt die Rechnung, und welche Lösungen (Mietendeckel, Genossenschaften, Bauland) halten Sie für tragfähig?",
-   "aspekte": [
-    "Situation: Mietsteigerungen, Genehmigungsstau",
-    "Interessen: Mieter, Eigentümer, Kommunen",
-    "Instrumente vergleichen: Deckel, Bauoffensive, Quote",
-    "eigener Vorschlag mit Erwartung an Wirkung"
-   ],
-   "redemittel": [
-    "Ich beginne mit der Bestandsaufnahme: …",
-    "Ein zentraler Streitpunkt ist die Frage, ob …",
-    "Befürworter eines Mietendeckels versprechen sich davon …",
-    "Aus ökonomischer Sicht überwiegen jedoch die Risiken, weil …",
-    "Deshalb schlage ich vor, …",
-    "Vielen Dank — ich freue mich auf die Diskussion."
-   ],
-   "partnerFragen": [
-    "Würden Sie einer Genossenschaft beitreten?",
-    "Welche Rolle sollen Ihrer Meinung nach private Investoren spielen?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt08",
-   "unit": "Wohnen",
-   "titel_de": "Zuhause sein — ein Ort oder ein Gefühl?",
-   "titel_ar": "الوطن: مكانٌ أم إحساس؟",
-   "auftrag_de": "Präsentieren Sie über das Konzept von Heimat: Ist es an Orte, Menschen oder Erinnerungen gebunden? Was bedeutet es für Migrantinnen und Migranten?",
-   "aspekte": [
-    "Begriff: Heimat zwischen Wohnung, Region, Sprache",
-    "Perspektive: Zuhause durch Menschen und Rituale",
-    "Migration: mehrfache Heimat, Sehnsucht, Neuanfang",
-    "persönliche Position mit Beispiel"
-   ],
-   "redemittel": [
-    "Über den Begriff Heimat lässt sich streiten, denn …",
-    "Ich möchte drei Aspekte beleuchten: erstens …",
-    "Aus eigener Erfahrung kann ich berichten, dass …",
-    "Ein Gegenbeispiel wäre jedoch …",
-    "Für mich persönlich bedeutet Heimat, …",
-    "Abschließend lässt sich festhalten: …"
-   ],
-   "partnerFragen": [
-    "Was ist für Sie der wichtigste Zuhause-Faktor?",
-    "Kann man an zwei Orten zugleich zuhause sein?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt09",
-   "unit": "Digital",
-   "titel_de": "KI als Chef — would you work for an algorithm?",
-   "titel_ar": "الذكاء الاصطناعي مديراً — تعمل لخوارزمية؟",
-   "auftrag_de": "Präsentieren Sie algorithmisches Management in Lager und Plattformarbeit: Was ist effizient daran, was ist gefährlich, und wo ziehen Sie die Grenze?",
-   "aspekte": [
-    "Situation: Scoring, automatisierte Einsatzpläne",
-    "Chance: Fairness ohne Willkür des Menschen?",
-    "Risiko: Intransparenz, Beschleunigungsdruck",
-    "Regulierung: Mitbestimmung, Recht auf Erklärung"
-   ],
-   "redemittel": [
-    "Kurz zum Begriff: Unter algorithmischem Management versteht man …",
-    "Befürworter betonen die Objektivität, doch …",
-    "Studien legen nahe, dass …",
-    "Ich halte davon wenig, weil …",
-    "Daher sollte gelten, dass …",
-    "Ich danke Ihnen — welche Fragen haben Sie?"
-   ],
-   "partnerFragen": [
-    "Würden Sie sich bei einer KI bewerben — oder bei ihr arbeiten?",
-    "Wer trägt die Verantwortung bei algorithmischen Fehlentscheidungen?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt10",
-   "unit": "Digital",
-   "titel_de": "Smartphone-freie Kindheit — Traum oder Realitätsflucht?",
-   "titel_ar": "طفولة بلا هاتف — حلم أم هروب؟",
-   "auftrag_de": "Präsentieren Sie das Spannungsfeld: Digitale Teilhabe ist Bildungschance, Bildschirmzeit macht krank. Wie soll die Gesellschaft Kinder schützen, ohne sie abzuschneiden?",
-   "aspekte": [
-    "Situation: frühe Ausstattung, Klassenchats",
-    "Chance: Medienkompetenz als Schlüsselqualifikation",
-    "Gefahr: Aufmerksamkeitsspanne, Daten, Suchtdesign",
-    "Wege: Gerätefreie Zonen, Elternarbeit, Designgrenzen"
-   ],
-   "redemittel": [
-    "Das Thema betrifft uns alle, weil …",
-    "Zunächst die Faktenlage: …",
-    "Ein häufiges Missverständnis ist, dass …",
-    "Richtiger ist jedoch, …",
-    "Mein Vorschlag lautet, …",
-    "Fassen wir zusammen: …"
-   ],
-   "partnerFragen": [
-    "Ab welchem Alter halten Sie ein eigenes Smartphone für vertretbar?",
-    "Sollten Schulen Handys einsammeln oder Medienkompetenz lehren?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt11",
-   "unit": "Wissenschaft",
-   "titel_de": "Studien zur Wirkung von Medien — wie zuverlässig sind sie?",
-   "titel_ar": "دراسات أثر الإعلام — ما مدى جدارتها بالثقة؟",
-   "auftrag_de": "Präsentieren Sie Probleme der Medienwirkungsforschung (Replikationskrise, Auftragsstudien) und zeigen Sie, woran man seriöse Ergebnisse erkennt.",
-   "aspekte": [
-    "Situation: Schlagzeilen über »Handy macht dumm«",
-    "Problem: kleine Stichproben, Interessenkonflikte",
-    "Gütekriterien: Peer-Review, Vorregistrierung, Effektgröße",
-    "eigene Regel für Laien-Umgang mit Studien"
-   ],
-   "redemittel": [
-    "Ich möchte zeigen, warum … oft missverstanden wird",
-    "Ein methodisches Kernproblem ist …",
-    "Als Laie erkennt man seriöse Arbeit daran, dass …",
-    "Daraus folgt keineswegs, dass …",
-    "Meine Empfehlung: erst Methode, dann Schlagzeile",
-    "Vielen Dank für Ihre Aufmerksamkeit."
-   ],
-   "partnerFragen": [
-    "Vertrauen Sie Studien, die in den Medien zitiert werden?",
-    "Welche Studie hat Sie zuletzt überzeugt — und warum?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt12",
-   "unit": "Wissenschaft",
-   "titel_de": "Forschungsfreiheit — darf Wissenschaft alles?",
-   "titel_ar": "حرية البحث — هل يحق للعلم كل شيء؟",
-   "auftrag_de": "Präsentieren Sie die Grenzen der Forschungsfreiheit am Beispiel Gentechnik oder KI-Waffen: Wo endet Erkenntnisinteresse, wo beginnt Verantwortung?",
-   "aspekte": [
-    "Situation: Forschungsanstöße, die Ethik überholen",
-    "Argument Pro Freiheit: Fortschritt durch Neugier",
-    "Argument Contra: Vorsorgeprinzip, Missbrauchsrisiko",
-    "Instanzen: Ethikrat, Genehmigungsverfahren"
-   ],
-   "redemittel": [
-    "Die Leitfrage meines Vortrags lautet: …",
-    "Historisch lässt sich zeigen, dass …",
-    "Ethiker warnen zu Recht davor, …",
-    "Einwand: Dann blockieren wir uns selbst — darauf antworte ich: …",
-    "Ich plädiere für Freiheit mit Leitplanken, konkret …",
-    "Ich komme zum Schluss: …"
-   ],
-   "partnerFragen": [
-    "Gibt es Forschung, die Ihrer Meinung nach tabu sein sollte?",
-    "Wer soll Grenzen ziehen — Wissenschaftler oder Politiker?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt13",
-   "unit": "Schönheit",
-   "titel_de": "Retuschierte Körper in der Werbung — Pflicht zur Kennzeichnung?",
-   "titel_ar": "أجساد محرّرة في الإعلانات — إلزام بالإفصاح؟",
-   "auftrag_de": "Präsentieren Sie die Debatte um bearbeitete Schönheitsbilder: Schützt ein Kennzeichnungsgesetz Jugendliche — oder ist Bevormundung?",
-   "aspekte": [
-    "Situation: Normbilder in Social Media und Werbung",
-    "Pro Kennzeichnung: Realitätssinn, Prävention",
-    "Contra: Zensurverdacht, Erziehungsfrage",
-    "Wege: Medienkompetenz plus Kennzeichnung — beides zusammen"
-   ],
-   "redemittel": [
-    "Das Bild, das ich meine, lautet: …",
-    "Die Studienlage ist eindeutig, wonach …",
-    "Dagegen wird eingewandt, dass …",
-    "Differenzierter betrachtet kommt es darauf an, wer …",
-    "Deshalb befürworte ich eine Kennzeichnung, die …",
-    "Ich danke Ihnen — ich beantworte gern Fragen."
-   ],
-   "partnerFragen": [
-    "Merken Sie Retuschen heutzutage noch?",
-    "Sollten Influencer Bearbeitungen offenlegen?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt14",
-   "unit": "Schönheit",
-   "titel_de": "Schönheits-OPs zwischen Selbstbestimmung und Druck",
-   "titel_ar": "جراحات التجميل بين الاستقلالية والضغط",
-   "auftrag_de": "Präsentieren Sie: Ist die Schönheits-OP Selbstbestimmung des Körpers — oder Anpassung an einen Markt, der normiert? Wo verläuft für Sie die Grenze?",
-   "aspekte": [
-    "Situation: steigende Zahlen auch bei unter 25-Jährigen",
-    "Selbstbestimmung: Körperhoheit ernst nehmen",
-    "Kritik: Normdruck, Filter als Cause",
-    "Aufklärungspflicht, Wartefristen, psychologischer Check"
-   ],
-   "redemittel": [
-    "Ich differenziere zwischen zwei Lesarten: …",
-    "Beide Seiten haben einen wahren Kern, weil …",
-    "Das Problem ist weniger die Entscheidung als …",
-    "Aus der Ethik lässt sich folgern, dass …",
-    "Konkret würde ich fordern: …",
-    "Zu Ihrer Frage: Das sehe ich teilweise so, weil …"
-   ],
-   "partnerFragen": [
-    "Wo endet für Sie Selbstbestimmung?",
-    "Sollten Eingriffe unter 25 Jahren einer Beratungspflicht unterliegen?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt15",
-   "unit": "Kunst",
-   "titel_de": "Sollte Kultur staatlich subventioniert werden?",
-   "titel_ar": "هل تُموَّل الثقافة من الدولة؟",
-   "auftrag_de": "Präsentieren Sie die Kulturfinanzierung: Markt vs. Gemeinwohl, und was passiert in Ihrer Stadt, wenn der Hahn zugedreht wird?",
-   "aspekte": [
-    "Situation: Theater/Museen als Dauerzuschussempfänger",
-    "Pro: Kulturgut braucht Distanz zur Kasse",
-    "Contra: Marktsiege, Publikumsschwund mancher Häuser",
-    "Beispiel konkret: Ihr liebstes Haus und seine Zahlen"
-   ],
-   "redemittel": [
-    "Zur Sache: öffentliche Kassen sind knapp, und trotzdem …",
-    "Kultur ist kein Luxus, den man sich leistet, sondern …",
-    "Ökonomisch spricht für den Markt, dass …",
-    "Kulturell wiegt schwerer, dass …",
-    "Meine Position: Grundsockel ja, Konkurrenz auf Qualitätsebene …",
-    "Abschließend ein Zitat, das meine Haltung fasst: …"
-   ],
-   "partnerFragen": [
-    "Welches Haus Ihrer Stadt würde Ihnen fehlen?",
-    "Wo endet förderungswürdige Kunst für Sie?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  },
-  {
-   "id": "vt16",
-   "unit": "Kunst",
-   "titel_de": "Kopieren oder schaffen? Remix-Kultur zwischen Diebstahl und Kunst",
-   "titel_ar": "نسخٌ أم إبداع؟ ثقافة الريمكس بين السرقة والفن",
-   "auftrag_de": "Präsentieren Sie die Spannung zwischen Urheberrecht und Remix-/KI-Kunst: Wer gehört ein Motiv — dem Original oder allen?",
-   "aspekte": [
-    "Situation: Memes, Sampling, KI-Bilder ohne Stilrecht",
-    "Urheberrecht: Schutz der Existenzgrundlage",
-    "Remix-Kultur: alles Neue war je Collage",
-    "Wege: freie Lizenzen, Quellenpflicht für KI-Trainingsdaten"
-   ],
-   "redemittel": [
-    "Die Gretchenfrage ist hier: …",
-    "Juristisch gilt derzeit, dass …",
-    "Künstlerisch betrachtet ist das zu eng, denn …",
-    "Ein Kompromiss könnte aussehen: …",
-    "Ich bin überzeugt, dass Kreativität Regeln braucht — aber faire",
-    "Ich danke für die Aufmerksamkeit."
-   ],
-   "partnerFragen": [
-    "Würden Sie einem KI-Bild Urheberrecht zugestehen?",
-    "Grenzen Sie Inspiration und Diebstahl selbst klar?"
-   ],
-   "dauer": {
-    "vorbereitung_s": 900,
-    "vortrag_s": 240
-   }
-  }
- ]
+  "themen": [
+    {
+      "id": "vt01",
+      "unit": "Beziehungen",
+      "titel_de": "Freundschaft im digitalen Zeitalter",
+      "titel_ar": "الصداقة في العصر الرقمي",
+      "auftrag_de": "Präsentieren Sie das Thema: Kann man online wirklich Freunde finden? Beschreiben Sie zunächst die Situation, nennen Sie Vor- und Nachteile und schließen Sie mit Ihrer eigenen begründeten Meinung.",
+      "aspekte": [
+        "Situation: Wie Jugendliche heute Freundschaften schließen",
+        "Vorteile: Reichweite, Niederschwelligkeit, Gemeinschaft über Grenzen",
+        "Nachteile: Oberflächlichkeit, Suchtdruck, Mobbingrisiko",
+        "Beispiel/Statistik aus Ihrem Umfeld oder einer Studie"
+      ],
+      "redemittel": [
+        "Ich möchte heute über … sprechen",
+        "Zunächst möchte ich die Situation beschreiben: …",
+        "Ein wesentlicher Vorteil besteht darin, dass …",
+        "Dem steht gegenüber, dass …",
+        "Nach meiner Erfahrung würde ich sagen, dass …",
+        "Abschließend möchte ich festhalten, dass …"
+      ],
+      "partnerFragen": [
+        "Welche Erfahrung hast du selbst mit Online-Freundschaften?",
+        "Wo ziehst du die Grenze zwischen Chat und echtem Treffen?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt02",
+      "unit": "Beziehungen",
+      "titel_de": "Soll man mit den Eltern zusammenwohnen, bis man arbeitet?",
+      "titel_ar": "هل يسكن الشاب مع والديه حتى يعمل؟",
+      "auftrag_de": "Präsentieren Sie das Thema mit Bildern: Welche Rollen spielen Familie und Selbstständigkeit in Ihrem Land? Nennen Sie Gründe dafür und dagegen, und begründen Sie Ihre eigene Position.",
+      "aspekte": [
+        "Situation: Wohnkosten vs. Nesthocker-Debatte",
+        "Vorteile: finanzielle Sicherheit, Familienbande",
+        "Nachteile: verzögerte Selbstständigkeit, Konflikte",
+        "Vergleich: Situation in Ihrem Heimatland vs. Deutschland"
+      ],
+      "redemittel": [
+        "Das Thema, über das ich spreche, ist …",
+        "In meinem Heimatland ist es üblich, dass …",
+        "Befürworter argumentieren, dass …",
+        "Kritiker wenden ein, dass …",
+        "Ich persönlich vertrete die Auffassung, dass …",
+        "Zusammenfassend lässt sich sagen: …"
+      ],
+      "partnerFragen": [
+        "Ab welchem Alter wären Sie bereit, aus dem Elternhaus auszuziehen?",
+        "Welchen Rat geben Sie einem 25-Jährigen, der zu Hause wohnt?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt03",
+      "unit": "Gesundheit",
+      "titel_de": "Digitale Gesundheitsangebote — Segen oder Risiko?",
+      "titel_ar": "العروض الصحية الرقمية — نعمة أم مخاطرة؟",
+      "auftrag_de": "Präsentieren Sie: Gesundheits-Apps, Wearables und Online-Arztbesuche. Was versprechen sie, was können sie wirklich, und wo sehen Sie Gefahren für Datenschutz und Arzt-Patienten-Beziehung?",
+      "aspekte": [
+        "Situation: Boom der Gesundheits-Apps und Smartwatches",
+        "Chance: Früherkennung, Motivation, Versorgung auf dem Land",
+        "Risiko: Datenmissbrauch, Fehldiagnosen durch Laien",
+        "eigene Bewertung mit klarem Kriterium"
+      ],
+      "redemittel": [
+        "Laut einer Studie nutzen bereits …",
+        "Der entscheidende Vorteil aus Nutzersicht ist …",
+        "Allerdings darf man nicht vergessen, dass …",
+        "Besonders bedenklich finde ich, dass …",
+        "Deshalb plädiere ich dafür, …",
+        "Mein Fazit lautet: …"
+      ],
+      "partnerFragen": [
+        "Würden Sie Ihre Gesundheitsdaten an eine App weitergeben?",
+        "Ersetzen Online-Sprechstunden Ihrer Meinung nach den Hausarzt?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt04",
+      "unit": "Gesundheit",
+      "titel_de": "Mobbing bei der Arbeit",
+      "titel_ar": "التنمّر في مكان العمل",
+      "auftrag_de": "Präsentieren Sie das Thema: Wie entsteht Mobbing in Teams, welche Folgen hat es für Betroffene und Betriebe, und was kann — was muss man dagegen tun?",
+      "aspekte": [
+        "Situation: Verbreitung und typische Formen (Ausschluss, Gerüchte, Entwertung)",
+        "Ursachen: Konkurrenzdruck, Führungskultur",
+        "Folgen: Krankheit, Fluktuation, Schweigespirale",
+        "Maßnahmen: Ansprechen, Dokumentation, Betriebsrat"
+      ],
+      "redemittel": [
+        "Unter Mobbing versteht man …",
+        "Statistiken zufolge leidet etwa …",
+        "Die Folgen sind sowohl für die Person als auch für das Unternehmen …",
+        "Ein erster Schritt wäre, …",
+        "Entscheidend ist für mich, dass …",
+        "Zum Abschluss möchte ich betonen: …"
+      ],
+      "partnerFragen": [
+        "Was würden Sie tun, wenn ein Kollege Sie systematisch ausschließt?",
+        "Ist Mobbing Ihrer Meinung nach ein Führungsproblem?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt05",
+      "unit": "Gesellschaft",
+      "titel_de": "Soll Konsumverzicht Pflicht werden?",
+      "titel_ar": "هل يصبح ترشيد الاستهلاك إلزامياً؟",
+      "auftrag_de": "Präsentieren Sie: Kann die Gesellschaft ihre Probleme lösen, wenn jeder weniger kauft? Diskutieren Sie Verantwortung des Einzelnen vs. Strukturpolitik und beziehen Sie klar Stellung.",
+      "aspekte": [
+        "Situation: Wegwerfmentalität, Siegel-Wildwuchs, Rebound-Effekt",
+        "Pro: Bewusstseinswandel beginnt beim Einzelnen",
+        "Contra: ohne Regulierung bleibt Verzicht symbolisch",
+        "Beispiel: Repair-Cafés, Leihstädte, Verpackungspfand"
+      ],
+      "redemittel": [
+        "Ich möchte heute erörtern, ob …",
+        "Auf den ersten Blick scheint …, doch bei genauerem Hinsehen …",
+        "Sowohl … als auch … spielen eine Rolle",
+        "Aus meiner Sicht greift das Argument zu kurz, dass …",
+        "Daher komme ich zu dem Schluss, dass …",
+        "Ich danke Ihnen für die Aufmerksamkeit."
+      ],
+      "partnerFragen": [
+        "Welchen Verzicht wären Sie selbst bereit zu leisten?",
+        "Braucht es Verbote statt Appelle?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt06",
+      "unit": "Gesellschaft",
+      "titel_de": "Engagement junger Menschen — ist es weniger geworden?",
+      "titel_ar": "انخراط الشباب — هل تراجع فعلاً؟",
+      "auftrag_de": "Präsentieren Sie die These, dass sich junge Menschen weniger engagieren: Halten Sie sie für richtig? Vergleichen Sie Vereinsmeierei mit Fridays-for-Future-artigen Formen.",
+      "aspekte": [
+        "Situation: schwindende Mitgliederzahlen in Vereinen",
+        "Gegenbild: zeitlich begrenzte, digitale Aktionsformen",
+        "Ursachen: Bindungsmüdigkeit vs. neue Themen",
+        "Lösung: niedrigschwellige Einstiege, Anerkennungskultur"
+      ],
+      "redemittel": [
+        "Die These lautet: …, und ich frage mich, ob …",
+        "Ein Blick in die Statistik zeigt …",
+        "Dagegen spricht allerdings, dass …",
+        "Wenn ich mein eigenes Umfeld betrachte, …",
+        "Insgesamt bin ich der Überzeugung, dass …",
+        "Gerne beantworte ich anschließend Ihre Fragen."
+      ],
+      "partnerFragen": [
+        "Engagieren Sie sich selbst? In welcher Form?",
+        "Welche Themen bringen Ihrer Meinung nach junge Menschen auf die Straße?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt07",
+      "unit": "Wohnen",
+      "titel_de": "Wohnraum ist knapp — wer soll bauen, wer soll zahlen?",
+      "titel_ar": "السكن نادر — من يبني ومن يدفع؟",
+      "auftrag_de": "Präsentieren Sie die Wohnungsnot: Wer ist schuld, wer zahlt die Rechnung, und welche Lösungen (Mietendeckel, Genossenschaften, Bauland) halten Sie für tragfähig?",
+      "aspekte": [
+        "Situation: Mietsteigerungen, Genehmigungsstau",
+        "Interessen: Mieter, Eigentümer, Kommunen",
+        "Instrumente vergleichen: Deckel, Bauoffensive, Quote",
+        "eigener Vorschlag mit Erwartung an Wirkung"
+      ],
+      "redemittel": [
+        "Ich beginne mit der Bestandsaufnahme: …",
+        "Ein zentraler Streitpunkt ist die Frage, ob …",
+        "Befürworter eines Mietendeckels versprechen sich davon …",
+        "Aus ökonomischer Sicht überwiegen jedoch die Risiken, weil …",
+        "Deshalb schlage ich vor, …",
+        "Vielen Dank — ich freue mich auf die Diskussion."
+      ],
+      "partnerFragen": [
+        "Würden Sie einer Genossenschaft beitreten?",
+        "Welche Rolle sollen Ihrer Meinung nach private Investoren spielen?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt08",
+      "unit": "Wohnen",
+      "titel_de": "Zuhause sein — ein Ort oder ein Gefühl?",
+      "titel_ar": "الوطن: مكانٌ أم إحساس؟",
+      "auftrag_de": "Präsentieren Sie über das Konzept von Heimat: Ist es an Orte, Menschen oder Erinnerungen gebunden? Was bedeutet es für Migrantinnen und Migranten?",
+      "aspekte": [
+        "Begriff: Heimat zwischen Wohnung, Region, Sprache",
+        "Perspektive: Zuhause durch Menschen und Rituale",
+        "Migration: mehrfache Heimat, Sehnsucht, Neuanfang",
+        "persönliche Position mit Beispiel"
+      ],
+      "redemittel": [
+        "Über den Begriff Heimat lässt sich streiten, denn …",
+        "Ich möchte drei Aspekte beleuchten: erstens …",
+        "Aus eigener Erfahrung kann ich berichten, dass …",
+        "Ein Gegenbeispiel wäre jedoch …",
+        "Für mich persönlich bedeutet Heimat, …",
+        "Abschließend lässt sich festhalten: …"
+      ],
+      "partnerFragen": [
+        "Was ist für Sie der wichtigste Zuhause-Faktor?",
+        "Kann man an zwei Orten zugleich zuhause sein?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt09",
+      "unit": "Digital",
+      "titel_de": "KI als Chef — would you work for an algorithm?",
+      "titel_ar": "الذكاء الاصطناعي مديراً — تعمل لخوارزمية؟",
+      "auftrag_de": "Präsentieren Sie algorithmisches Management in Lager und Plattformarbeit: Was ist effizient daran, was ist gefährlich, und wo ziehen Sie die Grenze?",
+      "aspekte": [
+        "Situation: Scoring, automatisierte Einsatzpläne",
+        "Chance: Fairness ohne Willkür des Menschen?",
+        "Risiko: Intransparenz, Beschleunigungsdruck",
+        "Regulierung: Mitbestimmung, Recht auf Erklärung"
+      ],
+      "redemittel": [
+        "Kurz zum Begriff: Unter algorithmischem Management versteht man …",
+        "Befürworter betonen die Objektivität, doch …",
+        "Studien legen nahe, dass …",
+        "Ich halte davon wenig, weil …",
+        "Daher sollte gelten, dass …",
+        "Ich danke Ihnen — welche Fragen haben Sie?"
+      ],
+      "partnerFragen": [
+        "Würden Sie sich bei einer KI bewerben — oder bei ihr arbeiten?",
+        "Wer trägt die Verantwortung bei algorithmischen Fehlentscheidungen?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt10",
+      "unit": "Digital",
+      "titel_de": "Smartphone-freie Kindheit — Traum oder Realitätsflucht?",
+      "titel_ar": "طفولة بلا هاتف — حلم أم هروب؟",
+      "auftrag_de": "Präsentieren Sie das Spannungsfeld: Digitale Teilhabe ist Bildungschance, Bildschirmzeit macht krank. Wie soll die Gesellschaft Kinder schützen, ohne sie abzuschneiden?",
+      "aspekte": [
+        "Situation: frühe Ausstattung, Klassenchats",
+        "Chance: Medienkompetenz als Schlüsselqualifikation",
+        "Gefahr: Aufmerksamkeitsspanne, Daten, Suchtdesign",
+        "Wege: Gerätefreie Zonen, Elternarbeit, Designgrenzen"
+      ],
+      "redemittel": [
+        "Das Thema betrifft uns alle, weil …",
+        "Zunächst die Faktenlage: …",
+        "Ein häufiges Missverständnis ist, dass …",
+        "Richtiger ist jedoch, …",
+        "Mein Vorschlag lautet, …",
+        "Fassen wir zusammen: …"
+      ],
+      "partnerFragen": [
+        "Ab welchem Alter halten Sie ein eigenes Smartphone für vertretbar?",
+        "Sollten Schulen Handys einsammeln oder Medienkompetenz lehren?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt11",
+      "unit": "Wissenschaft",
+      "titel_de": "Studien zur Wirkung von Medien — wie zuverlässig sind sie?",
+      "titel_ar": "دراسات أثر الإعلام — ما مدى جدارتها بالثقة؟",
+      "auftrag_de": "Präsentieren Sie Probleme der Medienwirkungsforschung (Replikationskrise, Auftragsstudien) und zeigen Sie, woran man seriöse Ergebnisse erkennt.",
+      "aspekte": [
+        "Situation: Schlagzeilen über »Handy macht dumm«",
+        "Problem: kleine Stichproben, Interessenkonflikte",
+        "Gütekriterien: Peer-Review, Vorregistrierung, Effektgröße",
+        "eigene Regel für Laien-Umgang mit Studien"
+      ],
+      "redemittel": [
+        "Ich möchte zeigen, warum … oft missverstanden wird",
+        "Ein methodisches Kernproblem ist …",
+        "Als Laie erkennt man seriöse Arbeit daran, dass …",
+        "Daraus folgt keineswegs, dass …",
+        "Meine Empfehlung: erst Methode, dann Schlagzeile",
+        "Vielen Dank für Ihre Aufmerksamkeit."
+      ],
+      "partnerFragen": [
+        "Vertrauen Sie Studien, die in den Medien zitiert werden?",
+        "Welche Studie hat Sie zuletzt überzeugt — und warum?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt12",
+      "unit": "Wissenschaft",
+      "titel_de": "Forschungsfreiheit — darf Wissenschaft alles?",
+      "titel_ar": "حرية البحث — هل يحق للعلم كل شيء؟",
+      "auftrag_de": "Präsentieren Sie die Grenzen der Forschungsfreiheit am Beispiel Gentechnik oder KI-Waffen: Wo endet Erkenntnisinteresse, wo beginnt Verantwortung?",
+      "aspekte": [
+        "Situation: Forschungsanstöße, die Ethik überholen",
+        "Argument Pro Freiheit: Fortschritt durch Neugier",
+        "Argument Contra: Vorsorgeprinzip, Missbrauchsrisiko",
+        "Instanzen: Ethikrat, Genehmigungsverfahren"
+      ],
+      "redemittel": [
+        "Die Leitfrage meines Vortrags lautet: …",
+        "Historisch lässt sich zeigen, dass …",
+        "Ethiker warnen zu Recht davor, …",
+        "Einwand: Dann blockieren wir uns selbst — darauf antworte ich: …",
+        "Ich plädiere für Freiheit mit Leitplanken, konkret …",
+        "Ich komme zum Schluss: …"
+      ],
+      "partnerFragen": [
+        "Gibt es Forschung, die Ihrer Meinung nach tabu sein sollte?",
+        "Wer soll Grenzen ziehen — Wissenschaftler oder Politiker?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt13",
+      "unit": "Schönheit",
+      "titel_de": "Retuschierte Körper in der Werbung — Pflicht zur Kennzeichnung?",
+      "titel_ar": "أجساد محرّرة في الإعلانات — إلزام بالإفصاح؟",
+      "auftrag_de": "Präsentieren Sie die Debatte um bearbeitete Schönheitsbilder: Schützt ein Kennzeichnungsgesetz Jugendliche — oder ist Bevormundung?",
+      "aspekte": [
+        "Situation: Normbilder in Social Media und Werbung",
+        "Pro Kennzeichnung: Realitätssinn, Prävention",
+        "Contra: Zensurverdacht, Erziehungsfrage",
+        "Wege: Medienkompetenz plus Kennzeichnung — beides zusammen"
+      ],
+      "redemittel": [
+        "Das Bild, das ich meine, lautet: …",
+        "Die Studienlage ist eindeutig, wonach …",
+        "Dagegen wird eingewandt, dass …",
+        "Differenzierter betrachtet kommt es darauf an, wer …",
+        "Deshalb befürworte ich eine Kennzeichnung, die …",
+        "Ich danke Ihnen — ich beantworte gern Fragen."
+      ],
+      "partnerFragen": [
+        "Merken Sie Retuschen heutzutage noch?",
+        "Sollten Influencer Bearbeitungen offenlegen?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt14",
+      "unit": "Schönheit",
+      "titel_de": "Schönheits-OPs zwischen Selbstbestimmung und Druck",
+      "titel_ar": "جراحات التجميل بين الاستقلالية والضغط",
+      "auftrag_de": "Präsentieren Sie: Ist die Schönheits-OP Selbstbestimmung des Körpers — oder Anpassung an einen Markt, der normiert? Wo verläuft für Sie die Grenze?",
+      "aspekte": [
+        "Situation: steigende Zahlen auch bei unter 25-Jährigen",
+        "Selbstbestimmung: Körperhoheit ernst nehmen",
+        "Kritik: Normdruck, Filter als Cause",
+        "Aufklärungspflicht, Wartefristen, psychologischer Check"
+      ],
+      "redemittel": [
+        "Ich differenziere zwischen zwei Lesarten: …",
+        "Beide Seiten haben einen wahren Kern, weil …",
+        "Das Problem ist weniger die Entscheidung als …",
+        "Aus der Ethik lässt sich folgern, dass …",
+        "Konkret würde ich fordern: …",
+        "Zu Ihrer Frage: Das sehe ich teilweise so, weil …"
+      ],
+      "partnerFragen": [
+        "Wo endet für Sie Selbstbestimmung?",
+        "Sollten Eingriffe unter 25 Jahren einer Beratungspflicht unterliegen?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt15",
+      "unit": "Kunst",
+      "titel_de": "Sollte Kultur staatlich subventioniert werden?",
+      "titel_ar": "هل تُموَّل الثقافة من الدولة؟",
+      "auftrag_de": "Präsentieren Sie die Kulturfinanzierung: Markt vs. Gemeinwohl, und was passiert in Ihrer Stadt, wenn der Hahn zugedreht wird?",
+      "aspekte": [
+        "Situation: Theater/Museen als Dauerzuschussempfänger",
+        "Pro: Kulturgut braucht Distanz zur Kasse",
+        "Contra: Marktsiege, Publikumsschwund mancher Häuser",
+        "Beispiel konkret: Ihr liebstes Haus und seine Zahlen"
+      ],
+      "redemittel": [
+        "Zur Sache: öffentliche Kassen sind knapp, und trotzdem …",
+        "Kultur ist kein Luxus, den man sich leistet, sondern …",
+        "Ökonomisch spricht für den Markt, dass …",
+        "Kulturell wiegt schwerer, dass …",
+        "Meine Position: Grundsockel ja, Konkurrenz auf Qualitätsebene …",
+        "Abschließend ein Zitat, das meine Haltung fasst: …"
+      ],
+      "partnerFragen": [
+        "Welches Haus Ihrer Stadt würde Ihnen fehlen?",
+        "Wo endet förderungswürdige Kunst für Sie?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    },
+    {
+      "id": "vt16",
+      "unit": "Kunst",
+      "titel_de": "Kopieren oder schaffen? Remix-Kultur zwischen Diebstahl und Kunst",
+      "titel_ar": "نسخٌ أم إبداع؟ ثقافة الريمكس بين السرقة والفن",
+      "auftrag_de": "Präsentieren Sie die Spannung zwischen Urheberrecht und Remix-/KI-Kunst: Wer gehört ein Motiv — dem Original oder allen?",
+      "aspekte": [
+        "Situation: Memes, Sampling, KI-Bilder ohne Stilrecht",
+        "Urheberrecht: Schutz der Existenzgrundlage",
+        "Remix-Kultur: alles Neue war je Collage",
+        "Wege: freie Lizenzen, Quellenpflicht für KI-Trainingsdaten"
+      ],
+      "redemittel": [
+        "Die Gretchenfrage ist hier: …",
+        "Juristisch gilt derzeit, dass …",
+        "Künstlerisch betrachtet ist das zu eng, denn …",
+        "Ein Kompromiss könnte aussehen: …",
+        "Ich bin überzeugt, dass Kreativität Regeln braucht — aber faire",
+        "Ich danke für die Aufmerksamkeit."
+      ],
+      "partnerFragen": [
+        "Würden Sie einem KI-Bild Urheberrecht zugestehen?",
+        "Grenzen Sie Inspiration und Diebstahl selbst klar?"
+      ],
+      "dauer": {
+        "vorbereitung_s": 900,
+        "vortrag_s": 240
+      }
+    }
+  ]
 }

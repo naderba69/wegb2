@@ -124,7 +124,7 @@ export function GrammatikArena({ progress: _progress }: { progress: Progress }) 
           <button
             key={m}
             className="chip"
-            style={{ cursor: "pointer", background: m === mode ? "var(--color-cola)" : "white", color: m === mode ? "white" : undefined }}
+            style={{ cursor: "pointer", background: m === mode ? "var(--color-cola)" : "var(--ui-surface-raised)", color: m === mode ? "var(--ui-on-accent)" : undefined }}
             onClick={() => wähle(m)}
           >
             {MODE_LABEL[m]}
@@ -154,8 +154,8 @@ export function GrammatikArena({ progress: _progress }: { progress: Progress }) 
                   justifyContent: "flex-start",
                   textAlign: "start",
                   direction: "ltr",
-                  background: state ? (o === it.answer ? "var(--color-a1)" : o === state.choice ? "var(--color-cola-soft)" : "white") : "white",
-                  color: state && o === it.answer ? "white" : undefined,
+                  background: state ? (o === it.answer ? "var(--color-a1)" : o === state.choice ? "var(--color-cola-soft)" : "var(--ui-surface-raised)") : "var(--ui-surface-raised)",
+                  color: state && o === it.answer ? "var(--ui-on-accent)" : undefined,
                 }}
                 disabled={!!state}
                 onClick={() => pruefen(o)}

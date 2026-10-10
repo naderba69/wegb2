@@ -1,70 +1,80 @@
 {
- "_zweck": "كلّ نسبة مئوية أو سنة في حقلٍ ألمانيّ يجب أن تكون هنا مع سببها — وإلا تفشل K79. الأصل: لا وقائع خارجية قابلة للتكذيب؛ الأرقام داخل استطلاعات/عقود وهميّة مسموحة إن كانت مُعلَنة كوهميّة بالسياق.",
- "eintraege": [
-  {
-   "muster": "70 Prozent",
-   "wo": "t-b1-03, luecken",
-   "grund": "استطلاع وهميّ داخل النص نفسه («Eine Umfrage zeigt»)، بلا مصدر حقيقي"
-  },
-  {
-   "muster": "45 Prozent",
-   "wo": "t-b1-07, luecken",
-   "grund": "استطلاع وهميّ («Eine Umfrage unter 500 Jugendlichen») بلا مصدر"
-  },
-  {
-   "muster": "50 Prozent",
-   "wo": "t-b1-03 option",
-   "grund": "مشتّت رقمي"
-  },
-  {
-   "muster": "90 Prozent",
-   "wo": "t-b1-03 option",
-   "grund": "مشتّت رقمي"
-  },
-  {
-   "muster": "5 Prozent",
-   "wo": "d-b2-05 Verhandlung",
-   "grund": "عرض تفاوضي داخل حوار وهميّ"
-  },
-  {
-   "muster": "15 Prozent",
-   "wo": "d-b2 Mieterhöhung",
-   "grund": "مطالبة مؤجّر داخل حوار وهميّ"
-  },
-  {
-   "muster": "9,8 Prozent",
-   "wo": "d-b2 Mieterhöhung",
-   "grund": "تصحيح داخل الحوار نفسه"
-  },
-  {
-   "muster": "67 Prozent",
-   "wo": "d-b2-13 Elterngeld",
-   "grund": "معيار قانوني عامّ لنسبة استبدال الدخل في Elterngeld — تحقّقتُ منه؛ يبقى الوحيد ذا مرجع خارجي، ولا يُعرض كإحصاء بل كقاعدة حسابية. الصوت مسجَّل، فلا يُعدَّل النصّ"
-  },
-  {
-   "muster": "80 Prozent",
-   "wo": "d-b2 Integrationskurs, pakete",
-   "grund": "شرط حضور لدورة وهميّة / رغبة دوام جزئي"
-  },
-  {
-   "muster": "2019",
-   "wo": "grammar a1-war-hatte",
-   "grund": "سنة في مثال نحوي شخصي («wir waren 2019 dort») لا واقعة"
-  },
-  {
-   "muster": "1998",
-   "wo": "writing[1] Formular",
-   "grund": "تاريخ ميلاد شخصية وهميّة (Youssef)"
-  },
-  {
-   "muster": "2024",
-   "wo": "szenarien Steuererklärung",
-   "grund": "سنة ضريبية في جملة إجرائية عامّة"
-  },
-  {
-   "muster": "20 Prozent",
-   "wo": "t-a2-17 lang",
-   "grund": "قراءة عدّاد عائلة وهميّة داخل السرد («Wir verbrauchen etwa 20 Prozent weniger») لا إحصاء"
-  }
- ]
+  "_zweck": "كلّ نسبة مئوية أو سنة في حقلٍ ألمانيّ يجب أن تكون هنا مع سببها — وإلا تفشل K79. الأصل: لا وقائع خارجية قابلة للتكذيب؛ الأرقام داخل استطلاعات/عقود وهميّة مسموحة إن كانت مُعلَنة كوهميّة بالسياق.",
+  "eintraege": [
+    {
+      "muster": "70 Prozent",
+      "wo": "t-b1-03, luecken",
+      "grund": "استطلاع وهميّ داخل النص نفسه («Eine Umfrage zeigt»)، بلا مصدر حقيقي"
+    },
+    {
+      "muster": "45 Prozent",
+      "wo": "t-b1-07, luecken",
+      "grund": "استطلاع وهميّ («Eine Umfrage unter 500 Jugendlichen») بلا مصدر"
+    },
+    {
+      "muster": "50 Prozent",
+      "wo": "t-b1-03 option",
+      "grund": "مشتّت رقمي"
+    },
+    {
+      "muster": "90 Prozent",
+      "wo": "t-b1-03 option",
+      "grund": "مشتّت رقمي"
+    },
+    {
+      "muster": "5 Prozent",
+      "wo": "d-b2-05 Verhandlung",
+      "grund": "عرض تفاوضي داخل حوار وهميّ"
+    },
+    {
+      "muster": "15 Prozent",
+      "wo": "d-b2 Mieterhöhung",
+      "grund": "مطالبة مؤجّر داخل حوار وهميّ"
+    },
+    {
+      "muster": "9,8 Prozent",
+      "wo": "d-b2 Mieterhöhung",
+      "grund": "تصحيح داخل الحوار نفسه"
+    },
+    {
+      "muster": "67 Prozent",
+      "wo": "d-b2-13 Elterngeld",
+      "grund": "معيار قانوني عامّ لنسبة استبدال الدخل في Elterngeld — تحقّقتُ منه؛ يبقى الوحيد ذا مرجع خارجي، ولا يُعرض كإحصاء بل كقاعدة حسابية. الصوت مسجَّل، فلا يُعدَّل النصّ"
+    },
+    {
+      "muster": "80 Prozent",
+      "wo": "d-b2 Integrationskurs, pakete",
+      "grund": "شرط حضور لدورة وهميّة / رغبة دوام جزئي"
+    },
+    {
+      "muster": "2019",
+      "wo": "grammar a1-war-hatte",
+      "grund": "سنة في مثال نحوي شخصي («wir waren 2019 dort») لا واقعة"
+    },
+    {
+      "muster": "1998",
+      "wo": "writing[1] Formular",
+      "grund": "تاريخ ميلاد شخصية وهميّة (Youssef)"
+    },
+    {
+      "muster": "2024",
+      "wo": "szenarien Steuererklärung",
+      "grund": "سنة ضريبية في جملة إجرائية عامّة"
+    },
+    {
+      "muster": "20 Prozent",
+      "wo": "t-a2-17 lang",
+      "grund": "قراءة عدّاد عائلة وهميّة داخل السرد («Wir verbrauchen etwa 20 Prozent weniger») لا إحصاء"
+    },
+    {
+      "muster": "30 Prozent",
+      "wo": "d-a2-ht01 lines and answer option",
+      "grund": "Rabatt eines ausdrücklich fiktiven Kaufhaus-Dialogs; kein aktuelles Angebot eines realen Händlers."
+    },
+    {
+      "muster": "10 Prozent",
+      "wo": "d-a2-ht01 distractor",
+      "grund": "Falschantwort in der Verständnisfrage zum fiktiven Kaufhausangebot; keine Tatsachenbehauptung."
+    }
+  ]
 }

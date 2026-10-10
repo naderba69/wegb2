@@ -113,7 +113,7 @@ function TeilStrategien() {
             <b style={{ fontSize: "0.92rem" }}>
               {t.emoji} {t.de} — {t.ar}
             </b>
-            <button className="chip" style={{ cursor: "pointer", background: an(id) ? "var(--color-a1)" : "white", color: an(id) ? "white" : undefined, border: 0 }} onClick={() => toggle(id)}>
+            <button className="chip" style={{ cursor: "pointer", background: an(id) ? "var(--color-a1)" : "var(--ui-surface-raised)", color: an(id) ? "var(--ui-on-accent)" : undefined, border: 0 }} onClick={() => toggle(id)}>
               {an(id) ? "✓ طُبّقت اليوم" : "✓ طبّقتها هذا الأسبوع"}
             </button>
           </div>
@@ -394,7 +394,7 @@ ${verteil.map((x) => `<tr><td>${KOMPETENZ_AR[x.h]} (${x.h})</td><td>${x.wert}٪<
       </div>
       <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
         {MINUTE_POOL.map(([m, label]) => (
-          <button key={m} className="chip" style={{ cursor: "pointer", background: min === m ? "var(--color-cola)" : "white", color: min === m ? "white" : undefined }} onClick={() => setMin(m)}>
+          <button key={m} className="chip" style={{ cursor: "pointer", background: min === m ? "var(--color-cola)" : "var(--ui-surface-raised)", color: min === m ? "var(--ui-on-accent)" : undefined }} onClick={() => setMin(m)}>
             {label}
           </button>
         ))}
@@ -535,12 +535,12 @@ function SelbstLinter() {
       ) : r && (
         <div style={{ display: "grid", gap: 6 }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-            <span className="chip" style={{ background: r.hart.length === 0 ? "var(--color-a1)" : r.hart.length <= 2 ? "var(--color-gold)" : "#b91c1c", color: "white", border: 0 }}>
+            <span className="chip" style={{ background: r.hart.length === 0 ? "var(--color-a1)" : r.hart.length <= 2 ? "var(--color-gold)" : "#b91c1c", color: r.hart.length > 2 ? "white" : "var(--ui-on-accent)", border: 0 }}>
               نظافة {r.sauberPct}٪ · {r.hart.length} خطأ · {r.hints.length} تلميح · {r.woerter} كلمة
             </span>
           </div>
           {r.funde.length === 0 && (
-            <div style={{ background: "var(--color-a1)", color: "white", borderRadius: 10, padding: "0.5rem 0.8rem", fontWeight: 900, fontSize: "0.82rem" }} dir="rtl">
+            <div style={{ background: "var(--color-a1)", color: "var(--ui-on-accent)", borderRadius: 10, padding: "0.5rem 0.8rem", fontWeight: 900, fontSize: "0.82rem" }} dir="rtl">
               ✓ صفر ملاحظات! هذه علامة «جاهز للتسليم» الحقيقية.
             </div>
           )}
@@ -563,7 +563,6 @@ function SelbstLinter() {
 /* ------------------------------------------------------------- المركز */
 
 export function LernStrategieZentrum({ progress }: { progress: Progress }) {
-  const { update } = useProgress();
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<"teile" | "pomo" | "feynman" | "plan" | "linter">("teile");
 
@@ -590,7 +589,7 @@ export function LernStrategieZentrum({ progress }: { progress: Progress }) {
                 ["linter", "✅ المصحّح الخماسي"],
               ] as const
             ).map(([id, label]) => (
-              <button key={id} className="chip" style={{ cursor: "pointer", background: tab === id ? "var(--color-cola)" : "white", color: tab === id ? "white" : undefined }} onClick={() => setTab(id)}>
+              <button key={id} className="chip" style={{ cursor: "pointer", background: tab === id ? "var(--color-cola)" : "var(--ui-surface-raised)", color: tab === id ? "var(--ui-on-accent)" : undefined }} onClick={() => setTab(id)}>
                 {label}
               </button>
             ))}
@@ -600,16 +599,6 @@ export function LernStrategieZentrum({ progress }: { progress: Progress }) {
           {tab === "feynman" && <Feynman />}
           {tab === "plan" && <WochenPlan progress={progress} />}
           {tab === "linter" && <SelbstLinter />}
-          <div style={{ display: "flex", justifyContent: "flex-end", borderTop: "1px dashed var(--color-line)", paddingTop: "0.5rem" }}>
-            <button
-              className="btn btn-ghost"
-              style={{ fontSize: "0.72rem" }}
-              onClick={() => update((p) => ({ ...p, settings: { ...p.settings, placed: false } }))}
-              title="يعيد بطاقة اختبار تحديد المستوى في أعلى الصفحة"
-            >
-              🏫 أعد اختبار تحديد المستوى
-            </button>
-          </div>
         </div>
       )}
     </div>

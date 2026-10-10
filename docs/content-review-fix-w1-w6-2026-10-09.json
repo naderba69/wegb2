@@ -1,0 +1,103 @@
+{
+  "reviewRule": "R142",
+  "date": "2026-10-09",
+  "summary": "تصحيح خمسة تحذيرات محتوى W1/W2/W3/W4/W6 (حقائق قانونية) كانت موثّقة من قبل دون تعديل. W5 (خطأ إملائي Digitalisierung) كان قد أُصلح سابقاً.",
+  "warningsFixed": [
+    {
+      "id": "W1",
+      "dialog": "d-b1-16",
+      "issue": "خمسون دقيقة → 15٪ تعويض يخالف لائحة حقوق المسافرين بالقطار (الاتحاد الأوروبي) 2021/782 المادة 19 (25٪ عند 60–119 دقيقة، 50٪ من 120 دقيقة).",
+      "source": "Art. 19 VO (EU) 2021/782; finanztip.de; buzer.de"
+    },
+    {
+      "id": "W2",
+      "dialog": "d-b1-24",
+      "issue": "«Vierzehn Tage Aufbewahrung» تخالف المادة 973 من القانون المدني (BGB): مهلة حفظ الأشياء المعثور عليها ستة أشهر من تاريخ البلاغ ثم المزاد العلني (المادتان 979–980).",
+      "source": "§ 973 BGB; amtsdeutschland.de; stadt-koeln.de; service.bremen.de"
+    },
+    {
+      "id": "W3",
+      "dialog": "d-b1-25",
+      "issue": "«eID-Funktion kostet sechs Euro» يخالف لائحة رسوم بطاقة الهوية (PAuswGebV) § 1 Abs. 5: تغيير العنوان مجّاني، وتفعيل الهوية الإلكترونية وإعادة تعيين الرقم السريّ مجّانيّان (personalausweisportal.de). ستة يورو تُدفع مقابل التصوير البيومتري في المكتب إن لم يحضر المستخدم صورة.",
+      "source": "§ 1 Abs. 5 PAuswGebV; personalausweisportal.de; amtsdeutschland.de"
+    },
+    {
+      "id": "W4",
+      "dialog": "d-b1-27",
+      "issue": "«die Gebühr bleibt gültig, keine Neuanmeldung» يخالف § 18 FeV: رسمُ الامتحان (24,99 € نظرية للفئة B وفق TÜV/DEKRA) يُستحقّ في كلّ محاولة، مع مهلة حظر 14 يوماً بين المحاولات (ولا إعادة تقديم الطلب طالما بقي صالحاً لسنة واحدة).",
+      "source": "§ 18 FeV; verivox.de; fahrschuleschobloch.com; theoriecoach.app"
+    },
+    {
+      "id": "W6",
+      "dialog": "d-b2-11",
+      "issue": "«Kappungsgrenze bei elf Prozent» لا وجود له في القانون؛ السقف النظامي حسب المادة 558 الفقرة 3 BGB هو 20٪ في ثلاث سنوات، و15٪ في المناطق ذات السوق الإيجاري المشدود (كبرلين وهامبورغ ومدن أخرى بمرسوم محلي).",
+      "source": "§ 558 Abs. 3 BGB; musterfuchs.de; finanztip.de; kanzlei-herfurtner.de"
+    }
+  ],
+  "judgement": {
+    "corrected": 5,
+    "openWarnings": 0,
+    "allDoorsGreen": true,
+    "tsc": true,
+    "build": true,
+    "smoke": "1473/0"
+  },
+  "contentChecks": [
+    {
+      "id": "CHK-W1-01",
+      "check": "d-b1-16.lines[0-1] تشيران إلى ستّين دقيقة و25٪ تعويض.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W1-02",
+      "check": "d-b1-16-q1 الإجابة 25٪ ومشتت 50٪ موجود.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W2-01",
+      "check": "d-b1-24.lines[7] تشير إلى ستة أشهر بعد البلاغ.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W2-02",
+      "check": "d-b1-24-q3 الإجابة «ستة أشهر» ومشتت «bis zwanzig Uhr zwanzig» لا «vierzehn Tage».",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W3-01",
+      "check": "d-b1-25.lines[7] تذكر مجانية التسجيل والعنوان والـeID، والستة يورو للتصوير البيومتري.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W3-02",
+      "check": "d-b1-25-q3 الإجابة «الصورة البيومترية» بدلاً من «eID مجانية أو مكلّفة».",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W4-01",
+      "check": "d-b1-27.lines[7] تذكر إعادة دفع رسم الامتحان في كل محاولة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W4-02",
+      "check": "d-b1-27-q3 الإجابة تذكر 14 يوماً حظر + رسم كل محاولة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W6-01",
+      "check": "d-b2-11.lines[2] تشير إلى Kappungsgrenze 15٪ بدلاً من 11٪.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-W6-02",
+      "check": "d-b2-11-q2 المشتتات 15٪ و20٪ (سقوف النظام)، والتصحيح إلى 9,8٪ إجابة.",
+      "status": "pass"
+    }
+  ],
+  "limits": {
+    "human": "لا مراجعة بشرية أو اعتماد مهني أو قانوني — المصادر الموثّقة أدناه للدلالة على النص النظامي.",
+    "audio": "لا استماع للملفات الصوتية",
+    "cefr": "لا تغيير في توزيع المستويات",
+    "scope": "خمسة أسطر ألمانية وخياراتها وإجاباتها والإملاءات؛ العربية محدَّثة لتطابق الألماني المصحَّح."
+  }
+}

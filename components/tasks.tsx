@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { istPhasenPruefung } from "@/lib/phasen";
-import type { DayTask, Exercise, SrsState, UiLang, VocabCard, Schreibaufgabe, GrammarTopic, Eselsbruecke } from "@/lib/types";
-import { eselsbruecken, getBrueckenFor, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap } from "@/lib/content";
+import type { DayTask, Exercise, SrsState, UiLang, VocabCard, Schreibaufgabe, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
+import { POS_AR } from "@/lib/types";
+import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
-import { newCard, reviewCard, isDue } from "@/lib/srs";
-import { addFehlerNow } from "@/lib/store";
+import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday } from "@/lib/srs";
+import { addFehlerNow, markiereSchriftlich, loadProgress, saveProgress } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
 import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
 import { buildBrueckeItems } from "@/lib/bruecken";
@@ -14,6 +15,7 @@ import ExerciseSet from "./exercises";
 import { FehlerFinden, RollenDialog, SchreibBerater, Pruefung } from "./lehrer";
 import { FehlerFallen, Fehlerheft } from "./fehler-ui";
 import { De } from "./De";
+import { SynonymKontext } from "./SynonymKontext";
 import { KompositaWerkstatt } from "./komposita";
 import { SignalRadar } from "./signalradar";
 import { StilWechsler } from "./stilwechsler";
@@ -21,6 +23,39 @@ import { grammatikImText } from "@/lib/grammatikRadar";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
 const alleGrammatik = Object.values(grammarMap);
+const alleVokabelIds = Object.values(vocabMap).flatMap((deck) => deck.cards.map((card) => card.id));
+
+/** مسودّة محلية للمهمة الجارية؛ تبقى حتى التسليم أو الإغلاق الصريح لليوم. */
+function useTaskDraft<T>(persistKey: string | undefined, slot: string, initial: T) {
+  const key = persistKey ? `${persistKey}:${slot}` : undefined;
+  const [draft, setDraft] = useState<T>(initial);
+  const [ready, setReady] = useState(!key);
+
+  useEffect(() => {
+    if (!key) {
+      setDraft(initial);
+      setReady(true);
+      return;
+    }
+    setReady(false);
+    try {
+      const raw = localStorage.getItem(key);
+      setDraft(raw ? JSON.parse(raw) as T : initial);
+    } catch {
+      setDraft(initial);
+    }
+    setReady(true);
+    // initial is a reset value; load only when the storage namespace changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+
+  useEffect(() => {
+    if (!key || !ready) return;
+    try { localStorage.setItem(key, JSON.stringify(draft)); } catch { /* التخزين محظور أو ممتلئ */ }
+  }, [key, ready, draft]);
+
+  return [draft, setDraft, ready] as const;
+}
 
 interface TaskProps {
   task: DayTask;
@@ -31,10 +66,13 @@ interface TaskProps {
   onPoints: (points: number, max: number) => void;
   voiceName?: string;
   rate?: number;
+  tempo?: Tempo;
+  /** بادئة تخزينٍ مؤقّتة لمحاولات المهمة، تُحذف عند تسليمها. */
+  persistKey?: string;
 }
 
 /** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
-export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate }: TaskProps) {
+export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey }: TaskProps) {
   // تسميع الإملاء: مستمع عام يعمل في كل المهام
   useEffect(() => {
     const onSpeak = (e: Event) => {
@@ -48,30 +86,35 @@ export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceN
 
   switch (task.kind) {
     case "grammatik":
-      return <GrammarTask task={task} onPoints={onPoints} />;
+      return <GrammarTask task={task} srs={srs} onPoints={onPoints} persistKey={persistKey} />;
     case "wortschatz":
-      return <VocabTask task={task} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} />;
+      return <VocabTask task={task} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} tempo={tempo} persistKey={persistKey} />;
     case "hoeren":
-      return <HoerenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} />;
+      return <HoerenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
     case "lesen":
-      return <LesenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} />;
+      return <LesenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
     case "schreiben":
-      return <SchreibenTask task={task} onPoints={onPoints} />;
+      return <SchreibenTask task={task} onPoints={onPoints} persistKey={persistKey} />;
     case "sprechen":
-      return <SprechenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} />;
+    case "aussprache":
+      return <SprechenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
+    case "briefe":
+    case "schulsim":
+    case "partner":
+      return <PartnerTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
     case "wiederholen":
       return task.fehlerKeys?.length ? (
         <Fehlerheft fehlerKeys={task.fehlerKeys} onPoints={onPoints} voiceName={voiceName} rate={rate} />
       ) : task.fehlerItems?.length ? (
         <FehlerFallen items={task.fehlerItems} onPoints={onPoints} />
       ) : (
-        <WiederholenTask task={task} day={day} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} />
+        <WiederholenTask task={task} day={day} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />
       );
     case "check":
       return task.exam ? (
         <Pruefung task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} />
       ) : (
-        <CheckTask task={task} onPoints={onPoints} />
+        <CheckTask task={task} onPoints={onPoints} persistKey={persistKey} />
       );
     default:
       return <CheckTask task={task} onPoints={onPoints} />;
@@ -217,7 +260,7 @@ function BrueckenQuiz({ gramId, bruecken }: { gramId: string; bruecken: Eselsbru
                 justifyContent: "flex-start",
                 minHeight: "44px",
                 border: "1px solid var(--color-line)",
-                background: richtig ? "var(--color-gold-soft)" : falsch ? "var(--color-cola-soft)" : "white",
+                background: richtig ? "rgb(34 197 94 / 0.14)" : falsch ? "var(--color-cola-soft)" : "transparent",
               }}
               disabled={!!wahl}
               onClick={() => antworte(o)}
@@ -242,26 +285,34 @@ function BrueckenQuiz({ gramId, bruecken }: { gramId: string; bruecken: Eselsbru
 }
 
 // ── 🧠 تركاتُ الحفظ: الشفراتُ والقصصُ والأمثالُ الملتصقةُ بهذا الدرسِ بعينه ──
-function BrueckenBlock({ gramId }: { gramId: string }) {
+function BrueckenBlock({ gramId, srs }: { gramId: string; srs: SrsState2 }) {
   const bruecken = getBrueckenFor(gramId);
   const [offen, setOffen] = useState<Record<string, boolean>>({});
+  const faellig = bruecken.filter((b) => srs[`bru:${b.id}`] && isDue(srs[`bru:${b.id}`])).length;
   if (!bruecken.length) return null;
   return (
-    <div style={{ display: "grid", gap: "0.5rem", margin: "0.9rem 0" }}>
-      <div style={{ fontWeight: 900, fontSize: "0.95rem", color: "var(--color-cola)" }}>
+    <div data-testid="grammar-bruecken-block" style={{ display: "grid", gap: "0.5rem", margin: "0.9rem 0" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "0.4rem", fontWeight: 900, fontSize: "0.95rem", color: "var(--color-cola)" }}>
         🧠 تركاتُ الحفظ لهذا الدرس <span className="rtl-num" style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>({bruecken.length})</span>
+        {faellig > 0 && <span data-testid="grammar-bruecken-due-count" className="chip" style={{ color: "var(--color-ink)", borderColor: "var(--color-gold)" }}>🔔 {faellig} مستحقّة</span>}
       </div>
       <BrueckenQuiz gramId={gramId} bruecken={bruecken} />
       {bruecken.map((b) => {
         const auf = !!offen[b.id];
+        const due = !!srs[`bru:${b.id}`] && isDue(srs[`bru:${b.id}`]);
         return (
-          <div key={b.id} className="card" style={{ padding: "0.7rem 0.95rem", background: "var(--color-paper2)", borderInlineStart: "4px solid var(--color-gold)" }}>
+          <div key={b.id} data-testid={`grammar-bruecke-${b.id}`} className="card" style={{ padding: "0.7rem 0.95rem", background: "var(--color-paper2)", borderInlineStart: "4px solid var(--color-gold)" }}>
             <button
+              type="button"
+              aria-expanded={auf}
               onClick={() => setOffen((o) => ({ ...o, [b.id]: !o[b.id] }))}
               style={{ background: "none", border: 0, cursor: "pointer", width: "100%", minHeight: "44px", display: "flex", gap: "0.5rem", alignItems: "center", justifyContent: "space-between", textAlign: "start", font: "inherit", color: "inherit" }}
             >
               <span style={{ fontWeight: 800 }}>{b.emoji} {b.titleAr}</span>
-              <span className="chip">{auf ? "إخفاء ▲" : "افتح ▼"}</span>
+              <span style={{ display: "flex", gap: "0.35rem", alignItems: "center", flexWrap: "wrap" }}>
+                {due && <span className="chip" data-testid={`grammar-bruecke-due-${b.id}`} style={{ borderColor: "var(--color-gold)" }}>🔔 مستحقّة</span>}
+                <span className="chip">{auf ? "إخفاء ▲" : "افتح ▼"}</span>
+              </span>
             </button>
             {auf && (
               <>
@@ -297,7 +348,7 @@ function BrueckenBlock({ gramId }: { gramId: string }) {
 }
 
 // ── الحلقة الثلاثية بعد القاعدة: تعرّف → إكمال → إنتاج حر ──────────────
-function TriplePractice({ topic, seed, onPoints }: { topic: GrammarTopic; seed: number; onPoints: (p: number, m: number) => void }) {
+function TriplePractice({ topic, seed, onPoints, persistKey }: { topic: GrammarTopic; seed: number; onPoints: (p: number, m: number) => void; persistKey?: string }) {
   const items = useMemo(() => {
     // نبني من أمثلة القاعدة 3 تمارين فقط إن أمكن
     const rand = rng(seed);
@@ -359,13 +410,13 @@ function TriplePractice({ topic, seed, onPoints }: { topic: GrammarTopic; seed: 
   return (
     <div style={{ marginTop: "0.8rem" }} data-testid="triple-practice">
       <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>🔁 الحلقة الثلاثية: تعرّف ← إكمال ← إنتاج</h4>
-      <ExerciseSet items={items} onPoints={onPoints} />
+      <ExerciseSet items={items} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:triple` : undefined} />
     </div>
   );
 }
 
 // ── شرح القواعد + تمارينه ───────────────────────────────────────────────
-function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void }) {
+function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: SrsState2; onPoints: (p: number, m: number) => void; persistKey?: string }) {
   const topic = getGrammar(task.topicId ?? "");
   // 🔍 الاستقراء قبل القاعدة: أمثلة ← تخمين ← كشف (lib/induktion.ts)
   const seed = Array.from(task.id).reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 11);
@@ -376,9 +427,9 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
     /* 🧩 مهمةُ الأسبوعِ (Komposita / FVG): ورشةٌ بلا درسٍ مضيف — أسئلتُها قائمةٌ بذاتها لا شاشةً خاوية */
     if (task.quiz && task.quiz.length > 0) {
       return (
-        <section className="card fadein" style={{ padding: "1.2rem" }}>
+        <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
           <Head icon="🧩" de={task.titleDe} ar={task.titleAr} />
-          <ExerciseSet items={task.quiz} onPoints={onPoints} />
+          <ExerciseSet items={task.quiz} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} />
         </section>
       );
     }
@@ -396,7 +447,7 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
   };
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="📘" de={topic.titleDe} ar={topic.titleAr} />
 
       {entdecken && ergebnis !== null && (
@@ -448,7 +499,7 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
       {offen && (<>
       <p style={{ lineHeight: 1.9 }}>{topic.summaryAr}</p>
 
-      <BrueckenBlock gramId={topic.id} />
+      <BrueckenBlock gramId={topic.id} srs={srs} />
 
       {/* 🧩 ورشةُ المركّبات: مهارةُ فكِّ شفرةٍ تُدرَّب داخلَ درسِها — بذرتُها رقمُ المهمة فتتجدّد */}
       {topic.id === "b2-nominalstil" && (
@@ -511,7 +562,7 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
 
       {topic.pitfalls && (
         <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.7rem", padding: "0.7rem 0.9rem", margin: "0.8rem 0" }}>
-          <strong style={{ color: "var(--color-cola)" }}>⚠️ أخطاء شائعة عند العرب</strong>
+          <strong style={{ color: "var(--color-cola)" }}>⚠️ انتبه إلى هذه الأمثلة</strong>
           {topic.pitfalls.map((p) => (
             <div key={p.de} style={{ marginTop: "0.4rem" }}>
               <De>{p.de}</De>
@@ -526,38 +577,63 @@ function GrammarTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, 
       )}
 
       <h4 style={{ fontWeight: 800, margin: "1rem 0 0.6rem" }}>تثبيت فوري</h4>
-      <ExerciseSet items={topic.exercises} onPoints={onPoints} />
+      <ExerciseSet items={topic.exercises} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:grammar` : undefined} />
 
       {/* 🔁 الحلقة الثلاثية: تعرّف → إكمال → إنتاج حر */}
-      <TriplePractice topic={topic} seed={Array.from(task.id).reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 41)} onPoints={onPoints} />
+      <TriplePractice topic={topic} seed={Array.from(task.id).reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 41)} onPoints={onPoints} persistKey={persistKey} />
       </>)}
     </section>
   );
 }
 
 // ── مفردات + بنك جمل ────────────────────────────────────────────────────
-function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day">) {
+function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey }: Omit<TaskProps, "lang" | "day">) {
   const deck = getDeck(task.deckId ?? "");
   const [queue, setQueue] = useState<VocabCard[]>([]);
   const [flipped, setFlipped] = useState(false);
   const [doneCount, setDoneCount] = useState(0);
+  const [queueStats, setQueueStats] = useState({ due: 0, fresh: 0, cap: 0, introduced: 0 });
+  const card = queue[0];
 
   useEffect(() => {
     let pool: VocabCard[];
+    let dueCount = 0;
+    let freshCount = 0;
+    let introducedToday = 0;
     if (deck) {
+      const pending = deck.cards.filter((c) => srs[c.id]?.reps === 0 && wasIntroducedToday(srs[c.id]));
+      const due = deck.cards.filter((c) => srs[c.id] && isDue(srs[c.id]) && !pending.some((p) => p.id === c.id));
       const fresh = deck.cards.filter((c) => !srs[c.id]);
-      const due = deck.cards.filter((c) => srs[c.id] && isDue(srs[c.id]));
-      const rest = deck.cards.filter((c) => srs[c.id] && !isDue(srs[c.id]));
-      pool = [...fresh, ...due, ...rest].slice(0, 10);
+      const alreadyIntroduced = countNewCardsIntroducedToday(srs, alleVokabelIds);
+      introducedToday = alreadyIntroduced;
+      const roomForNew = Math.max(0, newCardCap(tempo) - alreadyIntroduced);
+      const pendingToday = pending.slice(0, 10);
+      const dueSlots = Math.max(0, 10 - pendingToday.length);
+      const dueToday = due.slice(0, dueSlots);
+      const newSlots = Math.min(roomForNew, Math.max(0, 10 - pendingToday.length - dueToday.length));
+      // المستحقّ أولاً، ثم استأنف البطاقة التي ظهرت ولم تُقيَّم، وأخيراً الجديد ضمن السقف.
+      pool = [...dueToday, ...pendingToday, ...fresh.slice(0, newSlots)].slice(0, 10);
+      dueCount = due.length;
+      freshCount = fresh.length;
     } else {
       const all: VocabCard[] = Object.values(vocabMap).flatMap((d) => d.cards);
       pool = all.filter((c) => srs[c.id] && isDue(srs[c.id])).slice(0, 10);
+      dueCount = pool.length;
+      freshCount = 0;
     }
     setQueue(pool);
+    // R138/P-15: نُعرِض إحصائيات البطاقات (مستحقة/جديدة/مقدمة اليوم) في الـ state لكي تظهَر في الواجهة.
+    setQueueStats({ due: dueCount, fresh: freshCount, cap: newCardCap(tempo), introduced: introducedToday });
+    // تُثبَّت الوتيرة عند بدء المهمة؛ تغيّرُ SRS داخل الطابور لا يعيدُ البطاقةَ الحالية.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [task.id]);
+  }, [task.id, tempo]);
 
-  const card = queue[0];
+  // إدخال البطاقة في SRS عند ظهورها فعلاً، لا عند تحميل طابورٍ قد لا يراه المتعلّم.
+  useEffect(() => {
+    if (card && !srs[card.id]) onSrs(card.id, newCard());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [card?.id, srs, onSrs]);
+
   const kollokItems = useMemo(() => {
     const alle: VocabCard[] = Object.values(vocabMap).flatMap((d) => d.cards);
     const rand = rng(seedFrom(task.id) + 7);
@@ -581,7 +657,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
     onSrs(card.id, reviewCard(prev, q));
     if (q === 0) {
       addFehlerNow({
-        falsch: card.article ? `${card.article} ${card.de}` : card.de,
+        falsch: deFormOf(card),
         richtig: card.ar,
         art: "wortschatz",
         ar: card.exampleDe ? `${card.ar} — مثال: ${card.exampleDe}` : card.ar,
@@ -595,15 +671,20 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
   };
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head
         icon="🃏"
         de={deck?.titleDe ?? "Wiederholungskarten"}
-        ar={`${deck?.titleAr ?? "بطاقات المراجعة المتباعدة"} — بطاقات جديدة ومستحقة`}
+        ar={`${deck?.titleAr ?? "بطاقات المراجعة المتباعدة"} — سقفُ الجديد اليومي ${newCardCap(tempo)} بطاقات حسب الوتيرة`}
       />
+      <p data-testid="vocab-tempo-cap" style={{ margin: "-0.35rem 0 0.7rem", fontSize: "0.82rem", color: "var(--color-ink2)" }}>
+        الحدّ الأقصى للبطاقات الجديدة اليوم: <span className="rtl-num">{newCardCap(tempo)}</span>؛ تُقدَّم المراجعات المستحقّة أولاً.
+        <br />
+        <strong>بطاقات اليوم:</strong> <span className="rtl-num">{queue.length}</span> في الدفعة الحالية · مراجعات مستحقة إجمالاً: <span className="rtl-num">{queueStats.due}</span> · بطاقات جديدة متبقية في الحزمة: <span className="rtl-num">{queueStats.fresh}</span> · بطاقات جديدة قُدّمت اليوم: <span className="rtl-num">{queueStats.introduced}</span>/<span className="rtl-num">{queueStats.cap}</span>
+      </p>
       {card ? (
         <div className="card" style={{ padding: "1.4rem", textAlign: "center", background: "var(--color-paper2)", cursor: "pointer" }} onClick={() => setFlipped(true)}>
-          <div className="chip" style={{ marginBottom: "0.6rem" }}>
+          <div className="chip" data-testid="vocab-queue-count" style={{ marginBottom: "0.6rem" }}>
             <span className="rtl-num">{doneCount + 1}</span> / <span className="rtl-num">{doneCount + queue.length}</span>
           </div>
           {card.img && (
@@ -618,14 +699,14 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
           )}
           <div style={{ fontSize: "1.7rem", fontWeight: 900 }}>
             {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
-            <De>{card.de}</De>
+            <De>{deFormOf(card, false)}</De>
           </div>
           <button
             className="btn btn-ghost"
             style={{ margin: "0.5rem" }}
             onClick={(e) => {
               e.stopPropagation();
-              speakDe(card.de, { voiceName, rate });
+              speakDe(deFormOf(card), { voiceName, rate });
             }}
           >
             🔊 اسمع النطق
@@ -637,11 +718,38 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
           ) : (
             <div className="fadein">
               <div style={{ fontSize: "1.15rem", color: "var(--color-cola)" }}>{card.ar}</div>
+              {card.pos && (
+                <div style={{ marginTop: "0.35rem" }}>
+                  <span data-testid="karte-pos" className="chip" style={{ fontSize: "0.75rem" }}>
+                    🏷️ {card.pos}{POS_AR[card.pos] ? ` · ${POS_AR[card.pos]}` : ""}{card.posInfo ? ` (${card.posInfo})` : ""}
+                  </span>
+                </div>
+              )}
+              {card.ant?.length ? (
+                <div data-testid="karte-synant" style={{ marginTop: "0.5rem", fontSize: "0.85rem", display: "grid", gap: "0.2rem" }}>
+                  <div>↔️ ضدّ: <De>{card.ant.join(" · ")}</De></div>
+                </div>
+              ) : null}
+              <SynonymKontext karte={card} testId="karte-syn-context" />
               {getMnemonik(card.de) && (
                 <div style={{ marginTop: "0.4rem", fontSize: "0.85rem", background: "var(--color-gold-soft)", borderRadius: "0.5rem", padding: "0.35rem 0.6rem" }}>
                   💡 {getMnemonik(card.de)!.tipp}
                 </div>
               )}
+              {(() => {
+                // R138/P-22: روابط لشفرات Eselsbrücken المتعلقة بالكلمة
+                const bs = getBrueckenForWort(card.de);
+                if (!bs.length) return null;
+                return (
+                  <div style={{ marginTop: "0.4rem", fontSize: "0.82rem", display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
+                    {bs.map((b) => (
+                      <span key={b.id} className="chip" style={{ background: "var(--color-b2-soft, rgba(123,31,162,0.12))" }}>
+                        {b.emoji} شفرة: {b.titleAr}
+                      </span>
+                    ))}
+                  </div>
+                );
+              })()}
               {card.exampleDe && (
                 <div style={{ marginTop: "0.6rem" }}>
                   <De>{card.exampleDe}</De>
@@ -669,13 +777,13 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
       {kollokItems.length > 0 && (
         <div data-testid="kollok-uebung" style={{ marginTop: "1rem" }}>
           <h4 style={{ fontWeight: 800, margin: "0 0 0.5rem" }}>أكمل المتلازمة</h4>
-          <ExerciseSet items={kollokItems} onPoints={onPoints} />
+          <ExerciseSet items={kollokItems} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:collocations` : undefined} />
         </div>
       )}
       {satzItems.length > 0 && (
         <>
           <h4 style={{ fontWeight: 800, margin: "1rem 0 0.6rem" }}>تثبيت من بنك الجمل</h4>
-          <ExerciseSet items={satzItems} onPoints={onPoints} />
+          <ExerciseSet items={satzItems} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:sentences` : undefined} />
         </>
       )}
     </section>
@@ -683,12 +791,19 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate }: Omit<TaskPro
 }
 
 // ── استماع/تسميع (TTS) ─────────────────────────────────────────────────
-function HoerenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
+function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const dlg = getDialogue(task.dialogueId ?? "");
   const [playing, setPlaying] = useState(false);
   const [showText, setShowText] = useState(false);
   const [lineIdx, setLineIdx] = useState(-1);
   const [voReady, setVoReady] = useState(false);
+  // R138/P-13: Hörverstehen-Modi mit Anweisung
+  const modus = task.hoerenModus ?? "global";
+  const MODUS_INFO: Record<string, { labelDe: string; labelAr: string; instrAr: string }> = {
+    global: { labelDe: "Globalverstehen", labelAr: "فهم عام", instrAr: "🎯 هدفك: فهم الموضوع العام والمكان والعلاقة بين المتحدّثين. لا تقلق من كل كلمة." },
+    selektiv: { labelDe: "Selektivverstehen", labelAr: "فهم انتقائي", instrAr: "🎯 هدفك: التقاط معلومات محددة (تواريخ، أرقام، أسماء، أوقات) — ركّز فقط على ما تحتاجه." },
+    detailliert: { labelDe: "Detailverstehen", labelAr: "فهم تفصيلي", instrAr: "🎯 هدفك: فهم التفاصيل والحجج والسبب والنتيجة. استمع مرتين إن لزم." },
+  };
 
   useEffect(() => {
     warmVoices(() => setVoReady(true));
@@ -730,8 +845,11 @@ function HoerenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" 
   }));
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
-      <Head icon="🎧" de={dlg.titleDe} ar={`${dlg.titleAr} — تسميع بالنطق الداخلي للمتصفح`} />
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
+      <Head icon="🎧" de={`${dlg.titleDe} · ${MODUS_INFO[modus].labelDe}`} ar={`${dlg.titleAr} — ${MODUS_INFO[modus].labelAr}`} />
+      <div style={{ background: "var(--color-a1-soft, rgba(25,118,210,0.08))", border: "1px solid var(--color-a1-soft, rgba(25,118,210,0.2))", borderRadius: "0.5rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontSize: "0.88rem" }}>
+        {MODUS_INFO[modus].instrAr}
+      </div>
       {!speechAvailable() && (
         <p style={{ color: "var(--color-cola)" }}>
           ⚠️ متصفحك لا يدعم النطق المدمج — اقرأ النص بصوت عالٍ (يبقى التمرين نصياً كاملاً).
@@ -753,7 +871,8 @@ function HoerenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" 
             className="card"
             style={{
               padding: "0.55rem 0.8rem",
-              background: lineIdx === i ? "var(--color-gold-soft)" : "white",
+              background: lineIdx === i ? "rgb(34 197 94 / 0.14)" : "transparent",
+              borderColor: lineIdx === i ? "#22c55e" : undefined,
               display: "flex",
               gap: "0.6rem",
               alignItems: "flex-start",
@@ -777,12 +896,12 @@ function HoerenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" 
       </div>
 
       <h4 style={{ fontWeight: 800, margin: "0.8rem 0 0.5rem" }}>فهم المسموع</h4>
-      <ExerciseSet items={dlg.questions} onPoints={onPoints} />
+      <ExerciseSet items={dlg.questions} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:listening` : undefined} />
 
       <SignalRadar dlg={dlg} onPoints={onPoints} />
 
       <h4 style={{ fontWeight: 800, margin: "1rem 0 0.5rem" }}>إملاء (Dictation)</h4>
-      <ExerciseSet items={dictationEx} onPoints={onPoints} />
+      <ExerciseSet items={dictationEx} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:dictation` : undefined} />
 
       <RollenDialog dlg={dlg} onPoints={onPoints} voiceName={voiceName} rate={rate} />
     </section>
@@ -790,7 +909,7 @@ function HoerenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" 
 }
 
 // ── قراءة ───────────────────────────────────────────────────────────────
-function LesenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
+function LesenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const text = getText(task.textId ?? "");
   const [showTr, setShowTr] = useState(false);
   if (!text) return <Empty title="نص غير موجود" />;
@@ -800,7 +919,7 @@ function LesenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" |
   const woerter = lese.de.split(/\s+/).length;
   const radar = useMemo(() => grammatikImText(lese.de), [lese.de]);
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="📖" de={text.titleDe} ar={text.titleAr} />
       {lese.lang && (
         <div data-testid="lesen-lang" style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.5rem" }}>
@@ -836,34 +955,38 @@ function LesenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" |
         </button>
       </div>
       {showTr && <p style={{ color: "var(--color-ink2)", lineHeight: 1.9, marginBottom: "0.8rem" }}>{lese.ar}</p>}
-      <ExerciseSet items={lese.questions} onPoints={onPoints} />
+      <ExerciseSet items={lese.questions} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:reading` : undefined} />
     </section>
   );
 }
 
 // ── كتابة بتقييم ذاتي ───────────────────────────────────────────────────
-function SchreibenTask({ task, onPoints }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs" | "voiceName" | "rate">) {
+function SchreibenTask({ task, onPoints, persistKey }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs" | "voiceName" | "rate">) {
   const w = getWriting(task.writeId ?? "");
-  const [text, setText] = useState("");
-  const [checks, setChecks] = useState<Record<number, boolean>>({});
-  const [submitted, setSubmitted] = useState(false);
+  const [draft, setDraft, draftReady] = useTaskDraft(persistKey, "writing", {
+    text: "",
+    checks: {} as Record<number, boolean>,
+    submitted: false,
+  });
+  const { text, checks, submitted } = draft;
+  if (!draftReady) return <div className="card" role="status">⏳ جارٍ استعادة مسودّة الكتابة…</div>;
   if (!w) return <Empty title="مهمة كتابة غير موجودة" />;
   const selfScore = w.criteria.filter((_, i) => checks[i]).length;
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="✍️" de={w.titleDe} ar={w.titleAr} />
       <div className="card" style={{ padding: "0.8rem 1rem", marginBottom: "0.8rem", background: "var(--color-gold-soft)" }}>
         <De>{w.taskDe}</De>
         <div style={{ marginTop: "0.3rem", fontSize: "0.9rem" }}>{w.taskAr}</div>
       </div>
-      <textarea className="field" rows={8} dir="ltr" style={{ lineHeight: 1.8 }} placeholder="Schreibe hier …" value={text} onChange={(e) => setText(e.target.value)} />
+      <textarea className="field" rows={8} dir="ltr" style={{ lineHeight: 1.8 }} placeholder="Schreibe hier …" value={text} onChange={(e) => setDraft((d) => ({ ...d, text: e.target.value }))} />
       <div style={{ margin: "0.8rem 0", fontWeight: 700 }}>معايير التقييم الذاتي (مستمدة من معايير Goethe):</div>
       <ul style={{ display: "grid", gap: "0.35rem", listStyle: "none", padding: 0 }}>
         {w.criteria.map((c, i) => (
           <li key={c}>
             <label style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", cursor: "pointer" }}>
-              <input type="checkbox" checked={!!checks[i]} onChange={() => setChecks((ch) => ({ ...ch, [i]: !ch[i] }))} style={{ marginTop: "0.25rem" }} />
+              <input type="checkbox" checked={!!checks[i]} onChange={() => setDraft((d) => ({ ...d, checks: { ...d.checks, [i]: !d.checks[i] } }))} style={{ marginTop: "0.25rem" }} />
               <span>{c}</span>
             </label>
           </li>
@@ -875,7 +998,7 @@ function SchreibenTask({ task, onPoints }: Omit<TaskProps, "lang" | "day" | "srs
           style={{ marginTop: "0.8rem" }}
           disabled={text.trim().length < 30}
           onClick={() => {
-            setSubmitted(true);
+            setDraft((d) => ({ ...d, submitted: true }));
             onPoints(selfScore, w.criteria.length);
           }}
         >
@@ -900,12 +1023,18 @@ function SchreibenTask({ task, onPoints }: Omit<TaskProps, "lang" | "day" | "srs
 }
 
 // ── تحدّث (Shadowing + تسميع) ───────────────────────────────────────────
-function SprechenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
-  const [done, setDone] = useState<Record<number, boolean>>({});
+function SprechenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
+  const [draft, setDraft, draftReady] = useTaskDraft(persistKey, "speaking", {
+    done: {} as Record<number, boolean>,
+    schrift: "",
+    schriftAb: false,
+  });
+  const { done, schrift, schriftAb } = draft;
   const items = (task.sentenceIds ?? []).map((sid) => getSatz(sid)).filter(Boolean);
   const doneCount = items.filter((_, i) => done[i]).length;
+  if (!draftReady) return <div className="card" role="status">⏳ جارٍ استعادة تدريب التحدّث…</div>;
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="🗣️" de="Sprechtraining (Shadowing)" ar={`${task.titleAr} — استمع، كرّر، سجّل نفسك`} />
       <div style={{ display: "grid", gap: "0.5rem" }}>
         {items.map((s, i) => (
@@ -919,7 +1048,7 @@ function SprechenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang
                 <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{s!.ar}</div>
               </div>
               <label style={{ display: "flex", gap: "0.35rem", alignItems: "center", fontSize: "0.85rem", cursor: "pointer" }}>
-                <input type="checkbox" checked={!!done[i]} onChange={() => setDone((d) => ({ ...d, [i]: !d[i] }))} />
+                <input type="checkbox" checked={!!done[i]} onChange={() => setDraft((d) => ({ ...d, done: { ...d.done, [i]: !d.done[i] } }))} />
                 كرّرت بصوت عالٍ
               </label>
             </div>
@@ -929,6 +1058,37 @@ function SprechenTask({ task, onPoints, voiceName, rate }: Omit<TaskProps, "lang
       <p style={{ color: "var(--color-ink2)", fontSize: "0.88rem", margin: "0.7rem 0" }}>
         💡 قاعدة الظل اللغوي: استمع للجملة ← انسخ نغمة المتحدث بحذف اللامام ← سجّل صوتك بالهاتف واستمع كل 3 أيام لتلاحظ تقدّمك.
       </p>
+      {!schriftAb ? (
+        <div className="card" style={{ padding: "0.7rem 0.9rem", margin: "0 0 0.7rem", background: "var(--color-paper2)" }}>
+          <div style={{ fontWeight: 800, fontSize: "0.9rem" }}>⌨️ تعذّر النطق اليوم؟ (مرض · ضجيج · لا ميكروفون)</div>
+          <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.4rem" }}>
+            اكتب الجمل من الذاكرة بدلاً — يُحتسب إنجازاً للمهمة، لا دليل نطق.
+          </div>
+          <textarea
+            data-testid="sprech-schrift-text"
+            className="field"
+            rows={4}
+            value={schrift}
+            onChange={(e) => setDraft((d) => ({ ...d, schrift: e.target.value }))}
+            placeholder="Schreibe die Sätze aus dem Gedächtnis …"
+            style={{ width: "100%", padding: "0.5rem", fontSize: "0.9rem", borderRadius: "0.5rem" }}
+          />
+          <button
+            type="button"
+            className="btn btn-ghost"
+            data-testid="sprech-schrift-ab"
+            disabled={schrift.trim().length < 10}
+            onClick={() => { markiereSchriftlich(task.id); setDraft((d) => ({ ...d, schriftAb: true, done: Object.fromEntries(items.map((_, i) => [i, true])) })); }}
+            style={{ marginTop: "0.4rem" }}
+          >
+            سلّم كتابياً
+          </button>
+        </div>
+      ) : (
+        <div data-testid="sprech-schrift-hinweis" style={{ fontSize: "0.85rem", fontWeight: 700, margin: "0 0 0.7rem" }}>
+          📝 مسلَّم كتابياً — إثبات إنجاز لا إثبات نطق.
+        </div>
+      )}
       <button
         className="btn btn-primary"
         disabled={doneCount < items.length}
@@ -949,6 +1109,7 @@ function WiederholenTask({
   onPoints,
   voiceName,
   rate,
+  persistKey,
 }: Omit<TaskProps, "lang">) {
   const level = levelOf(Math.max(day - 1, 1));
   const isPhaseEnd = istPhasenPruefung(day); // أيام نهاية المرحلة: تقرير كامل
@@ -973,7 +1134,7 @@ function WiederholenTask({
     }));
 
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="🔁" de={task.titleDe} ar={task.titleAr} />
       {task.mandatory && (
         <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.6rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontWeight: 700, color: "var(--color-cola)" }}>
@@ -983,20 +1144,20 @@ function WiederholenTask({
       {satzItems.length > 0 && (
         <>
           <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>ترجم واسترجع</h4>
-          <ExerciseSet items={satzItems} onPoints={onPoints} />
+          <ExerciseSet items={satzItems} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:sentences` : undefined} />
         </>
       )}
       {task.quiz && task.quiz.length > 0 && (
         <>
           <h4 style={{ fontWeight: 800, margin: "1rem 0 0.5rem" }}>استرجاع سريع من أيام سابقة</h4>
-          <ExerciseSet items={task.quiz} onPoints={onPoints} />
+          <ExerciseSet items={task.quiz} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} />
         </>
       )}
       {(task.sentenceIds ?? []).length === 0 && !task.quiz?.length && (
         <div style={{ display: "grid", gap: "0.9rem", marginTop: "0.4rem" }}>
           <div
             style={{
-              background: "linear-gradient(135deg, var(--color-cola-soft), #fff)",
+              background: "linear-gradient(135deg, var(--color-cola-soft), var(--color-card))",
               border: "1px solid var(--color-cola)",
               borderRadius: "0.8rem",
               padding: "1rem 1.1rem",
@@ -1026,17 +1187,18 @@ function WiederholenTask({
               • <strong>W</strong> تنطق «ف» (Wasser = فاسر) · <strong>V</strong> غالباً «ف» أو «ف» ناعمة · <strong>Z</strong> «تس» (Zeit = تسايت) · <strong>S</strong> قبل حرف علة = «ز» (sehen = زين) · <strong>R</strong> خفيفة من الحلق · <strong>ß</strong> صوت «س» طويل.
             </div>
           </div>
-          <button
-            type="button"
-            className="btn btn-primary"
-            style={{ minHeight: "48px", padding: "0.6rem 1.4rem", fontWeight: 800, justifySelf: "start" }}
-            onClick={() => {
-              const el = document.getElementById("st-woerter");
-              if (el) el.scrollIntoView({ behavior: "smooth" });
+          <div
+            style={{
+              background: "rgb(34 197 94 / 0.10)",
+              border: "1px solid #22c55e",
+              borderRadius: "0.8rem",
+              padding: "0.7rem 1rem",
+              fontSize: "0.9rem",
+              lineHeight: 1.9,
             }}
           >
-            هيا نبدأ المفردات الأولى (المحطة 2) ←
-          </button>
+            👆 أكمل مهمّة اليوم، ثم سلّمها بزرّ «سلّم المهمة» بالأسفل — ومن الغد يبدأ كلّ يوم بالاسترجاع قبل الجديد.
+          </div>
         </div>
       )}
       <BrueckenSRS srs={srs} onSrs={onSrs} onPoints={onPoints} />
@@ -1052,8 +1214,14 @@ function seedFrom(id: string): number {
 }
 
 function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; full?: boolean }) {
-  const { toggleCanDo } = useProgressMini();
   const items = candoMap[level] ?? [];
+  const toggleCanDoNow = (id: string) => {
+    const progress = loadProgress();
+    const canDo = { ...progress.canDo };
+    if (canDo[id]) delete canDo[id];
+    else canDo[id] = true;
+    saveProgress({ ...progress, canDo });
+  };
   return (
     <div style={{ marginTop: "1.2rem" }}>
       <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>
@@ -1062,7 +1230,7 @@ function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; f
       <div style={{ display: "grid", gap: "0.35rem" }}>
         {(full ? items : items.slice(0, 4)).map((c) => (
           <label key={c.id} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", cursor: "pointer", border: "1px solid var(--color-line)", borderRadius: "0.6rem", padding: "0.5rem 0.7rem" }}>
-            <input type="checkbox" onChange={() => toggleCanDo(c.id)} style={{ marginTop: "0.25rem" }} />
+            <input type="checkbox" onChange={() => toggleCanDoNow(c.id)} style={{ marginTop: "0.25rem" }} />
             <span>
               <De>{c.de}</De>
               <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>{c.ar}</div>
@@ -1074,25 +1242,25 @@ function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; f
   );
 }
 
-// mini hook للتوافق مع تذييل «أستطيع» (يقرأ ويكتب في نفس المخزن)
-import { useProgress } from "@/lib/store";
-function useProgressMini() {
-  const { toggleCanDo } = useProgress();
-  return { toggleCanDo };
-}
-
 // ── فحص ختامي ──────────────────────────────────────────────────────────
-function CheckTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void }) {
+function CheckTask({ task, onPoints, persistKey }: { task: DayTask; onPoints: (p: number, m: number) => void; persistKey?: string }) {
   return (
-    <section className="card fadein" style={{ padding: "1.2rem" }}>
+    <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="✅" de={task.titleDe} ar={task.titleAr} />
-      {task.mandatory && (
-        <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.6rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontWeight: 700, color: "var(--color-cola)" }}>
-          ⚠️ تعويض إلزامي من اليوم {task.from}
+      {task.verifyFor ? (
+        <div data-testid="verify-banner" style={{ background: "var(--color-a1-soft)", border: "1px solid var(--color-a1)", borderRadius: "0.6rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontWeight: 700, color: "var(--color-a1)", lineHeight: 1.9 }}>
+          🎯 تحقق استقلال — مهمة جديدة (مستحقة منذ اليوم <span className="rtl-num">{task.from}</span>).
+          النجاح هنا هو الدليل على الاستقلال، لا درجة التدريب.
         </div>
+      ) : (
+        task.mandatory && (
+          <div style={{ background: "var(--color-cola-soft)", border: "1px solid var(--color-cola)", borderRadius: "0.6rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontWeight: 700, color: "var(--color-cola)" }}>
+            ⚠️ تعويض إلزامي من اليوم {task.from}
+          </div>
+        )
       )}
       <p style={{ color: "var(--color-ink2)", marginBottom: "0.7rem" }}>عتبة النجاح 80% — الفاشل يُعاد ويُرحَّل إن لزم.</p>
-      <ExerciseSet items={task.quiz ?? []} onPoints={onPoints} />
+      <ExerciseSet items={task.quiz ?? []} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} />
     </section>
   );
 }
@@ -1114,6 +1282,89 @@ function Empty({ title }: { title: string }) {
     <div className="card" style={{ padding: "1.2rem" }}>
       <strong>{title}</strong>
     </div>
+  );
+}
+
+/** R138/P-12 + R140: Anzeige für Partner/Diskussion, Kontaktgespräch, Monolog/Bild, Briefe, Schulsim */
+function PartnerTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void; voiceName?: string; rate?: number; persistKey?: string }) {
+  const partner = partnerKarten.find((p) => p.id === task.partnerId);
+  const kontakt = kontaktKarten.find((k) => k.id === task.kontaktId);
+  const mono = muendlich.find((m) => m.id === (task.muendlichId ?? task.monologId));
+  const karte = partner || kontakt || mono;
+  const [done, setDone] = useState(false);
+  const isKontakt = !!kontakt;
+  const isMono = !!mono && mono.teil === 2;
+  if (!karte) {
+    return (
+      <section className="card fadein" style={{ padding: "1.2rem" }}>
+        <Head icon="🗣️" de={task.titleDe} ar={task.titleAr} />
+        <p style={{ color: "var(--color-ink2)" }}>تدرّب على المهمة في كراستك أو مع شريك ثم سجّل إنجازك.</p>
+        <button className="btn btn-primary" disabled={done} onClick={() => { setDone(true); onPoints(1,1); }}>{done ? "✓ أنجزت" : "سجّل الإنجاز"}</button>
+      </section>
+    );
+  }
+  const icon = isMono ? "🎙️" : isKontakt ? "💬" : "🗣️";
+  const labelDe = isMono ? "Monolog / Bildbeschreibung" : isKontakt ? "Kontaktgespräch" : "Partner-Diskussion";
+  const stuetz = (karte.stuetzen ?? []) as string[];
+  const kriterien = (karte.kriterien ?? []) as { de: string; ar: string }[];
+  const auftragDe = (karte as { auftrag_de?: string }).auftrag_de ?? (partner ? karte.situationDe : "");
+  const auftragAr = (karte as { auftrag_ar?: string }).auftrag_ar ?? (partner ? karte.situationAr : "");
+  const zeit = (karte as { zeit_s?: number }).zeit_s ?? 120;
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon={icon} de={`${labelDe}: ${(karte as { titel_de?: string }).titel_de ?? task.titleDe}`} ar={(karte as { titel_ar?: string }).titel_ar ?? task.titleAr} />
+      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
+        <span className="chip">⏱️ {Math.round(zeit/60)} min</span>
+        {isKontakt ? <span className="chip">Teil 1</span> : isMono ? <span className="chip">Teil 2</span> : <span className="chip">Teil 3</span>}
+      </div>
+      <div style={{ background: "var(--color-paper2)", borderRadius: "0.7rem", padding: "0.9rem 1rem", marginBottom: "0.7rem" }}>
+        <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.3rem" }}>المهمة / الموقف:</div>
+        {auftragDe && <p style={{ margin: 0 }}><De>{auftragDe}</De></p>}
+        {partner?.situationDe && !isKontakt && !isMono && (
+          <>
+            <p style={{ margin: 0 }}><De>{partner.situationDe}</De></p>
+            {partner.vorschlagA && partner.vorschlagB && (
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem", marginTop: "0.5rem" }}>
+                <div style={{ background: "var(--color-a1)", borderRadius: "0.5rem", padding: "0.5rem", color: "#fff" }}>
+                  <div style={{ fontSize: "0.72rem" }}>Vorschlag A</div>
+                  <strong><De>{partner.vorschlagA}</De></strong>
+                </div>
+                <div style={{ background: "var(--color-b1)", borderRadius: "0.5rem", padding: "0.5rem", color: "#fff" }}>
+                  <div style={{ fontSize: "0.72rem" }}>Vorschlag B</div>
+                  <strong><De>{partner.vorschlagB}</De></strong>
+                </div>
+              </div>
+            )}
+          </>
+        )}
+        {auftragAr && <p style={{ margin: "0.4rem 0 0", color: "var(--color-ink2)" }} dir="rtl">{auftragAr}</p>}
+      </div>
+      {stuetz.length > 0 && (
+        <div style={{ background: "var(--color-gold-soft)", borderRadius: "0.5rem", padding: "0.5rem 0.8rem", marginBottom: "0.6rem", fontSize: "0.85rem" }}>
+          <strong>💡 Redemittel / Stützen:</strong> <De>{stuetz.join(" · ")}</De>
+        </div>
+      )}
+      {partner?.redemittel && (
+        <div style={{ background: "var(--color-gold-soft)", borderRadius: "0.5rem", padding: "0.5rem 0.8rem", marginBottom: "0.6rem", fontSize: "0.85rem" }}>
+          <strong>💡 Redemittel:</strong> <De>{partner.redemittel.join(" · ")}</De>
+        </div>
+      )}
+      {partner?.tippAr && <p style={{ color: "var(--color-ink2)", fontSize: "0.85rem" }}>💡 {partner.tippAr}</p>}
+      {kriterien.length > 0 && (
+        <div style={{ marginTop: "0.4rem" }}>
+          <div style={{ fontSize: "0.82rem", fontWeight: 700, marginBottom: "0.3rem" }}>📋 معايير التقييم:</div>
+          <ul style={{ margin: 0, paddingLeft: "1.2rem", fontSize: "0.85rem", color: "var(--color-ink2)" }}>
+            {kriterien.map((kr, i) => <li key={i}>{kr.ar} <span style={{ opacity: 0.7 }}>(<De>{kr.de}</De>)</span></li>)}
+          </ul>
+        </div>
+      )}
+      <button
+        className="btn btn-primary"
+        style={{ marginTop: "0.8rem" }}
+        disabled={done}
+        onClick={() => { setDone(true); onPoints(1,1); }}
+      >{done ? "✓ سجّلت التدريب" : "سجّل: أتممت التدريب"}</button>
+    </section>
   );
 }
 

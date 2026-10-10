@@ -9,6 +9,7 @@ import {
   GESAMT_SCHWELLE, FACH_SCHWELLE, TEIL_AR, type PruefTeil, type PruefErgebnis,
 } from "@/lib/modulpruefung";
 import { getDialogue, dialogAudioSrc } from "@/lib/content";
+import { speakAny } from "@/lib/speech";
 
 const LEER: Record<PruefTeil, number> = { lesen: 0, hoeren: 0, schreiben: 0, sprechen: 0 };
 
@@ -75,7 +76,7 @@ export default function ModulTor({ day }: { day: number }) {
       </p>
 
       {!modulFrei(progress, idx) && (
-        <div className="card" style={{ padding: "0.6rem 0.8rem", background: "#fee2e2", color: "#7f1d1d" }}>
+        <div className="card" style={{ padding: "0.6rem 0.8rem", background: "var(--color-rosa-soft)", color: "var(--color-die)" }}>
           🚧 هذه الوحدة مقفلة: عليك أوّلاً اجتياز امتحان الوحدة {idx - 1}.
         </div>
       )}
@@ -120,7 +121,24 @@ export default function ModulTor({ day }: { day: number }) {
                 <>
                   {ab.dialogIds.map((id) => {
                     const src = dialogAudioSrc(id);
-                    return src ? <audio key={id} controls src={src} style={{ width: "100%", marginBottom: "0.3rem" }} /> : null;
+                    const dialog = getDialogue(id);
+                    const spokenText = dialog?.lines.map((line) => line.de).join(" ") ?? "";
+                    return src ? (
+                      <audio key={id} controls src={src} style={{ width: "100%", marginBottom: "0.3rem" }} />
+                    ) : (
+                      <button
+                        key={id}
+                        type="button"
+                        data-audio-fallback="tts"
+                        className="btn btn-ghost"
+                        disabled={!spokenText}
+                        onClick={() => speakAny(spokenText)}
+                        aria-label={`الاستماع إلى ${dialog?.titleDe ?? "الحوار"} بصوت المتصفح`}
+                        style={{ width: "100%", marginBottom: "0.3rem", textAlign: "start" }}
+                      >
+                        🔊 استمع بصوت المتصفح — لا يوجد تسجيل لهذا الحوار
+                      </button>
+                    );
                   })}
                   {ab.fragen.map((f) => (
                     <div key={f.id} style={{ marginBottom: "0.35rem" }}>
@@ -167,7 +185,7 @@ export default function ModulTor({ day }: { day: number }) {
       )}
 
       {erg && (
-        <div className="card" data-test="tor-ergebnis" style={{ padding: "0.7rem 0.9rem", background: erg.bestanden ? "#dcfce7" : "#fef3c7" }}>
+        <div className="card" data-test="tor-ergebnis" style={{ padding: "0.7rem 0.9rem", background: erg.bestanden ? "var(--ui-green-soft)" : "var(--ui-gold-soft)", borderColor: erg.bestanden ? "var(--ui-green)" : "var(--ui-gold)" }}>
           <div style={{ fontWeight: 900 }}>
             {erg.bestanden ? `🎉 عبرتَ البوّابة — ${erg.gesamt}٪` : `⏳ لم تعبر بعد — ${erg.gesamt}٪`}
           </div>

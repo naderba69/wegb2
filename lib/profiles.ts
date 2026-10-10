@@ -11,6 +11,7 @@ type ProfilesData = { active: string; list: ProfileInfo[] };
 const PROFILES_KEY = "weg-b2-profiles";
 const LEGACY_KEY = "weg-b2-progress";
 const EVT = "weg-progress-changed";
+export const PROFILE_WILL_CHANGE = "weg-profile-will-change";
 
 export function progressKey(id: string): string {
   return `weg-b2-progress-${id}`;
@@ -73,7 +74,8 @@ export function progressKeyActive(): string {
 
 export function switchProfile(id: string) {
   const d = initProfiles();
-  if (!d.list.some((p) => p.id === id)) return;
+  if (!d.list.some((p) => p.id === id) || d.active === id) return;
+  if (typeof window !== "undefined") window.dispatchEvent(new Event(PROFILE_WILL_CHANGE));
   d.active = id;
   write(d);
   emit();
@@ -88,6 +90,7 @@ export function addProfile(name: string, emoji: string) {
     emoji: emoji || "📘",
     created: new Date().toISOString().slice(0, 10),
   });
+  if (typeof window !== "undefined") window.dispatchEvent(new Event(PROFILE_WILL_CHANGE));
   d.active = id;
   write(d);
   emit();
@@ -108,9 +111,14 @@ export function removeProfile(id: string) {
   if (d.list.length <= 1) return; // يبقى ملف واحد دائماً
   const i = d.list.findIndex((p) => p.id === id);
   if (i < 0) return;
+  if (d.active === id && typeof window !== "undefined") window.dispatchEvent(new Event(PROFILE_WILL_CHANGE));
   d.list.splice(i, 1);
   try {
-    window.localStorage.removeItem(progressKey(id));
+    const progressPrefix = `${progressKey(id)}:`;
+    for (let i = window.localStorage.length - 1; i >= 0; i--) {
+      const key = window.localStorage.key(i);
+      if (key === progressKey(id) || key?.startsWith(progressPrefix)) window.localStorage.removeItem(key);
+    }
   } catch {
     /* */
   }

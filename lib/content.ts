@@ -60,6 +60,14 @@ export const pakete = (paketeRaw as unknown as { pakete: import("./types").Konte
 export const alleVokabeln: VocabCard[] = Object.values(
   vocabRaw as unknown as Record<string, { cards: VocabCard[] }>
 ).flatMap((g) => g.cards);
+
+/** صيغة الاسم الكاملة/العنصر دون تكرار أداة التعريف المخزّنة في de. */
+export function deFormOf(card: VocabCard, includeArticle = true): string {
+  const prefix = card.article ? `${card.article} ` : "";
+  const full = prefix && !card.de.startsWith(prefix) ? `${prefix}${card.de}` : card.de;
+  return includeArticle || !prefix ? full : full.slice(prefix.length);
+}
+
 const langfassungen: Record<string, Langfassung> = { ...(langB2a as Record<string, Langfassung>), ...(langB2b as Record<string, Langfassung>), ...(langB1a as Record<string, Langfassung>), ...(langB1b as Record<string, Langfassung>), ...(langA2a as Record<string, Langfassung>), ...(langA2b as Record<string, Langfassung>), ...(langA1a as Record<string, Langfassung>), ...(langA1b as Record<string, Langfassung>) };
 /** النصوص؛ مَن له نسخة طويلة يحملها في `lang` — وقراءة B2 تعرضها (المهمّة lesen) بينما يبقى `de` نصَّ الصوت */
 export const texts = (textsRaw as unknown as Lesetext[]).map((t) => (langfassungen[t.id] ? { ...t, lang: langfassungen[t.id] } : t));
@@ -74,7 +82,7 @@ export const candoMap = candoRaw as unknown as Record<
   Level,
   { id: string; de: string; ar: string }[]
 >;
-/** موسوعة أخطاء العرب الشائعة (مترابطة بمحرّك دفتر الأخطاء) */
+/** بنك أنماط التصحيح الألمانية (مترابط بمحرّك دفتر الأخطاء) */
 export const fehlerList = fehlerRaw as unknown as (FehlerEintrag & { id: string; kat: string })[];
 /** حيل الحفظ السريع لكل كلمة (كلمة مفتاحية/قصة/جذر عربي) */
 export const mnemonikMap = mnemonikRaw as unknown as Record<
@@ -96,7 +104,18 @@ export function sprichwortSrc(id: string): string | null {
 export const eselsbruecken = brueckenRaw as unknown as Eselsbruecke[];
 /** تركاتُ درسٍ بعينِه — المستهلِكُ الوحيدُ لبطاقةِ القاعدة */
 export function getBrueckenFor(gramId: string): Eselsbruecke[] {
-  return eselsbruecken.filter((b) => b.gramIds.includes(gramId));
+  return eselsbruecken.filter((b) => (b.gramIds ?? []).includes(gramId));
+}
+/** R138/P-22: إيجاد التركات/الشفرات التي تخص كلمة مفردة بالبحث في storyAr+zeilen عن lemma. */
+export function getBrueckenForWort(wortDe: string): Eselsbruecke[] {
+  if (!wortDe) return [];
+  const base = wortDe.toLowerCase().replace(/\(.*?\)/g, "").trim().split(/[\s,/]/)[0];
+  if (base.length < 3) return [];
+  const re = new RegExp(`\\b${base.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
+  return eselsbruecken.filter((b) => {
+    if (re.test(b.storyAr) || re.test(b.titleAr)) return true;
+    return b.zeilen.some((z) => re.test(z.de) || re.test(z.code));
+  }).slice(0, 2);
 }
 
 export function getGrammar(id: string): GrammarTopic | undefined {
@@ -152,18 +171,68 @@ export interface HaerteRung {
 }
 export const haerte: HaerteRung[] = (haerteRaw as unknown as { rungen: HaerteRung[] }).rungen;
 
+export interface MuendlichEinwand {
+  id: string;
+  de: string;
+  ar: string;
+}
 export interface MuendlichKarte {
   id: string;
-  teil: 2 | 3;
+  teil: 1 | 2 | 3;
+  level?: import("./types").Level;
+  titel_de: string;
+  titel_ar: string;
+  auftrag_de?: string;
+  auftrag_ar?: string;
+  situationDe?: string;
+  situationAr?: string;
+  stuetzen?: string[];
+  kriterien?: { ar: string; de: string }[];
+  zeit_s?: number;
+  einwaende?: MuendlichEinwand[];
+  vorschlagA?: string;
+  vorschlagB?: string;
+  redemittel?: string[];
+  tippAr?: string;
+}
+export interface KontaktKarte {
+  id: string;
+  level: import("./types").Level;
+  teil: 1;
   titel_de: string;
   titel_ar: string;
   auftrag_de: string;
+  auftrag_ar: string;
+  situationDe?: string;
+  situationAr?: string;
+  vorschlagA?: string;
+  vorschlagB?: string;
   stuetzen: string[];
   kriterien: { ar: string; de: string }[];
   zeit_s: number;
 }
+export interface PartnerKarte {
+  id: string;
+  level: string;
+  situationDe: string;
+  situationAr: string;
+  vorschlagA: string;
+  vorschlagB: string;
+  redemittel: string[];
+  tippAr: string;
+  stuetzen?: string[];
+  kriterien?: { ar: string; de: string }[];
+  auftrag_de?: string;
+  auftrag_ar?: string;
+  zeit_s?: number;
+  titel_de?: string;
+  titel_ar?: string;
+}
 /** 🗣️ مختبر الشفهي — 12 بطاقة: 6 وصف صورة + 6 مناقشة (Modul AA) */
 export const muendlich: MuendlichKarte[] = (muendlichRaw as unknown as { karten: MuendlichKarte[] }).karten;
+export const partnerKarten: PartnerKarte[] = (muendlichRaw as unknown as { partner?: PartnerKarte[] }).partner ?? [];
+export const kontaktKarten: KontaktKarte[] = (muendlichRaw as unknown as { kontakt?: KontaktKarte[] }).kontakt ?? [];
+export const monologKartenExtra = muendlich; // all monolog cards (legacy mm01–mm12 now leveled + new)
 
 export interface VortragThema {
   id: string;

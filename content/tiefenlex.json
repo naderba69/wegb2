@@ -111,39 +111,423 @@
     }
   ],
   "verben": [
-    { "verb": "warten", "luecke": "Ich warte ___ den Bus.", "praep": "auf", "kasus": "Akk.", "ar": "ينتظر", "options": ["auf", "für", "an", "über"] },
-    { "verb": "sich freuen", "luecke": "Ich freue mich ___ das Wochenende.", "praep": "auf", "kasus": "Akk.", "ar": "يتطلّع بفرح إلى (مستقبل)", "options": ["auf", "für", "über", "an"] },
-    { "verb": "denken", "luecke": "Denkst du oft ___ deine Kindheit?", "praep": "an", "kasus": "Akk.", "ar": "يفكّر في", "options": ["an", "auf", "für", "von"] },
-    { "verb": "sich erinnern", "luecke": "Ich erinnere mich gut ___ diesen Tag.", "praep": "an", "kasus": "Akk.", "ar": "يتذكّر", "options": ["an", "auf", "von", "über"] },
-    { "verb": "teilnehmen", "luecke": "Wir nehmen ___ dem Kurs teil.", "praep": "an", "kasus": "Dat.", "ar": "يشارك في", "options": ["an", "bei", "in", "auf"] },
-    { "verb": "sich interessieren", "luecke": "Sie interessiert sich ___ Politik.", "praep": "für", "kasus": "Akk.", "ar": "يهتم بـ", "options": ["für", "an", "über", "um"] },
-    { "verb": "sich bewerben", "luecke": "Er bewirbt sich ___ eine neue Stelle.", "praep": "um", "kasus": "Akk.", "ar": "يتقدّم بطلب لـ", "options": ["um", "für", "auf", "nach"] },
-    { "verb": "verzichten", "luecke": "Ich verzichte ___ Zucker.", "praep": "auf", "kasus": "Akk.", "ar": "يتخلى عن", "options": ["auf", "von", "für", "gegen"] },
-    { "verb": "abhängen", "luecke": "Das hängt ___ dem Wetter ab.", "praep": "von", "kasus": "Dat.", "ar": "يعتمد على", "options": ["von", "auf", "an", "mit"] },
-    { "verb": "warnen", "luecke": "Man warnt uns ___ dem kalten Wasser.", "praep": "vor", "kasus": "Dat.", "ar": "يحذّر من", "options": ["vor", "gegen", "von", "für"] },
-    { "verb": "Angst haben", "luecke": "Das Kind hat Angst ___ Hunden.", "praep": "vor", "kasus": "Dat.", "ar": "يخاف من", "options": ["vor", "von", "gegen", "für"] },
-    { "verb": "danken", "luecke": "Ich danke dir ___ deine Hilfe.", "praep": "für", "kasus": "Akk.", "ar": "يشكر على", "options": ["für", "auf", "zu", "wegen"] },
-    { "verb": "gratulieren", "luecke": "Ich gratuliere dir ___ deinem Geburtstag!", "praep": "zu", "kasus": "Dat.", "ar": "يهنّئ بمناسبة", "options": ["zu", "für", "zu der", "auf"] },
-    { "verb": "sprechen", "luecke": "Wir müssen heute ___ die Prüfung sprechen.", "praep": "über", "kasus": "Akk.", "ar": "يتكلم عن", "options": ["über", "von", "auf", "für"] },
-    { "verb": "bestehen", "luecke": "Der Kuchen besteht ___ Nüssen und Honig.", "praep": "aus", "kasus": "Dat.", "ar": "يتكوّن من", "options": ["aus", "von", "mit", "durch"] },
-    { "verb": "erzählen", "luecke": "Er erzählt ___ seinem Urlaub.", "praep": "von", "kasus": "Dat.", "ar": "يحكي عن", "options": ["von", "über", "auf", "für"] },
-    { "verb": "sich handeln", "luecke": "Es handelt sich ___ eine dringende Sache.", "praep": "um", "kasus": "Akk.", "ar": "يتعلق الأمر بـ", "options": ["um", "von", "über", "für"] },
-    { "verb": "sich ärgern", "luecke": "Ich ärgere mich ___ den Lärm.", "praep": "über", "kasus": "Akk.", "ar": "يغتاظ من", "options": ["über", "auf", "von", "wegen"] },
-    { "verb": "sich kümmern", "luecke": "Wer kümmert sich ___ die Kinder?", "praep": "um", "kasus": "Akk.", "ar": "يعتني بـ", "options": ["um", "für", "an", "auf"] },
-    { "verb": "gehören", "luecke": "Das Buch ___ der Bibliothek.", "praep": "zu", "kasus": "Dat.", "ar": "ينتمي إلى", "options": ["zu", "an", "auf", "mit"] }
+    {
+      "verb": "warten",
+      "luecke": "Ich warte ___ den Bus.",
+      "praep": "auf",
+      "kasus": "Akk.",
+      "ar": "ينتظر",
+      "options": [
+        "auf",
+        "für",
+        "an",
+        "über"
+      ]
+    },
+    {
+      "verb": "sich freuen",
+      "luecke": "Ich freue mich ___ das Wochenende.",
+      "praep": "auf",
+      "kasus": "Akk.",
+      "ar": "يتطلّع بفرح إلى (مستقبل)",
+      "options": [
+        "auf",
+        "für",
+        "über",
+        "an"
+      ]
+    },
+    {
+      "verb": "denken",
+      "luecke": "Denkst du oft ___ deine Kindheit?",
+      "praep": "an",
+      "kasus": "Akk.",
+      "ar": "يفكّر في",
+      "options": [
+        "an",
+        "auf",
+        "für",
+        "von"
+      ]
+    },
+    {
+      "verb": "sich erinnern",
+      "luecke": "Ich erinnere mich gut ___ diesen Tag.",
+      "praep": "an",
+      "kasus": "Akk.",
+      "ar": "يتذكّر",
+      "options": [
+        "an",
+        "auf",
+        "von",
+        "über"
+      ]
+    },
+    {
+      "verb": "teilnehmen",
+      "luecke": "Wir nehmen ___ dem Kurs teil.",
+      "praep": "an",
+      "kasus": "Dat.",
+      "ar": "يشارك في",
+      "options": [
+        "an",
+        "bei",
+        "in",
+        "auf"
+      ]
+    },
+    {
+      "verb": "sich interessieren",
+      "luecke": "Sie interessiert sich ___ Politik.",
+      "praep": "für",
+      "kasus": "Akk.",
+      "ar": "يهتم بـ",
+      "options": [
+        "für",
+        "an",
+        "über",
+        "um"
+      ]
+    },
+    {
+      "verb": "sich bewerben",
+      "luecke": "Er bewirbt sich ___ eine neue Stelle.",
+      "praep": "um",
+      "kasus": "Akk.",
+      "ar": "يتقدّم بطلب لـ",
+      "options": [
+        "um",
+        "für",
+        "auf",
+        "nach"
+      ]
+    },
+    {
+      "verb": "verzichten",
+      "luecke": "Ich verzichte ___ Zucker.",
+      "praep": "auf",
+      "kasus": "Akk.",
+      "ar": "يتخلى عن",
+      "options": [
+        "auf",
+        "von",
+        "für",
+        "gegen"
+      ]
+    },
+    {
+      "verb": "abhängen",
+      "luecke": "Das hängt ___ dem Wetter ab.",
+      "praep": "von",
+      "kasus": "Dat.",
+      "ar": "يعتمد على",
+      "options": [
+        "von",
+        "auf",
+        "an",
+        "mit"
+      ]
+    },
+    {
+      "verb": "warnen",
+      "luecke": "Man warnt uns ___ dem kalten Wasser.",
+      "praep": "vor",
+      "kasus": "Dat.",
+      "ar": "يحذّر من",
+      "options": [
+        "vor",
+        "gegen",
+        "von",
+        "für"
+      ]
+    },
+    {
+      "verb": "Angst haben",
+      "luecke": "Das Kind hat Angst ___ Hunden.",
+      "praep": "vor",
+      "kasus": "Dat.",
+      "ar": "يخاف من",
+      "options": [
+        "vor",
+        "von",
+        "gegen",
+        "für"
+      ]
+    },
+    {
+      "verb": "danken",
+      "luecke": "Ich danke dir ___ deine Hilfe.",
+      "praep": "für",
+      "kasus": "Akk.",
+      "ar": "يشكر على",
+      "options": [
+        "für",
+        "auf",
+        "zu",
+        "wegen"
+      ]
+    },
+    {
+      "verb": "gratulieren",
+      "luecke": "Ich gratuliere dir ___ deinem Geburtstag!",
+      "praep": "zu",
+      "kasus": "Dat.",
+      "ar": "يهنّئ بمناسبة",
+      "options": [
+        "zu",
+        "für",
+        "zu der",
+        "auf"
+      ]
+    },
+    {
+      "verb": "sprechen",
+      "luecke": "Wir müssen heute ___ die Prüfung sprechen.",
+      "praep": "über",
+      "kasus": "Akk.",
+      "ar": "يتكلم عن",
+      "options": [
+        "über",
+        "von",
+        "auf",
+        "für"
+      ]
+    },
+    {
+      "verb": "bestehen",
+      "luecke": "Der Kuchen besteht ___ Nüssen und Honig.",
+      "praep": "aus",
+      "kasus": "Dat.",
+      "ar": "يتكوّن من",
+      "options": [
+        "aus",
+        "von",
+        "mit",
+        "durch"
+      ]
+    },
+    {
+      "verb": "erzählen",
+      "luecke": "Er erzählt ___ seinem Urlaub.",
+      "praep": "von",
+      "kasus": "Dat.",
+      "ar": "يحكي عن",
+      "options": [
+        "von",
+        "über",
+        "auf",
+        "für"
+      ]
+    },
+    {
+      "verb": "sich handeln",
+      "luecke": "Es handelt sich ___ eine dringende Sache.",
+      "praep": "um",
+      "kasus": "Akk.",
+      "ar": "يتعلق الأمر بـ",
+      "options": [
+        "um",
+        "von",
+        "über",
+        "für"
+      ]
+    },
+    {
+      "verb": "sich ärgern",
+      "luecke": "Ich ärgere mich ___ den Lärm.",
+      "praep": "über",
+      "kasus": "Akk.",
+      "ar": "يغتاظ من",
+      "options": [
+        "über",
+        "auf",
+        "von",
+        "wegen"
+      ]
+    },
+    {
+      "verb": "sich kümmern",
+      "luecke": "Wer kümmert sich ___ die Kinder?",
+      "praep": "um",
+      "kasus": "Akk.",
+      "ar": "يعتني بـ",
+      "options": [
+        "um",
+        "für",
+        "an",
+        "auf"
+      ]
+    },
+    {
+      "verb": "gehören",
+      "luecke": "Das Buch ___ der Bibliothek.",
+      "praep": "zu",
+      "kasus": "Dat.",
+      "ar": "ينتمي إلى",
+      "options": [
+        "zu",
+        "an",
+        "auf",
+        "mit"
+      ]
+    }
   ],
   "funktion": [
-    { "gefüge": "eine Entscheidung treffen", "luecke": "eine Entscheidung ___", "ar": "يتخذ قراراً", "satz": "Nach langer Diskussion hat sie endlich eine Entscheidung ___.", "options": ["treffen", "machen", "nehmen", "geben"], "answer": "treffen" },
-    { "gefüge": "eine Frage stellen", "luecke": "eine Frage ___", "ar": "يطرح سؤالاً", "satz": "Darf ich eine kurze Frage ___?", "options": ["stellen", "machen", "fragen", "setzen"], "answer": "stellen" },
-    { "gefüge": "eine Rolle spielen", "luecke": "eine Rolle ___", "ar": "يلعب دوراً", "satz": "Die Erfahrung spielt hier eine große ___.", "options": ["spielen", "machen", "haben", "bringen"], "answer": "spielen" },
-    { "gefüge": "in Betracht ziehen", "luecke": "in Betracht ___", "ar": "يضع في الحسبان", "satz": "Wir sollten auch die Kosten in ___.", "options": ["ziehen", "nehmen", "machen", "bringen"], "answer": "ziehen" },
-    { "gefüge": "zur Verfügung stehen", "luecke": "zur Verfügung ___", "ar": "يوضع تحت التصرّف", "satz": "Ihnen ___ zwei Zimmer zur Verfügung.", "options": ["stehen", "sein", "bleiben", "gelten"], "answer": "stehen" },
-    { "gefüge": "in Anspruch nehmen", "luecke": "in Anspruch ___", "ar": "يستهلك وقتاً/جهداً", "satz": "Das Projekt nimmt viel Zeit in ___.", "options": ["nehmen", "machen", "bringen", "stellen"], "answer": "nehmen" },
-    { "gefüge": "eine Meinung äußern", "luecke": "eine Meinung ___", "ar": "يبدي رأياً", "satz": "Jeder darf hier frei eine Meinung ___.", "options": ["äußern", "sagen", "machen", "sprechen"], "answer": "äußern" },
-    { "gefüge": "Kritik üben", "luecke": "Kritik ___", "ar": "يمارس النقد على", "satz": "Der Lehrer hat sanft Kritik an der Arbeit ___.", "options": ["geübt", "gemacht", "geäußert", "getrieben"], "answer": "geübt" },
-    { "gefüge": "Aufmerksamkeit schenken", "luecke": "Aufmerksamkeit ___", "ar": "يلتفت إلى · يهتم بـ", "satz": "Bitte schenken Sie den Details Aufmerksamkeit." , "options": ["schenken", "geben", "bringen", "setzen"], "answer": "schenken" },
-    { "gefüge": "eine Verbindung herstellen", "luecke": "eine Verbindung ___", "ar": "يوصّل اتصالاً", "satz": "Der Techniker hat eine Verbindung zum Server ___.", "options": ["hergestellt", "gemacht", "genommen", "gegeben"], "answer": "hergestellt" },
-    { "gefüge": "einen Vorschlag machen", "luecke": "einen Vorschlag ___", "ar": "يقدّم اقتراحاً", "satz": "Ich habe der Gruppe einen Vorschlag ___.", "options": ["gemacht", "getroffen", "gegeben", "gestellt"], "answer": "gemacht" },
-    { "gefüge": "eine Ausnahme machen", "luecke": "eine Ausnahme ___", "ar": "يستثني · يخرج عن القاعدة", "satz": "Heute mache ich eine Ausnahme.", "options": ["machen", "treffen", "geben", "bilden"], "answer": "machen" }
+    {
+      "gefüge": "eine Entscheidung treffen",
+      "luecke": "eine Entscheidung ___",
+      "ar": "يتخذ قراراً",
+      "satz": "Nach langer Diskussion hat sie endlich eine Entscheidung ___.",
+      "options": [
+        "treffen",
+        "machen",
+        "nehmen",
+        "geben"
+      ],
+      "answer": "treffen"
+    },
+    {
+      "gefüge": "eine Frage stellen",
+      "luecke": "eine Frage ___",
+      "ar": "يطرح سؤالاً",
+      "satz": "Darf ich eine kurze Frage ___?",
+      "options": [
+        "stellen",
+        "machen",
+        "fragen",
+        "setzen"
+      ],
+      "answer": "stellen"
+    },
+    {
+      "gefüge": "eine Rolle spielen",
+      "luecke": "eine Rolle ___",
+      "ar": "يلعب دوراً",
+      "satz": "Die Erfahrung spielt hier eine große ___.",
+      "options": [
+        "spielen",
+        "machen",
+        "haben",
+        "bringen"
+      ],
+      "answer": "spielen"
+    },
+    {
+      "gefüge": "in Betracht ziehen",
+      "luecke": "in Betracht ___",
+      "ar": "يضع في الحسبان",
+      "satz": "Wir sollten auch die Kosten in ___.",
+      "options": [
+        "ziehen",
+        "nehmen",
+        "machen",
+        "bringen"
+      ],
+      "answer": "ziehen"
+    },
+    {
+      "gefüge": "zur Verfügung stehen",
+      "luecke": "zur Verfügung ___",
+      "ar": "يوضع تحت التصرّف",
+      "satz": "Ihnen ___ zwei Zimmer zur Verfügung.",
+      "options": [
+        "stehen",
+        "sein",
+        "bleiben",
+        "gelten"
+      ],
+      "answer": "stehen"
+    },
+    {
+      "gefüge": "in Anspruch nehmen",
+      "luecke": "in Anspruch ___",
+      "ar": "يستهلك وقتاً/جهداً",
+      "satz": "Das Projekt nimmt viel Zeit in ___.",
+      "options": [
+        "nehmen",
+        "machen",
+        "bringen",
+        "stellen"
+      ],
+      "answer": "nehmen"
+    },
+    {
+      "gefüge": "eine Meinung äußern",
+      "luecke": "eine Meinung ___",
+      "ar": "يبدي رأياً",
+      "satz": "Jeder darf hier frei eine Meinung ___.",
+      "options": [
+        "äußern",
+        "sagen",
+        "machen",
+        "sprechen"
+      ],
+      "answer": "äußern"
+    },
+    {
+      "gefüge": "Kritik üben",
+      "luecke": "Kritik ___",
+      "ar": "يمارس النقد على",
+      "satz": "Der Lehrer hat sanft Kritik an der Arbeit ___.",
+      "options": [
+        "geübt",
+        "gemacht",
+        "geäußert",
+        "getrieben"
+      ],
+      "answer": "geübt"
+    },
+    {
+      "gefüge": "Aufmerksamkeit schenken",
+      "luecke": "Aufmerksamkeit ___",
+      "ar": "يلتفت إلى · يهتم بـ",
+      "satz": "Bitte schenken Sie den Details Aufmerksamkeit.",
+      "options": [
+        "schenken",
+        "geben",
+        "bringen",
+        "setzen"
+      ],
+      "answer": "schenken"
+    },
+    {
+      "gefüge": "eine Verbindung herstellen",
+      "luecke": "eine Verbindung ___",
+      "ar": "يوصّل اتصالاً",
+      "satz": "Der Techniker hat eine Verbindung zum Server ___.",
+      "options": [
+        "hergestellt",
+        "gemacht",
+        "genommen",
+        "gegeben"
+      ],
+      "answer": "hergestellt"
+    },
+    {
+      "gefüge": "einen Vorschlag machen",
+      "luecke": "einen Vorschlag ___",
+      "ar": "يقدّم اقتراحاً",
+      "satz": "Ich habe der Gruppe einen Vorschlag ___.",
+      "options": [
+        "gemacht",
+        "getroffen",
+        "gegeben",
+        "gestellt"
+      ],
+      "answer": "gemacht"
+    },
+    {
+      "gefüge": "eine Ausnahme machen",
+      "luecke": "eine Ausnahme ___",
+      "ar": "يستثني · يخرج عن القاعدة",
+      "satz": "Heute mache ich eine Ausnahme.",
+      "options": [
+        "machen",
+        "treffen",
+        "geben",
+        "bilden"
+      ],
+      "answer": "machen"
+    }
   ]
 }

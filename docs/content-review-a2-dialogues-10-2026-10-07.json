@@ -1,0 +1,1590 @@
+{
+  "reviewRule": "R112",
+  "date": "2026-10-07",
+  "batch": "a2-dialogues-10",
+  "targetDialogueIds": [
+    "d-a2-25",
+    "d-a2-26",
+    "d-a2-27"
+  ],
+  "totals": {
+    "items": 42,
+    "okay": 38,
+    "corrected": 4,
+    "unresolved": 0,
+    "sources": 40,
+    "waisenAudited": 29
+  },
+  "coverage": {
+    "dialogues": 3,
+    "items": 42,
+    "waisen": 29
+  },
+  "statusCounts": {
+    "سليم": 38,
+    "مصحح": 4,
+    "غير محسوم": 0
+  },
+  "statusDefinitions": {
+    "سليم": "وحدة روجعت ضد مصادر متاحة ووجدت متطابقة.",
+    "مصحح": "وحدة حُدّد فيها خطأ عربي مؤكَّد فصُحّح مع بقاء الألماني محمياً.",
+    "غير محسوم": "وحدة تحتاج معلومات إضافية لا تتوفر من المصادر؛ تُترك دون تعديل."
+  },
+  "correction": {
+    "changedFields": [
+      "d-a2-26.lines[2].ar",
+      "d-a2-26.lines[3].ar",
+      "d-a2-26.lines[4].ar",
+      "d-a2-26.lines[5].ar"
+    ],
+    "corrections": [
+      {
+        "field": "d-a2-26.lines[2].ar",
+        "beforeAr": "هذا في عرض خاص: 29 بدل 49 يورو. رخيص جداً.",
+        "afterAr": "هذه في عرض خاص: 29 بدل 49 يورو. رخيص جداً.",
+        "rationale": "تطابق اسم الإشارة «هذه» مع المؤنث «بنطال» المشار إليه (الألماني: Diese hier ist … Hose)."
+      },
+      {
+        "field": "d-a2-26.lines[3].ar",
+        "beforeAr": "اللون قديم الطراز قليلاً. هل لديكم منه بالأزرق الداكن؟",
+        "afterAr": "اللون قديم الطراز قليلاً. هل لديكم منها بالأزرق الداكن؟",
+        "rationale": "تطابق ضمير «منها» مع المؤنث die Hose، تماماً كـ«Haben Sie sie auch in Dunkelblau» بالألماني."
+      },
+      {
+        "field": "d-a2-26.lines[4].ar",
+        "beforeAr": "نعم، مقاس 38. غرفة القياس في الخلف يساراً. جرّبيه.",
+        "afterAr": "نعم، مقاس 38. غرفة القياس في الخلف يساراً. جرّبيها.",
+        "rationale": "تطابق الضمير «ها» مع المؤنث «بنطال». الألماني probieren Sie sie an محايد رسمي، والعربية تؤنث الربط بـHose."
+      },
+      {
+        "field": "d-a2-26.lines[5].ar",
+        "beforeAr": "مريح. سآخذه. وكيف الإرجاع إن لم يناسب في النهاية؟",
+        "afterAr": "مريحة. سآخذها. وكيف الإرجاع إن لم تناسب في النهاية؟",
+        "rationale": "تطابق الصفة «مريحة» والضمير «ها» مع المؤنث «البنطال»؛ وتطابق فعل «تناسب» مع المؤنث."
+      }
+    ],
+    "germanUnchanged": true,
+    "questionsUnchanged": true,
+    "rationale": "جميع التعديلات في مطابقة جنس الإشارة/الصفة/الضمير في العربية لتوافق المؤنث die Hose/البنطال; الألماني لم يتغير."
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "key": "sbn_nahverkehr",
+      "title": "Schlichtungsstelle Nahverkehr: Unfreiwillig Schwarzfahrer",
+      "url": "https://www.schlichtungsstelle-nahverkehr.de/unfreiwillig-schwarzfahrer",
+      "supports": "يؤكد أن الغرامة الوطنية الموحّدة «erhöhtes Beförderungsentgelt» هي 60 يورو، وأن تذكرة شخصية (غير منقولة) يمكن إبرازها لاحقاً في مركز الخدمة، وتُستبدل الغرامة برسم معالجة نحو 7 يورو في شركات كثيرة.",
+      "limits": "لا يثبت أن شراء بطاقة جديدة بعد المخالفة يخفّض الغرامة (هذا تبسيط تربوي في الحوار يُذكر كملاحظة سياقية)."
+    },
+    {
+      "id": "S02",
+      "key": "bussgeld_schwarzfahren",
+      "title": "bussgeldkatalog.org: Schwarzfahren Strafen",
+      "url": "https://www.bussgeldkatalog.org/schwarzfahren/",
+      "supports": "يسند مبلغ 60 يورو كحد أدنى للغرامة، وأن نسيان تذكرة شخصية يمكن معالجته برسم بسيط عند إبرازها لاحقاً.",
+      "limits": "لا يغطي كل شركات النقل الخاصة أو إجراءات الإنذار الشرطي."
+    },
+    {
+      "id": "S03",
+      "key": "ra_samimi_schwarzfahren",
+      "title": "RA Samimi: Schwarzfahren in Berlin — 7 Euro Nachzeigegebühr",
+      "url": "https://www.ra-samimi.de/schwarzfahren-in-berlin/",
+      "supports": "يذكر أن من يبرز تذكرة شخصية صالحة خلال أسبوع يدفع 7 يورو فقط بدلاً من 60 وفق شروط التعرفة (VBB).",
+      "limits": "يخص برلين/فيركيهرسفيربوند برلين-براندنبورغ ولا يُعمَّم على جميع الشبكات."
+    },
+    {
+      "id": "S04",
+      "key": "sbahn_berlin_ticket",
+      "title": "S-Bahn Berlin: Ticket Control — EBE 60 Euro",
+      "url": "https://sbahn.berlin/en/tickets/the-vbb-fare-explained/ticket-control/",
+      "supports": "يسند مبلغ 60 يورو ووسائل الدفع وإمكانية المراجعة في مركز العملاء.",
+      "limits": "يخص برلين ولا يثبت قيمة مخفّضة."
+    },
+    {
+      "id": "S05",
+      "key": "sbahn_hh_kontrolle",
+      "title": "S-Bahn Hamburg: Fahrkartenkontrolle — 60 Euro, Nachreichen möglich",
+      "url": "https://www.s-bahn-hamburg.de/fahrplan/fahrkartenkontrolle",
+      "supports": "يسند وجود آلية Nachreichen لتذاكر الاشتراك الشخصية ورسماً مخفضاً.",
+      "limits": "يخص هامبورغ."
+    },
+    {
+      "id": "S06",
+      "key": "test_nahverkehr_nachzeigen",
+      "title": "Stiftung Warentest: Monatskarte nachträglich vorlegen",
+      "url": "https://www.test.de/Oeffentlicher-Nahverkehr-Was-tun-wenn-Sie-unfreiwillig-schwarzgefahren-sind-4714356-0/",
+      "supports": "يؤكد أن Nachzeigen ينطبق فقط على التذاكر الشخصية (personenbezogen) غير المنقولة؛ أما البطاقات العادية (übertragbar) فلا تقبل بعد المخالفة. ورسوم Nachzeigen 7 يورو شائعة (برلين، كولونيا، شتوتغارت).",
+      "limits": "يحدد أن «شراء بطاقة جديدة بعد المخالفة» لا يخفض تلقائياً الغرامة (نقطة سياقية في الحوار)."
+    },
+    {
+      "id": "S07",
+      "key": "vzhh_rueckgabe",
+      "title": "Verbraucherzentrale Hamburg: Umtausch und Rückgabe — Rechte im Laden/Online",
+      "url": "https://www.vzhh.de/themen/einkauf-reise-freizeit/einkauf-online-shopping/umtausch-rueckgabe-welche-rechte-habe-ich",
+      "supports": "يؤكد أنه لا يوجد حق قانوني عام للإرجاع في المتاجر الفعلية («Gekauft ist gekauft»)، أما على الإنترنت فهناك حق انسحاب خلال 14 يوماً. وغالباً ما يمنح التجار 14 يوماً كسياسة كولون (Kulanz) مع طلب الإيصال.",
+      "limits": "حوار المتجر يذكر «أربعة عشر يوماً بالإيصال فقط» متوافقاً مع سياسات الكولون الشائعة، وهو لا يصف حقاً قانونياً شاملاً."
+    },
+    {
+      "id": "S08",
+      "key": "anwalt_rueckgaberecht",
+      "title": "anwalt.de: Rückgaberecht Online- & Ladenkauf",
+      "url": "https://www.anwalt.de/rechtstipps/rueckgaberecht",
+      "supports": "يؤكد أن المحل ليس ملزماً قانوناً بالإرجاع دون عيب، وأن سياسات 14 يوماً هي من باب Kulanz في الغالب، وغالباً ما تشترط الإيصال.",
+      "limits": "لا يثبت سياسة أي متجر بعينه."
+    },
+    {
+      "id": "S09",
+      "key": "ladenbau_rueckgabe",
+      "title": "ladenbau.de: Gesetzliches Rückgaberecht im Einzelhandel",
+      "url": "https://www.ladenbau.de/ratgeber/gesetzliches-rueckgaberecht-im-einzelhandel/",
+      "supports": "يسند أن سياسات 14 يوماً في المتاجر ممارسة طوعية شائعة وغالباً ما تشترط الإيصال.",
+      "limits": "لا يثبت حق قانوني."
+    },
+    {
+      "id": "S10",
+      "key": "tunesien_sousse",
+      "title": "Tunesien-Infos: Sousse — Hafenstadt am Mittelmeer",
+      "url": "https://www.tunesien-infos.de/sousse.html",
+      "supports": "يسند أن سوسة مدينة مرفئية رابعة/ثالثة في تونس على البحر المتوسط، ذات مدينة قديمة (Medina) مصنفة تراثاً عالمياً لليونسكو، ونقطة جذب سياحي.",
+      "limits": "لا يصف تفاصيل ذكريات الجدة (سرد شخصي)."
+    },
+    {
+      "id": "S11",
+      "key": "braunschweig_sousse",
+      "title": "Stadt Braunschweig: Sousse/Tunesien — Partnerstadt, die Perle am Mittelmeer",
+      "url": "https://www.braunschweig.de/leben/stadtportraet/partnerstaedte/sousse.php",
+      "supports": "يصف سوسة بوصفها مدينة جامعية ومركز الساحل التونسي وبحرها المتوسط ومينائها التجاري ومبانيها القديمة/الجديدة.",
+      "limits": "لا يحسم التغيّرات العمرانية في الذاكرة الشخصية."
+    },
+    {
+      "id": "S12",
+      "key": "vtours_sousse",
+      "title": "vtours: Sousse Urlaub",
+      "url": "https://www.vtours.com/de/reiseziele/tunesien/stadt/sousse/",
+      "supports": "يؤكد شاطئ سوسة الرملي على المتوسط وأن المدينة سياحية بحراً.",
+      "limits": "صفحة حجز سياحي."
+    },
+    {
+      "id": "S13",
+      "key": "duden_fahrkartenkontrolle",
+      "title": "Duden: Fahrkartenkontrolle",
+      "url": "https://www.duden.de/rechtschreibung/Fahrkartenkontrolle",
+      "supports": "يسند المفردة.",
+      "limits": "لا يصف الغرامات."
+    },
+    {
+      "id": "S14",
+      "key": "duden_schwarzfahren",
+      "title": "Duden: schwarzfahren",
+      "url": "https://www.duden.de/rechtschreibung/schwarzfahren",
+      "supports": "يسند الفعل ومعناه (ركوب المواصلات بلا تذكرة).",
+      "limits": "لا يصف الإجراءات."
+    },
+    {
+      "id": "S15",
+      "key": "duden_monatskarte",
+      "title": "Duden: Monatskarte",
+      "url": "https://www.duden.de/rechtschreibung/Monatskarte",
+      "supports": "يسند المفردة (بطاقة شهرية).",
+      "limits": "—"
+    },
+    {
+      "id": "S16",
+      "key": "duden_gueltig",
+      "title": "Duden: gültig",
+      "url": "https://www.duden.de/rechtschreibung/gueltig",
+      "supports": "يسند الصفة (صالح/ساري المفعول).",
+      "limits": "—"
+    },
+    {
+      "id": "S17",
+      "key": "duden_umleitung",
+      "title": "Duden: Umleitung",
+      "url": "https://www.duden.de/rechtschreibung/Umleitung",
+      "supports": "يسند المفردة (تحويلة/تحويل مسار).",
+      "limits": "—"
+    },
+    {
+      "id": "S18",
+      "key": "duden_verbindung",
+      "title": "Duden: Verbindung",
+      "url": "https://www.duden.de/rechtschreibung/Verbindung",
+      "supports": "يسند معنى «قطار/رحلة ربط» في سياق المواصلات.",
+      "limits": "—"
+    },
+    {
+      "id": "S19",
+      "key": "duden_auskunft",
+      "title": "Duden: Auskunft",
+      "url": "https://www.duden.de/rechtschreibung/Auskunft",
+      "supports": "يسند المفردة (معلومة/استعلام).",
+      "limits": "—"
+    },
+    {
+      "id": "S20",
+      "key": "duden_hoeflich",
+      "title": "Duden: höflich",
+      "url": "https://www.duden.de/rechtschreibung/hoeflich",
+      "supports": "يسند الصفة (مهذب/مؤدب).",
+      "limits": "—"
+    },
+    {
+      "id": "S21",
+      "key": "duden_anprobieren",
+      "title": "Duden: anprobieren",
+      "url": "https://www.duden.de/rechtschreibung/anprobieren",
+      "supports": "يسند الفعل (يجرب/يقيس ملابس).",
+      "limits": "—"
+    },
+    {
+      "id": "S22",
+      "key": "duden_umkleidekabine",
+      "title": "Duden: Umkleidekabine",
+      "url": "https://www.duden.de/rechtschreibung/Umkleidekabine",
+      "supports": "يسند المفردة (غرفة قياس).",
+      "limits": "—"
+    },
+    {
+      "id": "S23",
+      "key": "duden_hose",
+      "title": "Duden: Hose",
+      "url": "https://www.duden.de/rechtschreibung/Hose",
+      "supports": "يسند المفردة (بنطال) مؤنث بالألمانية (die Hose).",
+      "limits": "—"
+    },
+    {
+      "id": "S24",
+      "key": "duden_preiswert",
+      "title": "Duden: preiswert",
+      "url": "https://www.duden.de/rechtschreibung/preiswert",
+      "supports": "يسند الصفة (رخيص/جيد السعر).",
+      "limits": "—"
+    },
+    {
+      "id": "S25",
+      "key": "duden_sonderangebot",
+      "title": "Duden: Sonderangebot",
+      "url": "https://www.duden.de/rechtschreibung/Sonderangebot",
+      "supports": "يسند المفردة (عرض خاص).",
+      "limits": "—"
+    },
+    {
+      "id": "S26",
+      "key": "duden_rueckgabe",
+      "title": "Duden: Rückgabe",
+      "url": "https://www.duden.de/rechtschreibung/Rueckgabe",
+      "supports": "يسند المفردة (إرجاع).",
+      "limits": "—"
+    },
+    {
+      "id": "S27",
+      "key": "duden_quittung",
+      "title": "Duden: Quittung",
+      "url": "https://www.duden.de/rechtschreibung/Quittung",
+      "supports": "يسند المفردة (إيصال).",
+      "limits": "—"
+    },
+    {
+      "id": "S28",
+      "key": "duden_bequem",
+      "title": "Duden: bequem",
+      "url": "https://www.duden.de/rechtschreibung/bequem",
+      "supports": "يسند الصفة (مريح).",
+      "limits": "—"
+    },
+    {
+      "id": "S29",
+      "key": "duden_schmuck",
+      "title": "Duden: Schmuck",
+      "url": "https://www.duden.de/rechtschreibung/Schmuck",
+      "supports": "يسند المفردة (مجوهرات/حلي).",
+      "limits": "—"
+    },
+    {
+      "id": "S30",
+      "key": "duden_altmodisch",
+      "title": "Duden: altmodisch",
+      "url": "https://www.duden.de/rechtschreibung/altmodisch",
+      "supports": "يسند الصفة (قديم الطراز).",
+      "limits": "—"
+    },
+    {
+      "id": "S31",
+      "key": "duden_kindheit",
+      "title": "Duden: Kindheit",
+      "url": "https://www.duden.de/rechtschreibung/Kindheit",
+      "supports": "يسند المفردة (طفولة).",
+      "limits": "—"
+    },
+    {
+      "id": "S32",
+      "key": "duden_damals",
+      "title": "Duden: damals",
+      "url": "https://www.duden.de/rechtschreibung/damals",
+      "supports": "يسند الظرف (آنذاك/في ذلك الوقت).",
+      "limits": "—"
+    },
+    {
+      "id": "S33",
+      "key": "duden_neulich",
+      "title": "Duden: neulich",
+      "url": "https://www.duden.de/rechtschreibung/neulich",
+      "supports": "يسند الظرف (مؤخراً/منذ عهد قريب).",
+      "limits": "—"
+    },
+    {
+      "id": "S34",
+      "key": "duden_inzwischen",
+      "title": "Duden: inzwischen",
+      "url": "https://www.duden.de/rechtschreibung/inzwischen",
+      "supports": "يسند الظرف (في غضون ذلك/حتى الآن/منذ ذلك الحين).",
+      "limits": "—"
+    },
+    {
+      "id": "S35",
+      "key": "duden_erlebnis",
+      "title": "Duden: Erlebnis",
+      "url": "https://www.duden.de/rechtschreibung/Erlebnis",
+      "supports": "يسند المفردة (تجربة).",
+      "limits": "—"
+    },
+    {
+      "id": "S36",
+      "key": "duden_hohepunkt",
+      "title": "Duden: Höhepunkt",
+      "url": "https://www.duden.de/rechtschreibung/Hoehepunkt",
+      "supports": "يسند المفردة (ذروة/أجمل لحظة).",
+      "limits": "—"
+    },
+    {
+      "id": "S37",
+      "key": "duden_vergangenheit",
+      "title": "Duden: Vergangenheit",
+      "url": "https://www.duden.de/rechtschreibung/Vergangenheit",
+      "supports": "يسند المفردة (الماضي).",
+      "limits": "—"
+    },
+    {
+      "id": "S38",
+      "key": "duden_erzaehlen",
+      "title": "Duden: erzählen",
+      "url": "https://www.duden.de/rechtschreibung/erzaehlen",
+      "supports": "يسند الفعل (يحكي/يروي).",
+      "limits": "—"
+    },
+    {
+      "id": "S39",
+      "key": "duden_gewoehnen",
+      "title": "Duden: sich gewöhnen an",
+      "url": "https://www.duden.de/rechtschreibung/gewoehnen",
+      "supports": "يسند الفعل الانعكاسي mit Präposition an + Akkusativ (يعتاد على).",
+      "limits": "—"
+    },
+    {
+      "id": "S40",
+      "key": "duden_veraendern",
+      "title": "Duden: sich verändern",
+      "url": "https://www.duden.de/rechtschreibung/veraendern",
+      "supports": "يسند الفعل (يتغيّر).",
+      "limits": "—"
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a2-25",
+      "kind": "dialogue",
+      "status": "سليم",
+      "finding": "بيانات الحوار d-a2-25 (Im Zug ohne Ticket): 8 أسطر، 3 أسئلة، 2 إملاء، و9 waisen.",
+      "action": "بقيت بيانات الحوار (العنوانان، العلامة neu، وقائمة waisen) كما هي.",
+      "sources": [
+        "S13"
+      ],
+      "reviewed": {
+        "titleDe": "Im Zug ohne Ticket",
+        "titleAr": "في القطار بلا تذكرة",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "die Fahrkartenkontrolle",
+          "schwarzfahren",
+          "die Monatskarte",
+          "gültig",
+          "das Ticket",
+          "die Umleitung",
+          "die Verbindung",
+          "die Auskunft",
+          "höflich"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-25.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S01",
+        "S13"
+      ],
+      "reviewed": {
+        "who": "Kontrolleur",
+        "de": "Fahrkartenkontrolle, bitte. Ihr Ticket?",
+        "ar": "تفتيش التذاكر من فضلك. تذكرتك؟"
+      }
+    },
+    {
+      "id": "d-a2-25.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S02",
+        "S15"
+      ],
+      "reviewed": {
+        "who": "Rania",
+        "de": "Hier ist meine Monatskarte.",
+        "ar": "هذه بطاقتي الشهرية."
+      }
+    },
+    {
+      "id": "d-a2-25.lines[2]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S01",
+        "S16"
+      ],
+      "reviewed": {
+        "who": "Kontrolleur",
+        "de": "Die ist seit gestern nicht mehr gültig. Der Monat ist zu Ende.",
+        "ar": "لم تعد صالحة منذ أمس. انتهى الشهر."
+      }
+    },
+    {
+      "id": "d-a2-25.lines[3]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S02",
+        "S14"
+      ],
+      "reviewed": {
+        "who": "Rania",
+        "de": "Oh nein! Das habe ich vergessen. Ich wollte nicht schwarzfahren.",
+        "ar": "لا! نسيت ذلك. لم أقصد الركوب بلا تذكرة."
+      }
+    },
+    {
+      "id": "d-a2-25.lines[4]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S01",
+        "S02",
+        "S04"
+      ],
+      "reviewed": {
+        "who": "Kontrolleur",
+        "de": "Das glaube ich Ihnen. Aber die Regel ist die Regel: 60 Euro.",
+        "ar": "أصدّقك. لكن القاعدة قاعدة: 60 يورو."
+      }
+    },
+    {
+      "id": "d-a2-25.lines[5]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S03",
+        "S06"
+      ],
+      "reviewed": {
+        "who": "Rania",
+        "de": "Kann ich die neue Monatskarte nachher zeigen? Dann zahle ich weniger, oder?",
+        "ar": "هل يمكنني إظهار البطاقة الشهرية الجديدة لاحقاً؟ عندها أدفع أقل، صحيح؟"
+      }
+    },
+    {
+      "id": "d-a2-25.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S03",
+        "S06"
+      ],
+      "reviewed": {
+        "who": "Kontrolleur",
+        "de": "Ja, innerhalb von einer Woche im Kundenzentrum. Dann sind es nur sieben Euro.",
+        "ar": "نعم، خلال أسبوع في مركز الزبائن. عندها سبعة يورو فقط."
+      }
+    },
+    {
+      "id": "d-a2-25.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S17",
+        "S18",
+        "S19",
+        "S20"
+      ],
+      "reviewed": {
+        "who": "Rania",
+        "de": "Danke, dass Sie so höflich sind. Noch eine Auskunft bitte: Wegen der Umleitung heute, erreiche ich meine Verbindung am Hauptbahnhof?",
+        "ar": "شكراً لأنك مهذب. معلومة أخرى من فضلك: بسبب التحويلة اليوم، هل ألحق بقطار الربط في المحطة الرئيسية؟"
+      }
+    },
+    {
+      "id": "d-a2-25-q1",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "reviewed": {
+        "id": "d-a2-25-q1",
+        "type": "mc",
+        "promptDe": "Warum ist die Monatskarte nicht gültig?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "Der Monat ist zu Ende.",
+        "explanationAr": "الدليل: «Die ist seit gestern nicht mehr gültig. Der Monat ist zu Ende». الفخّ 1: لم يُذكر خطأ في الشراء. الفخّ 2: التحويلة موضوع آخر.",
+        "falle": true,
+        "options": [
+          "Rania hat die falsche Karte gekauft.",
+          "Der Zug fährt eine Umleitung.",
+          "Der Monat ist zu Ende."
+        ]
+      }
+    },
+    {
+      "id": "d-a2-25-q2",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S03",
+        "S06"
+      ],
+      "reviewed": {
+        "id": "d-a2-25-q2",
+        "type": "mc",
+        "promptDe": "Wie viel zahlt Rania, wenn sie die neue Monatskarte innerhalb einer Woche zeigt?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "sieben Euro",
+        "explanationAr": "الدليل: «innerhalb von einer Woche im Kundenzentrum. Dann sind es nur sieben Euro». الفخّ 1: 60 يورو بلا إثبات. الفخّ 2: sechs/sieben تشابه صوتي.",
+        "falle": true,
+        "options": [
+          "sieben Euro",
+          "60 Euro",
+          "sechs Euro"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-25-q3",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S14"
+      ],
+      "reviewed": {
+        "id": "d-a2-25-q3",
+        "type": "fill",
+        "promptDe": "Ich wollte nicht ___.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+        "answer": [
+          "schwarzfahren"
+        ],
+        "explanationAr": "الدليل: «Ich wollte nicht schwarzfahren» — فعل منفصل في المصدر بعد wollte.",
+        "falle": false
+      }
+    },
+    {
+      "id": "d-a2-25.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت الجملة كما هي.",
+      "sources": [
+        "S01",
+        "S16"
+      ],
+      "reviewed": {
+        "sentence": "Die ist seit gestern nicht mehr gültig."
+      }
+    },
+    {
+      "id": "d-a2-25.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت الجملة كما هي.",
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "reviewed": {
+        "sentence": "Aber die Regel ist die Regel: 60 Euro."
+      }
+    },
+    {
+      "id": "d-a2-26",
+      "kind": "dialogue",
+      "status": "سليم",
+      "finding": "بيانات الحوار d-a2-26 (Klamotten kaufen): 8 أسطر، 3 أسئلة، 2 إملاء، و10 waisen.",
+      "action": "بقيت بيانات الحوار (العنوانان، العلامة neu، وقائمة waisen) كما هي.",
+      "sources": [
+        "S13"
+      ],
+      "reviewed": {
+        "titleDe": "Klamotten kaufen",
+        "titleAr": "شراء ملابس",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "anprobieren",
+          "die Umkleidekabine",
+          "die Hose",
+          "preiswert",
+          "das Sonderangebot",
+          "die Rückgabe",
+          "die Quittung aufheben",
+          "bequem sitzen",
+          "der Schmuck",
+          "altmodisch"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-26.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S21"
+      ],
+      "reviewed": {
+        "who": "Verkäuferin",
+        "de": "Kann ich Ihnen helfen?",
+        "ar": "هل أستطيع مساعدتك؟"
+      }
+    },
+    {
+      "id": "d-a2-26.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S23"
+      ],
+      "reviewed": {
+        "who": "Mira",
+        "de": "Ja, ich suche eine Hose für die Arbeit. Nicht zu teuer.",
+        "ar": "نعم، أبحث عن بنطال للعمل. ليس غالياً جداً."
+      }
+    },
+    {
+      "id": "d-a2-26.lines[2]",
+      "kind": "line",
+      "status": "مصحح",
+      "finding": "تطابق اسم الإشارة «هذه» مع المؤنث «بنطال» المشار إليه (الألماني: Diese hier ist … Hose).",
+      "action": "صُحّحت الإشارة/الصفة/الضمير لتطابق المؤنث «البنطال» المقابل لـdie Hose بالألماني، مع بقاء الألماني كما هو.",
+      "sources": [
+        "S23",
+        "S22",
+        "S28"
+      ],
+      "reviewed": {
+        "who": "Verkäuferin",
+        "de": "Diese hier ist im Sonderangebot: 29 statt 49 Euro. Sehr preiswert.",
+        "ar": "هذه في عرض خاص: 29 بدل 49 يورو. رخيص جداً."
+      },
+      "before": {
+        "de": "Diese hier ist im Sonderangebot: 29 statt 49 Euro. Sehr preiswert.",
+        "ar": "هذا في عرض خاص: 29 بدل 49 يورو. رخيص جداً."
+      },
+      "after": {
+        "de": "Diese hier ist im Sonderangebot: 29 statt 49 Euro. Sehr preiswert.",
+        "ar": "هذه في عرض خاص: 29 بدل 49 يورو. رخيص جداً."
+      }
+    },
+    {
+      "id": "d-a2-26.lines[3]",
+      "kind": "line",
+      "status": "مصحح",
+      "finding": "تطابق ضمير «منها» مع المؤنث die Hose، تماماً كـ«Haben Sie sie auch in Dunkelblau» بالألماني.",
+      "action": "صُحّحت الإشارة/الصفة/الضمير لتطابق المؤنث «البنطال» المقابل لـdie Hose بالألماني، مع بقاء الألماني كما هو.",
+      "sources": [
+        "S23",
+        "S22",
+        "S28"
+      ],
+      "reviewed": {
+        "who": "Mira",
+        "de": "Die Farbe ist ein bisschen altmodisch. Haben Sie sie auch in Dunkelblau?",
+        "ar": "اللون قديم الطراز قليلاً. هل لديكم منها بالأزرق الداكن؟"
+      },
+      "before": {
+        "de": "Die Farbe ist ein bisschen altmodisch. Haben Sie sie auch in Dunkelblau?",
+        "ar": "اللون قديم الطراز قليلاً. هل لديكم منه بالأزرق الداكن؟"
+      },
+      "after": {
+        "de": "Die Farbe ist ein bisschen altmodisch. Haben Sie sie auch in Dunkelblau?",
+        "ar": "اللون قديم الطراز قليلاً. هل لديكم منها بالأزرق الداكن؟"
+      }
+    },
+    {
+      "id": "d-a2-26.lines[4]",
+      "kind": "line",
+      "status": "مصحح",
+      "finding": "تطابق الضمير «ها» مع المؤنث «بنطال». الألماني probieren Sie sie an محايد رسمي، والعربية تؤنث الربط بـHose.",
+      "action": "صُحّحت الإشارة/الصفة/الضمير لتطابق المؤنث «البنطال» المقابل لـdie Hose بالألماني، مع بقاء الألماني كما هو.",
+      "sources": [
+        "S23",
+        "S22",
+        "S28"
+      ],
+      "reviewed": {
+        "who": "Verkäuferin",
+        "de": "Ja, Größe 38. Die Umkleidekabine ist hinten links. Probieren Sie sie an.",
+        "ar": "نعم، مقاس 38. غرفة القياس في الخلف يساراً. جرّبيها."
+      },
+      "before": {
+        "de": "Ja, Größe 38. Die Umkleidekabine ist hinten links. Probieren Sie sie an.",
+        "ar": "نعم، مقاس 38. غرفة القياس في الخلف يساراً. جرّبيه."
+      },
+      "after": {
+        "de": "Ja, Größe 38. Die Umkleidekabine ist hinten links. Probieren Sie sie an.",
+        "ar": "نعم، مقاس 38. غرفة القياس في الخلف يساراً. جرّبيها."
+      }
+    },
+    {
+      "id": "d-a2-26.lines[5]",
+      "kind": "line",
+      "status": "مصحح",
+      "finding": "تطابق الصفة «مريحة» والضمير «ها» مع المؤنث «البنطال»؛ وتطابق فعل «تناسب» مع المؤنث.",
+      "action": "صُحّحت الإشارة/الصفة/الضمير لتطابق المؤنث «البنطال» المقابل لـdie Hose بالألماني، مع بقاء الألماني كما هو.",
+      "sources": [
+        "S23",
+        "S22",
+        "S28"
+      ],
+      "reviewed": {
+        "who": "Mira",
+        "de": "Sie sitzt bequem. Ich nehme sie. Und wie ist die Rückgabe, falls sie doch nicht passt?",
+        "ar": "مريحة. سآخذها. وكيف الإرجاع إن لم تناسب في النهاية؟"
+      },
+      "before": {
+        "de": "Sie sitzt bequem. Ich nehme sie. Und wie ist die Rückgabe, falls sie doch nicht passt?",
+        "ar": "مريح. سآخذه. وكيف الإرجاع إن لم يناسب في النهاية؟"
+      },
+      "after": {
+        "de": "Sie sitzt bequem. Ich nehme sie. Und wie ist die Rückgabe, falls sie doch nicht passt?",
+        "ar": "مريحة. سآخذها. وكيف الإرجاع إن لم تناسب في النهاية؟"
+      }
+    },
+    {
+      "id": "d-a2-26.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S07",
+        "S08",
+        "S09",
+        "S26"
+      ],
+      "reviewed": {
+        "who": "Verkäuferin",
+        "de": "Vierzehn Tage, aber nur mit Quittung. Heben Sie die Quittung also gut auf.",
+        "ar": "أربعة عشر يوماً، لكن بالإيصال فقط. احتفظي بالإيصال جيداً."
+      }
+    },
+    {
+      "id": "d-a2-26.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S29"
+      ],
+      "reviewed": {
+        "who": "Mira",
+        "de": "Mache ich. Den Schmuck dort schaue ich mir auch noch an.",
+        "ar": "سأفعل. سألقي نظرة أيضاً على المجوهرات هناك."
+      }
+    },
+    {
+      "id": "d-a2-26-q1",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S25"
+      ],
+      "reviewed": {
+        "id": "d-a2-26-q1",
+        "type": "mc",
+        "promptDe": "Was kostet die Hose im Sonderangebot?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "29 Euro",
+        "explanationAr": "الدليل: «29 statt 49 Euro». الفخّ 1: 49 السعر القديم. الفخّ 2: 38 هو المقاس.",
+        "falle": true,
+        "options": [
+          "29 Euro",
+          "49 Euro",
+          "38 Euro"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-26-q2",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S07",
+        "S08",
+        "S09",
+        "S26"
+      ],
+      "reviewed": {
+        "id": "d-a2-26-q2",
+        "type": "mc",
+        "promptDe": "Was ist für die Rückgabe wichtig?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "die Quittung",
+        "explanationAr": "الدليل: «Vierzehn Tage, aber nur mit Quittung». الفخّ 1: غرفة القياس للتجربة. الفخّ 2: اللون رغبة ميرا.",
+        "falle": true,
+        "options": [
+          "die Umkleidekabine",
+          "die Quittung",
+          "die Farbe Dunkelblau"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-26-q3",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S30"
+      ],
+      "reviewed": {
+        "id": "d-a2-26-q3",
+        "type": "truefalse",
+        "promptDe": "Mira findet die erste Farbe altmodisch.",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟",
+        "answer": "richtig",
+        "explanationAr": "الدليل: «Die Farbe ist ein bisschen altmodisch».",
+        "falle": false,
+        "options": [
+          "richtig",
+          "falsch"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-26.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت الجملة كما هي.",
+      "sources": [
+        "S22"
+      ],
+      "reviewed": {
+        "sentence": "Die Umkleidekabine ist hinten links."
+      }
+    },
+    {
+      "id": "d-a2-26.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت الجملة كما هي.",
+      "sources": [
+        "S07",
+        "S26"
+      ],
+      "reviewed": {
+        "sentence": "Heben Sie die Quittung also gut auf."
+      }
+    },
+    {
+      "id": "d-a2-27",
+      "kind": "dialogue",
+      "status": "سليم",
+      "finding": "بيانات الحوار d-a2-27 (Erinnerungen an die Kindheit): 8 أسطر، 3 أسئلة، 2 إملاء، و10 waisen.",
+      "action": "بقيت بيانات الحوار (العنوانان، العلامة neu، وقائمة waisen) كما هي.",
+      "sources": [
+        "S13"
+      ],
+      "reviewed": {
+        "titleDe": "Erinnerungen an die Kindheit",
+        "titleAr": "ذكريات الطفولة",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "die Kindheit",
+          "damals",
+          "neulich",
+          "inzwischen",
+          "das Erlebnis",
+          "sich verändern",
+          "der Höhepunkt",
+          "die Vergangenheit",
+          "erzählen",
+          "sich gewöhnen an"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-27.lines[0]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "reviewed": {
+        "who": "Enkelin",
+        "de": "Oma, erzähl mir von deiner Kindheit in Sousse.",
+        "ar": "جدتي، احكي لي عن طفولتك في سوسة."
+      }
+    },
+    {
+      "id": "d-a2-27.lines[1]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S31",
+        "S32"
+      ],
+      "reviewed": {
+        "who": "Oma",
+        "de": "Damals gab es kein Internet und nur ein Telefon im ganzen Haus. Wir haben draußen gespielt, bis es dunkel war.",
+        "ar": "آنذاك لم يكن هناك إنترنت وهاتف واحد فقط في البيت كله. كنا نلعب في الخارج حتى يحلّ الظلام."
+      }
+    },
+    {
+      "id": "d-a2-27.lines[2]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S34"
+      ],
+      "reviewed": {
+        "who": "Enkelin",
+        "de": "Was war das schönste Erlebnis?",
+        "ar": "ما أجمل تجربة؟"
+      }
+    },
+    {
+      "id": "d-a2-27.lines[3]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S10",
+        "S11",
+        "S36"
+      ],
+      "reviewed": {
+        "who": "Oma",
+        "de": "Der Höhepunkt war jeden Sommer die Reise ans Meer mit der ganzen Familie.",
+        "ar": "الذروة كانت كل صيف رحلة البحر مع العائلة كلها."
+      }
+    },
+    {
+      "id": "d-a2-27.lines[4]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S33"
+      ],
+      "reviewed": {
+        "who": "Enkelin",
+        "de": "Und hat sich die Stadt inzwischen sehr verändert?",
+        "ar": "وهل تغيّرت المدينة كثيراً منذ ذلك الحين؟"
+      }
+    },
+    {
+      "id": "d-a2-27.lines[5]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12",
+        "S40"
+      ],
+      "reviewed": {
+        "who": "Oma",
+        "de": "Sehr. Neulich war ich dort: neue Straßen, hohe Gebäude. Nur das Meer ist gleich geblieben.",
+        "ar": "كثيراً. مؤخراً كنت هناك: شوارع جديدة ومبانٍ عالية. البحر وحده بقي كما هو."
+      }
+    },
+    {
+      "id": "d-a2-27.lines[6]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S37"
+      ],
+      "reviewed": {
+        "who": "Enkelin",
+        "de": "Vermisst du die Vergangenheit?",
+        "ar": "هل تشتاقين إلى الماضي؟"
+      }
+    },
+    {
+      "id": "d-a2-27.lines[7]",
+      "kind": "line",
+      "status": "سليم",
+      "finding": "النص الألماني والعربي متطابقان من حيث المعنى والمفردات والسياق التربوي بعد التحقق.",
+      "action": "لم يُجرَ أي تعديل على هذا السطر.",
+      "sources": [
+        "S39",
+        "S38"
+      ],
+      "reviewed": {
+        "who": "Oma",
+        "de": "Manchmal. Aber man gewöhnt sich an alles, auch an Handys.",
+        "ar": "أحياناً. لكن المرء يعتاد على كل شيء، حتى الهواتف."
+      }
+    },
+    {
+      "id": "d-a2-27-q1",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S10",
+        "S36"
+      ],
+      "reviewed": {
+        "id": "d-a2-27-q1",
+        "type": "mc",
+        "promptDe": "Was war laut Oma der Höhepunkt jedes Sommers?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "die Reise ans Meer mit der Familie",
+        "explanationAr": "الدليل: «Der Höhepunkt war jeden Sommer die Reise ans Meer mit der ganzen Familie». الفخّ 1: اللعب في الخارج يومي لا ذروة الصيف. الفخّ 2: الهاتف تفصيل عن الماضي.",
+        "falle": true,
+        "options": [
+          "das Spielen draußen bis zum Dunkelwerden",
+          "die Reise ans Meer mit der Familie",
+          "das einzige Telefon im Haus"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-27-q2",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "reviewed": {
+        "id": "d-a2-27-q2",
+        "type": "mc",
+        "promptDe": "Was ist in Sousse gleich geblieben?",
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار.",
+        "answer": "das Meer",
+        "explanationAr": "الدليل: «Nur das Meer ist gleich geblieben». الفخّ: الشوارع والمباني «neue»/«hohe».",
+        "falle": true,
+        "options": [
+          "die Straßen",
+          "die Gebäude",
+          "das Meer"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-27-q3",
+      "kind": "question",
+      "status": "سليم",
+      "finding": "المفتاح مثبَّت بنص السطر المناظر؛ الفخاخ لا تغيّر السياق أو تستنتج وقائع خارجه.",
+      "action": "بقي السؤال ومفتاحه وخياراته وشرحه كما هي.",
+      "sources": [
+        "S39"
+      ],
+      "reviewed": {
+        "id": "d-a2-27-q3",
+        "type": "fill",
+        "promptDe": "Aber man gewöhnt sich ___ alles, auch an Handys.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار.",
+        "answer": [
+          "an"
+        ],
+        "explanationAr": "الدليل: «Aber man gewöhnt sich an alles» — sich gewöhnen an + Akkusativ.",
+        "falle": false
+      }
+    },
+    {
+      "id": "d-a2-27.dictation[0]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت الجملة كما هي.",
+      "sources": [
+        "S31",
+        "S32"
+      ],
+      "reviewed": {
+        "sentence": "Damals gab es kein Internet und nur ein Telefon im ganzen Haus."
+      }
+    },
+    {
+      "id": "d-a2-27.dictation[1]",
+      "kind": "dictation",
+      "status": "سليم",
+      "finding": "جملة الإملاء واردة حرفياً ضمن أحد أسطر الحوار الألماني.",
+      "action": "بقيت الجملة كما هي.",
+      "sources": [
+        "S10",
+        "S11"
+      ],
+      "reviewed": {
+        "sentence": "Nur das Meer ist gleich geblieben."
+      }
+    }
+  ],
+  "contextNotes": [
+    {
+      "where": "d-a2-25.lines[5–6]",
+      "note": "آلية Nachzeigen الألمانية الرسمية (نحو 7 يورو بدلاً من 60) تنطبق فقط على إبراز بطاقة شخصية (personenbezogen/غير منقولة) كان المسافر يملكها سلفاً ونسيها في البيت؛ أما «شراء Monatskarte جديدة بعد المخالفة» فلا يخفض تلقائياً الغرامة (راجع Stiftung Warentest وSchlichtungsstelle). الحوار يبسّط القاعدة تربوياً على مستوى A2 ويسأل العنصر عموماً «هل أدفع أقل إذا أظهرت البطاقة الشهرية الجديدة لاحقاً» ويجيب بنعم خلال أسبوع بسبعة يورو — يُسجَّل كسياق/تبسيط تربوي ولا يُعدَّل النص الألماني.",
+      "sources": [
+        "S01",
+        "S03",
+        "S06"
+      ]
+    },
+    {
+      "where": "d-a2-25.lines[4,7]",
+      "note": "المبالغ (60 يورو، سبعة يورو) وعبارة «die Regel ist die Regel» واقعية ومتطابقة مع التعريفات الحالية في فيربوندات كثيرة (برلين، هامبورغ، كولونيا، شتوتغارت)، ولا يوجد نص يدعي أن الراكبة اشترت بطاقة مزوّرة أو أنها معفاة من الدفع.",
+      "sources": [
+        "S02",
+        "S04",
+        "S05"
+      ]
+    },
+    {
+      "where": "d-a2-26.lines[6]",
+      "note": "لا يوجد حق إرجاع قانوني عام في المتاجر الفعلية في ألمانيا («Gekauft ist gekauft»)، لكن سياسة 14 يوماً مع الإيصال سياسة Kulanz (مجاملة) شائعة جداً في سلاسل الملابس. ذكر المتجر «Vierzehn Tage, aber nur mit Quittung» متوافق مع هذه الممارسة ولا يُقدَّم كحق قانوني مطلق في النص.",
+      "sources": [
+        "S07",
+        "S08",
+        "S09"
+      ]
+    },
+    {
+      "where": "d-a2-26.lines[2]",
+      "note": "السعر 29 بدلاً من 49 يورو ووصف Sonderangebot «preiswert» ينسجمان مع مفهوم العرض الخاص دون ادعاء نسبة خصم دقيقة أو اسم علامة تجارية.",
+      "sources": [
+        "S25"
+      ]
+    },
+    {
+      "where": "d-a2-27.lines[0,3,5]",
+      "note": "سوسة (Sousse) مدينة ساحلية تونسية ثالثة/رابعة على المتوسط، ذات Medina مصنفة تراثاً عالمياً لليونسكو وقطاع سياحي وشاطئ؛ الحديث عن رحلات الصيف إلى البحر ومبانٍ جديدة/شوارع جديدة و«بقي البحر كما هو» ينسجم مع طبيعتها الساحلية دون ادعاء حقائق عمرانية/سكانية محددة.",
+      "sources": [
+        "S10",
+        "S11",
+        "S12"
+      ]
+    },
+    {
+      "where": "d-a2-27.lines[1,7]",
+      "note": "وصف الطفولة (لا إنترنت، هاتف واحد، اللعب في الخارج، الاعتياد على الهواتف) سرد عائلي عام لا يُقدَّم كحقيقة تاريخية شاملة عن تونس أو سوسة في حقبة بعينها.",
+      "sources": [
+        "S31",
+        "S32"
+      ]
+    }
+  ],
+  "styleAlternatives": [
+    {
+      "where": "d-a2-25.lines[6].ar",
+      "alt": "يمكن صوغ «مركز الزبائن» بمصطلح أشهر «مركز العملاء/مركز الخدمة» (Kundenzentrum)، لكن «مركز الزبائن» مفهوم في سياق A2 ولا يقدّم معنى خاطئاً، فبقي كما هو.",
+      "sources": [],
+      "notChanged": true
+    },
+    {
+      "where": "d-a2-26.lines[2].ar",
+      "alt": "يمكن استخدام «تخفيض/عرض سعر» بدلاً من «عرض خاص» لمزيد من الواقعية التجارية، لكن العبارة الحالية سليمة.",
+      "sources": [
+        "S25"
+      ],
+      "notChanged": true
+    }
+  ],
+  "unresolved": [],
+  "waisen": [
+    {
+      "term": "die Fahrkartenkontrolle",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "vf-kultd-317",
+      "level": "A2",
+      "sources": [
+        "S13"
+      ]
+    },
+    {
+      "term": "schwarzfahren",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "vf-kultd-318",
+      "level": "A2",
+      "sources": [
+        "S14"
+      ]
+    },
+    {
+      "term": "die Monatskarte",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "vf-kultd-316",
+      "level": "A2",
+      "sources": [
+        "S15"
+      ]
+    },
+    {
+      "term": "gültig",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "vw-a2all-058",
+      "level": "A2",
+      "sources": [
+        "S16"
+      ]
+    },
+    {
+      "term": "das Ticket",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "v725",
+      "level": "A2",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "term": "die Umleitung",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "vf-kultd-319",
+      "level": "A2",
+      "sources": [
+        "S17"
+      ]
+    },
+    {
+      "term": "die Verbindung",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "vy-leben-031",
+      "level": "A2",
+      "sources": [
+        "S18"
+      ]
+    },
+    {
+      "term": "die Auskunft",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "vy-leben-058",
+      "level": "A2",
+      "sources": [
+        "S19"
+      ]
+    },
+    {
+      "term": "höflich",
+      "dialogueId": "d-a2-25",
+      "hasCard": true,
+      "cardId": "vw-a2all-076",
+      "level": "A2",
+      "sources": [
+        "S20"
+      ]
+    },
+    {
+      "term": "anprobieren",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vf-kultur-013",
+      "level": "A2",
+      "sources": [
+        "S21"
+      ]
+    },
+    {
+      "term": "die Umkleidekabine",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vf-kultur-014",
+      "level": "A2",
+      "sources": [
+        "S22"
+      ]
+    },
+    {
+      "term": "die Hose",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "v1414",
+      "level": "A2",
+      "sources": [
+        "S23"
+      ]
+    },
+    {
+      "term": "preiswert",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vd-geld-k-009",
+      "level": "A2",
+      "sources": [
+        "S24"
+      ]
+    },
+    {
+      "term": "das Sonderangebot",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vd-geld-k-011",
+      "level": "A2",
+      "sources": [
+        "S25"
+      ]
+    },
+    {
+      "term": "die Rückgabe",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vz-schr-900",
+      "level": "A2",
+      "sources": [
+        "S27"
+      ]
+    },
+    {
+      "term": "die Quittung aufheben",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vd-geld-k-023",
+      "level": "A2",
+      "sources": [
+        "S26"
+      ]
+    },
+    {
+      "term": "bequem sitzen",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vf-kultur-012",
+      "level": "A2",
+      "sources": [
+        "S28"
+      ]
+    },
+    {
+      "term": "der Schmuck",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vf-kultur-008",
+      "level": "A2",
+      "sources": [
+        "S29"
+      ]
+    },
+    {
+      "term": "altmodisch",
+      "dialogueId": "d-a2-26",
+      "hasCard": true,
+      "cardId": "vf-kultur-010",
+      "level": "A2",
+      "sources": [
+        "S30"
+      ]
+    },
+    {
+      "term": "die Kindheit",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "ve-erzaehl-017",
+      "level": "A2",
+      "sources": [
+        "S31"
+      ]
+    },
+    {
+      "term": "damals",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "ve-erzaehl-000",
+      "level": "A2",
+      "sources": [
+        "S32"
+      ]
+    },
+    {
+      "term": "neulich",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "ve-erzaehl-007",
+      "level": "A2",
+      "sources": [
+        "S33"
+      ]
+    },
+    {
+      "term": "inzwischen",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "ve-erzaehl-005",
+      "level": "A2",
+      "sources": [
+        "S33"
+      ]
+    },
+    {
+      "term": "das Erlebnis",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "ve-erzaehl-016",
+      "level": "A2",
+      "sources": [
+        "S34"
+      ]
+    },
+    {
+      "term": "sich verändern",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "ve-erzaehl-021",
+      "level": "A2",
+      "sources": [
+        "S35",
+        "S40"
+      ]
+    },
+    {
+      "term": "der Höhepunkt",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "ve-erzaehl-023",
+      "level": "A2",
+      "sources": [
+        "S36"
+      ]
+    },
+    {
+      "term": "die Vergangenheit",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "ve-erzaehl-018",
+      "level": "A2",
+      "sources": [
+        "S37"
+      ]
+    },
+    {
+      "term": "erzählen",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "v086",
+      "level": "A2",
+      "sources": [
+        "S38"
+      ]
+    },
+    {
+      "term": "sich gewöhnen an",
+      "dialogueId": "d-a2-27",
+      "hasCard": true,
+      "cardId": "vy-leben-014",
+      "level": "A2",
+      "sources": [
+        "S39"
+      ]
+    }
+  ],
+  "audio": {
+    "present": false,
+    "manifestEntries": [],
+    "mp3Files": [],
+    "note": "لا توجد إدخالات مطابقة في `content/dialog-audio.json` ولا ملفات mp3 تحت `public/audio/dialog` لهذه المعرفات، لذا لم يحدث تشغيل/استماع في هذه الدفعة."
+  },
+  "limits": {
+    "cefr": "لم يُعد تقييم CEFR أو نسبة المحتوى أو حساب المستوى.",
+    "audio": "لم يحدث تشغيل/استماع لأي ملف صوتي.",
+    "human": "المراجعة مؤازرة بمصادر منشورة وليست مراجعة بشرية أو اعتماداً مهنياً.",
+    "legal": "المعلومات عن الغرامة/الإرجاع عامة ولا تغني عن استشارة شركة المواصلات أو مستشار قانوني.",
+    "cultural": "وصف الطفولة في سوسة سرد شخصي أدبي لا يُفسَّر كحقيقة ديموغرافية شاملة."
+  },
+  "gates": {
+    "planned": "K186a–j"
+  }
+}

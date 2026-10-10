@@ -1,1026 +1,1662 @@
 [
- {
-  "id": "f01",
-  "kat": "falsche-freunde",
-  "level": "A1",
-  "falsch": "become = bekommen",
-  "richtig": "become = werden · bekommen = get/receive",
-  "ar": "أشهر فخّ لغوي: bekommen = يحصل على/يستلم وليست «يصبح»"
- },
- {
-  "id": "f02",
-  "kat": "falsche-freunde",
-  "level": "A1",
-  "falsch": "Ich nehme dir das Buch mit.",
-  "richtig": "Ich bringe dir das Buch.",
-  "ar": "bring = يجلب (bringen) · take = يأخذ (nehmen)"
- },
- {
-  "id": "f03",
-  "kat": "falsche-freunde",
-  "level": "A2",
-  "falsch": "Der Chef = الطاهي؟",
-  "richtig": "Der Chef = الرئيس/المدير · الطاهي = der Koch",
-  "ar": "Chef ألمانية = رئيس"
- },
- {
-  "id": "f04",
-  "kat": "falsche-freunde",
-  "level": "A2",
-  "falsch": "das Information",
-  "richtig": "die Information — ج: die Informationen",
-  "ar": "كلمات -ion/-tät/-ung مؤنثة دائماً"
- },
- {
-  "id": "f05",
-  "kat": "falsche-freunde",
-  "level": "A2",
-  "falsch": "Willst du Kaffee? (طلب ودّي)",
-  "richtig": "Möchtest du Kaffee?",
-  "ar": "wollen إرادة قوية؛ الودّ والعروض = möchten"
- },
- {
-  "id": "f06",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "Das ist eventual richtig.",
-  "richtig": "Das ist möglicherweise/eventuell richtig.",
-  "ar": "eventual(ly) إنجليزية ≠ eventuell ألمانية (ربما)"
- },
- {
-  "id": "f07",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "Ich habe das realisiert. (أدركت)",
-  "richtig": "Ich habe das bemerkt/verstanden · أُنفّذ = verwirklicht",
-  "ar": "realise = يُدرك (bemerken) وليس «أنفّذ»"
- },
- {
-  "id": "f08",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "ein sensibles Thema (حساس/دقيق)",
-  "richtig": "ein heikles Thema · sensibel = حسّاس طبياً/نفسياً",
-  "ar": "sensible/sensibel فخّ الترجمة الحرفية"
- },
- {
-  "id": "f09",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "Ich bin verlegen. (مسافر)",
-  "richtig": "verlegen = محرَج · verreist = مسافر/غائب",
-  "ar": "verlegen ≠ يسافر! خطأ شائع جداً"
- },
- {
-  "id": "f10",
-  "kat": "falsche-freunde",
-  "level": "B2",
-  "falsch": "Das ist plausible. (واضح)",
-  "richtig": "Das ist einleuchtend · plausible = معقول",
-  "ar": "plausible ≠ plain/clear — تشابه خادع"
- },
- {
-  "id": "f11",
-  "kat": "wortstellung",
-  "level": "A1",
-  "falsch": "Heute ich lerne Deutsch.",
-  "richtig": "Heute lerne ich Deutsch.",
-  "ar": "القاعدة الحديدية: الفعل في الموقع الثاني (V2)"
- },
- {
-  "id": "f12",
-  "kat": "wortstellung",
-  "level": "A1",
-  "falsch": "Morgen wir gehen ins Kino.",
-  "richtig": "Morgen gehen wir ins Kino.",
-  "ar": "كلمة أولى ← الفعل ثانياً ثم الفاعل"
- },
- {
-  "id": "f13",
-  "kat": "wortstellung",
-  "level": "A2",
-  "falsch": "Ich weiß, dass ich bin müde.",
-  "richtig": "Ich weiß, dass ich müde bin.",
-  "ar": "بعد dass/weil الفعل إلى آخر الجملة"
- },
- {
-  "id": "f14",
-  "kat": "wortstellung",
-  "level": "A2",
-  "falsch": "weil ich habe keine Zeit",
-  "richtig": "weil ich keine Zeit habe",
-  "ar": "«أخير الفعل» في جملة weil — أشهر خطأ عند العرب"
- },
- {
-  "id": "f15",
-  "kat": "wortstellung",
-  "level": "A2",
-  "falsch": "Obwohl es regnet, wir bleiben hier.",
-  "richtig": "Obwohl es regnet, bleiben wir hier.",
-  "ar": "بعد obwohl الافتتاحية يعود الفعل للموقع الثاني"
- },
- {
-  "id": "f16",
-  "kat": "wortstellung",
-  "level": "B1",
-  "falsch": "Ich habe nicht gewusst das.",
-  "richtig": "Ich habe das nicht gewusst.",
-  "ar": "المفعول بين haben و P.II وnicht قبل P.II"
- },
- {
-  "id": "f17",
-  "kat": "wortstellung",
-  "level": "B1",
-  "falsch": "Dann ich kann kommen.",
-  "richtig": "Dann kann ich kommen.",
-  "ar": "Dann افتتاح ← الفعل الثاني: kann ثم الفاعل"
- },
- {
-  "id": "f18",
-  "kat": "wortstellung",
-  "level": "B1",
-  "falsch": "… , dass er kommt morgen.",
-  "richtig": "… , dass er morgen kommt.",
-  "ar": "في الجملة الثانوية: الزمان في الوسط والفعل في النهاية"
- },
- {
-  "id": "f19",
-  "kat": "wortstellung",
-  "level": "B2",
-  "falsch": "Trotzdem er kam zu spät.",
-  "richtig": "Trotzdem kam er zu spät.",
-  "ar": "trotzdem/deshalb صيغ افتتاح ← الفعل ثانياً"
- },
- {
-  "id": "f20",
-  "kat": "wortstellung",
-  "level": "A2",
-  "falsch": "und ich habe gesagt ihm das",
-  "richtig": "und ich habe ihm das gesagt",
-  "ar": "بعد und نفس الترتيب: haben + … + P.II"
- },
- {
-  "id": "f21",
-  "kat": "artikel",
-  "level": "A1",
-  "falsch": "Ich lerne Deutsch Sprache.",
-  "richtig": "Ich lerne die deutsche Sprache.",
-  "ar": "الصفة بين الأداة والاسم مع نهاياتها"
- },
- {
-  "id": "f22",
-  "kat": "artikel",
-  "level": "A1",
-  "falsch": "Wo ist Bahnhof?",
-  "richtig": "Wo ist der Bahnhof?",
-  "ar": "الألمانية لا تحذف الأداة من المحدّد"
- },
- {
-  "id": "f23",
-  "kat": "artikel",
-  "level": "A2",
-  "falsch": "Ich bin 20 Jahre.",
-  "richtig": "Ich bin 20 Jahre alt.",
-  "ar": "alt إلزامية في العمر — حذفها خطأ كلاسيكي"
- },
- {
-  "id": "f24",
-  "kat": "artikel",
-  "level": "A2",
-  "falsch": "Ich habe 20 Jahre.",
-  "richtig": "Ich bin 20 Jahre alt.",
-  "ar": "العمر يكون وليس يملك"
- },
- {
-  "id": "f25",
-  "kat": "artikel",
-  "level": "A1",
-  "falsch": "Ich komme aus die Türkei.",
-  "richtig": "Ich komme aus der Türkei.",
-  "ar": "حروفُ الجرِّ aus تأخذُ الداتيف، والبلدانُ المؤنّثةُ (die Türkei) تصيرُ der: aus der Türkei. (aus + Dativ: die → der)"
- },
- {
-  "id": "f26",
-  "kat": "artikel",
-  "level": "A2",
-  "falsch": "mit die Freundin",
-  "richtig": "mit der Freundin",
-  "ar": "mit + Dativ دائماً"
- },
- {
-  "id": "f27",
-  "kat": "artikel",
-  "level": "B1",
-  "falsch": "trotz dem Regen",
-  "richtig": "trotz des Regens",
-  "ar": "trotz/wegen + Genitiv في الفصحى"
- },
- {
-  "id": "f28",
-  "kat": "artikel",
-  "level": "B1",
-  "falsch": "wegen dem Wetter",
-  "richtig": "wegen des Wetters",
-  "ar": "wegen + Genitiv (وليس Dativ الشائع عامياً)"
- },
- {
-  "id": "f29",
-  "kat": "praeposition",
-  "level": "A2",
-  "falsch": "Ich warte auf den Bus seit einer Stunde.",
-  "richtig": "Ich warte seit einer Stunde auf den Bus.",
-  "ar": "«auf den Bus» تبقى في آخر الجملة بعد seit"
- },
- {
-  "id": "f30",
-  "kat": "praeposition",
-  "level": "A2",
-  "falsch": "Ich fahre in Berlin.",
-  "richtig": "Ich fahre nach Berlin. / Ich bin in Berlin.",
-  "ar": "in + Dativ = موجود في؛ الحركة إلى مدينة = nach"
- },
- {
-  "id": "f31",
-  "kat": "praeposition",
-  "level": "A2",
-  "falsch": "Wir gehen zu dem Supermarkt.",
-  "richtig": "Wir gehen in den Supermarkt.",
-  "ar": "داخل المكان التجاري/المحطة = in + Akkusativ"
- },
- {
-  "id": "f32",
-  "kat": "praeposition",
-  "level": "A1",
-  "falsch": "am Montag um 8 Uhr? ✓ · aber: „bis 8 Uhr kommen“ (الوصول)",
-  "richtig": "um 8 Uhr kommen (الوصول المحدّد)",
-  "ar": "um = عند الساعة؛ von…bis = المدة"
- },
- {
-  "id": "f33",
-  "kat": "praeposition",
-  "level": "A2",
-  "falsch": "seit drei Monaten bin ich hier gewesen.",
-  "richtig": "seit drei Monaten bin ich hier.",
-  "ar": "seit مع المضارع للحالة المستمرة — لا Perfekt"
- },
- {
-  "id": "f34",
-  "kat": "praeposition",
-  "level": "B1",
-  "falsch": "Ich freue mich dein Geschenk.",
-  "richtig": "Ich freue mich über dein Geschenk.",
-  "ar": "freuen über (سبب) vs freuen auf (تطلّع)"
- },
- {
-  "id": "f35",
-  "kat": "praeposition",
-  "level": "B1",
-  "falsch": "Wir nehmen teil an den Kurs.",
-  "richtig": "Wir nehmen an dem Kurs teil.",
-  "ar": "an + Dativ وteil في آخر الجملة"
- },
- {
-  "id": "f36",
-  "kat": "praeposition",
-  "level": "B1",
-  "falsch": "Er hat Angst von Hunden.",
-  "richtig": "Er hat Angst vor Hunden.",
-  "ar": "الخوفُ يتعدّى بـvor + داتيف لا بـvon: Angst haben vor + Dativ. (Angst haben vor + Dativ)"
- },
- {
-  "id": "f37",
-  "kat": "zeitform",
-  "level": "A2",
-  "falsch": "Ich habe nicht ins Kino gegangen.",
-  "richtig": "Ich bin nicht ins Kino gegangen.",
-  "ar": "مع فعل حركة/تحول المركّب بـ sein وليس haben"
- },
- {
-  "id": "f38",
-  "kat": "zeitform",
-  "level": "A2",
-  "falsch": "Gestern ich habe gearbeitet.",
-  "richtig": "Gestern habe ich gearbeitet.",
-  "ar": "V2 حتى مع المضارع المركّب"
- },
- {
-  "id": "f39",
-  "kat": "zeitform",
-  "level": "A2",
-  "falsch": "Ich habe das Buch gelesen gestern.",
-  "richtig": "Gestern habe ich das Buch gelesen.",
-  "ar": "الظرف في الافتتاح أو قبل P.II مباشرة"
- },
- {
-  "id": "f40",
-  "kat": "zeitform",
-  "level": "A1",
-  "falsch": "Ich spiele gestern Fußball.",
-  "richtig": "Ich spielte Fußball gestern. / Ich habe gestern gespielt.",
-  "ar": "المضارع لا يحكي الأمس في الكتابة"
- },
- {
-  "id": "f41",
-  "kat": "zeitform",
-  "level": "B1",
-  "falsch": "Nachdem er kam, rief ich an.",
-  "richtig": "Nachdem er gekommen war, rief ich an.",
-  "ar": "nachdem: الحدث الأقدم = Plusquamperfekt"
- },
- {
-  "id": "f42",
-  "kat": "zeitform",
-  "level": "B1",
-  "falsch": "Als ich habe ihn gesehen, …",
-  "richtig": "Als ich ihn sah, …",
-  "ar": "als + ماضٍ بسيط/مركّب بترتيب الفاعل الطبيعي"
- },
- {
-  "id": "f43",
-  "kat": "zeitform",
-  "level": "A2",
-  "falsch": "Ich bin hier seit zwei Jahren gewohnt.",
-  "richtig": "Ich wohne hier seit zwei Jahren.",
-  "ar": "seit + مضارع (wohnen بلا مركّب)"
- },
- {
-  "id": "f44",
-  "kat": "zeitform",
-  "level": "A2",
-  "falsch": "Ich habe um 5 Uhr aufgestanden.",
-  "richtig": "Ich bin um 5 Uhr aufgestanden.",
-  "ar": "aufstehen فعل تحوّل ← sein"
- },
- {
-  "id": "f45",
-  "kat": "zahlen-zeit",
-  "level": "A1",
-  "falsch": "Telefon: 127 = eins-zwei-sieben? (مسموح) / «واحد اثنين» بالعربية",
-  "richtig": "Telefon: eins, zwei, sieben — رقمًا رقمًا",
-  "ar": "الألمان ينطّقون الهاتف رقماً رقماً بلا جمع"
- },
- {
-  "id": "f46",
-  "kat": "zahlen-zeit",
-  "level": "A1",
-  "falsch": "Es ist halb acht (08:30)",
-  "richtig": "halb neun = 08:30",
-  "ar": "«halb» تسبق الساعة التالية: نصف التاسعة = 8:30"
- },
- {
-  "id": "f47",
-  "kat": "zahlen-zeit",
-  "level": "A1",
-  "falsch": "am erste Mai",
-  "richtig": "am ersten Mai",
-  "ar": "التواريخ: am + Ordinalzahl (-en)"
- },
- {
-  "id": "f48",
-  "kat": "zahlen-zeit",
-  "level": "A2",
-  "falsch": "vor zehn Jahre",
-  "richtig": "vor zehn Jahren",
-  "ar": "vor + Dativ والجمع يأخذ n بعد الأداة/العدد"
- },
- {
-  "id": "f49",
-  "kat": "zahlen-zeit",
-  "level": "A2",
-  "falsch": "für zwei Stunde",
-  "richtig": "für zwei Stunden",
-  "ar": "العدد + جمع: بلا n إلا بعد الأداة أو في Dativ"
- },
- {
-  "id": "f50",
-  "kat": "zahlen-zeit",
-  "level": "A1",
-  "falsch": "zwei tausend zwan-zig (بالفصل)",
-  "richtig": "zweitausendzwanzig",
-  "ar": "الأرقام تركيب كلمة واحدة"
- },
- {
-  "id": "f51",
-  "kat": "konstruktion",
-  "level": "A1",
-  "falsch": "Ich heiß Ahmad.",
-  "richtig": "Ich heiße Ahmad.",
-  "ar": "heißen يتصل بـ e: heiße"
- },
- {
-  "id": "f52",
-  "kat": "konstruktion",
-  "level": "A1",
-  "falsch": "Ich bin kalt.",
-  "richtig": "Mir ist kalt.",
-  "ar": "الحرارة/الجوع/الخوف حالات Dativ: mir/dir ist"
- },
- {
-  "id": "f53",
-  "kat": "konstruktion",
-  "level": "A2",
-  "falsch": "Ich bin Hunger.",
-  "richtig": "Ich habe Hunger/Durst/Angst/Zeit.",
-  "ar": "الحالة بالجسد/النفس = haben في الألمانية"
- },
- {
-  "id": "f54",
-  "kat": "konstruktion",
-  "level": "A2",
-  "falsch": "Ich möchte gern ein Kaffee.",
-  "richtig": "Ich möchte gern einen Kaffee.",
-  "ar": "المفعول به بعد möchte = Akkusativ"
- },
- {
-  "id": "f55",
-  "kat": "konstruktion",
-  "level": "B1",
-  "falsch": "Leute, die sie sind freundlich.",
-  "richtig": "Leute, die freundlich sind.",
-  "ar": "الجملة الموصولة: الفعل في آخرها"
- },
- {
-  "id": "f56",
-  "kat": "konstruktion",
-  "level": "B1",
-  "falsch": "Ich bin gelernt Deutsch seit Jahren.",
-  "richtig": "Ich lerne seit Jahren Deutsch.",
-  "ar": "lernen ليس حالة — أصلح بالمضارع مع seit"
- },
- {
-  "id": "f57",
-  "kat": "konstruktion",
-  "level": "B2",
-  "falsch": "Er sagte, dass er kommt morgen.",
-  "richtig": "Er sagte, dass er morgen komme.",
-  "ar": "النقل المنقول: Konjunktiv I مع ترتيب dass"
- },
- {
-  "id": "f58",
-  "kat": "konstruktion",
-  "level": "B2",
-  "falsch": "Um Deutsch zu lernen, ich brauche Zeit.",
-  "richtig": "Um Deutsch zu lernen, brauche ich Zeit.",
-  "ar": "um…zu افتتاحية ← الفعل ثانياً"
- },
- {
-  "id": "f59",
-  "kat": "schreibung",
-  "level": "A1",
-  "falsch": "ich bin student",
-  "richtig": "Ich bin Student.",
-  "ar": "الجملة والاسم الألماني يبدأان بالكابيتال"
- },
- {
-  "id": "f60",
-  "kat": "schreibung",
-  "level": "A2",
-  "falsch": "schon (بمعنى جميل)",
-  "richtig": "schön",
-  "ar": "schon = بالفعل · schön = جميل — الهمزة تغيّر المعنى"
- },
- {
-  "id": "f61",
-  "kat": "schreibung",
-  "level": "A2",
-  "falsch": "fur dich",
-  "richtig": "für dich",
-  "ar": "fur = فروة/جلد · für = لأجل"
- },
- {
-  "id": "f62",
-  "kat": "schreibung",
-  "level": "A1",
-  "falsch": "strasse (بهمزة مجرّدة)",
-  "richtig": "Straße",
-  "ar": "ß بعد متحرك طويل؛ ss بعد قصير — ولا تخترع همزات"
- },
- {
-  "id": "f63",
-  "kat": "schreibung",
-  "level": "A1",
-  "falsch": "da er kommt (بالمعنى: أنّه يأتي)",
-  "richtig": "dass er kommt",
-  "ar": "da = هناك/بسبب ذلك · dass = أنّ (فعل في الآخر)"
- },
- {
-  "id": "f64",
-  "kat": "schreibung",
-  "level": "B1",
-  "falsch": "Kafee / Gemüse ✗ همزات مرتجلة",
-  "richtig": "Kaffee / Gemüse",
-  "ar": "عند الشك اكتب بلا همزة ثم صحّح من القاموس"
- },
- {
-  "id": "f65",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "Ich bin aktuell in meiner Firma und arbeite sehr viel.",
-  "richtig": "Ich bin zurzeit in der Firma und arbeite sehr viel.",
-  "ar": "فرنسيةُك تُغريك: actuellement = حاليّاً؛ لكن aktuell الألمانيةِ تعني «راهنيٌّ/مُستجدّ». للوقتِ الحاضر: zurzeit أو momentan."
- },
- {
-  "id": "f66",
-  "kat": "falsche-freunde",
-  "level": "A2",
-  "falsch": "Im Theater sehen wir eine Farce über die Politik.",
-  "richtig": "Im Theater sehen wir ein Lustspiel über die Politik.",
-  "ar": "farce بالفرنسية نكتةٌ مسرحية؛ die Farceُ الألمانيةُ سخريةٌ هزليةٌ قصيرة. ونكتتُك اليومية: der Witz."
- },
- {
-  "id": "f67",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "Im Sommer mache ich einen Stage bei einer Tunesier-Firma.",
-  "richtig": "Im Sommer mache ich ein Praktikum bei einer Firma in Sousse.",
-  "ar": "le stage التدريبُ المهنيُّ بالفرنسية؛ بالألمانية Stage اسمُ مسرحيةٍ غنائية! والمرادُ: das Praktikum machen."
- },
- {
-  "id": "f68",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "Es gibt eine Issue mit dem Terminplan.",
-  "richtig": "Es gibt ein Problem mit dem Terminplan.",
-  "ar": "issue إنجليزيةٌ/فرنسيةٌ (مسألةٌ أو عَدَدُ مجلة)؛ بالألمانية: das Problem — ولا تُدخلها في رأسِ جملةٍ ألمانية."
- },
- {
-  "id": "f69",
-  "kat": "falsche-freunde",
-  "level": "A2",
-  "falsch": "Wir sensibilisieren die Kinder für das Wasser.",
-  "richtig": "Wir machen die Kinder auf das Wasser aufmerksam.",
-  "ar": "sensibiliser الفرنسيةُ ليست ألمانية؛ الفعلُ sensiblisieren غيرُ موجود، والصواب: aufmerksam machen auf +Akk."
- },
- {
-  "id": "f70",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "Nach dem Bac beginne ich das Studium.",
-  "richtig": "Nach dem Abitur beginne ich das Studium.",
-  "ar": "le bac الباكالوريا عندنا؛ اسمُ الشهادةِ في النظام الألماني: das Abitur — فلا تُبقِ الكلمةَ الفرنسية في جملتك."
- },
- {
-  "id": "f71",
-  "kat": "falsche-freunde",
-  "level": "A2",
-  "falsch": "Zum Geburtstag habe ich ein tolles Gift bekommen.",
-  "richtig": "Zum Geburtstag habe ich ein tolles Geschenk bekommen.",
-  "ar": "الفخُّ إنجليزيٌّ شابٌّ شائع: gift هديّةٌ بالإنجليزية، وGift سمٌّ قاتلٌ بالألمانية! والألمانُ يقولون Geschenk — لا cadeau ولا gift."
- },
- {
-  "id": "f72",
-  "kat": "falsche-freunde",
-  "level": "B2",
-  "falsch": "Meine Bewerbung wurde abgelehnt, mein Deutsch war nicht suffisant.",
-  "richtig": "Meine Bewerbung wurde abgelehnt, mein Deutsch war nicht ausreichend.",
-  "ar": "suffisant بالفرنسية كافٍ؛ وبالألمانية suffisant صفةُ المُكتفي بنفسه المتعالِي — والصواب: ausreichend."
- },
- {
-  "id": "f73",
-  "kat": "falsche-freunde",
-  "level": "A2",
-  "falsch": "Jeden Abend repariere ich mein Deutsch.",
-  "richtig": "Jeden Abend verbessere ich mein Deutsch.",
-  "ar": "réparer تُصلح الأشياء؛ والمهارةُ تُحسَّن: verbessern — فلا تُصلِح لغتَك بالمفكّ كما تُصلِح دراجتَك."
- },
- {
-  "id": "f74",
-  "kat": "falsche-freunde",
-  "level": "B1",
-  "falsch": "Bei der Anmeldung fülle ich einen Zettel aus.",
-  "richtig": "Bei der Anmeldung fülle ich ein Formular aus.",
-  "ar": "un formulaire استمارةٌ: das Formular؛ der Zettel ورقةُ ملاحظاتٍ صغيرة — فلا تخلطهما بما تعلقُ على الثلاجة."
- },
- {
-  "id": "f75",
-  "kat": "wortstellung",
-  "level": "A2",
-  "falsch": "Heute ich habe eine schwere Prüfung geschrieben.",
-  "richtig": "Heute habe ich eine schwere Prüfung geschrieben.",
-  "ar": "الفعلُ دائماً في المركز الثاني: اليومُ احتلَّ الأولَ فالتصقَ به الفعل — قاعدةُ v2 لا تُناقَش، والترتيبُ العاديُّ في «aujourd'hui j'ai…» الفرنسيةِ هو المُغرِي."
- },
- {
-  "id": "f76",
-  "kat": "wortstellung",
-  "level": "A2",
-  "falsch": "Ich hoffe, dass ich komme morgen früh nach Hause.",
-  "richtig": "Ich hoffe, dass ich morgen früh nach Hause komme.",
-  "ar": "dass تدفع الفعلَ إلى الآخِر؛ و«parce que/que» الفرنسيةُ تُبقيه حيثُ وُلِد — فلا تفعل فعلَها."
- },
- {
-  "id": "f77",
-  "kat": "wortstellung",
-  "level": "A1",
-  "falsch": "Ich bin müde, weil ich habe die ganze Nacht gelernt.",
-  "richtig": "Ich bin müde, weil ich die ganze Nacht gelernt habe.",
-  "ar": "weil أيضًا يُرسل الفعلَ إلى الآخر — خلافاً لـ parce que الفرنسيةِ التي تُبقي الترتيبَ العادي."
- },
- {
-  "id": "f78",
-  "kat": "wortstellung",
-  "level": "B1",
-  "falsch": "Deshalb ich bin zur Prüfung nicht gekommen.",
-  "richtig": "Deshalb bin ich zur Prüfung nicht gekommen.",
-  "ar": "deshalfa ظرفٌ لا حرفُ عطف: يفتتحُ الجملةَ فيأتي فعلُه قبل فاعله — قلبٌ مباشرٌ لا خيارَ له."
- },
- {
-  "id": "f79",
-  "kat": "wortstellung",
-  "level": "B2",
-  "falsch": "Ich weiß nicht, ob er kommt morgen in den Kurs.",
-  "richtig": "Ich weiß nicht, ob er morgen in den Kurs kommt.",
-  "ar": "ob تسحبُ الأفعالَ كما يفعل dass — فلا تتركها في المركز الثاني من جملةٍ جانبية."
- },
- {
-  "id": "f80",
-  "kat": "wortstellung",
-  "level": "A2",
-  "falsch": "Ich habe nicht verstanden die ganze Aufgabe.",
-  "richtig": "Ich habe die ganze Aufgabe nicht verstanden.",
-  "ar": "nicht يتقدُّم على نواةِ الفعلِ فقط — لا تُنبذِ المفعولَ بهِ إلى نهايةِ الجملةِ كما في ترجمةٍ حرفية."
- },
- {
-  "id": "f81",
-  "kat": "wortstellung",
-  "level": "B1",
-  "falsch": "Ich auch möchte mitkommen, wenn es erlaubt ist.",
-  "richtig": "Ich möchte auch mitkommen, wenn es erlaubt ist.",
-  "ar": "auch تُجاور ما تُشارِك فيه لا صدرَ الجملة: «أنا أيضًا أريدُ المشاركة» غيرُ «أريدُ المشاركةَ أيضًا»."
- },
- {
-  "id": "f82",
-  "kat": "wortstellung",
-  "level": "B2",
-  "falsch": "Wenn ich haben werde Zeit am Wochenende, besuche ich dich.",
-  "richtig": "Wenn ich am Wochenende Zeit habe, besuche ich dich.",
-  "ar": "المستقبلُ في جملةِ wenn ممنوع؛ الحاضرُ يكفي — و«si j'aurai» الفرنسيةُ فخٌّ مماثِلٌ معروفٌ عندهم."
- },
- {
-  "id": "f83",
-  "kat": "artikel",
-  "level": "A1",
-  "falsch": "Ich bin ein Lehrer in Sousse.",
-  "richtig": "Ich bin Lehrer in Sousse.",
-  "ar": "المهنُ بعد sein بلا أداةٍ؛ جملةُ c'est un professeur الفرنسيةُ تُغريك — والصفرُ هنا هو القاعدية."
- },
- {
-  "id": "f84",
-  "kat": "artikel",
-  "level": "A1",
-  "falsch": "Ich wohne jetzt in der Tunesien.",
-  "richtig": "Ich wohne jetzt in Tunesien.",
-  "ar": "معظمُ الدول محايدةٌ بلا أداة؛ تونس منها: في تونس «in Tunesien». الأدواتُ للمؤنثِ والمذكرِ (die Türkei, der Iran)."
- },
- {
-  "id": "f85",
-  "kat": "artikel",
-  "level": "A2",
-  "falsch": "Am Abend spiele ich das Fußball.",
-  "richtig": "Am Abend spiele ich Fußball.",
-  "ar": "مع spielen لا أداة للرياضةِ والآلات؛ و«jouer du football» أداةُها حتميةٌ عندكم — لا تحملها معك."
- },
- {
-  "id": "f86",
-  "kat": "artikel",
-  "level": "A2",
-  "falsch": "Wir gehen oft in der Schule am Samstag.",
-  "richtig": "Wir gehen oft in die Schule am Samstag.",
-  "ar": "gehen حركةٌ إلى مكان: in +Akk (in die)؛ والداتيفُ forكونٌ ثابتٌ. «à l'école» لا تُفيدك في الحالات."
- },
- {
-  "id": "f87",
-  "kat": "artikel",
-  "level": "B2",
-  "falsch": "Das habe ich in Internet gefunden.",
-  "richtig": "Das habe ich im Internet gefunden.",
-  "ar": "im = in dem: الشبكةُ تحتاجُ الأداةَ مع حرفِ الجر؛ و«sur Internet» بلا أداةٍ إغراءٌ فرنسيٌّ مباشر."
- },
- {
-  "id": "f88",
-  "kat": "artikel",
-  "level": "A2",
-  "falsch": "Meine Tante ist ein prima Köchin.",
-  "richtig": "Meine Tante ist eine prima Köchin.",
-  "ar": "المؤنثُ مؤنثٌ في الأداتين: cuisinière→une→eine — فلا تُبقِ ein حيثُ une تسبقُ أنفًا."
- },
- {
-  "id": "f89",
-  "kat": "praeposition",
-  "level": "A2",
-  "falsch": "Jeden Morgen fahre ich in den Bus um sieben.",
-  "richtig": "Jeden Morgen steige ich um sieben in den Bus ein.",
-  "ar": "الدخولُ في العربة: einsteigen in +Akk؛ «in den Bus fahren» تعني أنك تركبُه أصلًا — وmonter dans يُوهِمك."
- },
- {
-  "id": "f90",
-  "kat": "praeposition",
-  "level": "B1",
-  "falsch": "Seit zwei Jahren arbeite ich in Siemens.",
-  "richtig": "Seit zwei Jahren arbeite ich bei Siemens.",
-  "ar": "chez l'entreprise = bei +Dat؛ الشركاتُ والبيوتُ «عند»، وin تدخل البقاعَ لا الأسماءَ التجارية."
- },
- {
-  "id": "f91",
-  "kat": "praeposition",
-  "level": "B1",
-  "falsch": "Das hängt von das Wetter ab.",
-  "richtig": "Das hängt vom Wetter ab.",
-  "ar": "von تأخذُ الداتيف: von dem → vom؛ و«dépendre de» لا تُفيدك شيئاً في حالاتِ الإعراب."
- },
- {
-  "id": "f92",
-  "kat": "praeposition",
-  "level": "A2",
-  "falsch": "Am Wochenende treffe ich mit meinen Kollegen.",
-  "richtig": "Am Wochenende treffe ich meine Kollegen.",
-  "ar": "treffen متعدٍّ بمفعولٍ منصوبٍ بلا معيّة؛ rendez-vous avec تُنسيك «mit» — وصوابُك بلا حروف."
- },
- {
-  "id": "f93",
-  "kat": "praeposition",
-  "level": "B2",
-  "falsch": "Ich danke für Ihre schnelle Hilfe.",
-  "richtig": "Ich danke Ihnen für Ihre schnelle Hilfe.",
-  "ar": "danken يدينُ لشخصٍ داتيفًا قبل für؛ merci de votre aide الفرنسيةُ تسقط المُدان — والألمانية لا تُسقطه."
- },
- {
-  "id": "f94",
-  "kat": "praeposition",
-  "level": "B1",
-  "falsch": "Heute spreche meinen Chef über das Projekt.",
-  "richtig": "Heute spreche ich mit meinem Chef über das Projekt.",
-  "ar": "sprechen مع (mit)، أو reden mit؛ «parler à» تُسقطُ الحرفَ — فلا تُسقطْه أنت."
- },
- {
-  "id": "f95",
-  "kat": "praeposition",
-  "level": "A2",
-  "falsch": "Im Sommer fahren wir nach den Strand.",
-  "richtig": "Im Sommer fahren wir an den Strand.",
-  "ar": "nach للمدنِ والبلادِ بلا أداة؛ الشواطئُ والبحيراتُ إلى: an +Akk. و«à la plage» لا تفرِّق."
- },
- {
-  "id": "f96",
-  "kat": "zeitform",
-  "level": "A2",
-  "falsch": "Gestern habe ich zum Arzt gegangen.",
-  "richtig": "Gestern bin ich zum Arzt gegangen.",
-  "ar": "gehen/kommen/fahren: صديقُها sein؛ auxiliaireُها في الفرنسيةِ être فيُسهِّلُ عليك الخطأَ في الترجمة."
- },
- {
-  "id": "f97",
-  "kat": "zeitform",
-  "level": "A2",
-  "falsch": "Ich habe verschlafen, weil ich war am Sonntag lange auf.",
-  "richtig": "Ich habe verschlafen, weil ich am Sonntag lange aufgeblieben war.",
-  "ar": "السببُ السابقُ على الماضي يرفعُ الفعلَ إلى Plusquamperfekt — ولا ترمِ بـ «war» في صدرِ weil كما في j'étais resté."
- },
- {
-  "id": "f98",
-  "kat": "zeitform",
-  "level": "B1",
-  "falsch": "Letzte Woche bin ich nach Tunis geflogen gewesen.",
-  "richtig": "Letzte Woche bin ich nach Tunis geflogen.",
-  "ar": "لا تُراكم التامَّ فوقَ التام؛ le plus-que-parfait لا يُجبرك عليه — الفعلانِ المتتابعانِ واحدُهما كافٍ."
- },
- {
-  "id": "f99",
-  "kat": "zeitform",
-  "level": "A1",
-  "falsch": "Nächste Woche ich werde ans Meer fahren.",
-  "richtig": "Nächste Woche fahre ich ans Meer.",
-  "ar": "لخطتك القادمةِ يكفي الحاضرُ مع ظرفِ الزمان؛ werden+Inf للتنبّؤ لا للنيّةِ المحجوزةِ مسبقاً."
- },
- {
-  "id": "f100",
-  "kat": "zeitform",
-  "level": "B2",
-  "falsch": "Seit ich habe studiert, arbeite ich in dieser Firma.",
-  "richtig": "Seit ich studiert habe, arbeite ich in dieser Firma.",
-  "ar": "في جملةِ seit الفعلُ في الآخر، والماضي المنجزُ Perfekt؛ منذُ وأنتَ تدرسُ فالحاضرُ يكفي — دقِّق في مرادِك"
- },
- {
-  "id": "f101",
-  "kat": "zeitform",
-  "level": "A2",
-  "falsch": "Heute Morgen habe ich gefrühstückt gerade.",
-  "richtig": "Heute Morgen habe ich gerade gefrühstückt.",
-  "ar": "gerade بين haben والماضي؛ و«vient de» لا تُنقَلُ إلى Perfekt بترتيبِها — «Ich komme gerade vom Frühstück»."
- },
- {
-  "id": "f102",
-  "kat": "zahlen-zeit",
-  "level": "A2",
-  "falsch": "Wir treffen uns am 30 Juni um neun Uhr.",
-  "richtig": "Wir treffen uns am 30. Juni um neun Uhr.",
-  "ar": "التاريخُ عدديٌّ وترتيبيٌّ في آنٍ معًا فتحتاجُ النقطةَ: 30. — و«le 30 juin» الفرنسيةُ بلا نقطة، فاحذف عادَتَك."
- },
- {
-  "id": "f103",
-  "kat": "zahlen-zeit",
-  "level": "A1",
-  "falsch": "Wir treffen uns um halb neun — also um halb zehn? Nein, ich meine 9:30 Uhr.",
-  "richtig": "Ich komme um halb neun, also um 8:30 Uhr.",
-  "ar": "نصفُ الألمان يسبقُ الساعةَ لا يلحقُها: halb neun = الثامنةُ والنصفُ لا التاسعةُ والنصف — «تسعة ونص» عندنا تُغريك، فاطرحْ واحدًا من ساعتِهم."
- },
- {
-  "id": "f104",
-  "kat": "zahlen-zeit",
-  "level": "A1",
-  "falsch": "Meine Nummer: null zweihundertsechzehn zweiundzwanzig vierunddreißig.",
-  "richtig": "Meine Nummer: nullnull zweiundsechzig zweiundzwanzig vierunddreißig.",
-  "ar": "مفتاحُ تونس +216 يُقرأ بالألمانية null zweiundsechzig أو nullsechzehn لا «zweihundert» — الأرقامُ المتسلسلةُ أزواجٌ أو آحاد، أبداً مئات"
- },
- {
-  "id": "f105",
-  "kat": "konstruktion",
-  "level": "A1",
-  "falsch": "Ich habe fünfundzwanzig Jahre.",
-  "richtig": "Ich bin fünfundzwanzig Jahre alt.",
-  "ar": "j'ai vingt-cinq ans تُغريك بـ haben؛ والعمرُ بالألمانيةِ كينونةٌ: sein + alt — لا مِلكية."
- },
- {
-  "id": "f106",
-  "kat": "konstruktion",
-  "level": "A1",
-  "falsch": "Heute habe ich kalt im Klassenzimmer.",
-  "richtig": "Heute ist mir kalt im Klassenzimmer.",
-  "ar": "j'ai froid تُلبِسُك haben؛ وجسدُك هنا داتيفٌ: mir ist kalt/heiß/wund. بردُك يكونُ عندك لا لديك"
- },
- {
-  "id": "f107",
-  "kat": "konstruktion",
-  "level": "B1",
-  "falsch": "Es sind zu viele Regeln, dass man sie nicht lernen kann.",
-  "richtig": "Es sind zu viele Regeln, als dass man sie lernen könnte.",
-  "ar": "trop…pour que: البناءُ als dass + Konjunktiv — و«أن» الحاديةُ لا تُنقَلُ إلى dass"
- },
- {
-  "id": "f108",
-  "kat": "konstruktion",
-  "level": "A2",
-  "falsch": "Es fällt, dass wir die Prüfung wiederholen.",
-  "richtig": "Es ist nötig, dass wir die Prüfung wiederholen.",
-  "ar": "il faut لا «تسقط»! الضرورةُ: es muss / es ist nötig — وحدهُ «fällt» هنا خطأٌ واضحٌ كوقوعِه"
- },
- {
-  "id": "f109",
-  "kat": "konstruktion",
-  "level": "B1",
-  "falsch": "Ich freue mich, dass ich bestanden habe am Montag.",
-  "richtig": "Ich freue mich, dass ich am Montag bestanden habe.",
-  "ar": "في dass تجرُّ الأداةُ (habe) آخرَ الكلّ — فلا تُوقِفها قبل الظرفِ كما في j'ai réussi lundi"
- },
- {
-  "id": "f110",
-  "kat": "konstruktion",
-  "level": "B2",
-  "falsch": "Obwohl das Wetter schlecht war, aber wir sind spazieren gegangen.",
-  "richtig": "Obwohl das Wetter schlecht war, sind wir spazieren gegangen.",
-  "ar": "obwohl يستولي فيؤخِّرُ الفعلَ فلا يحتاج aber؛ «bien que…mais» الفرنسيةُ لا تجمعُها والعربيةُ تُدرِكُ ذلك"
- },
- {
-  "id": "f111",
-  "kat": "konstruktion",
-  "level": "B1",
-  "falsch": "Das ist der Mann, den ich habe gestern getroffen.",
-  "richtig": "Das ist der Mann, den ich gestern getroffen habe.",
-  "ar": "صلةٌ موصولة: الفعلُ في آخرِها — والحرفُ den صحيحٌ، والترتيبُ هو المخطئُ هذه المرةَ فلا تُبدِلِ الضمير"
- },
- {
-  "id": "f112",
-  "kat": "konstruktion",
-  "level": "B2",
-  "falsch": "Ich bitte dir um einen früheren Termin.",
-  "richtig": "Ich bitte dich um einen früheren Termin.",
-  "ar": "bitten: الفعلُ متعدٍّ بمفعولٍ منصوب ثم um؛ «je vous prie de» تُظهِرُ لك المجهولَ مرفوعاً — والألمانيةُ تراه منصوباً"
- },
- {
-  "id": "f113",
-  "kat": "schreibung",
-  "level": "A1",
-  "falsch": "ich bin student an der uni in tunis.",
-  "richtig": "Ich bin Student an der Uni in Tunis.",
-  "ar": "الألمانيةُ تُكبِّرُ كلَّ اسمٍ — لا كما في العربيةِ والفرنسية؛ والجملةُ تبدأُ كبيراً. فابدأْ كبيراً تصغُرْ أخطاؤك"
- },
- {
-  "id": "f114",
-  "kat": "schreibung",
-  "level": "A1",
-  "falsch": "Die Strasse ist breit und wir grussen die Nachbarn.",
-  "richtig": "Die Straße ist breit und wir grüßen die Nachbarn.",
-  "ar": "ß بعد العلةِ الطويلةِ والمُثنّاة، ss بعد القصيرة: Straße لكن «Fluss». ولا تستعملْها في كلماتِ الإنجليزِ كما تكتبُها"
- },
- {
-  "id": "f115",
-  "kat": "schreibung",
-  "level": "A2",
-  "falsch": "Ich komme aus Tunissien.",
-  "richtig": "Ich komme aus Tunesien.",
-  "ar": "اسمُ بلدِك بسينٍ واحدٍ: Tunesien — «Tunesien» لا «Tunissien»: حرفٌ واحدٌ يُغيِّرُ بلدَك. ولغةُ أهلِه: tunesisch"
- },
- {
-  "id": "f116",
-  "kat": "schreibung",
-  "level": "B1",
-  "falsch": "Meine Schwester heyratet im Juni.",
-  "richtig": "Meine Schwester heiratet im Juni.",
-  "ar": "heiraten بلا ياءٍ بعد الهاء: heiratet/Heirat؛ و«ي» العَرَضِيةُ لا تعملُ في الألمانية — e بعد r لا تكتبُ ياءً"
- },
- {
-  "id": "f117",
-  "kat": "schreibung",
-  "level": "B1",
-  "falsch": "Wir gehen spatzieren, wenn es nicht regnet.",
-  "richtig": "Wir gehen spazieren, wenn es nicht regnet.",
-  "ar": "spazieren بزايٍ واحدة، والصحيحُ z: der Spaziergang. والحرفُ «spatz» كما في طيورِ الدوريِّ عصفورٌ لا ينزه — فلا تكتبْ ما تسمعُ فقط"
- },
- {
-  "id": "f118",
-  "kat": "schreibung",
-  "level": "A2",
-  "falsch": "Ich überphweiße dir das Geld.",
-  "richtig": "Ich überweise dir das Geld.",
-  "ar": "v الألمانيةُ تُنطَقُ f لكن تُكتَبُ v: überweisen/vorbereiten/fahren — فلا تُجمِلها بـ ph اللاتينيةِ والفرنسية"
- },
- {
-  "id": "f119",
-  "kat": "schreibung",
-  "level": "A1",
-  "falsch": "Ich denke, daß der Kurs am Montag beginnt.",
-  "richtig": "Ich denke, dass der Kurs am Montag beginnt.",
-  "ar": "«ß» في dass أُلغِيَت من الإملاءِ الحديث (1996): dass/duß؟ لا — dass دائماً؛ ß تبقى بعد الطويلِ فقط: aber/grüßen."
- },
- {
-  "id": "f120",
-  "kat": "wortschatz",
-  "level": "A2",
-  "falsch": "Meine Tante führt eine kleine Fabrik mit fünf Angestellten.",
-  "richtig": "Meine Tante führt eine kleine Firma mit fünf Angestellten.",
-  "ar": "usine = die Fabrik مصنعٌ يعلوهُ الدخان؛ ومحلُّ عمَّتك مكتبٌ صغير: die Firma. ولا تُصنِّعْ ما هو مكتَب"
- },
- {
-  "id": "f121",
-  "kat": "wortschatz",
-  "level": "A1",
-  "falsch": "Ich leihe das Buch von der Bibliothek und leihe es zurück.",
-  "richtig": "Ich leihe mir das Buch aus und gebe es zurück.",
-  "ar": "الاتجاهانِ في «prêter» واحدٌ؛ والألمانيةُ تُفرِّق: sich ausleihen تأخذ، geben/verleihen تُعطي. فلا تُعيدِ الإعارةَ مرتين"
- },
- {
-  "id": "f122",
-  "kat": "wortschatz",
-  "level": "B1",
-  "falsch": "Mein Mitschüler im Büro schreibt gut E-Mails.",
-  "richtig": "Mein Kollege im Büro schreibt gut E-Mails.",
-  "ar": "المدرسةُ لها Mitschüler، والوظيفةُ لها Kollege — و«زميلي» بالدارجةِ لا تفرِّق، فلا تُحمِّلْها على المكتب"
- },
- {
-  "id": "f123",
-  "kat": "wortschatz",
-  "level": "B1",
-  "falsch": "Wir hatten einen großen Termin über die Kosten im Büro.",
-  "richtig": "Wir hatten eine lange Besprechung über die Kosten.",
-  "ar": "Termin موعدٌ عند طبيبٍ أو شباك؛ واجتماعُ المكتب: Besprechung/Sitzung — و«grand» لا يصفُ المواعيد"
- },
- {
-  "id": "f124",
-  "kat": "wortschatz",
-  "level": "B2",
-  "falsch": "Im Sommer schwimmen wir gern in der See, der kleine See ist warm.",
-  "richtig": "Im Sommer schwimmen wir gern in dem See, der kleine See ist warm.",
-  "ar": "der See بحيرةٌ (مذكر)؛ die See البحرُ (مؤنثٌ شاعري) — فالخطأُ جِنسِيٌّ يُغرقُك في بحيرة. و«la mer» لا تُنقَلُ الأداةُ"
- },
- {
-  "id": "f125",
-  "kat": "wortschatz",
-  "level": "A2",
-  "falsch": "Zum Frühstück trinke ich den Kaffee und esse zwei Eier.",
-  "richtig": "Zum Frühstück trinke ich Kaffee und esse zwei Eier.",
-  "ar": "عامٌّ في مشروبِ الصباحِ بلا أداة؛ «le café» جنسٌ عندكم، والألمانيةُ في طقسِ الكوبِ تُعرِيهِ"
- },
- {
-  "id": "f126",
-  "kat": "wortschatz",
-  "level": "A1",
-  "falsch": "Ich nehme das Velo und fahre damit zur Arbeit.",
-  "richtig": "Ich nehme das Fahrrad und fahre damit zur Arbeit.",
-  "ar": "vélo فرنسيتُك؛ بالألمانية das Fahrrad — و«Velo» لا يفهمها إلا السويسريُّ المتفرنِج. ولا تقلْ « bicyclette »"
- },
- {
-  "id": "f127",
-  "kat": "sonst",
-  "level": "B2",
-  "falsch": "Dein Bruder ist nett, mais il ne le pense pas.",
-  "richtig": "Dein Bruder ist nett, aber er meint es nicht so.",
-  "ar": "حين تنزلقُ الجملةُ إلى الفرنسيةِ منتصفَها فقد خسرتَ المعنى لا الكلمةَ فقط — وأكمِلها ألمانيةً ولو ببساطتِها"
- },
- {
-  "id": "f128",
-  "kat": "sonst",
-  "level": "B2",
-  "falsch": "Ich bin d'accord mit deinem Vorschlag.",
-  "richtig": "Ich bin mit deinem Vorschlag einverstanden.",
-  "ar": "d'accord ليست ألمانية؛ einverstanden sein mit +Dat — و«OK» تُقبَلُ محادثةً، لا في رسالةِ الإدارة"
- }
+  {
+    "id": "f01",
+    "kat": "falsche-freunde",
+    "level": "A1",
+    "falsch": "become = bekommen",
+    "richtig": "become = werden · bekommen = get/receive",
+    "ar": "أشهر فخّ لغوي: bekommen = يحصل على/يستلم وليست «يصبح»"
+  },
+  {
+    "id": "f02",
+    "kat": "falsche-freunde",
+    "level": "A1",
+    "falsch": "Ich nehme dir das Buch mit.",
+    "richtig": "Ich bringe dir das Buch.",
+    "ar": "bring = يجلب (bringen) · take = يأخذ (nehmen)"
+  },
+  {
+    "id": "f03",
+    "kat": "falsche-freunde",
+    "level": "A2",
+    "falsch": "Der Chef = الطاهي؟",
+    "richtig": "Der Chef = الرئيس/المدير · الطاهي = der Koch",
+    "ar": "Chef ألمانية = رئيس"
+  },
+  {
+    "id": "f04",
+    "kat": "falsche-freunde",
+    "level": "A2",
+    "falsch": "das Information",
+    "richtig": "die Information — ج: die Informationen",
+    "ar": "كلمات -ion/-tät/-ung مؤنثة دائماً"
+  },
+  {
+    "id": "f05",
+    "kat": "falsche-freunde",
+    "level": "A2",
+    "falsch": "Willst du Kaffee? (طلب ودّي)",
+    "richtig": "Möchtest du Kaffee?",
+    "ar": "wollen إرادة قوية؛ الودّ والعروض = möchten"
+  },
+  {
+    "id": "f06",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "Das ist eventual richtig.",
+    "richtig": "Das ist möglicherweise/eventuell richtig.",
+    "ar": "eventual(ly) إنجليزية ≠ eventuell ألمانية (ربما)"
+  },
+  {
+    "id": "f07",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "Ich habe das realisiert. (أدركت)",
+    "richtig": "Ich habe das bemerkt/verstanden · أُنفّذ = verwirklicht",
+    "ar": "realise = يُدرك (bemerken) وليس «أنفّذ»"
+  },
+  {
+    "id": "f08",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "ein sensibles Thema (حساس/دقيق)",
+    "richtig": "ein heikles Thema · sensibel = حسّاس طبياً/نفسياً",
+    "ar": "sensible/sensibel فخّ الترجمة الحرفية"
+  },
+  {
+    "id": "f09",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "Ich bin verlegen. (مسافر)",
+    "richtig": "verlegen = محرَج · verreist = مسافر/غائب",
+    "ar": "verlegen ≠ يسافر! خطأ شائع جداً"
+  },
+  {
+    "id": "f10",
+    "kat": "falsche-freunde",
+    "level": "B2",
+    "falsch": "Das ist plausible. (واضح)",
+    "richtig": "Das ist einleuchtend · plausible = معقول",
+    "ar": "plausible ≠ plain/clear — تشابه خادع"
+  },
+  {
+    "id": "f11",
+    "kat": "wortstellung",
+    "level": "A1",
+    "falsch": "Heute ich lerne Deutsch.",
+    "richtig": "Heute lerne ich Deutsch.",
+    "ar": "القاعدة الحديدية: الفعل في الموقع الثاني (V2)"
+  },
+  {
+    "id": "f12",
+    "kat": "wortstellung",
+    "level": "A1",
+    "falsch": "Morgen wir gehen ins Kino.",
+    "richtig": "Morgen gehen wir ins Kino.",
+    "ar": "كلمة أولى ← الفعل ثانياً ثم الفاعل"
+  },
+  {
+    "id": "f13",
+    "kat": "wortstellung",
+    "level": "A2",
+    "falsch": "Ich weiß, dass ich bin müde.",
+    "richtig": "Ich weiß, dass ich müde bin.",
+    "ar": "بعد dass/weil الفعل إلى آخر الجملة"
+  },
+  {
+    "id": "f14",
+    "kat": "wortstellung",
+    "level": "A2",
+    "falsch": "weil ich habe keine Zeit",
+    "richtig": "weil ich keine Zeit habe",
+    "ar": "«أخير الفعل» في جملة weil — أشهر خطأ عند العرب"
+  },
+  {
+    "id": "f15",
+    "kat": "wortstellung",
+    "level": "A2",
+    "falsch": "Obwohl es regnet, wir bleiben hier.",
+    "richtig": "Obwohl es regnet, bleiben wir hier.",
+    "ar": "بعد obwohl الافتتاحية يعود الفعل للموقع الثاني"
+  },
+  {
+    "id": "f16",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "Ich habe nicht gewusst das.",
+    "richtig": "Ich habe das nicht gewusst.",
+    "ar": "المفعول بين haben و P.II وnicht قبل P.II"
+  },
+  {
+    "id": "f17",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "Dann ich kann kommen.",
+    "richtig": "Dann kann ich kommen.",
+    "ar": "Dann افتتاح ← الفعل الثاني: kann ثم الفاعل"
+  },
+  {
+    "id": "f18",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "…, dass er kommt morgen.",
+    "richtig": "…, dass er morgen kommt.",
+    "ar": "في الجملة الثانوية: الزمان في الوسط والفعل في النهاية"
+  },
+  {
+    "id": "f19",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "Trotzdem er kam zu spät.",
+    "richtig": "Trotzdem kam er zu spät.",
+    "ar": "trotzdem/deshalb صيغ افتتاح ← الفعل ثانياً"
+  },
+  {
+    "id": "f20",
+    "kat": "wortstellung",
+    "level": "A2",
+    "falsch": "und ich habe gesagt ihm das",
+    "richtig": "und ich habe ihm das gesagt",
+    "ar": "بعد und نفس الترتيب: haben + … + P.II"
+  },
+  {
+    "id": "f21",
+    "kat": "artikel",
+    "level": "A1",
+    "falsch": "Ich lerne Deutsch Sprache.",
+    "richtig": "Ich lerne die deutsche Sprache.",
+    "ar": "الصفة بين الأداة والاسم مع نهاياتها"
+  },
+  {
+    "id": "f22",
+    "kat": "artikel",
+    "level": "A1",
+    "falsch": "Wo ist Bahnhof?",
+    "richtig": "Wo ist der Bahnhof?",
+    "ar": "الألمانية لا تحذف الأداة من المحدّد"
+  },
+  {
+    "id": "f23",
+    "kat": "artikel",
+    "level": "A2",
+    "falsch": "Ich bin 20 Jahre.",
+    "richtig": "Ich bin 20 Jahre alt.",
+    "ar": "alt إلزامية في العمر — حذفها خطأ كلاسيكي"
+  },
+  {
+    "id": "f24",
+    "kat": "artikel",
+    "level": "A2",
+    "falsch": "Ich habe 20 Jahre.",
+    "richtig": "Ich bin 20 Jahre alt.",
+    "ar": "العمر يكون وليس يملك"
+  },
+  {
+    "id": "f25",
+    "kat": "artikel",
+    "level": "A1",
+    "falsch": "Ich komme aus die Türkei.",
+    "richtig": "Ich komme aus der Türkei.",
+    "ar": "حروفُ الجرِّ aus تأخذُ الداتيف، والبلدانُ المؤنّثةُ (die Türkei) تصيرُ der: aus der Türkei. (aus + Dativ: die → der)"
+  },
+  {
+    "id": "f26",
+    "kat": "artikel",
+    "level": "A2",
+    "falsch": "mit die Freundin",
+    "richtig": "mit der Freundin",
+    "ar": "mit + Dativ دائماً"
+  },
+  {
+    "id": "f27",
+    "kat": "artikel",
+    "level": "B1",
+    "falsch": "trotz dem Regen",
+    "richtig": "trotz des Regens",
+    "ar": "trotz/wegen + Genitiv في الفصحى"
+  },
+  {
+    "id": "f28",
+    "kat": "artikel",
+    "level": "B1",
+    "falsch": "wegen dem Wetter",
+    "richtig": "wegen des Wetters",
+    "ar": "wegen + Genitiv (وليس Dativ الشائع عامياً)"
+  },
+  {
+    "id": "f29",
+    "kat": "praeposition",
+    "level": "A2",
+    "falsch": "Ich warte auf den Bus seit einer Stunde.",
+    "richtig": "Ich warte seit einer Stunde auf den Bus.",
+    "ar": "«auf den Bus» تبقى في آخر الجملة بعد seit"
+  },
+  {
+    "id": "f30",
+    "kat": "praeposition",
+    "level": "A2",
+    "falsch": "Ich fahre in Berlin.",
+    "richtig": "Ich fahre nach Berlin. / Ich bin in Berlin.",
+    "ar": "in + Dativ = موجود في؛ الحركة إلى مدينة = nach"
+  },
+  {
+    "id": "f31",
+    "kat": "praeposition",
+    "level": "A2",
+    "falsch": "Wir gehen zu dem Supermarkt.",
+    "richtig": "Wir gehen in den Supermarkt.",
+    "ar": "داخل المكان التجاري/المحطة = in + Akkusativ"
+  },
+  {
+    "id": "f32",
+    "kat": "praeposition",
+    "level": "A1",
+    "falsch": "am Montag um 8 Uhr? ✓ · aber: „bis 8 Uhr kommen“ (الوصول)",
+    "richtig": "um 8 Uhr kommen (الوصول المحدّد)",
+    "ar": "um = عند الساعة؛ von…bis = المدة"
+  },
+  {
+    "id": "f33",
+    "kat": "praeposition",
+    "level": "A2",
+    "falsch": "seit drei Monaten bin ich hier gewesen.",
+    "richtig": "seit drei Monaten bin ich hier.",
+    "ar": "seit مع المضارع للحالة المستمرة — لا Perfekt"
+  },
+  {
+    "id": "f34",
+    "kat": "praeposition",
+    "level": "B1",
+    "falsch": "Ich freue mich dein Geschenk.",
+    "richtig": "Ich freue mich über dein Geschenk.",
+    "ar": "freuen über (سبب) vs freuen auf (تطلّع)"
+  },
+  {
+    "id": "f35",
+    "kat": "praeposition",
+    "level": "B1",
+    "falsch": "Wir nehmen teil an den Kurs.",
+    "richtig": "Wir nehmen an dem Kurs teil.",
+    "ar": "an + Dativ وteil في آخر الجملة"
+  },
+  {
+    "id": "f36",
+    "kat": "praeposition",
+    "level": "B1",
+    "falsch": "Er hat Angst von Hunden.",
+    "richtig": "Er hat Angst vor Hunden.",
+    "ar": "الخوفُ يتعدّى بـvor + داتيف لا بـvon: Angst haben vor + Dativ. (Angst haben vor + Dativ)"
+  },
+  {
+    "id": "f37",
+    "kat": "zeitform",
+    "level": "A2",
+    "falsch": "Ich habe nicht ins Kino gegangen.",
+    "richtig": "Ich bin nicht ins Kino gegangen.",
+    "ar": "مع فعل حركة/تحول المركّب بـ sein وليس haben"
+  },
+  {
+    "id": "f38",
+    "kat": "zeitform",
+    "level": "A2",
+    "falsch": "Gestern ich habe gearbeitet.",
+    "richtig": "Gestern habe ich gearbeitet.",
+    "ar": "V2 حتى مع المضارع المركّب"
+  },
+  {
+    "id": "f39",
+    "kat": "zeitform",
+    "level": "A2",
+    "falsch": "Ich habe das Buch gelesen gestern.",
+    "richtig": "Gestern habe ich das Buch gelesen.",
+    "ar": "الظرف في الافتتاح أو قبل P.II مباشرة"
+  },
+  {
+    "id": "f40",
+    "kat": "zeitform",
+    "level": "A1",
+    "falsch": "Ich spiele gestern Fußball.",
+    "richtig": "Ich spielte Fußball gestern. / Ich habe gestern gespielt.",
+    "ar": "المضارع لا يحكي الأمس في الكتابة"
+  },
+  {
+    "id": "f41",
+    "kat": "zeitform",
+    "level": "B1",
+    "falsch": "Nachdem er kam, rief ich an.",
+    "richtig": "Nachdem er gekommen war, rief ich an.",
+    "ar": "nachdem: الحدث الأقدم = Plusquamperfekt"
+  },
+  {
+    "id": "f42",
+    "kat": "zeitform",
+    "level": "B1",
+    "falsch": "Als ich habe ihn gesehen, …",
+    "richtig": "Als ich ihn sah, …",
+    "ar": "als + ماضٍ بسيط/مركّب بترتيب الفاعل الطبيعي"
+  },
+  {
+    "id": "f43",
+    "kat": "zeitform",
+    "level": "A2",
+    "falsch": "Ich bin hier seit zwei Jahren gewohnt.",
+    "richtig": "Ich wohne hier seit zwei Jahren.",
+    "ar": "seit + مضارع (wohnen بلا مركّب)"
+  },
+  {
+    "id": "f44",
+    "kat": "zeitform",
+    "level": "A2",
+    "falsch": "Ich habe um 5 Uhr aufgestanden.",
+    "richtig": "Ich bin um 5 Uhr aufgestanden.",
+    "ar": "aufstehen فعل تحوّل ← sein"
+  },
+  {
+    "id": "f45",
+    "kat": "zahlen-zeit",
+    "level": "A1",
+    "falsch": "Telefon: 127 = eins-zwei-sieben? (مسموح) / «واحد اثنين» بالعربية",
+    "richtig": "Telefon: eins, zwei, sieben — رقمًا رقمًا",
+    "ar": "الألمان ينطّقون الهاتف رقماً رقماً بلا جمع"
+  },
+  {
+    "id": "f46",
+    "kat": "zahlen-zeit",
+    "level": "A1",
+    "falsch": "Es ist halb acht (08:30)",
+    "richtig": "halb neun = 08:30",
+    "ar": "«halb» تسبق الساعة التالية: نصف التاسعة = 8:30"
+  },
+  {
+    "id": "f47",
+    "kat": "zahlen-zeit",
+    "level": "A1",
+    "falsch": "am erste Mai",
+    "richtig": "am ersten Mai",
+    "ar": "التواريخ: am + Ordinalzahl (-en)"
+  },
+  {
+    "id": "f48",
+    "kat": "zahlen-zeit",
+    "level": "A2",
+    "falsch": "vor zehn Jahre",
+    "richtig": "vor zehn Jahren",
+    "ar": "vor + Dativ والجمع يأخذ n بعد الأداة/العدد"
+  },
+  {
+    "id": "f49",
+    "kat": "zahlen-zeit",
+    "level": "A2",
+    "falsch": "für zwei Stunde",
+    "richtig": "für zwei Stunden",
+    "ar": "العدد + جمع: بلا n إلا بعد الأداة أو في Dativ"
+  },
+  {
+    "id": "f50",
+    "kat": "zahlen-zeit",
+    "level": "A1",
+    "falsch": "zwei tausend zwan-zig (بالفصل)",
+    "richtig": "zweitausendzwanzig",
+    "ar": "الأرقام تركيب كلمة واحدة"
+  },
+  {
+    "id": "f51",
+    "kat": "konstruktion",
+    "level": "A1",
+    "falsch": "Ich heiß Ahmad.",
+    "richtig": "Ich heiße Ahmad.",
+    "ar": "heißen يتصل بـ e: heiße"
+  },
+  {
+    "id": "f52",
+    "kat": "konstruktion",
+    "level": "A1",
+    "falsch": "Ich bin kalt.",
+    "richtig": "Mir ist kalt.",
+    "ar": "الحرارة/الجوع/الخوف حالات Dativ: mir/dir ist"
+  },
+  {
+    "id": "f53",
+    "kat": "konstruktion",
+    "level": "A2",
+    "falsch": "Ich bin Hunger.",
+    "richtig": "Ich habe Hunger/Durst/Angst/Zeit.",
+    "ar": "الحالة بالجسد/النفس = haben في الألمانية"
+  },
+  {
+    "id": "f54",
+    "kat": "konstruktion",
+    "level": "A2",
+    "falsch": "Ich möchte gern ein Kaffee.",
+    "richtig": "Ich möchte gern einen Kaffee.",
+    "ar": "المفعول به بعد möchte = Akkusativ"
+  },
+  {
+    "id": "f55",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "Leute, die sie sind freundlich.",
+    "richtig": "Leute, die freundlich sind.",
+    "ar": "الجملة الموصولة: الفعل في آخرها"
+  },
+  {
+    "id": "f56",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "Ich bin gelernt Deutsch seit Jahren.",
+    "richtig": "Ich lerne seit Jahren Deutsch.",
+    "ar": "lernen ليس حالة — أصلح بالمضارع مع seit"
+  },
+  {
+    "id": "f57",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "Er sagte, dass er kommt morgen.",
+    "richtig": "Er sagte, dass er morgen komme.",
+    "ar": "النقل المنقول: Konjunktiv I مع ترتيب dass"
+  },
+  {
+    "id": "f58",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "Um Deutsch zu lernen, ich brauche Zeit.",
+    "richtig": "Um Deutsch zu lernen, brauche ich Zeit.",
+    "ar": "um…zu افتتاحية ← الفعل ثانياً"
+  },
+  {
+    "id": "f59",
+    "kat": "schreibung",
+    "level": "A1",
+    "falsch": "ich bin student",
+    "richtig": "Ich bin Student.",
+    "ar": "الجملة والاسم الألماني يبدأان بالكابيتال"
+  },
+  {
+    "id": "f60",
+    "kat": "schreibung",
+    "level": "A2",
+    "falsch": "schon (بمعنى جميل)",
+    "richtig": "schön",
+    "ar": "schon = بالفعل · schön = جميل — الهمزة تغيّر المعنى"
+  },
+  {
+    "id": "f61",
+    "kat": "schreibung",
+    "level": "A2",
+    "falsch": "fur dich",
+    "richtig": "für dich",
+    "ar": "fur = فروة/جلد · für = لأجل"
+  },
+  {
+    "id": "f62",
+    "kat": "schreibung",
+    "level": "A1",
+    "falsch": "strasse (بهمزة مجرّدة)",
+    "richtig": "Straße",
+    "ar": "ß بعد متحرك طويل؛ ss بعد قصير — ولا تخترع همزات"
+  },
+  {
+    "id": "f63",
+    "kat": "schreibung",
+    "level": "A1",
+    "falsch": "da er kommt (بالمعنى: أنّه يأتي)",
+    "richtig": "dass er kommt",
+    "ar": "da = هناك/بسبب ذلك · dass = أنّ (فعل في الآخر)"
+  },
+  {
+    "id": "f64",
+    "kat": "schreibung",
+    "level": "B1",
+    "falsch": "Kaffee / Gemüse ✗ همزات مرتجلة",
+    "richtig": "Kaffee / Gemüse",
+    "ar": "عند الشك اكتب بلا همزة ثم صحّح من القاموس"
+  },
+  {
+    "id": "f65",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "Ich bin aktuell in meiner Firma und arbeite sehr viel.",
+    "richtig": "Ich bin zurzeit in der Firma und arbeite sehr viel.",
+    "ar": "فرنسيةُك تُغريك: actuellement = حاليّاً؛ لكن aktuell الألمانيةِ تعني «راهنيٌّ/مُستجدّ». للوقتِ الحاضر: zurzeit أو momentan."
+  },
+  {
+    "id": "f66",
+    "kat": "falsche-freunde",
+    "level": "A2",
+    "falsch": "Im Theater sehen wir eine Farce über die Politik.",
+    "richtig": "Im Theater sehen wir ein Lustspiel über die Politik.",
+    "ar": "farce بالفرنسية نكتةٌ مسرحية؛ die Farceُ الألمانيةُ سخريةٌ هزليةٌ قصيرة. ونكتتُك اليومية: der Witz."
+  },
+  {
+    "id": "f67",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "Im Sommer mache ich einen Stage bei einer Tunesier-Firma.",
+    "richtig": "Im Sommer mache ich ein Praktikum bei einer Firma in Sousse.",
+    "ar": "le stage التدريبُ المهنيُّ بالفرنسية؛ بالألمانية Stage اسمُ مسرحيةٍ غنائية! والمرادُ: das Praktikum machen."
+  },
+  {
+    "id": "f68",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "Es gibt eine Issue mit dem Terminplan.",
+    "richtig": "Es gibt ein Problem mit dem Terminplan.",
+    "ar": "issue إنجليزيةٌ/فرنسيةٌ (مسألةٌ أو عَدَدُ مجلة)؛ بالألمانية: das Problem — ولا تُدخلها في رأسِ جملةٍ ألمانية."
+  },
+  {
+    "id": "f69",
+    "kat": "falsche-freunde",
+    "level": "A2",
+    "falsch": "Wir sensibilisieren die Kinder für das Wasser.",
+    "richtig": "Wir machen die Kinder auf das Wasser aufmerksam.",
+    "ar": "sensibiliser الفرنسيةُ ليست ألمانية؛ الفعلُ sensiblisieren غيرُ موجود، والصواب: aufmerksam machen auf +Akk."
+  },
+  {
+    "id": "f70",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "Nach dem Bac beginne ich das Studium.",
+    "richtig": "Nach dem Abitur beginne ich das Studium.",
+    "ar": "le bac الباكالوريا عندنا؛ اسمُ الشهادةِ في النظام الألماني: das Abitur — فلا تُبقِ الكلمةَ الفرنسية في جملتك."
+  },
+  {
+    "id": "f71",
+    "kat": "falsche-freunde",
+    "level": "A2",
+    "falsch": "Zum Geburtstag habe ich ein tolles Gift bekommen.",
+    "richtig": "Zum Geburtstag habe ich ein tolles Geschenk bekommen.",
+    "ar": "الفخُّ إنجليزيٌّ شابٌّ شائع: gift هديّةٌ بالإنجليزية، وGift سمٌّ قاتلٌ بالألمانية! والألمانُ يقولون Geschenk — لا cadeau ولا gift."
+  },
+  {
+    "id": "f72",
+    "kat": "falsche-freunde",
+    "level": "B2",
+    "falsch": "Meine Bewerbung wurde abgelehnt, mein Deutsch war nicht suffisant.",
+    "richtig": "Meine Bewerbung wurde abgelehnt, mein Deutsch war nicht ausreichend.",
+    "ar": "suffisant بالفرنسية كافٍ؛ وبالألمانية suffisant صفةُ المُكتفي بنفسه المتعالِي — والصواب: ausreichend."
+  },
+  {
+    "id": "f73",
+    "kat": "falsche-freunde",
+    "level": "A2",
+    "falsch": "Jeden Abend repariere ich mein Deutsch.",
+    "richtig": "Jeden Abend verbessere ich mein Deutsch.",
+    "ar": "réparer تُصلح الأشياء؛ والمهارةُ تُحسَّن: verbessern — فلا تُصلِح لغتَك بالمفكّ كما تُصلِح دراجتَك."
+  },
+  {
+    "id": "f74",
+    "kat": "falsche-freunde",
+    "level": "B1",
+    "falsch": "Bei der Anmeldung fülle ich einen Zettel aus.",
+    "richtig": "Bei der Anmeldung fülle ich ein Formular aus.",
+    "ar": "un formulaire استمارةٌ: das Formular؛ der Zettel ورقةُ ملاحظاتٍ صغيرة — فلا تخلطهما بما تعلقُ على الثلاجة."
+  },
+  {
+    "id": "f75",
+    "kat": "wortstellung",
+    "level": "A2",
+    "falsch": "Heute ich habe eine schwere Prüfung geschrieben.",
+    "richtig": "Heute habe ich eine schwere Prüfung geschrieben.",
+    "ar": "الفعلُ دائماً في المركز الثاني: اليومُ احتلَّ الأولَ فالتصقَ به الفعل — قاعدةُ v2 لا تُناقَش، والترتيبُ العاديُّ في «aujourd'hui j'ai…» الفرنسيةِ هو المُغرِي."
+  },
+  {
+    "id": "f76",
+    "kat": "wortstellung",
+    "level": "A2",
+    "falsch": "Ich hoffe, dass ich komme morgen früh nach Hause.",
+    "richtig": "Ich hoffe, dass ich morgen früh nach Hause komme.",
+    "ar": "dass تدفع الفعلَ إلى الآخِر؛ و«parce que/que» الفرنسيةُ تُبقيه حيثُ وُلِد — فلا تفعل فعلَها."
+  },
+  {
+    "id": "f77",
+    "kat": "wortstellung",
+    "level": "A1",
+    "falsch": "Ich bin müde, weil ich habe die ganze Nacht gelernt.",
+    "richtig": "Ich bin müde, weil ich die ganze Nacht gelernt habe.",
+    "ar": "weil أيضًا يُرسل الفعلَ إلى الآخر — خلافاً لـ parce que الفرنسيةِ التي تُبقي الترتيبَ العادي."
+  },
+  {
+    "id": "f78",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "Deshalb ich bin zur Prüfung nicht gekommen.",
+    "richtig": "Deshalb bin ich zur Prüfung nicht gekommen.",
+    "ar": "deshalfa ظرفٌ لا حرفُ عطف: يفتتحُ الجملةَ فيأتي فعلُه قبل فاعله — قلبٌ مباشرٌ لا خيارَ له."
+  },
+  {
+    "id": "f79",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "Ich weiß nicht, ob er kommt morgen in den Kurs.",
+    "richtig": "Ich weiß nicht, ob er morgen in den Kurs kommt.",
+    "ar": "ob تسحبُ الأفعالَ كما يفعل dass — فلا تتركها في المركز الثاني من جملةٍ جانبية."
+  },
+  {
+    "id": "f80",
+    "kat": "wortstellung",
+    "level": "A2",
+    "falsch": "Ich habe nicht verstanden die ganze Aufgabe.",
+    "richtig": "Ich habe die ganze Aufgabe nicht verstanden.",
+    "ar": "nicht يتقدُّم على نواةِ الفعلِ فقط — لا تُنبذِ المفعولَ بهِ إلى نهايةِ الجملةِ كما في ترجمةٍ حرفية."
+  },
+  {
+    "id": "f81",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "Ich auch möchte mitkommen, wenn es erlaubt ist.",
+    "richtig": "Ich möchte auch mitkommen, wenn es erlaubt ist.",
+    "ar": "auch تُجاور ما تُشارِك فيه لا صدرَ الجملة: «أنا أيضًا أريدُ المشاركة» غيرُ «أريدُ المشاركةَ أيضًا»."
+  },
+  {
+    "id": "f82",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "Wenn ich haben werde Zeit am Wochenende, besuche ich dich.",
+    "richtig": "Wenn ich am Wochenende Zeit habe, besuche ich dich.",
+    "ar": "المستقبلُ في جملةِ wenn ممنوع؛ الحاضرُ يكفي — و«si j'aurai» الفرنسيةُ فخٌّ مماثِلٌ معروفٌ عندهم."
+  },
+  {
+    "id": "f83",
+    "kat": "artikel",
+    "level": "A1",
+    "falsch": "Ich bin ein Lehrer in Sousse.",
+    "richtig": "Ich bin Lehrer in Sousse.",
+    "ar": "المهنُ بعد sein بلا أداةٍ؛ جملةُ c'est un professeur الفرنسيةُ تُغريك — والصفرُ هنا هو القاعدية."
+  },
+  {
+    "id": "f84",
+    "kat": "artikel",
+    "level": "A1",
+    "falsch": "Ich wohne jetzt in der Tunesien.",
+    "richtig": "Ich wohne jetzt in Tunesien.",
+    "ar": "معظمُ الدول محايدةٌ بلا أداة؛ تونس منها: في تونس «in Tunesien». الأدواتُ للمؤنثِ والمذكرِ (die Türkei, der Iran)."
+  },
+  {
+    "id": "f85",
+    "kat": "artikel",
+    "level": "A2",
+    "falsch": "Am Abend spiele ich das Fußball.",
+    "richtig": "Am Abend spiele ich Fußball.",
+    "ar": "مع spielen لا أداة للرياضةِ والآلات؛ و«jouer du football» أداةُها حتميةٌ عندكم — لا تحملها معك."
+  },
+  {
+    "id": "f86",
+    "kat": "artikel",
+    "level": "A2",
+    "falsch": "Wir gehen oft in der Schule am Samstag.",
+    "richtig": "Wir gehen oft in die Schule am Samstag.",
+    "ar": "gehen حركةٌ إلى مكان: in +Akk (in die)؛ والداتيفُ forكونٌ ثابتٌ. «à l'école» لا تُفيدك في الحالات."
+  },
+  {
+    "id": "f87",
+    "kat": "artikel",
+    "level": "B2",
+    "falsch": "Das habe ich in Internet gefunden.",
+    "richtig": "Das habe ich im Internet gefunden.",
+    "ar": "im = in dem: الشبكةُ تحتاجُ الأداةَ مع حرفِ الجر؛ و«sur Internet» بلا أداةٍ إغراءٌ فرنسيٌّ مباشر."
+  },
+  {
+    "id": "f88",
+    "kat": "artikel",
+    "level": "A2",
+    "falsch": "Meine Tante ist ein prima Köchin.",
+    "richtig": "Meine Tante ist eine prima Köchin.",
+    "ar": "المؤنثُ مؤنثٌ في الأداتين: cuisinière→une→eine — فلا تُبقِ ein حيثُ une تسبقُ أنفًا."
+  },
+  {
+    "id": "f89",
+    "kat": "praeposition",
+    "level": "A2",
+    "falsch": "Jeden Morgen fahre ich in den Bus um sieben.",
+    "richtig": "Jeden Morgen steige ich um sieben in den Bus ein.",
+    "ar": "الدخولُ في العربة: einsteigen in +Akk؛ «in den Bus fahren» تعني أنك تركبُه أصلًا — وmonter dans يُوهِمك."
+  },
+  {
+    "id": "f90",
+    "kat": "praeposition",
+    "level": "B1",
+    "falsch": "Seit zwei Jahren arbeite ich in Siemens.",
+    "richtig": "Seit zwei Jahren arbeite ich bei Siemens.",
+    "ar": "chez l'entreprise = bei +Dat؛ الشركاتُ والبيوتُ «عند»، وin تدخل البقاعَ لا الأسماءَ التجارية."
+  },
+  {
+    "id": "f91",
+    "kat": "praeposition",
+    "level": "B1",
+    "falsch": "Das hängt von das Wetter ab.",
+    "richtig": "Das hängt vom Wetter ab.",
+    "ar": "von تأخذُ الداتيف: von dem → vom؛ و«dépendre de» لا تُفيدك شيئاً في حالاتِ الإعراب."
+  },
+  {
+    "id": "f92",
+    "kat": "praeposition",
+    "level": "A2",
+    "falsch": "Am Wochenende treffe ich mit meinen Kollegen.",
+    "richtig": "Am Wochenende treffe ich meine Kollegen.",
+    "ar": "treffen متعدٍّ بمفعولٍ منصوبٍ بلا معيّة؛ rendez-vous avec تُنسيك «mit» — وصوابُك بلا حروف."
+  },
+  {
+    "id": "f93",
+    "kat": "praeposition",
+    "level": "B2",
+    "falsch": "Ich danke für Ihre schnelle Hilfe.",
+    "richtig": "Ich danke Ihnen für Ihre schnelle Hilfe.",
+    "ar": "danken يدينُ لشخصٍ داتيفًا قبل für؛ merci de votre aide الفرنسيةُ تسقط المُدان — والألمانية لا تُسقطه."
+  },
+  {
+    "id": "f94",
+    "kat": "praeposition",
+    "level": "B1",
+    "falsch": "Heute spreche meinen Chef über das Projekt.",
+    "richtig": "Heute spreche ich mit meinem Chef über das Projekt.",
+    "ar": "sprechen مع (mit)، أو reden mit؛ «parler à» تُسقطُ الحرفَ — فلا تُسقطْه أنت."
+  },
+  {
+    "id": "f95",
+    "kat": "praeposition",
+    "level": "A2",
+    "falsch": "Im Sommer fahren wir nach den Strand.",
+    "richtig": "Im Sommer fahren wir an den Strand.",
+    "ar": "nach للمدنِ والبلادِ بلا أداة؛ الشواطئُ والبحيراتُ إلى: an +Akk. و«à la plage» لا تفرِّق."
+  },
+  {
+    "id": "f96",
+    "kat": "zeitform",
+    "level": "A2",
+    "falsch": "Gestern habe ich zum Arzt gegangen.",
+    "richtig": "Gestern bin ich zum Arzt gegangen.",
+    "ar": "gehen/kommen/fahren: صديقُها sein؛ auxiliaireُها في الفرنسيةِ être فيُسهِّلُ عليك الخطأَ في الترجمة."
+  },
+  {
+    "id": "f97",
+    "kat": "zeitform",
+    "level": "A2",
+    "falsch": "Ich habe verschlafen, weil ich war am Sonntag lange auf.",
+    "richtig": "Ich habe verschlafen, weil ich am Sonntag lange aufgeblieben war.",
+    "ar": "السببُ السابقُ على الماضي يرفعُ الفعلَ إلى Plusquamperfekt — ولا ترمِ بـ «war» في صدرِ weil كما في j'étais resté."
+  },
+  {
+    "id": "f98",
+    "kat": "zeitform",
+    "level": "B1",
+    "falsch": "Letzte Woche bin ich nach Tunis geflogen gewesen.",
+    "richtig": "Letzte Woche bin ich nach Tunis geflogen.",
+    "ar": "لا تُراكم التامَّ فوقَ التام؛ le plus-que-parfait لا يُجبرك عليه — الفعلانِ المتتابعانِ واحدُهما كافٍ."
+  },
+  {
+    "id": "f99",
+    "kat": "zeitform",
+    "level": "A1",
+    "falsch": "Nächste Woche ich werde ans Meer fahren.",
+    "richtig": "Nächste Woche fahre ich ans Meer.",
+    "ar": "لخطتك القادمةِ يكفي الحاضرُ مع ظرفِ الزمان؛ werden+Inf للتنبّؤ لا للنيّةِ المحجوزةِ مسبقاً."
+  },
+  {
+    "id": "f100",
+    "kat": "zeitform",
+    "level": "B2",
+    "falsch": "Seit ich habe studiert, arbeite ich in dieser Firma.",
+    "richtig": "Seit ich studiert habe, arbeite ich in dieser Firma.",
+    "ar": "في جملةِ seit الفعلُ في الآخر، والماضي المنجزُ Perfekt؛ منذُ وأنتَ تدرسُ فالحاضرُ يكفي — دقِّق في مرادِك"
+  },
+  {
+    "id": "f101",
+    "kat": "zeitform",
+    "level": "A2",
+    "falsch": "Heute Morgen habe ich gefrühstückt gerade.",
+    "richtig": "Heute Morgen habe ich gerade gefrühstückt.",
+    "ar": "gerade بين haben والماضي؛ و«vient de» لا تُنقَلُ إلى Perfekt بترتيبِها — «Ich komme gerade vom Frühstück»."
+  },
+  {
+    "id": "f102",
+    "kat": "zahlen-zeit",
+    "level": "A2",
+    "falsch": "Wir treffen uns am 30 Juni um neun Uhr.",
+    "richtig": "Wir treffen uns am 30. Juni um neun Uhr.",
+    "ar": "التاريخُ عدديٌّ وترتيبيٌّ في آنٍ معًا فتحتاجُ النقطةَ: 30. — و«le 30 juin» الفرنسيةُ بلا نقطة، فاحذف عادَتَك."
+  },
+  {
+    "id": "f103",
+    "kat": "zahlen-zeit",
+    "level": "A1",
+    "falsch": "Wir treffen uns um halb neun — also um halb zehn? Nein, ich meine 9:30 Uhr.",
+    "richtig": "Ich komme um halb neun, also um 8:30 Uhr.",
+    "ar": "نصفُ الألمان يسبقُ الساعةَ لا يلحقُها: halb neun = الثامنةُ والنصفُ لا التاسعةُ والنصف — «تسعة ونص» عندنا تُغريك، فاطرحْ واحدًا من ساعتِهم."
+  },
+  {
+    "id": "f104",
+    "kat": "zahlen-zeit",
+    "level": "A1",
+    "falsch": "Meine Nummer: null zweihundertsechzehn zweiundzwanzig vierunddreißig.",
+    "richtig": "Meine Nummer: nullnull zweiundsechzig zweiundzwanzig vierunddreißig.",
+    "ar": "مفتاحُ تونس +216 يُقرأ بالألمانية null zweiundsechzig أو nullsechzehn لا «zweihundert» — الأرقامُ المتسلسلةُ أزواجٌ أو آحاد، أبداً مئات"
+  },
+  {
+    "id": "f105",
+    "kat": "konstruktion",
+    "level": "A1",
+    "falsch": "Ich habe fünfundzwanzig Jahre.",
+    "richtig": "Ich bin fünfundzwanzig Jahre alt.",
+    "ar": "j'ai vingt-cinq ans تُغريك بـ haben؛ والعمرُ بالألمانيةِ كينونةٌ: sein + alt — لا مِلكية."
+  },
+  {
+    "id": "f106",
+    "kat": "konstruktion",
+    "level": "A1",
+    "falsch": "Heute habe ich kalt im Klassenzimmer.",
+    "richtig": "Heute ist mir kalt im Klassenzimmer.",
+    "ar": "j'ai froid تُلبِسُك haben؛ وجسدُك هنا داتيفٌ: mir ist kalt/heiß/wund. بردُك يكونُ عندك لا لديك"
+  },
+  {
+    "id": "f107",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "Es sind zu viele Regeln, dass man sie nicht lernen kann.",
+    "richtig": "Es sind zu viele Regeln, als dass man sie lernen könnte.",
+    "ar": "trop…pour que: البناءُ als dass + Konjunktiv — و«أن» الحاديةُ لا تُنقَلُ إلى dass"
+  },
+  {
+    "id": "f108",
+    "kat": "konstruktion",
+    "level": "A2",
+    "falsch": "Es fällt, dass wir die Prüfung wiederholen.",
+    "richtig": "Es ist nötig, dass wir die Prüfung wiederholen.",
+    "ar": "il faut لا «تسقط»! الضرورةُ: es muss / es ist nötig — وحدهُ «fällt» هنا خطأٌ واضحٌ كوقوعِه"
+  },
+  {
+    "id": "f109",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "Ich freue mich, dass ich bestanden habe am Montag.",
+    "richtig": "Ich freue mich, dass ich am Montag bestanden habe.",
+    "ar": "في dass تجرُّ الأداةُ (habe) آخرَ الكلّ — فلا تُوقِفها قبل الظرفِ كما في j'ai réussi lundi"
+  },
+  {
+    "id": "f110",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "Obwohl das Wetter schlecht war, aber wir sind spazieren gegangen.",
+    "richtig": "Obwohl das Wetter schlecht war, sind wir spazieren gegangen.",
+    "ar": "obwohl يستولي فيؤخِّرُ الفعلَ فلا يحتاج aber؛ «bien que…mais» الفرنسيةُ لا تجمعُها والعربيةُ تُدرِكُ ذلك"
+  },
+  {
+    "id": "f111",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "Das ist der Mann, den ich habe gestern getroffen.",
+    "richtig": "Das ist der Mann, den ich gestern getroffen habe.",
+    "ar": "صلةٌ موصولة: الفعلُ في آخرِها — والحرفُ den صحيحٌ، والترتيبُ هو المخطئُ هذه المرةَ فلا تُبدِلِ الضمير"
+  },
+  {
+    "id": "f112",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "Ich bitte dir um einen früheren Termin.",
+    "richtig": "Ich bitte dich um einen früheren Termin.",
+    "ar": "bitten: الفعلُ متعدٍّ بمفعولٍ منصوب ثم um؛ «je vous prie de» تُظهِرُ لك المجهولَ مرفوعاً — والألمانيةُ تراه منصوباً"
+  },
+  {
+    "id": "f113",
+    "kat": "schreibung",
+    "level": "A1",
+    "falsch": "ich bin student an der uni in tunis.",
+    "richtig": "Ich bin Student an der Uni in Tunis.",
+    "ar": "الألمانيةُ تُكبِّرُ كلَّ اسمٍ — لا كما في العربيةِ والفرنسية؛ والجملةُ تبدأُ كبيراً. فابدأْ كبيراً تصغُرْ أخطاؤك"
+  },
+  {
+    "id": "f114",
+    "kat": "schreibung",
+    "level": "A1",
+    "falsch": "Die Straße ist breit und wir grussen die Nachbarn.",
+    "richtig": "Die Straße ist breit und wir grüßen die Nachbarn.",
+    "ar": "ß بعد العلةِ الطويلةِ والمُثنّاة، ss بعد القصيرة: Straße لكن «Fluss». ولا تستعملْها في كلماتِ الإنجليزِ كما تكتبُها"
+  },
+  {
+    "id": "f115",
+    "kat": "schreibung",
+    "level": "A2",
+    "falsch": "Ich komme aus Tunissien.",
+    "richtig": "Ich komme aus Tunesien.",
+    "ar": "اسمُ بلدِك بسينٍ واحدٍ: Tunesien — «Tunesien» لا «Tunissien»: حرفٌ واحدٌ يُغيِّرُ بلدَك. ولغةُ أهلِه: tunesisch"
+  },
+  {
+    "id": "f116",
+    "kat": "schreibung",
+    "level": "B1",
+    "falsch": "Meine Schwester heyratet im Juni.",
+    "richtig": "Meine Schwester heiratet im Juni.",
+    "ar": "heiraten بلا ياءٍ بعد الهاء: heiratet/Heirat؛ و«ي» العَرَضِيةُ لا تعملُ في الألمانية — e بعد r لا تكتبُ ياءً"
+  },
+  {
+    "id": "f117",
+    "kat": "schreibung",
+    "level": "B1",
+    "falsch": "Wir gehen spatzieren, wenn es nicht regnet.",
+    "richtig": "Wir gehen spazieren, wenn es nicht regnet.",
+    "ar": "spazieren بزايٍ واحدة، والصحيحُ z: der Spaziergang. والحرفُ «spatz» كما في طيورِ الدوريِّ عصفورٌ لا ينزه — فلا تكتبْ ما تسمعُ فقط"
+  },
+  {
+    "id": "f118",
+    "kat": "schreibung",
+    "level": "A2",
+    "falsch": "Ich überphweiße dir das Geld.",
+    "richtig": "Ich überweise dir das Geld.",
+    "ar": "v الألمانيةُ تُنطَقُ f لكن تُكتَبُ v: überweisen/vorbereiten/fahren — فلا تُجمِلها بـ ph اللاتينيةِ والفرنسية"
+  },
+  {
+    "id": "f119",
+    "kat": "schreibung",
+    "level": "A1",
+    "falsch": "Ich denke, daß der Kurs am Montag beginnt.",
+    "richtig": "Ich denke, dass der Kurs am Montag beginnt.",
+    "ar": "«ß» في dass أُلغِيَت من الإملاءِ الحديث (1996): dass/duß؟ لا — dass دائماً؛ ß تبقى بعد الطويلِ فقط: aber/grüßen."
+  },
+  {
+    "id": "f120",
+    "kat": "wortschatz",
+    "level": "A2",
+    "falsch": "Meine Tante führt eine kleine Fabrik mit fünf Angestellten.",
+    "richtig": "Meine Tante führt eine kleine Firma mit fünf Angestellten.",
+    "ar": "usine = die Fabrik مصنعٌ يعلوهُ الدخان؛ ومحلُّ عمَّتك مكتبٌ صغير: die Firma. ولا تُصنِّعْ ما هو مكتَب"
+  },
+  {
+    "id": "f121",
+    "kat": "wortschatz",
+    "level": "A1",
+    "falsch": "Ich leihe das Buch von der Bibliothek und leihe es zurück.",
+    "richtig": "Ich leihe mir das Buch aus und gebe es zurück.",
+    "ar": "الاتجاهانِ في «prêter» واحدٌ؛ والألمانيةُ تُفرِّق: sich ausleihen تأخذ، geben/verleihen تُعطي. فلا تُعيدِ الإعارةَ مرتين"
+  },
+  {
+    "id": "f122",
+    "kat": "wortschatz",
+    "level": "B1",
+    "falsch": "Mein Mitschüler im Büro schreibt gut E-Mails.",
+    "richtig": "Mein Kollege im Büro schreibt gut E-Mails.",
+    "ar": "المدرسةُ لها Mitschüler، والوظيفةُ لها Kollege — و«زميلي» بالدارجةِ لا تفرِّق، فلا تُحمِّلْها على المكتب"
+  },
+  {
+    "id": "f123",
+    "kat": "wortschatz",
+    "level": "B1",
+    "falsch": "Wir hatten einen großen Termin über die Kosten im Büro.",
+    "richtig": "Wir hatten eine lange Besprechung über die Kosten.",
+    "ar": "Termin موعدٌ عند طبيبٍ أو شباك؛ واجتماعُ المكتب: Besprechung/Sitzung — و«grand» لا يصفُ المواعيد"
+  },
+  {
+    "id": "f124",
+    "kat": "wortschatz",
+    "level": "B2",
+    "falsch": "Im Sommer schwimmen wir gern in der See, der kleine See ist warm.",
+    "richtig": "Im Sommer schwimmen wir gern in dem See, der kleine See ist warm.",
+    "ar": "der See بحيرةٌ (مذكر)؛ die See البحرُ (مؤنثٌ شاعري) — فالخطأُ جِنسِيٌّ يُغرقُك في بحيرة. و«la mer» لا تُنقَلُ الأداةُ"
+  },
+  {
+    "id": "f125",
+    "kat": "wortschatz",
+    "level": "A2",
+    "falsch": "Zum Frühstück trinke ich den Kaffee und esse zwei Eier.",
+    "richtig": "Zum Frühstück trinke ich Kaffee und esse zwei Eier.",
+    "ar": "عامٌّ في مشروبِ الصباحِ بلا أداة؛ «le café» جنسٌ عندكم، والألمانيةُ في طقسِ الكوبِ تُعرِيهِ"
+  },
+  {
+    "id": "f126",
+    "kat": "wortschatz",
+    "level": "A1",
+    "falsch": "Ich nehme das Velo und fahre damit zur Arbeit.",
+    "richtig": "Ich nehme das Fahrrad und fahre damit zur Arbeit.",
+    "ar": "vélo فرنسيتُك؛ بالألمانية das Fahrrad — و«Velo» لا يفهمها إلا السويسريُّ المتفرنِج. ولا تقلْ « bicyclette »"
+  },
+  {
+    "id": "f127",
+    "kat": "sonst",
+    "level": "B2",
+    "falsch": "Dein Bruder ist nett, mais il ne le pense pas.",
+    "richtig": "Dein Bruder ist nett, aber er meint es nicht so.",
+    "ar": "حين تنزلقُ الجملةُ إلى الفرنسيةِ منتصفَها فقد خسرتَ المعنى لا الكلمةَ فقط — وأكمِلها ألمانيةً ولو ببساطتِها"
+  },
+  {
+    "id": "f128",
+    "kat": "sonst",
+    "level": "B2",
+    "falsch": "Ich bin d'accord mit deinem Vorschlag.",
+    "richtig": "Ich bin mit deinem Vorschlag einverstanden.",
+    "ar": "d'accord ليست ألمانية؛ einverstanden sein mit +Dat — و«OK» تُقبَلُ محادثةً، لا في رسالةِ الإدارة"
+  },
+  {
+    "id": "f129",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "*Ich freue mich auf dich zu sehen.",
+    "richtig": "Ich freue mich darauf, dich zu sehen. / Ich freue mich, dich zu sehen.",
+    "ar": "بعد «sich freuen» لا يأتي «auf … zu» مباشرة، بل إما «darauf, dass» أو مصدر بـzu مباشر أو «auf + اسم»."
+  },
+  {
+    "id": "f130",
+    "kat": "praeposition",
+    "level": "B1",
+    "falsch": "*Ich warte auf den Bus seit 10 Minuten.",
+    "richtig": "Ich warte seit 10 Minuten auf den Bus.",
+    "ar": "في الألمانية ترتيب المكمّلات: الزمان قبل المكان. لا تضع auf-Objekt قبل seit."
+  },
+  {
+    "id": "f131",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "*Weil ich bin krank, gehe ich nicht zur Arbeit.",
+    "richtig": "Weil ich krank bin, gehe ich nicht zur Arbeit.",
+    "ar": "في الجملة الثانوية بـweil/da/dass يذهب الفعل إلى النهاية: «Weil ich krank bin»."
+  },
+  {
+    "id": "f132",
+    "kat": "zeitform",
+    "level": "B1",
+    "falsch": "*Gestern habe ich gehen ins Kino.",
+    "richtig": "Gestern bin ich ins Kino gegangen.",
+    "ar": "أفعال الحركة (gehen/kommen/fahren/fliegen/laufen/reisen) تستخدم sein لا haben في Perfekt، والجزء الثاني في آخر الجملة."
+  },
+  {
+    "id": "f133",
+    "kat": "artikel",
+    "level": "B1",
+    "falsch": "*Ich fahre zu der Bahnhof.",
+    "richtig": "Ich fahre zum Bahnhof.",
+    "ar": "Bahnhof مذكر، لذا «zu dem» تُدمَج إلى «zum». لا تقل «zu der Bahnhof»."
+  },
+  {
+    "id": "f134",
+    "kat": "schreibung",
+    "level": "B1",
+    "falsch": "*That´s / das selbe",
+    "richtig": "daß? Nein — dass! / dasselbe (ein Wort)",
+    "ar": "«dass» بلا ß بعد إصلاح الإملاء، و«dasselbe» كلمة واحدة (selbe لا تُكتَب منفصلة عن das إذا صحبها -selbe)."
+  },
+  {
+    "id": "f135",
+    "kat": "wortschatz",
+    "level": "B1",
+    "falsch": "*Ich mache einen Spaziergang in dem Park.",
+    "richtig": "Ich mache einen Spaziergang im Park.",
+    "ar": "تستخدم «im» (in + dem) لدخول الحديقة والحديقة كمكان لا يتطلب «in dem» منفصلاً إلا للتشديد — im Park هو الشائع."
+  },
+  {
+    "id": "f136",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "*Ich bin langweilig.",
+    "richtig": "Mir ist langweilig.",
+    "ar": "للتعبير عن الشعور بالملل: «Mir ist langweilig» (كان الفضول لي؟). «Ich bin langweilig» تعني «أنا مملّ»! زِد: Mir ist kalt/warm/schlecht/langweilig/übel."
+  },
+  {
+    "id": "f137",
+    "kat": "praeposition",
+    "level": "B1",
+    "falsch": "*Ich erinnere mich an dem Termin.",
+    "richtig": "Ich erinnere mich an den Termin.",
+    "ar": "sich erinnern an + Akkusativ، لذا den Termin لا dem."
+  },
+  {
+    "id": "f138",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "*Es gibt viele Leute, die wollen nicht arbeiten.",
+    "richtig": "Es gibt viele Leute, die nicht arbeiten wollen.",
+    "ar": "جملة Relativ تحتاج إلى الفعل في نهايتها: die nicht arbeiten wollen."
+  },
+  {
+    "id": "f139",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Obwohl er hat viel gelernt, hat er die Prüfung nicht bestanden.",
+    "richtig": "Obwohl er viel gelernt hat, hat er die Prüfung nicht bestanden.",
+    "ar": "بعد Konzessivsätze mit obwohl/trotzdem/obgleich يأتي الفعل في نهاية الجملة الثانوية."
+  },
+  {
+    "id": "f140",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "*Nicht nur er spricht Deutsch, sondern auch Englisch.",
+    "richtig": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
+    "ar": "nicht nur … sondern auch يربط عنصرين متوازيين من الجملة، ولا تبدأ به الجملة عادةً."
+  },
+  {
+    "id": "f141",
+    "kat": "zeitform",
+    "level": "B2",
+    "falsch": "*Wenn ich nach Hause kam, hatte ich schon gegessen.",
+    "richtig": "Als ich nach Hause kam, hatte ich schon gegessen.",
+    "ar": "حدث لمرة واحدة في الماضي: استخدم «als» لا «wenn» (wenn = متكرر/مستقبل/شرط)."
+  },
+  {
+    "id": "f142",
+    "kat": "schreibung",
+    "level": "B2",
+    "falsch": "*man kann / *dass man kann",
+    "richtig": "man (Indefinitpronomen) — nicht « Mann » (الرجل)",
+    "ar": "«man» ضمير نكرة لا يُكتب «Mann». أما Mann فهو رجل."
+  },
+  {
+    "id": "f143",
+    "kat": "praeposition",
+    "level": "B2",
+    "falsch": "*Ich interessiere mich für das Buch nicht.",
+    "richtig": "Ich interessiere mich nicht für das Buch.",
+    "ar": "موقع nicht قبل الجزء المراد نفيه أو قبل für+Akkusativ في حالة النفي الكامل."
+  },
+  {
+    "id": "f144",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Laut dem Arzt soll ich viel trinken.",
+    "richtig": "Laut Arzt soll ich viel trinken. (أو Laut des Arztes مع Genitiv)",
+    "ar": "«laut» غالباً تستخدم بلا أداة: laut Arzt. ويمكن Genitiv (laut des Arztes) لكن ليس Dativ في الفصحى."
+  },
+  {
+    "id": "f145",
+    "kat": "zeitform",
+    "level": "B2",
+    "falsch": "*Bis nächsten Monat habe ich die Arbeit beendet.",
+    "richtig": "Bis nächsten Monat werde ich die Arbeit beendet haben.",
+    "ar": "للمستقبل التام (الانتهاء قبل نقطة في المستقبل) نستخدم Futur II: werde … Partizip II haben/sein."
+  },
+  {
+    "id": "f146",
+    "kat": "artikel",
+    "level": "B2",
+    "falsch": "*Ich gehe in die Schule.",
+    "richtig": "Ich gehe zur Schule.",
+    "ar": "للذهاب للمدرسة/العمل/الجامعة كعاد يومي: zur Schule/zur Arbeit، وليس في die Schule في سياق العادة."
+  },
+  {
+    "id": "f147",
+    "kat": "falsche-freunde",
+    "level": "B2",
+    "falsch": "*aktuell = aktuell / Actually, das Problem ist…",
+    "richtig": "aktuell = حاليّ/جارٍ الآن / tatsächlich/wirklich = فعلي actually",
+    "ar": "aktuell ≈ حالي لا «فعلي»؛ مقابل actually الإنجليزية هو tatsächlich أو wirklich."
+  },
+  {
+    "id": "f148",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Je mehr du lernst, desto besser wirst du.",
+    "richtig": "Je mehr du lernst, desto besser wirst du (هذه الجملة صحيحة أصلاً — لكن تنبيه: desto immer mit Komparativ!)",
+    "ar": "بناء je … desto … يتطلب صيغة المقارنة في الشطرين ولا يُفصل بينهما بفعل زائد قبل desto."
+  },
+  {
+    "id": "f149",
+    "kat": "wortschatz",
+    "level": "B2",
+    "falsch": "*Ich wohne in einem 20-Quadratmeter-Wohnung.",
+    "richtig": "Ich wohne in einer 20-Quadratmeter-Wohnung.",
+    "ar": "عند ربط الأرقام والوحدات بكلمة أخرى كمُركَّب وصفي، تُنسَب الصفة إلى الاسم النهائي: die Wohnung مؤنث → eine."
+  },
+  {
+    "id": "f150",
+    "kat": "sonst",
+    "level": "B2",
+    "falsch": "*Das Buch ist besser wie der Film.",
+    "richtig": "Das Buch ist besser als der Film.",
+    "ar": "بعد المقارنة (besser/schöner/größer …) تستخدم «als» لا «wie»."
+  },
+  {
+    "id": "f-a0-001",
+    "kat": "konstruktion",
+    "level": "A0",
+    "falsch": "*ich bin gehen",
+    "richtig": "ich gehe",
+    "regelAr": "الفعل يصرف للمتكلم: gehen → ich gehe (لا نستخدم bin مع الفعل الرئيسي).",
+    "kategorie": "Verbkonjugation",
+    "ar": "الفعل المصرف في الجملة الخبرية يأتي في المرتبة الثانية؛ لا نستخدم sein مع مصدر الفعل للتعبير عن المضارع، بل نقول: «ich gehe»."
+  },
+  {
+    "id": "f-a0-002",
+    "kat": "konstruktion",
+    "level": "A0",
+    "falsch": "*ich habe 30 Jahr alt",
+    "richtig": "ich bin 30 Jahre alt",
+    "regelAr": "العمر يأتي مع فعل sein، والاسم Jahre بالجمع بعد رقم غير الواحد.",
+    "kategorie": "Alter / sein",
+    "ar": "العمر يُعبَّر عنه بالفعل sein مع الصيغة «Jahre alt»؛ لذلك نقول «ich bin 30 Jahre alt» لا «ich habe … alt»."
+  },
+  {
+    "id": "f-a0-003",
+    "kat": "konstruktion",
+    "level": "A0",
+    "falsch": "*ich heiße Ali bin",
+    "richtig": "ich heiße Ali",
+    "regelAr": "heißen وحده يكفي لذكر الاسم؛ لا داعي لكلمة bin.",
+    "kategorie": "heißen",
+    "ar": "الفعل heißen يأخذ الاسم مباشرةً؛ إضافة bin بعد الاسم تترك الفعل بلا تتمّة وتكرر معنى التعريف بالنفس."
+  },
+  {
+    "id": "f-a0-004",
+    "kat": "wortstellung",
+    "level": "A0",
+    "falsch": "*ich bin ein Mann aus Syrien heiße Karim",
+    "richtig": "ich heiße Karim und komme aus Syrien",
+    "regelAr": "جملتان مستقلتان تربطهما und؛ لا تُجعل جملة واحدة بلا فعل رابط.",
+    "kategorie": "Satzbau",
+    "ar": "التعريف بالاسم والأصل يحتاج جملتين مربوطتين بـund؛ بعد «ich heiße Karim» يأتي «und komme aus Syrien»، لا فعلٌ ملتصق بلا رابط."
+  },
+  {
+    "id": "f-a0-005",
+    "kat": "wortstellung",
+    "level": "A0",
+    "falsch": "*Seit 2022 ich wohne in Berlin.",
+    "richtig": "Seit 2022 wohne ich in Berlin.",
+    "regelAr": "تحتل عبارة الزمن «Seit 2022» الموقع الأول؛ لذلك يجب أن يأتي الفعل المصرف في الموقع الثاني قبل الفاعل.",
+    "kategorie": "Wortstellung",
+    "ar": "إذا بدأت الجملة بعبارة الزمن «Seit 2022»، تأتي بعدها مباشرةً صيغة الفعل المصرفة ثم الفاعل: «Seit 2022 wohne ich …»."
+  },
+  {
+    "id": "f-a0-006",
+    "kat": "artikel",
+    "level": "A0",
+    "falsch": "*das ist ein Buch rot",
+    "richtig": "das ist ein rotes Buch",
+    "regelAr": "الصفة تأتي قبل الاسم في الألمانية، لا بعده.",
+    "kategorie": "Adjektivstellung",
+    "ar": "الصفة قبل الاسم بعد أداة النكرة تتلقى نهاية الجنس والحالة؛ Buch محايد في الرفع، لذا نقول «ein rotes Buch»."
+  },
+  {
+    "id": "f-a0-007",
+    "kat": "wortstellung",
+    "level": "A0",
+    "falsch": "*ich nicht verstehe",
+    "richtig": "ich verstehe nicht",
+    "regelAr": "nicht في نهاية الجملة بعد الفعل المصرف في جملة بسيطة.",
+    "kategorie": "Negation",
+    "ar": "في الجملة الخبرية البسيطة يأتي الفعل المصرف في الموقع الثاني؛ النفي «nicht» يوضع بعد بقية العبارة: «ich verstehe nicht»."
+  },
+  {
+    "id": "f-a0-008",
+    "kat": "artikel",
+    "level": "A0",
+    "falsch": "*ein Frau",
+    "richtig": "eine Frau",
+    "regelAr": "Frau اسم مؤنث → المُنكّر eine، der → ein، die → eine، das → ein.",
+    "kategorie": "Artikel",
+    "ar": "Frau اسم مؤنث؛ لذلك تأخذ أداة النكرة النهاية المؤنثة «eine» لا «ein»."
+  },
+  {
+    "id": "f-b2-028",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Obwohl er viel lernt, aber besteht er nicht.",
+    "richtig": "Obwohl er viel lernt, besteht er nicht.",
+    "regelAr": "obwohl في الجملة الثانوية يدفع الفعل للنهاية، ولا تستخدم aber معها (فهي تحمل التنازع وحدها).",
+    "kategorie": "Konzessivsatz",
+    "ar": "«Obwohl» يربط الجملة التابعة بالتنازل، فلا نضيف «aber» رابطاً ثانياً في الجملة الرئيسة؛ يكفي «Obwohl …, besteht …»."
+  },
+  {
+    "id": "f-b2-029",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Der Mann, der ich ihn gestern gesehen habe.",
+    "richtig": "Der Mann, den ich gestern gesehen habe.",
+    "regelAr": "الاسم الموصول في حالة المفعول به المذكر يأخذ den، ولا نعيد الضمير ihn في الجملة النسبية.",
+    "kategorie": "Relativsatz",
+    "ar": "الرجل هو مفعول الفعل «gesehen»، ولذلك يلزم ضمير الوصل في النصب «den» لا الرفع «der»."
+  },
+  {
+    "id": "f-b2-030",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "*Während ich studierte ich habe viel gelernt.",
+    "richtig": "Während ich studierte, lernte ich viel.",
+    "regelAr": "«Während» تفتح جملة تابعة وفعلها في النهاية؛ وإذا تقدمت، تبدأ الجملة الرئيسة بعد الفاصلة بالفعل قبل الفاعل. يجوز Präteritum أو Perfekt بحسب السياق.",
+    "kategorie": "Temporalsatz / Tempus",
+    "ar": "بعد «während» يأتي الفعل المصرف في نهاية الجملة التابعة؛ وبعد الفاصلة يبدأ الفعل الرئيس قبل الفاعل. لا نكرر الفاعل قبل الفعل ولا نهمل الفاصلة."
+  },
+  {
+    "id": "f-b2-031",
+    "kat": "praeposition",
+    "level": "B2",
+    "falsch": "*Ich freue mich auf, dass du kommst.",
+    "richtig": "Ich freue mich darauf, dass du kommst.",
+    "regelAr": "أفعال مع صرفة + dass تتطلب إشارية (darauf، darüber) قبل dass، لا حرف جر منفصل.",
+    "kategorie": "Präpositionaladverb + dass",
+    "ar": "الفعل «sich freuen auf» يحتاج عند وصلِه بجملة «dass» إلى ضمير الإحالة «darauf»: «Ich freue mich darauf, dass …»."
+  },
+  {
+    "id": "f-b2-032",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "*Je mehr du lernst, desto besser du sprichst.",
+    "richtig": "Je mehr du lernst, desto besser sprichst du.",
+    "regelAr": "بعد je … desto يأتي الفعل في المرتبة الثانية ولا حاجة لـ werden إن كان الحال في الحاضر.",
+    "kategorie": "Proportionalvergleich",
+    "ar": "في تركيب «je …, desto …» تتصدر عبارة المقارنة الجملة الثانية، فيأتي الفعل المصرف قبل الفاعل: «desto besser sprichst du»."
+  },
+  {
+    "id": "f-b2-033",
+    "kat": "praeposition",
+    "level": "B2",
+    "falsch": "*Laut den Bericht gibt es mehr Arbeitslose.",
+    "richtig": "Laut dem Bericht gibt es mehr Arbeitslose.",
+    "regelAr": "«laut» تقبل الداتيف أو الجينيتيف؛ في الاستعمال اليومي يشيع الداتيف «laut dem Bericht»، ويصح أيضاً الجينيتيف «laut des Berichts».",
+    "kategorie": "Präposition",
+    "ar": "«laut» يأخذ هنا الداتيف أو الجينيتيف؛ مع الاسم المفرد نقول «laut dem Bericht» أو «laut des Berichts»، لا أداة النصب «den»."
+  },
+  {
+    "id": "f-b2-034",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Das Buch ist wert zu lesen.",
+    "richtig": "Das Buch ist lesenswert / Es lohnt sich, das Buch zu lesen.",
+    "regelAr": "الصفة lesenswert هي الصياغة الصحيحة، «wert zu + Infinitiv» ليست ألمانية قياسية.",
+    "kategorie": "Adjektiv / -wert",
+    "ar": "«wert sein» يحتاج تركيباً مكتملاً مثل «es wert sein, etwas zu tun»؛ والأبسط هنا الصفة المركبة «lesenswert»."
+  },
+  {
+    "id": "f-b2-035",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "*Dadurch, dass ich viel lese, mein Deutsch verbessert sich.",
+    "richtig": "Dadurch, dass ich viel lese, verbessert sich mein Deutsch.",
+    "regelAr": "بعد الجملة التابعة المتقدمة يأتي فعل الجملة الرئيسة قبل الفاعل: «verbessert sich mein Deutsch».",
+    "kategorie": "Reflexiv",
+    "ar": "بعد الجملة التابعة المتقدمة «Dadurch, dass …» تأتي جملة رئيسة؛ فعلها المصرف يسبق الفاعل: «verbessert sich mein Deutsch»."
+  },
+  {
+    "id": "f-a1-032",
+    "kat": "praeposition",
+    "level": "A1",
+    "falsch": "*Ich gehe zur Hause.",
+    "richtig": "Ich gehe nach Hause.",
+    "regelAr": "نستخدم nach Hause للذهاب إلى البيت (حركة)، و zu Hause للوجود فيه (استقرار).",
+    "kategorie": "Präposition / Haus",
+    "ar": "عند قصد الحركة إلى البيت نستعمل التعبير الاتجاهي «nach Hause»؛ أما «zu Hause» فيدل على المكان، و«zur Hause» ليست الصيغة."
+  },
+  {
+    "id": "f-a1-033",
+    "kat": "konstruktion",
+    "level": "A1",
+    "falsch": "*ich habe 25 Jahre alt",
+    "richtig": "ich bin 25 Jahre alt",
+    "regelAr": "العمر يأتي مع فعل sein، لا haben.",
+    "kategorie": "Alter / sein",
+    "ar": "العمر يُبنى بـsein لا بـhaben: «Ich bin 25 Jahre alt»؛ «habe … Jahre alt» نقل حرفي من العربية."
+  },
+  {
+    "id": "f-a1-034",
+    "kat": "wortstellung",
+    "level": "A1",
+    "falsch": "*Mein Bruder seit drei Jahren in Berlin wohnt.",
+    "richtig": "Mein Bruder wohnt seit drei Jahren in Berlin.",
+    "regelAr": "في الجملة الرئيسية يأتي الفعل المصرف في الموقع الثاني: Mein Bruder (1) wohnt (2). لا يوضع الفعل في النهاية لمجرد وجود عبارة seit drei Jahren.",
+    "kategorie": "Wortstellung / Verbzweit",
+    "ar": "في الجملة الرئيسة يجب أن يحتل الفعل المصرف الموقع الثاني؛ يأتي «wohnt» بعد الفاعل مباشرةً، لا في آخر الجملة."
+  },
+  {
+    "id": "f-a1-035",
+    "kat": "wortstellung",
+    "level": "A1",
+    "falsch": "*Ich möchte trinken ein Wasser.",
+    "richtig": "Ich möchte ein Wasser trinken.",
+    "regelAr": "الفعل المصرف (möchte) في المرتبة الثانية، والمصدر في النهاية.",
+    "kategorie": "Modalverb + Infinitiv",
+    "ar": "بعد الفعل الناقص «möchte» يأتي المصدر في نهاية الجملة؛ المفعول «ein Wasser» يسبق المصدر «trinken»."
+  },
+  {
+    "id": "f-a1-036",
+    "kat": "wortstellung",
+    "level": "A1",
+    "falsch": "*Das Buch ist gut, aber ich nicht lese es.",
+    "richtig": "Das Buch ist gut, aber ich lese es nicht.",
+    "regelAr": "الفعل يأتي بعد الفاعل في الجملة المستقلة بعد aber، و nicht في النهاية.",
+    "kategorie": "Negation / Satzbau",
+    "ar": "«aber» لا يغيّر قاعدة الفعل في الجملة الرئيسة: «ich lese»؛ والنفي يأتي بعد المفعول «es» في هذا المثال."
+  },
+  {
+    "id": "f-a1-037",
+    "kat": "artikel",
+    "level": "A1",
+    "falsch": "*Ich habe ein Apfel.",
+    "richtig": "Ich habe einen Apfel.",
+    "regelAr": "Apfel مذكّر؛ المفعول به المذكر النكرة يأخذ einen. Akkusativ: der → den / ein → einen.",
+    "kategorie": "Akkusativ",
+    "ar": "Apfel مذكر، وهو مفعول به هنا؛ في حالة النصب تتحول أداة النكرة إلى «einen»."
+  },
+  {
+    "id": "f-a1-038",
+    "kat": "artikel",
+    "level": "A1",
+    "falsch": "*Ich komme aus Türkei.",
+    "richtig": "Ich komme aus der Türkei.",
+    "regelAr": "أسماء الدول المؤنثة أو المذكّرة (معظمها مؤنثة مثل die Türkei, die Schweiz, die USA) تأخذ أداة بعد aus/in.",
+    "kategorie": "Artikel / Länder",
+    "ar": "اسم البلد «die Türkei» يأتي مع أداة تعريف؛ وبعد «aus» نستخدم الداتيف، لذلك تصبح الأداة «der»."
+  },
+  {
+    "id": "f-a1-039",
+    "kat": "zeitform",
+    "level": "A1",
+    "falsch": "*Gestern ich gehe ins Kino.",
+    "richtig": "Gestern bin ich ins Kino gegangen.",
+    "regelAr": "في زمن الماضي نستخدم Perfekt: sein + gegangen. وفي بداية الجملة بعنصر زمني يأتي الفعل في المرتبة الثانية مباشرة.",
+    "kategorie": "Perfekt / Satzbau",
+    "ar": "«Gestern» يدل على الماضي؛ نستخدم Perfekt من «gehen» مع sein وPartizip II «gegangen»، مع بقاء الفعل المصرف في الموقع الثاني."
+  },
+  {
+    "id": "f-a1-040",
+    "kat": "zeitform",
+    "level": "A1",
+    "falsch": "*Gestern habe ich zur Arbeit gefahren.",
+    "richtig": "Gestern bin ich zur Arbeit gefahren.",
+    "regelAr": "fahren بمعنى الانتقال من مكان إلى آخر يأخذ sein في Perfekt: ich bin gefahren.",
+    "kategorie": "Perfekt / Hilfsverb",
+    "ar": "الفعل «fahren» الدال على الانتقال يأخذ sein في Perfekt: «bin gefahren»، لا haben."
+  },
+  {
+    "id": "f-a1-041",
+    "kat": "artikel",
+    "level": "A1",
+    "falsch": "*Meine Schwester hat ein neu Auto.",
+    "richtig": "Meine Schwester hat ein neues Auto.",
+    "regelAr": "Auto محايد وفي المفعول به يأتي بعد ein؛ لذلك تأخذ الصفة النهاية -es: ein neues Auto.",
+    "kategorie": "Adjektivdeklination",
+    "ar": "Auto محايد مفعولٌ به منصوب؛ بعد أداة النكرة ein تأخذ الصفة النهاية -es: «ein neues Auto»."
+  },
+  {
+    "id": "f-b1-046",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "*Wenn ich viel Geld hätte, ich würde eine Reise machen.",
+    "richtig": "Wenn ich viel Geld hätte, würde ich eine Reise machen.",
+    "regelAr": "الشرط غير الواقعي يستخدم hätte وwürde؛ وبعد جملة wenn المتقدمة يأتي فعل الجواب قبل الفاعل: «würde ich».",
+    "kategorie": "Konjunktiv II",
+    "ar": "بعد جملة «wenn» التابعة، تبدأ الجملة الرئيسة بالفعل المصرف قبل الفاعل: «…, würde ich …»؛ لا نقول «…, ich würde …»."
+  },
+  {
+    "id": "f-b1-047",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "*Ich freue mich auf den Urlaub, weil ich will mich ausruhen.",
+    "richtig": "Ich freue mich auf den Urlaub, weil ich mich ausruhen will.",
+    "regelAr": "في weil-Satz يذهب الفعل المُصرف إلى النهاية.",
+    "kategorie": "Nebensatz Wortstellung",
+    "ar": "«weil» تدخل جملة تابعة؛ لذلك يأتي الفعل الناقص «will» في آخرها بعد «mich ausruhen»."
+  },
+  {
+    "id": "f-b1-048",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "*Der Mann, der ich gestern getroffen habe, ist mein Nachbar.",
+    "richtig": "Der Mann, den ich gestern getroffen habe, ist mein Nachbar.",
+    "regelAr": "ضمير الوصل يأخذ الحالة بحسب وظيفته داخل جملة الوصل: هنا مفعول به مذكر، لذا den؛ ولا نكرر المفعول بضمير ihn.",
+    "kategorie": "Relativsatz / Akkusativ",
+    "ar": "ضمير الوصل يعود إلى «den Mann»، وهو مفعول «getroffen»؛ لذلك نستخدم Akkusativ «den» لا Nominativ «der»."
+  },
+  {
+    "id": "f-b1-049",
+    "kat": "artikel",
+    "level": "B1",
+    "falsch": "*Trotz des stark Regen gingen wir spazieren.",
+    "richtig": "Trotz des starken Regens gingen wir spazieren.",
+    "regelAr": "trotz يأخذ Genitiv؛ ومع الاسم المذكر المفرد: des Regens. وبعد أداة des تنتهي الصفة بـ -en: des starken Regens.",
+    "kategorie": "Genitiv / Adjektivdeklination",
+    "ar": "«trotz» يطلب الجينيتيف هنا: «des Regens»؛ وصفة الاسم بعد أداة الجينيتيف المذكرة تأخذ النهاية «-en»: «starken»."
+  },
+  {
+    "id": "f-b1-050",
+    "kat": "wortstellung",
+    "level": "B1",
+    "falsch": "*Als ich nach Hause kam, ich kochte das Abendessen.",
+    "richtig": "Als ich nach Hause kam, kochte ich das Abendessen.",
+    "regelAr": "إذا بدأت الجملة الرئيسية بجملة زمنية تابعة، تأتي بعدها فاصلة ثم الفعل المصرف مباشرة: ..., kochte ich ... (الفعل في الموقع الثاني).",
+    "kategorie": "Wortstellung nach Nebensatz",
+    "ar": "عندما تتقدم جملة «als» التابعة، يأتي فعل الجملة الرئيسة مباشرةً بعد الفاصلة وقبل الفاعل: «…, kochte ich»."
+  },
+  {
+    "id": "f-b1-051",
+    "kat": "zeitform",
+    "level": "B1",
+    "falsch": "*Ich habe mein Handy zu Hause vergisst.",
+    "richtig": "Ich habe mein Handy zu Hause vergessen.",
+    "regelAr": "Partizip II من vergessen هو vergessen (لا vergisst).",
+    "kategorie": "Perfekt starke Verben",
+    "ar": "في Perfekt نستخدم Partizip II من «vergessen» وهو «vergessen»؛ «vergisst» صيغة مضارع للمخاطب أو الغائب، وليست اسم المفعول."
+  },
+  {
+    "id": "f-b1-052",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "*Am besten lernst du Deutsch mit viel sprechen.",
+    "richtig": "Am besten lernst du Deutsch, indem du viel sprichst.",
+    "regelAr": "تُستخدم indem-Satz أو Infinitiv mit zu (durch vieles Sprechen)، لا mit + Infinitiv بهذا المعنى.",
+    "kategorie": "indem-Satz",
+    "ar": "بعد «mit» يلزم اسم، ويُكتب المصدر الاسمي بحرف كبير «Sprechen»؛ والأوضح هنا بناء وسيلة بـ«indem» وفعل مصرف."
+  },
+  {
+    "id": "f-b1-053",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "*Ich lerne Deutsch, um ich in Berlin arbeiten kann.",
+    "richtig": "Ich lerne Deutsch, um in Berlin arbeiten zu können. / Ich lerne Deutsch, damit ich in Berlin arbeiten kann.",
+    "regelAr": "um … zu تأتي عادةً مع الفاعل نفسه ولا يتبع um ضمير فاعل؛ أما damit فتأخذ جملةً بفعل مصرف في النهاية.",
+    "kategorie": "Zweck / um…zu · damit",
+    "ar": "بناء الغاية «um … zu» يأخذ مصدراً لا فاعلاً وفعلًا مصرفاً؛ نقول «um … arbeiten zu können»، أو نستخدم «damit ich … kann»."
+  },
+  {
+    "id": "f-b1-054",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "*Mir bin heute langweilig.",
+    "richtig": "Mir ist heute langweilig.",
+    "regelAr": "للتعبير عن الشعور بالملل نقول Mir ist langweilig (Dativ + sein). أمّا Ich bin langweilig فهي جملة صحيحة أخرى معناها «أنا شخص ممل»، وليست «أشعر بالملل».",
+    "kategorie": "Dativ / Bedeutungsunterschied",
+    "ar": "«mir» مفعول داتيف يدل على صاحب الشعور، وليس فاعل الجملة؛ لذلك تأتي صيغة الغائب «ist»: «Mir ist langweilig»."
+  },
+  {
+    "id": "f-b1-055",
+    "kat": "konstruktion",
+    "level": "B1",
+    "falsch": "*Entweder du kommst mit, und du bleibst zu Hause.",
+    "richtig": "Entweder du kommst mit, oder du bleibst zu Hause.",
+    "regelAr": "entweder … oder رابطان مزدوجان لا يأتي معهما und.",
+    "kategorie": "Doppelkonnektor",
+    "ar": "الربط الثنائي الصحيح هو «entweder … oder»؛ لا نجمع «entweder» مع «und» في طرفيه."
+  },
+  {
+    "id": "f-b2-036",
+    "kat": "praeposition",
+    "level": "B2",
+    "falsch": "*Im Vergleich zu das letzte Jahr ist der Umsatz gestiegen.",
+    "richtig": "Im Vergleich zum letzten Jahr ist der Umsatz gestiegen.",
+    "regelAr": "zu يأخذ Dativ: das Jahr يصبح dem Jahr؛ وzu dem تختصر عادةً إلى zum. لذلك: im Vergleich zum letzten Jahr.",
+    "kategorie": "Präposition / Dativ",
+    "ar": "بعد «im Vergleich zu» يأتي الداتيف؛ «das letzte Jahr» تصبح «dem letzten Jahr»، ويُختصر «zu dem» إلى «zum»."
+  },
+  {
+    "id": "f-b2-037",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "*Weil es stark regnete, das Fest fiel aus.",
+    "richtig": "Weil es stark regnete, fiel das Fest aus.",
+    "regelAr": "«weil» تجعل فعل الجملة التابعة في آخرها؛ وبعدها تبدأ الجملة الرئيسة بالفعل قبل الفاعل: «fiel das Fest aus».",
+    "kategorie": "Konnektor / Bedeutung",
+    "ar": "«weil» تفتح جملة تابعة وفعلها في النهاية؛ وبعد الفاصلة، لأن الجملة التابعة تقدمت، يبدأ الفعل الرئيس قبل الفاعل: «fiel das Fest aus»."
+  },
+  {
+    "id": "f-b2-038",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Die Zahl der Anträge sind im letzten Jahr gestiegen.",
+    "richtig": "Die Zahl der Anträge ist im letzten Jahr gestiegen.",
+    "regelAr": "رأس الفاعل هو Zahl وهو مفرد؛ أما Anträge فجاءت في Genitiv مضافاً إليه، لذلك يطابقه الفعل المفرد ist.",
+    "kategorie": "Subjekt-Verb-Kongruenz",
+    "ar": "رأس الفاعل هو «Die Zahl» وهو مفرد؛ عبارة «der Anträge» مضاف إليه ولا تغيّر المطابقة، لذا نقول «ist»."
+  },
+  {
+    "id": "f-b2-039",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "*Es besteht kein Zweifel daran, dass er hat Recht.",
+    "richtig": "Es besteht kein Zweifel daran, dass er Recht hat.",
+    "regelAr": "بعد dass الفعل في آخر الجملة الثانوية.",
+    "kategorie": "",
+    "ar": "«dass» تدخل جملة تابعة، فينتقل الفعل المصرف إلى نهايتها: «dass er Recht hat»."
+  },
+  {
+    "id": "f-b2-040",
+    "kat": "schreibung",
+    "level": "B2",
+    "falsch": "*Die Frage, die sich stellt, ist ob das Projekt finanzierbar ist.",
+    "richtig": "Die Frage, die sich stellt, ist, ob das Projekt finanzierbar ist.",
+    "regelAr": "قبل ob جملة ثانوية تُفصل بفاصلة بعد فعل الكينونة.",
+    "kategorie": "",
+    "ar": "الجملة غير المباشرة التي تبدأ بـ«ob» جملة تابعة؛ يجب فصلها بفاصلة عن الجملة الرئيسة: «ist, ob …»."
+  },
+  {
+    "id": "f-b2-041",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "*Die Behörde erklärte, dass sie die Entscheidung morgen teilt mit.",
+    "richtig": "Die Behörde erklärte, dass sie die Entscheidung morgen mitteilt.",
+    "regelAr": "في الجملة التابعة بـ dass يبقى الفعل المنفصل متصلاً في آخر الجملة: mitteilt؛ لا تُفصل البادئة mit عن الفعل.",
+    "kategorie": "Nebensatz / trennbare Verben",
+    "ar": "«mitteilen» فعل منفصل في الجملة الرئيسة، لكنه يُكتب متصلاً في جملة «dass» التابعة، ويأتي في نهايتها: «mitteilt»."
+  },
+  {
+    "id": "f-b2-042",
+    "kat": "zeitform",
+    "level": "B2",
+    "falsch": "*Nachdem er hat die Prüfung bestanden, feierte er mit seiner Familie.",
+    "richtig": "Nachdem er die Prüfung bestanden hatte, feierte er mit seiner Familie.",
+    "regelAr": "في جملة nachdem التابعة يذهب الفعل المصرف إلى النهاية؛ وعند سرد فعل أسبق من حدثٍ ماضٍ نستخدم Plusquamperfekt: bestanden hatte.",
+    "kategorie": "Nachdem-Satz / Plusquamperfekt",
+    "ar": "النجاح في الامتحان حدث قبل الاحتفال، لذلك يُستخدم Plusquamperfekt «bestanden hatte»؛ وفي جملة «nachdem» يأتي الفعل في النهاية."
+  },
+  {
+    "id": "f-b2-043",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Je schneller, desto gut.",
+    "richtig": "Je schneller, desto besser.",
+    "regelAr": "بعد je … desto يأتي الصفة بصيغة المقارنة في الجزأين (Kompärativ).",
+    "kategorie": "",
+    "ar": "في التركيب «je …, desto …» نستخدم درجة المقارنة في الطرفين؛ مقارنة «gut» هي «besser»، لا «gut»."
+  },
+  {
+    "id": "f-b2-044",
+    "kat": "schreibung",
+    "level": "B2",
+    "falsch": "*Ich bin daran interessiert das Projekt zu leiten.",
+    "richtig": "Ich bin daran interessiert, das Projekt zu leiten.",
+    "regelAr": "عندما يشير daran إلى مجموعة المصدر الموسعة، توضع فاصلة قبلها: daran interessiert, das Projekt zu leiten. الفعل zu leiten هو المصدر مع zu.",
+    "kategorie": "Komma / Infinitivgruppe",
+    "ar": "تتطلب مجموعة المصدر ذات «zu» فاصلة هنا لأنها تعتمد على أداة الإحالة «daran»: «daran interessiert, das Projekt zu leiten»."
+  },
+  {
+    "id": "f-b2-045",
+    "kat": "konstruktion",
+    "level": "B2",
+    "falsch": "*Die Ergebnisse sind besser wie im Vorjahr.",
+    "richtig": "Die Ergebnisse sind besser als im Vorjahr.",
+    "regelAr": "في المقارنة غير المتساوية يأتي als بعد صيغة المقارنة: besser als. أما wie فتستعمل للمساواة: so gut wie. «besser wie» لهجي في بعض المناطق، وليس الصيغة المعيارية للكتابة والامتحان.",
+    "kategorie": "Vergleich / als oder wie",
+    "ar": "في المقارنة المعيارية بعد صيغة التفضيل «besser» نستخدم «als» للفارق؛ أما «wie» فتناسب المساواة."
+  }
 ]

@@ -1,0 +1,1594 @@
+{
+  "date": "2026-10-05",
+  "batch": "A2-dialogues-06",
+  "reviewRule": "R108",
+  "scope": "مراجعة مصدرية فردية للحوارات الحية d-a2-13 إلى d-a2-15: 3 بيانات حوار، 24 سطراً، 9 أسئلة بكل خياراتها ومفاتيحها وشروحها، و6 جمل إملاء؛ 42 وحدة إجمالاً، مع فحص 29 مفردة waisen ضمن بيانات الحوار لا كوحدات إضافية. فُحص سجل الصوت والتاريخ كلٌّ ضمن حدوده.",
+  "method": "استُخرجت اللقطات والمعرفات من content/dialogues.json بعد إعادة فحص Git والتقارير. لكل وحدة 42 سُجل الدليل والحكم والإجراء واللقطة الحية؛ وربطت وسوم waisen الثمانية/العشرة/الإحدى عشرة بمصادرها الفردية. استُخدمت صفحات معجمية للمعنى فقط، ومصادر رسمية/سياقية لما قد يتعلق بسلامة الطعام. اقتصر التصحيح على خطأ عربي مؤكد؛ وفُصلت الملاحظات الأسلوبية والوقائع التي لا يحسمها السياق.",
+  "coverage": {
+    "dialogues": 3,
+    "dialogueMetadata": 3,
+    "lines": 24,
+    "questions": 9,
+    "dictationSentences": 6,
+    "audioAssets": 0,
+    "unresolvedContextNotes": 3,
+    "totalTrackedItems": 42,
+    "waisenTermsReviewed": 29
+  },
+  "statusCounts": {
+    "سليم": 39,
+    "مُصحح": 1,
+    "غير محسوم": 2
+  },
+  "statusDefinitions": {
+    "سليم": "فُحصت الوحدة بسياقها ومصدرها؛ لم يثبت فيها خطأ ترجمي/لغوي مؤكد يستلزم التعديل. قد تُسجل ملاحظة أسلوبية أو حدّ سياقي دون تحويله إلى عيب.",
+    "مُصحح": "ثبت خلل محدد في حقل العربية، وعُدّل الحقل وحده مع حفظ النص قبل التعديل.",
+    "غير محسوم": "المعنى المقصود أو حقيقة سياقية لا يحسمها النص/المصدر؛ لا تعديل تخمينياً، ولا يعني التصنيف ثبوت خطأ لغوي."
+  },
+  "limitations": [
+    "هذه مراجعة مساعد ذكاء اصطناعي بمصادر منشورة، وليست مراجعة بشرية أو اعتماداً لغوياً/مهنياً أو رأياً قانونياً/طبياً.",
+    "لم يُعَد تقييم A2/CEFR أو حساب النسبة أو مستوى المتعلم؛ لا تغيير لهذه الحقول.",
+    "مداخل القواميس تسند مفردات محددة ولا تثبت وحدها سلاسة كل جملة ألمانية أو عربية.",
+    "مدة التهيئة وموعد التدريب والسداد خصائص حوار شركة خيالية؛ لا تعمم على أصحاب العمل.",
+    "عرف الإكرامية غير محسوم لغياب المكان والمتلقي؛ مرجع Reisereporter محدود بسياقات وجهات معينة.",
+    "لا يحدد سطر اللحم نوعه أو طريقة إذابته؛ مرجع BfR خاص بالدواجن ومرجع LGL احتياط عام. لم يُنسب خطر غير مذكور إلى الحوار.",
+    "لم توجد إدخالات صوت/أسماء ملفات مطابقة؛ لا يستنتج من الغياب أن صوتاً مطلوب. لم يحدث تشغيل أو استماع أو اختبار TTS.",
+    "المقارنة التاريخية محدودة بملف الإنشاء الأولي وما أمكن التحقق منه؛ لا تدعي بناء سجل تاريخ كامل."
+  ],
+  "historicalPatchReview": {
+    "sources": [
+      "scripts/patches/dialoge_a2_neu1.py",
+      "scripts/patches/a_dialog_fallen.py"
+    ],
+    "role": "dialoge_a2_neu1.py يحتوي نص الإنشاء الأولي لبعض الحقول؛ استُخدم للمقارنة الحرفية فقط لا كحكم لغوي أو سجل تعديل كامل. بحث الملف a_dialog_fallen.py لا يجد معرفات d-a2-13 إلى d-a2-15، لذلك لا نستنتج تاريخاً للأسئلة منه.",
+    "unavailableHistoricalFields": [
+      "التسلسل الكامل لتعديلات النص بعد ملف الإنشاء الأولي",
+      "سجل سابق مستقل لأسئلة هذه المعرفات؛ a_dialog_fallen.py لا يحتويها",
+      "نية مؤلف d-a2-14.lines[2] في التفريق بين قطعة أمتعة وكمية قليلة",
+      "أي سجل صوت تاريخي أو تسجيل استماع"
+    ],
+    "comparisons": [
+      {
+        "id": "d-a2-13.lines[2].ar",
+        "historicalText": "فترة التأهيل تدوم أربعة أسابيع. في هذه الفترة لا ضغط وقت.",
+        "liveText": "تستغرق فترة التهيئة في العمل أربعة أسابيع. وخلالها لا يوجد ضغط زمني.",
+        "observation": "لقطة الإنشاء تطابق before؛ التغيير الحالي يخص العربية فقط."
+      },
+      {
+        "id": "d-a2-14.lines[2].de",
+        "historicalText": "Lang, aber die Landung war pünktlich. Ich habe nur ein kleines Gepäck.",
+        "liveText": "Lang, aber die Landung war pünktlich. Ich habe nur ein kleines Gepäck.",
+        "observation": "نص الإنشاء يطابق النص الحي؛ لا يستدل منه على نية المؤلف في تحديد عدد القطع."
+      },
+      {
+        "id": "d-a2-14.lines[2].ar",
+        "historicalText": "طويلة، لكن الهبوط كان في موعده. معي أمتعة صغيرة فقط.",
+        "liveText": "طويلة، لكن الهبوط كان في موعده. معي أمتعة صغيرة فقط.",
+        "observation": "نص الإنشاء يطابق النص الحي؛ بقيت دلالة كمية/قطعة غير محسومة."
+      }
+    ]
+  },
+  "contentPatch": {
+    "fieldsChanged": 1,
+    "changedFields": [
+      "d-a2-13.lines[2].ar"
+    ],
+    "reason": "أُصلح التركيب العربي غير الطبيعي «لا ضغط وقت» إلى «لا يوجد ضغط زمني» مع جعل جملة المدة عربية سليمة. لم يتغير النص الألماني أو مدة الأسابيع. لم تُطبق اقتراحات الأمتعة/السؤال الفندقي/تعليمة الفرن لأنها ملتبسة أو أسلوبية لا أخطاء مؤكدة.",
+    "protectedUnresolvedItemIds": [
+      "d-a2-14.lines[2]",
+      "d-a2-14.lines[7]"
+    ],
+    "protectedContextRelatedItemIds": [
+      "d-a2-14.lines[6]",
+      "d-a2-15.lines[1]"
+    ],
+    "protectedStyleItemIds": [
+      "d-a2-14-q2.promptDe",
+      "d-a2-15.lines[2].de"
+    ],
+    "deferredSuggestions": [
+      {
+        "id": "d-a2-14.lines[2]",
+        "candidate": {
+          "de": "ein kleines Gepäckstück",
+          "ar": "حقيبة صغيرة واحدة"
+        },
+        "reason": "فقط إذا أكد المؤلف أنه يقصد قطعة مفردة؛ لا تُحوّل قلة الأمتعة إلى حقيبة واحدة."
+      },
+      {
+        "id": "d-a2-14-q2.promptDe",
+        "candidate": "Wie viele Nächte bleibt der Gast?",
+        "reason": "بديل أشيع مؤيد بمثال فندقي، لكن الخطأ القاطع لم يثبت."
+      },
+      {
+        "id": "d-a2-15.lines[2].de",
+        "candidate": "Zuerst den Backofen auf 180 Grad vorheizen.",
+        "reason": "بديل أوضح لدرجة الحرارة، لا تصحيح إلزامي."
+      }
+    ]
+  },
+  "openNotes": [
+    {
+      "id": "d-a2-14.lines[2]",
+      "status": "غير محسوم",
+      "sources": [
+        "S18",
+        "S35",
+        "S36",
+        "S37"
+      ],
+      "relatedItemIds": [
+        "d-a2-14.lines[2]"
+      ],
+      "finding": "Gepäck يدل على مجموع الأمتعة؛ Gepäckstück على قطعة منفردة. النص العربي الحالي لا يصرح بحقيبة واحدة، ولا يوضح قصد المؤلف أهو قلة الأمتعة أم قطعة صغيرة. المصدر يفرّق المعنيين ولا يحسم نية الحوار.",
+      "action": "لا تغيير حتى تأكيد المقصود؛ إن كان المقصود قطعة واحدة فليُراجع de/ar معاً، وإن كان المقصود قلة الأمتعة فلتعتمد صياغة ذلك المعنى."
+    },
+    {
+      "id": "d-a2-14.lines[7]",
+      "status": "غير محسوم",
+      "sources": [
+        "S17",
+        "S54",
+        "S73",
+        "S74",
+        "S75"
+      ],
+      "relatedItemIds": [
+        "d-a2-14.lines[6]",
+        "d-a2-14.lines[7]"
+      ],
+      "finding": "السؤال/الجواب عن «هنا» يتوقف على بلد الفندق والجهة المقصودة. المصدر الفندقي الذي فُحص يذكر الإكرامية اختيارية ونحو 1–2 يورو لعمال housekeeping وفق سياق إقامة، ويذكر أن الإكرامية للاستقبال غير معتادة غالباً؛ لا يثبت أن الرقم «معتاد» في فندق غير محدد.",
+      "action": "يُحفظ النص بلا حكم عام أو تغيير تخميني؛ يلزم سياق جغرافي وتحديد متلقي الإكرامية إذا أريد تقرير العرف كحقيقة تعليمية."
+    },
+    {
+      "id": "d-a2-15.lines[1]",
+      "status": "غير محسوم",
+      "sources": [
+        "S60",
+        "S61",
+        "S29",
+        "S55",
+        "S56"
+      ],
+      "relatedItemIds": [
+        "d-a2-15.lines[1]"
+      ],
+      "finding": "طريقة وحرارة إذابة اللحم غير مذكورتين، كما أن نوعه غير محدد. LGL يذكر فصل سائل الذوبان، وBfR يقدم إرشاداً خاصاً بالدواجن؛ لا يسمح أي منهما بنسبة طريقة خطرة إلى الجملة أو الحكم على سلامة حالة لم يصفها الحوار.",
+      "action": "لا تعديل ولا نصيحة سلامة مستنتجة من هذه الجملة؛ إن أريد تحويل الحوار إلى وصفة إرشادية فيلزم تحديد نوع اللحم وطريقة الإذابة وإسنادها إلى دليل مناسب."
+    }
+  ],
+  "styleNotes": [
+    {
+      "id": "d-a2-14-q2.promptDe",
+      "alternative": "Wie viele Nächte bleibt der Gast?",
+      "reason": "Lingoneo يسند استعمال Nächte في سؤال الحجز/مدة الإقامة؛ صياغة d-a2-14 الحية ليست مثبتة هنا كخطأ نحوي قاطع، لذا لا تستبدل لمجرد أن البديل أشيع.",
+      "sources": [
+        "S12",
+        "S38"
+      ]
+    },
+    {
+      "id": "d-a2-15.lines[2].de",
+      "alternative": "Zuerst den Backofen auf 180 Grad vorheizen.",
+      "reason": "توضح درجة الفرن داخل التركيب نفسه، لكن «Zuerst den Backofen vorheizen, 180 Grad» مفهومة كتعليمة وصفة محكية؛ الإكمال تحسين وضوح اختياري لا خطأ مؤكد.",
+      "sources": [
+        "S24",
+        "S25",
+        "S69",
+        "S57"
+      ]
+    }
+  ],
+  "audioAssetAudit": [],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Duden: Einarbeitung",
+      "url": "https://www.duden.de/rechtschreibung/Einarbeitung",
+      "supports": "يعرّف Einarbeitung بأنها إدخال/تهيئة شخص في عمل جديد؛ لا يثبت مدة أربعة أسابيع الخاصة بالشركة الخيالية."
+    },
+    {
+      "id": "S02",
+      "title": "PONS: Fortbildung",
+      "url": "https://en.pons.com/translate/german-arabic/Fortbildung",
+      "supports": "يدعم معنى التعليم/التدريب المهني المستمر، ولا يحدد برنامج الشركة أو استحقاقه."
+    },
+    {
+      "id": "S03",
+      "title": "DWDS: Teamarbeit",
+      "url": "https://www.dwds.de/wb/Teamarbeit",
+      "supports": "يعرّفها بأنها عمل تعاوني تقوم به مجموعة؛ لا يحكم على أسلوب كل ترجمة عربية."
+    },
+    {
+      "id": "S04",
+      "title": "PONS: Kenntnisse",
+      "url": "https://en.pons.com/translate/german-arabic/Kenntnisse",
+      "supports": "يدعم معنى المعارف/المعرفة في سياق المهارات."
+    },
+    {
+      "id": "S05",
+      "title": "PONS: vorstellen",
+      "url": "https://en.pons.com/translate/german-arabic/vorstellen",
+      "supports": "يدعم معنى تقديم شخص إلى آخر في تركيب dem Team vorstellen."
+    },
+    {
+      "id": "S06",
+      "title": "Almaany: time pressure",
+      "url": "https://www.almaany.com/ar/dict/ar-en/time-pressure/",
+      "supports": "يسجل «ضغط زمني» و«ضغط الوقت» مقابلاً لـZeitdruck؛ لا يقيم صياغة الحوار كاملة."
+    },
+    {
+      "id": "S07",
+      "title": "PONS: Firma",
+      "url": "https://en.pons.com/translate/german-arabic/Firma",
+      "supports": "يدعم معنى الشركة."
+    },
+    {
+      "id": "S08",
+      "title": "PONS: pünktlich",
+      "url": "https://en.pons.com/translate/german-arabic/pünktlich",
+      "supports": "يدعم معنى الالتزام بالموعد/في الوقت المحدد."
+    },
+    {
+      "id": "S09",
+      "title": "PONS: Landung",
+      "url": "https://en.pons.com/translate/german-arabic/Landung",
+      "supports": "يدعم معنى هبوط الطائرة؛ السياق هو الرحلة الجوية."
+    },
+    {
+      "id": "S10",
+      "title": "PONS: Rezeption",
+      "url": "https://en.pons.com/translate/german-arabic/Rezeption",
+      "supports": "يدعم معنى مكتب الاستقبال الفندقي بحسب السياق."
+    },
+    {
+      "id": "S11",
+      "title": "PONS: Einzelzimmer",
+      "url": "https://en.pons.com/translate/german-arabic/Einzelzimmer",
+      "supports": "يدعم معنى غرفة مفردة/لشخص واحد."
+    },
+    {
+      "id": "S12",
+      "title": "PONS: Übernachtung",
+      "url": "https://en.pons.com/translate/german-arabic/Übernachtung",
+      "supports": "يدعم معنى المبيت/الليلة، ولا يحكم وحده على تركيب سؤال الإقامة."
+    },
+    {
+      "id": "S13",
+      "title": "PONS: Reiseführer",
+      "url": "https://en.pons.com/translate/german-arabic/Reiseführer",
+      "supports": "يدعم معنى الدليل السياحي."
+    },
+    {
+      "id": "S14",
+      "title": "PONS: Aussicht",
+      "url": "https://en.pons.com/translate/german-arabic/Aussicht",
+      "supports": "يدعم معنى الإطلالة/المنظر في تركيب Aussicht auf den Fluss."
+    },
+    {
+      "id": "S15",
+      "title": "PONS: sich verlaufen",
+      "url": "https://en.pons.com/translate/german-arabic/verlaufen",
+      "supports": "يدعم معنى أن يضل الشخص طريقه؛ لا يفرض مقابلاً عربياً واحداً."
+    },
+    {
+      "id": "S16",
+      "title": "PONS: Notausgang",
+      "url": "https://en.pons.com/translate/german-arabic/Notausgang",
+      "supports": "يعرض معنى مخرج الطوارئ."
+    },
+    {
+      "id": "S17",
+      "title": "PONS: Trinkgeld",
+      "url": "https://en.pons.com/translate/german-arabic/Trinkgeld",
+      "supports": "يدعم معنى الإكرامية؛ العرف والمبلغ يتوقفان على المكان والجهة."
+    },
+    {
+      "id": "S18",
+      "title": "PONS: Gepäck",
+      "url": "https://en.pons.com/translate/german-arabic/Gepäck",
+      "supports": "يدعم معنى الأمتعة بوصفها مجموعة/حمولة؛ لا يثبت عدّ قطعة منفردة."
+    },
+    {
+      "id": "S19",
+      "title": "Duden: Zutat",
+      "url": "https://www.duden.de/rechtschreibung/Zutat",
+      "supports": "يعرّف المكوّن المستخدم في إعداد شيء، مع أمثلة طعام."
+    },
+    {
+      "id": "S20",
+      "title": "PONS: Mehl",
+      "url": "https://en.pons.com/translate/german-arabic/Mehl",
+      "supports": "يدعم معنى الطحين/الدقيق."
+    },
+    {
+      "id": "S21",
+      "title": "PONS: braten",
+      "url": "https://en.pons.com/translate/german-arabic/braten",
+      "supports": "يدعم معنى القلي/التحمير في استعمال الطهي؛ لا يثبت مقدار الزيت أو السلامة."
+    },
+    {
+      "id": "S22",
+      "title": "PONS: Soße",
+      "url": "https://en.pons.com/translate/german-arabic/Soße",
+      "supports": "يدعم معنى الصلصة."
+    },
+    {
+      "id": "S23",
+      "title": "PONS: Pfeffer",
+      "url": "https://en.pons.com/translate/german-arabic/Pfeffer",
+      "supports": "يدعم معنى الفلفل بوصفه مكوّناً/تابلاً."
+    },
+    {
+      "id": "S24",
+      "title": "PONS: Backofen",
+      "url": "https://en.pons.com/translate/german-arabic/Backofen",
+      "supports": "يدعم معنى فرن الخَبز/الفرن المنزلي."
+    },
+    {
+      "id": "S25",
+      "title": "Duden: vorheizen",
+      "url": "https://www.duden.de/rechtschreibung/vorheizen",
+      "supports": "يدعم معنى تسخين الفرن قبل الاستخدام؛ لا يقرر أن العبارة الحوارية المختصرة خطأ."
+    },
+    {
+      "id": "S26",
+      "title": "PONS: Schüssel",
+      "url": "https://en.pons.com/translate/german-arabic/Schüssel",
+      "supports": "يدعم معنى الوعاء/الزبدية."
+    },
+    {
+      "id": "S27",
+      "title": "PONS: umrühren",
+      "url": "https://en.pons.com/translate/german-arabic/umrühren",
+      "supports": "يدعم معنى التحريك/التقليب."
+    },
+    {
+      "id": "S28",
+      "title": "PONS: einfrieren",
+      "url": "https://en.pons.com/translate/german-arabic/einfrieren",
+      "supports": "يدعم معنى التجميد."
+    },
+    {
+      "id": "S29",
+      "title": "PONS: auftauen",
+      "url": "https://en.pons.com/translate/german-arabic/auftauen",
+      "supports": "يدعم معنى الذوبان/إزالة التجميد، لا طريقة الذوبان أو سلامتها."
+    },
+    {
+      "id": "S30",
+      "title": "PONS: Arbeitstag",
+      "url": "https://en.pons.com/translate/german-arabic/Arbeitstag",
+      "supports": "يعطي يوم عمل مقابلاً لـArbeitstag؛ يدعم عنوان أول يوم عمل."
+    },
+    {
+      "id": "S31",
+      "title": "PONS: Ankunft",
+      "url": "https://en.pons.com/translate/german-arabic/Ankunft",
+      "supports": "يدعم معنى الوصول."
+    },
+    {
+      "id": "S32",
+      "title": "PONS: Hotel",
+      "url": "https://en.pons.com/translate/german-arabic/Hotel",
+      "supports": "يدعم معنى فندق."
+    },
+    {
+      "id": "S33",
+      "title": "PONS: zusammen",
+      "url": "https://en.pons.com/translate/german-arabic/zusammen",
+      "supports": "يدعم معنى معاً."
+    },
+    {
+      "id": "S34",
+      "title": "PONS: kochen",
+      "url": "https://en.pons.com/translate/german-arabic/kochen",
+      "supports": "يدعم معنى الطهي/الطبخ، ومنه الاستعمال المتعدي للطعام."
+    },
+    {
+      "id": "S35",
+      "title": "Duden: Gepäck",
+      "url": "https://www.duden.de/rechtschreibung/Gepaeck",
+      "supports": "يعرض Gepäck اسماً جمعياً للأمتعة؛ يفيد في تمييزه من قطعة معدودة."
+    },
+    {
+      "id": "S36",
+      "title": "Duden: Gepäckstück",
+      "url": "https://www.duden.de/rechtschreibung/Gepaeckstueck",
+      "supports": "يدعم Gepäckstück بوصفه قطعة/عنصراً واحداً من الأمتعة."
+    },
+    {
+      "id": "S37",
+      "title": "PONS: Gepäckstück",
+      "url": "https://en.pons.com/translate/german-arabic/Gepäckstück",
+      "supports": "يدعم المقابل العربي لحقيبة/قطعة أمتعة، ولا يحدد المقصود في الجملة الحية."
+    },
+    {
+      "id": "S38",
+      "title": "Lingoneo: booking a hotel room",
+      "url": "https://www.lingoneo.org/learn-german/page/learn-essential-phrases/vacation/booking-a-hotel-room/page-1838",
+      "supports": "يعرض الصياغة الفندقية «Wie viele Nächte möchten Sie bleiben?»؛ هذا بديل اصطلاحي مؤيد لا حكم قاطع ببطلان صياغة السؤال الحية."
+    },
+    {
+      "id": "S39",
+      "title": "PONS: nervös",
+      "url": "https://en.pons.com/translate/german-arabic/nerv%C3%B6s",
+      "supports": "يعرض من مقابلات nervös «متوتر»؛ لا يختار وحده بين الصيغ العربية."
+    },
+    {
+      "id": "S40",
+      "title": "PONS: sich freuen",
+      "url": "https://en.pons.com/translate/german-arabic/freuen",
+      "supports": "يدعم معنى السرور/الفرح في sich freuen."
+    },
+    {
+      "id": "S41",
+      "title": "PONS: Programm",
+      "url": "https://en.pons.com/translate/german-arabic/Programm",
+      "supports": "يعرض Programm بمعنى برنامج؛ لا يحدد البرنامج الوظيفي المقصود."
+    },
+    {
+      "id": "S42",
+      "title": "PONS: erklären",
+      "url": "https://en.pons.com/translate/german-arabic/erkl%C3%A4ren",
+      "supports": "يعرض شرح/توضيح مقابلاً لـerklären."
+    },
+    {
+      "id": "S43",
+      "title": "PONS: Chefin",
+      "url": "https://en.pons.com/translate/german-arabic/Chefin",
+      "supports": "يدعم معنى رئيسة/مديرة بوصفها الصيغة المؤنثة لـChef."
+    },
+    {
+      "id": "S44",
+      "title": "PONS: Kollege",
+      "url": "https://en.pons.com/translate/german-arabic/Kollege",
+      "supports": "يدعم معنى زميل؛ يعرض أيضاً Kollegin للمؤنث."
+    },
+    {
+      "id": "S45",
+      "title": "PONS: Geduld",
+      "url": "https://en.pons.com/translate/german-arabic/Geduld",
+      "supports": "يدعم معنى الصبر."
+    },
+    {
+      "id": "S46",
+      "title": "PONS: Flug",
+      "url": "https://en.pons.com/translate/german-arabic/Flug",
+      "supports": "يدعم معنى رحلة/طيران، ويعين السياق الحديث على معنى الرحلة الجوية."
+    },
+    {
+      "id": "S47",
+      "title": "PONS: reservieren",
+      "url": "https://en.pons.com/translate/german-arabic/reservieren",
+      "supports": "يدعم معنى الحجز."
+    },
+    {
+      "id": "S48",
+      "title": "PONS: Fluss",
+      "url": "https://en.pons.com/translate/german-arabic/Fluss",
+      "supports": "يعرض النهر معنىً لـFluss؛ يدعم Aussicht auf den Fluss."
+    },
+    {
+      "id": "S49",
+      "title": "PONS: Stock",
+      "url": "https://en.pons.com/translate/german-arabic/Stock",
+      "supports": "يفصل مدخل Stock2 عن العصا ويعرض معنى طابق/دور، المطابق لسياق مبنى الفندق."
+    },
+    {
+      "id": "S50",
+      "title": "PONS: Zwiebel",
+      "url": "https://en.pons.com/translate/german-arabic/Zwiebel",
+      "supports": "يدعم معنى البصل؛ لا يفرض إظهار الجمع في العربية مع اسم المادة."
+    },
+    {
+      "id": "S51",
+      "title": "PONS: Tag",
+      "url": "https://en.pons.com/translate/german-arabic/Tag",
+      "supports": "يدعم معنى اليوم في Das reicht für zwei Tage."
+    },
+    {
+      "id": "S52",
+      "title": "PONS: willkommen",
+      "url": "https://en.pons.com/translate/german-arabic/willkommen",
+      "supports": "يعرض مقابلات ترحيب عربية مثل مرحباً/أهلاً وسهلاً."
+    },
+    {
+      "id": "S53",
+      "title": "PONS: Guten Abend",
+      "url": "https://en.pons.com/translate/german-arabic/Guten+Abend",
+      "supports": "يعرض التحية المسائية «مساء الخير»."
+    },
+    {
+      "id": "S54",
+      "title": "Reisereporter: Trinkgeld im Hotel",
+      "url": "https://www.reisereporter.de/tipps-und-tricks/wissen-fuer-reise-nerds/trinkgeld-im-hotel-so-machen-reisende-es-richtig-YFJ67IMCCDJLSIWQLC7DCSUJ6W.html",
+      "supports": "يعرض الإكرامية الفندقية اختيارية، ويذكر نحو 1–2 يورو لعمال housekeeping بحسب الإقامة، مع أن الإكرامية للاستقبال غير معتادة غالباً؛ لا يعمم على مكان أو جهة غير محددين."
+    },
+    {
+      "id": "S55",
+      "title": "LGL Bayern: Umgang mit Eiern, Milch und Fleisch",
+      "url": "https://www.lgl.bayern.de/lebensmittel/hygiene/hygienischer_umgang/verbrauchertipps/et_eier_milch_fleisch.htm",
+      "supports": "يوصي بإزالة سائل ذوبان اللحوم بعناية ومنع ملامسته أطعمة أخرى، ويذكر تجنب التلوث المتبادل؛ لا يحدد نوع اللحم أو طريقة حواره."
+    },
+    {
+      "id": "S56",
+      "title": "BfR: Fragen und Antworten zu Geflügelfleisch",
+      "url": "https://www.bfr.bund.de/fragen-und-antworten/thema/ausgewaehlte-fragen-und-antworten-zu-gefluegelfleisch/",
+      "supports": "يقدم إرشادات خاصة بالدواجن عن الإذابة المبردة وسائل الذوبان والتلوث المتبادل؛ لا يجوز تعميمه على لحم غير محدد النوع أو نسبة الطريقة إلى الحوار."
+    },
+    {
+      "id": "S57",
+      "title": "Linguee: Backofen auf 180 Grad vorheizen",
+      "url": "https://www.linguee.com/german-english/translation/backofen+auf+180+grad+vorheizen.html",
+      "supports": "يعرض تركيباً كاملاً شائعاً «Backofen auf 180 Grad vorheizen»؛ يدعم اقتراح وضوح لا يثبت خطأ الشذرة الحوارية."
+    },
+    {
+      "id": "S58",
+      "title": "PONS: Ei",
+      "url": "https://en.pons.com/translate/german-arabic/Ei",
+      "supports": "يفرق بين Ei المفرد «بيضة» وEi الجمعي «بيض»."
+    },
+    {
+      "id": "S59",
+      "title": "PONS: Milch",
+      "url": "https://en.pons.com/translate/german-arabic/Milch",
+      "supports": "يدعم معنى الحليب؛ يظهر أيضاً مقابلاً إقليمياً مصنفاً Äg، فلا يفرض تنويعاً عربياً بعينه."
+    },
+    {
+      "id": "S60",
+      "title": "PONS: Fleisch",
+      "url": "https://en.pons.com/translate/german-arabic/Fleisch",
+      "supports": "يدعم معنى اللحم/اللحوم من دون تعيين نوع الحيوان."
+    },
+    {
+      "id": "S61",
+      "title": "PONS: Gefrierfach",
+      "url": "https://en.pons.com/translate/german-arabic/Gefrierfach",
+      "supports": "يدعم معنى حجرة/قسم التجميد؛ لا يحدد درجة حرارة جهاز بعينه."
+    },
+    {
+      "id": "S62",
+      "title": "PONS: Pfanne",
+      "url": "https://en.pons.com/translate/german-arabic/Pfanne",
+      "supports": "يدعم معنى المقلاة."
+    },
+    {
+      "id": "S63",
+      "title": "PONS: Klumpen",
+      "url": "https://en.pons.com/translate/german-arabic/Klumpen",
+      "supports": "يدعم معنى كتلة/تكتل؛ في خليط الطبخ: كتل."
+    },
+    {
+      "id": "S64",
+      "title": "PONS: Ende",
+      "url": "https://en.pons.com/translate/german-arabic/Ende",
+      "supports": "يدعم معنى النهاية/الآخر في am Ende."
+    },
+    {
+      "id": "S65",
+      "title": "PONS: bisschen",
+      "url": "https://en.pons.com/translate/german-arabic/bisschen",
+      "supports": "يعرض معنى قليل/قليلاً لـein bisschen."
+    },
+    {
+      "id": "S66",
+      "title": "PONS: Salz",
+      "url": "https://en.pons.com/translate/german-arabic/Salz",
+      "supports": "يدعم معنى الملح؛ لا يحسم الإضمار الحواري في Salz haben wir schon."
+    },
+    {
+      "id": "S67",
+      "title": "PONS: Rest",
+      "url": "https://en.pons.com/translate/german-arabic/Rest",
+      "supports": "يدعم معنى البقية/الباقي."
+    },
+    {
+      "id": "S68",
+      "title": "PONS: reichen",
+      "url": "https://en.pons.com/translate/german-arabic/reichen",
+      "supports": "يعرض معنى genügen/يكفي، ومنه das reicht."
+    },
+    {
+      "id": "S69",
+      "title": "PONS: Grad",
+      "url": "https://en.pons.com/translate/german-arabic/Grad",
+      "supports": "يعرض الدرجة في استعمال القياس/الحرارة."
+    },
+    {
+      "id": "S70",
+      "title": "PONS: Flur",
+      "url": "https://en.pons.com/translate/german-arabic/Flur",
+      "supports": "يعرض معنى الردهة/الممر للـFlur المنزلي، مع معنى آخر هو الحقل خارج هذا السياق."
+    },
+    {
+      "id": "S71",
+      "title": "PONS: links",
+      "url": "https://en.pons.com/translate/german-arabic/links",
+      "supports": "يعرض «إلى اليسار» لـnach links."
+    },
+    {
+      "id": "S72",
+      "title": "PONS: kostenlos",
+      "url": "https://en.pons.com/translate/german-arabic/kostenlos",
+      "supports": "يعرض kostenfrei/مجاني؛ صفحة القاموس تحيل في التفصيل إلى مدخل kostenfrei."
+    },
+    {
+      "id": "S73",
+      "title": "PONS: freiwillig",
+      "url": "https://en.pons.com/translate/german-arabic/freiwillig",
+      "supports": "يدعم معنى طوعي/اختياري."
+    },
+    {
+      "id": "S74",
+      "title": "PONS: üblich",
+      "url": "https://en.pons.com/translate/german-arabic/%C3%BCblich",
+      "supports": "يعرض «معتاد/مألوف» مقابلاً لـüblich."
+    },
+    {
+      "id": "S75",
+      "title": "PONS: Euro",
+      "url": "https://en.pons.com/translate/german-arabic/Euro",
+      "supports": "يدعم اسم العملة يورو؛ لا يثبت أن مبلغاً معيناً عرفٌ محلي."
+    },
+    {
+      "id": "S76",
+      "title": "PONS: dauern",
+      "url": "https://en.pons.com/translate/german-arabic/dauern",
+      "supports": "يعرض دام/استغرق مقابلاً لـdauern."
+    },
+    {
+      "id": "S77",
+      "title": "PONS: Woche",
+      "url": "https://en.pons.com/translate/german-arabic/Woche",
+      "supports": "يدعم أسبوع؛ أمثلة PONS تشمل nächste Woche."
+    },
+    {
+      "id": "S78",
+      "title": "PONS: Herbst",
+      "url": "https://en.pons.com/translate/german-arabic/Herbst",
+      "supports": "يدعم معنى الخريف."
+    },
+    {
+      "id": "S79",
+      "title": "PONS: bezahlen",
+      "url": "https://en.pons.com/translate/german-arabic/bezahlen",
+      "supports": "يدعم معنى دفع الثمن/السداد؛ لا يثبت أن الشركة الخيالية ستدفع فعلاً."
+    },
+    {
+      "id": "S80",
+      "title": "PONS: morgen",
+      "url": "https://en.pons.com/translate/german-arabic/morgen",
+      "supports": "يدعم الظرف الزمني غداً، مع تمييزه عن اسم Morgen الصباح."
+    },
+    {
+      "id": "S81",
+      "title": "PONS: acht",
+      "url": "https://en.pons.com/translate/german-arabic/acht",
+      "supports": "يدعم العدد acht = ثمانية؛ لا يحدد سياق الساعة خارج الجملة."
+    }
+  ],
+  "items": [
+    {
+      "id": "d-a2-13",
+      "kind": "بيانات الحوار/العنوان/وسوم waisen",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S30"
+      ],
+      "finding": "العنوان Der erste Arbeitstag يقابله «أول يوم عمل». فُحصت مفردات waisen الثماني كلمةً كلمةً بالمراجع المسندة هنا: Einarbeitung، Fortbildung، Teamarbeit، Kenntnisse، sich vorstellen، Zeitdruck، Firma، pünktlich. مدخل Duden هو الدليل الأساسي على الاسم Einarbeitung؛ لا تكفي نتيجة بحث معجمية عن الفعل وحده للحكم على الاسم. اللقطة الحية: A2؛ 8 أسطر/3 أسئلة/جملتا إملاء؛ neu=true. لا يُعاد تقييم CEFR.",
+      "action": "لا تغيير للعنوان أو الوسوم أو المستوى؛ لا تعميم لمدة التهيئة المذكورة في حوار شركة خيالية.",
+      "reviewed": {
+        "titleDe": "Der erste Arbeitstag",
+        "titleAr": "أول يوم عمل",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "die Einarbeitung",
+          "die Fortbildung",
+          "die Teamarbeit",
+          "die Kenntnisse",
+          "sich vorstellen",
+          "der Zeitdruck",
+          "die Firma",
+          "pünktlich"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-13.lines[0]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S07",
+        "S05",
+        "S03",
+        "S43"
+      ],
+      "finding": "الترحيب وتقديم Frau Mansour إلى الفريق محفوظان. مقابلات الشركة وتقديم شخص إلى فريق تدعمها المداخل المعجمية؛ «هل أقدّمك للفريق؟» عربية مفهومة ومطابقة للسؤال الرسمي. لا يثبت المعجم وحده طبيعية الجملة كاملة.",
+      "action": "لا تغيير؛ صياغة التحية العربية البديلة مسألة أسلوب لا خطأ معنى ثابت.",
+      "reviewed": {
+        "who": "Chefin",
+        "de": "Willkommen in der Firma, Frau Mansour! Darf ich Sie dem Team vorstellen?",
+        "ar": "أهلاً بك في الشركة سيدة منصور! هل أقدّمك للفريق؟"
+      }
+    },
+    {
+      "id": "d-a2-13.lines[1]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S39",
+        "S40"
+      ],
+      "finding": "nervös يقابل «متوترة»، وsich freuen يدل على السرور. «بكل سرور… متوترة قليلاً لكنني سعيدة» يحفظ التردد والفرح مع تأنيث المتحدثة؛ ليست سلاسة جملة عربية كاملة مستنتجة من مدخل مفردة.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Frau Mansour",
+        "de": "Sehr gern. Ich bin etwas nervös, aber ich freue mich.",
+        "ar": "بكل سرور. أنا متوترة قليلاً لكنني سعيدة."
+      }
+    },
+    {
+      "id": "d-a2-13.lines[2]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "مُصحح",
+      "sources": [
+        "S01",
+        "S06",
+        "S76",
+        "S77"
+      ],
+      "finding": "كان «في هذه الفترة لا ضغط وقت» نقلاً حرفياً متعثراً وغير طبيعي في العربية، وZeitdruck يعني ضغطاً زمنياً. الصياغة الجديدة «تستغرق فترة التهيئة في العمل أربعة أسابيع. وخلالها لا يوجد ضغط زمني» تحفظ مدة Einarbeitung ونفي الضغط. مدة الأسابيع ادعاء داخل حوار الشركة لا حقيقة عامة.",
+      "action": "صُحح حقل العربية وحده إلى ترجمة عربية سليمة؛ لم يتغير الألماني أو المدة أو مفتاح السؤال، ولم تُعمم المدة على أصحاب العمل.",
+      "reviewed": {
+        "who": "Chefin",
+        "de": "Die Einarbeitung dauert vier Wochen. In dieser Zeit gibt es keinen Zeitdruck.",
+        "ar": "تستغرق فترة التهيئة في العمل أربعة أسابيع. وخلالها لا يوجد ضغط زمني."
+      },
+      "before": {
+        "de": "Die Einarbeitung dauert vier Wochen. In dieser Zeit gibt es keinen Zeitdruck.",
+        "ar": "فترة التأهيل تدوم أربعة أسابيع. في هذه الفترة لا ضغط وقت."
+      }
+    },
+    {
+      "id": "d-a2-13.lines[3]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S41",
+        "S42",
+        "S43"
+      ],
+      "finding": "معنى شرح البرنامج على الحاسوب وسؤال الموظفة إن كانت المديرة هي التي ستشرحه محفوظ. «أنتِ كمديرة؟» يؤدي Sie als Chefin هنا، ويطابق تأنيث المخاطبة؛ المداخل تثبت معاني المفردات لا الحكم على كل تركيب.",
+      "action": "لا تغيير؛ لا التباس يثبت خطأً ملزماً.",
+      "reviewed": {
+        "who": "Frau Mansour",
+        "de": "Das ist gut. Und wer erklärt mir das Programm am Computer, Sie als Chefin?",
+        "ar": "هذا جيد. ومن يشرح لي البرنامج على الحاسوب، أنتِ كمديرة؟"
+      }
+    },
+    {
+      "id": "d-a2-13.lines[4]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S04",
+        "S03",
+        "S44",
+        "S45"
+      ],
+      "finding": "Tom هو الزميل، وله معرفة جيدة وصبر كثير، والعمل الجماعي مهم: العناصر الأساسية كلها في العربية. معرفة/معارف وزميل وصبر معانٍ مؤيدة بالمداخل؛ الجملة تخص الشركة الخيالية.",
+      "action": "لا تغيير ولا تعميم لادعاء أهمية Teamarbeit على كل شركة.",
+      "reviewed": {
+        "who": "Chefin",
+        "de": "Ihr Kollege Tom. Er hat gute Kenntnisse und viel Geduld. Teamarbeit ist bei uns wichtig.",
+        "ar": "زميلك توم. لديه معرفة جيدة وصبر كبير. العمل الجماعي مهم عندنا."
+      }
+    },
+    {
+      "id": "d-a2-13.lines[5]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S02"
+      ],
+      "finding": "السؤال عن وجود Fortbildung إضافية يقابله «هل يوجد تكوين مستمر أيضاً؟». «تكوين مستمر» اختيار عربي مفهوم؛ يمكن تفضيل «تدريب/تطوير مهني» حسب الجمهور، دون ثبوت خطأ ترجمي.",
+      "action": "لا تغيير؛ البديل الأسلوبي ليس عيباً مؤكداً.",
+      "reviewed": {
+        "who": "Frau Mansour",
+        "de": "Gibt es auch eine Fortbildung?",
+        "ar": "هل يوجد تكوين مستمر أيضاً؟"
+      }
+    },
+    {
+      "id": "d-a2-13.lines[6]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S07",
+        "S78",
+        "S79"
+      ],
+      "finding": "الخريف ويومان في كولن ودفع الشركة لكل شيء عناصر منقولة. المصادر تسند معاني الموسم والدفع والشركة؛ لا تتحقق من سياسة شركة حقيقية.",
+      "action": "لا تغيير؛ تبقى المعلومة داخل الحوار الخيالي.",
+      "reviewed": {
+        "who": "Chefin",
+        "de": "Ja, im Herbst, zwei Tage in Köln. Die Firma bezahlt alles.",
+        "ar": "نعم، في الخريف، يومان في كولن. الشركة تدفع كل شيء."
+      }
+    },
+    {
+      "id": "d-a2-13.lines[7]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S08",
+        "S80",
+        "S81"
+      ],
+      "finding": "النية «سأكون غداً في الثامنة ملتزمة بالموعد» محفوظة؛ pünktlich لا تعني مجرد «بالضبط» في كل سياق، لكن العربية «في الثامنة بالضبط» مفهومة ولا يثبت هنا انحراف يستدعي إصلاحاً.",
+      "action": "لا تغيير؛ يمكن استعمال «سأكون هنا غداً في الثامنة تماماً/في الموعد» كبديل أسلوبي فقط.",
+      "reviewed": {
+        "who": "Frau Mansour",
+        "de": "Danke! Ich bin morgen pünktlich um acht da.",
+        "ar": "شكراً! سأكون هنا غداً في الثامنة بالضبط."
+      }
+    },
+    {
+      "id": "d-a2-13-q1",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S02",
+        "S76",
+        "S77"
+      ],
+      "finding": "المفتاح vier Wochen منصوص عليه في d-a2-13.lines[2]. المشتتان «يومان» و«حتى الخريف» يخصان التدريب اللاحق؛ الخيارات الثلاثة متميزة ومفتاحها حاضر في النص.",
+      "action": "لا تغيير للمفتاح أو الخيارات أو الشرح.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wie lange dauert die Einarbeitung?",
+        "options": [
+          "zwei Tage",
+          "bis zum Herbst",
+          "vier Wochen"
+        ],
+        "answer": "vier Wochen",
+        "explanationAr": "الدليل: «Die Einarbeitung dauert vier Wochen». الفخّ 1: يومان هي مدة التكوين في كولن. الفخّ 2: الخريف موعد التكوين.",
+        "id": "d-a2-13-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-13-q2",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S42",
+        "S41",
+        "S44",
+        "S04"
+      ],
+      "finding": "السؤال يسأل عمن يشرح البرنامج؛ الجواب ihr Kollege Tom يطابق السطر 4 حرفياً، والمشتتان المديرة/مدرب كولن لا يناقضان النص. الشرح يستشهد بالدليل ويشرح الفخاخ.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wer erklärt Frau Mansour das Programm?",
+        "options": [
+          "ihr Kollege Tom",
+          "die Chefin",
+          "ein Trainer in Köln"
+        ],
+        "answer": "ihr Kollege Tom",
+        "explanationAr": "الدليل: «Ihr Kollege Tom. Er hat gute Kenntnisse und viel Geduld». الفخّ 1: المديرة تقدّمها للفريق فقط. الفخّ 2: كولن مكان التكوين.",
+        "id": "d-a2-13-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-13-q3",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S06"
+      ],
+      "finding": "الفراغ بعد keinen يطلب الاسم Zeitdruck، وهو الجواب المنقول حرفياً في السطر 2؛ الشرح يقتبس الجملة نفسها.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "fill",
+        "promptDe": "In dieser Zeit gibt es keinen ___.",
+        "answer": [
+          "Zeitdruck"
+        ],
+        "explanationAr": "الدليل: «In dieser Zeit gibt es keinen Zeitdruck».",
+        "id": "d-a2-13-q3",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-13.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S01",
+        "S76",
+        "S77"
+      ],
+      "finding": "جملة الإملاء مطابقة حرفياً للجملة الأولى من سطر التهيئة، ومدة الأسابيع محفوظة.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Die Einarbeitung dauert vier Wochen."
+      }
+    },
+    {
+      "id": "d-a2-13.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S03"
+      ],
+      "finding": "جملة الإملاء مطابقة حرفياً لـTeamarbeit ist bei uns wichtig؛ معنى العمل التعاوني يسنده DWDS.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Teamarbeit ist bei uns wichtig."
+      }
+    },
+    {
+      "id": "d-a2-14",
+      "kind": "بيانات الحوار/العنوان/وسوم waisen",
+      "status": "سليم",
+      "sources": [
+        "S31",
+        "S32",
+        "S09",
+        "S10",
+        "S11",
+        "S12",
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17",
+        "S18"
+      ],
+      "finding": "العنوان Ankunft im Hotel يقابله «الوصول إلى الفندق». فُحصت مفردات waisen العشر كلمةً كلمةً: Landung، Rezeption، Einzelzimmer، Übernachtung، Reiseführer، Aussicht، sich verlaufen، Notausgang، Trinkgeld، Gepäck. اللقطة الحية A2؛ 8/3/2؛ neu=true. لا إعادة لتقييم CEFR.",
+      "action": "لا تغيير للعنوان أو الوسوم أو المستوى. حُفظت النقاط السياقية المفتوحة منفصلة عن سلامة اللغة.",
+      "reviewed": {
+        "titleDe": "Ankunft im Hotel",
+        "titleAr": "الوصول إلى الفندق",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "die Landung",
+          "die Rezeption",
+          "das Einzelzimmer",
+          "die Übernachtung",
+          "der Reiseführer",
+          "die Aussicht",
+          "sich verlaufen",
+          "der Notausgang",
+          "das Trinkgeld",
+          "das Gepäck"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-14.lines[0]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S11",
+        "S47",
+        "S53"
+      ],
+      "finding": "تحية المساء وحجز غرفة مفردة باسم Trabelsi محفوظة في «مساء الخير. حجزت غرفة مفردة باسم الطرابلسي». الحجز والغرفة المفردة والتحية مدعومة معجمياً؛ تهجئة الاسم علمٌ من النص.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Gast",
+        "de": "Guten Abend. Ich habe ein Einzelzimmer reserviert, auf den Namen Trabelsi.",
+        "ar": "مساء الخير. حجزت غرفة مفردة باسم الطرابلسي."
+      }
+    },
+    {
+      "id": "d-a2-14.lines[1]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S52",
+        "S46",
+        "S32"
+      ],
+      "finding": "الترحيب والسؤال عن الرحلة محفوظان في «أهلاً! كيف كانت الرحلة؟». PONS يثبت معنى الترحيب والرحلة الجوية، لا يفرض مقابلاً عربياً بعينه للتحية.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Rezeption",
+        "de": "Willkommen! Wie war der Flug?",
+        "ar": "أهلاً! كيف كانت الرحلة؟"
+      }
+    },
+    {
+      "id": "d-a2-14.lines[2]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S09",
+        "S08",
+        "S18",
+        "S35",
+        "S36",
+        "S37"
+      ],
+      "finding": "landung pünktlich واضحان، لكن «Ich habe nur ein kleines Gepäck» لا يثبت أن المتكلم يقصد قطعة واحدة: Gepäck يدل على الأمتعة كمجموع، وGepäckstück على قطعة منفردة. العربية الحية «معي أمتعة صغيرة فقط» تميل إلى وصف كمية/حجم، لا إلى «حقيبة واحدة». لا نقرر المقصود ولا نصف العبارة خطأً مؤكداً دون توضيح.",
+      "action": "أُبقي الألمانية والعربية كما هما. إن كان المقصود قطعة واحدة فـGepäckstück خيار أدق؛ وإن كان المقصود قلة الأمتعة فتلزم صياغة مثل wenig Gepäck. لا يُطبق أي منهما قبل تأكيد النية.",
+      "reviewed": {
+        "who": "Gast",
+        "de": "Lang, aber die Landung war pünktlich. Ich habe nur ein kleines Gepäck.",
+        "ar": "طويلة، لكن الهبوط كان في موعده. معي أمتعة صغيرة فقط."
+      }
+    },
+    {
+      "id": "d-a2-14.lines[3]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S14",
+        "S12",
+        "S49",
+        "S48"
+      ],
+      "finding": "الغرفة 312 والطابق الثالث والإطلالة على النهر وثلاث ليالٍ محفوظة. PONS Stock يحدد معنى الطابق، لا معنى العصا، في هذا السياق؛ Aussicht/Fluss/Übernachtung تسند المقابلات العربية.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Rezeption",
+        "de": "Zimmer 312, dritter Stock, mit Aussicht auf den Fluss. Drei Übernachtungen, richtig?",
+        "ar": "الغرفة 312، الطابق الثالث، بإطلالة على النهر. ثلاث ليالٍ، صحيح؟"
+      }
+    },
+    {
+      "id": "d-a2-14.lines[4]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S13",
+        "S15"
+      ],
+      "finding": "طلب دليل للمدينة وكون الضيف يضل طريقه سريعاً محفوظان. «أضيع بسرعة» ممكن؛ «أضل الطريق بسهولة» بديل عربي أسلوبي إذا أريد معنى التكرار/السهولة، لا خطأ مؤكد.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Gast",
+        "de": "Ja. Haben Sie einen Reiseführer für die Stadt? Ich verlaufe mich schnell.",
+        "ar": "نعم. هل لديكم دليل سياحي للمدينة؟ أضيع بسرعة."
+      }
+    },
+    {
+      "id": "d-a2-14.lines[5]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S16",
+        "S70",
+        "S71",
+        "S72"
+      ],
+      "finding": "كون الدليل مجانياً وموقع مخرج الطوارئ في نهاية الممر يساراً محفوظ. Flur هنا ممر/ردهة، وlinks اتجاه إلى اليسار؛ للمفردة معنى آخر خارج السياق.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Rezeption",
+        "de": "Hier, kostenlos. Der Notausgang ist am Ende des Flurs, links.",
+        "ar": "تفضّل، مجاناً. مخرج الطوارئ في نهاية الممر، يساراً."
+      }
+    },
+    {
+      "id": "d-a2-14.lines[6]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S17",
+        "S54"
+      ],
+      "finding": "السؤال «هل يُعطى بقشيش هنا؟» مفهوم ومطابق للسياق الفندقي؛ «بقشيش» اختيار عربي دارج، ويمكن استخدام «إكرامية» فصحى دون أن يلزم ذلك.",
+      "action": "لا تغيير؛ لا يُفترض بلد الفندق أو الجهة المتلقية.",
+      "reviewed": {
+        "who": "Gast",
+        "de": "Danke. Gibt man hier Trinkgeld?",
+        "ar": "شكراً. هل يُعطى بقشيش هنا؟"
+      }
+    },
+    {
+      "id": "d-a2-14.lines[7]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "غير محسوم",
+      "sources": [
+        "S17",
+        "S73",
+        "S74",
+        "S75",
+        "S54"
+      ],
+      "finding": "المعاني «اختياري/طوعي» و«يورو أو اثنان» قابلة للنقل. لكن حكم «معتاد هنا» غير قابل للتعميم: المصدر الفندقي الذي فُحص يذكر housekeeping وسياق إقامة بعينه، ويصف tipping للاستقبال بأنه أقل شيوعاً؛ الحوار لا يحدد المكان أو متلقي الإكرامية.",
+      "action": "أُبقي النص دون تغيير ولا أقدّم عرفاً عاماً. يلزم تحديد المكان والجهة أو تأطير العبارة على أنها قول شخصية/عرف محلي.",
+      "reviewed": {
+        "who": "Rezeption",
+        "de": "Das ist freiwillig, ein bis zwei Euro sind üblich.",
+        "ar": "هذا اختياري، يورو أو اثنان هو المعتاد."
+      }
+    },
+    {
+      "id": "d-a2-14-q1",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S11",
+        "S14",
+        "S48"
+      ],
+      "finding": "المفتاح يجمع معلومتين ظاهرتين: Einzelzimmer في السطر 0 والإطلالة على النهر في السطر 3. المشتتان يخلطان معلومات صحيحة عن الطابق/الممر مع نوع الغرفة أو مخرج الطوارئ؛ الشرح يوضح ذلك.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was für ein Zimmer hat der Gast?",
+        "options": [
+          "ein Einzelzimmer mit Aussicht auf den Fluss",
+          "ein Doppelzimmer im dritten Stock",
+          "ein Zimmer am Ende des Flurs, links"
+        ],
+        "answer": "ein Einzelzimmer mit Aussicht auf den Fluss",
+        "explanationAr": "الدليل: «Ich habe ein Einzelzimmer reserviert» و«mit Aussicht auf den Fluss». الفخّ 1: الطابق الثالث صحيح لكن الغرفة مفردة لا مزدوجة. الفخّ 2: نهاية الممر يساراً هو مخرج الطوارئ.",
+        "id": "d-a2-14-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-14-q2",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S12",
+        "S38"
+      ],
+      "finding": "المفتاح drei يطابق «Drei Übernachtungen, richtig?» ثم «Ja». مثال Lingoneo يؤيد سؤالاً فندقياً أكثر تداولاً بـNächte؛ لكنه لا يثبت أن السؤال الحي «Wie viele Übernachtungen bleibt er?» خطأ نحوي قاطع، لذلك يبقى اقتراحاً أسلوبياً لا تصحيحاً مفروضاً.",
+      "action": "لا تغيير؛ لا يُستبدل promptDe ببديل أسلوبي دون دليل أقوى على خطأ مؤكد.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Wie viele Übernachtungen bleibt er?",
+        "options": [
+          "zwei",
+          "drei",
+          "eine Übernachtung"
+        ],
+        "answer": "drei",
+        "explanationAr": "الدليل: «Drei Übernachtungen, richtig?» … «Ja». الفخّ: «ein bis zwei Euro» هو البقشيش.",
+        "id": "d-a2-14-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-14-q3",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S13",
+        "S72",
+        "S75"
+      ],
+      "finding": "العبارة «الدليل يكلف يوروين» خاطئة بحسب السطر «Hier, kostenlos». معنى kostenlos مجاني؛ اليورو أو الاثنان ذُكرا في جواب الإكرامية لا ثمن الدليل.",
+      "action": "لا تغيير للمفتاح أو الخيارات أو الشرح.",
+      "reviewed": {
+        "type": "truefalse",
+        "promptDe": "Der Reiseführer kostet zwei Euro.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Hier, kostenlos». اليورو أو الاثنان هما البقشيش المعتاد.",
+        "id": "d-a2-14-q3",
+        "promptAr": "هل العبارة صحيحة أم خاطئة حسب الحوار؟"
+      }
+    },
+    {
+      "id": "d-a2-14.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S09",
+        "S08"
+      ],
+      "finding": "الجملة منقولة حرفياً من بداية السطر 2؛ landung/موعد الهبوط محفوظان.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Lang, aber die Landung war pünktlich."
+      }
+    },
+    {
+      "id": "d-a2-14.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S16",
+        "S70",
+        "S71"
+      ],
+      "finding": "الجملة مطابقة للسطر 5؛ المعجم يدعم مخرج الطوارئ والممر والاتجاه يساراً.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Der Notausgang ist am Ende des Flurs, links."
+      }
+    },
+    {
+      "id": "d-a2-15",
+      "kind": "بيانات الحوار/العنوان/وسوم waisen",
+      "status": "سليم",
+      "sources": [
+        "S33",
+        "S34",
+        "S19",
+        "S20",
+        "S21",
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26",
+        "S27",
+        "S28",
+        "S29"
+      ],
+      "finding": "العنوان Zusammen kochen يقابله «نطبخ معاً». فُحصت مفردات waisen الإحدى عشرة كلمةً كلمةً: Zutat، Mehl، braten، Soße، Pfeffer، Backofen، vorheizen، Schüssel، umrühren، einfrieren، auftauen. اللقطة A2؛ 8/3/2؛ neu=true؛ لا إعادة لتقييم CEFR.",
+      "action": "لا تغيير للعنوان أو المستوى أو الوسوم؛ نقاط سلامة الطعام مفصولة عن الحكم اللغوي.",
+      "reviewed": {
+        "titleDe": "Zusammen kochen",
+        "titleAr": "نطبخ معاً",
+        "level": "A2",
+        "lineCount": 8,
+        "questionCount": 3,
+        "dictationCount": 2,
+        "neu": true,
+        "hasWaisen": true,
+        "waisen": [
+          "die Zutat",
+          "das Mehl",
+          "braten",
+          "die Soße",
+          "der Pfeffer",
+          "der Backofen",
+          "vorheizen",
+          "die Schüssel",
+          "umrühren",
+          "einfrieren",
+          "auftauen"
+        ]
+      }
+    },
+    {
+      "id": "d-a2-15.lines[0]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S19",
+        "S20",
+        "S58",
+        "S59",
+        "S50"
+      ],
+      "finding": "السؤال عن توافر المكونات وقائمة Mehl/Eier/Milch/Zwiebeln محفوظة. العربية تستخدم اسم «بصل» الجمعي بدلاً من جمع عددي، وهو مناسب للمادة الغذائية في هذا السياق.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Lina",
+        "de": "Hast du alle Zutaten? Mehl, Eier, Milch und Zwiebeln?",
+        "ar": "هل لديك كل المكونات؟ طحين وبيض وحليب وبصل؟"
+      }
+    },
+    {
+      "id": "d-a2-15.lines[1]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S29",
+        "S60",
+        "S61",
+        "S55",
+        "S56"
+      ],
+      "finding": "المعنى اللغوي: أخذ اللحم من حجرة التجميد أمس وأصبح مذاباً؛ العربية تنقل ذلك. نوع اللحم وطريقة/درجة الذوبان غير مذكورين. LGL يعطي احتياطات عامة لسائل الذوبان، وBfR يتناول الدواجن تحديداً؛ لا يثبت أي منهما وقوع معالجة غير آمنة هنا.",
+      "action": "لا تعديل لغوي ولا حكم على سلامة طريقة غير مذكورة؛ تُحفظ الملاحظة السياقية فقط.",
+      "reviewed": {
+        "who": "Yusuf",
+        "de": "Ja. Das Fleisch habe ich gestern aus dem Gefrierfach genommen, es ist aufgetaut.",
+        "ar": "نعم. اللحم أخرجته أمس من الفريزر، وقد ذاب."
+      }
+    },
+    {
+      "id": "d-a2-15.lines[2]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S24",
+        "S25",
+        "S69",
+        "S57"
+      ],
+      "finding": "تعليمة الوصفة المختصرة مفهومة: سخّنوا الفرن مسبقاً، 180 درجة. Duden يدعم معنى vorheizen، ومصادر الوصفات تعرض الصياغة الأوضح «auf 180 Grad vorheizen»؛ حذف auf لا يكفي وحده لإثبات خطأ في هذه الشذرة الحوارية.",
+      "action": "لا تغيير؛ يُسجل البديل «Zuerst den Backofen auf 180 Grad vorheizen» كملاحظة وضوح اختيارية فقط.",
+      "reviewed": {
+        "who": "Lina",
+        "de": "Gut. Zuerst den Backofen vorheizen, 180 Grad.",
+        "ar": "جيد. أولاً نسخّن الفرن مسبقاً، 180 درجة."
+      }
+    },
+    {
+      "id": "d-a2-15.lines[3]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S21",
+        "S50",
+        "S62"
+      ],
+      "finding": "السؤال عن قلي البصل في المقلاة مطابق لمعاني الأفعال والأسماء في سياق وصفة الطعام.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Yusuf",
+        "de": "Und ich brate die Zwiebeln in der Pfanne?",
+        "ar": "وأنا أقلي البصل في المقلاة؟"
+      }
+    },
+    {
+      "id": "d-a2-15.lines[4]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S20",
+        "S26",
+        "S27",
+        "S59",
+        "S63"
+      ],
+      "finding": "إضافة الطحين والحليب إلى الوعاء والتحريك جيداً كي لا تتكوّن كتل محفوظة. العربية تتبع الإضمار الإرشادي في «Dann Mehl und Milch in die Schüssel…» ولا تفقد خطوة أساسية.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Lina",
+        "de": "Ja, langsam. Dann Mehl und Milch in die Schüssel und gut umrühren, sonst gibt es Klumpen.",
+        "ar": "نعم، ببطء. ثم الطحين والحليب في الوعاء ونحرّك جيداً وإلا تكوّنت كتل."
+      }
+    },
+    {
+      "id": "d-a2-15.lines[5]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S23",
+        "S22"
+      ],
+      "finding": "السؤال عما إذا كان الفلفل سيُضاف إلى الصلصة منقول بوضوح.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "who": "Yusuf",
+        "de": "Kommt Pfeffer in die Soße?",
+        "ar": "هل يُضاف الفلفل إلى الصلصة؟"
+      }
+    },
+    {
+      "id": "d-a2-15.lines[6]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S65",
+        "S64",
+        "S66"
+      ],
+      "finding": "قليل من الفلفل في النهاية، والملح موجود/سبق وضعه: المعنى الحواري محفوظ. «Salz haben wir schon» حذف محادثي، والعربية «الملح وضعناه» تصرّح بما يفهم من سياق إعداد الطعام؛ لا دليل قاطع على أن الإضمار يعني مجرد امتلاك الملح خارج الوصفة.",
+      "action": "لا تغيير تخميني؛ يمكن توضيحها أسلوبياً إلى «الملح أضفناه بالفعل» إذا أراد المحرر هذا المعنى.",
+      "reviewed": {
+        "who": "Lina",
+        "de": "Nur ein bisschen, am Ende. Salz haben wir schon.",
+        "ar": "قليلاً فقط، في النهاية. الملح وضعناه."
+      }
+    },
+    {
+      "id": "d-a2-15.lines[7]",
+      "kind": "سطر ألماني/ترجمته",
+      "status": "سليم",
+      "sources": [
+        "S28",
+        "S67",
+        "S68",
+        "S51"
+      ],
+      "finding": "السؤال عن تجميد الباقي، ثم أن الكمية تكفي يومين، محفوظ. PONS يدعم Rest وreichen بمعنى يكفي وTag بوصفه يوماً.",
+      "action": "لا تغيير؛ لا ادعاء مدة حفظ آمنة للطعام.",
+      "reviewed": {
+        "who": "Yusuf",
+        "de": "Und den Rest frieren wir ein? Das reicht für zwei Tage.",
+        "ar": "والباقي نجمّده؟ يكفي ليومين."
+      }
+    },
+    {
+      "id": "d-a2-15-q1",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S60",
+        "S61",
+        "S29"
+      ],
+      "finding": "الإجابة «أخرج اللحم من حجرة التجميد» مذكورة حرفياً في السطر 1؛ قلي البصل وتسخين الفرن خطوات تالية، لا فعل الأمس. شرح الفخاخ متوافق.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Was hat Yusuf gestern gemacht?",
+        "options": [
+          "die Zwiebeln gebraten",
+          "das Fleisch aus dem Gefrierfach genommen",
+          "den Backofen vorgeheizt"
+        ],
+        "answer": "das Fleisch aus dem Gefrierfach genommen",
+        "explanationAr": "الدليل: «Das Fleisch habe ich gestern aus dem Gefrierfach genommen». الفخّ 1: القلي الآن. الفخّ 2: التسخين هو أول خطوة اليوم.",
+        "id": "d-a2-15-q1",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-15-q2",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S27",
+        "S63",
+        "S23",
+        "S22"
+      ],
+      "finding": "الإجابة لأن التحريك يمنع الكتل منصوص عليها بـ«sonst gibt es Klumpen». مشتت الصلصة الحارة يخص الفلفل، ومشتت ذوبان اللحم يخص اليوم السابق.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "mc",
+        "promptDe": "Warum soll man gut umrühren?",
+        "options": [
+          "damit die Soße scharf wird",
+          "damit das Fleisch auftaut",
+          "weil es sonst Klumpen gibt"
+        ],
+        "answer": "weil es sonst Klumpen gibt",
+        "explanationAr": "الدليل: «gut umrühren, sonst gibt es Klumpen». الفخّ 1: الفلفل هو ما يخصّ الحرارة. الفخّ 2: اللحم ذاب أمس.",
+        "id": "d-a2-15-q2",
+        "falle": true,
+        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+      }
+    },
+    {
+      "id": "d-a2-15-q3",
+      "kind": "سؤال/خيارات/مفتاح/شرح",
+      "status": "سليم",
+      "sources": [
+        "S24",
+        "S25",
+        "S69",
+        "S57"
+      ],
+      "finding": "الفراغ بعد den Backofen يطلب vorheizen، وهو الفعل نفسه في السطر 2؛ 180 Grad جزء من التعليمة. صياغة الوصفة المختصرة ليست خللاً في مفتاح السؤال.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "type": "fill",
+        "promptDe": "Zuerst den Backofen ___, 180 Grad.",
+        "answer": [
+          "vorheizen"
+        ],
+        "explanationAr": "الدليل: «Zuerst den Backofen vorheizen, 180 Grad».",
+        "id": "d-a2-15-q3",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+      }
+    },
+    {
+      "id": "d-a2-15.dictation[0]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S24",
+        "S25",
+        "S69",
+        "S57"
+      ],
+      "finding": "جملة الإملاء مطابقة حرفياً لتعليمة الفرن في السطر 2؛ لا يثبت اختيار الشذرة أن صياغة وصفة أخرى غير صحيحة.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Zuerst den Backofen vorheizen, 180 Grad."
+      }
+    },
+    {
+      "id": "d-a2-15.dictation[1]",
+      "kind": "جملة إملاء",
+      "status": "سليم",
+      "sources": [
+        "S23",
+        "S22"
+      ],
+      "finding": "جملة الإملاء «Kommt Pfeffer in die Soße?» نسخة حرفية من السطر 5.",
+      "action": "لا تغيير.",
+      "reviewed": {
+        "sentence": "Kommt Pfeffer in die Soße?"
+      }
+    }
+  ],
+  "verification": {
+    "typescript": {
+      "command": "./node_modules/.bin/tsc --noEmit",
+      "result": "passed"
+    },
+    "smoke": {
+      "command": "npm run smoke",
+      "passed": 1140,
+      "failed": 0,
+      "gates": "K182a–j + previous gates"
+    },
+    "interaktiv": {
+      "command": "npm run interaktiv",
+      "passed": 699,
+      "failed": 0,
+      "note": "تحذيرات HTMLMediaElement.play/pause من jsdom؛ لا تُثبت تشغيل الصوت. لم يُشغّل أو يُستمع لصوت R108."
+    },
+    "contentAudit": {
+      "command": "npm run audit:content",
+      "result": "passed",
+      "confirmedStructuralDefects": 0,
+      "note": "الإشارات المطبوعة بشرية/تربوية أو heuristic وليست عيوباً مؤكدة."
+    },
+    "build": {
+      "command": "npm run build",
+      "result": "passed",
+      "staticPages": 11
+    },
+    "npmAudit": {
+      "command": "npm audit --no-fund",
+      "result": "passed",
+      "vulnerabilities": 0
+    },
+    "patchIdempotence": {
+      "command": "python3 scripts/patches/review_a2_dialogues_06.py",
+      "result": "already applied; no additional data changed"
+    },
+    "gitDiffCheck": {
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    "initialFailures": [
+      {
+        "command": "./node_modules/.bin/tsc --noEmit and npm run smoke",
+        "failure": "الاعتماديات المحلية غير موجودة أولاً (tsc/esbuild: not found).",
+        "resolution": "npm ci ثبّت 95 حزمة؛ أُعيد TypeScript وsmoke بنجاح."
+      },
+      {
+        "command": "npm run smoke",
+        "failure": "أول تشغيل لبوابات K182f وK182h رفض عبارتين مرساتين بسبب اختلاف حرفي مع صياغة التقرير، لا بسبب خلل في المحتوى.",
+        "resolution": "طوبقت العبارات على حدود الدليل النهائي دون تخفيف التغطية؛ أُعيد smoke كاملاً: 1140/0."
+      },
+      {
+        "command": "./node_modules/.bin/tsc --noEmit (بالتوازي مع npm run build)",
+        "failure": "تعارض مؤقت أثناء إعادة Next.js توليد .next/types؛ ظهر TS6053 لملفات الأنواع المولدة التي مسّها البناء المتزامن.",
+        "resolution": "بعد اكتمال build أُعيد TypeScript منفرداً ونجح؛ لا خطأ مصدر مستمر."
+      }
+    ]
+  }
+}
