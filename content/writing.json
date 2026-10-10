@@ -930,7 +930,10 @@
       "علامات ترقيم صحيحة"
     ],
     "sample": "Ich heiße Layla. Ich bin 24 Jahre alt. Ich komme aus Syrien. Ich wohne in Köln. Ich bin Studentin.",
-    "noteAr": "لا داعي لجمل طويلة. جملة واحدة قصيرة لكل نقطة كافية.",
+    "noteAr": [
+      "اكتب جملة قصيرة واحدة لكل معلومة، مع فعل واضح مثل heißen أو sein أو wohnen.",
+      "للعمر قل: Ich bin 24 Jahre alt؛ ولا تُسقط Jahre alt. ابدأ الجملة بحرف كبير واختمها بنقطة."
+    ],
     "zielWort": 25
   },
   {
@@ -946,8 +949,11 @@
       "مهن مذكورة",
       "أفعال بسيطة في زمن المضارع"
     ],
-    "sample": "Meine Familie hat vier Personen. Das ist mein Vater, meine Mutter, mein Bruder und ich. Mein Vater ist Arzt. Meine Mutter ist Hausfrau.",
-    "noteAr": "استعمل «das ist» أو «mein/meine».",
+    "sample": "In meiner Familie sind vier Personen: mein Vater Omar, meine Mutter Dalia, mein Bruder Sami und ich. Mein Vater ist 50 Jahre alt und Arzt. Meine Mutter ist 46 Jahre alt und Lehrerin. Mein Bruder ist 16 Jahre alt und Schüler. Ich bin Studentin.",
+    "noteAr": [
+      "استخدم mein مع المذكر والمحايد، مثل mein Vater وmein Kind، وmeine مع المؤنث، مثل meine Mutter.",
+      "عند تعداد أفراد الأسرة قل Das sind، ثم اذكر المهن بجمل بسيطة مع ist أو bin."
+    ],
     "zielWort": 30
   },
   {
@@ -962,8 +968,11 @@
       "5 ألوان مع مثال",
       "جنس الاسم في المثال صحيح"
     ],
-    "sample": "eins, zwei, drei … zwanzig. Das Gras ist grün. Der Himmel ist blau.",
-    "noteAr": "انتبه إلى جنس الأسماء: der/die/das في الأمثلة.",
+    "sample": "eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn, elf, zwölf, dreizehn, vierzehn, fünfzehn, sechzehn, siebzehn, achtzehn, neunzehn, zwanzig. Der Himmel ist blau. Die Sonne ist gelb. Das Gras ist grün. Die Erdbeere ist rot. Die Nacht ist schwarz.",
+    "noteAr": [
+      "اكتب الأعداد كلها بالترتيب من eins إلى zwanzig؛ انتبه خصوصاً إلى كتابة sechs وsechzehn وzwölf.",
+      "اربط كل لون باسم ذي أداة صحيحة، مثل der Himmel ist blau وdie Sonne ist gelb؛ الصفة هنا تبدأ بحرف صغير."
+    ],
     "zielWort": 30
   },
   {
@@ -979,8 +988,11 @@
       "أوقات صحيحة (um … Uhr)",
       "أفعال في المضارع صحيحة"
     ],
-    "sample": "Am Montag stehe ich um 7 Uhr auf. Ich trinke Kaffee und gehe zur Arbeit.",
-    "noteAr": "استعمل «am Montag», «am Wochenende», «um … Uhr».",
+    "sample": "Am Montag stehe ich um 7 Uhr auf. Danach frühstücke ich zu Hause. Am Dienstag fahre ich mit dem Bus zur Arbeit. Am Mittwoch lerne ich am Abend Deutsch. Am Donnerstag mache ich nach der Arbeit Sport. Am Freitag kaufe ich ein und koche mit meinem Bruder. Am Samstag schlafe ich länger und treffe Freunde. Am Sonntag besuche ich meine Eltern. Am Wochenende gehe ich außerdem gern spazieren.",
+    "noteAr": [
+      "لليوم استخدم am Montag أو am Wochenende، وللساعة um 7 Uhr؛ يأتي am قبل اليوم وum قبل الوقت.",
+      "اكتب من 8 إلى 10 جمل بالمضارع، ونوّع الأفعال؛ في الفعل المنفصل مثل aufstehen يأتي الجزء auf في آخر الجملة."
+    ],
     "zielWort": 80
   },
   {
@@ -996,8 +1008,11 @@
       "استخدام weil",
       "صفات بسيطة"
     ],
-    "sample": "Mein Lieblingsort ist der Park in meiner Stadt. Ich gehe gern dorthin, weil es dort ruhig ist.",
-    "noteAr": "حاول استخدام weil في جملة واحدة.",
+    "sample": "Mein Lieblingsort ist der Park in meiner Stadt. Der Park liegt neben meiner Wohnung. Dort gibt es viele Bäume und einen kleinen See. Ich gehe gern dorthin, weil es dort ruhig ist. Am Wochenende spaziere ich mit meiner Schwester im Park.",
+    "noteAr": [
+      "صف المكان بجمل واضحة، ثم اذكر أين يقع وما الذي تفعله فيه؛ أضف صفة بسيطة مثل ruhig أو schön.",
+      "بعد weil تأتي الجملة التابعة والفعل المصرف في آخرها: ..., weil es dort ruhig ist."
+    ],
     "zielWort": 80
   },
   {
@@ -1013,8 +1028,11 @@
       "مطلب واضح (تبديل/استرداد)",
       "نبرة مهذبة وحازمة"
     ],
-    "sample": "Sehr geehrte Damen und Herren, vor einer Woche habe ich in Ihrem Online-Shop ein Smartphone bestellt. Als das Paket ankam, stellte ich fest, dass …",
-    "noteAr": "استخدم «als» و«dass» في جمل ثانوية.",
+    "sample": "Sehr geehrte Damen und Herren,\n\nvor einer Woche habe ich in Ihrem Online-Shop ein Smartphone bestellt. Gestern wurde das Paket geliefert. Als ich das Gerät ausgepackt habe, bemerkte ich einen langen Kratzer auf dem Display. Die Verpackung war unbeschädigt, und ich habe den Schaden sofort fotografiert. Das Smartphone funktioniert zwar, aber der Kratzer stört mich sehr und das Gerät entspricht nicht der Beschreibung. Ich bitte Sie daher um einen Austausch gegen ein einwandfreies Modell. Bitte antworten Sie mir innerhalb von sieben Tagen und erklären Sie, wie ich das beschädigte Gerät kostenlos zurückschicken kann. Sollte ein Austausch nicht möglich sein, wünsche ich eine Rückerstattung des Kaufpreises. Ein Foto des Schadens füge ich bei.\n\nMit freundlichen Grüßen\nLena Hoffmann",
+    "noteAr": [
+      "ابدأ بتحية رسمية، وحدّد وقت الطلب والتسليم ووصف العيب؛ استخدم als للحدث المحدد في الماضي.",
+      "اجعل الحل المطلوب صريحاً (Umtausch أو Rückerstattung)، وحدّد مهلة للرد، واختم رسمياً؛ أرفق صورة للعيب إن توفرت."
+    ],
     "zielWort": 110
   },
   {
@@ -1030,8 +1048,11 @@
       "تجربة شخصية",
       "رأي معلَّل بـweil/meiner Meinung nach"
     ],
-    "sample": "Immer mehr Menschen lernen Sprachen mit Apps wie Duolingo oder Babbel. Meiner Meinung nach hat das Vorteile, aber auch Nachteile …",
-    "noteAr": "استخدم Konnektoren: einerseits/andererseits/obwohl.",
+    "sample": "Immer mehr Menschen lernen Sprachen mit Apps. Meiner Meinung nach sind sie eine praktische Ergänzung zum Unterricht. Einerseits kann man jederzeit und im eigenen Tempo üben. Kurze Übungen helfen dabei, neue Wörter regelmäßig zu wiederholen, und viele Apps geben sofort eine Rückmeldung. Ich lerne seit drei Monaten jeden Morgen zehn Minuten Deutsch mit einer App; dadurch habe ich meinen Wortschatz erweitert. Andererseits erklären Apps die Grammatik oft nur kurz, und beim Sprechen fehlt ein echter Gesprächspartner. Außerdem können Benachrichtigungen ablenken. Ich empfehle deshalb, eine App mit einem Sprachkurs oder einem Tandem zu kombinieren. So bleibt man motiviert und kann das Gelernte in echten Gesprächen anwenden. Eine App ersetzt keine Lehrkraft, ist aber eine hilfreiche Ergänzung.",
+    "noteAr": [
+      "وازن الإيجابيات والسلبيات في فقرات مترابطة؛ استخدم einerseits وandererseits لا قائمة مفككة.",
+      "اربط تجربة شخصية بتوصية نهائية معلّلة، ووضّح رأيك بعبارة مثل Meiner Meinung nach."
+    ],
     "zielWort": 110
   },
   {
@@ -1048,8 +1069,11 @@
       "رأي ختامي مبرَّر",
       "مستوى B2: Konjunktiv II / Nebensätze / Nominalstil"
     ],
-    "sample": "Die Digitalisierung der Schulen wird seit Jahren kontrovers diskutiert. Befürworter argumentieren, dass … Kritiker hingegen warnen, dass …",
-    "noteAr": "استخدم: Einerseits/Andererseits, Obwohl/Trotz, Aus meiner Sicht, Zusammenfassend.",
+    "sample": "Die Digitalisierung der Schulen wird kontrovers diskutiert. Richtig eingesetzt könnte sie den Unterricht vielfältiger und zugänglicher machen. Digitale Lehrmittel bieten aktuelle Quellen und ermöglichen es, dass Lernende im eigenen Tempo üben; Lehrkräfte können Aufgaben besser an unterschiedliche Niveaus anpassen. Zudem lassen sich Projekte leichter gemeinsam bearbeiten, auch wenn eine Klasse nicht am selben Ort arbeitet. Dem stehen erhebliche Risiken gegenüber. Wo Geräte oder stabiles Internet fehlen, werden soziale Unterschiede verstärkt. Außerdem lenken Benachrichtigungen ab, und die Erhebung persönlicher Daten wirft Datenschutzfragen auf. Ein Beispiel: Eine Recherche auf dem Tablet kann mehrere Perspektiven sichtbar machen; ohne klare Aufgabe wechseln manche jedoch zu Spielen. Technik allein verbessert also keinen Unterricht. Schulen sollten Lehrkräfte fortbilden, Datenschutz verbindlich regeln und analoge Alternativen sichern. Aus meiner Sicht ist Digitalisierung dann sinnvoll, wenn sie ein pädagogisches Ziel unterstützt und nicht die Beziehung zwischen Lehrkraft und Lernenden ersetzt.",
+    "noteAr": [
+      "ابدأ بأطروحة، ثم اعرض حجتين مؤيدتين وحجتين معارضتين مع مثال محدد لكل موقف؛ لا تكتفِ بسرد المزايا.",
+      "نوّع الروابط: obwohl يقدّم جملة تابعة، وtrotz يسبق اسماً في حالة المضاف إليه؛ واختم بحكم معلّل لا بمجرد إعادة العنوان."
+    ],
     "zielWort": 160
   },
   {
@@ -1066,8 +1090,11 @@
       "مهلة واضحة وتحذير قانوني",
       "لغة مهذبة وحازمة في آن واحد"
     ],
-    "sample": "Sehr geehrter Herr Müller, ich schreibe Ihnen bezüglich der Heizung in meiner Wohnung in der Schillerstraße 14. Seit dem 11. Oktober funktioniert die Heizung im Wohnzimmer nicht mehr …",
-    "noteAr": "استخدم: bezüglich, trotz wiederholter Anfrage, mit Bedauern stelle ich fest, ich setze Ihnen eine Frist bis zum …",
+    "sample": "[Ihre Anschrift]\n[Anschrift des Vermieters]\nKöln, den 28. Oktober\n\nBetreff: Erneute Mängelanzeige – Heizung in meiner Wohnung\n\nSehr geehrter Herr Müller,\n\nseit dem 30. September funktioniert die Heizung im Wohnzimmer meiner Wohnung nicht. Die Raumtemperatur liegt abends nur bei etwa 16 Grad, sodass das Zimmer kaum nutzbar ist. Am 3. und am 10. Oktober habe ich Sie bereits telefonisch über den Defekt informiert; leider wurde bisher weder eine Reparatur veranlasst noch ein Termin vereinbart. Ich bitte Sie daher, den Mangel innerhalb von 14 Tagen nach Zugang dieses Schreibens fachgerecht zu beheben. Bei Zugang am 28. Oktober endet diese Frist am 11. November. Bitte bestätigen Sie mir schriftlich, wann ein Handwerker kommt. Sollte die Reparatur bis zum Ablauf der Frist nicht erfolgt sein, behalte ich mir vor, nach rechtlicher Beratung eine angemessene Mietminderung geltend zu machen. Ich hoffe auf eine zeitnahe Lösung.\n\nMit freundlichen Grüßen\nMax Beispiel",
+    "noteAr": [
+      "ضع العنوان والتاريخ والموضوع قبل التحية، وسجّل تاريخ بدء العطل وتاريخي البلاغين السابقين بترتيب زمني دقيق.",
+      "حدّد مهلة 14 يوماً بموعد نهائي واطلب التأكيد؛ صغ Mietminderung كاحتمال بعد استشارة قانونية، لا كتخفيض فوري تلقائي."
+    ],
     "zielWort": 160
   },
   {
@@ -1085,7 +1112,8 @@
     ],
     "sample": "Hallo! Ich heiße Sara. Ich bin 22 Jahre alt. Ich wohne in Tunis. Ich schwimme gern.",
     "noteAr": [
-      "استخدم جملاً بسيطة جداً في A0؛ لا تحتاج إلى موصولات أو جمل ثانوية."
+      "في بطاقة A0 اكتفِ بجمل قصيرة من فاعل وفعل؛ لا حاجة إلى جمل موصولة أو ثانوية.",
+      "تحقق من وجود المعلومات الأربع: الاسم، والعمر مع Jahre alt، والسكن مع in، وهواية واحدة."
     ],
     "zielWort": 25
   },
@@ -1104,7 +1132,8 @@
     ],
     "sample": "Liebe Ayşe, ich habe am Samstag Geburtstag und mache eine Party. Die Party beginnt um 18 Uhr bei mir zu Hause, Goethestraße 5. Kannst du kommen? Bitte sag mir bis Donnerstag Bescheid. Bring bitte deine neue CD mit! Viele Grüße, Deine Lena.",
     "noteAr": [
-      "الموعد يسبق المكان عادة؛ اذكر العنوان في سطر واحد أو اثنين."
+      "رتّب الدعوة: التحية، واليوم والساعة، والمكان أو العنوان، ثم طلب الرد والختام.",
+      "للسؤال عن الحضور استخدم Kannst du kommen?؛ واكتب الموعد مثلاً am Samstag um 18 Uhr."
     ],
     "zielWort": 40
   },
@@ -1121,9 +1150,10 @@
       "Konkrete Forderung",
       "Freundliche Schlussformel"
     ],
-    "sample": "Sehr geehrte Damen und Herren, ich war vom 3. bis 5. Oktober in Ihrem Hotel (Zimmer 214). Leider war das Zimmer sehr kalt, die Heizung funktionierte nicht. Außerdem hatte ich kein WLAN. Ich bitte um eine Entschuldigung und eine Rückerstattung von 50 Euro. Mit freundlichen Grüßen, Ali Mahdi.",
+    "sample": "Betreff: Probleme während meines Aufenthalts\n\nSehr geehrte Damen und Herren,\n\nich war vom 3. bis 5. Oktober in Ihrem Hotel in München, Zimmer 214. Leider war es in meinem Zimmer sehr kalt, weil die Heizung nicht funktionierte. Außerdem hatte ich während des ganzen Wochenendes kein WLAN. Ich habe das Problem am Samstagmorgen an der Rezeption gemeldet, aber leider konnte mir niemand helfen. Deshalb war ich mit meinem Aufenthalt nicht zufrieden. Bitte entschuldigen Sie die Unannehmlichkeiten. Ich bitte um eine teilweise Rückerstattung von 50 Euro. Bitte bestätigen Sie mir kurz, ob das möglich ist.\n\nMit freundlichen Grüßen\nAli Mahdi",
     "noteAr": [
-      "Bleiben Sie sachlich – keine Emotionen. Konkrete Daten machen die Beschwerde glaubwürdig."
+      "ابدأ بسطر موضوع، ثم اذكر تاريخ الإقامة ورقم الغرفة، واشرح المشكلتين بوقائع محددة: التدفئة والواي فاي.",
+      "اطلب بوضوح اعتذاراً أو استرداداً جزئياً بمبلغ معلوم، واختم بصيغة مهذبة؛ استخدم الماضي لوصف الإقامة."
     ],
     "zielWort": 80
   },
@@ -1140,9 +1170,10 @@
       "Konkretes Beispiel",
       "Schlüssiger Schluss"
     ],
-    "sample": "Ich bin für ein Handyverbot in der Schule, denn Handys lenken Schüler vom Unterricht ab. Viele Schüler schreiben während der Stunde Nachrichten oder schauen Videos – das stört die Konzentration. Ein Beispiel: In meiner alten Schule waren Handys erlaubt, aber viele Lehrer beschwerten sich, dass die Noten schlechter wurden. Natürlich kann ein Handy im Notfall nützlich sein; trotzdem überwiegen die Nachteile. Meiner Meinung nach sollten Handys in der Schultasche bleiben.",
+    "sample": "Ich bin für ein Handyverbot während des Unterrichts, denn Handys lenken viele Schülerinnen und Schüler ab. Manche lesen Nachrichten oder schauen Videos, statt der Lehrkraft zuzuhören. So verpassen sie wichtige Erklärungen. Außerdem stören Klingeltöne die ganze Klasse. An meiner früheren Schule waren Handys erlaubt. In einer Mathematikstunde sah ich, wie mehrere Schüler heimlich Nachrichten schrieben; danach mussten wir die Aufgabe noch einmal besprechen. Natürlich kann ein Smartphone in den Pausen nützlich sein und im Notfall helfen. Deshalb sollte es nicht den ganzen Schultag verboten werden. Meiner Meinung nach bleiben Handys während des Unterrichts in der Tasche und werden nur mit Erlaubnis der Lehrkraft benutzt. So können sich alle besser konzentrieren, ohne auf die Vorteile ganz zu verzichten.",
     "noteAr": [
-      "استخدم meiner Meinung nach / aus meiner Sicht لتحديد موقفك وأدوات الربط (denn, trotzdem, natürlich)."
+      "أعلن موقفك بوضوح، وادعم كل حجة بسبب أو مثال ملموس؛ ميّز بين المنع أثناء الدرس والمنع طوال اليوم.",
+      "اربط الحجج بأدوات مثل denn وaußerdem وtrotzdem، ثم اختم باستنتاج ينسجم مع موقفك."
     ],
     "zielWort": 110
   },
@@ -1159,9 +1190,10 @@
       "Differenzierte Wortwahl",
       "Schlüssige Schlussfolgerung"
     ],
-    "sample": "Das Homeoffice hat die Arbeitswelt nachhaltig verändert – und das ist nicht nur positiv. Einerseits profitieren Arbeitnehmer von mehr Flexibilität: sie sparen den Pendelweg und können Familie und Beruf besser vereinbaren. Andererseits verschwimmen die Grenzen zwischen Arbeit und Privatleben, was zu Erschöpfung führen kann. Arbeitgeber wiederum sparen Büroflächen, doch riskieren sie den Verlust informellen Austauschs und damit der Teamkultur. Meiner Überzeugung nach ist eine Mischform – zwei bis drei Tage im Büro, Rest im Homeoffice – die zukunftsfähigste Lösung: sie kombiniert Flexibilität mit sozialem Zusammenhalt.",
+    "sample": "Das Homeoffice hat die Arbeitswelt nachhaltig verändert, doch nicht jeder Beschäftigte und jeder Betrieb profitiert gleichermaßen. Arbeitnehmerinnen und Arbeitnehmer sparen den täglichen Arbeitsweg und können ihre Arbeitszeit oft flexibler organisieren. Arbeitgeber gewinnen Zugang zu Fachkräften außerhalb ihres Standorts und benötigen möglicherweise weniger Bürofläche. Gleichzeitig kann die dauerhafte Arbeit zu Hause soziale Isolation fördern und die Grenze zwischen Beruf und Freizeit verwischen. Für Unternehmen wird es schwieriger, neue Beschäftigte einzuarbeiten und spontane Absprachen im Team zu ermöglichen; zudem müssen sensible Daten zuverlässig geschützt werden. Ein hybrides Modell könnte diese Nachteile begrenzen: feste Teamtage im Büro sichern den Austausch, während konzentrierte Aufgaben an anderen Tagen zu Hause erledigt werden. Voraussetzung sind klare Arbeitszeiten, geeignete Ausstattung und Regeln zur Erreichbarkeit. Meiner Ansicht nach sollte Homeoffice weder Pflicht noch Ausnahme sein. Beschäftigte und Arbeitgeber sollten gemeinsam entscheiden, welche Mischung zu den Aufgaben passt. So verbindet man Flexibilität mit Zusammenarbeit, ohne die Risiken zu übersehen.",
     "noteAr": [
-      "التعليق الصحفي يحتاج إلى أطروحة واضحة في البداية وحكم ختامي. استخدم einerseits/andererseits للتفريق."
+      "ميّز بين مصلحة الموظف وصاحب العمل، ووازن المرونة وتوفير الوقت مع العزلة وصعوبة التنسيق وحماية البيانات.",
+      "اعرض حجة مضادة ثم اقترح حلاً وسطاً عملياً، مثل أيام هجينة وقواعد واضحة، وعلّل موقفك في خاتمة محددة."
     ],
     "zielWort": 160
   }

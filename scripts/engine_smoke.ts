@@ -569,7 +569,7 @@ const vocabRepeatAudit = (() => {
     }
     {
       const wr = JSON.parse(readFileSync("content/writing.json", "utf8")) as unknown as { id: string; level: string; sample: string; noteAr?: string[] }[];
-      ok(wr.every((t) => t.sample.trim().length > 0), "K30a نماذجُ الكتابة: صفرُ فراغٍ في الثلاثين");
+      ok(wr.every((t) => t.sample.trim().length > 0), "K30a نماذجُ الكتابة: صفرُ فراغٍ في جميع المهام");
       ok(wr.filter((t) => t.level === "B1").every((t) => t.sample.trim().split(/\s+/).length >= 60) && wr.filter((t) => t.level === "B2").every((t) => t.sample.trim().split(/\s+/).length >= 100), "K30b النموذجُ على قدْرِ مهمته: B1 ≥60 كلمة · B2 ≥100");
       ok(wr.every((t) => Array.isArray(t.noteAr) && t.noteAr.length >= 2 && t.noteAr.every((n) => /[\u0600-\u06ff]/.test(n) && n.length <= 260)), "K30c طبقةُ الأستاذ: شرحُ «لماذا نموذج» في كل مهمة");
       ok(readFileSync("components/schreiben.tsx", "utf8").includes("noteAr") && readFileSync("lib/klausur.ts", "utf8").includes("noteAr") && readFileSync("lib/types.ts", "utf8").includes("noteAr"), "K30d الطبقة موصولةٌ بالواجهة والاختبار والنوع — لا حليةً في ملف");
