@@ -13869,6 +13869,32 @@
         ],
         "explanationAr": "ü = i مع استدارة الشفاه (كما في الفرنسية tu أو التركية ü).",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welches Wort enthält ein ü?",
+        "promptAr": "أي كلمة تحتوي على ü؟",
+        "options": [
+          "der Hut",
+          "die Tür",
+          "das Ohr",
+          "der Apfel"
+        ],
+        "answer": 1,
+        "explanationAr": "die Tür كلمة فيها ü."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welches Wort klingt wie «offenes e» (ä)?",
+        "promptAr": "أي كلمة فيها ä؟",
+        "options": [
+          "schön",
+          "Männer",
+          "Uhr",
+          "Fuß"
+        ],
+        "answer": 1,
+        "explanationAr": "Männer = مِنَر، فيها ä."
       }
     ],
     "pitfalls": [],
@@ -13999,6 +14025,19 @@
         ],
         "explanationAr": "auch → ch بعد au → ach-Laut خشن (كالخاء).",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wo klingt ch wie in «ich» (weich)?",
+        "promptAr": "أين ينطق ch ناعماً كـich؟",
+        "options": [
+          "nach a/o/u (Buch)",
+          "nach e/i/ä/ö/ü/ei/eu (ich)",
+          "nach s",
+          "immer gleich"
+        ],
+        "answer": 1,
+        "explanationAr": "بعد حروف e/i/ä/ö/ü/ei/eu يُنطَق ch ناعماً."
       }
     ],
     "pitfalls": [],
@@ -14069,6 +14108,19 @@
         ],
         "explanationAr": "مقطع -er في نهاية الكلمة يُختزل إلى a خفيفة: Vater = فاتَ.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie wird das r am Silbenende oft im Hochdeutschen ausgesprochen?",
+        "promptAr": "كيف يُنطَق r في نهاية المقطع في الفصحى؟",
+        "options": [
+          "Wie ein gerolltes Zungen-r",
+          "Wie ein dunkler a-Laut (Vokal)",
+          "Wie ein ch",
+          "Wie ein sch"
+        ],
+        "answer": 1,
+        "explanationAr": "نهاية المقطع r تنطق كصوت حرف علة داكن شبيه بـa، مثل «Vater»."
       }
     ],
     "pitfalls": [],
@@ -14185,6 +14237,32 @@
         ],
         "explanationAr": "st في بداية الكلمة = sht (شت): Stadt = شتات.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie spricht man <sp> am Wortanfang aus?",
+        "promptAr": "كيف ينطق sp في أول الكلمة؟",
+        "options": [
+          "sp wie in Italienisch",
+          "schp",
+          "sb",
+          "ʃp نعم — shp"
+        ],
+        "answer": 1,
+        "explanationAr": "في أول الكلمة تنطق shp (Schprache, Stadt=Shtadt)."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welches Wort wird mit «schp» ausgesprochen?",
+        "promptAr": "أي كلمة تنطق «shp»؟",
+        "options": [
+          "Sport",
+          "Fest",
+          "Wespe",
+          "Haus"
+        ],
+        "answer": 0,
+        "explanationAr": "Sport تنطق «Schport» لأن sp في أول الكلمة."
       }
     ],
     "pitfalls": [],
@@ -14302,6 +14380,32 @@
         ],
         "explanationAr": "Auslautverhärtung: آخر حرف g ينطق k → Tag = تاك.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie spricht man das <b> am Wortende aus?",
+        "promptAr": "كيف ينطق b في آخر الكلمة؟",
+        "options": [
+          "immer b",
+          "wie p",
+          "wie m",
+          "wie f"
+        ],
+        "answer": 1,
+        "explanationAr": "في آخر الكلمة ينطق b→p وd→t وg→k (Auslautverhärtung)."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welches Wort zeigt Auslautverhärtung?",
+        "promptAr": "أي كلمة تُظهر قلب نهاية المقطع؟",
+        "options": [
+          "Ball",
+          "Tag → Tak",
+          "Hund",
+          "Katze"
+        ],
+        "answer": 1,
+        "explanationAr": "Tag ينطق Tak."
       }
     ],
     "pitfalls": [],
@@ -15128,6 +15232,32 @@
         ],
         "answer": 1,
         "explanationAr": "Heute trinke ich Tee — الفعل في المرتبة الثانية."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Ordne richtig: komme / aus / ich / Tunesien",
+        "promptAr": "رتِّب: komme / aus / ich / Tunesien",
+        "options": [
+          "Aus ich komme Tunesien",
+          "Ich komme aus Tunesien",
+          "Ich aus Tunesien komme",
+          "Komme ich aus Tunesien"
+        ],
+        "answer": 1,
+        "explanationAr": "الفاعل Ich أولاً ثم الفعل komme ثم aus Tunesien."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welches Satz ist richtig?",
+        "promptAr": "أي الجمل صحيح؟",
+        "options": [
+          "Morgen ich gehe zum Arzt.",
+          "Morgen gehe ich zum Arzt.",
+          "Ich zum Arzt gehe morgen.",
+          "Gehe ich zum Arzt morgen."
+        ],
+        "answer": 1,
+        "explanationAr": "بعد ظرف الزمان Morgen يأتي الفعل في الموقع الثاني."
       }
     ],
     "commonErrors": [
