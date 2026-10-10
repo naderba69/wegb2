@@ -9992,9 +9992,20 @@ void 0;
   const locksOk = reviewA001.corrections.every((c:any)=>c.unit.includes("questions") && c.unit.endsWith(".promptAr")) &&
     ["d-a0-01","d-a0-02","d-a0-03"].every((id)=>{
       const dlg=dialoguesArr.find((x:any)=>x.id===id);
-      return dlg && [6,3,3].includes(dlg.lines.length) && dlg.questions.length===3 && dlg.dictation.length===3 && dlg.lines.every((l:any)=>"sp" in l);
+      if (!dlg || ![6,3,3].includes(dlg.lines.length) || dlg.questions.length!==3 || dlg.dictation.length!==3) return false;
+      const spoken = dlg.lines.map((l:any)=>l.de).join(" ");
+      const linesOk = dlg.lines.every((l:any)=>Object.keys(l).sort().join(",")==="ar,de,who" &&
+        ["A","B"].includes(l.who) && typeof l.de==="string" && !!l.de.trim() && typeof l.ar==="string" && !!l.ar.trim());
+      const questionsOk = dlg.questions.every((q:any)=>{
+        const answers = Array.isArray(q.answer) ? q.answer : [q.answer];
+        return typeof q.promptDe==="string" && !!q.promptDe.trim() && typeof q.promptAr==="string" && !!q.promptAr.trim() &&
+          typeof q.explanationAr==="string" && !!q.explanationAr.trim() && Array.isArray(q.options) && q.options.length>=2 &&
+          new Set(q.options).size===q.options.length && answers.length>0 && answers.every((a:any)=>q.options.includes(a));
+      });
+      const dictationOk = dlg.dictation.every((part:string)=>typeof part==="string" && !!part.trim() && spoken.includes(part));
+      return linesOk && questionsOk && dictationOk;
     });
-  ok(locksOk, "K207d كل الألماني/الأسطر/الخيارات/المفاتيح/الإملاءات مقفلة (A0 تستخدم حقل sp لا who)");
+  ok(locksOk, "K207d الألماني/المتحدثون/الأسئلة والخيارات والمفاتيح والإملاءات مقفلة وفق مخطط who المعتمد");
   ok((reviewA001.contextNotes["d-a0-01"]?.length||0)>=3 && (reviewA001.contextNotes["d-a0-02"]?.length||0)>=3 && (reviewA001.contextNotes["d-a0-03"]?.length||0)>=3 && reviewA001.contentChecks.length >= 4 &&
      reviewA001.judgement.note.includes("W1"),
     "K207e فحوص محتوى وملاحظات سياقية وذكر W1–W6 (موروثة دون تعديل)");
