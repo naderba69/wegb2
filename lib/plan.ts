@@ -25,6 +25,8 @@ import {
   getDeck,
   fehlerList,
   partnerKarten,
+  kontaktKarten,
+  muendlich,
 } from "./content";
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
@@ -973,6 +975,36 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         minutes: 10,
         partnerId: karte?.id,
       });
+    }
+    // R140: Kontaktgespräch (Teil 1 Sprechen) — كل أسبوع ابتداءً من A1
+    if (level !== "A0") {
+      const kPool = kontaktKarten.filter((k) => (k.level as unknown as string) === level);
+      if (kPool.length) {
+        const k = kPool[Math.abs(rand() * kPool.length) % kPool.length];
+        tasks.push({
+          id: tid(17),
+          kind: "partner",
+          titleDe: "Sprechen Teil 1: Kontaktgespräch",
+          titleAr: "جزء 1 من الامتحان الشفهي: حديث التعارف والتخطيط",
+          minutes: Math.round((k.zeit_s ?? 120) / 60) + 2,
+          kontaktId: k.id,
+        });
+      }
+    }
+    // R140: Monolog/Bildbeschreibung (Teil 2 Sprechen) — كل 3 أسابيع
+    if (wocheInPhase % 3 === 1) {
+      const mPool = muendlich.filter((mm) => mm.level === level);
+      if (mPool.length) {
+        const card = mPool[Math.abs(rand() * mPool.length) % mPool.length];
+        tasks.push({
+          id: tid(18),
+          kind: "partner",
+          titleDe: "Sprechen Teil 2: Monolog/Bild",
+          titleAr: "جزء 2: وصف صورة أو مونولوج",
+          minutes: Math.round((card.zeit_s ?? 120) / 60) + 2,
+          monologId: card.id,
+        });
+      }
     }
     tasks.push({
       id: tid(4),

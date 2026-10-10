@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { istPhasenPruefung } from "@/lib/phasen";
 import type { DayTask, Exercise, SrsState, UiLang, VocabCard, Schreibaufgabe, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
 import { POS_AR } from "@/lib/types";
-import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten } from "@/lib/content";
+import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday } from "@/lib/srs";
@@ -1285,50 +1285,85 @@ function Empty({ title }: { title: string }) {
   );
 }
 
-/** R138/P-12: Partnerübung (Briefe/Schulsim/Partner) — Anzeige einer Aufgabe mit Redemitteln + Punkte-Button */
+/** R138/P-12 + R140: Anzeige für Partner/Diskussion, Kontaktgespräch, Monolog/Bild, Briefe, Schulsim */
 function PartnerTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void; voiceName?: string; rate?: number; persistKey?: string }) {
-  const karte = partnerKarten.find((p) => p.id === task.partnerId);
+  const partner = partnerKarten.find((p) => p.id === task.partnerId);
+  const kontakt = kontaktKarten.find((k) => k.id === task.kontaktId);
+  const mono = muendlich.find((m) => m.id === task.monologId);
+  const karte = partner || kontakt || mono;
   const [done, setDone] = useState(false);
+  const isKontakt = !!kontakt;
+  const isMono = !!mono;
   if (!karte) {
     return (
       <section className="card fadein" style={{ padding: "1.2rem" }}>
         <Head icon="🗣️" de={task.titleDe} ar={task.titleAr} />
-        <p style={{ color: "var(--color-ink2)" }}>تدرّب على كتابة الرسالة أو محاكاة الموقف في كراستك ثم سجّل إنجازك.</p>
-        <button
-          className="btn btn-primary"
-          disabled={done}
-          onClick={() => { setDone(true); onPoints(1,1); }}
-        >{done ? "✓ أنجزت" : "سجّل الإنجاز"}</button>
+        <p style={{ color: "var(--color-ink2)" }}>تدرّب على المهمة في كراستك أو مع شريك ثم سجّل إنجازك.</p>
+        <button className="btn btn-primary" disabled={done} onClick={() => { setDone(true); onPoints(1,1); }}>{done ? "✓ أنجزت" : "سجّل الإنجاز"}</button>
       </section>
     );
   }
+  const icon = isMono ? "🎙️" : isKontakt ? "💬" : "🗣️";
+  const labelDe = isMono ? "Monolog / Bildbeschreibung" : isKontakt ? "Kontaktgespräch" : "Partner-Diskussion";
+  const stuetz = (karte.stuetzen ?? []) as string[];
+  const kriterien = (karte.kriterien ?? []) as { de: string; ar: string }[];
+  const auftragDe = (karte as { auftrag_de?: string }).auftrag_de ?? (partner ? karte.situationDe : "");
+  const auftragAr = (karte as { auftrag_ar?: string }).auftrag_ar ?? (partner ? karte.situationAr : "");
+  const zeit = (karte as { zeit_s?: number }).zeit_s ?? 120;
   return (
     <section className="card fadein" style={{ padding: "1.2rem" }}>
-      <Head icon="🗣️" de={`Partnerübung: ${task.titleDe}`} ar={task.titleAr} />
+      <Head icon={icon} de={`${labelDe}: ${(karte as { titel_de?: string }).titel_de ?? task.titleDe}`} ar={(karte as { titel_ar?: string }).titel_ar ?? task.titleAr} />
+      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.5rem" }}>
+        <span className="chip">⏱️ {Math.round(zeit/60)} min</span>
+        {isKontakt ? <span className="chip">Teil 1</span> : isMono ? <span className="chip">Teil 2</span> : <span className="chip">Teil 3</span>}
+      </div>
       <div style={{ background: "var(--color-paper2)", borderRadius: "0.7rem", padding: "0.9rem 1rem", marginBottom: "0.7rem" }}>
-        <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.3rem" }}>الموقف:</div>
-        <p style={{ margin: 0 }}><De>{karte.situationDe}</De></p>
-        <p style={{ margin: "0.3rem 0 0", color: "var(--color-ink2)" }} dir="rtl">{karte.situationAr}</p>
+        <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.3rem" }}>المهمة / الموقف:</div>
+        {auftragDe && <p style={{ margin: 0 }}><De>{auftragDe}</De></p>}
+        {partner?.situationDe && !isKontakt && !isMono && (
+          <>
+            <p style={{ margin: 0 }}><De>{partner.situationDe}</De></p>
+            {partner.vorschlagA && partner.vorschlagB && (
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem", marginTop: "0.5rem" }}>
+                <div style={{ background: "var(--color-a1)", borderRadius: "0.5rem", padding: "0.5rem", color: "#fff" }}>
+                  <div style={{ fontSize: "0.72rem" }}>Vorschlag A</div>
+                  <strong><De>{partner.vorschlagA}</De></strong>
+                </div>
+                <div style={{ background: "var(--color-b1)", borderRadius: "0.5rem", padding: "0.5rem", color: "#fff" }}>
+                  <div style={{ fontSize: "0.72rem" }}>Vorschlag B</div>
+                  <strong><De>{partner.vorschlagB}</De></strong>
+                </div>
+              </div>
+            )}
+          </>
+        )}
+        {auftragAr && <p style={{ margin: "0.4rem 0 0", color: "var(--color-ink2)" }} dir="rtl">{auftragAr}</p>}
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem", marginBottom: "0.7rem" }}>
-        <div style={{ background: "var(--color-a1)", borderRadius: "0.5rem", padding: "0.6rem", color: "#fff" }}>
-          <div style={{ fontSize: "0.75rem" }}>Vorschlag A</div>
-          <strong><De>{karte.vorschlagA}</De></strong>
+      {stuetz.length > 0 && (
+        <div style={{ background: "var(--color-gold-soft)", borderRadius: "0.5rem", padding: "0.5rem 0.8rem", marginBottom: "0.6rem", fontSize: "0.85rem" }}>
+          <strong>💡 Redemittel / Stützen:</strong> <De>{stuetz.join(" · ")}</De>
         </div>
-        <div style={{ background: "var(--color-b1)", borderRadius: "0.5rem", padding: "0.6rem", color: "#fff" }}>
-          <div style={{ fontSize: "0.75rem" }}>Vorschlag B</div>
-          <strong><De>{karte.vorschlagB}</De></strong>
+      )}
+      {partner?.redemittel && (
+        <div style={{ background: "var(--color-gold-soft)", borderRadius: "0.5rem", padding: "0.5rem 0.8rem", marginBottom: "0.6rem", fontSize: "0.85rem" }}>
+          <strong>💡 Redemittel:</strong> <De>{partner.redemittel.join(" · ")}</De>
         </div>
-      </div>
-      <div style={{ background: "var(--color-gold-soft)", borderRadius: "0.5rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontSize: "0.85rem" }}>
-        <strong>💡 Redemittel:</strong> <De>{karte.redemittel.join(" · ")}</De>
-      </div>
-      <p style={{ color: "var(--color-ink2)", fontSize: "0.85rem" }}>💡 {karte.tippAr}</p>
+      )}
+      {partner?.tippAr && <p style={{ color: "var(--color-ink2)", fontSize: "0.85rem" }}>💡 {partner.tippAr}</p>}
+      {kriterien.length > 0 && (
+        <div style={{ marginTop: "0.4rem" }}>
+          <div style={{ fontSize: "0.82rem", fontWeight: 700, marginBottom: "0.3rem" }}>📋 معايير التقييم:</div>
+          <ul style={{ margin: 0, paddingLeft: "1.2rem", fontSize: "0.85rem", color: "var(--color-ink2)" }}>
+            {kriterien.map((kr, i) => <li key={i}>{kr.ar} <span style={{ opacity: 0.7 }}>(<De>{kr.de}</De>)</span></li>)}
+          </ul>
+        </div>
+      )}
       <button
         className="btn btn-primary"
+        style={{ marginTop: "0.8rem" }}
         disabled={done}
         onClick={() => { setDone(true); onPoints(1,1); }}
-      >{done ? "✓ سجّلت المحادثة" : "سجّل: أجريت المحادثة"}</button>
+      >{done ? "✓ سجّلت التدريب" : "سجّل: أتممت التدريب"}</button>
     </section>
   );
 }

@@ -228,12 +228,12 @@ export function buildSkillKlausur(day: number, skill: SkillKey): Klausur {
   if (c2) secs.push({
     key: "Sprechen", titleDe: "Sprechen — Präsentation", titleAr: "العرضُ المصوَّر — «" + c2.titel_ar + "»",
     minutes: 7, realExamHint: "٣د تحضيرٌ صامت ثم ٤د أمام «اللجنة»: وصفٌ واستدلالٌ ورأيٌ واضح — المؤقّتُ هنا يعملُ وأنت تتكلم.",
-    items: [], sprechen: { titelDe: c2.titel_de, titelAr: c2.titel_ar, auftrag: c2.auftrag_de, stuetzen: c2.stuetzen, kriterien: c2.kriterien, zeit_s: c2.zeit_s, teil: 2 },
+    items: [], sprechen: { titelDe: c2.titel_de, titelAr: c2.titel_ar, auftrag: c2.auftrag_de ?? "", stuetzen: c2.stuetzen ?? [], kriterien: c2.kriterien ?? [], zeit_s: c2.zeit_s ?? 240, teil: 2 },
   });
   if (c3) secs.push({
     key: "Sprechen", titleDe: "Sprechen — Diskussion", titleAr: "النقاشُ مع الممتحِنَين", minutes: 6,
     realExamHint: "٥د لنقاشِ المهمة: رأيٌ + حُجّة + سؤالٌ للآخر — الصمتُ أطولَ من ثلاثِ ثوانٍ يُخصمُ أدباً لا زمناً.",
-    items: [], sprechen: { titelDe: c3.titel_de, titelAr: c3.titel_ar, auftrag: c3.auftrag_de, stuetzen: c3.stuetzen, kriterien: c3.kriterien, zeit_s: c3.zeit_s, teil: 3 },
+    items: [], sprechen: { titelDe: c3.titel_de, titelAr: c3.titel_ar, auftrag: c3.auftrag_de ?? "", stuetzen: c3.stuetzen ?? [], kriterien: c3.kriterien ?? [], zeit_s: c3.zeit_s ?? 300, teil: 3 },
   });
   return { level: lvl, total: secs.reduce((n, x) => n + x.minutes, 0), sections: secs };
 }

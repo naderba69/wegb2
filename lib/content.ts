@@ -178,19 +178,61 @@ export interface MuendlichEinwand {
 }
 export interface MuendlichKarte {
   id: string;
-  teil: 2 | 3;
+  teil: 1 | 2 | 3;
+  level?: import("./types").Level;
+  titel_de: string;
+  titel_ar: string;
+  auftrag_de?: string;
+  auftrag_ar?: string;
+  situationDe?: string;
+  situationAr?: string;
+  stuetzen?: string[];
+  kriterien?: { ar: string; de: string }[];
+  zeit_s?: number;
+  einwaende?: MuendlichEinwand[];
+  vorschlagA?: string;
+  vorschlagB?: string;
+  redemittel?: string[];
+  tippAr?: string;
+}
+export interface KontaktKarte {
+  id: string;
+  level: import("./types").Level;
+  teil: 1;
   titel_de: string;
   titel_ar: string;
   auftrag_de: string;
+  auftrag_ar: string;
+  situationDe?: string;
+  situationAr?: string;
+  vorschlagA?: string;
+  vorschlagB?: string;
   stuetzen: string[];
   kriterien: { ar: string; de: string }[];
   zeit_s: number;
-  /** B2 discussion only: unseen objections for the timed pressure round. */
-  einwaende?: MuendlichEinwand[];
+}
+export interface PartnerKarte {
+  id: string;
+  level: string;
+  situationDe: string;
+  situationAr: string;
+  vorschlagA: string;
+  vorschlagB: string;
+  redemittel: string[];
+  tippAr: string;
+  stuetzen?: string[];
+  kriterien?: { ar: string; de: string }[];
+  auftrag_de?: string;
+  auftrag_ar?: string;
+  zeit_s?: number;
+  titel_de?: string;
+  titel_ar?: string;
 }
 /** 🗣️ مختبر الشفهي — 12 بطاقة: 6 وصف صورة + 6 مناقشة (Modul AA) */
 export const muendlich: MuendlichKarte[] = (muendlichRaw as unknown as { karten: MuendlichKarte[] }).karten;
-export const partnerKarten: {id:string;level:string;situationDe:string;situationAr:string;vorschlagA:string;vorschlagB:string;redemittel:string[];tippAr:string}[] = (muendlichRaw as unknown as { partner?: {id:string;level:string;situationDe:string;situationAr:string;vorschlagA:string;vorschlagB:string;redemittel:string[];tippAr:string}[] }).partner ?? [];
+export const partnerKarten: PartnerKarte[] = (muendlichRaw as unknown as { partner?: PartnerKarte[] }).partner ?? [];
+export const kontaktKarten: KontaktKarte[] = (muendlichRaw as unknown as { kontakt?: KontaktKarte[] }).kontakt ?? [];
+export const monologKartenExtra = muendlich; // all monolog cards (legacy mm01–mm12 now leveled + new)
 
 export interface VortragThema {
   id: string;

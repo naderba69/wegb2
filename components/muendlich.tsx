@@ -46,9 +46,16 @@ export function MündlichLabor({ progress }: { progress: Progress }) {
   const einwandAusgeloestRef = useRef(false);
 
   const karten = useMemo(() => muendlich.filter((k) => k.teil === teil), [teil]);
-  const karte: MuendlichKarte = useMemo(() => {
+  const karte = useMemo<Required<Pick<MuendlichKarte,"id"|"teil"|"titel_de"|"titel_ar"|"auftrag_de"|"zeit_s"|"stuetzen"|"kriterien">> & MuendlichKarte>(() => {
     const r = rng(progress.plan.day * 131 + (teil === 2 ? 0 : 97) + zug * 13);
-    return karten[Math.floor(r() * karten.length)];
+    const raw = karten[Math.floor(r() * karten.length)];
+    return {
+      ...raw,
+      auftrag_de: raw.auftrag_de ?? raw.titel_de,
+      stuetzen: raw.stuetzen ?? [],
+      kriterien: raw.kriterien ?? [],
+      zeit_s: raw.zeit_s ?? 240,
+    };
   }, [karten, teil, zug, progress.plan.day]);
   const geplanterEinwand = useMemo(
     () => teil === 3 ? planeEinwand(karte.id, karte.einwaende ?? [], progress.plan.day, zug) : null,
