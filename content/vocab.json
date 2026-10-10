@@ -49626,5 +49626,380 @@
         "farbe": "BLAU"
       }
     ]
+  },
+  "b2-wissenschaft-zukunft": {
+    "id": "b2-wissenschaft-zukunft",
+    "titleDe": "Wissenschaft · Digitalisierung · Zukunft",
+    "titleAr": "العلم · الرقمنة · المستقبل",
+    "level": "B2",
+    "cards": [
+      {
+        "id": "v1431",
+        "de": "die Forschung",
+        "ar": "الأبحاث العلمية",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "In Deutschland wird viel Forschung im Bereich Erneuerbare Energien betrieben.",
+        "exampleAr": "في ألمانيا تُجرى أبحاث كثيرة في مجال الطاقات المتجددة."
+      },
+      {
+        "id": "v1432",
+        "de": "die Studie",
+        "ar": "دراسة علمية",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Eine aktuelle Studie zeigt, dass Bewegung das Lernen verbessert.",
+        "exampleAr": "تُظهر دراسة حديثة أن الحركة تحسّن التعلّم."
+      },
+      {
+        "id": "v1433",
+        "de": "die Untersuchung",
+        "ar": "فحص/تحقيق/دراسة",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Die Untersuchung ergab keine Hinweise auf Nebenwirkungen.",
+        "exampleAr": "لم يُظهر التحقيق أي دليل على آثار جانبية."
+      },
+      {
+        "id": "v1434",
+        "de": "die These",
+        "ar": "أطروحة/فرضية علمية",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Er stellte eine gewagte These über den Klimawandel auf.",
+        "exampleAr": "طرح فرضية جريئة حول تغيّر المناخ."
+      },
+      {
+        "id": "v1435",
+        "de": "die Hypothese",
+        "ar": "فرضية",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Die Hypothese muss in Experimenten überprüft werden.",
+        "exampleAr": "يجب اختبار الفرضية في التجارب."
+      },
+      {
+        "id": "v1436",
+        "de": "das Experiment",
+        "ar": "تجربة علمية",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "das",
+        "farbe": "BLAU",
+        "exampleDe": "Das Experiment wurde unter Laborbedingungen durchgeführt.",
+        "exampleAr": "أُجريت التجربة في ظروف مخبرية."
+      },
+      {
+        "id": "v1437",
+        "de": "beweisen",
+        "ar": "يُثبت",
+        "pos": "Verb",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "exampleDe": "Die Studie konnte die Wirkung noch nicht beweisen.",
+        "exampleAr": "لم تستطع الدراسة إثبات التأثير بعد."
+      },
+      {
+        "id": "v1438",
+        "de": "nachweisen",
+        "ar": "يُثبت/يُبرهن (بالدليل)",
+        "pos": "Verb",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "exampleDe": "Man konnte Schadstoffe im Wasser nachweisen.",
+        "exampleAr": "تم إثبات وجود مواد ضارة في الماء."
+      },
+      {
+        "id": "v1439",
+        "de": "auswerten",
+        "ar": "يُحلِّل/يُقيّم البيانات",
+        "pos": "Verb",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "exampleDe": "Die Daten werden derzeit ausgewertet.",
+        "exampleAr": "تُقيَّم البيانات حالياً."
+      },
+      {
+        "id": "v1440",
+        "de": "das Ergebnis",
+        "ar": "نتيجة",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "das",
+        "farbe": "BLAU",
+        "exampleDe": "Das Ergebnis der Umfrage war überraschend.",
+        "exampleAr": "كانت نتيجة الاستطلاع مفاجئة."
+      },
+      {
+        "id": "v1441",
+        "de": "die Auswirkung",
+        "ar": "أثر/تأثير",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Die Auswirkungen der Digitalisierung sind umstritten.",
+        "exampleAr": "آثار الرقمنة مُختلَف فيها."
+      },
+      {
+        "id": "v1442",
+        "de": "die Folge",
+        "ar": "نتيجة/عاقبة",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Als Folge des Regens fiel der Unterricht aus.",
+        "exampleAr": "نتيجة المطر أُلغي الدرس."
+      },
+      {
+        "id": "v1443",
+        "de": "der Fortschritt",
+        "ar": "تقدّم",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "der",
+        "farbe": "BLAU",
+        "exampleDe": "Technischer Fortschritt verändert die Arbeitswelt.",
+        "exampleAr": "التقدّم التقني يغير عالم العمل."
+      },
+      {
+        "id": "v1444",
+        "de": "die Entwicklung",
+        "ar": "تطوّر",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Die Entwicklung der KI schreitet schnell voran.",
+        "exampleAr": "يتقدّم تطوير الذكاء الاصطناعي بسرعة."
+      },
+      {
+        "id": "v1445",
+        "de": "die Zukunft",
+        "ar": "المستقبل",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Niemand weiß genau, was die Zukunft bringt.",
+        "exampleAr": "لا أحد يعرف بدقة ماذا سيجلب المستقبل."
+      },
+      {
+        "id": "v1446",
+        "de": "die Künstliche Intelligenz",
+        "ar": "الذكاء الاصطناعي",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Künstliche Intelligenz wird immer häufiger im Alltag eingesetzt.",
+        "exampleAr": "يُستخدم الذكاء الاصطناعي بشكل متزايد في الحياة اليومية."
+      },
+      {
+        "id": "v1447",
+        "de": "die Daten",
+        "ar": "البيانات",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Große Datenmengen werden in Echtzeit analysiert.",
+        "exampleAr": "تُحلَّل كميات ضخمة من البيانات لحظياً."
+      },
+      {
+        "id": "v1448",
+        "de": "der Algorithmus",
+        "ar": "الخوارزمية",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "der",
+        "farbe": "BLAU",
+        "exampleDe": "Soziale Netzwerke nutzen komplexe Algorithmen.",
+        "exampleAr": "تستخدم الشبكات الاجتماعية خوارزميات معقّدة."
+      },
+      {
+        "id": "v1449",
+        "de": "die Automatisierung",
+        "ar": "الأتمتة",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Die Automatisierung ersetzt manche Arbeitsplätze, schafft aber auch neue.",
+        "exampleAr": "تحل الأتمتة محل بعض الوظائف لكنها تخلق أيضاً وظائف جديدة."
+      },
+      {
+        "id": "v1450",
+        "de": "die Globalisierung",
+        "ar": "العولمة",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Die Globalisierung verbindet Märkte weltweit.",
+        "exampleAr": "تربط العولمة الأسواق عالمياً."
+      },
+      {
+        "id": "v1451",
+        "de": "die Nachhaltigkeit",
+        "ar": "الاستدامة",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Nachhaltigkeit bedeutet, Ressourcen schonend zu nutzen.",
+        "exampleAr": "تعني الاستدامة استخدام الموارد بحذر."
+      },
+      {
+        "id": "v1452",
+        "de": "erneuerbar",
+        "ar": "متجدّد",
+        "pos": "Adjektiv",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "exampleDe": "Wind- und Solarenergie sind erneuerbare Energien.",
+        "exampleAr": "طاقة الرياح والشمس طاقتان متجدّدتان."
+      },
+      {
+        "id": "v1453",
+        "de": "der Klimawandel",
+        "ar": "تغيّر المناخ",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "der",
+        "farbe": "BLAU",
+        "exampleDe": "Der Klimawandel führt zu häufigeren Extremwetterereignissen.",
+        "exampleAr": "يؤدي تغيّر المناخ إلى زيادة الظواهر الجوية المتطرفة."
+      },
+      {
+        "id": "v1454",
+        "de": "die Krise",
+        "ar": "أزمة",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Während der Krise war die Solidarität groß.",
+        "exampleAr": "خلال الأزمة كان التضامن كبيراً."
+      },
+      {
+        "id": "v1455",
+        "de": "die Lösung",
+        "ar": "حل",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "BLAU",
+        "exampleDe": "Es gibt keine einfache Lösung für dieses Problem.",
+        "exampleAr": "لا يوجد حل بسيط لهذه المشكلة."
+      }
+    ]
   }
 }
