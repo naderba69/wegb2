@@ -635,6 +635,15 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         sentenceIds: [],
         quiz: [],
       });
+      // R138/P-18: في اليوم الأول مهمة استماع/ترديد قصيرة لضبط الأذن على اللغة
+      tasks.push({
+        id: tid(6),
+        kind: "aussprache",
+        titleDe: "Erstes Hören & Nachsprechen",
+        titleAr: "أول استماع وترديد (حروف وتحايا)",
+        minutes: 8,
+        sentenceIds: [],
+      });
     } else {
       // استرجاع يومي ثابت
       tasks.push({
