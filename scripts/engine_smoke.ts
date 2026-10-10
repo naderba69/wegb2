@@ -2176,7 +2176,22 @@ void 0;
       for (const p of PREF2) if (w.startsWith(p) && w.length > p.length + 2) { const rest = w.slice(p.length); const rb = rest.endsWith("en") ? rest.slice(0, -2) : rest; if (low.includes(rb.slice(0, Math.max(3, rb.length - 2))) && (low.includes(` ${p} `) || low.includes(p + "ge" + rb.slice(0, 3)) || low.includes(p + rb.slice(0, 3)))) return true; }
       return false;
     };
-    const wortDrin2 = (word: string, de: string) => { const low = normS2(de); const w = word.toLowerCase().replace(/é/g, "e").replace(/^(der|die|das|sich)\s+/, "").replace(/\s+(auf|über|um|von|an|für)$/, "").replace(/\b(jdn|jdm|etwas|seine|sich)\b/g, "").trim(); return w.split(/[\s-]+/).filter((p) => p.length > 2).every((p) => partOk2(p, low)); };
+    const wortDrin2 = (word: string, de: string) => {
+      const low = normS2(de);
+      // Flexionshinweise (z. B. „, -schlüsse“), parenthetische Auflösungen
+      // („EU (Europäische Union)“) und alternative Formen sind Metadaten,
+      // keine Wörter des Lemmas, die jede Kollokation enthalten muss.
+      const w = word.toLowerCase().replace(/é/g, "e")
+        .replace(/;\s*plural:.*/i, "")
+        .replace(/\([^)]*\)/g, "")
+        .replace(/,\s*-[^,;]*/g, "")
+        .replace(/\s*\/.*$/, "")
+        .replace(/^(der|die|das|sich)\s+/, "")
+        .replace(/\s+(auf|über|um|von|an|für)$/, "")
+        .replace(/\b(jdn|jdm|etwas|seine|sich)\b/g, "")
+        .trim();
+      return w.split(/[\s-]+/).filter((p) => p.length > 2).every((p) => partOk2(p, low));
+    };
     const ohneWort = eintraege.flatMap(([id, ks]) => ks.filter((k) => !wortDrin2(ids.get(id)!.de, k)).map((k) => `${id}:${k}`));
     ok(ohneWort.length === 0, `K73c كلمةُ البطاقةِ تظهرُ في كلِّ متلازمةٍ من متلازماتِها (${ohneWort.slice(0, 3).join("|")})`);
     const alleK = eintraege.flatMap(([, ks]) => ks);
