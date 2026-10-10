@@ -10467,12 +10467,12 @@
     "questions": [
       {
         "options": [
-          "Hin und Rückfahrt",
+          "Hin und zurück",
           "Einfach",
           "Gruppenkarte"
         ],
         "answer": "Einfach",
-        "explanationAr": "يشتري تذكرة Einfach (ذهاب فقط).",
+        "explanationAr": "الدليل: سأل الموظف ذهاباً فقط أم ذهاباً وعودة، فأجاب الزبون Einfach. الفخّ: شرح أيضاً أن تذكرة المجموعة لعدة أشخاص، لكن الزبون قال إنه يسافر وحده ولم يخترها.",
         "promptDe": "Was für eine Fahrkarte kauft er?",
         "type": "mc",
         "id": "dlg-a1-fahrkarte-q1",
@@ -10485,7 +10485,7 @@
           "Gleis 5"
         ],
         "answer": "Gleis 4",
-        "explanationAr": "القطار من الرصيف الرابع (Gleis vier).",
+        "explanationAr": "الدليل: قالت الموظفة إن القطار يغادر من الرصيف الرابع. الفخّ: 10:15 وقت المغادرة، و30 يورو المبلغ المدفوع، ويورو واحد هو الباقي؛ لا شيء منها رقم الرصيف.",
         "promptDe": "Von welchem Gleis fährt der Zug?",
         "type": "mc",
         "id": "dlg-a1-fahrkarte-q2",
@@ -10493,12 +10493,12 @@
       },
       {
         "options": [
-          "29 €",
-          "30 €",
-          "19 €"
+          "Neunundzwanzig Euro",
+          "Dreißig Euro",
+          "Einen Euro zurück"
         ],
-        "answer": "29 €",
-        "explanationAr": "التذكرة بتسعة وعشرين يورو.",
+        "answer": "Neunundzwanzig Euro",
+        "explanationAr": "الدليل: قال الموظف إن البطاقة تكلف 29 يورو؛ دفع الزبون 30 يورو وأعاد له يورو واحداً. الفخّ: 30 هو المبلغ المدفوع، وEinen Euro zurück هو الباقي، لا الثمن.",
         "promptDe": "Was kostet die Fahrkarte?",
         "type": "mc",
         "id": "dlg-a1-fahrkarte-q3",
@@ -10513,13 +10513,13 @@
       },
       {
         "who": "Mitarbeiter",
-        "de": "Einfach oder hin und zurück?",
-        "ar": "ذهاب فقط أم ذهاب وعودة؟"
+        "de": "Einfach oder hin und zurück? Für mehrere Personen gibt es eine Gruppenkarte.",
+        "ar": "ذهاب فقط أم ذهاب وعودة؟ توجد تذكرة جماعية لعدة أشخاص."
       },
       {
         "who": "Kunde",
-        "de": "Einfach, bitte. Wann fährt der nächste Zug?",
-        "ar": "ذهاب فقط، من فضلك. متى يغادر القطار التالي؟"
+        "de": "Einfach, bitte. Ich reise allein. Wann fährt der nächste Zug?",
+        "ar": "ذهاب فقط، من فضلك. أسافر وحدي. متى يغادر القطار التالي؟"
       },
       {
         "who": "Mitarbeiter",
@@ -10565,28 +10565,28 @@
       {
         "id": "dlg-a1-reklamation-hotel-q1",
         "type": "mc",
-        "promptDe": "Welche Probleme hat der Gast im Zimmer?",
-        "promptAr": "ما المشكلتان في غرفة النزيل؟",
+        "promptDe": "Welche Probleme nennt der Gast?",
+        "promptAr": "ما المشكلات التي يذكرها النزيل؟",
         "options": [
-          "Das Zimmer ist schmutzig und das Licht im Bad funktioniert nicht",
-          "Das Bett ist zu klein",
-          "Das Fenster ist kaputt"
+          "Das Zimmer ist nicht sauber, das Licht im Bad funktioniert nicht und das WLAN funktioniert auch nicht",
+          "Das Zimmer ist nicht sauber, aber das Licht im Bad und das WLAN funktionieren",
+          "Das Zimmer ist sauber, aber das Licht im Bad und das WLAN funktionieren nicht"
         ],
-        "answer": "Das Zimmer ist schmutzig und das Licht im Bad funktioniert nicht",
-        "explanationAr": "يذكر الضيف أن الغرفة غير نظيفة وأن ضوء الحمام لا يعمل."
+        "answer": "Das Zimmer ist nicht sauber, das Licht im Bad funktioniert nicht und das WLAN funktioniert auch nicht",
+        "explanationAr": "الدليل: ذكر أن الغرفة غير نظيفة، وأن ضوء الحمام لا يعمل، ثم أضاف أن شبكة WLAN لا تعمل. الفخّ: الخياران الآخران يقلبان النفي في معلومة النظافة أو في عمل المصباح، فلا تكفِ معلومة صحيحة واحدة."
       },
       {
         "id": "dlg-a1-reklamation-hotel-q2",
         "type": "mc",
-        "promptDe": "Was bietet die Rezeptionistin an?",
-        "promptAr": "ماذا تعرض موظفة الاستقبال؟",
+        "promptDe": "Welche Alternative zum aktuellen Zimmer bietet die Rezeptionistin an?",
+        "promptAr": "ما البديل الذي تعرضه موظفة الاستقبال للغرفة الحالية؟",
         "options": [
-          "Ein anderes Zimmer",
-          "Ein kostenloses Frühstück",
-          "Eine spätere Abreise"
+          "Ein anderes Zimmer (Zimmer 214)",
+          "Eine Reparatur des Lichts im Bad",
+          "Eine WLAN-Reparatur"
         ],
-        "answer": "Ein anderes Zimmer",
-        "explanationAr": "تعرض غرفة أخرى، رقم 214."
+        "answer": "Ein anderes Zimmer (Zimmer 214)",
+        "explanationAr": "الدليل: عرضت الموظفة غرفة أخرى، وذكرت أن الغرفة 214 شاغرة. الفخّ: إرسال شخص لإصلاح الضوء اقتراح سابق، ولم تعرض إصلاح WLAN بديلاً عن الغرفة."
       }
     ],
     "lines": [
@@ -10607,7 +10607,7 @@
       },
       {
         "who": "Rezeptionistin",
-        "de": "Es tut mir sehr leid. Ich schicke sofort jemand, der das repariert.",
+        "de": "Es tut mir sehr leid. Ich schicke sofort jemanden, der das repariert.",
         "ar": "أعتذر جداً. سأرسل حالاً شخصاً ليصلح ذلك."
       },
       {
@@ -10638,12 +10638,12 @@
     "questions": [
       {
         "options": [
-          "Er will einen Termin absagen",
-          "Er will zum Arzt gehen",
-          "Er hat Schmerzen"
+          "Er möchte den Termin morgen absagen und für nächsten Dienstag um elf Uhr einen neuen vereinbaren",
+          "Er möchte den Termin morgen um zehn bestätigen",
+          "Er möchte den neuen Termin am nächsten Dienstag um elf absagen"
         ],
-        "answer": "Er will einen Termin absagen",
-        "explanationAr": "سامي يتصل لإلغاء موعده غداً.",
+        "answer": "Er möchte den Termin morgen absagen und für nächsten Dienstag um elf Uhr einen neuen vereinbaren",
+        "explanationAr": "الدليل: قال سامي إنه لا يستطيع الحضور غداً عند العاشرة، ثم طلب موعداً جديداً الثلاثاء القادم عند الحادية عشرة. الفخّ: لا يريد تأكيد موعد الغد ولا إلغاء الموعد البديل؛ بل إلغاء الأول وترتيب موعد جديد.",
         "promptDe": "Warum ruft Sami an?",
         "type": "mc",
         "id": "dlg-a2-terminabsage-q1",
@@ -10653,10 +10653,10 @@
         "options": [
           "morgen um zehn",
           "nächsten Dienstag um elf",
-          "um elf heute"
+          "morgen um elf"
         ],
         "answer": "nächsten Dienstag um elf",
-        "explanationAr": "الموعد الجديد الثلاثاء القادم الساعة 11.",
+        "explanationAr": "الدليل: اتفقا على الثلاثاء القادم عند الحادية عشرة، لا على موعد الغد عند العاشرة؛ فالغد هو الموعد القديم الذي يتعذر على سامي حضوره. الفخّ: لا تخلط الموعد الملغى بالموعد البديل.",
         "promptDe": "Wann ist der neue Termin?",
         "type": "mc",
         "id": "dlg-a2-terminabsage-q2",
@@ -10717,7 +10717,7 @@
           "Nur Ihr Arbeitgeber."
         ],
         "answer": "Sie und Ihr Arbeitgeber zahlen jeweils die Hälfte.",
-        "explanationAr": "«Wenn Sie gesetzlich versichert und angestellt sind, tragen Sie und Ihr Arbeitgeber ihn grundsätzlich je zur Hälfte.» — تتقاسمان المساهمة بالتساوي في هذه الحالة.",
+        "explanationAr": "الدليل: قالت الموظفة إنكِ وصاحب العمل تدفعان المساهمة مناصفةً عند انطباق هذه الحالة. الفخّ: الخياران الآخران يحمّلان طرفاً واحداً كامل المبلغ، خلافاً للتقاسم المتساوي.",
         "promptDe": "Wer zahlt den Beitrag?",
         "type": "mc",
         "id": "dlg-a2-krankenversicherung-q1",
@@ -10726,11 +10726,11 @@
       {
         "options": [
           "persönliche Daten und Informationen zur Beschäftigung",
-          "nur den Pass",
-          "eine Wohnungsmeldung"
+          "Nur persönliche Daten",
+          "Nur Informationen zur Beschäftigung"
         ],
         "answer": "persönliche Daten und Informationen zur Beschäftigung",
-        "explanationAr": "ذكرت الموظفة أنها تحتاج بيانات شخصية ومعلومات عن العمل؛ أما المستندات المحددة فتشرحها بحسب حالة الزبونة.",
+        "explanationAr": "الدليل: طلبت الموظفة بيانات شخصية ومعلومات عن العمل معاً. الفخّ: كل خيار خاطئ يذكر جانباً واحداً فقط؛ ولم تطلب في هذه المرحلة جوازاً أو شهادة سكن محددة.",
         "promptDe": "Welche Angaben braucht die Krankenkasse für die Anmeldung?",
         "type": "mc",
         "id": "dlg-a2-krankenversicherung-q2",
@@ -10791,7 +10791,7 @@
     "ort": "Bankfiliale",
     "lines": [
       {
-        "who": "Kunde",
+        "who": "Kundin",
         "de": "Guten Tag! Ich möchte gerne ein Girokonto eröffnen.",
         "ar": "نهارك سعيد! أريد فتح حساب جارٍ من فضلك."
       },
@@ -10801,8 +10801,8 @@
         "ar": "نهارك سعيد! أحضر معك بطاقتك الشخصية أو جواز سفرك وشهادة التسجيل في السكن من فضلك."
       },
       {
-        "who": "Kunde",
-        "de": "Ja, hier ist mein Personalausweis und die Meldebescheinigung.",
+        "who": "Kundin",
+        "de": "Ja, hier sind mein Personalausweis und die Meldebescheinigung.",
         "ar": "نعم، هذه بطاقتي وشهادة التسجيل."
       },
       {
@@ -10811,7 +10811,7 @@
         "ar": "شكراً. هل تريد إدارة الحساب عبر الإنترنت أم تأتي بانتظام إلى الفرع؟"
       },
       {
-        "who": "Kunde",
+        "who": "Kundin",
         "de": "Am liebsten online. Gibt es eine monatliche Gebühr?",
         "ar": "عبر الإنترنت من فضلك. هل توجد رسوم شهرية؟"
       },
@@ -10821,7 +10821,7 @@
         "ar": "الحساب الجاري مجاني للطلاب والمتدربين. خلاف ذلك يكلّف 4.90 يورو شهرياً."
       },
       {
-        "who": "Kunde",
+        "who": "Kundin",
         "de": "Ich bin Studentin. Hier ist meine Immatrikulationsbescheinigung.",
         "ar": "أنا طالبة. هذه شهادة قيدي الجامعي."
       },
@@ -10831,7 +10831,7 @@
         "ar": "ممتاز. املأ من فضلك هذه الاستمارة. ستصلك البطاقة والرمز السري بالبريد خلال أسبوع تقريباً."
       },
       {
-        "who": "Kunde",
+        "who": "Kundin",
         "de": "Vielen Dank für die Hilfe!",
         "ar": "شكراً جزيلاً على المساعدة!"
       }
@@ -10839,16 +10839,16 @@
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Welche Dokumente braucht der Kunde?",
-        "promptAr": "ما الوثائق التي يحتاجها الزبون؟",
+        "promptDe": "Welche Dokumente braucht die Kundin?",
+        "promptAr": "ما الوثائق التي تحتاجها الزبونة؟",
         "options": [
           "Personalausweis/Pass + Meldebescheinigung",
-          "Nur den Führerschein",
-          "Eine Gehaltsabrechnung",
-          "Keine Dokumente"
+          "Nur den Personalausweis",
+          "Eine Immatrikulationsbescheinigung",
+          "Das Formular und die PIN"
         ],
         "answer": "Personalausweis/Pass + Meldebescheinigung",
-        "explanationAr": "الموظّفة طلبت Personalausweis أو Pass وMeldebescheinigung.",
+        "explanationAr": "الدليل: طلبت الموظفة بطاقة الهوية أو جواز السفر وشهادة تسجيل السكن. الفخّ: شهادة القيد الجامعي ذُكرت لإثبات صفة الطالبة، أما الاستمارة والرقم السري فيرتبطان بإجراءات الحساب ولا يحلّان محل الوثيقتين المطلوبتين.",
         "id": "dlg-b1-kontoeroeffnung-q1"
       },
       {
@@ -10856,13 +10856,13 @@
         "promptDe": "Wann ist das Konto kostenlos?",
         "promptAr": "متى يكون الحساب مجانياً؟",
         "options": [
-          "Für alle",
+          "Für Kunden mit Online-Konto",
           "Für Studenten und Azubis",
-          "Nur für Rentner",
-          "Nur online"
+          "Für Kunden, die regelmäßig in die Filiale kommen",
+          "4,90 Euro im Monat"
         ],
         "answer": "Für Studenten und Azubis",
-        "explanationAr": "الحساب مجاني للطلاب والمتدربين.",
+        "explanationAr": "الدليل: الحساب مجاني للطلاب والمتدربين؛ أما غير ذلك فيكلف 4.90 يورو شهرياً. الفخّ: إدارة الحساب عبر الإنترنت أو زيارة الفرع ليستا شرطاً للمجانية، والسعر الشهري يخصّ غير الفئتين.",
         "id": "dlg-b1-kontoeroeffnung-q2"
       }
     ],
@@ -10931,7 +10931,7 @@
           "2160 Euro"
         ],
         "answer": "900 Euro",
-        "explanationAr": "Kaltmiete 720 + Nebenkosten 180 = 900 يورو.",
+        "explanationAr": "الدليل: الإيجار الأساسي 720 يورو والتكاليف الجانبية 180 يورو، ومجموعهما 900 يورو. الفخّ: 2160 يورو هو مبلغ التأمين، لا الإيجار الشهري.",
         "id": "dlg-b2-mietvertrag-q1"
       },
       {
@@ -10941,11 +10941,11 @@
         "options": [
           "Auf das Privatkonto der Vermieterin",
           "Auf ein separates Kautionskonto",
-          "Auf das Konto des Hausmeisters",
+          "Auf ein separates Konto der Vermieterin",
           "Bar bei Übergabe"
         ],
         "answer": "Auf ein separates Kautionskonto",
-        "explanationAr": "القانون يقتضي حساب تأمين منفصل (Kautionskonto).",
+        "explanationAr": "الدليل: يُودَع مبلغ التأمين في حساب Kautionskonto منفصل. الفخّ: المبلغ لا يُدفع نقداً ولا إلى الحساب الخاص للمؤجّرة؛ المقصود حساب التأمين المنفصل.",
         "id": "dlg-b2-mietvertrag-q2"
       }
     ],
@@ -11321,13 +11321,13 @@
         "promptDe": "Welcher Zug ist das?",
         "promptAr": "ما القطار؟",
         "options": [
-          "ICE 10",
-          "RE 10",
-          "S-Bahn 3",
-          "RB 25"
+          "Zug ICE 10",
+          "Zug RE 10",
+          "Zug S-Bahn 3",
+          "Zug RB 25"
         ],
-        "answer": "RE 10",
-        "explanationAr": "قطار RE 10.",
+        "answer": "Zug RE 10",
+        "explanationAr": "الدليل: أعلنت المحطة أن القطار المتجه إلى كولونيا هو RE 10. الفخّ: الرصيف الثالث وتأخير عشر دقائق تفصيلان آخران في الإعلان، لا رقما القطار.",
         "id": "hoer-a1-01-q1"
       },
       {
@@ -11341,7 +11341,7 @@
           "30 Minuten"
         ],
         "answer": "10 Minuten",
-        "explanationAr": "التأخير 10 دقائق.",
+        "explanationAr": "الدليل: أعلنت المحطة تأخيراً يقارب عشر دقائق. الفخّ: لا تخلط مدة التأخير برقم القطار أو الرصيف، ولا تختر خمساً أو عشرين أو ثلاثين دقيقة.",
         "id": "hoer-a1-01-q2"
       }
     ],
@@ -11359,8 +11359,8 @@
     "lines": [
       {
         "who": "Durchsage",
-        "de": "Sehr geehrte Kunden! Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent. Die Öffnungszeiten heute sind von 8 bis 20 Uhr. Vielen Dank für Ihren Besuch!",
-        "ar": "أيها الزبائن الكرام! التفاح اليوم في عرض: كيلو بـ99 سنتاً فقط. ساعات العمل اليوم من 8 إلى 20. شكراً لزيارتكم!"
+        "de": "Sehr geehrte Kunden! Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent. Bananen, Brot und Milch kosten den normalen Preis. Die Öffnungszeiten heute sind von 8 bis 20 Uhr. Vielen Dank für Ihren Besuch!",
+        "ar": "أيها الزبائن الكرام! التفاح اليوم في عرض: كيلوغرام بـ99 سنتاً فقط. أما الموز والخبز والحليب فتبقى أسعارها عادية. ساعات العمل اليوم من 8 إلى 20. شكراً لزيارتكم!"
       }
     ],
     "questions": [
@@ -11375,7 +11375,7 @@
           "Milch"
         ],
         "answer": "Äpfel",
-        "explanationAr": "التفاح في العرض.",
+        "explanationAr": "الدليل: التفاح وحده معروض بسعر 99 سنتاً للكيلوغرام. الفخّ: ذُكر الموز والخبز والحليب أيضاً، لكن الإعلان يقول إن أسعارها عادية وليست ضمن العرض.",
         "id": "hoer-a1-02-q1"
       },
       {
@@ -11389,7 +11389,7 @@
           "Um 22 Uhr"
         ],
         "answer": "Um 20 Uhr",
-        "explanationAr": "يغلق الساعة 20.",
+        "explanationAr": "الدليل: يذكر الإعلان أن ساعات العمل تنتهي عند الثامنة مساءً. الفخّ: الثامنة صباحاً وقت الافتتاح، أما 18 و22 فليستا موعد الإغلاق المذكور.",
         "id": "hoer-a1-02-q2"
       }
     ],
@@ -11417,27 +11417,27 @@
         "promptDe": "Welche Nummer wählt man in dringenden Fällen?",
         "promptAr": "ما رقم الطوارئ؟",
         "options": [
-          "110",
-          "112",
-          "116 117",
-          "0180-1"
+          "Ärztlicher Notdienst: 110",
+          "Ärztlicher Notdienst: 112",
+          "Ärztlicher Notdienst: 116 117",
+          "Ärztlicher Notdienst: 0180-1"
         ],
-        "answer": "116 117",
-        "explanationAr": "116117 هو رقم الطوارئ الطبية.",
+        "answer": "Ärztlicher Notdienst: 116 117",
+        "explanationAr": "الدليل: يطلب التسجيل الاتصال بالخدمة الطبية المناوبة على 116 117 عند الحالات العاجلة. الفخّ: 110 و112 رقمان شائعان للطوارئ، لكنهما ليسا الرقم المنطوق لهذه الخدمة؛ و0180-1 غير وارد في الإعلان.",
         "id": "hoer-a2-01-q1"
       },
       {
         "type": "mc",
-        "promptDe": "Wann ist die Praxis nachmittags geöffnet?",
-        "promptAr": "متى تفتح العيادة بعد الظهر؟",
+        "promptDe": "An welchen Tagen ist die Praxis nachmittags geöffnet?",
+        "promptAr": "في أيّ أيام تفتح العيادة بعد الظهر؟",
         "options": [
-          "Mo/Fr",
-          "Di/Do",
-          "Mi/Fr",
-          "Mo/Mi"
+          "Montag bis Freitag",
+          "Dienstag und Donnerstag",
+          "Montag und Freitag",
+          "Dienstag und Freitag"
         ],
-        "answer": "Di/Do",
-        "explanationAr": "الثلاثاء والخميس.",
+        "answer": "Dienstag und Donnerstag",
+        "explanationAr": "الدليل: يحدد التسجيل الدوام المسائي يومي الثلاثاء والخميس من الثالثة إلى السادسة. الفخّ: عبارة الاثنين إلى الجمعة تخص الفترة الصباحية، فلا تعني أن العيادة تفتح مساء كل يوم عمل.",
         "id": "hoer-a2-01-q2"
       }
     ],
@@ -11471,7 +11471,7 @@
           "Im Westen"
         ],
         "answer": "Im Westen",
-        "explanationAr": "العواصف في الغرب مساءً.",
+        "explanationAr": "الدليل: قالت النشرة إن عواصف رعدية قد تحدث في الغرب مساءً. الفخّ: المطر والغيوم يخصان الشمال، والطقس الدافئ الجاف يخص الجنوب؛ لا تخلطهما بمكان العواصف.",
         "id": "hoer-a2-02-q1"
       },
       {
@@ -11485,7 +11485,7 @@
           "30 Grad"
         ],
         "answer": "26 Grad",
-        "explanationAr": "تصل إلى 26.",
+        "explanationAr": "الدليل: تصل الحرارة في الجنوب إلى 26 درجة. الفخّ: 12–15 درجة تخص الشمال، و20 درجة تخص الوسط؛ لا تنقل رقماً من منطقة إلى أخرى.",
         "id": "hoer-a2-02-q2"
       }
     ],
@@ -11513,13 +11513,13 @@
         "promptDe": "Warum ruft Sarah an?",
         "promptAr": "لماذا تتصل سارة؟",
         "options": [
-          "Um eine Rechnung zu besprechen",
+          "Um den Termin am Mittwoch zu bestätigen",
           "Weil der Termin ausfällt",
-          "Um sich zu bewerben",
-          "Wegen einer Party"
+          "Um den neuen Termin am 18. November abzusagen",
+          "Weil Karim krank ist"
         ],
         "answer": "Weil der Termin ausfällt",
-        "explanationAr": "ألغت الموعد.",
+        "explanationAr": "الدليل: قالت Sarah إن موعد الأربعاء مع السيد Becker أُلغي لأنه مريض، واقترحت 18 نوفمبر الساعة العاشرة. الفخّ: الموعد الجديد اقتراح بديل، لا سبب الاتصال الأصلي.",
         "id": "hoer-b1-01-q1"
       },
       {
@@ -11527,13 +11527,13 @@
         "promptDe": "Was soll Karim bis morgen tun?",
         "promptAr": "ماذا على كريم أن يفعل حتى الغد؟",
         "options": [
-          "Die Rechnung bezahlen",
-          "Zur Arbeit kommen",
+          "Herrn Becker bis morgen zurückrufen",
+          "Den Mittwochstermin mit Herrn Becker bestätigen",
           "Bescheid sagen, ob der Termin passt",
-          "Den Vertrag unterschreiben"
+          "Sarah erst nach dem Mittwochstermin zurückrufen"
         ],
         "answer": "Bescheid sagen, ob der Termin passt",
-        "explanationAr": "يُعلمها إن كان الموعد مناسباً.",
+        "explanationAr": "الدليل: طلبت Sarah أن يخبرها Karim حتى الغد إن كان الموعد المقترح مناسباً؛ وإذا لم يناسبه يتصل بها على هاتفها. الفخّ: لا يُؤكّد موعد الأربعاء الملغى ولا ينتظر إلى ما بعده.",
         "id": "hoer-b1-01-q2"
       }
     ],
@@ -11551,8 +11551,8 @@
     "lines": [
       {
         "who": "Interviewer + Expertin",
-        "de": "F: Frau Dr. Weber, wie beurteilen Sie die Situation auf dem deutschen Arbeitsmarkt für ausländische Fachkräfte? – W: Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen. Das Problem liegt oft weniger in der Qualifikation als an der Anerkennung der Abschlüsse und an den Sprachkenntnissen. Viele Arbeitgeber fordern heute mindestens B2, in manchen Bereichen sogar C1. Außerdem spielt interkulturelle Kompetenz eine immer größere Rolle. Mein Rat: frühzeitig Deutsch lernen und die Anerkennung bereits im Heimatland beantragen.",
-        "ar": "س: د. فِبَر، كيف تقيّمين وضع سوق العمل الألماني للكفاءات الأجنبية؟ – ج: الطلب مرتفع أساساً، خصوصاً في المهن التقنية والصحة. المشكلة غالباً ليست في المؤهل بل في معادلة الشهادات ومستوى اللغة. كثير من أرباب العمل يطلبون B2 على الأقل، وفي بعض المجالات C1. كما تلعب الكفاءة بين الثقافات دوراً أكبر فأكبر. نصيحتي: تعلّم الألمانية مبكراً، وقدّم طلب المعادلة وأنت في بلدك."
+        "de": "F: Frau Dr. Weber, wie beurteilen Sie die Situation auf dem deutschen Arbeitsmarkt für ausländische Fachkräfte? – W: Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen. Das Problem liegt oft weniger in der Qualifikation als vielmehr in der Anerkennung der Abschlüsse und in den Sprachkenntnissen. A2- oder B1-Kenntnisse reichen oft nicht aus. Viele Arbeitgeber fordern heute mindestens B2, in manchen Bereichen sogar C1. Außerdem spielt interkulturelle Kompetenz eine immer größere Rolle. Mein Rat: frühzeitig Deutsch lernen und die Anerkennung bereits im Heimatland beantragen.",
+        "ar": "س: د. فِبَر، كيف تقيّمين وضع سوق العمل الألماني للكفاءات الأجنبية؟ – ج: الطلب مرتفع أساساً، خصوصاً في المهن التقنية والصحة. المشكلة غالباً ليست في المؤهل بل في معادلة الشهادات ومستوى اللغة. مستوى A2 أو B1 لا يكفي غالباً. كثير من أرباب العمل يطلبون B2 على الأقل، وفي بعض المجالات C1. كما تلعب الكفاءة بين الثقافات دوراً أكبر فأكبر. نصيحتي: تعلّم الألمانية مبكراً، وقدّم طلب المعادلة وأنت في بلدك."
       }
     ],
     "questions": [
@@ -11561,13 +11561,13 @@
         "promptDe": "Was ist nach Frau Weber das größere Problem?",
         "promptAr": "ما المشكلة الأكبر بحسب فِبَر؟",
         "options": [
-          "Die fehlende Motivation",
+          "Die hohe Nachfrage in technischen Berufen",
           "Die Anerkennung der Abschlüsse und die Sprache",
-          "Die zu hohen Steuern",
-          "Der Mangel an Jobs"
+          "Die interkulturelle Kompetenz",
+          "Die Qualifikation im Gesundheitswesen"
         ],
         "answer": "Die Anerkennung der Abschlüsse und die Sprache",
-        "explanationAr": "المشكلة في معادلة الشهادات واللغة.",
+        "explanationAr": "الدليل: قالت إن المشكلة غالباً ليست في المؤهلات نفسها، بل في الاعتراف بالشهادات ومعرفة اللغة. الفخّ: ذُكرت الحاجة العالية إلى التخصصات التقنية والكفاءة الثقافية أيضاً، لكنهما ليستا المشكلة التي حدّدتها.",
         "id": "hoer-b2-01-q1"
       },
       {
@@ -11575,13 +11575,13 @@
         "promptDe": "Welches Sprachniveau fordern viele Arbeitgeber mindestens?",
         "promptAr": "ما المستوى اللغوي المطلوب على الأقل؟",
         "options": [
-          "B1",
-          "B2",
-          "C1",
-          "A2"
+          "A2-Kenntnisse reichen oft nicht aus",
+          "Mindestens B2",
+          "C1 in manchen Bereichen",
+          "B1-Kenntnisse reichen oft nicht aus"
         ],
-        "answer": "B2",
-        "explanationAr": "B2 على الأقل، وأحياناً C1.",
+        "answer": "Mindestens B2",
+        "explanationAr": "الدليل: قالت إن A2 أو B1 لا يكفيان غالباً، وإن كثيراً من أصحاب العمل يطلبون B2 على الأقل، وقد يطلب بعضهم C1. الفخّ: C1 مطلب أعلى في مجالات معينة، لا الحد الأدنى العام.",
         "id": "hoer-b2-01-q2"
       }
     ],
@@ -11986,15 +11986,15 @@
       {
         "id": "d-a1-ht01-q1",
         "type": "mc",
-        "promptDe": "Wann ist die Praxis Dienstag Nachmittag geöffnet?",
-        "promptAr": "متى تفتح العيادة الثلاثاء بعد الظهر؟",
+        "promptDe": "An welchen Tagen ist die Praxis am Nachmittag geöffnet?",
+        "promptAr": "في أيّ أيام تفتح العيادة بعد الظهر؟",
         "options": [
-          "8–12 Uhr",
-          "15–18 Uhr",
-          "geschlossen"
+          "Montag bis Freitag 8–12 Uhr",
+          "Dienstag und Donnerstag 15–18 Uhr",
+          "Montag bis Freitag 15–18 Uhr"
         ],
-        "answer": "15–18 Uhr",
-        "explanationAr": "الإعلان: Dienstag und Donnerstag 15–18 Uhr."
+        "answer": "Dienstag und Donnerstag 15–18 Uhr",
+        "explanationAr": "الدليل: يحدد التسجيل الدوام الصباحي من الاثنين إلى الجمعة 8–12، والمسائي الثلاثاء والخميس 15–18. الفخّ: خيار الصباح لا يجيب عن فترة بعد الظهر، والدوام المسائي لا يمتد إلى كل أيام الأسبوع."
       }
     ],
     "dictation": [
@@ -12028,12 +12028,12 @@
         "promptDe": "Wie ist das Wetter am Wochenende?",
         "promptAr": "كيف الجو في نهاية الأسبوع؟",
         "options": [
-          "Regen",
+          "Regen im Norden",
           "Sonnenschein",
-          "Schnee"
+          "22 Grad im Süden"
         ],
         "answer": "Sonnenschein",
-        "explanationAr": "النشرة: Am Wochenende gibt es überall Sonnenschein."
+        "explanationAr": "الدليل: تقول النشرة إن الشمس ستشرق في كل المناطق خلال عطلة الأسبوع. الفخّ: المطر في الشمال ودرجة 22 في الجنوب يخصان توقعات اليوم، لا عطلة الأسبوع."
       }
     ],
     "dictation": [
@@ -12072,7 +12072,7 @@
           "30 Prozent"
         ],
         "answer": "30 Prozent",
-        "explanationAr": "الإعلان: 30 Prozent Rabatt."
+        "explanationAr": "الدليل: يعلن المتجر خصماً قدره 30 بالمئة على المعاطف الشتوية حتى إغلاق المتجر. الفخّ: 10 و20 بالمئة خياران أقل، لكن الإعلان يذكر 30 تحديداً."
       }
     ],
     "dictation": [
@@ -12106,12 +12106,12 @@
         "promptDe": "Wie lange dauert der Streik?",
         "promptAr": "كم يستمر الإضراب؟",
         "options": [
-          "Eine Stunde",
-          "Sechs Stunden",
-          "Zwölf Stunden"
+          "Der Streik dauert eine Stunde",
+          "Der Streik dauert sechs Stunden",
+          "Der Streik dauert zwölf Stunden"
         ],
-        "answer": "Sechs Stunden",
-        "explanationAr": "من ٤ إلى ١٠ = ٦ ساعات."
+        "answer": "Der Streik dauert sechs Stunden",
+        "explanationAr": "الدليل: يبدأ الإضراب الساعة الرابعة وينتهي العاشرة، أي ست ساعات. الفخّ: اختر المدة بين وقتي البداية والنهاية، لا مدة أقصر أو أطول."
       }
     ],
     "dictation": [
@@ -12131,8 +12131,8 @@
         "who": "Zugführer"
       },
       {
-        "de": "Wir erreichen den Hauptbahaussichtlich um 17:45 Uhr. Der Anschluss nach Hamburg ist dadurch gefährdet.",
-        "ar": "سنصل المحطة الرئيسية حوالي ١٧:٤٥. ربط هامبورغ مهدد بسبب التأخير.",
+        "de": "Wir erreichen den Hauptbahnhof voraussichtlich um 17:45 Uhr. Der Anschluss nach Hamburg ist dadurch gefährdet.",
+        "ar": "سنصل إلى المحطة الرئيسية حوالي ١٧:٤٥. ربط هامبورغ مهدد بسبب التأخير.",
         "who": "Zugführer"
       }
     ],
@@ -12145,12 +12145,12 @@
         "promptDe": "Warum verspätet sich der Zug?",
         "promptAr": "لماذا القطار متأخر؟",
         "options": [
-          "Wegen einer technischen Störung",
+          "Wegen einer technischen Störung mit 15 Minuten Verspätung",
           "Wegen Personen auf der Strecke",
-          "Wegen schlechten Wetters"
+          "Wegen schlechten Wetters mit 15 Minuten Verspätung"
         ],
         "answer": "Wegen Personen auf der Strecke",
-        "explanationAr": "المذكور: Personen auf der Strecke."
+        "explanationAr": "الدليل: ذُكر تأخير بنحو 15 دقيقة، وسببه أشخاص على السكة تُبعدهم الشرطة الاتحادية. الفخّ: لا يعزو الإعلان التأخير إلى عطل تقني أو طقس سيئ."
       }
     ],
     "dictation": [
@@ -12189,7 +12189,7 @@
           "Bis zum Abend"
         ],
         "answer": "Bis zum Mittag",
-        "explanationAr": "المذكور: bis zum Mittag."
+        "explanationAr": "الدليل: توقّع المذيع أن تستمر إزالة العوائق حتى الظهر. الفخّ: السابعة وقت بدء الإغلاق، والثامنة أو المساء ليسا وقت انتهاء الإزالة المذكور."
       }
     ],
     "dictation": [
@@ -12223,12 +12223,12 @@
         "promptDe": "Welche Nummer wählt man in dringenden Fällen?",
         "promptAr": "ما الرقم المطلوب في الحالات الطارئة؟",
         "options": [
-          "0228-900 100",
-          "110",
-          "112"
+          "Notdienst: 0228-900 100",
+          "Notdienst: 110",
+          "Notdienst: 112"
         ],
-        "answer": "0228-900 100",
-        "explanationAr": "المذكور: 0228-900 100."
+        "answer": "Notdienst: 0228-900 100",
+        "explanationAr": "الدليل: أعلنت الشركة رقم مناوبتها للحالات العاجلة: 0228-900 100. الفخّ: 110 و112 رقما طوارئ عامّان، لا رقم مناوبة الشركة."
       }
     ],
     "dictation": [
@@ -12376,7 +12376,7 @@
           "Gleis 15"
         ],
         "answer": "Gleis 5",
-        "explanationAr": "الإعلان يقول Gleis 5."
+        "explanationAr": "الدليل: ينطلق ICE 621 من الرصيف الخامس. الفخّ: الأرقام 15–21 تخص أرقام العربات في مؤخرة القطار، لا رقم الرصيف."
       }
     ],
     "dictation": [
@@ -12405,12 +12405,12 @@
         "promptDe": "Was soll Ahmed mitbringen?",
         "promptAr": "ماذا يجب أن يحضر أحمد؟",
         "options": [
-          "Seinen Pass",
+          "Nur sein Buch",
           "Buch und Stift",
-          "Nur Geld"
+          "Nur einen Stift"
         ],
         "answer": "Buch und Stift",
-        "explanationAr": "الرسالة: Buch und Stift."
+        "explanationAr": "الدليل: طلبت سابينه إحضار الكتاب والقلم معاً إلى الدورة. الفخّ: الكتاب وحده أو القلم وحده معلومة جزئية، وليسا الشيئين المطلوبين معاً."
       }
     ],
     "dictation": [
@@ -12440,11 +12440,11 @@
         "promptAr": "لماذا ينبغي للسائقين الخروج عند المخرج التالي؟",
         "options": [
           "Wegen Stau nach Unfall",
-          "Wegen Baustelle",
-          "Wegen Kontrolle"
+          "Wegen einer gesperrten Ausfahrt in Fahrtrichtung Frankfurt",
+          "Wegen eines Staus auf der A3 in Fahrtrichtung Köln"
         ],
         "answer": "Wegen Stau nach Unfall",
-        "explanationAr": "بسبب الحادث والازدحام."
+        "explanationAr": "الدليل: وقع الحادث على A3 باتجاه فرانكفورت، وتسبّب بازدحام يمتد ثمانية كيلومترات؛ لذلك طُلب استخدام المخرج التالي. الفخّ: الحديث عن مسار مغلق لا مخرج مغلق، والاتجاه المذكور فرانكفورت لا كولونيا."
       }
     ],
     "dictation": [
@@ -12490,10 +12490,10 @@
         "options": [
           "Mehr Autobahnen",
           "Mehr ÖPNV",
-          "Weniger Radwege"
+          "Weniger Autos auf der Autobahn"
         ],
         "answer": "Mehr ÖPNV",
-        "explanationAr": "تقترح الاستثمار في النقل العام."
+        "explanationAr": "الدليل: دعت إلى مزيد من الحافلات والقطارات والاستثمار في النقل العام، وقالت إن الطرق الجديدة تجلب سيارات أكثر. الفخّ: حركة السيارات والطرق وردت في النقاش، لكن اقتراحها المحدد هو تعزيز النقل العام."
       }
     ],
     "dictation": [
@@ -12527,7 +12527,7 @@
           "Dass Weiterbildung wichtig bleibt"
         ],
         "answer": "Die genaue Zahl künftig wegfallender Arbeitsplätze",
-        "explanationAr": "يقول المتحدث صراحةً إنه لا يمكن استنتاج عدد مؤكد للوظائف التي ستختفي."
+        "explanationAr": "الدليل: يوضح المتحدث أنه لا يمكن استنتاج عدد مؤكد للوظائف التي ستختفي. الفخّ: توقّع أتمتة بعض المهام لا يقدّم رقماً محدداً للوظائف."
       }
     ],
     "dictation": [

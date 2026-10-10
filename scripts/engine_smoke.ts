@@ -2030,7 +2030,7 @@ void 0;
       "K107b صفرَ بياضٍ موروثٍ في مكوّناتِ الواجهة (ورقتا الطباعة A4 مستثناتان — بيضاءٌ بنصٍّ داكنٍ معلن): كلَّ سطحٍ آخرَ يرثُ var(--color-card) — متبقٍّ: " + (weiss.join(" · ") || "لا شيء"));
   }
 
-  /* ═══ K66 — رادار الكلمات الإشارية (lib/signalwoerter.ts): مشتقّ من الحوارات الـ80، بحدود معلَنة ═══ */
+  /* ═══ K66 — رادار الكلمات الإشارية (lib/signalwoerter.ts): مشتقّ من الحوارات الـ156، بحدود معلَنة ═══ */
   {
     const s1 = signaleIn("Nein, nicht am Montag, sondern erst am Dienstag. Vielleicht später.");
     ok(s1.map((x) => x.kategorie).join(",") === "korrektur,zeitfalle,kontrast,einschraenkung,sicherheit,reihenfolge",
