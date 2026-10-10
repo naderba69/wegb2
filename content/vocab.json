@@ -3247,7 +3247,8 @@
         "exampleAr": "يعلّق المقال الافتتاحي في الصحيفة على إصلاح التعليم الجديد.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Berichterstattung",
@@ -3258,7 +3259,8 @@
         "exampleAr": "تعرض التغطية الإخبارية المتوازنة مواقف مختلفة.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Quellenangabe, -n",
@@ -3269,7 +3271,8 @@
         "exampleAr": "يحتاج كل رسم بياني إلى إحالة دقيقة إلى المصدر.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Nachrichtensendung, -en",
@@ -3280,7 +3283,8 @@
         "exampleAr": "تقدم نشرة الأخبار اليوم تقريراً عن الانتخابات.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Talkshow, -s",
@@ -3291,7 +3295,8 @@
         "exampleAr": "يناقش الخبراء الإصلاح في البرنامج الحواري.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Titelseite, -n",
@@ -3302,7 +3307,8 @@
         "exampleAr": "يتصدر موضوع مهم الصفحة الأولى اليوم.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Boulevardblatt, die Boulevardblätter",
@@ -3313,7 +3319,8 @@
         "exampleAr": "نشرت الصحيفة الشعبية عنواناً مثيراً ومبالغاً فيه.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Medienkompetenz",
@@ -3324,7 +3331,8 @@
         "exampleAr": "تساعد الكفاءة الإعلامية على التمييز بين المعلومات الموثوقة والخاطئة.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Schulabschluss, -schlüsse",
@@ -3335,7 +3343,8 @@
         "exampleAr": "يمكن التقدم لتدريب مهني بعد الحصول على شهادة إنهاء المدرسة.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Abitur",
@@ -3346,7 +3355,8 @@
         "exampleAr": "يمكنها الدراسة في جامعة بعد شهادة الثانوية المؤهلة للجامعة.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Klassenarbeit, -en",
@@ -3357,7 +3367,8 @@
         "exampleAr": "تراجع الصف المادة قبل الامتحان.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Note, -n",
@@ -3368,7 +3379,8 @@
         "exampleAr": "حصلت على علامة جيدة في الألمانية.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Zeugnis, -se",
@@ -3379,7 +3391,8 @@
         "exampleAr": "تظهر درجات العام الدراسي في كشف العلامات.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Lehrplan, -pläne",
@@ -3390,7 +3403,8 @@
         "exampleAr": "يحدد المنهاج الدراسي أهداف التعلم للعام.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Schulsystem, -e",
@@ -3401,7 +3415,8 @@
         "exampleAr": "يختلف النظام المدرسي من ولاية اتحادية إلى أخرى.",
         "tags": [
           "b2-medien-schule"
-        ]
+        ],
+        "pos": "Nomen"
       }
     ]
   },
@@ -23150,8 +23165,8 @@
         "de": "gelb",
         "ar": "أصفر",
         "pos": "Adjektiv",
-        "exampleDe": "Die Sonne ist gelb.",
-        "exampleAr": "الشمسُ صفراء",
+        "exampleDe": "Das Schild ist gelb.",
+        "exampleAr": "اللافتة صفراء.",
         "level": "A1",
         "tags": [
           "farbe"
@@ -49800,18 +49815,18 @@
     "cards": [
       {
         "id": "v1431",
-        "de": "die Forschung",
-        "ar": "الأبحاث العلمية",
+        "de": "das Forschungsvorhaben",
+        "ar": "المشروع البحثي",
         "pos": "Nomen",
         "level": "B2",
         "tags": [
           "wissenschaft",
           "zukunft"
         ],
-        "article": "die",
-        "farbe": "BLAU",
-        "exampleDe": "In Deutschland wird viel Forschung im Bereich Erneuerbare Energien betrieben.",
-        "exampleAr": "في ألمانيا تُجرى أبحاث كثيرة في مجال الطاقات المتجددة."
+        "article": "das",
+        "farbe": "GRÜN",
+        "exampleDe": "Das Forschungsvorhaben untersucht den Einfluss von Schlaf auf das Lernen.",
+        "exampleAr": "يدرس المشروع البحثي أثر النوم في التعلّم."
       },
       {
         "id": "v1432",
@@ -49824,7 +49839,7 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Eine aktuelle Studie zeigt, dass Bewegung das Lernen verbessert.",
         "exampleAr": "تُظهر دراسة حديثة أن الحركة تحسّن التعلّم."
       },
@@ -49839,7 +49854,7 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Die Untersuchung ergab keine Hinweise auf Nebenwirkungen.",
         "exampleAr": "لم يُظهر التحقيق أي دليل على آثار جانبية."
       },
@@ -49854,14 +49869,14 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Er stellte eine gewagte These über den Klimawandel auf.",
         "exampleAr": "طرح فرضية جريئة حول تغيّر المناخ."
       },
       {
         "id": "v1435",
-        "de": "die Hypothese",
-        "ar": "فرضية",
+        "de": "die Prämisse",
+        "ar": "المقدّمة المنطقية",
         "pos": "Nomen",
         "level": "B2",
         "tags": [
@@ -49869,9 +49884,9 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
-        "exampleDe": "Die Hypothese muss in Experimenten überprüft werden.",
-        "exampleAr": "يجب اختبار الفرضية في التجارب."
+        "farbe": "ROT",
+        "exampleDe": "Die Prämisse der Studie wird im Diskussionsteil kritisch hinterfragt.",
+        "exampleAr": "تُراجع المقدّمة المنطقية للدراسة نقدياً في قسم المناقشة."
       },
       {
         "id": "v1436",
@@ -49884,7 +49899,7 @@
           "zukunft"
         ],
         "article": "das",
-        "farbe": "BLAU",
+        "farbe": "GRÜN",
         "exampleDe": "Das Experiment wurde unter Laborbedingungen durchgeführt.",
         "exampleAr": "أُجريت التجربة في ظروف مخبرية."
       },
@@ -49903,29 +49918,29 @@
       },
       {
         "id": "v1438",
-        "de": "nachweisen",
-        "ar": "يُثبت/يُبرهن (بالدليل)",
+        "de": "untermauern",
+        "ar": "يدعم بالأدلة",
         "pos": "Verb",
         "level": "B2",
         "tags": [
           "wissenschaft",
           "zukunft"
         ],
-        "exampleDe": "Man konnte Schadstoffe im Wasser nachweisen.",
-        "exampleAr": "تم إثبات وجود مواد ضارة في الماء."
+        "exampleDe": "Die Ergebnisse untermauern die zentrale These der Studie.",
+        "exampleAr": "تدعم النتائج الأطروحة الأساسية للدراسة بالأدلة."
       },
       {
         "id": "v1439",
-        "de": "auswerten",
-        "ar": "يُحلِّل/يُقيّم البيانات",
+        "de": "interpretieren",
+        "ar": "يفسّر",
         "pos": "Verb",
         "level": "B2",
         "tags": [
           "wissenschaft",
           "zukunft"
         ],
-        "exampleDe": "Die Daten werden derzeit ausgewertet.",
-        "exampleAr": "تُقيَّم البيانات حالياً."
+        "exampleDe": "Die Forschenden interpretieren die Ergebnisse vorsichtig.",
+        "exampleAr": "يفسّر الباحثون النتائج بحذر."
       },
       {
         "id": "v1440",
@@ -49938,14 +49953,14 @@
           "zukunft"
         ],
         "article": "das",
-        "farbe": "BLAU",
+        "farbe": "GRÜN",
         "exampleDe": "Das Ergebnis der Umfrage war überraschend.",
         "exampleAr": "كانت نتيجة الاستطلاع مفاجئة."
       },
       {
         "id": "v1441",
-        "de": "die Auswirkung",
-        "ar": "أثر/تأثير",
+        "de": "die Folgewirkung",
+        "ar": "الأثر اللاحق",
         "pos": "Nomen",
         "level": "B2",
         "tags": [
@@ -49953,9 +49968,9 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
-        "exampleDe": "Die Auswirkungen der Digitalisierung sind umstritten.",
-        "exampleAr": "آثار الرقمنة مُختلَف فيها."
+        "farbe": "ROT",
+        "exampleDe": "Eine unerwartete Folgewirkung der Reform ist die höhere Nachfrage.",
+        "exampleAr": "من الآثار اللاحقة غير المتوقعة للإصلاح ارتفاع الطلب."
       },
       {
         "id": "v1442",
@@ -49968,14 +49983,14 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Als Folge des Regens fiel der Unterricht aus.",
         "exampleAr": "نتيجة المطر أُلغي الدرس."
       },
       {
         "id": "v1443",
-        "de": "der Fortschritt",
-        "ar": "تقدّم",
+        "de": "der Strukturwandel",
+        "ar": "التحول الهيكلي",
         "pos": "Nomen",
         "level": "B2",
         "tags": [
@@ -49984,8 +49999,8 @@
         ],
         "article": "der",
         "farbe": "BLAU",
-        "exampleDe": "Technischer Fortschritt verändert die Arbeitswelt.",
-        "exampleAr": "التقدّم التقني يغير عالم العمل."
+        "exampleDe": "Der Strukturwandel verändert die Wirtschaftsstruktur vieler Regionen.",
+        "exampleAr": "يغيّر التحول الهيكلي البنية الاقتصادية لمناطق كثيرة."
       },
       {
         "id": "v1444",
@@ -49998,7 +50013,7 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Die Entwicklung der KI schreitet schnell voran.",
         "exampleAr": "يتقدّم تطوير الذكاء الاصطناعي بسرعة."
       },
@@ -50013,24 +50028,24 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Niemand weiß genau, was die Zukunft bringt.",
         "exampleAr": "لا أحد يعرف بدقة ماذا سيجلب المستقبل."
       },
       {
         "id": "v1446",
-        "de": "die Künstliche Intelligenz",
-        "ar": "الذكاء الاصطناعي",
+        "de": "das maschinelle Lernen",
+        "ar": "التعلّم الآلي",
         "pos": "Nomen",
         "level": "B2",
         "tags": [
           "wissenschaft",
           "zukunft"
         ],
-        "article": "die",
-        "farbe": "BLAU",
-        "exampleDe": "Künstliche Intelligenz wird immer häufiger im Alltag eingesetzt.",
-        "exampleAr": "يُستخدم الذكاء الاصطناعي بشكل متزايد في الحياة اليومية."
+        "article": "das",
+        "farbe": "GRÜN",
+        "exampleDe": "Maschinelles Lernen kann Muster in großen Datensätzen erkennen.",
+        "exampleAr": "يمكن للتعلّم الآلي اكتشاف أنماط في مجموعات بيانات كبيرة."
       },
       {
         "id": "v1447",
@@ -50043,29 +50058,14 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Große Datenmengen werden in Echtzeit analysiert.",
         "exampleAr": "تُحلَّل كميات ضخمة من البيانات لحظياً."
       },
       {
         "id": "v1448",
-        "de": "der Algorithmus",
-        "ar": "الخوارزمية",
-        "pos": "Nomen",
-        "level": "B2",
-        "tags": [
-          "wissenschaft",
-          "zukunft"
-        ],
-        "article": "der",
-        "farbe": "BLAU",
-        "exampleDe": "Soziale Netzwerke nutzen komplexe Algorithmen.",
-        "exampleAr": "تستخدم الشبكات الاجتماعية خوارزميات معقّدة."
-      },
-      {
-        "id": "v1449",
-        "de": "die Automatisierung",
-        "ar": "الأتمتة",
+        "de": "die Datenverarbeitung",
+        "ar": "معالجة البيانات",
         "pos": "Nomen",
         "level": "B2",
         "tags": [
@@ -50073,9 +50073,24 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
-        "exampleDe": "Die Automatisierung ersetzt manche Arbeitsplätze, schafft aber auch neue.",
-        "exampleAr": "تحل الأتمتة محل بعض الوظائف لكنها تخلق أيضاً وظائف جديدة."
+        "farbe": "ROT",
+        "exampleDe": "Bei der Datenverarbeitung müssen personenbezogene Informationen geschützt werden.",
+        "exampleAr": "يجب حماية المعلومات الشخصية عند معالجة البيانات."
+      },
+      {
+        "id": "v1449",
+        "de": "die Prozessautomatisierung",
+        "ar": "أتمتة العمليات",
+        "pos": "Nomen",
+        "level": "B2",
+        "tags": [
+          "wissenschaft",
+          "zukunft"
+        ],
+        "article": "die",
+        "farbe": "ROT",
+        "exampleDe": "Die Prozessautomatisierung kann wiederkehrende Arbeitsschritte beschleunigen.",
+        "exampleAr": "يمكن لأتمتة العمليات تسريع خطوات العمل المتكررة."
       },
       {
         "id": "v1450",
@@ -50088,14 +50103,14 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Die Globalisierung verbindet Märkte weltweit.",
         "exampleAr": "تربط العولمة الأسواق عالمياً."
       },
       {
         "id": "v1451",
-        "de": "die Nachhaltigkeit",
-        "ar": "الاستدامة",
+        "de": "die Ressourcenschonung",
+        "ar": "ترشيد استخدام الموارد",
         "pos": "Nomen",
         "level": "B2",
         "tags": [
@@ -50103,22 +50118,25 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
-        "exampleDe": "Nachhaltigkeit bedeutet, Ressourcen schonend zu nutzen.",
-        "exampleAr": "تعني الاستدامة استخدام الموارد بحذر."
+        "farbe": "ROT",
+        "exampleDe": "Ressourcenschonung beginnt mit einem bewussten Umgang mit Energie und Wasser.",
+        "exampleAr": "يبدأ ترشيد استخدام الموارد بالتعامل الواعي مع الطاقة والماء."
       },
       {
         "id": "v1452",
-        "de": "erneuerbar",
-        "ar": "متجدّد",
+        "de": "emissionsarm",
+        "ar": "منخفض الانبعاثات",
         "pos": "Adjektiv",
         "level": "B2",
         "tags": [
           "wissenschaft",
           "zukunft"
         ],
-        "exampleDe": "Wind- und Solarenergie sind erneuerbare Energien.",
-        "exampleAr": "طاقة الرياح والشمس طاقتان متجدّدتان."
+        "exampleDe": "Der neue Stadtbus fährt emissionsarm durch die Innenstadt.",
+        "exampleAr": "تسير الحافلة الجديدة منخفضة الانبعاثات عبر وسط المدينة.",
+        "ant": [
+          "emissionsintensiv"
+        ]
       },
       {
         "id": "v1453",
@@ -50146,7 +50164,7 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Während der Krise war die Solidarität groß.",
         "exampleAr": "خلال الأزمة كان التضامن كبيراً."
       },
@@ -50161,7 +50179,7 @@
           "zukunft"
         ],
         "article": "die",
-        "farbe": "BLAU",
+        "farbe": "ROT",
         "exampleDe": "Es gibt keine einfache Lösung für dieses Problem.",
         "exampleAr": "لا يوجد حل بسيط لهذه المشكلة."
       }
@@ -50180,7 +50198,8 @@
         "exampleAr": "يظهر العدد صفر على الشاشة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "eins",
@@ -50191,7 +50210,8 @@
         "exampleAr": "واحد زائد اثنين يساوي ثلاثة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "zwei",
@@ -50202,7 +50222,8 @@
         "exampleAr": "لديّ دفتران.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "drei",
@@ -50213,7 +50234,8 @@
         "exampleAr": "نحن ثلاثة أصدقاء.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "vier",
@@ -50224,7 +50246,8 @@
         "exampleAr": "هذا يكلف أربعة يورو.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "fünf",
@@ -50235,7 +50258,8 @@
         "exampleAr": "تأتي الحافلة الساعة الخامسة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "sechs",
@@ -50246,7 +50270,8 @@
         "exampleAr": "يبدأ الصف الساعة السادسة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "sieben",
@@ -50257,7 +50282,8 @@
         "exampleAr": "ينطلق القطار الساعة السابعة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "acht",
@@ -50268,7 +50294,8 @@
         "exampleAr": "ينتظر ثمانية أشخاص أمام الباب.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "neun",
@@ -50279,7 +50306,8 @@
         "exampleAr": "الساعة التاسعة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "zehn",
@@ -50290,7 +50318,8 @@
         "exampleAr": "أعمار الأطفال عشر سنوات.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "elf",
@@ -50301,7 +50330,8 @@
         "exampleAr": "تبدأ دورة الألمانية الساعة الحادية عشرة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "zwölf",
@@ -50312,7 +50342,8 @@
         "exampleAr": "الساعة الثانية عشرة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "dreizehn",
@@ -50323,7 +50354,8 @@
         "exampleAr": "ينطلق القطار الساعة الثالثة عشرة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "zwanzig",
@@ -50334,7 +50366,8 @@
         "exampleAr": "يكلف القاموس عشرين يورو.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "dreißig",
@@ -50345,7 +50378,8 @@
         "exampleAr": "عمرها ثلاثون سنة.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "hundert",
@@ -50356,7 +50390,8 @@
         "exampleAr": "اليورو الواحد فيه مئة سنت.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       },
       {
         "de": "einhundert",
@@ -50367,7 +50402,8 @@
         "exampleAr": "يكلف القاموس مئة يورو.",
         "tags": [
           "a0-zahlen"
-        ]
+        ],
+        "pos": "Zahl"
       }
     ],
     "titleDe": "Zahlen 0–20 + Zehner",
@@ -50386,7 +50422,8 @@
         "exampleAr": "الطماطم حمراء.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "blau",
@@ -50397,7 +50434,8 @@
         "exampleAr": "البحر أزرق.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "grün",
@@ -50408,7 +50446,8 @@
         "exampleAr": "العشب أخضر.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "gelb",
@@ -50419,7 +50458,8 @@
         "exampleAr": "الشمس صفراء.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "schwarz",
@@ -50430,7 +50470,8 @@
         "exampleAr": "الليل أسود.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "weiß",
@@ -50441,7 +50482,8 @@
         "exampleAr": "الثلج أبيض.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "orange",
@@ -50452,7 +50494,8 @@
         "exampleAr": "البرتقالة برتقالية.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "lila",
@@ -50463,7 +50506,8 @@
         "exampleAr": "الزهرة بنفسجية.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "braun",
@@ -50474,7 +50518,8 @@
         "exampleAr": "الطاولة بنية.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "grau",
@@ -50485,7 +50530,8 @@
         "exampleAr": "السماء رمادية.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "rosa",
@@ -50496,7 +50542,8 @@
         "exampleAr": "الفستان وردي.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "dunkelblau",
@@ -50507,7 +50554,8 @@
         "exampleAr": "البحر أزرق داكن.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       },
       {
         "de": "hellgrün",
@@ -50518,7 +50566,8 @@
         "exampleAr": "القميص أخضر فاتح.",
         "tags": [
           "a0-farben"
-        ]
+        ],
+        "pos": "Adjektiv"
       }
     ],
     "titleDe": "Farben",
@@ -50537,7 +50586,8 @@
         "exampleAr": "التفاحة حمراء.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Banane, -n",
@@ -50548,7 +50598,8 @@
         "exampleAr": "الموزة صفراء.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Orange, -n",
@@ -50559,7 +50610,8 @@
         "exampleAr": "البرتقالة حلوة.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Tomate, -n",
@@ -50570,7 +50622,8 @@
         "exampleAr": "الطماطم ناضجة.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Kartoffel, -n",
@@ -50581,7 +50634,8 @@
         "exampleAr": "البطاطا ساخنة.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Salat, -e",
@@ -50592,7 +50646,8 @@
         "exampleAr": "السلطة طازجة.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Möhre, -n",
@@ -50603,7 +50658,8 @@
         "exampleAr": "الجزرة برتقالية.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Zwiebel, -n",
@@ -50614,7 +50670,8 @@
         "exampleAr": "أقطع بصلة.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Apfelsinensaft",
@@ -50625,7 +50682,8 @@
         "exampleAr": "عصير البرتقال بارد.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Gurke, -n",
@@ -50636,7 +50694,8 @@
         "exampleAr": "الخيار أخضر.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Erdbeere, -n",
@@ -50647,7 +50706,8 @@
         "exampleAr": "الفراولة حلوة.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Apfelstrudel",
@@ -50658,7 +50718,8 @@
         "exampleAr": "أحب أكل فطيرة التفاح.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Zitrone, -n",
@@ -50669,7 +50730,8 @@
         "exampleAr": "الليمونة حامضة.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Obst",
@@ -50680,7 +50742,8 @@
         "exampleAr": "آكل الفاكهة كل يوم.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Gemüse",
@@ -50691,7 +50754,8 @@
         "exampleAr": "نأكل الخضار في الغداء.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Reis",
@@ -50702,7 +50766,8 @@
         "exampleAr": "أطبخ الأرز.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Brot, -e",
@@ -50713,7 +50778,8 @@
         "exampleAr": "الخبز طازج.",
         "tags": [
           "a0-obst-gemuese"
-        ]
+        ],
+        "pos": "Nomen"
       }
     ],
     "titleDe": "Obst und Gemüse",
@@ -50732,7 +50798,8 @@
         "exampleAr": "في الديمقراطية يستطيع المواطنون انتخاب ممثليهم.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Wahl, -en",
@@ -50743,7 +50810,8 @@
         "exampleAr": "تُجرى الانتخابات القادمة في الخريف.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Wähler / die Wählerin; Plural: die Wähler / die Wählerinnen",
@@ -50754,7 +50822,8 @@
         "exampleAr": "تدلي كل ناخبة وكل ناخب بصوت.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Partei, -en",
@@ -50765,7 +50834,8 @@
         "exampleAr": "عرض الحزب برنامجه.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Regierung, -en",
@@ -50776,40 +50846,50 @@
         "exampleAr": "تقدم الحكومة مشروع قانون إلى البوندستاغ.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
-        "de": "der Bundestag",
-        "ar": "البوندستاغ",
+        "de": "die Gesetzgebung",
+        "ar": "سنّ القوانين",
         "id": "b2-politik-demokratie-006",
         "level": "B2",
-        "exampleDe": "Der Bundestag berät über den Gesetzentwurf.",
-        "exampleAr": "يناقش البوندستاغ مشروع القانون.",
+        "exampleDe": "Die Gesetzgebung auf Bundesebene umfasst mehrere Schritte.",
+        "exampleAr": "تشمل عملية سنّ القوانين على المستوى الاتحادي عدة خطوات.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "die",
+        "farbe": "ROT"
       },
       {
-        "de": "der Bundesrat",
-        "ar": "البوندسرات",
+        "de": "die Ländervertretung",
+        "ar": "تمثيل الولايات",
         "id": "b2-politik-demokratie-007",
         "level": "B2",
-        "exampleDe": "Der Bundesrat vertritt die Länder auf Bundesebene.",
-        "exampleAr": "يمثل البوندسرات الولايات على المستوى الاتحادي.",
+        "exampleDe": "Die Ländervertretung im Bundesrat bringt Interessen der Länder in die Bundespolitik ein.",
+        "exampleAr": "ينقل تمثيل الولايات في البوندسرات مصالحها إلى السياسة الاتحادية.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "die",
+        "farbe": "ROT"
       },
       {
-        "de": "das Grundgesetz",
-        "ar": "القانون الأساسي",
+        "de": "der Verfassungsstaat",
+        "ar": "الدولة الدستورية",
         "id": "b2-politik-demokratie-008",
         "level": "B2",
-        "exampleDe": "Das Grundgesetz schützt die Grundrechte.",
-        "exampleAr": "يحمي القانون الأساسي الحقوق الأساسية.",
+        "exampleDe": "Im Verfassungsstaat sind staatliche Entscheidungen an die Verfassung gebunden.",
+        "exampleAr": "تلتزم قرارات الدولة في الدولة الدستورية بأحكام الدستور.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "der",
+        "farbe": "BLAU"
       },
       {
         "de": "der Bundeskanzler / die Bundeskanzlerin",
@@ -50820,7 +50900,8 @@
         "exampleAr": "تقود المستشارة الاتحادية الحكومة الاتحادية.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Bundespräsident / die Bundespräsidentin; Plural: die Bundespräsidenten / die Bundespräsidentinnen",
@@ -50831,7 +50912,8 @@
         "exampleAr": "يمثل الرئيس الاتحادي ألمانيا في الخارج.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Koalition, -en",
@@ -50842,7 +50924,8 @@
         "exampleAr": "بعد الانتخابات شكّل حزبان ائتلافاً.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Opposition",
@@ -50853,40 +50936,50 @@
         "exampleAr": "تراقب المعارضة عمل الحكومة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
-        "de": "das Wahlrecht",
-        "ar": "حق الانتخاب",
+        "de": "die Wahlbeteiligung",
+        "ar": "المشاركة في الانتخابات",
         "id": "b2-politik-demokratie-013",
         "level": "B2",
-        "exampleDe": "Das Wahlrecht ermöglicht die Teilnahme an einer Wahl.",
-        "exampleAr": "يتيح حق الانتخاب المشاركة في الانتخابات.",
+        "exampleDe": "Eine hohe Wahlbeteiligung kann die demokratische Legitimation stärken.",
+        "exampleAr": "يمكن للمشاركة الواسعة في الانتخابات أن تعزز الشرعية الديمقراطية.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "die",
+        "farbe": "ROT"
       },
       {
-        "de": "die Meinungsfreiheit",
-        "ar": "حرية الرأي",
+        "de": "die politische Teilhabe",
+        "ar": "المشاركة السياسية",
         "id": "b2-politik-demokratie-014",
         "level": "B2",
-        "exampleDe": "Die Meinungsfreiheit schützt auch unbequeme Ansichten.",
-        "exampleAr": "تحمي حرية الرأي حتى الآراء غير المريحة.",
+        "exampleDe": "Politische Teilhabe setzt verlässliche Informationen voraus.",
+        "exampleAr": "تفترض المشاركة السياسية توافر معلومات موثوقة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "die",
+        "farbe": "ROT"
       },
       {
-        "de": "die Pressefreiheit",
-        "ar": "حرية الصحافة",
+        "de": "die Medienaufsicht",
+        "ar": "الرقابة على وسائل الإعلام",
         "id": "b2-politik-demokratie-015",
         "level": "B2",
-        "exampleDe": "Die Pressefreiheit schützt unabhängige Berichterstattung.",
-        "exampleAr": "تحمي حرية الصحافة التغطية الإخبارية المستقلة.",
+        "exampleDe": "Die Medienaufsicht prüft, ob Anbieter gesetzliche Regeln einhalten.",
+        "exampleAr": "تتحقق جهة الرقابة الإعلامية من التزام الجهات المقدّمة بالقواعد القانونية.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "die",
+        "farbe": "ROT"
       },
       {
         "de": "das Gesetz, -e",
@@ -50897,7 +50990,8 @@
         "exampleAr": "يدخل القانون حيز التنفيذ في يناير.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Beschluss, -schlüsse",
@@ -50908,7 +51002,8 @@
         "exampleAr": "اعتُمد القرار بأغلبية كبيرة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Abstimmung, -en",
@@ -50919,7 +51014,8 @@
         "exampleAr": "برر النواب موقفهم قبل التصويت.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Mehrheit, -en",
@@ -50930,7 +51026,8 @@
         "exampleAr": "صوّتت الأغلبية لصالح الاقتراح.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Minderheit, -en",
@@ -50941,7 +51038,8 @@
         "exampleAr": "رفضت أقلية من النواب الاقتراح.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Mitglied, -er",
@@ -50952,7 +51050,8 @@
         "exampleAr": "يحق لكل عضو المشاركة في الجلسة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Abgeordnete / die Abgeordnete; Plural: die Abgeordneten",
@@ -50963,7 +51062,8 @@
         "exampleAr": "طرحت النائبة سؤالاً على الوزير.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Verfassung, -en",
@@ -50974,7 +51074,8 @@
         "exampleAr": "يحدد الدستور النظام الأساسي للدولة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Sozialversicherung, -en",
@@ -50985,7 +51086,8 @@
         "exampleAr": "يشمل التأمين الاجتماعي، من بين أمور أخرى، التأمين الصحي وتأمين التقاعد.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Sozialstaat, die Sozialstaaten",
@@ -50996,18 +51098,22 @@
         "exampleAr": "تدعم دولة الرعاية الأشخاص في ظروف معيشية صعبة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
-        "de": "die Globalisierung",
-        "ar": "العولمة",
+        "de": "der Welthandel",
+        "ar": "التجارة العالمية",
         "id": "b2-politik-demokratie-026",
         "level": "B2",
-        "exampleDe": "Die Globalisierung verbindet Märkte und Arbeitsplätze weltweit.",
-        "exampleAr": "تربط العولمة الأسواق وفرص العمل في أنحاء العالم.",
+        "exampleDe": "Der Welthandel reagiert empfindlich auf politische Konflikte.",
+        "exampleAr": "يتأثر نشاط التجارة العالمية سريعاً بالنزاعات السياسية.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "der",
+        "farbe": "BLAU"
       },
       {
         "de": "die EU (Europäische Union)",
@@ -51018,18 +51124,22 @@
         "exampleAr": "يتيح الاتحاد الأوروبي اتخاذ قرارات مشتركة في مجالات سياسية كثيرة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
-        "de": "die Nachhaltigkeit",
-        "ar": "الاستدامة",
+        "de": "die Zukunftsfähigkeit",
+        "ar": "القدرة على الاستمرار مستقبلاً",
         "id": "b2-politik-demokratie-028",
         "level": "B2",
-        "exampleDe": "Nachhaltigkeit berücksichtigt ökologische, soziale und wirtschaftliche Folgen.",
-        "exampleAr": "تراعي الاستدامة الآثار البيئية والاجتماعية والاقتصادية.",
+        "exampleDe": "Die Zukunftsfähigkeit einer Stadt hängt auch von bezahlbarem Wohnraum ab.",
+        "exampleAr": "تعتمد قدرة المدينة على الاستمرار مستقبلاً أيضاً على توافر سكن ميسور التكلفة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "die",
+        "farbe": "ROT"
       },
       {
         "de": "der Protest, -e",
@@ -51040,7 +51150,8 @@
         "exampleAr": "وُجّه الاحتجاج ضد الرسوم المخطط لها.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Demonstration, -en",
@@ -51051,7 +51162,8 @@
         "exampleAr": "شارك كثير من الناس في المظاهرة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Rente, -n",
@@ -51062,7 +51174,8 @@
         "exampleAr": "يتلقى كثير من الناس معاشاً بعد الحياة المهنية.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Steuersystem, -e",
@@ -51073,18 +51186,22 @@
         "exampleAr": "يموّل النظام الضريبي المهام العامة.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
-        "de": "die Inflation",
-        "ar": "التضخم",
+        "de": "die Preissteigerung",
+        "ar": "ارتفاع الأسعار",
         "id": "b2-politik-demokratie-033",
         "level": "B2",
-        "exampleDe": "Hohe Inflation verringert die Kaufkraft des Geldes.",
-        "exampleAr": "يقلل التضخم المرتفع القدرة الشرائية للنقود.",
+        "exampleDe": "Starke Preissteigerungen belasten Haushalte mit geringem Einkommen.",
+        "exampleAr": "تثقل الزيادات الكبيرة في الأسعار كاهل الأسر ذات الدخل المنخفض.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen",
+        "article": "die",
+        "farbe": "ROT"
       },
       {
         "de": "die Arbeitslosigkeit",
@@ -51095,7 +51212,8 @@
         "exampleAr": "ارتفعت البطالة قليلاً في الشتاء.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Mindestlohn, -löhne",
@@ -51106,7 +51224,8 @@
         "exampleAr": "يحدد الحد الأدنى للأجور أدنى أجر قانوني.",
         "tags": [
           "b2-politik-demokratie"
-        ]
+        ],
+        "pos": "Nomen"
       }
     ],
     "titleDe": "Politik und Demokratie",
@@ -51125,7 +51244,8 @@
         "exampleAr": "الكرسي أزرق.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Tisch, die Tische",
@@ -51136,7 +51256,8 @@
         "exampleAr": "الطاولة كبيرة.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Tafel, die Tafeln",
@@ -51147,7 +51268,8 @@
         "exampleAr": "السبورة خضراء.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Kreide",
@@ -51158,7 +51280,8 @@
         "exampleAr": "الطبشور أبيض.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Kugelschreiber, die Kugelschreiber",
@@ -51169,7 +51292,8 @@
         "exampleAr": "قلم الحبر أزرق.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Heft, die Hefte",
@@ -51180,7 +51304,8 @@
         "exampleAr": "دفتري جديد.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Buch, die Bücher",
@@ -51191,7 +51316,8 @@
         "exampleAr": "الكتاب ممتع.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Lehrer / die Lehrerin",
@@ -51202,7 +51328,8 @@
         "exampleAr": "تأتي المعلمة اليوم.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Schüler / die Schülerin",
@@ -51213,7 +51340,8 @@
         "exampleAr": "يتعلم التلميذ الألمانية.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Tür, die Türen",
@@ -51224,7 +51352,8 @@
         "exampleAr": "الباب مفتوح.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Fenster",
@@ -51235,7 +51364,8 @@
         "exampleAr": "النافذة كبيرة.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Lampe, die Lampen",
@@ -51246,7 +51376,8 @@
         "exampleAr": "المصباح مضيء.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "die Tasche, die Taschen",
@@ -51257,7 +51388,8 @@
         "exampleAr": "حقيبتي سوداء.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "der Bleistift, die Bleistifte",
@@ -51268,7 +51400,8 @@
         "exampleAr": "قلم الرصاص قصير.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "das Papier",
@@ -51279,7 +51412,8 @@
         "exampleAr": "الورق أبيض.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Nomen"
       },
       {
         "de": "öffnen",
@@ -51290,7 +51424,8 @@
         "exampleAr": "افتح الكتاب من فضلك.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Verb"
       },
       {
         "de": "schließen",
@@ -51301,7 +51436,8 @@
         "exampleAr": "أغلق الباب من فضلك.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Verb"
       },
       {
         "de": "schreiben",
@@ -51312,7 +51448,8 @@
         "exampleAr": "أكتب اسمي.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Verb"
       },
       {
         "de": "lesen",
@@ -51323,7 +51460,8 @@
         "exampleAr": "أقرأ كتاباً.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Verb"
       },
       {
         "de": "hören",
@@ -51334,7 +51472,8 @@
         "exampleAr": "أسمع المعلم.",
         "tags": [
           "a0-klassenzimmer"
-        ]
+        ],
+        "pos": "Verb"
       }
     ],
     "titleDe": "Im Klassenzimmer",

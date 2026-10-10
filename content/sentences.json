@@ -1895,8 +1895,8 @@
   {
     "id": "s-b2-51",
     "level": "B2",
-    "de": "Der Algorithmus bevorzugt Beiträge von Influencern, die Empörung auslösen, weshalb die Bildschirmzeit vieler Nutzer steigt.",
-    "ar": "الخوارزمية تفضّل منشورات المؤثّرين التي تثير الاستنكار، ولذلك يرتفع زمن الشاشة لدى كثير من المستخدمين.",
+    "de": "Der Algorithmus bevorzugt Beiträge von Influencern, die Empörung auslösen, weshalb die Bildschirmzeit vieler Nutzer steigt. Verfahren des maschinellen Lernens können große Datenmengen auswerten; eine sorgfältige Datenverarbeitung trägt dabei zum Schutz personenbezogener Informationen bei.",
+    "ar": "تفضّل الخوارزمية منشورات المؤثّرين التي تثير السخط، ولذلك يزداد وقت الشاشة لدى كثير من المستخدمين. ويمكن لأساليب التعلّم الآلي تحليل كميات كبيرة من البيانات؛ كما تسهم معالجة البيانات بعناية في حماية المعلومات الشخصية.",
     "tags": [
       "relativsatz",
       "weshalb"
@@ -1905,14 +1905,16 @@
     "waisen": [
       "der Algorithmus",
       "der Influencer",
-      "die Bildschirmzeit"
+      "die Bildschirmzeit",
+      "das maschinelle Lernen",
+      "die Datenverarbeitung"
     ]
   },
   {
     "id": "s-b2-52",
     "level": "B2",
-    "de": "Bevor die Hypothese publiziert wird, muss der Datensatz erneut ausgewertet werden.",
-    "ar": "قبل نشر الفرضية يجب إعادة تحليل مجموعة البيانات.",
+    "de": "Bevor die Hypothese publiziert wird, muss der Datensatz erneut ausgewertet werden. Im Forschungsvorhaben werden zudem die zugrunde liegende Prämisse und mögliche Folgewirkungen geprüft, bevor die Forschenden die Ergebnisse interpretieren. Die Ergebnisse können die zentrale These untermauern.",
+    "ar": "قبل نشر الفرضية، يجب إعادة تحليل مجموعة البيانات. وفي المشروع البحثي، تُفحَص أيضاً المسلّمة التي يستند إليها البحث والآثار اللاحقة المحتملة قبل أن يفسّر الباحثون النتائج. ويمكن للنتائج أن تدعم الأطروحة الأساسية بالأدلة.",
     "tags": [
       "passiv",
       "modalverb"
@@ -1922,7 +1924,12 @@
       "die Hypothese",
       "publizieren",
       "der Datensatz",
-      "auswerten"
+      "auswerten",
+      "das Forschungsvorhaben",
+      "die Prämisse",
+      "die Folgewirkung",
+      "interpretieren",
+      "untermauern"
     ]
   },
   {
@@ -3320,8 +3327,8 @@
   {
     "id": "s-b2-68",
     "level": "B2",
-    "de": "Man muss die Folgen der Automatisierung differenziert beurteilen, damit technische Kontrollen nicht zu einer ständigen Belästigung führen.",
-    "ar": "يجب على المرء تقييم عواقب الأتمتة بشكل متمايز، حتى لا تؤدي الرقابة التقنية إلى إزعاج مستمر.",
+    "de": "Man muss die Folgen der Automatisierung differenziert beurteilen, damit technische Kontrollen nicht zu einer ständigen Belästigung führen. Zugleich kann die Prozessautomatisierung wiederkehrende Arbeitsschritte vereinfachen.",
+    "ar": "ينبغي تقييم عواقب الأتمتة بتروٍّ حتى لا تتحول الضوابط التقنية إلى مصدر إزعاج دائم. وفي الوقت نفسه، يمكن لأتمتة العمليات أن تبسّط خطوات العمل المتكررة.",
     "tags": [
       "technik",
       "arbeit"
@@ -3330,7 +3337,8 @@
     "waisen": [
       "die Automatisierung",
       "beurteilen",
-      "die Belästigung"
+      "die Belästigung",
+      "die Prozessautomatisierung"
     ]
   },
   {
@@ -3480,8 +3488,8 @@
   {
     "id": "s-b2-78",
     "level": "B2",
-    "de": "Nach dem verheerenden Hochwasser einigten sich die Politiker auf verbindliche Treibhausgase und ein klares nationales Klimaziel.",
-    "ar": "بعد الفيضان المدمر اتفق السياسيون على خفض ملزم لغازات الاحتباس الحراري وهدف مناخي وطني واضح.",
+    "de": "Nach dem verheerenden Hochwasser einigten sich die Politiker auf verbindliche Ziele zur Senkung der Treibhausgasemissionen und ein klares nationales Klimaziel. Der Strukturwandel soll die Zukunftsfähigkeit der Region sichern und zugleich die Ressourcenschonung voranbringen.",
+    "ar": "بعد الفيضان المدمّر، اتفق السياسيون على أهداف ملزمة لخفض انبعاثات غازات الاحتباس الحراري، وعلى هدف مناخي وطني واضح. وينبغي للتحول الهيكلي أن يعزز قدرة المنطقة على الاستمرار مستقبلاً، وأن يدعم ترشيد الموارد في الوقت نفسه.",
     "tags": [
       "klima",
       "umwelt"
@@ -3490,7 +3498,10 @@
     "waisen": [
       "das Hochwasser",
       "das Treibhausgas",
-      "das Klimaziel"
+      "das Klimaziel",
+      "der Strukturwandel",
+      "die Zukunftsfähigkeit",
+      "die Ressourcenschonung"
     ]
   },
   {
@@ -3881,8 +3892,8 @@
   {
     "id": "s-b2-83",
     "level": "B2",
-    "de": "Seriöse Journalisten widerlegen reißerische Behauptungen und warnen vor tendenziösen Berichten in ungeprüften Online-Quellen.",
-    "ar": "يدحض الصحفيون الرصينون الادعاءات الفضائحية ويحذرون من التقارير المنحازة في المصادر غير المدققة.",
+    "de": "Seriöse Journalisten widerlegen reißerische Behauptungen und warnen vor tendenziösen Berichten in ungeprüften Online-Quellen. Auch Nachrichtensendungen und Talkshows sollten ihre Quellenangaben offenlegen, damit sich Aussagen überprüfen lassen; eine reißerische Titelseite eines Boulevardblatts ersetzt keine Medienkompetenz.",
+    "ar": "يفنّد الصحفيون المهنيون الادعاءات المثيرة ويحذّرون من التقارير المتحيزة في المصادر الإلكترونية غير المتحقق منها. وينبغي لنشرات الأخبار والحوارات التلفزيونية أيضاً الإفصاح عن مصادرها كي يتسنى التحقق من التصريحات؛ فالصفحة الأولى الصاخبة لصحيفة شعبية لا تغني عن الثقافة الإعلامية.",
     "tags": [
       "medien",
       "beruf"
@@ -3891,7 +3902,13 @@
     "waisen": [
       "widerlegen",
       "reißerisch",
-      "tendenziös"
+      "tendenziös",
+      "die Quellenangabe, -n",
+      "die Nachrichtensendung, -en",
+      "die Talkshow, -s",
+      "die Titelseite, -n",
+      "das Boulevardblatt, die Boulevardblätter",
+      "die Medienkompetenz"
     ]
   },
   {
@@ -3945,8 +3962,8 @@
   {
     "id": "s-b2-87",
     "level": "B2",
-    "de": "Auf dem turbulenten Elternabend debattierte die Klassenkonferenz über die gefährdete Versetzung mehrerer Schüler.",
-    "ar": "في لقاء الأولياء المسائي المليء بالنقاشات، تداولت مؤتمر الصف بشأن انتقال عدة تلاميذ المعرّض للخطر.",
+    "de": "Auf dem turbulenten Elternabend debattierte die Klassenkonferenz über die gefährdete Versetzung mehrerer Schülerinnen und Schüler, nachdem eine Klassenarbeit deutliche Lernlücken gezeigt hatte.",
+    "ar": "في اجتماع أولياء الأمور المليء بالنقاش، تداول مجلس الصف خطر عدم انتقال عدة تلاميذ إلى الصف التالي، بعدما كشف اختبار صفي عن فجوات واضحة في التعلم.",
     "tags": [
       "schule",
       "alltag"
@@ -3955,14 +3972,15 @@
     "waisen": [
       "der Elternabend",
       "die Klassenkonferenz",
-      "die Versetzung"
+      "die Versetzung",
+      "die Klassenarbeit, -en"
     ]
   },
   {
     "id": "s-b2-88",
     "level": "B2",
-    "de": "Schon lange vor der Wahl zwischen Leistungskurs und Grundkurs prägt die verbindliche Grundschulempfehlung den schulischen Werdegang.",
-    "ar": "قبل وقت طويل من الاختيار بين المادة المكثفة والمادة الأساسية، تحدد توصية المرحلة الابتدائية المسار الدراسي.",
+    "de": "Die Grundschulempfehlung beeinflusst den schulischen Werdegang, ist aber nicht in jedem Bundesland verbindlich. Am Ende der Schullaufbahn hängt der Schulabschluss vom jeweiligen Schulsystem ab; wer das Abitur anstrebt, kann Inhalte im Leistungskurs vertiefen, die im Grundkurs nur grundlegend behandelt werden.",
+    "ar": "تؤثر توصية المدرسة الابتدائية في المسار الدراسي، لكنها ليست ملزمة في كل ولاية اتحادية. وفي نهاية المسار يتحدد المؤهل المدرسي بحسب النظام التعليمي؛ ويمكن لمن يسعى إلى شهادة الأبيتور تعميق موضوعات في المساق المتقدم تُدرّس بصورة أساسية في المساق العادي.",
     "tags": [
       "schule",
       "bildung"
@@ -3971,7 +3989,10 @@
     "waisen": [
       "der Leistungskurs",
       "der Grundkurs",
-      "die Grundschulempfehlung"
+      "die Grundschulempfehlung",
+      "der Schulabschluss, -schlüsse",
+      "das Schulsystem, -e",
+      "das Abitur"
     ]
   },
   {
@@ -4041,8 +4062,8 @@
   {
     "id": "s-b2-93",
     "level": "B2",
-    "de": "In unserer föderalen Ordnung müssen sowohl der Bundestag als auch der Bundesrat einem neuen Gesetzentwurf zustimmen.",
-    "ar": "في نظامنا الاتحادي، يجب أن يوافق كل من مجلس النواب ومجلس الولايات على مشروع القانون الجديد.",
+    "de": "In unserer föderalen Ordnung verabschiedet der Bundestag Gesetze; bei Zustimmungsgesetzen muss auch der Bundesrat zustimmen, der als Ländervertretung an der Gesetzgebung auf Bundesebene mitwirkt. Nach einer Bundestagswahl bilden Parteien oft eine Koalition; der Bundeskanzler wird vom Bundestag gewählt, während der Bundespräsident von der Bundesversammlung gewählt wird. Im Parlament können Abgeordnete auch die Anliegen politischer Minderheiten einbringen.",
+    "ar": "في نظامنا الاتحادي، يسنّ البوندستاغ القوانين؛ وفي القوانين التي تتطلب موافقة البوندسرات، يجب أن يوافق المجلس أيضاً، إذ يمثّل الولايات على المستوى الاتحادي ويشارك في سنّ القوانين. وبعد انتخابات البوندستاغ، تشكّل الأحزاب ائتلافاً في كثير من الأحيان؛ وينتخب البوندستاغ المستشار الاتحادي، بينما تنتخب الجمعية الاتحادية الرئيس الاتحادي. ويمكن للنواب أيضاً عرض قضايا الأقليات السياسية في البرلمان.",
     "tags": [
       "politik",
       "staat"
@@ -4051,14 +4072,21 @@
     "waisen": [
       "föderal",
       "der Bundestag",
-      "der Bundesrat"
+      "der Bundesrat",
+      "die Ländervertretung",
+      "die Gesetzgebung",
+      "der Bundeskanzler / die Bundeskanzlerin",
+      "der Bundespräsident / die Bundespräsidentin; Plural: die Bundespräsidenten / die Bundespräsidentinnen",
+      "die Koalition, -en",
+      "die Minderheit, -en",
+      "der Abgeordnete / die Abgeordnete; Plural: die Abgeordneten"
     ]
   },
   {
     "id": "s-b2-94",
     "level": "B2",
-    "de": "Staatliche Hilfen wie das Bürgergeld, ein zusätzliches Wohngeld und das monatliche Kindergeld sichern das familiäre Existenzminimum.",
-    "ar": "تؤمّن المساعدات الحكومية مثل بدل المواطن وبدل السكن الإضافي وإعانة الطفل الشهرية الحد الأدنى للمعيشة الأسرية.",
+    "de": "Staatliche Hilfen wie das Bürgergeld, ein zusätzliches Wohngeld und das monatliche Kindergeld sichern das familiäre Existenzminimum. Die Sozialversicherung schützt vor bestimmten Lebensrisiken; bei Arbeitslosigkeit können Ansprüche aus der Arbeitslosenversicherung greifen, während der Mindestlohn und das Steuersystem das verfügbare Einkommen beeinflussen.",
+    "ar": "تسهم مساعدات الدولة، مثل إعانة المواطن وبدل السكن الإضافي وإعانة الطفل الشهرية، في ضمان الحد الأدنى للمعيشة للأسرة. ويحمي التأمين الاجتماعي من مخاطر حياتية معينة؛ فعند التعطل عن العمل قد تنطبق استحقاقات تأمين البطالة، بينما يؤثر الحد الأدنى للأجور والنظام الضريبي في الدخل المتاح.",
     "tags": [
       "soziales",
       "finanzen"
@@ -4067,7 +4095,11 @@
     "waisen": [
       "das Bürgergeld",
       "das Wohngeld",
-      "das Kindergeld"
+      "das Kindergeld",
+      "die Sozialversicherung, -en",
+      "die Arbeitslosigkeit",
+      "der Mindestlohn, -löhne",
+      "das Steuersystem, -e"
     ]
   },
   {
@@ -4603,8 +4635,8 @@
   {
     "id": "s-b2-106",
     "level": "B2",
-    "de": "Eine wehrhafte Demokratie schützt das allgemeine Wahlrecht, garantiert freie Pressefreiheit und verbietet jede gesellschaftliche Diskriminierung.",
-    "ar": "تحمي الديمقراطية القوية حق الاقتراع العام وتضمن حرية الصحافة وتحظر كل تمييز مجتمعي.",
+    "de": "Eine wehrhafte Demokratie schützt das Wahlrecht und die Pressefreiheit und verbietet gesellschaftliche Diskriminierung. Im Verfassungsstaat achtet eine unabhängige Medienaufsicht auf die Einhaltung einschlägiger Regeln; sachliche Berichterstattung kann die Wahlbeteiligung fördern.",
+    "ar": "تحمي الديمقراطية الحصينة حق الانتخاب وحرية الصحافة، وتحظر التمييز المجتمعي. وفي الدولة الدستورية، تراقب جهة مستقلة للإشراف على الإعلام الالتزام بالقواعد ذات الصلة؛ ويمكن للتغطية الصحفية الموضوعية أن تعزز المشاركة في الانتخابات.",
     "tags": [
       "politik",
       "gesellschaft"
@@ -4613,7 +4645,10 @@
     "waisen": [
       "die Pressefreiheit",
       "das Wahlrecht",
-      "die Diskriminierung"
+      "die Diskriminierung",
+      "der Verfassungsstaat",
+      "die Medienaufsicht",
+      "die Wahlbeteiligung"
     ]
   },
   {
@@ -6877,8 +6912,8 @@
   {
     "id": "s-b2-155",
     "level": "B2",
-    "de": "Im modernen Online-Handel entlastet flexible Arbeitszeit die Work-Life-Balance der Mitarbeiter, ohne dass Händler ihre Gutscheine entwerten.",
-    "ar": "في التجارة الإلكترونية الحديثة تخفف ساعات العمل المرنة التوازن بين العمل والحياة للموظفين، دون أن يقوم التجار بإلغاء صلاحية قسائمهم.",
+    "de": "Durch die Globalisierung ist der moderne Online-Handel eng mit dem Welthandel verknüpft; Preissteigerungen auf internationalen Märkten erhöhen die Einkaufskosten. Flexible Arbeitszeiten können zugleich die Work-Life-Balance der Beschäftigten verbessern, ohne dass Händler Gutscheine entwerten.",
+    "ar": "في ظل العولمة، ترتبط التجارة الإلكترونية الحديثة ارتباطاً وثيقاً بالتجارة العالمية؛ وتؤدي الزيادات السعرية في الأسواق الدولية إلى رفع تكاليف الشراء. ويمكن لساعات العمل المرنة أيضاً أن تحسّن التوازن بين العمل والحياة لدى العاملين، دون أن يُبطل التجار صلاحية قسائمهم.",
     "tags": [
       "digital",
       "arbeit"
@@ -6887,7 +6922,10 @@
     "waisen": [
       "der Online-Handel",
       "die Work-Life-Balance",
-      "entwerten"
+      "entwerten",
+      "die Preissteigerung",
+      "der Welthandel",
+      "die Globalisierung"
     ]
   },
   {

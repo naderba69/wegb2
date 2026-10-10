@@ -8912,5 +8912,301 @@
   "vf-kultur-002": [
     "kräftig gebaut",
     "kräftig wirken"
+  ],
+  "v1443": [
+    "den Strukturwandel gestalten",
+    "der Strukturwandel der Wirtschaft",
+    "einen tiefgreifenden Strukturwandel auslösen"
+  ],
+  "v1431": [
+    "ein Forschungsvorhaben durchführen",
+    "ein Forschungsvorhaben beantragen",
+    "ein interdisziplinäres Forschungsvorhaben"
+  ],
+  "v1441": [
+    "eine unbeabsichtigte Folgewirkung",
+    "Folgewirkungen berücksichtigen",
+    "langfristige Folgewirkungen abschätzen"
+  ],
+  "b2-politik-demokratie-014": [
+    "politische Teilhabe ermöglichen",
+    "politische Teilhabe fördern",
+    "politische Teilhabe stärken"
+  ],
+  "v1448": [
+    "eine sichere Datenverarbeitung gewährleisten",
+    "Datenverarbeitung im Auftrag",
+    "personenbezogene Datenverarbeitung"
+  ],
+  "v1446": [
+    "maschinelles Lernen anwenden",
+    "Methoden des maschinellen Lernens",
+    "Algorithmen für maschinelles Lernen"
+  ],
+  "v1449": [
+    "die Prozessautomatisierung einführen",
+    "Prozessautomatisierung in der Produktion",
+    "Prozessautomatisierung und Qualitätssicherung"
+  ],
+  "v1435": [
+    "eine Prämisse kritisch hinterfragen",
+    "von derselben Prämisse ausgehen",
+    "die zentrale Prämisse der Studie"
+  ],
+  "v1439": [
+    "Daten sorgfältig interpretieren",
+    "Ergebnisse vorsichtig interpretieren",
+    "eine Aussage anders interpretieren"
+  ],
+  "v1451": [
+    "Ressourcenschonung im Alltag fördern",
+    "Ressourcenschonung und Energieeffizienz",
+    "Maßnahmen zur Ressourcenschonung ergreifen"
+  ],
+  "b2-politik-demokratie-028": [
+    "die Zukunftsfähigkeit sichern",
+    "Zukunftsfähigkeit der Region stärken",
+    "langfristige Zukunftsfähigkeit gewährleisten"
+  ],
+  "v1452": [
+    "emissionsarme Antriebe entwickeln",
+    "emissionsarm unterwegs sein",
+    "emissionsarme Busse einsetzen"
+  ],
+  "b2-politik-demokratie-033": [
+    "starke Preissteigerungen abfedern",
+    "unerwartete Preissteigerungen erklären",
+    "mit einer Preissteigerung rechnen"
+  ],
+  "b2-politik-demokratie-008": [
+    "den Verfassungsstaat stärken",
+    "im demokratischen Verfassungsstaat",
+    "Prinzipien des Verfassungsstaats achten"
+  ],
+  "b2-politik-demokratie-015": [
+    "unabhängige Medienaufsicht stärken",
+    "Aufgaben der Medienaufsicht",
+    "unter staatlicher Medienaufsicht"
+  ],
+  "b2-politik-demokratie-013": [
+    "die Wahlbeteiligung steigern",
+    "hohe Wahlbeteiligung fördern",
+    "bei niedriger Wahlbeteiligung"
+  ],
+  "b2-politik-demokratie-006": [
+    "die Gesetzgebung reformieren",
+    "an der Gesetzgebung mitwirken",
+    "Gesetzgebung auf Bundesebene"
+  ],
+  "b2-politik-demokratie-007": [
+    "die Ländervertretung im Bundesrat",
+    "eine starke Ländervertretung",
+    "Interessen in der Ländervertretung vertreten"
+  ],
+  "v1438": [
+    "eine These mit Belegen untermauern",
+    "eine Behauptung wissenschaftlich untermauern",
+    "Argumente durch Daten untermauern"
+  ],
+  "b2-politik-demokratie-026": [
+    "den Welthandel liberalisieren",
+    "der Welthandel wächst",
+    "den Welthandel nachhaltig gestalten"
+  ],
+  "b2-medien-schule-031": [
+    "einen Leitartikel verfassen",
+    "der Leitartikel der Zeitung"
+  ],
+  "b2-medien-schule-032": [
+    "umfassende Berichterstattung über die Wahl",
+    "die Berichterstattung kritisch bewerten"
+  ],
+  "b2-medien-schule-033": [
+    "eine vollständige Quellenangabe machen",
+    "Quellenangaben sorgfältig prüfen"
+  ],
+  "b2-medien-schule-034": [
+    "eine Nachrichtensendung ausstrahlen",
+    "die Nachrichtensendung beginnt pünktlich"
+  ],
+  "b2-medien-schule-035": [
+    "eine politische Talkshow moderieren",
+    "in einer Talkshow Gäste befragen"
+  ],
+  "b2-medien-schule-036": [
+    "auf der Titelseite erscheinen",
+    "die Titelseite der Zeitung"
+  ],
+  "b2-medien-schule-038": [
+    "Medienkompetenz im Unterricht fördern",
+    "Medienkompetenz kritisch vermitteln"
+  ],
+  "b2-medien-schule-039": [
+    "einen Schulabschluss erwerben",
+    "einen anerkannten Schulabschluss erhalten"
+  ],
+  "b2-medien-schule-040": [
+    "das Abitur bestehen",
+    "sich auf das Abitur vorbereiten"
+  ],
+  "b2-medien-schule-041": [
+    "eine Klassenarbeit schreiben",
+    "die Klassenarbeit sorgfältig korrigieren"
+  ],
+  "b2-medien-schule-042": [
+    "eine schlechte Note erklären",
+    "die Note im Zeugnis"
+  ],
+  "b2-medien-schule-043": [
+    "ein gutes Zeugnis erhalten",
+    "das Zeugnis vorlegen"
+  ],
+  "b2-medien-schule-044": [
+    "einen Lehrplan überarbeiten",
+    "den Lehrplan regelmäßig anpassen"
+  ],
+  "b2-medien-schule-045": [
+    "das Schulsystem reformieren",
+    "ein durchlässiges Schulsystem schaffen"
+  ],
+  "v1432": [
+    "eine empirische Studie durchführen",
+    "die Studie veröffentlichen"
+  ],
+  "v1433": [
+    "eine Untersuchung anordnen",
+    "eine Untersuchung abschließen"
+  ],
+  "v1434": [
+    "eine These überprüfen",
+    "eine These formulieren"
+  ],
+  "v1436": [
+    "ein Experiment durchführen",
+    "ein kontrolliertes Experiment wiederholen"
+  ],
+  "v1437": [
+    "einen Zusammenhang beweisen",
+    "eine Vermutung wissenschaftlich beweisen"
+  ],
+  "v1440": [
+    "ein Ergebnis erzielen",
+    "die Ergebnisse sorgfältig auswerten"
+  ],
+  "v1442": [
+    "eine unmittelbare Folge haben",
+    "Folgen einer Entscheidung abschätzen"
+  ],
+  "v1444": [
+    "eine Entwicklung fördern",
+    "die technische Entwicklung beobachten"
+  ],
+  "v1445": [
+    "in naher Zukunft",
+    "die Zukunft nachhaltig gestalten"
+  ],
+  "v1447": [
+    "Daten systematisch erheben",
+    "Daten aus mehreren Quellen vergleichen"
+  ],
+  "v1450": [
+    "die Globalisierung vorantreiben",
+    "Folgen der Globalisierung abmildern"
+  ],
+  "v1453": [
+    "den Klimawandel begrenzen",
+    "Folgen des Klimawandels abmildern"
+  ],
+  "v1454": [
+    "eine Krise überwinden",
+    "aus der Krise gestärkt hervorgehen"
+  ],
+  "v1455": [
+    "eine tragfähige Lösung finden",
+    "eine Lösung für das Problem entwickeln"
+  ],
+  "b2-politik-demokratie-001": [
+    "die Demokratie festigen",
+    "demokratische Grundrechte schützen"
+  ],
+  "b2-politik-demokratie-002": [
+    "eine Wahl gewinnen",
+    "bei der Wahl antreten"
+  ],
+  "b2-politik-demokratie-004": [
+    "eine Partei gründen",
+    "einer Partei angehören"
+  ],
+  "b2-politik-demokratie-005": [
+    "eine Regierung bilden",
+    "die Regierung kontrollieren"
+  ],
+  "b2-politik-demokratie-011": [
+    "eine Koalition bilden",
+    "in eine Koalition eintreten"
+  ],
+  "b2-politik-demokratie-012": [
+    "die Opposition anführen",
+    "der Opposition angehören"
+  ],
+  "b2-politik-demokratie-016": [
+    "ein neues Gesetz beschließen",
+    "ein Gesetz in Kraft setzen"
+  ],
+  "b2-politik-demokratie-017": [
+    "einen Beschluss fassen",
+    "einen Beschluss gemeinsam treffen"
+  ],
+  "b2-politik-demokratie-018": [
+    "eine Abstimmung organisieren",
+    "bei der Abstimmung dafür sein"
+  ],
+  "b2-politik-demokratie-019": [
+    "mit großer Mehrheit beschließen",
+    "eine Mehrheit im Bundestag sichern"
+  ],
+  "b2-politik-demokratie-020": [
+    "Minderheitenrechte stärken",
+    "die Minderheit im Parlament vertreten"
+  ],
+  "b2-politik-demokratie-021": [
+    "Mitglied einer Partei werden",
+    "als Mitglied abstimmen"
+  ],
+  "b2-politik-demokratie-023": [
+    "die Verfassung ergänzen",
+    "in der Verfassung verankern"
+  ],
+  "b2-politik-demokratie-024": [
+    "in die Sozialversicherung einzahlen",
+    "Beiträge zur Sozialversicherung leisten"
+  ],
+  "b2-politik-demokratie-027": [
+    "Mitglied der Europäischen Union werden",
+    "Beschlüsse der Europäischen Union umsetzen"
+  ],
+  "b2-politik-demokratie-029": [
+    "Protest gegen die Reform",
+    "einen Protest anmelden"
+  ],
+  "b2-politik-demokratie-030": [
+    "eine Demonstration organisieren",
+    "eine öffentliche Demonstration planen"
+  ],
+  "b2-politik-demokratie-031": [
+    "eine Rente beziehen",
+    "im Ruhestand eine Rente erhalten"
+  ],
+  "b2-politik-demokratie-032": [
+    "das Steuersystem reformieren",
+    "im deutschen Steuersystem"
+  ],
+  "b2-politik-demokratie-034": [
+    "die Arbeitslosigkeit senken",
+    "von Arbeitslosigkeit betroffen sein"
+  ],
+  "b2-politik-demokratie-035": [
+    "den Mindestlohn anheben",
+    "über den Mindestlohn verhandeln"
   ]
 }

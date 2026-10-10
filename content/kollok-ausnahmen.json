@@ -166,5 +166,29 @@
   "vo-b1v-032": {
     "de": "jenseits von",
     "grund": "Präposition (jenseits von)"
+  },
+  "b2-medien-schule-037": {
+    "de": "das Boulevardblatt, die Boulevardblätter",
+    "grund": "Die Karte enthält Singular und unregelmäßigen Plural als Paradigma; keine einzelne Kollokation deckt beide Formen ab."
+  },
+  "b2-politik-demokratie-003": {
+    "de": "der Wähler / die Wählerin; Plural: die Wähler / die Wählerinnen",
+    "grund": "Die Karte bündelt männliche und weibliche Formen samt Plural; sie ist ein Formenparadigma, keine einzelne Kollokation."
+  },
+  "b2-politik-demokratie-009": {
+    "de": "der Bundeskanzler / die Bundeskanzlerin",
+    "grund": "Die Karte führt beide geschlechtsspezifischen Amtsbezeichnungen; eine künstliche Verbindung mit beiden Varianten wäre unidiomatisch."
+  },
+  "b2-politik-demokratie-010": {
+    "de": "der Bundespräsident / die Bundespräsidentin; Plural: die Bundespräsidenten / die Bundespräsidentinnen",
+    "grund": "Die Karte führt beide Geschlechter und beide Pluralformen; sie ist ein vollständiges Formenparadigma."
+  },
+  "b2-politik-demokratie-022": {
+    "de": "der Abgeordnete / die Abgeordnete; Plural: die Abgeordneten",
+    "grund": "Die Karte bündelt männliche und weibliche Form sowie den gemeinsamen Plural; sie ist ein Formenparadigma."
+  },
+  "b2-politik-demokratie-025": {
+    "de": "der Sozialstaat, die Sozialstaaten",
+    "grund": "Die Karte nennt Singular und Plural des Staatsmodells; die Formen werden als Paradigma statt als Kollokation gelernt."
   }
 }
