@@ -3936,24 +3936,24 @@
     "summaryAr": "بعد أن تعلّمت حروف جر Dativ في A1، يأتي دور الأفعال التي تأخذ Dativ دائماً: helfen (يساعد)، danken (يشكر)، gefallen (يعجب)، gehören (يعود/يملك)، antworten (يجيب)، passen (يناسب)، fehlen (يغيب/ينقص)، schmecken (يستلذ/يؤكل جيداً), glauben (يصدّق), wehtun (يؤلم). تذكير: هذه الأفعال لا تأخذ Akkusativ لشخص المخاطَب.",
     "rules": [
       {
-        "de": "helfen + Dativ: Ich helfe dem Kind. (لا: ich helfe das Kind)",
-        "ar": "helfen تأخذ Dativ لا Akkusativ."
+        "de": "helfen + Dativ: Ich helfe dem Kind.",
+        "ar": "helfen يأخذ Dativ لا Akkusativ؛ نقول Ich helfe dem Kind، لا Ich helfe das Kind."
       },
       {
         "de": "danken + Dativ: Ich danke dir/Ihnen.",
         "ar": "danken تأخذ Dativ."
       },
       {
-        "de": "gefallen + Dativ: Das Buch gefällt mir. (لا: mich)",
-        "ar": "gefallen يعجب، والشخص المُعجَب به في Dativ."
+        "de": "gefallen + Dativ: Das Buch gefällt mir.",
+        "ar": "gefallen بمعنى «يعجب» يأخذ Dativ للشخص: Das Buch gefällt mir، لا mich."
       },
       {
         "de": "gehören + Dativ: Das Auto gehört meinem Vater.",
         "ar": "gehören يملك/يعود لـ، مع Dativ."
       },
       {
-        "de": "fehlen + Dativ: Du fehlst mir. (أفتقدك = أنت غائبٌ عنّي)",
-        "ar": "fehlen = يَغيب/ينقص. جملة «افتقدك» تُقال Du fehlst mir."
+        "de": "fehlen + Dativ: Du fehlst mir.",
+        "ar": "fehlen يعني «يغيب/ينقص»؛ Du fehlst mir تعني حرفياً أنك غائب عني، أي أفتقدك."
       },
       {
         "de": "schmecken + Dativ: Das Essen schmeckt mir gut.",
@@ -8246,6 +8246,19 @@
         ],
         "explanationDe": "Ich kann gut Deutsch sprechen.",
         "explanationAr": "المصدر في آخر الجملة مع الناقص."
+      },
+      {
+        "id": "a1-modalverben-r143-e05",
+        "type": "mc",
+        "promptDe": "Er ___ heute länger bleiben. (müssen)",
+        "promptAr": "أكمل تصريف müssen مع er.",
+        "options": [
+          "muss",
+          "müssen",
+          "musst"
+        ],
+        "answer": "muss",
+        "explanationAr": "مع er نستخدم muss؛ ويبقى الفعل الثاني في المصدر في نهاية الجملة: bleiben."
       }
     ],
     "pitfalls": [
@@ -8417,6 +8430,19 @@
         "answer": "dem",
         "explanationAr": "المذكر dem في Dativ.",
         "promptAr": "اختر الكلمة الصحيحة لإكمال الجملة."
+      },
+      {
+        "id": "a1-dativ-r143-e05",
+        "type": "mc",
+        "promptDe": "Wir sprechen mit ___ Lehrer. (der Lehrer)",
+        "promptAr": "أكمل أداة التعريف بعد mit.",
+        "options": [
+          "dem",
+          "den",
+          "der"
+        ],
+        "answer": "dem",
+        "explanationAr": "mit تأخذ Dativ؛ der Lehrer يصبح dem Lehrer."
       }
     ],
     "pitfalls": [
@@ -8580,6 +8606,16 @@
         ],
         "explanationDe": "ins Kino",
         "explanationAr": "الوجهة (Wohin?) تأخذ Akkusativ: in das Kino = ins Kino."
+      },
+      {
+        "id": "a1-wechsel-r143-e05",
+        "type": "fill",
+        "promptDe": "Die Zeitung liegt auf ___ Tisch. (Wo?)",
+        "promptAr": "أكمل بأداة التعريف المناسبة؛ السؤال عن المكان Wo؟",
+        "answer": [
+          "dem"
+        ],
+        "explanationAr": "المكان الثابت يجيب عن Wo؟ ويأخذ Dativ: auf dem Tisch."
       }
     ],
     "pitfalls": [
@@ -9487,6 +9523,16 @@
         ],
         "promptAr": "صِغِ الجملة باستخدام Partizip I بدلاً من جملة الصلة.",
         "points": 2
+      },
+      {
+        "id": "b1-partizip1-r143-e05",
+        "type": "fill",
+        "promptDe": "Die ___ Kinder spielen im Garten. (lachen)",
+        "promptAr": "حوّل lachen إلى Partizip I وصَرِّفه قبل Kinder.",
+        "answer": [
+          "lachenden"
+        ],
+        "explanationAr": "Partizip I: lachen + d = lachend؛ وبعد أداة الجمع die تأخذ الصفة النهاية -en: die lachenden Kinder."
       }
     ],
     "pitfalls": [
@@ -10447,6 +10493,20 @@
           "هجّئ اسمك!"
         ],
         "explanationAr": "«Buchstabiere» (فعل أمر من buchstabieren) = هجِّ/هجِّئ."
+      },
+      {
+        "id": "a0-buchstaben-r143-e05",
+        "type": "mc",
+        "promptDe": "Welcher Buchstabe kommt im Alphabet nach O?",
+        "promptAr": "أي حرف يأتي بعد O في الأبجدية؟",
+        "options": [
+          "N (enn)",
+          "P (peh)",
+          "Q (kuh)",
+          "Z (tset)"
+        ],
+        "answer": "P (peh)",
+        "explanationAr": "في ترتيب الأبجدية يأتي P (peh) مباشرة بعد O."
       }
     ],
     "pitfalls": [
@@ -10594,6 +10654,20 @@
           "Wie spät ist es"
         ],
         "explanationAr": "الصيغتان القياسيتان: Wie spät ist es؟ / Wie viel Uhr ist es؟"
+      },
+      {
+        "id": "a0-zahlen-r143-e05",
+        "type": "mc",
+        "promptDe": "Welche Zahl kommt nach sechs?",
+        "promptAr": "أي عدد يأتي بعد ستة؟",
+        "options": [
+          "fünf",
+          "sieben",
+          "acht",
+          "zehn"
+        ],
+        "answer": "sieben",
+        "explanationAr": "بعد sechs (ستة) يأتي sieben (سبعة)."
       }
     ],
     "pitfalls": [
@@ -10747,6 +10821,20 @@
         "answer": "Könnten Sie mir bitte den Pass geben?",
         "explanationAr": "الصيغ المباشرة للأمر فظّة مع الغرباء. الصيغة المهذّبة مع Könnten هي القياسية.",
         "promptAr": "أيُّ صيغةٍ أكثر أدباً؟"
+      },
+      {
+        "id": "a2-konj2-hoflich-r143-e05",
+        "type": "mc",
+        "promptDe": "Sie bestellen höflich einen Tee. Welche Form passt?",
+        "promptAr": "تطلب الشاي بأدب؛ أي صيغة مناسبة؟",
+        "options": [
+          "Ich will einen Tee.",
+          "Ich hätte gern einen Tee.",
+          "Ich hatte gern einen Tee.",
+          "Ich habe einen Tee."
+        ],
+        "answer": "Ich hätte gern einen Tee.",
+        "explanationAr": "للطلَب المهذّب نستخدم hätte gern، لا الماضي hatte ولا الطلب المباشر Ich will."
       }
     ],
     "pitfalls": [
@@ -13319,8 +13407,8 @@
     "summaryAr": "الدرس الأهم في الألمانية: كل اسم له جنس دائماً يُحفظ مع الكلمة من أول مرة (der/die/das)، لا تُحفظ الاسم وحده. الجمع يُحفظ مع الأداة die جمعاً. أهم شيفرة: الأسماء المنتهية بـ -er/-en/-ig/-ling غالباً مذكر؛ -in/-ung/-heit/-keit/-schaft/-ei/-tion مؤنثة؛ -chen/-lein/-um/-ium محايدة.",
     "rules": [
       {
-        "de": "der = المذكر · die = المؤنث · das = المحايد · die (pl) = الجمع",
-        "ar": "أدوات التعريف: der للمذكر، die للمؤنث، das للمحايد، die للجميع في الجمع."
+        "de": "der = Maskulinum · die = Femininum · das = Neutrum · Plural: die",
+        "ar": "أدوات التعريف: der للمذكر، die للمؤنث، das للمحايد؛ وفي الجمع نستخدم die."
       },
       {
         "de": "der Mann — die Männer · die Frau — die Frauen · das Kind — die Kinder",
@@ -13489,7 +13577,16 @@
         "explanationAr": "جمع das Kind هو die Kinder."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Der Frau kommt aus Tunis.“ ✗ → „Die Frau kommt aus Tunis.“ ✓",
+        "ar": "Frau مؤنث: نقول die Frau. احفظ الاسم مع أداة جنسه؛ لا تستنتج الأداة من الترجمة وحدها."
+      },
+      {
+        "de": "„Das Kinder sind hier.“ ✗ → „Die Kinder sind hier.“ ✓",
+        "ar": "في الجمع نستخدم أداة التعريف die، مهما كانت أداة الاسم في المفرد: das Kind، die Kinder."
+      }
+    ],
     "eselsbrueckeAr": "شفرة أولية سريعة: الـ«der» كلمة مذكر والـ«die» مؤنث والـ«das» محايد — اعتبر الأداة جزءاً من الكلمة (derMann, dieFrau, dasKind).",
     "pronTippAr": ""
   },
@@ -13552,16 +13649,16 @@
     "summaryAr": "في الألمانية ثلاث صيغ للمخاطب: du (أنتَ/أنتِ غير الرسمي للأصدقاء والأطفال)، ihr (أنتم غير الرسمي لمجموعة أصدقاء)، Sie (أنتم الرسمي — دائماً بحرف كبير! — للغرباء والكبار وزملاء العمل والرؤساء والطبيب والموظفين). متى Sie؟ أول لقاء، أكبر سناً، لقب رسمي (Herr/Frau/Dr.). متى du؟ الأصدقاء، الطلبة، الأطفال، أفراد الأسرة.",
     "rules": [
       {
-        "de": "du = أنتَ/أنتِ (صديق، طفل، قريب)",
-        "ar": "صيغة غير رسمية للمفرد: تُستعمل مع الأصدقاء، الأطفال، أفراد الأسرة، الطلبة."
+        "de": "du = informell, Singular (Freunde, Kinder, Familie)",
+        "ar": "du للمفرد غير الرسمي: مع الأصدقاء والأطفال وأفراد الأسرة."
       },
       {
-        "de": "ihr = أنتم (مجموعة أصدقاء/أطفال)",
-        "ar": "صيغة غير رسمية للجمع: لمجموعة من الأصدقاء أو الأطفال."
+        "de": "ihr = informell, Plural (mehrere angesprochene Personen)",
+        "ar": "ihr لجمع المخاطَبين في الأسلوب غير الرسمي، مثل مجموعة من الأصدقاء."
       },
       {
-        "de": "Sie = أنتَ/أنتِ/أنتم (رسمي) — IMMER großgeschrieben!",
-        "ar": "صيغة الرسمي للمفرد والجمع معاً: للغرباء، الكبار، زملاء العمل، الموظفين، الطبيب. تكتب دائماً بحرف كبير S."
+        "de": "Sie = formelle Anrede im Singular und Plural; immer großschreiben",
+        "ar": "Sie للمخاطبة الرسمية للمفرد والجمع، وتُكتب دائماً بحرف كبير."
       },
       {
         "de": "Faustregel: Bei ersten Begegnungen immer Sie — der Partner sagt schnell \"Du kannst du sagen\".",
@@ -13672,7 +13769,16 @@
         "explanationAr": "مع الصديق نستخدم Dativ: Wie geht es dir? أما الرسمي فهو Ihnen."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Wie geht es Sie?“ ✗ → „Wie geht es Ihnen?“ ✓",
+        "ar": "مع Sie الرسمية نستخدم صيغة Dativ Ihnen بعد es geht …؛ لا نقول Sie هنا."
+      },
+      {
+        "de": "„Guten Tag, Frau Meier. Wie geht es dir?“ ✗ → „Guten Tag, Frau Meier. Wie geht es Ihnen?“ ✓",
+        "ar": "لا تخلط التحية الرسمية Frau Meier مع ضمير المخاطبة غير الرسمي dir؛ استعمل Ihnen."
+      }
+    ],
     "eselsbrueckeAr": "تخيل «Sie» مثل «سيادتك» — تبدأ بحرف S كبير دائماً لأن الشخص يستحق احتراماً زائداً. مع الأصدقاء الصغار: du (أنتَ صغير = du = كلمتان قصيرتان).",
     "pronTippAr": ""
   },
@@ -13829,7 +13935,16 @@
         "explanationAr": "في Beet تُنطق ee طويلة، وفي Bett الحركة قصيرة."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Im Wort „Stadt“ ist das a lang.“ ✗ → „Im Wort „Stadt“ ist das a kurz.“ ✓",
+        "ar": "في زوج الحد الأدنى Stadt–Staat يتغير طول الحركة؛ في Stadt قصيرة وفي Staat طويلة."
+      },
+      {
+        "de": "„Im Wort „Bett“ ist das e lang.“ ✗ → „Im Wort „Bett“ ist das e kurz.“ ✓",
+        "ar": "قارن Bett ذات e القصيرة بـBeet ذات ee الطويلة؛ الكتابة والصوت يساعدان على التمييز."
+      }
+    ],
     "eselsbrueckeAr": "تخيّل الحرف h علامة مطّ (طويل)، تماماً كما في العربية: دام vs دامـه.",
     "pronTippAr": ""
   },
@@ -13976,7 +14091,16 @@
         "explanationAr": "في الجمع تتحول o إلى ö: der Sohn, die Söhne."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Das ü klingt wie ein u.“ ✗ → „Das ü klingt ähnlich wie ein i, aber mit gerundeten Lippen.“ ✓",
+        "ar": "لـü اللسان قريب من وضع i مع تدوير الشفتين؛ لا تستبدله بصوت u."
+      },
+      {
+        "de": "„„schon“ bedeutet „schön“.“ ✗ → „„schon“ bedeutet „bereits“.“ ✓",
+        "ar": "schon تعني «بالفعل»، أما schön فتعني «جميل»؛ الأوملاوت يغيّر الكلمة والمعنى."
+      }
+    ],
     "eselsbrueckeAr": "طريقة مجرّبة: انطق e ثم دوّر شفتيك — تسمع ö. انطق i ثم دوّر شفتيك — تسمع ü.",
     "pronTippAr": ""
   },
@@ -14146,7 +14270,16 @@
         "explanationAr": "في Buch يأتي ch بعد u، فيُنطق ach-Laut الخشن."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„In „Buch“ hört man den weichen ich-Laut.“ ✗ → „In „Buch“ hört man den harten ach-Laut.“ ✓",
+        "ar": "بعد u في Buch يأتي عادة الصوت الخلفي ach-Laut؛ أما ich ففيه الصوت الأمامي الناعم."
+      },
+      {
+        "de": "„In „ich“ hört man den harten ach-Laut.“ ✗ → „In „ich“ hört man den weichen ich-Laut.“ ✓",
+        "ar": "بعد i في ich يأتي ich-Laut الناعم، لا ach-Laut الخلفي."
+      }
+    ],
     "eselsbrueckeAr": "تخيّل ch مع الحروف الأمامية (i/e) = هواء يمر عبر قناة ضيقة (ناعم)، والحروف الخلفية (a/o/u) = هواء يمر من أقصى الحلق كالخاء.",
     "pronTippAr": ""
   },
@@ -14260,7 +14393,16 @@
         "explanationAr": "Regen تبدأ بحرف r، أما sehen فتبدأ بصوت z/ز."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Im Standarddeutschen wird das r am Ende von „Vater“ immer gerollt.“ ✗ → „Im Standarddeutschen wird das -er am Wortende häufig vokalisiert.“ ✓",
+        "ar": "في النطق المعياري يُختزل -er غير المشدد في آخر Vater غالباً إلى [ɐ]؛ لكن توجد اختلافات إقليمية في نطق r."
+      },
+      {
+        "de": "„Ein gerolltes Zungen-r ist im Deutschen immer falsch.“ ✗ → „Regionale r-Varianten sind möglich; im Standard ist das vokalisierte -er häufig.“ ✓",
+        "ar": "لا تفرض طريقة نطق واحدة على جميع اللهجات؛ تعلّم النطق المعياري مع معرفة وجود تنوع إقليمي."
+      }
+    ],
     "eselsbrueckeAr": "بدل أن تقرأ Vater «فاتِر»، قلها «فاتَ» وكأن آخرها a خفيفة.",
     "pronTippAr": ""
   },
@@ -14425,7 +14567,16 @@
         "explanationAr": "في بداية sprechen تُنطق sp بصوت shp."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Sport beginnt mit einem normalen s-Laut.“ ✗ → „Sport beginnt standardsprachlich mit schp.“ ✓",
+        "ar": "في بداية Sport يُنطق sp عادةً /ʃp/؛ الكتابة sp لا تعني صوت s+p منفصلين هنا."
+      },
+      {
+        "de": "„Wespe hat schp in der Wortmitte.“ ✗ → „Wespe hat den normalen sp-Laut in der Wortmitte.“ ✓",
+        "ar": "لا يتحول كل sp داخل الكلمة إلى schp؛ في Wespe يبقى الصوت /sp/."
+      }
+    ],
     "eselsbrueckeAr": "حرف s قبل p أو t في بداية الكلمة يخجل من النطق فيستعين بحرف ش: sp→شب، st→شت.",
     "pronTippAr": ""
   },
@@ -14586,7 +14737,16 @@
         "explanationAr": "في نهاية Kind تُهمس d وتُنطق مثل t."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Tag endet mit einem stimmhaften g.“ ✗ → „Tag klingt am Wortende mit k.“ ✓",
+        "ar": "في النطق المعياري تُهمس g في آخر Tag فتُسمع كـk؛ وفي Tage يظهر g بين الحركات."
+      },
+      {
+        "de": "„Tag wird wegen des k-Lauts mit k geschrieben.“ ✗ → „Tag bleibt mit g geschrieben; Tage zeigt das g.“ ✓",
+        "ar": "الإملاء يحافظ على g في Tag رغم نطقها كـk؛ صيغة Tage تساعد على تذكر الحرف."
+      }
+    ],
     "eselsbrueckeAr": "الألمان يرهبون الجهر في آخر الكلمة: كل مجهور يفقد جهره في النهاية.",
     "pronTippAr": ""
   },
@@ -14645,24 +14805,24 @@
     "summaryAr": "حروف جر Genitiv شائعة الاستخدام في الكتابة الرسمية: wegen (بسبب), trotz (رغم), während (خلال), aufgrund (بسبب/بناءً على), anlässlich (بمناسبة), statt/anstatt (بدلاً من), innerhalb (خلال/داخل), außerhalb (خارج). في اللغة المحكية يستعمل الألمان Dativ كثيراً مع هذه الأدوات، لكن Schriftdeutsch يتطلب Genitiv.",
     "rules": [
       {
-        "de": "wegen + Genitiv: Wegen des Regens (بسبب المطر)",
-        "ar": "تُستخدم في السبب: wegen + Genitiv."
+        "de": "wegen + Genitiv: Wegen des Regens",
+        "ar": "wegen يأخذ Genitiv في الأسلوب المعياري الرسمي: wegen des Regens. ويشيع Dativ في الكلام اليومي."
       },
       {
-        "de": "trotz + Genitiv: Trotz des Regens ging er spazieren (رغم المطر)",
-        "ar": "للمخالفة/التناقض: trotz + Genitiv."
+        "de": "trotz + Genitiv: Trotz des Regens ging er spazieren.",
+        "ar": "trotz يأخذ Genitiv في الكتابة المعيارية: trotz des Regens."
       },
       {
-        "de": "während + Genitiv: Während des Krieges (خلال الحرب)",
-        "ar": "للزمان المتزامن: während + Genitiv."
+        "de": "während + Genitiv: Während des Krieges",
+        "ar": "während الزمنية تأخذ Genitiv في الصيغة المعيارية: während des Krieges."
       },
       {
-        "de": "aufgrund + Genitiv: Aufgrund schlechten Wetters (بسبب سوء الأحوال الجوية)",
-        "ar": "للسبب (رسمي): aufgrund + Genitiv."
+        "de": "aufgrund + Genitiv: Aufgrund schlechten Wetters",
+        "ar": "aufgrund ذات الطابع الرسمي تأخذ Genitiv: aufgrund schlechten Wetters."
       },
       {
-        "de": "(an)statt + Genitiv: Statt eines Briefes schickte er eine E-Mail (بدلاً من رسالة)",
-        "ar": "للبديل: (an)statt + Genitiv."
+        "de": "(an)statt + Genitiv: Statt eines Briefes schickte er eine E-Mail.",
+        "ar": "(an)statt تأخذ Genitiv في الصيغة المعيارية: statt eines Briefes."
       }
     ],
     "tables": [
@@ -14781,7 +14941,16 @@
         "explanationAr": "während يأخذ Genitiv؛ Sitzung مؤنث، لذلك während der Sitzung."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Wegen des Regen blieben wir zu Hause.“ ✗ → „Wegen des Regens blieben wir zu Hause.“ ✓",
+        "ar": "بعد wegen يأتي Genitiv في الصيغة المعيارية؛ ومع الاسم المذكر المفرد Regen تظهر علامة -s في Regens. ويشيع Dativ في الكلام اليومي."
+      },
+      {
+        "de": "„Statt ein Brief schickte er eine E-Mail.“ ✗ → „Statt eines Briefes schickte er eine E-Mail.“ ✓",
+        "ar": "تأخذ statt Genitiv في الصيغة المعيارية: ein Brief تصبح eines Briefes."
+      }
+    ],
     "eselsbrueckeAr": "تذكير: هذه الأدوات في الكتابة الرسمية تأخذ دائماً Genitiv — كأنها «تُضيف» -s/-en إلى الاسم بعدها كما في الإنجليزية because of the rain.",
     "pronTippAr": ""
   },
@@ -14836,8 +15005,8 @@
         "ar": "trotzdem جملة مستقلة بعدها الفعل في الموقع الثاني."
       },
       {
-        "de": "Auch wenn es regnet, gehe ich spazieren. (hypothetisch: حتى لو)",
-        "ar": "auch wenn للاحتمال/الافتراض (حتى لو)."
+        "de": "Auch wenn es regnet, gehe ich spazieren. (konzessiv; je nach Kontext hypothetisch)",
+        "ar": "auch wenn تعني «حتى إن/حتى لو»؛ وقد تكون الحالة افتراضية بحسب السياق، لكن ذلك ليس لازماً. يبقى الفعل المصرف في نهاية الجملة التابعة."
       },
       {
         "de": "Bei Regen gehe ich trotzdem spazieren. (Präpositionalgruppe)",
@@ -14975,7 +15144,16 @@
         "explanationAr": "trotzdem يبدأ جملة رئيسية؛ يأتي الفعل المصرف بعدها في الموقع الثاني."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Obwohl es regnet, ich gehe spazieren.“ ✗ → „Obwohl es regnet, gehe ich spazieren.“ ✓",
+        "ar": "obwohl يقدّم جملة تابعة والفعل المصرف فيها أخيراً؛ بعد الفاصلة تأتي الجملة الرئيسية بترتيب V2: gehe ich."
+      },
+      {
+        "de": "„Trotzdem es regnet, gehe ich spazieren.“ ✗ → „Obwohl es regnet, gehe ich spazieren.“ ✓",
+        "ar": "في الألمانية المعيارية نستخدم obwohl لافتتاح الجملة التابعة؛ ويمكن استعمال trotzdem في جملة رئيسية بترتيب الفعل الثاني."
+      }
+    ],
     "eselsbrueckeAr": "trotzdem = trotzdem هي ظرف لا رابط: تحتاج نقطة/فاصلة قبلها، وبعدها يأتي الفعل ثانياً. أما obwohl فإنه يسحب الفعل إلى آخر الجملة.",
     "pronTippAr": ""
   },
@@ -15132,7 +15310,16 @@
         "explanationAr": "deren يعود إلى الاسم المؤنث Frau ويعبّر عن الملكية."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Der Mann, deren Auto vor der Tür steht, wartet.“ ✗ → „Der Mann, dessen Auto vor der Tür steht, wartet.“ ✓",
+        "ar": "dessen يعود إلى الاسم السابق المذكر أو المحايد؛ يطابق جنس الاسم السابق لا الشيء المملوك."
+      },
+      {
+        "de": "„Die Frau, dessen Tochter Ärztin ist, wohnt hier.“ ✗ → „Die Frau, deren Tochter Ärztin ist, wohnt hier.“ ✓",
+        "ar": "deren يعود إلى الاسم السابق المؤنث أو الجمع؛ يطابق جنس الاسم السابق لا Tochter."
+      }
+    ],
     "eselsbrueckeAr": "dessen يُذكّرك بـhis/its (للمفرد)، deren بـher/their (للمؤنث والجمع).",
     "pronTippAr": ""
   },
@@ -15266,7 +15453,16 @@
         "explanationAr": "من صيغ الختام الشخصية: Viele Grüße."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Ich übersetze jedes unbekannte Wort einzeln.“ ✗ → „Ich suche zuerst nach den Schlüsselwörtern der Aufgabe.“ ✓",
+        "ar": "في القراءة لا تتوقف عند كل كلمة مجهولة؛ ابدأ بمطلوب السؤال وابحث عن الكلمات المفتاحية والسياق."
+      },
+      {
+        "de": "„Beim Schreiben lasse ich einen Aufgabenpunkt aus.“ ✗ → „Ich beantworte jeden vorgegebenen Punkt kurz und klar.“ ✓",
+        "ar": "حتى إن كانت الإجابة قصيرة، لا تترك أياً من النقاط المطلوبة في مهمة الكتابة."
+      }
+    ],
     "eselsbrueckeAr": "امتحان A1 لا يختبر ذكاءك بل مدى استخدامك الألمانية البسيطة بدقة — فكّر ببساطة واكتب بوضوح.",
     "pronTippAr": ""
   },
@@ -15385,7 +15581,16 @@
         "explanationAr": "السياق ومعنى الجملة كلها يساعدان على فهم الكلمة."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Bei einem unbekannten Wort höre ich nicht weiter zu.“ ✗ → „Ich höre weiter und erschließe die Bedeutung aus dem Satz.“ ✓",
+        "ar": "لا تتوقف عن الاستماع بسبب كلمة مجهولة؛ تابع واستنتج المعنى من الجملة والسياق."
+      },
+      {
+        "de": "„Ich beantworte nur zwei von drei Punkten.“ ✗ → „Ich beantworte alle vorgegebenen Punkte.“ ✓",
+        "ar": "راجع كل نقطة مطلوبة قبل إرسال الكتابة؛ لا تسقط نقطة بسبب التركيز على عدد الكلمات."
+      }
+    ],
     "eselsbrueckeAr": "النقاط الثلاث في الرسالة: اذكرها كلها بعبارة واحدة لكل منها، ولا تنسَ الختام.",
     "pronTippAr": ""
   },
@@ -15504,7 +15709,16 @@
         "explanationAr": "يجب أن تتفاعل مع ما يقوله الشريك."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Ich nenne meine Meinung ohne Begründung.“ ✗ → „Ich begründe meine Meinung und verknüpfe die Argumente.“ ✓",
+        "ar": "في B1 ادعم الرأي بسبب أو مثال، واربط الحجج حتى يكون الموقف مفهوماً."
+      },
+      {
+        "de": "„Ich spreche im Gespräch nur über meinen eigenen Plan.“ ✗ → „Ich reagiere auch auf den Beitrag meines Partners.“ ✓",
+        "ar": "في الحوار التفاعلي استمع إلى الشريك وردّ على فكرته؛ لا تلقِ نصاً محفوظاً منفصلاً."
+      }
+    ],
     "eselsbrueckeAr": "كلمة لإنقاذ نفسك عندما لا تعرف: «Könnten Sie das bitte wiederholen?» و«Ich bin nicht sicher, aber ich glaube,…».",
     "pronTippAr": ""
   },
@@ -15623,7 +15837,16 @@
         "explanationAr": "مخطط قصير يساعد على تنظيم الحجة والنص."
       }
     ],
-    "pitfalls": [],
+    "pitfalls": [
+      {
+        "de": "„Ich nenne die Gegenposition, ohne sie abzuwägen.“ ✗ → „Ich prüfe Gegenpositionen und formuliere danach mein Fazit.“ ✓",
+        "ar": "في مستوى B2 لا تذكر الرأي المقابل فقط؛ ناقشه بإنصاف ثم بيّن نتيجة الموازنة."
+      },
+      {
+        "de": "„Ich wähle möglichst komplizierte Sätze, auch wenn sie unklar sind.“ ✗ → „Ich schreibe klar, präzise und gut gegliedert.“ ✓",
+        "ar": "الدقة والترابط أهم من تعقيد الجمل؛ استعمل روابط مناسبة مع بنية واضحة."
+      }
+    ],
     "eselsbrueckeAr": "في B2 يُقيّم التعقيد المناسب (Konjunktiv II، Nominalstil، Doppelkonnektoren) — لا تكتب جملاً أبسط من مستوى B2.",
     "pronTippAr": ""
   },

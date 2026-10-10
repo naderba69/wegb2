@@ -65,6 +65,16 @@
       "muster": "20 Prozent",
       "wo": "t-a2-17 lang",
       "grund": "قراءة عدّاد عائلة وهميّة داخل السرد («Wir verbrauchen etwa 20 Prozent weniger») لا إحصاء"
+    },
+    {
+      "muster": "30 Prozent",
+      "wo": "d-a2-ht01 lines and answer option",
+      "grund": "Rabatt eines ausdrücklich fiktiven Kaufhaus-Dialogs; kein aktuelles Angebot eines realen Händlers."
+    },
+    {
+      "muster": "10 Prozent",
+      "wo": "d-a2-ht01 distractor",
+      "grund": "Falschantwort in der Verständnisfrage zum fiktiven Kaufhausangebot; keine Tatsachenbehauptung."
     }
   ]
 }

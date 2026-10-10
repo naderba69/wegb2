@@ -41,7 +41,13 @@ for (const t of Object.values(grammarMap)) {
   if (!t.examples?.length) add("grammar:keineBeispiele", t.id);
   if (!t.pitfalls?.length) add("grammar:keineFallen", t.id);
   for (const r of t.rules) { if (DE_ONLY_BAD.test(r.de)) add("grammar:rule.de arabisch", `${t.id} «${r.de}»`); if (!AR.test(r.ar)) add("grammar:rule.ar", `${t.id} «${r.de}»`); }
-  for (const ex of t.examples) { if (AR.test(ex.de)) add("grammar:example.de arabisch", `${t.id} «${ex.de}»`); if (!/[.!?…"“”»]$/.test(ex.de.trim())) add("grammar:example ohne Satzzeichen", `${t.id} «${ex.de}»`); }
+  for (const ex of t.examples) {
+    if (AR.test(ex.de)) add("grammar:example.de arabisch", `${t.id} «${ex.de}»`);
+    // Minimal pairs, word lists and IPA transcriptions are intentional fragments;
+    // sentence examples still need terminal punctuation.
+    const fragment = /[—–→·]|\[[^\]]+\]/.test(ex.de.trim());
+    if (!/[.!?…"“”»]$/.test(ex.de.trim()) && !fragment) add("grammar:example ohne Satzzeichen", `${t.id} «${ex.de}»`);
+  }
   for (const e of t.exercises) { if (ids.has(e.id)) add("exercise:dupId", e.id); ids.add(e.id); pruefeExercise(e, t.id); }
   if (t.exercises.length < 5) hinweis("grammar:wenigeÜbungen — prüfen تربوياً", `${t.id} (${t.exercises.length})`);
 }

@@ -97,7 +97,7 @@ export interface GrammarTopic {
 export interface Eselsbruecke {
   id: string;
   emoji: string;
-  sektion: "genus" | "satzbau" | "praeposition" | "verb" | "adjektiv" | "b2" | "sprichwort";
+  sektion: "genus" | "satzbau" | "praeposition" | "verb" | "adjektiv" | "b2" | "sprichwort" | "aussprache" | "pruefung";
   level: Level;
   titleAr: string;
   storyAr: string;

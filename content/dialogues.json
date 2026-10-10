@@ -10707,34 +10707,34 @@
   {
     "id": "dlg-a2-krankenversicherung",
     "level": "A2",
-    "titleDe": "Bei der Krankenversicherung",
-    "titleAr": "في التأمين الصحي",
+    "titleDe": "Bei der gesetzlichen Krankenkasse",
+    "titleAr": "في التأمين الصحي القانوني",
     "questions": [
       {
         "options": [
-          "14,6% vom Bruttogehalt",
-          "20%",
-          "gar nichts"
+          "Sie und Ihr Arbeitgeber zahlen jeweils die Hälfte.",
+          "Nur Sie.",
+          "Nur Ihr Arbeitgeber."
         ],
-        "answer": "14,6% vom Bruttogehalt",
-        "explanationAr": "الاشتراك حوالي 14,6% من الراتب الإجمالي.",
-        "promptDe": "Wie hoch ist der Versicherungsbeitrag etwa?",
+        "answer": "Sie und Ihr Arbeitgeber zahlen jeweils die Hälfte.",
+        "explanationAr": "«Wenn Sie gesetzlich versichert und angestellt sind, tragen Sie und Ihr Arbeitgeber ihn grundsätzlich je zur Hälfte.» — تتقاسمان المساهمة بالتساوي في هذه الحالة.",
+        "promptDe": "Wer zahlt den Beitrag?",
         "type": "mc",
         "id": "dlg-a2-krankenversicherung-q1",
-        "promptAr": "كم تبلغ مساهمة التأمين تقريباً؟"
+        "promptAr": "من يدفع المساهمة؟"
       },
       {
         "options": [
-          "Personalausweis, Arbeitgeberbescheinigung, Steuer-ID",
+          "persönliche Daten und Informationen zur Beschäftigung",
           "nur den Pass",
           "eine Wohnungsmeldung"
         ],
-        "answer": "Personalausweis, Arbeitgeberbescheinigung, Steuer-ID",
-        "explanationAr": "تحتاج بطاقة+شهادة رب عمل+رقم ضريبي.",
-        "promptDe": "Welche Unterlagen braucht die Mitarbeiterin?",
+        "answer": "persönliche Daten und Informationen zur Beschäftigung",
+        "explanationAr": "ذكرت الموظفة أنها تحتاج بيانات شخصية ومعلومات عن العمل؛ أما المستندات المحددة فتشرحها بحسب حالة الزبونة.",
+        "promptDe": "Welche Angaben braucht die Krankenkasse für die Anmeldung?",
         "type": "mc",
         "id": "dlg-a2-krankenversicherung-q2",
-        "promptAr": "ما المستندات التي تحتاجها الموظفة؟"
+        "promptAr": "ما المعلومات التي يحتاجها صندوق التأمين للتسجيل؟"
       }
     ],
     "lines": [
@@ -10745,18 +10745,18 @@
       },
       {
         "who": "Mitarbeiterin",
-        "de": "Herzlich willkommen bei der AOK. Sind Sie berufstätig oder Student?",
-        "ar": "أهلاً وسهلاً بك في AOK. هل أنت موظف أم طالب؟"
+        "de": "Herzlich willkommen bei Ihrer gesetzlichen Krankenkasse. Sind Sie berufstätig oder studieren Sie?",
+        "ar": "أهلاً وسهلاً بك في صندوق التأمين الصحي القانوني. هل تعملين أم تدرسين؟"
       },
       {
         "who": "Kundin",
-        "de": "Ich bin berufstätig und arbeite als Ingenieur.",
-        "ar": "أنا موظف وأعمل مهندساً."
+        "de": "Ich bin berufstätig und arbeite als Ingenieurin.",
+        "ar": "أعمل، وأنا مهندسة."
       },
       {
         "who": "Mitarbeiterin",
-        "de": "Dann brauche ich Ihren Personalausweis, die Arbeitgeberbescheinigung und Ihre Steuer-ID.",
-        "ar": "أحتاج بطاقتك الشخصية، شهادة صاحب العمل، ورقمك الضريبي."
+        "de": "Für die Anmeldung brauche ich Ihre persönlichen Daten und Informationen zu Ihrer Beschäftigung. Die nötigen Unterlagen erkläre ich Ihnen gern.",
+        "ar": "أحتاج إلى بياناتك الشخصية ومعلومات عن عملك للتسجيل. ويسرّني أن أشرح لك المستندات المطلوبة بحسب حالتك."
       },
       {
         "who": "Kundin",
@@ -10765,8 +10765,8 @@
       },
       {
         "who": "Mitarbeiterin",
-        "de": "Etwa 14,6 Prozent Ihres Bruttogehalts, je die Hälfte tragen Sie und Ihr Arbeitgeber.",
-        "ar": "حوالي 14,6% من راتبك الإجمالي، تدفع نصفها ويدفع صاحب العمل النصف الآخر."
+        "de": "Der Beitrag richtet sich nach Ihrem Einkommen. Wenn Sie gesetzlich versichert und angestellt sind, tragen Sie und Ihr Arbeitgeber ihn grundsätzlich je zur Hälfte.",
+        "ar": "تتحدد المساهمة بحسب دخلك. وإذا كنتِ موظفة ومؤمّنة في نظام التأمين الصحي القانوني، فتدفعين أنتِ وصاحب العمل المساهمة مناصفةً في المعتاد."
       },
       {
         "who": "Kundin",
@@ -10775,8 +10775,8 @@
       },
       {
         "who": "Mitarbeiterin",
-        "de": "Ab dem ersten Arbeitstag.",
-        "ar": "من أول يوم عمل."
+        "de": "Das hängt von Ihrem Versicherungsstatus ab. Wir prüfen Ihre Unterlagen und nennen Ihnen den Beginn.",
+        "ar": "يعتمد ذلك على وضعك التأميني. سنراجع مستنداتك ونخبرك بتاريخ بدء التغطية."
       }
     ],
     "dictation": [

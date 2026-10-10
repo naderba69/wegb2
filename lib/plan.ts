@@ -1314,6 +1314,27 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     }
   }
 
+  // R143b: keep the four writing prompts missed by the seeded rotation in the
+  // default curriculum too; each is a real, level-appropriate Schreibtask.
+  const extraWritingByDay: Record<number, string[]> = {
+    [PHASEN.A0.von + 5]: ["w-a0-02"],
+    [PHASEN.A0.von + 6]: ["w-a0-04"],
+    [PHASEN.A0.von + 7]: ["w-a0-05"],
+    [PHASEN.A2.von]: ["w-a2-06"],
+  };
+  for (const [index, writingId] of (extraWritingByDay[day] ?? []).entries()) {
+    const extraWriting = writesOfLevel.find((writing) => writing.id === writingId);
+    if (!extraWriting) continue;
+    tasks.push({
+      id: tid(93 + index),
+      kind: "schreiben",
+      titleDe: `Zusätzliche Schreibaufgabe: ${extraWriting.titleDe}`,
+      titleAr: `كتابة إضافية: ${extraWriting.titleAr}`,
+      minutes: level === "A0" ? 10 : 15,
+      writeId: extraWriting.id,
+    });
+  }
+
   // ── محرّكات التعلّم الذكي ──────────────────────────────────────────
   // (1) التكيّف: تمييز النقاط الضعيفة داخل فحوصات اليوم
   const wt = weakTopics(progress, 2);

@@ -11,6 +11,8 @@ const SEKTIONEN: { key: string; titel: string }[] = [
   { key: "adjektiv", titel: "⑤ الصفاتُ والنفي" },
   { key: "b2", titel: "⑥ تركيباتُ B2" },
   { key: "sprichwort", titel: "⑦ أمثالٌ بقاعدةٍ مدمجة" },
+  { key: "aussprache", titel: "⑧ النطق والأصوات" },
+  { key: "pruefung", titel: "⑨ استراتيجيات الامتحان" },
 ];
 
 export default function DruckSeite() {

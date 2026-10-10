@@ -358,7 +358,7 @@ const empty = () => loadProgress();
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
     ["szenarien", szenarien.length, 12],
-    ["eselsbruecken", eselsbruecken.length, 65],
+    ["eselsbruecken", eselsbruecken.length, 83],
     ["sprichwort-audio", Object.keys(sprichwortAudio).length, 8],
       ["mnemonik", Object.keys(mnemonikMap).length, 120],
     ["pakete", pakete.length, 3],
@@ -1364,7 +1364,7 @@ const empty = () => loadProgress();
     {
       const bb = eselsbruecken;
       const gids = Object.keys(grammarMap);
-      ok(bb.length === 65 && new Set(bb.map((b) => b.id)).size === 65, "K39a خمسٌ وستّونَ تركةً بمعرّفاتٍ فريدة — بعد تغطيةِ ستةٍ وستّينَ درساً");
+      ok(bb.length === 83 && new Set(bb.map((b) => b.id)).size === 83, "K39a ثلاثٌ وثمانونَ تركةً بمعرّفاتٍ فريدة — بعد استكمالِ تغطيةِ الدروس");
       ok(bb.every((b) => b.gramIds.length > 0 && b.gramIds.every((g) => gids.includes(g))), "K39b كلُّ تركةٍ معلَّقةٌ بدرسٍ موجودٍ فعلاً — لا شفرةٌ يتيمةٌ ولا إشارةٌ إلى درسٍ وهميّ");
       ok(bb.every((b) => getBrueckenFor(b.gramIds[0]).some((x) => x.id === b.id)), "K39c الطريقُ عكسيٌّ أيضاً: getBrueckenFor تُرجِعُ التركةَ لدرسِها — السلكُ حيٌّ لا مُعلَن");
       ok(bb.every((b) => /[\u0600-\u06ff]/.test(b.titleAr) && /[\u0600-\u06ff]/.test(b.storyAr) && b.storyAr.length >= 40), "K39d لكلِّ شفرةٍ قصةٌ عربيةٌ مسهبةٌ لا عنوانٌ أجرد");
@@ -1846,7 +1846,7 @@ void 0;
   const ids = Object.keys(grammarMap);
   const uncovered = ids.filter((id) => getBrueckenFor(id).length === 0);
   const wizardCuts = /getBrueckenFor\(topicId\)\.slice|b\.zeilen[^\n]*\.slice/.test(wizard);
-  ok(ids.length === 66 && uncovered.length === 0, `K140a لكل درس قواعد شفرة مرتبطة (${ids.length}/66؛ بلا شفرة: ${uncovered.join(",") || "لا شيء"})`);
+  ok(ids.length === 82 && uncovered.length === 0, `K140a لكل درس قواعد شفرة مرتبطة (${ids.length}/82؛ بلا شفرة: ${uncovered.join(",") || "لا شيء"})`);
   ok(wizard.includes("sortiert.map((b)") && wizard.includes("b.zeilen.map") && !wizardCuts,
     "K140b معالج الدرس يرسم كل شفرة وأسطرها بلا قصّ لأول عنصرين/ثلاثة");
   ok(wizard.includes("isDue(srs[`bru:${b.id}`])") && wizard.includes("wizard-bruecke-due-${b.id}") &&
@@ -2807,7 +2807,7 @@ void 0;
   ok(NEU.every((id) => erstN[id] !== undefined), `K130c السبعةُ مجدولةٌ (${NEU.map((id) => `${id}@${erstN[id]}`).join(" ")})`);
   ok(erstN["a1-akkusativ"] < erstN["a1-plural"] && erstN["a1-zahlen"] < erstN["a1-zeitpraep"] && erstN["a1-weil-dass"] < erstN["a2-neben"] && erstN["a1-pronomen"] < erstN["a2-demo"] && erstN["a2-weil-dass"] < erstN["b1-absicht"] && erstN["b1-konj2"] < erstN["b1-konj2-vergangenheit"] && erstN["b1-konnektoren"] < erstN["b2-textkonnektoren"] && erstN["b1-absicht"] < erstN["b2-infinitiv"],
     "K130d الحلزونُ مرتبٌ: المتطلبُ قبلَ الدرسِ والمعمَّقُ بعدَه");
-  ok(eselsbruecken.length === 65 && NEU.every((id) => getBrueckenFor(id).length >= 1), "K130e تركةٌ لكلِّ جديدٍ والمجموعُ 65");
+  ok(eselsbruecken.length === 83 && NEU.every((id) => getBrueckenFor(id).length >= 1), "K130e لكلِّ درسٍ تركةٌ مرتبطةٌ؛ مجموعُ البنك 83");
 }
 
   /* ═══ K131 · دفعة D1/D3/E7: لوح A0 + إتمام A1 + الأصدقاء الكاذبون ═══ */
@@ -2861,7 +2861,7 @@ void 0;
   const prereqs = ["a1-akkusativ", "a2-dativ", "a2-demo"];
   ok(phaseA2.indexOf("a2-wasfuer") > phaseA2.indexOf("a2-dativ") && prereqs.every((id) => prereqDay[id] !== undefined && prereqDay[id] < prereqDay["a2-wasfuer"]),
     `K132f الدرسُ مجدولٌ بعدَ متطلباته (${prereqs.map((id) => `${id}@${prereqDay[id]}`).join(" · ")} → a2-wasfuer@${prereqDay["a2-wasfuer"]})`);
-  ok(eselsbruecken.length === 65 && getBrueckenFor("a2-wasfuer").some((b) => b.id === "e-wasfuer"), "K132g تركةُ Was-für معلَّقةٌ بدرسها؛ إجماليُّ التركات 65");
+  ok(eselsbruecken.length === 83 && getBrueckenFor("a2-wasfuer").some((b) => b.id === "e-wasfuer"), "K132g تركةُ Was-für معلَّقةٌ بدرسها؛ إجماليُّ التركات 83");
   const dueDay = 23;
   const dueProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 20 }, verify: { ...(emptyProgress.verify ?? {}), "a2-wasfuer": { dueDay } } };
   const early = dueVerify(dueProgress, dueDay - 1).some((v) => v.lessonId === "a2-wasfuer");
@@ -4040,22 +4040,35 @@ void 0;
   const auditMarkdown = readFileSync("docs/content-review-a1-grammar-03-2026-10-04.md", "utf8");
   const topicIds = ["a1-modalverben", "a1-dativ", "a1-wechsel"];
   const topics = topicIds.map((id) => grammarMap[id]);
-  const expectedIds = topics.flatMap((topic) => [
+  const currentIds = new Set(topics.flatMap((topic) => [
     topic.id,
     ...topic.exercises.map((exercise) => exercise.id),
     ...(topic.verify ?? []).map((exercise) => exercise.id),
-  ]);
+  ]));
   const auditIds = audit.items.map((item) => item.id);
   const auditById = new Map(audit.items.map((item) => [item.id, item]));
   const exerciseCount = topics.reduce((total, topic) => total + topic.exercises.length, 0);
   const verifyCount = topics.reduce((total, topic) => total + (topic.verify?.length ?? 0), 0);
-  ok(topics.length === 3 && exerciseCount === 12 && verifyCount === 6 &&
+  ok(topics.length === 3 && exerciseCount >= audit.coverage.grammarExercises && verifyCount === 6 &&
     audit.date === "2026-10-04" && audit.batch === "A1-grammar-03" &&
     audit.coverage.grammarTopics === 3 && audit.coverage.grammarExercises === 12 && audit.coverage.grammarVerify === 6 &&
-    expectedIds.length === 21 && new Set(expectedIds).size === 21 && audit.coverage.totalTrackedItems === 21 &&
-    auditIds.length === 21 && new Set(auditIds).size === 21 && expectedIds.every((id) => auditById.has(id)) &&
-    expectedIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
-    "K161a سجل A1-grammar-03 يغطي الموضوعات الثلاثة وكل تمرين/تحقق في JSON وMarkdown بلا فقد أو تكرار");
+    audit.coverage.totalTrackedItems === 21 && auditIds.length === 21 && new Set(auditIds).size === 21 &&
+    auditIds.every((id) => currentIds.has(id) && auditById.has(id)) &&
+    auditIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
+    "K161a سجل A1-grammar-03 التاريخي يحفظ عناصره الـ21؛ الإضافات اللاحقة لا تُنسب إلى تدقيق 4 أكتوبر");
+  const r143ExerciseIds = [
+    ["a1-modalverben", "a1-modalverben-r143-e05"], ["a1-dativ", "a1-dativ-r143-e05"],
+    ["a1-wechsel", "a1-wechsel-r143-e05"], ["b1-partizip1", "b1-partizip1-r143-e05"],
+    ["a0-buchstaben", "a0-buchstaben-r143-e05"], ["a0-zahlen", "a0-zahlen-r143-e05"],
+    ["a2-konj2-hoflich", "a2-konj2-hoflich-r143-e05"],
+  ] as const;
+  const r143Exercises = r143ExerciseIds.map(([topicId, id]) => grammarMap[topicId]?.exercises.find((exercise) => exercise.id === id));
+  const r143ExercisesValid = r143Exercises.every((exercise) => {
+    if (!exercise?.promptDe || !exercise.promptAr || !/[\u0600-\u06FF]/.test(exercise.explanationAr ?? "")) return false;
+    if (exercise.type === "mc") return typeof exercise.answer === "string" && !!exercise.options?.includes(exercise.answer);
+    return exercise.type === "fill" && (typeof exercise.answer === "string" || Array.isArray(exercise.answer));
+  });
+  ok(r143Exercises.length === 7 && r143ExercisesValid, "K161e تمارين R143b السبعة لها تعليمة وشرح عربيان وإجابة صالحة");
 
   const sourceIds = new Set(audit.sources.map((source) => source.id));
   const statusCounts = audit.items.reduce<Record<string, number>>((counts, item) => {

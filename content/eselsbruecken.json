@@ -2367,5 +2367,494 @@
       }
     ],
     "warnung": "القول إن الفاصلة تُستعمل فقط عند اختلاف الفاعلين تبسيط غير دقيق؛ بين الجملتين المستقلتين مع und/or تكون الفاصلة للتوضيح اختيارية."
+  },
+  {
+    "id": "e-a0-artikel",
+    "emoji": "🚪",
+    "sektion": "genus",
+    "level": "A0",
+    "titleAr": "ثلاثة أبواب: der · die · das، وباب الجمع die",
+    "storyAr": "تخيّل ثلاثة أبواب تدخل منها أسماء المفرد: باب المذكر der، وباب المؤنث die، وباب المحايد das. حين تتحول الأسماء إلى جمع، تجتمع كلها عند باب die. لا تكشف ترجمة الاسم العربية دائماً عن جنسه الألماني، لذلك احفظ كل اسم مع أداته.",
+    "zeilen": [
+      {
+        "code": "مذكر · der",
+        "de": "der Mann",
+        "ar": "الرجل؛ اسم مذكر مع der."
+      },
+      {
+        "code": "مؤنث · die",
+        "de": "die Frau",
+        "ar": "المرأة؛ اسم مؤنث مع die."
+      },
+      {
+        "code": "محايد · das",
+        "de": "das Kind",
+        "ar": "الطفل؛ اسم محايد مع das."
+      },
+      {
+        "code": "جمع · die",
+        "de": "die Kinder",
+        "ar": "في الجمع تأتي die، حتى إن كان المفرد das Kind."
+      }
+    ],
+    "gramIds": [
+      "a0-artikel"
+    ],
+    "warnung": "الجنس النحوي يُحفَظ مع الاسم؛ ولا يعني das Kind أن الطفل محايد في المعنى."
+  },
+  {
+    "id": "e-a0-umlaut",
+    "emoji": "👄",
+    "sektion": "aussprache",
+    "level": "A0",
+    "titleAr": "الأوملاوت يغيّر صوت الكلمة ومعناها",
+    "storyAr": "تذكّر الأوملاوت بتدوير الشفتين: في ö وü لا يكفي تبديل الحرف بنظيره العادي. اجعل وضع اللسان قريباً من e أو i، ثم دوّر الشفتين. النقاط الصغيرة فوق الحرف جزء من الهجاء وتغيّر المعنى، وليست زينة يمكن إهمالها.",
+    "zeilen": [
+      {
+        "code": "ä ≈ e مفتوحة",
+        "de": "die Männer",
+        "ar": "Männer فيها ä، وهو صوت قريب من e مفتوحة."
+      },
+      {
+        "code": "ö: لسان e + شفاه مستديرة",
+        "de": "schön ≠ schon",
+        "ar": "schön تعني جميل، وschon تعني بالفعل."
+      },
+      {
+        "code": "ü: لسان i + شفاه مستديرة",
+        "de": "die Tür",
+        "ar": "في ü يبقى اللسان قريباً من i مع تدوير الشفتين."
+      }
+    ],
+    "gramIds": [
+      "a0-aussprache-umlaut"
+    ],
+    "warnung": "لا تستبدل ä/ö/ü بـa/o/u عند الكتابة؛ قد تصبح كلمة أخرى."
+  },
+  {
+    "id": "e-a0-vokale",
+    "emoji": "⏱️",
+    "sektion": "aussprache",
+    "level": "A0",
+    "titleAr": "زوجا المدة: Stadt–Staat وBett–Beet",
+    "storyAr": "اسمع طول الحركة قبل حفظ الكلمة: في Stadt الحركة قصيرة، وفي Staat طويلة؛ وفي Bett حرف e قصير، وفي Beet يطول. تغيّر المدة قد يغيّر الكلمة ومعناها، لذا احفظ الأمثلة كأزواج صوتية لا كتهجئة منفصلة.",
+    "zeilen": [
+      {
+        "code": "a قصيرة",
+        "de": "die Stadt",
+        "ar": "الحركة قصيرة في Stadt."
+      },
+      {
+        "code": "aa طويلة",
+        "de": "der Staat",
+        "ar": "aa تجعل الحركة طويلة في Staat."
+      },
+      {
+        "code": "e قصيرة / ee طويلة",
+        "de": "das Bett · das Beet",
+        "ar": "قارن e القصيرة في Bett بـee الطويلة في Beet."
+      }
+    ],
+    "gramIds": [
+      "a0-aussprache-vowels"
+    ],
+    "warnung": "هذه مؤشرات شائعة لا قاعدة بلا استثناء؛ ثبّت نطق المفردة مع سماعها."
+  },
+  {
+    "id": "e-a0-du-sie",
+    "emoji": "👥",
+    "sektion": "satzbau",
+    "level": "A0",
+    "titleAr": "du واحد قريب، ihr جماعة قريبة، Sie مخاطبة رسمية",
+    "storyAr": "اسأل نفسك قبل الكلام: أخاطب صديقاً واحداً، مجموعة أصدقاء، أم شخصاً بصيغة رسمية؟ الأول du، والثاني ihr، والرسمي Sie بحرف كبير، سواء أكان شخصاً واحداً أم أكثر. تغيّر الضمير يغيّر تصريف الفعل أيضاً.",
+    "zeilen": [
+      {
+        "code": "صديق واحد · du",
+        "de": "Wie geht es dir?",
+        "ar": "مع صديق واحد نقول dir في التعبير الثابت Wie geht es dir?"
+      },
+      {
+        "code": "مجموعة أصدقاء · ihr",
+        "de": "Wo wohnt ihr?",
+        "ar": "مع مجموعة غير رسمية نستعمل ihr وتصريف الجمع."
+      },
+      {
+        "code": "رسمي · Sie",
+        "de": "Wie geht es Ihnen?",
+        "ar": "في المخاطبة الرسمية نقول Ihnen، وتظل Sie مكتوبة بحرف كبير."
+      }
+    ],
+    "gramIds": [
+      "a0-du-sie"
+    ],
+    "warnung": "Sie الرسمية للمفرد والجمع؛ لا تخلطها بـsie التي تعني هي أو هم بحسب السياق."
+  },
+  {
+    "id": "e-a0-satzbau",
+    "emoji": "🧱",
+    "sektion": "satzbau",
+    "level": "A0",
+    "titleAr": "الفعل المصرف في الموقع الثاني",
+    "storyAr": "ابنِ الجملة الألمانية كقطع: الفعل المصرف يحتل الموقع الثاني. إذا بدأت بالفاعل جاء الفعل بعده، وإذا بدأت بظرف مثل Heute ينتقل الفاعل إلى ما بعد الفعل؛ لا تضع الفعل مرتين ولا تتركه بعد الفاعل في الموقع الثالث.",
+    "zeilen": [
+      {
+        "code": "فاعل + فعل + تتمة",
+        "de": "Ich lerne Deutsch.",
+        "ar": "الفاعل Ich ثم الفعل المصرف lerne."
+      },
+      {
+        "code": "ظرف + فعل + فاعل",
+        "de": "Heute lerne ich Deutsch.",
+        "ar": "بدأنا بـHeute؛ بقي الفعل في الموقع الثاني وتلاه الفاعل."
+      },
+      {
+        "code": "زمن + فعل + فاعل",
+        "de": "Am Morgen trinke ich Tee.",
+        "ar": "بعد Am Morgen يأتي الفعل trinke مباشرة."
+      }
+    ],
+    "gramIds": [
+      "a0-satzbau"
+    ],
+    "warnung": "الموقع الثاني يعني ثاني عنصر نحوي، لا ثاني كلمة دائماً."
+  },
+  {
+    "id": "e-a1-auslaut",
+    "emoji": "🔇",
+    "sektion": "aussprache",
+    "level": "A1",
+    "titleAr": "آخر الكلمة يهمس: b→p وd→t وg→k",
+    "storyAr": "في نهاية الكلمة الألمانية المعيارية تُهمَس بعض الأصوات المجهورة: b كأنها p، وd كأنها t، وg كأنها k. أضف حركة أو انتقل إلى صيغة صرفية أخرى لتسمع الصوت المجهور من جديد وتحفظ الحرف الصحيح.",
+    "zeilen": [
+      {
+        "code": "b → p في الآخر",
+        "de": "lieb [liːp] · Liebe",
+        "ar": "تُسمع b في lieb كـp، وتظهر b في Liebe."
+      },
+      {
+        "code": "d → t في الآخر",
+        "de": "Kind [kɪnt] · Kinder",
+        "ar": "تُسمع d في Kind كـt، وتظهر في Kinder."
+      },
+      {
+        "code": "g → k في الآخر",
+        "de": "Tag [taːk] · Tage",
+        "ar": "تُسمع g في Tag كـk، وتظهر في Tage."
+      }
+    ],
+    "gramIds": [
+      "a1-aussprache-auslaut"
+    ],
+    "warnung": "التغيّر في النطق لا يغيّر تهجئة أصل الكلمة: Tag لا تُكتب Tak."
+  },
+  {
+    "id": "e-a1-ch",
+    "emoji": "🌬️",
+    "sektion": "aussprache",
+    "level": "A1",
+    "titleAr": "ich الناعم بعد الأمام، وach الخلفي بعد a/o/u",
+    "storyAr": "قسّم صوت ch بحسب الحركة التي تسبقه: بعد الحركات الأمامية مثل i وe غالباً صوت ich الناعم، وبعد الحركات الخلفية a وo وu غالباً صوت ach الأشد. احفظ زوجاً واضحاً من كل مجموعة واستمع إلى موضع اللسان.",
+    "zeilen": [
+      {
+        "code": "ich-Laut · ناعم",
+        "de": "ich · Milch",
+        "ar": "بعد i يأتي غالباً الصوت الأمامي الناعم /ç/."
+      },
+      {
+        "code": "ach-Laut · خلفي",
+        "de": "Buch · machen",
+        "ar": "بعد u أو a يأتي غالباً الصوت الخلفي /x/."
+      },
+      {
+        "code": "المقارنة",
+        "de": "Ich habe auch ein Buch.",
+        "ar": "في الجملة نسمع ich ناعمة وauch/Buch خلفية."
+      }
+    ],
+    "gramIds": [
+      "a1-aussprache-ch"
+    ],
+    "warnung": "هذا تلخيص تعليمي للنطق المعياري؛ توجد تفاصيل واستثناءات مع بعض الأصوات والكلمات الدخيلة."
+  },
+  {
+    "id": "e-a1-r",
+    "emoji": "🗣️",
+    "sektion": "aussprache",
+    "level": "A1",
+    "titleAr": "راقب موقع r، ولا تفرض لهجة واحدة",
+    "storyAr": "لا تحفظ r الألمانية على أنها حركة واحدة في كل موضع: في بداية المقطع تبقى r صوتاً صامتاً مستقلاً وتختلف طريقة نطقها إقليمياً؛ أما النهاية غير المشددة -er فتُختزل كثيراً في النطق المعياري إلى صوت قريب من a خفيف. قارن الموضعين واستمع.",
+    "zeilen": [
+      {
+        "code": "r في البداية",
+        "de": "rot · Reise",
+        "ar": "في أول المقطع نسمع r، مع اختلاف نطقه إقليمياً."
+      },
+      {
+        "code": "-er غير مشدد في الآخر",
+        "de": "Vater · Mutter · Kinder",
+        "ar": "-er في النهاية يُختزل غالباً إلى [ɐ] في النطق المعياري."
+      },
+      {
+        "code": "جملة تدريب",
+        "de": "Rita reist am Freitag nach Rom.",
+        "ar": "كرر r في Rita وreist وFreitag وRom بوضوح دون مبالغة."
+      }
+    ],
+    "gramIds": [
+      "a1-aussprache-r"
+    ],
+    "warnung": "النطق الحلقي أو اللساني قد يختلف باختلاف المنطقة؛ ليس كل اختلاف خطأً."
+  },
+  {
+    "id": "e-a1-sp-st",
+    "emoji": "🪄",
+    "sektion": "aussprache",
+    "level": "A1",
+    "titleAr": "في بداية الكلمة: sp→schp وst→scht",
+    "storyAr": "تخيّل أن s تلبس صوت sh حين تفتح مقطعاً في أول كلمة ألمانية: sp تصبح schp وst تصبح scht. لكن لا تعمم ذلك على كل موضع؛ في كلمات مثل Wespe يبقى sp صوتاً عادياً. التزم بموضع المجموعة واستمع.",
+    "zeilen": [
+      {
+        "code": "sp في البداية",
+        "de": "Sport · sprechen",
+        "ar": "تبدأان بصوت schp في النطق المعياري."
+      },
+      {
+        "code": "st في البداية",
+        "de": "Straße · stehen",
+        "ar": "تبدآن بصوت scht في النطق المعياري."
+      },
+      {
+        "code": "ليس في كل موضع",
+        "de": "Wespe · Fenster",
+        "ar": "في وسط الكلمات لا يتحول sp/st تلقائياً إلى schp/scht."
+      }
+    ],
+    "gramIds": [
+      "a1-aussprache-sp-st"
+    ],
+    "warnung": "الشفرة تخص موضع بداية الكلمة/المقطع في النطق المعياري، لا كل ظهور مكتوب لـsp أو st."
+  },
+  {
+    "id": "e-a1-pruefung",
+    "emoji": "🔎",
+    "sektion": "pruefung",
+    "level": "A1",
+    "titleAr": "في الامتحان: اقرأ المطلوب ثم ابحث عن الدليل",
+    "storyAr": "في اختبار القراءة لا تبدأ بترجمة كل النص. اقرأ السؤال، حدّد كلمة مفتاحية مثل Preis أو Uhrzeit، ثم ابحث عن دليلها في النص. في الكتابة ضع تحية ومعلومات كل النقاط وخاتمة بسيطة؛ إجابة قصيرة صحيحة أفضل من ترك بند مطلوب.",
+    "zeilen": [
+      {
+        "code": "السؤال أولاً",
+        "de": "Welche Linie fährt zum Bahnhof?",
+        "ar": "افهم المطلوب قبل قراءة التفاصيل."
+      },
+      {
+        "code": "مفتاح البحث",
+        "de": "Linie · Bahnhof",
+        "ar": "ابحث عن الكلمات المفتاحية أو مرادفاتها في النص."
+      },
+      {
+        "code": "لا تسقط بنداً",
+        "de": "Anrede · Information · Gruß",
+        "ar": "في الرسالة القصيرة غطّ كل المطلوب ثم اختم."
+      }
+    ],
+    "gramIds": [
+      "a1-pruefungsstrategie"
+    ],
+    "warnung": "إذا لم تجد الكلمة نفسها، ابحث عن إعادة صياغتها ولا تختر جواباً بلا شاهد."
+  },
+  {
+    "id": "e-a2-pruefung",
+    "emoji": "🎧",
+    "sektion": "pruefung",
+    "level": "A2",
+    "titleAr": "اسمع المعنى، وأجب عن كل نقطة",
+    "storyAr": "في A2 اقرأ السؤال قبل الاستماع، وانتبه إلى المعنى وإعادة الصياغة بدلاً من انتظار كلمة مطابقة حرفياً. إذا فاتتك كلمة، واصل الاستماع واستنتجها من الجملة. في الكتابة راجع قائمة النقاط، وأجب عنها كلها قبل الإرسال.",
+    "zeilen": [
+      {
+        "code": "اقرأ المطلوب",
+        "de": "Lies zuerst die Aufgabenstellung.",
+        "ar": "اقرأ السؤال قبل بدء البحث عن الإجابة."
+      },
+      {
+        "code": "تابع السياق",
+        "de": "Achte auf Schlüsselwörter und Paraphrasen.",
+        "ar": "انتبه للكلمات المفتاحية وإعادة الصياغة."
+      },
+      {
+        "code": "تحقق من التغطية",
+        "de": "Beantworte alle vorgegebenen Punkte.",
+        "ar": "أجب عن جميع النقاط المطلوبة في الكتابة."
+      }
+    ],
+    "gramIds": [
+      "a2-pruefungsstrategie"
+    ],
+    "warnung": "لا تجعل كلمة مجهولة واحدة تمنعك من فهم الفكرة العامة أو الإجابة عن البقية."
+  },
+  {
+    "id": "e-b1-pruefung",
+    "emoji": "🧭",
+    "sektion": "pruefung",
+    "level": "B1",
+    "titleAr": "رأيٌ مسنود، واستجابةٌ للشريك",
+    "storyAr": "في كتابة B1 رتّب رأيك: موقف واضح، ثم سبب، ثم مثال أو نتيجة. وفي الحوار لا تكتف بقراءة حجتك؛ استمع إلى الشريك وأجب عن فكرته. أداة الربط المناسبة تجعل الموقف مفهوماً وتمنع النص من التحول إلى جمل منفصلة.",
+    "zeilen": [
+      {
+        "code": "رأي + سبب",
+        "de": "Ich bin dafür, weil es Zeit spart.",
+        "ar": "أذكر الموقف وأدعمه بسبب واضح."
+      },
+      {
+        "code": "حجة مقابلة",
+        "de": "Einerseits …, andererseits …",
+        "ar": "اعرض جانبي الموضوع عند الحاجة."
+      },
+      {
+        "code": "رد تفاعلي",
+        "de": "Was meinst du dazu?",
+        "ar": "اسأل الشريك وردّ على رأيه."
+      }
+    ],
+    "gramIds": [
+      "b1-pruefungsstrategie"
+    ],
+    "warnung": "لا تحفظ فقرة لا تستجيب للمهمة؛ اربط كل حجة بالمطلوب وبكلام الشريك."
+  },
+  {
+    "id": "e-b2-genitiv-praep",
+    "emoji": "🧩",
+    "sektion": "praeposition",
+    "level": "B2",
+    "titleAr": "حروف جرّ Genitiv: wegen · trotz · während · aufgrund",
+    "storyAr": "اربط حروف الجر هذه بحالة Genitiv في الأسلوب المعياري: بسبب wegen، رغم trotz، أثناء während، وبناءً على aufgrund. اسأل «بسبب ماذا؟» أو «رغم ماذا؟» ثم راجع أداة الاسم ونهايته. في الكلام قد تسمع Dativ مع بعضها، لكن الكتابة الرسمية تقتضي غالباً Genitiv.",
+    "zeilen": [
+      {
+        "code": "سبب",
+        "de": "Wegen des Regens bleiben wir zu Hause.",
+        "ar": "بسبب المطر؛ des Regens في Genitiv."
+      },
+      {
+        "code": "رغم",
+        "de": "Trotz des Regens gehen wir spazieren.",
+        "ar": "رغم المطر؛ بعد trotz نستخدم هنا Genitiv."
+      },
+      {
+        "code": "أثناء",
+        "de": "Während des Gesprächs notiert sie die Fragen.",
+        "ar": "أثناء الحديث؛ des Gesprächs في Genitiv."
+      },
+      {
+        "code": "بناءً على",
+        "de": "Aufgrund der Lage änderten wir den Plan.",
+        "ar": "بناءً على الوضع؛ der Lage في Genitiv المؤنث."
+      }
+    ],
+    "gramIds": [
+      "b2-genitiv-praep"
+    ],
+    "warnung": "لا تعرض الاستخدام الشفهي بـDativ على أنه خطأ مطلق؛ ميّز بين المحكي والمعيار الرسمي."
+  },
+  {
+    "id": "e-b2-konzessiv",
+    "emoji": "⚖️",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "obwohl يتراجع بالفعل، trotzdem يمشي في V2",
+    "storyAr": "عند وجود تناقض اختر البنية بحسب الرابط: obwohl وauch wenn يفتحان جملة تابعة فيذهب الفعل إلى النهاية؛ trotzdem يبدأ أو يربط جملة رئيسية ويبقى الفعل المصرف في الموقع الثاني. أما bei فيختصر المعنى في مجموعة جرّية مع Dativ.",
+    "zeilen": [
+      {
+        "code": "جملة تابعة",
+        "de": "Obwohl es regnet, gehe ich spazieren.",
+        "ar": "بعد obwohl يأتي الفعل في نهاية الجملة التابعة."
+      },
+      {
+        "code": "جملة رئيسية",
+        "de": "Es regnet; trotzdem gehe ich spazieren.",
+        "ar": "بعد trotzdem يبقى الفعل في الموقع الثاني."
+      },
+      {
+        "code": "تنازل",
+        "de": "Auch wenn es regnet, gehe ich spazieren.",
+        "ar": "تعني auch wenn «حتى إن/حتى لو»؛ وقد يكون المعنى افتراضياً بحسب السياق، والفعل المصرف في النهاية."
+      },
+      {
+        "code": "مجموعة جرّية",
+        "de": "Bei Regen gehe ich trotzdem spazieren.",
+        "ar": "bei Regen صيغة مختصرة، وRegen هنا Dativ."
+      }
+    ],
+    "gramIds": [
+      "b2-konzessiv"
+    ],
+    "warnung": "لا تخلط ترتيب الجملة التابعة بعد obwohl بترتيب الجملة الرئيسية بعد trotzdem."
+  },
+  {
+    "id": "e-b2-pruefung",
+    "emoji": "🏗️",
+    "sektion": "pruefung",
+    "level": "B2",
+    "titleAr": "ابنِ حجة B2: أطروحة، تعليل، مثال، موازنة، خلاصة",
+    "storyAr": "تعامل مع كتابة B2 كحجة متوازنة: اعرض أطروحتك، علّلها، أضف مثالاً، ناقش الرأي المقابل بإنصاف، ثم اختم بخلاصة واضحة. لا تخلط كثرة المفردات بالتعقيد؛ الروابط المنطقية والدقة أهم من جملة طويلة لا تؤدي معنى محدداً.",
+    "zeilen": [
+      {
+        "code": "أطروحة",
+        "de": "Meiner Ansicht nach ist der Vorschlag sinnvoll.",
+        "ar": "أعلن الموقف بوضوح."
+      },
+      {
+        "code": "تعليل",
+        "de": "Denn er spart Zeit und Kosten.",
+        "ar": "ادعم الأطروحة بسبب."
+      },
+      {
+        "code": "موازنة",
+        "de": "Zwar gibt es Nachteile, dennoch …",
+        "ar": "اعترف بالرأي المقابل ثم وازنه."
+      },
+      {
+        "code": "خلاصة",
+        "de": "Insgesamt überwiegen für mich die Vorteile.",
+        "ar": "اختم بنتيجة متسقة مع الحجج."
+      }
+    ],
+    "gramIds": [
+      "b2-pruefungsstrategie"
+    ],
+    "warnung": "لا تُخفِ ضعف الدليل خلف تراكيب معقدة؛ اجعل العلاقة بين الادعاء والشاهد صريحة."
+  },
+  {
+    "id": "e-b2-relativ-genitiv",
+    "emoji": "🔗",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "dessen للمذكر والمحايد، deren للمؤنث والجمع",
+    "storyAr": "في ضمير الوصل المضاف، انظر إلى الاسم السابق لا إلى الشيء المملوك: الاسم السابق المذكر والمحايد يأخذ dessen، والمؤنث والجمع يأخذ deren. اسأل «لمن يعود الضمير؟» قبل النظر إلى جنس الاسم الذي يأتي بعده.",
+    "zeilen": [
+      {
+        "code": "مذكر",
+        "de": "Der Mann, dessen Auto vor der Tür steht, wartet.",
+        "ar": "Mann مذكر؛ لذلك dessen، مع أن Auto محايد."
+      },
+      {
+        "code": "محايد",
+        "de": "Das Kind, dessen Spielzeug fehlt, sucht es.",
+        "ar": "Kind محايد؛ لذلك dessen."
+      },
+      {
+        "code": "مؤنث",
+        "de": "Die Frau, deren Mann Arzt ist, wohnt hier.",
+        "ar": "Frau مؤنث؛ لذلك deren، رغم أن Mann مذكر."
+      },
+      {
+        "code": "جمع",
+        "de": "Die Leute, deren Kinder hier wohnen, sind freundlich.",
+        "ar": "Leute جمع؛ لذلك deren."
+      }
+    ],
+    "gramIds": [
+      "b2-relativ-genitiv"
+    ],
+    "warnung": "الجنس والعدد يتبعان الاسم السابق؛ لا الشيء المملوك بعد dessen/deren."
   }
 ]
