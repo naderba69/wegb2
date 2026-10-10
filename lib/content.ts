@@ -104,7 +104,7 @@ export function sprichwortSrc(id: string): string | null {
 export const eselsbruecken = brueckenRaw as unknown as Eselsbruecke[];
 /** تركاتُ درسٍ بعينِه — المستهلِكُ الوحيدُ لبطاقةِ القاعدة */
 export function getBrueckenFor(gramId: string): Eselsbruecke[] {
-  return eselsbruecken.filter((b) => b.gramIds.includes(gramId));
+  return eselsbruecken.filter((b) => (b.gramIds ?? []).includes(gramId));
 }
 /** R138/P-22: إيجاد التركات/الشفرات التي تخص كلمة مفردة بالبحث في storyAr+zeilen عن lemma. */
 export function getBrueckenForWort(wortDe: string): Eselsbruecke[] {
