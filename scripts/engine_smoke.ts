@@ -703,8 +703,9 @@ const vocabRepeatAudit = (() => {
       ok(dd.every((x) => x.questions.every((q) => q.type !== "mc" || (q.options && q.options.length >= 3 && q.options.includes(q.answer as string)))), "K36e كلُّ خيارٍ متعدّدٍ جوابُه من صميمِه — قديمًا ووافدًا");
       ok(dd.slice(36, 72).every((x) => { const lde = new Set(x.lines.map((l) => l.de)); return x.lines.length >= 7 && x.dictation.length >= 2 && x.dictation.every((d) => lde.has(d)) && x.lines.every((l) => l.who && l.de && l.ar); }), "K36f الوافدُ الثلاثون: سبعةُ أسطرٍ مُترجَمة، وإملاؤُه منسوخٌ من فمِ Dialog نفسه");
       {
-        const w3 = dd.slice(72).filter((x) => x.level !== "A0"); // فحوصات الموجة الثالثة (A0 لاحقًا بملفات صوت)
-        ok(w3.length >= 8 && new Set(w3.map((x) => x.level)).size >= 4, "K36i الموجةُ الثالثة: ثمانيةُ حواراتٍ، اثنانِ لكلِّ مستوى");
+        const W3_IDS = ["d-a1-31", "d-a1-32", "d-a2-31", "d-a2-32", "d-b1-31", "d-b1-32", "d-b2-31", "d-b2-32"];
+        const w3 = dd.filter((x) => W3_IDS.includes(x.id)); // الموجة الثالثة محددة بالمعرّف، لا بموضع يتغير مع إضافات لاحقة
+        ok(w3.length === W3_IDS.length && new Set(w3.map((x) => x.level)).size === 4, "K36i الموجةُ الثالثة: ثمانيةُ حواراتٍ محددةٌ، اثنانِ لكلِّ مستوى");
         const perLevel: Record<string, number> = {};
         for (const x of w3) perLevel[x.level] = (perLevel[x.level] ?? 0) + 1;
         ok(Object.values(perLevel).every((n) => n >= 2) && (perLevel.A1 === perLevel.A2) && (perLevel.B1 === perLevel.B2),
