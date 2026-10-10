@@ -587,15 +587,20 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
   const [queue, setQueue] = useState<VocabCard[]>([]);
   const [flipped, setFlipped] = useState(false);
   const [doneCount, setDoneCount] = useState(0);
+  const [queueStats, setQueueStats] = useState({ due: 0, fresh: 0, cap: 0, introduced: 0 });
   const card = queue[0];
 
   useEffect(() => {
     let pool: VocabCard[];
+    let dueCount = 0;
+    let freshCount = 0;
+    let introducedToday = 0;
     if (deck) {
       const pending = deck.cards.filter((c) => srs[c.id]?.reps === 0 && wasIntroducedToday(srs[c.id]));
       const due = deck.cards.filter((c) => srs[c.id] && isDue(srs[c.id]) && !pending.some((p) => p.id === c.id));
       const fresh = deck.cards.filter((c) => !srs[c.id]);
       const alreadyIntroduced = countNewCardsIntroducedToday(srs, alleVokabelIds);
+      introducedToday = alreadyIntroduced;
       const roomForNew = Math.max(0, newCardCap(tempo) - alreadyIntroduced);
       const pendingToday = pending.slice(0, 10);
       const dueSlots = Math.max(0, 10 - pendingToday.length);
@@ -603,11 +608,17 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
       const newSlots = Math.min(roomForNew, Math.max(0, 10 - pendingToday.length - dueToday.length));
       // المستحقّ أولاً، ثم استأنف البطاقة التي ظهرت ولم تُقيَّم، وأخيراً الجديد ضمن السقف.
       pool = [...dueToday, ...pendingToday, ...fresh.slice(0, newSlots)].slice(0, 10);
+      dueCount = due.length;
+      freshCount = fresh.length;
     } else {
       const all: VocabCard[] = Object.values(vocabMap).flatMap((d) => d.cards);
       pool = all.filter((c) => srs[c.id] && isDue(srs[c.id])).slice(0, 10);
+      dueCount = pool.length;
+      freshCount = 0;
     }
     setQueue(pool);
+    // R138/P-15: نُعرِض إحصائيات البطاقات (مستحقة/جديدة/مقدمة اليوم) في الـ state لكي تظهَر في الواجهة.
+    setQueueStats({ due: dueCount, fresh: freshCount, cap: newCardCap(tempo), introduced: introducedToday });
     // تُثبَّت الوتيرة عند بدء المهمة؛ تغيّرُ SRS داخل الطابور لا يعيدُ البطاقةَ الحالية.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [task.id, tempo]);
@@ -663,6 +674,8 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
       />
       <p data-testid="vocab-tempo-cap" style={{ margin: "-0.35rem 0 0.7rem", fontSize: "0.82rem", color: "var(--color-ink2)" }}>
         الحدّ الأقصى للبطاقات الجديدة اليوم: <span className="rtl-num">{newCardCap(tempo)}</span>؛ تُقدَّم المراجعات المستحقّة أولاً.
+        <br />
+        <strong>بطاقات اليوم:</strong> <span className="rtl-num">{queue.length}</span> في الدفعة الحالية · مراجعات مستحقة إجمالاً: <span className="rtl-num">{queueStats.due}</span> · بطاقات جديدة متبقية في الحزمة: <span className="rtl-num">{queueStats.fresh}</span> · بطاقات جديدة قُدّمت اليوم: <span className="rtl-num">{queueStats.introduced}</span>/<span className="rtl-num">{queueStats.cap}</span>
       </p>
       {card ? (
         <div className="card" style={{ padding: "1.4rem", textAlign: "center", background: "var(--color-paper2)", cursor: "pointer" }} onClick={() => setFlipped(true)}>

@@ -2066,13 +2066,14 @@
   },
   "a2-wechsel": {
     "id": "a2-wechsel",
-    "titleDe": "Wechselpräpositionen",
-    "titleAr": "حروف الجرّ المتغيّرة (مكان أم اتجاه؟)",
+    "titleDe": "Wechselpräpositionen in Wegbeschreibung & Bewegung",
+    "titleAr": "حروف الجر المتغيرة في وصف الطريق والحركة",
     "level": "A2",
-    "ziel": "تطبّق Dativ/Akkusativ بعد حروف الاتجاه الثنائية في سياقات جديدة.",
+    "ziel": "تستخدم حروف Wechsel في وصف الطريق والوجهة: über, durch, entlang, um … herum، بالإضافة إلى التمييز بين wo/wohin في السياقات المعقدة.",
     "voraus": [
-      "a2-dativ",
-      "a1-wechsel"
+      "a1-wechsel",
+      "a1-akkusativ",
+      "a1-dativ"
     ],
     "anwendung": {
       "ar": "احكِ رحلة فندقية: أين كنت (im Hotel) وإلى أين ذهبت (ins Museum) — 4 جمل.",
@@ -2104,19 +2105,31 @@
         "explanationAr": "hängen (سكون) + an + Dativ: an der Wand."
       }
     ],
-    "summaryAr": "تسعة حروف جرّ: an, auf, hinter, in, neben, über, unter, vor, zwischen. إذا أجبت عن «أين؟» (مكان ثابت) ← Dativ، وإذا أجبت عن «إلى أين؟» (حركة واتجاه) ← Akkusativ. القاعدة البصرية: الحركة مع السهم ← Akkusativ، البقاء مع النجمة ← Dativ.",
+    "summaryAr": "في A1 تعلّمت القاعدة البصرية: مكان ثابت Dativ، حركة Akkusativ. في A2 تضيف: (1) حروف جر إضافية تستخدم مع وصف الطريق: über (يعبر/فوق), durch (عبر), entlang (على طول — غالباً مع Dativ بعد الاسم), um … herum (حول). (2) أين نضع حرف الجر إذا كان هناك ظرف مكان (gehen Sie die Straße entlang). (3) أفعى تفرض اتجاهاً: stellen/legen/setzen/hängen دائماً Akkusativ (حركة)، بينما stehen/liegen/sitzen/hängen ثابتة.",
     "rules": [
       {
-        "de": "Wo? → Dativ: Das Bild hängt an der Wand.",
-        "ar": "أين يعلق؟ مكان ثابت — Wo? (مكان) → Dativ: Das Bild hängt an der Wand."
+        "de": "entlang + Dativ nach dem Nomen: Gehen Sie die Straße entlang.",
+        "ar": "entlang يأتي غالباً بعد الاسم ومع Dativ."
       },
       {
-        "de": "Wohin? → Akkusativ: Ich hänge das Bild an die Wand.",
-        "ar": "إلى أين؟ حركة — Wohin? (اتجاه) → Akkusativ: Ich hänge das Bild an die Wand."
+        "de": "über + Akk. (Bewegung): Gehen Sie über die Brücke.",
+        "ar": "über مع Akkusativ = يعبر فوق."
       },
       {
-        "de": "der→dem (Dat) / den (Akk) · die→der (Dat) / die (Akk) · das→dem (Dat) / das (Akk)",
-        "ar": "احفظ هذا الجدول — عليه نصف التعابير اليومية"
+        "de": "durch + Akk.: Gehen Sie durch den Park.",
+        "ar": "durch مع Akkusativ = عبر."
+      },
+      {
+        "de": "um … herum: Es gibt einen Garten um das Haus herum.",
+        "ar": "um … herum = حول."
+      },
+      {
+        "de": "stellen/legen/setzen/hängen + Akk. (Bewegung →)",
+        "ar": "أفعال الوضع المتحركة: يضع شيئاً في مكان ما → حركة → Akkusativ."
+      },
+      {
+        "de": "stehen/liegen/sitzen/hängen + Dat./Nominativ (Zustand)",
+        "ar": "أفعال الوجود/الثبات → حالة ثابتة → Dativ (مع حرف جر)."
       }
     ],
     "examples": [
@@ -2221,10 +2234,10 @@
   },
   "a2-modal": {
     "id": "a2-modal",
-    "titleDe": "Modalverben & ihr Präteritum",
-    "titleAr": "الأفعال الناقصة وماضيها",
+    "titleDe": "Modalverben im Präteritum: konnte, musste, sollte, wollte, durfte",
+    "titleAr": "ماضي الأفعال الناقصة: konnte/musste/sollte/wollte/durfte",
     "level": "A2",
-    "ziel": "تستخدم الأفعال الناقصة في المضارع والماضي (konnte/musste/wollte).",
+    "ziel": "تتقن صيغ Präteritum للأفعال الناقصة فقط — هذه الصيغ تُستعمل حتى في الكلام اليومي أكثر من Perfekt.",
     "voraus": [
       "a1-modalverben",
       "a2-praeteritum-grund"
@@ -2264,7 +2277,7 @@
         "points": 2
       }
     ],
-    "summaryAr": "können (يستطيع), müssen (يجب), dürfen (يُسمح), wollen (يريد), sollen (يُنصح/يُطلب), möchten (يرغب). الفعل الرئيسي يذهب عارياً (بدون to!) للنهاية. في الماضي البسيط تصير: konnte, musste, durfte, wollte, sollte — وهذه تستعمل حتى في الكلام اليومي مع Perfekt!",
+    "summaryAr": "هذا الدرس لا يعيد تصريف الأفعال الناقصة في المضارع (انظر a1-modalverben)، بل يدرس فقط Präteritum: ich konnte, ich musste, ich sollte, ich wollte, ich durfte. في اللغة المنطوقة تُستعمل هذه الصيغ أكثر من Perfekt للأفعال الناقصة.",
     "rules": [
       {
         "de": "Modalverb auf Position 2, Vollverb im Infinitiv am Satzende: Ich muss heute arbeiten.",
@@ -3882,12 +3895,13 @@
   },
   "a2-dativ": {
     "id": "a2-dativ",
-    "titleDe": "Dativ — der dritte Fall",
-    "titleAr": "حالة Dativ (المجرور/المفعول به غير المباشر)",
+    "titleDe": "Dativ-Verben (helfen, danken, gefallen …)",
+    "titleAr": "أفعال Dativ (helfen/danken/gefallen/gehören/antworten/fehlen/passen/schmecken)",
     "level": "A2",
-    "ziel": "تستخدم Dativ مع الأفعال (helfen/danken/gehören) وحروف الجر.",
+    "ziel": "تتقن الأفعال التي تجرّ دائماً المفعول به غير المباشر (Dativ) — وهي مجموعة صغيرة شائعة جداً لا يمكن قول جمل صحيحة من دونها. لا تعيد درس Dativ الأساسي من A1، بل تضيف الأفعال وحدها.",
     "voraus": [
-      "a1-dativ"
+      "a1-dativ",
+      "a1-akkusativ"
     ],
     "anwendung": {
       "ar": "اشرح شكوى عند الطبيب: Mir tut … weh / Ich danke Ihnen — 4 جمل.",
@@ -3919,23 +3933,35 @@
         "explanationAr": "wehtun + Dativ: Mir tut der Kopf weh."
       }
     ],
-    "summaryAr": "Dativ هو «لمن؟ من أجل مَن؟»: Ich gebe dem Mann das Buch (أعطي الرجلَ الكتابَ). كثير من حروف الجر تفرضه دائماً: mit, nach, aus, zu, von, bei, seit, gegenüber. ومع الأدوات: dem (der/das) و der (die).",
+    "summaryAr": "بعد أن تعلّمت حروف جر Dativ في A1، يأتي دور الأفعال التي تأخذ Dativ دائماً: helfen (يساعد)، danken (يشكر)، gefallen (يعجب)، gehören (يعود/يملك)، antworten (يجيب)، passen (يناسب)، fehlen (يغيب/ينقص)، schmecken (يستلذ/يؤكل جيداً), glauben (يصدّق), wehtun (يؤلم). تذكير: هذه الأفعال لا تأخذ Akkusativ لشخص المخاطَب.",
     "rules": [
       {
-        "de": "Ich helfe dem Kind.",
-        "ar": "الفعل المفيد يطلب Dativ: helfen, danken, gefallen, antworten, gehören, schmecken — أساعد الطفلَ (لأجله)"
+        "de": "helfen + Dativ: Ich helfe dem Kind. (لا: ich helfe das Kind)",
+        "ar": "helfen تأخذ Dativ لا Akkusativ."
       },
       {
-        "de": "mit/nach/aus/zu/von/bei/seit/gegenüber + Dativ",
-        "ar": "قاعدة ذهبية: هذه الحروف معها Dativ دائماً بلا استثناء"
+        "de": "danken + Dativ: Ich danke dir/Ihnen.",
+        "ar": "danken تأخذ Dativ."
       },
       {
-        "de": "Ich gebe meinem Bruder das Buch.",
-        "ar": "الترتيب: الفعل + المفعول به غير المباشر (Dativ) + المفعول المباشر (Akkusativ)"
+        "de": "gefallen + Dativ: Das Buch gefällt mir. (لا: mich)",
+        "ar": "gefallen يعجب، والشخص المُعجَب به في Dativ."
       },
       {
-        "de": "Personalpronomen Dativ: mir, dir, ihm/ihr/ihm, uns, Ihnen/ihnen",
-        "ar": "Wie geht es dir? — هل حالك؟ يطلب Dativ"
+        "de": "gehören + Dativ: Das Auto gehört meinem Vater.",
+        "ar": "gehören يملك/يعود لـ، مع Dativ."
+      },
+      {
+        "de": "fehlen + Dativ: Du fehlst mir. (أفتقدك = أنت غائبٌ عنّي)",
+        "ar": "fehlen = يَغيب/ينقص. جملة «افتقدك» تُقال Du fehlst mir."
+      },
+      {
+        "de": "schmecken + Dativ: Das Essen schmeckt mir gut.",
+        "ar": "schmecken يستسيغ."
+      },
+      {
+        "de": "weh tun + Dativ: Der Kopf tut mir weh.",
+        "ar": "weh tun = يؤلم. مكان الألم في المقدمة، والمجروح في Dativ."
       }
     ],
     "tables": [

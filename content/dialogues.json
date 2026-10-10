@@ -10507,5 +10507,65 @@
     "de": "Guten Abend. Ich habe ein Problem mit meinem Zimmer.\nGuten Abend. Was ist los?\nDas Zimmer ist nicht sauber und das Licht im Bad funktioniert nicht.\nEs tut mir sehr leid. Ich schicke sofort jemand, der das repariert.\nUnd das WLAN funktioniert auch nicht!\nIch kann Ihnen ein anderes Zimmer anbieten. Zimmer 214 ist frei.\nVielen Dank, das ist sehr freundlich.",
     "ar": "— مساء الخير. عندي مشكلة في غرفتي.\n— مساء الخير. ما الأمر؟\n— الغرفة غير نظيفة والمصباح في الحمام لا يعمل.\n— أعتذر جداً. سأرسل حالاً شخصاً ليصلح ذلك.\n— والـWLAN لا يعمل أيضاً!\n— يمكنني أن أعرض عليك غرفة أخرى. الغرفة 214 شاغرة.\n— شكراً جزيلاً، هذا لطف منك.",
     "questions": []
+  },
+  {
+    "id": "dlg-a2-terminabsage",
+    "level": "A2",
+    "titleDe": "Einen Termin absagen",
+    "titleAr": "إلغاء موعد (طبيب/إدارة)",
+    "de": "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?\nGuten Tag, hier spricht Sami Ben Salah. Ich habe morgen um zehn Uhr einen Termin, aber ich kann leider nicht kommen.\nKein Problem. Möchten Sie einen neuen Termin vereinbaren?\nJa, bitte. Geht es nächsten Dienstag um elf Uhr?\nAm Dienstag um elf ist noch frei. Ich trage Sie ein. Tut mir leid, dass Sie nicht kommen können.\nVielen Dank, auf Wiederhören!\nAuf Wiederhören!",
+    "ar": "— نهار سعيد، عيادة الدكتور مولر، كيف يمكنني المساعدة؟\n— نهار سعيد، معكم سامي بن صالح. عندي موعد غداً الساعة العاشرة لكنني للأسف لا أستطيع الحضور.\n— لا مشكلة. هل تريد حجز موعد جديد؟\n— نعم من فضلك. هل الثلاثاء القادم الساعة الحادية عشرة ممكن؟\n— الثلاثاء في الحادية عشرة ما زال شاغراً. سأُسجّل لك. آسف لأنك لا تستطيع الحضور.\n— شكراً جزيلاً، إلى اللقاء!\n— إلى اللقاء!",
+    "questions": [
+      {
+        "q": "Warum ruft Sami an?",
+        "options": [
+          "Er will einen Termin absagen",
+          "Er will zum Arzt gehen",
+          "Er hat Schmerzen"
+        ],
+        "answer": "Er will einen Termin absagen",
+        "explanationAr": "سامي يتصل لإلغاء موعده غداً."
+      },
+      {
+        "q": "Wann ist der neue Termin?",
+        "options": [
+          "morgen um zehn",
+          "nächsten Dienstag um elf",
+          "um elf heute"
+        ],
+        "answer": "nächsten Dienstag um elf",
+        "explanationAr": "الموعد الجديد الثلاثاء القادم الساعة 11."
+      }
+    ]
+  },
+  {
+    "id": "dlg-a2-krankenversicherung",
+    "level": "A2",
+    "titleDe": "Bei der Krankenversicherung",
+    "titleAr": "في التأمين الصحي",
+    "de": "Guten Tag, ich möchte mich krankenversichern.\nHerzlich willkommen bei der AOK. Sind Sie berufstätig oder Student?\nIch bin berufstätig und arbeite als Ingenieur.\nDann brauche ich Ihren Personalausweis, die Arbeitgeberbescheinigung und Ihre Steuer-ID.\nHier sind meine Unterlagen. Wie viel kostet die Versicherung?\nEtwa 14,6 Prozent Ihres Bruttogehalts, je die Hälfte tragen Sie und Ihr Arbeitgeber.\nWann bin ich versichert?\nAb dem ersten Arbeitstag.",
+    "ar": "— نهار سعيد، أريد الاشتراك في التأمين الصحي.\n— أهلاً وسهلاً بك في AOK. هل أنت موظف أم طالب؟\n— أنا موظف وأعمل مهندساً.\n— أحتاج بطاقتك الشخصية، شهادة صاحب العمل، ورقمك الضريبي.\n— ها هي المستندات. بكم التأمين؟\n— حوالي 14,6% من راتبك الإجمالي، تدفع نصفها ويدفع صاحب العمل النصف الآخر.\n— متى أبدأ التغطية؟\n— من أول يوم عمل.",
+    "questions": [
+      {
+        "q": "Wie hoch ist der Versicherungsbeitrag etwa?",
+        "options": [
+          "14,6% vom Bruttogehalt",
+          "20%",
+          "gar nichts"
+        ],
+        "answer": "14,6% vom Bruttogehalt",
+        "explanationAr": "الاشتراك حوالي 14,6% من الراتب الإجمالي."
+      },
+      {
+        "q": "Welche Unterlagen braucht die Mitarbeiterin?",
+        "options": [
+          "Personalausweis, Arbeitgeberbescheinigung, Steuer-ID",
+          "nur den Pass",
+          "eine Wohnungsmeldung"
+        ],
+        "answer": "Personalausweis, Arbeitgeberbescheinigung, Steuer-ID",
+        "explanationAr": "تحتاج بطاقة+شهادة رب عمل+رقم ضريبي."
+      }
+    ]
   }
 ]
