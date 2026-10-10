@@ -187,7 +187,7 @@ reading_evidence = {
     't-a2-25-q1': 'ein Kilo für 1,49 Euro.',
     't-a2-26-q1': 'Bitte sag mir bis Donnerstag Bescheid, ob du kommen kannst.',
     't-a2-27-q1': 'Die Kaltmiete beträgt 580 Euro.',
-    't-a2-28-q1': 'In der Regel schicken wir die Nummer innerhalb von 10 Tagen per Post.',
+    't-a2-28-q1': 'Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist.',
     't-a2-29-q1': 'Der Kurs ist dreimal pro Woche: montags, mittwochs und freitags',
     't-a2-30-q1': 'Das kocht meine Mutter jeden Freitag in Tunesien.',
     't-b1-31-q1': 'Der Grund war ein neues Jobangebot als Softwareentwicklerin.',
@@ -195,13 +195,13 @@ reading_evidence = {
     't-b1-32-q1': 'Seit einem Jahr esse ich kein Fleisch mehr.',
     't-b1-32-q2': 'Natürlich muss ich darauf achten, genügend Eisen und Eiweiß zu essen',
     't-b1-33-q1': 'bei einer Marketingfirma in Köln.',
-    't-b1-34-q1': 'hat sich am Knie verletzt.',
+    't-b1-34-q1': 'verletzte sich leicht am Knie.',
     't-b1-35-q1': 'Ich schlage vor, dass die Stadt mehr Kontrollen durchführt und höhere Geldstrafen verhängt.',
     't-b2-36-q1': 'Kritiker wenden ein, dass späterer Unterricht die Eltern vor organisatorische Probleme stellt',
     't-b2-37-q1': 'war ich überrascht, wie direkt Kollegen und Nachbarn ihre Meinung sagten.',
-    't-b2-38-q1': 'Arbeitgeberverbände warnen davor, dass in produzierenden Branchen Maschinen stillstehen könnten und die Dienstleistungsqualität sinkt.',
+    't-b2-38-q1': 'Arbeitgeberverbände warnen davor, dass in produzierenden Branchen Maschinen stillstehen könnten und die Dienstleistungsqualität sinken könnte.',
     't-b2-39-q1': 'Gründe sind hohe Mieten, beengte Wohnverhältnisse und der Wunsch nach mehr Natur und Ruhe.',
-    't-b2-40-q1': 'Menschen nach psychologischen Studien durchschnittlich ein- bis zweimal pro Tag.',
+    't-b2-40-q1': 'Andere sollen Mitmenschen schonen.',
 }
 for t in texts:
     for question in t.get('questions', []):
