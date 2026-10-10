@@ -106,6 +106,17 @@ export const eselsbruecken = brueckenRaw as unknown as Eselsbruecke[];
 export function getBrueckenFor(gramId: string): Eselsbruecke[] {
   return eselsbruecken.filter((b) => b.gramIds.includes(gramId));
 }
+/** R138/P-22: إيجاد التركات/الشفرات التي تخص كلمة مفردة بالبحث في storyAr+zeilen عن lemma. */
+export function getBrueckenForWort(wortDe: string): Eselsbruecke[] {
+  if (!wortDe) return [];
+  const base = wortDe.toLowerCase().replace(/\(.*?\)/g, "").trim().split(/[\s,/]/)[0];
+  if (base.length < 3) return [];
+  const re = new RegExp(`\\b${base.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
+  return eselsbruecken.filter((b) => {
+    if (re.test(b.storyAr) || re.test(b.titleAr)) return true;
+    return b.zeilen.some((z) => re.test(z.de) || re.test(z.code));
+  }).slice(0, 2);
+}
 
 export function getGrammar(id: string): GrammarTopic | undefined {
   return grammarMap[id];

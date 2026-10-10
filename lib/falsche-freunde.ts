@@ -384,10 +384,38 @@ export function findFalschenFreund(wort: string): FalscherFreund | undefined {
   return FALSCHE_FREUNDE.find((f) => f.de.toLowerCase() === w);
 }
 
-/** اختيار عدد من الأصدقاء الكاذبين عشوائياً حسب المستوى */
+/** R138/P-14: ترتيب الأصدقاء الكاذبين بحسب «يوم ظهور الكلمة الألمانية» حتى يُعرضوا
+ *  في الوقت الذي يتعلّم فيه الطالب الكلمة (لا بترتيب ثابت). غير الظاهر في
+ *  دفاتر المفردات يُرتَّب هجائياً في نهاية القائمة. */
 export function freundeByLevel(level: "A1"|"A2"|"B1"|"B2", max = 5): FalscherFreund[] {
+  const ord: Record<string, number> = { A0: 0, A1: 1, A2: 2, B1: 3, B2: 4 };
+  const cur = ord[level] ?? 4;
+  // استنتاج أول ظهور: نمر على دفاتر المفردات مرتّبة حسب المستوى (A1→B2) ثم تسلسلياً.
+  const firstDay = new Map<string, number>();
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { vocabMap } = require("./content") as typeof import("./content");
+    const decks = Object.values(vocabMap).sort((a, b) => (ord[a.level] ?? 0) - (ord[b.level] ?? 0));
+    let seq = 0;
+    for (const deck of decks) {
+      if ((ord[deck.level] ?? 0) > cur) continue;
+      for (const card of deck.cards) {
+        seq++;
+        const key = (card.de ?? "").toLowerCase().split(/[,/(/\s]/)[0];
+        if (key && !firstDay.has(key)) firstDay.set(key, seq);
+      }
+    }
+  } catch { /* تجاهل: الاستيراد الدائري آمن هنا */ }
   const pool = FALSCHE_FREUNDE.filter((f) => f.level === level || earlierLevel(f.level, level));
-  // خلط بسيط ثابت
+  const keyOf = (f: FalscherFreund) => f.de.toLowerCase().split(/[,/(/\s]/)[0];
+  pool.sort((a, b) => {
+    const oa = ord[a.level] ?? 0, ob = ord[b.level] ?? 0;
+    if (oa !== ob) return oa - ob;
+    const da = firstDay.get(keyOf(a)) ?? 999999;
+    const db = firstDay.get(keyOf(b)) ?? 999999;
+    if (da !== db) return da - db;
+    return a.de.localeCompare(b.de);
+  });
   return pool.slice(0, max);
 }
 

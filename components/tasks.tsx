@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { istPhasenPruefung } from "@/lib/phasen";
 import type { DayTask, Exercise, SrsState, UiLang, VocabCard, Schreibaufgabe, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
 import { POS_AR } from "@/lib/types";
-import { eselsbruecken, getBrueckenFor, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten } from "@/lib/content";
+import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday } from "@/lib/srs";
@@ -736,6 +736,20 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
                   💡 {getMnemonik(card.de)!.tipp}
                 </div>
               )}
+              {(() => {
+                // R138/P-22: روابط لشفرات Eselsbrücken المتعلقة بالكلمة
+                const bs = getBrueckenForWort(card.de);
+                if (!bs.length) return null;
+                return (
+                  <div style={{ marginTop: "0.4rem", fontSize: "0.82rem", display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
+                    {bs.map((b) => (
+                      <span key={b.id} className="chip" style={{ background: "var(--color-b2-soft, rgba(123,31,162,0.12))" }}>
+                        {b.emoji} شفرة: {b.titleAr}
+                      </span>
+                    ))}
+                  </div>
+                );
+              })()}
               {card.exampleDe && (
                 <div style={{ marginTop: "0.6rem" }}>
                   <De>{card.exampleDe}</De>
