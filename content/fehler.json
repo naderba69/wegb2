@@ -1201,370 +1201,462 @@
   },
   {
     "id": "f-a0-001",
+    "kat": "konstruktion",
+    "level": "A0",
     "falsch": "*ich bin gehen",
     "richtig": "ich gehe",
     "regelAr": "الفعل يصرف للمتكلم: gehen → ich gehe (لا نستخدم bin مع الفعل الرئيسي).",
-    "level": "A0",
-    "kategorie": "Verbkonjugation"
+    "kategorie": "Verbkonjugation",
+    "ar": "الفعل المصرف في الجملة الخبرية يأتي في المرتبة الثانية؛ لا نستخدم sein مع مصدر الفعل للتعبير عن المضارع، بل نقول: «ich gehe»."
   },
   {
     "id": "f-a0-002",
+    "kat": "konstruktion",
+    "level": "A0",
     "falsch": "*ich habe 30 Jahr alt",
     "richtig": "ich bin 30 Jahre alt",
     "regelAr": "العمر يأتي مع فعل sein، والاسم Jahre بالجمع بعد رقم غير الواحد.",
-    "level": "A0",
-    "kategorie": "Alter / sein"
+    "kategorie": "Alter / sein",
+    "ar": "العمر يُعبَّر عنه بالفعل sein مع الصيغة «Jahre alt»؛ لذلك نقول «ich bin 30 Jahre alt» لا «ich habe … alt»."
   },
   {
     "id": "f-a0-003",
+    "kat": "konstruktion",
+    "level": "A0",
     "falsch": "*ich heiße Ali bin",
     "richtig": "ich heiße Ali",
     "regelAr": "heißen وحده يكفي لذكر الاسم؛ لا داعي لكلمة bin.",
-    "level": "A0",
-    "kategorie": "heißen"
+    "kategorie": "heißen",
+    "ar": "الفعل heißen يأخذ الاسم مباشرةً؛ إضافة bin بعد الاسم تترك الفعل بلا تتمّة وتكرر معنى التعريف بالنفس."
   },
   {
     "id": "f-a0-004",
+    "kat": "wortstellung",
+    "level": "A0",
     "falsch": "*ich bin ein Mann aus Syrien heiße Karim",
     "richtig": "ich heiße Karim und komme aus Syrien",
     "regelAr": "جملتان مستقلتان تربطهما und؛ لا تُجعل جملة واحدة بلا فعل رابط.",
-    "level": "A0",
-    "kategorie": "Satzbau"
+    "kategorie": "Satzbau",
+    "ar": "التعريف بالاسم والأصل يحتاج جملتين مربوطتين بـund؛ بعد «ich heiße Karim» يأتي «und komme aus Syrien»، لا فعلٌ ملتصق بلا رابط."
   },
   {
     "id": "f-a0-005",
-    "falsch": "*ich wohne in Berlin seit 2022",
-    "richtig": "ich wohne seit 2022 in Berlin",
-    "regelAr": "الزمن/المدة (seit …) غالباً قبل المكان في الجملة البسيطة (حسب قواعد TeKaMoLo تمهيداً للA1).",
+    "kat": "wortstellung",
     "level": "A0",
-    "kategorie": "Wortstellung"
+    "falsch": "*Seit 2022 ich wohne in Berlin.",
+    "richtig": "Seit 2022 wohne ich in Berlin.",
+    "regelAr": "تحتل عبارة الزمن «Seit 2022» الموقع الأول؛ لذلك يجب أن يأتي الفعل المصرف في الموقع الثاني قبل الفاعل.",
+    "kategorie": "Wortstellung",
+    "ar": "إذا بدأت الجملة بعبارة الزمن «Seit 2022»، تأتي بعدها مباشرةً صيغة الفعل المصرفة ثم الفاعل: «Seit 2022 wohne ich …»."
   },
   {
     "id": "f-a0-006",
+    "kat": "artikel",
+    "level": "A0",
     "falsch": "*das ist ein Buch rot",
     "richtig": "das ist ein rotes Buch",
     "regelAr": "الصفة تأتي قبل الاسم في الألمانية، لا بعده.",
-    "level": "A0",
-    "kategorie": "Adjektivstellung"
+    "kategorie": "Adjektivstellung",
+    "ar": "الصفة قبل الاسم بعد أداة النكرة تتلقى نهاية الجنس والحالة؛ Buch محايد في الرفع، لذا نقول «ein rotes Buch»."
   },
   {
     "id": "f-a0-007",
+    "kat": "wortstellung",
+    "level": "A0",
     "falsch": "*ich nicht verstehe",
     "richtig": "ich verstehe nicht",
     "regelAr": "nicht في نهاية الجملة بعد الفعل المصرف في جملة بسيطة.",
-    "level": "A0",
-    "kategorie": "Negation"
+    "kategorie": "Negation",
+    "ar": "في الجملة الخبرية البسيطة يأتي الفعل المصرف في الموقع الثاني؛ النفي «nicht» يوضع بعد بقية العبارة: «ich verstehe nicht»."
   },
   {
     "id": "f-a0-008",
+    "kat": "artikel",
+    "level": "A0",
     "falsch": "*ein Frau",
     "richtig": "eine Frau",
     "regelAr": "Frau اسم مؤنث → المُنكّر eine، der → ein، die → eine، das → ein.",
-    "level": "A0",
-    "kategorie": "Artikel"
+    "kategorie": "Artikel",
+    "ar": "Frau اسم مؤنث؛ لذلك تأخذ أداة النكرة النهاية المؤنثة «eine» لا «ein»."
   },
   {
     "id": "f-b2-028",
+    "kat": "konstruktion",
+    "level": "B2",
     "falsch": "*Obwohl er viel lernt, aber besteht er nicht.",
     "richtig": "Obwohl er viel lernt, besteht er nicht.",
     "regelAr": "obwohl في الجملة الثانوية يدفع الفعل للنهاية، ولا تستخدم aber معها (فهي تحمل التنازع وحدها).",
-    "level": "B2",
-    "kategorie": "Konzessivsatz"
+    "kategorie": "Konzessivsatz",
+    "ar": "«Obwohl» يربط الجملة التابعة بالتنازل، فلا نضيف «aber» رابطاً ثانياً في الجملة الرئيسة؛ يكفي «Obwohl …, besteht …»."
   },
   {
     "id": "f-b2-029",
+    "kat": "konstruktion",
+    "level": "B2",
     "falsch": "*Der Mann, der ich ihn gestern gesehen habe.",
     "richtig": "Der Mann, den ich gestern gesehen habe.",
     "regelAr": "الاسم الموصول في حالة المفعول به المذكر يأخذ den، ولا نعيد الضمير ihn في الجملة النسبية.",
-    "level": "B2",
-    "kategorie": "Relativsatz"
+    "kategorie": "Relativsatz",
+    "ar": "الرجل هو مفعول الفعل «gesehen»، ولذلك يلزم ضمير الوصل في النصب «den» لا الرفع «der»."
   },
   {
     "id": "f-b2-030",
-    "falsch": "*Während ich studierte, habe ich viel gelernt.",
-    "richtig": "Während ich studierte, lernte ich viel / habe ich viel gelernt (wenn Betonung auf Ergebnis).",
-    "regelAr": "Präteritum في جملة während يتناسب مع نص سردي في الماضي؛ Perfekt مقبول أيضاً لكن Präteritum أكثر أصالة في الكتابة الرسمية.",
+    "kat": "wortstellung",
     "level": "B2",
-    "kategorie": "Temporalsatz / Tempus"
+    "falsch": "*Während ich studierte ich habe viel gelernt.",
+    "richtig": "Während ich studierte, lernte ich viel.",
+    "regelAr": "«Während» تفتح جملة تابعة وفعلها في النهاية؛ وإذا تقدمت، تبدأ الجملة الرئيسة بعد الفاصلة بالفعل قبل الفاعل. يجوز Präteritum أو Perfekt بحسب السياق.",
+    "kategorie": "Temporalsatz / Tempus",
+    "ar": "بعد «während» يأتي الفعل المصرف في نهاية الجملة التابعة؛ وبعد الفاصلة يبدأ الفعل الرئيس قبل الفاعل. لا نكرر الفاعل قبل الفعل ولا نهمل الفاصلة."
   },
   {
     "id": "f-b2-031",
+    "kat": "praeposition",
+    "level": "B2",
     "falsch": "*Ich freue mich auf, dass du kommst.",
     "richtig": "Ich freue mich darauf, dass du kommst.",
     "regelAr": "أفعال مع صرفة + dass تتطلب إشارية (darauf، darüber) قبل dass، لا حرف جر منفصل.",
-    "level": "B2",
-    "kategorie": "Präpositionaladverb + dass"
+    "kategorie": "Präpositionaladverb + dass",
+    "ar": "الفعل «sich freuen auf» يحتاج عند وصلِه بجملة «dass» إلى ضمير الإحالة «darauf»: «Ich freue mich darauf, dass …»."
   },
   {
     "id": "f-b2-032",
-    "falsch": "*Je mehr du lernst, desto besser wirst du sprechen.",
+    "kat": "wortstellung",
+    "level": "B2",
+    "falsch": "*Je mehr du lernst, desto besser du sprichst.",
     "richtig": "Je mehr du lernst, desto besser sprichst du.",
     "regelAr": "بعد je … desto يأتي الفعل في المرتبة الثانية ولا حاجة لـ werden إن كان الحال في الحاضر.",
-    "level": "B2",
-    "kategorie": "Proportionalvergleich"
+    "kategorie": "Proportionalvergleich",
+    "ar": "في تركيب «je …, desto …» تتصدر عبارة المقارنة الجملة الثانية، فيأتي الفعل المصرف قبل الفاعل: «desto besser sprichst du»."
   },
   {
     "id": "f-b2-033",
-    "falsch": "*Laut des Berichts gibt es mehr Arbeitslose.",
-    "richtig": "Laut dem Bericht gibt es mehr Arbeitslose.",
-    "regelAr": "laut تُستخدم مع Dativ غالباً (laut dem Bericht)؛ Genitiv (laut des Berichts) فصيح جداً ونادر في اللغة اليومية.",
+    "kat": "praeposition",
     "level": "B2",
-    "kategorie": "Präposition"
+    "falsch": "*Laut den Bericht gibt es mehr Arbeitslose.",
+    "richtig": "Laut dem Bericht gibt es mehr Arbeitslose.",
+    "regelAr": "«laut» تقبل الداتيف أو الجينيتيف؛ في الاستعمال اليومي يشيع الداتيف «laut dem Bericht»، ويصح أيضاً الجينيتيف «laut des Berichts».",
+    "kategorie": "Präposition",
+    "ar": "«laut» يأخذ هنا الداتيف أو الجينيتيف؛ مع الاسم المفرد نقول «laut dem Bericht» أو «laut des Berichts»، لا أداة النصب «den»."
   },
   {
     "id": "f-b2-034",
+    "kat": "konstruktion",
+    "level": "B2",
     "falsch": "*Das Buch ist wert zu lesen.",
     "richtig": "Das Buch ist lesenswert / Es lohnt sich, das Buch zu lesen.",
     "regelAr": "الصفة lesenswert هي الصياغة الصحيحة، «wert zu + Infinitiv» ليست ألمانية قياسية.",
-    "level": "B2",
-    "kategorie": "Adjektiv / -wert"
+    "kategorie": "Adjektiv / -wert",
+    "ar": "«wert sein» يحتاج تركيباً مكتملاً مثل «es wert sein, etwas zu tun»؛ والأبسط هنا الصفة المركبة «lesenswert»."
   },
   {
     "id": "f-b2-035",
-    "falsch": "*Dadurch, dass ich viel lese, verbessert sich mein Deutsch.",
-    "richtig": "Dadurch, dass ich viel lese, verbessere ich mein Deutsch.",
-    "regelAr": "sich verbessern يعود على الفاعل، وإن كان الفاعل Deutsch حيادياً لكن الفاعل الصحيح هو ich في صيغة aktive، أو: mein Deutsch verbessert sich.",
+    "kat": "wortstellung",
     "level": "B2",
-    "kategorie": "Reflexiv"
+    "falsch": "*Dadurch, dass ich viel lese, mein Deutsch verbessert sich.",
+    "richtig": "Dadurch, dass ich viel lese, verbessert sich mein Deutsch.",
+    "regelAr": "بعد الجملة التابعة المتقدمة يأتي فعل الجملة الرئيسة قبل الفاعل: «verbessert sich mein Deutsch».",
+    "kategorie": "Reflexiv",
+    "ar": "بعد الجملة التابعة المتقدمة «Dadurch, dass …» تأتي جملة رئيسة؛ فعلها المصرف يسبق الفاعل: «verbessert sich mein Deutsch»."
   },
   {
     "id": "f-a1-032",
-    "falsch": "*ich gehe zu Hause",
-    "richtig": "ich gehe nach Hause",
-    "regelAr": "نستخدم nach Hause للذهاب إلى البيت (حركة)، و zu Hause للوجود فيه (استقرار).",
+    "kat": "praeposition",
     "level": "A1",
-    "kategorie": "Präposition / Haus"
+    "falsch": "*Ich gehe zur Hause.",
+    "richtig": "Ich gehe nach Hause.",
+    "regelAr": "نستخدم nach Hause للذهاب إلى البيت (حركة)، و zu Hause للوجود فيه (استقرار).",
+    "kategorie": "Präposition / Haus",
+    "ar": "عند قصد الحركة إلى البيت نستعمل التعبير الاتجاهي «nach Hause»؛ أما «zu Hause» فيدل على المكان، و«zur Hause» ليست الصيغة."
   },
   {
     "id": "f-a1-033",
+    "kat": "konstruktion",
+    "level": "A1",
     "falsch": "*ich habe 25 Jahre alt",
     "richtig": "ich bin 25 Jahre alt",
     "regelAr": "العمر يأتي مع فعل sein، لا haben.",
-    "level": "A1",
-    "kategorie": "Alter / sein"
+    "kategorie": "Alter / sein",
+    "ar": "العمر يُبنى بـsein لا بـhaben: «Ich bin 25 Jahre alt»؛ «habe … Jahre alt» نقل حرفي من العربية."
   },
   {
     "id": "f-a1-034",
+    "kat": "wortstellung",
+    "level": "A1",
     "falsch": "*Mein Bruder seit drei Jahren in Berlin wohnt.",
     "richtig": "Mein Bruder wohnt seit drei Jahren in Berlin.",
     "regelAr": "في الجملة الرئيسية يأتي الفعل المصرف في الموقع الثاني: Mein Bruder (1) wohnt (2). لا يوضع الفعل في النهاية لمجرد وجود عبارة seit drei Jahren.",
-    "level": "A1",
-    "kategorie": "Wortstellung / Verbzweit"
+    "kategorie": "Wortstellung / Verbzweit",
+    "ar": "في الجملة الرئيسة يجب أن يحتل الفعل المصرف الموقع الثاني؛ يأتي «wohnt» بعد الفاعل مباشرةً، لا في آخر الجملة."
   },
   {
     "id": "f-a1-035",
+    "kat": "wortstellung",
+    "level": "A1",
     "falsch": "*Ich möchte trinken ein Wasser.",
     "richtig": "Ich möchte ein Wasser trinken.",
     "regelAr": "الفعل المصرف (möchte) في المرتبة الثانية، والمصدر في النهاية.",
-    "level": "A1",
-    "kategorie": "Modalverb + Infinitiv"
+    "kategorie": "Modalverb + Infinitiv",
+    "ar": "بعد الفعل الناقص «möchte» يأتي المصدر في نهاية الجملة؛ المفعول «ein Wasser» يسبق المصدر «trinken»."
   },
   {
     "id": "f-a1-036",
+    "kat": "wortstellung",
+    "level": "A1",
     "falsch": "*Das Buch ist gut, aber ich nicht lese es.",
     "richtig": "Das Buch ist gut, aber ich lese es nicht.",
     "regelAr": "الفعل يأتي بعد الفاعل في الجملة المستقلة بعد aber، و nicht في النهاية.",
-    "level": "A1",
-    "kategorie": "Negation / Satzbau"
+    "kategorie": "Negation / Satzbau",
+    "ar": "«aber» لا يغيّر قاعدة الفعل في الجملة الرئيسة: «ich lese»؛ والنفي يأتي بعد المفعول «es» في هذا المثال."
   },
   {
     "id": "f-a1-037",
+    "kat": "artikel",
+    "level": "A1",
     "falsch": "*Ich habe ein Apfel.",
     "richtig": "Ich habe einen Apfel.",
     "regelAr": "Apfel مذكّر؛ المفعول به المذكر النكرة يأخذ einen. Akkusativ: der → den / ein → einen.",
-    "level": "A1",
-    "kategorie": "Akkusativ"
+    "kategorie": "Akkusativ",
+    "ar": "Apfel مذكر، وهو مفعول به هنا؛ في حالة النصب تتحول أداة النكرة إلى «einen»."
   },
   {
     "id": "f-a1-038",
+    "kat": "artikel",
+    "level": "A1",
     "falsch": "*Ich komme aus Türkei.",
     "richtig": "Ich komme aus der Türkei.",
     "regelAr": "أسماء الدول المؤنثة أو المذكّرة (معظمها مؤنثة مثل die Türkei, die Schweiz, die USA) تأخذ أداة بعد aus/in.",
-    "level": "A1",
-    "kategorie": "Artikel / Länder"
+    "kategorie": "Artikel / Länder",
+    "ar": "اسم البلد «die Türkei» يأتي مع أداة تعريف؛ وبعد «aus» نستخدم الداتيف، لذلك تصبح الأداة «der»."
   },
   {
     "id": "f-a1-039",
+    "kat": "zeitform",
+    "level": "A1",
     "falsch": "*Gestern ich gehe ins Kino.",
     "richtig": "Gestern bin ich ins Kino gegangen.",
     "regelAr": "في زمن الماضي نستخدم Perfekt: sein + gegangen. وفي بداية الجملة بعنصر زمني يأتي الفعل في المرتبة الثانية مباشرة.",
-    "level": "A1",
-    "kategorie": "Perfekt / Satzbau"
+    "kategorie": "Perfekt / Satzbau",
+    "ar": "«Gestern» يدل على الماضي؛ نستخدم Perfekt من «gehen» مع sein وPartizip II «gegangen»، مع بقاء الفعل المصرف في الموقع الثاني."
   },
   {
     "id": "f-a1-040",
+    "kat": "zeitform",
+    "level": "A1",
     "falsch": "*Gestern habe ich zur Arbeit gefahren.",
     "richtig": "Gestern bin ich zur Arbeit gefahren.",
     "regelAr": "fahren بمعنى الانتقال من مكان إلى آخر يأخذ sein في Perfekt: ich bin gefahren.",
-    "level": "A1",
-    "kategorie": "Perfekt / Hilfsverb"
+    "kategorie": "Perfekt / Hilfsverb",
+    "ar": "الفعل «fahren» الدال على الانتقال يأخذ sein في Perfekt: «bin gefahren»، لا haben."
   },
   {
     "id": "f-a1-041",
+    "kat": "artikel",
+    "level": "A1",
     "falsch": "*Meine Schwester hat ein neu Auto.",
     "richtig": "Meine Schwester hat ein neues Auto.",
     "regelAr": "Auto محايد وفي المفعول به يأتي بعد ein؛ لذلك تأخذ الصفة النهاية -es: ein neues Auto.",
-    "level": "A1",
-    "kategorie": "Adjektivdeklination"
+    "kategorie": "Adjektivdeklination",
+    "ar": "Auto محايد مفعولٌ به منصوب؛ بعد أداة النكرة ein تأخذ الصفة النهاية -es: «ein neues Auto»."
   },
   {
     "id": "f-b1-046",
-    "falsch": "*Wenn ich viel Geld habe, würde ich eine Reise machen.",
-    "richtig": "Wenn ich viel Geld hätte, würde ich eine Reise machen.",
-    "regelAr": "شرط غير واقعي في الحاضر: Konjunktiv II في جملة الشرط، وwürde + Infinitiv في الجواب.",
+    "kat": "wortstellung",
     "level": "B1",
-    "kategorie": "Konjunktiv II"
+    "falsch": "*Wenn ich viel Geld hätte, ich würde eine Reise machen.",
+    "richtig": "Wenn ich viel Geld hätte, würde ich eine Reise machen.",
+    "regelAr": "الشرط غير الواقعي يستخدم hätte وwürde؛ وبعد جملة wenn المتقدمة يأتي فعل الجواب قبل الفاعل: «würde ich».",
+    "kategorie": "Konjunktiv II",
+    "ar": "بعد جملة «wenn» التابعة، تبدأ الجملة الرئيسة بالفعل المصرف قبل الفاعل: «…, würde ich …»؛ لا نقول «…, ich würde …»."
   },
   {
     "id": "f-b1-047",
+    "kat": "wortstellung",
+    "level": "B1",
     "falsch": "*Ich freue mich auf den Urlaub, weil ich will mich ausruhen.",
     "richtig": "Ich freue mich auf den Urlaub, weil ich mich ausruhen will.",
     "regelAr": "في weil-Satz يذهب الفعل المُصرف إلى النهاية.",
-    "level": "B1",
-    "kategorie": "Nebensatz Wortstellung"
+    "kategorie": "Nebensatz Wortstellung",
+    "ar": "«weil» تدخل جملة تابعة؛ لذلك يأتي الفعل الناقص «will» في آخرها بعد «mich ausruhen»."
   },
   {
     "id": "f-b1-048",
+    "kat": "konstruktion",
+    "level": "B1",
     "falsch": "*Der Mann, der ich gestern getroffen habe, ist mein Nachbar.",
     "richtig": "Der Mann, den ich gestern getroffen habe, ist mein Nachbar.",
     "regelAr": "ضمير الوصل يأخذ الحالة بحسب وظيفته داخل جملة الوصل: هنا مفعول به مذكر، لذا den؛ ولا نكرر المفعول بضمير ihn.",
-    "level": "B1",
-    "kategorie": "Relativsatz / Akkusativ"
+    "kategorie": "Relativsatz / Akkusativ",
+    "ar": "ضمير الوصل يعود إلى «den Mann»، وهو مفعول «getroffen»؛ لذلك نستخدم Akkusativ «den» لا Nominativ «der»."
   },
   {
     "id": "f-b1-049",
+    "kat": "artikel",
+    "level": "B1",
     "falsch": "*Trotz des stark Regen gingen wir spazieren.",
     "richtig": "Trotz des starken Regens gingen wir spazieren.",
     "regelAr": "trotz يأخذ Genitiv؛ ومع الاسم المذكر المفرد: des Regens. وبعد أداة des تنتهي الصفة بـ -en: des starken Regens.",
-    "level": "B1",
-    "kategorie": "Genitiv / Adjektivdeklination"
+    "kategorie": "Genitiv / Adjektivdeklination",
+    "ar": "«trotz» يطلب الجينيتيف هنا: «des Regens»؛ وصفة الاسم بعد أداة الجينيتيف المذكرة تأخذ النهاية «-en»: «starken»."
   },
   {
     "id": "f-b1-050",
+    "kat": "wortstellung",
+    "level": "B1",
     "falsch": "*Als ich nach Hause kam, ich kochte das Abendessen.",
     "richtig": "Als ich nach Hause kam, kochte ich das Abendessen.",
     "regelAr": "إذا بدأت الجملة الرئيسية بجملة زمنية تابعة، تأتي بعدها فاصلة ثم الفعل المصرف مباشرة: ..., kochte ich ... (الفعل في الموقع الثاني).",
-    "level": "B1",
-    "kategorie": "Wortstellung nach Nebensatz"
+    "kategorie": "Wortstellung nach Nebensatz",
+    "ar": "عندما تتقدم جملة «als» التابعة، يأتي فعل الجملة الرئيسة مباشرةً بعد الفاصلة وقبل الفاعل: «…, kochte ich»."
   },
   {
     "id": "f-b1-051",
+    "kat": "zeitform",
+    "level": "B1",
     "falsch": "*Ich habe mein Handy zu Hause vergisst.",
     "richtig": "Ich habe mein Handy zu Hause vergessen.",
     "regelAr": "Partizip II من vergessen هو vergessen (لا vergisst).",
-    "level": "B1",
-    "kategorie": "Perfekt starke Verben"
+    "kategorie": "Perfekt starke Verben",
+    "ar": "في Perfekt نستخدم Partizip II من «vergessen» وهو «vergessen»؛ «vergisst» صيغة مضارع للمخاطب أو الغائب، وليست اسم المفعول."
   },
   {
     "id": "f-b1-052",
+    "kat": "konstruktion",
+    "level": "B1",
     "falsch": "*Am besten lernst du Deutsch mit viel sprechen.",
     "richtig": "Am besten lernst du Deutsch, indem du viel sprichst.",
     "regelAr": "تُستخدم indem-Satz أو Infinitiv mit zu (durch vieles Sprechen)، لا mit + Infinitiv بهذا المعنى.",
-    "level": "B1",
-    "kategorie": "indem-Satz"
+    "kategorie": "indem-Satz",
+    "ar": "بعد «mit» يلزم اسم، ويُكتب المصدر الاسمي بحرف كبير «Sprechen»؛ والأوضح هنا بناء وسيلة بـ«indem» وفعل مصرف."
   },
   {
     "id": "f-b1-053",
+    "kat": "konstruktion",
+    "level": "B1",
     "falsch": "*Ich lerne Deutsch, um ich in Berlin arbeiten kann.",
     "richtig": "Ich lerne Deutsch, um in Berlin arbeiten zu können. / Ich lerne Deutsch, damit ich in Berlin arbeiten kann.",
     "regelAr": "um … zu تأتي عادةً مع الفاعل نفسه ولا يتبع um ضمير فاعل؛ أما damit فتأخذ جملةً بفعل مصرف في النهاية.",
-    "level": "B1",
-    "kategorie": "Zweck / um…zu · damit"
+    "kategorie": "Zweck / um…zu · damit",
+    "ar": "بناء الغاية «um … zu» يأخذ مصدراً لا فاعلاً وفعلًا مصرفاً؛ نقول «um … arbeiten zu können»، أو نستخدم «damit ich … kann»."
   },
   {
     "id": "f-b1-054",
+    "kat": "konstruktion",
+    "level": "B1",
     "falsch": "*Mir bin heute langweilig.",
     "richtig": "Mir ist heute langweilig.",
     "regelAr": "للتعبير عن الشعور بالملل نقول Mir ist langweilig (Dativ + sein). أمّا Ich bin langweilig فهي جملة صحيحة أخرى معناها «أنا شخص ممل»، وليست «أشعر بالملل».",
-    "level": "B1",
-    "kategorie": "Dativ / Bedeutungsunterschied"
+    "kategorie": "Dativ / Bedeutungsunterschied",
+    "ar": "«mir» مفعول داتيف يدل على صاحب الشعور، وليس فاعل الجملة؛ لذلك تأتي صيغة الغائب «ist»: «Mir ist langweilig»."
   },
   {
     "id": "f-b1-055",
+    "kat": "konstruktion",
+    "level": "B1",
     "falsch": "*Entweder du kommst mit, und du bleibst zu Hause.",
     "richtig": "Entweder du kommst mit, oder du bleibst zu Hause.",
     "regelAr": "entweder … oder رابطان مزدوجان لا يأتي معهما und.",
-    "level": "B1",
-    "kategorie": "Doppelkonnektor"
+    "kategorie": "Doppelkonnektor",
+    "ar": "الربط الثنائي الصحيح هو «entweder … oder»؛ لا نجمع «entweder» مع «und» في طرفيه."
   },
   {
     "id": "f-b2-036",
+    "kat": "praeposition",
+    "level": "B2",
     "falsch": "*Im Vergleich zu das letzte Jahr ist der Umsatz gestiegen.",
     "richtig": "Im Vergleich zum letzten Jahr ist der Umsatz gestiegen.",
     "regelAr": "zu يأخذ Dativ: das Jahr يصبح dem Jahr؛ وzu dem تختصر عادةً إلى zum. لذلك: im Vergleich zum letzten Jahr.",
-    "level": "B2",
-    "kategorie": "Präposition / Dativ"
+    "kategorie": "Präposition / Dativ",
+    "ar": "بعد «im Vergleich zu» يأتي الداتيف؛ «das letzte Jahr» تصبح «dem letzten Jahr»، ويُختصر «zu dem» إلى «zum»."
   },
   {
     "id": "f-b2-037",
-    "falsch": "*Indem es stark regnete, fiel das Fest aus.",
-    "richtig": "Weil es stark regnete, fiel das Fest aus. / Wegen des starken Regens fiel das Fest aus.",
-    "regelAr": "indem يشرح الوسيلة أو الكيفية (كيف حدث الفعل)، أما السبب فيُعبَّر عنه هنا بـ weil أو wegen. الخطأ دلالي في اختيار الرابط، لا في ترتيب الكلمات.",
+    "kat": "wortstellung",
     "level": "B2",
-    "kategorie": "Konnektor / Bedeutung"
+    "falsch": "*Weil es stark regnete, das Fest fiel aus.",
+    "richtig": "Weil es stark regnete, fiel das Fest aus.",
+    "regelAr": "«weil» تجعل فعل الجملة التابعة في آخرها؛ وبعدها تبدأ الجملة الرئيسة بالفعل قبل الفاعل: «fiel das Fest aus».",
+    "kategorie": "Konnektor / Bedeutung",
+    "ar": "«weil» تفتح جملة تابعة وفعلها في النهاية؛ وبعد الفاصلة، لأن الجملة التابعة تقدمت، يبدأ الفعل الرئيس قبل الفاعل: «fiel das Fest aus»."
   },
   {
     "id": "f-b2-038",
+    "kat": "konstruktion",
+    "level": "B2",
     "falsch": "*Die Zahl der Anträge sind im letzten Jahr gestiegen.",
     "richtig": "Die Zahl der Anträge ist im letzten Jahr gestiegen.",
     "regelAr": "رأس الفاعل هو Zahl وهو مفرد؛ أما Anträge فجاءت في Genitiv مضافاً إليه، لذلك يطابقه الفعل المفرد ist.",
     "kategorie": "Subjekt-Verb-Kongruenz",
-    "level": "B2"
+    "ar": "رأس الفاعل هو «Die Zahl» وهو مفرد؛ عبارة «der Anträge» مضاف إليه ولا تغيّر المطابقة، لذا نقول «ist»."
   },
   {
     "id": "f-b2-039",
+    "kat": "wortstellung",
+    "level": "B2",
     "falsch": "*Es besteht kein Zweifel daran, dass er hat Recht.",
     "richtig": "Es besteht kein Zweifel daran, dass er Recht hat.",
     "regelAr": "بعد dass الفعل في آخر الجملة الثانوية.",
     "kategorie": "",
-    "level": "B2"
+    "ar": "«dass» تدخل جملة تابعة، فينتقل الفعل المصرف إلى نهايتها: «dass er Recht hat»."
   },
   {
     "id": "f-b2-040",
+    "kat": "schreibung",
+    "level": "B2",
     "falsch": "*Die Frage, die sich stellt, ist ob das Projekt finanzierbar ist.",
     "richtig": "Die Frage, die sich stellt, ist, ob das Projekt finanzierbar ist.",
     "regelAr": "قبل ob جملة ثانوية تُفصل بفاصلة بعد فعل الكينونة.",
     "kategorie": "",
-    "level": "B2"
+    "ar": "الجملة غير المباشرة التي تبدأ بـ«ob» جملة تابعة؛ يجب فصلها بفاصلة عن الجملة الرئيسة: «ist, ob …»."
   },
   {
     "id": "f-b2-041",
+    "kat": "wortstellung",
+    "level": "B2",
     "falsch": "*Die Behörde erklärte, dass sie die Entscheidung morgen teilt mit.",
     "richtig": "Die Behörde erklärte, dass sie die Entscheidung morgen mitteilt.",
     "regelAr": "في الجملة التابعة بـ dass يبقى الفعل المنفصل متصلاً في آخر الجملة: mitteilt؛ لا تُفصل البادئة mit عن الفعل.",
     "kategorie": "Nebensatz / trennbare Verben",
-    "level": "B2"
+    "ar": "«mitteilen» فعل منفصل في الجملة الرئيسة، لكنه يُكتب متصلاً في جملة «dass» التابعة، ويأتي في نهايتها: «mitteilt»."
   },
   {
     "id": "f-b2-042",
+    "kat": "zeitform",
+    "level": "B2",
     "falsch": "*Nachdem er hat die Prüfung bestanden, feierte er mit seiner Familie.",
     "richtig": "Nachdem er die Prüfung bestanden hatte, feierte er mit seiner Familie.",
     "regelAr": "في جملة nachdem التابعة يذهب الفعل المصرف إلى النهاية؛ وعند سرد فعل أسبق من حدثٍ ماضٍ نستخدم Plusquamperfekt: bestanden hatte.",
     "kategorie": "Nachdem-Satz / Plusquamperfekt",
-    "level": "B2"
+    "ar": "النجاح في الامتحان حدث قبل الاحتفال، لذلك يُستخدم Plusquamperfekt «bestanden hatte»؛ وفي جملة «nachdem» يأتي الفعل في النهاية."
   },
   {
     "id": "f-b2-043",
+    "kat": "konstruktion",
+    "level": "B2",
     "falsch": "*Je schneller, desto gut.",
     "richtig": "Je schneller, desto besser.",
     "regelAr": "بعد je … desto يأتي الصفة بصيغة المقارنة في الجزأين (Kompärativ).",
     "kategorie": "",
-    "level": "B2"
+    "ar": "في التركيب «je …, desto …» نستخدم درجة المقارنة في الطرفين؛ مقارنة «gut» هي «besser»، لا «gut»."
   },
   {
     "id": "f-b2-044",
+    "kat": "schreibung",
+    "level": "B2",
     "falsch": "*Ich bin daran interessiert das Projekt zu leiten.",
     "richtig": "Ich bin daran interessiert, das Projekt zu leiten.",
     "regelAr": "عندما يشير daran إلى مجموعة المصدر الموسعة، توضع فاصلة قبلها: daran interessiert, das Projekt zu leiten. الفعل zu leiten هو المصدر مع zu.",
     "kategorie": "Komma / Infinitivgruppe",
-    "level": "B2"
+    "ar": "تتطلب مجموعة المصدر ذات «zu» فاصلة هنا لأنها تعتمد على أداة الإحالة «daran»: «daran interessiert, das Projekt zu leiten»."
   },
   {
     "id": "f-b2-045",
+    "kat": "konstruktion",
+    "level": "B2",
     "falsch": "*Die Ergebnisse sind besser wie im Vorjahr.",
     "richtig": "Die Ergebnisse sind besser als im Vorjahr.",
     "regelAr": "في المقارنة غير المتساوية يأتي als بعد صيغة المقارنة: besser als. أما wie فتستعمل للمساواة: so gut wie. «besser wie» لهجي في بعض المناطق، وليس الصيغة المعيارية للكتابة والامتحان.",
     "kategorie": "Vergleich / als oder wie",
-    "level": "B2"
+    "ar": "في المقارنة المعيارية بعد صيغة التفضيل «besser» نستخدم «als» للفارق؛ أما «wie» فتناسب المساواة."
   }
 ]

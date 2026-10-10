@@ -600,13 +600,13 @@ const vocabRepeatAudit = (() => {
     }
     {
       const fvv = JSON.parse(readFileSync("content/fehler.json", "utf8")) as unknown as { id: string; kat: string; level: string; falsch: string; richtig: string; ar: string }[];
-      ok(fvv.length === 128, "K33a بنكُ الفخاخ: 64 → 128 بالضبط — البوابةُ تعدُّ من القرص");
-      ok(new Set(fvv.map((f) => f.id)).size === 128, "K33b لا مزدوجَ في المعرّفات");
+      ok(fvv.length === 196, "K33a بنكُ الفخاخ: 196 مدخلاً — العددُ من القرص");
+      ok(new Set(fvv.map((f) => f.id)).size === 196, "K33b المعرّفاتُ الـ196 فريدة");
       const KATS = new Set(Object.keys(FEHLER_KAT));
       ok(fvv.every((f) => KATS.has(f.kat)), "K33c كلُّ فئةٍ من العشرِ المحرّسة — لا فئةً مُبتدَعة");
-      ok(fvv.slice(64).every((f) => f.falsch.length > 16 && /\s/.test(f.falsch) && f.richtig.length > 4), "K33d كلُّ وافدٍ يدخلُ مسبحَ الامتحانِ في الاختبارِ الممزوج");
+      ok(fvv.slice(64).every((f) => (f.level === "A0" ? f.falsch.trim().length > 4 : f.falsch.length > 16) && /\s/.test(f.falsch) && f.richtig.length > 4), "K33d الوافدون صالحون للاختبار؛ A0 يسمح بفخٍّ قصيرٍ واضح");
       ok(fvv.slice(64).filter((f) => /فرنس|دارج/.test(f.ar)).length >= 20, "K33e التونسةُ سارية: عشرون فخّاً على الأقلِ تسمّي المُغْرِيَ");
-      ok(fvv.every((f) => ["A1","A2","B1","B2"].includes(f.level)), "K33f سلّمُ المستوياتِ مُقفَلٌ رباعياً");
+      ok(fvv.every((f) => ["A0","A1","A2","B1","B2"].includes(f.level)), "K33f سلّمُ المستوياتِ يغطي A0–B2 بلا مستوىٍ دخيل");
     }
     {
       const tx = JSON.parse(readFileSync("content/texts.json", "utf8")) as unknown as { id: string; questions: { id: string; type: string; promptDe: string; options?: string[]; answer?: string | string[]; explanationAr?: string }[] }[];
