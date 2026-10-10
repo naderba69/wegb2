@@ -7234,5 +7234,120 @@
         "explanationAr": "مرة إلى مرتين يومياً."
       }
     ]
+  },
+  {
+    "id": "t-a0-06",
+    "level": "A0",
+    "titleDe": "In der Klasse",
+    "titleAr": "في الصف",
+    "de": "Das ist mein Klassenzimmer. Hier lerne ich Deutsch. Die Lehrerin heißt Frau Schulz. Sie ist sehr nett. Im Kurs sind 12 Studenten. Sie kommen aus Syrien, aus der Türkei, aus Polen und aus Italien. Wir sprechen zusammen Deutsch. Manchmal lachen wir viel.",
+    "ar": "هذا فصلي. أتعلم فيه الألمانية. المعلمة اسمها فراوله شولتس وهي لطيفة جداً. في الدورة 12 طالباً من سوريا وتركيا وبولندا وإيطاليا. نتكلم الألمانية معاً، وأحياناً نضحك كثيراً.",
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Wie heißt die Lehrerin?",
+        "promptAr": "ما اسم المعلمة؟",
+        "options": [
+          "Frau Müller",
+          "Frau Schulz",
+          "Frau Becker",
+          "Frau Klein"
+        ],
+        "answer": 1,
+        "explanationAr": "اسمها Frau Schulz."
+      }
+    ]
+  },
+  {
+    "id": "t-a0-07",
+    "level": "A0",
+    "titleDe": "Die Wochentage",
+    "titleAr": "أيام الأسبوع",
+    "de": "Am Montag gehe ich zur Arbeit. Am Dienstag habe ich Deutschkurs. Am Mittwoch kaufe ich ein. Am Donnerstag treffe ich meine Freunde. Am Freitag sehe ich fern. Am Samstag schlafe ich lange. Am Sonntag besuche ich meine Familie.",
+    "ar": "الاثنين أذهب إلى العمل. الثلاثاء لدي درس ألمانية. الأربعاء أتسوّق. الخميس أقابل أصدقائي. الجمعة أشاهد التلفاز. السبت أنام طويلاً. الأحد أزور عائلتي.",
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Was macht er am Mittwoch?",
+        "promptAr": "ماذا يفعل الأربعاء؟",
+        "options": [
+          "Er arbeitet.",
+          "Er kauft ein.",
+          "Er sieht fern.",
+          "Er schläft."
+        ],
+        "answer": 1,
+        "explanationAr": "يتسوّق."
+      }
+    ]
+  },
+  {
+    "id": "t-a0-08",
+    "level": "A0",
+    "titleDe": "Das Essen",
+    "titleAr": "الطعام",
+    "de": "Ich esse gern Brot mit Käse zum Frühstück. Zum Mittag esse ich gern Reis mit Gemüse und Fleisch. Zum Abendbrot trinke ich Tee und esse Obst. Ich trinke nicht viel Kaffee. Mein Lieblingsobst ist Apfel. Ich mag Bananen und Orangen auch.",
+    "ar": "أحب أكل الخبز مع الجبن في الفطور. في الغداء آكل الأرز مع الخضار واللحم. في العشاء أشرب الشاي وآكل فاكهة. لا أشرب الكثير من القهوة. فاكهتي المفضلة التفاح، وأحب الموز والبرتقال أيضاً.",
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Was ist sein Lieblingsobst?",
+        "promptAr": "ما فاكهته المفضلة؟",
+        "options": [
+          "Banane",
+          "Apfel",
+          "Orange",
+          "Traube"
+        ],
+        "answer": 1,
+        "explanationAr": "التفاح."
+      }
+    ]
+  },
+  {
+    "id": "t-a0-09",
+    "level": "A0",
+    "titleDe": "Die Uhrzeit",
+    "titleAr": "الوقت",
+    "de": "Ich stehe um 7 Uhr auf. Um 8 Uhr frühstücke ich. Um 9 Uhr beginne ich mit der Arbeit. Um 12 Uhr esse ich zu Mittag. Um 17 Uhr gehe ich nach Hause. Um 19 Uhr esse ich zu Abend. Um 23 Uhr gehe ich ins Bett.",
+    "ar": "أستيقظ في السابعة. أفطر في الثامنة. أبدأ العمل التاسعة. آكل الغداء 12. أذهب للبيت 17. أتعشى 19. أذهب للسرير 23.",
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Wann beginnt er zu arbeiten?",
+        "promptAr": "متى يبدأ العمل؟",
+        "options": [
+          "Um 7",
+          "Um 8",
+          "Um 9",
+          "Um 12"
+        ],
+        "answer": 2,
+        "explanationAr": "التاسعة."
+      }
+    ]
+  },
+  {
+    "id": "t-a0-10",
+    "level": "A0",
+    "titleDe": "Wetter und Jahreszeiten",
+    "titleAr": "الطقس والفصول",
+    "de": "Im Winter ist es kalt und es schneit. Ich trage eine dicke Jacke. Im Frühling blühen die Blumen. Im Sommer ist es heiß, ich gehe schwimmen. Im Herbst sind die Blätter bunt: rot, gelb und braun. Ich mag den Frühling am liebsten.",
+    "ar": "في الشتاء بارد ويتساقط الثلج، أرتدي سترة سميكة. في الربيع تتفتح الأزهار. في الصيف حار وأذهب للسباحة. في الخريف الأوراق ملونة: أحمر وأصفر وبني. أحب الربيع أكثر من غيره.",
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Welche Jahreszeit mag er am liebsten?",
+        "promptAr": "أي فصل يحب أكثر؟",
+        "options": [
+          "Winter",
+          "Frühling",
+          "Sommer",
+          "Herbst"
+        ],
+        "answer": 1,
+        "explanationAr": "الربيع."
+      }
+    ]
   }
 ]
