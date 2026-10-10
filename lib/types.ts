@@ -243,6 +243,8 @@ export interface DayTask {
   partnerId?: string;
   kontaktId?: string;
   monologId?: string;
+  /** R141e: Karte für beliebigen Sprechteil (insbesondere Teil 3 Diskussion). */
+  muendlichId?: string;
   /** R138/P-13: نمط فهم المسموع — global (فهم عام) / detailliert (تفاصيل) / selektiv (معلومات محددة) */
   hoerenModus?: "global" | "detailliert" | "selektiv";
   quiz?: Exercise[];
@@ -463,7 +465,7 @@ export interface Progress {
 
 export const TOTAL_DAYS = 378;
 // R138: P-01/P-03 grammar reorder (Artikel day 4, Akkusativ before trennbar, Futur/weil-dass to A2, Plural earlier).
-export const CURRICULUM_SCHEDULE_VERSION = 4;
+export const CURRICULUM_SCHEDULE_VERSION = 5;
 
 export const emptyProgress: Progress = {
   v: 2,

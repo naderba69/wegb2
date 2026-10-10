@@ -1159,6 +1159,111 @@
         }
       ],
       "zeit_s": 240
+    },
+    {
+      "id": "mm-a1-07",
+      "teil": 3,
+      "level": "A1",
+      "titel_de": "Kaffee oder Tee?",
+      "titel_ar": "القهوة أم الشاي؟",
+      "auftrag_de": "Sie sind in einem Café. Wählen Sie gemeinsam ein Getränk: Kaffee oder Tee. Fragen Sie Ihren Partner, was er gern trinkt, und einigen Sie sich auf eine Bestellung.",
+      "auftrag_ar": "أنتما في مقهى. اختارا معاً مشروباً: القهوة أم الشاي؟ اسأل شريكك عمّا يحب أن يشرب، واتفقا على طلب.",
+      "stuetzen": [
+        "Ich trinke gern …",
+        "Ich möchte lieber …",
+        "Was trinkst du gern?",
+        "Dann nehmen wir …",
+        "Gute Idee!"
+      ],
+      "kriterien": [
+        {
+          "de": "einen Wunsch nennen",
+          "ar": "ذكر ما يفضّله"
+        },
+        {
+          "de": "eine einfache Frage stellen",
+          "ar": "طرح سؤال بسيط"
+        },
+        {
+          "de": "auf den Partner reagieren",
+          "ar": "التفاعل مع الشريك"
+        },
+        {
+          "de": "sich auf ein Getränk einigen",
+          "ar": "الاتفاق على مشروب"
+        }
+      ],
+      "zeit_s": 120
+    },
+    {
+      "id": "mm-a2-07",
+      "teil": 3,
+      "level": "A2",
+      "titel_de": "Tagesausflug: Zug oder Auto?",
+      "titel_ar": "رحلة ليوم واحد: بالقطار أم بالسيارة؟",
+      "auftrag_de": "Sie planen einen Tagesausflug. Entscheiden Sie gemeinsam: Fahren Sie mit dem Zug oder mit dem Auto? Sprechen Sie über Zeit, Kosten und den Treffpunkt und einigen Sie sich.",
+      "auftrag_ar": "تخططان لرحلة ليوم واحد. قررا معاً: هل تذهبان بالقطار أم بالسيارة؟ تحدثا عن الوقت والتكلفة ومكان اللقاء ثم اتفقا.",
+      "stuetzen": [
+        "Mit dem Zug sind wir …",
+        "Das Auto ist …",
+        "Ich bin dafür, weil …",
+        "Was hältst du davon?",
+        "Dann treffen wir uns um …"
+      ],
+      "kriterien": [
+        {
+          "de": "beide Möglichkeiten vergleichen",
+          "ar": "مقارنة الخيارين"
+        },
+        {
+          "de": "mindestens einen Grund nennen",
+          "ar": "ذكر سبب واحد على الأقل"
+        },
+        {
+          "de": "auf den Vorschlag des Partners eingehen",
+          "ar": "التفاعل مع اقتراح الشريك"
+        },
+        {
+          "de": "Zeit und Treffpunkt festlegen",
+          "ar": "تحديد الوقت ومكان اللقاء"
+        }
+      ],
+      "zeit_s": 180
+    },
+    {
+      "id": "mm-b1-07",
+      "teil": 3,
+      "level": "B1",
+      "titel_de": "Autofreie Innenstadt – sinnvoll oder nicht?",
+      "titel_ar": "مركز مدينة خالٍ من السيارات: فكرة مفيدة أم لا؟",
+      "auftrag_de": "Diskutieren Sie, ob Innenstädte für private Autos gesperrt werden sollten. Nennen Sie Vor- und Nachteile, reagieren Sie auf die Meinung Ihres Partners und formulieren Sie am Ende eine gemeinsame Position.",
+      "auftrag_ar": "ناقشا ما إذا كان ينبغي منع السيارات الخاصة من دخول مراكز المدن. اذكرا الإيجابيات والسلبيات، وتفاعلا مع رأي الشريك، ثم صوغا موقفاً مشتركاً في النهاية.",
+      "stuetzen": [
+        "Einerseits …, andererseits …",
+        "Ein Vorteil/Nachteil besteht darin, dass …",
+        "Ich stimme teilweise zu, denn …",
+        "Wie siehst du das?",
+        "Wir könnten uns darauf einigen, dass …"
+      ],
+      "kriterien": [
+        {
+          "de": "eine klare Position ausdrücken",
+          "ar": "التعبير عن موقف واضح"
+        },
+        {
+          "de": "mindestens je einen Vor- und Nachteil begründen",
+          "ar": "تعليل ميزة وعيب على الأقل"
+        },
+        {
+          "de": "auf Argumente des Partners eingehen",
+          "ar": "التفاعل مع حجج الشريك"
+        },
+        {
+          "de": "ein gemeinsames Fazit formulieren",
+          "ar": "صياغة خلاصة مشتركة"
+        }
+      ],
+      "zeit_s": 240
     }
   ],
   "partner": [

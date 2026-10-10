@@ -17,8 +17,9 @@
           "Hassan",
           "Omar"
         ],
-        "answer": 1,
-        "explanationAr": "النص يقول: Ich heiße Ali."
+        "answer": "Ali",
+        "explanationAr": "النص يقول: Ich heiße Ali.",
+        "id": "t-a0-01-q1"
       },
       {
         "type": "mc",
@@ -30,8 +31,9 @@
           "In Berlin",
           "In Köln"
         ],
-        "answer": 2,
-        "explanationAr": "النص يقول: Ich wohne in Berlin."
+        "answer": "In Berlin",
+        "explanationAr": "النص يقول: Ich wohne in Berlin.",
+        "id": "t-a0-01-q2"
       }
     ]
   },
@@ -53,8 +55,9 @@
           "Vierzig",
           "Fünfzig"
         ],
-        "answer": 1,
-        "explanationAr": "النص يقول: dreißig Jahre alt."
+        "answer": "Dreißig",
+        "explanationAr": "النص يقول: dreißig Jahre alt.",
+        "id": "t-a0-02-q1"
       },
       {
         "type": "mc",
@@ -66,8 +69,9 @@
           "zwölf",
           "zehn"
         ],
-        "answer": 2,
-        "explanationAr": "zwölf = 12 غير موجودة في القائمة، وإن وردت كجزء من Hausnummer."
+        "answer": "zwölf",
+        "explanationAr": "zwölf = 12 غير موجودة في القائمة، وإن وردت كجزء من Hausnummer.",
+        "id": "t-a0-02-q2"
       }
     ]
   },
@@ -89,8 +93,9 @@
           "Leila",
           "Sara"
         ],
-        "answer": 1,
-        "explanationAr": "النص يقول: Ich heiße Fatima."
+        "answer": "Fatima",
+        "explanationAr": "النص يقول: Ich heiße Fatima.",
+        "id": "t-a0-03-q1"
       },
       {
         "type": "mc",
@@ -102,8 +107,9 @@
           "F",
           "G"
         ],
-        "answer": 1,
-        "explanationAr": "بعد D يأتي E."
+        "answer": "E",
+        "explanationAr": "بعد D يأتي E.",
+        "id": "t-a0-03-q2"
       }
     ]
   },
@@ -125,8 +131,9 @@
           "rot",
           "gelb"
         ],
-        "answer": 1,
-        "explanationAr": "النص يقول: Der Himmel ist blau."
+        "answer": "blau",
+        "explanationAr": "النص يقول: Der Himmel ist blau.",
+        "id": "t-a0-04-q1"
       },
       {
         "type": "mc",
@@ -138,8 +145,9 @@
           "Das Blut",
           "Die Schokolade"
         ],
-        "answer": 1,
-        "explanationAr": "النص يقول: Die Milch ist weiß."
+        "answer": "Die Milch",
+        "explanationAr": "النص يقول: Die Milch ist weiß.",
+        "id": "t-a0-04-q2"
       }
     ]
   },
@@ -161,8 +169,9 @@
           "Student",
           "Ingenieur"
         ],
-        "answer": 2,
-        "explanationAr": "النص يقول: Ich bin Student."
+        "answer": "Student",
+        "explanationAr": "النص يقول: Ich bin Student.",
+        "id": "t-a0-05-q1"
       },
       {
         "type": "mc",
@@ -174,8 +183,9 @@
           "Der Bruder",
           "Die Schwester"
         ],
-        "answer": 1,
-        "explanationAr": "النص يقول: Mein Vater ist Arzt."
+        "answer": "Der Vater",
+        "explanationAr": "النص يقول: Mein Vater ist Arzt.",
+        "id": "t-a0-05-q2"
       }
     ]
   },
@@ -6594,7 +6604,35 @@
     "de": "Ich heiße Karim und bin 28 Jahre alt. Ich wohne in Köln mit meiner Frau Amina und unserer Tochter Sara, die drei Jahre alt ist. Mein Vater wohnt in Tunesien, aber er besucht uns jedes Jahr im Sommer. Am Freitag essen wir zusammen Couscous und trinken Minztee. Ich liebe meine Familie sehr.",
     "ar": "اسمي كريم وعمري 28 سنة. أسكن في كولونيا مع زوجتي أمينة وابنتنا سارة التي تبلغ من العمر ثلاث سنوات. والدي يسكن في تونس لكنه يزورنا كل صيف. يوم الجمعة نأكل معاً الكسكس ونشرب الشاي بالنعناع. أحب عائلتي جداً.",
     "wordCountDe": 52,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-021-q1",
+        "type": "mc",
+        "promptDe": "Mit wem wohnt Karim in Köln?",
+        "promptAr": "مع من يسكن كريم في كولونيا؟",
+        "options": [
+          "Mit seiner Frau und seiner Tochter",
+          "Mit seinem Vater",
+          "Allein"
+        ],
+        "answer": "Mit seiner Frau und seiner Tochter",
+        "explanationAr": "الدليل في النص: «Ich wohne in Köln mit meiner Frau Amina und unserer Tochter Sara» — يعيش كريم مع زوجته أمينة وابنته سارة."
+      },
+      {
+        "id": "t-a1-021-q2",
+        "type": "mc",
+        "promptDe": "Wann besucht sein Vater die Familie?",
+        "promptAr": "متى يزور والده العائلة؟",
+        "options": [
+          "Jeden Sommer",
+          "Jeden Freitag",
+          "Jeden Monat"
+        ],
+        "answer": "Jeden Sommer",
+        "explanationAr": "الدليل في النص: «Mein Vater wohnt in Tunesien, aber er besucht uns jedes Jahr im Sommer.» — والده يزوره كل صيف."
+      }
+    ]
   },
   {
     "id": "t-a1-022",
@@ -6604,7 +6642,35 @@
     "de": "Ich stehe jeden Tag um halb sieben auf. Zuerst trinke ich einen Kaffee, dann dusche ich und ziehe mich an. Um acht Uhr frühstücke ich mit meiner Frau: Brot mit Käse und ein Ei. Um halb neun gehe ich zur Arbeit. Mein Morgen ist immer ein bisschen stressig, aber ich mag meine Routine.",
     "ar": "أستيقظ كل يوم في السادسة والنصف. أولاً أشرب قهوة، ثم أستحم وأرتدي ملابسي. في الثامنة أفطر مع زوجتي: خبزاً بالجبن وبيضة. في الثامنة والنصف أذهب إلى العمل. صباحي مُجهد قليلاً لكنني أحب روتيني.",
     "wordCountDe": 53,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-022-q1",
+        "type": "mc",
+        "promptDe": "Wann steht der Erzähler auf?",
+        "promptAr": "متى يستيقظ المتحدث؟",
+        "options": [
+          "Um halb sechs",
+          "Um halb sieben",
+          "Um acht Uhr"
+        ],
+        "answer": "Um halb sieben",
+        "explanationAr": "الدليل في النص: «Ich stehe jeden Tag um halb sieben auf.» — النص يقول: um halb sieben."
+      },
+      {
+        "id": "t-a1-022-q2",
+        "type": "mc",
+        "promptDe": "Was frühstückt er mit seiner Frau?",
+        "promptAr": "ماذا يفطر مع زوجته؟",
+        "options": [
+          "Brot mit Käse und ein Ei",
+          "Müsli und Obst",
+          "Nur Kaffee"
+        ],
+        "answer": "Brot mit Käse und ein Ei",
+        "explanationAr": "الدليل في النص: «Um acht Uhr frühstücke ich mit meiner Frau: Brot mit Käse und ein Ei.» — يفطران خبزاً بالجبن وبيضة."
+      }
+    ]
   },
   {
     "id": "t-a1-023",
@@ -6614,7 +6680,35 @@
     "de": "Meine Wohnung ist nicht groß, aber sehr hell. Sie hat zwei Zimmer, eine Küche, ein Bad und einen kleinen Balkon. Im Wohnzimmer stehen ein Sofa, ein Tisch und ein Fernseher. In der Küche koche ich jeden Abend. Die Miete ist sechshundert Euro warm. Ich bin sehr zufrieden mit meiner Wohnung.",
     "ar": "شقتي ليست كبيرة لكنها مشرقة جداً. فيها غرفتان ومطبخ وحمّام وشرفة صغيرة. في غرفة المعيشة أريكة وطاولة وتلفاز. في المطبخ أطبخ كل مساء. الإيجار ستمائة يورو شامل التدفئة. أنا سعيد جداً بشقتي.",
     "wordCountDe": 50,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-023-q1",
+        "type": "mc",
+        "promptDe": "Wie viele Zimmer hat die Wohnung?",
+        "promptAr": "كم غرفة في الشقة؟",
+        "options": [
+          "Ein Zimmer",
+          "Zwei Zimmer",
+          "Drei Zimmer"
+        ],
+        "answer": "Zwei Zimmer",
+        "explanationAr": "الدليل في النص: «Sie hat zwei Zimmer, eine Küche, ein Bad und einen kleinen Balkon.» — للشقة غرفتان."
+      },
+      {
+        "id": "t-a1-023-q2",
+        "type": "mc",
+        "promptDe": "Wie hoch ist die Miete warm?",
+        "promptAr": "كم الإيجار شاملاً التدفئة؟",
+        "options": [
+          "500 Euro",
+          "600 Euro",
+          "700 Euro"
+        ],
+        "answer": "600 Euro",
+        "explanationAr": "الدليل في النص: «Die Miete ist sechshundert Euro warm.» — الإيجار 600 يورو warm."
+      }
+    ]
   },
   {
     "id": "t-a1-024",
@@ -6624,7 +6718,35 @@
     "de": "Ich wohne in Leipzig, einer Stadt im Osten von Deutschland. In der Stadt gibt es viele Parks, Cafés und Geschäfte. Am Wochenende gehe ich gern in die Innenstadt und trinke einen Kaffee mit Freunden. Die Straßenbahn fährt direkt vor meiner Haustür, das ist sehr praktisch.",
     "ar": "أسكن في لايبزيغ، مدينة في شرق ألمانيا. في المدينة حدائق كثيرة ومقاهٍ ومحلات. في عطلة نهاية الأسبوع أذهب إلى وسط المدينة وأشرب القهوة مع الأصدقاء. الترام يمر مباشرة أمام بيتي، وهذا مريح جداً.",
     "wordCountDe": 45,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-024-q1",
+        "type": "mc",
+        "promptDe": "In welcher Stadt wohnt die Person?",
+        "promptAr": "في أي مدينة يسكن المتحدث؟",
+        "options": [
+          "Leipzig",
+          "Köln",
+          "Berlin"
+        ],
+        "answer": "Leipzig",
+        "explanationAr": "الدليل في النص: «Ich wohne in Leipzig, einer Stadt im Osten von Deutschland.» — النص يبدأ: Ich wohne in Leipzig."
+      },
+      {
+        "id": "t-a1-024-q2",
+        "type": "mc",
+        "promptDe": "Was fährt direkt vor der Haustür?",
+        "promptAr": "ماذا يمر مباشرة أمام المنزل؟",
+        "options": [
+          "Der Bus",
+          "Die Straßenbahn",
+          "Der Zug"
+        ],
+        "answer": "Die Straßenbahn",
+        "explanationAr": "الدليل في النص: «Die Straßenbahn fährt direkt vor meiner Haustür» — الترام يمر مباشرة أمام البيت."
+      }
+    ]
   },
   {
     "id": "t-a1-025",
@@ -6634,7 +6756,35 @@
     "de": "Heute gehe ich zum Supermarkt. Ich brauche Milch, Brot, Eier, Äpfel und Käse. Der Supermarkt ist groß und hat viele Produkte. Zuerst suche ich die Milch, dann hole ich Brot und Eier. An der Kasse bezahle ich mit Karte. Alles kostet zusammen zwölf Euro.",
     "ar": "اليوم أذهب إلى السوبرماركت. أحتاج حليباً وخبزاً وبيضاً وتفاحاً وجبناً. السوبرماركت كبير وبه منتجات كثيرة. أولاً أبحث عن الحليب، ثم آخذ الخبز والبيض. عند الكاش أدفع بالبطاقة. كل شيء يكلف اثني عشر يورو.",
     "wordCountDe": 44,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-025-q1",
+        "type": "mc",
+        "promptDe": "Wie viel kostet alles zusammen?",
+        "promptAr": "كم يكلف كل شيء؟",
+        "options": [
+          "Zehn Euro",
+          "Zwölf Euro",
+          "Zwanzig Euro"
+        ],
+        "answer": "Zwölf Euro",
+        "explanationAr": "الدليل في النص: «Alles kostet zusammen zwölf Euro.» — المجموع 12 يورو."
+      },
+      {
+        "id": "t-a1-025-q2",
+        "type": "mc",
+        "promptDe": "Wie bezahlt die Person an der Kasse?",
+        "promptAr": "كيف يدفع المتحدث عند الصندوق؟",
+        "options": [
+          "Mit Karte",
+          "Mit Bargeld",
+          "Mit dem Handy"
+        ],
+        "answer": "Mit Karte",
+        "explanationAr": "الدليل في النص: «An der Kasse bezahle ich mit Karte.» — يدفع بالبطاقة."
+      }
+    ]
   },
   {
     "id": "t-a1-026",
@@ -6644,7 +6794,35 @@
     "de": "Heute ist das Wetter sehr schön. Die Sonne scheint und der Himmel ist blau. Es ist nicht zu kalt und nicht zu heiß, etwa zwanzig Grad. Am Nachmittag gehe ich spazieren und höre Musik. Am Abend koche ich zu Hause. So ein Tag gefällt mir sehr.",
     "ar": "الطقس اليوم جميل جداً. الشمس مشرقة والسماء زرقاء. الجو ليس بارداً ولا حاراً، حوالي عشرين درجة. بعد الظهر أتمشى وأستمع للموسيقى. في المساء أطبخ في البيت. يعجبني يوم مثل هذا.",
     "wordCountDe": 46,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-026-q1",
+        "type": "mc",
+        "promptDe": "Wie warm ist es ungefähr?",
+        "promptAr": "كم درجة الحرارة تقريباً؟",
+        "options": [
+          "Zehn Grad",
+          "Zwanzig Grad",
+          "Dreißig Grad"
+        ],
+        "answer": "Zwanzig Grad",
+        "explanationAr": "الدليل في النص: «etwa zwanzig Grad.» — درجة الحرارة حوالي 20 درجة."
+      },
+      {
+        "id": "t-a1-026-q2",
+        "type": "mc",
+        "promptDe": "Was macht die Person am Nachmittag?",
+        "promptAr": "ماذا يفعل المتحدث بعد الظهر؟",
+        "options": [
+          "Er geht spazieren und hört Musik",
+          "Er arbeitet im Büro",
+          "Er besucht einen Arzt"
+        ],
+        "answer": "Er geht spazieren und hört Musik",
+        "explanationAr": "الدليل في النص: «Am Nachmittag gehe ich spazieren und höre Musik.» — بعد الظهر يتمشى ويستمع إلى الموسيقى."
+      }
+    ]
   },
   {
     "id": "t-a1-027",
@@ -6654,7 +6832,35 @@
     "de": "Mein Hobby ist Fußball. Jeden Freitagabend spiele ich mit meinen Kollegen. Wir spielen in einer Halle in der Nähe meiner Wohnung. Nach dem Spiel trinken wir zusammen ein Bier. Fußball macht Spaß und hält mich fit. Ich bin nicht sehr gut, aber ich spiele gern.",
     "ar": "هوايتي كرة القدم. كل مساء جمعة ألعب مع زملائي. نلعب في قاعة قريبة من شقتي. بعد المباراة نشرب معاً جعة واحدة. كرة القدم ممتعة وتبقيني لائقاً بدنياً. أنا لست ماهراً جداً لكنني ألعب بحب.",
     "wordCountDe": 45,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-027-q1",
+        "type": "mc",
+        "promptDe": "Wo spielt die Person Fußball?",
+        "promptAr": "أين يلعب المتحدث كرة القدم؟",
+        "options": [
+          "In einer Halle in der Nähe der Wohnung",
+          "Im Garten",
+          "In einer Schule"
+        ],
+        "answer": "In einer Halle in der Nähe der Wohnung",
+        "explanationAr": "الدليل في النص: «Wir spielen in einer Halle in der Nähe meiner Wohnung.» — يلعبون في قاعة قريبة من الشقة."
+      },
+      {
+        "id": "t-a1-027-q2",
+        "type": "mc",
+        "promptDe": "Was machen die Kollegen nach dem Spiel?",
+        "promptAr": "ماذا يفعل الزملاء بعد المباراة؟",
+        "options": [
+          "Sie trinken zusammen ein Bier",
+          "Sie gehen zur Arbeit",
+          "Sie essen Kuchen"
+        ],
+        "answer": "Sie trinken zusammen ein Bier",
+        "explanationAr": "الدليل في النص: «Nach dem Spiel trinken wir zusammen ein Bier.» — يشربون معاً بيرة بعد المباراة."
+      }
+    ]
   },
   {
     "id": "t-a1-028",
@@ -6664,7 +6870,35 @@
     "de": "Ich arbeite als Ingenieur in einer kleinen Firma in der Stadt. Die Firma macht Maschinen für Autos. Jeden Tag stehe ich um halb sieben auf und fahre mit dem Bus zur Arbeit. Meine Kollegen sind sehr nett. Das Arbeitspensum ist manchmal hoch, aber ich mag meinen Beruf.",
     "ar": "أعمل مهندساً في شركة صغيرة في المدينة. الشركة تصنع آلات للسيارات. كل يوم أستيقظ في السادسة والنصف وأذهب بالحافلة إلى العمل. زملائي لطفاء جداً. ضغط العمل أحياناً كبير لكنني أحب مهنتي.",
     "wordCountDe": 47,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-028-q1",
+        "type": "mc",
+        "promptDe": "Was ist der Beruf des Erzählers?",
+        "promptAr": "ما مهنة المتحدث؟",
+        "options": [
+          "Ingenieur",
+          "Lehrer",
+          "Arzt"
+        ],
+        "answer": "Ingenieur",
+        "explanationAr": "الدليل في النص: «Ich arbeite als Ingenieur in einer kleinen Firma in der Stadt.» — يقول إنه يعمل مهندساً."
+      },
+      {
+        "id": "t-a1-028-q2",
+        "type": "mc",
+        "promptDe": "Was produziert die Firma?",
+        "promptAr": "ماذا تنتج الشركة؟",
+        "options": [
+          "Maschinen für Autos",
+          "Kleidung",
+          "Bücher"
+        ],
+        "answer": "Maschinen für Autos",
+        "explanationAr": "الدليل في النص: «Die Firma macht Maschinen für Autos.» — الشركة تصنع آلات للسيارات."
+      }
+    ]
   },
   {
     "id": "t-a1-029",
@@ -6674,27 +6908,111 @@
     "de": "Heute trage ich eine blaue Jeans, ein weißes T-Shirt und schwarze Schuhe. Im Winter ziehe ich eine warme Jacke an, manchmal auch einen Schal und Handschuhe. Im Sommer trage ich kurze Hosen und T-Shirts. Ich kaufe meine Kleidung meistens in der Stadt.",
     "ar": "ألبس اليوم جينزاً أزرق وقميصاً أبيض وحذاءً أسود. في الشتاء أرتدي سترة دافئة وأحياناً وشاحاً وقفازات. في الصيف ألبس بنطالاً قصيراً وقمصاناً قصيرة الأكمام. أشتري ملابسي غالباً من وسط المدينة.",
     "wordCountDe": 42,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-029-q1",
+        "type": "mc",
+        "promptDe": "Was trägt die Person heute?",
+        "promptAr": "ماذا يلبس المتحدث اليوم؟",
+        "options": [
+          "Eine blaue Jeans, ein weißes T-Shirt und schwarze Schuhe",
+          "Eine rote Hose und einen Mantel",
+          "Ein Kleid und Sandalen"
+        ],
+        "answer": "Eine blaue Jeans, ein weißes T-Shirt und schwarze Schuhe",
+        "explanationAr": "الدليل في النص: «Heute trage ich eine blaue Jeans, ein weißes T-Shirt und schwarze Schuhe.» — هذه هي الملابس المذكورة في بداية النص."
+      },
+      {
+        "id": "t-a1-029-q2",
+        "type": "mc",
+        "promptDe": "Was trägt die Person im Winter manchmal zusätzlich?",
+        "promptAr": "ماذا يرتدي المتحدث أحياناً في الشتاء إضافةً إلى السترة؟",
+        "options": [
+          "Einen Schal und Handschuhe",
+          "Eine kurze Hose",
+          "Ein T-Shirt"
+        ],
+        "answer": "Einen Schal und Handschuhe",
+        "explanationAr": "الدليل في النص: «Im Winter ziehe ich eine warme Jacke an, manchmal auch einen Schal und Handschuhe.» — يذكر النص وشاحاً وقفازات."
+      }
+    ]
   },
   {
     "id": "t-a1-030",
     "level": "A1",
     "titleDe": "Beim Arzt",
     "titleAr": "Beim Arzt",
-    "de": "Heute bin ich beim Arzt, weil ich seit zwei Tagen Kopfschmerzen habe. Die Ärztin fragt: »Was tut weh?« Ich antworte: »Mein Kopf tut weh und ich habe ein bisschen Fieber.« Sie untersucht mich und sagt: »Das ist eine Erkältung. Trinken Sie viel Wasser und ruhen Sie sich aus.« Ich nehme Tabletten und trinke Tee.",
-    "ar": "اليوم أنا عند الطبيب لأنني أعاني من الصداع منذ يومين. الطبيبة تسأل: «ماذا يؤلمك؟» أجيب: «رأسي يؤلمني وعندي حمى بسيطة». تفحصني وتقول: «هذا زكام. اشرب ماءً كثيراً واسترح». أتناول الحبوب وأشرب الشاي.",
+    "de": "Heute bin ich beim Arzt. Ich habe seit zwei Tagen Kopfschmerzen. Die Ärztin fragt: »Was tut weh?« Ich antworte: »Mein Kopf tut weh und ich habe ein bisschen Fieber.« Sie untersucht mich und sagt: »Das ist eine Erkältung. Trinken Sie viel Wasser und ruhen Sie sich aus.« Ich nehme Tabletten und trinke Tee.",
+    "ar": "اليوم أنا عند الطبيب. أعاني من الصداع منذ يومين. الطبيبة تسأل: «ماذا يؤلمك؟» أجيب: «رأسي يؤلمني وعندي حمى بسيطة». تفحصني وتقول: «هذا زكام. اشرب ماءً كثيراً واسترح». أتناول الحبوب وأشرب الشاي.",
     "wordCountDe": 54,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-030-q1",
+        "type": "mc",
+        "promptDe": "Was tut dem Patienten weh?",
+        "promptAr": "ما الذي يؤلم المريض؟",
+        "options": [
+          "Der Kopf",
+          "Der Bauch",
+          "Der Fuß"
+        ],
+        "answer": "Der Kopf",
+        "explanationAr": "الدليل في النص: «Ich habe seit zwei Tagen Kopfschmerzen.» — يقول: Mein Kopf tut weh."
+      },
+      {
+        "id": "t-a1-030-q2",
+        "type": "mc",
+        "promptDe": "Was empfiehlt die Ärztin?",
+        "promptAr": "بماذا تنصح الطبيبة؟",
+        "options": [
+          "Viel Wasser trinken und sich ausruhen",
+          "Lange spazieren gehen",
+          "Keinen Tee trinken"
+        ],
+        "answer": "Viel Wasser trinken und sich ausruhen",
+        "explanationAr": "الدليل في النص: «Trinken Sie viel Wasser und ruhen Sie sich aus.» — تنصحه بشرب الماء والراحة."
+      }
+    ]
   },
   {
     "id": "t-a1-031",
     "level": "A1",
     "titleDe": "Mein Haustier",
     "titleAr": "Mein Haustier",
-    "de": "Ich habe eine kleine Katze. Sie heißt Mimi und ist zwei Jahre alt. Sie ist schwarz-weiß und sehr süß. Jeden Morgen gibt ich ihr Futter und frisches Wasser. Am Abend spielt sie gern mit einem roten Ball. Wenn ich nach Hause komme, wartet sie schon vor der Tür.",
+    "de": "Ich habe eine kleine Katze. Sie heißt Mimi und ist zwei Jahre alt. Sie ist schwarz-weiß und sehr süß. Jeden Morgen gebe ich ihr Futter und frisches Wasser. Am Abend spielt sie gern mit einem roten Ball. Wenn ich nach Hause komme, wartet sie schon vor der Tür.",
     "ar": "عندي قطة صغيرة. اسمها ميمي وعمرها سنتان. هي سوداء بيضاء ولطيفة جداً. كل صباح أعطيها طعاماً وماء عذباً. في المساء تحب اللعب بكرة حمراء. عندما أعود إلى البيت، تكون بانتظاري أمام الباب.",
     "wordCountDe": 48,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-031-q1",
+        "type": "mc",
+        "promptDe": "Wie heißt die Katze?",
+        "promptAr": "ما اسم القطة؟",
+        "options": [
+          "Mimi",
+          "Luna",
+          "Mia"
+        ],
+        "answer": "Mimi",
+        "explanationAr": "الدليل في النص: «Sie heißt Mimi und ist zwei Jahre alt.» — اسم القطة Mimi."
+      },
+      {
+        "id": "t-a1-031-q2",
+        "type": "mc",
+        "promptDe": "Womit spielt die Katze am Abend gern?",
+        "promptAr": "بماذا تحب القطة اللعب مساءً؟",
+        "options": [
+          "Mit einem roten Ball",
+          "Mit einem Buch",
+          "Mit einer Tasche"
+        ],
+        "answer": "Mit einem roten Ball",
+        "explanationAr": "الدليل في النص: «Am Abend spielt sie gern mit einem roten Ball.» — تلعب مساءً بكرة حمراء."
+      }
+    ]
   },
   {
     "id": "t-a1-032",
@@ -6704,7 +7022,35 @@
     "de": "Am Wochenende schlafe ich länger als in der Woche. Am Samstag putze ich die Wohnung und kaufe ein. Am Sonntag treffe ich meine Freunde oder besuche meine Familie. Manchmal schaue ich einen Film zu Hause. Am Sonntagabend koche ich etwas Leckeres und bereite mich auf die neue Woche vor.",
     "ar": "في عطلة نهاية الأسبوع أنام أطول من أيام الأسبوع. يوم السبت أنظف الشقة وأتسوق. يوم الأحد أقابل أصدقائي أو أزور عائلتي. أحياناً أشاهد فيلماً في البيت. مساء الأحد أطبخ شيئاً لذيذاً وأستعد للأسبوع الجديد.",
     "wordCountDe": 49,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-032-q1",
+        "type": "mc",
+        "promptDe": "Was macht die Person am Samstag?",
+        "promptAr": "ماذا يفعل المتحدث يوم السبت؟",
+        "options": [
+          "Sie putzt die Wohnung und kauft ein",
+          "Sie fährt zur Arbeit",
+          "Sie besucht einen Arzt"
+        ],
+        "answer": "Sie putzt die Wohnung und kauft ein",
+        "explanationAr": "الدليل في النص: «Am Samstag putze ich die Wohnung und kaufe ein.» — يوم السبت ينظف الشقة ويتسوق."
+      },
+      {
+        "id": "t-a1-032-q2",
+        "type": "mc",
+        "promptDe": "Was macht die Person am Sonntagabend?",
+        "promptAr": "ماذا يفعل المتحدث مساء الأحد؟",
+        "options": [
+          "Sie kocht und bereitet sich auf die neue Woche vor",
+          "Sie geht ins Kino",
+          "Sie arbeitet im Supermarkt"
+        ],
+        "answer": "Sie kocht und bereitet sich auf die neue Woche vor",
+        "explanationAr": "الدليل في النص: «Am Sonntagabend koche ich etwas Leckeres und bereite mich auf die neue Woche vor.» — يطهو ويستعد للأسبوع الجديد."
+      }
+    ]
   },
   {
     "id": "t-a1-033",
@@ -6714,7 +7060,35 @@
     "de": "Zum Frühstück esse ich gern Brot mit Marmelade und trinke Kaffee. Zum Mittagessen gehe ich in die Kantine: es gibt Fleisch mit Kartoffeln und Gemüse. Zum Abendessen koche ich zu Hause: Nudeln mit Tomatensauce oder Reis mit Gemüse. Ich trinke viel Wasser und manchmal Apfelsaft.",
     "ar": "في الفطور أحب الخبز بالمربى وأشرب القهوة. في الغداء أذهب إلى الكافتيريا: هناك لحم مع البطاطس والخضار. في العشاء أطبخ في البيت: معكرونة بصلصة الطماطم أو رز بالخضار. أشرب ماء كثيراً وأحياناً عصير تفاح.",
     "wordCountDe": 45,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-033-q1",
+        "type": "mc",
+        "promptDe": "Was isst und trinkt die Person zum Frühstück?",
+        "promptAr": "ماذا يأكل ويشرب المتحدث على الفطور؟",
+        "options": [
+          "Brot mit Marmelade und Kaffee",
+          "Reis und Wasser",
+          "Fleisch und Tee"
+        ],
+        "answer": "Brot mit Marmelade und Kaffee",
+        "explanationAr": "الدليل في النص: «Zum Frühstück esse ich gern Brot mit Marmelade und trinke Kaffee.» — الفطور خبز بالمربى وقهوة."
+      },
+      {
+        "id": "t-a1-033-q2",
+        "type": "mc",
+        "promptDe": "Was trinkt die Person manchmal?",
+        "promptAr": "ماذا يشرب المتحدث أحياناً؟",
+        "options": [
+          "Apfelsaft",
+          "Milch",
+          "Limonade"
+        ],
+        "answer": "Apfelsaft",
+        "explanationAr": "الدليل في النص: «Ich trinke viel Wasser und manchmal Apfelsaft.» — يشرب أحياناً عصير التفاح."
+      }
+    ]
   },
   {
     "id": "t-a1-034",
@@ -6724,7 +7098,35 @@
     "de": "Entschuldigung, wo ist der Bahnhof? – Gehen Sie geradeaus bis zur Ampel, dann biegen Sie links ab. Nach zweihundert Metern sehen Sie den Bahnhof auf der rechten Seite. Gehen Sie zu Fuß fünf Minuten, oder nehmen Sie die Buslinie drei. – Vielen Dank! – Bitte schön.",
     "ar": "عفواً، أين محطة القطار؟ – اذهب مباشرة حتى الإشارة الضوئية، ثم انعطف يساراً. بعد مئتي متر ترى المحطة على اليمين. امشِ خمس دقائق، أو استقل الحافلة رقم ثلاثة. – شكراً جزيلاً! – عفواً.",
     "wordCountDe": 46,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-034-q1",
+        "type": "mc",
+        "promptDe": "Was soll man an der Ampel tun?",
+        "promptAr": "ماذا ينبغي أن يفعل المرء عند الإشارة؟",
+        "options": [
+          "Links abbiegen",
+          "Rechts abbiegen",
+          "Geradeaus zurückgehen"
+        ],
+        "answer": "Links abbiegen",
+        "explanationAr": "الدليل في النص: «Gehen Sie geradeaus bis zur Ampel, dann biegen Sie links ab.» — بعد الإشارة انعطف يساراً."
+      },
+      {
+        "id": "t-a1-034-q2",
+        "type": "mc",
+        "promptDe": "Welche Buslinie fährt zum Bahnhof?",
+        "promptAr": "أي خط حافلة يذهب إلى المحطة؟",
+        "options": [
+          "Linie zwei",
+          "Linie drei",
+          "Linie fünf"
+        ],
+        "answer": "Linie drei",
+        "explanationAr": "الدليل في النص: «nehmen Sie die Buslinie drei.» — النص يذكر Buslinie drei."
+      }
+    ]
   },
   {
     "id": "t-a1-035",
@@ -6734,7 +7136,35 @@
     "de": "Heute habe ich Geburtstag und bin dreißig Jahre alt. Meine Freunde kommen zu mir und bringen Geschenke: ein Buch, eine Flasche Wein und eine Karte. Meine Frau hat einen Kuchen gemacht. Wir essen zusammen Kuchen und trinken Kaffee. Es ist ein schöner Tag und ich bin sehr glücklich.",
     "ar": "اليوم عيد ميلادي وأنا في الثلاثين. أصدقائي يأتون إليّ ويجلبون الهدايا: كتاباً، قنينة خمر، وبطاقة. زوجتي صنعت كعكة. نأكل معاً الكعكة ونشرب القهوة. إنه يوم جميل وأنا سعيد جداً.",
     "wordCountDe": 48,
-    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema)."
+    "notes": "R138/P-11: Zusätzlicher A1-Lesetext (3–5 Sätze, Alltagsthema).",
+    "questions": [
+      {
+        "id": "t-a1-035-q1",
+        "type": "mc",
+        "promptDe": "Wie alt wird die Person heute?",
+        "promptAr": "كم يصبح عمر المتحدث اليوم؟",
+        "options": [
+          "Zwanzig",
+          "Dreißig",
+          "Vierzig"
+        ],
+        "answer": "Dreißig",
+        "explanationAr": "الدليل في النص: «Heute habe ich Geburtstag und bin dreißig Jahre alt.» — يقول: Ich bin dreißig Jahre alt."
+      },
+      {
+        "id": "t-a1-035-q2",
+        "type": "mc",
+        "promptDe": "Wer hat den Kuchen gemacht?",
+        "promptAr": "من أعدّ الكعكة؟",
+        "options": [
+          "Seine Frau",
+          "Sein Vater",
+          "Seine Tochter"
+        ],
+        "answer": "Seine Frau",
+        "explanationAr": "الدليل في النص: «Meine Frau hat einen Kuchen gemacht.» — زوجته صنعت الكعكة."
+      }
+    ]
   },
   {
     "id": "t-a2-21",
@@ -6754,8 +7184,9 @@
           "Seit einer Woche",
           "Seit zwei Wochen"
         ],
-        "answer": 1,
-        "explanationAr": "منذ ثلاثة أيام."
+        "answer": "Seit drei Tagen",
+        "explanationAr": "الدليل في النص: «Ich fühle mich seit drei Tagen nicht gut.» — منذ ثلاثة أيام.",
+        "id": "t-a2-21-q1"
       },
       {
         "type": "mc",
@@ -6767,8 +7198,9 @@
           "Nur Sport machen",
           "Kaffee trinken"
         ],
-        "answer": 1,
-        "explanationAr": "أوصاها بشرب الكثير من الشاي والبقاء في السرير."
+        "answer": "Viel Tee trinken und im Bett bleiben",
+        "explanationAr": "الدليل في النص: «ich soll viel Tee trinken und zwei Tage im Bett bleiben.» — أوصاها بشرب الكثير من الشاي والبقاء في السرير.",
+        "id": "t-a2-21-q2"
       }
     ]
   },
@@ -6790,8 +7222,9 @@
           "Sie hat keine Zeit",
           "Der Unterricht fällt aus"
         ],
-        "answer": 1,
-        "explanationAr": "لأن ابنتها مريضة."
+        "answer": "Ihre Tochter ist krank",
+        "explanationAr": "الدليل في النص: «weil meine Tochter krank ist.» — لأن ابنتها مريضة.",
+        "id": "t-a2-22-q1"
       }
     ]
   },
@@ -6813,8 +7246,9 @@
           "15 Minuten",
           "20 Minuten"
         ],
-        "answer": 1,
-        "explanationAr": "ثماني دقائق."
+        "answer": "8 Minuten",
+        "explanationAr": "الدليل في النص: «Sie brauchen zu Fuß ungefähr acht Minuten.» — ثماني دقائق.",
+        "id": "t-a2-23-q1"
       }
     ]
   },
@@ -6836,8 +7270,9 @@
           "Am Montag",
           "Am Dienstag"
         ],
-        "answer": 2,
-        "explanationAr": "الاثنين."
+        "answer": "Am Montag",
+        "explanationAr": "الدليل في النص: «weil ich am Montag einen Test hatte.» — الاثنين.",
+        "id": "t-a2-24-q1"
       }
     ]
   },
@@ -6859,8 +7294,9 @@
           "1,49 Euro",
           "2,49 Euro"
         ],
-        "answer": 2,
-        "explanationAr": "1.49 يورو."
+        "answer": "1,49 Euro",
+        "explanationAr": "الدليل في النص: «ein Kilo für 1,49 Euro.» — 1.49 يورو.",
+        "id": "t-a2-25-q1"
       }
     ]
   },
@@ -6882,8 +7318,9 @@
           "Bis Donnerstag",
           "Bis Sonntag"
         ],
-        "answer": 2,
-        "explanationAr": "حتى الخميس."
+        "answer": "Bis Donnerstag",
+        "explanationAr": "الدليل في النص: «Bitte sag mir bis Donnerstag Bescheid, ob du kommen kannst.» — حتى الخميس.",
+        "id": "t-a2-26-q1"
       }
     ]
   },
@@ -6905,8 +7342,9 @@
           "600 Euro",
           "650 Euro"
         ],
-        "answer": 1,
-        "explanationAr": "580 يورو."
+        "answer": "580 Euro",
+        "explanationAr": "الدليل في النص: «Die Kaltmiete beträgt 580 Euro.» — 580 يورو.",
+        "id": "t-a2-27-q1"
       }
     ]
   },
@@ -6928,8 +7366,9 @@
           "3 Wochen",
           "Einen Monat"
         ],
-        "answer": 1,
-        "explanationAr": "خلال 10 أيام."
+        "answer": "10 Tage",
+        "explanationAr": "الدليل في النص: «In der Regel schicken wir die Nummer innerhalb von 10 Tagen per Post.» — خلال 10 أيام.",
+        "id": "t-a2-28-q1"
       }
     ]
   },
@@ -6951,8 +7390,9 @@
           "Di/Do/Sa",
           "Mi/Fr/So"
         ],
-        "answer": 1,
-        "explanationAr": "الاثنين والأربعاء والجمعة."
+        "answer": "Mo/Mi/Fr",
+        "explanationAr": "الدليل في النص: «Der Kurs ist dreimal pro Woche: montags, mittwochs und freitags» — الاثنين والأربعاء والجمعة.",
+        "id": "t-a2-29-q1"
       }
     ]
   },
@@ -6974,8 +7414,9 @@
           "Jeden Sonntag",
           "Nur im Ramadan"
         ],
-        "answer": 1,
-        "explanationAr": "كل يوم جمعة."
+        "answer": "Jeden Freitag",
+        "explanationAr": "الدليل في النص: «Das kocht meine Mutter jeden Freitag in Tunesien.» — كل يوم جمعة.",
+        "id": "t-a2-30-q1"
       }
     ]
   },
@@ -6997,8 +7438,9 @@
           "Wegen des Studiums",
           "Wegen der Familie"
         ],
-        "answer": 1,
-        "explanationAr": "السبب عرض عمل جديد."
+        "answer": "Wegen eines neuen Jobs",
+        "explanationAr": "الدليل في النص: «Der Grund war ein neues Jobangebot als Softwareentwicklerin.» — السبب عرض عمل جديد.",
+        "id": "t-b1-31-q1"
       },
       {
         "type": "mc",
@@ -7010,8 +7452,9 @@
           "Die vielen Hochhäuser",
           "Das Nachtleben"
         ],
-        "answer": 1,
-        "explanationAr": "المساحات الخضراء والإيجارات الرخيصة."
+        "answer": "Die vielen Grünflächen und günstige Mieten",
+        "explanationAr": "الدليل في النص: «Was ich an Leipzig besonders mag, sind die vielen Grünflächen und die günstigen Mieten im Vergleich zu Hamburg.» — المساحات الخضراء والإيجارات الرخيصة.",
+        "id": "t-b1-31-q2"
       }
     ]
   },
@@ -7033,8 +7476,9 @@
           "Zwei Jahre",
           "Drei Jahre"
         ],
-        "answer": 1,
-        "explanationAr": "منذ سنة."
+        "answer": "Ein Jahr",
+        "explanationAr": "الدليل في النص: «Seit einem Jahr esse ich kein Fleisch mehr.» — منذ سنة.",
+        "id": "t-b1-32-q1"
       },
       {
         "type": "mc",
@@ -7046,8 +7490,9 @@
           "Auf viel Zucker",
           "Auf wenig Wasser"
         ],
-        "answer": 1,
-        "explanationAr": "الانتباه للحديد والبروتين."
+        "answer": "Auf genügend Eisen und Eiweiß",
+        "explanationAr": "الدليل في النص: «Natürlich muss ich darauf achten, genügend Eisen und Eiweiß zu essen» — الانتباه للحديد والبروتين.",
+        "id": "t-b1-32-q2"
       }
     ]
   },
@@ -7069,8 +7514,9 @@
           "Einer Schule",
           "Einem Krankenhaus"
         ],
-        "answer": 1,
-        "explanationAr": "شركة تسويق في كولونيا."
+        "answer": "Einer Marketingfirma",
+        "explanationAr": "الدليل في النص: «bei einer Marketingfirma in Köln.» — شركة تسويق في كولونيا.",
+        "id": "t-b1-33-q1"
       }
     ]
   },
@@ -7092,8 +7538,9 @@
           "Am Kopf",
           "Am Rücken"
         ],
-        "answer": 1,
-        "explanationAr": "أُصيب في ركبته."
+        "answer": "Am Knie",
+        "explanationAr": "الدليل في النص: «hat sich am Knie verletzt.» — أُصيب في ركبته.",
+        "id": "t-b1-34-q1"
       }
     ]
   },
@@ -7115,8 +7562,9 @@
           "Mehr Partys im Park",
           "Weniger Mülleimer"
         ],
-        "answer": 1,
-        "explanationAr": "مزيد من الرقابة وغرامات أعلى."
+        "answer": "Mehr Kontrollen und höhere Strafen",
+        "explanationAr": "الدليل في النص: «Ich schlage vor, dass die Stadt mehr Kontrollen durchführt und höhere Geldstrafen verhängt.» — مزيد من الرقابة وغرامات أعلى.",
+        "id": "t-b1-35-q1"
       }
     ]
   },
@@ -7138,8 +7586,9 @@
           "Lehrer wollen nicht früher aufstehen",
           "Die Busse fahren nicht später"
         ],
-        "answer": 1,
-        "explanationAr": "النقاد يذكرون مشاكل تنظيمية لدى الوالدين."
+        "answer": "Eltern haben organisatorische Probleme",
+        "explanationAr": "الدليل في النص: «Kritiker wenden ein, dass späterer Unterricht die Eltern vor organisatorische Probleme stellt» — النقاد يذكرون مشاكل تنظيمية لدى الوالدين.",
+        "id": "t-b2-36-q1"
       }
     ]
   },
@@ -7161,8 +7610,9 @@
           "Langes Schweigen",
           "Viel Smalltalk"
         ],
-        "answer": 1,
-        "explanationAr": "المباشرة."
+        "answer": "Direktheit",
+        "explanationAr": "الدليل في النص: «war ich überrascht, wie direkt Kollegen und Nachbarn ihre Meinung sagten.» — المباشرة.",
+        "id": "t-b2-37-q1"
       }
     ]
   },
@@ -7184,8 +7634,9 @@
           "Zu viele Urlaubstage",
           "Zu geringe Nachfrage"
         ],
-        "answer": 1,
-        "explanationAr": "خشية توقف الآلات وتراجع جودة الخدمات."
+        "answer": "Stillstand von Maschinen und sinkende Dienstleistungsqualität",
+        "explanationAr": "الدليل في النص: «Arbeitgeberverbände warnen davor, dass in produzierenden Branchen Maschinen stillstehen könnten und die Dienstleistungsqualität sinkt.» — خشية توقف الآلات وتراجع جودة الخدمات.",
+        "id": "t-b2-38-q1"
       }
     ]
   },
@@ -7207,8 +7658,9 @@
           "Wegen mehr Kulturangeboten",
           "Wegen kürzerer Arbeitswege"
         ],
-        "answer": 1,
-        "explanationAr": "إيجارات أقل ومزيد من الطبيعة."
+        "answer": "Wegen niedriger Mieten und mehr Natur",
+        "explanationAr": "الدليل في النص: «Gründe sind hohe Mieten, beengte Wohnverhältnisse und der Wunsch nach mehr Natur und Ruhe.» — إيجارات أقل ومزيد من الطبيعة.",
+        "id": "t-b2-39-q1"
       }
     ]
   },
@@ -7230,8 +7682,9 @@
           "Ein- bis zweimal pro Tag",
           "Zehnmal pro Tag"
         ],
-        "answer": 2,
-        "explanationAr": "مرة إلى مرتين يومياً."
+        "answer": "Ein- bis zweimal pro Tag",
+        "explanationAr": "الدليل في النص: «Menschen nach psychologischen Studien durchschnittlich ein- bis zweimal pro Tag.» — مرة إلى مرتين يومياً.",
+        "id": "t-b2-40-q1"
       }
     ]
   },
@@ -7253,8 +7706,9 @@
           "Frau Becker",
           "Frau Klein"
         ],
-        "answer": 1,
-        "explanationAr": "اسمها Frau Schulz."
+        "answer": "Frau Schulz",
+        "explanationAr": "اسمها Frau Schulz.",
+        "id": "t-a0-06-q1"
       }
     ]
   },
@@ -7276,8 +7730,9 @@
           "Er sieht fern.",
           "Er schläft."
         ],
-        "answer": 1,
-        "explanationAr": "يتسوّق."
+        "answer": "Er kauft ein.",
+        "explanationAr": "يتسوّق.",
+        "id": "t-a0-07-q1"
       }
     ]
   },
@@ -7299,8 +7754,9 @@
           "Orange",
           "Traube"
         ],
-        "answer": 1,
-        "explanationAr": "التفاح."
+        "answer": "Apfel",
+        "explanationAr": "التفاح.",
+        "id": "t-a0-08-q1"
       }
     ]
   },
@@ -7322,8 +7778,9 @@
           "Um 9",
           "Um 12"
         ],
-        "answer": 2,
-        "explanationAr": "التاسعة."
+        "answer": "Um 9",
+        "explanationAr": "التاسعة.",
+        "id": "t-a0-09-q1"
       }
     ]
   },
@@ -7345,8 +7802,9 @@
           "Sommer",
           "Herbst"
         ],
-        "answer": 1,
-        "explanationAr": "الربيع."
+        "answer": "Frühling",
+        "explanationAr": "الربيع.",
+        "id": "t-a0-10-q1"
       }
     ]
   },
@@ -7355,41 +7813,21 @@
     "level": "A0",
     "titleDe": "Meine Schultasche",
     "titleAr": "حقيبتي المدرسية",
-    "bodyDe": "Ich habe eine Schultasche. Sie ist blau und rot. In der Tasche sind drei Hefte, ein Kugelschreiber, ein Bleistift und ein Radiergummi. Ich habe auch ein Buch für Deutsch. Die Tasche ist nicht schwer. Ich nehme sie jeden Morgen in die Schule.",
-    "bodyAr": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاث دفاتر وقلم حبر وقلم رصاص وممحاة. عندي أيضاً كتاب للألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
-    "gloss": [
-      [
-        "die Schultasche",
-        "الحقيبة المدرسية"
-      ],
-      [
-        "das Heft,-e",
-        "الدفتر"
-      ],
-      [
-        "der Kugelschreiber",
-        "قلم الحبر"
-      ],
-      [
-        "das Radiergummi",
-        "الممحاة"
-      ],
-      [
-        "schwer",
-        "ثقيل"
-      ]
-    ],
-    "comprehension": [
+    "de": "Ich habe eine Schultasche. Sie ist blau und rot. In der Tasche sind drei Hefte, ein Kugelschreiber, ein Bleistift und ein Radiergummi. Ich habe auch ein Buch für den Deutschunterricht. Die Tasche ist nicht schwer. Ich nehme sie jeden Morgen in die Schule.",
+    "ar": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاثة دفاتر وقلم حبر وقلم رصاص وممحاة. عندي أيضاً كتاب لحصة الألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
+    "questions": [
       {
-        "frage_de": "Was ist in der Schultasche?",
-        "frage_ar": "ماذا يوجد في الحقيبة؟",
+        "id": "t-a0-011-q1",
+        "type": "mc",
+        "promptDe": "Was ist in der Schultasche?",
+        "promptAr": "ماذا يوجد في الحقيبة؟",
         "options": [
           "Ein Apfel",
           "Drei Hefte und Stifte",
           "Ein Telefon"
         ],
-        "answer": 1,
-        "erklaerung_ar": "في النص: drei Hefte, Kugelschreiber, Bleistift."
+        "answer": "Drei Hefte und Stifte",
+        "explanationAr": "في النص: drei Hefte, Kugelschreiber, Bleistift."
       }
     ]
   },
@@ -7398,37 +7836,21 @@
     "level": "A0",
     "titleDe": "Am Wochenende",
     "titleAr": "في نهاية الأسبوع",
-    "bodyDe": "Am Samstag stehe ich spät auf. Ich trinke Kaffee und lese die Zeitung. Am Nachmittag gehe ich mit meinem Hund im Park spazieren. Am Sonntag besuche ich meine Mutter. Wir essen zusammen Kuchen und trinken Tee. Das Wochenende ist schön.",
-    "bodyAr": "يوم السبت أستيقظ متأخراً. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نأكل الكيك معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
-    "gloss": [
-      [
-        "spät aufstehen",
-        "يستيقظ متأخراً"
-      ],
-      [
-        "der Hund,-e",
-        "الكلب"
-      ],
-      [
-        "spazieren gehen",
-        "يتنزه"
-      ],
-      [
-        "der Kuchen",
-        "الكيك/الكعك"
-      ]
-    ],
-    "comprehension": [
+    "de": "Am Samstag stehe ich spät auf. Ich trinke Kaffee und lese die Zeitung. Am Nachmittag gehe ich mit meinem Hund im Park spazieren. Am Sonntag besuche ich meine Mutter. Wir essen zusammen Kuchen und trinken Tee. Das Wochenende ist schön.",
+    "ar": "يوم السبت أستيقظ متأخراً. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نأكل الكيك معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
+    "questions": [
       {
-        "frage_de": "Was macht er am Sonntag?",
-        "frage_ar": "ماذا يفعل يوم الأحد؟",
+        "id": "t-a0-012-q1",
+        "type": "mc",
+        "promptDe": "Was macht er am Sonntag?",
+        "promptAr": "ماذا يفعل يوم الأحد؟",
         "options": [
           "Er geht arbeiten",
           "Er besucht seine Mutter",
           "Er schläft den ganzen Tag"
         ],
-        "answer": 1,
-        "erklaerung_ar": "النص يقول: Am Sonntag besuche ich meine Mutter."
+        "answer": "Er besucht seine Mutter",
+        "explanationAr": "النص يقول: Am Sonntag besuche ich meine Mutter."
       }
     ]
   },
@@ -7437,41 +7859,21 @@
     "level": "A0",
     "titleDe": "Das Wetter heute",
     "titleAr": "الطقس اليوم",
-    "bodyDe": "Heute ist Montag. Der Himmel ist blau und die Sonne scheint. Es ist warm, etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
-    "bodyAr": "اليوم الإثنين. السماء زرقاء والشمس مشرقة. الجو دافئ، حوالي ٢٠ درجة. ألبس قميصاً وبنطلون جينز. لا أحتاج إلى سترة. أنا متشوق لقضاء بعد الظهر في الحديقة.",
-    "gloss": [
-      [
-        "der Himmel",
-        "السماء"
-      ],
-      [
-        "scheinen",
-        "تشرق/تسطع"
-      ],
-      [
-        "anziehen",
-        "يلبس"
-      ],
-      [
-        "die Jacke",
-        "السترة"
-      ],
-      [
-        "sich freuen auf",
-        "يتشوق لـ"
-      ]
-    ],
-    "comprehension": [
+    "de": "Heute ist Montag. Der Himmel ist blau und die Sonne scheint. Es ist warm, etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
+    "ar": "اليوم الإثنين. السماء زرقاء والشمس مشرقة. الجو دافئ، حوالي ٢٠ درجة. ألبس قميصاً وبنطلون جينز. لا أحتاج إلى سترة. أنا متشوق لقضاء بعد الظهر في الحديقة.",
+    "questions": [
       {
-        "frage_de": "Welche Temperatur hat es heute?",
-        "frage_ar": "كم درجة الحرارة اليوم؟",
+        "id": "t-a0-013-q1",
+        "type": "mc",
+        "promptDe": "Welche Temperatur hat es heute?",
+        "promptAr": "كم درجة الحرارة اليوم؟",
         "options": [
           "10 Grad",
           "20 Grad",
           "30 Grad"
         ],
-        "answer": 1,
-        "erklaerung_ar": "النص: etwa 20 Grad."
+        "answer": "20 Grad",
+        "explanationAr": "النص: etwa 20 Grad."
       }
     ]
   },
@@ -7480,41 +7882,21 @@
     "level": "A0",
     "titleDe": "Im Restaurant",
     "titleAr": "في المطعم",
-    "bodyDe": "Ich gehe gern ins Restaurant. Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln. Dazu trinke ich ein Wasser. Der Kellner ist freundlich. Das Essen schmeckt sehr gut. Ich bezahle und gehe nach Hause.",
-    "bodyAr": "أحب الذهاب إلى المطعم. اليوم أطلب شوربة وشريحة لحم مع بطاطس. وأشرب معها ماءً. النادل لطيف. الأكل لذيذ جداً. أدفع وأذهب إلى البيت.",
-    "gloss": [
-      [
-        "bestellen",
-        "يطلب"
-      ],
-      [
-        "die Suppe",
-        "الشوربة"
-      ],
-      [
-        "das Schnitzel",
-        "شريحة لحم مقلية"
-      ],
-      [
-        "freundlich",
-        "لطيف"
-      ],
-      [
-        "schmecken",
-        "يكون لذيذاً"
-      ]
-    ],
-    "comprehension": [
+    "de": "Ich gehe gern ins Restaurant. Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln. Dazu trinke ich ein Wasser. Der Kellner ist freundlich. Das Essen schmeckt sehr gut. Ich bezahle und gehe nach Hause.",
+    "ar": "أحب الذهاب إلى المطعم. اليوم أطلب شوربة وشريحة لحم مع بطاطس. وأشرب معها ماءً. النادل لطيف. الأكل لذيذ جداً. أدفع وأذهب إلى البيت.",
+    "questions": [
       {
-        "frage_de": "Was trinkt er?",
-        "frage_ar": "ماذا يشرب؟",
+        "id": "t-a0-014-q1",
+        "type": "mc",
+        "promptDe": "Was trinkt er?",
+        "promptAr": "ماذا يشرب؟",
         "options": [
           "Bier",
           "Wasser",
           "Cola"
         ],
-        "answer": 1,
-        "erklaerung_ar": "النص: Dazu trinke ich ein Wasser."
+        "answer": "Wasser",
+        "explanationAr": "النص: Dazu trinke ich ein Wasser."
       }
     ]
   },
@@ -7523,41 +7905,21 @@
     "level": "A0",
     "titleDe": "Meine Wohnung",
     "titleAr": "شقتي",
-    "bodyDe": "Ich wohne in einer kleinen Wohnung in der Stadt. Die Wohnung hat ein Wohnzimmer, ein Schlafzimmer, eine Küche und ein Bad. Im Wohnzimmer steht ein Sofa vor dem Fernseher. In der Küche mache ich Kaffee. Die Wohnung ist ruhig und hell.",
-    "bodyAr": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمّام. في غرفة المعيشة كنبة أمام التلفاز. في المطبخ أصنع القهوة. الشقة هادئة ومشرقة.",
-    "gloss": [
-      [
-        "das Wohnzimmer",
-        "غرفة المعيشة"
-      ],
-      [
-        "das Schlafzimmer",
-        "غرفة النوم"
-      ],
-      [
-        "das Sofa",
-        "الكنبة"
-      ],
-      [
-        "ruhig",
-        "هادئ"
-      ],
-      [
-        "hell",
-        "مشرق"
-      ]
-    ],
-    "comprehension": [
+    "de": "Ich wohne in einer kleinen Wohnung in der Stadt. Die Wohnung hat ein Wohnzimmer, ein Schlafzimmer, eine Küche und ein Bad. Im Wohnzimmer steht ein Sofa vor dem Fernseher. In der Küche mache ich Kaffee. Die Wohnung ist ruhig und hell.",
+    "ar": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمّام. في غرفة المعيشة كنبة أمام التلفاز. في المطبخ أصنع القهوة. الشقة هادئة ومشرقة.",
+    "questions": [
       {
-        "frage_de": "Wie ist die Wohnung?",
-        "frage_ar": "كيف هي الشقة؟",
+        "id": "t-a0-015-q1",
+        "type": "mc",
+        "promptDe": "Wie ist die Wohnung?",
+        "promptAr": "كيف هي الشقة؟",
         "options": [
           "Groß und laut",
           "Klein, ruhig und hell",
           "Dunkel und alt"
         ],
-        "answer": 1,
-        "erklaerung_ar": "النص: kleine Wohnung, ruhig und hell."
+        "answer": "Klein, ruhig und hell",
+        "explanationAr": "النص: kleine Wohnung, ruhig und hell."
       }
     ]
   },
@@ -7566,45 +7928,21 @@
     "level": "A2",
     "titleDe": "Ein Umzug nach Leipzig",
     "titleAr": "انتقال إلى لايبزيغ",
-    "bodyDe": "Letzten Monat ist Sara von München nach Leipzig gezogen. Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch, deshalb suchte sie eine Wohnung im Osten. In Leipzig fand sie eine schöne Altbauwohnung mit drei Zimmern und Balkon für 650 Euro warm. Am Anfang vermisste sie ihre Freunde in München, aber sie hat schnell neue Kollegen kennengelernt. Jetzt gefällt ihr Leipzig gut: Die Stadt ist grün, die Menschen sind freundlich und die Mieten sind bezahlbar. Am Wochenende erkundet sie mit dem Fahrrad die Viertel und probiert neue Cafés aus.",
-    "bodyAr": "انتقلت سارة الشهر الماضي من ميونخ إلى لايبزيغ. وجدت وظيفة جديدة كمصممة جرافيك. كانت الإيجارات في ميونخ مرتفعة جدًا، فبحثت عن شقة في الشرق. وجدت في لايبزيغ شقة جميلة في مبنى قديم بثلاث غرف وشرفة بـ 650 يورو شاملة التدفئة. في البداية افتقدت أصدقائها في ميونخ، لكنها سرعان ما تعرفت على زملاء جدد. والآن تعجبها لايبزيغ: المدينة خضراء، الناس لطفاء، والإيجارات معقولة. في نهاية الأسبوع تستكشف الأحياء بالدراجة وتجرب مقاهي جديدة.",
-    "gloss": [
-      [
-        "umziehen",
-        "ينتقل"
-      ],
-      [
-        "die Stelle,-n",
-        "الوظيفة"
-      ],
-      [
-        "die Altbauwohnung,-en",
-        "شقة في مبنى قديم"
-      ],
-      [
-        "warm",
-        "شاملة التدفئة"
-      ],
-      [
-        "bezahlbar",
-        "يمكن دفعه/معقول"
-      ],
-      [
-        "erkunden",
-        "يستكشف"
-      ]
-    ],
-    "comprehension": [
+    "de": "Letzten Monat ist Sara von München nach Leipzig gezogen. Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch, deshalb suchte sie eine Wohnung im Osten. In Leipzig fand sie eine schöne Altbauwohnung mit drei Zimmern und Balkon für 650 Euro warm. Am Anfang vermisste sie ihre Freunde in München, aber sie lernte schnell neue Kollegen kennen. Jetzt gefällt ihr Leipzig gut: Die Stadt ist grün, die Menschen sind freundlich und die Mieten sind bezahlbar. Am Wochenende erkundet sie die Stadt mit dem Fahrrad und probiert neue Cafés aus.",
+    "ar": "انتقلت سارة الشهر الماضي من ميونخ إلى لايبزيغ. وجدت وظيفة جديدة كمصممة جرافيك. كانت الإيجارات في ميونخ مرتفعة جدًا، فبحثت عن شقة في الشرق. وجدت في لايبزيغ شقة جميلة في مبنى قديم بثلاث غرف وشرفة بـ 650 يورو شاملة التدفئة. في البداية افتقدت أصدقائها في ميونخ، لكنها سرعان ما تعرفت على زملاء جدد. والآن تعجبها لايبزيغ: المدينة خضراء، الناس لطفاء، والإيجارات معقولة. في نهاية الأسبوع تستكشف المدينة بالدراجة وتجرب مقاهي جديدة.",
+    "questions": [
       {
-        "frage_de": "Warum ist Sara nach Leipzig gezogen?",
-        "frage_ar": "لماذا انتقلت إلى لايبزيغ؟",
+        "id": "t-a2-031-q1",
+        "type": "mc",
+        "promptDe": "Warum ist Sara nach Leipzig gezogen?",
+        "promptAr": "لماذا انتقلت إلى لايبزيغ؟",
         "options": [
           "Wegen einer neuen Stelle und niedrigeren Mieten",
           "Wegen des Wetters",
           "Weil ihre Familie dort wohnt"
         ],
-        "answer": 0,
-        "erklaerung_ar": "وجدت وظيفة جديدة وكانت إيجارات ميونخ عالية."
+        "answer": "Wegen einer neuen Stelle und niedrigeren Mieten",
+        "explanationAr": "الدليل في النص: «Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch» — وجدت وظيفة جديدة وكانت إيجارات ميونخ عالية."
       }
     ]
   },
@@ -7613,41 +7951,21 @@
     "level": "A2",
     "titleDe": "Ein gesunder Tagesablauf",
     "titleAr": "يوم صحي",
-    "bodyDe": "Lukas hat seinen Tagesablauf in den letzten Monaten stark verändert. Früher stand er spät auf, trank drei Tassen Kaffee zum Frühstück und aß mittags oft Fast Food. Abends saß er stundenlang vor dem Fernseher. Jetzt steht er um sieben Uhr auf, macht zwanzig Minuten Yoga und frühstückt Müsli mit Obst. Mittags kocht er selbst Gemüse mit Reis. Er geht dreimal pro Woche laufen und schläft vor Mitternacht. Seitdem fühlt er sich viel fitter und ist in der Arbeit konzentrierter. Er sagt, die größte Schwierigkeit war, abends keine Schokolade zu essen.",
-    "bodyAr": "غيّر لوكاس روتينه اليومي في الأشهر الماضية بشكل كبير. سابقاً كان يستيقظ متأخراً، يشرب ثلاثة فناجين قهوة على الفطور، ويأكل وجبات سريعة في الغداء. في المساء يجلس ساعات أمام التلفاز. الآن يستيقظ السابعة، يمارس اليوغا عشرين دقيقة، ويفطر موسلي بالفاكهة. يطبخ في الغداء خضاراً مع الأرز، يركض ثلاث مرات أسبوعياً، وينام قبل منتصف الليل. منذ ذلك يشعر بأكثر نشاطاً وأعلى تركيزاً في العمل. ويقول إن الصعوبة الأكبر كانت عدم أكل الشوكولاتة مساءً.",
-    "gloss": [
-      [
-        "der Tagesablauf",
-        "الروتين اليومي"
-      ],
-      [
-        "verändern",
-        "يغيّر"
-      ],
-      [
-        "das Fast Food",
-        "الوجبات السريعة"
-      ],
-      [
-        "fitter",
-        "أكثر نشاطاً/لياقة"
-      ],
-      [
-        "konzentriert",
-        "مُركِّز"
-      ]
-    ],
-    "comprehension": [
+    "de": "Lukas hat seinen Tagesablauf in den letzten Monaten stark verändert. Früher stand er spät auf, trank drei Tassen Kaffee zum Frühstück und aß mittags oft Fast Food. Abends saß er stundenlang vor dem Fernseher. Jetzt steht er um sieben Uhr auf, macht zwanzig Minuten Yoga und frühstückt Müsli mit Obst. Mittags kocht er selbst Gemüse mit Reis. Er geht dreimal pro Woche laufen und schläft vor Mitternacht. Seitdem fühlt er sich viel fitter und ist in der Arbeit konzentrierter. Er sagt, die größte Schwierigkeit war, abends keine Schokolade zu essen.",
+    "ar": "غيّر لوكاس روتينه اليومي في الأشهر الماضية بشكل كبير. سابقاً كان يستيقظ متأخراً، يشرب ثلاثة فناجين قهوة على الفطور، ويأكل وجبات سريعة في الغداء. في المساء يجلس ساعات أمام التلفاز. الآن يستيقظ السابعة، يمارس اليوغا عشرين دقيقة، ويفطر موسلي بالفاكهة. يطبخ في الغداء خضاراً مع الأرز، يركض ثلاث مرات أسبوعياً، وينام قبل منتصف الليل. منذ ذلك يشعر بأكثر نشاطاً وأعلى تركيزاً في العمل. ويقول إن الصعوبة الأكبر كانت عدم أكل الشوكولاتة مساءً.",
+    "questions": [
       {
-        "frage_de": "Was war Lukas' größte Schwierigkeit bei der Umstellung?",
-        "frage_ar": "ما كانت أكبر صعوبة؟",
+        "id": "t-a2-032-q1",
+        "type": "mc",
+        "promptDe": "Was war Lukas' größte Schwierigkeit bei der Umstellung?",
+        "promptAr": "ما كانت أكبر صعوبة؟",
         "options": [
           "Früher aufzustehen",
           "Keine Schokolade abends zu essen",
           "Täglich Sport zu machen"
         ],
-        "answer": 1,
-        "erklaerung_ar": "النص يقول إن أصعب شيء كان عدم أكل الشوكولاتة مساءً."
+        "answer": "Keine Schokolade abends zu essen",
+        "explanationAr": "الدليل في النص: «die größte Schwierigkeit war, abends keine Schokolade zu essen.» — النص يقول إن أصعب شيء كان عدم أكل الشوكولاتة مساءً."
       }
     ]
   }

@@ -10237,34 +10237,34 @@
     "titleAr": "تحية",
     "lines": [
       {
-        "sp": "A",
         "de": "Hallo!",
-        "ar": "مرحباً!"
+        "ar": "مرحباً!",
+        "who": "A"
       },
       {
-        "sp": "B",
         "de": "Guten Tag!",
-        "ar": "نهارك سعيد!"
+        "ar": "نهارك سعيد!",
+        "who": "B"
       },
       {
-        "sp": "A",
         "de": "Wie heißt du?",
-        "ar": "ما اسمك؟"
+        "ar": "ما اسمك؟",
+        "who": "A"
       },
       {
-        "sp": "B",
         "de": "Ich heiße Ali. Und du?",
-        "ar": "اسمي علي. وأنت؟"
+        "ar": "اسمي علي. وأنت؟",
+        "who": "B"
       },
       {
-        "sp": "A",
         "de": "Ich heiße Sara. Freut mich!",
-        "ar": "اسمي سارة. سعيدة بلقائك!"
+        "ar": "اسمي سارة. سعيدة بلقائك!",
+        "who": "A"
       },
       {
-        "sp": "B",
         "de": "Auf Wiedersehen!",
-        "ar": "إلى اللقاء!"
+        "ar": "إلى اللقاء!",
+        "who": "B"
       }
     ],
     "questions": [
@@ -10324,19 +10324,19 @@
     "titleAr": "أرقام",
     "lines": [
       {
-        "sp": "A",
         "de": "Wie viel ist eins plus zwei?",
-        "ar": "كم واحد زائد اثنين؟"
+        "ar": "كم واحد زائد اثنين؟",
+        "who": "A"
       },
       {
-        "sp": "B",
         "de": "Eins plus zwei ist drei.",
-        "ar": "واحد زائد اثنين يساوي ثلاثة."
+        "ar": "واحد زائد اثنين يساوي ثلاثة.",
+        "who": "B"
       },
       {
-        "sp": "A",
         "de": "Danke!",
-        "ar": "شكراً!"
+        "ar": "شكراً!",
+        "who": "A"
       }
     ],
     "questions": [
@@ -10394,19 +10394,19 @@
     "titleAr": "تهجئة",
     "lines": [
       {
-        "sp": "A",
         "de": "Buchstabiere bitte deinen Namen!",
-        "ar": "هجِّ اسمك من فضلك!"
+        "ar": "هجِّ اسمك من فضلك!",
+        "who": "A"
       },
       {
-        "sp": "B",
         "de": "A – L – I. Ali.",
-        "ar": "A – L – I. علي."
+        "ar": "A – L – I. علي.",
+        "who": "B"
       },
       {
-        "sp": "A",
         "de": "Danke!",
-        "ar": "شكراً!"
+        "ar": "شكراً!",
+        "who": "A"
       }
     ],
     "questions": [
@@ -10464,39 +10464,96 @@
     "level": "A1",
     "titleDe": "Eine Fahrkarte kaufen",
     "titleAr": "شراء تذكرة قطار",
-    "de": "Guten Tag! Ich möchte eine Fahrkarte nach Berlin, bitte.\nEinfach oder hin und zurück?\nEinfach, bitte. Wann fährt der nächste Zug?\nUm Viertel nach zehn von Gleis vier.\nWas kostet die Karte?\nNeunundzwanzig Euro, bitte.\nHier sind dreißig Euro.\nDanke, und einen Euro zurück. Gute Fahrt!\nVielen Dank, Auf Wiedersehen!",
-    "ar": "— نهار سعيد! أريد تذكرة إلى برلين من فضلك.\n— ذهاب فقط أم ذهاب وعودة؟\n— ذهاب فقط، من فضلك. متى يغادر القطار التالي؟\n— الساعة العاشرة والربع من الرصيف الرابع.\n— بكم التذكرة؟\n— تسعة وعشرون يورو من فضلك.\n— هنا ثلاثون يورو.\n— شكراً، يورو كباقي. رحلة سعيدة!\n— شكراً جزيلاً، إلى اللقاء!",
     "questions": [
       {
-        "q": "Was für eine Fahrkarte kauft er?",
         "options": [
           "Hin und Rückfahrt",
           "Einfach",
           "Gruppenkarte"
         ],
         "answer": "Einfach",
-        "explanationAr": "يشتري تذكرة Einfach (ذهاب فقط)."
+        "explanationAr": "يشتري تذكرة Einfach (ذهاب فقط).",
+        "promptDe": "Was für eine Fahrkarte kauft er?",
+        "type": "mc",
+        "id": "dlg-a1-fahrkarte-q1",
+        "promptAr": "أي نوع من التذاكر يشتري؟"
       },
       {
-        "q": "Von welchem Gleis fährt der Zug?",
         "options": [
           "Gleis 3",
           "Gleis 4",
           "Gleis 5"
         ],
         "answer": "Gleis 4",
-        "explanationAr": "القطار من الرصيف الرابع (Gleis vier)."
+        "explanationAr": "القطار من الرصيف الرابع (Gleis vier).",
+        "promptDe": "Von welchem Gleis fährt der Zug?",
+        "type": "mc",
+        "id": "dlg-a1-fahrkarte-q2",
+        "promptAr": "من أي رصيف ينطلق القطار؟"
       },
       {
-        "q": "Was kostet die Fahrkarte?",
         "options": [
           "29 €",
           "30 €",
           "19 €"
         ],
         "answer": "29 €",
-        "explanationAr": "التذكرة بتسعة وعشرين يورو."
+        "explanationAr": "التذكرة بتسعة وعشرين يورو.",
+        "promptDe": "Was kostet die Fahrkarte?",
+        "type": "mc",
+        "id": "dlg-a1-fahrkarte-q3",
+        "promptAr": "كم ثمن التذكرة؟"
       }
+    ],
+    "lines": [
+      {
+        "who": "Kunde",
+        "de": "Guten Tag! Ich möchte eine Fahrkarte nach Berlin, bitte.",
+        "ar": "نهار سعيد! أريد تذكرة إلى برلين من فضلك."
+      },
+      {
+        "who": "Mitarbeiter",
+        "de": "Einfach oder hin und zurück?",
+        "ar": "ذهاب فقط أم ذهاب وعودة؟"
+      },
+      {
+        "who": "Kunde",
+        "de": "Einfach, bitte. Wann fährt der nächste Zug?",
+        "ar": "ذهاب فقط، من فضلك. متى يغادر القطار التالي؟"
+      },
+      {
+        "who": "Mitarbeiter",
+        "de": "Um Viertel nach zehn von Gleis vier.",
+        "ar": "الساعة العاشرة والربع من الرصيف الرابع."
+      },
+      {
+        "who": "Kunde",
+        "de": "Was kostet die Karte?",
+        "ar": "بكم التذكرة؟"
+      },
+      {
+        "who": "Mitarbeiter",
+        "de": "Neunundzwanzig Euro, bitte.",
+        "ar": "تسعة وعشرون يورو من فضلك."
+      },
+      {
+        "who": "Kunde",
+        "de": "Hier sind dreißig Euro.",
+        "ar": "هنا ثلاثون يورو."
+      },
+      {
+        "who": "Mitarbeiter",
+        "de": "Danke, und einen Euro zurück. Gute Fahrt!",
+        "ar": "شكراً، يورو كباقي. رحلة سعيدة!"
+      },
+      {
+        "who": "Kunde",
+        "de": "Vielen Dank, Auf Wiedersehen!",
+        "ar": "شكراً جزيلاً، إلى اللقاء!"
+      }
+    ],
+    "dictation": [
+      "Ich möchte eine Fahrkarte nach Berlin, bitte."
     ]
   },
   {
@@ -10504,38 +10561,147 @@
     "level": "A2",
     "titleDe": "Reklamation im Hotel",
     "titleAr": "شكوى في الفندق",
-    "de": "Guten Abend. Ich habe ein Problem mit meinem Zimmer.\nGuten Abend. Was ist los?\nDas Zimmer ist nicht sauber und das Licht im Bad funktioniert nicht.\nEs tut mir sehr leid. Ich schicke sofort jemand, der das repariert.\nUnd das WLAN funktioniert auch nicht!\nIch kann Ihnen ein anderes Zimmer anbieten. Zimmer 214 ist frei.\nVielen Dank, das ist sehr freundlich.",
-    "ar": "— مساء الخير. عندي مشكلة في غرفتي.\n— مساء الخير. ما الأمر؟\n— الغرفة غير نظيفة والمصباح في الحمام لا يعمل.\n— أعتذر جداً. سأرسل حالاً شخصاً ليصلح ذلك.\n— والـWLAN لا يعمل أيضاً!\n— يمكنني أن أعرض عليك غرفة أخرى. الغرفة 214 شاغرة.\n— شكراً جزيلاً، هذا لطف منك.",
-    "questions": []
+    "questions": [
+      {
+        "id": "dlg-a1-reklamation-hotel-q1",
+        "type": "mc",
+        "promptDe": "Welche Probleme hat der Gast im Zimmer?",
+        "promptAr": "ما المشكلتان في غرفة النزيل؟",
+        "options": [
+          "Das Zimmer ist schmutzig und das Licht im Bad funktioniert nicht",
+          "Das Bett ist zu klein",
+          "Das Fenster ist kaputt"
+        ],
+        "answer": "Das Zimmer ist schmutzig und das Licht im Bad funktioniert nicht",
+        "explanationAr": "يذكر الضيف أن الغرفة غير نظيفة وأن ضوء الحمام لا يعمل."
+      },
+      {
+        "id": "dlg-a1-reklamation-hotel-q2",
+        "type": "mc",
+        "promptDe": "Was bietet die Rezeptionistin an?",
+        "promptAr": "ماذا تعرض موظفة الاستقبال؟",
+        "options": [
+          "Ein anderes Zimmer",
+          "Ein kostenloses Frühstück",
+          "Eine spätere Abreise"
+        ],
+        "answer": "Ein anderes Zimmer",
+        "explanationAr": "تعرض غرفة أخرى، رقم 214."
+      }
+    ],
+    "lines": [
+      {
+        "who": "Gast",
+        "de": "Guten Abend. Ich habe ein Problem mit meinem Zimmer.",
+        "ar": "مساء الخير. عندي مشكلة في غرفتي."
+      },
+      {
+        "who": "Rezeptionistin",
+        "de": "Guten Abend. Was ist los?",
+        "ar": "مساء الخير. ما الأمر؟"
+      },
+      {
+        "who": "Gast",
+        "de": "Das Zimmer ist nicht sauber und das Licht im Bad funktioniert nicht.",
+        "ar": "الغرفة غير نظيفة والمصباح في الحمام لا يعمل."
+      },
+      {
+        "who": "Rezeptionistin",
+        "de": "Es tut mir sehr leid. Ich schicke sofort jemand, der das repariert.",
+        "ar": "أعتذر جداً. سأرسل حالاً شخصاً ليصلح ذلك."
+      },
+      {
+        "who": "Gast",
+        "de": "Und das WLAN funktioniert auch nicht!",
+        "ar": "والـWLAN لا يعمل أيضاً!"
+      },
+      {
+        "who": "Rezeptionistin",
+        "de": "Ich kann Ihnen ein anderes Zimmer anbieten. Zimmer 214 ist frei.",
+        "ar": "يمكنني أن أعرض عليك غرفة أخرى. الغرفة 214 شاغرة."
+      },
+      {
+        "who": "Gast",
+        "de": "Vielen Dank, das ist sehr freundlich.",
+        "ar": "شكراً جزيلاً، هذا لطف منك."
+      }
+    ],
+    "dictation": [
+      "Ich habe ein Problem mit meinem Zimmer."
+    ]
   },
   {
     "id": "dlg-a2-terminabsage",
     "level": "A2",
     "titleDe": "Einen Termin absagen",
     "titleAr": "إلغاء موعد (طبيب/إدارة)",
-    "de": "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?\nGuten Tag, hier spricht Sami Ben Salah. Ich habe morgen um zehn Uhr einen Termin, aber ich kann leider nicht kommen.\nKein Problem. Möchten Sie einen neuen Termin vereinbaren?\nJa, bitte. Geht es nächsten Dienstag um elf Uhr?\nAm Dienstag um elf ist noch frei. Ich trage Sie ein. Tut mir leid, dass Sie nicht kommen können.\nVielen Dank, auf Wiederhören!\nAuf Wiederhören!",
-    "ar": "— نهار سعيد، عيادة الدكتور مولر، كيف يمكنني المساعدة؟\n— نهار سعيد، معكم سامي بن صالح. عندي موعد غداً الساعة العاشرة لكنني للأسف لا أستطيع الحضور.\n— لا مشكلة. هل تريد حجز موعد جديد؟\n— نعم من فضلك. هل الثلاثاء القادم الساعة الحادية عشرة ممكن؟\n— الثلاثاء في الحادية عشرة ما زال شاغراً. سأُسجّل لك. آسف لأنك لا تستطيع الحضور.\n— شكراً جزيلاً، إلى اللقاء!\n— إلى اللقاء!",
     "questions": [
       {
-        "q": "Warum ruft Sami an?",
         "options": [
           "Er will einen Termin absagen",
           "Er will zum Arzt gehen",
           "Er hat Schmerzen"
         ],
         "answer": "Er will einen Termin absagen",
-        "explanationAr": "سامي يتصل لإلغاء موعده غداً."
+        "explanationAr": "سامي يتصل لإلغاء موعده غداً.",
+        "promptDe": "Warum ruft Sami an?",
+        "type": "mc",
+        "id": "dlg-a2-terminabsage-q1",
+        "promptAr": "لماذا يتصل سامي؟"
       },
       {
-        "q": "Wann ist der neue Termin?",
         "options": [
           "morgen um zehn",
           "nächsten Dienstag um elf",
           "um elf heute"
         ],
         "answer": "nächsten Dienstag um elf",
-        "explanationAr": "الموعد الجديد الثلاثاء القادم الساعة 11."
+        "explanationAr": "الموعد الجديد الثلاثاء القادم الساعة 11.",
+        "promptDe": "Wann ist der neue Termin?",
+        "type": "mc",
+        "id": "dlg-a2-terminabsage-q2",
+        "promptAr": "متى الموعد الجديد؟"
       }
+    ],
+    "lines": [
+      {
+        "who": "Mitarbeiterin",
+        "de": "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?",
+        "ar": "نهار سعيد، عيادة الدكتور مولر، كيف يمكنني المساعدة؟"
+      },
+      {
+        "who": "Patient",
+        "de": "Guten Tag, hier spricht Sami Ben Salah. Ich habe morgen um zehn Uhr einen Termin, aber ich kann leider nicht kommen.",
+        "ar": "نهار سعيد، معكم سامي بن صالح. عندي موعد غداً الساعة العاشرة لكنني للأسف لا أستطيع الحضور."
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Kein Problem. Möchten Sie einen neuen Termin vereinbaren?",
+        "ar": "لا مشكلة. هل تريد حجز موعد جديد؟"
+      },
+      {
+        "who": "Patient",
+        "de": "Ja, bitte. Geht es nächsten Dienstag um elf Uhr?",
+        "ar": "نعم من فضلك. هل الثلاثاء القادم الساعة الحادية عشرة ممكن؟"
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Am Dienstag um elf ist noch frei. Ich trage Sie ein. Tut mir leid, dass Sie nicht kommen können.",
+        "ar": "الثلاثاء في الحادية عشرة ما زال شاغراً. سأُسجّل لك. آسف لأنك لا تستطيع الحضور."
+      },
+      {
+        "who": "Patient",
+        "de": "Vielen Dank, auf Wiederhören!",
+        "ar": "شكراً جزيلاً، إلى اللقاء!"
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Auf Wiederhören!",
+        "ar": "إلى اللقاء!"
+      }
+    ],
+    "dictation": [
+      "Guten Tag, Praxis Dr."
     ]
   },
   {
@@ -10543,29 +10709,78 @@
     "level": "A2",
     "titleDe": "Bei der Krankenversicherung",
     "titleAr": "في التأمين الصحي",
-    "de": "Guten Tag, ich möchte mich krankenversichern.\nHerzlich willkommen bei der AOK. Sind Sie berufstätig oder Student?\nIch bin berufstätig und arbeite als Ingenieur.\nDann brauche ich Ihren Personalausweis, die Arbeitgeberbescheinigung und Ihre Steuer-ID.\nHier sind meine Unterlagen. Wie viel kostet die Versicherung?\nEtwa 14,6 Prozent Ihres Bruttogehalts, je die Hälfte tragen Sie und Ihr Arbeitgeber.\nWann bin ich versichert?\nAb dem ersten Arbeitstag.",
-    "ar": "— نهار سعيد، أريد الاشتراك في التأمين الصحي.\n— أهلاً وسهلاً بك في AOK. هل أنت موظف أم طالب؟\n— أنا موظف وأعمل مهندساً.\n— أحتاج بطاقتك الشخصية، شهادة صاحب العمل، ورقمك الضريبي.\n— ها هي المستندات. بكم التأمين؟\n— حوالي 14,6% من راتبك الإجمالي، تدفع نصفها ويدفع صاحب العمل النصف الآخر.\n— متى أبدأ التغطية؟\n— من أول يوم عمل.",
     "questions": [
       {
-        "q": "Wie hoch ist der Versicherungsbeitrag etwa?",
         "options": [
           "14,6% vom Bruttogehalt",
           "20%",
           "gar nichts"
         ],
         "answer": "14,6% vom Bruttogehalt",
-        "explanationAr": "الاشتراك حوالي 14,6% من الراتب الإجمالي."
+        "explanationAr": "الاشتراك حوالي 14,6% من الراتب الإجمالي.",
+        "promptDe": "Wie hoch ist der Versicherungsbeitrag etwa?",
+        "type": "mc",
+        "id": "dlg-a2-krankenversicherung-q1",
+        "promptAr": "كم تبلغ مساهمة التأمين تقريباً؟"
       },
       {
-        "q": "Welche Unterlagen braucht die Mitarbeiterin?",
         "options": [
           "Personalausweis, Arbeitgeberbescheinigung, Steuer-ID",
           "nur den Pass",
           "eine Wohnungsmeldung"
         ],
         "answer": "Personalausweis, Arbeitgeberbescheinigung, Steuer-ID",
-        "explanationAr": "تحتاج بطاقة+شهادة رب عمل+رقم ضريبي."
+        "explanationAr": "تحتاج بطاقة+شهادة رب عمل+رقم ضريبي.",
+        "promptDe": "Welche Unterlagen braucht die Mitarbeiterin?",
+        "type": "mc",
+        "id": "dlg-a2-krankenversicherung-q2",
+        "promptAr": "ما المستندات التي تحتاجها الموظفة؟"
       }
+    ],
+    "lines": [
+      {
+        "who": "Kundin",
+        "de": "Guten Tag, ich möchte mich krankenversichern.",
+        "ar": "نهار سعيد، أريد الاشتراك في التأمين الصحي."
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Herzlich willkommen bei der AOK. Sind Sie berufstätig oder Student?",
+        "ar": "أهلاً وسهلاً بك في AOK. هل أنت موظف أم طالب؟"
+      },
+      {
+        "who": "Kundin",
+        "de": "Ich bin berufstätig und arbeite als Ingenieur.",
+        "ar": "أنا موظف وأعمل مهندساً."
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Dann brauche ich Ihren Personalausweis, die Arbeitgeberbescheinigung und Ihre Steuer-ID.",
+        "ar": "أحتاج بطاقتك الشخصية، شهادة صاحب العمل، ورقمك الضريبي."
+      },
+      {
+        "who": "Kundin",
+        "de": "Hier sind meine Unterlagen. Wie viel kostet die Versicherung?",
+        "ar": "ها هي المستندات. بكم التأمين؟"
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Etwa 14,6 Prozent Ihres Bruttogehalts, je die Hälfte tragen Sie und Ihr Arbeitgeber.",
+        "ar": "حوالي 14,6% من راتبك الإجمالي، تدفع نصفها ويدفع صاحب العمل النصف الآخر."
+      },
+      {
+        "who": "Kundin",
+        "de": "Wann bin ich versichert?",
+        "ar": "متى أبدأ التغطية؟"
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Ab dem ersten Arbeitstag.",
+        "ar": "من أول يوم عمل."
+      }
+    ],
+    "dictation": [
+      "Guten Tag, ich möchte mich krankenversichern."
     ]
   },
   {
@@ -10632,8 +10847,9 @@
           "Eine Gehaltsabrechnung",
           "Keine Dokumente"
         ],
-        "answer": 0,
-        "explanationAr": "الموظّفة طلبت Personalausweis أو Pass وMeldebescheinigung."
+        "answer": "Personalausweis/Pass + Meldebescheinigung",
+        "explanationAr": "الموظّفة طلبت Personalausweis أو Pass وMeldebescheinigung.",
+        "id": "dlg-b1-kontoeroeffnung-q1"
       },
       {
         "type": "mc",
@@ -10645,8 +10861,9 @@
           "Nur für Rentner",
           "Nur online"
         ],
-        "answer": 1,
-        "explanationAr": "الحساب مجاني للطلاب والمتدربين."
+        "answer": "Für Studenten und Azubis",
+        "explanationAr": "الحساب مجاني للطلاب والمتدربين.",
+        "id": "dlg-b1-kontoeroeffnung-q2"
       }
     ],
     "dictation": [
@@ -10713,8 +10930,9 @@
           "180 Euro",
           "2160 Euro"
         ],
-        "answer": 1,
-        "explanationAr": "Kaltmiete 720 + Nebenkosten 180 = 900 يورو."
+        "answer": "900 Euro",
+        "explanationAr": "Kaltmiete 720 + Nebenkosten 180 = 900 يورو.",
+        "id": "dlg-b2-mietvertrag-q1"
       },
       {
         "type": "mc",
@@ -10726,8 +10944,9 @@
           "Auf das Konto des Hausmeisters",
           "Bar bei Übergabe"
         ],
-        "answer": 1,
-        "explanationAr": "القانون يقتضي حساب تأمين منفصل (Kautionskonto)."
+        "answer": "Auf ein separates Kautionskonto",
+        "explanationAr": "القانون يقتضي حساب تأمين منفصل (Kautionskonto).",
+        "id": "dlg-b2-mietvertrag-q2"
       }
     ],
     "dictation": [
@@ -10784,8 +11003,9 @@
           "Aus der Türkei",
           "Aus Ägypten"
         ],
-        "answer": 1,
-        "explanationAr": "ليلى من سوريا."
+        "answer": "Aus Syrien",
+        "explanationAr": "ليلى من سوريا.",
+        "id": "d-a0-04-q1"
       },
       {
         "type": "mc",
@@ -10797,8 +11017,9 @@
           "In Hamburg",
           "In Köln"
         ],
-        "answer": 2,
-        "explanationAr": "تسكن في هامبورغ."
+        "answer": "In Hamburg",
+        "explanationAr": "تسكن في هامبورغ.",
+        "id": "d-a0-04-q2"
       }
     ],
     "dictation": [
@@ -10855,8 +11076,9 @@
           "U-H-B-E-R",
           "H-A-B-E-R"
         ],
-        "answer": 1,
-        "explanationAr": "العميل هجّاها H–U–B–E–R."
+        "answer": "H-U-B-E-R",
+        "explanationAr": "العميل هجّاها H–U–B–E–R.",
+        "id": "d-a0-05-q1"
       }
     ],
     "dictation": [
@@ -10912,8 +11134,9 @@
           "Nur ein Bier",
           "Wein und Käse"
         ],
-        "answer": 1,
-        "explanationAr": "قهوة بالحليب وماء."
+        "answer": "Kaffee mit Milch und ein Wasser",
+        "explanationAr": "قهوة بالحليب وماء.",
+        "id": "d-a0-06-q1"
       }
     ],
     "dictation": [
@@ -10965,8 +11188,9 @@
           "30",
           "18"
         ],
-        "answer": 0,
-        "explanationAr": "سارة في الـ22."
+        "answer": "22",
+        "explanationAr": "سارة في الـ22.",
+        "id": "d-a0-07-q1"
       },
       {
         "type": "mc",
@@ -10978,8 +11202,9 @@
           "In München",
           "In Köln"
         ],
-        "answer": 2,
-        "explanationAr": "يسكن في ميونخ."
+        "answer": "In München",
+        "explanationAr": "يسكن في ميونخ.",
+        "id": "d-a0-07-q2"
       }
     ],
     "dictation": [
@@ -11025,8 +11250,9 @@
           "Nie",
           "Heute Abend"
         ],
-        "answer": 1,
-        "explanationAr": "قال A: Bis morgen! أي إلى الغد."
+        "answer": "Morgen",
+        "explanationAr": "قال A: Bis morgen! أي إلى الغد.",
+        "id": "d-a0-08-q1"
       }
     ],
     "dictation": [
@@ -11058,8 +11284,9 @@
           "S-Bahn 3",
           "RB 25"
         ],
-        "answer": 1,
-        "explanationAr": "قطار RE 10."
+        "answer": "RE 10",
+        "explanationAr": "قطار RE 10.",
+        "id": "hoer-a1-01-q1"
       },
       {
         "type": "mc",
@@ -11071,8 +11298,9 @@
           "20 Minuten",
           "30 Minuten"
         ],
-        "answer": 1,
-        "explanationAr": "التأخير 10 دقائق."
+        "answer": "10 Minuten",
+        "explanationAr": "التأخير 10 دقائق.",
+        "id": "hoer-a1-01-q2"
       }
     ],
     "dictation": [
@@ -11104,8 +11332,9 @@
           "Brot",
           "Milch"
         ],
-        "answer": 1,
-        "explanationAr": "التفاح في العرض."
+        "answer": "Äpfel",
+        "explanationAr": "التفاح في العرض.",
+        "id": "hoer-a1-02-q1"
       },
       {
         "type": "mc",
@@ -11117,8 +11346,9 @@
           "Um 20 Uhr",
           "Um 22 Uhr"
         ],
-        "answer": 2,
-        "explanationAr": "يغلق الساعة 20."
+        "answer": "Um 20 Uhr",
+        "explanationAr": "يغلق الساعة 20.",
+        "id": "hoer-a1-02-q2"
       }
     ],
     "dictation": [
@@ -11150,8 +11380,9 @@
           "116 117",
           "0180-1"
         ],
-        "answer": 2,
-        "explanationAr": "116117 هو رقم الطوارئ الطبية."
+        "answer": "116 117",
+        "explanationAr": "116117 هو رقم الطوارئ الطبية.",
+        "id": "hoer-a2-01-q1"
       },
       {
         "type": "mc",
@@ -11163,8 +11394,9 @@
           "Mi/Fr",
           "Mo/Mi"
         ],
-        "answer": 1,
-        "explanationAr": "الثلاثاء والخميس."
+        "answer": "Di/Do",
+        "explanationAr": "الثلاثاء والخميس.",
+        "id": "hoer-a2-01-q2"
       }
     ],
     "dictation": [
@@ -11196,8 +11428,9 @@
           "Im Süden",
           "Im Westen"
         ],
-        "answer": 3,
-        "explanationAr": "العواصف في الغرب مساءً."
+        "answer": "Im Westen",
+        "explanationAr": "العواصف في الغرب مساءً.",
+        "id": "hoer-a2-02-q1"
       },
       {
         "type": "mc",
@@ -11209,8 +11442,9 @@
           "26 Grad",
           "30 Grad"
         ],
-        "answer": 2,
-        "explanationAr": "تصل إلى 26."
+        "answer": "26 Grad",
+        "explanationAr": "تصل إلى 26.",
+        "id": "hoer-a2-02-q2"
       }
     ],
     "dictation": [
@@ -11242,8 +11476,9 @@
           "Um sich zu bewerben",
           "Wegen einer Party"
         ],
-        "answer": 1,
-        "explanationAr": "ألغت الموعد."
+        "answer": "Weil der Termin ausfällt",
+        "explanationAr": "ألغت الموعد.",
+        "id": "hoer-b1-01-q1"
       },
       {
         "type": "mc",
@@ -11255,8 +11490,9 @@
           "Bescheid sagen, ob der Termin passt",
           "Den Vertrag unterschreiben"
         ],
-        "answer": 2,
-        "explanationAr": "يُعلمها إن كان الموعد مناسباً."
+        "answer": "Bescheid sagen, ob der Termin passt",
+        "explanationAr": "يُعلمها إن كان الموعد مناسباً.",
+        "id": "hoer-b1-01-q2"
       }
     ],
     "dictation": [
@@ -11288,8 +11524,9 @@
           "Die zu hohen Steuern",
           "Der Mangel an Jobs"
         ],
-        "answer": 1,
-        "explanationAr": "المشكلة في معادلة الشهادات واللغة."
+        "answer": "Die Anerkennung der Abschlüsse und die Sprache",
+        "explanationAr": "المشكلة في معادلة الشهادات واللغة.",
+        "id": "hoer-b2-01-q1"
       },
       {
         "type": "mc",
@@ -11301,8 +11538,9 @@
           "C1",
           "A2"
         ],
-        "answer": 1,
-        "explanationAr": "B2 على الأقل، وأحياناً C1."
+        "answer": "B2",
+        "explanationAr": "B2 على الأقل، وأحياناً C1.",
+        "id": "hoer-b2-01-q2"
       }
     ],
     "dictation": [
@@ -11354,8 +11592,9 @@
           "3,40",
           "5,00"
         ],
-        "answer": 1,
-        "explanationAr": "2.50 يورو."
+        "answer": "2,50",
+        "explanationAr": "2.50 يورو.",
+        "id": "d-a0-09-q1"
       }
     ],
     "dictation": [
@@ -11401,8 +11640,9 @@
           "Drei Uhr",
           "Viertel vor drei"
         ],
-        "answer": 1,
-        "explanationAr": "الثالثة والربع."
+        "answer": "Viertel nach drei",
+        "explanationAr": "الثالثة والربع.",
+        "id": "d-a0-10-q1"
       }
     ],
     "dictation": [
@@ -11453,8 +11693,9 @@
           "Bauchschmerzen",
           "Halsschmerzen"
         ],
-        "answer": 1,
-        "explanationAr": "صداع وحرارة."
+        "answer": "Kopfschmerzen und Fieber",
+        "explanationAr": "صداع وحرارة.",
+        "id": "d-a0-11-q1"
       }
     ],
     "dictation": [
@@ -11500,8 +11741,9 @@
           "Drei: einen Bruder und zwei Schwestern",
           "Keine"
         ],
-        "answer": 2,
-        "explanationAr": "أخ وأختان = ثلاثة."
+        "answer": "Drei: einen Bruder und zwei Schwestern",
+        "explanationAr": "أخ وأختان = ثلاثة.",
+        "id": "d-a0-12-q1"
       }
     ],
     "dictation": [
@@ -11547,8 +11789,9 @@
           "5 Minuten",
           "20 Minuten"
         ],
-        "answer": 2,
-        "explanationAr": "خمس دقائق."
+        "answer": "5 Minuten",
+        "explanationAr": "خمس دقائق.",
+        "id": "d-a0-13-q1"
       }
     ],
     "dictation": [
@@ -11563,28 +11806,35 @@
     "situationAr": "إعلان في محطة القطار عن تأخير",
     "lines": [
       {
-        "speaker": "Ansage",
         "de": "Achtung, Gleis 3! Der Regionalzug nach Bonn fährt heute zehn Minuten später.",
-        "ar": "انتباه، الرصيف ٣! القطار الإقليمي إلى بون يتأخر اليوم عشر دقائق."
+        "ar": "انتباه، الرصيف ٣! القطار الإقليمي إلى بون يتأخر اليوم عشر دقائق.",
+        "who": "Ansage"
       },
       {
-        "speaker": "Ansage",
         "de": "Der Zug hält auch in Köln-Süd. Bitte steigen Sie erst ein, wenn der Zug steht.",
-        "ar": "القطار يتوقف أيضاً في كولونيا-جنوب. الرجاء الصعود فقط بعد توقف القطار."
+        "ar": "القطار يتوقف أيضاً في كولونيا-جنوب. الرجاء الصعود فقط بعد توقف القطار.",
+        "who": "Ansage"
       }
     ],
-    "comprehension": [
+    "titleDe": "Ansage am Bahnhof (Zugverspätung)",
+    "titleAr": "إعلان في محطة القطار عن تأخير",
+    "questions": [
       {
-        "frage_de": "Wie viele Minuten hat der Zug Verspätung?",
-        "frage_ar": "كم دقيقة تأخير القطار؟",
+        "id": "d-a0-ht01-q1",
+        "type": "mc",
+        "promptDe": "Wie viele Minuten hat der Zug Verspätung?",
+        "promptAr": "كم دقيقة تأخير القطار؟",
         "options": [
           "zwei Minuten",
           "fünf Minuten",
           "zehn Minuten"
         ],
-        "answer": 2,
-        "erklaerung_ar": "الإعلان يقول: zehn Minuten später (عشر دقائق)."
+        "answer": "zehn Minuten",
+        "explanationAr": "الإعلان يقول: zehn Minuten später (عشر دقائق)."
       }
+    ],
+    "dictation": [
+      "Achtung, Gleis 3!"
     ]
   },
   {
@@ -11595,28 +11845,35 @@
     "situationAr": "جهاز الرد الآلي في عيادة الدكتورة ليمان",
     "lines": [
       {
-        "speaker": "Anrufbeantworter",
         "de": "Sie haben die Praxis von Dr. Lehmann erreicht. Unsere Öffnungszeiten sind Montag bis Freitag von 8 bis 12 Uhr und Dienstag und Donnerstag von 15 bis 18 Uhr.",
-        "ar": "اتصلت بعيادة د. ليمان. ساعات العمل من الإثنين إلى الجمعة ٨–١٢، الثلاثاء والخميس ١٥–١٨."
+        "ar": "اتصلت بعيادة د. ليمان. ساعات العمل من الإثنين إلى الجمعة ٨–١٢، الثلاثاء والخميس ١٥–١٨.",
+        "who": "Anrufbeantworter"
       },
       {
-        "speaker": "Anrufbeantworter",
         "de": "Bei akuten Schmerzen rufen Sie bitte den Notdienst unter der Nummer 116 117 an. Vielen Dank.",
-        "ar": "في حال الألم الحاد اتصل بالطوارئ على ١١٦١١٧. شكراً."
+        "ar": "في حال الألم الحاد اتصل بالطوارئ على ١١٦١١٧. شكراً.",
+        "who": "Anrufbeantworter"
       }
     ],
-    "comprehension": [
+    "titleDe": "Anrufbeantworter: Arztpraxis Dr. Lehmann",
+    "titleAr": "جهاز الرد الآلي في عيادة الدكتورة ليمان",
+    "questions": [
       {
-        "frage_de": "Wann ist die Praxis Dienstag Nachmittag geöffnet?",
-        "frage_ar": "متى تفتح العيادة الثلاثاء بعد الظهر؟",
+        "id": "d-a1-ht01-q1",
+        "type": "mc",
+        "promptDe": "Wann ist die Praxis Dienstag Nachmittag geöffnet?",
+        "promptAr": "متى تفتح العيادة الثلاثاء بعد الظهر؟",
         "options": [
           "8–12 Uhr",
           "15–18 Uhr",
           "geschlossen"
         ],
-        "answer": 1,
-        "erklaerung_ar": "الإعلان: Dienstag und Donnerstag 15–18 Uhr."
+        "answer": "15–18 Uhr",
+        "explanationAr": "الإعلان: Dienstag und Donnerstag 15–18 Uhr."
       }
+    ],
+    "dictation": [
+      "Sie haben die Praxis von Dr."
     ]
   },
   {
@@ -11627,28 +11884,35 @@
     "situationAr": "نشرة الأحوال الجوية في الراديو",
     "lines": [
       {
-        "speaker": "Sprecherin",
         "de": "Guten Morgen, liebe Hörerinnen und Hörer! Heute bleibt es im Norden bewölkt mit etwas Regen bei 12 Grad.",
-        "ar": "صباح الخير أيها المستمعون! الجو اليوم غائم مع مطر خفيف في الشمال ١٢ درجة."
+        "ar": "صباح الخير أيها المستمعون! الجو اليوم غائم مع مطر خفيف في الشمال ١٢ درجة.",
+        "who": "Sprecherin"
       },
       {
-        "speaker": "Sprecherin",
         "de": "Im Süden scheint die Sonne bei bis zu 22 Grad. Am Wochenende gibt es überall Sonnenschein.",
-        "ar": "في الجنوب تشرق الشمس وتصل الحرارة إلى ٢٢ درجة. عطلة نهاية الأسبوع مشمسة في كل المناطق."
+        "ar": "في الجنوب تشرق الشمس وتصل الحرارة إلى ٢٢ درجة. عطلة نهاية الأسبوع مشمسة في كل المناطق.",
+        "who": "Sprecherin"
       }
     ],
-    "comprehension": [
+    "titleDe": "Radiomeldung: Wetter",
+    "titleAr": "نشرة الأحوال الجوية في الراديو",
+    "questions": [
       {
-        "frage_de": "Wie ist das Wetter am Wochenende?",
-        "frage_ar": "كيف الجو في نهاية الأسبوع؟",
+        "id": "d-a1-ht02-q1",
+        "type": "mc",
+        "promptDe": "Wie ist das Wetter am Wochenende?",
+        "promptAr": "كيف الجو في نهاية الأسبوع؟",
         "options": [
           "Regen",
           "Sonnenschein",
           "Schnee"
         ],
-        "answer": 1,
-        "erklaerung_ar": "النشرة: Am Wochenende gibt es überall Sonnenschein."
+        "answer": "Sonnenschein",
+        "explanationAr": "النشرة: Am Wochenende gibt es überall Sonnenschein."
       }
+    ],
+    "dictation": [
+      "Guten Morgen, liebe Hörerinnen und Hörer!"
     ]
   },
   {
@@ -11659,28 +11923,35 @@
     "situationAr": "إعلان داخل متجر عن عرض خاص",
     "lines": [
       {
-        "speaker": "Ansage",
         "de": "Sehr geehrte Kundinnen und Kunden! Heute erhalten Sie auf alle Winterjacken 30 Prozent Rabatt.",
-        "ar": "أيها الزبائن الكرام! اليوم خصم ٣٠٪ على جميع معاطف الشتاء."
+        "ar": "أيها الزبائن الكرام! اليوم خصم ٣٠٪ على جميع معاطف الشتاء.",
+        "who": "Ansage"
       },
       {
-        "speaker": "Ansage",
         "de": "Das Angebot gilt nur heute bis Ladenschluss um 20 Uhr. Bitte beachten Sie auch unsere neue Damenabteilung im ersten Stock.",
-        "ar": "العرض ساري اليوم فقط حتى إغلاق المتجر الساعة ٢٠. زوروا قسم النساء الجديد في الطابق الأول."
+        "ar": "العرض ساري اليوم فقط حتى إغلاق المتجر الساعة ٢٠. زوروا قسم النساء الجديد في الطابق الأول.",
+        "who": "Ansage"
       }
     ],
-    "comprehension": [
+    "titleDe": "Ansage im Kaufhaus: Sonderangebot",
+    "titleAr": "إعلان داخل متجر عن عرض خاص",
+    "questions": [
       {
-        "frage_de": "Wie viel Rabatt gibt es auf Winterjacken?",
-        "frage_ar": "كم الخصم على معاطف الشتاء؟",
+        "id": "d-a2-ht01-q1",
+        "type": "mc",
+        "promptDe": "Wie viel Rabatt gibt es auf Winterjacken?",
+        "promptAr": "كم الخصم على معاطف الشتاء؟",
         "options": [
           "10 Prozent",
           "20 Prozent",
           "30 Prozent"
         ],
-        "answer": 2,
-        "erklaerung_ar": "الإعلان: 30 Prozent Rabatt."
+        "answer": "30 Prozent",
+        "explanationAr": "الإعلان: 30 Prozent Rabatt."
       }
+    ],
+    "dictation": [
+      "Sehr geehrte Kundinnen und Kunden!"
     ]
   },
   {
@@ -11691,28 +11962,35 @@
     "situationAr": "خبر في الراديو: إضراب النقل العام",
     "lines": [
       {
-        "speaker": "Moderator",
         "de": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks der Gewerkschaft Verdi nur eingeschränkt fahren.",
-        "ar": "غداً الثلاثاء، ستسير الحافلات والقطارات في المدينة بشكل محدود بسبب إضراب تحذيري لنقابة فيردي."
+        "ar": "غداً الثلاثاء، ستسير الحافلات والقطارات في المدينة بشكل محدود بسبب إضراب تحذيري لنقابة فيردي.",
+        "who": "Moderator"
       },
       {
-        "speaker": "Moderator",
         "de": "Besonders die U-Bahn-Linien U1 und U3 sind betroffen. Die S-Bahn soll nach Angaben der Deutschen Bahn fast vollständig fahren. Der Streik dauert von 4 bis 10 Uhr.",
-        "ar": "خطوط المترو U1 وU3 هي الأكثر تأثراً، بينما قطارات الـS-Bahn تسير شبه كاملة حسب تصريحات دويتشه بان. الإضراب من الساعة ٤ حتى ١٠ صباحاً."
+        "ar": "خطوط المترو U1 وU3 هي الأكثر تأثراً، بينما قطارات الـS-Bahn تسير شبه كاملة حسب تصريحات دويتشه بان. الإضراب من الساعة ٤ حتى ١٠ صباحاً.",
+        "who": "Moderator"
       }
     ],
-    "comprehension": [
+    "titleDe": "Radiomeldung: Streik im ÖPNV",
+    "titleAr": "خبر في الراديو: إضراب النقل العام",
+    "questions": [
       {
-        "frage_de": "Wie lange dauert der Streik?",
-        "frage_ar": "كم يستمر الإضراب؟",
+        "id": "d-b1-ht01-q1",
+        "type": "mc",
+        "promptDe": "Wie lange dauert der Streik?",
+        "promptAr": "كم يستمر الإضراب؟",
         "options": [
           "Eine Stunde",
           "Sechs Stunden",
           "Zwölf Stunden"
         ],
-        "answer": 1,
-        "erklaerung_ar": "من ٤ إلى ١٠ = ٦ ساعات."
+        "answer": "Sechs Stunden",
+        "explanationAr": "من ٤ إلى ١٠ = ٦ ساعات."
       }
+    ],
+    "dictation": [
+      "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks der Gewerkschaft Verdi nur eingeschränkt fahren."
     ]
   },
   {
@@ -11723,28 +12001,35 @@
     "situationAr": "إعلان في القطار: تأخير بسبب أشخاص على السكة",
     "lines": [
       {
-        "speaker": "Zugführer",
         "de": "Sehr geehrte Fahrgäste, wir bitten die Verspätung von etwa 15 Minuten zu entschuldigen. Grund sind Personen auf der Strecke, die die Bundespolizei gerade wegschickt.",
-        "ar": "أيها الركاب، نعتذر عن التأخير بنحو ١٥ دقيقة بسبب أشخاص على السكة وتقوم الشرطة الاتحادية بإبعادهم."
+        "ar": "أيها الركاب، نعتذر عن التأخير بنحو ١٥ دقيقة بسبب أشخاص على السكة وتقوم الشرطة الاتحادية بإبعادهم.",
+        "who": "Zugführer"
       },
       {
-        "speaker": "Zugführer",
         "de": "Wir erreichen den Hauptbahaussichtlich um 17:45 Uhr. Der Anschluss nach Hamburg ist dadurch gefährdet.",
-        "ar": "سنصل المحطة الرئيسية حوالي ١٧:٤٥. ربط هامبورغ مهدد بسبب التأخير."
+        "ar": "سنصل المحطة الرئيسية حوالي ١٧:٤٥. ربط هامبورغ مهدد بسبب التأخير.",
+        "who": "Zugführer"
       }
     ],
-    "comprehension": [
+    "titleDe": "Ansage im Zug: Verspätung wegen Personen auf der Strecke",
+    "titleAr": "إعلان في القطار: تأخير بسبب أشخاص على السكة",
+    "questions": [
       {
-        "frage_de": "Warum verspätet sich der Zug?",
-        "frage_ar": "لماذا القطار متأخر؟",
+        "id": "d-b1-ht02-q1",
+        "type": "mc",
+        "promptDe": "Warum verspätet sich der Zug?",
+        "promptAr": "لماذا القطار متأخر؟",
         "options": [
           "Wegen einer technischen Störung",
           "Wegen Personen auf der Strecke",
           "Wegen schlechten Wetters"
         ],
-        "answer": 1,
-        "erklaerung_ar": "المذكور: Personen auf der Strecke."
+        "answer": "Wegen Personen auf der Strecke",
+        "explanationAr": "المذكور: Personen auf der Strecke."
       }
+    ],
+    "dictation": [
+      "Sehr geehrte Fahrgäste, wir bitten die Verspätung von etwa 15 Minuten zu entschuldigen."
     ]
   },
   {
@@ -11755,28 +12040,35 @@
     "situationAr": "خبر في الراديو: احتجاج مناخي يغلق طريقاً سريعاً",
     "lines": [
       {
-        "speaker": "Nachrichtensprecher",
         "de": "Aktivisten der Gruppe «Letzte Generation» haben heute Morgen die A100 in Berlin blockiert, indem sie sich auf der Fahrbahn festklebten.",
-        "ar": "ناشطون من مجموعة «الجيل الأخير» أغلقوا الطريق السريع A100 في برلين صباحاً بلصق أنفسهم على الطريق."
+        "ar": "ناشطون من مجموعة «الجيل الأخير» أغلقوا الطريق السريع A100 في برلين صباحاً بلصق أنفسهم على الطريق.",
+        "who": "Nachrichtensprecher"
       },
       {
-        "speaker": "Nachrichtensprecher",
         "de": "Die Polizei hat mit der Räumung begonnen. Bislang kam es zu einem Stau von etwa 14 Kilometern. Die A100 ist stadteinwärts seit 7 Uhr gesperrt, die Räumung wird voraussichtlich bis zum Mittag dauern.",
-        "ar": "بدأت الشرطة بالإخلاء. الازدحام يبلغ ١٤ كيلومتراً. الطريق مغلق باتجاه المدينة منذ الساعة ٧ ومن المتوقع أن يستمر الإخلاء حتى الظهيرة."
+        "ar": "بدأت الشرطة بالإخلاء. الازدحام يبلغ ١٤ كيلومتراً. الطريق مغلق باتجاه المدينة منذ الساعة ٧ ومن المتوقع أن يستمر الإخلاء حتى الظهيرة.",
+        "who": "Nachrichtensprecher"
       }
     ],
-    "comprehension": [
+    "titleDe": "Radiomeldung: Klimaprotest blockiert Autobahn",
+    "titleAr": "خبر في الراديو: احتجاج مناخي يغلق طريقاً سريعاً",
+    "questions": [
       {
-        "frage_de": "Wie lange wird die Räumung voraussichtlich dauern?",
-        "frage_ar": "متى يتوقع انتهاء الإخلاء؟",
+        "id": "d-b2-ht01-q1",
+        "type": "mc",
+        "promptDe": "Wie lange wird die Räumung voraussichtlich dauern?",
+        "promptAr": "متى يتوقع انتهاء الإخلاء؟",
         "options": [
           "Bis 8 Uhr",
           "Bis zum Mittag",
           "Bis zum Abend"
         ],
-        "answer": 1,
-        "erklaerung_ar": "المذكور: bis zum Mittag."
+        "answer": "Bis zum Mittag",
+        "explanationAr": "المذكور: bis zum Mittag."
       }
+    ],
+    "dictation": [
+      "Aktivisten der Gruppe «Letzte Generation» haben heute Morgen die A100 in Berlin blockiert, indem sie sich auf der Fahrbahn festklebten."
     ]
   },
   {
@@ -11787,28 +12079,35 @@
     "situationAr": "جهاز الرد الآلي لشركة مولر وأبناء (ردّ مكالمة عميل)",
     "lines": [
       {
-        "speaker": "Anrufbeantworter",
         "de": "Guten Tag, Sie haben die Firma Müller & Söhne erreicht. Heute ist Freitag, der 10. Oktober, unser Büro ist bereits geschlossen.",
-        "ar": "نهاركم سعيد، لقد اتصلتم بشركة مولر وأبناء. اليوم الجمعة ١٠ تشرين الأول ومكتبنا مغلق."
+        "ar": "نهاركم سعيد، لقد اتصلتم بشركة مولر وأبناء. اليوم الجمعة ١٠ تشرين الأول ومكتبنا مغلق.",
+        "who": "Anrufbeantworter"
       },
       {
-        "speaker": "Anrufbeantworter",
         "de": "Unsere Öffnungszeiten am Montag sind 8 bis 17 Uhr. In dringenden Fällen erreichen Sie unseren Notdienst unter der 0228-900 100. Vielen Dank für Ihr Verständnis.",
-        "ar": "ساعات العمل الإثنين من ٨ حتى ١٧. في الحالات الطارئة اتصل بخدمة الطوارئ على ٠٢٢٨-٩٠٠١٠٠. شكراً لتفهمكم."
+        "ar": "ساعات العمل الإثنين من ٨ حتى ١٧. في الحالات الطارئة اتصل بخدمة الطوارئ على ٠٢٢٨-٩٠٠١٠٠. شكراً لتفهمكم.",
+        "who": "Anrufbeantworter"
       }
     ],
-    "comprehension": [
+    "titleDe": "Anrufbeantworter: Firma Müller & Söhne (Kundenrückruf)",
+    "titleAr": "جهاز الرد الآلي لشركة مولر وأبناء (ردّ مكالمة عميل)",
+    "questions": [
       {
-        "frage_de": "Welche Nummer wählt man in dringenden Fällen?",
-        "frage_ar": "ما الرقم المطلوب في الحالات الطارئة؟",
+        "id": "d-b2-ht02-q1",
+        "type": "mc",
+        "promptDe": "Welche Nummer wählt man in dringenden Fällen?",
+        "promptAr": "ما الرقم المطلوب في الحالات الطارئة؟",
         "options": [
           "0228-900 100",
           "110",
           "112"
         ],
-        "answer": 0,
-        "erklaerung_ar": "المذكور: 0228-900 100."
+        "answer": "0228-900 100",
+        "explanationAr": "المذكور: 0228-900 100."
       }
+    ],
+    "dictation": [
+      "Guten Tag, Sie haben die Firma Müller & Söhne erreicht."
     ]
   },
   {
@@ -11819,23 +12118,30 @@
     "situationAr": "إعلان داخل السوبرماركت",
     "lines": [
       {
-        "speaker": "Ansage",
         "de": "Liebe Kunden! Heute sind die Bananen im Angebot: ein Kilo für einen Euro. Bitte bezahlen Sie an der Kasse.",
-        "ar": "أيها الزبائن! الموز اليوم في العرض: كيلو بيورو واحد. الرجاء الدفع عند الصندوق."
+        "ar": "أيها الزبائن! الموز اليوم في العرض: كيلو بيورو واحد. الرجاء الدفع عند الصندوق.",
+        "who": "Ansage"
       }
     ],
-    "comprehension": [
+    "titleDe": "Im Supermarkt: Ansage",
+    "titleAr": "إعلان داخل السوبرماركت",
+    "questions": [
       {
-        "frage_de": "Was kostet ein Kilo Bananen heute?",
-        "frage_ar": "كم سعر كيلو الموز اليوم؟",
+        "id": "d-a0-ht02-q1",
+        "type": "mc",
+        "promptDe": "Was kostet ein Kilo Bananen heute?",
+        "promptAr": "كم سعر كيلو الموز اليوم؟",
         "options": [
           "zwei Euro",
           "ein Euro",
           "fünfzig Cent"
         ],
-        "answer": 1,
-        "erklaerung_ar": "الإعلان يقول 1€."
+        "answer": "ein Euro",
+        "explanationAr": "الإعلان يقول 1€."
       }
+    ],
+    "dictation": [
+      "Heute sind die Bananen im Angebot: ein Kilo für einen Euro."
     ]
   },
   {
@@ -11846,38 +12152,45 @@
     "situationAr": "طلب في المقهى",
     "lines": [
       {
-        "speaker": "Kellner",
         "de": "Guten Tag! Was möchten Sie?",
-        "ar": "نهاركم سعيد، ماذا تريدون؟"
+        "ar": "نهاركم سعيد، ماذا تريدون؟",
+        "who": "Kellner"
       },
       {
-        "speaker": "Gast",
         "de": "Einen Kaffee, bitte. Mit Milch und Zucker.",
-        "ar": "قهوة من فضلك، مع حليب وسكر."
+        "ar": "قهوة من فضلك، مع حليب وسكر.",
+        "who": "Gast"
       },
       {
-        "speaker": "Kellner",
         "de": "Sonst noch etwas?",
-        "ar": "أي شيء آخر؟"
+        "ar": "أي شيء آخر؟",
+        "who": "Kellner"
       },
       {
-        "speaker": "Gast",
         "de": "Nein, danke.",
-        "ar": "لا، شكراً."
+        "ar": "لا، شكراً.",
+        "who": "Gast"
       }
     ],
-    "comprehension": [
+    "titleDe": "Im Café: Bestellung",
+    "titleAr": "طلب في المقهى",
+    "questions": [
       {
-        "frage_de": "Was bestellt der Gast?",
-        "frage_ar": "ماذا طلب الزبون؟",
+        "id": "d-a0-ht03-q1",
+        "type": "mc",
+        "promptDe": "Was bestellt der Gast?",
+        "promptAr": "ماذا طلب الزبون؟",
         "options": [
           "Tee",
           "Kaffee mit Milch und Zucker",
           "Wasser"
         ],
-        "answer": 1,
-        "erklaerung_ar": "الزبون طلب Kaffee mit Milch und Zucker."
+        "answer": "Kaffee mit Milch und Zucker",
+        "explanationAr": "الزبون طلب Kaffee mit Milch und Zucker."
       }
+    ],
+    "dictation": [
+      "Was möchten Sie?"
     ]
   },
   {
@@ -11888,28 +12201,35 @@
     "situationAr": "إعلان على رصيف القطار",
     "lines": [
       {
-        "speaker": "Ansage",
         "de": "Achtung, Gleis 5! Der ICE 621 nach Frankfurt fährt in 5 Minuten ab. Wagen 15 bis 21 stehen im hinteren Bereich. Vorsicht bei der Einfahrt!",
-        "ar": "انتباه، الرصيف 5! قطار ICE 621 إلى فرانكفورت سينطلق بعد 5 دقائق. العربات 15–21 في الخلف. انتبهوا عند دخول القطار."
+        "ar": "انتباه، الرصيف 5! قطار ICE 621 إلى فرانكفورت سينطلق بعد 5 دقائق. العربات 15–21 في الخلف. انتبهوا عند دخول القطار.",
+        "who": "Ansage"
       },
       {
-        "speaker": "Ansage",
         "de": "Wir wünschen Ihnen eine angenehme Reise.",
-        "ar": "نتمنى لكم رحلة سعيدة."
+        "ar": "نتمنى لكم رحلة سعيدة.",
+        "who": "Ansage"
       }
     ],
-    "comprehension": [
+    "titleDe": "Ansage am Bahnsteig: Zug fährt ab",
+    "titleAr": "إعلان على رصيف القطار",
+    "questions": [
       {
-        "frage_de": "Auf welchem Gleis fährt der ICE ab?",
-        "frage_ar": "على أي رصيف ينطلق القطار؟",
+        "id": "d-a1-ht03-q1",
+        "type": "mc",
+        "promptDe": "Auf welchem Gleis fährt der ICE ab?",
+        "promptAr": "على أي رصيف ينطلق القطار؟",
         "options": [
           "Gleis 1",
           "Gleis 5",
           "Gleis 15"
         ],
-        "answer": 1,
-        "erklaerung_ar": "الإعلان يقول Gleis 5."
+        "answer": "Gleis 5",
+        "explanationAr": "الإعلان يقول Gleis 5."
       }
+    ],
+    "dictation": [
+      "Achtung, Gleis 5!"
     ]
   },
   {
@@ -11920,23 +12240,30 @@
     "situationAr": "رسالة من مركز تعليم الكبار",
     "lines": [
       {
-        "speaker": "Frau Becker",
         "de": "Hallo Ahmed, hier ist Sabine Becker von der Volkshochschule. Ihr Kurs beginnt am kommenden Montag um 18 Uhr in Raum 304. Bitte bringen Sie Ihr Buch und einen Stift mit. Rückfragen unter 0221-4711.",
-        "ar": "مرحباً أحمد، معكِ زابينه بيكر من مركز تعليم الكبار. دورتك تبدأ الإثنين القادم الساعة 18 في القاعة 304. أحضر كتابك وقلم. للأسئلة اتصل على 0221-4711."
+        "ar": "مرحباً أحمد، معكِ زابينه بيكر من مركز تعليم الكبار. دورتك تبدأ الإثنين القادم الساعة 18 في القاعة 304. أحضر كتابك وقلم. للأسئلة اتصل على 0221-4711.",
+        "who": "Frau Becker"
       }
     ],
-    "comprehension": [
+    "titleDe": "Anrufbeantworter: Nachricht von der VHS",
+    "titleAr": "رسالة من مركز تعليم الكبار",
+    "questions": [
       {
-        "frage_de": "Was soll Ahmed mitbringen?",
-        "frage_ar": "ماذا يجب أن يحضر أحمد؟",
+        "id": "d-a2-ht02-q1",
+        "type": "mc",
+        "promptDe": "Was soll Ahmed mitbringen?",
+        "promptAr": "ماذا يجب أن يحضر أحمد؟",
         "options": [
           "Seinen Pass",
           "Buch und Stift",
           "Nur Geld"
         ],
-        "answer": 1,
-        "erklaerung_ar": "الرسالة: Buch und Stift."
+        "answer": "Buch und Stift",
+        "explanationAr": "الرسالة: Buch und Stift."
       }
+    ],
+    "dictation": [
+      "Hallo Ahmed, hier ist Sabine Becker von der Volkshochschule."
     ]
   },
   {
@@ -11947,23 +12274,30 @@
     "situationAr": "خبر: حادث على الطريق السريع A3",
     "lines": [
       {
-        "speaker": "Sprecher",
-        "de": "Die Polizei meldet einen Unfall auf der A3 zwischen Köln und Bonn in Fahrtrichtung Süden. Drei Fahrzeuge sind beteiligt, die linke Spur ist gesperrt. Es gibt zur Zeit einen Stau von acht Kilometern. Autofahrer werden gebeten, bei Lohmar auszufahren.",
-        "ar": "تُبلغ الشرطة عن حادث على A3 بين كولونيا وبون باتجاه الجنوب. اشتركت فيه 3 سيارات، المسار الأيسر مغلق، والازدحام 8 كم. يُرجى الخروج عند لومار."
+        "de": "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt. Drei Fahrzeuge sind beteiligt, die linke Spur ist gesperrt. Es gibt zurzeit einen Stau von acht Kilometern. Autofahrer werden gebeten, bei der nächsten Ausfahrt abzufahren.",
+        "ar": "تُبلغ الشرطة عن حادث على الطريق السريع A3 بعد مخرج لومار بقليل باتجاه فرانكفورت. اشتركت فيه ثلاث سيارات، والمسار الأيسر مغلق. يبلغ طول الازدحام حالياً ثمانية كيلومترات. ويُرجى من السائقين الخروج عند المخرج التالي.",
+        "who": "Sprecher"
       }
     ],
-    "comprehension": [
+    "titleDe": "Radiomeldung: Unfall auf der A3",
+    "titleAr": "خبر: حادث على الطريق السريع A3",
+    "questions": [
       {
-        "frage_de": "Warum sollen Autofahrer bei Lohmar ausfahren?",
-        "frage_ar": "لماذا الخروج عند لومار؟",
+        "id": "d-a2-ht03-q1",
+        "type": "mc",
+        "promptDe": "Warum sollen Autofahrer an der nächsten Ausfahrt abfahren?",
+        "promptAr": "لماذا ينبغي للسائقين الخروج عند المخرج التالي؟",
         "options": [
           "Wegen Stau nach Unfall",
           "Wegen Baustelle",
           "Wegen Kontrolle"
         ],
-        "answer": 0,
-        "erklaerung_ar": "بسبب الحادث والازدحام."
+        "answer": "Wegen Stau nach Unfall",
+        "explanationAr": "بسبب الحادث والازدحام."
       }
+    ],
+    "dictation": [
+      "Die Polizei meldet einen Unfall auf der A3 zwischen Köln und Bonn in Fahrtrichtung Süden."
     ]
   },
   {
@@ -11974,65 +12308,79 @@
     "situationAr": "مقابلة مع ناشطة بيئية",
     "lines": [
       {
-        "speaker": "Moderator",
         "de": "Frau Neumann, Sie protestieren gegen die neue Autobahn durch den Wald. Warum?",
-        "ar": "السيدة نويمان، لماذا تحتجين على الطريق السريع الجديد عبر الغابة؟"
+        "ar": "السيدة نويمان، لماذا تحتجين على الطريق السريع الجديد عبر الغابة؟",
+        "who": "Moderator"
       },
       {
-        "speaker": "Frau Neumann",
         "de": "Der Wald ist ein wichtiger CO₂-Speicher und Lebensraum für viele Tiere. Statt neuer Autobahnen brauchen wir mehr Bus und Bahn. Die Regierung sollte in den ÖPNV investieren.",
-        "ar": "الغابة مخزن مهم لثاني أكسيد الكربون ومسكن للحيوانات. نحتاج حافلات وقطارات أكثر لا طرقاً جديدة. على الحكومة الاستثمار في النقل العام."
+        "ar": "الغابة مخزن مهم لثاني أكسيد الكربون ومسكن للحيوانات. نحتاج حافلات وقطارات أكثر لا طرقاً جديدة. على الحكومة الاستثمار في النقل العام.",
+        "who": "Frau Neumann"
       },
       {
-        "speaker": "Moderator",
         "de": "Aber die Autobahn würde den Verkehr entlasten.",
-        "ar": "لكن الطريق سيُخفف الزحام."
+        "ar": "لكن الطريق سيُخفف الزحام.",
+        "who": "Moderator"
       },
       {
-        "speaker": "Frau Neumann",
         "de": "Studien zeigen: Neue Straßen ziehen mehr Autos an – nach fünf Jahren ist der Stau zurück. Nur öffentlicher Verkehr hilft dauerhaft.",
-        "ar": "الطرق الجديدة تجذب سيارات أكثر فيعود الازدحام بعد 5 سنوات. النقل العام وحده هو الحل الدائم."
+        "ar": "الطرق الجديدة تجذب سيارات أكثر فيعود الازدحام بعد 5 سنوات. النقل العام وحده هو الحل الدائم.",
+        "who": "Frau Neumann"
       }
     ],
-    "comprehension": [
+    "titleDe": "Interview mit Umweltschützerin",
+    "titleAr": "مقابلة مع ناشطة بيئية",
+    "questions": [
       {
-        "frage_de": "Was schlägt Frau Neumann vor?",
-        "frage_ar": "ماذا تقترح نويمان؟",
+        "id": "d-b1-ht03-q1",
+        "type": "mc",
+        "promptDe": "Was schlägt Frau Neumann vor?",
+        "promptAr": "ماذا تقترح نويمان؟",
         "options": [
           "Mehr Autobahnen",
           "Mehr ÖPNV",
           "Weniger Radwege"
         ],
-        "answer": 1,
-        "erklaerung_ar": "تقترح الاستثمار في النقل العام."
+        "answer": "Mehr ÖPNV",
+        "explanationAr": "تقترح الاستثمار في النقل العام."
       }
+    ],
+    "dictation": [
+      "Frau Neumann, Sie protestieren gegen die neue Autobahn durch den Wald."
     ]
   },
   {
     "id": "d-b2-ht03",
     "level": "B2",
     "type": "hoer",
-    "situationDe": "Wissenschaftsmeldung: KI am Arbeitsmarkt",
+    "situationDe": "Wissenschaftsmeldung: KI und der Arbeitsmarkt",
     "situationAr": "خبر علمي: الذكاء الاصطناعي وسوق العمل",
     "lines": [
       {
-        "speaker": "Sprecher",
-        "de": "Laut einer IAB-Studie wird KI bis 2030 etwa 1,5 Millionen Arbeitsplätze in Deutschland verändern. Wegfallen werden davon nur rund 300.000; neue Stellen entstehen vor allem in Datenanalyse und Softwareentwicklung. Besonders betroffen sind Büroberufe und einfache Verwaltungsaufgaben. Die Forscher empfehlen mehr Weiterbildung für Beschäftigte über 45.",
-        "ar": "وفقاً لدراسة معهد IAB، سيُغيّر الذكاء الاصطناعي حتى 2030 نحو 1.5 مليون وظيفة في ألمانيا. منها 300 ألف ستفقد، ووظائف جديدة في تحليل البيانات والبرمجة. الأكثر تضرراً وظائف المكاتب والمهام الإدارية. يُنصح بتدريب العاملين فوق 45 عاماً."
+        "de": "Eine neue Untersuchung des Instituts für Arbeitsmarkt- und Berufsforschung analysiert, wie künstliche Intelligenz berufliche Aufgaben verändert. Die Forschenden erwarten, dass einige Tätigkeiten automatisiert werden, während in anderen Bereichen neue Aufgaben entstehen. Besonders betroffen sein könnten wiederkehrende Büro- und Verwaltungsaufgaben. Aus der Untersuchung lässt sich jedoch keine sichere Zahl künftig wegfallender Stellen ableiten. Entscheidend seien Weiterbildung und die Frage, ob Unternehmen KI unterstützend statt ersetzend einsetzen.",
+        "ar": "تحلل دراسة جديدة لمعهد بحوث سوق العمل والمهن كيف يغيّر الذكاء الاصطناعي المهام المهنية. ويتوقع الباحثون أتمتة بعض الأنشطة، في حين تنشأ مهام جديدة في مجالات أخرى. وقد تتأثر خصوصاً المهام المكتبية والإدارية المتكررة. لكن لا يمكن استنتاج رقم مؤكد للوظائف التي ستختفي مستقبلاً. ويعتمد الأمر على التدريب المستمر وعلى ما إذا كانت الشركات تستخدم الذكاء الاصطناعي للمساعدة أم للاستبدال.",
+        "who": "Sprecher"
       }
     ],
-    "comprehension": [
+    "titleDe": "Wissenschaftsmeldung: KI und der Arbeitsmarkt",
+    "titleAr": "خبر علمي: الذكاء الاصطناعي وسوق العمل",
+    "questions": [
       {
-        "frage_de": "Wie viele Jobs werden laut Studie BIS 2030 WEGFALLEN?",
-        "frage_ar": "كم وظيفة ستفقد حتى 2030؟",
+        "id": "d-b2-ht03-q1",
+        "type": "mc",
+        "promptDe": "Was lässt sich laut Sprecher NICHT sicher aus der Untersuchung ableiten?",
+        "promptAr": "ما الذي لا يمكن استنتاجه على نحو مؤكد من الدراسة؟",
         "options": [
-          "1,5 Millionen",
-          "ca. 300.000",
-          "keine"
+          "Die genaue Zahl künftig wegfallender Arbeitsplätze",
+          "Dass sich berufliche Aufgaben verändern können",
+          "Dass Weiterbildung wichtig bleibt"
         ],
-        "answer": 1,
-        "erklaerung_ar": "300 ألف فقط، أما 1.5 مليون فالمتغير لا الفاقد."
+        "answer": "Die genaue Zahl künftig wegfallender Arbeitsplätze",
+        "explanationAr": "يقول المتحدث صراحةً إنه لا يمكن استنتاج عدد مؤكد للوظائف التي ستختفي."
       }
+    ],
+    "dictation": [
+      "Eine neue Untersuchung analysiert, wie künstliche Intelligenz berufliche Aufgaben verändert."
     ]
   }
 ]

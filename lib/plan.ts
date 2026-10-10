@@ -214,12 +214,18 @@ function rangeOfPhase(phase: Phase) {
   return PHASE_RANGES.find((range) => range.phase === phase);
 }
 
-function grammarTaskDay(day: number): boolean {
+function legacyGrammarTaskDay(day: number): boolean {
   const weekday = ((day - 1) % 7) + 1;
   return dayType(day) === "lerntag" && weekday <= 4;
 }
 
-/** أيام تقديم درس جديد في طوره: الاثنين/الأربعاء، مع تهيئة واحدة إن بدأ الطور وسط الأسبوع. */
+/** A0 kompakt: درسٌ جديد في كل يوم تعلّم؛ المستويات الأطول: خانات الاثنين/الأربعاء. */
+function grammarTaskDay(day: number): boolean {
+  const weekday = ((day - 1) % 7) + 1;
+  return dayType(day) === "lerntag" && (phaseOf(day) === "A0" || weekday <= 4);
+}
+
+/** Slots für neue Lektionen: A0 an jedem Lerntag, in längeren Phasen regulär montags/mittwochs. */
 function topicSlotDays(phase: Phase): number[] {
   const range = rangeOfPhase(phase);
   if (!range || phase === "Abschluss") return [];
@@ -229,9 +235,9 @@ function topicSlotDays(phase: Phase): number[] {
     if (!grammarTaskDay(day)) continue;
     firstGrammarDay ??= day;
     const weekday = ((day - 1) % 7) + 1;
-    if (weekday === 1 || weekday === 3) slots.push(day);
+    if (phase === "A0" || weekday === 1 || weekday === 3) slots.push(day);
   }
-  if (firstGrammarDay !== undefined) {
+  if (phase !== "A0" && firstGrammarDay !== undefined) {
     const weekday = ((firstGrammarDay - 1) % 7) + 1;
     if ((weekday === 2 || weekday === 4) && !slots.includes(firstGrammarDay)) slots.push(firstGrammarDay);
   }
@@ -240,7 +246,8 @@ function topicSlotDays(phase: Phase): number[] {
 
 /** إعادة اشتقاق المهمة القديمة كما وُلّدت قبل الترحيل؛ لا تُغيّر PHASE_TOPICS. */
 function legacyTopicForDay(day: number): string | undefined {
-  if (!grammarTaskDay(day)) return undefined;
+  // Keep the pre-v5 schedule byte-for-byte reconstructible for protected days.
+  if (!legacyGrammarTaskDay(day)) return undefined;
   const phase = phaseOf(day);
   const topics = PHASE_TOPICS[phase];
   if (!topics?.length) return undefined;
@@ -770,11 +777,14 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       const topicId = assignment?.topicId;
       if (assignment && topicId) {
         const isReview = assignment.status === "review";
+        const isNewA0 = phase === "A0" && assignment.status === "new";
         tasks.push({
           id: tid(2),
           kind: "grammatik",
-          titleDe: `${isReview ? "Wiederholung" : "Vertiefung"}: ${grammarMap[topicId]?.titleDe ?? ""}`,
-          titleAr: `${isReview ? "مراجعة وتثبيت" : "تعميق القاعدة"}: ${grammarMap[topicId]?.titleAr ?? ""}`,
+          titleDe: isNewA0
+            ? `Neue Grammatik: ${grammarMap[topicId]?.titleDe ?? ""}`
+            : `${isReview ? "Wiederholung" : "Vertiefung"}: ${grammarMap[topicId]?.titleDe ?? ""}`,
+          titleAr: `${isReview ? "مراجعة وتثبيت" : isNewA0 ? "قاعدة جديدة" : "تعميق القاعدة"}: ${grammarMap[topicId]?.titleAr ?? ""}`,
           minutes: 30,
           topicId,
         });
@@ -834,6 +844,19 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         quiz: buildQuiz(day, phase, 8, progress, "tc2"),
       });
     } else {
+      // A0 hat nur zehn Kalendertage: auch am fünften Lerntag wird ein eigener Grammatikslot genutzt.
+      const a0Assignment = phase === "A0" ? grammarAssignment : undefined;
+      if (a0Assignment?.topicId) {
+        const isReview = a0Assignment.status === "review";
+        tasks.push({
+          id: tid(20),
+          kind: "grammatik",
+          titleDe: `${isReview ? "Wiederholung" : "Neue Grammatik"}: ${grammarMap[a0Assignment.topicId]?.titleDe ?? ""}`,
+          titleAr: `${isReview ? "مراجعة وتثبيت" : "قاعدة جديدة"}: ${grammarMap[a0Assignment.topicId]?.titleAr ?? ""}`,
+          minutes: 30,
+          topicId: a0Assignment.topicId,
+        });
+      }
       // يوم 5 — دمج وبناء الجملة
       tasks.push({
         id: tid(2),
@@ -966,7 +989,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     // R138/P-12: Partnerübung (Diskussion mit Partner) — كل أسبوعين في Festigung من B1 فصاعداً
     if ((level === "B1" || level === "B2") && wocheInPhase % 2 === 0) {
       const partnerPool = partnerKarten.filter((p) => p.level === level);
-      const karte = partnerPool[Math.abs(rand() * partnerPool.length) % partnerPool.length];
+      const karte = partnerPool[Math.floor(rand() * partnerPool.length)];
       tasks.push({
         id: tid(16),
         kind: "partner",
@@ -980,7 +1003,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     if (level !== "A0") {
       const kPool = kontaktKarten.filter((k) => (k.level as unknown as string) === level);
       if (kPool.length) {
-        const k = kPool[Math.abs(rand() * kPool.length) % kPool.length];
+        const k = kPool[Math.floor(rand() * kPool.length)];
         tasks.push({
           id: tid(17),
           kind: "partner",
@@ -991,11 +1014,11 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         });
       }
     }
-    // R140: Monolog/Bildbeschreibung (Teil 2 Sprechen) — كل 3 أسابيع
+    // R140: Monolog/Bildbeschreibung (Teil 2) — alle 3 Wochen, strikt nur aus Teil-2-Karten.
     if (wocheInPhase % 3 === 1) {
-      const mPool = muendlich.filter((mm) => mm.level === level);
+      const mPool = muendlich.filter((mm) => mm.level === level && mm.teil === 2);
       if (mPool.length) {
-        const card = mPool[Math.abs(rand() * mPool.length) % mPool.length];
+        const card = mPool[Math.floor(rand() * mPool.length)];
         tasks.push({
           id: tid(18),
           kind: "partner",
@@ -1003,6 +1026,21 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleAr: "جزء 2: وصف صورة أو مونولوج",
           minutes: Math.round((card.zeit_s ?? 120) / 60) + 2,
           monologId: card.id,
+        });
+      }
+    }
+    // R141e: Diskussion (Teil 3) alle 3 Wochen, im Wechsel mit Teil 2.
+    if (wocheInPhase % 3 === 2) {
+      const diskussionsPool = muendlich.filter((mm) => mm.level === level && mm.teil === 3);
+      if (diskussionsPool.length) {
+        const card = diskussionsPool[Math.floor(rand() * diskussionsPool.length)];
+        tasks.push({
+          id: tid(19),
+          kind: "partner",
+          titleDe: "Sprechen Teil 3: Diskussion",
+          titleAr: "جزء 3: نقاش مع الشريك",
+          minutes: Math.round((card.zeit_s ?? 180) / 60) + 2,
+          muendlichId: card.id,
         });
       }
     }

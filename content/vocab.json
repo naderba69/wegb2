@@ -3239,64 +3239,169 @@
         "exampleAr": "القدرة على الحكم تظهر حين يتناقض مصدران."
       },
       {
-        "de": "der Kommentar, -e",
-        "ar": "تعليق (رأي صحفي)"
+        "de": "der Leitartikel, -",
+        "ar": "المقال الافتتاحي",
+        "id": "b2-medien-schule-031",
+        "level": "B2",
+        "exampleDe": "Der Leitartikel der Zeitung kommentiert die neue Bildungsreform.",
+        "exampleAr": "يعلّق المقال الافتتاحي في الصحيفة على إصلاح التعليم الجديد.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "die Berichterstattung",
-        "ar": "التغطية الإخبارية"
+        "ar": "التغطية الإخبارية",
+        "id": "b2-medien-schule-032",
+        "level": "B2",
+        "exampleDe": "Eine ausgewogene Berichterstattung stellt unterschiedliche Positionen dar.",
+        "exampleAr": "تعرض التغطية الإخبارية المتوازنة مواقف مختلفة.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
-        "de": "die Quelle, -n",
-        "ar": "مصدر"
+        "de": "die Quellenangabe, -n",
+        "ar": "الإحالة إلى المصدر / بيانات المصدر",
+        "id": "b2-medien-schule-033",
+        "level": "B2",
+        "exampleDe": "Jede Grafik braucht eine genaue Quellenangabe.",
+        "exampleAr": "يحتاج كل رسم بياني إلى إحالة دقيقة إلى المصدر.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "die Nachrichtensendung, -en",
-        "ar": "نشرة الأخبار"
+        "ar": "نشرة الأخبار",
+        "id": "b2-medien-schule-034",
+        "level": "B2",
+        "exampleDe": "Die Nachrichtensendung berichtet heute über die Wahl.",
+        "exampleAr": "تقدم نشرة الأخبار اليوم تقريراً عن الانتخابات.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "die Talkshow, -s",
-        "ar": "برنامج حواري"
+        "ar": "برنامج حواري",
+        "id": "b2-medien-schule-035",
+        "level": "B2",
+        "exampleDe": "In der Talkshow diskutieren Fachleute über die Reform.",
+        "exampleAr": "يناقش الخبراء الإصلاح في البرنامج الحواري.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
-        "de": "die Schlagzeile, -n",
-        "ar": "عنوان بارز"
+        "de": "die Titelseite, -n",
+        "ar": "الصفحة الأولى للصحيفة",
+        "id": "b2-medien-schule-036",
+        "level": "B2",
+        "exampleDe": "Auf der Titelseite steht heute ein wichtiges Thema.",
+        "exampleAr": "يتصدر موضوع مهم الصفحة الأولى اليوم.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
-        "de": "das Boulevardblatt, -äer",
-        "ar": "صحيفة شعبية"
+        "de": "das Boulevardblatt, die Boulevardblätter",
+        "ar": "صحيفة شعبية",
+        "id": "b2-medien-schule-037",
+        "level": "B2",
+        "exampleDe": "Das Boulevardblatt veröffentlichte eine zugespitzte Schlagzeile.",
+        "exampleAr": "نشرت الصحيفة الشعبية عنواناً مثيراً ومبالغاً فيه.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "die Medienkompetenz",
-        "ar": "الإعلامية التربوية (مهارة التعامل مع الإعلام)"
+        "ar": "الكفاءة الإعلامية / مهارات فهم الإعلام وتقييمه",
+        "id": "b2-medien-schule-038",
+        "level": "B2",
+        "exampleDe": "Medienkompetenz hilft, verlässliche von falschen Informationen zu unterscheiden.",
+        "exampleAr": "تساعد الكفاءة الإعلامية على التمييز بين المعلومات الموثوقة والخاطئة.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "der Schulabschluss, -schlüsse",
-        "ar": "شهادة إنهاء المدرسة"
+        "ar": "شهادة إنهاء المدرسة",
+        "id": "b2-medien-schule-039",
+        "level": "B2",
+        "exampleDe": "Mit einem Schulabschluss kann man sich um eine Ausbildung bewerben.",
+        "exampleAr": "يمكن التقدم لتدريب مهني بعد الحصول على شهادة إنهاء المدرسة.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "das Abitur",
-        "ar": "الشهادة الثانوية المؤهلة للجامعة"
+        "ar": "الشهادة الثانوية المؤهلة للجامعة",
+        "id": "b2-medien-schule-040",
+        "level": "B2",
+        "exampleDe": "Nach dem Abitur kann sie an einer Universität studieren.",
+        "exampleAr": "يمكنها الدراسة في جامعة بعد شهادة الثانوية المؤهلة للجامعة.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "die Klassenarbeit, -en",
-        "ar": "امتحان فصل"
+        "ar": "امتحان فصل",
+        "id": "b2-medien-schule-041",
+        "level": "B2",
+        "exampleDe": "Vor der Klassenarbeit wiederholt die Klasse den Stoff.",
+        "exampleAr": "تراجع الصف المادة قبل الامتحان.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "die Note, -n",
-        "ar": "علامة / درجة"
+        "ar": "علامة / درجة",
+        "id": "b2-medien-schule-042",
+        "level": "B2",
+        "exampleDe": "Sie bekam eine gute Note in Deutsch.",
+        "exampleAr": "حصلت على علامة جيدة في الألمانية.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "das Zeugnis, -se",
-        "ar": "كشف علامات"
+        "ar": "كشف علامات",
+        "id": "b2-medien-schule-043",
+        "level": "B2",
+        "exampleDe": "Im Zeugnis stehen die Noten des Schuljahres.",
+        "exampleAr": "تظهر درجات العام الدراسي في كشف العلامات.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "der Lehrplan, -pläne",
-        "ar": "المنهاج الدراسي"
+        "ar": "المنهاج الدراسي",
+        "id": "b2-medien-schule-044",
+        "level": "B2",
+        "exampleDe": "Der Lehrplan legt die Lernziele für das Schuljahr fest.",
+        "exampleAr": "يحدد المنهاج الدراسي أهداف التعلم للعام.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       },
       {
         "de": "das Schulsystem, -e",
-        "ar": "النظام المدرسي"
+        "ar": "النظام المدرسي",
+        "id": "b2-medien-schule-045",
+        "level": "B2",
+        "exampleDe": "Das Schulsystem unterscheidet sich von Bundesland zu Bundesland.",
+        "exampleAr": "يختلف النظام المدرسي من ولاية اتحادية إلى أخرى.",
+        "tags": [
+          "b2-medien-schule"
+        ]
       }
     ]
   },
@@ -50064,454 +50169,1175 @@
   },
   "a0-zahlen": {
     "id": "a0-zahlen",
-    "titelDe": "Zahlen 0–20 + Zehner",
-    "titelAr": "الأرقام من 0 إلى 20 والعشرات",
     "level": "A0",
     "cards": [
       {
         "de": "null",
-        "ar": "٠"
+        "ar": "٠",
+        "id": "a0-zahlen-001",
+        "level": "A0",
+        "exampleDe": "Die Zahl null steht auf dem Display.",
+        "exampleAr": "يظهر العدد صفر على الشاشة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "eins",
-        "ar": "١"
+        "ar": "١",
+        "id": "a0-zahlen-002",
+        "level": "A0",
+        "exampleDe": "Eins plus zwei ist drei.",
+        "exampleAr": "واحد زائد اثنين يساوي ثلاثة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "zwei",
-        "ar": "٢"
+        "ar": "٢",
+        "id": "a0-zahlen-003",
+        "level": "A0",
+        "exampleDe": "Ich habe zwei Hefte.",
+        "exampleAr": "لديّ دفتران.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "drei",
-        "ar": "٣"
+        "ar": "٣",
+        "id": "a0-zahlen-004",
+        "level": "A0",
+        "exampleDe": "Wir sind drei Freunde.",
+        "exampleAr": "نحن ثلاثة أصدقاء.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "vier",
-        "ar": "٤"
+        "ar": "٤",
+        "id": "a0-zahlen-005",
+        "level": "A0",
+        "exampleDe": "Das kostet vier Euro.",
+        "exampleAr": "هذا يكلف أربعة يورو.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "fünf",
-        "ar": "٥"
+        "ar": "٥",
+        "id": "a0-zahlen-006",
+        "level": "A0",
+        "exampleDe": "Der Bus kommt um fünf Uhr.",
+        "exampleAr": "تأتي الحافلة الساعة الخامسة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "sechs",
-        "ar": "٦"
+        "ar": "٦",
+        "id": "a0-zahlen-007",
+        "level": "A0",
+        "exampleDe": "Die Klasse beginnt um sechs Uhr.",
+        "exampleAr": "يبدأ الصف الساعة السادسة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "sieben",
-        "ar": "٧"
+        "ar": "٧",
+        "id": "a0-zahlen-008",
+        "level": "A0",
+        "exampleDe": "Der Zug fährt um sieben Uhr ab.",
+        "exampleAr": "ينطلق القطار الساعة السابعة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "acht",
-        "ar": "٨"
+        "ar": "٨",
+        "id": "a0-zahlen-009",
+        "level": "A0",
+        "exampleDe": "Acht Personen warten vor der Tür.",
+        "exampleAr": "ينتظر ثمانية أشخاص أمام الباب.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "neun",
-        "ar": "٩"
+        "ar": "٩",
+        "id": "a0-zahlen-010",
+        "level": "A0",
+        "exampleDe": "Es ist neun Uhr.",
+        "exampleAr": "الساعة التاسعة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "zehn",
-        "ar": "١٠"
+        "ar": "١٠",
+        "id": "a0-zahlen-011",
+        "level": "A0",
+        "exampleDe": "Die Kinder sind zehn Jahre alt.",
+        "exampleAr": "أعمار الأطفال عشر سنوات.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "elf",
-        "ar": "١١"
+        "ar": "١١",
+        "id": "a0-zahlen-012",
+        "level": "A0",
+        "exampleDe": "Der Deutschkurs beginnt um elf Uhr.",
+        "exampleAr": "تبدأ دورة الألمانية الساعة الحادية عشرة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "zwölf",
-        "ar": "١٢"
+        "ar": "١٢",
+        "id": "a0-zahlen-013",
+        "level": "A0",
+        "exampleDe": "Es ist zwölf Uhr.",
+        "exampleAr": "الساعة الثانية عشرة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "dreizehn",
-        "ar": "١٣"
+        "ar": "١٣",
+        "id": "a0-zahlen-014",
+        "level": "A0",
+        "exampleDe": "Der Zug fährt um dreizehn Uhr ab.",
+        "exampleAr": "ينطلق القطار الساعة الثالثة عشرة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "zwanzig",
-        "ar": "٢٠"
+        "ar": "٢٠",
+        "id": "a0-zahlen-015",
+        "level": "A0",
+        "exampleDe": "Das Wörterbuch kostet zwanzig Euro.",
+        "exampleAr": "يكلف القاموس عشرين يورو.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "dreißig",
-        "ar": "٣٠"
+        "ar": "٣٠",
+        "id": "a0-zahlen-016",
+        "level": "A0",
+        "exampleDe": "Sie ist dreißig Jahre alt.",
+        "exampleAr": "عمرها ثلاثون سنة.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "hundert",
-        "ar": "١٠٠"
+        "ar": "١٠٠",
+        "id": "a0-zahlen-017",
+        "level": "A0",
+        "exampleDe": "Ein Euro hat hundert Cent.",
+        "exampleAr": "اليورو الواحد فيه مئة سنت.",
+        "tags": [
+          "a0-zahlen"
+        ]
       },
       {
         "de": "einhundert",
-        "ar": "مئة"
+        "ar": "مئة",
+        "id": "a0-zahlen-018",
+        "level": "A0",
+        "exampleDe": "Das Wörterbuch kostet einhundert Euro.",
+        "exampleAr": "يكلف القاموس مئة يورو.",
+        "tags": [
+          "a0-zahlen"
+        ]
       }
-    ]
+    ],
+    "titleDe": "Zahlen 0–20 + Zehner",
+    "titleAr": "الأرقام من 0 إلى 20 والعشرات"
   },
   "a0-farben": {
     "id": "a0-farben",
-    "titelDe": "Farben",
-    "titelAr": "الألوان",
     "level": "A0",
     "cards": [
       {
         "de": "rot",
-        "ar": "أحمر"
+        "ar": "أحمر",
+        "id": "a0-farben-001",
+        "level": "A0",
+        "exampleDe": "Die Tomate ist rot.",
+        "exampleAr": "الطماطم حمراء.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "blau",
-        "ar": "أزرق"
+        "ar": "أزرق",
+        "id": "a0-farben-002",
+        "level": "A0",
+        "exampleDe": "Das Meer ist blau.",
+        "exampleAr": "البحر أزرق.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "grün",
-        "ar": "أخضر"
+        "ar": "أخضر",
+        "id": "a0-farben-003",
+        "level": "A0",
+        "exampleDe": "Das Gras ist grün.",
+        "exampleAr": "العشب أخضر.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "gelb",
-        "ar": "أصفر"
+        "ar": "أصفر",
+        "id": "a0-farben-004",
+        "level": "A0",
+        "exampleDe": "Die Sonne ist gelb.",
+        "exampleAr": "الشمس صفراء.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "schwarz",
-        "ar": "أسود"
+        "ar": "أسود",
+        "id": "a0-farben-005",
+        "level": "A0",
+        "exampleDe": "Die Nacht ist schwarz.",
+        "exampleAr": "الليل أسود.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "weiß",
-        "ar": "أبيض"
+        "ar": "أبيض",
+        "id": "a0-farben-006",
+        "level": "A0",
+        "exampleDe": "Der Schnee ist weiß.",
+        "exampleAr": "الثلج أبيض.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "orange",
-        "ar": "برتقالي"
+        "ar": "برتقالي",
+        "id": "a0-farben-007",
+        "level": "A0",
+        "exampleDe": "Die Orange ist orange.",
+        "exampleAr": "البرتقالة برتقالية.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "lila",
-        "ar": "بنفسجي"
+        "ar": "بنفسجي",
+        "id": "a0-farben-008",
+        "level": "A0",
+        "exampleDe": "Die Blume ist lila.",
+        "exampleAr": "الزهرة بنفسجية.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "braun",
-        "ar": "بني"
+        "ar": "بني",
+        "id": "a0-farben-009",
+        "level": "A0",
+        "exampleDe": "Der Tisch ist braun.",
+        "exampleAr": "الطاولة بنية.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "grau",
-        "ar": "رمادي"
+        "ar": "رمادي",
+        "id": "a0-farben-010",
+        "level": "A0",
+        "exampleDe": "Der Himmel ist grau.",
+        "exampleAr": "السماء رمادية.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "rosa",
-        "ar": "وردي"
+        "ar": "وردي",
+        "id": "a0-farben-011",
+        "level": "A0",
+        "exampleDe": "Das Kleid ist rosa.",
+        "exampleAr": "الفستان وردي.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "dunkelblau",
-        "ar": "أزرق داكن"
+        "ar": "أزرق داكن",
+        "id": "a0-farben-012",
+        "level": "A0",
+        "exampleDe": "Das Meer ist dunkelblau.",
+        "exampleAr": "البحر أزرق داكن.",
+        "tags": [
+          "a0-farben"
+        ]
       },
       {
         "de": "hellgrün",
-        "ar": "أخضر فاتح"
+        "ar": "أخضر فاتح",
+        "id": "a0-farben-013",
+        "level": "A0",
+        "exampleDe": "Das T-Shirt ist hellgrün.",
+        "exampleAr": "القميص أخضر فاتح.",
+        "tags": [
+          "a0-farben"
+        ]
       }
-    ]
+    ],
+    "titleDe": "Farben",
+    "titleAr": "الألوان"
   },
   "a0-obst-gemuese": {
     "id": "a0-obst-gemuese",
-    "titelDe": "Obst und Gemüse",
-    "titelAr": "الفاكهة والخضار",
     "level": "A0",
     "cards": [
       {
         "de": "der Apfel, Äpfel",
-        "ar": "تفاحة"
+        "ar": "تفاحة",
+        "id": "a0-obst-gemuese-001",
+        "level": "A0",
+        "exampleDe": "Der Apfel ist rot.",
+        "exampleAr": "التفاحة حمراء.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Banane, -n",
-        "ar": "موزة"
+        "ar": "موزة",
+        "id": "a0-obst-gemuese-002",
+        "level": "A0",
+        "exampleDe": "Die Banane ist gelb.",
+        "exampleAr": "الموزة صفراء.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Orange, -n",
-        "ar": "برتقالة"
+        "ar": "برتقالة",
+        "id": "a0-obst-gemuese-003",
+        "level": "A0",
+        "exampleDe": "Die Orange ist süß.",
+        "exampleAr": "البرتقالة حلوة.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Tomate, -n",
-        "ar": "طماطم"
+        "ar": "طماطم",
+        "id": "a0-obst-gemuese-004",
+        "level": "A0",
+        "exampleDe": "Die Tomate ist reif.",
+        "exampleAr": "الطماطم ناضجة.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Kartoffel, -n",
-        "ar": "بطاطس"
+        "ar": "بطاطس",
+        "id": "a0-obst-gemuese-005",
+        "level": "A0",
+        "exampleDe": "Die Kartoffel ist heiß.",
+        "exampleAr": "البطاطا ساخنة.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "der Salat, -e",
-        "ar": "خسّ / سلطة"
+        "ar": "خسّ / سلطة",
+        "id": "a0-obst-gemuese-006",
+        "level": "A0",
+        "exampleDe": "Der Salat ist frisch.",
+        "exampleAr": "السلطة طازجة.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Möhre, -n",
-        "ar": "جزر"
+        "ar": "جزر",
+        "id": "a0-obst-gemuese-007",
+        "level": "A0",
+        "exampleDe": "Die Möhre ist orange.",
+        "exampleAr": "الجزرة برتقالية.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Zwiebel, -n",
-        "ar": "بصل"
+        "ar": "بصل",
+        "id": "a0-obst-gemuese-008",
+        "level": "A0",
+        "exampleDe": "Ich schneide eine Zwiebel.",
+        "exampleAr": "أقطع بصلة.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "der Apfelsinensaft",
-        "ar": "عصير البرتقال"
+        "ar": "عصير البرتقال",
+        "id": "a0-obst-gemuese-009",
+        "level": "A0",
+        "exampleDe": "Der Apfelsinensaft ist kalt.",
+        "exampleAr": "عصير البرتقال بارد.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Gurke, -n",
-        "ar": "خيار"
+        "ar": "خيار",
+        "id": "a0-obst-gemuese-010",
+        "level": "A0",
+        "exampleDe": "Die Gurke ist grün.",
+        "exampleAr": "الخيار أخضر.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Erdbeere, -n",
-        "ar": "فراولة"
+        "ar": "فراولة",
+        "id": "a0-obst-gemuese-011",
+        "level": "A0",
+        "exampleDe": "Die Erdbeere ist süß.",
+        "exampleAr": "الفراولة حلوة.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "der Apfelstrudel",
-        "ar": "سترودل التفاح"
+        "ar": "سترودل التفاح",
+        "id": "a0-obst-gemuese-012",
+        "level": "A0",
+        "exampleDe": "Ich esse gern Apfelstrudel.",
+        "exampleAr": "أحب أكل فطيرة التفاح.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "die Zitrone, -n",
-        "ar": "ليمون"
+        "ar": "ليمون",
+        "id": "a0-obst-gemuese-013",
+        "level": "A0",
+        "exampleDe": "Die Zitrone ist sauer.",
+        "exampleAr": "الليمونة حامضة.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "das Obst",
-        "ar": "الفاكهة"
+        "ar": "الفاكهة",
+        "id": "a0-obst-gemuese-014",
+        "level": "A0",
+        "exampleDe": "Ich esse jeden Tag Obst.",
+        "exampleAr": "آكل الفاكهة كل يوم.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "das Gemüse",
-        "ar": "الخضار"
+        "ar": "الخضار",
+        "id": "a0-obst-gemuese-015",
+        "level": "A0",
+        "exampleDe": "Wir essen Gemüse zum Mittagessen.",
+        "exampleAr": "نأكل الخضار في الغداء.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "der Reis",
-        "ar": "الأرز"
+        "ar": "الأرز",
+        "id": "a0-obst-gemuese-016",
+        "level": "A0",
+        "exampleDe": "Ich koche Reis.",
+        "exampleAr": "أطبخ الأرز.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       },
       {
         "de": "das Brot, -e",
-        "ar": "الخبز"
+        "ar": "الخبز",
+        "id": "a0-obst-gemuese-017",
+        "level": "A0",
+        "exampleDe": "Das Brot ist frisch.",
+        "exampleAr": "الخبز طازج.",
+        "tags": [
+          "a0-obst-gemuese"
+        ]
       }
-    ]
+    ],
+    "titleDe": "Obst und Gemüse",
+    "titleAr": "الفاكهة والخضار"
   },
   "b2-politik-demokratie": {
     "id": "b2-politik-demokratie",
-    "titelDe": "Politik und Demokratie",
-    "titelAr": "السياسة والديمقراطية",
     "level": "B2",
     "cards": [
       {
         "de": "die Demokratie, -n",
-        "ar": "الديمقراطية"
+        "ar": "الديمقراطية",
+        "id": "b2-politik-demokratie-001",
+        "level": "B2",
+        "exampleDe": "In einer Demokratie können Bürgerinnen und Bürger ihre Vertreter wählen.",
+        "exampleAr": "في الديمقراطية يستطيع المواطنون انتخاب ممثليهم.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Wahl, -en",
-        "ar": "الانتخاب"
+        "ar": "الانتخاب",
+        "id": "b2-politik-demokratie-002",
+        "level": "B2",
+        "exampleDe": "Die nächste Wahl findet im Herbst statt.",
+        "exampleAr": "تُجرى الانتخابات القادمة في الخريف.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
-        "de": "der Wähler/die Wählerin, -",
-        "ar": "الناخب/ة"
+        "de": "der Wähler / die Wählerin; Plural: die Wähler / die Wählerinnen",
+        "ar": "الناخب/ة",
+        "id": "b2-politik-demokratie-003",
+        "level": "B2",
+        "exampleDe": "Jede Wählerin und jeder Wähler gibt eine Stimme ab.",
+        "exampleAr": "تدلي كل ناخبة وكل ناخب بصوت.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Partei, -en",
-        "ar": "الحزب"
+        "ar": "الحزب",
+        "id": "b2-politik-demokratie-004",
+        "level": "B2",
+        "exampleDe": "Die Partei stellte ihr Programm vor.",
+        "exampleAr": "عرض الحزب برنامجه.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Regierung, -en",
-        "ar": "الحكومة"
+        "ar": "الحكومة",
+        "id": "b2-politik-demokratie-005",
+        "level": "B2",
+        "exampleDe": "Die Regierung legt dem Bundestag einen Gesetzentwurf vor.",
+        "exampleAr": "تقدم الحكومة مشروع قانون إلى البوندستاغ.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "der Bundestag",
-        "ar": "البوندستاغ"
+        "ar": "البوندستاغ",
+        "id": "b2-politik-demokratie-006",
+        "level": "B2",
+        "exampleDe": "Der Bundestag berät über den Gesetzentwurf.",
+        "exampleAr": "يناقش البوندستاغ مشروع القانون.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "der Bundesrat",
-        "ar": "البوندسرات"
+        "ar": "البوندسرات",
+        "id": "b2-politik-demokratie-007",
+        "level": "B2",
+        "exampleDe": "Der Bundesrat vertritt die Länder auf Bundesebene.",
+        "exampleAr": "يمثل البوندسرات الولايات على المستوى الاتحادي.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "das Grundgesetz",
-        "ar": "القانون الأساسي"
+        "ar": "القانون الأساسي",
+        "id": "b2-politik-demokratie-008",
+        "level": "B2",
+        "exampleDe": "Das Grundgesetz schützt die Grundrechte.",
+        "exampleAr": "يحمي القانون الأساسي الحقوق الأساسية.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
-        "de": "der Bundeskanzler/die Bundeskanzlerin, -",
-        "ar": "المستشار/ة الاتحادي/ة"
+        "de": "der Bundeskanzler / die Bundeskanzlerin",
+        "ar": "المستشار/ة الاتحادي/ة",
+        "id": "b2-politik-demokratie-009",
+        "level": "B2",
+        "exampleDe": "Die Bundeskanzlerin leitet die Bundesregierung.",
+        "exampleAr": "تقود المستشارة الاتحادية الحكومة الاتحادية.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
-        "de": "der Bundespräsident/die Bundespräsidentin, -en",
-        "ar": "الرئيس الاتحادي"
+        "de": "der Bundespräsident / die Bundespräsidentin; Plural: die Bundespräsidenten / die Bundespräsidentinnen",
+        "ar": "الرئيس الاتحادي",
+        "id": "b2-politik-demokratie-010",
+        "level": "B2",
+        "exampleDe": "Der Bundespräsident repräsentiert Deutschland nach außen.",
+        "exampleAr": "يمثل الرئيس الاتحادي ألمانيا في الخارج.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Koalition, -en",
-        "ar": "الائتلاف"
+        "ar": "الائتلاف",
+        "id": "b2-politik-demokratie-011",
+        "level": "B2",
+        "exampleDe": "Nach der Wahl bildeten zwei Parteien eine Koalition.",
+        "exampleAr": "بعد الانتخابات شكّل حزبان ائتلافاً.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Opposition",
-        "ar": "المعارضة"
+        "ar": "المعارضة",
+        "id": "b2-politik-demokratie-012",
+        "level": "B2",
+        "exampleDe": "Die Opposition kontrolliert die Arbeit der Regierung.",
+        "exampleAr": "تراقب المعارضة عمل الحكومة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "das Wahlrecht",
-        "ar": "حق الانتخاب"
+        "ar": "حق الانتخاب",
+        "id": "b2-politik-demokratie-013",
+        "level": "B2",
+        "exampleDe": "Das Wahlrecht ermöglicht die Teilnahme an einer Wahl.",
+        "exampleAr": "يتيح حق الانتخاب المشاركة في الانتخابات.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Meinungsfreiheit",
-        "ar": "حرية الرأي"
+        "ar": "حرية الرأي",
+        "id": "b2-politik-demokratie-014",
+        "level": "B2",
+        "exampleDe": "Die Meinungsfreiheit schützt auch unbequeme Ansichten.",
+        "exampleAr": "تحمي حرية الرأي حتى الآراء غير المريحة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Pressefreiheit",
-        "ar": "حرية الصحافة"
+        "ar": "حرية الصحافة",
+        "id": "b2-politik-demokratie-015",
+        "level": "B2",
+        "exampleDe": "Die Pressefreiheit schützt unabhängige Berichterstattung.",
+        "exampleAr": "تحمي حرية الصحافة التغطية الإخبارية المستقلة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "das Gesetz, -e",
-        "ar": "القانون"
+        "ar": "القانون",
+        "id": "b2-politik-demokratie-016",
+        "level": "B2",
+        "exampleDe": "Das Gesetz tritt im Januar in Kraft.",
+        "exampleAr": "يدخل القانون حيز التنفيذ في يناير.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "der Beschluss, -schlüsse",
-        "ar": "قرار"
+        "ar": "قرار",
+        "id": "b2-politik-demokratie-017",
+        "level": "B2",
+        "exampleDe": "Der Beschluss wurde mit großer Mehrheit angenommen.",
+        "exampleAr": "اعتُمد القرار بأغلبية كبيرة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Abstimmung, -en",
-        "ar": "تصويت"
+        "ar": "تصويت",
+        "id": "b2-politik-demokratie-018",
+        "level": "B2",
+        "exampleDe": "Vor der Abstimmung begründeten die Abgeordneten ihre Position.",
+        "exampleAr": "برر النواب موقفهم قبل التصويت.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Mehrheit, -en",
-        "ar": "الأكثرية"
+        "ar": "الأكثرية",
+        "id": "b2-politik-demokratie-019",
+        "level": "B2",
+        "exampleDe": "Die Mehrheit stimmte für den Vorschlag.",
+        "exampleAr": "صوّتت الأغلبية لصالح الاقتراح.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Minderheit, -en",
-        "ar": "الأقلية"
+        "ar": "الأقلية",
+        "id": "b2-politik-demokratie-020",
+        "level": "B2",
+        "exampleDe": "Eine Minderheit der Abgeordneten lehnte den Vorschlag ab.",
+        "exampleAr": "رفضت أقلية من النواب الاقتراح.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "das Mitglied, -er",
-        "ar": "عضو"
+        "ar": "عضو",
+        "id": "b2-politik-demokratie-021",
+        "level": "B2",
+        "exampleDe": "Jedes Mitglied darf an der Sitzung teilnehmen.",
+        "exampleAr": "يحق لكل عضو المشاركة في الجلسة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
-        "de": "der Abgeordnete/die Abgeordnete, -n",
-        "ar": "النائب/ة"
+        "de": "der Abgeordnete / die Abgeordnete; Plural: die Abgeordneten",
+        "ar": "النائب/ة",
+        "id": "b2-politik-demokratie-022",
+        "level": "B2",
+        "exampleDe": "Die Abgeordnete stellte eine Frage an den Minister.",
+        "exampleAr": "طرحت النائبة سؤالاً على الوزير.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Verfassung, -en",
-        "ar": "الدستور"
+        "ar": "الدستور",
+        "id": "b2-politik-demokratie-023",
+        "level": "B2",
+        "exampleDe": "Die Verfassung legt die Grundordnung eines Staates fest.",
+        "exampleAr": "يحدد الدستور النظام الأساسي للدولة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Sozialversicherung, -en",
-        "ar": "التأمين الاجتماعي"
+        "ar": "التأمين الاجتماعي",
+        "id": "b2-politik-demokratie-024",
+        "level": "B2",
+        "exampleDe": "Die Sozialversicherung umfasst unter anderem die Kranken- und Rentenversicherung.",
+        "exampleAr": "يشمل التأمين الاجتماعي، من بين أمور أخرى، التأمين الصحي وتأمين التقاعد.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
-        "de": "der Sozialstaat, -en",
-        "ar": "دولة الرعاية"
+        "de": "der Sozialstaat, die Sozialstaaten",
+        "ar": "دولة الرعاية",
+        "id": "b2-politik-demokratie-025",
+        "level": "B2",
+        "exampleDe": "Der Sozialstaat unterstützt Menschen in schwierigen Lebenslagen.",
+        "exampleAr": "تدعم دولة الرعاية الأشخاص في ظروف معيشية صعبة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Globalisierung",
-        "ar": "العولمة"
+        "ar": "العولمة",
+        "id": "b2-politik-demokratie-026",
+        "level": "B2",
+        "exampleDe": "Die Globalisierung verbindet Märkte und Arbeitsplätze weltweit.",
+        "exampleAr": "تربط العولمة الأسواق وفرص العمل في أنحاء العالم.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die EU (Europäische Union)",
-        "ar": "الاتحاد الأوروبي"
+        "ar": "الاتحاد الأوروبي",
+        "id": "b2-politik-demokratie-027",
+        "level": "B2",
+        "exampleDe": "Die Europäische Union ermöglicht gemeinsame Entscheidungen in vielen Politikfeldern.",
+        "exampleAr": "يتيح الاتحاد الأوروبي اتخاذ قرارات مشتركة في مجالات سياسية كثيرة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Nachhaltigkeit",
-        "ar": "الاستدامة"
+        "ar": "الاستدامة",
+        "id": "b2-politik-demokratie-028",
+        "level": "B2",
+        "exampleDe": "Nachhaltigkeit berücksichtigt ökologische, soziale und wirtschaftliche Folgen.",
+        "exampleAr": "تراعي الاستدامة الآثار البيئية والاجتماعية والاقتصادية.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "der Protest, -e",
-        "ar": "احتجاج"
+        "ar": "احتجاج",
+        "id": "b2-politik-demokratie-029",
+        "level": "B2",
+        "exampleDe": "Der Protest richtete sich gegen die geplante Gebühr.",
+        "exampleAr": "وُجّه الاحتجاج ضد الرسوم المخطط لها.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Demonstration, -en",
-        "ar": "مظاهرة"
+        "ar": "مظاهرة",
+        "id": "b2-politik-demokratie-030",
+        "level": "B2",
+        "exampleDe": "Viele Menschen nahmen an der Demonstration teil.",
+        "exampleAr": "شارك كثير من الناس في المظاهرة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Rente, -n",
-        "ar": "التقاعد"
+        "ar": "التقاعد",
+        "id": "b2-politik-demokratie-031",
+        "level": "B2",
+        "exampleDe": "Viele Menschen erhalten nach dem Berufsleben eine Rente.",
+        "exampleAr": "يتلقى كثير من الناس معاشاً بعد الحياة المهنية.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "das Steuersystem, -e",
-        "ar": "النظام الضريبي"
+        "ar": "النظام الضريبي",
+        "id": "b2-politik-demokratie-032",
+        "level": "B2",
+        "exampleDe": "Das Steuersystem finanziert öffentliche Aufgaben.",
+        "exampleAr": "يموّل النظام الضريبي المهام العامة.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Inflation",
-        "ar": "التضخم"
+        "ar": "التضخم",
+        "id": "b2-politik-demokratie-033",
+        "level": "B2",
+        "exampleDe": "Hohe Inflation verringert die Kaufkraft des Geldes.",
+        "exampleAr": "يقلل التضخم المرتفع القدرة الشرائية للنقود.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "die Arbeitslosigkeit",
-        "ar": "البطالة"
+        "ar": "البطالة",
+        "id": "b2-politik-demokratie-034",
+        "level": "B2",
+        "exampleDe": "Die Arbeitslosigkeit stieg im Winter leicht.",
+        "exampleAr": "ارتفعت البطالة قليلاً في الشتاء.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       },
       {
         "de": "der Mindestlohn, -löhne",
-        "ar": "الحد الأدنى للأجور"
+        "ar": "الحد الأدنى للأجور",
+        "id": "b2-politik-demokratie-035",
+        "level": "B2",
+        "exampleDe": "Der Mindestlohn legt eine gesetzliche Lohnuntergrenze fest.",
+        "exampleAr": "يحدد الحد الأدنى للأجور أدنى أجر قانوني.",
+        "tags": [
+          "b2-politik-demokratie"
+        ]
       }
-    ]
+    ],
+    "titleDe": "Politik und Demokratie",
+    "titleAr": "السياسة والديمقراطية"
   },
   "a0-klassenzimmer": {
     "id": "a0-klassenzimmer",
-    "titelDe": "Im Klassenzimmer",
-    "titelAr": "في غرفة الصف",
     "level": "A0",
     "cards": [
       {
-        "de": "der Stuhl, -ühe",
-        "ar": "كرسي"
+        "de": "der Stuhl, die Stühle",
+        "ar": "كرسي",
+        "id": "a0-klassenzimmer-001",
+        "level": "A0",
+        "exampleDe": "Der Stuhl ist blau.",
+        "exampleAr": "الكرسي أزرق.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "der Tisch, -e",
-        "ar": "طاولة"
+        "de": "der Tisch, die Tische",
+        "ar": "طاولة",
+        "id": "a0-klassenzimmer-002",
+        "level": "A0",
+        "exampleDe": "Der Tisch ist groß.",
+        "exampleAr": "الطاولة كبيرة.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "die Tafel, -n",
-        "ar": "سبورة"
+        "de": "die Tafel, die Tafeln",
+        "ar": "سبورة",
+        "id": "a0-klassenzimmer-003",
+        "level": "A0",
+        "exampleDe": "Die Tafel ist grün.",
+        "exampleAr": "السبورة خضراء.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "die Kreide, -n",
-        "ar": "طبشور"
+        "de": "die Kreide",
+        "ar": "طبشور",
+        "id": "a0-klassenzimmer-004",
+        "level": "A0",
+        "exampleDe": "Die Kreide ist weiß.",
+        "exampleAr": "الطبشور أبيض.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "der Kugelschreiber, -",
-        "ar": "قلم حبر"
+        "de": "der Kugelschreiber, die Kugelschreiber",
+        "ar": "قلم حبر",
+        "id": "a0-klassenzimmer-005",
+        "level": "A0",
+        "exampleDe": "Der Kugelschreiber ist blau.",
+        "exampleAr": "قلم الحبر أزرق.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "das Heft, -e",
-        "ar": "دفتر"
+        "de": "das Heft, die Hefte",
+        "ar": "دفتر",
+        "id": "a0-klassenzimmer-006",
+        "level": "A0",
+        "exampleDe": "Mein Heft ist neu.",
+        "exampleAr": "دفتري جديد.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "das Buch, -ücher",
-        "ar": "كتاب"
+        "de": "das Buch, die Bücher",
+        "ar": "كتاب",
+        "id": "a0-klassenzimmer-007",
+        "level": "A0",
+        "exampleDe": "Das Buch ist interessant.",
+        "exampleAr": "الكتاب ممتع.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "der Lehrer/die Lehrerin, -",
-        "ar": "المعلم/ة"
+        "de": "der Lehrer / die Lehrerin",
+        "ar": "المعلم/ة",
+        "id": "a0-klassenzimmer-008",
+        "level": "A0",
+        "exampleDe": "Die Lehrerin kommt heute.",
+        "exampleAr": "تأتي المعلمة اليوم.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "der Schüler/die Schülerin, -",
-        "ar": "التلميذ/ة"
+        "de": "der Schüler / die Schülerin",
+        "ar": "التلميذ/ة",
+        "id": "a0-klassenzimmer-009",
+        "level": "A0",
+        "exampleDe": "Der Schüler lernt Deutsch.",
+        "exampleAr": "يتعلم التلميذ الألمانية.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "die Tür, -en",
-        "ar": "باب"
+        "de": "die Tür, die Türen",
+        "ar": "باب",
+        "id": "a0-klassenzimmer-010",
+        "level": "A0",
+        "exampleDe": "Die Tür ist offen.",
+        "exampleAr": "الباب مفتوح.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "das Fenster, -",
-        "ar": "نافذة"
+        "de": "das Fenster",
+        "ar": "نافذة",
+        "id": "a0-klassenzimmer-011",
+        "level": "A0",
+        "exampleDe": "Das Fenster ist groß.",
+        "exampleAr": "النافذة كبيرة.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "die Lampe, -n",
-        "ar": "مصباح"
+        "de": "die Lampe, die Lampen",
+        "ar": "مصباح",
+        "id": "a0-klassenzimmer-012",
+        "level": "A0",
+        "exampleDe": "Die Lampe ist hell.",
+        "exampleAr": "المصباح مضيء.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "die Tasche, -n",
-        "ar": "حقيبة"
+        "de": "die Tasche, die Taschen",
+        "ar": "حقيبة",
+        "id": "a0-klassenzimmer-013",
+        "level": "A0",
+        "exampleDe": "Meine Tasche ist schwarz.",
+        "exampleAr": "حقيبتي سوداء.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "der Bleistift, -e",
-        "ar": "قلم رصاص"
+        "de": "der Bleistift, die Bleistifte",
+        "ar": "قلم رصاص",
+        "id": "a0-klassenzimmer-014",
+        "level": "A0",
+        "exampleDe": "Der Bleistift ist kurz.",
+        "exampleAr": "قلم الرصاص قصير.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
-        "de": "das Papier, -e",
-        "ar": "ورقة"
+        "de": "das Papier",
+        "ar": "ورقة",
+        "id": "a0-klassenzimmer-015",
+        "level": "A0",
+        "exampleDe": "Das Papier ist weiß.",
+        "exampleAr": "الورق أبيض.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
         "de": "öffnen",
-        "ar": "يفتح"
+        "ar": "يفتح",
+        "id": "a0-klassenzimmer-016",
+        "level": "A0",
+        "exampleDe": "Bitte öffnen Sie das Buch.",
+        "exampleAr": "افتح الكتاب من فضلك.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
         "de": "schließen",
-        "ar": "يغلق"
+        "ar": "يغلق",
+        "id": "a0-klassenzimmer-017",
+        "level": "A0",
+        "exampleDe": "Bitte schließen Sie die Tür.",
+        "exampleAr": "أغلق الباب من فضلك.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
         "de": "schreiben",
-        "ar": "يكتب"
+        "ar": "يكتب",
+        "id": "a0-klassenzimmer-018",
+        "level": "A0",
+        "exampleDe": "Ich schreibe meinen Namen.",
+        "exampleAr": "أكتب اسمي.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
         "de": "lesen",
-        "ar": "يقرأ"
+        "ar": "يقرأ",
+        "id": "a0-klassenzimmer-019",
+        "level": "A0",
+        "exampleDe": "Ich lese ein Buch.",
+        "exampleAr": "أقرأ كتاباً.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       },
       {
         "de": "hören",
-        "ar": "يسمع"
+        "ar": "يسمع",
+        "id": "a0-klassenzimmer-020",
+        "level": "A0",
+        "exampleDe": "Ich höre den Lehrer.",
+        "exampleAr": "أسمع المعلم.",
+        "tags": [
+          "a0-klassenzimmer"
+        ]
       }
-    ]
+    ],
+    "titleDe": "Im Klassenzimmer",
+    "titleAr": "في غرفة الصف"
   }
 }

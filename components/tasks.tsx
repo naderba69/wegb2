@@ -1289,11 +1289,11 @@ function Empty({ title }: { title: string }) {
 function PartnerTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void; voiceName?: string; rate?: number; persistKey?: string }) {
   const partner = partnerKarten.find((p) => p.id === task.partnerId);
   const kontakt = kontaktKarten.find((k) => k.id === task.kontaktId);
-  const mono = muendlich.find((m) => m.id === task.monologId);
+  const mono = muendlich.find((m) => m.id === (task.muendlichId ?? task.monologId));
   const karte = partner || kontakt || mono;
   const [done, setDone] = useState(false);
   const isKontakt = !!kontakt;
-  const isMono = !!mono;
+  const isMono = !!mono && mono.teil === 2;
   if (!karte) {
     return (
       <section className="card fadein" style={{ padding: "1.2rem" }}>

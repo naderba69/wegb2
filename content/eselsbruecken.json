@@ -2301,22 +2301,71 @@
   {
     "id": "es-b2-16",
     "level": "B2",
-    "stichwort": "der/das/das Nutzen",
+    "stichwort": "der Nutzen / das Nutzen",
     "text_de": "«Der Nutzen» (الفائدة/النفع) مذكّر. تذكَّر: «der Nutzen» نون، «das Nutzen» غير صحيحة.",
     "text_ar": "Nutzen بمعنى الفائدة مذكّر der، وينتهي بـ-en لكنه ليس مصدراً محايداً هنا.",
     "gramIds": [
-      "b2-nomen-verb"
+      "b2-nominalstil",
+      "b2-funktionsverben"
+    ],
+    "emoji": "⚖️",
+    "sektion": "genus",
+    "titleAr": "der Nutzen: الفائدة، وdas Nutzen: عملية الاستخدام",
+    "storyAr": "ميّز بين «الفائدة» وهي اسم مذكر: der Nutzen، وبين الفعل حين يُحوَّل إلى اسم: das Nutzen. لا تحفظ «das Nutzen» خطأً مطلقاً؛ فله معنى صحيح مختلف، وإن كانت Nutzung أكثر شيوعاً في كثير من السياقات.",
+    "zeilen": [
+      {
+        "code": "der Nutzen = الفائدة",
+        "de": "Der Nutzen der Reform ist umstritten.",
+        "ar": "فائدة الإصلاح محل خلاف."
+      },
+      {
+        "code": "das Nutzen = فعل الاستخدام بعد تحويله إلى اسم",
+        "de": "Das Nutzen sozialer Medien kann Risiken mit sich bringen.",
+        "ar": "قد ينطوي استخدام وسائل التواصل الاجتماعي على مخاطر."
+      },
+      {
+        "code": "nutzen = فعل",
+        "de": "Wir nutzen die Zeit sinnvoll.",
+        "ar": "نستثمر الوقت بشكل مفيد."
+      }
     ]
   },
   {
     "id": "es-b2-17",
     "level": "B2",
-    "stichwort": "das Komma vor und/oder",
+    "stichwort": "Komma vor und/oder",
     "text_de": "قبل und/oder لا فاصلة عادة إلا بين جملتين كاملتين بفاعلين مختلفين.",
     "text_ar": "لا فاصلة قبل und/oder في جملة بسيطة؛ فقط بين Hauptsätze مستقلين.",
     "gramIds": [
-      "b2-komma",
-      "b2-nebensatz"
-    ]
+      "a2-neben",
+      "b2-textkonnektoren"
+    ],
+    "emoji": "🧭",
+    "sektion": "satzbau",
+    "titleAr": "الفاصلة قبل und/or: ليست واجبة بسبب اختلاف الفاعل وحده",
+    "storyAr": "مع und وoder لا نضع فاصلة عادة بين الكلمات أو عناصر الجملة. وبين جملتين مستقلتين يجوز استعمالها للتوضيح، لكنه ليس واجباً لمجرد اختلاف الفاعلين. أمّا قبل جملة تابعة مثل weil فالفاصلة واجبة.",
+    "zeilen": [
+      {
+        "code": "عناصر متعاطفة — بلا فاصلة",
+        "de": "Ich kaufe Brot und Käse.",
+        "ar": "لا فاصلة بين الاسمين المرتبطين بـund."
+      },
+      {
+        "code": "جملتان مستقلتان — الفاصلة للتوضيح اختيارية",
+        "de": "Er fährt mit dem Bus, und seine Schwester nimmt das Fahrrad.",
+        "ar": "يجوز وضع فاصلة لتوضيح حدّ الجملتين، ويجوز أيضاً حذفها."
+      },
+      {
+        "code": "من دون فاصلة — صيغة صحيحة كذلك",
+        "de": "Er fährt mit dem Bus und seine Schwester nimmt das Fahrrad.",
+        "ar": "حذف الفاصلة في المثال السابق مقبول أيضاً."
+      },
+      {
+        "code": "جملة تابعة — الفاصلة واجبة",
+        "de": "Er blieb zu Hause, weil er krank war.",
+        "ar": "الفاصلة واجبة قبل جملة weil التابعة."
+      }
+    ],
+    "warnung": "القول إن الفاصلة تُستعمل فقط عند اختلاف الفاعلين تبسيط غير دقيق؛ بين الجملتين المستقلتين مع und/or تكون الفاصلة للتوضيح اختيارية."
   }
 ]

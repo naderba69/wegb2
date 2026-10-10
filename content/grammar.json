@@ -8933,7 +8933,7 @@
     "level": "A2",
     "ziel": "تستخدم صيغة Futur I: werden المصرف + مصدر الفعل، في الجملة الخبرية الرئيسية.",
     "voraus": [
-      "a2-praesens-wdh",
+      "a1-praesens",
       "a2-perfekt"
     ],
     "anwendung": {
@@ -9377,7 +9377,6 @@
     "level": "B2",
     "ziel": "تستخدم Partizip I كصفة (der lesende Mann) بنهايات صحيحة.",
     "voraus": [
-      "b2-adjektiv-partizip",
       "b1-adjektivendungen"
     ],
     "anwendung": {
@@ -13282,44 +13281,38 @@
     "verify": [
       {
         "id": "a0-artikel-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ Mann kommt aus Berlin.",
         "options": [
           "Der",
           "Die",
           "Das"
         ],
-        "answer": [
-          "Der"
-        ],
+        "answer": "Der",
         "explanationAr": "Mann مذكر → der Mann."
       },
       {
         "id": "a0-artikel-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ Frau heißt Anna.",
         "options": [
           "Der",
           "Die",
           "Das"
         ],
-        "answer": [
-          "Die"
-        ],
+        "answer": "Die",
         "explanationAr": "Frau مؤنثة → die Frau."
       },
       {
         "id": "a0-artikel-v3",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ Kind ist drei Jahre alt.",
         "options": [
           "Der",
           "Die",
           "Das"
         ],
-        "answer": [
-          "Das"
-        ],
+        "answer": "Das",
         "explanationAr": "Kind محايد → das Kind."
       }
     ],
@@ -13442,48 +13435,58 @@
     "exercises": [
       {
         "id": "a0-artikel-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ Mann kommt aus Berlin.",
         "options": [
           "Der",
           "Die",
           "Das"
         ],
-        "answer": [
-          "Der"
-        ],
+        "answer": "Der",
         "explanationAr": "Mann مذكر → der Mann.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "a0-artikel-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ Frau heißt Anna.",
         "options": [
           "Der",
           "Die",
           "Das"
         ],
-        "answer": [
-          "Die"
-        ],
+        "answer": "Die",
         "explanationAr": "Frau مؤنثة → die Frau.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "a0-artikel-v3",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ Kind ist drei Jahre alt.",
         "options": [
           "Der",
           "Die",
           "Das"
         ],
-        "answer": [
-          "Das"
-        ],
+        "answer": "Das",
         "explanationAr": "Kind محايد → das Kind.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "a0-artikel-r141e-prod",
+        "type": "fill",
+        "promptDe": "___ Frau kommt aus Tunis.",
+        "promptAr": "أكمل بأداة التعريف المناسبة: المرأة من تونس.",
+        "answer": "Die",
+        "explanationAr": "Frau مؤنث، لذلك نقول die Frau."
+      },
+      {
+        "id": "a0-artikel-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Singular: das Kind. Plural: die ___ sind hier.",
+        "promptAr": "اكتب جمع Kind.",
+        "answer": "Kinder",
+        "explanationAr": "جمع das Kind هو die Kinder."
       }
     ],
     "pitfalls": [],
@@ -13511,44 +13514,38 @@
     "verify": [
       {
         "id": "a0-du-sie-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Guten Tag, Frau Schmidt, wie geht es ___?",
         "options": [
           "du",
           "ihr",
           "Ihnen"
         ],
-        "answer": [
-          "Ihnen"
-        ],
+        "answer": "Ihnen",
         "explanationAr": "مع Frau Schmidt (شخص أكبر/غريب) نستخدم الصيغة الرسمية: Wie geht es Ihnen?"
       },
       {
         "id": "a0-du-sie-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Hallo Anna, wo wohnst ___?",
         "options": [
           "du",
           "ihr",
           "Sie"
         ],
-        "answer": [
-          "du"
-        ],
+        "answer": "du",
         "explanationAr": "مع صديق/طفل نستخدم du: Wo wohnst du?"
       },
       {
         "id": "a0-du-sie-v3",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Woher kommt ___ (ihr zwei)?",
         "options": [
           "du",
           "ihr",
           "Sie"
         ],
-        "answer": [
-          "ihr"
-        ],
+        "answer": "ihr",
         "explanationAr": "لمجموعة أصدقاء (أنتما/أنتم غير الرسمي) نستخدم ihr: Woher kommt ihr?"
       }
     ],
@@ -13621,48 +13618,58 @@
     "exercises": [
       {
         "id": "a0-du-sie-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Guten Tag, Frau Schmidt, wie geht es ___?",
         "options": [
           "du",
           "ihr",
           "Ihnen"
         ],
-        "answer": [
-          "Ihnen"
-        ],
+        "answer": "Ihnen",
         "explanationAr": "مع Frau Schmidt (شخص أكبر/غريب) نستخدم الصيغة الرسمية: Wie geht es Ihnen?",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "a0-du-sie-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Hallo Anna, wo wohnst ___?",
         "options": [
           "du",
           "ihr",
           "Sie"
         ],
-        "answer": [
-          "du"
-        ],
+        "answer": "du",
         "explanationAr": "مع صديق/طفل نستخدم du: Wo wohnst du?",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "a0-du-sie-v3",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Woher kommt ___ (ihr zwei)?",
         "options": [
           "du",
           "ihr",
           "Sie"
         ],
-        "answer": [
-          "ihr"
-        ],
+        "answer": "ihr",
         "explanationAr": "لمجموعة أصدقاء (أنتما/أنتم غير الرسمي) نستخدم ihr: Woher kommt ihr?",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "a0-du-sie-r141e-prod",
+        "type": "fill",
+        "promptDe": "Guten Tag, Frau Meier. Wie geht es ___?",
+        "promptAr": "أكمل بصيغة المخاطبة الرسمية.",
+        "answer": "Ihnen",
+        "explanationAr": "مع المخاطبة الرسمية نقول: Wie geht es Ihnen? وIhnen تُكتب بحرف كبير."
+      },
+      {
+        "id": "a0-du-sie-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Hallo Ali! Wie geht es ___?",
+        "promptAr": "أكمل بصيغة المخاطبة غير الرسمية.",
+        "answer": "dir",
+        "explanationAr": "مع الصديق نستخدم Dativ: Wie geht es dir? أما الرسمي فهو Ihnen."
       }
     ],
     "pitfalls": [],
@@ -13686,30 +13693,26 @@
     "verify": [
       {
         "id": "a0-av-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welches Wort hat ein LANGES a?",
         "options": [
           "Stadt",
           "Staat",
           "Satz"
         ],
-        "answer": [
-          "Staat"
-        ],
+        "answer": "Staat",
         "explanationAr": "Staat تُنطَق بـ aa طويل (دولة)؛ Stadt a قصيرة (مدينة)."
       },
       {
         "id": "a0-av-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welches Wort hat ein KURZES i?",
         "options": [
           "ihm",
           "bin",
           "ihn"
         ],
-        "answer": [
-          "bin"
-        ],
+        "answer": "bin",
         "explanationAr": "bin i قصيرة (أنا)؛ ihm/ihn بـ ih طويلة."
       }
     ],
@@ -13761,37 +13764,37 @@
       {
         "de": "Stadt — Staat",
         "ar": "مدينة — دولة (الطول يُغيّر المعنى)"
+      },
+      {
+        "de": "Bett — Beet",
+        "ar": "سرير — حوض زهور (e قصيرة في Bett وطويلة في Beet)."
       }
     ],
     "eselsbruecke": "تخيّل الحرف h علامة مطّ (طويل)، تماماً كما في العربية: دام vs دامـه.",
     "exercises": [
       {
         "id": "a0-av-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welches Wort hat ein LANGES a?",
         "options": [
           "Stadt",
           "Staat",
           "Satz"
         ],
-        "answer": [
-          "Staat"
-        ],
+        "answer": "Staat",
         "explanationAr": "Staat تُنطَق بـ aa طويل (دولة)؛ Stadt a قصيرة (مدينة).",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "a0-av-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welches Wort hat ein KURZES i?",
         "options": [
           "ihm",
           "bin",
           "ihn"
         ],
-        "answer": [
-          "bin"
-        ],
+        "answer": "bin",
         "explanationAr": "bin i قصيرة (أنا)؛ ihm/ihn بـ ih طويلة.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -13805,8 +13808,25 @@
           "der Sohn",
           "die Uhr"
         ],
-        "answer": 0,
-        "explanationAr": "في Bann الحرف a قصير (متبوع بحرفين ساكنين)، أما Bahn فالـa طويل."
+        "answer": "der Bann",
+        "explanationAr": "في Bann الحرف a قصير (متبوع بحرفين ساكنين)، أما Bahn فالـa طويل.",
+        "id": "a0-aussprache-vowels-r141e-e03"
+      },
+      {
+        "id": "a0-aussprache-vowels-r141e-prod",
+        "type": "fill",
+        "promptDe": "Welches Wort hat ein langes a: Stadt oder ___?",
+        "promptAr": "أي الكلمتين فيها a طويلة: Stadt أم ___؟",
+        "answer": "Staat",
+        "explanationAr": "Staat تُكتب بـaa وتُنطق بحركة طويلة؛ Stadt فيها a قصيرة."
+      },
+      {
+        "id": "a0-aussprache-vowels-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Welches Wort hat ein langes e: Bett oder ___?",
+        "promptAr": "أي الكلمتين فيها e طويلة: Bett أم ___؟",
+        "answer": "Beet",
+        "explanationAr": "في Beet تُنطق ee طويلة، وفي Bett الحركة قصيرة."
       }
     ],
     "pitfalls": [],
@@ -13831,16 +13851,14 @@
     "verify": [
       {
         "id": "a0-au-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welcher Umlaut klingt wie ein gerundetes \"i\"?",
         "options": [
           "ä",
           "ö",
           "ü"
         ],
-        "answer": [
-          "ü"
-        ],
+        "answer": "ü",
         "explanationAr": "ü = i مع استدارة الشفاه (كما في الفرنسية tu أو التركية ü)."
       }
     ],
@@ -13864,22 +13882,24 @@
       {
         "de": "die Männer — hören — die Tür",
         "ar": "الرجال — يسمع — الباب (أمثلة ä/ö/ü)"
+      },
+      {
+        "de": "der Hut — die Hüte · schon — schön",
+        "ar": "قبعة — قبعات · بالفعل/جميل (أمثلة على u/ü وo/ö)."
       }
     ],
     "eselsbruecke": "طريقة مجرّبة: انطق e ثم دوّر شفتيك — تسمع ö. انطق i ثم دوّر شفتيك — تسمع ü.",
     "exercises": [
       {
         "id": "a0-au-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welcher Umlaut klingt wie ein gerundetes \"i\"?",
         "options": [
           "ä",
           "ö",
           "ü"
         ],
-        "answer": [
-          "ü"
-        ],
+        "answer": "ü",
         "explanationAr": "ü = i مع استدارة الشفاه (كما في الفرنسية tu أو التركية ü).",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -13893,8 +13913,9 @@
           "das Ohr",
           "der Apfel"
         ],
-        "answer": 1,
-        "explanationAr": "die Tür كلمة فيها ü."
+        "answer": "die Tür",
+        "explanationAr": "die Tür كلمة فيها ü.",
+        "id": "a0-aussprache-umlaut-r141e-e02"
       },
       {
         "type": "mc",
@@ -13906,8 +13927,9 @@
           "Uhr",
           "Fuß"
         ],
-        "answer": 1,
-        "explanationAr": "Männer = مِنَر، فيها ä."
+        "answer": "Männer",
+        "explanationAr": "Männer = مِنَر، فيها ä.",
+        "id": "a0-aussprache-umlaut-r141e-e03"
       },
       {
         "type": "mc",
@@ -13919,8 +13941,9 @@
           "Haus",
           "Tür"
         ],
-        "answer": 1,
-        "explanationAr": "schön فيها ö."
+        "answer": "schön",
+        "explanationAr": "schön فيها ö.",
+        "id": "a0-aussprache-umlaut-r141e-e04"
       },
       {
         "type": "mc",
@@ -13932,8 +13955,25 @@
           "Tür",
           "Heft"
         ],
-        "answer": 2,
-        "explanationAr": "Tür فيها ü."
+        "answer": "Tür",
+        "explanationAr": "Tür فيها ü.",
+        "id": "a0-aussprache-umlaut-r141e-e05"
+      },
+      {
+        "id": "a0-aussprache-umlaut-r141e-prod",
+        "type": "fill",
+        "promptDe": "Der Hut — zwei ___.",
+        "promptAr": "اكتب جمع Hut مع الأوملاوت.",
+        "answer": "Hüte",
+        "explanationAr": "يتحوّل u إلى ü في الجمع: der Hut, die Hüte."
+      },
+      {
+        "id": "a0-aussprache-umlaut-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Der Sohn — die ___.",
+        "promptAr": "اكتب جمع Sohn مع الأوملاوت.",
+        "answer": "Söhne",
+        "explanationAr": "في الجمع تتحول o إلى ö: der Sohn, die Söhne."
       }
     ],
     "pitfalls": [],
@@ -13957,30 +13997,26 @@
     "verify": [
       {
         "id": "a1-ac-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welches Wort hat den WEICHEN ch-Laut (ich-Laut)?",
         "options": [
           "Buch",
           "ich",
           "Nacht"
         ],
-        "answer": [
-          "ich"
-        ],
+        "answer": "ich",
         "explanationAr": "ich → ch بعد i → ich-Laut ناعم (لا «ش» ولا «خ»! هاء مرققة من وسط اللسان). Buch/Nacht → ach-Laut خشن."
       },
       {
         "id": "a1-ac-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welches Wort hat den HARTEN ch-Laut (ach-Laut)?",
         "options": [
           "nicht",
           "Bücher",
           "auch"
         ],
-        "answer": [
-          "auch"
-        ],
+        "answer": "auch",
         "explanationAr": "auch → ch بعد au → ach-Laut خشن (كالخاء)."
       }
     ],
@@ -14031,37 +14067,37 @@
       {
         "de": "Ich habe auch ein Buch.",
         "ar": "عندي أيضاً كتاب. (ich ناعم، auch/Buch خشان)"
+      },
+      {
+        "de": "ich · Milch · machen · Buch",
+        "ar": "صوت ch ناعم بعد i، وخشن بعد a أو u."
       }
     ],
     "eselsbruecke": "تخيّل ch مع الحروف الأمامية (i/e) = هواء يمر عبر قناة ضيقة (ناعم)، والحروف الخلفية (a/o/u) = هواء يمر من أقصى الحلق كالخاء.",
     "exercises": [
       {
         "id": "a1-ac-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welches Wort hat den WEICHEN ch-Laut (ich-Laut)?",
         "options": [
           "Buch",
           "ich",
           "Nacht"
         ],
-        "answer": [
-          "ich"
-        ],
+        "answer": "ich",
         "explanationAr": "ich → ch بعد i → ich-Laut ناعم (لا «ش» ولا «خ»! هاء مرققة من وسط اللسان). Buch/Nacht → ach-Laut خشن.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "a1-ac-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Welches Wort hat den HARTEN ch-Laut (ach-Laut)?",
         "options": [
           "nicht",
           "Bücher",
           "auch"
         ],
-        "answer": [
-          "auch"
-        ],
+        "answer": "auch",
         "explanationAr": "auch → ch بعد au → ach-Laut خشن (كالخاء).",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -14075,8 +14111,9 @@
           "nach s",
           "immer gleich"
         ],
-        "answer": 1,
-        "explanationAr": "بعد حروف e/i/ä/ö/ü/ei/eu يُنطَق ch ناعماً."
+        "answer": "nach e/i/ä/ö/ü/ei/eu (ich)",
+        "explanationAr": "بعد حروف e/i/ä/ö/ü/ei/eu يُنطَق ch ناعماً.",
+        "id": "a1-aussprache-ch-r141e-e03"
       },
       {
         "type": "mc",
@@ -14088,8 +14125,25 @@
           "Nacht",
           "Kuchen"
         ],
-        "answer": 1,
-        "explanationAr": "بعد i/e/ä/ö/ü/ei/eu ينطق ch ناعماً."
+        "answer": "ich",
+        "explanationAr": "بعد i/e/ä/ö/ü/ei/eu ينطق ch ناعماً.",
+        "id": "a1-aussprache-ch-r141e-e04"
+      },
+      {
+        "id": "a1-aussprache-ch-r141e-prod",
+        "type": "fill",
+        "promptDe": "Ich trinke eine Tasse ___. (ch nach i)",
+        "promptAr": "أكمل بكلمة فيها ch الناعمة بعد i.",
+        "answer": "Milch",
+        "explanationAr": "في Milch يأتي ch بعد i، فيُنطق ich-Laut الناعم."
+      },
+      {
+        "id": "a1-aussprache-ch-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Der ___ ist neu. (ch nach u)",
+        "promptAr": "أكمل باسم فيه ch الخشنة بعد u.",
+        "answer": "Buch",
+        "explanationAr": "في Buch يأتي ch بعد u، فيُنطق ach-Laut الخشن."
       }
     ],
     "pitfalls": [],
@@ -14113,16 +14167,14 @@
     "verify": [
       {
         "id": "a1-ar-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie wird das \"-er\" in \"Vater\" ausgesprochen?",
         "options": [
           "-er بلسان ملفوف",
           "schwaches a (Vata)",
           "-e"
         ],
-        "answer": [
-          "schwaches a (Vata)"
-        ],
+        "answer": "schwaches a (Vata)",
         "explanationAr": "مقطع -er في نهاية الكلمة يُختزل إلى a خفيفة: Vater = فاتَ."
       }
     ],
@@ -14142,22 +14194,24 @@
       {
         "de": "Vater [ˈfaːtɐ], Mutter [ˈmʊtɐ], Kinder [ˈkɪndɐ]",
         "ar": "أب/أم/أطفال — -er آخراً = a خفيفة."
+      },
+      {
+        "de": "Rita reist am Freitag nach Rom.",
+        "ar": "راء بداية الكلمات Rita وreist وRom تُنطق احتكاكياً."
       }
     ],
     "eselsbruecke": "بدل أن تقرأ Vater «فاتِر»، قلها «فاتَ» وكأن آخرها a خفيفة.",
     "exercises": [
       {
         "id": "a1-ar-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie wird das \"-er\" in \"Vater\" ausgesprochen?",
         "options": [
           "-er بلسان ملفوف",
           "schwaches a (Vata)",
           "-e"
         ],
-        "answer": [
-          "schwaches a (Vata)"
-        ],
+        "answer": "schwaches a (Vata)",
         "explanationAr": "مقطع -er في نهاية الكلمة يُختزل إلى a خفيفة: Vater = فاتَ.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -14171,8 +14225,9 @@
           "Wie ein ch",
           "Wie ein sch"
         ],
-        "answer": 1,
-        "explanationAr": "نهاية المقطع r تنطق كصوت حرف علة داكن شبيه بـa، مثل «Vater»."
+        "answer": "Wie ein dunkler a-Laut (Vokal)",
+        "explanationAr": "نهاية المقطع r تنطق كصوت حرف علة داكن شبيه بـa، مثل «Vater».",
+        "id": "a1-aussprache-r-r141e-e02"
       },
       {
         "type": "mc",
@@ -14184,8 +14239,25 @@
           "Wie l",
           "Wie ch"
         ],
-        "answer": 1,
-        "explanationAr": "في نهاية المقطع يُنطَق r كحرف علة داكن."
+        "answer": "Dunkles a (Vokal)",
+        "explanationAr": "في نهاية المقطع يُنطَق r كحرف علة داكن.",
+        "id": "a1-aussprache-r-r141e-e03"
+      },
+      {
+        "id": "a1-aussprache-r-r141e-prod",
+        "type": "fill",
+        "promptDe": "Das unbetonte -er am Wortende in «Vater» klingt ungefähr wie ein schwaches ___.",
+        "promptAr": "بماذا يشبه تقريباً صوت -er غير المشدد في آخر Vater؟",
+        "answer": "a",
+        "explanationAr": "في نهاية كلمات مثل Vater تُختزل -er غالباً إلى صوت a خفيف [ɐ]."
+      },
+      {
+        "id": "a1-aussprache-r-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Welches Wort beginnt mit deutschem r: Regen oder sehen? ___",
+        "promptAr": "اكتب الكلمة التي تبدأ بصوت r الألماني: Regen أم sehen؟",
+        "answer": "Regen",
+        "explanationAr": "Regen تبدأ بحرف r، أما sehen فتبدأ بصوت z/ز."
       }
     ],
     "pitfalls": [],
@@ -14209,16 +14281,14 @@
     "verify": [
       {
         "id": "a1-as-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie wird \"Stadt\" ausgesprochen?",
         "options": [
           "s-tat",
           "schtatt",
           "ts-tat"
         ],
-        "answer": [
-          "schtatt"
-        ],
+        "answer": "schtatt",
         "explanationAr": "st في بداية الكلمة = sht (شت): Stadt = شتات."
       }
     ],
@@ -14285,21 +14355,28 @@
         ]
       }
     ],
-    "examples": [],
+    "examples": [
+      {
+        "de": "spielen · sprechen · Straße · Schule",
+        "ar": "في بداية المقطع: sp تُنطق shp، وst تُنطق sht، وsch تُنطق ش."
+      },
+      {
+        "de": "Wespe · Fenster · ist",
+        "ar": "في وسط الكلمة أو نهايتها لا تتحول sp/st تلقائياً إلى shp/sht."
+      }
+    ],
     "eselsbruecke": "حرف s قبل p أو t في بداية الكلمة يخجل من النطق فيستعين بحرف ش: sp→شب، st→شت.",
     "exercises": [
       {
         "id": "a1-as-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie wird \"Stadt\" ausgesprochen?",
         "options": [
           "s-tat",
           "schtatt",
           "ts-tat"
         ],
-        "answer": [
-          "schtatt"
-        ],
+        "answer": "schtatt",
         "explanationAr": "st في بداية الكلمة = sht (شت): Stadt = شتات.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -14313,8 +14390,9 @@
           "sb",
           "ʃp نعم — shp"
         ],
-        "answer": 1,
-        "explanationAr": "في أول الكلمة تنطق shp (Schprache, Stadt=Shtadt)."
+        "answer": "schp",
+        "explanationAr": "في أول الكلمة تنطق shp (Schprache, Stadt=Shtadt).",
+        "id": "a1-aussprache-sp-st-r141e-e02"
       },
       {
         "type": "mc",
@@ -14326,8 +14404,25 @@
           "Wespe",
           "Haus"
         ],
-        "answer": 0,
-        "explanationAr": "Sport تنطق «Schport» لأن sp في أول الكلمة."
+        "answer": "Sport",
+        "explanationAr": "Sport تنطق «Schport» لأن sp في أول الكلمة.",
+        "id": "a1-aussprache-sp-st-r141e-e03"
+      },
+      {
+        "id": "a1-aussprache-sp-st-r141e-prod",
+        "type": "fill",
+        "promptDe": "Er geht über die ___raße. (st am Wortanfang)",
+        "promptAr": "أكمل الكلمة التي يبدأ فيها st بصوت sht.",
+        "answer": "St",
+        "explanationAr": "الكلمة Straße تبدأ بـst، وتُنطق في أول الكلمة /ʃt/."
+      },
+      {
+        "id": "a1-aussprache-sp-st-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Wir ___ Deutsch. (sp am Wortanfang)",
+        "promptAr": "أكمل بالفعل sprechen؛ في بدايته sp تُنطق shp.",
+        "answer": "sprechen",
+        "explanationAr": "في بداية sprechen تُنطق sp بصوت shp."
       }
     ],
     "pitfalls": [],
@@ -14352,16 +14447,14 @@
     "verify": [
       {
         "id": "a1-al-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie wird \"Tag\" ausgesprochen?",
         "options": [
           "تاغ",
           "تاك",
           "تا"
         ],
-        "answer": [
-          "تاك"
-        ],
+        "answer": "تاك",
         "explanationAr": "Auslautverhärtung: آخر حرف g ينطق k → Tag = تاك."
       }
     ],
@@ -14427,22 +14520,24 @@
       {
         "de": "Der Tag ist gut. → [deːɐ̯ ta:k ɪst gu:t]",
         "ar": "اليوم جميل."
+      },
+      {
+        "de": "lieb — Liebe · Kind — Kinder · Tag — Tage",
+        "ar": "عند إضافة حركة تظهر العلاقة بين b/p وd/t وg/k."
       }
     ],
     "eselsbruecke": "الألمان يرهبون الجهر في آخر الكلمة: كل مجهور يفقد جهره في النهاية.",
     "exercises": [
       {
         "id": "a1-al-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie wird \"Tag\" ausgesprochen?",
         "options": [
           "تاغ",
           "تاك",
           "تا"
         ],
-        "answer": [
-          "تاك"
-        ],
+        "answer": "تاك",
         "explanationAr": "Auslautverhärtung: آخر حرف g ينطق k → Tag = تاك.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -14456,8 +14551,9 @@
           "wie m",
           "wie f"
         ],
-        "answer": 1,
-        "explanationAr": "في آخر الكلمة ينطق b→p وd→t وg→k (Auslautverhärtung)."
+        "answer": "wie p",
+        "explanationAr": "في آخر الكلمة ينطق b→p وd→t وg→k (Auslautverhärtung).",
+        "id": "a1-aussprache-auslaut-r141e-e02"
       },
       {
         "type": "mc",
@@ -14469,8 +14565,25 @@
           "Hund",
           "Katze"
         ],
-        "answer": 1,
-        "explanationAr": "Tag ينطق Tak."
+        "answer": "Tag → Tak",
+        "explanationAr": "Tag ينطق Tak.",
+        "id": "a1-aussprache-auslaut-r141e-e03"
+      },
+      {
+        "id": "a1-aussprache-auslaut-r141e-prod",
+        "type": "fill",
+        "promptDe": "Am Ende klingt das g in «Tag» wie ___.",
+        "promptAr": "كيف يُنطق g في نهاية Tag؟",
+        "answer": "k",
+        "explanationAr": "تُهمس g في نهاية الكلمة وتُنطق كـk: Tag [taːk]."
+      },
+      {
+        "id": "a1-aussprache-auslaut-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Am Ende klingt das d in «Kind» wie ___.",
+        "promptAr": "كيف يُنطق d في نهاية Kind؟",
+        "answer": "t",
+        "explanationAr": "في نهاية Kind تُهمس d وتُنطق مثل t."
       }
     ],
     "pitfalls": [],
@@ -14494,44 +14607,38 @@
     "verify": [
       {
         "id": "b2-gp-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ des Regens sind wir zu Hause geblieben.",
         "options": [
           "Wegen",
           "Trotz",
           "Während"
         ],
-        "answer": [
-          "Wegen"
-        ],
+        "answer": "Wegen",
         "explanationAr": "Wegen + Genitiv = بسبب. Weil es regnete sind wir zu Hause geblieben."
       },
       {
         "id": "b2-gp-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ der Krankheit kam er zur Arbeit.",
         "options": [
           "Wegen",
           "Trotz",
           "Während"
         ],
-        "answer": [
-          "Trotz"
-        ],
+        "answer": "Trotz",
         "explanationAr": "Trotz + Genitiv = رغم. Trotz der Krankheit = رغم المرض."
       },
       {
         "id": "b2-gp-v3",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ des Krieges lebte die Familie im Ausland.",
         "options": [
           "Wegen",
           "Während",
           "Aufgrund"
         ],
-        "answer": [
-          "Während"
-        ],
+        "answer": "Während",
         "explanationAr": "Während + Genitiv = أثناء/خلال. Während des Krieges = خلال الحرب."
       }
     ],
@@ -14620,48 +14727,58 @@
     "exercises": [
       {
         "id": "b2-gp-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ des Regens sind wir zu Hause geblieben.",
         "options": [
           "Wegen",
           "Trotz",
           "Während"
         ],
-        "answer": [
-          "Wegen"
-        ],
+        "answer": "Wegen",
         "explanationAr": "Wegen + Genitiv = بسبب. Weil es regnete sind wir zu Hause geblieben.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "b2-gp-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ der Krankheit kam er zur Arbeit.",
         "options": [
           "Wegen",
           "Trotz",
           "Während"
         ],
-        "answer": [
-          "Trotz"
-        ],
+        "answer": "Trotz",
         "explanationAr": "Trotz + Genitiv = رغم. Trotz der Krankheit = رغم المرض.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "b2-gp-v3",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ des Krieges lebte die Familie im Ausland.",
         "options": [
           "Wegen",
           "Während",
           "Aufgrund"
         ],
-        "answer": [
-          "Während"
-        ],
+        "answer": "Während",
         "explanationAr": "Während + Genitiv = أثناء/خلال. Während des Krieges = خلال الحرب.",
         "promptAr": "اختر الإجابة الصحيحة."
+      },
+      {
+        "id": "b2-genitiv-praep-r141e-prod",
+        "type": "fill",
+        "promptDe": "Wegen ___ Regens bleiben wir zu Hause.",
+        "promptAr": "أكمل بأداة Genitiv المناسبة قبل Regens.",
+        "answer": "des",
+        "explanationAr": "wegen يأخذ Genitiv؛ الاسم المذكر المفرد: wegen des Regens."
+      },
+      {
+        "id": "b2-genitiv-praep-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Während ___ Sitzung blieb das Telefon aus.",
+        "promptAr": "أكمل أداة Genitiv قبل Sitzung.",
+        "answer": "der",
+        "explanationAr": "während يأخذ Genitiv؛ Sitzung مؤنث، لذلك während der Sitzung."
       }
     ],
     "pitfalls": [],
@@ -14685,30 +14802,26 @@
     "verify": [
       {
         "id": "b2-kk-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ es regnete, gingen wir spazieren.",
         "options": [
           "Obwohl",
           "Trotzdem",
           "Jedoch"
         ],
-        "answer": [
-          "Obwohl"
-        ],
+        "answer": "Obwohl",
         "explanationAr": "Obwohl يربط جملة ثانوية في البداية: Obwohl es regnete, … (جملة ثانوية + جملة رئيسية)."
       },
       {
         "id": "b2-kk-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Es regnete stark. ___ gingen wir spazieren.",
         "options": [
           "Obwohl",
           "Trotzdem",
           "Weil"
         ],
-        "answer": [
-          "Trotzdem"
-        ],
+        "answer": "Trotzdem",
         "explanationAr": "Trotzdem ظرف يربط جملتين مستقلتين (لا يغيّر ترتيب الفعل)."
       }
     ],
@@ -14797,37 +14910,37 @@
       {
         "de": "Obwohl das Buch lang ist, liest es sich sehr schnell. Trotzdem brauchte ich drei Tage dafür.",
         "ar": "رغم أن الكتاب طويل، يُقرأ بسرعة. ومع ذلك احتجت ثلاثة أيام."
+      },
+      {
+        "de": "Wenngleich die Kosten gestiegen sind, wurde das Projekt fortgesetzt.",
+        "ar": "على الرغم من ارتفاع التكاليف، استمر المشروع."
       }
     ],
     "eselsbruecke": "trotzdem = trotzdem هي ظرف لا رابط: تحتاج نقطة/فاصلة قبلها، وبعدها يأتي الفعل ثانياً. أما obwohl فإنه يسحب الفعل إلى آخر الجملة.",
     "exercises": [
       {
         "id": "b2-kk-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "___ es regnete, gingen wir spazieren.",
         "options": [
           "Obwohl",
           "Trotzdem",
           "Jedoch"
         ],
-        "answer": [
-          "Obwohl"
-        ],
+        "answer": "Obwohl",
         "explanationAr": "Obwohl يربط جملة ثانوية في البداية: Obwohl es regnete, … (جملة ثانوية + جملة رئيسية).",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "b2-kk-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Es regnete stark. ___ gingen wir spazieren.",
         "options": [
           "Obwohl",
           "Trotzdem",
           "Weil"
         ],
-        "answer": [
-          "Trotzdem"
-        ],
+        "answer": "Trotzdem",
         "explanationAr": "Trotzdem ظرف يربط جملتين مستقلتين (لا يغيّر ترتيب الفعل).",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -14841,8 +14954,25 @@
           "wenn",
           "dass"
         ],
-        "answer": 1,
-        "explanationAr": "obwohl / obgleich / auch wenn كلها أدوات تنازع."
+        "answer": "obwohl",
+        "explanationAr": "obwohl / obgleich / auch wenn كلها أدوات تنازع.",
+        "id": "b2-konzessiv-r141e-e03"
+      },
+      {
+        "id": "b2-konzessiv-r141e-prod",
+        "type": "fill",
+        "promptDe": "Obwohl es regnet, ___ wir spazieren.",
+        "promptAr": "أكمل الفعل في الجملة الرئيسية بعد obwohl.",
+        "answer": "gehen",
+        "explanationAr": "بعد الجملة التابعة التي بدأت بـobwohl تأتي الجملة الرئيسية مع الفعل في الموقع الثاني: gehen wir."
+      },
+      {
+        "id": "b2-konzessiv-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Es regnet, ___ gehen wir spazieren.",
+        "promptAr": "أكمل بالرابط المستقل trotzdem.",
+        "answer": "trotzdem",
+        "explanationAr": "trotzdem يبدأ جملة رئيسية؛ يأتي الفعل المصرف بعدها في الموقع الثاني."
       }
     ],
     "pitfalls": [],
@@ -14866,30 +14996,26 @@
     "verify": [
       {
         "id": "b2-rg-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Der Mann, ___ Sohn in Berlin studiert, kommt aus Tunesien.",
         "options": [
           "dessen",
           "deren",
           "dem"
         ],
-        "answer": [
-          "dessen"
-        ],
+        "answer": "dessen",
         "explanationAr": "dessen للمفكر المذكر/المحايد: der Mann, dessen Sohn …"
       },
       {
         "id": "b2-rg-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Die Frau, ___ Kinder hier wohnen, arbeitet bei BMW.",
         "options": [
           "dessen",
           "deren",
           "derer"
         ],
-        "answer": [
-          "deren"
-        ],
+        "answer": "deren",
         "explanationAr": "deren للمؤنث والجمع: die Frau, deren Kinder …"
       }
     ],
@@ -14941,37 +15067,37 @@
       {
         "de": "Der Autor, dessen letztes Buch ein Bestseller war, liest heute Abend.",
         "ar": "الكاتب الذي كان كتابه الأخير من الكتب الأكثر مبيعاً يقرأ هذا المساء."
+      },
+      {
+        "de": "Die Firma, deren Produkte im Ausland verkauft werden, wächst.",
+        "ar": "الشركة التي تُباع منتجاتها في الخارج تنمو."
       }
     ],
     "eselsbruecke": "dessen يُذكّرك بـhis/its (للمفرد)، deren بـher/their (للمؤنث والجمع).",
     "exercises": [
       {
         "id": "b2-rg-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Der Mann, ___ Sohn in Berlin studiert, kommt aus Tunesien.",
         "options": [
           "dessen",
           "deren",
           "dem"
         ],
-        "answer": [
-          "dessen"
-        ],
+        "answer": "dessen",
         "explanationAr": "dessen للمفكر المذكر/المحايد: der Mann, dessen Sohn …",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "b2-rg-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Die Frau, ___ Kinder hier wohnen, arbeitet bei BMW.",
         "options": [
           "dessen",
           "deren",
           "derer"
         ],
-        "answer": [
-          "deren"
-        ],
+        "answer": "deren",
         "explanationAr": "deren للمؤنث والجمع: die Frau, deren Kinder …",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -14985,8 +15111,25 @@
           "Der Mann, das Auto rot ist, fährt weg.",
           "Der Mann, denen Auto rot ist, fährt weg."
         ],
-        "answer": 0,
-        "explanationAr": "dessen لملكية المذكر/المحايد، deren للمؤنث والجمع."
+        "answer": "Der Mann, dessen Auto rot ist, fährt weg.",
+        "explanationAr": "dessen لملكية المذكر/المحايد، deren للمؤنث والجمع.",
+        "id": "b2-relativ-genitiv-r141e-e03"
+      },
+      {
+        "id": "b2-relativ-genitiv-r141e-prod",
+        "type": "fill",
+        "promptDe": "Der Mann, ___ Auto vor der Tür steht, wartet.",
+        "promptAr": "أكمل بضمير الوصل في Genitiv للمذكر.",
+        "answer": "dessen",
+        "explanationAr": "dessen يعود إلى الاسم المذكر Mann ويعبّر عن الملكية."
+      },
+      {
+        "id": "b2-relativ-genitiv-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Die Frau, ___ Tochter Ärztin ist, wohnt hier.",
+        "promptAr": "أكمل بضمير الوصل في Genitiv للمؤنث.",
+        "answer": "deren",
+        "explanationAr": "deren يعود إلى الاسم المؤنث Frau ويعبّر عن الملكية."
       }
     ],
     "pitfalls": [],
@@ -15011,30 +15154,26 @@
     "verify": [
       {
         "id": "a1-ps-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie viele Wörter sollten Sie im Prüfungsteil Schreiben (E-Mail) etwa schreiben?",
         "options": [
           "10 Wörter",
           "30 Wörter",
           "100 Wörter"
         ],
-        "answer": [
-          "30 Wörter"
-        ],
+        "answer": "30 Wörter",
         "explanationAr": "في كتابة A1 الهدف 30 كلمة تقريباً للرسالة القصيرة."
       },
       {
         "id": "a1-ps-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Im Leseteil ist es am besten,…",
         "options": [
           "…jedes Wort im Wörterbuch nachzuschlagen",
           "…zuerst die Fragen zu lesen und dann gezielt zu suchen",
           "…den ganzen Text laut vorzulesen"
         ],
-        "answer": [
-          "…zuerst die Fragen zu lesen und dann gezielt zu suchen"
-        ],
+        "answer": "…zuerst die Fragen zu lesen und dann gezielt zu suchen",
         "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث عن الجواب في النص؛ هذا يوفر وقتاً كبيراً."
       }
     ],
@@ -15058,36 +15197,41 @@
       }
     ],
     "tables": [],
-    "examples": [],
+    "examples": [
+      {
+        "de": "«Wann fährt der Zug?» — Ich suche im Text eine Uhrzeit.",
+        "ar": "«متى ينطلق القطار؟» — أبحث في النص عن وقت."
+      },
+      {
+        "de": "Eine kurze Nachricht hat eine Anrede, die nötigen Informationen und einen Gruß.",
+        "ar": "تتضمن الرسالة القصيرة تحية ومعلومات مطلوبة وختاماً."
+      }
+    ],
     "eselsbruecke": "امتحان A1 لا يختبر ذكاءك بل مدى استخدامك الألمانية البسيطة بدقة — فكّر ببساطة واكتب بوضوح.",
     "exercises": [
       {
         "id": "a1-ps-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie viele Wörter sollten Sie im Prüfungsteil Schreiben (E-Mail) etwa schreiben?",
         "options": [
           "10 Wörter",
           "30 Wörter",
           "100 Wörter"
         ],
-        "answer": [
-          "30 Wörter"
-        ],
+        "answer": "30 Wörter",
         "explanationAr": "في كتابة A1 الهدف 30 كلمة تقريباً للرسالة القصيرة.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
       {
         "id": "a1-ps-v2",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Im Leseteil ist es am besten,…",
         "options": [
           "…jedes Wort im Wörterbuch nachzuschlagen",
           "…zuerst die Fragen zu lesen und dann gezielt zu suchen",
           "…den ganzen Text laut vorzulesen"
         ],
-        "answer": [
-          "…zuerst die Fragen zu lesen und dann gezielt zu suchen"
-        ],
+        "answer": "…zuerst die Fragen zu lesen und dann gezielt zu suchen",
         "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث عن الجواب في النص؛ هذا يوفر وقتاً كبيراً.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -15101,8 +15245,25 @@
           "Den Text auswendig lernen",
           "Schnell einmal lesen ohne Aufgaben"
         ],
-        "answer": 1,
-        "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث في النص عن الجواب."
+        "answer": "Erst Aufgaben lesen, dann Text gezielt durchsuchen",
+        "explanationAr": "اقرأ الأسئلة أولاً ثم ابحث في النص عن الجواب.",
+        "id": "a1-pruefungsstrategie-r141e-e03"
+      },
+      {
+        "id": "a1-pruefungsstrategie-r141e-prod",
+        "type": "fill",
+        "promptDe": "Eine kurze Nachricht braucht Anrede, Informationen und einen ___.",
+        "promptAr": "أكمل: تحتاج الرسالة القصيرة إلى تحية ومعلومات و…",
+        "answer": "Gruß",
+        "explanationAr": "اختم الرسالة بتحية وداع مناسبة مثل Viele Grüße."
+      },
+      {
+        "id": "a1-pruefungsstrategie-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Zum Schluss schreibe ich: «Viele ___.»",
+        "promptAr": "أكمل صيغة الختام في رسالة شخصية: Viele …",
+        "answer": "Grüße",
+        "explanationAr": "من صيغ الختام الشخصية: Viele Grüße."
       }
     ],
     "pitfalls": [],
@@ -15127,37 +15288,55 @@
     "verify": [
       {
         "id": "a2-ps-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie viele Wörter brauchen Sie im Prüfungsteil Schreiben A2?",
         "options": [
           "30 + 30",
           "100 + 100",
           "150 + 150"
         ],
-        "answer": [
-          "100 + 100"
-        ],
+        "answer": "100 + 100",
         "explanationAr": "في A2: رسالة خاصة 100 كلمة ورسالة رسمية 100 كلمة."
       }
     ],
     "summaryAr": "بنية Goethe A2: Hören 30د، Lesen 30د، Schreiben 30د (رسالة خاصة + رسمية كل منهما 100 كلمة)، Sprechen 15د. استراتيجيات: في القراءة ابدأ بالعناوين؛ في الاستماع لا تتوقف عند كلمة مجهولة؛ في الرسائل احترم التحية (Sehr geehrte Frau X / Lieber Omar) والختام (Mit freundlichen Grüßen / Liebe Grüße)؛ في التحدث قدّم رأيك ببساطة مع weil.",
-    "rules": [],
+    "rules": [
+      {
+        "de": "Lies zuerst die Aufgabenstellung und markiere dann gezielt passende Schlüsselwörter.",
+        "ar": "اقرأ المطلوب أولاً ثم ابحث في النص عن الكلمات المفتاحية المناسبة."
+      },
+      {
+        "de": "Beantworte beim Schreiben jeden vorgegebenen Punkt.",
+        "ar": "أجب في الكتابة عن كل نقطة مطلوبة."
+      },
+      {
+        "de": "Wenn ein Wort im Hörtext unbekannt ist, höre auf den Sinn des ganzen Satzes.",
+        "ar": "إذا جهلت كلمة في المسموع، فركّز على معنى الجملة كلها."
+      }
+    ],
     "tables": [],
-    "examples": [],
+    "examples": [
+      {
+        "de": "Frage: «Wie viel kostet das Zimmer?» — Schlüsselwort: Preis.",
+        "ar": "السؤال: «كم تكلف الغرفة؟» — الكلمة المفتاحية: السعر."
+      },
+      {
+        "de": "Ich antworte auf alle drei Punkte in der E-Mail.",
+        "ar": "أجيب عن النقاط الثلاث كلها في البريد الإلكتروني."
+      }
+    ],
     "eselsbruecke": "النقاط الثلاث في الرسالة: اذكرها كلها بعبارة واحدة لكل منها، ولا تنسَ الختام.",
     "exercises": [
       {
         "id": "a2-ps-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie viele Wörter brauchen Sie im Prüfungsteil Schreiben A2?",
         "options": [
           "30 + 30",
           "100 + 100",
           "150 + 150"
         ],
-        "answer": [
-          "100 + 100"
-        ],
+        "answer": "100 + 100",
         "explanationAr": "في A2: رسالة خاصة 100 كلمة ورسالة رسمية 100 كلمة.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -15171,8 +15350,9 @@
           "Immer 5 Minuten",
           "Nur die schwierigen Aufgaben zuerst"
         ],
-        "answer": 1,
-        "explanationAr": "وزّع الوقت على التمارين بحسب الدرجات، لا تحبس نفسك على سؤال واحد."
+        "answer": "Pro Aufgabe im Verhältnis zur Punktzahl",
+        "explanationAr": "وزّع الوقت على التمارين بحسب الدرجات، لا تحبس نفسك على سؤال واحد.",
+        "id": "a2-pruefungsstrategie-r141e-e02"
       },
       {
         "type": "mc",
@@ -15184,8 +15364,25 @@
           "Auf die Grammatik",
           "Auf die Aussprache"
         ],
-        "answer": 1,
-        "explanationAr": "الكلمات المفتاحية كافية للإجابة، لا تحاول فهم كل كلمة."
+        "answer": "Auf Schlüsselwörter (Wer? Wo? Wann? Warum?)",
+        "explanationAr": "الكلمات المفتاحية كافية للإجابة، لا تحاول فهم كل كلمة.",
+        "id": "a2-pruefungsstrategie-r141e-e03"
+      },
+      {
+        "id": "a2-pruefungsstrategie-r141e-prod",
+        "type": "fill",
+        "promptDe": "Lies zuerst die Aufgabe und achte auf wichtige ___.",
+        "promptAr": "ما الذي تبحث عنه في النص بعد قراءة السؤال؟",
+        "answer": "Schlüsselwörter",
+        "explanationAr": "الكلمات المفتاحية تساعدك على العثور على المعلومة المطلوبة."
+      },
+      {
+        "id": "a2-pruefungsstrategie-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Bei einem unbekannten Wort achte ich auf den Sinn des ganzen ___.",
+        "promptAr": "أكمل استراتيجية الاستماع: أركز على معنى … كله.",
+        "answer": "Satzes",
+        "explanationAr": "السياق ومعنى الجملة كلها يساعدان على فهم الكلمة."
       }
     ],
     "pitfalls": [],
@@ -15210,37 +15407,55 @@
     "verify": [
       {
         "id": "b1-ps-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Aufbau einer B1-Meinungsmail:",
         "options": [
           "Einleitung → Hauptteil (2-3 Argumente) → Schluss",
           "Nur Schluss",
           "Fließtext ohne Struktur"
         ],
-        "answer": [
-          "Einleitung → Hauptteil (2-3 Argumente) → Schluss"
-        ],
+        "answer": "Einleitung → Hauptteil (2-3 Argumente) → Schluss",
         "explanationAr": "بنية المقال: مقدمة + 2-3 حجج + خاتمة."
       }
     ],
     "summaryAr": "بنية B1: Lesen 65د، Hören 40د، Schreiben 60د (بريد شخصي + رأي/تعليق 80-100 كلمة)، Sprechen 15د (تقديم، مونولوج، نقاش مع الشريك). المقال: مقدمة بجملة عامة + حجتان أو ثلاث مع weil/deshalb/außerdem + خاتة برأي شخصي. في النقاش: استمع جيداً، واطرح سؤالاً وأبدِ موافقة أو اعتراضاً مهذباً (Ich bin anderer Meinung, weil… / Da stimme ich dir zu.).",
-    "rules": [],
+    "rules": [
+      {
+        "de": "Gliedere einen Beitrag in Einleitung, Argumente und Schluss.",
+        "ar": "قسّم المشاركة إلى مقدمة وحجج وخاتمة."
+      },
+      {
+        "de": "Begründe deine Meinung und verbinde die Argumente nachvollziehbar.",
+        "ar": "علّل رأيك واربط حججك بوضوح."
+      },
+      {
+        "de": "Reagiere im Gespräch auf den Beitrag des Partners.",
+        "ar": "تفاعل في الحوار مع كلام الشريك."
+      }
+    ],
     "tables": [],
-    "examples": [],
+    "examples": [
+      {
+        "de": "Meiner Meinung nach ist der Vorschlag sinnvoll, weil er Zeit spart.",
+        "ar": "في رأيي الاقتراح مفيد لأنه يوفر الوقت."
+      },
+      {
+        "de": "Einerseits ist die Lösung günstig, andererseits kostet sie viel Zeit.",
+        "ar": "من جهة الحل غير مكلف، ومن جهة أخرى يستغرق وقتاً طويلاً."
+      }
+    ],
     "eselsbruecke": "كلمة لإنقاذ نفسك عندما لا تعرف: «Könnten Sie das bitte wiederholen?» و«Ich bin nicht sicher, aber ich glaube,…».",
     "exercises": [
       {
         "id": "b1-ps-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Aufbau einer B1-Meinungsmail:",
         "options": [
           "Einleitung → Hauptteil (2-3 Argumente) → Schluss",
           "Nur Schluss",
           "Fließtext ohne Struktur"
         ],
-        "answer": [
-          "Einleitung → Hauptteil (2-3 Argumente) → Schluss"
-        ],
+        "answer": "Einleitung → Hauptteil (2-3 Argumente) → Schluss",
         "explanationAr": "بنية المقال: مقدمة + 2-3 حجج + خاتمة.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -15254,8 +15469,9 @@
           "ca. 100–120 Wörter",
           "ca. 300 Wörter"
         ],
-        "answer": 2,
-        "explanationAr": "المطلوب B1 حوالي 100 كلمة (بريد إلكتروني 40 + رسالة 80 تقريباً)."
+        "answer": "ca. 100–120 Wörter",
+        "explanationAr": "المطلوب B1 حوالي 100 كلمة (بريد إلكتروني 40 + رسالة 80 تقريباً).",
+        "id": "b1-pruefungsstrategie-r141e-e02"
       },
       {
         "type": "mc",
@@ -15267,8 +15483,25 @@
           "Umschreiben (Paraphrase)",
           "Den Satz abbrechen"
         ],
-        "answer": 2,
-        "explanationAr": "عُبّر عنها بكلمات أخرى؛ التفاهم يُقاس لا الكلمة."
+        "answer": "Umschreiben (Paraphrase)",
+        "explanationAr": "عُبّر عنها بكلمات أخرى؛ التفاهم يُقاس لا الكلمة.",
+        "id": "b1-pruefungsstrategie-r141e-e03"
+      },
+      {
+        "id": "b1-pruefungsstrategie-r141e-prod",
+        "type": "fill",
+        "promptDe": "Ein Kommentar hat eine Einleitung, Argumente und einen ___.",
+        "promptAr": "أكمل بنية التعليق: مقدمة وحجج و…",
+        "answer": "Schluss",
+        "explanationAr": "اختم التعليق بخلاصة أو موقف نهائي واضح."
+      },
+      {
+        "id": "b1-pruefungsstrategie-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Im Gespräch sollte ich auf den Beitrag meines Partners ___.",
+        "promptAr": "أكمل استراتيجية النقاش: ينبغي أن … على مساهمة الشريك.",
+        "answer": "reagieren",
+        "explanationAr": "يجب أن تتفاعل مع ما يقوله الشريك."
       }
     ],
     "pitfalls": [],
@@ -15293,37 +15526,55 @@
     "verify": [
       {
         "id": "b2-ps-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie lang sollte der B2-Meinungsaufsatz sein?",
         "options": [
           "30 Wörter",
           "120–180 Wörter",
           "300–400 Wörter"
         ],
-        "answer": [
-          "120–180 Wörter"
-        ],
+        "answer": "120–180 Wörter",
         "explanationAr": "مقال الرأي في B2 بين 120 و180 كلمة."
       }
     ],
     "summaryAr": "بنية B2: Lesen 80د، Hören 30د، Schreiben 75د (بريد رسمي + تعليق رأي 120-180 كلمة)، Sprechen 15د (مقارنة، عرض رأي، مناقشة). استراتيجيات: 1) اقرأ الأسئلة قبل النص. 2) لا تترجم كل كلمة، استنتج من السياق. 3) المقال: مقدمة (أعيد صياغة السؤال) + حجتان أو ثلاث مضادة ومؤيدة بأمثلة + خاتة مع خلاصة وتوصية. 4) في النقاش: ابدأ بالموافقة الجزئية ثم اعترض مهذباً مع حجج.",
-    "rules": [],
+    "rules": [
+      {
+        "de": "Unterscheide im Kommentar klar zwischen These, Begründung und Beispiel.",
+        "ar": "ميّز بوضوح في التعليق بين الأطروحة والتعليل والمثال."
+      },
+      {
+        "de": "Wäge Gegenpositionen ab, bevor du dein Fazit formulierst.",
+        "ar": "وازن الرأي المقابل قبل صياغة خلاصة موقفك."
+      },
+      {
+        "de": "Nutze die Vorbereitungszeit, um eine kurze Gliederung zu notieren.",
+        "ar": "استعمل وقت التحضير لكتابة مخطط قصير."
+      }
+    ],
     "tables": [],
-    "examples": [],
+    "examples": [
+      {
+        "de": "Die Maßnahme ist zwar kostspielig, könnte langfristig jedoch Vorteile bringen.",
+        "ar": "الإجراء مكلف، لكنه قد يحقق فوائد على المدى الطويل."
+      },
+      {
+        "de": "Ein Beispiel verdeutlicht, warum diese Position überzeugend ist.",
+        "ar": "يوضح المثال سبب قوة هذا الموقف."
+      }
+    ],
     "eselsbruecke": "في B2 يُقيّم التعقيد المناسب (Konjunktiv II، Nominalstil، Doppelkonnektoren) — لا تكتب جملاً أبسط من مستوى B2.",
     "exercises": [
       {
         "id": "b2-ps-v1",
-        "type": "choice",
+        "type": "mc",
         "promptDe": "Wie lang sollte der B2-Meinungsaufsatz sein?",
         "options": [
           "30 Wörter",
           "120–180 Wörter",
           "300–400 Wörter"
         ],
-        "answer": [
-          "120–180 Wörter"
-        ],
+        "answer": "120–180 Wörter",
         "explanationAr": "مقال الرأي في B2 بين 120 و180 كلمة.",
         "promptAr": "اختر الإجابة الصحيحة."
       },
@@ -15337,8 +15588,9 @@
           "Vorlesen eines Textes",
           "Wortschatztest"
         ],
-        "answer": 1,
-        "explanationAr": "عرض (مونولوج) مدعّم بالحجج."
+        "answer": "Präsentation (Monolog) mit Begründung",
+        "explanationAr": "عرض (مونولوج) مدعّم بالحجج.",
+        "id": "b2-pruefungsstrategie-r141e-e02"
       },
       {
         "type": "mc",
@@ -15350,8 +15602,25 @@
           "10 Minuten",
           "Keine Vorbereitung"
         ],
-        "answer": 1,
-        "explanationAr": "في Goethe B2 ثلاث دقائق للتحضير."
+        "answer": "3 Minuten",
+        "explanationAr": "في Goethe B2 ثلاث دقائق للتحضير.",
+        "id": "b2-pruefungsstrategie-r141e-e03"
+      },
+      {
+        "id": "b2-pruefungsstrategie-r141e-prod",
+        "type": "fill",
+        "promptDe": "Ein überzeugendes Argument besteht aus These, Begründung und ___.",
+        "promptAr": "أكمل مكوّنات الحجة المقنعة: أطروحة وتعليل و…",
+        "answer": "Beispiel",
+        "explanationAr": "المثال يوضح التعليل ويدعم الأطروحة."
+      },
+      {
+        "id": "b2-pruefungsstrategie-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Vor dem Schreiben notiere ich eine kurze ___.",
+        "promptAr": "أكمل استراتيجية الكتابة: أدوّن مخططاً قصيراً قبل الكتابة.",
+        "answer": "Gliederung",
+        "explanationAr": "مخطط قصير يساعد على تنظيم الحجة والنص."
       }
     ],
     "pitfalls": [],
@@ -15399,8 +15668,9 @@
           "Wohne ich in Berlin.",
           "In Berlin ich wohne."
         ],
-        "answer": 0,
-        "explanationAr": "الفاعل أولاً ثم الفعل ثم المكان."
+        "answer": "Ich wohne in Berlin.",
+        "explanationAr": "الفاعل أولاً ثم الفعل ثم المكان.",
+        "id": "a0-satzbau-r141e-e01"
       },
       {
         "type": "mc",
@@ -15412,8 +15682,9 @@
           "Tee",
           "Bin"
         ],
-        "answer": 1,
-        "explanationAr": "Heute trinke ich Tee — الفعل في المرتبة الثانية."
+        "answer": "Heute",
+        "explanationAr": "Heute trinke ich Tee — الفعل في المرتبة الثانية.",
+        "id": "a0-satzbau-r141e-e02"
       },
       {
         "type": "mc",
@@ -15425,8 +15696,9 @@
           "Ich aus Tunesien komme",
           "Komme ich aus Tunesien"
         ],
-        "answer": 1,
-        "explanationAr": "الفاعل Ich أولاً ثم الفعل komme ثم aus Tunesien."
+        "answer": "Ich komme aus Tunesien",
+        "explanationAr": "الفاعل Ich أولاً ثم الفعل komme ثم aus Tunesien.",
+        "id": "a0-satzbau-r141e-e03"
       },
       {
         "type": "mc",
@@ -15438,8 +15710,9 @@
           "Ich zum Arzt gehe morgen.",
           "Gehe ich zum Arzt morgen."
         ],
-        "answer": 1,
-        "explanationAr": "بعد ظرف الزمان Morgen يأتي الفعل في الموقع الثاني."
+        "answer": "Morgen gehe ich zum Arzt.",
+        "explanationAr": "بعد ظرف الزمان Morgen يأتي الفعل في الموقع الثاني.",
+        "id": "a0-satzbau-r141e-e04"
       },
       {
         "type": "mc",
@@ -15451,8 +15724,25 @@
           "Am Ende",
           "Vor dem Subjekt"
         ],
-        "answer": 1,
-        "explanationAr": "الفعل في المرتبة الثانية دائماً في الجملة الخبرية."
+        "answer": "An zweiter Stelle",
+        "explanationAr": "الفعل في المرتبة الثانية دائماً في الجملة الخبرية.",
+        "id": "a0-satzbau-r141e-e05"
+      },
+      {
+        "id": "a0-satzbau-r141e-prod",
+        "type": "fill",
+        "promptDe": "Heute ___ ich Tee.",
+        "promptAr": "أكمل بالفعل trinken في الجملة.",
+        "answer": "trinke",
+        "explanationAr": "بعد الظرف Heute يأتي الفعل المصرف مباشرة في الموقع الثاني: Heute trinke ich Tee."
+      },
+      {
+        "id": "a0-satzbau-r141e-prod2",
+        "type": "fill",
+        "promptDe": "Am Morgen ___ ich Musik.",
+        "promptAr": "أكمل بالفعل hören في المضارع.",
+        "answer": "höre",
+        "explanationAr": "بعد Am Morgen يأتي الفعل المصرف في الموقع الثاني: Am Morgen höre ich Musik."
       }
     ],
     "commonErrors": [
@@ -15477,6 +15767,20 @@
       "Ich bin … Jahre alt.",
       "Ich wohne in …",
       "Ich komme aus …"
+    ],
+    "examples": [
+      {
+        "de": "Ich heiße Sara.",
+        "ar": "اسمي سارة — الفعل في الموقع الثاني بعد الفاعل."
+      },
+      {
+        "de": "Heute wohne ich in Tunis.",
+        "ar": "أسكن اليوم في تونس — بعد Heute يأتي الفعل ثم الفاعل."
+      },
+      {
+        "de": "Am Morgen trinke ich Tee.",
+        "ar": "أشرب الشاي صباحاً — ظرف الزمان في البداية ولا يغيّر موقع الفعل الثاني."
+      }
     ]
   }
 }

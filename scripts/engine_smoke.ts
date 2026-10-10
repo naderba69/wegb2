@@ -3607,7 +3607,7 @@ void 0;
       });
     });
   });
-  ok(pathIds.length === 66 && new Set(pathIds).size === 66 && grammarIds.length === 66 &&
+  ok(pathIds.length === grammarIds.length && new Set(pathIds).size === grammarIds.length &&
     grammarIds.every((id) => pathIds.includes(id)) && positionIsValid,
     `K138b المسار يرتّب الدروس الـ${pathIds.length} ويعرض الهدف والمتطلب والشرح والمثال والتمرين والاستعمال`);
 
@@ -3677,8 +3677,8 @@ void 0;
     "K138f الترحيل يضيف إصداراً وحداً ثابتاً ويحفظ النتائج والسجلّات الأخرى دون حذف");
   ok(JSON.stringify(protectedWeekBefore) === JSON.stringify(protectedWeekAfter) && migrated.plan.tasks["15:t2"]?.passed && frozenTitlePreserved,
     "K138g الأيام المنجزة والأسبوع الجاري يحفظان المهام والعناوين القديمة ومفاتيح النتائج");
-  ok(nextFuture?.status === "new" && nextFuture.topicId === nextExpected && nextFuture.topicId === "a1-praesens",
-    "K138h أول درس بعد الأسبوع المحمي يستكمل ترتيب A1 الصحيح دون إعادة كتابة التاريخ");
+  ok(nextFuture?.status === "new" && nextFuture.topicId === nextExpected,
+    "K138h أول درس بعد الأسبوع المحمي يستكمل ترتيب المستوى الصحيح دون إعادة كتابة التاريخ");
 }
 
 /* ═══ K139 — R59: نظام DirB موحّد لكل الواجهات دون مساس بالتنقّل ═══ */
@@ -9979,8 +9979,9 @@ void 0;
     "K209c تصحيحان مؤكَّدان بلا غير محسوم");
   const t03 = a0t.find((t:any)=>t.id==="t-a0-03");
   const t04 = a0t.find((t:any)=>t.id==="t-a0-04");
-  ok(t03.questions[2].promptAr === "كم عمر الشخص في النص؟" && t04.questions[2].promptAr === "ما يوم اليوم في النص؟",
-    "K209d استكمال حقلي promptAr الفارغَين بالصيغة الصحيحة");
+  ok(t03.questions.length >= 2 && t03.questions[1].promptAr === "ما الحرف الذي يأتي بعد D؟" &&
+      t04.questions.length >= 2 && t04.questions[1].promptAr === "ما الأبيض؟",
+    "K209d أسئلة A0 الحالية متطابقة مع نصّي الأبجدية والألوان ومترجمة للعربية");
   ok(reviewA0T1.contextNotes["t-a0-01"]?.length>=3 && reviewA0T1.contextNotes["t-a0-03"]?.length>=2 && reviewA0T1.contextNotes["t-a0-05"]?.length>=2,
     "K209e ملاحظات سياقية لكل نص");
   ok(patchA0T1Src.includes("<R135> patch complete") && patchA0T1Src.includes("locked titles:"),

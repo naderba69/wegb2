@@ -207,6 +207,26 @@
       "id": "a0-7",
       "de": "Ich verstehe langsam und deutlich gesprochene Begrüßungen und Zahlen.",
       "ar": "أفهم التحيات والأرقام عندما تُنطق ببطء ووضوح."
+    },
+    {
+      "id": "a0-8",
+      "de": "Ich kann Farben und einfache Dinge aus dem Klassenzimmer benennen.",
+      "ar": "أستطيع تسمية الألوان والأشياء البسيطة في غرفة الصف."
+    },
+    {
+      "id": "a0-9",
+      "de": "Ich kann im Café ein einfaches Getränk oder Gericht bestellen.",
+      "ar": "أستطيع طلب مشروب أو وجبة بسيطة في المقهى."
+    },
+    {
+      "id": "a0-10",
+      "de": "Ich kann um Wiederholung oder langsameres Sprechen bitten.",
+      "ar": "أستطيع طلب إعادة الكلام أو التحدث ببطء أكثر."
+    },
+    {
+      "id": "a0-11",
+      "de": "Ich kann einfache Lebensmittel und Getränke benennen und sagen, was ich gern esse oder trinke.",
+      "ar": "أستطيع تسمية أطعمة ومشروبات بسيطة وذكر ما أحب أكله أو شربه."
     }
   ]
 }
