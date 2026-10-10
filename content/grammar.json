@@ -9372,11 +9372,12 @@
   },
   "b1-partizip1": {
     "id": "b1-partizip1",
-    "titleDe": "Partizip I als Adjektiv · Adjektivdeklination ohne Artikel",
-    "titleAr": "Partizip I كصفة وتصريف الصفات بدون أداة",
-    "level": "B1",
+    "titleDe": "Partizip I als Adjektiv (Partizipialattribute)",
+    "titleAr": "Partizip I كصفة (التعابيل المفعولية المطوّلة)",
+    "level": "B2",
     "ziel": "تستخدم Partizip I كصفة (der lesende Mann) بنهايات صحيحة.",
     "voraus": [
+      "b2-adjektiv-partizip",
       "b1-adjektivendungen"
     ],
     "anwendung": {

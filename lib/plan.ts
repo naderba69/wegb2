@@ -88,9 +88,10 @@ export const PHASE_TOPICS: Record<Phase, string[]> = {
   A1: ["a1-sein-haben", "a1-pronomen", "a1-praesens", "a1-zahlen", "a1-akkusativ", "a1-plural", "a1-trennbar", "a1-aussprache-ch", "a1-modalverben", "a1-dativ", "a1-aussprache-r", "a1-wechsel", "a1-aussprache-sp-st", "a1-imperativ", "a1-perfekt-einf", "a1-war-hatte", "a1-zeitpraep", "a1-aussprache-auslaut", "a1-pruefungsstrategie"],
   A2: ["a2-perfekt", "a2-praeteritum-grund", "a2-praeteritum", "a1-weil-dass", "a2-weil-dass", "a2-dativ", "a2-wasfuer", "a2-wechsel", "a2-konj2-hoflich", "a2-verb-praep", "a2-reflexiv", "a2-negation", "a2-steigerung", "a2-adjektiv-einfach", "a2-modal", "a2-imperativ", "a1-futur-einf", "a2-futur", "a2-verschmolzene", "a2-neben", "a2-demo", "a2-pruefungsstrategie"],
   // R138/P-20: Prüfungsstrategie am Ende des B1
-  B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-konj2-vergangenheit", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-partizip1", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben", "b1-absicht", "b1-adjektivendungen", "b1-pruefungsstrategie"],
-  // R138/P-06/P-08/P-20: Genitivpräpositionen, Konzessivsätze, Relativsätze mit deren/dessen + Prüfungsstrategie.
-  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-genitiv-praep", "b2-konzessiv", "b2-partizip", "b2-adjektiv-partizip", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-relativ-genitiv", "b2-nominalstil", "b2-redew", "b2-textkonnektoren", "b2-pruefungsstrategie"],
+  // R138/P-07: Partizip I aus B1 entfernt — gehört zu B2 (Partizipialattribute).
+  B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-konj2-vergangenheit", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben", "b1-absicht", "b1-adjektivendungen", "b1-pruefungsstrategie"],
+  // R138/P-06/P-07/P-08/P-20: Partizip I hierher verschoben; Genitivpräpositionen, Konzessivsätze, Relativsätze mit deren/dessen + Prüfungsstrategie.
+  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-genitiv-praep", "b2-konzessiv", "b2-partizip", "b2-adjektiv-partizip", "b1-partizip1", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-relativ-genitiv", "b2-nominalstil", "b2-redew", "b2-textkonnektoren", "b2-pruefungsstrategie"],
   Abschluss: [],
 };
 
