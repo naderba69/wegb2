@@ -8166,15 +8166,15 @@
       {
         "id": "t-a0-012-q1",
         "type": "mc",
-        "promptDe": "Was macht er am Sonntag?",
-        "promptAr": "ماذا يفعل يوم الأحد؟",
+        "promptDe": "Was macht die Person am Sonntag?",
+        "promptAr": "ماذا يفعل الشخص يوم الأحد؟",
         "options": [
-          "Er geht arbeiten",
-          "Er besucht seine Mutter",
-          "Er schläft den ganzen Tag"
+          "Die Person arbeitet.",
+          "Die Person besucht die Mutter.",
+          "Die Person schläft den ganzen Tag."
         ],
-        "answer": "Er besucht seine Mutter",
-        "explanationAr": "النص يقول: Am Sonntag besuche ich meine Mutter."
+        "answer": "Die Person besucht die Mutter.",
+        "explanationAr": "«Am Sonntag besuche ich meine Mutter.» — يزور الشخص أمه يوم الأحد."
       },
       {
         "id": "t-a0-012-q2",

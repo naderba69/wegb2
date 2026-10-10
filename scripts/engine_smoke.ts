@@ -3044,13 +3044,15 @@ void 0;
     deFormOf(cardMeta) === "die Entschuldigung" && deFormOf(cardMeta, false) === "Entschuldigung",
     "K143a v146 يحمل die/ROT مرةً واحدة، وصيغة العرض لا تكرر أداة التعريف");
 
-  const a0Numbers = texts.find((text) => text.id === "t-a0-03")!;
-  const a0Days = texts.find((text) => text.id === "t-a0-04")!;
-  const weekendQ = a0Days.questions.find((question) => question.id === "t-a0-04-q2")!;
-  const displayedA0 = [leseText(a0Numbers).de, leseText(a0Days).de];
+  const a0Family = texts.find((text) => text.id === "t-a0-05")!;
+  const a0Weekend = texts.find((text) => text.id === "t-a0-012")!;
+  const weekendQ = a0Weekend.questions.find((question) => question.id === "t-a0-012-q1")!;
+  const weekendEvidence = "Am Sonntag besuche ich meine Mutter.";
+  const displayedA0 = [leseText(a0Family).de, leseText(a0Weekend).de];
   ok(displayedA0.every((text) => text.trim().split(/\s+/).filter(Boolean).length >= 20) &&
-    displayedA0[1].includes("Samstag und Sonntag sind das Wochenende.") && weekendQ.promptDe === "Was sind Samstag und Sonntag?" &&
-    weekendQ.answer === "das Wochenende" && (weekendQ.options?.includes(weekendQ.answer as string) ?? false),
+    displayedA0[1].includes(weekendEvidence) && weekendQ.promptDe === "Was macht die Person am Sonntag?" &&
+    weekendQ.answer === "Die Person besucht die Mutter." && (weekendQ.options?.includes(weekendQ.answer as string) ?? false) &&
+    weekendQ.explanationAr.includes(weekendEvidence),
     "K143e نصّا A0 يتجاوزان الحد الإرشادي الأدنى، وسؤال عطلة الأسبوع له دليل وإجابة غير ملتبسة");
 
   const wA201 = writingTasks.find((task) => task.id === "w-a2-01");
