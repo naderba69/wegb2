@@ -850,6 +850,14 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         minutes: level === "B2" ? 40 : 35,
         writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
       });
+      // R138/P-13: Hörverstehen-Modi — global/selektiv/detailliert rotierend nach Niveau
+      const hoerenModi: ("global" | "selektiv" | "detailliert")[] = level === "A0" || level === "A1"
+        ? ["global"]
+        : level === "A2"
+          ? ["global", "selektiv"]
+          : level === "B1"
+            ? ["global", "selektiv", "detailliert"]
+            : ["selektiv", "detailliert", "global"];
       tasks.push({
         id: tid(4),
         kind: "hoeren",
@@ -857,6 +865,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleAr: "تسميع واستماع",
         minutes: level === "B2" ? 20 : 25,
         dialogueId: nextDialog()?.id,
+        hoerenModus: hoerenModi[wocheInPhase % hoerenModi.length],
       });
       if (level === "B2" || level === "B1") {
         tasks.push({

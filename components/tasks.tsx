@@ -783,6 +783,13 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
   const [showText, setShowText] = useState(false);
   const [lineIdx, setLineIdx] = useState(-1);
   const [voReady, setVoReady] = useState(false);
+  // R138/P-13: Hörverstehen-Modi mit Anweisung
+  const modus = task.hoerenModus ?? "global";
+  const MODUS_INFO: Record<string, { labelDe: string; labelAr: string; instrAr: string }> = {
+    global: { labelDe: "Globalverstehen", labelAr: "فهم عام", instrAr: "🎯 هدفك: فهم الموضوع العام والمكان والعلاقة بين المتحدّثين. لا تقلق من كل كلمة." },
+    selektiv: { labelDe: "Selektivverstehen", labelAr: "فهم انتقائي", instrAr: "🎯 هدفك: التقاط معلومات محددة (تواريخ، أرقام، أسماء، أوقات) — ركّز فقط على ما تحتاجه." },
+    detailliert: { labelDe: "Detailverstehen", labelAr: "فهم تفصيلي", instrAr: "🎯 هدفك: فهم التفاصيل والحجج والسبب والنتيجة. استمع مرتين إن لزم." },
+  };
 
   useEffect(() => {
     warmVoices(() => setVoReady(true));
@@ -825,7 +832,10 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
 
   return (
     <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
-      <Head icon="🎧" de={dlg.titleDe} ar={`${dlg.titleAr} — تسميع بالنطق الداخلي للمتصفح`} />
+      <Head icon="🎧" de={`${dlg.titleDe} · ${MODUS_INFO[modus].labelDe}`} ar={`${dlg.titleAr} — ${MODUS_INFO[modus].labelAr}`} />
+      <div style={{ background: "var(--color-a1-soft, rgba(25,118,210,0.08))", border: "1px solid var(--color-a1-soft, rgba(25,118,210,0.2))", borderRadius: "0.5rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontSize: "0.88rem" }}>
+        {MODUS_INFO[modus].instrAr}
+      </div>
       {!speechAvailable() && (
         <p style={{ color: "var(--color-cola)" }}>
           ⚠️ متصفحك لا يدعم النطق المدمج — اقرأ النص بصوت عالٍ (يبقى التمرين نصياً كاملاً).

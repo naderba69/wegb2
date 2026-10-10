@@ -241,6 +241,8 @@ export interface DayTask {
   writeId?: string;
   sentenceIds?: string[];
   partnerId?: string;
+  /** R138/P-13: نمط فهم المسموع — global (فهم عام) / detailliert (تفاصيل) / selektiv (معلومات محددة) */
+  hoerenModus?: "global" | "detailliert" | "selektiv";
   quiz?: Exercise[];
   /** امتحان شامل متعدد الأقسام (نهاية المرحلة/الختام) */
   exam?: boolean;
