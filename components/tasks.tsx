@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { istPhasenPruefung } from "@/lib/phasen";
 import type { DayTask, Exercise, SrsState, UiLang, VocabCard, Schreibaufgabe, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
 import { POS_AR } from "@/lib/types";
-import { eselsbruecken, getBrueckenFor, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf } from "@/lib/content";
+import { eselsbruecken, getBrueckenFor, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday } from "@/lib/srs";
@@ -96,7 +96,12 @@ export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceN
     case "schreiben":
       return <SchreibenTask task={task} onPoints={onPoints} persistKey={persistKey} />;
     case "sprechen":
+    case "aussprache":
       return <SprechenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
+    case "briefe":
+    case "schulsim":
+    case "partner":
+      return <PartnerTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
     case "wiederholen":
       return task.fehlerKeys?.length ? (
         <Fehlerheft fehlerKeys={task.fehlerKeys} onPoints={onPoints} voiceName={voiceName} rate={rate} />
@@ -1253,6 +1258,54 @@ function Empty({ title }: { title: string }) {
     <div className="card" style={{ padding: "1.2rem" }}>
       <strong>{title}</strong>
     </div>
+  );
+}
+
+/** R138/P-12: Partnerübung (Briefe/Schulsim/Partner) — Anzeige einer Aufgabe mit Redemitteln + Punkte-Button */
+function PartnerTask({ task, onPoints }: { task: DayTask; onPoints: (p: number, m: number) => void; voiceName?: string; rate?: number; persistKey?: string }) {
+  const karte = partnerKarten.find((p) => p.id === task.partnerId);
+  const [done, setDone] = useState(false);
+  if (!karte) {
+    return (
+      <section className="card fadein" style={{ padding: "1.2rem" }}>
+        <Head icon="🗣️" de={task.titleDe} ar={task.titleAr} />
+        <p style={{ color: "var(--color-ink2)" }}>تدرّب على كتابة الرسالة أو محاكاة الموقف في كراستك ثم سجّل إنجازك.</p>
+        <button
+          className="btn btn-primary"
+          disabled={done}
+          onClick={() => { setDone(true); onPoints(1,1); }}
+        >{done ? "✓ أنجزت" : "سجّل الإنجاز"}</button>
+      </section>
+    );
+  }
+  return (
+    <section className="card fadein" style={{ padding: "1.2rem" }}>
+      <Head icon="🗣️" de={`Partnerübung: ${task.titleDe}`} ar={task.titleAr} />
+      <div style={{ background: "var(--color-paper2)", borderRadius: "0.7rem", padding: "0.9rem 1rem", marginBottom: "0.7rem" }}>
+        <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.3rem" }}>الموقف:</div>
+        <p style={{ margin: 0 }}><De>{karte.situationDe}</De></p>
+        <p style={{ margin: "0.3rem 0 0", color: "var(--color-ink2)" }} dir="rtl">{karte.situationAr}</p>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem", marginBottom: "0.7rem" }}>
+        <div style={{ background: "var(--color-a1)", borderRadius: "0.5rem", padding: "0.6rem", color: "#fff" }}>
+          <div style={{ fontSize: "0.75rem" }}>Vorschlag A</div>
+          <strong><De>{karte.vorschlagA}</De></strong>
+        </div>
+        <div style={{ background: "var(--color-b1)", borderRadius: "0.5rem", padding: "0.6rem", color: "#fff" }}>
+          <div style={{ fontSize: "0.75rem" }}>Vorschlag B</div>
+          <strong><De>{karte.vorschlagB}</De></strong>
+        </div>
+      </div>
+      <div style={{ background: "var(--color-gold-soft)", borderRadius: "0.5rem", padding: "0.5rem 0.8rem", marginBottom: "0.7rem", fontSize: "0.85rem" }}>
+        <strong>💡 Redemittel:</strong> <De>{karte.redemittel.join(" · ")}</De>
+      </div>
+      <p style={{ color: "var(--color-ink2)", fontSize: "0.85rem" }}>💡 {karte.tippAr}</p>
+      <button
+        className="btn btn-primary"
+        disabled={done}
+        onClick={() => { setDone(true); onPoints(1,1); }}
+      >{done ? "✓ سجّلت المحادثة" : "سجّل: أجريت المحادثة"}</button>
+    </section>
   );
 }
 

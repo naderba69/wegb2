@@ -13,6 +13,7 @@ export type TaskKind =
   | "aussprache"
   | "schulsim"  // R138/P-16: Schulsimulator (Prüfungs-Simulation)
   | "briefe"    // R138/P-16: Briefe / formelle E-Mails
+  | "partner"   // R138/P-12: Partnerübung (Diskussion mit Partner)
   | "check";
 export type DayType = "lerntag" | "festigung" | "wochencheck" | "abschluss";
 
@@ -239,6 +240,7 @@ export interface DayTask {
   dialogueId?: string;
   writeId?: string;
   sentenceIds?: string[];
+  partnerId?: string;
   quiz?: Exercise[];
   /** امتحان شامل متعدد الأقسام (نهاية المرحلة/الختام) */
   exam?: boolean;

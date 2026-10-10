@@ -79,6 +79,14 @@ const KIND_PATH: Record<TaskKind, React.ReactNode> = {
       <path d="M9 19v-6h6v6" />
     </>
   ),
+  partner: (
+    <>
+      <circle cx="9" cy="8" r="3" />
+      <circle cx="16" cy="10" r="2.5" />
+      <path d="M3 19c0-3 3-5 6-5s6 2 6 5" />
+      <path d="M13 19c0-2 2-3.5 4-3.5s3.5 1 3.5 3.5" />
+    </>
+  ),
   check: (
     <>
       <circle cx="12" cy="12" r="8.6" />

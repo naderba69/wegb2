@@ -456,5 +456,100 @@
         }
       ]
     }
+  ],
+  "partner": [
+    {
+      "id": "p-b1-01",
+      "level": "B1",
+      "situationDe": "Sie und Ihr Kollege möchten am Freitag nach der Arbeit zusammen essen gehen.",
+      "situationAr": "تريد أنت وزميلك تناول الطعام معاً الجمعة بعد العمل. تفاهَما على المكان والوقت والطعام.",
+      "vorschlagA": "Italienisches Restaurant um 19 Uhr",
+      "vorschlagB": "Imbiss um 18 Uhr (schnell, günstig)",
+      "redemittel": [
+        "Ich schlage vor, …",
+        "Was hältst du von …?",
+        "Einverstanden!",
+        "Tut mir leid, aber ich kann nicht, weil …",
+        "Das passt mir gut."
+      ],
+      "tippAr": "ابدأ بعرض، ثم اسأل رأي الزميل، واتفقا على حل وسط. لا تنسَ التحية في البداية والختام."
+    },
+    {
+      "id": "p-b1-02",
+      "level": "B1",
+      "situationDe": "Sie und Ihr Freund/Ihre Freundin planen einen Wochenendausflug.",
+      "situationAr": "تخطط أنت وصديقك لرحلة نهاية أسبوع.",
+      "vorschlagA": "Wandern in den Bergen",
+      "vorschlagB": "Städtetrip nach Hamburg",
+      "redemittel": [
+        "Lass uns …",
+        "Ich würde lieber …",
+        "Meiner Meinung nach …",
+        "Das ist eine gute Idee, aber …",
+        "Einigen wir uns auf …"
+      ],
+      "tippAr": "قدّم اقتراحك وبرّره بجملة weil، واعترض مهذباً، وصِفا الحل الذي اتفقتما عليه."
+    },
+    {
+      "id": "p-b1-03",
+      "level": "B1",
+      "situationDe": "Sie möchten zusammen mit Ihrem Nachbarn eine Party im Hausflur organisieren.",
+      "situationAr": "تريد تنظيم حفلة مع جارك في مدخل البيت.",
+      "vorschlagA": "Samstag um 20 Uhr, laute Musik",
+      "vorschlagB": "Freitag um 18 Uhr, ruhig mit Nachbarn einladen",
+      "redemittel": [
+        "Ich würde vorschlagen …",
+        "Hast du etwas dagegen, wenn …?",
+        "Ich habe eine Bitte: …",
+        "Das finde ich nicht gut, weil …"
+      ],
+      "tippAr": "ناقش: متى؟ الموسيقى؟ هل تدعو الجيران؟ اتّفق على قرار واسبُره."
+    },
+    {
+      "id": "p-b2-01",
+      "level": "B2",
+      "situationDe": "Diskutieren Sie mit Ihrem Partner / Ihrer Partnerin, ob man in der Stadt Autos verbieten sollte.",
+      "situationAr": "ناقش مع شريكك: هل يجب منع السيارات من وسط المدينة؟",
+      "vorschlagA": "Autos in der Innenstadt verbieten, mehr Fahrradwege",
+      "vorschlagB": "Autos erlauben, aber strengere Emissionsnormen",
+      "redemittel": [
+        "Ich bin der Meinung, dass …",
+        "Da stimme ich dir nicht zu, weil …",
+        "Andererseits …",
+        "Einerseits … andererseits …",
+        "Um einen Kompromiss zu finden, könnten wir …"
+      ],
+      "tippAr": "قدّم حجتين مؤيدتين وحجتين معارضتين، واتفقا على حل وسط."
+    },
+    {
+      "id": "p-b2-02",
+      "level": "B2",
+      "situationDe": "Sie planen einen Klassenausflug mit Ihrer Deutschkursgruppe.",
+      "situationAr": "تخطط لرحلة صف مع مجموعة دروس الألمانية.",
+      "vorschlagA": "Besuch eines Museums (z.B. Technik-Museum)",
+      "vorschlagB": "Picknick und Grillen am See",
+      "redemittel": [
+        "Ich möchte einen Vorschlag machen.",
+        "Obwohl … ist, bin ich für …",
+        "Das überzeugt mich nicht ganz.",
+        "Ein guter Kompromiss wäre …"
+      ],
+      "tippAr": "استخدم obwohl/obgleich und حججاً مضادة، وصِغ اتفاقية واضحة."
+    },
+    {
+      "id": "p-b2-03",
+      "level": "B2",
+      "situationDe": "Sie diskutieren, ob soziale Medien für Jugendliche unter 16 verboten werden sollten.",
+      "situationAr": "ناقش: هل تُمنَع وسائل التواصل الاجتماعي عن المراهقين دون السادسة عشرة؟",
+      "vorschlagA": "Verbot unter 16 Jahren",
+      "vorschlagB": "Kein Verbot, sondern Medienkompetenz in der Schule",
+      "redemittel": [
+        "Aus meiner Sicht …",
+        "Gegen diese Ansicht spricht, dass …",
+        "Man muss auch bedenken, dass …",
+        "Meines Erachtens wäre es besser, …"
+      ],
+      "tippAr": "استخدم تعابير مهذبة للاعتراض und mindestens einen Konzessivsatz (obwohl/trotz/auch wenn)."
+    }
   ]
 }

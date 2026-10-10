@@ -179,6 +179,7 @@ export interface MuendlichKarte {
 }
 /** 🗣️ مختبر الشفهي — 12 بطاقة: 6 وصف صورة + 6 مناقشة (Modul AA) */
 export const muendlich: MuendlichKarte[] = (muendlichRaw as unknown as { karten: MuendlichKarte[] }).karten;
+export const partnerKarten: {id:string;level:string;situationDe:string;situationAr:string;vorschlagA:string;vorschlagB:string;redemittel:string[];tippAr:string}[] = (muendlichRaw as unknown as { partner?: {id:string;level:string;situationDe:string;situationAr:string;vorschlagA:string;vorschlagB:string;redemittel:string[];tippAr:string}[] }).partner ?? [];
 
 export interface VortragThema {
   id: string;

@@ -27,6 +27,7 @@ export const KIND_KOMPETENZ: Record<TaskKind, Kompetenz> = {
   aussprache: "Sprechen",
   schulsim: "Schreiben",
   briefe: "Schreiben",
+  partner: "Sprechen",
   check: "Grammatik",
 };
 

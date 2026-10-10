@@ -24,6 +24,7 @@ import {
   getSatz,
   getDeck,
   fehlerList,
+  partnerKarten,
 } from "./content";
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
@@ -950,6 +951,19 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           minutes: 10,
         });
       }
+    }
+    // R138/P-12: Partnerübung (Diskussion mit Partner) — كل أسبوعين في Festigung من B1 فصاعداً
+    if ((level === "B1" || level === "B2") && wocheInPhase % 2 === 0) {
+      const partnerPool = partnerKarten.filter((p) => p.level === level);
+      const karte = partnerPool[Math.abs(rand() * partnerPool.length) % partnerPool.length];
+      tasks.push({
+        id: tid(16),
+        kind: "partner",
+        titleDe: "Partnerübung: Diskussion",
+        titleAr: "تدريب محادثة مع شريك (نقاش)",
+        minutes: 10,
+        partnerId: karte?.id,
+      });
     }
     tasks.push({
       id: tid(4),
