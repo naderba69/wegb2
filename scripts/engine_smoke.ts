@@ -1274,9 +1274,12 @@ const empty = () => loadProgress();
 
       /** مطابقةُ الأداةِ للدفترِ عبرَ الحالاتِ الممكنة (مع استثناءَي الجمعِ واسمِ الإشارة) */
       const genus = new Map<string, string>();
+      const bekanntePluralformen = new Set<string>();
       for (const c of alleVokabeln) {
         const m = /^(der|die|das)\s+([A-ZÄÖÜ][\wäöüßÄÖÜ-]*)$/.exec(c.de);
         if (m && !genus.has(m[2])) genus.set(m[2], m[1]);
+        const plural = /^die\s+([A-ZÄÖÜ][\wäöüßÄÖÜ-]*)/.exec(c.plural ?? "");
+        if (plural) bekanntePluralformen.add(plural[1]);
       }
       const ERLAUBT: Record<string, string[]> = { der: ["der", "den", "dem", "des"], die: ["die", "der"], das: ["das", "dem", "des"] };
       const verstoss: string[] = [];
@@ -1284,6 +1287,7 @@ const empty = () => loadProgress();
         for (const m of t.matchAll(/(^|[^\wäöüß])(der|die|das|den|dem|des)\s+([A-ZÄÖÜ][\wäöüßÄÖÜ-]+)/g)) {
           const [, vor, artikel, wort] = m;
           const g = genus.get(wort);
+          if (artikel === "die" && bekanntePluralformen.has(wort)) continue;
           if (!g || ERLAUBT[g].includes(artikel)) continue;
           if (g === "der" && artikel === "die") continue;               // جمعُ -er المشروع
           if (artikel === "das" && /\b(ist|war|wird|sind)\s*$/i.test(t.slice(0, m.index ?? 0) + vor)) continue; // «ist das Pflicht?» اسمُ إشارة

@@ -147,7 +147,7 @@ for t in texts:
     for index, question in enumerate(t.get('questions', []), start=1):
         question.setdefault('id', f"{t['id']}-q{index}")
 reading_evidence = {
-    't-a1-021-q1': 'Ich wohne in Köln mit meiner Frau Amina und unserer Tochter Sara',
+    't-a1-021-q1': 'Ich wohne in Köln mit meiner Frau Amina. Unsere Tochter Sara ist drei Jahre alt.',
     't-a1-021-q2': 'Mein Vater wohnt in Tunesien, aber er besucht uns jedes Jahr im Sommer.',
     't-a1-022-q1': 'Ich stehe jeden Tag um halb sieben auf.',
     't-a1-022-q2': 'Um acht Uhr frühstücke ich mit meiner Frau: Brot mit Käse und ein Ei.',
@@ -169,14 +169,14 @@ reading_evidence = {
     't-a1-030-q2': 'Trinken Sie viel Wasser und ruhen Sie sich aus.',
     't-a1-031-q1': 'Sie heißt Mimi und ist zwei Jahre alt.',
     't-a1-031-q2': 'Am Abend spielt sie gern mit einem roten Ball.',
-    't-a1-032-q1': 'Am Samstag putze ich die Wohnung und kaufe ein.',
-    't-a1-032-q2': 'Am Sonntagabend koche ich etwas Leckeres und bereite mich auf die neue Woche vor.',
+    't-a1-032-q1': 'Dann putze ich die Wohnung und kaufe ein.',
+    't-a1-032-q2': 'Danach bereite ich meine Sachen für Montag vor.',
     't-a1-033-q1': 'Zum Frühstück esse ich gern Brot mit Marmelade und trinke Kaffee.',
     't-a1-033-q2': 'Ich trinke viel Wasser und manchmal Apfelsaft.',
     't-a1-034-q1': 'Gehen Sie geradeaus bis zur Ampel, dann biegen Sie links ab.',
     't-a1-034-q2': 'nehmen Sie die Buslinie drei.',
     't-a1-035-q1': 'Heute habe ich Geburtstag und bin dreißig Jahre alt.',
-    't-a1-035-q2': 'Meine Frau hat einen Kuchen gemacht.',
+    't-a1-035-q2': 'Meine Frau hat einen Kuchen gebacken.',
     't-a2-031-q1': 'Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch',
     't-a2-032-q1': 'die größte Schwierigkeit war, abends keine Schokolade zu essen.',
     't-a2-21-q1': 'Ich fühle mich seit drei Tagen nicht gut.',
