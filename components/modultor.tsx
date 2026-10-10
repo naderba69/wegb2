@@ -9,6 +9,7 @@ import {
   GESAMT_SCHWELLE, FACH_SCHWELLE, TEIL_AR, type PruefTeil, type PruefErgebnis,
 } from "@/lib/modulpruefung";
 import { getDialogue, dialogAudioSrc } from "@/lib/content";
+import { speakAny } from "@/lib/speech";
 
 const LEER: Record<PruefTeil, number> = { lesen: 0, hoeren: 0, schreiben: 0, sprechen: 0 };
 
@@ -120,7 +121,24 @@ export default function ModulTor({ day }: { day: number }) {
                 <>
                   {ab.dialogIds.map((id) => {
                     const src = dialogAudioSrc(id);
-                    return src ? <audio key={id} controls src={src} style={{ width: "100%", marginBottom: "0.3rem" }} /> : null;
+                    const dialog = getDialogue(id);
+                    const spokenText = dialog?.lines.map((line) => line.de).join(" ") ?? "";
+                    return src ? (
+                      <audio key={id} controls src={src} style={{ width: "100%", marginBottom: "0.3rem" }} />
+                    ) : (
+                      <button
+                        key={id}
+                        type="button"
+                        data-audio-fallback="tts"
+                        className="btn btn-ghost"
+                        disabled={!spokenText}
+                        onClick={() => speakAny(spokenText)}
+                        aria-label={`الاستماع إلى ${dialog?.titleDe ?? "الحوار"} بصوت المتصفح`}
+                        style={{ width: "100%", marginBottom: "0.3rem", textAlign: "start" }}
+                      >
+                        🔊 استمع بصوت المتصفح — لا يوجد تسجيل لهذا الحوار
+                      </button>
+                    );
                   })}
                   {ab.fragen.map((f) => (
                     <div key={f.id} style={{ marginBottom: "0.35rem" }}>

@@ -717,13 +717,23 @@ const vocabRepeatAudit = (() => {
       const dm = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as unknown as { count: number; einsaetze: { id: string; file: string; bytes: number; voice: string; level: string }[] };
       ok(dm.count === 80 && dm.einsaetze.length === 80, "K36g ثمانونَ صوتَ حوارٍ — وكلُّها بأداءِ أدوار: تسعةٌ وسبعونَ بصوتَينِ وواحدٌ بثلاثةِ أصوات · لا حوارَ أحاديَّ الصوتِ بعدَ اليوم — والعدّادُ صادق");
       ok(dm.einsaetze.every((e) => dd.some((x) => x.id === e.id && x.level === e.level) && (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03") && e.bytes > 8000 && readFileSync(`public${e.file}`).byteLength === e.bytes), "K36h كلُّ ملفٍ مذكورٍ موجودٌ بايتًا بايتًا، لصاحبِ الصوتِ الواحد، ومستواهُ كبطاقتِه");
-      const alteDialoge = dd.filter((x) => x.level !== "A0");
-      ok(alteDialoge.every((x) => dm.einsaetze.some((e) => e.id === x.id)), "K36n كلُّ حوارٍ قديم (80 من 83، باستثناء A0 التمهيدي) له صوتٌ مسجَّلٌ على القرص — ثمانونَ من ثمانين");
+      const audioIds = new Set(dm.einsaetze.map((e) => e.id));
+      const ohneAufnahme = ddAlle.filter((x) => !audioIds.has(x.id));
+      const alteOhneAufnahme = ohneAufnahme.filter((x) => !x.neu);
+      const neueOhneAufnahme = ohneAufnahme.filter((x) => x.neu);
+      const modultorSrc = readFileSync("components/modultor.tsx", "utf8");
+      const pruefungSrc = readFileSync("components/pruefung.tsx", "utf8");
+      const ttsFallback = modultorSrc.includes("data-audio-fallback=\"tts\"") && modultorSrc.includes("speakAny(spokenText)") && pruefungSrc.includes("else speakAny(");
+      ok(audioIds.size === dm.einsaetze.length && ddAlle.filter((x) => audioIds.has(x.id)).length === dm.einsaetze.length &&
+        ohneAufnahme.length === ddAlle.length - dm.einsaetze.length && alteOhneAufnahme.length > 0 && neueOhneAufnahme.length > 0 && ttsFallback,
+        `K36n التغطية الصوتيةُ تطابقُ المانيفستو، والباقي له TTS؛ ووسم neu مستقلٌّ عن وجود MP3 (${dm.einsaetze.length}/${ddAlle.length} تسجيلاً، ${ohneAufnahme.length} بدائل)`);
     {
-      /* ═══ K82 · الموجةُ الرابعة (حواراتٌ من المفرداتِ اليتيمة): بلا صوتٍ بعدُ — مُعلَنٌ، لا مخفيّ ═══ */
+      /* ═══ K82 · الموجةُ الرابعة: neu علامةُ حداثةِ المحتوى لا حالةُ التسجيل؛ الصوتُ يُختبَر مستقلاً في K36n ═══ */
       const neu = ddAlle.filter((x) => x.neu);
       ok(neu.length === 36 && neu.every((x) => x.level === "A2" || x.level === "A1"), `K82a ${neu.length} حواراً جديداً، كلُّها A1/A2 (سدُّ عدمِ التوازن)`);
-      ok(neu.every((x) => !dm.einsaetze.some((e) => e.id === x.id)), "K82b الجديدُ بلا صوتٍ على القرصِ — مُعلَنٌ بعلامةِ neu؛ الواجهةُ تعرضُ الحالةَ لا صوتاً وهمياً");
+      const audioIds82 = new Set(dm.einsaetze.map((e) => e.id));
+      ok(neu.some((x) => !audioIds82.has(x.id)) && ddAlle.some((x) => !x.neu && !audioIds82.has(x.id)),
+        "K82b وسم neu لا يساوي غياب التسجيل: توجد مادة جديدة وقديمة غير مسجّلة، وكلاهما يستخدم مسار TTS");
       const st = (w: string) => { const x = w.toLowerCase().replace(/^(der|die|das|sich|jdn|jdm)\s+/, "").replace(/^etwas\s+/, "").split(/\s+/)[0]; return x.slice(0, Math.max(4, x.length - 2)); };
       const normD = (s: string) => s.toLowerCase().replace(/é/g, "e").replace(/[^a-zäöüß0-9 ]/g, " ");
       const waisenOk = neu.every((x) => { const low = normD(x.lines.map((l) => l.de).join(" ")); const drin = (x.waisen ?? []).filter((w) => alleVokabeln.some((c) => c.de === w && c.level === x.level) && low.includes(st(w))); return drin.length >= 8; });
