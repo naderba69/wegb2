@@ -760,5 +760,61 @@
     "unresolved": 0,
     "note": "مراجعة تحريرية للنصوص العشرة وجملها الاثنين والستين وأسئلتها العشرين. صُقلت العربية، وصُححت ترجمات مثبتة واتساق الضمائر ومفاتيح الأسئلة؛ ووسم الطقس بأنه مثال غير آني. حُفظت حواجز smoke دون تخفيف: أضيفت K226a–f، وحُدّث نص توقع K143e ليتوافق مع صيغة المتكلم الجديدة. smoke الحالية 1498 نجاحاً و38 إخفاقاً، وهي الإخفاقات الـ38 نفسها في HEAD السابق؛ K226a–f كلها ناجحة. audit:content والبناء وTypeScript ناجحة؛ interactive يحتفظ بـ17 إخفاقاً سابقة."
   },
-  "qualityStatus": "completed"
+  "qualityStatus": "completed",
+  "followups": [
+    {
+      "id": "R161",
+      "date": "2026-10-11",
+      "scope": "لاحق لتقرير R155؛ لا يغيّر لقطة audioAudit التاريخية",
+      "germanCorrections": [
+        {
+          "id": "t-a0-07.de",
+          "before": "Am Dienstag habe ich Deutschkurs.",
+          "after": "Am Dienstag habe ich einen Deutschkurs."
+        },
+        {
+          "id": "t-a0-08.de",
+          "before": "Ich mag Bananen und Orangen auch.",
+          "after": "Ich mag auch Bananen und Orangen."
+        },
+        {
+          "id": "t-a0-10.de",
+          "before": "Im Sommer ist es heiß, ich gehe schwimmen.",
+          "after": "Im Sommer ist es heiß. Ich gehe schwimmen."
+        }
+      ],
+      "generatedAudioIds": [
+        "t-a0-01",
+        "t-a0-06",
+        "t-a0-07",
+        "t-a0-08",
+        "t-a0-09",
+        "t-a0-10",
+        "t-a0-011",
+        "t-a0-012",
+        "t-a0-013",
+        "t-a0-014"
+      ],
+      "remainingTargetIdsWithoutAudio": [
+        "t-a0-015"
+      ],
+      "manifest": "content/hoeren-audio.json",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "coverageAfter": {
+        "hoerenAudio": 94,
+        "texts": 157,
+        "A0": "14/15",
+        "A1": "20/35",
+        "A2": "20/32",
+        "B1": "20/35",
+        "B2": "20/40"
+      },
+      "validation": {
+        "fileBytesRecordedInManifest": true,
+        "id3AndMpegLayer3FramesValidated": true,
+        "humanListening": false
+      },
+      "separation": "لم تتغير مانيفستات الحوار والإملاء؛ لا تُحسب هذه الملفات تغطيةً لهما."
+    }
+  ]
 }

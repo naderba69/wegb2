@@ -529,7 +529,7 @@ const vocabRepeatAudit = (() => {
     ok(man.einsaetze.length === Object.keys(hoerenAudio).length && man.einsaetze.length >= 80 && man.einsaetze.every((e) => texts.some((t) => t.id === e.id)), `K26a بيانُ الصوت يطابق الخريطةَ والنصوصَ (${man.einsaetze.length} مُسجَّلاً؛ لا شبحَ ولا منسيَّ)`);
     ok(man.einsaetze.every((e) => existsSync("public" + e.file.replace(/^\//, "/")) || existsSync("public/" + e.file.replace(/^\//, ""))), "K26b كل معلن موجود على القرص — لا مدخل شبح");
     ok(man.einsaetze.every((e) => Math.abs(require("fs").statSync(`public${e.file}`).size - e.bytes) < 1), "K26c الحجوم المعلنة truthful بحرف واحد — لا ملف صامت مُموَّه");
-    ok(man.einsaetze.every((e) => /^\/audio\/hoeren\/t-(?:a[012]|b[12])-\d\d\.mp3$/.test(e.file)), "K26d المسارات محلية النظام وحده: /audio/hoeren/t-(a0|a1|a2|b1|b2)-NN.mp3 — لا مضيف خارجي، وقرارُ «لا روابط» محترمٌ حتى في الوسائط");
+    ok(man.einsaetze.every((e) => /^\/audio\/hoeren\/t-(?:a[012]|b[12])-\d{2,3}\.mp3$/.test(e.file)), "K26d المسارات محلية النظام وحده؛ أرقام المعرّفات من خانتين أو ثلاث — لا مضيف خارجي، وقرارُ «لا روابط» محترمٌ حتى في الوسائط");
     const audioIds = Object.keys(hoerenAudio);
     ok(audioIds.length >= 80 && audioIds.every((id) => texts.some((t) => t.id === id && !(t as { neu?: boolean }).neu)), `K26e كلُّ تسجيلٍ صوتيٍّ مرتبطٌ بنصٍّ قديم (${audioIds.length} ملفاً، منها تسجيلات A0؛ وبقيةُ النصوص تستخدم TTS المُعلَن)`);
     ok(Object.keys(hoerenAudio).length === man.einsaetze.length, "K26f الخريطة المصدَّرة بعدد المداخل — تصدير lib/content صادق");
@@ -539,6 +539,8 @@ const vocabRepeatAudit = (() => {
       ok(src.includes('preload="auto"'), "K26h التحميل المسبق مفعَّل — نقر الطالب لا ينتظر الشبكة المحلية");
     }
     ok(Object.values(hoerenAudio).every((e) => !e.file.startsWith("http")), "K26i صفر عنوان مطلق في كل مسار — كل شيء يخدم من الدار");
+    const a0Batch = ["t-a0-01", "t-a0-06", "t-a0-07", "t-a0-08", "t-a0-09", "t-a0-10", "t-a0-011", "t-a0-012", "t-a0-013", "t-a0-014"];
+    ok(a0Batch.every((id) => hoerenAudio[id]?.level === "A0" && existsSync(`public/audio/hoeren/${id}.mp3`)), "K26j دفعةُ A0 الجديدةُ مسجّلةٌ في المانيفستو ولها ملفاتُها العشرةُ الفعليةُ");
     const dman = JSON.parse(require("fs").readFileSync("content/diktat-audio.json", "utf8")) as { einsaetze: { id: string; file: string; level: string; bytes: number }[] };
     const ddisk = require("fs").readdirSync("public/audio/diktat").filter((f: string) => f.endsWith(".mp3")).map((f: string) => f.replace(/\.mp3$/, "")).sort();
     ok(dman.einsaetze.length === ddisk.length && dman.einsaetze.every((e) => ddisk.includes(e.id)) && ddisk.length === 180, "K27a المصنع مقفل: 180/180 — العددُ جُمِّد إقراراً بالتمام كما فُعِل في hoeren، بعد أن كان حياً في الطريق");
@@ -2687,8 +2689,8 @@ void 0;
   ok(nD === 156 && lies.includes("dialogues **156**"), `K125b الحواراتُ 156 في القرصِ والسطرِ والفهرس (${nD})`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 80 && nH === 84 && nH + nG + nK + nS === 352 && lies.includes("84 ملفاً صوتياً") && lies.includes("352 ملفاً صوتياً"),
-    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 352`);
+  ok(nG === 80 && nH === 94 && nH + nG + nK + nS === 362 && lies.includes("94 ملفاً صوتياً") && lies.includes("362 ملفاً صوتياً"),
+    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 362`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
   const nAb = dialogues.flatMap((d) => ablenker(d)).length;
@@ -10603,22 +10605,28 @@ void 0;
   const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
   const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
   const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
-  const noManifestEntries = [...dialogAudio, ...hoerenAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
+  const currentHoerenIds = hoerenAudio.filter((entry:any) => ids.includes(entry.id)).map((entry:any) => entry.id).sort();
+  const expectedHoerenIds = ids.slice(0, 9).sort();
+  const noCrossManifestEntries = [...dialogAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
   const matchingFiles: string[] = [];
   const scanAudio = (dir:string):void => {
     if (!existsSync(dir)) return;
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
       const path = dir + "/" + entry.name;
       if (entry.isDirectory()) scanAudio(path);
-      else if (ids.includes(entry.name.replace(/\\.[^.]*$/, ""))) matchingFiles.push(path);
+      else if (ids.includes(entry.name.replace(/\.[^.]*$/, ""))) matchingFiles.push(path);
     }
   };
   scanAudio("public/audio");
-  ok(noManifestEntries && matchingFiles.length === 0 && reviewA0Extras.audioAudit.dialogAudioManifestEntries === 0 &&
+  const historicalAudit = reviewA0Extras.audioAudit.dialogAudioManifestEntries === 0 &&
     reviewA0Extras.audioAudit.hoerenAudioManifestEntries === 0 && reviewA0Extras.audioAudit.diktatAudioManifestEntries === 0 &&
     reviewA0Extras.audioAudit.matchingFilesPresent === 0 && reviewA0Extras.audioAudit.listened === false &&
-    reviewA0Extras.audioAudit.generated === false && reviewA0Extras.audioAudit.modified === false,
-    "K226e مانيفستو الحوار والاستماع والإملاء منفصلة؛ لا ملفات أو إدخالات ولا ادعاء بالاستماع");
+    reviewA0Extras.audioAudit.generated === false && reviewA0Extras.audioAudit.modified === false;
+  const followupR161 = reviewA0Extras.followups?.find((entry:any) => entry.id === "R161");
+  ok(JSON.stringify(currentHoerenIds) === JSON.stringify(expectedHoerenIds) && noCrossManifestEntries &&
+    matchingFiles.length === 9 && matchingFiles.every((path) => path.includes("/audio/hoeren/")) && historicalAudit &&
+    followupR161?.generatedAudioIds?.length === 10 && followupR161?.validation?.humanListening === false,
+    "K226e تقرير R155 لقطةٌ تاريخيةٌ قبل الصوت؛ تسعةُ ملفاتٍ لاحقةٌ في مانيفستو الاستماع وحده من أصل عشرة");
   ok(reviewA0Extras.limits.cefr && reviewA0Extras.limits.human && reviewA0Extras.limits.fiction &&
     reviewA0Extras.gates.planned === "K226a–f" && reviewA0Extras.totals.unresolved === 0,
     "K226f حدود CEFR والمراجعة البشرية والسيناريوهات موضحة؛ لا فجوات مصطنعة");
