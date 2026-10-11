@@ -10294,6 +10294,65 @@ void 0;
       existsSync("public" + entry.file)) && reviewA1D2.audio.listened === false,
     "K221f ملفات الحوارات الثلاثة موجودة في المانيفستو وعلى القرص؛ لا ادعاء بالاستماع");
 }
+/* ═══ K222 — موارد A1 الإضافية: حوار تذكرة و5 نصوص استماع (R151). ═══ */
+{
+  const reviewA1Extras = JSON.parse(readFileSync("docs/content-review-a1-dialogues-11-2026-10-11.json", "utf8")) as any;
+  const reviewA1ExtrasMd = readFileSync("docs/content-review-a1-dialogues-11-2026-10-11.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const ids = ["dlg-a1-fahrkarte", "hoer-a1-01", "hoer-a1-02", "d-a1-ht01", "d-a1-ht02", "d-a1-ht03"];
+  const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const tasksValid = batch.every((d:any) => d && d.level === "A1" && d.questions.length > 0 &&
+    d.questions.every((q:any) => typeof q.promptDe === "string" && !!q.promptDe.trim() &&
+      typeof q.promptAr === "string" && !!q.promptAr.trim() && typeof q.explanationAr === "string" && !!q.explanationAr.trim() &&
+      (q.type === "mc" ? Array.isArray(q.options) && new Set(q.options).size === q.options.length && q.options.includes(q.answer) :
+        q.type === "fill" ? Array.isArray(q.answer) && q.answer.length > 0 && q.answer.every((a:string) => !!a.trim()) :
+          q.type === "truefalse" ? Array.isArray(q.options) && q.options.includes(q.answer) : false)) &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewA1Extras.reviewRule === "R151" && JSON.stringify(reviewA1Extras.targetIds) === JSON.stringify(ids) &&
+    reviewA1Extras.totals.resources === 6 && reviewA1Extras.totals.dialogues === 1 && reviewA1Extras.totals.hoertexte === 5 &&
+    reviewA1Extras.totals.lines === 17 && reviewA1Extras.totals.questions === 10 && reviewA1Extras.totals.dictation === 6 &&
+    reviewA1Extras.totals.correctedFields === 16 && reviewA1Extras.totals.unresolved === 0 &&
+    reviewA1Extras.corrections.length === 16 && reviewA1ExtrasMd.includes("K222a–f") &&
+    reviewA1Extras.audio.dialogAudioManifestEntries === 0 && reviewA1Extras.audio.hoerenAudioManifestEntries === 0 &&
+    reviewA1Extras.audio.matchingFilesPresent === 0 && reviewA1Extras.audio.modified === false,
+    "K222a تقرير R151 يحصي الموارد والتصحيحات وغياب التسجيلات من دون ادعاء استماع");
+  ok(tasksValid, "K222b حوار التذكرة ونصوص A1 المسموعة: مفاتيح صالحة وأسئلة وإملاءات نصية متسقة");
+  const ticket = batch[0];
+  ok(ticket.lines[0].ar === "طاب يومك! أريد تذكرة إلى برلين من فضلك." &&
+    ticket.lines[7].ar === "شكراً، تفضّل يورو واحداً من الباقي. رحلة سعيدة!" &&
+    ticket.questions[0].answer === "Einfach" && ticket.questions[1].answer === "Gleis 4" &&
+    ticket.questions[1].explanationAr.includes("الرصيفان 3 و5") &&
+    ticket.questions[2].answer === "Neunundzwanzig Euro" && ticket.lines[5].de.includes("Neunundzwanzig Euro") &&
+    ticket.lines[6].de.includes("dreißig Euro") && ticket.lines[7].de.includes("einen Euro zurück"),
+    "K222c dlg-a1-fahrkarte خيار الذهاب والسعر 29 والمدفوع 30 والباقي يورو؛ شرح الرصيف يعالج مشتتيه الفعليين");
+  const train = batch[1], market = batch[2];
+  ok(train.questions[0].promptAr === "ما رقم القطار؟" && train.questions[0].answer === "Zug RE 10" &&
+    train.questions[1].answer === "10 Minuten" && train.dictation[0] === "Achtung, Achtung! Der Zug RE 10 nach Köln fährt heute um 14 Uhr 25 von Gleis 3." &&
+    train.dictation[0] === train.lines[0].de.slice(0, train.dictation[0].length) &&
+    market.lines[0].ar === "أيها الزبائن الكرام! التفاح اليوم ضمن العروض: كيلوغرام واحد مقابل 99 سنتاً فقط. أما الموز والخبز والحليب فأسعارها عادية. ساعات العمل اليوم من الساعة 8 صباحاً حتى الساعة 8 مساءً. شكراً لزيارتكم!" &&
+    market.questions[0].promptAr === "أيّ السلع معروضة اليوم؟" && market.questions[0].answer === "Äpfel" &&
+    market.questions[1].promptAr === "متى يغلق السوبرماركت؟" && market.questions[1].answer === "Um 20 Uhr" &&
+    market.dictation[0] === "Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent." && market.lines[0].de.includes(market.dictation[0]),
+    "K222d إعلان RE10 والتأخير/الرصيف وإعلان التفاح والسعر وساعات المتجر وإملاء الجمل كاملة");
+  const office = batch[3], weather = batch[4], platform = batch[5];
+  ok(office.titleAr === "جهاز الرد الآلي في عيادة د. ليمان" && office.situationAr === "جهاز الرد الآلي في عيادة د. ليمان" &&
+    office.lines[0].ar.includes("اتصلت بعيادة د. ليمان") && office.lines[0].ar.includes("من ٨ صباحاً إلى ١٢ ظهراً") &&
+    office.lines[0].ar.includes("الثلاثاء والخميس من ١٥ إلى ١٨") &&
+    office.lines[1].ar.includes("خدمة الأطباء المناوبة") && office.lines[1].ar.includes("١١٦ ١١٧") &&
+    office.dictation[0] === "Sie haben die Praxis von Dr. Lehmann erreicht." && office.lines[0].de.includes(office.dictation[0]) &&
+    weather.lines[0].ar === "صباح الخير أيها المستمعون! الطقس اليوم غائم مع أمطار خفيفة في الشمال، ودرجة الحرارة ١٢ درجة." &&
+    weather.questions[0].promptAr === "كيف سيكون الطقس في عطلة نهاية الأسبوع؟" && weather.questions[0].answer === "Sonnenschein" &&
+    platform.questions[0].answer === "Gleis 5" && platform.questions[0].explanationAr.includes("أرقام العربات") &&
+    platform.dictation[0] === platform.lines[0].de.slice(0, platform.dictation[0].length),
+    "K222e نص العيادة يميز خدمة 116117، والنشرة الجوية والرصيف/أرقام العربات متسقة");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio].every((entry:any) => !ids.includes(entry.id));
+  const noFiles = ids.every((id) => !existsSync(`public/audio/dialog/${id}.mp3`) && !existsSync(`public/audio/hoeren/${id}.mp3`));
+  ok(noManifestEntries && noFiles && reviewA1Extras.audio.listened === false &&
+    reviewA1Extras.audio.generated === false && reviewA1Extras.audio.modified === false,
+    "K222f مانيفستو الحوارات ومنفصل الاستماع لا يسجلان هذه الموارد ولا توجد ملفات؛ لا neu ولا توليد ولا ادعاء سماع");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;

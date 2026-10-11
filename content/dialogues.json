@@ -10485,7 +10485,7 @@
           "Gleis 5"
         ],
         "answer": "Gleis 4",
-        "explanationAr": "الدليل: قالت الموظفة إن القطار يغادر من الرصيف الرابع. الفخّ: 10:15 وقت المغادرة، و30 يورو المبلغ المدفوع، ويورو واحد هو الباقي؛ لا شيء منها رقم الرصيف.",
+        "explanationAr": "الدليل: «Um Viertel nach zehn von Gleis vier». الفخّ: الرصيف الرابع هو المذكور؛ أما الرصيفان 3 و5 فلا يردان في الإعلان.",
         "promptDe": "Von welchem Gleis fährt der Zug?",
         "type": "mc",
         "id": "dlg-a1-fahrkarte-q2",
@@ -10509,7 +10509,7 @@
       {
         "who": "Kunde",
         "de": "Guten Tag! Ich möchte eine Fahrkarte nach Berlin, bitte.",
-        "ar": "نهار سعيد! أريد تذكرة إلى برلين من فضلك."
+        "ar": "طاب يومك! أريد تذكرة إلى برلين من فضلك."
       },
       {
         "who": "Mitarbeiter",
@@ -10544,7 +10544,7 @@
       {
         "who": "Mitarbeiter",
         "de": "Danke, und einen Euro zurück. Gute Fahrt!",
-        "ar": "شكراً، يورو كباقي. رحلة سعيدة!"
+        "ar": "شكراً، تفضّل يورو واحداً من الباقي. رحلة سعيدة!"
       },
       {
         "who": "Kunde",
@@ -11319,7 +11319,7 @@
       {
         "type": "mc",
         "promptDe": "Welcher Zug ist das?",
-        "promptAr": "ما القطار؟",
+        "promptAr": "ما رقم القطار؟",
         "options": [
           "Zug ICE 10",
           "Zug RE 10",
@@ -11346,7 +11346,7 @@
       }
     ],
     "dictation": [
-      "Der Zug RE 10 nach Köln fährt um 14 Uhr 25."
+      "Achtung, Achtung! Der Zug RE 10 nach Köln fährt heute um 14 Uhr 25 von Gleis 3."
     ],
     "hoertext": true
   },
@@ -11360,14 +11360,14 @@
       {
         "who": "Durchsage",
         "de": "Sehr geehrte Kunden! Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent. Bananen, Brot und Milch kosten den normalen Preis. Die Öffnungszeiten heute sind von 8 bis 20 Uhr. Vielen Dank für Ihren Besuch!",
-        "ar": "أيها الزبائن الكرام! التفاح اليوم في عرض: كيلوغرام بـ99 سنتاً فقط. أما الموز والخبز والحليب فتبقى أسعارها عادية. ساعات العمل اليوم من 8 إلى 20. شكراً لزيارتكم!"
+        "ar": "أيها الزبائن الكرام! التفاح اليوم ضمن العروض: كيلوغرام واحد مقابل 99 سنتاً فقط. أما الموز والخبز والحليب فأسعارها عادية. ساعات العمل اليوم من الساعة 8 صباحاً حتى الساعة 8 مساءً. شكراً لزيارتكم!"
       }
     ],
     "questions": [
       {
         "type": "mc",
         "promptDe": "Was ist im Angebot?",
-        "promptAr": "ما في العرض؟",
+        "promptAr": "أيّ السلع معروضة اليوم؟",
         "options": [
           "Bananen",
           "Äpfel",
@@ -11381,7 +11381,7 @@
       {
         "type": "mc",
         "promptDe": "Wann schließt der Markt?",
-        "promptAr": "متى يغلق السوق؟",
+        "promptAr": "متى يغلق السوبرماركت؟",
         "options": [
           "Um 8 Uhr",
           "Um 18 Uhr",
@@ -11394,7 +11394,7 @@
       }
     ],
     "dictation": [
-      "Heute sind alle Äpfel im Angebot."
+      "Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent."
     ],
     "hoertext": true
   },
@@ -11967,21 +11967,21 @@
     "level": "A1",
     "type": "hoer",
     "situationDe": "Anrufbeantworter: Arztpraxis Dr. Lehmann",
-    "situationAr": "جهاز الرد الآلي في عيادة الدكتورة ليمان",
+    "situationAr": "جهاز الرد الآلي في عيادة د. ليمان",
     "lines": [
       {
         "de": "Sie haben die Praxis von Dr. Lehmann erreicht. Unsere Öffnungszeiten sind Montag bis Freitag von 8 bis 12 Uhr und Dienstag und Donnerstag von 15 bis 18 Uhr.",
-        "ar": "اتصلت بعيادة د. ليمان. ساعات العمل من الإثنين إلى الجمعة ٨–١٢، الثلاثاء والخميس ١٥–١٨.",
+        "ar": "اتصلت بعيادة د. ليمان. ساعات العمل من الاثنين إلى الجمعة من ٨ صباحاً إلى ١٢ ظهراً، ويومي الثلاثاء والخميس من ١٥ إلى ١٨.",
         "who": "Anrufbeantworter"
       },
       {
         "de": "Bei akuten Schmerzen rufen Sie bitte den Notdienst unter der Nummer 116 117 an. Vielen Dank.",
-        "ar": "في حال الألم الحاد اتصل بالطوارئ على ١١٦١١٧. شكراً.",
+        "ar": "في حال ألم حاد، يُرجى الاتصال بخدمة الأطباء المناوبة على الرقم ١١٦ ١١٧. شكراً.",
         "who": "Anrufbeantworter"
       }
     ],
     "titleDe": "Anrufbeantworter: Arztpraxis Dr. Lehmann",
-    "titleAr": "جهاز الرد الآلي في عيادة الدكتورة ليمان",
+    "titleAr": "جهاز الرد الآلي في عيادة د. ليمان",
     "questions": [
       {
         "id": "d-a1-ht01-q1",
@@ -11998,7 +11998,7 @@
       }
     ],
     "dictation": [
-      "Sie haben die Praxis von Dr."
+      "Sie haben die Praxis von Dr. Lehmann erreicht."
     ]
   },
   {
@@ -12010,7 +12010,7 @@
     "lines": [
       {
         "de": "Guten Morgen, liebe Hörerinnen und Hörer! Heute bleibt es im Norden bewölkt mit etwas Regen bei 12 Grad.",
-        "ar": "صباح الخير أيها المستمعون! الجو اليوم غائم مع مطر خفيف في الشمال ١٢ درجة.",
+        "ar": "صباح الخير أيها المستمعون! الطقس اليوم غائم مع أمطار خفيفة في الشمال، ودرجة الحرارة ١٢ درجة.",
         "who": "Sprecherin"
       },
       {
@@ -12026,7 +12026,7 @@
         "id": "d-a1-ht02-q1",
         "type": "mc",
         "promptDe": "Wie ist das Wetter am Wochenende?",
-        "promptAr": "كيف الجو في نهاية الأسبوع؟",
+        "promptAr": "كيف سيكون الطقس في عطلة نهاية الأسبوع؟",
         "options": [
           "Regen im Norden",
           "Sonnenschein",
