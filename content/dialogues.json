@@ -232,7 +232,7 @@
       {
         "who": "Amina",
         "de": "Geben Sie mir bitte ein Kilo.",
-        "ar": "أعطني كيلو من فضلك."
+        "ar": "من فضلك، أعطني كيلوغراماً."
       },
       {
         "who": "Verkäufer",
@@ -242,7 +242,7 @@
       {
         "who": "Amina",
         "de": "Ja, ein Brot und sechs Eier.",
-        "ar": "نعم، خبز وست بيضات."
+        "ar": "نعم، رغيف خبز وست بيضات."
       },
       {
         "who": "Verkäufer",
@@ -278,7 +278,7 @@
         ],
         "answer": "sechs Eier",
         "explanationAr": "الدليل: «ein Brot und sechs Eier». الفخّ 1: ثلاثة هو سعر الطماطم باليورو. الفخّ 2: الكيلو للطماطم.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "كم بيضة تشتري أمينة؟"
       }
     ],
     "dictation": [
@@ -331,7 +331,7 @@
         ],
         "answer": "Er spielt Fußball mit Freunden.",
         "explanationAr": "الدليل: «Am Samstag spiele ich Fußball mit Freunden». الفخّ 1: يزور عمته أو خالته يوم الأحد، لا السبت. الفخّ 2: تعلّم الألمانية في البيت نشاط لينا.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا يفعل كريم يوم السبت؟"
       },
       {
         "id": "d-a1-05-q2",
@@ -1352,17 +1352,17 @@
       {
         "who": "Sami",
         "de": "Hier, bitte. Eine Fahrkarte zum Zentrum?",
-        "ar": "تفضّل. تذكرة إلى الوسط؟"
+        "ar": "تفضّل. تذكرة إلى وسط المدينة؟"
       },
       {
         "who": "Fahrer",
         "de": "Das ist die falsche Linie. Sie müssen hier aussteigen.",
-        "ar": "هذا الخط الخاطئ. يجب عليك أن تنزل هنا."
+        "ar": "هذا خط الحافلة الخاطئ. يجب أن تنزل هنا."
       },
       {
         "who": "Sami",
         "de": "Oh, danke! Und welcher Bus fährt zum Zentrum?",
-        "ar": "أوه، شكراً! وأي حافلة تذهب إلى الوسط؟"
+        "ar": "أوه، شكراً! وأي حافلة تذهب إلى وسط المدينة؟"
       },
       {
         "who": "Fahrer",
@@ -1381,8 +1381,8 @@
           "Ja, es ist die Nummer zwölf."
         ],
         "answer": "Nein, das ist die falsche Linie.",
-        "explanationAr": "الدليل: «Das ist die falsche Linie. Sie müssen hier aussteigen». الفخّ: رقم 12 هو الحافلة الصحيحة «gegenüber»، لا هذه.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "explanationAr": "الدليل: «Das ist die falsche Linie. Sie müssen hier aussteigen». الفخّ: الحافلة رقم 12 في الجهة المقابلة، وليست الحافلة التي يستقلها الآن.",
+        "promptAr": "هل سامي في الحافلة الصحيحة؟"
       },
       {
         "id": "d-a1-06-q2",

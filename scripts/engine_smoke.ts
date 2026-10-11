@@ -4617,14 +4617,14 @@ void 0;
   const d5q2 = d5?.questions.find((question) => question.id === "d-a1-05-q2");
   const d6q2 = d6?.questions.find((question) => question.id === "d-a1-06-q2");
   const d6Level = auditById.get("d-a1-06.level");
-  ok(!!(d4?.lines[1]?.ar === "أعطني كيلو من فضلك." && d4q1?.promptAr === "أكمل الفراغ بالسعر الصحيح من الحوار." &&
+  ok(!!(d4?.lines[1]?.ar === "من فضلك، أعطني كيلوغراماً." && d4q1?.promptAr === "أكمل الفراغ بالسعر الصحيح من الحوار." &&
     Array.isArray(d4q1?.answer) && d4q1.answer.includes("drei") && d4q1.answer.includes("3") &&
     d5?.titleAr === "وقت الفراغ في عطلة نهاية الأسبوع" &&
     d5.lines[0]?.ar === "ماذا تفعل في عطلة نهاية الأسبوع؟" &&
     d5.lines[3]?.ar === "يوم الأحد أزور عمتي أو خالتي. وأنتِ؟" &&
     d5q1?.explanationAr?.includes("عمته أو خالته") === true &&
     d5q2?.promptDe === "Da ___ ich meine Tante." && Array.isArray(d5q2.answer) && d5q2.answer[0] === "besuche" &&
-    d6?.lines[2]?.ar === "هذا الخط الخاطئ. يجب عليك أن تنزل هنا." &&
+    d6?.lines[2]?.ar === "هذا خط الحافلة الخاطئ. يجب أن تنزل هنا." &&
     d6.lines[4]?.ar === "الحافلة رقم 12 في الجهة المقابلة." &&
     d6q2?.promptDe === "Sie müssen hier ___." && Array.isArray(d6q2.answer) && d6q2.answer[0] === "aussteigen" &&
     d6Level?.status === "غير محسوم" && d6Level.finding.includes("لا برهان قاطع")),
@@ -10242,6 +10242,57 @@ void 0;
     audioEntries.every((entry:any) => entry.level === "A1" && entry.bytes > 0 && !String(entry.voice).includes("neu") &&
       existsSync("public" + entry.file)) && reviewA1D1.audio.listened === false,
     "K220f تسجيلات الحوارات الثلاثة مدرجة وملفاتها موجودة وبياناتها A1؛ لم يُدّعَ الاستماع إليها");
+}
+/* ═══ K221 — ثاني دفعة حوارات A1 d-a1-04..06 (R150). ═══ */
+{
+  const reviewA1D2 = JSON.parse(readFileSync("docs/content-review-a1-dialogues-02-2026-10-11.json", "utf8")) as any;
+  const reviewA1D2Md = readFileSync("docs/content-review-a1-dialogues-02-2026-10-11.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const ids = ["d-a1-04", "d-a1-05", "d-a1-06"];
+  const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const tasksValid = batch.every((d:any) => d && d.level === "A1" && d.questions.length === 2 &&
+    d.questions.every((q:any) => typeof q.promptDe === "string" && !!q.promptDe.trim() &&
+      typeof q.promptAr === "string" && !!q.promptAr.trim() && typeof q.explanationAr === "string" && !!q.explanationAr.trim() &&
+      (q.type === "mc" ? Array.isArray(q.options) && new Set(q.options).size === q.options.length && q.options.includes(q.answer) :
+        q.type === "fill" ? Array.isArray(q.answer) && q.answer.length > 0 && q.answer.every((a:string) => !!a.trim()) : false)) &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewA1D2.reviewRule === "R150" && JSON.stringify(reviewA1D2.targetIds) === JSON.stringify(ids) &&
+    reviewA1D2.totals.dialogues === 3 && reviewA1D2.totals.lines === 16 && reviewA1D2.totals.questions === 6 &&
+    reviewA1D2.totals.dictation === 9 && reviewA1D2.totals.correctedFields === 9 && reviewA1D2.totals.unresolved === 0 &&
+    reviewA1D2.corrections.length === 9 && reviewA1D2Md.includes("K221a–f") &&
+    reviewA1D2.audio.manifestEntries === 3 && reviewA1D2.audio.filesPresent === 3 &&
+    reviewA1D2.audio.listened === false && reviewA1D2.audio.modified === false,
+    "K221a تقرير R150 يطابق النطاق والتصحيحات وحالة التسجيلات المسجلة غير المستمع إليها");
+  ok(tasksValid, "K221b d-a1-04..06: مفاتيح MC/fill صالحة وأسئلة عربية وإملاءات مسندة إلى النص");
+  const dA104 = batch[0];
+  ok(dA104.lines[1].ar === "من فضلك، أعطني كيلوغراماً." &&
+    dA104.lines[3].ar === "نعم، رغيف خبز وست بيضات." && dA104.questions[0].answer.includes("drei") &&
+    dA104.questions[1].promptAr === "كم بيضة تشتري أمينة؟" && dA104.questions[1].answer === "sechs Eier" &&
+    dA104.questions[1].explanationAr.includes("ثلاثة هو سعر الطماطم") &&
+    dA104.dictation.every((part:string) => dA104.lines.some((line:any) => line.de.includes(part))),
+    "K221c d-a1-04 وحدة الكيلو ورغيف الخبز وعدد البيض منفصلة عن سعر الطماطم");
+  const dA105 = batch[1];
+  ok(dA105.questions[0].promptAr === "ماذا يفعل كريم يوم السبت؟" &&
+    dA105.questions[0].answer === "Er spielt Fußball mit Freunden." &&
+    dA105.questions[0].explanationAr.includes("يوم الأحد") && dA105.questions[0].explanationAr.includes("نشاط لينا") &&
+    dA105.questions[1].answer[0] === "besuche" &&
+    dA105.dictation.every((part:string) => dA105.lines.some((line:any) => line.de.includes(part))),
+    "K221d d-a1-05 نشاط كريم يوم السبت منفصل عن زيارة الأحد ونشاط لينا");
+  const dA106 = batch[2];
+  ok(dA106.lines[1].ar === "تفضّل. تذكرة إلى وسط المدينة؟" &&
+    dA106.lines[2].ar === "هذا خط الحافلة الخاطئ. يجب أن تنزل هنا." &&
+    dA106.lines[3].ar.includes("إلى وسط المدينة") && dA106.questions[0].promptAr === "هل سامي في الحافلة الصحيحة؟" &&
+    dA106.questions[0].answer === "Nein, das ist die falsche Linie." &&
+    dA106.questions[0].explanationAr.includes("الجهة المقابلة") && dA106.questions[1].answer[0] === "aussteigen" &&
+    dA106.dictation.every((part:string) => dA106.lines.some((line:any) => line.de.includes(part))),
+    "K221e d-a1-06 خط الحافلة الخطأ والنزول هنا والحافلة 12 إلى وسط المدينة في الجهة المقابلة");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const audioEntries = dialogAudio.filter((entry:any) => ids.includes(entry.id));
+  const audioIds = audioEntries.map((entry:any) => entry.id).sort();
+  ok(audioEntries.length === 3 && JSON.stringify(audioIds) === JSON.stringify(ids) &&
+    audioEntries.every((entry:any) => entry.level === "A1" && entry.bytes > 0 && !String(entry.voice).includes("neu") &&
+      existsSync("public" + entry.file)) && reviewA1D2.audio.listened === false,
+    "K221f ملفات الحوارات الثلاثة موجودة في المانيفستو وعلى القرص؛ لا ادعاء بالاستماع");
 }
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
