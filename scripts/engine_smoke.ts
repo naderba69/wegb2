@@ -10688,6 +10688,78 @@ void 0;
     reviewA1Extras.audioAudit.generated === false && reviewA1Extras.audioAudit.modified === false,
     "K227f مانيفستو الحوار والاستماع والإملاء منفصلة؛ لا إدخالات أو ملفات لهذه المعرّفات ولا ادعاء بالاستماع");
 }
+/* ═══ K228 — اثنا عشر نصاً A2 إضافياً (R157). ═══ */
+{
+  const reviewA2Extras = JSON.parse(readFileSync("docs/content-review-a2-texts-02-2026-10-11.json", "utf8")) as any;
+  const reviewA2ExtrasMd = readFileSync("docs/content-review-a2-texts-02-2026-10-11.md", "utf8");
+  const reviewA2ExtrasPatch = readFileSync("scripts/patches/review_a2_texts_02.py", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const ids = ["t-a2-21", "t-a2-22", "t-a2-23", "t-a2-24", "t-a2-25", "t-a2-26", "t-a2-27", "t-a2-28", "t-a2-29", "t-a2-30", "t-a2-031", "t-a2-032"];
+  const batch = ids.map((id) => textsArr.find((t:any) => t.id === id));
+  const correctionUnits = reviewA2Extras.corrections.map((c:any) => c.unit);
+  ok(reviewA2Extras.reviewRule === "R157" && JSON.stringify(reviewA2Extras.targetIds) === JSON.stringify(ids) &&
+    reviewA2Extras.totals.texts === 12 && reviewA2Extras.totals.germanWords === 1886 &&
+    reviewA2Extras.totals.sentenceEndMarks === 206 && reviewA2Extras.totals.questions === 24 && reviewA2Extras.totals.correctedFields === 32 &&
+    reviewA2Extras.coverage.before.covered === 135 && reviewA2Extras.coverage.newlyCovered === 12 &&
+    reviewA2Extras.totals.guardedTransitions === 32 && reviewA2Extras.totals.unresolved === 0 &&
+    correctionUnits.length === 32 && new Set(correctionUnits).size === 32 &&
+    reviewA2Extras.coverage.after.covered === 147 && reviewA2Extras.coverage.after.total === 157 &&
+    reviewA2ExtrasMd.includes("K228a–f") && reviewA2ExtrasPatch.includes("len(EDITS) != 32"),
+    "K228a تقرير R157 يحصي النصوص والكلمات والأسئلة والتصحيحات والتغطية والرقعة المحروسة");
+  const tasksValid = batch.every((t:any) => t && t.level === "A2" && typeof t.titleDe === "string" && !!t.titleDe.trim() &&
+    typeof t.titleAr === "string" && !!t.titleAr.trim() && typeof t.de === "string" && !!t.de.trim() &&
+    typeof t.ar === "string" && !!t.ar.trim() && Array.isArray(t.questions) && t.questions.length === 2 &&
+    t.questions.every((q:any) => q.type === "mc" && !!q.promptDe?.trim() && !!q.promptAr?.trim() && !!q.explanationAr?.trim() &&
+      Array.isArray(q.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length && q.options.includes(q.answer)));
+  ok(tasksValid, "K228b نصوص A2 الاثنا عشر وأسئلتها الأربعة والعشرون مكتملة؛ مفاتيح MC فريدة وصالحة");
+  const clinic = batch[0], insurance = batch[7];
+  ok(clinic.titleDe === "Linas Arzttermin: Verdacht auf Grippe" && clinic.de.includes("Der Arzt vermutet eine Grippe.") &&
+    !clinic.de.includes("Er sagt, ich habe eine Grippe.") && clinic.ar.includes("يرجّح الطبيب إصابتي بالإنفلونزا") &&
+    insurance.titleDe === "Beispielanruf bei einer Krankenkasse" && !JSON.stringify(insurance).includes("AOK") &&
+    insurance.de.includes("hier ist Ihre Krankenkasse") && insurance.ar.includes("صندوق التأمين الصحي") &&
+    insurance.ar.includes("تتولى العيادة تسوية الحساب معنا مباشرةً") &&
+    reviewA2Extras.limits.medical && reviewA2Extras.limits.insurance,
+    "K228c التحوّط من تشخيص قاطع، وعدم نسبة حوار افتراضي إلى AOK");
+  const course = batch[8], recipe = batch[9], move = batch[10], apartment = batch[6], weekend = batch[3], routine = batch[11];
+  ok(course.questions[1].promptDe === "Wofür brauche ich das Zertifikat?" &&
+    course.questions[1].answer === "Für meinen Job" && course.questions[1].explanationAr.includes("Das Zertifikat brauche ich") &&
+    move.questions[0].options[0].includes("der hohen Miete in München") &&
+    move.questions[0].answer === "Wegen einer neuen Stelle und der hohen Miete in München" &&
+    move.questions[0].explanationAr.includes("إيجار ميونخ مرتفعاً أكثر من اللازم") &&
+    apartment.de.includes("Die Kaltmiete beträgt 580 Euro.") &&
+    weekend.ar.includes("لأن اختباري كان يوم الاثنين") && weekend.ar.includes("قمت بجولة حول البحيرة") &&
+    routine.titleAr === "روتين يومي صحي" &&
+    recipe.titleAr === "طبقي المفضل" && recipe.ar.includes("البابريكا") && recipe.ar.includes("كمية الهريسة الحارة") &&
+    !recipe.ar.includes("درجة حرارة طعامه"),
+    "K228d سؤال الدورة والانتقال دقيقان؛ Kaltmiete محفوظة وعنوان/وصفة الكسكس مترجمان بدقة");
+  const exampleIds = ["t-a2-23", "t-a2-25", "t-a2-26", "t-a2-27", "t-a2-28", "t-a2-29", "t-a2-031"];
+  const examplesLabeled = exampleIds.every((id) => {
+    const t = batch.find((x:any) => x.id === id);
+    return !!t && t.titleDe.startsWith("Beispiel") && t.titleAr.startsWith("مثال");
+  });
+  ok(examplesLabeled && reviewA2Extras.limits.financial && reviewA2Extras.limits.locations &&
+    reviewA2Extras.totals.unresolved === 0 && reviewA2Extras.gates.planned === "K228a–f",
+    "K228e الأسعار والعناوين والمسارات والجداول المؤشرة أمثلة؛ الحدود والفجوات معلنة");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
+  const matchingFiles: string[] = [];
+  const scanAudio = (dir:string):void => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = dir + "/" + entry.name;
+      if (entry.isDirectory()) scanAudio(path);
+      else if (ids.includes(entry.name.replace(/\\.[^.]*$/, ""))) matchingFiles.push(path);
+    }
+  };
+  scanAudio("public/audio");
+  ok(noManifestEntries && matchingFiles.length === 0 && reviewA2Extras.audioAudit.dialogAudioManifestEntries === 0 &&
+    reviewA2Extras.audioAudit.hoerenAudioManifestEntries === 0 && reviewA2Extras.audioAudit.diktatAudioManifestEntries === 0 &&
+    reviewA2Extras.audioAudit.matchingFilesPresent === 0 && reviewA2Extras.audioAudit.listened === false &&
+    reviewA2Extras.audioAudit.generated === false && reviewA2Extras.audioAudit.modified === false,
+    "K228f مانيفستو الحوار والاستماع والإملاء منفصلة؛ لا إدخالات أو ملفات ولا ادعاء بالاستماع");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;

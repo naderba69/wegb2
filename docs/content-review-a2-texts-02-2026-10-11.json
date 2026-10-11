@@ -1,0 +1,526 @@
+{
+  "reviewRule": "R157",
+  "date": "2026-10-11",
+  "scope": "مراجعة 12 نص قراءة A2 غير مغطاة في التقارير السابقة: `t-a2-21`–`t-a2-30` و`t-a2-031`–`t-a2-032`. فُحصت الفقرات الألمانية والعربية والعناوين والأسئلة والخيارات والمفاتيح والشروح؛ لم تُحذف موارد أو أسئلة.",
+  "method": "قورنت الحقول مع HEAD السابق للدفعة. الرقعة scripts/patches/review_a2_texts_02.py تحرس كل قيمة قديمة، وتتحقق من مستوى A2، ومن سؤالَي MC كاملين لكل نص وخيارات فريدة ومفتاح صالح. فُحصت النصوص والترجمات سطراً سطراً؛ عدد الكلمات وعلامات نهاية الجملة/الدور محسوب من الألمانية الحالية؛ لا تقييم CEFR مستقل.",
+  "targetIds": [
+    "t-a2-21",
+    "t-a2-22",
+    "t-a2-23",
+    "t-a2-24",
+    "t-a2-25",
+    "t-a2-26",
+    "t-a2-27",
+    "t-a2-28",
+    "t-a2-29",
+    "t-a2-30",
+    "t-a2-031",
+    "t-a2-032"
+  ],
+  "resources": [
+    {
+      "id": "t-a2-21",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Linas Arzttermin: Verdacht auf Grippe",
+      "titleAr": "موعد لينا عند الطبيب: اشتباه بالإنفلونزا",
+      "germanWords": 154,
+      "sentenceEndMarks": 18,
+      "questions": 2,
+      "corrections": 4,
+      "judgement": "صيغت حالة الإنفلونزا كاشتباه. الزمن (ثلاثة أيام) والنصائح المنقولة والأسئلة متطابقة؛ المشهد لا يُعرض كتوجيه طبي."
+    },
+    {
+      "id": "t-a2-22",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Eine E-Mail an die Lehrerin",
+      "titleAr": "رسالة إلى المعلمة",
+      "germanWords": 157,
+      "sentenceEndMarks": 15,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "رسالة الاعتذار والطلب إلى المعلمة واضحة؛ سبب الغياب وتعويض الدرس متطابقان، ولا تعديل لازم."
+    },
+    {
+      "id": "t-a2-23",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Wegbeschreibung zum Bahnhof",
+      "titleAr": "مثال: وصف الطريق إلى المحطة",
+      "germanWords": 167,
+      "sentenceEndMarks": 18,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "خط السير/المسافة/الثماني دقائق مثال تدريبي غير مربوط بمدينة أو محطة حقيقية؛ السؤالان لهما دليل مباشر."
+    },
+    {
+      "id": "t-a2-24",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Mein Wochenende",
+      "titleAr": "عطلة نهاية أسبوعي",
+      "germanWords": 153,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "corrections": 1,
+      "judgement": "طابقنا ترجمة يوم الاختبار زمن الماضي الألماني، وصقلنا تعبير الجولة حول البحيرة؛ بقية تسلسل السبت والأحد والجوابين متسق."
+    },
+    {
+      "id": "t-a2-25",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein Gespräch im Supermarkt",
+      "titleAr": "مثال: محادثة في السوبرماركت",
+      "germanWords": 171,
+      "sentenceEndMarks": 27,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "أماكن الحليب والخبز والخضار والدفع متسقة؛ سعر الطماطم محدد كعنصر في مثال لا سعر سوق حالي."
+    },
+    {
+      "id": "t-a2-26",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Eine Einladung zum Geburtstag",
+      "titleAr": "مثال: دعوة إلى عيد ميلاد",
+      "germanWords": 153,
+      "sentenceEndMarks": 17,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "موعد السبت والساعة والعنوان وخط المترو عناصر دعوة تدريبية؛ سؤالا الرد والوصول يطابقانها."
+    },
+    {
+      "id": "t-a2-27",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Eine Wohnung suchen",
+      "titleAr": "مثال: البحث عن شقة",
+      "germanWords": 151,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "الحد الأقصى 600 يورو والإيجار الأساسي 580 يورو متسقان؛ أرقام المساحة والإيجار داخل مثال لا نصيحة سكنية."
+    },
+    {
+      "id": "t-a2-28",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispielanruf bei einer Krankenkasse",
+      "titleAr": "مثال: اتصال بصندوق تأمين صحي",
+      "germanWords": 154,
+      "sentenceEndMarks": 20,
+      "questions": 2,
+      "corrections": 4,
+      "judgement": "أزيل اسم AOK كي لا تُنسب إجراءات عامة إلى جهة حقيقية بلا مصدر؛ صيغت تسوية الفاتورة بدقة أكبر، وبقيت مشروطة بسريان التأمين."
+    },
+    {
+      "id": "t-a2-29",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein neuer Deutschkurs",
+      "titleAr": "مثال: دورة ألمانية جديدة",
+      "germanWords": 153,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "corrections": 7,
+      "judgement": "أيام الدورة وساعاتها والغرض من الشهادة متسقة في مثال؛ وُحّد السؤال مع صيغة Ich."
+    },
+    {
+      "id": "t-a2-30",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Mein Lieblingsgericht",
+      "titleAr": "طبقي المفضل",
+      "germanWords": 152,
+      "sentenceEndMarks": 15,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "وصفة عائلية للكسكس؛ صُحح عنوان Lieblingsgericht ومعنى Paprika وscharf، دون تعميمها على كل وصفات تونس."
+    },
+    {
+      "id": "t-a2-031",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein Umzug nach Leipzig",
+      "titleAr": "مثال: الانتقال إلى لايبزيغ",
+      "germanWords": 153,
+      "sentenceEndMarks": 13,
+      "questions": 2,
+      "corrections": 5,
+      "judgement": "قصة الانتقال والعمل والإيجار مثال غير إحصائي؛ حُصر المفتاح والشرح في الوظيفة الجديدة والإيجار المرتفع المصرح به."
+    },
+    {
+      "id": "t-a2-032",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Ein gesunder Tagesablauf",
+      "titleAr": "روتين يومي صحي",
+      "germanWords": 168,
+      "sentenceEndMarks": 15,
+      "questions": 2,
+      "corrections": 1,
+      "judgement": "روتين لوكاس وصف شخصي داخل نص تدريبي، لا توصية صحية عامة؛ صُحح العنوان إلى «روتين يومي صحي»، والترجمة ومفتاحا الشوكولاتة والجري متسقة."
+    }
+  ],
+  "totals": {
+    "texts": 12,
+    "germanWords": 1886,
+    "sentenceEndMarks": 206,
+    "questions": 24,
+    "correctedFields": 32,
+    "guardedTransitions": 32,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-a2-21.ar",
+      "old": "اسمي لينا. لديّ اليوم موعد مع الدكتور مولر. أشعر بتوعّك منذ ثلاثة أيام. لديّ سعال وزكام ورأسي يؤلمني. أكون في العيادة عند التاسعة. يجب أولاً أن أُظهر بطاقة التأمين عند الاستقبال. ثم أنتظر في غرفة الانتظار. بعد خمس عشرة دقيقة تناديني المساعدة الطبية. يقيس الطبيب حرارتي ويستمع إلى رئتيّ. يقول إن لديّ إنفلونزا. يكتب لي وصفة وينصحني بشرب الكثير من الشاي والبقاء في السرير يومين. تشرح لي المساعدة الطبية في أي صيدلية أستطيع صرف الوصفة. أشتري الأقراص من هناك لاحقاً. أخبر مديري على الهاتف أنني مريضة ولن أذهب إلى العمل اليوم. ثم أعود مباشرة إلى البيت. أستريح وأشرب كوباً من الشاي. إذا لم أشعر بتحسن غداً، أتصل بالعيادة مرة أخرى.",
+      "new": "اسمي لينا. لديّ اليوم موعد مع الدكتور مولر. أشعر بتوعّك منذ ثلاثة أيام. لديّ سعال وزكام ورأسي يؤلمني. أكون في العيادة عند التاسعة. يجب أولاً أن أُظهر بطاقة التأمين عند الاستقبال. ثم أنتظر في غرفة الانتظار. بعد خمس عشرة دقيقة تناديني المساعدة الطبية. يقيس الطبيب حرارتي ويستمع إلى رئتيّ. يرجّح الطبيب إصابتي بالإنفلونزا. يكتب لي وصفة وينصحني بشرب الكثير من الشاي والبقاء في السرير يومين. تشرح لي المساعدة الطبية في أي صيدلية أستطيع صرف الوصفة. أشتري الأقراص من هناك لاحقاً. أخبر مديري على الهاتف أنني مريضة ولن أذهب إلى العمل اليوم. ثم أعود مباشرة إلى البيت. أستريح وأشرب كوباً من الشاي. إذا لم أشعر بتحسن غداً، أتصل بالعيادة مرة أخرى.",
+      "rationale": "مطابقة الترجمة للاشتباه الطبي، لا لنتيجة تشخيص مؤكدة."
+    },
+    {
+      "unit": "t-a2-21.de",
+      "old": "Mein Name ist Lina. Heute habe ich einen Termin bei Dr. Müller. Ich fühle mich seit drei Tagen nicht gut. Ich habe Husten und Schnupfen, und mein Kopf tut weh. Ich bin um neun Uhr in der Praxis. Zuerst muss ich am Empfang meine Versichertenkarte zeigen. Dann warte ich im Wartezimmer. Nach fünfzehn Minuten ruft mich die Arzthelferin. Der Arzt misst meine Temperatur und hört meine Lunge ab. Er sagt, ich habe eine Grippe. Er schreibt mir ein Rezept und sagt, ich soll viel Tee trinken und zwei Tage im Bett bleiben. Die Arzthelferin erklärt mir, in welcher Apotheke ich das Rezept abgeben kann. Dort hole ich später die Tabletten. Ich sage meinem Chef am Telefon, dass ich krank bin und heute nicht zur Arbeit komme. Danach fahre ich direkt nach Hause. Ich ruhe mich aus und trinke eine Tasse Tee. Wenn es mir morgen nicht besser geht, rufe ich die Praxis noch einmal an.",
+      "new": "Mein Name ist Lina. Heute habe ich einen Termin bei Dr. Müller. Ich fühle mich seit drei Tagen nicht gut. Ich habe Husten und Schnupfen, und mein Kopf tut weh. Ich bin um neun Uhr in der Praxis. Zuerst muss ich am Empfang meine Versichertenkarte zeigen. Dann warte ich im Wartezimmer. Nach fünfzehn Minuten ruft mich die Arzthelferin. Der Arzt misst meine Temperatur und hört meine Lunge ab. Der Arzt vermutet eine Grippe. Er schreibt mir ein Rezept und sagt, ich soll viel Tee trinken und zwei Tage im Bett bleiben. Die Arzthelferin erklärt mir, in welcher Apotheke ich das Rezept abgeben kann. Dort hole ich später die Tabletten. Ich sage meinem Chef am Telefon, dass ich krank bin und heute nicht zur Arbeit komme. Danach fahre ich direkt nach Hause. Ich ruhe mich aus und trinke eine Tasse Tee. Wenn es mir morgen nicht besser geht, rufe ich die Praxis noch einmal an.",
+      "rationale": "تبديل «ich habe eine Grippe» إلى «Der Arzt vermutet eine Grippe» لتجنب تشخيص مؤكّد لا يسنده النص."
+    },
+    {
+      "unit": "t-a2-21.titleAr",
+      "old": "موعد لينا عند الطبيب والإنفلونزا",
+      "new": "موعد لينا عند الطبيب: اشتباه بالإنفلونزا",
+      "rationale": "مطابقة العنوان العربي للاشتباه بالإنفلونزا بدلاً من الجزم بها."
+    },
+    {
+      "unit": "t-a2-21.titleDe",
+      "old": "Linas Arzttermin und Grippe",
+      "new": "Linas Arzttermin: Verdacht auf Grippe",
+      "rationale": "تغيير العنوان من تشخيص قطعي إلى اشتباه، موافقاً لصياغة الأعراض في المشهد."
+    },
+    {
+      "unit": "t-a2-23.titleAr",
+      "old": "وصف الطريق إلى المحطة",
+      "new": "مثال: وصف الطريق إلى المحطة",
+      "rationale": "وسم المسافة والإشارات وخط السير بأنها مثال تدريبي لا وصف طريق حقيقي موثق."
+    },
+    {
+      "unit": "t-a2-23.titleDe",
+      "old": "Wegbeschreibung zum Bahnhof",
+      "new": "Beispiel: Wegbeschreibung zum Bahnhof",
+      "rationale": "وسم المسافة والإشارات وخط السير بأنها مثال تدريبي لا وصف طريق حقيقي موثق."
+    },
+    {
+      "unit": "t-a2-24.ar",
+      "old": "استيقظت يوم السبت في التاسعة. شربت القهوة وقرأت الجريدة أولاً. ثم نظفت الشقة وتسوقت. كان الطقس لطيفاً، لذلك ذهبت إلى السوبرماركت سيراً على الأقدام. اشتريت هناك خبزاً وفاكهة وحليباً. جاءت صديقتي إلى بيتي بعد الظهر. تسكن في الشارع نفسه. ذهبنا معاً إلى مقهى عند الثالثة وتحدثنا كثيراً. طلبنا القهوة أولاً. ثم تحدثنا عن العمل وخططنا للصيف. تناولت العشاء في البيت مع عائلتي مساءً. نمت طويلاً يوم الأحد وتمشيت في الحديقة. استمعت هناك إلى الموسيقى ومشيت دورة حول البحيرة. درست الألمانية مساءً لأن لديّ اختباراً يوم الاثنين. جهزت حقيبتي لليوم التالي قبل النوم. كانت عطلة نهاية أسبوع هادئة وجميلة إجمالاً.",
+      "new": "استيقظت يوم السبت في التاسعة. شربت القهوة وقرأت الجريدة أولاً. ثم نظفت الشقة وتسوقت. كان الطقس لطيفاً، لذلك ذهبت إلى السوبرماركت سيراً على الأقدام. اشتريت هناك خبزاً وفاكهة وحليباً. جاءت صديقتي إلى بيتي بعد الظهر. تسكن في الشارع نفسه. ذهبنا معاً إلى مقهى عند الثالثة وتحدثنا كثيراً. طلبنا القهوة أولاً. ثم تحدثنا عن العمل وخططنا للصيف. تناولت العشاء في البيت مع عائلتي مساءً. نمت طويلاً يوم الأحد وتمشيت في الحديقة. استمعت هناك إلى الموسيقى وقمت بجولة حول البحيرة. درست الألمانية مساءً لأن اختباري كان يوم الاثنين. جهزت حقيبتي لليوم التالي قبل النوم. كانت عطلة نهاية أسبوع هادئة وجميلة إجمالاً.",
+      "rationale": "مطابقة زمن الجملة الألمانية الماضية «hatte» بصيغة الماضي في العربية، وصقل ترجمة «eine Runde um den See» إلى جولة حول البحيرة."
+    },
+    {
+      "unit": "t-a2-25.titleAr",
+      "old": "محادثة في السوبرماركت",
+      "new": "مثال: محادثة في السوبرماركت",
+      "rationale": "وسم سعر 1.49 يورو وعرض الطماطم بأنه جزء من حوار تدريبي لا سعر سوق حالي."
+    },
+    {
+      "unit": "t-a2-25.titleDe",
+      "old": "Ein Gespräch im Supermarkt",
+      "new": "Beispiel: Ein Gespräch im Supermarkt",
+      "rationale": "وسم سعر 1.49 يورو وعرض الطماطم بأنه جزء من حوار تدريبي لا سعر سوق حالي."
+    },
+    {
+      "unit": "t-a2-26.titleAr",
+      "old": "دعوة لعيد ميلاد",
+      "new": "مثال: دعوة إلى عيد ميلاد",
+      "rationale": "تمييز الدعوة وعنوان الشارع/رقم المبنى كبيانات سيناريو لا عنوان شخص حقيقي."
+    },
+    {
+      "unit": "t-a2-26.titleDe",
+      "old": "Eine Einladung zum Geburtstag",
+      "new": "Beispiel: Eine Einladung zum Geburtstag",
+      "rationale": "تمييز الدعوة وعنوان الشارع/رقم المبنى كبيانات سيناريو لا عنوان شخص حقيقي."
+    },
+    {
+      "unit": "t-a2-27.titleAr",
+      "old": "البحث عن شقة",
+      "new": "مثال: البحث عن شقة",
+      "rationale": "تأطير حدود الإيجار والمساحة والمبلغ داخل الشقة كقيم قصة تدريبية لا بيانات سوق."
+    },
+    {
+      "unit": "t-a2-27.titleDe",
+      "old": "Eine Wohnung suchen",
+      "new": "Beispiel: Eine Wohnung suchen",
+      "rationale": "تأطير حدود الإيجار والمساحة والمبلغ داخل الشقة كقيم قصة تدريبية لا بيانات سوق."
+    },
+    {
+      "unit": "t-a2-28.ar",
+      "old": "نهارك سعيد، معك خدمة AOK. اسمي كلاين. كيف أستطيع مساعدتك؟ — نهارك سعيد، معكم نادية صالح. سجلت أمس، لكنني لم أحصل على رقم التأمين بعد. كيف يصلني؟ — نرسل الرقم بالبريد بعد معالجة طلبك. وقد يستغرق ذلك بضعة أيام. — هل يمكنني الذهاب إلى الطبيب في هذه الأثناء؟ وهل يجب أن أدفع الفاتورة بنفسي؟ — إذا كان تأمينك سارياً بالفعل، فعادةً ما تتعامل العيادة معنا مباشرةً. يمكنك طلب شهادة عضوية منا وإبرازها للطبيب. — وهل سأحصل على بطاقة التأمين لاحقاً أيضاً؟ — نعم، نرسل البطاقة بالبريد بعد معالجة الطلب. من فضلك تحققي من صحة عنوانك. — سأفعل ذلك. أدوّن المعلومات في دفتري كي لا أنساها. شكراً على المعلومة. — على الرحب والسعة. يمكنك معاودة الاتصال بنا إن كانت لديك أسئلة أخرى. — إلى اللقاء عبر الهاتف!",
+      "new": "مرحباً، معك صندوق التأمين الصحي. كيف أستطيع مساعدتك؟ — نهارك سعيد، معكم نادية صالح. سجلت أمس، لكنني لم أحصل على رقم التأمين بعد. كيف يصلني؟ — نرسل الرقم بالبريد بعد معالجة طلبك. وقد يستغرق ذلك بضعة أيام. — هل يمكنني الذهاب إلى الطبيب في هذه الأثناء؟ وهل يجب أن أدفع الفاتورة بنفسي؟ — إذا كان تأمينك سارياً بالفعل، فعادةً ما تتولى العيادة تسوية الحساب معنا مباشرةً. يمكنك طلب شهادة عضوية منا وإبرازها للطبيب. — وهل سأحصل على بطاقة التأمين لاحقاً أيضاً؟ — نعم، نرسل البطاقة بالبريد بعد معالجة الطلب. من فضلك تحققي من صحة عنوانك. — سأفعل ذلك. أدوّن المعلومات في دفتري كي لا أنساها. شكراً على المعلومة. — على الرحب والسعة. يمكنك معاودة الاتصال بنا إن كانت لديك أسئلة أخرى. — إلى اللقاء عبر الهاتف!",
+      "rationale": "مطابقة الترجمة للمكالمة العامة من دون ادعاء تمثيل AOK، وتوضيح معنى تسوية الحساب في «rechnet ... ab»."
+    },
+    {
+      "unit": "t-a2-28.de",
+      "old": "Guten Tag, hier ist die AOK. Mein Name ist Klein. Wie kann ich Ihnen helfen? — Guten Tag, hier spricht Nadia Saleh. Ich habe mich gestern angemeldet, aber meine Versicherungsnummer noch nicht bekommen. Wie erhalte ich sie? — Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist. Das kann einige Tage dauern. — Kann ich in der Zwischenzeit trotzdem zum Arzt gehen? Muss ich die Rechnung selbst bezahlen? — Wenn Ihre Versicherung bereits aktiv ist, rechnet die Praxis normalerweise direkt mit uns ab. Sie können eine Mitgliedsbescheinigung bei uns anfordern und beim Arzt vorzeigen. — Bekomme ich die Versichertenkarte später auch? — Ja, die Karte kommt nach der Bearbeitung ebenfalls per Post. Bitte prüfen Sie, ob Ihre Adresse richtig ist. — Das mache ich. Ich schreibe die Informationen in mein Notizbuch, damit ich sie nicht vergesse. Vielen Dank für die Information. — Gern. Wenn Sie noch Fragen haben, können Sie uns wieder anrufen. — Auf Wiederhören!",
+      "new": "Guten Tag, hier ist Ihre Krankenkasse. Wie kann ich Ihnen helfen? — Guten Tag, hier spricht Nadia Saleh. Ich habe mich gestern angemeldet, aber meine Versicherungsnummer noch nicht bekommen. Wie erhalte ich sie? — Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist. Das kann einige Tage dauern. — Kann ich in der Zwischenzeit trotzdem zum Arzt gehen? Muss ich die Rechnung selbst bezahlen? — Wenn Ihre Versicherung bereits aktiv ist, rechnet die Praxis normalerweise direkt mit uns ab. Sie können eine Mitgliedsbescheinigung bei uns anfordern und beim Arzt vorzeigen. — Bekomme ich die Versichertenkarte später auch? — Ja, die Karte kommt nach der Bearbeitung ebenfalls per Post. Bitte prüfen Sie, ob Ihre Adresse richtig ist. — Das mache ich. Ich schreibe die Informationen in mein Notizbuch, damit ich sie nicht vergesse. Vielen Dank für die Information. — Gern. Wenn Sie noch Fragen haben, können Sie uns wieder anrufen. — Auf Wiederhören!",
+      "rationale": "إزالة نسبة المحادثة إلى AOK الحقيقي، مع إبقاء السؤال الإجرائي في إطار تمثيل عام."
+    },
+    {
+      "unit": "t-a2-28.titleAr",
+      "old": "مكالمة مع التأمين الصحي",
+      "new": "مثال: اتصال بصندوق تأمين صحي",
+      "rationale": "توضيح أن المكالمة نموذج تعليمي عام."
+    },
+    {
+      "unit": "t-a2-28.titleDe",
+      "old": "Ein Anruf bei der Krankenversicherung",
+      "new": "Beispielanruf bei einer Krankenkasse",
+      "rationale": "وصف المكالمة بأنها مثال عام، لا اتصال ممثل فعلي لدى شركة بعينها."
+    },
+    {
+      "unit": "t-a2-29.questions[1].answer",
+      "old": "Für ihren Job",
+      "new": "Für meinen Job",
+      "rationale": "تحديث المفتاح إلى الصيغة نفسها مع بقاء العمل هو السبب المذكور."
+    },
+    {
+      "unit": "t-a2-29.questions[1].explanationAr",
+      "old": "الدليل في النص: «Das Zertifikat brauche ich für meinen Job.» — تحتاج إلى الشهادة من أجل عملها.",
+      "new": "«Das Zertifikat brauche ich für meinen Job.» — أحتاج إلى الشهادة من أجل عملي.",
+      "rationale": "مواءمة الشرح مع الاقتباس الحرفي وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a2-29.questions[1].options",
+      "old": [
+        "Für ihren Job",
+        "Für eine Reise",
+        "Für die Universität"
+      ],
+      "new": [
+        "Für meinen Job",
+        "Für eine Reise",
+        "Für die Universität"
+      ],
+      "rationale": "تحويل الخيارات إلى صيغة المتكلم لتطابق السؤال والنص، من دون تغيير المشتتات."
+    },
+    {
+      "unit": "t-a2-29.questions[1].promptAr",
+      "old": "لماذا تحتاج المتحدثة إلى الشهادة؟",
+      "new": "لماذا أحتاج إلى الشهادة؟",
+      "rationale": "إزالة افتراض جنس الراوية وصياغة السؤال بضمير المتكلم."
+    },
+    {
+      "unit": "t-a2-29.questions[1].promptDe",
+      "old": "Wofür braucht die Person das Zertifikat?",
+      "new": "Wofür brauche ich das Zertifikat?",
+      "rationale": "مطابقة سؤال الغرض من الشهادة مع صيغة ich في النص."
+    },
+    {
+      "unit": "t-a2-29.titleAr",
+      "old": "دورة ألمانية جديدة",
+      "new": "مثال: دورة ألمانية جديدة",
+      "rationale": "تأطير جدول الدورة واسم المدرس بوصفه مثالاً لا إعلان دورة راهنة."
+    },
+    {
+      "unit": "t-a2-29.titleDe",
+      "old": "Ein neuer Deutschkurs",
+      "new": "Beispiel: Ein neuer Deutschkurs",
+      "rationale": "تأطير جدول الدورة واسم المدرس بوصفه مثالاً لا إعلان دورة راهنة."
+    },
+    {
+      "unit": "t-a2-30.ar",
+      "old": "طبختي المفضلة هي الكسكس بالخضار ولحم الضأن. تطبخه أمي كل يوم جمعة في تونس. نحتاج إلى الكسكس والجزر والكوسا والحمص والطماطم والبصل والثوم وتوابل مثل الكمون والفلفل الأحمر. تضيف أمي التوابل حسب الذوق. تحضّر الخضار أولاً. تقشّر الجزر وتقطّع الكوسا إلى قطع. يُفرم البصل ناعماً ويُحمّر بقليل من الزيت. ثم يُضاف لحم الضأن والماء والتوابل إلى القدر. يُطهى كل شيء على نار هادئة حتى يطرى اللحم. يُطهى الكسكس على البخار في مصفاة فوق القدر. ويُطهى الحمص معه حتى يطرى. في النهاية تضع أمي الكسكس في طبق كبير وتضع اللحم والخضار فوقه. يكون طعمه لذيذاً جداً مع الهريسة الحارة. توضع الصلصة جانباً كي يختار كل شخص درجة حرارة طعامه. تتناول العائلة كلها الطعام معاً يوم الجمعة.",
+      "new": "طبقي المفضل هو الكسكس بالخضار ولحم الضأن. تطبخه أمي كل يوم جمعة في تونس. نحتاج إلى الكسكس والجزر والكوسا والحمص والطماطم والبصل والثوم وتوابل مثل الكمون والبابريكا. تضيف أمي التوابل حسب الذوق. تحضّر الخضار أولاً. تقشّر الجزر وتقطّع الكوسا إلى قطع. يُفرم البصل ناعماً ويُحمّر بقليل من الزيت. ثم يُضاف لحم الضأن والماء والتوابل إلى القدر. يُطهى كل شيء على نار هادئة حتى يطرى اللحم. يُطهى الكسكس على البخار في مصفاة فوق القدر. ويُطهى الحمص معه حتى يطرى. في النهاية تضع أمي الكسكس في طبق كبير وتضع اللحم والخضار فوقه. يكون طعمه لذيذاً جداً مع الهريسة الحارة. توضع الصلصة جانباً كي يختار كل شخص بنفسه كمية الهريسة الحارة التي تناسبه. تتناول العائلة كلها الطعام معاً يوم الجمعة.",
+      "rationale": "استخدام «البابريكا» مقابلاً لتابل Paprika، وتصحيح scharf إلى مقدار الهريسة/الحدة لا درجة حرارة الطعام."
+    },
+    {
+      "unit": "t-a2-30.titleAr",
+      "old": "طبختي المفضلة",
+      "new": "طبقي المفضل",
+      "rationale": "ترجمة Lieblingsgericht إلى «طبقي المفضل» لا «طبختي المفضلة»."
+    },
+    {
+      "unit": "t-a2-031.questions[0].answer",
+      "old": "Wegen einer neuen Stelle und niedrigeren Mieten",
+      "new": "Wegen einer neuen Stelle und der hohen Miete in München",
+      "rationale": "مطابقة المفتاح للسببين المصرّح بهما: الوظيفة الجديدة وارتفاع إيجار ميونخ."
+    },
+    {
+      "unit": "t-a2-031.questions[0].explanationAr",
+      "old": "الدليل في النص: «Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch» — وجدت وظيفة جديدة وكانت إيجارات ميونخ عالية.",
+      "new": "الدليل في النص: «Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch.» — وجدت وظيفة جديدة، وكان إيجار ميونخ مرتفعاً أكثر من اللازم.",
+      "rationale": "مطابقة الشرح للمفرد «Die Miete» وللمعنى الدقيق لـ«zu hoch»؛ الإيجار كان مرتفعاً أكثر من اللازم."
+    },
+    {
+      "unit": "t-a2-031.questions[0].options",
+      "old": [
+        "Wegen einer neuen Stelle und niedrigeren Mieten",
+        "Wegen des Wetters",
+        "Weil ihre Familie dort wohnt"
+      ],
+      "new": [
+        "Wegen einer neuen Stelle und der hohen Miete in München",
+        "Wegen des Wetters",
+        "Weil ihre Familie dort wohnt"
+      ],
+      "rationale": "استبدال استنتاج «إيجارات أقل» بسبب مذكور حرفياً: الإيجار المرتفع في ميونخ."
+    },
+    {
+      "unit": "t-a2-031.titleAr",
+      "old": "انتقال إلى لايبزيغ",
+      "new": "مثال: الانتقال إلى لايبزيغ",
+      "rationale": "تأطير قصة الانتقال وأرقام الإيجار ومقارنة المدينتين كحالة تعليمية لا إحصاء سوقياً."
+    },
+    {
+      "unit": "t-a2-031.titleDe",
+      "old": "Ein Umzug nach Leipzig",
+      "new": "Beispiel: Ein Umzug nach Leipzig",
+      "rationale": "تأطير قصة الانتقال وأرقام الإيجار ومقارنة المدينتين كحالة تعليمية لا إحصاء سوقياً."
+    },
+    {
+      "unit": "t-a2-032.titleAr",
+      "old": "يوم صحي",
+      "new": "روتين يومي صحي",
+      "rationale": "ترجمة «Tagesablauf» إلى روتين يومي، لا إلى يوم فقط."
+    }
+  ],
+  "coverage": {
+    "before": {
+      "covered": 135,
+      "total": 157
+    },
+    "after": {
+      "covered": 147,
+      "total": 157
+    },
+    "newlyCovered": 12,
+    "remaining": {
+      "total": 10,
+      "byLevel": {
+        "B1": 5,
+        "B2": 5
+      },
+      "ids": [
+        "t-b1-31..t-b1-35",
+        "t-b2-36..t-b2-40"
+      ]
+    },
+    "duplicateCoverage": 0
+  },
+  "contentChecks": [
+    {
+      "id": "CHK-R157-01",
+      "check": "المعرّفات الاثنا عشر المستهدفة موجودة كلها على A2؛ 1,886 كلمة ألمانية و206 علامات نهاية جملة/دور، وتغطية الدفعة ترفع السجل من 135/157 إلى 147/157.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R157-02",
+      "check": "النصوص الألمانية والعربية والعناوين والأسئلة مكتملة؛ الأسئلة الـ24 من نوع MC، خياراتها فريدة ومفتاح كل سؤال بينها.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R157-03",
+      "check": "الانتقالات الـ32 تطابق القيم القديمة في HEAD والقيم الجديدة في الملف والتقرير؛ إعادة تشغيل الرقعة أعادت 0/32.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R157-04",
+      "check": "K228c–d: الاشتباه الطبي، حذف AOK، تسوية الحساب، سؤال الشهادة بصيغة Ich، زمن اختبار نهاية الأسبوع، أسباب انتقال سارة، وإيجار Kaltmiete ومفردات الكسكس اجتازت التحقق.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R157-05",
+      "check": "K228e: إشارات المثال ظاهرة في العناوين للأرقام والعناوين والمسارات والجداول؛ أُعلنت القيود والفجوات.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R157-06",
+      "check": "لا إدخالات بهذه المعرّفات في مانيفستو الحوار أو الاستماع أو الإملاء؛ لا ملفات مطابقة ولا ادعاء بالاستماع.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R157-07",
+      "check": "K228a–f جميعها ناجحة: smoke بلغ 1510 نجاحات/38 إخفاقاً قديماً؛ مقابل 1504/38 في خط R156، ولا إخفاق جديد. لم تُخفّف البوابات السابقة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R157-08",
+      "check": "audit:content صفر عيوب بنيوية مؤكدة؛ TypeScript والبناء الإنتاجي وgit diff --check اجتازت. interaktiv بقي 682/17 بالإخفاقات المعروفة نفسها.",
+      "status": "pass"
+    }
+  ],
+  "audioAudit": {
+    "dialogAudioManifest": "content/dialog-audio.json",
+    "dialogAudioManifestEntries": 0,
+    "hoerenAudioManifest": "content/hoeren-audio.json",
+    "hoerenAudioManifestEntries": 0,
+    "diktatAudioManifest": "content/diktat-audio.json",
+    "diktatAudioManifestEntries": 0,
+    "matchingFilesPresent": 0,
+    "matchingFiles": [],
+    "listened": false,
+    "generated": false,
+    "modified": false,
+    "note": "فُحص مانيفستو صوت الحوارات ومانيفستو الاستماع ومانيفستو الإملاء كلٌّ على حدة. لا إدخالات بهذه المعرّفات ولا ملفات مطابقة بالأسماء في public/audio؛ لم يحدث استماع أو توليد أو تعديل صوت."
+  },
+  "limits": {
+    "human": "مراجعة تحريرية على بيانات المحتوى، لا مراجعة بشرية مستقلة أو اعتماد مهني.",
+    "cefr": "A2 هو الوسم الموجود؛ لم يُجر تقييم CEFR مستقل.",
+    "medical": "مقاطع الطبيب والعافية أمثلة تعليمية؛ لم تُراجع كمعلومات طبية أو نصيحة، وصيغ تشخيص الإنفلونزا كاحتمال.",
+    "financial": "السعر 1.49 يورو وأرقام الإيجارات والمساحة قيم في قصص/حوارات تدريبية، لا أسعار حالية أو بيانات سوق أو مشورة مالية/سكنية.",
+    "insurance": "مكالمة التأمين مثال عام بعد حذف اسم AOK؛ لم يُتحقق خارجياً من إجراءات أي شركة بعينها.",
+    "locations": "عنوان الدعوة ومسار Goethestraße والأوقات/المسافات أمثلة تدريبية غير منسوبة إلى مكان حقيقي.",
+    "fiction": "الأسماء والأحداث ووصفات العائلة في هذه النصوص سيناريوهات؛ لا تُعرض كسجلات أو شهادات واقعية.",
+    "audio": "لا ادعاء بالاستماع أو وجود تسجيل؛ dialog-audio وhoeren-audio وdiktat-audio مانيفستات مستقلة.",
+    "sources": "لم تُستخدم مصادر خارجية أو تُضف وقائع مستقلة؛ القيود أعلاه موضحة."
+  },
+  "judgement": {
+    "corrected": 32,
+    "unresolved": 0,
+    "note": "رُوجعت النصوص الاثنا عشر (1,886 كلمة) والأسئلة الأربعة والعشرون كاملة. صُحح الجزم الطبي، وحُيّدت نسبة المكالمة إلى شركة تأمين حقيقية، ووُسمت الحوارات ذات الأسعار والعناوين والمسارات والجداول كأمثلة. وُحّدت صيغة سؤال الشهادة مع Ich، وصُحح زمن/تعبير ترجمة عطلة نهاية الأسبوع، وحُصر جواب انتقال سارة وشرحه في الدليل الصريح، وصُحح عنوان Tagesablauf ومعنى Lieblingsgericht وPaprika وscharf. بوابات K228a–f اجتازت الست؛ smoke الحالي 1510/38 مقابل R156 1504/38، أي ست بوابات جديدة ناجحة بلا إخفاق إضافي. audit:content صفري بنيوياً، TypeScript والبناء اجتازا، وinteraktiv بقي 682/17 بإخفاقاته المعروفة."
+  },
+  "gates": {
+    "planned": "K228a–f",
+    "results": {
+      "patchReapply": {
+        "status": "pass",
+        "result": "0/32 انتقالاً إضافياً في التشغيل الثاني والثالث"
+      },
+      "smoke": {
+        "status": "pass-no-new-failures",
+        "passed": 1510,
+        "knownFailures": 38,
+        "preBatchBaselinePassed": 1504,
+        "preBatchBaselineFailures": 38,
+        "newFailures": 0,
+        "newGates": "K228a–f: 6/6 pass",
+        "note": "بقي عدد الإخفاقات المعروفة 38 من أصل البوابات الأقدم؛ نجحت البوابات الست الجديدة، ولم تُغيّر بوابة قديمة أو تُخفّف."
+      },
+      "auditContent": {
+        "status": "pass",
+        "structuralDefects": 0,
+        "note": "بقيت تنبيهات heuristic/مراجعة بشرية، لا عيوب بنيوية مؤكدة."
+      },
+      "interactive": {
+        "status": "baseline-known-failures",
+        "passed": 682,
+        "knownFailures": 17,
+        "newFailures": 0,
+        "sameFailureSetAsR156": true
+      },
+      "typescript": {
+        "status": "pass",
+        "command": "npx tsc --noEmit"
+      },
+      "productionBuild": {
+        "status": "pass",
+        "command": "npm run build",
+        "staticRoutes": 13
+      },
+      "gitDiffCheck": {
+        "status": "pass",
+        "command": "git diff --check"
+      }
+    }
+  },
+  "patch": "scripts/patches/review_a2_texts_02.py",
+  "qualityStatus": "completed"
+}

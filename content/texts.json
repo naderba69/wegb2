@@ -7169,10 +7169,10 @@
   {
     "id": "t-a2-21",
     "level": "A2",
-    "titleDe": "Linas Arzttermin und Grippe",
-    "titleAr": "موعد لينا عند الطبيب والإنفلونزا",
-    "de": "Mein Name ist Lina. Heute habe ich einen Termin bei Dr. Müller. Ich fühle mich seit drei Tagen nicht gut. Ich habe Husten und Schnupfen, und mein Kopf tut weh. Ich bin um neun Uhr in der Praxis. Zuerst muss ich am Empfang meine Versichertenkarte zeigen. Dann warte ich im Wartezimmer. Nach fünfzehn Minuten ruft mich die Arzthelferin. Der Arzt misst meine Temperatur und hört meine Lunge ab. Er sagt, ich habe eine Grippe. Er schreibt mir ein Rezept und sagt, ich soll viel Tee trinken und zwei Tage im Bett bleiben. Die Arzthelferin erklärt mir, in welcher Apotheke ich das Rezept abgeben kann. Dort hole ich später die Tabletten. Ich sage meinem Chef am Telefon, dass ich krank bin und heute nicht zur Arbeit komme. Danach fahre ich direkt nach Hause. Ich ruhe mich aus und trinke eine Tasse Tee. Wenn es mir morgen nicht besser geht, rufe ich die Praxis noch einmal an.",
-    "ar": "اسمي لينا. لديّ اليوم موعد مع الدكتور مولر. أشعر بتوعّك منذ ثلاثة أيام. لديّ سعال وزكام ورأسي يؤلمني. أكون في العيادة عند التاسعة. يجب أولاً أن أُظهر بطاقة التأمين عند الاستقبال. ثم أنتظر في غرفة الانتظار. بعد خمس عشرة دقيقة تناديني المساعدة الطبية. يقيس الطبيب حرارتي ويستمع إلى رئتيّ. يقول إن لديّ إنفلونزا. يكتب لي وصفة وينصحني بشرب الكثير من الشاي والبقاء في السرير يومين. تشرح لي المساعدة الطبية في أي صيدلية أستطيع صرف الوصفة. أشتري الأقراص من هناك لاحقاً. أخبر مديري على الهاتف أنني مريضة ولن أذهب إلى العمل اليوم. ثم أعود مباشرة إلى البيت. أستريح وأشرب كوباً من الشاي. إذا لم أشعر بتحسن غداً، أتصل بالعيادة مرة أخرى.",
+    "titleDe": "Linas Arzttermin: Verdacht auf Grippe",
+    "titleAr": "موعد لينا عند الطبيب: اشتباه بالإنفلونزا",
+    "de": "Mein Name ist Lina. Heute habe ich einen Termin bei Dr. Müller. Ich fühle mich seit drei Tagen nicht gut. Ich habe Husten und Schnupfen, und mein Kopf tut weh. Ich bin um neun Uhr in der Praxis. Zuerst muss ich am Empfang meine Versichertenkarte zeigen. Dann warte ich im Wartezimmer. Nach fünfzehn Minuten ruft mich die Arzthelferin. Der Arzt misst meine Temperatur und hört meine Lunge ab. Der Arzt vermutet eine Grippe. Er schreibt mir ein Rezept und sagt, ich soll viel Tee trinken und zwei Tage im Bett bleiben. Die Arzthelferin erklärt mir, in welcher Apotheke ich das Rezept abgeben kann. Dort hole ich später die Tabletten. Ich sage meinem Chef am Telefon, dass ich krank bin und heute nicht zur Arbeit komme. Danach fahre ich direkt nach Hause. Ich ruhe mich aus und trinke eine Tasse Tee. Wenn es mir morgen nicht besser geht, rufe ich die Praxis noch einmal an.",
+    "ar": "اسمي لينا. لديّ اليوم موعد مع الدكتور مولر. أشعر بتوعّك منذ ثلاثة أيام. لديّ سعال وزكام ورأسي يؤلمني. أكون في العيادة عند التاسعة. يجب أولاً أن أُظهر بطاقة التأمين عند الاستقبال. ثم أنتظر في غرفة الانتظار. بعد خمس عشرة دقيقة تناديني المساعدة الطبية. يقيس الطبيب حرارتي ويستمع إلى رئتيّ. يرجّح الطبيب إصابتي بالإنفلونزا. يكتب لي وصفة وينصحني بشرب الكثير من الشاي والبقاء في السرير يومين. تشرح لي المساعدة الطبية في أي صيدلية أستطيع صرف الوصفة. أشتري الأقراص من هناك لاحقاً. أخبر مديري على الهاتف أنني مريضة ولن أذهب إلى العمل اليوم. ثم أعود مباشرة إلى البيت. أستريح وأشرب كوباً من الشاي. إذا لم أشعر بتحسن غداً، أتصل بالعيادة مرة أخرى.",
     "questions": [
       {
         "type": "mc",
@@ -7246,8 +7246,8 @@
   {
     "id": "t-a2-23",
     "level": "A2",
-    "titleDe": "Wegbeschreibung zum Bahnhof",
-    "titleAr": "وصف الطريق إلى المحطة",
+    "titleDe": "Beispiel: Wegbeschreibung zum Bahnhof",
+    "titleAr": "مثال: وصف الطريق إلى المحطة",
     "de": "Entschuldigung, wie komme ich am besten zum Hauptbahnhof? — Gehen Sie hier geradeaus bis zur Ampel. Dort biegen Sie links in die Goethestraße. Dann gehen Sie etwa 300 Meter. Sie sehen eine Bäckerei auf der rechten Seite. Überqueren Sie die Straße und gehen Sie durch die Unterführung. Der Bahnhof liegt direkt gegenüber. Sie brauchen zu Fuß ungefähr acht Minuten. Der Weg ist einfach, wenn Sie auf die Straßenschilder achten. Die Ampel steht vor einem großen Geschäft. Nachdem Sie links abgebogen sind, bleiben Sie auf dem Gehweg und folgen der Goethestraße. Auf der rechten Seite sehen Sie zuerst ein kleines Hotel und später die Bäckerei. Gehen Sie bis zur nächsten großen Straße und überqueren Sie sie an der Ampel. Danach gehen Sie durch die Unterführung. Der Tunnel ist hell und es gibt dort Wegweiser zum Bahnhof. Am Ende der Unterführung sehen Sie den Haupteingang. Dort stehen ein Fahrkartenautomat und ein Stadtplan. Wenn Sie ein Gleis suchen, können Sie die Anzeige in der Bahnhofshalle lesen oder am Informationsschalter fragen.",
     "ar": "عفواً، ما أفضل طريق إلى محطة القطار الرئيسية؟ — سر مباشرة حتى الإشارة الضوئية. انعطف يساراً إلى شارع غوته. ثم سر نحو 300 متر. سترى مخبزاً على اليمين. اعبر الشارع وامشِ عبر النفق. تقع المحطة مقابله مباشرة. تحتاج إلى نحو ثماني دقائق سيراً. الطريق سهل إذا انتبهت إلى لافتات الشوارع. تقع الإشارة أمام متجر كبير. بعد أن تنعطف يساراً، ابقَ على الرصيف واتبع شارع غوته. سترى على اليمين فندقاً صغيراً أولاً ثم المخبز. تابع حتى الشارع الكبير التالي واعبره عند الإشارة. بعد ذلك سر عبر النفق. النفق مضاء جيداً، وتوجد فيه لافتات تدل على المحطة. سترى المدخل الرئيسي في نهاية النفق. توجد هناك آلة لشراء التذاكر وخريطة للمدينة. إذا كنت تبحث عن رصيف قطار معين، يمكنك قراءة الشاشة في صالة المحطة أو السؤال عند مكتب المعلومات.",
     "questions": [
@@ -7287,7 +7287,7 @@
     "titleDe": "Mein Wochenende",
     "titleAr": "عطلة نهاية أسبوعي",
     "de": "Am Samstag bin ich um neun Uhr aufgestanden. Zuerst habe ich Kaffee getrunken und Zeitung gelesen. Dann habe ich die Wohnung geputzt und eingekauft. Das Wetter war angenehm, deshalb bin ich zu Fuß zum Supermarkt gegangen. Dort habe ich Brot, Obst und Milch gekauft. Nachmittags ist meine Freundin zu mir gekommen. Sie wohnt in derselben Straße. Um drei Uhr sind wir zusammen in ein Café gegangen und haben viel geredet. Zuerst haben wir einen Kaffee bestellt. Danach haben wir über die Arbeit und unsere Pläne für den Sommer gesprochen. Abends habe ich mit meiner Familie zu Hause gegessen. Am Sonntag habe ich lange geschlafen und war im Park spazieren. Dort habe ich Musik gehört und eine Runde um den See gemacht. Abends habe ich Deutsch gelernt, weil ich am Montag einen Test hatte. Vor dem Schlafengehen habe ich meine Tasche für den nächsten Tag vorbereitet. Insgesamt war es ein ruhiges und schönes Wochenende.",
-    "ar": "استيقظت يوم السبت في التاسعة. شربت القهوة وقرأت الجريدة أولاً. ثم نظفت الشقة وتسوقت. كان الطقس لطيفاً، لذلك ذهبت إلى السوبرماركت سيراً على الأقدام. اشتريت هناك خبزاً وفاكهة وحليباً. جاءت صديقتي إلى بيتي بعد الظهر. تسكن في الشارع نفسه. ذهبنا معاً إلى مقهى عند الثالثة وتحدثنا كثيراً. طلبنا القهوة أولاً. ثم تحدثنا عن العمل وخططنا للصيف. تناولت العشاء في البيت مع عائلتي مساءً. نمت طويلاً يوم الأحد وتمشيت في الحديقة. استمعت هناك إلى الموسيقى ومشيت دورة حول البحيرة. درست الألمانية مساءً لأن لديّ اختباراً يوم الاثنين. جهزت حقيبتي لليوم التالي قبل النوم. كانت عطلة نهاية أسبوع هادئة وجميلة إجمالاً.",
+    "ar": "استيقظت يوم السبت في التاسعة. شربت القهوة وقرأت الجريدة أولاً. ثم نظفت الشقة وتسوقت. كان الطقس لطيفاً، لذلك ذهبت إلى السوبرماركت سيراً على الأقدام. اشتريت هناك خبزاً وفاكهة وحليباً. جاءت صديقتي إلى بيتي بعد الظهر. تسكن في الشارع نفسه. ذهبنا معاً إلى مقهى عند الثالثة وتحدثنا كثيراً. طلبنا القهوة أولاً. ثم تحدثنا عن العمل وخططنا للصيف. تناولت العشاء في البيت مع عائلتي مساءً. نمت طويلاً يوم الأحد وتمشيت في الحديقة. استمعت هناك إلى الموسيقى وقمت بجولة حول البحيرة. درست الألمانية مساءً لأن اختباري كان يوم الاثنين. جهزت حقيبتي لليوم التالي قبل النوم. كانت عطلة نهاية أسبوع هادئة وجميلة إجمالاً.",
     "questions": [
       {
         "type": "mc",
@@ -7322,8 +7322,8 @@
   {
     "id": "t-a2-25",
     "level": "A2",
-    "titleDe": "Ein Gespräch im Supermarkt",
-    "titleAr": "محادثة في السوبرماركت",
+    "titleDe": "Beispiel: Ein Gespräch im Supermarkt",
+    "titleAr": "مثال: محادثة في السوبرماركت",
     "de": "Guten Tag! Wo finde ich bitte die Milch? — Die Milch ist im Kühlregal ganz hinten links. — Danke. Und wo ist das Brot? — Das Brot ist am Eingang bei der Bäckereiabteilung. — Haben Sie heute keine Tomaten? — Doch, die Tomaten sind heute im Angebot, ein Kilo für 1,49 Euro. Sie liegen gleich beim Gemüse. — Vielen Dank! — Bitte schön. — Ich möchte heute einen Salat für meine Familie machen. Das Gemüse brauche ich für das Abendessen. Gibt es auch Gurken und Paprika? — Ja, beides liegt neben den Tomaten. — Dann nehme ich ein Kilo von den Tomaten. Sind sie frisch? — Ja, die Lieferung kam heute Morgen. Sie können die Tomaten einzeln auswählen. — Können Sie mir bitte auch sagen, wo der Käse ist? — Der Käse liegt im Kühlregal direkt neben der Milch. — Und wo kann ich bezahlen? — Die Kasse ist vorne rechts. Sie können bar oder mit Karte bezahlen. — Gut, dann gehe ich jetzt zur Kasse. Auf Wiedersehen! — Auf Wiedersehen!",
     "ar": "نهارك سعيد! أين أجد الحليب من فضلك؟ — الحليب في رفّ التبريد، في الخلف إلى اليسار. — شكراً. وأين الخبز؟ — الخبز عند المدخل قرب قسم المخبوزات. — ألا توجد لديكم طماطم اليوم؟ — بلى، الطماطم عليها عرض اليوم: الكيلو بـ1.49 يورو. تجدها بجانب الخضار. — شكراً جزيلاً! — على الرحب والسعة. — أريد اليوم إعداد سلطة لعائلتي. أحتاج إلى الخضار للعشاء. هل لديكم خيار وفلفل أيضاً؟ — نعم، كلاهما بجانب الطماطم. — سأشتري كيلوغراماً من الطماطم إذن. هل هي طازجة؟ — نعم، وصلت الشحنة هذا الصباح. يمكنك اختيار الطماطم واحدةً واحدة. — هل يمكنك أن تخبرني أيضاً أين الجبن؟ — الجبن في رفّ التبريد بجانب الحليب مباشرة. — وأين يمكنني الدفع؟ — الصندوق في الأمام إلى اليمين. يمكنك الدفع نقداً أو بالبطاقة. — حسناً، سأذهب إلى الصندوق الآن. إلى اللقاء! — إلى اللقاء!",
     "questions": [
@@ -7360,8 +7360,8 @@
   {
     "id": "t-a2-26",
     "level": "A2",
-    "titleDe": "Eine Einladung zum Geburtstag",
-    "titleAr": "دعوة لعيد ميلاد",
+    "titleDe": "Beispiel: Eine Einladung zum Geburtstag",
+    "titleAr": "مثال: دعوة إلى عيد ميلاد",
     "de": "Hallo Ahmed,\n\nich feiere am Samstag um 19 Uhr meinen Geburtstag bei mir zu Hause. Ich wohne in der Schillerstraße 14 im dritten Stock. Du kannst mit der U-Bahn-Linie 3 bis zur Haltestelle Markt fahren. Von dort sind es fünf Minuten zu Fuß. Meine Wohnung ist auf der rechten Seite im dritten Stock. Ich mache Pizza und einen Salat. Es gibt auch Kuchen und Saft. Wir möchten zusammen essen, Musik hören und Karten spielen. Bitte komm pünktlich, damit das Essen nicht kalt wird. Meine Schwester hilft mir bei der Vorbereitung. Ich stelle genug Stühle ins Wohnzimmer, damit alle bequem sitzen können. Du musst nichts mitbringen. Wenn du etwas nicht essen kannst, sag mir bitte vorher Bescheid. Bitte sag mir bis Donnerstag Bescheid, ob du kommen kannst. Ich freue mich, wenn wir uns wiedersehen. Wenn du den Weg nicht findest, ruf mich bitte an. Ich öffne die Haustür ab halb sieben.\n\nViele Grüße\nLena",
     "ar": "مرحباً أحمد،\n\nسأحتفل بعيد ميلادي يوم السبت في الساعة السابعة مساءً في بيتي. أسكن في شارع شيلر رقم 14، في الطابق الثالث. يمكنك ركوب خط المترو رقم 3 حتى محطة ماركت. ومن هناك تحتاج إلى خمس دقائق سيراً. شقتي على اليمين في الطابق الثالث. سأعدّ البيتزا والسلطة. وسيكون هناك أيضاً كعك وعصير. نريد أن نأكل معاً ونستمع إلى الموسيقى ونلعب الورق. أرجو أن تأتي في الموعد كي لا يبرد الطعام. تساعدني أختي في التحضير. سأضع كراسٍ كافية في غرفة المعيشة كي يجلس الجميع براحة. لا تحتاج إلى إحضار شيء. إذا كان هناك طعام لا تستطيع تناوله، فأخبرني من فضلك مسبقاً. أخبرني قبل يوم الخميس إن كنت تستطيع الحضور. سأكون سعيدة إذا التقينا من جديد. إذا لم تجد الطريق، فاتصل بي من فضلك. سأفتح باب المبنى من السادسة والنصف.\n\nأطيب التحيات،\nلينا",
     "questions": [
@@ -7398,8 +7398,8 @@
   {
     "id": "t-a2-27",
     "level": "A2",
-    "titleDe": "Eine Wohnung suchen",
-    "titleAr": "البحث عن شقة",
+    "titleDe": "Beispiel: Eine Wohnung suchen",
+    "titleAr": "مثال: البحث عن شقة",
     "de": "Ich suche seit zwei Monaten eine kleine Wohnung in der Stadt. Sie muss nicht groß sein, aber hell und ruhig. Ein Balkon wäre schön. Die Kaltmiete sollte nicht über 600 Euro liegen. Ich habe schon viele Anzeigen gelesen und mehrere Wohnungen besichtigt. Gestern habe ich eine schöne Zwei-Zimmer-Wohnung gesehen. Sie liegt in einem Altbau, hat 50 Quadratmeter, einen Balkon und eine Einbauküche. Die Kaltmiete beträgt 580 Euro. Bei der Besichtigung hat mir besonders das helle Wohnzimmer gefallen. Die Küche ist schon eingebaut, und im Bad gibt es ein Fenster. Vom Balkon sieht man auf einen ruhigen Innenhof. Die Vermieterin war freundlich und hat mir die Nebenkosten erklärt. Ich habe meine Unterlagen vorbereitet und ihr eine Nachricht geschickt. Sie möchte mir nächste Woche Bescheid geben. Bis dahin suche ich weiter, denn ich möchte sicher sein, dass die neue Wohnung wirklich passt. Wenn ich eine Zusage bekomme, kann ich im nächsten Monat umziehen.",
     "ar": "أبحث منذ شهرين عن شقة صغيرة في المدينة. لا يشترط أن تكون كبيرة، لكن أريدها مضيئة وهادئة. وستكون الشرفة جميلة. ينبغي ألا يتجاوز الإيجار الأساسي 600 يورو. قرأت كثيراً من الإعلانات وزرت عدة شقق. شاهدت أمس شقة جميلة من غرفتين. تقع في مبنى قديم، ومساحتها 50 متراً مربعاً، وفيها شرفة ومطبخ مجهز. يبلغ الإيجار الأساسي 580 يورو. أعجبتني غرفة المعيشة المضيئة خصوصاً أثناء المعاينة. المطبخ مركّب بالفعل، وفي الحمّام نافذة. أرى من الشرفة فناءً داخلياً هادئاً. كانت المالكة لطيفة وشرحت لي التكاليف الإضافية. جهزت أوراقي وأرسلت إليها رسالة. تريد أن تخبرني بقرارها الأسبوع القادم. سأواصل البحث إلى ذلك الحين، لأنني أريد التأكد من أن الشقة الجديدة مناسبة حقاً. إذا حصلت على موافقتها، يمكنني الانتقال في الشهر القادم.",
     "questions": [
@@ -7436,10 +7436,10 @@
   {
     "id": "t-a2-28",
     "level": "A2",
-    "titleDe": "Ein Anruf bei der Krankenversicherung",
-    "titleAr": "مكالمة مع التأمين الصحي",
-    "de": "Guten Tag, hier ist die AOK. Mein Name ist Klein. Wie kann ich Ihnen helfen? — Guten Tag, hier spricht Nadia Saleh. Ich habe mich gestern angemeldet, aber meine Versicherungsnummer noch nicht bekommen. Wie erhalte ich sie? — Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist. Das kann einige Tage dauern. — Kann ich in der Zwischenzeit trotzdem zum Arzt gehen? Muss ich die Rechnung selbst bezahlen? — Wenn Ihre Versicherung bereits aktiv ist, rechnet die Praxis normalerweise direkt mit uns ab. Sie können eine Mitgliedsbescheinigung bei uns anfordern und beim Arzt vorzeigen. — Bekomme ich die Versichertenkarte später auch? — Ja, die Karte kommt nach der Bearbeitung ebenfalls per Post. Bitte prüfen Sie, ob Ihre Adresse richtig ist. — Das mache ich. Ich schreibe die Informationen in mein Notizbuch, damit ich sie nicht vergesse. Vielen Dank für die Information. — Gern. Wenn Sie noch Fragen haben, können Sie uns wieder anrufen. — Auf Wiederhören!",
-    "ar": "نهارك سعيد، معك خدمة AOK. اسمي كلاين. كيف أستطيع مساعدتك؟ — نهارك سعيد، معكم نادية صالح. سجلت أمس، لكنني لم أحصل على رقم التأمين بعد. كيف يصلني؟ — نرسل الرقم بالبريد بعد معالجة طلبك. وقد يستغرق ذلك بضعة أيام. — هل يمكنني الذهاب إلى الطبيب في هذه الأثناء؟ وهل يجب أن أدفع الفاتورة بنفسي؟ — إذا كان تأمينك سارياً بالفعل، فعادةً ما تتعامل العيادة معنا مباشرةً. يمكنك طلب شهادة عضوية منا وإبرازها للطبيب. — وهل سأحصل على بطاقة التأمين لاحقاً أيضاً؟ — نعم، نرسل البطاقة بالبريد بعد معالجة الطلب. من فضلك تحققي من صحة عنوانك. — سأفعل ذلك. أدوّن المعلومات في دفتري كي لا أنساها. شكراً على المعلومة. — على الرحب والسعة. يمكنك معاودة الاتصال بنا إن كانت لديك أسئلة أخرى. — إلى اللقاء عبر الهاتف!",
+    "titleDe": "Beispielanruf bei einer Krankenkasse",
+    "titleAr": "مثال: اتصال بصندوق تأمين صحي",
+    "de": "Guten Tag, hier ist Ihre Krankenkasse. Wie kann ich Ihnen helfen? — Guten Tag, hier spricht Nadia Saleh. Ich habe mich gestern angemeldet, aber meine Versicherungsnummer noch nicht bekommen. Wie erhalte ich sie? — Wir schicken die Nummer per Post, sobald Ihre Anmeldung bearbeitet ist. Das kann einige Tage dauern. — Kann ich in der Zwischenzeit trotzdem zum Arzt gehen? Muss ich die Rechnung selbst bezahlen? — Wenn Ihre Versicherung bereits aktiv ist, rechnet die Praxis normalerweise direkt mit uns ab. Sie können eine Mitgliedsbescheinigung bei uns anfordern und beim Arzt vorzeigen. — Bekomme ich die Versichertenkarte später auch? — Ja, die Karte kommt nach der Bearbeitung ebenfalls per Post. Bitte prüfen Sie, ob Ihre Adresse richtig ist. — Das mache ich. Ich schreibe die Informationen in mein Notizbuch, damit ich sie nicht vergesse. Vielen Dank für die Information. — Gern. Wenn Sie noch Fragen haben, können Sie uns wieder anrufen. — Auf Wiederhören!",
+    "ar": "مرحباً، معك صندوق التأمين الصحي. كيف أستطيع مساعدتك؟ — نهارك سعيد، معكم نادية صالح. سجلت أمس، لكنني لم أحصل على رقم التأمين بعد. كيف يصلني؟ — نرسل الرقم بالبريد بعد معالجة طلبك. وقد يستغرق ذلك بضعة أيام. — هل يمكنني الذهاب إلى الطبيب في هذه الأثناء؟ وهل يجب أن أدفع الفاتورة بنفسي؟ — إذا كان تأمينك سارياً بالفعل، فعادةً ما تتولى العيادة تسوية الحساب معنا مباشرةً. يمكنك طلب شهادة عضوية منا وإبرازها للطبيب. — وهل سأحصل على بطاقة التأمين لاحقاً أيضاً؟ — نعم، نرسل البطاقة بالبريد بعد معالجة الطلب. من فضلك تحققي من صحة عنوانك. — سأفعل ذلك. أدوّن المعلومات في دفتري كي لا أنساها. شكراً على المعلومة. — على الرحب والسعة. يمكنك معاودة الاتصال بنا إن كانت لديك أسئلة أخرى. — إلى اللقاء عبر الهاتف!",
     "questions": [
       {
         "type": "mc",
@@ -7473,8 +7473,8 @@
   {
     "id": "t-a2-29",
     "level": "A2",
-    "titleDe": "Ein neuer Deutschkurs",
-    "titleAr": "دورة ألمانية جديدة",
+    "titleDe": "Beispiel: Ein neuer Deutschkurs",
+    "titleAr": "مثال: دورة ألمانية جديدة",
     "de": "Nächste Woche beginnt ein neuer Deutschkurs an der Volkshochschule. Der Kurs ist dreimal pro Woche: montags, mittwochs und freitags von 18 bis 20 Uhr. Viele von uns lernen nach der Arbeit, deshalb ist der Abendkurs praktisch. Am Ende der Woche wiederholen wir gemeinsam den Wortschatz. Der Lehrer heißt Herr Neumann. Er ist freundlich und erklärt die Grammatik mit einfachen Beispielen. Im Kurs sprechen wir viel miteinander. Wir üben kurze Gespräche, hören Dialoge und schreiben kleine Texte. In der Pause trinke ich Tee mit zwei anderen Teilnehmenden. Wir helfen einander bei den Hausaufgaben. Ich freue mich auf den Kurs, weil ich für die A2-Prüfung üben möchte. Das Zertifikat brauche ich für meinen Job. Heute habe ich das Lehrbuch gekauft und mein Heft vorbereitet. Ich möchte vor dem ersten Unterricht noch einmal die wichtigsten Wörter wiederholen. So kann ich besser mitarbeiten und den Lehrer verstehen. Nach dem Kurs fahre ich mit dem Bus nach Hause.",
     "ar": "تبدأ دورة جديدة للألمانية الأسبوع القادم في مركز تعليم الكبار. تُعقد الدورة ثلاث مرات في الأسبوع: أيام الاثنين والأربعاء والجمعة من السادسة إلى الثامنة مساءً. يتعلم كثير منا بعد العمل، لذلك تناسبنا الدورة المسائية. نراجع المفردات معاً في نهاية الأسبوع. اسم المدرس السيد نويمان. إنه ودود ويشرح القواعد بأمثلة بسيطة. نتحدث كثيراً معاً في الدورة. نتدرب على حوارات قصيرة ونستمع إلى حوارات ونكتب نصوصاً صغيرة. أشرب الشاي في الاستراحة مع مشاركين اثنين آخرين. نساعد بعضنا في الواجبات. أنا متحمس للدورة لأنني أريد الاستعداد لامتحان A2. أحتاج إلى الشهادة من أجل عملي. اشتريت كتاب الدورة وجهزت دفتري اليوم. أريد أن أراجع أهم الكلمات مرة أخرى قبل الدرس الأول. هكذا أستطيع المشاركة بصورة أفضل وفهم المدرس. أعود إلى البيت بالحافلة بعد الدورة.",
     "questions": [
@@ -7495,15 +7495,15 @@
       {
         "id": "t-a2-29-q2",
         "type": "mc",
-        "promptDe": "Wofür braucht die Person das Zertifikat?",
-        "promptAr": "لماذا تحتاج المتحدثة إلى الشهادة؟",
+        "promptDe": "Wofür brauche ich das Zertifikat?",
+        "promptAr": "لماذا أحتاج إلى الشهادة؟",
         "options": [
-          "Für ihren Job",
+          "Für meinen Job",
           "Für eine Reise",
           "Für die Universität"
         ],
-        "answer": "Für ihren Job",
-        "explanationAr": "الدليل في النص: «Das Zertifikat brauche ich für meinen Job.» — تحتاج إلى الشهادة من أجل عملها."
+        "answer": "Für meinen Job",
+        "explanationAr": "«Das Zertifikat brauche ich für meinen Job.» — أحتاج إلى الشهادة من أجل عملي."
       }
     ],
     "wordCountDe": 153
@@ -7512,9 +7512,9 @@
     "id": "t-a2-30",
     "level": "A2",
     "titleDe": "Mein Lieblingsgericht",
-    "titleAr": "طبختي المفضلة",
+    "titleAr": "طبقي المفضل",
     "de": "Mein Lieblingsgericht ist Couscous mit Gemüse und Lamm. Das kocht meine Mutter jeden Freitag in Tunesien. Für das Gericht braucht man Couscous, Karotten, Zucchini, Kichererbsen, Tomaten, Zwiebeln, Knoblauch und Gewürze wie Kreuzkümmel und Paprika. Meine Mutter würzt das Gericht nach Geschmack. Sie bereitet zuerst das Gemüse vor. Sie schält die Karotten und schneidet die Zucchini in Stücke. Die Zwiebeln werden klein geschnitten und mit etwas Öl angebraten. Danach kommen das Lamm, Wasser und die Gewürze in den Topf. Alles kocht langsam, bis das Fleisch weich ist. Der Couscous wird in einem Siebeinsatz über dem Dampf gegart. Die Kichererbsen kochen mit, bis sie weich sind. Am Schluss legt man den Couscous auf einen großen Teller und gibt Fleisch und Gemüse darüber. Es schmeckt besonders gut mit scharfer Harissa. Die Soße steht extra auf dem Tisch, damit jeder selbst entscheiden kann, wie scharf sein Essen sein soll. Am Freitag isst die ganze Familie gemeinsam.",
-    "ar": "طبختي المفضلة هي الكسكس بالخضار ولحم الضأن. تطبخه أمي كل يوم جمعة في تونس. نحتاج إلى الكسكس والجزر والكوسا والحمص والطماطم والبصل والثوم وتوابل مثل الكمون والفلفل الأحمر. تضيف أمي التوابل حسب الذوق. تحضّر الخضار أولاً. تقشّر الجزر وتقطّع الكوسا إلى قطع. يُفرم البصل ناعماً ويُحمّر بقليل من الزيت. ثم يُضاف لحم الضأن والماء والتوابل إلى القدر. يُطهى كل شيء على نار هادئة حتى يطرى اللحم. يُطهى الكسكس على البخار في مصفاة فوق القدر. ويُطهى الحمص معه حتى يطرى. في النهاية تضع أمي الكسكس في طبق كبير وتضع اللحم والخضار فوقه. يكون طعمه لذيذاً جداً مع الهريسة الحارة. توضع الصلصة جانباً كي يختار كل شخص درجة حرارة طعامه. تتناول العائلة كلها الطعام معاً يوم الجمعة.",
+    "ar": "طبقي المفضل هو الكسكس بالخضار ولحم الضأن. تطبخه أمي كل يوم جمعة في تونس. نحتاج إلى الكسكس والجزر والكوسا والحمص والطماطم والبصل والثوم وتوابل مثل الكمون والبابريكا. تضيف أمي التوابل حسب الذوق. تحضّر الخضار أولاً. تقشّر الجزر وتقطّع الكوسا إلى قطع. يُفرم البصل ناعماً ويُحمّر بقليل من الزيت. ثم يُضاف لحم الضأن والماء والتوابل إلى القدر. يُطهى كل شيء على نار هادئة حتى يطرى اللحم. يُطهى الكسكس على البخار في مصفاة فوق القدر. ويُطهى الحمص معه حتى يطرى. في النهاية تضع أمي الكسكس في طبق كبير وتضع اللحم والخضار فوقه. يكون طعمه لذيذاً جداً مع الهريسة الحارة. توضع الصلصة جانباً كي يختار كل شخص بنفسه كمية الهريسة الحارة التي تناسبه. تتناول العائلة كلها الطعام معاً يوم الجمعة.",
     "questions": [
       {
         "type": "mc",
@@ -8306,8 +8306,8 @@
   {
     "id": "t-a2-031",
     "level": "A2",
-    "titleDe": "Ein Umzug nach Leipzig",
-    "titleAr": "انتقال إلى لايبزيغ",
+    "titleDe": "Beispiel: Ein Umzug nach Leipzig",
+    "titleAr": "مثال: الانتقال إلى لايبزيغ",
     "de": "Letzten Monat ist Sara von München nach Leipzig gezogen. Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch, deshalb suchte sie eine Wohnung im Osten. In Leipzig fand sie eine schöne Altbauwohnung mit drei Zimmern und Balkon für 650 Euro warm. Am Anfang vermisste sie ihre Freunde in München, aber sie lernte schnell neue Kollegen kennen. Jetzt gefällt ihr Leipzig gut: Die Stadt ist grün, die Menschen sind freundlich und die Mieten sind bezahlbar. Ihre neue Wohnung liegt in einem ruhigen Viertel. Vom Balkon sieht sie einen kleinen Park. Am ersten Tag hat sie die Kartons ausgepackt und die Küche eingerichtet. Eine Nachbarin hat ihr geholfen, die Möbel ins Haus zu tragen. Bei der Arbeit hat Sara neue Aufgaben bekommen. Sie vermisst ihre Familie noch, telefoniert aber am Wochenende oft mit ihrer Schwester. Am Samstag erkundet sie die Stadt mit dem Fahrrad und probiert neue Cafés aus.",
     "ar": "انتقلت سارة الشهر الماضي من ميونخ إلى لايبزيغ. كانت قد وجدت وظيفة جديدة كمصممة جرافيك. كان الإيجار في ميونخ مرتفعاً جداً، لذلك بحثت عن شقة في الشرق. وجدت في لايبزيغ شقة جميلة في مبنى قديم، فيها ثلاث غرف وشرفة، بإيجار شامل قدره 650 يورو. افتقدت أصدقاءها في ميونخ في البداية، لكنها تعرفت سريعاً على زملاء جدد. والآن تعجبها لايبزيغ: المدينة خضراء والناس لطفاء والإيجارات معقولة. تقع شقتها الجديدة في حي هادئ. وترى من الشرفة حديقة صغيرة. أخرجت الصناديق ورتبت المطبخ في اليوم الأول. ساعدتها جارة في نقل الأثاث إلى المبنى. حصلت سارة في العمل على مهام جديدة. ما زالت تفتقد عائلتها، لكنها تتصل بأختها كثيراً في نهاية الأسبوع. تستكشف المدينة يوم السبت بالدراجة وتجرب مقاهي جديدة.",
     "questions": [
@@ -8317,12 +8317,12 @@
         "promptDe": "Warum ist Sara nach Leipzig gezogen?",
         "promptAr": "لماذا انتقلت إلى لايبزيغ؟",
         "options": [
-          "Wegen einer neuen Stelle und niedrigeren Mieten",
+          "Wegen einer neuen Stelle und der hohen Miete in München",
           "Wegen des Wetters",
           "Weil ihre Familie dort wohnt"
         ],
-        "answer": "Wegen einer neuen Stelle und niedrigeren Mieten",
-        "explanationAr": "الدليل في النص: «Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch» — وجدت وظيفة جديدة وكانت إيجارات ميونخ عالية."
+        "answer": "Wegen einer neuen Stelle und der hohen Miete in München",
+        "explanationAr": "الدليل في النص: «Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch.» — وجدت وظيفة جديدة، وكان إيجار ميونخ مرتفعاً أكثر من اللازم."
       },
       {
         "id": "t-a2-031-q2",
@@ -8344,7 +8344,7 @@
     "id": "t-a2-032",
     "level": "A2",
     "titleDe": "Ein gesunder Tagesablauf",
-    "titleAr": "يوم صحي",
+    "titleAr": "روتين يومي صحي",
     "de": "Lukas hat seinen Tagesablauf in den letzten Monaten stark verändert. Früher stand er spät auf, trank drei Tassen Kaffee zum Frühstück und aß mittags oft Fast Food. Abends saß er stundenlang vor dem Fernseher. Jetzt steht er um sieben Uhr auf, macht zwanzig Minuten Yoga und frühstückt Müsli mit Obst. Mittags kocht er selbst Gemüse mit Reis. Er geht dreimal pro Woche laufen und schläft vor Mitternacht. Seitdem fühlt er sich viel fitter und ist bei der Arbeit konzentrierter. Er sagt, die größte Schwierigkeit war, abends keine Schokolade zu essen. Am Anfang fiel es ihm schwer, früher ins Bett zu gehen. Deshalb legt er sein Handy abends in einen anderen Raum und liest vor dem Schlafen ein Buch. Er plant seine Mahlzeiten für die Woche und kauft am Samstag frisches Gemüse. Seine Kollegen haben die Veränderung bemerkt. In der Mittagspause gehen sie manchmal gemeinsam spazieren. Lukas sagt, dass kleine Schritte besser zu seinem Alltag passen als ein strenger Plan. Er möchte die neue Routine auch im Winter beibehalten.",
     "ar": "غيّر لوكاس روتينه اليومي كثيراً خلال الأشهر الماضية. كان يستيقظ متأخراً، ويشرب ثلاثة أكواب من القهوة على الفطور، ويتناول غالباً الوجبات السريعة على الغداء. وكان يجلس ساعات أمام التلفاز في المساء. أما الآن فيستيقظ في السابعة، ويمارس اليوغا عشرين دقيقة، ويفطر موسلي مع الفاكهة. يطبخ الخضار مع الأرز على الغداء بنفسه. يركض ثلاث مرات في الأسبوع وينام قبل منتصف الليل. ومنذ ذلك الحين يشعر بنشاط أكبر ويكون أكثر تركيزاً في العمل. يقول إن أصعب شيء كان الامتناع عن أكل الشوكولاتة مساءً. في البداية كان من الصعب عليه أن ينام أبكر. لذلك يضع هاتفه في غرفة أخرى مساءً ويقرأ كتاباً قبل النوم. يخطط لوجبات الأسبوع ويشتري الخضار الطازجة يوم السبت. لاحظ زملاؤه هذا التغيير. ويتمشون معاً أحياناً في استراحة الغداء. يقول لوكاس إن الخطوات الصغيرة تناسب حياته اليومية أكثر من خطة صارمة. ويريد المحافظة على روتينه الجديد في الشتاء أيضاً.",
     "questions": [
