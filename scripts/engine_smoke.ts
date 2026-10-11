@@ -10421,6 +10421,78 @@ void 0;
     reviewA2Extras.audio.listened === false && reviewA2Extras.audio.generated === false && reviewA2Extras.audio.modified === false,
     "K223f مانيفستو الحوار ومانيفستو الاستماع منفصلان ولا تسجيلات/ملفات لهذه الموارد؛ لا استماع أو neu أو توليد/تعديل");
 }
+/* ═══ K224 — موارد B1 الإضافية: حوار و4 نصوص استماع (R153). ═══ */
+{
+  const reviewB1Extras = JSON.parse(readFileSync("docs/content-review-b1-dialogues-10-2026-10-11.json", "utf8")) as any;
+  const reviewB1ExtrasMd = readFileSync("docs/content-review-b1-dialogues-10-2026-10-11.md", "utf8");
+  const reviewB1Patch = readFileSync("scripts/patches/review_b1_extras_10.py", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const ids = ["dlg-b1-kontoeroeffnung", "hoer-b1-01", "d-b1-ht01", "d-b1-ht02", "d-b1-ht03"];
+  const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const tasksValid = batch.every((d:any) => d && d.level === "B1" && Array.isArray(d.lines) && d.lines.length > 0 &&
+    d.lines.every((line:any) => typeof line.de === "string" && !!line.de.trim() && typeof line.ar === "string" && !!line.ar.trim()) &&
+    Array.isArray(d.questions) && d.questions.length > 0 && d.questions.every((q:any) =>
+      typeof q.promptDe === "string" && !!q.promptDe.trim() && typeof q.promptAr === "string" && !!q.promptAr.trim() &&
+      typeof q.explanationAr === "string" && !!q.explanationAr.trim() && q.type === "mc" && Array.isArray(q.options) &&
+      new Set(q.options).size === q.options.length && q.options.includes(q.answer)) &&
+    Array.isArray(d.dictation) && d.dictation.length > 0 &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewB1Extras.reviewRule === "R153" && JSON.stringify(reviewB1Extras.targetIds) === JSON.stringify(ids) &&
+    reviewB1Extras.totals.resources === 5 && reviewB1Extras.totals.dialogues === 1 && reviewB1Extras.totals.hoertexte === 4 &&
+    reviewB1Extras.totals.lines === 18 && reviewB1Extras.totals.questions === 7 && reviewB1Extras.totals.dictation === 6 &&
+    reviewB1Extras.totals.correctedFields === 30 && reviewB1Extras.totals.unresolved === 0 && reviewB1Extras.corrections.length === 30 &&
+    reviewB1ExtrasMd.includes("K224a–f") && reviewB1Patch.includes("expected 30 guarded edits") && reviewB1Patch.includes("if current == new"),
+    "K224a تقرير R153 والرقعة المحروسة يطابقان الموارد والحقول والتوثيق");
+  ok(tasksValid, "K224b موارد B1 الإضافية: كل سطر مترجم، ومفاتيح MC فريدة وصالحة، والإملاءات مقاطع حرفية");
+  const bank = batch[0];
+  ok(bank.questions[0].promptDe === "Welche Unterlagen soll die Kundin zu Beginn mitbringen?" &&
+    bank.questions[0].answer === "Personalausweis/Pass + Meldebescheinigung" && bank.questions[0].explanationAr.includes("في بداية الحوار") &&
+    bank.questions[1].answer === "Für Studenten und Azubis" && bank.lines[5].de.includes("4,90 Euro im Monat") &&
+    bank.lines[2].ar.includes("شهادة تسجيل السكن") && bank.lines[7].ar.includes("يُرجى ملء هذه الاستمارة") &&
+    bank.dictation[0] === "Ich möchte gerne ein Girokonto eröffnen." &&
+    bank.dictation[1] === "Sie bekommen die Karte und die PIN in etwa einer Woche per Post.",
+    "K224c حساب Girokonto: وثائق البداية منفصلة عن شهادة الطالبة اللاحقة؛ مفاتيح الرسوم والإملاءات محفوظة");
+  const mailbox = batch[1];
+  ok(mailbox.lines[0].de.includes("Ansonsten ruf mich bitte auf dem Handy zurück.") &&
+    !mailbox.lines[0].de.includes("ruf mich zurück auf dem Handy") &&
+    mailbox.questions[0].answer === "Weil der Termin ausfällt" &&
+    mailbox.questions[1].answer === "Bescheid sagen, ob der Termin passt" &&
+    mailbox.dictation[0] === "Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen." &&
+    mailbox.lines[0].de.includes(mailbox.dictation[0]) && mailbox.lines[0].ar.includes("لن يُعقد") &&
+    mailbox.lines[0].ar.includes("على هاتفي المحمول"),
+    "K224d رسالة البريد الصوتي: موعد بديل وطلب الرد والاتصال الراجع بصياغة سليمة وإملاء يتضمن الساعة 10");
+  const strike = batch[2], rail = batch[3], environment = batch[4];
+  ok(!strike.lines[0].de.includes("Verdi") && !strike.lines[1].de.includes("Deutsche Bahn") &&
+    strike.lines[0].de.includes("eines Warnstreiks einer Gewerkschaft") &&
+    strike.lines[1].de.includes("des Verkehrsunternehmens") && strike.lines[1].de.includes("10 Uhr morgens") &&
+    strike.questions[0].answer === "Der Streik dauert sechs Stunden" && strike.dictation[0] === strike.lines[0].de &&
+    rail.lines[0].de.includes("wir bitten Sie, die Verspätung") && !rail.lines[0].de.includes("Bundespolizei") &&
+    rail.lines[0].de.includes("die Polizei gerade wegschickt") && rail.questions[0].answer === "Wegen Personen auf der Strecke" &&
+    rail.lines[1].ar.includes("قطار الربط إلى هامبورغ") &&
+    rail.dictation[0] === "Sehr geehrte Fahrgäste, wir bitten Sie, die Verspätung von etwa 15 Minuten zu entschuldigen." &&
+    environment.lines[3].de.includes("Ich befürchte") && environment.lines[3].de.includes("Meiner Meinung nach") &&
+    !environment.lines[3].de.includes("Studien zeigen") && !environment.lines[3].de.includes("fünf Jahren") &&
+    environment.questions[0].promptAr === "ماذا تقترح السيدة نويمان؟" && environment.questions[0].answer === "Mehr ÖPNV" &&
+    environment.questions[0].explanationAr.includes("إنها تخشى"),
+    "K224e الأخبار عامة بلا أسماء مؤسسات حقيقية، واعتذار القطار صحيح، وادعاء السنوات غير المسند صار رأياً؛ المفاتيح ثابتة");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio].every((entry:any) => !ids.includes(entry.id));
+  const matchingFiles: string[] = [];
+  const scanAudio = (dir:string):void => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = dir + "/" + entry.name;
+      if (entry.isDirectory()) scanAudio(path);
+      else if (ids.includes(entry.name.replace(/\.[^.]*$/, ""))) matchingFiles.push(path);
+    }
+  };
+  scanAudio("public/audio");
+  ok(noManifestEntries && matchingFiles.length === 0 && reviewB1Extras.audio.dialogAudioManifestEntries === 0 &&
+    reviewB1Extras.audio.hoerenAudioManifestEntries === 0 && reviewB1Extras.audio.matchingFilesPresent === 0 &&
+    reviewB1Extras.audio.listened === false && reviewB1Extras.audio.generated === false && reviewB1Extras.audio.modified === false,
+    "K224f مانيفستو الحوار ومانيفستو الاستماع منفصلان ولا تسجيلات/ملفات لهذه الموارد؛ لا استماع أو neu أو توليد/تعديل");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;

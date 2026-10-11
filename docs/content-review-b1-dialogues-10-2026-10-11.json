@@ -1,0 +1,293 @@
+{
+  "reviewRule": "R153",
+  "date": "2026-10-11",
+  "scope": "مراجعة خمسة موارد B1 إضافية: حوار فتح حساب، رسالة بريد صوتي، وثلاثة نصوص إذاعية/إعلانية. شمل الفحص كل سطر وترجمته، الأسئلة والخيارات والمفاتيح والشروح والإملاءات؛ وفُصل مانيفستو الحوار عن مانيفستو نصوص الاستماع.",
+  "method": "استُخرجت العناصر من content/dialogues.json الحي. رقعة scripts/patches/review_b1_extras_10.py ذات 30 انتقالاً محروساً، قابلة لإعادة التشغيل بلا تغييرات إضافية؛ تحققت من مفاتيح MC داخل خيارات فريدة ومن وجود كل إملاء حرفياً في سطر ألماني.",
+  "targetIds": [
+    "dlg-b1-kontoeroeffnung",
+    "hoer-b1-01",
+    "d-b1-ht01",
+    "d-b1-ht02",
+    "d-b1-ht03"
+  ],
+  "resources": [
+    {
+      "id": "dlg-b1-kontoeroeffnung",
+      "level": "B1",
+      "kind": "dialogue",
+      "titleDe": "Ein Girokonto eröffnen",
+      "lines": 9,
+      "questions": 2,
+      "dictation": 2,
+      "corrections": 10,
+      "judgement": "الحوار يطلب في البداية الهوية أو جواز السفر وشهادة تسجيل السكن؛ شهادة القيد الجامعي لاحقة لإثبات صفة الطالبة؛ الحساب مجاني للطلاب والمتدربين وفق سياسة الفرع في السيناريو."
+    },
+    {
+      "id": "hoer-b1-01",
+      "level": "B1",
+      "kind": "hoertext",
+      "titleDe": "Nachricht auf der Mailbox",
+      "lines": 1,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 3,
+      "judgement": "رسالة سارة: موعد الأربعاء مع السيد بيكر لن يُعقد بسبب مرضه، ومقترح بديل 18 نوفمبر الساعة 10؛ يلزم رد كريم حتى الغد؛ صُحح ترتيب zurückrufen واكتمل الإملاء."
+    },
+    {
+      "id": "d-b1-ht01",
+      "level": "B1",
+      "kind": "hoertext",
+      "titleDe": "Radiomeldung: Streik im ÖPNV",
+      "lines": 2,
+      "questions": 1,
+      "dictation": 1,
+      "corrections": 5,
+      "judgement": "إضراب تحذيري افتراضي في مدينة غير محددة: الخدمة محدودة، U1/U3 الأكثر تأثراً، S-Bahn شبه كاملة، من 4 إلى 10 صباحاً؛ حُذفت الأسماء المؤسسية الحقيقية."
+    },
+    {
+      "id": "d-b1-ht02",
+      "level": "B1",
+      "kind": "hoertext",
+      "titleDe": "Ansage im Zug: Verspätung wegen Personen auf der Strecke",
+      "lines": 2,
+      "questions": 1,
+      "dictation": 1,
+      "corrections": 6,
+      "judgement": "تأخير نحو 15 دقيقة بسبب أشخاص على السكة؛ الشرطة تتعامل معهم، الوصول متوقع 17:45، والربط إلى هامبورغ معرض للخطر؛ صُحح تركيب الاعتذار والإملاء."
+    },
+    {
+      "id": "d-b1-ht03",
+      "level": "B1",
+      "kind": "hoertext",
+      "titleDe": "Interview mit Umweltschützerin",
+      "lines": 4,
+      "questions": 1,
+      "dictation": 1,
+      "corrections": 6,
+      "judgement": "مقابلة عن طريق عبر الغابة والنقل العام؛ صارت ترجمة CO₂ وخدمات الحافلات/القطارات أدق، وأزيل ادعاء «خمس سنوات» غير المسند وصيغ الموقف كرأي."
+    }
+  ],
+  "totals": {
+    "resources": 5,
+    "dialogues": 1,
+    "hoertexte": 4,
+    "lines": 18,
+    "questions": 7,
+    "dictation": 6,
+    "correctedFields": 30,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "dlg-b1-kontoeroeffnung.lines[0].ar",
+      "old": "نهارك سعيد! أريد فتح حساب جارٍ من فضلك.",
+      "new": "مرحباً! أودّ فتح حساب جارٍ.",
+      "rationale": "استبدال التحية الحرفية بتحية هاتفية/خدمية عربية مألوفة، مع ترجمة Ich möchte gerne بصيغة رغبة طبيعية."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.lines[1].ar",
+      "old": "نهارك سعيد! أحضر معك بطاقتك الشخصية أو جواز سفرك وشهادة التسجيل في السكن من فضلك.",
+      "new": "مرحباً! يُرجى إحضار بطاقة هويتك أو جواز سفرك، بالإضافة إلى شهادة تسجيل السكن.",
+      "rationale": "صياغة طلب إحضار المستندات بصيغة مهذبة محايدة الجنس، وتحديد Meldebescheinigung كشهادة تسجيل السكن."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.lines[2].ar",
+      "old": "نعم، هذه بطاقتي وشهادة التسجيل.",
+      "new": "نعم، تفضّلي؛ هذه بطاقة هويتي وشهادة تسجيل السكن.",
+      "rationale": "توضيح هوية الوثيقتين وصياغة تسليم الزبونة لهما للموظفة بصيغة عربية طبيعية."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.lines[3].ar",
+      "old": "شكراً. هل تريد إدارة الحساب عبر الإنترنت أم تأتي بانتظام إلى الفرع؟",
+      "new": "شكراً. هل تفضّلين إدارة الحساب عبر الإنترنت أم زيارة الفرع بانتظام؟",
+      "rationale": "توحيد بنية الخيارين وتوجيه المخاطبة للمؤنث بما يوافق Kundin؛ إما إدارة الحساب إلكترونياً أو زيارة الفرع."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.lines[4].ar",
+      "old": "عبر الإنترنت من فضلك. هل توجد رسوم شهرية؟",
+      "new": "أفضل إدارة الحساب عبر الإنترنت. هل توجد رسوم شهرية؟",
+      "rationale": "ترجمة Am liebsten online إلى تفضيل إدارة الحساب إلكترونياً، لا طلبٍ مبهم «من فضلك»."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.lines[5].ar",
+      "old": "الحساب الجاري مجاني للطلاب والمتدربين. خلاف ذلك يكلّف 4.90 يورو شهرياً.",
+      "new": "الحساب الجاري مجاني للطلاب والمتدربين. أما سائر العملاء فيدفعون 4.90 يورو شهرياً.",
+      "rationale": "توضيح أن الرسوم الشهرية تخص سائر العملاء غير فئتي الطلاب والمتدربين."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.lines[7].ar",
+      "old": "ممتاز. املأ من فضلك هذه الاستمارة. ستصلك البطاقة والرمز السري بالبريد خلال أسبوع تقريباً.",
+      "new": "ممتاز. يُرجى ملء هذه الاستمارة. وستصلك البطاقة والرقم السري بالبريد خلال أسبوع تقريباً.",
+      "rationale": "استبدال الأمر المذكر الموجّه إلى زبونة بصيغة مهذبة محايدة، وتوحيد ترجمة PIN إلى الرقم السري."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.questions[0].promptDe",
+      "old": "Welche Dokumente braucht die Kundin?",
+      "new": "Welche Unterlagen soll die Kundin zu Beginn mitbringen?",
+      "rationale": "تحديد أن السؤال عن المستندات التي طُلب إحضارها في بداية المحادثة، لا كل وثيقة تظهر لاحقاً."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.questions[0].promptAr",
+      "old": "ما الوثائق التي تحتاجها الزبونة؟",
+      "new": "ما المستندات التي ينبغي للزبونة إحضارها في بداية المحادثة؟",
+      "rationale": "مطابقة العربية لسؤال بداية المحادثة، منعاً للخلط مع شهادة القيد الجامعي اللاحقة."
+    },
+    {
+      "unit": "dlg-b1-kontoeroeffnung.questions[0].explanationAr",
+      "old": "الدليل: طلبت الموظفة بطاقة الهوية أو جواز السفر وشهادة تسجيل السكن. الفخّ: شهادة القيد الجامعي ذُكرت لإثبات صفة الطالبة، أما الاستمارة والرقم السري فيرتبطان بإجراءات الحساب ولا يحلّان محل الوثيقتين المطلوبتين.",
+      "new": "الدليل: طلبت الموظفة في بداية الحوار بطاقة الهوية أو جواز السفر مع شهادة تسجيل السكن. الفخّ: تظهر شهادة القيد الجامعي لاحقاً لإثبات الدراسة والاستفادة من الإعفاء؛ أما الاستمارة والرقم السري فجزء من الإجراء.",
+      "rationale": "الفصل بين وثائق فتح الحساب المطلوبة أولاً وشهادة القيد التي تظهر لاحقاً لإثبات صفة الطالبة، مع شرح المشتتين."
+    },
+    {
+      "unit": "hoer-b1-01.lines[0].de",
+      "old": "Hallo Karim, hier ist Sarah von der Arbeit. Ich rufe an, weil der Termin mit Herrn Becker am Mittwoch leider ausfällt. Er ist krank geworden. Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen. Bitte sag mir bis morgen Bescheid, ob dir das passt. Ansonsten ruf mich zurück auf dem Handy. Danke, bis dann!",
+      "new": "Hallo Karim, hier ist Sarah von der Arbeit. Ich rufe an, weil der Termin mit Herrn Becker am Mittwoch leider ausfällt. Er ist krank geworden. Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen. Bitte sag mir bis morgen Bescheid, ob dir das passt. Ansonsten ruf mich bitte auf dem Handy zurück. Danke, bis dann!",
+      "rationale": "إصلاح موضع الظرف مع الفعل المنفصل zurückrufen؛ الصيغة الطبيعية هنا ruf mich bitte auf dem Handy zurück."
+    },
+    {
+      "unit": "hoer-b1-01.lines[0].ar",
+      "old": "مرحباً كريم، سارة من العمل. أتصل لأن موعد الأربعاء مع السيد بيكر أُلغيَ، فهو مريض. اقترحتُ موعداً جديداً في 18 نوفمبر الساعة 10. من فضلك أبلغني بحلول الغد إن كان يناسبك، وإلا فاتصل بي على الجوال. شكراً، إلى اللقاء.",
+      "new": "مرحباً كريم، معك سارة من العمل. أتصل بك لأن موعد الأربعاء مع السيد بيكر لن يُعقد؛ فقد مرض. اقترحت بالفعل موعداً بديلاً في 18 نوفمبر عند الساعة العاشرة. يُرجى إبلاغي بحلول الغد إن كان يناسبك. وإلا فاتصل بي على هاتفي المحمول. شكراً، إلى اللقاء!",
+      "rationale": "صقل الرسالة الهاتفية، وتوضيح أن الموعد لن يُعقد بسبب مرض السيد بيكر، والحفاظ على المقترح والمهلة وطلب الاتصال."
+    },
+    {
+      "unit": "hoer-b1-01.dictation[0]",
+      "old": "Ich habe schon einen neuen Termin für den 18. November vorgeschlagen.",
+      "new": "Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen.",
+      "rationale": "إكمال جملة الإملاء لتتضمن الساعة العاشرة كما في الرسالة؛ المقطع السابق أسقط معلومة الوقت من وسط الجملة."
+    },
+    {
+      "unit": "d-b1-ht01.lines[0].de",
+      "old": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks der Gewerkschaft Verdi nur eingeschränkt fahren.",
+      "new": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks einer Gewerkschaft nur eingeschränkt fahren.",
+      "rationale": "حذف اسم نقابة حقيقية كي لا يبدو الخبر المجهول المدينة/التاريخ تقريراً عن إضراب واقعي؛ بقيت فكرة الإضراب التحذيري."
+    },
+    {
+      "unit": "d-b1-ht01.lines[0].ar",
+      "old": "غداً الثلاثاء، ستسير الحافلات والقطارات في المدينة بشكل محدود بسبب إضراب تحذيري لنقابة فيردي.",
+      "new": "غداً الثلاثاء، ستعمل الحافلات والقطارات في المدينة على نحو محدود بسبب إضراب تحذيري تنظمه إحدى النقابات.",
+      "rationale": "مطابقة الترجمة لصياغة النقابة العامة بعد حذف الاسم الحقيقي، مع تركيب عربي سليم."
+    },
+    {
+      "unit": "d-b1-ht01.lines[1].de",
+      "old": "Besonders die U-Bahn-Linien U1 und U3 sind betroffen. Die S-Bahn soll nach Angaben der Deutschen Bahn fast vollständig fahren. Der Streik dauert von 4 bis 10 Uhr.",
+      "new": "Besonders die U-Bahn-Linien U1 und U3 sind betroffen. Die S-Bahn soll nach Angaben des Verkehrsunternehmens fast vollständig fahren. Der Streik dauert von 4 bis 10 Uhr morgens.",
+      "rationale": "استبدال اسم شركة حقيقية بإحالة عامة إلى شركة النقل، وتحديد أن الساعات من الرابعة إلى العاشرة صباحاً لرفع الالتباس."
+    },
+    {
+      "unit": "d-b1-ht01.lines[1].ar",
+      "old": "خطوط المترو U1 وU3 هي الأكثر تأثراً، بينما قطارات الـS-Bahn تسير شبه كاملة حسب تصريحات دويتشه بان. الإضراب من الساعة ٤ حتى ١٠ صباحاً.",
+      "new": "وتتأثر خصوصاً خطوط المترو U1 وU3. ومن المتوقع أن تستمر خدمة قطارات إس-بان بصورة شبه كاملة، وفقاً لشركة النقل. ويستمر الإضراب من الرابعة حتى العاشرة صباحاً.",
+      "rationale": "صياغة طبيعية لعبارة «خدمة إس-بان شبه كاملة» ومطابقة ذكر شركة النقل والدوام الصباحي."
+    },
+    {
+      "unit": "d-b1-ht01.dictation[0]",
+      "old": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks der Gewerkschaft Verdi nur eingeschränkt fahren.",
+      "new": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks einer Gewerkschaft nur eingeschränkt fahren.",
+      "rationale": "تحديث الإملاء ليطابق الجملة بعد حذف اسم النقابة الحقيقية من النص."
+    },
+    {
+      "unit": "d-b1-ht02.lines[0].de",
+      "old": "Sehr geehrte Fahrgäste, wir bitten die Verspätung von etwa 15 Minuten zu entschuldigen. Grund sind Personen auf der Strecke, die die Bundespolizei gerade wegschickt.",
+      "new": "Sehr geehrte Fahrgäste, wir bitten Sie, die Verspätung von etwa 15 Minuten zu entschuldigen. Grund sind Personen auf der Strecke, die die Polizei gerade wegschickt.",
+      "rationale": "إضافة المفعول Sie والفاصلة اللازمة في bitten Sie, ... zu entschuldigen، واستبدال اسم الشرطة الاتحادية الحقيقي بالشرطة العامة في سيناريو غير مؤرخ."
+    },
+    {
+      "unit": "d-b1-ht02.lines[0].ar",
+      "old": "أيها الركاب، نعتذر عن التأخير بنحو ١٥ دقيقة بسبب أشخاص على السكة وتقوم الشرطة الاتحادية بإبعادهم.",
+      "new": "أيها الركاب، نعتذر عن تأخير يقارب 15 دقيقة. سببه وجود أشخاص على السكة تعمل الشرطة على إبعادهم حالياً.",
+      "rationale": "تقسيم الاعتذار والسبب إلى جملتين أوضح، ومطابقة إحالة الشرطة العامة الجديدة."
+    },
+    {
+      "unit": "d-b1-ht02.lines[1].ar",
+      "old": "سنصل إلى المحطة الرئيسية حوالي ١٧:٤٥. ربط هامبورغ مهدد بسبب التأخير.",
+      "new": "من المتوقع أن نصل إلى المحطة الرئيسية للقطارات عند 17:45. ويهدد ذلك إمكانية اللحاق بقطار الربط إلى هامبورغ.",
+      "rationale": "ترجمة Hauptbahnhof كمحطة قطارات رئيسية وAnschluss بوصفه قطار ربط، مع إبقاء الخطر احتمالاً لا يقيناً."
+    },
+    {
+      "unit": "d-b1-ht02.questions[0].promptAr",
+      "old": "لماذا القطار متأخر؟",
+      "new": "ما سبب تأخر القطار؟",
+      "rationale": "صياغة عربية معيارية للسؤال عن سبب التأخر."
+    },
+    {
+      "unit": "d-b1-ht02.questions[0].explanationAr",
+      "old": "الدليل: ذُكر تأخير بنحو 15 دقيقة، وسببه أشخاص على السكة تُبعدهم الشرطة الاتحادية. الفخّ: لا يعزو الإعلان التأخير إلى عطل تقني أو طقس سيئ.",
+      "new": "الدليل: ذُكر تأخير بنحو 15 دقيقة، وسببه وجود أشخاص على السكة تعمل الشرطة على إبعادهم. الفخّ: لا يعزو الإعلان التأخير إلى عطل تقني أو سوء الطقس.",
+      "rationale": "مطابقة الشرح لتعديل Bundespolizei إلى الشرطة العامة، مع إبقاء نفي البدائل كما في النص."
+    },
+    {
+      "unit": "d-b1-ht02.dictation[0]",
+      "old": "Sehr geehrte Fahrgäste, wir bitten die Verspätung von etwa 15 Minuten zu entschuldigen.",
+      "new": "Sehr geehrte Fahrgäste, wir bitten Sie, die Verspätung von etwa 15 Minuten zu entschuldigen.",
+      "rationale": "جعل الإملاء يطابق الجملة الألمانية بعد إصلاح البنية النحوية وإضافة Sie والفاصلة."
+    },
+    {
+      "unit": "d-b1-ht03.lines[1].ar",
+      "old": "الغابة مخزن مهم لثاني أكسيد الكربون ومسكن للحيوانات. نحتاج حافلات وقطارات أكثر لا طرقاً جديدة. على الحكومة الاستثمار في النقل العام.",
+      "new": "الغابة مستودع مهم للكربون وموطن لكثير من الحيوانات. وبدلاً من إنشاء طرق سريعة جديدة، نحتاج إلى مزيد من خدمات الحافلات والقطارات. وينبغي للحكومة الاستثمار في النقل العام.",
+      "rationale": "تصحيح ترجمة CO₂-Speicher إلى مستودع للكربون، وتحسين ترجمة خدمات Bus und Bahn وموطن الحيوانات."
+    },
+    {
+      "unit": "d-b1-ht03.lines[2].ar",
+      "old": "لكن الطريق سيُخفف الزحام.",
+      "new": "لكن الطريق السريع قد يخفف الضغط على حركة المرور.",
+      "rationale": "نقل würde كاحتمال/نتيجة مشروطة، وتحديد المقصود بالطريق السريع وضغط حركة المرور."
+    },
+    {
+      "unit": "d-b1-ht03.lines[3].de",
+      "old": "Studien zeigen: Neue Straßen ziehen mehr Autos an – nach fünf Jahren ist der Stau zurück. Nur öffentlicher Verkehr hilft dauerhaft.",
+      "new": "Ich befürchte, dass neue Straßen noch mehr Autos anziehen. Dann könnte der Stau später zurückkehren. Meiner Meinung nach ist ein besseres Angebot im öffentlichen Verkehr eine langfristige Lösung.",
+      "rationale": "حذف إحالة «الدراسات» والمدة القطعية بعد خمس سنوات لغياب مصدر، وتحويل الحجة إلى خوف ورأي صريحين بصيغ B1."
+    },
+    {
+      "unit": "d-b1-ht03.lines[3].ar",
+      "old": "الطرق الجديدة تجذب سيارات أكثر فيعود الازدحام بعد 5 سنوات. النقل العام وحده هو الحل الدائم.",
+      "new": "أخشى أن تجذب الطرق الجديدة مزيداً من السيارات. وقد يعود الازدحام لاحقاً. وفي رأيي، يشكّل تحسين خدمات النقل العام حلاً على المدى الطويل.",
+      "rationale": "مطابقة العربية للصياغة الجديدة كخوف ورأي، من دون تقديم المدة غير المسندة كحقيقة."
+    },
+    {
+      "unit": "d-b1-ht03.questions[0].promptAr",
+      "old": "ماذا تقترح نويمان؟",
+      "new": "ماذا تقترح السيدة نويمان؟",
+      "rationale": "إضافة «السيدة» وصياغة سؤال طبيعي مطابق لـFrau Neumann."
+    },
+    {
+      "unit": "d-b1-ht03.questions[0].explanationAr",
+      "old": "الدليل: دعت إلى مزيد من الحافلات والقطارات والاستثمار في النقل العام، وقالت إن الطرق الجديدة تجلب سيارات أكثر. الفخّ: حركة السيارات والطرق وردت في النقاش، لكن اقتراحها المحدد هو تعزيز النقل العام.",
+      "new": "الدليل: تدعو إلى مزيد من الحافلات والقطارات والاستثمار في النقل العام، وتقول إنها تخشى أن تجذب الطرق الجديدة سيارات أكثر. الفخّ: الحديث عن إنشاء الطريق السريع لا يعني أنه اقتراحها؛ اقتراحها هو تعزيز النقل العام.",
+      "rationale": "ربط الدليل بما تقوله المتحدثة بوصفه خشيةً ورأياً، لا حقيقةً إحصائية؛ وبيان أن اقتراحها النقل العام."
+    }
+  ],
+  "contentChecks": [
+    "dlg-b1-kontoeroeffnung: طلب الوثائق الأول يميز هوية/جوازاً وشهادة تسجيل السكن عن شهادة القيد الجامعي اللاحقة؛ سؤال الرسوم يثبت المجانية للطلاب والمتدربين والسعر في سيناريو الفرع.",
+    "hoer-b1-01: موعد الأربعاء أُلغي لمرض السيد بيكر؛ البديل 18 نوفمبر الساعة 10، والرد مطلوب حتى الغد؛ الإملاء يضم الوقت ويطابق الجملة كاملة.",
+    "d-b1-ht01: لا Verdi ولا Deutsche Bahn؛ الإضراب عام وغير منسوب إلى جهة حقيقية؛ المدة 4–10 صباحاً = ست ساعات، ومفتاح السؤال صحيح.",
+    "d-b1-ht02: الاعتذار الألماني صحيح نحوياً، وسبب التأخير أشخاص على السكة؛ لا ادعاء باسم جهة اتحادية أو عطل/طقس؛ الإملاء يطابق الجملة بعد التصحيح.",
+    "d-b1-ht03: سؤال الاقتراح يطابق الدعوة إلى ÖPNV؛ أزيلت عبارة «Studien zeigen» والمدة القطعية بعد خمس سنوات غير المسندة، وبقي موقف الناشطة منسوباً إليها بوصفه رأياً.",
+    "كل مفاتيح MC ضمن خيارات فريدة، ومقاطع الإملاء الستة موجودة نصياً في الأسطر الألمانية بعد التصحيح.",
+    "رسوم الحساب، شرط شهادة السكن، ومدة وصول البطاقة/الرقم السري تعامل كسياسة مصرفية داخل سيناريو بنك غير مسمى، لا كقاعدة عامة."
+  ],
+  "audio": {
+    "dialogAudioManifestEntries": 0,
+    "hoerenAudioManifestEntries": 0,
+    "matchingFilesPresent": 0,
+    "matchingFiles": [],
+    "listened": false,
+    "generated": false,
+    "modified": false,
+    "note": "لا إدخالات لهذه المعرفات في content/dialog-audio.json (مانيفستو صوت الحوارات) ولا في content/hoeren-audio.json (مانيفستو تسجيلات الاستماع)، ولا ملفات صوت مطابقة؛ لم يحدث استماع أو توليد أو تعديل، ولم يُستخدم neu بديلاً."
+  },
+  "limits": {
+    "human": "مراجعة تحريرية في بيئة الوكيل؛ ليست مراجعة بشرية مستقلة أو اعتماداً CEFR.",
+    "bank": "المبلغ 4.90 يورو، الإعفاء، المستندات المطلوبة، ومدة البريد تخص السيناريو المصرفي غير المسمى؛ لم تُتحقق خارجياً ولا تُعرض كقاعدة عامة أو نصيحة مصرفية.",
+    "dates": "تاريخ 18 نوفمبر وموعد الأربعاء والسيناريوهات الإذاعية/القطارية افتراضية ولا تتضمن سنة/مدينة قابلة للتحقق.",
+    "environment": "ادعاء «بعد خمس سنوات» و«الدراسات» حُذفا لغياب مصدر؛ بقيت حجة المتحدثة رأياً صريحاً، لا نتيجة بحث مثبتة.",
+    "audio": "لا إدخالات أو ملفات مطابقة في المانيفستوَين؛ لا ادعاء بسماع أي تسجيل.",
+    "other": "لم تتغير تحذيرات W1–W6."
+  },
+  "gates": {
+    "planned": "K224a–f"
+  },
+  "patch": "scripts/patches/review_b1_extras_10.py"
+}

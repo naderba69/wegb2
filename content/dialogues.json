@@ -10793,32 +10793,32 @@
       {
         "who": "Kundin",
         "de": "Guten Tag! Ich möchte gerne ein Girokonto eröffnen.",
-        "ar": "نهارك سعيد! أريد فتح حساب جارٍ من فضلك."
+        "ar": "مرحباً! أودّ فتح حساب جارٍ."
       },
       {
         "who": "Mitarbeiterin",
         "de": "Guten Tag! Bringen Sie bitte Ihren Personalausweis oder Pass und Ihre Meldebescheinigung mit.",
-        "ar": "نهارك سعيد! أحضر معك بطاقتك الشخصية أو جواز سفرك وشهادة التسجيل في السكن من فضلك."
+        "ar": "مرحباً! يُرجى إحضار بطاقة هويتك أو جواز سفرك، بالإضافة إلى شهادة تسجيل السكن."
       },
       {
         "who": "Kundin",
         "de": "Ja, hier sind mein Personalausweis und die Meldebescheinigung.",
-        "ar": "نعم، هذه بطاقتي وشهادة التسجيل."
+        "ar": "نعم، تفضّلي؛ هذه بطاقة هويتي وشهادة تسجيل السكن."
       },
       {
         "who": "Mitarbeiterin",
         "de": "Danke. Möchten Sie das Konto online führen oder möchten Sie regelmäßig in die Filiale kommen?",
-        "ar": "شكراً. هل تريد إدارة الحساب عبر الإنترنت أم تأتي بانتظام إلى الفرع؟"
+        "ar": "شكراً. هل تفضّلين إدارة الحساب عبر الإنترنت أم زيارة الفرع بانتظام؟"
       },
       {
         "who": "Kundin",
         "de": "Am liebsten online. Gibt es eine monatliche Gebühr?",
-        "ar": "عبر الإنترنت من فضلك. هل توجد رسوم شهرية؟"
+        "ar": "أفضل إدارة الحساب عبر الإنترنت. هل توجد رسوم شهرية؟"
       },
       {
         "who": "Mitarbeiterin",
         "de": "Für Studenten und Azubis ist das Girokonto kostenlos. Ansonsten kostet es 4,90 Euro im Monat.",
-        "ar": "الحساب الجاري مجاني للطلاب والمتدربين. خلاف ذلك يكلّف 4.90 يورو شهرياً."
+        "ar": "الحساب الجاري مجاني للطلاب والمتدربين. أما سائر العملاء فيدفعون 4.90 يورو شهرياً."
       },
       {
         "who": "Kundin",
@@ -10828,7 +10828,7 @@
       {
         "who": "Mitarbeiterin",
         "de": "Perfekt. Dann füllen Sie bitte dieses Formular aus. Sie bekommen die Karte und die PIN in etwa einer Woche per Post.",
-        "ar": "ممتاز. املأ من فضلك هذه الاستمارة. ستصلك البطاقة والرمز السري بالبريد خلال أسبوع تقريباً."
+        "ar": "ممتاز. يُرجى ملء هذه الاستمارة. وستصلك البطاقة والرقم السري بالبريد خلال أسبوع تقريباً."
       },
       {
         "who": "Kundin",
@@ -10839,8 +10839,8 @@
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Welche Dokumente braucht die Kundin?",
-        "promptAr": "ما الوثائق التي تحتاجها الزبونة؟",
+        "promptDe": "Welche Unterlagen soll die Kundin zu Beginn mitbringen?",
+        "promptAr": "ما المستندات التي ينبغي للزبونة إحضارها في بداية المحادثة؟",
         "options": [
           "Personalausweis/Pass + Meldebescheinigung",
           "Nur den Personalausweis",
@@ -10848,7 +10848,7 @@
           "Das Formular und die PIN"
         ],
         "answer": "Personalausweis/Pass + Meldebescheinigung",
-        "explanationAr": "الدليل: طلبت الموظفة بطاقة الهوية أو جواز السفر وشهادة تسجيل السكن. الفخّ: شهادة القيد الجامعي ذُكرت لإثبات صفة الطالبة، أما الاستمارة والرقم السري فيرتبطان بإجراءات الحساب ولا يحلّان محل الوثيقتين المطلوبتين.",
+        "explanationAr": "الدليل: طلبت الموظفة في بداية الحوار بطاقة الهوية أو جواز السفر مع شهادة تسجيل السكن. الفخّ: تظهر شهادة القيد الجامعي لاحقاً لإثبات الدراسة والاستفادة من الإعفاء؛ أما الاستمارة والرقم السري فجزء من الإجراء.",
         "id": "dlg-b1-kontoeroeffnung-q1"
       },
       {
@@ -11503,8 +11503,8 @@
     "lines": [
       {
         "who": "Kollegin",
-        "de": "Hallo Karim, hier ist Sarah von der Arbeit. Ich rufe an, weil der Termin mit Herrn Becker am Mittwoch leider ausfällt. Er ist krank geworden. Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen. Bitte sag mir bis morgen Bescheid, ob dir das passt. Ansonsten ruf mich zurück auf dem Handy. Danke, bis dann!",
-        "ar": "مرحباً كريم، سارة من العمل. أتصل لأن موعد الأربعاء مع السيد بيكر أُلغيَ، فهو مريض. اقترحتُ موعداً جديداً في 18 نوفمبر الساعة 10. من فضلك أبلغني بحلول الغد إن كان يناسبك، وإلا فاتصل بي على الجوال. شكراً، إلى اللقاء."
+        "de": "Hallo Karim, hier ist Sarah von der Arbeit. Ich rufe an, weil der Termin mit Herrn Becker am Mittwoch leider ausfällt. Er ist krank geworden. Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen. Bitte sag mir bis morgen Bescheid, ob dir das passt. Ansonsten ruf mich bitte auf dem Handy zurück. Danke, bis dann!",
+        "ar": "مرحباً كريم، معك سارة من العمل. أتصل بك لأن موعد الأربعاء مع السيد بيكر لن يُعقد؛ فقد مرض. اقترحت بالفعل موعداً بديلاً في 18 نوفمبر عند الساعة العاشرة. يُرجى إبلاغي بحلول الغد إن كان يناسبك. وإلا فاتصل بي على هاتفي المحمول. شكراً، إلى اللقاء!"
       }
     ],
     "questions": [
@@ -11538,7 +11538,7 @@
       }
     ],
     "dictation": [
-      "Ich habe schon einen neuen Termin für den 18. November vorgeschlagen."
+      "Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen."
     ],
     "hoertext": true
   },
@@ -12087,13 +12087,13 @@
     "situationAr": "خبر في الراديو: إضراب النقل العام",
     "lines": [
       {
-        "de": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks der Gewerkschaft Verdi nur eingeschränkt fahren.",
-        "ar": "غداً الثلاثاء، ستسير الحافلات والقطارات في المدينة بشكل محدود بسبب إضراب تحذيري لنقابة فيردي.",
+        "de": "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks einer Gewerkschaft nur eingeschränkt fahren.",
+        "ar": "غداً الثلاثاء، ستعمل الحافلات والقطارات في المدينة على نحو محدود بسبب إضراب تحذيري تنظمه إحدى النقابات.",
         "who": "Moderator"
       },
       {
-        "de": "Besonders die U-Bahn-Linien U1 und U3 sind betroffen. Die S-Bahn soll nach Angaben der Deutschen Bahn fast vollständig fahren. Der Streik dauert von 4 bis 10 Uhr.",
-        "ar": "خطوط المترو U1 وU3 هي الأكثر تأثراً، بينما قطارات الـS-Bahn تسير شبه كاملة حسب تصريحات دويتشه بان. الإضراب من الساعة ٤ حتى ١٠ صباحاً.",
+        "de": "Besonders die U-Bahn-Linien U1 und U3 sind betroffen. Die S-Bahn soll nach Angaben des Verkehrsunternehmens fast vollständig fahren. Der Streik dauert von 4 bis 10 Uhr morgens.",
+        "ar": "وتتأثر خصوصاً خطوط المترو U1 وU3. ومن المتوقع أن تستمر خدمة قطارات إس-بان بصورة شبه كاملة، وفقاً لشركة النقل. ويستمر الإضراب من الرابعة حتى العاشرة صباحاً.",
         "who": "Moderator"
       }
     ],
@@ -12115,7 +12115,7 @@
       }
     ],
     "dictation": [
-      "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks der Gewerkschaft Verdi nur eingeschränkt fahren."
+      "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks einer Gewerkschaft nur eingeschränkt fahren."
     ]
   },
   {
@@ -12126,13 +12126,13 @@
     "situationAr": "إعلان في القطار: تأخير بسبب أشخاص على السكة",
     "lines": [
       {
-        "de": "Sehr geehrte Fahrgäste, wir bitten die Verspätung von etwa 15 Minuten zu entschuldigen. Grund sind Personen auf der Strecke, die die Bundespolizei gerade wegschickt.",
-        "ar": "أيها الركاب، نعتذر عن التأخير بنحو ١٥ دقيقة بسبب أشخاص على السكة وتقوم الشرطة الاتحادية بإبعادهم.",
+        "de": "Sehr geehrte Fahrgäste, wir bitten Sie, die Verspätung von etwa 15 Minuten zu entschuldigen. Grund sind Personen auf der Strecke, die die Polizei gerade wegschickt.",
+        "ar": "أيها الركاب، نعتذر عن تأخير يقارب 15 دقيقة. سببه وجود أشخاص على السكة تعمل الشرطة على إبعادهم حالياً.",
         "who": "Zugführer"
       },
       {
         "de": "Wir erreichen den Hauptbahnhof voraussichtlich um 17:45 Uhr. Der Anschluss nach Hamburg ist dadurch gefährdet.",
-        "ar": "سنصل إلى المحطة الرئيسية حوالي ١٧:٤٥. ربط هامبورغ مهدد بسبب التأخير.",
+        "ar": "من المتوقع أن نصل إلى المحطة الرئيسية للقطارات عند 17:45. ويهدد ذلك إمكانية اللحاق بقطار الربط إلى هامبورغ.",
         "who": "Zugführer"
       }
     ],
@@ -12143,18 +12143,18 @@
         "id": "d-b1-ht02-q1",
         "type": "mc",
         "promptDe": "Warum verspätet sich der Zug?",
-        "promptAr": "لماذا القطار متأخر؟",
+        "promptAr": "ما سبب تأخر القطار؟",
         "options": [
           "Wegen einer technischen Störung mit 15 Minuten Verspätung",
           "Wegen Personen auf der Strecke",
           "Wegen schlechten Wetters mit 15 Minuten Verspätung"
         ],
         "answer": "Wegen Personen auf der Strecke",
-        "explanationAr": "الدليل: ذُكر تأخير بنحو 15 دقيقة، وسببه أشخاص على السكة تُبعدهم الشرطة الاتحادية. الفخّ: لا يعزو الإعلان التأخير إلى عطل تقني أو طقس سيئ."
+        "explanationAr": "الدليل: ذُكر تأخير بنحو 15 دقيقة، وسببه وجود أشخاص على السكة تعمل الشرطة على إبعادهم. الفخّ: لا يعزو الإعلان التأخير إلى عطل تقني أو سوء الطقس."
       }
     ],
     "dictation": [
-      "Sehr geehrte Fahrgäste, wir bitten die Verspätung von etwa 15 Minuten zu entschuldigen."
+      "Sehr geehrte Fahrgäste, wir bitten Sie, die Verspätung von etwa 15 Minuten zu entschuldigen."
     ]
   },
   {
@@ -12465,17 +12465,17 @@
       },
       {
         "de": "Der Wald ist ein wichtiger CO₂-Speicher und Lebensraum für viele Tiere. Statt neuer Autobahnen brauchen wir mehr Bus und Bahn. Die Regierung sollte in den ÖPNV investieren.",
-        "ar": "الغابة مخزن مهم لثاني أكسيد الكربون ومسكن للحيوانات. نحتاج حافلات وقطارات أكثر لا طرقاً جديدة. على الحكومة الاستثمار في النقل العام.",
+        "ar": "الغابة مستودع مهم للكربون وموطن لكثير من الحيوانات. وبدلاً من إنشاء طرق سريعة جديدة، نحتاج إلى مزيد من خدمات الحافلات والقطارات. وينبغي للحكومة الاستثمار في النقل العام.",
         "who": "Frau Neumann"
       },
       {
         "de": "Aber die Autobahn würde den Verkehr entlasten.",
-        "ar": "لكن الطريق سيُخفف الزحام.",
+        "ar": "لكن الطريق السريع قد يخفف الضغط على حركة المرور.",
         "who": "Moderator"
       },
       {
-        "de": "Studien zeigen: Neue Straßen ziehen mehr Autos an – nach fünf Jahren ist der Stau zurück. Nur öffentlicher Verkehr hilft dauerhaft.",
-        "ar": "الطرق الجديدة تجذب سيارات أكثر فيعود الازدحام بعد 5 سنوات. النقل العام وحده هو الحل الدائم.",
+        "de": "Ich befürchte, dass neue Straßen noch mehr Autos anziehen. Dann könnte der Stau später zurückkehren. Meiner Meinung nach ist ein besseres Angebot im öffentlichen Verkehr eine langfristige Lösung.",
+        "ar": "أخشى أن تجذب الطرق الجديدة مزيداً من السيارات. وقد يعود الازدحام لاحقاً. وفي رأيي، يشكّل تحسين خدمات النقل العام حلاً على المدى الطويل.",
         "who": "Frau Neumann"
       }
     ],
@@ -12486,14 +12486,14 @@
         "id": "d-b1-ht03-q1",
         "type": "mc",
         "promptDe": "Was schlägt Frau Neumann vor?",
-        "promptAr": "ماذا تقترح نويمان؟",
+        "promptAr": "ماذا تقترح السيدة نويمان؟",
         "options": [
           "Mehr Autobahnen",
           "Mehr ÖPNV",
           "Weniger Autos auf der Autobahn"
         ],
         "answer": "Mehr ÖPNV",
-        "explanationAr": "الدليل: دعت إلى مزيد من الحافلات والقطارات والاستثمار في النقل العام، وقالت إن الطرق الجديدة تجلب سيارات أكثر. الفخّ: حركة السيارات والطرق وردت في النقاش، لكن اقتراحها المحدد هو تعزيز النقل العام."
+        "explanationAr": "الدليل: تدعو إلى مزيد من الحافلات والقطارات والاستثمار في النقل العام، وتقول إنها تخشى أن تجذب الطرق الجديدة سيارات أكثر. الفخّ: الحديث عن إنشاء الطريق السريع لا يعني أنه اقتراحها؛ اقتراحها هو تعزيز النقل العام."
       }
     ],
     "dictation": [
