@@ -10819,6 +10819,80 @@ void 0;
   ok(reviewB1Final.contentChecks.length === 6 && reviewB1Final.contentChecks.every((c:any) => c.status === "pass"),
     "K229f سجل التقرير فحوص R158 الستة الناجحة");
 }
+/* ═══ K230 — آخر خمسة نصوص B2 t-b2-36..40 (R159). ═══ */
+{
+  const reviewB2Final = JSON.parse(readFileSync("docs/content-review-b2-texts-02-2026-10-11.json", "utf8")) as any;
+  const reviewB2FinalMd = readFileSync("docs/content-review-b2-texts-02-2026-10-11.md", "utf8");
+  const reviewB2FinalPatch = readFileSync("scripts/patches/review_b2_texts_02.py", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const ids = ["t-b2-36", "t-b2-37", "t-b2-38", "t-b2-39", "t-b2-40"];
+  const batch = ids.map((id) => textsArr.find((t:any) => t.id === id));
+  const corrections = reviewB2Final.corrections.map((c:any) => c.unit);
+  const sourceIds = reviewB2Final.sources.map((source:any) => source.id);
+  ok(reviewB2Final.reviewRule === "R159" && JSON.stringify(reviewB2Final.targetIds) === JSON.stringify(ids) &&
+    reviewB2Final.totals.texts === 5 && reviewB2Final.totals.germanWords === 1000 &&
+    reviewB2Final.totals.sentenceEndMarks === 70 && reviewB2Final.totals.questions === 10 &&
+    reviewB2Final.totals.correctedFields === 20 && reviewB2Final.totals.guardedTransitions === 20 &&
+    reviewB2Final.totals.unresolved === 0 && corrections.length === 20 && new Set(corrections).size === 20 &&
+    reviewB2Final.coverage.before.covered === 152 && reviewB2Final.coverage.after.covered === 157 &&
+    reviewB2Final.coverage.after.total === 157 && reviewB2Final.coverage.remaining.total === 0 &&
+    sourceIds.length === 5 && new Set(sourceIds).size === 5 && reviewB2FinalMd.includes("K230a–f") &&
+    reviewB2FinalPatch.includes("len(EDITS) != 20"),
+    "K230a تقرير R159 يحصي النصوص والكلمات والأسئلة والتصحيحات والمصادر ويكمل تغطية القراءة");
+  const tasksValid = batch.every((t:any) => t && t.level === "B2" && !!t.titleDe?.trim() && !!t.titleAr?.trim() &&
+    !!t.de?.trim() && !!t.ar?.trim() && Array.isArray(t.questions) && t.questions.length === 2 &&
+    t.questions.every((q:any) => q.type === "mc" && !!q.promptDe?.trim() && !!q.promptAr?.trim() && !!q.explanationAr?.trim() &&
+      Array.isArray(q.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length && q.options.includes(q.answer)));
+  ok(tasksValid, "K230b نصوص B2 الخمسة وأسئلتها العشرة مكتملة وخياراتها ومفاتيحها صالحة");
+  const school = batch[0];
+  ok(school.titleDe === "Sollte der Schulbeginn später sein?" && school.de.includes("Eine mögliche Änderung wäre") &&
+    !school.de.includes("Immer mehr Experten") && school.de.includes("nicht eindeutig") &&
+    reviewB2Final.sources.find((source:any) => source.id === "S1")?.url.includes("aap.org") &&
+    reviewB2Final.sources.find((source:any) => source.id === "S2")?.url.includes("PMC9665092") &&
+    school.questions[0].answer === "Eltern haben organisatorische Probleme" &&
+    school.questions[0].explanationAr.includes("organisatorische Probleme"),
+    "K230c صياغة بدء الدراسة احتمالية، ودليل النوم/التحصيل حذر، والسؤال يطابق الاعتراض");
+  const workweek = batch[2];
+  ok(workweek.titleDe.includes("Vier-Tage-Woche") && workweek.de.includes("In Island blieben") &&
+    workweek.de.includes("britischen Pilotprojekt") && workweek.de.includes("stiegen leicht") &&
+    workweek.de.includes("Die deutsche Studie berichtete") && workweek.de.includes("statistisch nicht signifikant") &&
+    workweek.ar.includes("انخفض عدد أيام المرض انخفاضاً طفيفاً، لكن الفرق لم يكن ذا دلالة إحصائية") &&
+    workweek.ar.includes("ففي آيسلندا") && workweek.ar.includes("وفي التجربة البريطانية") &&
+    workweek.ar.includes("أما الدراسة الألمانية") &&
+    !workweek.de.includes("weniger Krankmeldungen") && !workweek.de.includes("Arbeitgeberverbände warnen") &&
+    ["S3", "S4", "S5"].every((id:string) => reviewB2Final.sources.some((source:any) => source.id === id && !!source.url)) &&
+    workweek.questions[0].promptDe === "Welcher Einwand wird im Text genannt?" &&
+    workweek.questions[0].explanationAr.includes("Ein möglicher Einwand lautet") &&
+    workweek.questions[0].options.includes(workweek.questions[0].answer),
+    "K230d تجارب أسبوع العمل مؤهلة حسب نتائجها؛ لا تعميم للمرض ولا نسبة اعتراض بلا سند");
+  const culture = batch[1], rural = batch[3], lie = batch[4];
+  ok(culture.titleDe.includes("persönliche Erfahrung") && culture.de.includes("In der Umgebung, aus der ich komme") &&
+    culture.ar.includes("في البيئة التي نشأت فيها") && rural.titleAr.includes("الهجرة من المدن") &&
+    rural.de.includes("Je nach Region") && rural.de.includes("Andernfalls könnte") &&
+    rural.ar.includes("تختلف الحال من منطقة إلى أخرى") && lie.ar.includes("كذبة مجاملة") &&
+    reviewB2Final.contentChecks.length === 6 && reviewB2Final.contentChecks.every((c:any) => c.status === "pass") &&
+    reviewB2FinalMd.includes("لم تُنشأ بدائل لفجوتي الحوارات"),
+    "K230e الثقافة مؤطرة كتجربة، وتحديات الريف مقيدة، والترجمات والتقرير العربي متسقة");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
+  const matchingFiles: string[] = [];
+  const scanAudio = (dir:string):void => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = dir + "/" + entry.name;
+      if (entry.isDirectory()) scanAudio(path);
+      else if (ids.includes(entry.name.replace(/\.[^.]*$/, ""))) matchingFiles.push(path);
+    }
+  };
+  scanAudio("public/audio");
+  ok(noManifestEntries && matchingFiles.length === 0 && reviewB2Final.audioAudit.dialogAudioManifestEntries === 0 &&
+    reviewB2Final.audioAudit.hoerenAudioManifestEntries === 0 && reviewB2Final.audioAudit.diktatAudioManifestEntries === 0 &&
+    reviewB2Final.audioAudit.matchingFilesPresent === 0 && reviewB2Final.audioAudit.listened === false &&
+    reviewB2Final.audioAudit.generated === false && reviewB2Final.audioAudit.modified === false,
+    "K230f مانيفست الحوار والاستماع والإملاء مستقل؛ لا إدخالات أو ملفات صوت ولا ادعاء بالاستماع");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
