@@ -7934,7 +7934,7 @@
     "titleDe": "In der Klasse",
     "titleAr": "في الصف",
     "de": "Das ist mein Klassenzimmer. Hier lerne ich Deutsch. Die Lehrerin heißt Frau Schulz. Sie ist sehr nett. Im Kurs sind 12 Studenten. Sie kommen aus Syrien, aus der Türkei, aus Polen und aus Italien. Wir sprechen zusammen Deutsch. Manchmal lachen wir viel.",
-    "ar": "هذا فصلي. أتعلم فيه الألمانية. المعلمة اسمها فراوله شولتس وهي لطيفة جداً. في الدورة 12 طالباً من سوريا وتركيا وبولندا وإيطاليا. نتكلم الألمانية معاً، وأحياناً نضحك كثيراً.",
+    "ar": "هذا فصلي. أتعلم فيه الألمانية. اسم المعلمة السيدة شولتس، وهي لطيفة جداً. يضمّ الصف 12 طالباً من سوريا وتركيا وبولندا وإيطاليا. نتحدث الألمانية معاً، وأحياناً نضحك كثيراً.",
     "questions": [
       {
         "type": "mc",
@@ -7947,7 +7947,7 @@
           "Frau Klein"
         ],
         "answer": "Frau Schulz",
-        "explanationAr": "اسمها Frau Schulz.",
+        "explanationAr": "اسمها السيدة شولتس.",
         "id": "t-a0-06-q1"
       },
       {
@@ -7972,27 +7972,27 @@
     "titleDe": "Die Wochentage",
     "titleAr": "أيام الأسبوع",
     "de": "Am Montag gehe ich zur Arbeit. Am Dienstag habe ich Deutschkurs. Am Mittwoch kaufe ich ein. Am Donnerstag treffe ich meine Freunde. Am Freitag sehe ich fern. Am Samstag schlafe ich lange. Am Sonntag besuche ich meine Familie.",
-    "ar": "الاثنين أذهب إلى العمل. الثلاثاء لدي درس ألمانية. الأربعاء أتسوّق. الخميس أقابل أصدقائي. الجمعة أشاهد التلفاز. السبت أنام طويلاً. الأحد أزور عائلتي.",
+    "ar": "أذهب إلى العمل يوم الاثنين. لدي دورة في اللغة الألمانية يوم الثلاثاء. أتسوّق يوم الأربعاء. أقابل أصدقائي يوم الخميس. أشاهد التلفاز يوم الجمعة. أنام وقتاً طويلاً يوم السبت. أزور عائلتي يوم الأحد.",
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Was macht er am Mittwoch?",
-        "promptAr": "ماذا يفعل الأربعاء؟",
+        "promptDe": "Was mache ich am Mittwoch?",
+        "promptAr": "ماذا أفعل يوم الأربعاء؟",
         "options": [
-          "Er arbeitet.",
-          "Er kauft ein.",
-          "Er sieht fern.",
-          "Er schläft."
+          "Ich arbeite.",
+          "Ich kaufe ein.",
+          "Ich sehe fern.",
+          "Ich schlafe."
         ],
-        "answer": "Er kauft ein.",
-        "explanationAr": "يتسوّق.",
+        "answer": "Ich kaufe ein.",
+        "explanationAr": "«Am Mittwoch kaufe ich ein.» — أتسوّق يوم الأربعاء.",
         "id": "t-a0-07-q1"
       },
       {
         "id": "t-a0-07-q2",
         "type": "mc",
-        "promptDe": "Wann besucht die Person ihre Familie?",
-        "promptAr": "متى يزور المتحدث عائلته؟",
+        "promptDe": "Wann besuche ich meine Familie?",
+        "promptAr": "متى أزور عائلتي؟",
         "options": [
           "Am Montag",
           "Am Donnerstag",
@@ -8000,7 +8000,7 @@
           "Am Sonntag"
         ],
         "answer": "Am Sonntag",
-        "explanationAr": "«Am Sonntag besuche ich meine Familie.» — يزور عائلته يوم الأحد."
+        "explanationAr": "«Am Sonntag besuche ich meine Familie.» — أزور عائلتي يوم الأحد."
       }
     ]
   },
@@ -8014,8 +8014,8 @@
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Was ist sein Lieblingsobst?",
-        "promptAr": "ما فاكهته المفضلة؟",
+        "promptDe": "Was ist mein Lieblingsobst?",
+        "promptAr": "ما فاكهتي المفضلة؟",
         "options": [
           "Banane",
           "Apfel",
@@ -8023,14 +8023,14 @@
           "Traube"
         ],
         "answer": "Apfel",
-        "explanationAr": "التفاح.",
+        "explanationAr": "«Mein Lieblingsobst ist der Apfel.» — فاكهتي المفضلة هي التفاح.",
         "id": "t-a0-08-q1"
       },
       {
         "id": "t-a0-08-q2",
         "type": "mc",
-        "promptDe": "Was isst die Person zum Abendbrot?",
-        "promptAr": "ماذا يأكل المتحدث في العشاء؟",
+        "promptDe": "Was esse ich zum Abendbrot?",
+        "promptAr": "ماذا آكل في وجبة العشاء؟",
         "options": [
           "Brot und Käse",
           "Reis und Fleisch",
@@ -8038,7 +8038,7 @@
           "Kuchen"
         ],
         "answer": "Obst",
-        "explanationAr": "«Zum Abendbrot trinke ich Tee und esse Obst.» — يأكل الفاكهة في العشاء."
+        "explanationAr": "«Zum Abendbrot trinke ich Tee und esse Obst.» — أشرب الشاي وآكل الفاكهة في وجبة العشاء."
       }
     ]
   },
@@ -8048,27 +8048,27 @@
     "titleDe": "Die Uhrzeit",
     "titleAr": "الوقت",
     "de": "Ich stehe um 7 Uhr auf. Um 8 Uhr frühstücke ich. Um 9 Uhr beginne ich mit der Arbeit. Um 12 Uhr esse ich zu Mittag. Um 17 Uhr gehe ich nach Hause. Um 19 Uhr esse ich zu Abend. Um 23 Uhr gehe ich ins Bett.",
-    "ar": "أستيقظ في السابعة. أفطر في الثامنة. أبدأ العمل التاسعة. آكل الغداء 12. أذهب للبيت 17. أتعشى 19. أذهب للسرير 23.",
+    "ar": "أستيقظ عند السابعة صباحاً. أتناول الفطور عند الثامنة. أبدأ العمل عند التاسعة. أتناول الغداء عند الثانية عشرة ظهراً. أعود إلى البيت عند الخامسة مساءً. أتناول العشاء عند السابعة مساءً. أذهب إلى الفراش عند الحادية عشرة ليلاً.",
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Wann beginnt er zu arbeiten?",
-        "promptAr": "متى يبدأ العمل؟",
+        "promptDe": "Wann beginne ich mit der Arbeit?",
+        "promptAr": "متى أبدأ العمل؟",
         "options": [
-          "Um 7",
-          "Um 8",
-          "Um 9",
-          "Um 12"
+          "Um 7 Uhr",
+          "Um 8 Uhr",
+          "Um 9 Uhr",
+          "Um 12 Uhr"
         ],
-        "answer": "Um 9",
-        "explanationAr": "التاسعة.",
+        "answer": "Um 9 Uhr",
+        "explanationAr": "«Um 9 Uhr beginne ich mit der Arbeit.» — أبدأ العمل عند التاسعة.",
         "id": "t-a0-09-q1"
       },
       {
         "id": "t-a0-09-q2",
         "type": "mc",
-        "promptDe": "Wann geht die Person nach Hause?",
-        "promptAr": "متى يعود المتحدث إلى البيت؟",
+        "promptDe": "Wann gehe ich nach Hause?",
+        "promptAr": "متى أعود إلى البيت؟",
         "options": [
           "Um 9 Uhr",
           "Um 12 Uhr",
@@ -8076,7 +8076,7 @@
           "Um 19 Uhr"
         ],
         "answer": "Um 17 Uhr",
-        "explanationAr": "«Um 17 Uhr gehe ich nach Hause.» — يعود إلى البيت في الساعة الخامسة مساءً."
+        "explanationAr": "«Um 17 Uhr gehe ich nach Hause.» — أعود إلى البيت عند الخامسة مساءً."
       }
     ]
   },
@@ -8086,12 +8086,12 @@
     "titleDe": "Wetter und Jahreszeiten",
     "titleAr": "الطقس والفصول",
     "de": "Im Winter ist es kalt und es schneit. Ich trage eine dicke Jacke. Im Frühling blühen die Blumen. Im Sommer ist es heiß, ich gehe schwimmen. Im Herbst sind die Blätter bunt: rot, gelb und braun. Ich mag den Frühling am liebsten.",
-    "ar": "في الشتاء بارد ويتساقط الثلج، أرتدي سترة سميكة. في الربيع تتفتح الأزهار. في الصيف حار وأذهب للسباحة. في الخريف الأوراق ملونة: أحمر وأصفر وبني. أحب الربيع أكثر من غيره.",
+    "ar": "الجو بارد في الشتاء ويتساقط الثلج. أرتدي سترة سميكة. تتفتح الأزهار في الربيع. الجو حار في الصيف وأذهب للسباحة. أوراق الأشجار ملوّنة في الخريف: حمراء وصفراء وبنية. أحب الربيع أكثر من غيره.",
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Welche Jahreszeit mag er am liebsten?",
-        "promptAr": "أي فصل يحب أكثر؟",
+        "promptDe": "Welche Jahreszeit mag ich am liebsten?",
+        "promptAr": "أي فصل أحب أكثر؟",
         "options": [
           "Winter",
           "Frühling",
@@ -8099,14 +8099,14 @@
           "Herbst"
         ],
         "answer": "Frühling",
-        "explanationAr": "الربيع.",
+        "explanationAr": "«Ich mag den Frühling am liebsten.» — أحب الربيع أكثر من غيره.",
         "id": "t-a0-10-q1"
       },
       {
         "id": "t-a0-10-q2",
         "type": "mc",
-        "promptDe": "Was trägt die Person im Winter?",
-        "promptAr": "ماذا يرتدي المتحدث في الشتاء؟",
+        "promptDe": "Was trage ich im Winter?",
+        "promptAr": "ماذا أرتدي في الشتاء؟",
         "options": [
           "Eine dicke Jacke",
           "Ein T-Shirt",
@@ -8114,7 +8114,7 @@
           "Eine kurze Hose"
         ],
         "answer": "Eine dicke Jacke",
-        "explanationAr": "«Ich trage eine dicke Jacke.» — يرتدي سترة سميكة."
+        "explanationAr": "«Ich trage eine dicke Jacke.» — أرتدي سترة سميكة."
       }
     ]
   },
@@ -8124,26 +8124,26 @@
     "titleDe": "Meine Schultasche",
     "titleAr": "حقيبتي المدرسية",
     "de": "Ich habe eine Schultasche. Sie ist blau und rot. In der Tasche sind drei Hefte, ein Kugelschreiber, ein Bleistift und ein Radiergummi. Ich habe auch ein Buch für den Deutschunterricht. Die Tasche ist nicht schwer. Ich nehme sie jeden Morgen in die Schule.",
-    "ar": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاثة دفاتر وقلم حبر وقلم رصاص وممحاة. عندي أيضاً كتاب لحصة الألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
+    "ar": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاثة دفاتر وقلم حبر جاف وقلم رصاص وممحاة. عندي أيضاً كتاب لحصة الألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
     "questions": [
       {
         "id": "t-a0-011-q1",
         "type": "mc",
-        "promptDe": "Was ist in der Schultasche?",
-        "promptAr": "ماذا يوجد في الحقيبة؟",
+        "promptDe": "Wie viele Hefte sind in der Schultasche?",
+        "promptAr": "كم دفتراً في الحقيبة المدرسية؟",
         "options": [
-          "Ein Apfel",
-          "Drei Hefte und Stifte",
-          "Ein Telefon"
+          "Ein Heft",
+          "Zwei Hefte",
+          "Drei Hefte"
         ],
-        "answer": "Drei Hefte und Stifte",
-        "explanationAr": "في النص: drei Hefte, Kugelschreiber, Bleistift."
+        "answer": "Drei Hefte",
+        "explanationAr": "في النص: ثلاثة دفاتر."
       },
       {
         "id": "t-a0-011-q2",
         "type": "mc",
-        "promptDe": "Wohin nimmt die Person die Tasche jeden Morgen?",
-        "promptAr": "إلى أين يأخذ المتحدث الحقيبة كل صباح؟",
+        "promptDe": "Wohin nehme ich die Tasche jeden Morgen?",
+        "promptAr": "إلى أين آخذ الحقيبة كل صباح؟",
         "options": [
           "In den Park",
           "Zur Arbeit",
@@ -8151,7 +8151,7 @@
           "Zum Bahnhof"
         ],
         "answer": "In die Schule",
-        "explanationAr": "«Ich nehme sie jeden Morgen in die Schule.» — يأخذها إلى المدرسة كل صباح."
+        "explanationAr": "«Ich nehme sie jeden Morgen in die Schule.» — آخذها إلى المدرسة كل صباح."
       }
     ]
   },
@@ -8161,63 +8161,63 @@
     "titleDe": "Am Wochenende",
     "titleAr": "في نهاية الأسبوع",
     "de": "Am Samstag stehe ich spät auf. Ich trinke Kaffee und lese die Zeitung. Am Nachmittag gehe ich mit meinem Hund im Park spazieren. Am Sonntag besuche ich meine Mutter. Wir essen zusammen Kuchen und trinken Tee. Das Wochenende ist schön.",
-    "ar": "يوم السبت أستيقظ متأخراً. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نأكل الكيك معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
+    "ar": "أستيقظ في وقت متأخر يوم السبت. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نتناول الكعكة معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
     "questions": [
       {
         "id": "t-a0-012-q1",
         "type": "mc",
-        "promptDe": "Was macht die Person am Sonntag?",
-        "promptAr": "ماذا يفعل الشخص يوم الأحد؟",
+        "promptDe": "Was mache ich am Sonntag?",
+        "promptAr": "ماذا أفعل يوم الأحد؟",
         "options": [
-          "Die Person arbeitet.",
-          "Die Person besucht die Mutter.",
-          "Die Person schläft den ganzen Tag."
+          "Ich arbeite.",
+          "Ich besuche meine Mutter.",
+          "Ich schlafe den ganzen Tag."
         ],
-        "answer": "Die Person besucht die Mutter.",
-        "explanationAr": "«Am Sonntag besuche ich meine Mutter.» — يزور الشخص أمه يوم الأحد."
+        "answer": "Ich besuche meine Mutter.",
+        "explanationAr": "«Am Sonntag besuche ich meine Mutter.» — أزور أمي يوم الأحد."
       },
       {
         "id": "t-a0-012-q2",
         "type": "mc",
-        "promptDe": "Mit welchem Tier geht die Person am Samstag im Park spazieren?",
-        "promptAr": "مع أي حيوان يتمشى المتحدث في الحديقة يوم السبت؟",
+        "promptDe": "Mit welchem Tier gehe ich am Samstag im Park spazieren?",
+        "promptAr": "مع أي حيوان أتمشى في الحديقة يوم السبت؟",
         "options": [
           "Mit einer Katze",
-          "Mit einem Hund",
+          "Mit meinem Hund",
           "Mit einem Pferd",
           "Mit einem Vogel"
         ],
-        "answer": "Mit einem Hund",
-        "explanationAr": "«Am Nachmittag gehe ich mit meinem Hund im Park spazieren.» — يتمشى مع كلبه."
+        "answer": "Mit meinem Hund",
+        "explanationAr": "«Am Nachmittag gehe ich mit meinem Hund im Park spazieren.» — أتمشى مع كلبي في الحديقة."
       }
     ]
   },
   {
     "id": "t-a0-013",
     "level": "A0",
-    "titleDe": "Das Wetter heute",
-    "titleAr": "الطقس اليوم",
-    "de": "Heute ist Montag. Der Himmel ist blau und die Sonne scheint. Es ist warm, etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
-    "ar": "اليوم الإثنين. السماء زرقاء والشمس مشرقة. الجو دافئ، حوالي ٢٠ درجة. ألبس قميصاً وبنطلون جينز. لا أحتاج إلى سترة. أنا متشوق لقضاء بعد الظهر في الحديقة.",
+    "titleDe": "Wetterbeispiel: Ein warmer Montag",
+    "titleAr": "مثال عن الطقس: يوم اثنين دافئ",
+    "de": "An einem Montag ist der Himmel blau und die Sonne scheint. Es sind etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
+    "ar": "في يوم اثنين تكون السماء زرقاء والشمس مشرقة. تبلغ الحرارة نحو 20 درجة. أرتدي قميصاً وبنطال جينز. لا أحتاج إلى سترة. وأتطلع إلى قضاء فترة بعد الظهر في الحديقة.",
     "questions": [
       {
         "id": "t-a0-013-q1",
         "type": "mc",
-        "promptDe": "Welche Temperatur hat es heute?",
-        "promptAr": "كم درجة الحرارة اليوم؟",
+        "promptDe": "Wie warm ist es an diesem Montag?",
+        "promptAr": "كم تبلغ درجة الحرارة يوم الاثنين في هذا المثال؟",
         "options": [
           "10 Grad",
           "20 Grad",
           "30 Grad"
         ],
         "answer": "20 Grad",
-        "explanationAr": "النص: etwa 20 Grad."
+        "explanationAr": "النص يذكر نحو 20 درجة («etwa 20 Grad»)."
       },
       {
         "id": "t-a0-013-q2",
         "type": "mc",
-        "promptDe": "Was zieht die Person an?",
-        "promptAr": "ماذا يرتدي المتحدث؟",
+        "promptDe": "Was ziehe ich an?",
+        "promptAr": "ماذا أرتدي؟",
         "options": [
           "Ein T-Shirt und eine Jeans",
           "Eine dicke Jacke",
@@ -8225,7 +8225,7 @@
           "Ein Kleid"
         ],
         "answer": "Ein T-Shirt und eine Jeans",
-        "explanationAr": "«Ich ziehe ein T-Shirt und eine Jeans an.» — يرتدي قميصاً وبنطال جينز."
+        "explanationAr": "«Ich ziehe ein T-Shirt und eine Jeans an.» — أرتدي قميصاً وبنطال جينز."
       }
     ]
   },
@@ -8235,26 +8235,26 @@
     "titleDe": "Im Restaurant",
     "titleAr": "في المطعم",
     "de": "Ich gehe gern ins Restaurant. Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln. Dazu trinke ich ein Glas Wasser. Der Kellner ist freundlich. Das Essen schmeckt sehr gut. Ich bezahle und gehe nach Hause.",
-    "ar": "أحب الذهاب إلى المطعم. اليوم أطلب شوربة وشريحة لحم مع بطاطس. وأشرب معها ماءً. النادل لطيف. الأكل لذيذ جداً. أدفع وأذهب إلى البيت.",
+    "ar": "أحب الذهاب إلى المطعم. اليوم أطلب حساءً وقطعة شنيتسل مع البطاطس. وأشرب مع الوجبة كأساً من الماء. النادل ودود. الطعام لذيذ جداً. أدفع الحساب وأعود إلى البيت.",
     "questions": [
       {
         "id": "t-a0-014-q1",
         "type": "mc",
-        "promptDe": "Was trinkt er?",
-        "promptAr": "ماذا يشرب؟",
+        "promptDe": "Was trinke ich dazu?",
+        "promptAr": "ماذا أشرب مع الطعام؟",
         "options": [
           "Bier",
-          "Wasser",
+          "Ein Glas Wasser",
           "Cola"
         ],
-        "answer": "Wasser",
-        "explanationAr": "النص يقول: «Dazu trinke ich ein Glas Wasser.» — ويشرب معه كأساً من الماء."
+        "answer": "Ein Glas Wasser",
+        "explanationAr": "«Dazu trinke ich ein Glas Wasser.» — أشرب كأساً من الماء مع الطعام."
       },
       {
         "id": "t-a0-014-q2",
         "type": "mc",
-        "promptDe": "Was bestellt die Person zu essen?",
-        "promptAr": "ماذا يطلب المتحدث ليأكل؟",
+        "promptDe": "Was bestelle ich zu essen?",
+        "promptAr": "ماذا أطلب من الطعام؟",
         "options": [
           "Eine Suppe und ein Schnitzel mit Kartoffeln",
           "Nur einen Salat",
@@ -8262,7 +8262,7 @@
           "Fisch mit Reis"
         ],
         "answer": "Eine Suppe und ein Schnitzel mit Kartoffeln",
-        "explanationAr": "«Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln.» — يطلب حساءً وشنيتسل مع البطاطس."
+        "explanationAr": "«Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln.» — أطلب حساءً وقطعة شنيتسل مع البطاطس."
       }
     ]
   },
@@ -8272,7 +8272,7 @@
     "titleDe": "Meine Wohnung",
     "titleAr": "شقتي",
     "de": "Ich wohne in einer kleinen Wohnung in der Stadt. Die Wohnung hat ein Wohnzimmer, ein Schlafzimmer, eine Küche und ein Bad. Im Wohnzimmer steht ein Sofa vor dem Fernseher. In der Küche mache ich Kaffee. Die Wohnung ist ruhig und hell.",
-    "ar": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمّام. في غرفة المعيشة كنبة أمام التلفاز. في المطبخ أصنع القهوة. الشقة هادئة ومشرقة.",
+    "ar": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمام. توجد أريكة أمام التلفاز في غرفة المعيشة. أُحضّر القهوة في المطبخ. الشقة هادئة ومشرقة.",
     "questions": [
       {
         "id": "t-a0-015-q1",

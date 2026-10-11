@@ -3050,9 +3050,9 @@ void 0;
   const weekendEvidence = "Am Sonntag besuche ich meine Mutter.";
   const displayedA0 = [leseText(a0Family).de, leseText(a0Weekend).de];
   ok(displayedA0.every((text) => text.trim().split(/\s+/).filter(Boolean).length >= 20) &&
-    displayedA0[1].includes(weekendEvidence) && weekendQ.promptDe === "Was macht die Person am Sonntag?" &&
-    weekendQ.answer === "Die Person besucht die Mutter." && (weekendQ.options?.includes(weekendQ.answer as string) ?? false) &&
-    weekendQ.explanationAr.includes(weekendEvidence),
+    displayedA0[1].includes(weekendEvidence) && weekendQ.promptDe === "Was mache ich am Sonntag?" &&
+    weekendQ.answer === "Ich besuche meine Mutter." && (weekendQ.options?.includes(weekendQ.answer as string) ?? false) &&
+    typeof weekendQ.explanationAr === "string" && weekendQ.explanationAr.includes(weekendEvidence),
     "K143e نصّا A0 يتجاوزان الحد الإرشادي الأدنى، وسؤال عطلة الأسبوع له دليل وإجابة غير ملتبسة");
 
   const wA201 = writingTasks.find((task) => task.id === "w-a2-01");
@@ -10564,6 +10564,64 @@ void 0;
     reviewB2Extras.audioAudit.hoerenAudioManifestEntries === 0 && reviewB2Extras.audioAudit.matchingFilesPresent === 0 &&
     reviewB2Extras.audioAudit.listened === false && reviewB2Extras.audioAudit.generated === false && reviewB2Extras.audioAudit.modified === false,
     "K225f مانيفستو الحوار والاستماع منفصلان؛ لا إدخالات أو ملفات مطابقة ولا ادعاء بالاستماع");
+}
+/* ═══ K226 — عشرة نصوص A0 إضافية (R155). ═══ */
+{
+  const reviewA0Extras = JSON.parse(readFileSync("docs/content-review-a0-texts-02-2026-10-11.json", "utf8")) as any;
+  const reviewA0ExtrasMd = readFileSync("docs/content-review-a0-texts-02-2026-10-11.md", "utf8");
+  const reviewA0ExtrasPatch = readFileSync("scripts/patches/review_a0_texts_02.py", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const ids = ["t-a0-06", "t-a0-07", "t-a0-08", "t-a0-09", "t-a0-10", "t-a0-011", "t-a0-012", "t-a0-013", "t-a0-014", "t-a0-015"];
+  const batch = ids.map((id) => textsArr.find((t:any) => t.id === id));
+  const tasksValid = batch.every((t:any) => t && t.level === "A0" && typeof t.titleDe === "string" && !!t.titleDe.trim() &&
+    typeof t.titleAr === "string" && !!t.titleAr.trim() && typeof t.de === "string" && !!t.de.trim() &&
+    typeof t.ar === "string" && !!t.ar.trim() && Array.isArray(t.questions) && t.questions.length === 2 &&
+    t.questions.every((q:any) => q.type === "mc" && typeof q.promptDe === "string" && !!q.promptDe.trim() &&
+      typeof q.promptAr === "string" && !!q.promptAr.trim() && typeof q.explanationAr === "string" && !!q.explanationAr.trim() &&
+      Array.isArray(q.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length && q.options.includes(q.answer)));
+  const correctionUnits = reviewA0Extras.corrections.map((c:any) => c.unit);
+  ok(reviewA0Extras.reviewRule === "R155" && JSON.stringify(reviewA0Extras.targetIds) === JSON.stringify(ids) &&
+    reviewA0Extras.totals.resources === 10 && reviewA0Extras.totals.passages === 10 && reviewA0Extras.totals.sentences === 62 &&
+    reviewA0Extras.totals.questions === 20 && reviewA0Extras.totals.correctedFields === 73 &&
+    reviewA0Extras.totals.guardedTransitions === 75 && reviewA0Extras.totals.unresolved === 0 &&
+    correctionUnits.length === 73 && new Set(correctionUnits).size === 73 && reviewA0ExtrasMd.includes("K226a–f") &&
+    reviewA0ExtrasPatch.includes("expected_edits = 75") && reviewA0ExtrasPatch.includes("REVISION_EDITS"),
+    "K226a تقرير R155 العربي والرقعة: عشرة نصوص، 62 جملة، 20 سؤالاً، 73 حقلاً/75 انتقالاً محروساً");
+  ok(tasksValid, "K226b نصوص A0: كل العناوين والنصين والسؤالين مكتملة؛ مفاتيح MC فريدة وموجودة ضمن الخيارات");
+  const classText = batch[0], weekdays = batch[1], schoolbag = batch[5], weekend = batch[6];
+  ok(classText.de.includes("Die Lehrerin heißt Frau Schulz") && classText.ar.includes("اسم المعلمة السيدة شولتس") &&
+    weekdays.questions[0].promptDe === "Was mache ich am Mittwoch?" && weekdays.questions[0].answer === "Ich kaufe ein." &&
+    schoolbag.ar.includes("قلم حبر جاف") && schoolbag.questions[1].promptDe === "Wohin nehme ich die Tasche jeden Morgen?" &&
+    weekend.questions[0].promptDe === "Was mache ich am Sonntag?" && weekend.questions[0].answer === "Ich besuche meine Mutter." &&
+    weekend.questions[0].explanationAr.includes("Am Sonntag besuche ich meine Mutter."),
+    "K226c الاسم وأدوات الحقيبة والأسئلة متسقة مع الأجوبة وسرد المتكلم");
+  const weatherExample = batch[7];
+  ok(weatherExample.titleDe === "Wetterbeispiel: Ein warmer Montag" && !weatherExample.de.includes("Heute") &&
+    weatherExample.de.includes("An einem Montag") && weatherExample.de.includes("etwa 20 Grad") &&
+    weatherExample.questions[0].answer === "20 Grad" && weatherExample.questions[0].explanationAr.includes("نحو 20 درجة"),
+    "K226d الطقس مثال غير مؤرخ، لا ادعاء عن الطقس الحالي، والسؤال يطابق القيمة التقريبية");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
+  const matchingFiles: string[] = [];
+  const scanAudio = (dir:string):void => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = dir + "/" + entry.name;
+      if (entry.isDirectory()) scanAudio(path);
+      else if (ids.includes(entry.name.replace(/\\.[^.]*$/, ""))) matchingFiles.push(path);
+    }
+  };
+  scanAudio("public/audio");
+  ok(noManifestEntries && matchingFiles.length === 0 && reviewA0Extras.audioAudit.dialogAudioManifestEntries === 0 &&
+    reviewA0Extras.audioAudit.hoerenAudioManifestEntries === 0 && reviewA0Extras.audioAudit.diktatAudioManifestEntries === 0 &&
+    reviewA0Extras.audioAudit.matchingFilesPresent === 0 && reviewA0Extras.audioAudit.listened === false &&
+    reviewA0Extras.audioAudit.generated === false && reviewA0Extras.audioAudit.modified === false,
+    "K226e مانيفستو الحوار والاستماع والإملاء منفصلة؛ لا ملفات أو إدخالات ولا ادعاء بالاستماع");
+  ok(reviewA0Extras.limits.cefr && reviewA0Extras.limits.human && reviewA0Extras.limits.fiction &&
+    reviewA0Extras.gates.planned === "K226a–f" && reviewA0Extras.totals.unresolved === 0,
+    "K226f حدود CEFR والمراجعة البشرية والسيناريوهات موضحة؛ لا فجوات مصطنعة");
 }
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {

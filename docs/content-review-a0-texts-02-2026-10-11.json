@@ -1,0 +1,764 @@
+{
+  "reviewRule": "R155",
+  "date": "2026-10-11",
+  "scope": "مراجعة عشرة نصوص قراءة A0 إضافية (`t-a0-06`–`t-a0-10` و`t-a0-011`–`t-a0-015`): فُحصت الجمل الألمانية وترجماتها، العناوين، كل سؤال وخياراته ومفتاحه وشرحه. لا تتضمن هذه الدفعة ادعاءً بتسجيل/استماع.",
+  "method": "قورنت الحقول قبل/بعد مع HEAD السابق للدفعة. الرقعة scripts/patches/review_a0_texts_02.py فيها 68 انتقالاً أساسياً و7 تنقيحات متابعة، قابلة لإعادة التشغيل؛ نتج منها 73 حقلاً متميزاً معدلاً. تتحقق الرقعة من مستوى A0 ومفاتيح MC داخل خيارات فريدة.",
+  "targetIds": [
+    "t-a0-06",
+    "t-a0-07",
+    "t-a0-08",
+    "t-a0-09",
+    "t-a0-10",
+    "t-a0-011",
+    "t-a0-012",
+    "t-a0-013",
+    "t-a0-014",
+    "t-a0-015"
+  ],
+  "resources": [
+    {
+      "id": "t-a0-06",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "In der Klasse",
+      "titleAr": "في الصف",
+      "sentences": 8,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "ترجمة الصف والمتعلمين سليمة بعد تصحيح اسم المعلمة؛ أرقام الصف والبلدان عناصر في سيناريو تعليمي."
+    },
+    {
+      "id": "t-a0-07",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Die Wochentage",
+      "titleAr": "أيام الأسبوع",
+      "sentences": 7,
+      "questions": 2,
+      "corrections": 9,
+      "judgement": "أنشطة الأسبوع السبعة مرتبة بوضوح؛ الأسئلة الآن تتبع ضمير المتكلم."
+    },
+    {
+      "id": "t-a0-08",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Das Essen",
+      "titleAr": "الطعام",
+      "sentences": 6,
+      "questions": 2,
+      "corrections": 6,
+      "judgement": "الطعام في الفطور والغداء والعشاء وتفضيل الفاكهة متسق مع السؤالين."
+    },
+    {
+      "id": "t-a0-09",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Die Uhrzeit",
+      "titleAr": "الوقت",
+      "sentences": 7,
+      "questions": 2,
+      "corrections": 9,
+      "judgement": "روتين اليوم من السابعة حتى 23:00 متسق؛ صارت أوقات العربية واضحة."
+    },
+    {
+      "id": "t-a0-10",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Wetter und Jahreszeiten",
+      "titleAr": "الطقس والفصول",
+      "sentences": 6,
+      "questions": 2,
+      "corrections": 7,
+      "judgement": "الفصول والملابس والألوان متسقة؛ الأسئلة لا تفترض جنس الراوي."
+    },
+    {
+      "id": "t-a0-011",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Meine Schultasche",
+      "titleAr": "حقيبتي المدرسية",
+      "sentences": 6,
+      "questions": 2,
+      "corrections": 9,
+      "judgement": "محتويات الحقيبة مطابقة؛ سؤال الدفاتر لا يختزل بقية الأدوات."
+    },
+    {
+      "id": "t-a0-012",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Am Wochenende",
+      "titleAr": "في نهاية الأسبوع",
+      "sentences": 6,
+      "questions": 2,
+      "corrections": 11,
+      "judgement": "نشاط السبت والأحد والكلب والكعكة متسق؛ صيغ الأسئلة تتبع الراوي."
+    },
+    {
+      "id": "t-a0-013",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Wetterbeispiel: Ein warmer Montag",
+      "titleAr": "مثال عن الطقس: يوم اثنين دافئ",
+      "sentences": 5,
+      "questions": 2,
+      "corrections": 10,
+      "judgement": "مثال تدريبي عن يوم اثنين وحرارة تقارب 20 درجة، لا طقس حالي موثق."
+    },
+    {
+      "id": "t-a0-014",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Im Restaurant",
+      "titleAr": "في المطعم",
+      "sentences": 6,
+      "questions": 2,
+      "corrections": 9,
+      "judgement": "الطلب هو حساء وشنيتسل مع البطاطس وكأس ماء؛ الأسئلة مباشرة."
+    },
+    {
+      "id": "t-a0-015",
+      "level": "A0",
+      "kind": "reading-text",
+      "titleDe": "Meine Wohnung",
+      "titleAr": "شقتي",
+      "sentences": 5,
+      "questions": 2,
+      "corrections": 1,
+      "judgement": "وصف الغرف والأريكة والقهوة والصفات متسق بعد صقل العربية."
+    }
+  ],
+  "totals": {
+    "resources": 10,
+    "passages": 10,
+    "sentences": 62,
+    "questions": 20,
+    "correctedFields": 73,
+    "guardedTransitions": 75,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-a0-06.ar",
+      "old": "هذا فصلي. أتعلم فيه الألمانية. المعلمة اسمها فراوله شولتس وهي لطيفة جداً. في الدورة 12 طالباً من سوريا وتركيا وبولندا وإيطاليا. نتكلم الألمانية معاً، وأحياناً نضحك كثيراً.",
+      "new": "هذا فصلي. أتعلم فيه الألمانية. اسم المعلمة السيدة شولتس، وهي لطيفة جداً. يضمّ الصف 12 طالباً من سوريا وتركيا وبولندا وإيطاليا. نتحدث الألمانية معاً، وأحياناً نضحك كثيراً.",
+      "rationale": "تصحيح النقل الصوتي الحرفي الخاطئ لـFrau Schulz إلى «السيدة شولتس»، وتحسين صياغة الصف والحديث معاً."
+    },
+    {
+      "unit": "t-a0-06.questions[0].explanationAr",
+      "old": "اسمها Frau Schulz.",
+      "new": "اسمها السيدة شولتس.",
+      "rationale": "مطابقة الشرح العربي لاسم المعلمة كما صار مكتوباً في النص."
+    },
+    {
+      "unit": "t-a0-07.ar",
+      "old": "الاثنين أذهب إلى العمل. الثلاثاء لدي درس ألمانية. الأربعاء أتسوّق. الخميس أقابل أصدقائي. الجمعة أشاهد التلفاز. السبت أنام طويلاً. الأحد أزور عائلتي.",
+      "new": "أذهب إلى العمل يوم الاثنين. لدي دورة في اللغة الألمانية يوم الثلاثاء. أتسوّق يوم الأربعاء. أقابل أصدقائي يوم الخميس. أشاهد التلفاز يوم الجمعة. أنام وقتاً طويلاً يوم السبت. أزور عائلتي يوم الأحد.",
+      "rationale": "ترتيب أيام الأسبوع في جمل عربية طبيعية، مع تجنب وصف المتحدث بصفة جنس غير معلومة."
+    },
+    {
+      "unit": "t-a0-07.questions[0].answer",
+      "old": "Er kauft ein.",
+      "new": "Ich kaufe ein.",
+      "rationale": "مطابقة السؤال والخيارات والمفتاح لسرد المتكلم بضمير ich، بدلاً من التحول غير الممهّد إلى er."
+    },
+    {
+      "unit": "t-a0-07.questions[0].explanationAr",
+      "old": "يتسوّق.",
+      "new": "«Am Mittwoch kaufe ich ein.» — أتسوّق يوم الأربعاء.",
+      "rationale": "مطابقة السؤال والخيارات والمفتاح لسرد المتكلم بضمير ich، بدلاً من التحول غير الممهّد إلى er."
+    },
+    {
+      "unit": "t-a0-07.questions[0].options",
+      "old": [
+        "Er arbeitet.",
+        "Er kauft ein.",
+        "Er sieht fern.",
+        "Er schläft."
+      ],
+      "new": [
+        "Ich arbeite.",
+        "Ich kaufe ein.",
+        "Ich sehe fern.",
+        "Ich schlafe."
+      ],
+      "rationale": "مطابقة السؤال والخيارات والمفتاح لسرد المتكلم بضمير ich، بدلاً من التحول غير الممهّد إلى er."
+    },
+    {
+      "unit": "t-a0-07.questions[0].promptAr",
+      "old": "ماذا يفعل الأربعاء؟",
+      "new": "ماذا أفعل يوم الأربعاء؟",
+      "rationale": "مطابقة السؤال والخيارات والمفتاح لسرد المتكلم بضمير ich، بدلاً من التحول غير الممهّد إلى er."
+    },
+    {
+      "unit": "t-a0-07.questions[0].promptDe",
+      "old": "Was macht er am Mittwoch?",
+      "new": "Was mache ich am Mittwoch?",
+      "rationale": "مطابقة السؤال والخيارات والمفتاح لسرد المتكلم بضمير ich، بدلاً من التحول غير الممهّد إلى er."
+    },
+    {
+      "unit": "t-a0-07.questions[1].explanationAr",
+      "old": "«Am Sonntag besuche ich meine Familie.» — يزور عائلته يوم الأحد.",
+      "new": "«Am Sonntag besuche ich meine Familie.» — أزور عائلتي يوم الأحد.",
+      "rationale": "مطابقة السؤال/الشرح العربي لصيغة المتكلم في النص الألماني."
+    },
+    {
+      "unit": "t-a0-07.questions[1].promptAr",
+      "old": "متى يزور المتحدث عائلته؟",
+      "new": "متى أزور عائلتي؟",
+      "rationale": "مطابقة السؤال/الشرح العربي لصيغة المتكلم في النص الألماني."
+    },
+    {
+      "unit": "t-a0-07.questions[1].promptDe",
+      "old": "Wann besucht die Person ihre Familie?",
+      "new": "Wann besuche ich meine Familie?",
+      "rationale": "مطابقة السؤال/الشرح العربي لصيغة المتكلم في النص الألماني."
+    },
+    {
+      "unit": "t-a0-08.questions[0].explanationAr",
+      "old": "التفاح.",
+      "new": "«Mein Lieblingsobst ist der Apfel.» — فاكهتي المفضلة هي التفاح.",
+      "rationale": "إزالة افتراض جنس الراوي وربط السؤال والشرح بعبارة mein Lieblingsobst."
+    },
+    {
+      "unit": "t-a0-08.questions[0].promptAr",
+      "old": "ما فاكهته المفضلة؟",
+      "new": "ما فاكهتي المفضلة؟",
+      "rationale": "إزالة افتراض جنس الراوي وربط السؤال والشرح بعبارة mein Lieblingsobst."
+    },
+    {
+      "unit": "t-a0-08.questions[0].promptDe",
+      "old": "Was ist sein Lieblingsobst?",
+      "new": "Was ist mein Lieblingsobst?",
+      "rationale": "إزالة افتراض جنس الراوي وربط السؤال والشرح بعبارة mein Lieblingsobst."
+    },
+    {
+      "unit": "t-a0-08.questions[1].explanationAr",
+      "old": "«Zum Abendbrot trinke ich Tee und esse Obst.» — يأكل الفاكهة في العشاء.",
+      "new": "«Zum Abendbrot trinke ich Tee und esse Obst.» — أشرب الشاي وآكل الفاكهة في وجبة العشاء.",
+      "rationale": "مطابقة سؤال العشاء وشرحه لسرد المتكلم، مع تضمين الشاي والفاكهة المذكورين."
+    },
+    {
+      "unit": "t-a0-08.questions[1].promptAr",
+      "old": "ماذا يأكل المتحدث في العشاء؟",
+      "new": "ماذا آكل في وجبة العشاء؟",
+      "rationale": "مطابقة سؤال العشاء وشرحه لسرد المتكلم، مع تضمين الشاي والفاكهة المذكورين."
+    },
+    {
+      "unit": "t-a0-08.questions[1].promptDe",
+      "old": "Was isst die Person zum Abendbrot?",
+      "new": "Was esse ich zum Abendbrot?",
+      "rationale": "مطابقة سؤال العشاء وشرحه لسرد المتكلم، مع تضمين الشاي والفاكهة المذكورين."
+    },
+    {
+      "unit": "t-a0-09.ar",
+      "old": "أستيقظ في السابعة. أفطر في الثامنة. أبدأ العمل التاسعة. آكل الغداء 12. أذهب للبيت 17. أتعشى 19. أذهب للسرير 23.",
+      "new": "أستيقظ عند السابعة صباحاً. أتناول الفطور عند الثامنة. أبدأ العمل عند التاسعة. أتناول الغداء عند الثانية عشرة ظهراً. أعود إلى البيت عند الخامسة مساءً. أتناول العشاء عند السابعة مساءً. أذهب إلى الفراش عند الحادية عشرة ليلاً.",
+      "rationale": "تصحيح ترجمة أوقات 12/17/19/23 إلى صيغ عربية واضحة، وتحديد ظهر/مساء/ليل دون إسقاط الساعات."
+    },
+    {
+      "unit": "t-a0-09.questions[0].answer",
+      "old": "Um 9",
+      "new": "Um 9 Uhr",
+      "rationale": "توحيد السؤال والاختيارات والمفتاح على um 9 Uhr وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-09.questions[0].explanationAr",
+      "old": "التاسعة.",
+      "new": "«Um 9 Uhr beginne ich mit der Arbeit.» — أبدأ العمل عند التاسعة.",
+      "rationale": "توحيد السؤال والاختيارات والمفتاح على um 9 Uhr وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-09.questions[0].options",
+      "old": [
+        "Um 7",
+        "Um 8",
+        "Um 9",
+        "Um 12"
+      ],
+      "new": [
+        "Um 7 Uhr",
+        "Um 8 Uhr",
+        "Um 9 Uhr",
+        "Um 12 Uhr"
+      ],
+      "rationale": "توحيد السؤال والاختيارات والمفتاح على um 9 Uhr وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-09.questions[0].promptAr",
+      "old": "متى يبدأ العمل؟",
+      "new": "متى أبدأ العمل؟",
+      "rationale": "توحيد السؤال والاختيارات والمفتاح على um 9 Uhr وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-09.questions[0].promptDe",
+      "old": "Wann beginnt er zu arbeiten?",
+      "new": "Wann beginne ich mit der Arbeit?",
+      "rationale": "توحيد السؤال والاختيارات والمفتاح على um 9 Uhr وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-09.questions[1].explanationAr",
+      "old": "«Um 17 Uhr gehe ich nach Hause.» — يعود إلى البيت في الساعة الخامسة مساءً.",
+      "new": "«Um 17 Uhr gehe ich nach Hause.» — أعود إلى البيت عند الخامسة مساءً.",
+      "rationale": "مطابقة سؤال وشرح العودة إلى البيت لصيغة المتكلم ولوقت 17:00."
+    },
+    {
+      "unit": "t-a0-09.questions[1].promptAr",
+      "old": "متى يعود المتحدث إلى البيت؟",
+      "new": "متى أعود إلى البيت؟",
+      "rationale": "مطابقة سؤال وشرح العودة إلى البيت لصيغة المتكلم ولوقت 17:00."
+    },
+    {
+      "unit": "t-a0-09.questions[1].promptDe",
+      "old": "Wann geht die Person nach Hause?",
+      "new": "Wann gehe ich nach Hause?",
+      "rationale": "مطابقة سؤال وشرح العودة إلى البيت لصيغة المتكلم ولوقت 17:00."
+    },
+    {
+      "unit": "t-a0-10.ar",
+      "old": "في الشتاء بارد ويتساقط الثلج، أرتدي سترة سميكة. في الربيع تتفتح الأزهار. في الصيف حار وأذهب للسباحة. في الخريف الأوراق ملونة: أحمر وأصفر وبني. أحب الربيع أكثر من غيره.",
+      "new": "الجو بارد في الشتاء ويتساقط الثلج. أرتدي سترة سميكة. تتفتح الأزهار في الربيع. الجو حار في الصيف وأذهب للسباحة. أوراق الأشجار ملوّنة في الخريف: حمراء وصفراء وبنية. أحب الربيع أكثر من غيره.",
+      "rationale": "إكمال جملة الطقس العربية وتصحيح مطابقة ألوان الأوراق المؤنثة جمعاً."
+    },
+    {
+      "unit": "t-a0-10.questions[0].explanationAr",
+      "old": "الربيع.",
+      "new": "«Ich mag den Frühling am liebsten.» — أحب الربيع أكثر من غيره.",
+      "rationale": "توحيد السؤال والشرح مع ich في النص بدلاً من افتراض متحدث مذكر."
+    },
+    {
+      "unit": "t-a0-10.questions[0].promptAr",
+      "old": "أي فصل يحب أكثر؟",
+      "new": "أي فصل أحب أكثر؟",
+      "rationale": "توحيد السؤال والشرح مع ich في النص بدلاً من افتراض متحدث مذكر."
+    },
+    {
+      "unit": "t-a0-10.questions[0].promptDe",
+      "old": "Welche Jahreszeit mag er am liebsten?",
+      "new": "Welche Jahreszeit mag ich am liebsten?",
+      "rationale": "توحيد السؤال والشرح مع ich في النص بدلاً من افتراض متحدث مذكر."
+    },
+    {
+      "unit": "t-a0-10.questions[1].explanationAr",
+      "old": "«Ich trage eine dicke Jacke.» — يرتدي سترة سميكة.",
+      "new": "«Ich trage eine dicke Jacke.» — أرتدي سترة سميكة.",
+      "rationale": "مطابقة سؤال وشرح الملابس الشتوية لصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-10.questions[1].promptAr",
+      "old": "ماذا يرتدي المتحدث في الشتاء؟",
+      "new": "ماذا أرتدي في الشتاء؟",
+      "rationale": "مطابقة سؤال وشرح الملابس الشتوية لصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-10.questions[1].promptDe",
+      "old": "Was trägt die Person im Winter?",
+      "new": "Was trage ich im Winter?",
+      "rationale": "مطابقة سؤال وشرح الملابس الشتوية لصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-011.ar",
+      "old": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاثة دفاتر وقلم حبر وقلم رصاص وممحاة. عندي أيضاً كتاب لحصة الألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
+      "new": "عندي حقيبة مدرسية. هي زرقاء وحمراء. في الحقيبة ثلاثة دفاتر وقلم حبر جاف وقلم رصاص وممحاة. عندي أيضاً كتاب لحصة الألمانية. الحقيبة ليست ثقيلة. آخذها كل صباح إلى المدرسة.",
+      "rationale": "تدقيق مفردات الأدوات: Kugelschreiber قلم حبر جاف، وBleistift قلم رصاص."
+    },
+    {
+      "unit": "t-a0-011.questions[0].answer",
+      "old": "Drei Hefte und Stifte",
+      "new": "Drei Hefte",
+      "rationale": "تضييق السؤال إلى عدد الدفاتر كي لا يوحي الخيار بأنه قائمة كاملة بكل محتويات الحقيبة."
+    },
+    {
+      "unit": "t-a0-011.questions[0].explanationAr",
+      "old": "في النص: drei Hefte, Kugelschreiber, Bleistift.",
+      "new": "في النص: ثلاثة دفاتر.",
+      "rationale": "تضييق السؤال إلى عدد الدفاتر كي لا يوحي الخيار بأنه قائمة كاملة بكل محتويات الحقيبة."
+    },
+    {
+      "unit": "t-a0-011.questions[0].options",
+      "old": [
+        "Ein Apfel",
+        "Drei Hefte und Stifte",
+        "Ein Telefon"
+      ],
+      "new": [
+        "Ein Heft",
+        "Zwei Hefte",
+        "Drei Hefte"
+      ],
+      "rationale": "تضييق السؤال إلى عدد الدفاتر كي لا يوحي الخيار بأنه قائمة كاملة بكل محتويات الحقيبة."
+    },
+    {
+      "unit": "t-a0-011.questions[0].promptAr",
+      "old": "ماذا يوجد في الحقيبة؟",
+      "new": "كم دفتراً في الحقيبة المدرسية؟",
+      "rationale": "تضييق السؤال إلى عدد الدفاتر كي لا يوحي الخيار بأنه قائمة كاملة بكل محتويات الحقيبة."
+    },
+    {
+      "unit": "t-a0-011.questions[0].promptDe",
+      "old": "Was ist in der Schultasche?",
+      "new": "Wie viele Hefte sind in der Schultasche?",
+      "rationale": "تضييق السؤال إلى عدد الدفاتر كي لا يوحي الخيار بأنه قائمة كاملة بكل محتويات الحقيبة."
+    },
+    {
+      "unit": "t-a0-011.questions[1].explanationAr",
+      "old": "«Ich nehme sie jeden Morgen in die Schule.» — يأخذها إلى المدرسة كل صباح.",
+      "new": "«Ich nehme sie jeden Morgen in die Schule.» — آخذها إلى المدرسة كل صباح.",
+      "rationale": "مطابقة سؤال المكان والشرح لصيغة ich في النص وتحييد افتراض جنس المتحدث."
+    },
+    {
+      "unit": "t-a0-011.questions[1].promptAr",
+      "old": "إلى أين يأخذ المتحدث الحقيبة كل صباح؟",
+      "new": "إلى أين آخذ الحقيبة كل صباح؟",
+      "rationale": "مطابقة سؤال المكان والشرح لصيغة ich في النص وتحييد افتراض جنس المتحدث."
+    },
+    {
+      "unit": "t-a0-011.questions[1].promptDe",
+      "old": "Wohin nimmt die Person die Tasche jeden Morgen?",
+      "new": "Wohin nehme ich die Tasche jeden Morgen?",
+      "rationale": "مطابقة سؤال المكان والشرح لصيغة ich في النص وتحييد افتراض جنس المتحدث."
+    },
+    {
+      "unit": "t-a0-012.ar",
+      "old": "يوم السبت أستيقظ متأخراً. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نأكل الكيك معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
+      "new": "أستيقظ في وقت متأخر يوم السبت. أشرب القهوة وأقرأ الجريدة. بعد الظهر أتنزه مع كلبي في الحديقة. يوم الأحد أزور أمي. نتناول الكعكة معاً ونشرب الشاي. نهاية الأسبوع جميلة.",
+      "rationale": "صياغة الاستيقاظ المتأخر بلا افتراض جنس، واختيار «الكعكة» مقابلاً أوضح لـKuchen."
+    },
+    {
+      "unit": "t-a0-012.questions[0].answer",
+      "old": "Die Person besucht die Mutter.",
+      "new": "Ich besuche meine Mutter.",
+      "rationale": "مطابقة الفعل والخيارات والمفتاح والشرح لسرد المتكلم بضمير ich."
+    },
+    {
+      "unit": "t-a0-012.questions[0].explanationAr",
+      "old": "«Am Sonntag besuche ich meine Mutter.» — يزور الشخص أمه يوم الأحد.",
+      "new": "«Am Sonntag besuche ich meine Mutter.» — أزور أمي يوم الأحد.",
+      "rationale": "مطابقة الفعل والخيارات والمفتاح والشرح لسرد المتكلم بضمير ich."
+    },
+    {
+      "unit": "t-a0-012.questions[0].options",
+      "old": [
+        "Die Person arbeitet.",
+        "Die Person besucht die Mutter.",
+        "Die Person schläft den ganzen Tag."
+      ],
+      "new": [
+        "Ich arbeite.",
+        "Ich besuche meine Mutter.",
+        "Ich schlafe den ganzen Tag."
+      ],
+      "rationale": "مطابقة الفعل والخيارات والمفتاح والشرح لسرد المتكلم بضمير ich."
+    },
+    {
+      "unit": "t-a0-012.questions[0].promptAr",
+      "old": "ماذا يفعل الشخص يوم الأحد؟",
+      "new": "ماذا أفعل يوم الأحد؟",
+      "rationale": "مطابقة الفعل والخيارات والمفتاح والشرح لسرد المتكلم بضمير ich."
+    },
+    {
+      "unit": "t-a0-012.questions[0].promptDe",
+      "old": "Was macht die Person am Sonntag?",
+      "new": "Was mache ich am Sonntag?",
+      "rationale": "مطابقة الفعل والخيارات والمفتاح والشرح لسرد المتكلم بضمير ich."
+    },
+    {
+      "unit": "t-a0-012.questions[1].answer",
+      "old": "Mit einem Hund",
+      "new": "Mit meinem Hund",
+      "rationale": "توحيد السؤال والخيارات والمفتاح والشرح مع صيغة ich وmein Hund الواردة حرفياً."
+    },
+    {
+      "unit": "t-a0-012.questions[1].explanationAr",
+      "old": "«Am Nachmittag gehe ich mit meinem Hund im Park spazieren.» — يتمشى مع كلبه.",
+      "new": "«Am Nachmittag gehe ich mit meinem Hund im Park spazieren.» — أتمشى مع كلبي في الحديقة.",
+      "rationale": "توحيد السؤال والخيارات والمفتاح والشرح مع صيغة ich وmein Hund الواردة حرفياً."
+    },
+    {
+      "unit": "t-a0-012.questions[1].options",
+      "old": [
+        "Mit einer Katze",
+        "Mit einem Hund",
+        "Mit einem Pferd",
+        "Mit einem Vogel"
+      ],
+      "new": [
+        "Mit einer Katze",
+        "Mit meinem Hund",
+        "Mit einem Pferd",
+        "Mit einem Vogel"
+      ],
+      "rationale": "توحيد السؤال والخيارات والمفتاح والشرح مع صيغة ich وmein Hund الواردة حرفياً."
+    },
+    {
+      "unit": "t-a0-012.questions[1].promptAr",
+      "old": "مع أي حيوان يتمشى المتحدث في الحديقة يوم السبت؟",
+      "new": "مع أي حيوان أتمشى في الحديقة يوم السبت؟",
+      "rationale": "توحيد السؤال والخيارات والمفتاح والشرح مع صيغة ich وmein Hund الواردة حرفياً."
+    },
+    {
+      "unit": "t-a0-012.questions[1].promptDe",
+      "old": "Mit welchem Tier geht die Person am Samstag im Park spazieren?",
+      "new": "Mit welchem Tier gehe ich am Samstag im Park spazieren?",
+      "rationale": "توحيد السؤال والخيارات والمفتاح والشرح مع صيغة ich وmein Hund الواردة حرفياً."
+    },
+    {
+      "unit": "t-a0-013.ar",
+      "old": "اليوم الإثنين. السماء زرقاء والشمس مشرقة. الجو دافئ، حوالي ٢٠ درجة. ألبس قميصاً وبنطلون جينز. لا أحتاج إلى سترة. أنا متشوق لقضاء بعد الظهر في الحديقة.",
+      "new": "في يوم اثنين تكون السماء زرقاء والشمس مشرقة. تبلغ الحرارة نحو 20 درجة. أرتدي قميصاً وبنطال جينز. لا أحتاج إلى سترة. وأتطلع إلى قضاء فترة بعد الظهر في الحديقة.",
+      "rationale": "مطابقة المشهد التوضيحي وتركيب الجمل العربية من دون الادعاء بحالة طقس راهنة."
+    },
+    {
+      "unit": "t-a0-013.de",
+      "old": "Heute ist Montag. Der Himmel ist blau und die Sonne scheint. Es ist warm, etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
+      "new": "An einem Montag ist der Himmel blau und die Sonne scheint. Es sind etwa 20 Grad. Ich ziehe ein T-Shirt und eine Jeans an. Ich brauche keine Jacke. Ich freue mich auf den Nachmittag im Garten.",
+      "rationale": "حذف اليوم الفعلي غير المؤرخ، وصياغة الاثنين ودرجة الحرارة كمشهد توضيحي."
+    },
+    {
+      "unit": "t-a0-013.questions[0].explanationAr",
+      "old": "النص: etwa 20 Grad.",
+      "new": "النص يذكر نحو 20 درجة («etwa 20 Grad»).",
+      "rationale": "مطابقة سؤال الحرارة وشرحه للمشهد غير المؤرخ وللقيمة التقريبية الواردة فيه."
+    },
+    {
+      "unit": "t-a0-013.questions[0].promptAr",
+      "old": "كم درجة الحرارة اليوم؟",
+      "new": "كم تبلغ درجة الحرارة يوم الاثنين في هذا المثال؟",
+      "rationale": "مطابقة سؤال الحرارة وشرحه للمشهد غير المؤرخ وللقيمة التقريبية الواردة فيه."
+    },
+    {
+      "unit": "t-a0-013.questions[0].promptDe",
+      "old": "Welche Temperatur hat es heute?",
+      "new": "Wie warm ist es an diesem Montag?",
+      "rationale": "مطابقة سؤال الحرارة وشرحه للمشهد غير المؤرخ وللقيمة التقريبية الواردة فيه."
+    },
+    {
+      "unit": "t-a0-013.questions[1].explanationAr",
+      "old": "«Ich ziehe ein T-Shirt und eine Jeans an.» — يرتدي قميصاً وبنطال جينز.",
+      "new": "«Ich ziehe ein T-Shirt und eine Jeans an.» — أرتدي قميصاً وبنطال جينز.",
+      "rationale": "مطابقة السؤال والشرح لصيغة المتكلم في النص."
+    },
+    {
+      "unit": "t-a0-013.questions[1].promptAr",
+      "old": "ماذا يرتدي المتحدث؟",
+      "new": "ماذا أرتدي؟",
+      "rationale": "مطابقة السؤال والشرح لصيغة المتكلم في النص."
+    },
+    {
+      "unit": "t-a0-013.questions[1].promptDe",
+      "old": "Was zieht die Person an?",
+      "new": "Was ziehe ich an?",
+      "rationale": "مطابقة السؤال والشرح لصيغة المتكلم في النص."
+    },
+    {
+      "unit": "t-a0-013.titleAr",
+      "old": "الطقس اليوم",
+      "new": "مثال عن الطقس: يوم اثنين دافئ",
+      "rationale": "وسم الطقس بأنه مثال تدريبي بدلاً من ادعاء راهن عن «اليوم»."
+    },
+    {
+      "unit": "t-a0-013.titleDe",
+      "old": "Das Wetter heute",
+      "new": "Wetterbeispiel: Ein warmer Montag",
+      "rationale": "وسم الطقس بأنه مثال تدريبي بدلاً من ادعاء راهن عن «اليوم»."
+    },
+    {
+      "unit": "t-a0-014.ar",
+      "old": "أحب الذهاب إلى المطعم. اليوم أطلب شوربة وشريحة لحم مع بطاطس. وأشرب معها ماءً. النادل لطيف. الأكل لذيذ جداً. أدفع وأذهب إلى البيت.",
+      "new": "أحب الذهاب إلى المطعم. اليوم أطلب حساءً وقطعة شنيتسل مع البطاطس. وأشرب مع الوجبة كأساً من الماء. النادل ودود. الطعام لذيذ جداً. أدفع الحساب وأعود إلى البيت.",
+      "rationale": "تدقيق ترجمة Schnitzel وإضافة كأس الماء، وصقل ألفاظ الطعام والدفع والعودة إلى البيت."
+    },
+    {
+      "unit": "t-a0-014.questions[0].answer",
+      "old": "Wasser",
+      "new": "Ein Glas Wasser",
+      "rationale": "مطابقة السؤال والخيارات والمفتاح والشرح لعبارة ein Glas Wasser وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-014.questions[0].explanationAr",
+      "old": "النص يقول: «Dazu trinke ich ein Glas Wasser.» — ويشرب معه كأساً من الماء.",
+      "new": "«Dazu trinke ich ein Glas Wasser.» — أشرب كأساً من الماء مع الطعام.",
+      "rationale": "مطابقة السؤال والخيارات والمفتاح والشرح لعبارة ein Glas Wasser وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-014.questions[0].options",
+      "old": [
+        "Bier",
+        "Wasser",
+        "Cola"
+      ],
+      "new": [
+        "Bier",
+        "Ein Glas Wasser",
+        "Cola"
+      ],
+      "rationale": "مطابقة السؤال والخيارات والمفتاح والشرح لعبارة ein Glas Wasser وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-014.questions[0].promptAr",
+      "old": "ماذا يشرب؟",
+      "new": "ماذا أشرب مع الطعام؟",
+      "rationale": "مطابقة السؤال والخيارات والمفتاح والشرح لعبارة ein Glas Wasser وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-014.questions[0].promptDe",
+      "old": "Was trinkt er?",
+      "new": "Was trinke ich dazu?",
+      "rationale": "مطابقة السؤال والخيارات والمفتاح والشرح لعبارة ein Glas Wasser وصيغة المتكلم."
+    },
+    {
+      "unit": "t-a0-014.questions[1].explanationAr",
+      "old": "«Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln.» — يطلب حساءً وشنيتسل مع البطاطس.",
+      "new": "«Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln.» — أطلب حساءً وقطعة شنيتسل مع البطاطس.",
+      "rationale": "مطابقة السؤال والشرح لسؤال المتكلم عن طلب الطعام."
+    },
+    {
+      "unit": "t-a0-014.questions[1].promptAr",
+      "old": "ماذا يطلب المتحدث ليأكل؟",
+      "new": "ماذا أطلب من الطعام؟",
+      "rationale": "مطابقة السؤال والشرح لسؤال المتكلم عن طلب الطعام."
+    },
+    {
+      "unit": "t-a0-014.questions[1].promptDe",
+      "old": "Was bestellt die Person zu essen?",
+      "new": "Was bestelle ich zu essen?",
+      "rationale": "مطابقة السؤال والشرح لسؤال المتكلم عن طلب الطعام."
+    },
+    {
+      "unit": "t-a0-015.ar",
+      "old": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمّام. في غرفة المعيشة كنبة أمام التلفاز. في المطبخ أصنع القهوة. الشقة هادئة ومشرقة.",
+      "new": "أسكن في شقة صغيرة في المدينة. فيها غرفة معيشة وغرفة نوم ومطبخ وحمام. توجد أريكة أمام التلفاز في غرفة المعيشة. أُحضّر القهوة في المطبخ. الشقة هادئة ومشرقة.",
+      "rationale": "تحسين العربية الطبيعية لـmache Kaffee وSofa، مع الحفاظ على بقية معنى وصف الشقة."
+    }
+  ],
+  "audioAudit": {
+    "dialogAudioManifest": "content/dialog-audio.json",
+    "dialogAudioManifestEntries": 0,
+    "hoerenAudioManifest": "content/hoeren-audio.json",
+    "hoerenAudioManifestEntries": 0,
+    "diktatAudioManifest": "content/diktat-audio.json",
+    "diktatAudioManifestEntries": 0,
+    "matchingFilesPresent": 0,
+    "matchingFiles": [],
+    "listened": false,
+    "generated": false,
+    "modified": false,
+    "note": "لا إدخالات لهذه المعرفات في مانيفستو صوت الحوارات content/dialog-audio.json، أو مانيفستو الاستماع content/hoeren-audio.json، أو مانيفستو الإملاء content/diktat-audio.json، ولا ملفات مطابقة. لم يحدث استماع أو توليد أو تعديل صوت."
+  },
+  "limits": {
+    "human": "مراجعة تحريرية في بيئة الوكيل؛ ليست مراجعة بشرية مستقلة أو اعتماداً لغوياً مهنياً.",
+    "cefr": "المستوى A0 هو الوسم المسجل؛ لم يُجر اختبار CEFR مستقل.",
+    "fiction": "الأعداد والبلدان في مشهد الصف، ومشهد الاثنين/20 درجة، أمثلة نصية وليست إحصاءات أو طقساً حالياً.",
+    "names": "Frau Schulz شخصية ضمن نص تدريبي؛ لا ادعاء بأنها مقابلة أو شخصية حقيقية موثقة.",
+    "audio": "مانيفستو الحوار والاستماع والإملاء منفصلة؛ لا إدخالات أو ملفات لهذه النصوص، ولا ادعاء بالاستماع.",
+    "other": "لم تُضف وقائع خارج النص؛ السؤال عن A1/A2 28–30 غير المحسوم يبقى خارج هذا النطاق."
+  },
+  "gates": {
+    "planned": "K226a–f",
+    "results": {
+      "patchReapply": {
+        "status": "pass",
+        "result": "0/75 انتقالاً في التشغيل الثاني"
+      },
+      "smoke": {
+        "status": "pass-no-new-failures",
+        "passed": 1498,
+        "knownFailures": 38,
+        "preBatchBaselinePassed": 1492,
+        "preBatchBaselineFailures": 38,
+        "newFailures": 0,
+        "note": "اجتازت K226a–f. إخفاقات smoke الحالية هي نفسها الـ38 في تشغيل بيانات HEAD السابقة. K209j إخفاق سابق يتعلق بمتطلب ثلاثة أسئلة لنصوص t-a0-01..05 ذات السؤالين؛ لم يُعدّل."
+      },
+      "auditContent": {
+        "status": "pass",
+        "structuralDefects": 0,
+        "note": "بقيت تنبيهات heuristic/مراجعة بشرية، لا عيوب بنيوية."
+      },
+      "interactive": {
+        "status": "baseline-known-failures",
+        "passed": 682,
+        "knownFailures": 17,
+        "baselineMatchesR154": true
+      },
+      "typescript": {
+        "status": "pass",
+        "command": "npx tsc --noEmit"
+      },
+      "productionBuild": {
+        "status": "pass",
+        "command": "npm run build",
+        "staticRoutes": 13
+      },
+      "gitDiffCheck": {
+        "status": "pass",
+        "command": "git diff --check"
+      }
+    }
+  },
+  "patch": "scripts/patches/review_a0_texts_02.py",
+  "coverage": {
+    "before": {
+      "covered": 110,
+      "total": 157
+    },
+    "after": {
+      "covered": 120,
+      "total": 157
+    },
+    "newlyCovered": 10,
+    "remaining": {
+      "total": 37,
+      "byLevel": {
+        "A1": 15,
+        "A2": 12,
+        "B1": 5,
+        "B2": 5
+      },
+      "ids": [
+        "t-a1-021..t-a1-035",
+        "t-a2-21..t-a2-30",
+        "t-a2-031..t-a2-032",
+        "t-b1-31..t-b1-35",
+        "t-b2-36..t-b2-40"
+      ]
+    },
+    "duplicateCoverage": 0
+  },
+  "contentChecks": [
+    {
+      "id": "CHK-R155-01",
+      "check": "النطاق يضم المعرّفات العشرة المختارة، وعدد النصوص/الجمل/الأسئلة 10/62/20.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R155-02",
+      "check": "كل الأسئلة العشرين MC مكتملة؛ الخيارات فريدة ومفتاح كل سؤال ضمن الخيارات.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R155-03",
+      "check": "73 حقلاً متميزاً موثقاً من 75 انتقالاً محروساً؛ التشغيل الثاني 0/75.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R155-04",
+      "check": "t-a0-013 مثال طقس غير مؤرخ؛ أزيل ادعاء «اليوم» مع الحفاظ على الإجابة الموافقة لنحو 20 درجة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R155-05",
+      "check": "مانيفستات الحوار والاستماع والإملاء مستقلة، ولا إدخالات أو ملفات مطابقة؛ لم يحدث استماع أو توليد.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R155-06",
+      "check": "K226a–f كاملة؛ لا بوابة smoke خُفّفت. K143e حدّثت لتطابق سؤال/مفتاح المتكلم بعد تصحيح النص، مع بقاء حدودها وفحوص الأدلة.",
+      "status": "pass"
+    }
+  ],
+  "judgement": {
+    "corrected": 73,
+    "unresolved": 0,
+    "note": "مراجعة تحريرية للنصوص العشرة وجملها الاثنين والستين وأسئلتها العشرين. صُقلت العربية، وصُححت ترجمات مثبتة واتساق الضمائر ومفاتيح الأسئلة؛ ووسم الطقس بأنه مثال غير آني. حُفظت حواجز smoke دون تخفيف: أضيفت K226a–f، وحُدّث نص توقع K143e ليتوافق مع صيغة المتكلم الجديدة. smoke الحالية 1498 نجاحاً و38 إخفاقاً، وهي الإخفاقات الـ38 نفسها في HEAD السابق؛ K226a–f كلها ناجحة. audit:content والبناء وTypeScript ناجحة؛ interactive يحتفظ بـ17 إخفاقاً سابقة."
+  },
+  "qualityStatus": "completed"
+}
