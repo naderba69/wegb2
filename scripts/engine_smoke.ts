@@ -10088,6 +10088,39 @@ void 0;
     d09.lines[4].ar.includes("احتفظ بالباقي"),
     "K217d d-a0-09 سعر الخبز بالعملة والدليل؛ والمجموع والدفع منفصلان وترجمة Stimmt so! دقيقة");
 }
+/* ═══ K218 — دفعة A0 الرابعة d-a0-10..12 (R137). ═══ */
+{
+  const reviewA004 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-04-2026-10-11.json", "utf8")) as any;
+  const reviewA004Md = readFileSync("docs/content-review-a0-dialogues-04-2026-10-11.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const batch = ["d-a0-10", "d-a0-11", "d-a0-12"].map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const qaValid = (q:any) => Array.isArray(q?.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length &&
+    typeof q.promptDe === "string" && !!q.promptDe.trim() && typeof q.promptAr === "string" && !!q.promptAr.trim() &&
+    typeof q.answer === "string" && q.options.includes(q.answer) && typeof q.explanationAr === "string" && !!q.explanationAr.trim();
+  const tasksValid = batch.every((d:any) => d && d.level === "A0" && d.questions.length === 2 && d.questions.every(qaValid) &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewA004.reviewRule === "R137" && reviewA004.totals.dialogues === 3 && reviewA004.totals.lines === 13 &&
+    reviewA004.totals.questions === 6 && reviewA004.totals.dictation === 3 && reviewA004.totals.correctedFields === 7 &&
+    reviewA004.totals.unresolved === 0 && reviewA004.corrections.length === 7 && reviewA004Md.includes("K218a–e") &&
+    reviewA004.audio.a0ManifestEntries === 0 && reviewA004.audio.modified === false,
+    "K218a تقرير R137 يطابق نطاق الدفعة والتصحيحات وتوثيق الصوت");
+  ok(tasksValid, "K218b d-a0-10..12: المفاتيح ضمن خيارات فريدة والإملاءات مقاطع منطوقة حرفياً");
+  const d10 = batch[0];
+  ok(d10.questions[0].answer === "Viertel nach drei" && d10.lines[3].de.includes("Um Viertel nach drei") &&
+    d10.questions[0].explanationAr.includes("الثالثة والربع") && d10.questions[1].answer === "Halb drei" &&
+    d10.questions[1].explanationAr.includes("2:30") &&
+    d10.lines[2].ar === "شكراً! متى تأتي الحافلة؟" && d10.questions[0].promptAr === "متى تأتي الحافلة؟",
+    "K218c d-a0-10 Halb drei=2:30 وViertel nach drei=3:15؛ وترجمة Bus سليمة");
+  const d11 = batch[1];
+  ok(d11.lines[1].ar === "أعاني من صداع وحُمّى." && d11.questions[0].promptAr === "ما أعراض المريض؟" &&
+    d11.questions[0].explanationAr === "يعاني المريض من صداع وحُمّى." && d11.questions[1].answer === "Nein, er hat keinen Husten",
+    "K218d d-a0-11 الأعراض والشرح ترجمتها دقيقة ومفتاح السعال منفي كما في الحوار، بلا تشخيص إضافي");
+  const d12 = batch[2];
+  ok(d12.lines[3].ar === "أخي عمره 20 سنة، وأختاي عمرهما 15 و10 سنوات." &&
+    d12.questions[0].answer === "Drei: einen Bruder und zwei Schwestern" && d12.questions[1].answer === "20 Jahre" &&
+    d12.dictation[0] === d12.lines[1].de,
+    "K218e d-a0-12 العدد والأعمار محددة، والإملاء يطابق السطر كاملاً بما فيه Ja");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;

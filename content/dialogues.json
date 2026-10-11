@@ -11677,7 +11677,7 @@
       {
         "who": "A",
         "de": "Danke! Wann kommt der Bus?",
-        "ar": "شكراً! متى يأتي الباص؟"
+        "ar": "شكراً! متى تأتي الحافلة؟"
       },
       {
         "who": "B",
@@ -11689,7 +11689,7 @@
       {
         "type": "mc",
         "promptDe": "Wann kommt der Bus?",
-        "promptAr": "متى يأتي الباص؟",
+        "promptAr": "متى تأتي الحافلة؟",
         "options": [
           "Halb drei",
           "Viertel nach drei",
@@ -11734,7 +11734,7 @@
       {
         "who": "Patient",
         "de": "Ich habe Kopfschmerzen und Fieber.",
-        "ar": "عندي صداع وحرارة."
+        "ar": "أعاني من صداع وحُمّى."
       },
       {
         "who": "Arzt",
@@ -11756,7 +11756,7 @@
       {
         "type": "mc",
         "promptDe": "Was hat der Patient?",
-        "promptAr": "ما يشكو المريض؟",
+        "promptAr": "ما أعراض المريض؟",
         "options": [
           "Husten",
           "Kopfschmerzen und Fieber",
@@ -11764,7 +11764,7 @@
           "Halsschmerzen"
         ],
         "answer": "Kopfschmerzen und Fieber",
-        "explanationAr": "صداع وحرارة.",
+        "explanationAr": "يعاني المريض من صداع وحُمّى.",
         "id": "d-a0-11-q1"
       },
       {
@@ -11811,7 +11811,7 @@
       {
         "who": "B",
         "de": "Mein Bruder ist 20, meine Schwestern sind 15 und 10.",
-        "ar": "أخي في العشرين، وأختاي 15 و10."
+        "ar": "أخي عمره 20 سنة، وأختاي عمرهما 15 و10 سنوات."
       }
     ],
     "questions": [
@@ -11845,7 +11845,7 @@
       }
     ],
     "dictation": [
-      "Ich habe einen Bruder und zwei Schwestern."
+      "Ja, ich habe einen Bruder und zwei Schwestern."
     ]
   },
   {
