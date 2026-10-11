@@ -11069,30 +11069,30 @@
       {
         "type": "mc",
         "promptDe": "Wie buchstabiert man Huber?",
-        "promptAr": "كيف تُتَهجَّأ Huber؟",
+        "promptAr": "ما تهجئة الاسم Huber؟",
         "options": [
-          "H-U-P-E-R",
-          "H-U-B-E-R",
-          "U-H-B-E-R",
-          "H-A-B-E-R"
+          "H – U – P – E – R",
+          "H – U – B – E – R",
+          "U – H – B – E – R",
+          "H – A – B – E – R"
         ],
-        "answer": "H-U-B-E-R",
-        "explanationAr": "العميل هجّاها H–U–B–E–R.",
+        "answer": "H – U – B – E – R",
+        "explanationAr": "تهجئة الاسم Huber هي H – U – B – E – R.",
         "id": "d-a0-05-q1"
       },
       {
         "id": "d-a0-05-q2",
         "type": "mc",
-        "promptDe": "Was bittet die Mitarbeiterin den Kunden zuerst zu tun?",
-        "promptAr": "ماذا تطلب الموظفة من العميل أن يفعل أولاً؟",
+        "promptDe": "Was sagt die Mitarbeiterin direkt nach dem Namen?",
+        "promptAr": "ماذا تقول الموظفة مباشرةً بعد ذكر الاسم؟",
         "options": [
-          "Seinen Namen zu buchstabieren",
-          "Seine Telefonnummer aufzuschreiben",
-          "Einen Kaffee zu bestellen",
-          "Seinen Ausweis zu zeigen"
+          "Buchstabieren Sie bitte!",
+          "Danke. Und Ihre Telefonnummer?",
+          "Haben Sie einen Termin?",
+          "Brauchen Sie Hilfe?"
         ],
-        "answer": "Seinen Namen zu buchstabieren",
-        "explanationAr": "«Buchstabieren Sie bitte!» — تطلب منه تهجئة اسمه."
+        "answer": "Buchstabieren Sie bitte!",
+        "explanationAr": "تقول مباشرةً بعد ذكر الاسم: «Buchstabieren Sie bitte!» — «يرجى تهجئة الاسم»."
       }
     ],
     "dictation": [
@@ -11119,12 +11119,12 @@
       {
         "who": "Kellner",
         "de": "Mit Milch oder ohne?",
-        "ar": "مع حليب أو بدون؟"
+        "ar": "مع الحليب أم بدونه؟"
       },
       {
         "who": "Gast",
         "de": "Mit Milch, bitte. Und ein Glas Wasser.",
-        "ar": "مع حليب من فضلك. وكأس ماء."
+        "ar": "مع الحليب من فضلك، وكأس من الماء."
       },
       {
         "who": "Kellner",
@@ -11141,7 +11141,7 @@
       {
         "type": "mc",
         "promptDe": "Was bestellt der Gast?",
-        "promptAr": "ماذا طلب الزبون؟",
+        "promptAr": "ماذا يطلب الضيف؟",
         "options": [
           "Tee und Kuchen",
           "Kaffee mit Milch und ein Glas Wasser",
@@ -11149,22 +11149,22 @@
           "Wein und Käse"
         ],
         "answer": "Kaffee mit Milch und ein Glas Wasser",
-        "explanationAr": "قهوة بالحليب وماء.",
+        "explanationAr": "يطلب قهوةً بالحليب وكأساً من الماء.",
         "id": "d-a0-06-q1"
       },
       {
         "id": "d-a0-06-q2",
         "type": "mc",
-        "promptDe": "Was möchte der Gast zusätzlich zum Kaffee?",
-        "promptAr": "ماذا يريد الضيف إضافةً إلى القهوة؟",
+        "promptDe": "Was bestellt der Gast noch?",
+        "promptAr": "ماذا يطلب الضيف أيضاً؟",
         "options": [
-          "Ein Glas Wasser",
+          "Milch und ein Glas Wasser",
           "Einen Kuchen",
           "Einen Tee",
           "Ein Sandwich"
         ],
-        "answer": "Ein Glas Wasser",
-        "explanationAr": "«Und ein Glas Wasser.» — يريد كأساً من الماء أيضاً."
+        "answer": "Milch und ein Glas Wasser",
+        "explanationAr": "«Mit Milch, bitte. Und ein Glas Wasser.» — يطلب قهوته بالحليب وكأساً من الماء."
       }
     ],
     "dictation": [

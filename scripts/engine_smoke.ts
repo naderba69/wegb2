@@ -10022,6 +10022,42 @@ void 0;
     "K207i الحوارات الثلاث بلا حقل waisen");
   const a0Count = dialoguesArr.filter((d:any)=>d.level==="A0").length;
   ok(a0Count === 3, `K207j مستوى A0 يغطي 3 حوارات في content/dialogues.json (فعلياً ${a0Count})`);
+/* ═══ K216 — دفعة A0 الثانية d-a0-04..06 (R135). ═══ */
+{
+  const reviewA002 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-02-2026-10-10.json", "utf8")) as any;
+  const reviewA002Md = readFileSync("docs/content-review-a0-dialogues-02-2026-10-10.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const batch = ["d-a0-04", "d-a0-05", "d-a0-06"].map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const qaValid = (q:any) => Array.isArray(q?.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length &&
+    typeof q.promptDe === "string" && !!q.promptDe.trim() && typeof q.promptAr === "string" && !!q.promptAr.trim() &&
+    typeof q.answer === "string" && q.options.includes(q.answer) && typeof q.explanationAr === "string" && !!q.explanationAr.trim();
+  const linesAndTasksValid = batch.every((d:any) => d && d.level === "A0" && d.questions.length === 2 &&
+    d.questions.every(qaValid) && d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewA002.reviewRule === "R135" && reviewA002.totals.dialogues === 3 && reviewA002.totals.lines === 18 &&
+    reviewA002.totals.questions === 6 && reviewA002.totals.dictation === 5 && reviewA002.totals.correctedFields === 18 &&
+    reviewA002.totals.unresolved === 0 && reviewA002.corrections.length === 18 && reviewA002Md.includes("K216a–d") &&
+    reviewA002.audio.a0ManifestEntries === 0 && reviewA002.audio.modified === false && reviewA002.audio.generated === false,
+    "K216a تقرير R135 يطابق نطاق الدفعة والتصحيحات، ويسجل غياب الصوت بلا تعويض أو ادعاء");
+  ok(linesAndTasksValid, "K216b d-a0-04..06: كل سؤال له مفتاح ضمن خيارات فريدة، والإملاءات مقاطع حرفية من الحوار");
+
+  const d05 = batch[1];
+  const spelling = d05.questions.find((q:any) => q.id === "d-a0-05-q1");
+  const nextTurn = d05.questions.find((q:any) => q.id === "d-a0-05-q2");
+  const spelledLine = d05.lines[3].de.replace(/\.$/, "");
+  ok(spelling.promptAr === "ما تهجئة الاسم Huber؟" && spelling.answer === spelledLine && spelling.options.includes(spelling.answer) &&
+    spelling.explanationAr.includes(spelledLine) && nextTurn.promptDe === "Was sagt die Mitarbeiterin direkt nach dem Namen?" &&
+    nextTurn.answer === d05.lines[2].de && nextTurn.options.includes(d05.lines[4].de) &&
+    nextTurn.promptAr === "ماذا تقول الموظفة مباشرةً بعد ذكر الاسم؟",
+    "K216c d-a0-05 تهجئة Huber مطابقة للسطر؛ ومفتاح السؤال التالي هو جواب الموظفة المباشر بعد الاسم");
+
+  const d06 = batch[2];
+  const additionalOrder = d06.questions.find((q:any) => q.id === "d-a0-06-q2");
+  ok(d06.lines[2].ar === "مع الحليب أم بدونه؟" && d06.lines[3].ar === "مع الحليب من فضلك، وكأس من الماء." &&
+    d06.questions[0].promptAr === "ماذا يطلب الضيف؟" && additionalOrder.promptDe === "Was bestellt der Gast noch?" &&
+    additionalOrder.answer === "Milch und ein Glas Wasser" && additionalOrder.options.includes(additionalOrder.answer) &&
+    additionalOrder.explanationAr.includes(d06.lines[3].de),
+    "K216d d-a0-06 ترجمة الحليب واضحة، والسؤال ومفتاحه وشرحه يشملون الحليب وكأس الماء كليهما");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;

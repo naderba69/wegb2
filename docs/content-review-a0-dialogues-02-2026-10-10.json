@@ -1,0 +1,207 @@
+{
+  "reviewRule": "R135",
+  "date": "2026-10-10",
+  "scope": "دفعة A0 الثانية: d-a0-04..06 (التعارف، تهجئة الاسم ورقم الهاتف، الطلب في المقهى). مراجعة كل سطر ألماني وعربي وكل سؤال وخيار ومفتاح وإملاء؛ بلا استماع.",
+  "dialogues": [
+    {
+      "id": "d-a0-04",
+      "level": "A0",
+      "titleDe": "Woher kommst du?",
+      "lines": 6,
+      "questions": 2,
+      "dictation": 2,
+      "corrections": 0,
+      "judgement": "المحادثة وتسلسل الأجوبة صحيحان؛ الإجابتان عن بلد ليلى ومكان سكنها مستندتان إلى سطرين منطوقين. لا تعديل."
+    },
+    {
+      "id": "d-a0-05",
+      "level": "A0",
+      "titleDe": "Namen buchstabieren und Telefonnummer nennen",
+      "lines": 6,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 9,
+      "judgement": "وُحّدت كتابة أحرف Huber مع السطر المسموع، وأُصلح سؤال عربي غير سليم، وخُفِّف سؤال ألماني مركّب وأُعيد بناء خياراته لتطابق الاستجابة التالية مباشرةً."
+    },
+    {
+      "id": "d-a0-06",
+      "level": "A0",
+      "titleDe": "Im Café — bestellen",
+      "lines": 6,
+      "questions": 2,
+      "dictation": 2,
+      "corrections": 9,
+      "judgement": "صُقلت ترجمة سؤال/جواب الطلب، وصُحّحت صياغة السؤال عن الطلب الإضافي كي تشمل الحليب والماء معاً، كما نُقّحت ترجمة سطري الحليب."
+    }
+  ],
+  "totals": {
+    "dialogues": 3,
+    "lines": 18,
+    "questions": 6,
+    "dictation": 5,
+    "correctedFields": 18,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "d-a0-05.questions[0].promptAr",
+      "old": "كيف تُتَهجَّأ Huber؟",
+      "new": "ما تهجئة الاسم Huber؟",
+      "rationale": "استبدال تركيب استفهامي غير سليم بصياغة عربية موجزة وطبيعية."
+    },
+    {
+      "unit": "d-a0-05.questions[0].options",
+      "old": [
+        "H-U-P-E-R",
+        "H-U-B-E-R",
+        "U-H-B-E-R",
+        "H-A-B-E-R"
+      ],
+      "new": [
+        "H – U – P – E – R",
+        "H – U – B – E – R",
+        "U – H – B – E – R",
+        "H – A – B – E – R"
+      ],
+      "rationale": "توحيد المسافات والفواصل مع تهجئة H – U – B – E – R في السطر الألماني. بقي تسلسل الحروف الخاطئ في كل مشتت كما هو."
+    },
+    {
+      "unit": "d-a0-05.questions[0].answer",
+      "old": "H-U-B-E-R",
+      "new": "H – U – B – E – R",
+      "rationale": "تطابق المفتاح مع خيار التهجئة الموحّد ومع ما نُطق في الحوار."
+    },
+    {
+      "unit": "d-a0-05.questions[0].explanationAr",
+      "old": "العميل هجّاها H–U–B–E–R.",
+      "new": "تهجئة الاسم Huber هي H – U – B – E – R.",
+      "rationale": "تسمية الاسم صراحةً وعرض الأحرف بالصيغة نفسها المستخدمة في السؤال."
+    },
+    {
+      "unit": "d-a0-05.questions[1].promptDe",
+      "old": "Was bittet die Mitarbeiterin den Kunden zuerst zu tun?",
+      "new": "Was sagt die Mitarbeiterin direkt nach dem Namen?",
+      "rationale": "تبسيط تركيب zu-Infinitiv غير الملائم لمستوى A0 مع تحديد موضع الإجابة في تسلسل الحوار."
+    },
+    {
+      "unit": "d-a0-05.questions[1].promptAr",
+      "old": "ماذا تطلب الموظفة من العميل أن يفعل أولاً؟",
+      "new": "ماذا تقول الموظفة مباشرةً بعد ذكر الاسم؟",
+      "rationale": "مطابقة الترجمة العربية لصيغة السؤال الألمانية الجديدة."
+    },
+    {
+      "unit": "d-a0-05.questions[1].options",
+      "old": [
+        "Seinen Namen zu buchstabieren",
+        "Seine Telefonnummer aufzuschreiben",
+        "Einen Kaffee zu bestellen",
+        "Seinen Ausweis zu zeigen"
+      ],
+      "new": [
+        "Buchstabieren Sie bitte!",
+        "Danke. Und Ihre Telefonnummer?",
+        "Haben Sie einen Termin?",
+        "Brauchen Sie Hilfe?"
+      ],
+      "rationale": "خيارات قولية موجزة؛ الخيار الثاني اقتباسٌ مسموع لاحقاً لكنه ليس الاستجابة المباشرة، فيختبر ترتيب السطور، والبقيّة مشتتات سياقية غير مسموعة."
+    },
+    {
+      "unit": "d-a0-05.questions[1].answer",
+      "old": "Seinen Namen zu buchstabieren",
+      "new": "Buchstabieren Sie bitte!",
+      "rationale": "مفتاح حرفي مطابق للسطر التالي مباشرةً بعد ذكر الاسم."
+    },
+    {
+      "unit": "d-a0-05.questions[1].explanationAr",
+      "old": "«Buchstabieren Sie bitte!» — تطلب منه تهجئة اسمه.",
+      "new": "تقول مباشرةً بعد ذكر الاسم: «Buchstabieren Sie bitte!» — «يرجى تهجئة الاسم».",
+      "rationale": "إظهار الدليل الزمني والعبارة المنطوقة وترجمتها بوضوح."
+    },
+    {
+      "unit": "d-a0-06.lines[2].ar",
+      "old": "مع حليب أو بدون؟",
+      "new": "مع الحليب أم بدونه؟",
+      "rationale": "صياغة عربية أفصح وتوضيح أن السؤال عن إضافة الحليب أو تركه."
+    },
+    {
+      "unit": "d-a0-06.lines[3].ar",
+      "old": "مع حليب من فضلك. وكأس ماء.",
+      "new": "مع الحليب من فضلك، وكأس من الماء.",
+      "rationale": "استكمال أداة التعريف وحرف الجر في الترجمة مع الحفاظ على الطلبين."
+    },
+    {
+      "unit": "d-a0-06.questions[0].promptAr",
+      "old": "ماذا طلب الزبون؟",
+      "new": "ماذا يطلب الضيف؟",
+      "rationale": "مطابقة زمن السؤال الألماني الحاضر Was bestellt der Gast? وتوحيد تسمية Gast بالضيف."
+    },
+    {
+      "unit": "d-a0-06.questions[0].explanationAr",
+      "old": "قهوة بالحليب وماء.",
+      "new": "يطلب قهوةً بالحليب وكأساً من الماء.",
+      "rationale": "توضيح أن الطلب يتضمن كأس ماء محدداً، لا ماءً مطلقاً."
+    },
+    {
+      "unit": "d-a0-06.questions[1].promptDe",
+      "old": "Was möchte der Gast zusätzlich zum Kaffee?",
+      "new": "Was bestellt der Gast noch?",
+      "rationale": "استبدال außerdem/zusätzlich بصياغة A0 أقصر، وإزالة الإيحاء بأن السؤال عن الحليب وحده أو الماء وحده."
+    },
+    {
+      "unit": "d-a0-06.questions[1].promptAr",
+      "old": "ماذا يريد الضيف إضافةً إلى القهوة؟",
+      "new": "ماذا يطلب الضيف أيضاً؟",
+      "rationale": "مطابقة السؤال الجديد مع صيغة طلبٍ إضافي واضحة."
+    },
+    {
+      "unit": "d-a0-06.questions[1].options",
+      "old": [
+        "Ein Glas Wasser",
+        "Einen Kuchen",
+        "Einen Tee",
+        "Ein Sandwich"
+      ],
+      "new": [
+        "Milch und ein Glas Wasser",
+        "Einen Kuchen",
+        "Einen Tee",
+        "Ein Sandwich"
+      ],
+      "rationale": "إكمال الخيار الصحيح ليشمل الإضافتين المنطوقتين: الحليب وكأس الماء."
+    },
+    {
+      "unit": "d-a0-06.questions[1].answer",
+      "old": "Ein Glas Wasser",
+      "new": "Milch und ein Glas Wasser",
+      "rationale": "إصلاح مفتاح ناقص؛ المحادثة تطلب الحليب للقهوة وكأس ماء معاً."
+    },
+    {
+      "unit": "d-a0-06.questions[1].explanationAr",
+      "old": "«Und ein Glas Wasser.» — يريد كأساً من الماء أيضاً.",
+      "new": "«Mit Milch, bitte. Und ein Glas Wasser.» — يطلب قهوته بالحليب وكأساً من الماء.",
+      "rationale": "اقتباس الدليل الكامل كي لا يسقط جزء الحليب من التفسير."
+    }
+  ],
+  "contentChecks": [
+    "d-a0-04: لا تغيير؛ بلد Layla (Syrien) ومكان سكنها (Hamburg) يطابقان السطرين 4 و6، ومفتاحا السؤالين لا يلتبسان.",
+    "d-a0-05: تسلسل الاسم ثم طلب التهجئة ثم طلب رقم الهاتف ثابت؛ كل سؤال له مفتاح ضمن خيارات فريدة، والإملاء مطابق لمقطع منطوق.",
+    "d-a0-06: القهوة مع الحليب وكأس الماء طلبان مختلفان؛ السؤال الثاني ومفتاحه ودليله يشملان كليهما. لا تغيير في النص الألماني المنطوق."
+  ],
+  "audio": {
+    "a0ManifestEntries": 0,
+    "listened": false,
+    "generated": false,
+    "modified": false,
+    "note": "لا توجد إدخالات A0 في content/dialog-audio.json؛ لم يُدّعَ وجود تسجيل، ولم يُستخدم neu بديلاً، ولم يُنشأ صوت في هذه المراجعة."
+  },
+  "limits": {
+    "human": "تدقيق آلي/تحريري في هذه البيئة وليس مراجعة لغوية بشرية مستقلة.",
+    "cefr": "مواءمة صياغة سؤال d-a0-05 وd-a0-06 مع بساطة A0 تقدير تربوي؛ ليست شهادة CEFR.",
+    "externalSources": "لم تُستخدم مصادر خارجية؛ التحقق من مطابقة الأسئلة والأجوبة قائم على نص الحوار نفسه.",
+    "audio": "لم يُستمع إلى تسجيل؛ بيان الصوت لم يتغير.",
+    "other": "لا ادعاءات قانونية أو طبية أو مهنية في هذه الدفعة. تحذيرات W1–W6 لم تتغير."
+  },
+  "gates": {
+    "planned": "K216a–d"
+  }
+}
