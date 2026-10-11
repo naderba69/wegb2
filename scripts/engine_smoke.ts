@@ -10022,7 +10022,7 @@ void 0;
     "K207i الحوارات الثلاث بلا حقل waisen");
   const a0Count = dialoguesArr.filter((d:any)=>d.level==="A0").length;
   ok(a0Count === 3, `K207j مستوى A0 يغطي 3 حوارات في content/dialogues.json (فعلياً ${a0Count})`);
-/* ═══ K216 — دفعة A0 الثانية d-a0-04..06 (R135). ═══ */
+/* ═══ K216 — دفعة A0 الثانية d-a0-04..06 (R145). ═══ */
 {
   const reviewA002 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-02-2026-10-10.json", "utf8")) as any;
   const reviewA002Md = readFileSync("docs/content-review-a0-dialogues-02-2026-10-10.md", "utf8");
@@ -10033,11 +10033,11 @@ void 0;
     typeof q.answer === "string" && q.options.includes(q.answer) && typeof q.explanationAr === "string" && !!q.explanationAr.trim();
   const linesAndTasksValid = batch.every((d:any) => d && d.level === "A0" && d.questions.length === 2 &&
     d.questions.every(qaValid) && d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
-  ok(reviewA002.reviewRule === "R135" && reviewA002.totals.dialogues === 3 && reviewA002.totals.lines === 18 &&
+  ok(reviewA002.reviewRule === "R145" && reviewA002.totals.dialogues === 3 && reviewA002.totals.lines === 18 &&
     reviewA002.totals.questions === 6 && reviewA002.totals.dictation === 5 && reviewA002.totals.correctedFields === 18 &&
     reviewA002.totals.unresolved === 0 && reviewA002.corrections.length === 18 && reviewA002Md.includes("K216a–d") &&
     reviewA002.audio.a0ManifestEntries === 0 && reviewA002.audio.modified === false && reviewA002.audio.generated === false,
-    "K216a تقرير R135 يطابق نطاق الدفعة والتصحيحات، ويسجل غياب الصوت بلا تعويض أو ادعاء");
+    "K216a تقرير R145 يطابق نطاق الدفعة والتصحيحات، ويسجل غياب الصوت بلا تعويض أو ادعاء");
   ok(linesAndTasksValid, "K216b d-a0-04..06: كل سؤال له مفتاح ضمن خيارات فريدة، والإملاءات مقاطع حرفية من الحوار");
 
   const d05 = batch[1];
@@ -10058,7 +10058,7 @@ void 0;
     additionalOrder.explanationAr.includes(d06.lines[3].de),
     "K216d d-a0-06 ترجمة الحليب واضحة، والسؤال ومفتاحه وشرحه يشملون الحليب وكأس الماء كليهما");
 }
-/* ═══ K217 — دفعة A0 الثالثة d-a0-07..09 (R136). ═══ */
+/* ═══ K217 — دفعة A0 الثالثة d-a0-07..09 (R146). ═══ */
 {
   const reviewA003 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-03-2026-10-11.json", "utf8")) as any;
   const reviewA003Md = readFileSync("docs/content-review-a0-dialogues-03-2026-10-11.md", "utf8");
@@ -10069,11 +10069,11 @@ void 0;
     typeof q.answer === "string" && q.options.includes(q.answer) && typeof q.explanationAr === "string" && !!q.explanationAr.trim();
   const tasksValid = batch.every((d:any) => d && d.level === "A0" && d.questions.length === 2 && d.questions.every(qaValid) &&
     d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
-  ok(reviewA003.reviewRule === "R136" && reviewA003.totals.dialogues === 3 && reviewA003.totals.lines === 14 &&
+  ok(reviewA003.reviewRule === "R146" && reviewA003.totals.dialogues === 3 && reviewA003.totals.lines === 14 &&
     reviewA003.totals.questions === 6 && reviewA003.totals.dictation === 4 && reviewA003.totals.correctedFields === 7 &&
     reviewA003.totals.unresolved === 0 && reviewA003.corrections.length === 7 && reviewA003Md.includes("K217a–d") &&
     reviewA003.audio.a0ManifestEntries === 0 && reviewA003.audio.modified === false,
-    "K217a تقرير R136 ونطاق المراجعة والتصحيحات والصوت مطابق للمانيفستو");
+    "K217a تقرير R146 ونطاق المراجعة والتصحيحات والصوت مطابق للمانيفستو");
   ok(tasksValid, "K217b d-a0-07..09: المفاتيح ضمن خيارات فريدة والإملاءات مقاطع حرفية من الحوار");
   const d08 = batch[1];
   const whenQ = d08.questions.find((q:any) => q.id === "d-a0-08-q1");
@@ -10088,7 +10088,7 @@ void 0;
     d09.lines[4].ar.includes("احتفظ بالباقي"),
     "K217d d-a0-09 سعر الخبز بالعملة والدليل؛ والمجموع والدفع منفصلان وترجمة Stimmt so! دقيقة");
 }
-/* ═══ K218 — دفعة A0 الرابعة d-a0-10..12 (R137). ═══ */
+/* ═══ K218 — دفعة A0 الرابعة d-a0-10..12 (R147). ═══ */
 {
   const reviewA004 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-04-2026-10-11.json", "utf8")) as any;
   const reviewA004Md = readFileSync("docs/content-review-a0-dialogues-04-2026-10-11.md", "utf8");
@@ -10099,11 +10099,11 @@ void 0;
     typeof q.answer === "string" && q.options.includes(q.answer) && typeof q.explanationAr === "string" && !!q.explanationAr.trim();
   const tasksValid = batch.every((d:any) => d && d.level === "A0" && d.questions.length === 2 && d.questions.every(qaValid) &&
     d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
-  ok(reviewA004.reviewRule === "R137" && reviewA004.totals.dialogues === 3 && reviewA004.totals.lines === 13 &&
+  ok(reviewA004.reviewRule === "R147" && reviewA004.totals.dialogues === 3 && reviewA004.totals.lines === 13 &&
     reviewA004.totals.questions === 6 && reviewA004.totals.dictation === 3 && reviewA004.totals.correctedFields === 7 &&
     reviewA004.totals.unresolved === 0 && reviewA004.corrections.length === 7 && reviewA004Md.includes("K218a–e") &&
     reviewA004.audio.a0ManifestEntries === 0 && reviewA004.audio.modified === false,
-    "K218a تقرير R137 يطابق نطاق الدفعة والتصحيحات وتوثيق الصوت");
+    "K218a تقرير R147 يطابق نطاق الدفعة والتصحيحات وتوثيق الصوت");
   ok(tasksValid, "K218b d-a0-10..12: المفاتيح ضمن خيارات فريدة والإملاءات مقاطع منطوقة حرفياً");
   const d10 = batch[0];
   ok(d10.questions[0].answer === "Viertel nach drei" && d10.lines[3].de.includes("Um Viertel nach drei") &&
