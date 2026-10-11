@@ -11858,12 +11858,12 @@
       {
         "who": "Tourist",
         "de": "Entschuldigung! Wo ist der Bahnhof?",
-        "ar": "عفواً، أين المحطة؟"
+        "ar": "عفواً، أين محطة القطار؟"
       },
       {
         "who": "Passant",
         "de": "Gehen Sie geradeaus, dann rechts.",
-        "ar": "امشِ مستقيماً ثم يميناً."
+        "ar": "سِرْ مستقيماً، ثم انعطف يميناً."
       },
       {
         "who": "Tourist",
@@ -11880,7 +11880,7 @@
       {
         "type": "mc",
         "promptDe": "Wie lange dauert es?",
-        "promptAr": "كم تستغرق؟",
+        "promptAr": "كم يستغرق الوصول سيراً؟",
         "options": [
           "Eine Stunde",
           "10 Minuten",
@@ -11888,14 +11888,14 @@
           "20 Minuten"
         ],
         "answer": "5 Minuten",
-        "explanationAr": "خمس دقائق.",
+        "explanationAr": "خمس دقائق سيراً على الأقدام.",
         "id": "d-a0-13-q1"
       },
       {
         "id": "d-a0-13-q2",
         "type": "mc",
-        "promptDe": "Wohin soll der Tourist gehen?",
-        "promptAr": "إلى أين ينبغي أن يذهب السائح؟",
+        "promptDe": "Wie kommt der Tourist zum Bahnhof?",
+        "promptAr": "كيف يصل السائح إلى محطة القطار؟",
         "options": [
           "Geradeaus, dann rechts",
           "Links und dann zurück",
@@ -11907,7 +11907,7 @@
       }
     ],
     "dictation": [
-      "Fünf Minuten zu Fuß."
+      "Nein, fünf Minuten zu Fuß."
     ]
   },
   {
@@ -11935,7 +11935,7 @@
         "id": "d-a0-ht01-q1",
         "type": "mc",
         "promptDe": "Wie viele Minuten hat der Zug Verspätung?",
-        "promptAr": "كم دقيقة تأخير القطار؟",
+        "promptAr": "كم دقيقة يتأخر القطار؟",
         "options": [
           "zwei Minuten",
           "fünf Minuten",
@@ -12244,7 +12244,7 @@
     "lines": [
       {
         "de": "Liebe Kunden! Heute sind die Bananen im Angebot: ein Kilo für einen Euro. Bitte bezahlen Sie an der Kasse.",
-        "ar": "أيها الزبائن! الموز اليوم في العرض: كيلو بيورو واحد. الرجاء الدفع عند الصندوق.",
+        "ar": "أيها الزبائن! الموز ضمن العروض اليوم: كيلوغرام واحد مقابل يورو واحد. يرجى الدفع عند الصندوق.",
         "who": "Ansage"
       }
     ],
@@ -12262,7 +12262,7 @@
           "fünfzig Cent"
         ],
         "answer": "ein Euro",
-        "explanationAr": "الإعلان يقول 1€."
+        "explanationAr": "«ein Kilo für einen Euro» — سعر الكيلوغرام يورو واحد."
       },
       {
         "id": "d-a0-ht02-q2",
@@ -12296,7 +12296,7 @@
       },
       {
         "de": "Einen Kaffee, bitte. Mit Milch und Zucker.",
-        "ar": "قهوة من فضلك، مع حليب وسكر.",
+        "ar": "قهوة من فضلك، مع الحليب والسكر.",
         "who": "Gast"
       },
       {
@@ -12317,14 +12317,14 @@
         "id": "d-a0-ht03-q1",
         "type": "mc",
         "promptDe": "Was bestellt der Gast?",
-        "promptAr": "ماذا طلب الزبون؟",
+        "promptAr": "ماذا يطلب الضيف؟",
         "options": [
           "Tee",
           "Kaffee mit Milch und Zucker",
           "Wasser"
         ],
         "answer": "Kaffee mit Milch und Zucker",
-        "explanationAr": "الزبون طلب Kaffee mit Milch und Zucker."
+        "explanationAr": "يطلب قهوةً بالحليب والسكر."
       },
       {
         "id": "d-a0-ht03-q2",

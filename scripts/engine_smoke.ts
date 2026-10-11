@@ -10020,8 +10020,13 @@ void 0;
     "K207h حدود الصوت/CEFR/بشري/قانوني/مهني والصوت بلا استماع");
   ok(reviewA001.waisen.present === false,
     "K207i الحوارات الثلاث بلا حقل waisen");
-  const a0Count = dialoguesArr.filter((d:any)=>d.level==="A0").length;
-  ok(a0Count === 3, `K207j مستوى A0 يغطي 3 حوارات في content/dialogues.json (فعلياً ${a0Count})`);
+  const a0Entries = dialoguesArr.filter((d:any)=>d.level==="A0");
+  const expectedA0Ids = ["d-a0-01", "d-a0-02", "d-a0-03", "d-a0-04", "d-a0-05", "d-a0-06", "d-a0-07", "d-a0-08", "d-a0-09", "d-a0-10", "d-a0-11", "d-a0-12", "d-a0-13", "d-a0-ht01", "d-a0-ht02", "d-a0-ht03"];
+  const actualA0Ids = a0Entries.map((d:any)=>d.id).sort();
+  const a0Count = a0Entries.length;
+  ok(a0Count === 16 && JSON.stringify(actualA0Ids) === JSON.stringify(expectedA0Ids) &&
+    a0Entries.filter((d:any)=>d.type==="hoer").length === 3 && a0Entries.filter((d:any)=>d.type!=="hoer").length === 13,
+    `K207j موارد A0 كاملة: 13 حواراً و3 نصوص hoer (16 معرفاً محدداً؛ فعلياً ${a0Count})`);
 /* ═══ K216 — دفعة A0 الثانية d-a0-04..06 (R145). ═══ */
 {
   const reviewA002 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-02-2026-10-10.json", "utf8")) as any;
@@ -10120,6 +10125,66 @@ void 0;
     d12.questions[0].answer === "Drei: einen Bruder und zwei Schwestern" && d12.questions[1].answer === "20 Jahre" &&
     d12.dictation[0] === d12.lines[1].de,
     "K218e d-a0-12 العدد والأعمار محددة، والإملاء يطابق السطر كاملاً بما فيه Ja");
+}
+/* ═══ K219 — دفعة A0 الخامسة d-a0-13 وht01..03 (R148). ═══ */
+{
+  const reviewA005 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-05-2026-10-11.json", "utf8")) as any;
+  const reviewA005Md = readFileSync("docs/content-review-a0-dialogues-05-2026-10-11.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const ids = ["d-a0-13", "d-a0-ht01", "d-a0-ht02", "d-a0-ht03"];
+  const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const qaValid = (q:any) => Array.isArray(q?.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length &&
+    typeof q.promptDe === "string" && !!q.promptDe.trim() && typeof q.promptAr === "string" && !!q.promptAr.trim() &&
+    typeof q.answer === "string" && q.options.includes(q.answer) && typeof q.explanationAr === "string" && !!q.explanationAr.trim();
+  const tasksValid = batch.every((d:any) => d && d.level === "A0" && d.questions.length === 2 && d.questions.every(qaValid) &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewA005.reviewRule === "R148" && JSON.stringify(reviewA005.targetIds) === JSON.stringify(ids) &&
+    reviewA005.totals.dialogues === 4 && reviewA005.totals.lines === 11 && reviewA005.totals.questions === 8 &&
+    reviewA005.totals.dictation === 4 && reviewA005.totals.correctedFields === 13 && reviewA005.totals.unresolved === 0 &&
+    reviewA005.corrections.length === 13 && reviewA005Md.includes("K219a–f") &&
+    reviewA005.audio.a0ManifestEntries === 0 && reviewA005.audio.modified === false,
+    "K219a تقرير R148 يطابق موارد الدفعة والتصحيحات وحدود الصوت");
+  ok(tasksValid, "K219b d-a0-13 وht01..03: مفاتيح ضمن خيارات فريدة، والإملاءات مقتطفات منطوقة حرفياً");
+  const d13 = batch[0];
+  ok(d13.lines[0].ar === "عفواً، أين محطة القطار؟" && d13.lines[1].ar === "سِرْ مستقيماً، ثم انعطف يميناً." &&
+    d13.questions[0].promptAr === "كم يستغرق الوصول سيراً؟" && d13.questions[0].answer === "5 Minuten" &&
+    d13.questions[0].explanationAr === "خمس دقائق سيراً على الأقدام." &&
+    d13.questions[1].promptDe === "Wie kommt der Tourist zum Bahnhof?" &&
+    d13.questions[1].promptAr === "كيف يصل السائح إلى محطة القطار؟" &&
+    d13.dictation[0] === "Nein, fünf Minuten zu Fuß." && d13.dictation[0] === d13.lines[3].de,
+    "K219c d-a0-13 اتجاهات Bahnhof ومدة المشي والسؤال والإملاء تتطابق دلالياً وحرفياً");
+  const ht01 = batch[1], ht02 = batch[2];
+  ok(ht01.questions[0].promptAr === "كم دقيقة يتأخر القطار؟" && ht01.questions[0].answer === "zehn Minuten" &&
+    ht01.lines[0].de.includes("Gleis 3") && ht01.lines[0].de.includes("zehn Minuten später") &&
+    ht01.questions[1].answer === "Gleis 3" && ht02.lines[0].ar === "أيها الزبائن! الموز ضمن العروض اليوم: كيلوغرام واحد مقابل يورو واحد. يرجى الدفع عند الصندوق." &&
+    ht02.questions[0].answer === "ein Euro" && ht02.questions[0].explanationAr.includes("«ein Kilo für einen Euro»") &&
+    ht02.questions[1].answer === "An der Kasse",
+    "K219d ht01 تأخير عشر دقائق ورصيف 3؛ وht02 سعر الكيلو والدفع عند الصندوق موثقة بالنص");
+  const ht03 = batch[3];
+  ok(ht03.lines[1].ar === "قهوة من فضلك، مع الحليب والسكر." &&
+    ht03.questions[0].promptAr === "ماذا يطلب الضيف؟" && ht03.questions[0].answer === "Kaffee mit Milch und Zucker" &&
+    ht03.questions[0].explanationAr === "يطلب قهوةً بالحليب والسكر." && ht03.questions[1].answer === "Milch und Zucker" &&
+    ht03.lines[0].de.endsWith(ht03.dictation[0]),
+    "K219e ht03 الطلب وترجمته وزمن السؤال والإملاء متسقة مع الحوار");
+  const a0AuditPaths = [
+    "docs/content-review-a0-dialogues-01-2026-10-08.json",
+    "docs/content-review-a0-dialogues-02-2026-10-10.json",
+    "docs/content-review-a0-dialogues-03-2026-10-11.json",
+    "docs/content-review-a0-dialogues-04-2026-10-11.json",
+    "docs/content-review-a0-dialogues-05-2026-10-11.json"
+  ];
+  const a0AuditReports = a0AuditPaths.map((path) => JSON.parse(readFileSync(path, "utf8")) as any);
+  const coveredA0Ids = a0AuditReports.flatMap((report:any) => report.dialogues.map((d:any) => d.id));
+  const actualA0Entries = dialoguesArr.filter((d:any) => d.level === "A0");
+  const actualA0Ids = actualA0Entries.map((d:any) => d.id).sort();
+  const declaredCoverage = [...reviewA005.corpusCoverage.auditedIds].sort();
+  ok(reviewA005.corpusCoverage.totalEntries === 16 && reviewA005.corpusCoverage.dialogueEntries === 13 &&
+    reviewA005.corpusCoverage.hoerEntries === 3 && actualA0Entries.length === 16 &&
+    actualA0Entries.filter((d:any) => d.type === "hoer").length === 3 &&
+    coveredA0Ids.length === 16 && new Set(coveredA0Ids).size === 16 &&
+    JSON.stringify([...coveredA0Ids].sort()) === JSON.stringify(actualA0Ids) &&
+    JSON.stringify(declaredCoverage) === JSON.stringify(actualA0Ids),
+    "K219f إغلاق تدقيق A0: تقارير R133 وR145–R148 تغطي المعرفات الستة عشر بلا فقد أو تكرار (13 حواراً + 3 hoer)");
 }
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
