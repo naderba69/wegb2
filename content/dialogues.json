@@ -11217,7 +11217,7 @@
           "18"
         ],
         "answer": "22",
-        "explanationAr": "سارة في الـ22.",
+        "explanationAr": "عمر سارة 22 سنة.",
         "id": "d-a0-07-q1"
       },
       {
@@ -11253,8 +11253,8 @@
       },
       {
         "who": "B",
-        "de": "Auf Wiedersehen! Bis später!",
-        "ar": "إلى اللقاء! إلى اللاحق!"
+        "de": "Auf Wiedersehen!",
+        "ar": "إلى اللقاء!"
       },
       {
         "who": "A",
@@ -11620,7 +11620,7 @@
       {
         "who": "Kunde",
         "de": "Hier sind 5 Euro. Stimmt so!",
-        "ar": "هذه 5 يورو. الباقي بقشيش!"
+        "ar": "تفضّل خمسة يورو، احتفظ بالباقي!"
       }
     ],
     "questions": [
@@ -11629,13 +11629,13 @@
         "promptDe": "Wie viel kostet das Brot?",
         "promptAr": "كم ثمن الخبز؟",
         "options": [
-          "1,50",
-          "2,50",
-          "3,40",
-          "5,00"
+          "1,50 €",
+          "2,50 €",
+          "3,40 €",
+          "5,00 €"
         ],
-        "answer": "2,50",
-        "explanationAr": "2.50 يورو.",
+        "answer": "2,50 €",
+        "explanationAr": "«Das macht 2,50 Euro.» — ثمن الخبز 2.50 يورو.",
         "id": "d-a0-09-q1"
       },
       {

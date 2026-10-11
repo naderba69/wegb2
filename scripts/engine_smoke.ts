@@ -10058,6 +10058,36 @@ void 0;
     additionalOrder.explanationAr.includes(d06.lines[3].de),
     "K216d d-a0-06 ترجمة الحليب واضحة، والسؤال ومفتاحه وشرحه يشملون الحليب وكأس الماء كليهما");
 }
+/* ═══ K217 — دفعة A0 الثالثة d-a0-07..09 (R136). ═══ */
+{
+  const reviewA003 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-03-2026-10-11.json", "utf8")) as any;
+  const reviewA003Md = readFileSync("docs/content-review-a0-dialogues-03-2026-10-11.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const batch = ["d-a0-07", "d-a0-08", "d-a0-09"].map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const qaValid = (q:any) => Array.isArray(q?.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length &&
+    typeof q.promptDe === "string" && !!q.promptDe.trim() && typeof q.promptAr === "string" && !!q.promptAr.trim() &&
+    typeof q.answer === "string" && q.options.includes(q.answer) && typeof q.explanationAr === "string" && !!q.explanationAr.trim();
+  const tasksValid = batch.every((d:any) => d && d.level === "A0" && d.questions.length === 2 && d.questions.every(qaValid) &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewA003.reviewRule === "R136" && reviewA003.totals.dialogues === 3 && reviewA003.totals.lines === 14 &&
+    reviewA003.totals.questions === 6 && reviewA003.totals.dictation === 4 && reviewA003.totals.correctedFields === 7 &&
+    reviewA003.totals.unresolved === 0 && reviewA003.corrections.length === 7 && reviewA003Md.includes("K217a–d") &&
+    reviewA003.audio.a0ManifestEntries === 0 && reviewA003.audio.modified === false,
+    "K217a تقرير R136 ونطاق المراجعة والتصحيحات والصوت مطابق للمانيفستو");
+  ok(tasksValid, "K217b d-a0-07..09: المفاتيح ضمن خيارات فريدة والإملاءات مقاطع حرفية من الحوار");
+  const d08 = batch[1];
+  const whenQ = d08.questions.find((q:any) => q.id === "d-a0-08-q1");
+  ok(d08.lines[0].de.includes("Bis morgen!") && d08.lines[1].de === "Auf Wiedersehen!" &&
+    !d08.lines.some((line:any) => line.de.includes("Bis später")) && whenQ.answer === "Morgen" &&
+    whenQ.options.includes(whenQ.answer) && whenQ.explanationAr.includes("Bis morgen!"),
+    "K217c d-a0-08 إزالة تناقض Bis später؛ Morgen هو الجواب الوحيد المدعوم");
+  const d09 = batch[2];
+  const priceQ = d09.questions.find((q:any) => q.id === "d-a0-09-q1");
+  ok(JSON.stringify(priceQ.options) === JSON.stringify(["1,50 €", "2,50 €", "3,40 €", "5,00 €"]) &&
+    priceQ.answer === "2,50 €" && d09.lines[1].de.includes("2,50 Euro") && priceQ.explanationAr.includes("«Das macht 2,50 Euro.»") &&
+    d09.lines[4].ar.includes("احتفظ بالباقي"),
+    "K217d d-a0-09 سعر الخبز بالعملة والدليل؛ والمجموع والدفع منفصلان وترجمة Stimmt so! دقيقة");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;

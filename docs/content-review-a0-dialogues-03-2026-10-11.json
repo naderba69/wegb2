@@ -1,0 +1,121 @@
+{
+  "reviewRule": "R136",
+  "date": "2026-10-11",
+  "scope": "دفعة A0 الثالثة: d-a0-07..09 (السؤال عن العمر والسكن، الوداع، الشراء والأسعار). مراجعة كل سطر وكل سؤال ومفتاح وخيار وإملاء.",
+  "dialogues": [
+    {
+      "id": "d-a0-07",
+      "level": "A0",
+      "titleDe": "Wie alt bist du?",
+      "lines": 5,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 1,
+      "judgement": "الحوار متسق؛ صححت صياغة عربية غير طبيعية في شرح العمر."
+    },
+    {
+      "id": "d-a0-08",
+      "level": "A0",
+      "titleDe": "Auf Wiedersehen!",
+      "lines": 4,
+      "questions": 2,
+      "dictation": 2,
+      "corrections": 2,
+      "judgement": "حُذف Bis später المتعارض مع Bis morgen، ونُقحت ترجمته العربية؛ جواب سؤال موعد اللقاء صار وحيداً."
+    },
+    {
+      "id": "d-a0-09",
+      "level": "A0",
+      "titleDe": "Zahlen und Preise",
+      "lines": 5,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 4,
+      "judgement": "صُحّحت ترجمة اصطلاح Stimmt so!، وأضيفت وحدة Euro إلى أسعار الخيارات ومفتاح سؤال السعر، مع شرح يستشهد بالسطر."
+    }
+  ],
+  "totals": {
+    "dialogues": 3,
+    "lines": 14,
+    "questions": 6,
+    "dictation": 4,
+    "correctedFields": 7,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "d-a0-07.questions[0].explanationAr",
+      "old": "سارة في الـ22.",
+      "new": "عمر سارة 22 سنة.",
+      "rationale": "استبدال التعبير العربي غير الطبيعي بصياغة معيارية قصيرة ودقيقة."
+    },
+    {
+      "unit": "d-a0-08.lines[1].de",
+      "old": "Auf Wiedersehen! Bis später!",
+      "new": "Auf Wiedersehen!",
+      "rationale": "A قال Bis morgen؛ Bis später يحدد لقاءً لاحقاً اليوم ويخلق تناقضاً زمنياً مع السؤال وإجابة Morgen."
+    },
+    {
+      "unit": "d-a0-08.lines[1].ar",
+      "old": "إلى اللقاء! إلى اللاحق!",
+      "new": "إلى اللقاء!",
+      "rationale": "حذف ترجمة حرفية غير طبيعية لـBis später بعد حذف العبارة الألمانية."
+    },
+    {
+      "unit": "d-a0-09.lines[4].ar",
+      "old": "هذه 5 يورو. الباقي بقشيش!",
+      "new": "تفضّل خمسة يورو، احتفظ بالباقي!",
+      "rationale": "Stimmt so! في موقف الدفع تعني أن يحتفظ البائع بالباقي؛ بقشيش أضيق وقد يوحي بعمولة محددة."
+    },
+    {
+      "unit": "d-a0-09.questions[0].options",
+      "old": [
+        "1,50",
+        "2,50",
+        "3,40",
+        "5,00"
+      ],
+      "new": [
+        "1,50 €",
+        "2,50 €",
+        "3,40 €",
+        "5,00 €"
+      ],
+      "rationale": "إظهار رمز العملة في كل خيار وفق التنسيق الألماني الشائع للأسعار؛ يبقى الدليل المنطوق في الشرح بصيغة Euro."
+    },
+    {
+      "unit": "d-a0-09.questions[0].answer",
+      "old": "2,50",
+      "new": "2,50 €",
+      "rationale": "مطابقة المفتاح للصيغة المكتملة بالعملة في الخيارات ولسطر البائعة."
+    },
+    {
+      "unit": "d-a0-09.questions[0].explanationAr",
+      "old": "2.50 يورو.",
+      "new": "«Das macht 2,50 Euro.» — ثمن الخبز 2.50 يورو.",
+      "rationale": "إضافة الدليل المسموع صراحةً وربط السعر برغيف الخبز لا بالمجموع اللاحق."
+    }
+  ],
+  "contentChecks": [
+    "d-a0-07: Sara عمرها 22 وTim عمره 25؛ Tim وSara يسكنان في München؛ الخياران مستندان إلى الحوار.",
+    "d-a0-08: بعد إزالة Bis später لا يبقى إلا Bis morgen جواباً عن موعد اللقاء، ومفتاح السؤال Morgen مطابق.",
+    "d-a0-09: ثمن الخبز 2,50 Euro، والمجموع بعد إضافة Brötchen هو 3,40 Euro، والدفع 5 Euro؛ لا خلط بين ثمن الخبز والمجموع أو الباقي."
+  ],
+  "audio": {
+    "a0ManifestEntries": 0,
+    "listened": false,
+    "generated": false,
+    "modified": false,
+    "note": "لا توجد إدخالات A0 في content/dialog-audio.json؛ لا استماع أو تسجيل أو تغيير للمانيفستو، ولا استخدام لـneu بديلاً."
+  },
+  "limits": {
+    "human": "تدقيق تحريري في بيئة الوكيل وليس مراجعة لغوية بشرية مستقلة.",
+    "cefr": "المواءمة تقدير تربوي لـA0 وليست شهادة CEFR.",
+    "externalSources": "لا مصادر خارجية؛ تحقق الأسعار والمفاتيح من نص المحادثة نفسه.",
+    "audio": "لم يُستمع إلى تسجيل ولم تُعدّل حالة التسجيل.",
+    "other": "لا ادعاءات قانونية أو طبية أو مهنية؛ W1–W6 لم تتغير."
+  },
+  "gates": {
+    "planned": "K217a–d"
+  }
+}
