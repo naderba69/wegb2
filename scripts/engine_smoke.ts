@@ -10760,6 +10760,65 @@ void 0;
     reviewA2Extras.audioAudit.generated === false && reviewA2Extras.audioAudit.modified === false,
     "K228f مانيفستو الحوار والاستماع والإملاء منفصلة؛ لا إدخالات أو ملفات ولا ادعاء بالاستماع");
 }
+/* ═══ K229 — خمسة نصوص B1 أخيرة (R158). ═══ */
+{
+  const reviewB1Final = JSON.parse(readFileSync("docs/content-review-b1-texts-01-2026-10-11.json", "utf8")) as any;
+  const reviewB1FinalMd = readFileSync("docs/content-review-b1-texts-01-2026-10-11.md", "utf8");
+  const reviewB1FinalPatch = readFileSync("scripts/patches/review_b1_texts_02.py", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const ids = ["t-b1-31", "t-b1-32", "t-b1-33", "t-b1-34", "t-b1-35"];
+  const batch = ids.map((id) => textsArr.find((t:any) => t.id === id));
+  const correctionUnits = reviewB1Final.corrections.map((c:any) => c.unit);
+  ok(reviewB1Final.reviewRule === "R158" && JSON.stringify(reviewB1Final.targetIds) === JSON.stringify(ids) &&
+    reviewB1Final.totals.texts === 5 && reviewB1Final.totals.germanWords === 871 &&
+    reviewB1Final.totals.sentenceEndMarks === 70 && reviewB1Final.totals.questions === 10 &&
+    reviewB1Final.totals.correctedFields === 18 && reviewB1Final.totals.guardedTransitions === 18 &&
+    reviewB1Final.totals.unresolved === 0 && correctionUnits.length === 18 && new Set(correctionUnits).size === 18 &&
+    reviewB1Final.coverage.before.covered === 147 && reviewB1Final.coverage.after.covered === 152 &&
+    reviewB1Final.coverage.after.total === 157 && reviewB1FinalMd.includes("K229a–f") &&
+    reviewB1FinalPatch.includes("len(EDITS) != 18"),
+    "K229a تقرير R158 يحصي نصوص B1 والأسئلة والتصحيحات والتغطية والرقعة المحروسة");
+  const tasksValid = batch.every((t:any) => t && t.level === "B1" && !!t.titleDe?.trim() && !!t.titleAr?.trim() &&
+    !!t.de?.trim() && !!t.ar?.trim() && Array.isArray(t.questions) && t.questions.length === 2 &&
+    t.questions.every((q:any) => q.type === "mc" && !!q.promptDe?.trim() && !!q.promptAr?.trim() && !!q.explanationAr?.trim() &&
+      Array.isArray(q.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length && q.options.includes(q.answer)));
+  ok(tasksValid, "K229b نصوص B1 الخمسة وأسئلتها العشرة مكتملة؛ خيارات MC فريدة والمفاتيح صالحة");
+  const rent = batch[0], diet = batch[1], interview = batch[2], accident = batch[3], letter = batch[4];
+  ok(rent.questions[1].explanationAr.includes("الإيجارات الأقل مقارنة بهامبورغ") &&
+    diet.questions[1].promptAr === "ما الذي يجب أن تنتبه إليه؟" &&
+    diet.questions[1].explanationAr.includes("كمية كافية من الحديد والبروتين") &&
+    interview.ar.includes("لم أتلقَّ عرض عمل بعد") &&
+    accident.ar.includes("كان يقود دراجته في خط مستقيم") && accident.ar.includes("أُصيب إصابة طفيفة في ركبته") &&
+    accident.ar.includes("نبّه رجل آخر السائقين إلى الحادث") &&
+    letter.questions[0].promptDe === "Was schlägt die Autorin vor?" &&
+    letter.questions[0].promptAr === "ماذا تقترح كاتبة الرسالة؟" && letter.ar.includes("الحديقة العامة مهمة للحي"),
+    "K229c المقارنة والتغذية وZusage ووصف الحادث وجنس كاتبة الرسالة مطابقة بدقة");
+  const examplesLabeled = batch.every((t:any) => t.titleDe.startsWith("Beispiel:") && t.titleAr.startsWith("مثال:"));
+  ok(examplesLabeled && reviewB1Final.limits.health && reviewB1Final.limits.city && reviewB1Final.limits.incident &&
+    reviewB1Final.limits.letter && reviewB1Final.totals.unresolved === 0 && reviewB1Final.gates.planned === "K229a–f",
+    "K229d النصوص الخمسة مؤطرة كأمثلة؛ حدود الادعاءات الصحية والسوقية والواقعة والرسالة معلنة");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
+  const matchingFiles: string[] = [];
+  const scanAudio = (dir:string):void => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = dir + "/" + entry.name;
+      if (entry.isDirectory()) scanAudio(path);
+      else if (ids.includes(entry.name.replace(/\\.[^.]*$/, ""))) matchingFiles.push(path);
+    }
+  };
+  scanAudio("public/audio");
+  ok(noManifestEntries && matchingFiles.length === 0 && reviewB1Final.audioAudit.dialogAudioManifestEntries === 0 &&
+    reviewB1Final.audioAudit.hoerenAudioManifestEntries === 0 && reviewB1Final.audioAudit.diktatAudioManifestEntries === 0 &&
+    reviewB1Final.audioAudit.matchingFilesPresent === 0 && reviewB1Final.audioAudit.listened === false &&
+    reviewB1Final.audioAudit.generated === false && reviewB1Final.audioAudit.modified === false,
+    "K229e مانيفستات الحوار والاستماع والإملاء مستقلة؛ لا ملفات صوت ولا ادعاء بالاستماع");
+  ok(reviewB1Final.contentChecks.length === 6 && reviewB1Final.contentChecks.every((c:any) => c.status === "pass"),
+    "K229f سجل التقرير فحوص R158 الستة الناجحة");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
