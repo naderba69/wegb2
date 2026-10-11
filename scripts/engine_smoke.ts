@@ -10186,6 +10186,63 @@ void 0;
     JSON.stringify(declaredCoverage) === JSON.stringify(actualA0Ids),
     "K219f إغلاق تدقيق A0: تقارير R133 وR145–R148 تغطي المعرفات الستة عشر بلا فقد أو تكرار (13 حواراً + 3 hoer)");
 }
+/* ═══ K220 — أول دفعة حوارات A1 d-a1-01..03 (R149). ═══ */
+{
+  const reviewA1D1 = JSON.parse(readFileSync("docs/content-review-a1-dialogues-01-2026-10-11.json", "utf8")) as any;
+  const reviewA1D1Md = readFileSync("docs/content-review-a1-dialogues-01-2026-10-11.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const ids = ["d-a1-01", "d-a1-02", "d-a1-03"];
+  const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const tasksValid = batch.every((d:any) => d && d.level === "A1" && d.questions.length === 2 &&
+    d.questions.every((q:any) => typeof q.promptDe === "string" && !!q.promptDe.trim() &&
+      typeof q.promptAr === "string" && !!q.promptAr.trim() && typeof q.explanationAr === "string" && !!q.explanationAr.trim() &&
+      (q.type === "mc" ? Array.isArray(q.options) && new Set(q.options).size === q.options.length && q.options.includes(q.answer) :
+        q.type === "fill" ? Array.isArray(q.answer) && q.answer.length > 0 && q.answer.every((a:string) => !!a.trim()) : false)) &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewA1D1.reviewRule === "R149" && JSON.stringify(reviewA1D1.targetIds) === JSON.stringify(ids) &&
+    reviewA1D1.totals.dialogues === 3 && reviewA1D1.totals.lines === 21 && reviewA1D1.totals.questions === 6 &&
+    reviewA1D1.totals.dictation === 9 && reviewA1D1.totals.correctedFields === 20 && reviewA1D1.totals.unresolved === 0 &&
+    reviewA1D1.corrections.length === 20 && reviewA1D1Md.includes("K220a–f") &&
+    reviewA1D1.audio.manifestEntries === 3 && reviewA1D1.audio.filesPresent === 3 &&
+    reviewA1D1.audio.listened === false && reviewA1D1.audio.modified === false,
+    "K220a تقرير R149 يطابق نطاق الحوارات والتصحيحات وحالة الصوت غير المستمع إليه");
+  ok(tasksValid, "K220b d-a1-01..03: MC وfill بمفاتيح صالحة وأسئلة عربية وإملاءات مسندة للأسطر");
+  const dA101 = batch[0];
+  ok(dA101.titleAr === "التعارف لأول مرة" && dA101.lines[0].ar === "مرحباً! اسمي آنا. وأنت؟" &&
+    dA101.lines[4].ar === "أنا بخير أيضاً. هل أنت من تونس؟" && dA101.lines[5].ar === "نعم، أنا من تونس. أسكن الآن في برلين." &&
+    dA101.questions[0].promptAr === "من أيّ بلد يأتي عمر؟" &&
+    JSON.stringify(dA101.questions[0].options) === JSON.stringify(["aus Tunesien", "aus Berlin", "aus Deutschland"]) &&
+    dA101.questions[0].answer === "aus Tunesien" && dA101.questions[0].explanationAr.includes("الدليل") &&
+    dA101.questions[0].explanationAr.includes("الفخّ") && dA101.questions[0].explanationAr.includes("بلده الأصلي ألمانيا") &&
+    dA101.questions[1].answer.includes("Monaten") && dA101.questions[1].explanationAr.includes("Dativ") &&
+    dA101.dictation.every((part:string) => dA101.lines.some((line:any) => line.de.includes(part))),
+    "K220c d-a1-01 بلد الأصل منفصل عن السكن؛ خيار مشتت طبيعي وseit ثلاثة أشهر بداتيف جمع");
+  const dA102 = batch[1];
+  ok(dA102.titleAr === "في المقهى: قهوة وكعكة" && dA102.lines[0].ar === "نهاركم سعيد! ماذا تودّون؟" &&
+    dA102.lines[3].ar === "قليل من الحليب، بلا سكر." && dA102.lines[5].ar === "قطعة كعكة من فضلك. كم ثمنها؟" &&
+    dA102.lines[6].ar === "المجموع خمسة يورو وخمسون سنتاً." && dA102.questions[0].promptAr === "ماذا يشرب سامي؟" &&
+    dA102.questions[0].answer === "Kaffee mit ein bisschen Milch" &&
+    dA102.questions[1].answer[0] === "fünf" && dA102.questions[1].explanationAr.includes("5,50 يورو") &&
+    dA102.dictation.every((part:string) => dA102.lines.some((line:any) => line.de.includes(part))),
+    "K220d d-a1-02 الحليب بلا سكر والكعكة ومجموع 5,50 يورو؛ مفاتيح الطلب والسعر مطابقة");
+  const dA103 = batch[2];
+  ok(dA103.lines[0].ar === "مرحباً، معكم نور. هل يمكنني التحدّث إلى السيد كلاين؟" &&
+    dA103.lines[1].ar === "معكم كلاين. طاب يومكم!" && dA103.lines[2].ar === "طاب يومكم. أودّ تحديد موعد." &&
+    dA103.lines[4].ar === "يوم الثلاثاء عند الساعة العاشرة؟" &&
+    dA103.lines[5].ar === "نعم، لديّ وقت يوم الثلاثاء عند الساعة العاشرة. إلى اللقاء يوم الثلاثاء!" &&
+    dA103.questions[0].promptAr === "متى الموعد؟" && dA103.questions[0].answer === "am Dienstag um zehn Uhr" &&
+    dA103.questions[0].explanationAr.includes("الفخّان") && dA103.questions[0].explanationAr.includes("Donnerstag") &&
+    dA103.questions[1].answer[0] === "Termin" &&
+    dA103.dictation.every((part:string) => dA103.lines.some((line:any) => line.de.includes(part))),
+    "K220e d-a1-03 صياغة المكالمة والموعد الثلاثاء 10:00 وTermin متسقة مع النص");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const audioEntries = dialogAudio.filter((entry:any) => ids.includes(entry.id));
+  const audioIds = audioEntries.map((entry:any) => entry.id).sort();
+  ok(audioEntries.length === 3 && JSON.stringify(audioIds) === JSON.stringify(ids) &&
+    audioEntries.every((entry:any) => entry.level === "A1" && entry.bytes > 0 && !String(entry.voice).includes("neu") &&
+      existsSync("public" + entry.file)) && reviewA1D1.audio.listened === false,
+    "K220f تسجيلات الحوارات الثلاثة مدرجة وملفاتها موجودة وبياناتها A1؛ لم يُدّعَ الاستماع إليها");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;

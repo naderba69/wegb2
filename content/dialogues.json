@@ -3,12 +3,12 @@
     "id": "d-a1-01",
     "level": "A1",
     "titleDe": "Erste Begegnung",
-    "titleAr": "لقاء أول",
+    "titleAr": "التعارف لأول مرة",
     "lines": [
       {
         "who": "Anna",
         "de": "Hallo! Ich heiße Anna. Und du?",
-        "ar": "مرحباً! أنا اسمي آنا. وأنت؟"
+        "ar": "مرحباً! اسمي آنا. وأنت؟"
       },
       {
         "who": "Omar",
@@ -28,12 +28,12 @@
       {
         "who": "Anna",
         "de": "Auch gut. Kommst du aus Tunesien?",
-        "ar": "أنا أيضاً. هل أنت من تونس؟"
+        "ar": "أنا بخير أيضاً. هل أنت من تونس؟"
       },
       {
         "who": "Omar",
         "de": "Ja, ich komme aus Tunesien. Ich wohne jetzt in Berlin.",
-        "ar": "نعم، من تونس. أسكن الآن في برلين."
+        "ar": "نعم، أنا من تونس. أسكن الآن في برلين."
       },
       {
         "who": "Anna",
@@ -54,11 +54,11 @@
         "options": [
           "aus Tunesien",
           "aus Berlin",
-          "aus Deutschland, seit drei Monaten"
+          "aus Deutschland"
         ],
         "answer": "aus Tunesien",
-        "explanationAr": "الدليل: «Ja, ich komme aus Tunesien. Ich wohne jetzt in Berlin». الفخّ 1: برلين مكان السكن الآن لا الأصل. الفخّ 2: «drei Monate» مدّة تعلّم الألمانية.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "explanationAr": "الدليل: «Ja, ich komme aus Tunesien». الفخّ: يسكن عمر الآن في برلين، لكن السكن الحالي لا يعني أن بلده الأصلي ألمانيا.",
+        "promptAr": "من أيّ بلد يأتي عمر؟"
       },
       {
         "id": "d-a1-01-q2",
@@ -81,12 +81,12 @@
     "id": "d-a1-02",
     "level": "A1",
     "titleDe": "Im Café: Kaffee und Kuchen",
-    "titleAr": "في المقهى: قهوة وكعك",
+    "titleAr": "في المقهى: قهوة وكعكة",
     "lines": [
       {
         "who": "Kellner",
         "de": "Guten Tag! Was darf es sein?",
-        "ar": "طاب يومكم! ماذا تفضّلون؟"
+        "ar": "نهاركم سعيد! ماذا تودّون؟"
       },
       {
         "who": "Sami",
@@ -111,12 +111,12 @@
       {
         "who": "Sami",
         "de": "Ein Stück Kuchen, bitte. Was kostet das?",
-        "ar": "قطعة كعك من فضلك. كم السعر؟"
+        "ar": "قطعة كعكة من فضلك. كم ثمنها؟"
       },
       {
         "who": "Kellner",
         "de": "Zusammen fünf Euro fünfzig.",
-        "ar": "المجموع خمسة يورو ونصف."
+        "ar": "المجموع خمسة يورو وخمسون سنتاً."
       }
     ],
     "questions": [
@@ -131,7 +131,7 @@
         ],
         "answer": "Kaffee mit ein bisschen Milch",
         "explanationAr": "الدليل: «Ein bisschen Milch, keinen Zucker». الفخّ: «Zucker» سُمع في سؤال النادل لكنّ سامي رفضه («keinen»).",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "promptAr": "ماذا يشرب سامي؟"
       },
       {
         "id": "d-a1-02-q2",
@@ -140,7 +140,7 @@
         "answer": [
           "fünf"
         ],
-        "explanationAr": "5,50 يورو.",
+        "explanationAr": "المجموع خمسة يورو وخمسون سنتاً (5,50 يورو).",
         "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
       }
     ],
@@ -159,17 +159,17 @@
       {
         "who": "Nour",
         "de": "Hallo, hier spricht Nour. Kann ich mit Herrn Klein sprechen?",
-        "ar": "مرحباً، نور معكم. هل أتحدث مع هير كلاين؟"
+        "ar": "مرحباً، معكم نور. هل يمكنني التحدّث إلى السيد كلاين؟"
       },
       {
         "who": "Klein",
         "de": "Klein am Apparat. Guten Tag!",
-        "ar": "كلاين على الهاتف. طاب يومكم!"
+        "ar": "معكم كلاين. طاب يومكم!"
       },
       {
         "who": "Nour",
         "de": "Guten Tag. Ich möchte einen Termin vereinbaren.",
-        "ar": "مرحباً. أودّ تحديد موعد."
+        "ar": "طاب يومكم. أودّ تحديد موعد."
       },
       {
         "who": "Klein",
@@ -179,12 +179,12 @@
       {
         "who": "Nour",
         "de": "Am Dienstag um zehn Uhr?",
-        "ar": "يوم الثلاثاء في العاشرة؟"
+        "ar": "يوم الثلاثاء عند الساعة العاشرة؟"
       },
       {
         "who": "Klein",
         "de": "Ja, am Dienstag um zehn Uhr habe ich Zeit. Bis Dienstag!",
-        "ar": "نعم، لديّ وقت يوم الثلاثاء في العاشرة. إلى اللقاء يوم الثلاثاء!"
+        "ar": "نعم، لديّ وقت يوم الثلاثاء عند الساعة العاشرة. إلى اللقاء يوم الثلاثاء!"
       }
     ],
     "questions": [
@@ -198,8 +198,8 @@
           "am Dienstag um zehn Uhr"
         ],
         "answer": "am Dienstag um zehn Uhr",
-        "explanationAr": "الدليل الصريح: «Am Dienstag um zehn Uhr?» … «Ja, am Dienstag um zehn Uhr habe ich Zeit». يثبت الجواب الآن اليوم والساعة بلا استنتاج من ردٍّ لا يذكر الساعة صراحةً. الفخّ 1: Dienstag/Donnerstag تشابه صوتي. الفخّ 2: zehn/zwölf تشابه صوتي.",
-        "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
+        "explanationAr": "الدليل: «Ja, am Dienstag um zehn Uhr habe ich Zeit» — الموعد يوم الثلاثاء عند الساعة العاشرة. الفخّان: Donnerstag يوم آخر، وzwölf Uhr تعني الثانية عشرة لا العاشرة.",
+        "promptAr": "متى الموعد؟"
       },
       {
         "id": "d-a1-03-q2",
