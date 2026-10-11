@@ -1,0 +1,310 @@
+{
+  "reviewRule": "R152",
+  "date": "2026-10-11",
+  "scope": "مراجعة ثمانية موارد A2 إضافية: ثلاثة حوارات، ونصّان مسموعان مسجلان بصيغة hoer-a2، وثلاثة نصوص d-a2-ht. شمل الفحص كل سطر بالألمانية والعربية، والعناوين والأسئلة والخيارات والمفاتيح والشروح والإملاءات؛ وفُصل مانيفستو الحوار عن مانيفستو الاستماع.",
+  "method": "استُخرجت الموارد من content/dialogues.json الحي، وقورنت قبل/بعد على مستوى الحقول. اختُبرت مفاتيح الاختيار داخل خيارات فريدة، وطابقت مقاطع الإملاء نصوص الأسطر حرفياً بما في ذلك موضع علامة الترقيم. اقتصر التعديل على الحقول ذات العيب المؤكد أو الصياغة الملتبسة، وبقيت التفاصيل الواقعية التي لم تُتحقق خارجياً معلنة الحدود.",
+  "targetIds": [
+    "dlg-a1-reklamation-hotel",
+    "dlg-a2-terminabsage",
+    "dlg-a2-krankenversicherung",
+    "hoer-a2-01",
+    "hoer-a2-02",
+    "d-a2-ht01",
+    "d-a2-ht02",
+    "d-a2-ht03"
+  ],
+  "resources": [
+    {
+      "id": "dlg-a1-reklamation-hotel",
+      "level": "A2",
+      "kind": "dialogue",
+      "titleDe": "Reklamation im Hotel",
+      "lines": 7,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 1,
+      "judgement": "الغرفة غير نظيفة، ومصباح الحمام وشبكة الواي فاي لا يعملان؛ عرضت موظفة الاستقبال غرفة 214. الأسئلة والإملاء مسنودة إلى الحوار."
+    },
+    {
+      "id": "dlg-a2-terminabsage",
+      "level": "A2",
+      "kind": "dialogue",
+      "titleDe": "Einen Termin absagen",
+      "lines": 7,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 6,
+      "judgement": "سامـي يعتذر عن موعد الغد عند العاشرة ويطلب بديلاً الثلاثاء القادم عند الحادية عشرة؛ حُيّد جنس Dr. Müller في الترجمة وأُكمل الإملاء."
+    },
+    {
+      "id": "dlg-a2-krankenversicherung",
+      "level": "A2",
+      "kind": "dialogue",
+      "titleDe": "Bei der gesetzlichen Krankenkasse",
+      "lines": 8,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 3,
+      "judgement": "التسجيل يطلب بيانات شخصية ومعلومات عن العمل؛ المساهمة مرتبطة بالدخل، ويذكر الحوار تقاسمها عادةً مناصفةً للموظف المؤمن قانونياً. لا اعتماد قانوني مستقل."
+    },
+    {
+      "id": "hoer-a2-01",
+      "level": "A2",
+      "kind": "hoertext",
+      "titleDe": "Anrufbeantworter Arztpraxis",
+      "lines": 1,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 5,
+      "judgement": "مواعيد العيادة صباحاً من الاثنين إلى الجمعة، ومساء الثلاثاء والخميس؛ 116 117 خدمة الأطباء المناوبة؛ تعليمات الحجز/الإعادة بالأزرار 1 و9."
+    },
+    {
+      "id": "hoer-a2-02",
+      "level": "A2",
+      "kind": "hoertext",
+      "titleDe": "Wettervorhersage im Radio",
+      "lines": 1,
+      "questions": 2,
+      "dictation": 1,
+      "corrections": 3,
+      "judgement": "الشمال 12–15 درجة مع غيوم ومطر خفيف، الوسط حتى 20، الجنوب عظمى 26، وعواصف محتملة غرباً مساءً؛ الإملاء جملة كاملة."
+    },
+    {
+      "id": "d-a2-ht01",
+      "level": "A2",
+      "kind": "hoertext",
+      "titleDe": "Ansage im Kaufhaus: Sonderangebot",
+      "lines": 2,
+      "questions": 1,
+      "dictation": 1,
+      "corrections": 0,
+      "judgement": "خصم 30٪ على معاطف الشتاء حتى إغلاق المتجر عند 20:00، مع قسم نسائي جديد في الطابق الأول؛ لم يحتج النص إلى تصحيح."
+    },
+    {
+      "id": "d-a2-ht02",
+      "level": "A2",
+      "kind": "hoertext",
+      "titleDe": "Anrufbeantworter: Nachricht von der VHS",
+      "lines": 1,
+      "questions": 1,
+      "dictation": 1,
+      "corrections": 1,
+      "judgement": "رسالة سابينه إلى أحمد: الدورة الاثنين القادم الساعة 18 في الغرفة 304؛ إحضار كتاب وقلم؛ رقم الاستفسار كما هو في السيناريو."
+    },
+    {
+      "id": "d-a2-ht03",
+      "level": "A2",
+      "kind": "hoertext",
+      "titleDe": "Radiomeldung: Unfall auf der A3",
+      "lines": 1,
+      "questions": 1,
+      "dictation": 1,
+      "corrections": 6,
+      "judgement": "خبر عن حادث على A3 بعد تقاطع Lohmar باتجاه Frankfurt، ثلاث مركبات، المسار الأيسر مغلق وازدحام 8 كم؛ أصبح السؤال والإملاء مطابقين للمسموع نصياً."
+    }
+  ],
+  "totals": {
+    "resources": 8,
+    "dialogues": 3,
+    "hoertexte": 5,
+    "lines": 28,
+    "questions": 13,
+    "dictation": 8,
+    "correctedFields": 25,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "dlg-a1-reklamation-hotel.lines[4].ar",
+      "old": "والـWLAN لا يعمل أيضاً!",
+      "new": "وشبكة الواي فاي لا تعمل أيضاً!",
+      "rationale": "إظهار أن المقصود شبكة الواي فاي بصياغة عربية سليمة، مع تأنيث «الشبكة» في الفعل."
+    },
+    {
+      "unit": "dlg-a2-terminabsage.titleAr",
+      "old": "إلغاء موعد (طبيب/إدارة)",
+      "new": "إلغاء موعد في العيادة",
+      "rationale": "تحديد أن الموعد في عيادة؛ العنوان القديم يوسّع السيناريو إلى «طبيب/إدارة» بلا سند."
+    },
+    {
+      "unit": "dlg-a2-terminabsage.lines[0].ar",
+      "old": "نهار سعيد، عيادة الدكتور مولر، كيف يمكنني المساعدة؟",
+      "new": "مرحباً، عيادة د. مولر، كيف يمكنني مساعدتك؟",
+      "rationale": "صياغة التحية العربية بطبيعية، والإبقاء على «د.» محايداً لأن Dr. Müller لا يحدد جنس الطبيب."
+    },
+    {
+      "unit": "dlg-a2-terminabsage.lines[1].ar",
+      "old": "نهار سعيد، معكم سامي بن صالح. عندي موعد غداً الساعة العاشرة لكنني للأسف لا أستطيع الحضور.",
+      "new": "مرحباً، معكم سامي بن صالح. عندي موعد غداً الساعة العاشرة لكنني للأسف لا أستطيع الحضور.",
+      "rationale": "استبدال «نهار سعيد» بتحية هاتفية مألوفة مع إبقاء تعريف سامي وموعده كما وردا."
+    },
+    {
+      "unit": "dlg-a2-terminabsage.lines[3].ar",
+      "old": "نعم من فضلك. هل الثلاثاء القادم الساعة الحادية عشرة ممكن؟",
+      "new": "نعم، من فضلك. هل يناسبك الثلاثاء القادم عند الساعة الحادية عشرة؟",
+      "rationale": "إصلاح تركيب السؤال العربي ليطلب إمكان الموعد بوضوح، مطابقاً Geht es …?"
+    },
+    {
+      "unit": "dlg-a2-terminabsage.lines[4].ar",
+      "old": "الثلاثاء في الحادية عشرة ما زال شاغراً. سأُسجّل لك. آسف لأنك لا تستطيع الحضور.",
+      "new": "ما زال موعد الثلاثاء عند الساعة الحادية عشرة متاحاً. سأُسجّل لك. أعتذر لعدم تمكنك من الحضور.",
+      "rationale": "جعل المتاح هو الموعد عند الحادية عشرة، واستبدال صيغة «آسف» المذكرة باعتذار محايد من الموظفة."
+    },
+    {
+      "unit": "dlg-a2-terminabsage.dictation[0]",
+      "old": "Guten Tag, Praxis Dr.",
+      "new": "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?",
+      "rationale": "الإملاء كان مبتوراً بعد Dr.؛ استُكملت جملة الاستقبال حرفياً إلى نهايتها وعلامتها."
+    },
+    {
+      "unit": "dlg-a2-krankenversicherung.titleAr",
+      "old": "في التأمين الصحي القانوني",
+      "new": "في صندوق التأمين الصحي القانوني",
+      "rationale": "تسمية المؤسسة المقصودة، وهي صندوق/مؤسسة التأمين الصحي القانوني، لا نظام التأمين مجرداً."
+    },
+    {
+      "unit": "dlg-a2-krankenversicherung.lines[0].ar",
+      "old": "نهار سعيد، أريد الاشتراك في التأمين الصحي.",
+      "new": "مرحباً، أريد الاشتراك في التأمين الصحي.",
+      "rationale": "استبدال التحية الحرفية غير المألوفة بتحية عربية طبيعية من دون تغيير المعنى."
+    },
+    {
+      "unit": "dlg-a2-krankenversicherung.lines[3].ar",
+      "old": "أحتاج إلى بياناتك الشخصية ومعلومات عن عملك للتسجيل. ويسرّني أن أشرح لك المستندات المطلوبة بحسب حالتك.",
+      "new": "أحتاج إلى بياناتك الشخصية ومعلومات عن عملك للتسجيل. ويسرّني أن أشرح لك المستندات اللازمة.",
+      "rationale": "حذف «بحسب حالتك» التي لا يقابلها النص الألماني، مع ترجمة nötigen إلى «اللازمة»."
+    },
+    {
+      "unit": "hoer-a2-01.titleAr",
+      "old": "مجيب آلي في عيادة الطبيب",
+      "new": "جهاز الرد الآلي لعيادة د. مولر",
+      "rationale": "صياغة العنوان على نحو طبيعي ومحايد جنسياً، موافقاً لاسم Dr. Müller غير المحدد الجنس."
+    },
+    {
+      "unit": "hoer-a2-01.lines[0].de",
+      "old": "Guten Tag, Sie haben die Praxis Dr. Müller erreicht. Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr. In dringenden Fällen rufen Sie bitte den ärztlichen Notdienst unter der Nummer 116 117 an. Möchten Sie einen Termin vereinbaren, drücken Sie bitte die 1. Wiederhören Sie die Ansage mit der 9.",
+      "new": "Guten Tag, Sie haben die Praxis von Dr. Müller erreicht. Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr. In dringenden Fällen rufen Sie bitte den ärztlichen Notdienst unter der Nummer 116 117 an. Möchten Sie einen Termin vereinbaren, drücken Sie bitte die 1. Um die Ansage zu wiederholen, drücken Sie bitte die 9.",
+      "rationale": "تصحيح Wiederhören Sie die Ansage، وهي صياغة غير سليمة هنا، إلى تعليمات هاتفية ألمانية معيارية؛ وإضافة von بعد Praxis في هذا التركيب."
+    },
+    {
+      "unit": "hoer-a2-01.lines[0].ar",
+      "old": "نهارك سعيد، اتصلت بعيادة الدكتور مولر. ساعات العمل من الاثنين إلى الجمعة 8–12، الثلاثاء والخميس 15–18. في الحالات الطارئة اتصل بالطوارئ الطبية على 116117. لحجز موعد اضغط 1. لإعادة الإعلان اضغط 9.",
+      "new": "مرحباً، لقد اتصلتم بعيادة د. مولر. ساعات استقبال المرضى من الاثنين إلى الجمعة من ٨ صباحاً إلى ١٢ ظهراً، ويومي الثلاثاء والخميس من ١٥ إلى ١٨. في الحالات الطبية العاجلة، يُرجى الاتصال بخدمة الأطباء المناوبة على الرقم ١١٦ ١١٧. لحجز موعد، اضغطوا الرقم 1. ولإعادة سماع الإعلان، اضغطوا الرقم 9.",
+      "rationale": "مواءمة الترجمة مع النص الألماني: ساعات صباحية/مسائية صريحة، خدمة الأطباء المناوبة لا الطوارئ العامة، لقب محايد، وأزرار 1 و9 واضحة."
+    },
+    {
+      "unit": "hoer-a2-01.questions[0].promptAr",
+      "old": "ما رقم الطوارئ؟",
+      "new": "ما رقم خدمة الأطباء المناوبة في الحالات العاجلة؟",
+      "rationale": "السؤال عن رقم خدمة الأطباء المناوبة في الحالات العاجلة، لا عن رقم الطوارئ العامة."
+    },
+    {
+      "unit": "hoer-a2-01.dictation[0]",
+      "old": "Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12.",
+      "new": "Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr.",
+      "rationale": "إكمال المقطع إلى جملة الدوام كاملة؛ النسخة السابقة وضعت نقطة قبل استمرار الجملة بـund."
+    },
+    {
+      "unit": "hoer-a2-02.lines[0].ar",
+      "old": "والآن طقس الغد: في الشمال غائم مع بعض المطر، درجات الحرارة بين 12 و15. في الوسط تشرق الشمس وتصل الحرارة إلى 20. في الجنوب يظل الجو دافئاً وجافاً بحرارة تبلغ 26. في المساء قد تحدث عواصف رعدية في الغرب.",
+      "new": "والآن طقس الغد: في الشمال يكون الطقس غائماً مع أمطار خفيفة، وتتراوح الحرارة بين 12 و15 درجة. في وسط ألمانيا تشرق الشمس وتصل الحرارة إلى 20 درجة. وفي الجنوب يبقى الجو دافئاً وجافاً، وتصل الدرجة العظمى إلى 26 درجة. وفي المساء قد تحدث عواصف رعدية في الغرب.",
+      "rationale": "إظهار وحدة الدرجة في الأرقام الثلاثة، ونقل وسط ألمانيا بدقة، وترجمة Höchstwerte بوصفها درجة عظمى."
+    },
+    {
+      "unit": "hoer-a2-02.questions[0].promptAr",
+      "old": "أين العواصف الرعدية؟",
+      "new": "أين يُتوقع حدوث العواصف الرعدية؟",
+      "rationale": "صياغة فصيحة كاملة للسؤال عن موضع احتمال العواصف الرعدية."
+    },
+    {
+      "unit": "hoer-a2-02.dictation[0]",
+      "old": "Im Süden bleibt es warm und trocken.",
+      "new": "Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad.",
+      "rationale": "استبدال المقتطف الذي أُغلق بنقطة قبل امتداد الجملة بمقطع كامل متصل يذكر قيمة 26 درجة."
+    },
+    {
+      "unit": "d-a2-ht02.lines[0].ar",
+      "old": "مرحباً أحمد، معكِ زابينه بيكر من مركز تعليم الكبار. دورتك تبدأ الإثنين القادم الساعة 18 في القاعة 304. أحضر كتابك وقلم. للأسئلة اتصل على 0221-4711.",
+      "new": "مرحباً أحمد، أنا زابينه بيكر من مركز تعليم الكبار. تبدأ دورتك يوم الاثنين القادم الساعة 18 في الغرفة 304. يُرجى إحضار كتابك وقلماً معك. للاستفسار، اتصل على 0221-4711.",
+      "rationale": "تصحيح ضمير المتكلم (أنا سابينه، لا معكِ)، وترجمة Raum إلى غرفة، وصياغة إحضار الكتاب والقلم بتكليف مهذب."
+    },
+    {
+      "unit": "d-a2-ht03.questions[0].promptDe",
+      "old": "Warum sollen Autofahrer an der nächsten Ausfahrt abfahren?",
+      "new": "Wie lang ist der Stau auf der A3?",
+      "rationale": "إزالة سؤال «لماذا» الذي كان يتطلب استنتاج السببية؛ السؤال الجديد يختبر معلومة صريحة في النص."
+    },
+    {
+      "unit": "d-a2-ht03.questions[0].promptAr",
+      "old": "لماذا ينبغي للسائقين الخروج عند المخرج التالي؟",
+      "new": "كم يبلغ طول الازدحام على A3؟",
+      "rationale": "مطابقة السؤال العربي لسؤال مباشر عن طول الازدحام، بدلاً من استنتاج سبب نصي غير مصرح به."
+    },
+    {
+      "unit": "d-a2-ht03.questions[0].options",
+      "old": [
+        "Wegen Stau nach Unfall",
+        "Wegen einer gesperrten Ausfahrt in Fahrtrichtung Frankfurt",
+        "Wegen eines Staus auf der A3 in Fahrtrichtung Köln"
+      ],
+      "new": [
+        "acht Kilometer",
+        "fünf Kilometer",
+        "drei Kilometer"
+      ],
+      "rationale": "جعل الخيارات من نوع واحد (طول الازدحام) مع مشتتين عدديين معقولين بدلاً من خلط أسباب/اتجاهات."
+    },
+    {
+      "unit": "d-a2-ht03.questions[0].answer",
+      "old": "Wegen Stau nach Unfall",
+      "new": "acht Kilometer",
+      "rationale": "تحديث المفتاح ليتطابق مع الخيار الصحيح الجديد: ثمانية كيلومترات."
+    },
+    {
+      "unit": "d-a2-ht03.questions[0].explanationAr",
+      "old": "الدليل: وقع الحادث على A3 باتجاه فرانكفورت، وتسبّب بازدحام يمتد ثمانية كيلومترات؛ لذلك طُلب استخدام المخرج التالي. الفخّ: الحديث عن مسار مغلق لا مخرج مغلق، والاتجاه المذكور فرانكفورت لا كولونيا.",
+      "new": "الدليل: «Es gibt zurzeit einen Stau von acht Kilometern». الفخّ: الرقمان خمسة وثلاثة يبدلان طول الازدحام المذكور.",
+      "rationale": "ربط الشرح بالجملة الألمانية الصريحة وتفسير المشتتين العدديين من دون الادعاء بأن الحادث سبّب الازدحام."
+    },
+    {
+      "unit": "d-a2-ht03.dictation[0]",
+      "old": "Die Polizei meldet einen Unfall auf der A3 zwischen Köln und Bonn in Fahrtrichtung Süden.",
+      "new": "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt.",
+      "rationale": "استبدال معلومة جغرافية خاطئة (كولن/بون/جنوب) بجملة الموقع والاتجاه كما وردت حرفياً في النص الحي."
+    }
+  ],
+  "contentChecks": [
+    "dlg-a1-reklamation-hotel: النظافة ومصباح الحمام والواي فاي ومقترح الغرفة 214 مذكورة صراحةً؛ لم يتغير المفتاحان.",
+    "dlg-a2-terminabsage: الموعد القديم غداً الساعة 10؛ الموعد البديل الثلاثاء القادم الساعة 11؛ إملاء جملة الاستقبال كاملة ومتطابقة مع السطر.",
+    "dlg-a2-krankenversicherung: سؤالا البيانات المطلوبة وتقاسم المساهمة يطابقان النص، مع بقاء التقييد الألماني grundsätzlich/إذا كانت موظفة ومؤمّنة قانونياً.",
+    "hoer-a2-01: ساعات الصباح/المساء والرقم 116 117 واختيار الرقمين 1 و9 متسقة؛ لا يُسمّى الرقم طوارئ عامة؛ الإملاء جملة دوام كاملة.",
+    "hoer-a2-02: الأرقام 12–15 و20 و26 درجات مئوية، والعواصف المحتملة في الغرب مساءً؛ الإملاء يتصل إلى نهاية الجملة وعلامتها.",
+    "d-a2-ht01: خصم 30٪ حتى 20:00، وقسم النساء في الطابق الأول؛ السؤال عن الخصم ومفتاحه صحيحان.",
+    "d-a2-ht02: المتحدثة سابينه، المخاطب أحمد، موعد الاثنين 18:00 والغرفة 304، والكتاب والقلم؛ الترجمة لا تفترض أن المتحدثة تخاطب امرأة.",
+    "d-a2-ht03: المسافة ثمانية كيلومترات مذكورة نصاً؛ السؤال المباشر لا يستنتج سبب الازدحام؛ الإملاء يطابق الموقع/الاتجاه الحقيقيين في السطر.",
+    "كل مفاتيح MC ضمن خيارات فريدة، ومقاطع الإملاء الثمانية موجودة حرفياً في الأسطر الألمانية بعد التصحيح.",
+    "المعرّف dlg-a1-reklamation-hotel يحمل slug تاريخياً فيه a1، بينما حقل المستوى الحي A2؛ أُبقي كما هو لتجنب كسر الإحالات، ولا يُعدّ هذا حكماً مستقلاً على CEFR."
+  ],
+  "audio": {
+    "dialogAudioManifestEntries": 0,
+    "hoerenAudioManifestEntries": 0,
+    "matchingFilesPresent": 0,
+    "matchingFiles": [],
+    "listened": false,
+    "generated": false,
+    "modified": false,
+    "note": "لا توجد إدخالات لهذه المعرفات في content/dialog-audio.json (مانيفستو صوت الحوارات) ولا في content/hoeren-audio.json (مانيفستو تسجيلات نصوص الاستماع)، ولا ملفات صوت مطابقة. لم يحدث استماع أو توليد أو تعديل صوت، ولم يُستخدم neu بديلاً."
+  },
+  "limits": {
+    "human": "تدقيق تحريري في بيئة الوكيل؛ ليس مراجعة بشرية مستقلة أو اعتماداً مهنياً.",
+    "cefr": "المستوى A2 هو الحقل المسجل؛ لم يُجر اختبار CEFR مستقل. slug المعرّف dlg-a1-reklamation-hotel محفوظ كما هو.",
+    "insurance": "صياغة مساهمة التأمين مقيدة في الحوار بشرط gesetzlich versichert und angestellt وبكلمة grundsätzlich؛ لم تُجر مراجعة قانونية خارجية ولا ينبغي استخدامها كنصيحة تأمينية.",
+    "medical": "جرى تصحيح ترجمة 116 117 إلى خدمة الأطباء المناوبة لا الطوارئ العامة؛ لا تقييم سريري أو نصيحة تشخيص/علاج.",
+    "external": "الطقس والازدحام وأوقات العيادة/المتجر ورقم VHS سيناريوهات نصية؛ لم تُتحقق كوقائع راهنة.",
+    "audio": "المانيفستوان منفصلان؛ لا إدخالات ولا ملفات لهذه الموارد، ولا ادعاء بالاستماع.",
+    "other": "لم تتغير تحذيرات W1–W6."
+  },
+  "gates": {
+    "planned": "K223a–f"
+  }
+}

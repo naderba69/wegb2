@@ -10613,7 +10613,7 @@
       {
         "who": "Gast",
         "de": "Und das WLAN funktioniert auch nicht!",
-        "ar": "والـWLAN لا يعمل أيضاً!"
+        "ar": "وشبكة الواي فاي لا تعمل أيضاً!"
       },
       {
         "who": "Rezeptionistin",
@@ -10634,7 +10634,7 @@
     "id": "dlg-a2-terminabsage",
     "level": "A2",
     "titleDe": "Einen Termin absagen",
-    "titleAr": "إلغاء موعد (طبيب/إدارة)",
+    "titleAr": "إلغاء موعد في العيادة",
     "questions": [
       {
         "options": [
@@ -10667,12 +10667,12 @@
       {
         "who": "Mitarbeiterin",
         "de": "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?",
-        "ar": "نهار سعيد، عيادة الدكتور مولر، كيف يمكنني المساعدة؟"
+        "ar": "مرحباً، عيادة د. مولر، كيف يمكنني مساعدتك؟"
       },
       {
         "who": "Patient",
         "de": "Guten Tag, hier spricht Sami Ben Salah. Ich habe morgen um zehn Uhr einen Termin, aber ich kann leider nicht kommen.",
-        "ar": "نهار سعيد، معكم سامي بن صالح. عندي موعد غداً الساعة العاشرة لكنني للأسف لا أستطيع الحضور."
+        "ar": "مرحباً، معكم سامي بن صالح. عندي موعد غداً الساعة العاشرة لكنني للأسف لا أستطيع الحضور."
       },
       {
         "who": "Mitarbeiterin",
@@ -10682,12 +10682,12 @@
       {
         "who": "Patient",
         "de": "Ja, bitte. Geht es nächsten Dienstag um elf Uhr?",
-        "ar": "نعم من فضلك. هل الثلاثاء القادم الساعة الحادية عشرة ممكن؟"
+        "ar": "نعم، من فضلك. هل يناسبك الثلاثاء القادم عند الساعة الحادية عشرة؟"
       },
       {
         "who": "Mitarbeiterin",
         "de": "Am Dienstag um elf ist noch frei. Ich trage Sie ein. Tut mir leid, dass Sie nicht kommen können.",
-        "ar": "الثلاثاء في الحادية عشرة ما زال شاغراً. سأُسجّل لك. آسف لأنك لا تستطيع الحضور."
+        "ar": "ما زال موعد الثلاثاء عند الساعة الحادية عشرة متاحاً. سأُسجّل لك. أعتذر لعدم تمكنك من الحضور."
       },
       {
         "who": "Patient",
@@ -10701,14 +10701,14 @@
       }
     ],
     "dictation": [
-      "Guten Tag, Praxis Dr."
+      "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?"
     ]
   },
   {
     "id": "dlg-a2-krankenversicherung",
     "level": "A2",
     "titleDe": "Bei der gesetzlichen Krankenkasse",
-    "titleAr": "في التأمين الصحي القانوني",
+    "titleAr": "في صندوق التأمين الصحي القانوني",
     "questions": [
       {
         "options": [
@@ -10741,7 +10741,7 @@
       {
         "who": "Kundin",
         "de": "Guten Tag, ich möchte mich krankenversichern.",
-        "ar": "نهار سعيد، أريد الاشتراك في التأمين الصحي."
+        "ar": "مرحباً، أريد الاشتراك في التأمين الصحي."
       },
       {
         "who": "Mitarbeiterin",
@@ -10756,7 +10756,7 @@
       {
         "who": "Mitarbeiterin",
         "de": "Für die Anmeldung brauche ich Ihre persönlichen Daten und Informationen zu Ihrer Beschäftigung. Die nötigen Unterlagen erkläre ich Ihnen gern.",
-        "ar": "أحتاج إلى بياناتك الشخصية ومعلومات عن عملك للتسجيل. ويسرّني أن أشرح لك المستندات المطلوبة بحسب حالتك."
+        "ar": "أحتاج إلى بياناتك الشخصية ومعلومات عن عملك للتسجيل. ويسرّني أن أشرح لك المستندات اللازمة."
       },
       {
         "who": "Kundin",
@@ -11402,20 +11402,20 @@
     "id": "hoer-a2-01",
     "level": "A2",
     "titleDe": "Anrufbeantworter Arztpraxis",
-    "titleAr": "مجيب آلي في عيادة الطبيب",
+    "titleAr": "جهاز الرد الآلي لعيادة د. مولر",
     "ort": "Anrufbeantworter",
     "lines": [
       {
         "who": "Anrufbeantworter",
-        "de": "Guten Tag, Sie haben die Praxis Dr. Müller erreicht. Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr. In dringenden Fällen rufen Sie bitte den ärztlichen Notdienst unter der Nummer 116 117 an. Möchten Sie einen Termin vereinbaren, drücken Sie bitte die 1. Wiederhören Sie die Ansage mit der 9.",
-        "ar": "نهارك سعيد، اتصلت بعيادة الدكتور مولر. ساعات العمل من الاثنين إلى الجمعة 8–12، الثلاثاء والخميس 15–18. في الحالات الطارئة اتصل بالطوارئ الطبية على 116117. لحجز موعد اضغط 1. لإعادة الإعلان اضغط 9."
+        "de": "Guten Tag, Sie haben die Praxis von Dr. Müller erreicht. Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr. In dringenden Fällen rufen Sie bitte den ärztlichen Notdienst unter der Nummer 116 117 an. Möchten Sie einen Termin vereinbaren, drücken Sie bitte die 1. Um die Ansage zu wiederholen, drücken Sie bitte die 9.",
+        "ar": "مرحباً، لقد اتصلتم بعيادة د. مولر. ساعات استقبال المرضى من الاثنين إلى الجمعة من ٨ صباحاً إلى ١٢ ظهراً، ويومي الثلاثاء والخميس من ١٥ إلى ١٨. في الحالات الطبية العاجلة، يُرجى الاتصال بخدمة الأطباء المناوبة على الرقم ١١٦ ١١٧. لحجز موعد، اضغطوا الرقم 1. ولإعادة سماع الإعلان، اضغطوا الرقم 9."
       }
     ],
     "questions": [
       {
         "type": "mc",
         "promptDe": "Welche Nummer wählt man in dringenden Fällen?",
-        "promptAr": "ما رقم الطوارئ؟",
+        "promptAr": "ما رقم خدمة الأطباء المناوبة في الحالات العاجلة؟",
         "options": [
           "Ärztlicher Notdienst: 110",
           "Ärztlicher Notdienst: 112",
@@ -11442,7 +11442,7 @@
       }
     ],
     "dictation": [
-      "Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12."
+      "Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr."
     ],
     "hoertext": true
   },
@@ -11456,14 +11456,14 @@
       {
         "who": "Radio",
         "de": "Und nun das Wetter für morgen: Im Norden ist es bewölkt mit etwas Regen bei Temperaturen zwischen 12 und 15 Grad. In der Mitte Deutschlands scheint die Sonne bei bis zu 20 Grad. Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad. Am Abend kann es im Westen Gewitter geben.",
-        "ar": "والآن طقس الغد: في الشمال غائم مع بعض المطر، درجات الحرارة بين 12 و15. في الوسط تشرق الشمس وتصل الحرارة إلى 20. في الجنوب يظل الجو دافئاً وجافاً بحرارة تبلغ 26. في المساء قد تحدث عواصف رعدية في الغرب."
+        "ar": "والآن طقس الغد: في الشمال يكون الطقس غائماً مع أمطار خفيفة، وتتراوح الحرارة بين 12 و15 درجة. في وسط ألمانيا تشرق الشمس وتصل الحرارة إلى 20 درجة. وفي الجنوب يبقى الجو دافئاً وجافاً، وتصل الدرجة العظمى إلى 26 درجة. وفي المساء قد تحدث عواصف رعدية في الغرب."
       }
     ],
     "questions": [
       {
         "type": "mc",
         "promptDe": "Wo gibt es Gewitter?",
-        "promptAr": "أين العواصف الرعدية؟",
+        "promptAr": "أين يُتوقع حدوث العواصف الرعدية؟",
         "options": [
           "Im Norden",
           "In der Mitte",
@@ -11490,7 +11490,7 @@
       }
     ],
     "dictation": [
-      "Im Süden bleibt es warm und trocken."
+      "Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad."
     ],
     "hoertext": true
   },
@@ -12392,7 +12392,7 @@
     "lines": [
       {
         "de": "Hallo Ahmed, hier ist Sabine Becker von der Volkshochschule. Ihr Kurs beginnt am kommenden Montag um 18 Uhr in Raum 304. Bitte bringen Sie Ihr Buch und einen Stift mit. Rückfragen unter 0221-4711.",
-        "ar": "مرحباً أحمد، معكِ زابينه بيكر من مركز تعليم الكبار. دورتك تبدأ الإثنين القادم الساعة 18 في القاعة 304. أحضر كتابك وقلم. للأسئلة اتصل على 0221-4711.",
+        "ar": "مرحباً أحمد، أنا زابينه بيكر من مركز تعليم الكبار. تبدأ دورتك يوم الاثنين القادم الساعة 18 في الغرفة 304. يُرجى إحضار كتابك وقلماً معك. للاستفسار، اتصل على 0221-4711.",
         "who": "Frau Becker"
       }
     ],
@@ -12436,19 +12436,19 @@
       {
         "id": "d-a2-ht03-q1",
         "type": "mc",
-        "promptDe": "Warum sollen Autofahrer an der nächsten Ausfahrt abfahren?",
-        "promptAr": "لماذا ينبغي للسائقين الخروج عند المخرج التالي؟",
+        "promptDe": "Wie lang ist der Stau auf der A3?",
+        "promptAr": "كم يبلغ طول الازدحام على A3؟",
         "options": [
-          "Wegen Stau nach Unfall",
-          "Wegen einer gesperrten Ausfahrt in Fahrtrichtung Frankfurt",
-          "Wegen eines Staus auf der A3 in Fahrtrichtung Köln"
+          "acht Kilometer",
+          "fünf Kilometer",
+          "drei Kilometer"
         ],
-        "answer": "Wegen Stau nach Unfall",
-        "explanationAr": "الدليل: وقع الحادث على A3 باتجاه فرانكفورت، وتسبّب بازدحام يمتد ثمانية كيلومترات؛ لذلك طُلب استخدام المخرج التالي. الفخّ: الحديث عن مسار مغلق لا مخرج مغلق، والاتجاه المذكور فرانكفورت لا كولونيا."
+        "answer": "acht Kilometer",
+        "explanationAr": "الدليل: «Es gibt zurzeit einen Stau von acht Kilometern». الفخّ: الرقمان خمسة وثلاثة يبدلان طول الازدحام المذكور."
       }
     ],
     "dictation": [
-      "Die Polizei meldet einen Unfall auf der A3 zwischen Köln und Bonn in Fahrtrichtung Süden."
+      "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt."
     ]
   },
   {

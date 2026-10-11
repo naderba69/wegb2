@@ -10353,6 +10353,74 @@ void 0;
     reviewA1Extras.audio.generated === false && reviewA1Extras.audio.modified === false,
     "K222f مانيفستو الحوارات ومنفصل الاستماع لا يسجلان هذه الموارد ولا توجد ملفات؛ لا neu ولا توليد ولا ادعاء سماع");
 }
+/* ═══ K223 — موارد A2 الإضافية: 3 حوارات و5 نصوص استماع (R152). ═══ */
+{
+  const reviewA2Extras = JSON.parse(readFileSync("docs/content-review-a2-dialogues-11-2026-10-11.json", "utf8")) as any;
+  const reviewA2ExtrasMd = readFileSync("docs/content-review-a2-dialogues-11-2026-10-11.md", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const ids = ["dlg-a1-reklamation-hotel", "dlg-a2-terminabsage", "dlg-a2-krankenversicherung", "hoer-a2-01", "hoer-a2-02", "d-a2-ht01", "d-a2-ht02", "d-a2-ht03"];
+  const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const tasksValid = batch.every((d:any) => d && d.level === "A2" && Array.isArray(d.lines) && d.lines.length > 0 &&
+    d.lines.every((line:any) => typeof line.de === "string" && !!line.de.trim() && typeof line.ar === "string" && !!line.ar.trim()) &&
+    Array.isArray(d.questions) && d.questions.length > 0 && d.questions.every((q:any) =>
+      typeof q.promptDe === "string" && !!q.promptDe.trim() && typeof q.promptAr === "string" && !!q.promptAr.trim() &&
+      typeof q.explanationAr === "string" && !!q.explanationAr.trim() && q.type === "mc" &&
+      Array.isArray(q.options) && new Set(q.options).size === q.options.length && q.options.includes(q.answer)) &&
+    Array.isArray(d.dictation) && d.dictation.length > 0 &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  ok(reviewA2Extras.reviewRule === "R152" && JSON.stringify(reviewA2Extras.targetIds) === JSON.stringify(ids) &&
+    reviewA2Extras.totals.resources === 8 && reviewA2Extras.totals.dialogues === 3 && reviewA2Extras.totals.hoertexte === 5 &&
+    reviewA2Extras.totals.lines === 28 && reviewA2Extras.totals.questions === 13 && reviewA2Extras.totals.dictation === 8 &&
+    reviewA2Extras.totals.correctedFields === 25 && reviewA2Extras.totals.unresolved === 0 && reviewA2Extras.corrections.length === 25 &&
+    reviewA2ExtrasMd.includes("K223a–f") && reviewA2ExtrasMd.includes("خدمة الأطباء المناوبة"),
+    "K223a تقرير R152 يحصي الموارد والحقول المصححة وحدود المراجعة");
+  ok(tasksValid, "K223b موارد A2 الإضافية: كل سطر مترجم، ومفاتيح MC فريدة وصالحة، والإملاءات مقاطع حرفية كاملة");
+  const hotel = batch[0], appointment = batch[1], insurance = batch[2];
+  ok(hotel.lines[4].ar === "وشبكة الواي فاي لا تعمل أيضاً!" &&
+    hotel.questions[0].answer.includes("Das Zimmer ist nicht sauber") && hotel.questions[0].answer.includes("WLAN funktioniert auch nicht") &&
+    appointment.titleAr === "إلغاء موعد في العيادة" && appointment.questions[0].answer.includes("morgen absagen") &&
+    appointment.questions[1].answer === "nächsten Dienstag um elf" && appointment.dictation[0] === "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?" &&
+    appointment.lines[0].ar.includes("د. مولر") && appointment.lines[4].ar.includes("أعتذر لعدم تمكنك") &&
+    insurance.titleAr === "في صندوق التأمين الصحي القانوني" && insurance.questions[0].answer === "Sie und Ihr Arbeitgeber zahlen jeweils die Hälfte." &&
+    insurance.lines[5].de.includes("grundsätzlich je zur Hälfte") && !insurance.lines[3].ar.includes("بحسب حالتك"),
+    "K223c مشكلات الفندق والموعد البديل والتأمين: ترجمة دقيقة، لقب محايد، وإملاء مكتمل بلا تعميم غير مشروط");
+  const office = batch[3], weather = batch[4];
+  ok(office.lines[0].de.includes("Um die Ansage zu wiederholen, drücken Sie bitte die 9.") &&
+    !office.lines[0].de.includes("Wiederhören Sie") && office.lines[0].ar.includes("خدمة الأطباء المناوبة") &&
+    office.lines[0].ar.includes("١١٦ ١١٧") && office.questions[0].promptAr.includes("رقم خدمة الأطباء المناوبة") &&
+    office.questions[0].answer === "Ärztlicher Notdienst: 116 117" &&
+    office.dictation[0] === "Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr." &&
+    weather.lines[0].ar.includes("12 و15 درجة") && weather.lines[0].ar.includes("20 درجة") && weather.lines[0].ar.includes("26 درجة") &&
+    weather.questions[0].promptAr === "أين يُتوقع حدوث العواصف الرعدية؟" && weather.questions[0].answer === "Im Westen" &&
+    weather.dictation[0] === "Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad.",
+    "K223d نصا العيادة والطقس: تمييز خدمة 116117، تعليمات الرد الآلي، درجات الحرارة والسؤال والإملاء المتصل");
+  const sale = batch[5], vhs = batch[6], traffic = batch[7];
+  ok(sale.questions[0].answer === "30 Prozent" && sale.lines[1].de.includes("bis Ladenschluss um 20 Uhr") &&
+    vhs.lines[0].ar.startsWith("مرحباً أحمد، أنا زابينه") && vhs.lines[0].ar.includes("الغرفة 304") &&
+    vhs.lines[0].ar.includes("كتابك وقلماً") && vhs.questions[0].answer === "Buch und Stift" &&
+    traffic.questions[0].promptDe === "Wie lang ist der Stau auf der A3?" && traffic.questions[0].answer === "acht Kilometer" &&
+    traffic.questions[0].options.join("|") === "acht Kilometer|fünf Kilometer|drei Kilometer" &&
+    traffic.questions[0].explanationAr.includes("Es gibt zurzeit einen Stau von acht Kilometern") &&
+    traffic.dictation[0] === "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt.",
+    "K223e إعلان المتجر ورسالة VHS وخبر A3: سؤال مباشر عن 8 كم وإملاء يصحح الموقع والاتجاه");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio].every((entry:any) => !ids.includes(entry.id));
+  const matchingFiles: string[] = [];
+  const scanAudio = (dir:string):void => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = dir + "/" + entry.name;
+      if (entry.isDirectory()) scanAudio(path);
+      else if (ids.includes(entry.name.replace(/\.[^.]*$/, ""))) matchingFiles.push(path);
+    }
+  };
+  scanAudio("public/audio");
+  ok(noManifestEntries && matchingFiles.length === 0 && reviewA2Extras.audio.dialogAudioManifestEntries === 0 &&
+    reviewA2Extras.audio.hoerenAudioManifestEntries === 0 && reviewA2Extras.audio.matchingFilesPresent === 0 &&
+    reviewA2Extras.audio.listened === false && reviewA2Extras.audio.generated === false && reviewA2Extras.audio.modified === false,
+    "K223f مانيفستو الحوار ومانيفستو الاستماع منفصلان ولا تسجيلات/ملفات لهذه الموارد؛ لا استماع أو neu أو توليد/تعديل");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
