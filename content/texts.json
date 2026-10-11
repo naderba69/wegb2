@@ -6677,8 +6677,8 @@
     "level": "A1",
     "titleDe": "Meine Wohnung",
     "titleAr": "شقتي",
-    "de": "Meine Wohnung ist nicht groß, aber sehr hell. Sie hat zwei Zimmer, eine Küche, ein Bad und einen kleinen Balkon. Im Wohnzimmer stehen ein Sofa, ein Tisch und ein Fernseher. In einem Zimmer schlafen meine Frau und ich. Das zweite Zimmer ist unser Arbeitszimmer. Am Morgen kommt viel Licht durch die Fenster. In der Küche koche ich jeden Abend. Dort stehen auch ein kleiner Tisch und vier Stühle. Auf dem Balkon stehen zwei Stühle und viele Blumen. Im Sommer frühstücke ich dort gern. Die Miete ist sechshundert Euro warm. Die Wohnung liegt nahe an einer Bushaltestelle. Am Wochenende besuchen uns Freunde, und wir trinken Kaffee im Wohnzimmer. Ich bin sehr zufrieden mit meiner Wohnung.",
-    "ar": "شقتي ليست كبيرة لكنها مشرقة جداً. فيها غرفتان ومطبخ وحمّام وشرفة صغيرة. في غرفة المعيشة أريكة وطاولة وتلفاز. أنام مع زوجتي في إحدى الغرف. والغرفة الثانية مكتبنا. يدخل ضوء كثير من النوافذ صباحاً. أطبخ كل مساء في المطبخ. وهناك أيضاً طاولة صغيرة وأربعة كراسٍ. في الشرفة كرسيان وكثير من الزهور. أحب تناول الفطور هناك في الصيف. الإيجار الشامل للتدفئة ستمئة يورو. تقع الشقة قرب موقف حافلات. يزورنا أصدقاؤنا في نهاية الأسبوع ونشرب القهوة في غرفة المعيشة. أنا راضٍ جداً عن شقتي.",
+    "de": "Meine Wohnung ist nicht groß, aber sehr hell. Sie hat zwei Zimmer, eine Küche, ein Bad und einen kleinen Balkon. Im Wohnzimmer stehen ein Sofa, ein Tisch und ein Fernseher. In einem Zimmer schlafen meine Frau und ich. Das zweite Zimmer ist unser Arbeitszimmer. Am Morgen kommt viel Licht durch die Fenster. In der Küche koche ich jeden Abend. Dort stehen auch ein kleiner Tisch und vier Stühle. Auf dem Balkon stehen zwei Stühle und viele Blumen. Im Sommer frühstücke ich dort gern. Die Warmmiete beträgt sechshundert Euro. Die Wohnung liegt nahe an einer Bushaltestelle. Am Wochenende besuchen uns Freunde, und wir trinken Kaffee im Wohnzimmer. Ich bin sehr zufrieden mit meiner Wohnung.",
+    "ar": "شقتي ليست كبيرة لكنها مشرقة جداً. فيها غرفتان ومطبخ وحمام وشرفة صغيرة. في غرفة المعيشة أريكة وطاولة وتلفاز. أنام مع زوجتي في إحدى الغرف. والغرفة الثانية مكتبنا. يدخل ضوء كثير من النوافذ صباحاً. أطبخ كل مساء في المطبخ. وهناك أيضاً طاولة صغيرة وأربعة كراسٍ. في الشرفة كرسيان وكثير من الزهور. أحب تناول الفطور هناك في الصيف. يبلغ الإيجار الشامل (Warmmiete) ستمئة يورو. تقع الشقة قرب موقف حافلات. يزورنا أصدقاؤنا في نهاية الأسبوع ونشرب القهوة في غرفة المعيشة. أنا راضٍ جداً عن شقتي.",
     "wordCountDe": 114,
     "notes": "R138/P-11: A1-Lesetext, in R142 auf 90–160 Wörter erweitert.",
     "questions": [
@@ -6698,15 +6698,15 @@
       {
         "id": "t-a1-023-q2",
         "type": "mc",
-        "promptDe": "Wie hoch ist die Miete warm?",
-        "promptAr": "كم الإيجار شاملاً التدفئة؟",
+        "promptDe": "Wie hoch ist die Warmmiete?",
+        "promptAr": "كم تبلغ قيمة الإيجار الشامل؟",
         "options": [
           "500 Euro",
           "600 Euro",
           "700 Euro"
         ],
         "answer": "600 Euro",
-        "explanationAr": "الدليل في النص: «Die Miete ist sechshundert Euro warm.» — الإيجار 600 يورو warm."
+        "explanationAr": "«Die Warmmiete beträgt sechshundert Euro.» — الإيجار الشامل يبلغ 600 يورو."
       }
     ]
   },
@@ -6753,8 +6753,8 @@
     "level": "A1",
     "titleDe": "Im Supermarkt",
     "titleAr": "في السوبرماركت",
-    "de": "Heute gehe ich zum Supermarkt. Ich brauche Milch, Brot, Eier, Äpfel und Käse. Der Supermarkt ist groß und hat viele Produkte. Zuerst suche ich die Milch, dann hole ich Brot und Eier. Ich kaufe auch Tomaten und eine Flasche Wasser. Die Äpfel sind heute im Angebot. Ich vergleiche die Preise und nehme eine kleine Tüte mit. Im Laden treffe ich meine Nachbarin. Wir sprechen kurz über das Wetter. Dann gehe ich zur Kasse. Vor mir stehen zwei Personen. Die Verkäuferin sagt: „Guten Tag.“ An der Kasse bezahle ich mit Karte. Sie gibt mir den Kassenbon. Alles kostet zusammen zwölf Euro. Zu Hause stelle ich die Milch und das Wasser in den Kühlschrank. Das Brot kommt in den Schrank.",
-    "ar": "اليوم أذهب إلى السوبرماركت. أحتاج إلى الحليب والخبز والبيض والتفاح والجبن. المتجر كبير وفيه منتجات كثيرة. أبحث عن الحليب أولاً، ثم آخذ الخبز والبيض. أشتري أيضاً الطماطم وزجاجة ماء. التفاح عليه عرض اليوم. أقارن الأسعار وآخذ كيساً صغيراً معي. ألتقي جارتي في المتجر. نتحدث قليلاً عن الطقس. ثم أذهب إلى الصندوق. يقف أمامي شخصان. تقول البائعة: «مرحباً». أدفع بالبطاقة عند الصندوق وتعطيني الإيصال. المجموع اثنا عشر يورو. في البيت أضع الحليب والماء في الثلاجة، وأضع الخبز في الخزانة.",
+    "de": "Heute gehe ich zum Supermarkt. Ich brauche Milch, Brot, Eier, Äpfel und Käse. Der Supermarkt ist groß und hat viele Produkte. Zuerst suche ich die Milch, dann hole ich Brot und Eier. Ich kaufe auch Tomaten und eine Flasche Wasser. Die Äpfel sind heute im Angebot. Ich vergleiche die Preise und nehme eine kleine Tüte mit. Im Laden treffe ich meine Nachbarin. Wir sprechen kurz über das Wetter. Dann gehe ich zur Kasse. Vor mir stehen zwei Personen. Die Verkäuferin sagt: „Guten Tag.“ An der Kasse bezahle ich mit Karte. Die Verkäuferin gibt mir den Kassenbon. Alles kostet zusammen zwölf Euro. Zu Hause stelle ich die Milch und das Wasser in den Kühlschrank. Das Brot kommt in den Schrank.",
+    "ar": "اليوم أذهب إلى السوبرماركت. أحتاج إلى الحليب والخبز والبيض والتفاح والجبن. المتجر كبير وفيه منتجات كثيرة. أبحث عن الحليب أولاً، ثم آخذ الخبز والبيض. أشتري أيضاً الطماطم وزجاجة ماء. التفاح عليه عرض اليوم. أقارن الأسعار وآخذ كيساً صغيراً معي. ألتقي جارتي في المتجر. نتحدث قليلاً عن الطقس. ثم أذهب إلى الصندوق. يقف أمامي شخصان. تقول البائعة: «مرحباً». أدفع بالبطاقة عند الصندوق، ثم تعطيني البائعة الإيصال. المجموع اثنا عشر يورو. في البيت أضع الحليب والماء في الثلاجة، وأضع الخبز في الخزانة.",
     "wordCountDe": 118,
     "notes": "R138/P-11: A1-Lesetext, in R142 auf 90–160 Wörter erweitert.",
     "questions": [
@@ -6906,7 +6906,7 @@
     "titleDe": "Meine Kleidung",
     "titleAr": "ملابسي",
     "de": "Heute trage ich eine blaue Jeans, ein weißes T-Shirt und schwarze Schuhe. Im Winter ziehe ich eine warme Jacke an, manchmal auch einen Schal und Handschuhe. Im Sommer trage ich kurze Hosen und T-Shirts. Zu Hause trage ich gern eine bequeme Hose und ein altes T-Shirt. Für die Arbeit brauche ich keine besondere Kleidung. Am Samstag gehe ich mit meiner Freundin in ein Geschäft. Sie sucht ein Kleid, und ich brauche neue Socken. Im Geschäft probiere ich eine grüne Jacke an. Sie passt gut, aber sie ist ein bisschen teuer. Ich kaufe sie nicht. Am Ende fahren wir mit dem Bus nach Hause.",
-    "ar": "أرتدي اليوم بنطال جينز أزرق وقميصاً أبيض وحذاءً أسود. أرتدي في الشتاء سترة دافئة، وأحياناً وشاحاً وقفازات أيضاً. ألبس في الصيف سراويل قصيرة وقمصاناً قصيرة الأكمام. أحب في البيت ارتداء بنطال مريح وقميص قديم. لا أحتاج إلى ملابس خاصة للعمل. أذهب يوم السبت مع صديقتي إلى متجر. تبحث هي عن فستان وأحتاج أنا إلى جوارب جديدة. أجرب سترة خضراء في المتجر. إنها تناسبني لكنها غالية قليلاً. لا أشتريها. نعود إلى البيت بالحافلة في النهاية.",
+    "ar": "أرتدي اليوم بنطال جينز أزرق وقميصاً أبيض وزوجاً من الأحذية السوداء. أرتدي في الشتاء سترة دافئة، وأحياناً وشاحاً وقفازات أيضاً. ألبس في الصيف سراويل قصيرة وقمصاناً قصيرة الأكمام. أحب في البيت ارتداء بنطال مريح وقميص قديم. لا أحتاج إلى ملابس خاصة للعمل. أذهب يوم السبت مع صديقتي إلى متجر. تبحث هي عن فستان وأحتاج أنا إلى جوارب جديدة. أجرب سترة خضراء في المتجر. إنها تناسبني لكنها غالية قليلاً. لا أشتريها. نعود إلى البيت بالحافلة في النهاية.",
     "wordCountDe": 103,
     "notes": "R138/P-11: A1-Lesetext, in R142 auf 90–160 Wörter erweitert.",
     "questions": [
@@ -6943,8 +6943,8 @@
     "level": "A1",
     "titleDe": "Besuch bei der Ärztin",
     "titleAr": "زيارة الطبيبة",
-    "de": "Heute bin ich beim Arzt. Ich habe seit zwei Tagen Kopfschmerzen. Die Ärztin fragt: „Was tut weh?“ Ich antworte: „Mein Kopf tut weh und ich habe ein bisschen Fieber.“ Sie untersucht mich und sagt: „Das ist eine Erkältung. Trinken Sie viel Wasser und ruhen Sie sich aus.“ In der Praxis warten noch drei Personen. Ich sitze im Wartezimmer und lese eine Zeitschrift. Nach zwanzig Minuten ruft mich die Ärztin. Sie fragt: „Haben Sie auch Husten?“ Ich sage: „Ein wenig, aber mein Hals tut nicht weh.“ Sie misst meine Temperatur. Dann schreibt sie ein Rezept. In der Apotheke kaufe ich die Tabletten. Zu Hause trinke ich Wasser und gehe früh schlafen. Am nächsten Morgen geht es mir besser.",
-    "ar": "أنا في عيادة الطبيبة اليوم. أعاني من الصداع منذ يومين. تسأل الطبيبة: «ماذا يؤلمك؟» أجيب: «رأسي يؤلمني وعندي حمى خفيفة.» تفحصني وتقول: «إنها نزلة برد. اشرب الكثير من الماء واسترح.» ينتظر ثلاثة أشخاص آخرون في العيادة. أجلس في غرفة الانتظار وأقرأ مجلة. تناديني الطبيبة بعد عشرين دقيقة. تسأل: «هل لديك سعال أيضاً؟» أقول: «قليلاً، لكن حلقي لا يؤلمني.» تقيس حرارتي. ثم تكتب وصفة. أشتري الأقراص من الصيدلية. أشرب الماء في البيت وأذهب إلى النوم باكراً. أشعر بتحسن في صباح اليوم التالي.",
+    "de": "Heute bin ich bei der Ärztin. Ich habe seit zwei Tagen Kopfschmerzen. Die Ärztin fragt: „Was tut weh?“ Ich antworte: „Mein Kopf tut weh und ich habe ein bisschen Fieber.“ Sie untersucht mich und sagt: „Vielleicht ist es eine Erkältung. Trinken Sie viel Wasser und ruhen Sie sich aus.“ In der Praxis warten noch drei Personen. Ich sitze im Wartezimmer und lese eine Zeitschrift. Nach zwanzig Minuten ruft mich die Ärztin. Sie fragt: „Haben Sie auch Husten?“ Ich sage: „Ein wenig, aber mein Hals tut nicht weh.“ Sie misst meine Temperatur. Dann schreibt sie ein Rezept. In der Apotheke kaufe ich die Tabletten. Zu Hause trinke ich Wasser und gehe früh schlafen. Am nächsten Morgen geht es mir besser.",
+    "ar": "أنا عند الطبيبة اليوم. أعاني من الصداع منذ يومين. تسألني الطبيبة: «ماذا يؤلمك؟» أجيب: «رأسي يؤلمني وعندي حمى خفيفة.» تفحصني وتقول: «ربما تكون نزلة برد. اشرب الكثير من الماء واسترح.» ينتظر ثلاثة أشخاص آخرون في العيادة. أجلس في غرفة الانتظار وأقرأ مجلة. تناديني الطبيبة بعد عشرين دقيقة. تسألني: «هل لديك سعال أيضاً؟» أقول: «قليلاً، لكن حلقي لا يؤلمني.» تقيس حرارتي. ثم تكتب وصفة طبية. أشتري الأقراص من الصيدلية. أشرب الماء في البيت وأذهب إلى النوم باكراً. أشعر بتحسن في صباح اليوم التالي.",
     "wordCountDe": 117,
     "notes": "R138/P-11: A1-Lesetext, in R142 auf 90–160 Wörter erweitert.",
     "questions": [
@@ -7027,28 +7027,28 @@
       {
         "id": "t-a1-032-q1",
         "type": "mc",
-        "promptDe": "Was macht die Person am Samstag?",
-        "promptAr": "ماذا يفعل المتحدث يوم السبت؟",
+        "promptDe": "Was mache ich am Samstag?",
+        "promptAr": "ماذا أفعل يوم السبت؟",
         "options": [
-          "Sie putzt die Wohnung und kauft ein",
-          "Sie fährt zur Arbeit",
-          "Sie besucht einen Arzt"
+          "Ich putze die Wohnung und kaufe ein",
+          "Ich fahre zur Arbeit",
+          "Ich besuche einen Arzt"
         ],
-        "answer": "Sie putzt die Wohnung und kauft ein",
-        "explanationAr": "الدليل في النص: «Dann putze ich die Wohnung und kaufe ein.» — ينظف الشقة ويتسوق بعد الإفطار يوم السبت."
+        "answer": "Ich putze die Wohnung und kaufe ein",
+        "explanationAr": "«Dann putze ich die Wohnung und kaufe ein.» — أنظف الشقة وأتسوّق يوم السبت."
       },
       {
         "id": "t-a1-032-q2",
         "type": "mc",
-        "promptDe": "Was macht die Person am Sonntagabend?",
-        "promptAr": "ماذا يفعل المتحدث مساء الأحد؟",
+        "promptDe": "Was mache ich am Sonntagabend?",
+        "promptAr": "ماذا أفعل مساء الأحد؟",
         "options": [
-          "Sie kocht und bereitet ihre Sachen für Montag vor",
-          "Sie geht ins Kino",
-          "Sie arbeitet im Supermarkt"
+          "Ich koche und bereite meine Sachen für Montag vor",
+          "Ich gehe ins Kino",
+          "Ich arbeite im Supermarkt"
         ],
-        "answer": "Sie kocht und bereitet ihre Sachen für Montag vor",
-        "explanationAr": "الدليل في النص: «Danach bereite ich meine Sachen für Montag vor.» — تحضّر أشياءها ليوم الاثنين بعد أن تطهو."
+        "answer": "Ich koche und bereite meine Sachen für Montag vor",
+        "explanationAr": "«Am Sonntagabend koche ich etwas Leckeres. Danach bereite ich meine Sachen für Montag vor.» — أطبخ شيئاً لذيذاً مساء الأحد، ثم أجهّز أشيائي ليوم الاثنين."
       }
     ]
   },
@@ -7111,7 +7111,7 @@
           "Geradeaus zurückgehen"
         ],
         "answer": "Links abbiegen",
-        "explanationAr": "الدليل في النص: «Gehen Sie geradeaus bis zur Ampel, dann biegen Sie links ab.» — بعد الإشارة انعطف يساراً."
+        "explanationAr": "الدليل في النص: «Gehen Sie geradeaus bis zur Ampel, dann biegen Sie links ab.» — سر مباشرةً حتى الإشارة ثم انعطف يساراً عندها."
       },
       {
         "id": "t-a1-034-q2",
@@ -7133,8 +7133,8 @@
     "level": "A1",
     "titleDe": "Geburtstag",
     "titleAr": "عيد ميلادي",
-    "de": "Heute habe ich Geburtstag und bin dreißig Jahre alt. Ich habe sechs Freunde zum Geburtstag eingeladen. Sie kommen am Nachmittag um vier Uhr. Sie bringen Geschenke: ein Buch, eine Flasche Wein und eine Karte. Meine Frau hat einen Kuchen gebacken. Wir essen zusammen Kuchen und trinken Kaffee. Es ist ein schöner Tag und ich bin sehr glücklich. Auf dem Tisch stehen Teller, Tassen und Saft. Meine Mutter ruft an und gratuliert mir. Danach spielen wir ein Spiel und hören Musik. Ein Freund bringt auch Blumen mit. Wir machen ein Foto im Garten. Am Abend gehen meine Freunde nach Hause. Ich räume die Tassen weg. Ich bin müde, aber zufrieden.",
-    "ar": "اليوم عيد ميلادي وأتمّ الثلاثين من عمري. دعوت ستة أصدقاء إلى عيد ميلادي. يأتون في الرابعة بعد الظهر. يجلبون هدايا: كتاباً وزجاجة نبيذ وبطاقة تهنئة. خبزت زوجتي كعكة. نأكل الكعكة معاً ونشرب القهوة. إنه يوم جميل وأنا سعيد جداً. على الطاولة صحون وفناجين وعصير. تتصل أمي وتهنئني. بعد ذلك نلعب لعبة ونستمع إلى الموسيقى. يجلب أحد أصدقائي باقة زهور أيضاً. نلتقط صورة في الحديقة. يعود أصدقائي إلى بيوتهم مساءً. أرتب الفناجين. أنا متعب لكنني راضٍ.",
+    "de": "Heute habe ich Geburtstag und bin dreißig Jahre alt. Ich habe sechs Freunde zum Geburtstag eingeladen. Sie kommen am Nachmittag um vier Uhr. Sie bringen Geschenke: ein Buch, eine Flasche Wein und eine Karte. Meine Frau hat einen Kuchen gebacken. Wir essen zusammen Kuchen und trinken Kaffee. Es ist ein schöner Tag und ich bin sehr glücklich. Auf dem Tisch stehen Teller und Tassen. Es gibt auch Saft. Meine Mutter ruft an und gratuliert mir. Danach spielen wir ein Spiel und hören Musik. Ein Freund bringt auch Blumen mit. Wir machen ein Foto im Garten. Am Abend gehen meine Freunde nach Hause. Ich räume die Tassen weg. Ich bin müde, aber zufrieden.",
+    "ar": "اليوم عيد ميلادي وأتمّ الثلاثين من عمري. دعوت ستة أصدقاء إلى عيد ميلادي. يأتون في الرابعة بعد الظهر. يجلبون هدايا: كتاباً وزجاجة نبيذ وبطاقة تهنئة. خبزت زوجتي كعكة. نأكل الكعكة معاً ونشرب القهوة. إنه يوم جميل وأنا سعيد جداً. على الطاولة صحون وفناجين. وهناك عصير أيضاً. تتصل أمي وتهنئني. بعد ذلك نلعب لعبة ونستمع إلى الموسيقى. يجلب أحد أصدقائي زهوراً أيضاً. نلتقط صورة في الحديقة. يعود أصدقائي إلى بيوتهم مساءً. أرتب الفناجين. أنا متعب لكنني راضٍ.",
     "wordCountDe": 109,
     "notes": "R138/P-11: A1-Lesetext, in R142 auf 90–160 Wörter erweitert.",
     "questions": [

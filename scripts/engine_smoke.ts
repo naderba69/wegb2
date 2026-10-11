@@ -10623,6 +10623,71 @@ void 0;
     reviewA0Extras.gates.planned === "K226a–f" && reviewA0Extras.totals.unresolved === 0,
     "K226f حدود CEFR والمراجعة البشرية والسيناريوهات موضحة؛ لا فجوات مصطنعة");
 }
+/* ═══ K227 — خمسة عشر نصاً A1 إضافياً (R156). ═══ */
+{
+  const reviewA1Extras = JSON.parse(readFileSync("docs/content-review-a1-texts-04-2026-10-11.json", "utf8")) as any;
+  const reviewA1ExtrasMd = readFileSync("docs/content-review-a1-texts-04-2026-10-11.md", "utf8");
+  const reviewA1ExtrasPatch = readFileSync("scripts/patches/review_a1_texts_04.py", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const ids = ["t-a1-021", "t-a1-022", "t-a1-023", "t-a1-024", "t-a1-025", "t-a1-026", "t-a1-027", "t-a1-028", "t-a1-029", "t-a1-030", "t-a1-031", "t-a1-032", "t-a1-033", "t-a1-034", "t-a1-035"];
+  const batch = ids.map((id) => textsArr.find((t:any) => t.id === id));
+  const correctionUnits = reviewA1Extras.corrections.map((c:any) => c.unit);
+  ok(reviewA1Extras.reviewRule === "R156" && JSON.stringify(reviewA1Extras.targetIds) === JSON.stringify(ids) &&
+    reviewA1Extras.totals.texts === 15 && reviewA1Extras.totals.germanWords === 1619 &&
+    reviewA1Extras.totals.sentenceEndMarks === 202 && reviewA1Extras.totals.questions === 30 &&
+    reviewA1Extras.totals.correctedFields === 23 && reviewA1Extras.totals.guardedTransitions === 23 &&
+    reviewA1Extras.totals.unresolved === 0 && correctionUnits.length === 23 && new Set(correctionUnits).size === 23 &&
+    reviewA1Extras.coverage.after.covered === 135 && reviewA1Extras.coverage.after.total === 157 &&
+    reviewA1ExtrasMd.includes("K227a–f") && reviewA1ExtrasPatch.includes("len(EDITS) != 23"),
+    "K227a تقرير R156 يحصي النصوص والكلمات والأسئلة والتصحيحات والتغطية والرقعة المحروسة");
+  const tasksValid = batch.every((t:any) => t && t.level === "A1" && typeof t.titleDe === "string" && !!t.titleDe.trim() &&
+    typeof t.titleAr === "string" && !!t.titleAr.trim() && typeof t.de === "string" && !!t.de.trim() &&
+    typeof t.ar === "string" && !!t.ar.trim() && Array.isArray(t.questions) && t.questions.length === 2 &&
+    t.questions.every((q:any) => q.type === "mc" && !!q.promptDe?.trim() && !!q.promptAr?.trim() && !!q.explanationAr?.trim() &&
+      Array.isArray(q.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length && q.options.includes(q.answer)));
+  ok(tasksValid, "K227b نصوص A1 الخمسة عشر وأسئلتها الثلاثون كاملة؛ مفاتيح MC فريدة وموجودة في الخيارات");
+  const apartment = batch[2];
+  ok(apartment.de.includes("Die Warmmiete beträgt sechshundert Euro.") &&
+    apartment.ar.includes("الإيجار الشامل (Warmmiete)") && apartment.questions[1].promptDe === "Wie hoch ist die Warmmiete?" &&
+    apartment.questions[1].answer === "600 Euro" && apartment.questions[1].explanationAr.includes("الإيجار الشامل"),
+    "K227c مصطلح Warmmiete وسؤال 600 يورو موحّدان دون اختزال المصطلح إلى التدفئة");
+  const clinic = batch[9];
+  ok(clinic.titleDe.includes("Ärztin") && clinic.de.includes("Heute bin ich bei der Ärztin.") &&
+    !clinic.de.includes("beim Arzt") && clinic.de.includes("Vielleicht ist es eine Erkältung.") &&
+    !clinic.de.includes("Das ist eine Erkältung.") && clinic.ar.includes("ربما تكون نزلة برد") &&
+    reviewA1Extras.limits.medical.includes("لا تشخيص"),
+    "K227d الطبيبة متسقة مع العنوان والتشخيص مصوغ كاحتمال لا كحقيقة طبية مؤكدة");
+  const weekend = batch[11], clothes = batch[8], checkout = batch[4], route = batch[13], birthday = batch[14];
+  ok(weekend.questions[0].promptDe === "Was mache ich am Samstag?" &&
+    weekend.questions[0].answer === "Ich putze die Wohnung und kaufe ein" &&
+    weekend.questions[1].promptDe === "Was mache ich am Sonntagabend?" &&
+    weekend.questions[1].answer === "Ich koche und bereite meine Sachen für Montag vor" &&
+    weekend.questions[1].explanationAr.includes("Am Sonntagabend koche ich") &&
+    clothes.ar.includes("زوجاً من الأحذية السوداء") && checkout.de.includes("Die Verkäuferin gibt mir den Kassenbon.") &&
+    route.questions[0].explanationAr.includes("عندها") &&
+    birthday.de.includes("Auf dem Tisch stehen Teller und Tassen. Es gibt auch Saft.") &&
+    birthday.ar.includes("زهوراً أيضاً") && !birthday.ar.includes("باقة زهور"),
+    "K227e أسئلة نهاية الأسبوع متسقة؛ العدد والمرجع والاتجاه وجملة العصير وترجمة Blumen سليمة");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
+  const matchingFiles: string[] = [];
+  const scanAudio = (dir:string):void => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = dir + "/" + entry.name;
+      if (entry.isDirectory()) scanAudio(path);
+      else if (ids.includes(entry.name.replace(/\\.[^.]*$/, ""))) matchingFiles.push(path);
+    }
+  };
+  scanAudio("public/audio");
+  ok(noManifestEntries && matchingFiles.length === 0 && reviewA1Extras.audioAudit.dialogAudioManifestEntries === 0 &&
+    reviewA1Extras.audioAudit.hoerenAudioManifestEntries === 0 && reviewA1Extras.audioAudit.diktatAudioManifestEntries === 0 &&
+    reviewA1Extras.audioAudit.matchingFilesPresent === 0 && reviewA1Extras.audioAudit.listened === false &&
+    reviewA1Extras.audioAudit.generated === false && reviewA1Extras.audioAudit.modified === false,
+    "K227f مانيفستو الحوار والاستماع والإملاء منفصلة؛ لا إدخالات أو ملفات لهذه المعرّفات ولا ادعاء بالاستماع");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;

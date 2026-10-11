@@ -1,0 +1,502 @@
+{
+  "reviewRule": "R156",
+  "date": "2026-10-11",
+  "scope": "مراجعة خمسة عشر نص قراءة A1 غير موثّق المراجعة في التقارير السابقة (`t-a1-021`–`t-a1-035`): فُحص النص الألماني كله وترجمته وعنوانه وسؤالاه وخياراتهما ومفتاحاهما وشروح الإجابة. لم تُحذف موارد أو أسئلة.",
+  "method": "قورنت الحقول مع HEAD السابق للدفعة. الرقعة scripts/patches/review_a1_texts_04.py تحرس كل قيمة قديمة وتتحقق من A1 ومن اكتمال سؤالين MC ذوي خيارات فريدة ومفتاح صالح. عدد علامات نهاية الجمل/الحوار 202 في 1,619 كلمة ألمانية؛ لم يُعد تقييم مستوى CEFR مستقلاً.",
+  "targetIds": [
+    "t-a1-021",
+    "t-a1-022",
+    "t-a1-023",
+    "t-a1-024",
+    "t-a1-025",
+    "t-a1-026",
+    "t-a1-027",
+    "t-a1-028",
+    "t-a1-029",
+    "t-a1-030",
+    "t-a1-031",
+    "t-a1-032",
+    "t-a1-033",
+    "t-a1-034",
+    "t-a1-035"
+  ],
+  "resources": [
+    {
+      "id": "t-a1-021",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Karims Familie in Köln",
+      "titleAr": "عائلة كريم في كولونيا",
+      "germanWords": 98,
+      "sentenceEndMarks": 11,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "العائلة والأعمار وأماكن الإقامة والزيارة السنوية والهاتف متسقة؛ مفتاحا السكن والزيارة يطابقان النص."
+    },
+    {
+      "id": "t-a1-022",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Mein Tagesablauf",
+      "titleAr": "روتيني اليومي",
+      "germanWords": 110,
+      "sentenceEndMarks": 12,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "أوقات اليوم والتنقل والفطور والعمل متسقة؛ «halb sieben» = السادسة والنصف، ومكونات الفطور واضحة."
+    },
+    {
+      "id": "t-a1-023",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Meine Wohnung",
+      "titleAr": "شقتي",
+      "germanWords": 113,
+      "sentenceEndMarks": 14,
+      "questions": 2,
+      "corrections": 5,
+      "judgement": "الغرف والأثاث متسقة؛ صحّح المصطلح إلى Warmmiete وترجمته. مبلغ 600 يورو رقم داخل قصة تدريبية، لا مرجع لسوق الإيجار."
+    },
+    {
+      "id": "t-a1-024",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Ein Wochenende in Leipzig",
+      "titleAr": "نهاية أسبوع في لايبزيغ",
+      "germanWords": 121,
+      "sentenceEndMarks": 13,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "مسار الحياة اليومية والترام والمخبز والحديقة متسق داخل مشهد لا يحدد عنواناً حقيقياً؛ الجوابان مدعومان."
+    },
+    {
+      "id": "t-a1-025",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Im Supermarkt",
+      "titleAr": "في السوبرماركت",
+      "germanWords": 119,
+      "sentenceEndMarks": 17,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "قائمة المشتريات والبطاقة والإجمالي 12 يورو متسقة كما يوردها النص؛ لم تُخترع أسعار مفردة غير موجودة."
+    },
+    {
+      "id": "t-a1-026",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Ein sonniger Tag im Park",
+      "titleAr": "يوم مشمس في الحديقة",
+      "germanWords": 110,
+      "sentenceEndMarks": 14,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "طقس اليوم والأنشطة المسائية سرد تدريبي؛ 20 درجة تقريبية مذكورة وتطابق المفتاح، لا تقرير طقس راهن موثق."
+    },
+    {
+      "id": "t-a1-027",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Mein Hobby",
+      "titleAr": "هوايتي: كرة القدم",
+      "germanWords": 105,
+      "sentenceEndMarks": 12,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "كرة القدم والقاعة والمرمى ووقت اللعب متسقة؛ سؤالا مكان اللعب وما بعده لهما دليل مباشر."
+    },
+    {
+      "id": "t-a1-028",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Mein Beruf",
+      "titleAr": "مهنتي",
+      "germanWords": 108,
+      "sentenceEndMarks": 13,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "المهنة والورشة وساعات العمل مترابطة؛ سؤال الشركة يطابق وصف إنتاج آلات للسيارات."
+    },
+    {
+      "id": "t-a1-029",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Meine Kleidung",
+      "titleAr": "ملابسي",
+      "germanWords": 103,
+      "sentenceEndMarks": 11,
+      "questions": 2,
+      "corrections": 1,
+      "judgement": "الملابس والألوان والإضافات الشتوية متسقة؛ صُحّح فقط الجمع في ترجمة الأحذية."
+    },
+    {
+      "id": "t-a1-030",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Besuch bei der Ärztin",
+      "titleAr": "زيارة الطبيبة",
+      "germanWords": 119,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "تطابق مرجع الطبيبة وأزيل الجزم بالتشخيص؛ الوصفة والدواء غير محددين، والنص حوار تدريبي لا إرشاد طبي."
+    },
+    {
+      "id": "t-a1-031",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Mein Haustier",
+      "titleAr": "حيواني الأليف",
+      "germanWords": 111,
+      "sentenceEndMarks": 13,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "اسم القطة وعمرها وألوانها وروتينها متسق؛ الإجابتان لهما شاهدان حرفيان."
+    },
+    {
+      "id": "t-a1-032",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Am Wochenende",
+      "titleAr": "عطلة نهاية الأسبوع",
+      "germanWords": 101,
+      "sentenceEndMarks": 14,
+      "questions": 2,
+      "corrections": 10,
+      "judgement": "روتين السبت والأحد متسق؛ وُحّدت الأسئلة والاختيارات والمفاتيح مع Ich وأصبح شرح سؤال الأحد يغطي جزأي الإجابة."
+    },
+    {
+      "id": "t-a1-033",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Essen und Trinken",
+      "titleAr": "الطعام والشراب",
+      "germanWords": 99,
+      "sentenceEndMarks": 12,
+      "questions": 2,
+      "corrections": 0,
+      "judgement": "الفطور والغداء والعشاء والمشروبات متسقة؛ السؤالان يختبران معلومات منصوصاً عليها."
+    },
+    {
+      "id": "t-a1-034",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Nach dem Weg zum Bahnhof fragen",
+      "titleAr": "السؤال عن الطريق إلى محطة القطار",
+      "germanWords": 90,
+      "sentenceEndMarks": 14,
+      "questions": 2,
+      "corrections": 1,
+      "judgement": "الاتجاه عند الإشارة وخط الحافلة 3 واضحان؛ صُقلت عبارة الانعطاف لمنع فهمها بعد تجاوز الإشارة."
+    },
+    {
+      "id": "t-a1-035",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Geburtstag",
+      "titleAr": "عيد ميلادي",
+      "germanWords": 112,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "corrections": 2,
+      "judgement": "العمر والهدايا وتسلسل المناسبة متسق؛ صُقلت جملة ما على الطاولة ولم تُضف باقة إلى ترجمة Blumen."
+    }
+  ],
+  "totals": {
+    "texts": 15,
+    "germanWords": 1619,
+    "sentenceEndMarks": 202,
+    "questions": 30,
+    "correctedFields": 23,
+    "guardedTransitions": 23,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-a1-023.ar",
+      "old": "شقتي ليست كبيرة لكنها مشرقة جداً. فيها غرفتان ومطبخ وحمّام وشرفة صغيرة. في غرفة المعيشة أريكة وطاولة وتلفاز. أنام مع زوجتي في إحدى الغرف. والغرفة الثانية مكتبنا. يدخل ضوء كثير من النوافذ صباحاً. أطبخ كل مساء في المطبخ. وهناك أيضاً طاولة صغيرة وأربعة كراسٍ. في الشرفة كرسيان وكثير من الزهور. أحب تناول الفطور هناك في الصيف. الإيجار الشامل للتدفئة ستمئة يورو. تقع الشقة قرب موقف حافلات. يزورنا أصدقاؤنا في نهاية الأسبوع ونشرب القهوة في غرفة المعيشة. أنا راضٍ جداً عن شقتي.",
+      "new": "شقتي ليست كبيرة لكنها مشرقة جداً. فيها غرفتان ومطبخ وحمام وشرفة صغيرة. في غرفة المعيشة أريكة وطاولة وتلفاز. أنام مع زوجتي في إحدى الغرف. والغرفة الثانية مكتبنا. يدخل ضوء كثير من النوافذ صباحاً. أطبخ كل مساء في المطبخ. وهناك أيضاً طاولة صغيرة وأربعة كراسٍ. في الشرفة كرسيان وكثير من الزهور. أحب تناول الفطور هناك في الصيف. يبلغ الإيجار الشامل (Warmmiete) ستمئة يورو. تقع الشقة قرب موقف حافلات. يزورنا أصدقاؤنا في نهاية الأسبوع ونشرب القهوة في غرفة المعيشة. أنا راضٍ جداً عن شقتي.",
+      "rationale": "ترجمة Warmmiete إلى «الإيجار الشامل» بدلاً من حصر المعنى في التدفئة وحدها."
+    },
+    {
+      "unit": "t-a1-023.de",
+      "old": "Meine Wohnung ist nicht groß, aber sehr hell. Sie hat zwei Zimmer, eine Küche, ein Bad und einen kleinen Balkon. Im Wohnzimmer stehen ein Sofa, ein Tisch und ein Fernseher. In einem Zimmer schlafen meine Frau und ich. Das zweite Zimmer ist unser Arbeitszimmer. Am Morgen kommt viel Licht durch die Fenster. In der Küche koche ich jeden Abend. Dort stehen auch ein kleiner Tisch und vier Stühle. Auf dem Balkon stehen zwei Stühle und viele Blumen. Im Sommer frühstücke ich dort gern. Die Miete ist sechshundert Euro warm. Die Wohnung liegt nahe an einer Bushaltestelle. Am Wochenende besuchen uns Freunde, und wir trinken Kaffee im Wohnzimmer. Ich bin sehr zufrieden mit meiner Wohnung.",
+      "new": "Meine Wohnung ist nicht groß, aber sehr hell. Sie hat zwei Zimmer, eine Küche, ein Bad und einen kleinen Balkon. Im Wohnzimmer stehen ein Sofa, ein Tisch und ein Fernseher. In einem Zimmer schlafen meine Frau und ich. Das zweite Zimmer ist unser Arbeitszimmer. Am Morgen kommt viel Licht durch die Fenster. In der Küche koche ich jeden Abend. Dort stehen auch ein kleiner Tisch und vier Stühle. Auf dem Balkon stehen zwei Stühle und viele Blumen. Im Sommer frühstücke ich dort gern. Die Warmmiete beträgt sechshundert Euro. Die Wohnung liegt nahe an einer Bushaltestelle. Am Wochenende besuchen uns Freunde, und wir trinken Kaffee im Wohnzimmer. Ich bin sehr zufrieden mit meiner Wohnung.",
+      "rationale": "استبدال تركيب «Miete ... warm» بصيغة الاسم المركب القياسية «Warmmiete beträgt»."
+    },
+    {
+      "unit": "t-a1-023.questions[1].explanationAr",
+      "old": "الدليل في النص: «Die Miete ist sechshundert Euro warm.» — الإيجار 600 يورو warm.",
+      "new": "«Die Warmmiete beträgt sechshundert Euro.» — الإيجار الشامل يبلغ 600 يورو.",
+      "rationale": "توحيد الشرح مع اللفظ الجديد في النص ومع المفتاح 600 Euro."
+    },
+    {
+      "unit": "t-a1-023.questions[1].promptAr",
+      "old": "كم الإيجار شاملاً التدفئة؟",
+      "new": "كم تبلغ قيمة الإيجار الشامل؟",
+      "rationale": "مطابقة السؤال العربي لمفهوم الإيجار الشامل."
+    },
+    {
+      "unit": "t-a1-023.questions[1].promptDe",
+      "old": "Wie hoch ist die Miete warm?",
+      "new": "Wie hoch ist die Warmmiete?",
+      "rationale": "صياغة سؤال الإيجار بالمصطلح الألماني الموحد في النص."
+    },
+    {
+      "unit": "t-a1-025.ar",
+      "old": "اليوم أذهب إلى السوبرماركت. أحتاج إلى الحليب والخبز والبيض والتفاح والجبن. المتجر كبير وفيه منتجات كثيرة. أبحث عن الحليب أولاً، ثم آخذ الخبز والبيض. أشتري أيضاً الطماطم وزجاجة ماء. التفاح عليه عرض اليوم. أقارن الأسعار وآخذ كيساً صغيراً معي. ألتقي جارتي في المتجر. نتحدث قليلاً عن الطقس. ثم أذهب إلى الصندوق. يقف أمامي شخصان. تقول البائعة: «مرحباً». أدفع بالبطاقة عند الصندوق وتعطيني الإيصال. المجموع اثنا عشر يورو. في البيت أضع الحليب والماء في الثلاجة، وأضع الخبز في الخزانة.",
+      "new": "اليوم أذهب إلى السوبرماركت. أحتاج إلى الحليب والخبز والبيض والتفاح والجبن. المتجر كبير وفيه منتجات كثيرة. أبحث عن الحليب أولاً، ثم آخذ الخبز والبيض. أشتري أيضاً الطماطم وزجاجة ماء. التفاح عليه عرض اليوم. أقارن الأسعار وآخذ كيساً صغيراً معي. ألتقي جارتي في المتجر. نتحدث قليلاً عن الطقس. ثم أذهب إلى الصندوق. يقف أمامي شخصان. تقول البائعة: «مرحباً». أدفع بالبطاقة عند الصندوق، ثم تعطيني البائعة الإيصال. المجموع اثنا عشر يورو. في البيت أضع الحليب والماء في الثلاجة، وأضع الخبز في الخزانة.",
+      "rationale": "إبراز أن البائعة هي التي تسلّم الإيصال، ومطابقة التوضيح للألمانية."
+    },
+    {
+      "unit": "t-a1-025.de",
+      "old": "Heute gehe ich zum Supermarkt. Ich brauche Milch, Brot, Eier, Äpfel und Käse. Der Supermarkt ist groß und hat viele Produkte. Zuerst suche ich die Milch, dann hole ich Brot und Eier. Ich kaufe auch Tomaten und eine Flasche Wasser. Die Äpfel sind heute im Angebot. Ich vergleiche die Preise und nehme eine kleine Tüte mit. Im Laden treffe ich meine Nachbarin. Wir sprechen kurz über das Wetter. Dann gehe ich zur Kasse. Vor mir stehen zwei Personen. Die Verkäuferin sagt: „Guten Tag.“ An der Kasse bezahle ich mit Karte. Sie gibt mir den Kassenbon. Alles kostet zusammen zwölf Euro. Zu Hause stelle ich die Milch und das Wasser in den Kühlschrank. Das Brot kommt in den Schrank.",
+      "new": "Heute gehe ich zum Supermarkt. Ich brauche Milch, Brot, Eier, Äpfel und Käse. Der Supermarkt ist groß und hat viele Produkte. Zuerst suche ich die Milch, dann hole ich Brot und Eier. Ich kaufe auch Tomaten und eine Flasche Wasser. Die Äpfel sind heute im Angebot. Ich vergleiche die Preise und nehme eine kleine Tüte mit. Im Laden treffe ich meine Nachbarin. Wir sprechen kurz über das Wetter. Dann gehe ich zur Kasse. Vor mir stehen zwei Personen. Die Verkäuferin sagt: „Guten Tag.“ An der Kasse bezahle ich mit Karte. Die Verkäuferin gibt mir den Kassenbon. Alles kostet zusammen zwölf Euro. Zu Hause stelle ich die Milch und das Wasser in den Kühlschrank. Das Brot kommt in den Schrank.",
+      "rationale": "تسمية البائعة صراحةً بدلاً من ضمير «Sie» بعد ذكر الصندوق، لتثبيت مرجع من تسلّم الإيصال."
+    },
+    {
+      "unit": "t-a1-029.ar",
+      "old": "أرتدي اليوم بنطال جينز أزرق وقميصاً أبيض وحذاءً أسود. أرتدي في الشتاء سترة دافئة، وأحياناً وشاحاً وقفازات أيضاً. ألبس في الصيف سراويل قصيرة وقمصاناً قصيرة الأكمام. أحب في البيت ارتداء بنطال مريح وقميص قديم. لا أحتاج إلى ملابس خاصة للعمل. أذهب يوم السبت مع صديقتي إلى متجر. تبحث هي عن فستان وأحتاج أنا إلى جوارب جديدة. أجرب سترة خضراء في المتجر. إنها تناسبني لكنها غالية قليلاً. لا أشتريها. نعود إلى البيت بالحافلة في النهاية.",
+      "new": "أرتدي اليوم بنطال جينز أزرق وقميصاً أبيض وزوجاً من الأحذية السوداء. أرتدي في الشتاء سترة دافئة، وأحياناً وشاحاً وقفازات أيضاً. ألبس في الصيف سراويل قصيرة وقمصاناً قصيرة الأكمام. أحب في البيت ارتداء بنطال مريح وقميص قديم. لا أحتاج إلى ملابس خاصة للعمل. أذهب يوم السبت مع صديقتي إلى متجر. تبحث هي عن فستان وأحتاج أنا إلى جوارب جديدة. أجرب سترة خضراء في المتجر. إنها تناسبني لكنها غالية قليلاً. لا أشتريها. نعود إلى البيت بالحافلة في النهاية.",
+      "rationale": "تصحيح العدد: الألمانية تقول Schuhe جمعاً؛ صيغت العربية «زوجاً من الأحذية» بدلاً من مفرد حذاء."
+    },
+    {
+      "unit": "t-a1-030.ar",
+      "old": "أنا في عيادة الطبيبة اليوم. أعاني من الصداع منذ يومين. تسأل الطبيبة: «ماذا يؤلمك؟» أجيب: «رأسي يؤلمني وعندي حمى خفيفة.» تفحصني وتقول: «إنها نزلة برد. اشرب الكثير من الماء واسترح.» ينتظر ثلاثة أشخاص آخرون في العيادة. أجلس في غرفة الانتظار وأقرأ مجلة. تناديني الطبيبة بعد عشرين دقيقة. تسأل: «هل لديك سعال أيضاً؟» أقول: «قليلاً، لكن حلقي لا يؤلمني.» تقيس حرارتي. ثم تكتب وصفة. أشتري الأقراص من الصيدلية. أشرب الماء في البيت وأذهب إلى النوم باكراً. أشعر بتحسن في صباح اليوم التالي.",
+      "new": "أنا عند الطبيبة اليوم. أعاني من الصداع منذ يومين. تسألني الطبيبة: «ماذا يؤلمك؟» أجيب: «رأسي يؤلمني وعندي حمى خفيفة.» تفحصني وتقول: «ربما تكون نزلة برد. اشرب الكثير من الماء واسترح.» ينتظر ثلاثة أشخاص آخرون في العيادة. أجلس في غرفة الانتظار وأقرأ مجلة. تناديني الطبيبة بعد عشرين دقيقة. تسألني: «هل لديك سعال أيضاً؟» أقول: «قليلاً، لكن حلقي لا يؤلمني.» تقيس حرارتي. ثم تكتب وصفة طبية. أشتري الأقراص من الصيدلية. أشرب الماء في البيت وأذهب إلى النوم باكراً. أشعر بتحسن في صباح اليوم التالي.",
+      "rationale": "مطابقة جنس الطبيبة للنص، وترجمة «Vielleicht» كاحتمال؛ المشهد تدريبي لا تشخيص موثق."
+    },
+    {
+      "unit": "t-a1-030.de",
+      "old": "Heute bin ich beim Arzt. Ich habe seit zwei Tagen Kopfschmerzen. Die Ärztin fragt: „Was tut weh?“ Ich antworte: „Mein Kopf tut weh und ich habe ein bisschen Fieber.“ Sie untersucht mich und sagt: „Das ist eine Erkältung. Trinken Sie viel Wasser und ruhen Sie sich aus.“ In der Praxis warten noch drei Personen. Ich sitze im Wartezimmer und lese eine Zeitschrift. Nach zwanzig Minuten ruft mich die Ärztin. Sie fragt: „Haben Sie auch Husten?“ Ich sage: „Ein wenig, aber mein Hals tut nicht weh.“ Sie misst meine Temperatur. Dann schreibt sie ein Rezept. In der Apotheke kaufe ich die Tabletten. Zu Hause trinke ich Wasser und gehe früh schlafen. Am nächsten Morgen geht es mir besser.",
+      "new": "Heute bin ich bei der Ärztin. Ich habe seit zwei Tagen Kopfschmerzen. Die Ärztin fragt: „Was tut weh?“ Ich antworte: „Mein Kopf tut weh und ich habe ein bisschen Fieber.“ Sie untersucht mich und sagt: „Vielleicht ist es eine Erkältung. Trinken Sie viel Wasser und ruhen Sie sich aus.“ In der Praxis warten noch drei Personen. Ich sitze im Wartezimmer und lese eine Zeitschrift. Nach zwanzig Minuten ruft mich die Ärztin. Sie fragt: „Haben Sie auch Husten?“ Ich sage: „Ein wenig, aber mein Hals tut nicht weh.“ Sie misst meine Temperatur. Dann schreibt sie ein Rezept. In der Apotheke kaufe ich die Tabletten. Zu Hause trinke ich Wasser und gehe früh schlafen. Am nächsten Morgen geht es mir besser.",
+      "rationale": "توحيد «beim Arzt» مع عنوان الطبيبة ومرجع Ärztin، وصياغة التشخيص احتمالاً («Vielleicht») لا يقيناً من عرضين فقط."
+    },
+    {
+      "unit": "t-a1-032.questions[0].answer",
+      "old": "Sie putzt die Wohnung und kauft ein",
+      "new": "Ich putze die Wohnung und kaufe ein",
+      "rationale": "مطابقة المفتاح لصيغة المتكلم الجديدة مع الحفاظ على الجواب الصحيح."
+    },
+    {
+      "unit": "t-a1-032.questions[0].explanationAr",
+      "old": "الدليل في النص: «Dann putze ich die Wohnung und kaufe ein.» — ينظف الشقة ويتسوق بعد الإفطار يوم السبت.",
+      "new": "«Dann putze ich die Wohnung und kaufe ein.» — أنظف الشقة وأتسوّق يوم السبت.",
+      "rationale": "إسناد الإجابة إلى جملة السبت نفسها، وبصيغة المتكلم."
+    },
+    {
+      "unit": "t-a1-032.questions[0].options",
+      "old": [
+        "Sie putzt die Wohnung und kauft ein",
+        "Sie fährt zur Arbeit",
+        "Sie besucht einen Arzt"
+      ],
+      "new": [
+        "Ich putze die Wohnung und kaufe ein",
+        "Ich fahre zur Arbeit",
+        "Ich besuche einen Arzt"
+      ],
+      "rationale": "توحيد الخيارات مع صيغة المتكلم في النص، مع إبقاء المشتتات الثلاثة معقولة ومتميزة."
+    },
+    {
+      "unit": "t-a1-032.questions[0].promptAr",
+      "old": "ماذا يفعل المتحدث يوم السبت؟",
+      "new": "ماذا أفعل يوم السبت؟",
+      "rationale": "مواءمة العربية لسرد المتكلم من دون افتراض جنس الراوي."
+    },
+    {
+      "unit": "t-a1-032.questions[0].promptDe",
+      "old": "Was macht die Person am Samstag?",
+      "new": "Was mache ich am Samstag?",
+      "rationale": "مواءمة السؤال مع سرد Ich بضمير المتكلم بدلاً من تحويله إلى شخصية مؤنثة غير معرّفة."
+    },
+    {
+      "unit": "t-a1-032.questions[1].answer",
+      "old": "Sie kocht und bereitet ihre Sachen für Montag vor",
+      "new": "Ich koche und bereite meine Sachen für Montag vor",
+      "rationale": "مطابقة المفتاح لصيغة المتكلم الجديدة مع الحفاظ على الجواب الصحيح."
+    },
+    {
+      "unit": "t-a1-032.questions[1].explanationAr",
+      "old": "الدليل في النص: «Danach bereite ich meine Sachen für Montag vor.» — تحضّر أشياءها ليوم الاثنين بعد أن تطهو.",
+      "new": "«Am Sonntagabend koche ich etwas Leckeres. Danach bereite ich meine Sachen für Montag vor.» — أطبخ شيئاً لذيذاً مساء الأحد، ثم أجهّز أشيائي ليوم الاثنين.",
+      "rationale": "إضافة دليلي الطهي مساء الأحد والاستعداد ليوم الاثنين؛ الشرح يغطي جزأي الجواب."
+    },
+    {
+      "unit": "t-a1-032.questions[1].options",
+      "old": [
+        "Sie kocht und bereitet ihre Sachen für Montag vor",
+        "Sie geht ins Kino",
+        "Sie arbeitet im Supermarkt"
+      ],
+      "new": [
+        "Ich koche und bereite meine Sachen für Montag vor",
+        "Ich gehe ins Kino",
+        "Ich arbeite im Supermarkt"
+      ],
+      "rationale": "توحيد الخيارات مع صيغة المتكلم في النص، مع إبقاء المشتتات الثلاثة معقولة ومتميزة."
+    },
+    {
+      "unit": "t-a1-032.questions[1].promptAr",
+      "old": "ماذا يفعل المتحدث مساء الأحد؟",
+      "new": "ماذا أفعل مساء الأحد؟",
+      "rationale": "مواءمة العربية لسرد المتكلم من دون افتراض جنس الراوي."
+    },
+    {
+      "unit": "t-a1-032.questions[1].promptDe",
+      "old": "Was macht die Person am Sonntagabend?",
+      "new": "Was mache ich am Sonntagabend?",
+      "rationale": "مواءمة السؤال مع سرد Ich بضمير المتكلم بدلاً من تحويله إلى شخصية مؤنثة غير معرّفة."
+    },
+    {
+      "unit": "t-a1-034.questions[0].explanationAr",
+      "old": "الدليل في النص: «Gehen Sie geradeaus bis zur Ampel, dann biegen Sie links ab.» — بعد الإشارة انعطف يساراً.",
+      "new": "الدليل في النص: «Gehen Sie geradeaus bis zur Ampel, dann biegen Sie links ab.» — سر مباشرةً حتى الإشارة ثم انعطف يساراً عندها.",
+      "rationale": "توضيح أن الانعطاف يساراً يكون عند الوصول إلى الإشارة، لا بعد تجاوزها."
+    },
+    {
+      "unit": "t-a1-035.ar",
+      "old": "اليوم عيد ميلادي وأتمّ الثلاثين من عمري. دعوت ستة أصدقاء إلى عيد ميلادي. يأتون في الرابعة بعد الظهر. يجلبون هدايا: كتاباً وزجاجة نبيذ وبطاقة تهنئة. خبزت زوجتي كعكة. نأكل الكعكة معاً ونشرب القهوة. إنه يوم جميل وأنا سعيد جداً. على الطاولة صحون وفناجين وعصير. تتصل أمي وتهنئني. بعد ذلك نلعب لعبة ونستمع إلى الموسيقى. يجلب أحد أصدقائي باقة زهور أيضاً. نلتقط صورة في الحديقة. يعود أصدقائي إلى بيوتهم مساءً. أرتب الفناجين. أنا متعب لكنني راضٍ.",
+      "new": "اليوم عيد ميلادي وأتمّ الثلاثين من عمري. دعوت ستة أصدقاء إلى عيد ميلادي. يأتون في الرابعة بعد الظهر. يجلبون هدايا: كتاباً وزجاجة نبيذ وبطاقة تهنئة. خبزت زوجتي كعكة. نأكل الكعكة معاً ونشرب القهوة. إنه يوم جميل وأنا سعيد جداً. على الطاولة صحون وفناجين. وهناك عصير أيضاً. تتصل أمي وتهنئني. بعد ذلك نلعب لعبة ونستمع إلى الموسيقى. يجلب أحد أصدقائي زهوراً أيضاً. نلتقط صورة في الحديقة. يعود أصدقائي إلى بيوتهم مساءً. أرتب الفناجين. أنا متعب لكنني راضٍ.",
+      "rationale": "مطابقة تقسيم الجملة، وحذف «باقة» لأنها تفصيل غير موجود في Blumen."
+    },
+    {
+      "unit": "t-a1-035.de",
+      "old": "Heute habe ich Geburtstag und bin dreißig Jahre alt. Ich habe sechs Freunde zum Geburtstag eingeladen. Sie kommen am Nachmittag um vier Uhr. Sie bringen Geschenke: ein Buch, eine Flasche Wein und eine Karte. Meine Frau hat einen Kuchen gebacken. Wir essen zusammen Kuchen und trinken Kaffee. Es ist ein schöner Tag und ich bin sehr glücklich. Auf dem Tisch stehen Teller, Tassen und Saft. Meine Mutter ruft an und gratuliert mir. Danach spielen wir ein Spiel und hören Musik. Ein Freund bringt auch Blumen mit. Wir machen ein Foto im Garten. Am Abend gehen meine Freunde nach Hause. Ich räume die Tassen weg. Ich bin müde, aber zufrieden.",
+      "new": "Heute habe ich Geburtstag und bin dreißig Jahre alt. Ich habe sechs Freunde zum Geburtstag eingeladen. Sie kommen am Nachmittag um vier Uhr. Sie bringen Geschenke: ein Buch, eine Flasche Wein und eine Karte. Meine Frau hat einen Kuchen gebacken. Wir essen zusammen Kuchen und trinken Kaffee. Es ist ein schöner Tag und ich bin sehr glücklich. Auf dem Tisch stehen Teller und Tassen. Es gibt auch Saft. Meine Mutter ruft an und gratuliert mir. Danach spielen wir ein Spiel und hören Musik. Ein Freund bringt auch Blumen mit. Wir machen ein Foto im Garten. Am Abend gehen meine Freunde nach Hause. Ich räume die Tassen weg. Ich bin müde, aber zufrieden.",
+      "rationale": "فصل الأطباق والفناجين عن العصير: الأشياء توضع على الطاولة، أما العصير فيُذكر أنه متاح عليها من دون إسناد فعل الوقوف إليه."
+    }
+  ],
+  "coverage": {
+    "before": {
+      "covered": 120,
+      "total": 157
+    },
+    "after": {
+      "covered": 135,
+      "total": 157
+    },
+    "newlyCovered": 15,
+    "remaining": {
+      "total": 22,
+      "byLevel": {
+        "A2": 12,
+        "B1": 5,
+        "B2": 5
+      },
+      "ids": [
+        "t-a2-21..t-a2-30",
+        "t-a2-031..t-a2-032",
+        "t-b1-31..t-b1-35",
+        "t-b2-36..t-b2-40"
+      ]
+    },
+    "duplicateCoverage": 0
+  },
+  "contentChecks": [
+    {
+      "id": "CHK-R156-01",
+      "check": "المعرّفات t-a1-021–035 موجودة كلها على A1، وعددها 15؛ النصوص الألمانية والعربية غير فارغة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R156-02",
+      "check": "الأسئلة الثلاثون من نوع MC مكتملة؛ الخيارات فريدة ومفتاح كل سؤال موجود ضمن الخيارات.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R156-03",
+      "check": "كل انتقال من الانتقالات الـ23 يطابق قيمة HEAD السابقة والجديدة؛ التشغيل الثاني للرقعة 0/23.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R156-04",
+      "check": "Warmmiete، ومرجع الطبيبة، والاحتمال الطبي، وصيغة أسئلة t-a1-032، والاتجاه عند الإشارة، وترجمة Geburtstags-Text اجتازت فحوص المطابقة.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R156-05",
+      "check": "لا إدخالات لهذه المعرّفات في مانيفست الحوار أو الاستماع أو الإملاء؛ لا ملفات مطابقة ولا ادعاء بالاستماع.",
+      "status": "pass"
+    },
+    {
+      "id": "CHK-R156-06",
+      "check": "K227a–f جميعها ناجحة؛ لا تعديل أو تخفيف لأي بوابة smoke سابقة.",
+      "status": "pass"
+    }
+  ],
+  "audioAudit": {
+    "dialogAudioManifest": "content/dialog-audio.json",
+    "dialogAudioManifestEntries": 0,
+    "hoerenAudioManifest": "content/hoeren-audio.json",
+    "hoerenAudioManifestEntries": 0,
+    "diktatAudioManifest": "content/diktat-audio.json",
+    "diktatAudioManifestEntries": 0,
+    "matchingFilesPresent": 0,
+    "matchingFiles": [],
+    "listened": false,
+    "generated": false,
+    "modified": false,
+    "note": "فُحص مانيفستو صوت الحوارات ومانيفستو الاستماع ومانيفستو الإملاء كلٌّ على حدة. لم توجد إدخالات بهذه المعرّفات ولا ملفات مطابقة بالأسماء في public/audio؛ لم يحدث استماع أو توليد أو تعديل صوت."
+  },
+  "limits": {
+    "human": "مراجعة تحريرية على البيانات الحية؛ ليست مراجعة بشرية مستقلة أو اعتماداً لغوياً مهنياً.",
+    "cefr": "A1 هو الوسم الموجود؛ لم يُجر اختبار CEFR مستقل.",
+    "medical": "مشهد الطبيبة نص تدريبي خيالي لا تشخيص ولا نصيحة طبية؛ لم تُذكر أسماء دواء أو جرعات، وصيغ الاحتمال واضحة.",
+    "legal": "مبلغ Warmmiete في قصة الشقة رقم تعليمي، وليس بياناً عن إيجار حقيقي أو نصيحة قانونية/سكنية.",
+    "fiction": "الأسماء والأحداث والأسعار والطقس في هذه المقاطع أمثلة سردية؛ لا تُعرض كوقائع حالية موثقة.",
+    "audio": "لا ادعاء بالاستماع أو وجود تسجيل؛ `dialog-audio`, `hoeren-audio`, و`diktat-audio` مانيفستات منفصلة.",
+    "sources": "لم تُستخدم مصادر خارجية؛ لم تُضف حقيقة مستقلة عن النصوص."
+  },
+  "judgement": {
+    "corrected": 23,
+    "unresolved": 0,
+    "note": "رُوجعت النصوص الخمسة عشر (1,619 كلمة) والأسئلة الثلاثون كاملة. التعديلات المؤكدة: اصطلاح Warmmiete وترجمته، ضمير الإيصال، جمع Schuhe، اتساق Ärztin مع العنوان والتحوّط من تشخيص قاطع، صياغة أسئلة عطلة نهاية الأسبوع بضمير Ich، شرح الاتجاه عند الإشارة، وصياغة جملة العصير دون إضافة باقة غير موجودة في المصدر. بوابات K227a–f اجتازت الست؛ smoke الإجمالي 1504/38 مقابل خط أساس R155 البالغ 1498/38، فلا إخفاق جديد. audit:content وTypeScript والبناء اجتازت؛ التفاعلي 682/17 بالإخفاقات المعروفة نفسها."
+  },
+  "gates": {
+    "planned": "K227a–f",
+    "results": {
+      "patchReapply": {
+        "status": "pass",
+        "result": "0/23 انتقالاً في التشغيل الثاني"
+      },
+      "smoke": {
+        "status": "pass-no-new-failures",
+        "passed": 1504,
+        "knownFailures": 38,
+        "preBatchBaselinePassed": 1498,
+        "preBatchBaselineFailures": 38,
+        "newFailures": 0,
+        "newGates": "K227a–f: 6/6 pass",
+        "note": "قائمة الإخفاقات الحالية هي نفسها في HEAD السابق. تتضمن بوابات أقدم ذات توقعات تعداد غير محدثة مثل K212i (يتوقع 20 نص A1 بينما البيانات تضم 35) وK215i (يتوقع 110 نصوص بينما البيانات تضم 157)؛ لم تُغيّر هذه البوابات."
+      },
+      "auditContent": {
+        "status": "pass",
+        "structuralDefects": 0,
+        "note": "بقيت تنبيهات heuristic/مراجعة بشرية، لا عيوب بنيوية مؤكدة."
+      },
+      "interactive": {
+        "status": "baseline-known-failures",
+        "passed": 682,
+        "knownFailures": 17,
+        "newFailures": 0,
+        "sameFailureSetAsR155": true
+      },
+      "typescript": {
+        "status": "pass",
+        "command": "npx tsc --noEmit"
+      },
+      "productionBuild": {
+        "status": "pass",
+        "command": "npm run build",
+        "staticRoutes": 13
+      },
+      "gitDiffCheck": {
+        "status": "pass",
+        "command": "git diff --check"
+      }
+    }
+  },
+  "patch": "scripts/patches/review_a1_texts_04.py",
+  "qualityStatus": "completed"
+}
