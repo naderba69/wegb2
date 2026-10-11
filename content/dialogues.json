@@ -10880,18 +10880,18 @@
     "lines": [
       {
         "who": "Vermieterin",
-        "de": "Frau Saleh, hier ist der Mietvertrag. Die Kaltmiete beträgt 720 Euro, die Nebenkosten liegen bei 180 Euro warm.",
-        "ar": "الآنسة صالح، هذا عقد الإيجار. الإيجار الأساسي 720 يورو والتكاليف الجانبية 180 يورو، أي الإيجار الإجمالي 900 يورو."
+        "de": "Frau Saleh, hier ist der Mietvertrag. Die Kaltmiete beträgt 720 Euro und die Nebenkosten liegen bei 180 Euro. Zusammen sind das 900 Euro Warmmiete.",
+        "ar": "السيدة صالح، هذا عقد الإيجار. الإيجار الأساسي 720 يورو، والتكاليف الجانبية 180 يورو. ويبلغ الإيجار الإجمالي 900 يورو."
       },
       {
         "who": "Mieterin",
-        "de": "Ist die Kaution vereinbart? Üblich sind drei Kaltmieten, oder?",
-        "ar": "هل تم الاتفاق على التأمين؟ المعتاد ثلاثة إيجارات أساسية، أليس كذلك؟"
+        "de": "Wie hoch ist die Kaution im Vertrag? Sie entspricht drei Kaltmieten, oder?",
+        "ar": "ما قيمة وديعة الضمان في العقد؟ إنها تعادل ثلاثة أشهر من الإيجار الأساسي، أليس كذلك؟"
       },
       {
         "who": "Vermieterin",
         "de": "Ja, die Kaution beträgt 2160 Euro und wird auf ein separates Kautionskonto eingezahlt.",
-        "ar": "نعم، التأمين 2160 يورو ويُدفع في حساب تأمين منفصل."
+        "ar": "نعم، تبلغ وديعة الضمان 2160 يورو، وتُودَع في حساب ضمان منفصل."
       },
       {
         "who": "Mieterin",
@@ -10900,8 +10900,8 @@
       },
       {
         "who": "Vermieterin",
-        "de": "Für Sie gilt die gesetzliche Frist von drei Monaten. In den ersten zwei Jahren gibt es eine Staffelmiete von zwei Prozent pro Jahr.",
-        "ar": "تنطبق عليك المهلة القانونية وهي ثلاثة أشهر. في أول عامين هناك إيجار متدرّج بنسبة 2% سنوياً."
+        "de": "Für die ordentliche Kündigung gilt in der Regel eine gesetzliche Frist von drei Monaten. Für die ersten zwei Jahre ist eine Staffelmiete vereinbart; die Beträge und Termine stehen im Vertrag.",
+        "ar": "بالنسبة إلى الفسخ العادي، تسري في العادة مهلة قانونية مدتها ثلاثة أشهر. وفي أول عامين، اتُّفق على إيجار متدرّج؛ وترد مبالغ الزيادة ومواعيدها في العقد."
       },
       {
         "who": "Mieterin",
@@ -10910,13 +10910,13 @@
       },
       {
         "who": "Vermieterin",
-        "de": "Streichen in neutralen Farben ist erlaubt, Bohrungen bitte nur in Absprache. Bei Auszug muss die Wohnung in dem Zustand übergeben werden, wie Sie sie übernommen haben.",
-        "ar": "الطلاء بألوان محايدة مسموح، والثقوب يرجى أن تكون بالاتفاق. عند المغادرة يجب تسليم الشقة بحالة الاستلام."
+        "de": "Neutrale Wandfarben sind in Ordnung. Bitte sprechen Sie geplante Bohrungen vorher mit mir ab. Normale Gebrauchsspuren sind kein Problem; was bei Auszug nötig ist, richtet sich nach dem Vertrag und dem Zustand der Wohnung.",
+        "ar": "الألوان المحايدة للجدران مقبولة. يُرجى التنسيق معي مسبقاً بشأن الثقوب المخطط لها. آثار الاستعمال العادية لا مشكلة فيها؛ وما يلزم عند المغادرة يتحدد وفق العقد وحالة الشقة."
       },
       {
         "who": "Mieterin",
         "de": "Gut, dann lese ich den Vertrag noch einmal in Ruhe durch und schicke ihn Ihnen unterschrieben zurück.",
-        "ar": "جيد، سأقرأ العقد بهدوء ثم أرسله إليك موقّعاً."
+        "ar": "حسناً، سأقرأ العقد مرة أخرى على مهل، ثم أعيده إليك موقّعاً."
       }
     ],
     "questions": [
@@ -10931,27 +10931,27 @@
           "2160 Euro"
         ],
         "answer": "900 Euro",
-        "explanationAr": "الدليل: الإيجار الأساسي 720 يورو والتكاليف الجانبية 180 يورو، ومجموعهما 900 يورو. الفخّ: 2160 يورو هو مبلغ التأمين، لا الإيجار الشهري.",
+        "explanationAr": "الدليل: الإيجار الأساسي 720 يورو والتكاليف الجانبية 180 يورو؛ ومجموعهما 900 يورو كإيجار إجمالي. الفخّ: 2160 يورو مبلغ وديعة الضمان، لا الإيجار الشهري.",
         "id": "dlg-b2-mietvertrag-q1"
       },
       {
         "type": "mc",
         "promptDe": "Auf welches Konto geht die Kaution?",
-        "promptAr": "في أي حساب يُدفع التأمين؟",
+        "promptAr": "إلى أي حساب تُودَع وديعة الضمان؟",
         "options": [
           "Auf das Privatkonto der Vermieterin",
           "Auf ein separates Kautionskonto",
-          "Auf ein separates Konto der Vermieterin",
+          "Auf das Konto für die Nebenkosten",
           "Bar bei Übergabe"
         ],
         "answer": "Auf ein separates Kautionskonto",
-        "explanationAr": "الدليل: يُودَع مبلغ التأمين في حساب Kautionskonto منفصل. الفخّ: المبلغ لا يُدفع نقداً ولا إلى الحساب الخاص للمؤجّرة؛ المقصود حساب التأمين المنفصل.",
+        "explanationAr": "الدليل: ينص الحوار على إيداع وديعة الضمان في حساب منفصل مخصص لها. الفخّ: ليس الحساب الشخصي للمؤجّرة، ولا حساب التكاليف الجانبية، ولا الدفع النقدي عند التسليم.",
         "id": "dlg-b2-mietvertrag-q2"
       }
     ],
     "dictation": [
-      "Die Kaltmiete beträgt 720 Euro, die Nebenkosten liegen bei 180 Euro warm.",
-      "In den ersten zwei Jahren gibt es eine Staffelmiete von zwei Prozent pro Jahr."
+      "Die Kaltmiete beträgt 720 Euro und die Nebenkosten liegen bei 180 Euro.",
+      "Für die ersten zwei Jahre ist eine Staffelmiete vereinbart; die Beträge und Termine stehen im Vertrag."
     ]
   },
   {
@@ -11551,15 +11551,15 @@
     "lines": [
       {
         "who": "Interviewer + Expertin",
-        "de": "F: Frau Dr. Weber, wie beurteilen Sie die Situation auf dem deutschen Arbeitsmarkt für ausländische Fachkräfte? – W: Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen. Das Problem liegt oft weniger in der Qualifikation als vielmehr in der Anerkennung der Abschlüsse und in den Sprachkenntnissen. A2- oder B1-Kenntnisse reichen oft nicht aus. Viele Arbeitgeber fordern heute mindestens B2, in manchen Bereichen sogar C1. Außerdem spielt interkulturelle Kompetenz eine immer größere Rolle. Mein Rat: frühzeitig Deutsch lernen und die Anerkennung bereits im Heimatland beantragen.",
-        "ar": "س: د. فِبَر، كيف تقيّمين وضع سوق العمل الألماني للكفاءات الأجنبية؟ – ج: الطلب مرتفع أساساً، خصوصاً في المهن التقنية والصحة. المشكلة غالباً ليست في المؤهل بل في معادلة الشهادات ومستوى اللغة. مستوى A2 أو B1 لا يكفي غالباً. كثير من أرباب العمل يطلبون B2 على الأقل، وفي بعض المجالات C1. كما تلعب الكفاءة بين الثقافات دوراً أكبر فأكبر. نصيحتي: تعلّم الألمانية مبكراً، وقدّم طلب المعادلة وأنت في بلدك."
+        "de": "Wie beurteilen Sie die Situation auf dem deutschen Arbeitsmarkt für ausländische Fachkräfte? – Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen. Das Problem liegt oft weniger in der Qualifikation als vielmehr in der Anerkennung der Abschlüsse und in den Sprachkenntnissen. A2- oder B1-Kenntnisse reichen für manche Tätigkeiten nicht aus. Einige Arbeitgeber fordern mindestens B2, in bestimmten Bereichen sogar C1. Außerdem spielt interkulturelle Kompetenz eine immer größere Rolle. Mein Rat: frühzeitig Deutsch lernen und die Anerkennung bereits im Heimatland beantragen.",
+        "ar": "س: كيف تقيّمين وضع سوق العمل الألماني للكفاءات الأجنبية؟ – ج: بوجه عام، الطلب مرتفع، خصوصاً في المهن التقنية ومجال الصحة. وغالباً لا تكمن المشكلة في المؤهل نفسه بقدر ما تكمن في الاعتراف بالشهادات ومستوى اللغة. وقد لا تكفي معرفة A2 أو B1 لبعض الوظائف. ويطلب بعض أرباب العمل B2 على الأقل، وفي مجالات معينة C1. كما تزداد أهمية الكفاءة بين الثقافات. نصيحتي: تعلّموا الألمانية مبكراً، وقدّموا طلب معادلة الشهادة منذ وجودكم في بلدكم."
       }
     ],
     "questions": [
       {
         "type": "mc",
-        "promptDe": "Was ist nach Frau Weber das größere Problem?",
-        "promptAr": "ما المشكلة الأكبر بحسب فِبَر؟",
+        "promptDe": "Was ist laut der Expertin das größere Problem?",
+        "promptAr": "ما المشكلة الأكبر بحسب الخبيرة؟",
         "options": [
           "Die hohe Nachfrage in technischen Berufen",
           "Die Anerkennung der Abschlüsse und die Sprache",
@@ -11567,13 +11567,13 @@
           "Die Qualifikation im Gesundheitswesen"
         ],
         "answer": "Die Anerkennung der Abschlüsse und die Sprache",
-        "explanationAr": "الدليل: قالت إن المشكلة غالباً ليست في المؤهلات نفسها، بل في الاعتراف بالشهادات ومعرفة اللغة. الفخّ: ذُكرت الحاجة العالية إلى التخصصات التقنية والكفاءة الثقافية أيضاً، لكنهما ليستا المشكلة التي حدّدتها.",
+        "explanationAr": "الدليل: تذكر الإجابة الاعتراف بالشهادات واللغة بوصفهما الصعوبة الأبرز، لا المؤهل نفسه. الفخّ: ارتفاع الطلب في بعض المهن والكفاءة بين الثقافات ذُكرا أيضاً، لكنهما ليسا المشكلة المحددة.",
         "id": "hoer-b2-01-q1"
       },
       {
         "type": "mc",
-        "promptDe": "Welches Sprachniveau fordern viele Arbeitgeber mindestens?",
-        "promptAr": "ما المستوى اللغوي المطلوب على الأقل؟",
+        "promptDe": "Welches Sprachniveau wird zuerst als Mindestanforderung genannt?",
+        "promptAr": "ما المستوى اللغوي الذي ذُكر أولاً بوصفه الحد الأدنى؟",
         "options": [
           "A2-Kenntnisse reichen oft nicht aus",
           "Mindestens B2",
@@ -11581,12 +11581,12 @@
           "B1-Kenntnisse reichen oft nicht aus"
         ],
         "answer": "Mindestens B2",
-        "explanationAr": "الدليل: قالت إن A2 أو B1 لا يكفيان غالباً، وإن كثيراً من أصحاب العمل يطلبون B2 على الأقل، وقد يطلب بعضهم C1. الفخّ: C1 مطلب أعلى في مجالات معينة، لا الحد الأدنى العام.",
+        "explanationAr": "الدليل: ذُكر B2 أولاً كحد أدنى لدى بعض أصحاب العمل، ثم C1 لبعض المجالات. الفخّ: C1 أعلى ويخص مجالات معينة، وليس المستوى الأول المذكور.",
         "id": "hoer-b2-01-q2"
       }
     ],
     "dictation": [
-      "Die Nachfrage ist hoch, insbesondere in technischen Berufen."
+      "Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen."
     ],
     "hoertext": true
   },
@@ -12161,22 +12161,22 @@
     "id": "d-b2-ht01",
     "level": "B2",
     "type": "hoer",
-    "situationDe": "Radiomeldung: Klimaprotest blockiert Autobahn",
-    "situationAr": "خبر في الراديو: احتجاج مناخي يغلق طريقاً سريعاً",
+    "situationDe": "Fiktive Radiomeldung: Klimaprotest auf einer Autobahn",
+    "situationAr": "خبر إذاعي افتراضي: احتجاج مناخي على طريق سريع",
     "lines": [
       {
-        "de": "Aktivisten der Gruppe «Letzte Generation» haben heute Morgen die A100 in Berlin blockiert, indem sie sich auf der Fahrbahn festklebten.",
-        "ar": "ناشطون من مجموعة «الجيل الأخير» أغلقوا الطريق السريع A100 في برلين صباحاً بلصق أنفسهم على الطريق.",
+        "de": "Umweltaktivisten haben heute Morgen eine Autobahn in einer Großstadt blockiert, indem sie sich auf der Fahrbahn festklebten.",
+        "ar": "أغلق ناشطون بيئيون صباح اليوم طريقاً سريعاً في مدينة كبيرة، بعد أن ألصقوا أنفسهم بسطح الطريق.",
         "who": "Nachrichtensprecher"
       },
       {
-        "de": "Die Polizei hat mit der Räumung begonnen. Bislang kam es zu einem Stau von etwa 14 Kilometern. Die A100 ist stadteinwärts seit 7 Uhr gesperrt, die Räumung wird voraussichtlich bis zum Mittag dauern.",
-        "ar": "بدأت الشرطة بالإخلاء. الازدحام يبلغ ١٤ كيلومتراً. الطريق مغلق باتجاه المدينة منذ الساعة ٧ ومن المتوقع أن يستمر الإخلاء حتى الظهيرة.",
+        "de": "Die Polizei hat mit der Räumung begonnen. Es kam zu einem langen Stau. Die Straße ist stadteinwärts gesperrt; die Räumung wird voraussichtlich bis zum Mittag dauern.",
+        "ar": "بدأت الشرطة إخلاء الطريق. وحدث ازدحام طويل. وأُغلق المسار المتجه إلى داخل المدينة؛ ومن المتوقع أن تستمر عملية الإخلاء حتى الظهر.",
         "who": "Nachrichtensprecher"
       }
     ],
-    "titleDe": "Radiomeldung: Klimaprotest blockiert Autobahn",
-    "titleAr": "خبر في الراديو: احتجاج مناخي يغلق طريقاً سريعاً",
+    "titleDe": "Fiktive Radiomeldung: Klimaprotest auf einer Autobahn",
+    "titleAr": "خبر إذاعي افتراضي: احتجاج مناخي على طريق سريع",
     "questions": [
       {
         "id": "d-b2-ht01-q1",
@@ -12189,50 +12189,50 @@
           "Bis zum Abend"
         ],
         "answer": "Bis zum Mittag",
-        "explanationAr": "الدليل: توقّع المذيع أن تستمر إزالة العوائق حتى الظهر. الفخّ: السابعة وقت بدء الإغلاق، والثامنة أو المساء ليسا وقت انتهاء الإزالة المذكور."
+        "explanationAr": "الدليل: توقّع المذيع أن تستمر عملية الإخلاء حتى الظهر. الفخّ: الإغلاق بدأ صباحاً، لكن وقت انتهائه المتوقع هو الظهر، لا الثامنة أو المساء."
       }
     ],
     "dictation": [
-      "Aktivisten der Gruppe «Letzte Generation» haben heute Morgen die A100 in Berlin blockiert, indem sie sich auf der Fahrbahn festklebten."
+      "Umweltaktivisten haben heute Morgen eine Autobahn in einer Großstadt blockiert, indem sie sich auf der Fahrbahn festklebten."
     ]
   },
   {
     "id": "d-b2-ht02",
     "level": "B2",
     "type": "hoer",
-    "situationDe": "Anrufbeantworter: Firma Müller & Söhne (Kundenrückruf)",
-    "situationAr": "جهاز الرد الآلي لشركة مولر وأبناء (ردّ مكالمة عميل)",
+    "situationDe": "Anrufbeantworter: Büro geschlossen und Notdienst",
+    "situationAr": "جهاز الرد الآلي: إغلاق المكتب وخدمة المناوبة",
     "lines": [
       {
-        "de": "Guten Tag, Sie haben die Firma Müller & Söhne erreicht. Heute ist Freitag, der 10. Oktober, unser Büro ist bereits geschlossen.",
-        "ar": "نهاركم سعيد، لقد اتصلتم بشركة مولر وأبناء. اليوم الجمعة ١٠ تشرين الأول ومكتبنا مغلق.",
+        "de": "Guten Tag, Sie haben unser Büro erreicht. Es ist heute bereits geschlossen.",
+        "ar": "مرحباً، لقد اتصلتم بمكتبنا، وهو مغلق اليوم.",
         "who": "Anrufbeantworter"
       },
       {
-        "de": "Unsere Öffnungszeiten am Montag sind 8 bis 17 Uhr. In dringenden Fällen erreichen Sie unseren Notdienst unter der 0228-900 100. Vielen Dank für Ihr Verständnis.",
-        "ar": "ساعات العمل الإثنين من ٨ حتى ١٧. في الحالات الطارئة اتصل بخدمة الطوارئ على ٠٢٢٨-٩٠٠١٠٠. شكراً لتفهمكم.",
+        "de": "Unsere Öffnungszeiten am Montag sind von 8 bis 17 Uhr. In dringenden Fällen finden Sie die Rufnummer unseres Notdienstes in Ihren Vertragsunterlagen. Vielen Dank für Ihr Verständnis.",
+        "ar": "ساعات عملنا يوم الاثنين من 8 إلى 17. في الحالات العاجلة، تجدون رقم خدمة المناوبة في مستنداتكم التعاقدية. شكراً لتفهمكم.",
         "who": "Anrufbeantworter"
       }
     ],
-    "titleDe": "Anrufbeantworter: Firma Müller & Söhne (Kundenrückruf)",
-    "titleAr": "جهاز الرد الآلي لشركة مولر وأبناء (ردّ مكالمة عميل)",
+    "titleDe": "Anrufbeantworter: Büro geschlossen und Notdienst",
+    "titleAr": "جهاز الرد الآلي: إغلاق المكتب وخدمة المناوبة",
     "questions": [
       {
         "id": "d-b2-ht02-q1",
         "type": "mc",
-        "promptDe": "Welche Nummer wählt man in dringenden Fällen?",
-        "promptAr": "ما الرقم المطلوب في الحالات الطارئة؟",
+        "promptDe": "Wo finden Kundinnen und Kunden die Nummer des Notdienstes?",
+        "promptAr": "أين يجد العملاء رقم خدمة المناوبة؟",
         "options": [
-          "Notdienst: 0228-900 100",
-          "Notdienst: 110",
-          "Notdienst: 112"
+          "In den Vertragsunterlagen",
+          "Im Büro während der Öffnungszeiten",
+          "Im Büro am Montag"
         ],
-        "answer": "Notdienst: 0228-900 100",
-        "explanationAr": "الدليل: أعلنت الشركة رقم مناوبتها للحالات العاجلة: 0228-900 100. الفخّ: 110 و112 رقما طوارئ عامّان، لا رقم مناوبة الشركة."
+        "answer": "In den Vertragsunterlagen",
+        "explanationAr": "الدليل: تشير الرسالة إلى أن رقم خدمة المناوبة موجود في المستندات التعاقدية. الفخّ: تُذكر أوقات المكتب، لكن لا يقال إن الرقم يُعطى فيه أو خلال الدوام."
       }
     ],
     "dictation": [
-      "Guten Tag, Sie haben die Firma Müller & Söhne erreicht."
+      "Guten Tag, Sie haben unser Büro erreicht."
     ]
   },
   {
@@ -12504,34 +12504,34 @@
     "id": "d-b2-ht03",
     "level": "B2",
     "type": "hoer",
-    "situationDe": "Wissenschaftsmeldung: KI und der Arbeitsmarkt",
-    "situationAr": "خبر علمي: الذكاء الاصطناعي وسوق العمل",
+    "situationDe": "Beispiel: KI und der Arbeitsmarkt",
+    "situationAr": "مثال: الذكاء الاصطناعي وسوق العمل",
     "lines": [
       {
-        "de": "Eine neue Untersuchung des Instituts für Arbeitsmarkt- und Berufsforschung analysiert, wie künstliche Intelligenz berufliche Aufgaben verändert. Die Forschenden erwarten, dass einige Tätigkeiten automatisiert werden, während in anderen Bereichen neue Aufgaben entstehen. Besonders betroffen sein könnten wiederkehrende Büro- und Verwaltungsaufgaben. Aus der Untersuchung lässt sich jedoch keine sichere Zahl künftig wegfallender Stellen ableiten. Entscheidend seien Weiterbildung und die Frage, ob Unternehmen KI unterstützend statt ersetzend einsetzen.",
-        "ar": "تحلل دراسة جديدة لمعهد بحوث سوق العمل والمهن كيف يغيّر الذكاء الاصطناعي المهام المهنية. ويتوقع الباحثون أتمتة بعض الأنشطة، في حين تنشأ مهام جديدة في مجالات أخرى. وقد تتأثر خصوصاً المهام المكتبية والإدارية المتكررة. لكن لا يمكن استنتاج رقم مؤكد للوظائف التي ستختفي مستقبلاً. ويعتمد الأمر على التدريب المستمر وعلى ما إذا كانت الشركات تستخدم الذكاء الاصطناعي للمساعدة أم للاستبدال.",
+        "de": "Betrachten wir ein Beispiel: Künstliche Intelligenz könnte berufliche Aufgaben verändern. Einige Tätigkeiten könnten automatisiert werden, während in anderen Bereichen neue Aufgaben entstehen. Besonders betroffen sein könnten wiederkehrende Büro- und Verwaltungsaufgaben. Aus diesem Beispiel lässt sich jedoch keine sichere Zahl künftig wegfallender Stellen ableiten. Entscheidend wären Weiterbildung und die Frage, ob Unternehmen KI unterstützend statt ersetzend einsetzen.",
+        "ar": "لننظر في مثال: قد يغيّر الذكاء الاصطناعي المهام المهنية. وقد تُؤتمت بعض الأنشطة، في حين تنشأ مهام جديدة في مجالات أخرى. وقد تتأثر خصوصاً المهام المكتبية والإدارية المتكررة. لكن لا يمكن استنتاج عدد مؤكد للوظائف التي قد تختفي مستقبلاً من هذا المثال. وفي هذا المثال، سيكون التدريب المستمر واستخدام الشركات للذكاء الاصطناعي بوصفه أداةً مساندة لا بديلاً عاملين حاسمين.",
         "who": "Sprecher"
       }
     ],
-    "titleDe": "Wissenschaftsmeldung: KI und der Arbeitsmarkt",
-    "titleAr": "خبر علمي: الذكاء الاصطناعي وسوق العمل",
+    "titleDe": "Beispiel: KI und der Arbeitsmarkt",
+    "titleAr": "مثال: الذكاء الاصطناعي وسوق العمل",
     "questions": [
       {
         "id": "d-b2-ht03-q1",
         "type": "mc",
-        "promptDe": "Was lässt sich laut Sprecher NICHT sicher aus der Untersuchung ableiten?",
-        "promptAr": "ما الذي لا يمكن استنتاجه على نحو مؤكد من الدراسة؟",
+        "promptDe": "Welche Aussage lässt sich aus dem Beispiel nicht sicher ableiten?",
+        "promptAr": "ما الذي لا يمكن استنتاجه على نحو مؤكد من المثال؟",
         "options": [
-          "Die genaue Zahl künftig wegfallender Arbeitsplätze",
-          "Dass sich berufliche Aufgaben verändern können",
-          "Dass Weiterbildung wichtig bleibt"
+          "Eine sichere Zahl künftig wegfallender Stellen",
+          "Dass einige Tätigkeiten automatisiert werden könnten",
+          "Dass in anderen Bereichen neue Aufgaben entstehen"
         ],
-        "answer": "Die genaue Zahl künftig wegfallender Arbeitsplätze",
-        "explanationAr": "الدليل: يوضح المتحدث أنه لا يمكن استنتاج عدد مؤكد للوظائف التي ستختفي. الفخّ: توقّع أتمتة بعض المهام لا يقدّم رقماً محدداً للوظائف."
+        "answer": "Eine sichere Zahl künftig wegfallender Stellen",
+        "explanationAr": "الدليل: يذكر المتحدث أنه لا يمكن استنتاج عدد مؤكد للوظائف التي قد تختفي من المثال. الفخّ: احتمال أتمتة بعض المهام أو ظهور مهام أخرى لا يقدم رقماً محدداً للوظائف."
       }
     ],
     "dictation": [
-      "Eine neue Untersuchung analysiert, wie künstliche Intelligenz berufliche Aufgaben verändert."
+      "Betrachten wir ein Beispiel: Künstliche Intelligenz könnte berufliche Aufgaben verändern."
     ]
   }
 ]

@@ -10493,6 +10493,78 @@ void 0;
     reviewB1Extras.audio.listened === false && reviewB1Extras.audio.generated === false && reviewB1Extras.audio.modified === false,
     "K224f مانيفستو الحوار ومانيفستو الاستماع منفصلان ولا تسجيلات/ملفات لهذه الموارد؛ لا استماع أو neu أو توليد/تعديل");
 }
+/* ═══ K225 — موارد B2 الإضافية: حوار و4 نصوص استماع (R154). ═══ */
+{
+  const reviewB2Extras = JSON.parse(readFileSync("docs/content-review-b2-dialogues-10-2026-10-11.json", "utf8")) as any;
+  const reviewB2ExtrasMd = readFileSync("docs/content-review-b2-dialogues-10-2026-10-11.md", "utf8");
+  const reviewB2Patch = readFileSync("scripts/patches/review_b2_extras_10.py", "utf8");
+  const dialoguesArr = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const ids = ["dlg-b2-mietvertrag", "hoer-b2-01", "d-b2-ht01", "d-b2-ht02", "d-b2-ht03"];
+  const batch = ids.map((id) => dialoguesArr.find((d:any) => d.id === id));
+  const tasksValid = batch.every((d:any) => d && d.level === "B2" && Array.isArray(d.lines) && d.lines.length > 0 &&
+    d.lines.every((line:any) => typeof line.de === "string" && !!line.de.trim() && typeof line.ar === "string" && !!line.ar.trim()) &&
+    Array.isArray(d.questions) && d.questions.length > 0 && d.questions.every((q:any) =>
+      typeof q.promptDe === "string" && !!q.promptDe.trim() && typeof q.promptAr === "string" && !!q.promptAr.trim() &&
+      typeof q.explanationAr === "string" && !!q.explanationAr.trim() && q.type === "mc" && Array.isArray(q.options) &&
+      new Set(q.options).size === q.options.length && q.options.includes(q.answer)) &&
+    Array.isArray(d.dictation) && d.dictation.length > 0 &&
+    d.dictation.every((part:string) => d.lines.some((line:any) => line.de.includes(part))));
+  const correctionUnits = reviewB2Extras.corrections.map((c:any) => c.unit);
+  ok(reviewB2Extras.reviewRule === "R154" && JSON.stringify(reviewB2Extras.targetIds) === JSON.stringify(ids) &&
+    reviewB2Extras.totals.resources === 5 && reviewB2Extras.totals.dialogues === 1 && reviewB2Extras.totals.hoertexte === 4 &&
+    reviewB2Extras.totals.lines === 14 && reviewB2Extras.totals.questions === 7 && reviewB2Extras.totals.dictation === 6 &&
+    reviewB2Extras.totals.correctedFields === 61 && reviewB2Extras.totals.guardedTransitions === 65 &&
+    reviewB2Extras.totals.unresolved === 0 && correctionUnits.length === 61 && new Set(correctionUnits).size === 61 &&
+    reviewB2ExtrasMd.includes("K225a–f") && reviewB2Patch.includes("expected_edits = 65") &&
+    reviewB2Patch.includes("REVISION_EDITS") && reviewB2Patch.includes("current == final_values.get"),
+    "K225a تقرير R154 يحصي الحقول والانتقالات والرقعة المحروسة");
+  ok(tasksValid, "K225b موارد B2: أسطر ألمانية/عربية ومفاتيح MC فريدة وإملاءات مطابقة حرفياً");
+  const lease = batch[0];
+  ok(lease.lines[0].de.includes("Nebenkosten liegen bei 180 Euro. Zusammen sind das 900 Euro Warmmiete.") &&
+    !lease.lines[0].de.includes("180 Euro warm") && lease.lines[0].ar.startsWith("السيدة ") &&
+    lease.lines[4].de.includes("ordentliche Kündigung gilt in der Regel") &&
+    lease.lines[4].de.includes("Beträge und Termine stehen im Vertrag") && !lease.lines[4].de.includes("zwei Prozent") &&
+    lease.lines[6].de.includes("Normale Gebrauchsspuren") && lease.lines[6].de.includes("richtet sich nach dem Vertrag") &&
+    !lease.lines[6].de.includes("wie Sie sie übernommen haben") && lease.questions[0].answer === "900 Euro" &&
+    lease.questions[1].answer === "Auf ein separates Kautionskonto" && lease.questions[1].options.includes("Auf das Konto für die Nebenkosten") &&
+    lease.dictation[0] === "Die Kaltmiete beträgt 720 Euro und die Nebenkosten liegen bei 180 Euro." &&
+    lease.dictation[1] === "Für die ersten zwei Jahre ist eine Staffelmiete vereinbart; die Beträge und Termine stehen im Vertrag.",
+    "K225c Mietvertrag: Warmmiete/Kaution الحسابية صحيحة، الشروط مقيدة، وعبارة المغادرة والإملاء غير مضللين");
+  const interview = batch[1], protest = batch[2];
+  ok(!JSON.stringify(interview).includes("Weber") && interview.lines[0].de.includes("Einige Arbeitgeber fordern mindestens B2") &&
+    interview.lines[0].de.includes("in bestimmten Bereichen sogar C1") && interview.questions[1].promptDe.includes("zuerst als Mindestanforderung") &&
+    interview.questions[1].answer === "Mindestens B2" && interview.dictation[0] === interview.lines[0].de.slice(interview.lines[0].de.indexOf("Grundsätzlich"), interview.lines[0].de.indexOf(" Das Problem")) &&
+    protest.titleDe.includes("Fiktive Radiomeldung") && !JSON.stringify(protest).includes("Letzte Generation") &&
+    !JSON.stringify(protest).includes("A100") && !JSON.stringify(protest).includes("14 Kilometern") &&
+    protest.questions[0].answer === "Bis zum Mittag" && protest.dictation[0] === protest.lines[0].de,
+    "K225d مقابلة العمل بلا اسم/تعميم زمني، وخبر الطريق خيالي بلا مكان أو قياسات مزعومة");
+  const mailbox = batch[3], aiExample = batch[4];
+  ok(!JSON.stringify(mailbox).includes("Müller & Söhne") && !JSON.stringify(mailbox).includes("10. Oktober") &&
+    !JSON.stringify(mailbox).includes("0228-900 100") && mailbox.lines[1].de.includes("Rufnummer unseres Notdienstes in Ihren Vertragsunterlagen") &&
+    mailbox.questions[0].answer === "In den Vertragsunterlagen" &&
+    !JSON.stringify(aiExample).includes("Institut für Arbeitsmarkt") && !JSON.stringify(aiExample).includes("neue Untersuchung") &&
+    aiExample.titleDe === "Beispiel: KI und der Arbeitsmarkt" && aiExample.questions[0].promptDe.includes("aus dem Beispiel") &&
+    aiExample.questions[0].answer === "Eine sichere Zahl künftig wegfallender Stellen" &&
+    aiExample.dictation[0] === aiExample.lines[0].de.slice(0, aiExample.dictation[0].length),
+    "K225e Nachricht ohne Firma/Telefon/Datum; KI-Text hypothetisch statt Studie ohne Quelle");
+  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
+  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
+  const noManifestEntries = [...dialogAudio, ...hoerenAudio].every((entry:any) => !ids.includes(entry.id));
+  const matchingFiles: string[] = [];
+  const scanAudio = (dir:string):void => {
+    if (!existsSync(dir)) return;
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const path = dir + "/" + entry.name;
+      if (entry.isDirectory()) scanAudio(path);
+      else if (ids.includes(entry.name.replace(/\\.[^.]*$/, ""))) matchingFiles.push(path);
+    }
+  };
+  scanAudio("public/audio");
+  ok(noManifestEntries && matchingFiles.length === 0 && reviewB2Extras.audioAudit.dialogAudioManifestEntries === 0 &&
+    reviewB2Extras.audioAudit.hoerenAudioManifestEntries === 0 && reviewB2Extras.audioAudit.matchingFilesPresent === 0 &&
+    reviewB2Extras.audioAudit.listened === false && reviewB2Extras.audioAudit.generated === false && reviewB2Extras.audioAudit.modified === false,
+    "K225f مانيفستو الحوار والاستماع منفصلان؛ لا إدخالات أو ملفات مطابقة ولا ادعاء بالاستماع");
+}
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
   const reviewFixW5 = JSON.parse(readFileSync("docs/content-review-fix-w5-2026-10-09.json", "utf8")) as any;
