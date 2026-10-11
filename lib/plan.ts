@@ -651,9 +651,9 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         id: tid(6),
         kind: "aussprache",
         titleDe: "Erstes Hören & Nachsprechen",
-        titleAr: "أول استماع وترديد (حروف وتحايا)",
+        titleAr: "أول استماع وترديد (التحية والتعريف بالنفس)",
         minutes: 8,
-        sentenceIds: [],
+        sentenceIds: ["s-a0-01", "s-a0-02", "s-a0-03"],
       });
     } else {
       // استرجاع يومي ثابت

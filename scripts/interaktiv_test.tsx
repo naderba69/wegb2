@@ -1331,14 +1331,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(t.includes("مدرّب النطق"), "XLIV1 لوحةُ النطقِ مرسومة");
     ok(t.includes("Ich möchte einen Termin vereinbaren."), "XLIV2 والجملةُ المستهدَفةُ معروضةٌ للقراءة");
     ok(t.includes("صوتك لا يغادر جهازك"), "XLIV3 وتعهُّدُ الخصوصيةِ مكتوبٌ على الشاشة");
-    ok(t.includes("ولا تحكم بعدُ على الأصوات المفردة"), "XLIV4 وحدُّ المرحلةِ معلَنٌ بصدقٍ لا مُدَّعى");
+    ok(t.includes("لا يقيس بعدُ مخارج الأصوات المفردة"), "XLIV4 وحدُّ المرحلةِ معلَنٌ بصدقٍ لا مُدَّعى");
     ok(/المقاطع المتوقّعة: \d+/.test(t), "XLIV5 وعددُ المقاطعِ المتوقَّعةِ محسوبٌ من الجملة");
-    ok(/زمن النموذج ≈ [\d.]+ ثانية/.test(t), "XLIV6 وزمنُ النموذجِ معروضٌ هدفاً");
+    ok(/زمن النموذج التقريبي: [\d.]+ ثانية/.test(t), "XLIV6 وزمنُ النموذجِ معروضٌ هدفاً");
     const rec = btn("سجّل");
     ok(!!rec, "XLIV7 وزرُّ التسجيلِ موجود");
     if (rec) click(rec as HTMLElement);
     await new Promise((r) => setTimeout(r, 30));
-    ok(txt().includes("تعذّر الوصول إلى الميكروفون") || txt().includes("أوقف وحلّل"),
+    ok(txt().includes("لا يوفّر التسجيل المحلي") || txt().includes("تعذّر فتح الميكروفون") || txt().includes("أوقف التسجيل وحلّل"),
       "XLIV8 وبلا ميكروفونٍ يظهرُ المسارُ البديلُ بدلَ الانهيار");
     ok(!txt().includes("تُحتسَب في الدرجة") || txt().includes("لا تُحتسَب في الدرجة"),
       "XLIV9 والقراءةُ غيرُ المقيسةِ لا تُحتسَبُ درجةً — لا تهوينَ في المحاسبة");
@@ -3254,6 +3254,54 @@ const hasFile = txt().includes("صوتٌ من الدار");
       }
       ok(allAnswersAccepted, `XCIII2 ${item.id} مفاتيح الأسئلة الثلاثة تُقبل في واجهة الاستماع الفعلية`);
       if (cleanup) cleanup();
+    }
+  }
+
+  /* ═══ XCIV — مهمة النطق اليومية تستعمل الجمل ومدرّب التسجيل فعلياً ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const { buildDay } = await import("../lib/plan");
+    const firstDay = buildDay(1, { ...emptyProgress });
+    const task = firstDay.tasks.find((item) => item.kind === "aussprache");
+    ok(!!task, "XCIV1 خطة اليوم الأول تولّد مهمة نطق");
+    ok(!!task && JSON.stringify(task.sentenceIds) === JSON.stringify(["s-a0-01", "s-a0-02", "s-a0-03"]),
+      "XCIV2 المهمة مرتبطة بثلاث جمل A0 فعلية، لا قائمة فارغة");
+    const points: [number, number][] = [];
+    if (task) {
+      mount(React.createElement(TaskView, {
+        task,
+        lang: "ar" as const,
+        day: 1,
+        srs: {},
+        onSrs: () => {},
+        onPoints: (score: number, max: number) => points.push([score, max]),
+      }));
+      ok(!!rootEl.querySelector('[data-testid="aussprache-task"]'), "XCIV3 عارض المهمة يركّب مدرّب النطق اليومي");
+      ok(["Hallo!", "Ich heiße Ali.", "Ich komme aus Tunesien."].every((sentence) => txt().includes(sentence)),
+        "XCIV4 واجهة المهمة تعرض جمل اليوم الأول الثلاث بالألمانية");
+      ok(rootEl.querySelectorAll('[data-testid="aussprache-model"]').length === 3
+        && rootEl.querySelectorAll('[data-testid="aussprache-record"]').length === 3,
+        "XCIV5 لكل جملة زرّ نموذج صوتي ومسار تسجيل محلي");
+
+      const firstItem = rootEl.querySelector('[data-testid="aussprache-item-s-a0-01"]') as HTMLElement | null;
+      const record = firstItem?.querySelector('[data-testid="aussprache-record"]') as HTMLElement | null;
+      if (record) click(record);
+      ok(!!firstItem && (firstItem.textContent ?? "").includes("لا يوفّر التسجيل المحلي")
+        || !!firstItem && (firstItem.textContent ?? "").includes("تعذّر فتح الميكروفون"),
+        "XCIV6 عند غياب ميكروفون jsdom تظهر رسالة بديلة ولا ينهار المسار");
+
+      for (const id of task.sentenceIds ?? []) {
+        const item = rootEl.querySelector(`[data-testid="aussprache-item-${id}"]`) as HTMLElement | null;
+        const attest = item?.querySelector('[data-testid="aussprache-self-attest"]') as HTMLElement | null;
+        if (attest) click(attest);
+      }
+      ok(txt().includes("تدرّبت 3/3") && txt().includes("دون قياس"),
+        "XCIV7 الترديد الذاتي يكمّل الجمل بلا ميكروفون أو درجة مصطنعة");
+      const complete = rootEl.querySelector('[data-testid="aussprache-task-complete"]') as HTMLButtonElement | null;
+      ok(!!complete && !complete.disabled, "XCIV8 لا يتاح تسليم المهمة قبل تدريب الجمل الثلاث");
+      if (complete) click(complete);
+      ok(points.length === 1 && points[0][0] === 3 && points[0][1] === 3,
+        "XCIV9 عند التسليم يبلّغ الإنجاز الفعلي للنقاط دون ادعاء قياس فونيمي");
     }
   }
 

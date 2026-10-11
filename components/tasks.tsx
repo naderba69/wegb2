@@ -15,6 +15,7 @@ import ExerciseSet from "./exercises";
 import { FehlerFinden, RollenDialog, SchreibBerater, Pruefung } from "./lehrer";
 import { FehlerFallen, Fehlerheft } from "./fehler-ui";
 import { De } from "./De";
+import AusspracheTrainer, { type AusspracheAbschluss } from "./aussprachetrainer";
 import { SynonymKontext } from "./SynonymKontext";
 import { KompositaWerkstatt } from "./komposita";
 import { SignalRadar } from "./signalradar";
@@ -96,8 +97,9 @@ export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceN
     case "schreiben":
       return <SchreibenTask task={task} onPoints={onPoints} persistKey={persistKey} />;
     case "sprechen":
-    case "aussprache":
       return <SprechenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
+    case "aussprache":
+      return <AusspracheTask task={task} day={day} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
     case "briefe":
     case "schulsim":
     case "partner":
@@ -1018,6 +1020,74 @@ function SchreibenTask({ task, onPoints, persistKey }: Omit<TaskProps, "lang" | 
           <SchreibBerater text={text} taskDe={w.taskDe} />
         </div>
       )}
+    </section>
+  );
+}
+
+// ── نطقٌ وإيقاعٌ قابلان للاستعمال داخل مهمة اليوم ──────────────────────
+function AusspracheTask({ task, day, onPoints, voiceName, rate, persistKey }: Omit<TaskProps, "lang" | "srs" | "onSrs">) {
+  const [draft, setDraft, draftReady] = useTaskDraft(persistKey, "pronunciation", {
+    done: {} as Record<string, boolean>,
+    measured: {} as Record<string, boolean>,
+  });
+  const done = draft.done ?? {};
+  const measured = draft.measured ?? {};
+  const items = (task.sentenceIds ?? []).flatMap((id) => {
+    const sentence = getSatz(id);
+    return sentence ? [sentence] : [];
+  });
+  const level = levelOf(day);
+  const doneCount = items.filter((sentence) => done[sentence.id]).length;
+  const measuredCount = items.filter((sentence) => measured[sentence.id]).length;
+
+  const completeSentence = (id: string, result: AusspracheAbschluss) => {
+    setDraft((previous) => ({
+      ...previous,
+      done: { ...(previous.done ?? {}), [id]: true },
+      measured: { ...(previous.measured ?? {}), [id]: result.measured },
+    }));
+  };
+
+  if (!draftReady) return <div className="card" role="status">⏳ جارٍ استعادة تدريب النطق…</div>;
+  if (!items.length) return <div className="card" role="alert">لا توجد جمل نطق مرتبطة بهذه المهمة بعد؛ لم نُسجّل إنجازاً وهمياً.</div>;
+
+  return (
+    <section className="card fadein dirb-ex" data-testid="aussprache-task" style={{ padding: "1.2rem" }}>
+      <Head icon="🎙️" de="Aussprache & Shadowing" ar={`${task.titleAr} — اسمع النموذج، كرّر، وراجع تسجيلك`} />
+      <p style={{ margin: "0.2rem 0 0.5rem", color: "var(--color-ink2)", fontSize: "0.86rem" }}>
+        الجمل محفوظة لهذه المهمة فقط. يمكنك التدرّب بترديد ذاتي، أو تسجيل صوت محلي ومقارنته بالنموذج؛ القياس الحالي للإيقاع والوقفات لا لمخارج الأصوات.
+      </p>
+      <div style={{ display: "grid", gap: "0.65rem" }}>
+        {items.map((sentence) => (
+          <div key={sentence.id} className="card" data-testid={`aussprache-item-${sentence.id}`} style={{ padding: "0.7rem 0.85rem" }}>
+            <AusspracheTrainer
+              satz={sentence.de}
+              ar={sentence.ar}
+              level={level}
+              voiceName={voiceName}
+              rate={rate}
+              onPracticeComplete={(result) => completeSentence(sentence.id, result)}
+            />
+            <div role="status" aria-live="polite" style={{ marginTop: "0.35rem", fontSize: "0.8rem", color: "var(--color-ink2)" }}>
+              {done[sentence.id]
+                ? measured[sentence.id] ? "✅ تمّت مراجعة الإيقاع محلياً؛ لا حكم على مخارج الحروف." : "✅ تمّ الترديد ذاتياً دون قياس أو درجة."
+                : "الجملة لم تُسجَّل كمكتملة بعد."}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style={{ marginTop: "0.65rem", display: "flex", gap: "0.6rem", alignItems: "center", flexWrap: "wrap" }}>
+        <span className="chip rtl-num">تدرّبت {doneCount}/{items.length} · قياس محلي {measuredCount}</span>
+        <button
+          type="button"
+          className="btn btn-primary"
+          data-testid="aussprache-task-complete"
+          disabled={doneCount < items.length}
+          onClick={() => onPoints(doneCount, items.length)}
+        >
+          أنجزت تدريب النطق ({doneCount}/{items.length})
+        </button>
+      </div>
     </section>
   );
 }
