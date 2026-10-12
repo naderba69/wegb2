@@ -579,9 +579,28 @@ const vocabRepeatAudit = (() => {
         audio.subarray(0, 3).toString() === "ID3" && audio.length > 8000 && audio.length === entry?.bytes;
     });
     ok(r164aBatch.length === 10 && new Set(r164aBatch).size === 10 && r164aAudioValid &&
-      Object.keys(hoerenAudio).length === 120 &&
       [...r164aDialog, ...r164aDiktat].every((entry) => !r164aBatch.includes(entry.id)),
       "K26m دفعة R164a: عشرة نصوص A2 وعدّها صحيح؛ voice-00 وإطارات/أحجام سليمة في مانيفستو HörLabor وحده");
+    const r164bBatch = ["t-a2-031", "t-a2-032"];
+    const r164bTexts = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+    const r164bDialog = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze as { id: string }[];
+    const r164bDiktat = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze as { id: string }[];
+    const r164bReview = JSON.parse(readFileSync("docs/content-review-a2-audio-07-2026-10-12.json", "utf8")) as any;
+    const r164bAudioValid = r164bBatch.every((id) => {
+      const entry = hoerenAudio[id];
+      const source = r164bTexts.find((text:any) => text.id === id);
+      const path = `public/audio/hoeren/${id}.mp3`;
+      const audio = existsSync(path) ? require("fs").readFileSync(path) as Buffer : Buffer.alloc(0);
+      const fileCheck = r164bReview.audio.files.find((file:any) => file.id === id);
+      return source?.level === "A2" && !source?.neu && source.wordCountDe === source.de.split(/\s+/).filter(Boolean).length &&
+        entry?.level === "A2" && entry?.voice === "voice-00 (de-DE, Arena TTS)" && entry?.file === `/audio/hoeren/${id}.mp3` &&
+        audio.subarray(0, 3).toString() === "ID3" && audio.length > 8000 && audio.length === entry?.bytes &&
+        fileCheck?.bytes === audio.length && fileCheck?.id3v2Header === true && fileCheck?.mpegLayer3Frames > 0;
+    });
+    ok(r164bBatch.length === 2 && new Set(r164bBatch).size === 2 && r164bAudioValid &&
+      r164bReview.audio.generatedAudioIds.length === 2 && r164bReview.audio.sourceTextExact === true &&
+      [...r164bDialog, ...r164bDiktat].every((entry) => !r164bBatch.includes(entry.id)),
+      "K26n دفعة R164b: آخر نصين A2 وعدّهما مطابق؛ voice-00 وID3/إطارات/بايتات سليمة في مانيفستو HörLabor وحده");
     const dman = JSON.parse(require("fs").readFileSync("content/diktat-audio.json", "utf8")) as { einsaetze: { id: string; file: string; level: string; bytes: number }[] };
     const ddisk = require("fs").readdirSync("public/audio/diktat").filter((f: string) => f.endsWith(".mp3")).map((f: string) => f.replace(/\.mp3$/, "")).sort();
     ok(dman.einsaetze.length === ddisk.length && dman.einsaetze.every((e) => ddisk.includes(e.id)) && ddisk.length === 180, "K27a المصنع مقفل: 180/180 — العددُ جُمِّد إقراراً بالتمام كما فُعِل في hoeren، بعد أن كان حياً في الطريق");
@@ -2730,8 +2749,8 @@ void 0;
   ok(nD === 156 && lies.includes("dialogues **156**"), `K125b الحواراتُ 156 في القرصِ والسطرِ والفهرس (${nD})`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 80 && nH === 120 && nH + nG + nK + nS === 388 && lies.includes("120 ملفاً صوتياً") && lies.includes("388 ملفاً صوتياً"),
-    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 388`);
+  ok(nG === 80 && nH === 122 && nH + nG + nK + nS === 390 && lies.includes("122 ملفاً صوتياً") && lies.includes("390 ملفاً صوتياً"),
+    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 390`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
   const nAb = dialogues.flatMap((d) => ablenker(d)).length;
@@ -10813,7 +10832,9 @@ void 0;
   const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
   const noCrossManifestEntries = [...dialogAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
   const currentHoerenIds = hoerenAudio.filter((entry:any) => ids.includes(entry.id)).map((entry:any) => entry.id).sort();
+  const expectedIds = [...ids].sort();
   const expectedR164aIds = ids.slice(0, 10).sort();
+  const expectedR164bIds = ids.slice(10).sort();
   const matchingFiles: string[] = [];
   const scanAudio = (dir:string):void => {
     if (!existsSync(dir)) return;
@@ -10831,12 +10852,18 @@ void 0;
   const followupR164a = reviewA2Extras.followups?.find((entry:any) => entry.id === "R164a");
   const r164aGeneratedIds = [...(followupR164a?.generatedAudioIds ?? [])].sort();
   const r164aRemainingIds = [...(followupR164a?.remainingTargetIdsWithoutAudio ?? [])].sort();
-  ok(JSON.stringify(currentHoerenIds) === JSON.stringify(expectedR164aIds) && noCrossManifestEntries &&
-    matchingFiles.length === 10 && matchingFiles.every((path) => path.includes("/audio/hoeren/")) && historicalAudit &&
+  const followupR164b = reviewA2Extras.followups?.find((entry:any) => entry.id === "R164b");
+  const r164bGeneratedIds = [...(followupR164b?.generatedAudioIds ?? [])].sort();
+  const r164bRemainingIds = [...(followupR164b?.remainingTargetIdsWithoutAudio ?? [])].sort();
+  ok(JSON.stringify(currentHoerenIds) === JSON.stringify(expectedIds) && noCrossManifestEntries &&
+    matchingFiles.length === 12 && matchingFiles.every((path) => path.includes("/audio/hoeren/")) && historicalAudit &&
     JSON.stringify(r164aGeneratedIds) === JSON.stringify(expectedR164aIds) &&
-    JSON.stringify(r164aRemainingIds) === JSON.stringify(ids.slice(10).sort()) &&
-    followupR164a?.validation?.humanListening === false,
-    "K228f لقطة R157 الصوتية محفوظة؛ متابعة R164a أضافت عشرة نصوص للاستماع فقط وأبقت آخر اثنين للمتابعة");
+    JSON.stringify(r164aRemainingIds) === JSON.stringify(expectedR164bIds) &&
+    followupR164a?.validation?.humanListening === false &&
+    JSON.stringify(r164bGeneratedIds) === JSON.stringify(expectedR164bIds) && r164bRemainingIds.length === 0 &&
+    followupR164b?.coverageAfter?.hoerenAudio === "122/157" && followupR164b?.coverageAfter?.A2 === "32/32" &&
+    followupR164b?.validation?.humanListening === false,
+    "K228f لقطة R157 محفوظة؛ متابعتا R164a/R164b أكملتا النصوص الاثني عشر في HörLabor فقط");
 }
 /* ═══ K229 — خمسة نصوص B1 أخيرة (R158). ═══ */
 {
@@ -11401,7 +11428,7 @@ void 0;
       audio.length === entry?.bytes && fileCheck?.bytes === audio.length && fileCheck?.id3v2Header === true &&
       fileCheck?.mpegLayer3Frames > 0;
   });
-  ok(hoerenManifest.count === 120 && hoerenManifest.einsaetze.length === 120 && audioEntriesValid && noCrossManifest &&
+  ok(hoerenManifest.count === hoerenManifest.einsaetze.length && audioEntriesValid && noCrossManifest &&
     reviewR164a.audio.generatedAudioIds.length === 10 && reviewR164a.audio.sourceTextExact === true &&
     reviewR164a.audio.coverage.before.hoerenAudio === 110 && reviewR164a.audio.coverage.after.hoerenAudio === 120 &&
     reviewR164a.audio.coverage.after.A2 === "30/32" && reviewR164a.audio.coverage.after.remainingWithoutLocalMP3 === 37 &&
@@ -11420,6 +11447,93 @@ void 0;
     followupR164a.validation.humanListening === false && reviewR164a.followup.reviewRule === "R164b" &&
     reviewR164a.followup.remainingTargetIds.length === 2 && reviewR164aMd.includes("لا تُعلن تغطية A2 مكتملة"),
     "K232f حدود النطق والاعتماد صريحة؛ يحفظ R157 متابعة R164a ويؤجل آخر نصين دون ادعاء اكتمال A2");
+}
+
+/* ═══ K233 — إكمال آخر نصين A2 ومراجعة R164b. ═══ */
+{
+  const reviewR164b = JSON.parse(readFileSync("docs/content-review-a2-audio-07-2026-10-12.json", "utf8")) as any;
+  const reviewR164bMd = readFileSync("docs/content-review-a2-audio-07-2026-10-12.md", "utf8");
+  const patchR164b = readFileSync("scripts/patches/add_hoeren_audio_r164b.py", "utf8");
+  const reviewR157 = JSON.parse(readFileSync("docs/content-review-a2-texts-02-2026-10-11.json", "utf8")) as any;
+  const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const ids = ["t-a2-031", "t-a2-032"];
+  const batch = ids.map((id) => textsArr.find((text:any) => text.id === id));
+  const correction = reviewR164b.corrections.find((item:any) => item.unit === "t-a2-032");
+  const germanWords = batch.reduce((sum:number, text:any) => sum + text.de.split(/\s+/).filter(Boolean).length, 0);
+  const punctuationMarks = batch.reduce((sum:number, text:any) => sum + (text.de.match(/[.!?]/g) ?? []).length, 0);
+  ok(reviewR164b.reviewRule === "R164b" && JSON.stringify(reviewR164b.targetIds) === JSON.stringify(ids) &&
+    reviewR164b.sourceReview.reviewRule === "R157" && reviewR164b.sourceReview.priorAudioBatch === "R164a" &&
+    reviewR164b.totals.texts === 2 && reviewR164b.totals.germanWords === 321 && germanWords === 321 &&
+    reviewR164b.totals.sentenceEndMarks === 28 && punctuationMarks === 28 && reviewR164b.totals.questions === 4 &&
+    reviewR164b.totals.correctedFields === 1 && reviewR164b.totals.guardedTransitions === 1 &&
+    reviewR164b.totals.unresolved === 0 && reviewR164b.resources.length === 2 && reviewR164b.contentChecks.length === 2 &&
+    correction?.fields.join(",") === "ar" && reviewR164bMd.includes("K233a–f") &&
+    patchR164b.includes("if current == before") && patchR164b.includes("mp3_frame_count"),
+    "K233a تقرير R164b يحصي النصين والكلمات والأسئلة والتصحيح العربي والرقعة المحروسة");
+  const tasksValid = batch.every((text:any) => text && text.level === "A2" && !text.neu && !!text.titleDe?.trim() &&
+    !!text.titleAr?.trim() && !!text.de?.trim() && !!text.ar?.trim() && text.wordCountDe === text.de.split(/\s+/).filter(Boolean).length &&
+    Array.isArray(text.questions) && text.questions.length === 2 && text.questions.every((question:any) =>
+      question.type === "mc" && !!question.promptDe?.trim() && !!question.promptAr?.trim() && !!question.explanationAr?.trim() &&
+      Array.isArray(question.options) && question.options.length >= 2 && new Set(question.options).size === question.options.length &&
+      question.options.includes(question.answer)));
+  ok(tasksValid, "K233b النصان الأخيران A2 وعدّهما وأسئلتهما الأربعة وخياراتها ومفاتيحها سليمة");
+  const move = batch[0], routine = batch[1];
+  ok(move.de.includes("Letzten Monat ist Sara von München nach Leipzig gezogen.") &&
+    move.de.includes("650 Euro warm") && move.questions[0].answer === "Wegen einer neuen Stelle und der hohen Miete in München" &&
+    move.questions[1].answer === "Mit dem Fahrrad" &&
+    routine.de.includes("Seitdem fühlt er sich viel fitter") && routine.questions[0].answer === "Keine Schokolade abends zu essen" &&
+    routine.questions[1].answer === "Dreimal pro Woche" && routine.ar.includes("أكثر لياقة بكثير") &&
+    !routine.ar.includes("يشعر بنشاط أكبر") && correction?.before.ar.includes("يشعر بنشاط أكبر") &&
+    correction?.after.ar === routine.ar && reviewR164b.contentChecks.every((check:any) => check.status === "pass" && !!check.result) &&
+    reviewR164b.limits.employmentAndRent && reviewR164b.limits.health && reviewR164b.judgement.unresolved === 0,
+    "K233c قصة الانتقال مثال معلّم، وأسئلة السبب/الدراجة والروتين/الشوكولاتة دقيقة؛ صُقلت دلالة fitter");
+  const hoerenManifest = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any;
+  const dialogManifest = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
+  const diktatManifest = JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any;
+  const selectedEntries = hoerenManifest.einsaetze.filter((entry:any) => ids.includes(entry.id));
+  const noCrossManifest = [...dialogManifest.einsaetze, ...diktatManifest.einsaetze].every((entry:any) => !ids.includes(entry.id));
+  const audioEntriesValid = selectedEntries.length === 2 && ids.every((id) => {
+    const entry = selectedEntries.find((candidate:any) => candidate.id === id);
+    const path = `public/audio/hoeren/${id}.mp3`;
+    const audio = existsSync(path) ? readFileSync(path) : Buffer.alloc(0);
+    const fileCheck = reviewR164b.audio.files.find((file:any) => file.id === id);
+    return entry?.voice === "voice-00 (de-DE, Arena TTS)" && entry?.level === "A2" &&
+      entry?.file === `/audio/hoeren/${id}.mp3` && audio.subarray(0, 3).toString() === "ID3" &&
+      audio.length === entry?.bytes && fileCheck?.bytes === audio.length && fileCheck?.id3v2Header === true &&
+      fileCheck?.mpegLayer3Frames > 0;
+  });
+  ok(hoerenManifest.count === hoerenManifest.einsaetze.length && audioEntriesValid && noCrossManifest &&
+    reviewR164b.audio.generatedAudioIds.length === 2 && reviewR164b.audio.sourceTextExact === true &&
+    reviewR164b.audio.coverage.before.hoerenAudio === 120 && reviewR164b.audio.coverage.after.hoerenAudio === 122 &&
+    reviewR164b.audio.coverage.after.A2 === "32/32" && reviewR164b.audio.coverage.after.remainingWithoutLocalMP3 === 35 &&
+    reviewR164b.audio.coverage.remainingTargetIdsWithoutAudio.length === 0 &&
+    reviewR164b.audio.otherManifests.dialogAudioEntriesForTargets === 0 && reviewR164b.audio.otherManifests.diktatAudioEntriesForTargets === 0,
+    "K233d آخر تسجيلين voice-00 وID3/MPEG3/الأحجام صحيحة؛ استكملت A2 في مانيفستو HörLabor وحده");
+  const followupR164a = reviewR157.followups?.find((entry:any) => entry.id === "R164a");
+  const followupR164b = reviewR157.followups?.find((entry:any) => entry.id === "R164b");
+  const r164aIds = [...(followupR164a?.generatedAudioIds ?? [])].sort();
+  const r164aPending = [...(followupR164a?.remainingTargetIdsWithoutAudio ?? [])].sort();
+  const r164bIds = [...(followupR164b?.generatedAudioIds ?? [])].sort();
+  ok(reviewR164b.audio.coverage.before.hoerenAudio === 120 && reviewR164b.audio.coverage.after.hoerenAudio === 122 &&
+    reviewR164b.audio.coverage.after.A2 === "32/32" && reviewR164b.audio.coverage.after.remainingWithoutLocalMP3 === 35 &&
+    reviewR164b.audio.coverage.remainingTargetIdsWithoutAudio.length === 0 && reviewR164b.next.remainingUnrecordedTexts === 35 &&
+    reviewR164bMd.includes("اكتملت تغطية نصوص A2 الصوتية"),
+    "K233e اكتمال A2 عند 32/32 و122/157، مع حصر المتبقي في 35 نص B1/B2");
+  ok(reviewR164b.audio.validation.humanListening === false && reviewR164b.audio.validation.pronunciationQualityJudged === false &&
+    reviewR164b.gates.result === "pass" && reviewR164b.validationResults.smoke.passed === 1545 &&
+    reviewR164b.validationResults.smoke.knownFailures === 38 && reviewR164b.validationResults.smoke.newFailures === 0 &&
+    reviewR164b.validationResults.smoke.exitCode === 1 && reviewR164b.validationResults.interaktiv.passed === 702 &&
+    reviewR164b.validationResults.interaktiv.knownFailures === 6 && reviewR164b.validationResults.interaktiv.newFailures === 0 &&
+    reviewR164b.validationResults.interaktiv.exitCode === 1 && reviewR164b.validationResults.typeScript.status === "pass" &&
+    reviewR164b.validationResults.build.status === "pass" && reviewR164b.validationResults.auditContent.structuralDefects === 0 &&
+    reviewR164b.validationResults.npmAudit.status === "pass" && reviewR164b.validationResults.npmAudit.vulnerabilities === 0 &&
+    reviewR164b.validationResults.diffCheck === "pass" &&
+    JSON.stringify(r164aIds) === JSON.stringify(Array.from({ length: 10 }, (_, index) => `t-a2-${index + 21}`).sort()) &&
+    JSON.stringify(r164aPending) === JSON.stringify(ids.slice().sort()) && followupR164a?.status === "completed" &&
+    JSON.stringify(r164bIds) === JSON.stringify(ids.slice().sort()) && followupR164b?.remainingTargetIdsWithoutAudio.length === 0 &&
+    followupR164b?.coverageAfter?.A2 === "32/32" && followupR164b?.validation?.humanListening === false &&
+    reviewR164bMd.includes("لا استماع بشري"),
+    "K233f حدود النطق صريحة؛ تقرير R157 يحفظ R164a التاريخي ويثبت اكتمال R164b");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

@@ -1,0 +1,206 @@
+{
+  "reviewRule": "R164b",
+  "date": "2026-10-12",
+  "scope": "استكمال مراجعة R164 للنصين الأخيرين غير المسجلين في A2: t-a2-031 وt-a2-032. فُحصت كل جملة ألمانية وترجمتها والعنوان والأسئلة الأربعة وخياراتها ومفاتيحها وشروحها، وسُجّل الملفان لإكمال A2.",
+  "method": "أعيدت مقارنة المعنى جملةً جملة، بما في ذلك الأرقام والضمائر وتسلسل الماضي/الحاضر، وطوبق كل سؤال ومفتاحه وشاهده. أعيد عد الكلمات بـde.split()؛ تطابق الحقلان الحاليان. لم يتغير النص الألماني. صُقلت ترجمة fitter بتغيير محروس في scripts/patches/add_hoeren_audio_r164b.py. ولّد كل ملف من نص de الحالي حرفياً، ثم فُحصت ترويسة ID3v2 وإطارات MPEG Layer III والبايتات.",
+  "sourceReview": {
+    "report": "docs/content-review-a2-texts-02-2026-10-11.json",
+    "reviewRule": "R157",
+    "priorAudioBatch": "R164a",
+    "priorAudioIds": [
+      "t-a2-21",
+      "t-a2-22",
+      "t-a2-23",
+      "t-a2-24",
+      "t-a2-25",
+      "t-a2-26",
+      "t-a2-27",
+      "t-a2-28",
+      "t-a2-29",
+      "t-a2-30"
+    ]
+  },
+  "targetIds": [
+    "t-a2-031",
+    "t-a2-032"
+  ],
+  "resources": [
+    {
+      "id": "t-a2-031",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein Umzug nach Leipzig",
+      "titleAr": "مثال: الانتقال إلى لايبزيغ",
+      "germanWords": 153,
+      "sentenceEndMarks": 13,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "تسلسل الانتقال من ميونخ إلى لايبزيغ والوظيفة الجديدة وسبب البحث عن سكن أرخص والعمل الجديد والتأقلم متماسك. ترجمة الإيجار «شاملاً» تلائم warm؛ العنوان والمدينة والمبلغ مؤطرة صراحةً كحالة مثال لا كإحصاء سوقي. السؤالان يطابقان سبب الانتقال ووسيلة استكشاف المدينة."
+    },
+    {
+      "id": "t-a2-032",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Ein gesunder Tagesablauf",
+      "titleAr": "روتين يومي صحي",
+      "germanWords": 168,
+      "sentenceEndMarks": 15,
+      "questions": 2,
+      "correctedFields": 1,
+      "judgement": "المقابلة بين العادة السابقة والروتين الحالي وأوقاته والأنشطة اليومية مترابطة؛ الخطوات الصغيرة وصفٌ شخصي لا وصفة صحية عامة. صُقلت ترجمة fitter من «نشاط أكبر» إلى «أكثر لياقة بكثير» لتطابق اللياقة البدنية في الأصل، وبقي التركيز في العمل منقولاً. سؤالا الشوكولاتة والجري لهما دليل حرفي."
+    }
+  ],
+  "totals": {
+    "texts": 2,
+    "germanWords": 321,
+    "sentenceEndMarks": 28,
+    "questions": 4,
+    "correctedFields": 1,
+    "guardedTransitions": 1,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-a2-032",
+      "fields": [
+        "ar"
+      ],
+      "before": {
+        "ar": "غيّر لوكاس روتينه اليومي كثيراً خلال الأشهر الماضية. كان يستيقظ متأخراً، ويشرب ثلاثة أكواب من القهوة على الفطور، ويتناول غالباً الوجبات السريعة على الغداء. وكان يجلس ساعات أمام التلفاز في المساء. أما الآن فيستيقظ في السابعة، ويمارس اليوغا عشرين دقيقة، ويفطر موسلي مع الفاكهة. يطبخ الخضار مع الأرز على الغداء بنفسه. يركض ثلاث مرات في الأسبوع وينام قبل منتصف الليل. ومنذ ذلك الحين يشعر بنشاط أكبر ويكون أكثر تركيزاً في العمل. يقول إن أصعب شيء كان الامتناع عن أكل الشوكولاتة مساءً. في البداية كان من الصعب عليه أن ينام أبكر. لذلك يضع هاتفه في غرفة أخرى مساءً ويقرأ كتاباً قبل النوم. يخطط لوجبات الأسبوع ويشتري الخضار الطازجة يوم السبت. لاحظ زملاؤه هذا التغيير. ويتمشون معاً أحياناً في استراحة الغداء. يقول لوكاس إن الخطوات الصغيرة تناسب حياته اليومية أكثر من خطة صارمة. ويريد المحافظة على روتينه الجديد في الشتاء أيضاً."
+      },
+      "after": {
+        "ar": "غيّر لوكاس روتينه اليومي كثيراً خلال الأشهر الماضية. كان يستيقظ متأخراً، ويشرب ثلاثة أكواب من القهوة على الفطور، ويتناول غالباً الوجبات السريعة على الغداء. وكان يجلس ساعات أمام التلفاز في المساء. أما الآن فيستيقظ في السابعة، ويمارس اليوغا عشرين دقيقة، ويفطر موسلي مع الفاكهة. يطبخ الخضار مع الأرز على الغداء بنفسه. يركض ثلاث مرات في الأسبوع وينام قبل منتصف الليل. ومنذ ذلك الحين يشعر بأنه أصبح أكثر لياقة بكثير، كما أصبح أكثر تركيزاً في العمل. يقول إن أصعب شيء كان الامتناع عن أكل الشوكولاتة مساءً. في البداية كان من الصعب عليه أن ينام أبكر. لذلك يضع هاتفه في غرفة أخرى مساءً ويقرأ كتاباً قبل النوم. يخطط لوجبات الأسبوع ويشتري الخضار الطازجة يوم السبت. لاحظ زملاؤه هذا التغيير. ويتمشون معاً أحياناً في استراحة الغداء. يقول لوكاس إن الخطوات الصغيرة تناسب حياته اليومية أكثر من خطة صارمة. ويريد المحافظة على روتينه الجديد في الشتاء أيضاً."
+      },
+      "reason": "fitter تدل هنا على اللياقة البدنية؛ صيغت «أكثر لياقة بكثير» بدلاً من «نشاط أكبر» لتقريب المعنى، مع إبقاء دلالة التركيز في العمل."
+    }
+  ],
+  "contentChecks": [
+    {
+      "id": "t-a2-031",
+      "status": "pass",
+      "result": "تسلسل الانتقال من ميونخ إلى لايبزيغ والوظيفة الجديدة وسبب البحث عن سكن أرخص والعمل الجديد والتأقلم متماسك. ترجمة الإيجار «شاملاً» تلائم warm؛ العنوان والمدينة والمبلغ مؤطرة صراحةً كحالة مثال لا كإحصاء سوقي. السؤالان يطابقان سبب الانتقال ووسيلة استكشاف المدينة."
+    },
+    {
+      "id": "t-a2-032",
+      "status": "pass",
+      "result": "المقابلة بين العادة السابقة والروتين الحالي وأوقاته والأنشطة اليومية مترابطة؛ الخطوات الصغيرة وصفٌ شخصي لا وصفة صحية عامة. صُقلت ترجمة fitter من «نشاط أكبر» إلى «أكثر لياقة بكثير» لتطابق اللياقة البدنية في الأصل، وبقي التركيز في العمل منقولاً. سؤالا الشوكولاتة والجري لهما دليل حرفي."
+    }
+  ],
+  "audio": {
+    "generatedAudioIds": [
+      "t-a2-031",
+      "t-a2-032"
+    ],
+    "voice": "voice-00 (de-DE, Arena TTS)",
+    "sourceTextExact": true,
+    "files": [
+      {
+        "id": "t-a2-031",
+        "bytes": 227661,
+        "mpegLayer3Frames": 2370,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-032",
+        "bytes": 255021,
+        "mpegLayer3Frames": 2655,
+        "id3v2Header": true
+      }
+    ],
+    "coverage": {
+      "before": {
+        "hoerenAudio": 120,
+        "A2": "30/32",
+        "remainingWithoutLocalMP3": 37
+      },
+      "after": {
+        "hoerenAudio": 122,
+        "totalTexts": 157,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "20/35",
+        "B2": "20/40",
+        "remainingWithoutLocalMP3": 35
+      },
+      "remainingTargetIdsWithoutAudio": []
+    },
+    "otherManifests": {
+      "dialogAudioEntriesForTargets": 0,
+      "diktatAudioEntriesForTargets": 0
+    },
+    "validation": {
+      "id3v2HeaderValidated": true,
+      "mpegLayer3FramesValidated": true,
+      "allFileByteCountsMatchManifest": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false
+    }
+  },
+  "limits": {
+    "editorial": "تدقيق تحريري لا يمثل اعتماداً من مدرس أو متحدث أصلي، ولا اختبار CEFR مستقلاً.",
+    "employmentAndRent": "قصة الانتقال والإيجار في t-a2-031 مثال تعليمي وليست بيانات سوق أو مقارنة إحصائية عن المدن.",
+    "health": "روتين t-a2-032 تجربة شخصية للوكاس لا نصيحة أو توصية طبية.",
+    "audio": "فحص بنيوي فقط؛ لم يحدث استماع بشري أو تقييم لجودة النطق."
+  },
+  "judgement": {
+    "result": "اكتملت مراجعة النصين؛ التصحيح الوحيد تحسين دقة ترجمة fitter. لا مسألة غير محسومة.",
+    "unresolved": 0
+  },
+  "gates": {
+    "planned": "K26n, K125c, K233a–f؛ تحديث K26m وK228f وK232e للقطات التاريخية",
+    "result": "pass"
+  },
+  "validationResults": {
+    "smoke": {
+      "command": "npm run smoke",
+      "passed": 1545,
+      "knownFailures": 38,
+      "baselinePassed": 1538,
+      "baselineFailures": 38,
+      "newFailures": 0,
+      "exitCode": 1,
+      "status": "completed with 38 known baseline failures and 0 new failures"
+    },
+    "interaktiv": {
+      "command": "npm run interaktiv",
+      "passed": 702,
+      "knownFailures": 6,
+      "newFailures": 0,
+      "sameKnownFailureSetAsR164a": true,
+      "exitCode": 1,
+      "status": "completed with 6 known baseline failures and 0 new failures"
+    },
+    "typeScript": {
+      "command": "npx tsc --noEmit",
+      "status": "pass"
+    },
+    "build": {
+      "command": "npm run build",
+      "status": "pass",
+      "staticRoutes": 13
+    },
+    "auditContent": {
+      "command": "npm run audit:content",
+      "status": "pass",
+      "structuralDefects": 0
+    },
+    "diffCheck": "pass",
+    "patchReapply": "pass: 0 additional manifest entries; Arabic correction and manifest update are idempotent",
+    "npmAudit": {
+      "command": "npm audit --no-fund",
+      "status": "pass",
+      "vulnerabilities": 0
+    }
+  },
+  "patch": "scripts/patches/add_hoeren_audio_r164b.py",
+  "next": {
+    "remainingUnrecordedTexts": 35,
+    "byLevel": {
+      "A2": 0,
+      "B1": 15,
+      "B2": 20
+    },
+    "priority": "ابدأ دفعة B1 التالية؛ حُفظ فصل مانيفستو الحوارات عن HörLabor."
+  }
+}

@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-02",
-  "count": 120,
+  "count": 122,
   "einsaetze": [
     {
       "id": "t-a1-01",
@@ -841,6 +841,20 @@
       "voice": "voice-00 (de-DE, Arena TTS)",
       "level": "A2",
       "bytes": 251661
+    },
+    {
+      "id": "t-a2-031",
+      "file": "/audio/hoeren/t-a2-031.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A2",
+      "bytes": 227661
+    },
+    {
+      "id": "t-a2-032",
+      "file": "/audio/hoeren/t-a2-032.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A2",
+      "bytes": 255021
     }
   ],
   "updated": "2026-10-12"

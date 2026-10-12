@@ -555,7 +555,49 @@
         "humanListening": false,
         "pronunciationQualityJudged": false
       },
-      "note": "متابعة لاحقة لتدقيق R157: سُجّلت النصوص العشرة الأولى فقط؛ بقي النصان t-a2-031 وt-a2-032 بلا MP3، لذلك لا تُعد تغطية A2 مكتملة."
+      "note": "متابعة لاحقة لتدقيق R157: سُجّلت النصوص العشرة الأولى فقط؛ بقي النصان t-a2-031 وt-a2-032 بلا MP3، لذلك لا تُعد تغطية A2 مكتملة.",
+      "status": "completed",
+      "completedBy": "R164b",
+      "completedAudioIds": [
+        "t-a2-031",
+        "t-a2-032"
+      ],
+      "coverageAtCompletion": {
+        "hoerenAudio": "122/157",
+        "A2": "32/32",
+        "remainingWithoutLocalMP3": 35
+      }
+    },
+    {
+      "id": "R164b",
+      "date": "2026-10-12",
+      "generatedAudioIds": [
+        "t-a2-031",
+        "t-a2-032"
+      ],
+      "remainingTargetIdsWithoutAudio": [],
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "coverageAfter": {
+        "hoerenAudio": "122/157",
+        "A2": "32/32",
+        "remainingWithoutLocalMP3": 35
+      },
+      "corrections": [
+        {
+          "unit": "t-a2-032",
+          "fields": [
+            "ar"
+          ],
+          "note": "صُقلت ترجمة fitter إلى «أكثر لياقة بكثير»؛ الألمانية والأسئلة بقيت كما هي."
+        }
+      ],
+      "validation": {
+        "id3v2HeaderValidated": true,
+        "mpegLayer3FramesValidated": true,
+        "humanListening": false,
+        "pronunciationQualityJudged": false
+      },
+      "note": "اكتملت متابعة R164: أضيف الصوت للنصين المتبقيين بعد R164a؛ تغطية A2 الصوتية 32/32، مع بقاء B1/B2."
     }
   ]
 }
