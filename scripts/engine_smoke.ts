@@ -550,6 +550,21 @@ const vocabRepeatAudit = (() => {
         hoerenAudio[id]?.file === `/audio/hoeren/${id}.mp3` && existsSync(`public/audio/hoeren/${id}.mp3`);
     }) && [...r162Dialog, ...r162Diktat].every((entry) => !r162Batch.includes(entry.id)),
       "K26k دفعة R162 (A0 واحد + تسعة A1) بصوت voice-00 في مانيفستو HörLabor وحده وبمسارات صحيحة");
+    const r163Batch = ["t-a1-030", "t-a1-031", "t-a1-032", "t-a1-033", "t-a1-034", "t-a1-035"];
+    const r163Dialog = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze as { id: string }[];
+    const r163Diktat = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze as { id: string }[];
+    const r163Texts = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+    const r163AudioValid = r163Batch.every((id) => {
+      const entry = hoerenAudio[id];
+      const source = r163Texts.find((text:any) => text.id === id);
+      return source?.level === "A1" && !source?.neu && source.wordCountDe === source.de.split(/\s+/).filter(Boolean).length &&
+        entry?.level === "A1" && entry?.voice === "voice-00 (de-DE, Arena TTS)" &&
+        entry?.file === `/audio/hoeren/${id}.mp3` && existsSync(`public/audio/hoeren/${id}.mp3`) &&
+        require("fs").statSync(`public/audio/hoeren/${id}.mp3`).size === entry?.bytes;
+    });
+    ok(r163Batch.length === 6 && new Set(r163Batch).size === 6 && r163AudioValid &&
+      [...r163Dialog, ...r163Diktat].every((entry) => !r163Batch.includes(entry.id)),
+      "K26l دفعة R163: ستة نصوص A1 وعدّ الكلمات مطابق؛ voice-00 وملفات/بايتات صحيحة في مانيفستو HörLabor وحده");
     const dman = JSON.parse(require("fs").readFileSync("content/diktat-audio.json", "utf8")) as { einsaetze: { id: string; file: string; level: string; bytes: number }[] };
     const ddisk = require("fs").readdirSync("public/audio/diktat").filter((f: string) => f.endsWith(".mp3")).map((f: string) => f.replace(/\.mp3$/, "")).sort();
     ok(dman.einsaetze.length === ddisk.length && dman.einsaetze.every((e) => ddisk.includes(e.id)) && ddisk.length === 180, "K27a المصنع مقفل: 180/180 — العددُ جُمِّد إقراراً بالتمام كما فُعِل في hoeren، بعد أن كان حياً في الطريق");
@@ -2698,8 +2713,8 @@ void 0;
   ok(nD === 156 && lies.includes("dialogues **156**"), `K125b الحواراتُ 156 في القرصِ والسطرِ والفهرس (${nD})`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 80 && nH === 104 && nH + nG + nK + nS === 372 && lies.includes("104 ملفاً صوتياً") && lies.includes("372 ملفاً صوتياً"),
-    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 372`);
+  ok(nG === 80 && nH === 110 && nH + nG + nK + nS === 378 && lies.includes("110 ملفاً صوتياً") && lies.includes("378 ملفاً صوتياً"),
+    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 378`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
   const nAb = dialogues.flatMap((d) => ablenker(d)).length;
@@ -10696,7 +10711,9 @@ void 0;
   const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
   const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
   const currentHoerenIds = hoerenAudio.filter((entry:any) => ids.includes(entry.id)).map((entry:any) => entry.id).sort();
-  const expectedHoerenIds = ids.slice(0, 9).sort();
+  const expectedCurrentIds = ids.slice(0, 15).sort();
+  const expectedR162GeneratedIds = ids.slice(0, 9).sort();
+  const expectedR162RemainingIds = ids.slice(9).sort();
   const noCrossManifestEntries = [...dialogAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
   const matchingFiles: string[] = [];
   const scanAudio = (dir:string):void => {
@@ -10713,11 +10730,14 @@ void 0;
     reviewA1Extras.audioAudit.matchingFilesPresent === 0 && reviewA1Extras.audioAudit.listened === false &&
     reviewA1Extras.audioAudit.generated === false && reviewA1Extras.audioAudit.modified === false;
   const followupR162 = reviewA1Extras.followups?.find((entry:any) => entry.id === "R162");
-  ok(JSON.stringify(currentHoerenIds) === JSON.stringify(expectedHoerenIds) && noCrossManifestEntries &&
-    matchingFiles.length === 9 && matchingFiles.every((path) => path.includes("/audio/hoeren/")) && historicalAudit &&
-    followupR162?.generatedAudioIds?.length === 9 && followupR162?.remainingTargetIdsWithoutAudio?.length === 6 &&
+  const r162GeneratedIds = [...(followupR162?.generatedAudioIds ?? [])].sort();
+  const r162RemainingIds = [...(followupR162?.remainingTargetIdsWithoutAudio ?? [])].sort();
+  ok(JSON.stringify(currentHoerenIds) === JSON.stringify(expectedCurrentIds) && noCrossManifestEntries &&
+    matchingFiles.length === 15 && matchingFiles.every((path) => path.includes("/audio/hoeren/")) && historicalAudit &&
+    JSON.stringify(r162GeneratedIds) === JSON.stringify(expectedR162GeneratedIds) &&
+    JSON.stringify(r162RemainingIds) === JSON.stringify(expectedR162RemainingIds) &&
     followupR162?.validation?.humanListening === false,
-    "K227f لقطة تدقيق R156 تاريخية؛ تسعة تسجيلات لاحقة في مانيفستو HörLabor وحده بعد R162");
+    "K227f لقطة R156 محفوظة؛ سجل R162 التاريخي لتسعة ملفات صحيح، وR163 أكمل الستة في مانيفستو HörLabor وحده");
 }
 /* ═══ K228 — اثنا عشر نصاً A2 إضافياً (R157). ═══ */
 {
@@ -11228,6 +11248,73 @@ void 0;
 
 
 
+
+/* ═══ K231 — تدقيق نصوص A1 وإكمال تسجيلاتها الصوتية (R163). ═══ */
+{
+  const reviewR163 = JSON.parse(readFileSync("docs/content-review-a1-audio-05-2026-10-12.json", "utf8")) as any;
+  const reviewR163Md = readFileSync("docs/content-review-a1-audio-05-2026-10-12.md", "utf8");
+  const patchR163 = readFileSync("scripts/patches/add_hoeren_audio_r163.py", "utf8");
+  const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const ids = ["t-a1-030", "t-a1-031", "t-a1-032", "t-a1-033", "t-a1-034", "t-a1-035"];
+  const batch = ids.map((id) => textsArr.find((text:any) => text.id === id));
+  const correctionUnits = reviewR163.corrections.map((correction:any) => correction.unit);
+  const germanWords = batch.reduce((sum:number, text:any) => sum + text.de.split(/\s+/).filter(Boolean).length, 0);
+  const sentenceEndMarks = batch.reduce((sum:number, text:any) => sum + (text.de.match(/[.!?]/g) ?? []).length, 0);
+  ok(reviewR163.reviewRule === "R163" && JSON.stringify(reviewR163.targetIds) === JSON.stringify(ids) &&
+    reviewR163.totals.texts === 6 && reviewR163.totals.germanWords === 632 && germanWords === 632 &&
+    reviewR163.totals.sentenceEndMarks === 85 && sentenceEndMarks === 85 && reviewR163.totals.questions === 12 &&
+    reviewR163.totals.correctedFields === 3 && reviewR163.totals.guardedTransitions === 3 &&
+    reviewR163.totals.unresolved === 0 && correctionUnits.length === 3 && new Set(correctionUnits).size === 2 &&
+    reviewR163Md.includes("K231a–f") && patchR163.includes("if current == before") && patchR163.includes("mp3_frame_count"),
+    "K231a تقرير R163 يحصي النصوص والكلمات والأسئلة والتصحيحات والرقعة المحروسة وبوابات المتابعة");
+  const tasksValid = batch.every((text:any) => text && text.level === "A1" && !text.neu && !!text.titleDe?.trim() &&
+    !!text.titleAr?.trim() && !!text.de?.trim() && !!text.ar?.trim() && text.wordCountDe === text.de.split(/\s+/).filter(Boolean).length &&
+    Array.isArray(text.questions) && text.questions.length === 2 && text.questions.every((question:any) =>
+      question.type === "mc" && !!question.promptDe?.trim() && !!question.promptAr?.trim() && !!question.explanationAr?.trim() &&
+      Array.isArray(question.options) && question.options.length >= 2 &&
+      new Set(question.options).size === question.options.length && question.options.includes(question.answer)));
+  ok(tasksValid, "K231b النصوص الستة A1 وأسئلتها الاثنا عشر مكتملة؛ عدّ الكلمات والخيارات والمفاتيح صالحة");
+  const clinic = batch[0], birthday = batch[5];
+  ok(clinic.wordCountDe === 119 && reviewR163.corrections.find((correction:any) => correction.unit === "t-a1-030")?.before.wordCountDe === 117 &&
+    birthday.wordCountDe === 112 && birthday.ar.includes("أجمع الفناجين وأضعها في مكانها") && !birthday.ar.includes("أرتب الفناجين") &&
+    reviewR163.corrections.find((correction:any) => correction.unit === "t-a1-035" && correction.fields.includes("ar"))?.reason.includes("weg") &&
+    reviewR163.corrections.find((correction:any) => correction.unit === "t-a1-035" && correction.fields.includes("wordCountDe"))?.before.wordCountDe === 109,
+    "K231c عدّا t-a1-030/t-a1-035 صُحّحا؛ وتُرجمت دلالة weg في جمع الفناجين وإبعادها");
+  ok(clinic.de.includes("Vielleicht ist es eine Erkältung.") && clinic.questions.every((question:any) => clinic.de.includes(question.answer === "Der Kopf" ? "Kopfschmerzen" : "Trinken Sie viel Wasser")) &&
+    batch[1].de.includes("mit einem roten Ball") && batch[1].questions[0].answer === "Mimi" &&
+    batch[2].questions[0].promptDe === "Was mache ich am Samstag?" && batch[2].questions[1].explanationAr.includes("Am Sonntagabend koche ich") &&
+    batch[3].questions[0].answer === "Brot mit Marmelade und Kaffee" && batch[3].questions[1].answer === "Apfelsaft" &&
+    batch[4].questions[0].answer === "Links abbiegen" && batch[4].questions[1].answer === "Linie drei" &&
+    birthday.questions[0].answer === "Dreißig" && birthday.questions[1].answer === "Die Ehefrau" &&
+    reviewR163.contentChecks.length === 6 && reviewR163.contentChecks.every((check:any) => check.status === "pass"),
+    "K231d المشاهد والأسئلة الستة: الأدلة والأجوبة متسقة، والطبي احتمالي وغير جازم");
+  const hoerenManifest = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any;
+  const dialogManifest = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
+  const diktatManifest = JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any;
+  const selectedEntries = hoerenManifest.einsaetze.filter((entry:any) => ids.includes(entry.id));
+  const noCrossManifest = [...dialogManifest.einsaetze, ...diktatManifest.einsaetze].every((entry:any) => !ids.includes(entry.id));
+  const audioEntriesValid = selectedEntries.length === 6 && ids.every((id) => {
+    const entry = selectedEntries.find((candidate:any) => candidate.id === id);
+    const path = `public/audio/hoeren/${id}.mp3`;
+    return entry?.voice === "voice-00 (de-DE, Arena TTS)" && entry?.level === "A1" &&
+      entry?.file === `/audio/hoeren/${id}.mp3` && existsSync(path) && require("fs").statSync(path).size === entry?.bytes;
+  });
+  ok(hoerenManifest.count === 110 && hoerenManifest.einsaetze.length === 110 && audioEntriesValid && noCrossManifest &&
+    reviewR163.audio.generatedAudioIds.length === 6 && reviewR163.audio.coverage.before.hoerenAudio === 104 &&
+    reviewR163.audio.coverage.after.hoerenAudio === 110 && reviewR163.audio.coverage.after.A1 === "35/35" &&
+    reviewR163.audio.coverage.remainingWithoutLocalMP3 === 47 && reviewR163.audio.otherManifests.dialogAudioEntriesForTargets === 0 &&
+    reviewR163.audio.otherManifests.diktatAudioEntriesForTargets === 0,
+    "K231e ستة تسجيلات voice-00 بمسارات وأحجام صحيحة؛ تغطية HörLabor 110/157 والمانيفستات منفصلة");
+  ok(reviewR163.audio.validation.id3v2HeaderValidated && reviewR163.audio.validation.mpegLayer3FramesValidated &&
+    reviewR163.audio.validation.humanListening === false && reviewR163.audio.validation.pronunciationQualityJudged === false &&
+    reviewR163.limits.editorial.includes("لا اعتماد مستقل") && reviewR163.limits.medical.includes("لا تشخيص") &&
+    reviewR163.limits.route.includes("لم تُراجع على خريطة") && reviewR163.limits.audio.includes("لا استماع بشري") &&
+    reviewR163.gates.planned === "K26l, K125c, K231a–f" && reviewR163.gates.result === "pass" &&
+    reviewR163.validationResults.smoke.newFailures === 0 && reviewR163.validationResults.build.staticRoutes === 13 &&
+    reviewR163.validationResults.diffCheck === "pass" &&
+    reviewR163Md.includes("ليس استماعاً بشرياً"),
+    "K231f حدود CEFR والطب والطريق والصوت معلنة؛ لا ادعاء باستماع أو اعتماد مستقل");
+}
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {

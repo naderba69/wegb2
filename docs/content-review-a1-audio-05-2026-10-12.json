@@ -1,0 +1,194 @@
+{
+  "reviewRule": "R163",
+  "date": "2026-10-12",
+  "scope": "مراجعة تحريرية ثانية للنصوص الستة t-a1-030–t-a1-035 قبل التسجيل: الألمانية والعربية والعناوين والأسئلة الاثنا عشر وخياراتها ومفاتيحها وشروحها؛ مع إنتاج MP3 والتحقق من مانيفستو HörLabor.",
+  "method": "قورنت الجمل الألمانية وترجماتها العربية سطراً/جملةً جملة، وفُحص تسلسل الوقائع ومطابقة كل سؤال وجوابه وشاهده. عُدّت الكلمات بـde.split() كما في المخطط، وأُصلحت الحقول بقيم سابقة محروسة في scripts/patches/add_hoeren_audio_r163.py. لا تعديل للنص الألماني في R163؛ تسجيل كل ملف مولّد من نص de الحالي حرفياً.",
+  "targetIds": [
+    "t-a1-030",
+    "t-a1-031",
+    "t-a1-032",
+    "t-a1-033",
+    "t-a1-034",
+    "t-a1-035"
+  ],
+  "resources": [
+    {
+      "id": "t-a1-030",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Besuch bei der Ärztin",
+      "titleAr": "زيارة الطبيبة",
+      "germanWords": 119,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "correctedFields": 1,
+      "judgement": "تسلسل الصداع والحمى الخفيفة والفحص والوصفة والتحسن مفهوم؛ Vielleicht يبقي احتمال نزلة البرد احتمالاً لا تشخيصاً. العربية تطابق مرجع الطبيبة والنصيحة، والسؤالان لهما جوابان مباشران. المشهد تدريبي لا إرشاد طبي."
+    },
+    {
+      "id": "t-a1-031",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Mein Haustier",
+      "titleAr": "حيواني الأليف",
+      "germanWords": 111,
+      "sentenceEndMarks": 13,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "اسم القطة وعمرها ولونها وروتينها اليومي متسقة بين النصين؛ Mimi والكرة الحمراء مثبتان في النص ومفتاحا السؤالين."
+    },
+    {
+      "id": "t-a1-032",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Am Wochenende",
+      "titleAr": "عطلة نهاية الأسبوع",
+      "germanWords": 101,
+      "sentenceEndMarks": 14,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "تتابع روتين السبت والأحد ومواعيده وأفعاله واضح في الألمانية والعربية؛ السؤالان بصيغة المتكلم والإجابتان تغطيان الشاهد المطلوب."
+    },
+    {
+      "id": "t-a1-033",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Essen und Trinken",
+      "titleAr": "الطعام والشراب",
+      "germanWords": 99,
+      "sentenceEndMarks": 12,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "الفطور والغداء والعشاء والمشروبات مرتبة ومتسقة؛ نقلت العربية الوجبات والمقصف وصلصة الطماطم وعصير التفاح، ومفتاحا السؤالين منصوص عليهما."
+    },
+    {
+      "id": "t-a1-034",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Nach dem Weg zum Bahnhof fragen",
+      "titleAr": "السؤال عن الطريق إلى محطة القطار",
+      "germanWords": 90,
+      "sentenceEndMarks": 14,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "الإرشادات مرتبة: التقدم إلى الإشارة ثم اليسار، وبعدها الحديقة والمخبز والمحطة؛ ترجمة السؤال والرد وخط الحافلة 3 سليمة. الطريق مثال تدريبي غير متحقق من خريطة."
+    },
+    {
+      "id": "t-a1-035",
+      "level": "A1",
+      "kind": "reading-text",
+      "titleDe": "Geburtstag",
+      "titleAr": "عيد ميلادي",
+      "germanWords": 112,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "correctedFields": 2,
+      "judgement": "العمر والهدايا والكعكة والاتصال واللعب وتسلسل المناسبة متسقة؛ صُقلت ترجمة räume die Tassen weg لتدل على جمع الفناجين وإبعادها، ومفتاحا العمر وهوية من خبز الكعكة صحيحان."
+    }
+  ],
+  "totals": {
+    "texts": 6,
+    "germanWords": 632,
+    "sentenceEndMarks": 85,
+    "questions": 12,
+    "correctedFields": 3,
+    "guardedTransitions": 3,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-a1-030",
+      "fields": ["wordCountDe"],
+      "before": {"wordCountDe": 117},
+      "after": {"wordCountDe": 119},
+      "reason": "المطابقة مع 119 مقطعاً مفصولاً بمسافات في النص الألماني."
+    },
+    {
+      "unit": "t-a1-035",
+      "fields": ["ar"],
+      "before": {
+        "ar": "اليوم عيد ميلادي وأتمّ الثلاثين من عمري. دعوت ستة أصدقاء إلى عيد ميلادي. يأتون في الرابعة بعد الظهر. يجلبون هدايا: كتاباً وزجاجة نبيذ وبطاقة تهنئة. خبزت زوجتي كعكة. نأكل الكعكة معاً ونشرب القهوة. إنه يوم جميل وأنا سعيد جداً. على الطاولة صحون وفناجين. وهناك عصير أيضاً. تتصل أمي وتهنئني. بعد ذلك نلعب لعبة ونستمع إلى الموسيقى. يجلب أحد أصدقائي زهوراً أيضاً. نلتقط صورة في الحديقة. يعود أصدقائي إلى بيوتهم مساءً. أرتب الفناجين. أنا متعب لكنني راضٍ."
+      },
+      "after": {
+        "ar": "اليوم عيد ميلادي وأتمّ الثلاثين من عمري. دعوت ستة أصدقاء إلى عيد ميلادي. يأتون في الرابعة بعد الظهر. يجلبون هدايا: كتاباً وزجاجة نبيذ وبطاقة تهنئة. خبزت زوجتي كعكة. نأكل الكعكة معاً ونشرب القهوة. إنه يوم جميل وأنا سعيد جداً. على الطاولة صحون وفناجين. وهناك عصير أيضاً. تتصل أمي وتهنئني. بعد ذلك نلعب لعبة ونستمع إلى الموسيقى. يجلب أحد أصدقائي زهوراً أيضاً. نلتقط صورة في الحديقة. يعود أصدقائي إلى بيوتهم مساءً. أجمع الفناجين وأضعها في مكانها. أنا متعب لكنني راضٍ."
+      },
+      "reason": "räumt … weg تعني هنا جمع الفناجين وإبعادها؛ «أرتب الفناجين» وحدها أعمّ ولا تنقل weg بدقة."
+    },
+    {
+      "unit": "t-a1-035",
+      "fields": ["wordCountDe"],
+      "before": {"wordCountDe": 109},
+      "after": {"wordCountDe": 112},
+      "reason": "المطابقة مع 112 مقطعاً مفصولاً بمسافات في النص الألماني."
+    }
+  ],
+  "questionAudit": {
+    "allTwelveQuestionsAreMC": true,
+    "optionsUnique": true,
+    "answerInOptions": true,
+    "answerSupportedByText": true,
+    "explanationsPointToSourceEvidence": true
+  },
+  "audio": {
+    "generatedAudioIds": [
+      "t-a1-030",
+      "t-a1-031",
+      "t-a1-032",
+      "t-a1-033",
+      "t-a1-034",
+      "t-a1-035"
+    ],
+    "manifest": "content/hoeren-audio.json",
+    "voice": "voice-00 (de-DE, Arena TTS)",
+    "files": [
+      {"id": "t-a1-030", "bytes": 182541, "mpegLayer3Frames": 1900},
+      {"id": "t-a1-031", "bytes": 155373, "mpegLayer3Frames": 1617},
+      {"id": "t-a1-032", "bytes": 159693, "mpegLayer3Frames": 1662},
+      {"id": "t-a1-033", "bytes": 152109, "mpegLayer3Frames": 1583},
+      {"id": "t-a1-034", "bytes": 147789, "mpegLayer3Frames": 1538},
+      {"id": "t-a1-035", "bytes": 183981, "mpegLayer3Frames": 1915}
+    ],
+    "coverage": {
+      "before": {"hoerenAudio": 104, "texts": 157, "A0": "15/15", "A1": "29/35", "A2": "20/32", "B1": "20/35", "B2": "20/40"},
+      "after": {"hoerenAudio": 110, "texts": 157, "A0": "15/15", "A1": "35/35", "A2": "20/32", "B1": "20/35", "B2": "20/40"},
+      "remainingWithoutLocalMP3": 47,
+      "remainingByLevel": {"A0": 0, "A1": 0, "A2": 12, "B1": 15, "B2": 20}
+    },
+    "otherManifests": {"dialogAudioEntriesForTargets": 0, "diktatAudioEntriesForTargets": 0},
+    "validation": {
+      "fileSizeRecordedInManifest": true,
+      "id3v2HeaderValidated": true,
+      "mpegLayer3FramesValidated": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false
+    },
+    "separation": "التسجيلات الستة في مانيفستو HörLabor وحده؛ مانيفستو الحوار content/dialog-audio.json ومانيفستو الإملاء content/diktat-audio.json مستقلان."
+  },
+  "contentChecks": [
+    {"id": "C1", "status": "pass", "check": "الألمانية والعربية قورنتا جملةً جملة؛ التتابع والزمن والضمائر والمفردات متسقة في النصوص الستة."},
+    {"id": "C2", "status": "pass", "check": "الأسئلة الاثنا عشر وخياراتها ومفاتيحها وشروحها مكتملة، فريدة الخيارات، ومثبتة في النص."},
+    {"id": "C3", "status": "pass", "check": "صُحح عدّ t-a1-030 وt-a1-035 وفق split()، بلا تغيير النص الألماني."},
+    {"id": "C4", "status": "pass", "check": "ترجمة räume die Tassen weg في t-a1-035 أصبحت «أجمع الفناجين وأضعها في مكانها»."},
+    {"id": "C5", "status": "pass", "check": "الملفات الستة بصوت voice-00 تطابق نصوص المصدر، وأحجامها وإطارات ID3/MPEG Layer III سليمة في مانيفستو HörLabor."},
+    {"id": "C6", "status": "pass", "check": "الحدود الطبية والجغرافية وCEFR والاستماع البشري معلنة؛ لا ادعاء بتحقق خارجي أو استماع بشري."}
+  ],
+  "limits": {
+    "editorial": "مراجعة تحريرية في هذه الجلسة، لا اعتماد مستقل من مدرس/متحدث أصلي ولا تقييم CEFR منفصل.",
+    "medical": "نص العيادة تدريبي، لا تشخيص أو نصيحة علاجية موثقة؛ لا دواء أو جرعة محددة.",
+    "route": "الاتجاهات وخط الحافلة جزء من مثال تعليمي؛ لم تُراجع على خريطة أو جدول مواصلات.",
+    "audio": "لا استماع بشري؛ تحقّق آلي من رأس ID3 وحجوم الملفات وإطارات MPEG Layer III فقط، بلا حكم على جودة النطق أو المحاذاة الفونيمية."
+  },
+  "gates": {"planned": "K26l, K125c, K231a–f", "passed": "K26l, K125c, K231a–f", "result": "pass"},
+  "validationResults": {
+    "smoke": {"passed": 1531, "knownBaselineFailures": 38, "newFailures": 0},
+    "interaktiv": {"passed": 702, "knownFailures": 6},
+    "typescript": "pass",
+    "build": {"result": "pass", "staticRoutes": 13},
+    "diffCheck": "pass",
+    "auditContent": {"structuralDefects": 0, "humanReviewHints": "21 short-dialogue signals and 6 heuristic noun-without-article candidates"}
+  },
+  "nextAudioTarget": {
+    "level": "A2",
+    "count": 12,
+    "ids": ["t-a2-21", "t-a2-22", "t-a2-23", "t-a2-24", "t-a2-25", "t-a2-26", "t-a2-27", "t-a2-28", "t-a2-29", "t-a2-30", "t-a2-031", "t-a2-032"]
+  }
+}

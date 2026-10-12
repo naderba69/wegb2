@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-02",
-  "count": 104,
+  "count": 110,
   "einsaetze": [
     {
       "id": "t-a1-01",
@@ -729,6 +729,48 @@
       "voice": "voice-00 (de-DE, Arena TTS)",
       "level": "A1",
       "bytes": 153069
+    },
+    {
+      "id": "t-a1-030",
+      "file": "/audio/hoeren/t-a1-030.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 182541
+    },
+    {
+      "id": "t-a1-031",
+      "file": "/audio/hoeren/t-a1-031.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 155373
+    },
+    {
+      "id": "t-a1-032",
+      "file": "/audio/hoeren/t-a1-032.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 159693
+    },
+    {
+      "id": "t-a1-033",
+      "file": "/audio/hoeren/t-a1-033.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 152109
+    },
+    {
+      "id": "t-a1-034",
+      "file": "/audio/hoeren/t-a1-034.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 147789
+    },
+    {
+      "id": "t-a1-035",
+      "file": "/audio/hoeren/t-a1-035.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 183981
     }
   ],
   "updated": "2026-10-12"
