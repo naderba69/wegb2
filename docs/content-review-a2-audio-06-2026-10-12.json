@@ -1,0 +1,409 @@
+{
+  "reviewRule": "R164a",
+  "date": "2026-10-12",
+  "scope": "مراجعة تحريرية ثانية قبل التسجيل لأول عشرة من نصوص A2 التي غطّاها R157: t-a2-21–t-a2-30. فُحصت الألمانية والعربية والعنوان والأسئلة العشرون وخياراتها ومفاتيحها وشروحها؛ أُضيفت ملفات HörLabor لهذه العشرة فقط.",
+  "method": "قورنت كل جملة ألمانية بترجمتها العربية، وفُحص اتصال الضمائر والأزمنة والأرقام وتسلسل الوقائع، ثم طُوبق كل سؤال ومفتاحه ودليله في الشرح مع النص. عُدّت الكلمات بـde.split() كما في المخطط، وصُحح الحقلان القديمان بقيم سابقة محروسة في scripts/patches/add_hoeren_audio_r164.py. تحقق التسجيل من النص الألماني الحالي حرفياً ومن ID3v2 وإطارات MPEG Layer III والأحجام. لا استماع بشري ولا تقييم نطق.",
+  "sourceReview": {
+    "report": "docs/content-review-a2-texts-02-2026-10-11.json",
+    "reviewRule": "R157",
+    "reviewedTargets": 12,
+    "originalCorrections": 32,
+    "unresolved": 0
+  },
+  "targetIds": [
+    "t-a2-21",
+    "t-a2-22",
+    "t-a2-23",
+    "t-a2-24",
+    "t-a2-25",
+    "t-a2-26",
+    "t-a2-27",
+    "t-a2-28",
+    "t-a2-29",
+    "t-a2-30"
+  ],
+  "resources": [
+    {
+      "id": "t-a2-21",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Linas Arzttermin: Verdacht auf Grippe",
+      "titleAr": "موعد لينا عند الطبيب: اشتباه بالإنفلونزا",
+      "germanWords": 154,
+      "sentenceEndMarks": 18,
+      "questions": 2,
+      "correctedFields": 1,
+      "judgement": "تسلسل الموعد والأعراض ومدته (ثلاثة أيام) والفحص والاشتباك الاحتمالي «Der Arzt vermutet…» والوصفة والراحة وإبلاغ المدير متسق؛ العربية تنقل الاحتمال ولا تحول المثال إلى تشخيص. السؤالان يطابقان المدة والنصيحة."
+    },
+    {
+      "id": "t-a2-22",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Eine E-Mail an die Lehrerin",
+      "titleAr": "رسالة إلى المعلمة",
+      "germanWords": 157,
+      "sentenceEndMarks": 15,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "صيغة الرسالة والتحية والاعتذار وسبب الغياب (مرض الابنة) وطلب الواجب والصفحات والمفردات متماسكة؛ مرجع الضمائر في الألمانية والعربية واضح. السؤالان يثبتان سبب الغياب وطريقة تدارك المادة."
+    },
+    {
+      "id": "t-a2-23",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Wegbeschreibung zum Bahnhof",
+      "titleAr": "مثال: وصف الطريق إلى المحطة",
+      "germanWords": 167,
+      "sentenceEndMarks": 18,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "إرشادات السؤال عن Hauptbahnhof مرتبة على شوارع وإشارة ومخبز ونفق ومدّة ثماني دقائق؛ الترجمة ومفتاحا الموقع/الشارع يطابقان النص. المسار مثال تدريبي غير مربوط بخريطة مدينة، وليس توجيهاً مواصلاتياً آنياً."
+    },
+    {
+      "id": "t-a2-24",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Mein Wochenende",
+      "titleAr": "عطلة نهاية أسبوعي",
+      "germanWords": 153,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "تتابع السبت والأحد والأفعال الماضية والأزمنة متماسك؛ اختلاط Perfekt بـwar طبيعي في السرد لأن sein كثيراً ما يأتي بالماضي البسيط. ترجمة اختبار الاثنين والجولة حول البحيرة تطابق المعنى. السؤالان مباشران."
+    },
+    {
+      "id": "t-a2-25",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein Gespräch im Supermarkt",
+      "titleAr": "مثال: محادثة في السوبرماركت",
+      "germanWords": 171,
+      "sentenceEndMarks": 27,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "المحادثة تبقي مواقع الحليب والخبز والخضار والجبن والصندوق متسقة؛ «Doch» يجيب عن سؤال النفي، والسعر مكتوب بالفاصلة الألمانية ومؤطر كعرض داخل مثال لا كسعر سوق حالي. السؤالان لهما دليل صريح."
+    },
+    {
+      "id": "t-a2-26",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Eine Einladung zum Geburtstag",
+      "titleAr": "مثال: دعوة إلى عيد ميلاد",
+      "germanWords": 153,
+      "sentenceEndMarks": 17,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "الدعوة تحفظ ترابط السبت والساعة والعنوان والطابق ومحطة U-Bahn-Linie 3 وموعد الرد قبل الخميس؛ ترجمة Haustür هنا باب المبنى مناسبة لفتح المدخل من السادسة والنصف. السؤالان متطابقان مع الموعد وطريقة الوصول؛ تفاصيل المكان افتراضية."
+    },
+    {
+      "id": "t-a2-27",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Eine Wohnung suchen",
+      "titleAr": "مثال: البحث عن شقة",
+      "germanWords": 151,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "حد البحث 600 يورو ينسجم مع Kaltmiete البالغة 580؛ المصطلح يظل «الإيجار الأساسي» ولا يختلط بالتكاليف الإضافية، والمطبخ المجهز والشرفة والطابق/المعاينة متسقة. الأسئلة تلتقط الإيجار وميزة الشقة؛ الأرقام مثال لا معلومة سوقية."
+    },
+    {
+      "id": "t-a2-28",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispielanruf bei einer Krankenkasse",
+      "titleAr": "مثال: اتصال بصندوق تأمين صحي",
+      "germanWords": 154,
+      "sentenceEndMarks": 20,
+      "questions": 2,
+      "correctedFields": 1,
+      "judgement": "حوار التأمين عام وغير منسوب إلى شركة واقعية؛ شرط بدء سريان التأمين يقيّد تسوية العيادة، ثم ترد شهادة العضوية والبطاقة والبريد بتسلسل مفهوم. العربية تحافظ على الشرط وعلى معنى طلب الشهادة وإبرازها. السؤالان يملكان شاهداً مباشراً."
+    },
+    {
+      "id": "t-a2-29",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein neuer Deutschkurs",
+      "titleAr": "مثال: دورة ألمانية جديدة",
+      "germanWords": 153,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "أيام الدورة وساعاتها ومراجعة المفردات واستعمال المعلم وهدف A2 متسقة؛ عنوان «Ein neuer Deutschkurs» سليم نحوياً، ومرجع الشهادة إلى العمل واضح. السؤال الأول يطابق Mo/Mi/Fr والثاني يطابق job؛ صيغتا السؤال والإجابة المتكلمتان منسجمتان."
+    },
+    {
+      "id": "t-a2-30",
+      "level": "A2",
+      "kind": "reading-text",
+      "titleDe": "Mein Lieblingsgericht",
+      "titleAr": "طبقي المفضل",
+      "germanWords": 152,
+      "sentenceEndMarks": 15,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "الوصفة مذكورة كعادة عائلية محددة لا قاعدة عامة عن تونس؛ ترتيب تجهيز الخضار واللحم وطبخ الكسكس على البخار والهريسة على الجانب متماسك. العربية تحفظ معنى Paprika كنوع توابل/فلفل ومعنى scharf. السؤالان عن الجمعة والهريسة ثابتان بالنص."
+    }
+  ],
+  "totals": {
+    "texts": 10,
+    "germanWords": 1565,
+    "sentenceEndMarks": 178,
+    "questions": 20,
+    "correctedFields": 2,
+    "guardedTransitions": 2,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-a2-21",
+      "fields": [
+        "wordCountDe"
+      ],
+      "before": {
+        "wordCountDe": 155
+      },
+      "after": {
+        "wordCountDe": 154
+      },
+      "reason": "قيمة الحقل السابقة زادت كلمةً واحدة على عدّ مقاطع النص الألماني المفصولة بمسافات."
+    },
+    {
+      "unit": "t-a2-28",
+      "fields": [
+        "wordCountDe"
+      ],
+      "before": {
+        "wordCountDe": 158
+      },
+      "after": {
+        "wordCountDe": 154
+      },
+      "reason": "قيمة الحقل السابقة زادت أربع كلمات على عدّ مقاطع النص الألماني المفصولة بمسافات."
+    }
+  ],
+  "contentChecks": [
+    {
+      "id": "t-a2-21",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-22",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-23",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-24",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-25",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-26",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-27",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-28",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-29",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    },
+    {
+      "id": "t-a2-30",
+      "status": "pass",
+      "result": "فُحص النص الألماني وترجمته العربية والعنوان والسؤالان وخيارات MC والمفتاحان والشرحان؛ لم يظهر تصحيح لغوي/ترجمي/سؤالي جديد."
+    }
+  ],
+  "audio": {
+    "generatedAudioIds": [
+      "t-a2-21",
+      "t-a2-22",
+      "t-a2-23",
+      "t-a2-24",
+      "t-a2-25",
+      "t-a2-26",
+      "t-a2-27",
+      "t-a2-28",
+      "t-a2-29",
+      "t-a2-30"
+    ],
+    "voice": "voice-00 (de-DE, Arena TTS)",
+    "sourceTextExact": true,
+    "files": [
+      {
+        "id": "t-a2-21",
+        "bytes": 226893,
+        "mpegLayer3Frames": 2362,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-22",
+        "bytes": 214893,
+        "mpegLayer3Frames": 2237,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-23",
+        "bytes": 250701,
+        "mpegLayer3Frames": 2610,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-24",
+        "bytes": 221613,
+        "mpegLayer3Frames": 2307,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-25",
+        "bytes": 254541,
+        "mpegLayer3Frames": 2650,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-26",
+        "bytes": 219021,
+        "mpegLayer3Frames": 2280,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-27",
+        "bytes": 227181,
+        "mpegLayer3Frames": 2365,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-28",
+        "bytes": 227949,
+        "mpegLayer3Frames": 2373,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-29",
+        "bytes": 244173,
+        "mpegLayer3Frames": 2542,
+        "id3v2Header": true
+      },
+      {
+        "id": "t-a2-30",
+        "bytes": 251661,
+        "mpegLayer3Frames": 2620,
+        "id3v2Header": true
+      }
+    ],
+    "coverage": {
+      "before": {
+        "hoerenAudio": 110,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "20/32",
+        "B1": "20/35",
+        "B2": "20/40"
+      },
+      "after": {
+        "hoerenAudio": 120,
+        "totalTexts": 157,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "30/32",
+        "B1": "20/35",
+        "B2": "20/40",
+        "remainingWithoutLocalMP3": 37
+      },
+      "remainingTargetIdsWithoutAudio": [
+        "t-a2-031",
+        "t-a2-032"
+      ]
+    },
+    "otherManifests": {
+      "dialogAudioEntriesForTargets": 0,
+      "diktatAudioEntriesForTargets": 0
+    },
+    "validation": {
+      "id3v2HeaderValidated": true,
+      "mpegLayer3FramesValidated": true,
+      "allFileByteCountsMatchManifest": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false
+    }
+  },
+  "limits": {
+    "editorial": "مراجعة تحريرية للمحتوى والأسئلة وليست اعتماداً لغوياً من مدرس أو متحدث أصلي، ولا اختبار CEFR مستقل.",
+    "medical": "موعد الطبيب في t-a2-21 نص تدريبي، لا تشخيص أو إرشاد طبي مستقل.",
+    "route": "خط سير t-a2-23 مثال لا يرتبط بمحطة حقيقية ولا تحقق جغرافي.",
+    "insurance": "حوار t-a2-28 عام غير منسوب إلى شركة؛ المعاملة مشروطة بسريان التأمين ولا تمثل بياناً رسمياً.",
+    "financial": "الأسعار والإيجارات أرقام سيناريوهات لا أسعار حالية.",
+    "locations": "العنوان ومحطة المترو والمركز التدريبي افتراضية داخل الأمثلة.",
+    "recipe": "وصفة t-a2-30 عادة أسرة بعينها ولا تعميم عن كل وصفات تونس.",
+    "audio": "فحص بنيوي للملفات فقط؛ لم يحدث استماع بشري أو حكم على جودة النطق."
+  },
+  "judgement": {
+    "result": "نجح التدقيق التحريري للنصوص العشرة؛ لم يظهر تصحيح جديد للألمانية أو العربية أو الأسئلة عدا حقلي عدد الكلمات.",
+    "unresolved": 0
+  },
+  "gates": {
+    "planned": "K26m, K125c, K232a–f، مع تحديث K228f وK231e لحفظ النتائج التاريخية",
+    "result": "pass"
+  },
+  "validationResults": {
+    "smoke": {
+      "command": "npm run smoke",
+      "passed": 1538,
+      "knownFailures": 38,
+      "baselinePassed": 1531,
+      "baselineFailures": 38,
+      "newFailures": 0
+    },
+    "interaktiv": {
+      "command": "npm run interaktiv",
+      "passed": 702,
+      "knownFailures": 6,
+      "newFailures": 0,
+      "sameKnownFailureSetAsR163": true
+    },
+    "typeScript": {
+      "command": "npx tsc --noEmit",
+      "status": "pass"
+    },
+    "build": {
+      "command": "npm run build",
+      "status": "pass",
+      "staticRoutes": 13
+    },
+    "auditContent": {
+      "command": "npm run audit:content",
+      "status": "pass",
+      "structuralDefects": 0
+    },
+    "diffCheck": "pass",
+    "patchReapply": "pass: 0 additional manifest entries; corrections remain idempotent"
+  },
+  "patch": "scripts/patches/add_hoeren_audio_r164.py",
+  "followup": {
+    "reviewRule": "R164b",
+    "remainingTargetIds": [
+      "t-a2-031",
+      "t-a2-032"
+    ],
+    "note": "استكمال التسجيلين المتبقيين بعد هذه الدفعة الجزئية؛ لا تُعلن تغطية A2 كاملة قبلها."
+  }
+}

@@ -522,5 +522,40 @@
     }
   },
   "patch": "scripts/patches/review_a2_texts_02.py",
-  "qualityStatus": "completed"
+  "qualityStatus": "completed",
+  "followups": [
+    {
+      "id": "R164a",
+      "date": "2026-10-12",
+      "generatedAudioIds": [
+        "t-a2-21",
+        "t-a2-22",
+        "t-a2-23",
+        "t-a2-24",
+        "t-a2-25",
+        "t-a2-26",
+        "t-a2-27",
+        "t-a2-28",
+        "t-a2-29",
+        "t-a2-30"
+      ],
+      "remainingTargetIdsWithoutAudio": [
+        "t-a2-031",
+        "t-a2-032"
+      ],
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "coverageAfter": {
+        "hoerenAudio": "120/157",
+        "A2": "30/32",
+        "remainingWithoutLocalMP3": 37
+      },
+      "validation": {
+        "id3v2HeaderValidated": true,
+        "mpegLayer3FramesValidated": true,
+        "humanListening": false,
+        "pronunciationQualityJudged": false
+      },
+      "note": "متابعة لاحقة لتدقيق R157: سُجّلت النصوص العشرة الأولى فقط؛ بقي النصان t-a2-031 وt-a2-032 بلا MP3، لذلك لا تُعد تغطية A2 مكتملة."
+    }
+  ]
 }
