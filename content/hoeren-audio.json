@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-02",
-  "count": 94,
+  "count": 104,
   "einsaetze": [
     {
       "id": "t-a1-01",
@@ -659,7 +659,77 @@
       "voice": "voice-00 (de-DE, Arena TTS)",
       "level": "A0",
       "bytes": 62733
+    },
+    {
+      "id": "t-a0-015",
+      "file": "/audio/hoeren/t-a0-015.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A0",
+      "bytes": 65229
+    },
+    {
+      "id": "t-a1-021",
+      "file": "/audio/hoeren/t-a1-021.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 152013
+    },
+    {
+      "id": "t-a1-022",
+      "file": "/audio/hoeren/t-a1-022.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 153933
+    },
+    {
+      "id": "t-a1-023",
+      "file": "/audio/hoeren/t-a1-023.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 180333
+    },
+    {
+      "id": "t-a1-024",
+      "file": "/audio/hoeren/t-a1-024.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 188301
+    },
+    {
+      "id": "t-a1-025",
+      "file": "/audio/hoeren/t-a1-025.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 206061
+    },
+    {
+      "id": "t-a1-026",
+      "file": "/audio/hoeren/t-a1-026.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 166509
+    },
+    {
+      "id": "t-a1-027",
+      "file": "/audio/hoeren/t-a1-027.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 154221
+    },
+    {
+      "id": "t-a1-028",
+      "file": "/audio/hoeren/t-a1-028.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 153741
+    },
+    {
+      "id": "t-a1-029",
+      "file": "/audio/hoeren/t-a1-029.mp3",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "level": "A1",
+      "bytes": 153069
     }
   ],
-  "updated": "2026-10-11"
+  "updated": "2026-10-12"
 }

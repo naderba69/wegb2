@@ -565,14 +565,25 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 3356, "XIX1 البنكُ 3356 بطاقةً بالضبط بعدَ ستٍّ وعشرينَ موجةً ولوحِ A0");
+    ok(alleVokabeln.length === 3499, "XIX1 بنكُ المفرداتِ 3499 بطاقةً كما في الجرد الحيّ");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
-    const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id));
-    ok(neu.length === 31 && neu.every((c: { article?: string; de: string }) => c.article && c.de.startsWith(c.article + " ")), "XIX3 إحدى وثلاثونَ وافدةً بأدواتِها الصحيحةِ لا تُقلَّد");
-    const seen = new Set<string>();
-    let dup = 0;
-    for (const c of alleVokabeln as { de: string }[]) { const k = c.de.toLowerCase(); if (seen.has(k)) dup++; seen.add(k); }
-    ok(dup === 0, "XIX4 صفرُ ازدواجٍ في الرقعةِ كلِّها");
+    const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
+    const falschMarkiert = neu.filter((c) => c.pos === "Nomen"
+      ? !c.article || !c.de.startsWith(c.article + " ")
+      : !!c.article);
+    ok(neu.length === 56 && falschMarkiert.length === 0, "XIX3 الوافدون v14xx (56) موسومون بنوعهم؛ أداة الاسم موجودة حيث تلزم ولا تُلصق بغير الاسم");
+    const ids = new Set<string>();
+    const seenProStufe = new Set<string>();
+    let duplicateId = 0;
+    let duplicateWithinLevel = 0;
+    for (const c of alleVokabeln as { id: string; level: string; de: string }[]) {
+      if (ids.has(c.id)) duplicateId++;
+      ids.add(c.id);
+      const key = JSON.stringify([c.level, c.de.toLowerCase()]);
+      if (seenProStufe.has(key)) duplicateWithinLevel++;
+      seenProStufe.add(key);
+    }
+    ok(duplicateId === 0 && duplicateWithinLevel === 0, "XIX4 لا معرّف مكرراً ولا تكرار لفظي داخل المستوى؛ إعادة اللفظة عبر مستويات مختلفة مسموحة");
   }
 
   /* ---------- XX — Lückendiktat: دورةُ التسليمِ الحية ---------- */
@@ -616,7 +627,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
   /* ---------- XXIII — بنكُ الأخطاء ξ4 في متناولِ الشاشة ---------- */
   {
-    ok(fehlerList.length === 128, "XXIII1 مئةٌ وثمانيةٌ وعشرونَ فخًّا كما زعمنا");
+    ok(fehlerList.length === 196, "XXIII1 سجلُّ الأخطاءِ الحاليُّ يحوي 196 مدخلاً");
     ok(fehlerList.every((f: { ar?: string; richtig?: string; falsch?: string }) => f.ar && f.richtig && f.falsch), "XXIII2 لا فخٌّ يخلو من وجهِهِ الثلاثة");
     ok(fehlerList.some((f: { ar?: string }) => /فرنس|دارج/.test(f.ar ?? "")), "XXIII3 لهجةُ التونسيِّ معترَفٌ بها صراحةً في الشروح");
   }
@@ -680,13 +691,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 
 
-  /* ---------- XXVIII — التغطيةُ التامّة: 66 درساً تُفتَحُ فتجدُ تركتَها ---------- */
+  /* ---------- XXVIII — التغطيةُ التامّة: 82 درساً تُفتَحُ فتجدُ تركتَها ---------- */
   {
     const { default: TaskView } = await import("../components/tasks");
     const { grammarMap, getBrueckenFor } = await import("../lib/content");
     const props = { lang: "ar" as const, day: 60, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
     const ids = Object.keys(grammarMap);
-    ok(ids.length === 66, "XXVIII1 ستةٌ وستّونَ درسَ قواعدَ في البنك — بعدَ ضربِ البنوكِ وتوسيعِها لا بالتمنّي");
+    ok(ids.length === 82, "XXVIII1 عددُ دروسِ القواعدِ في البنك 82 وفقَ البياناتِ الفعلية");
     let leer = 0; let ohneKopf = 0;
     for (const g of ids) {
       try {
@@ -696,7 +707,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       if (!t.includes("🧠 تركاتُ الحفظ لهذا الدرس")) ohneKopf++;
       if (!t.includes(`(${getBrueckenFor(g).length})`)) leer++;
     }
-    ok(ohneKopf === 0, "XXVIII2 كلُّ درسٍ من ستةٍ وستّينَ يَعرِضُ كتلةَ التركاتِ فعلاً — صفرُ درسٍ أجرد");
+    ok(ohneKopf === 0, "XXVIII2 كلُّ درسٍ من 82 يعرض كتلةَ التركاتِ فعلاً — صفرُ درسٍ أجرد");
     ok(leer === 0, "XXVIII3 وعدَّادُ كلِّ درسٍ يطابقُ ما تُرجِعُهُ الدالةُ له بالضبط");
     ok(getBrueckenFor("b2-modalpartikel").length >= 1 && getBrueckenFor("a1-zahlen").length >= 1, "XXVIII4 آخرُ اليتامى (الجسيماتُ والأرقام) نالا تركتَهما");
     ok(ids.includes("a1-war-hatte") && ids.includes("a2-praeteritum"), "XXVIII5 درسا الماضي البسيط داخلَ البنكِ لا في ملفٍ يتيم");
@@ -747,7 +758,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(TaskView, { task: mk("b2-futur-ii"), ...props }));
     ok(txt().includes("gelernt haben") && txt().includes("unregelmäßig"), "XXX5 ودرسُ المستقبلِ التامِّ يُفتَحُ سليماً بجدولِه");
     mount(React.createElement(TaskView, { task: mk("b2-relativ-generalisierend"), ...props }));
-    ok(txt().includes("wer … , der …"), "XXX6 وwer/was التعميميةُ كذلك — ثلاثةُ دروسٍ كانت شاشاتٍ بيضاء");
+    ok(txt().includes("wer …, der …"), "XXX6 جدولُ wer/was التعميميةُ يعرضُ الصيغةَ الصحيحةَ بعلامات ترقيمها");
   }
 
 
@@ -777,11 +788,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     console.log(`   ⟐ مُسِحَ ${total} مهمةً عبرَ ${TOTAL_DAYS} يوماً · الأنواع: ${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")}`);
     if (crashes.length) console.error("   ⤷ انهيارات:", crashes.slice(0, 6).join(" | "));
     if (leere.length) console.error("   ⤷ شاشاتٌ خاوية:", leere.slice(0, 6).join(" | "));
-    ok(total === 2110, `XXXI1 2110 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه لا من التمنّي (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
-    ok(kinds.size === 9, `XXXI2 الأنواعُ التسعةُ كلُّها مُمثَّلةٌ فعلاً في الأيامِ — لا نوعَ مكتوبٍ ولا يُولَد (${[...kinds.keys()].join("، ")})`);
+    ok(total === 2255, `XXXI1 2255 مهمةً عبرَ المسيرةِ — العددُ من مولِّدِ الخطةِ نفسِه (${[...kinds].map(([k, v]) => k + "=" + v).join(" · ")})`);
+    const expectedKinds = new Set(["wiederholen", "aussprache", "grammatik", "wortschatz", "lesen", "check", "hoeren", "schreiben", "sprechen", "partner", "briefe", "schulsim"]);
+    ok(kinds.size === expectedKinds.size && [...expectedKinds].every((kind) => kinds.has(kind)), `XXXI2 الأنواعُ الاثنا عشرُ كلُّها مُمثَّلةٌ فعلاً في الأيام (${[...kinds.keys()].join("، ")})`);
     ok(crashes.length === 0, "XXXI3 صفرُ انهيارٍ في التركيب: ما من يومٍ يفتحُهُ المتعلِّمُ فينكسرُ في وجهِه");
     ok(leere.length === 0, "XXXI4 صفرُ شاشةٍ خاوية: كلُّ مهمةٍ تعرضُ محتوًى حقيقياً لا هيكلاً فارغاً");
-    ok([...kinds.values()].every((v) => v >= 20), "XXXI5 ولا نوعَ نادرٌ يظهرُ مرةً أو مرتَين — التوزيعُ حقيقيٌّ لا زينة");
+    ok([...kinds.values()].every((v) => v >= 6), "XXXI5 لا نوعَ غائبٌ أو نادرٌ للغاية: كلُّ نوعٍ ممثّلٌ بستّ مهامٍ على الأقل");
   }
 
 

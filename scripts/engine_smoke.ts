@@ -541,6 +541,15 @@ const vocabRepeatAudit = (() => {
     ok(Object.values(hoerenAudio).every((e) => !e.file.startsWith("http")), "K26i صفر عنوان مطلق في كل مسار — كل شيء يخدم من الدار");
     const a0Batch = ["t-a0-01", "t-a0-06", "t-a0-07", "t-a0-08", "t-a0-09", "t-a0-10", "t-a0-011", "t-a0-012", "t-a0-013", "t-a0-014"];
     ok(a0Batch.every((id) => hoerenAudio[id]?.level === "A0" && existsSync(`public/audio/hoeren/${id}.mp3`)), "K26j دفعةُ A0 الجديدةُ مسجّلةٌ في المانيفستو ولها ملفاتُها العشرةُ الفعليةُ");
+    const r162Batch = ["t-a0-015", "t-a1-021", "t-a1-022", "t-a1-023", "t-a1-024", "t-a1-025", "t-a1-026", "t-a1-027", "t-a1-028", "t-a1-029"];
+    const r162Dialog = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze as { id: string }[];
+    const r162Diktat = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze as { id: string }[];
+    ok(r162Batch.length === 10 && new Set(r162Batch).size === 10 && r162Batch.every((id) => {
+      const level = id === "t-a0-015" ? "A0" : "A1";
+      return hoerenAudio[id]?.level === level && hoerenAudio[id]?.voice === "voice-00 (de-DE, Arena TTS)" &&
+        hoerenAudio[id]?.file === `/audio/hoeren/${id}.mp3` && existsSync(`public/audio/hoeren/${id}.mp3`);
+    }) && [...r162Dialog, ...r162Diktat].every((entry) => !r162Batch.includes(entry.id)),
+      "K26k دفعة R162 (A0 واحد + تسعة A1) بصوت voice-00 في مانيفستو HörLabor وحده وبمسارات صحيحة");
     const dman = JSON.parse(require("fs").readFileSync("content/diktat-audio.json", "utf8")) as { einsaetze: { id: string; file: string; level: string; bytes: number }[] };
     const ddisk = require("fs").readdirSync("public/audio/diktat").filter((f: string) => f.endsWith(".mp3")).map((f: string) => f.replace(/\.mp3$/, "")).sort();
     ok(dman.einsaetze.length === ddisk.length && dman.einsaetze.every((e) => ddisk.includes(e.id)) && ddisk.length === 180, "K27a المصنع مقفل: 180/180 — العددُ جُمِّد إقراراً بالتمام كما فُعِل في hoeren، بعد أن كان حياً في الطريق");
@@ -2191,7 +2200,7 @@ void 0;
     const mit = alleVokabeln.filter((k) => k.exampleDe);
     const fehlWort = mit.filter((k) => !wortDrin(k.de, k.exampleDe!)).map((k) => k.id);
     ok(mit.length === alleVokabeln.length, `K72a كلُّ البطاقاتِ بجملةِ مثال: ${mit.length}/${alleVokabeln.length} (كانت 1955 قبلَ الدفعات؛ 7 دفعاتٍ موثَّقة)`);
-    ok(alleVokabeln.every((k) => !!k.exampleDe && !!k.exampleAr), "K72h كلُّ بطاقةٍ من المستوياتِ الخمسةِ لها مثالٌ وترجمتُه — 3356/3356");
+    ok(alleVokabeln.every((k) => !!k.exampleDe && !!k.exampleAr), "K72h كلُّ بطاقةٍ من المستوياتِ الخمسةِ لها مثالٌ وترجمتُه — 3499/3499");
     const batches = (require("../content/beispiele-batches.json") as { batches: { nr: number; ids: string[] }[] }).batches;
     const neuIds = new Set(batches.flatMap((b) => b.ids));
     const altFehl = fehlWort.filter((id) => !neuIds.has(id));
@@ -2689,8 +2698,8 @@ void 0;
   ok(nD === 156 && lies.includes("dialogues **156**"), `K125b الحواراتُ 156 في القرصِ والسطرِ والفهرس (${nD})`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 80 && nH === 94 && nH + nG + nK + nS === 362 && lies.includes("94 ملفاً صوتياً") && lies.includes("362 ملفاً صوتياً"),
-    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 362`);
+  ok(nG === 80 && nH === 104 && nH + nG + nK + nS === 372 && lies.includes("104 ملفاً صوتياً") && lies.includes("372 ملفاً صوتياً"),
+    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 372`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
   const nAb = dialogues.flatMap((d) => ablenker(d)).length;
@@ -10606,7 +10615,7 @@ void 0;
   const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
   const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
   const currentHoerenIds = hoerenAudio.filter((entry:any) => ids.includes(entry.id)).map((entry:any) => entry.id).sort();
-  const expectedHoerenIds = ids.slice(0, 9).sort();
+  const expectedHoerenIds = ids.slice().sort();
   const noCrossManifestEntries = [...dialogAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
   const matchingFiles: string[] = [];
   const scanAudio = (dir:string):void => {
@@ -10623,10 +10632,13 @@ void 0;
     reviewA0Extras.audioAudit.matchingFilesPresent === 0 && reviewA0Extras.audioAudit.listened === false &&
     reviewA0Extras.audioAudit.generated === false && reviewA0Extras.audioAudit.modified === false;
   const followupR161 = reviewA0Extras.followups?.find((entry:any) => entry.id === "R161");
+  const followupR162 = reviewA0Extras.followups?.find((entry:any) => entry.id === "R162");
   ok(JSON.stringify(currentHoerenIds) === JSON.stringify(expectedHoerenIds) && noCrossManifestEntries &&
-    matchingFiles.length === 9 && matchingFiles.every((path) => path.includes("/audio/hoeren/")) && historicalAudit &&
-    followupR161?.generatedAudioIds?.length === 10 && followupR161?.validation?.humanListening === false,
-    "K226e تقرير R155 لقطةٌ تاريخيةٌ قبل الصوت؛ تسعةُ ملفاتٍ لاحقةٌ في مانيفستو الاستماع وحده من أصل عشرة");
+    matchingFiles.length === 10 && matchingFiles.every((path) => path.includes("/audio/hoeren/")) && historicalAudit &&
+    followupR161?.generatedAudioIds?.length === 10 && followupR161?.validation?.humanListening === false &&
+    followupR162?.generatedAudioIds?.includes("t-a0-015") && followupR162?.remainingTargetIdsWithoutAudio?.length === 0 &&
+    followupR162?.validation?.humanListening === false,
+    "K226e تدقيق R155 التاريخي محفوظ؛ ملفات نصوصه العشرة لاحقاً في مانيفستو الاستماع وحده بعد R161/R162");
   ok(reviewA0Extras.limits.cefr && reviewA0Extras.limits.human && reviewA0Extras.limits.fiction &&
     reviewA0Extras.gates.planned === "K226a–f" && reviewA0Extras.totals.unresolved === 0,
     "K226f حدود CEFR والمراجعة البشرية والسيناريوهات موضحة؛ لا فجوات مصطنعة");
@@ -10665,7 +10677,8 @@ void 0;
     !clinic.de.includes("Das ist eine Erkältung.") && clinic.ar.includes("ربما تكون نزلة برد") &&
     reviewA1Extras.limits.medical.includes("لا تشخيص"),
     "K227d الطبيبة متسقة مع العنوان والتشخيص مصوغ كاحتمال لا كحقيقة طبية مؤكدة");
-  const weekend = batch[11], clothes = batch[8], checkout = batch[4], route = batch[13], birthday = batch[14];
+  const weekend = batch[11], clothes = batch[8], checkout = batch[4], route = batch[13], birthday = batch[14], weather = batch[5];
+  const r162AudioTexts = batch.slice(0, 9);
   ok(weekend.questions[0].promptDe === "Was mache ich am Samstag?" &&
     weekend.questions[0].answer === "Ich putze die Wohnung und kaufe ein" &&
     weekend.questions[1].promptDe === "Was mache ich am Sonntagabend?" &&
@@ -10674,27 +10687,37 @@ void 0;
     clothes.ar.includes("زوجاً من الأحذية السوداء") && checkout.de.includes("Die Verkäuferin gibt mir den Kassenbon.") &&
     route.questions[0].explanationAr.includes("عندها") &&
     birthday.de.includes("Auf dem Tisch stehen Teller und Tassen. Es gibt auch Saft.") &&
-    birthday.ar.includes("زهوراً أيضاً") && !birthday.ar.includes("باقة زهور"),
-    "K227e أسئلة نهاية الأسبوع متسقة؛ العدد والمرجع والاتجاه وجملة العصير وترجمة Blumen سليمة");
+    birthday.ar.includes("زهوراً أيضاً") && !birthday.ar.includes("باقة زهور") &&
+    weather.de.startsWith("An einem sonnigen Tag") && !weather.de.includes("Heute") &&
+    r162AudioTexts.every((text:any) => text.wordCountDe === text.de.split(/\s+/).filter(Boolean).length) &&
+    weather.ar.startsWith("الطقس جميل جداً في يوم مشمس") && weather.questions[1].promptAr === "ماذا أفعل بعد الظهر؟",
+    "K227e أسئلة نهاية الأسبوع متسقة؛ الطقس مثال غير آني، وسؤال المتكلم والعدّ اللفظي مضبوطان");
   const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
   const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
   const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
-  const noManifestEntries = [...dialogAudio, ...hoerenAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
+  const currentHoerenIds = hoerenAudio.filter((entry:any) => ids.includes(entry.id)).map((entry:any) => entry.id).sort();
+  const expectedHoerenIds = ids.slice(0, 9).sort();
+  const noCrossManifestEntries = [...dialogAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
   const matchingFiles: string[] = [];
   const scanAudio = (dir:string):void => {
     if (!existsSync(dir)) return;
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
       const path = dir + "/" + entry.name;
       if (entry.isDirectory()) scanAudio(path);
-      else if (ids.includes(entry.name.replace(/\\.[^.]*$/, ""))) matchingFiles.push(path);
+      else if (ids.includes(entry.name.replace(/\.[^.]*$/, ""))) matchingFiles.push(path);
     }
   };
   scanAudio("public/audio");
-  ok(noManifestEntries && matchingFiles.length === 0 && reviewA1Extras.audioAudit.dialogAudioManifestEntries === 0 &&
+  const historicalAudit = reviewA1Extras.audioAudit.dialogAudioManifestEntries === 0 &&
     reviewA1Extras.audioAudit.hoerenAudioManifestEntries === 0 && reviewA1Extras.audioAudit.diktatAudioManifestEntries === 0 &&
     reviewA1Extras.audioAudit.matchingFilesPresent === 0 && reviewA1Extras.audioAudit.listened === false &&
-    reviewA1Extras.audioAudit.generated === false && reviewA1Extras.audioAudit.modified === false,
-    "K227f مانيفستو الحوار والاستماع والإملاء منفصلة؛ لا إدخالات أو ملفات لهذه المعرّفات ولا ادعاء بالاستماع");
+    reviewA1Extras.audioAudit.generated === false && reviewA1Extras.audioAudit.modified === false;
+  const followupR162 = reviewA1Extras.followups?.find((entry:any) => entry.id === "R162");
+  ok(JSON.stringify(currentHoerenIds) === JSON.stringify(expectedHoerenIds) && noCrossManifestEntries &&
+    matchingFiles.length === 9 && matchingFiles.every((path) => path.includes("/audio/hoeren/")) && historicalAudit &&
+    followupR162?.generatedAudioIds?.length === 9 && followupR162?.remainingTargetIdsWithoutAudio?.length === 6 &&
+    followupR162?.validation?.humanListening === false,
+    "K227f لقطة تدقيق R156 تاريخية؛ تسعة تسجيلات لاحقة في مانيفستو HörLabor وحده بعد R162");
 }
 /* ═══ K228 — اثنا عشر نصاً A2 إضافياً (R157). ═══ */
 {

@@ -498,5 +498,99 @@
     }
   },
   "patch": "scripts/patches/review_a1_texts_04.py",
-  "qualityStatus": "completed"
+  "qualityStatus": "completed",
+  "followups": [
+    {
+      "id": "R162",
+      "date": "2026-10-12",
+      "scope": "لاحق لتدقيق R156؛ لا يغيّر audioAudit التاريخي ولا يوسم بقية النصوص بصوت غير موجود",
+      "sourceAlignmentCorrections": [
+        {
+          "id": "t-a1-023",
+          "fields": [
+            "wordCountDe"
+          ],
+          "before": {
+            "wordCountDe": 114
+          },
+          "after": {
+            "wordCountDe": 113
+          },
+          "reason": "مطابقة بيانات العدد للكلمات المفصولة بمسافات في النص الألماني الحالي."
+        },
+        {
+          "id": "t-a1-025",
+          "fields": [
+            "wordCountDe"
+          ],
+          "before": {
+            "wordCountDe": 118
+          },
+          "after": {
+            "wordCountDe": 119
+          },
+          "reason": "مطابقة بيانات العدد للكلمات المفصولة بمسافات في النص الألماني الحالي."
+        },
+        {
+          "id": "t-a1-026",
+          "fields": [
+            "de",
+            "ar",
+            "questions[1].promptAr",
+            "wordCountDe"
+          ],
+          "before": {
+            "de": "Heute ist das Wetter sehr schön. Die Sonne scheint und der Himmel ist blau. Es ist nicht zu kalt und nicht zu heiß. Es sind etwa zwanzig Grad. Ich ziehe ein T-Shirt und eine leichte Jacke an. Am Nachmittag gehe ich spazieren und höre Musik. Ich rufe meine Freundin an, und wir treffen uns im Park. Dort sitzen wir auf einer Bank, sprechen und lachen. Wir sehen viele Kinder und einen kleinen Hund. Später kaufen wir ein Eis. Am Abend koche ich zu Hause Nudeln. Danach sehe ich aus dem Fenster: Der Himmel ist noch blau. Ich öffne das Fenster und höre die Vögel. So ein Tag gefällt mir sehr.",
+            "ar": "الطقس اليوم جميل جداً. الشمس مشرقة والسماء زرقاء. الجو ليس بارداً جداً ولا حاراً جداً. الحرارة نحو عشرين درجة. أرتدي تيشيرت وسترة خفيفة. أتمشى بعد الظهر وأستمع إلى الموسيقى. أتصل بصديقتي ونلتقي في الحديقة. نجلس هناك على مقعد ونتحدث ونضحك. نرى كثيراً من الأطفال وكلباً صغيراً. ثم نشتري بوظة. أطبخ المعكرونة في البيت مساءً. بعد ذلك أنظر من النافذة: ما زالت السماء زرقاء. أفتح النافذة وأسمع العصافير. يعجبني كثيراً يوم كهذا.",
+            "questions[1].promptAr": "ماذا يفعل المتحدث بعد الظهر؟",
+            "wordCountDe": 110
+          },
+          "after": {
+            "de": "An einem sonnigen Tag ist das Wetter sehr schön. Die Sonne scheint und der Himmel ist blau. Es ist nicht zu kalt und nicht zu heiß. Es sind etwa zwanzig Grad. Ich ziehe ein T-Shirt und eine leichte Jacke an. Am Nachmittag gehe ich spazieren und höre Musik. Ich rufe meine Freundin an, und wir treffen uns im Park. Dort sitzen wir auf einer Bank, sprechen und lachen. Wir sehen viele Kinder und einen kleinen Hund. Später kaufen wir ein Eis. Am Abend koche ich zu Hause Nudeln. Danach sehe ich aus dem Fenster: Der Himmel ist noch blau. Ich öffne das Fenster und höre die Vögel. So ein Tag gefällt mir sehr.",
+            "ar": "الطقس جميل جداً في يوم مشمس. الشمس مشرقة والسماء زرقاء. الجو ليس بارداً جداً ولا حاراً جداً. الحرارة نحو عشرين درجة. أرتدي تيشيرت وسترة خفيفة. أتمشى بعد الظهر وأستمع إلى الموسيقى. أتصل بصديقتي ونلتقي في الحديقة. نجلس هناك على مقعد ونتحدث ونضحك. نرى كثيراً من الأطفال وكلباً صغيراً. ثم نشتري بوظة. أطبخ المعكرونة في البيت مساءً. بعد ذلك أنظر من النافذة: ما زالت السماء زرقاء. أفتح النافذة وأسمع العصافير. يعجبني كثيراً يوم كهذا.",
+            "questions[1].promptAr": "ماذا أفعل بعد الظهر؟",
+            "wordCountDe": 113
+          },
+          "reason": "تأطير الطقس بوصفه مشهداً تدريبياً غير آني، ومطابقة السؤال العربي لضمير المتكلم في الألمانية والإجابة."
+        }
+      ],
+      "generatedAudioIds": [
+        "t-a1-021",
+        "t-a1-022",
+        "t-a1-023",
+        "t-a1-024",
+        "t-a1-025",
+        "t-a1-026",
+        "t-a1-027",
+        "t-a1-028",
+        "t-a1-029"
+      ],
+      "manifest": "content/hoeren-audio.json",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "remainingTargetIdsWithoutAudio": [
+        "t-a1-030",
+        "t-a1-031",
+        "t-a1-032",
+        "t-a1-033",
+        "t-a1-034",
+        "t-a1-035"
+      ],
+      "coverageAfter": {
+        "hoerenAudio": 104,
+        "texts": 157,
+        "A0": "15/15",
+        "A1": "29/35",
+        "A2": "20/32",
+        "B1": "20/35",
+        "B2": "20/40"
+      },
+      "validation": {
+        "fileBytesRecordedInManifest": true,
+        "id3AndMpegLayer3FramesValidated": true,
+        "humanListening": false
+      },
+      "separation": "التسجيلات في مانيفستو HörLabor وحده؛ لم تُمس مانيفستو الحوار أو الإملاء.",
+      "germanWordsAfter": 1622
+    }
+  ]
 }

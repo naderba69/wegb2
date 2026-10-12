@@ -815,6 +815,32 @@
         "humanListening": false
       },
       "separation": "لم تتغير مانيفستات الحوار والإملاء؛ لا تُحسب هذه الملفات تغطيةً لهما."
+    },
+    {
+      "id": "R162",
+      "date": "2026-10-12",
+      "scope": "إكمال لاحق لتسجيل R155؛ تبقى audioAudit الأصلية لقطة تاريخية كما كانت وقت المراجعة",
+      "generatedAudioIds": [
+        "t-a0-015"
+      ],
+      "manifest": "content/hoeren-audio.json",
+      "voice": "voice-00 (de-DE, Arena TTS)",
+      "remainingTargetIdsWithoutAudio": [],
+      "coverageAfter": {
+        "hoerenAudio": 104,
+        "texts": 157,
+        "A0": "15/15",
+        "A1": "29/35",
+        "A2": "20/32",
+        "B1": "20/35",
+        "B2": "20/40"
+      },
+      "validation": {
+        "fileBytesRecordedInManifest": true,
+        "id3AndMpegLayer3FramesValidated": true,
+        "humanListening": false
+      },
+      "separation": "R162 أضاف نص A0 إلى مانيفستو HörLabor؛ مانيفستو الحوار والإملاء لم تتغيرا."
     }
   ]
 }
