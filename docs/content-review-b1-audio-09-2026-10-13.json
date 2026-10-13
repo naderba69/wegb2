@@ -1,0 +1,305 @@
+{
+  "reviewRule": "R166",
+  "date": "2026-10-13",
+  "scope": "إعادة تدقيق نصوص B1 الخمسة t-b1-31–t-b1-35 التي راجعها R158، مع إصلاحات متابعة محددة وتسجيلها في HörLabor. قُرئ الألماني والعربي كاملاً كلمةً وجملةً، والعناوين والأسئلة والخيارات والمفاتيح والشروح؛ لا حذف لمورد أو سؤال.",
+  "method": "scripts/patches/add_hoeren_audio_r166.py يحرس خمس انتقالات: ثلاثة حقول كاملة واستبدالان مفردان داخل ترجمتين. --prepare قابل لإعادة التشغيل؛ بُنيت تجزئات SHA-256 من حقول de النهائية بعد المراجعة والتوليد.",
+  "sourceReview": {
+    "priorTextReviewRule": "R158",
+    "priorReport": "docs/content-review-b1-texts-01-2026-10-11.json",
+    "priorAudioStatePreserved": true
+  },
+  "targetIds": [
+    "t-b1-31",
+    "t-b1-32",
+    "t-b1-33",
+    "t-b1-34",
+    "t-b1-35"
+  ],
+  "resources": [
+    {
+      "id": "t-b1-31",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein Umzug in eine neue Stadt",
+      "titleAr": "مثال: الانتقال إلى مدينة جديدة",
+      "germanWords": 181,
+      "arabicWords": 137,
+      "sentenceEndMarks": 14,
+      "questions": 2,
+      "correctedFields": 2,
+      "judgement": "مثال شخصي لا بيانات سوق: لا يُقرأ وصف الإيجارات على أنه متوسط إحصائي راهن؛ عُدّل خيار الإجابة ليطابق النص نحوياً."
+    },
+    {
+      "id": "t-b1-32",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Vegetarisch leben — meine Erfahrung",
+      "titleAr": "مثال: العيش نباتياً — تجربتي",
+      "germanWords": 180,
+      "arabicWords": 154,
+      "sentenceEndMarks": 13,
+      "questions": 2,
+      "correctedFields": 1,
+      "judgement": "تجربة غذائية فردية لا نصيحة ولا علاقة سببية صحية مثبتة؛ حُفظت دلالة traditionell في الترجمة."
+    },
+    {
+      "id": "t-b1-33",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein Bewerbungsgespräch",
+      "titleAr": "مثال: مقابلة عمل",
+      "germanWords": 169,
+      "arabicWords": 130,
+      "sentenceEndMarks": 15,
+      "questions": 2,
+      "correctedFields": 0,
+      "judgement": "سيناريو مقابلة عمل؛ تسلسل التحضير والأسئلة والدعوة الثانية متسق، والترجمة تصرح بعدم تلقي عرض عمل بعد."
+    },
+    {
+      "id": "t-b1-34",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein Unfall im Straßenverkehr",
+      "titleAr": "مثال: حادث مروري",
+      "germanWords": 172,
+      "arabicWords": 142,
+      "sentenceEndMarks": 16,
+      "questions": 2,
+      "correctedFields": 1,
+      "judgement": "سيناريو تدريبي بلا مكان/مصدر/تاريخ؛ تسلسل الإصابة وطلب المساعدة متماسك، والترجمة تحفظ wieder."
+    },
+    {
+      "id": "t-b1-35",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Beispiel: Ein Brief an die Zeitung: Müll im Park",
+      "titleAr": "مثال: رسالة إلى الجريدة: النفايات في الحديقة",
+      "germanWords": 169,
+      "arabicWords": 142,
+      "sentenceEndMarks": 12,
+      "questions": 2,
+      "correctedFields": 1,
+      "judgement": "رسالة رأي تدريبية وليست شكوى موثقة أو بياناً عن غرامات نافذة؛ السؤالان يطابقان الاقتراحات والمؤلفة."
+    }
+  ],
+  "totals": {
+    "texts": 5,
+    "germanWords": 871,
+    "arabicWords": 705,
+    "sentenceEndMarks": 70,
+    "questions": 10,
+    "correctedFields": 5,
+    "guardedTransitions": 5,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-b1-31.questions[1].options[1]",
+      "old": "Die vielen Grünflächen und günstige Mieten",
+      "new": "Die vielen Grünflächen und die günstigen Mieten",
+      "rationale": "إكمال أداة التعريف في طرفي العطف؛ الخيار يطابق تركيب النص الألماني، مع بقاء المفتاح مساوياً للخيار."
+    },
+    {
+      "unit": "t-b1-31.questions[1].answer",
+      "old": "Die vielen Grünflächen und günstige Mieten",
+      "new": "Die vielen Grünflächen und die günstigen Mieten",
+      "rationale": "تحديث المفتاح بعد إصلاح الخيار؛ ظل صحيحاً ومطابقاً لخيار واحد فريد."
+    },
+    {
+      "unit": "t-b1-32.ar",
+      "old": "لأن عائلتي تطهو اللحم كثيراً",
+      "new": "لأن عائلتي، بحكم عاداتها، تطهو اللحم كثيراً",
+      "rationale": "استعادة معنى traditionell في النص؛ لا تغيير في مضمون التجربة الصحية الشخصية."
+    },
+    {
+      "unit": "t-b1-34.ar",
+      "old": "وعزّز ذلك لديّ الإحساس بأهمية الانتباه في الطريق",
+      "new": "وذكّرني هذا الحادث مجدداً بأهمية الانتباه في حركة المرور",
+      "rationale": "ترجمة wieder gezeigt مباشرةً بمعنى التذكير مجدداً، وحفظ سياق Verkehr والمقابلة بين المشي والقيادة."
+    },
+    {
+      "unit": "t-b1-35.questions[1].promptAr",
+      "old": "ما الإجراء الآخر الذي يقترحه الكاتب؟",
+      "new": "ما الإجراء الآخر الذي تقترحه كاتبة الرسالة؟",
+      "rationale": "مطابقة صيغة التأنيث مع المؤلفة Anwohnerin وتوقيع الرسالة."
+    }
+  ],
+  "factualReview": {
+    "t-b1-31": "العنوان يبدأ بـBeispiel؛ مقارنة هامبورغ/لايبزيغ جزء من رواية شخصية افتراضية، لا إحصاء إيجارات راهناً ولا تعميم سوقي.",
+    "t-b1-32": "العنوان يعلن مثالاً وتجربة شخصية؛ لا يقرر النص أن النظام النباتي سبب انخفاض الكوليسترول أو زيادة الطاقة ولا يقدم علاجاً. راجعنا فقط معقولية مصادر الحديد/البروتين النباتية؛ مرجع DGE عن vegan أكثر تقييداً من vegetarisch، فلا يُعمّم حكمه على جميع النباتيين.",
+    "t-b1-33": "قصة مقابلة تدريبية باسم شركة غير محدد؛ لا قاعدة توظيف أو وعد بنتيجة.",
+    "t-b1-34": "حادث مروري افتراضي غير منسوب إلى موقع أو تقرير حقيقي؛ لا استنتاج قانوني أو إسعافي.",
+    "t-b1-35": "رسالة نموذجية ورأي اقتراحي؛ لا ادعاء بأن رقابة أو غرامات بعينها سارية في مدينة حقيقية."
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "name": "Deutsche Gesellschaft für Ernährung (DGE), FAQ vegane Ernährung",
+      "url": "https://www.dge.de/gesunde-ernaehrung/faq/faqs-vegane-ernaehrung/",
+      "relevance": "يسرد البروتين والحديد ضمن عناصر تحتاج انتباهاً في النظام vegan ويذكر Hülsenfrüchte/Nüsse وSpinat كمصادر نباتية؛ استُخدم لمراجعة أمثلة الطعام فقط مع التنبيه إلى اختلاف نطاقه عن vegetarisch."
+    }
+  ],
+  "audio": {
+    "generatedAudioIds": [
+      "t-b1-31",
+      "t-b1-32",
+      "t-b1-33",
+      "t-b1-34",
+      "t-b1-35"
+    ],
+    "voice": "voice-01 (de-DE, Arena TTS)",
+    "sourceTextExact": true,
+    "pendingRegenerationIds": [],
+    "files": [
+      {
+        "id": "t-b1-31",
+        "bytes": 261453,
+        "mpegLayer3Frames": 2722,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "sha256": "f865f55d77eb241d30ec807977d12debc9da04fadff96da150fb30c9bcf41f08"
+      },
+      {
+        "id": "t-b1-32",
+        "bytes": 283341,
+        "mpegLayer3Frames": 2950,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "sha256": "a9ab88bdbaf501984a0e7561496276f4784d9406344182efe7d3436d7252c74d"
+      },
+      {
+        "id": "t-b1-33",
+        "bytes": 262509,
+        "mpegLayer3Frames": 2733,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "sha256": "3c47d1794d291357f93ef9e8fe634062eaa893808619129232aadbe925685442"
+      },
+      {
+        "id": "t-b1-34",
+        "bytes": 253773,
+        "mpegLayer3Frames": 2642,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "sha256": "91e7d36e6dcb57218c7c7d63b549d00343ec5cfc6991b1325475b84e822190db"
+      },
+      {
+        "id": "t-b1-35",
+        "bytes": 274221,
+        "mpegLayer3Frames": 2855,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "sha256": "c97abce9acc9a66f2badf4809fc89decb0eb6fc9bb226bd84e9786081094532d"
+      }
+    ],
+    "coverage": {
+      "before": {
+        "hoerenAudio": 132,
+        "totalTexts": 157,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "30/35",
+        "B2": "20/40",
+        "remainingWithoutLocalMP3": 25
+      },
+      "after": {
+        "hoerenAudio": 137,
+        "totalTexts": 157,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "35/35",
+        "B2": "20/40",
+        "remainingWithoutLocalMP3": 20
+      }
+    },
+    "manifestCount": 137,
+    "manifestSha256AfterReapply": "ffefcb9127bdd41e01ea4fc650001ea15a738fc9a6dfafc42b81775d435b6e6f",
+    "validation": {
+      "id3v2AndMpegLayer3": "pass",
+      "allSourceHashesMatch": true,
+      "manifestDiskExactSet": true,
+      "manifestReapply": "pass: 0 new, 0 refreshed; SHA-256 stable",
+      "manifestSha256StableOnReapply": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false
+    },
+    "otherManifests": {
+      "dialogAudioEntriesForTargets": 0,
+      "diktatAudioEntriesForTargets": 0
+    }
+  },
+  "limits": {
+    "editorial": "مراجعة تحريرية لا اعتماد CEFR مستقل.",
+    "health": "t-b1-32 تجربة فردية؛ ليست نصيحة طبية ولا إثبات سببية.",
+    "city": "مقارنة الإيجار قصة مثال، لا إحصاء سوق.",
+    "audio": "تحقق بنيوي ومطابقة تجزئات المصدر؛ لم يحدث استماع بشري أو تقييم للنطق."
+  },
+  "gates": {
+    "planned": "K229e التاريخية، K234d التاريخية، K235a–e",
+    "passed": "K229e التاريخية، K234d التاريخية، K235a–e",
+    "result": "pass"
+  },
+  "validationResults": {
+    "smoke": {
+      "command": "npm run smoke",
+      "passed": 1555,
+      "knownFailures": 38,
+      "baselineFailures": 38,
+      "newFailures": 0,
+      "exitCode": 1,
+      "status": "completed with 38 known baseline failures and 0 new failures; K229e/K234d/K235a-e pass"
+    },
+    "interaktiv": {
+      "command": "npm run interaktiv",
+      "passed": 702,
+      "knownFailures": 6,
+      "newFailures": 0,
+      "sameKnownFailureSetAsR165": true,
+      "exitCode": 1,
+      "status": "completed with the same 6 known baseline failures and 0 new failures"
+    },
+    "typeScript": {
+      "command": "npx tsc --noEmit",
+      "status": "pass"
+    },
+    "build": {
+      "command": "npm run build",
+      "status": "pass",
+      "staticRoutes": 13
+    },
+    "auditContent": {
+      "command": "npm run audit:content",
+      "status": "pass",
+      "structuralDefects": 0,
+      "humanReviewHints": "21 short-dialogue signals and 6 heuristic noun-without-article candidates"
+    },
+    "npmAudit": {
+      "command": "npm audit --no-fund",
+      "status": "pass",
+      "vulnerabilities": 0
+    },
+    "diffCheck": "pass",
+    "patchReapply": "pass: --prepare twice; finalizer 0 additions/refreshes on reapply; manifest SHA-256 stable"
+  },
+  "patch": "scripts/patches/add_hoeren_audio_r166.py",
+  "next": {
+    "remainingUnrecordedTexts": 20,
+    "byLevel": {
+      "A0": 0,
+      "A1": 0,
+      "A2": 0,
+      "B1": 0,
+      "B2": 20
+    },
+    "priority": "بعد دفع R166: راجع وسجّل عشرين نص B2 المتبقية في HörLabor؛ مانيفستو الحوار content/dialog-audio.json مستقل."
+  },
+  "verifiedOn": "2026-10-13",
+  "judgement": "اكتملت إعادة تدقيق آخر خمسة نصوص B1 وتصحيح خمسة حقول وتوليد خمسة MP3 من النصوص الألمانية النهائية؛ اجتازت K229e التاريخية وK234d التاريخية وK235a–e. تغطية B1 الصوتية 35/35 وHörLabor 137/157؛ بقي 20 B2."
+}

@@ -7574,11 +7574,11 @@
         "promptAr": "ما يعجبها في لايبزيغ تحديداً؟",
         "options": [
           "Das Meer und der Hafen",
-          "Die vielen Grünflächen und günstige Mieten",
+          "Die vielen Grünflächen und die günstigen Mieten",
           "Die vielen Hochhäuser",
           "Das Nachtleben"
         ],
-        "answer": "Die vielen Grünflächen und günstige Mieten",
+        "answer": "Die vielen Grünflächen und die günstigen Mieten",
         "explanationAr": "الدليل في النص: «Was ich an Leipzig besonders mag, sind die vielen Grünflächen und die günstigen Mieten im Vergleich zu Hamburg.» — المساحات الخضراء الكثيرة والإيجارات الأقل مقارنة بهامبورغ.",
         "id": "t-b1-31-q2"
       }
@@ -7591,7 +7591,7 @@
     "titleDe": "Beispiel: Vegetarisch leben — meine Erfahrung",
     "titleAr": "مثال: العيش نباتياً — تجربتي",
     "de": "Seit einem Jahr esse ich kein Fleisch mehr. Anfangs war es schwierig, weil meine Familie traditionell viel Fleisch kocht und ich in Restaurants oft nur wenige Optionen hatte. Inzwischen habe ich viele neue Rezepte ausprobiert, vor allem aus der orientalischen und indischen Küche, in der es viele vegetarische Gerichte gibt. Was mich überrascht hat: Ich fühle mich nicht schwächer, im Gegenteil — ich habe mehr Energie und mein Cholesterinwert ist gesunken. Natürlich muss ich darauf achten, genügend Eisen und Eiweiß zu essen, zum Beispiel durch Hülsenfrüchte, Nüsse und Spinat. Meine Freunde reagieren unterschiedlich: Einige finden es gut, andere machen Witze darüber. Ich versuche, niemanden zu missionieren, sondern einfach mit gutem Beispiel voranzugehen. Inzwischen bereite ich mein Mittagessen oft am Abend vorher zu. So muss ich in der Pause nicht lange nach einem passenden Gericht suchen. Wenn ich mit Freunden essen gehe, frage ich freundlich nach den Zutaten. Meistens finden wir ein Restaurant mit mehreren vegetarischen Möglichkeiten. Meine Familie probiert jetzt auch neue Rezepte aus. Für mich ist wichtig, dass die Entscheidung zu meinem Alltag passt und ich genügend Auswahl habe.",
-    "ar": "منذ سنة لم أعد آكل اللحم. كان الأمر صعباً في البداية لأن عائلتي تطهو اللحم كثيراً، ولم أجد في المطاعم سوى خيارات قليلة. جرّبت في هذه الأثناء وصفات جديدة كثيرة، خصوصاً من المطبخين الشرقي والهندي، حيث توجد أطباق نباتية كثيرة. ما فاجأني هو أنني لم أشعر بضعف؛ بل على العكس، أصبحت لديّ طاقة أكبر وانخفض مستوى الكوليسترول لديّ. بالطبع عليّ أن أحرص على تناول ما يكفي من الحديد والبروتين، من البقوليات والمكسرات والسبانخ مثلاً. تختلف ردود فعل أصدقائي: بعضهم يعجبه ذلك، وآخرون يمزحون بشأنه. أحاول ألا أفرض رأيي على أحد، بل أكتفي بأن أكون قدوة حسنة. أجهز غدائي غالباً في المساء السابق. وهكذا لا أحتاج إلى وقت طويل للبحث عن وجبة مناسبة في الاستراحة. عندما أذهب إلى مطعم مع أصدقائي أسأل بلطف عن المكونات. وغالباً ما نجد مطعماً لديه خيارات نباتية متعددة. بدأت عائلتي أيضاً تجربة وصفات جديدة. المهم بالنسبة إليّ أن يناسب هذا القرار حياتي اليومية وأن تكون لديّ خيارات كافية.",
+    "ar": "منذ سنة لم أعد آكل اللحم. كان الأمر صعباً في البداية لأن عائلتي، بحكم عاداتها، تطهو اللحم كثيراً، ولم أجد في المطاعم سوى خيارات قليلة. جرّبت في هذه الأثناء وصفات جديدة كثيرة، خصوصاً من المطبخين الشرقي والهندي، حيث توجد أطباق نباتية كثيرة. ما فاجأني هو أنني لم أشعر بضعف؛ بل على العكس، أصبحت لديّ طاقة أكبر وانخفض مستوى الكوليسترول لديّ. بالطبع عليّ أن أحرص على تناول ما يكفي من الحديد والبروتين، من البقوليات والمكسرات والسبانخ مثلاً. تختلف ردود فعل أصدقائي: بعضهم يعجبه ذلك، وآخرون يمزحون بشأنه. أحاول ألا أفرض رأيي على أحد، بل أكتفي بأن أكون قدوة حسنة. أجهز غدائي غالباً في المساء السابق. وهكذا لا أحتاج إلى وقت طويل للبحث عن وجبة مناسبة في الاستراحة. عندما أذهب إلى مطعم مع أصدقائي أسأل بلطف عن المكونات. وغالباً ما نجد مطعماً لديه خيارات نباتية متعددة. بدأت عائلتي أيضاً تجربة وصفات جديدة. المهم بالنسبة إليّ أن يناسب هذا القرار حياتي اليومية وأن تكون لديّ خيارات كافية.",
     "questions": [
       {
         "type": "mc",
@@ -7668,7 +7668,7 @@
     "titleDe": "Beispiel: Ein Unfall im Straßenverkehr",
     "titleAr": "مثال: حادث مروري",
     "de": "Gestern sah ich auf dem Weg zur Arbeit einen kleinen Unfall. An einer Kreuzung wollte ein Autofahrer rechts abbiegen. Dabei übersah er einen Radfahrer, der geradeaus fuhr. Der Radfahrer stürzte und verletzte sich leicht am Knie. Zum Glück trug er einen Helm und blieb bei Bewusstsein. Passanten halfen sofort, riefen den Krankenwagen und informierten die Polizei. Eine Frau blieb beim Radfahrer, während ein anderer Mann den Verkehr warnte. Der Autofahrer war sehr aufgeregt und entschuldigte sich mehrmals. Nach kurzer Zeit konnte der Radfahrer wieder stehen. Ein Polizist sprach mit den Beteiligten und nahm ihre Aussagen auf. Niemand wusste zuerst, ob die Verletzung schwer war. Deshalb warteten die Passanten, bis die Rettungskräfte eintrafen. Ich blieb noch kurz stehen und sprach mit einer Frau, die den Unfall ebenfalls gesehen hatte. Dann ging ich weiter zur Arbeit und dachte über die Situation nach. Der Vorfall hat mir wieder gezeigt, wie wichtig es ist, im Verkehr aufmerksam zu sein — sowohl als Fußgängerin als auch als Fahrerin. Seitdem achte ich an Kreuzungen besonders auf abbiegende Autos.",
-    "ar": "رأيت أمس حادثاً بسيطاً في طريقي إلى العمل. أراد سائق سيارة أن ينعطف يميناً عند تقاطع، لكنه لم ينتبه إلى راكب دراجة كان يقود دراجته في خط مستقيم. سقط راكب الدراجة وأُصيب إصابة طفيفة في ركبته. لحسن الحظ كان يرتدي خوذة وظل واعياً. ساعد المارة فوراً واتصلوا بالإسعاف وأبلغوا الشرطة. بقيت امرأة قرب راكب الدراجة، بينما نبّه رجل آخر السائقين إلى الحادث. كان السائق منفعلاً جداً واعتذر مرات عدة. وبعد وقت قصير استطاع راكب الدراجة الوقوف من جديد. تحدث شرطي مع الأطراف وأخذ أقوالهم. لم يعرف أحد في البداية إن كانت الإصابة خطيرة. لذلك انتظر المارة حتى وصلت فرق الإنقاذ. بقيت واقفة قليلاً وتحدثت مع امرأة شاهدت الحادث أيضاً. ثم واصلت طريقي إلى العمل وفكرت في الموقف. وعزّز ذلك لديّ الإحساس بأهمية الانتباه في الطريق، سواء أكنت ماشية أم سائقة. ومنذ ذلك الحين أنتبه كثيراً إلى السيارات التي تنعطف عند التقاطعات.",
+    "ar": "رأيت أمس حادثاً بسيطاً في طريقي إلى العمل. أراد سائق سيارة أن ينعطف يميناً عند تقاطع، لكنه لم ينتبه إلى راكب دراجة كان يقود دراجته في خط مستقيم. سقط راكب الدراجة وأُصيب إصابة طفيفة في ركبته. لحسن الحظ كان يرتدي خوذة وظل واعياً. ساعد المارة فوراً واتصلوا بالإسعاف وأبلغوا الشرطة. بقيت امرأة قرب راكب الدراجة، بينما نبّه رجل آخر السائقين إلى الحادث. كان السائق منفعلاً جداً واعتذر مرات عدة. وبعد وقت قصير استطاع راكب الدراجة الوقوف من جديد. تحدث شرطي مع الأطراف وأخذ أقوالهم. لم يعرف أحد في البداية إن كانت الإصابة خطيرة. لذلك انتظر المارة حتى وصلت فرق الإنقاذ. بقيت واقفة قليلاً وتحدثت مع امرأة شاهدت الحادث أيضاً. ثم واصلت طريقي إلى العمل وفكرت في الموقف. وذكّرني هذا الحادث مجدداً بأهمية الانتباه في حركة المرور، سواء أكنت ماشية أم سائقة. ومنذ ذلك الحين أنتبه كثيراً إلى السيارات التي تنعطف عند التقاطعات.",
     "questions": [
       {
         "type": "mc",
@@ -7726,7 +7726,7 @@
         "id": "t-b1-35-q2",
         "type": "mc",
         "promptDe": "Welche weitere Maßnahme wird vorgeschlagen?",
-        "promptAr": "ما الإجراء الآخر الذي يقترحه الكاتب؟",
+        "promptAr": "ما الإجراء الآخر الذي تقترحه كاتبة الرسالة؟",
         "options": [
           "Schulklassen und Freiwillige zu Säuberungsaktionen einladen",
           "Den Park schließen",
