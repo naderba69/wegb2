@@ -1,0 +1,419 @@
+{
+  "reviewRule": "R168",
+  "date": "2026-10-13",
+  "title": "مراجعة النصوص B2 وتدقيق العربية والأسئلة وإضافة صوت HörLabor",
+  "targetIds": [
+    "t-b2-26",
+    "t-b2-27",
+    "t-b2-28",
+    "t-b2-29",
+    "t-b2-30"
+  ],
+  "sourceReview": {
+    "priorPayloadGuard": "SHA-256 يغطي titleDe/titleAr/de/ar/questions في اللقطة السابقة؛ لم يُسمح إلا باللقطة الأصلية أو لقطات R168 الوسيطة ذات البصمات الدقيقة أو الحالة النهائية المراجعة، ورُفض أي اختلاف آخر.",
+    "germanFixedBeforeAudio": true,
+    "completeArabicTranslations": true,
+    "questionIdsPreserved": true,
+    "selectedVoice": "voice-02 (de-DE, Arena TTS)",
+    "preparationScript": "scripts/patches/add_hoeren_audio_r168.py",
+    "germanSourceSha256": {
+      "t-b2-26": "09fcd34301c0b8e2f3e91c2c7b76c41afd76388dd016b07853243d866d956540",
+      "t-b2-27": "11f1d3da3a8117a1de234243070ffbd187d5ac4d1d1f4b38f47392425adf785d",
+      "t-b2-28": "f64af208a63307bc2524c72701dc03f78bd6e1040f217f56f82ccf6babe73198",
+      "t-b2-29": "990f801c5a6d586c787f090e81ee977762877ae6b553372b9c707f5143c2dc9f",
+      "t-b2-30": "03775b7a2133642c40c9abc5f9be0be0ddecf7b91e117a4ecfbf19850805e55c"
+    },
+    "followUpGermanReviewBeforeRegeneration": true
+  },
+  "totals": {
+    "texts": 5,
+    "germanWords": 1134,
+    "arabicWords": 1160,
+    "sentenceEndMarks": 84,
+    "questions": 20,
+    "germanSentencePhraseReplacements": 27,
+    "fullTextFieldsUpdated": 15,
+    "questionsTouched": 18,
+    "questionFieldsUpdated": 63,
+    "unresolved": 0
+  },
+  "resources": [
+    {
+      "id": "t-b2-26",
+      "germanWords": 230,
+      "arabicWords": 245,
+      "sentenceEndMarks": 17,
+      "questions": 4
+    },
+    {
+      "id": "t-b2-27",
+      "germanWords": 228,
+      "arabicWords": 231,
+      "sentenceEndMarks": 15,
+      "questions": 4
+    },
+    {
+      "id": "t-b2-28",
+      "germanWords": 224,
+      "arabicWords": 223,
+      "sentenceEndMarks": 16,
+      "questions": 4
+    },
+    {
+      "id": "t-b2-29",
+      "germanWords": 225,
+      "arabicWords": 241,
+      "sentenceEndMarks": 20,
+      "questions": 4
+    },
+    {
+      "id": "t-b2-30",
+      "germanWords": 227,
+      "arabicWords": 220,
+      "sentenceEndMarks": 16,
+      "questions": 4
+    }
+  ],
+  "titleEdits": [
+    {
+      "id": "t-b2-26",
+      "titleDe": "Beispiel: Der Bürgerwindpark",
+      "titleAr": "مثال: مشروع تعاوني لطاقة الرياح"
+    },
+    {
+      "id": "t-b2-27",
+      "titleDe": "Beispiel: Das Kleingedruckte",
+      "titleAr": "مثال: الشروط المكتوبة بخط صغير"
+    },
+    {
+      "id": "t-b2-28",
+      "titleDe": "Beispiel: Wem gehört die Stadt?",
+      "titleAr": "مثال: لمن المدينة؟"
+    },
+    {
+      "id": "t-b2-29",
+      "titleDe": "Beispiel: Ankommen dauert",
+      "titleAr": "مثال: الاستقرار يستغرق وقتاً"
+    },
+    {
+      "id": "t-b2-30",
+      "titleDe": "Beispiel: Ein Stolperstein vor dem Haus",
+      "titleAr": "مثال: حجر تذكاري أمام المنزل"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "t-b2-26",
+      "count": 9,
+      "notes": "قُيّد وصف دراسة UBA بنتائجها وحدودها (خمسة مواقع وثلاثة مواقع لاختبارات الاستماع)، وأزيل الربط السببي الصحي غير المسند والضمان بأن الأرباح ستبقى كلها محلياً؛ صيغت الإيرادات والقبول بصيغة الاحتمال، وفُصلت مشكلة نقل الكهرباء عن القصة. أُعيدت مفردة «fossile Subventionen» ضمن تفصيل قصصي لا ادعاء واقعي مستقل.",
+      "arabic": "ترجمة عربية كاملة من ثلاث فقرات؛ حافظت على التمييز بين نتائج الدراسة والتفاصيل القصصية والاحتمالات الاقتصادية."
+    },
+    {
+      "id": "t-b2-27",
+      "count": 4,
+      "notes": "صُحّح التعميم عن التجديد التلقائي للاشتراك والعبوات الأقل محتوى والاستبدال والضمان؛ قُيّدت حقوق الإرجاع بحسب نوع العقد، وفُصل العيب القانوني عن مجرد عدم الرضا، وقُيّدت صلاحية الإنذار بالمخالفات والجهات المؤهلة. أُعيدت مفردتا «reklamieren» و«Abmahnung» في سياق طبيعي.",
+      "arabic": "ترجمة كاملة تميّز بين الاستبدال الاختياري وحقوق الضمان عند وجود عيب، وتحفظ القيود والاستثناءات."
+    },
+    {
+      "id": "t-b2-28",
+      "count": 5,
+      "notes": "ضُبط تعريف Gentrifizierung/Verdrängung، ووُصفت صلاحية Vorkaufsrecht بأنها محكومة بالقانون والمصلحة العامة، وأُبقي حظر تغيير الاستخدام محلياً لا اتحادياً، وقُيّدت مشاركة السكان بأنها لا تضمن رضا الجميع؛ وأُعيد المصطلح الاسمي «Leerstand».",
+      "arabic": "ترجمة كاملة حافظت على Mietspiegel وKappungsgrenze وVorkaufsrecht مع شرح عربي دقيق للمصطلحات."
+    },
+    {
+      "id": "t-b2-29",
+      "count": 6,
+      "notes": "أزيل تفسير غير دقيق لمعادلة المؤهل، ونُفي شرط شهادة دورة الاندماج على نحو مطلق، وصيغ لمّ الشمل وتصريح الإقامة الدائمة لحاملي البطاقة الزرقاء بصيغة مشروطة؛ فمدتا 27 و21 شهراً لا تلغيان بقية الشروط القانونية. أُعيدت مفردات «zugewandert»، «Lehrplan»، «Bleibeperspektive»، «Staatsbürgerschaft»، «sich einfügen» و«Zweitspracherwerb»؛ و«Duldung» إرجاء مؤقت للترحيل لا تصريح إقامة.",
+      "arabic": "ترجمة كاملة تشرح Duldung كإرجاء مؤقت للترحيل، وتحفظ المصطلحات وشروط 27/21 شهراً دون وعد بالنتيجة."
+    },
+    {
+      "id": "t-b2-30",
+      "count": 3,
+      "notes": "صُرّح بأن المثال التاريخي متخيّل، وصُحّح وصف Stolperstein بوصفه كتلة خرسانية بصفيحة نحاسية، وصيغ عمل الذاكرة بلغة متوازنة ونُسبت الأقوال إلى المعلمة داخل القصة.",
+      "arabic": "ترجمة كاملة؛ أبقت بوضوح على أن الوقائع والشخصيات والتسجيل المذكور جزء من مثال خيالي."
+    }
+  ],
+  "questionReview": {
+    "total": 20,
+    "perText": 4,
+    "touchedQuestions": 18,
+    "updatedFields": 63,
+    "checks": [
+      "مطابقة كل سؤال مع دليل حرفي من النص الألماني",
+      "فحص مفاتيح الاختيار المتعدد وتفرّد الخيارات",
+      "فحص توازن وصحة صواب/خطأ",
+      "التحقق من إجابات ملء الفراغ ووجودها في النص",
+      "اكتمال promptDe/promptAr/explanationAr وعدم كسر معرفات الأسئلة"
+    ]
+  },
+  "factualReview": {
+    "t-b2-26": "نتائج الدراسة البيئية مقصورة على تقرير UBA: قياسات في خمسة مواقع، واختبارات استماع في ثلاثة، ومستويات تحت عتبة السمع المرجعية للدراسة؛ وارتفعت درجة الإزعاج في الاختبارات مع عمق تعديل السعة. لا يُستنتج من ذلك انعدام أي أثر صحي لكل شخص. التعاونية وعائداتها ومواقف سكان القرية حكاية تدريبية؛ استُخدمت صيغ الاحتمال ولم يُضمن الربح.",
+    "t-b2-27": "لا يوجد حق عام في إرجاع سلعة سليمة اشتريت من متجر لمجرد عدم الرضا؛ يختلف ذلك عن حق الانسحاب في بعض عقود المسافة/خارج المتجر مع استثناءات. استُخدم Sachmangel وفق BGB §434 لا بوصفه مرادفاً لكل انخفاض ذاتي في الجودة. العبوة ذات المحتوى الأقل قد تكون مضللة بحسب الظروف والانطباع العام؛ والاشتراك لا يستمر إلا إذا كان الاتفاق نافذاً ولم يقع الإلغاء في الموعد. الإنذار محصور في مخالفات محددة وجهات مؤهلة.",
+    "t-b2-28": "Mietspiegel هو نظرة عامة على الإيجار المقارن المعتاد محلياً (BGB §558c)؛ وتنطبق حدود Kappungsgrenze على أنواع محددة من الزيادات، وتختلف النسبة بحسب المنطقة والقانون (BGB §558). حق الشراء بالأولوية للبلدية ليس عاماً بل مقيد بحالات القانون والمصلحة العامة (BauGB §24). حظر الاستخدام للعطلات يختلف محلياً؛ أُورد مصدر برلين مثالاً لا قاعدة اتحادية. أرقام الأسرة والمبنى والاستفتاء والستين شقة عناصر قصصية وليست بيانات واقعية عن مدينة بعينها.",
+    "t-b2-29": "Duldung وفق §60a AufenthG تعليق مؤقت للترحيل وليس تصريح إقامة؛ والتجديد كل ستة أشهر تفصيل داخل السيناريو لا قاعدة عامة. متطلبات لمّ الشمل تعتمد على نوع الإقامة والحالة، وتوجد استثناءات لإثبات اللغة وفق §30؛ شهادة دورة الاندماج ليست شرطاً عاماً لكل الحالات. يجيز §18c لحامل البطاقة الزرقاء التقدم لتصريح إقامة دائمة بعد 27 شهراً مع بقية الشروط والاشتراكات ومعرفة أساسية بالألمانية، وتصبح المدة 21 شهراً عند كفاية اللغة؛ ليس ذلك ضماناً تلقائياً. شخصية الدكتورة والتواريخ المهنية والعائلية مثال تعليمي غير موثق كسيرة شخص حقيقي.",
+    "t-b2-30": "افتتاح النص يصرّح بأن المثال متخيّل؛ فلا يُقدّم آخر شاهد أو مقابلة الـ43 دقيقة أو الأسرة بوصفها وقائع تاريخية حقيقية. مادة مؤسسة Stolpersteine تؤيد وصف الحجر كتكوين خرساني مع صفيحة نحاسية، ونقش الاسم وسنة الميلاد والمصير؛ أما المدرسة والحوار فجزء من السيناريو.",
+    "unresolved": []
+  },
+  "sources": [
+    {
+      "id": "UBA-2022-Wind",
+      "title": "Geräuschwirkungen bei der Nutzung von Windenergie an Land, Umweltbundesamt, TEXTE 69/2022",
+      "url": "https://www.umweltbundesamt.de/system/files/medien/479/publikationen/texte_69-2022_geraeuschwirkungen_bei_der_nutzung_von_windenergie_an_land.pdf",
+      "scope": "خمسة مواقع قياس، ثلاثة مواقع لاختبارات الاستماع، العتبة المرجعية، تعديل السعة والإزعاج."
+    },
+    {
+      "id": "BGB-312g",
+      "title": "BGB §312g — Widerrufsrecht",
+      "url": "https://www.gesetze-im-internet.de/bgb/__312g.html",
+      "scope": "حق الانسحاب في العقود خارج المتجر/المسافة والاستثناءات."
+    },
+    {
+      "id": "Verbraucherzentrale-Umtausch",
+      "title": "Verbraucherzentrale — Von Widerruf bis Umtausch",
+      "url": "https://www.verbraucherzentrale.de/wissen/vertraege-reklamation/kundenrechte/von-widerruf-bis-umtausch-wenn-sie-mit-der-ware-nicht-zufrieden-sind-5117",
+      "scope": "عدم وجود حق عام في إعادة سلعة سليمة اشتريت من متجر؛ تمييز الإرجاع الطوعي والعيب."
+    },
+    {
+      "id": "BGB-434",
+      "title": "BGB §434 — Sachmangel",
+      "url": "https://www.gesetze-im-internet.de/bgb/__434.html",
+      "scope": "معايير مطابقة السلعة، ومن ضمنها الكمية والخصائص المتوقعة."
+    },
+    {
+      "id": "BGB-309",
+      "title": "BGB §309 — Klauselverbote",
+      "url": "https://www.gesetze-im-internet.de/bgb/__309.html",
+      "scope": "قيود شروط العقود المتكررة والاشتراكات؛ لا تُعرض استمرارية الاشتراك كقاعدة مطلقة."
+    },
+    {
+      "id": "UWG-8",
+      "title": "UWG §8 — Beseitigung und Unterlassung",
+      "url": "https://www.gesetze-im-internet.de/uwg_2004/BJNR141400004.html?showAll=true",
+      "scope": "الجهات المخولة طلب الإزالة/الامتناع، ومنها جمعيات المستهلك المؤهلة."
+    },
+    {
+      "id": "VZHH-Mogelpackungen",
+      "title": "Verbraucherzentrale Hamburg — Mogelpackungen: Weniger drin – Preis gleich",
+      "url": "https://www.vzhh.de/themen/mogelpackungen/mogelpackungen-weniger-drin-preis-gleich",
+      "scope": "إمكان وقوع التضليل عند تقليل المحتوى مع بقاء الحجم/التصميم والسعر؛ التقييم ليس آلياً لمجرد رقم الملء."
+    },
+    {
+      "id": "BGB-558c",
+      "title": "BGB §558c — Mietspiegel",
+      "url": "https://www.gesetze-im-internet.de/bgb/__558c.html",
+      "scope": "تعريف Mietspiegel بأنه نظرة عامة على الإيجار المقارن المعتاد محلياً."
+    },
+    {
+      "id": "BGB-558",
+      "title": "BGB §558 — Mieterhöhung bis zur ortsüblichen Vergleichsmiete",
+      "url": "https://www.gesetze-im-internet.de/bgb/__558.html",
+      "scope": "Kappungsgrenze خلال ثلاث سنوات والتمييز بين الحد العام والمناطق ذات النسبة المخفضة."
+    },
+    {
+      "id": "BauGB-24",
+      "title": "BauGB §24 — Allgemeines Vorkaufsrecht",
+      "url": "https://www.gesetze-im-internet.de/bbaug/__24.html",
+      "scope": "حالات حق البلدية في الشراء بالأولوية وشرط مصلحة الجمهور."
+    },
+    {
+      "id": "Berlin-Zweckentfremdung",
+      "title": "Berlin — Zweckentfremdungsverbot",
+      "url": "https://www.berlin.de/sen/wohnen/rechtliches/zweckentfremdungsverbot/",
+      "scope": "مثال رسمي على تنظيم محلي لتأجير المساكن للعطلات؛ لا يعمم على كل البلديات."
+    },
+    {
+      "id": "AufenthG-60a",
+      "title": "AufenthG §60a — Vorübergehende Aussetzung der Abschiebung (Duldung)",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__60a.html",
+      "scope": "المعنى القانوني المحدود لـDuldung بوصفه تعليقاً مؤقتاً للترحيل."
+    },
+    {
+      "id": "AufenthG-30",
+      "title": "AufenthG §30 — Ehegattennachzug",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__30.html",
+      "scope": "متطلبات الزوج/الزوجة والاستثناءات المتعلقة بإثبات اللغة."
+    },
+    {
+      "id": "AufenthG-18c",
+      "title": "AufenthG §18c — Niederlassungserlaubnis für Fachkräfte",
+      "url": "https://www.gesetze-im-internet.de/aufenthg_2004/__18c.html",
+      "scope": "مسارا 27 و21 شهراً لحامل البطاقة الزرقاء مع الشروط القانونية الأخرى."
+    },
+    {
+      "id": "Stolpersteine-Material",
+      "title": "Stolpersteine.eu — Ein Mensch, ein Name, ein Stein (pädagogisches Material)",
+      "url": "https://www.stolpersteine.eu/assets/PaedagMaterial_Rund_um_die-Steine.pdf",
+      "scope": "مادة المؤسسة عن الكتلة الخرسانية والصفيحة النحاسية والنقوش التذكارية."
+    }
+  ],
+  "audio": {
+    "generatedAudioIds": [
+      "t-b2-26",
+      "t-b2-27",
+      "t-b2-28",
+      "t-b2-29",
+      "t-b2-30"
+    ],
+    "voice": "voice-02 (de-DE, Arena TTS)",
+    "sourceTextExact": true,
+    "pendingRegenerationIds": [],
+    "files": [
+      {
+        "id": "t-b2-26",
+        "bytes": 425709,
+        "sha256": "3bb53ed36ae1ec68f8f1f1fc53b3b6f704b1b001bac6b706fb7359d5e4158311",
+        "id3v2Header": true,
+        "mpegLayer3Frames": 4433,
+        "sourceTextSha256": "09fcd34301c0b8e2f3e91c2c7b76c41afd76388dd016b07853243d866d956540",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "paragraphChunksFrames": [
+          1587,
+          2847
+        ]
+      },
+      {
+        "id": "t-b2-27",
+        "bytes": 394797,
+        "sha256": "efd5dc1de70015ef381de15bb1a7df44a1a66354308db96520bd9e6186e6929f",
+        "id3v2Header": true,
+        "mpegLayer3Frames": 4111,
+        "sourceTextSha256": "11f1d3da3a8117a1de234243070ffbd187d5ac4d1d1f4b38f47392425adf785d",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "paragraphChunksFrames": [
+          827,
+          3285
+        ]
+      },
+      {
+        "id": "t-b2-28",
+        "bytes": 403053,
+        "sha256": "5e809aef9e372663b2997d9e162d2da747cd34929ed22a2504bc20f6560425f0",
+        "id3v2Header": true,
+        "mpegLayer3Frames": 4197,
+        "sourceTextSha256": "f64af208a63307bc2524c72701dc03f78bd6e1040f217f56f82ccf6babe73198",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "paragraphChunksFrames": [
+          1343,
+          2855
+        ]
+      },
+      {
+        "id": "t-b2-29",
+        "bytes": 426285,
+        "sha256": "b13ee2d6dad9fbab4a459a641d7b1cf3c09ec48d8359a6370844f794aceb15d8",
+        "id3v2Header": true,
+        "mpegLayer3Frames": 4439,
+        "sourceTextSha256": "990f801c5a6d586c787f090e81ee977762877ae6b553372b9c707f5143c2dc9f",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "paragraphChunksFrames": [
+          1173,
+          3267
+        ]
+      },
+      {
+        "id": "t-b2-30",
+        "bytes": 440781,
+        "sha256": "178e61fcf9c2b78bf8bf765a17b62fe61fc4b7d7558ea566b60a8df1b9209dd0",
+        "id3v2Header": true,
+        "mpegLayer3Frames": 4590,
+        "sourceTextSha256": "03775b7a2133642c40c9abc5f9be0be0ddecf7b91e117a4ecfbf19850805e55c",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false,
+        "paragraphChunksFrames": [
+          3428,
+          1128
+        ]
+      }
+    ],
+    "merge": {
+      "mode": "lossless-MPEG-frame join",
+      "id3Handling": "حُفظ وسم ID3 الأول؛ أزيل وسم ID3 الثاني وإطار Info الداخلي لكل ملف ثانٍ، ثم صُحح إطار Info الأول لعدد الإطارات/البايتات وأزيلت حقول TOC/quality القديمة؛ لم تُدمج البايتات عشوائياً ولم يُعد ترميز الصوت.",
+      "manifestReapply": "0 new, 0 refreshed",
+      "manifestSha256AfterReapply": "6a18750e98b51d3644dc16c78c968faceb034d42a192ac116fdbb373ace851c7"
+    },
+    "coverage": {
+      "before": {
+        "totalTexts": 157,
+        "hoerenAudio": 142,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "35/35",
+        "B2": "25/40",
+        "remainingWithoutLocalMP3": 15,
+        "localAudioFilesTotal": 410
+      },
+      "after": {
+        "totalTexts": 157,
+        "hoerenAudio": 147,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "35/35",
+        "B2": "30/40",
+        "remainingWithoutLocalMP3": 10,
+        "localAudioFilesTotal": 415
+      }
+    },
+    "manifestCount": 147,
+    "manifestSha256AfterReapply": "6a18750e98b51d3644dc16c78c968faceb034d42a192ac116fdbb373ace851c7",
+    "validation": {
+      "id3v2Header": true,
+      "mpegLayer3Frames": true,
+      "manifestReapply": "0 new, 0 refreshed",
+      "manifestSha256StableOnReapply": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false
+    },
+    "otherManifests": {
+      "dialogAudioEntriesForTargets": 0,
+      "diktatAudioEntriesForTargets": 0,
+      "dialogManifestUntouched": true,
+      "diktatManifestUntouched": true
+    }
+  },
+  "gates": {
+    "planned": "K237a–f",
+    "passed": [
+      "K237a",
+      "K237b",
+      "K237c",
+      "K237d",
+      "K237e",
+      "K237f"
+    ],
+    "result": "pass"
+  },
+  "validationResults": {
+    "contentAudit": "نجح npm run audit:content؛ صفر عيوب بنيوية مؤكدة.",
+    "smoke": "1567 نجاحاً و38 إخفاقاً مطابقة لخط الأساس R167 (1561/38)، بلا جديد؛ اجتازت K237a–f وK81f/K81g/K84b/K84e.",
+    "interaktiv": "702 نجاح و6 إخفاقات خط أساس مطابقة لـR167.",
+    "typescript": "نجح npx tsc --noEmit.",
+    "build": "نجح npm run build؛ توليد 13/13 مساراً ساكناً.",
+    "npmAudit": "نجح npm audit --no-fund؛ صفر ثغرات.",
+    "gitDiffCheck": "نجح git diff --check."
+  },
+  "next": {
+    "remainingUnrecordedTexts": 10,
+    "byLevel": {
+      "B2": 10
+    },
+    "ids": [
+      "t-b2-31",
+      "t-b2-32",
+      "t-b2-33",
+      "t-b2-34",
+      "t-b2-35",
+      "t-b2-36",
+      "t-b2-37",
+      "t-b2-38",
+      "t-b2-39",
+      "t-b2-40"
+    ],
+    "maintainSeparateManifests": true
+  }
+}
