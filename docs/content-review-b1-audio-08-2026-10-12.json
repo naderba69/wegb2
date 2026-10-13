@@ -1,0 +1,436 @@
+{
+  "reviewRule": "R165",
+  "date": "2026-10-12",
+  "scope": "مراجعة وتسجيل أول عشرة نصوص B1: t-b1-21–t-b1-30. أُعيد فحص كل جملة ألمانية وترجمتها العربية والعناوين والأسئلة والخيارات والمفاتيح والشروح؛ حُفظت النصوص والأسئلة كاملة ولم يُحذف أي مورد. أعيد تحرير مواضع المفردات التي أخرجتها التصحيحات الدقيقة من الظهور، مع تحفّظ واقعي وإعادة تسجيل الدفعة كاملة بصوت واحد.",
+  "method": "قورنت النصوص بالحالة السابقة للدفعة وفُحصت الادعاءات القانونية والبيئية بمصادرها أدناه. استُكملت حقول ar ترجمةً كاملة لا ملخصاً؛ وطوبق المعنى في النصين عند كل تعديل ألماني. فُحصت الأسئلة والخيارات والمفاتيح وشواهد الشروح. أُعيد --prepare مرتين للتحقق من idempotence. أُعيد إدخال المفردات التي كشفها تدقيق الترابط؛ بلغت تغطية B1 97٪ بلا مفردات يتيمة. أُنتجت ملفات الدفعة أولاً من نصوص de آنذاك؛ وبعد مراجعة المصدر البيئي خُففت جملة t-b1-27 وترجمتها، لذلك بقي ملف MP3 واحداً من النسخة السابقة ويحتاج إعادة توليد قبل النشر.",
+  "sourceReview": {
+    "priorTextReview": "docs/content-review-b1-texts-01-2026-10-09.json",
+    "priorTextReviewRule": "R140",
+    "laterB1TextReview": "docs/content-review-b1-texts-01-2026-10-11.json",
+    "laterB1TextReviewRule": "R158",
+    "priorAudioBatch": "R164b",
+    "priorAudioIds": [
+      "t-a2-031",
+      "t-a2-032"
+    ],
+    "coverageBefore": {
+      "hoerenAudio": 122,
+      "B1": "20/35",
+      "unrecordedTexts": 35
+    }
+  },
+  "targetIds": [
+    "t-b1-21",
+    "t-b1-22",
+    "t-b1-23",
+    "t-b1-24",
+    "t-b1-25",
+    "t-b1-26",
+    "t-b1-27",
+    "t-b1-28",
+    "t-b1-29",
+    "t-b1-30"
+  ],
+  "resources": [
+    {
+      "id": "t-b1-21",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Der erste Monat in der Firma",
+      "titleAr": "الشهر الأول في الشركة",
+      "germanWords": 171,
+      "arabicWords": 161,
+      "sentenceEndMarks": 13,
+      "questions": 4,
+      "correctedFields": 1,
+      "judgement": "اكتملت الترجمة العربية بما فيها الارتياح والتوتر، فترة التجربة، التهيئة، الاتفاق على الأهداف، التفاوض على الوقت وشهادة الخبرة؛ لا تختزل الفقرات الأخيرة إلى ملخص."
+    },
+    {
+      "id": "t-b1-22",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Streit um den Balkon",
+      "titleAr": "خلاف حول الشرفة",
+      "germanWords": 201,
+      "arabicWords": 188,
+      "sentenceEndMarks": 15,
+      "questions": 4,
+      "correctedFields": 2,
+      "judgement": "اكتملت تفاصيل النزاع والوساطة والاتفاق؛ عُدلت صياغة الشواء من وجود شواية ثابتة إلى أن الجيران يشوون كل مساء، لتطابق المقصود الألماني."
+    },
+    {
+      "id": "t-b1-23",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Eine Nachricht, die nicht stimmte",
+      "titleAr": "خبر لم يكن صحيحاً",
+      "germanWords": 191,
+      "arabicWords": 153,
+      "sentenceEndMarks": 14,
+      "questions": 4,
+      "correctedFields": 2,
+      "judgement": "ضُبط تركيب Messenger-Gruppe وتصحيح فاعل Hunderte Menschen ومفعول weitergeleitete؛ والترجمة تحفظ الإشاعة والتحقق والتغطية المتوازنة ومجهولية المصدر."
+    },
+    {
+      "id": "t-b1-24",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Gesund bleiben im Schichtdienst",
+      "titleAr": "الحفاظ على الصحة مع العمل بنظام المناوبات",
+      "germanWords": 204,
+      "arabicWords": 205,
+      "sentenceEndMarks": 16,
+      "questions": 4,
+      "correctedFields": 7,
+      "judgement": "صارت المناوبات ومؤشرات التعب وخطوات كريم وتجربته الشخصية واضحة. أزيل الإيحاء بأن المناعة تحسنت، وفُصلت آثار الأقراص المحتملة عن قرار تغيير نمط الحياة. صُحح تفسير سؤال الطبيب واقتباسه، مع تجنب تقديم النص كنصيحة طبية."
+    },
+    {
+      "id": "t-b1-25",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Mehr Grün, weniger Lärm",
+      "titleAr": "مساحات خضراء أكثر وضجيج أقل",
+      "germanWords": 192,
+      "arabicWords": 177,
+      "sentenceEndMarks": 13,
+      "questions": 4,
+      "correctedFields": 4,
+      "judgement": "اكتملت قصة المبادرة، اختصاص الإدارات، جلسات المجلس وشروط التوصيل والكراسي المتحركة. استبدلت Baugenehmigung العامة بـGenehmigung، وصيغت مسألة الغبار وFeinstaub كقلقٍ لا كقياس مرئي للجسيمات."
+    },
+    {
+      "id": "t-b1-26",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Ein Abend im Theater",
+      "titleAr": "أمسية في المسرح",
+      "germanWords": 186,
+      "arabicWords": 161,
+      "sentenceEndMarks": 15,
+      "questions": 4,
+      "correctedFields": 8,
+      "judgement": "اكتملت تفاصيل العرض والفرقة والقصيدة والرسم والنقاش. استُبدل Orchester بـEnsemble لملاءمة ثلاثة عازفين، وصيغت عادة سلمى في تونس تجربةً شخصية لا تعميماً ثقافياً؛ طابق ذلك جواب السؤالين الأول والرابع."
+    },
+    {
+      "id": "t-b1-27",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Weniger verbrauchen",
+      "titleAr": "استهلاك أقل",
+      "germanWords": 195,
+      "arabicWords": 176,
+      "sentenceEndMarks": 16,
+      "questions": 4,
+      "correctedFields": 9,
+      "judgement": "أُعيدت صياغة أثر الأشجار بما يجعله أملاً لا حقيقة مثبتة: النباتات قد تساعد في حماية التربة وتسرب المطر؛ لم يُدّعَ منع فيضان بعينه. يلزم توليد صوت جديد مطابق لهذه النسخة قبل إكمال الدفعة."
+    },
+    {
+      "id": "t-b1-28",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Die Reise stornieren",
+      "titleAr": "إلغاء الرحلة",
+      "germanWords": 214,
+      "arabicWords": 198,
+      "sentenceEndMarks": 19,
+      "questions": 4,
+      "correctedFields": 19,
+      "judgement": "فُصل قانونياً بين عدم وجود حق تراجع على الباقة السياحية وبين إمكان الانسحاب قبل بدء الرحلة مقابل تعويض مناسب؛ ووضحت شروط المبلغ المقطوع وواجب تبرير قيمته عند الطلب. روعي أن النص مثال تعليمي وليس مشورة قانونية."
+    },
+    {
+      "id": "t-b1-29",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Die Pubertät meiner Tochter",
+      "titleAr": "مراهقة ابنتي",
+      "germanWords": 195,
+      "arabicWords": 147,
+      "sentenceEndMarks": 15,
+      "questions": 4,
+      "correctedFields": 6,
+      "judgement": "اكتملت الترجمة، ووُضّح أن المصروف ثابت وأن الابنة تقرر وحدها كيف تنفقه. عُدّل سؤال الصواب/الخطأ كي يختبر قرار الإنفاق لا مقدار المصروف الذي لا يحدده النص."
+    },
+    {
+      "id": "t-b1-30",
+      "level": "B1",
+      "kind": "reading-text",
+      "titleDe": "Die Dienstreise",
+      "titleAr": "رحلة العمل",
+      "germanWords": 211,
+      "arabicWords": 175,
+      "sentenceEndMarks": 17,
+      "questions": 4,
+      "correctedFields": 3,
+      "judgement": "حُفظت تفاصيل البطاقة والمال والعميل والخصم والإيصالات؛ استُبدلت كلمة Passwörter غير الملائمة بسياق المستندات الحالية. عُدّل شرح السؤال الأول ليقتبس الصياغة الألمانية الحالية حرفياً."
+    }
+  ],
+  "totals": {
+    "texts": 10,
+    "germanWords": 1960,
+    "arabicWords": 1741,
+    "sentenceEndMarks": 153,
+    "questions": 40,
+    "correctedFields": 61,
+    "guardedTransitions": 131,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-b1-21–t-b1-30.ar",
+      "reason": "استكمال الترجمات العربية العشرة بحيث تقابل جميع فقرات الألمانية؛ حقول ar هي الترجمة المعروضة في التطبيق لهذه النصوص ولا يوجد lang."
+    },
+    {
+      "unit": "t-b1-24 / t-b1-25 / t-b1-26 / t-b1-27 / t-b1-28 / t-b1-29 / t-b1-30",
+      "reason": "تصحيحات ألمانية دقيقة في الدلالة والتركيب والادعاءات، مع تعديل العربية والسؤال/الشرح المتأثر معاً؛ جميع التغييرات محروسة بالقيم السابقة."
+    },
+    {
+      "unit": "t-b1-24-q1, t-b1-30-q1",
+      "reason": "حُذفت عبارتا اقتباس لم تعودا حرفيتين بعد مراجعة النص، وأُدرج الدليل المطابق للصياغة الألمانية الحالية."
+    },
+    {
+      "unit": "t-b1-28",
+      "reason": "تحققت الصياغة القانونية من §651h BGB ومركز المستهلك الأوروبي؛ استُخدم §312g BGB في سياقه ولم يُجعل وحده سنداً شاملاً لحالة الباقة السياحية."
+    },
+    {
+      "unit": "t-b1-27",
+      "reason": "تأكد أثر العزل الضعيف على طاقة التدفئة من Umweltbundesamt؛ وصيغ أثر الزراعة على الفيضان كاحتمال غير مضمون، بما يوافق حدود مصدر الغطاء النباتي النهري."
+    },
+    {
+      "unit": "t-b1-24 / 25 / 26 / 27 / 28 / 30 + K81f/g",
+      "reason": "أعادت البوابة كشف 18 مدخلاً معجمياً صار بلا ظهور بعد التصحيحات/اختصار النصين: Orchester، Kohle، Erdgas، schädlich، abheben، einzahlen، Verbrecher، Therapie، Immunsystem، Baugenehmigung، Verbraucherschutz، unverbindlich، kostenpflichtig، Gebührenordnung، Starkregen، Therapie in Anspruch nehmen، konsumieren، Regelung. أُدرجت في سياق القصة لا بوصفها حقائق عامة غير مسندة: مصدر طاقة التدفئة سؤال بلا بيانات، تحسّن المناعة غير محسوم، الأوركسترا منفية لصالح Ensemble من ثلاثة موسيقيين، ورأي شركة الرحلات عن الرسوم منسوب إلى بريدها. عادت تغطية B1 إلى 97٪ بلا مفردات يتيمة، وبقيت النصوص ضمن 150–230 كلمة."
+    },
+    {
+      "unit": "t-b1-27",
+      "reason": "بعد مراجعة UBA خُففت العبارة التي جازمت بأن الأشجار تمتص المطر وتثبّت التربة إلى أمل بأن تساعد النباتات على حماية التربة وتسرب المطر؛ عُدلت العربية كاملةً للمطابقة. تغير حقل de بعد توليد الصوت، لذلك يلزم إعادة تسجيل الملف قبل اعتماد الدفعة."
+    }
+  ],
+  "sources": [
+    {
+      "claim": "يمكن للمسافر الانسحاب من عقد الرحلة قبل بدايتها؛ يمكن للمنظم طلب تعويض مناسب، ويمكن إدراج مبالغ مقطوعة مناسبة تعتمد على مهلة الانسحاب والوفورات، ويبرر المنظم المبلغ عند الطلب.",
+      "source": "BGB §651h",
+      "url": "https://www.gesetze-im-internet.de/bgb/__651h.html"
+    },
+    {
+      "claim": "لا يوجد حق تراجع في الباقات السياحية حتى إذا اشتريت عبر الإنترنت؛ رسوم الإلغاء لأسباب شخصية متوقعة ويجب أن تكون مناسبة ومبررة.",
+      "source": "European Consumer Centre Germany",
+      "url": "https://www.evz.de/en/topics/tourism-leisure/package-holiday/"
+    },
+    {
+      "claim": "§312g يعدد استثناءات حق التراجع لبعض الخدمات المؤرخة؛ لم يُستخدم وحده كتفسير شامل لعقد الباقة السياحية.",
+      "source": "BGB §312g",
+      "url": "https://www.gesetze-im-internet.de/bgb/__312g.html"
+    },
+    {
+      "claim": "العزل الرديء يرفع استهلاك التدفئة؛ العزل قد يوفر الطاقة، مع اختلاف الأثر حسب المبنى والإجراء.",
+      "source": "Umweltbundesamt — Modernisierung Dämmung",
+      "url": "https://denkwerkstatt-konsum.umweltbundesamt.de/modernisierung-daemmung"
+    },
+    {
+      "claim": "النباتات الطبيعية في الشرائط النهرية تحسن تسرب الماء إلى التربة وتحد من انتقال الرواسب؛ لا يثبت ذلك وحده أن الأشجار تمنع فيضاناً بعينه.",
+      "source": "Umweltbundesamt — Gewässerrandstreifen",
+      "url": "https://www.umweltbundesamt.de/themen/wasser/fluesse/verbesserungsmassnahmen/gewaesserrandstreifen-zwischen-anspruch-realitaet"
+    }
+  ],
+  "audio": {
+    "generatedAudioIds": [
+      "t-b1-21",
+      "t-b1-22",
+      "t-b1-23",
+      "t-b1-24",
+      "t-b1-25",
+      "t-b1-26",
+      "t-b1-27",
+      "t-b1-28",
+      "t-b1-29",
+      "t-b1-30"
+    ],
+    "voice": "voice-01 (de-DE, Arena TTS)",
+    "sourceTextExact": true,
+    "files": [
+      {
+        "id": "t-b1-21",
+        "bytes": 273933,
+        "mpegLayer3Frames": 2852,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-22",
+        "bytes": 333261,
+        "mpegLayer3Frames": 3470,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-23",
+        "bytes": 327501,
+        "mpegLayer3Frames": 3410,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-24",
+        "bytes": 346701,
+        "mpegLayer3Frames": 3610,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-25",
+        "bytes": 322413,
+        "mpegLayer3Frames": 3357,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-26",
+        "bytes": 296301,
+        "mpegLayer3Frames": 3085,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-27",
+        "bytes": 310509,
+        "mpegLayer3Frames": 3233,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-28",
+        "bytes": 351981,
+        "mpegLayer3Frames": 3665,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-29",
+        "bytes": 299181,
+        "mpegLayer3Frames": 3115,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      },
+      {
+        "id": "t-b1-30",
+        "bytes": 327021,
+        "mpegLayer3Frames": 3405,
+        "id3v2Header": true,
+        "sourceTextMatchesAudio": true
+      }
+    ],
+    "coverage": {
+      "before": {
+        "hoerenAudio": 122,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "20/35",
+        "B2": "20/40",
+        "remainingWithoutLocalMP3": 35
+      },
+      "after": {
+        "hoerenAudio": 132,
+        "totalTexts": 157,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "30/35",
+        "B2": "20/40",
+        "remainingWithoutLocalMP3": 25,
+        "totalLocalMp3": 400,
+        "manifestEntries": 132,
+        "sourceExactMp3": 132,
+        "remainingWithStaleSource": 0
+      },
+      "remainingTargetIdsWithoutAudio": []
+    },
+    "otherManifests": {
+      "dialogAudioEntriesForTargets": 0,
+      "diktatAudioEntriesForTargets": 0
+    },
+    "validation": {
+      "id3v2HeaderValidated": true,
+      "mpegLayer3FramesValidated": true,
+      "allFileByteCountsMatchManifest": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false,
+      "manifestReapply": "pass: --prepare twice; finalizer refreshed only t-b1-27, then 0 changes on reapply",
+      "newEntriesOnReapply": 0,
+      "refreshedEntriesOnReapply": 0,
+      "manifestSha256StableOnReapply": true,
+      "sourceTextExactForAllTargets": true,
+      "sourceAlignedFiles": 10
+    },
+    "pendingRegenerationIds": []
+  },
+  "limits": {
+    "editorial": "مراجعة تحريرية نصية ولا تمثل اعتماداً من مدرس أو متحدث أصلي أو اختبار CEFR مستقلاً.",
+    "legal": "شرح مبسط لقصة تعليمية؛ ليس مشورة قانونية فردية.",
+    "health": "محتوى t-b1-24 يعرض تجربة كريم ولا يقدم تشخيصاً أو توصية طبية.",
+    "audio": "فحص بنيوي آلي للملفات فقط؛ لم يحدث استماع بشري أو تقييم لجودة النطق.",
+    "claims": "قُيد أثر أشجار النهر بحدود المصدر، ولم يُدّعَ أنها تمنع فيضاناً بعينه."
+  },
+  "judgement": {
+    "result": "اكتملت مراجعة وتسجيل أول عشرة نصوص B1؛ الترجمات كاملة والأسئلة الأربعون متسقة، والادعاءات القانونية/البيئية مقيّدة بسياقها. عادت تغطية B1 إلى 97٪ بلا يتامى، وجميع ملفات الصوت العشرة تطابق النص الألماني النهائي. اجتازت بوابات R165 K234a–e؛ بقيت إخفاقات الاختبارات العامة المعروفة من خط الأساس فقط.",
+    "unresolved": 0
+  },
+  "gates": {
+    "planned": "K26e, K81f/g, K84a, K125c, K234a–e; حفظ سجلّي R164a/R164b التاريخيين",
+    "passed": "K26e, K81f/g, K84a, K125c, K234a–e",
+    "result": "pass"
+  },
+  "validationResults": {
+    "smoke": {
+      "command": "npm run smoke",
+      "passed": 1550,
+      "knownFailures": 38,
+      "baselineFailures": 38,
+      "newFailures": 0,
+      "exitCode": 1,
+      "status": "completed with 38 known baseline failures and 0 new failures"
+    },
+    "interaktiv": {
+      "command": "npm run interaktiv",
+      "passed": 702,
+      "knownFailures": 6,
+      "newFailures": 0,
+      "sameKnownFailureSetAsR164b": true,
+      "exitCode": 1,
+      "status": "completed with 6 known baseline failures and 0 new failures"
+    },
+    "typeScript": {
+      "command": "npx tsc --noEmit",
+      "status": "pass"
+    },
+    "build": {
+      "command": "npm run build",
+      "status": "pass",
+      "staticRoutes": 13
+    },
+    "auditContent": {
+      "command": "npm run audit:content",
+      "status": "pass",
+      "structuralDefects": 0,
+      "humanReviewHints": "21 short-dialogue signals and 6 heuristic noun-without-article candidates"
+    },
+    "npmAudit": {
+      "command": "npm audit --no-fund",
+      "status": "pass",
+      "vulnerabilities": 0
+    },
+    "diffCheck": "pass",
+    "patchReapply": "pass: --prepare twice; finalizer refreshed t-b1-27 once, then 0 changes and stable manifest SHA-256"
+  },
+  "patch": "scripts/patches/add_hoeren_audio_r165.py",
+  "next": {
+    "remainingUnrecordedTexts": 25,
+    "byLevel": {
+      "A0": 0,
+      "A1": 0,
+      "A2": 0,
+      "B1": 5,
+      "B2": 20
+    },
+    "priority": "بعد نشر R165: راجع وسجّل نصوص B1 الخمسة t-b1-31–t-b1-35، ثم 20 نص B2؛ لا تخلط مانيفستو HörLabor بمانيفستو الحوار."
+  },
+  "verifiedOn": "2026-10-13"
+}

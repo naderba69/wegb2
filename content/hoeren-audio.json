@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-02",
-  "count": 122,
+  "count": 132,
   "einsaetze": [
     {
       "id": "t-a1-01",
@@ -855,7 +855,77 @@
       "voice": "voice-00 (de-DE, Arena TTS)",
       "level": "A2",
       "bytes": 255021
+    },
+    {
+      "id": "t-b1-21",
+      "file": "/audio/hoeren/t-b1-21.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 273933
+    },
+    {
+      "id": "t-b1-22",
+      "file": "/audio/hoeren/t-b1-22.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 333261
+    },
+    {
+      "id": "t-b1-23",
+      "file": "/audio/hoeren/t-b1-23.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 327501
+    },
+    {
+      "id": "t-b1-24",
+      "file": "/audio/hoeren/t-b1-24.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 346701
+    },
+    {
+      "id": "t-b1-25",
+      "file": "/audio/hoeren/t-b1-25.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 322413
+    },
+    {
+      "id": "t-b1-26",
+      "file": "/audio/hoeren/t-b1-26.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 296301
+    },
+    {
+      "id": "t-b1-27",
+      "file": "/audio/hoeren/t-b1-27.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 310509
+    },
+    {
+      "id": "t-b1-28",
+      "file": "/audio/hoeren/t-b1-28.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 351981
+    },
+    {
+      "id": "t-b1-29",
+      "file": "/audio/hoeren/t-b1-29.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 299181
+    },
+    {
+      "id": "t-b1-30",
+      "file": "/audio/hoeren/t-b1-30.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B1",
+      "bytes": 327021
     }
   ],
-  "updated": "2026-10-12"
+  "updated": "2026-10-13"
 }
