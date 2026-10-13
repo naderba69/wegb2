@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-02",
-  "count": 137,
+  "count": 142,
   "einsaetze": [
     {
       "id": "t-a1-01",
@@ -960,6 +960,41 @@
       "voice": "voice-01 (de-DE, Arena TTS)",
       "level": "B1",
       "bytes": 274221
+    },
+    {
+      "id": "t-b2-21",
+      "file": "/audio/hoeren/t-b2-21.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B2",
+      "bytes": 321261
+    },
+    {
+      "id": "t-b2-22",
+      "file": "/audio/hoeren/t-b2-22.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B2",
+      "bytes": 273453
+    },
+    {
+      "id": "t-b2-23",
+      "file": "/audio/hoeren/t-b2-23.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B2",
+      "bytes": 348333
+    },
+    {
+      "id": "t-b2-24",
+      "file": "/audio/hoeren/t-b2-24.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B2",
+      "bytes": 303021
+    },
+    {
+      "id": "t-b2-25",
+      "file": "/audio/hoeren/t-b2-25.mp3",
+      "voice": "voice-01 (de-DE, Arena TTS)",
+      "level": "B2",
+      "bytes": 341133
     }
   ],
   "updated": "2026-10-13"

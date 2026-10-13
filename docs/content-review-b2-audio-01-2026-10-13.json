@@ -1,0 +1,203 @@
+{
+  "reviewRule": "R167",
+  "date": "2026-10-13",
+  "scope": "إعادة تدقيق النصوص B2 t-b2-21 إلى t-b2-25 جملةً جملةً، واستبدال ملخصات ar بترجمات كاملة، ومراجعة الألمانية والأسئلة والادعاءات الواقعية، ثم إضافة تسجيلات HörLabor بعد تثبيت الألمانية.",
+  "method": "scripts/patches/add_hoeren_audio_r167.py يحرس الانتقالات النصية، ويثبت تجزئات SHA-256 من حقول de النهائية، ويفحص ملفات MP3 ورؤوس ID3v2 وإطارات MPEG Layer III، ويحدّث مانيفستو HörLabor وحده. تكرر --prepare بأمان، ثم أعيد تطبيق الرقعة للتحقق من عدم تغير المانيفستو.",
+  "sourceReview": {
+    "priorTranslationClaim": "R141",
+    "priorReport": "docs/content-review-b2-texts-01-2026-10-09.md",
+    "r141CorrectionRecorded": true,
+    "finding": "كان ادعاء اكتمال ترجمة أجسام نصوص B2 أوسع من مراجعة R141 الفعلية؛ R141 أحصى 140 حقل promptAr للأسئلة ولم يوثق مقارنة أجسام de/ar جملةً بجملة.",
+    "remainingAffectedIds": [
+      "t-b2-26",
+      "t-b2-27",
+      "t-b2-28",
+      "t-b2-29",
+      "t-b2-30",
+      "t-b2-31",
+      "t-b2-32",
+      "t-b2-33",
+      "t-b2-34",
+      "t-b2-35"
+    ]
+  },
+  "targetIds": [
+    "t-b2-21",
+    "t-b2-22",
+    "t-b2-23",
+    "t-b2-24",
+    "t-b2-25"
+  ],
+  "resources": [
+    {
+      "id": "t-b2-21",
+      "titleDe": "Beispiel: Ein Missverständnis unter Freunden",
+      "titleAr": "مثال: سوء فهم بين صديقين",
+      "germanWords": 192,
+      "arabicWords": 182,
+      "sentenceEndMarks": 17,
+      "questions": 4
+    },
+    {
+      "id": "t-b2-22",
+      "titleDe": "Beispiel: Zurück nach der Operation",
+      "titleAr": "مثال: العودة إلى العمل بعد العملية",
+      "germanWords": 179,
+      "arabicWords": 169,
+      "sentenceEndMarks": 12,
+      "questions": 4
+    },
+    {
+      "id": "t-b2-23",
+      "titleDe": "Beispiel: Ein Passwort für mehrere Konten",
+      "titleAr": "مثال: كلمة مرور واحدة لعدة حسابات",
+      "germanWords": 222,
+      "arabicWords": 212,
+      "sentenceEndMarks": 13,
+      "questions": 4
+    },
+    {
+      "id": "t-b2-24",
+      "titleDe": "Beispiel: Das erste Semester",
+      "titleAr": "مثال: الفصل الجامعي الأول",
+      "germanWords": 177,
+      "arabicWords": 178,
+      "sentenceEndMarks": 14,
+      "questions": 4
+    },
+    {
+      "id": "t-b2-25",
+      "titleDe": "Beispiel: Die Niederlage im Turnier",
+      "titleAr": "مثال: الهزيمة في البطولة",
+      "germanWords": 200,
+      "arabicWords": 191,
+      "sentenceEndMarks": 16,
+      "questions": 4
+    }
+  ],
+  "totals": {
+    "texts": 5,
+    "germanWords": 970,
+    "arabicWords": 932,
+    "sentenceEndMarks": 72,
+    "questions": 20,
+    "correctedFields": 33,
+    "guardedTransitions": 45,
+    "unresolved": 0
+  },
+  "corrections": [
+    {
+      "unit": "t-b2-21",
+      "fields": ["titleDe", "titleAr", "ar", "questions[3].promptAr", "de"],
+      "reason": "استبدال الملخص بترجمة كاملة؛ وسم القصة مثالاً؛ إزالة لبس الإحالات في جملة الحسد ومقابلة التوظيف؛ ومطابقة موضع السؤال الرابع بالعربية."
+    },
+    {
+      "unit": "t-b2-22",
+      "fields": ["titleDe", "titleAr", "ar", "questions[0].promptAr", "questions[3].promptAr"],
+      "reason": "استبدال الملخص بترجمة كاملة، ووسم السيناريو مثالاً، وتحسين صياغة السؤالين الأول والرابع بالعربية."
+    },
+    {
+      "unit": "t-b2-23",
+      "fields": ["titleDe", "titleAr", "ar", "de", "questions[3].promptDe", "questions[3].promptAr", "questions[3].explanationAr"],
+      "reason": "تصحيح الوصف إلى بيانات دخول مسروقة تُجرّب آلياً لدى خدمات أخرى وفق BSI؛ وتقييد طلب المحو بموجب المادة 17 من DSGVO مع ذكر الاستثناءات؛ وإكمال الترجمة والسؤال القانوني."
+    },
+    {
+      "unit": "t-b2-24",
+      "fields": ["titleDe", "titleAr", "ar", "questions[0].promptAr", "questions[1].promptAr", "questions[2].promptAr", "questions[3].promptAr", "waisen[1]"],
+      "reason": "استبدال الملخص بترجمة كاملة، وتحسين ترجمة الأسئلة، وإظهار فراغ السؤال الرابع، وتصحيح جنس الاسم إلى der Hörsaal."
+    },
+    {
+      "unit": "t-b2-25",
+      "fields": ["titleDe", "titleAr", "ar", "de", "questions[2].promptDe", "questions[2].promptAr", "questions[2].explanationAr", "questions[3].promptAr"],
+      "reason": "استبدال الملخص بترجمة كاملة؛ التصريح بأن أرقام الإصابات قيم قصصية لا إحصاء موثقاً؛ تحسين جملة الانضمام وسؤالها وشرح دليلها الحرفي."
+    }
+  ],
+  "factualReview": {
+    "t-b2-21": "سيناريو تعليمي عن سوء فهم بين صديقين، لا ادعاء واقعي قابل للتحقق. صيغت إحالة الحسد والمقابلة بوضوح أكبر في الألمانية والعربية.",
+    "t-b2-22": "حكاية تدريبية عن العودة إلى العمل. النص نفسه يقول إن أثر نظام الاستراحات على الإنتاجية غير معروف بدقة؛ لم يُحوّل ذلك إلى نتيجة بحثية.",
+    "t-b2-23": "وُصف credential stuffing بدقة بوصفه تجربة آلية لبيانات دخول مسروقة على خدمات إلكترونية أخرى. المادة 17 لا تمنح حذفاً مطلقاً: الطلب مشروط بأسباب/شروط قانونية، وتوجد استثناءات؛ لا يقدم النص نصيحة قانونية.",
+    "t-b2-24": "قصة تعليمية لا تدّعي واقعة جامعية موثقة؛ حُفظت تفاصيلها في الترجمة الكاملة وصُحح der Hörsaal في قائمة المفردات.",
+    "t-b2-25": "أرقام شدّ العضلات والرضوض جزء من القصة التدريبية وحدها، وليست إحصاءً موثقاً؛ أضيف التنبيه صراحةً إلى النصين الألماني والعربي."
+  },
+  "sources": [
+    {
+      "id": "BSI-Credential-Stuffing",
+      "url": "https://www.bsi.bund.de/SharedDocs/Newsletter/DE/BuergerCERT-Newsletter/10_Sicher-Informiert_12-05-2021.html",
+      "noteAr": "مرجع BSI الرسمي يشرح تجربة بيانات الدخول المسروقة آلياً لدى خدمات أخرى ويوصي بكلمات مرور فريدة والمصادقة متعددة العوامل."
+    },
+    {
+      "id": "EUR-Lex-GDPR-Article-17",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
+      "noteAr": "المادة 17 من اللائحة 2016/679: حق المحو يُطبّق عند أسباب وشروط محددة وترد عليه استثناءات منصوص عليها."
+    }
+  ],
+  "contentChecks": [
+    {"id": "K236a", "check": "المعرّفات الخمسة في المستوى B2، عناوين المثال واضحة، والحقول ar ترجمات كاملة لا ملخصات.", "status": "pass"},
+    {"id": "K236b", "check": "20 سؤالاً بأربعة أسئلة لكل نص؛ prompts عربية/ألمانية ومفاتيح وخيارات وشروح متسقة.", "status": "pass"},
+    {"id": "K236c", "check": "قيد المادة 17، دقة وصف BSI، تنبيه الأرقام التدريبية، وتصويب R141 موثقة.", "status": "pass"},
+    {"id": "K236d", "check": "ملفات الصوت الخمسة موجودة، مصدرها de النهائي، وسجلت في مانيفستو HörLabor وحده.", "status": "pass"},
+    {"id": "K236e", "check": "التغطية الحالية تطابق المانيفستو والقرص؛ إعادة التطبيق لا تضيف إدخالات ولا تغير تجزئة المانيفستو.", "status": "pass"},
+    {"id": "K236f", "check": "التغطية بعد R167 هي 142/157؛ B2 25/40؛ المتبقي t-b2-26–40 (15 نصاً).", "status": "pass"}
+  ],
+  "contentWarnings": [],
+  "judgement": "اكتملت مراجعة النصوص الخمسة t-b2-21–25 وترجماتها العربية الكاملة وأسئلتها، وسُجلت خمسة ملفات صوت بعد تثبيت الألمانية. صارت تغطية HörLabor 142/157 وB2 25/40؛ يبقى 15 نص B2 بلا تسجيل. لا تُعدّل هذه النتيجة التصويب التاريخي لتقرير R141 ولا تعني إكمال t-b2-26–35.",
+  "limits": {
+    "human": "لا اعتماد لغوي بشري أو تقييم CEFR.",
+    "legal": "مراجعة تحريرية بمصدر EUR-Lex الرسمي؛ ليست استشارة قانونية.",
+    "factual": "الأرقام في t-b2-25 موصوفة داخل النص على أنها مثال قصصي لا إحصاء موثقاً.",
+    "audio": "فحص بنيوي ومطابقة نص الإدخال فقط؛ لا استماع بشري ولا حكم على جودة النطق."
+  },
+  "audio": {
+    "generatedAudioIds": ["t-b2-21", "t-b2-22", "t-b2-23", "t-b2-24", "t-b2-25"],
+    "voice": "voice-01 (de-DE, Arena TTS)",
+    "sourceTextExact": true,
+    "pendingRegenerationIds": [],
+    "files": [
+      {"id": "t-b2-21", "bytes": 321261, "id3v2Header": true, "mpegLayer3Frames": 3345, "sourceTextMatchesAudio": true, "pendingRegeneration": false},
+      {"id": "t-b2-22", "bytes": 273453, "id3v2Header": true, "mpegLayer3Frames": 2847, "sourceTextMatchesAudio": true, "pendingRegeneration": false},
+      {"id": "t-b2-23", "bytes": 348333, "id3v2Header": true, "mpegLayer3Frames": 3627, "sourceTextMatchesAudio": true, "pendingRegeneration": false},
+      {"id": "t-b2-24", "bytes": 303021, "id3v2Header": true, "mpegLayer3Frames": 3155, "sourceTextMatchesAudio": true, "pendingRegeneration": false},
+      {"id": "t-b2-25", "bytes": 341133, "id3v2Header": true, "mpegLayer3Frames": 3552, "sourceTextMatchesAudio": true, "pendingRegeneration": false}
+    ],
+    "coverage": {
+      "before": {"totalTexts": 157, "hoerenAudio": 137, "A0": "15/15", "A1": "35/35", "A2": "32/32", "B1": "35/35", "B2": "20/40", "remainingWithoutLocalMP3": 20, "localAudioFilesTotal": 405},
+      "after": {"totalTexts": 157, "hoerenAudio": 142, "A0": "15/15", "A1": "35/35", "A2": "32/32", "B1": "35/35", "B2": "25/40", "remainingWithoutLocalMP3": 15, "localAudioFilesTotal": 410}
+    },
+    "manifestCount": 142,
+    "manifestSha256AfterReapply": "96b9b0e98917013ed59f7c83ab9a70f8b3f49d72e240ead58578f9657ac16ced",
+    "validation": {
+      "id3v2Header": true,
+      "mpegLayer3Frames": true,
+      "manifestReapply": "0 new, 0 refreshed",
+      "manifestSha256StableOnReapply": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false
+    },
+    "otherManifests": {
+      "dialogAudioEntriesForTargets": 0,
+      "diktatAudioEntriesForTargets": 0
+    }
+  },
+  "gates": {
+    "planned": "K234d التاريخية، K235d/e التاريخية، K236a–f",
+    "passed": ["K236a", "K236b", "K236c", "K236d", "K236e", "K236f"],
+    "result": "pass"
+  },
+  "validationResults": {
+    "smoke": "1561 نجاحاً و38 إخفاقاً؛ هي نفسها إخفاقات نسخة R166 النظيفة، ولا إخفاق جديد (exit 1 بسبب خط الأساس).",
+    "interaktiv": "702 نجاح و6 إخفاقات خط أساس مطابقة لـR166؛ لا جديد (exit 1).",
+    "typeScript": "نجح: npx tsc --noEmit",
+    "build": "نجح: npm run build؛ 13 صفحة ثابتة",
+    "auditContent": "نجح؛ صفر عيوب بنيوية مؤكدة",
+    "npmAudit": "نجح؛ صفر ثغرات",
+    "diffCheck": "نجح: git diff --check",
+    "patchReapply": "0 تغييرات؛ 0 new/0 refreshed؛ SHA-256 مستقر"
+  },
+  "patch": "scripts/patches/add_hoeren_audio_r167.py",
+  "next": {
+    "remainingUnrecordedTexts": 15,
+    "byLevel": {"B2": 15},
+    "priority": "t-b2-26 إلى t-b2-30 ثم t-b2-31 إلى t-b2-35 ثم t-b2-36 إلى t-b2-40"
+  },
+  "verifiedOn": "2026-10-13"
+}

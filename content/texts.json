@@ -4677,10 +4677,10 @@
   {
     "id": "t-b2-21",
     "level": "B2",
-    "titleDe": "Ein Missverständnis unter Freunden",
-    "titleAr": "سوء فهم بين صديقين",
-    "de": "Als Rami erfuhr, dass sein Freund Tarek die Stelle bekommen hatte, auf die sie sich beide beworben hatten, sagte er zuerst gar nichts. Später schrieb er eine kurze Nachricht: „Glückwunsch.“ Ohne Ausrufezeichen. Tarek las darin eine Kränkung und antwortete drei Tage lang nicht. So begann ein Missverständnis, das ihr Verhältnis fast beendet hätte.\n\nIn Wahrheit war Rami weder neidisch noch wütend. Er gönnte Tarek den Erfolg, aber die eigene Enttäuschung war an diesem Abend größer als seine Zuneigung. Das ist menschlich, und es wäre kein Problem gewesen, hätte er es einfach gesagt. Stattdessen schwieg er, und Schweigen lässt sich in jede Richtung deuten. Tarek dachte an Neid; seine Schwester vermutete sogar, Tarek habe ihn betrügen wollen, weil Tarek ihm nichts von dem Gespräch erzählt hatte.\n\nDass die beiden heute wieder zusammen Fußball spielen, liegt an einer einzigen Frage. Tarek rief an und fragte nicht „Warum bist du so?“, sondern „Wie geht es dir damit?“. Diese Frage zeigt Mitgefühl; man muss dafür weder nachgeben noch sich rechtfertigen. Rami konnte antworten, ohne sein Selbstwertgefühl zu verteidigen. Gelassenheit heißt nicht, nichts zu fühlen; sie heißt, das Gefühl zu benennen, bevor es den anderen enttäuscht.",
-    "ar": "رامي وطارق تقدّما للوظيفة نفسها؛ حين فاز طارق أرسل رامي تهنئة جافّة، ففهمها طارق إهانة وصمت ثلاثة أيام. الحقيقة: رامي لم يحسد، لكن خيبته كانت أكبر من مودّته تلك الليلة، وصمته فُسّر حسداً وحتى ظنّاً بأن طارق أراد خداعه. أنقذت الصداقةَ مكالمةٌ بسؤال واحد يُظهر التعاطف: «كيف تشعر حيال ذلك؟» — الرزانة هي تسمية الشعور قبل أن يخيّب الآخر.",
+    "titleDe": "Beispiel: Ein Missverständnis unter Freunden",
+    "titleAr": "مثال: سوء فهم بين صديقين",
+    "de": "Als Rami erfuhr, dass sein Freund Tarek die Stelle bekommen hatte, auf die sie sich beide beworben hatten, sagte er zuerst gar nichts. Später schrieb er eine kurze Nachricht: „Glückwunsch.“ Ohne Ausrufezeichen. Tarek las darin eine Kränkung und antwortete drei Tage lang nicht. So begann ein Missverständnis, das ihr Verhältnis fast beendet hätte.\n\nIn Wahrheit war Rami weder neidisch noch wütend. Er gönnte Tarek den Erfolg, aber die eigene Enttäuschung war an diesem Abend größer als seine Zuneigung. Das ist menschlich, und es wäre kein Problem gewesen, hätte er es einfach gesagt. Stattdessen schwieg er, und Schweigen lässt sich in jede Richtung deuten. Tarek deutete Ramis Schweigen als Neid; seine Schwester vermutete sogar, Tarek habe Rami betrügen wollen, weil Tarek ihm nichts vom Bewerbungsgespräch erzählt hatte.\n\nDass die beiden heute wieder zusammen Fußball spielen, liegt an einer einzigen Frage. Tarek rief an und fragte nicht „Warum bist du so?“, sondern „Wie geht es dir damit?“. Diese Frage zeigt Mitgefühl; man muss dafür weder nachgeben noch sich rechtfertigen. Rami konnte antworten, ohne sein Selbstwertgefühl zu verteidigen. Gelassenheit heißt nicht, nichts zu fühlen; sie heißt, das Gefühl zu benennen, bevor es den anderen enttäuscht.",
+    "ar": "عندما علم رامي أن صديقه طارق حصل على الوظيفة التي تقدّم إليها الاثنان، لم يقل شيئاً في البداية. ثم كتب إليه رسالة قصيرة: «تهانينا». من دون علامة تعجب. قرأ طارق في الرسالة إهانةً، ولم يردّ طوال ثلاثة أيام. وهكذا بدأ سوء فهم كاد ينهي علاقتهما.\n\nفي الحقيقة، لم يكن رامي حاسداً ولا غاضباً. كان يفرح من أجل نجاح طارق، لكن خيبة أمله هو في تلك الليلة كانت أكبر من مودّته له. وهذا شعور إنساني، ولم يكن ليصبح مشكلة لو قال ذلك ببساطة. لكنه صمت بدلاً من ذلك، والصمت قابل لتفسيرات شتى. ففسّر طارق صمت رامي على أنه حسد؛ بل إن أخته اشتبهت في أن طارق ربما أراد خداع رامي، لأنه لم يخبره عن مقابلة التوظيف.\n\nوما جعل الاثنين يعودان اليوم إلى لعب كرة القدم معاً هو سؤال واحد. اتصل طارق، ولم يسأله: «لماذا تتصرف هكذا؟»، بل قال: «كيف تشعر حيال الأمر؟». يُظهر هذا السؤال تعاطفاً؛ ولا يحتاج المرء كي يطرحه إلى التنازل أو تبرير نفسه. استطاع رامي أن يجيب من دون أن يدافع عن تقديره لذاته. فالرزانة لا تعني ألا يشعر المرء بشيء؛ بل أن يسمّي شعوره قبل أن يخيّب ظنّ الآخر.",
     "questions": [
       {
         "type": "mc",
@@ -4728,7 +4728,7 @@
         ],
         "explanationAr": "الدليل حرفياً: «Er gönnte Tarek den Erfolg» — gönnen = يتمنّى الخير للآخر دون حسد، هنا في Präteritum.",
         "id": "t-b2-21-q4",
-        "promptAr": "هو ___ لطارق النجاح، لكن خيبة أمله كانت أكبر."
+        "promptAr": "كان رامي ___ لطارق النجاح، لكن خيبة أمله كانت أكبر."
       }
     ],
     "neu": true,
@@ -4751,10 +4751,10 @@
   {
     "id": "t-b2-22",
     "level": "B2",
-    "titleDe": "Zurück nach der Operation",
-    "titleAr": "العودة بعد العملية",
+    "titleDe": "Beispiel: Zurück nach der Operation",
+    "titleAr": "مثال: العودة إلى العمل بعد العملية",
     "de": "Nach acht Wochen kehrt Frau Lang ins Büro zurück. Im Frühjahr wurde sie am Knie operiert, danach folgten drei Wochen Reha und eine lange Krankschreibung. Die Genesung verlief gut, sagt sie, aber sie hat etwas gelernt, das mit dem Knie wenig zu tun hat: Wie ein Umfeld auf Krankheit reagiert, sagt mehr über das Arbeitsklima als jede Umfrage.\n\nIhre Kolleginnen hatten in der Zeit ihre Aufgaben still übernommen. Niemand fragte, wann sie „endlich“ zurückkomme. Diese Solidarität war keine Selbstverständlichkeit; in ihrer früheren Firma galt schon eine Erkältung als Schwäche, und wer zur Vorsorge ging, tat das heimlich. Dort war sie, wie sie heute selbst sagt, fast süchtig nach Anerkennung gewesen und hatte jede Pause als verlorene Zeit empfunden.\n\nJetzt dosiert sie die Anstrengung anders. Die Bildschirmarbeit unterbricht sie alle fünfzig Minuten, weil der Physiotherapeut es empfohlen hat, aber auch, weil sie gemerkt hat, dass die Arbeit danach besser wird. Ihr Chef hat das Modell für das ganze Team übernommen. Ob das die Produktivität steigert, weiß niemand genau. Dass es das Klima verbessert hat, merkt man schon an der Kaffeemaschine.",
-    "ar": "تعود السيدة لانغ إلى المكتب بعد ثمانية أسابيع: عملية في الركبة، ثلاثة أسابيع تأهيل، وإجازة مرضية طويلة. ما تعلّمته: ردّ فعل المحيط على المرض يكشف المناخ المهني. زميلاتها تولّين مهامها بصمت، بخلاف شركتها السابقة حيث كان الزكام ضعفاً والفحص الوقائي سرّاً، وكانت شبه مدمنة على التقدير. الآن تقسّم الجهد وتقطع عمل الشاشة كل خمسين دقيقة، وتبنّى رئيسها النموذج للفريق كله.",
+    "ar": "تعود السيدة لانغ إلى المكتب بعد ثمانية أسابيع. ففي الربيع خضعت لعملية جراحية في ركبتها، ثم أمضت ثلاثة أسابيع في إعادة التأهيل، تلتها إجازة مرضية طويلة. وتقول إن تعافيها سار جيداً، لكنها تعلّمت أمراً لا علاقة له كثيراً بركبتها: إن طريقة تعامل المحيطين مع المرض تكشف عن مناخ العمل أكثر مما يكشفه أي استبيان.\n\nخلال تلك الفترة تولّت زميلاتها مهامها بهدوء ومن دون ضجة. ولم يسألها أحد: «متى ستعودين أخيراً؟». ولم يكن هذا التضامن أمراً مفروغاً منه؛ ففي شركتها السابقة كان حتى الزكام يُعدّ علامة ضعف، وكانت من تذهب لإجراء فحص وقائي تفعل ذلك سراً. وتقول اليوم إنها كانت هناك شبه مدمنة على نيل التقدير، وكانت ترى في كل استراحة وقتاً ضائعاً.\n\nأما الآن فتوزّع جهدها على نحو مختلف. وهي تقاطع عملها أمام الشاشة كل خمسين دقيقة، بناءً على توصية اختصاصي العلاج الطبيعي، وكذلك لأنها لاحظت أن أداءها بعد الاستراحة يتحسن. وقد اعتمد مديرها هذا النظام للفريق كله. ولا أحد يعرف على وجه الدقة إن كان يزيد الإنتاجية. أما أنه حسّن أجواء العمل، فيمكن ملاحظته بالفعل عند آلة القهوة.",
     "questions": [
       {
         "type": "mc",
@@ -4767,7 +4767,7 @@
         "answer": "wie ein Umfeld auf Krankheit reagiert",
         "explanationAr": "الدليل حرفياً: «Wie ein Umfeld auf Krankheit reagiert, sagt mehr über das Arbeitsklima als jede Umfrage». الفخّ 1: التعافي سار جيداً لكنه ليس المقياس. الفخّ 2: الوقاية ذُكرت عن الشركة السابقة.",
         "id": "t-b2-22-q1",
-        "promptAr": "ماذا يقول عن مناخ العمل أكثر من أي استبيان حسب السيدة لانغ؟"
+        "promptAr": "ما الذي يكشف عن مناخ العمل أكثر من أي استبيان بحسب السيدة لانغ؟"
       },
       {
         "type": "mc",
@@ -4802,7 +4802,7 @@
         ],
         "explanationAr": "الدليل حرفياً: «danach folgten drei Wochen Reha und eine lange Krankschreibung».",
         "id": "t-b2-22-q4",
-        "promptAr": "بعد العملية تبعتها ثلاثة أسابيع ___ وإجازة مرضية طويلة."
+        "promptAr": "بعد العملية أمضت السيدة لانغ ثلاثة أسابيع في ___، ثم حصلت على إجازة مرضية طويلة."
       }
     ],
     "neu": true,
@@ -4825,10 +4825,10 @@
   {
     "id": "t-b2-23",
     "level": "B2",
-    "titleDe": "Ein Passwort für alles",
-    "titleAr": "كلمة مرور واحدة لكل شيء",
-    "de": "Herr Ben Salem benutzte jahrelang ein einziges Passwort: für das Nutzerkonto beim Online-Händler, für die Cloud mit den Familienfotos und für das Spiel seines Sohnes. Er hielt das für praktisch. Dann kam eine E-Mail, die er für Spam hielt, und zwei Tage später war das Konto beim Händler gehackt. Bestellt wurde nichts Teures; die Angreifer wollten offenbar nur prüfen, wo das Passwort noch passt.\n\nDie Beraterin der Bank erklärte ihm, dass Cyberkriminalität selten wie im Film aussieht. Meistens sammelt jemand Zugangsdaten und probiert sie automatisch überall aus. Ein Chatbot der Bank hätte ihm dieselbe Antwort gegeben, sagte sie lachend, aber ohne Kaffee. Ihre Empfehlungen waren einfach: für jedes Konto ein eigenes Passwort, die Software regelmäßig aktualisieren, ein Backup außerhalb der Cloud.\n\nZu Hause stellte er fest, dass das letzte Update auf seinem Handy ein Jahr alt war, weil der Speicher voll war und der Akku bei jeder Installation schwächelte. Die Nutzungsbedingungen der Cloud hatte er nie gelesen; dort stand, wie lange die Datenspeicherung nach einer Kündigung weiterläuft. Nach der DSGVO darf er die Löschung verlangen. Er hat es getan, und die Fotos liegen jetzt zusätzlich auf einer kleinen Festplatte in der Küchenschublade.",
-    "ar": "السيد بن سالم استعمل كلمة مرور واحدة لكل حساباته حتى اختُرق حسابه عند المتجر بعد إيميل ظنّه بريداً مزعجاً؛ المهاجمون كانوا يختبرون أين تصلح الكلمة نفسها. مستشارة البنك: الجرائم السيبرانية غالباً تجميع بيانات دخول وتجربتها آلياً؛ توصياتها: كلمة لكل حساب، تحديث دوري، نسخة احتياطية خارج السحابة. اكتشف أن آخر تحديث لهاتفه عمره سنة لامتلاء الذاكرة، وأن شروط الاستخدام تحدّد مدة تخزين البيانات؛ طلب الحذف وفق اللائحة الأوروبية وحفظ الصور على قرص صغير.",
+    "titleDe": "Beispiel: Ein Passwort für mehrere Konten",
+    "titleAr": "مثال: كلمة مرور واحدة لعدة حسابات",
+    "de": "Herr Ben Salem benutzte jahrelang ein einziges Passwort: für das Nutzerkonto beim Online-Händler, für die Cloud mit den Familienfotos und für das Spiel seines Sohnes. Er hielt das für praktisch. Dann kam eine E-Mail, die er für Spam hielt, und zwei Tage später war das Konto beim Händler gehackt. Bestellt wurde nichts Teures; die Angreifer wollten offenbar nur prüfen, wo das Passwort noch passt.\n\nDie Beraterin der Bank erklärte ihm, dass Cyberkriminalität selten wie im Film aussieht. Oft verwenden Angreifer gestohlene Zugangsdaten und probieren sie automatisch bei anderen Onlinediensten aus. Ein Chatbot der Bank hätte ihm dieselbe Antwort gegeben, sagte sie lachend, aber ohne Kaffee. Ihre Empfehlungen waren einfach: für jedes Konto ein eigenes Passwort, die Software regelmäßig aktualisieren, ein Backup außerhalb der Cloud.\n\nZu Hause stellte er fest, dass das letzte Update auf seinem Handy ein Jahr alt war, weil der Speicher voll war und der Akku bei jeder Installation schwächelte. Die Nutzungsbedingungen der Cloud hatte er nie gelesen; dort stand, wie lange die Datenspeicherung nach einer Kündigung weiterläuft. Unter bestimmten Voraussetzungen kann er nach Artikel 17 der DSGVO die Löschung seiner personenbezogenen Daten verlangen. Ob der Cloud-Anbieter sie in diesem Fall löschen muss, hängt von den gesetzlichen Voraussetzungen und möglichen Ausnahmen ab. Er hat die Löschung beantragt, und die Fotos liegen jetzt zusätzlich auf einer kleinen Festplatte in der Küchenschublade.",
+    "ar": "استخدم السيد بن سالم لسنوات كلمة مرور واحدة فقط: لحسابه لدى متجر إلكتروني، ولخدمة التخزين السحابي التي تضم صور العائلة، وللعبة ابنه. وكان يظن أن ذلك عملي. ثم وصلته رسالة إلكترونية ظنها بريداً مزعجاً، وبعد يومين اكتشف أن حسابه لدى المتجر قد اختُرق. لم يُطلب شيء باهظ الثمن؛ ويبدو أن المهاجمين أرادوا فقط اختبار الخدمات التي ما زالت كلمة المرور نفسها تعمل فيها.\n\nشرحت له مستشارة البنك أن الجرائم السيبرانية نادراً ما تبدو كما في الأفلام. وكثيراً ما يستخدم المهاجمون بيانات دخول مسروقة ويجرّبونها آلياً لدى خدمات إلكترونية أخرى. وقالت ضاحكةً إن روبوت المحادثة في البنك كان سيعطيه الإجابة نفسها، لكن من دون قهوة. وكانت توصياتها بسيطة: كلمة مرور مختلفة لكل حساب، وتحديث البرامج بانتظام، وإنشاء نسخة احتياطية خارج السحابة.\n\nوعندما عاد إلى المنزل اكتشف أن آخر تحديث لهاتفه يعود إلى سنة مضت؛ فالذاكرة كانت ممتلئة، والبطارية تضعف مع كل محاولة تثبيت. ولم يقرأ قط شروط استخدام الخدمة السحابية؛ فقد أوضحت المدة التي يستمر خلالها تخزين البيانات بعد إلغاء الاشتراك. وبموجب المادة 17 من اللائحة العامة لحماية البيانات الأوروبية (DSGVO)، يمكنه طلب حذف بياناته الشخصية إذا انطبقت شروط محددة. أما وجوب حذف مزوّد الخدمة السحابية لها في حالته فيعتمد على الشروط القانونية والاستثناءات الممكنة. وقد قدّم طلباً للحذف، وصارت لديه الآن نسخة إضافية من الصور على قرص صلب صغير في درج المطبخ.",
     "questions": [
       {
         "type": "mc",
@@ -4870,13 +4870,13 @@
       },
       {
         "type": "fill",
-        "promptDe": "Nach der ___ darf er die Löschung verlangen.",
+        "promptDe": "Unter bestimmten Voraussetzungen kann er nach Artikel 17 der ___ die Löschung verlangen.",
         "answer": [
           "DSGVO"
         ],
-        "explanationAr": "الدليل حرفياً: «Nach der DSGVO darf er die Löschung verlangen».",
+        "explanationAr": "الدليل حرفياً: «Unter bestimmten Voraussetzungen kann er nach Artikel 17 der DSGVO die Löschung seiner personenbezogenen Daten verlangen». أي إن طلب الحذف ممكن عند انطباق شروط المادة 17، ولا يعني أن كل طلب واجب القبول.",
         "id": "t-b2-23-q4",
-        "promptAr": "بعد ___ يجوز له طلب الحذف."
+        "promptAr": "بشروط محددة، يمكنه طلب الحذف بموجب المادة 17 من ___."
       }
     ],
     "neu": true,
@@ -4901,10 +4901,10 @@
   {
     "id": "t-b2-24",
     "level": "B2",
-    "titleDe": "Das erste Semester",
-    "titleAr": "الفصل الجامعي الأول",
+    "titleDe": "Beispiel: Das erste Semester",
+    "titleAr": "مثال: الفصل الجامعي الأول",
     "de": "Mona hatte den Studienplatz erst im zweiten Anlauf bekommen; die Zulassung kam per Post, die Einschreibung musste sie persönlich erledigen. Dann saß sie in der ersten Vorlesung, in einem Hörsaal mit vierhundert Plätzen, und verstand nach zwanzig Minuten kaum noch ein Wort. Nicht wegen der Sprache. Wegen des Tempos.\n\nIn der Sprechstunde riet ihr die Dozentin zu etwas, das Mona zunächst kindisch fand: einem Lerntagebuch. Jeden Abend drei Zeilen: Was habe ich verstanden, was nicht, was mache ich morgen dagegen. Nach zwei Wochen sah Mona ein Muster. Ihre größte Ablenkung war nicht das Handy, sondern die Sorge, nicht gut genug zu sein. Diese Sorge kostete mehr Zeit als jede Nachricht.\n\nFür den ersten Leistungsnachweis, eine Hausarbeit von zwölf Seiten, plante sie rückwärts: Abgabe, Korrektur, Rohfassung, Gliederung, Lesen. Zeitmanagement heißt für sie seitdem nicht, mehr zu schaffen, sondern früher anzufangen. Die Arbeit wurde mit einer Zwei benotet. Die Dozentin schrieb darunter, die Gliederung sei ungewöhnlich klar. Bis zur Abschlussarbeit sind es noch Jahre, aber die Karteikarten mit den Fachbegriffen liegen schon jetzt in einer Schachtel neben dem Bett.",
-    "ar": "منى حصلت على مقعد الدراسة في المحاولة الثانية، وفي أول محاضرة في مدرّج بأربعمائة مقعد لم تفهم بعد عشرين دقيقة بسبب السرعة لا اللغة. في موعد المكتب نصحتها المحاضِرة بدفتر تعلّم: ثلاثة أسطر كل مساء. بعد أسبوعين اكتشفت أن أكبر مشتّت لها ليس الهاتف بل القلق من عدم الكفاءة. خطّطت للبحث المكتوب عكسياً من موعد التسليم؛ إدارة الوقت عندها صارت: البدء مبكراً لا الإنجاز أكثر. نالت درجة اثنين، والبطاقات جاهزة قرب السرير.",
+    "ar": "حصلت منى على المقعد الجامعي بعد المحاولة الثانية فقط؛ وصلها خطاب القبول بالبريد، وكان عليها إنجاز إجراءات التسجيل بنفسها حضورياً. ثم جلست في محاضرتها الأولى داخل مدرّج يتسع لأربعمائة مقعد، وبعد عشرين دقيقة باتت بالكاد تفهم أي كلمة. لم يكن السبب اللغة، بل سرعة المحاضرة.\n\nفي الساعات المكتبية نصحتها المحاضِرة بأمر وجدته منى في البداية طفولياً: أن تحتفظ بمذكرة للتعلّم. وكتبت كل مساء ثلاثة أسطر: ماذا فهمت؟ وما الذي لم أفهمه؟ وماذا سأفعل غداً حيال ذلك؟ وبعد أسبوعين لاحظت منى نمطاً متكرراً. لم يكن هاتفها أكبر ما يشتت انتباهها، بل خوفها من ألا تكون جيدة بما يكفي. وقد استهلك هذا الخوف وقتاً أطول من أي رسالة.\n\nولأول تقييم، وهو بحث من اثنتي عشرة صفحة، وضعت خطة عكسية بدءاً من موعد التسليم: المراجعة، ثم المسودة الأولية، فالخطة، فالقراءة. ومنذ ذلك الحين، لم تعد إدارة الوقت بالنسبة إليها تعني إنجاز المزيد، بل البدء في وقت أبكر. حصل البحث على الدرجة 2. وكتبت المحاضِرة تحته أن خطة البحث كانت واضحة على نحو غير معتاد. وما زالت سنوات تفصلها عن مشروع التخرج، لكن بطاقات المصطلحات التخصصية موجودة الآن في علبة بجانب سريرها.",
     "questions": [
       {
         "type": "mc",
@@ -4917,7 +4917,7 @@
         "answer": "wegen des Tempos",
         "explanationAr": "الدليل حرفياً: «Nicht wegen der Sprache. Wegen des Tempos». الفخّ 1: اللغة منفيّة صراحة. الفخّ 2: حجم المدرّج وصف لا سبب.",
         "id": "t-b2-24-q1",
-        "promptAr": "لماذا لم تفهم منى في المحاضرة الأولى شيئاً تقريباً؟"
+        "promptAr": "لماذا لم تعد منى تفهم إلا القليل في المحاضرة الأولى؟"
       },
       {
         "type": "mc",
@@ -4930,7 +4930,7 @@
         "answer": "die Sorge, nicht gut genug zu sein",
         "explanationAr": "الدليل حرفياً: «Ihre größte Ablenkung war nicht das Handy, sondern die Sorge, nicht gut genug zu sein». الفخّ: الهاتف منفيّ بـ«nicht … sondern».",
         "id": "t-b2-24-q2",
-        "promptAr": "ما أكبر ما ألهى منى حسب مذكرتها التعلمية؟"
+        "promptAr": "ما أكبر مصدر لتشتت منى بحسب مذكرة التعلّم؟"
       },
       {
         "type": "truefalse",
@@ -4942,7 +4942,7 @@
         "answer": "richtig",
         "explanationAr": "الدليل حرفياً: «Die Arbeit wurde mit einer Zwei benotet».",
         "id": "t-b2-24-q3",
-        "promptAr": "هل حصل البحث على علامة «اثنين»؟"
+        "promptAr": "هل نال البحث الدرجة 2؟"
       },
       {
         "type": "fill",
@@ -4952,13 +4952,13 @@
         ],
         "explanationAr": "الدليل حرفياً: «In der Sprechstunde riet ihr die Dozentin zu etwas».",
         "id": "t-b2-24-q4",
-        "promptAr": "في ___ نصحتها المحاضِرة بمذكرة تعلمية."
+        "promptAr": "في ___ نصحتها المحاضِرة بكتابة مذكرة للتعلّم."
       }
     ],
     "neu": true,
     "waisen": [
       "die Vorlesung",
-      "das Hörsaal",
+      "der Hörsaal",
       "die Hausarbeit",
       "der Leistungsnachweis",
       "benoten",
@@ -4977,10 +4977,10 @@
   {
     "id": "t-b2-25",
     "level": "B2",
-    "titleDe": "Die Niederlage im Turnier",
-    "titleAr": "الهزيمة في البطولة",
-    "de": "Das Turnier endete für den kleinen Verein aus dem Stadtteil im Halbfinale, mit einem Elfmeter in der letzten Minute. Der Schiedsrichter hatte ein Foul gesehen, das die Hälfte der Zuschauer nicht gesehen hatte. Die andere Hälfte jubelte. So ist das bei einem Wettkampf: Dieselbe Szene, zwei Wahrheiten.\n\nInteressanter als die Niederlage war, was danach geschah. Auf der Mitgliederversammlung zwei Wochen später sprach niemand über den Schiedsrichter. Man sprach über Training. Die Trainerin legte Zahlen vor: drei Zerrungen und zwei Prellungen in einer Saison, fast alle in der zweiten Halbzeit. Ihre Erklärung war unbequem. Das Ausdauertraining sei gut, das Krafttraining schwach, und vor den Spielen dehne sich kaum jemand länger als zwei Minuten.\n\nDer Verein beschloss, disziplinierter zu werden, ohne strenger zu sein: zwei feste Einheiten pro Woche, ein Aufwärmplan, den jeder kennt, und ein Notizbuch, in dem jede Spielerin ihre Bestleistung selbst einträgt. Seit dem Beschluss gab es sieben Beitritte, die meisten von Eltern, die vorher nur vom Rand aus angefeuert hatten. Ob die Mannschaft nächstes Jahr weiterkommt, ist offen. Dass sie besser vorbereitet verliert oder gewinnt, ist sicher.",
-    "ar": "خرج نادي الحي من البطولة في نصف النهائي بركلة جزاء في الدقيقة الأخيرة رأى الحكم فيها خطأً لم يره نصف الجمهور. الأهمّ ما جرى بعدها: في الجمعية العمومية لم يتحدث أحد عن الحكم بل عن التدريب؛ المدربة عرضت أرقام الإصابات (شدّ ورضوض معظمها في الشوط الثاني) وشخّصت ضعف تمارين القوة والإطالة. قرّر النادي الانضباط دون تشدّد: حصّتان ثابتتان، خطة إحماء، ودفتر تسجّل فيه كل لاعبة أفضل نتيجتها. سبعة انتساب جديد، معظمهم آباء كانوا يشجعون من الحافة.",
+    "titleDe": "Beispiel: Die Niederlage im Turnier",
+    "titleAr": "مثال: الهزيمة في البطولة",
+    "de": "Das Turnier endete für den kleinen Verein aus dem Stadtteil im Halbfinale mit einem Elfmeter in der letzten Minute. Der Schiedsrichter hatte ein Foul gesehen, das die Hälfte der Zuschauer nicht gesehen hatte. Die andere Hälfte jubelte. So ist das bei einem Wettkampf: Dieselbe Szene, zwei Wahrheiten.\n\nInteressanter als die Niederlage war, was danach geschah. Auf der Mitgliederversammlung zwei Wochen später sprach niemand über den Schiedsrichter. Man sprach über Training. Die Trainerin legte Zahlen vor: drei Zerrungen und zwei Prellungen in einer Saison, fast alle in der zweiten Halbzeit. Diese Zahlen gehören zur Trainingsgeschichte; sie sind keine belegte Statistik. Ihre Erklärung war unbequem. Das Ausdauertraining sei gut, das Krafttraining schwach, und vor den Spielen dehne sich kaum jemand länger als zwei Minuten.\n\nDer Verein beschloss, disziplinierter zu werden, ohne strenger zu sein: zwei feste Einheiten pro Woche, ein Aufwärmplan, den jeder kennt, und ein Notizbuch, in dem jede Spielerin ihre Bestleistung selbst einträgt. Seit dem Beschluss verzeichnete der Verein sieben Beitritte. Die meisten neuen Mitglieder waren Eltern, die vorher nur vom Rand aus angefeuert hatten. Ob die Mannschaft nächstes Jahr eine Runde weiterkommt, ist offen. Sicher ist, dass die Mannschaft besser vorbereitet sein wird – ob sie gewinnt oder verliert.",
+    "ar": "انتهى مشوار النادي الصغير من الحي في البطولة عند الدور نصف النهائي، بعد احتساب ركلة جزاء في الدقيقة الأخيرة. كان الحكم قد احتسب مخالفةً لم يرها نصف المتفرجين، فيما هتف النصف الآخر فرحاً. هكذا تكون المنافسة: المشهد نفسه، وحقيقتان مختلفتان.\n\nوكان ما جرى بعد ذلك أكثر إثارة للاهتمام من الهزيمة. فبعد أسبوعين، في اجتماع الأعضاء، لم يتحدث أحد عن الحكم؛ بل تحدثوا عن التدريب. عرضت المدربة أرقاماً: ثلاث حالات شدّ عضلي ورضّتان في موسم واحد، وقعت معظمها في الشوط الثاني. وهذه الأرقام جزء من القصة التدريبية، وليست إحصاءً موثّقاً. ولم يكن تفسيرها مريحاً: قالت إن تدريب التحمل جيد، لكن تدريب القوة ضعيف، وإنه لا يكاد أحد يمارس تمارين الإطالة لأكثر من دقيقتين قبل المباريات.\n\nقرر النادي أن يصبح أكثر التزاماً من دون أن يكون أكثر تشدداً: حصتان ثابتتان أسبوعياً، وخطة إحماء يعرفها الجميع، ودفتر تسجل فيه كل لاعبة أفضل نتيجة حققتها بنفسها. ومنذ اتخاذ القرار، سجّل النادي سبع حالات انتساب. وكان معظم الأعضاء الجدد من أولياء الأمور الذين كانوا يكتفون بالتشجيع من على جانب الملعب. ولا يزال من غير المعروف ما إذا كان الفريق سيتأهل إلى مرحلة أبعد في العام المقبل. والأكيد أن الفريق سيكون أفضل استعداداً، سواء فاز أم خسر.",
     "questions": [
       {
         "type": "mc",
@@ -5010,15 +5010,15 @@
       },
       {
         "type": "truefalse",
-        "promptDe": "Die meisten neuen Mitglieder sind Eltern, die vorher vom Rand aus angefeuert hatten.",
+        "promptDe": "Die meisten neuen Mitglieder waren Eltern, die vorher nur vom Rand aus angefeuert hatten.",
         "options": [
           "richtig",
           "falsch"
         ],
         "answer": "richtig",
-        "explanationAr": "الدليل حرفياً: «die meisten von Eltern, die vorher nur vom Rand aus angefeuert hatten».",
+        "explanationAr": "الدليل حرفياً: «Die meisten neuen Mitglieder waren Eltern, die vorher nur vom Rand aus angefeuert hatten».",
         "id": "t-b2-25-q3",
-        "promptAr": "هل معظم الأعضاء الجدد أولياء كانوا يهتفون من الحافة سابقاً؟"
+        "promptAr": "هل معظم الأعضاء الجدد من أولياء الأمور الذين كانوا يشجعون من جانب الملعب؟"
       },
       {
         "type": "fill",
@@ -5028,7 +5028,7 @@
         ],
         "explanationAr": "الدليل حرفياً: «drei Zerrungen und zwei Prellungen in einer Saison».",
         "id": "t-b2-25-q4",
-        "promptAr": "ثلاث ___ ورضّتان في موسم واحد، كلها في الشوط الثاني."
+        "promptAr": "ثلاث ___ ورضّتان في موسم واحد، وقعت معظمها في الشوط الثاني."
       }
     ],
     "neu": true,
