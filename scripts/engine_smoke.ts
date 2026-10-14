@@ -537,15 +537,17 @@ const vocabRepeatAudit = (() => {
     const r167AudioIds = Array.from({ length: 5 }, (_, index) => `t-b2-${index + 21}`);
     const r168AudioIds = Array.from({ length: 5 }, (_, index) => `t-b2-${index + 26}`);
     const r169AudioIds = Array.from({ length: 5 }, (_, index) => `t-b2-${index + 31}`);
+    const r170AudioIds = Array.from({ length: 5 }, (_, index) => `t-b2-${index + 36}`);
     const audioForNewTexts = audioIds.filter((id) => texts.some((t) => t.id === id && (t as { neu?: boolean }).neu));
     const r169Voices = new Set(r169AudioIds.map((id) => hoerenAudio[id]?.voice));
-    ok(audioIds.length === 152 && audioIds.every((id) => texts.some((t) => t.id === id)) &&
+    ok(audioIds.length === 157 && audioIds.every((id) => texts.some((t) => t.id === id)) &&
       audioForNewTexts.length === 25 && r165AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.voice === "voice-01 (de-DE, Arena TTS)") &&
       r166AudioIds.every((id) => audioIds.includes(id) && hoerenAudio[id]?.level === "B1" && hoerenAudio[id]?.voice === "voice-01 (de-DE, Arena TTS)") &&
       r167AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice === "voice-01 (de-DE, Arena TTS)") &&
       r168AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice === "voice-02 (de-DE, Arena TTS)") &&
-      r169AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice?.startsWith("voice-") && hoerenAudio[id]?.voice?.includes("(de-DE, Arena TTS)")) && r169Voices.size === 1,
-      `K26e تسجيلات R165–R169 (${audioIds.length} ملفاً؛ 25 نصاً neu وخمسة B1 في R166)`);
+      r169AudioIds.every((id) => audioForNewTexts.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice?.startsWith("voice-") && hoerenAudio[id]?.voice?.includes("(de-DE, Arena TTS)")) && r169Voices.size === 1 &&
+      r170AudioIds.every((id) => audioIds.includes(id) && hoerenAudio[id]?.level === "B2" && hoerenAudio[id]?.voice === "voice-03 (de-DE, Arena TTS)"),
+      `K26e تسجيلات R165–R170 (${audioIds.length} ملفاً؛ 25 نصاً neu وتغطية B2 ‏40/40)`);
     ok(Object.keys(hoerenAudio).length === man.einsaetze.length, "K26f الخريطة المصدَّرة بعدد المداخل — تصدير lib/content صادق");
     hoerenSrcCheck: {
       const src = readFileSync("components/hoeren.tsx", "utf8");
@@ -2776,8 +2778,8 @@ void 0;
   ok(nD === 156 && lies.includes("dialogues **156**"), `K125b الحواراتُ 156 في القرصِ والسطرِ والفهرس (${nD})`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 80 && nH === 152 && nH + nG + nK + nS === 420 && lies.includes("152 ملفاً صوتياً") && lies.includes("420 ملفات صوتية"),
-    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 420`);
+  ok(nG === 80 && nH === 157 && nH + nG + nK + nS === 425 && lies.includes("157 ملفاً صوتياً") && lies.includes("425 ملفاً صوتياً"),
+    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 425`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
   const nAb = dialogues.flatMap((d) => ablenker(d)).length;
@@ -10955,79 +10957,65 @@ void 0;
   ok(reviewB1Final.contentChecks.length === 6 && reviewB1Final.contentChecks.every((c:any) => c.status === "pass"),
     "K229f سجل التقرير فحوص R158 الستة الناجحة");
 }
-/* ═══ K230 — آخر خمسة نصوص B2 t-b2-36..40 (R159). ═══ */
+/* ═══ K230 — لقطة R159 التاريخية للنصوص t-b2-36..40؛ الحالة الحالية في K239. ═══ */
 {
   const reviewB2Final = JSON.parse(readFileSync("docs/content-review-b2-texts-02-2026-10-11.json", "utf8")) as any;
   const reviewB2FinalMd = readFileSync("docs/content-review-b2-texts-02-2026-10-11.md", "utf8");
   const reviewB2FinalPatch = readFileSync("scripts/patches/review_b2_texts_02.py", "utf8");
-  const textsArr = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
   const ids = ["t-b2-36", "t-b2-37", "t-b2-38", "t-b2-39", "t-b2-40"];
-  const batch = ids.map((id) => textsArr.find((t:any) => t.id === id));
-  const corrections = reviewB2Final.corrections.map((c:any) => c.unit);
+  const corrections = reviewB2Final.corrections;
+  const archivedValue = (unit:string) => corrections.find((entry:any) => entry.unit === unit)?.new ?? "";
+  const correctionsByUnit = new Set(corrections.map((entry:any) => entry.unit));
   const sourceIds = reviewB2Final.sources.map((source:any) => source.id);
   ok(reviewB2Final.reviewRule === "R159" && JSON.stringify(reviewB2Final.targetIds) === JSON.stringify(ids) &&
     reviewB2Final.totals.texts === 5 && reviewB2Final.totals.germanWords === 1000 &&
     reviewB2Final.totals.sentenceEndMarks === 70 && reviewB2Final.totals.questions === 10 &&
     reviewB2Final.totals.correctedFields === 20 && reviewB2Final.totals.guardedTransitions === 20 &&
-    reviewB2Final.totals.unresolved === 0 && corrections.length === 20 && new Set(corrections).size === 20 &&
+    reviewB2Final.totals.unresolved === 0 && corrections.length === 20 && correctionsByUnit.size === 20 &&
     reviewB2Final.coverage.before.covered === 152 && reviewB2Final.coverage.after.covered === 157 &&
     reviewB2Final.coverage.after.total === 157 && reviewB2Final.coverage.remaining.total === 0 &&
     sourceIds.length === 5 && new Set(sourceIds).size === 5 && reviewB2FinalMd.includes("K230a–f") &&
     reviewB2FinalPatch.includes("len(EDITS) != 20"),
-    "K230a تقرير R159 يحصي النصوص والكلمات والأسئلة والتصحيحات والمصادر ويكمل تغطية القراءة");
-  const tasksValid = batch.every((t:any) => t && t.level === "B2" && !!t.titleDe?.trim() && !!t.titleAr?.trim() &&
-    !!t.de?.trim() && !!t.ar?.trim() && Array.isArray(t.questions) && t.questions.length === 2 &&
-    t.questions.every((q:any) => q.type === "mc" && !!q.promptDe?.trim() && !!q.promptAr?.trim() && !!q.explanationAr?.trim() &&
-      Array.isArray(q.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length && q.options.includes(q.answer)));
-  ok(tasksValid, "K230b نصوص B2 الخمسة وأسئلتها العشرة مكتملة وخياراتها ومفاتيحها صالحة");
-  const school = batch[0];
-  ok(school.titleDe === "Sollte der Schulbeginn später sein?" && school.de.includes("Eine mögliche Änderung wäre") &&
-    !school.de.includes("Immer mehr Experten") && school.de.includes("nicht eindeutig") &&
+    "K230a لقطة R159 التاريخية: خمسة نصوص و20 تصحيحاً وتغطية القراءة 152→157 محفوظة");
+  const archivedResourcesValid = reviewB2Final.resources.length === 5 && reviewB2Final.resources.every((resource:any) =>
+    resource.level === "B2" && resource.kind === "reading-text" && resource.questions === 2) &&
+    ids.every((id:string) => correctionsByUnit.has(`${id}.ar`)) &&
+    ["t-b2-36.de", "t-b2-37.de", "t-b2-38.de", "t-b2-39.de"].every((unit:string) => correctionsByUnit.has(unit));
+  ok(archivedResourcesValid,
+    "K230b سجل R159 التاريخي يحفظ النصوص وترجماتها الكاملة وأسئلة النسخة ذات السؤالين؛ النسخة الحالية في K239");
+  const archivedSchool = archivedValue("t-b2-36.de");
+  ok(archivedSchool.startsWith("Eine mögliche Änderung wäre") && archivedSchool.includes("nicht eindeutig") &&
+    !archivedSchool.includes("Immer mehr Experten") &&
     reviewB2Final.sources.find((source:any) => source.id === "S1")?.url.includes("aap.org") &&
     reviewB2Final.sources.find((source:any) => source.id === "S2")?.url.includes("PMC9665092") &&
-    school.questions[0].answer === "Eltern haben organisatorische Probleme" &&
-    school.questions[0].explanationAr.includes("organisatorische Probleme"),
-    "K230c صياغة بدء الدراسة احتمالية، ودليل النوم/التحصيل حذر، والسؤال يطابق الاعتراض");
-  const workweek = batch[2];
-  ok(workweek.titleDe.includes("Vier-Tage-Woche") && workweek.de.includes("In Island blieben") &&
-    workweek.de.includes("britischen Pilotprojekt") && workweek.de.includes("stiegen leicht") &&
-    workweek.de.includes("Die deutsche Studie berichtete") && workweek.de.includes("statistisch nicht signifikant") &&
-    workweek.ar.includes("انخفض عدد أيام المرض انخفاضاً طفيفاً، لكن الفرق لم يكن ذا دلالة إحصائية") &&
-    workweek.ar.includes("ففي آيسلندا") && workweek.ar.includes("وفي التجربة البريطانية") &&
-    workweek.ar.includes("أما الدراسة الألمانية") &&
-    !workweek.de.includes("weniger Krankmeldungen") && !workweek.de.includes("Arbeitgeberverbände warnen") &&
+    archivedValue("t-b2-36.questions[0].promptDe") === "Welchen Einwand nennen die Kritiker?",
+    "K230c سجل R159 التاريخي يحفظ الصياغة الحذرة لبدء الدراسة ومصادر النوم والتحصيل");
+  const archivedWorkweek = archivedValue("t-b2-38.de");
+  const archivedWorkweekAr = archivedValue("t-b2-38.ar");
+  ok(archivedWorkweek.includes("Die Ergebnisse fallen je nach Land unterschiedlich aus") &&
+    archivedWorkweek.includes("In Island blieben") && archivedWorkweek.includes("britischen Pilotprojekt") &&
+    archivedWorkweek.includes("stiegen leicht") && archivedWorkweek.includes("statistisch nicht signifikant") &&
+    archivedWorkweekAr.includes("انخفض عدد أيام المرض انخفاضاً طفيفاً، لكن الفرق لم يكن ذا دلالة إحصائية") &&
+    archivedWorkweekAr.includes("ففي آيسلندا") && archivedWorkweekAr.includes("وفي التجربة البريطانية") &&
+    archivedWorkweekAr.includes("أما الدراسة الألمانية") &&
     ["S3", "S4", "S5"].every((id:string) => reviewB2Final.sources.some((source:any) => source.id === id && !!source.url)) &&
-    workweek.questions[0].promptDe === "Welcher Einwand wird im Text genannt?" &&
-    workweek.questions[0].explanationAr.includes("Ein möglicher Einwand lautet") &&
-    workweek.questions[0].options.includes(workweek.questions[0].answer),
-    "K230d تجارب أسبوع العمل مؤهلة حسب نتائجها؛ لا تعميم للمرض ولا نسبة اعتراض بلا سند");
-  const culture = batch[1], rural = batch[3], lie = batch[4];
-  ok(culture.titleDe.includes("persönliche Erfahrung") && culture.de.includes("In der Umgebung, aus der ich komme") &&
-    culture.ar.includes("في البيئة التي نشأت فيها") && rural.titleAr.includes("الهجرة من المدن") &&
-    rural.de.includes("Je nach Region") && rural.de.includes("Andernfalls könnte") &&
-    rural.ar.includes("تختلف الحال من منطقة إلى أخرى") && lie.ar.includes("كذبة مجاملة") &&
-    reviewB2Final.contentChecks.length === 6 && reviewB2Final.contentChecks.every((c:any) => c.status === "pass") &&
+    archivedValue("t-b2-38.questions[0].promptDe") === "Welcher Einwand wird im Text genannt?" &&
+    archivedValue("t-b2-38.questions[0].explanationAr").includes("Ein möglicher Einwand lautet"),
+    "K230d سجل R159 التاريخي يحفظ نتائج أسبوع العمل المؤهلة ومصدر كل تجربة");
+  ok(archivedValue("t-b2-37.de").includes("In der Umgebung, aus der ich komme") &&
+    archivedValue("t-b2-37.ar").includes("في البيئة التي نشأت فيها") &&
+    archivedValue("t-b2-39.de").includes("Je nach Region") && archivedValue("t-b2-39.de").includes("Andernfalls könnte") &&
+    archivedValue("t-b2-39.ar").includes("تختلف الحال من منطقة إلى أخرى") &&
+    archivedValue("t-b2-40.ar").includes("كذبة مجاملة") &&
+    reviewB2Final.contentChecks.length === 6 && reviewB2Final.contentChecks.every((check:any) => check.status === "pass") &&
     reviewB2FinalMd.includes("لم تُنشأ بدائل لفجوتي الحوارات"),
-    "K230e الثقافة مؤطرة كتجربة، وتحديات الريف مقيدة، والترجمات والتقرير العربي متسقة");
-  const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
-  const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
-  const diktatAudio = (JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any).einsaetze;
-  const noManifestEntries = [...dialogAudio, ...hoerenAudio, ...diktatAudio].every((entry:any) => !ids.includes(entry.id));
-  const matchingFiles: string[] = [];
-  const scanAudio = (dir:string):void => {
-    if (!existsSync(dir)) return;
-    for (const entry of readdirSync(dir, { withFileTypes: true })) {
-      const path = dir + "/" + entry.name;
-      if (entry.isDirectory()) scanAudio(path);
-      else if (ids.includes(entry.name.replace(/\.[^.]*$/, ""))) matchingFiles.push(path);
-    }
-  };
-  scanAudio("public/audio");
-  ok(noManifestEntries && matchingFiles.length === 0 && reviewB2Final.audioAudit.dialogAudioManifestEntries === 0 &&
-    reviewB2Final.audioAudit.hoerenAudioManifestEntries === 0 && reviewB2Final.audioAudit.diktatAudioManifestEntries === 0 &&
-    reviewB2Final.audioAudit.matchingFilesPresent === 0 && reviewB2Final.audioAudit.listened === false &&
-    reviewB2Final.audioAudit.generated === false && reviewB2Final.audioAudit.modified === false,
-    "K230f مانيفست الحوار والاستماع والإملاء مستقل؛ لا إدخالات أو ملفات صوت ولا ادعاء بالاستماع");
+    "K230e سجل R159 التاريخي يحفظ تأطير التجربة الثقافية وقيود الريف والترجمة العربية");
+  const historicalAudioAudit = reviewB2Final.audioAudit;
+  ok(historicalAudioAudit.dialogAudioManifestEntries === 0 && historicalAudioAudit.hoerenAudioManifestEntries === 0 &&
+    historicalAudioAudit.diktatAudioManifestEntries === 0 && historicalAudioAudit.matchingFilesPresent === 0 &&
+    historicalAudioAudit.listened === false && historicalAudioAudit.generated === false && historicalAudioAudit.modified === false &&
+    historicalAudioAudit.matchingFiles.length === 0,
+    "K230f لقطة R159 التاريخية توثق غياب ملفات الصوت آنذاك؛ التغطية الحالية المستقلة في K239");
 }
 /* ═══ K208 — إصلاح تحذير نصي W5 (R134). ═══ */
 {
@@ -11940,11 +11928,9 @@ void 0;
       fileCheck?.sourceTextSha256 === digest && fileCheck?.pendingRegeneration === false;
   });
   const noCrossManifest = [...dialogManifest.einsaetze, ...diktatManifest.einsaetze].every((entry:any) => !ids.includes(entry.id));
-  const localAudioTotal = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
-    sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
   const coverageBefore = reviewR168.audio.coverage.before;
   const coverageAfter = reviewR168.audio.coverage.after;
-  ok(audioEntriesValid && noCrossManifest && hoerenManifest.count === 152 && hoerenManifest.count === hoerenManifest.einsaetze.length &&
+  ok(audioEntriesValid && noCrossManifest && hoerenManifest.count === hoerenManifest.einsaetze.length &&
     reviewR168.audio.generatedAudioIds.length === 5 && reviewR168.audio.sourceTextExact === true &&
     reviewR168.audio.pendingRegenerationIds.length === 0 && reviewR168.audio.manifestCount === 147 &&
     typeof reviewR168.audio.manifestSha256AfterReapply === "string" && reviewR168.audio.manifestSha256AfterReapply.length === 64 &&
@@ -11952,16 +11938,16 @@ void 0;
     reviewR168.audio.validation.manifestSha256StableOnReapply === true &&
     coverageBefore.hoerenAudio === 142 && coverageBefore.B2 === "25/40" && coverageBefore.localAudioFilesTotal === 410 &&
     coverageAfter.hoerenAudio === 147 && coverageAfter.B2 === "30/40" && coverageAfter.remainingWithoutLocalMP3 === 10 &&
-    coverageAfter.localAudioFilesTotal === 415 && localAudioTotal === 420 &&
+    coverageAfter.localAudioFilesTotal === 415 &&
     reviewR168.audio.otherManifests.dialogAudioEntriesForTargets === 0 && reviewR168.audio.otherManifests.diktatAudioEntriesForTargets === 0,
-    "K237d سجلات R168 التاريخية ثابتة؛ مانيفستو HörLabor الحالي 152، وأعيد التحقق من ملفات الدفعة في K238");
+    "K237d لقطة R168 التاريخية 147/157 وملفاتها محفوظة؛ كل دفعة لاحقة تختبر التغطية الحالية مستقلاً");
 
   ok(noCrossManifest && dialogManifest.count === 80 && diktatManifest.einsaetze.length === 180 &&
     reviewR168.audio.otherManifests.dialogManifestUntouched === true &&
     reviewR168.audio.otherManifests.diktatManifestUntouched === true &&
     coverageAfter.hoerenAudio === 147 && coverageAfter.B2 === "30/40" &&
-    coverageAfter.remainingWithoutLocalMP3 === 10 && coverageAfter.localAudioFilesTotal === 415 && localAudioTotal === 420,
-    "K237e لقطة R168 التاريخية 147/157 و30/40 B2 محفوظة؛ التغطية الحالية بعد R169 تُفحَص في K238");
+    coverageAfter.remainingWithoutLocalMP3 === 10 && coverageAfter.localAudioFilesTotal === 415,
+    "K237e سجل R168 يحتفظ بلقطة تغطية 147/157 و30/40 B2 التاريخية، بلا فرضها على التغطية الحالية");
 
   ok(reviewR168.gates.planned === "K237a–f" && reviewR168.gates.result === "pass" &&
     reviewR168.gates.passed.join(",") === "K237a,K237b,K237c,K237d,K237e,K237f" &&
@@ -12065,20 +12051,19 @@ void 0;
     reviewR169.audio.otherManifests.dialogManifestUntouched === true && reviewR169.audio.otherManifests.diktatManifestUntouched === true &&
     reviewR169.audio.otherManifests.dialogAudioSha256Before === dialogShaR169 && reviewR169.audio.otherManifests.dialogAudioSha256After === dialogShaR169 &&
     reviewR169.audio.otherManifests.diktatAudioSha256Before === diktatShaR169 && reviewR169.audio.otherManifests.diktatAudioSha256After === diktatShaR169;
-  const localAudioTotalR169 = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
+  const localAudioTotalCurrent = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
     sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
-  const manifestShaR169 = createHash("sha256").update(readFileSync("content/hoeren-audio.json")).digest("hex");
   const coverageBeforeR169 = reviewR169.audio.coverage.before;
   const coverageAfterR169 = reviewR169.audio.coverage.after;
-  ok(filesR169Valid && otherManifestsR169Valid && hoerenR169.count === 152 && hoerenR169.count === hoerenR169.einsaetze.length &&
+  ok(filesR169Valid && otherManifestsR169Valid && hoerenR169.count === 157 && hoerenR169.count === hoerenR169.einsaetze.length &&
     reviewR169.audio.generatedAudioIds.join(",") === idsR169.join(",") && reviewR169.audio.sourceTextExact === true &&
     reviewR169.audio.pendingRegenerationIds.length === 0 && reviewR169.audio.manifestCount === 152 &&
-    reviewR169.audio.manifestSha256AfterReapply === manifestShaR169 && reviewR169.audio.validation.manifestReapply === "0 new, 0 refreshed" &&
-    reviewR169.audio.validation.manifestSha256StableOnReapply === true &&
+    reviewR169.audio.manifestSha256AfterReapply === "669dd78fdde0e5642ee7db7c594d7d754d8f3aa186abc6fcd86c77f30e6c92db" &&
+    reviewR169.audio.validation.manifestReapply === "0 new, 0 refreshed" && reviewR169.audio.validation.manifestSha256StableOnReapply === true &&
     coverageBeforeR169.hoerenAudio === 147 && coverageBeforeR169.B2 === "30/40" && coverageBeforeR169.localAudioFilesTotal === 415 &&
     coverageAfterR169.hoerenAudio === 152 && coverageAfterR169.B2 === "35/40" && coverageAfterR169.remainingWithoutLocalMP3 === 5 &&
-    coverageAfterR169.localAudioFilesTotal === 420 && localAudioTotalR169 === 420,
-    "K238d خمسة ملفات ID3/MPEG مطابقة للألمانية النهائية؛ التغطية 152/157 وB2 ‏35/40 مع عزل مانيفستو الحوار والإملاء");
+    coverageAfterR169.localAudioFilesTotal === 420 && localAudioTotalCurrent === 425,
+    "K238d سجل R169 التاريخي 152/157 محفوظ؛ ملفاته الخمسة تطابق ID3/MPEG والمانيفستات الأخرى مستقلة");
 
   ok(reviewR169.gates.planned === "K238a–f" && reviewR169.gates.result === "pass" &&
     reviewR169.gates.passed.join(",") === "K238a,K238b,K238c,K238d,K238e,K238f" && reviewR169.totals.unresolved === 0 &&
@@ -12086,7 +12071,126 @@ void 0;
     reviewR169Md.includes("لم يحدث استماع بشري") && reviewR169Md.includes("لم يُحكم على جودة النطق") &&
     reviewR169.next.remainingUnrecordedTexts === 5 && reviewR169.next.byLevel.B2 === 5 &&
     JSON.stringify(reviewR169.next.pendingIds) === JSON.stringify(["t-b2-36", "t-b2-37", "t-b2-38", "t-b2-39", "t-b2-40"]),
-    "K238e–f حدود المراجعة والصوت معلنة بلا ادعاء استماع؛ المتبقي خمسة نصوص B2 ‏36–40");
+    "K238e–f حدود المراجعة والصوت في تقرير R169 موثقة بلا ادعاء استماع؛ قائمة الخطوة التالية التاريخية هي نطاق R170 ‏36–40");
+}
+
+/* ═══ R170 / K239 — مراجعة ختام نصوص B2 36–40، الترجمة والأسئلة والصوت والتغطية الكاملة. ═══ */
+{
+  const reviewR170 = JSON.parse(readFileSync("docs/content-review-b2-audio-04-2026-10-14.json", "utf8")) as any;
+  const reviewR170Md = readFileSync("docs/content-review-b2-audio-04-2026-10-14.md", "utf8");
+  const patchR170 = readFileSync("scripts/patches/add_hoeren_audio_r170.py", "utf8");
+  const textsR170 = JSON.parse(readFileSync("content/texts.json", "utf8")) as any[];
+  const idsR170 = Array.from({ length: 5 }, (_, index) => `t-b2-${index + 36}`);
+  const batchR170 = idsR170.map((id) => textsR170.find((text:any) => text.id === id));
+  const germanWordsR170 = [182, 207, 180, 177, 197];
+  const arabicWordsR170 = [188, 190, 220, 176, 201];
+  const sentenceEndMarksR170 = [13, 16, 14, 16, 15];
+  const resourcesR170 = reviewR170.resources as any[];
+  const countsR170Valid = batchR170.every((text:any, index:number) => text &&
+    text.de.split(/\s+/).filter(Boolean).length === germanWordsR170[index] &&
+    text.ar.split(/\s+/).filter(Boolean).length === arabicWordsR170[index] &&
+    text.wordCountDe === germanWordsR170[index] && text.de.length <= 1500 &&
+    (text.de.match(/[.!?](?:[\"»”])?(?:\s|$)/g) ?? []).length === sentenceEndMarksR170[index] &&
+    resourcesR170.find((resource:any) => resource.id === text.id)?.germanWords === germanWordsR170[index] &&
+    resourcesR170.find((resource:any) => resource.id === text.id)?.arabicWords === arabicWordsR170[index] &&
+    resourcesR170.find((resource:any) => resource.id === text.id)?.sentenceEndMarks === sentenceEndMarksR170[index] &&
+    resourcesR170.find((resource:any) => resource.id === text.id)?.sourceTextSha256 === createHash("sha256").update(text.de, "utf8").digest("hex"));
+  const sourceHashesR170Valid = batchR170.every((text:any) => {
+    const digest = createHash("sha256").update(text.de, "utf8").digest("hex");
+    return patchR170.includes(`\"${text.id}\": \"${digest}\"`) &&
+      resourcesR170.find((resource:any) => resource.id === text.id)?.sourceTextSha256 === digest;
+  });
+  ok(reviewR170.reviewRule === "R170" && reviewR170.date === "2026-10-14" &&
+    JSON.stringify(reviewR170.targetIds) === JSON.stringify(idsR170) &&
+    reviewR170.totals.texts === 5 && reviewR170.totals.germanWords === 943 && reviewR170.totals.arabicWords === 975 &&
+    reviewR170.totals.sentenceEndMarks === 74 && reviewR170.totals.questions === 20 &&
+    reviewR170.totals.questionFieldsUpdated === 34 && reviewR170.totals.questionFieldsAdded === 65 &&
+    reviewR170.totals.wordCountDeCorrected === 5 && reviewR170.totals.unresolved === 0 &&
+    countsR170Valid && sourceHashesR170Valid && patchR170.includes("TEXT_FIELD_UPDATES") && patchR170.includes("NEW_QUESTIONS"),
+    "K239a أعداد R170 وبصمات الألمانية وwordCountDe: ‏943 كلمة ألمانية و975 عربية و74 نهاية جملة و20 سؤالاً");
+
+  const translationsAndQuestionsR170Valid = batchR170.every((text:any) => text && text.level === "B2" && text.neu !== true &&
+    text.de.split(/\n\n+/).length === 3 && text.ar.split(/\n\n+/).length === 3 &&
+    text.ar.split(/\s+/).filter(Boolean).length >= Math.max(150, Math.floor(text.de.split(/\s+/).filter(Boolean).length * 0.75)) &&
+    text.questions?.length === 4 && new Set(text.questions.map((question:any) => question.id)).size === 4 &&
+    text.questions.slice(0, 2).every((question:any, index:number) => question.id === `${text.id}-q${index + 1}` && question.type === "mc") &&
+    text.questions[2].type === "truefalse" && text.questions[3].type === "fill" &&
+    text.questions.every((question:any) => !!question.promptDe?.trim() && !!question.promptAr?.trim() && !!question.explanationAr?.trim() &&
+      (question.type === "fill"
+        ? Array.isArray(question.answer) && question.answer.length > 0 && question.answer.every((word:string) => text.de.includes(word)) && question.promptDe.includes("___") && question.promptAr.includes("___")
+        : question.type === "truefalse"
+          ? question.options?.join(",") === "richtig,falsch" && ["richtig", "falsch"].includes(question.answer)
+          : Array.isArray(question.options) && question.options.length >= 2 && new Set(question.options).size === question.options.length && question.options.includes(question.answer)) &&
+      [...(question.explanationAr.matchAll(/«([^»]+)»/g))].every((match:any) => text.de.includes(match[1]))));
+  const t37R170 = batchR170.find((text:any) => text.id === "t-b2-37");
+  const t38R170 = batchR170.find((text:any) => text.id === "t-b2-38");
+  const t39R170 = batchR170.find((text:any) => text.id === "t-b2-39");
+  const t40R170 = batchR170.find((text:any) => text.id === "t-b2-40");
+  const targetEditsR170Valid = t37R170?.titleDe.startsWith("Beispiel:") && t37R170.titleAr.startsWith("مثال:") &&
+    t37R170.de.startsWith("Das folgende Beispiel ist fiktiv.") && t37R170.de.includes("kein Urteil über alle Menschen eines Landes") &&
+    t38R170?.de.includes("Nur 23 von 61 Organisationen lieferten Umsatzdaten") && t38R170.de.includes("statistisch nicht signifikant") &&
+    t39R170?.de.includes("Je nach Region fahren öffentliche Verkehrsmittel seltener") && t39R170.de.includes("ausreichend schnelles Internet voraus") &&
+    t40R170?.de.includes("dienen dem Selbstschutz") && t40R170.de.includes("kann die Lüge eine Beziehung jedoch belasten");
+  ok(translationsAndQuestionsR170Valid && targetEditsR170Valid && reviewR170.sourceReview.completeArabicTranslations === true &&
+    reviewR170.sourceReview.questionIdsPreserved === true && reviewR170.totals.fullTextFieldsUpdated === 20 &&
+    JSON.stringify(reviewR170.questionTypeCounts) === JSON.stringify({ mc: 10, truefalse: 5, fill: 5 }),
+    "K239b الترجمات الكاملة والأسئلة الأربعة لكل نص سليمة؛ حُفظت المعرّفات وصُوّبت النماذج اللغوية والخيالية");
+
+  const sourceUrlsR170 = reviewR170.sources.map((source:any) => source.url);
+  const factualReviewR170Valid = reviewR170.factualReview["t-b2-36"].includes("8:30") &&
+    reviewR170.factualReview["t-b2-37"].includes("خيالي") &&
+    reviewR170.factualReview["t-b2-38"].includes("1.4") && reviewR170.factualReview["t-b2-38"].includes("ليست علاقة سببية") &&
+    reviewR170.factualReview["t-b2-39"].includes("بلا أرقام محلية") && reviewR170.factualReview["t-b2-40"].includes("صياغة معيارية") &&
+    sourceUrlsR170.includes("https://aasm.org/advocacy/initiatives/school-start-times/") &&
+    sourceUrlsR170.includes("https://autonomy.work/wp-content/uploads/2021/06/ICELAND_4DW.pdf") &&
+    sourceUrlsR170.includes("https://autonomy.work/portfolio/uk4dwpilotresults/") &&
+    sourceUrlsR170.includes("https://www.ukri.org/who-we-are/how-we-are-doing/research-outcomes-and-impact/esrc/making-the-case-for-a-four-day-working-week/") &&
+    sourceUrlsR170.includes("https://www.wiwi.uni-muenster.de/fakultaet/de/news/4877");
+  ok(factualReviewR170Valid && reviewR170.gates.passed.includes("K239c"),
+    "K239c الادعاءات المدرسية والعمل المختصر موثقة بمصادر أولية؛ أرقام التجارب محددة ولا تعميم سببي");
+
+  const hoerenR170 = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any;
+  const dialogR170 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
+  const diktatR170 = JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any;
+  const generatedR170 = hoerenR170.einsaetze.filter((entry:any) => idsR170.includes(entry.id));
+  const filesR170Valid = generatedR170.length === 5 && idsR170.every((id) => {
+    const entry = generatedR170.find((candidate:any) => candidate.id === id);
+    const file = `public/audio/hoeren/${id}.mp3`;
+    const audio = existsSync(file) ? readFileSync(file) : Buffer.alloc(0);
+    const fileCheck = reviewR170.audio.files.find((candidate:any) => candidate.id === id);
+    const digest = createHash("sha256").update(batchR170.find((text:any) => text.id === id).de, "utf8").digest("hex");
+    return entry?.voice === reviewR170.audio.voice && entry?.level === "B2" && entry?.file === `/audio/hoeren/${id}.mp3` &&
+      audio.subarray(0, 3).toString() === "ID3" && audio.length > 8000 && audio.length === entry?.bytes &&
+      fileCheck?.bytes === audio.length && fileCheck?.id3v2Header === true && fileCheck?.mpegLayer3Frames > 0 &&
+      fileCheck?.sourceTextMatchesAudio === true && fileCheck?.sourceTextSha256 === digest && fileCheck?.pendingRegeneration === false;
+  });
+  const dialogShaR170 = createHash("sha256").update(readFileSync("content/dialog-audio.json")).digest("hex");
+  const diktatShaR170 = createHash("sha256").update(readFileSync("content/diktat-audio.json")).digest("hex");
+  const otherManifestsR170Valid = [...dialogR170.einsaetze, ...diktatR170.einsaetze].every((entry:any) => !idsR170.includes(entry.id)) &&
+    reviewR170.audio.otherManifests.dialogManifestUntouched === true && reviewR170.audio.otherManifests.diktatManifestUntouched === true &&
+    reviewR170.audio.otherManifests.dialogAudioSha256Before === dialogShaR170 && reviewR170.audio.otherManifests.dialogAudioSha256After === dialogShaR170 &&
+    reviewR170.audio.otherManifests.diktatAudioSha256Before === diktatShaR170 && reviewR170.audio.otherManifests.diktatAudioSha256After === diktatShaR170;
+  const localAudioTotalR170 = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
+    sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
+  const manifestShaR170 = createHash("sha256").update(readFileSync("content/hoeren-audio.json")).digest("hex");
+  const coverageBeforeR170 = reviewR170.audio.coverage.before;
+  const coverageAfterR170 = reviewR170.audio.coverage.after;
+  ok(filesR170Valid && otherManifestsR170Valid && hoerenR170.count === 157 && hoerenR170.count === hoerenR170.einsaetze.length &&
+    reviewR170.audio.generatedAudioIds.join(",") === idsR170.join(",") && reviewR170.audio.sourceTextExact === true &&
+    reviewR170.audio.pendingRegenerationIds.length === 0 && reviewR170.audio.manifestCount === 157 &&
+    reviewR170.audio.manifestSha256AfterReapply === manifestShaR170 && reviewR170.audio.validation.manifestReapply === "0 new, 0 refreshed" &&
+    reviewR170.audio.validation.manifestSha256StableOnReapply === true &&
+    coverageBeforeR170.hoerenAudio === 152 && coverageBeforeR170.B2 === "35/40" && coverageBeforeR170.localAudioFilesTotal === 420 &&
+    coverageAfterR170.hoerenAudio === 157 && coverageAfterR170.B2 === "40/40" && coverageAfterR170.remainingWithoutLocalMP3 === 0 &&
+    coverageAfterR170.localAudioFilesTotal === 425 && localAudioTotalR170 === 425,
+    "K239d خمسة تسجيلات R170 تطابق بصمات الألمانية وID3/MPEG؛ التغطية مكتملة 157/157 وB2 ‏40/40");
+
+  ok(reviewR170.gates.planned === "K239a–f" && reviewR170.gates.result === "pass" &&
+    reviewR170.gates.passed.join(",") === "K239a,K239b,K239c,K239d,K239e,K239f" && reviewR170.totals.unresolved === 0 &&
+    reviewR170.audio.validation.humanListening === false && reviewR170.audio.validation.pronunciationQualityJudged === false &&
+    reviewR170Md.includes("لم يحدث استماع بشري") && reviewR170Md.includes("لم يُحكم على جودة النطق") &&
+    reviewR170.next.remainingUnrecordedTexts === 0 && reviewR170.next.pendingIds.length === 0,
+    "K239e–f حدود التدقيق والصوت معلنة بلا ادعاء استماع؛ أُنجزت نصوص B2 الأربعون كلها");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

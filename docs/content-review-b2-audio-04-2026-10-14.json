@@ -1,0 +1,650 @@
+{
+  "reviewRule": "R170",
+  "date": "2026-10-14",
+  "title": "مراجعة ختام نصوص B2 وترجماتها وأسئلتها وتسجيلها في HörLabor",
+  "targetIds": [
+    "t-b2-36",
+    "t-b2-37",
+    "t-b2-38",
+    "t-b2-39",
+    "t-b2-40"
+  ],
+  "sourceReview": {
+    "priorPayloadGuard": "حارس SHA-256 يغطي titleDe/titleAr/de/ar/questions/wordCountDe؛ لا يطبّق الرقعة إلا على الحمولة الأصلية المعروفة أو وسيط المراجعة المصرّح به أو الحمولة النهائية.",
+    "editorialKeys": [
+      "titleDe",
+      "titleAr",
+      "de",
+      "ar",
+      "questions",
+      "wordCountDe"
+    ],
+    "sourcePayloadSha256": {
+      "t-b2-36": "56e063ada3b7233f6184c94b1ea0d68ab86d87f679a1a7a6636ec573bfa54739",
+      "t-b2-37": "8f9cb5215431ff25207279927f3a3f16f8259cafbbc3fe2eda05a4f93819ec04",
+      "t-b2-38": "49474f15c4bda67aa33d18b18ce98d9f497782c6fff4689fb5cced776ae76e7b",
+      "t-b2-39": "3daaf030662701810dca03f4d3e8c7bc48eab0c9d32377fc51da743be0d08933",
+      "t-b2-40": "5c84d0420685c4fcd9427eec2eaf7692347eb6e9843cbc345d30c07753ad60ef"
+    },
+    "intermediatePayloadSha256": {
+      "t-b2-36": "cc10dfd52a9fdc13f467a399f355026f529d687bd2c7318952990be1aea910eb",
+      "t-b2-37": "d12ca30897d0e3449be1a5432924055d4d9b128061d1f5efbcf7453a589d122f",
+      "t-b2-38": "6e00ddf4c7f00e248655b70a103fdfbe14dd773a5f21ba73bfa81adab208c386",
+      "t-b2-39": "bd377366dbd2a75dd44cc149f7ee150ca97a3c1bf0f28cb98789af2db009b47e",
+      "t-b2-40": "24bb6d4f8e71af04c05a8c81642b31ea26b5a2453b2ecef965deb9682c642af4"
+    },
+    "finalPayloadSha256": {
+      "t-b2-36": "c68ad2cedee7af628fdab5aea5de270a3b1db839d8f464d243b59cc687afaf7e",
+      "t-b2-37": "eb630706944596cb643f1084a5c4003e1135051aedadb3ad8517aff82440339e",
+      "t-b2-38": "2351e40553770b3a4596bdfc8cdda6a781a34d7added1b6e8270a8eface478b8",
+      "t-b2-39": "304259c358fa86380aa9056dc2e9165c85b1b8f8faed39b1b616902f07fa0c3b",
+      "t-b2-40": "355570bc4f78472489ed2dee5df8f339ca737970388fe6a6374495a81c0d028f"
+    },
+    "germanFixedBeforeAudio": true,
+    "germanTextUnchangedAfterTts": false,
+    "arabicTranslationsFinalized": true,
+    "completeArabicTranslations": true,
+    "questionIdsPreserved": true,
+    "questionFieldsRefinedAfterTts": true,
+    "postTtsScope": "بعد أول توليد صوتي، أُحكمت خيارات وشروح الأسئلة، ثم كشف audit:content أن t-b2-39 كان 171 كلمة، دون الحد الأدنى 173. أضيفت جملة ختامية ألمانية وترجمتها العربية؛ ثُبّتت النسخة النهائية ثم أُعيد توليد MP3 لهذا المعرّف بصوت voice-03. بقيت ملفات النصوص الأربعة الأخرى مطابقة لبصماتها ولم تتغير المانيفستات الأخرى.",
+    "selectedVoice": "voice-03 (de-DE, Arena TTS)",
+    "preparationScript": "scripts/patches/add_hoeren_audio_r170.py",
+    "germanSourceSha256": {
+      "t-b2-36": "a71f2701b7f628dd97c0b297796e7767b8f930521c36633a759666c9295c11d5",
+      "t-b2-37": "e6ef96c3551d71ab2bc9d9f27b7574d99f4c98e2fc261e55aa085ebe98124baa",
+      "t-b2-38": "1b6621baeb8c87e2ba91245a2705282af37ccca83ddd9de541b011746a093bae",
+      "t-b2-39": "cb10922559c067a9741193bf8c51e4164ca502bdecff81334433815da250aaee",
+      "t-b2-40": "e9e7b6ff82522140ee2b89677277ceca5e941655add59652abc3ce2234e87270"
+    },
+    "sourceTextLockedForTts": true,
+    "germanTextRevisedAfterTts": true,
+    "wordCountCorrections": [
+      {
+        "id": "t-b2-36",
+        "previousWordCountDe": 174,
+        "previousWhitespaceWordCount": 176,
+        "finalWordCountDe": 182
+      },
+      {
+        "id": "t-b2-37",
+        "previousWordCountDe": 196,
+        "previousWhitespaceWordCount": 200,
+        "finalWordCountDe": 207
+      },
+      {
+        "id": "t-b2-38",
+        "previousWordCountDe": 205,
+        "previousWhitespaceWordCount": 269,
+        "finalWordCountDe": 180
+      },
+      {
+        "id": "t-b2-39",
+        "previousWordCountDe": 177,
+        "previousWhitespaceWordCount": 181,
+        "finalWordCountDe": 177
+      },
+      {
+        "id": "t-b2-40",
+        "previousWordCountDe": 174,
+        "previousWhitespaceWordCount": 174,
+        "finalWordCountDe": 197
+      }
+    ],
+    "germanTextChangedAfterInitialTts": [
+      "t-b2-39"
+    ],
+    "finalGermanTextLockedBeforeFinalTts": true
+  },
+  "totals": {
+    "texts": 5,
+    "germanWords": 943,
+    "arabicWords": 975,
+    "sentenceEndMarks": 74,
+    "questions": 20,
+    "questionTypeCounts": {
+      "mc": 10,
+      "truefalse": 5,
+      "fill": 5
+    },
+    "germanTextFieldsReviewed": 5,
+    "arabicTextFieldsReviewed": 5,
+    "fullTextFieldsUpdated": 20,
+    "wordCountDeCorrected": 5,
+    "questionsTouched": 20,
+    "questionFieldsUpdated": 34,
+    "questionFieldsAdded": 65,
+    "unresolved": 0
+  },
+  "questionTypeCounts": {
+    "mc": 10,
+    "truefalse": 5,
+    "fill": 5
+  },
+  "resources": [
+    {
+      "id": "t-b2-36",
+      "titleDe": "Sollte der Schulbeginn später sein?",
+      "titleAr": "هل ينبغي أن يبدأ الدوام المدرسي لاحقاً؟",
+      "germanWords": 182,
+      "arabicWords": 188,
+      "germanCharacters": 1405,
+      "sentenceEndMarks": 13,
+      "wordCountDe": 182,
+      "questions": 4,
+      "questionIds": [
+        "t-b2-36-q1",
+        "t-b2-36-q2",
+        "t-b2-36-q3",
+        "t-b2-36-q4"
+      ],
+      "questionTypes": {
+        "mc": 2,
+        "truefalse": 1,
+        "fill": 1
+      },
+      "sourceTextSha256": "a71f2701b7f628dd97c0b297796e7767b8f930521c36633a759666c9295c11d5",
+      "finalPayloadSha256": "c68ad2cedee7af628fdab5aea5de270a3b1db839d8f464d243b59cc687afaf7e"
+    },
+    {
+      "id": "t-b2-37",
+      "titleDe": "Beispiel: Kommunikation zwischen Kulturen",
+      "titleAr": "مثال: التواصل بين الثقافات",
+      "germanWords": 207,
+      "arabicWords": 190,
+      "germanCharacters": 1434,
+      "sentenceEndMarks": 16,
+      "wordCountDe": 207,
+      "questions": 4,
+      "questionIds": [
+        "t-b2-37-q1",
+        "t-b2-37-q2",
+        "t-b2-37-q3",
+        "t-b2-37-q4"
+      ],
+      "questionTypes": {
+        "mc": 2,
+        "truefalse": 1,
+        "fill": 1
+      },
+      "sourceTextSha256": "e6ef96c3551d71ab2bc9d9f27b7574d99f4c98e2fc261e55aa085ebe98124baa",
+      "finalPayloadSha256": "eb630706944596cb643f1084a5c4003e1135051aedadb3ad8517aff82440339e"
+    },
+    {
+      "id": "t-b2-38",
+      "titleDe": "Vier-Tage-Modelle: Was Pilotprojekte zeigen",
+      "titleAr": "نماذج العمل لأربعة أيام: ما الذي تظهره التجارب؟",
+      "germanWords": 180,
+      "arabicWords": 220,
+      "germanCharacters": 1450,
+      "sentenceEndMarks": 14,
+      "wordCountDe": 180,
+      "questions": 4,
+      "questionIds": [
+        "t-b2-38-q1",
+        "t-b2-38-q2",
+        "t-b2-38-q3",
+        "t-b2-38-q4"
+      ],
+      "questionTypes": {
+        "mc": 2,
+        "truefalse": 1,
+        "fill": 1
+      },
+      "sourceTextSha256": "1b6621baeb8c87e2ba91245a2705282af37ccca83ddd9de541b011746a093bae",
+      "finalPayloadSha256": "2351e40553770b3a4596bdfc8cdda6a781a34d7added1b6e8270a8eface478b8"
+    },
+    {
+      "id": "t-b2-39",
+      "titleDe": "Stadtflucht und Landleben",
+      "titleAr": "الهجرة من المدن والحياة الريفية",
+      "germanWords": 177,
+      "arabicWords": 176,
+      "germanCharacters": 1326,
+      "sentenceEndMarks": 16,
+      "wordCountDe": 177,
+      "questions": 4,
+      "questionIds": [
+        "t-b2-39-q1",
+        "t-b2-39-q2",
+        "t-b2-39-q3",
+        "t-b2-39-q4"
+      ],
+      "questionTypes": {
+        "mc": 2,
+        "truefalse": 1,
+        "fill": 1
+      },
+      "sourceTextSha256": "cb10922559c067a9741193bf8c51e4164ca502bdecff81334433815da250aaee",
+      "finalPayloadSha256": "304259c358fa86380aa9056dc2e9165c85b1b8f8faed39b1b616902f07fa0c3b"
+    },
+    {
+      "id": "t-b2-40",
+      "titleDe": "Warum lügen Menschen?",
+      "titleAr": "لماذا يكذب الناس؟",
+      "germanWords": 197,
+      "arabicWords": 201,
+      "germanCharacters": 1457,
+      "sentenceEndMarks": 15,
+      "wordCountDe": 197,
+      "questions": 4,
+      "questionIds": [
+        "t-b2-40-q1",
+        "t-b2-40-q2",
+        "t-b2-40-q3",
+        "t-b2-40-q4"
+      ],
+      "questionTypes": {
+        "mc": 2,
+        "truefalse": 1,
+        "fill": 1
+      },
+      "sourceTextSha256": "e9e7b6ff82522140ee2b89677277ceca5e941655add59652abc3ce2234e87270",
+      "finalPayloadSha256": "355570bc4f78472489ed2dee5df8f339ca737970388fe6a6374495a81c0d028f"
+    }
+  ],
+  "titleEdits": [
+    {
+      "id": "t-b2-36",
+      "titleDe": "Sollte der Schulbeginn später sein?",
+      "titleAr": "هل ينبغي أن يبدأ الدوام المدرسي لاحقاً؟"
+    },
+    {
+      "id": "t-b2-37",
+      "titleDe": "Beispiel: Kommunikation zwischen Kulturen",
+      "titleAr": "مثال: التواصل بين الثقافات"
+    },
+    {
+      "id": "t-b2-38",
+      "titleDe": "Vier-Tage-Modelle: Was Pilotprojekte zeigen",
+      "titleAr": "نماذج العمل لأربعة أيام: ما الذي تظهره التجارب؟"
+    },
+    {
+      "id": "t-b2-39",
+      "titleDe": "Stadtflucht und Landleben",
+      "titleAr": "الهجرة من المدن والحياة الريفية"
+    },
+    {
+      "id": "t-b2-40",
+      "titleDe": "Warum lügen Menschen?",
+      "titleAr": "لماذا يكذب الناس؟"
+    }
+  ],
+  "questionChanges": [
+    {
+      "id": "t-b2-36",
+      "retainedQuestionIds": [
+        "t-b2-36-q1",
+        "t-b2-36-q2"
+      ],
+      "newQuestionIds": [
+        "t-b2-36-q3",
+        "t-b2-36-q4"
+      ],
+      "updatedFields": [
+        {
+          "id": "t-b2-36-q1",
+          "fields": [
+            "answer",
+            "explanationAr",
+            "options"
+          ]
+        },
+        {
+          "id": "t-b2-36-q2",
+          "fields": [
+            "explanationAr",
+            "options"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t-b2-37",
+      "retainedQuestionIds": [
+        "t-b2-37-q1",
+        "t-b2-37-q2"
+      ],
+      "newQuestionIds": [
+        "t-b2-37-q3",
+        "t-b2-37-q4"
+      ],
+      "updatedFields": [
+        {
+          "id": "t-b2-37-q1",
+          "fields": [
+            "answer",
+            "explanationAr",
+            "options",
+            "promptAr",
+            "promptDe"
+          ]
+        },
+        {
+          "id": "t-b2-37-q2",
+          "fields": [
+            "explanationAr"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t-b2-38",
+      "retainedQuestionIds": [
+        "t-b2-38-q1",
+        "t-b2-38-q2"
+      ],
+      "newQuestionIds": [
+        "t-b2-38-q3",
+        "t-b2-38-q4"
+      ],
+      "updatedFields": [
+        {
+          "id": "t-b2-38-q1",
+          "fields": [
+            "answer",
+            "explanationAr",
+            "options",
+            "promptAr",
+            "promptDe"
+          ]
+        },
+        {
+          "id": "t-b2-38-q2",
+          "fields": [
+            "answer",
+            "explanationAr",
+            "options",
+            "promptAr",
+            "promptDe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t-b2-39",
+      "retainedQuestionIds": [
+        "t-b2-39-q1",
+        "t-b2-39-q2"
+      ],
+      "newQuestionIds": [
+        "t-b2-39-q3",
+        "t-b2-39-q4"
+      ],
+      "updatedFields": [
+        {
+          "id": "t-b2-39-q1",
+          "fields": [
+            "answer",
+            "explanationAr",
+            "options"
+          ]
+        },
+        {
+          "id": "t-b2-39-q2",
+          "fields": [
+            "explanationAr",
+            "options",
+            "promptDe"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t-b2-40",
+      "retainedQuestionIds": [
+        "t-b2-40-q1",
+        "t-b2-40-q2"
+      ],
+      "newQuestionIds": [
+        "t-b2-40-q3",
+        "t-b2-40-q4"
+      ],
+      "updatedFields": [
+        {
+          "id": "t-b2-40-q1",
+          "fields": [
+            "explanationAr",
+            "options"
+          ]
+        },
+        {
+          "id": "t-b2-40-q2",
+          "fields": [
+            "answer",
+            "explanationAr",
+            "options",
+            "promptAr",
+            "promptDe"
+          ]
+        }
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "id": "t-b2-36",
+      "notes": "دُقّق النقاش حول بدء اليوم الدراسي لاحقاً؛ فُصلت الحجج المؤيدة (النوم والإرهاق) عن اعتراضات التنظيم والنقل والرعاية. صيغت آثار التحصيل بوصفها أمراً ينبغي قياسه، وانتهى النص بتجربة محلية ترصد النوم والرفاه والمشاركة لا العلامات وحدها.",
+      "arabic": "ترجمة كاملة من ثلاث فقرات؛ نقل 8→9 مثال قابل للاختبار لا قاعدة عامة."
+    },
+    {
+      "id": "t-b2-37",
+      "notes": "وُسم الراوي صراحةً بأنه خيالي، وحُصرت ملاحظته في خبرة شخصية لتجنب تعميمات عن جميع الألمان أو الثقافات. حُفظ التوازن بين سوء الفهم الأولي والتعلم من السؤال والتوضيح.",
+      "arabic": "ترجمة كاملة؛ حُفظت «المباشرة» في الأمثلة والتمييز بين رأي الراوي والحكم على مجتمع كامل."
+    },
+    {
+      "id": "t-b2-38",
+      "notes": "أُعيد تحرير النص الطويل إلى 180 كلمة، وصُحح wordCountDe القديم (205 رغم أن النص السابق بلغ 269 كلمة بحسب split whitespace). فُصلت نتائج آيسلندا والمملكة المتحدة وألمانيا، وقُيّدت نتيجة 1.4% بمجموعة 23/61 وبالوزن الحجمي، ونُفي الاستدلال السببي. ذُكر أن تجربة ألمانيا سجّلت تحسناً مُبلّغاً عنه وأن تراجع أيام المرض لم يكن ذا دلالة إحصائية.",
+      "arabic": "ترجمة كاملة؛ حُفظت أعداد المؤسسات ومقام عينة الإيرادات وحدود الدلالة الإحصائية."
+    },
+    {
+      "id": "t-b2-39",
+      "notes": "ضُبطت جملة ندرة الخدمات لتكون سليمة نحوياً، وأُبقيت القيود بصيغ احتمالية حسب المنطقة. لا يتضمن النص نسباً أو أرقاماً محلية غير موثقة؛ كما يضم النقل والإنترنت ورعاية الأطفال والخدمات العامة ضمن قرار الانتقال. أضاف التدقيق الختامي جملة توصية بالمراجعة المنتظمة لبلوغ حد B2 الأدنى البالغ 173 كلمة؛ أُعيد تسجيل t-b2-39 بعد ذلك.",
+      "arabic": "ترجمة كاملة تفصل بين أسباب الانتقال ومخاطره وشروط البنية التحتية. وأضيفت ترجمة «وينبغي تقييم هذه الحلول بانتظام»."
+    },
+    {
+      "id": "t-b2-40",
+      "notes": "مُيّزت دوافع حماية الذات ومراعاة الآخرين وتحسين الصورة عن التلاعب المتعمد؛ صيغ أثر كذبة المجاملة بصيغة احتمالية، وأضيف توازن بين الصدق ومراعاة المخاطَب.",
+      "arabic": "ترجمة كاملة؛ لم تُحوّل الملاحظات الأخلاقية إلى ادعاءات نفسية تجريبية."
+    }
+  ],
+  "factualReview": {
+    "t-b2-36": "استندت المراجعة إلى بيان AASM عن تأخر الإيقاع اليومي للمراهقين وآثار بدء المدرسة المبكر، وإلى موقفها الذي يدعو إلى 8:30 صباحاً أو بعده للمرحلتين المتوسطة والثانوية. نقل 8→9 في النص مثالٌ افتراضي لتجربة، لا توصية عامة؛ الأثر في الدرجات مقترحٌ للقياس لا حقيقة مفترضة.",
+    "t-b2-37": "الراوي والقصة خياليان ومصرّح بذلك داخل النص والعنوان. لا يُعرض أسلوب تواصل شخص واحد بوصفه سمةً ثابتة لجميع الألمان أو لأبناء ثقافة أخرى.",
+    "t-b2-38": "قورنت الأرقام بتقارير Alda/Autonomy وUKRI/ESRC وجامعة Münster: تجربة بريطانيا 61 منظمة، ولم تقدم الإيرادات إلا 23 منظمة؛ المتوسط المرجّح بحجم المنظمة +1.4%. في ألمانيا شاركت 45 منظمة، وكان انخفاض أيام المرض طفيفاً وغير دال إحصائياً. اختلاف التصاميم وقيود البيانات تعني أن النتيجة ليست علاقة سببية ولا تبرر تعميماً على كل القطاعات.",
+    "t-b2-39": "النص عام وغير مربوط بدولة بعينها؛ استُخدمت «بحسب المنطقة» و«قد» و«يمكن»، بلا أرقام محلية. البنية التحتية وحاجات السكان توصية سياسية/عملية لا إحصاء يدّعي الانتشار.",
+    "t-b2-40": "النص يعرض فروقاً مفهومية وأمثلة يومية بصياغة معيارية، لا نتائج تجربة أو تشخيصاً نفسياً. فُصلت اللباقة عن الخداع المتعمد، وقُيّد الضرر المحتمل بظهور الحقيقة لاحقاً."
+  },
+  "sources": [
+    {
+      "title": "School Start Times / Delaying Middle School and High School Start Times Promotes Student Health and Performance",
+      "publisher": "American Academy of Sleep Medicine (AASM)",
+      "url": "https://aasm.org/advocacy/initiatives/school-start-times/",
+      "supports": "يشرح تغير الإيقاع اليومي لدى المراهقين وصلة النوم باليقظة والصحة؛ موقف الجمعية يوصي ببدء المرحلة المتوسطة والثانوية 8:30 صباحاً أو بعده."
+    },
+    {
+      "title": "Going Public: Iceland's Journey to a Shorter Working Week",
+      "publisher": "Alda and Autonomy (2021)",
+      "url": "https://autonomy.work/wp-content/uploads/2021/06/ICELAND_4DW.pdf",
+      "supports": "خلاصة تجارب تقليص ساعات العمل في Reykjavík والحكومة الآيسلندية: الإنتاجية والخدمات بقيت كما هي أو تحسنت في غالبية مواقع التجربة، مع تحسن مؤشرات الرفاه."
+    },
+    {
+      "title": "The results are in: the UK's four-day week pilot",
+      "publisher": "Autonomy / University of Cambridge / Boston College (2023)",
+      "url": "https://autonomy.work/portfolio/uk4dwpilotresults/",
+      "supports": "تجربة 61 منظمة؛ بيانات الإيرادات متاحة لـ23 منظمة، ومتوسط الإيرادات ارتفع 1.4% مرجحاً بحجم المنظمة؛ لا يثبت ذلك وحده السببية."
+    },
+    {
+      "title": "Making the case for a four-day working week",
+      "publisher": "UK Research and Innovation / ESRC (2024)",
+      "url": "https://www.ukri.org/who-we-are/how-we-are-doing/research-outcomes-and-impact/esrc/making-the-case-for-a-four-day-working-week/",
+      "supports": "مصدر تمويل/بحثي بريطاني يؤكد حجم التجربة وقيود مجموعة الإيرادات (23 منظمة) ومعدل 1.4%، مع مؤشرات الرفاه."
+    },
+    {
+      "title": "Mehr Zufriedenheit mit weniger Arbeit",
+      "publisher": "Universität Münster, Wirtschaftswissenschaftliche Fakultät (2024)",
+      "url": "https://www.wiwi.uni-muenster.de/fakultaet/de/news/4877",
+      "supports": "نتائج التجربة الألمانية ذات 45 منظمة: تحسن مُبلّغ عنه للصحة النفسية والجسدية؛ انخفاض طفيف في أيام المرض لم يكن ذا دلالة إحصائية."
+    }
+  ],
+  "audio": {
+    "voice": "voice-03 (de-DE, Arena TTS)",
+    "generatedAudioIds": [
+      "t-b2-36",
+      "t-b2-37",
+      "t-b2-38",
+      "t-b2-39",
+      "t-b2-40"
+    ],
+    "sourceTextExact": true,
+    "sourceTextBasis": "استُخدم حقل de النهائي حرفياً بوصفه إدخال TTS؛ تطابقت بصمة SHA-256 للمدخل مع البصمة المحروسة في السكربت. لم يُجر تفريغ آلي أو استماع بشري للناتج.",
+    "pendingRegenerationIds": [],
+    "manifestCount": 157,
+    "manifestSha256AfterReapply": "d99f48475c418d347806d0194dbaf7add3bc04c1d34f62c2594ca67972310c54",
+    "validation": {
+      "manifestReapply": "0 new, 0 refreshed",
+      "manifestSha256StableOnReapply": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false,
+      "id3v2Header": true,
+      "mpegLayer3Frames": true,
+      "questionFieldsRefinedAfterTts": true,
+      "germanTextRevisedAfterTts": true,
+      "t39AudioRegeneratedAfterContentAudit": true
+    },
+    "otherManifests": {
+      "dialogManifestUntouched": true,
+      "diktatManifestUntouched": true,
+      "dialogAudioSha256Before": "388561e80ffe47c47eb013daa5fb455df9359c272f8a4c984b407787801b2306",
+      "dialogAudioSha256After": "388561e80ffe47c47eb013daa5fb455df9359c272f8a4c984b407787801b2306",
+      "diktatAudioSha256Before": "4a3c259a8545112599e8067db9b6c107160170dc2360332433ffa5ae6f2ed2b7",
+      "diktatAudioSha256After": "4a3c259a8545112599e8067db9b6c107160170dc2360332433ffa5ae6f2ed2b7"
+    },
+    "files": [
+      {
+        "id": "t-b2-36",
+        "bytes": 322893,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3362,
+        "sourceTextMatchesAudio": true,
+        "sourceTextSha256": "a71f2701b7f628dd97c0b297796e7767b8f930521c36633a759666c9295c11d5",
+        "voice": "voice-03 (de-DE, Arena TTS)",
+        "pendingRegeneration": false
+      },
+      {
+        "id": "t-b2-37",
+        "bytes": 347853,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3622,
+        "sourceTextMatchesAudio": true,
+        "sourceTextSha256": "e6ef96c3551d71ab2bc9d9f27b7574d99f4c98e2fc261e55aa085ebe98124baa",
+        "voice": "voice-03 (de-DE, Arena TTS)",
+        "pendingRegeneration": false
+      },
+      {
+        "id": "t-b2-38",
+        "bytes": 360333,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3752,
+        "sourceTextMatchesAudio": true,
+        "sourceTextSha256": "1b6621baeb8c87e2ba91245a2705282af37ccca83ddd9de541b011746a093bae",
+        "voice": "voice-03 (de-DE, Arena TTS)",
+        "pendingRegeneration": false
+      },
+      {
+        "id": "t-b2-39",
+        "bytes": 333069,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3468,
+        "sourceTextMatchesAudio": true,
+        "sourceTextSha256": "cb10922559c067a9741193bf8c51e4164ca502bdecff81334433815da250aaee",
+        "voice": "voice-03 (de-DE, Arena TTS)",
+        "pendingRegeneration": false
+      },
+      {
+        "id": "t-b2-40",
+        "bytes": 360909,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3758,
+        "sourceTextMatchesAudio": true,
+        "sourceTextSha256": "e9e7b6ff82522140ee2b89677277ceca5e941655add59652abc3ce2234e87270",
+        "voice": "voice-03 (de-DE, Arena TTS)",
+        "pendingRegeneration": false
+      }
+    ],
+    "coverage": {
+      "before": {
+        "hoerenAudio": 152,
+        "B2": "35/40",
+        "localAudioFilesTotal": 420,
+        "hoerenManifestSha256": "669dd78fdde0e5642ee7db7c594d7d754d8f3aa186abc6fcd86c77f30e6c92db"
+      },
+      "after": {
+        "hoerenAudio": 157,
+        "B2": "40/40",
+        "remainingWithoutLocalMP3": 0,
+        "localAudioFilesTotal": 425,
+        "hoerenManifestSha256": "d99f48475c418d347806d0194dbaf7add3bc04c1d34f62c2594ca67972310c54"
+      }
+    }
+  },
+  "gates": {
+    "planned": "K239a–f",
+    "result": "pass",
+    "passed": [
+      "K239a",
+      "K239b",
+      "K239c",
+      "K239d",
+      "K239e",
+      "K239f"
+    ]
+  },
+  "next": {
+    "remainingUnrecordedTexts": 0,
+    "byLevel": {
+      "B2": 0
+    },
+    "pendingIds": [],
+    "summary": "اكتملت تسجيلات نصوص HörLabor وعددها 157/157؛ لا يبقى نص استماع B2 بلا MP3."
+  },
+  "checks": {
+    "npmRunSmoke": {
+      "passed": 1574,
+      "failed": 41,
+      "r170Gates": "pass",
+      "note": "الإخفاقات الـ41 في بوابات أقدم خارج K239/R170؛ لم تُنسب إلى الدفعة تلقائياً."
+    },
+    "npmRunInteraktiv": {
+      "passed": 702,
+      "failed": 6,
+      "failureIds": [
+        "LXXIX3",
+        "LXXIX4",
+        "VII6",
+        "LXXXVII1",
+        "LXXXVIII1:d-a1-04",
+        "LXXXVIII1:d-a1-06"
+      ],
+      "note": "تطابق الإخفاقات الستة أسماء خط الأساس السابق؛ لم تُسجل إخفاقات R170 تفاعلية."
+    },
+    "typescript": "pass (npx tsc --noEmit)",
+    "build": {
+      "result": "pass",
+      "staticPages": 13
+    },
+    "contentAudit": {
+      "result": "pass",
+      "confirmedStructuralDefects": 0
+    },
+    "npmAudit": {
+      "vulnerabilities": 0
+    },
+    "patchReapply": {
+      "textsChanged": 0,
+      "manifestAdded": 0,
+      "manifestRefreshed": 0,
+      "manifestCount": 157
+    },
+    "gitDiffCheck": "pass"
+  }
+}
