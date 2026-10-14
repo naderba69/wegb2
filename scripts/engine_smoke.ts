@@ -794,8 +794,8 @@ const vocabRepeatAudit = (() => {
         void 0;
       }
       const dm = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as unknown as { count: number; einsaetze: { id: string; file: string; bytes: number; voice: string; level: string }[] };
-      ok(dm.count === 80 && dm.einsaetze.length === 80, "K36g ثمانونَ صوتَ حوارٍ — وكلُّها بأداءِ أدوار: تسعةٌ وسبعونَ بصوتَينِ وواحدٌ بثلاثةِ أصوات · لا حوارَ أحاديَّ الصوتِ بعدَ اليوم — والعدّادُ صادق");
-      ok(dm.einsaetze.every((e) => dd.some((x) => x.id === e.id && x.level === e.level) && (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03") && e.bytes > 8000 && readFileSync(`public${e.file}`).byteLength === e.bytes), "K36h كلُّ ملفٍ مذكورٍ موجودٌ بايتًا بايتًا، لصاحبِ الصوتِ الواحد، ومستواهُ كبطاقتِه");
+      ok(dm.count === 82 && dm.einsaetze.length === 82, "K36g اثنان وثمانون صوتَ حوارٍ — بأداء أدوار: 81 بصوتَين وواحد بثلاثة أصوات؛ والعدّاد صادق");
+      ok(dm.einsaetze.every((e) => dd.some((x) => x.id === e.id && x.level === e.level) && (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03" || e.voice === "voice-04+voice-05") && e.bytes > 8000 && readFileSync(`public${e.file}`).byteLength === e.bytes), "K36h كلُّ ملفٍ مذكورٍ موجودٌ بايتًا بايتًا، لصاحبِ الصوتِ الواحد، ومستواهُ كبطاقتِه");
       const audioIds = new Set(dm.einsaetze.map((e) => e.id));
       const ohneAufnahme = ddAlle.filter((x) => !audioIds.has(x.id));
       const alteOhneAufnahme = ohneAufnahme.filter((x) => !x.neu);
@@ -1328,7 +1328,7 @@ const vocabRepeatAudit = (() => {
     ok(roh.count === roh.einsaetze.length, `K47a عدَّادُ مانيفستِ الحواراتِ صادقٌ (${roh.count})`);
     const zwei = roh.einsaetze.filter((e) => e.stimmen === 2);
     ok(zwei.length >= 79, `K47b حواراتٌ بصوتَينِ متناوبَين موجودةٌ فعلاً (${zwei.length})`);
-    ok(zwei.every((e) => e.voice.split("+").length === 2 && e.voice.split("+").every((s) => ["voice-01", "voice-02", "voice-03"].includes(s))), "K47c الحوارُ الثنائيُّ يوثِّقُ صوتَيهِ كلَيهِما بالاسمِ في المانيفست");
+    ok(zwei.every((e) => e.voice.split("+").length === 2 && e.voice.split("+").every((s) => ["voice-01", "voice-02", "voice-03", "voice-04", "voice-05"].includes(s))), "K47c الحوارُ الثنائيُّ يوثِّقُ صوتَيهِ كلَيهِما بالاسمِ في المانيفست");
     ok(roh.einsaetze.every((e) => !e.voice.includes("voice-00")), "K47d لا أثرَ لصوتٍ محظورٍ (voice-00) في أيِّ ملفٍّ صوتيّ");
     const fehltDatei = roh.einsaetze.filter((e) => !existsSync("public" + e.file));
     ok(fehltDatei.length === 0, `K47e كلُّ ملفٍّ في المانيفستِ موجودٌ على القرص (${fehltDatei.length} مفقود)`);
@@ -1338,7 +1338,7 @@ const vocabRepeatAudit = (() => {
     const echt = dialogues.filter((d) => zweiIds.includes(d.id));
     ok(echt.length === zwei.length, "K47g كلُّ حوارٍ ثنائيِّ الصوتِ لهُ نصٌّ مقابلٌ في البنك");
     ok(echt.every((d) => new Set(d.lines.map((l) => l.who)).size === 2), "K47h ونصُّهُ فعلاً بمتحدِّثَينِ اثنَين — فالصوتانِ يطابقانِ الدَّورَين");
-    ok(roh.einsaetze.every((e) => (e.stimmen ?? 1) >= 2), "K47k لا حوارَ أحاديَّ الصوتِ في المشروع — ثمانونَ حواراً كلُّها بأداءِ أدوار");
+    ok(roh.einsaetze.every((e) => (e.stimmen ?? 1) >= 2), "K47k لا حوارَ أحاديَّ الصوتِ في المشروع — كلُّ الحواراتِ المسجَّلةِ بأداءِ أدوار (${roh.count})");
     const drei = roh.einsaetze.filter((e) => e.stimmen === 3);
     ok(drei.length === 1 && drei[0].voice === "voice-01+voice-02+voice-03", "K47i حوارٌ واحدٌ بثلاثةِ أصواتٍ — وهو الوحيدُ الذي نصُّهُ ثلاثيُّ المتحدّثين");
     ok(drei.every((e) => { const d = dialogues.find((x) => x.id === e.id); return !!d && new Set(d.lines.map((l) => l.who)).size === 3; }), "K47j وثلاثةُ الأصواتِ تطابقُ ثلاثةَ الأدوارِ بالضبط");
@@ -2778,8 +2778,8 @@ void 0;
   ok(nD === 156 && lies.includes("dialogues **156**"), `K125b الحواراتُ 156 في القرصِ والسطرِ والفهرس (${nD})`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 80 && nH === 157 && nH + nG + nK + nS === 425 && lies.includes("157 ملفاً صوتياً") && lies.includes("425 ملفاً صوتياً"),
-    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 425`);
+  ok(nG === 82 && nH === 157 && nH + nG + nK + nS === 427 && lies.includes("157 ملفاً صوتياً") && lies.includes("427 ملفاً صوتياً"),
+    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 427`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
   const nAb = dialogues.flatMap((d) => ablenker(d)).length;
@@ -11942,7 +11942,7 @@ void 0;
     reviewR168.audio.otherManifests.dialogAudioEntriesForTargets === 0 && reviewR168.audio.otherManifests.diktatAudioEntriesForTargets === 0,
     "K237d لقطة R168 التاريخية 147/157 وملفاتها محفوظة؛ كل دفعة لاحقة تختبر التغطية الحالية مستقلاً");
 
-  ok(noCrossManifest && dialogManifest.count === 80 && diktatManifest.einsaetze.length === 180 &&
+  ok(noCrossManifest && dialogManifest.count === dialogManifest.einsaetze.length && dialogManifest.count >= 80 && diktatManifest.einsaetze.length === 180 &&
     reviewR168.audio.otherManifests.dialogManifestUntouched === true &&
     reviewR168.audio.otherManifests.diktatManifestUntouched === true &&
     coverageAfter.hoerenAudio === 147 && coverageAfter.B2 === "30/40" &&
@@ -12045,13 +12045,12 @@ void 0;
       fileCheck?.bytes === audio.length && fileCheck?.id3v2Header === true && fileCheck?.mpegLayer3Frames > 0 &&
       fileCheck?.sourceTextMatchesAudio === true && fileCheck?.sourceTextSha256 === digest && fileCheck?.pendingRegeneration === false;
   });
-  const dialogShaR169 = createHash("sha256").update(readFileSync("content/dialog-audio.json")).digest("hex");
-  const diktatShaR169 = createHash("sha256").update(readFileSync("content/diktat-audio.json")).digest("hex");
+  const otherHashesR169 = reviewR169.audio.otherManifests;
   const otherManifestsR169Valid = [...dialogR169.einsaetze, ...diktatR169.einsaetze].every((entry:any) => !idsR169.includes(entry.id)) &&
-    reviewR169.audio.otherManifests.dialogManifestUntouched === true && reviewR169.audio.otherManifests.diktatManifestUntouched === true &&
-    reviewR169.audio.otherManifests.dialogAudioSha256Before === dialogShaR169 && reviewR169.audio.otherManifests.dialogAudioSha256After === dialogShaR169 &&
-    reviewR169.audio.otherManifests.diktatAudioSha256Before === diktatShaR169 && reviewR169.audio.otherManifests.diktatAudioSha256After === diktatShaR169;
-  const localAudioTotalCurrent = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
+    otherHashesR169.dialogManifestUntouched === true && otherHashesR169.diktatManifestUntouched === true &&
+    otherHashesR169.dialogAudioSha256Before === otherHashesR169.dialogAudioSha256After &&
+    otherHashesR169.diktatAudioSha256Before === otherHashesR169.diktatAudioSha256After;
+  const localAudioTotalAtR169 = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
     sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
   const coverageBeforeR169 = reviewR169.audio.coverage.before;
   const coverageAfterR169 = reviewR169.audio.coverage.after;
@@ -12062,8 +12061,8 @@ void 0;
     reviewR169.audio.validation.manifestReapply === "0 new, 0 refreshed" && reviewR169.audio.validation.manifestSha256StableOnReapply === true &&
     coverageBeforeR169.hoerenAudio === 147 && coverageBeforeR169.B2 === "30/40" && coverageBeforeR169.localAudioFilesTotal === 415 &&
     coverageAfterR169.hoerenAudio === 152 && coverageAfterR169.B2 === "35/40" && coverageAfterR169.remainingWithoutLocalMP3 === 5 &&
-    coverageAfterR169.localAudioFilesTotal === 420 && localAudioTotalCurrent === 425,
-    "K238d سجل R169 التاريخي 152/157 محفوظ؛ ملفاته الخمسة تطابق ID3/MPEG والمانيفستات الأخرى مستقلة");
+    coverageAfterR169.localAudioFilesTotal === 420 && localAudioTotalAtR169 >= coverageAfterR169.localAudioFilesTotal,
+    "K238d سجل R169 التاريخي 152/157 محفوظ؛ ملفاته الخمسة تطابق ID3/MPEG والمانيفستات قد تُحدَّث لاحقاً");
 
   ok(reviewR169.gates.planned === "K238a–f" && reviewR169.gates.result === "pass" &&
     reviewR169.gates.passed.join(",") === "K238a,K238b,K238c,K238d,K238e,K238f" && reviewR169.totals.unresolved === 0 &&
@@ -12164,13 +12163,12 @@ void 0;
       fileCheck?.bytes === audio.length && fileCheck?.id3v2Header === true && fileCheck?.mpegLayer3Frames > 0 &&
       fileCheck?.sourceTextMatchesAudio === true && fileCheck?.sourceTextSha256 === digest && fileCheck?.pendingRegeneration === false;
   });
-  const dialogShaR170 = createHash("sha256").update(readFileSync("content/dialog-audio.json")).digest("hex");
-  const diktatShaR170 = createHash("sha256").update(readFileSync("content/diktat-audio.json")).digest("hex");
+  const otherHashesR170 = reviewR170.audio.otherManifests;
   const otherManifestsR170Valid = [...dialogR170.einsaetze, ...diktatR170.einsaetze].every((entry:any) => !idsR170.includes(entry.id)) &&
-    reviewR170.audio.otherManifests.dialogManifestUntouched === true && reviewR170.audio.otherManifests.diktatManifestUntouched === true &&
-    reviewR170.audio.otherManifests.dialogAudioSha256Before === dialogShaR170 && reviewR170.audio.otherManifests.dialogAudioSha256After === dialogShaR170 &&
-    reviewR170.audio.otherManifests.diktatAudioSha256Before === diktatShaR170 && reviewR170.audio.otherManifests.diktatAudioSha256After === diktatShaR170;
-  const localAudioTotalR170 = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
+    otherHashesR170.dialogManifestUntouched === true && otherHashesR170.diktatManifestUntouched === true &&
+    otherHashesR170.dialogAudioSha256Before === otherHashesR170.dialogAudioSha256After &&
+    otherHashesR170.diktatAudioSha256Before === otherHashesR170.diktatAudioSha256After;
+  const localAudioTotalCurrent = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
     sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
   const manifestShaR170 = createHash("sha256").update(readFileSync("content/hoeren-audio.json")).digest("hex");
   const coverageBeforeR170 = reviewR170.audio.coverage.before;
@@ -12182,8 +12180,8 @@ void 0;
     reviewR170.audio.validation.manifestSha256StableOnReapply === true &&
     coverageBeforeR170.hoerenAudio === 152 && coverageBeforeR170.B2 === "35/40" && coverageBeforeR170.localAudioFilesTotal === 420 &&
     coverageAfterR170.hoerenAudio === 157 && coverageAfterR170.B2 === "40/40" && coverageAfterR170.remainingWithoutLocalMP3 === 0 &&
-    coverageAfterR170.localAudioFilesTotal === 425 && localAudioTotalR170 === 425,
-    "K239d خمسة تسجيلات R170 تطابق بصمات الألمانية وID3/MPEG؛ التغطية مكتملة 157/157 وB2 ‏40/40");
+    coverageAfterR170.localAudioFilesTotal === 425 && localAudioTotalCurrent >= coverageAfterR170.localAudioFilesTotal,
+    "K239d خمسة تسجيلات R170 تطابق بصمات الألمانية وID3/MPEG؛ لقطة التغطية التاريخية 157/157 وB2 ‏40/40");
 
   ok(reviewR170.gates.planned === "K239a–f" && reviewR170.gates.result === "pass" &&
     reviewR170.gates.passed.join(",") === "K239a,K239b,K239c,K239d,K239e,K239f" && reviewR170.totals.unresolved === 0 &&
@@ -12191,6 +12189,71 @@ void 0;
     reviewR170Md.includes("لم يحدث استماع بشري") && reviewR170Md.includes("لم يُحكم على جودة النطق") &&
     reviewR170.next.remainingUnrecordedTexts === 0 && reviewR170.next.pendingIds.length === 0,
     "K239e–f حدود التدقيق والصوت معلنة بلا ادعاء استماع؛ أُنجزت نصوص B2 الأربعون كلها");
+}
+
+/* ═══ R171 / K240 — تسجيل حوارَي A0 بصوتين وحراسة المصدر والمانيفستو. ═══ */
+{
+  const reviewR171 = JSON.parse(readFileSync("docs/content-review-dialog-audio-01-2026-10-14.json", "utf8")) as any;
+  const reviewR171Md = readFileSync("docs/content-review-dialog-audio-01-2026-10-14.md", "utf8");
+  const patchR171 = readFileSync("scripts/patches/add_dialog_audio_r171.py", "utf8");
+  const dialogueBankR171 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
+  const dialogManifestCurrent = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
+  const hoerenManifestCurrent = JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any;
+  const diktatManifestCurrent = JSON.parse(readFileSync("content/diktat-audio.json", "utf8")) as any;
+  const idsR171 = ["d-a0-01", "d-a0-02"];
+  const targetsR171 = idsR171.map((id) => dialogueBankR171.find((dialogue:any) => dialogue.id === id));
+  const sourceShaR171 = (dialogue:any) => createHash("sha256").update(
+    dialogue.lines.map((line:any) => `${line.who}\t${line.de}`).join("\n"), "utf8").digest("hex");
+  const sourceReviewR171Valid = targetsR171.every((dialogue:any) => dialogue && dialogue.level === "A0" &&
+    reviewR171.sourceReview.guardedDialogueLinesSha256[dialogue.id] === sourceShaR171(dialogue) &&
+    patchR171.includes(`\"${dialogue.id}\": \"${sourceShaR171(dialogue)}\"`)) &&
+    JSON.stringify(reviewR171.targetIds) === JSON.stringify(idsR171) &&
+    reviewR171.sourceReview.dialogueTextChanged === false && reviewR171.sourceReview.arabicTranslationsChanged === false &&
+    reviewR171.sourceReview.exactGermanLineCount === 9;
+  ok(reviewR171.reviewRule === "R171" && reviewR171.scope === "dialogue-audio-only" && sourceReviewR171Valid,
+    "K240a R171 يثبت مصدر الحوارين A0 كما هو ويحرس أسطر الألمانية بتجزئة SHA-256");
+
+  const manifestEntriesR171 = dialogManifestCurrent.einsaetze as any[];
+  const manifestTargetsR171 = manifestEntriesR171.filter((entry:any) => idsR171.includes(entry.id));
+  const sourceFilesR171Valid = idsR171.every((id) => {
+    const entry = manifestTargetsR171.find((candidate:any) => candidate.id === id);
+    const file = entry ? `public${entry.file}` : "";
+    const audio = entry && existsSync(file) ? readFileSync(file) : Buffer.alloc(0);
+    const reportFile = reviewR171.audio.files.find((candidate:any) => candidate.id === id);
+    const sourceSha = reviewR171.sourceReview.guardedDialogueLinesSha256[id];
+    return entry?.file === `/audio/dialog/${id}.mp3` && entry?.level === "A0" && entry?.voice === "voice-04+voice-05" &&
+      entry?.stimmen === 2 && entry?.bytes > 40000 && audio.subarray(0, 3).toString() === "ID3" &&
+      audio.length === entry?.bytes && reportFile?.bytes === audio.length &&
+      reportFile?.sha256 === createHash("sha256").update(audio).digest("hex") &&
+      reportFile?.id3v2Header === true && reportFile?.mpegLayer3Frames > 0 && reportFile?.sourceTextSha256 === sourceSha &&
+      reportFile?.sourceTextMatchesAudio === true && reportFile?.voice === entry.voice && reportFile?.stimmen === 2;
+  });
+  const r171TargetIsolation = [...hoerenManifestCurrent.einsaetze, ...diktatManifestCurrent.einsaetze]
+    .every((entry:any) => !idsR171.includes(entry.id));
+  ok(sourceFilesR171Valid && manifestTargetsR171.length === 2 && r171TargetIsolation &&
+    reviewR171.audio.sourceTextExact === true && reviewR171.audio.voice === "voice-04+voice-05" &&
+    reviewR171.audio.humanListening === false && reviewR171.audio.pronunciationQualityJudged === false,
+    "K240b ملفا MP3 بصوتين، ID3 وMPEG-III، يطابقان حوارَي المصدر ولا يتسربان إلى مانيفستو آخر");
+
+  const manifestSnapshotR171 = reviewR171.audio.manifest;
+  const localAudioTotalCurrentR171 = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((sum, folder) =>
+    sum + readdirSync(`public/audio/${folder}`).filter((file) => file.endsWith(".mp3")).length, 0);
+  ok(manifestSnapshotR171.countBefore === 80 && manifestSnapshotR171.countAfter === 82 &&
+    manifestSnapshotR171.entriesAdded === 2 && manifestSnapshotR171.sha256Before === "388561e80ffe47c47eb013daa5fb455df9359c272f8a4c984b407787801b2306" &&
+    manifestSnapshotR171.sha256After.length === 64 && manifestSnapshotR171.reapply === "0 added, 0 refreshed" &&
+    dialogManifestCurrent.count === manifestEntriesR171.length && dialogManifestCurrent.count >= 82 &&
+    localAudioTotalCurrentR171 >= reviewR171.audio.coverage.localAudioFilesTotal &&
+    reviewR171.audio.coverage.dialoguesBefore === 80 && reviewR171.audio.coverage.dialoguesAfter === 82 &&
+    reviewR171.audio.coverage.remainingAfter === 74 && reviewR171.audio.coverage.localAudioFilesTotal === 427,
+    "K240c إضافة R171 ثنائية ومستقرة؛ سجل التغطية التاريخي يرتفع من 80 إلى 82 دون كسر إضافات لاحقة");
+
+  ok(reviewR171.gates.planned === "K240a–d" && reviewR171.gates.result === "pass" &&
+    reviewR171.gates.passed.join(",") === "K240a,K240b,K240c,K240d" &&
+    reviewR171.next.remainingUnrecordedDialogues === 74 && reviewR171.next.byLevel.A0 === 14 &&
+    reviewR171.next.byLevel.A1 === 24 && reviewR171.next.byLevel.A2 === 26 &&
+    reviewR171.next.byLevel.B1 === 5 && reviewR171.next.byLevel.B2 === 5 &&
+    reviewR171Md.includes("لا استماع بشري") && reviewR171Md.includes("لم يُحكم على جودة النطق"),
+    "K240d بوابات R171 والخطوة التالية والحدود الصوتية موثقة؛ لا ادعاء استماع بشري");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

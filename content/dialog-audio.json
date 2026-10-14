@@ -1,6 +1,22 @@
 {
-  "count": 80,
+  "count": 82,
   "einsaetze": [
+    {
+      "id": "d-a0-01",
+      "file": "/audio/dialog/d-a0-01.mp3",
+      "bytes": 139206,
+      "voice": "voice-04+voice-05",
+      "level": "A0",
+      "stimmen": 2
+    },
+    {
+      "id": "d-a0-02",
+      "file": "/audio/dialog/d-a0-02.mp3",
+      "bytes": 87078,
+      "voice": "voice-04+voice-05",
+      "level": "A0",
+      "stimmen": 2
+    },
     {
       "id": "d-a1-01",
       "file": "/audio/dialog/d-a1-01.mp3",

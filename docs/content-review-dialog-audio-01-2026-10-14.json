@@ -1,0 +1,219 @@
+{
+  "reviewRule": "R171",
+  "date": "2026-10-14",
+  "title": "تسجيل أول حوارَي A0 بملفات محلية بصوتين",
+  "scope": "dialogue-audio-only",
+  "targetIds": [
+    "d-a0-01",
+    "d-a0-02"
+  ],
+  "sourceReview": {
+    "dialogueTextChanged": false,
+    "arabicTranslationsChanged": false,
+    "dialogueContentEdited": false,
+    "exactGermanLineCount": 9,
+    "guardedDialogueLinesSha256": {
+      "d-a0-01": "0993535f0337b79310bbf30b1b5780ed507d6ca366b5fb9108340667ba06d4cf",
+      "d-a0-02": "e58f6a4e6e41aa50028c586b9da542610d84b780ec05ec3f3957a78b516993ea"
+    },
+    "hashDefinition": "SHA-256 للنص الناتج من أسطر who ثم علامة تبويب ثم نص de، مع الفصل بين الأسطر بمحرف newline.",
+    "speakerVoiceMapping": {
+      "d-a0-01": {
+        "A": "voice-04 (feminine, de-DE)",
+        "B": "voice-05 (masculine, de-DE)"
+      },
+      "d-a0-02": {
+        "A": "voice-04 (feminine, de-DE)",
+        "B": "voice-05 (masculine, de-DE)"
+      }
+    },
+    "selectedByUserAfterAudition": true,
+    "auditContentNote": "يعرض audit:content d-a0-02 (ثلاثة أسطر) ضمن مرشّحات الحوار القصير للمراجعة التربوية؛ لا عيب بنيوياً مؤكداً، ولم يُعدّل المحتوى ضمن دفعة الصوت."
+  },
+  "audio": {
+    "voice": "voice-04+voice-05",
+    "sourceTextExact": true,
+    "assembly": {
+      "separateClipPerUtterance": true,
+      "gapBetweenUtterancesMs": 320,
+      "sampleRateHz": 24000,
+      "channels": 1,
+      "bitRateKbps": 96,
+      "encoder": "libmp3lame"
+    },
+    "files": [
+      {
+        "id": "d-a0-01",
+        "file": "/audio/dialog/d-a0-01.mp3",
+        "bytes": 139206,
+        "sha256": "706c49b90ef44d8e9bd8c5a8a44fcc0ffc348f86041ec91032f3169d3fa77a42",
+        "id3v2Header": true,
+        "mpegLayer3Frames": 483,
+        "sourceTextMatchesAudio": true,
+        "sourceTextSha256": "0993535f0337b79310bbf30b1b5780ed507d6ca366b5fb9108340667ba06d4cf",
+        "voice": "voice-04+voice-05",
+        "stimmen": 2,
+        "level": "A0",
+        "lineCount": 6,
+        "assembledPcmDurationSeconds": 11.52
+      },
+      {
+        "id": "d-a0-02",
+        "file": "/audio/dialog/d-a0-02.mp3",
+        "bytes": 87078,
+        "sha256": "c958920d8734eaf9640b825a0975c3b783eaeaa7cf826d7eeb318a6bb11064f2",
+        "id3v2Header": true,
+        "mpegLayer3Frames": 302,
+        "sourceTextMatchesAudio": true,
+        "sourceTextSha256": "e58f6a4e6e41aa50028c586b9da542610d84b780ec05ec3f3957a78b516993ea",
+        "voice": "voice-04+voice-05",
+        "stimmen": 2,
+        "level": "A0",
+        "lineCount": 3,
+        "assembledPcmDurationSeconds": 7.16
+      }
+    ],
+    "manifest": {
+      "path": "content/dialog-audio.json",
+      "countBefore": 80,
+      "countAfter": 82,
+      "entriesAdded": 2,
+      "idsAdded": [
+        "d-a0-01",
+        "d-a0-02"
+      ],
+      "sha256Before": "388561e80ffe47c47eb013daa5fb455df9359c272f8a4c984b407787801b2306",
+      "sha256After": "beadab51e786e00b6bccf8f89ec1dfc729ff53efa9d6c35076871515319e846a",
+      "reapply": "0 added, 0 refreshed",
+      "stableOnReapply": true
+    },
+    "coverage": {
+      "dialoguesBefore": 80,
+      "dialoguesAfter": 82,
+      "totalDialogues": 156,
+      "remainingBefore": 76,
+      "remainingAfter": 74,
+      "byLevelBefore": {
+        "A0": {
+          "covered": 0,
+          "total": 16
+        },
+        "A1": {
+          "covered": 11,
+          "total": 35
+        },
+        "A2": {
+          "covered": 11,
+          "total": 37
+        },
+        "B1": {
+          "covered": 29,
+          "total": 34
+        },
+        "B2": {
+          "covered": 29,
+          "total": 34
+        }
+      },
+      "byLevelAfter": {
+        "A0": {
+          "covered": 2,
+          "total": 16
+        },
+        "A1": {
+          "covered": 11,
+          "total": 35
+        },
+        "A2": {
+          "covered": 11,
+          "total": 37
+        },
+        "B1": {
+          "covered": 29,
+          "total": 34
+        },
+        "B2": {
+          "covered": 29,
+          "total": 34
+        }
+      },
+      "localAudioFilesTotalBefore": 425,
+      "localAudioFilesTotal": 427
+    },
+    "otherManifests": {
+      "hoerenUnchanged": true,
+      "hoerenSha256Before": "d99f48475c418d347806d0194dbaf7add3bc04c1d34f62c2594ca67972310c54",
+      "hoerenSha256After": "d99f48475c418d347806d0194dbaf7add3bc04c1d34f62c2594ca67972310c54",
+      "diktatUnchanged": true,
+      "diktatSha256Before": "4a3c259a8545112599e8067db9b6c107160170dc2360332433ffa5ae6f2ed2b7",
+      "diktatSha256After": "4a3c259a8545112599e8067db9b6c107160170dc2360332433ffa5ae6f2ed2b7"
+    },
+    "humanListening": false,
+    "pronunciationQualityJudged": false
+  },
+  "gates": {
+    "planned": "K240a–d",
+    "result": "pass",
+    "passed": [
+      "K240a",
+      "K240b",
+      "K240c",
+      "K240d"
+    ]
+  },
+  "next": {
+    "remainingUnrecordedDialogues": 74,
+    "byLevel": {
+      "A0": 14,
+      "A1": 24,
+      "A2": 26,
+      "B1": 5,
+      "B2": 5
+    },
+    "pendingIds": [],
+    "summary": "أضيف صوت محلي لحوارَي A0 الأولين؛ بقي 74 حواراً بلا MP3 ضمن المسارات الحالية."
+  },
+  "checks": {
+    "npmRunSmoke": {
+      "passed": 1578,
+      "failed": 41,
+      "r171Gates": "pass",
+      "note": "اجتازت K240a–d؛ الإخفاقات الـ41 في بوابات أقدم خارج R171 ولم تُنسب إلى الدفعة."
+    },
+    "npmRunInteraktiv": {
+      "passed": 702,
+      "failed": 6,
+      "failureIds": [
+        "LXXIX3",
+        "LXXIX4",
+        "VII6",
+        "LXXXVII1",
+        "LXXXVIII1:d-a1-04",
+        "LXXXVIII1:d-a1-06"
+      ],
+      "note": "الأسماء الستة مطابقة لنتيجة التشغيل السابق لـR171؛ اجتازت اختبارات تغطية الصوت الجديدة XVI1–3."
+    },
+    "typescript": "pass (npx tsc --noEmit)",
+    "build": {
+      "result": "pass",
+      "staticPages": 13
+    },
+    "contentAudit": {
+      "result": "pass",
+      "confirmedStructuralDefects": 0,
+      "humanReviewWarnings": [
+        "d-a0-02: 3 Zeilen (مراجعة تربوية للحوار القصير؛ لا عيب بنيوياً مؤكداً)"
+      ]
+    },
+    "npmAudit": {
+      "vulnerabilities": 0
+    },
+    "patchReapply": {
+      "added": 0,
+      "refreshed": 0,
+      "manifestCount": 82,
+      "stable": true
+    },
+    "gitDiffCheck": "pass"
+  }
+}

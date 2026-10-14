@@ -515,9 +515,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XVI — مانيفستُ dialog-audio: العقدُ مع القرص ---------- */
   {
     const es = Object.values(dialogAudio) as unknown as { id: string; file: string; bytes: number; voice: string; level: string; stimmen?: number }[];
-    ok(es.length === 80, "XVI1 ثمانونَ مدخلاً — كلُّ حوارٍ في البنكِ لهُ صوت");
-    ok(es.every((e) => /^\/audio\/dialog\/d-[ab][12]-\d\d\.mp3$/.test(e.file)), "XVI2 كلُّ ملفٍّ تحتَ دارِ الحواراتِ باسمِ حوارِه");
-    ok(es.every((e) => (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03")), "XVI3 أصواتُ الدارِ معلومةٌ مسمّاة: voice-01 وحدَه · أو مع voice-02 في الثنائيّ · أو معهما voice-03 في الثلاثيّ — ولا أثرَ لسواها");
+    ok(es.length === 82, "XVI1 اثنان وثمانون مدخلاً محلياً — وكلها لحوارات في البنك");
+    ok(es.every((e) => /^\/audio\/dialog\/d-(?:a0|[ab][12])-\d\d\.mp3$/.test(e.file)), "XVI2 كلُّ ملفٍّ تحتَ دارِ الحواراتِ باسمِ حوارِه");
+    ok(es.every((e) => (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03" || e.voice === "voice-04+voice-05")), "XVI3 أصواتُ الدارِ موثّقة بأسمائها، ومنها الثنائية الجديدة voice-04+voice-05");
     ok(es.filter((e) => e.level === "B1").length === 29 && es.filter((e) => e.level === "B2").length === 29 && es.filter((e) => e.level === "A1").length === 11 && es.filter((e) => e.level === "A2").length === 11, "XVI4 توزيعُ المستويات: 29 B2 · 29 B1 · 11 A1 · 11 A2");
     ok(es.every((e) => dialogAudioSrc(e.id) === e.file), "XVI5 dialogAudioSrc يردُّ ما في القرصِ حرفيًّا");
     ok(es.every((e) => (e.stimmen ?? 1) >= 2 ? e.bytes > 60000 : e.bytes > 200000), "XVI6 الحوارُ الأحاديُّ فوقَ دقيقتَين، والمؤدَّى بأصواتٍ فوقَ نصفِ دقيقةٍ — لا ملفَّ أجوف");
