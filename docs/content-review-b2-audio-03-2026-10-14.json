@@ -1,0 +1,409 @@
+{
+  "reviewRule": "R169",
+  "date": "2026-10-14",
+  "title": "مراجعة النصوص B2 وترجماتها وأسئلتها وتسجيلها في HörLabor",
+  "targetIds": [
+    "t-b2-31",
+    "t-b2-32",
+    "t-b2-33",
+    "t-b2-34",
+    "t-b2-35"
+  ],
+  "sourceReview": {
+    "priorPayloadGuard": "حارس SHA-256 يغطي titleDe/titleAr/de/ar/questions؛ سمح فقط بلقطة المصدر أو وسيط R169 المحسوب قبل التصحيح أو الحمولة النهائية المراجعة، ورفض أي اختلاف آخر.",
+    "editorialKeys": [
+      "titleDe",
+      "titleAr",
+      "de",
+      "ar",
+      "questions"
+    ],
+    "sourcePayloadSha256": {
+      "t-b2-31": "3cd57722ac40cae04366ddf980a1b21c99df40768440ad26ef24837979e32dd1",
+      "t-b2-32": "dd4e745889cd631fe70d43a98cf1deae3b5dd18e77cb19fbcf2eea3e54838fa1",
+      "t-b2-33": "c5673b3e00f67e5fc7f1466c4bea0667d01469dda24afe337f954f643b590734",
+      "t-b2-34": "91bc5761dd20365298ad7ec89bd16ccc8e473dc08203b6cdfe1d214569b14dea",
+      "t-b2-35": "e62cf549a1e89a6bfcc4ba2b86f17036544f76578a87905c64f201f072670219"
+    },
+    "intermediatePayloadSha256": {
+      "t-b2-31": "529a51aa3ac58b48aaeba6c7c9bda7f9246726fedec7f78d071afca71802a8e8",
+      "t-b2-32": "3188ff2b42ac14dd75de4c8d4caf03c0ee704c78613f96bec56da3470c510a3c",
+      "t-b2-33": "8325613e27a00111e458e85bafaf5c0932cd9112d92d1cb64790dc7c0b3dea5b",
+      "t-b2-34": "41ef1fca23fbe3e4cd606c5d70a8faa954070eb2c1b7f631a7ca651ec124a86b",
+      "t-b2-35": "8f1b341597bb91680a151fac29f6499f00dc4940811a918d25948d4805f40bea"
+    },
+    "finalPayloadSha256": {
+      "t-b2-31": "aa08ab8897c8bfeb4bc318d047fb35feb01aaeff808239d3b628076903717877",
+      "t-b2-32": "3188ff2b42ac14dd75de4c8d4caf03c0ee704c78613f96bec56da3470c510a3c",
+      "t-b2-33": "8325613e27a00111e458e85bafaf5c0932cd9112d92d1cb64790dc7c0b3dea5b",
+      "t-b2-34": "41ef1fca23fbe3e4cd606c5d70a8faa954070eb2c1b7f631a7ca651ec124a86b",
+      "t-b2-35": "7cb1fedd309066f8c8f4172c5fa4497e8d82ce2b1bddd3dd3c879520c4472ad9"
+    },
+    "germanFixedBeforeAudio": true,
+    "completeArabicTranslations": true,
+    "questionIdsPreserved": true,
+    "selectedVoice": "voice-03 (de-DE, Arena TTS)",
+    "preparationScript": "scripts/patches/add_hoeren_audio_r169.py",
+    "germanSourceSha256": {
+      "t-b2-31": "e319c9a7339da1172a3366cc9ca4e82bbc516ba52a69b6f009eda943dbf58a2c",
+      "t-b2-32": "b63d68dd197ec35545296dee18029993c2e5c9180a4e0089e0d9c57d78f2c3aa",
+      "t-b2-33": "77fbadc2d60281711d946acc93586ed8f24cf0b8db9e124f45cd91a291ab5e14",
+      "t-b2-34": "66706327ec4a8e315c1f3ddc88f6d32ac02305009331f23b8c4d466a2ac2cae1",
+      "t-b2-35": "96cca76054ace5d022c8287d04ae49c3122301e2b992b13af9b762656dcf65b4"
+    },
+    "textPayloadLockedBeforeTts": true,
+    "textRevisedAfterTts": false
+  },
+  "totals": {
+    "texts": 5,
+    "germanWords": 1027,
+    "arabicWords": 1117,
+    "sentenceEndMarks": 80,
+    "questions": 20,
+    "germanTextFieldsReviewed": 5,
+    "fullTextFieldsUpdated": 20,
+    "questionsTouched": 20,
+    "questionFieldsUpdated": 69,
+    "unresolved": 0
+  },
+  "resources": [
+    {
+      "id": "t-b2-31",
+      "titleDe": "Beispiel: Pendeln oder umziehen?",
+      "titleAr": "مثال: التنقّل اليومي أم الانتقال؟",
+      "germanWords": 222,
+      "arabicWords": 251,
+      "sentenceEndMarks": 15,
+      "questions": 4,
+      "sourceTextSha256": "e319c9a7339da1172a3366cc9ca4e82bbc516ba52a69b6f009eda943dbf58a2c",
+      "finalPayloadSha256": "aa08ab8897c8bfeb4bc318d047fb35feb01aaeff808239d3b628076903717877"
+    },
+    {
+      "id": "t-b2-32",
+      "titleDe": "Beispiel: Das perfekte Bild",
+      "titleAr": "مثال: الصورة المثالية",
+      "germanWords": 207,
+      "arabicWords": 219,
+      "sentenceEndMarks": 16,
+      "questions": 4,
+      "sourceTextSha256": "b63d68dd197ec35545296dee18029993c2e5c9180a4e0089e0d9c57d78f2c3aa",
+      "finalPayloadSha256": "3188ff2b42ac14dd75de4c8d4caf03c0ee704c78613f96bec56da3470c510a3c"
+    },
+    {
+      "id": "t-b2-33",
+      "titleDe": "Beispiel: Der Verein und der Austritt",
+      "titleAr": "مثال: النادي وقرار الانسحاب",
+      "germanWords": 201,
+      "arabicWords": 203,
+      "sentenceEndMarks": 17,
+      "questions": 4,
+      "sourceTextSha256": "77fbadc2d60281711d946acc93586ed8f24cf0b8db9e124f45cd91a291ab5e14",
+      "finalPayloadSha256": "8325613e27a00111e458e85bafaf5c0932cd9112d92d1cb64790dc7c0b3dea5b"
+    },
+    {
+      "id": "t-b2-34",
+      "titleDe": "Beispiel: Zwischen den Zeilen",
+      "titleAr": "مثال: ما بين السطور",
+      "germanWords": 199,
+      "arabicWords": 220,
+      "sentenceEndMarks": 18,
+      "questions": 4,
+      "sourceTextSha256": "66706327ec4a8e315c1f3ddc88f6d32ac02305009331f23b8c4d466a2ac2cae1",
+      "finalPayloadSha256": "41ef1fca23fbe3e4cd606c5d70a8faa954070eb2c1b7f631a7ca651ec124a86b"
+    },
+    {
+      "id": "t-b2-35",
+      "titleDe": "Beispiel: Das Forschungsprojekt",
+      "titleAr": "مثال: المشروع البحثي",
+      "germanWords": 198,
+      "arabicWords": 224,
+      "sentenceEndMarks": 14,
+      "questions": 4,
+      "sourceTextSha256": "96cca76054ace5d022c8287d04ae49c3122301e2b992b13af9b762656dcf65b4",
+      "finalPayloadSha256": "7cb1fedd309066f8c8f4172c5fa4497e8d82ce2b1bddd3dd3c879520c4472ad9"
+    }
+  ],
+  "titleEdits": [
+    {
+      "id": "t-b2-31",
+      "titleDe": "Beispiel: Pendeln oder umziehen?",
+      "titleAr": "مثال: التنقّل اليومي أم الانتقال؟"
+    },
+    {
+      "id": "t-b2-32",
+      "titleDe": "Beispiel: Das perfekte Bild",
+      "titleAr": "مثال: الصورة المثالية"
+    },
+    {
+      "id": "t-b2-33",
+      "titleDe": "Beispiel: Der Verein und der Austritt",
+      "titleAr": "مثال: النادي وقرار الانسحاب"
+    },
+    {
+      "id": "t-b2-34",
+      "titleDe": "Beispiel: Zwischen den Zeilen",
+      "titleAr": "مثال: ما بين السطور"
+    },
+    {
+      "id": "t-b2-35",
+      "titleDe": "Beispiel: Das Forschungsprojekt",
+      "titleAr": "مثال: المشروع البحثي"
+    }
+  ],
+  "corrections": [
+    {
+      "id": "t-b2-31",
+      "notes": "رُبطت الترجمة صراحةً بعمل الزوج في القرية ودراسة الأطفال فيها وكون المنزل مسدّد الثمن، وأن هذه الأمور تربط الأسرة بالقرية. ضُبطت بدائل الحافلة بين المدن والقطار والسيارة الكهربائية، وصيغت أيام العمل من المنزل والقطار واحتساب زمن الرحلة وفق الاتفاق. وُسم السيناريو بوضوح بأنه مثال خيالي.",
+      "arabic": "ترجمة كاملة من ثلاث فقرات؛ لا تختزل الحل الوسط أو تفاصيل عمل الزوج والأسرة."
+    },
+    {
+      "id": "t-b2-32",
+      "notes": "وُسمت الحكاية بالخيال، وفُصل وصف الصور المنقّحة والرعاية والتجربة ذات الأسبوع عن التعميم على المراهقين أو الادعاء بعلاقة سببية طويلة الأمد. طوبقت الترجمة مع النص في تفاصيل الشاشات والإعجابات ورسائل الصديقات.",
+      "arabic": "ترجمة كاملة؛ تحفظ حدود التجربة ولا تنسب إليها نتيجة سببية أو نفسية دائمة."
+    },
+    {
+      "id": "t-b2-33",
+      "notes": "ثُبّت ترتيب المباراة: تعادل بعد الوقت الأصلي، وهدف مرفوض للتسلل أثناء الوقت الإضافي، ثم تعادل بعده فركلات ترجيح. نُقّحت الترجمة لتقول «التخييم قرب البحيرة» و«أكثر من مجرد منافسة»، وحُذف وصف بن بأنه زميل كريم لأنه غير مذكور، ورُبط شهر مايو بجولة الدراجة اللاحقة فقط.",
+      "arabic": "ترجمة كاملة؛ لا تضيف صلة قرابة/زمالة غير واردة ولا تنقل موعد مايو إلى نشاط سابق."
+    },
+    {
+      "id": "t-b2-34",
+      "notes": "رُوجعت مفاهيم framing وAgenda-Setting واقتصاد الانتباه والتضليل. أزيلت من العربية تفاصيل الاثنين والقناة والصحيفة الكبيرة وعبارة «من دون أن أتدخل» لغيابها عن الألمانية؛ وحوفظ على معنى منشور Clickbait دون اختراع منصة أو وسيلة.",
+      "arabic": "ترجمة كاملة متوازية؛ لا تفاصيل عن يوم أو قناة أو صحيفة أو تدخل للمعلم غير موجودة في الأصل."
+    },
+    {
+      "id": "t-b2-35",
+      "notes": "طوبق النص العربي مع أن ليلى أدارت مشروعاً بحثياً وحصلت على تمويل يغطي وظيفتين. عُدلت ترجمة المعدل/القبول والتجربة، وفُصلت نتائج العينة الخيالية عن القواعد العامة. قُيّدت إتاحة التحليلات بموافقات المشاركين وقواعد حماية البيانات، ولم تُعرض البيانات الخام المرتبطة بأشخاص للعموم.",
+      "arabic": "ترجمة كاملة؛ توضح إدارة المشروع والتمويل لوظيفتين وتلتزم بحدود الموافقات والخصوصية."
+    }
+  ],
+  "questionReview": {
+    "total": 20,
+    "perText": 4,
+    "touchedQuestions": 20,
+    "updatedFields": 69,
+    "checks": [
+      "مطابقة السؤال ومفتاحه مع دليل حرفي من الألمانية",
+      "تفرّد خيارات الاختيار المتعدد وصحة المفتاح",
+      "مراجعة صواب/خطأ مع شروح ثنائية اللغة",
+      "مطابقة كل جواب فراغ للنص الألماني ووجود الفراغ باللغتين",
+      "اكتمال promptDe وpromptAr وexplanationAr والحفاظ على المعرّفات"
+    ]
+  },
+  "factualReview": {
+    "t-b2-31": "الشخصيات والأرقام (المسافة، الزمن، وتعطل الشحن) عناصر مثال معلن أنه خيالي وليست إحصاءات عن الريف أو النقل. تفاصيل الزوج والأطفال والمنزل متسقة مع تعليل عدم الانتقال؛ واحتساب العمل في القطار مشروط بالاتفاق في القصة.",
+    "t-b2-32": "حكاية ابنة أخت وتجربة أسبوع خيالية، لا دراسة عن كل المراهقين؛ النص يصرح بأن التجربة لا تثبت سبب ردود الفعل ولا تغيراً طويل الأمد في الثقة بالنفس.",
+    "t-b2-33": "وفق قانون التسلل وقانون تحديد نتيجة المباراة لدى IFAB، يقع التسلل خلال اللعب، وتأتي ركلات الترجيح بعد انتهاء المباراة والوقت الإضافي عند استمرار التعادل. لذلك صيغ إلغاء الهدف في الوقت الإضافي لا أثناء الترجيح؛ الشخصية والنتيجة والنقاش داخل النادي عناصر خيالية.",
+    "t-b2-34": "تؤيد مراجع المفوضية الأوروبية أن التضليل أوسع من مصطلح Fake News، وأن الأرقام الصحيحة قد تكون مضللة عند الانتقاء أو حذف السياق. يشرح bpb أثر انتقاء الموضوعات والتأطير وتحديد جدول الأعمال في تكوين الرأي؛ والإشارات الواردة في الصف أمثلة تعليمية لا اختباراً آلياً للصدق.",
+    "t-b2-35": "المشروع والعينة والنتائج أحداث خيالية ولا تُعرض نتيجة الدراسة كحقيقة عامة. يتسق إيداع الاستبيان والإرشادات والتحليلات المجهولة بقدر ما تسمح به الموافقات وقواعد حماية البيانات مع توصيات إدارة البيانات البحثية؛ أما البيانات الشخصية الخام المرتبطة بأشخاص فلا تُتاح علناً في القصة.",
+    "unresolved": []
+  },
+  "sources": [
+    {
+      "id": "IFAB-Law10",
+      "title": "IFAB, Law 10 — Determining the Outcome of a Match",
+      "url": "https://www.theifab.com/laws/latest/determining-the-outcome-of-a-match/",
+      "scopeAr": "توقيت المباراة والوقت الإضافي وركلات الترجيح؛ تحقق تسلسل التعادل ثم اللجوء إلى الترجيح بعد انتهاء الوقت الإضافي."
+    },
+    {
+      "id": "IFAB-Law11",
+      "title": "IFAB, Law 11 — Offside",
+      "url": "https://www.theifab.com/laws/latest/offside/",
+      "scopeAr": "تعريف مخالفة التسلل؛ وُضع إلغاء الهدف في الوقت الإضافي، لا أثناء ركلات الترجيح."
+    },
+    {
+      "id": "EU-HLEG-2018",
+      "title": "European Commission, Final report of the High Level Expert Group on Fake News and Online Disinformation",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/final-report-high-level-expert-group-fake-news-and-online-disinformation",
+      "scopeAr": "التضليل يتجاوز مفهوم الأخبار الزائفة، وقد يشمل معلومات كاذبة أو غير دقيقة أو مضللة مقصوداً بها الإضرار العام أو الربح."
+    },
+    {
+      "id": "EU-Code-Disinformation",
+      "title": "European Commission, Questions and Answers on the Code of Practice on Disinformation",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/qa-code-practice-disinformation",
+      "scopeAr": "تعريف المفوضية للتضليل بوصفه محتوى كاذباً أو مضللاً ينتشر بقصد الخداع أو لتحقيق مكسب وقد يسبب ضرراً عاماً."
+    },
+    {
+      "id": "bpb-Agenda-Framing",
+      "title": "Bundeszentrale für politische Bildung, Die Medienlogik der Informationsintermediäre und ihre Bedeutung für Meinungsbildung",
+      "url": "https://www.bpb.de/themen/medien-journalismus/digitale-desinformation/290575/die-medienlogik-der-informationsintermediaere-und-ihre-bedeutung-fuer-meinungsbildung/",
+      "scopeAr": "شرح انتقاء الموضوعات والتأطير وأثر وسائط المعلومات في تكوين الرأي؛ لا تُعرض ملاحظة القصة كقاعدة سببية مطلقة."
+    },
+    {
+      "id": "DFG-RDM-Education",
+      "title": "Gemeinsame Stellungnahme von DGfE, GEBF und GFD zum Forschungsdatenmanagement in den Bildungswissenschaften (hosted by DFG)",
+      "url": "https://www.dfg.de/resource/blob/174560/67a06609aa9aaa98e73b9b7d798afbb9/stellungnahme-forschungsdatenmanagement-data.pdf",
+      "scopeAr": "إدارة البيانات البحثية وإتاحتها وإعادة استخدامها مع مراعاة الموافقات والخصوصية والأخلاقيات؛ الإتاحة ليست تلقائية."
+    }
+  ],
+  "audio": {
+    "voice": "voice-03 (de-DE, Arena TTS)",
+    "sourceTextExact": true,
+    "generatedAudioIds": [
+      "t-b2-31",
+      "t-b2-32",
+      "t-b2-33",
+      "t-b2-34",
+      "t-b2-35"
+    ],
+    "pendingRegenerationIds": [],
+    "manifestCount": 152,
+    "manifestSha256AfterReapply": "669dd78fdde0e5642ee7db7c594d7d754d8f3aa186abc6fcd86c77f30e6c92db",
+    "coverage": {
+      "before": {
+        "totalTexts": 157,
+        "hoerenAudio": 147,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "35/35",
+        "B2": "30/40",
+        "remainingWithoutLocalMP3": 10,
+        "localAudioFilesTotal": 415
+      },
+      "after": {
+        "totalTexts": 157,
+        "hoerenAudio": 152,
+        "A0": "15/15",
+        "A1": "35/35",
+        "A2": "32/32",
+        "B1": "35/35",
+        "B2": "35/40",
+        "remainingWithoutLocalMP3": 5,
+        "localAudioFilesTotal": 420
+      }
+    },
+    "files": [
+      {
+        "id": "t-b2-31",
+        "file": "/audio/hoeren/t-b2-31.mp3",
+        "bytes": 355341,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3700,
+        "audioFileSha256": "0ee4939982aaa39c0e9191453effc69d83d75ba9896c6353a7a1bcbb0f2f5fbc",
+        "sourceTextSha256": "e319c9a7339da1172a3366cc9ca4e82bbc516ba52a69b6f009eda943dbf58a2c",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false
+      },
+      {
+        "id": "t-b2-32",
+        "file": "/audio/hoeren/t-b2-32.mp3",
+        "bytes": 334701,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3485,
+        "audioFileSha256": "2faacfa05983efc1b6e5711716ccd1d63b7edd4ccccb5cdf7abd5aaae1487848",
+        "sourceTextSha256": "b63d68dd197ec35545296dee18029993c2e5c9180a4e0089e0d9c57d78f2c3aa",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false
+      },
+      {
+        "id": "t-b2-33",
+        "file": "/audio/hoeren/t-b2-33.mp3",
+        "bytes": 323469,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3368,
+        "audioFileSha256": "fdda22a6811106dd24634dc2a742f44c2db8c2ff8907e9a48d5c18837414419e",
+        "sourceTextSha256": "77fbadc2d60281711d946acc93586ed8f24cf0b8db9e124f45cd91a291ab5e14",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false
+      },
+      {
+        "id": "t-b2-34",
+        "file": "/audio/hoeren/t-b2-34.mp3",
+        "bytes": 359469,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3743,
+        "audioFileSha256": "39c7618f1d307a87f52cb967b5225de5886ccbdb345506502a0dc6c467367da8",
+        "sourceTextSha256": "66706327ec4a8e315c1f3ddc88f6d32ac02305009331f23b8c4d466a2ac2cae1",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false
+      },
+      {
+        "id": "t-b2-35",
+        "file": "/audio/hoeren/t-b2-35.mp3",
+        "bytes": 370029,
+        "id3v2Header": true,
+        "mpegLayer3Frames": 3853,
+        "audioFileSha256": "734175fda4c726598733e329dbe52fbc9668f0f0999304c320ca40865d4b2ced",
+        "sourceTextSha256": "96cca76054ace5d022c8287d04ae49c3122301e2b992b13af9b762656dcf65b4",
+        "sourceTextMatchesAudio": true,
+        "pendingRegeneration": false
+      }
+    ],
+    "otherManifests": {
+      "dialogAudioEntriesForTargets": 0,
+      "diktatAudioEntriesForTargets": 0,
+      "dialogManifestUntouched": true,
+      "diktatManifestUntouched": true,
+      "dialogAudioSha256Before": "388561e80ffe47c47eb013daa5fb455df9359c272f8a4c984b407787801b2306",
+      "dialogAudioSha256After": "388561e80ffe47c47eb013daa5fb455df9359c272f8a4c984b407787801b2306",
+      "diktatAudioSha256Before": "4a3c259a8545112599e8067db9b6c107160170dc2360332433ffa5ae6f2ed2b7",
+      "diktatAudioSha256After": "4a3c259a8545112599e8067db9b6c107160170dc2360332433ffa5ae6f2ed2b7"
+    },
+    "validation": {
+      "id3v2Header": true,
+      "mpegLayer3FramesPresent": true,
+      "sourceTextMatchesAudio": true,
+      "manifestReapply": "0 new, 0 refreshed",
+      "manifestSha256StableOnReapply": true,
+      "humanListening": false,
+      "pronunciationQualityJudged": false
+    }
+  },
+  "gates": {
+    "planned": "K238a–f",
+    "passed": [
+      "K238a",
+      "K238b",
+      "K238c",
+      "K238d",
+      "K238e",
+      "K238f"
+    ],
+    "result": "pass"
+  },
+  "tests": {
+    "npmCi": "نجح: أضيفت 96 حزمة من package-lock.json، دون تحديث الحزمة",
+    "smoke": {
+      "passed": 1570,
+      "failed": 40,
+      "previouslyDocumentedR168Failures": 38,
+      "r169SpecificGates": "K238a–f اجتازت جميعاً",
+      "differenceFromPreviousReport": "ظهر إخفاقان أكثر من العدد المدوّن بعد R168؛ لم يُنسبا إلى محتوى R169 ولم يُدّع اجتياز كامل."
+    },
+    "interaktiv": {
+      "passed": 702,
+      "failed": 6,
+      "status": "نفس إخفاقات الأساس المسجلة في R168"
+    },
+    "typescript": "npx tsc --noEmit — اجتاز",
+    "build": {
+      "status": "اجتاز",
+      "staticRoutes": 13
+    },
+    "auditContent": {
+      "confirmedStructuralDefects": 0,
+      "dialogueShortCandidatesForHumanReview": 21,
+      "vocabularyArticleHeuristicCandidates": 6
+    },
+    "npmAudit": {
+      "vulnerabilities": 0
+    },
+    "pyCompile": "اجتاز",
+    "gitDiffCheck": "الفحص الموجّه لملفات R169 اجتاز؛ الفحص الكامل للدفعة التراكمية أظهر مسافات نهاية سطر مقصودة لكسر Markdown في تقارير أقدم (R138/R139/R142 وبعض تقارير الحوارات)، لا في ملفات R169."
+  },
+  "next": {
+    "remainingUnrecordedTexts": 5,
+    "byLevel": {
+      "B2": 5
+    },
+    "pendingIds": [
+      "t-b2-36",
+      "t-b2-37",
+      "t-b2-38",
+      "t-b2-39",
+      "t-b2-40"
+    ]
+  },
+  "judgement": "اكتملت مراجعة R169 للنصوص الخمسة وترجماتها العربية الكاملة وأسئلتها، وثُبّت الألماني قبل إنتاج خمسة ملفات بصوت voice-03. ارتفعت تغطية HörLabor إلى 152/157 وB2 إلى 35/40؛ بقيت t-b2-36 إلى t-b2-40. لا يُدّعى الاستماع البشري أو تقييم جودة النطق."
+}
