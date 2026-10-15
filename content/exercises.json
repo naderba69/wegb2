@@ -1,0 +1,6843 @@
+{
+  "version": "3.0 - Major enhancement with full tracking",
+  "description": "Interactive exercises for Wegb2 German language course",
+  "total_exercises": 233,
+  "exercises": [
+    {
+      "id": "A1-ex-28-fill",
+      "dialogue_id": "d-a1-28",
+      "type": "fill_in_the_blank",
+      "title": "A1 - In der Bibliothek - Fill Exercise",
+      "content": {
+        "question": "Wo ist das Buch?",
+        "correct_answer": "auf der linken Seite",
+        "explanation": "الدليل: Auf der linken Seite.",
+        "dictation": [
+          "Kann ich helfen?",
+          "Auf der linken Seite."
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-28-mc",
+      "dialogue_id": "d-a1-28",
+      "type": "multiple_choice",
+      "title": "A1 - In der Bibliothek - MC Exercise",
+      "content": {
+        "question": "Was sucht der Lerner?",
+        "options": [
+          "ein Buch",
+          "ein Ticket",
+          "ein Essen"
+        ],
+        "correct_answer": "ein Buch",
+        "explanation": "الدليل: ich suche ein Buch uber Deutschland."
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-29-fill",
+      "dialogue_id": "d-a1-29",
+      "type": "fill_in_the_blank",
+      "title": "A1 - Auf der Post - Fill Exercise",
+      "content": {
+        "question": "Was mochte der Lerner senden?",
+        "correct_answer": "ein Paket",
+        "explanation": "الدليل: Ich möchte ein Paket nach Deutschland senden.",
+        "dictation": [
+          "Haben Sie den Brief dabei?",
+          "Die Kosten sind 1,50 Euro."
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-29-mc",
+      "dialogue_id": "d-a1-29",
+      "type": "multiple_choice",
+      "title": "A1 - Auf der Post - MC Exercise",
+      "content": {
+        "question": "Wohin möchte der Lerner?",
+        "options": [
+          "Nach Frankfurt",
+          "Nach Berlin",
+          "Nach München"
+        ],
+        "correct_answer": "Nach Frankfurt",
+        "explanation": "الدليل: Nach Frankfurt, bitte."
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-30-fill",
+      "dialogue_id": "d-a1-30",
+      "type": "fill_in_the_blank",
+      "title": "A1 - Wo ist die U-Bahn? - Fill Exercise",
+      "content": {
+        "question": "Wie viele Stationen?",
+        "correct_answer": "zwei",
+        "explanation": "الدليل: Nur zwei Stationen.",
+        "dictation": [
+          "Entschuldigung, wo ist die U-Bahn?",
+          "Nur zwei Stationen."
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-30-mc",
+      "dialogue_id": "d-a1-30",
+      "type": "multiple_choice",
+      "title": "A1 - Wo ist die U-Bahn? - MC Exercise",
+      "content": {
+        "question": "Wo fragt der Lerner?",
+        "options": [
+          "Am Bahnhof",
+          "Auf der Post",
+          "Wo ist die U-Bahn?"
+        ],
+        "correct_answer": "Wo ist die U-Bahn?",
+        "explanation": "الدليل: Entschuldigung, wo ist die U-Bahn?"
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-rev-d-a1-01",
+      "dialogue_id": "d-a1-01",
+      "type": "review",
+      "title": "A1 Review - Erste Begegnung",
+      "content": {
+        "dialogue_title": "Erste Begegnung",
+        "key_phrases": [
+          "Hallo! Ich heiße Anna. Und du?",
+          "Hallo Anna. Ich heiße Omar."
+        ],
+        "questions": [
+          {
+            "id": "d-a1-01-q1",
+            "type": "mc",
+            "promptDe": "Woher kommt Omar?",
+            "options": [
+              "aus Tunesien",
+              "aus Berlin",
+              "aus Deutschland"
+            ],
+            "answer": "aus Tunesien",
+            "explanationAr": "الدليل: «Ja, ich komme aus Tunesien». الفخّ: يسكن عمر الآن في برلين، لكن السكن الحالي لا يعني أن بلده الأصلي ألمانيا.",
+            "promptAr": "من أيّ بلد يأتي عمر؟"
+          },
+          {
+            "id": "d-a1-01-q2",
+            "type": "fill",
+            "promptDe": "Er lernt seit drei ___.",
+            "answer": [
+              "Monaten"
+            ],
+            "explanationAr": "seit + Dativ جمع: seit drei Monaten.",
+            "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+          }
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 5,
+      "category": "A1 Review",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-rev-d-a1-02",
+      "dialogue_id": "d-a1-02",
+      "type": "review",
+      "title": "A1 Review - Im Café: Kaffee und Kuchen",
+      "content": {
+        "dialogue_title": "Im Café: Kaffee und Kuchen",
+        "key_phrases": [
+          "Guten Tag! Was darf es sein?",
+          "Einen Kaffee, bitte."
+        ],
+        "questions": [
+          {
+            "id": "d-a1-02-q1",
+            "type": "mc",
+            "promptDe": "Was trinkt Sami?",
+            "options": [
+              "Kaffee mit Zucker",
+              "Kaffee mit ein bisschen Milch",
+              "Kaffee mit Milch und Zucker"
+            ],
+            "answer": "Kaffee mit ein bisschen Milch",
+            "explanationAr": "الدليل: «Ein bisschen Milch, keinen Zucker». الفخّ: «Zucker» سُمع في سؤال النادل لكنّ سامي رفضه («keinen»).",
+            "promptAr": "ماذا يشرب سامي؟"
+          },
+          {
+            "id": "d-a1-02-q2",
+            "type": "fill",
+            "promptDe": "Zusammen ___ Euro fünfzig.",
+            "answer": [
+              "fünf"
+            ],
+            "explanationAr": "المجموع خمسة يورو وخمسون سنتاً (5,50 يورو).",
+            "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+          }
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 5,
+      "category": "A1 Review",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-rev-d-a1-03",
+      "dialogue_id": "d-a1-03",
+      "type": "review",
+      "title": "A1 Review - Telefontermin",
+      "content": {
+        "dialogue_title": "Telefontermin",
+        "key_phrases": [
+          "Hallo, hier spricht Nour. Kann ich mit Herrn Klein sprechen?",
+          "Klein am Apparat. Guten Tag!"
+        ],
+        "questions": [
+          {
+            "id": "d-a1-03-q1",
+            "type": "mc",
+            "promptDe": "Wann ist der Termin?",
+            "options": [
+              "am Donnerstag um zehn Uhr",
+              "am Dienstag um zwölf Uhr",
+              "am Dienstag um zehn Uhr"
+            ],
+            "answer": "am Dienstag um zehn Uhr",
+            "explanationAr": "الدليل: «Ja, am Dienstag um zehn Uhr habe ich Zeit» — الموعد يوم الثلاثاء عند الساعة العاشرة. الفخّان: Donnerstag يوم آخر، وzwölf Uhr تعني الثانية عشرة لا العاشرة.",
+            "promptAr": "متى الموعد؟"
+          },
+          {
+            "id": "d-a1-03-q2",
+            "type": "fill",
+            "promptDe": "Ich möchte einen ___ vereinbaren.",
+            "answer": [
+              "Termin"
+            ],
+            "explanationAr": "في هذا السياق: einen Termin vereinbaren = تحديد موعد.",
+            "promptAr": "أكمل الفراغ بالكلمة المناسبة من الحوار."
+          }
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 5,
+      "category": "A1 Review",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-28-fill",
+      "dialogue_id": "d-a2-28",
+      "type": "dictation",
+      "title": "A2 - Am Bahnhof: Fahrkarte kaufen - Fill Exercise",
+      "content": {
+        "question": "Wie viel kostet ein Ticket?",
+        "correct_answer": "27,50 Euro",
+        "explanation": "الدليل: Ein Ticket nach Frankfurt kostet 27,50 Euro.",
+        "dictation": [
+          "Nach Frankfurt, bitte.",
+          "Ein Ticket nach Frankfurt kostet 27,50 Euro."
+        ]
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-28-mc",
+      "dialogue_id": "d-a2-28",
+      "type": "multiple_choice",
+      "title": "A2 - Am Bahnhof: Fahrkarte kaufen - MC Exercise",
+      "content": {
+        "question": "Wohin fährt der Lerner?",
+        "options": [
+          "Frankfurt",
+          "Berlin",
+          "München"
+        ],
+        "correct_answer": "Frankfurt",
+        "explanation": "الدليل: Nach Frankfurt, bitte."
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-29-fill",
+      "dialogue_id": "d-a2-29",
+      "type": "dictation",
+      "title": "A2 - Im Restaurant - Fill Exercise",
+      "content": {
+        "question": "Was möchte der Lerner essen?",
+        "correct_answer": "den Fisch",
+        "explanation": "الدليل: Ich hätte gerne den Fisch.",
+        "dictation": [
+          "Tisch für zwei?",
+          "Kommen Sie bitte hierher."
+        ]
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-29-mc",
+      "dialogue_id": "d-a2-29",
+      "type": "multiple_choice",
+      "title": "A2 - Im Restaurant - MC Exercise",
+      "content": {
+        "question": "Für wen ist der Tisch reserviert?",
+        "options": [
+          "Für den Ober",
+          "Für Meier",
+          "Für den Lerner"
+        ],
+        "correct_answer": "Für Meier",
+        "explanation": "الدليل: unter dem Namen Meier."
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-30-fill",
+      "dialogue_id": "d-a2-30",
+      "type": "dictation",
+      "title": "A2 - Anruf bei Freunden - Fill Exercise",
+      "content": {
+        "question": "Was macht der Lerner später?",
+        "correct_answer": "ruft später zurück",
+        "explanation": "الدليل: Dann rufe ich später zurück.",
+        "dictation": [
+          "Hallo, ist Hans da?",
+          "Dann rufe ich später zurück."
+        ]
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-30-mc",
+      "dialogue_id": "d-a2-30",
+      "type": "multiple_choice",
+      "title": "A2 - Anruf bei Freunden - MC Exercise",
+      "content": {
+        "question": "Wo ist Hans?",
+        "options": [
+          "Draußen",
+          "Im Haus",
+          "Im Urlaub"
+        ],
+        "correct_answer": "Draußen",
+        "explanation": "الدليل: er ist draußen."
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-tf-01",
+      "dialogue_id": "d-a1-01",
+      "type": "true_false",
+      "title": "A1 True/False - d-a1-01",
+      "content": {
+        "question": "Willst du? Grammatikfrage?",
+        "correct_answer": true,
+        "explanation": "Grammatikübung"
+      },
+      "level": "A1",
+      "status": "available",
+      "difficulty": "easy",
+      "time_limit": 60,
+      "points": 5,
+      "category": "grammar",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-tf-02",
+      "dialogue_id": "d-a1-02",
+      "type": "true_false",
+      "title": "A1 True/False - d-a1-02",
+      "content": {
+        "question": "Hast du? Grammatikfrage?",
+        "correct_answer": true,
+        "explanation": "Grammatikübung"
+      },
+      "level": "A1",
+      "status": "available",
+      "difficulty": "easy",
+      "time_limit": 60,
+      "points": 5,
+      "category": "grammar",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-match-01",
+      "dialogue_id": "d-a2-01",
+      "type": "matching",
+      "title": "A2 Matching Exercise - d-a2-01",
+      "content": {
+        "question": "Associez les phrases",
+        "matches": [
+          {
+            "left": "Hallo",
+            "right": "Guten Tag"
+          },
+          {
+            "left": "Tschüss",
+            "right": "Auf Wiedersehen"
+          }
+        ],
+        "correct_pairs": 2
+      },
+      "level": "A2",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 120,
+      "points": 9,
+      "category": "vocabulary",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Match items with their correct pairs",
+      "difficultyRating": 2.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "matching"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-match-02",
+      "dialogue_id": "d-a2-02",
+      "type": "matching",
+      "title": "A2 Matching Exercise - d-a2-02",
+      "content": {
+        "question": "Associez les phrases",
+        "matches": [
+          {
+            "left": "Hallo",
+            "right": "Guten Tag"
+          },
+          {
+            "left": "Tschüss",
+            "right": "Auf Wiedersehen"
+          }
+        ],
+        "correct_pairs": 2
+      },
+      "level": "A2",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 120,
+      "points": 9,
+      "category": "vocabulary",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Match items with their correct pairs",
+      "difficultyRating": 2.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "matching"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-review-01",
+      "dialogue_id": "d-a1-03",
+      "type": "review",
+      "title": "A1 Review - d-a1-03",
+      "content": {
+        "dialogue_title": "A1 - d-a1-03",
+        "key_phrases": [
+          "key phrase 1",
+          "key phrase 2"
+        ],
+        "questions": [
+          "question 1",
+          "question 2"
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 5,
+      "category": "review",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "time_limit": 5,
+        "type": "practice",
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-review-02",
+      "dialogue_id": "d-a1-04",
+      "type": "review",
+      "title": "A1 Review - d-a1-04",
+      "content": {
+        "dialogue_title": "A1 - d-a1-04",
+        "key_phrases": [
+          "key phrase 1",
+          "key phrase 2"
+        ],
+        "questions": [
+          "question 1",
+          "question 2"
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 5,
+      "category": "review",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-31-fill",
+      "dialogue_id": "d-a1-36",
+      "type": "fill_in_the_blank",
+      "title": "A1 - In the Cafe - Fill Exercise",
+      "content": {
+        "question": "ماذا تريد في cafe؟",
+        "correct_answer": "كافي",
+        "explanation": "الدليل: كافي",
+        "dictation": [
+          "حوار d-a1-36",
+          "كافي"
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-31-mc",
+      "dialogue_id": "d-a1-36",
+      "type": "multiple_choice",
+      "title": "A1 - In the Cafe - MC Exercise",
+      "content": {
+        "question": "ماذا تشتري في cafe؟",
+        "options": [
+          "كافي",
+          "شاي",
+          "بسكويت"
+        ],
+        "correct_answer": "كافي",
+        "explanation": "الدليل: كافي"
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-32-fill",
+      "dialogue_id": "d-a1-37",
+      "type": "fill_in_the_blank",
+      "title": "A1 - At the Bus Stop - Fill Exercise",
+      "content": {
+        "question": "ماذا تريد في bus_stop؟",
+        "correct_answer": "حافلة",
+        "explanation": "الدليل: حافلة",
+        "dictation": [
+          "حوار d-a1-37",
+          "حافلة"
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-32-mc",
+      "dialogue_id": "d-a1-37",
+      "type": "multiple_choice",
+      "title": "A1 - At the Bus Stop - MC Exercise",
+      "content": {
+        "question": "ماذا تشتري في bus_stop؟",
+        "options": [
+          "حافلة",
+          "تذكرة",
+          "الوقت"
+        ],
+        "correct_answer": "حافلة",
+        "explanation": "الدليل: حافلة"
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-33-fill",
+      "dialogue_id": "d-a1-38",
+      "type": "fill_in_the_blank",
+      "title": "A1 - How Much? - Fill Exercise",
+      "content": {
+        "question": "ماذا تريد في price؟",
+        "correct_answer": "كم",
+        "explanation": "الدليل: كم",
+        "dictation": [
+          "حوار d-a1-38",
+          "كم"
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-33-mc",
+      "dialogue_id": "d-a1-38",
+      "type": "multiple_choice",
+      "title": "A1 - How Much? - MC Exercise",
+      "content": {
+        "question": "ماذا تشتري في price؟",
+        "options": [
+          "كم",
+          "يورو",
+          "بضعة"
+        ],
+        "correct_answer": "كم",
+        "explanation": "الدليل: كم"
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-34-fill",
+      "dialogue_id": "d-a1-39",
+      "type": "fill_in_the_blank",
+      "title": "A1 - About the Family - Fill Exercise",
+      "content": {
+        "question": "ماذا تريد في family؟",
+        "correct_answer": "أب",
+        "explanation": "الدليل: أب",
+        "dictation": [
+          "حوار d-a1-39",
+          "أب"
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-34-mc",
+      "dialogue_id": "d-a1-39",
+      "type": "multiple_choice",
+      "title": "A1 - About the Family - MC Exercise",
+      "content": {
+        "question": "ماذا تشتري في family؟",
+        "options": [
+          "أب",
+          "أم",
+          "أخو"
+        ],
+        "correct_answer": "أب",
+        "explanation": "الدليل: أب"
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-35-fill",
+      "dialogue_id": "d-a1-40",
+      "type": "fill_in_the_blank",
+      "title": "A1 - At the Gym - Fill Exercise",
+      "content": {
+        "question": "ماذا تريد في gym؟",
+        "correct_answer": "تمارين",
+        "explanation": "الدليل: تمارين",
+        "dictation": [
+          "حوار d-a1-40",
+          "تمارين"
+        ]
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-ex-35-mc",
+      "dialogue_id": "d-a1-40",
+      "type": "multiple_choice",
+      "title": "A1 - At the Gym - MC Exercise",
+      "content": {
+        "question": "ماذا تشتري في gym؟",
+        "options": [
+          "تمارين",
+          "وزن",
+          "ماء"
+        ],
+        "correct_answer": "تمارين",
+        "explanation": "الدليل: تمارين"
+      },
+      "level": "A1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 10,
+      "category": "A1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-41-fill",
+      "dialogue_id": "d-a2-33",
+      "type": "fill_in_the_blank",
+      "title": "A2 - Restaurant Complaint - Fill Exercise",
+      "content": {
+        "question": "ماذا تطلب في complaint؟",
+        "correct_answer": "food",
+        "explanation": "الدليل: food",
+        "dictation": [
+          "حوار d-a2-33",
+          "food"
+        ]
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-41-mc",
+      "dialogue_id": "d-a2-33",
+      "type": "multiple_choice",
+      "title": "A2 - Restaurant Complaint - MC Exercise",
+      "content": {
+        "question": "ماذا تطلب في complaint؟",
+        "options": [
+          "food",
+          "service",
+          "bill"
+        ],
+        "correct_answer": "food",
+        "explanation": "الدليل: food"
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-42-fill",
+      "dialogue_id": "d-a2-34",
+      "type": "fill_in_the_blank",
+      "title": "A2 - At the Train Station - Fill Exercise",
+      "content": {
+        "question": "ماذا تطلب في train؟",
+        "correct_answer": "قطار",
+        "explanation": "الدليل: قطار",
+        "dictation": [
+          "حوار d-a2-34",
+          "قطار"
+        ]
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-42-mc",
+      "dialogue_id": "d-a2-34",
+      "type": "multiple_choice",
+      "title": "A2 - At the Train Station - MC Exercise",
+      "content": {
+        "question": "ماذا تطلب في train؟",
+        "options": [
+          "قطار",
+          "منصة",
+          "تذكرة"
+        ],
+        "correct_answer": "قطار",
+        "explanation": "الدليل: قطار"
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-43-fill",
+      "dialogue_id": "d-a2-35",
+      "type": "fill_in_the_blank",
+      "title": "A2 - Making Plans - Fill Exercise",
+      "content": {
+        "question": "ماذا تطلب في plans؟",
+        "correct_answer": "غدا",
+        "explanation": "الدليل: غدا",
+        "dictation": [
+          "حوار d-a2-35",
+          "غدا"
+        ]
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-ex-43-mc",
+      "dialogue_id": "d-a2-35",
+      "type": "multiple_choice",
+      "title": "A2 - Making Plans - MC Exercise",
+      "content": {
+        "question": "ماذا تطلب في plans؟",
+        "options": [
+          "غدا",
+          "هذا الأسبوع",
+          "قابل"
+        ],
+        "correct_answer": "غدا",
+        "explanation": "الدليل: غدا"
+      },
+      "level": "A2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 12,
+      "category": "A2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Simple descriptions and opinions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-38-fill",
+      "dialogue_id": "d-b1-01",
+      "type": "fill_in_the_blank",
+      "title": "B1 - d-b1-01 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "überwiegt",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Meiner",
+          "Meiner Meinung nach ist Homeoffice die Zukunft der Arbeit. Da bin ich nicht ganz einverstanden. Zwar spart man Zeit, aber man verliert den Kontakt. Trotzdem glaube ich, dass die Flexibilität überwiegt"
+        ]
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-38-mc",
+      "dialogue_id": "d-b1-01",
+      "type": "multiple_choice",
+      "title": "B1 - d-b1-01 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Meiner",
+          "Meinung",
+          "nach"
+        ],
+        "correct_answer": "Meiner",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-40-fill",
+      "dialogue_id": "d-b1-02",
+      "type": "fill_in_the_blank",
+      "title": "B1 - d-b1-02 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "Verant",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Erzählen",
+          "Erzählen Sie kurz etwas über sich. Gern. Ich habe drei Jahre als Techniker gearbeitet und spreche Deutsch auf B1-Niveau. Warum möchten Sie wechseln? Ich möchte neue Erfahrungen sammeln und mehr Verant"
+        ]
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-40-mc",
+      "dialogue_id": "d-b1-02",
+      "type": "multiple_choice",
+      "title": "B1 - d-b1-02 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Erzählen",
+          "Sie",
+          "kurz"
+        ],
+        "correct_answer": "Erzählen",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-42-fill",
+      "dialogue_id": "d-b1-03",
+      "type": "fill_in_the_blank",
+      "title": "B1 - d-b1-03 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "So",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Hast",
+          "Hast du die Nachrichten gehört? Der Streik geht weiter. Ja, die Züge fahren heute wieder nicht. Ich habe gelesen, die Verhandlungen hätten gestern begonnen. Hoffentlich finden sie bald eine Lösung. So"
+        ]
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-42-mc",
+      "dialogue_id": "d-b1-03",
+      "type": "multiple_choice",
+      "title": "B1 - d-b1-03 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Hast",
+          "du",
+          "die"
+        ],
+        "correct_answer": "Hast",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-44-fill",
+      "dialogue_id": "d-b1-07",
+      "type": "fill_in_the_blank",
+      "title": "B1 - d-b1-07 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "Si",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Die",
+          "Die Untersuchung zeigt: Es ist nichts Schlimmes. Gott sei Dank! Was soll ich denn tun? Sie sollten weniger am Bildschirm arbeiten und Pausen machen. Und wenn die Schmerzen zurückkommen? Dann kommen Si"
+        ]
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-44-mc",
+      "dialogue_id": "d-b1-07",
+      "type": "multiple_choice",
+      "title": "B1 - d-b1-07 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Die",
+          "Untersuchung",
+          "zeigt:"
+        ],
+        "correct_answer": "Die",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-46-fill",
+      "dialogue_id": "d-b1-15",
+      "type": "fill_in_the_blank",
+      "title": "B1 - d-b1-15 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "kommt",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Ich",
+          "Ich habe meine EC-Karte verloren — bitte sofort sperren! Die Karte ist gesperrt. Wann und wo zuletzt benutzt? Gestern Vormittag, Automat am Hauptbahnhof. Kein Missbrauch vermerkt. Die neue Karte kommt"
+        ]
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-ex-46-mc",
+      "dialogue_id": "d-b1-15",
+      "type": "multiple_choice",
+      "title": "B1 - d-b1-15 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Ich",
+          "habe",
+          "meine"
+        ],
+        "correct_answer": "Ich",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B1",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 15,
+      "category": "B1",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-55-fill",
+      "dialogue_id": "d-b2-01",
+      "type": "fill_in_the_blank",
+      "title": "B2 - d-b2-01 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "Investit",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Frau",
+          "Frau Berger, wie bewerten Sie die bisherige Klimapolitik? Die Maßnahmen gehen in die richtige Richtung, reichen aber bei Weitem nicht aus. Was schlagen Sie konkret vor? Es geht um nachhaltige Investit"
+        ]
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-55-mc",
+      "dialogue_id": "d-b2-01",
+      "type": "multiple_choice",
+      "title": "B2 - d-b2-01 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Frau",
+          "Berger,",
+          "wie"
+        ],
+        "correct_answer": "Frau",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-57-fill",
+      "dialogue_id": "d-b2-02",
+      "type": "fill_in_the_blank",
+      "title": "B2 - d-b2-02 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "die",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Wo",
+          "Wo sehen Sie die größte Herausforderung? Die Digitalisierung setzt eine Infrastruktur voraus, die viele Kommunen noch nicht haben. Gleichwohl müssen wir anfangen. Natürlich. Entscheidend ist, dass die"
+        ]
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-57-mc",
+      "dialogue_id": "d-b2-02",
+      "type": "multiple_choice",
+      "title": "B2 - d-b2-02 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Wo",
+          "sehen",
+          "Sie"
+        ],
+        "correct_answer": "Wo",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-59-fill",
+      "dialogue_id": "d-b2-03",
+      "type": "fill_in_the_blank",
+      "title": "B2 - d-b2-03 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "b",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Hast",
+          "Hast du den Artikel gelesen? Angeblich hat der Konzern die Zahlen geschönt. Ich habe die Quelle geprüft: Sie ist nicht besonders seriös. Also sollten wir die Behauptung in Frage stellen. Genau. Ohne b"
+        ]
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-59-mc",
+      "dialogue_id": "d-b2-03",
+      "type": "multiple_choice",
+      "title": "B2 - d-b2-03 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Hast",
+          "du",
+          "den"
+        ],
+        "correct_answer": "Hast",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-61-fill",
+      "dialogue_id": "d-b2-07",
+      "type": "fill_in_the_blank",
+      "title": "B2 - d-b2-07 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "E",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Die",
+          "Die von Ihnen angebotenen Konditionen decken unsere Kosten kaum. Angesichts der Marktlage halten wir unser Angebot für fair. Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit. E"
+        ]
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-61-mc",
+      "dialogue_id": "d-b2-07",
+      "type": "multiple_choice",
+      "title": "B2 - d-b2-07 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Die",
+          "von",
+          "Ihnen"
+        ],
+        "correct_answer": "Die",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-63-fill",
+      "dialogue_id": "d-b2-15",
+      "type": "fill_in_the_blank",
+      "title": "B2 - d-b2-15 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "nich",
+        "explanation": "الدليل: من الحوار",
+        "dictation": [
+          "Seit",
+          "Seit gestern quillt Wasser aus der Decke — Schaden gemeldet, Nummer 7714. Protokoll: Fotos, Uhrzeit, Handwerker-Notdienst bereits beauftragt? Ja — die Rechnung über die Sofortmaßnahme reicht ein, nich"
+        ]
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-ex-63-mc",
+      "dialogue_id": "d-b2-15",
+      "type": "multiple_choice",
+      "title": "B2 - d-b2-15 - MC Exercise",
+      "content": {
+        "question": "Was ist das Hauptthema?",
+        "options": [
+          "Seit",
+          "gestern",
+          "quillt"
+        ],
+        "correct_answer": "Seit",
+        "explanation": "الدليل: من الحوار"
+      },
+      "level": "B2",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "medium",
+      "time_limit": 180,
+      "points": 20,
+      "category": "B2",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-tf-01",
+      "dialogue_id": "d-b1-01",
+      "type": "true_false",
+      "title": "B1 True/False - Homeoffice",
+      "content": {
+        "question": "Homeoffice hat nur Vorteile?",
+        "correct_answer": false,
+        "explanation": "Aus dem Dialog: Es gibt auch Nachteile wie Isolation."
+      },
+      "level": "B1",
+      "status": "available",
+      "difficulty": "easy",
+      "time_limit": 60,
+      "points": 7,
+      "category": "grammar",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-tf-02",
+      "dialogue_id": "d-b1-02",
+      "type": "true_false",
+      "title": "B1 True/False - Bewerbung",
+      "content": {
+        "question": "Bei jedem Bewerbungsgespräch gibt es Fragen zu Schwächen?",
+        "correct_answer": true,
+        "explanation": "Aus dem Dialog: Es werden Stärken und Schwächen besprochen."
+      },
+      "level": "B1",
+      "status": "available",
+      "difficulty": "easy",
+      "time_limit": 60,
+      "points": 7,
+      "category": "grammar",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-tf-01",
+      "dialogue_id": "d-b2-01",
+      "type": "true_false",
+      "title": "B2 True/False - Klimapolitik",
+      "content": {
+        "question": "Die Klimapolitik wird in diesem Interview diskutiert?",
+        "correct_answer": true,
+        "explanation": "Aus dem Dialog: Frau Berger bewertet die Klimapolitik."
+      },
+      "level": "B2",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 60,
+      "points": 10,
+      "category": "grammar",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-tf-02",
+      "dialogue_id": "d-b2-03",
+      "type": "true_false",
+      "title": "B2 True/False - Medienkritik",
+      "content": {
+        "question": "Es wurde über gefälschte Zahlen berichtet?",
+        "correct_answer": true,
+        "explanation": "Aus dem Dialog: Der Konzern soll die Zahlen geschönt haben."
+      },
+      "level": "B2",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 60,
+      "points": 10,
+      "category": "grammar",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1.2,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-match-01",
+      "dialogue_id": "d-b1-01",
+      "type": "matching",
+      "title": "B1 Matching - Homeoffice Vocabulary",
+      "content": {
+        "question": "Ordne die deutschen Wörter den Arabischen zu",
+        "matches": [
+          {
+            "left": "vorteil",
+            "right": "ميزة"
+          },
+          {
+            "left": "nachteil",
+            "right": "عيب"
+          },
+          {
+            "left": "flexibel",
+            "right": "مرن"
+          }
+        ],
+        "correct_pairs": 3
+      },
+      "level": "B1",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 120,
+      "points": 12,
+      "category": "vocabulary",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Match items with their correct pairs",
+      "difficultyRating": 2.4,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "matching"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-match-02",
+      "dialogue_id": "d-b1-02",
+      "type": "matching",
+      "title": "B1 Matching - Bewerbung Vocabulary",
+      "content": {
+        "question": "Ordne die Begriffe",
+        "matches": [
+          {
+            "left": "vorstellung",
+            "right": "Introduktion"
+          },
+          {
+            "left": "erfahrung",
+            "right": "Experienza"
+          },
+          {
+            "left": "motivation",
+            "right": "دافعية"
+          }
+        ],
+        "correct_pairs": 3
+      },
+      "level": "B1",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 120,
+      "points": 12,
+      "category": "vocabulary",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Match items with their correct pairs",
+      "difficultyRating": 2.4,
+      "estimatedTime": 5,
+      "academic_focus": "Basic academic writing and descriptions",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "matching"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-match-01",
+      "dialogue_id": "d-b2-01",
+      "type": "matching",
+      "title": "B2 Matching - Klimapolitik",
+      "content": {
+        "question": "Ordne die Fachbegriffe",
+        "matches": [
+          {
+            "left": "Klimapolitik",
+            "right": "Policy climatique"
+          },
+          {
+            "left": "nachhaltig",
+            "right": "sustainable"
+          },
+          {
+            "left": "CO2-Reduktion",
+            "right": "CO2-Reduktion"
+          }
+        ],
+        "correct_pairs": 3
+      },
+      "level": "B2",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 120,
+      "points": 16,
+      "category": "vocabulary",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Match items with their correct pairs",
+      "difficultyRating": 2.4,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "matching"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-match-02",
+      "dialogue_id": "d-b2-03",
+      "type": "matching",
+      "title": "B2 Matching - Medienkritik",
+      "content": {
+        "question": "Ordne die Begriffe zum Artikel",
+        "matches": [
+          {
+            "left": "Angeblich",
+            "right": "supposedly"
+          },
+          {
+            "left": "zahlen",
+            "right": "numbers"
+          },
+          {
+            "left": "geschönt",
+            "right": "polished"
+          }
+        ],
+        "correct_pairs": 3
+      },
+      "level": "B2",
+      "status": "available",
+      "difficulty": "medium",
+      "time_limit": 120,
+      "points": 16,
+      "category": "vocabulary",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Match items with their correct pairs",
+      "difficultyRating": 2.4,
+      "estimatedTime": 5,
+      "academic_focus": "Essay structure and formal writing",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "matching"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-66-fill",
+      "dialogue_id": "d-a0-01",
+      "type": "fill_in_the_blank",
+      "title": "A0 - d-a0-01 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "Hallo!",
+        "explanation": "aus Dialog",
+        "dictation": [
+          "Hallo!",
+          "Hallo! Guten Tag! Wie heißt du? Ich heiße Ali. Und"
+        ]
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-67-mc",
+      "dialogue_id": "d-a0-01",
+      "type": "multiple_choice",
+      "title": "A0 - d-a0-01 - MC Exercise",
+      "content": {
+        "question": "Was ist das?",
+        "options": [
+          "Hallo!",
+          "Guten",
+          "Tag!"
+        ],
+        "correct_answer": "Hallo!",
+        "explanation": "aus Dialog"
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-67-fill",
+      "dialogue_id": "d-a0-02",
+      "type": "fill_in_the_blank",
+      "title": "A0 - d-a0-02 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "Wie",
+        "explanation": "aus Dialog",
+        "dictation": [
+          "Wie",
+          "Wie viel ist eins plus zwei? Eins plus zwei ist dr"
+        ]
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-68-mc",
+      "dialogue_id": "d-a0-02",
+      "type": "multiple_choice",
+      "title": "A0 - d-a0-02 - MC Exercise",
+      "content": {
+        "question": "Was ist das?",
+        "options": [
+          "Wie",
+          "viel",
+          "ist"
+        ],
+        "correct_answer": "Wie",
+        "explanation": "aus Dialog"
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-68-fill",
+      "dialogue_id": "d-a0-03",
+      "type": "fill_in_the_blank",
+      "title": "A0 - d-a0-03 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "Buchstabiere",
+        "explanation": "aus Dialog",
+        "dictation": [
+          "Buchstabiere",
+          "Buchstabiere bitte deinen Namen! A – L – I. Ali. D"
+        ]
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-69-mc",
+      "dialogue_id": "d-a0-03",
+      "type": "multiple_choice",
+      "title": "A0 - d-a0-03 - MC Exercise",
+      "content": {
+        "question": "Was ist das?",
+        "options": [
+          "Buchstabiere",
+          "bitte",
+          "deinen"
+        ],
+        "correct_answer": "Buchstabiere",
+        "explanation": "aus Dialog"
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-69-fill",
+      "dialogue_id": "d-a0-04",
+      "type": "fill_in_the_blank",
+      "title": "A0 - d-a0-04 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "Hallo!",
+        "explanation": "aus Dialog",
+        "dictation": [
+          "Hallo!",
+          "Hallo! Wie heißt du? Ich heiße Layla. Und du? Ich "
+        ]
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-70-mc",
+      "dialogue_id": "d-a0-04",
+      "type": "multiple_choice",
+      "title": "A0 - d-a0-04 - MC Exercise",
+      "content": {
+        "question": "Was ist das?",
+        "options": [
+          "Hallo!",
+          "Wie",
+          "heißt"
+        ],
+        "correct_answer": "Hallo!",
+        "explanation": "aus Dialog"
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-70-fill",
+      "dialogue_id": "d-a0-05",
+      "type": "fill_in_the_blank",
+      "title": "A0 - d-a0-05 - Fill Exercise",
+      "content": {
+        "question": "Was sagt der Sprecher?",
+        "correct_answer": "Guten",
+        "explanation": "aus Dialog",
+        "dictation": [
+          "Guten",
+          "Guten Tag! Ihr Name, bitte? Mein Name ist Huber. B"
+        ]
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-ex-71-mc",
+      "dialogue_id": "d-a0-05",
+      "type": "multiple_choice",
+      "title": "A0 - d-a0-05 - MC Exercise",
+      "content": {
+        "question": "Was ist das?",
+        "options": [
+          "Guten",
+          "Tag!",
+          "Ihr"
+        ],
+        "correct_answer": "Guten",
+        "explanation": "aus Dialog"
+      },
+      "level": "A0",
+      "status": "available",
+      "progress": {
+        "attempts": 0,
+        "score": 0,
+        "max_score": 1,
+        "completed": false,
+        "last_attempt": null,
+        "hints_used": 0,
+        "success_rate": 0
+      },
+      "difficulty": "easy",
+      "time_limit": 120,
+      "points": 10,
+      "category": "A0",
+      "display_text": false,
+      "highlight_during_audio": false,
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1.0,
+      "estimatedTime": 5,
+      "academic_focus": "Basic vocabulary for academic context",
+      "is_academic": true,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-fe-11",
+      "dialogue_id": "d-a0-01",
+      "type": "fill_in_the_blank",
+      "title": "A0 Fill-in-blank",
+      "content": {
+        "question": "?",
+        "correct_answer": "Hallo",
+        "explanation": "From the dialog"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic greeting vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-mc-06",
+      "dialogue_id": "d-a0-02",
+      "type": "multiple_choice",
+      "title": "A0 Multiple-choice",
+      "content": {
+        "question": "Was grusst man?",
+        "options": [
+          "Hallo",
+          "Tschufer",
+          "Auf Wiedersehen"
+        ],
+        "correct_index": 0,
+        "explanation": "From the dialog"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic greeting vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-fe-24",
+      "dialogue_id": "d-a1-24",
+      "type": "fill_in_the_blank",
+      "title": "A1 Fill-in-blank",
+      "content": {
+        "question": "?",
+        "correct_answer": "gut",
+        "explanation": "From the dialog"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic description vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-mc-13",
+      "dialogue_id": "d-a1-25",
+      "type": "multiple_choice",
+      "title": "A1 Multiple-choice",
+      "content": {
+        "question": "Wie geht es dir?",
+        "options": [
+          "Mir gut",
+          "Mir schlecht",
+          "So-so"
+        ],
+        "correct_index": 0,
+        "explanation": "From the dialog"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic well-being vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-re-06",
+      "dialogue_id": "d-a1-26",
+      "type": "review",
+      "title": "A1 Review",
+      "content": {
+        "sentences": [
+          "Ich lerne Deutsch.",
+          "Ich mag Deutsch."
+        ],
+        "exercise": "Choose the correct sentence"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic sentence review",
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-tf-03",
+      "dialogue_id": "d-a1-27",
+      "type": "true_false",
+      "title": "A1 True/False",
+      "content": {
+        "question": "Aus dem Dialog: Es gibt auch Nachteile.",
+        "correct_answer": false,
+        "explanation": "From the dialog"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic negation vocabulary",
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-dict-02",
+      "dialogue_id": "d-a2-10",
+      "type": "dictation",
+      "title": "A2 Dictation",
+      "content": {
+        "sentence": "Der Mann trinkt Kaffee.",
+        "instruction": "Listen and write what you hear"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Listening and writing accuracy",
+      "learningObjective": "Listen and write what you hear",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-fe-11",
+      "dialogue_id": "d-a2-11",
+      "type": "fill_in_the_blank",
+      "title": "A2 Fill-in-blank",
+      "content": {
+        "question": "?",
+        "correct_answer": "kalt",
+        "explanation": "From the dialog"
+      },
+      "level": "A2",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Descriptive vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-tf-03",
+      "dialogue_id": "d-b1-20",
+      "type": "true_false",
+      "title": "B1 True/False",
+      "content": {
+        "question": "Aus dem Dialog: Er arbeitet als Lehrer.",
+        "correct_answer": true,
+        "explanation": "From the dialog"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Professional vocabulary",
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 2,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-fe-12",
+      "dialogue_id": "d-b1-21",
+      "type": "fill_in_the_blank",
+      "title": "B1 Fill-in-blank",
+      "content": {
+        "question": "?",
+        "correct_answer": "morgen",
+        "explanation": "From the dialog"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Professional context vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 2,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-fe-12",
+      "dialogue_id": "d-a0-03",
+      "type": "fill_in_the_blank",
+      "title": "A0 Foundational 1",
+      "content": {
+        "question": "The boy is ...",
+        "correct_answer": "hungry",
+        "explanation": "Basic adjective description"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic adjective vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-mc-07",
+      "dialogue_id": "d-a0-04",
+      "type": "multiple_choice",
+      "title": "A0 Choice 2",
+      "content": {
+        "question": "How are you?",
+        "options": [
+          "Good",
+          "Bad",
+          "Tired"
+        ],
+        "correct_index": 0,
+        "explanation": "Basic response"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic responses",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-mp-01",
+      "dialogue_id": "d-a0-05",
+      "type": "multiple_choice",
+      "title": "A0 Mastery 1",
+      "content": {
+        "question": "What is this?",
+        "options": [
+          "A book",
+          "A pen",
+          "A pencil"
+        ],
+        "correct_index": 1,
+        "explanation": "Basic object identification"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic object vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-fe-25",
+      "dialogue_id": "d-a1-28",
+      "type": "fill_in_the_blank",
+      "title": "A1 Descriptive 1",
+      "content": {
+        "question": "The weather is ...",
+        "correct_answer": "sunny",
+        "explanation": "Descriptive vocabulary"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Weather and descriptions",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-mc-14",
+      "dialogue_id": "d-a1-29",
+      "type": "multiple_choice",
+      "title": "A1 Choice 3",
+      "content": {
+        "question": "What do you like?",
+        "options": [
+          "Food",
+          "Animals",
+          "Sports"
+        ],
+        "correct_index": 0,
+        "explanation": "Preference vocabulary"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Preference vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-re-07",
+      "dialogue_id": "d-a1-30",
+      "type": "review",
+      "title": "A1 Review 2",
+      "content": {
+        "sentences": [
+          "Ich wohnen in Berlin.",
+          "I live in Berlin."
+        ],
+        "exercise": "Correct the sentence"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Sentence structure review",
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-tf-04",
+      "dialogue_id": "d-a1-31",
+      "type": "true_false",
+      "title": "A1 Negation 2",
+      "content": {
+        "question": "Aus dem Dialog: Er hat Bruder.",
+        "correct_answer": false,
+        "explanation": "Sibling negation"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Family vocabulary negation",
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-mp-06",
+      "dialogue_id": "d-a1-32",
+      "type": "multiple_choice",
+      "title": "A1 Choice 4",
+      "content": {
+        "question": "Study subject?",
+        "options": "Math, Music, Sport",
+        "correct_index": 2,
+        "explanation": "Academic context"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Academic context vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-dict-03",
+      "dialogue_id": "d-a2-12",
+      "type": "dictation",
+      "title": "A2 Listening 2",
+      "content": {
+        "sentence": "Ich möchte ein Ticket.",
+        "instruction": "Listen and write what you hear"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Listening and writing accuracy",
+      "learningObjective": "Listen and write what you hear",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-fe-12",
+      "dialogue_id": "d-a2-13",
+      "type": "fill_in_the_blank",
+      "title": "A2 Descriptive 2",
+      "content": {
+        "question": "Das Essen ist ...",
+        "correct_answer": "lecker",
+        "explanation": "Food description"
+      },
+      "level": "A2",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Food and taste vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-mc-07",
+      "dialogue_id": "d-a2-14",
+      "type": "multiple_choice",
+      "title": "A2 Choice 2",
+      "content": {
+        "question": "Wie ist das Wetter?",
+        "options": [
+          "Sonne",
+          "Regen",
+          "Schnee"
+        ],
+        "correct_index": 0,
+        "explanation": "Weather description"
+      },
+      "level": "A2",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Weather and descriptions",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-tf-04",
+      "dialogue_id": "d-b1-22",
+      "type": "true_false",
+      "title": "B1 Professional 1",
+      "content": {
+        "question": "Aus dem Dialog: Er plant eine Reise.",
+        "correct_answer": true,
+        "explanation": "Travel plans"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Professional travel vocabulary",
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 2,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-fe-13",
+      "dialogue_id": "d-b1-23",
+      "type": "fill_in_the_blank",
+      "title": "B1 Context 1",
+      "content": {
+        "question": "?",
+        "correct_answer": "Bahnhof",
+        "explanation": "Location vocabulary"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Professional location vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 2,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-re-02",
+      "dialogue_id": "d-b1-24",
+      "type": "review",
+      "title": "B1 Review 1",
+      "content": {
+        "text": "Arbeitserfahrung",
+        "exercise": "Match terms with definitions"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Professional terminology review",
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-mc-07",
+      "dialogue_id": "d-b1-25",
+      "type": "multiple_choice",
+      "title": "B1 Academic 1",
+      "content": {
+        "question": "Universitatsthema?",
+        "options": "Umwelt, Kochen, Sport",
+        "correct_index": 0,
+        "explanation": "Academic topic"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Academic discussion vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 2,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-dict-03",
+      "dialogue_id": "d-b2-20",
+      "type": "dictation",
+      "title": "B2 Advanced Listening",
+      "content": {
+        "sentence": "Ich halte einen Vortrag.",
+        "instruction": "Listen and write"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced academic listening",
+      "learningObjective": "Listen and write what you hear",
+      "difficultyRating": 3,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-fe-03",
+      "dialogue_id": "d-b2-21",
+      "type": "fill_in_the_blank",
+      "title": "B2 Academic 1",
+      "content": {
+        "question": "Das Thema ist ...",
+        "correct_answer": "Umwelt",
+        "explanation": "Environmental topic"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced academic writing",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 3,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-mc-04",
+      "dialogue_id": "d-b2-22",
+      "type": "multiple_choice",
+      "title": "B2 Debate 1",
+      "content": {
+        "question": "Sollte Deutsch Pflicht sein?",
+        "options": [
+          "Ja",
+          "Nein"
+        ],
+        "correct_index": 0,
+        "explanation": "Debate argument"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced debate and argumentation",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 3,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-fe-13",
+      "dialogue_id": "d-a0-06",
+      "type": "fill_in_the_blank",
+      "title": "A0 Foundational 2",
+      "content": {
+        "question": "The boy is ...",
+        "correct_answer": "hungry",
+        "explanation": "Basic adjective description"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic adjective vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-mc-08",
+      "dialogue_id": "d-a0-07",
+      "type": "multiple_choice",
+      "title": "A0 Choice 3",
+      "content": {
+        "question": "What is this?",
+        "options": [
+          "A book",
+          "A pen",
+          "A pencil"
+        ],
+        "correct_index": 1,
+        "explanation": "Basic object identification"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic object vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-mp-02",
+      "dialogue_id": "d-a0-08",
+      "type": "multiple_choice",
+      "title": "A0 Mastery 2",
+      "content": {
+        "question": "Where is the book?",
+        "options": [
+          "On the table",
+          "Under the chair"
+        ],
+        "correct_index": 0,
+        "explanation": "Location"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic location vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-fe-26",
+      "dialogue_id": "d-a1-33",
+      "type": "fill_in_the_blank",
+      "title": "A1 Descriptive 1",
+      "content": {
+        "question": "The weather is ...",
+        "correct_answer": "sunny",
+        "explanation": "Descriptive vocabulary"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Weather and descriptions",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-mc-15",
+      "dialogue_id": "d-a1-34",
+      "type": "multiple_choice",
+      "title": "A1 Choice 4",
+      "content": {
+        "question": "What do you study?",
+        "options": [
+          "Subjects",
+          "Food",
+          "Sports"
+        ],
+        "correct_index": 0,
+        "explanation": "Academic context"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Academic context vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-re-08",
+      "dialogue_id": "d-a1-35",
+      "type": "review",
+      "title": "A1 Review 2",
+      "content": {
+        "sentences": [
+          "Ich wohnen in Berlin.",
+          "I live in Berlin."
+        ],
+        "exercise": "Correct the sentence"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Sentence structure review",
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-tf-05",
+      "dialogue_id": "d-a1-36",
+      "type": "true_false",
+      "title": "A1 Negation 3",
+      "content": {
+        "question": "Aus dem Dialog: Sie hat Bruder.",
+        "correct_answer": false,
+        "explanation": "Sibling negation"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Family vocabulary negation",
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A1-mp-07",
+      "dialogue_id": "d-a1-37",
+      "type": "multiple_choice",
+      "title": "A1 Choice 5",
+      "content": {
+        "question": "Hobby?",
+        "options": [
+          "Painting",
+          "Cooking",
+          "Reading"
+        ],
+        "correct_index": 2,
+        "explanation": "Leisure time"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Leisure and hobbies vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-dict-04",
+      "dialogue_id": "d-a2-15",
+      "type": "dictation",
+      "title": "A2 Listening 3",
+      "content": {
+        "sentence": "Wo ist die Bushaltestelle?",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Listening comprehension",
+      "learningObjective": "Listen and write what you hear",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-fe-13",
+      "dialogue_id": "d-a2-16",
+      "type": "fill_in_the_blank",
+      "title": "A2 Descriptive 2",
+      "content": {
+        "question": "Das Wetter ist ...",
+        "correct_answer": "schön",
+        "explanation": "Weather description"
+      },
+      "level": "A2",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Weather and descriptions",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-mc-08",
+      "dialogue_id": "d-a2-17",
+      "type": "multiple_choice",
+      "title": "A2 Choice 3",
+      "content": {
+        "question": "Wie ist das Wetter?",
+        "options": [
+          "Sonne",
+          "Regen",
+          "Schnee"
+        ],
+        "correct_index": 0,
+        "explanation": "Weather description"
+      },
+      "level": "A2",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Weather and descriptions",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 1,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A2-re-02",
+      "dialogue_id": "d-a2-18",
+      "type": "review",
+      "title": "A2 Review 2",
+      "content": {
+        "text": "Einkaufen",
+        "exercise": "Match terms with definitions"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Shopping vocabulary review",
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-tf-05",
+      "dialogue_id": "d-b1-26",
+      "type": "true_false",
+      "title": "B1 Professional 2",
+      "content": {
+        "question": "Aus dem Dialog: Er plant eine Reise.",
+        "correct_answer": true,
+        "explanation": "Travel plans"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Professional travel vocabulary",
+      "learningObjective": "Determine if statements are true or false",
+      "difficultyRating": 2,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-fe-14",
+      "dialogue_id": "d-b1-27",
+      "type": "fill_in_the_blank",
+      "title": "B1 Context 2",
+      "content": {
+        "question": "?",
+        "correct_answer": "Universität",
+        "explanation": "Education context"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Education context vocabulary",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 2,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-re-03",
+      "dialogue_id": "d-b1-25",
+      "type": "review",
+      "title": "B1 Review 2",
+      "content": {
+        "text": "Studium",
+        "exercise": "Match terms with definitions"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Academic terminology review",
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 2,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B1-mc-08",
+      "dialogue_id": "d-b1-28",
+      "type": "multiple_choice",
+      "title": "B1 Academic 2",
+      "content": {
+        "question": "Karriereziel?",
+        "options": [
+          "Führung",
+          "Spezialist",
+          "Wechsel"
+        ],
+        "correct_index": 0,
+        "explanation": "Career goals"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Career and professional vocabulary",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 2,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-dict-04",
+      "dialogue_id": "d-b2-23",
+      "type": "dictation",
+      "title": "B2 Advanced Listening 2",
+      "content": {
+        "sentence": "Ich halte einen Vortrag.",
+        "instruction": "Listen and write"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced academic listening",
+      "learningObjective": "Listen and write what you hear",
+      "difficultyRating": 3,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-fe-04",
+      "dialogue_id": "d-b2-24",
+      "type": "fill_in_the_blank",
+      "title": "B2 Academic 2",
+      "content": {
+        "question": "Das Thema ist ...",
+        "correct_answer": "Umwelt",
+        "explanation": "Environmental topic"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced academic writing",
+      "learningObjective": "Fill in the blanks with correct vocabulary",
+      "difficultyRating": 3,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-mc-09",
+      "dialogue_id": "d-b2-27",
+      "type": "multiple_choice",
+      "title": "B2 Debate 2",
+      "content": {
+        "question": "Umweltpolitik?",
+        "options": [
+          "Nein",
+          "Ja"
+        ],
+        "correct_index": 0,
+        "explanation": "Environmental policy"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced debate and argumentation",
+      "learningObjective": "Choose the correct answer",
+      "difficultyRating": 3,
+      "estimatedTime": 5,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "B2-re-02",
+      "dialogue_id": "d-b2-26",
+      "type": "review",
+      "title": "B2 Review 1",
+      "content": {
+        "text": "Abschlussarbeit",
+        "exercise": "Match terms with definitions"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Final project terminology",
+      "learningObjective": "Review and reinforce learning",
+      "difficultyRating": 3,
+      "estimatedTime": 10,
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "review"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      }
+    },
+    {
+      "id": "A0-dic-01",
+      "dialogue_id": "d-a0-01",
+      "type": "dictation",
+      "title": "A0 Dictation 1",
+      "content": {
+        "sentence": "Hallo",
+        "instruction": "Listen and write"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Basic sound recognition",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A0-dic-02",
+      "dialogue_id": "d-a0-02",
+      "type": "dictation",
+      "title": "A0 Dictation 2",
+      "content": {
+        "sentence": "Guten Tag",
+        "instruction": "Listen and write"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Basic greeting sounds",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A0-dic-03",
+      "dialogue_id": "d-a0-03",
+      "type": "dictation",
+      "title": "A0 Dictation 3",
+      "content": {
+        "sentence": "Danke",
+        "instruction": "Listen and write"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Basic polite sounds",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-01",
+      "dialogue_id": "d-a1-01",
+      "type": "dictation",
+      "title": "A1 Dictation 1",
+      "content": {
+        "sentence": "Ich heiße Max.",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Name and introduction",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-02",
+      "dialogue_id": "d-a1-02",
+      "type": "dictation",
+      "title": "A1 Dictation 2",
+      "content": {
+        "sentence": "Ich lerne Deutsch.",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Basic phrase recognition",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-03",
+      "dialogue_id": "d-a1-03",
+      "type": "dictation",
+      "title": "A1 Dictation 3",
+      "content": {
+        "sentence": "Wo bist du?",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Question phrase recognition",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-04",
+      "dialogue_id": "d-a1-04",
+      "type": "dictation",
+      "title": "A1 Dictation 4",
+      "content": {
+        "sentence": "Wie geht es dir?",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Well-being phrase",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-05",
+      "dialogue_id": "d-a1-05",
+      "type": "dictation",
+      "title": "A1 Dictation 5",
+      "content": {
+        "sentence": "Wo kommen Sie her?",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Origin phrase",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A2-dic-02",
+      "dialogue_id": "d-a2-01",
+      "type": "dictation",
+      "title": "A2 Dictation 2",
+      "content": {
+        "sentence": "Ich hätte gerne ein Ticket.",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Transaction phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A2-dic-03",
+      "dialogue_id": "d-a2-02",
+      "type": "dictation",
+      "title": "A2 Dictation 3",
+      "content": {
+        "sentence": "Wo ist die nächste U-Bahn?",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Direction phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A2-dic-04",
+      "dialogue_id": "d-a2-03",
+      "type": "dictation",
+      "title": "A2 Dictation 4",
+      "content": {
+        "sentence": "Die Rechnung bitte.",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Transaction phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A2-dic-05",
+      "dialogue_id": "d-a2-04",
+      "type": "dictation",
+      "title": "A2 Dictation 5",
+      "content": {
+        "sentence": "Entschuldigung, zahlen.",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Transaction phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B1-dic-01",
+      "dialogue_id": "d-b1-01",
+      "type": "dictation",
+      "title": "B1 Dictation 1",
+      "content": {
+        "sentence": "Ich habe ein Termin.",
+        "instruction": "Listen and write"
+      },
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Professional phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B1-dic-02",
+      "dialogue_id": "d-b1-02",
+      "type": "dictation",
+      "title": "B1 Dictation 2",
+      "content": {
+        "sentence": "Die Besprechung beginnt um 15 Uhr.",
+        "instruction": "Listen and write"
+      },
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Professional phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B1-dic-03",
+      "dialogue_id": "d-b1-03",
+      "type": "dictation",
+      "title": "B1 Dictation 3",
+      "content": {
+        "sentence": "Bitte reichen Sie die Unterlagen nach.",
+        "instruction": "Listen and write"
+      },
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Professional phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B2-dic-01",
+      "dialogue_id": "d-b2-01",
+      "type": "dictation",
+      "title": "B2 Dictation 1",
+      "content": {
+        "sentence": "Ich hätte gerne ein nichtraucher Zimmer.",
+        "instruction": "Listen and write"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Advanced phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B2-dic-02",
+      "dialogue_id": "d-b2-02",
+      "type": "dictation",
+      "title": "B2 Dictation 2",
+      "content": {
+        "sentence": "Wie lautet die Reservierungsnummer?",
+        "instruction": "Listen and write"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Advanced phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B2-dic-03",
+      "dialogue_id": "d-b2-03",
+      "type": "dictation",
+      "title": "B2 Dictation 3",
+      "content": {
+        "sentence": "Entschuldigung, ich verstehe nicht.",
+        "instruction": "Listen and write"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Advanced phrases",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A0-01",
+      "dialogue_id": "d-a0-01",
+      "type": "multiple_choice",
+      "title": "A0 Diagnostic 1",
+      "content": {
+        "question": "Was grüsst man?",
+        "options": [
+          "Hallo",
+          "Tschüßer",
+          "Auf Wiedersehen"
+        ],
+        "correct_index": 0,
+        "explanation": "Basic greeting"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A0-02",
+      "dialogue_id": "d-a0-02",
+      "type": "fill_in_the_blank",
+      "title": "A0 Diagnostic 2",
+      "content": {
+        "question": "How are you? Ich ... gut.",
+        "correct_answer": "gehe",
+        "explanation": "Basic response"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "fill_in_the_blank"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A1-01",
+      "dialogue_id": "d-a1-01",
+      "type": "multiple_choice",
+      "title": "A1 Diagnostic 1",
+      "content": {
+        "question": "What do you study?",
+        "options": [
+          "Subjects",
+          "Food",
+          "Sports"
+        ],
+        "correct_index": 0,
+        "explanation": "Academic context"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A1-02",
+      "dialogue_id": "d-a1-02",
+      "type": "true_false",
+      "title": "A1 Diagnostic 2",
+      "content": {
+        "question": "Aus dem Dialog: Ich lerne Deutsch.",
+        "correct_answer": true,
+        "explanation": "Language learning statement"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A2-01",
+      "dialogue_id": "d-a2-01",
+      "type": "dictation",
+      "title": "A2 Diagnostic 1",
+      "content": {
+        "sentence": "Wo ist die Bushaltestelle?",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "dictation"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A2-02",
+      "dialogue_id": "d-a2-02",
+      "type": "multiple_choice",
+      "title": "A2 Diagnostic 2",
+      "content": {
+        "question": "Wie ist das Wetter?",
+        "options": [
+          "Sonne",
+          "Regen",
+          "Schnee"
+        ],
+        "correct_index": 0,
+        "explanation": "Weather description"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B1-01",
+      "dialogue_id": "d-b1-01",
+      "type": "true_false",
+      "title": "B1 Diagnostic 1",
+      "content": {
+        "question": "Aus dem Dialog: Er arbeitet als Lehrer.",
+        "correct_answer": true,
+        "explanation": "Profession statement"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "true_false"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B1-02",
+      "dialogue_id": "d-b1-02",
+      "type": "multiple_choice",
+      "title": "B1 Diagnostic 2",
+      "content": {
+        "question": "Karriereziel?: Führung, Spezialist, Wechsel",
+        "correct_index": 0,
+        "explanation": "Career goals"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B2-01",
+      "dialogue_id": "d-b2-01",
+      "type": "multiple_choice",
+      "title": "B2 Diagnostic 1",
+      "content": {
+        "question": "Sollte Deutsch Pflicht sein?",
+        "options": [
+          "Nein",
+          "Ja"
+        ],
+        "correct_index": 0,
+        "explanation": "Language policy"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B2-02",
+      "dialogue_id": "d-b2-02",
+      "type": "multiple_choice",
+      "title": "B2 Diagnostic 2",
+      "content": {
+        "question": "Umweltpolitik?",
+        "options": [
+          "Nein",
+          "Ja"
+        ],
+        "correct_index": 0,
+        "explanation": "Environmental policy"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "multiple_choice"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "practice-A0-01",
+      "title": "A0 Practice Test 1",
+      "level": "A0",
+      "type": "mixed",
+      "duration": 15,
+      "questions": 10,
+      "focus": "basic_german",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": " mixed"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "practice-A1-01",
+      "title": "A1 Practice Test 1",
+      "level": "A1",
+      "type": "mixed",
+      "duration": 20,
+      "questions": 15,
+      "focus": "daily_communication",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "mixed"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "practice-B1-01",
+      "title": "B1 Practice Test 1",
+      "level": "B1",
+      "type": "mixed",
+      "duration": 25,
+      "questions": 20,
+      "focus": "professional_communication",
+      "exam_simulation": {
+        "enabled": false,
+        "time_limit": 5,
+        "focus": "mixed"
+      },
+      "immediate_feedback": {
+        "show_correct_answer": true,
+        "explanation": "Good job!"
+      },
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A0-dic-04",
+      "dialogue_id": "d-a0-01",
+      "type": "dictation",
+      "title": "A0 Dictation 4",
+      "content": {
+        "sentence": "Guten Morgen",
+        "instruction": "Listen and write"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic greeting sounds"
+    },
+    {
+      "id": "A0-dic-05",
+      "dialogue_id": "d-a0-02",
+      "type": "dictation",
+      "title": "A0 Dictation 5",
+      "content": {
+        "sentence": "Auf Wiedersehen",
+        "instruction": "Listen and write"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Basic farewell sounds",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A0-dic-06",
+      "dialogue_id": "d-a0-03",
+      "type": "dictation",
+      "title": "A0 Dictation 6",
+      "content": {
+        "sentence": "Entschuldigung",
+        "instruction": "Listen and write"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Basic polite sounds",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-06",
+      "dialogue_id": "d-a1-06",
+      "type": "dictation",
+      "title": "A1 Dictation 6",
+      "content": {
+        "sentence": "Ich bin Student.",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Student introduction",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-07",
+      "dialogue_id": "d-a1-07",
+      "type": "dictation",
+      "title": "A1 Dictation 7",
+      "content": {
+        "sentence": "Ich komme aus Berlin.",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Origin phrase",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-08",
+      "dialogue_id": "d-a1-08",
+      "type": "dictation",
+      "title": "A1 Dictation 8",
+      "content": {
+        "sentence": "Ich habe einen Bruder.",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "academic_focus": "Family vocabulary",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-09",
+      "dialogue_id": "d-a1-09",
+      "type": "dictation",
+      "title": "A1 Dictation 9",
+      "content": {
+        "sentence": "Wo wohnst du?",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Location phrase",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A1-dic-10",
+      "dialogue_id": "d-a1-10",
+      "type": "dictation",
+      "title": "A1 Dictation 10",
+      "content": {
+        "sentence": "Wie heißt dein Haustier?",
+        "instruction": "Listen and write"
+      },
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Pet vocabulary",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A2-dic-06",
+      "dialogue_id": "d-a2-05",
+      "type": "dictation",
+      "title": "A2 Dictation 6",
+      "content": {
+        "sentence": "Ich möchte ein Zimmer buchen.",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Hotel vocabulary",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A2-dic-07",
+      "dialogue_id": "d-a2-06",
+      "type": "dictation",
+      "title": "A2 Dictation 7",
+      "content": {
+        "sentence": "Ich verlange eine Rechnung.",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Transaction phrases",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A2-dic-08",
+      "dialogue_id": "d-a2-07",
+      "type": "dictation",
+      "title": "A2 Dictation 8",
+      "content": {
+        "sentence": "Ich habe Probleme mit dem Auto.",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Car problems",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "A2-dic-09",
+      "dialogue_id": "d-a2-08",
+      "type": "dictation",
+      "title": "A2 Dictation 9",
+      "content": {
+        "sentence": "Wo ist die nächste Apotheke?",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "academic_focus": "Health phrases",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B1-dic-04",
+      "dialogue_id": "d-b1-04",
+      "type": "dictation",
+      "title": "B1 Dictation 4",
+      "content": {
+        "sentence": "Ich habe einen Termin beim Arzt.",
+        "instruction": "Listen and write"
+      },
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Professional phrases",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B1-dic-05",
+      "dialogue_id": "d-b1-05",
+      "type": "dictation",
+      "title": "B1 Dictation 5",
+      "content": {
+        "sentence": "Ich muss den Vertrag unterschreiben.",
+        "instruction": "Listen and write"
+      },
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Professional phrases",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B1-dic-06",
+      "dialogue_id": "d-b1-06",
+      "type": "dictation",
+      "title": "B1 Dictation 6",
+      "content": {
+        "sentence": "Die Besprechung wurde verschoben.",
+        "instruction": "Listen and write"
+      },
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "academic_focus": "Professional phrases",
+      "is_academic": true,
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A0-01",
+      "dialogue_id": "d-a0-01",
+      "type": "multiple_choice",
+      "title": "A0 Diagnostic 1",
+      "content": {
+        "question": "Was grüßt man auf Deutsch?",
+        "options": [
+          "Hallo",
+          "Tschüss",
+          "Auf Wiedersehen"
+        ],
+        "correct_index": 0,
+        "explanation": "Basic greeting"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A0-02",
+      "dialogue_id": "d-a0-02",
+      "type": "fill_in_the_blank",
+      "title": "A0 Diagnostic 2",
+      "content": {
+        "question": "How are you? Ich ... gut.",
+        "correct_answer": "gehe",
+        "explanation": "Basic response"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A1-01",
+      "dialogue_id": "d-a1-01",
+      "type": "multiple_choice",
+      "title": "A1 Diagnostic 1",
+      "content": {
+        "question": "What do you study?",
+        "options": [
+          "Subjects",
+          "Food",
+          "Sports"
+        ],
+        "correct_index": 0,
+        "explanation": "Academic context"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A1-02",
+      "dialogue_id": "d-a1-02",
+      "type": "true_false",
+      "title": "A1 Diagnostic 2",
+      "content": {
+        "question": "Aus dem Dialog: Ich lerne Deutsch.",
+        "correct_answer": true,
+        "explanation": "Language learning statement"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A2-01",
+      "dialogue_id": "d-a2-01",
+      "type": "dictation",
+      "title": "A2 Diagnostic 1",
+      "content": {
+        "sentence": "Wo ist die Bushaltestelle?",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A2-02",
+      "dialogue_id": "d-a2-02",
+      "type": "multiple_choice",
+      "title": "A2 Diagnostic 2",
+      "content": {
+        "question": "Wie ist das Wetter?",
+        "options": [
+          "Sonne",
+          "Regen",
+          "Schnee"
+        ],
+        "correct_index": 0,
+        "explanation": "Weather description"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B1-01",
+      "dialogue_id": "d-b1-01",
+      "type": "true_false",
+      "title": "B1 Diagnostic 1",
+      "content": {
+        "question": "Aus dem Dialog: Er arbeitet als Lehrer.",
+        "correct_answer": true,
+        "explanation": "Profession statement"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B1-02",
+      "dialogue_id": "d-b1-02",
+      "type": "multiple_choice",
+      "title": "B1 Diagnostic 2",
+      "content": {
+        "question": "Karriereziel?: Führung, Spezialist, Wechsel",
+        "correct_index": 0,
+        "explanation": "Career goals"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B2-01",
+      "dialogue_id": "d-b2-01",
+      "type": "multiple_choice",
+      "title": "B2 Diagnostic 1",
+      "content": {
+        "question": "Sollte Deutsch Pflicht sein?",
+        "options": [
+          "Nein",
+          "Ja"
+        ],
+        "correct_index": 0,
+        "explanation": "Language policy"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B2-02",
+      "dialogue_id": "d-b2-02",
+      "type": "multiple_choice",
+      "title": "B2 Diagnostic 2",
+      "content": {
+        "question": "Umweltpolitik?",
+        "options": [
+          "Nein",
+          "Ja"
+        ],
+        "correct_index": 0,
+        "explanation": "Environmental policy"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A0-01",
+      "dialogue_id": "d-a0-01",
+      "type": "multiple_choice",
+      "title": "A0 Diagnostic 1",
+      "content": {
+        "question": "Was grüßt man?",
+        "correct_answer": "Hallo",
+        "explanation": "Basic greeting"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A0-02",
+      "dialogue_id": "d-a0-02",
+      "type": "fill_in_the_blank",
+      "title": "A0 Diagnostic 2",
+      "content": {
+        "question": "How are you? Ich ... gut.",
+        "correct_answer": "gehe",
+        "explanation": "Basic response"
+      },
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A1-01",
+      "dialogue_id": "d-a1-01",
+      "type": "multiple_choice",
+      "title": "A1 Diagnostic 1",
+      "content": {
+        "question": "What do you study?",
+        "correct_answer": "Subjects",
+        "explanation": "Academic context"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A1-02",
+      "dialogue_id": "d-a1-02",
+      "type": "true_false",
+      "title": "A1 Diagnostic 2",
+      "content": {
+        "question": "Aus dem Dialog: Ich lerne Deutsch.",
+        "correct_answer": true,
+        "explanation": "Language learning statement"
+      },
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A2-01",
+      "dialogue_id": "d-a2-01",
+      "type": "dictation",
+      "title": "A2 Diagnostic 1",
+      "content": {
+        "sentence": "Wo ist die Bushaltestelle?",
+        "instruction": "Listen and write"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-A2-02",
+      "dialogue_id": "d-a2-02",
+      "type": "multiple_choice",
+      "title": "A2 Diagnostic 2",
+      "content": {
+        "question": "Wie ist das Wetter?",
+        "correct_answer": "Sonne",
+        "explanation": "Weather description"
+      },
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B1-01",
+      "dialogue_id": "d-b1-01",
+      "type": "true_false",
+      "title": "B1 Diagnostic 1",
+      "content": {
+        "question": "Aus dem Dialog: Er arbeitet als Lehrer.",
+        "correct_answer": true,
+        "explanation": "Profession statement"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B1-02",
+      "dialogue_id": "d-b1-02",
+      "type": "multiple_choice",
+      "title": "B1 Diagnostic 2",
+      "content": {
+        "question": "Karriereziel?: Führung, Spezialist, Wechsel",
+        "correct_answer": "Führung",
+        "explanation": "Career goals"
+      },
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B2-01",
+      "dialogue_id": "d-b2-01",
+      "type": "multiple_choice",
+      "title": "B2 Diagnostic 1",
+      "content": {
+        "question": "Sollte Deutsch Pflicht sein?",
+        "correct_answer": "Nein",
+        "explanation": "Language policy"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "diag-B2-02",
+      "dialogue_id": "d-b2-02",
+      "type": "multiple_choice",
+      "title": "B2 Diagnostic 2",
+      "content": {
+        "question": "Umweltpolitik?",
+        "correct_answer": "Nein",
+        "explanation": "Environmental policy"
+      },
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_diagnostic": true,
+      "diagnostic_category": "level_assessment",
+      "is_academic": true,
+      "academic_focus": "German language learning",
+      "learningObjective": "Practice German language skills"
+    },
+    {
+      "id": "B2-dic-10",
+      "type": "dictation",
+      "title": "B2 Dictation 10",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced professional vocabulary"
+    },
+    {
+      "id": "B2-dic-11",
+      "type": "dictation",
+      "title": "B2 Dictation 11",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Business German"
+    },
+    {
+      "id": "B2-dic-12",
+      "type": "dictation",
+      "title": "B2 Dictation 12",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Technical terminology"
+    },
+    {
+      "id": "B2-mc-10",
+      "type": "multiple_choice",
+      "title": "B2 MC 10",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Complex sentence structures"
+    },
+    {
+      "id": "B2-mc-11",
+      "type": "multiple_choice",
+      "title": "B2 MC 11",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Nuanced meaning"
+    },
+    {
+      "id": "B2-mc-12",
+      "type": "multiple_choice",
+      "title": "B2 MC 12",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Formal vs informal"
+    },
+    {
+      "id": "B2-fill-10",
+      "type": "fill_in_the_blank",
+      "title": "B2 Fill 10",
+      "level": "B2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Idiomatic expressions"
+    },
+    {
+      "id": "B2-fill-11",
+      "type": "fill_in_the_blank",
+      "title": "B2 Fill 11",
+      "level": "B2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Collocations"
+    },
+    {
+      "id": "B2-fill-12",
+      "type": "fill_in_the_blank",
+      "title": "B2 Fill 12",
+      "level": "B2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Fixed expressions"
+    },
+    {
+      "id": "B2-tf-05",
+      "type": "true_false",
+      "title": "B2 TF 5",
+      "level": "B2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "German grammar myths"
+    },
+    {
+      "id": "B2-tf-06",
+      "type": "true_false",
+      "title": "B2 TF 6",
+      "level": "B2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Usage errors"
+    },
+    {
+      "id": "B2-match-04",
+      "type": "matching",
+      "title": "B2 Match 4",
+      "level": "B2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Terminology matching"
+    },
+    {
+      "id": "B2-match-05",
+      "type": "matching",
+      "title": "B2 Match 5",
+      "level": "B2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Phrase pairing"
+    },
+    {
+      "id": "B2-review-03",
+      "type": "review",
+      "title": "B2 Review 3",
+      "level": "B2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Comprehensive review"
+    },
+    {
+      "id": "A1-tf-10",
+      "type": "true_false",
+      "title": "A1 TF 10",
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic statements"
+    },
+    {
+      "id": "A1-tf-11",
+      "type": "true_false",
+      "title": "A1 TF 11",
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Present tense"
+    },
+    {
+      "id": "B1-tf-05",
+      "type": "true_false",
+      "title": "B1 TF 5",
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Complex sentences"
+    },
+    {
+      "id": "B2-tf-07",
+      "type": "true_false",
+      "title": "B2 TF 7",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Nuanced grammar"
+    },
+    {
+      "id": "A2-match-03",
+      "type": "matching",
+      "title": "A2 Match 3",
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Word pairs"
+    },
+    {
+      "id": "B1-match-03",
+      "type": "matching",
+      "title": "B1 Match 3",
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Phrase matching"
+    },
+    {
+      "id": "B2-match-06",
+      "type": "matching",
+      "title": "B2 Match 6",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced terminology"
+    },
+    {
+      "id": "A0-review-03",
+      "type": "review",
+      "title": "A0 Review 3",
+      "level": "A0",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Foundational review"
+    },
+    {
+      "id": "B1-review-03",
+      "type": "review",
+      "title": "B1 Review 3",
+      "level": "B1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Intermediate review"
+    },
+    {
+      "id": "B2-review-04",
+      "type": "review",
+      "title": "B2 Review 4",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Comprehensive review"
+    },
+    {
+      "id": "A1-order-01",
+      "type": "sentence_order",
+      "title": "A1 Order 1",
+      "level": "A1",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Word order"
+    },
+    {
+      "id": "A2-order-01",
+      "type": "sentence_order",
+      "title": "A2 Order 1",
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Sentence construction"
+    },
+    {
+      "id": "B1-order-01",
+      "type": "sentence_order",
+      "title": "B1 Order 1",
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Complex order"
+    },
+    {
+      "id": "A2-dic-12",
+      "type": "dictation",
+      "title": "A2 Dic 12",
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Transition level listening"
+    },
+    {
+      "id": "A1-speak-01",
+      "type": "sentence_order",
+      "title": "A1 Speaking 1",
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Pronunciation practice",
+      "learningObjective": "Repeat and practice German pronunciation"
+    },
+    {
+      "id": "A1-speak-02",
+      "type": "sentence_order",
+      "title": "A1 Speaking 2",
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic greetings pronunciation"
+    },
+    {
+      "id": "A2-speak-01",
+      "type": "sentence_order",
+      "title": "A2 Speaking 1",
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Intermediate pronunciation"
+    },
+    {
+      "id": "A2-speak-02",
+      "type": "sentence_order",
+      "title": "A2 Speaking 2",
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Daily routine phrases"
+    },
+    {
+      "id": "B1-speak-01",
+      "type": "sentence_order",
+      "title": "B1 Speaking 1",
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Complex sentences pronunciation"
+    },
+    {
+      "id": "B1-speak-02",
+      "type": "sentence_order",
+      "title": "B1 Speaking 2",
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Opinions and plans"
+    },
+    {
+      "id": "B2-speak-01",
+      "type": "sentence_order",
+      "title": "B2 Speaking 1",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Advanced discussion"
+    },
+    {
+      "id": "B2-speak-02",
+      "type": "sentence_order",
+      "title": "B2 Speaking 2",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Professional discussion"
+    },
+    {
+      "id": "A1-list-01",
+      "type": "dictation",
+      "title": "A1 Listening 1",
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Basic listening comprehension"
+    },
+    {
+      "id": "A1-list-02",
+      "type": "dictation",
+      "title": "A1 Listening 2",
+      "level": "A1",
+      "difficulty": "easy",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Slow speech practice"
+    },
+    {
+      "id": "A2-list-01",
+      "type": "dictation",
+      "title": "A2 Listening 1",
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Transition level listening"
+    },
+    {
+      "id": "A2-list-02",
+      "type": "dictation",
+      "title": "A2 Listening 2",
+      "level": "A2",
+      "difficulty": "medium",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Fast speech practice"
+    },
+    {
+      "id": "B1-list-01",
+      "type": "dictation",
+      "title": "B1 Listening 1",
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Complex speech"
+    },
+    {
+      "id": "B1-list-02",
+      "type": "dictation",
+      "title": "B1 Listening 2",
+      "level": "B1",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Professional German"
+    },
+    {
+      "id": "B2-list-01",
+      "type": "dictation",
+      "title": "B2 Listening 1",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Native speed"
+    },
+    {
+      "id": "B2-list-02",
+      "type": "dictation",
+      "title": "B2 Listening 2",
+      "level": "B2",
+      "difficulty": "hard",
+      "points": 5,
+      "is_academic": true,
+      "academic_focus": "Technical discussions"
+    }
+  ],
+  "progress_tracking": {
+    "user_id": "anonymous",
+    "completed_exercises": [],
+    "streak_days": 0,
+    "last_activity": null,
+    "hint_usage_tracking": {},
+    "success_rate_calculation": "moving_average",
+    "difficulty_adjustment": "automatic",
+    "time_limit_configurable": true,
+    "export_format": [
+      "json",
+      "csv"
+    ],
+    "shuffle_enabled": true,
+    "repeat_enabled": true,
+    "max_hints_per_exercise": 3,
+    "performance_metrics": {
+      "accuracy": 0,
+      "average_time": 0,
+      "total_time_spent": 0,
+      "sessions_completed": 0
+    },
+    "category_progress": {
+      "vocabulary": {
+        "completed": 0,
+        "total": 0,
+        "percentage": 0
+      },
+      "grammar": {
+        "completed": 0,
+        "total": 0,
+        "percentage": 0
+      },
+      "communication": {
+        "completed": 0,
+        "total": 0,
+        "percentage": 0
+      },
+      "review": {
+        "completed": 0,
+        "total": 0,
+        "percentage": 0
+      }
+    }
+  },
+  "system_features": {
+    "user_authentication": "optional - can use anonymous or registered",
+    "score_tracking": "enabled - points per exercise",
+    "hint_system": "available - 3 hints max per exercise",
+    "progression_tracking": "enabled - tracks completed exercises",
+    "export_results": "enabled - can export results as JSON or CSV",
+    "shuffle_questions": "enabled - questions can be shuffled for retries",
+    "repeat_exercise": "enabled - exercises can be retaken unlimited times",
+    "difficulty_levels": "easy, medium, hard per exercise",
+    "time_limits": "configurable per exercise type",
+    "category_system": "vocabulary, grammar, review, communication",
+    "hint_system_detail": "3 hints maximum per exercise, with progressive hints",
+    "success_rate_tracking": "enabled - moving average calculation",
+    "performance_metrics": "detailed tracking: accuracy, time, sessions",
+    "category_system_detail": "progress tracking by category type",
+    "export_capabilities": "JSON and CSV formats supported",
+    "unlimited_retries": "exercises can be repeated unlimited times",
+    "question_shuffling": "questions shuffled for each retry session"
+  }
+}

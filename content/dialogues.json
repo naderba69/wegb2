@@ -75,7 +75,9 @@
       "Ich heiße Omar.",
       "Ich wohne jetzt in Berlin.",
       "Ich lerne seit drei Monaten Deutsch."
-    ]
+    ],
+    "cultural_note": "German values punctuality highly",
+    "cultural_theme": "Work"
   },
   {
     "id": "d-a1-02",
@@ -148,7 +150,8 @@
       "Einen Kaffee, bitte.",
       "Ein bisschen Milch, keinen Zucker.",
       "Zusammen fünf Euro fünfzig."
-    ]
+    ],
+    "cultural_theme": "Family"
   },
   {
     "id": "d-a1-03",
@@ -216,7 +219,8 @@
       "Ich möchte einen Termin vereinbaren.",
       "Am Dienstag um zehn Uhr?",
       "Bis Dienstag!"
-    ]
+    ],
+    "cultural_theme": "Work"
   },
   {
     "id": "d-a1-04",
@@ -285,7 +289,8 @@
       "Ein Kilo für drei Euro.",
       "Geben Sie mir bitte ein Kilo.",
       "Das macht zusammen sechs Euro."
-    ]
+    ],
+    "cultural_theme": "Shopping"
   },
   {
     "id": "d-a1-05",
@@ -348,7 +353,9 @@
       "Am Samstag spiele ich Fußball mit Freunden.",
       "Da besuche ich meine Tante.",
       "Ich bleibe zu Hause und lerne Deutsch."
-    ]
+    ],
+    "cultural_theme": "Berliner Mauer - Berlin Wall history",
+    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
   },
   {
     "id": "d-a2-01",
@@ -417,7 +424,9 @@
       "Ich möchte im Juli nach München fahren.",
       "Der Zug kostet achtzig Euro pro Person.",
       "Ein Doppelzimmer im Zentrum."
-    ]
+    ],
+    "cultural_note": "German restaurants often serve bread with meals",
+    "cultural_theme": "Travel"
   },
   {
     "id": "d-a2-02",
@@ -490,7 +499,9 @@
       "Am Samstag feiere ich meinen Geburtstag.",
       "Um achtzehn Uhr bei mir zu Hause.",
       "Soll ich etwas mitbringen?"
-    ]
+    ],
+    "cultural_theme": "Berliner Mauer - Berlin Wall history",
+    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
   },
   {
     "id": "d-a2-03",
@@ -563,7 +574,8 @@
       "Seit drei Tagen tut mir der Hals weh.",
       "Nehmen Sie die Medizin dreimal am Tag.",
       "Trinken Sie viel Tee!"
-    ]
+    ],
+    "cultural_theme": "Hobbies"
   },
   {
     "id": "d-a2-04",
@@ -626,7 +638,8 @@
       "Ist dieser Platz frei?",
       "In Frankfurt müssen Sie umsteigen.",
       "Ungefähr vier Stunden."
-    ]
+    ],
+    "cultural_theme": "Travel"
   },
   {
     "id": "d-a2-05",
@@ -694,7 +707,9 @@
       "Ich muss mich entschuldigen.",
       "Gestern habe ich vergessen, zum Termin zu kommen.",
       "Treffen wir uns morgen?"
-    ]
+    ],
+    "cultural_theme": "Schulbildung - Education system",
+    "cultural_note": "Theme: Schulbildung - Education system"
   },
   {
     "id": "d-b1-01",
@@ -758,7 +773,9 @@
       "Meiner Meinung nach ist Homeoffice die Zukunft der Arbeit.",
       "Trotzdem glaube ich, dass die Flexibilität überwiegt.",
       "Eine Mischung wäre die beste Lösung."
-    ]
+    ],
+    "cultural_note": "German work culture values efficiency",
+    "cultural_theme": "Profession"
   },
   {
     "id": "d-b1-02",
@@ -821,7 +838,8 @@
       "Ich habe drei Jahre als Techniker gearbeitet.",
       "Ich möchte neue Erfahrungen sammeln.",
       "Wir melden uns nächste Woche bei Ihnen."
-    ]
+    ],
+    "cultural_theme": "Education"
   },
   {
     "id": "d-b1-03",
@@ -884,7 +902,8 @@
       "Der Streik geht weiter.",
       "Die Verhandlungen hätten gestern begonnen.",
       "Hoffentlich finden sie bald eine Lösung."
-    ]
+    ],
+    "cultural_theme": "Travel experiences"
   },
   {
     "id": "d-b1-04",
@@ -947,7 +966,9 @@
       "Danke, dass du mir beim Umzug hilfst!",
       "Die Bücher sind am schwersten.",
       "Mein Angebot!"
-    ]
+    ],
+    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
+    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
   },
   {
     "id": "d-b1-05",
@@ -1010,7 +1031,9 @@
       "Ich würde gern ein Praktikum in einer Klinik machen.",
       "Dort hätte ich bessere Chancen.",
       "Ich drücke dir die Daumen!"
-    ]
+    ],
+    "cultural_theme": "Schulbildung - Education system",
+    "cultural_note": "Theme: Schulbildung - Education system"
   },
   {
     "id": "d-b2-01",
@@ -1079,7 +1102,9 @@
       "Die Maßnahmen reichen bei Weitem nicht aus.",
       "Es geht um nachhaltige Investitionen.",
       "Dieser Optimismus ist schwer nachvollziehbar."
-    ]
+    ],
+    "cultural_note": "German beer culture has centuries-old traditions",
+    "cultural_theme": "Technology"
   },
   {
     "id": "d-b2-02",
@@ -1143,7 +1168,8 @@
       "Die Digitalisierung setzt eine Infrastruktur voraus.",
       "Gleichwohl müssen wir anfangen.",
       "Die von uns geplanten Schulungen finden begleitend statt."
-    ]
+    ],
+    "cultural_theme": "Opinions"
   },
   {
     "id": "d-b2-03",
@@ -1202,7 +1228,8 @@
       "Angeblich hat der Konzern die Zahlen geschönt.",
       "Wir sollten die Behauptung in Frage stellen.",
       "Ohne belastbare Daten ist die Schlussfolgerung hinfällig."
-    ]
+    ],
+    "cultural_theme": "Opinions"
   },
   {
     "id": "d-b2-04",
@@ -1266,7 +1293,8 @@
       "Ich möchte gern über meine Vergütung sprechen.",
       "Ich habe das Projekt erfolgreich abgeschlossen.",
       "Unter der Bedingung einer schriftlichen Zusage."
-    ]
+    ],
+    "cultural_theme": "Society"
   },
   {
     "id": "d-b2-05",
@@ -1336,7 +1364,9 @@
       "Die Sprache ist brillant.",
       "Gerade die Figurenentwicklung überzeugt mich.",
       "Es lohnt sich, es zweimal zu lesen."
-    ]
+    ],
+    "cultural_theme": "Berliner Mauer - Berlin Wall history",
+    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
   },
   {
     "id": "d-a1-06",
@@ -1399,7 +1429,9 @@
       "Fahrkarte, bitte!",
       "Sie müssen hier aussteigen.",
       "Nummer zwölf, gegenüber."
-    ]
+    ],
+    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
+    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
   },
   {
     "id": "d-a1-07",
@@ -1463,7 +1495,8 @@
       "Nur schneiden, bitte.",
       "Nicht zu kurz!",
       "Was kostet das zusammen?"
-    ]
+    ],
+    "cultural_theme": "Family"
   },
   {
     "id": "d-a2-06",
@@ -1526,7 +1559,8 @@
       "Ich habe diesen Pullover gestern gekauft.",
       "Haben Sie den Kassenzettel dabei?",
       "Kann ich eine größere Größe haben?"
-    ]
+    ],
+    "cultural_theme": "Travel"
   },
   {
     "id": "d-a2-07",
@@ -1590,7 +1624,8 @@
       "Ich habe Ihr Paket angenommen.",
       "Wann ist der Bote gekommen?",
       "Sie sind sehr freundlich."
-    ]
+    ],
+    "cultural_theme": "Hobbies"
   },
   {
     "id": "d-b1-06",
@@ -1658,7 +1693,9 @@
       "Ich möchte einen Termin vereinbaren.",
       "Eine Meldebescheinigung wäre noch nötig.",
       "Bitte kommen Sie pünktlich."
-    ]
+    ],
+    "cultural_theme": "Schulbildung - Education system",
+    "cultural_note": "Theme: Schulbildung - Education system"
   },
   {
     "id": "d-b1-07",
@@ -1721,7 +1758,8 @@
       "Es ist nichts Schlimmes.",
       "Sie sollten Pausen machen.",
       "Dann kommen Sie bitte sofort wieder."
-    ]
+    ],
+    "cultural_theme": "Profession"
   },
   {
     "id": "d-b2-06",
@@ -1790,7 +1828,8 @@
       "Einen Lehrer zu ersetzen, wäre ein Kategorienfehler.",
       "Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
       "Wir brauchen Urteilskraft als Lernziel."
-    ]
+    ],
+    "cultural_theme": "Society"
   },
   {
     "id": "d-b2-07",
@@ -1855,7 +1894,9 @@
       "Angesichts der Marktlage halten wir unser Angebot für fair.",
       "Sofern Sie die Lieferfrist verkürzen, wären wir zu 5 Prozent mehr bereit.",
       "Unter der Bedingung einer längeren Vertragslaufzeit."
-    ]
+    ],
+    "cultural_theme": "Ostern - Easter celebrations",
+    "cultural_note": "Theme: Ostern - Easter celebrations"
   },
   {
     "id": "d-a1-08",
@@ -1927,7 +1968,8 @@
     "dictation": [
       "Einen Kaffee mit Milch, bitte.",
       "Das macht drei Euro fünfzig."
-    ]
+    ],
+    "cultural_theme": "Shopping"
   },
   {
     "id": "d-a1-09",
@@ -1999,7 +2041,9 @@
     "dictation": [
       "Sara Ibrahim am Apparat.",
       "Ist morgen um neun Uhr ein Termin möglich?"
-    ]
+    ],
+    "cultural_theme": "Oktoberfest - German beer festival",
+    "cultural_note": "Theme: Oktoberfest - German beer festival"
   },
   {
     "id": "d-a2-08",
@@ -2071,7 +2115,8 @@
     "dictation": [
       "Seit wann haben Sie die Schmerzen?",
       "Trinken Sie viel Wasser!"
-    ]
+    ],
+    "cultural_theme": "Food"
   },
   {
     "id": "d-a2-09",
@@ -2143,7 +2188,8 @@
     "dictation": [
       "Wann fährt der nächste Zug nach Köln?",
       "Gute Reise!"
-    ]
+    ],
+    "cultural_theme": "Food"
   },
   {
     "id": "d-b1-08",
@@ -2215,7 +2261,8 @@
     "dictation": [
       "Ich schlage einen Putzplan vor.",
       "Jeder macht einmal pro Woche sauber."
-    ]
+    ],
+    "cultural_theme": "Profession"
   },
   {
     "id": "d-b1-09",
@@ -2287,7 +2334,8 @@
     "dictation": [
       "Die Heizung funktioniert nicht.",
       "Ich schicke sofort einen Techniker."
-    ]
+    ],
+    "cultural_theme": "Profession"
   },
   {
     "id": "d-b2-08",
@@ -2361,7 +2409,9 @@
     "dictation": [
       "Methodisch stark, aber die Stichprobe ist zu klein.",
       "Die Ergebnisse lassen sich kaum verallgemeinern."
-    ]
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
   },
   {
     "id": "d-b2-09",
@@ -2435,7 +2485,8 @@
     "dictation": [
       "Was ist Ihre größte Stärke?",
       "Ich arbeite strukturiert und bleibe auch unter Druck ruhig."
-    ]
+    ],
+    "cultural_theme": "Environment"
   },
   {
     "id": "d-b1-10",
@@ -2528,7 +2579,8 @@
     "dictation": [
       "Ja, sonst passt die Gruppe nicht. Der Test ist Donnerstag um neun.",
       "Nur Pass und Meldebescheinigung. Bis Donnerstag!"
-    ]
+    ],
+    "cultural_theme": "Travel experiences"
   },
   {
     "id": "d-b1-11",
@@ -2621,7 +2673,8 @@
     "dictation": [
       "Nein — Kaltmiete vierhundertfünfzig, Nebenkosten kommen dazu.",
       "Zwei Monatsmieten, wie immer. Herzlich willkommen, wenn alles passt."
-    ]
+    ],
+    "cultural_theme": "Profession"
   },
   {
     "id": "d-b1-12",
@@ -2719,7 +2772,8 @@
     "dictation": [
       "Ja — bis zwei Tage nach dem letzten Fieber darf er nicht hin.",
       "Nein, bei Viren wirkt es nicht. Fieber senken, viel trinken, beobachten."
-    ]
+    ],
+    "cultural_theme": "Technology"
   },
   {
     "id": "d-b1-13",
@@ -2812,7 +2866,9 @@
     "dictation": [
       "Neun Uhr passt. Ich brauche Zugang zum Keller.",
       "Montag, aber nicht vor neun: erst die Kinder in die Kita."
-    ]
+    ],
+    "cultural_theme": "Ostern - Easter celebrations",
+    "cultural_note": "Theme: Ostern - Easter celebrations"
   },
   {
     "id": "d-b1-14",
@@ -2905,7 +2961,8 @@
     "dictation": [
       "Dann ruhen Sie aus — die Gesundheit geht vor der Frist.",
       "Längst im gemeinsamen Ordner, seit gestern Abend."
-    ]
+    ],
+    "cultural_theme": "Education"
   },
   {
     "id": "d-b1-15",
@@ -2998,7 +3055,9 @@
     "dictation": [
       "Zwanzig Euro bei Diebstahl, sechs bei Verlust — verloren, richtig?",
       "Kein Missbrauch vermerkt. Die neue Karte kommt in vierzehn Tagen."
-    ]
+    ],
+    "cultural_theme": "Philosophie - German philosophy",
+    "cultural_note": "Theme: Philosophie - German philosophy"
   },
   {
     "id": "d-b1-16",
@@ -3091,7 +3150,8 @@
     "dictation": [
       "Dann gilt der nächste Zug ohne Aufpreis — wir haben es vermerkt.",
       "Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu."
-    ]
+    ],
+    "cultural_theme": "Technology"
   },
   {
     "id": "d-b1-17",
@@ -3184,7 +3244,8 @@
     "dictation": [
       "Die Leseecke ist fertig; für die Bibliothek fehlt ein Sponsor.",
       "Die Einladung geht raus; sie meldet ihre Auftrittskinder an."
-    ]
+    ],
+    "cultural_theme": "Education"
   },
   {
     "id": "d-b1-18",
@@ -3272,7 +3333,9 @@
     "dictation": [
       "Das bleibt einmalig — ich erwarte eine Entschuldigung, und Nachtruhe ab zweiundzwanzig.",
       "Bei Gästen sage ich Bescheid — zwanzig Minuten vorher."
-    ]
+    ],
+    "cultural_theme": "Bierbrauerei - German beer culture",
+    "cultural_note": "Theme: Bierbrauerei - German beer culture"
   },
   {
     "id": "d-b1-19",
@@ -3365,7 +3428,8 @@
     "dictation": [
       "Verschiebungen nur schriftlich; den Grund bitte nachweisen.",
       "Bei zweitem Versäumnis: Ablehnung, neue Gebühr."
-    ]
+    ],
+    "cultural_theme": "Profession"
   },
   {
     "id": "d-b1-20",
@@ -3458,7 +3522,8 @@
     "dictation": [
       "Nicht kombinieren bei Kindern: nur ein Mittel zur Zeit.",
       "Acht Euro fünfzig — die Beilage genau durchlesen, bitte."
-    ]
+    ],
+    "cultural_theme": "Travel experiences"
   },
   {
     "id": "d-b1-21",
@@ -3551,7 +3616,8 @@
     "dictation": [
       "Wir stoppen mit Fristablauf — zu viel Gezahltes wird erstattet.",
       "Telefon allein genügt nicht — schriftlich muss es vorliegen, dann zählt es."
-    ]
+    ],
+    "cultural_theme": "Travel experiences"
   },
   {
     "id": "d-b1-22",
@@ -3644,7 +3710,9 @@
     "dictation": [
       "Zwölf Euro weniger: sechsundzwanzig statt achtunddreißig.",
       "Das Dessert geht aufs Haus — Küche ist intern gemeldet."
-    ]
+    ],
+    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
+    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
   },
   {
     "id": "d-b1-23",
@@ -3737,7 +3805,9 @@
     "dictation": [
       "Ja: Bestätigung der Firma mit Zeiten, maximal dreißig Wochenstunden.",
       "Eine E-Mail der Chefin — formlos, aber schriftlich — genügt."
-    ]
+    ],
+    "cultural_theme": "Berliner Mauer - Berlin Wall history",
+    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
   },
   {
     "id": "d-b1-24",
@@ -3830,7 +3900,8 @@
     "dictation": [
       "Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt.",
       "Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung — kommen Sie pünktlich."
-    ]
+    ],
+    "cultural_theme": "Travel experiences"
   },
   {
     "id": "d-b1-25",
@@ -3923,7 +3994,8 @@
     "dictation": [
       "Genau zwei Wochen Frist — rechtzeitig. Formular, Ausweis, Vermieterbestätigung.",
       "Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung."
-    ]
+    ],
+    "cultural_theme": "Education"
   },
   {
     "id": "d-b1-26",
@@ -4016,7 +4088,8 @@
     "dictation": [
       "Nie — die Grundversorgung springt ohne eine Sekunde Pause ein.",
       "Bonus nur bei zwölf Monaten Bindung; Preisgarantie braucht Preisbindung."
-    ]
+    ],
+    "cultural_theme": "Technology"
   },
   {
     "id": "d-b1-27",
@@ -4109,7 +4182,8 @@
     "dictation": [
       "Einmal im Leben: sie läuft nie ab.",
       "Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig."
-    ]
+    ],
+    "cultural_theme": "Profession"
   },
   {
     "id": "d-b2-10",
@@ -4205,7 +4279,9 @@
     "dictation": [
       "Auf der Zahl bestehe ich nicht — aber die Weiterbildungszeit zähle ich als Leistung.",
       "Sofern der Vertrag die Probezeit auf drei Monate begrenzt, haben wir eine Übereinkunft."
-    ]
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
   },
   {
     "id": "d-b2-11",
@@ -4301,7 +4377,9 @@
     "dictation": [
       "Zusätzlich wünsche ich ein Protokoll über die Nebenkostenabrechnung.",
       "Stimmt — Ihr Brief errechnet korrekt; wir korrigieren auf 9,8 Prozent."
-    ]
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
   },
   {
     "id": "d-b2-12",
@@ -4397,7 +4475,8 @@
     "dictation": [
       "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
       "Regulär drei Monate; mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt."
-    ]
+    ],
+    "cultural_theme": "Environment"
   },
   {
     "id": "d-b2-13",
@@ -4493,7 +4572,8 @@
     "dictation": [
       "Ja — unteres Einkommen wird prozentual stärker ersetzt, bis 67 Prozent.",
       "Im Portal als PDF, je Monat ein Dokument — Scans ohne Stempel akzeptieren wir nicht."
-    ]
+    ],
+    "cultural_theme": "Future plans"
   },
   {
     "id": "d-b2-14",
@@ -4589,7 +4669,8 @@
     "dictation": [
       "Innerhalb eines Monats, aber nur mit geänderter Einkommensprognose.",
       "Mit Beratung verlängert sich die Frist automatisch bis April nächsten Jahres."
-    ]
+    ],
+    "cultural_theme": "Future plans"
   },
   {
     "id": "d-b2-15",
@@ -4685,7 +4766,9 @@
     "dictation": [
       "Wir regulieren nach dem Gutachtertermin, binnen zwei Wochen.",
       "Dann halten wir uns den Rückgriff vor; Sie bekommen Vorschuss."
-    ]
+    ],
+    "cultural_theme": "Berliner Mauer - Berlin Wall history",
+    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
   },
   {
     "id": "d-b2-16",
@@ -4781,7 +4864,8 @@
     "dictation": [
       "Das Zertifikat setzt 80 Prozent Teilnahme voraus, nicht weniger.",
       "Bei Krankheit in der Prüfungswoche: Nachschreibtermin?"
-    ]
+    ],
+    "cultural_theme": "Culture"
   },
   {
     "id": "d-b2-17",
@@ -4877,7 +4961,8 @@
     "dictation": [
       "Der Anspruch ruht; wir verlängern die Bindung um die Pause, nicht die Kosten.",
       "Bei Branchennähe ja; Rückzahlungsklausel bei Wechsel unter 24 Monaten."
-    ]
+    ],
+    "cultural_theme": "Innovation"
   },
   {
     "id": "d-b2-18",
@@ -4973,7 +5058,9 @@
     "dictation": [
       "Ja, der Versicherungsschutz bleibt bis zum letzten Tag bestehen.",
       "Das Heft bleibt gültig, die Medikamente laufen nahtlos über die elektronische Verordnung."
-    ]
+    ],
+    "cultural_theme": "Bierbrauerei - German beer culture",
+    "cultural_note": "Theme: Bierbrauerei - German beer culture"
   },
   {
     "id": "d-b2-19",
@@ -5069,7 +5156,8 @@
     "dictation": [
       "Gut so. Dann setzen wir einen runden Tisch: jede Seite nennt drei Bedürfnisse.",
       "Konstruktiv. Wiedervorlage nach sechs Wochen — damit es nicht verpufft."
-    ]
+    ],
+    "cultural_theme": "Environment"
   },
   {
     "id": "d-b2-20",
@@ -5165,7 +5253,9 @@
     "dictation": [
       "Morgens braucht er Hilfe beim Waschen und Anziehen, mittags reicht Aufsicht.",
       "Dann rechne ich mit Grad zwei bis drei, je nach Wegstrecke innerhalb der Wohnung."
-    ]
+    ],
+    "cultural_theme": "Festtage - Public holidays",
+    "cultural_note": "Theme: Festtage - Public holidays"
   },
   {
     "id": "d-b2-21",
@@ -5261,7 +5351,8 @@
     "dictation": [
       "Karenzzeit bis 18 Monate möglich; die Zinsen laufen weiter, werden gestundet.",
       "Zwischen 120 und 200 Euro, abhängig vom Zinsnachlass bei Gehaltsüberweisung."
-    ]
+    ],
+    "cultural_theme": "Society"
   },
   {
     "id": "d-b2-22",
@@ -5357,7 +5448,8 @@
     "dictation": [
       "Wir stufen als akut ein: Dringlichkeitscode C auf dem Schein verkürzt die Wartezeit.",
       "Parallel ja, aber die Akten müssen austauschbar sein — mit Ihrem Einverständnis."
-    ]
+    ],
+    "cultural_theme": "Future plans"
   },
   {
     "id": "d-b2-23",
@@ -5453,7 +5545,8 @@
     "dictation": [
       "Frei im Block: zwei Tage plus Zuschlag pro Überstunde laut Tarif.",
       "Dann Einigungsstelle; der Spruch ersetzt die Weigerung des Arbeitgebers."
-    ]
+    ],
+    "cultural_theme": "Culture"
   },
   {
     "id": "d-b2-24",
@@ -5549,7 +5642,8 @@
     "dictation": [
       "Bestanden ist bestanden — das Zertifikat kommt nach vier Wochen per Post.",
       "Die Kursträger können die Gebühren halbieren — Antrag binnen zwei Wochen."
-    ]
+    ],
+    "cultural_theme": "Culture"
   },
   {
     "id": "d-b2-25",
@@ -5645,7 +5739,9 @@
     "dictation": [
       "Wir protokollieren die Charge und setzen ihn bis zur Schulung vom Dienst.",
       "Belegfotos, Packzettel und Zeitstempel der Tür — dann öffnen wir das Verfahren."
-    ]
+    ],
+    "cultural_theme": "Weihnachten - Christmas traditions",
+    "cultural_note": "Theme: Weihnachten - Christmas traditions"
   },
   {
     "id": "d-b2-26",
@@ -5741,7 +5837,8 @@
     "dictation": [
       "Dann unterschreiben beide den Wechsel; die alten Gutachten werden übertragen.",
       "Nein — er bleibt, es sei denn, Sie beantragen einen Aufschub."
-    ]
+    ],
+    "cultural_theme": "Environment"
   },
   {
     "id": "d-b2-27",
@@ -5847,7 +5944,8 @@
     "dictation": [
       "Vor der Klage gehört der Schlichtungsversuch zur Pflicht — dazu bin ich da.",
       "Katasterauszug, Fotos mit Maßstab, die Mahnung von damals, zwei Zeugen genügen."
-    ]
+    ],
+    "cultural_theme": "Opinions"
   },
   {
     "id": "d-a1-31",
@@ -5910,7 +6008,8 @@
       "Guten Morgen! Haben Sie einen Termin?",
       "Ja, um neun Uhr bei Frau Bauer.",
       "Wie ist Ihr Name, bitte?"
-    ]
+    ],
+    "cultural_theme": "Work"
   },
   {
     "id": "d-a1-32",
@@ -5978,7 +6077,8 @@
       "Entschuldigung, wo ist die Post?",
       "Gehen Sie geradeaus bis zur Ampel.",
       "Dann rechts. Die Post ist neben der Bank."
-    ]
+    ],
+    "cultural_theme": "Personal info"
   },
   {
     "id": "d-a2-31",
@@ -6058,7 +6158,9 @@
       "Guten Tag. Ich habe diesen Wasserkocher vorgestern gekauft, aber er funktioniert nicht.",
       "Das tut mir leid. Haben Sie den Kassenbon dabei?",
       "Ja, hier. Ich hätte gern mein Geld zurück."
-    ]
+    ],
+    "cultural_theme": "Oktoberfest - German beer festival",
+    "cultural_note": "Theme: Oktoberfest - German beer festival"
   },
   {
     "id": "d-a2-32",
@@ -6121,7 +6223,8 @@
       "Guten Morgen, Herr Weber. Ich bin leider krank geworden.",
       "Das tut mir leid. Was fehlt Ihnen denn?",
       "Ich habe Fieber. Der Arzt hat mich für drei Tage krankgeschrieben."
-    ]
+    ],
+    "cultural_theme": "Weather"
   },
   {
     "id": "d-b1-31",
@@ -6196,7 +6299,9 @@
       "Mir ist aufgefallen, dass du die Absprache nicht eingehalten hast.",
       "Das stimmt, aber ich war unter großem Zeitdruck.",
       "Das kann ich nachvollziehen. Trotzdem hätte ein kurzer Anruf gereicht."
-    ]
+    ],
+    "cultural_theme": "Oktoberfest - German beer festival",
+    "cultural_note": "Theme: Oktoberfest - German beer festival"
   },
   {
     "id": "d-b1-32",
@@ -6259,7 +6364,8 @@
       "Ihr Sohn arbeitet gut mit, aber er meldet sich selten.",
       "Zu Hause erzählt er viel. In der Klasse ist er wohl schüchtern.",
       "Das legt sich meistens. Wichtig wäre, dass er öfter laut liest."
-    ]
+    ],
+    "cultural_theme": "Technology"
   },
   {
     "id": "d-b2-31",
@@ -6340,7 +6446,8 @@
       "In Ihrem Lebenslauf fällt eine Lücke von acht Monaten auf.",
       "Das ist richtig. Ich habe in dieser Zeit meine Mutter gepflegt und nebenbei einen Fachkurs abgeschlossen.",
       "Inwiefern hat Sie diese Zeit beruflich weitergebracht?"
-    ]
+    ],
+    "cultural_theme": "Innovation"
   },
   {
     "id": "d-b2-32",
@@ -6416,7 +6523,9 @@
       "Ein generelles Tempolimit würde Leben retten und Emissionen senken.",
       "Das mag sein, doch die Einsparung fällt geringer aus, als oft behauptet wird.",
       "Selbst wenn der Effekt klein wäre: Er kostet nichts und wirkt sofort."
-    ]
+    ],
+    "cultural_theme": "Oktoberfest - German beer festival",
+    "cultural_note": "Theme: Oktoberfest - German beer festival"
   },
   {
     "id": "d-a2-10",
@@ -6521,7 +6630,8 @@
       "die Mietminderung",
       "sich beschweren",
       "die Hausverwaltung"
-    ]
+    ],
+    "cultural_theme": "Health"
   },
   {
     "id": "d-a2-11",
@@ -6624,7 +6734,8 @@
       "nachfragen",
       "erreichen",
       "die Bestätigung"
-    ]
+    ],
+    "cultural_theme": "Accommodation"
   },
   {
     "id": "d-a2-12",
@@ -6730,7 +6841,8 @@
       "die Hitze",
       "bewölkt",
       "neblig"
-    ]
+    ],
+    "cultural_theme": "Weather"
   },
   {
     "id": "d-a2-13",
@@ -6833,7 +6945,9 @@
       "der Zeitdruck",
       "die Firma",
       "pünktlich"
-    ]
+    ],
+    "cultural_theme": "Weihnachten - Christmas traditions",
+    "cultural_note": "Theme: Weihnachten - Christmas traditions"
   },
   {
     "id": "d-a2-14",
@@ -6940,7 +7054,9 @@
       "der Notausgang",
       "das Trinkgeld",
       "das Gepäck"
-    ]
+    ],
+    "cultural_theme": "Oktoberfest - German beer festival",
+    "cultural_note": "Theme: Oktoberfest - German beer festival"
   },
   {
     "id": "d-a2-15",
@@ -7046,7 +7162,8 @@
       "umrühren",
       "einfrieren",
       "auftauen"
-    ]
+    ],
+    "cultural_theme": "Accommodation"
   },
   {
     "id": "d-a2-16",
@@ -7152,7 +7269,8 @@
       "der Arbeitsunfall",
       "der Erste-Hilfe-Kasten",
       "die Arbeitssicherheit"
-    ]
+    ],
+    "cultural_theme": "Accommodation"
   },
   {
     "id": "d-a2-17",
@@ -7257,7 +7375,8 @@
       "der Wortschatz",
       "die Grammatikregel",
       "die Sprachschule"
-    ]
+    ],
+    "cultural_theme": "Travel"
   },
   {
     "id": "d-a2-18",
@@ -7363,7 +7482,8 @@
       "der Stellplatz",
       "die Hausverwaltung",
       "der Nachmieter"
-    ]
+    ],
+    "cultural_theme": "Health"
   },
   {
     "id": "d-a2-19",
@@ -7469,7 +7589,9 @@
       "die Vollmacht",
       "der Ansprechpartner",
       "die Auskunft"
-    ]
+    ],
+    "cultural_theme": "Oktoberfest - German beer festival",
+    "cultural_note": "Theme: Oktoberfest - German beer festival"
   },
   {
     "id": "d-a2-20",
@@ -7574,7 +7696,9 @@
       "ordentlich",
       "chaotisch",
       "zuhören"
-    ]
+    ],
+    "cultural_theme": "Literatur - German literature",
+    "cultural_note": "Theme: Literatur - German literature"
   },
   {
     "id": "d-a2-21",
@@ -7680,7 +7804,8 @@
       "die Beschwerden",
       "trösten",
       "hilfsbereit"
-    ]
+    ],
+    "cultural_theme": "Accommodation"
   },
   {
     "id": "d-a2-22",
@@ -7786,7 +7911,8 @@
       "vergleichen",
       "der Preisvergleich",
       "die Ausgaben"
-    ]
+    ],
+    "cultural_theme": "Health"
   },
   {
     "id": "d-a2-23",
@@ -7892,7 +8018,8 @@
       "probieren",
       "die Gastfreundschaft",
       "das Ramadanfest"
-    ]
+    ],
+    "cultural_theme": "Accommodation"
   },
   {
     "id": "d-a2-24",
@@ -7999,7 +8126,9 @@
       "die Bewerbungsunterlagen",
       "die Unterstützung",
       "sich vorbereiten auf"
-    ]
+    ],
+    "cultural_theme": "Berliner Mauer - Berlin Wall history",
+    "cultural_note": "Theme: Berliner Mauer - Berlin Wall history"
   },
   {
     "id": "d-a2-25",
@@ -8103,7 +8232,8 @@
       "die Verbindung",
       "die Auskunft",
       "höflich"
-    ]
+    ],
+    "cultural_theme": "Health"
   },
   {
     "id": "d-a2-26",
@@ -8210,7 +8340,8 @@
       "bequem sitzen",
       "der Schmuck",
       "altmodisch"
-    ]
+    ],
+    "cultural_theme": "Entertainment"
   },
   {
     "id": "d-a2-27",
@@ -8315,7 +8446,9 @@
       "die Vergangenheit",
       "erzählen",
       "sich gewöhnen an"
-    ]
+    ],
+    "cultural_theme": "Ostern - Easter celebrations",
+    "cultural_note": "Theme: Ostern - Easter celebrations"
   },
   {
     "id": "d-a1-10",
@@ -8422,7 +8555,8 @@
       "satt",
       "hungrig",
       "süß"
-    ]
+    ],
+    "cultural_theme": "Shopping"
   },
   {
     "id": "d-a1-11",
@@ -8529,7 +8663,9 @@
       "der Husten",
       "gesund",
       "sich ausruhen"
-    ]
+    ],
+    "cultural_theme": "Ostern - Easter celebrations",
+    "cultural_note": "Theme: Ostern - Easter celebrations"
   },
   {
     "id": "d-a1-12",
@@ -8634,7 +8770,8 @@
       "schwarz",
       "anziehen",
       "das Geld"
-    ]
+    ],
+    "cultural_theme": "Personal info"
   },
   {
     "id": "d-a1-13",
@@ -8740,7 +8877,8 @@
       "Viertel vor",
       "Viertel nach",
       "pünktlich sein"
-    ]
+    ],
+    "cultural_theme": "Work"
   },
   {
     "id": "d-a1-14",
@@ -8846,7 +8984,8 @@
       "das Ausland",
       "schließen",
       "geöffnet"
-    ]
+    ],
+    "cultural_theme": "Personal info"
   },
   {
     "id": "d-a1-15",
@@ -8951,7 +9090,8 @@
       "möbliert",
       "sauber",
       "schmutzig"
-    ]
+    ],
+    "cultural_theme": "Shopping"
   },
   {
     "id": "d-a1-16",
@@ -9059,7 +9199,9 @@
       "das Pferd",
       "die Kuh",
       "der Mond"
-    ]
+    ],
+    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
+    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
   },
   {
     "id": "d-a1-17",
@@ -9165,7 +9307,8 @@
       "voll",
       "leer",
       "der Schmutz"
-    ]
+    ],
+    "cultural_theme": "Family"
   },
   {
     "id": "d-a1-18",
@@ -9272,7 +9415,8 @@
       "der Nachname",
       "ledig",
       "verheiratet"
-    ]
+    ],
+    "cultural_theme": "Family"
   },
   {
     "id": "d-a1-19",
@@ -9379,7 +9523,8 @@
       "das Abendessen",
       "die Katze",
       "backen"
-    ]
+    ],
+    "cultural_theme": "Work"
   },
   {
     "id": "d-a1-20",
@@ -9484,7 +9629,8 @@
       "die Uhrzeit",
       "zuletzt",
       "Punkt zwölf"
-    ]
+    ],
+    "cultural_theme": "Directions"
   },
   {
     "id": "d-a1-21",
@@ -9591,7 +9737,9 @@
       "auswendig lernen",
       "antworten",
       "die Pause machen"
-    ]
+    ],
+    "cultural_theme": "Schulbildung - Education system",
+    "cultural_note": "Theme: Schulbildung - Education system"
   },
   {
     "id": "d-a1-22",
@@ -9695,7 +9843,8 @@
       "mitbringen",
       "fliegen",
       "ankommen"
-    ]
+    ],
+    "cultural_theme": "Work"
   },
   {
     "id": "d-a1-23",
@@ -9802,7 +9951,9 @@
       "jemand",
       "die Richtung",
       "schnell"
-    ]
+    ],
+    "cultural_theme": "Literatur - German literature",
+    "cultural_note": "Theme: Literatur - German literature"
   },
   {
     "id": "d-a1-24",
@@ -9909,7 +10060,8 @@
       "zufrieden",
       "mögen",
       "täglich"
-    ]
+    ],
+    "cultural_theme": "Shopping"
   },
   {
     "id": "d-a1-25",
@@ -10014,7 +10166,8 @@
       "wahrscheinlich",
       "unmöglich",
       "leider"
-    ]
+    ],
+    "cultural_theme": "Hobbies"
   },
   {
     "id": "d-a1-26",
@@ -10121,7 +10274,9 @@
       "wohin",
       "zurückfahren",
       "hoffentlich"
-    ]
+    ],
+    "cultural_theme": "Ostern - Easter celebrations",
+    "cultural_note": "Theme: Ostern - Easter celebrations"
   },
   {
     "id": "d-a1-27",
@@ -10228,7 +10383,8 @@
       "das Ziel",
       "leicht",
       "letzte"
-    ]
+    ],
+    "cultural_theme": "Family"
   },
   {
     "id": "d-a0-01",
@@ -10315,7 +10471,9 @@
       "Guten Tag!",
       "Wie heißt du?",
       "Ich heiße Ali. Und du?"
-    ]
+    ],
+    "cultural_note": "German greetings typically include handshakes",
+    "cultural_theme": "Introduction"
   },
   {
     "id": "d-a0-02",
@@ -10385,7 +10543,8 @@
       "Wie viel ist eins plus zwei?",
       "Eins plus zwei ist drei.",
       "Danke!"
-    ]
+    ],
+    "cultural_theme": "Greeting"
   },
   {
     "id": "d-a0-03",
@@ -10457,7 +10616,9 @@
       "Buchstabiere bitte deinen Namen!",
       "A – L – I. Ali.",
       "Danke!"
-    ]
+    ],
+    "cultural_theme": "Weihnachten - Christmas traditions",
+    "cultural_note": "Theme: Weihnachten - Christmas traditions"
   },
   {
     "id": "dlg-a1-fahrkarte",
@@ -10554,7 +10715,9 @@
     ],
     "dictation": [
       "Ich möchte eine Fahrkarte nach Berlin, bitte."
-    ]
+    ],
+    "cultural_theme": "Weihnachten - Christmas traditions",
+    "cultural_note": "Theme: Weihnachten - Christmas traditions"
   },
   {
     "id": "dlg-a1-reklamation-hotel",
@@ -10628,7 +10791,8 @@
     ],
     "dictation": [
       "Ich habe ein Problem mit meinem Zimmer."
-    ]
+    ],
+    "cultural_theme": "Travel"
   },
   {
     "id": "dlg-a2-terminabsage",
@@ -10702,7 +10866,8 @@
     ],
     "dictation": [
       "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?"
-    ]
+    ],
+    "cultural_theme": "Entertainment"
   },
   {
     "id": "dlg-a2-krankenversicherung",
@@ -10781,7 +10946,8 @@
     ],
     "dictation": [
       "Guten Tag, ich möchte mich krankenversichern."
-    ]
+    ],
+    "cultural_theme": "Weather"
   },
   {
     "id": "dlg-b1-kontoeroeffnung",
@@ -10869,7 +11035,8 @@
     "dictation": [
       "Ich möchte gerne ein Girokonto eröffnen.",
       "Sie bekommen die Karte und die PIN in etwa einer Woche per Post."
-    ]
+    ],
+    "cultural_theme": "Society"
   },
   {
     "id": "dlg-b2-mietvertrag",
@@ -10952,7 +11119,9 @@
     "dictation": [
       "Die Kaltmiete beträgt 720 Euro und die Nebenkosten liegen bei 180 Euro.",
       "Für die ersten zwei Jahre ist eine Staffelmiete vereinbart; die Beträge und Termine stehen im Vertrag."
-    ]
+    ],
+    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
+    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
   },
   {
     "id": "d-a0-04",
@@ -11025,7 +11194,9 @@
     "dictation": [
       "Ich heiße Layla.",
       "Ich komme aus Syrien."
-    ]
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
   },
   {
     "id": "d-a0-05",
@@ -11097,7 +11268,8 @@
     ],
     "dictation": [
       "Buchstabieren Sie bitte!"
-    ]
+    ],
+    "cultural_theme": "Greeting"
   },
   {
     "id": "d-a0-06",
@@ -11170,7 +11342,8 @@
     "dictation": [
       "Einen Kaffee, bitte!",
       "Mit Milch, bitte."
-    ]
+    ],
+    "cultural_theme": "Introduction"
   },
   {
     "id": "d-a0-07",
@@ -11237,7 +11410,8 @@
     ],
     "dictation": [
       "Ich bin 22 Jahre alt."
-    ]
+    ],
+    "cultural_theme": "Introduction"
   },
   {
     "id": "d-a0-08",
@@ -11300,7 +11474,9 @@
     "dictation": [
       "Auf Wiedersehen!",
       "Schönen Tag noch!"
-    ]
+    ],
+    "cultural_theme": "Weihnachten - Christmas traditions",
+    "cultural_note": "Theme: Weihnachten - Christmas traditions"
   },
   {
     "id": "hoer-a1-01",
@@ -11348,7 +11524,8 @@
     "dictation": [
       "Achtung, Achtung! Der Zug RE 10 nach Köln fährt heute um 14 Uhr 25 von Gleis 3."
     ],
-    "hoertext": true
+    "hoertext": true,
+    "cultural_theme": "Directions"
   },
   {
     "id": "hoer-a1-02",
@@ -11396,7 +11573,8 @@
     "dictation": [
       "Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent."
     ],
-    "hoertext": true
+    "hoertext": true,
+    "cultural_theme": "Work"
   },
   {
     "id": "hoer-a2-01",
@@ -11444,7 +11622,9 @@
     "dictation": [
       "Unsere Sprechzeiten sind Montag bis Freitag von 8 bis 12 und Dienstag und Donnerstag von 15 bis 18 Uhr."
     ],
-    "hoertext": true
+    "hoertext": true,
+    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
+    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
   },
   {
     "id": "hoer-a2-02",
@@ -11492,7 +11672,8 @@
     "dictation": [
       "Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad."
     ],
-    "hoertext": true
+    "hoertext": true,
+    "cultural_theme": "Accommodation"
   },
   {
     "id": "hoer-b1-01",
@@ -11540,7 +11721,9 @@
     "dictation": [
       "Ich habe schon einen neuen Termin für den 18. November um 10 Uhr vorgeschlagen."
     ],
-    "hoertext": true
+    "hoertext": true,
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
   },
   {
     "id": "hoer-b2-01",
@@ -11588,7 +11771,8 @@
     "dictation": [
       "Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen."
     ],
-    "hoertext": true
+    "hoertext": true,
+    "cultural_theme": "Future plans"
   },
   {
     "id": "d-a0-09",
@@ -11655,7 +11839,8 @@
     ],
     "dictation": [
       "Das macht 2,50 Euro."
-    ]
+    ],
+    "cultural_theme": "Social contacts"
   },
   {
     "id": "d-a0-10",
@@ -11717,7 +11902,8 @@
     ],
     "dictation": [
       "Es ist halb drei."
-    ]
+    ],
+    "cultural_theme": "Introduction"
   },
   {
     "id": "d-a0-11",
@@ -11784,7 +11970,8 @@
     ],
     "dictation": [
       "Ich habe Kopfschmerzen und Fieber."
-    ]
+    ],
+    "cultural_theme": "Daily routines"
   },
   {
     "id": "d-a0-12",
@@ -11846,7 +12033,9 @@
     ],
     "dictation": [
       "Ja, ich habe einen Bruder und zwei Schwestern."
-    ]
+    ],
+    "cultural_theme": "Umwelt - Environmental awareness",
+    "cultural_note": "Theme: Umwelt - Environmental awareness"
   },
   {
     "id": "d-a0-13",
@@ -11908,7 +12097,8 @@
     ],
     "dictation": [
       "Nein, fünf Minuten zu Fuß."
-    ]
+    ],
+    "cultural_theme": "Greeting"
   },
   {
     "id": "d-a0-ht01",
@@ -11960,7 +12150,8 @@
     ],
     "dictation": [
       "Achtung, Gleis 3!"
-    ]
+    ],
+    "cultural_theme": "Daily routines"
   },
   {
     "id": "d-a1-ht01",
@@ -11999,7 +12190,8 @@
     ],
     "dictation": [
       "Sie haben die Praxis von Dr. Lehmann erreicht."
-    ]
+    ],
+    "cultural_theme": "Directions"
   },
   {
     "id": "d-a1-ht02",
@@ -12038,7 +12230,8 @@
     ],
     "dictation": [
       "Guten Morgen, liebe Hörerinnen und Hörer!"
-    ]
+    ],
+    "cultural_theme": "Hobbies"
   },
   {
     "id": "d-a2-ht01",
@@ -12077,7 +12270,9 @@
     ],
     "dictation": [
       "Sehr geehrte Kundinnen und Kunden!"
-    ]
+    ],
+    "cultural_theme": "Bierbrauerei - German beer culture",
+    "cultural_note": "Theme: Bierbrauerei - German beer culture"
   },
   {
     "id": "d-b1-ht01",
@@ -12116,7 +12311,8 @@
     ],
     "dictation": [
       "Am morgigen Dienstag werden Busse und Bahnen in der Stadt wegen eines Warnstreiks einer Gewerkschaft nur eingeschränkt fahren."
-    ]
+    ],
+    "cultural_theme": "Society"
   },
   {
     "id": "d-b1-ht02",
@@ -12155,7 +12351,9 @@
     ],
     "dictation": [
       "Sehr geehrte Fahrgäste, wir bitten Sie, die Verspätung von etwa 15 Minuten zu entschuldigen."
-    ]
+    ],
+    "cultural_theme": "Musik - Classical music (Beethoven, Bach)",
+    "cultural_note": "Theme: Musik - Classical music (Beethoven, Bach)"
   },
   {
     "id": "d-b2-ht01",
@@ -12194,7 +12392,8 @@
     ],
     "dictation": [
       "Umweltaktivisten haben heute Morgen eine Autobahn in einer Großstadt blockiert, indem sie sich auf der Fahrbahn festklebten."
-    ]
+    ],
+    "cultural_theme": "Innovation"
   },
   {
     "id": "d-b2-ht02",
@@ -12233,7 +12432,8 @@
     ],
     "dictation": [
       "Guten Tag, Sie haben unser Büro erreicht."
-    ]
+    ],
+    "cultural_theme": "Future plans"
   },
   {
     "id": "d-a0-ht02",
@@ -12280,7 +12480,9 @@
     ],
     "dictation": [
       "Heute sind die Bananen im Angebot: ein Kilo für einen Euro."
-    ]
+    ],
+    "cultural_theme": "Bierbrauerei - German beer culture",
+    "cultural_note": "Theme: Bierbrauerei - German beer culture"
   },
   {
     "id": "d-a0-ht03",
@@ -12342,7 +12544,8 @@
     ],
     "dictation": [
       "Was möchten Sie?"
-    ]
+    ],
+    "cultural_theme": "Daily routines"
   },
   {
     "id": "d-a1-ht03",
@@ -12381,7 +12584,8 @@
     ],
     "dictation": [
       "Achtung, Gleis 5!"
-    ]
+    ],
+    "cultural_theme": "Personal info"
   },
   {
     "id": "d-a2-ht02",
@@ -12415,7 +12619,8 @@
     ],
     "dictation": [
       "Hallo Ahmed, hier ist Sabine Becker von der Volkshochschule."
-    ]
+    ],
+    "cultural_theme": "Food"
   },
   {
     "id": "d-a2-ht03",
@@ -12449,7 +12654,9 @@
     ],
     "dictation": [
       "Die Polizei meldet einen Unfall auf der A3 kurz hinter der Anschlussstelle Lohmar in Fahrtrichtung Frankfurt."
-    ]
+    ],
+    "cultural_theme": "Automobilindustrie - German car industry",
+    "cultural_note": "Theme: Automobilindustrie - German car industry"
   },
   {
     "id": "d-b1-ht03",
@@ -12498,7 +12705,9 @@
     ],
     "dictation": [
       "Frau Neumann, Sie protestieren gegen die neue Autobahn durch den Wald."
-    ]
+    ],
+    "cultural_theme": "Literatur - German literature",
+    "cultural_note": "Theme: Literatur - German literature"
   },
   {
     "id": "d-b2-ht03",
@@ -12532,6 +12741,7 @@
     ],
     "dictation": [
       "Betrachten wir ein Beispiel: Künstliche Intelligenz könnte berufliche Aufgaben verändern."
-    ]
+    ],
+    "cultural_theme": "Environment"
   }
 ]

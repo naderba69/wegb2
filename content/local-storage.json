@@ -1,0 +1,199 @@
+{
+  "user_id": "anonymous",
+  "level": "A1",
+  "last_dialogue": "d-a1-01",
+  "completed_exercises": [],
+  "stats": {
+    "total_exercises": 0,
+    "correct_answers": 0,
+    "streak_days": 0,
+    "last_activity": null
+  },
+  "preferences": {
+    "auto_play_audio": true,
+    "show_transcript": true,
+    "difficulty": "medium",
+    "language_focus": "both"
+  },
+  "session_stats": {
+    "exercises_today": 0,
+    "start_date": null,
+    "last_session": null
+  },
+  "users": {
+    "current_user": "anonymous",
+    "guest_mode": true,
+    "user_history": [],
+    "anonymous": {
+      "name": "Guest",
+      "level": "A1",
+      "total_exercises": 0,
+      "correct_answers": 0,
+      "streak_days": 0,
+      "created": null,
+      "last_login": null
+    }
+  },
+  "user_profiles": {
+    "anonymous": {
+      "name": "Guest",
+      "level": "A1",
+      "total_exercises": 0,
+      "correct_answers": 0,
+      "streak_days": 0,
+      "created": null,
+      "last_login": null
+    }
+  },
+  "current_user": "anonymous",
+  "guest_mode": true,
+  "user_history": [],
+  "first_contact": null,
+  "session_start": null,
+  "points": {
+    "total_points": 0,
+    "points_today": 0,
+    "badge_progress": {
+      "exercises_completed": 0,
+      "accuracy_percentage": 0,
+      "streak_milestones": [
+        10,
+        25,
+        50,
+        100
+      ],
+      "achieved_badges": []
+    }
+  },
+  "achievements": {
+    "definitions": {
+      "first_exercise": {
+        "name": "Exercise Beginner",
+        "description": "Complete your first exercise",
+        "points": 10,
+        "icon": "🏁"
+      },
+      "accuracy_50": {
+        "name": "Half Correct",
+        "description": "Get 50% accuracy",
+        "points": 15,
+        "icon": "📊"
+      },
+      "accuracy_80": {
+        "name": "Good",
+        "description": "Get 80% accuracy",
+        "points": 25,
+        "icon": "🎯"
+      },
+      "streak_7": {
+        "name": "Week Streak",
+        "description": "7-day streak",
+        "points": 30,
+        "icon": "🔥"
+      },
+      "streak_30": {
+        "name": "Month Streak",
+        "description": "30-day streak",
+        "points": 50,
+        "icon": "💯"
+      },
+      "exercise_10": {
+        "name": "Dedicated",
+        "description": "Complete 10 exercises",
+        "points": 20,
+        "icon": "📝"
+      },
+      "exercise_50": {
+        "name": "Serious Learner",
+        "description": "Complete 50 exercises",
+        "points": 40,
+        "icon": "📚"
+      },
+      "exercise_100": {
+        "name": "Master",
+        "description": "Complete 100 exercises",
+        "points": 75,
+        "icon": "👑"
+      },
+      "level_complete": {
+        "name": "Level Complete",
+        "description": "Complete all exercises for a level",
+        "points": 35,
+        "icon": "🎓"
+      },
+      "culture_learner": {
+        "name": "Culture Enthusiast",
+        "description": "Engage with cultural content",
+        "points": 25,
+        "icon": "🌍"
+      }
+    },
+    "user_progress": {
+      "exercises_completed": 0,
+      "accuracy_current": 0,
+      "total_earned_points": 0,
+      "badges_earned": []
+    }
+  },
+  "studyGoals": {
+    "currentGoal": "Complete A1 level",
+    "goalProgress": 0,
+    "targetExercises": 23,
+    "completedThisSession": 0,
+    "lastGoalReset": null
+  },
+  "sessionHistory": [],
+  "languageFocus": {
+    "german": true,
+    "arabic": false,
+    "focusAreas": [
+      "vocabulary",
+      "grammar",
+      "listening",
+      "speaking"
+    ]
+  },
+  "teacher_info": {
+    "teacher_name": "Wegb2 German Course",
+    "course_name": "German A0-B2 Self-Study",
+    "total_hours_estimated": 80,
+    "total_study_minutes": 0,
+    "lessons_completed": 0,
+    "course_completed": false
+  },
+  "level_progress": {
+    "A0": {
+      "completed_lessons": 10,
+      "total_lessons": 10,
+      "progress_percent": 100
+    },
+    "A1": {
+      "completed_lessons": 0,
+      "total_lessons": 23,
+      "progress_percent": 0
+    },
+    "A2": {
+      "completed_lessons": 0,
+      "total_lessons": 14,
+      "progress_percent": 0
+    },
+    "B1": {
+      "completed_lessons": 0,
+      "total_lessons": 14,
+      "progress_percent": 0
+    },
+    "B2": {
+      "completed_lessons": 0,
+      "total_lessons": 14,
+      "progress_percent": 0
+    }
+  },
+  "weekly_goals": {
+    "current_week": 1,
+    "goals_set": [
+      "Complete 5 exercises this week",
+      "Practice listening 10 minutes"
+    ],
+    "goals_completed": 0
+  }
+}
