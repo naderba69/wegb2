@@ -1,0 +1,23 @@
+{
+  "user_id": "anonymous",
+  "level": "A1",
+  "last_dialogue": "d-a1-01",
+  "completed_exercises": [],
+  "stats": {
+    "total_exercises": 0,
+    "correct_answers": 0,
+    "streak_days": 0,
+    "last_activity": null
+  },
+  "preferences": {
+    "auto_play_audio": true,
+    "show_transcript": true,
+    "difficulty": "medium",
+    "language_focus": "both"
+  },
+  "session_stats": {
+    "exercises_today": 0,
+    "start_date": null,
+    "last_session": null
+  }
+}
