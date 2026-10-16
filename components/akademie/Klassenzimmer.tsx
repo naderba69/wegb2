@@ -94,7 +94,7 @@ export function Klassenzimmer({
   const lang = progress.settings.uiLang === "auto" ? "ar" : progress.settings.uiLang;
   const [pauseSaved, setPauseSaved] = useState(false);
   // 🎬 R187/U1: وضع الجلسة المتسلسلة — مهمّة ← تسليم ← التالية بزرٍّ واحد، وحرية الرقائق باقية
-  const [spieler, setSpieler] = useState(false);
+  const [spieler, setSpieler] = useState(true);
   const savePause = () => {
     onPauseSession?.();
     try { localStorage.setItem(`wegb2:day-step:${day}`, String(stepFrei)); } catch { /* قد يكون التخزين محظوراً */ }
@@ -246,7 +246,7 @@ export function Klassenzimmer({
 
       {/* ── 🔥 إحماء الاسترجاع: يظهر مع مهمّة الاسترجاع فقط ── */}
       {currentTask?.kind === "wiederholen" && warmupSaetze.length > 0 && (
-        <details className="dirb-details" open>
+        <details className="dirb-details">
           <summary>🔥 إحماء: جمل مساء الأمس — استمع واستحضر قبل أن تُسترجَع</summary>
           <div style={{ display: "grid", gap: "0.5rem", marginTop: "0.6rem" }}>
             {warmupSaetze.map((s) => (
@@ -310,6 +310,30 @@ export function Klassenzimmer({
               {restMinuten > 0 && <> · متبقٍّ مخططًا نحو <span className="rtl-num">{restMinuten}</span> دقيقة</>}
               {" "}· اختر أيّ رقاقة متى شئت — التسلسل لا يلغي حريتك.
             </div>
+            <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap" }} data-testid="sitzung-fortschritt" role="list" aria-label="تقدّم مهام اليوم">
+              {plan.tasks.map((tk, i) => {
+                const r = resultOf(tk.id);
+                const jetzt = i === stepFrei;
+                return (
+                  <span
+                    key={tk.id}
+                    role="listitem"
+                    title={`${i + 1}. ${tk.titleAr}${r ? " — مُسلَّمة" : jetzt ? " — الحالية" : ""}`}
+                    aria-label={`المهمة ${i + 1}${r ? " مُسلَّمة" : jetzt ? " الحالية" : ""}`}
+                    style={{
+                      width: "30px", height: "30px", borderRadius: "50%",
+                      display: "inline-flex", alignItems: "center", justifyContent: "center",
+                      fontSize: "0.72rem", fontWeight: 800,
+                      border: jetzt ? "3px solid var(--color-gold)" : "1px solid var(--color-line)",
+                      background: r ? "var(--color-a1)" : jetzt ? "var(--color-cola)" : "transparent",
+                      color: r || jetzt ? "var(--ui-on-accent)" : "var(--color-ink2)",
+                    }}
+                  >
+                    {r ? "✓" : i + 1}
+                  </span>
+                );
+              })}
+            </div>
             {currentTask && resultOf(currentTask.id) && naechsteOffeneGesamt >= 0 && (
               <button
                 type="button"
@@ -329,8 +353,12 @@ export function Klassenzimmer({
           </div>
         )}
 
-        {/* ── رقائق مهام اليوم ── */}
-        <div className="dirb-chiprow" role="list" aria-label="مهام اليوم">
+        {/* ── رقائق مهام اليوم: مطوية في وضع الجلسة المركّز، مفتوحة في الوضع الحرّ (R194) ── */}
+        <details key={spieler ? "sitzung" : "frei"} data-testid="aufgaben-details" {...(spieler ? {} : { open: true })}>
+          <summary style={{ cursor: "pointer", fontWeight: 700, minHeight: "44px", display: "flex", alignItems: "center" }}>
+            🗂️ مهام اليوم ({plan.tasks.length}) — اختر أيّ مهمة بحرّية متى شئت
+          </summary>
+        <div className="dirb-chiprow" role="list" aria-label="مهام اليوم" style={{ marginTop: "0.4rem" }}>
           {plan.tasks.map((tk, i) => {
             const r = resultOf(tk.id);
             const passed = r?.passed;
@@ -360,6 +388,7 @@ export function Klassenzimmer({
             );
           })}
         </div>
+        </details>
 
         {currentTask && (
           <div style={{ display: "grid", gap: "0.8rem" }}>

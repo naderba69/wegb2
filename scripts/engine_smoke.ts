@@ -13273,6 +13273,17 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K286b الرئيسية تعرض المسار قبل المشغّل، وخطة الأسبوع غادرتها، وعُقد المسار مشتقّة من الأيام المغلقة مع إفصاح عدم-التنقّل");
 }
 
+// ===== K287 (R194 · Redesign Etappe 2): Der Sitzungsplayer ist Standard und
+// fokussiert — Aufgaben-Chips eingeklappt, Fortschritts-Punkte sichtbar, das
+// Aufwärmen zu — freie Wahl und alle Wege bleiben (K280/XCV unverändert wahr). =====
+{
+  const kzSrc2 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+  ok(kzSrc2.includes("useState(true)") && kzSrc2.includes('data-testid="aufgaben-details"') &&
+     kzSrc2.includes('data-testid="sitzung-fortschritt"') && kzSrc2.includes('data-testid={`aufgabe-chip-${i}`}') &&
+     kzSrc2.includes("اختر أيّ مهمة بحرّية متى شئت") && kzSrc2.includes('data-testid="sitzung-weiter"'),
+    "K287 المشغّل افتراضي والرقائق مطوية خلف ملخّص صريح مع بقاء كل رقاقة وزرّ التالية — تركيز بلا حجب للحرية");
+}
+
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den
 // echten CSS-Tokens, de-Sprachkennzeichnung für Screenreader, Fokus/​Skip-Link. =====
 {

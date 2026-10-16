@@ -3341,8 +3341,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
       resultOf: () => undefined,
     } as never));
     const modus = rootEl.querySelector('[data-testid="sitzung-modus"]') as HTMLElement | null;
-    ok(!!modus, "XCV1 زرّ وضع الجلسة المتسلسلة حاضر في رأس التدريب");
-    if (modus) click(modus);
+    ok(!!modus && modus.getAttribute("aria-pressed") === "true",
+      "XCV1 وضع الجلسة المتسلسلة هو الافتراضي الآن (R194: التركيز أولًا) وزرّه حاضر في رأس التدريب");
     const leiste = rootEl.querySelector('[data-testid="sitzung-spieler"]');
     ok(!!leiste && (leiste.textContent ?? "").includes(`من`) && !!rootEl.querySelector('[data-testid="aufgabe-chip-1"]'),
       "XCV2 الشريط يعرض التقدّم من نتائج الخطة، ورقائق الاختيار الحرّ باقية في الوضع نفسه");
@@ -3354,8 +3354,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       ...basisProps, progress: progFertig, stepFrei: 0, ritual: ritualUrteil(plan, progFertig),
       resultOf: (id: string) => (id === t0.id ? { done: true, passed: true, score: 3, total: 3, attempts: 1 } : undefined),
     } as never));
-    const modus2 = rootEl.querySelector('[data-testid="sitzung-modus"]') as HTMLElement | null;
-    if (modus2) click(modus2);
+
     const weiter = rootEl.querySelector('[data-testid="sitzung-weiter"]') as HTMLElement | null;
     ok(!!weiter && naechsteOffeneIdx > 0 && (weiter.textContent ?? "").includes(plan.tasks[naechsteOffeneIdx].titleAr.split(" ")[0]),
       "XCV3 بعد تسليم الأولى يظهر زرّ «المهمة التالية» حاملًا اسم المهمة المفتوحة التالية فعلًا");
