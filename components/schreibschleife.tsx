@@ -111,9 +111,9 @@ export function SchreibSchleife({ taskId, v1 }: { taskId: string; v1: string }) 
           s.art === "gleich" ? (
             <span key={i}>{s.text} </span>
           ) : s.art === "weg" ? (
-            <span key={i} style={{ background: "#f8d7da", textDecoration: "line-through", borderRadius: "3px", padding: "0 2px" }}>{s.text} </span>
+            <span key={i} style={{ background: "#f8d7da", color: "#4a0a12", textDecoration: "line-through", borderRadius: "3px", padding: "0 2px" }}>{s.text} </span>
           ) : (
-            <span key={i} style={{ background: "#d4edda", borderRadius: "3px", padding: "0 2px" }}>{s.text} </span>
+            <span key={i} style={{ background: "#d4edda", color: "#0b3d1e", borderRadius: "3px", padding: "0 2px" }}>{s.text} </span>
           ),
         )}
       </article>

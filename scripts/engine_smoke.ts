@@ -13218,6 +13218,40 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K283b نظرة الصفّ في الإعدادات، وتصديرها ملفّات محلية (JSON + HTML طباعة) بلا أيّ طلب شبكي");
 }
 
+// ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den
+// echten CSS-Tokens, de-Sprachkennzeichnung für Screenreader, Fokus/​Skip-Link. =====
+{
+  const css = readFileSync("app/globals.css", "utf8");
+  const tok = (name: string) => {
+    const m = css.match(new RegExp(name.replace(/[-]/g, "\\-") + ":\\s*(#[0-9a-fA-F]{6})"));
+    return m?.[1];
+  };
+  const lum = (hex: string) => {
+    const v = [0, 2, 4].map((i) => parseInt(hex.slice(1 + i, 3 + i), 16) / 255)
+      .map((x) => (x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4)));
+    return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2];
+  };
+  const ratio = (a: string, b: string) => {
+    const [l1, l2] = [lum(a), lum(b)].sort((x, y) => y - x);
+    return (l1 + 0.05) / (l2 + 0.05);
+  };
+  const BG = tok("--ui-bg")!, SF = tok("--ui-surface")!, TX = tok("--ui-text")!, MU = tok("--ui-muted")!;
+  const paare: [string, string, string][] = [
+    ["نص/خلفية", TX, BG], ["نص/سطح", TX, SF], ["باهت/خلفية", MU, BG], ["باهت/سطح", MU, SF],
+    ["أخضر/خلفية", tok("--ui-green")!, BG], ["ذهبي/خلفية", tok("--ui-gold")!, BG],
+    ["خطر/خلفية", tok("--ui-danger")!, BG], ["حبر-على-أخضر", tok("--ui-on-accent")!, tok("--ui-green")!],
+    ["محذوف-M5", "#4a0a12", "#f8d7da"], ["مضاف-M5", "#0b3d1e", "#d4edda"],
+  ];
+  const schlechteste = Math.min(...paare.map(([, f, b]) => ratio(f, b)));
+  ok(paare.every(([, f, b]) => ratio(f, b) >= 4.5),
+    `K284a تباين WCAG AA محسوب من رموز CSS الفعلية: أضعف زوج ${schlechteste.toFixed(2)}:1 (≥4.5) عبر ${paare.length} أزواج واجهة وفرق`);
+  const deSrc = readFileSync("components/De.tsx", "utf8");
+  const dsSrc = readFileSync("components/dirb/DesignSystem.tsx", "utf8");
+  ok((deSrc.match(/lang="de"/g) ?? []).length >= 2 && css.includes(":focus-visible") && css.includes("--ui-focus") &&
+     dsSrc.includes('href="#main-content"') && css.includes(".ui-skip-link") && css.includes("prefers-reduced-motion"),
+    "K284b النص الألماني موسوم lang=«de» لقارئات الشاشة، وقاعدة تركيز مرئية عالمية، ورابط تخطٍّ، واحترام تقليل الحركة");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

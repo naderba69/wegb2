@@ -3364,6 +3364,22 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "XCV4 النقر ينقل الخطوة إلى المهمة التالية المفتوحة بالضبط (تسلسل لا قفز أعمى)");
   }
 
+  /* ═══ XCVI — وصولية U5 تحت الإصبع: لغة الألماني معلنة وتخطٍّ وتركيز ═══ */
+  {
+    const { De, DeBlock } = await import("../components/De");
+    const { UiAppShell } = await import("../components/dirb/DesignSystem");
+    mount(React.createElement(UiAppShell, null,
+      React.createElement("main", { id: "main-content", tabIndex: -1 },
+        React.createElement(De, null, "Guten Morgen"),
+        React.createElement(DeBlock, null, "Wie geht es dir?"))));
+    const deEl = Array.from(d0.querySelectorAll('[lang="de"]'));
+    const skip = d0.querySelector('a.ui-skip-link[href="#main-content"]');
+    ok(deEl.length >= 2 && deEl.every((e) => (e.textContent ?? "").length > 0),
+      "XCVI1 كلّ نصّ ألماني عبر De/DeBlock يحمل lang=«de» فعليًا في DOM لقارئ الشاشة");
+    ok(!!skip && !!d0.getElementById("main-content"),
+      "XCVI2 رابط التخطّي يشير إلى هدفٍ موجود (#main-content) في الهيكل نفسه");
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

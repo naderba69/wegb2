@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R190: **Axis C + M vollständig · Axis U: U1–U4 ✅ (R187–R190)**
+> Status nach R191: **Axis C + M vollständig · Axis U: U1–U5 ✅ (R187–R191)**
+> R191 (U5 A11y) — alle Gates grün (smoke 1756/0, interaktiv 715/0). Weiter: U6 (letzte Roadmap-Runde R192), danach Abschluss-Audit.
 > R190 (U4 Lehrermodus) — alle Gates grün (smoke 1754/0). Weiter: U5, U6.
 > R189 (U3 Offline-PWA) — alle Gates grün (smoke 1752/0). Weiter: U4–U6.
 > R188 (U2 ehrliche Motivation) — alle Gates grün (smoke 1750/0). Weiter: U3–U6.
@@ -349,6 +350,14 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R191 — U5 Barrierefreiheit: Kontrast-Nachweis + Sprachkennzeichnung — abgeschlossen ✅
+
+- **Befund**: Fokus-Ring, Skip-Link, Reduced-Motion und Touch-Sweep (XXXIV) waren stark;
+  zwei echte Lücken geschlossen: `De`/`DeBlock` (das überall genutzte Deutsch-Wrapper) trugen
+  kein `lang="de"` — jetzt gesetzt; die hellen M5-Diff-Chips bekamen rechnerisch geprüften
+  dunklen Text. Keine Token-Änderung nötig: schlechtestes Paar 6.96:1 (K284a rechnet aus CSS).
+- **Nachweise**: tsc ✓ · smoke **1756/0** · interaktiv **715/0** (XCVI1/2 DOM-Belege) · audit 0 · build ✓.
 
 ## R190 — U4 Lehrermodus: lokale Klassenansicht + Export/Druck — abgeschlossen ✅
 
