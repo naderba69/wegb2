@@ -411,7 +411,7 @@ export interface Progress {
     tempo: Tempo;
     voiceName?: string;
     /** مدرّس LLM اختياري (OpenAI-compatible) — يبقى محلياً في متصفحك */
-    llm?: { baseUrl: string; apiKey: string; model: string };
+    llm?: { baseUrl: string; apiKey: string; model: string; anbieter?: string; zugestimmt?: boolean };
     /** 🎙️ التعرّف السحابي على الكلام (Web Speech API) — يُرسِل الصوتَ إلى خدمة المتصفّح الخارجية.
      *  اختياريٌّ صريح: إن عُطِّل فُتح المسارُ المحلّيُّ البديل ولا يُحسبُ شيءٌ في الشبكة. */
     cloudSpeech?: boolean;

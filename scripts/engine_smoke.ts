@@ -49,7 +49,7 @@ import {
   elternBrief,
   FEHLER_KAT,
 } from "../lib/fehler";
-import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct } from "../lib/grader";
+import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER } from "../lib/grader";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
@@ -12606,6 +12606,35 @@ void 0;
   ok(qc.dateien.length === 164 && qc.anomalienGesamt === 0 && qc.gruppen.ki.anzahl === 82 && qc.gruppen.haus.anzahl === 82 &&
      qc.dateien.every((f: any) => f.ok && f.dauerS >= 3 && f.zeichenProSekunde >= 5 && f.zeichenProSekunde <= 22),
     `K261b فحصُ الصوتِ الآليُّ R169: ‏164/164 ملفَ حوارٍ مفكوكاً (82 دار + 82 KI) بلا شذوذ — سرعةُ KI الوسطى ${qc.gruppen.ki.zeichenProSekundeMedian} ح/ث مقابل الدار ${qc.gruppen.haus.zeichenProSekundeMedian}؛ اكتمالٌ وقابليةُ سماعٍ مثبتة آلياً، لا ادّعاءَ سماعٍ بشري`);
+}
+
+/* ═══ K262 · R170: ذكاء اصطناعي اختياري بمفتاح المتعلم (Gemini/OpenRouter مجاني) — موافقة وإفصاح ولا مفاتيح في الكود ═══ */
+{
+  const or = LLM_ANBIETER.find((a) => a.id === "openrouter");
+  const ge = LLM_ANBIETER.find((a) => a.id === "gemini");
+  ok(!!or && or.baseUrl === "https://openrouter.ai/api/v1" && or.modell.includes(":free") && or.schluesselUrl === "https://openrouter.ai/keys" &&
+     !!ge && ge.baseUrl === "https://generativelanguage.googleapis.com/v1beta/openai" && ge.schluesselUrl === "https://aistudio.google.com/apikey" &&
+     LLM_ANBIETER.every((a) => a.hinweisAr.length > 20),
+    "K262a مزوّدا الاقتراح المعتمَد حاضرين بعناوينهما الرسمية ونموذج OpenRouter مجاني (:free) وروابط مفاتيح مجانية وإفصاح بيانات لكل مزوّد");
+  const codeAlle = [...collectR262("app"), ...collectR262("components"), ...collectR262("lib")].map((f) => readFileSync(f, "utf8")).join("\n");
+  ok(!/\bsk-[A-Za-z0-9_-]{16,}\b/.test(codeAlle) && !/AIza[0-9A-Za-z_-]{20,}/.test(codeAlle),
+    "K262b لا مادة مفتاح API في الكود أبدًا — المفتاح يعيش في متصفح المتعلم فقط (BYOK)");
+  const graderSrc = readFileSync("lib/grader.ts", "utf8");
+  const einstSrc = readFileSync("app/einstellungen/page.tsx", "utf8");
+  const lehrerSrc = readFileSync("components/lehrer.tsx", "utf8");
+  ok(graderSrc.includes("if (!llmBereit(cfg)) return null") && graderSrc.includes("zugestimmt") &&
+     einstSrc.includes("أوافق على إرسال نصوص كتابتي إلى المزوّد المختار") && einstSrc.includes("احصل على مفتاح مجاني") &&
+     lehrerSrc.includes("llmBereit(cfg)") && lehrerSrc.includes("تصحيح مولّد بالذكاء الاصطناعي عبر مزوّد خارجي"),
+    "K262c سلسلة الموافقة كاملة: لا إرسال بلا مفتاح+موافقة (llmBereit)، وإفصاح وموافقة صريحة في الإعدادات، ووسم ناتج الذكاء الاصطناعي عند العرض");
+}
+
+function collectR262(dir: string, out: string[] = []): string[] {
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    const r = `${dir}/${e.name}`;
+    if (e.isDirectory()) collectR262(r, out);
+    else if (/\.tsx?$/.test(r)) out.push(r);
+  }
+  return out;
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

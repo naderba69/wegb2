@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useProgress, loadProgress } from "@/lib/store";
 import { LANG_LABEL, effectiveLang } from "@/lib/i18n";
-import { noteFromPct } from "@/lib/grader";
+import { noteFromPct, LLM_ANBIETER } from "@/lib/grader";
 import { TEMPO_LABEL } from "@/lib/types";
 import { Fehlerkartei, Lernstrategien } from "@/components/fehler-ui";
 import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
@@ -19,6 +19,17 @@ export default function Einstellungen() {
   const [msg, setMsg] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const lang = effectiveLang(progress);
+  // R170: إعدادات مدرّس الذكاء الاختياري (BYOK) — تحديث جزئي واحد لكل الحقول
+  const setLlm = (patch: Partial<{ baseUrl: string; apiKey: string; model: string; anbieter: string; zugestimmt: boolean }>) =>
+    update((pr) => ({
+      ...pr,
+      settings: {
+        ...pr.settings,
+        llm: { baseUrl: "", apiKey: "", model: "", ...(pr.settings.llm ?? {}), ...patch },
+      },
+    }));
+  const llmCfg = progress.settings.llm;
+  const aktiverAnbieter = LLM_ANBIETER.find((a) => a.id === llmCfg?.anbieter) ?? LLM_ANBIETER[LLM_ANBIETER.length - 1];
 
   useEffect(() => {
     warmVoices((vs) => setVoices(vs));
@@ -293,86 +304,87 @@ export default function Einstellungen() {
           <summary>🧠 محرك التصحيح</summary>
           <p style={{ fontSize: "0.9rem", lineHeight: 1.9, margin: "0.6rem 0 0.2rem" }}>
             deterministic (مطابقة، تطبيع، ترتيب، كلمات مفتاحية، تسميع ≥85%) عبر <code>lib/grader.ts</code> بواجهة{" "}
-            <code>Grader</code> جاهزة لاستبدالها بـ <code>LLMGrader</code> لاحقاً دون تغيير أي شاشة. صفر خدمات خارجية اليوم.
+            <code>Grader</code> جاهزة لاستبدالها بـ <code>LLMGrader</code> دون تغيير أي شاشة. افتراضيًا صفر خدمات خارجية: كلّ شيء محلي، والخارجي الوحيد اختياريّ بمفتاحك المجاني وموافقتك الصريحة (قسم «مدرّس الذكاء الاصطناعي» هنا).
             يرافقه «مراجعة المدرّس العميقة»: مقارنة كلمة-بكلمة مع تصنيف الخطأ (أداة/إملاء/همزة/فعل/ترتيب…) وشرح عربي.
           </p>
         </details>
 
         <details className="dirb-details">
-          <summary>🤖 مدرّس الذكاء الاصطناعي (اختياري)</summary>
+          <summary>🤖 مدرّس الذكاء الاصطناعي (اختياري — بمفتاحك المجاني)</summary>
           <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.7rem", lineHeight: 1.9 }}>
-            أضف خدمة متوافقة مع OpenAI لتحصل على تصحيح تحريري لمقالاتك وملاحظات مفصّلة. يعمل التطبيق كاملاً بدونها،
-            والمفتاح يبقى في متصفحك فقط (لا خوادم لنا).
+            اقتراحٌ معتمَد من المالك (R170): تصحيح تحريري أعمق لنصوصك عبر مزوّد ذكاء اصطناعي مجاني
+            <strong> بمفتاحك أنت (BYOK)</strong>. لا يُرسَل أيّ شيء في الخلفية أبدًا — الإرسال يحدث فقط حين تطلب
+            التصحيح بنفسك وبعد موافقتك الصريحة هنا. المفتاح يبقى في متصفحك فقط (لا خوادم لنا)،
+            والتطبيق كامل الوظائف محليًا بدون هذه الميزة.
           </p>
           <div style={{ display: "grid", gap: "0.5rem" }}>
+            <select
+              className="field"
+              value={llmCfg?.anbieter ?? ""}
+              onChange={(e) => {
+                const a2 = LLM_ANBIETER.find((x) => x.id === e.target.value);
+                if (!a2) { setLlm({ anbieter: "", zugestimmt: false }); return; }
+                setLlm({ anbieter: a2.id, baseUrl: a2.baseUrl || (llmCfg?.baseUrl ?? ""), model: a2.modell || (llmCfg?.model ?? "") });
+              }}
+            >
+              <option value="">— مطفأ (محلي فقط) —</option>
+              {LLM_ANBIETER.map((a2) => (
+                <option key={a2.id} value={a2.id}>{a2.nameAr}</option>
+              ))}
+            </select>
             <input
               className="field"
               dir="ltr"
-              placeholder="Base URL — مثال: https://api.openai.com/v1"
-              value={progress.settings.llm?.baseUrl ?? ""}
-              onChange={(e) =>
-                update((p) => ({
-                  ...p,
-                  settings: {
-                    ...p.settings,
-                    llm: {
-                      baseUrl: e.target.value,
-                      apiKey: p.settings.llm?.apiKey ?? "",
-                      model: p.settings.llm?.model ?? "",
-                    },
-                  },
-                }))
-              }
+              placeholder="Base URL"
+              value={llmCfg?.baseUrl ?? ""}
+              onChange={(e) => setLlm({ baseUrl: e.target.value })}
             />
             <input
               className="field"
               dir="ltr"
               type="password"
               placeholder="API Key (يبقى محلياً في متصفحك)"
-              value={progress.settings.llm?.apiKey ?? ""}
-              onChange={(e) =>
-                update((p) => ({
-                  ...p,
-                  settings: {
-                    ...p.settings,
-                    llm: {
-                      baseUrl: p.settings.llm?.baseUrl ?? "",
-                      apiKey: e.target.value,
-                      model: p.settings.llm?.model ?? "",
-                    },
-                  },
-                }))
-              }
+              value={llmCfg?.apiKey ?? ""}
+              onChange={(e) => setLlm({ apiKey: e.target.value })}
             />
             <input
               className="field"
               dir="ltr"
-              placeholder="Model — مثال: gpt-4o-mini"
-              value={progress.settings.llm?.model ?? ""}
-              onChange={(e) =>
-                update((p) => ({
-                  ...p,
-                  settings: {
-                    ...p.settings,
-                    llm: {
-                      baseUrl: p.settings.llm?.baseUrl ?? "",
-                      apiKey: p.settings.llm?.apiKey ?? "",
-                      model: e.target.value,
-                    },
-                  },
-                }))
-              }
+              placeholder="Model"
+              value={llmCfg?.model ?? ""}
+              onChange={(e) => setLlm({ model: e.target.value })}
             />
+            {llmCfg?.anbieter && aktiverAnbieter.schluesselUrl && (
+              <a className="btn btn-ghost" style={{ minHeight: "44px" }} href={aktiverAnbieter.schluesselUrl} target="_blank" rel="noreferrer">
+                🔑 احصل على مفتاح مجاني
+              </a>
+            )}
+            {llmCfg?.anbieter && (
+              <div className="card" style={{ padding: "0.7rem 0.9rem", fontSize: "0.88rem", lineHeight: 1.9 }}>
+                <div>📤 <strong>ما يُرسَل:</strong> نصّ كتابتك ونصّ المهمّة فقط، وحين تطلب التصحيح بنفسك فقط.</div>
+                <div>🏢 <strong>إلى مَن:</strong> {aktiverAnbieter.nameAr} — {aktiverAnbieter.hinweisAr}</div>
+                <label style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", marginTop: "0.5rem", cursor: "pointer" }}>
+                  <input
+                    type="checkbox"
+                    checked={!!llmCfg?.zugestimmt}
+                    onChange={(e) => setLlm({ zugestimmt: e.target.checked })}
+                    style={{ marginTop: "0.35rem" }}
+                  />
+                  <span><strong>أوافق على إرسال نصوص كتابتي إلى المزوّد المختار</strong> عند طلبي التصحيح صراحةً، وأعلم أنّ الناتج ذكاءٌ اصطناعيٌّ قد يخطئ فأراجعه بعينٍ ناقدة.</span>
+                </label>
+              </div>
+            )}
             <button
               className="btn btn-primary"
               style={{ minHeight: "48px" }}
               onClick={async () => {
                 const cfg = progress.settings.llm;
                 if (!cfg?.apiKey) return setMsg("أدخل مفتاح API أولاً.");
+                if (!cfg?.zugestimmt) return setMsg("فعّل موافقة الإرسال أولاً — بلا موافقة لا يغادر أيّ نصّ جهازك.");
                 setMsg("جارٍ الاختبار…");
                 const { llmKorrigieren } = await import("@/lib/grader");
                 const res = await llmKorrigieren(cfg, "Schreibe 2 Sätze über dich.", "Ich habe müde und ich bin arbeiten.");
-                setMsg(res ? "✅ الاتصال يعمل — المدرّس الذكي جاهز في مستشار الكتابة." : "❌ لم ينجح الاتصال — راجع القيم.");
+                setMsg(res ? "✅ الاتصال يعمل — المدرّس الذكي جاهز في مستشار الكتابة." : "❌ لم ينجح الاتصال — راجع القيم والمفتاح والنموذج.");
               }}
             >
               ▶️ اختبر الاتصال

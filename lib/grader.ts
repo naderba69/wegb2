@@ -361,6 +361,63 @@ export interface LlmCfg {
   baseUrl: string;
   apiKey: string;
   model: string;
+  /** مزوّد مختار من LLM_ANBIETER (أو "custom") — R170 */
+  anbieter?: string;
+  /** موافقة صريحة على إرسال نصّ الكتابة إلى المزوّد الخارجي — بلا موافقة لا إرسال (R170) */
+  zugestimmt?: boolean;
+}
+
+/**
+ * مزوّدو ذكاء اصطناعي اختياريون بمفتاح المتعلّم نفسه (BYOK) — اقتراح المالك R170.
+ * الافتراضي: مطفأ تمامًا؛ التطبيق كامل الوظائف محليًا بدون أيٍّ منها (R24).
+ * لا مفتاح ولا عنوان سرّي في الكود أبدًا — المفتاح يعيش في متصفح المتعلّم فقط.
+ * Gemini هنا عبر واجهته المتوافقة مع OpenAI رسميًا (ai.google.dev/gemini-api/docs/openai)،
+ * فيكفي مسار fetch الوحيد القائم في هذا الملف (K122c) للمزوّدين معًا.
+ */
+export interface LlmAnbieter {
+  id: string;
+  nameAr: string;
+  baseUrl: string;
+  /** نموذج افتراضي مجاني — قابل للتحرير؛ توفّر النماذج المجانية يتغيّر عند المزوّد */
+  modell: string;
+  /** صفحة الحصول على مفتاح مجاني */
+  schluesselUrl: string;
+  /** إفصاح بيانات خاص بالمزوّد يُعرَض قبل الموافقة */
+  hinweisAr: string;
+}
+
+export const LLM_ANBIETER: LlmAnbieter[] = [
+  {
+    id: "openrouter",
+    nameAr: "OpenRouter — نماذج مجانية (:free)",
+    baseUrl: "https://openrouter.ai/api/v1",
+    modell: "meta-llama/llama-3.3-70b-instruct:free",
+    schluesselUrl: "https://openrouter.ai/keys",
+    hinweisAr:
+      "OpenRouter وسيط يوجّه طلبك إلى مستضيف النموذج المجاني الذي تختاره؛ قد تُسجَّل النصوص المرسلة لدى الوسيط/المستضيف وفق سياساتهم، والنماذج المجانية قد تتغيّر أو تُحدّ بمعدّل طلبات.",
+  },
+  {
+    id: "gemini",
+    nameAr: "Google Gemini — الطبقة المجانية",
+    baseUrl: "https://generativelanguage.googleapis.com/v1beta/openai",
+    modell: "gemini-2.5-flash",
+    schluesselUrl: "https://aistudio.google.com/apikey",
+    hinweisAr:
+      "في طبقة Gemini المجانية قد تستخدم Google محتوى واجهة البرمجة (بما فيه نصّك المرسل) لتحسين منتجاتها وفق شروط خدماتها غير المدفوعة — لا ترسل نصوصًا حسّاسة.",
+  },
+  {
+    id: "custom",
+    nameAr: "خدمة مخصّصة متوافقة مع OpenAI",
+    baseUrl: "",
+    modell: "",
+    schluesselUrl: "",
+    hinweisAr: "خدمة تختارها بنفسك؛ أنت المسؤول عن معرفة سياسة بياناتها قبل إرسال أيّ نصّ.",
+  },
+];
+
+/** لا إرسال إلا بمفتاح + موافقة صريحة مسجّلة — بلا أيٍّ منهما يعود null بصمت (سلوك محلي كامل) */
+export function llmBereit(cfg?: LlmCfg | null): boolean {
+  return !!cfg?.apiKey?.trim() && !!cfg?.zugestimmt && !!cfg?.baseUrl?.trim();
 }
 
 export interface LlmKorrektur {
@@ -374,7 +431,7 @@ export async function llmKorrigieren(
   aufgabeDe: string,
   text: string
 ): Promise<LlmKorrektur | null> {
-  if (!cfg?.apiKey) return null;
+  if (!llmBereit(cfg)) return null; // R170: مفتاح بلا موافقة = لا إرسال
   try {
     const base = (cfg.baseUrl || "https://api.openai.com/v1").replace(/\/+$/, "");
     const res = await fetch(`${base}/chat/completions`, {

@@ -12,6 +12,7 @@ import { getText, getDialogue, getWriting } from "@/lib/content";
 import {
   deepReview,
   llmKorrigieren,
+  llmBereit,
   noteFromPct,
   normalize,
   type LlmKorrektur,
@@ -366,6 +367,10 @@ export function SchreibBerater({ text, taskDe }: { text: string; taskDe: string 
       setErr("لم تُفعَّل خدمة المدرّس الذكي بعد — أضف مفتاح API من الإعدادات (اختياري).");
       return;
     }
+    if (!llmBereit(cfg)) {
+      setErr("اخترتَ مزوّدًا لكنك لم تُفعّل موافقة الإرسال في الإعدادات — بلا موافقتك الصريحة لا يغادر أيّ نصّ جهازك.");
+      return;
+    }
     setBusy(true);
     setErr("");
     const res = await llmKorrigieren(cfg, taskDe, text);
@@ -392,6 +397,9 @@ export function SchreibBerater({ text, taskDe }: { text: string; taskDe: string 
       {err && <div style={{ color: "var(--color-cola)", fontSize: "0.88rem", marginTop: "0.4rem" }}>{err}</div>}
       {llm && (
         <div className="card fadein" style={{ marginTop: "0.6rem", padding: "0.8rem 1rem", background: "var(--color-gold-soft)" }}>
+          <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--color-ink2)", marginBottom: "0.3rem" }}>
+            🤖 تصحيح مولّد بالذكاء الاصطناعي عبر مزوّد خارجي بمفتاحك (R170) — ليس تصحيحًا بشريًا؛ راجعه بعينٍ ناقدة.
+          </div>
           <div style={{ fontWeight: 800 }}>✏️ النص المصحَّح:</div>
           <article className="de" style={{ display: "block", lineHeight: 1.85, margin: "0.3rem 0" }}>{llm.korrigiert}</article>
           {llm.notizen.length > 0 && (
