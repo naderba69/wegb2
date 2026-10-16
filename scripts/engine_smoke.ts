@@ -53,6 +53,7 @@ import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM
 import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
 import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisExamen } from "../lib/bereitschaft";
 import { bewerteKriterien } from "../lib/kriterien";
+import { baueSprechRunde, selbstPunkte, SPRECH_KRITERIEN } from "../lib/sprechkarten";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
@@ -12761,6 +12762,26 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(alleMarkiert && briefBank.length === 16 && briefBank.filter((w) => w.level === "B2").length >= 5 &&
      schrSrc.includes("task.zielWort ?? cfg!.ziel") && writingTasks.every((w) => !w.zielWort || w.zielWort >= 20),
     `K266d بنك الكتابة موسومٌ بصيغة الامتحان: ${briefBank.length} مهمة رسائل (تحية/ختام في الإنجاز) والباقي نص حر، والهدف من zielWort البنك`);
+}
+
+/* ═══ K267 · R174 (E5): بطاقات محادثة مسجّلة — بنك نقي وتسجيل محلي وتقييم ذاتي ═══ */
+{
+  const s1 = baueSprechRunde(7, "B2"), s2 = baueSprechRunde(7, "B2"), sA = baueSprechRunde(7, "A2");
+  ok(JSON.stringify(s1) === JSON.stringify(s2) && s1.kontakt?.level === "B2" && s1.teil2?.teil === 2 && s1.teil2?.level === "B2" &&
+     s1.teil3?.teil === 3 && s1.teil3?.level === "B2" && s1.vorbereitungMin === 15 && sA.vorbereitungMin === 20 &&
+     (sA.teil3 === null || (sA.teil3.teil === 3 && sA.teil3.level === "A2")),
+    "K267a جولة حتمية بالبذرة: الأجزاء الثلاثة من بنك المستوى وحده، والتحضير 15د (Goethe) و20د (DTZ/A2)");
+  ok(selbstPunkte([0, 0, 0, 0]) === 100 && selbstPunkte([4, 4, 4, 4]) === 0 && selbstPunkte([2, 2, 2, 2]) === 52 &&
+     SPRECH_KRITERIEN.length === 4 && SPRECH_KRITERIEN.some((k) => k.key === "aussprache"),
+    "K267b شبكة ذاتية رباعية (طلاقة/مفردات/بنى/نطق ذاتي) بمقياس المحاكاة نفسه: الكل A = 100 والكل E = 0");
+  const sprSrc = readFileSync("components/sprechkarten.tsx", "utf8");
+  const typSrc = readFileSync("lib/types.ts", "utf8");
+  const pageSrc = readFileSync("app/pruefen/page.tsx", "utf8");
+  ok(sprSrc.includes("MediaRecorder") && sprSrc.includes("لا يغادر هذا الجهاز") && sprSrc.includes("لا يحكم على نطقك") &&
+     !sprSrc.includes("fetch(") && !sprSrc.includes("bewerteAussprache") &&
+     sprSrc.includes("URL.createObjectURL") && sprSrc.includes("revokeObjectURL") &&
+     typSrc.includes("sprechUebungen") && sprSrc.includes("sprechUebungen") && pageSrc.includes("sprechkarten"),
+    "K267c التسجيل محليٌّ بذاكرة الجلسة (بلا أيّ fetch وبلا حكم نطق آلي)، يُحفظ وصفيًّا فقط، والبطاقة موصولة بصفحة اختبر");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
