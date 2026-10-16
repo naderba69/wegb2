@@ -11,6 +11,7 @@ import { ProfilVerwaltung } from "@/components/profil";
 import { speakDe, germanVoices, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
 import LocalSpeechPilot from "@/components/LocalSpeechPilot";
 import { PHASE_START, levelAmTag } from "@/lib/phasen";
+import { OfflineKarte } from "@/components/offline";
 import type { UiLang, Tempo, Level } from "@/lib/types";
 
 export default function Einstellungen() {
@@ -274,6 +275,11 @@ export default function Einstellungen() {
         <details className="dirb-details">
           <summary>🧪 طيار التعرّف المحلي الألماني (de-DE) — منفصل واختياري</summary>
           <LocalSpeechPilot />
+        </details>
+
+        <details className="dirb-details">
+          <summary>📴 العمل بلا اتصال (PWA)</summary>
+          <OfflineKarte />
         </details>
 
         <details className="dirb-details">

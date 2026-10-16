@@ -13180,6 +13180,21 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K281c البطاقة على الرئيسية، وأرقامها موسومة بمصدرها السجلّي، وبلا نقاط زينة إطلاقًا");
 }
 
+// ===== K282 (R189 · U3): Offline-PWA — SW deckt Shell, banks.json (SWR) und
+// benutzte Audios ab; Speichergröße wird angezeigt und ist löschbar. =====
+{
+  const sw = readFileSync("public/sw.js", "utf8");
+  const offSrc = readFileSync("components/offline.tsx", "utf8");
+  const einSrc2 = readFileSync("app/einstellungen/page.tsx", "utf8");
+  ok(/const CACHE = "wegb2-v\d+"/.test(sw) && sw.includes('"/banks.json"') && sw.includes("stale-while-revalidate") &&
+     sw.includes('url.pathname.startsWith("/audio/")') && sw.includes('req.mode === "navigate"') &&
+     sw.includes("url.origin !== self.location.origin") && sw.includes("Promise.allSettled"),
+    "K282a عامل الخدمة v2: غلاف + banks.json بتحديث خلفي + صوتيات cache-first + سقوط ملاحي، ونفس الأصل حصرًا وتثبيت متسامح");
+  ok(einSrc2.includes("<OfflineKarte />") && offSrc.includes("navigator.storage") && offSrc.includes("caches.delete") &&
+     offSrc.includes("امسح مخزن عدم الاتصال") && offSrc.includes("لا يُمسّ"),
+    "K282b بطاقة عدم الاتصال في الإعدادات: حجم مقاس من المتصفح ومسح بيد المتعلّم مع إبقاء التقدّم");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

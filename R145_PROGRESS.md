@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R188: **Axis C + M vollständig · Axis U: U1–U2 ✅ (R187–R188)**
+> Status nach R189: **Axis C + M vollständig · Axis U: U1–U3 ✅ (R187–R189)**
+> R189 (U3 Offline-PWA) — alle Gates grün (smoke 1752/0). Weiter: U4–U6.
 > R188 (U2 ehrliche Motivation) — alle Gates grün (smoke 1750/0). Weiter: U3–U6.
 > R187 (U1 Sitzungsplayer) — alle Gates grün (smoke 1747/0, interaktiv 713/0). Weiter: U2–U6.
 > R186 (M6 Muster-Drills) — alle Gates grün (smoke 1746/0). Weiter: Axis U (U1–U6).
@@ -347,6 +348,15 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R189 — U3 Offline-PWA vervollständigt — abgeschlossen ✅
+
+- **Befund**: Der SW existierte, ließ aber `/banks.json` uncached — offline wäre die App leer
+  gewesen. v2: Shell best-effort precached, banks.json stale-while-revalidate, Audio/Assets
+  cache-first (Gehörtes bleibt verfügbar), Navigations-Fallback, strikt same-origin.
+- **Transparenz**: Einstellungen ▸ «العمل بلا اتصال» zeigt SW-Status, Dateizahl und die vom
+  Browser gemessene Größe; Löschen entfernt nur Assets (`wegb2-*`), nie den Fortschritt.
+- **Nachweise**: tsc ✓ · smoke **1752/0** (K282a/b) · interaktiv 713/0 · audit 0 · build ✓.
 
 ## R188 — U2 Ehrliche Motivation aus dem Verlauf — abgeschlossen ✅
 
