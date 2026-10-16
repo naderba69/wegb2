@@ -3420,6 +3420,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "CII3 عند الفتح تظهر التعبيرات الستة عشر كلّها بسياقها");
   }
 
+  /* ═══ CIII — بطاقة عدم الاتصال (R202): زرّ التنزيل الكامل معلن بحجمه ═══ */
+  {
+    const { OfflineKarte } = await import("../components/offline");
+    mount(React.createElement(OfflineKarte));
+    ok(!!rootEl.querySelector('[data-testid="offline-voll-download"]') && txt().includes("نحو 64 MB"),
+      "CIII1 بطاقة عدم الاتصال تعرض تنزيل الصوت الكامل بحجمه الحقيقي قبل أيّ نقرة");
+  }
+
   /* ═══ XCVI — وصولية U5 تحت الإصبع: لغة الألماني معلنة وتخطٍّ وتركيز ═══ */
   {
     const { De, DeBlock } = await import("../components/De");

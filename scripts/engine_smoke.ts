@@ -2886,7 +2886,10 @@ void 0;
   // لفكّ ترميزه محليًا ومقارنته موجيًا؛ لا بيانات مستخدم تغادر، ولا رابط خارجي في الملفّ إطلاقًا (يُختبَر أدناه).
   const bankSrc = srcOf("lib/bankload.ts");
   const shadowSrc122 = srcOf("components/shadowing.tsx");
-  ok(fetchIn.length === 3 && fetchIn[0] === "components/shadowing.tsx" && fetchIn[1] === "lib/bankload.ts" && fetchIn[2] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc) && shadowSrc122.includes("fetch(einheit.audioSrc)") && !/https?:\/\//.test(shadowSrc122), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ والاستثناء الوحيد الإضافي منذ R184 هو جلب التظليل لملفّ النموذج من نفس الأصل (einheit.audioSrc، بلا أيّ رابط http) لتحليله موجيًا — لا رفع ولا خادم خارجي؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
+  const offlineSrc122 = srcOf("components/offline.tsx");
+  // R202: الاستثناء الثالث بنفس المنطق حرفيًا — بطاقة عدم الاتصال تجلب بيان الصوت وملفات MP3 من نفس الأصل
+  // فقط لتعبئة مخزن المتصفح المحلي؛ لا بيانات مستخدم، ولا رابط خارجي في الملفّ إطلاقًا (يُختبَر أدناه).
+  ok(fetchIn.length === 4 && fetchIn[0] === "components/offline.tsx" && fetchIn[1] === "components/shadowing.tsx" && fetchIn[2] === "lib/bankload.ts" && fetchIn[3] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc) && shadowSrc122.includes("fetch(einheit.audioSrc)") && !/https?:\/\//.test(shadowSrc122) && offlineSrc122.includes('fetch("/audio-manifest.json")') && offlineSrc122.includes("fetch(e.p)") && !/https?:\/\//.test(offlineSrc122), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ والاستثناء الوحيد الإضافي منذ R184 هو جلب التظليل لملفّ النموذج من نفس الأصل (einheit.audioSrc، بلا أيّ رابط http) لتحليله موجيًا — لا رفع ولا خادم خارجي؛ ومنذ R202 تجلب بطاقة عدم الاتصال بيان/ملفات الصوت من نفس الأصل لتعبئة مخزن محلي (بلا رابط http في ملفّها إطلاقًا)؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
   ok(srcOf("app/einstellungen/page.tsx").includes("أُذِنُ بإرسال صوتي") && srcOf("lib/speech.ts").includes("بلا إذنٍ صريحٍ في الإعدادات"),
     "K122d سلسلةُ الموافقةِ السحابية: صياغةُ الإذنِ + شرطُ البوابةِ حاضران");
   const callers = code.filter((f) => f !== "lib/speech.ts" && srcOf(f).includes("listenDe("));
@@ -13396,6 +13399,19 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(ci.includes("tsc --noEmit") && ci.includes("npm run smoke") && ci.includes("npm run interaktiv") &&
      ci.includes("npm run audit:content") && ci.includes("npm run build") && ci.includes("pull_request"),
     "K294 بوابة CI موجودة وتشغّل البوابات الخمس كلّها على الدفع وطلبات السحب — لا اعتماد على ذاكرة بشرية");
+}
+
+// ===== K295 (R202 · Offline-Voll-Download): Manifest wird aus public/audio
+// gebaut (nicht versioniert), die Karte füllt den wegb2-audio-voll-Cache per
+// ehrlichem Größen-Hinweis; K282-Substanz (SW-Strategie, Löschen, Fortschritt
+// unberührt) bleibt unverändert. =====
+{
+  const kopier = readFileSync("scripts/copy_banks.mjs", "utf8");
+  const offSrc = readFileSync("components/offline.tsx", "utf8");
+  ok(kopier.includes("audio-manifest.json") && offSrc.includes('data-testid="offline-voll-download"') &&
+     offSrc.includes("wegb2-audio-voll") && offSrc.includes("audio-manifest.json") &&
+     offSrc.includes("نحو 64 MB") && offSrc.includes(" تقدّمك وبطاقاتك ودفترك لم يُمسّوا"),
+    "K295 تنزيل الصوت الكامل صار قرارًا صريحًا بحجم معلن وبيان مبنيّ من الملفات نفسها — والتقدّم خارج المخزن كعهد K282");
 }
 
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den

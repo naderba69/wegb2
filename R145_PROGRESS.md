@@ -353,6 +353,23 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R202 — Offline: optionaler Voll-Download aller Audios — abgeschlossen ✅
+
+- `scripts/copy_banks.mjs` erzeugt `public/audio-manifest.json` aus public/audio
+  (519 Dateien, 62,3 MB; gitignored). OfflineKarte: Voll-Download in den
+  `wegb2-audio-voll`-Cache mit Fortschritt, Stopp/Resume, ehrlicher
+  Größenangabe; bestehendes Löschen räumt ihn mit. K282-Substanz unverändert.
+- K122c um components/offline.tsx erweitert — ausschließlich Same-Origin
+  (fetch("/audio-manifest.json") + fetch(e.p)), null http-Links im File,
+  exakt dieselbe Ausnahme-Logik wie R184.
+- **Nachweise**: tsc ✓ · smoke **1774/0** (K295, K122c erweitert) · interaktiv **729/0** (CIII1) · audit 0 · build ✓.
+
+## R201 — GitHub CI — abgeschlossen ✅
+
+- `.github/workflows/ci.yml`: npm ci → tsc → smoke → interaktiv → audit → build
+  bei jedem Push/PR (Node 22), per K294 quellengesichert; erster Lauf auf dem
+  Branch vom Push selbst ausgelöst und im Blick behalten.
+
 ## R200 — Lebenswelt, Anerkennung & Umgangssprache — abgeschlossen ✅
 
 - Neue Bank `content/lebenswelt.json` (Bankdateien 52→53): 12 Themenkarten

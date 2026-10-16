@@ -4,7 +4,7 @@
  * الفعلي المقاس من المتصفح نفسه، ومسحه بيد المتعلّم. المسح يزيل
  * أصولًا مخزّنة فقط — تقدّمك (localStorage) لا يُمسّ.
  */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface OfflineZustand {
   swAktiv: boolean;
@@ -34,15 +34,55 @@ async function messe(): Promise<OfflineZustand> {
   };
 }
 
+/** مقطع صوتي واحد من بيان التنزيل الكامل (public/audio-manifest.json يُبنى من public/audio). */
+interface AudioEintrag { p: string; b: number }
+
 export function OfflineKarte() {
   const [zustand, setZustand] = useState<OfflineZustand | null>(null);
   const [meldung, setMeldung] = useState("");
+  const [laedtVoll, setLaedtVoll] = useState<null | { n: number; gesamt: number; mbGesamt: number }>(null);
+  const abbrechenRef = useRef(false);
 
   useEffect(() => {
     let lebt = true;
     messe().then((z) => { if (lebt) setZustand(z); }).catch(() => undefined);
     return () => { lebt = false; };
   }, []);
+
+  /** 📥 تنزيل كلّ الصوت مسبقًا (R202): قرار صريح بحجمه الحقيقي المقاس من البيان.
+   *  يملأ مخزن «wegb2-audio-voll» (يقرأه عامل الخدمة بـ cache-first كغيره)،
+   *  والمسح القائم يزيله مع بقية مخازن wegb2- — تقدّم المتعلّم لا يُمسّ أبدًا. */
+  const allesLaden = async () => {
+    try {
+      const res = await fetch("/audio-manifest.json");
+      if (!res.ok) throw new Error("manifest");
+      const eintraege = (await res.json()) as AudioEintrag[];
+      const mbGesamt = Math.round((eintraege.reduce((a, x) => a + x.b, 0) / 1048576) * 10) / 10;
+      abbrechenRef.current = false;
+      const cache = await caches.open("wegb2-audio-voll");
+      let n = 0;
+      setLaedtVoll({ n, gesamt: eintraege.length, mbGesamt });
+      for (const e of eintraege) {
+        if (abbrechenRef.current) break;
+        try {
+          if (!(await cache.match(e.p))) {
+            const r = await fetch(e.p);
+            if (r.ok) await cache.put(e.p, r);
+          }
+        } catch { /* ملف واحد لا يقتل البقية */ }
+        n += 1;
+        if (n % 20 === 0 || n === eintraege.length) setLaedtVoll({ n, gesamt: eintraege.length, mbGesamt });
+      }
+      setLaedtVoll(null);
+      setMeldung(abbrechenRef.current
+        ? `توقّف التنزيل عند ${n} من ${eintraege.length} ملفًا — ما نزل يعمل بلا اتصال، والبقية تُستكمل من زرّ التنزيل نفسه.`
+        : `اكتمل تنزيل الصوت: ${n} ملفًا (نحو ${mbGesamt} MB) — كلّ حواراتك تعمل الآن بلا اتصال.`);
+      setZustand(await messe());
+    } catch {
+      setLaedtVoll(null);
+      setMeldung("تعذّر التنزيل الكامل هنا (المتصفح أو الشبكة) — الصوت الذي تسمعه يبقى مخزّنًا كالعادة.");
+    }
+  };
 
   const leeren = async () => {
     try {
@@ -70,11 +110,25 @@ export function OfflineKarte() {
       ) : (
         <p className="tiny muted" style={{ margin: 0 }}>جارٍ قياس المخزن…</p>
       )}
-      <div>
+      <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+        <button type="button" className="btn btn-primary" data-testid="offline-voll-download"
+          onClick={allesLaden} disabled={!!laedtVoll} style={{ minHeight: "44px" }}>
+          {laedtVoll ? `📥 يُنزِّل… ${laedtVoll.n}/${laedtVoll.gesamt}` : "📥 نزّل كلّ الصوت للاستخدام دون اتصال"}
+        </button>
+        {laedtVoll && (
+          <button type="button" className="btn" style={{ minHeight: "44px" }}
+            onClick={() => { abbrechenRef.current = true; }}>
+            ⏹ إيقاف التنزيل
+          </button>
+        )}
         <button type="button" className="btn" onClick={leeren} style={{ minHeight: "44px" }}>
           🧹 امسح مخزن عدم الاتصال
         </button>
       </div>
+      <p className="tiny muted" style={{ margin: 0 }}>
+        التنزيل الكامل اختياري وكبير (نحو 64 MB بصوت الحوارات كاملًا) — على Wi-Fi أفضل.
+        بلا تنزيل كامل يبقى كلّ صوت تسمعه مخزّنًا تلقائيًا كما كان.
+      </p>
       {meldung && <p className="tiny" role="status" style={{ margin: 0 }}>{meldung}</p>}
     </div>
   );
