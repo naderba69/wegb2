@@ -199,7 +199,7 @@ export function phaseOf(day: number): Phase {
 // بتقويمِ تقدّمٍ فارغ، محسوبٌ مرّةً واحدةً لكلِّ مستوى ومحفوظ. إعادةُ التشغيلِ تعدُّ المواقعَ
 // لا المحتوى، فتبقى صحيحةً مهما تغيّر حجمُ البنك (التدوير modulo عند السحب نفسه).
 const schreibBasisCache = new Map<string, number[]>();
-let schreibReplay: { zaehler: number } | null = null;
+let schreibReplay: { tag: number; zaehler: number } | null = null;
 function schreibBasis(day: number, level: Level): number {
   const range = PHASE_RANGES.find((p) => p.level === level);
   if (!range) return 0;
@@ -207,7 +207,7 @@ function schreibBasis(day: number, level: Level): number {
   if (!basis) {
     basis = [0];
     for (let d = range.from; d <= range.to; d++) {
-      schreibReplay = { zaehler: 0 };
+      schreibReplay = { tag: d, zaehler: 0 };
       buildDay(d, emptyProgress);
       basis.push(basis[basis.length - 1] + schreibReplay.zaehler);
       schreibReplay = null;
@@ -659,7 +659,9 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   // عددُ السحوباتِ حجمَ البنك (وهو حاصلٌ في كلِّ مستوى) — بلا يتامى وبلا تكرارٍ قبل استنفادِ البنك.
   let writeSlot = 0;
   const nextWrite = () => {
-    if (schreibReplay) { schreibReplay.zaehler++; return writesOfLevel[0]; }
+    // أثناء إعادة التشغيل لا تُعَدّ إلا سحوبات اليوم الموسوم نفسه — فالأيام المتداخلة
+    // (كبسولة الأمس تبني أيامًا مجاورة عبر lib/kapsel) لا تُلوّث عدّاد هذا اليوم.
+    if (schreibReplay) { if (day === schreibReplay.tag) schreibReplay.zaehler++; return writesOfLevel[0]; }
     if (!writesOfLevel.length) return undefined;
     return writesOfLevel[(schreibBasis(day, level) + writeSlot++) % writesOfLevel.length];
   };
@@ -1347,16 +1349,16 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     }
   }
 
-  // R143b: keep the four writing prompts missed by the seeded rotation in the
-  // default curriculum too; each is a real, level-appropriate Schreibtask.
-  const extraWritingByDay: Record<number, string[]> = {
-    [PHASEN.A0.von + 5]: ["w-a0-02"],
-    [PHASEN.A0.von + 6]: ["w-a0-04"],
-    [PHASEN.A0.von + 7]: ["w-a0-05"],
-    [PHASEN.A2.von]: ["w-a2-06"],
+  // R143b→R178: مهمّة كتابة إضافية في أيام ثابتة — كانت بأيدي مرقّعة لإنقاذ ما فات الدورانَ
+  // القديم، والآن تسحب من الدوران التراكميّ نفسه (R177) فتتقدّم التغطية بدل تكرار مهمّة بعينها.
+  const extraWritingByDay: Record<number, number> = {
+    [PHASEN.A0.von + 5]: 1,
+    [PHASEN.A0.von + 6]: 1,
+    [PHASEN.A0.von + 7]: 1,
+    [PHASEN.A2.von]: 1,
   };
-  for (const [index, writingId] of (extraWritingByDay[day] ?? []).entries()) {
-    const extraWriting = writesOfLevel.find((writing) => writing.id === writingId);
+  for (let index = 0; index < (extraWritingByDay[day] ?? 0); index++) {
+    const extraWriting = nextWrite();
     if (!extraWriting) continue;
     tasks.push({
       id: tid(93 + index),

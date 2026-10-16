@@ -12,6 +12,7 @@ import { HoerLabor, LueckDiktat } from "@/components/hoeren";
 import { MündlichLabor } from "@/components/muendlich";
 import { LeseLeiter } from "@/components/leseleiter";
 import { RedemittelBank } from "@/components/redemittel";
+import { Vertiefung } from "@/components/vertiefung";
 import { VortragsBühne } from "@/components/vortrag";
 import { InterviewArena } from "@/components/interview2";
 import { BriefSchmiede } from "@/components/briefe";
@@ -28,7 +29,7 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   zusatz: { icon: "➕", titel: "تدريب إضافي", unter: "تمارين أخرى بقيت من درس اليوم." },
@@ -44,6 +45,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   szenarien: { icon: "🏙️", titel: "مواقف من الحياة", unter: "طبّق ما تعلّمته في مواقف واقعية." },
   leseleiter: { icon: "🪜", titel: "سلّم القراءة", unter: "نصوص قصيرة متدرّجة بين A0 وA1 بمسرد وأسئلة من النصّ." },
   redemittel: { icon: "🧰", titel: "بنك وسائل التعبير", unter: "عبارات الامتحان مصنّفة بالوظيفة والجزء، مع تدريب استرجاع." },
+  vertiefung: { icon: "📚", titel: "مكتبة التذوّق B2+/C1", unter: "نصوص وحوارات C1 إثرائية بعد B2 — خارج الخطة." },
   tiefen: { icon: "📖", titel: "معجم المفردات", unter: "ابحث عن كلمة أو معنى عند الحاجة." },
   katalog: { icon: "🗃️", titel: "دليل التدريبات", unter: "استعرض التدريبات المتاحة في الأكاديمية." },
 };
@@ -59,7 +61,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-skills",
     title: "تدرّب على المهارات",
     description: "اختر مهارة أو طبّق ما تعلّمته في موقف.",
-    items: ["hoeren", "lueck", "muendlich", "vortrag", "interview", "briefe", "szenarien", "leseleiter", "redemittel"],
+    items: ["hoeren", "lueck", "muendlich", "vortrag", "interview", "briefe", "szenarien", "leseleiter", "redemittel", "vertiefung"],
   },
   {
     id: "ueben-reference",
@@ -186,6 +188,7 @@ export default function Ueben() {
           {offen === "szenarien" && <LebensSzenarien progress={progress} />}
           {offen === "leseleiter" && <LeseLeiter />}
           {offen === "redemittel" && <RedemittelBank />}
+          {offen === "vertiefung" && <Vertiefung />}
           {offen === "tiefen" && <TiefenLexikon progress={progress} />}
           {offen === "katalog" && <KatalogLeiste />}
         </section>

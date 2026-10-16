@@ -1,0 +1,1413 @@
+{
+  "texte": [
+    {
+      "id": "vf-t1",
+      "level": "C1",
+      "titelDe": "Wissenschaft verständlich machen: Die neue Kunst der Vermittlung",
+      "titelAr": "تبسيط العلم: فنّ التواصل الجديد",
+      "de": "Noch vor wenigen Jahrzehnten galt Wissenschaftskommunikation als Einbahnstraße: Forschende veröffentlichten ihre Ergebnisse in Fachzeitschriften, und die Öffentlichkeit erfuhr – wenn überhaupt – nur Bruchstücke davon. Heute hat sich dieses Verhältnis grundlegend gewandelt. Universitäten betreiben eigene Podcasts, Institute erklären ihre Arbeit in kurzen Videos, und komplexe Studien werden in allgemein verständlicher Sprache zusammengefasst. Der Grund liegt auf der Hand: Wer öffentliche Gelder erhält, muss der Gesellschaft Rechenschaft darüber ablegen, was mit diesen Mitteln geschieht. Zugleich wächst der Bedarf an verlässlicher Einordnung. In Krisenzeiten, etwa während einer Pandemie, verbreiten sich Gerüchte schneller als geprüfte Fakten. Wissenschaftlerinnen und Wissenschaftler, die sich verständlich äußern können, leisten deshalb einen Beitrag zur demokratischen Meinungsbildung. Allerdings birgt die Vereinfachung auch Risiken. Wer Forschungsergebnisse zu stark verkürzt, verzerrt sie womöglich: Aus einer vorsichtigen Vermutung wird in der Schlagzeile schnell eine scheinbare Gewissheit. Gute Wissenschaftskommunikation muss daher beides leisten – zugänglich sein und zugleich die Grenzen des Wissens ehrlich benennen. Viele Hochschulen reagieren darauf mit eigenen Ausbildungsprogrammen: Doktorandinnen und Doktoranden lernen dort, ihre Dissertation in drei Minuten so zu erklären, dass auch Laien folgen können. Entscheidend ist dabei die Haltung: Wer kommuniziert, muss bereit sein, auch unbequeme Zwischenstände offenzulegen, statt nur Erfolge zu verkünden. Formate wie Bürgerdialoge oder offene Labortage zeigen zudem, dass das Publikum keine belehrende Ansprache sucht, sondern echte Gesprächsbereitschaft auf Augenhöhe. Nur so entsteht das Vertrauen, ohne das selbst die beste Erklärung wirkungslos verpufft. Die Kunst besteht nicht darin, Fachbegriffe zu vermeiden, sondern sie im richtigen Moment einzuführen und anschaulich zu erklären.",
+      "ar": "قبل بضعة عقود فقط، كان التواصل العلمي يُعدّ طريقًا باتجاه واحد: كان الباحثون ينشرون نتائجهم في مجلات متخصصة، ولم يكن الجمهور يعرف – إن عرف أصلًا – سوى شذرات منها. أمّا اليوم فقد تغيّرت هذه العلاقة جذريًا. تُدير الجامعات ملفات بودكاست خاصة بها، وتشرح المعاهد عملها في مقاطع فيديو قصيرة، وتُلخَّص الدراسات المعقدة بلغة مفهومة للجميع. والسبب واضح: من يتلقى أموالًا عامة يجب أن يُحاسَب أمام المجتمع عمّا يُفعل بهذه الوسائل. وفي الوقت نفسه يتزايد الاحتياج إلى تصنيف موثوق. ففي أوقات الأزمات، كما أثناء جائحة، تنتشر الشائعات أسرع من الحقائق المدقّقة. لذلك فإنّ العلماء القادرين على التعبير بوضوح يُسهمون في تكوين الرأي الديمقراطي. غير أنّ التبسيط ينطوي أيضًا على مخاطر. فمن يختصر نتائج البحث أكثر من اللازم قد يشوّهها: إذ تتحوّل الفرضية الحذرة في العنوان سريعًا إلى يقين ظاهري. لذا يجب على التواصل العلمي الجيّد أن يحقق الأمرين: أن يكون في المتناول وأن يُسمّي حدود المعرفة بصدق في الوقت نفسه. وتستجيب جامعات كثيرة لذلك ببرامج تدريب خاصة: يتعلّم طلاب الدكتوراه هناك شرح أطروحتهم في ثلاث دقائق بحيث يستطيع حتى غير المتخصصين المتابعة. والحاسم في ذلك هو الموقف: فمن يتواصل يجب أن يكون مستعدًا لكشف المراحل الوسيطة غير المريحة أيضًا، بدل إعلان النجاحات فقط. كما تُظهر صيغ مثل حوارات المواطنين أو أيام المختبرات المفتوحة أنّ الجمهور لا يبحث عن خطاب تعليمي، بل عن استعداد حقيقي للحوار على قدم المساواة. فبهذا فقط ينشأ الثقة التي بدونها تتبخّر حتى أفضل الشروحات بلا أثر. والفنّ لا يكمن في تجنّب المصطلحات المتخصصة، بل في تقديمها في اللحظة المناسبة وشرحها بشكل ملموس.",
+      "glossar": [
+        {
+          "de": "die Einbahnstraße",
+          "ar": "طريق باتجاه واحد (مجازًا: تواصل من طرف واحد)"
+        },
+        {
+          "de": "Rechenschaft ablegen",
+          "ar": "تقديم حساب / الخضوع للمساءلة"
+        },
+        {
+          "de": "die Einordnung",
+          "ar": "التصنيف في سياق / وضع الشيء في إطاره"
+        },
+        {
+          "de": "verzerren",
+          "ar": "تشويه / تحريف"
+        },
+        {
+          "de": "die Gewissheit",
+          "ar": "اليقين"
+        },
+        {
+          "de": "zugänglich",
+          "ar": "في المتناول / سهل الوصول والفهم"
+        },
+        {
+          "de": "der Laie",
+          "ar": "غير المتخصص / العامي في مجال ما"
+        },
+        {
+          "de": "anschaulich",
+          "ar": "بشكل ملموس وواضح بالصور والأمثلة"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-t1-q1",
+          "promptDe": "Wie war Wissenschaftskommunikation früher?",
+          "promptAr": "كيف كان التواصل العلمي في الماضي؟",
+          "options": [
+            "Ein Dialog mit der Öffentlichkeit",
+            "Eine Einbahnstraße von der Forschung zum Publikum",
+            "Vor allem über soziale Medien organisiert",
+            "Nur für Krisenzeiten gedacht"
+          ],
+          "answer": "Eine Einbahnstraße von der Forschung zum Publikum",
+          "explanationAr": "النص يقول: «galt Wissenschaftskommunikation als Einbahnstraße»."
+        },
+        {
+          "id": "vf-t1-q2",
+          "promptDe": "Warum müssen Forschende heute Rechenschaft ablegen?",
+          "promptAr": "لماذا يجب على الباحثين اليوم تقديم حساب؟",
+          "options": [
+            "Weil sie öffentliche Gelder erhalten",
+            "Weil Verlage es verlangen",
+            "Weil Podcasts beliebt sind",
+            "Weil Laien es fordern"
+          ],
+          "answer": "Weil sie öffentliche Gelder erhalten",
+          "explanationAr": "النص: «Wer öffentliche Gelder erhält, muss der Gesellschaft Rechenschaft darüber ablegen»."
+        },
+        {
+          "id": "vf-t1-q3",
+          "promptDe": "Welche Gefahr birgt zu starke Vereinfachung?",
+          "promptAr": "ما خطر التبسيط المفرط؟",
+          "options": [
+            "Sie kostet zu viel Zeit",
+            "Sie kann Ergebnisse verzerren",
+            "Sie braucht Fachbegriffe",
+            "Sie verhindert Podcasts"
+          ],
+          "answer": "Sie kann Ergebnisse verzerren",
+          "explanationAr": "النص: «Wer Forschungsergebnisse zu stark verkürzt, verzerrt sie womöglich»."
+        },
+        {
+          "id": "vf-t1-q4",
+          "promptDe": "Worin besteht laut Text die eigentliche Kunst?",
+          "promptAr": "فيما يكمن الفنّ الحقيقي بحسب النص؟",
+          "options": [
+            "Fachbegriffe ganz zu vermeiden",
+            "Nur noch Videos zu produzieren",
+            "Fachbegriffe im richtigen Moment einzuführen und anschaulich zu erklären",
+            "Dissertationen abzuschaffen"
+          ],
+          "answer": "Fachbegriffe im richtigen Moment einzuführen und anschaulich zu erklären",
+          "explanationAr": "النص: «Die Kunst besteht nicht darin, Fachbegriffe zu vermeiden, sondern sie im richtigen Moment einzuführen und anschaulich zu erklären»."
+        }
+      ]
+    },
+    {
+      "id": "vf-t2",
+      "level": "C1",
+      "titelDe": "Die Stadt der kurzen Wege: Urbaner Wandel mit Maß",
+      "titelAr": "مدينة المسافات القصيرة: تحوّل حضري بلا إفراط",
+      "de": "Immer mehr europäische Städte experimentieren mit dem Konzept der Fünfzehn-Minuten-Stadt: Alle wichtigen Einrichtungen des Alltags – Schule, Arztpraxis, Supermarkt, Arbeitsplatz und Grünanlage – sollen zu Fuß oder mit dem Fahrrad innerhalb einer Viertelstunde erreichbar sein. Befürworter sehen darin weit mehr als ein Verkehrsprojekt. Wer kurze Wege hat, spart nicht nur Zeit, sondern begegnet auch häufiger seinen Nachbarn; Quartiere werden lebendiger, und der öffentliche Raum gewinnt an Bedeutung. Kritiker wenden jedoch ein, dass sich eine gewachsene Stadt nicht am Reißbrett neu ordnen lasse. Mieten in gut angebundenen Vierteln steigen bereits, sodass einkommensschwache Haushalte an den Stadtrand verdrängt werden – genau dorthin, wo die Wege wieder lang sind. Hinzu kommt die Frage der Zumutbarkeit: Nicht jede Tätigkeit lässt sich in Wohnungsnähe verlagern, und viele Berufe erfordern spezialisierte Standorte. Stadtforscher empfehlen deshalb einen behutsamen Umbau statt radikaler Verbote: bessere Radwege, gemischte Nutzung in Erdgeschossen und eine Verdichtung, die den Charakter der Viertel respektiert. Entscheidend sei, die Bewohner frühzeitig einzubeziehen, statt Konzepte über ihre Köpfe hinweg durchzusetzen. Pilotprojekte in mehreren Städten liefern inzwischen belastbare Zahlen: Wo Straßen zugunsten von Fußgängern umgebaut wurden, stiegen die Umsätze der anliegenden Geschäfte entgegen allen Befürchtungen leicht an, während sich die Luftqualität messbar verbesserte. Solche Erfahrungen helfen, die anfangs oft emotional geführte Debatte zu versachlichen. Das stärkt zugleich ihre Position in der öffentlichen Auseinandersetzung. Wo das gelingt, berichten Anwohner nach wenigen Jahren von einer spürbar höheren Lebensqualität – auch ohne dass jemand auf sein Auto verzichten musste.",
+      "ar": "تُجرّب مدن أوروبية متزايدة مفهوم مدينة الخمس عشرة دقيقة: ينبغي أن تكون جميع مرافق الحياة اليومية المهمة – المدرسة وعيادة الطبيب والسوبرماركت ومكان العمل والمساحة الخضراء – في متناول القدم أو الدراجة خلال ربع ساعة. ويرى المؤيدون في ذلك أكثر بكثير من مشروع مروري. فمن لديه مسافات قصيرة لا يوفّر الوقت فحسب، بل يلتقي جيرانه أيضًا بصورة متكررة أكثر؛ وتصبح الأحياء أكثر حيوية، ويكتسب الفضاء العام أهمية أكبر. غير أنّ النقاد يعترضون بأنّ مدينة نمت عبر التاريخ لا يمكن إعادة ترتيبها على لوحة الرسم. فالإيجارات في الأحياء جيدة الاتصال ترتفع بالفعل، بحيث تُدفع الأسر ذات الدخل الضعيف إلى أطراف المدينة – بالضبط حيث تصبح المسافات طويلة مجددًا. وتُضاف إلى ذلك مسألة المعقولية: فلا يمكن نقل كل نشاط إلى قرب السكن، وتتطلب مهن كثيرة مواقع متخصصة. لذلك يوصي باحثو المدن بإعادة بناء حذرة بدل الحظر الراديكالي: ممرات دراجات أفضل، واستخدام مختلط في الطوابق الأرضية، وتكثيف يحترم طابع الأحياء. والحاسم هو إشراك السكان مبكرًا بدل فرض المفاهيم من فوق رؤوسهم. تقدّم مشاريع تجريبية في مدن عديدة الآن أرقامًا موثوقة: فحيث أُعيد بناء الشوارع لصالح المشاة، ارتفعت مبيعات المتاجر المجاورة قليلًا خلافًا لكل المخاوف، بينما تحسّنت جودة الهواء بشكل قابل للقياس. وتساعد مثل هذه التجارب على تحويل النقاش العاطفي في بدايته غالبًا إلى نقاش موضوعي. وهذا يقوّي في الوقت نفسه موقفهم في الجدل العام. وحيثما ينجح ذلك، يتحدث السكان بعد سنوات قليلة عن جودة حياة أعلى بشكل ملموس – حتى دون أن يضطر أحد إلى الاستغناء عن سيارته.",
+      "glossar": [
+        {
+          "de": "das Quartier",
+          "ar": "الحيّ السكني"
+        },
+        {
+          "de": "am Reißbrett",
+          "ar": "على لوحة الرسم (نظريًا من الصفر)"
+        },
+        {
+          "de": "verdrängen",
+          "ar": "إزاحة / دفع بعيدًا"
+        },
+        {
+          "de": "die Zumutbarkeit",
+          "ar": "المعقولية / ما يمكن تحمّله"
+        },
+        {
+          "de": "behutsam",
+          "ar": "بحذر وتأنٍّ"
+        },
+        {
+          "de": "die Verdichtung",
+          "ar": "التكثيف العمراني"
+        },
+        {
+          "de": "über ihre Köpfe hinweg",
+          "ar": "من فوق رؤوسهم (دون إشراك المعنيين)"
+        },
+        {
+          "de": "verlagern (sich ~ lassen)",
+          "ar": "قابل للنقل إلى مكان آخر"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-t2-q1",
+          "promptDe": "Was bedeutet die Fünfzehn-Minuten-Stadt?",
+          "promptAr": "ما المقصود بمدينة الخمس عشرة دقيقة؟",
+          "options": [
+            "Alle Autos werden verboten",
+            "Wichtige Einrichtungen sind in 15 Minuten erreichbar",
+            "Man darf nur 15 Minuten parken",
+            "Die Innenstadt schließt nach 15 Minuten"
+          ],
+          "answer": "Wichtige Einrichtungen sind in 15 Minuten erreichbar",
+          "explanationAr": "النص: مرافق الحياة اليومية «innerhalb einer Viertelstunde erreichbar»."
+        },
+        {
+          "id": "vf-t2-q2",
+          "promptDe": "Welches Problem nennen die Kritiker?",
+          "promptAr": "ما المشكلة التي يذكرها النقاد؟",
+          "options": [
+            "Zu viele Radwege",
+            "Steigende Mieten verdrängen arme Haushalte an den Stadtrand",
+            "Zu wenig Grünanlagen",
+            "Schulen sind zu nah"
+          ],
+          "answer": "Steigende Mieten verdrängen arme Haushalte an den Stadtrand",
+          "explanationAr": "النص: الإيجارات ترتفع و«einkommensschwache Haushalte an den Stadtrand verdrängt werden»."
+        },
+        {
+          "id": "vf-t2-q3",
+          "promptDe": "Was empfehlen Stadtforscher stattdessen?",
+          "promptAr": "بمَ يوصي باحثو المدن بدلًا من ذلك؟",
+          "options": [
+            "Radikale Verbote",
+            "Einen behutsamen Umbau mit Bewohnerbeteiligung",
+            "Neue Städte auf dem Land",
+            "Keine Veränderung"
+          ],
+          "answer": "Einen behutsamen Umbau mit Bewohnerbeteiligung",
+          "explanationAr": "النص: «einen behutsamen Umbau statt radikaler Verbote» و«die Bewohner frühzeitig einzubeziehen»."
+        },
+        {
+          "id": "vf-t2-q4",
+          "promptDe": "Was berichten Anwohner gelungener Projekte?",
+          "promptAr": "ما الذي يرويه سكان المشاريع الناجحة؟",
+          "options": [
+            "Sie mussten ihr Auto verkaufen",
+            "Spürbar höhere Lebensqualität, ohne dass jemand aufs Auto verzichten musste",
+            "Die Wege wurden länger",
+            "Die Mieten sanken überall"
+          ],
+          "answer": "Spürbar höhere Lebensqualität, ohne dass jemand aufs Auto verzichten musste",
+          "explanationAr": "النص: «eine spürbar höhere Lebensqualität – auch ohne dass jemand auf sein Auto verzichten musste»."
+        }
+      ]
+    },
+    {
+      "id": "vf-t3",
+      "level": "C1",
+      "titelDe": "Lebenslanges Lernen: Berufsbilder im Umbruch",
+      "titelAr": "التعلّم مدى الحياة: مهن في طور التحوّل",
+      "de": "Der Gedanke, man lerne einen Beruf und übe ihn dann vierzig Jahre unverändert aus, gehört zunehmend der Vergangenheit an. Automatisierung und künstliche Intelligenz verändern Tätigkeiten nicht nur in Fabriken, sondern längst auch in Büros, Kanzleien und Krankenhäusern. Studien gehen davon aus, dass ein erheblicher Teil der heutigen Aufgabenprofile innerhalb eines Jahrzehnts wegfällt oder sich grundlegend wandelt. Daraus folgt jedoch keineswegs, dass menschliche Arbeit überflüssig wird. Vielmehr verschiebt sich ihr Schwerpunkt: Routinetätigkeiten übernehmen Maschinen, während Urteilsvermögen, Empathie und kreative Problemlösung an Wert gewinnen. Für Beschäftigte bedeutet das eine dauerhafte Lernbereitschaft. Arbeitgeber wiederum stehen in der Pflicht, Weiterbildung nicht als Belohnung für wenige, sondern als selbstverständlichen Teil der Arbeitszeit zu organisieren. Wo das gelingt, zeigen sich bemerkenswerte Effekte: Teams, die regelmäßig geschult werden, berichten von höherer Motivation und geringerer Fluktuation. Auch der Staat ist gefordert – etwa durch Bildungsgutscheine, die unabhängig vom jeweiligen Arbeitgeber eingelöst werden können. Wer lebenslanges Lernen ernst nimmt, darf es schließlich nicht dem Zufall oder der Brieftasche des Einzelnen überlassen. Hinzu kommt eine Generationenfrage: Jüngere Beschäftigte wechseln häufiger den Arbeitsplatz und erwarten von Anfang an, dass ihr Arbeitgeber in ihre Entwicklung investiert. Unternehmen, die das ignorieren, verlieren im Wettbewerb um Fachkräfte zunehmend an Boden – ein Trend, der durch den demografischen Wandel noch verschärft wird. Weiterbildung ist damit längst vom Randthema zur Überlebensfrage geworden. Lernen wird damit zu einer Infrastrukturaufgabe, vergleichbar mit Straßen oder Stromnetzen: unsichtbar, solange sie funktioniert, aber unverzichtbar.",
+      "ar": "أصبحت فكرة أن يتعلّم المرء مهنة ثم يمارسها أربعين عامًا دون تغيير تنتمي بشكل متزايد إلى الماضي. فالأتمتة والذكاء الاصطناعي يغيّران الأنشطة ليس في المصانع فقط، بل منذ زمن أيضًا في المكاتب ومكاتب المحاماة والمستشفيات. وتفترض الدراسات أنّ جزءًا كبيرًا من ملامح المهام الحالية سيختفي خلال عقد أو يتغير جذريًا. لكن لا يترتب على ذلك بأي حال أنّ العمل البشري سيصبح زائدًا عن الحاجة. بل ينتقل مركز ثقله: تتولى الآلات المهام الروتينية، بينما يكتسب حسن التقدير والتعاطف وحل المشكلات الإبداعي قيمة أكبر. ويعني ذلك للموظفين استعدادًا دائمًا للتعلّم. أما أصحاب العمل فعليهم واجب تنظيم التدريب المستمر لا كمكافأة للقليلين، بل كجزء بديهي من وقت العمل. وحيثما ينجح ذلك، تظهر آثار ملفتة: فالفرق التي تتلقى تدريبًا منتظمًا تتحدث عن دافعية أعلى وتنقّل أقل للموظفين. والدولة أيضًا مطالبة – مثلًا عبر قسائم تعليمية يمكن صرفها بمعزل عن صاحب العمل المعني. فمن يأخذ التعلّم مدى الحياة على محمل الجد لا يجوز له في النهاية أن يتركه للصدفة أو لمحفظة الفرد. يُضاف إلى ذلك سؤال الأجيال: فالموظفون الأصغر يغيّرون مكان عملهم بصورة أكثر تكرارًا ويتوقّعون منذ البداية أن يستثمر صاحب عملهم في تطويرهم. والشركات التي تتجاهل ذلك تخسر مكانتها بشكل متزايد في المنافسة على الكفاءات – وهو اتجاه يفاقمه التغيّر الديمغرافي أكثر. وهكذا أصبح التدريب المستمر منذ زمن من موضوع هامشي إلى سؤال بقاء. وهكذا يصبح التعلّم مهمة بنية تحتية، شبيهة بالطرق أو شبكات الكهرباء: غير مرئية ما دامت تعمل، لكن لا غنى عنها.",
+      "glossar": [
+        {
+          "de": "der Umbruch",
+          "ar": "تحوّل جذري / منعطف"
+        },
+        {
+          "de": "das Aufgabenprofil",
+          "ar": "ملمح المهام في وظيفة ما"
+        },
+        {
+          "de": "das Urteilsvermögen",
+          "ar": "حسن التقدير والتمييز"
+        },
+        {
+          "de": "die Fluktuation",
+          "ar": "تنقّل الموظفين بين الشركات"
+        },
+        {
+          "de": "die Pflicht (in der ~ stehen)",
+          "ar": "يكون ملزمًا / عليه واجب"
+        },
+        {
+          "de": "einlösen",
+          "ar": "صرف / استبدال (قسيمة بقيمتها)"
+        },
+        {
+          "de": "die Brieftasche",
+          "ar": "المحفظة"
+        },
+        {
+          "de": "unverzichtbar",
+          "ar": "لا غنى عنه"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-t3-q1",
+          "promptDe": "Was gehört laut Text der Vergangenheit an?",
+          "promptAr": "ما الذي أصبح من الماضي بحسب النص؟",
+          "options": [
+            "Berufe überhaupt",
+            "Einen Beruf lernen und 40 Jahre unverändert ausüben",
+            "Fabrikarbeit",
+            "Weiterbildung"
+          ],
+          "answer": "Einen Beruf lernen und 40 Jahre unverändert ausüben",
+          "explanationAr": "النص: «Der Gedanke, man lerne einen Beruf und übe ihn dann vierzig Jahre unverändert aus, gehört zunehmend der Vergangenheit an»."
+        },
+        {
+          "id": "vf-t3-q2",
+          "promptDe": "Was gewinnen an Wert, wenn Maschinen Routinen übernehmen?",
+          "promptAr": "ما الذي يكتسب قيمة حين تتولى الآلات الروتين؟",
+          "options": [
+            "Längere Arbeitszeiten",
+            "Urteilsvermögen, Empathie und kreative Problemlösung",
+            "Weniger Pausen",
+            "Mehr Kontrolle"
+          ],
+          "answer": "Urteilsvermögen, Empathie und kreative Problemlösung",
+          "explanationAr": "النص: «während Urteilsvermögen, Empathie und kreative Problemlösung an Wert gewinnen»."
+        },
+        {
+          "id": "vf-t3-q3",
+          "promptDe": "Welche Effekte zeigen geschulte Teams?",
+          "promptAr": "ما آثار الفرق المدربة بانتظام؟",
+          "options": [
+            "Höhere Motivation und geringere Fluktuation",
+            "Mehr Überstunden",
+            "Weniger Gehalt",
+            "Größere Büros"
+          ],
+          "answer": "Höhere Motivation und geringere Fluktuation",
+          "explanationAr": "النص: «höherer Motivation und geringerer Fluktuation»."
+        },
+        {
+          "id": "vf-t3-q4",
+          "promptDe": "Womit vergleicht der Text das Lernen am Ende?",
+          "promptAr": "بمَ يقارن النص التعلّم في الختام؟",
+          "options": [
+            "Mit einem Wettbewerb",
+            "Mit Infrastruktur wie Straßen oder Stromnetzen",
+            "Mit einem Hobby",
+            "Mit einer Prüfung"
+          ],
+          "answer": "Mit Infrastruktur wie Straßen oder Stromnetzen",
+          "explanationAr": "النص: «vergleichbar mit Straßen oder Stromnetzen»."
+        }
+      ]
+    },
+    {
+      "id": "vf-t4",
+      "level": "C1",
+      "titelDe": "Datenschutz im Alltag: Zwischen Bequemlichkeit und Kontrolle",
+      "titelAr": "حماية البيانات في الحياة اليومية: بين الراحة والسيطرة",
+      "de": "Jede Suchanfrage, jeder Einkauf und nahezu jeder Weg durch die Stadt hinterlässt digitale Spuren. Unternehmen werten diese Daten aus, um Werbung zu personalisieren, Preise anzupassen oder neue Produkte zu entwickeln. Viele Nutzer nehmen das stillschweigend in Kauf: Die Bequemlichkeit kostenloser Dienste scheint den Preis der eigenen Daten aufzuwiegen. Doch diese Rechnung geht nicht für alle auf. Wer beispielsweise ständig dynamische Preise angezeigt bekommt, zahlt unter Umständen mehr als andere – ohne es zu bemerken. Auch Versicherungen und Arbeitgeber interessieren sich zunehmend für Verhaltensdaten, etwa aus Fitness-Apps. Der Gesetzgeber hat mit der Datenschutz-Grundverordnung zwar einen Rahmen geschaffen, der Auskunfts- und Löschrechte garantiert. In der Praxis scheitern viele Bürger jedoch an undurchsichtigen Einwilligungsformularen, die so gestaltet sind, dass man fast zwangsläufig allem zustimmt. Fachleute sprechen von sogenannten Dark Patterns: Gestaltungstricks, die Nutzer zu Entscheidungen verleiten, die sie bei klarem Blick nicht treffen würden. Abhilfe versprechen einfachere Standardeinstellungen, bei denen Datensparsamkeit voreingestellt ist und jede weitergehende Nutzung aktiv gewählt werden muss. Bemerkenswert ist dabei die Rolle der Voreinstellungen: Die allermeisten Nutzer ändern niemals die Werkseinstellungen ihrer Geräte, weshalb die Entscheidungen der Hersteller und Gesetzgeber faktisch für Millionen Menschen mitentscheiden. Wer Datenschutz ernsthaft stärken will, muss deshalb bei der Gestaltung ansetzen, nicht bei der Belehrung der Einzelnen. Dort entscheidet sich letztlich, ob Grundrechte auch im Netz gewahrt bleiben. Letztlich bleibt der Schutz der Privatsphäre eine gesellschaftliche Aushandlung: Technik allein wird nicht entscheiden, wie viel Beobachtung eine freie Gesellschaft ertragen will.",
+      "ar": "كل عملية بحث وكل عملية شراء وتقريبًا كل طريق عبر المدينة يترك آثارًا رقمية. وتقيّم الشركات هذه البيانات لتخصيص الإعلانات أو تعديل الأسعار أو تطوير منتجات جديدة. ويتقبّل مستخدمون كثيرون ذلك بصمت: إذ يبدو أنّ راحة الخدمات المجانية توازن ثمن بياناتهم الخاصة. لكن هذه الحسبة لا تنجح مع الجميع. فمن تُعرض عليه مثلًا أسعار متغيرة باستمرار قد يدفع في ظروف معينة أكثر من غيره – دون أن يلاحظ. كما تهتم شركات التأمين وأصحاب العمل بشكل متزايد بالبيانات السلوكية، مثل بيانات تطبيقات اللياقة. صحيح أنّ المشرّع أنشأ بالإطار العام لحماية البيانات إطارًا يضمن حقوق الاطلاع والحذف. لكنّ المواطنين في الممارسة العملية يفشلون أمام نماذج موافقة غامضة مصممة بحيث يوافق المرء على كل شيء تقريبًا حتمًا. ويتحدث الخبراء عن ما يسمى الأنماط المظلمة: حيل تصميمية تغري المستخدمين بقرارات ما كانوا ليتخذوها بنظر صافٍ. ويُتوقع العلاج من إعدادات افتراضية أبسط، يكون فيها الاقتصاد في البيانات مضبوطًا مسبقًا ويجب اختيار كل استخدام أوسع بشكل فعّال. والملفت في ذلك دور الإعدادات المسبقة: فالغالبية العظمى من المستخدمين لا يغيّرون أبدًا إعدادات المصنع لأجهزتهم، ولذلك فإنّ قرارات الشركات المصنّعة والمشرّعين تقرّر فعليًا نيابة عن ملايين الناس. فمن يريد تقوية حماية البيانات بجدّية يجب أن يبدأ من التصميم، لا من وعظ الأفراد. وهناك يتقرّر في النهاية ما إذا كانت الحقوق الأساسية ستُصان على الشبكة أيضًا. وفي النهاية يبقى حماية الخصوصية تفاوضًا مجتمعيًا: فالتقنية وحدها لن تقرر كمّ المراقبة التي يريد مجتمع حر تحمّله.",
+      "glossar": [
+        {
+          "de": "stillschweigend in Kauf nehmen",
+          "ar": "تقبّل شيء بصمت على مضض"
+        },
+        {
+          "de": "aufwiegen",
+          "ar": "يوازن / يعادل في القيمة"
+        },
+        {
+          "de": "unter Umständen",
+          "ar": "في ظروف معينة / ربما"
+        },
+        {
+          "de": "die Einwilligung",
+          "ar": "الموافقة (القانونية)"
+        },
+        {
+          "de": "undurchsichtig",
+          "ar": "غامض / غير شفاف"
+        },
+        {
+          "de": "verleiten",
+          "ar": "إغراء / دفع إلى فعل خاطئ"
+        },
+        {
+          "de": "die Datensparsamkeit",
+          "ar": "الاقتصاد في جمع البيانات"
+        },
+        {
+          "de": "die Aushandlung",
+          "ar": "التفاوض / المساومة الجماعية"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-t4-q1",
+          "promptDe": "Warum werten Unternehmen Nutzerdaten aus?",
+          "promptAr": "لماذا تحلّل الشركات بيانات المستخدمين؟",
+          "options": [
+            "Um Werbung zu personalisieren und Produkte zu entwickeln",
+            "Um Steuern zu berechnen",
+            "Um Städte zu planen",
+            "Um Fitness zu verbessern"
+          ],
+          "answer": "Um Werbung zu personalisieren und Produkte zu entwickeln",
+          "explanationAr": "النص: «um Werbung zu personalisieren, Preise anzupassen oder neue Produkte zu entwickeln»."
+        },
+        {
+          "id": "vf-t4-q2",
+          "promptDe": "Was sind Dark Patterns?",
+          "promptAr": "ما الأنماط المظلمة؟",
+          "options": [
+            "Dunkle Farben in Apps",
+            "Gestaltungstricks, die Nutzer zu ungewollten Entscheidungen verleiten",
+            "Verschlüsselte Daten",
+            "Alte Formulare"
+          ],
+          "answer": "Gestaltungstricks, die Nutzer zu ungewollten Entscheidungen verleiten",
+          "explanationAr": "النص: «Gestaltungstricks, die Nutzer zu Entscheidungen verleiten»."
+        },
+        {
+          "id": "vf-t4-q3",
+          "promptDe": "Woran scheitern viele Bürger in der Praxis?",
+          "promptAr": "بمَ يفشل مواطنون كثيرون عمليًا؟",
+          "options": [
+            "An zu kurzen Passwörtern",
+            "An undurchsichtigen Einwilligungsformularen",
+            "An fehlenden Apps",
+            "An hohen Gebühren"
+          ],
+          "answer": "An undurchsichtigen Einwilligungsformularen",
+          "explanationAr": "النص: «scheitern viele Bürger jedoch an undurchsichtigen Einwilligungsformularen»."
+        },
+        {
+          "id": "vf-t4-q4",
+          "promptDe": "Was verspricht laut Text Abhilfe?",
+          "promptAr": "ما العلاج المتوقع بحسب النص؟",
+          "options": [
+            "Mehr Werbung",
+            "Standardeinstellungen mit voreingestellter Datensparsamkeit",
+            "Verbot aller Apps",
+            "Längere Formulare"
+          ],
+          "answer": "Standardeinstellungen mit voreingestellter Datensparsamkeit",
+          "explanationAr": "النص: «bei denen Datensparsamkeit voreingestellt ist»."
+        }
+      ]
+    },
+    {
+      "id": "vf-t5",
+      "level": "C1",
+      "titelDe": "Gesundheitssystem unter Druck: Pflege braucht neue Antworten",
+      "titelAr": "النظام الصحي تحت الضغط: الرعاية تحتاج أجوبة جديدة",
+      "de": "Es ist ein offenes Geheimnis: In vielen Ländern Europas fehlen Pflegekräfte in erheblichem Ausmaß. Die Ursachen sind vielfältig – Schichtdienst, körperliche Belastung und eine Bezahlung, die der Verantwortung des Berufs kaum gerecht wird. Zugleich steigt die Zahl pflegebedürftiger Menschen stetig, weil die Bevölkerung älter wird. Einzelne Kliniken reagieren mit Prämien für neue Mitarbeiter, doch solche Maßnahmen verlagern das Problem nur: Was die eine Einrichtung gewinnt, verliert die andere. Nachhaltiger wirken Veränderungen im Arbeitsalltag selbst. Wo Pflegekräfte ihre Dienstpläne mitgestalten können und verlässlich freie Tage haben, sinken Krankenstände und Kündigungen messbar. Auch die Aufwertung der Ausbildung spielt eine Rolle: Ein Pflegestudium, das mit einem akademischen Grad abschließt, eröffnet Karrierewege in Leitung und Lehre und macht den Beruf für Abiturienten attraktiver. Nicht zuletzt verspricht die Digitalisierung Entlastung – vorausgesetzt, sie wird mit den Beschäftigten statt über sie hinweg eingeführt. Dokumentationssoftware, die doppelte Eingaben erspart, schenkt Zeit für das eigentliche: die Zuwendung zum Patienten. Auch die Bezahlung bleibt ein Streitpunkt: Zwar sind die Gehälter zuletzt gestiegen, doch im Vergleich zu ähnlich verantwortungsvollen Berufen klafft weiterhin eine Lücke, die viele Absolventen vom Pflegeberuf abschreckt. Gewerkschaften fordern deshalb nicht nur mehr Geld, sondern verbindliche Personalschlüssel, die festlegen, wie viele Patienten eine Kraft höchstens betreuen darf. Für viele Beschäftigte wäre schon das ein spürbares Signal der Wertschätzung. Denn am Ende lässt sich gute Pflege nicht allein in Minuten und Kennzahlen messen; sie zeigt sich in der Qualität menschlicher Begegnung.",
+      "ar": "إنه سرّ مكشوف: في بلدان أوروبية كثيرة يوجد نقص كبير في أطقم التمريض والرعاية. والأسباب متنوعة – عمل بنظام الورديات، وإجهاد جسدي، وأجر لا يليق بمسؤولية المهنة. وفي الوقت نفسه يزداد عدد المحتاجين إلى الرعاية باستمرار لأن السكان يتقدمون في العمر. وتردّ عيادات مفردة بمكافآت للموظفين الجدد، لكن مثل هذه التدابير تنقل المشكلة فقط: فما تكسبه مؤسسة تخسره أخرى. أما التغييرات في الحياة العملية اليومية نفسها فهي أكثر استدامة في أثرها. فحيثما يستطيع الممرضون المشاركة في تصميم جداول خدمتهم ولديهم أيام عطلة موثوقة، تنخفض الإجازات المرضية والاستقالات بشكل قابل للقياس. كما يلعب رفع قيمة التدريب دورًا: فدراسة تمريض تنتهي بدرجة أكاديمية تفتح مسارات مهنية في القيادة والتدريس وتجعل المهنة أكثر جاذبية لحملة الشهادة الثانوية. وأخيرًا تعد الرقمنة بالتخفيف – شرط أن تُدخل مع الموظفين لا من فوقهم. فبرامج التوثيق التي توفّر الإدخال المزدوج تمنح وقتًا للجوهر: العناية بالمريض. ويبقى الأجر أيضًا نقطة خلاف: فصحيح أنّ الرواتب ارتفعت أخيرًا، لكن مقارنةً بمهن ذات مسؤولية مماثلة لا تزال هناك فجوة تثني خريجين كثيرين عن مهنة الرعاية. لذلك تطالب النقابات لا بمزيد من المال فقط، بل بمفاتيح أعداد ملزمة تحدّد كم مريضًا يستطيع الموظّف أن يرعى كحدّ أقصى. وبالنسبة لكثير من الموظفين سيكون حتى هذا إشارة تقدير ملموسة. ففي النهاية لا يمكن قياس الرعاية الجيدة بالدقائق والمؤشرات وحدها؛ بل تظهر في جودة اللقاء الإنساني.",
+      "glossar": [
+        {
+          "de": "die Pflegekraft",
+          "ar": "الممرض / عامل الرعاية"
+        },
+        {
+          "de": "gerecht werden",
+          "ar": "يليق بـ / يكون على قدر"
+        },
+        {
+          "de": "pflegebedürftig",
+          "ar": "محتاج إلى الرعاية"
+        },
+        {
+          "de": "die Prämie",
+          "ar": "مكافأة مالية"
+        },
+        {
+          "de": "nachhaltig",
+          "ar": "مستدام"
+        },
+        {
+          "de": "der Krankenstand",
+          "ar": "معدل الإجازات المرضية"
+        },
+        {
+          "de": "die Aufwertung",
+          "ar": "رفع القيمة والمكانة"
+        },
+        {
+          "de": "die Zuwendung",
+          "ar": "العناية والاهتمام الشخصي"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-t5-q1",
+          "promptDe": "Welche Ursachen für den Pflegemangel nennt der Text?",
+          "promptAr": "ما أسباب نقص الرعاية التي يذكرها النص؟",
+          "options": [
+            "Zu viele Kliniken",
+            "Schichtdienst, Belastung und Bezahlung",
+            "Zu kurze Ausbildung",
+            "Zu wenig Patienten"
+          ],
+          "answer": "Schichtdienst, Belastung und Bezahlung",
+          "explanationAr": "النص: «Schichtdienst, körperliche Belastung und eine Bezahlung, die der Verantwortung des Berufs kaum gerecht wird»."
+        },
+        {
+          "id": "vf-t5-q2",
+          "promptDe": "Warum helfen Prämien nur begrenzt?",
+          "promptAr": "لماذا لا تساعد المكافآت إلا بشكل محدود؟",
+          "options": [
+            "Sie sind verboten",
+            "Sie verlagern das Problem nur zwischen Einrichtungen",
+            "Sie kosten zu wenig",
+            "Niemand will sie"
+          ],
+          "answer": "Sie verlagern das Problem nur zwischen Einrichtungen",
+          "explanationAr": "النص: «doch solche Maßnahmen verlagern das Problem nur»."
+        },
+        {
+          "id": "vf-t5-q3",
+          "promptDe": "Was senkt Krankenstände und Kündigungen messbar?",
+          "promptAr": "ما الذي يخفض الإجازات والاستقالات بشكل قابل للقياس؟",
+          "options": [
+            "Mehr Dokumentation",
+            "Dienstpläne mitgestalten und verlässlich freie Tage",
+            "Längere Schichten",
+            "Weniger Urlaub"
+          ],
+          "answer": "Dienstpläne mitgestalten und verlässlich freie Tage",
+          "explanationAr": "النص: «Wo Pflegekräfte ihre Dienstpläne mitgestalten können und verlässlich freie Tage haben, sinken Krankenstände und Kündigungen messbar»."
+        },
+        {
+          "id": "vf-t5-q4",
+          "promptDe": "Worin zeigt sich gute Pflege am Ende?",
+          "promptAr": "فيمَ تظهر الرعاية الجيدة في النهاية؟",
+          "options": [
+            "In Kennzahlen",
+            "In Minutenplänen",
+            "In der Qualität menschlicher Begegnung",
+            "In neuer Software"
+          ],
+          "answer": "In der Qualität menschlicher Begegnung",
+          "explanationAr": "النص: «sie zeigt sich in der Qualität menschlicher Begegnung»."
+        }
+      ]
+    },
+    {
+      "id": "vf-t6",
+      "level": "C1",
+      "titelDe": "Klimapolitik zwischen Anspruch und Wirklichkeit",
+      "titelAr": "سياسة المناخ بين الطموح والواقع",
+      "de": "Kaum ein Politikfeld ist von einer größeren Kluft zwischen Anspruch und Wirklichkeit geprägt als der Klimaschutz. Nahezu alle Staaten haben sich zu ehrgeizigen Zielen verpflichtet, doch die globalen Emissionen sinken langsamer als nötig – in manchen Regionen steigen sie sogar weiter. Die Gründe sind struktureller Natur: Energieversorgung, Verkehr und Industrie lassen sich nicht per Dekret umbauen, sondern nur in Jahrzehnte währenden Prozessen. Hinzu kommen Zielkonflikte. Billige Energie sichert Arbeitsplätze in der Industrie, verteuert aber den Umstieg, wenn Alternativen noch nicht wettbewerbsfähig sind. Umgekehrt erzeugen Förderprogramme für erneuerbare Energien neue Branchen mit Hunderttausenden Arbeitsplätzen. Erfolgreiche Klimapolitik zeichnet sich deshalb weniger durch spektakuläre Einzelmaßnahmen aus als durch verlässliche Rahmensetzung: Ein langsam, aber stetig steigender CO₂-Preis gibt Unternehmen Planungssicherheit und belohnt jede eingesparte Tonne. Ebenso wichtig ist die soziale Abfederung – wer überdurchschnittlich belastet wird, etwa Pendler auf dem Land, braucht Ausgleich, damit Klimaschutz nicht als Projekt wohlhabender Stadtbewohner wahrgenommen wird. International kommt ein weiteres Problem hinzu: Solange große Volkswirtschaften unterschiedliche Geschwindigkeiten vorlegen, droht die Abwanderung energieintensiver Industrien dorthin, wo Regeln laxer sind. Dem wirken Grenzabgaben entgegen, die Importe aus Ländern mit schwächeren Klimastandards verteuern – ein Instrument, das handelspolitisch umstritten, klimapolitisch aber konsequent ist. Erst wenn diese Bausteine ineinandergreifen, entsteht aus Einzelmaßnahmen eine wirksame und glaubwürdige Gesamtstrategie. Schließlich entscheidet auch die Glaubwürdigkeit der Politik: Ziele, die wiederholt verkündet und ebenso oft verschoben werden, untergraben das Vertrauen der Bürger in die Ernsthaftigkeit des gesamten Vorhabens.",
+      "ar": "لا يكاد يوجد مجال سياسي يتميز بفجوة أكبر بين الطموح والواقع مثل حماية المناخ. فقد التزمت جميع الدول تقريبًا بأهداف طموحة، لكن الانبعاثات العالمية تنخفض ببطء أقل من اللازم – بل ترتفع في بعض المناطق أكثر. والأسباب بنيوية بطبيعتها: فإمدادات الطاقة والنقل والصناعة لا يمكن إعادة بنائها بمرسوم، بل عبر عمليات تستمر عقودًا. تُضاف إلى ذلك تعارضات الأهداف. فالطاقة الرخيصة تؤمّن الوظائف في الصناعة، لكنها تجعل التحوّل أغلى حين لا تكون البدائل قادرة على المنافسة بعد. وبالعكس، تولّد برامج دعم الطاقات المتجددة قطاعات جديدة بمئات آلاف الوظائف. لذلك تتميز سياسة المناخ الناجحة بوضع إطار موثوق أكثر مما تتميز بتدابير فردية مبهرجة: فسعر CO₂ يرتفع ببطء لكن بثبات يمنح الشركات أمانًا في التخطيط ويكافئ كل طن يتم توفيره. ومهم بالقدر نفسه التخفيف الاجتماعي – فمن يتحمل عبئًا فوق المتوسط، مثل المتنقلين في الريف، يحتاج إلى تعويض، حتى لا يُنظر إلى حماية المناخ كمشروع لسكان المدن الأثرياء. دوليًا تُضاف مشكلة أخرى: فما دامت اقتصادات كبرى تتقدّم بسرعات متفاوتة، تتهدد الصناعات كثيفة الطاقة بالهجرة إلى حيث القواعد أكثر تساهلًا. وتواجه ذلك رسوم حدودية تجعل الواردات من بلدان ذات معايير مناخية أضعف أغلى – وهي أداة مثيرة للجدل تجاريًا، لكنها متّسقة مناخيًا. وحين تتشابك هذه اللبنات فقط تنشأ من التدابير الفردية استراتيجية. وأخيرًا تحسم مصداقية السياسة أيضًا: فالأهداف التي تُعلن مرارًا وتُرحّل بالتكرار نفسه تقوّض ثقة المواطنين في جدية المشروع برمته.",
+      "glossar": [
+        {
+          "de": "die Kluft",
+          "ar": "الفجوة / الهوة"
+        },
+        {
+          "de": "sich verpflichten zu",
+          "ar": "الالتزام بـ"
+        },
+        {
+          "de": "per Dekret",
+          "ar": "بمرسوم / بقرار فوقي"
+        },
+        {
+          "de": "der Zielkonflikt",
+          "ar": "تعارض الأهداف"
+        },
+        {
+          "de": "wettbewerbsfähig",
+          "ar": "قادر على المنافسة"
+        },
+        {
+          "de": "die Rahmensetzung",
+          "ar": "وضع الإطار (القواعد العامة)"
+        },
+        {
+          "de": "die Abfederung",
+          "ar": "التخفيف / امتصاص الصدمة"
+        },
+        {
+          "de": "untergraben",
+          "ar": "تقويض / زعزعة من الأساس"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-t6-q1",
+          "promptDe": "Warum ist der Umbau laut Text so langsam?",
+          "promptAr": "لماذا التحوّل بطيء بحسب النص؟",
+          "options": [
+            "Niemand will Klimaschutz",
+            "Energie, Verkehr und Industrie lassen sich nur in Jahrzehnte dauernden Prozessen umbauen",
+            "Es fehlen Ziele",
+            "Die Technik existiert nicht"
+          ],
+          "answer": "Energie, Verkehr und Industrie lassen sich nur in Jahrzehnte dauernden Prozessen umbauen",
+          "explanationAr": "النص: «lassen sich nicht per Dekret umbauen, sondern nur in Jahrzehnten währenden Prozessen»."
+        },
+        {
+          "id": "vf-t6-q2",
+          "promptDe": "Was gibt Unternehmen Planungssicherheit?",
+          "promptAr": "ما الذي يمنح الشركات أمان التخطيط؟",
+          "options": [
+            "Einmalige Subventionen",
+            "Ein langsam, aber stetig steigender CO₂-Preis",
+            "Werbekampagnen",
+            "Neue Gesetze ohne Preis"
+          ],
+          "answer": "Ein langsam, aber stetig steigender CO₂-Preis",
+          "explanationAr": "النص: «Ein langsam, aber stetig steigender CO₂-Preis gibt Unternehmen Planungssicherheit»."
+        },
+        {
+          "id": "vf-t6-q3",
+          "promptDe": "Warum braucht es soziale Abfederung?",
+          "promptAr": "لماذا يلزم التخفيف الاجتماعي؟",
+          "options": [
+            "Damit Klimaschutz nicht als Projekt wohlhabender Stadtbewohner gilt",
+            "Damit Autos billiger werden",
+            "Damit Pendler umziehen",
+            "Damit Firmen sparen"
+          ],
+          "answer": "Damit Klimaschutz nicht als Projekt wohlhabender Stadtbewohner gilt",
+          "explanationAr": "النص: «damit Klimaschutz nicht als Projekt wohlhabender Stadtbewohner wahrgenommen wird»."
+        },
+        {
+          "id": "vf-t6-q4",
+          "promptDe": "Was untergräbt das Vertrauen der Bürger?",
+          "promptAr": "ما الذي يقوّض ثقة المواطنين؟",
+          "options": [
+            "Zu hohe Ziele an sich",
+            "Wiederholt verkündete und verschobene Ziele",
+            "Neue Branchen",
+            "CO₂-Preise"
+          ],
+          "answer": "Wiederholt verkündete und verschobene Ziele",
+          "explanationAr": "النص: «Ziele, die wiederholt verkündet und ebenso oft verschoben werden, untergraben das Vertrauen»."
+        }
+      ]
+    },
+    {
+      "id": "vf-t7",
+      "level": "C1",
+      "titelDe": "Die Rückkehr der Handschrift: Schreiben in digitalen Zeiten",
+      "titelAr": "عودة الكتابة اليدوية: الكتابة في الزمن الرقمي",
+      "de": "Lange galt die Handschrift als Auslaufmodell. Schülerinnen und Schüler tippten Hausaufgaben am Laptop, Studierende fotografierten Tafelbilder statt mitzuschreiben, und selbst Einkaufszettel wanderten ins Smartphone. Doch seit einigen Jahren zeichnet sich eine bemerkenswerte Gegenbewegung ab: Ausgerechnet junge Menschen kaufen wieder Füller und Notizbücher, und Schreibwarenläden verzeichnen steigende Umsätze. Lernforscher überrascht das nicht. Wer von Hand schreibt, ist gezwungen, langsamer zu denken und das Gehörte in eigene Worte zu fassen – ein Prozess, der das Verständnis nachweislich vertieft. Maschinenschreiben dagegen verführt zum wörtlichen Mitprotokollieren, bei dem die Inhalte kaum verarbeitet werden. Hinzu kommt ein ästhetischer Genuss: Das eigene Schriftbild ist unverwechselbar und verleiht Gedanken eine persönliche Note, die kein Standardfont ersetzen kann. Allerdings wäre es verkürzt, Handschrift und Tastatur gegeneinander auszuspielen. Für lange Texte, gemeinsame Bearbeitung und barrierefreies Arbeiten bleibt der Computer unverzichtbar. Die Kunst der Zukunft dürfte im bewussten Wechsel liegen: Notizen von Hand, wo es ums Denken geht – digitale Werkzeuge, wo Tempo und Teilen zählen. Sogar die Werbebranche hat den Trend erkannt: Hochwertige Schreibgeräte gelten wieder als Statussymbol, und in sozialen Netzwerken präsentieren junge Kreative ihre Kalligrafien einem Millionenpublikum. Was als Rückzug ins Analoge beginnt, entpuppt sich bei näherem Hinsehen oft als bewusste Entschleunigung in einer beschleunigten Welt. Sie ist Ausdruck eines Bedürfnisses nach Echtheit und nach Spuren, die bleiben und sich nicht per Knopfdruck löschen lassen. So wird die Handschrift nicht zum Relikt, sondern zu einer Kulturtechnik, die man sich bewusst leistet.",
+      "ar": "طالما عُدّت الكتابة اليدوية نموذجًا آفلًا. فالتلاميذ كانوا يكتبون الواجبات على الحاسوب المحمول، والطلاب يصوّرون ما على السبورة بدل كتابته، وحتى قائمة التسوق هاجرت إلى الهاتف الذكي. لكن منذ سنوات قليلة تترسم حركة مضادة ملفتة: فالشباب بالذات يشترون مجددًا أقلام الحبر والدفاتر، وتسجّل متاجر القرطاسية مبيعات متزايدة. ولا يفاجأ باحثو التعلم بذلك. فمن يكتب بيده يُجبر على التفكير ببطء أكبر وصياغة المسموع بكلماته الخاصة – وهي عملية تعمّق الفهم بشكل مثبت. أما الكتابة الآلية فتغري بالتدوين الحرفي الذي لا تكاد فيه المحتويات أن تُعالج. يُضاف إلى ذلك متعة جمالية: فخط المرء الخاص لا يُشبه غيره ويمنح الأفكار لمسة شخصية لا يستطيع أي خط قياسي أن يحل محلها. غير أنه سيكون اختزالًا أن نضع الكتابة اليدوية ولوحة المفاتيح في مواجهة بعضهما. فالنصوص الطويلة والتحرير المشترك والعمل الخالي من العوائق يبقى الحاسوب فيها لا غنى عنه. وفن المستقبل سيكمن غالبًا في التنقل الواعي: ملاحظات باليد حيث يتعلق الأمر بالتفكير – وأدوات رقمية حيث تهم السرعة والمشاركة. وحتى صناعة الإعلان أدركت الاتجاه: فأدوات الكتابة الفاخرة تُعدّ مجددًا رمز مكانة، وفي الشبكات الاجتماعية يعرض مبدعون شباب خطوطهم أمام جمهور بالملايين. وما يبدأ كانسحاب إلى التناظري يتبيّن عند النظر الأقرب غالبًا كتباطؤ واعٍ في عالم متسارع. إنّها تعبير عن حاجة إلى الأصالة وإلى آثار تبقى ولا يمكن حذفها بضغطة زر. وهكذا لا تصبح الكتابة اليدوية أثرًا باقيًا، بل تقنية ثقافية يمنح المرء نفسه إياها بوعي.",
+      "glossar": [
+        {
+          "de": "das Auslaufmodell",
+          "ar": "نموذج آفل / في طريقه للانتهاء"
+        },
+        {
+          "de": "die Gegenbewegung",
+          "ar": "حركة مضادة"
+        },
+        {
+          "de": "nachweislich",
+          "ar": "بشكل مثبت بالأدلة"
+        },
+        {
+          "de": "das Mitprotokollieren",
+          "ar": "التدوين المتزامن لما يقال"
+        },
+        {
+          "de": "unverwechselbar",
+          "ar": "لا يُشبه غيره / فريد"
+        },
+        {
+          "de": "verkürzt",
+          "ar": "مختزل / مبسّط أكثر من اللازم"
+        },
+        {
+          "de": "barrierefrei",
+          "ar": "خالٍ من العوائق (لذوي الاحتياجات)"
+        },
+        {
+          "de": "das Relikt",
+          "ar": "أثر باقٍ من زمن مضى"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-t7-q1",
+          "promptDe": "Was kaufen junge Menschen wieder vermehrt?",
+          "promptAr": "ما الذي يشتريه الشباب مجددًا بشكل متزايد؟",
+          "options": [
+            "Laptops",
+            "Füller und Notizbücher",
+            "Smartphones",
+            "Tafeln"
+          ],
+          "answer": "Füller und Notizbücher",
+          "explanationAr": "النص: «kaufen wieder Füller und Notizbücher»."
+        },
+        {
+          "id": "vf-t7-q2",
+          "promptDe": "Warum vertieft Handschrift das Verständnis?",
+          "promptAr": "لماذا تعمّق الكتابة اليدوية الفهم؟",
+          "options": [
+            "Sie ist schneller",
+            "Man muss langsamer denken und Gehörtes in eigene Worte fassen",
+            "Sie sieht schöner aus",
+            "Sie spart Papier"
+          ],
+          "answer": "Man muss langsamer denken und Gehörtes in eigene Worte fassen",
+          "explanationAr": "النص: «ist gezwungen, langsamer zu denken und das Gehörte in eigene Worte zu fassen»."
+        },
+        {
+          "id": "vf-t7-q3",
+          "promptDe": "Wozu verführt Maschinenschreiben?",
+          "promptAr": "إلى ماذا تغري الكتابة الآلية؟",
+          "options": [
+            "Zum wörtlichen Mitprotokollieren ohne Verarbeitung",
+            "Zum Zeichnen",
+            "Zum Langsamschreiben",
+            "Zum Auswendiglernen"
+          ],
+          "answer": "Zum wörtlichen Mitprotokollieren ohne Verarbeitung",
+          "explanationAr": "النص: «verführt zum wörtlichen Mitprotokollieren»."
+        },
+        {
+          "id": "vf-t7-q4",
+          "promptDe": "Worin liegt laut Text die Kunst der Zukunft?",
+          "promptAr": "فيمَ يكمن فنّ المستقبل بحسب النص؟",
+          "options": [
+            "Nur noch von Hand schreiben",
+            "Im bewussten Wechsel zwischen Handschrift und digitalen Werkzeugen",
+            "Nur noch tippen",
+            "Schreiben abschaffen"
+          ],
+          "answer": "Im bewussten Wechsel zwischen Handschrift und digitalen Werkzeugen",
+          "explanationAr": "النص: «Die Kunst der Zukunft dürfte im bewussten Wechsel liegen»."
+        }
+      ]
+    },
+    {
+      "id": "vf-t8",
+      "level": "C1",
+      "titelDe": "Wohnen im Alter: Zwischen Eigenheim und Gemeinschaft",
+      "titelAr": "السكن في الشيخوخة: بين البيت الخاص والمجتمع",
+      "de": "Die Frage, wie man im Alter wohnen möchte, stellen sich viele Menschen erst dann, wenn sie sich nicht mehr ausweichen lässt – nach einem Sturz etwa oder wenn der Garten zur Last wird. Dabei böten frühe Entscheidungen weit mehr Gestaltungsspielraum. Wer mit sechzig über Barrierefreiheit nachdenkt, kann das eigene Haus schrittweise anpassen: schwellenlose Dusche, Treppenlift, ein Schlafzimmer im Erdgeschoss. Andere suchen bewusst den Anschluss an Gleichgesinnte. Wohnprojekte, in denen jede Partei ihre eigene Wohnung hat, Gemeinschaftsräume aber geteilt werden, erfreuen sich wachsender Beliebtheit. Ihr Prinzip lautet: so viel Privatsphäre wie nötig, so viel Gemeinschaft wie gewünscht. Gegenseitige Hilfe im Alltag – vom Blumengießen im Urlaub bis zur Fahrt zum Arzt – ersetzt dort teilweise professionelle Dienste. Freilich sind solche Projekte kein Allheilmittel. Sie verlangen Kompromissbereitschaft und funktionieren nur, solange die Bewohner ihre Konflikte selbst regeln können. Auch finanziell bleibt die Spanne groß: Das umgebaute Eigenheim bindet Vermögen, während Genossenschaftsanteile vergleichsweise günstig sein können. Beratungsstellen berichten übereinstimmend, dass Paare das Thema oft zu lange vor sich herschieben, weil es mit der eigenen Endlichkeit konfrontiert. Wer es dagegen rechtzeitig anspricht, erlebt häufig eine unerwartete Erleichterung: Die Entscheidung wird vom drohenden Notfall zur selbstbestimmten Lebensplanung, über die man in Ruhe und auch mit Humor sprechen kann. Entscheidend ist weniger die gewählte Form als der Zeitpunkt: Wer sich früh mit der eigenen Vorstellung vom guten Wohnen auseinandersetzt, entscheidet selbst – statt später von Umständen entschieden zu werden.",
+      "ar": "إن سؤال كيف يريد المرء أن يسكن في شيخوخته لا يطرحه كثير من الناس على أنفسهم إلا حين لا يعود بالإمكان تجنّبه – بعد سقوط مثلًا أو حين يصبح الحديقة عبئًا. وفي الحقيقة توفّر القرارات المبكرة مساحة تشكيل أوسع بكثير. فمن يفكر في سن الستين في الخلو من العوائق يمكنه تكييف بيته تدريجيًا: دش دون عتبات، ومصعد للدرج، وغرفة نوم في الطابق الأرضي. وآخرون يبحثون بوعي عن الارتباط بأناس مثلهم. فمشاريع سكنية يكون فيها لكل طرف شقته الخاصة بينما تُشارك في الغرف المشتركة تحظى بشعبية متزايدة. ومبدؤها: خصوصية بقدر الحاجة، ومجتمع بقدر الرغبة. والمساعدة المتبادلة في الحياة اليومية – من سقي الزهور في الإجازة إلى التوصيلة إلى الطبيب – تحل هناك جزئيًا محل الخدمات الاحترافية. وبالطبع ليست مثل هذه المشاريع علاجًا لكل شيء. فهي تتطلب استعدادًا للتسوية ولا تنجح إلا ما دام السكان قادرين على تسوية نزاعاتهم بأنفسهم. ماليًا أيضًا يبقى المدى واسعًا: فالبيت الخاص المُعاد تجهيزه يربط ثروة، بينما قد تكون حصص التعاونيات رخيصة نسبيًا. تتّفق مراكز الاستشارة على أنّ الأزواج غالبًا ما يؤجّلون الموضوع طويلًا لأنه يواجههم بنهايتهم الخاصة. أما من يطرحه في الوقت المناسب فيشعر غالبًا بارتياح غير متوقّع: إذ يتحوّل القرار من حالة طوارئ مهدِّدة إلى تخطيط حياة ذاتي القرار، يمكن الحديث عنه بهدوء وبروح الدعابة أيضًا. والحاسم ليس الشكل المختار بقدر ما هو التوقيت: فمن يواجه مبكرًا تصوّره الخاص عن السكن الجيّد يقرر بنفسه – بدل أن يُقرَّر عنه لاحقًا بفعل الظروف.",
+      "glossar": [
+        {
+          "de": "sich nicht ausweichen lassen",
+          "ar": "لا يمكن تجنّبه"
+        },
+        {
+          "de": "der Gestaltungsspielraum",
+          "ar": "مساحة التشكيل والتصرف"
+        },
+        {
+          "de": "schwellenlos",
+          "ar": "دون عتبات"
+        },
+        {
+          "de": "Gleichgesinnte",
+          "ar": "أناس من نفس التفكير والاهتمام"
+        },
+        {
+          "de": "das Allheilmittel",
+          "ar": "علاج لكل شيء"
+        },
+        {
+          "de": "die Kompromissbereitschaft",
+          "ar": "الاستعداد للتسوية"
+        },
+        {
+          "de": "die Genossenschaft",
+          "ar": "التعاونية (السكنية)"
+        },
+        {
+          "de": "sich auseinandersetzen mit",
+          "ar": "مواجهة موضوع والتفكير فيه بعمق"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-t8-q1",
+          "promptDe": "Wann stellen sich viele die Wohnfrage erst?",
+          "promptAr": "متى يطرح كثيرون سؤال السكن على أنفسهم؟",
+          "options": [
+            "Mit dreißig",
+            "Erst wenn sie sich nicht mehr ausweichen lässt",
+            "Beim Hauskauf",
+            "Nie"
+          ],
+          "answer": "Erst wenn sie sich nicht mehr ausweichen lässt",
+          "explanationAr": "النص: «erst dann, wenn sie sich nicht mehr ausweichen lässt»."
+        },
+        {
+          "id": "vf-t8-q2",
+          "promptDe": "Wie lautet das Prinzip der Wohnprojekte?",
+          "promptAr": "ما مبدأ المشاريع السكنية؟",
+          "options": [
+            "Alles wird geteilt",
+            "So viel Privatsphäre wie nötig, so viel Gemeinschaft wie gewünscht",
+            "Keine eigenen Wohnungen",
+            "Nur für Studenten"
+          ],
+          "answer": "So viel Privatsphäre wie nötig, so viel Gemeinschaft wie gewünscht",
+          "explanationAr": "النص: «so viel Privatsphäre wie nötig, so viel Gemeinschaft wie gewünscht»."
+        },
+        {
+          "id": "vf-t8-q3",
+          "promptDe": "Was ersetzt gegenseitige Hilfe teilweise?",
+          "promptAr": "ما الذي تحلّ المساعدة المتبادلة جزئيًا محله؟",
+          "options": [
+            "Familienbesuche",
+            "Professionelle Dienste",
+            "Gemeinschaftsräume",
+            "Den Garten"
+          ],
+          "answer": "Professionelle Dienste",
+          "explanationAr": "النص: «ersetzt dort teilweise professionelle Dienste»."
+        },
+        {
+          "id": "vf-t8-q4",
+          "promptDe": "Was ist laut Text wichtiger als die Wohnform?",
+          "promptAr": "ما الأهم من شكل السكن بحسب النص؟",
+          "options": [
+            "Der Zeitpunkt der Entscheidung",
+            "Die Größe der Wohnung",
+            "Die Stadt",
+            "Das Vermögen"
+          ],
+          "answer": "Der Zeitpunkt der Entscheidung",
+          "explanationAr": "النص: «Entscheidend ist weniger die gewählte Form als der Zeitpunkt»."
+        }
+      ]
+    }
+  ],
+  "dialoge": [
+    {
+      "id": "vf-d1",
+      "level": "C1",
+      "titelDe": "Im Fachgespräch: Projektstand und Risiken",
+      "titelAr": "في نقاش متخصص: وضع المشروع والمخاطر",
+      "lines": [
+        {
+          "who": "Frau Lehmann",
+          "de": "Guten Morgen, Herr Yilmaz. Wie ist der aktuelle Stand bei der Datenbankmigration?",
+          "ar": "صباح الخير، سيد إيلماز. ما الوضع الحالي في ترحيل قاعدة البيانات؟"
+        },
+        {
+          "who": "Herr Yilmaz",
+          "de": "Wir liegen weitgehend im Zeitplan. Allerdings hat sich bei den Altbeständen ein Problem gezeigt, mit dem wir nicht gerechnet hatten.",
+          "ar": "نحن إلى حد كبير ضمن الجدول الزمني. غير أنه ظهرت مشكلة في البيانات القديمة لم نكن قد حسبنا حسابها."
+        },
+        {
+          "who": "Frau Lehmann",
+          "de": "Könnten Sie das bitte konkretisieren?",
+          "ar": "هل يمكنك توضيح ذلك بشكل ملموس من فضلك؟"
+        },
+        {
+          "who": "Herr Yilmaz",
+          "de": "Gern. Rund zwanzig Prozent der Datensätze sind unvollständig. Wir müssten sie manuell nacharbeiten, was ungefähr drei Wochen dauern würde.",
+          "ar": "بكل سرور. نحو عشرين بالمئة من السجلات ناقصة. وسيتعين علينا معالجتها يدويًا، ما سيستغرق ثلاثة أسابيع تقريبًا."
+        },
+        {
+          "who": "Frau Lehmann",
+          "de": "Das würde unseren Puffer vollständig aufbrauchen. Gibt es eine Alternative?",
+          "ar": "سيستهلك ذلك هامشنا الاحتياطي كاملًا. هل يوجد بديل؟"
+        },
+        {
+          "who": "Herr Yilmaz",
+          "de": "Wir könnten die unvollständigen Bestände zunächst ausklammern und erst in einer zweiten Phase migrieren. Der Kernbetrieb bliebe davon unberührt.",
+          "ar": "يمكننا استثناء البيانات الناقصة أولًا وترحيلها في مرحلة ثانية فقط. وسيبقى التشغيل الأساسي غير متأثر بذلك."
+        },
+        {
+          "who": "Frau Lehmann",
+          "de": "Das klingt vernünftig. Welche Risiken sehen Sie bei diesem Vorgehen?",
+          "ar": "يبدو ذلك معقولًا. ما المخاطر التي تراها في هذا الإجراء؟"
+        },
+        {
+          "who": "Herr Yilmaz",
+          "de": "Die Fachabteilung müsste eine Zeit lang mit zwei Systemen arbeiten. Das ist unbequem, aber beherrschbar – vorausgesetzt, wir schulen die Kollegen rechtzeitig.",
+          "ar": "سيتعين على القسم المتخصص العمل لفترة بنظامين. هذا غير مريح لكنه قابل للسيطرة – بشرط أن ندرّب الزملاء في الوقت المناسب."
+        },
+        {
+          "who": "Frau Lehmann",
+          "de": "Einverstanden. Erstellen Sie mir bitte bis Freitag einen überarbeiteten Plan inklusive Schulungskonzept.",
+          "ar": "اتفقنا. أعدّ لي من فضلك حتى الجمعة خطة معدّلة تشمل مفهوم التدريب."
+        },
+        {
+          "who": "Herr Yilmaz",
+          "de": "Mache ich. Ich stimme mich vorher noch mit dem Datenschutzbeauftragten ab, damit wir keine böse Überraschung erleben.",
+          "ar": "سأفعل. سأتنسق قبل ذلك مع مسؤول حماية البيانات حتى لا نواجه مفاجأة غير سارة."
+        },
+        {
+          "who": "Frau Lehmann",
+          "de": "Sehr gut. Dann sehen wir uns am Freitag zur Entscheidung.",
+          "ar": "جيد جدًا. إذن نلتقي الجمعة للقرار."
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-d1-q1",
+          "promptDe": "Welches Problem ist bei der Migration aufgetreten?",
+          "promptAr": "ما المشكلة التي ظهرت في الترحيل؟",
+          "options": [
+            "Der Server ist abgestürzt",
+            "Rund 20 Prozent der Altbestände sind unvollständig",
+            "Die Kollegen sind im Urlaub",
+            "Das Budget fehlt"
+          ],
+          "answer": "Rund 20 Prozent der Altbestände sind unvollständig",
+          "explanationAr": "يقول: «Rund zwanzig Prozent der Datensätze sind unvollständig»."
+        },
+        {
+          "id": "vf-d1-q2",
+          "promptDe": "Welche Alternative schlägt Herr Yilmaz vor?",
+          "promptAr": "ما البديل الذي يقترحه السيد إيلماز؟",
+          "options": [
+            "Alles manuell nacharbeiten",
+            "Unvollständige Bestände erst in einer zweiten Phase migrieren",
+            "Das Projekt stoppen",
+            "Eine neue Datenbank kaufen"
+          ],
+          "answer": "Unvollständige Bestände erst in einer zweiten Phase migrieren",
+          "explanationAr": "يقول: «erst in einer zweiten Phase migrieren. Der Kernbetrieb bliebe davon unberührt»."
+        },
+        {
+          "id": "vf-d1-q3",
+          "promptDe": "Was ist die Bedingung dafür, dass der Plan funktioniert?",
+          "promptAr": "ما شرط نجاح الخطة؟",
+          "options": [
+            "Mehr Geld",
+            "Die Kollegen rechtzeitig zu schulen",
+            "Zwei neue Server",
+            "Weniger Daten"
+          ],
+          "answer": "Die Kollegen rechtzeitig zu schulen",
+          "explanationAr": "يقول: «vorausgesetzt, wir schulen die Kollegen rechtzeitig»."
+        }
+      ]
+    },
+    {
+      "id": "vf-d2",
+      "level": "C1",
+      "titelDe": "In der Sprechstunde: Ein schwieriges Gespräch",
+      "titelAr": "في ساعة الاستشارة: حديث صعب",
+      "lines": [
+        {
+          "who": "Dr. Sommer",
+          "de": "Nehmen Sie bitte Platz, Frau Berger. Die Ergebnisse Ihrer Untersuchung liegen jetzt vor.",
+          "ar": "تفضلي بالجلوس، سيدة بيرغر. نتائج فحصك أصبحت جاهزة الآن."
+        },
+        {
+          "who": "Frau Berger",
+          "de": "Ich bin ehrlich gesagt ziemlich nervös. Ist es etwas Ernstes?",
+          "ar": "أنا بصراحة متوترة جدًا. هل الأمر خطير؟"
+        },
+        {
+          "who": "Dr. Sommer",
+          "de": "Das kann ich gut nachvollziehen. Zunächst die gute Nachricht: Ein Tumor konnte ausgeschlossen werden.",
+          "ar": "أستطيع تفهّم ذلك جيدًا. أولًا الخبر الجيد: تم استبعاد وجود ورم."
+        },
+        {
+          "who": "Frau Berger",
+          "de": "Gott sei Dank. Aber irgendetwas haben Sie doch gefunden?",
+          "ar": "الحمد لله. لكنك وجدت شيئًا ما، أليس كذلك؟"
+        },
+        {
+          "who": "Dr. Sommer",
+          "de": "Ja. Ihre Schilddrüse arbeitet zu langsam. Das erklärt Ihre Müdigkeit und die Gewichtszunahme der letzten Monate.",
+          "ar": "نعم. غدتك الدرقية تعمل ببطء شديد. وهذا يفسّر تعبك وزيادة وزنك في الأشهر الأخيرة."
+        },
+        {
+          "who": "Frau Berger",
+          "de": "Klingt das bedrohlich? Muss ich operiert werden?",
+          "ar": "هل يبدو ذلك مهدِّدًا؟ هل يجب أن أخضع لعملية؟"
+        },
+        {
+          "who": "Dr. Sommer",
+          "de": "Nein, eine Operation ist nicht nötig. In den allermeisten Fällen lässt sich das mit einem Medikament gut einstellen, das Sie morgens einnehmen.",
+          "ar": "لا، العملية ليست ضرورية. في الغالبية العظمى من الحالات يمكن ضبط ذلك جيدًا بدواء تتناولينه صباحًا."
+        },
+        {
+          "who": "Frau Berger",
+          "de": "Und wie lange muss ich das nehmen?",
+          "ar": "وكم يجب أن آخذه؟"
+        },
+        {
+          "who": "Dr. Sommer",
+          "de": "Voraussichtlich dauerhaft. Wir kontrollieren die Werte zunächst alle sechs Wochen, bis die Dosis exakt auf Sie abgestimmt ist.",
+          "ar": "على الأرجح بشكل دائم. سنراقب القيم أولًا كل ستة أسابيع حتى تُضبط الجرعة بدقة وفقًا لك."
+        },
+        {
+          "who": "Frau Berger",
+          "de": "Verstehe. Gibt es etwas, worauf ich im Alltag achten sollte?",
+          "ar": "أفهم. هل يوجد شيء يجب أن أنتبه له في الحياة اليومية؟"
+        },
+        {
+          "who": "Dr. Sommer",
+          "de": "Nehmen Sie die Tablette auf nüchternen Magen ein und warten Sie eine halbe Stunde mit dem Frühstück. Alles Weitere habe ich Ihnen hier verständlich zusammengefasst.",
+          "ar": "خذي الحبة على معدة فارغة وانتظري نصف ساعة قبل الفطور. وبقية الأمور لخّصتها لك هنا بشكل مفهوم."
+        },
+        {
+          "who": "Frau Berger",
+          "de": "Vielen Dank, Frau Doktor. Ich fühle mich schon deutlich ruhiger.",
+          "ar": "شكرًا جزيلًا، دكتورة. أشعر الآن بهدوء أكبر بكثير."
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-d2-q1",
+          "promptDe": "Welche gute Nachricht nennt die Ärztin zuerst?",
+          "promptAr": "ما الخبر الجيد الذي تذكره الطبيبة أولًا؟",
+          "options": [
+            "Die Werte sind perfekt",
+            "Ein Tumor konnte ausgeschlossen werden",
+            "Keine Medikamente nötig",
+            "Die Untersuchung war kostenlos"
+          ],
+          "answer": "Ein Tumor konnte ausgeschlossen werden",
+          "explanationAr": "تقول: «Ein Tumor konnte ausgeschlossen werden»."
+        },
+        {
+          "id": "vf-d2-q2",
+          "promptDe": "Was ist die eigentliche Diagnose?",
+          "promptAr": "ما التشخيص الفعلي؟",
+          "options": [
+            "Herzprobleme",
+            "Die Schilddrüse arbeitet zu langsam",
+            "Ein Vitaminmangel",
+            "Zu hoher Blutdruck"
+          ],
+          "answer": "Die Schilddrüse arbeitet zu langsam",
+          "explanationAr": "تقول: «Ihre Schilddrüse arbeitet zu langsam»."
+        },
+        {
+          "id": "vf-d2-q3",
+          "promptDe": "Wie wird behandelt?",
+          "promptAr": "كيف يكون العلاج؟",
+          "options": [
+            "Operation",
+            "Ein Medikament, voraussichtlich dauerhaft",
+            "Nur sechs Wochen Sport",
+            "Gar nicht"
+          ],
+          "answer": "Ein Medikament, voraussichtlich dauerhaft",
+          "explanationAr": "تقول: «lässt sich das mit einem Medikament gut einstellen» و«Voraussichtlich dauerhaft»."
+        }
+      ]
+    },
+    {
+      "id": "vf-d3",
+      "level": "C1",
+      "titelDe": "Seminardiskussion: Soll Geschichte Pflichtfach bleiben?",
+      "titelAr": "نقاش في ندوة: هل تبقى مادة التاريخ إلزامية؟",
+      "lines": [
+        {
+          "who": "Dozentin",
+          "de": "Wir diskutieren heute die Frage, ob Geschichte bis zum Abitur Pflichtfach bleiben soll. Wer möchte beginnen?",
+          "ar": "نناقش اليوم سؤال ما إذا كان يجب أن تبقى مادة التاريخ إلزامية حتى الشهادة الثانوية. من يريد أن يبدأ؟"
+        },
+        {
+          "who": "Jonas",
+          "de": "Ich vertrete die Position, dass Geschichte unverzichtbar ist. Wer die Vergangenheit nicht kennt, versteht die Gegenwart nicht.",
+          "ar": "أمثّل الموقف القائل إن التاريخ لا غنى عنه. فمن لا يعرف الماضي لا يفهم الحاضر."
+        },
+        {
+          "who": "Mia",
+          "de": "Dem würde ich teilweise widersprechen. Nicht der Stoff selbst ist das Problem, sondern die Art, wie er vermittelt wird: Jahreszahlen auswendig zu lernen hat wenig mit Verstehen zu tun.",
+          "ar": "سأعارض ذلك جزئيًا. فالمشكلة ليست المادة نفسها، بل الطريقة التي تُدرَّس بها: فحفظ السنوات غيبًا لا علاقة له بالفهم."
+        },
+        {
+          "who": "Dozentin",
+          "de": "Ein berechtigter Einwand. Jonas, wie reagieren Sie darauf?",
+          "ar": "اعتراض وجيه. يونس، كيف تردّ على ذلك؟"
+        },
+        {
+          "who": "Jonas",
+          "de": "Da ist etwas Wahres dran. Dennoch braucht man ein Grundgerüst an Fakten, um überhaupt Zusammenhänge erkennen zu können.",
+          "ar": "في ذلك شيء من الحقيقة. ومع ذلك يحتاج المرء إلى هيكل أساسي من الحقائق حتى يستطيع أصلًا إدراك الروابط."
+        },
+        {
+          "who": "Karim",
+          "de": "Darf ich einen Vorschlag zur Güte machen? Man könnte die Stundenzahl reduzieren und dafür stärker projektorientiert arbeiten, etwa mit Zeitzeugeninterviews.",
+          "ar": "هل لي أن أقدّم اقتراحًا للتسوية؟ يمكن تخفيض عدد الحصص والعمل بشكل أقوى عبر المشاريع، مثلًا بمقابلات مع شهود العصر."
+        },
+        {
+          "who": "Mia",
+          "de": "Damit könnte ich gut leben. Entscheidend ist doch, dass Geschichte zum Nachdenken anregt statt zum bloßen Nachbeten.",
+          "ar": "يمكنني القبول بذلك جيدًا. فالحاسم أن يحفّز التاريخ على التفكير بدل الترديد المجرّد."
+        },
+        {
+          "who": "Dozentin",
+          "de": "Fassen wir zusammen: Über das Ziel – historisches Urteilsvermögen – besteht Einigkeit, über den Weg dorthin wird weiter zu streiten sein.",
+          "ar": "لنلخّص: حول الهدف – القدرة على الحكم التاريخي – يوجد اتفاق، وحول الطريق إليه سيستمر الجدل."
+        },
+        {
+          "who": "Jonas",
+          "de": "Wobei ich festhalten möchte: Ohne verbindlichen Rahmen geht es nicht. Freiwillige Kurse erreichen nur die ohnehin Interessierten.",
+          "ar": "مع ملاحظة أني أريد تثبيت أن الأمر لا يستقيم دون إطار ملزم. فالدورات الاختيارية لا تصل إلا إلى المهتمين أصلًا."
+        },
+        {
+          "who": "Karim",
+          "de": "Das ist ein starkes Argument. Vielleicht wäre ein Pflichtkern mit Wahlmodulen der tragfähigste Kompromiss.",
+          "ar": "هذه حجة قوية. ربما تكون نواة إلزامية مع وحدات اختيارية هي التسوية الأكثر قابلية للحمل."
+        },
+        {
+          "who": "Dozentin",
+          "de": "Ein tragfähiger Vorschlag zum Abschluss. Bitte bereiten Sie für nächste Woche je eine Seite mit Ihrer begründeten Position vor.",
+          "ar": "اقتراح قابل للحمل في الختام. حضّروا من فضلكم للأسبوع القادم صفحة واحدة لكل منكم بموقفكم المعلَّل."
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-d3-q1",
+          "promptDe": "Was kritisiert Mia?",
+          "promptAr": "ما الذي تنتقده ميا؟",
+          "options": [
+            "Den Stoff Geschichte an sich",
+            "Die Art der Vermittlung, etwa Auswendiglernen von Jahreszahlen",
+            "Die Dozentin",
+            "Die Stundenzahl allein"
+          ],
+          "answer": "Die Art der Vermittlung, etwa Auswendiglernen von Jahreszahlen",
+          "explanationAr": "تقول: «Nicht der Stoff selbst ist das Problem, sondern die Art, wie er vermittelt wird»."
+        },
+        {
+          "id": "vf-d3-q2",
+          "promptDe": "Welchen Kompromiss schlägt Karim vor?",
+          "promptAr": "ما التسوية التي يقترحها كريم؟",
+          "options": [
+            "Geschichte abschaffen",
+            "Weniger Stunden, dafür projektorientiert mit Zeitzeugeninterviews",
+            "Nur noch Filme zeigen",
+            "Mehr Prüfungen"
+          ],
+          "answer": "Weniger Stunden, dafür projektorientiert mit Zeitzeugeninterviews",
+          "explanationAr": "يقول: «die Stundenzahl reduzieren und dafür stärker projektorientiert arbeiten, etwa mit Zeitzeugeninterviews»."
+        },
+        {
+          "id": "vf-d3-q3",
+          "promptDe": "Worüber besteht am Ende Einigkeit?",
+          "promptAr": "حول ماذا يوجد اتفاق في النهاية؟",
+          "options": [
+            "Über die Abschaffung",
+            "Über das Ziel: historisches Urteilsvermögen",
+            "Über die Stundenzahl",
+            "Über die Lehrbücher"
+          ],
+          "answer": "Über das Ziel: historisches Urteilsvermögen",
+          "explanationAr": "تقول المحاضِرة: «Über das Ziel – historisches Urteilsvermögen – besteht Einigkeit»."
+        }
+      ]
+    },
+    {
+      "id": "vf-d4",
+      "level": "C1",
+      "titelDe": "Beim Projektstart: Erwartungen klären",
+      "titelAr": "في انطلاق مشروع: توضيح التوقعات",
+      "lines": [
+        {
+          "who": "Projektleiterin",
+          "de": "Willkommen zur Kick-off-Runde. Bevor wir Termine verteilen, sollten wir klären, was am Ende konkret vorliegen muss.",
+          "ar": "مرحبًا بكم في اجتماع الانطلاق. قبل أن نوزّع المواعيد، ينبغي أن نوضّح ما الذي يجب أن يكون جاهزًا في النهاية بشكل ملموس."
+        },
+        {
+          "who": "Entwickler",
+          "de": "Aus technischer Sicht brauchen wir zuerst eine stabile Testumgebung. Ohne die können wir keine belastbaren Aussagen machen.",
+          "ar": "من الناحية التقنية نحتاج أولًا إلى بيئة اختبار مستقرة. بدونها لا يمكننا إعطاء بيانات موثوقة."
+        },
+        {
+          "who": "Vertrieb",
+          "de": "Die Kunden erwarten allerdings schon im März eine erste Demo. Lässt sich das irgendwie darstellen?",
+          "ar": "غير أن العملاء يتوقعون عرضًا أوليًا في مارس بالفعل. هل يمكن تحقيق ذلك بشكل ما؟"
+        },
+        {
+          "who": "Projektleiterin",
+          "de": "Eine Demo mit Beispieldaten wäre machbar, solange wir ehrlich kennzeichnen, was noch fehlt.",
+          "ar": "عرض ببيانات تجريبية سيكون ممكنًا، بشرط أن نشير بصدق إلى ما ينقص بعد."
+        },
+        {
+          "who": "Entwickler",
+          "de": "Damit kann ich leben. Wichtig ist mir nur, dass wir keine Funktionen versprechen, die noch nicht einmal konzipiert sind.",
+          "ar": "يمكنني القبول بذلك. المهم لي فقط ألا نعد بوظائف لم تُصمَّم أصلًا بعد."
+        },
+        {
+          "who": "Vertrieb",
+          "de": "Verstanden. Ich formuliere es gegenüber den Kunden als Ausblick, nicht als Zusage.",
+          "ar": "مفهوم. سأصيغه أمام العملاء كتطلّع مستقبلي، لا كوعد."
+        },
+        {
+          "who": "Projektleiterin",
+          "de": "Genau so. Und damit wir gar nicht erst aneinander vorbeireden: Wir treffen uns ab sofort jeden Montag für fünfzehn Minuten, kurz und ohne Präsentationen.",
+          "ar": "تمامًا هكذا. وحتى لا نتحدث دون أن يسمع بعضنا بعضًا أصلًا: سنلتقي من الآن كل اثنين لمدة خمس عشرة دقيقة، بشكل قصير وبلا عروض تقديمية."
+        },
+        {
+          "who": "Entwickler",
+          "de": "Einverstanden. Wer dokumentiert die Entscheidungen?",
+          "ar": "اتفقنا. من يوثّق القرارات؟"
+        },
+        {
+          "who": "Projektleiterin",
+          "de": "Ich führe ein fortlaufendes Protokoll, das für alle einsehbar ist. Widersprüche bitte sofort ansprechen, nicht erst bei der Abnahme.",
+          "ar": "سأحتفظ بمحضر مستمر متاح للجميع للاطّلاع. الاعتراضات من فضلكم فورًا، لا عند التسليم أولًا."
+        },
+        {
+          "who": "Vertrieb",
+          "de": "Gut. Dann fasse ich die Kundenzusagen bis Mittwoch zusammen und stimme sie hier noch einmal ab.",
+          "ar": "جيد. إذن سألخّص وعود العملاء حتى الأربعاء وأنسّقها هنا مرة أخرى."
+        },
+        {
+          "who": "Projektleiterin",
+          "de": "Perfekt. Wenn wir so arbeiten, sehe ich dem März-Termin gelassen entgegen.",
+          "ar": "ممتاز. إذا عملنا بهذا الشكل، فإني أنظر إلى موعد مارس بهدوء."
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-d4-q1",
+          "promptDe": "Was braucht die Technik zuerst?",
+          "promptAr": "ما الذي تحتاجه التقنية أولًا؟",
+          "options": [
+            "Mehr Kunden",
+            "Eine stabile Testumgebung",
+            "Neue Büros",
+            "Eine Demo"
+          ],
+          "answer": "Eine stabile Testumgebung",
+          "explanationAr": "يقول: «brauchen wir zuerst eine stabile Testumgebung»."
+        },
+        {
+          "id": "vf-d4-q2",
+          "promptDe": "Unter welcher Bedingung ist die März-Demo machbar?",
+          "promptAr": "بأي شرط يكون عرض مارس ممكنًا؟",
+          "options": [
+            "Wenn ehrlich gekennzeichnet wird, was noch fehlt",
+            "Wenn alle Überstunden machen",
+            "Wenn Kunden weniger erwarten",
+            "Gar nicht"
+          ],
+          "answer": "Wenn ehrlich gekennzeichnet wird, was noch fehlt",
+          "explanationAr": "تقول: «solange wir ehrlich kennzeichnen, was noch fehlt»."
+        },
+        {
+          "id": "vf-d4-q3",
+          "promptDe": "Was wird zum wöchentlichen Ritual?",
+          "promptAr": "ما الذي يصبح طقسًا أسبوعيًا؟",
+          "options": [
+            "Lange Präsentationen",
+            "Fünfzehn Minuten Treffen jeden Montag ohne Präsentationen",
+            "Kundenbesuche",
+            "Protokolle am Freitag"
+          ],
+          "answer": "Fünfzehn Minuten Treffen jeden Montag ohne Präsentationen",
+          "explanationAr": "تقول: «jeden Montag für fünfzehn Minuten, kurz und ohne Präsentationen»."
+        }
+      ]
+    },
+    {
+      "id": "vf-d5",
+      "level": "C1",
+      "titelDe": "Beratungsgespräch: Umschulung mit Mitte vierzig",
+      "titelAr": "حديث استشاري: إعادة تأهيل في منتصف الأربعينيات",
+      "lines": [
+        {
+          "who": "Beraterin",
+          "de": "Guten Tag, Herr Krüger. Sie überlegen, sich beruflich noch einmal neu zu orientieren. Erzählen Sie mir gern mehr.",
+          "ar": "نهارك سعيد، سيد كروغر. أنت تفكّر في إعادة توجيه نفسك مهنيًا من جديد. حدّثني أكثر من فضلك."
+        },
+        {
+          "who": "Herr Krüger",
+          "de": "Ich bin seit zwanzig Jahren Lagerleiter. Die Arbeit wird zunehmend automatisiert, und ehrlich gesagt: Ich möchte nicht die nächsten zwanzig Jahre dasselbe machen.",
+          "ar": "أنا مدير مخزن منذ عشرين عامًا. العمل يصبح مؤتمتًا بشكل متزايد، وبصراحة: لا أريد أن أفعل الشيء نفسه في العشرين سنة القادمة."
+        },
+        {
+          "who": "Beraterin",
+          "de": "Das ist ein nachvollziehbarer Wunsch. Haben Sie schon eine Richtung im Kopf?",
+          "ar": "هذه رغبة مفهومة. هل لديك اتجاه في ذهنك بالفعل؟"
+        },
+        {
+          "who": "Herr Krüger",
+          "de": "Ich könnte mir etwas mit Menschen vorstellen, vielleicht in der Beratung oder im sozialen Bereich. Aber mit Mitte vierzig noch einmal von vorn anzufangen, macht mir auch Angst.",
+          "ar": "أستطيع تصوّر شيء مع الناس، ربما في الاستشارة أو المجال الاجتماعي. لكن البدء من جديد في منتصف الأربعينيات يخيفني أيضًا."
+        },
+        {
+          "who": "Beraterin",
+          "de": "Diese Sorge höre ich oft. Dabei bringen Sie etwas mit, das kein Zertifikat ersetzt: zwei Jahrzehnte Erfahrung im Umgang mit Teams und schwierigen Situationen.",
+          "ar": "أسمع هذا القلق كثيرًا. وفي الحقيقة تحمل معك ما لا تعوّضه أي شهادة: عقدين من الخبرة في التعامل مع الفرق والمواقف الصعبة."
+        },
+        {
+          "who": "Herr Krüger",
+          "de": "Das stimmt wohl. Aber formal fehlt mir jede Qualifikation in dem Bereich.",
+          "ar": "هذا صحيح على الأرجح. لكن رسميًا تنقصني أي مؤهّل في ذلك المجال."
+        },
+        {
+          "who": "Beraterin",
+          "de": "Dafür gibt es Wege: Eine Umschulung dauert in der Regel zwei Jahre und wird unter bestimmten Voraussetzungen gefördert. Daneben existieren berufsbegleitende Lehrgänge.",
+          "ar": "لهذا توجد طرق: إعادة التأهيل تستغرق عادة سنتين وتُدعَّم بشروط معينة. وإلى جانبها توجد دورات أثناء العمل."
+        },
+        {
+          "who": "Herr Krüger",
+          "de": "Berufsbegleitend klänge realistischer. Ich muss schließlich meine Familie versorgen.",
+          "ar": "أثناء العمل يبدو أكثر واقعية. ففي النهاية يجب أن أعيل أسرتي."
+        },
+        {
+          "who": "Beraterin",
+          "de": "Verständlich. Mein Vorschlag: Wir schauen uns drei konkrete Angebote an und prüfen, welche Anerkennung Ihre Erfahrung dort findet.",
+          "ar": "مفهوم. اقتراحي: ننظر في ثلاثة عروض ملموسة ونفحص أيّ اعتراف تجده خبرتك هناك."
+        },
+        {
+          "who": "Herr Krüger",
+          "de": "Das klingt nach einem machbaren ersten Schritt. Muss ich mich heute schon festlegen?",
+          "ar": "يبدو ذلك خطوة أولى قابلة للتنفيذ. هل يجب أن أحسم أمري اليوم بالفعل؟"
+        },
+        {
+          "who": "Beraterin",
+          "de": "Keinesfalls. Nehmen Sie die Unterlagen mit, schlafen Sie darüber und kommen Sie in zwei Wochen wieder. Entscheidungen dieser Tragweite brauchen Zeit.",
+          "ar": "إطلاقًا. خذ المستندات معك، ونم عليها (فكّر بهدوء)، وعُد بعد أسبوعين. فقرارات بهذا الحجم تحتاج وقتًا."
+        },
+        {
+          "who": "Herr Krüger",
+          "de": "Vielen Dank. Allein, dass es konkrete Optionen gibt, nimmt mir schon einen Teil der Angst.",
+          "ar": "شكرًا جزيلًا. مجرّد وجود خيارات ملموسة يزيل عني جزءًا من الخوف بالفعل."
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-d5-q1",
+          "promptDe": "Warum will Herr Krüger sich umorientieren?",
+          "promptAr": "لماذا يريد السيد كروغر تغيير اتجاهه؟",
+          "options": [
+            "Er hat gekündigt",
+            "Seine Arbeit wird automatisiert und er will nicht 20 Jahre dasselbe machen",
+            "Er zieht um",
+            "Sein Chef verlangt es"
+          ],
+          "answer": "Seine Arbeit wird automatisiert und er will nicht 20 Jahre dasselbe machen",
+          "explanationAr": "يقول: «Die Arbeit wird zunehmend automatisiert» و«Ich möchte nicht die nächsten zwanzig Jahre dasselbe machen»."
+        },
+        {
+          "id": "vf-d5-q2",
+          "promptDe": "Was bringt Herr Krüger laut Beraterin mit?",
+          "promptAr": "ما الذي يحمله السيد كروغر معه بحسب المستشارة؟",
+          "options": [
+            "Zertifikate",
+            "Zwei Jahrzehnte Erfahrung mit Teams und schwierigen Situationen",
+            "Ersparnisse",
+            "Einen Studienabschluss"
+          ],
+          "answer": "Zwei Jahrzehnte Erfahrung mit Teams und schwierigen Situationen",
+          "explanationAr": "تقول: «zwei Jahrzehnte Erfahrung im Umgang mit Teams und schwierigen Situationen»."
+        },
+        {
+          "id": "vf-d5-q3",
+          "promptDe": "Wozu rät die Beraterin am Ende?",
+          "promptAr": "بمَ تنصح المستشارة في النهاية؟",
+          "options": [
+            "Sofort kündigen",
+            "Unterlagen mitnehmen, darüber schlafen und in zwei Wochen wiederkommen",
+            "Gleich einen Vertrag unterschreiben",
+            "Alles aufgeben"
+          ],
+          "answer": "Unterlagen mitnehmen, darüber schlafen und in zwei Wochen wiederkommen",
+          "explanationAr": "تقول: «Nehmen Sie die Unterlagen mit, schlafen Sie darüber und kommen Sie in zwei Wochen wieder»."
+        }
+      ]
+    },
+    {
+      "id": "vf-d6",
+      "level": "C1",
+      "titelDe": "Radiointerview: Zukunft der Bibliotheken",
+      "titelAr": "مقابلة إذاعية: مستقبل المكتبات",
+      "lines": [
+        {
+          "who": "Moderatorin",
+          "de": "Zu Gast ist heute Frau Professor Aydın, die zur Zukunft öffentlicher Bibliotheken forscht. Frau Aydın, stirbt die Bibliothek im digitalen Zeitalter?",
+          "ar": "ضيفتنا اليوم السيدة البروفيسورة آيدن، التي تبحث في مستقبل المكتبات العامة. سيدة آيدن، هل تموت المكتبة في العصر الرقمي؟"
+        },
+        {
+          "who": "Prof. Aydın",
+          "de": "Diese Frage höre ich seit zwanzig Jahren – und die Bibliotheken sind immer noch da. Was sich ändert, ist ihre Funktion: Weg vom reinen Buchlager, hin zum offenen Aufenthaltsort.",
+          "ar": "أسمع هذا السؤال منذ عشرين عامًا – والمكتبات لا تزال موجودة. ما يتغيّر هو وظيفتها: بعيدًا عن مخزن الكتب المجرّد، نحو مكان مفتوح للبقاء فيه."
+        },
+        {
+          "who": "Moderatorin",
+          "de": "Was suchen die Menschen dort, wenn sie Bücher auch zu Hause lesen können?",
+          "ar": "ما الذي يبحث عنه الناس هناك إذا كان بإمكانهم قراءة الكتب في البيت أيضًا؟"
+        },
+        {
+          "who": "Prof. Aydın",
+          "de": "Vor allem drei Dinge: einen ruhigen Arbeitsplatz, kompetente Beratung – und einander. Viele kommen, um nicht allein zu sein, ohne etwas kaufen zu müssen.",
+          "ar": "ثلاثة أشياء قبل كل شيء: مكان عمل هادئ، واستشارة مختصة – وبعضهم بعضًا. كثيرون يأتون كي لا يكونوا وحيدين، دون أن يضطروا لشراء شيء."
+        },
+        {
+          "who": "Moderatorin",
+          "de": "Gleichzeitig stehen viele Kommunen unter Spardruck. Wo setzt man da den Rotstift an?",
+          "ar": "في الوقت نفسه تواجه بلديات كثيرة ضغط توفير. فأين يضع المرء قلم الحذف الأحمر؟"
+        },
+        {
+          "who": "Prof. Aydın",
+          "de": "Hoffentlich nicht bei den Öffnungszeiten. Eine Bibliothek, die nur werktags bis sechzehn Uhr öffnet, schließt genau die aus, die arbeiten – und die sie am dringendsten bräuchten.",
+          "ar": "آمل ألا يكون عند ساعات الفتح. فمكتبة لا تفتح إلا في أيام العمل حتى الرابعة عصرًا تستبعد بالضبط أولئك الذين يعملون – والذين يحتاجونها على أحرّ وجه."
+        },
+        {
+          "who": "Moderatorin",
+          "de": "Welche Rolle spielt die Digitalisierung jenseits vom E-Book?",
+          "ar": "ما الدور الذي تلعبه الرقمنة بعيدًا عن الكتاب الإلكتروني؟"
+        },
+        {
+          "who": "Prof. Aydın",
+          "de": "Eine größere, als viele denken: Bibliotheken verleihen inzwischen Werkzeuge, bieten Makerspaces mit 3D-Druckern an und helfen älteren Menschen im Umgang mit Behördenportalen.",
+          "ar": "دورًا أكبر مما يظنه كثيرون: فالمكتبات تُعير الآن أدوات، وتقدّم مساحات صناعة بطابعات ثلاثية الأبعاد، وتساعد كبار السن في التعامل مع بوابات السلطات."
+        },
+        {
+          "who": "Moderatorin",
+          "de": "Klingt nach einer Institution im Aufwind. Wo sehen Sie die größte Baustelle?",
+          "ar": "يبدو كمؤسسة في صعود. أين ترين أكبر ورشة (مشكلة تحتاج علاجًا)؟"
+        },
+        {
+          "who": "Prof. Aydın",
+          "de": "Bei der personellen Ausstattung. Neue Aufgaben mit altem Personalstamm zu bewältigen, überfordert auf Dauer selbst die engagiertesten Teams.",
+          "ar": "في التجهيز البشري. فإنجاز مهام جديدة بطاقم قديم يفوق قدرة أكثر الفرق التزامًا على المدى الطويل."
+        },
+        {
+          "who": "Moderatorin",
+          "de": "Ihr Ausblick in einem Satz?",
+          "ar": "تطلّعك في جملة واحدة؟"
+        },
+        {
+          "who": "Prof. Aydın",
+          "de": "Die Bibliothek der Zukunft wird weniger ein Ort der Bücher sein als ein Ort der Möglichkeiten – vorausgesetzt, die Politik gibt ihr den Raum dazu.",
+          "ar": "مكتبة المستقبل ستكون مكانًا للإمكانيات أكثر من كونها مكانًا للكتب – بشرط أن تمنحها السياسة المساحة لذلك."
+        }
+      ],
+      "fragen": [
+        {
+          "id": "vf-d6-q1",
+          "promptDe": "Wie verändert sich die Funktion der Bibliothek?",
+          "promptAr": "كيف تتغيّر وظيفة المكتبة؟",
+          "options": [
+            "Sie wird zum Buchladen",
+            "Vom reinen Buchlager zum offenen Aufenthaltsort",
+            "Sie schließt",
+            "Sie wird digital abgeschafft"
+          ],
+          "answer": "Vom reinen Buchlager zum offenen Aufenthaltsort",
+          "explanationAr": "تقول: «Weg vom reinen Buchlager, hin zum offenen Aufenthaltsort»."
+        },
+        {
+          "id": "vf-d6-q2",
+          "promptDe": "Wo sollte laut Frau Aydın nicht gespart werden?",
+          "promptAr": "أين ينبغي ألا يُقتَّر فيه بحسب السيدة آيدن؟",
+          "options": [
+            "Bei den Öffnungszeiten",
+            "Bei neuen Büchern",
+            "Bei 3D-Druckern",
+            "Bei Veranstaltungen"
+          ],
+          "answer": "Bei den Öffnungszeiten",
+          "explanationAr": "تقول: «Hoffentlich nicht bei den Öffnungszeiten»."
+        },
+        {
+          "id": "vf-d6-q3",
+          "promptDe": "Was ist die größte Baustelle?",
+          "promptAr": "ما أكبر مشكلة تحتاج علاجًا؟",
+          "options": [
+            "Zu wenige Bücher",
+            "Die personelle Ausstattung",
+            "Zu viele Besucher",
+            "Die Digitalisierung"
+          ],
+          "answer": "Die personelle Ausstattung",
+          "explanationAr": "تقول: «Bei der personellen Ausstattung»."
+        }
+      ]
+    }
+  ]
+}

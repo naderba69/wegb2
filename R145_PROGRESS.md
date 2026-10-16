@@ -341,6 +341,24 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R178 — C2 Vertiefungsbibliothek B2+/C1 + Rotations-Zählfix — abgeschlossen ✅
+
+- **Bibliothek**: `content/vertiefung.json` (Autoren: `scripts/patches/_c2_bank.py`, `_c2_expand.py`,
+  `_c2_dialoge.py`, `_c2_dialoge2.py`) — 8 C1-Lesetexte (232–246 Wörter, je 8 Glossar-Einträge aus
+  dem Text, 4 Verständnisfragen mit Beleg-Erklärung) und 6 C1-Dialoge (10–12 Zeilen, 3 Fragen).
+- **Station**: `components/vertiefung.tsx` in /ueben mit Abzeichen «بعد B2 · تذوّق C1», Geräte-TTS
+  als «نطق آلي من متصفّحك» gekennzeichnet, Quiz nur in der Sitzung (kein Progress-Write, kein fetch).
+- **Isolation per Gate (K271c)**: 378-Tage-Sweep enthält keine einzige vf-ID; Plan-Abdeckung
+  unverändert 157 Texte / 164 Dialoge / 90 Schreibaufgaben; plan.ts referenziert die Bibliothek nicht.
+- **Rotations-Zählfix (wichtig)**: Das Audit meldete `w-a1-19` als ungenutzt, obwohl der Smoke-Sweep
+  90/90 zeigte. Ursache 1: `lib/kapsel.ts` baut Nachbartage in buildDay hinein; deren nextWrite-Züge
+  verschmutzten den Replay-Zähler des laufenden Tages → Zähler jetzt tagesgenau getaggt.
+  Ursache 2: Die R143b-Hardcode-Extras (w-a0-02/04/05, w-a2-06 an Fix-Tagen) duplizierten Rotationszüge
+  und ließen w-a0-06 aus → Extras ziehen jetzt selbst aus der Rotation (Kalendertage unverändert).
+  Danach: **90/90 auch im leeren Audit-Sweep** (`abdeckung:writing` wieder reine Info).
+- **Nachweise**: tsc ✓ · smoke **1722/0** (K271a–d neu; K257a 47→48; K112a/b um die Station erweitert) ·
+  interaktiv 709/0 · audit 0 strukturell · build ✓ (/ueben 37,8 kB).
+
 ## R177 — C4 Schreibbank 58→90 + kumulative Rotation — abgeschlossen ✅
 
 - **Bank**: 32 neue Aufgaben (`scripts/patches/_c4_bank.py`), je Niveau die fehlenden Examensformate:

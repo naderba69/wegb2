@@ -66,7 +66,7 @@ import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
-import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter, redemittelBank,
+import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter, redemittelBank, vertiefungTexte, vertiefungDialoge,
 } from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi, dialogAudioSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
@@ -2017,9 +2017,9 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← معجم ← كاتالوج");
-    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
+    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
 
@@ -12500,8 +12500,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 47 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
-    "K257a bankload جاهزٌ في Node: 47 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 48 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
+    "K257a bankload جاهزٌ في Node: 48 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;
@@ -12860,6 +12860,50 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const kurzeA = waehle((t) => (t.level === "A1" || t.level === "A2") && (t.zielWort ?? 0) <= 70);
   ok(langBrief >= 5 && forumB2 >= 5 && kurzeA >= 20,
     `K270d عمق الصيغ: رسائل طويلة ≥100ك=${langBrief} · منتدى B2 ≥150ك=${forumB2} · قصيرة A1/A2=${kurzeA}`);
+}
+
+// ===== K271 (R178 · C2): Vertiefungsbibliothek B2+/C1 — STRIKT ausserhalb der 378 Tage.
+// Kein Eintrag darf in buildDay/Phasen/Plaenen auftauchen; die Plan-Abdeckung bleibt exakt.
+// Inhalt: 8 C1-Texte (230-380 Woerter, Glossar aus dem Text, 4 Fragen) + 6 C1-Dialoge. =====
+{
+  const worteZ = (s: string) => s.split(/\s+/).filter(Boolean).length;
+  const formOk = vertiefungTexte.length === 8 && vertiefungDialoge.length === 6 &&
+    vertiefungTexte.every((t) => t.level === "C1" && worteZ(t.de) >= 230 && worteZ(t.de) <= 380 && t.glossar.length >= 6 &&
+      t.fragen.length === 4 && t.fragen.every((f) => f.options.includes(f.answer) && new Set(f.options).size === f.options.length)) &&
+    vertiefungDialoge.every((d) => d.level === "C1" && d.lines.length >= 10 && d.fragen.length === 3 &&
+      d.fragen.every((f) => f.options.includes(f.answer)) && d.lines.every((l) => l.de.length > 3 && l.ar.length > 3));
+  ok(formOk, `K271a مكتبة التذوّق: ${vertiefungTexte.length} نصوص C1 (230–380 كلمة، مسرد ≥6، 4 أسئلة) و${vertiefungDialoge.length} حوارات (≥10 أسطر، 3 أسئلة)، وإجابة كلّ سؤال بين خياراته`);
+  // Glossar-Stamm muss im Text vorkommen (Stamm-Heuristik wie beim Autor)
+  const PREF = ["ein", "aus", "auf", "ab", "an", "zu", "nach", "vor", "mit", "weiter", "fest"];
+  const glossarOk = vertiefungTexte.every((t) => {
+    const low = (t.titelDe + " " + t.de).toLowerCase();
+    return t.glossar.every((g) => {
+      const kern = g.de.replace(/^(die|der|das) /, "").split("(")[0].trim().toLowerCase();
+      return kern.length > 0 && (low.includes(kern) || (kern.length > 5 && low.includes(kern.slice(0, 5))) ||
+        PREF.some((p) => kern.startsWith(p) && (low.includes(p + "ge" + kern.slice(p.length, p.length + 3)) || low.includes(p + "zu" + kern.slice(p.length, p.length + 3)))));
+    });
+  });
+  ok(glossarOk, "K271b كلُّ مدخلِ مسردٍ مشتقٌّ من متنِ نصِّه (جذعٌ أو صيغةٌ منفصلة الفعل)");
+  // Isolation: 378-Tage-Sweep darf keine vf-IDs enthalten; Plan-Abdeckung unveraendert
+  const vfIds = new Set([...vertiefungTexte.map((t) => t.id), ...vertiefungDialoge.map((d) => d.id)]);
+  const plSrc = readFileSync("lib/plan.ts", "utf8");
+  const txS = new Set<string>(), dgS = new Set<string>(), wrS = new Set<string>();
+  for (let d = 1; d <= TOTAL_DAYS; d++) {
+    for (const t of buildDay(d, emptyProgress).tasks) {
+      if (t.textId) txS.add(t.textId);
+      if (t.dialogueId) dgS.add(t.dialogueId);
+      if (t.writeId) wrS.add(t.writeId);
+    }
+  }
+  const leckt = [...txS, ...dgS, ...wrS].some((id) => vfIds.has(id));
+  ok(!plSrc.includes("vertiefung") && !plSrc.includes("vf-") && !leckt && txS.size === 157 && dgS.size === 164 && wrS.size === 90,
+    `K271c صفر تسرّب: لا مرجعَ في plan.ts ولا جدولةَ لأيّ vf في 378 يومًا؛ التغطية ثابتة (${txS.size}/${dgS.size}/${wrS.size})`);
+  const vfSrc = readFileSync("components/vertiefung.tsx", "utf8");
+  const uebSrc2 = readFileSync("app/ueben/page.tsx", "utf8");
+  ok(vfSrc.includes("بعد B2 · تذوّق C1") && vfSrc.includes("خارج خطة الـ378 يومًا") && vfSrc.includes("نطق آلي من متصفّحك") &&
+     vfSrc.includes("speakDe") && !vfSrc.includes("fetch(") && !vfSrc.includes("update(") &&
+     uebSrc2.includes('"vertiefung"') && uebSrc2.includes("<Vertiefung />"),
+    "K271d المكتبة موصولة في «تدرّب» بوسام «بعد B2 · تذوّق C1» صريح، نطقها آليٌّ موسوم، وبلا كتابة تقدّم وبلا fetch");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

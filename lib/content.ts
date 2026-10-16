@@ -232,6 +232,28 @@ export interface LeiterText {
   fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
 }
 export const leseleiter: LeiterText[] = [];
+/** 📚 نصّ تذوّقٍ C1 (C2/R178): مكتبةُ إثراءٍ ما بعد B2 — خارجَ خطّة الـ378 يومًا تمامًا */
+export interface VertiefungText {
+  id: string;
+  level: "C1";
+  titelDe: string;
+  titelAr: string;
+  de: string;
+  ar: string;
+  glossar: { de: string; ar: string }[];
+  fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
+}
+/** 💬 حوار تذوّقٍ C1 (C2/R178) */
+export interface VertiefungDialog {
+  id: string;
+  level: "C1";
+  titelDe: string;
+  titelAr: string;
+  lines: { who: string; de: string; ar: string }[];
+  fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
+}
+export const vertiefungTexte: VertiefungText[] = [];
+export const vertiefungDialoge: VertiefungDialog[] = [];
 /** 🧰 عبارة تعبير وظيفية (C3): مصنّفة بوظيفتها وبأجزاء الامتحان التي تخدمها */
 export interface RedemittelItem {
   id: string;
@@ -315,6 +337,8 @@ function fuelleAusBanken(): void {
   luecken.splice(0, luecken.length, ...(bankRoh("luecken.json") as { items: LkItem[] }).items);
   leseleiter.splice(0, leseleiter.length, ...((bankRoh("leseleiter.json") as { texte: LeiterText[] } | undefined)?.texte ?? []));
   redemittelBank.splice(0, redemittelBank.length, ...((bankRoh("redemittel.json") as { items: RedemittelItem[] } | undefined)?.items ?? []));
+  vertiefungTexte.splice(0, vertiefungTexte.length, ...((bankRoh("vertiefung.json") as { texte: VertiefungText[] } | undefined)?.texte ?? []));
+  vertiefungDialoge.splice(0, vertiefungDialoge.length, ...((bankRoh("vertiefung.json") as { dialoge: VertiefungDialog[] } | undefined)?.dialoge ?? []));
   const hoer = bankRoh("hoeren-audio.json") as { einaetze?: HoerAudio[]; einsaetze: HoerAudio[] };
   Object.assign(hoerenAudio, Object.fromEntries(hoer.einsaetze.map((e) => [e.id, e])));
   const dik = bankRoh("diktat-audio.json") as { einsaetze: HoerAudio[] };
