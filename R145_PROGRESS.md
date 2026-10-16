@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R185: **Axis C vollständig · Axis M: M1–M5 ✅ (R181–R185)**
+> Status nach R186: **Axis C vollständig · Axis M vollständig (M1–M6, R181–R186)**
+> R186 (M6 Muster-Drills) — alle Gates grün (smoke 1746/0). Weiter: Axis U (U1–U6).
 > R185 (M5 Schreibschleife) — alle Gates grün (smoke 1744/0). Weiter: M6, dann Axis U (U1–U6).
 > R184 (M4 Shadowing, Rhythmusvergleich ohne Aussprache-Urteil) — alle Gates grün (smoke 1742/0). Weiter: M5, M6, dann Axis U.
 > R183 (M3 adaptives Niveau + sicherer Einstieg) — alle Gates grün (smoke 1739/0). Weiter: M4–M6, dann Axis U.
@@ -344,6 +345,16 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R186 — M6 Generierte Fehler-Muster-Drills — abgeschlossen ✅ · **Achse M vollständig (M1–M6)**
+
+- **Motor** (`lib/musterdrill.ts`): zwei schwächste Fehlerfamilien des Lerners (Schwere aus
+  Modul N) → bis 6 MC-Fragen aus der geprüften Korrekturbank (196 Paare) derselben Kategorie.
+  Heftpaare des Lerners (falsch UND richtig) sind hart ausgeschlossen; Tagesrotation wechselt
+  die Fragen deterministisch. Leeres Heft = ehrlicher Leerzustand, keine erfundenen Muster.
+- **UI**: Abschnitt oben im Fehlerlabor (Muster + Zählung offengelegt, Button für neue Fragen).
+- **Nachweise**: tsc ✓ · smoke **1746/0** (K279a Neuheits-/Rotationsbeweis, K279b Montage) ·
+  interaktiv 709/0 · audit 0 · build ✓.
 
 ## R185 — M5 Schreibschleife: Entwurf → Korrektur → Neufassung → Diff — abgeschlossen ✅
 

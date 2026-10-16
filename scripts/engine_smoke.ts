@@ -97,6 +97,7 @@ import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, k
 import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungsPool, einstufungStart, einstufungAktuell, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
 import { schattenEinheiten, huellkurve, kurveAufLaenge, korrelation, pausenZaehlen, vergleicheSchatten } from "../lib/shadowing";
 import { wortDiff, diffStatistik } from "../lib/textdiff";
+import { musterDrill } from "../lib/musterdrill";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
@@ -13107,6 +13108,30 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(swSrc.includes("<SchreibSchleife") && slSrc.includes("schreibEntwuerfe") && slSrc.includes("wortDiff") &&
      tySrc.includes("schreibEntwuerfe") && slSrc.includes("ليس تصحيحًا بشريًا") && slSrc.includes("لا تحكم أنّ التغيير صواب"),
     "K278b الحلقة مركّبة بعد التصحيح في الورشة، والنسختان في التقدّم المحلي، وإفصاحا عدم-الحكم صريحان");
+}
+
+// ===== K279 (R186 · M6): Muster-Drill auf den zwei schwächsten Fehlerfamilien des
+// Lerners, aus der Korrekturbank generiert — nie eine Frage aus seinem Heft selbst. =====
+{
+  const leerDrill = musterDrill(emptyProgress, 100);
+  const heft = { ...emptyProgress, fehler: {
+    k1: { key: "k1", falsch: "Ich gehe in die Schule gestern.", richtig: "Ich bin gestern in die Schule gegangen.", art: "wortstellung", ar: "x", srs: { reps: 1, lapses: 2, ease: 2.5, interval: 1, due: "2026-01-01" }, treffer: 3 },
+    k2: { key: "k2", falsch: "der Frau (Dat) -> die Frau", richtig: "der Frau", art: "artikel", ar: "x", srs: { reps: 1, lapses: 1, ease: 2.5, interval: 1, due: "2026-01-01" }, treffer: 2 },
+    k3: { key: "k3", falsch: "Ich habe Hunger auf Brotzeit.", richtig: "Ich habe Hunger.", art: "wortstellung", ar: "x", srs: { reps: 0, lapses: 0, ease: 2.5, interval: 0, due: "2026-01-01" }, treffer: 1 },
+  } } as typeof emptyProgress;
+  const d1 = musterDrill(heft, 100);
+  const heftStrings = new Set(Object.values(heft.fehler ?? {}).flatMap((f) => [f.falsch.trim().toLowerCase(), f.richtig.trim().toLowerCase()]));
+  const neuartig = d1.uebungen.every((u) => !heftStrings.has(String(u.answer).trim().toLowerCase()) &&
+    (u.options ?? []).every((o) => !heftStrings.has(o.trim().toLowerCase())));
+  const d2 = musterDrill(heft, 101);
+  ok(leerDrill.leer && d1.muster.length === 2 && d1.muster[0].art === "wortstellung" && d1.uebungen.length === 6 &&
+     d1.uebungen.every((u) => u.type === "mc" && u.options!.includes(String(u.answer))) && neuartig &&
+     d2.uebungen.map((u) => u.id).join() !== d1.uebungen.map((u) => u.id).join(),
+    "K279a فارغ بلا دفتر، وبدفتر: نمطان أضعفان (ترتيب أولًا)، ٦ أسئلة صالحة، لا سؤال يطابق زوجًا من الدفتر، والتناوب اليومي يبدّل الأسئلة");
+  const mdSrc = readFileSync("components/musterdrill.tsx", "utf8");
+  const flSrc = readFileSync("components/fehlerlabor.tsx", "utf8");
+  ok(flSrc.includes("<MusterDrill progress={progress} />") && mdSrc.includes("musterDrill") && mdSrc.includes("مستبعدة عمدًا"),
+    "K279b التدريب مركّب في معمل الأخطاء ويصرّح باستبعاد أزواج الدفتر");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

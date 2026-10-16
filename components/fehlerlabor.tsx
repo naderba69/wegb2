@@ -13,6 +13,7 @@ import {
   URSACHEN, ursacheVon, fehlerFamilien, wochenWaerme, resistenteFehler, fehlerDesMonats, schwere,
 } from "@/lib/fehler";
 import { gradeFehlerNow } from "@/lib/store";
+import { MusterDrill } from "./musterdrill";
 import { De } from "./De";
 
 function FehlerZeile({ f, offen }: { f: FehlerState; offen: boolean }) {
@@ -101,6 +102,7 @@ export function FehlerLabor({ progress }: { progress: Progress }) {
       </div>
       {open && (
         <>
+          <MusterDrill progress={progress} />
           <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "0.7rem" }}>
             {TABS.map((t) => (
               <button
