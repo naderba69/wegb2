@@ -341,6 +341,22 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R177 — C4 Schreibbank 58→90 + kumulative Rotation — abgeschlossen ✅
+
+- **Bank**: 32 neue Aufgaben (`scripts/patches/_c4_bank.py`), je Niveau die fehlenden Examensformate:
+  B2 +9 (4 Forumsbeiträge 150 W, telc-Stellungnahme, 2 berufliche Briefe 100 W, Leserbrief, Bewerbung),
+  B1 +9 (3 Forumsbeiträge 120 W, 2 Beschwerden, 3 halbformelle E-Mails, 1 Absage frei),
+  A2 +8, A1 +6 → total **90** (A0 6 · A1 19 · A2 20 · B1 22 · B2 23), brief 32 / frei 58,
+  jede mit Kriterien (B: 4, A: 3), ≥2 noteAr und Modell im Band [0.85, 1.6]×zielWort (K270a–d).
+- **Rotations-Fix (Kern des Rounds)**: Die alte pickN-Ziehung deckte die größere Bank nicht mehr
+  garantiert ab (K241d/K260c: 6 verwaiste IDs). Ersetzt durch einen **kumulativen Rotationsindex**:
+  `schreibBasis(day, level)` zählt per Kalender-Replay (emptyProgress, memoiziert) alle Schreibzüge
+  der Vortage; jeder `nextWrite()`-Aufruf (9 Sites, inkl. Festigung/Fest/Fest) konsumiert den nächsten
+  Index → null Waisen **per Konstruktion**, solange Gesamtzüge ≥ Bankgröße (45/49/56/61/8 ≥ 19/20/22/23/6 ✓).
+  K241d/K260c weisen jetzt alle 90 nach; K30b hält Modell-Mindestlängen (B1 ≥60, B2 ≥100 Wörter).
+- **Nachweise**: tsc ✓ · smoke **1718/0** (K270a–d neu; K125f/K266d auf 90/32 nachgezogen) ·
+  interaktiv 709/0 · audit 0 strukturell · build ✓. Keine Gate-Abschwächung, kein Löschen/Umbenennen.
+
 ## R176 — C3 Redemittel-Bank nach Prüfungsteilen — abgeschlossen ✅
 
 Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funktionen (Meinung, Begründung, Widerspruch, Beschwerde …), niveaugestaffelt A2–B2, jede mit Vollsatz-Beispiel und arabischer Übersetzung, getaggt auf die fünf Prüfungsteile Sprechen 1/2/3, Schreiben-Forum und Schreiben-Brief (Abdeckung 15/29/57/44/23, Gate K269a). `lib/redemittel.ts` wählt deterministisch pro Teil; die neue Station in /ueben bietet Durchblättern mit Filtern plus Abruf-Drill (erst erinnern, dann aufdecken, ehrlich selbst markieren — keine behauptete Autokorrektur). Kontext-Integration wie in der Roadmap versprochen: In der Vorbereitungsphase der Sprechkarten (R174) erscheinen teilpassende Phrasen, in der Schreib-Werkstatt ein aufklappbares Panel passend zum Aufgabenformat (Brief/Forum, R173-Tagging). Fortschritt bleibt sitzungsintern.

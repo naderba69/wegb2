@@ -195,6 +195,29 @@ export function phaseOf(day: number): Phase {
   for (const p of PHASE_RANGES) if (day >= p.from && day <= p.to) return p.phase;
   return "Abschluss";
 }
+// R177: أساسُ دورانِ الكتابة التراكميّ — عددُ سحوباتِ nextWrite في أيامِ [بداية المستوى، day)
+// بتقويمِ تقدّمٍ فارغ، محسوبٌ مرّةً واحدةً لكلِّ مستوى ومحفوظ. إعادةُ التشغيلِ تعدُّ المواقعَ
+// لا المحتوى، فتبقى صحيحةً مهما تغيّر حجمُ البنك (التدوير modulo عند السحب نفسه).
+const schreibBasisCache = new Map<string, number[]>();
+let schreibReplay: { zaehler: number } | null = null;
+function schreibBasis(day: number, level: Level): number {
+  const range = PHASE_RANGES.find((p) => p.level === level);
+  if (!range) return 0;
+  let basis = schreibBasisCache.get(level);
+  if (!basis) {
+    basis = [0];
+    for (let d = range.from; d <= range.to; d++) {
+      schreibReplay = { zaehler: 0 };
+      buildDay(d, emptyProgress);
+      basis.push(basis[basis.length - 1] + schreibReplay.zaehler);
+      schreibReplay = null;
+    }
+    schreibBasisCache.set(level, basis);
+  }
+  const idx = day - range.from;
+  return idx >= 0 && idx < basis.length ? basis[idx] : basis[basis.length - 1];
+}
+
 export function levelOf(day: number): Level {
   for (const p of PHASE_RANGES) if (day >= p.from && day <= p.to) return p.level;
   return "B2";
@@ -630,12 +653,16 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   };
   const nextDialog = () => dialogsOfLevel.length ? dialogsOfLevel[(dialogRang + dialogSlot++) % dialogsOfLevel.length] : undefined;
   const writesOfLevel = writingTasks.filter((w) => w.level === level);
-  // 🔁 R146: دورانٌ حتميٌّ لمهامِّ الكتابة من موقع «جملة الأسبوع» (يومُ التثبيتِ أسبوعياً) —
-  // القرعةُ وحدَها تركت w-b2-06/w-b2-10 بلا موعدٍ في 378 يوماً؛ الدورانُ الأسبوعيُّ يمرُّ بمهامِّ المستوى كلِّها تباعاً
-  const WRITE_SLOTS = [0, 0, 0, 0, 0, 1, 0];
-  const writeRang = rangVor(WRITE_SLOTS);
+  // 🔁 R146→R177: دورانٌ تراكميٌّ حتميٌّ لمهامِّ الكتابة — المؤشّرُ هو العددُ الكلّيُّ لسحوباتِ الكتابة
+  // في أيامِ المستوى السابقة (تقويمٌ فارغُ التقدّم، محفوظٌ في schreibBasis)؛ كلُّ مواقعِ السحبِ تعتمد
+  // على نوعِ اليوم/يومِ الأسبوع/المرحلة فقط، لا على التقدّم، فتبلغُ الدورةُ كلَّ مهمّةٍ متى فاقَ
+  // عددُ السحوباتِ حجمَ البنك (وهو حاصلٌ في كلِّ مستوى) — بلا يتامى وبلا تكرارٍ قبل استنفادِ البنك.
   let writeSlot = 0;
-  const nextWrite = () => writesOfLevel.length ? writesOfLevel[(writeRang + writeSlot++) % writesOfLevel.length] : undefined;
+  const nextWrite = () => {
+    if (schreibReplay) { schreibReplay.zaehler++; return writesOfLevel[0]; }
+    if (!writesOfLevel.length) return undefined;
+    return writesOfLevel[(schreibBasis(day, level) + writeSlot++) % writesOfLevel.length];
+  };
   const satzOfLevel = sentences.filter((s) => s.level === level);
 
   if (type === "lerntag") {
@@ -810,7 +837,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Kurz schreiben",
           titleAr: "كتابة قصيرة (10 دقائق)",
           minutes: 25,
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         });
       } else {
         tasks.push({
@@ -879,7 +906,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Schreibtraining",
         titleAr: "تدريب كتابة",
         minutes: level === "B2" ? 40 : 35,
-        writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+        writeId: nextWrite()?.id,
       });
       // R138/P-13: Hörverstehen-Modi — global/selektiv/detailliert rotierend nach Niveau
       const hoerenModi: ("global" | "selektiv" | "detailliert")[] = level === "A0" || level === "A1"
@@ -949,7 +976,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           ? "كتابة جمل بسيطة (تعبير موجّه)"
           : "كتابة نصّ كامل (المعيار: معايير التقييم)",
         minutes: level === "A0" ? 15 : 40,
-        writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+        writeId: nextWrite()?.id,
       });
     }
     // K-SilentPeriod: لا تحدّث حر قبل أواخر A2
@@ -980,7 +1007,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Brief/E-Mail der Woche",
         titleAr: "رسالة رسمية قصيرة (تدريب كتابة)",
         minutes: 15,
-        writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+        writeId: nextWrite()?.id,
       });
       if (level === "B1" || level === "B2") {
         tasks.push({
@@ -1072,7 +1099,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
             exam: true,
             textId: nextText()?.id,
             dialogueId: nextDialog()?.id,
-            writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+            writeId: nextWrite()?.id,
           }
         : {
             id: tid(1),
@@ -1159,7 +1186,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           minutes: 50,
           sentenceIds: gesternKapsel,
           quiz: buildQuiz(374, "B2", 15, progress, "final374"),
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         },
         {
           id: tid(2),
@@ -1193,7 +1220,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Abschluss-Schreiben (Kurzform)",
           titleAr: "تدريب كتابة ختامي قصير",
           minutes: 15,
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         },
         {
           id: tid(5),
@@ -1259,7 +1286,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           exam: true,
           textId: nextText()?.id,
           dialogueId: nextDialog()?.id,
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         },
         {
           id: tid(6),
@@ -1267,7 +1294,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Abschluss-Schreiben (letzter Teil)",
           titleAr: "قسم الكتابة الختامي",
           minutes: 15,
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         },
         {
           id: tid(2),

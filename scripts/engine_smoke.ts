@@ -2953,7 +2953,7 @@ void 0;
     `K125d تغطيةُ الرادارِ من الدالةِ نفسِها: ${abR.mitSignal}/${abR.dialoge} إشارات · ${abR.mitFalle} مضلل (${nAb})`);
   ok(lies.includes(`(${nDr} تمريناً`) , `K125e تمارينُ الأذنِ من الدالةِ نفسِها (${nDr})`);
   const nS2 = J("content/sentences.json"), nW = J("content/writing.json"), nV = J("content/verben.json");
-  ok(nS2 === 678 && nW === 58 && nV === 126 && lies.includes("678") && lies.includes("writing **58**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (678 بعد جملتَي يتيمتَي B2 — R145)`);
+  ok(nS2 === 678 && nW === 90 && nV === 126 && lies.includes("678") && lies.includes("writing **90**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (678 بعد جملتَي يتيمتَي B2 — R145)`);
   const nKt = J("content/kollokationen.json");
   const nLue = (JSON.parse(readFileSync("content/luecken.json", "utf8")).items as { gaps: unknown[] }[]).reduce((n, it) => n + it.gaps.length, 0);
   ok(nKt === 2191 && nLue === 216 && lies.includes("2191") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`);
@@ -12600,7 +12600,7 @@ void 0;
     for (const t of pl.tasks) { if (t.textId) tx.add(t.textId); if (t.dialogueId) dg.add(t.dialogueId); if (t.writeId) wr.add(t.writeId); }
     if (d >= PHASEN.B2.von && d <= PHASEN.B2.bis && pl.type === "festigung" && !pl.tasks.some((t) => t.titleDe === "Festigungs-Check" && (t.quiz?.length ?? 0) >= 8)) festOk = false;
   }
-  ok(tx.size === 157 && dg.size === 164 && wr.size === 58 && festOk,
+  ok(tx.size === 157 && dg.size === 164 && wr.size === 90 && festOk,
     `K260c لا بندَ بنكياً فريداً سقطَ بكشطِ D1-B: ${tx.size} نصّاً و${dg.size} حواراً و${wr.size} مهمّةَ كتابةٍ مجدولةً (كخطِّ الأساسِ قبلَ التغيير)، وفحصُ التثبيتِ الأسبوعيُّ في B2 سليمٌ بأسئلتِه`);
 }
 
@@ -12759,9 +12759,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
      gradSrc.includes("export async function llmKriterien") && gradSrc.includes("KRITERIEN_NAMEN") &&
      schrSrc.includes("KriterienPanel") && schrSrc.includes('art={task.format === "brief" ? "brief" : "forum"}'),
     "K266c اللوحة موصولة بورشة الكتابة معلنةً آليّتها، ومستشار المعايير اختياريّ خلف llmBereit بلا إرسال صامت");
-  const alleMarkiert = writingTasks.length === 58 && writingTasks.every((w) => w.format === "brief" || w.format === "frei");
+  const alleMarkiert = writingTasks.length === 90 && writingTasks.every((w) => w.format === "brief" || w.format === "frei");
   const briefBank = writingTasks.filter((w) => w.format === "brief");
-  ok(alleMarkiert && briefBank.length === 16 && briefBank.filter((w) => w.level === "B2").length >= 5 &&
+  ok(alleMarkiert && briefBank.length === 32 && briefBank.filter((w) => w.level === "B2").length >= 5 &&
      schrSrc.includes("task.zielWort ?? cfg!.ziel") && writingTasks.every((w) => !w.zielWort || w.zielWort >= 20),
     `K266d بنك الكتابة موسومٌ بصيغة الامتحان: ${briefBank.length} مهمة رسائل (تحية/ختام في الإنجاز) والباقي نص حر، والهدف من zielWort البنك`);
 }
@@ -12838,6 +12838,28 @@ function collectR262(dir: string, out: string[] = []): string[] {
      schrSrc.includes("redemittelFuerTeil") && schrSrc.includes("وسائل تعبير لصيغة هذه المهمة") &&
      uebSrc.includes('"redemittel"') && uebSrc.includes("RedemittelBank"),
     "K269c العبارات تظهر داخل تحضير بطاقات التحدّث ولصيغة مهمّة الكتابة، والمحطة موصولة في «تدرّب»");
+}
+
+// ===== K270 (R177 · C4): Schreibbank-Erweiterung 58→90 in Pruefungsformaten. Die Rotation (K260c)
+// erreicht alle 90 (Schreib-Slots je Niveau >= Bankgroesse). Modelle nahe der Wortvorgabe. =====
+{
+  const waehle = (bed: (t: (typeof writingTasks)[number]) => boolean) => writingTasks.filter(bed).length;
+  const proNiveau: Record<string, number> = {};
+  for (const t of writingTasks) proNiveau[t.level] = (proNiveau[t.level] ?? 0) + 1;
+  ok(proNiveau.A0 === 6 && proNiveau.A1 === 19 && proNiveau.A2 === 20 && proNiveau.B1 === 22 && proNiveau.B2 === 23 && writingTasks.length === 90,
+    `K270a مزيج المستويات 6/19/20/22/23 صحيح: ${JSON.stringify(proNiveau)}`);
+  const NEU_IDS = ["w-b2-15", "w-b2-16", "w-b2-17", "w-b2-18", "w-b2-19", "w-b2-20", "w-b2-21", "w-b2-22", "w-b2-23", "w-b1-14", "w-b1-15", "w-b1-16", "w-b1-17", "w-b1-18", "w-b1-19", "w-b1-20", "w-b1-21", "w-b1-22", "w-a2-13", "w-a2-14", "w-a2-15", "w-a2-16", "w-a2-17", "w-a2-18", "w-a2-19", "w-a2-20", "w-a1-14", "w-a1-15", "w-a1-16", "w-a1-17", "w-a1-18", "w-a1-19"];
+  const NEU = writingTasks.filter((t) => NEU_IDS.includes(t.id));
+  ok(NEU.length === 32 && NEU.every((t) => (t.noteAr?.length ?? 0) >= 2 && t.criteria.length >= (t.level === "B1" || t.level === "B2" ? 4 : 3)),
+    `K270b 32 مهمّة جديدة بـ≥2 ملاحظة و≥4 معايير: ${NEU.length}`);
+  const worte = (s: string) => s.split(/\s+/).filter(Boolean).length;
+  const modellOk = NEU.every((t) => { const n = worte(t.sample); const z = t.zielWort ?? 0; return n >= z * 0.85 && n <= z * 1.6; });
+  ok(modellOk, "K270c إجابات النماذج الجديدة في نطاق [0.85،1.6]×هدف الكلمات");
+  const langBrief = waehle((t) => t.format === "brief" && (t.zielWort ?? 0) >= 100);
+  const forumB2 = waehle((t) => t.level === "B2" && t.format === "frei" && (t.zielWort ?? 0) >= 150);
+  const kurzeA = waehle((t) => (t.level === "A1" || t.level === "A2") && (t.zielWort ?? 0) <= 70);
+  ok(langBrief >= 5 && forumB2 >= 5 && kurzeA >= 20,
+    `K270d عمق الصيغ: رسائل طويلة ≥100ك=${langBrief} · منتدى B2 ≥150ك=${forumB2} · قصيرة A1/A2=${kurzeA}`);
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
