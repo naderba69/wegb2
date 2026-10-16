@@ -431,6 +431,8 @@ export interface Progress {
   simulationen?: { datum: string; seed: number; format?: string; punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number }; bestanden: boolean }[];
   /** 🎙️ سجلّ بطاقات المحادثة المسجّلة (E5): بيانات وصفية فقط (بطاقة/تقدير ذاتي/مدّة) — الصوت نفسه لا يُخزَّن أبداً */
   sprechUebungen?: { datum: string; level: string; teil: number; karteId: string; dauerS: number; punkte: number }[];
+  /** 🔁 حلقات الكتابة (M5/R185): مسودّة وإعادة كتابتها محفوظتان محليًا للمقارنة الكلمية — آخر ٨ حلقات */
+  schreibEntwuerfe?: { id: string; taskId: string; datum: string; v1: string; v2?: string }[];
   /** 🪜 تقدّم سلّم القراءة (C1): النص ← أفضل نتيجة (صحيحة/كلية) — المحطة التالية تُفتح بإتمام السابقة */
   leseleiter?: Record<string, { r: number; g: number }>;
   /** 🌙 سجلّ فواصل الكبسولة المتكيفة (M1/R181): الجملة ← درجة السلّم (0..4 على 1/3/7/30/90 يومًا) وآخر يوم تدرّب وعدد الأخطاء.

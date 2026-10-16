@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R184: **Axis C vollständig · Axis M: M1–M4 ✅ (R181–R184)**
+> Status nach R185: **Axis C vollständig · Axis M: M1–M5 ✅ (R181–R185)**
+> R185 (M5 Schreibschleife) — alle Gates grün (smoke 1744/0). Weiter: M6, dann Axis U (U1–U6).
 > R184 (M4 Shadowing, Rhythmusvergleich ohne Aussprache-Urteil) — alle Gates grün (smoke 1742/0). Weiter: M5, M6, dann Axis U.
 > R183 (M3 adaptives Niveau + sicherer Einstieg) — alle Gates grün (smoke 1739/0). Weiter: M4–M6, dann Axis U.
 > R182 (M2 Retrieval-first, verallgemeinert + gemessen) — alle Gates grün (smoke 1735/0). Weiter: Axis M (M3–M6), dann Axis U.
@@ -343,6 +344,17 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R185 — M5 Schreibschleife: Entwurf → Korrektur → Neufassung → Diff — abgeschlossen ✅
+
+- **Ablauf** in der bestehenden Schreib-Werkstatt (nach KriterienPanel + SchreibBerater):
+  Entwurf lokal speichern → Neufassung (startet vom Entwurf) → Wort-Diff farbig mit Statistik.
+  Der Korrektur-Schritt nutzt die vorhandenen ehrlichen Wege: lokale Goethe-Kriterien-Signale
+  (R173) und optional den konsentierten BYOK-LLM (R170, als «ليس تصحيحًا بشريًا» markiert).
+- **Motor** `lib/textdiff.ts`: deterministischer LCS-Wortdiff + Statistik (K278a exakt nachgerechnet:
+  Identität, Ersetzung, Zählwerte 4→6). Persistenz `Progress.schreibEntwuerfe` (letzte 8, nur lokal);
+  Diff ist Änderungsbeschreibung, kein Richtigkeitsurteil (in UI + Gate festgehalten).
+- **Nachweise**: tsc ✓ · smoke **1744/0** · interaktiv 709/0 · audit 0 · build ✓.
 
 ## R184 — M4 Shadowing: aufnehmen & Rhythmus vergleichen — abgeschlossen ✅
 

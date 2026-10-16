@@ -96,6 +96,7 @@ import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE,
 import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, kapselVerbuche, kapselFaellig, kapselIdsAdaptiv, kapselQuizAdaptiv, kapselQuiz, satzIdAusUebung } from "../lib/kapsel";
 import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungsPool, einstufungStart, einstufungAktuell, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
 import { schattenEinheiten, huellkurve, kurveAufLaenge, korrelation, pausenZaehlen, vergleicheSchatten } from "../lib/shadowing";
+import { wortDiff, diffStatistik } from "../lib/textdiff";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
@@ -13087,6 +13088,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(uSrc3.includes('offen === "schatten"') && shSrc.includes("لا حكم على النطق") && shSrc.includes("لا يُرفع أيّ صوت إلى الشبكة") &&
      shSrc.includes("download=") && !/fetch\([^)]*shadowing|XMLHttpRequest/.test(shSrc),
     "K277c المحطة مركّبة، وإفصاحا «لا حكم نطق» و«لا رفع شبكي» صريحان، والتنزيل بيد المتعلّم");
+}
+
+// ===== K278 (R185 · M5): Schreibschleife Entwurf -> Korrektur -> Neufassung -> Diff.
+// Der Wort-Diff ist exakt nachrechenbar; beide Fassungen bleiben lokal gespeichert. =====
+{
+  const gleich = wortDiff("Ich wohne in Berlin.", "Ich wohne in Berlin.");
+  const ersetzt = wortDiff("Ich wohne in Berlin.", "Ich lebe in Berlin.");
+  const stat = diffStatistik("Ich wohne in Berlin.", "Ich lebe seit Jahren in Berlin.");
+  ok(gleich.length === 1 && gleich[0].art === "gleich" &&
+     ersetzt.some((s) => s.art === "weg" && s.text === "wohne") && ersetzt.some((s) => s.art === "neu" && s.text === "lebe") &&
+     stat.woerterV1 === 4 && stat.woerterV2 === 6 && stat.gleich === 3 && stat.entfernt === 1 && stat.hinzugefuegt === 3 &&
+     stat.geaendertAnteil > 0 && stat.geaendertAnteil < 1,
+    "K278a فرق الكلمات دقيق: تطابق كامل، واستبدال (سكن/عاش)، وإحصاء (٤←٦، بقي ٣، حُذف ١، أُضيف ٣)");
+  const slSrc = readFileSync("components/schreibschleife.tsx", "utf8");
+  const swSrc = readFileSync("components/schreiben.tsx", "utf8");
+  const tySrc = readFileSync("lib/types.ts", "utf8");
+  ok(swSrc.includes("<SchreibSchleife") && slSrc.includes("schreibEntwuerfe") && slSrc.includes("wortDiff") &&
+     tySrc.includes("schreibEntwuerfe") && slSrc.includes("ليس تصحيحًا بشريًا") && slSrc.includes("لا تحكم أنّ التغيير صواب"),
+    "K278b الحلقة مركّبة بعد التصحيح في الورشة، والنسختان في التقدّم المحلي، وإفصاحا عدم-الحكم صريحان");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

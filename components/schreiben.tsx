@@ -12,6 +12,7 @@ import { SchreibBerater } from "./lehrer";
 import { redemittelFuerTeil } from "@/lib/redemittel";
 import { saatAusText } from "@/lib/optionen";
 import { KriterienPanel } from "./kriterienpanel";
+import { SchreibSchleife } from "./schreibschleife";
 import { De } from "./De";
 
 type Teil = "T1" | "T2" | "T3";
@@ -156,6 +157,7 @@ export function SchreibWerkstatt({ progress }: { progress: Progress }) {
               </details>
               <KriterienPanel text={text} ziel={task.zielWort ?? cfg!.ziel} art={task.format === "brief" ? "brief" : "forum"} taskDe={task.taskDe} />
               <SchreibBerater text={text} taskDe={task.taskDe} />
+              <SchreibSchleife key={task.id} taskId={task.id} v1={text} />
               <button className="btn btn-ghost" style={{ marginTop: "0.6rem" }} onClick={() => setTeil(null)}>
                 ← جولة جديدة
               </button>
