@@ -22,7 +22,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   zentrum: { icon: "🏛️", titel: "مركز الاختبارات", unter: "اختبارات المراحل وسجلّ النتائج." },
   selbsttest: { icon: "🪞", titel: "الاختبار الذاتي", unter: "راجع ما تتقنه وما يحتاج إلى تدريب." },
   schulsim: { icon: "🏫", titel: "محاكاة المدرسة", unter: "تدرّب على يوم اختبار كامل." },
-  simulation: { icon: "🎓", titel: "محاكاة Goethe B2", unter: "أربع وحدات موقوتة بصيغة الامتحان الرسمي · نجاح كلّ وحدة 60 بلا تعويض." },
+  simulation: { icon: "🎓", titel: "محاكاة الامتحانات", unter: "Goethe B2/B1 · ‏telc B2 · ‏DTZ — وحدات موقوتة بصيغ رسمية من بنوك مستواك." },
 };
 
 export default function Pruefen() {

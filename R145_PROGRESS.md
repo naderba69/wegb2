@@ -302,3 +302,19 @@ Auf Vorschlag des Besitzers ist die freie KI als **optionale BYOK-Schicht** inte
 Erste Welle der Roadmap (nach der vorgezogenen KI-Schicht R170): `lib/simulation.ts` erzeugt deterministisch per Seed eine komplette Goethe-B2-Simulation ausschließlich aus den Projektbanken — Lesen 30 Items aus B2-Texten (65 Min), Hören 25 Items aus B2-Dialogen (40 Min, Teile 1/3 einmal, 2/4 zweimal abspielbar, KI-Stimmen offengelegt), Schreiben zwei B2-Aufgaben als Forumsbeitrag ≈150 + Nachricht ≈100 Wörter (75 Min, Halb-Längen-Regel kappt unter 59), Sprechen mit unbewertetem Einstieg, Vortrag (Teil-2-Karte) und Diskussion (Teil-3-Karte) nach 15 Min Vorbereitung. Bewertung: Lesen/Hören automatisch, Schreiben/Sprechen per offengelegter Selbsteinschätzungs-Rubrik (4 Kriterien × A–E), Modulsieg ab 60, **kein Ausgleich** — gespeichert werden die letzten 30 Versuche in `Progress.simulationen`. Neue Karte „محاكاة Goethe B2" auf /pruefen hinter dem bestehenden Modul-Tor. Ehrlich ausgewiesen im UI: Trainings-Simulation, kein offizielles Ergebnis, keine Prognose.
 
 **Beleg:** tsc sauber · smoke **1693/0** (neu K263a–d: Determinismus, Bankreinheit B2, Form-/Urteilslogik, Auto-Korrektur voll/fehlerfrei) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Offen aus der Welle: E2 (telc/B1/DTZ), E3 (Bereitschafts-Analytik), E4 (Schreiben nach Prüfungskriterien inkl. KI-Berater R170).
+
+
+---
+
+## R172 — محاكاة telc B2 وGoethe B1 وDTZ (خارطة الطريق E2)
+
+**الهدف:** الصيغ الثلاث على محرّك R171 نفسه، بلا محتوى جديد: بنوك B1/A2 ولِبنة `luecken`.
+
+**ما أُنجز (كود فقط + بوابات):
+- **`lib/simulation.ts` (إعادة كتابة مع المحافظة على سطح R171):** جدول `SIM_FORMATE` موثّق بمصدره لكل صيغة. `baueSimulation(seed, formatId)`: ‏telc B2 = قراءة B2 (5 نصوص) + بنى لغوية (نصّا Cloze من `luecken.json` ‏36 نصًّا × 6 فجوات) + استماع B2 كلّه مرّة واحدة + كتابة واحدة ≥150 كلمة/30د + تحدّث بـ20د تحضير؛ Goethe B1 = هيكل Goethe على بنوك B1 ومنح 60/100 لكل مهارة؛ DTZ = قراءة/استماع مزيج A2+B1 وبنى وكتابة وتحدّث B1. `bewerteSimulation(formatId, roh)`: ‏Goethe منفصلة 60/مهارة بلا تعويض؛ telc كتلة مكتوبة (75+30+75+45) ≥135 **و** شفوية ≥45/75 معًا؛ DTZ نتيجة مستوية (B1 ‏≥60% · A2 ‏59–45% · دون A2). حدود السماع الرسمية لكل صيغة (`eimalMax` أعلى لـtelc/DTZ)، التوقيتات: telc قراءة+بنى 90/سماع 20/كتابة 30/شفوي 15، تحضير telc/DTZ ‏20د.
+- **`components/simulation.tsx` (إعادة كتابة):** منتقٍ بأربع صيغ مع ملاحظة موثّقة لكلٍّ منها، مراحل ديناميكية (مرحلة بنى لغوية للمحاكيات التلكية فقط، كتابة بـمهمة أو مهمّتين)، النتائج بصيغ الكتلة والمستوى، وسجلّ المحاولات يعرض الآن الصيغة.
+- **`lib/types.ts`:** حقل `format?` في سجلّات المحاولة؛ بطاقة الاختبار سمّيت «محاكاة الامتحانات».
+
+**البوابات:** K264a–d — جدول الصيغ، بنية telc وتوقيتاته وحدّ السماع مرّة، نقاء بنوك Goethe B1، مزيج DTZ ‏A2+B1 + بنى B1، منطق كتلة telc وحكم DTZ المستوي. **الدقّة:** ‏smoke **1697/0**، interaktiv **709/0**، tsc ✓، build ✓ (`/pruefen` ‏31.4kB)، audit صفر بنيوي.
+
+**المنهجية المعلنة:** النتائج ليست درجات رسمية، والكتابة/التحدّث تقييم ذاتي معلن بالشبكة؛ عتبة الإتقان الداخلية للتعلّم (80%/60%) لا تتغيّر — وعتبات النجاح المعروضة هي الرسمية لكل صيغة، كتِلة واحدة كما في telc الحقيقية لا تعويد داخليّ.

@@ -50,7 +50,7 @@ import {
   FEHLER_KAT,
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER } from "../lib/grader";
-import { SIM_FORM, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte } from "../lib/simulation";
+import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
@@ -61,7 +61,8 @@ import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
-import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf } from "../lib/content";
+import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken,
+} from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi, dialogAudioSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
 import { bauHoerRunde, darfSpielen, fragenFrei, werteItem, werteRunde, hoerNote, RATE } from "../lib/hoeren";
@@ -12674,6 +12675,33 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const simSrc = readFileSync("components/simulation.tsx", "utf8");
   ok(richtig === nLesen && falschOk && einstSim.includes("simulation") && simSrc.includes("ليست امتحانًا رسميًا") && simSrc.includes("simulationen"),
     `K263d التصحيح الآلي متماسك (${richtig}/${nLesen} عند الإجابة الصحيحة وصفر عند المختلقة)، والبطاقة موصولة بصفحة اختبر مع صدق «ليست امتحانًا رسميًا» وحفظ السجلّ`);
+}
+
+/* ═══ K264 · R172 (E2): صيغ telc B2 وGoethe B1 وDTZ على المحرّك نفسه ═══ */
+{
+  const ids264 = SIM_FORMATE.map((f) => f.id);
+  const telc = baueSimulation(11, "telc-b2");
+  const nSprach = telc.sprachbausteine.reduce((a, g) => a + g.gaps.length, 0);
+  const sprachOk = telc.sprachbausteine.every((g) => luecken.find((l) => l.id === g.lueckenId)?.level === "B2");
+  ok(ids264.join() === "goethe-b2,telc-b2,goethe-b1,dtz" && telc.schreiben.teil2 === "" && nSprach === 12 && sprachOk &&
+     telc.hoeren.every((g) => g.einmal) && telc.zeiten.schreiben === 30 && telc.zeiten.vorbereitung === 20,
+    `K264a telc B2: مهمّة كتابة واحدة (30د/تحضير 20د)، ${nSprach} فجوة بنى من بنك B2، وكلّ الاستماع بسماعٍ واحد`);
+  const gb1 = baueSimulation(11, "goethe-b1");
+  const b1Ok = gb1.lesen.every((g) => texts.find((t) => t.id === g.textId)?.level === "B1") &&
+    gb1.hoeren.every((g) => dialogues.find((d) => d.id === g.dialogId)?.level === "B1") && gb1.schreiben.teil2 !== "";
+  ok(b1Ok && gb1.zielLesen === 30, "K264b Goethe B1: كلّ البنود من بنوك B1 ومهمّتا كتابة");
+  const dtz = baueSimulation(11, "dtz");
+  const dtzLevel = new Set(dtz.lesen.map((g) => texts.find((t) => t.id === g.textId)?.level));
+  ok(dtzLevel.has("A2") && dtzLevel.has("B1") && dtz.sprachbausteine.length === 2,
+    "K264c DTZ يمزج موادّ A2+B1 كما في الامتحان الحقيقي وبنى من B1");
+  const roh = { lesenAnteil: 0.8, sprachAnteil: 0.8, hoerenAnteil: 0.8, schreibenRubrik: 76, schreibenZuKurz: false, sprechenRubrik: 76 };
+  const bt = bewerteSimulation("telc-b2", roh);
+  const btSchwach = bewerteSimulation("telc-b2", { ...roh, sprechenRubrik: 40 });
+  const bd = bewerteSimulation("dtz", roh);
+  const bdA2 = bewerteSimulation("dtz", { ...roh, lesenAnteil: 0.5, sprachAnteil: 0.5, hoerenAnteil: 0.5, schreibenRubrik: 50, sprechenRubrik: 50 });
+  ok(bt.bestanden && !btSchwach.bestanden && bd.bestanden && !bdA2.bestanden &&
+     bd.zeilen.some((z) => z.wert === "B1") && bdA2.zeilen.some((z) => z.wert === "A2"),
+    "K264d أحكام الصيغ: telc تشترط الكتلتين (مكتوب 135 + شفهي 45) وDTZ يمنح مستوى B1/A2 لا نقطة");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
