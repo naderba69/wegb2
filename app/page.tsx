@@ -11,6 +11,7 @@ import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
 import { KindIcon } from "@/components/dirb/icons";
 import { Wochenplan } from "@/components/wochen";
+import { WochenZielKarte } from "@/components/motivation";
 import { ProfilWahl } from "@/components/profil";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
 
@@ -476,6 +477,8 @@ export default function Today() {
         </div>
       </details>
       <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف 90 دقيقة افتراضي للجلسة فقط؛ مجموع تقديرات الخطة مستقل عنه. احفظ التوقّف وعد لاحقاً؛ لن يتحوّل ما لم تسلّمه إلى فشل أو تعويض.</p>
+
+      <WochenZielKarte progress={progress} />
 
       <Wochenplan progress={progress} />
 

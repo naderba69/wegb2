@@ -98,6 +98,7 @@ import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungsPool, einstufungStart,
 import { schattenEinheiten, huellkurve, kurveAufLaenge, korrelation, pausenZaehlen, vergleicheSchatten } from "../lib/shadowing";
 import { wortDiff, diffStatistik } from "../lib/textdiff";
 import { musterDrill } from "../lib/musterdrill";
+import { wochenBilanz, streakAusVerlauf, zielAusVerlauf, wochenMontag } from "../lib/motivation";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
@@ -13144,6 +13145,39 @@ function collectR262(dir: string, out: string[] = []): string[] {
      kzSrc.includes('data-testid={`aufgabe-chip-${i}`}') && kzSrc.includes("submitCurrent") &&
      kzSrc.includes("اختر أيّ رقاقة متى شئت"),
     "K280 مشغّل الجلسة حاضر بشريطه وزرّ التالية، ورقائق الاختيار الحرّ وزرّ التسليم القائمان لم يُمسّا");
+}
+
+// ===== K281 (R188 · U2): Ehrliche Motivation — jede angezeigte Zahl wird aus den
+// Rohdatensätzen neu hergeleitet und vom Gate unabhängig nachgerechnet. =====
+{
+  // Fixture: heute = Mittwoch 2026-10-14; geschlossene Tage diese + Vorwochen
+  const mkTag = (at: string, tasksDone: number, minutenEffektiv: number) =>
+    ({ closed: true, score: 8, total: 10, tasksDone, tasksTotal: 10, at: `${at}T20:00:00.000Z`, minutenEffektiv });
+  const verlauf = { ...emptyProgress, plan: { ...emptyProgress.plan, days: {
+    1: mkTag("2026-09-21", 5, 60), 2: mkTag("2026-09-23", 5, 60), 3: mkTag("2026-09-25", 5, 60),
+    4: mkTag("2026-09-28", 6, 70), 5: mkTag("2026-10-01", 6, 70),
+    6: mkTag("2026-10-05", 7, 80), 7: mkTag("2026-10-08", 7, 80),
+    8: mkTag("2026-10-12", 4, 45), 9: mkTag("2026-10-13", 6, 55),
+  } } } as typeof emptyProgress;
+  const b = wochenBilanz(verlauf, "2026-10-14");
+  // Unabhängige Nachrechnung aus den Rohdaten im Test selbst
+  const roh = Object.values(verlauf.plan.days);
+  const aktiveUnabhaengig = new Set(roh.filter((d) => d.at.slice(0, 10) >= "2026-10-12" && d.at.slice(0, 10) <= "2026-10-18").map((d) => d.at.slice(0, 10))).size;
+  const aufgabenUnabhaengig = roh.filter((d) => d.at.slice(0, 10) >= "2026-10-12").reduce((s, d) => s + d.tasksDone, 0);
+  const streak = streakAusVerlauf(verlauf, "2026-10-14");
+  const ziel = zielAusVerlauf(verlauf, "2026-10-14");
+  ok(wochenMontag("2026-10-14") === "2026-10-12" && b.aktiveTage === aktiveUnabhaengig && aktiveUnabhaengig === 2 &&
+     b.aufgabenErledigt === aufgabenUnabhaengig && b.minutenGemessen === 100 && streak === 2 &&
+     ziel.ausVerlauf && ziel.ziel === 2 && b.zielTage === 2 && b.zielErreicht,
+    "K281a كلّ رقم معروض يُعاد اشتقاقه من السجلّ الخام مستقلًا: يومان نشطان، ١٠ مهام، ١٠٠ دقيقة مقاسة، سلسلة ٢، والهدف ٢ من متوسط الأسابيع الماضية (3/2/2 ← 2.33 ← 2) وقد بُلغ");
+  const leerB = wochenBilanz(emptyProgress, "2026-10-14");
+  ok(leerB.aktiveTage === 0 && leerB.minutenGemessen === 0 && leerB.zielTage === 3 && !leerB.zielAusVerlauf && streakAusVerlauf(emptyProgress, "2026-10-14") === 0,
+    "K281b بسجلّ فارغ: أصفار صادقة وهدف بداية معلَن (3) لا يتنكّر كإيقاع مقاس");
+  const mvSrc = readFileSync("components/motivation.tsx", "utf8");
+  const pgSrc2 = readFileSync("app/page.tsx", "utf8");
+  ok(pgSrc2.includes("<WochenZielKarte progress={progress} />") && mvSrc.includes("من سجلّك") &&
+     mvSrc.includes("لا نقدّم نقاطًا") && !/(XP|عملات|coins)/.test(mvSrc),
+    "K281c البطاقة على الرئيسية، وأرقامها موسومة بمصدرها السجلّي، وبلا نقاط زينة إطلاقًا");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
