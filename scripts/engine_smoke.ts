@@ -13284,6 +13284,19 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K287 المشغّل افتراضي والرقائق مطوية خلف ملخّص صريح مع بقاء كل رقاقة وزرّ التالية — تركيز بلا حجب للحرية");
 }
 
+// ===== K288 (R195 · Redesign Etappe 3): Stationsseiten entschlackt — Gruppen
+// einklappbar (erste offen), Stationen durchsuchbar; Reihenfolge/Montage der
+// Stationen (K112/K137) bleibt exakt bestehen. =====
+{
+  const msSrc = readFileSync("components/dirb/MenuSection.tsx", "utf8");
+  const ueSrc = readFileSync("app/ueben/page.tsx", "utf8");
+  const foSrc = readFileSync("app/fortschritt/page.tsx", "utf8");
+  ok(msSrc.includes("einklappbar") && msSrc.includes("<details") && msSrc.includes("<summary") &&
+     ueSrc.includes('data-testid="ueben-suche"') && ueSrc.includes("einklappbar") && ueSrc.includes("sichtbareIds") &&
+     foSrc.includes("einklappbar") && ueSrc.includes("لا محطة تطابق"),
+    "K288 مجموعات المحطات قابلة للطي (الأولى مفتوحة) في التدرّب والتقدّم، وبحث فوري في /ueben بحالة فراغ صادقة");
+}
+
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den
 // echten CSS-Tokens, de-Sprachkennzeichnung für Screenreader, Fokus/​Skip-Link. =====
 {

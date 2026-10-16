@@ -81,6 +81,7 @@ export default function Ueben() {
   const { progress } = useProgress();
   const [abend, setAbend] = useState(false);
   const [offen, setOffen] = useState<string | null>(null);
+  const [suchtext, setSuchtext] = useState("");
   const [geladen, setGeladen] = useState(false);
 
   useEffect(() => {
@@ -207,8 +208,10 @@ export default function Ueben() {
 
   // ── القائمة حسب ترتيب الأولوية؛ التقسيم لا يغيّر ترتيبها (K112a) ──
   const ids = UEBEN_REIHENFOLGE.split(",").filter((id) => id !== "zusatz" || hatZusatz);
+  const q = suchtext.trim();
+  const sichtbareIds = ids.filter((id) => !q || (KARTE[id] && `${KARTE[id].titel} ${KARTE[id].unter}`.includes(q)));
   const groups = MENU_GROUPS
-    .map((group) => ({ ...group, items: group.items.filter((id) => ids.includes(id)) }))
+    .map((group) => ({ ...group, items: group.items.filter((id) => sichtbareIds.includes(id)) }))
     .filter((group) => group.items.length > 0);
   const renderCard = (id: string) => {
     const k = KARTE[id];
@@ -244,18 +247,36 @@ export default function Ueben() {
         </div>
       )}
 
+      <div style={{ marginBottom: "0.7rem" }}>
+        <input
+          className="field"
+          type="search"
+          value={suchtext}
+          onChange={(e) => setSuchtext(e.target.value)}
+          placeholder="ابحث في المحطات… (استماع، كتابة، أخطاء)"
+          aria-label="ابحث في محطات التدريب"
+          data-testid="ueben-suche"
+          style={{ width: "100%", minHeight: "48px" }}
+        />
+      </div>
+
       <div className="dirb-menu-groups dirb-hero-anim-2">
-        {groups.map((group) => (
+        {groups.map((group, gi) => (
           <MenuSection
-            key={group.id}
+            key={`${group.id}-${q ? "suche" : "liste"}`}
             id={group.id}
             title={group.title}
             description={group.description}
             count={group.items.length}
+            einklappbar
+            startOffen={gi === 0 || !!q}
           >
             {group.items.map(renderCard)}
           </MenuSection>
         ))}
+        {groups.length === 0 && (
+          <p className="tiny muted" role="status">لا محطة تطابق «{q}» — جرّب كلمة أخرى أو امسح البحث.</p>
+        )}
       </div>
     </div>
   );

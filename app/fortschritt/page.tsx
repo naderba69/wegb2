@@ -121,13 +121,15 @@ export default function Fortschritt() {
       </header>
 
       <div className="dirb-menu-groups dirb-hero-anim-2">
-        {groups.map((group) => (
+        {groups.map((group, gi) => (
           <MenuSection
             key={group.id}
             id={group.id}
             title={group.title}
             description={group.description}
             count={group.items.length}
+            einklappbar
+            startOffen={gi === 0}
           >
             {group.items.map(renderCard)}
           </MenuSection>
