@@ -93,6 +93,8 @@ export function Klassenzimmer({
   const rate = progress.settings.rate;
   const lang = progress.settings.uiLang === "auto" ? "ar" : progress.settings.uiLang;
   const [pauseSaved, setPauseSaved] = useState(false);
+  // 🎬 R187/U1: وضع الجلسة المتسلسلة — مهمّة ← تسليم ← التالية بزرٍّ واحد، وحرية الرقائق باقية
+  const [spieler, setSpieler] = useState(false);
   const savePause = () => {
     onPauseSession?.();
     try { localStorage.setItem(`wegb2:day-step:${day}`, String(stepFrei)); } catch { /* قد يكون التخزين محظوراً */ }
@@ -116,6 +118,11 @@ export function Klassenzimmer({
   const warmupSaetze = day > 1 ? kapselSaetzeAbend(day - 1) : [];
 
   const fertig = plan.tasks.length > 0 && plan.tasks.every((tk) => resultOf(tk.id));
+  // 🎬 U1: حسابات شريط المشغّل — من نتائج الخطة ودقائقها المخططة لا من ادّعاء
+  const erledigtZahl = plan.tasks.filter((tk) => resultOf(tk.id)).length;
+  const naechsteOffene = plan.tasks.findIndex((tk, i) => i > stepFrei && !resultOf(tk.id) && !aufgabeGesperrt(ritual, i));
+  const naechsteOffeneGesamt = naechsteOffene >= 0 ? naechsteOffene : plan.tasks.findIndex((tk, i) => i !== stepFrei && !resultOf(tk.id) && !aufgabeGesperrt(ritual, i));
+  const restMinuten = plan.tasks.filter((tk) => !resultOf(tk.id)).reduce((s, tk) => s + tk.minutes, 0);
   const kicker = !currentTask
     ? "🎉 لا مهامَّ اليوم"
     : fertig
@@ -282,7 +289,45 @@ export function Klassenzimmer({
           <span className="dirb-training-count">
             المهمة {stepFrei + 1}/{plan.tasks.length}
           </span>
+          <button
+            type="button"
+            className="chip"
+            data-testid="sitzung-modus"
+            aria-pressed={spieler}
+            onClick={() => setSpieler((s) => !s)}
+            style={{ minHeight: "40px", cursor: "pointer", fontWeight: 800 }}
+          >
+            {spieler ? "🎬 وضع الجلسة: يعمل" : "🎬 وضع الجلسة المتسلسلة"}
+          </button>
         </div>
+
+        {/* ── 🎬 R187/U1: شريط المشغّل المتسلسل — مهمّة ‹ تسليم ‹ التالية ── */}
+        {spieler && (
+          <div className="dirb-hero-anim-2" data-testid="sitzung-spieler" style={{ display: "grid", gap: "0.45rem", marginBottom: "0.6rem" }}>
+            <div style={{ fontSize: "0.92rem" }}>
+              🎬 <strong>جلسة اليوم متسلسلة:</strong> أنجزت <span className="rtl-num">{erledigtZahl}</span> من{" "}
+              <span className="rtl-num">{plan.tasks.length}</span> مهام
+              {restMinuten > 0 && <> · متبقٍّ مخططًا نحو <span className="rtl-num">{restMinuten}</span> دقيقة</>}
+              {" "}· اختر أيّ رقاقة متى شئت — التسلسل لا يلغي حريتك.
+            </div>
+            {currentTask && resultOf(currentTask.id) && naechsteOffeneGesamt >= 0 && (
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-testid="sitzung-weiter"
+                style={{ minHeight: "52px", fontWeight: 900 }}
+                onClick={() => { setStep(naechsteOffeneGesamt); scrollNach("dirb-training"); }}
+              >
+                ▶ المهمة التالية: {plan.tasks[naechsteOffeneGesamt].titleAr}
+              </button>
+            )}
+            {currentTask && resultOf(currentTask.id) && naechsteOffeneGesamt < 0 && (
+              <div data-testid="sitzung-fertig" style={{ fontWeight: 800 }}>
+                🏁 لا مهام مفتوحة بعد في هذا اليوم — الجلسة مكتملة، وزرّ إغلاق اليوم في الأسفل حين تريد.
+              </div>
+            )}
+          </div>
+        )}
 
         {/* ── رقائق مهام اليوم ── */}
         <div className="dirb-chiprow" role="list" aria-label="مهام اليوم">

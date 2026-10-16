@@ -3322,6 +3322,48 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══ XCV — مشغّل الجلسة المتسلسلة (U1/R187): مهمّة ← تسليم ← التالية، والحرية باقية ═══ */
+  {
+    const { Klassenzimmer } = await import("../components/akademie/Klassenzimmer");
+    const { buildDay } = await import("../lib/plan");
+    const { ritualUrteil } = await import("../lib/ritual");
+    const prog = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 3 } };
+    const plan = buildDay(3, prog);
+    const schritte: number[] = [];
+    const basisProps = {
+      progress: prog, day: 3, plan, setStep: (i: number) => { schritte.push(i); },
+      onPoints: () => {}, submitCurrent: () => {}, doCloseDay: () => {}, confirmClose: false,
+      setConfirmClose: () => {}, unpassed: [], allSubmitted: false, onSrs: () => {},
+      localOf: () => ({ score: 0, total: 3 }),
+    };
+    mount(React.createElement(Klassenzimmer, {
+      ...basisProps, stepFrei: 0, ritual: ritualUrteil(plan, prog),
+      resultOf: () => undefined,
+    } as never));
+    const modus = rootEl.querySelector('[data-testid="sitzung-modus"]') as HTMLElement | null;
+    ok(!!modus, "XCV1 زرّ وضع الجلسة المتسلسلة حاضر في رأس التدريب");
+    if (modus) click(modus);
+    const leiste = rootEl.querySelector('[data-testid="sitzung-spieler"]');
+    ok(!!leiste && (leiste.textContent ?? "").includes(`من`) && !!rootEl.querySelector('[data-testid="aufgabe-chip-1"]'),
+      "XCV2 الشريط يعرض التقدّم من نتائج الخطة، ورقائق الاختيار الحرّ باقية في الوضع نفسه");
+    const t0 = plan.tasks[0];
+    const naechsteOffeneIdx = plan.tasks.findIndex((tk, i) => i > 0 && tk.id !== t0.id);
+    // بوابة الطقس تُشتَقّ من التقدّم نفسه: الأولى مُسلَّمة فيه → ما بعدها مفتوح (كما في الصفحة الحقيقية)
+    const progFertig = { ...prog, plan: { ...prog.plan, tasks: { [t0.id]: { score: 3, total: 3, done: true, passed: true, attempts: 1 } } } };
+    mount(React.createElement(Klassenzimmer, {
+      ...basisProps, progress: progFertig, stepFrei: 0, ritual: ritualUrteil(plan, progFertig),
+      resultOf: (id: string) => (id === t0.id ? { done: true, passed: true, score: 3, total: 3, attempts: 1 } : undefined),
+    } as never));
+    const modus2 = rootEl.querySelector('[data-testid="sitzung-modus"]') as HTMLElement | null;
+    if (modus2) click(modus2);
+    const weiter = rootEl.querySelector('[data-testid="sitzung-weiter"]') as HTMLElement | null;
+    ok(!!weiter && naechsteOffeneIdx > 0 && (weiter.textContent ?? "").includes(plan.tasks[naechsteOffeneIdx].titleAr.split(" ")[0]),
+      "XCV3 بعد تسليم الأولى يظهر زرّ «المهمة التالية» حاملًا اسم المهمة المفتوحة التالية فعلًا");
+    if (weiter) click(weiter);
+    ok(schritte[schritte.length - 1] === naechsteOffeneIdx,
+      "XCV4 النقر ينقل الخطوة إلى المهمة التالية المفتوحة بالضبط (تسلسل لا قفز أعمى)");
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

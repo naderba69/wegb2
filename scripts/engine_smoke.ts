@@ -13134,6 +13134,18 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K279b التدريب مركّب في معمل الأخطاء ويصرّح باستبعاد أزواج الدفتر");
 }
 
+// ===== K280 (R187 · U1): Sequentieller Sitzungsplayer im Klassenzimmer —
+// Aufgabe, Abgabe, eine Weiter-Taste zur nächsten offenen Aufgabe; die freie
+// Aufgabenwahl (Chips) bleibt vollständig erhalten. =====
+{
+  const kzSrc = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+  ok(kzSrc.includes('data-testid="sitzung-modus"') && kzSrc.includes('data-testid="sitzung-spieler"') &&
+     kzSrc.includes('data-testid="sitzung-weiter"') && kzSrc.includes("naechsteOffeneGesamt") &&
+     kzSrc.includes('data-testid={`aufgabe-chip-${i}`}') && kzSrc.includes("submitCurrent") &&
+     kzSrc.includes("اختر أيّ رقاقة متى شئت"),
+    "K280 مشغّل الجلسة حاضر بشريطه وزرّ التالية، ورقائق الاختيار الحرّ وزرّ التسليم القائمان لم يُمسّا");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R186: **Axis C vollständig · Axis M vollständig (M1–M6, R181–R186)**
+> Status nach R187: **Axis C + M vollständig · Axis U: U1 ✅ (R187)**
+> R187 (U1 Sitzungsplayer) — alle Gates grün (smoke 1747/0, interaktiv 713/0). Weiter: U2–U6.
 > R186 (M6 Muster-Drills) — alle Gates grün (smoke 1746/0). Weiter: Axis U (U1–U6).
 > R185 (M5 Schreibschleife) — alle Gates grün (smoke 1744/0). Weiter: M6, dann Axis U (U1–U6).
 > R184 (M4 Shadowing, Rhythmusvergleich ohne Aussprache-Urteil) — alle Gates grün (smoke 1742/0). Weiter: M5, M6, dann Axis U.
@@ -345,6 +346,17 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R187 — U1 Sequentieller Sitzungsplayer — abgeschlossen ✅
+
+- **Player** im Klassenzimmer (opt-in Toggle): Fortschrittsleiste ausschließlich aus Plan-
+  Ergebnissen + geplanten Minuten; nach Abgabe der aktuellen Aufgabe eine primäre
+  «المهمة التالية»-Taste, die exakt auf die nächste offene, nicht ritual-gesperrte Aufgabe
+  zeigt (Ableitung `naechsteOffeneGesamt`), plus ehrlicher Abschlusszustand.
+- **Kein Pfad verloren**: Aufgab-Bereich, Vor/Zurück, Abgabe — alles unverändert (K280 quellenfest);
+  Sitzungsuhr (R19) bleibt das Zeitmaß, der Player ist reine Führung.
+- **Nachweise**: tsc ✓ · smoke **1747/0** · interaktiv **713/0** (XCV1–4 neu: Rendern, Umschalten,
+  Weiter-Name, exakter Schritt) · audit 0 · build ✓.
 
 ## R186 — M6 Generierte Fehler-Muster-Drills — abgeschlossen ✅ · **Achse M vollständig (M1–M6)**
 
