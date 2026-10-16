@@ -3385,9 +3385,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { PflegeStation } = await import("../components/pflege");
     const { pflegeWoerter, pflegeDialoge } = await import("../lib/pflege");
     mount(React.createElement(PflegeStation));
-    ok(pflegeWoerter.length === 40 && !!rootEl.querySelector('[data-testid="pflege-station"]') &&
-       !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]'),
-      "XCIX1 محطة التمريض تعرض بنكها المهني (40 كلمة) منذ أول تركيب");
+    ok(pflegeWoerter.length === 115 && !!rootEl.querySelector('[data-testid="pflege-station"]') &&
+       !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]') && !!rootEl.querySelector('[data-testid="pflege-medizin-start"]'),
+      "XCIX1 محطة التمريض تعرض بنكها المهني المعمّق (115 كلمة) وزرّ بدء محاكاة Medizin منذ أول تركيب");
     ok(rootEl.querySelectorAll('[data-testid="pflege-zeile"]').length === (pflegeDialoge[0]?.zeilen.length ?? 0),
       "XCIX2 حوار الجولة الطبية معروض بكل سطوره ثنائية اللغة");
     const musterBtn = rootEl.querySelector('[data-testid="pflege-muster-pf-w1"]') as HTMLElement | null;

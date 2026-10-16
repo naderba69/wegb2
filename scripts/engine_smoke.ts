@@ -13325,15 +13325,32 @@ function collectR262(dir: string, out: string[] = []): string[] {
   };
   const pfSrc = readFileSync("components/pflege.tsx", "utf8");
   const planSrc2 = readFileSync("lib/plan.ts", "utf8");
-  ok(pf.wortschatz.length === 40 && pf.wortschatz.every((w) => w.de && w.ar && w.bsp) &&
-     new Set(pf.wortschatz.map((w) => w.id)).size === 40 &&
-     pf.dialoge.length === 4 && pf.dialoge.every((d) => d.zeilen.length >= 6 && d.zeilen.every((z) => z.de && z.ar)) &&
-     pf.dokumentation.length === 3 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
+  ok(pf.wortschatz.length === 115 && pf.wortschatz.every((w) => w.de && w.ar && w.bsp) &&
+     new Set(pf.wortschatz.map((w) => w.id)).size === 115 &&
+     pf.dialoge.length === 8 && pf.dialoge.every((d) => d.zeilen.length >= 6 && d.zeilen.every((z) => z.de && z.ar)) &&
+     pf.dokumentation.length === 6 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
      pf.pruefung.length === 3,
-    "K290a بنك التمريض مكتمل البنية: 40 كلمة بمثال، 4 حوارات ثنائية اللغة، 3 نماذج توثيق بقوائم فحص، 3 بطاقات صيغة");
+    "K290a بنك التمريض مكتمل البنية: 115 كلمة بمثال (R199: تعميق أدوية/يوم عمل/طوارئ/تشريح/نتائج)، 8 حوارات ثنائية اللغة، 6 نماذج توثيق بقوائم فحص، 3 بطاقات صيغة");
   ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("ليست امتحانًا رسميًا") &&
      !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
     "K290b المحطة مركّبة في /ueben كإضافة اختيارية، والخطة ذات الـ378 يومًا لا تعرف عنها شيئًا — الجسر لا يهزّ العمود الفقري");
+}
+
+// ===== K292 (R199 · Vertiefung + Medizin-Simulation): Die Prüfungs-Simulation
+// hat 12 Items (2×3 Lesen, 2×3 Hören) mit genau einer richtigen Option je
+// Frage und ehrlicher Kennzeichnung als interne Simulation. =====
+{
+  const pf2 = JSON.parse(readFileSync("content/pflege.json", "utf8")) as {
+    medizinpruefung: { lesen: { fragen: { optionen: string[]; richtig: number }[] }[]; hoeren: { transkript: string; fragen: { optionen: string[]; richtig: number }[] }[] };
+  };
+  const med = pf2.medizinpruefung;
+  const alleFragen = [...med.lesen, ...med.hoeren].flatMap((x) => x.fragen);
+  const pfSrc2 = readFileSync("components/pflege.tsx", "utf8");
+  ok(med.lesen.length === 2 && med.hoeren.length === 2 && alleFragen.length === 12 &&
+     alleFragen.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3) &&
+     med.hoeren.every((h) => h.transkript.length > 60) &&
+     pfSrc2.includes('data-testid="pflege-medizin"') && pfSrc2.includes("محاكاة داخلية، لا نتيجة telc"),
+    "K292 محاكاة Medizin: 12 بندًا سليم البنية بمؤقّت وتسليم ونتيجة موسومة داخلية — بلا ادّعاء رسمية");
 }
 
 // ===== K291 (R198 · KI-Sprechbegleiter): BYOK-Rollenspiel fürs Sprechen —

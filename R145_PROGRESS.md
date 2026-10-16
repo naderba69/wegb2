@@ -353,6 +353,15 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R199 — Pflege vertieft + Medizin-Simulation — abgeschlossen ✅
+
+- Bank wächst: 115 Wörter (Medikamente, Stationsalltag, Notfall, Anatomie,
+  Befund/Verwaltung), 8 Dialoge, 6 Dokumentations-Muster.
+- `MedizinSimulation` in der Pflege-Station: 20-Minuten-Timer, 12 Items
+  (2 Lesen + 2 Hören via Browser-TTS), Abgabe, ehrlich markierte interne
+  Punktzahl, Transkripte erst nach Abgabe. Keine telc-Originalmaterialien.
+- **Nachweise**: tsc ✓ · smoke **1771/0** (K292, K290a aktualisiert) · interaktiv 725/0 · audit 0 · build ✓.
+
 ## R198 — KI-Sprechbegleiter (BYOK-Rollenspiel) — abgeschlossen ✅
 
 - `llmGespraech` in lib/grader.ts (einziger Fetch-Pfad, K122c unangetastet) +

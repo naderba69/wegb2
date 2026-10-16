@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung } from "@/lib/pflege";
+import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung, pflegeMedizin } from "@/lib/pflege";
+import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
 
@@ -15,7 +16,99 @@ const THEMEN: Record<string, string> = {
   symptome: "🤒 الأعراض",
   versorgung: "💉 الرعاية والقياس",
   doku: "🗂️ التوثيق والتسليم",
+  medikamente: "💊 الأدوية",
+  pflegealltag: "🏥 يوم العمل في القسم",
+  notfall: "🚨 الطوارئ",
+  anatomie: "🦴 تشريح أعمق",
+  befund: "📋 نتائج وإدارة",
 };
+
+/** ⏱️ محاكاة Medizin مؤقّتة (R199): 12 بندًا (قراءة+استماع) بزمن مقترح ونتيجة صريحة المصدر. */
+function MedizinSimulation() {
+  const [aktiv, setAktiv] = useState(false);
+  const [antworten, setAntworten] = useState<Record<string, number>>({});
+  const [fertig, setFertig] = useState(false);
+  const [sekunden, setSekunden] = useState(20 * 60);
+  useEffect(() => {
+    if (!aktiv || fertig) return;
+    const t = setInterval(() => setSekunden((s) => {
+      if (s <= 1) { setFertig(true); return 0; }
+      return s - 1;
+    }), 1000);
+    return () => clearInterval(t);
+  }, [aktiv, fertig]);
+  const alle = [
+    ...pflegeMedizin.lesen.flatMap((l) => l.fragen.map((f, fi) => ({ schluessel: `${l.id}-${fi}`, richtig: f.richtig }))),
+    ...pflegeMedizin.hoeren.flatMap((h) => h.fragen.map((f, fi) => ({ schluessel: `${h.id}-${fi}`, richtig: f.richtig }))),
+  ];
+  const richtigZahl = alle.filter((a) => antworten[a.schluessel] === a.richtig).length;
+  const fragenBlock = (itemId: string, fragen: typeof pflegeMedizin.lesen[0]["fragen"]) => (
+    <div style={{ display: "grid", gap: "0.5rem", marginTop: "0.5rem" }}>
+      {fragen.map((f, fi) => (
+        <fieldset key={fi} style={{ border: "1px solid var(--color-line)", borderRadius: "0.6rem", padding: "0.5rem 0.7rem" }}>
+          <legend style={{ fontWeight: 700, fontSize: "0.88rem" }}><De>{f.frage}</De></legend>
+          {f.optionen.map((o, oi) => {
+            const k = `${itemId}-${fi}`;
+            const gewaehlt = antworten[k] === oi;
+            const korrekt = fertig && oi === f.richtig;
+            const falschGewaehlt = fertig && gewaehlt && oi !== f.richtig;
+            return (
+              <label key={oi} style={{ display: "flex", gap: "0.45rem", alignItems: "center", minHeight: "40px", cursor: "pointer", fontWeight: korrekt ? 800 : 400, color: falschGewaehlt ? "var(--color-cola)" : undefined }}>
+                <input type="radio" name={k} checked={gewaehlt} disabled={fertig}
+                  onChange={() => setAntworten((a) => ({ ...a, [k]: oi }))} />
+                <De>{o}</De>{korrekt ? " ✓" : falschGewaehlt ? " ✗" : ""}
+              </label>
+            );
+          })}
+        </fieldset>
+      ))}
+    </div>
+  );
+  return (
+    <section data-testid="pflege-medizin">
+      <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>⏱️ محاكاة telc Medizin/Pflege المصغّرة — قراءة واستماع (20 دقيقة)</h3>
+      <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0 0 0.5rem" }}>{pflegeMedizin.hinweisAr}</p>
+      {!aktiv ? (
+        <button type="button" className="btn btn-primary" style={{ minHeight: "46px" }} data-testid="pflege-medizin-start"
+          onClick={() => { setAktiv(true); setFertig(false); setAntworten({}); setSekunden(20 * 60); }}>
+          ▶ ابدأ المحاكاة (12 سؤالًا)
+        </button>
+      ) : (
+        <div style={{ display: "grid", gap: "0.7rem" }}>
+          <div role="timer" aria-label="الزمن المتبقي" style={{ fontWeight: 800 }}>
+            ⏱️ المتبقي: {Math.floor(sekunden / 60)}:{String(sekunden % 60).padStart(2, "0")}
+            {fertig && <span data-testid="pflege-medizin-ergebnis"> · النتيجة: {richtigZahl}/{alle.length} ({Math.round((richtigZahl / alle.length) * 100)}%) — محاكاة داخلية، لا نتيجة telc</span>}
+          </div>
+          {pflegeMedizin.lesen.map((l) => (
+            <article key={l.id} className="card" style={{ padding: "0.7rem 0.9rem" }}>
+              <div style={{ fontWeight: 800 }}>📖 <De>{l.titel}</De></div>
+              <De style={{ display: "block", lineHeight: 1.9, marginTop: "0.3rem" }}>{l.text}</De>
+              {fragenBlock(l.id, l.fragen)}
+            </article>
+          ))}
+          {pflegeMedizin.hoeren.map((h) => (
+            <article key={h.id} className="card" style={{ padding: "0.7rem 0.9rem" }}>
+              <div style={{ fontWeight: 800 }}>🎧 <De>{h.titel}</De></div>
+              <button type="button" className="btn btn-ghost" style={{ minHeight: "44px", marginTop: "0.35rem" }}
+                onClick={() => speakAny(h.transkript)}>🔊 استمع (صوت متصفح آلي)</button>
+              {fragenBlock(h.id, h.fragen)}
+              {fertig && <De style={{ display: "block", fontSize: "0.82rem", color: "var(--color-ink2)", marginTop: "0.4rem" }}>{h.transkript}</De>}
+            </article>
+          ))}
+          {!fertig ? (
+            <button type="button" className="btn btn-primary" style={{ minHeight: "46px" }} data-testid="pflege-medizin-abgabe" onClick={() => setFertig(true)}>
+              ✅ سلّم واعرض النتيجة
+            </button>
+          ) : (
+            <button type="button" className="btn btn-ghost" style={{ minHeight: "46px" }} onClick={() => { setAktiv(false); setFertig(false); setAntworten({}); }}>
+              ↩ محاولة جديدة لاحقًا
+            </button>
+          )}
+        </div>
+      )}
+    </section>
+  );
+}
 
 export function PflegeStation() {
   const [stufe, setStufe] = useState<string>("alle");
@@ -122,6 +215,8 @@ export function PflegeStation() {
           ))}
         </div>
       </section>
+
+      <MedizinSimulation />
 
       {/* ── صيغة الامتحان المهني ── */}
       <section>

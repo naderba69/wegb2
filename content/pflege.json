@@ -402,6 +402,767 @@
    "stufe": "B1",
    "thema": "doku",
    "wortart": "verb"
+  },
+  {
+   "id": "pf-m01",
+   "de": "die Dosis",
+   "plural": "die Dosen",
+   "ar": "الجرعة",
+   "bsp": "Die Dosis wird halbiert.",
+   "bspAr": "ستُخفَّض الجرعة إلى النصف.",
+   "stufe": "B1",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m02",
+   "de": "die Nebenwirkung",
+   "plural": "die Nebenwirkungen",
+   "ar": "الأثر الجانبي",
+   "bsp": "Eine mögliche Nebenwirkung ist Müdigkeit.",
+   "bspAr": "أثر جانبي محتمل هو التعب.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m03",
+   "de": "das Schmerzmittel",
+   "plural": "die Schmerzmittel",
+   "ar": "مسكّن الألم",
+   "bsp": "Bei Bedarf bekommen Sie ein Schmerzmittel.",
+   "bspAr": "عند الحاجة ستحصل على مسكّن.",
+   "stufe": "B1",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m04",
+   "de": "das Antibiotikum",
+   "plural": "die Antibiotika",
+   "ar": "المضاد الحيوي",
+   "bsp": "Das Antibiotikum läuft über die Infusion.",
+   "bspAr": "المضاد الحيوي يُعطى عبر المحلول.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m05",
+   "de": "die Salbe",
+   "plural": "die Salben",
+   "ar": "المرهم",
+   "bsp": "Die Salbe wird dünn aufgetragen.",
+   "bspAr": "يُدهن المرهم بطبقة رقيقة.",
+   "stufe": "B1",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m06",
+   "de": "die Einnahme",
+   "plural": "die Einnahmen",
+   "ar": "تناول الدواء",
+   "bsp": "Die Einnahme erfolgt nach dem Essen.",
+   "bspAr": "يكون التناول بعد الأكل.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m07",
+   "de": "nüchtern",
+   "plural": "",
+   "ar": "على الريق (قبل الأكل)",
+   "bsp": "Bitte bleiben Sie ab Mitternacht nüchtern.",
+   "bspAr": "من فضلك ابقَ على الريق من منتصف الليل.",
+   "stufe": "B1",
+   "thema": "medikamente",
+   "wortart": "adj"
+  },
+  {
+   "id": "pf-m08",
+   "de": "der Beipackzettel",
+   "plural": "die Beipackzettel",
+   "ar": "منشور الدواء",
+   "bsp": "Lesen Sie den Beipackzettel genau.",
+   "bspAr": "اقرأ منشور الدواء بدقة.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m09",
+   "de": "die Allergie",
+   "plural": "die Allergien",
+   "ar": "الحساسية",
+   "bsp": "Haben Sie eine Allergie gegen Penicillin?",
+   "bspAr": "هل عندك حساسية من البنسلين؟",
+   "stufe": "B1",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m10",
+   "de": "die Wechselwirkung",
+   "plural": "die Wechselwirkungen",
+   "ar": "التفاعل الدوائي",
+   "bsp": "Zwei Medikamente können Wechselwirkungen haben.",
+   "bspAr": "قد تحدث تفاعلات بين دواءين.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m11",
+   "de": "verschreiben",
+   "plural": "",
+   "ar": "يصف دواءً (فعل)",
+   "bsp": "Der Arzt verschreibt ein Antibiotikum.",
+   "bspAr": "الطبيب يصف مضادًا حيويًا.",
+   "stufe": "B1",
+   "thema": "medikamente",
+   "wortart": "verb"
+  },
+  {
+   "id": "pf-m12",
+   "de": "die Verabreichung",
+   "plural": "die Verabreichungen",
+   "ar": "إعطاء الدواء",
+   "bsp": "Die Verabreichung wird dokumentiert.",
+   "bspAr": "يُوثَّق إعطاء الدواء.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m13",
+   "de": "der Wirkstoff",
+   "plural": "die Wirkstoffe",
+   "ar": "المادّة الفعّالة",
+   "bsp": "Der Wirkstoff senkt den Blutdruck.",
+   "bspAr": "المادة الفعالة تخفض الضغط.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m14",
+   "de": "der Blutverdünner",
+   "plural": "die Blutverdünner",
+   "ar": "مخفّف الدم",
+   "bsp": "Er nimmt täglich einen Blutverdünner.",
+   "bspAr": "يأخذ مخفف دم يوميًا.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-m15",
+   "de": "die Dosierung",
+   "plural": "die Dosierungen",
+   "ar": "تحديد الجرعة",
+   "bsp": "Die Dosierung hängt vom Gewicht ab.",
+   "bspAr": "تتعلق الجرعة بالوزن.",
+   "stufe": "B2",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-a01",
+   "de": "der Dienstplan",
+   "plural": "die Dienstpläne",
+   "ar": "جدول الورديات",
+   "bsp": "Der neue Dienstplan hängt im Büro.",
+   "bspAr": "جدول الورديات الجديد معلّق في المكتب.",
+   "stufe": "B1",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a02",
+   "de": "der Nachtdienst",
+   "plural": "die Nachtdienste",
+   "ar": "الوردية الليلية",
+   "bsp": "Ich habe diese Woche Nachtdienst.",
+   "bspAr": "عندي وردية ليلية هذا الأسبوع.",
+   "stufe": "B1",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a03",
+   "de": "der Frühdienst",
+   "plural": "die Frühdienste",
+   "ar": "الوردية الصباحية",
+   "bsp": "Der Frühdienst beginnt um 6 Uhr.",
+   "bspAr": "تبدأ الوردية الصباحية 6:00.",
+   "stufe": "B1",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a04",
+   "de": "der Spätdienst",
+   "plural": "die Spätdienste",
+   "ar": "الوردية المسائية",
+   "bsp": "Im Spätdienst sind wir zu dritt.",
+   "bspAr": "في الوردية المسائية نحن ثلاثة.",
+   "stufe": "B1",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a05",
+   "de": "der Bewohner",
+   "plural": "die Bewohner",
+   "ar": "المقيم (في دار الرعاية)",
+   "bsp": "Der Bewohner möchte im Garten sitzen.",
+   "bspAr": "يريد المقيم الجلوس في الحديقة.",
+   "stufe": "B1",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a06",
+   "de": "der Patient",
+   "plural": "die Patienten",
+   "ar": "المريض",
+   "bsp": "Der Patient wartet auf die Visite.",
+   "bspAr": "المريض ينتظر الجولة الطبية.",
+   "stufe": "A2",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a07",
+   "de": "die Station",
+   "plural": "die Stationen",
+   "ar": "القسم / الجناح",
+   "bsp": "Unsere Station hat zwanzig Betten.",
+   "bspAr": "قسمنا فيه عشرون سريرًا.",
+   "stufe": "A2",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a08",
+   "de": "der Flur",
+   "plural": "die Flure",
+   "ar": "الممرّ",
+   "bsp": "Bitte warten Sie kurz auf dem Flur.",
+   "bspAr": "انتظر لحظة في الممر من فضلك.",
+   "stufe": "A2",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a09",
+   "de": "die Klingel",
+   "plural": "die Klingeln",
+   "ar": "جرس النداء",
+   "bsp": "Drücken Sie die Klingel, wenn Sie etwas brauchen.",
+   "bspAr": "اضغط الجرس عندما تحتاج شيئًا.",
+   "stufe": "A2",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a10",
+   "de": "der Handschuh",
+   "plural": "die Handschuhe",
+   "ar": "القفاز",
+   "bsp": "Ziehen Sie neue Handschuhe an.",
+   "bspAr": "البس قفازين جديدين.",
+   "stufe": "A2",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a11",
+   "de": "der Kittel",
+   "plural": "die Kittel",
+   "ar": "المئزر الطبي",
+   "bsp": "Der Kittel wird täglich gewechselt.",
+   "bspAr": "يُغيَّر المئزر يوميًا.",
+   "stufe": "B1",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a12",
+   "de": "waschen",
+   "plural": "",
+   "ar": "يغسل (فعل)",
+   "bsp": "Ich helfe Ihnen beim Waschen.",
+   "bspAr": "سأساعدك في الغسل.",
+   "stufe": "A2",
+   "thema": "pflegealltag",
+   "wortart": "verb"
+  },
+  {
+   "id": "pf-a13",
+   "de": "duschen",
+   "plural": "",
+   "ar": "يستحمّ (فعل)",
+   "bsp": "Er möchte heute duschen.",
+   "bspAr": "يريد الاستحمام اليوم.",
+   "stufe": "A2",
+   "thema": "pflegealltag",
+   "wortart": "verb"
+  },
+  {
+   "id": "pf-a14",
+   "de": "anziehen",
+   "plural": "",
+   "ar": "يُلبس / يرتدي (فعل)",
+   "bsp": "Ich helfe Ihnen beim Anziehen.",
+   "bspAr": "سأساعدك في ارتداء الملابس.",
+   "stufe": "A2",
+   "thema": "pflegealltag",
+   "wortart": "verb"
+  },
+  {
+   "id": "pf-a15",
+   "de": "lagern",
+   "plural": "",
+   "ar": "يُقلّب / يضع بوضعية (فعل)",
+   "bsp": "Der Patient wird alle zwei Stunden gelagert.",
+   "bspAr": "يُقلَّب المريض كل ساعتين.",
+   "stufe": "B2",
+   "thema": "pflegealltag",
+   "wortart": "verb"
+  },
+  {
+   "id": "pf-a16",
+   "de": "begleiten",
+   "plural": "",
+   "ar": "يرافق (فعل)",
+   "bsp": "Ich begleite Sie zur Untersuchung.",
+   "bspAr": "سأرافقك إلى الفحص.",
+   "stufe": "B1",
+   "thema": "pflegealltag",
+   "wortart": "verb"
+  },
+  {
+   "id": "pf-a17",
+   "de": "beobachten",
+   "plural": "",
+   "ar": "يلاحظ / يراقب (فعل)",
+   "bsp": "Wir beobachten die Wunde genau.",
+   "bspAr": "نراقب الجرح بدقة.",
+   "stufe": "B1",
+   "thema": "pflegealltag",
+   "wortart": "verb"
+  },
+  {
+   "id": "pf-a18",
+   "de": "die Pause",
+   "plural": "die Pausen",
+   "ar": "الاستراحة",
+   "bsp": "Die Pause dauert dreißig Minuten.",
+   "bspAr": "الاستراحة ثلاثون دقيقة.",
+   "stufe": "A2",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a19",
+   "de": "das Zimmer",
+   "plural": "die Zimmer",
+   "ar": "الغرفة",
+   "bsp": "Zimmer 12 ist ein Einzelzimmer.",
+   "bspAr": "الغرفة 12 غرفة فردية.",
+   "stufe": "A2",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-a20",
+   "de": "der Aufzug",
+   "plural": "die Aufzüge",
+   "ar": "المصعد",
+   "bsp": "Der Aufzug ist leider defekt.",
+   "bspAr": "المصعد معطّل للأسف.",
+   "stufe": "A2",
+   "thema": "pflegealltag"
+  },
+  {
+   "id": "pf-n01",
+   "de": "der Notfall",
+   "plural": "die Notfälle",
+   "ar": "حالة الطوارئ",
+   "bsp": "Das ist ein Notfall, rufen Sie Hilfe!",
+   "bspAr": "هذه حالة طوارئ، اطلب المساعدة!",
+   "stufe": "B1",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n02",
+   "de": "bewusstlos",
+   "plural": "",
+   "ar": "فاقد الوعي",
+   "bsp": "Der Patient ist bewusstlos.",
+   "bspAr": "المريض فاقد الوعي.",
+   "stufe": "B2",
+   "thema": "notfall",
+   "wortart": "adj"
+  },
+  {
+   "id": "pf-n03",
+   "de": "der Kreislauf",
+   "plural": "die Kreisläufe",
+   "ar": "الدورة الدموية",
+   "bsp": "Der Kreislauf ist stabil.",
+   "bspAr": "الدورة الدموية مستقرة.",
+   "stufe": "B2",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n04",
+   "de": "die Wiederbelebung",
+   "plural": "die Wiederbelebungen",
+   "ar": "الإنعاش",
+   "bsp": "Die Wiederbelebung beginnt sofort.",
+   "bspAr": "يبدأ الإنعاش فورًا.",
+   "stufe": "B2",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n05",
+   "de": "der Defibrillator",
+   "plural": "die Defibrillatoren",
+   "ar": "جهاز الصدمات القلبية",
+   "bsp": "Holen Sie den Defibrillator!",
+   "bspAr": "أحضر جهاز الصدمات!",
+   "stufe": "B2",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n06",
+   "de": "die Blutung",
+   "plural": "die Blutungen",
+   "ar": "النزيف",
+   "bsp": "Die Blutung muss gestoppt werden.",
+   "bspAr": "يجب إيقاف النزيف.",
+   "stufe": "B1",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n07",
+   "de": "der Knochenbruch",
+   "plural": "die Knochenbrüche",
+   "ar": "كسر العظام",
+   "bsp": "Der Knochenbruch wird geröntgt.",
+   "bspAr": "سيُصوَّر الكسر بالأشعة.",
+   "stufe": "B1",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n08",
+   "de": "die Verbrennung",
+   "plural": "die Verbrennungen",
+   "ar": "الحرق",
+   "bsp": "Die Verbrennung ist nur leicht.",
+   "bspAr": "الحرق خفيف فقط.",
+   "stufe": "B1",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n09",
+   "de": "der Schlaganfall",
+   "plural": "die Schlaganfälle",
+   "ar": "السكتة الدماغية",
+   "bsp": "Bei einem Schlaganfall zählt jede Minute.",
+   "bspAr": "في السكتة الدماغية كل دقيقة تهمّ.",
+   "stufe": "B2",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n10",
+   "de": "der Herzinfarkt",
+   "plural": "die Herzinfarkte",
+   "ar": "النوبة القلبية",
+   "bsp": "Die Schmerzen können ein Herzinfarkt sein.",
+   "bspAr": "قد يكون الألم نوبة قلبية.",
+   "stufe": "B2",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n11",
+   "de": "die Sauerstoffsättigung",
+   "plural": "die Sauerstoffsättigungen",
+   "ar": "تشبّع الأكسجين",
+   "bsp": "Die Sauerstoffsättigung liegt bei 96 Prozent.",
+   "bspAr": "تشبع الأكسجين 96 بالمئة.",
+   "stufe": "B2",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n12",
+   "de": "der Notarzt",
+   "plural": "die Notärzte",
+   "ar": "طبيب الطوارئ",
+   "bsp": "Der Notarzt ist unterwegs.",
+   "bspAr": "طبيب الطوارئ في الطريق.",
+   "stufe": "B1",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n13",
+   "de": "alarmieren",
+   "plural": "",
+   "ar": "يُنذر / يستدعي (فعل)",
+   "bsp": "Alarmieren Sie den Notarzt!",
+   "bspAr": "استدعِ طبيب الطوارئ!",
+   "stufe": "B2",
+   "thema": "notfall",
+   "wortart": "verb"
+  },
+  {
+   "id": "pf-n14",
+   "de": "der Notruf",
+   "plural": "die Notrufe",
+   "ar": "نداء الطوارئ",
+   "bsp": "Der Notruf wurde um 3 Uhr ausgelöst.",
+   "bspAr": "أُطلق نداء الطوارئ في الثالثة.",
+   "stufe": "B1",
+   "thema": "notfall"
+  },
+  {
+   "id": "pf-n15",
+   "de": "stabil",
+   "plural": "",
+   "ar": "مستقرّ",
+   "bsp": "Der Patient ist wieder stabil.",
+   "bspAr": "المريض مستقر من جديد.",
+   "stufe": "B1",
+   "thema": "notfall",
+   "wortart": "adj"
+  },
+  {
+   "id": "pf-t01",
+   "de": "der Muskel",
+   "plural": "die Muskeln",
+   "ar": "العضلة",
+   "bsp": "Der Muskel ist verspannt.",
+   "bspAr": "العضلة متشنجة.",
+   "stufe": "B1",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t02",
+   "de": "der Knochen",
+   "plural": "die Knochen",
+   "ar": "العظم",
+   "bsp": "Der Knochen heilt in sechs Wochen.",
+   "bspAr": "يلتئم العظم في ستة أسابيع.",
+   "stufe": "B1",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t03",
+   "de": "das Gelenk",
+   "plural": "die Gelenke",
+   "ar": "المفصل",
+   "bsp": "Das Gelenk ist geschwollen.",
+   "bspAr": "المفصل متورّم.",
+   "stufe": "B1",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t04",
+   "de": "die Lunge",
+   "plural": "die Lungen",
+   "ar": "الرئة",
+   "bsp": "Die Lunge klingt frei.",
+   "bspAr": "الرئة صافية الصوت.",
+   "stufe": "B1",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t05",
+   "de": "die Leber",
+   "plural": "die Lebern",
+   "ar": "الكبد",
+   "bsp": "Die Leberwerte sind erhöht.",
+   "bspAr": "قيم الكبد مرتفعة.",
+   "stufe": "B2",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t06",
+   "de": "die Niere",
+   "plural": "die Nieren",
+   "ar": "الكلية",
+   "bsp": "Die Nieren arbeiten normal.",
+   "bspAr": "الكليتان تعملان طبيعيًا.",
+   "stufe": "B2",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t07",
+   "de": "der Magen",
+   "plural": "die Mägen",
+   "ar": "المعدة",
+   "bsp": "Der Magen ist leer.",
+   "bspAr": "المعدة فارغة.",
+   "stufe": "A2",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t08",
+   "de": "der Darm",
+   "plural": "die Därme",
+   "ar": "الأمعاء",
+   "bsp": "Der Darm braucht Ruhe.",
+   "bspAr": "الأمعاء تحتاج راحة.",
+   "stufe": "B1",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t09",
+   "de": "die Blase",
+   "plural": "die Blasen",
+   "ar": "المثانة",
+   "bsp": "Die Blase ist voll.",
+   "bspAr": "المثانة ممتلئة.",
+   "stufe": "B1",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t10",
+   "de": "das Blut",
+   "plural": "—",
+   "ar": "الدم",
+   "bsp": "Das Blut wird im Labor untersucht.",
+   "bspAr": "يُفحص الدم في المختبر.",
+   "stufe": "A2",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t11",
+   "de": "die Vene",
+   "plural": "die Venen",
+   "ar": "الوريد",
+   "bsp": "Die Infusion läuft über die Vene.",
+   "bspAr": "المحلول يسير عبر الوريد.",
+   "stufe": "B2",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t12",
+   "de": "die Arterie",
+   "plural": "die Arterien",
+   "ar": "الشريان",
+   "bsp": "Die Arterie ist frei.",
+   "bspAr": "الشريان مفتوح.",
+   "stufe": "B2",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t13",
+   "de": "der Nerv",
+   "plural": "die Nerven",
+   "ar": "العصب",
+   "bsp": "Der Nerv ist gereizt.",
+   "bspAr": "العصب متهيّج.",
+   "stufe": "B2",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t14",
+   "de": "das Gehirn",
+   "plural": "die Gehirne",
+   "ar": "الدماغ",
+   "bsp": "Das Gehirn braucht Sauerstoff.",
+   "bspAr": "الدماغ يحتاج أكسجين.",
+   "stufe": "B1",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-t15",
+   "de": "die Wirbelsäule",
+   "plural": "die Wirbelsäulen",
+   "ar": "العمود الفقري",
+   "bsp": "Die Wirbelsäule wurde untersucht.",
+   "bspAr": "فُحص العمود الفقري.",
+   "stufe": "B2",
+   "thema": "anatomie"
+  },
+  {
+   "id": "pf-b01",
+   "de": "der Befund",
+   "plural": "die Befunde",
+   "ar": "نتيجة الفحص",
+   "bsp": "Der Befund ist unauffällig.",
+   "bspAr": "نتيجة الفحص طبيعية.",
+   "stufe": "B2",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b02",
+   "de": "die Diagnose",
+   "plural": "die Diagnosen",
+   "ar": "التشخيص",
+   "bsp": "Die Diagnose steht noch nicht fest.",
+   "bspAr": "التشخيص لم يتحدد بعد.",
+   "stufe": "B2",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b03",
+   "de": "die Therapie",
+   "plural": "die Therapien",
+   "ar": "العلاج / الخطة العلاجية",
+   "bsp": "Die Therapie zeigt Wirkung.",
+   "bspAr": "العلاج يُظهر أثرًا.",
+   "stufe": "B2",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b04",
+   "de": "die Untersuchung",
+   "plural": "die Untersuchungen",
+   "ar": "الفحص الطبي",
+   "bsp": "Die Untersuchung dauert zehn Minuten.",
+   "bspAr": "الفحص يستغرق عشر دقائق.",
+   "stufe": "B1",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b05",
+   "de": "die Behandlung",
+   "plural": "die Behandlungen",
+   "ar": "المعالجة",
+   "bsp": "Die Behandlung beginnt morgen.",
+   "bspAr": "تبدأ المعالجة غدًا.",
+   "stufe": "B1",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b06",
+   "de": "die Entlassung",
+   "plural": "die Entlassungen",
+   "ar": "الخروج من المستشفى",
+   "bsp": "Die Entlassung ist für Freitag geplant.",
+   "bspAr": "الخروج مخطط ليوم الجمعة.",
+   "stufe": "B1",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b07",
+   "de": "die Aufnahme",
+   "plural": "die Aufnahmen",
+   "ar": "الاستقبال / الدخول",
+   "bsp": "Die Aufnahme erfolgt an der Rezeption.",
+   "bspAr": "الاستقبال يكون عند الاستعلامات.",
+   "stufe": "B1",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b08",
+   "de": "die Überweisung",
+   "plural": "die Überweisungen",
+   "ar": "التحويل الطبي",
+   "bsp": "Sie brauchen eine Überweisung zum Facharzt.",
+   "bspAr": "تحتاج تحويلًا إلى الطبيب المختص.",
+   "stufe": "B1",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b09",
+   "de": "die Krankenkasse",
+   "plural": "die Krankenkassen",
+   "ar": "صندوق التأمين الصحي",
+   "bsp": "Die Krankenkasse übernimmt die Kosten.",
+   "bspAr": "صندوق التأمين يتحمل التكاليف.",
+   "stufe": "B2",
+   "thema": "befund"
+  },
+  {
+   "id": "pf-b10",
+   "de": "die Versichertenkarte",
+   "plural": "die Versichertenkarten",
+   "ar": "بطاقة التأمين الصحي",
+   "bsp": "Bitte zeigen Sie Ihre Versichertenkarte.",
+   "bspAr": "من فضلك أظهر بطاقة تأمينك.",
+   "stufe": "B1",
+   "thema": "befund"
   }
  ],
  "dialoge": [
@@ -566,6 +1327,168 @@
      "ar": "بكل سرور — لا زهور بتربة من فضلك، لكن الفاكهة مرحّب بها."
     }
    ]
+  },
+  {
+   "id": "pf-g5",
+   "titel": "Notfall auf der Station — طارئ في القسم",
+   "ar": "العثور على مريض فاقد الوعي وطلب النجدة",
+   "stufe": "B2",
+   "zeilen": [
+    {
+     "r": "Pflegekraft A",
+     "de": "Kommen Sie schnell! Herr Yilmaz reagiert nicht!",
+     "ar": "تعال بسرعة! السيد يلماز لا يستجيب!"
+    },
+    {
+     "r": "Pflegekraft B",
+     "de": "Ich prüfe die Atmung. Kein Atemzug — ich beginne mit der Herzdruckmassage!",
+     "ar": "أفحص التنفس. لا نفَس — أبدأ الضغط على الصدر!"
+    },
+    {
+     "r": "Pflegekraft A",
+     "de": "Ich löse den Notruf aus und hole den Defibrillator!",
+     "ar": "أطلق نداء الطوارئ وأحضر جهاز الصدمات!"
+    },
+    {
+     "r": "Pflegekraft B",
+     "de": "Rufen Sie den Notarzt und bringen Sie den Notfallwagen!",
+     "ar": "استدعِ طبيب الطوارئ وأحضر عربة الطوارئ!"
+    },
+    {
+     "r": "Pflegekraft A",
+     "de": "Der Notruf ist raus. Sauerstoffsättigung nicht messbar, ich beatme jetzt.",
+     "ar": "النداء خرج. تشبع الأكسجين لا يُقاس، أبدأ التنفس الاصطناعي."
+    },
+    {
+     "r": "Pflegekraft B",
+     "de": "Weiter drücken, nicht aufhören! Wechsel in zwei Minuten.",
+     "ar": "واصل الضغط، لا تتوقف! التبديل بعد دقيقتين."
+    }
+   ]
+  },
+  {
+   "id": "pf-g6",
+   "titel": "Ein neues Medikament erklären — شرح دواء جديد",
+   "ar": "مريضة تسأل عن قرص جديد",
+   "stufe": "B1",
+   "zeilen": [
+    {
+     "r": "Patientin",
+     "de": "Was ist das für eine Tablette? Die kenne ich nicht.",
+     "ar": "ما هذا القرص؟ لا أعرفه."
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Das ist Ihr neues Medikament gegen den hohen Blutdruck. Es senkt den Druck langsam.",
+     "ar": "هذا دواؤك الجديد ضد ضغط الدم المرتفع. يخفض الضغط ببطء."
+    },
+    {
+     "r": "Patientin",
+     "de": "Muss ich es jeden Tag nehmen?",
+     "ar": "هل يجب أن آخذه كل يوم؟"
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Ja, jeden Morgen eine Tablette nach dem Frühstück. Bitte nicht selbst absetzen.",
+     "ar": "نعم، قرصًا كل صباح بعد الفطور. ولا توقفيه من نفسك من فضلك."
+    },
+    {
+     "r": "Patientin",
+     "de": "Und wenn mir schwindelig wird?",
+     "ar": "وماذا لو شعرت بالدوار؟"
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Dann setzen Sie sich sofort hin und klingeln Sie. Schwindel steht auch im Beipackzettel als mögliche Nebenwirkung.",
+     "ar": "اجلسي فورًا واضغطي الجرس. الدوار مذكور أيضًا في المنشور كأثر جانبي محتمل."
+    }
+   ]
+  },
+  {
+   "id": "pf-g7",
+   "titel": "Das Aufnahmegespräch — مقابلة الاستقبال",
+   "ar": "استقبال مريضة جديدة وأسئلة القبول",
+   "stufe": "B1",
+   "zeilen": [
+    {
+     "r": "Pflegekraft",
+     "de": "Willkommen auf unserer Station. Ich stelle Ihnen ein paar Fragen für die Aufnahme.",
+     "ar": "مرحبًا بك في قسمنا. سأطرح عليك بعض أسئلة الاستقبال."
+    },
+    {
+     "r": "Patientin",
+     "de": "Gern, fragen Sie nur.",
+     "ar": "بكل سرور، اسأل."
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Haben Sie Allergien, zum Beispiel gegen Medikamente?",
+     "ar": "هل عندك حساسيات، مثلًا من أدوية؟"
+    },
+    {
+     "r": "Patientin",
+     "de": "Ja, gegen Penicillin bekomme ich einen Ausschlag.",
+     "ar": "نعم، من البنسلين يصيبني طفح جلدي."
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Das trage ich sofort ein. Nehmen Sie regelmäßig Medikamente?",
+     "ar": "سأدوّن ذلك فورًا. هل تأخذين أدوية بانتظام؟"
+    },
+    {
+     "r": "Patientin",
+     "de": "Nur etwas gegen den Blutdruck, morgens.",
+     "ar": "فقط شيء ضد الضغط، صباحًا."
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Danke. Ihre Versichertenkarte kopiere ich gleich an der Rezeption.",
+     "ar": "شكرًا. سأصوّر بطاقة تأمينك عند الاستعلامات."
+    }
+   ]
+  },
+  {
+   "id": "pf-g8",
+   "titel": "Schmerzen einschätzen — تقييم الألم",
+   "ar": "سؤال منهجي عن الألم بمقياس 0–10",
+   "stufe": "B1",
+   "zeilen": [
+    {
+     "r": "Pflegekraft",
+     "de": "Wo genau tut es weh?",
+     "ar": "أين يؤلمك بالضبط؟"
+    },
+    {
+     "r": "Patient",
+     "de": "Hier im Bauch, auf der rechten Seite.",
+     "ar": "هنا في البطن، في الجهة اليمنى."
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Auf einer Skala von 0 bis 10 — wie stark ist der Schmerz?",
+     "ar": "على مقياس من 0 إلى 10 — كم شدة الألم؟"
+    },
+    {
+     "r": "Patient",
+     "de": "Vielleicht eine 7. Es zieht bis in den Rücken.",
+     "ar": "ربما 7. ويمتد إلى الظهر."
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Seit wann ist der Schmerz so stark?",
+     "ar": "منذ متى الألم بهذه الشدة؟"
+    },
+    {
+     "r": "Patient",
+     "de": "Seit heute Nacht, es wird immer schlimmer.",
+     "ar": "منذ الليلة، ويزداد سوءًا."
+    },
+    {
+     "r": "Pflegekraft",
+     "de": "Ich gebe Ihnen etwas gegen die Schmerzen und informiere den Arzt sofort.",
+     "ar": "سأعطيك شيئًا ضد الألم وأبلغ الطبيب فورًا."
+    }
+   ]
   }
  ],
  "dokumentation": [
@@ -604,6 +1527,42 @@
     "هل الإجراءات المتخذة (إبلاغ الطبيب) موثّقة؟",
     "هل نبرة المحضر وقائعية تمامًا بلا لوم؟"
    ]
+  },
+  {
+   "id": "pf-w4",
+   "titel": "Medikamentengabe dokumentieren",
+   "ar": "توثيق إعطاء دواء",
+   "aufgabeDe": "Dokumentieren Sie: 12:00 Uhr, Frau Kaya erhält eine Tablette gegen Schmerzen (vom Arzt verordnet). Wirkung nach 30 Minuten: Schmerz von 7 auf 3 gesunken.",
+   "muster": "12:00 Uhr: Schmerzmittel gemäß ärztlicher Anordnung verabreicht. 12:30 Uhr: Wirkungskontrolle — Schmerzangabe von 7/10 auf 3/10 gesunken. Patientin schläft ruhig. Verabreichung und Wirkung dokumentiert.",
+   "punkte": [
+    "هل نوع الدواء والتوقيت موجودان؟",
+    "هل فحص الأثر بعد الإعطاء موثّق بوقته؟",
+    "هل الأرقام على مقياس الألم واضحة؟"
+   ]
+  },
+  {
+   "id": "pf-w5",
+   "titel": "Beobachtung nach Schwindel",
+   "ar": "ملاحظة بعد دوخة",
+   "aufgabeDe": "Dokumentieren Sie: 15:10 Uhr, Herr Berger wurde beim Aufstehen schwindelig. Ins Bett begleitet, Blutdruck 105/65, nach 15 Minuten beschwerdefrei, Arzt informiert.",
+   "muster": "15:10 Uhr: Patient wurde beim Aufstehen schwindelig. Sofort ins Bett begleitet und gelagert. Vitalzeichen: RR 105/65 mmHg, Puls 78. Nach 15 Minuten beschwerdefrei. Diensthabender Arzt informiert. Weitere Beobachtung angeordnet.",
+   "punkte": [
+    "هل تسلسل الأحداث زمنيًا واضح؟",
+    "هل القيم المقاسة مدوّنة؟",
+    "هل إبلاغ الطبيب والملاحظة اللاحقة مذكوران؟"
+   ]
+  },
+  {
+   "id": "pf-w6",
+   "titel": "Entlassungsnotiz",
+   "ar": "ملاحظة خروج مريض",
+   "aufgabeDe": "Schreiben Sie eine kurze Entlassungsnotiz: Frau Yilmaz verlässt die Station heute um 11 Uhr, Arztbrief und Medikamente für drei Tage mitgegeben, Hausarzt-Termin vereinbart.",
+   "muster": "Entlassung: Patientin verlässt die Station heute um 11:00 Uhr in stabilem Allgemeinzustand. Arztbrief und Medikation für drei Tage mitgegeben. Kontrolltermin beim Hausarzt vereinbart. Keine offenen Fragen.",
+   "punkte": [
+    "هل الحالة العامة عند الخروج مذكورة؟",
+    "هل ما سُلّم للمريضة (تقرير/دواء) واضح؟",
+    "هل متابعة طبيب الأسرة موثّقة؟"
+   ]
   }
  ],
  "pruefung": [
@@ -628,5 +1587,148 @@
    "formatAr": "في العمل الحقيقي ستسمع تسليمات سريعة ومهاتفات مع الأطباء والأقسام — تدرّب على حوار التسليم أعلاه إصغاءً وإعادةً حتى تلتقط الأرقام والقيم دون ترجمة حرفية.",
    "uebungAr": "شغّل كل سطر صوتًا، كرّره، ثم أعد قول قيم الضغط والحرارة من ذاكرتك."
   }
- ]
+ ],
+ "medizinpruefung": {
+  "hinweisAr": "محاكاة تدريبية داخلية على أنواع بنود telc Medizin/Pflege — ليست امتحان telc رسميًا ولا تستخدم موادّه. الاستماع هنا بصوت متصفح آلي، وفي الامتحان الحقيقي تسجيلات أصلية.",
+  "lesen": [
+   {
+    "id": "pf-l1",
+    "titel": "Information: Besuchsregeln auf der Station",
+    "text": "Liebe Besucherinnen und Besucher, auf unserer Station gelten Besuchszeiten von 14 bis 19 Uhr. Bitte besuchen Sie Patientinnen und Patienten mit höchstens zwei Personen gleichzeitig. Aus hygienischen Gründen sind Blumen mit Erde im Krankenzimmer nicht erlaubt. Waschen oder desinfizieren Sie sich beim Betreten und Verlassen der Station die Hände. Kinder unter zwölf Jahren dürfen die Intensivstation nicht betreten. Vielen Dank für Ihr Verständnis!",
+    "fragen": [
+     {
+      "frage": "Wann darf man Patienten besuchen?",
+      "optionen": [
+       "Von 8 bis 12 Uhr",
+       "Von 14 bis 19 Uhr",
+       "Den ganzen Tag"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was ist im Krankenzimmer verboten?",
+      "optionen": [
+       "Obst",
+       "Blumen mit Erde",
+       "Bücher"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wer darf die Intensivstation nicht betreten?",
+      "optionen": [
+       "Kinder unter zwölf Jahren",
+       "Ältere Menschen",
+       "Ärzte"
+      ],
+      "richtig": 0
+     }
+    ]
+   },
+   {
+    "id": "pf-l2",
+    "titel": "Hinweis: Verhalten im Notfall",
+    "text": "Wenn ein Patient nicht reagiert und nicht normal atmet, lösen Sie sofort den Notruf aus und rufen Sie laut um Hilfe. Beginnen Sie ohne Verzögerung mit der Herzdruckmassage. Eine zweite Person holt den Defibrillator und den Notfallwagen. Setzen Sie die Wiederbelebung fort, bis das Notfallteam eintrifft. Dokumentieren Sie den Zeitpunkt des Ereignisses und alle Maßnahmen.",
+    "fragen": [
+     {
+      "frage": "Was tun Sie zuerst, wenn ein Patient nicht reagiert?",
+      "optionen": [
+       "Den Arztbrief schreiben",
+       "Den Notruf auslösen und Hilfe rufen",
+       "Die Familie anrufen"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was holt die zweite Person?",
+      "optionen": [
+       "Essen und Trinken",
+       "Defibrillator und Notfallwagen",
+       "Die Versichertenkarte"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was muss am Ende festgehalten werden?",
+      "optionen": [
+       "Die Besuchszeiten",
+       "Zeitpunkt und Maßnahmen",
+       "Die Zimmernummer des Arztes"
+      ],
+      "richtig": 1
+     }
+    ]
+   }
+  ],
+  "hoeren": [
+   {
+    "id": "pf-h1",
+    "titel": "Übergabe: kurze Nachricht",
+    "transkript": "Übergabe für Zimmer 9. Herr Berger hat in der Nacht zweimal geklingelt. Der Blutdruck war um 3 Uhr bei 105 zu 65. Er hat eine Tablette gegen die Schmerzen bekommen und danach gut geschlafen. Morgens um 7 Uhr ist eine Blutentnahme geplant, er muss nüchtern bleiben.",
+    "fragen": [
+     {
+      "frage": "Wie oft hat Herr Berger geklingelt?",
+      "optionen": [
+       "Einmal",
+       "Zweimal",
+       "Dreimal"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was ist um 7 Uhr geplant?",
+      "optionen": [
+       "Eine Operation",
+       "Eine Blutentnahme",
+       "Die Entlassung"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was muss Herr Berger beachten?",
+      "optionen": [
+       "Er muss nüchtern bleiben",
+       "Er muss viel essen",
+       "Er darf nicht schlafen"
+      ],
+      "richtig": 0
+     }
+    ]
+   },
+   {
+    "id": "pf-h2",
+    "titel": "Anruf: Laborwert",
+    "transkript": "Hallo, hier ist das Labor. Der Blutwert von Frau Kaya ist da. Der Entzündungswert ist leicht erhöht. Der Arzt möchte die Kontrolle morgen früh wiederholen. Bitte dokumentieren Sie den Anruf.",
+    "fragen": [
+     {
+      "frage": "Wer ruft an?",
+      "optionen": [
+       "Die Familie",
+       "Das Labor",
+       "Die Krankenkasse"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wie ist der Entzündungswert?",
+      "optionen": [
+       "Normal",
+       "Leicht erhöht",
+       "Sehr niedrig"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was soll morgen früh geschehen?",
+      "optionen": [
+       "Die Kontrolle wird wiederholt",
+       "Die Patientin wird entlassen",
+       "Die Operation beginnt"
+      ],
+      "richtig": 0
+     }
+    ]
+   }
+  ]
+ }
 }
