@@ -353,6 +353,18 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R197 — Fachsprache Pflege: eigenständiger Zusatz-Track — abgeschlossen ✅
+
+- Neue Bank `content/pflege.json` (Bankdateien 51→52, K257a dokumentiert erweitert):
+  40 Berufswörter (Artikel/Plural/Beispiel, A2→B2), 4 Arbeitsdialoge de+ar
+  (Visite, Übergabe, Beruhigung, Angehörige), 3 Dokumentations-Muster mit
+  Selbst-Checklisten, 3 telc-Medizin/Pflege-Formatkarten — ehrlich als
+  Trainings-Orientierung gekennzeichnet, nicht als offizielles Examen.
+- Station `components/pflege.tsx` in /ueben (Gruppe Fertigkeiten, K112a-Reihenfolge
+  dokumentiert um `pflege` erweitert, K137-Verkettung automatisch geprüft).
+  Browser-TTS als Stimme deklariert. Kein Eingriff in Plan/Ergebnisse (K290b).
+- **Nachweise**: tsc ✓ · smoke **1768/0** (K290a-b) · interaktiv **723/0** (XCIX1-3) · audit 0 · build ✓.
+
 ## R196 — Redesign Etappe 4: Praxis vor Theorie + Stations-Takt — abgeschlossen ✅
 
 - Grammatik-Lektion: nach der Entdeckung sofort «طبّق أولًا» (ExerciseSet unverändert);

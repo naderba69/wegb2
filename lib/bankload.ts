@@ -14,7 +14,7 @@ export const BANK_DATEIEN: string[] = [
   "eselsbruecken.json", "fehler.json", "grammar.json", "haerte.json", "hoeren-audio.json", "hoerneu.json",
   "kollokationen.json", "kollok-vertiefung.json", "leseleiter.json", "luecken.json", "mnemonik.json", "muendlich.json", "pakete.json", "redemittel.json",
   "sentences.json", "sprichwort-audio.json", "synonyme-kontext.json", "synonym-vertiefung.json", "szenarien.json",
-  "texts.json", "tiefenlex.json", "verben.json", "vertiefung.json", "vocab.json", "vortrag.json", "writing.json",
+  "pflege.json", "texts.json", "tiefenlex.json", "verben.json", "vertiefung.json", "vocab.json", "vortrag.json", "writing.json",
   "lang/a1-01-10.json", "lang/a1-11-20.json", "lang/a1-21-25.json", "lang/a1-26-30.json", "lang/a1-31-35.json",
   "lang/a2-01-10.json", "lang/a2-11-20.json", "lang/a2-21-26.json", "lang/a2-27-32.json",
   "lang/b1-01-10.json", "lang/b1-11-20.json", "lang/b1-21-25.json", "lang/b1-26-30.json", "lang/b1-31-35.json",

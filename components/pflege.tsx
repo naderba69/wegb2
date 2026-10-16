@@ -1,0 +1,144 @@
+"use client";
+import { useState } from "react";
+import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung } from "@/lib/pflege";
+import { speakAny } from "@/lib/speech";
+import { De } from "@/components/De";
+
+/**
+ * 🩺 محطة ألمانية التمريض (R197) — مسار Fachsprache إضافي اختياري:
+ * مفردات مهنية A2→B2، حوارات عمل حقيقية، نماذج توثيق، وتوجيه لصيغة telc Medizin/Pflege.
+ * لا يدخل في خطة الـ378 يومًا ولا في أيّ نتيجة — هدفه جسر B2 العام إلى مكان العمل.
+ * الصوت هنا نطق متصفح (speakAny) لا تسجيلات — ولا ندّعي غير ذلك.
+ */
+const THEMEN: Record<string, string> = {
+  koerper: "🧍 أعضاء الجسم",
+  symptome: "🤒 الأعراض",
+  versorgung: "💉 الرعاية والقياس",
+  doku: "🗂️ التوثيق والتسليم",
+};
+
+export function PflegeStation() {
+  const [stufe, setStufe] = useState<string>("alle");
+  const [dialogId, setDialogId] = useState<string>(pflegeDialoge[0]?.id ?? "");
+  const [offeneMuster, setOffeneMuster] = useState<Record<string, boolean>>({});
+  const dialog = pflegeDialoge.find((d) => d.id === dialogId) ?? pflegeDialoge[0];
+  const woerter = pflegeWoerter.filter((w) => stufe === "alle" || w.stufe === stufe);
+
+  return (
+    <div data-testid="pflege-station" style={{ display: "grid", gap: "1rem" }}>
+      <p style={{ fontSize: "0.86rem", color: "var(--color-ink2)", margin: 0 }}>
+        🩺 مسارٌ إضافي اختياري لمن هدفه العمل في الرعاية الصحية بألمانيا. لا يدخل في خطة الأيام ولا نتائجها —
+        وهو جسرٌ من B2 العام إلى لغة مكان العمل. صوت الحوارات نطقُ متصفّحٍ آلي، لا تسجيلات بشرية.
+      </p>
+
+      {/* ── المفردات المهنية ── */}
+      <section>
+        <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>📚 المفردات المهنية ({woerter.length})</h3>
+        <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }} role="group" aria-label="تصفية بالمستوى">
+          {["alle", "A2", "B1", "B2"].map((s) => (
+            <button key={s} type="button" className="chip" data-testid={`pflege-stufe-${s}`}
+              onClick={() => setStufe(s)}
+              style={{ cursor: "pointer", minHeight: "40px", fontWeight: 700, background: stufe === s ? "var(--color-cola)" : undefined, color: stufe === s ? "var(--ui-on-accent)" : undefined }}>
+              {s === "alle" ? "الكلّ" : s}
+            </button>
+          ))}
+        </div>
+        <div style={{ display: "grid", gap: "0.45rem" }}>
+          {woerter.map((w) => (
+            <article key={w.id} data-testid={`pflege-wort-${w.id}`} className="card" style={{ padding: "0.6rem 0.8rem" }}>
+              <div style={{ display: "flex", gap: "0.5rem", alignItems: "baseline", flexWrap: "wrap" }}>
+                <De style={{ fontWeight: 800 }}>{w.de}</De>
+                {w.plural && w.plural !== "—" && <span className="tiny muted">جمع: <De>{w.plural}</De></span>}
+                <span className="chip">{w.stufe}</span>
+                <span className="chip">{THEMEN[w.thema]}</span>
+                <span style={{ fontWeight: 700 }}>{w.ar}</span>
+              </div>
+              <div style={{ display: "flex", gap: "0.4rem", alignItems: "center", marginTop: "0.3rem", flexWrap: "wrap" }}>
+                <De style={{ fontSize: "0.88rem" }}>{w.bsp}</De>
+                <button type="button" className="chip" style={{ cursor: "pointer", minHeight: "36px" }} onClick={() => speakAny(w.bsp)} aria-label="استمع إلى جملة المثال">🔊</button>
+              </div>
+              <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{w.bspAr}</div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* ── حوارات العمل ── */}
+      <section>
+        <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>🗣️ حوارات من يوم العمل</h3>
+        <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
+          {pflegeDialoge.map((d) => (
+            <button key={d.id} type="button" className="chip" data-testid={`pflege-dialog-${d.id}`}
+              onClick={() => setDialogId(d.id)}
+              style={{ cursor: "pointer", minHeight: "40px", fontWeight: 700, background: dialog?.id === d.id ? "var(--color-cola)" : undefined, color: dialog?.id === d.id ? "var(--ui-on-accent)" : undefined }}>
+              {d.titel}
+            </button>
+          ))}
+        </div>
+        {dialog && (
+          <div className="card" style={{ padding: "0.8rem 1rem" }}>
+            <div style={{ fontWeight: 700, marginBottom: "0.2rem" }}>{dialog.ar} · مستوى {dialog.stufe}</div>
+            <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0 0 0.6rem" }}>
+              استمع لكلّ سطر، كرّره بصوت مرتفع، ثم تدرّب على دور الممرّض وحده — هكذا تُبنى طلاقة مكان العمل.
+            </p>
+            <div style={{ display: "grid", gap: "0.5rem" }}>
+              {dialog.zeilen.map((z, i) => (
+                <div key={i} data-testid="pflege-zeile" style={{ borderInlineStart: "3px solid var(--color-b1)", paddingInlineStart: "0.6rem" }}>
+                  <span className="chip" style={{ fontWeight: 800 }}>{z.r}</span>{" "}
+                  <De>{z.de}</De>{" "}
+                  <button type="button" className="chip" style={{ cursor: "pointer", minHeight: "36px" }} onClick={() => speakAny(z.de)} aria-label="استمع إلى السطر">🔊</button>
+                  <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{z.ar}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </section>
+
+      {/* ── التوثيق المهني ── */}
+      <section>
+        <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>✍️ التوثيق المهني — اكتب ثم قارن بالنموذج</h3>
+        <div style={{ display: "grid", gap: "0.6rem" }}>
+          {pflegeDoku.map((d) => (
+            <article key={d.id} className="card" style={{ padding: "0.7rem 0.9rem" }}>
+              <div style={{ fontWeight: 800 }}>{d.titel}</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>{d.ar}</div>
+              <De style={{ display: "block", margin: "0.4rem 0", fontSize: "0.9rem" }}>{d.aufgabeDe}</De>
+              <textarea className="field" rows={4} placeholder="اكتب تدوينك الألماني هنا…" aria-label={d.titel} style={{ width: "100%" }} />
+              <button type="button" className="btn btn-ghost" style={{ marginTop: "0.4rem", minHeight: "44px" }}
+                data-testid={`pflege-muster-${d.id}`}
+                onClick={() => setOffeneMuster((m) => ({ ...m, [d.id]: !m[d.id] }))}>
+                {offeneMuster[d.id] ? "🙈 أخفِ النموذج" : "👁 قارن بالنموذج وقائمة الفحص"}
+              </button>
+              {offeneMuster[d.id] && (
+                <div style={{ marginTop: "0.5rem" }}>
+                  <De style={{ display: "block", background: "var(--color-paper2)", padding: "0.6rem 0.8rem", borderRadius: "0.5rem", lineHeight: 1.9 }}>{d.muster}</De>
+                  <ul style={{ margin: "0.4rem 0 0", paddingInlineStart: "1.1rem", fontSize: "0.85rem" }}>
+                    {d.punkte.map((p) => <li key={p}>{p}</li>)}
+                  </ul>
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* ── صيغة الامتحان المهني ── */}
+      <section>
+        <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>🎯 نحو امتحان telc Medizin/Pflege — توجيه تدريبي</h3>
+        <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0 0 0.5rem" }}>
+          هذه بطاقات توجيه على صيغة الامتحان المهني كما تنشرها telc — تدريبٌ عليها، وليست امتحانًا رسميًا ولا بديلًا عن نماذج telc الأصلية قبل التقديم.
+        </p>
+        <div style={{ display: "grid", gap: "0.5rem" }}>
+          {pflegePruefung.map((p) => (
+            <article key={p.id} className="card" style={{ padding: "0.7rem 0.9rem" }}>
+              <div style={{ fontWeight: 800 }}><De>{p.titel}</De> · {p.ar}</div>
+              <p style={{ fontSize: "0.86rem", margin: "0.3rem 0" }}>{p.formatAr}</p>
+              <p style={{ fontSize: "0.84rem", color: "var(--color-ink2)", margin: 0 }}>🏃 {p.uebungAr}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}

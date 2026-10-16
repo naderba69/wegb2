@@ -2024,8 +2024,8 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,schatten,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197: امتداد بنيوي موثّق داخل مجموعة المهارات) ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
     const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
@@ -12510,8 +12510,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 51 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
-    "K257a bankload جاهزٌ في Node: 51 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 52 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
+    "K257a bankload جاهزٌ في Node: 52 ملفَّ بنكٍ تُقرأ من content/ مباشرةً (52 منذ R197: بنك التمريض pflege.json امتداد بنيوي موثّق) — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;
@@ -13309,6 +13309,30 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const kzSrc3 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
   ok(kzSrc3.includes('data-testid="sitzung-station"') && kzSrc3.includes("stationOfTask") && kzSrc3.includes("محطاتٍ قصيرة"),
     "K289 المشغّل يعرض محطة المهمة الحالية وتقدّمها — اليوم ست محطات قصيرة لا كتلة واحدة");
+}
+
+// ===== K290 (R197 · Fachsprache Pflege): eigenständige Zusatzbank + Station —
+// 40 Berufswörter mit Artikel/Plural/Beispiel, 4 Arbeitsdialoge mit de+ar je
+// Zeile, 3 Dokumentations-Muster, telc-Medizin-Orientierung ehrlich als
+// Training gekennzeichnet; der 378-Tage-Rumpf bleibt unberührt. =====
+{
+  const pf = JSON.parse(readFileSync("content/pflege.json", "utf8")) as {
+    wortschatz: { id: string; de: string; ar: string; bsp: string; stufe: string }[];
+    dialoge: { id: string; zeilen: { de: string; ar: string }[] }[];
+    dokumentation: { id: string; muster: string; punkte: string[] }[];
+    pruefung: { id: string }[];
+  };
+  const pfSrc = readFileSync("components/pflege.tsx", "utf8");
+  const planSrc2 = readFileSync("lib/plan.ts", "utf8");
+  ok(pf.wortschatz.length === 40 && pf.wortschatz.every((w) => w.de && w.ar && w.bsp) &&
+     new Set(pf.wortschatz.map((w) => w.id)).size === 40 &&
+     pf.dialoge.length === 4 && pf.dialoge.every((d) => d.zeilen.length >= 6 && d.zeilen.every((z) => z.de && z.ar)) &&
+     pf.dokumentation.length === 3 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
+     pf.pruefung.length === 3,
+    "K290a بنك التمريض مكتمل البنية: 40 كلمة بمثال، 4 حوارات ثنائية اللغة، 3 نماذج توثيق بقوائم فحص، 3 بطاقات صيغة");
+  ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("ليست امتحانًا رسميًا") &&
+     !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
+    "K290b المحطة مركّبة في /ueben كإضافة اختيارية، والخطة ذات الـ378 يومًا لا تعرف عنها شيئًا — الجسر لا يهزّ العمود الفقري");
 }
 
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den

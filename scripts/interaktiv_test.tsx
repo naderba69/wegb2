@@ -3380,6 +3380,21 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!theo && (theo.textContent ?? "").length > 100, "XCVIII2 النظرية لم تُحذف — نصّها كامل داخل العنصر المطويّ");
   }
 
+  /* ═══ XCIX — محطة التمريض (R197): مفردات وحوارات ونموذج توثيق ═══ */
+  {
+    const { PflegeStation } = await import("../components/pflege");
+    const { pflegeWoerter, pflegeDialoge } = await import("../lib/pflege");
+    mount(React.createElement(PflegeStation));
+    ok(pflegeWoerter.length === 40 && !!rootEl.querySelector('[data-testid="pflege-station"]') &&
+       !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]'),
+      "XCIX1 محطة التمريض تعرض بنكها المهني (40 كلمة) منذ أول تركيب");
+    ok(rootEl.querySelectorAll('[data-testid="pflege-zeile"]').length === (pflegeDialoge[0]?.zeilen.length ?? 0),
+      "XCIX2 حوار الجولة الطبية معروض بكل سطوره ثنائية اللغة");
+    const musterBtn = rootEl.querySelector('[data-testid="pflege-muster-pf-w1"]') as HTMLElement | null;
+    if (musterBtn) click(musterBtn);
+    ok(txt().includes("Vitalzeichen kontrolliert"), "XCIX3 نموذج التوثيق يُكشف عند الطلب مع قائمة فحصه");
+  }
+
   /* ═══ XCVI — وصولية U5 تحت الإصبع: لغة الألماني معلنة وتخطٍّ وتركيز ═══ */
   {
     const { De, DeBlock } = await import("../components/De");
