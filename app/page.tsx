@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useProgress, saveProgress, loadProgress, planeVerifikation } from "@/lib/store";
 import { buildDay, dayScore, debtsFrom, modulOf } from "@/lib/plan";
+import { kapselVerbuche } from "@/lib/kapsel";
 import { TOTAL_DAYS } from "@/lib/types";
 import { useSessionClock } from "@/hooks/use-session-clock";
 import { sessionGoalReached, sessionMinuteTenth } from "@/lib/session-clock";
@@ -489,6 +490,7 @@ export default function Today() {
           resultOf={resultOf}
           localOf={localOf}
           onPoints={onPoints}
+          onKapselErgebnis={(sid, ok) => update((pr) => ({ ...pr, kapselStand: kapselVerbuche(pr.kapselStand, sid, day, ok) }))}
           submitCurrent={submitCurrent}
           doCloseDay={doCloseDay}
           badDayToday={badDayToday}

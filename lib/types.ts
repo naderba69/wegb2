@@ -431,6 +431,9 @@ export interface Progress {
   sprechUebungen?: { datum: string; level: string; teil: number; karteId: string; dauerS: number; punkte: number }[];
   /** 🪜 تقدّم سلّم القراءة (C1): النص ← أفضل نتيجة (صحيحة/كلية) — المحطة التالية تُفتح بإتمام السابقة */
   leseleiter?: Record<string, { r: number; g: number }>;
+  /** 🌙 سجلّ فواصل الكبسولة المتكيفة (M1/R181): الجملة ← درجة السلّم (0..4 على 1/3/7/30/90 يومًا) وآخر يوم تدرّب وعدد الأخطاء.
+   *  الخطأ يعيد الجملة غدًا، والصواب يُبعدها درجةً — ولا جملة تختفي أبدًا (الدرجة القصوى تُستدعى بعد 90 يومًا). */
+  kapselStand?: Record<string, { s: number; t: number; f: number }>;
   /** نتائج امتحانات المراحل: اليوم ← الدرجة المئوية ونجاح */
   exams?: Record<number, { score: number; passed: boolean }>;
   /** 🎯 طابور تحقق الاستقلال: الدرس ← يوم الاستحقاق (التدريب+3) ونتيجة التحقق.

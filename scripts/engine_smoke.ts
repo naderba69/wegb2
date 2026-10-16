@@ -93,7 +93,7 @@ import {
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, MIN_BEISPIELE, stufenAbstand } from "../lib/induktion";
 import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stilProfil } from "../lib/stil";
 import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE, KATEGORIE_AR } from "../lib/signalwoerter";
-import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE } from "../lib/kapsel";
+import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, kapselVerbuche, kapselFaellig, kapselIdsAdaptiv, kapselQuizAdaptiv, kapselQuiz, satzIdAusUebung } from "../lib/kapsel";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
@@ -12952,6 +12952,42 @@ function collectR262(dir: string, out: string[] = []): string[] {
      tlSrc.includes('"kv"') && tlSrc.includes('"sv"') && tlSrc.includes("Kollokationen B2") &&
      tlSrc.includes("logK") && tlSrc.includes("addFehlerNow"),
     "K273c العمقان الجديدان موصولان في TiefenLexikon كتدريب استرجاع بالسجلّ والأخطاء نفسه (Wortschatz) — لا جزيرة جديدة");
+}
+
+// ===== K274 (R181 · M1): Leistungsbasierte Kapsel-Intervalle 1/3/7/30/90. Fehler kommt
+// morgen wieder, Treffer steigt eine Stufe, nichts verschwindet (Stufe 4 wird nach
+// 90 Tagen erneut faellig). Leerer Fortschritt = exakt die bisherige 1/7/30-Kapsel. =====
+{
+  const echtA = kapselIds(50)[0], echtB = kapselIds(50)[1];
+  let st = kapselVerbuche(undefined, echtA, 10, false);
+  const nachFehler = st[echtA].s === 0 && st[echtA].f === 1 && kapselFaellig(st, 11).includes(echtA) && !kapselFaellig(st, 10).includes(echtA);
+  st = kapselVerbuche(st, echtA, 11, true);
+  const nachTreffer = st[echtA].s === 1 && !kapselFaellig(st, 13).includes(echtA) && kapselFaellig(st, 14).includes(echtA);
+  let stMax = kapselVerbuche(undefined, echtB, 1, true);
+  for (let i = 0; i < 6; i++) stMax = kapselVerbuche(stMax, echtB, 2 + i, true);
+  const nieVerschwindet = stMax[echtB].s === KAPSEL_LEITER.length - 1 && !kapselFaellig(stMax, 96).includes(echtB) && kapselFaellig(stMax, 97).includes(echtB);
+  ok(nachFehler && nachTreffer && nieVerschwindet && KAPSEL_LEITER.join() === "1,3,7,30,90",
+    "K274a سلّم الأداء: الخطأ يعود غدًا، والصواب يصعد 1←3←7←30←90، وفي القمّة تُستدعى بعد 90 يومًا — لا اختفاء");
+  let gleich = true;
+  for (let d = 2; d <= TOTAL_DAYS; d++) {
+    if (kapselIdsAdaptiv(emptyProgress, d).join() !== kapselIds(d).join()) { gleich = false; break; }
+  }
+  const quizGleich = [2, 50, 200, 377].every((d) => kapselQuizAdaptiv(emptyProgress, d).map((q) => q.id).join() === kapselQuiz(d).map((q) => q.id).join());
+  ok(gleich && quizGleich, "K274b بتقدّمٍ فارغٍ تُطابق الكبسولة المتكيفة كبسولةَ 1/7/30 وتمارينها في الأيام 2..378 حرفيًا");
+  const zielSatz = kapselIds(50)[0];
+  const fixture = { ...emptyProgress, kapselStand: { [zielSatz]: { s: 0, t: 49, f: 2 } } } as typeof emptyProgress;
+  const adaptiv = kapselIdsAdaptiv(fixture, 50);
+  const imPlan = buildDay(50, fixture).tasks.some((t) => (t.sentenceIds ?? []).includes(zielSatz));
+  ok(adaptiv[0] === zielSatz && adaptiv.length === 3 && imPlan && satzIdAusUebung(`q50-k-0-${zielSatz}-cz0`) === zielSatz && satzIdAusUebung(`${zielSatz}-tr2`) === zielSatz,
+    "K274c الجملة المُخطأ فيها أمس تعود أوّلًا في كبسولة اليوم وفي مهمّة الاسترجاع، واستخراج المعرّف من التمارين سليم");
+  const plSrc3 = readFileSync("lib/plan.ts", "utf8");
+  const exSrc = readFileSync("components/exercises.tsx", "utf8");
+  const tkSrc = readFileSync("components/tasks.tsx", "utf8");
+  const pgSrc = readFileSync("app/page.tsx", "utf8");
+  const kpSrc = readFileSync("components/kapsel.tsx", "utf8");
+  ok(plSrc3.includes("kapselQuizAdaptiv(progress, day)") && exSrc.includes("onErgebnis") && tkSrc.includes("onKapselErgebnis") &&
+     tkSrc.includes("satzIdAusUebung") && pgSrc.includes("kapselVerbuche") && kpSrc.includes("1←3←7←30←90"),
+    "K274d السلسلة كاملة: الخطة تبني بالمتكيف، والتمارين تُبلغ النتيجة، والمهام تستخرج الجملة، والرئيسية تحجز الفاصل، والكبسولة تشرحه للمتعلم");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

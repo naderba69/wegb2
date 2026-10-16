@@ -21,6 +21,8 @@ export interface ExerciseProgress {
 interface Props {
   items: Exercise[];
   onPoints?: (points: number, max: number) => void;
+  /** نتيجة كلّ تمرين عند احتسابه أوّل مرّة (M1: حجز فواصل الكبسولة المتكيفة). */
+  onErgebnis?: (ex: Exercise, ok: boolean) => void;
   /** حفظ اختياري لحالة المحاولة عند مغادرة الخطوة والعودة إليها. */
   storageKey?: string;
   /** تقرير التقدّم الفعلي، لا مجرد النقر على زرّ. */
@@ -51,7 +53,7 @@ function exerciseStateKey(ex: Exercise, index: number): string {
 }
 
 /** عارض التمارين — تصحيح فوري عبر Grader (قابل للاستبدال بـ LLM) */
-export default function ExerciseSet({ items, onPoints, storageKey, onProgress }: Props) {
+export default function ExerciseSet({ items, onPoints, storageKey, onProgress, onErgebnis }: Props) {
   const [states, setStates] = useState<Record<string, ItemState>>({});
   const [storageReady, setStorageReady] = useState(!storageKey);
 
@@ -116,6 +118,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
         sicher: st?.sicher,
       });
       if (!gezaehlt) onPoints?.(halb ? Math.round(res.maxPoints / 2) : res.points, res.maxPoints);
+      if (!gezaehlt) onErgebnis?.(ex, !halb);
       if (!gezaehlt && ex.type === "mc" && st?.sicher !== undefined) logSicherheitNow({ t: new Date().toISOString(), id: stateId, sicher: st.sicher, correct: !halb });
       return;
     }
@@ -132,6 +135,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
     // ❌ الكشف النهائي: Diff + ثقة + فحص المدرّس + دفتر الأخطاء
     setState(stateId, { response, checked: true, correct: false, versuche, gezaehlt: true, feedback: res.feedbackAr, sicher: st?.sicher });
     if (!gezaehlt) onPoints?.(0, res.maxPoints);
+    if (!gezaehlt) onErgebnis?.(ex, false);
     const ueberkonfident = ex.type === "mc" && st?.sicher === true;
     if (!gezaehlt && ex.type === "mc" && st?.sicher !== undefined) logSicherheitNow({ t: new Date().toISOString(), id: stateId, sicher: st.sicher, correct: false });
     const given = givenOf({ response, checked: true, correct: false, versuche, gezaehlt: true });

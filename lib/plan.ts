@@ -31,7 +31,7 @@ import {
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
 import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B2_DECKEL_MIN } from "./phasen";
-import { kapselIds, kapselIdsAbend, kapselQuiz } from "./kapsel";
+import { kapselIds, kapselIdsAbend, kapselQuiz, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
 import { baueKompositaWoche } from "./komposita-aufgabe";
@@ -702,8 +702,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         // ولو زادَ عددُ الحزمِ على خاناتِ درسِ المفرداتِ الأسبوعية
         deckId: phaseDecks[(day - 1) % Math.max(phaseDecks.length, 1)],
         // 🌙 حلقة الكبسولة: مزيج التباعد المكاني 1/7/30 يومًا (lib/kapsel.ts)
-        sentenceIds: kapselIds(day),
-        quiz: kapselQuiz(day),
+        sentenceIds: kapselIdsAdaptiv(progress, day),
+        quiz: kapselQuizAdaptiv(progress, day),
       });
     }
 
@@ -955,8 +955,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleDe: lightReview ? "Leichte Wiederholung" : "Wochen-Wiederholung",
       titleAr: lightReview ? "مراجعة خفيفة (خريطة ذهنية)" : "مراجعة الأسبوع كاملاً (كبسولة متباعدة)",
       minutes: lightReview ? 15 : 30,
-      sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة 1/7/30
-      quiz: [...kapselQuiz(day), ...(lightReview ? [] : buildQuiz(day - 2, phase, 5, progress, "wdfest"))],
+      sentenceIds: kapselIdsAdaptiv(progress, day), // 🌙 كبسولة متباعدة 1/7/30
+      quiz: [...kapselQuizAdaptiv(progress, day), ...(lightReview ? [] : buildQuiz(day - 2, phase, 5, progress, "wdfest"))],
     });
     if (lightReview) {
       // في اليوم الخفيف: خريطة ذهنية للمفردات بدل الكتابة
@@ -1171,8 +1171,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleDe: "Ich-kann & Ausblick",
       titleAr: "أستطيع أن… + كبسولة متباعدة للأسبوع القادم",
       minutes: 15,
-      sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة
-      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 4, progress, "wk").slice(0, 4)],
+      sentenceIds: kapselIdsAdaptiv(progress, day), // 🌙 كبسولة متباعدة
+      quiz: [...kapselQuizAdaptiv(progress, day), ...buildQuiz(day - 2, phase, 4, progress, "wk").slice(0, 4)],
     });
   } else {
     // أيام الختام 375-378 — تستخدم الكبسولة المتباعدة لآخر البنك
@@ -1304,8 +1304,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Bilanz & Ausblick",
           titleAr: "الحصيلة وخطة ما بعد B2",
           minutes: 10,
-          sentenceIds: kapselIds(day),
-          quiz: [...kapselQuiz(day), ...buildQuiz(378, "Abschluss", 5, progress, "wk2").slice(0, 5)],
+          sentenceIds: kapselIdsAdaptiv(progress, day),
+          quiz: [...kapselQuizAdaptiv(progress, day), ...buildQuiz(378, "Abschluss", 5, progress, "wk2").slice(0, 5)],
         },
       ],
     };

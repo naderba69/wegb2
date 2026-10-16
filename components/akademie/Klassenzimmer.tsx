@@ -29,6 +29,8 @@ interface KlassenzimmerProps {
   resultOf: (id: string) => TaskResult | undefined;
   localOf: (id: string) => { score: number; total: number };
   onPoints: (p: number, m: number) => void;
+  /** نتيجة استرجاع كبسولة (M1) تُحجز في فواصل المتعلم. */
+  onKapselErgebnis?: (satzId: string, ok: boolean) => void;
   submitCurrent: () => void;
   doCloseDay: () => void;
   badDayToday?: () => void;
@@ -75,6 +77,7 @@ export function Klassenzimmer({
   resultOf,
   localOf,
   onPoints,
+  onKapselErgebnis,
   submitCurrent,
   doCloseDay,
   badDayToday,
@@ -332,6 +335,7 @@ export function Klassenzimmer({
               rate={rate}
               tempo={progress.settings.tempo}
               persistKey={`wegb2:partial:${currentTask.id}`}
+              onKapselErgebnis={onKapselErgebnis}
             />
 
             <div className="dirb-actions">

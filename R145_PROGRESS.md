@@ -341,6 +341,21 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R181 — M1 Leistungsbasierte Kapsel-Intervalle (1/3/7/30/90) — abgeschlossen ✅
+
+- **Motor** (`lib/kapsel.ts`): `KAPSEL_LEITER = [1, 3, 7, 30, 90]`, `kapselVerbuche` (Treffer aus
+  erstem Versuch → Stufe +1, Treffer erst nach Wiederholung → Neustart, Fehler → Stufe 0),
+  `kapselFaellig` (überfälligste zuerst, Fehlerzahl als Tiebreak, deterministisch),
+  `kapselIdsAdaptiv`/`kapselQuizAdaptiv` (Fällige zuerst, max. 2 der 3 Plätze; die 1/7/30-Planung
+  füllt auf, der Abend→Morgen-Platz bleibt immer erhalten). Neuer Stand: `Progress.kapselStand`.
+- **Rückfluss**: `ExerciseSet.onErgebnis` meldet das Zählergebnis jeder Übung;
+  `WiederholenTask` extrahiert per `satzIdAusUebung` die Satz-ID und meldet nur Kapselsätze;
+  die Startseite verbucht in `kapselStand` (Kette per K274d quellengeprüft).
+- **Invarianz**: Bei leerem Fortschritt ist die adaptive Kapsel für alle 378 Tage exakt die alte
+  (K274b, ID- und Quiz-ID-gleich) — alle Bestandsgates unverändert grün. Die Abendkapsel erklärt
+  dem Lernenden den Mechanismus ehrlich («لا جملة تختفي نهائيًا»).
+- **Nachweise**: tsc ✓ · smoke **1732/0** (K274a–d neu) · interaktiv 709/0 · audit 0 · build ✓.
+
 ## R180 — C6 B2-Kollokations-/Synonym-Vertiefung im TiefenLexikon — abgeschlossen ✅
 
 - **Bänke**: `kollok-vertiefung.json` (31 B2-Kollokationen mit Kontextsatz, Lücke, einzig richtigem

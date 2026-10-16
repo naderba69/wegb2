@@ -105,7 +105,10 @@ export function kapselAusTag(day: number): boolean {
  * بهذا لا يتلقّى المتعلّم نفس سؤال الأمس بنفس الصيغة — يتلقّى الاسترجاع من زوايا مختلفة.
  */
 export function kapselQuiz(day: number): Exercise[] {
-  const ids = kapselIds(day);
+  return kapselQuizFuerIds(day, kapselIds(day));
+}
+
+function kapselQuizFuerIds(day: number, ids: string[]): Exercise[] {
   const { rng, clozeFromSatz, translateFromSatz } = require("./plan") as typeof import("./plan");
   const rand = rng(day * 211 + 17);
   const out: Exercise[] = [];
@@ -117,4 +120,56 @@ export function kapselQuiz(day: number): Exercise[] {
     out.push({ ...base, id: `q${day}-k-${i}-${base.id}` });
   });
   return out;
+}
+
+/* ─── M1 (R181): فواصل متكيفة بالأداء — 1/3/7/30/90 ───────────────────────────
+   كلّ جملة تدرّبها تُحجز في kapselStand. الصواب يرفعها درجةً (1←3←7←30←90)،
+   والخطأ يعيدها إلى درجة الصفر (تعود غدًا). لا جملة تُحذف: في القمّة تُستدعى
+   بعد 90 يومًا من جديد. الاختيار التكيفي يقدّم المستحقّ (بحدّ فتحتين) ثم يملأ
+   من كبسولة الجدولة — وفتحةٌ واحدةٌ على الأقلّ تبقى دائمًا لجملِ مساءِ أمس. */
+
+export const KAPSEL_LEITER = [1, 3, 7, 30, 90] as const;
+export interface KapselStandEintrag { s: number; t: number; f: number }
+type StandMap = Record<string, KapselStandEintrag>;
+
+/** يحجز نتيجة تدرّب جملة: صوابٌ = درجة أعلى، خطأ = عودة الغد؛ يُرجع خريطة جديدة (لا يعدّل الأصل). */
+export function kapselVerbuche(stand: StandMap | undefined, id: string, day: number, ok: boolean): StandMap {
+  const alt = stand?.[id];
+  const s = ok ? Math.min((alt?.s ?? 0) + 1, KAPSEL_LEITER.length - 1) : 0;
+  return { ...(stand ?? {}), [id]: { s, t: day, f: (alt?.f ?? 0) + (ok ? 0 : 1) } };
+}
+
+/** الجمل المستحقّة اليوم: مرّ على آخر تدرّبٍ لها فاصلُ درجتها — الأقدم استحقاقًا أولًا، ثم الأكثر خطأً. */
+export function kapselFaellig(stand: StandMap | undefined, day: number, limit = 3): string[] {
+  if (!stand) return [];
+  return Object.entries(stand)
+    .map(([id, e]) => ({ id, ueber: day - e.t - KAPSEL_LEITER[Math.min(Math.max(e.s, 0), KAPSEL_LEITER.length - 1)], f: e.f }))
+    .filter((x) => x.ueber >= 0 && getSatz(x.id))
+    .sort((a, b) => b.ueber - a.ueber || b.f - a.f || (a.id < b.id ? -1 : 1))
+    .slice(0, Math.max(0, limit))
+    .map((x) => x.id);
+}
+
+type MitStand = { kapselStand?: StandMap };
+
+/** كبسولة الصباح التكيفية: مستحقّات الأداء أولًا (بحدّ فتحتين)، ثم جمل الجدولة 1/7/30.
+ *  بتقدّمٍ فارغٍ تُطابق kapselIds حرفيًا (حتمية البوابات). */
+export function kapselIdsAdaptiv(progress: MitStand, day: number): string[] {
+  const faellig = kapselFaellig(progress?.kapselStand, day, KAPSEL_GROESSE - 1);
+  const out = [...faellig];
+  for (const id of kapselIds(day)) {
+    if (out.length >= KAPSEL_GROESSE) break;
+    if (!out.includes(id)) out.push(id);
+  }
+  return out;
+}
+
+export function kapselQuizAdaptiv(progress: MitStand, day: number): Exercise[] {
+  return kapselQuizFuerIds(day, kapselIdsAdaptiv(progress, day));
+}
+
+/** يستخرج معرّف الجملة من معرّف تمرين استرجاع (q<tag>-k-<i>-<satz>-cz/tr<n> أو <satz>-tr<n>). */
+export function satzIdAusUebung(uebungId: string): string | null {
+  const m = uebungId.match(/^q\d+-k-\d+-(.+)-(?:cz|tr)\d+$/) ?? uebungId.match(/^(.+)-tr\d+$/);
+  return m ? m[1] : null;
 }

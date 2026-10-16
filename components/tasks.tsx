@@ -12,6 +12,7 @@ import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices
 import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
 import { buildBrueckeItems } from "@/lib/bruecken";
 import ExerciseSet from "./exercises";
+import { satzIdAusUebung } from "@/lib/kapsel";
 import { FehlerFinden, RollenDialog, SchreibBerater, Pruefung } from "./lehrer";
 import { FehlerFallen, Fehlerheft } from "./fehler-ui";
 import { De } from "./De";
@@ -65,6 +66,8 @@ interface TaskProps {
   srs: Record<string, SrsState>;
   onSrs: (cardId: string, state: SrsState) => void;
   onPoints: (points: number, max: number) => void;
+  /** نتيجة استرجاع جملة كبسولة (M1): تُحجز في فواصل المتعلم المتكيفة. */
+  onKapselErgebnis?: (satzId: string, ok: boolean) => void;
   voiceName?: string;
   rate?: number;
   tempo?: Tempo;
@@ -73,7 +76,7 @@ interface TaskProps {
 }
 
 /** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
-export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey }: TaskProps) {
+export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis }: TaskProps) {
   // تسميع الإملاء: مستمع عام يعمل في كل المهام
   useEffect(() => {
     const onSpeak = (e: Event) => {
@@ -110,7 +113,7 @@ export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceN
       ) : task.fehlerItems?.length ? (
         <FehlerFallen items={task.fehlerItems} onPoints={onPoints} />
       ) : (
-        <WiederholenTask task={task} day={day} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />
+        <WiederholenTask task={task} day={day} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} onKapselErgebnis={onKapselErgebnis} />
       );
     case "check":
       return task.exam ? (
@@ -1180,6 +1183,7 @@ function WiederholenTask({
   voiceName,
   rate,
   persistKey,
+  onKapselErgebnis,
 }: Omit<TaskProps, "lang">) {
   const level = levelOf(Math.max(day - 1, 1));
   const isPhaseEnd = istPhasenPruefung(day); // أيام نهاية المرحلة: تقرير كامل
@@ -1214,13 +1218,13 @@ function WiederholenTask({
       {satzItems.length > 0 && (
         <>
           <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>ترجم واسترجع</h4>
-          <ExerciseSet items={satzItems} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:sentences` : undefined} />
+          <ExerciseSet items={satzItems} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:sentences` : undefined} onErgebnis={(ex, ok) => { const sid = satzIdAusUebung(ex.id); if (sid && (task.sentenceIds ?? []).includes(sid)) onKapselErgebnis?.(sid, ok); }} />
         </>
       )}
       {task.quiz && task.quiz.length > 0 && (
         <>
           <h4 style={{ fontWeight: 800, margin: "1rem 0 0.5rem" }}>استرجاع سريع من أيام سابقة</h4>
-          <ExerciseSet items={task.quiz} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} />
+          <ExerciseSet items={task.quiz} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} onErgebnis={(ex, ok) => { const sid = satzIdAusUebung(ex.id); if (sid && (task.sentenceIds ?? []).includes(sid)) onKapselErgebnis?.(sid, ok); }} />
         </>
       )}
       {(task.sentenceIds ?? []).length === 0 && !task.quiz?.length && (
