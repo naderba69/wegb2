@@ -421,6 +421,8 @@ export interface Progress {
     examDate?: string;
     examName?: string;
   };
+  /** 🎓 نتائج محاكاة الامتحان (E1/R171): أحدث 30 محاولة بنقاط الوحدات الأربع وحكمها — محاكاة لا نتيجة رسمية */
+  simulationen?: { datum: string; seed: number; punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number }; bestanden: boolean }[];
   /** نتائج امتحانات المراحل: اليوم ← الدرجة المئوية ونجاح */
   exams?: Record<number, { score: number; passed: boolean }>;
   /** 🎯 طابور تحقق الاستقلال: الدرس ← يوم الاستحقاق (التدريب+3) ونتيجة التحقق.

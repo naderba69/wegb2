@@ -50,6 +50,7 @@ import {
   FEHLER_KAT,
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER } from "../lib/grader";
+import { SIM_FORM, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte } from "../lib/simulation";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
@@ -61,7 +62,7 @@ import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/s
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
 import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf } from "../lib/content";
-import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi } from "../lib/content";
+import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi, dialogAudioSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
 import { bauHoerRunde, darfSpielen, fragenFrei, werteItem, werteRunde, hoerNote, RATE } from "../lib/hoeren";
 import { buildSkillKlausur, SKILL_LABELS, type SkillKey } from "../lib/klausur";
@@ -12635,6 +12636,44 @@ function collectR262(dir: string, out: string[] = []): string[] {
     else if (/\.tsx?$/.test(r)) out.push(r);
   }
   return out;
+}
+
+/* ═══ K263 · R171 (E1): محرّك محاكاة Goethe B2 — حتمية وبنية وصيغة وحكم ═══ */
+{
+  const p1 = baueSimulation(42), p2 = baueSimulation(42);
+  const signatur = (p: typeof p1) => JSON.stringify([p.lesen, p.hoeren, p.schreiben, p.sprechen]);
+  const nLesen = p1.lesen.reduce((a, g) => a + g.fragen.length, 0);
+  const nHoeren = p1.hoeren.reduce((a, g) => a + g.fragen.length, 0);
+  const alleTexteB2 = p1.lesen.every((g) => texts.find((t) => t.id === g.textId)?.level === "B2" && g.fragen.every((fi) => !!texts.find((t) => t.id === g.textId)?.questions[fi]));
+  const alleDialogeB2 = p1.hoeren.every((g) => dialogues.find((d) => d.id === g.dialogId)?.level === "B2" && g.fragen.every((fi) => !!dialogues.find((d) => d.id === g.dialogId)?.questions[fi] && dialogAudioSrc(g.dialogId)));
+  ok(signatur(p1) === signatur(p2) && nLesen === SIM_FORM.lesenZiel && nHoeren === SIM_FORM.hoerenZiel && alleTexteB2 && alleDialogeB2,
+    `K263a توليدٌ حتميّ بالبذرة: ${nLesen} بندَ قراءة و${nHoeren} بندَ استماع، كلُّها من بنوك B2 وبأصواتٍ موجودة`);
+  const w1 = writingTasks.find((w) => w.id === p1.schreiben.teil1), w2 = writingTasks.find((w) => w.id === p1.schreiben.teil2);
+  const vortrag = muendlich.find((k) => k.id === p1.sprechen.vortragId), disk = muendlich.find((k) => k.id === p1.sprechen.diskussionId);
+  ok(!!w1 && !!w2 && w1.id !== w2.id && w1.level === "B2" && w2.level === "B2" &&
+     vortrag?.level === "B2" && vortrag?.teil === 2 && disk?.level === "B2" && disk?.teil === 3,
+    "K263b الكتابة مهمّتان مختلفتان من B2، والتحدّث عرضُ Teil 2 ونقاشُ Teil 3 من B2");
+  ok(SIM_FORM.lesenMinuten === 65 && SIM_FORM.hoerenMinuten === 40 && SIM_FORM.schreibenMinuten === 75 &&
+     SIM_FORM.sprechenVorbereitungMinuten === 15 && SIM_FORM.passPunkte === 60 &&
+     simulationBestanden({ lesen: 60, hoeren: 60, schreiben: 60, sprechen: 60 }) &&
+     !simulationBestanden({ lesen: 100, hoeren: 100, schreiben: 100, sprechen: 59 }) &&
+     rubrikPunkte([0, 0, 0, 0]) === 100 && schreibenZuKurz(74, 150) && !schreibenZuKurz(75, 150) &&
+     schreibenPunkte(100, true, false) === 59 && punkteAusAnteil(0.6) === 60 && modulBestanden(60) && !modulBestanden(59),
+    "K263c الصيغة الرسمية والحكم: أزمنة Goethe (65/40/75+15) وعتبة 60، ولا تعويض بين الوحدات، وقاعدة نصف الطول تسقف الكتابة");
+  let richtig = 0, falschOk = true;
+  for (const g of p1.lesen) {
+    const t = texts.find((x) => x.id === g.textId)!;
+    for (const fi of g.fragen) {
+      const q = t.questions[fi] as unknown as { answer?: unknown };
+      const korrekt = Array.isArray(q.answer) ? String(q.answer[0]) : String(q.answer ?? "");
+      if (antwortRichtig(q as never, korrekt)) richtig++;
+      if (antwortRichtig(q as never, "Antwort-die-es-nicht-gibt-xyz")) falschOk = false;
+    }
+  }
+  const einstSim = readFileSync("app/pruefen/page.tsx", "utf8");
+  const simSrc = readFileSync("components/simulation.tsx", "utf8");
+  ok(richtig === nLesen && falschOk && einstSim.includes("simulation") && simSrc.includes("ليست امتحانًا رسميًا") && simSrc.includes("simulationen"),
+    `K263d التصحيح الآلي متماسك (${richtig}/${nLesen} عند الإجابة الصحيحة وصفر عند المختلقة)، والبطاقة موصولة بصفحة اختبر مع صدق «ليست امتحانًا رسميًا» وحفظ السجلّ`);
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
