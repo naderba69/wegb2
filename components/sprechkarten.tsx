@@ -14,6 +14,7 @@ import {
   sprechBudgetSekunden,
   type SprechLevel,
 } from "@/lib/sprechkarten";
+import { redemittelFuerTeil, type RedeTeil } from "@/lib/redemittel";
 import { De, DeBlock } from "./De";
 
 type Phase = "wahl" | "vorbereitung" | "sprechen" | "fertig";
@@ -258,6 +259,14 @@ export function SprechKartenStudio() {
                     عبارات مساندة: {s.stuetzen.map((x, i) => (<span key={i}> <De>{x}</De>{i < s.stuetzen.length - 1 ? " ·" : ""}</span>))}
                   </div>
                 )}
+                {(() => {
+                  const rm = redemittelFuerTeil(`sprechen${s.teil}` as RedeTeil, runde.seed + s.teil * 3, 3);
+                  return rm.length ? (
+                    <div style={{ fontSize: "0.82rem", marginTop: "0.35rem" }}>
+                      🧰 وسائل تعبير لهذا الجزء من بنك العبارات: {rm.map((x, i) => (<span key={x.id}> <De>{x.de}</De>{i < rm.length - 1 ? " ·" : ""}</span>))}
+                    </div>
+                  ) : null;
+                })()}
               </div>
             ))}
           </div>

@@ -232,6 +232,18 @@ export interface LeiterText {
   fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
 }
 export const leseleiter: LeiterText[] = [];
+/** 🧰 عبارة تعبير وظيفية (C3): مصنّفة بوظيفتها وبأجزاء الامتحان التي تخدمها */
+export interface RedemittelItem {
+  id: string;
+  de: string;
+  ar: string;
+  beispielDe: string;
+  beispielAr: string;
+  funktion: string;
+  teile: string[];
+  level: "A2" | "B1" | "B2";
+}
+export const redemittelBank: RedemittelItem[] = [];
 export const luecken = [] as LkItem[];
 export const hoerenAudio: Record<string, HoerAudio> = {};
 export const diktatAudio: Record<string, HoerAudio> = {};
@@ -302,6 +314,7 @@ function fuelleAusBanken(): void {
   vortrag.splice(0, vortrag.length, ...(bankRoh("vortrag.json") as { themen: VortragThema[] }).themen);
   luecken.splice(0, luecken.length, ...(bankRoh("luecken.json") as { items: LkItem[] }).items);
   leseleiter.splice(0, leseleiter.length, ...((bankRoh("leseleiter.json") as { texte: LeiterText[] } | undefined)?.texte ?? []));
+  redemittelBank.splice(0, redemittelBank.length, ...((bankRoh("redemittel.json") as { items: RedemittelItem[] } | undefined)?.items ?? []));
   const hoer = bankRoh("hoeren-audio.json") as { einaetze?: HoerAudio[]; einsaetze: HoerAudio[] };
   Object.assign(hoerenAudio, Object.fromEntries(hoer.einsaetze.map((e) => [e.id, e])));
   const dik = bankRoh("diktat-audio.json") as { einsaetze: HoerAudio[] };

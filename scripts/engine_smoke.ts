@@ -55,6 +55,7 @@ import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisE
 import { bewerteKriterien } from "../lib/kriterien";
 import { baueSprechRunde, selbstPunkte, SPRECH_KRITERIEN } from "../lib/sprechkarten";
 import { LEITER_STUFEN, fehlendeWoerter, stufeFrei, stufeAbgeschlossen, textBestanden, woerterZaehlen as leiterWoerter } from "../lib/leseleiter";
+import { REDE_FUNKTIONEN, REDE_TEILE, redemittelFuerTeil, drillRunde } from "../lib/redemittel";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
@@ -65,7 +66,7 @@ import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
-import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter,
+import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter, redemittelBank,
 } from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi, dialogAudioSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
@@ -2016,9 +2017,9 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← معجم ← كاتالوج");
-    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← معجم ← كاتالوج");
+    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
 
@@ -12499,8 +12500,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 46 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
-    "K257a bankload جاهزٌ في Node: 46 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 47 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
+    "K257a bankload جاهزٌ في Node: 47 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;
@@ -12811,6 +12812,32 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(llSrc.includes("gemischteOptionen") && llSrc.includes("speakDe") && llSrc.includes("نطق آلي من متصفّحك") && !llSrc.includes("fetch(") &&
      uebSrc.includes('"leseleiter"') && uebSrc.includes("LeseLeiter") && typSrc.includes("leseleiter?"),
     "K268d المكوّن موصولٌ في «تدرّب» بخلطٍ حتميّ وصوت جهازٍ موسومٍ آليًّا، والتقدّم يُحفظ في Progress.leseleiter");
+}
+
+/* ═══ K269 · R176 (C3): بنك وسائل التعبير — تغطية أجزاء الامتحان ودمجٌ في الكلام والكتابة ═══ */
+{
+  const funkKeys = REDE_FUNKTIONEN.map((f) => f.key);
+  const proFunk = funkKeys.map((k) => redemittelBank.filter((x) => x.funktion === k).length);
+  const proTeil = REDE_TEILE.map((t) => redemittelBank.filter((x) => x.teile.includes(t.key)).length);
+  const proLevel = ["A2", "B1", "B2"].map((l) => redemittelBank.filter((x) => x.level === l).length);
+  const normDe = redemittelBank.map((x) => x.de.trim().toLowerCase());
+  const formOk = redemittelBank.length >= 110 && new Set(normDe).size === normDe.length &&
+    redemittelBank.every((x) => x.beispielDe.length > 8 && x.beispielAr.length > 2 && x.ar.length > 2 && x.teile.length >= 1 && funkKeys.includes(x.funktion));
+  ok(formOk && proFunk.every((n) => n >= 8) && proTeil[0] >= 12 && proTeil[1] >= 20 && proTeil[2] >= 40 && proTeil[3] >= 30 && proTeil[4] >= 20 && proLevel.every((n) => n >= 25),
+    `K269a بنك العبارات (${redemittelBank.length}): كلّ عبارة بمثالٍ مترجم، 11 وظيفة ×≥8، تغطية أجزاء الامتحان (${proTeil.join("/")}) ومستويات متوازنة (${proLevel.join("/")})`);
+  const d1 = redemittelFuerTeil("sprechen3", 5, 4), d2 = redemittelFuerTeil("sprechen3", 5, 4);
+  const drill1 = drillRunde(9, 8), drill2 = drillRunde(9, 8);
+  ok(JSON.stringify(d1) === JSON.stringify(d2) && d1.length === 4 && d1.every((x) => x.teile.includes("sprechen3")) &&
+     JSON.stringify(drill1) === JSON.stringify(drill2) && drill1.length === 8 &&
+     redemittelFuerTeil("brief", 3, 6).every((x) => x.teile.includes("brief")),
+    "K269b الاختيار حتميّ بالبذرة ومقيّدٌ بجزء الامتحان المطلوب في الكلام والكتابة معًا");
+  const sprSrc = readFileSync("components/sprechkarten.tsx", "utf8");
+  const schrSrc = readFileSync("components/schreiben.tsx", "utf8");
+  const uebSrc = readFileSync("app/ueben/page.tsx", "utf8");
+  ok(sprSrc.includes("redemittelFuerTeil") && sprSrc.includes("وسائل تعبير لهذا الجزء") &&
+     schrSrc.includes("redemittelFuerTeil") && schrSrc.includes("وسائل تعبير لصيغة هذه المهمة") &&
+     uebSrc.includes('"redemittel"') && uebSrc.includes("RedemittelBank"),
+    "K269c العبارات تظهر داخل تحضير بطاقات التحدّث ولصيغة مهمّة الكتابة، والمحطة موصولة في «تدرّب»");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

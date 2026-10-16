@@ -9,6 +9,8 @@ import { useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { SchreibBerater } from "./lehrer";
+import { redemittelFuerTeil } from "@/lib/redemittel";
+import { saatAusText } from "@/lib/optionen";
 import { KriterienPanel } from "./kriterienpanel";
 import { De } from "./De";
 
@@ -97,6 +99,16 @@ export function SchreibWerkstatt({ progress }: { progress: Progress }) {
             <De>{task.taskDe}</De>
             <div style={{ fontSize: "0.85rem", marginTop: "0.2rem" }}>{task.taskAr}</div>
           </div>
+          <details style={{ margin: "0.4rem 0" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 700 }}>🧰 وسائل تعبير لصيغة هذه المهمة ({task.format === "brief" ? "رسالة" : "منتدى/رأي"})</summary>
+            <div style={{ display: "grid", gap: "0.25rem", marginTop: "0.35rem" }}>
+              {redemittelFuerTeil(task.format === "brief" ? "brief" : "forum", saatAusText(task.id), 6).map((x) => (
+                <div key={x.id} style={{ fontSize: "0.85rem" }}>
+                  <De>{x.de}</De> <span style={{ color: "var(--color-ink2)" }}>— {x.ar}</span>
+                </div>
+              ))}
+            </div>
+          </details>
           <textarea
             className="field"
             rows={8}
