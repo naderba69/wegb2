@@ -341,6 +341,23 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R179 — C5 Hörmaterialien neu (KI-Audio + R169-QC) — abgeschlossen ✅
+
+- **Material**: `content/hoerneu.json` (Autor: `scripts/patches/_c5_bank.py`) — 8 Einheiten:
+  3× Kurznachrichten (B1/B2), 2× Durchsagen (Bahnhof B1, Flughafen A2), 1× Radiowerbung (B1),
+  2× Interviews (B2/B1) — je 3 Verständnisfragen mit Beleg-Erklärung, Transkript DE/AR.
+- **Audio**: 10 Clips per Arena-TTS erzeugt (Stimme A = Stimme-04 weiblich, B = Stimme-05 männlich),
+  Dateien `public/audio/hoerneu/ki-hn-*.mp3`, in der Bank mit `stimmeLabel` als KI gekennzeichnet.
+- **QC**: `scripts/audio_qc_hoerneu.py` (miniaudio, exakt die R169-Schwellen) →
+  `docs/audio-qc-hoerneu-2026-10-16.json`: **10/10 ok, 0 Anomalien**, Median 17,48 Zeichen/s
+  (Referenzband R169-KI: 15,95; Schwelle [5, 22]), Stille-Median 0,252. Ehrlichkeitsgrenze wie R169:
+  maschinelle Vollständigkeits-/Hörbarkeitsprüfung, kein menschliches Anhören, kein Ausspracheurteil.
+- **Player**: `components/hoerneu.tsx` — Clips werden verkettet abgespielt, Tempi 0,75/0,9/1/1,15
+  ausschließlich per `playbackRate` (keine neuen Dateien), Transkript auf Wunsch, Sitzungsergebnis.
+  Strikte außerhalb des Plans (K272c: kein Verweis in plan.ts), kein Progress-Write, kein fetch.
+- **Nachweise**: tsc ✓ · smoke **1725/0** (K272a–c neu; K257a 48→49; K112a/b erweitert) ·
+  interaktiv 709/0 · audit 0 strukturell · build ✓.
+
 ## R178 — C2 Vertiefungsbibliothek B2+/C1 + Rotations-Zählfix — abgeschlossen ✅
 
 - **Bibliothek**: `content/vertiefung.json` (Autoren: `scripts/patches/_c2_bank.py`, `_c2_expand.py`,

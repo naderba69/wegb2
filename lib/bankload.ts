@@ -11,7 +11,7 @@ import { join } from "path";
 
 export const BANK_DATEIEN: string[] = [
   "arena.json", "cando.json", "dialog-audio.json", "dialogues.json", "diktat-audio.json",
-  "eselsbruecken.json", "fehler.json", "grammar.json", "haerte.json", "hoeren-audio.json",
+  "eselsbruecken.json", "fehler.json", "grammar.json", "haerte.json", "hoeren-audio.json", "hoerneu.json",
   "kollokationen.json", "leseleiter.json", "luecken.json", "mnemonik.json", "muendlich.json", "pakete.json", "redemittel.json",
   "sentences.json", "sprichwort-audio.json", "synonyme-kontext.json", "szenarien.json",
   "texts.json", "tiefenlex.json", "verben.json", "vertiefung.json", "vocab.json", "vortrag.json", "writing.json",

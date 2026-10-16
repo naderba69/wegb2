@@ -253,6 +253,18 @@ export interface VertiefungDialog {
   fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
 }
 export const vertiefungTexte: VertiefungText[] = [];
+/** 🎧 مادة استماع متنوّعة (C5/R179): أخبار/إعلانات/مقابلات بصوت KI موسوم — خارج الخطة */
+export interface HoerNeuItem {
+  id: string;
+  format: "nachrichten" | "durchsage" | "werbung" | "interview";
+  level: string;
+  titelDe: string;
+  titelAr: string;
+  zeilen: { who: string; de: string; ar: string }[];
+  clips: { zeilen: number[]; stimme: "A" | "B"; datei?: string; stimmeLabel?: string; bytes?: number }[];
+  fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
+}
+export const hoerneu: HoerNeuItem[] = [];
 export const vertiefungDialoge: VertiefungDialog[] = [];
 /** 🧰 عبارة تعبير وظيفية (C3): مصنّفة بوظيفتها وبأجزاء الامتحان التي تخدمها */
 export interface RedemittelItem {
@@ -339,6 +351,7 @@ function fuelleAusBanken(): void {
   redemittelBank.splice(0, redemittelBank.length, ...((bankRoh("redemittel.json") as { items: RedemittelItem[] } | undefined)?.items ?? []));
   vertiefungTexte.splice(0, vertiefungTexte.length, ...((bankRoh("vertiefung.json") as { texte: VertiefungText[] } | undefined)?.texte ?? []));
   vertiefungDialoge.splice(0, vertiefungDialoge.length, ...((bankRoh("vertiefung.json") as { dialoge: VertiefungDialog[] } | undefined)?.dialoge ?? []));
+  hoerneu.splice(0, hoerneu.length, ...((bankRoh("hoerneu.json") as { items: HoerNeuItem[] } | undefined)?.items ?? []));
   const hoer = bankRoh("hoeren-audio.json") as { einaetze?: HoerAudio[]; einsaetze: HoerAudio[] };
   Object.assign(hoerenAudio, Object.fromEntries(hoer.einsaetze.map((e) => [e.id, e])));
   const dik = bankRoh("diktat-audio.json") as { einsaetze: HoerAudio[] };

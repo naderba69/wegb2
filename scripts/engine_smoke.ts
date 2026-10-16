@@ -66,7 +66,7 @@ import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
-import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter, redemittelBank, vertiefungTexte, vertiefungDialoge,
+import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter, redemittelBank, vertiefungTexte, vertiefungDialoge, hoerneu,
 } from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi, dialogAudioSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
@@ -2017,9 +2017,9 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
-    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
+    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
 
@@ -12500,8 +12500,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 48 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
-    "K257a bankload جاهزٌ في Node: 48 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 49 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
+    "K257a bankload جاهزٌ في Node: 49 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;
@@ -12904,6 +12904,35 @@ function collectR262(dir: string, out: string[] = []): string[] {
      vfSrc.includes("speakDe") && !vfSrc.includes("fetch(") && !vfSrc.includes("update(") &&
      uebSrc2.includes('"vertiefung"') && uebSrc2.includes("<Vertiefung />"),
     "K271d المكتبة موصولة في «تدرّب» بوسام «بعد B2 · تذوّق C1» صريح، نطقها آليٌّ موسوم، وبلا كتابة تقدّم وبلا fetch");
+}
+
+// ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),
+// KI-Stimme gekennzeichnet, maschinelle QC (R169-Werkzeug, eigene Schwellenakte), Tempi aus
+// dem Player (playbackRate), strikte ausserhalb der 378 Tage. =====
+{
+  const formate = (f: string) => hoerneu.filter((i) => i.format === f).length;
+  const clipZahl = hoerneu.reduce((a, i) => a + i.clips.length, 0);
+  const formOk = hoerneu.length === 8 && formate("nachrichten") >= 3 && formate("durchsage") >= 2 &&
+    formate("werbung") >= 1 && formate("interview") >= 2 && clipZahl === 10 &&
+    hoerneu.every((i) => i.fragen.length === 3 && i.fragen.every((f) => f.options.includes(f.answer) && new Set(f.options).size === f.options.length) &&
+      i.zeilen.every((z) => z.de.length > 10 && z.ar.length > 5));
+  ok(formOk, `K272a موادّ الاستماع: ${hoerneu.length} موادّ (${clipZahl} مقاطع) بصيغ أخبار/إعلانات/مقابلات، 3 أسئلة بلا خيارات مكرّرة`);
+  let qcOk = false, qcDetail = "";
+  try {
+    const qc = JSON.parse(readFileSync("docs/audio-qc-hoerneu-2026-10-16.json", "utf8")) as { dateien: { id: string; ok: boolean; zeichenProSekunde: number }[]; anomalienGesamt: number };
+    const dateiOk = hoerneu.every((i) =>
+      i.clips.every((c) => !!c.datei && !!c.stimmeLabel && c.stimmeLabel.includes("KI") && (c.bytes ?? 0) > 1000 &&
+        existsSync("public" + c.datei)));
+    qcOk = dateiOk && qc.anomalienGesamt === 0 && qc.dateien.length === clipZahl &&
+      qc.dateien.every((d) => d.ok && d.zeichenProSekunde >= 5 && d.zeichenProSekunde <= 22);
+    qcDetail = `dateien=${qc.dateien.length} anomalien=${qc.anomalienGesamt}`;
+  } catch (e) { qcDetail = String(e); }
+  ok(qcOk, `K272b كلُّ مقطعٍ جديدٍ ملفُّه موجود ووسمُه KI والفحص الآلي R169 صفر شذوذ (${qcDetail}) — اكتمال/سماع/سرعة آليًا، لا حكم سماع بشري`);
+  const hnSrc = readFileSync("components/hoerneu.tsx", "utf8");
+  const plSrc2 = readFileSync("lib/plan.ts", "utf8");
+  ok(!plSrc2.includes("hoerneu") && !plSrc2.includes("hn-0") && hnSrc.includes("مولّد آليًا بالذكاء الاصطناعي") &&
+     hnSrc.includes("playbackRate") && !hnSrc.includes("update(") && !hnSrc.includes("fetch("),
+    "K272c الموادّ خارج الخطة (لا مرجع في plan.ts)، الصوت موسوم KI في الواجهة، والسرعات من المشغّل (playbackRate) بلا ملفات جديدة");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
