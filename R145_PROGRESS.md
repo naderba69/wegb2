@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R187: **Axis C + M vollständig · Axis U: U1 ✅ (R187)**
+> Status nach R188: **Axis C + M vollständig · Axis U: U1–U2 ✅ (R187–R188)**
+> R188 (U2 ehrliche Motivation) — alle Gates grün (smoke 1750/0). Weiter: U3–U6.
 > R187 (U1 Sitzungsplayer) — alle Gates grün (smoke 1747/0, interaktiv 713/0). Weiter: U2–U6.
 > R186 (M6 Muster-Drills) — alle Gates grün (smoke 1746/0). Weiter: Axis U (U1–U6).
 > R185 (M5 Schreibschleife) — alle Gates grün (smoke 1744/0). Weiter: M6, dann Axis U (U1–U6).
@@ -346,6 +347,17 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R188 — U2 Ehrliche Motivation aus dem Verlauf — abgeschlossen ✅
+
+- **Motor** (`lib/motivation.ts`): Wochenbilanz (Mo–So) nur aus geschlossenen Tagesdatensätzen
+  (aktive Tage, erledigte Aufgaben, per Sitzungsuhr gemessene Minuten), Verlauf-Streak statt
+  gespeicherter Zähler, Wochenziel = Mittel der eigenen aktiven Tage der letzten 4 Wochen
+  (2..6; ohne Verlauf deklarierte 3).
+- **Karte** auf der Startseite vor dem (projektiven) Wochenplan — klar getrennt: Plan vs. Ist.
+  Kein Punkte-/Dekor-System; Gate K281 rechnet alle fünf Kennzahlen aus Roh-Fixtures unabhängig
+  nach und verbietet Dekor-Begriffe in der Komponente.
+- **Nachweise**: tsc ✓ · smoke **1750/0** · interaktiv 713/0 · audit 0 · build ✓.
 
 ## R187 — U1 Sequentieller Sitzungsplayer — abgeschlossen ✅
 
