@@ -2025,8 +2025,8 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198: امتداد بنيوي موثّق) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,leben,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← تذوّق ← حياة في ألمانيا (R200: امتداد بنيوي موثّق في المراجع) ← معجم ← كاتالوج");
     const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
@@ -12511,8 +12511,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 52 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
-    "K257a bankload جاهزٌ في Node: 52 ملفَّ بنكٍ تُقرأ من content/ مباشرةً (52 منذ R197: بنك التمريض pflege.json امتداد بنيوي موثّق) — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 53 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
+    "K257a bankload جاهزٌ في Node: 53 ملفَّ بنكٍ تُقرأ من content/ مباشرةً (53 منذ R200: بنك الحياة في ألمانيا lebenswelt.json؛ كان 52 في R197) — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;
@@ -13370,6 +13370,22 @@ function collectR262(dir: string, out: string[] = []): string[] {
      compSrc.includes("لا حكم على النطق") && compSrc.includes("/einstellungen") &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("<SprechBegleiter />"),
     "K291b المحطة لا تفتح حوارًا بلا مفتاح+موافقة، وتفصح عن حدّها، ومركّبة في /ueben");
+}
+
+// ===== K293 (R200 · Lebenswelt/Anerkennung + Umgangssprache): 12 Behörden-/
+// Lebens-Karten mit Schlüsselphrasen (Anerkennung der Pflege prominent),
+// 16 Umgangs-Ausdrücke mit Situation; ehrlich als Orientierung markiert. =====
+{
+  const lw = JSON.parse(readFileSync("content/lebenswelt.json", "utf8")) as {
+    themen: { id: string; titel: string; textAr: string; saetze: { de: string; ar: string }[] }[];
+    umgang: { de: string; situationAr: string }[];
+  };
+  const lwSrc = readFileSync("components/lebenswelt.tsx", "utf8");
+  ok(lw.themen.length === 12 && lw.themen.every((t) => t.textAr.length > 80 && t.saetze.length >= 3 && t.saetze.every((s) => s.de && s.ar)) &&
+     lw.themen.some((t) => t.id === "lw-03" && t.textAr.includes("Kenntnisprüfung") && t.textAr.includes("Anpassungslehrgang")) &&
+     lw.umgang.length === 16 && lw.umgang.every((e) => e.de && e.situationAr) &&
+     lwSrc.includes("ليست استشارة قانونية") && readFileSync("app/ueben/page.tsx", "utf8").includes("<LebensweltStation />"),
+    "K293 الحياة في ألمانيا: 12 بطاقة مؤسسات بعبارات جاهزة وبطاقة الاعتراف التمريضي كاملة المسارات، و16 تعبير شارع بسياقه — توجيه لا استشارة قانونية");
 }
 
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den

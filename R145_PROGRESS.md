@@ -353,6 +353,17 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R200 — Lebenswelt, Anerkennung & Umgangssprache — abgeschlossen ✅
+
+- Neue Bank `content/lebenswelt.json` (Bankdateien 52→53): 12 Themenkarten
+  (Anmeldung, Aufenthalt, Anerkennung Pflege mit Kenntnisprüfung/
+  Anpassungslehrgang/Berufserlaubnis, Versicherung, Vertrag, Lohn, Kündigung,
+  Miete/Schufa, Kita, Verkehr, Notruf, Feiertage/Krankmeldung) mit je ≥3
+  Schlüsselphrasen + 16 Umgangs-Ausdrücke mit Situationskontext.
+- Station `components/lebenswelt.tsx` in /ueben (Referenz-Gruppe; K112a
+  dokumentiert erweitert). Ehrlich: Orientierung, keine Rechtsberatung.
+- **Nachweise**: tsc ✓ · smoke **1772/0** (K293) · interaktiv **728/0** (CII1-3) · audit 0 · build ✓.
+
 ## R199 — Pflege vertieft + Medizin-Simulation — abgeschlossen ✅
 
 - Bank wächst: 115 Wörter (Medikamente, Stationsalltag, Notfall, Anatomie,

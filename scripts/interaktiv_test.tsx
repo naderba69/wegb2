@@ -3405,6 +3405,21 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "C2 الإفصاح عن حدّ النطق والسيناريوهات الستة (تمريض أولًا) ظاهر قبل أيّ تفعيل");
   }
 
+  /* ═══ CII — الحياة في ألمانيا (R200): بطاقات مؤسسات ولغة شارع عند الطلب ═══ */
+  {
+    const { LebensweltStation } = await import("../components/lebenswelt");
+    const { lebensweltThemen, umgangBank } = await import("../lib/lebenswelt");
+    mount(React.createElement(LebensweltStation));
+    ok(lebensweltThemen.length === 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
+       txt().includes("الاعتراف بمؤهّل التمريض"),
+      "CII1 المحطة تعرض البطاقات الاثنتي عشرة وبطاقة الاعتراف التمريضي بينها");
+    ok(!rootEl.querySelector('[data-testid="umgang-eintrag"]'), "CII2 لغة الشارع مطوية حتى تُطلب صراحة");
+    const tog = rootEl.querySelector('[data-testid="umgang-toggle"]') as HTMLElement | null;
+    if (tog) click(tog);
+    ok(rootEl.querySelectorAll('[data-testid="umgang-eintrag"]').length === umgangBank.length && umgangBank.length === 16,
+      "CII3 عند الفتح تظهر التعبيرات الستة عشر كلّها بسياقها");
+  }
+
   /* ═══ XCVI — وصولية U5 تحت الإصبع: لغة الألماني معلنة وتخطٍّ وتركيز ═══ */
   {
     const { De, DeBlock } = await import("../components/De");

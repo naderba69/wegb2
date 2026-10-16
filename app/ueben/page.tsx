@@ -24,6 +24,7 @@ import { EinstufungTest } from "@/components/einstufung";
 import { ShadowingStation } from "@/components/shadowing";
 import { PflegeStation } from "@/components/pflege";
 import { SprechBegleiter } from "@/components/sprechbegleiter";
+import { LebensweltStation } from "@/components/lebenswelt";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
@@ -34,7 +35,7 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,leben,tiefen,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
@@ -56,6 +57,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   redemittel: { icon: "🧰", titel: "بنك وسائل التعبير", unter: "عبارات الامتحان مصنّفة بالوظيفة والجزء، مع تدريب استرجاع." },
   vertiefung: { icon: "📚", titel: "مكتبة التذوّق B2+/C1", unter: "نصوص وحوارات C1 إثرائية بعد B2 — خارج الخطة." },
   hoerneu: { icon: "🎧", titel: "استماع متنوّع", unter: "أخبار وإعلانات ومقابلات بصوت KI موسوم وسرعات من المشغّل." },
+  leben: { icon: "🌍", titel: "الحياة في ألمانيا والاعتراف المهني", unter: "مؤسسات وأوراق وعادات، ومسار Anerkennung التمريض، ولغة شارع بسياقها." },
   tiefen: { icon: "📖", titel: "معجم المفردات", unter: "ابحث عن كلمة أو معنى عند الحاجة." },
   katalog: { icon: "🗃️", titel: "دليل التدريبات", unter: "استعرض التدريبات المتاحة في الأكاديمية." },
 };
@@ -77,7 +79,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-reference",
     title: "مراجع إضافية",
     description: "للبحث والاستكشاف عند الحاجة.",
-    items: ["tiefen", "katalog"],
+    items: ["leben", "tiefen", "katalog"],
   },
 ];
 
@@ -206,6 +208,7 @@ export default function Ueben() {
           {offen === "schatten" && <ShadowingStation />}
           {offen === "pflege" && <PflegeStation />}
           {offen === "begleiter" && <SprechBegleiter />}
+          {offen === "leben" && <LebensweltStation />}
           {offen === "katalog" && <KatalogLeiste />}
         </section>
       </div>
