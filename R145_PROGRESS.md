@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R182: **Axis C vollständig (C1–C6, R175–R180) · Axis M: M1 (R181) + M2 (R182) ✅**
+> Status nach R183: **Axis C vollständig (C1–C6) · Axis M: M1–M3 ✅ (R181–R183)**
+> R183 (M3 adaptives Niveau + sicherer Einstieg) — alle Gates grün (smoke 1739/0). Weiter: M4–M6, dann Axis U.
 > R182 (M2 Retrieval-first, verallgemeinert + gemessen) — alle Gates grün (smoke 1735/0). Weiter: Axis M (M3–M6), dann Axis U.
 ## النتيجة قبل/بعد
 
@@ -341,6 +342,20 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R183 — M3 Adaptives Niveau je Fertigkeit + sicherer Einstiegstag — abgeschlossen ✅
+
+- **Motor** (`lib/einstufung.ts`): je Fertigkeit (Lesen/Hören/Grammatik/Wortschatz) eine Leiter
+  A1→B2 mit je 2 echten MC-Fragen aus der Bank genau dieser Stufe (Grammatik-Übungen,
+  Text-/Dialogfragen, generierte Wortschatz-MC mit Stufen-Distraktoren); Stopp bei 0/2,
+  Schätzung = Stufe darunter; Weglänge adaptiv 2–8 Fragen. Hören nutzt Dialog-Audio (KI markiert).
+- **Sicherer Sprung**: `einstiegsVorschlag` = PHASE_START der schwächsten Fertigkeit, gedeckelt
+  auf den ersten nicht bestandenen Phasenprüfungstag (Start an der Prüfung, nicht darüber).
+  K276b fuzzed alle 256 Antwortmuster × 4 Fertigkeiten auf strikte Monotonie.
+- **UI**: Station «تحديد المستوى التكيّفي» in /ueben (K112a/K137b strukturell erweitert wie bei
+  früheren Stationen), verlinkt aus den Einstellungen (🚀); Anwendung setzt plan.day explizit und
+  speichert `settings.einstufung`; Ehrlichkeitszeile «ليس اختبارًا رسميًا».
+- **Nachweise**: tsc ✓ · smoke **1739/0** (K276a–d) · interaktiv 709/0 · audit 0 · build ✓.
 
 ## R182 — M2 Retrieval-first day opener, generalized + measured — abgeschlossen ✅
 

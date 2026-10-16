@@ -421,6 +421,8 @@ export interface Progress {
     cloudSpeech?: boolean;
     /** أُكِّد اختبار تحديد المستوى */
     placed?: boolean;
+    /** 🪪 نتيجة التشخيص التكيّفي (M3/R183): تقدير كلّ مهارة واليوم المطبَّق وتاريخه — تقدير آلي من بنوك التطبيق لا اختبار رسمي */
+    einstufung?: { lesen: string; hoeren: string; grammatik: string; wortschatz: string; tag: number; datum: string };
     /** موعد الامتحان الخارجي (YYYY-MM-DD) + اسمه */
     examDate?: string;
     examName?: string;

@@ -94,6 +94,7 @@ import { entdeckungsFrage, induktionMoeglich, ergebnisText, MIN_BEISPIELE, stufe
 import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stilProfil } from "../lib/stil";
 import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE, KATEGORIE_AR } from "../lib/signalwoerter";
 import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, kapselVerbuche, kapselFaellig, kapselIdsAdaptiv, kapselQuizAdaptiv, kapselQuiz, satzIdAusUebung } from "../lib/kapsel";
+import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungsPool, einstufungStart, einstufungAktuell, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
@@ -2017,9 +2018,9 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
-    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
+    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
 
@@ -13013,6 +13014,51 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const klM2 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
   ok(klM2.includes("abruf-eroeffnung") && klM2.includes("الاسترجاع أولًا دائمًا"),
     "K275c زمن الافتتاحية ومبدؤها معلنان للمتعلم في رأس اليوم دائمًا");
+}
+
+// ===== K276 (R183 · M3): Adaptives Niveau je Fertigkeit. Pools nur aus der Bank der
+// Stufe, Treppe steigt bei >= 1/2 und stoppt bei 0/2, Schaetzung monoton in den
+// Antworten, Einstieg = schwächste Fertigkeit, nie über eine unbestandene Prüfung. =====
+{
+  const poolsOk = EINSTUFUNG_SKILLS.every((sk) =>
+    einstufungsFragen(sk).length === 8 &&
+    einstufungsFragen(sk).every((f, i) => f.stufe === (["A1", "A1", "A2", "A2", "B1", "B1", "B2", "B2"] as const)[i]) &&
+    einstufungsFragen(sk).every((f) => f.ex.type === "mc" && (f.ex.options?.length ?? 0) >= 2 && f.ex.options!.includes(String(f.ex.answer))) &&
+    (sk !== "hoeren" || einstufungsFragen(sk).every((f) => typeof f.audioSrc === "string" || !!f.ex.text)));
+  ok(poolsOk, "K276a لكلِّ مهارة 8 أسئلة (زوج لكلّ مستوى A1..B2) من بنك مستواها، خيارات صالحة والجواب بينها، وللسماع صوت أو نص بديل");
+  // Monotonie-Fuzz: kein Antwortmuster darf bei einer Verbesserung sinken
+  const schaetzungFuer = (sk: (typeof EINSTUFUNG_SKILLS)[number], muster: boolean[]) => {
+    let lauf = einstufungStart(sk);
+    for (const okk of muster) { if (lauf.fertig) break; lauf = einstufungAntwort(lauf, okk); }
+    return ["A0", "A1", "A2", "B1", "B2"].indexOf(lauf.schaetzung ?? "A0");
+  };
+  let monoton = true;
+  for (const sk of EINSTUFUNG_SKILLS) {
+    for (let m = 0; m < 256 && monoton; m++) {
+      const muster = Array.from({ length: 8 }, (_, i) => !!(m & (1 << i)));
+      const basis = schaetzungFuer(sk, muster);
+      for (let i = 0; i < 8; i++) {
+        if (muster[i]) continue;
+        const besser = [...muster]; besser[i] = true;
+        if (schaetzungFuer(sk, besser) < basis) { monoton = false; break; }
+      }
+    }
+  }
+  ok(monoton, "K276b رتابة صارمة: تحسين أيّ إجابة في أيّ نمط (256×4 مهارة) لا يُنزل التقدير أبدًا");
+  const alle = (v: string) => ({ lesen: v, hoeren: v, grammatik: v, wortschatz: v } as Record<(typeof EINSTUFUNG_SKILLS)[number], "A1">);
+  const vLeer = einstiegsVorschlag(alle("B2") as never, emptyProgress);
+  const vMitte = einstiegsVorschlag({ ...alle("B2"), lesen: "A2" } as never, emptyProgress);
+  const mitA2Bestanden = { ...emptyProgress, exams: { 10: { score: 90, passed: true }, 94: { score: 90, passed: true }, 178: { score: 90, passed: true } } };
+  const vOffen = einstiegsVorschlag(alle("B2") as never, mitA2Bestanden as typeof emptyProgress);
+  const alleBestanden = { ...emptyProgress, exams: { 10: { score: 90, passed: true }, 94: { score: 90, passed: true }, 178: { score: 90, passed: true }, 276: { score: 90, passed: true } } };
+  const vFrei = einstiegsVorschlag(alle("B2") as never, alleBestanden as typeof emptyProgress);
+  ok(vLeer.tag === 10 && vLeer.pruefungsTag === 10 && vMitte.tag === 10 && vOffen.tag === 276 && vOffen.pruefungsTag === 276 && vFrei.tag === 277 && vFrei.pruefungsTag === undefined,
+    "K276c القفز الآمن: بلا امتحانات مجتازة يقف الاقتراح عند أوّل امتحان (يوم 10) مهما علت المهارات، وبعد A0–A2 عند امتحان B1 (276)، وبعد الكلّ عند 277 بلا سقف");
+  const eSrc = readFileSync("components/einstufung.tsx", "utf8");
+  const uSrc2 = readFileSync("app/ueben/page.tsx", "utf8");
+  const setSrc = readFileSync("app/einstellungen/page.tsx", "utf8");
+  ok(uSrc2.includes('offen === "einstufung"') && eSrc.includes("einstiegsVorschlag") && eSrc.includes("ليس اختبار Goethe/telc رسميًا") && setSrc.includes("التشخيص التكيّفي"),
+    "K276d المحطة مركّبة في /ueben، تطبّق الاقتراح، بإفصاح «ليس اختبارًا رسميًا»، ومربوطة من الإعدادات");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

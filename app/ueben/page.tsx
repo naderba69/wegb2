@@ -20,6 +20,7 @@ import { BriefSchmiede } from "@/components/briefe";
 import { LebensSzenarien } from "@/components/szenarien";
 import { TiefenLexikon } from "@/components/tiefenlex";
 import { KatalogLeiste } from "@/components/katalog";
+import { EinstufungTest } from "@/components/einstufung";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
@@ -30,9 +31,10 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
+  einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
   zusatz: { icon: "➕", titel: "تدريب إضافي", unter: "تمارين أخرى بقيت من درس اليوم." },
   fehlerlabor: { icon: "🔬", titel: "معمل تحليل الخطأ", unter: "افهم سبب الخطأ وتدرّب على تصحيحه." },
   uebungen: { icon: "🗂️", titel: "التدريب الحرّ", unter: "راجع المفردات والبطاقات وفق حاجتك." },
@@ -57,7 +59,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-priority",
     title: "ابدأ بالأهم",
     description: "ابدأ بما بقي من الدرس، ثم راجع الأخطاء.",
-    items: ["zusatz", "fehlerlabor", "uebungen", "blitz"],
+    items: ["einstufung", "zusatz", "fehlerlabor", "uebungen", "blitz"],
   },
   {
     id: "ueben-skills",
@@ -193,6 +195,7 @@ export default function Ueben() {
           {offen === "vertiefung" && <Vertiefung />}
           {offen === "hoerneu" && <HoerNeu />}
           {offen === "tiefen" && <TiefenLexikon progress={progress} />}
+          {offen === "einstufung" && <EinstufungTest />}
           {offen === "katalog" && <KatalogLeiste />}
         </section>
       </div>

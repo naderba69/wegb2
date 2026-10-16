@@ -98,6 +98,9 @@ export default function Einstellungen() {
             أنت اليوم في <strong>اليوم {progress.plan.day}</strong> (المستوى {levelAmTag(progress.plan.day)}).
             الانتقال يغيّر موضعك في الخطة فقط — بطاقاتك ودفتر أخطائك ونقاطك تبقى كما هي، ويمكنك العودة متى شئت.
           </p>
+          <p style={{ margin: "0 0 0.6rem" }}>
+            <Link href="/ueben">🪪 أو حدّد مستواك بالتشخيص التكيّفي (أربع مهارات، دقائق معدودة) ←</Link>
+          </p>
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }} data-testid="einstieg-wahl">
             {(["A1", "A2", "B1", "B2"] as Level[]).map((lvl) => (
               <button
