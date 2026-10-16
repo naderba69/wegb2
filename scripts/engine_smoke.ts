@@ -13297,6 +13297,20 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K288 مجموعات المحطات قابلة للطي (الأولى مفتوحة) في التدرّب والتقدّم، وبحث فوري في /ueben بحالة فراغ صادقة");
 }
 
+// ===== K289 (R196 · Redesign Etappe 4): Üben vor Theorie + Stationen-Takt —
+// die Grammatik-Aufgabe zeigt nach der Entdeckung sofort die Übung; die volle
+// Erklärung liegt eingeklappt darunter (entdeck<summary<rules bleibt, LIV
+// unverändert). Der Player benennt die aktuelle der sechs Stationen. =====
+{
+  const tkSrc = readFileSync("components/tasks.tsx", "utf8");
+  const iUeb = tkSrc.indexOf("}:grammar`"), iTheo = tkSrc.indexOf('data-testid="grammatik-theorie"'), iSum2 = tkSrc.indexOf("{topic.summaryAr}");
+  ok(iUeb > 0 && iTheo > iUeb && iSum2 > iTheo && tkSrc.includes("طبّق أولًا"),
+    "K289 في درس القواعد يسبق التمرينُ الشرحَ، والنظرية كاملة مطوية بعده قابلة للفتح — ممارسة أولًا بلا حذف أيّ محتوى");
+  const kzSrc3 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+  ok(kzSrc3.includes('data-testid="sitzung-station"') && kzSrc3.includes("stationOfTask") && kzSrc3.includes("محطاتٍ قصيرة"),
+    "K289 المشغّل يعرض محطة المهمة الحالية وتقدّمها — اليوم ست محطات قصيرة لا كتلة واحدة");
+}
+
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den
 // echten CSS-Tokens, de-Sprachkennzeichnung für Screenreader, Fokus/​Skip-Link. =====
 {

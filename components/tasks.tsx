@@ -502,6 +502,17 @@ function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: 
       )}
 
       {offen && (<>
+      {/* 🏃 R196 — الممارسة قبل النظرية: التثبيت الفوري أولًا، والشرح الكامل مطويّ لمن يحتاجه */}
+      <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.3rem" }}>🏃 طبّق أولًا — ثبّت بالمحاولة قبل قراءة الشرح</h4>
+      <p style={{ fontSize: "0.83rem", color: "var(--color-ink2)", margin: "0 0 0.6rem" }}>
+        حاول بنفسك الآن؛ الخطأ هنا وقودُ التعلّم. الشرح والقواعد كاملةً مطويّة أسفل التمرين — افتحها بعد محاولتك أو متى احتجتَها.
+      </p>
+      <ExerciseSet items={topic.exercises} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:grammar` : undefined} />
+
+      <details data-testid="grammatik-theorie" style={{ marginTop: "0.9rem" }}>
+        <summary style={{ cursor: "pointer", fontWeight: 800, minHeight: "44px", display: "flex", alignItems: "center" }}>
+          📘 الشرح والقواعد والأمثلة كاملةً — افتح عند الحاجة
+        </summary>
       <p style={{ lineHeight: 1.9 }}>{topic.summaryAr}</p>
 
       <BrueckenBlock gramId={topic.id} srs={srs} />
@@ -581,8 +592,7 @@ function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: 
         <FehlerFinden pitfalls={topic.pitfalls} onPoints={onPoints} />
       )}
 
-      <h4 style={{ fontWeight: 800, margin: "1rem 0 0.6rem" }}>تثبيت فوري</h4>
-      <ExerciseSet items={topic.exercises} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:grammar` : undefined} />
+      </details>
 
       {/* 🔁 الحلقة الثلاثية: تعرّف → إكمال → إنتاج حر */}
       <TriplePractice topic={topic} seed={Array.from(task.id).reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 41)} onPoints={onPoints} persistKey={persistKey} />

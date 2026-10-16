@@ -3363,6 +3363,23 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "XCV4 النقر ينقل الخطوة إلى المهمة التالية المفتوحة بالضبط (تسلسل لا قفز أعمى)");
   }
 
+  /* ═══ XCVIII — الممارسة قبل النظرية (R196): التمرين ظاهر والشرح مطويّ ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props2 = { lang: "ar" as const, day: 100, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, {
+      task: { id: "t3-b1-genitiv", kind: "grammatik" as const, titleDe: "G", titleAr: "ق", minutes: 15, topicId: "b1-genitiv" },
+      ...props2,
+    }));
+    const skip = rootEl.querySelector('[data-testid="entdecken-ueberspringen"]') as HTMLElement | null;
+    if (skip) click(skip);
+    const theo = rootEl.querySelector('[data-testid="grammatik-theorie"]') as HTMLDetailsElement | null;
+    const kopf = Array.from(rootEl.querySelectorAll("h4")).find((h) => (h.textContent ?? "").includes("طبّق أولًا"));
+    ok(!!theo && !theo.open && !!kopf && (kopf.compareDocumentPosition(theo) & 4) !== 0,
+      "XCVIII1 بعد الاكتشاف يتصدّر «طبّق أولًا» والشرح الكامل موجود لكن مطويّ افتراضيًا");
+    ok(!!theo && (theo.textContent ?? "").length > 100, "XCVIII2 النظرية لم تُحذف — نصّها كامل داخل العنصر المطويّ");
+  }
+
   /* ═══ XCVI — وصولية U5 تحت الإصبع: لغة الألماني معلنة وتخطٍّ وتركيز ═══ */
   {
     const { De, DeBlock } = await import("../components/De");

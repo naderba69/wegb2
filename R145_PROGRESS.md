@@ -353,6 +353,17 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R196 — Redesign Etappe 4: Praxis vor Theorie + Stations-Takt — abgeschlossen ✅
+
+- Grammatik-Lektion: nach der Entdeckung sofort «طبّق أولًا» (ExerciseSet unverändert);
+  vollständige Theorie (Zusammenfassung, Regeln, Tabellen, Beispiele, Pitfalls)
+  eingeklappt darunter — nichts gestrichen, LIV/K-Reihenfolge quellenfest.
+- Player benennt die aktuelle der sechs Stationen samt Fortschritt in ihr
+  (stationOfTask) — der Tag wirkt als sechs kurze Einheiten. Aufgabenfolge/Sperren
+  unverändert; Interleaving am «Nächste»-Knopf verworfen, weil XCV/K280 die exakte
+  Sequenz in Substanz festschreiben (Sequenz ≠ Sprung) und Sperren nicht beanstandet waren.
+- **Nachweise**: tsc ✓ · smoke **1766/0** (K289) · interaktiv **720/0** (XCVIII1-2) · audit 0 · build ✓.
+
 ## R195 — Redesign Etappe 3: Stationsseiten entschlackt — abgeschlossen ✅
 
 - `MenuSection` optional einklappbar; /ueben + /fortschritt: erste Gruppe offen, Rest zu.

@@ -13,6 +13,7 @@ import {
 import { grammarMap, getDeck } from "@/lib/content";
 import TaskView from "@/components/tasks";
 import { TagesKapsel } from "@/components/kapsel";
+import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { kapselSaetzeAbend } from "@/lib/kapsel";
 import { speakDe } from "@/lib/speech";
 import { aufgabeGesperrt, sperrText, type RitualUrteil } from "@/lib/ritual";
@@ -123,6 +124,10 @@ export function Klassenzimmer({
   const naechsteOffene = plan.tasks.findIndex((tk, i) => i > stepFrei && !resultOf(tk.id) && !aufgabeGesperrt(ritual, i));
   const naechsteOffeneGesamt = naechsteOffene >= 0 ? naechsteOffene : plan.tasks.findIndex((tk, i) => i !== stepFrei && !resultOf(tk.id) && !aufgabeGesperrt(ritual, i));
   const restMinuten = plan.tasks.filter((tk) => !resultOf(tk.id)).reduce((s, tk) => s + tk.minutes, 0);
+  // 🧭 تقطيع اليوم محطاتٍ قصيرة (R196): موقع المهمة الحالية داخل محطّتها الستّ
+  const stationJetzt = currentTask ? stationOfTask(currentTask) : null;
+  const stationAlle = stationJetzt ? plan.tasks.filter((tk) => stationOfTask(tk) === stationJetzt) : [];
+  const stationFertig = stationAlle.filter((tk) => resultOf(tk.id)).length;
   const kicker = !currentTask
     ? "🎉 لا مهامَّ اليوم"
     : fertig
@@ -310,6 +315,11 @@ export function Klassenzimmer({
               {restMinuten > 0 && <> · متبقٍّ مخططًا نحو <span className="rtl-num">{restMinuten}</span> دقيقة</>}
               {" "}· اختر أيّ رقاقة متى شئت — التسلسل لا يلغي حريتك.
             </div>
+            {stationJetzt && (
+              <div data-testid="sitzung-station" style={{ fontSize: "0.85rem", fontWeight: 700 }}>
+                {STATIONEN[stationJetzt].icon} محطّة «{STATIONEN[stationJetzt].ar}»: أنجزتَ {stationFertig} من {stationAlle.length} — يومُك ستُّ محطاتٍ قصيرة لا كتلةً واحدة
+              </div>
+            )}
             <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap" }} data-testid="sitzung-fortschritt" role="list" aria-label="تقدّم مهام اليوم">
               {plan.tasks.map((tk, i) => {
                 const r = resultOf(tk.id);
