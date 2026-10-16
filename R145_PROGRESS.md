@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R183: **Axis C vollständig (C1–C6) · Axis M: M1–M3 ✅ (R181–R183)**
+> Status nach R184: **Axis C vollständig · Axis M: M1–M4 ✅ (R181–R184)**
+> R184 (M4 Shadowing, Rhythmusvergleich ohne Aussprache-Urteil) — alle Gates grün (smoke 1742/0). Weiter: M5, M6, dann Axis U.
 > R183 (M3 adaptives Niveau + sicherer Einstieg) — alle Gates grün (smoke 1739/0). Weiter: M4–M6, dann Axis U.
 > R182 (M2 Retrieval-first, verallgemeinert + gemessen) — alle Gates grün (smoke 1735/0). Weiter: Axis M (M3–M6), dann Axis U.
 ## النتيجة قبل/بعد
@@ -342,6 +343,19 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R184 — M4 Shadowing: aufnehmen & Rhythmus vergleichen — abgeschlossen ✅
+
+- **Motor** (`lib/shadowing.ts`): Einheiten aus den KI-markierten HoerNeu-Clips + kurzen Dialogen
+  mit Audio; reiner DSP-Vergleich (RMS-Hüllkurve, Dauer-Verhältnis, Pausen, Hüllkurven-Korrelation
+  nach Zeitangleichung). K277a beweist die Metrik synthetisch exakt (Identität 1.00, halbe Zeit 0.50).
+- **Station** in /ueben: Modell hören (Transkript umschaltbar), lokal aufnehmen (MediaRecorder,
+  Sitzungs-Blob), beide Wellen gezeichnet, A/B anhören, eigenen Download in Lernerhand.
+  Ehrlichkeitszeilen integral: «مقارنة إيقاع لا حكم نطق», «لا رفع شبكي» (K277c quellengeprüft).
+- **K122c**: Messproxy auf seine dokumentierte Substanz korrigiert (kein externer Kontakt außer
+  BYOK-LLM) und zugleich verschärft festgenagelt: Shadowing darf ausschließlich die relative
+  Modelldatei desselben Ursprungs zum lokalen Dekodieren laden — Datei enthält keinerlei http-URL.
+- **Nachweise**: tsc ✓ · smoke **1742/0** · interaktiv 709/0 · audit 0 · build ✓.
 
 ## R183 — M3 Adaptives Niveau je Fertigkeit + sicherer Einstiegstag — abgeschlossen ✅
 

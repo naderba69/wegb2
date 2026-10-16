@@ -95,6 +95,7 @@ import { STIL_PAARE, REGEL_AR, bankPruefen, stilUebungen, registerErkennen, stil
 import { signaleIn, ablenker, signalRadar, signalDrill, radarAbdeckung, SIGNALE, KATEGORIE_AR } from "../lib/signalwoerter";
 import { kapselIds, kapselSaetze, kapselAusTag, KAPSEL_GROESSE, KAPSEL_LEITER, kapselVerbuche, kapselFaellig, kapselIdsAdaptiv, kapselQuizAdaptiv, kapselQuiz, satzIdAusUebung } from "../lib/kapsel";
 import { EINSTUFUNG_SKILLS, einstufungsFragen, einstufungsPool, einstufungStart, einstufungAktuell, einstufungAntwort, einstiegsVorschlag } from "../lib/einstufung";
+import { schattenEinheiten, huellkurve, kurveAufLaenge, korrelation, pausenZaehlen, vergleicheSchatten } from "../lib/shadowing";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
@@ -2018,9 +2019,9 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
-    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />"];
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,schatten,vortrag,interview,briefe,szenarien,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
+    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
 
@@ -2875,8 +2876,11 @@ void 0;
   const fetchIn = code.filter((f) => srcOf(f).includes("fetch(")).sort();
   // R163: تُصحَّح البوابةُ إلى جوهرِ R24 الموثّق (لا اتصالٍ خارجيٍّ إلا مصحّح LLM) وتُشدَّد: جلبُ حزمةِ البنوكِ من نفسِ الأصلِ
   // (تسليمُ أصلٍ ثابتٍ كالـMP3، بلا بياناتِ مستخدم) مسموحٌ لملفٍّ واحدٍ بهدفٍ حرفيٍّ نسبيٍّ فقط، ويُحظرُ أيُّ أصلٍ خارجيٍّ فيه.
+  // R184: الاستثناء الثاني بنفس المنطق حرفيًا — التظليل يجلب ملفَّ نموذجٍ ثابتًا من نفس الأصل (مسار /audio/ نسبي من بيانات البنك)
+  // لفكّ ترميزه محليًا ومقارنته موجيًا؛ لا بيانات مستخدم تغادر، ولا رابط خارجي في الملفّ إطلاقًا (يُختبَر أدناه).
   const bankSrc = srcOf("lib/bankload.ts");
-  ok(fetchIn.length === 2 && fetchIn[0] === "lib/bankload.ts" && fetchIn[1] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
+  const shadowSrc122 = srcOf("components/shadowing.tsx");
+  ok(fetchIn.length === 3 && fetchIn[0] === "components/shadowing.tsx" && fetchIn[1] === "lib/bankload.ts" && fetchIn[2] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc) && shadowSrc122.includes("fetch(einheit.audioSrc)") && !/https?:\/\//.test(shadowSrc122), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ والاستثناء الوحيد الإضافي منذ R184 هو جلب التظليل لملفّ النموذج من نفس الأصل (einheit.audioSrc، بلا أيّ رابط http) لتحليله موجيًا — لا رفع ولا خادم خارجي؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
   ok(srcOf("app/einstellungen/page.tsx").includes("أُذِنُ بإرسال صوتي") && srcOf("lib/speech.ts").includes("بلا إذنٍ صريحٍ في الإعدادات"),
     "K122d سلسلةُ الموافقةِ السحابية: صياغةُ الإذنِ + شرطُ البوابةِ حاضران");
   const callers = code.filter((f) => f !== "lib/speech.ts" && srcOf(f).includes("listenDe("));
@@ -13059,6 +13063,30 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const setSrc = readFileSync("app/einstellungen/page.tsx", "utf8");
   ok(uSrc2.includes('offen === "einstufung"') && eSrc.includes("einstiegsVorschlag") && eSrc.includes("ليس اختبار Goethe/telc رسميًا") && setSrc.includes("التشخيص التكيّفي"),
     "K276d المحطة مركّبة في /ueben، تطبّق الاقتراح، بإفصاح «ليس اختبارًا رسميًا»، ومربوطة من الإعدادات");
+}
+
+// ===== K277 (R184 · M4): Shadowing-Vergleich ist reine Wellen-/Zeit-Metrik an
+// synthetischen Signalen exakt prüfbar; Einheiten tragen echte Audiodateien und
+// ehrliche KI-Markierung; Oberfläche spricht die Nicht-Aussage aus. =====
+{
+  const rate = 1000; // 1 Sample = 1 ms zur einfachen Rechnung
+  const ton = (ms: number, amp = 0.5) => new Array(ms).fill(amp);
+  const orig = [...ton(400), ...ton(300, 0.0), ...ton(400)]; // Ton–Pause–Ton = 1.1 s
+  const gleich = vergleicheSchatten(orig, rate, [...orig], rate);
+  const schneller = vergleicheSchatten(orig, rate, [...ton(200), ...ton(150, 0.0), ...ton(200)], rate);
+  ok(gleich.verhaeltnis === 1 && gleich.rhythmusAehnlichkeit > 0.99 && gleich.pausenOriginal === 1 && gleich.pausenAufnahme === 1 &&
+     schneller.verhaeltnis === 0.5 && schneller.rhythmusAehnlichkeit > 0.9,
+    "K277a على إشارات صناعية: المطابقة تعطي ١٫٠٠ وتشابهًا ~١ ووقفة واحدة، والنصف زمنيًا يعطي ٠٫٥٠ مع بقاء نمط الإيقاع");
+  const einh = schattenEinheiten();
+  const { existsSync } = require("fs") as typeof import("fs");
+  ok(einh.length >= 10 && einh.every((e) => existsSync("public" + e.audioSrc)) &&
+     einh.filter((e) => e.quelle === "hoerneu").every((e) => e.ki) && einh.every((e) => e.textDe.length > 10),
+    `K277b وحدات التظليل (${einh.length}) كلها بملفات صوت موجودة فعلًا، ومقاطع KI موسومة، ونص نموذج حاضر`);
+  const shSrc = readFileSync("components/shadowing.tsx", "utf8");
+  const uSrc3 = readFileSync("app/ueben/page.tsx", "utf8");
+  ok(uSrc3.includes('offen === "schatten"') && shSrc.includes("لا حكم على النطق") && shSrc.includes("لا يُرفع أيّ صوت إلى الشبكة") &&
+     shSrc.includes("download=") && !/fetch\([^)]*shadowing|XMLHttpRequest/.test(shSrc),
+    "K277c المحطة مركّبة، وإفصاحا «لا حكم نطق» و«لا رفع شبكي» صريحان، والتنزيل بيد المتعلّم");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
