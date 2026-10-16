@@ -341,6 +341,20 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R180 — C6 B2-Kollokations-/Synonym-Vertiefung im TiefenLexikon — abgeschlossen ✅
+
+- **Bänke**: `kollok-vertiefung.json` (31 B2-Kollokationen mit Kontextsatz, Lücke, einzig richtigem
+  Partner und arabischer Partner-Logik — inkl. Perfekt-Formen genommen/gestellt/gebracht) und
+  `synonym-vertiefung.json` (24 Register-Paare mit Kontext und arabischem Nuancen-Vermerk;
+  einige sind Bedeutungs- statt Stilunterschiede: ehemalig/aktuell/erwägen). Autoren:
+  `scripts/patches/_c6_kollok.py`, `_c6_syn.py`.
+- **Integration statt Insel**: zwei neue Tiefen ⑤ Kollokationen B2 und ⑥ Register-Synonyme im
+  bestehenden `TiefenLexikon` — gleicher Runden-Mechanismus, Fehler fließen ins Fehlerlabor,
+  Treffer in die Wortschatz-Kompetenz (K273c). Bestandsbänke (70 Synonym-Paare, kollokationen
+  je Karte, tiefenlex 12/20/12) unverändert.
+- **Nachweise**: tsc ✓ · smoke **1728/0** (K273a–c neu; K257a 49→51) · interaktiv 709/0 ·
+  audit 0 strukturell · build ✓. **Milestone C damit komplett (C1–C6).**
+
 ## R179 — C5 Hörmaterialien neu (KI-Audio + R169-QC) — abgeschlossen ✅
 
 - **Material**: `content/hoerneu.json` (Autor: `scripts/patches/_c5_bank.py`) — 8 Einheiten:

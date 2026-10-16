@@ -1,0 +1,469 @@
+{
+  "items": [
+    {
+      "id": "kv-01",
+      "kollokation": "eine Entscheidung treffen",
+      "satz": "Der Vorstand ___ morgen eine endgültige Entscheidung.",
+      "satzAr": "سيتخذ مجلس الإدارة غدًا قرارًا نهائيًا.",
+      "antwort": "trifft",
+      "optionen": [
+        "trifft",
+        "macht",
+        "tut",
+        "gibt"
+      ],
+      "ar": "يتّخذ قرارًا",
+      "noteAr": "قرارات تُتّخذ بـtreffen لا بـmachen: نقول eine Entscheidung treffen."
+    },
+    {
+      "id": "kv-02",
+      "kollokation": "einen Antrag stellen",
+      "satz": "Sie ___ einen Antrag auf ein Stipendium.",
+      "satzAr": "هي تتقدّم بطلب للحصول على منحة.",
+      "antwort": "stellt",
+      "optionen": [
+        "stellt",
+        "macht",
+        "gibt",
+        "nimmt"
+      ],
+      "ar": "يتقدّم بطلب رسمي",
+      "noteAr": "الطلب الرسمي يُقدَّم بـstellen: einen Antrag stellen."
+    },
+    {
+      "id": "kv-03",
+      "kollokation": "Kritik üben",
+      "satz": "Die Opposition ___ scharfe Kritik an dem Plan.",
+      "satzAr": "تمارس المعارضة نقدًا حادًا للخطة.",
+      "antwort": "übt",
+      "optionen": [
+        "übt",
+        "macht",
+        "sagt",
+        "spricht"
+      ],
+      "ar": "يمارس النقد / يوجّه نقدًا",
+      "noteAr": "النقد يُمارَس بـüben: Kritik üben an + Dativ."
+    },
+    {
+      "id": "kv-04",
+      "kollokation": "eine Rolle spielen",
+      "satz": "Das Geld ___ dabei keine Rolle.",
+      "satzAr": "المال لا يلعب دورًا في ذلك.",
+      "antwort": "spielt",
+      "optionen": [
+        "spielt",
+        "macht",
+        "hat",
+        "ist"
+      ],
+      "ar": "يلعب دورًا",
+      "noteAr": "الدور يُلعَب بـspielen: eine Rolle spielen."
+    },
+    {
+      "id": "kv-05",
+      "kollokation": "Verantwortung übernehmen",
+      "satz": "Er ___ die volle Verantwortung für den Fehler.",
+      "satzAr": "هو يتحمّل المسؤولية الكاملة عن الخطأ.",
+      "antwort": "übernimmt",
+      "optionen": [
+        "übernimmt",
+        "hat",
+        "macht",
+        "gibt"
+      ],
+      "ar": "يتحمّل المسؤولية",
+      "noteAr": "المسؤولية تُتحمَّل بـübernehmen (أو tragen)، لا بـhaben."
+    },
+    {
+      "id": "kv-06",
+      "kollokation": "einen Beitrag leisten",
+      "satz": "Jeder kann einen Beitrag zum Klimaschutz ___.",
+      "satzAr": "يستطيع كلّ واحد أن يقدّم إسهامًا في حماية المناخ.",
+      "antwort": "leisten",
+      "optionen": [
+        "leisten",
+        "machen",
+        "geben",
+        "tun"
+      ],
+      "ar": "يقدّم إسهامًا",
+      "noteAr": "الإسهام يُقدَّم بـleisten: einen Beitrag leisten zu."
+    },
+    {
+      "id": "kv-07",
+      "kollokation": "Maßnahmen ergreifen",
+      "satz": "Die Regierung ___ wirksame Maßnahmen gegen die Krise.",
+      "satzAr": "تتخذ الحكومة إجراءات فعّالة ضد الأزمة.",
+      "antwort": "ergreift",
+      "optionen": [
+        "ergreift",
+        "macht",
+        "tut",
+        "stellt"
+      ],
+      "ar": "يتّخذ إجراءات",
+      "noteAr": "الإجراءات الرسمية تُتّخذ بـergreifen: Maßnahmen ergreifen."
+    },
+    {
+      "id": "kv-08",
+      "kollokation": "zur Verfügung stehen",
+      "satz": "Ich ___ Ihnen jederzeit zur Verfügung.",
+      "satzAr": "أنا تحت تصرّفك في أيّ وقت.",
+      "antwort": "stehe",
+      "optionen": [
+        "stehe",
+        "bin",
+        "bleibe",
+        "komme"
+      ],
+      "ar": "يكون تحت التصرّف",
+      "noteAr": "صيغة ثابتة: jemandem zur Verfügung stehen — لا نقول ich bin zur Verfügung."
+    },
+    {
+      "id": "kv-09",
+      "kollokation": "in Kraft treten",
+      "satz": "Das neue Gesetz ___ am ersten Januar in Kraft.",
+      "satzAr": "يدخل القانون الجديد حيّز التنفيذ في الأول من يناير.",
+      "antwort": "tritt",
+      "optionen": [
+        "tritt",
+        "kommt",
+        "geht",
+        "wird"
+      ],
+      "ar": "يدخل حيّز التنفيذ",
+      "noteAr": "القوانين تدخل حيّز النفاذ بـtreten: in Kraft treten."
+    },
+    {
+      "id": "kv-10",
+      "kollokation": "Rücksicht nehmen",
+      "satz": "Man sollte auf ältere Menschen Rücksicht ___.",
+      "satzAr": "ينبغي مراعاة كبار السن.",
+      "antwort": "nehmen",
+      "optionen": [
+        "nehmen",
+        "machen",
+        "haben",
+        "geben"
+      ],
+      "ar": "يراعي / يأخذ بالاعتبار",
+      "noteAr": "المراعاة بـnehmen: Rücksicht nehmen auf + Akk."
+    },
+    {
+      "id": "kv-11",
+      "kollokation": "einen Termin vereinbaren",
+      "satz": "Ich möchte einen Termin beim Arzt ___.",
+      "satzAr": "أريد تحديد موعد عند الطبيب.",
+      "antwort": "vereinbaren",
+      "optionen": [
+        "vereinbaren",
+        "bestellen",
+        "eröffnen",
+        "bezahlen"
+      ],
+      "ar": "يحدّد موعدًا بالاتفاق",
+      "noteAr": "الموعد يُتّفق عليه بـvereinbaren (رسميًا أدقّ من machen العامية)."
+    },
+    {
+      "id": "kv-12",
+      "kollokation": "Bedenken äußern",
+      "satz": "Sie ___ Bedenken gegen den Vorschlag.",
+      "satzAr": "هي تُبدي تحفّظات على الاقتراح.",
+      "antwort": "äußert",
+      "optionen": [
+        "äußert",
+        "sagt",
+        "spricht",
+        "tut"
+      ],
+      "ar": "يُبدي (رأيًا/تحفّظًا)",
+      "noteAr": "الإبداء الرسمي بـäußern: Bedenken/Zweifel äußern."
+    },
+    {
+      "id": "kv-13",
+      "kollokation": "eine Gefahr darstellen",
+      "satz": "Diese Entwicklung ___ eine ernsthafte Gefahr dar.",
+      "satzAr": "يمثّل هذا التطوّر خطرًا جدّيًا.",
+      "antwort": "stellt",
+      "optionen": [
+        "stellt",
+        "ist",
+        "macht",
+        "gibt"
+      ],
+      "ar": "يمثّل / يشكّل",
+      "noteAr": "فعل منفصل: eine Gefahr darstellen (stellt ... dar)."
+    },
+    {
+      "id": "kv-14",
+      "kollokation": "eine Schlussfolgerung ziehen",
+      "satz": "Welche Schlussfolgerung ___ Sie aus den Daten?",
+      "satzAr": "ما الاستنتاج الذي تستخلصه من البيانات؟",
+      "antwort": "ziehen",
+      "optionen": [
+        "ziehen",
+        "machen",
+        "nehmen",
+        "holen"
+      ],
+      "ar": "يستخلص استنتاجًا",
+      "noteAr": "الاستنتاج يُستخلَص بـziehen: eine Schlussfolgerung ziehen."
+    },
+    {
+      "id": "kv-15",
+      "kollokation": "Anforderungen erfüllen",
+      "satz": "Das Produkt ___ alle technischen Anforderungen.",
+      "satzAr": "يستوفي المنتج جميع المتطلّبات التقنية.",
+      "antwort": "erfüllt",
+      "optionen": [
+        "erfüllt",
+        "macht",
+        "hat",
+        "tut"
+      ],
+      "ar": "يستوفي المتطلبات",
+      "noteAr": "الاستيفاء بـerfüllen: Anforderungen/Bedingungen erfüllen."
+    },
+    {
+      "id": "kv-16",
+      "kollokation": "Vorrang haben",
+      "satz": "Die Sicherheit der Kinder ___ absoluten Vorrang.",
+      "satzAr": "لسلامة الأطفال أولوية مطلقة.",
+      "antwort": "hat",
+      "optionen": [
+        "hat",
+        "ist",
+        "macht",
+        "steht"
+      ],
+      "ar": "له الأولوية",
+      "noteAr": "صيغة ثابتة: Vorrang haben vor + Dativ."
+    },
+    {
+      "id": "kv-17",
+      "kollokation": "zur Sprache bringen",
+      "satz": "Ich ___ das Thema morgen zur Sprache.",
+      "satzAr": "سأطرح الموضوع غدًا للنقاش.",
+      "antwort": "bringe",
+      "optionen": [
+        "bringe",
+        "sage",
+        "mache",
+        "rede"
+      ],
+      "ar": "يطرح (موضوعًا) للنقاش",
+      "noteAr": "الطرح للنقاش بـbringen: etwas zur Sprache bringen."
+    },
+    {
+      "id": "kv-18",
+      "kollokation": "Wert legen",
+      "satz": "Wir ___ großen Wert auf Qualität.",
+      "satzAr": "نحن نولي أهمية كبيرة للجودة.",
+      "antwort": "legen",
+      "optionen": [
+        "legen",
+        "machen",
+        "haben",
+        "geben"
+      ],
+      "ar": "يولي أهمية",
+      "noteAr": "إيلاء القيمة بـlegen: Wert legen auf + Akk."
+    },
+    {
+      "id": "kv-19",
+      "kollokation": "in Frage kommen",
+      "satz": "Das ___ für uns nicht in Frage.",
+      "satzAr": "هذا غير وارد بالنسبة لنا.",
+      "antwort": "kommt",
+      "optionen": [
+        "kommt",
+        "geht",
+        "ist",
+        "bleibt"
+      ],
+      "ar": "يكون واردًا / ممكنًا",
+      "noteAr": "الوارد بـkommen: für jemanden in Frage kommen."
+    },
+    {
+      "id": "kv-20",
+      "kollokation": "Kenntnis nehmen",
+      "satz": "Ich habe von Ihrem Schreiben Kenntnis ___.",
+      "satzAr": "لقد اطّلعت على رسالتك (أخذت علمًا بها).",
+      "antwort": "genommen",
+      "optionen": [
+        "genommen",
+        "gelesen",
+        "gehört",
+        "gesehen"
+      ],
+      "ar": "يأخذ علمًا بـ",
+      "noteAr": "الماضي التام بـgenommen: von etwas Kenntnis nehmen — صيغة رسمية في الرسائل."
+    },
+    {
+      "id": "kv-21",
+      "kollokation": "Bezug nehmen",
+      "satz": "Er hat in seiner Antwort auf Ihren Brief Bezug ___.",
+      "satzAr": "لقد أشار في ردّه إلى رسالتك.",
+      "antwort": "genommen",
+      "optionen": [
+        "genommen",
+        "gemacht",
+        "gestellt",
+        "geschrieben"
+      ],
+      "ar": "يشير إلى / يحيل إلى",
+      "noteAr": "الإحالة الرسمية: Bezug nehmen auf + Akk. — الماضي genommen."
+    },
+    {
+      "id": "kv-22",
+      "kollokation": "in Anspruch nehmen",
+      "satz": "Die Beratung wurde von vielen Familien in Anspruch ___.",
+      "satzAr": "استفادت عائلات كثيرة من الاستشارة.",
+      "antwort": "genommen",
+      "optionen": [
+        "genommen",
+        "gemacht",
+        "gebraucht",
+        "genutzt"
+      ],
+      "ar": "يستعين بـ / يستفيد من",
+      "noteAr": "الاستعانة: eine Leistung in Anspruch nehmen — الماضي genommen."
+    },
+    {
+      "id": "kv-23",
+      "kollokation": "unter Beweis stellen",
+      "satz": "Sie hat ihr Können unter Beweis ___.",
+      "satzAr": "لقد أثبتت قدرتها.",
+      "antwort": "gestellt",
+      "optionen": [
+        "gestellt",
+        "gemacht",
+        "gezeigt",
+        "getan"
+      ],
+      "ar": "يثبت (قدرته)",
+      "noteAr": "الإثبات: sein Können unter Beweis stellen — الماضي gestellt."
+    },
+    {
+      "id": "kv-24",
+      "kollokation": "auf den Weg bringen",
+      "satz": "Das Projekt wurde endlich auf den Weg ___.",
+      "satzAr": "أُطلق المشروع أخيرًا.",
+      "antwort": "gebracht",
+      "optionen": [
+        "gebracht",
+        "gemacht",
+        "gestellt",
+        "gestartet"
+      ],
+      "ar": "يُطلق (مشروعًا)",
+      "noteAr": "الإطلاق: ein Projekt auf den Weg bringen — الماضي gebracht."
+    },
+    {
+      "id": "kv-25",
+      "kollokation": "auf dem neuesten Stand",
+      "satz": "Die Technik hier ist auf dem ___ Stand.",
+      "satzAr": "التقنية هنا على أحدث مستوى.",
+      "antwort": "neuesten",
+      "optionen": [
+        "neuesten",
+        "letzten",
+        "höchsten",
+        "größten"
+      ],
+      "ar": "على أحدث ما يكون",
+      "noteAr": "صيغة ثابتة: auf dem neuesten Stand (sein/bleiben)."
+    },
+    {
+      "id": "kv-26",
+      "kollokation": "in vollem Umfang",
+      "satz": "Wir unterstützen den Plan in ___ Umfang.",
+      "satzAr": "ندعم الخطة بشكل كامل تمامًا.",
+      "antwort": "vollem",
+      "optionen": [
+        "vollem",
+        "ganzem",
+        "großem",
+        "weitem"
+      ],
+      "ar": "بشكل كامل",
+      "noteAr": "صيغة ثابتة: in vollem Umfang."
+    },
+    {
+      "id": "kv-27",
+      "kollokation": "eine Rede halten",
+      "satz": "Die Ministerin ___ eine Rede vor dem Parlament.",
+      "satzAr": "تلقي الوزيرة خطابًا أمام البرلمان.",
+      "antwort": "hält",
+      "optionen": [
+        "hält",
+        "gibt",
+        "macht",
+        "sagt"
+      ],
+      "ar": "يلقي خطابًا",
+      "noteAr": "الخطاب يُلقى بـhalten: eine Rede/einen Vortrag halten."
+    },
+    {
+      "id": "kv-28",
+      "kollokation": "Rede und Antwort stehen",
+      "satz": "Der Direktor musste den Eltern Rede und Antwort ___.",
+      "satzAr": "كان على المدير أن يفسّر ويبرّر أمام الأهل.",
+      "antwort": "stehen",
+      "optionen": [
+        "stehen",
+        "geben",
+        "machen",
+        "sagen"
+      ],
+      "ar": "يقف مفسّرًا ومبرّرًا",
+      "noteAr": "صيغة ثابتة: jemandem Rede und Antwort stehen."
+    },
+    {
+      "id": "kv-29",
+      "kollokation": "zur Verfügung stellen",
+      "satz": "Die Stadt ___ den Vereinen Räume zur Verfügung.",
+      "satzAr": "تضع المدينة قاعات تحت تصرّف الجمعيات.",
+      "antwort": "stellt",
+      "optionen": [
+        "stellt",
+        "gibt",
+        "macht",
+        "bringt"
+      ],
+      "ar": "يضع تحت التصرّف",
+      "noteAr": "الإتاحة بـstellen: jemandem etwas zur Verfügung stellen — قارن kv-08."
+    },
+    {
+      "id": "kv-30",
+      "kollokation": "Abschied nehmen",
+      "satz": "Wir ___ Abschied von unserer Kollegin.",
+      "satzAr": "نودّع زميلتنا.",
+      "antwort": "nehmen",
+      "optionen": [
+        "nehmen",
+        "machen",
+        "geben",
+        "sagen"
+      ],
+      "ar": "يودّع",
+      "noteAr": "الوداع بـnehmen: Abschied nehmen von + Dativ."
+    },
+    {
+      "id": "kv-31",
+      "kollokation": "Einfluss ausüben",
+      "satz": "Er ___ großen Einfluss auf die Jugend aus.",
+      "satzAr": "يمارس تأثيرًا كبيرًا على الشباب.",
+      "antwort": "übt",
+      "optionen": [
+        "übt",
+        "macht",
+        "tut",
+        "spielt"
+      ],
+      "ar": "يمارس تأثيرًا",
+      "noteAr": "التأثير يُمارَس بـausüben: Einfluss ausüben auf + Akk."
+    }
+  ]
+}

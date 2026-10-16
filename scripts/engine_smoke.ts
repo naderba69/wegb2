@@ -66,7 +66,7 @@ import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
-import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter, redemittelBank, vertiefungTexte, vertiefungDialoge, hoerneu,
+import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter, redemittelBank, vertiefungTexte, vertiefungDialoge, hoerneu, kollokVertiefung, synonymVertiefung,
 } from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi, dialogAudioSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
@@ -12500,8 +12500,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 49 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
-    "K257a bankload جاهزٌ في Node: 49 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 51 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
+    "K257a bankload جاهزٌ في Node: 51 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;
@@ -12933,6 +12933,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(!plSrc2.includes("hoerneu") && !plSrc2.includes("hn-0") && hnSrc.includes("مولّد آليًا بالذكاء الاصطناعي") &&
      hnSrc.includes("playbackRate") && !hnSrc.includes("update(") && !hnSrc.includes("fetch("),
     "K272c الموادّ خارج الخطة (لا مرجع في plan.ts)، الصوت موسوم KI في الواجهة، والسرعات من المشغّل (playbackRate) بلا ملفات جديدة");
+}
+
+// ===== K273 (R180 · C6): B2-Kollokations- und Register-Synonym-Vertiefung als zwei neue
+// Tiefen des TiefenLexikons (Retrieval-Kontextuebung mit Fehler-/Kompetenz-Rueckfluss wie
+// die vier Bestandstiefen). Bestehende 70er-Synonym- und Kollokations-Bestaende unberuehrt. =====
+{
+  const kvOk = kollokVertiefung.length === 31 && kollokVertiefung.every((k) =>
+    k.satz.includes("___") && k.optionen.includes(k.antwort) && new Set(k.optionen).size === 4 &&
+    k.ar.length > 3 && k.noteAr.length > 10 && k.kollokation.length > 5);
+  ok(kvOk, `K273a تلازمات B2 العميقة: ${kollokVertiefung.length} بندًا بجملة سياق وفراغ وخيارات أربعة وشرح شريك بالعربية`);
+  const svOk = synonymVertiefung.length === 24 && synonymVertiefung.every((x) =>
+    x.satz.includes("___") && x.optionen.includes(x.ziel) && x.optionen.includes(x.basis) &&
+    new Set(x.optionen).size === 4 && x.ziel !== x.basis && x.nuanceAr.length > 10);
+  ok(svOk, `K273b مرادفات السجلّ B2: ${synonymVertiefung.length} زوجًا (أساس/هدف) بسياقٍ وبيان فرقٍ عربي، والهدف بين الخيارات`);
+  const tlSrc = readFileSync("components/tiefenlex.tsx", "utf8");
+  ok(tlSrc.includes("bauKollokVertiefung") && tlSrc.includes("bauSynonymVertiefung") &&
+     tlSrc.includes('"kv"') && tlSrc.includes('"sv"') && tlSrc.includes("Kollokationen B2") &&
+     tlSrc.includes("logK") && tlSrc.includes("addFehlerNow"),
+    "K273c العمقان الجديدان موصولان في TiefenLexikon كتدريب استرجاع بالسجلّ والأخطاء نفسه (Wortschatz) — لا جزيرة جديدة");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

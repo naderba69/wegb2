@@ -265,6 +265,29 @@ export interface HoerNeuItem {
   fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
 }
 export const hoerneu: HoerNeuItem[] = [];
+/** 🧩 تلازم B2 معمّق (C6/R180): شريك الكلمة الصحيح داخل جملة سياقية */
+export interface KollokVertiefungItem {
+  id: string;
+  kollokation: string;
+  satz: string;
+  satzAr: string;
+  antwort: string;
+  optionen: string[];
+  ar: string;
+  noteAr: string;
+}
+/** 🪞 مرادف B2 سجلّي معمّق (C6/R180): الكلمة الأرقى للسياق الرسمي مع بيان الفرق */
+export interface SynonymVertiefungItem {
+  id: string;
+  basis: string;
+  ziel: string;
+  satz: string;
+  satzAr: string;
+  optionen: string[];
+  nuanceAr: string;
+}
+export const kollokVertiefung: KollokVertiefungItem[] = [];
+export const synonymVertiefung: SynonymVertiefungItem[] = [];
 export const vertiefungDialoge: VertiefungDialog[] = [];
 /** 🧰 عبارة تعبير وظيفية (C3): مصنّفة بوظيفتها وبأجزاء الامتحان التي تخدمها */
 export interface RedemittelItem {
@@ -352,6 +375,8 @@ function fuelleAusBanken(): void {
   vertiefungTexte.splice(0, vertiefungTexte.length, ...((bankRoh("vertiefung.json") as { texte: VertiefungText[] } | undefined)?.texte ?? []));
   vertiefungDialoge.splice(0, vertiefungDialoge.length, ...((bankRoh("vertiefung.json") as { dialoge: VertiefungDialog[] } | undefined)?.dialoge ?? []));
   hoerneu.splice(0, hoerneu.length, ...((bankRoh("hoerneu.json") as { items: HoerNeuItem[] } | undefined)?.items ?? []));
+  kollokVertiefung.splice(0, kollokVertiefung.length, ...((bankRoh("kollok-vertiefung.json") as { items: KollokVertiefungItem[] } | undefined)?.items ?? []));
+  synonymVertiefung.splice(0, synonymVertiefung.length, ...((bankRoh("synonym-vertiefung.json") as { items: SynonymVertiefungItem[] } | undefined)?.items ?? []));
   const hoer = bankRoh("hoeren-audio.json") as { einaetze?: HoerAudio[]; einsaetze: HoerAudio[] };
   Object.assign(hoerenAudio, Object.fromEntries(hoer.einsaetze.map((e) => [e.id, e])));
   const dik = bankRoh("diktat-audio.json") as { einsaetze: HoerAudio[] };
