@@ -13388,6 +13388,16 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K293 الحياة في ألمانيا: 12 بطاقة مؤسسات بعبارات جاهزة وبطاقة الاعتراف التمريضي كاملة المسارات، و16 تعبير شارع بسياقه — توجيه لا استشارة قانونية");
 }
 
+// ===== K294 (R201 · CI): .github/workflows/ci.yml fährt alle Tore bei jedem
+// Push/PR — tsc, smoke, interaktiv, audit, build. Das Fehlen von CI war ein
+// dokumentierter Mangel; die Datei selbst ist hiermit quellengeprüft. =====
+{
+  const ci = existsSync(".github/workflows/ci.yml") ? readFileSync(".github/workflows/ci.yml", "utf8") : "";
+  ok(ci.includes("tsc --noEmit") && ci.includes("npm run smoke") && ci.includes("npm run interaktiv") &&
+     ci.includes("npm run audit:content") && ci.includes("npm run build") && ci.includes("pull_request"),
+    "K294 بوابة CI موجودة وتشغّل البوابات الخمس كلّها على الدفع وطلبات السحب — لا اعتماد على ذاكرة بشرية");
+}
+
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den
 // echten CSS-Tokens, de-Sprachkennzeichnung für Screenreader, Fokus/​Skip-Link. =====
 {
