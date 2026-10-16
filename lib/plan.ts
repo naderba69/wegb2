@@ -1471,6 +1471,22 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       }
     }
   }
+  // ═══ R182/M2 · الافتتاحية الاسترجاعية أولًا في كلّ يوم (تعميم طقس البدء) ═══
+  // قبل R182 كانت مهام الاسترجاع تتأخر خلف فحص الأسبوع ونصوصه الجديدة (56 يومًا).
+  // القاعدة الآن: بعد مهام الرأس الإلزامية/الامتحانية (ففي الفحص الأسبوعي الامتحانُ
+  // نفسه استرجاع) تأتي كلُّ مهام الاسترجاع قبل أيّ محتوى جديد — في كلّ يومٍ ≥2.
+  // إعادة ترتيب مستقرة بلا تغيير في المحتوى؛ تُعاد ترقيم المعرفات الموضعية.
+  if (day > 1) {
+    let kopf = 0;
+    while (kopf < tasks.length && (tasks[kopf].mandatory || tasks[kopf].exam || tasks[kopf].kind === "check")) kopf++;
+    const abruf = tasks.filter((t, i) => i >= kopf && t.kind === "wiederholen");
+    if (abruf.length > 0) {
+      const rest = tasks.filter((t, i) => i >= kopf && t.kind !== "wiederholen");
+      const neu = [...tasks.slice(0, kopf), ...abruf, ...rest];
+      neu.forEach((t, i) => { t.id = `${day}:t${i + 1}`; });
+      tasks.splice(0, tasks.length, ...neu);
+    }
+  }
   const tempo = progress.settings.tempo ?? "regelmaessig";
   return { day, week, weekday, phase, type, tasks, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES };
 }

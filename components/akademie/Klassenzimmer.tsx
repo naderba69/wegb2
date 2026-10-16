@@ -156,6 +156,14 @@ export function Klassenzimmer({
         </div>
       )}
 
+      {/* ── 🔁 R182/M2: زمن الافتتاحية الاسترجاعية معلَن دائمًا ── */}
+      {day > 1 && ritual.torMinuten > 0 && (
+        <p className="tiny muted" data-testid="abruf-eroeffnung" style={{ margin: 0 }}>
+          🔁 يُفتتح يومك باسترجاعٍ قبل أيّ جديد: نحو <strong>{ritual.torMinuten} دقيقة</strong> مخططة
+          {ritual.grund === "wochencheck" ? " (امتحان الأسبوع نفسه + استرجاع)" : ""} — الاسترجاع أولًا دائمًا.
+        </p>
+      )}
+
       {/* ── 🦸 البطل: مهمّتك الآن ── */}
       {showCurrentHero && currentTask && (
         <section className="dirb-hero dirb-hero-anim-3" aria-label="مهمتك الآن">

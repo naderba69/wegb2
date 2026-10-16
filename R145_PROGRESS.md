@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-
+> Status nach R182: **Axis C vollständig (C1–C6, R175–R180) · Axis M: M1 (R181) + M2 (R182) ✅**
+> R182 (M2 Retrieval-first, verallgemeinert + gemessen) — alle Gates grün (smoke 1735/0). Weiter: Axis M (M3–M6), dann Axis U.
 ## النتيجة قبل/بعد
 
 | الفحص | قبل الإصلاح | بعده |
@@ -340,6 +341,18 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R182 — M2 Retrieval-first day opener, generalized + measured — abgeschlossen ✅
+
+- **Befund**: Das Sitzungsritual (K64) sperrte Neues hinter dem Abruf, doch an 56 Wochencheck-/
+  Reifetagen standen neue Lese-/Schreibinhalte VOR der Wiederholung; die Öffnungszeit war
+  nirgends ausgewiesen. buildDay ordnet jetzt stabil um (Kopf: Pflicht/Prüfung — im Wochencheck
+  ist die Prüfung selbst Abruf, K64d unverändert), danach alle Wiederholen-Aufgaben, dann Neues;
+  Positions-IDs werden neu nummeriert. Kein Inhalts-, nur Reihenfolge-Eingriff.
+- **Messung**: `RitualUrteil.torMinuten` summiert die geplanten Minuten der Tor-Aufgaben
+  (Wochencheck: Prüfungskopf + Abruf); das Klassenzimmer zeigt sie an jedem Tag ≥ 2 dauerhaft.
+- **Nachweise**: tsc ✓ · smoke **1735/0** (K275a Ordnung über 2..378, K275b Messung, K275c UI) ·
+  interaktiv 709/0 · audit 0 · build ✓.
 
 ## R181 — M1 Leistungsbasierte Kapsel-Intervalle (1/3/7/30/90) — abgeschlossen ✅
 

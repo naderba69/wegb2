@@ -12990,6 +12990,31 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K274d السلسلة كاملة: الخطة تبني بالمتكيف، والتمارين تُبلغ النتيجة، والمهام تستخرج الجملة، والرئيسية تحجز الفاصل، والكبسولة تشرحه للمتعلم");
 }
 
+// ===== K275 (R182 · M2): Die Abruf-Eröffnung steht in jedem Tag >= 2 vor jedem neuen
+// Inhalt (Kopf = Pflicht-/Prüfungsaufgaben; im Wochencheck ist die Prüfung der Abruf),
+// ihre geplante Zeit wird gemessen und im Klassenzimmer ausgewiesen. =====
+{
+  let ordnungOk = true; let geprueft = 0;
+  for (let d = 2; d <= TOTAL_DAYS; d++) {
+    const p = buildDay(d, emptyProgress);
+    const wi = p.tasks.findIndex((t) => t.kind === "wiederholen");
+    if (wi < 0) { ordnungOk = false; break; }
+    const davor = p.tasks.slice(0, wi);
+    const kopfOk = davor.every((t) => t.mandatory || t.exam || t.kind === "check") && (p.type === "wochencheck" || p.type === "abschluss" || davor.every((t) => t.mandatory));
+    if (!kopfOk) { ordnungOk = false; break; }
+    geprueft++;
+  }
+  ok(ordnungOk && geprueft === TOTAL_DAYS - 1, "K275a في الأيام 2..378 كلها يسبق الاسترجاعُ أيَّ محتوى جديد (الرأس: إلزامي/امتحاني فقط)");
+  const u2m = ritualUrteil(buildDay(2, emptyProgress), emptyProgress);
+  const summe2 = u2m.torIndizes.reduce((s, i) => s + buildDay(2, emptyProgress).tasks[i].minutes, 0);
+  const u7m = ritualUrteil(buildDay(7, emptyProgress), emptyProgress);
+  ok(u2m.torMinuten === summe2 && u2m.torMinuten > 0 && u7m.grund === "wochencheck" && u7m.torMinuten > 0,
+    "K275b زمن الافتتاحية محسوب من دقائق الخطة نفسها (بوابة عادية وفحص أسبوعي)، وبوابة K64 الأصلية محفوظة");
+  const klM2 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+  ok(klM2.includes("abruf-eroeffnung") && klM2.includes("الاسترجاع أولًا دائمًا"),
+    "K275c زمن الافتتاحية ومبدؤها معلنان للمتعلم في رأس اليوم دائمًا");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

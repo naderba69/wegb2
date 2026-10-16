@@ -35,6 +35,8 @@ export interface RitualUrteil {
   offen: number;
   /** مقفول = بوابة نشطة وفيها مهمّة لم تُسلَّم */
   gesperrt: boolean;
+  /** R182/M2: زمن الافتتاحية الاسترجاعية المخطط (دقائق مهام البوابة؛ وفي الفحص الأسبوعي دقائق الامتحان الافتتاحي نفسه) */
+  torMinuten: number;
   /** سبب غياب البوابة — للشفافية على الشاشة */
   grund?: "tag1" | "wochencheck" | "keinAbruf";
 }
@@ -50,13 +52,20 @@ export function torAufgaben(tasks: DayTask[]): number[] {
 }
 
 export function ritualUrteil(plan: DayPlan, progress: Progress): RitualUrteil {
-  const keine = (grund: RitualUrteil["grund"]): RitualUrteil => ({ aktiv: false, torIndizes: [], ersteFreie: 0, offen: 0, gesperrt: false, grund });
+  const keine = (grund: RitualUrteil["grund"]): RitualUrteil => ({ aktiv: false, torIndizes: [], ersteFreie: 0, offen: 0, gesperrt: false, grund, torMinuten: 0 });
   if (plan.day <= 1) return keine("tag1");
-  if (plan.type === "wochencheck") return keine("wochencheck");
+  if (plan.type === "wochencheck") {
+    const u = keine("wochencheck");
+    let kopfMin = 0;
+    for (const t of plan.tasks) { if (t.mandatory || t.exam || t.kind === "check") kopfMin += t.minutes; else break; }
+    const abrufMin = plan.tasks.filter((t) => t.kind === "wiederholen").reduce((s, t) => s + t.minutes, 0);
+    return { ...u, torMinuten: kopfMin + abrufMin };
+  }
   const tor = torAufgaben(plan.tasks);
   if (tor.length === 0) return keine("keinAbruf");
   const offen = tor.filter((i) => !progress.plan.tasks[plan.tasks[i].id]).length;
-  return { aktiv: true, torIndizes: tor, ersteFreie: tor.length, offen, gesperrt: offen > 0 };
+  const torMinuten = tor.reduce((s, i) => s + plan.tasks[i].minutes, 0);
+  return { aktiv: true, torIndizes: tor, ersteFreie: tor.length, offen, gesperrt: offen > 0, torMinuten };
 }
 
 /** هل المهمّة ذات الفهرس `index` مقفولةٌ الآن؟ */
