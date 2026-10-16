@@ -1,0 +1,320 @@
+{
+  "t-a2-27": {
+    "de": "Ich suche seit zwei Monaten eine kleine Wohnung in der Stadt. Sie muss nicht groß sein, aber hell und ruhig. Ein Balkon wäre schön, und die Kaltmiete sollte nicht über sechshundert Euro liegen. Ich habe schon viele Anzeigen gelesen und mehrere Wohnungen besichtigt. Viele waren zu teuer oder zu dunkel, und manche hatten kein Fenster im Bad.\n\nGestern habe ich eine schöne Zwei-Zimmer-Wohnung gesehen. Sie liegt in einem Altbau, hat fünfzig Quadratmeter, einen Balkon und eine Einbauküche. Die Kaltmiete beträgt fünfhundertachtzig Euro. Bei der Besichtigung hat mir besonders das helle Wohnzimmer gefallen. Im Bad gibt es ein Fenster, und vom Balkon sieht man auf einen ruhigen Innenhof.\n\nDie Vermieterin war freundlich und hat mir die Nebenkosten erklärt. Ich habe meine Unterlagen vorbereitet und ihr eine Nachricht geschickt. Sie möchte mir nächste Woche Bescheid geben. Bis dahin suche ich weiter, denn ich möchte sicher sein. Wenn ich eine Zusage bekomme, kann ich nächsten Monat umziehen. Dann beginnt ein neues Kapitel für mich in dieser Stadt.",
+    "ar": "بحث عن شقة منذ شهرين (صغيرة مشرقة هادئة، إيجار بارد ≤600 يورو)، وبعد إعلانات ومعاينات كثيرة وجد أمس شقة غرفتين في مبنى قديم: 50م² وشرفة ومطبخ مدمج بـ580 يورو، وغرفة معيشة مشرقة وحمّام بنافذة وشرفة على فناء داخلي هادئ. المالكة ودودة وشرحت التكاليف الإضافية؛ أرسل أوراقه وينتظر ردها الأسبوع القادم ويواصل البحث احتياطاً، فإن قُبل انتقل الشهر القادم.",
+    "questions": [
+      {
+        "id": "t-a2-27-l1",
+        "type": "mc",
+        "promptDe": "Seit wann sucht er eine Wohnung?",
+        "options": [
+          "seit zwei Monaten",
+          "seit zwei Wochen",
+          "seit einem Jahr"
+        ],
+        "answer": "seit zwei Monaten",
+        "explanationAr": "الدليل في النص: «Ich suche seit zwei Monaten eine kleine Wohnung»."
+      },
+      {
+        "id": "t-a2-27-l2",
+        "type": "mc",
+        "promptDe": "Wie hoch ist die Kaltmiete der Wohnung?",
+        "options": [
+          "fünfhundertachtzig Euro",
+          "sechshundert Euro",
+          "fünfhundert Euro"
+        ],
+        "answer": "fünfhundertachtzig Euro",
+        "explanationAr": "الدليل في النص: «Die Kaltmiete beträgt fünfhundertachtzig Euro»."
+      },
+      {
+        "id": "t-a2-27-l3",
+        "type": "truefalse",
+        "promptDe": "Die Wohnung hat einen Balkon mit Blick auf einen Innenhof.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «vom Balkon sieht man auf einen ruhigen Innenhof»."
+      },
+      {
+        "id": "t-a2-27-l4",
+        "type": "mc",
+        "promptDe": "Wann möchte die Vermieterin Bescheid geben?",
+        "options": [
+          "nächste Woche",
+          "morgen",
+          "nächsten Monat"
+        ],
+        "answer": "nächste Woche",
+        "explanationAr": "الدليل في النص: «Sie möchte mir nächste Woche Bescheid geben»."
+      }
+    ]
+  },
+  "t-a2-28": {
+    "de": "Nadia Saleh hat sich gestern bei einer Krankenkasse angemeldet. Heute ruft sie dort an, weil sie ihre Versicherungsnummer noch nicht bekommen hat. Eine freundliche Mitarbeiterin erklärt ihr alles am Telefon. Sie wartet nur kurz in der Leitung und hört leise Musik.\n\nDie Nummer wird per Post geschickt, sobald die Anmeldung bearbeitet ist. Das kann einige Tage dauern. Nadia fragt, ob sie in der Zwischenzeit trotzdem zum Arzt gehen kann. Die Mitarbeiterin sagt: Wenn die Versicherung schon aktiv ist, rechnet die Praxis direkt mit der Krankenkasse ab. Sie kann eine Mitgliedsbescheinigung anfordern und beim Arzt vorzeigen. Das ist eine gute Nachricht für Nadia. Sie bedankt sich für die klare Erklärung und fragt noch nach der Versichertenkarte.\n\nAuch die Versichertenkarte kommt später per Post. Die Mitarbeiterin bittet sie, ihre Adresse zu prüfen. Nadia schreibt alle Informationen in ihr Notizbuch, damit sie nichts vergisst. Jetzt kennt sie alle Schritte und fühlt sich gut informiert. Am Ende bedankt sie sich und legt auf. Sie ist jetzt beruhigt.",
+    "ar": "نادية صالح سجّلت أمس في شركة تأمين صحي وتتصل اليوم لأن رقم تأمينها لم يصل: الموظفة تشرح أن الرقم (والبطاقة لاحقاً) يأتيان بالبريد بعد معالجة التسجيل وقد يستغرق ذلك أياماً. في هذه الأثناء يمكنها زيارة الطبيب إن كان تأمينها فعّالاً — العيادة تحاسب الشركة مباشرة — وتطلب شهادة عضوية لتقديمها. تدوّن كل شيء في دفترها وتطمئن بعد التحقق من عنوانها.",
+    "questions": [
+      {
+        "id": "t-a2-28-l1",
+        "type": "mc",
+        "promptDe": "Warum ruft Nadia bei der Krankenkasse an?",
+        "options": [
+          "Sie hat ihre Versicherungsnummer noch nicht",
+          "Sie ist krank",
+          "Sie sucht einen Arzt"
+        ],
+        "answer": "Sie hat ihre Versicherungsnummer noch nicht",
+        "explanationAr": "الدليل في النص: «weil sie ihre Versicherungsnummer noch nicht bekommen hat»."
+      },
+      {
+        "id": "t-a2-28-l2",
+        "type": "mc",
+        "promptDe": "Wie erhält sie die Nummer?",
+        "options": [
+          "per Post nach der Bearbeitung",
+          "sofort per E-Mail",
+          "am Telefon"
+        ],
+        "answer": "per Post nach der Bearbeitung",
+        "explanationAr": "الدليل في النص: «Die Nummer wird per Post geschickt, sobald die Anmeldung bearbeitet ist»."
+      },
+      {
+        "id": "t-a2-28-l3",
+        "type": "truefalse",
+        "promptDe": "Nadia muss die Arztrechnung auf jeden Fall selbst bezahlen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «rechnet die Praxis direkt mit der Krankenkasse ab» إن كان التأمين فعّالاً."
+      },
+      {
+        "id": "t-a2-28-l4",
+        "type": "mc",
+        "promptDe": "Was schreibt Nadia in ihr Notizbuch?",
+        "options": [
+          "alle Informationen",
+          "die Telefonnummer",
+          "ihre Adresse"
+        ],
+        "answer": "alle Informationen",
+        "explanationAr": "الدليل في النص: «Nadia schreibt alle Informationen in ihr Notizbuch»."
+      }
+    ]
+  },
+  "t-a2-29": {
+    "de": "Nächste Woche beginnt ein neuer Deutschkurs an der Volkshochschule. Der Kurs ist dreimal pro Woche: montags, mittwochs und freitags von achtzehn bis zwanzig Uhr. Viele von uns lernen nach der Arbeit, deshalb ist der Abendkurs sehr praktisch. Der Kursraum ist hell und hat große Fenster mit Blick auf einen kleinen Garten.\n\nDer Lehrer heißt Herr Neumann. Er ist freundlich und erklärt die Grammatik mit einfachen Beispielen. Im Kurs sprechen wir viel miteinander. Wir üben kurze Gespräche, hören Dialoge und schreiben kleine Texte. Am Ende der Woche wiederholen wir gemeinsam den Wortschatz. In der Pause trinke ich Tee mit zwei anderen Teilnehmenden, und wir helfen einander bei den Hausaufgaben. Manchmal arbeiten wir in kleinen Gruppen und stellen uns gegenseitig Fragen.\n\nIch freue mich auf den Kurs, weil ich für die A2-Prüfung üben möchte. Das Zertifikat brauche ich für meinen Job. Heute habe ich das Lehrbuch gekauft und mein Heft vorbereitet. So kann ich gut mitarbeiten. Am ersten Tag möchte ich pünktlich sein und möglichst viel verstehen. Nach dem Kurs fahre ich mit dem Bus nach Hause.",
+    "ar": "دورة ألمانية جديدة في الجامعة الشعبية ثلاث مرات أسبوعياً (اثنين وأربعاء وجمعة 18–20) — مسائية عملية لمن يعملون. المعلم السيد نويمان ودود ويشرح القواعد بأمثلة بسيطة؛ في الدرس حديث كثير وحوارات مسموعة ونصوص قصيرة ومراجعة مفردات جماعية آخر الأسبوع، واستراحة شاي ومساعدة متبادلة في الواجب. تستعد صاحبة النص لامتحان A2 لأنها تحتاج الشهادة لعملها، اشترت الكتاب وجهزت الدفتر.",
+    "questions": [
+      {
+        "id": "t-a2-29-l1",
+        "type": "mc",
+        "promptDe": "Wann ist der Deutschkurs?",
+        "options": [
+          "montags, mittwochs und freitags abends",
+          "jeden Tag am Morgen",
+          "nur am Wochenende"
+        ],
+        "answer": "montags, mittwochs und freitags abends",
+        "explanationAr": "الدليل في النص: «montags, mittwochs und freitags von achtzehn bis zwanzig Uhr»."
+      },
+      {
+        "id": "t-a2-29-l2",
+        "type": "mc",
+        "promptDe": "Wie erklärt Herr Neumann die Grammatik?",
+        "options": [
+          "mit einfachen Beispielen",
+          "mit langen Texten",
+          "nur auf Deutsch ohne Beispiele"
+        ],
+        "answer": "mit einfachen Beispielen",
+        "explanationAr": "الدليل في النص: «erklärt die Grammatik mit einfachen Beispielen»."
+      },
+      {
+        "id": "t-a2-29-l3",
+        "type": "truefalse",
+        "promptDe": "Der Kurs findet dreimal pro Woche statt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Der Kurs ist dreimal pro Woche»."
+      },
+      {
+        "id": "t-a2-29-l4",
+        "type": "mc",
+        "promptDe": "Warum braucht sie das A2-Zertifikat?",
+        "options": [
+          "für ihren Job",
+          "für eine Reise",
+          "für die Wohnungssuche"
+        ],
+        "answer": "für ihren Job",
+        "explanationAr": "الدليل في النص: «Das Zertifikat brauche ich für meinen Job»."
+      }
+    ]
+  },
+  "t-a2-30": {
+    "de": "Mein Lieblingsgericht ist Couscous mit Gemüse und Lamm. Meine Mutter kocht es jeden Freitag in Tunesien für die ganze Familie. Für das Gericht braucht man Couscous, Karotten, Zucchini, Kichererbsen, Tomaten, Zwiebeln, Knoblauch und Gewürze wie Kreuzkümmel und Paprika. Der Duft aus der Küche füllt am Freitag das ganze Haus.\n\nMeine Mutter bereitet zuerst das Gemüse vor. Sie schält die Karotten und schneidet die Zucchini in Stücke. Die Zwiebeln werden klein geschnitten und mit etwas Öl angebraten. Danach kommen das Lamm, Wasser und die Gewürze in den Topf. Alles kocht langsam, bis das Fleisch weich ist. Der Couscous wird in einem Siebeinsatz über dem Dampf gegart, und die Kichererbsen kochen mit.\n\nAm Schluss legt man den Couscous auf einen großen Teller und gibt Fleisch und Gemüse darüber. Dazu steht scharfe Harissa extra auf dem Tisch, damit jeder selbst entscheiden kann, wie scharf sein Essen sein soll. Am Freitag isst die ganze Familie gemeinsam und genießt das Essen. Niemand isst allein, und alle bleiben lange am Tisch sitzen und erzählen.",
+    "ar": "طبقه المفضل كسكس بالخضار ولحم الضأن تطبخه أمه كل جمعة في تونس للعائلة: مكوّنات (جزر وكوسا وحمص وطماطم وبصل وثوم وكمون وفلفل). تحضّر الخضار وتقلي البصل بالزيت ثم اللحم والماء والتوابل على نار هادئة حتى يطرى، ويُبخَّر الكسكس فوق القدر مع الحمص. أخيراً يُقدَّم على طبق كبير باللحم والخضار فوقه، والهريسة الحارة على الطاولة جانباً ليقرر كلٌّ حدّته — والجمعة مائدة عائلية جامعة.",
+    "questions": [
+      {
+        "id": "t-a2-30-l1",
+        "type": "mc",
+        "promptDe": "Wann kocht die Mutter das Gericht?",
+        "options": [
+          "jeden Freitag",
+          "jeden Sonntag",
+          "jeden Tag"
+        ],
+        "answer": "jeden Freitag",
+        "explanationAr": "الدليل في النص: «Meine Mutter kocht es jeden Freitag»."
+      },
+      {
+        "id": "t-a2-30-l2",
+        "type": "mc",
+        "promptDe": "Wie wird der Couscous gegart?",
+        "options": [
+          "in einem Siebeinsatz über dem Dampf",
+          "in viel Wasser",
+          "im Ofen"
+        ],
+        "answer": "in einem Siebeinsatz über dem Dampf",
+        "explanationAr": "الدليل في النص: «wird in einem Siebeinsatz über dem Dampf gegart»."
+      },
+      {
+        "id": "t-a2-30-l3",
+        "type": "truefalse",
+        "promptDe": "Die Harissa wird direkt in den Topf gegeben.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «steht scharfe Harissa extra auf dem Tisch» — على الطاولة جانباً لا في القدر."
+      },
+      {
+        "id": "t-a2-30-l4",
+        "type": "mc",
+        "promptDe": "Welche Gewürze nennt der Text?",
+        "options": [
+          "Kreuzkümmel und Paprika",
+          "Salz und Zucker",
+          "Zimt und Honig"
+        ],
+        "answer": "Kreuzkümmel und Paprika",
+        "explanationAr": "الدليل في النص: «Gewürze wie Kreuzkümmel und Paprika»."
+      }
+    ]
+  },
+  "t-a2-031": {
+    "de": "Letzten Monat ist Sara von München nach Leipzig gezogen. Sie hatte eine neue Stelle als Grafikdesignerin gefunden. Die Miete in München war zu hoch, deshalb suchte sie eine Wohnung im Osten. In Leipzig fand sie eine schöne Altbauwohnung mit drei Zimmern und Balkon für sechshundertfünfzig Euro warm.\n\nIhre neue Wohnung liegt in einem ruhigen Viertel, und vom Balkon sieht sie einen kleinen Park. Am ersten Tag hat sie die Kartons ausgepackt und die Küche eingerichtet. Eine freundliche Nachbarin hat ihr geholfen, die Möbel ins Haus zu tragen. Bei der Arbeit hat Sara neue Aufgaben bekommen und nette Kollegen kennengelernt. Die Kollegen helfen ihr gern, wenn sie Fragen zu den neuen Aufgaben hat.\n\nAm Anfang vermisste sie ihre Freunde in München. Jetzt gefällt ihr Leipzig gut: Die Stadt ist grün, die Menschen sind freundlich und die Mieten sind bezahlbar. Sie vermisst ihre Familie noch, telefoniert aber am Wochenende oft mit ihrer Schwester. Am Samstag erkundet sie die Stadt mit dem Fahrrad, probiert neue Cafés aus und fotografiert die schönen alten Häuser.",
+    "ar": "انتقال Sara الشهر الماضي من ميونخ (إيجاراتها الغالية) إلى لايبزيغ لوظيفة مصممة غرافيك، فسكنت شقة قديمة بثلاث غرف وشرفة بـ650 يورو شاملاً في حي هادئ تطل على حديقة صغيرة. فرّغت الصناديق ورتبت المطبخ وساعدتها جارة في الأثاث، وفي العمل مهام جديدة وزملاء لطفاء. اشتاقت أولاً لأصدقائها ثم أحبت مدينتها الخضراء الودودة الرخيصة، وتتصل بأختها نهاية الأسبوع وتستكشف المدينة بالدراجة السبت.",
+    "questions": [
+      {
+        "id": "t-a2-031-l1",
+        "type": "mc",
+        "promptDe": "Warum ist Sara nach Leipzig gezogen?",
+        "options": [
+          "Sie hat dort eine neue Stelle gefunden",
+          "Ihre Familie wohnt dort",
+          "Sie studiert dort"
+        ],
+        "answer": "Sie hat dort eine neue Stelle gefunden",
+        "explanationAr": "الدليل في النص: «Sie hatte eine neue Stelle als Grafikdesignerin gefunden»."
+      },
+      {
+        "id": "t-a2-031-l2",
+        "type": "mc",
+        "promptDe": "Wie viel kostet ihre Wohnung warm?",
+        "options": [
+          "sechshundertfünfzig Euro",
+          "fünfhundertachtzig Euro",
+          "siebenhundert Euro"
+        ],
+        "answer": "sechshundertfünfzig Euro",
+        "explanationAr": "الدليل في النص: «für sechshundertfünfzig Euro warm»."
+      },
+      {
+        "id": "t-a2-031-l3",
+        "type": "truefalse",
+        "promptDe": "Eine Nachbarin hat Sara beim Umzug geholfen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Eine freundliche Nachbarin hat ihr geholfen, die Möbel ins Haus zu tragen»."
+      },
+      {
+        "id": "t-a2-031-l4",
+        "type": "mc",
+        "promptDe": "Was macht Sara am Samstag in Leipzig?",
+        "options": [
+          "Sie erkundet die Stadt mit dem Fahrrad",
+          "Sie fährt nach München",
+          "Sie packt Kartons aus"
+        ],
+        "answer": "Sie erkundet die Stadt mit dem Fahrrad",
+        "explanationAr": "الدليل في النص: «Am Samstag erkundet sie die Stadt mit dem Fahrrad»."
+      }
+    ]
+  },
+  "t-a2-032": {
+    "de": "Lukas hat seinen Tagesablauf in den letzten Monaten stark verändert. Früher stand er spät auf, trank drei Tassen Kaffee zum Frühstück und aß mittags oft Fast Food. Abends saß er stundenlang vor dem Fernseher und ging viel zu spät ins Bett. Er wollte gesünder leben, aber er wusste lange nicht, wie er anfangen soll.\n\nJetzt steht er um sieben Uhr auf, macht zwanzig Minuten Yoga und frühstückt Müsli mit Obst. Mittags kocht er selbst Gemüse mit Reis und geht dreimal pro Woche laufen. Er schläft vor Mitternacht und fühlt sich viel fitter. Bei der Arbeit ist er konzentrierter als früher.\n\nDie größte Schwierigkeit war, abends keine Schokolade zu essen. Am Anfang fiel es ihm schwer, früher ins Bett zu gehen. Deshalb legt er sein Handy in einen anderen Raum und liest ein Buch. Er plant seine Mahlzeiten und kauft am Samstag frisches Gemüse. Auch seine Kollegen haben die Veränderung bemerkt und gehen in der Mittagspause manchmal mit ihm spazieren. Lukas sagt, kleine Schritte passen besser zu seinem Alltag als ein strenger Plan. Er möchte die neue Routine auch im Winter beibehalten.",
+    "ar": "غيّر لوكاس روتينه جذرياً في أشهر: كان يقوم متأخراً ويشرب ثلاث قهوات صباحاً ويأكل وجبات سريعة ظهراً ويسهر أمام التلفاز؛ فصار يقوم في السابعة ويمارس يوغا 20 دقيقة ويفطر موسلي بالفاكهة ويطبخ ظهراً خضاراً وأرزاً ويجري ثلاث مرات أسبوعياً وينام قبل منتصف الليل — فزاد نشاطه وتركيزه. أصعب شيء ترك شوكولاتة المساء؛ يبعد هاتفه ويقرأ قبل النوم، ويخطط وجباته ويشتري خضاراً طازجة السبت، مقتنعاً أن الخطوات الصغيرة أنسب من خطة صارمة.",
+    "questions": [
+      {
+        "id": "t-a2-032-l1",
+        "type": "mc",
+        "promptDe": "Was macht Lukas jetzt am Morgen?",
+        "options": [
+          "Er macht Yoga und frühstückt Müsli",
+          "Er trinkt drei Tassen Kaffee",
+          "Er sieht fern"
+        ],
+        "answer": "Er macht Yoga und frühstückt Müsli",
+        "explanationAr": "الدليل في النص: «macht zwanzig Minuten Yoga und frühstückt Müsli mit Obst»."
+      },
+      {
+        "id": "t-a2-032-l2",
+        "type": "mc",
+        "promptDe": "Was war für Lukas am schwierigsten?",
+        "options": [
+          "abends keine Schokolade zu essen",
+          "früh aufzustehen",
+          "selbst zu kochen"
+        ],
+        "answer": "abends keine Schokolade zu essen",
+        "explanationAr": "الدليل في النص: «Die größte Schwierigkeit war, abends keine Schokolade zu essen»."
+      },
+      {
+        "id": "t-a2-032-l3",
+        "type": "truefalse",
+        "promptDe": "Lukas trinkt zum Frühstück drei Tassen Kaffee.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Früher stand er spät auf, trank drei Tassen Kaffee» — كان ذلك قديماً؛ الآن «frühstückt Müsli mit Obst»."
+      },
+      {
+        "id": "t-a2-032-l4",
+        "type": "mc",
+        "promptDe": "Warum legt er sein Handy in einen anderen Raum?",
+        "options": [
+          "Damit er früher ins Bett geht",
+          "Weil es kaputt ist",
+          "Weil er es nicht braucht"
+        ],
+        "answer": "Damit er früher ins Bett geht",
+        "explanationAr": "الدليل في النص: «Deshalb legt er sein Handy in einen anderen Raum und liest ein Buch» بعد صعوبة النوم المبكر."
+      }
+    ]
+  }
+}

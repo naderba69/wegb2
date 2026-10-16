@@ -319,7 +319,10 @@ async function main() {
     const { diktatSrc } = await import("../lib/content");
     ok(diktatSrc("s-a1-01") === "/audio/diktat/s-a1-01.mp3", "VII5 وجبة δ1 تصل القرص: A1-01 ملفها من الدار جاهز للنقر");
     const { sentences: sBank } = await import("../lib/content");
-    ok(sBank.filter((sx) => !(sx as { neu?: boolean }).neu).every((sx) => diktatSrc(sx.id) !== null) && sBank.filter((sx) => (sx as { neu?: boolean }).neu).every((sx) => diktatSrc(sx.id) === null) && diktatSrc("s-x-999") === null, "VII6 إعلانُ القفل: كلُّ جملةٍ قديمةٍ لها ملف، والجديدةُ (neu) تُرَدُّ null بصدق، والشبحُ يُرَدُّ null — لا كتمانَ حضورٍ ولا اختلاقَ غياب");
+    // R145: الإعلان الصادق = المانيفست نفسه: 180 جملةً قديمةً مسجّلة تُرَدّ ملفُها، وما عداها (قديمٌ لم يُسجَّل وجديد) يُرَدّ null بلا اختلاق
+    const { diktatAudio } = await import("../lib/content");
+    const manifestIds = new Set(Object.keys(diktatAudio));
+    ok(manifestIds.size === 180 && sBank.every((sx) => (diktatSrc(sx.id) !== null) === manifestIds.has(sx.id)) && sBank.filter((sx) => (sx as { neu?: boolean }).neu).every((sx) => diktatSrc(sx.id) === null) && diktatSrc("s-x-999") === null, "VII6 إعلانُ القفل: المانيفستُ مرآةُ ما يُرَدّ — 180 ملفاً مُعلناً يصل، وكلُّ ما عداه null بصدق، والشبحُ null — لا كتمانَ حضورٍ ولا اختلاقَ غياب");
 const hasFile = txt().includes("صوتٌ من الدار");
     const hasFall = txt().includes("📟");
     ok(hasFile !== hasFall, "VII7 شارةُ المصدر واحدةٌ دائماً لا ثنتان ولا صفر: حضورُ الملف يُعلَن وغيابُه يُعلَن — أياً كانت قرعةُ الجولة، فلا تقلّبَ ولا وميضَ كاذب");
@@ -462,7 +465,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
 
   /* ═══════════════ موجةُ ξ التتويج: مراكزُ XV الجديدة ═══════════════ */
-  const { dialogAudio, dialogAudioSrc, getMnemonik, mnemonikMap, alleVokabeln, fehlerList, luecken, dialogues } = await import("../lib/content");
+  const { dialogAudio, dialogAudioSrc, dialogAudioArt, dialogAudioIstKi, getMnemonik, mnemonikMap, alleVokabeln, fehlerList, luecken, dialogues } = await import("../lib/content");
   const { default: fsRaw } = { default: null } as { default: null };
 
   /* ---------- XIII — DialogOrdnung: دورةُ الترتيبِ كاملة ---------- */
@@ -515,12 +518,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XVI — مانيفستُ dialog-audio: العقدُ مع القرص ---------- */
   {
     const es = Object.values(dialogAudio) as unknown as { id: string; file: string; bytes: number; voice: string; level: string; stimmen?: number }[];
-    ok(es.length === 82, "XVI1 اثنان وثمانون مدخلاً محلياً — وكلها لحوارات في البنك");
-    ok(es.every((e) => /^\/audio\/dialog\/d-(?:a0|[ab][12])-\d\d\.mp3$/.test(e.file)), "XVI2 كلُّ ملفٍّ تحتَ دارِ الحواراتِ باسمِ حوارِه");
-    ok(es.every((e) => (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03" || e.voice === "voice-04+voice-05")), "XVI3 أصواتُ الدارِ موثّقة بأسمائها، ومنها الثنائية الجديدة voice-04+voice-05");
-    ok(es.filter((e) => e.level === "B1").length === 29 && es.filter((e) => e.level === "B2").length === 29 && es.filter((e) => e.level === "A1").length === 11 && es.filter((e) => e.level === "A2").length === 11, "XVI4 توزيعُ المستويات: 29 B2 · 29 B1 · 11 A1 · 11 A2");
+    ok(es.length === 164 && es.filter((e) => e.voice.startsWith("ki-")).length === 82 && es.filter((e) => !e.voice.startsWith("ki-")).length === 82, "XVI1 مئةٌ وأربعةٌ وستون مدخلاً محلياً: 82 بيتياً + 82 ki-* موسوماً (R164) — وكلها لحوارات في البنك");
+    ok(es.every((e) => e.file === `/audio/dialog/${e.id}.mp3`), "XVI2 كلُّ ملفٍّ تحتَ دارِ الحواراتِ باسمِ حوارِه حرفياً");
+    ok(es.every((e) => e.voice.startsWith("ki-") ? ["ki-f1", "ki-f2", "ki-m1", "ki-m2"].includes(e.voice) && e.stimmen === 1 : ["voice-01", "voice-01+voice-02", "voice-01+voice-02+voice-03", "voice-02+voice-03", "voice-04+voice-05"].includes(e.voice)), "XVI3 أصواتُ الدارِ موثّقة بأسمائها (ومنها voice-04+voice-05)، والـki-* موسومٌ أحاديَّ الصوتِ صراحةً — لا تمويهَ بين البيتي والمولّد");
+    const hausXVI = es.filter((e) => !e.voice.startsWith("ki-"));
+    ok(hausXVI.filter((e) => e.level === "B1").length === 29 && hausXVI.filter((e) => e.level === "B2").length === 29 && hausXVI.filter((e) => e.level === "A1").length === 11 && hausXVI.filter((e) => e.level === "A2").length === 11 && es.filter((e) => e.level === "A0").length === 16 && es.filter((e) => e.level === "A1").length === 36 && es.filter((e) => e.level === "A2").length === 38 && es.filter((e) => e.level === "B1").length === 37 && es.filter((e) => e.level === "B2").length === 37, "XVI4 توزيعُ البيتي: 29 B2 · 29 B1 · 11 A1 · 11 A2 (+2 A0)؛ والإجماليُّ بعد ki-*: ‏A0 16 · A1 36 · A2 38 · B1 37 · B2 37 = البنكُ كلُّه");
     ok(es.every((e) => dialogAudioSrc(e.id) === e.file), "XVI5 dialogAudioSrc يردُّ ما في القرصِ حرفيًّا");
-    ok(es.every((e) => (e.stimmen ?? 1) >= 2 ? e.bytes > 60000 : e.bytes > 200000), "XVI6 الحوارُ الأحاديُّ فوقَ دقيقتَين، والمؤدَّى بأصواتٍ فوقَ نصفِ دقيقةٍ — لا ملفَّ أجوف");
+    ok(es.every((e) => dialogAudioArt(e.id) === (e.voice.startsWith("ki-") ? "ki" : "haus") && dialogAudioIstKi(e.id) === e.voice.startsWith("ki-")) && dialogAudioArt("gibt-es-nicht") === null && !dialogAudioIstKi("gibt-es-nicht"), "XVI7 نوعُ الصوتِ يُشتقُّ من وسمِ المانيفستو نفسه: ki-* ‏= KI أحادي، وغيرُه = دار، والشبحُ بلا نوع");
+    ok(es.every((e) => (e.stimmen ?? 1) >= 2 ? e.bytes > 60000 : e.bytes > 20000), "XVI6 لا ملفَّ أجوف: البيتيُّ المؤدَّى بأصواتٍ فوقَ 60KB، والـki-* الأحاديُّ فوقَ 20KB (أقصرُ حوارٍ 75 حرفاً منطوقٌ فعلاً؛ والبايتاتُ الدقيقةُ مقفولةٌ في K258c)");
   }
 
   /* ---------- XVII — سيناريوهات ξ8: الجناحُ التونسيُّ في الشاشات ---------- */
@@ -2844,7 +2849,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     if (reveal) click(reveal);
     const rendered = txt();
     ok(!!reveal && rendered.includes("Hallo, hier spricht Nour.") && rendered.includes("أودّ تحديد موعد.") &&
-      rendered.includes("Ja, am Dienstag um zehn Uhr habe ich Zeit.") && rendered.includes("لديّ وقت يوم الثلاثاء في العاشرة"),
+      rendered.includes("Ja, am Dienstag um zehn Uhr habe ich Zeit.") && rendered.includes("لديّ وقت يوم الثلاثاء عند الساعة العاشرة"),
       "LXXXVII1 واجهة الاستماع تعرض صيغة الهاتف المصححة، ترجمة الموعد، وتأكيد اليوم والساعة بعد كشف النص");
 
     const q2 = Array.from(rootEl.querySelectorAll(".dirb-ex-item")).find((item) => (item.textContent ?? "").includes("Ich möchte einen ___ vereinbaren."));
@@ -2865,7 +2870,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       {
         id: "d-a1-04", titleDe: "Einkaufen auf dem Markt", titleAr: "التسوّق في السوق",
         prompt: "Ein Kilo Tomaten kostet ___ Euro.", answer: "drei",
-        visible: ["أعطني كيلو من فضلك.", "أكمل الفراغ بالسعر الصحيح من الحوار."],
+        visible: ["من فضلك، أعطني كيلوغراماً.", "أكمل الفراغ بالسعر الصحيح من الحوار."],
       },
       {
         id: "d-a1-05", titleDe: "Freizeit am Wochenende", titleAr: "وقت الفراغ في عطلة نهاية الأسبوع",
@@ -2875,7 +2880,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       {
         id: "d-a1-06", titleDe: "Im Bus", titleAr: "في الحافلة",
         prompt: "Sie müssen hier ___.", answer: "aussteigen",
-        visible: ["هذا الخط الخاطئ. يجب عليك أن تنزل هنا.", "الحافلة رقم 12 في الجهة المقابلة."],
+        visible: ["هذا خط الحافلة الخاطئ. يجب أن تنزل هنا.", "الحافلة رقم 12 في الجهة المقابلة."],
       },
     ];
     for (const item of cases) {

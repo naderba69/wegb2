@@ -9,3 +9,5 @@ next-env.d.ts
 __pycache__/
 public/sync/*.bundle
 content/.grammar.bak
+# R163: erzeugt aus content/ (Quelle der Wahrheit)
+public/banks.json

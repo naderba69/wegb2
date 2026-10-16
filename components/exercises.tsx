@@ -5,6 +5,7 @@
 import { useEffect, useState } from "react";
 import type { Exercise } from "@/lib/types";
 import { grader, deepReview, konfidenz, diffWoerter } from "@/lib/grader";
+import { gemischteOptionen } from "@/lib/optionen";
 import { addFehlerNow, logSicherheitNow } from "@/lib/store";
 import { speakAny } from "@/lib/speech";
 import { VertrauensBalken, AntwortDiff } from "./ui";
@@ -181,6 +182,11 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
       {items.map((ex, i) => {
         const stateId = exerciseStateKey(ex, i);
         const st = states[stateId];
+        // R145: ترتيب عرض مخلوط حتمياً ببذرة السؤال — يكسر انحياز موضع الجواب في البنوك
+        const mcOptionen = ex.type === "mc" && ex.options ? gemischteOptionen(ex.options, `mc:${stateId}`) : null;
+        const tfOptionen = ex.type === "truefalse"
+          ? gemischteOptionen(ex.options && ex.options.length === 2 ? ex.options : ["richtig", "falsch"], `tf:${stateId}`)
+          : null;
         const liveWert = getippt(ex) && st && !st.checked ? konfidenz(givenOf(st), refOf(ex)) : null;
         return (
           <div
@@ -226,7 +232,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
             )}
             {ex.type === "mc" && ex.options && (
               <div style={{ display: "grid", gap: "0.4rem" }}>
-                {ex.options.map((opt) => {
+                {(mcOptionen ?? ex.options).map((opt) => {
                   const selected = st?.response === opt;
                   return (
                     <button
@@ -251,7 +257,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
 
             {ex.type === "truefalse" && (
               <div style={{ display: "flex", gap: "0.5rem" }}>
-                {(ex.options && ex.options.length === 2 ? ex.options : ["richtig", "falsch"]).map((opt) => {
+                {(tfOptionen ?? ["richtig", "falsch"]).map((opt) => {
                   const selected = st?.response === opt;
                   return (
                     <button

@@ -51,36 +51,47 @@ export function buildModulPruefung(index: number, versuch = 0): ModulPruefung {
   const rand = rng(index * 7919 + versuch * 131 + 17);
   const lv = m.level;
 
+  // R145: الورقة من بنود مكتملة — نصوص بثلاثة أسئلة فأكثر أولاً، وتُستكمل الستة من بقية نصوص المستوى عند الحاجة
   const tOfLevel = texts.filter((t) => t.level === lv);
-  const gewaehlteTexte = pickN(tOfLevel, 2, rand);
-  const leseFragen: PruefFrage[] = gewaehlteTexte.flatMap((t) =>
-    leseText(t).questions.slice(0, 3).map((q) => ({
-      id: `mp${index}-l-${q.id}`,
-      promptDe: q.promptDe,
-      options: q.type === "truefalse" ? ["richtig", "falsch"] : q.options,
-      answer: Array.isArray(q.answer) ? String(q.answer[0]) : String(q.answer),
-      explanationAr: q.explanationAr ?? "",
-    }))
-  );
+  const texteSortiert = [...tOfLevel.filter((t) => leseText(t).questions.length >= 3), ...tOfLevel.filter((t) => leseText(t).questions.length < 3)];
+  const gewaehlteTexte = pickN(texteSortiert.slice(0, Math.max(2, tOfLevel.filter((t) => leseText(t).questions.length >= 3).length)), 2, rand);
+  const leseFragen: PruefFrage[] = [];
+  for (const t of [...gewaehlteTexte, ...pickN(texteSortiert.filter((t) => !gewaehlteTexte.includes(t)), texteSortiert.length, rand)]) {
+    if (leseFragen.length >= 6) break;
+    for (const q of leseText(t).questions.slice(0, 3)) {
+      if (leseFragen.length >= 6) break;
+      leseFragen.push({
+        id: `mp${index}-l-${q.id}`,
+        promptDe: q.promptDe,
+        options: q.type === "truefalse" ? ["richtig", "falsch"] : q.options,
+        answer: Array.isArray(q.answer) ? String(q.answer[0]) : String(q.answer),
+        explanationAr: q.explanationAr ?? "",
+      });
+    }
+  }
 
-  const dOfLevel = dialogues.filter((d) => d.level === lv);
+  // R145: حوارات حقيقية بسؤالين فأكثر (نصوص الاستماع الأحادية ht/hoer لا تدخل ورقة الوحدة)، وتُستكمل الستة بحوار رابع عند الحاجة
+  const dOfLevel = dialogues.filter((d) => d.level === lv && d.questions.length >= 2 && d.lines.length >= 2);
   const gewaehlteDialoge = pickN(dOfLevel, 3, rand);
-  const hoerFragen: PruefFrage[] = gewaehlteDialoge.flatMap((d) =>
-    d.questions.slice(0, 2).map((q) => ({
-      id: `mp${index}-h-${q.id}`,
-      promptDe: q.promptDe,
-      options: q.type === "truefalse" ? ["richtig", "falsch"] : q.options,
-      answer: Array.isArray(q.answer) ? String(q.answer[0]) : String(q.answer),
-      explanationAr: q.explanationAr ?? "",
-    }))
-  );
+  const hoerFragen: PruefFrage[] = [];
+  for (const d of [...gewaehlteDialoge, ...pickN(dOfLevel.filter((d) => !gewaehlteDialoge.includes(d)), dOfLevel.length, rand)]) {
+    if (hoerFragen.length >= 6) break;
+    for (const q of d.questions.slice(0, 2)) {
+      if (hoerFragen.length >= 6) break;
+      hoerFragen.push({
+        id: `mp${index}-h-${q.id}`,
+        promptDe: q.promptDe,
+        options: q.type === "truefalse" ? ["richtig", "falsch"] : q.options,
+        answer: Array.isArray(q.answer) ? String(q.answer[0]) : String(q.answer),
+        explanationAr: q.explanationAr ?? "",
+      });
+    }
+  }
 
   const wOfLevel = writingTasks.filter((w) => w.level === lv);
   const w = wOfLevel.length ? pickN(wOfLevel, 1, rand)[0] : undefined;
 
-  const sprechSaetze = gewaehlteDialoge[0]
-    ? gewaehlteDialoge[0].lines.slice(0, 3).map((l) => ({ de: l.de, ar: l.ar }))
-    : [];
+  const sprechSaetze = gewaehlteDialoge.flatMap((d) => d.lines).slice(0, 3).map((l) => ({ de: l.de, ar: l.ar }));
 
   return {
     modulNr: index, level: lv, titelAr: m.titelAr, minuten: 45,

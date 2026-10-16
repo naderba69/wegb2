@@ -1,0 +1,267 @@
+{
+  "t-a1-026": {
+    "de": "Heute ist ein sonniger Tag und das Wetter ist sehr schön. Die Sonne scheint und der Himmel ist blau. Es ist nicht zu kalt und nicht zu heiß. Es sind etwa zwanzig Grad. Ich ziehe ein T-Shirt und eine leichte Jacke an und bleibe lange draußen.\n\nAm Nachmittag gehe ich spazieren und höre Musik. Ich rufe meine Freundin an, und wir treffen uns im Park. Dort sitzen wir auf einer Bank, sprechen und lachen viel. Wir sehen viele Kinder und einen kleinen Hund. Der Hund spielt mit einem Ball. Später kaufen wir ein Eis und essen es langsam.\n\nAm Abend koche ich zu Hause Nudeln und esse auf dem Sofa. Danach sehe ich aus dem Fenster: Der Himmel ist noch blau. Ich öffne das Fenster und höre die Vögel. Sie singen laut und fröhlich. So ein Tag gefällt mir sehr. Ich gehe glücklich ins Bett.",
+    "ar": "يوم مشمس لطيف (نحو عشرين درجة): قميص وجاكيت خفيف ونزهة بعد الظهر. يتصل بصديقته فيلتقيان في الحديقة على مقعد، يضحكان ويشاهدان الأطفال وكلباً صغيراً ثم يشتريان مثلجات. مساءً يطبخ معكرونة في البيت ويفتح النافذة على سماء ما زالت زرقاء وعصافير تغرّد — يوم يسعده جداً.",
+    "questions": [
+      {
+        "id": "t-a1-026-l1",
+        "type": "mc",
+        "promptDe": "Wie ist das Wetter heute?",
+        "options": [
+          "sonnig und etwa zwanzig Grad",
+          "kalt und regnerisch",
+          "sehr heiß"
+        ],
+        "answer": "sonnig und etwa zwanzig Grad",
+        "explanationAr": "الدليل في النص: «Es sind etwa zwanzig Grad» والشمس مشرقة."
+      },
+      {
+        "id": "t-a1-026-l2",
+        "type": "mc",
+        "promptDe": "Was machen er und seine Freundin im Park?",
+        "options": [
+          "Sie spielen Fußball",
+          "Sie sitzen auf einer Bank und sprechen",
+          "Sie kaufen Brot"
+        ],
+        "answer": "Sie sitzen auf einer Bank und sprechen",
+        "explanationAr": "الدليل في النص: «Dort sitzen wir auf einer Bank, sprechen und lachen viel»."
+      },
+      {
+        "id": "t-a1-026-l3",
+        "type": "truefalse",
+        "promptDe": "Am Abend kocht er zu Hause Nudeln.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Am Abend koche ich zu Hause Nudeln»."
+      },
+      {
+        "id": "t-a1-026-l4",
+        "type": "mc",
+        "promptDe": "Was hört er am Abend am Fenster?",
+        "options": [
+          "die Vögel",
+          "die Kinder",
+          "den Hund"
+        ],
+        "answer": "die Vögel",
+        "explanationAr": "الدليل في النص: «Ich öffne das Fenster und höre die Vögel»."
+      }
+    ]
+  },
+  "t-a1-027": {
+    "de": "Mein Hobby ist Fußball. Jeden Freitagabend spiele ich mit meinen Kollegen. Wir spielen in einer Halle in der Nähe meiner Wohnung. Die Halle ist groß und hat zwei Tore. Wir treffen uns um sieben Uhr und freuen uns auf das Spiel.\n\nVor dem Spiel ziehen wir unsere Sportsachen an und trinken Wasser. Dann spielen wir eine Stunde. Ich bin nicht sehr gut, aber ich spiele gern und laufe viel. Mein Freund Paul ist der Torwart und hält viele Bälle. Manchmal lache ich über meine Fehler.\n\nNach dem Spiel trinken wir zusammen ein Bier und sprechen über die Arbeit. Manchmal sitzen wir noch eine Weile zusammen. Am Samstag bin ich oft müde, aber glücklich. Ich freue mich schon auf das nächste Spiel am Freitag.",
+    "ar": "هوايته كرة القدم: كل جمعة مساءً يلعب مع زملائه ساعة في قاعة كبيرة قرب بيته ذات مرميين، بعد تبديل الملابس الرياضية وشرب الماء. صديقه باول حارس يصدّ كرات كثيرة. بعد اللعب شراب وحديث عن العمل، والسبت تعب سعيد وترقّب للمباراة القادمة.",
+    "questions": [
+      {
+        "id": "t-a1-027-l1",
+        "type": "mc",
+        "promptDe": "Wann spielt er Fußball?",
+        "options": [
+          "jeden Freitagabend",
+          "jeden Samstagmorgen",
+          "jeden Sonntagabend"
+        ],
+        "answer": "jeden Freitagabend",
+        "explanationAr": "الدليل في النص: «Jeden Freitagabend spiele ich mit meinen Kollegen»."
+      },
+      {
+        "id": "t-a1-027-l2",
+        "type": "mc",
+        "promptDe": "Was ist Pauls Rolle im Spiel?",
+        "options": [
+          "Er ist der Torwart",
+          "Er ist der Trainer",
+          "Er zählt die Tore"
+        ],
+        "answer": "Er ist der Torwart",
+        "explanationAr": "الدليل في النص: «Mein Freund Paul ist der Torwart und hält viele Bälle»."
+      },
+      {
+        "id": "t-a1-027-l3",
+        "type": "truefalse",
+        "promptDe": "Sie spielen zwei Stunden in der Halle.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Dann spielen wir eine Stunde» — ساعة واحدة لا اثنتين."
+      },
+      {
+        "id": "t-a1-027-l4",
+        "type": "mc",
+        "promptDe": "Wie fühlt er sich am Samstag?",
+        "options": [
+          "oft müde, aber glücklich",
+          "krank",
+          "traurig"
+        ],
+        "answer": "oft müde, aber glücklich",
+        "explanationAr": "الدليل في النص: «Am Samstag bin ich oft müde, aber glücklich»."
+      }
+    ]
+  },
+  "t-a1-028": {
+    "de": "Ich arbeite als Ingenieur in einer kleinen Firma in der Stadt. Die Firma macht Maschinen für Autos. Jeden Tag stehe ich um halb sieben auf und fahre mit dem Bus zur Arbeit. Meine Kollegen sind sehr nett, und wir helfen uns oft.\n\nIch beginne um acht Uhr. Zuerst lese ich meine E-Mails. Dann spreche ich mit meinem Chef über den Tag. In der Werkstatt prüfen wir die Maschinen zusammen. Um zwölf Uhr mache ich eine Pause und esse Brot mit Käse. Am Nachmittag arbeite ich mit einem Kollegen an einer Maschine.\n\nManchmal haben wir viel Arbeit, aber mein Beruf gefällt mir sehr. Um fünf Uhr fahre ich nach Hause. Am Wochenende mache ich Sport oder besuche meine Eltern. So sind meine Tage: ruhig und gut.",
+    "ar": "مهندس في شركة صغيرة تصنع آلات للسيارات: يقوم في السادسة والنصف ويبدأ في الثامنة بالبريد ثم اجتماع مع المدير وفحص الآلات في الورشة مع الزملاء. استراحة الظهيرة خبز وجبن، والعودة في الخامسة. أحياناً عمل كثير لكنه يحب مهنته؛ نهاية الأسبوع رياضة أو زيارة الوالدين.",
+    "questions": [
+      {
+        "id": "t-a1-028-l1",
+        "type": "mc",
+        "promptDe": "Was macht die Firma?",
+        "options": [
+          "Maschinen für Autos",
+          "Autos",
+          "Computer"
+        ],
+        "answer": "Maschinen für Autos",
+        "explanationAr": "الدليل في النص: «Die Firma macht Maschinen für Autos»."
+      },
+      {
+        "id": "t-a1-028-l2",
+        "type": "mc",
+        "promptDe": "Was macht er zuerst bei der Arbeit?",
+        "options": [
+          "Er spricht mit dem Chef",
+          "Er liest seine E-Mails",
+          "Er prüft die Maschinen"
+        ],
+        "answer": "Er liest seine E-Mails",
+        "explanationAr": "الدليل في النص: «Zuerst lese ich meine E-Mails». الفخّ: الحديث مع المدير بعد البريد."
+      },
+      {
+        "id": "t-a1-028-l3",
+        "type": "truefalse",
+        "promptDe": "Er beginnt um acht Uhr mit der Arbeit.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Ich beginne um acht Uhr»."
+      },
+      {
+        "id": "t-a1-028-l4",
+        "type": "mc",
+        "promptDe": "Was isst er in der Pause?",
+        "options": [
+          "Brot mit Käse",
+          "Nudeln",
+          "ein Eis"
+        ],
+        "answer": "Brot mit Käse",
+        "explanationAr": "الدليل في النص: «esse Brot mit Käse»."
+      }
+    ]
+  },
+  "t-a1-029": {
+    "de": "Heute trage ich eine blaue Jeans, ein weißes T-Shirt und schwarze Schuhe. Im Winter ziehe ich eine warme Jacke an, manchmal auch einen Schal und Handschuhe. Im Sommer trage ich kurze Hosen und leichte T-Shirts. Zu Hause trage ich gern eine bequeme Hose und ein altes T-Shirt.\n\nFür die Arbeit brauche ich keine besondere Kleidung. Am Samstag gehe ich mit meiner Freundin in ein Geschäft. Sie sucht ein Kleid für eine Party, und ich brauche neue Socken. Im Geschäft probiere ich eine grüne Jacke an. Sie passt gut und steht mir.\n\nAber die Jacke ist ein bisschen teuer. Ich kaufe sie nicht und lege sie zurück. Meine Freundin kauft ihr Kleid. Am Ende fahren wir mit dem Bus nach Hause und sind zufrieden mit dem Tag.",
+    "ar": "ملابسه بحسب الفصل: اليوم جينز أزرق وقميص أبيض وحذاء أسود؛ شتاءً جاكيت دافئة ووشاح وقفازات، وصيفاً سراويل قصيرة، وفي البيت ملابس مريحة قديمة. السبت تسوّق مع صديقته: هي تبحث عن فستان وهو يحتاج جوارب؛ يجرّب جاكيت خضراء تناسبه لكنها غالية فلا يشتريها، ويعودان بالحافلة راضيين.",
+    "questions": [
+      {
+        "id": "t-a1-029-l1",
+        "type": "mc",
+        "promptDe": "Was trägt er heute?",
+        "options": [
+          "eine blaue Jeans und ein weißes T-Shirt",
+          "eine grüne Jacke",
+          "kurze Hosen"
+        ],
+        "answer": "eine blaue Jeans und ein weißes T-Shirt",
+        "explanationAr": "الدليل في النص: «Heute trage ich eine blaue Jeans, ein weißes T-Shirt»."
+      },
+      {
+        "id": "t-a1-029-l2",
+        "type": "mc",
+        "promptDe": "Was sucht seine Freundin im Geschäft?",
+        "options": [
+          "ein Kleid",
+          "neue Socken",
+          "eine Jacke"
+        ],
+        "answer": "ein Kleid",
+        "explanationAr": "الدليل في النص: «Sie sucht ein Kleid für eine Party»."
+      },
+      {
+        "id": "t-a1-029-l3",
+        "type": "truefalse",
+        "promptDe": "Er kauft die grüne Jacke im Geschäft.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Ich kaufe sie nicht und lege sie zurück» — أعادها لأنها غالية."
+      },
+      {
+        "id": "t-a1-029-l4",
+        "type": "mc",
+        "promptDe": "Warum kauft er die Jacke nicht?",
+        "options": [
+          "Sie passt nicht",
+          "Sie ist ein bisschen teuer",
+          "Sie ist grün"
+        ],
+        "answer": "Sie ist ein bisschen teuer",
+        "explanationAr": "الدليل في النص: «die Jacke ist ein bisschen teuer» مع أنها تناسبه: «Sie passt gut»."
+      }
+    ]
+  },
+  "t-a1-030": {
+    "de": "Heute bin ich bei der Ärztin. Ich habe seit zwei Tagen Kopfschmerzen und ein bisschen Fieber. Zuerst sitze ich im Wartezimmer und lese eine Zeitschrift. Dort warten noch drei Personen. Nach zwanzig Minuten ruft mich die Ärztin in ihr Zimmer.\n\nDie Ärztin fragt: „Was tut weh?“ Ich antworte: „Mein Kopf tut weh.“ Sie fragt auch: „Haben Sie Husten?“ Ich sage: „Ein wenig, aber mein Hals tut nicht weh.“ Sie untersucht mich und misst meine Temperatur. Dann sagt sie: „Vielleicht ist es eine Erkältung. Trinken Sie viel Wasser und ruhen Sie sich aus.“\n\nSie schreibt ein Rezept für mich. In der Apotheke kaufe ich die Tabletten. Zu Hause trinke ich viel Wasser und gehe früh schlafen. Am nächsten Morgen geht es mir schon besser.",
+    "ar": "عند الطبيبة بعد يومين من الصداع وحمى خفيفة: انتظار عشرين دقيقة في غرفة الانتظار مع ثلاثة أشخاص وقراءة مجلة، ثم أسئلة وفحص وقياس حرارة — التشخيص المرجح نزلة برد. الوصفة: ماء كثير وراحة وأقراص من الصيدلية؛ وفي البيت نوم مبكر فتحسّن في الصباح التالي.",
+    "questions": [
+      {
+        "id": "t-a1-030-l1",
+        "type": "mc",
+        "promptDe": "Seit wann hat er Kopfschmerzen?",
+        "options": [
+          "seit zwei Tagen",
+          "seit einer Woche",
+          "seit heute Morgen"
+        ],
+        "answer": "seit zwei Tagen",
+        "explanationAr": "الدليل في النص: «Ich habe seit zwei Tagen Kopfschmerzen»."
+      },
+      {
+        "id": "t-a1-030-l2",
+        "type": "mc",
+        "promptDe": "Was macht er im Wartezimmer?",
+        "options": [
+          "Er liest eine Zeitschrift",
+          "Er schläft",
+          "Er trinkt Wasser"
+        ],
+        "answer": "Er liest eine Zeitschrift",
+        "explanationAr": "الدليل في النص: «sitze ich im Wartezimmer und lese eine Zeitschrift»."
+      },
+      {
+        "id": "t-a1-030-l3",
+        "type": "truefalse",
+        "promptDe": "Die Ärztin schreibt ein Rezept für Tabletten.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Sie schreibt ein Rezept für mich» ثم اشترى الأقراص من الصيدلية."
+      },
+      {
+        "id": "t-a1-030-l4",
+        "type": "mc",
+        "promptDe": "Was sagt die Ärztin am Ende?",
+        "options": [
+          "Er soll viel Wasser trinken und sich ausruhen",
+          "Er soll Sport machen",
+          "Er soll mehr arbeiten"
+        ],
+        "answer": "Er soll viel Wasser trinken und sich ausruhen",
+        "explanationAr": "الدليل في النص: «Trinken Sie viel Wasser und ruhen Sie sich aus»."
+      }
+    ]
+  }
+}

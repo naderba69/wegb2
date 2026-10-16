@@ -3806,7 +3806,7 @@
     "waisen": [
       "die Schulpflicht",
       "der Schulabbruch",
-      "lebenslanges Lernen"
+      "das lebenslange Lernen"
     ]
   },
   {
@@ -4514,7 +4514,7 @@
     ],
     "neu": true,
     "waisen": [
-      "künstliche Intelligenz",
+      "die künstliche Intelligenz",
       "die Bedienungsanleitung",
       "die Prioritäten setzen"
     ]
@@ -4986,7 +4986,7 @@
     "waisen": [
       "die Schonung",
       "die Genesung abwarten",
-      "belastende Arbeit"
+      "die belastende Arbeit"
     ]
   },
   {
@@ -9078,5 +9078,35 @@
     "level": "A2",
     "de": "Die Party hat mir viel Spaß gemacht.",
     "ar": "استمتعت كثيراً في الحفلة."
+  },
+  {
+    "id": "s-b2-211",
+    "level": "B2",
+    "de": "Trotz der Niederlage im Turnier wollten die Fans ihre Mannschaft für das nächste Spiel anfeuern.",
+    "ar": "رغم الهزيمة في البطولة أراد المشجّعون تشجيع فريقهم في المباراة المقبلة.",
+    "tags": [
+      "waisen"
+    ],
+    "neu": true,
+    "waisen": [
+      "anfeuern",
+      "die Niederlage",
+      "das Turnier"
+    ]
+  },
+  {
+    "id": "s-b2-212",
+    "level": "B2",
+    "de": "Zur Erholung verbrachten wir unseren Aufenthalt auf einem Campingplatz am See.",
+    "ar": "طلباً للاستجمام قضينا إقامتنا في مخيّم على ضفاف بحيرة.",
+    "tags": [
+      "waisen"
+    ],
+    "neu": true,
+    "waisen": [
+      "der Campingplatz",
+      "die Erholung",
+      "der Aufenthalt"
+    ]
   }
 ]

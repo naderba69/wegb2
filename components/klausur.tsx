@@ -5,6 +5,7 @@ import type { Exercise, Progress } from "@/lib/types";
 import { buildKlausur, buildSkillKlausur, SKILL_LABELS, klausurNote, sprintPlan, type Klausur, type KlausurSection, type SkillKey } from "@/lib/klausur";
 import { getDialogue } from "@/lib/content";
 import { normalize } from "@/lib/grader";
+import { gemischteOptionen } from "@/lib/optionen";
 import { addFehlerNow, logKN } from "@/lib/store";
 import type { Kompetenz } from "@/lib/types";
 import { speakAny, speakLine, stopSpeech, listenDe, recognitionAvailable, cloudSpracheFrei } from "@/lib/speech";
@@ -246,7 +247,7 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
                 </div>
                 {ex.type === "mc" ? (
                   <div style={{ display: "grid", gap: "0.3rem" }}>
-                    {(ex.options ?? []).map((o) => (
+                    {gemischteOptionen(ex.options ?? [], ex.id).map((o) => (
                       <label key={o} style={{ display: "flex", gap: "0.5rem", cursor: "pointer", direction: "ltr", textAlign: "left" }}>
                         <input
                           type="radio"

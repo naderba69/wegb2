@@ -3,6 +3,7 @@ import "./globals.css";
 import Navigation from "@/components/akademie/Navigation";
 import { UiAppShell } from "@/components/dirb/DesignSystem";
 import RegisterSW from "@/components/RegisterSW";
+import BankenStart from "@/components/BankenStart";
 
 export const metadata: Metadata = {
   title: "طريقي إلى B2 — Mein Weg bis B2",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ar" dir="rtl">
       <body>
+        <BankenStart>
         <UiAppShell data-ui-shell="ui-app-shell">
           <main id="main-content" className="ui-main" tabIndex={-1}>
             {children}
@@ -29,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             طريقي إلى B2 · خطتك وتقدّمك محفوظان في هذا المتصفح.
           </footer>
         </UiAppShell>
+        </BankenStart>
         <RegisterSW />
       </body>
     </html>

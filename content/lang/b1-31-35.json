@@ -1,0 +1,302 @@
+{
+  "t-b1-31": {
+    "de": "Vor drei Monaten bin ich von Hamburg nach Leipzig gezogen. Der Grund war ein neues Jobangebot als Softwareentwicklerin, das ich nicht ablehnen wollte. Am Anfang fiel es mir schwer, weil ich meine Freunde und meine Familie sehr vermisste. Außerdem kannte ich die Stadt überhaupt nicht und musste mich erst orientieren.\n\nIch nahm mir vor, jede Woche einen neuen Ort zu besuchen: ein Café, einen Park oder ein Museum. So lernte ich die Stadt Schritt für Schritt kennen. Inzwischen habe ich zwei Kolleginnen kennengelernt, mit denen ich mich gut verstehe. Wir gehen manchmal zusammen essen oder ins Kino. Was ich an Leipzig besonders mag, sind die vielen Grünflächen und die günstigen Mieten im Vergleich zu Hamburg.\n\nNatürlich gibt es auch Dinge, die ich vermisse, zum Beispiel die Hafenatmosphäre und das Meer. Aber ich bereue den Umzug nicht: Er hat mir geholfen, selbstständiger zu werden und neue Perspektiven zu gewinnen. Auch bei der Arbeit fühle ich mich inzwischen sicherer. Mein Team hilft mir, wenn ich Fragen habe, und ich lerne jeden Tag etwas Neues. Am Wochenende gehe ich mit meinen Kolleginnen in einen Park oder koche ein Gericht aus Hamburg. So entdecke ich die neue Stadt, ohne meine alte Heimat zu vergessen.",
+    "ar": "انتقلت قبل ثلاثة أشهر من هامبورغ إلى لايبزيغ لعرض عمل كمطوّرة برمجيات لم تستطع رفضه. البداية كانت صعبة: اشتياق للأصدقاء والعائلة ومدينة لا تعرف فيها شيئاً، فقررت زيارة مكان جديد كل أسبوع (مقهى أو حديقة أو متحف) حتى عرفت لايبزيغ خطوة خطوة وكوّنت صداقة مع زميلتين، وصارت تحب مساحاتها الخضراء وإيجاراتها الرخيصة قياساً بهامبورغ. تفتقد أجواء الميناء والبحر لكنها لا تندم: الانتقال جعلها أكثر استقلالية وفتح لها آفاقاً جديدة، وفي العمل تشعر بأمان أكبر وفريقها يساعدها، ونهاية الأسبوع بين حديقة مع الزميلتين وطبق من هامبورغ — مدينة جديدة تُكتشف دون نسيان الوطن القديم.",
+    "questions": [
+      {
+        "id": "t-b1-31-l1",
+        "type": "mc",
+        "promptDe": "Warum ist sie nach Leipzig gezogen?",
+        "options": [
+          "Wegen eines neuen Jobangebots",
+          "Wegen des Meeres",
+          "Weil ihre Familie dort wohnt"
+        ],
+        "answer": "Wegen eines neuen Jobangebots",
+        "explanationAr": "الدليل في النص: «Der Grund war ein neues Jobangebot als Softwareentwicklerin»."
+      },
+      {
+        "id": "t-b1-31-l2",
+        "type": "mc",
+        "promptDe": "Was nahm sie sich am Anfang vor?",
+        "options": [
+          "jede Woche einen neuen Ort zu besuchen",
+          "sofort zurückzuziehen",
+          "jeden Tag Hamburg anzurufen"
+        ],
+        "answer": "jede Woche einen neuen Ort zu besuchen",
+        "explanationAr": "الدليل في النص: «Ich nahm mir vor, jede Woche einen neuen Ort zu besuchen»."
+      },
+      {
+        "id": "t-b1-31-l3",
+        "type": "mc",
+        "promptDe": "Was mag sie an Leipzig besonders?",
+        "options": [
+          "die vielen Grünflächen und die günstigen Mieten",
+          "die Hafenatmosphäre",
+          "das Meer"
+        ],
+        "answer": "die vielen Grünflächen und die günstigen Mieten",
+        "explanationAr": "الدليل في النص: «die vielen Grünflächen und die günstigen Mieten im Vergleich zu Hamburg»."
+      },
+      {
+        "id": "t-b1-31-l4",
+        "type": "truefalse",
+        "promptDe": "Sie bereut den Umzug nach Leipzig.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Aber ich bereue den Umzug nicht»."
+      },
+      {
+        "id": "t-b1-31-l5",
+        "type": "fill",
+        "promptDe": "Ich nahm mir vor, jede Woche einen neuen ___ zu besuchen: ein Café, einen Park oder ein Museum.",
+        "answer": "Ort",
+        "explanationAr": "الدليل في النص: «einen neuen Ort zu besuchen»."
+      }
+    ]
+  },
+  "t-b1-32": {
+    "de": "Seit einem Jahr esse ich kein Fleisch mehr. Anfangs war es schwierig, weil meine Familie traditionell viel Fleisch kocht und ich in Restaurants oft nur wenige Optionen hatte. Inzwischen habe ich viele neue Rezepte ausprobiert, vor allem aus der orientalischen und indischen Küche, in der es viele vegetarische Gerichte gibt.\n\nWas mich überrascht hat: Ich fühle mich nicht schwächer, im Gegenteil, ich habe mehr Energie, und mein Cholesterinwert ist gesunken. Natürlich muss ich darauf achten, genügend Eisen und Eiweiß zu essen, zum Beispiel durch Hülsenfrüchte, Nüsse und Spinat. Inzwischen bereite ich mein Mittagessen oft am Abend vorher zu, damit ich in der Pause nicht lange suchen muss. Wenn ich mit Freunden essen gehe, frage ich freundlich nach den Zutaten.\n\nMeine Freunde reagieren unterschiedlich: Einige finden es gut, andere machen Witze darüber. Ich versuche, niemanden zu missionieren, sondern einfach mit gutem Beispiel voranzugehen. Auch meine Familie probiert jetzt neue Rezepte aus. Für mich ist wichtig, dass die Entscheidung zu meinem Alltag passt und ich genügend Auswahl habe. So fühlt sich der Verzicht nicht wie ein Zwang an, sondern wie eine Gewohnheit.",
+    "ar": "عام بلا لحم: البداية صعبة في عائلة تطبخ اللحم تقليدياً ومطاعم بخيارات قليلة، ثم اكتشفت وصفات شرقية وهندية غنية بالأطباق النباتية. المفاجأة أنها لا تشعر بضعف بل بطاقة أكبر وانخفاض في الكولسترول، مع انتباه للحديد والبروتين من البقوليات والمكسرات والسبانخ، وتحضير غدائها مساءً وسؤال ودود عن المكوّنات عند الأكل مع الأصدقاء. ردود الأصدقاء بين مؤيد وساخر، وهي لا تبشّر بل تقدّم مثالاً هادئاً حتى صارت عائلتها تجرب الوصفات الجديدة؛ المهم أن يناسب القرار يومها وأن تبقى الخيارات كافية فلا يشبه الحرمان قسراً.",
+    "questions": [
+      {
+        "id": "t-b1-32-l1",
+        "type": "mc",
+        "promptDe": "Warum war der Anfang für sie schwierig?",
+        "options": [
+          "Ihre Familie kocht viel Fleisch und Restaurants hatten wenig Auswahl",
+          "Sie konnte nicht kochen",
+          "Gemüse war zu teuer"
+        ],
+        "answer": "Ihre Familie kocht viel Fleisch und Restaurants hatten wenig Auswahl",
+        "explanationAr": "الدليل في النص: «weil meine Familie traditionell viel Fleisch kocht und ich in Restaurants oft nur wenige Optionen hatte»."
+      },
+      {
+        "id": "t-b1-32-l2",
+        "type": "mc",
+        "promptDe": "Was hat sie an sich selbst überrascht?",
+        "options": [
+          "Sie hat mehr Energie und ihr Cholesterinwert ist gesunken",
+          "Sie ist schwächer geworden",
+          "Sie hat zugenommen"
+        ],
+        "answer": "Sie hat mehr Energie und ihr Cholesterinwert ist gesunken",
+        "explanationAr": "الدليل في النص: «ich habe mehr Energie, und mein Cholesterinwert ist gesunken»."
+      },
+      {
+        "id": "t-b1-32-l3",
+        "type": "mc",
+        "promptDe": "Worauf muss sie bei ihrer Ernährung achten?",
+        "options": [
+          "auf genügend Eisen und Eiweiß",
+          "auf mehr Zucker",
+          "auf weniger Gemüse"
+        ],
+        "answer": "auf genügend Eisen und Eiweiß",
+        "explanationAr": "الدليل في النص: «genügend Eisen und Eiweiß zu essen, zum Beispiel durch Hülsenfrüchte, Nüsse und Spinat»."
+      },
+      {
+        "id": "t-b1-32-l4",
+        "type": "truefalse",
+        "promptDe": "Sie versucht, ihre Freunde von ihrer Ernährung zu überzeugen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Ich versuche, niemanden zu missionieren»."
+      },
+      {
+        "id": "t-b1-32-l5",
+        "type": "fill",
+        "promptDe": "Ich fühle mich nicht schwächer, im ___ habe ich mehr Energie.",
+        "answer": "Gegenteil",
+        "explanationAr": "الدليل في النص: «im Gegenteil, ich habe mehr Energie»."
+      }
+    ]
+  },
+  "t-b1-33": {
+    "de": "Letzte Woche hatte ich ein Bewerbungsgespräch bei einer Marketingfirma in Köln. Schon Tage vorher war ich ziemlich nervös. Ich las meinen Lebenslauf mehrmals durch, informierte mich gründlich über die Firma und übte typische Fragen: nach meinen Stärken und Schwächen, meiner Berufserfahrung und meinen Gehaltsvorstellungen.\n\nPünktlich um zehn Uhr war ich da. Die Gesprächspartnerin war freundlich und stellte mir zuerst das Unternehmen vor. Sie fragte nach meinem Studium und meinen Praktika. Außerdem wollte sie wissen, warum ich gerade in dieser Firma arbeiten möchte. Am Ende hatte ich auch selbst die Gelegenheit, Fragen zu stellen. Ich fragte nach dem Team, den Arbeitszeiten und der Möglichkeit, teilweise im Homeoffice zu arbeiten. Besonders wichtig war mir, wie ein normaler Arbeitstag aussieht und welche Aufgaben am Anfang auf mich warten.\n\nDie Gesprächspartnerin beantwortete alle Fragen geduldig. Danach fühlte ich mich viel ruhiger. Obwohl ich noch keine Zusage hatte, war ich mit dem Gespräch zufrieden. Drei Tage später bekam ich eine E-Mail: Ich wurde zu einem zweiten Gespräch eingeladen. Diese Einladung machte mich sehr froh, und ich begann sofort, mich darauf vorzubereiten.",
+    "ar": "مقابلة عمل في شركة تسويق بكولونيا بعد أيام من التوتر والاستعداد: قراءة السيرة مراراً ودراسة الشركة والتدرب على الأسئلة المعتادة (نقاط القوة والضعف والخبرة وتوقعات الراتب). حضرت في العاشرة تماماً فاستقبلتها المحاوِرة بلطف وقدّمت الشركة وسألت عن دراستها وتدريبها وسبب اختيارها هذه الشركة بالذات، ثم أتيح لها أن تسأل عن الفريق وساعات العمل وإمكانية العمل الجزئي من البيت وشكل يوم العمل العادي ومهام البداية. أجابت المحاوِرة عن كل شيء فهدأت رغم غياب أي وعد، وبعد ثلاثة أيام وصلتها دعوة لمقابلة ثانية أسعدتها وبدأت تستعد لها فوراً.",
+    "questions": [
+      {
+        "id": "t-b1-33-l1",
+        "type": "mc",
+        "promptDe": "Wie bereitete sie sich auf das Gespräch vor?",
+        "options": [
+          "Sie las ihren Lebenslauf und übte typische Fragen",
+          "Sie kaufte neue Kleidung",
+          "Sie rief die Firma mehrmals an"
+        ],
+        "answer": "Sie las ihren Lebenslauf und übte typische Fragen",
+        "explanationAr": "الدليل في النص: «Ich las meinen Lebenslauf mehrmals durch» و«übte typische Fragen»."
+      },
+      {
+        "id": "t-b1-33-l2",
+        "type": "mc",
+        "promptDe": "Was fragte sie am Ende selbst?",
+        "options": [
+          "nach Team, Arbeitszeiten und Homeoffice",
+          "nur nach dem Gehalt",
+          "nach dem Urlaub der Chefin"
+        ],
+        "answer": "nach Team, Arbeitszeiten und Homeoffice",
+        "explanationAr": "الدليل في النص: «Ich fragte nach dem Team, den Arbeitszeiten und der Möglichkeit, teilweise im Homeoffice zu arbeiten»."
+      },
+      {
+        "id": "t-b1-33-l3",
+        "type": "mc",
+        "promptDe": "Was passierte drei Tage nach dem Gespräch?",
+        "options": [
+          "Sie wurde zu einem zweiten Gespräch eingeladen",
+          "Sie bekam sofort den Job",
+          "Sie erhielt eine Absage"
+        ],
+        "answer": "Sie wurde zu einem zweiten Gespräch eingeladen",
+        "explanationAr": "الدليل في النص: «Ich wurde zu einem zweiten Gespräch eingeladen»."
+      },
+      {
+        "id": "t-b1-33-l4",
+        "type": "truefalse",
+        "promptDe": "Sie konnte am Ende auch selbst Fragen stellen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Am Ende hatte ich auch selbst die Gelegenheit, Fragen zu stellen»."
+      },
+      {
+        "id": "t-b1-33-l5",
+        "type": "fill",
+        "promptDe": "Ich wurde zu einem zweiten ___ eingeladen.",
+        "answer": "Gespräch",
+        "explanationAr": "الدليل في النص: «zu einem zweiten Gespräch eingeladen»."
+      }
+    ]
+  },
+  "t-b1-34": {
+    "de": "Gestern sah ich auf dem Weg zur Arbeit einen kleinen Unfall. An einer Kreuzung wollte ein Autofahrer rechts abbiegen. Dabei übersah er einen Radfahrer, der geradeaus fuhr. Der Radfahrer stürzte und verletzte sich leicht am Knie. Zum Glück trug er einen Helm und blieb bei Bewusstsein.\n\nPassanten halfen sofort: Sie riefen den Krankenwagen und informierten die Polizei. Eine Frau blieb beim Radfahrer und sprach beruhigend mit ihm, während ein anderer Mann den Verkehr warnte. Der Autofahrer war sehr aufgeregt und entschuldigte sich mehrmals. Nach kurzer Zeit konnte der Radfahrer zum Glück wieder stehen. Ein Polizist sprach mit den Beteiligten und nahm ihre Aussagen auf. Niemand wusste am Anfang, ob die Verletzung schwer war. Deshalb warteten alle, bis die Rettungskräfte eintrafen.\n\nIch blieb noch kurz stehen und sprach mit einer Frau, die den Unfall ebenfalls gesehen hatte. Dann ging ich weiter zur Arbeit und dachte über die Situation nach. Der Vorfall hat mir wieder gezeigt, wie wichtig es ist, im Verkehr aufmerksam zu sein, sowohl als Fußgängerin als auch als Fahrerin. Seitdem achte ich an Kreuzungen besonders auf abbiegende Autos.",
+    "ar": "حادث صغير شاهدته في طريقها إلى العمل: سائق ينعطف يميناً عند تقاطع دون أن يرى درّاجاً يمضي مستقيماً، فسقط الدرّاج وأصاب ركبته إصابة خفيفة وكان لحسن الحظ يرتدي خوذة وبقي واعياً. تحرّك المارة فوراً: إسعاف وشرطة، وامرأة بقيت تهدّئ المصاب ورجل حذّر حركة المرور، والسائق مضطرب يعتذر مراراً. وقف الدرّاج بعد قليل وسجّل شرطي أقوال الجميع وانتظروا وصول المسعفين لأن خطورة الإصابة لم تكن معلومة أولاً. الدرس الذي خرجت به: الانتباه في المرور واجب على المشاة والسائقين معاً، ومنذئذ تتفحص عند التقاطعات السيارات المنعطفة خصوصاً.",
+    "questions": [
+      {
+        "id": "t-b1-34-l1",
+        "type": "mc",
+        "promptDe": "Wie kam es zu dem Unfall?",
+        "options": [
+          "Ein Autofahrer übersah beim Abbiegen einen Radfahrer",
+          "Der Radfahrer fuhr zu schnell",
+          "Die Ampel war kaputt"
+        ],
+        "answer": "Ein Autofahrer übersah beim Abbiegen einen Radfahrer",
+        "explanationAr": "الدليل في النص: «Dabei übersah er einen Radfahrer, der geradeaus fuhr»."
+      },
+      {
+        "id": "t-b1-34-l2",
+        "type": "mc",
+        "promptDe": "Was taten die Passanten?",
+        "options": [
+          "Sie riefen Krankenwagen und Polizei und halfen dem Radfahrer",
+          "Sie gingen einfach weiter",
+          "Sie machten nur Fotos"
+        ],
+        "answer": "Sie riefen Krankenwagen und Polizei und halfen dem Radfahrer",
+        "explanationAr": "الدليل في النص: «Sie riefen den Krankenwagen und informierten die Polizei»."
+      },
+      {
+        "id": "t-b1-34-l3",
+        "type": "mc",
+        "promptDe": "Was macht die Erzählerin seit dem Unfall?",
+        "options": [
+          "Sie achtet an Kreuzungen besonders auf abbiegende Autos",
+          "Sie fährt nur noch Bus",
+          "Sie meidet die Kreuzung"
+        ],
+        "answer": "Sie achtet an Kreuzungen besonders auf abbiegende Autos",
+        "explanationAr": "الدليل في النص: «Seitdem achte ich an Kreuzungen besonders auf abbiegende Autos»."
+      },
+      {
+        "id": "t-b1-34-l4",
+        "type": "truefalse",
+        "promptDe": "Der Radfahrer war schwer verletzt und bewusstlos.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «verletzte sich leicht am Knie» و«blieb bei Bewusstsein»."
+      },
+      {
+        "id": "t-b1-34-l5",
+        "type": "fill",
+        "promptDe": "Der Radfahrer stürzte und verletzte sich leicht am ___.",
+        "answer": "Knie",
+        "explanationAr": "الدليل في النص: «verletzte sich leicht am Knie»."
+      }
+    ]
+  },
+  "t-b1-35": {
+    "de": "Sehr geehrte Redaktion,\n\nich schreibe Ihnen, weil ich mich über den Zustand des Stadtparks in meinem Viertel ärgere. Immer wieder sehe ich dort Müll auf den Wiesen und auf den Spielplätzen: leere Flaschen, Plastiktüten, Zigarettenkippen und Essensverpackungen. Obwohl es genug Mülleimer gibt, werfen viele Leute ihren Abfall einfach auf den Boden. Das ist nicht nur hässlich, sondern auch gefährlich für Kinder und Tiere.\n\nDer Park wird von Familien, älteren Menschen und Sportlern genutzt. Wenn Müll liegen bleibt, können sich Tiere daran verletzen, und der Platz wird für alle weniger angenehm. Ich schlage vor, dass die Stadt mehr Kontrollen durchführt und höhere Geldstrafen verhängt. Außerdem könnte man Schulklassen und Freiwillige zu regelmäßigen Säuberungsaktionen einladen. Weitere Mülleimer an den Eingängen und neben den Bänken könnten ebenfalls helfen.\n\nBesucher können ihren Abfall einfach mitnehmen und andere freundlich darauf aufmerksam machen. Ein gemeinsamer Park ist für das Viertel wichtig, weil die Menschen dort gern ihre Freizeit verbringen. Nur wenn alle Verantwortung übernehmen, bleibt der Park ein schöner Ort für alle.\n\nMit freundlichen Grüßen\nEine Anwohnerin",
+    "ar": "رسالة إلى الجريدة من ساكنة في الحي تشكو قمامة حديقة المدينة: زجاجات فارغة وأكياساً بلاستيكية وأعقاب سجائر وأغلفة طعام على المروج والملاعب رغم كفاية السلال — قبح وخطر على الأطفال والحيوانات في حديقة ترتادها عائلات ومسنّون ورياضيون. تقترح رقابة أكثر وغرامات أعلى، ودعوة مدارس ومتطوعين لحملات تنظيف منتظمة، وسلالاً إضافية عند المداخل والمقاعد، وأن يحمل الزوّار نفاياتهم وينبّهوا غيرهم بلطف. فالحديقة المشتركة مهمة للحي، ولا تبقى جميلة للجميع إلا إذا تحمّل الجميع المسؤولية.",
+    "questions": [
+      {
+        "id": "t-b1-35-l1",
+        "type": "mc",
+        "promptDe": "Worüber ärgert sich die Anwohnerin?",
+        "options": [
+          "über den Müll im Stadtpark",
+          "über die hohen Mieten",
+          "über den Lärm der Sportler"
+        ],
+        "answer": "über den Müll im Stadtpark",
+        "explanationAr": "الدليل في النص: «ich mich über den Zustand des Stadtparks» و«Müll auf den Wiesen»."
+      },
+      {
+        "id": "t-b1-35-l2",
+        "type": "mc",
+        "promptDe": "Was schlägt sie der Stadt vor?",
+        "options": [
+          "mehr Kontrollen und höhere Geldstrafen",
+          "den Park zu schließen",
+          "Eintritt zu verlangen"
+        ],
+        "answer": "mehr Kontrollen und höhere Geldstrafen",
+        "explanationAr": "الدليل في النص: «dass die Stadt mehr Kontrollen durchführt und höhere Geldstrafen verhängt»."
+      },
+      {
+        "id": "t-b1-35-l3",
+        "type": "mc",
+        "promptDe": "Wer könnte bei Säuberungsaktionen helfen?",
+        "options": [
+          "Schulklassen und Freiwillige",
+          "nur die Polizei",
+          "die Sportler allein"
+        ],
+        "answer": "Schulklassen und Freiwillige",
+        "explanationAr": "الدليل في النص: «könnte man Schulklassen und Freiwillige zu regelmäßigen Säuberungsaktionen einladen»."
+      },
+      {
+        "id": "t-b1-35-l4",
+        "type": "truefalse",
+        "promptDe": "Im Park gibt es genug Mülleimer, aber viele werfen ihren Müll auf den Boden.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Obwohl es genug Mülleimer gibt, werfen viele Leute ihren Abfall einfach auf den Boden»."
+      },
+      {
+        "id": "t-b1-35-l5",
+        "type": "fill",
+        "promptDe": "Ich schlage vor, dass die Stadt mehr ___ durchführt und höhere Geldstrafen verhängt.",
+        "answer": "Kontrollen",
+        "explanationAr": "الدليل في النص: «dass die Stadt mehr Kontrollen durchführt»."
+      }
+    ]
+  }
+}

@@ -45,7 +45,8 @@ export function MündlichLabor({ progress }: { progress: Progress }) {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const einwandAusgeloestRef = useRef(false);
 
-  const karten = useMemo(() => muendlich.filter((k) => k.teil === teil), [teil]);
+  // R145/R31: جولات Teil 3 في المختبر ببطاقات الامتحان (300ث + اعتراضات)؛ بطاقات التدرّب الموسومة بالمستوى تخدم مهامّ الخطة لا جولة الاعتراض
+  const karten = useMemo(() => muendlich.filter((k) => k.teil === teil && (teil === 2 || (k.einwaende?.length ?? 0) > 0)), [teil]);
   const karte = useMemo<Required<Pick<MuendlichKarte,"id"|"teil"|"titel_de"|"titel_ar"|"auftrag_de"|"zeit_s"|"stuetzen"|"kriterien">> & MuendlichKarte>(() => {
     const r = rng(progress.plan.day * 131 + (teil === 2 ? 0 : 97) + zug * 13);
     const raw = karten[Math.floor(r() * karten.length)];

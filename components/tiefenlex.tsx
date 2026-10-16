@@ -10,6 +10,7 @@ import { useMemo, useState } from "react";
 import type { Exercise, Level, Progress, VocabCard } from "@/lib/types";
 import { sentences, tiefenlex, alleVokabeln } from "@/lib/content";
 import { levelOf, pickN, rng } from "@/lib/plan";
+import { gemischteOptionen } from "@/lib/optionen";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
@@ -157,7 +158,7 @@ function Runde({ items, titel, onFertig }: { items: Challenge[]; titel: string; 
       </div>
       {antwort === null ? (
         <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-          {c.options.map((o) => (
+          {gemischteOptionen(c.options, c.id).map((o) => (
             <button key={o} className="chip" style={{ cursor: "pointer", fontSize: "1rem", padding: "0.45rem 1rem" }} onClick={() => waehle(o)}>
               {o}
             </button>

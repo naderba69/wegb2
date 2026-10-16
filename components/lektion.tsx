@@ -16,6 +16,7 @@ import { logK } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
 import { VertrauensBalken, AntwortDiff } from "./ui";
 import { De } from "./De";
+import { gemischteOptionen } from "@/lib/optionen";
 
 function gradeItem(ex: Exercise, resp: string): boolean {
   if (!resp.trim()) return false;
@@ -180,7 +181,7 @@ function LektionsGenerator({ progress }: { progress: Progress }) {
           </div>
           {q.ex.options ? (
             <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap" }}>
-              {q.ex.options.map((o) => {
+              {gemischteOptionen(q.ex.options, q.ex.id).map((o) => {
                 const gewaehlt = antworten[q.ex.id] === o;
                 const richtig = done && gradeItem(q.ex, o);
                 return (

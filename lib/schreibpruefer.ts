@@ -2,7 +2,7 @@
 // صدقُ الادّعاء: هذا **كاشفُ أنماطٍ** يرى الشكلَ ولا يرى المعنى. كلُّ قاعدةٍ هنا مكتوبةٌ صراحةً،
 // ولا يوجدُ نموذجٌ لغويٌّ ولا اتصالٌ بالشبكة.
 import { vocabMap } from "./content";
-import fehlerBank from "@/content/fehler.json";
+import { bankRoh, beiBankenBereit } from "./bankload";
 
 export type Spalte = "grammatik" | "syntax" | "wortwahl";
 export type Schwere = "sicher" | "wahrscheinlich" | "stil";
@@ -59,7 +59,15 @@ const GENUS: Record<string, string> = (() => {
   return m;
 })();
 
-const FEHLER = fehlerBank as { id: string; kat: string; falsch: string; richtig: string; ar: string }[];
+type FehlerZeile = { id: string; kat: string; falsch: string; richtig: string; ar: string };
+const FEHLER: FehlerZeile[] = [];
+/** R163: in Node sofort befüllt, im Browser nach /banks.json. */
+function fuelleFehler(): void {
+  const r = bankRoh("fehler.json") as FehlerZeile[] | undefined;
+  if (r) FEHLER.splice(0, FEHLER.length, ...r);
+}
+fuelleFehler();
+beiBankenBereit(fuelleFehler);
 const woerter = (s: string) => s.split(/\s+/).filter(Boolean);
 const rein = (w: string) => w.replace(/[.,;:!?»«"()]/g, "");
 

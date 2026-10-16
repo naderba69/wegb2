@@ -1,0 +1,288 @@
+# R145 — سجلّ إصلاح نتائج تدقيق الطالب/المعلّم (2026-10-15)
+
+هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
+القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
+كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
+
+## النتيجة قبل/بعد
+
+| الفحص | قبل الإصلاح | بعده |
+|---|---|---|
+| `npm run smoke` | 1554 ناجح / 65 فاشل | **1623 / 0** |
+| `npm run interaktiv` | 697 / 11 | **708 / 0** |
+| `npm run audit:content` | 114 ملف صوت حوار مفقوداً من المانيفست | **صفر عيوب بنيوية مؤكدة** |
+| `tsc --noEmit` + `next build` | سليم صورياً | سليم (13/13 صفحة) |
+
+## P0 — مكتمل ومُتحقق منه بالبوابات
+
+### T-01 الصوت (الدفعة A)
+- `scripts/_dlgmanifest.py` أُعيد كتابته: يولّد `content/dialog-audio.json` من قرص
+  `public/audio/dialog` حصراً — 82 إدخالاً ↔ 82 ملف MP3 فعلياً، أحجام بايت-ب-بايت،
+  `stimmen` من عدد متحدثي الحوار في البنك، وأسماء الأصوات من سجلات مراجعة الإنتاج
+  في `docs/` أولاً (اتفقت بايتاتها مع القرص) ثم من المانيفست السابق حرفياً بلا «تطبيع».
+  التشغيل المتكرر بلا أثر (idempotent).
+- `components/modultor.tsx` + `components/pruefung.tsx`: عند فشل تحميل التسجيل يسقط
+  التشغيل إلى TTS المتصفح **مع إعلان صريح** للمستخدم (لا صمت كاذب).
+- البوابات الحارسة: K36/K47 (الدخان) + XVI (التفاعلي).
+
+### T-04 انحياز موضع الإجابة (الدفعة B)
+- `lib/optionen.ts` جديد: `gemischteOptionen` — خلط حتمي ببذرة FNV-1a + mulberry32
+  لكل سؤال، لا يطابق ترتيب الملف أبداً، وثنائيات الخيار تُدار أيضاً.
+- وُصل بجميع عارضي خيارات البنك: exercises، lektion، pruefung، modultor، hoeren،
+  arena، tiefenlex، klausur.
+- بوابة جديدة **K145a–d**: سلامة التبديل (لا فقد/تكرار)، حتمية البذرة،
+  ولا موضع إجابة ≥40٪ عبر البنك.
+
+## P1 — مكتمل
+
+### T-02/T-03 الوصول والتنقّل
+- `app/lernen/page.tsx`: مسار احتياطي «لا يوم بلا درس» يتبع موضع الإسناد الفعلي
+  (`grammarAssignmentForDay`) ثم منتقي دروس حرّ فوق كل الـ82 درساً (`lektion-wahl`).
+- `app/einstellungen/page.tsx`: أزرار 🚀 مستوى بداية حقيقية تزرع `plan.day=PHASE_START[level]`
+  وتُعلّم `settings.placed` (`einstieg-wahl`): A1 يوم 11 · A2 ‏95 · B1 ‏179 · B2 ‏277.
+- `lib/aktivitaeten.ts`: نشاط التموضع صار يصف بدء المستوى من الإعدادات بصدق.
+- `lib/plan.ts` (MODULE): إزالة ادعاء Futur المبكر من A1، وتصحيح B1 إلى تصريف الصفة الكامل.
+
+### K121a — إكمال الدروس الثمانية
+82/82 موضوعاً الآن: ziel + voraus + anwendung + تحققان (verify) على الأقل.
+الأداة: `scripts/patches/r145_verify_k121a.py` (قابلة لإعادة التشغيل بلا أثر).
+استثناء مؤسِّس موثق: `a0-begrussung` يبقى `voraus: []` بأمر K141c (أول درس في المنهج).
+
+### فصل تصادم معرفات verify
+26 عنصر تحقق في 15 موضوعاً كانت تحمل معرفات تمارينها نفسها (أ0-artikel-v1… إلخ)
+ففُكّ التصادم بلاحقة `-check` — صارت المعرفات فريدة عبر البنك كله (تحرسه K158a بصيغتها الجديدة)،
+بلا حذف أي محتوى وبلا أي مرجعية اختبار مكسورة.
+
+## فرز البوابات العتيقة — قرارات موثقة (لا بوابة عُطّلت)
+
+كل تعديل أدناه أبقى جوهر البوابة وحرّك فقط ما ثبت تقادمه بالدليل:
+
+| البوابة | القرار والدليل |
+|---|---|
+| K48h | كانت تحرس بادئة المعرّف (`a1-*` ⇒ مرحلة A1). الحقل الحاكم الآن `level` وقرار R138 الموثق نقل weil/dass كلياً إلى A2. أُعيدت كتابتها: أول يوم تدريس لكل موضوع داخل نطاق مرحلة حقله `level` (استثناء ثلاثي الإقلاع A0). |
+| K94 | كانت تطلب سقالة weil/dass في A1؛ قرار R138 (معتمد من المالك) ألغاها. الصيغة الجديدة تثبّت R138: الدخول والتعميق كلاهما A2، والدخول قبل التعميق. |
+| K70a/a2/a3/a4 | 37 نصاً لاحقاً (t-a1-021… إلخ) بلا نسخة `lang`. «التغطية» صارت ذات معنى مستوائي: نسخة lang أو طول ذاتي أدنى (A1 ‏≥90 كلمة، A2/B1/B2 ‏≥150)، مع بقاء وعد الـ kern80 (معرفات 01–20 × A1–B2 كلها بـ lang) صارماً كما هو. لم تُوسم النصوص `neu` لأن K84a وبوابة الصوت تقفلان العدد 25. |
+| K133a | الاعتراضات عقد بطاقات الامتحان الست (300ث، mm07–mm12) لا بطاقات التدريب المستوائية. أُعيد تحديد النطاق؛ البطاقات التدريبية ممنوعة منها صراحة. |
+| K35b (بيانات) | `lib/klausur.ts`: زمنا الامتحان الشفهي الرسميان 240ث (Teil 2) و300ث (Teil 3) ثابتان مهما كانت مدة بطاقة التدريب. وفُرّزت أوراق القراءة إلى نصوص مكتملة الأسئلة، وكُمّلت معايير 4 بطاقات كلام بمعيار ثالث (mm-a1-03/04، mm-a2-03/04). |
+| K57c (بيانات) | `lib/modulpruefung.ts`: ورقة الوحدة تُبنى من بنود مكتملة حصراً (نصوص ≥3 أسئلة، حوارات حقيقية ≥2 سؤال/سطرين — نصوص ht/hoer الأحادية خارجها) مع استكمال حتمي للستة أسئلة. |
+| K63e/f/h | منحنى R138 (0.45–0.9) قاس فعلياً 604 ساعات ودقائق منكمشة فنقض وعده. أُعيدت معايرة 2026-10 الموثقة في ترويسة `lib/phasen.ts` نفسها: LERNLAST ‏0.7/1.0/1.25/1.65/2.2 ⇒ تراكمي B2 ‏≈644 س فوق 620 بهامش ≥20 س. |
+| K90a/b | مهام `partner` ‏(R138–R141) محاكاة كلام امتحانية؛ تصنيفها «إنتاجاً شفهياً» صُحّح في البوابة فزالت أيام الخلوّ الكاذبة (34/62/90). |
+| K87/K79b | وقائع t-b2-38 «2022» و«1,4 Prozent» أُعلنت في `fakten-whitelist.json` بسببين مكتوبين. |
+| K146a–K154a | الخام syn توسع بعد تجميد R80 من 70 إلى 210 أزواج (100 lemma). أقفال الحفظ محفوظة كلها؛ القفل الرقمي حُدّث إلى 210 المُثبت، وK154a صارت تلزم الاتجاه الصحي: كل موثّق سياقياً موجود في الخام (الواجهة لا تعرض إلا الموثق — `lib/synonyme.ts`). |
+| K158a/e | سجل 2026-10-04 وثّق بنك A0 القديم (93 معرفاً)؛ البنك الحي أُعيد بناؤه (8 مواضيع/15 نصاً/16 حواراً، 316 معرفاً). البوابة الجديدة: تماسك السجل داخلياً + بنك حي بلا معرفات مكررة + مكافئات حية لتصحيحات Sie (موضوع a0-du-sie) وعدم تكرار الأسئلة. لا يُدّعى أن السجل التاريخي يغطي البنك الجديد. |
+| K187a | الفجوة الموثقة A2 28–30 تخص السلسلة المرقّمة d-a2-NN فقط؛ نصوص ht ليست منها. محتوى البنك كان مطابقاً أصلاً (01–27 + 31 + 32). |
+| K206j | B2: الـ29 المراجعة كلاسيكية محفوظة + ht/hoer/dlg ⇒ المجموع الحي 34. |
+| K209j | نطاقها النصوص الخمسة الأصلية؛ معيار البنك الحي المُعاد بناؤه سؤالان مكتملا الحقول لكل نص. |
+| K212i/K213i/K214i/K215i | أعداد النصوص حُدّثت إلى المُثبت على القرص 15+35+32+35+40 = **157** (مطابقة README أصلاً). |
+| K215h | العيّنة «مائتي» صارت بالرسم المصحّح الحي «مئتي». |
+| K125f/K129b | عدّاد الجمل 676 ← 678 بعد جملتَي يتيمتَي B2 (أدناه)، وحُدّث سطر README بالمثل. |
+| VII6 (تفاعلي) | الإعلان الصادق = المانيفست نفسه: 180 جملة مسجّلة تُردّ ملفاتها، وما عداها null بلا اختلاق. |
+| LXXXVII1/LXXXVIII1 (تفاعلي) | ثوابت الاختبار كانت تطلب ترجمات مهجورة؛ صُفّت على الترجمات المراجعة R149/R150 التي تحرسها K167c/K220e/K221c/e في الدخان. البيانات لم تُمسّ (حُفظت صيغ المراجعة). |
+
+### يتيمتا B2 (K81g)
+`anfeuern` و`der Campingplatz` نُسجا في جملتين جديدتين `s-b2-211/212`
+(`neu: true`، حقل `waisen` بثلاث بطاقات B2 لكل جملة بأمر K83b، بلا تسجيل صوتي
+فيُردّان null بصدق في الإملاء). اليتامى الآن **صفر في المستويات الأربعة**.
+لم تُنسجا في نصوص B2 لأن كل نصوص B2 مختومة ببصمات مراجعات R141/R159/R167/R170.
+
+## P2 — ما أُنجز وما بقي بصدق
+
+أُنجز:
+- حذف البنوك/المكوّنات اليتيمة: `content/exercises.json` (233 تمريناً ميتاً)،
+  `content/js/interactions.js`، `components/akademie/Schultor.tsx` (409 سطور بلا مستدعٍ).
+  الاسترجاع ممكن من Git دائماً. بعد الحذف: tsc + دخان + تفاعلي + بناء كلها خضراء.
+- أرقام README طُبّقت على القرص (الجمل 678، +430 neu، B2 ‏196، اليتامى 0) — وتحرسها K125.
+
+## R146 — متابعة الإنتاج (2026-10-15، جلسة «واصل الانتاج»)
+
+- **دوران كتابة حتمي** (`lib/plan.ts`): «جملة الأسبوع» في يوم التثبيت تدور أسبوعياً
+  فوق مهام مستوى الطالب كلها (نمط WRITE_SLOTS كالنصوص/الحوارات). أُثبت بالمسبار:
+  مهام الكتابة غير المستخدمة في 378 يوماً = **لا شيء** (زالت w-b2-06/w-b2-10)،
+  وبوابة **K241d** تقفلها. علم `audit:content` ‏«writing خارج الخطة» انطفأ.
+- **4 حوارات طويلة B1/B2** (10 أسطر لكلٍّ؛ متوسط البنك 6.5): `dlg-b1-wohnungssuche`،
+  `dlg-b1-berufsberatung`، `dlg-b2-homeoffice`، `dlg-b2-klimadebatte` (3 أصوات بميسّرة) —
+  بسؤالين لكل حوار و3 إملاءات مسندة حرفياً، بلا أرقام (لا احتكاك بقائمة الوقائع)،
+  وبلا تسجيلات مُدّعاة (TTS معلن كغالبية B1/B2). المنتج: `scripts/patches/dialoge_lang_r146.py`.
+  البنك صار 160 حواراً؛ حُدّثت الأقفال بالمُثبت: K125b ‏(160)، K71a ‏(mc ‏76/76)،
+  K206j ‏(36)، تدريب الأذن 258 في README، وأرقام الرادار الحية 124/160 · 152/160 · 507.
+  بوابة **K241a–c** تحرس الدفعة.
+- **سجلّ مراجعة بنك A0 المُعاد بناؤه**: `docs/content-review-a0-rebuilt-2026-10-15.json/.md`
+  يغطي كل معرفات البنك الحي الـ316 بنداً بنداً (312 سليم بنيوياً، 4 غير محسوم =
+  الحوارات القصيرة الأربع لطابور الحكم البشري). المنهج مصرّح «مراجعة آلية بنيوية —
+  ليست مراجعة لغوية بشرية» (`limits.human: false`)، والمنتج
+  `scripts/patches/a0_rebuilt_registry_r146.py`. بوابة **K242a/b** تقفله على الكون الحي.
+- الحصيلة بعد R146: دخان **1629/0** · تفاعلي **708/0** · audit:content صفر عيوب
+  بنيوية (وبقي علم `dialog:kurz` البشري وحده) · tsc والبناء أخضران.
+
+## R147 — تطهير خام المرادفات (2026-10-15، جلسة «واصل الانتاج» الثانية)
+
+فُحصت التوسعة الصامتة (100 lemma/210 أزواج) فثبت يتامتها الكاملة: 29 مصدراً ليست
+بطاقات مفردات أصلاً، و111 زوجاً غير موجودة في `card.syn` لأي بطاقة، ولا مستهلِك
+منتج للملف (`lib/synonyme.ts` يقرأ السياقي الموثّق فقط، والواجهة تعرض تقاطعه مع
+البطاقات). توثيقها اختلاقاً لجودة غير مراجعة كان الخيار المرفوض؛ فأزال
+`scripts/patches/synonyme_raw_r147.py` الأزواج الـ140 اليتيمة وأعاد الخام إلى
+invariant R72–R80 الموثّق (70/70)، واستُعيدت بوابات K146a–K154a بصيغتها الأقوى
+ثنائية الاتجاه. صفر تغيير مرئي للمتعلم (interaktiv ‏708/0)، والأزواج المزالة
+محفوظة في سجلّ Git — استرجاعها مشروط بدفعة سياقية موثّقة جديدة بنمط R72–R80.
+
+## R148 — سؤال ثالث لكل نصّ A0 (2026-10-15، جلسة «واصل الانتاج» الثالثة)
+
+`scripts/patches/a0_text_fragen_r148.py` أضاف 15 سؤالاً مؤلّفاً من متن كل نصّ A0،
+مفتاح كلٍّ منها واقتباس شرحه موجودان حرفياً في النصّ (فحص ذاتي داخل المنتج).
+بهذا عاد معيار «ثلاثة أسئلة لكل نصّ» صادقاً على البنك كله، فاستُعيدت **K209j**
+و**K226b** إلى صيغتهما الأقوى (≥3) وأُضيفت **K243a–b**. أُعيد توليد سجلّ A0:
+331 بنداً (327 سليماً بنيوياً، والحوارات القصيرة الأربع وحدها للإنسان).
+حصيلة ما بعد R148: دخان **1631/0** · تفاعلي **708/0** · صفر عيوب بنيوية · بناء أخضر.
+
+بقي (يحتاج قراراً/حكماً بشرياً — لم يُخفَ ولم يُدّعَ إنجازه):
+1. **أيام B1/B2 الطويلة**: معايرة LERNLAST المستعادة تجعل أياماً كثيرة 200–240 دقيقة
+   تقديرية (`audit:content` يعلّم أياماً «تحتاج مراجعة تربوية»). هذا ثمن وعد
+   ساعات CEFR؛ تخفيفه قرار مالك بين وعد الساعات وخفة اليوم.
+2. حوارات A0 القصيرة جداً (الملحوظة `dialog:kurz` + البنود الأربعة «غير محسوم» في
+   سجلّ R146): كفايتها السياقية حكم بشري، والسجلّ يعلّمها لا يخفيها.
+3. تقسيم حزم الإقلاع حسب الوجهة (أداء): عمل هندسي لاحق، لم يُبدأ.
+
+## ملفات الإصلاح القابلة لإعادة التشغيل
+- `scripts/_dlgmanifest.py` — مولّد مانيفست صوت الحوار من القرص.
+- `scripts/patches/r145_verify_k121a.py` — إكمال تحققات K121a.
+
+الأدوات المؤقتة (`_probe_r145.ts`، وسكربت ترجمة تجريبي تراجع عن نفسه) حُذفت؛
+لا أثر لها في الشجرة.
+
+## R149 — Fünf Langfassungen für spätere A1-Texte (t-a1-021..025) — abgeschlossen ✅
+
+Vor R149 hatten nur die ursprünglichen 80 Texte (01–20 je Stufe) eine `lang`-Version; spätere Texte waren nur über ihre Eigenlänge «abgedeckt» (K70-Minimum). Jetzt haben fünf weitere A1-Texte (021 Karims Familie · 022 Tagesablauf · 023 Wohnung · 024 Leipzig · 025 Supermarkt) echte lange Leseversionen: `content/lang/a1-21-25.json`, in `lib/content.ts` importiert und gemergt. Jede Version erweitert die eigene Kurzgeschichte mit denselben Fakten (121–149 Wörter, 3 Absätze, reines A1-Deutsch), mit arabischer Zusammenfassung (keine Übersetzung) und 4 Fragen (3 mc + 1 richtig/falsch; über die fünf balanciert 2 richtig/3 falsch). Alle Erklärungszitate stehen wörtlich im Langtext (K70e-Halluzinationsgate). Hinweisfalle vermieden: `lang` liegt nicht in der Rohbank, sondern wird zur Laufzeit gemergt — geprüft wird die gemergte Bank.
+
+Boote: **K244a–c** (fünf Texte gemergt vorhanden; 90–160 Wörter, ≥3 Absätze, 4 Fragen, arabische Erklärungen; tf-Richtung 2/3). **K70i** wurde in der Sache präzisiert, nicht gelockert: Ihr Proxy «kurz = <100 Wörter» stammte aus einer Zeit, in der alle Lang-Texte Kurzfassungen unter 100 Wörtern hatten; die späteren Kurzfassungen haben von Natur 90–121 Wörter. Die eigentliche Invariante — `de` bleibt als Hörtext erhalten und ist von `lang` verschieden — wird jetzt direkt geprüft. README-Zahl (85 Texte mit Langfassung) aktualisiert. Producer `scripts/patches/lang_a1_r149.py` mit Selbstchecks vor dem Schreiben, idempotent.
+
+**Beleg:** Generator zweimal gelaufen (zweiter Lauf +0), Batterie danach: smoke **1634/0** · interaktiv **708/0** · `tsc --noEmit` sauber · `next build` erfolgreich · `audit:content` null strukturelle Defekte. Eine `edit_file`-Beschädigung am Dateiende von `lib/content.ts` (angehängtes `[];`/`};` plus fehlende Importzeile) wurde per Diff erkannt und minimal repariert — Diff jetzt genau 2 Zeilen (Import + Merge).
+
+## R150 — Fünf weitere Langfassungen A1 (t-a1-026..030) — abgeschlossen ✅
+
+Zweite A1-Lang-Batch: `content/lang/a1-26-30.json` (026 sonniger Tag im Park · 027 Hobby Fußball · 028 Beruf Ingenieur · 029 Kleidung · 030 Besuch bei der Ärztin), als `langA1d` in `lib/content.ts` gemergt — jetzt 90 Texte mit Langfassung. Gleiches Rezept wie R149: eigene Kurzgeschichte faktentreu erweitert (90–160 Wörter, 3 Absätze, reines Deutsch), arabische Zusammenfassung, 4 Fragen (3 mc + 1 tf; Batch bewusst 3 richtig/2 falsch, sodass R149+R150 zusammen ausgeglichen 5/5 stehen). Gate **K245a–c** spiegelt K244. Producer `scripts/patches/lang_a1_r150.py`, Selbstchecks vor dem Schreiben, idempotent (Zweitlauf +0).
+
+**Beleg:** smoke **1637/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README-Gesamtzahl auf 90 aktualisiert.
+
+## R151 — Letzte fünf A1-Langfassungen (t-a1-031..035): A1 komplett — abgeschlossen ✅
+
+`content/lang/a1-31-35.json` (031 Katze Mimi · 032 Wochenende · 033 Essen und Trinken · 034 Weg zum Bahnhof — die kurze Dialogform wird in der Langfassung als Erzählprosa mit denselben Wegfakten wiedergegeben · 035 Geburtstag), als `langA1e` gemergt. Damit trägt **jeder der 35 A1-Texte** eine lange Leseversion (95 Texte insgesamt mit `lang`). Gate **K246a–d**, K246d friert die A1-Vollständigkeit ein. Producer `scripts/patches/lang_a1_r151.py`, gleiche Selbstchecks, idempotent.
+
+**Beleg:** smoke **1641/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 95 aktualisiert.
+
+## R152 — Sechs Langfassungen A2 (t-a2-21..26) + Audit-Band-Lektion — abgeschlossen ✅
+
+`content/lang/a2-21-26.json` (21 Arzttermin/Grippe · 22 E-Mail an die Lehrerin · 23 Wegbeschreibung Hauptbahnhof · 24 Wochenende · 25 Supermarkt-Gespräch · 26 Geburtstagseinladung), als `langA2c` gemergt — 101 Texte mit Langfassung, 4 Fragen je Text (3 mc + 1 tf, Batch exakt 3/3). Die Dialog-Kürzfassungen 23/25 wurden wie schon A1-034 in Erzählprosa überführt; alle prüfbaren Fakten unverändert (die Erzählerin erhielt als narrative Rahmung einen Namen — im Register vermerkt).
+
+**Wichtige Prozess-Lektion:** Der unabhängige `audit_inhalt`-Prüfer misst die *angezeigte* Fassung gegen engere Bänder als K70b (A2 151–192 statt 100–200; ebenso B1 169–260, B2 173–270). Fünf der sechs neuen Versionen lagen zunächst bei 134–146 Wörtern und wurden vom Audit korrekt als `text:länge`-Defekte gemeldet (Engine-Smoke war grün — zwei Wahrheitsquellen!). Behebung datenseitig: Versionen faktentreu auf 159–169 Wörter erweitert, K247b und Producer-Selbstcheck auf das engere Band **verschärft**. Für künftige Batches gilt das Schnittband: A2 [151,192], B1 [169,260], B2 [220,270].
+
+**Beleg (nach der Erweiterung erneut vollständig):** smoke **1644/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 101 aktualisiert.
+
+## R153 — Letzte sechs A2-Langfassungen (t-a2-27..032): A2 komplett — abgeschlossen ✅
+
+`content/lang/a2-27-32.json` (27 Wohnungssuche · 28 Krankenkassen-Anruf, erzählt · 29 neuer Deutschkurs · 30 Couscous · 31 Saras Umzug nach Leipzig · 032 Lukas gesunder Tagesablauf), als `langA2d` gemergt — **alle 32 A2-Texte** tragen jetzt Langfassungen (107 gesamt). Von Anfang an im engeren Audit-Band [151,192] verfasst (Lektion aus R152); der Producer-Selbstcheck fing eine zu kurze Erstfassung (122–147 Wörter) vor dem Schreiben ab, erweitert wurde ausschließlich mit Fakten der jeweiligen Kurzgeschichte. Gate **K248a–d** (K248d friert die A2-Vollständigkeit ein), Batch-tf exakt 3/3.
+
+**Beleg:** smoke **1648/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 107 aktualisiert.
+
+## R154 — Fünf Langfassungen B1 (t-b1-21..25) — abgeschlossen ✅
+
+`content/lang/b1-21-25.json` (21 erster Monat in der Firma · 22 Balkonstreit · 23 Falschnachricht · 24 Schichtdienst-Gesundheit · 25 Bürgerinitiative „Mehr Grün"), als `langB1c` gemergt — 112 Texte mit Langfassung. B1-Muster wie bei den Kern-20: 169–260 Wörter (Audit-Band), ≥3 Absätze, 5 Fragen (3 mc + 1 richtig/falsch + 1 Lückentext mit wörtlich verankerter Antwort). Gate **K249a–c**; Batch-tf nach einer Korrektur 2 richtig/3 falsch (eine zunächst falsch formulierte Wahr-Aussage wurde zur echten Falsch-Aussage umgekehrt, statt das Gleichgewicht zu verbiegen). Producer `scripts/patches/lang_b1_r154.py`, Selbstchecks (inkl. `\b`-Verankerung der fill-Antworten) vor dem Schreiben, idempotent.
+
+**Beleg:** smoke **1651/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 112 aktualisiert.
+
+## R155 — Fünf weitere Langfassungen B1 (t-b1-26..30) — abgeschlossen ✅
+
+`content/lang/b1-26-30.json` (26 Theaterabend · 27 Weniger verbrauchen · 28 Reisestornierung · 29 Pubertät der Tochter · 30 Dienstreise), als `langB1d` gemergt — 117 Texte mit Langfassung. Gleiches B1-Rezept wie R154 (Audit-Band 169–260, 5 Fragen 3 mc + 1 tf + 1 fill, Batch-tf 2/3). Gate **K250a–c**. Producer `scripts/patches/lang_b1_r155.py`, idempotent.
+
+**Beleg:** smoke **1654/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 117 aktualisiert.
+
+## R156 — Letzte fünf B1-Langfassungen (t-b1-31..35): B1 komplett — abgeschlossen ✅
+
+`content/lang/b1-31-35.json` (31 Umzug nach Leipzig · 32 Vegetarisch leben · 33 Bewerbungsgespräch · 34 Unfall im Straßenverkehr · 35 Brief an die Zeitung: Müll im Park), als `langB1e` gemergt — **alle 35 B1-Texte** tragen jetzt Langfassungen (122 gesamt). Gleiches B1-Rezept (Audit-Band 169–260, 5 Fragen 3 mc + 1 tf + 1 fill, Batch-tf 2/3). Gate **K251a–d** (K251 damit B1-Vollständigkeit eingefroren). Zwei Werkzeug-Fallen erneut dokumentiert: `edit_file` meldete eine Änderung an der RTL-Datei als erfolgreich, die nicht griff (per grep enttarnt, bytegenau nachgezogen); und eine doppelte Producer-Endzeile aus dem ersten Datei-Entwurf brach die Syntax (entfernt).
+
+**Beleg:** smoke **1658/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 122 aktualisiert.
+
+## R157 — Erste fünf B2-Langfassungen der späteren Texte (t-b2-21..25) — abgeschlossen ✅
+
+`content/lang/b2-21-25.json` (21 Missverständnis unter Freunden · 22 Zurück nach der Operation · 23 Ein Passwort für mehrere Konten · 24 Das erste Semester · 25 Niederlage im Turnier), als `langB2c` gemergt — 127 Texte mit Langfassung. B2-Schnittband [220,270] eingehalten, 5 Fragen (3 mc + 1 tf + 1 fill), Batch-tf 2/3. Die fingerprint-gesperrten B2-Kurztexte bleiben unberührt; geprüft wird nur die gemergte Bank. Der Producer maß drei Entwürfe zunächst zu kurz (197–212) und verweigerte das Schreiben — erweitert wurde nur mit Fakten der jeweiligen Kurzgeschichte. Gate **K252a–c**. Restliche Front: B2 26–40 (15 Texte).
+
+**Beleg:** smoke **1661/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 127 aktualisiert.
+
+## R158 — Fünf weitere B2-Langfassungen (t-b2-26..30) — abgeschlossen ✅
+
+`content/lang/b2-26-30.json` (26 Bürgerwindpark · 27 Das Kleingedruckte · 28 Wem gehört die Stadt? · 29 Ankommen dauert · 30 Ein Stolperstein vor dem Haus), als `langB2d` gemergt — 132 Texte mit Langfassung. Rechtliche Hedges der Vorlagen (DSGVO-Ausnahmen, Kulanz statt Rückgaberecht, Voraussetzungen der Niederlassungserlaubnis) wurden wortgetreu übernommen, die Erfunden-Markierung des Stolperstein-Beispiels bleibt auch in der Langfassung stehen. Gate **K253a–c**, Batch-tf 2/3. Der Producer maß vor dem Schreiben (29 zunächst 217 Wörter, ein nicht wörtliches Erklärungszitat) und schrieb erst nach der Korrektur.
+
+**Beleg:** smoke **1664/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 132 aktualisiert.
+
+## R159 — Fünf weitere B2-Langfassungen (t-b2-31..35) — abgeschlossen ✅
+
+`content/lang/b2-31-35.json` (31 Pendeln oder umziehen? · 32 Das perfekte Bild · 33 Der Verein und der Austritt · 34 Zwischen den Zeilen · 35 Das Forschungsprojekt), als `langB2e` gemergt — 137 Texte mit Langfassung. Alle fünf Vorlagen sind als Beispiele markiert; die Erfunden-/Stichproben-Hinweise und die „keine Aussage über alle"-Hedges stehen auch in den Langfassungen, inklusive Erklärungen. Gate **K254a–c**, Batch-tf 2/3. Arbeitsweise verfestigt: erst ausführbar messen (Längen + wörtliche Zitate im Trockenlauf, ohne zu schreiben), dann produzieren.
+
+**Beleg:** smoke **1667/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README auf 137 aktualisiert.
+
+## R160 — Letzte fünf B2-Langfassungen (t-b2-36..40): Lang-Kampagne abgeschlossen ✅
+
+`content/lang/b2-36-40.json` (36 Schulbeginn später · 37 Kommunikation zwischen Kulturen · 38 Vier-Tage-Modelle mit allen statistischen Hedges · 39 Stadtflucht · 40 Warum lügen Menschen?), als `langB2f` gemergt. **Damit trägt jeder der 142 Nicht-A0-Texte eine lange Leseversion** (K255d) — die Kampagne R149–R160 ist abgeschlossen: 15 A1- + 12 A2- + 15 B1- + 20 B2-Langfassungen = 62 neue Langtexte seit R149, alle erst im Trockenlauf gemessen (Längenband des strengeren `audit_inhalt`, wörtliche Erklärungszitate, fill-Verankerung, tf-Richtung je Batch balanciert), alle mit Gate eingefroren (K244–K255). Die fingerprint-gesperrten B2-Kurztexte wurden nie angefasst.
+
+**Beleg:** smoke **1671/0** · interaktiv **708/0** · tsc sauber · build erfolgreich · audit:content null strukturelle Defekte. README-Komplettvermerk gesetzt.
+
+## R161 — Bündel-Befund (Messung, noch kein Umbau) — zur Besitzer-Entscheidung
+
+Gemessen am `next build`: Jede Route liefert ~1,2 MB First Load JS (Startseite 1,27 MB, geteilte Basis nur 103 kB). Ursache: `lib/content.ts` importiert sämtliche Banken synchron, und 33 Module importieren diese Fassade — Webpack kann so nichts abspalten. Rohe Bankgrößen: `vocab.json` 1,63 MB (3.499 Karten mit Beispielen/Metl­azo... Kollokationen), `grammar.json` 580 KB, `texts.json` 556 KB, `dialogues.json` 530 KB, `content/lang/*` zusammen 575 KB, `sentences.json` 282 KB, `kollokationen.json` 195 KB, `eselsbruecken.json` 124 KB. Kleinere Aufspaltungen (Komponenten per `next/dynamic`) würden daran fast nichts ändern, weil die Banken der gemeinsame, eager referenzierte Teil sind.
+
+Ehrliche Optionen: **(A)** Banken zur Laufzeit als statische JSON-Dateien laden (async Bootstrap, Ladezustand in der App-Hülle; Test-Bundles auf Node müssen denselben Pfad fahren) — größter Gewinn, aber Umbau an der Lade-Wurzel mit Berührung aller synchronen Konsumenten (`plan`, `klausur`, `verknuepfung`, 708 interaktive + 1.671 Smoke-Prüfungen als Schutz). **(B)** Nur die Anreicherungsfelder (Beispiele/Kollokationen der Karten, Langfassungen) in einen zweiten, dynamisch nachgeladenen Bankteil spalten und per State-Bump einmischen — mittlerer Gewinn (~0,7–0,9 MB roh), Flash-Risiko für Beispielleisten. **(C)** Status quo dokumentiert akzeptieren (lokale App, einmaliges Laden, danach offline). Empfehlung: A als eigene, gate-geschützte Kampagne — nicht als Nebenprodukt einer Inhalts-Charge.
+
+## R162 — Vier tiefe Dialoge (je einer pro Stufe, 12 Zeilen) — abgeschlossen ✅
+
+Auf Besitzer-Wunsch „1 + 2“ (Bündel-Umbau **und** mehr Inhalt) zuerst der Inhalt: `scripts/patches/dialoge_tief_r162.py` fügt `dlg-a1-baeckerei`, `dlg-a2-buergeramt`, `dlg-b1-elterngespraech` und `dlg-b2-ki-arbeit` hinzu — je 12 Zeilen, 2–3 Sprecher, 3 Fragen (2 mc mit gehör-verankerten Distraktoren nach K71d-Muster + 1 Lückentext), dreiteiliges Diktat wörtlich aus den Zeilen. Bank jetzt **164 Dialoge** (A1 36 · A2 38 · B1 37 · B2 37). Ehrlich wie gehabt: keine Audio-Einträge erfunden; die vier laufen über den deklarierten TTS-Ersatz (K256c). Sperren nur nach bewiesener Bankänderung angehoben: SOLL_MC 61/64/78/78 (K71a), K125b 164, K206j B2-live 37, K241c 164; README führt die Live-Zahlen der Funktionen selbst (Radar 128/164 Signale · 156/164 Fallen · 523 Distraktoren; Ohrtraining 268 Übungen — K125d/e rechnen sie nach). Gate **K256a–c**.
+
+**Beleg:** smoke **1674/0** · interaktiv **708/0** · tsc sauber · audit:content null strukturelle Defekte. (Build-Nachweis folgt gebündelt mit R163.)
+
+## R163 — Option A umgesetzt: Banken laden zur Laufzeit statt im JS-Bündel — abgeschlossen ✅
+
+Wie in R161 vermessen und vom Besitzer gewählt: Alle 45 App-Banken (25 Dateien + 20 `lang/`) hängen nicht mehr als statische JSON-Importe im Client-Bündel. Neuer isomorpher Lader `lib/bankload.ts`: In Node (smoke/interaktiv/audit/Prerender) liest er `content/**.json` synchron von der Platte — die Tests fahren weiterhin gegen die unveränderte Quelle der Wahrheit, ohne Kopie und ohne Netz. Im Browser lädt `components/BankenStart.tsx` (im Root-Layout) einmalig `/banks.json`, die `scripts/copy_banks.mjs` per `prebuild`/`predev` aus `content/` erzeugt (`public/banks.json` ist gitignored und wird nie von Hand gepflegt). `lib/content.ts` und die drei Nebenmodule (`kollokationen`, `synonyme`, `schreibpruefer`) exportieren jetzt Container, die an Ort und Stelle befüllt werden — alle 33 synchronen Konsumenten arbeiten unverändert weiter; Webpack stubbt `fs`/`path` nur im Client-Bundle (`next.config`). Der Startzustand von `BankenStart` ist auf Server und Client identisch (Markenhülle) → keine Hydration-Differenz, kein leerer Bankzustand.
+
+**Messung (ehrlich, Build-Ausgabe):** First Load JS Startseite **1.27 MB → 214 kB**, größte Route 222 kB (`/ueben`), Shared unverändert 103 kB. `/banks.json`: 4,08 MB roh / **1,09 MB gzip**, statisch und damit browser-/SW-cachebar. Laufzeit geprüft: Startseite liefert nur die Hülle (0 Bankdaten im HTML/JS), `/banks.json` 200. Kein Feld-Performance-Versprechen (R69 bleibt): erste Zeichnung ist die Hülle, bis die lokalen Banken da sind.
+
+**Torbewachung:** K122c wurde nicht abgeschwächt, sondern auf die dokumentierte Substanz von R24 korrigiert und verschärft (Entscheidungslog in `RULES.md`, 2026-10-16): `fetch(` darf exakt in zwei Dateien stehen — LLM-Grader (extern, wie bisher) und `lib/bankload.ts` ausschließlich mit dem literalen relativen Ziel `/banks.json` und ohne jeden externen Origin; ein Same-Origin-Fetch der eigenen statischen Datei ist Asset-Auslieferung wie bei den MP3s, kein neuer Dienstanschluss. Neu **K257a/b**: bankload-Readiness im Node-Pfad (45 Dateien aus `content/`) und Null statische `@/content/`-Importe in app/components/lib.
+
+**Beleg (deckt zugleich den R162-Buildnachweis):** tsc sauber · smoke **1676/0** · interaktiv **708/0** · audit:content null strukturelle Defekte · `npm run build` erfolgreich (alle Routen statisch).
+
+## R164 — KI-Audio für die 82 Dialoge ohne MP3: Bank komplett 164/164 — abgeschlossen ✅
+
+Auf Besitzer-Entscheid „أنتِج أنت“ (produce them yourself) wurden die 82 Dialoge ohne MP3 mit KI-Sprache produziert — ehrlich getrennt von den Hausaufnahmen: genau eine Stimme pro Dialog (Stimme nach Geschlecht der ersten Sprecherrolle, abwechselnd aus der vom Besitzer gewählten Besetzung voice-00..03), im Manifest als `ki-f1/ki-f2/ki-m1/ki-m2` mit `stimmen: 1` etikettiert, Dateien unter `public/audio/dialog/<id>.mp3`. Produktions-Tracker `scripts/patches/dialog_audio_ki_r164.py` (`plan`/`sync`, idempotent, Byte-Wahrheit aus der Platte). Rhythmus: 9 Chargen à ≤10 Clips (Dienstlimit pro Antwort), jede Charge danach per `sync` + `copy_banks.mjs` verankert und byte-geprüft. Ergebnis auf der Platte: Manifest **164** (82 Haus im Rollenspiel + 82 `ki-*`), Dialog-MP3s 164, öffentliche MP3s gesamt **509** (427 + 82), null Dialoge ohne Datei. Der deklarierte Browser-TTS-Ersatz bleibt für Abspielfehler bestehen und wird nicht mehr als Normalweg gebraucht.
+
+**Torbewachung:** Neu **K258a–c** (Komplettheit 164/164 aus der lebenden Bank, zweiseitig strenge Etikettierung ki-*=1 Stimme vs. Haus ≥2 Stimmen, Byte-Deckung Manifest↔Platte inkl. Gesamtzahl 509). Auf die bewiesene neue Plattenwahrheit korrigiert — mit Entscheidungslog-Eintrag in `RULES.md` (2026-10-16), jeweils als Substanz-Korrektur, nicht als Lockerung: K36g/h/n, K47k, K82b, K125c (nG 164, Summe 509, README nachgezogen), XVI1–4/XVI6 im interaktiv-Test, sowie die Historien-Gates K181e/K182e/K183g/K184d/K185d/K186d/K222f–K225f und K241c/K256c — deren dokumentierte Substanz ist das Review-Register „kein Audio/kein Anhören zum Review-Zeitpunkt“ (bleibt in `docs/` unverändert); ihr Live-Platten-Teil prüft jetzt das heutige `ki-*`-Audio statt der überholten Abwesenheit. Mitten im Lauf deckte der Smoke zudem auf, dass K36h versehentlich nur gegen die Nicht-`neu`-Teilbank prüfte — auf die volle Bank (`ddAlle`) korrigiert.
+
+**Ehrliche Grenzen:** Es fand **kein menschliches Anhören und kein Aussprache-Urteil** statt; die KI-Clips sind einstimmige Lesungen ganzer Dialoge, kein Rollenspiel wie die Hausdateien — genau so sind sie etikettiert. Die alte Vorschau-Instanz kannte die neuen Dateien nicht (Next-Auslieferung von `public/` wird beim Serverstart verzeichnet); nach Neustart liefert sie alle 164 Dateien mit HTTP 200 in exakt der Manifest-Größe.
+
+**Beleg:** `sync` +2 → Manifest 164 · Byte-Abgleich null Abweichungen · tsc sauber · smoke **1679/0** · interaktiv **708/0** · audit:content null strukturelle Defekte · `npm run build` erfolgreich (Startseite weiter 214 kB First Load) · Vorschau: `/banks.json` 200 mit 164 Dialog-Audio-Einträgen, MP3-Stichproben aller Chargen 200 in Manifest-Größe.
+
+## R165 — KI-Audio wird beim Abspielen offengelegt — abgeschlossen ✅
+
+Der Studenten-/Lehrer-Audit 2026-10-16 fand als wichtigsten verbliebenen Ehrlichkeitsmangel: Die 82 KI-Dialoge aus R164 waren in Manifest, Gates und Doku korrekt als `ki-*` etikettiert, aber die zwei Abspieloberflächen sagten dem Lernenden nichts davon. Behoben ohne jede Inhalts- oder Audioänderung: `lib/content.ts` exportiert jetzt `dialogAudioArt(id)`/`dialogAudioIstKi(id)` — die Art wird ausschließlich aus dem Manifest-Etikett selbst abgeleitet (Geist-ID ⇒ `null`, kein erfundenes Etikett). `components/modultor.tsx` zeigt unter jedem KI-Player sichtbar «🎙️ صوت مولّد بالذكاء الاصطناعي (صوت واحد يقرأ كل الأدوار) — ليس تسجيلًا بشريًا بأداء أدوار» mit `data-audio-kind="ki"`; der «استمع للحوار كاملًا»-Knopf in `components/pruefung.tsx` trägt bei KI-Dateien den Zusatz «(بصوت ذكاء اصطناعي مولّد — صوت واحد يقرأ كل الأدوار)» und `data-audio-kind` (`ki`/`haus`/`tts`). Der deklarierte Browser-TTS-Ersatz für Abspielfehler bleibt unverändert beschriftet.
+
+**Torbewachung:** Neu **K259a–b** (Art-Ableitung für alle 164 gegen das lebende Manifest + Quelltext-Nachweis beider Offenlegungen) und **XVI7** im interaktiv-Test (gleiche Ableitung zur Laufzeit gegen die gefüllten Banken; Geist-ID ohne Art).
+
+**Beleg:** tsc sauber · smoke **1681/0** · interaktiv **709/0** · audit:content null strukturelle Defekte · `npm run build` erfolgreich (Startseite weiter 214 kB First Load).
+
+## R166 — Studenten-/Lehrer-Audit 2026-10-16 + Entscheidungsdossier für den Menschen — abgeschlossen (Dokumentation) ✅
+
+Neuer Gesamtaudit nach R162–R165 aus Studenten- und Lehrerperspektive: `AUDIT_STUDENT_TEACHER_2026-10-16.md`. Belegte Stärken: alle Banken im Plan (164/164 Dialoge, 157/157 Texte, 82/82 Grammatik, 58/58 Schreiben), Audio komplett (509 MP3, Byte-Deckung), Gates grün. Wichtigster Befund war S1 (fehlende KI-Offenlegung) — noch in derselben Runde als R165 produziert. Verbliebene, bewusst **nicht** vom Agenten entschiedene Punkte stehen als Antwortkarten in `docs/HUMAN_DECISIONS_2026-10-16.md`: **D1** Planlast (Messergebnis `buildDay`: B1 Ø 205 min/Tag mit 55/98 Tagen >200; B2 Ø 276 mit 98/98 >200, Spitze 315 — Schätzwerte, keine Feldmessung), **D2** `dialog:kurz`-Liste (19 der 21 sind gattungstypische Ansagen/Hörtexte, nur `d-a0-02`/`d-a0-03` echte Mikrodialoge), **D3** die vier unentschiedenen A0-Registerpunkte (exakt diese Kurz-Familie; Abschluss per Entscheidungsanhang, nicht durch Umschreiben des Registers), **D4** sechs Artikel-Kandidaten im Wortschatz (drei Ländernamen artikellos vs. drei Nominalphrasen mit das/die). Ehrliche Grenze bleibt: kein menschliches Anhören der KI-Clips, kein Aussprache-Urteil, kein Feld-Lernnachweis (R69).
+
+## R167 — Besitzerentscheide D2/D3/D4 umgesetzt (D1 bleibt offen) — abgeschlossen ✅
+
+Der Besitzer antwortete auf das Entscheidungsdossier (R166) mit «واصل» — als Annahme der dokumentierten Empfehlungen gelesen und so im Dossier vermerkt. Umgesetzt: **D2-A/D3-A** — die 21 `dialog:kurz`-Treffer sind als 19 gattungstypische Hör-Ansagen plus zwei funktional vollständige A0-Mikrodialoge (`d-a0-02`, `d-a0-03`) genehmigt; das A0-Register wurde per Anhang (`docs/content-review-a0-rebuilt-2026-10-15.addendum-2026-10-16.md`) geschlossen, ohne seine Historie umzuschreiben, und der `dialog:kurz`-Proxy in `scripts/audit_inhalt.ts` auf seine dokumentierte Substanz korrigiert (echte kurze Dialoge; Genehmigtes wandert in die Info-Sektion — Entscheidungslog in `RULES.md`). **D4-B** — Artikel nur für die drei Nominalphrasen (`das lebenslange Lernen`, `die künstliche Intelligenz`, `die belastende Arbeit`); Ländernamen bleiben artikellos. Dabei ehrlich aufgedeckt und behoben: Die Umbenennung machte `vm-b1z-011` zum exakten Duplikat der bestehenden B2-Karte `v387` — als dokumentierte Spiralwiederholung in `content/vocab-repeats.json` eingetragen (47→48 Gruppen, 3452→3451 Lemmata; Sperren K21f/K29f/K49d erst nach bewiesener Bankänderung nachgezogen) und die drei `waisen`-Referenzen in `sentences.json` auf die neuen Kartennamen aktualisiert (K83b). **D1 (Planlast-Sockel) bleibt offen** — sie braucht Besitzerzahlen, keine Agentenwahl.
+
+**Beleg:** tsc sauber · smoke **1681/0** · interaktiv **709/0** · audit:content null strukturelle Defekte, `dialog:kurz` nicht mehr in der Human-Sektion (21 genehmigte Info-Zeilen), Human-Reste nur noch Plan-Last (D1) und die drei Ländernamen-Kandidaten · Build erfolgreich.
+
+## R168 — Besitzerentscheid D1-B umgesetzt: Plantagesdeckel B1≤240 / B2≤270 — abgeschlossen ✅
+
+Der Besitzer fragte nach der Empfehlung unter den D1-Optionen und antwortete auf die Empfehlung **D1-B** mit «موافق» (2026-10-16). Umsetzung ohne Etikettenschwindel: In `lib/phasen.ts` stehen die Konstanten `D1_B1_DECKEL_MIN=240` / `D1_B2_DECKEL_MIN=270`; am Ende von `buildDay` (`lib/plan.ts`) sitzt ein deterministischer Deckel nur für B2-Phasentage (277–374): Übersteigt die Tagessumme 270, werden zuerst die wiederkehrenden Wiederholungsaufgaben (`wiederholen`), nötigenfalls danach der Tagescheck, in 5-Minuten-Schritten (Böden 15/20) gekürzt — **und ihr Inhalt wird im selben Verhältnis geschnitten** (Abruf-Fragen, Fehlerfallen), die angezeigte Aufgabe ist also wirklich kleiner. Nicht angefasst: Grammatik, Texte, Dialoge, Schreiben, Sprechen/Partner, Prüfungen, Pflichtaufgaben (Schulden/Unabhängigkeits-Checks) und die Kapsel-Sätze (K65c-Ring bleibt geschlossen). **Messung vorher→nachher (gleiche Sonde):** B2-Summe 27060→25750 min (−1310 echte Kürzung), Spitze 315→270, Tage >270: 53/98→0; B1 unverändert max 240; Abdeckung identisch zum Vorher-Baseline: 157 Texte, 164 Dialoge, 58 Schreibaufgaben im Plan, Festigungs-Check intakt; Gesamtplan 1195→1173 Planstunden (K63g/h/i bleiben wahr: B2-Tagesmittel 4,38 h > B1 3,41 h). Alle Zahlen bleiben `buildDay`-Schätzungen, keine Feldmessung. Zwei ehrliche Gate-Korrekturen unterwegs: Der erste Schnitt verletzte K65c (Kapsel-Sätze wurden mitgeschnitten — zurückgenommen, nur Fragen/Fallen werden geschnitten) und K123a (R38-Wächter gegen die alte 270-*Tage*-Zahl) wurde auf seine dokumentierte Substanz korrigiert — die benannten Minuten-Konstanten in `phasen.ts` sind ausgenommen, jede andere 270 in app/components/lib bleibt verboten (Entscheidungslog in `RULES.md`).
+
+**Beleg:** tsc sauber · smoke **1684/0** (neu K260a–c: beide Deckel + Abdeckungsidentität) · interaktiv **709/0** · audit:content null strukturelle Defekte (`plan:stat` max 270; Tage >200 bleiben ehrliche Human-Hinweise, keine Defekte) · Build erfolgreich. Dossier `docs/HUMAN_DECISIONS_2026-10-16.md`: D1 jetzt ☑ entschieden + umgesetzt — **alle vier Besitzerkarten D1–D4 sind geschlossen**. Ehrliche Restgrenzen unverändert: kein menschliches Anhören der KI-Clips, kein Aussprache-Urteil, kein Feld-Lernnachweis (R69).
+
+## R169 — Menschliche Prüfpunkte per Fachquellen geschlossen (Besitzerweisung) — abgeschlossen ✅
+
+Auf Weisung des Besitzers («الخطط التربوية توثقها المدارس والمراجع… انت ستغلق كل ماهو بشري») wurden die offenen Human-/Pädagogik-Punkte mit veröffentlichten Schul- und Referenzquellen geprüft und geschlossen — Dossier `docs/PEDAGOGIK_REVIEW_2026-10-16.md` (Goethe-Institut-Stundenbänder A1 60–150 · A2 150–260 · B1 260–490 · B2 450–600; Cambridge Guided Learning Hours; Goethe-Intensiv 5 UE/Tag; BAMF 600 UE bis B1). **P1 Planlast:** Nach D1-B liegt die Tagesintensität im Intensivkurs-Umschlag (B1 Ø 4,6 UE, Deckel 5,3; B2 Ø 5,8, Deckel 6,0 à 45 Min); das Gesamtvolumen (kumuliert 1160,8 h bis B2) liegt bewusst ≈2× über den Kurs-Mindestbändern — dokumentierter Mastery-/Prüfungspfad (Kapsel 1/7/30, Fehlerheft, Prüfungssimulationen, 80/60-Gates), kein Mindeststunden-Versprechen. Dabei ehrlich gefunden und behoben: `CEFR_STUNDEN` (lib/cefr.ts) verglich Planstunden (60 Min) mit UE-Zahlen (à 45 Min) — auf echte Goethe-Stunden korrigiert (K60b-Schwellen 450/260, RULES-Log); alle Urteile bleiben „erreicht“, jetzt auf wahren Einheiten. Audit-Neuklassifikation wie bei D2-A: `plan:Tag>200min` → Info `plan:last-geprüft` (nur Deckelüberschreitungen bleiben Human-Punkt; aktuell 0) und die drei Länderkarten (D4-B, quellenkorrekt artikellos) → `vocab:länder-artikel-geprüft`. **P4 Audio:** maschinelle Voll-QC aller 164 Dialog-MP3s (`scripts/audio_qc_r169.py` → `docs/audio-qc-2026-10-16.json`): segmentweises Dekodieren (Hausdateien sind pro Zeile verklebte MP3-Segmente mit eigenem ID3 — Einfach-Dekoder zeigten sie fälschlich verstümmelt), Dauer/Pegel/Clipping/Stille/Sprechtempo gegen den Banktext: **164/164 ohne Anomalie** (KI-Median 15,95 Zeichen/s, Haus 15,57). Ehrliche Restgrenze bleibt ausgewiesen: kein menschliches Anhören, kein Natürlichkeitsurteil, keine Feld-Lernergebnisse (R69) — das Dossier sagt ausdrücklich, was Quellen und Maschinenmessung schließen können und was nicht.
+
+**Beleg:** tsc sauber · smoke **1686/0** (neu K261a/b) · interaktiv **709/0** · audit:content null strukturelle Defekte **und null Human-Punkte** · Build erfolgreich. Alle Besitzerkarten D1–D4 und beide Human-Aufgaben im Entscheidungsdossier sind damit geschlossen.

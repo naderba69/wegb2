@@ -51,6 +51,7 @@ import {
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct } from "../lib/grader";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
+import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
 import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
 import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
@@ -60,7 +61,7 @@ import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/s
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
 import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf } from "../lib/content";
-import { hoerenAudio, diktatAudio, diktatSrc } from "../lib/content";
+import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
 import { bauHoerRunde, darfSpielen, fragenFrei, werteItem, werteRunde, hoerNote, RATE } from "../lib/hoeren";
 import { buildSkillKlausur, SKILL_LABELS, type SkillKey } from "../lib/klausur";
@@ -96,6 +97,7 @@ import { synonymKontexteFuer, synonymKontextAnzahl } from "../lib/synonyme";
 import type { Exercise, Level, Progress, TaskResult, DayTask } from "../lib/types";
 import { STUFEN, stufeVonTag, tagVonStufe, ankerVon, wegHeute } from "../lib/weg";
 import { AKTIVITAETEN } from "../lib/aktivitaeten";
+import { gemischteOptionen } from "../lib/optionen";
 
 import { TOTAL_DAYS as TOTAL } from "../lib/types";
 let pass = 0;
@@ -428,8 +430,8 @@ const vocabRepeatAudit = (() => {
 
   ok(alleVokabeln.length === 3499, "K21d بنك المفردات: 3499 بطاقة عبر 80 حزمةً؛ يتطابق العدد مع القرص والفهرس");
   ok(GOETHE_UNITS.every((u) => { const key = { Beziehungen: "beziehungen", Gesundheit: "gesundheit", Gesellschaft: "gesellschaft", Wohnen: "wohnen", Digital: "digital", Wissenschaft: "wissenschaft", Schönheit: "schoenheit", Kunst: "kunst-kultur" }[u] as string; return alleVokabeln.filter((c) => c.tags?.includes(key)).length >= 40; }), "K21e تغطية موضوعية: ≥40 كلمة لكل لوحة Goethe");
-  ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 47 && vocabRepeatAudit.unique === 3452,
-    `K21f التكرار المعجمي إما موثّق لإعادة الاسترجاع عبر المستويات أو معدوم (${vocabRepeatAudit.groups} مجموعة/47؛ ${vocabRepeatAudit.unique}/3452 فريداً)`);
+  ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3451,
+    `K21f التكرار المعجمي إما موثّق لإعادة الاسترجاع عبر المستويات أو معدوم (${vocabRepeatAudit.groups} مجموعة/48؛ ${vocabRepeatAudit.unique}/3451 فريداً)`);
 
   const LUECKEN = ["b2-futur-ii", "b2-relativ-generalisierend", "b2-doppelkonnektoren"];
   ok(LUECKEN.every((k) => grammarMap[k] && grammarMap[k].exercises.length >= 5 && grammarMap[k].level === "B2"), "K21g فجوات القواعد الثلاث سُدّت بمواضيع كاملة (≥5 تمارين B2)");
@@ -642,8 +644,8 @@ const vocabRepeatAudit = (() => {
       ok(ikarten.every((c) => /[\u0600-\u06ff]/.test(c.ar) && !/[A-Za-z]/.test(c.ar)), "K29c عربيةٌ خالصة: لا لاتينيةً في شرحٍ ولا شرحَ بلا عربية");
       ok(ikarten.every((c) => /^(der|die|das) /.test(c.de) ? (c.article === c.de.split(" ")[0] && (!c.plural || /^(der|die|das) /.test(c.plural))) : (!c.article && !c.plural)), "K29d الأداةُ والجمعُ منضبطان — والفعلُ والصفةُ عاريان منهما");
       ok(alleVokabeln.filter((c) => c.tags?.some((t) => ITAGS.includes(t))).length === ikarten.length, "K29e الرقعةُ مسطَّحةٌ في البنك: كل بطاقةٍ يراها محركُ SRS بلا واسطة");
-      ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 47 && vocabRepeatAudit.unique === 3452,
-        `K29f رقعةُ المفردات لا تضيف تكراراً غير موثّق (${vocabRepeatAudit.groups} مجموعة مقصودة؛ ${vocabRepeatAudit.unique}/3452 فريداً)`);
+      ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3451,
+        `K29f رقعةُ المفردات لا تضيف تكراراً غير موثّق (${vocabRepeatAudit.groups} مجموعة مقصودة؛ ${vocabRepeatAudit.unique}/3451 فريداً)`);
     }
     {
       const wr = JSON.parse(readFileSync("content/writing.json", "utf8")) as unknown as { id: string; level: string; sample: string; noteAr?: string[] }[];
@@ -793,9 +795,9 @@ const vocabRepeatAudit = (() => {
         ok(w3.every((x) => x.questions.length >= 2 && x.questions.every((q) => /[\u0600-\u06FF]/.test(q.promptAr ?? "")) && x.questions.every((q) => !!q.explanationAr)), "K36m ولكلِّ سؤالٍ شرحٌ عربيٌّ يُعلِّم");
         void 0;
       }
-      const dm = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as unknown as { count: number; einsaetze: { id: string; file: string; bytes: number; voice: string; level: string }[] };
-      ok(dm.count === 82 && dm.einsaetze.length === 82, "K36g اثنان وثمانون صوتَ حوارٍ — بأداء أدوار: 81 بصوتَين وواحد بثلاثة أصوات؛ والعدّاد صادق");
-      ok(dm.einsaetze.every((e) => dd.some((x) => x.id === e.id && x.level === e.level) && (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03" || e.voice === "voice-04+voice-05") && e.bytes > 8000 && readFileSync(`public${e.file}`).byteLength === e.bytes), "K36h كلُّ ملفٍ مذكورٍ موجودٌ بايتًا بايتًا، لصاحبِ الصوتِ الواحد، ومستواهُ كبطاقتِه");
+      const dm = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as unknown as { count: number; einsaetze: { id: string; file: string; bytes: number; voice: string; level: string; stimmen?: number }[] };
+      ok(dm.count === 164 && dm.einsaetze.length === 164 && dm.einsaetze.filter((e) => e.voice.startsWith("ki-")).length === 82 && dm.einsaetze.filter((e) => !e.voice.startsWith("ki-")).length === 82, "K36g مئةٌ وأربعةٌ وستون صوتَ حوارٍ: 82 تسجيلاً بيتياً بأداء أدوار + 82 بصوت ذكاءٍ اصطناعيٍّ أحاديٍّ موسوم ki-* (R164)؛ والعدّاد صادق");
+      ok(dm.einsaetze.every((e) => ddAlle.some((x) => x.id === e.id && x.level === e.level) && (e.voice.startsWith("ki-") ? ["ki-f1", "ki-f2", "ki-m1", "ki-m2"].includes(e.voice) && e.stimmen === 1 : ["voice-01", "voice-01+voice-02", "voice-01+voice-02+voice-03", "voice-02+voice-03", "voice-04+voice-05"].includes(e.voice)) && e.bytes > 8000 && readFileSync(`public${e.file}`).byteLength === e.bytes), "K36h كلُّ ملفٍ مذكورٍ موجودٌ بايتًا بايتًا ومستواهُ كبطاقتِه؛ البيتيُّ بأصواتِه الموثّقة والـki-* موسومٌ أحاديَّ الصوتِ صراحةً (stimmen=1)");
       const audioIds = new Set(dm.einsaetze.map((e) => e.id));
       const ohneAufnahme = ddAlle.filter((x) => !audioIds.has(x.id));
       const alteOhneAufnahme = ohneAufnahme.filter((x) => !x.neu);
@@ -804,15 +806,15 @@ const vocabRepeatAudit = (() => {
       const pruefungSrc = readFileSync("components/pruefung.tsx", "utf8");
       const ttsFallback = modultorSrc.includes("data-audio-fallback=\"tts\"") && modultorSrc.includes("speakAny(spokenText)") && pruefungSrc.includes("else speakAny(");
       ok(audioIds.size === dm.einsaetze.length && ddAlle.filter((x) => audioIds.has(x.id)).length === dm.einsaetze.length &&
-        ohneAufnahme.length === ddAlle.length - dm.einsaetze.length && alteOhneAufnahme.length > 0 && neueOhneAufnahme.length > 0 && ttsFallback,
-        `K36n التغطية الصوتيةُ تطابقُ المانيفستو، والباقي له TTS؛ ووسم neu مستقلٌّ عن وجود MP3 (${dm.einsaetze.length}/${ddAlle.length} تسجيلاً، ${ohneAufnahme.length} بدائل)`);
+        ohneAufnahme.length === 0 && alteOhneAufnahme.length === 0 && neueOhneAufnahme.length === 0 && ttsFallback,
+        `K36n التغطية الصوتيةُ كاملةٌ تطابقُ المانيفستو (R164: 82 بيتي + 82 ki-*)، وبديل TTS باقٍ مُعلناً لتعذّر التشغيل؛ ووسم neu مستقلٌّ عن وجود MP3 (${dm.einsaetze.length}/${ddAlle.length} تسجيلاً، ${ohneAufnahme.length} بلا ملف)`);
     {
       /* ═══ K82 · الموجةُ الرابعة: neu علامةُ حداثةِ المحتوى لا حالةُ التسجيل؛ الصوتُ يُختبَر مستقلاً في K36n ═══ */
       const neu = ddAlle.filter((x) => x.neu);
       ok(neu.length === 36 && neu.every((x) => x.level === "A2" || x.level === "A1"), `K82a ${neu.length} حواراً جديداً، كلُّها A1/A2 (سدُّ عدمِ التوازن)`);
       const audioIds82 = new Set(dm.einsaetze.map((e) => e.id));
-      ok(neu.some((x) => !audioIds82.has(x.id)) && ddAlle.some((x) => !x.neu && !audioIds82.has(x.id)),
-        "K82b وسم neu لا يساوي غياب التسجيل: توجد مادة جديدة وقديمة غير مسجّلة، وكلاهما يستخدم مسار TTS");
+      ok(neu.every((x) => audioIds82.has(x.id)) && ddAlle.some((x) => !x.neu && audioIds82.has(x.id)),
+        "K82b وسم neu لا يساوي حالة التسجيل: الجديدُ كلُّه له صوتٌ موسوم ki-* بعد R164 والقديمُ مسجَّلٌ أيضاً — العلامتان مستقلتان");
       const st = (w: string) => { const x = w.toLowerCase().replace(/^(der|die|das|sich|jdn|jdm)\s+/, "").replace(/^etwas\s+/, "").split(/\s+/)[0]; return x.slice(0, Math.max(4, x.length - 2)); };
       const normD = (s: string) => s.toLowerCase().replace(/é/g, "e").replace(/[^a-zäöüß0-9 ]/g, " ");
       const waisenOk = neu.every((x) => { const low = normD(x.lines.map((l) => l.de).join(" ")); const drin = (x.waisen ?? []).filter((w) => alleVokabeln.some((c) => c.de === w && c.level === x.level) && low.includes(st(w))); return drin.length >= 8; });
@@ -839,7 +841,7 @@ const vocabRepeatAudit = (() => {
       ok(/@media \(pointer: coarse\)[\s\S]*?min-height:\s*44px/.test(css), "K42a قاعدةُ 44px للمسِ الخشنِ قائمةٌ — لا تُحذَفُ في رقعةٍ عابرة");
       ok(/input\[type="checkbox"\][\s\S]*?1\.4rem/.test(css) && /label:has\(input\[type="checkbox"\]\)[\s\S]*?min-height:\s*44px/.test(css), "K42b ومربّعاتُ الاختيارِ تكبُرُ وعناوينُها تنالُ مساحةَ الإصبع");
       ok(/@media \(max-width:\s*640px\)/.test(css) && /@media \(max-width:\s*400px\)/.test(css) && /@media \(min-width:\s*1500px\)/.test(css), "K42c كسراتُ 400 و640 و1500 — المدى 320→1440 مخدومٌ كلُّه");
-      ok(/table[\s\S]{0,80}overflow-x:\s*auto/.test(css), "K42d الجداولُ تُمرَّرُ داخلَ نفسِها فلا تفيضُ الصفحةُ أفقياً على 320");
+      ok(/table[\s\S]{0,80}overflow-x:\s*auto/.test(css), "K42d الج�لا تفيضُ الصفحةُ أفقياً على 320");
       const nagel = readFileSync("components/blitz.tsx", "utf8").includes('minHeight: "44px"') && readFileSync("components/szenarien.tsx", "utf8").includes('minHeight: "44px"');
       ok(nagel, "K42e رؤوسُ الأكورديوناتِ وأزرارُ الرقعِ نالَت ارتفاعَها الصريح — الإصلاحُ في المكوّنِ لا في البوابة");
     }
@@ -997,7 +999,7 @@ const vocabRepeatAudit = (() => {
     /* المرجع */
     ok(LEVEL_ORDER.every((l) => Array.isArray(CEFR_STUNDEN[l]) && CEFR_STUNDEN[l].length === 2 && CEFR_STUNDEN[l][0] < CEFR_STUNDEN[l][1]),
       "K60a مرجعُ CEFR نطاقاتٌ [أدنى,أعلى] لكلِّ المستوياتِ الأربعة — لا رقمٌ حاسمٌ يُدَّعى");
-    ok(CEFR_STUNDEN.B2[0] >= 600 && CEFR_STUNDEN.B1[0] >= 350 && CEFR_STUNDEN.A2[0] >= 150 && CEFR_STUNDEN.A1[0] >= 60,
+    ok(CEFR_STUNDEN.B2[0] >= 450 && CEFR_STUNDEN.B1[0] >= 260 && CEFR_STUNDEN.A2[0] >= 150 && CEFR_STUNDEN.A1[0] >= 60, // R169: عتباتُ Goethe بالساعات الحقيقية (450/260) لا أرقام UE ‏à45 المخلوطة قديماً (600/350) — تصحيحُ وحداتٍ بسجلّ RULES
       "K60b والنطاقاتُ مطابقةٌ لمرجعِ Goethe/telc التراكميِّ من الصفر");
     ok(PHASE_END_DAY.A1 === PHASEN.A1.bis && PHASE_END_DAY.A2 === PHASEN.A2.bis && PHASE_END_DAY.B1 === PHASEN.B1.bis && PHASE_END_DAY.B2 === TOTAL && levelOf(PHASEN.A1.bis) === "A1" && levelOf(PHASEN.A1.bis + 1) === "A2" && levelOf(PHASEN.B1.bis + 1) === "B2",
       "K60c ونهاياتُ المراحلِ هي حدودُ الخطةِ نفسِها — لا تقويمٌ موازٍ");
@@ -1270,7 +1272,7 @@ const vocabRepeatAudit = (() => {
     ok((proL["A1"] ?? 0) + (proL["A2"] ?? 0) + (proL["B1"] ?? 0) >= 2400, `K49a3 الرصيدُ التراكميُّ حتى B1 عبرَ ٢٤٠٠ المرجعيةَ (${(proL["A1"] ?? 0) + (proL["A2"] ?? 0) + (proL["B1"] ?? 0)})`);
     ok((proL["A1"] ?? 0) + (proL["A2"] ?? 0) >= 1300, `K49a2 الرصيدُ التراكميُّ A1+A2 عبرَ ١٣٠٠ المرجعيةَ لمستوى A2 (${(proL["A1"] ?? 0) + (proL["A2"] ?? 0)})`);
     ok(alleVokabeln.length >= 3356, `K49c مجموعُ البطاقاتِ من البنكِ لا من التقدير (${alleVokabeln.length})`);
-    ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 47 && vocabRepeatAudit.unique === 3452,
+    ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3451,
       `K49d التكرارات المقصودة موثّقة بأمثلة مختلفة وعبر مستويات متباينة (${vocabRepeatAudit.groups} مجموعة؛ ${vocabRepeatAudit.unique}/${alleVokabeln.length} فريداً)`);
     const idSet = new Set(alleVokabeln.map((v) => v.id));
     ok(idSet.size === alleVokabeln.length, "K49e ولا معرِّفَ مكرَّرٌ يُفسِدُ جدولَ المراجعة");
@@ -1303,12 +1305,18 @@ const vocabRepeatAudit = (() => {
     ok(erst["b1-relativ"] < erst["b2-relativ-generalisierend"], "K48e جملةُ الوصلِ قبلَ وصلِها المعمَّم");
     ok(erst["b1-konnektoren"] < erst["b2-doppelkonnektoren"], "K48f الروابطُ المفردةُ قبلَ الروابطِ الثنائية");
     ok(erst["a1-akkusativ"] < erst["a2-dativ"], "K48g الأكوزاتيف قبلَ الداتيف كما في كلِّ منهجٍ رصين");
-    const a1G = alleG.filter((g) => g.startsWith("a1-"));
-    const bootSet = new Set(["a1-sein-haben", "a1-pronomen", "a1-praesens"]); // Boot-Camp A0: sein/haben/الضمائر/الحاضر — تُعرَض التهيئةً قبل بداية A1 الرسمية (يوم 11)
-    const spaete = a1G.filter((g) => erst[g] > PHASEN.A1.bis);
-    const frueheNichtBoot = a1G.filter((g) => erst[g] < PHASEN.A1.von && !bootSet.has(g));
-    ok(a1G.length >= 7 && spaete.length === 0 && frueheNichtBoot.length === 0,
-      `K48h دروسُ A1 لا تتجاوزُ نهاية المرحلة (94) ولا يسبق A1 سوى دروس التهيئة الثلاثة sein/haben/Präsens/الضمائر في أيام A0 — مخالف: ${[...spaete, ...frueheNichtBoot].map((g) => `${g}:${erst[g]}`).join(", ") || "لا شيء"} (إجمالي A1: ${a1G.length})`);
+    // R145: الحارس على حقل المستوى لا على بادئة المعرّف — البادئات تاريخية (a1-weil-dass مستواه A2 بقرار R138 الموثّق)
+    const bootSet = new Set(["a1-sein-haben", "a1-pronomen", "a1-praesens"]); // Boot-Camp A0: تُعرَض التهيئةً قبل بداية A1 الرسمية (يوم 11)
+    const phasenVonLevel: Record<string, { von: number; bis: number }> = { A0: PHASEN.A0, A1: PHASEN.A1, A2: PHASEN.A2, B1: PHASEN.B1, B2: PHASEN.B2 };
+    const niveauVerstoss = alleG.filter((g) => {
+      const lv = grammarMap[g]?.level;
+      const bereich = lv ? phasenVonLevel[lv] : undefined;
+      if (!bereich || erst[g] === undefined) return false;
+      if (bootSet.has(g) && erst[g] < bereich.von) return false; // تهيئة A0 المصرّح بها
+      return erst[g] < bereich.von || erst[g] > bereich.bis;
+    });
+    ok(niveauVerstoss.length === 0,
+      `K48h لا درسَ يُدرَّس خارجَ طورِ مستواه البياناتي (البادئة تاريخية لا عقد) — مخالف: ${niveauVerstoss.map((g) => `${g}:${erst[g]}/${grammarMap[g]?.level}`).join(", ") || "لا شيء"}`);
 
     /* K48i–m · سدُّ فجوة Präteritum: القرارُ المنهجيُّ مثبَّتٌ — تعرُّفٌ في A1 ثمَّ إنتاجٌ في A2 ثمَّ سردٌ في B1 */
     ok("a1-war-hatte" in grammarMap && "a2-praeteritum" in grammarMap, "K48i درسا الماضي البسيط موجودان: war/hatte في A1 و Präteritum في A2");
@@ -1338,7 +1346,7 @@ const vocabRepeatAudit = (() => {
     const echt = dialogues.filter((d) => zweiIds.includes(d.id));
     ok(echt.length === zwei.length, "K47g كلُّ حوارٍ ثنائيِّ الصوتِ لهُ نصٌّ مقابلٌ في البنك");
     ok(echt.every((d) => new Set(d.lines.map((l) => l.who)).size === 2), "K47h ونصُّهُ فعلاً بمتحدِّثَينِ اثنَين — فالصوتانِ يطابقانِ الدَّورَين");
-    ok(roh.einsaetze.every((e) => (e.stimmen ?? 1) >= 2), "K47k لا حوارَ أحاديَّ الصوتِ في المشروع — كلُّ الحواراتِ المسجَّلةِ بأداءِ أدوار (${roh.count})");
+    ok(roh.einsaetze.every((e) => e.voice.startsWith("ki-") ? e.stimmen === 1 : (e.stimmen ?? 1) >= 2), "K47k البيتيُّ كلُّه بأداءِ أدوار (≥2 صوت)؛ وأحاديُّ الصوتِ هو ki-* الموسومُ وحده صراحةً (stimmen=1) — لا تمويهَ بين البيتي والمولّد (${roh.count})");
     const drei = roh.einsaetze.filter((e) => e.stimmen === 3);
     ok(drei.length === 1 && drei[0].voice === "voice-01+voice-02+voice-03", "K47i حوارٌ واحدٌ بثلاثةِ أصواتٍ — وهو الوحيدُ الذي نصُّهُ ثلاثيُّ المتحدّثين");
     ok(drei.every((e) => { const d = dialogues.find((x) => x.id === e.id); return !!d && new Set(d.lines.map((l) => l.who)).size === 3; }), "K47j وثلاثةُ الأصواتِ تطابقُ ثلاثةَ الأدوارِ بالضبط");
@@ -1600,7 +1608,8 @@ void 0;
 
   /* ═══ K90 · حصّةُ الإنتاج اليومي (لا وهم إتقان بسبب الاختيار من متعدّد) ═══ */
   {
-    const PROD_KINDS = new Set(["schreiben", "sprechen", "grammatik"]);
+    // R145: مهامّ partner (R138–R141) محاكاةُ كلامٍ امتحانية (تعارف/مونولوج/نقاش) = إنتاجٌ شفهيّ بامتياز؛ إخراجها من التصنيف أظهر أيامَ مراجعةٍ كاذبةَ الخلوّ
+    const PROD_KINDS = new Set(["schreiben", "sprechen", "grammatik", "partner"]);
     const REZEPTIV_KINDS = new Set(["lesen", "hoeren", "wiederholen"]);
     // أسئلة quiz من نوع إنتاج تحسب كإنتاج بوزن 0.8 دقيقة/سؤال، mc بصفر.
     const FREE_RE = /"(fill|umformung|order|translate|dictation)"/;
@@ -1633,7 +1642,7 @@ void 0;
     // شرط أقسى: كل يوم (بعد اليوم 10) يحتوي على مهمة إنتاج واحدة على الأقل (schreiben/sprechen/grammatik) أو امتحانٍ بفقرة كتابة (writeId)
     for (let d = 11; d <= 378; d++) {
       const t = buildDay(d, emptyProgress).tasks;
-      const hat = t.some((x) => ["schreiben", "sprechen", "grammatik"].includes(x.kind))
+      const hat = t.some((x) => ["schreiben", "sprechen", "grammatik", "partner"].includes(x.kind))
         || t.some((x) => x.exam && (x as unknown as { writeId?: string }).writeId)
         || t.some((x) => (x as unknown as { writeId?: string }).writeId); // أيّ مهمةٍ تحمل writeId (مراجعة بكتابة مدمجة) تُعدّ إنتاجاً
       if (!hat) fehltProd.push(d);
@@ -1723,12 +1732,12 @@ void 0;
     ok(bad.length === 0, `K93 نهاياتُ الصفات مُدرَّجة A2→B1→B2 — مخالف: ${bad.join(" · ")}`);
   }
 
-  /* ═══ K94 · weil/dass-Bahn: A1-Gerüst vor A2-Vertiefung ═══ */
+  /* ═══ K94 · weil/dass-Bahn: قرار R138 — لا سقالة A1؛ مدخلٌ ثمَّ تعميقٌ داخل A2 ═══ */
   {
     const bad: string[] = [];
     const a1w = grammarMap["a1-weil-dass"];
     const PROD = new Set(["fill", "umformung", "order", "translate", "dictation"]);
-    if (!a1w || a1w.level !== "A1") bad.push("a1-weil-dass fehlt oder nicht A1");
+    if (!a1w || a1w.level !== "A2") bad.push("a1-weil-dass fehlt oder nicht A2 (R138)");
     else {
       const n = a1w.exercises?.length ?? 0;
       const prod = (a1w.exercises ?? []).filter((e) => PROD.has(e.type)).length;
@@ -1740,7 +1749,8 @@ void 0;
       const fall = JSON.stringify(a1w.pitfalls ?? []);
       if (!fall.includes("weil ich müde bin")) bad.push("a1-weil-dass: der Klassiker »weil ich (bin) müde« fehlt in den Fallen");
     }
-    if (!PHASE_TOPICS.A1.includes("a1-weil-dass")) bad.push("a1-weil-dass nicht in PHASE_TOPICS.A1");
+    if (PHASE_TOPICS.A1.includes("a1-weil-dass")) bad.push("a1-weil-dass doch in PHASE_TOPICS.A1 (R138 verletzt)");
+    if (!PHASE_TOPICS.A2.includes("a1-weil-dass")) bad.push("a1-weil-dass nicht in PHASE_TOPICS.A2");
     // التسلسل: الجسر A1 يظهر قبل تعميق A2 — لا يُبنى الجسر بعد الجسر!
     const progSeq = loadProgress();
     const erst: Record<string, number> = {};
@@ -1748,11 +1758,10 @@ void 0;
       for (const t of buildDay(d, progSeq).tasks)
         if (t.topicId && !(t.topicId in erst)) erst[t.topicId] = d;
     if (erst["a1-weil-dass"] === undefined) bad.push("a1-weil-dass nie geplant (K48a-Verstoß droht)");
-    else if (erst["a1-weil-dass"] < (PHASEN.A1.von ?? 11)) bad.push(`a1-weil-dass vor A1-Beginn (${erst["a1-weil-dass"]})`);
-    else if (erst["a1-weil-dass"] > (PHASEN.A1.bis ?? 94)) bad.push(`a1-weil-dass nach A1-Ende (${erst["a1-weil-dass"]})`);
+    else if (erst["a1-weil-dass"] < (PHASEN.A2.von ?? 95) || erst["a1-weil-dass"] > (PHASEN.A2.bis ?? 178)) bad.push(`a1-weil-dass ausserhalb A2 (${erst["a1-weil-dass"]})`);
     else if (erst["a2-weil-dass"] !== undefined && !(erst["a1-weil-dass"] < erst["a2-weil-dass"]))
-      bad.push(`a1 (${erst["a1-weil-dass"]}) nicht vor a2 (${erst["a2-weil-dass"]})`);
-    ok(bad.length === 0, `K94 weil/dass-Bahn A1→A2: ${bad.join(" · ") || "A1-Gerüst steht und wird vor der A2-Vertiefung gezeigt"}`);
+      bad.push(`Einstieg (${erst["a1-weil-dass"]}) nicht vor Vertiefung (${erst["a2-weil-dass"]})`);
+    ok(bad.length === 0, `K94 weil/dass-Bahn (R138): ${bad.join(" · ") || "مدخلُ A2 قبلَ تعميقِه ولا سقالةَ في A1"}`);
   }
 
   /* ═══ K95 · Redewendungen-Bank B2: Regeln + Produktion + Wortlaut-Fallen ═══ */
@@ -2209,7 +2218,7 @@ void 0;
     const ABSURD = /^(nie|nichts|niemand|keine|gar nicht|sofort|ja|nein|presse|status|bargeld|ein foto|kündigung|schimpfen|abstimmen|ersparnis|prämie|kurzer|annullierung)$/i;
     const b2 = dialogues.filter((d) => d.level === LV);
     const mc = b2.flatMap((d) => d.questions.filter((q) => q.type === "mc").map((q) => ({ d, q })));
-    const SOLL_MC: Record<string, number> = { B2: 74, B1: 74, A2: 62, A1: 59 };
+    const SOLL_MC: Record<string, number> = { B2: 78, B1: 78, A2: 64, A1: 61 }; // R146: +2 mc من الحوارين الطويلين في B1/B2؛ R162: +2 لكل مستوى من حوار عميق (2 mc)
     ok(mc.length === SOLL_MC[LV], `K71a·${LV} حواراتُ ${LV} الـ${b2.length} فيها ${SOLL_MC[LV]} سؤالَ mc (${mc.length})`);
     ok(mc.every(({ q }) => (q.options ?? []).includes(q.answer as string) && new Set(q.options).size === (q.options ?? []).length), "K71b·${LV} الإجابةُ ضمنَ الخياراتِ ولا خيارَ مكرَّراً");
     const absurd = mc.flatMap(({ q }) => (q.options ?? []).filter((o) => ABSURD.test(o.trim())));
@@ -2604,10 +2613,14 @@ void 0;
     const AR = /[\u0600-\u06FF]/;
     const SOLL: Record<string, [number, number]> = { A1: [90, 160], A2: [100, 200], B1: [150, 320], B2: [220, 420] };
     const mitLang = texts.filter((t) => t.lang);
+    // R145: «مغطّى» = نسخةٌ طويلة أو طولٌ ذاتيٌّ بحدِّ المستوى؛ ووعدُ الأجيالِ الأولى (01–20 لكلِّ مستوى) بنسخةٍ طويلةٍ يبقى صارماً كما كان
+    const MINWORT: Record<string, number> = { A1: 90, A2: 150, B1: 150, B2: 150 };
+    const abgedeckt = (t: (typeof texts)[number]) => !!t.lang || t.de.split(/\s+/).length >= (MINWORT[t.level] ?? 0);
+    const kern = (lvl: string) => texts.filter((t) => t.level === lvl && Number((t.id.match(/(\d+)\s*$/) ?? ["0", "99"])[1]) <= 20);
     const b2 = texts.filter((t) => t.level === "B2");
-    ok(b2.filter((t) => !(t as { neu?: boolean }).neu).every((t) => !!t.lang), `K70a كلُّ نصوصِ B2 القديمةِ لها نسخةٌ طويلة؛ الجديدةُ (neu) طويلةٌ بذاتِها (${b2.filter((t) => t.lang).length})`);
+    ok(kern("B2").length === 20 && kern("B2").every((t) => !!t.lang) && b2.every(abgedeckt), `K70a نصوصُ B2 العشرون الأولى بنسخٍ طويلةٍ والباقي مغطّى بطولِ مستواه (${b2.filter((t) => t.lang).length} طويلة)`);
     const b1 = texts.filter((t) => t.level === "B1");
-    ok(b1.filter((t) => !(t as { neu?: boolean }).neu).every((t) => !!t.lang), `K70a2 كلُّ نصوصِ B1 القديمةِ لها نسخةٌ طويلة؛ الجديدةُ طويلةٌ بذاتِها (${b1.filter((t) => t.lang).length})`);
+    ok(kern("B1").length === 20 && kern("B1").every((t) => !!t.lang) && b1.every(abgedeckt), `K70a2 نصوصُ B1 العشرون الأولى بنسخٍ طويلةٍ والباقي مغطّى بطولِ مستواه (${b1.filter((t) => t.lang).length} طويلة)`);
     // الامتحاناتُ تقرأُ النسخةَ الطويلة
     const kl = buildSkillKlausur(200, "lesen" as SkillKey).sections[0] as unknown as { passages?: { de: string }[] };
     ok(!!kl.passages && kl.passages.length === 6 && kl.passages.every((p) => p.de.split(/\s+/).length >= 150), "K70j كلاوزور القراءةِ في B2 يعرضُ النصوصَ الطويلةَ لا القصيرة");
@@ -2616,14 +2629,12 @@ void 0;
     ok(mitLang.every((t) => !AR.test(t.lang!.de) && t.lang!.de.split(/\n\n+/).length >= 3), "K70c النصُّ الطويلُ ألمانيٌّ صِرفٌ وذو ≥3 فقرات");
     ok(mitLang.every((t) => t.lang!.questions.length >= (t.level === "A2" || t.level === "A1" ? 4 : 5) && AR.test(t.lang!.ar)), "K70d ≥5 أسئلةٍ لكلِّ نصٍّ طويل (A2: ≥4) + ملخّصٌ عربيّ");
     const a2 = texts.filter((t) => t.level === "A2");
-    ok(a2.every((t) => !!t.lang), `K70a3 كلُّ نصوصِ A2 الـ${a2.length} لها نسخةٌ طويلة (${a2.filter((t) => t.lang).length})`);
-    // K70a4: النسخة القديمة (80) كلها بنسخة طويلة؛ والنصوص الجديدة neu إمّا بنسخة طويلة أو بطول ≥150 كلمة بذاتها، وكلها تحمل حقل lang أو de نظيف بلا عربية.
-    const alteTexte = texts.filter((t) => !(t as { neu?: boolean }).neu);
-    const altLangOk = alteTexte.filter((t: { level?: string }) => t.level !== "A0").every((t: { lang?: unknown }) => !!t.lang);
+    ok(kern("A2").length === 20 && kern("A2").every((t) => !!t.lang) && a2.every(abgedeckt), `K70a3 نصوصُ A2 العشرون الأولى بنسخٍ طويلةٍ والباقي مغطّى بطولِ مستواه (${a2.filter((t) => t.lang).length} طويلة من ${a2.length})`);
+    // K70a4 (R145): الثمانون الأصلية (01–20 × A1–B2) بنسخٍ طويلةٍ كلُّها؛ وكلُّ نصٍّ غيرِ A0 مغطّى (طويلة أو طولُ مستوى)؛ وعربيّةُ الجديدِ في حقل ar لا de.
+    const kern80 = ["A1", "A2", "B1", "B2"].flatMap((L) => kern(L));
     const neuTexts = texts.filter((t) => (t as { neu?: boolean }).neu);
-    const neuLangOK = neuTexts.every((t) => !!t.lang || t.de.split(/\s+/).length >= 150);
     const neuWortOK = neuTexts.every((t) => !AR.test(t.de));
-    ok(altLangOk && neuLangOK && neuWortOK, `K70a4 كلُّ النصوصِ القديمةِ (غير-A0) بنسخةٍ طويلة (${alteTexte.filter((t) => t.level !== "A0" && t.lang).length}) والجديدةُ ${neuTexts.length} إمّا بطولٍ ذاتيٍّ ≥150 كلمة أو بنسخة lang، وعربيّتُها في حقل ar لا de`);
+    ok(kern80.length === 80 && kern80.every((t) => !!t.lang) && texts.filter((t) => t.level !== "A0").every(abgedeckt) && neuWortOK, `K70a4 الثمانون الأصليةُ بنسخٍ طويلةٍ (${kern80.filter((t) => t.lang).length}/80) وكلُّ نصٍّ غيرِ A0 مغطّى بطولِ مستواه، وعربيّةُ الجديدِ في حقلِها`);
     const zitatFehl: string[] = [], antwortFehl: string[] = [], ids = new Set<string>(), doppel: string[] = [];
     for (const t of mitLang) for (const q of t.lang!.questions) {
       if (ids.has(q.id)) doppel.push(q.id); ids.add(q.id);
@@ -2643,9 +2654,150 @@ void 0;
     const tfOk = tf.every((q) => (q.options ?? []).includes(q.answer as string) && (q.answer === "richtig" || q.answer === "falsch"));
     const tfR = tf.filter((q) => q.answer === "richtig").length;
     ok(tf.length > 0 && tfOk && tfR >= tf.length * 0.35 && tfR <= tf.length * 0.65, `K70h صواب/خطأ: الإجابةُ ضمنَ الخيارات (richtig/falsch) ومتوازنة (${tfR}/${tf.length} صواب)`);
-    const kurzErhalten = texts.filter((t) => t.lang && t.de.split(/\s+/).length < 100);
-    ok(kurzErhalten.length === mitLang.length, "K70i النصُّ القصيرُ `de` محفوظٌ لِنصِّ الاستماعِ المسجَّل (الصوتُ لا يفقدُ نصَّه)");
+    // R149: جوهرُ الحارس بقاءُ `de` القصير نصَّ الصوت مستقلاً عن الطويلة — عتبةُ المئةِ كلمةٍ وكيلٌ اعتباطيّ (قصيرُ اللاحقة 90–121 كلمة)
+    const kurzErhalten = texts.filter((t) => t.lang && t.de.trim().length > 0 && t.de !== t.lang!.de);
+    ok(kurzErhalten.length === mitLang.length, "K70i النصُّ القصيرُ `de` محفوظٌ لِنصِّ الاستماعِ المسجَّل مستقلاً عن النسخة الطويلة (الصوتُ لا يفقدُ نصَّه)");
   }
+
+/* ═══ K244 · R149: نسخٌ طويلةٌ لخمسةِ نصوصِ A1 اللاحقة (021–025) — توسعةٌ أمينةٌ لقصصِها القصيرة ═══ */
+{
+  const ids5 = ["t-a1-021", "t-a1-022", "t-a1-023", "t-a1-024", "t-a1-025"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K244a النصوصُ الخمسةُ تحمل نسخاً طويلةً مدموجةً في البنك");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; return n >= 90 && n <= 160 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 4 && L.questions.filter((q) => q.type === "mc").length >= 3 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K244b كلُّ نسخةٍ 90–160 كلمةً و≥3 فقراتٍ و4 أسئلة (≥3 اختيار) وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K244c صواب/خطأ الخمسة متوازنة الاتجاهين (2 صواب/3 خطأ)");
+}
+
+/* ═══ K245 · R150: نسخٌ طويلةٌ لخمسةِ نصوصِ A1 اللاحقة (026–030) ═══ */
+{
+  const ids5 = ["t-a1-026", "t-a1-027", "t-a1-028", "t-a1-029", "t-a1-030"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K245a النصوصُ الخمسةُ (026–030) تحمل نسخاً طويلةً مدموجةً");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; return n >= 90 && n <= 160 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 4 && L.questions.filter((q) => q.type === "mc").length >= 3 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K245b كلُّ نسخةٍ 90–160 كلمةً و≥3 فقراتٍ و4 أسئلة وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 3 && tf5.filter((q) => q.answer === "falsch").length === 2, "K245c صواب/خطأ الخمسة متوازنة (3 صواب/2 خطأ — مع R149 يتعادل المجموع)");
+}
+
+/* ═══ K246 · R151: نسخٌ طويلةٌ لآخرِ خمسةِ نصوصِ A1 اللاحقة (031–035) — اكتمالُ A1 ═══ */
+{
+  const ids5 = ["t-a1-031", "t-a1-032", "t-a1-033", "t-a1-034", "t-a1-035"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K246a النصوصُ الخمسةُ (031–035) تحمل نسخاً طويلةً مدموجةً");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; return n >= 90 && n <= 160 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 4 && L.questions.filter((q) => q.type === "mc").length >= 3 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K246b كلُّ نسخةٍ 90–160 كلمةً و≥3 فقراتٍ و4 أسئلة وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K246c صواب/خطأ الخمسة متوازنة (2 صواب/3 خطأ)");
+  const a1alle = texts.filter((t) => t.level === "A1");
+  ok(a1alle.every((t) => !!t.lang), `K246d كلُّ نصوصِ A1 الـ${a1alle.length} بنسخٍ طويلةٍ الآن`);
+}
+
+/* ═══ K247 · R152: نسخٌ طويلةٌ لستةِ نصوصِ A2 اللاحقة (21–26) ═══ */
+{
+  const ids6 = ["t-a2-21", "t-a2-22", "t-a2-23", "t-a2-24", "t-a2-25", "t-a2-26"];
+  const t6 = ids6.map((id) => texts.find((t) => t.id === id));
+  ok(t6.every((t) => !!t && !!t.lang), "K247a النصوصُ الستةُ (A2 21–26) تحمل نسخاً طويلةً مدموجةً");
+  const qual = t6.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; return n >= 151 && n <= 192 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 4 && L.questions.filter((q) => q.type === "mc").length >= 3 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K247b كلُّ نسخةٍ ضمنَ نطاقِ العرضِ المستقلّ 151–192 كلمةً (تقاطع K70b مع مراجع audit_inhalt) و≥3 فقراتٍ و4 أسئلة وشروحٌ عربية");
+  const tf6 = t6.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf6.length === 6 && tf6.filter((q) => q.answer === "richtig").length === 3 && tf6.filter((q) => q.answer === "falsch").length === 3, "K247c صواب/خطأ الستة متوازنة تماماً (3/3)");
+}
+
+/* ═══ K248 · R153: نسخٌ طويلةٌ لآخرِ ستةِ نصوصِ A2 اللاحقة (27–032) — اكتمالُ A2 ═══ */
+{
+  const ids6 = ["t-a2-27", "t-a2-28", "t-a2-29", "t-a2-30", "t-a2-031", "t-a2-032"];
+  const t6 = ids6.map((id) => texts.find((t) => t.id === id));
+  ok(t6.every((t) => !!t && !!t.lang), "K248a النصوصُ الستةُ (A2 27–032) تحمل نسخاً طويلةً مدموجةً");
+  const qual = t6.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; return n >= 151 && n <= 192 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 4 && L.questions.filter((q) => q.type === "mc").length >= 3 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K248b كلُّ نسخةٍ ضمنَ نطاقِ العرض 151–192 كلمةً و≥3 فقراتٍ و4 أسئلة وشروحٌ عربية");
+  const tf6 = t6.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf6.length === 6 && tf6.filter((q) => q.answer === "richtig").length === 3 && tf6.filter((q) => q.answer === "falsch").length === 3, "K248c صواب/خطأ الستة متوازنة تماماً (3/3)");
+  const a2alle = texts.filter((t) => t.level === "A2");
+  ok(a2alle.every((t) => !!t.lang), `K248d كلُّ نصوصِ A2 الـ${a2alle.length} بنسخٍ طويلةٍ الآن`);
+}
+
+/* ═══ K249 · R154: نسخٌ طويلةٌ لخمسةِ نصوصِ B1 اللاحقة (21–25) ═══ */
+{
+  const ids5 = ["t-b1-21", "t-b1-22", "t-b1-23", "t-b1-24", "t-b1-25"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K249a النصوصُ الخمسةُ (B1 21–25) تحمل نسخاً طويلةً مدموجةً");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; const ty = L.questions.map((q) => q.type); return n >= 169 && n <= 260 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 5 && ty.filter((x) => x === "mc").length === 3 && ty.filter((x) => x === "truefalse").length === 1 && ty.filter((x) => x === "fill").length === 1 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K249b كلُّ نسخةٍ ضمنَ نطاقِ عرض B1 ‏169–260 كلمةً و≥3 فقراتٍ و5 أسئلة (3 اختيار + صواب/خطأ + إكمال) وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K249c صواب/خطأ الخمسة متوازنة الاتجاهين (2/3)");
+}
+
+/* ═══ K250 · R155: نسخٌ طويلةٌ لخمسةِ نصوصِ B1 اللاحقة (26–30) ═══ */
+{
+  const ids5 = ["t-b1-26", "t-b1-27", "t-b1-28", "t-b1-29", "t-b1-30"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K250a النصوصُ الخمسةُ (B1 26–30) تحمل نسخاً طويلةً مدموجةً");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; const ty = L.questions.map((q) => q.type); return n >= 169 && n <= 260 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 5 && ty.filter((x) => x === "mc").length === 3 && ty.filter((x) => x === "truefalse").length === 1 && ty.filter((x) => x === "fill").length === 1 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K250b كلُّ نسخةٍ ضمنَ نطاقِ عرض B1 ‏169–260 كلمةً و≥3 فقراتٍ و5 أسئلة (3 اختيار + صواب/خطأ + إكمال) وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K250c صواب/خطأ الخمسة متوازنة الاتجاهين (2/3)");
+}
+
+/* ═══ K251 · R156: نسخٌ طويلةٌ لآخرِ خمسةِ نصوصِ B1 اللاحقة (31–35) — اكتمالُ B1 ═══ */
+{
+  const ids5 = ["t-b1-31", "t-b1-32", "t-b1-33", "t-b1-34", "t-b1-35"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K251a النصوصُ الخمسةُ (B1 31–35) تحمل نسخاً طويلةً مدموجةً");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; const ty = L.questions.map((q) => q.type); return n >= 169 && n <= 260 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 5 && ty.filter((x) => x === "mc").length === 3 && ty.filter((x) => x === "truefalse").length === 1 && ty.filter((x) => x === "fill").length === 1 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K251b كلُّ نسخةٍ ضمنَ نطاقِ عرض B1 ‏169–260 كلمةً و≥3 فقراتٍ و5 أسئلة (3 اختيار + صواب/خطأ + إكمال) وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K251c صواب/خطأ الخمسة متوازنة الاتجاهين (2/3)");
+  const b1alle = texts.filter((t) => t.level === "B1");
+  ok(b1alle.every((t) => !!t.lang), `K251d كلُّ نصوصِ B1 الـ${b1alle.length} بنسخٍ طويلةٍ الآن`);
+}
+
+/* ═══ K252 · R157: نسخٌ طويلةٌ لخمسةِ نصوصِ B2 اللاحقة (21–25) ═══ */
+{
+  const ids5 = ["t-b2-21", "t-b2-22", "t-b2-23", "t-b2-24", "t-b2-25"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K252a النصوصُ الخمسةُ (B2 21–25) تحمل نسخاً طويلةً مدموجةً (والقصيرة بصمتُها لا تُمَسّ)");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; const ty = L.questions.map((q) => q.type); return n >= 220 && n <= 270 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 5 && ty.filter((x) => x === "mc").length === 3 && ty.filter((x) => x === "truefalse").length === 1 && ty.filter((x) => x === "fill").length === 1 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K252b كلُّ نسخةٍ ضمنَ تقاطعِ نطاقَي B2 ‏220–270 كلمةً و≥3 فقراتٍ و5 أسئلة (3 اختيار + صواب/خطأ + إكمال) وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K252c صواب/خطأ الخمسة متوازنة الاتجاهين (2/3)");
+}
+
+/* ═══ K253 · R158: نسخٌ طويلةٌ لخمسةِ نصوصِ B2 اللاحقة (26–30) ═══ */
+{
+  const ids5 = ["t-b2-26", "t-b2-27", "t-b2-28", "t-b2-29", "t-b2-30"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K253a النصوصُ الخمسةُ (B2 26–30) تحمل نسخاً طويلةً مدموجةً (والقصيرة بصمتُها لا تُمَسّ)");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; const ty = L.questions.map((q) => q.type); return n >= 220 && n <= 270 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 5 && ty.filter((x) => x === "mc").length === 3 && ty.filter((x) => x === "truefalse").length === 1 && ty.filter((x) => x === "fill").length === 1 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K253b كلُّ نسخةٍ ضمنَ تقاطعِ نطاقَي B2 ‏220–270 كلمةً و≥3 فقراتٍ و5 أسئلة (3 اختيار + صواب/خطأ + إكمال) وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K253c صواب/خطأ الخمسة متوازنة الاتجاهين (2/3)");
+}
+
+/* ═══ K254 · R159: نسخٌ طويلةٌ لخمسةِ نصوصِ B2 اللاحقة (31–35) ═══ */
+{
+  const ids5 = ["t-b2-31", "t-b2-32", "t-b2-33", "t-b2-34", "t-b2-35"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K254a النصوصُ الخمسةُ (B2 31–35) تحمل نسخاً طويلةً مدموجةً (والقصيرة بصمتُها لا تُمَسّ)");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; const ty = L.questions.map((q) => q.type); return n >= 220 && n <= 270 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 5 && ty.filter((x) => x === "mc").length === 3 && ty.filter((x) => x === "truefalse").length === 1 && ty.filter((x) => x === "fill").length === 1 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K254b كلُّ نسخةٍ ضمنَ تقاطعِ نطاقَي B2 ‏220–270 كلمةً و≥3 فقراتٍ و5 أسئلة (3 اختيار + صواب/خطأ + إكمال) وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K254c صواب/خطأ الخمسة متوازنة الاتجاهين (2/3)");
+}
+
+/* ═══ K255 · R160: نسخٌ طويلةٌ لآخرِ خمسةِ نصوصِ B2 اللاحقة (36–40) — اكتمالُ النسخِ الطويلة لكلِّ نصٍّ غير A0 ═══ */
+{
+  const ids5 = ["t-b2-36", "t-b2-37", "t-b2-38", "t-b2-39", "t-b2-40"];
+  const t5 = ids5.map((id) => texts.find((t) => t.id === id));
+  ok(t5.every((t) => !!t && !!t.lang), "K255a النصوصُ الخمسةُ (B2 36–40) تحمل نسخاً طويلةً مدموجةً (والقصيرة بصمتُها لا تُمَسّ)");
+  const qual = t5.every((t) => { const L = t!.lang!; const n = L.de.split(/\s+/).length; const ty = L.questions.map((q) => q.type); return n >= 220 && n <= 270 && L.de.split(/\n\n+/).length >= 3 && L.questions.length === 5 && ty.filter((x) => x === "mc").length === 3 && ty.filter((x) => x === "truefalse").length === 1 && ty.filter((x) => x === "fill").length === 1 && L.questions.every((q) => /[\u0600-\u06FF]/.test(q.explanationAr ?? "")); });
+  ok(qual, "K255b كلُّ نسخةٍ ضمنَ تقاطعِ نطاقَي B2 ‏220–270 كلمةً و≥3 فقراتٍ و5 أسئلة (3 اختيار + صواب/خطأ + إكمال) وشروحٌ عربية");
+  const tf5 = t5.flatMap((t) => t!.lang!.questions.filter((q) => q.type === "truefalse"));
+  ok(tf5.length === 5 && tf5.filter((q) => q.answer === "richtig").length === 2 && tf5.filter((q) => q.answer === "falsch").length === 3, "K255c صواب/خطأ الخمسة متوازنة الاتجاهين (2/3)");
+  const nichtA0 = texts.filter((t) => t.level !== "A0");
+  ok(nichtA0.every((t) => !!t.lang), `K255d اكتملت النسخُ الطويلة: كلُّ نصٍّ غير A0 بنسخةٍ طويلة (${nichtA0.filter((t) => t.lang).length}/${nichtA0.length})`);
+}
 
 /* ═══ K119 — عاملهُ الأسبوع: مهمةُ الورشةِ بلا درسِ مضيف تُعرِضُ أسئلتها لا شاشةٍ خاويةً ═══ */
 {
@@ -2678,7 +2830,7 @@ void 0;
   const g = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   const ids = Object.keys(g);
   const std = ids.filter((id) => g[id].ziel && g[id].voraus && g[id].anwendung && (g[id].verify ?? []).length >= 2);
-  ok(ids.length === 66 && std.length === 66, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (ziel/voraus/anwendung + تحققان لكل درس)`);
+  ok(ids.length === 82 && std.length === 82, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (ziel/voraus/anwendung + تحققان لكل درس)`);
   const v = JSON.parse(readFileSync("content/vocab.json", "utf8")) as any;
   let n = 0, ex = 0, syn = 0;
   const walk = (x: any): void => {
@@ -2712,8 +2864,11 @@ void 0;
   for (const f of ["README.md", ...ui]) for (const c of claims) if (srcOf(f).includes(c)) hit.push(`${f}:${c}`);
   ok(hit.length === 0, `K122b لا ادعاءاتِ تفوقٍ/اعتمادٍ في الواجهات (${hit.slice(0, 2).join(" ")})`);
   const code = [...collect("app"), ...collect("components"), ...collect("lib")];
-  const fetchIn = code.filter((f) => srcOf(f).includes("fetch("));
-  ok(fetchIn.length === 1 && fetchIn[0] === "lib/grader.ts", `K122c fetch المباشرُ محصورٌ في مصحّح LLM؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
+  const fetchIn = code.filter((f) => srcOf(f).includes("fetch(")).sort();
+  // R163: تُصحَّح البوابةُ إلى جوهرِ R24 الموثّق (لا اتصالٍ خارجيٍّ إلا مصحّح LLM) وتُشدَّد: جلبُ حزمةِ البنوكِ من نفسِ الأصلِ
+  // (تسليمُ أصلٍ ثابتٍ كالـMP3، بلا بياناتِ مستخدم) مسموحٌ لملفٍّ واحدٍ بهدفٍ حرفيٍّ نسبيٍّ فقط، ويُحظرُ أيُّ أصلٍ خارجيٍّ فيه.
+  const bankSrc = srcOf("lib/bankload.ts");
+  ok(fetchIn.length === 2 && fetchIn[0] === "lib/bankload.ts" && fetchIn[1] === "lib/grader.ts" && bankSrc.includes('fetch("/banks.json")') && !/https?:\/\//.test(bankSrc), `K122c fetch الخارجيُّ محصورٌ في مصحّح LLM وbankload يجلب /banks.json من نفس الأصل فقط (R163)؛ تنزيلُ حزمة المتصفح محكومٌ بـK135 (${fetchIn.join(",") || "لا شيء"})`);
   ok(srcOf("app/einstellungen/page.tsx").includes("أُذِنُ بإرسال صوتي") && srcOf("lib/speech.ts").includes("بلا إذنٍ صريحٍ في الإعدادات"),
     "K122d سلسلةُ الموافقةِ السحابية: صياغةُ الإذنِ + شرطُ البوابةِ حاضران");
   const callers = code.filter((f) => f !== "lib/speech.ts" && srcOf(f).includes("listenDe("));
@@ -2733,7 +2888,11 @@ void 0;
     return out;
   };
   const code = [...collectR("app"), ...collectR("components"), ...collectR("lib")];
-  const mit270 = code.filter((f) => /\b270\b/.test(readFileSync(f, "utf8")));
+  // R168 تصحيحُ وكيلٍ إلى وثيقتِه (سجلّ RULES 2026-10-16): حرسُ R38 رقمَ *أيّامِ* الخطةِ القديم لا دقائقَ سقفِ حملٍ مالكيّ.
+  // الثابتان الاسميّان D1_B1/D1_B2_DECKEL_MIN في lib/phasen.ts — مصدرِ الثوابتِ الأوحد — دقائقُ مخطَّطةٌ لا أيّام؛
+  // يُستثنى إعلانُهما حرفياً ويبقى أيُّ 270 آخرَ في app/components/lib محظوراً كما كان.
+  const ohneDeckel = (s: string) => s.replace(/D1_B[12]_DECKEL_MIN = \d+/g, "D1_DECKEL_MIN");
+  const mit270 = code.filter((f) => /\b270\b/.test(ohneDeckel(readFileSync(f, "utf8"))));
   ok(mit270.length === 0, `K123a لا رقمَ 270 مزروعاً في الكود — المرجعُ TOTAL_DAYS وحده (${mit270.join(",") || "نظيف"})`);
   const seite = readFileSync("app/page.tsx", "utf8");
   ok(seite.includes("اكتملت الرحلة — {TOTAL_DAYS}") && seite.includes("${closedDays.length}/${TOTAL_DAYS}"),
@@ -2775,11 +2934,11 @@ void 0;
   const J = (f: string): number => { const x = JSON.parse(readFileSync(f, "utf8")); return Array.isArray(x) ? x.length : Object.keys(x).length; };
   const nT = J("content/texts.json"), nD = J("content/dialogues.json");
   ok(nT === 157 && lies.includes("texts **157**"), `K125a النصوصُ 157 في القرصِ والسطرِ والفهرس (${nT})`);
-  ok(nD === 156 && lies.includes("dialogues **156**"), `K125b الحواراتُ 156 في القرصِ والسطرِ والفهرس (${nD})`);
+  ok(nD === 164 && lies.includes("dialogues **164**"), `K125b الحواراتُ 164 في القرصِ والسطرِ والفهرس (${nD}) — R146 أربعةً طويلة وR162 أربعةً عميقة (واحدٌ لكلِّ مستوى)`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 82 && nH === 157 && nH + nG + nK + nS === 427 && lies.includes("157 ملفاً صوتياً") && lies.includes("427 ملفاً صوتياً"),
-    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 427`);
+  ok(nG === 164 && nH === 157 && nH + nG + nK + nS === 509 && lies.includes("157 ملفاً صوتياً") && lies.includes("509 ملفات صوتية"),
+    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 509`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
   const nAb = dialogues.flatMap((d) => ablenker(d)).length;
@@ -2787,7 +2946,7 @@ void 0;
     `K125d تغطيةُ الرادارِ من الدالةِ نفسِها: ${abR.mitSignal}/${abR.dialoge} إشارات · ${abR.mitFalle} مضلل (${nAb})`);
   ok(lies.includes(`(${nDr} تمريناً`) , `K125e تمارينُ الأذنِ من الدالةِ نفسِها (${nDr})`);
   const nS2 = J("content/sentences.json"), nW = J("content/writing.json"), nV = J("content/verben.json");
-  ok(nS2 === 676 && nW === 58 && nV === 126 && lies.includes("676") && lies.includes("writing **58**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً`);
+  ok(nS2 === 678 && nW === 58 && nV === 126 && lies.includes("678") && lies.includes("writing **58**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (678 بعد جملتَي يتيمتَي B2 — R145)`);
   const nKt = J("content/kollokationen.json");
   const nLue = (JSON.parse(readFileSync("content/luecken.json", "utf8")).items as { gaps: unknown[] }[]).reduce((n, it) => n + it.gaps.length, 0);
   ok(nKt === 2191 && nLue === 216 && lies.includes("2191") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`);
@@ -2924,7 +3083,7 @@ void 0;
   const st = JSON.parse(readFileSync("content/sentences.json", "utf8")) as any;
   const stl = (Array.isArray(st) ? st : st.sentences) as any[];
   const byIdS = (id: string) => stl.find((x) => x.id === id);
-  ok(stl.length === 676 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 676");
+  ok(stl.length === 678 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 678 (جملتا يتيمتَي B2 — R145)");
   ok(!JSON.stringify(stl).includes("konjunktor"), "K129c وسم konjunktor مصحّح");
   const gg2 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   let dupAns = 0;
@@ -3026,14 +3185,17 @@ void 0;
 /* ═══ K133 — R31: اعتراضٌ مفاجئٌ حتميٌّ في مناقشاتِ Teil 3 ═══ */
 {
   const teil2 = muendlich.filter((karte) => karte.teil === 2);
-  const teil3 = muendlich.filter((karte) => karte.teil === 3);
+  const teil3Alle = muendlich.filter((karte) => karte.teil === 3);
+  // R145: الاعتراضات المفاجئة عقدُ بطاقاتِ الامتحان (300 ثانية)؛ بطاقاتُ التدرّب الموسومة بالمستوى أقصر وبلا اعتراضات
+  const teil3 = teil3Alle.filter((karte) => karte.zeit_s === 300);
   const ids = teil3.flatMap((karte) => (karte.einwaende ?? []).map((einwand) => einwand.id));
   const inhaltGilt = teil3.length === 6 && teil3.every((karte) =>
-    karte.zeit_s === 300 && karte.einwaende?.length === 2 && karte.einwaende.every((einwand) =>
+    karte.einwaende?.length === 2 && karte.einwaende.every((einwand) =>
       !!einwand.id && einwand.de.length >= 45 && !!einwand.ar && !/[\u0600-\u06ff]/.test(einwand.de),
     ),
-  ) && new Set(ids).size === 12 && teil2.every((karte) => !karte.einwaende?.length);
-  ok(inhaltGilt, "K133a ستُّ بطاقاتِ Teil 3 لها اعتراضان ألمانيان سياقيان وترجمتان؛ بلا اعتراضاتٍ دخيلةٍ على Teil 2");
+  ) && teil3Alle.filter((karte) => karte.zeit_s !== 300).every((karte) => !karte.einwaende?.length)
+  && new Set(ids).size === 12 && teil2.every((karte) => !karte.einwaende?.length);
+  ok(inhaltGilt, "K133a ستُّ بطاقاتِ Teil 3 امتحانية (300ث) لها اعتراضان ألمانيان سياقيان وترجمتان؛ بطاقات التدرّب و Teil 2 بلا اعتراضات");
 
   const plaene = teil3.flatMap((karte) => [1, 42, 378].map((day) =>
     [0, 1].map((zug) => planeEinwand(karte.id, karte.einwaende ?? [], day, zug)),
@@ -3568,6 +3730,7 @@ void 0;
     "glauben→meinen", "kräftig→muskulös", "nett→freundlich", "weit→entfernt", "zufrieden→befriedigt",
   ];
   const newContextsValid = newPairs.every((pair) => pairSet.has(pair));
+  // R147: طُهّر الخام إلى invariant R72–R80 (70/70 ثنائي الاتجاه) بعد إثبات يتامة التوسعة الصامتة 210؛ الاسترجاع من Git فقط وبدفعة موثّقة
   ok(rawPairs.length === 70 && rawSet.size === 70 && contextPairs.length === 70 && pairSet.size === 70 &&
     rawPairs.every((pair) => pairSet.has(pair)) && contextPairs.every((pair) => rawSet.has(pair)) &&
     newPairs.length === 10 && newContextsValid && valid,
@@ -3915,13 +4078,14 @@ void 0;
   const auditIds = audit.items.map((item) => item.id);
   const auditById = new Map(audit.items.map((item) => [item.id, item]));
   const expectedUnique = new Set(expectedAuditIds);
+  // R145: سجلّ 2026-10-04 وثّق بنك A0 القديم (3 مواضيع/5 نصوص/3 حوارات/93 معرفاً)؛ البنك الحي أُعيد بناؤه
+  // (8 مواضيع/15 نصاً/16 حواراً) فلا يُدّعى شمول السجل التاريخي له. الملزم: تماسك السجل داخلياً وبنكٌ حيٌّ بلا معرفات مكررة.
   ok(audit.date === "2026-10-04" && audit.batch === "A0" &&
-    a0Topics.length === 3 && a0Texts.length === 5 && a0Dialogues.length === 3 &&
-    expectedAuditIds.length === 93 && expectedUnique.size === expectedAuditIds.length &&
-    audit.coverage.totalTrackedItems === expectedAuditIds.length &&
-    auditIds.length === expectedAuditIds.length && new Set(auditIds).size === auditIds.length &&
-    expectedAuditIds.every((id) => auditById.has(id)),
-    `K158a سجل A0 يغطي كل عنصر فعلياً بلا فقد أو تكرار (${expectedAuditIds.length} معرفاً)`);
+    auditIds.length === 93 && new Set(auditIds).size === 93 &&
+    audit.coverage.totalTrackedItems === 93 &&
+    expectedUnique.size === expectedAuditIds.length &&
+    a0Topics.length === 8 && a0Texts.length === 15 && a0Dialogues.length === 16,
+    `K158a سجل A0 التاريخي متماسك (93 معرفاً فريداً) وبنك A0 الحي 8/15/16 بلا تكرار (${expectedAuditIds.length} معرفاً حياً) — R145`);
 
   const sourceIds = new Set(audit.sources.map((source) => source.id));
   const statusCounts = audit.items.reduce<Record<string, number>>((counts, item) => {
@@ -3962,13 +4126,11 @@ void 0;
 
   const a0Greeting = a0Topics.find((topic) => topic.id === "a0-begrussung");
   const a0Letters = a0Topics.find((topic) => topic.id === "a0-buchstaben");
-  const alphabetText = a0Texts.find((text) => text.id === "t-a0-01");
-  const greetingText = a0Texts.find((text) => text.id === "t-a0-02");
-  const pronounText = a0Texts.find((text) => text.id === "t-a0-05");
-  const alphabetQ3 = alphabetText?.questions.find((question) => question.id === "t-a0-01-q3");
+  // R145: نصوص A0 المراجعة (أبجدية/تحيات/ضمائر بمعرفاتها القديمة) تقاعدت مع إعادة بناء البنك؛
+  // مكافئاتها الحية: موضوع a0-du-sie يحمل توضيح Sie، وأسئلة النصوص الـ30 غير مكررة.
+  const a0DuSie = a0Topics.find((topic) => topic.id === "a0-du-sie");
+  const a0Prompts = a0Texts.flatMap((text) => text.questions.map((question) => question.promptDe));
   const alphabetExerciseQ2 = a0Letters?.exercises.find((exercise) => exercise.id === "a0-buchstaben-q2");
-  const greetingQ3 = greetingText?.questions.find((question) => question.id === "t-a0-02-q3");
-  const pronounQ3 = pronounText?.questions.find((question) => question.id === "t-a0-05-q3");
   const letterExample = a0Letters?.verify?.find((exercise) => exercise.id === "a0-buchstaben-v1");
   const pronunciationTip = (a0Letters as { pronTippAr?: string } | undefined)?.pronTippAr ?? "";
   ok(!!a0Greeting && a0Greeting.summaryAr.includes("heißen") && a0Greeting.summaryAr.includes("kommen") &&
@@ -3978,9 +4140,8 @@ void 0;
     pronunciationTip.includes("bed") && pronunciationTip.includes("bird") && pronunciationTip.includes("tu") &&
     !!letterExample && (letterExample.explanationAr ?? "").includes("من أمثلة التهجئة") &&
     !!alphabetExerciseQ2 && alphabetExerciseQ2.promptDe.startsWith("Buchstabiere") &&
-    !!alphabetQ3 && alphabetQ3.promptDe.includes("vor ß") && alphabetQ3.answer === "Ü" &&
-    !!greetingQ3 && greetingQ3.promptDe.includes("folgt auf") && greetingQ3.answer === "Guten Tag!" &&
-    !!pronounQ3 && pronounQ3.promptDe.includes("am Anfang des Textes") && !!pronounText && pronounText.ar.includes("للمخاطَب الرسمي"),
+    !!a0DuSie && a0DuSie.summaryAr.includes("الرسمي") &&
+    a0Prompts.length === 45 && new Set(a0Prompts).size === a0Prompts.length, // R148: 15 نصاً × 3 أسئلة فريدة
     "K158e تصحيحات التحيات والحروف، وأمثلة DIN، والأسئلة غير المكررة، وتوضيح Sie في الترجمة");
 
   const checkedDialogues = ["d-a0-02", "d-a0-03"].map((id) => a0Dialogues.find((dialogue) => dialogue.id === id));
@@ -4535,9 +4696,12 @@ void 0;
 /* ═══ K165 — R91: لا تُحوَّل حدود تقديرات الخطة heuristic إلى عيب بنيوي ═══ */
 {
   const auditSource = readFileSync("scripts/audit_inhalt.ts", "utf8");
-  ok(auditSource.includes('if (m > 200) hinweis("plan:Tag>200min — مجموع تقديرات يحتاج مراجعة تربوية"') &&
-    !auditSource.includes('if (m > 200) add('),
-    "K165 تجاوز تقدير اليوم 200 دقيقة يظهر للمراجعة التربوية ولا يُسمّى عيباً أو وقتاً مقاساً آلياً");
+  // R169: أُنجزت المراجعة التربوية بملفّ موثّق (Goethe/Cambridge/BAMF) — داخل السقوف معلومة موثّقة، وفوق سقف المرحلة بند مراجعة؛
+  // ويبقى جوهر R91: لا عيب بنيوياً من تقدير ولا ادّعاء وقت مقاس أبداً.
+  ok(auditSource.includes('hinweis("plan:Tag über Phasendeckel') &&
+    auditSource.includes('info("plan:last-geprüft (R169)"') &&
+    !auditSource.includes('if (m > 200) add(') && !auditSource.includes('add("plan:Tag'),
+    "K165 (R91→R169) تقديراتُ الحملِ ظاهرةٌ وموثّقة: داخلُ سقوفِ D1-B معلومةٌ مراجَعة، وفوقَها بندُ مراجعةٍ — ولا تُسمّى عيباً بنيوياً أو وقتاً مقاساً آلياً أبداً");
 }
 
 /* ═══ K166 — R92: مراجعة أول ثلاثة حوارات A1، كل سطر/سؤال/إملاء بمصدر ═══ */
@@ -6863,7 +7027,7 @@ void 0;
     historyA2Batch5.role.includes("لا كحكم لغوي") && historyA2Batch5.unavailableHistoricalFields.length >= 3,
     "K181d المقارنة التاريخية محدودة بمصدر الإنشاء وبحث ملف الأسئلة؛ لا تدّعي استعادة تاريخ كامل");
 
-  const audioManifestA2Batch5 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; file: string }[] };
+  const audioManifestA2Batch5 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; file: string; voice: string }[] };
   const targetAudioIdsA2Batch5 = new Set(["d-a2-10", "d-a2-11", "d-a2-12"]);
   const manifestAudioMatchesA2Batch5 = audioManifestA2Batch5.einsaetze.filter((entry) => targetAudioIdsA2Batch5.has(entry.id));
   const publicMatchesA2Batch5: string[] = [];
@@ -6876,11 +7040,11 @@ void 0;
     }
   };
   scanPublicA2Batch5("public");
-  ok(manifestAudioMatchesA2Batch5.length === 0 && publicMatchesA2Batch5.length === 0 &&
+  ok(manifestAudioMatchesA2Batch5.length === 3 && manifestAudioMatchesA2Batch5.every((entry) => entry.voice.startsWith("ki-")) && publicMatchesA2Batch5.length === 3 &&
     reviewA2Batch5.audioAssetAudit.length === 0 && reviewA2Batch5.coverage.audioAssets === 0 &&
     reviewA2Batch5.limitations.some((limitation: string) => limitation.includes("لم يُشغّل متصفح TTS")) &&
     reviewMarkdownA2Batch5.includes("لم يحدث استماع") && selectedA2Batch5.every((dialogue) => dialogue.neu === true),
-    "K181e فحص البيان وأسماء الملفات بلا استنتاج أن الصوت مطلوب؛ لا ادعاء تشغيل/استماع أو اختبار TTS");
+    "K181e سجلُّ المراجعةِ التاريخيُّ بلا صوتٍ وقتَها ولم يدّعِ استماعاً؛ واليومَ للنطاقِ صوتُ ki-* موسومٌ أحاديٌّ (R164) في البيان والقرص");
 
   const legalNoteA2Batch5 = reviewA2Batch5.openNotes.find((note: any) => note.id === "d-a2-10.lines[3]");
   const weatherNoteA2Batch5 = reviewA2Batch5.openNotes.find((note: any) => note.id === "d-a2-12.lines[0]");
@@ -7053,7 +7217,7 @@ void 0;
     historyA2Batch6.unavailableHistoricalFields.length >= 3,
     "K182d المقارنة التاريخية مقتصرة على ملف الإنشاء؛ لا تُنسب إلى ملف الأسئلة أو تُدّعى كسجل كامل");
 
-  const audioManifestA2Batch6 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; file: string }[] };
+  const audioManifestA2Batch6 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; file: string; voice: string }[] };
   const targetAudioIdsA2Batch6 = new Set(["d-a2-13", "d-a2-14", "d-a2-15"]);
   const manifestAudioMatchesA2Batch6 = audioManifestA2Batch6.einsaetze.filter((entry) => targetAudioIdsA2Batch6.has(entry.id));
   const publicMatchesA2Batch6: string[] = [];
@@ -7066,11 +7230,11 @@ void 0;
     }
   };
   scanPublicA2Batch6("public");
-  ok(manifestAudioMatchesA2Batch6.length === 0 && publicMatchesA2Batch6.length === 0 &&
+  ok(manifestAudioMatchesA2Batch6.length === 3 && manifestAudioMatchesA2Batch6.every((entry) => entry.voice.startsWith("ki-")) && publicMatchesA2Batch6.length === 3 &&
     reviewA2Batch6.audioAssetAudit.length === 0 && reviewA2Batch6.coverage.audioAssets === 0 &&
     reviewA2Batch6.limitations.some((limitation: string) => limitation.includes("لم يحدث تشغيل أو استماع")) &&
     reviewMarkdownA2Batch6.includes("لم يحدث تشغيل أو استماع") && selectedA2Batch6.every((dialogue) => dialogue.neu === true),
-    "K182e فُحص بيان الصوت وأسماء الملفات؛ لا ادعاء تشغيل أو استماع ولا استنتاج أن غياب الصوت عيب");
+    "K182e سجلُّ المراجعةِ التاريخيُّ بلا صوتٍ وقتَها ولم يدّعِ استماعاً؛ واليومَ للنطاقِ صوتُ ki-* موسومٌ أحاديٌّ (R164) في البيان والقرص");
 
   const baggageNoteA2Batch6 = reviewA2Batch6.openNotes.find((note: any) => note.id === "d-a2-14.lines[2]");
   const tippingNoteA2Batch6 = reviewA2Batch6.openNotes.find((note: any) => note.id === "d-a2-14.lines[7]");
@@ -7310,7 +7474,7 @@ void 0;
   const historicalQuestionsSourceA2Batch7 = readFileSync("scripts/patches/a_dialog_fallen.py", "utf8");
   const historicalMatchesA2Batch7 = reviewA2Batch7.historicalPatchReview.comparisons.every((entry: any) =>
     creationSourceA2Batch7.includes(entry.historicalText) && entry.liveText.length > 0 && entry.observation.length > 0);
-  const audioManifestA2Batch7 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; file: string }[] };
+  const audioManifestA2Batch7 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; file: string; voice: string }[] };
   const targetAudioIdsA2Batch7 = new Set(["d-a2-16", "d-a2-17", "d-a2-18"]);
   const manifestAudioMatchesA2Batch7 = audioManifestA2Batch7.einsaetze.filter((entry) => targetAudioIdsA2Batch7.has(entry.id));
   const publicAudioMatchesA2Batch7: string[] = [];
@@ -7327,10 +7491,10 @@ void 0;
     reviewA2Batch7.historicalPatchReview.sources.includes("scripts/patches/a_dialog_fallen.py") && historicalMatchesA2Batch7 &&
     reviewA2Batch7.historicalPatchReview.comparisons.length === 11 && !historicalQuestionsSourceA2Batch7.includes("d-a2-16") &&
     !historicalQuestionsSourceA2Batch7.includes("d-a2-17") && !historicalQuestionsSourceA2Batch7.includes("d-a2-18") &&
-    manifestAudioMatchesA2Batch7.length === 0 && publicAudioMatchesA2Batch7.length === 0 && reviewA2Batch7.audioAssetAudit.length === 0 &&
+    manifestAudioMatchesA2Batch7.length === 3 && manifestAudioMatchesA2Batch7.every((entry) => entry.voice.startsWith("ki-")) && publicAudioMatchesA2Batch7.length === 3 && reviewA2Batch7.audioAssetAudit.length === 0 &&
     reviewA2Batch7.coverage.audioAssets === 0 && reviewA2Batch7.limitations.some((limitation: string) => limitation.includes("لم يحدث تشغيل أو استماع")) &&
     reviewMarkdownA2Batch7.includes("لا يدل أي منهما على تاريخ تعديلات كامل"),
-    "K183g المقارنة التاريخية محدودة بالمصدر المتاح؛ بيان/ملفات الصوت خالية للنطاق، دون ادعاء استماع أو سجل كامل");
+    "K183g المقارنة التاريخية محدودة بالمصدر المتاح؛ سجلُّ الصوتِ التاريخيُّ خالٍ وقتَها واليومَ صوتُ ki-* موسومٌ (R164)، دون ادعاء استماع أو سجل كامل");
 
   ok(reviewA2Batch7.date === "2026-10-06" && reviewA2Batch7.reviewRule === "R109" && reviewA2Batch7.batch === "A2-dialogues-07" &&
     reviewMarkdownA2Batch7.includes("## سجل الوحدات الـ42") && reviewMarkdownA2Batch7.includes("## تدقيق مفردات waisen (28 مدخلاً فردياً)") &&
@@ -7479,10 +7643,10 @@ void 0;
     }
   };
   scanPublicA2Batch8("public/audio");
-  ok(manifestEntriesA2Batch8.length === 0 && publicMatchesA2Batch8.length === 0 &&
+  ok(manifestEntriesA2Batch8.length === 3 && manifestEntriesA2Batch8.every((entry: any) => typeof entry.voice === "string" && entry.voice.startsWith("ki-")) && publicMatchesA2Batch8.length === 3 &&
     reviewA2Batch8.audio.present === false && reviewA2Batch8.audio.note.includes("لم يحدث تشغيل أو استماع") &&
     reviewMarkdownA2Batch8.includes("لا توجد إدخالات") && reviewMarkdownA2Batch8.includes("لم يحدث تشغيل أو استماع"),
-    "K184d لا توجد أصول صوت للنطاق في البيان أو على القرص، ولا ادعاء استماع أو فك ترميز");
+    "K184d سجلُّ المراجعةِ التاريخيُّ بلا أصولِ صوتٍ وقتَها ولا ادعاء استماع؛ واليومَ للنطاقِ صوتُ ki-* موسومٌ (R164) في البيان والقرص");
 
   // Idempotent patch: the script contains explicit before/after guards that
   // refuse unexpected values, and prints "already applied; no files written" on
@@ -7683,10 +7847,10 @@ void 0;
     }
   };
   scanPublicA2Batch9("public/audio");
-  ok(manifestEntriesA2Batch9.length === 0 && publicMatchesA2Batch9.length === 0 &&
+  ok(manifestEntriesA2Batch9.length === 3 && manifestEntriesA2Batch9.every((entry: any) => typeof entry.voice === "string" && entry.voice.startsWith("ki-")) && publicMatchesA2Batch9.length === 3 &&
     reviewA2Batch9.audio.present === false && reviewA2Batch9.audio.note.includes("لم يحدث تشغيل") &&
     reviewMarkdownA2Batch9.includes("لا توجد") && reviewMarkdownA2Batch9.includes("لم يحدث تشغيل"),
-    "K185d لا توجد أصول صوت للنطاق في البيان أو على القرص، ولا ادعاء استماع");
+    "K185d سجلُّ المراجعةِ التاريخيُّ بلا أصولِ صوتٍ وقتَها ولا ادعاء استماع؛ واليومَ للنطاقِ صوتُ ki-* موسومٌ (R164) في البيان والقرص");
 
   const patchRunnableA2Batch9 = patchSourceA2Batch9.includes("TARGET_IDS") &&
     patchSourceA2Batch9.includes("guarded_update") && patchSourceA2Batch9.includes("Unexpected dialogue diff") &&
@@ -7881,10 +8045,10 @@ void 0;
     }
   };
   scanPublicA2Batch10("public/audio");
-  ok(manifestEntriesA2Batch10.length === 0 && publicMatchesA2Batch10.length === 0 &&
+  ok(manifestEntriesA2Batch10.length === 3 && manifestEntriesA2Batch10.every((entry: any) => typeof entry.voice === "string" && entry.voice.startsWith("ki-")) && publicMatchesA2Batch10.length === 3 &&
     reviewA2Batch10.audio.present === false && reviewA2Batch10.audio.note.includes("لم يحدث تشغيل") &&
     reviewMarkdownA2Batch10.includes("لا توجد") && reviewMarkdownA2Batch10.includes("لم يحدث تشغيل"),
-    "K186d لا توجد أصول صوت للنطاق في البيان أو على القرص، ولا ادعاء استماع");
+    "K186d سجلُّ المراجعةِ التاريخيُّ بلا أصولِ صوتٍ وقتَها ولا ادعاء استماع؛ واليومَ للنطاقِ صوتُ ki-* موسومٌ (R164) في البيان والقرص");
 
   const patchRunnableA2Batch10 = patchSourceA2Batch10.includes("TARGET_IDS") &&
     patchSourceA2Batch10.includes("guarded_update") && (patchSourceA2Batch10.includes("Unexpected dialogue diff") || patchSourceA2Batch10.includes("Unexpected diff:")) &&
@@ -7949,7 +8113,8 @@ void 0;
   const gapA2Report28Md = readFileSync("docs/content-gap-a2-dialogues-28-30-2026-10-08.md", "utf8");
   const liveDialoguesGapA2 = JSON.parse(readFileSync("content/dialogues.json", "utf8")) as any[];
   const audioManifestGapA2 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any;
-  const a2Live = liveDialoguesGapA2.filter((d) => (d.id as string).startsWith("d-a2-"));
+  // R145: النطاق هو الحوارات الكلاسيكية المرقّمة d-a2-NN؛ نصوص الاستماع d-a2-ht* ليست من سلسلة الفجوة الموثقة
+  const a2Live = liveDialoguesGapA2.filter((d) => /^d-a2-\d{2}$/.test(d.id as string));
   const a2LiveIds = a2Live.map((d) => d.id).sort();
   const expectedA2Ids = [
     ...Array.from({ length: 27 }, (_, i) => `d-a2-${String(i + 1).padStart(2, "0")}`),
@@ -10063,7 +10228,9 @@ void 0;
     "K206i حدود الصوت/CEFR/بشري/قانوني/مهني والصوت بلا استماع");
   // Final B2 completion marker
   const b2Count = dialoguesArr.filter((d:any)=>d.level==="B2").length;
-  ok(b2Count === 29, `K206j مراجعة B2 مكتملة: 29 حواراً في content/dialogues.json (فعلياً ${b2Count})`);
+  const b2Klassik = dialoguesArr.filter((d:any)=>/^d-b2-\d{2}$/.test(d.id)).length;
+  // R145: الـ29 المراجعة هي السلسلة الكلاسيكية (01–27 و31–32 بفجوة 28–30 كـA2)؛ البنك الحي أضاف ht/hoer/dlg فصار المجموع 34
+  ok(b2Klassik === 29 && b2Count === 37, `K206j مراجعة B2 مكتملة: 29 كلاسيكياً محفوظة والبنك الحي 37 بعد R162 (فعلياً ${b2Count}/${b2Klassik})`);
 /* ═══ K207 — أول دفعة A0 d-a0-01..03 (R133). ═══ */
 {
   const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
@@ -10438,11 +10605,12 @@ void 0;
     "K222e نص العيادة يميز خدمة 116117، والنشرة الجوية والرصيف/أرقام العربات متسقة");
   const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
   const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
-  const noManifestEntries = [...dialogAudio, ...hoerenAudio].every((entry:any) => !ids.includes(entry.id));
-  const noFiles = ids.every((id) => !existsSync(`public/audio/dialog/${id}.mp3`) && !existsSync(`public/audio/hoeren/${id}.mp3`));
-  ok(noManifestEntries && noFiles && reviewA1Extras.audio.listened === false &&
+  const kiEntries222 = dialogAudio.filter((entry:any) => ids.includes(entry.id));
+  const hoerenEntries222 = hoerenAudio.filter((entry:any) => ids.includes(entry.id));
+  const kiFiles222 = ids.every((id) => existsSync(`public/audio/dialog/${id}.mp3`) && !existsSync(`public/audio/hoeren/${id}.mp3`));
+  ok(kiEntries222.length === ids.length && kiEntries222.every((entry:any) => typeof entry.voice === "string" && entry.voice.startsWith("ki-")) && hoerenEntries222.length === 0 && kiFiles222 && reviewA1Extras.audio.listened === false &&
     reviewA1Extras.audio.generated === false && reviewA1Extras.audio.modified === false,
-    "K222f مانيفستو الحوارات ومنفصل الاستماع لا يسجلان هذه الموارد ولا توجد ملفات؛ لا neu ولا توليد ولا ادعاء سماع");
+    "K222f سجلُّ المراجعةِ بلا استماعٍ/توليدٍ وقتَها؛ واليومَ المواردُ بصوت ki-* موسومٍ (R164) في مانيفستو الحواراتِ فقط، ومنفصلُ الاستماعِ خالٍ منها");
 }
 /* ═══ K223 — موارد A2 الإضافية: 3 حوارات و5 نصوص استماع (R152). ═══ */
 {
@@ -10496,7 +10664,8 @@ void 0;
     "K223e إعلان المتجر ورسالة VHS وخبر A3: سؤال مباشر عن 8 كم وإملاء يصحح الموقع والاتجاه");
   const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
   const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
-  const noManifestEntries = [...dialogAudio, ...hoerenAudio].every((entry:any) => !ids.includes(entry.id));
+  const kiEntries223 = dialogAudio.filter((entry:any) => ids.includes(entry.id));
+  const hoerenEntries223 = hoerenAudio.filter((entry:any) => ids.includes(entry.id));
   const matchingFiles: string[] = [];
   const scanAudio = (dir:string):void => {
     if (!existsSync(dir)) return;
@@ -10507,10 +10676,10 @@ void 0;
     }
   };
   scanAudio("public/audio");
-  ok(noManifestEntries && matchingFiles.length === 0 && reviewA2Extras.audio.dialogAudioManifestEntries === 0 &&
+  ok(kiEntries223.length === ids.length && kiEntries223.every((entry:any) => typeof entry.voice === "string" && entry.voice.startsWith("ki-")) && hoerenEntries223.length === 0 && matchingFiles.length === ids.length && reviewA2Extras.audio.dialogAudioManifestEntries === 0 &&
     reviewA2Extras.audio.hoerenAudioManifestEntries === 0 && reviewA2Extras.audio.matchingFilesPresent === 0 &&
     reviewA2Extras.audio.listened === false && reviewA2Extras.audio.generated === false && reviewA2Extras.audio.modified === false,
-    "K223f مانيفستو الحوار ومانيفستو الاستماع منفصلان ولا تسجيلات/ملفات لهذه الموارد؛ لا استماع أو neu أو توليد/تعديل");
+    "K223f مانيفستو الحوار ومانيفستو الاستماع منفصلان؛ سجلُّ المراجعةِ التاريخيُّ بلا تسجيلاتٍ وقتَها، واليومَ المواردُ بصوت ki-* موسومٍ (R164) في الحواراتِ فقط؛ لا ادعاء استماعٍ في المراجعة");
 }
 /* ═══ K224 — موارد B1 الإضافية: حوار و4 نصوص استماع (R153). ═══ */
 {
@@ -10568,7 +10737,8 @@ void 0;
     "K224e الأخبار عامة بلا أسماء مؤسسات حقيقية، واعتذار القطار صحيح، وادعاء السنوات غير المسند صار رأياً؛ المفاتيح ثابتة");
   const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
   const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
-  const noManifestEntries = [...dialogAudio, ...hoerenAudio].every((entry:any) => !ids.includes(entry.id));
+  const kiEntries224 = dialogAudio.filter((entry:any) => ids.includes(entry.id));
+  const hoerenEntries224 = hoerenAudio.filter((entry:any) => ids.includes(entry.id));
   const matchingFiles: string[] = [];
   const scanAudio = (dir:string):void => {
     if (!existsSync(dir)) return;
@@ -10579,10 +10749,10 @@ void 0;
     }
   };
   scanAudio("public/audio");
-  ok(noManifestEntries && matchingFiles.length === 0 && reviewB1Extras.audio.dialogAudioManifestEntries === 0 &&
+  ok(kiEntries224.length === ids.length && kiEntries224.every((entry:any) => typeof entry.voice === "string" && entry.voice.startsWith("ki-")) && hoerenEntries224.length === 0 && matchingFiles.length === ids.length && reviewB1Extras.audio.dialogAudioManifestEntries === 0 &&
     reviewB1Extras.audio.hoerenAudioManifestEntries === 0 && reviewB1Extras.audio.matchingFilesPresent === 0 &&
     reviewB1Extras.audio.listened === false && reviewB1Extras.audio.generated === false && reviewB1Extras.audio.modified === false,
-    "K224f مانيفستو الحوار ومانيفستو الاستماع منفصلان ولا تسجيلات/ملفات لهذه الموارد؛ لا استماع أو neu أو توليد/تعديل");
+    "K224f مانيفستو الحوار ومانيفستو الاستماع منفصلان؛ سجلُّ المراجعةِ التاريخيُّ بلا تسجيلاتٍ وقتَها، واليومَ المواردُ بصوت ki-* موسومٍ (R164) في الحواراتِ فقط؛ لا ادعاء استماعٍ في المراجعة");
 }
 /* ═══ K225 — موارد B2 الإضافية: حوار و4 نصوص استماع (R154). ═══ */
 {
@@ -10640,7 +10810,8 @@ void 0;
     "K225e Nachricht ohne Firma/Telefon/Datum; KI-Text hypothetisch statt Studie ohne Quelle");
   const dialogAudio = (JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as any).einsaetze;
   const hoerenAudio = (JSON.parse(readFileSync("content/hoeren-audio.json", "utf8")) as any).einsaetze;
-  const noManifestEntries = [...dialogAudio, ...hoerenAudio].every((entry:any) => !ids.includes(entry.id));
+  const kiEntries225 = dialogAudio.filter((entry:any) => ids.includes(entry.id));
+  const hoerenEntries225 = hoerenAudio.filter((entry:any) => ids.includes(entry.id));
   const matchingFiles: string[] = [];
   const scanAudio = (dir:string):void => {
     if (!existsSync(dir)) return;
@@ -10651,10 +10822,10 @@ void 0;
     }
   };
   scanAudio("public/audio");
-  ok(noManifestEntries && matchingFiles.length === 0 && reviewB2Extras.audioAudit.dialogAudioManifestEntries === 0 &&
+  ok(kiEntries225.length === ids.length && kiEntries225.every((entry:any) => typeof entry.voice === "string" && entry.voice.startsWith("ki-")) && hoerenEntries225.length === 0 && matchingFiles.length === ids.length && reviewB2Extras.audioAudit.dialogAudioManifestEntries === 0 &&
     reviewB2Extras.audioAudit.hoerenAudioManifestEntries === 0 && reviewB2Extras.audioAudit.matchingFilesPresent === 0 &&
     reviewB2Extras.audioAudit.listened === false && reviewB2Extras.audioAudit.generated === false && reviewB2Extras.audioAudit.modified === false,
-    "K225f مانيفستو الحوار والاستماع منفصلان؛ لا إدخالات أو ملفات مطابقة ولا ادعاء بالاستماع");
+    "K225f مانيفستو الحوار والاستماع منفصلان؛ سجلُّ المراجعةِ التاريخيُّ بلا إدخالاتٍ وقتَها، واليومَ المواردُ بصوت ki-* موسومٍ (R164) في الحواراتِ فقط؛ لا ادعاء استماعٍ في المراجعة");
 }
 /* ═══ K226 — عشرة نصوص A0 إضافية (R155). ═══ */
 {
@@ -10666,7 +10837,7 @@ void 0;
   const batch = ids.map((id) => textsArr.find((t:any) => t.id === id));
   const tasksValid = batch.every((t:any) => t && t.level === "A0" && typeof t.titleDe === "string" && !!t.titleDe.trim() &&
     typeof t.titleAr === "string" && !!t.titleAr.trim() && typeof t.de === "string" && !!t.de.trim() &&
-    typeof t.ar === "string" && !!t.ar.trim() && Array.isArray(t.questions) && t.questions.length === 2 &&
+    typeof t.ar === "string" && !!t.ar.trim() && Array.isArray(t.questions) && t.questions.length === 3 && // R148: سؤال ثالث لكل نصّ
     t.questions.every((q:any) => q.type === "mc" && typeof q.promptDe === "string" && !!q.promptDe.trim() &&
       typeof q.promptAr === "string" && !!q.promptAr.trim() && typeof q.explanationAr === "string" && !!q.explanationAr.trim() &&
       Array.isArray(q.options) && q.options.length >= 2 && new Set(q.options).size === q.options.length && q.options.includes(q.answer)));
@@ -10678,7 +10849,7 @@ void 0;
     correctionUnits.length === 73 && new Set(correctionUnits).size === 73 && reviewA0ExtrasMd.includes("K226a–f") &&
     reviewA0ExtrasPatch.includes("expected_edits = 75") && reviewA0ExtrasPatch.includes("REVISION_EDITS"),
     "K226a تقرير R155 العربي والرقعة: عشرة نصوص، 62 جملة، 20 سؤالاً، 73 حقلاً/75 انتقالاً محروساً");
-  ok(tasksValid, "K226b نصوص A0: كل العناوين والنصين والسؤالين مكتملة؛ مفاتيح MC فريدة وموجودة ضمن الخيارات");
+  ok(tasksValid, "K226b نصوص A0: كل العناوين والنصين والأسئلة الثلاثة مكتملة؛ مفاتيح MC فريدة وموجودة ضمن الخيارات (R148)");
   const classText = batch[0], weekdays = batch[1], schoolbag = batch[5], weekend = batch[6];
   ok(classText.de.includes("Die Lehrerin heißt Frau Schulz") && classText.ar.includes("اسم المعلمة السيدة شولتس") &&
     weekdays.questions[0].promptDe === "Was mache ich am Mittwoch?" && weekdays.questions[0].answer === "Ich kaufe ein." &&
@@ -11081,8 +11252,9 @@ void 0;
     "K209h الحدود معلَنة والصوت بلا استماع");
   ok(Array.isArray(reviewA0T1.contentChecks) && reviewA0T1.contentChecks.length >= 4,
     "K209i فحوص محتوى لا تقل عن أربعة");
-  ok(a0t.every((t:any)=>t.de && t.ar && t.titleDe && t.titleAr && Array.isArray(t.questions) && t.questions.length>=3),
-    "K209j كل نص A0 له عنوان ونص ألماني/عربي وأسئلة، وجميع الحقول مقفلة");
+  // R148: أُضيف سؤال ثالث مؤلّف من متن كل نصّ، فعاد المعيار الأصلي ≥3 لبنك A0 كله (يحرسه K243 للخمسة عشر)
+  ok(a0t.length === 5 && a0t.every((t:any)=>t.de && t.ar && t.titleDe && t.titleAr && Array.isArray(t.questions) && t.questions.length>=3 && t.questions.every((q:any)=>q.promptDe && q.promptAr && q.explanationAr)),
+    "K209j نصوص A0 الخمسة الأصلية لها عناوين ونص ألماني/عربي وثلاثة أسئلة مكتملة الحقول — المعيار الأصلي مستعاداً (R148)");
 /* ═══ K210 — أول دفعة نصوص A1 t-a1-01..03 (R136). ═══ */
 {
   const reviewA1T1 = JSON.parse(readFileSync("docs/content-review-a1-texts-01-2026-10-09.json", "utf8")) as any;
@@ -11164,8 +11336,8 @@ void 0;
     "K212g الحدود معلَنة");
   ok(Array.isArray(reviewA1T3.contentChecks) && reviewA1T3.contentChecks.length>=5,
     "K212h فحوص محتوى كافية");
-  ok(textsArr.filter((t:any)=>t.level==="A1").length===20,
-    "K212i مستوى A1 يغطي 20 نص في content/texts.json");
+  ok(textsArr.filter((t:any)=>t.level==="A1").length===35,
+    "K212i مستوى A1 يغطي 35 نصاً في content/texts.json (كان 20 عند المراجعة؛ نما البنك — R145)");
   ok(a1t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
     "K212j الحقول الأساسية مقفلة");
 /* ═══ K213 — نصوص A2 كاملة t-a2-01..20 (R139). ═══ */
@@ -11193,8 +11365,8 @@ void 0;
   const t03=a2t.find((t:any)=>t.id==="t-a2-03"), t10=a2t.find((t:any)=>t.id==="t-a2-10"), t20=a2t.find((t:any)=>t.id==="t-a2-20");
   ok(t03.questions[3].promptAr.includes("الطائرة") && t10.questions[2].promptAr.includes("ميزة") && t20.questions[0].promptAr.includes("التقرير"),
     "K213h نماذج من الأسئلة العربية مطابقة");
-  ok(textsArr.filter((t:any)=>t.level==="A2").length===20,
-    "K213i مستوى A2 يغطي 20 نص");
+  ok(textsArr.filter((t:any)=>t.level==="A2").length===32,
+    "K213i مستوى A2 يغطي 32 نصاً (كان 20؛ نموّ البنك — R145)");
   ok(a2t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
     "K213j الحقول الأساسية مقفلة");
 /* ═══ K214 — نصوص B1 كاملة t-b1-01..30 (R140). ═══ */
@@ -11222,8 +11394,8 @@ void 0;
   const t01=b1t.find((t:any)=>t.id==="t-b1-01"), t15=b1t.find((t:any)=>t.id==="t-b1-15"), t30=b1t.find((t:any)=>t.id==="t-b1-30");
   ok(t01.questions[0].promptAr.includes("ميزة") && t15.questions[0].promptAr.includes("التفكير") && t30.questions[3].promptAr.includes("تولّت"),
     "K214h نماذج عربية مطابقة");
-  ok(textsArr.filter((t:any)=>t.level==="B1").length===30,
-    "K214i مستوى B1 = 30 نص");
+  ok(textsArr.filter((t:any)=>t.level==="B1").length===35,
+    "K214i مستوى B1 = 35 نصاً (كان 30؛ نموّ البنك — R145)");
   ok(b1t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
     "K214j الحقول مقفلة");
 /* ═══ K215 — نصوص B2 كاملة t-b2-01..35 (R141 — إكمال جميع النصوص). ═══ */
@@ -11249,11 +11421,11 @@ void 0;
   ok(Array.isArray(reviewB2T1.contentChecks) && reviewB2T1.contentChecks.length>=5,
     "K215g فحوص كافية");
   const t01=b2t.find((t:any)=>t.id==="t-b2-01"), t17=b2t.find((t:any)=>t.id==="t-b2-17"), t35=b2t.find((t:any)=>t.id==="t-b2-35");
-  ok(t01.questions[0].promptAr.includes("أفضل") && t17.questions[2].promptAr.includes("المساحات") && t35.questions[3].promptAr.includes("مائتي"),
+  ok(t01.questions[0].promptAr.includes("أفضل") && t17.questions[2].promptAr.includes("المساحات") && t35.questions[3].promptAr.includes("مئتي"),
     "K215h نماذج عربية مطابقة");
   const levelCounts:any={}; textsArr.forEach((t:any)=>{if(t.level) levelCounts[t.level]=(levelCounts[t.level]||0)+1});
-  ok(levelCounts.A0===5 && levelCounts.A1===20 && levelCounts.A2===20 && levelCounts.B1===30 && levelCounts.B2===35 && levelCounts.A0+levelCounts.A1+levelCounts.A2+levelCounts.B1+levelCounts.B2===110,
-    "K215i تعداد المستويات 5+20+20+30+35=110 نص");
+  ok(levelCounts.A0===15 && levelCounts.A1===35 && levelCounts.A2===32 && levelCounts.B1===35 && levelCounts.B2===40 && levelCounts.A0+levelCounts.A1+levelCounts.A2+levelCounts.B1+levelCounts.B2===157,
+    "K215i تعداد المستويات 15+35+32+35+40=157 نصاً (كان 110 عند مراجعة R171؛ نموّ موثق في README — R145)");
   ok(b2t.every((t:any)=>t.de && t.ar && Array.isArray(t.questions) && t.questions.length>=3),
     "K215j الحقول مقفلة");
 }
@@ -12254,6 +12426,186 @@ void 0;
     reviewR171.next.byLevel.B1 === 5 && reviewR171.next.byLevel.B2 === 5 &&
     reviewR171Md.includes("لا استماع بشري") && reviewR171Md.includes("لم يُحكم على جودة النطق"),
     "K240d بوابات R171 والخطوة التالية والحدود الصوتية موثقة؛ لا ادعاء استماع بشري");
+}
+
+/* ═══ K145 · R145: خلطُ خياراتِ الاختيارِ حتميٌّ ببذرةِ السؤالِ ويكسرُ انحيازَ الموضع ═══ */
+{
+  const mcAlle: { id: string; options: string[]; answer: string }[] = [];
+  const sammle = (ex: unknown) => {
+    const e = ex as { id?: string; type?: string; options?: string[]; answer?: unknown };
+    if (e && e.type === "mc" && Array.isArray(e.options) && e.options.length >= 2 && typeof e.answer === "string" && e.options.includes(e.answer))
+      mcAlle.push({ id: String(e.id ?? "?"), options: e.options, answer: e.answer });
+  };
+  for (const t of Object.values(grammarMap)) { (t.exercises ?? []).forEach(sammle); (t.verify ?? []).forEach(sammle); }
+  for (const t of texts) leseText(t).questions.forEach(sammle);
+  for (const d of dialogues) (d.questions ?? []).forEach(sammle);
+  ok(mcAlle.length > 900, `K145a جُمعت أسئلةُ الاختيارِ من البنوكِ كلِّها (${mcAlle.length})`);
+  ok(mcAlle.every((q) => {
+    const g = gemischteOptionen(q.options, `mc:${q.id}`);
+    return g.length === q.options.length && [...g].sort().join("") === [...q.options].sort().join("") && g.includes(q.answer);
+  }), "K145b الخلطُ تبديلٌ حقيقيٌّ بلا فقدٍ ولا تكرارٍ وجوابُه حاضرٌ دائماً");
+  const positionen: Record<number, number> = {};
+  let vier = 0;
+  for (const q of mcAlle) {
+    if (q.options.length < 3) continue;
+    vier++;
+    const p = gemischteOptionen(q.options, `mc:${q.id}`).indexOf(q.answer);
+    positionen[p] = (positionen[p] ?? 0) + 1;
+  }
+  const anteile = Object.values(positionen).map((n) => n / Math.max(1, vier));
+  ok(vier > 600 && anteile.every((a) => a < 0.4), `K145c لا موضعَ يبتلعُ الجوابَ بعدَ الخلطِ (قبلَه: 50٪ في الثاني؛ الآن: ${anteile.map((a) => Math.round(a * 100) + "٪").join("/")})`);
+  ok(mcAlle.every((q) => JSON.stringify(gemischteOptionen(q.options, `mc:${q.id}`)) === JSON.stringify(gemischteOptionen(q.options, `mc:${q.id}`))),
+    "K145d الخلطُ حتميٌّ: نفسُ السؤالِ = نفسُ الترتيبِ عندَ كلِّ فتح");
+}
+
+/* ═══ K241 · R146: حوارات B1/B2 الطويلة (10 أسطر) + دوران كتابة حتمي بلا يتامى ═══ */
+{
+  const dlg = (id: string) => dialogues.find((d) => d.id === id);
+  const neu = ["dlg-b1-wohnungssuche", "dlg-b1-berufsberatung", "dlg-b2-homeoffice", "dlg-b2-klimadebatte"];
+  const man = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; voice: string }[] };
+  ok(neu.every((id) => { const d = dlg(id); return !!d && d.lines.length === 10 && new Set(d.lines.map((l) => l.who)).size >= 2; }) &&
+     new Set(dlg("dlg-b2-klimadebatte")!.lines.map((l) => l.who)).size === 3,
+    "K241a الحوارات الأربعة الجديدة بعشرة أسطر (ضعف متوسط البنك 6.5)؛ نقاش المناخ بثلاثة أصوات (ميسّرة وضيفان)");
+  ok(neu.every((id) => { const d = dlg(id)!; return d.questions.length === 2 &&
+      d.questions.every((q) => !!q.promptAr?.trim() && !!q.explanationAr?.trim() &&
+        (q.type === "mc" ? Array.isArray(q.options) && new Set(q.options).size === q.options.length && q.options.includes(q.answer as string) : Array.isArray(q.answer) && q.answer.length > 0)) &&
+      d.dictation.length === 3 && d.dictation.every((part) => d.lines.some((l) => l.de.includes(part))); }),
+    "K241b أسئلة الأربعة صالحة المفاتيح وإملاءاتها الثلاث مسندة حرفياً لأسطرها");
+  ok(dialogues.length === 164 && dialogues.filter((d) => d.level === "B1").length === 37 && dialogues.filter((d) => d.level === "B2").length === 37 && dialogues.filter((d) => d.level === "A2").length === 38 && dialogues.filter((d) => d.level === "A1").length === 36 &&
+     neu.every((id) => man.einsaetze.some((e) => e.id === id && e.voice.startsWith("ki-"))),
+    "K241c البنك 164 (A1 ‏36 · A2 ‏38 · B1 ‏37 · B2 ‏37 بعد R162) والجديد بصوت ki-* موسومٍ أحاديٍّ (R164) لا بادعاءِ تسجيلٍ بيتيّ");
+  const ungenutzt: string[] = [];
+  const gebrauchteWrites = new Set<string>();
+  for (let d = 1; d <= TOTAL_DAYS; d++) for (const t of buildDay(d, emptyProgress).tasks) if (t.writeId) gebrauchteWrites.add(t.writeId);
+  for (const w of writingTasks) if (!gebrauchteWrites.has(w.id)) ungenutzt.push(w.id);
+  ok(ungenutzt.length === 0, `K241d كل مهمة كتابة تصل المتعلم في 378 يوماً بدوران التثبيت الحتمي (بلا استخدام: ${ungenutzt.join(",") || "لا شيء"})`);
+}
+
+/* ═══ K256 · R162: أربعةُ حواراتٍ عميقة (12 سطراً؛ واحدٌ لكلِّ مستوى A1/A2/B1/B2) ═══ */
+{
+  const neuIds = ["dlg-a1-baeckerei", "dlg-a2-buergeramt", "dlg-b1-elterngespraech", "dlg-b2-ki-arbeit"];
+  const nd = neuIds.map((id) => dialogues.find((d) => d.id === id));
+  ok(nd.every((d) => !!d), "K256a الحواراتُ الأربعةُ العميقةُ موجودةٌ في البنك الحيّ");
+  const qual = nd.every((d) => { const spr = new Set(d!.lines.map((l) => l.who)); return d!.lines.length === 12 && spr.size >= 2 && d!.questions.length === 3 && d!.questions.filter((q) => q.type === "mc").length === 2 && d!.questions.filter((q) => q.type === "fill").length === 1 && d!.dictation.length === 3 && d!.dictation.every((part) => d!.lines.some((l) => l.de.includes(part))); });
+  ok(qual, "K256b كلُّ حوارٍ 12 سطراً و≥2 متحدثين و3 أسئلة (2 اختيار + إكمال) وإملاؤه الثلاثيّ حرفيٌّ من سطوره");
+  const man = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; voice: string }[] };
+  ok(neuIds.every((id) => man.einsaetze.some((e) => e.id === id && e.voice.startsWith("ki-"))), "K256c الأربعة بصوت ki-* موسومٍ أحاديٍّ (R164) — لا بادعاءِ تسجيلٍ بيتيٍّ، وبديل TTS باقٍ مُعلناً عند تعذّر التشغيل");
+}
+/* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
+{
+  ok(bankenBereit() && BANK_DATEIEN.length === 45 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
+    "K257a bankload جاهزٌ في Node: 45 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  const sammle = (dir: string, out: string[]): string[] => {
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+      const p2 = `${dir}/${e.name}`;
+      if (e.isDirectory()) sammle(p2, out);
+      else if (/\.tsx?$/.test(p2)) out.push(p2);
+    }
+    return out;
+  };
+  const codeDateien = [...sammle("app", []), ...sammle("components", []), ...sammle("lib", [])];
+  const statisch = codeDateien.filter((f) => readFileSync(f, "utf8").includes("@/content/"));
+  ok(statisch.length === 0, `K257b لا وارداتٍ ثابتةَ @/content/ في التطبيق — التحميلُ حصراً عبر lib/bankload (${statisch.join(",") || "نظيف"})`);
+}
+
+
+/* ═══ K258 · R164: اكتمالُ صوتِ الحوارات — 82 بيتيٌّ بأداءِ أدوار + 82 ki-* موسومٌ أحاديّ، بلا حوارٍ بلا ملف ═══ */
+{
+  const man258 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { count: number; einsaetze: { id: string; file: string; bytes: number; voice: string; level: string; stimmen?: number }[] };
+  const ki258 = man258.einsaetze.filter((e) => e.voice.startsWith("ki-"));
+  const haus258 = man258.einsaetze.filter((e) => !e.voice.startsWith("ki-"));
+  const ids258 = new Set(man258.einsaetze.map((e) => e.id));
+  ok(man258.count === 164 && man258.einsaetze.length === 164 && ki258.length === 82 && haus258.length === 82 && dialogues.every((d) => ids258.has(d.id)),
+    "K258a كلُّ حوارٍ من الـ164 له ملفُ صوتٍ في المانيفستو: 82 بيتياً + 82 ki-* (R164) — صفر حوارات بلا صوت");
+  ok(ki258.every((e) => ["ki-f1", "ki-f2", "ki-m1", "ki-m2"].includes(e.voice) && e.stimmen === 1) && haus258.every((e) => (e.stimmen ?? 0) >= 2 && !e.voice.startsWith("ki-")),
+    "K258b الوسمُ صارمٌ في الاتجاهين: الـki-* أحاديُّ الصوتِ موسومٌ، والبيتيُّ ≥2 صوت ولا ki-* فيه — لا خلطَ ولا تمويه");
+  const mp3Dialog258 = readdirSync("public/audio/dialog").filter((f) => f.endsWith(".mp3")).length;
+  const mp3Alle258 = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((n, d) => n + readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length, 0);
+  ok(mp3Dialog258 === 164 && mp3Alle258 === 509 && man258.einsaetze.every((e) => existsSync("public" + e.file) && readFileSync("public" + e.file).byteLength === e.bytes),
+    `K258c القرصُ يطابقُ المانيفستو بايتاً بايتًا: ${mp3Dialog258} ملفَّ حوارٍ و${mp3Alle258} ملفاً صوتياً إجمالاً`);
+}
+
+/* ═══ K259 · R165: إفصاحُ نوعِ الصوتِ للمتعلم — KI المولّد لا يمرّ كتسجيلِ دار ═══ */
+{
+  const man259 = JSON.parse(readFileSync("content/dialog-audio.json", "utf8")) as { einsaetze: { id: string; voice: string }[] };
+  ok(man259.einsaetze.every((e) => dialogAudioArt(e.id) === (e.voice.startsWith("ki-") ? "ki" : "haus") && dialogAudioIstKi(e.id) === e.voice.startsWith("ki-")) && dialogAudioArt("gibt-es-nicht") === null && !dialogAudioIstKi("gibt-es-nicht"),
+    "K259a dialogAudioArt/IstKi يشتقّان النوعَ من وسمِ المانيفستو نفسه لكلِّ الـ164: ki-* ‏= KI أحادي، وغيرُه = دار، والشبحُ بلا نوعٍ مختلَق");
+  const mod259 = readFileSync("components/modultor.tsx", "utf8");
+  const pru259 = readFileSync("components/pruefung.tsx", "utf8");
+  ok(mod259.includes('data-audio-kind="ki"') && mod259.includes("صوت مولّد بالذكاء الاصطناعي") && mod259.includes("ليس تسجيلًا بشريًا بأداء أدوار") &&
+    pru259.includes('data-audio-kind={src ? (istKi ? "ki" : "haus") : "tts"}') && pru259.includes("بصوت ذكاء اصطناعي مولّد — صوت واحد يقرأ كل الأدوار"),
+    "K259b سطحا التشغيلِ يعلنان صوتَ KI صراحةً قبلَ/عندَ السماع: شارةٌ مرئيةٌ في وحدةِ التقييم ووسمٌ في زرِّ ترتيبِ الحوار — لا سماعَ مولّداً بلا إفصاح");
+}
+
+/* ═══ K242 · R146: سجلّ مراجعة A0 المُعاد بناؤه يطابق كونَ معرفاتِ البنكِ الحيّ بنداً بنداً ═══ */
+{
+  const reg = JSON.parse(readFileSync("docs/content-review-a0-rebuilt-2026-10-15.json", "utf8")) as any;
+  const regMd = readFileSync("docs/content-review-a0-rebuilt-2026-10-15.md", "utf8");
+  const a0T = Object.values(grammarMap).filter((t) => t.level === "A0");
+  const a0X = texts.filter((t) => t.level === "A0");
+  const a0D = dialogues.filter((d) => d.level === "A0");
+  const a0W = writingTasks.filter((w) => w.level === "A0");
+  const a0S = sentences.filter((s) => s.level === "A0");
+  const universe = [
+    ...a0T.flatMap((t) => [t.id, ...t.exercises.map((e) => e.id), ...(t.verify ?? []).map((e) => e.id)]),
+    ...a0X.flatMap((t) => [t.id, ...t.questions.map((q) => q.id)]),
+    ...a0D.flatMap((d) => [d.id, ...d.lines.map((_, i) => `${d.id}.lines[${i}]`), ...d.questions.map((q) => q.id), ...d.dictation.map((_, i) => `${d.id}.dictation[${i}]`)]),
+    ...a0W.map((w) => w.id),
+    ...a0S.map((s) => s.id),
+  ];
+  const regIds = (reg.items as any[]).map((i) => i.id);
+  ok(reg.reviewRule === "R146" && reg.coverage.totalTrackedItems === universe.length &&
+     regIds.length === universe.length && new Set(regIds).size === regIds.length &&
+     universe.every((id) => regIds.includes(id)) &&
+     (reg.items as any[]).every((i) => ["سليم بنيوياً", "غير محسوم"].includes(i.status) && !!i.finding && Array.isArray(i.checks)) &&
+     reg.limits.human === false && regMd.includes("ليست مراجعة لغوية بشرية"),
+    `K242a سجلّ R146 يغطي كلَّ معرفات A0 الحية (${universe.length}) بلا فقد/تكرار وبحدودٍ معلنة`);
+  const offen = (reg.items as any[]).filter((i) => i.status === "غير محسوم").map((i) => i.id);
+  ok(reg.statusCounts["غير محسوم"] === offen.length && offen.every((id) => ["d-a0-02", "d-a0-03", "d-a0-ht01", "d-a0-ht02"].includes(id)),
+    `K242b غيرُ المحسوم هي الحواراتُ القصيرةُ الأربعُ فقط لطابورِ الحكمِ البشري (${offen.join(",")})`);
+}
+
+/* ═══ K243 · R148: ثلاثة أسئلة لكلّ نصّ A0 من متنه، والسجلّ المُجدّد يعكسها ═══ */
+{
+  const a0Alle = texts.filter((t) => t.level === "A0");
+  ok(a0Alle.length === 15 && a0Alle.every((t) => t.questions.length >= 3 &&
+      t.questions.every((q) => !!q.promptDe?.trim() && !!q.promptAr?.trim() && !!q.explanationAr?.trim() &&
+        (q.type === "mc" ? Array.isArray(q.options) && new Set(q.options).size === q.options.length && q.options.includes(q.answer as string)
+                         : Array.isArray(q.answer) && q.answer.length > 0))),
+    "K243 كلّ نصوص A0 الخمسة عشر بثلاثة أسئلة صالحة المفاتيح على الأقل (R148)");
+  const reg = JSON.parse(readFileSync("docs/content-review-a0-rebuilt-2026-10-15.json", "utf8")) as any;
+  ok(reg.coverage.totalTrackedItems === 331 && reg.statusCounts["سليم بنيوياً"] === 327 && reg.statusCounts["غير محسوم"] === 4,
+    `K243b سجلّ A0 المُجدّد بعد أسئلة R148: ${reg.coverage.totalTrackedItems} بنداً (327 سليماً بنيوياً، 4 للإنسان)`);
+}
+
+/* ═══ K260 · R168 (D1-B بقرارِ المالك 2026-10-16): سقفا الحملِ اليوميِّ B1≤240 وB2≤270 بكشطِ مراجعةٍ حقيقي ═══ */
+{
+  const sum260 = (d: number) => buildDay(d, emptyProgress).tasks.reduce((a, t) => a + t.minutes, 0);
+  let maxB1 = 0, maxB2 = 0;
+  for (let d = PHASEN.B1.von; d <= PHASEN.B1.bis; d++) maxB1 = Math.max(maxB1, sum260(d));
+  for (let d = PHASEN.B2.von; d <= PHASEN.B2.bis; d++) maxB2 = Math.max(maxB2, sum260(d));
+  ok(maxB1 <= 240, `K260a كلُّ أيامِ B1 ‏≤ 240 دقيقةً مخطَّطة (الأقصى ${maxB1}) — سقفُ D1-B متحققٌ بالقياسِ بلا مساسٍ بالمحتوى`);
+  ok(maxB2 <= 270, `K260b كلُّ أيامِ B2 ‏≤ 270 دقيقةً مخطَّطة (الأقصى ${maxB2}) — كشطُ الذروةِ داخلَ B2 نفسِها مع بقاءِ الأيامِ 378`);
+  const tx = new Set<string>(), dg = new Set<string>(), wr = new Set<string>();
+  let festOk = true;
+  for (let d = 1; d <= TOTAL_DAYS; d++) {
+    const pl = buildDay(d, emptyProgress);
+    for (const t of pl.tasks) { if (t.textId) tx.add(t.textId); if (t.dialogueId) dg.add(t.dialogueId); if (t.writeId) wr.add(t.writeId); }
+    if (d >= PHASEN.B2.von && d <= PHASEN.B2.bis && pl.type === "festigung" && !pl.tasks.some((t) => t.titleDe === "Festigungs-Check" && (t.quiz?.length ?? 0) >= 8)) festOk = false;
+  }
+  ok(tx.size === 157 && dg.size === 164 && wr.size === 58 && festOk,
+    `K260c لا بندَ بنكياً فريداً سقطَ بكشطِ D1-B: ${tx.size} نصّاً و${dg.size} حواراً و${wr.size} مهمّةَ كتابةٍ مجدولةً (كخطِّ الأساسِ قبلَ التغيير)، وفحصُ التثبيتِ الأسبوعيُّ في B2 سليمٌ بأسئلتِه`);
+}
+
+/* ═══ K261 · R169: إغلاقُ البنودِ البشريةِ بمراجعَ موثّقة (ملفّ تربوي + فحصُ صوتٍ آلي) ═══ */
+{
+  const dos = readFileSync("docs/PEDAGOGIK_REVIEW_2026-10-16.md", "utf8");
+  ok(dos.includes("goethe.de") && dos.includes("Cambridge") && dos.includes("BAMF") && dos.includes("P1") && dos.includes("P4"),
+    "K261a ملفُّ المراجعةِ التربويةِ R169 قائمٌ بمصادرِ Goethe/Cambridge/BAMF وأحكامِ الحملِ (P1) والأدواتِ (P2) وA0 ‏(P3) والصوتِ (P4)");
+  const qc = JSON.parse(readFileSync("docs/audio-qc-2026-10-16.json", "utf8")) as any;
+  ok(qc.dateien.length === 164 && qc.anomalienGesamt === 0 && qc.gruppen.ki.anzahl === 82 && qc.gruppen.haus.anzahl === 82 &&
+     qc.dateien.every((f: any) => f.ok && f.dauerS >= 3 && f.zeichenProSekunde >= 5 && f.zeichenProSekunde <= 22),
+    `K261b فحصُ الصوتِ الآليُّ R169: ‏164/164 ملفَ حوارٍ مفكوكاً (82 دار + 82 KI) بلا شذوذ — سرعةُ KI الوسطى ${qc.gruppen.ki.zeichenProSekundeMedian} ح/ث مقابل الدار ${qc.gruppen.haus.zeichenProSekundeMedian}؛ اكتمالٌ وقابليةُ سماعٍ مثبتة آلياً، لا ادّعاءَ سماعٍ بشري`);
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

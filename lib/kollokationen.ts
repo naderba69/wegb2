@@ -1,9 +1,16 @@
-import kollokRaw from "@/content/kollokationen.json";
+import { bankRoh, beiBankenBereit } from "./bankload";
 import type { Exercise, VocabCard } from "./types";
 import { pickN } from "./plan";
 
 /** المتلازمات اللفظية: لكلّ بطاقة 2–3 عبارات ثابتة تحوي كلمةَ البطاقة (content/kollokationen.json) */
-export const kollokationen = kollokRaw as unknown as Record<string, string[]>;
+export const kollokationen: Record<string, string[]> = {};
+/** R163: in Node sofort befüllt, im Browser nach /banks.json — Container bleibt dieselbe Referenz. */
+function fuelleKollokationen(): void {
+  const r = bankRoh("kollokationen.json");
+  if (r) Object.assign(kollokationen, r);
+}
+fuelleKollokationen();
+beiBankenBereit(fuelleKollokationen);
 
 export function kollokationenFuer(card: Pick<VocabCard, "id">): string[] {
   return kollokationen[card.id] ?? [];

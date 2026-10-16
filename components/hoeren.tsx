@@ -11,6 +11,7 @@ import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { speakAny, stopSpeech, speechAvailable } from "@/lib/speech";
+import { gemischteOptionen } from "@/lib/optionen";
 import { hoerenAudio, type LkGap } from "@/lib/content";
 import { pickLk } from "@/lib/luecken";
 import { normalize } from "@/lib/grader";
@@ -149,7 +150,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
               </div>
               {it.options ? (
                 <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-                  {it.options.map((o) => (
+                  {gemischteOptionen(it.options, it.id).map((o) => (
                     <button
                       key={o}
                       className="btn btn-ghost"

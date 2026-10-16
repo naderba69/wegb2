@@ -75,6 +75,16 @@
       "muster": "10 Prozent",
       "wo": "d-a2-ht01 distractor",
       "grund": "Falschantwort in der Verständnisfrage zum fiktiven Kaufhausangebot; keine Tatsachenbehauptung."
+    },
+    {
+      "muster": "2022",
+      "wo": "t-b2-38",
+      "grund": "التجربة البريطانية المنشورة لعام 2022 (أسبوع عمل من أربعة أيام) — واقعة منسوبة في النص إلى التجربة نفسها"
+    },
+    {
+      "muster": "1,4 Prozent",
+      "wo": "t-b2-38",
+      "grund": "متوسط الإيرادات المرجّح في التجربة البريطانية 2022 كما ورد في تقاريرها — منسوب داخل النص ومتبوع بنفي الاستدلال السببي"
     }
   ]
 }

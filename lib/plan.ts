@@ -30,7 +30,7 @@ import {
 } from "./content";
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
-import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten } from "./phasen";
+import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B2_DECKEL_MIN } from "./phasen";
 import { kapselIds, kapselIdsAbend, kapselQuiz } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -163,7 +163,7 @@ export const MODULE: Modul[] = [
   { nr: 1, level: "A1", von: 11, bis: 31,  titelDe: "Lektion 1–2: Begrüßung & Zahlen",  titelAr: "التعارف والأرقام",      inhalteAr: "التحيات · sein/haben · تصريف منتظم · ضمائر · أرقام 0-100 · Ja/nein/W-Fragen" },
   { nr: 2, level: "A1", von: 32, bis: 52,  titelDe: "Lektion 3–4: Familie & Gegenstände", titelAr: "العائلة والأشياء",      inhalteAr: "العائلة · أدوات الملكية · أفعال شاذة · der/die/das/kein · ألوان · صفات" },
   { nr: 3, level: "A1", von: 53, bis: 73,  titelDe: "Lektion 5–6: Zeit & Essen",        titelAr: "الوقت والطعام",        inhalteAr: "الساعة · أفعال منفصلة · جر الوقت · المأكولات · Akkusativ · möchten" },
-  { nr: 4, level: "A1", von: 74, bis: 94,  titelDe: "Lektion 7–8: Hobbys & Wohnen",     titelAr: "الهوايات والسكن",      inhalteAr: "الهوايات · können · الطقس · الشقة · Dativ أساسي · Wechselpräpositionen · Modalverben · مقدمة Perfekt/Futur · Imperativ" },
+  { nr: 4, level: "A1", von: 74, bis: 94,  titelDe: "Lektion 7–8: Hobbys & Wohnen",     titelAr: "الهوايات والسكن",      inhalteAr: "الهوايات · können · الطقس · الشقة · Dativ أساسي · Wechselpräpositionen · Modalverben · مقدمة Perfekt · Imperativ" },
   // ── A2: 12 Wochen / 84 Tage ──
   { nr: 1, level: "A2", von: 95,  bis: 115, titelDe: "Lektion 9–10: Vergangenheit & Orientierung", titelAr: "الماضي والتوجّه",  inhalteAr: "Perfekt كامل · Präteritum للناقصة · Dativ كامل · وصف الطريق · المواصلات" },
   { nr: 2, level: "A2", von: 116, bis: 136, titelDe: "Lektion 11–12: Gesundheit & Kleidung", titelAr: "الصحة والملابس",       inhalteAr: "الطبيب · أفعال انعكاسية · تبديل الجر · صيغة الأمر (تثبيت) · المقارنة · الملابس والألوان" },
@@ -173,7 +173,7 @@ export const MODULE: Modul[] = [
   { nr: 1, level: "B1", von: 179, bis: 203, titelDe: "Lektion 17–18: Beziehungen & Ausbildung", titelAr: "العلاقات والتعليم",  inhalteAr: "الصداقات والنزاعات · Relativsätze · obwohl/trotzdem · السيرة الذاتية · Präteritum كامل · تصريف الصفات" },
   { nr: 2, level: "B1", von: 204, bis: 228, titelDe: "Lektion 19–20: Bewerbung & Umwelt", titelAr: "البحث عن عمل والبيئة",   inhalteAr: "Konjunktiv II حاضر · um…zu/damit · Passiv بكل الأزمنة · أفعال بحروف جر · البيئة والطبيعة" },
   { nr: 3, level: "B1", von: 229, bis: 252, titelDe: "Lektion 21–22: Konsum & Gesundheit", titelAr: "الاستهلاك والصحة",      inhalteAr: "Genitiv كامل · Futur I · Infinitiv mit zu · الصحة النفسية واللياقة · Nominalisierung أساسي" },
-  { nr: 4, level: "B1", von: 253, bis: 276, titelDe: "Lektion 23–24: Politik & Zukunft", titelAr: "السياسة والمستقبل",      inhalteAr: "الروابط الزمنية · صفات كأسماء · Konjunktiv II ماضي (مقدمة) · الأسئلة غير المباشرة · Partizip I · أحلام ومستقبل · مراجعة B1" },
+  { nr: 4, level: "B1", von: 253, bis: 276, titelDe: "Lektion 23–24: Politik & Zukunft", titelAr: "السياسة والمستقبل",      inhalteAr: "الروابط الزمنية · صفات كأسماء · Konjunktiv II ماضي (مقدمة) · الأسئلة غير المباشرة · تصريف الصفات كاملاً · أحلام ومستقبل · مراجعة B1" },
   // ── B2: 14 Wochen / 98 Tage ──
   { nr: 1, level: "B2", von: 277, bis: 301, titelDe: "Lektion 25–26: Globalisierung & Arbeitswelt", titelAr: "العولمة وسوق العمل", inhalteAr: "الروابط المزدوجة · Funktionsverbgefüge · بدائل Passiv · الشركات الناشئة · الذكاء الاصطناعي · اندماج حروف جر" },
   { nr: 2, level: "B2", von: 302, bis: 326, titelDe: "Lektion 27–28: Hochschule & Medien", titelAr: "الجامعة والإعلام",       inhalteAr: "الجامعة والبحث · Konjunktiv I (كلام غير مباشر) · Partizipattribute مطوّلة · الصحافة ووسائل التواصل · حرية الصحافة" },
@@ -630,6 +630,12 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   };
   const nextDialog = () => dialogsOfLevel.length ? dialogsOfLevel[(dialogRang + dialogSlot++) % dialogsOfLevel.length] : undefined;
   const writesOfLevel = writingTasks.filter((w) => w.level === level);
+  // 🔁 R146: دورانٌ حتميٌّ لمهامِّ الكتابة من موقع «جملة الأسبوع» (يومُ التثبيتِ أسبوعياً) —
+  // القرعةُ وحدَها تركت w-b2-06/w-b2-10 بلا موعدٍ في 378 يوماً؛ الدورانُ الأسبوعيُّ يمرُّ بمهامِّ المستوى كلِّها تباعاً
+  const WRITE_SLOTS = [0, 0, 0, 0, 0, 1, 0];
+  const writeRang = rangVor(WRITE_SLOTS);
+  let writeSlot = 0;
+  const nextWrite = () => writesOfLevel.length ? writesOfLevel[(writeRang + writeSlot++) % writesOfLevel.length] : undefined;
   const satzOfLevel = sentences.filter((s) => s.level === level);
 
   if (type === "lerntag") {
@@ -1118,7 +1124,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         ? "جملة الأسبوع (3 جمل عن أسبوعك)"
         : "جملة/فقرة الأسبوع (5 جمل تلخّص ما تعلّمته)",
       minutes: level === "B2" ? 15 : level === "A0" ? 8 : level === "A1" ? 10 : 12,
-      writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+      writeId: nextWrite()?.id,
     });
     if (level === "B2") {
       tasks.push({
@@ -1401,6 +1407,41 @@ export function buildDay(day: number, progress: Progress): DayPlan {
 
   // ⚖️ تقديرات كل مهمة مستقلة عن هدف الجلسة وإيقاع البطاقات؛ لا نضغط مجموعها ولا نمدّه.
   for (const t of tasks) if (!t.mandatory) t.minutes = lastMinuten(t.minutes, level);
+
+  // ⚖️ D1-B (R168 · قرارُ المالك 2026-10-16 باعتماد D1-B): سقفُ الحملِ اليوميِّ المخطَّط في B2 عندَ D1_B2_DECKEL_MIN
+  //    (وB1 داخلُ سقفِها بالقياسِ أصلاً — يُقفِلُه K260a). الكشطُ حقيقيٌّ لا إعادةُ تسمية: تُخفَّضُ
+  //    دقائقُ مهامِّ المراجعةِ المتكرِّرةِ أوّلاً (wiederholen) ثم فحصِ اليومِ عندَ الحاجة، ويُقطَعُ محتواها
+  //    (أسئلةُ الاختبار/جملُ الكبسولة/فخاخُ الأخطاء) بالنسبةِ نفسِها — فالمهمّةُ المعروضةُ أصغرُ فعلاً.
+  //    لا يُمَسُّ أيُّ بندٍ بنكيٍّ فريد: القواعدُ والنصوصُ والحواراتُ والكتابةُ والمحادثةُ والامتحاناتُ خارجُ
+  //    الكشطِ بتاتاً، والإلزاميّاتُ (دَينُ التعويض/تحقُّقُ الاستقلال) لا تُخفَّض. ما يُقطَعُ يتكرَّرُ بطبيعتِه
+  //    (استرجاعٌ متباعدٌ أسبوعي/يومي) فيعودُ في دوراتٍ لاحقة. الأرقامُ تقديراتٌ مخطَّطةٌ من buildDay
+  //    لا زمنُ تعلُّمٍ مقيسٌ ميدانياً — كما وثَّقَ R166/D1. يُقفَلُ بسقوف K260a/b وسلامةِ التغطية K260c.
+  if (phase === "B2") {
+    const D1_DECKEL = D1_B2_DECKEL_MIN; // من lib/phasen.ts — مصدر الثوابت الأوحد
+    const ausgang = new Map(tasks.map((t) => [t, { m: t.minutes, q: t.quiz?.length ?? 0, s: t.sentenceIds?.length ?? 0, f: t.fehlerItems?.length ?? 0 }]));
+    const kuerzeInhalt = (t: DayTask) => {
+      const u = ausgang.get(t);
+      if (!u || u.m <= 0) return;
+      const anteil = t.minutes / u.m;
+      if (t.quiz && u.q > 0) t.quiz = t.quiz.slice(0, Math.max(1, Math.round(u.q * anteil)));
+      // جملُ الكبسولة (sentenceIds) لا تُقطَع أبداً — حلقةُ التباعدِ المكانيِّ K65c مقفلةٌ عليها.
+      if (t.fehlerItems && u.f > 0) t.fehlerItems = t.fehlerItems.slice(0, Math.max(2, Math.round(u.f * anteil)));
+    };
+    let summe = tasks.reduce((a, t) => a + t.minutes, 0);
+    for (const art of ["wiederholen", "check"] as const) {
+      if (summe <= D1_DECKEL) break;
+      const boden = art === "wiederholen" ? 15 : 20;
+      const ziele = tasks
+        .filter((t) => !t.mandatory && !t.exam && t.kind === art)
+        .sort((a, b) => b.minutes - a.minutes);
+      while (summe > D1_DECKEL && ziele.some((t) => t.minutes > boden)) {
+        for (const t of ziele) {
+          if (summe <= D1_DECKEL) break;
+          if (t.minutes > boden) { t.minutes -= 5; summe -= 5; kuerzeInhalt(t); }
+        }
+      }
+    }
+  }
   const tempo = progress.settings.tempo ?? "regelmaessig";
   return { day, week, weekday, phase, type, tasks, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES };
 }

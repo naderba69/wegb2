@@ -8,6 +8,7 @@ import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
+import { gemischteOptionen } from "@/lib/optionen";
 import { De } from "./De";
 
 type Mode = "deklination" | "konnektoren" | "passiv";
@@ -146,7 +147,7 @@ export function GrammatikArena({ progress: _progress }: { progress: Progress }) 
             {it.promptAr && <div style={{ fontSize: "0.83rem", color: "var(--color-ink2)", fontWeight: 400 }}>{it.promptAr}</div>}
           </div>
           <div style={{ display: "grid", gap: "0.3rem" }}>
-            {it.options.map((o) => (
+            {gemischteOptionen(it.options, `${mode}:${idx}:${it.promptDe}`).map((o) => (
               <button
                 key={o}
                 className="btn btn-ghost"

@@ -1,0 +1,302 @@
+{
+  "t-b1-26": {
+    "de": "In Deutschland ging Salma zum ersten Mal ins Theater. Ihre Kollegin hatte zwei Karten für ein kleines Festival, bei dem junge Gruppen alte Texte ganz neu zeigen. Salma zog sich elegant an, obwohl die Kollegin gesagt hatte, das sei nicht nötig. Sie war es aus Tunis gewohnt, sich für das Theater schön anzuziehen, und sie wollte diesen Abend besonders genießen.\n\nDas Stück basierte auf einem Roman, den Salma im Kurs gelesen hatte, aber nur bis zum dritten Kapitel. Ein großes Orchester gab es nicht; auf der Bühne stand ein kleines Ensemble: drei Musiker, jeder mit einem anderen Instrument. Zwischen den Szenen las eine Schauspielerin ein Gedicht, und im Hintergrund malte ein Künstler live ein Bild, das am Ende des Abends fertig war. Salma verstand nicht jedes Wort, aber der Eindruck war stark: Literatur, Musik und Kunst in einem einzigen Raum.\n\nAuf dem Heimweg diskutierten die beiden lange. Die Kollegin kritisierte das Ende, das sie zu schnell fand. Salma hatte gerade dieses Ende beeindruckt, weil niemand erklärt hatte, wie die Geschichte weitergeht. „Wie im Film“, sagte die Kollegin. „Nein“, sagte Salma, „im Film sieht man alles. Hier muss man selbst denken.“ Nächste Woche will sie den Roman endlich zu Ende lesen.",
+    "ar": "أول مسرح في ألمانيا: زميلة سلمى دعتها بمقعدين لمهرجان صغير تقدّم فيه فرق شابة نصوصاً قديمة بروح جديدة، فتأنّقت كما اعتادت في تونس رغم أن الأناقة غير لازمة. المسرحية من رواية قرأتها في الدورة حتى الفصل الثالث فقط؛ وبدل أوركسترا كبيرة فرقة صغيرة من ثلاثة موسيقيين، وممثلة تقرأ قصائد بين المشاهد ورسّام يرسم لوحة تكتمل في نهاية الأمسية — أدب وموسيقى وفن في قاعة واحدة وإن لم تفهم كل كلمة. في طريق العودة تناقشتا حول النهاية: الزميلة رأتها سريعة، وسلمى أعجبت بانفتاحها؛ فالسينما تُريك كل شيء أما هنا فعليك أن تفكّر بنفسك. وستكمل الرواية الأسبوع القادم.",
+    "questions": [
+      {
+        "id": "t-b1-26-l1",
+        "type": "mc",
+        "promptDe": "Warum zog sich Salma elegant an?",
+        "options": [
+          "Sie war es aus Tunis so gewohnt",
+          "Die Kollegin hatte es verlangt",
+          "Es gab eine Kleiderordnung"
+        ],
+        "answer": "Sie war es aus Tunis so gewohnt",
+        "explanationAr": "الدليل في النص: «Sie war es aus Tunis gewohnt, sich für das Theater schön anzuziehen»."
+      },
+      {
+        "id": "t-b1-26-l2",
+        "type": "mc",
+        "promptDe": "Was gab es auf der Bühne statt eines großen Orchesters?",
+        "options": [
+          "ein kleines Ensemble mit drei Musikern",
+          "nur eine Schauspielerin",
+          "eine große Band"
+        ],
+        "answer": "ein kleines Ensemble mit drei Musikern",
+        "explanationAr": "الدليل في النص: «auf der Bühne stand ein kleines Ensemble: drei Musiker»."
+      },
+      {
+        "id": "t-b1-26-l3",
+        "type": "mc",
+        "promptDe": "Warum beeindruckte Salma das Ende des Stücks?",
+        "options": [
+          "Weil offen blieb, wie die Geschichte weitergeht",
+          "Weil es sehr schnell war",
+          "Weil es wie ein Film war"
+        ],
+        "answer": "Weil offen blieb, wie die Geschichte weitergeht",
+        "explanationAr": "الدليل في النص: «weil niemand erklärt hatte, wie die Geschichte weitergeht». الزميلة على العكس رأته سريعاً."
+      },
+      {
+        "id": "t-b1-26-l4",
+        "type": "truefalse",
+        "promptDe": "Salma hatte den Roman vorher schon zu Ende gelesen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «den Salma im Kurs gelesen hatte, aber nur bis zum dritten Kapitel»."
+      },
+      {
+        "id": "t-b1-26-l5",
+        "type": "fill",
+        "promptDe": "Zwischen den Szenen las eine Schauspielerin ein ___.",
+        "answer": "Gedicht",
+        "explanationAr": "الدليل في النص: «las eine Schauspielerin ein Gedicht»."
+      }
+    ]
+  },
+  "t-b1-27": {
+    "de": "Als bei einem Starkregen zum zweiten Mal in drei Jahren der Keller eines Hauses in unserer Straße unter Wasser stand, änderte sich etwas. Die Überschwemmung war klein, aber sie machte aus einer Diskussion eine ernste Frage: Was können wir selbst tun? Ein Nachbar, der früher gegen jede neue Regel protestiert hatte, schlug vor, den Verbrauch der ganzen Straße zu messen.\n\nDas Ergebnis überraschte uns alle. Viele Häuser sind schlecht gedämmt und brauchen im Winter viel Heizenergie. Wir konsumieren auch mehr, als wir brauchen; jede Woche füllte Verpackungsmüll drei große Mülltonnen. Auch beim Wasserverbrauch gab es große Unterschiede zwischen den Häusern. Niemand wollte jemandem etwas vorwerfen. Ein Nachbar fragte: „Kommt die Heizenergie aus Kohle oder Erdgas? Ist das schädlich?“ Dazu hatte die Gruppe keine Daten; sie hatte nur den Verbrauch gemessen.\n\nSeitdem heizen wir sparsamer, kaufen weniger Produkte in Plastikverpackungen und werfen weniger weg. Auf die weltweite Erdölförderung haben wir wenig Einfluss, aber die Landschaft vor dem Dorf können wir schützen: Am Fluss haben wir Bäume gepflanzt. Wir hoffen, dass die Pflanzen den Boden schützen und mehr Regenwasser dort versickert. Ob das die nächste Überschwemmung verhindert, weiß niemand. Aber die Nachbarn, die vorher nur über Politik geredet haben, reden jetzt über Bäume.",
+    "ar": "فيضان صغير ثانٍ خلال ثلاث سنوات لقبو في الشارع حوّل النقاش إلى سؤال جدي: ما الذي بوسعنا فعله؟ فاقترح جار كان يعترض على كل قاعدة جديدة قياس استهلاك الشارع كاملاً. فاجأت النتائج الجميع: بيوت سيئة العزل تلتهم طاقة التدفئة، وثلاثة براميل نفايات تغليف أسبوعياً، وفروق كبيرة في استهلاك الماء — بلا لوم متبادل. سؤال من أين تأتي الطاقة (فحم أم غاز) بقي بلا جواب إذ لم يملكوا إلا بيانات الاستهلاك. منذئذ تدفئة مقتصدة وبلاستيك أقل ورمي أقل؛ وعلى استخراج النفط العالمي لا سلطان لهم، لكنهم زرعوا أشجاراً على النهر تحمي التربة وتمتص المطر، والجيران الذين لم يتحدثوا إلا في السياسة صاروا يتحدثون عن الأشجار.",
+    "questions": [
+      {
+        "id": "t-b1-27-l1",
+        "type": "mc",
+        "promptDe": "Was schlug der Nachbar nach der Überschwemmung vor?",
+        "options": [
+          "den Verbrauch der ganzen Straße zu messen",
+          "neue Regeln zu verbieten",
+          "die Straße zu sperren"
+        ],
+        "answer": "den Verbrauch der ganzen Straße zu messen",
+        "explanationAr": "الدليل في النص: «schlug vor, den Verbrauch der ganzen Straße zu messen»."
+      },
+      {
+        "id": "t-b1-27-l2",
+        "type": "mc",
+        "promptDe": "Was überraschte die Gruppe beim Ergebnis?",
+        "options": [
+          "Viele Häuser sind schlecht gedämmt und verbrauchen viel",
+          "Niemand heizt im Winter",
+          "Alle Häuser verbrauchen gleich viel"
+        ],
+        "answer": "Viele Häuser sind schlecht gedämmt und verbrauchen viel",
+        "explanationAr": "الدليل في النص: «Viele Häuser sind schlecht gedämmt und brauchen im Winter viel Heizenergie»."
+      },
+      {
+        "id": "t-b1-27-l3",
+        "type": "mc",
+        "promptDe": "Worauf hat die Gruppe laut Text wenig Einfluss?",
+        "options": [
+          "auf die weltweite Erdölförderung",
+          "auf das Wetter im Dorf",
+          "auf die Bäume am Fluss"
+        ],
+        "answer": "auf die weltweite Erdölförderung",
+        "explanationAr": "الدليل في النص: «Auf die weltweite Erdölförderung haben wir wenig Einfluss»."
+      },
+      {
+        "id": "t-b1-27-l4",
+        "type": "truefalse",
+        "promptDe": "Die Gruppe hatte genaue Daten darüber, ob die Heizenergie aus Kohle oder Erdgas kommt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Dazu hatte die Gruppe keine Daten; sie hatte nur den Verbrauch gemessen»."
+      },
+      {
+        "id": "t-b1-27-l5",
+        "type": "fill",
+        "promptDe": "Am Fluss haben wir ___ gepflanzt, damit der Boden geschützt wird.",
+        "answer": "Bäume",
+        "explanationAr": "الدليل في النص: «Am Fluss haben wir Bäume gepflanzt»."
+      }
+    ]
+  },
+  "t-b1-28": {
+    "de": "Herr Nasri hatte online eine Pauschalreise gebucht. Zwei Tage später stornierte er, weil seine Mutter krank wurde. Der Veranstalter verlangte den Gesamtpreis und nannte die Stornierung kostenpflichtig. In der E-Mail stand, bei Pauschalreisen gelte kein Widerrufsrecht. Nasri ärgerte sich: „Ich bin kein Verbrecher; warum soll ich alles zahlen?“ Eine Gebührenordnung oder Berechnung fehlte in der E-Mail; der Veranstalter hatte aber seine Kartendaten.\n\nEin Anwalt mit Schwerpunkt Verbraucherschutz erklärte ihm die Regelung und gab eine unverbindliche Einschätzung. Für die Prüfung wollte er zuerst den Vertrag lesen. Bei einer Pauschalreise gibt es tatsächlich kein Widerrufsrecht, auch nicht bei Online-Buchung. Nasri kann aber vor Reisebeginn stornieren; dann darf der Veranstalter eine angemessene Entschädigung verlangen. Der Vertrag kann dafür eine Pauschale vorsehen. Ihre Höhe hängt davon ab, wie früh man storniert und welche Kosten der Veranstalter spart. Auf Nachfrage muss er die Höhe begründen. Der Anwalt hielt die Forderung von hundert Prozent hier für angreifbar.\n\nVor Gericht kam es nicht. Auf den Brief des Anwalts hin räumte der Veranstalter ein, dass die Klausel unklar war, und zahlte zwei Drittel des Preises zurück. Die Polizei hatte mit dem Vertragsstreit nichts zu tun. Seitdem liest Nasri vor dem Klick auf „verbindlich buchen“ genau den Absatz zur Stornierung. Auch ein Klick kann verbindlich sein.",
+    "ar": "السيد نصري حجز رحلة شاملة إلكترونياً ثم ألغى بعد يومين لمرض والدته فطالبه المنظّم بالثمن كاملاً مستنداً إلى غياب حق العدول في الرحلات الشاملة، بلا جدول رسوم ولا حساب — ومعه بيانات بطاقته. محامي حماية مستهلك شرح له القاعدة: لا حق عدول فعلاً حتى إلكترونياً، لكن الإلغاء قبل السفر ممكن مقابل تعويض معقول قد يُنصّ عليه كمبلغ مقطوع تتحدد قيمته ببكور الإلغاء وما وفّره المنظّم، وعليه تبريره عند الطلب؛ ورأى أن مطالبة المئة بالمئة قابلة للطعن. لم تصل القضية للمحكمة: برسالة المحامي أقرّ المنظّم بغموض الشرط وردّ ثلثي المبلغ. صار نصري يقرأ فقرة الإلغاء قبل نقرة «حجز ملزم» — فالنقرة أيضاً قد تُلزم.",
+    "questions": [
+      {
+        "id": "t-b1-28-l1",
+        "type": "mc",
+        "promptDe": "Warum stornierte Herr Nasri die Reise?",
+        "options": [
+          "Weil seine Mutter krank wurde",
+          "Weil die Reise zu teuer war",
+          "Weil er keine Zeit hatte"
+        ],
+        "answer": "Weil seine Mutter krank wurde",
+        "explanationAr": "الدليل في النص: «stornierte er, weil seine Mutter krank wurde»."
+      },
+      {
+        "id": "t-b1-28-l2",
+        "type": "mc",
+        "promptDe": "Was hielt der Anwalt für angreifbar?",
+        "options": [
+          "die Forderung von hundert Prozent des Preises",
+          "die Online-Buchung selbst",
+          "die Erkrankung der Mutter"
+        ],
+        "answer": "die Forderung von hundert Prozent des Preises",
+        "explanationAr": "الدليل في النص: «hielt die Forderung von hundert Prozent hier für angreifbar»."
+      },
+      {
+        "id": "t-b1-28-l3",
+        "type": "mc",
+        "promptDe": "Wie endete der Streit?",
+        "options": [
+          "Der Veranstalter zahlte nach dem Anwaltsbrief zwei Drittel zurück",
+          "Ein Gericht entschied für Nasri",
+          "Nasri zahlte alles"
+        ],
+        "answer": "Der Veranstalter zahlte nach dem Anwaltsbrief zwei Drittel zurück",
+        "explanationAr": "الدليل في النص: «zahlte zwei Drittel des Preises zurück» دون محكمة."
+      },
+      {
+        "id": "t-b1-28-l4",
+        "type": "truefalse",
+        "promptDe": "Bei Pauschalreisen gibt es kein Widerrufsrecht, auch nicht bei Online-Buchung.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «gibt es tatsächlich kein Widerrufsrecht, auch nicht bei Online-Buchung»."
+      },
+      {
+        "id": "t-b1-28-l5",
+        "type": "fill",
+        "promptDe": "Der Veranstalter zahlte ___ Drittel des Preises zurück.",
+        "answer": "zwei",
+        "explanationAr": "الدليل في النص: «zahlte zwei Drittel des Preises zurück»."
+      }
+    ]
+  },
+  "t-b1-29": {
+    "de": "Mit dreizehn hat meine Tochter angefangen, ihre Zimmertür zu schließen. Nicht laut, nur konsequent. Für mich war das der Beginn der Pubertät, und ich war nicht vorbereitet. In meiner eigenen Erziehung gab es keine geschlossenen Türen; Distanz galt damals als Kälte. Heute weiß ich: Sie ist ein Teil der Beziehung, nicht ihr Ende.\n\nDie ersten Monate waren voller Unsicherheit. Ich warf ihr vor, sie habe Geheimnisse vor mir; sie warf mir vor, ich würde mich viel zu viel um sie kümmern. Beides stimmte ein bisschen. Eine Freundin, die als Beraterin arbeitet, sagte mir einen Satz, den ich mir aufgeschrieben habe: Die Psyche eines Jugendlichen braucht eine Tür, die zu ist, und ein Haus, das offen bleibt.\n\nWir haben dann drei Dinge geändert. Das Taschengeld ist jetzt fest, und meine Tochter entscheidet allein, wofür sie es ausgibt. Die Aufgabenteilung im Haushalt steht auf einem Zettel am Kühlschrank; ich muss mich nicht mehr jeden Abend durchsetzen. Und einmal pro Woche unterhalten wir uns beim Kochen über alles, worüber sie reden will, und über nichts, was sie nicht will. Seitdem ist das Familienleben ruhiger geworden. Die Grenze ist klar, und die Hoffnung, dass die Tür eines Tages von selbst aufgeht, hat sich schon zweimal erfüllt.",
+    "ar": "في الثالثة عشرة بدأت ابنتها تغلق باب غرفتها بهدوء وإصرار — بداية مراهقة لم تكن الأم مستعدة لها، إذ تربّت على أن لا أبواب مغلقة وأن البعد بُرود؛ واليوم تفهم أن المسافة جزء من العلاقة لا نهايتها. أشهر أولى من الشك وتبادل لوم صادق من الطرفين، حتى قالت لها صديقة مستشارة جملة دوّنتها: نفس المراهق تحتاج باباً يغلق وبيتاً يبقى مفتوحاً. غيّروا ثلاثة أشياء: مصروف ثابت تقرر الابنة وحدها إنفاقه، وتقسيم مهام البيت على ورقة على الثلاجة بدل فرض يومي، وحديث أسبوعي أثناء الطبخ عمّا تريد هي فقط. هدأ بيت العائلة، والباب الذي تتمنى أن يفتح من تلقائه فتح مرتين فعلاً.",
+    "questions": [
+      {
+        "id": "t-b1-29-l1",
+        "type": "mc",
+        "promptDe": "Was war für die Mutter der Beginn der Pubertät?",
+        "options": [
+          "dass ihre Tochter anfing, die Zimmertür zu schließen",
+          "dass ihre Tochter schlechte Noten bekam",
+          "dass ihre Tochter einen Freund hatte"
+        ],
+        "answer": "dass ihre Tochter anfing, die Zimmertür zu schließen",
+        "explanationAr": "الدليل في النص: «hat meine Tochter angefangen, ihre Zimmertür zu schließen» و«Für mich war das der Beginn der Pubertät»."
+      },
+      {
+        "id": "t-b1-29-l2",
+        "type": "mc",
+        "promptDe": "Was sagte die Freundin, die als Beraterin arbeitet?",
+        "options": [
+          "Ein Jugendlicher braucht eine geschlossene Tür und ein offenes Haus",
+          "Man muss Jugendliche streng kontrollieren",
+          "Türen müssen immer offen bleiben"
+        ],
+        "answer": "Ein Jugendlicher braucht eine geschlossene Tür und ein offenes Haus",
+        "explanationAr": "الدليل في النص: «braucht eine Tür, die zu ist, und ein Haus, das offen bleibt»."
+      },
+      {
+        "id": "t-b1-29-l3",
+        "type": "mc",
+        "promptDe": "Worüber sprechen Mutter und Tochter beim wöchentlichen Kochen?",
+        "options": [
+          "nur über das, worüber die Tochter reden will",
+          "über die Hausaufgaben",
+          "über das Taschengeld"
+        ],
+        "answer": "nur über das, worüber die Tochter reden will",
+        "explanationAr": "الدليل في النص: «über alles, worüber sie reden will, und über nichts, was sie nicht will»."
+      },
+      {
+        "id": "t-b1-29-l4",
+        "type": "truefalse",
+        "promptDe": "Die Mutter verbietet ihrer Tochter jetzt, die Tür zu schließen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: الباب المغلق مقبول كحدّ واضح: «Die Grenze ist klar»."
+      },
+      {
+        "id": "t-b1-29-l5",
+        "type": "fill",
+        "promptDe": "Die Aufgabenteilung im Haushalt steht auf einem Zettel am ___.",
+        "answer": "Kühlschrank",
+        "explanationAr": "الدليل في النص: «auf einem Zettel am Kühlschrank»."
+      }
+    ]
+  },
+  "t-b1-30": {
+    "de": "Meine erste Dienstreise begann mit einem Zettel von der Chefin: Zeitplan, Hotel, Name des Kunden und der Satz „Spesen bitte mit Quittung“. Meine Abwesenheit im Büro dauerte drei Tage; die Vertretung übernahm eine Kollegin, die mich am Abend vorher noch fragte, wo die aktuellen Unterlagen für den Kundendienst liegen.\n\nAm Flughafen konnte ich online einchecken. Das Hotel wollte aber eine Kreditkarte, die ich nicht hatte. Deshalb wollte ich vor der Reise Bargeld abheben. Am Flughafen hob ich etwas Geld ab und bezahlte damit die erste Taxifahrt. Das Hotel rechnete später direkt mit der Firma ab. Nach der Rückkehr konnte ich den übrigen Betrag auf mein Konto einzahlen. Der Kunde selbst war freundlich: Meine Präsentation dauerte zwanzig Minuten, die Diskussion über die Umsetzung dauerte zwei Stunden. Am Ende wollte er einen Rabatt, den ich nicht versprechen durfte. Ich habe gesagt, ich melde mich, und das war genau richtig.\n\nZurück im Büro lernte ich den unangenehmsten Teil kennen: die Bearbeitung der Spesen. Ich musste jede Quittung einzeln abgeben und für jede Taxifahrt den Grund angeben. Die Dienstleistung, die wir verkaufen, ist kompliziert; kompliziert sind auch die Regeln für ein Mittagessen auf Reisen. Meine Chefin lachte und sagte, das gehöre dazu. Beim zweiten Mal, versicherte sie, brauche ich für die Spesen nur noch eine halbe Stunde.",
+    "ar": "أول رحلة عمل بدأت بورقة من المديرة (جدول وفندق واسم العميل و«النفقات بالإيصال حصراً») وغياب ثلاثة أيام تتولى فيه زميلة التغطية. تسجيل وصول إلكتروني في المطار، لكن الفندق طلب بطاقة ائتمان لا تملكها فسحبت نقداً ودفعت أول سيارة أجرة (حاسب الفندق الشركة لاحقاً مباشرة وأودعت الباقي عند عودتها). العميل ودود: عرضها عشرون دقيقة ونقاش التنفيذ ساعتان، وطلب خصماً لا تملك وعدَه فقالت سأعاود الاتصال — وكان صواباً. عند العودة الجزء الأبغض: تسوية النفقات، كل إيصال على حدة مع سبب لكل سيارة وقواعد معقدة لغداء السفر؛ ضحكت المديرة: في المرة الثانية لن تحتاجي إلا نصف ساعة.",
+    "questions": [
+      {
+        "id": "t-b1-30-l1",
+        "type": "mc",
+        "promptDe": "Was stand auf dem Zettel von der Chefin?",
+        "options": [
+          "Zeitplan, Hotel, Kundenname und der Satz zu den Spesen",
+          "nur die Adresse des Hotels",
+          "eine Liste mit Geschenken"
+        ],
+        "answer": "Zeitplan, Hotel, Kundenname und der Satz zu den Spesen",
+        "explanationAr": "الدليل في النص: «Zeitplan, Hotel, Name des Kunden und der Satz „Spesen bitte mit Quittung“»."
+      },
+      {
+        "id": "t-b1-30-l2",
+        "type": "mc",
+        "promptDe": "Warum hob sie am Flughafen Bargeld ab?",
+        "options": [
+          "Das Hotel wollte eine Kreditkarte, die sie nicht hatte",
+          "Das Taxi war zu teuer",
+          "Sie wollte einkaufen gehen"
+        ],
+        "answer": "Das Hotel wollte eine Kreditkarte, die sie nicht hatte",
+        "explanationAr": "الدليل في النص: «Das Hotel wollte aber eine Kreditkarte, die ich nicht hatte»."
+      },
+      {
+        "id": "t-b1-30-l3",
+        "type": "mc",
+        "promptDe": "Was musste sie bei der Spesenbearbeitung tun?",
+        "options": [
+          "jede Quittung einzeln abgeben und Gründe angeben",
+          "alle Belege wegwerfen",
+          "die Chefin alles machen lassen"
+        ],
+        "answer": "jede Quittung einzeln abgeben und Gründe angeben",
+        "explanationAr": "الدليل في النص: «Ich musste jede Quittung einzeln abgeben und für jede Taxifahrt den Grund angeben»."
+      },
+      {
+        "id": "t-b1-30-l4",
+        "type": "truefalse",
+        "promptDe": "Die Präsentation dauerte zwanzig Minuten, die Diskussion zwei Stunden.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Meine Präsentation dauerte zwanzig Minuten, die Diskussion über die Umsetzung dauerte zwei Stunden»."
+      },
+      {
+        "id": "t-b1-30-l5",
+        "type": "fill",
+        "promptDe": "Am Ende wollte der Kunde einen ___, den sie nicht versprechen durfte.",
+        "answer": "Rabatt",
+        "explanationAr": "الدليل في النص: «wollte er einen Rabatt, den ich nicht versprechen durfte»."
+      }
+    ]
+  }
+}

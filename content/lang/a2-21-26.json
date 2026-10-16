@@ -1,0 +1,320 @@
+{
+  "t-a2-21": {
+    "de": "Mein Name ist Lina, und heute habe ich einen Termin bei Dr. Müller. Ich fühle mich seit drei Tagen nicht gut. Ich habe Husten und Schnupfen, und mein Kopf tut weh. Trotzdem bin ich um neun Uhr pünktlich in der Praxis.\n\nAm Empfang muss ich zuerst meine Versichertenkarte zeigen. Dann warte ich im Wartezimmer und lese eine Zeitschrift. Nach fünfzehn Minuten ruft mich die Arzthelferin. Der Arzt misst meine Temperatur und hört meine Lunge ab. Er vermutet eine Grippe. Er schreibt mir ein Rezept und sagt, ich soll viel Tee trinken und zwei Tage im Bett bleiben.\n\nDie Arzthelferin erklärt mir freundlich, in welcher Apotheke ich das Rezept abgeben kann. Dort hole ich später die Tabletten. Dann rufe ich meinen Chef an und sage ihm am Telefon, dass ich krank bin. Danach fahre ich direkt nach Hause, ruhe mich aus und trinke eine Tasse Tee. Wenn es mir morgen nicht besser geht, rufe ich die Praxis noch einmal an.",
+    "ar": "لينا مريضة منذ ثلاثة أيام (سعال وزكام وصداع) عند د. مولر: بطاقة تأمين عند الاستقبال، انتظار 15 دقيقة، ثم قياس حرارة وسماع للرئة — الاشتباه إنفلونزا. الوصفة: شاي كثير ويومان في الفراش. السكرتيرة تدلّها على الصيدلية، وتتصل بمديرها لتعتذر، وفي البيت راحة وشاي، وإن لم تتحسن غداً تعاود الاتصال بالعيادة.",
+    "questions": [
+      {
+        "id": "t-a2-21-l1",
+        "type": "mc",
+        "promptDe": "Seit wann fühlt sich Lina nicht gut?",
+        "options": [
+          "seit drei Tagen",
+          "seit einer Woche",
+          "seit heute Morgen"
+        ],
+        "answer": "seit drei Tagen",
+        "explanationAr": "الدليل في النص: «Ich fühle mich seit drei Tagen nicht gut»."
+      },
+      {
+        "id": "t-a2-21-l2",
+        "type": "mc",
+        "promptDe": "Was macht der Arzt bei der Untersuchung?",
+        "options": [
+          "Er misst die Temperatur und hört die Lunge ab",
+          "Er schreibt sofort ein Rezept",
+          "Er ruft den Chef an"
+        ],
+        "answer": "Er misst die Temperatur und hört die Lunge ab",
+        "explanationAr": "الدليل في النص: «Der Arzt misst meine Temperatur und hört meine Lunge ab»."
+      },
+      {
+        "id": "t-a2-21-l3",
+        "type": "truefalse",
+        "promptDe": "Der Arzt vermutet eine Grippe.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Er vermutet eine Grippe»."
+      },
+      {
+        "id": "t-a2-21-l4",
+        "type": "mc",
+        "promptDe": "Was soll Lina zu Hause machen?",
+        "options": [
+          "viel Tee trinken und im Bett bleiben",
+          "sofort wieder arbeiten",
+          "Sport machen"
+        ],
+        "answer": "viel Tee trinken und im Bett bleiben",
+        "explanationAr": "الدليل في النص: «ich soll viel Tee trinken und zwei Tage im Bett bleiben»."
+      }
+    ]
+  },
+  "t-a2-22": {
+    "de": "Liebe Frau Becker,\n\nich kann heute leider nicht zum Unterricht kommen, weil meine Tochter krank ist. Sie hat Fieber und muss zu Hause bleiben. Der Kinderarzt hat gesagt, dass sie sich ausruhen soll. Deshalb bleibe ich heute bei ihr. Ich mache ihr einen warmen Tee und bleibe an ihrem Bett. Zwischendurch schaue ich auf die Uhr, bald muss sie ihre Medizin nehmen. Sie schläft viel und trinkt Wasser, wenn sie wach ist. Mein Mann ist auf Geschäftsreise und kann leider nicht helfen.\n\nKönnten Sie mir bitte mitteilen, welche Seiten wir heute im Buch lesen und welche Wörter ich lernen soll? Kann ich die Hausaufgaben von einer Mitschülerin bekommen? Meine Freundin Sara kann mir am Abend ein Foto von ihren Notizen schicken. So kann ich den Stoff zu Hause nachholen.\n\nWenn es meiner Tochter morgen besser geht, komme ich wieder in den Kurs. Falls nicht, informiere ich Sie rechtzeitig. Ich erledige die Aufgaben zu Hause, damit ich nicht zu viel verpasse. Vielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\nFatima",
+    "ar": "رسالة فاطمة إلى معلمتها: تغيب اليوم لأن ابنتها محمومة ويجب أن ترتاح بأمر طبيب الأطفال، وزوجها في رحلة عمل فلا مساعد. تطلب معرفة صفحات اليوم وكلماته وأن تصلها الواجبات عبر صديقتها سارة التي سترسل صورة ملاحظاتها مساءً، لتذاكر في البيت ولا يفوتها الكثير؛ وتعد بالحضور غداً إن تحسنت ابنتها أو إخبار المعلمة مسبقاً.",
+    "questions": [
+      {
+        "id": "t-a2-22-l1",
+        "type": "mc",
+        "promptDe": "Warum kann Fatima heute nicht zum Unterricht kommen?",
+        "options": [
+          "Ihre Tochter ist krank",
+          "Sie ist selbst krank",
+          "Ihr Mann ist verreist"
+        ],
+        "answer": "Ihre Tochter ist krank",
+        "explanationAr": "الدليل في النص: «weil meine Tochter krank ist»."
+      },
+      {
+        "id": "t-a2-22-l2",
+        "type": "mc",
+        "promptDe": "Was soll Sara am Abend machen?",
+        "options": [
+          "ein Foto von ihren Notizen schicken",
+          "die Tochter besuchen",
+          "den Kinderarzt anrufen"
+        ],
+        "answer": "ein Foto von ihren Notizen schicken",
+        "explanationAr": "الدليل في النص: «kann mir am Abend ein Foto von ihren Notizen schicken»."
+      },
+      {
+        "id": "t-a2-22-l3",
+        "type": "truefalse",
+        "promptDe": "Fatimas Mann bleibt heute bei der Tochter zu Hause.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Mein Mann ist auf Geschäftsreise» — مسافر، ولذلك تبقى هي."
+      },
+      {
+        "id": "t-a2-22-l4",
+        "type": "mc",
+        "promptDe": "Was möchte Fatima von der Lehrerin wissen?",
+        "options": [
+          "welche Seiten und Wörter heute dran sind",
+          "wann die Prüfung ist",
+          "ob der Kurs ausfällt"
+        ],
+        "answer": "welche Seiten und Wörter heute dran sind",
+        "explanationAr": "الدليل في النص: «welche Seiten wir heute im Buch lesen und welche Wörter ich lernen soll»."
+      }
+    ]
+  },
+  "t-a2-23": {
+    "de": "Ein Besucher ist neu in der Stadt und sucht den Hauptbahnhof. Er fragt eine Frau: „Entschuldigung, wie komme ich am besten zum Hauptbahnhof?“ Die Frau erklärt ihm den Weg freundlich und genau.\n\nEr geht zuerst geradeaus bis zur Ampel und biegt dort links in die Goethestraße ab. Auf dem Gehweg folgt er der Straße etwa dreihundert Meter. Rechts sieht er zuerst ein kleines Hotel und später eine Bäckerei. Unterwegs schaut er auf die Straßenschilder, genau wie die Frau es ihm gesagt hat. Dann überquert er die nächste große Straße an der Ampel und geht durch die helle Unterführung. Dort zeigen Wegweiser den Weg zum Bahnhof.\n\nAm Ende der Unterführung sieht er den Haupteingang. Davor stehen ein Fahrkartenautomat und ein großer Stadtplan. Der ganze Weg dauert zu Fuß nur ungefähr acht Minuten. Wenn er ein Gleis sucht, kann er die Anzeige in der Halle lesen oder am Informationsschalter fragen. Er ist froh, weil der Weg so einfach war und er noch Zeit für einen Kaffee hat.",
+    "ar": "زائر جديد يسأل عن المحطة الرئيسية فتشرح له امرأة الطريق: مستقيماً حتى الإشارة ثم يساراً في شارع غوته نحو ثلاثمئة متر ماراً بفندق صغير ثم مخبز على اليمين، ثم عبور الشارع الكبير والدخول في نفق مضيء بلوحات إرشاد. عند المخرج المدخل الرئيسي وأمامه آلة تذاكر وخريطة مدينة — ثماني دقائق مشياً، ومن يبحث عن رصيف يقرأ لوحة القاعة أو يسأل مكتب المعلومات.",
+    "questions": [
+      {
+        "id": "t-a2-23-l1",
+        "type": "mc",
+        "promptDe": "In welche Straße biegt er an der Ampel ab?",
+        "options": [
+          "in die Goethestraße",
+          "in die Schillerstraße",
+          "in die Bahnhofstraße"
+        ],
+        "answer": "in die Goethestraße",
+        "explanationAr": "الدليل في النص: «biegt dort links in die Goethestraße ab»."
+      },
+      {
+        "id": "t-a2-23-l2",
+        "type": "mc",
+        "promptDe": "Was sieht er auf der rechten Seite?",
+        "options": [
+          "ein Hotel und eine Bäckerei",
+          "eine Apotheke und ein Café",
+          "einen Park und eine Schule"
+        ],
+        "answer": "ein Hotel und eine Bäckerei",
+        "explanationAr": "الدليل في النص: «Rechts sieht er zuerst ein kleines Hotel und später eine Bäckerei»."
+      },
+      {
+        "id": "t-a2-23-l3",
+        "type": "truefalse",
+        "promptDe": "Der Weg zum Bahnhof dauert zu Fuß etwa acht Minuten.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Der ganze Weg dauert zu Fuß nur ungefähr acht Minuten»."
+      },
+      {
+        "id": "t-a2-23-l4",
+        "type": "mc",
+        "promptDe": "Wo kann er nach seinem Gleis fragen?",
+        "options": [
+          "am Informationsschalter",
+          "an der Kasse",
+          "im Hotel"
+        ],
+        "answer": "am Informationsschalter",
+        "explanationAr": "الدليل في النص: «oder am Informationsschalter fragen»."
+      }
+    ]
+  },
+  "t-a2-24": {
+    "de": "Am Samstag bin ich um neun Uhr aufgestanden. Zuerst habe ich Kaffee getrunken und Zeitung gelesen. Dann habe ich die Wohnung geputzt und bin einkaufen gegangen. Das Wetter war angenehm, deshalb bin ich zu Fuß zum Supermarkt gegangen. Dort habe ich Brot, Obst und Milch gekauft.\n\nNachmittags ist meine Freundin zu mir gekommen. Sie wohnt in derselben Straße, ganz in meiner Nähe. Um drei Uhr sind wir zusammen in ein Café gegangen und haben viel geredet. Wir haben über die Arbeit und unsere Pläne für den Sommer gesprochen und schon ein bisschen geträumt. Wir lachen viel und erzählen uns Geschichten aus der letzten Woche.\n\nAbends habe ich mit meiner Familie zu Hause gegessen. Am Sonntag habe ich lange geschlafen und bin im Park spazieren gegangen. Dort habe ich Musik gehört und eine Runde um den See gemacht. Die Sonne schien, und viele Familien waren draußen im Park. Abends habe ich Deutsch gelernt, weil ich am Montag einen Test hatte. Insgesamt war es ein ruhiges und schönes Wochenende.",
+    "ar": "عطلة هادئة جميلة: السبت قيام في التاسعة وقهوة وصحيفة ثم تنظيف وتسوّق مشياً في جو لطيف (خبز وفاكهة وحليب). بعد الظهر صديقتها من الشارع نفسه، وفي الثالثة مقهى وحديث عن العمل وخطط الصيف. مساءً عشاء عائلي، والأحد نوم طويل ونزهة حول بحيرة الحديقة مع موسيقى، ثم مذاكرة ألمانية استعداداً لاختبار الاثنين وتجهيز الحقيبة.",
+    "questions": [
+      {
+        "id": "t-a2-24-l1",
+        "type": "mc",
+        "promptDe": "Was hat sie am Samstag zuerst gemacht?",
+        "options": [
+          "Kaffee getrunken und Zeitung gelesen",
+          "die Wohnung geputzt",
+          "Deutsch gelernt"
+        ],
+        "answer": "Kaffee getrunken und Zeitung gelesen",
+        "explanationAr": "الدليل في النص: «Zuerst habe ich Kaffee getrunken und Zeitung gelesen»."
+      },
+      {
+        "id": "t-a2-24-l2",
+        "type": "mc",
+        "promptDe": "Warum ist sie zu Fuß zum Supermarkt gegangen?",
+        "options": [
+          "Das Wetter war angenehm",
+          "Der Bus war kaputt",
+          "Der Supermarkt ist im Haus"
+        ],
+        "answer": "Das Wetter war angenehm",
+        "explanationAr": "الدليل في النص: «Das Wetter war angenehm, deshalb bin ich zu Fuß zum Supermarkt gegangen»."
+      },
+      {
+        "id": "t-a2-24-l3",
+        "type": "truefalse",
+        "promptDe": "Am Sonntag hat sie mit ihrer Freundin Karten gespielt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: الأحد «bin im Park spazieren gegangen» ومذاكرة؛ لقاء الصديقة كان السبت."
+      },
+      {
+        "id": "t-a2-24-l4",
+        "type": "mc",
+        "promptDe": "Warum hat sie am Sonntagabend Deutsch gelernt?",
+        "options": [
+          "Sie hatte am Montag einen Test",
+          "Sie beginnt einen neuen Kurs",
+          "Sie schreibt eine E-Mail"
+        ],
+        "answer": "Sie hatte am Montag einen Test",
+        "explanationAr": "الدليل في النص: «weil ich am Montag einen Test hatte»."
+      }
+    ]
+  },
+  "t-a2-25": {
+    "de": "Heute Morgen geht Frau Yilmaz in den Supermarkt. Sie möchte einen Salat für ihre Familie machen und braucht frisches Gemüse für das Abendessen. Im Laden fragt sie eine Verkäuferin: „Wo finde ich bitte die Milch?“ Die Verkäuferin antwortet: „Die Milch ist im Kühlregal ganz hinten links. Der Käse liegt direkt daneben.“ Frau Yilmaz nimmt einen Einkaufskorb und geht langsam durch den Laden.\n\nSie fragt weiter nach dem Brot und den Tomaten. Das Brot ist am Eingang bei der Bäckereiabteilung. Die Tomaten sind heute im Angebot und liegen beim Gemüse. Sie kosten nur ein Euro neunundvierzig pro Kilo. Die Lieferung kam heute Morgen, deshalb sind sie ganz frisch. Frau Yilmaz nimmt ein Kilo und wählt die Tomaten einzeln aus. Gurken und Paprika liegen gleich daneben.\n\nAm Ende geht sie zur Kasse vorne rechts. Dort kann sie bar oder mit Karte bezahlen. Die Verkäuferin wünscht ihr einen schönen Tag, und Frau Yilmaz bedankt sich für die nette Hilfe. Zu Hause wäscht sie das Gemüse und beginnt gleich mit dem Salat.",
+    "ar": "السيدة يلماز في السوبرماركت لتحضير سلطة العشاء العائلية: الحليب (والجبن بجانبه) في ثلاجة آخر اليسار، والخبز عند قسم المخبز عند المدخل. الطماطم في عرض اليوم (يورو و49 سنتاً للكيلو) وصلت صباحاً طازجة فتنتقيها حبة حبة، والخيار والفلفل بجوارها. تدفع عند صندوق آخر اليمين نقداً أو بالبطاقة وتشكر البائعة على مساعدتها.",
+    "questions": [
+      {
+        "id": "t-a2-25-l1",
+        "type": "mc",
+        "promptDe": "Was möchte Frau Yilmaz heute machen?",
+        "options": [
+          "einen Salat für ihre Familie",
+          "einen Kuchen backen",
+          "ein Frühstück für Gäste"
+        ],
+        "answer": "einen Salat für ihre Familie",
+        "explanationAr": "الدليل في النص: «Sie möchte einen Salat für ihre Familie machen»."
+      },
+      {
+        "id": "t-a2-25-l2",
+        "type": "mc",
+        "promptDe": "Wo ist die Milch im Laden?",
+        "options": [
+          "im Kühlregal ganz hinten links",
+          "am Eingang rechts",
+          "neben der Kasse"
+        ],
+        "answer": "im Kühlregal ganz hinten links",
+        "explanationAr": "الدليل في النص: «Die Milch ist im Kühlregal ganz hinten links»."
+      },
+      {
+        "id": "t-a2-25-l3",
+        "type": "truefalse",
+        "promptDe": "Die Tomaten sind heute im Angebot.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Die Tomaten sind heute im Angebot»."
+      },
+      {
+        "id": "t-a2-25-l4",
+        "type": "mc",
+        "promptDe": "Warum sind die Tomaten ganz frisch?",
+        "options": [
+          "Die Lieferung kam heute Morgen",
+          "Sie sind im Angebot",
+          "Sie liegen beim Gemüse"
+        ],
+        "answer": "Die Lieferung kam heute Morgen",
+        "explanationAr": "الدليل في النص: «Die Lieferung kam heute Morgen, deshalb sind sie ganz frisch»."
+      }
+    ]
+  },
+  "t-a2-26": {
+    "de": "Hallo Ahmed,\n\nich feiere am Samstag um neunzehn Uhr meinen Geburtstag bei mir zu Hause. Ich wohne in der Schillerstraße 14 im dritten Stock. Du kannst mit der U-Bahn-Linie drei bis zur Haltestelle Markt fahren. Von dort sind es nur fünf Minuten zu Fuß zu meiner Wohnung. Das Haus ist alt, aber meine Wohnung ist hell und gemütlich.\n\nIch mache Pizza und einen Salat für uns. Es gibt auch Kuchen und Saft. Meine Schwester hilft mir bei der Vorbereitung, und ich stelle genug Stühle ins Wohnzimmer, damit alle bequem sitzen können. Wir möchten zusammen essen, Musik hören und Karten spielen. Bitte komm pünktlich, damit das Essen nicht kalt wird. Du musst nichts mitbringen.\n\nBitte sag mir bis Donnerstag Bescheid, ob du kommen kannst. Wenn du etwas nicht essen kannst, sag mir bitte vorher Bescheid. Die Haustür ist ab halb sieben offen. Ich dekoriere noch das Wohnzimmer mit Ballons und stelle die Musik bereit. Ich freue mich sehr auf dich!\n\nViele Grüße\nLena",
+    "ar": "دعوة لينا لأحمد إلى عيد ميلادها السبت 19:00 في بيتها (شارع شيلر 14، الطابق الثالث؛ مترو 3 حتى «السوق» ثم خمس دقائق مشياً). تحضّر بيتزا وسلطة وكعكاً وعصيراً وتساعدها أختها وترتّب كراسي كافية؛ البرنامج أكل وموسيقى ولعب ورق. لا حاجة لإحضار شيء، لكن الرد مطلوب حتى الخميس وإعلامها بأي طعام لا يأكله؛ الباب مفتوح من السادسة والنصف.",
+    "questions": [
+      {
+        "id": "t-a2-26-l1",
+        "type": "mc",
+        "promptDe": "Wann feiert Lena ihren Geburtstag?",
+        "options": [
+          "am Samstag um neunzehn Uhr",
+          "am Freitag um achtzehn Uhr",
+          "am Sonntag um zwanzig Uhr"
+        ],
+        "answer": "am Samstag um neunzehn Uhr",
+        "explanationAr": "الدليل في النص: «ich feiere am Samstag um neunzehn Uhr meinen Geburtstag»."
+      },
+      {
+        "id": "t-a2-26-l2",
+        "type": "mc",
+        "promptDe": "Wie kommt Ahmed zu Lena?",
+        "options": [
+          "mit der U-Bahn-Linie drei bis Markt",
+          "mit dem Bus bis Schillerstraße",
+          "zu Fuß vom Hauptbahnhof"
+        ],
+        "answer": "mit der U-Bahn-Linie drei bis Markt",
+        "explanationAr": "الدليل في النص: «Du kannst mit der U-Bahn-Linie drei bis zur Haltestelle Markt fahren»."
+      },
+      {
+        "id": "t-a2-26-l3",
+        "type": "truefalse",
+        "promptDe": "Ahmed soll einen Kuchen mitbringen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Du musst nichts mitbringen» والكعك عند لينا أصلاً."
+      },
+      {
+        "id": "t-a2-26-l4",
+        "type": "mc",
+        "promptDe": "Bis wann soll Ahmed Bescheid sagen?",
+        "options": [
+          "bis Donnerstag",
+          "bis Samstag",
+          "bis Freitag"
+        ],
+        "answer": "bis Donnerstag",
+        "explanationAr": "الدليل في النص: «Bitte sag mir bis Donnerstag Bescheid»."
+      }
+    ]
+  }
+}

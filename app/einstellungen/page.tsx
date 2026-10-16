@@ -10,7 +10,8 @@ import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
 import { ProfilVerwaltung } from "@/components/profil";
 import { speakDe, germanVoices, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
 import LocalSpeechPilot from "@/components/LocalSpeechPilot";
-import type { UiLang, Tempo } from "@/lib/types";
+import { PHASE_START, levelAmTag } from "@/lib/phasen";
+import type { UiLang, Tempo, Level } from "@/lib/types";
 
 export default function Einstellungen() {
   const { progress, update, importProgress, reset } = useProgress();
@@ -78,6 +79,30 @@ export default function Einstellungen() {
         <ProfilVerwaltung />
 
         <div className="dirb-kicker" style={{ marginTop: "0.4rem" }}>☀️ الأساسيات اليومية — ما تحتاجه كل يوم</div>
+
+        <details className="dirb-details">
+          <summary>🚀 نقطة الانطلاق — ابدأ من مستواك الحقيقي</summary>
+          <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.8rem", lineHeight: 1.9 }}>
+            تعرف ألمانية من قبل؟ لا تبدأ من الصفر: اختر مستوى الانطلاق فتنتقل خطتك إلى أول يوم فيه.
+            أنت اليوم في <strong>اليوم {progress.plan.day}</strong> (المستوى {levelAmTag(progress.plan.day)}).
+            الانتقال يغيّر موضعك في الخطة فقط — بطاقاتك ودفتر أخطائك ونقاطك تبقى كما هي، ويمكنك العودة متى شئت.
+          </p>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }} data-testid="einstieg-wahl">
+            {(["A1", "A2", "B1", "B2"] as Level[]).map((lvl) => (
+              <button
+                key={lvl}
+                className="btn"
+                style={{ minHeight: "48px", padding: "0.6rem 1rem" }}
+                onClick={() => {
+                  update((p) => ({ ...p, plan: { ...p.plan, day: PHASE_START[lvl] }, settings: { ...p.settings, placed: true } }));
+                  setMsg(`تم ضبط نقطة الانطلاق على المستوى ${lvl} (اليوم ${PHASE_START[lvl]}) ✓`);
+                }}
+              >
+                ابدأ من {lvl} — اليوم {PHASE_START[lvl]}
+              </button>
+            ))}
+          </div>
+        </details>
 
         <details className="dirb-details" open>
           <summary>🎚️ إيقاع المحتوى اليومي</summary>

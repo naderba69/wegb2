@@ -169,7 +169,10 @@ export function buildSkillKlausur(day: number, skill: SkillKey): Klausur {
   const rand = rng(d0 * 911 + 7);
 
   if (skill === "lesen") {
-    const ts = pickN(texts.filter((t) => t.level === lvl), 6, rand);
+    // R145: ورقة الامتحان من نصوص مكتملة الأسئلة (3+)؛ النصوص ذات السؤالين تخدم الدرس اليومي لا محاكاة الـ18 عنصراً
+    const pool = texts.filter((t) => t.level === lvl);
+    const voll = pool.filter((t) => leseText(t).questions.length >= 3);
+    const ts = pickN(voll.length >= 6 ? voll : pool, 6, rand);
     // ثلاثةُ أسئلةٍ لكلِّ نصٍّ في الورقةِ الامتحانية (18 بالضبط)؛ السؤالُ الرابعُ — إن وُجِدَ — يبقى للتمرينِ اليوميّ
     const items = ts.flatMap((t) =>
       leseText(t).questions.slice(0, 3).map((q) => {
@@ -228,12 +231,12 @@ export function buildSkillKlausur(day: number, skill: SkillKey): Klausur {
   if (c2) secs.push({
     key: "Sprechen", titleDe: "Sprechen — Präsentation", titleAr: "العرضُ المصوَّر — «" + c2.titel_ar + "»",
     minutes: 7, realExamHint: "٣د تحضيرٌ صامت ثم ٤د أمام «اللجنة»: وصفٌ واستدلالٌ ورأيٌ واضح — المؤقّتُ هنا يعملُ وأنت تتكلم.",
-    items: [], sprechen: { titelDe: c2.titel_de, titelAr: c2.titel_ar, auftrag: c2.auftrag_de ?? "", stuetzen: c2.stuetzen ?? [], kriterien: c2.kriterien ?? [], zeit_s: c2.zeit_s ?? 240, teil: 2 },
+    items: [], sprechen: { titelDe: c2.titel_de, titelAr: c2.titel_ar, auftrag: c2.auftrag_de ?? "", stuetzen: c2.stuetzen ?? [], kriterien: c2.kriterien ?? [], zeit_s: 240, teil: 2 },
   });
   if (c3) secs.push({
     key: "Sprechen", titleDe: "Sprechen — Diskussion", titleAr: "النقاشُ مع الممتحِنَين", minutes: 6,
     realExamHint: "٥د لنقاشِ المهمة: رأيٌ + حُجّة + سؤالٌ للآخر — الصمتُ أطولَ من ثلاثِ ثوانٍ يُخصمُ أدباً لا زمناً.",
-    items: [], sprechen: { titelDe: c3.titel_de, titelAr: c3.titel_ar, auftrag: c3.auftrag_de ?? "", stuetzen: c3.stuetzen ?? [], kriterien: c3.kriterien ?? [], zeit_s: c3.zeit_s ?? 300, teil: 3 },
+    items: [], sprechen: { titelDe: c3.titel_de, titelAr: c3.titel_ar, auftrag: c3.auftrag_de ?? "", stuetzen: c3.stuetzen ?? [], kriterien: c3.kriterien ?? [], zeit_s: 300, teil: 3 },
   });
   return { level: lvl, total: secs.reduce((n, x) => n + x.minutes, 0), sections: secs };
 }

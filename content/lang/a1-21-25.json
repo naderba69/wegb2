@@ -1,0 +1,267 @@
+{
+  "t-a1-021": {
+    "de": "Ich heiße Karim und bin achtundzwanzig Jahre alt. Ich wohne mit meiner Frau Amina in Köln. Unsere Tochter Sara ist drei Jahre alt und sehr fröhlich. Am Morgen bringt Amina Sara in den Kindergarten. Dann geht Amina zur Arbeit in eine Schule. Ich arbeite in einem Büro in der Stadtmitte.\n\nMein Vater wohnt in Tunesien. Er ist schon alt, aber er besucht uns jedes Jahr im Sommer. Dann ist unser Haus voll und laut, und wir erzählen viele Geschichten. Am Freitag macht Amina Couscous mit Gemüse und Fleisch. Dazu trinken wir Minztee. Das ist eine Tradition in unserer Familie.\n\nAm Nachmittag spielen wir mit Sara zu Hause oder gehen in den Park. Sara liebt den Spielplatz und lacht viel. Am Sonntag rufe ich meine Mutter in Tunesien an. Wir sprechen lange über die Familie und über das Leben. Ich liebe meine Familie sehr und freue mich auf jeden Besuch.",
+    "ar": "كريم (28) يعيش في كولونيا مع زوجته أمينة وابنتهما سارة (3 سنوات): صباحاً روضة وعمل، وأبوه يزورهم من تونس كل صيف فيمتلئ البيت بالحكايات. الجمعة كسكس وشاي نعناع تقليدياً، والعصر لعب مع سارة في البيت أو الحديقة، والأحد مكالمة طويلة مع أمه في تونس.",
+    "questions": [
+      {
+        "id": "t-a1-021-l1",
+        "type": "mc",
+        "promptDe": "Wohin bringt Amina Sara am Morgen?",
+        "options": [
+          "in die Schule",
+          "in den Kindergarten",
+          "in den Park"
+        ],
+        "answer": "in den Kindergarten",
+        "explanationAr": "الدليل في النص: «Am Morgen bringt Amina Sara in den Kindergarten». الفخّ: المدرسة مكان عمل أمينة."
+      },
+      {
+        "id": "t-a1-021-l2",
+        "type": "mc",
+        "promptDe": "Wann besucht der Vater die Familie?",
+        "options": [
+          "jedes Jahr im Sommer",
+          "jeden Freitag",
+          "jeden Sonntag"
+        ],
+        "answer": "jedes Jahr im Sommer",
+        "explanationAr": "الدليل في النص: «er besucht uns jedes Jahr im Sommer»."
+      },
+      {
+        "id": "t-a1-021-l3",
+        "type": "truefalse",
+        "promptDe": "Am Freitag trinkt die Familie Kaffee zum Couscous.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Dazu trinken wir Minztee» — شاي نعناع لا قهوة."
+      },
+      {
+        "id": "t-a1-021-l4",
+        "type": "mc",
+        "promptDe": "Wen ruft Karim am Sonntag an?",
+        "options": [
+          "seinen Vater",
+          "seine Mutter",
+          "seine Frau"
+        ],
+        "answer": "seine Mutter",
+        "explanationAr": "الدليل في النص: «Am Sonntag rufe ich meine Mutter in Tunesien an»."
+      }
+    ]
+  },
+  "t-a1-022": {
+    "de": "Ich stehe jeden Tag um halb sieben auf. Zuerst trinke ich einen Kaffee, dann dusche ich und ziehe mich an. Um acht Uhr frühstücke ich mit meiner Frau. Wir essen Brot mit Käse und ein Ei. Danach räume ich den Tisch ab und packe meine Tasche.\n\nUm halb neun fahre ich mit dem Bus zur Arbeit. Die Haltestelle ist direkt vor unserem Haus, das ist sehr praktisch. Im Büro begrüße ich meine Kollegen und beginne meine Arbeit. Um zwölf Uhr essen wir alle zusammen zu Mittag. Die Pause ist kurz, aber wir lachen viel.\n\nNach der Arbeit gehe ich manchmal noch einkaufen. Um sechs Uhr komme ich nach Hause. Am Abend erzählen meine Frau und ich uns von unserem Tag. Dann lese ich ein Buch oder sehe ein bisschen fern. So ist mein Tag: voll, aber gut.",
+    "ar": "روتين يومي كامل: قيام في السادسة والنصف وقهوة واستحمام، فطور مع الزوجة في الثامنة (خبز وجبن وبيض)، ثم حافلة الثامنة والنصف إلى المكتب وغداء جماعي في الثانية عشرة. بعد العمل تسوّق أحياناً وعودة في السادسة، ومساءً حديث مع الزوجة عن اليوم ثم كتاب أو تلفاز.",
+    "questions": [
+      {
+        "id": "t-a1-022-l1",
+        "type": "mc",
+        "promptDe": "Was macht er zuerst nach dem Aufstehen?",
+        "options": [
+          "Er duscht",
+          "Er trinkt einen Kaffee",
+          "Er frühstückt"
+        ],
+        "answer": "Er trinkt einen Kaffee",
+        "explanationAr": "الدليل في النص: «Zuerst trinke ich einen Kaffee». الفخّ: الاستحمام بعد القهوة."
+      },
+      {
+        "id": "t-a1-022-l2",
+        "type": "mc",
+        "promptDe": "Warum ist die Haltestelle praktisch?",
+        "options": [
+          "Sie ist direkt vor dem Haus",
+          "Der Bus ist immer leer",
+          "Die Arbeit ist nah"
+        ],
+        "answer": "Sie ist direkt vor dem Haus",
+        "explanationAr": "الدليل في النص: «Die Haltestelle ist direkt vor unserem Haus, das ist sehr praktisch»."
+      },
+      {
+        "id": "t-a1-022-l3",
+        "type": "truefalse",
+        "promptDe": "Er fährt um sechs Uhr mit dem Bus zur Arbeit.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Um halb neun fahre ich mit dem Bus zur Arbeit» — في السادسة مساءً يعود إلى البيت."
+      },
+      {
+        "id": "t-a1-022-l4",
+        "type": "mc",
+        "promptDe": "Was macht er am Abend mit seiner Frau?",
+        "options": [
+          "Sie erzählen sich von ihrem Tag",
+          "Sie gehen einkaufen",
+          "Sie packen die Tasche"
+        ],
+        "answer": "Sie erzählen sich von ihrem Tag",
+        "explanationAr": "الدليل في النص: «erzählen meine Frau und ich uns von unserem Tag»."
+      }
+    ]
+  },
+  "t-a1-023": {
+    "de": "Meine Wohnung ist nicht groß, aber sehr hell. Sie hat zwei Zimmer, eine Küche, ein Bad und einen kleinen Balkon. Im Wohnzimmer stehen ein Sofa, ein Tisch und ein Fernseher. In einem Zimmer schlafen meine Frau und ich. Das zweite Zimmer ist unser Arbeitszimmer mit Büchern und einem Schreibtisch.\n\nAm Morgen kommt viel Licht durch die Fenster. In der Küche koche ich jeden Abend für uns. Dort stehen auch ein kleiner Tisch und vier Stühle. Auf dem Balkon stehen zwei Stühle und viele Blumen. Im Sommer frühstücke ich dort gern in der Sonne.\n\nDie Warmmiete beträgt sechshundert Euro im Monat. Die Wohnung liegt nahe an einer Bushaltestelle, das ist praktisch für die Arbeit. Am Wochenende besuchen uns Freunde, und wir trinken Kaffee im Wohnzimmer. Ich bin sehr zufrieden mit meiner Wohnung.",
+    "ar": "شقة صغيرة مشرقة: غرفتان (نوم وعمل) ومطبخ وحمّام وشرفة بالزهور يفطر عليها صيفاً. يطبخ كل مساء في المطبخ، والأجرة الشاملة ستمئة يورو وقربها من محطة الحافلات عملي. في نهاية الأسبوع يزورهم الأصدقاء لقهوة في غرفة المعيشة، وهو راضٍ جداً عن شقته.",
+    "questions": [
+      {
+        "id": "t-a1-023-l1",
+        "type": "mc",
+        "promptDe": "Was ist das zweite Zimmer?",
+        "options": [
+          "ein Kinderzimmer",
+          "ein Arbeitszimmer",
+          "ein zweites Bad"
+        ],
+        "answer": "ein Arbeitszimmer",
+        "explanationAr": "الدليل في النص: «Das zweite Zimmer ist unser Arbeitszimmer»."
+      },
+      {
+        "id": "t-a1-023-l2",
+        "type": "mc",
+        "promptDe": "Wo frühstückt er im Sommer gern?",
+        "options": [
+          "in der Küche",
+          "im Wohnzimmer",
+          "auf dem Balkon"
+        ],
+        "answer": "auf dem Balkon",
+        "explanationAr": "الدليل في النص: «Im Sommer frühstücke ich dort gern» — dort تعود على الشرفة."
+      },
+      {
+        "id": "t-a1-023-l3",
+        "type": "truefalse",
+        "promptDe": "Die Warmmiete beträgt sechshundert Euro.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Die Warmmiete beträgt sechshundert Euro im Monat»."
+      },
+      {
+        "id": "t-a1-023-l4",
+        "type": "mc",
+        "promptDe": "Was macht er jeden Abend in der Küche?",
+        "options": [
+          "Er kocht",
+          "Er schläft",
+          "Er liest Bücher"
+        ],
+        "answer": "Er kocht",
+        "explanationAr": "الدليل في النص: «In der Küche koche ich jeden Abend für uns»."
+      }
+    ]
+  },
+  "t-a1-024": {
+    "de": "Ich wohne in Leipzig, einer Stadt im Osten von Deutschland. In der Stadt gibt es viele Parks, Cafés und Geschäfte. Die Straßenbahn fährt direkt vor meiner Haustür, das ist sehr praktisch. In meiner Straße gibt es auch eine Bäckerei und einen kleinen Supermarkt.\n\nAm Morgen kaufe ich in der Bäckerei manchmal frisches Brot. Der Park ist nur zehn Minuten zu Fuß entfernt. Im Sommer sitzen viele Menschen auf den Bänken und Kinder spielen auf dem Gras. Am Wochenende gehe ich gern in die Innenstadt und trinke einen Kaffee mit Freunden.\n\nAm Samstag fahre ich mit Freunden in die Stadtmitte. Wir essen in einem Café und gehen danach in ein Geschäft. Am Abend fahre ich mit der Straßenbahn nach Hause. Die Haltestelle ist gleich neben meinem Haus. Leipzig gefällt mir sehr, ich lebe gern hier.",
+    "ar": "لايبزيغ في شرق ألمانيا: ترام أمام الباب ومخبز وسوبرماركت صغير في الشارع نفسه، وحديقة على عشر دقائق مشياً تمتلئ صيفاً بالناس والأطفال. نهاية الأسبوع قهوة مع الأصدقاء في الوسط، والسبت أكل في مقهى وتسوّق ثم عودة بالترام إلى محطة بجانب بيته — يحب مدينته كثيراً.",
+    "questions": [
+      {
+        "id": "t-a1-024-l1",
+        "type": "mc",
+        "promptDe": "Wo liegt Leipzig?",
+        "options": [
+          "im Osten von Deutschland",
+          "im Süden von Deutschland",
+          "im Norden von Deutschland"
+        ],
+        "answer": "im Osten von Deutschland",
+        "explanationAr": "الدليل في النص: «einer Stadt im Osten von Deutschland»."
+      },
+      {
+        "id": "t-a1-024-l2",
+        "type": "mc",
+        "promptDe": "Wie weit ist der Park entfernt?",
+        "options": [
+          "zehn Minuten zu Fuß",
+          "zehn Minuten mit der Straßenbahn",
+          "eine Stunde zu Fuß"
+        ],
+        "answer": "zehn Minuten zu Fuß",
+        "explanationAr": "الدليل في النص: «Der Park ist nur zehn Minuten zu Fuß entfernt»."
+      },
+      {
+        "id": "t-a1-024-l3",
+        "type": "truefalse",
+        "promptDe": "Am Samstag bleibt er den ganzen Tag zu Hause.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل في النص: «Am Samstag fahre ich mit Freunden in die Stadtmitte»."
+      },
+      {
+        "id": "t-a1-024-l4",
+        "type": "mc",
+        "promptDe": "Was kauft er am Morgen manchmal in der Bäckerei?",
+        "options": [
+          "frisches Brot",
+          "einen Kaffee",
+          "Blumen"
+        ],
+        "answer": "frisches Brot",
+        "explanationAr": "الدليل في النص: «kaufe ich in der Bäckerei manchmal frisches Brot»."
+      }
+    ]
+  },
+  "t-a1-025": {
+    "de": "Heute gehe ich zum Supermarkt. Ich brauche Milch, Brot, Eier, Äpfel und Käse. Der Supermarkt ist groß und hat viele Produkte. Zuerst suche ich die Milch, dann hole ich Brot und Eier. Ich kaufe auch Tomaten und eine Flasche Wasser.\n\nDie Äpfel sind heute im Angebot, sie sind billig. Ich vergleiche die Preise und nehme eine kleine Tüte mit. Im Laden treffe ich meine Nachbarin. Wir sprechen kurz über das Wetter und lachen. Dann gehe ich langsam zur Kasse.\n\nVor mir stehen zwei Personen. Die Verkäuferin sagt freundlich: „Guten Tag.“ Ich bezahle mit Karte und bekomme den Kassenbon. Alles kostet zusammen zwölf Euro. Zu Hause stelle ich die Milch und das Wasser in den Kühlschrank. Das Brot kommt in den Schrank.",
+    "ar": "تسوّق كامل بقائمة (حليب وخبز وبيض وتفاح وجبن) في سوبرماركت كبير: يبدأ بالحليب، ويقارن الأسعار، والتفاح في عرض اليوم. يلتقي جارته ويتحدثان عن الطقس، ثم عند الصندوق يدفع بالبطاقة ويأخذ الإيصال — المجموع اثنا عشر يورو. في البيت: الحليب والماء في الثلاجة والخبز في الخزانة.",
+    "questions": [
+      {
+        "id": "t-a1-025-l1",
+        "type": "mc",
+        "promptDe": "Was sucht er zuerst im Supermarkt?",
+        "options": [
+          "das Brot",
+          "die Milch",
+          "die Äpfel"
+        ],
+        "answer": "die Milch",
+        "explanationAr": "الدليل في النص: «Zuerst suche ich die Milch». الفخّ: الخبز والبيض بعد الحليب."
+      },
+      {
+        "id": "t-a1-025-l2",
+        "type": "mc",
+        "promptDe": "Warum sind die Äpfel heute billig?",
+        "options": [
+          "Sie sind im Angebot",
+          "Sie sind alt",
+          "Er vergleicht die Preise"
+        ],
+        "answer": "Sie sind im Angebot",
+        "explanationAr": "الدليل في النص: «Die Äpfel sind heute im Angebot, sie sind billig»."
+      },
+      {
+        "id": "t-a1-025-l3",
+        "type": "truefalse",
+        "promptDe": "Er bezahlt an der Kasse mit Karte.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل في النص: «Ich bezahle mit Karte und bekomme den Kassenbon»."
+      },
+      {
+        "id": "t-a1-025-l4",
+        "type": "mc",
+        "promptDe": "Wohin stellt er die Milch zu Hause?",
+        "options": [
+          "in den Schrank",
+          "in den Kühlschrank",
+          "auf den Tisch"
+        ],
+        "answer": "in den Kühlschrank",
+        "explanationAr": "الدليل في النص: «stelle ich die Milch und das Wasser in den Kühlschrank». الفخّ: الخبز في الخزانة لا الثلاجة."
+      }
+    ]
+  }
+}
