@@ -220,6 +220,18 @@ export interface HoerAudio { id: string; file: string; voice: string; level: str
 /** 🧩 Lückendiktat — فراغُ الاستماع: جُمَلٌ من البنك مُبيَّضةُ الكلمة، وشريطُها النصُّ نفسه */
 export interface LkGap { id: string; sent: string; blanked: string; answer: string }
 export interface LkItem { id: string; textId: string; level: "B1" | "B2"; titleDe: string; titleAr: string; gaps: LkGap[] }
+/** 🪜 نصّ سلّم القراءة (C1): نصّ جسريّ قصير بعد A0 بمفردات A0/A1 ومسرد ذاتي */
+export interface LeiterText {
+  id: string;
+  stufe: 1 | 2 | 3 | 4 | 5 | 6;
+  titelDe: string;
+  titelAr: string;
+  de: string;
+  ar: string;
+  glossar: { de: string; ar: string }[];
+  fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
+}
+export const leseleiter: LeiterText[] = [];
 export const luecken = [] as LkItem[];
 export const hoerenAudio: Record<string, HoerAudio> = {};
 export const diktatAudio: Record<string, HoerAudio> = {};
@@ -289,6 +301,7 @@ function fuelleAusBanken(): void {
   kontaktKarten.splice(0, kontaktKarten.length, ...(mu.kontakt ?? []));
   vortrag.splice(0, vortrag.length, ...(bankRoh("vortrag.json") as { themen: VortragThema[] }).themen);
   luecken.splice(0, luecken.length, ...(bankRoh("luecken.json") as { items: LkItem[] }).items);
+  leseleiter.splice(0, leseleiter.length, ...((bankRoh("leseleiter.json") as { texte: LeiterText[] } | undefined)?.texte ?? []));
   const hoer = bankRoh("hoeren-audio.json") as { einaetze?: HoerAudio[]; einsaetze: HoerAudio[] };
   Object.assign(hoerenAudio, Object.fromEntries(hoer.einsaetze.map((e) => [e.id, e])));
   const dik = bankRoh("diktat-audio.json") as { einsaetze: HoerAudio[] };

@@ -54,6 +54,7 @@ import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil,
 import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisExamen } from "../lib/bereitschaft";
 import { bewerteKriterien } from "../lib/kriterien";
 import { baueSprechRunde, selbstPunkte, SPRECH_KRITERIEN } from "../lib/sprechkarten";
+import { LEITER_STUFEN, fehlendeWoerter, stufeFrei, stufeAbgeschlossen, textBestanden, woerterZaehlen as leiterWoerter } from "../lib/leseleiter";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
@@ -64,7 +65,7 @@ import { levelOfXp, checkAbzeichen, ABZEICHEN, XP_LEVELS } from "../lib/spiel";
 import { loadProgress, touchStreak, separateLegacyManualMinutes } from "../lib/store";
 import { createHash } from "crypto";
 import { readFileSync, existsSync , readdirSync} from "fs";
-import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken,
+import { leseText, getSatz, sentences, texts, dialogues, writingTasks, alleVokabeln, fehlerList, grammarMap, verben, szenarien, pakete, haerte, muendlich, vortrag, mnemonikMap, deFormOf, luecken, leseleiter,
 } from "../lib/content";
 import { hoerenAudio, diktatAudio, diktatSrc, dialogAudioArt, dialogAudioIstKi, dialogAudioSrc } from "../lib/content";
 import { signKontrakt, voidKontrakt, pruefeKontrakt, anwendenErfuellt, anwendenStrafe, tagLokal, groetsterFehler } from "../lib/kontrakt";
@@ -2015,9 +2016,9 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← معجم ← كاتالوج");
-    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,leseleiter,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← فجوات ← كلام ← عرض ← مقابلة ← رسائل ← سيناريوهات ← سلّم قراءة ← معجم ← كاتالوج");
+    const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
 
@@ -12498,8 +12499,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 45 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
-    "K257a bankload جاهزٌ في Node: 45 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 46 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
+    "K257a bankload جاهزٌ في Node: 46 ملفَّ بنكٍ تُقرأ من content/ مباشرةً — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;
@@ -12782,6 +12783,34 @@ function collectR262(dir: string, out: string[] = []): string[] {
      sprSrc.includes("URL.createObjectURL") && sprSrc.includes("revokeObjectURL") &&
      typSrc.includes("sprechUebungen") && sprSrc.includes("sprechUebungen") && pageSrc.includes("sprechkarten"),
     "K267c التسجيل محليٌّ بذاكرة الجلسة (بلا أيّ fetch وبلا حكم نطق آلي)، يُحفظ وصفيًّا فقط، والبطاقة موصولة بصفحة اختبر");
+}
+
+/* ═══ K268 · R175 (C1): سلّم القراءة A0→A1 — تدرّج ومفردات مقيدة وتقدّم ═══ */
+{
+  const proStufe = LEITER_STUFEN.map((s) => leseleiter.filter((t) => t.stufe === s.stufe));
+  const formOk = leseleiter.length === 18 && proStufe.every((g) => g.length === 3) &&
+    leseleiter.every((t) => t.fragen.length === 3 && t.fragen.every((f) => f.options.includes(f.answer) && f.explanationAr.length > 3) && t.ar.length > 10 && t.glossar.length >= 2);
+  const laengenOk = leseleiter.every((t) => { const w = leiterWoerter(t.de); const b = LEITER_STUFEN.find((s) => s.stufe === t.stufe)!; return w >= b.minW && w <= b.maxW; });
+  const med3 = (a: number[]) => [...a].sort((x, y) => x - y)[1];
+  const mediane = proStufe.map((g) => med3(g.map((t) => leiterWoerter(t.de))));
+  const steigend = mediane.every((m, i) => i === 0 || m > mediane[i - 1]);
+  ok(formOk && laengenOk && steigend,
+    `K268a البنك 18 نصًّا (6×3) بأسئلة من المتن وترجمة ومسرد، وأطوالٌ في نطاقات المحطات ومتوسطاتٌ متصاعدة (${mediane.join("/")})`);
+  const fehlendAlle = leseleiter.flatMap((t) => fehlendeWoerter(t).map((w) => `${t.id}:${w}`));
+  const fremd = fehlendeWoerter({ id: "x", stufe: 6, titelDe: "", titelAr: "", ar: "", glossar: [], de: "Die Verantwortungsbewusstsein der Gesellschaft wächst.", fragen: [] } as never);
+  ok(fehlendAlle.length === 0 && fremd.includes("verantwortungsbewusstsein"),
+    `K268b قيد المفردات مفروضٌ على البنك كله: كلّ كلمة من بطاقات A0/A1 أو كلمة وظيفية أو مسرد النصّ (مخالفٌ مكشوف: ${fehlendAlle.slice(0, 3).join(",") || "لا شيء"})`);
+  const leerBest: Record<string, { r: number; g: number }> = {};
+  const nurStufe1 = Object.fromEntries(proStufe[0].map((t) => [t.id, { r: 2, g: 3 }]));
+  ok(stufeFrei(leerBest, 1) && !stufeFrei(leerBest, 2) && stufeAbgeschlossen(nurStufe1, 1) && stufeFrei(nurStufe1, 2) && !stufeFrei(nurStufe1, 3) &&
+     !textBestanden({ [proStufe[0][0].id]: { r: 1, g: 3 } }, proStufe[0][0].id),
+    "K268c التقدّم: المحطة 1 مفتوحة، وإتمام نصوصها بثلثين يفتح الثانية فقط، ودون الثلثين لا اجتياز");
+  const llSrc = readFileSync("components/leseleiter.tsx", "utf8");
+  const uebSrc = readFileSync("app/ueben/page.tsx", "utf8");
+  const typSrc = readFileSync("lib/types.ts", "utf8");
+  ok(llSrc.includes("gemischteOptionen") && llSrc.includes("speakDe") && llSrc.includes("نطق آلي من متصفّحك") && !llSrc.includes("fetch(") &&
+     uebSrc.includes('"leseleiter"') && uebSrc.includes("LeseLeiter") && typSrc.includes("leseleiter?"),
+    "K268d المكوّن موصولٌ في «تدرّب» بخلطٍ حتميّ وصوت جهازٍ موسومٍ آليًّا، والتقدّم يُحفظ في Progress.leseleiter");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

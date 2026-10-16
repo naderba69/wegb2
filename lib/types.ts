@@ -429,6 +429,8 @@ export interface Progress {
   simulationen?: { datum: string; seed: number; format?: string; punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number }; bestanden: boolean }[];
   /** 🎙️ سجلّ بطاقات المحادثة المسجّلة (E5): بيانات وصفية فقط (بطاقة/تقدير ذاتي/مدّة) — الصوت نفسه لا يُخزَّن أبداً */
   sprechUebungen?: { datum: string; level: string; teil: number; karteId: string; dauerS: number; punkte: number }[];
+  /** 🪜 تقدّم سلّم القراءة (C1): النص ← أفضل نتيجة (صحيحة/كلية) — المحطة التالية تُفتح بإتمام السابقة */
+  leseleiter?: Record<string, { r: number; g: number }>;
   /** نتائج امتحانات المراحل: اليوم ← الدرجة المئوية ونجاح */
   exams?: Record<number, { score: number; passed: boolean }>;
   /** 🎯 طابور تحقق الاستقلال: الدرس ← يوم الاستحقاق (التدريب+3) ونتيجة التحقق.

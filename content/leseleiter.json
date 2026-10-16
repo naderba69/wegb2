@@ -1,0 +1,1348 @@
+{
+  "texte": [
+    {
+      "id": "ll-1-1",
+      "stufe": 1,
+      "titelDe": "Ali stellt sich vor",
+      "titelAr": "علي يقدّم نفسه",
+      "de": "Hallo! Ich heiße Ali. Ich komme aus Tunesien. Ich wohne in Berlin. Ich lerne Deutsch. Ich spreche Arabisch und Deutsch. Deutsch ist schwer, aber ich lerne jeden Tag.",
+      "ar": "مرحبًا! اسمي علي. أنا من تونس. أسكن في برلين. أتعلم الألمانية. أتحدث العربية والألمانية. الألمانية صعبة، لكنني أتعلم كل يوم.",
+      "glossar": [
+        {
+          "de": "Tunesien",
+          "ar": "تونس (اسم بلد)"
+        },
+        {
+          "de": "Arabisch",
+          "ar": "اللغة العربية"
+        },
+        {
+          "de": "Ali",
+          "ar": "علي (اسم)"
+        },
+        {
+          "de": "Berlin",
+          "ar": "برلين (مدينة)"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-1-1-q1",
+          "promptDe": "Wie heißt der Mann?",
+          "promptAr": "ما اسم الرجل؟",
+          "options": [
+            "Ali",
+            "Omar",
+            "Sara"
+          ],
+          "answer": "Ali",
+          "explanationAr": "النص يقول: «Ich heiße Ali.»"
+        },
+        {
+          "id": "ll-1-1-q2",
+          "promptDe": "Wo wohnt Ali?",
+          "promptAr": "أين يسكن علي؟",
+          "options": [
+            "In Tunis",
+            "In Berlin",
+            "In Hamburg"
+          ],
+          "answer": "In Berlin",
+          "explanationAr": "النص يقول: «Ich wohne in Berlin.»"
+        },
+        {
+          "id": "ll-1-1-q3",
+          "promptDe": "Was lernt Ali jeden Tag?",
+          "promptAr": "ماذا يتعلم علي كل يوم؟",
+          "options": [
+            "Arabisch",
+            "Deutsch",
+            "Musik"
+          ],
+          "answer": "Deutsch",
+          "explanationAr": "النص يقول: «Ich lerne Deutsch.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-1-2",
+      "stufe": 1,
+      "titelDe": "Meine Familie",
+      "titelAr": "أسرتي",
+      "de": "Mein Vater heißt Hassan und meine Mutter Fatima. Ich habe einen Bruder und eine Schwester. Mein Bruder ist zehn Jahre alt, meine Schwester sieben. Wir wohnen in Berlin.",
+      "ar": "اسم أبي حسن واسم أمي فاطمة. عندي أخ وأخت. أخي عمره عشر سنوات، وأختي سبع. نسكن في برلين.",
+      "glossar": [
+        {
+          "de": "Hassan",
+          "ar": "حسن (اسم)"
+        },
+        {
+          "de": "Fatima",
+          "ar": "فاطمة (اسم)"
+        },
+        {
+          "de": "Berlin",
+          "ar": "برلين (مدينة)"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-1-2-q1",
+          "promptDe": "Wie heißt der Vater?",
+          "promptAr": "ما اسم الأب؟",
+          "options": [
+            "Ali",
+            "Omar",
+            "Hassan"
+          ],
+          "answer": "Hassan",
+          "explanationAr": "النص يقول: «Mein Vater heißt Hassan.»"
+        },
+        {
+          "id": "ll-1-2-q2",
+          "promptDe": "Wie alt ist der Bruder?",
+          "promptAr": "كم عمر الأخ؟",
+          "options": [
+            "Sieben Jahre",
+            "Zehn Jahre",
+            "Fünf Jahre"
+          ],
+          "answer": "Zehn Jahre",
+          "explanationAr": "النص يقول: «Mein Bruder ist zehn Jahre alt.»"
+        },
+        {
+          "id": "ll-1-2-q3",
+          "promptDe": "Wo wohnt die Familie?",
+          "promptAr": "أين تسكن الأسرة؟",
+          "options": [
+            "In Berlin",
+            "In Tunis",
+            "In München"
+          ],
+          "answer": "In Berlin",
+          "explanationAr": "النص يقول: «Wir wohnen in Berlin.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-1-3",
+      "stufe": 1,
+      "titelDe": "Mein Morgen",
+      "titelAr": "صباحي",
+      "de": "Am Morgen stehe ich um sechs Uhr auf. Ich wasche mein Gesicht. Dann esse ich Brot und trinke Tee. Um sieben Uhr gehe ich zur Schule.",
+      "ar": "في الصباح أستيقظ في الساعة السادسة. أغسل وجهي. ثم آكل الخبز وأشرب الشاي. في الساعة السابعة أذهب إلى المدرسة.",
+      "glossar": [
+        {
+          "de": "das Gesicht",
+          "ar": "الوجه"
+        },
+        {
+          "de": "aufstehen",
+          "ar": "يستيقظ / ينهض"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-1-3-q1",
+          "promptDe": "Um wie viel Uhr steht er auf?",
+          "promptAr": "في أي ساعة يستيقظ؟",
+          "options": [
+            "Um sechs Uhr",
+            "Um sieben Uhr",
+            "Um acht Uhr"
+          ],
+          "answer": "Um sechs Uhr",
+          "explanationAr": "النص يقول: «stehe ich um sechs Uhr auf.»"
+        },
+        {
+          "id": "ll-1-3-q2",
+          "promptDe": "Was trinkt er am Morgen?",
+          "promptAr": "ماذا يشرب في الصباح؟",
+          "options": [
+            "Kaffee",
+            "Wasser",
+            "Tee"
+          ],
+          "answer": "Tee",
+          "explanationAr": "النص يقول: «trinke Tee.»"
+        },
+        {
+          "id": "ll-1-3-q3",
+          "promptDe": "Wohin geht er um sieben Uhr?",
+          "promptAr": "إلى أين يذهب في السابعة؟",
+          "options": [
+            "Zur Arbeit",
+            "Zur Schule",
+            "In den Park"
+          ],
+          "answer": "Zur Schule",
+          "explanationAr": "النص يقول: «gehe ich zur Schule.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-2-1",
+      "stufe": 2,
+      "titelDe": "In der Schule",
+      "titelAr": "في المدرسة",
+      "de": "Ich lerne Deutsch in der Schule. Meine Lehrerin heißt Frau Weber. Sie ist nett. Wir lesen, schreiben und sprechen Deutsch. Ich habe ein Buch und ein Heft. Lernen macht Spaß.",
+      "ar": "أتعلم الألمانية في المدرسة. اسم معلمتي السيدة فيبر. هي لطيفة. نقرأ ونكتب ونتحدث الألمانية. عندي كتاب ودفتر. التعلم ممتع.",
+      "glossar": [
+        {
+          "de": "Weber",
+          "ar": "فيبر (اسم عائلة)"
+        },
+        {
+          "de": "das Heft",
+          "ar": "الدفتر"
+        },
+        {
+          "de": "der Spaß",
+          "ar": "المتعة"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-2-1-q1",
+          "promptDe": "Wie heißt die Lehrerin?",
+          "promptAr": "ما اسم المعلمة؟",
+          "options": [
+            "Frau Sara",
+            "Frau Weber",
+            "Frau Fatima"
+          ],
+          "answer": "Frau Weber",
+          "explanationAr": "النص يقول: «Meine Lehrerin heißt Frau Weber.»"
+        },
+        {
+          "id": "ll-2-1-q2",
+          "promptDe": "Was machen die Schüler in der Schule?",
+          "promptAr": "ماذا يفعل التلاميذ في المدرسة؟",
+          "options": [
+            "Sie spielen Fußball",
+            "Sie lesen, schreiben und sprechen",
+            "Sie essen und trinken"
+          ],
+          "answer": "Sie lesen, schreiben und sprechen",
+          "explanationAr": "النص يقول: «Wir lesen, schreiben und sprechen Deutsch.»"
+        },
+        {
+          "id": "ll-2-1-q3",
+          "promptDe": "Was hat der Schüler?",
+          "promptAr": "ماذا عند التلميذ؟",
+          "options": [
+            "Ein Buch und ein Heft",
+            "Ein Auto",
+            "Einen Bruder"
+          ],
+          "answer": "Ein Buch und ein Heft",
+          "explanationAr": "النص يقول: «Ich habe ein Buch und ein Heft.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-2-2",
+      "stufe": 2,
+      "titelDe": "Essen und Trinken",
+      "titelAr": "الأكل والشرب",
+      "de": "Am Morgen esse ich Brot mit Käse. Ich trinke Tee. Am Mittag esse ich Reis mit Hähnchen. Am Abend trinke ich Wasser. Nach der Schule habe ich Hunger und Durst.",
+      "ar": "في الصباح آكل الخبز مع الجبن. أشرب الشاي. في الظهيرة آكل الأرز مع الدجاج. في المساء أشرب الماء. بعد المدرسة أشعر بالجوع والعطش.",
+      "glossar": [
+        {
+          "de": "der Käse",
+          "ar": "الجبن"
+        },
+        {
+          "de": "das Hähnchen",
+          "ar": "الدجاج"
+        },
+        {
+          "de": "der Hunger",
+          "ar": "الجوع"
+        },
+        {
+          "de": "der Durst",
+          "ar": "العطش"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-2-2-q1",
+          "promptDe": "Was isst er am Morgen?",
+          "promptAr": "ماذا يأكل في الصباح؟",
+          "options": [
+            "Reis",
+            "Brot mit Käse",
+            "Fisch"
+          ],
+          "answer": "Brot mit Käse",
+          "explanationAr": "النص يقول: «esse ich Brot mit Käse.»"
+        },
+        {
+          "id": "ll-2-2-q2",
+          "promptDe": "Was isst er am Mittag?",
+          "promptAr": "ماذا يأكل في الظهيرة؟",
+          "options": [
+            "Reis mit Hähnchen",
+            "Brot mit Käse",
+            "Eine Suppe"
+          ],
+          "answer": "Reis mit Hähnchen",
+          "explanationAr": "النص يقول: «esse ich Reis mit Hähnchen.»"
+        },
+        {
+          "id": "ll-2-2-q3",
+          "promptDe": "Was hat er nach der Schule?",
+          "promptAr": "بماذا يشعر بعد المدرسة؟",
+          "options": [
+            "Durst nur",
+            "Hunger und Durst",
+            "Keine Zeit"
+          ],
+          "answer": "Hunger und Durst",
+          "explanationAr": "النص يقول: «habe ich Hunger und Durst.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-2-3",
+      "stufe": 2,
+      "titelDe": "Meine Wohnung",
+      "titelAr": "شقتي",
+      "de": "Ich wohne in einer kleinen Wohnung in Berlin. Die Wohnung hat drei Zimmer: ein Wohnzimmer, ein Schlafzimmer und eine Küche. Mein Bett ist groß. Ich mag meine Wohnung sehr.",
+      "ar": "أسكن في شقة صغيرة في برلين. الشقة فيها ثلاث غرف: غرفة معيشة وغرفة نوم ومطبخ. سريري كبير. أحب شقتي كثيرًا.",
+      "glossar": [
+        {
+          "de": "das Wohnzimmer",
+          "ar": "غرفة المعيشة"
+        },
+        {
+          "de": "das Schlafzimmer",
+          "ar": "غرفة النوم"
+        },
+        {
+          "de": "Berlin",
+          "ar": "برلين (مدينة)"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-2-3-q1",
+          "promptDe": "Wie viele Zimmer hat die Wohnung?",
+          "promptAr": "كم غرفة في الشقة؟",
+          "options": [
+            "Zwei",
+            "Drei",
+            "Fünf"
+          ],
+          "answer": "Drei",
+          "explanationAr": "النص يقول: «Die Wohnung hat drei Zimmer.»"
+        },
+        {
+          "id": "ll-2-3-q2",
+          "promptDe": "Welche Zimmer gibt es?",
+          "promptAr": "ما الغرف الموجودة؟",
+          "options": [
+            "Wohnzimmer, Schlafzimmer und Küche",
+            "Nur eine Küche",
+            "Zwei Bäder"
+          ],
+          "answer": "Wohnzimmer, Schlafzimmer und Küche",
+          "explanationAr": "النص يعدّ: «ein Wohnzimmer, ein Schlafzimmer und eine Küche.»"
+        },
+        {
+          "id": "ll-2-3-q3",
+          "promptDe": "Wie ist das Bett?",
+          "promptAr": "كيف السرير؟",
+          "options": [
+            "Klein",
+            "Groß",
+            "Neu"
+          ],
+          "answer": "Groß",
+          "explanationAr": "النص يقول: «Mein Bett ist groß.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-3-1",
+      "stufe": 3,
+      "titelDe": "Mein Tag",
+      "titelAr": "يومي",
+      "de": "Ich stehe um sechs Uhr auf. Dann wasche ich mich und esse Frühstück. Um acht Uhr fahre ich mit dem Bus zur Arbeit. Ich arbeite von acht bis fünf. Am Abend bin ich zu Hause. Ich lese ein Buch und gehe um zehn Uhr ins Bett.",
+      "ar": "أستيقظ في السادسة. ثم أغتسل وآكل الفطور. في الثامنة أركب الحافلة إلى العمل. أعمل من الثامنة إلى الخامسة. في المساء أكون في البيت. أقرأ كتابًا وأذهب إلى السرير في العاشرة.",
+      "glossar": [
+        {
+          "de": "sich waschen",
+          "ar": "يغتسل"
+        },
+        {
+          "de": "der Bus",
+          "ar": "الحافلة"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-3-1-q1",
+          "promptDe": "Wie fährt er zur Arbeit?",
+          "promptAr": "كيف يذهب إلى العمل؟",
+          "options": [
+            "Mit dem Bus",
+            "Mit dem Zug",
+            "Zu Fuß"
+          ],
+          "answer": "Mit dem Bus",
+          "explanationAr": "النص يقول: «fahre ich mit dem Bus zur Arbeit.»"
+        },
+        {
+          "id": "ll-3-1-q2",
+          "promptDe": "Wie lange arbeitet er?",
+          "promptAr": "كم ساعة يعمل؟",
+          "options": [
+            "Von sechs bis zehn",
+            "Von acht bis fünf",
+            "Von neun bis sechs"
+          ],
+          "answer": "Von acht bis fünf",
+          "explanationAr": "النص يقول: «Ich arbeite von acht bis fünf.»"
+        },
+        {
+          "id": "ll-3-1-q3",
+          "promptDe": "Was macht er am Abend?",
+          "promptAr": "ماذا يفعل في المساء؟",
+          "options": [
+            "Er spielt Fußball",
+            "Er liest ein Buch",
+            "Er fährt ans Meer"
+          ],
+          "answer": "Er liest ein Buch",
+          "explanationAr": "النص يقول: «Ich lese ein Buch.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-3-2",
+      "stufe": 3,
+      "titelDe": "Meine Hobbys",
+      "titelAr": "هواياتي",
+      "de": "In meiner Freizeit spiele ich Fußball mit meinen Freunden. Ich höre gern Musik und lese Bücher. Meine Schwester spielt Klavier. Am Wochenende fahren wir oft in den Park. Dort spielen die Kinder und wir trinken Tee. Das macht uns Spaß.",
+      "ar": "في وقت فراغي ألعب كرة القدم مع أصدقائي. أحب سماع الموسيقى وأقرأ الكتب. أختي تعزف البيانو. في عطلة نهاية الأسبوع نذهب غالبًا إلى الحديقة. هناك يلعب الأطفال ونشرب الشاي. هذا يسعدنا.",
+      "glossar": [
+        {
+          "de": "die Musik",
+          "ar": "الموسيقى"
+        },
+        {
+          "de": "das Klavier",
+          "ar": "البيانو"
+        },
+        {
+          "de": "die Freizeit",
+          "ar": "وقت الفراغ"
+        },
+        {
+          "de": "der Spaß",
+          "ar": "المتعة"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-3-2-q1",
+          "promptDe": "Was spielt er in der Freizeit?",
+          "promptAr": "ماذا يلعب في وقت فراغه؟",
+          "options": [
+            "Fußball",
+            "Klavier",
+            "Tennis"
+          ],
+          "answer": "Fußball",
+          "explanationAr": "النص يقول: «spiele ich Fußball.»"
+        },
+        {
+          "id": "ll-3-2-q2",
+          "promptDe": "Was macht die Schwester?",
+          "promptAr": "ماذا تفعل الأخت؟",
+          "options": [
+            "Sie liest Bücher",
+            "Sie spielt Klavier",
+            "Sie trinkt Tee"
+          ],
+          "answer": "Sie spielt Klavier",
+          "explanationAr": "النص يقول: «Meine Schwester spielt Klavier.»"
+        },
+        {
+          "id": "ll-3-2-q3",
+          "promptDe": "Wohin fahren sie am Wochenende?",
+          "promptAr": "إلى أين يذهبون في عطلة الأسبوع؟",
+          "options": [
+            "Ans Meer",
+            "In die Stadt",
+            "In den Park"
+          ],
+          "answer": "In den Park",
+          "explanationAr": "النص يقول: «fahren wir oft in den Park.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-3-3",
+      "stufe": 3,
+      "titelDe": "Das Wetter",
+      "titelAr": "الطقس",
+      "de": "Heute ist das Wetter schön. Die Sonne scheint und der Himmel ist blau. Es ist warm, fast 25 Grad. Im Sommer ist es oft heiß. Morgen regnet es, sagt mein Bruder. Dann ist es kalt und windig. Ich nehme einen Regenschirm mit.",
+      "ar": "اليوم الطقس جميل. الشمس مشرقة والسماء زرقاء. الجو دافئ، نحو 25 درجة. في الصيف يكون الجو حارًا غالبًا. غدًا ستمطر، يقول أخي. عندها يكون الجو باردًا وعاصفًا. آخذ مظلة معي.",
+      "glossar": [
+        {
+          "de": "das Wetter",
+          "ar": "الطقس"
+        },
+        {
+          "de": "die Sonne",
+          "ar": "الشمس"
+        },
+        {
+          "de": "scheinen",
+          "ar": "تشرق / يسطع"
+        },
+        {
+          "de": "der Himmel",
+          "ar": "السماء"
+        },
+        {
+          "de": "der Grad",
+          "ar": "الدرجة (حرارة)"
+        },
+        {
+          "de": "der Sommer",
+          "ar": "الصيف"
+        },
+        {
+          "de": "windig",
+          "ar": "عاصف / فيه رياح"
+        },
+        {
+          "de": "der Regenschirm",
+          "ar": "المظلة"
+        },
+        {
+          "de": "regnen",
+          "ar": "تمطر"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-3-3-q1",
+          "promptDe": "Wie ist das Wetter heute?",
+          "promptAr": "كيف الطقس اليوم؟",
+          "options": [
+            "Kalt und windig",
+            "Schön und warm",
+            "Es regnet"
+          ],
+          "answer": "Schön und warm",
+          "explanationAr": "النص يقول: «Heute ist das Wetter schön.» و«Es ist warm.»"
+        },
+        {
+          "id": "ll-3-3-q2",
+          "promptDe": "Was passiert morgen?",
+          "promptAr": "ماذا سيحدث غدًا؟",
+          "options": [
+            "Die Sonne scheint",
+            "Es ist heiß",
+            "Es regnet"
+          ],
+          "answer": "Es regnet",
+          "explanationAr": "النص يقول: «Morgen regnet es.»"
+        },
+        {
+          "id": "ll-3-3-q3",
+          "promptDe": "Was nimmt er mit?",
+          "promptAr": "ماذا يأخذ معه؟",
+          "options": [
+            "Einen Regenschirm",
+            "Ein Buch",
+            "Einen Ball"
+          ],
+          "answer": "Einen Regenschirm",
+          "explanationAr": "النص يقول: «Ich nehme einen Regenschirm mit.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-4-1",
+      "stufe": 4,
+      "titelDe": "Auf dem Markt",
+      "titelAr": "في السوق",
+      "de": "Am Samstag gehe ich mit meiner Mutter auf den Markt. Wir kaufen Obst und Gemüse: Äpfel, Bananen und Tomaten. Der Verkäufer ist freundlich und sagt: Guten Morgen! Die Äpfel kosten drei Euro. Meine Mutter kauft auch Brot und Käse für das Abendessen. Ich trage die Tasche. Dann fahren wir mit dem Bus nach Hause. Zu Hause essen wir einen Apfel. Der Apfel ist süß.",
+      "ar": "يوم السبت أذهب مع أمي إلى السوق. نشتري الفاكهة والخضار: تفاحًا وموزًا وطماطم. البائع لطيف. التفاح بثلاثة يورو. أمي تشتري أيضًا الخبز والجبن. ثم نعود بالحافلة إلى البيت.",
+      "glossar": [
+        {
+          "de": "der Verkäufer",
+          "ar": "البائع"
+        },
+        {
+          "de": "kosten",
+          "ar": "يكلّف / ثمنه"
+        },
+        {
+          "de": "tragen",
+          "ar": "يحمل"
+        },
+        {
+          "de": "die Tasche",
+          "ar": "الحقيبة"
+        },
+        {
+          "de": "süß",
+          "ar": "حلو المذاق"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-4-1-q1",
+          "promptDe": "Wann geht er auf den Markt?",
+          "promptAr": "متى يذهب إلى السوق؟",
+          "options": [
+            "Am Montag",
+            "Am Samstag",
+            "Am Sonntag"
+          ],
+          "answer": "Am Samstag",
+          "explanationAr": "النص يقول: «Am Samstag gehe ich … auf den Markt.»"
+        },
+        {
+          "id": "ll-4-1-q2",
+          "promptDe": "Was kaufen sie?",
+          "promptAr": "ماذا يشترون؟",
+          "options": [
+            "Nur Fisch",
+            "Obst und Gemüse",
+            "Kleidung"
+          ],
+          "answer": "Obst und Gemüse",
+          "explanationAr": "النص يقول: «Wir kaufen Obst und Gemüse.»"
+        },
+        {
+          "id": "ll-4-1-q3",
+          "promptDe": "Wie fahren sie nach Hause?",
+          "promptAr": "كيف يعودون إلى البيت؟",
+          "options": [
+            "Mit dem Zug",
+            "Zu Fuß",
+            "Mit dem Bus"
+          ],
+          "answer": "Mit dem Bus",
+          "explanationAr": "النص يقول: «fahren wir mit dem Bus nach Hause.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-4-2",
+      "stufe": 4,
+      "titelDe": "Das Wochenende",
+      "titelAr": "عطلة نهاية الأسبوع",
+      "de": "Am Freitag kochen wir zusammen. Mein Vater macht eine Suppe und meine Schwester einen Salat. Ich wasche die Tomaten und das Brot schneidet mein Bruder. Am Samstag fahren wir in den Park. Die Kinder spielen Fußball und ich lese unter einem Baum. Am Sonntag sind wir zu Hause. Wir trinken Tee und sprechen zusammen. Das Wochenende ist kurz, aber schön.",
+      "ar": "مساء الجمعة نطبخ معًا. أبي يعدّ حساءً وأختي تعدّ سلطة. يوم السبت نذهب إلى الحديقة. الأطفال يلعبون كرة القدم وأنا أقرأ تحت شجرة. يوم الأحد نكون في البيت. نشرب الشاي ونتحدث معًا.",
+      "glossar": [
+        {
+          "de": "kochen",
+          "ar": "يطبخ"
+        },
+        {
+          "de": "die Suppe",
+          "ar": "الحساء"
+        },
+        {
+          "de": "der Salat",
+          "ar": "السلطة"
+        },
+        {
+          "de": "der Baum",
+          "ar": "الشجرة"
+        },
+        {
+          "de": "schneiden",
+          "ar": "يقطع"
+        },
+        {
+          "de": "süß",
+          "ar": "حلو"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-4-2-q1",
+          "promptDe": "Was macht der Vater am Freitagabend?",
+          "promptAr": "ماذا يفعل الأب مساء الجمعة؟",
+          "options": [
+            "Er macht eine Suppe",
+            "Er spielt Fußball",
+            "Er liest ein Buch"
+          ],
+          "answer": "Er macht eine Suppe",
+          "explanationAr": "النص يقول: «Mein Vater macht eine Suppe.»"
+        },
+        {
+          "id": "ll-4-2-q2",
+          "promptDe": "Was macht er im Park?",
+          "promptAr": "ماذا يفعل في الحديقة؟",
+          "options": [
+            "Er kocht",
+            "Er liest unter einem Baum",
+            "Er schläft"
+          ],
+          "answer": "Er liest unter einem Baum",
+          "explanationAr": "النص يقول: «ich lese unter einem Baum.»"
+        },
+        {
+          "id": "ll-4-2-q3",
+          "promptDe": "Wo sind sie am Sonntag?",
+          "promptAr": "أين هم يوم الأحد؟",
+          "options": [
+            "Im Park",
+            "Auf dem Markt",
+            "Zu Hause"
+          ],
+          "answer": "Zu Hause",
+          "explanationAr": "النص يقول: «Am Sonntag sind wir zu Hause.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-4-3",
+      "stufe": 4,
+      "titelDe": "Meine Arbeit",
+      "titelAr": "عملي",
+      "de": "Ich arbeite in einem Büro in der Stadt. Mein Chef heißt Herr Yilmaz. Ich schreibe E-Mails und spreche mit Kunden am Telefon. Ich arbeite von acht Uhr bis fünf Uhr. Um ein Uhr mache ich eine Pause und esse einen Salat. Meine Kollegen sind nett und helfen mir. Ich mag meine Arbeit, aber am Abend bin ich müde.",
+      "ar": "أعمل في مكتب في المدينة. اسم مديري السيد يلماز. أكتب رسائل إلكترونية وأتحدث مع الزبائن. يبدأ العمل في الثامنة وينتهي في الخامسة. زملائي لطفاء. أحب عملي، لكنني في المساء أكون متعبًا.",
+      "glossar": [
+        {
+          "de": "der Chef",
+          "ar": "المدير"
+        },
+        {
+          "de": "Yilmaz",
+          "ar": "يلماز (اسم عائلة)"
+        },
+        {
+          "de": "die E-Mail",
+          "ar": "البريد الإلكتروني"
+        },
+        {
+          "de": "der Kunde",
+          "ar": "الزبون"
+        },
+        {
+          "de": "der Kollege",
+          "ar": "الزميل"
+        },
+        {
+          "de": "müde",
+          "ar": "متعب"
+        },
+        {
+          "de": "der Herr",
+          "ar": "السيد"
+        },
+        {
+          "de": "das Telefon",
+          "ar": "الهاتف"
+        },
+        {
+          "de": "die Pause",
+          "ar": "الاستراحة"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-4-3-q1",
+          "promptDe": "Wo arbeitet er?",
+          "promptAr": "أين يعمل؟",
+          "options": [
+            "In einem Büro",
+            "In einer Schule",
+            "Auf dem Markt"
+          ],
+          "answer": "In einem Büro",
+          "explanationAr": "النص يقول: «Ich arbeite in einem Büro.»"
+        },
+        {
+          "id": "ll-4-3-q2",
+          "promptDe": "Was macht er bei der Arbeit?",
+          "promptAr": "ماذا يفعل في عمله؟",
+          "options": [
+            "Er kocht Suppen",
+            "Er schreibt E-Mails",
+            "Er fährt Bus"
+          ],
+          "answer": "Er schreibt E-Mails",
+          "explanationAr": "النص يقول: «Ich schreibe E-Mails.»"
+        },
+        {
+          "id": "ll-4-3-q3",
+          "promptDe": "Wie ist er am Abend?",
+          "promptAr": "كيف يشعر في المساء؟",
+          "options": [
+            "Müde",
+            "Hungrig",
+            "Krank"
+          ],
+          "answer": "Müde",
+          "explanationAr": "النص يقول: «am Abend bin ich müde.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-5-1",
+      "stufe": 5,
+      "titelDe": "Eine kleine Reise",
+      "titelAr": "رحلة صغيرة",
+      "de": "Im Sommer fahre ich mit meiner Schwester ans Meer. Wir nehmen den Zug um sieben Uhr. Die Fahrt dauert drei Stunden. Im Zug lesen wir und essen Brot. Am Meer schwimmen wir und liegen am Strand. Das Wasser ist warm und die Sonne scheint hell. Am Mittag essen wir Fisch in einem kleinen Restaurant. Am Abend sehen wir die Sonne im Meer. Die Reise ist kurz, aber sehr schön.",
+      "ar": "في الصيف أسافر مع أختي إلى البحر. نأخذ القطار في الساعة السابعة. الرحلة تستغرق ثلاث ساعات. عند البحر نسبح ونستلقي على الشاطئ. الماء دافئ والشمس ساطعة. في المساء نأكل السمك في مطعم صغير. الرحلة قصيرة لكنها جميلة جدًا.",
+      "glossar": [
+        {
+          "de": "das Meer",
+          "ar": "البحر"
+        },
+        {
+          "de": "die Fahrt",
+          "ar": "الرحلة / مدة السفر"
+        },
+        {
+          "de": "dauern",
+          "ar": "يستغرق (وقتًا)"
+        },
+        {
+          "de": "schwimmen",
+          "ar": "يسبح"
+        },
+        {
+          "de": "der Strand",
+          "ar": "الشاطئ"
+        },
+        {
+          "de": "der Fisch",
+          "ar": "السمك"
+        },
+        {
+          "de": "das Restaurant",
+          "ar": "المطعم"
+        },
+        {
+          "de": "die Sonne",
+          "ar": "الشمس"
+        },
+        {
+          "de": "der Sommer",
+          "ar": "الصيف"
+        },
+        {
+          "de": "scheinen",
+          "ar": "تشرق / يسطع"
+        },
+        {
+          "de": "sehen",
+          "ar": "يرى"
+        },
+        {
+          "de": "hell",
+          "ar": "ساطع / مضيء"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-5-1-q1",
+          "promptDe": "Mit wem fährt er ans Meer?",
+          "promptAr": "مع من يسافر إلى البحر؟",
+          "options": [
+            "Mit seinem Bruder",
+            "Mit seiner Schwester",
+            "Mit seinem Vater"
+          ],
+          "answer": "Mit seiner Schwester",
+          "explanationAr": "النص يقول: «fahre ich mit meiner Schwester ans Meer.»"
+        },
+        {
+          "id": "ll-5-1-q2",
+          "promptDe": "Wie lange dauert die Fahrt?",
+          "promptAr": "كم تستغرق الرحلة؟",
+          "options": [
+            "Eine Stunde",
+            "Drei Stunden",
+            "Sieben Stunden"
+          ],
+          "answer": "Drei Stunden",
+          "explanationAr": "النص يقول: «Die Fahrt dauert drei Stunden.»"
+        },
+        {
+          "id": "ll-5-1-q3",
+          "promptDe": "Was essen sie am Abend?",
+          "promptAr": "ماذا يأكلون في المساء؟",
+          "options": [
+            "Fisch",
+            "Hähnchen",
+            "Eine Suppe"
+          ],
+          "answer": "Fisch",
+          "explanationAr": "النص يقول: «essen wir Fisch.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-5-2",
+      "stufe": 5,
+      "titelDe": "Beim Arzt",
+      "titelAr": "عند الطبيب",
+      "de": "Heute bin ich krank. Mein Kopf tut weh und ich habe Fieber. Ich trinke Tee und bleibe im Bett. Meine Mutter fährt mit mir zum Arzt. Der Arzt sagt: Trinken Sie viel Wasser und bleiben Sie zwei Tage zu Hause! Meine Mutter kocht eine warme Suppe für mich. Ich schlafe viel und lese ein bisschen. Am Abend ist das Fieber weg. Dann geht es mir besser.",
+      "ar": "اليوم أنا مريض. رأسي يؤلمني وعندي حمّى. أمي تذهب بي إلى الطبيب. يقول الطبيب: اشرب ماءً كثيرًا وابقَ في البيت! أبقى في البيت يومين وأنام كثيرًا. ثم أصبح أفضل.",
+      "glossar": [
+        {
+          "de": "krank",
+          "ar": "مريض"
+        },
+        {
+          "de": "der Kopf",
+          "ar": "الرأس"
+        },
+        {
+          "de": "weh tun",
+          "ar": "يؤلم"
+        },
+        {
+          "de": "das Fieber",
+          "ar": "الحمّى"
+        },
+        {
+          "de": "der Arzt",
+          "ar": "الطبيب"
+        },
+        {
+          "de": "kochen",
+          "ar": "يطبخ"
+        },
+        {
+          "de": "die Suppe",
+          "ar": "الحساء"
+        },
+        {
+          "de": "besser",
+          "ar": "أفضل / أحسن"
+        },
+        {
+          "de": "ein bisschen",
+          "ar": "قليلًا"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-5-2-q1",
+          "promptDe": "Was tut weh?",
+          "promptAr": "ما الذي يؤلم؟",
+          "options": [
+            "Der Kopf",
+            "Das Bein",
+            "Die Hand"
+          ],
+          "answer": "Der Kopf",
+          "explanationAr": "النص يقول: «Mein Kopf tut weh.»"
+        },
+        {
+          "id": "ll-5-2-q2",
+          "promptDe": "Was sagt der Arzt?",
+          "promptAr": "ماذا يقول الطبيب؟",
+          "options": [
+            "Fahren Sie ans Meer!",
+            "Trinken Sie viel Wasser!",
+            "Spielen Sie Fußball!"
+          ],
+          "answer": "Trinken Sie viel Wasser!",
+          "explanationAr": "النص يقول: «Trinken Sie viel Wasser.»"
+        },
+        {
+          "id": "ll-5-2-q3",
+          "promptDe": "Wie lange bleibt er zu Hause?",
+          "promptAr": "كم يومًا يبقى في البيت؟",
+          "options": [
+            "Einen Tag",
+            "Zwei Tage",
+            "Eine Woche"
+          ],
+          "answer": "Zwei Tage",
+          "explanationAr": "النص يقول: «Ich bleibe zwei Tage zu Hause.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-5-3",
+      "stufe": 5,
+      "titelDe": "Einkaufen für das Abendessen",
+      "titelAr": "التسوّق للعشاء",
+      "de": "Heute Abend kommen meine Freunde zu uns. Ich kaufe im Supermarkt ein. Ich nehme Tomaten, Käse, Brot und Obst. Die Tomaten sind billig, aber der Käse ist teuer. Ich kaufe auch Wasser und Saft für meine Freunde. Ich bezahle mit Karte und trage die Tasche nach Hause. Zu Hause kochen wir zusammen eine Suppe und einen Salat. Wir essen am großen Tisch und sprechen viel. Der Abend ist schön.",
+      "ar": "هذا المساء يأتي أصدقائي إلينا. أتسوّق في السوبرماركت. آخذ طماطم وجبنًا وخبزًا وفاكهة. الطماطم رخيصة لكن الجبن غالٍ. أدفع بالبطاقة. في البيت نطبخ معًا ونأكل على الطاولة الكبيرة.",
+      "glossar": [
+        {
+          "de": "einkaufen",
+          "ar": "يتسوّق"
+        },
+        {
+          "de": "billig",
+          "ar": "رخيص"
+        },
+        {
+          "de": "teuer",
+          "ar": "غالٍ"
+        },
+        {
+          "de": "bezahlen",
+          "ar": "يدفع"
+        },
+        {
+          "de": "die Karte",
+          "ar": "البطاقة (بنكية هنا)"
+        },
+        {
+          "de": "tragen",
+          "ar": "يحمل"
+        },
+        {
+          "de": "die Tasche",
+          "ar": "الحقيبة"
+        },
+        {
+          "de": "der Saft",
+          "ar": "العصير"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-5-3-q1",
+          "promptDe": "Wer kommt heute Abend?",
+          "promptAr": "من يأتي هذا المساء؟",
+          "options": [
+            "Seine Freunde",
+            "Sein Chef",
+            "Seine Lehrerin"
+          ],
+          "answer": "Seine Freunde",
+          "explanationAr": "النص يقول: «kommen meine Freunde zu uns.»"
+        },
+        {
+          "id": "ll-5-3-q2",
+          "promptDe": "Was ist teuer?",
+          "promptAr": "ما الغالي؟",
+          "options": [
+            "Die Tomaten",
+            "Das Brot",
+            "Der Käse"
+          ],
+          "answer": "Der Käse",
+          "explanationAr": "النص يقول: «der Käse ist teuer.»"
+        },
+        {
+          "id": "ll-5-3-q3",
+          "promptDe": "Wie bezahlt er?",
+          "promptAr": "كيف يدفع؟",
+          "options": [
+            "Mit Karte",
+            "Mit Geld aus Papier nur",
+            "Er bezahlt nicht"
+          ],
+          "answer": "Mit Karte",
+          "explanationAr": "النص يقول: «Ich bezahle mit Karte.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-6-1",
+      "stufe": 6,
+      "titelDe": "Meine Pläne für den Sommer",
+      "titelAr": "خططي للصيف",
+      "de": "Nächsten Sommer möchte ich nach Deutschland reisen und dort vier Wochen bleiben. Ich spare Geld und lerne jeden Tag Deutsch, auch am Samstag. Vor der Reise will ich die A1-Prüfung machen. Am Anfang war Deutsch schwer für mich. Heute verstehe ich schon viel: Ich kann mich vorstellen, einkaufen und nach dem Weg fragen. In Deutschland will ich eine große Stadt sehen und mit vielen Menschen sprechen. Mein Ziel ist klar: Ich will gut Deutsch sprechen, neue Freunde finden und später in Deutschland arbeiten.",
+      "ar": "في الصيف القادم أريد السفر إلى ألمانيا والبقاء هناك أربعة أسابيع. أُدّخر المال وأتعلم الألمانية كل يوم. قبل الرحلة أريد اجتياز امتحان A1. في البداية كانت الألمانية صعبة عليّ. اليوم أفهم الكثير بالفعل. هدفي واضح: أريد أن أتحدث الألمانية جيدًا وأن أجد أصدقاء جددًا.",
+      "glossar": [
+        {
+          "de": "Deutschland",
+          "ar": "ألمانيا"
+        },
+        {
+          "de": "die Woche",
+          "ar": "الأسبوع"
+        },
+        {
+          "de": "sparen",
+          "ar": "يُدّخر"
+        },
+        {
+          "de": "die Prüfung",
+          "ar": "الامتحان"
+        },
+        {
+          "de": "der Anfang",
+          "ar": "البداية"
+        },
+        {
+          "de": "verstehen",
+          "ar": "يفهم"
+        },
+        {
+          "de": "das Ziel",
+          "ar": "الهدف"
+        },
+        {
+          "de": "der Weg",
+          "ar": "الطريق"
+        },
+        {
+          "de": "fragen",
+          "ar": "يسأل"
+        },
+        {
+          "de": "später",
+          "ar": "لاحقًا"
+        },
+        {
+          "de": "der Sommer",
+          "ar": "الصيف"
+        },
+        {
+          "de": "sich vorstellen",
+          "ar": "يقدّم نفسه"
+        },
+        {
+          "de": "die Menschen",
+          "ar": "الناس"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-6-1-q1",
+          "promptDe": "Wie lange will er in Deutschland bleiben?",
+          "promptAr": "كم يريد أن يبقى في ألمانيا؟",
+          "options": [
+            "Vier Tage",
+            "Vier Wochen",
+            "Vier Monate"
+          ],
+          "answer": "Vier Wochen",
+          "explanationAr": "النص يقول: «dort vier Wochen bleiben.»"
+        },
+        {
+          "id": "ll-6-1-q2",
+          "promptDe": "Was will er vor der Reise machen?",
+          "promptAr": "ماذا يريد أن يفعل قبل الرحلة؟",
+          "options": [
+            "Die A1-Prüfung machen",
+            "Ein Auto kaufen",
+            "Fußball spielen"
+          ],
+          "answer": "Die A1-Prüfung machen",
+          "explanationAr": "النص يقول: «will ich die A1-Prüfung machen.»"
+        },
+        {
+          "id": "ll-6-1-q3",
+          "promptDe": "Was ist sein Ziel?",
+          "promptAr": "ما هدفه؟",
+          "options": [
+            "Gut Deutsch sprechen",
+            "In Berlin wohnen",
+            "Lehrer werden"
+          ],
+          "answer": "Gut Deutsch sprechen",
+          "explanationAr": "النص يقول: «Ich will gut Deutsch sprechen.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-6-2",
+      "stufe": 6,
+      "titelDe": "Sara und ihr Tag",
+      "titelAr": "سارة ويومها",
+      "de": "Sara steht um halb sieben auf. Sie wäscht sich, isst ein kleines Frühstück und fährt mit dem Fahrrad zur Arbeit. Sie arbeitet als Verkäuferin in einem Supermarkt. Sie spricht mit vielen Kunden und ist immer freundlich. Am Nachmittag kauft sie Obst für ihre Familie. Am Wochenende besucht sie ihre Freundin. Sie kochen zusammen und trinken Tee. Am Abend lernt sie Deutsch mit einer App und schreibt neue Wörter in ein Heft. Sie sagt: Deutsch ist schwer, aber jeden Tag ein bisschen besser.",
+      "ar": "تستيقظ سارة في السادسة والنصف. تغتسل وتأكل فطورًا صغيرًا وتذهب بالدراجة إلى العمل. تعمل بائعة في سوبرماركت. بعد الظهر تشتري الفاكهة لأسرتها. في المساء تتعلم الألمانية بتطبيق. تقول: الألمانية صعبة، لكنها كل يوم أفضل قليلًا.",
+      "glossar": [
+        {
+          "de": "halb sieben",
+          "ar": "السادسة والنصف (حرفيًا: نصف السابعة)"
+        },
+        {
+          "de": "sich waschen",
+          "ar": "يغتسل"
+        },
+        {
+          "de": "das Fahrrad",
+          "ar": "الدراجة"
+        },
+        {
+          "de": "die Verkäuferin",
+          "ar": "البائعة"
+        },
+        {
+          "de": "der Nachmittag",
+          "ar": "بعد الظهر"
+        },
+        {
+          "de": "die App",
+          "ar": "التطبيق"
+        },
+        {
+          "de": "ein bisschen",
+          "ar": "قليلًا"
+        },
+        {
+          "de": "Sara",
+          "ar": "سارة (اسم)"
+        },
+        {
+          "de": "immer",
+          "ar": "دائمًا"
+        },
+        {
+          "de": "besser",
+          "ar": "أفضل / أحسن"
+        },
+        {
+          "de": "der Kunde",
+          "ar": "الزبون"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-6-2-q1",
+          "promptDe": "Wie fährt Sara zur Arbeit?",
+          "promptAr": "كيف تذهب سارة إلى العمل؟",
+          "options": [
+            "Mit dem Bus",
+            "Mit dem Fahrrad",
+            "Mit dem Zug"
+          ],
+          "answer": "Mit dem Fahrrad",
+          "explanationAr": "النص يقول: «fährt mit dem Fahrrad zur Arbeit.»"
+        },
+        {
+          "id": "ll-6-2-q2",
+          "promptDe": "Was ist Sara von Beruf?",
+          "promptAr": "ما مهنة سارة؟",
+          "options": [
+            "Lehrerin",
+            "Ärztin",
+            "Verkäuferin"
+          ],
+          "answer": "Verkäuferin",
+          "explanationAr": "النص يقول: «Sie arbeitet als Verkäuferin.»"
+        },
+        {
+          "id": "ll-6-2-q3",
+          "promptDe": "Wie lernt sie am Abend Deutsch?",
+          "promptAr": "كيف تتعلم الألمانية في المساء؟",
+          "options": [
+            "Mit einer App",
+            "In der Schule",
+            "Mit ihrem Bruder"
+          ],
+          "answer": "Mit einer App",
+          "explanationAr": "النص يقول: «lernt sie Deutsch mit einer App.»"
+        }
+      ]
+    },
+    {
+      "id": "ll-6-3",
+      "stufe": 6,
+      "titelDe": "Warum ich Deutsch lerne",
+      "titelAr": "لماذا أتعلم الألمانية",
+      "de": "Ich lerne Deutsch, weil ich in Deutschland arbeiten und leben will. Früher konnte ich nur Hallo und Danke sagen. Heute kann ich einkaufen, nach dem Weg fragen und mit Nachbarn sprechen. Ich verstehe die Lehrerin und meine Kollegen. Deutsch ist nicht leicht, aber es ist der Schlüssel zu einem neuen Leben. Am Abend schreibe ich neue Wörter in mein Heft und lerne sie. Meine Familie hilft mir jeden Tag. Ich lerne jeden Tag weiter, Schritt für Schritt, und ich gebe nicht auf.",
+      "ar": "أتعلم الألمانية لأنني أريد أن أعمل وأعيش في ألمانيا. في السابق كنت أستطيع قول مرحبًا وشكرًا فقط. اليوم أستطيع التسوق والسؤال عن الطريق والتحدث مع الجيران. الألمانية ليست سهلة، لكنها مفتاح حياة جديدة. لذلك أواصل التعلم كل يوم، خطوة بخطوة.",
+      "glossar": [
+        {
+          "de": "weil",
+          "ar": "لأنّ"
+        },
+        {
+          "de": "leben",
+          "ar": "يعيش"
+        },
+        {
+          "de": "früher",
+          "ar": "في السابق"
+        },
+        {
+          "de": "der Weg",
+          "ar": "الطريق"
+        },
+        {
+          "de": "fragen",
+          "ar": "يسأل"
+        },
+        {
+          "de": "der Nachbar",
+          "ar": "الجار"
+        },
+        {
+          "de": "leicht",
+          "ar": "سهل"
+        },
+        {
+          "de": "der Schlüssel",
+          "ar": "المفتاح"
+        },
+        {
+          "de": "der Schritt",
+          "ar": "الخطوة"
+        },
+        {
+          "de": "aufgeben",
+          "ar": "يستسلم (هنا: لا يستسلم)"
+        },
+        {
+          "de": "verstehen",
+          "ar": "يفهم"
+        },
+        {
+          "de": "der Kollege",
+          "ar": "الزميل"
+        },
+        {
+          "de": "das Heft",
+          "ar": "الدفتر"
+        }
+      ],
+      "fragen": [
+        {
+          "id": "ll-6-3-q1",
+          "promptDe": "Warum lernt er Deutsch?",
+          "promptAr": "لماذا يتعلم الألمانية؟",
+          "options": [
+            "Er will in Deutschland arbeiten und leben",
+            "Er will Lehrer in Tunis werden",
+            "Er mag Musik"
+          ],
+          "answer": "Er will in Deutschland arbeiten und leben",
+          "explanationAr": "النص يقول: «weil ich in Deutschland arbeiten und leben will.»"
+        },
+        {
+          "id": "ll-6-3-q2",
+          "promptDe": "Was konnte er früher nur sagen?",
+          "promptAr": "ماذا كان يستطيع قوله في السابق فقط؟",
+          "options": [
+            "Seinen Namen",
+            "Hallo und Danke",
+            "Die Zahlen"
+          ],
+          "answer": "Hallo und Danke",
+          "explanationAr": "النص يقول: «konnte ich nur Hallo und Danke sagen.»"
+        },
+        {
+          "id": "ll-6-3-q3",
+          "promptDe": "Was kann er heute schon?",
+          "promptAr": "ماذا يستطيع اليوم؟",
+          "options": [
+            "Einkaufen und nach dem Weg fragen",
+            "Auto fahren",
+            "Klavier spielen"
+          ],
+          "answer": "Einkaufen und nach dem Weg fragen",
+          "explanationAr": "النص يقول: «Heute kann ich einkaufen, nach dem Weg fragen.»"
+        }
+      ]
+    }
+  ]
+}
