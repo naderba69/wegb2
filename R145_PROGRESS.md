@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R189: **Axis C + M vollständig · Axis U: U1–U3 ✅ (R187–R189)**
+> Status nach R190: **Axis C + M vollständig · Axis U: U1–U4 ✅ (R187–R190)**
+> R190 (U4 Lehrermodus) — alle Gates grün (smoke 1754/0). Weiter: U5, U6.
 > R189 (U3 Offline-PWA) — alle Gates grün (smoke 1752/0). Weiter: U4–U6.
 > R188 (U2 ehrliche Motivation) — alle Gates grün (smoke 1750/0). Weiter: U3–U6.
 > R187 (U1 Sitzungsplayer) — alle Gates grün (smoke 1747/0, interaktiv 713/0). Weiter: U2–U6.
@@ -348,6 +349,15 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R190 — U4 Lehrermodus: lokale Klassenansicht + Export/Druck — abgeschlossen ✅
+
+- **Motor** (`lib/lehrer.ts`): je lokalem Profil eine Zeile strikt aus dessen Datensatz
+  (Planstand/Phase, geschlossene Tage, letztes Aktivitätsdatum, gemessene Minuten ohne
+  Doppelzählung, Phase-Prüfungen, schwächstes Fehlermuster).
+- **Ansicht** in den Einstellungen: Tabelle aller Geräte-Profile + Exporte als lokale Dateien
+  (Klassen-JSON, Einzel-JSON = Backup-Format, druckbares HTML) — null Netzwerk (K283b).
+- **Nachweise**: tsc ✓ · smoke **1754/0** · interaktiv 713/0 · audit 0 · build ✓.
 
 ## R189 — U3 Offline-PWA vervollständigt — abgeschlossen ✅
 

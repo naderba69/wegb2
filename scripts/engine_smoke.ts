@@ -99,6 +99,7 @@ import { schattenEinheiten, huellkurve, kurveAufLaenge, korrelation, pausenZaehl
 import { wortDiff, diffStatistik } from "../lib/textdiff";
 import { musterDrill } from "../lib/musterdrill";
 import { wochenBilanz, streakAusVerlauf, zielAusVerlauf, wochenMontag } from "../lib/motivation";
+import { lernendenZeile } from "../lib/lehrer";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
@@ -13193,6 +13194,28 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(einSrc2.includes("<OfflineKarte />") && offSrc.includes("navigator.storage") && offSrc.includes("caches.delete") &&
      offSrc.includes("امسح مخزن عدم الاتصال") && offSrc.includes("لا يُمسّ"),
     "K282b بطاقة عدم الاتصال في الإعدادات: حجم مقاس من المتصفح ومسح بيد المتعلّم مع إبقاء التقدّم");
+}
+
+// ===== K283 (R190 · U4): Lehreransicht aus lokalen Profilen — Zeilen werden aus
+// Roh-Fortschritten abgeleitet, Exporte sind lokale Dateien (JSON/HTML). =====
+{
+  const pA = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 120,
+    days: { 1: { closed: true, score: 8, total: 10, tasksDone: 9, tasksTotal: 10, at: "2026-10-01T10:00:00.000Z", minutenEffektiv: 70 },
+            2: { closed: true, score: 9, total: 10, tasksDone: 10, tasksTotal: 10, at: "2026-10-03T10:00:00.000Z", minutenEffektiv: 80 } },
+    minutenEffektivTage: { 119: 70, 120: 80 } },
+    exams: { 10: { score: 90, passed: true }, 94: { score: 55, passed: false } },
+    fehler: { k1: { key: "k1", falsch: "x", richtig: "y", art: "artikel", ar: "z", srs: { reps: 1, lapses: 2, ease: 2.5, interval: 1, due: "2026-01-01" }, treffer: 2 } } } as typeof emptyProgress;
+  const z = lernendenZeile({ id: "a", name: "ليلى", emoji: "🦊" }, pA, "a");
+  ok(z.aktiv && z.tag === 120 && z.geschlosseneTage === 2 && z.letztesDatum === "2026-10-03" &&
+     z.minutenGemessen === 150 && z.pruefungenBestanden === 1 && z.pruefungenGesamt === 2 &&
+     (z.schwaechstesMuster ?? "").includes("الأدوات") && z.fehlerGesamt === 1,
+    "K283a سطر المتعلّم مشتقّ بدقة من سجلّه: يوم 120، يومان مغلقان، آخر نشاط 10-03، 150 دقيقة مقاسة بلا ازدواج، امتحان مجتاز من اثنين");
+  const kaSrc = readFileSync("components/klassenansicht.tsx", "utf8");
+  const einSrc3 = readFileSync("app/einstellungen/page.tsx", "utf8");
+  ok(einSrc3.includes("<KlassenAnsicht />") && kaSrc.includes("listProfiles") && kaSrc.includes("application/json") &&
+     kaSrc.includes("text/html") && kaSrc.includes("download") && !/fetch\(|XMLHttpRequest/.test(kaSrc) &&
+     kaSrc.includes("لا خادم ولا رفع"),
+    "K283b نظرة الصفّ في الإعدادات، وتصديرها ملفّات محلية (JSON + HTML طباعة) بلا أيّ طلب شبكي");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
