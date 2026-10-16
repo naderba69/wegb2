@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R191: **Axis C + M vollständig · Axis U: U1–U5 ✅ (R187–R191)**
+> Status nach R192: **ROADMAP VOLLSTÄNDIG — Axis E ✅ · Axis C ✅ · Axis M ✅ · Axis U ✅ (R171–R192)**
+> R192 (U6 Zieltempo) — alle Gates grün (smoke 1760/0, interaktiv 715/0). Offen: Abschlussverifikation + mögliche Bonus-Runden nur auf Besitzer-Wunsch.
 > R191 (U5 A11y) — alle Gates grün (smoke 1756/0, interaktiv 715/0). Weiter: U6 (letzte Roadmap-Runde R192), danach Abschluss-Audit.
 > R190 (U4 Lehrermodus) — alle Gates grün (smoke 1754/0). Weiter: U5, U6.
 > R189 (U3 Offline-PWA) — alle Gates grün (smoke 1752/0). Weiter: U4–U6.
@@ -350,6 +351,16 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R192 — U6 Zieltempo mit Prüfdatum — abgeschlossen ✅ · **Roadmap R171–R192 vollständig**
+
+- **Motor** (`lib/zieltempo.ts`): nötiges Tempo (Plantage/Kalendertag, geplante Minuten/Tag)
+  rein aus `planMinBis` + aktueller Position. Tragbarkeitsgrenze = schwerster Tagesdeckel
+  (`D1_B2_DECKEL_MIN` aus phasen.ts; K123a-Zahlenguard respektiert). Status ruhig/eng/
+  unrealistisch; im letzten Fall ehrliche Ansage + frühestes tragbares Datum.
+- **Strukturell unmöglich, die Kappen zu brechen**: buildDay kennt kein Prüfdatum; K285b misst
+  die Deckel über alle 378 Tage erneut nach. Pacing ist Anzeige, kein Eingriff in Plan/Coverage.
+- **Nachweise**: tsc ✓ · smoke **1760/0** · interaktiv 715/0 · audit 0 · build ✓.
 
 ## R191 — U5 Barrierefreiheit: Kontrast-Nachweis + Sprachkennzeichnung — abgeschlossen ✅
 

@@ -100,6 +100,7 @@ import { wortDiff, diffStatistik } from "../lib/textdiff";
 import { musterDrill } from "../lib/musterdrill";
 import { wochenBilanz, streakAusVerlauf, zielAusVerlauf, wochenMontag } from "../lib/motivation";
 import { lernendenZeile } from "../lib/lehrer";
+import { zielTempo, ZIEL_MINUTEN_OK, ZIEL_MINUTEN_MAX } from "../lib/zieltempo";
 import { ritualUrteil, aufgabeGesperrt, torAufgaben, sperrText } from "../lib/ritual";
 import { PHASEN, PHASE_START, LERNLAST, ABSCHLUSS_VON, levelAmTag, istPhasenPruefung, lastMinuten, PHASEN_PRUEFUNGSTAGE } from "../lib/phasen";
 import { getDialogue, eselsbruecken, getBrueckenFor, vocabMap, sprichwortAudio, sprichwortSrc } from "../lib/content";
@@ -13216,6 +13217,39 @@ function collectR262(dir: string, out: string[] = []): string[] {
      kaSrc.includes("text/html") && kaSrc.includes("download") && !/fetch\(|XMLHttpRequest/.test(kaSrc) &&
      kaSrc.includes("لا خادم ولا رفع"),
     "K283b نظرة الصفّ في الإعدادات، وتصديرها ملفّات محلية (JSON + HTML طباعة) بلا أيّ طلب شبكي");
+}
+
+// ===== K285 (R192 · U6): Zieltempo nur innerhalb der Deckeln — die Ableitung
+// verändert buildDay nie; Unmöglichkeit wird ausgesprochen statt kaschiert. =====
+{
+  const mkP = (day: number, examDate?: string) => ({ ...emptyProgress, plan: { ...emptyProgress.plan, day }, settings: { ...emptyProgress.settings, examDate } } as typeof emptyProgress);
+  const zRuhig = zielTempo(mkP(1, "2027-10-14"), "2026-10-14");
+  const zEng = zielTempo(mkP(1, "2027-04-14"), "2026-10-14");
+  const zUnreal = zielTempo(mkP(300, "2026-10-24"), "2026-10-14");
+  const zKein = zielTempo(mkP(50), "2026-10-14");
+  const restMin = planMinBis(TOTAL_DAYS) - planMinBis(0);
+  ok(zRuhig.status === "ruhig" && zRuhig.restPlanTage === 378 && zRuhig.minutenProTag <= ZIEL_MINUTEN_OK &&
+     zEng.status === "eng" && zEng.minutenProTag > ZIEL_MINUTEN_OK && zEng.minutenProTag <= ZIEL_MINUTEN_MAX &&
+     zUnreal.status === "unrealistisch" && !!zUnreal.fruehestesRuhigesDatum && zUnreal.fruehestesRuhigesDatum > "2026-10-24" &&
+     zKein.status === "kein-datum" && Math.abs(zRuhig.minutenJePlanTag - restMin / 378) < 2,
+    "K285a الإيقاع مشتقّ من دقائق الخطة الكلية: سنة كاملة هادئة، ونصف سنة مشدود، و١٠ أيام لبقية B2 غير واقعية مع أقرب موعد أمين مقترح");
+  // إعادة الإيقاع لا تلمس الخطة أبدًا: دقائق كلّ يوم وسقوفه ثابتة مهما كان التاريخ
+  let deckelOk = true; let maxB1 = 0; let maxB2 = 0;
+  for (let d = 2; d <= TOTAL_DAYS; d++) {
+    const p = buildDay(d, emptyProgress);
+    const sum = p.tasks.reduce((s, t) => s + t.minutes, 0);
+    const ph = phaseOf(d);
+    if (ph === "B1") maxB1 = Math.max(maxB1, sum);
+    if (ph === "B2") maxB2 = Math.max(maxB2, sum);
+  }
+  deckelOk = maxB1 <= 240 && maxB2 <= 270;
+  ok(deckelOk, `K285b سقفا اليوم كما هما بعد كلّ جولات الإيقاع: B1 ‏${maxB1}≤240 وB2 ‏${maxB2}≤270 دقيقة مخططة`);
+  const ztSrc = readFileSync("components/zieltempo.tsx", "utf8");
+  const einSrc4 = readFileSync("app/einstellungen/page.tsx", "utf8");
+  ok(einSrc4.includes("<ZielTempoKarte progress={progress} />") && ztSrc.includes("لا نعرضه كخطة"),
+    "K285c بطاقة الإيقاع في قسم الموعد وتحذير الاستحالة الصريح حاضر");
+  ok(ztSrc.includes("لن نكسر سقوف الأيام ولا نحذف تغطية") && ztSrc.includes("تقديرات الخطة المخطّطة"),
+    "K285d الإفصاحان ملازمان: لا كسر سقوف/لا حذف تغطية، والدقائق تقديرات مخططة لا وعود");
 }
 
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den

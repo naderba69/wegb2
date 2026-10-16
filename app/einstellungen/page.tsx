@@ -13,6 +13,7 @@ import LocalSpeechPilot from "@/components/LocalSpeechPilot";
 import { PHASE_START, levelAmTag } from "@/lib/phasen";
 import { OfflineKarte } from "@/components/offline";
 import { KlassenAnsicht } from "@/components/klassenansicht";
+import { ZielTempoKarte } from "@/components/zieltempo";
 import type { UiLang, Tempo, Level } from "@/lib/types";
 
 export default function Einstellungen() {
@@ -170,6 +171,7 @@ export default function Einstellungen() {
               onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, examName: e.target.value || undefined } }))}
             />
           </div>
+          <ZielTempoKarte progress={progress} />
           {progress.settings.examDate && (
             <div style={{ marginTop: "0.6rem", fontWeight: 700, color: "var(--color-b2)" }}>
               📅{" "}
