@@ -471,3 +471,75 @@ export async function llmKorrigieren(
     return null;
   }
 }
+
+/* ── E4/R173: تقييم اختياري بمعايير Goethe الأربعة عبر المدرّس الذكي (BYOK + موافقة فقط) ── */
+
+export interface LlmKriterien {
+  /** اسم المعيار بالألمانية كما في شبكة Goethe */
+  name: string;
+  /** 0..100 */
+  punkte: number;
+  kommentar: string;
+}
+
+export interface LlmKriterienErgebnis {
+  kriterien: LlmKriterien[];
+  fazit: string;
+}
+
+const KRITERIEN_NAMEN = ["Erfüllung", "Wortschatz", "Strukturen", "Kohärenz"];
+
+/**
+ * يطلب من نموذج المتعلّم (مفتاحه وموافقته فقط — R170) تقديرًا بالمعايير الأربعة.
+ * الإخراج JSON صارم يُقرأ دفاعيًا؛ أيّ فشل = null ويبقى التقدير المحلي وحده ظاهرًا.
+ */
+export async function llmKriterien(
+  cfg: LlmCfg,
+  aufgabeDe: string,
+  text: string,
+  zielWorte: number
+): Promise<LlmKriterienErgebnis | null> {
+  if (!llmBereit(cfg)) return null; // مفتاح بلا موافقة = لا إرسال (R170)
+  try {
+    const base = (cfg.baseUrl || "https://api.openai.com/v1").replace(/\/+$/, "");
+    const res = await fetch(`${base}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: cfg.model || "gpt-4o-mini",
+        temperature: 0.2,
+        messages: [
+          {
+            role: "system",
+            content:
+              'أنت مصحّح معتمد لامتحانات Goethe للناطقين بالعربية. قيّم نص المتعلم بالمعايير الأربعة الرسمية: Erfüllung (إنجاز المهمة والطول)، Wortschatz (المفردات)، Strukturen (التراكيب)، Kohärenz (التماسك). كل معيار 0-100 نقطة؛ ودون نصف عدد الكلمات المطلوب يكون Erfüllung صفرًا. علّق بالعربية بلطف ودقّة. أعد JSON فقط: {"kriterien":[{"name":"Erfüllung","punkte":0,"kommentar":"..."},{"name":"Wortschatz","punkte":0,"kommentar":"..."},{"name":"Strukturen","punkte":0,"kommentar":"..."},{"name":"Kohärenz","punkte":0,"kommentar":"..."}],"fazit":"جملة ختامية بالعربية"}',
+          },
+          {
+            role: "user",
+            content: `المهمة: ${aufgabeDe}\nعدد الكلمات المطلوب تقريبًا: ${zielWorte}\n\nنص المتعلم:\n${text}`,
+          },
+        ],
+      }),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const raw: string = data?.choices?.[0]?.message?.content ?? "";
+    const m = raw.match(/\{[\s\S]*\}/);
+    if (!m) return null;
+    const p = JSON.parse(m[0]);
+    const liste: LlmKriterien[] = (Array.isArray(p.kriterien) ? p.kriterien : [])
+      .map((k: { name?: unknown; punkte?: unknown; kommentar?: unknown }) => ({
+        name: String(k?.name ?? ""),
+        punkte: Math.max(0, Math.min(100, Math.round(Number(k?.punkte) || 0))),
+        kommentar: String(k?.kommentar ?? ""),
+      }))
+      .filter((k: LlmKriterien) => KRITERIEN_NAMEN.includes(k.name));
+    if (liste.length < 4) return null;
+    return { kriterien: liste, fazit: String(p.fazit ?? "") };
+  } catch {
+    return null;
+  }
+}

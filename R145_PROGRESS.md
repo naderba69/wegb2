@@ -318,3 +318,10 @@ Erste Welle der Roadmap (nach der vorgezogenen KI-Schicht R170): `lib/simulation
 **البوابات:** K264a–d — جدول الصيغ، بنية telc وتوقيتاته وحدّ السماع مرّة، نقاء بنوك Goethe B1، مزيج DTZ ‏A2+B1 + بنى B1، منطق كتلة telc وحكم DTZ المستوي. **الدقّة:** ‏smoke **1697/0**، interaktiv **709/0**، tsc ✓، build ✓ (`/pruefen` ‏31.4kB)، audit صفر بنيوي.
 
 **المنهجية المعلنة:** النتائج ليست درجات رسمية، والكتابة/التحدّث تقييم ذاتي معلن بالشبكة؛ عتبة الإتقان الداخلية للتعلّم (80%/60%) لا تتغيّر — وعتبات النجاح المعروضة هي الرسمية لكل صيغة، كتِلة واحدة كما في telc الحقيقية لا تعويد داخليّ.
+
+
+## R173 — E3 Bereitschafts-Analytik + E4 Schreiben nach Goethe-Kriterien — abgeschlossen ✅
+
+Welle 1 der Roadmap schließt: **E3** (`lib/bereitschaft.ts` + Karte „تحليلات الاستعداد" auf /pruefen) leitet die vier Fertigkeiten ausschließlich aus den gespeicherten Simulationsversuchen ab — Mittel der letzten 3, Trend, Zähler über der offiziellen 60er-Linie, beschreibende Bänder; ohne Daten bleibt alles ehrlich leer (kein erfundener Wert), eine einzige Empfehlung benennt die schwächste belegte Fertigkeit, der Prüfungstermin ist ein reiner Tageszähler. Quell-Gate K265c verbannt Vorhersage-Sprache („Wahrscheinlichkeit"/احتمال نجاح) aus beiden Quellen. **E4** (`lib/kriterien.ts` + Panel in der Schreib-Werkstatt): deterministische Maschinensignale zu Erfüllung/Wortschatz/Strukturen/Kohärenz aus dem Text selbst (Konnektoren, Nebensatzmarker, Relativsätze, Typenquote), Halb-Längen-Regel wie offiziell (Erfüllung 0, Deckel 59), Bankweit sind alle 58 Schreibaufgaben jetzt mit `format` (16 Brief / 42 frei) und `zielWort` getaggt; optional bewertet `llmKriterien` (nur BYOK + Zustimmung, R170) nach denselben vier Kriterien — im UI ausdrücklich als KI-Maschinenschätzung etikettiert, nie als menschliche Korrektur.
+
+**Beleg:** tsc sauber · smoke **1704/0** (neu K265a–c, K266a–d; E4-Monotonie an echten Banksamples geprüft) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Offen aus Achse E nur noch: E5 (Sprechen mit lokalem MediaRecorder + Selbsteinschätzung).

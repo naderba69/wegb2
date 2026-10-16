@@ -51,6 +51,8 @@ import {
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER } from "../lib/grader";
 import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
+import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisExamen } from "../lib/bereitschaft";
+import { bewerteKriterien } from "../lib/kriterien";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
 import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
@@ -12702,6 +12704,63 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(bt.bestanden && !btSchwach.bestanden && bd.bestanden && !bdA2.bestanden &&
      bd.zeilen.some((z) => z.wert === "B1") && bdA2.zeilen.some((z) => z.wert === "A2"),
     "K264d أحكام الصيغ: telc تشترط الكتلتين (مكتوب 135 + شفهي 45) وDTZ يمنح مستوى B1/A2 لا نقطة");
+}
+
+/* ═══ K265 · R173 (E3): تحليلات الاستعداد — من السجلّ فقط، بلا تنبؤ ═══ */
+{
+  const leerB = fertigkeitenBilanz(emptyProgress);
+  const fazitLeer = bereitschaftsFazit(emptyProgress);
+  ok(leerB.every((b) => b.versuche === 0 && b.mittel === null) && fazitLeer.versucheGesamt === 0 &&
+     fazitLeer.empfehlungAr === null && schwaechsteFertigkeit(leerB) === null && tageBisExamen(emptyProgress) === null,
+    "K265a بلا سجلّ: لا أرقام مخترعة ولا توصية — الحقول فارغة بصراحة");
+  const datum = (t: number) => new Date(Date.UTC(2026, 0, t)).toISOString();
+  const simP = { ...emptyProgress, simulationen: [60, 80, 90, 95].map((l, i) => ({
+    datum: datum(i + 1), seed: i, format: "goethe-b2",
+    punkte: { lesen: l, hoeren: 40, schreiben: 55, sprechen: 62 }, bestanden: false })) };
+  const bil = fertigkeitenBilanz(simP as never);
+  const les = bil.find((b) => b.key === "lesen")!, hoe = bil.find((b) => b.key === "hoeren")!;
+  ok(les.mittel === 88.3 && les.ueberLinie === 3 && les.trend === "steigend" && hoe.mittel === 40 &&
+     schwaechsteFertigkeit(bil)?.key === "hoeren" && (bereitschaftsFazit(simP as never).empfehlungAr ?? "").includes("الاستماع"),
+    `K265b من السجلّ نفسه: متوسط آخر ٣ (${les.mittel}) واتجاه وفوق-الخطّ، والتوصية تسمّي الأضعف بدليله (${hoe.key})`);
+  const fmtD = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  const mitTermin = { ...emptyProgress, settings: { ...emptyProgress.settings, examDate: fmtD(new Date(2026, 5, 25)) } };
+  const libB = readFileSync("lib/bereitschaft.ts", "utf8");
+  const compB = readFileSync("components/bereitschaft.tsx", "utf8");
+  ok(tageBisExamen(mitTermin as never, new Date(2026, 5, 15)) === 10 && les.bandAr.includes("ثابتة فوق خطّ النجاح") &&
+     !/wahrscheinlichkeit/i.test(libB + compB) && compB.includes("وليست تنبؤًا") && !compB.includes("احتمال نجاح") &&
+     libB.includes("خطّ النجاح المرجعي = 60"),
+    "K265c عدّاد أيامٍ وصفيّ فقط، والنطاقات تسمّي السجلّ بخطّ 60 الرسمي — لا لغة تنبؤ في المصدرين");
+}
+
+/* ═══ K266 · R173 (E4): تقييم الكتابة بمعايير Goethe — إشارات آلية وقاعدة نصف الطول ═══ */
+{
+  const lang = [...writingTasks].sort((a, b) => b.sample.split(/\s+/).length - a.sample.split(/\s+/).length)[0];
+  const reich = bewerteKriterien(lang.sample, 150, "forum");
+  const arm = bewerteKriterien("Ich bin gut.", 150, "forum");
+  ok(lang.sample.split(/\s+/).length >= 100 && reich.woerter >= 100 && reich.kriterien.erfuellung.punkte >= 90 &&
+     arm.zuKurz && arm.kriterien.erfuellung.punkte === 0 && arm.gesamt <= 59 && reich.gesamt > arm.gesamt,
+    `K266a عيّنة البنك الحقيقية (${reich.woerter} كلمة) تُنجز المهمة، والنصّ المبتور يخضع لقاعدة نصف الطول: إنجاز 0 وسقف 59`);
+  const basisW = "Ich lerne Deutsch jeden Tag. Die Sprache ist schwer. Ich übe viel. Meine Familie hilft mir. Die Arbeit ist wichtig. Ich lese Bücher. Der Kurs ist gut. Ich schreibe oft. Die Prüfung kommt bald. Ich bleibe ruhig.";
+  const kohBasis = bewerteKriterien(basisW, 80, "forum");
+  const kohReich = bewerteKriterien(basisW + " Außerdem ist das wichtig für mich. Deshalb übe ich weiter. Jedoch ist die Zeit kurz. Zusammenfassend bleibe ich optimistisch.", 80, "forum");
+  const strBasis = bewerteKriterien(basisW, 80, "forum");
+  const strReich = bewerteKriterien(basisW + " Ich lerne, weil ich die Prüfung bestehen will, und ich schreibe einen Text, der alle überzeugt. Das Thema wird oft diskutiert.", 80, "forum");
+  ok(kohReich.kriterien.kohaerenz.punkte > kohBasis.kriterien.kohaerenz.punkte &&
+     strReich.kriterien.strukturen.punkte > strBasis.kriterien.strukturen.punkte &&
+     reich.kriterien.kohaerenz.hinweiseAr.length > 0 && reich.gesamt >= 0 && reich.gesamt <= 100,
+    "K266b الروابط ترفع التماسك والجمل الفرعية/الصلة ترفع التراكيب — المؤشرات تستجيب للنصّ فعلًا لا ثابتة");
+  const panSrc = readFileSync("components/kriterienpanel.tsx", "utf8");
+  const gradSrc = readFileSync("lib/grader.ts", "utf8");
+  const schrSrc = readFileSync("components/schreiben.tsx", "utf8");
+  ok(panSrc.includes("ليست درجة مصحّح بشري") && panSrc.includes("مولّد بالذكاء الاصطناعي") &&
+     gradSrc.includes("export async function llmKriterien") && gradSrc.includes("KRITERIEN_NAMEN") &&
+     schrSrc.includes("KriterienPanel") && schrSrc.includes('art={task.format === "brief" ? "brief" : "forum"}'),
+    "K266c اللوحة موصولة بورشة الكتابة معلنةً آليّتها، ومستشار المعايير اختياريّ خلف llmBereit بلا إرسال صامت");
+  const alleMarkiert = writingTasks.length === 58 && writingTasks.every((w) => w.format === "brief" || w.format === "frei");
+  const briefBank = writingTasks.filter((w) => w.format === "brief");
+  ok(alleMarkiert && briefBank.length === 16 && briefBank.filter((w) => w.level === "B2").length >= 5 &&
+     schrSrc.includes("task.zielWort ?? cfg!.ziel") && writingTasks.every((w) => !w.zielWort || w.zielWort >= 20),
+    `K266d بنك الكتابة موسومٌ بصيغة الامتحان: ${briefBank.length} مهمة رسائل (تحية/ختام في الإنجاز) والباقي نص حر، والهدف من zielWort البنك`);
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

@@ -2,6 +2,7 @@
   {
     "id": "w-a0-01",
     "level": "A0",
+    "format": "frei",
     "titleDe": "Das Alphabet schreiben",
     "titleAr": "كتابة الأبجدية الألمانية",
     "taskDe": "Schreibe die 26 Buchstaben des Alphabets, die drei Umlaute (ä, ö, ü) und ß. Finde zu jedem Zeichen ein Beispielwort: Bei A–Z und ä/ö/ü beginnt es damit; das Beispiel zu ß enthält ß, zum Beispiel Straße.",
@@ -23,6 +24,7 @@
   {
     "id": "w-a0-02",
     "level": "A0",
+    "format": "frei",
     "titleDe": "Hallo! Ich heiße …",
     "titleAr": "مرحباً! اسمي …",
     "taskDe": "Schreibe 3 einfache Sätze über dich: Name, Herkunft, Sprache.",
@@ -43,6 +45,7 @@
   {
     "id": "w-a1-01",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Stell dich vor!",
     "titleAr": "قدّم نفسك",
     "taskDe": "Schreibe 4–5 Sätze über dich: Name, Alter, Land, Stadt, Beruf/Schule, Sprachen.",
@@ -64,6 +67,7 @@
   {
     "id": "w-a1-02",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Formular ausfüllen",
     "titleAr": "املأ استمارة",
     "taskDe": "Schreibe deine Personalien als Formular: Vorname, Familienname, Alter, Geburtsdatum, Land, Adresse, Telefonnummer.",
@@ -84,6 +88,7 @@
   {
     "id": "w-a1-03",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Meine Familie",
     "titleAr": "عائلتي",
     "taskDe": "Schreibe 5 Sätze über deine Familie (Vater, Mutter, Geschwister) mit Possessivartikeln.",
@@ -104,6 +109,7 @@
   {
     "id": "w-a1-04",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Mein Tagesablauf",
     "titleAr": "جدولي اليومي",
     "taskDe": "Schreibe 6 Sätze über deinen Tag: Aufstehen, Arbeit, Mittag, Abend, Schlafen. Nutze trennbare Verben!",
@@ -124,6 +130,7 @@
   {
     "id": "w-a1-05",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Eine kurze Nachricht",
     "titleAr": "رسالة قصيرة",
     "taskDe": "Schreibe eine kurze Nachricht an einen Freund: Termin am Freitag, Uhrzeit, Ort.",
@@ -144,6 +151,7 @@
   {
     "id": "w-a2-01",
     "level": "A2",
+    "format": "frei",
     "titleDe": "Mein gestriger Tag",
     "titleAr": "يومي أمس",
     "taskDe": "Schreibe 6 Sätze über gestern – benutze mindestens 5× Perfekt (3× haben, 2× sein).",
@@ -165,6 +173,7 @@
   {
     "id": "w-a2-02",
     "level": "A2",
+    "format": "frei",
     "titleDe": "Warum ich Deutsch lerne",
     "titleAr": "لماذا أتعلّم الألمانية",
     "taskDe": "Schreibe einen Absatz (5–6 Sätze) mit 2× „weil“ und 1× „dass“. Denk an die Wortstellung!",
@@ -185,6 +194,7 @@
   {
     "id": "w-a2-03",
     "level": "A2",
+    "format": "brief",
     "titleDe": "Reise-E-Mail",
     "titleAr": "بريد رحلة",
     "taskDe": "Schreibe eine E-Mail an eine Freundin über deine Reise: Wohin, wann, wie (Zug/Flug), Hotel.",
@@ -205,6 +215,7 @@
   {
     "id": "w-a2-04",
     "level": "A2",
+    "format": "frei",
     "titleDe": "Beim Arzt – eine Erklärung",
     "titleAr": "شرح للطبيب",
     "taskDe": "Schreibe, was du dem Arzt sagst: Symptome seit wann, Schmerzen, Medizin.",
@@ -225,6 +236,7 @@
   {
     "id": "w-a2-05",
     "level": "A2",
+    "format": "frei",
     "titleDe": "Einladung schreiben",
     "titleAr": "كتابة دعوة",
     "taskDe": "Schreibe eine Einladung zu einer Feier: Anlass, Tag, Uhrzeit, Ort, was mitbringen.",
@@ -245,6 +257,7 @@
   {
     "id": "w-b1-01",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Meinung + Begründung",
     "titleAr": "رأي مبرَّر",
     "taskDe": "Schreibe einen Absatz (ca. 80 Wörter): Sollen Handys in Schulen verboten werden? Nutze: meiner Meinung nach, weil, deshalb, obwohl + 1× Konjunktiv II.",
@@ -266,6 +279,7 @@
   {
     "id": "w-b1-02",
     "level": "B1",
+    "format": "brief",
     "titleDe": "Anschreiben (Bewerbung)",
     "titleAr": "خطاب التوظيف",
     "taskDe": "Schreibe den Kern eines Anschreibens (ca. 100 Wörter): Wer bist du? Warum diese Stelle? Was bringst du mit? Nutze 2 Relativsätze.",
@@ -287,6 +301,7 @@
   {
     "id": "w-b1-03",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Erlebnis erzählen",
     "titleAr": "سرد تجربة",
     "taskDe": "Erzähle eine Geschichte (ca. 80 Wörter) in der Erzählzeit: Präteritum für sein/haben (war, hatte), Plusquamperfekt für das Vorherige, Perfekt im wörtlichen Gespräch.",
@@ -308,6 +323,7 @@
   {
     "id": "w-b1-04",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Kommentar I: Umwelt",
     "titleAr": "تعليق 1: البيئة",
     "taskDe": "Kommentar (ca. 100 Wörter): Brauchen wir mehr Radwege? Gliederung: Einstieg → 2 Argumente (mit Konnektoren) → Schluss.",
@@ -328,6 +344,7 @@
   {
     "id": "w-b1-05",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Rat geben",
     "titleAr": "تقديم نصيحة",
     "taskDe": "Ein Freund will seinen Job kündigen, obwohl er gut verdient. Schreibe deinen Rat (80 Wörter) mit Konjunktiv II.",
@@ -348,6 +365,7 @@
   {
     "id": "w-b2-01",
     "level": "B2",
+    "format": "frei",
     "titleDe": "Zeitungskommentar",
     "titleAr": "تعليق صحفي",
     "taskDe": "Kommentar (ca. 150 Wörter) zur These: „Soziale Medien machen die Gesellschaft unzufriedener.“ Gliederung: Einstieg → These → 2 Argumente → indirekte Rede (1×) → Schluss. Mindestens 1 Funktionsverbgefüge.",
@@ -370,6 +388,7 @@
   {
     "id": "w-b2-02",
     "level": "B2",
+    "format": "brief",
     "titleDe": "Formelle E-Mail (Anfrage)",
     "titleAr": "بريد رسمي (استفسار)",
     "taskDe": "Schreibe eine formelle E-Mail (ca. 120 Wörter) an eine Firma: Interesse an einer Stelle, Qualifikationen, Termin für Gespräch. Nutze Funktionsverbgefüge + erweiterten Infinitiv.",
@@ -391,6 +410,7 @@
   {
     "id": "w-b2-03",
     "level": "B2",
+    "format": "frei",
     "titleDe": "Rezension",
     "titleAr": "مراجعة نقدية",
     "taskDe": "Rezension eines Buches/Films (ca. 150 Wörter): Inhalt kurz → Stärken/Schwächen → Fazit mit Empfehlung. Nutze zwar … doch, obgleich, im Hinblick auf.",
@@ -412,6 +432,7 @@
   {
     "id": "w-b2-04",
     "level": "B2",
+    "format": "frei",
     "titleDe": "Erörterung: Homeoffice",
     "titleAr": "دراسة قضية: العمل من المنزل",
     "taskDe": "Erörterung (ca. 150 Wörter): „Homeoffice ist die Zukunft der Arbeit.“ Für und Wider strukturiert, dann dein Standpunkt. Nutze Bedingungssätze.",
@@ -433,6 +454,7 @@
   {
     "id": "w-b2-05",
     "level": "B2",
+    "format": "brief",
     "titleDe": "Bewerbung auf Englisch? Nein: Motivationsschreiben B2",
     "titleAr": "خطاب دافع (B2)",
     "taskDe": "Motivationsschreiben (ca. 150 Wörter) für ein Stipendium/dein Traumstudium: Wer du bist, deine Ziele, warum genau du. Nutze Partizipialattribute.",
@@ -454,6 +476,7 @@
   {
     "id": "w-a1-06",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Postkarte aus dem Urlaub",
     "titleAr": "بطاقة بريدية من العطلة",
     "taskDe": "Schreibe eine kurze Postkarte (4–5 Sätze) aus dem Urlaub: Wo bist du? Wie ist das Wetter? Was machst du?",
@@ -475,6 +498,7 @@
   {
     "id": "w-a2-06",
     "level": "A2",
+    "format": "brief",
     "titleDe": "Beschwerde-E-Mail ans Hotel",
     "titleAr": "بريد شكوى إلى الفندق",
     "taskDe": "Schreibe eine kurze Beschwerde-E-Mail (6 Sätze) an ein Hotel: Problem (Zimmer/Lärm), Bitte um Lösung, Perfekt nutzen.",
@@ -496,6 +520,7 @@
   {
     "id": "w-b1-06",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Forum-Post: Lernmethoden",
     "titleAr": "مشاركة في منتدى: طرق التعلّم",
     "taskDe": "Schreibe einen Forum-Post (ca. 100 Wörter): Wie lernst du am besten? Erzähle von deiner Erfahrung und gib Tipps. Nutze: einerseits/andererseits, deshalb.",
@@ -517,6 +542,7 @@
   {
     "id": "w-b2-06",
     "level": "B2",
+    "format": "frei",
     "titleDe": "Bericht: Debatte zusammenfassen",
     "titleAr": "تقرير: تلخيص مناظرة",
     "taskDe": "Schreibe einen Bericht (ca. 150 Wörter) über die Debatte „KI im Unterricht“: Sachlich referieren (indirekte Rede!), Positionen wiedergeben, eigenes Fazit. Nutze: laut, zufolge, demzufolge.",
@@ -539,6 +565,7 @@
   {
     "id": "w-a1-07",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Nachricht an einen Freund",
     "titleAr": "رسالة قصيرة إلى صديق",
     "taskDe": "Schreibe eine kurze Nachricht (3–5 Sätze) an einen Freund: Wie geht es dir? Was machst du heute Abend? Treffen wir uns?",
@@ -560,6 +587,7 @@
   {
     "id": "w-a2-07",
     "level": "A2",
+    "format": "brief",
     "titleDe": "E-Mail an den Vermieter",
     "titleAr": "بريد إلى صاحب الشقة",
     "taskDe": "Schreibe eine E-Mail an deinen Vermieter: In deiner Wohnung ist etwas kaputt (z. B. der Wasserhahn). Beschreibe das Problem und schlage einen Termin vor.",
@@ -581,6 +609,7 @@
   {
     "id": "w-a2-08",
     "level": "A2",
+    "format": "frei",
     "titleDe": "Mein Tagesplan",
     "titleAr": "جدولي اليومي",
     "taskDe": "Schreibe über deinen Tagesplan: Wann stehst du auf? Was machst du am Vormittag, am Nachmittag und am Abend?",
@@ -602,6 +631,7 @@
   {
     "id": "w-b1-07",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Handys im Unterricht – meine Meinung",
     "titleAr": "الهواتف في الصف — رأيي",
     "taskDe": "Schreibe einen Text (ca. 80 Wörter): Sollen Handys im Unterricht erlaubt sein? Begründe deine Meinung mit zwei Argumenten.",
@@ -623,6 +653,7 @@
   {
     "id": "w-b2-07",
     "level": "B2",
+    "format": "brief",
     "titleDe": "Formelle Beschwerde",
     "titleAr": "شكوى رسمية",
     "taskDe": "Du hast einen Online-Kurs gekauft, aber der Zugang funktioniert nicht. Schreibe eine formelle Beschwerde (ca. 100 Wörter): Sachverhalt, Forderung, Frist.",
@@ -644,6 +675,7 @@
   {
     "id": "w-b2-08",
     "level": "B2",
+    "format": "frei",
     "titleDe": "Essay: Ein Auslandsjahr",
     "titleAr": "مقال: سنة في الخارج",
     "taskDe": "Schreibe ein kurzes Essay (ca. 100 Wörter): Lohnt sich ein Auslandsjahr für junge Leute? Nutze Konjunktiv II und Vergleiche.",
@@ -665,6 +697,7 @@
   {
     "id": "w-a1-08",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Eine SMS an die Lehrerin",
     "titleAr": "رسالة قصيرة إلى المعلّمة",
     "taskDe": "Du bist krank und kannst nicht zum Kurs kommen. Schreibe eine kurze Nachricht (3–4 Sätze): Grund, wie lange, eine Frage zu den Hausaufgaben.",
@@ -686,6 +719,7 @@
   {
     "id": "w-a1-09",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Postkarte an einen Freund",
     "titleAr": "بطاقة بريدية إلى صديق",
     "taskDe": "Schreibe eine Postkarte an einen Freund (4–5 Sätze): Wo bist du? Wie ist das Wetter? Was machst du? Wann kommst du zurück?",
@@ -707,6 +741,7 @@
   {
     "id": "w-a1-10",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Ein Formular im Amt",
     "titleAr": "استمارة في الدائرة",
     "taskDe": "Fülle das Formular für die Anmeldung im Sprachkurs aus: Vorname, Nachname, Geburtsdatum, Adresse mit Postleitzahl, Telefon, Muttersprache, Kurs (A1/A2).",
@@ -728,6 +763,7 @@
   {
     "id": "w-a2-09",
     "level": "A2",
+    "format": "brief",
     "titleDe": "Absage einer Einladung",
     "titleAr": "الاعتذار عن دعوة",
     "taskDe": "Eine Freundin lädt dich zu ihrer Hochzeit ein, aber du kannst nicht kommen. Schreibe eine E-Mail (6–8 Sätze): Dank, Grund, Entschuldigung, Vorschlag für ein Treffen.",
@@ -749,6 +785,7 @@
   {
     "id": "w-a2-10",
     "level": "A2",
+    "format": "brief",
     "titleDe": "Beschwerde beim Hausmeister",
     "titleAr": "شكوى إلى حارس البناية",
     "taskDe": "Die Heizung in deiner Wohnung funktioniert seit drei Tagen nicht. Schreibe eine kurze Nachricht an den Hausmeister (6–8 Sätze): Problem, seit wann, was du schon gemacht hast, Bitte um Termin.",
@@ -770,6 +807,7 @@
   {
     "id": "w-a2-11",
     "level": "A2",
+    "format": "frei",
     "titleDe": "Ein Erlebnis erzählen",
     "titleAr": "سرد تجربة",
     "taskDe": "Erzähle von einem Tag, an dem etwas nicht geklappt hat (7–9 Sätze): Was war der Plan? Was ist passiert? Wie ist es ausgegangen? Benutze das Perfekt.",
@@ -791,6 +829,7 @@
   {
     "id": "w-b1-08",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Forumsbeitrag: Homeoffice",
     "titleAr": "مشاركة في منتدى: العمل من البيت",
     "taskDe": "In einem Forum wird diskutiert, ob Homeoffice gut für Familien ist. Schreibe einen Beitrag (ca. 100 Wörter): eigene Erfahrung, ein Vorteil, ein Nachteil, deine Meinung mit Begründung.",
@@ -812,6 +851,7 @@
   {
     "id": "w-b1-09",
     "level": "B1",
+    "format": "brief",
     "titleDe": "Halbformelle E-Mail: Kurs verschieben",
     "titleAr": "إيميل شبه رسمي: تأجيل دورة",
     "taskDe": "Du hast einen Fortbildungskurs gebucht, kannst aber am Termin nicht teilnehmen. Schreibe an die Sprachschule (ca. 100 Wörter): Situation, Bitte um Verschiebung, Alternativtermine, Frage zu Kosten.",
@@ -833,6 +873,7 @@
   {
     "id": "w-b1-10",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Bericht: Ein Missverständnis",
     "titleAr": "تقرير: سوء فهم",
     "taskDe": "Schreibe für den Kurs einen kurzen Bericht (ca. 100 Wörter) über ein Missverständnis in Deutschland: Was ist passiert? Warum kam es dazu? Was hast du daraus gelernt?",
@@ -854,6 +895,7 @@
   {
     "id": "w-b2-09",
     "level": "B2",
+    "format": "brief",
     "titleDe": "Leserbrief: Tempolimit in der Innenstadt",
     "titleAr": "رسالة قارئ: تحديد السرعة في وسط المدينة",
     "taskDe": "Die Lokalzeitung diskutiert ein Tempolimit von 30 km/h in der ganzen Innenstadt. Schreibe einen Leserbrief (ca. 150 Wörter): Bezug auf die Debatte, zwei Argumente, ein Gegenargument mit Entkräftung, Fazit.",
@@ -876,6 +918,7 @@
   {
     "id": "w-b2-10",
     "level": "B2",
+    "format": "brief",
     "titleDe": "Formelle Beschwerde: Onlinekauf",
     "titleAr": "شكوى رسمية: شراء عبر الإنترنت",
     "taskDe": "Ein online bestelltes Gerät kam beschädigt an, und der Kundendienst antwortet seit zwei Wochen nicht. Schreibe eine formelle Beschwerde (ca. 150 Wörter): Sachverhalt mit Daten, bisherige Schritte, konkrete Forderung mit Frist, Hinweis auf Verbraucherzentrale.",
@@ -897,6 +940,7 @@
   {
     "id": "w-b2-11",
     "level": "B2",
+    "format": "frei",
     "titleDe": "Stellungnahme: Ehrenamt verpflichtend?",
     "titleAr": "موقف: هل يكون التطوع إلزامياً؟",
     "taskDe": "In deiner Stadt wird vorgeschlagen, dass alle Schülerinnen und Schüler der Oberstufe 40 Stunden Ehrenamt leisten müssen. Schreibe eine Stellungnahme (ca. 180 Wörter): Einleitung, Vorteile, Nachteile, eigene Position mit Begründung, Vorschlag.",
@@ -919,6 +963,7 @@
   {
     "id": "w-a0-03",
     "level": "A0",
+    "format": "frei",
     "titleDe": "Mich vorstellen (5 Sätze)",
     "titleAr": "تقديم نفسي (5 جمل)",
     "taskDe": "Schreibe 5 einfache Sätze über dich: Name, Alter, Herkunft, Wohnort, Beruf/Studium. Nutze \"ich heiße\", \"ich bin\", \"ich komme aus\", \"ich wohne in\", \"ich bin (Beruf)\".",
@@ -939,6 +984,7 @@
   {
     "id": "w-a0-04",
     "level": "A0",
+    "format": "frei",
     "titleDe": "Meine Familie",
     "titleAr": "عائلتي",
     "taskDe": "Schreibe 4–6 Sätze über deine Familie: Wie viele Personen? Wie heißen sie? Wie alt sind sie? Was machen sie beruflich?",
@@ -959,6 +1005,7 @@
   {
     "id": "w-a0-05",
     "level": "A0",
+    "format": "frei",
     "titleDe": "Zahlen und Farben",
     "titleAr": "الأرقام والألوان",
     "taskDe": "Schreibe die Zahlen von 1 bis 20 auf Deutsch und nenne zu 5 Farben ein Beispiel (der Himmel ist blau usw.).",
@@ -978,6 +1025,7 @@
   {
     "id": "w-a1-11",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Mein Wochenplan",
     "titleAr": "برنامج أسبوعي",
     "taskDe": "Schreibe 8–10 Sätze über deinen typischen Wochenablauf: Wann stehst du auf? Was machst du am Montag/Dienstag/...? Was machst du am Wochenende?",
@@ -998,6 +1046,7 @@
   {
     "id": "w-a1-12",
     "level": "A1",
+    "format": "frei",
     "titleDe": "Mein Lieblingsort",
     "titleAr": "مكاني المفضل",
     "taskDe": "Beschreibe deinen Lieblingsort: Wo ist er? Warum gefällt er dir? Was machst du dort?",
@@ -1018,6 +1067,7 @@
   {
     "id": "w-b1-11",
     "level": "B1",
+    "format": "brief",
     "titleDe": "Beschwerde-E-Mail an ein Online-Geschäft",
     "titleAr": "رسالة شكوى لمتجر إلكتروني",
     "taskDe": "Du hast vor einer Woche online ein Smartphone bestellt. Es ist angekommen, aber das Display hat einen Kratzer. Schreibe eine E-Mail an den Kundenservice (ca. 100 Wörter): Grund für die Beschwerde, was passiert ist, was du verlangst (Umtausch/Rückerstattung), Frist.",
@@ -1038,6 +1088,7 @@
   {
     "id": "w-b1-12",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Meine Meinung zum Lernen mit Apps",
     "titleAr": "رأيي في التعلّم بالتطبيقات",
     "taskDe": "Schreibe einen Forumsbeitrag (ca. 100 Wörter) über das Sprachenlernen mit Apps: Vor- und Nachteile, deine Erfahrung, Empfehlung.",
@@ -1058,6 +1109,7 @@
   {
     "id": "w-b2-12",
     "level": "B2",
+    "format": "frei",
     "titleDe": "Kommentar zur Digitalisierung an Schulen",
     "titleAr": "تعليق حول الرقمنة في المدارس",
     "taskDe": "Schreibe einen Kommentar (ca. 150 Wörter) für eine Online-Zeitung: Welche Chancen und Risiken birgt die Digitalisierung in Schulen? Nenne mindestens zwei Argumente pro und zwei contra sowie ein Beispiel. Schließe mit deiner begründeten Meinung.",
@@ -1079,6 +1131,7 @@
   {
     "id": "w-b2-13",
     "level": "B2",
+    "format": "brief",
     "titleDe": "Formelle Beschwerde an den Vermieter",
     "titleAr": "شكوى رسمية للمؤجِّر",
     "taskDe": "Seit Wochen ist die Heizung in deiner Wohnung defekt. Du hast den Vermieter bereits zweimal telefonisch informiert, aber nichts passiert. Schreibe einen formellen Brief (ca. 150 Wörter) mit genauer Schilderung, Verweis auf frühere Meldungen, angemessener Frist (14 Tage) und Ankündigung von Rechtsmitteln (Mietminderung) bei Nichterfüllung.",
@@ -1100,6 +1153,7 @@
   {
     "id": "w-a0-06",
     "level": "A0",
+    "format": "frei",
     "titleDe": "Sich vorstellen (Postkarte)",
     "titleAr": "تقديم النفس (بطاقة بريدية)",
     "taskDe": "Schreiben Sie 3–4 Sätze auf einer Postkarte: Name, Alter, Wohnort und Hobby.",
@@ -1120,6 +1174,7 @@
   {
     "id": "w-a1-13",
     "level": "A1",
+    "format": "brief",
     "titleDe": "Einladung zum Geburtstag",
     "titleAr": "دعوة عيد ميلاد",
     "taskDe": "Schreiben Sie an Ihre Freundin Ayşe eine E-Mail (ca. 40 Wörter): Einladung zur Geburtstagsfeier – wann? wo? was soll sie mitbringen?",
@@ -1140,6 +1195,7 @@
   {
     "id": "w-a2-12",
     "level": "A2",
+    "format": "brief",
     "titleDe": "Beschwerde an Hotel",
     "titleAr": "شكوى إلى الفندق",
     "taskDe": "Schreiben Sie an ein Hotel in München (ca. 80 Wörter): Sie waren letztes Wochenende dort – das Zimmer war kalt, das WLAN funktionierte nicht – bitten Sie um Entschuldigung / Teilrückerstattung.",
@@ -1160,6 +1216,7 @@
   {
     "id": "w-b1-13",
     "level": "B1",
+    "format": "frei",
     "titleDe": "Meinung: Handyverbot in der Schule?",
     "titleAr": "رأي: هل يُمنع الهاتف في المدرسة؟",
     "taskDe": "Schreiben Sie einen Forumsbeitrag (ca. 110 Wörter): Sind Sie für oder gegen ein Handyverbot in Schulen? Nennen Sie zwei Argumente und ein Beispiel.",
@@ -1180,6 +1237,7 @@
   {
     "id": "w-b2-14",
     "level": "B2",
+    "format": "frei",
     "titleDe": "Kommentar: Homeoffice – Chance oder Risiko?",
     "titleAr": "تعليق: العمل من البيت فرصة أم خطر؟",
     "taskDe": "Schreiben Sie einen Kommentar für eine Online-Zeitung (ca. 160 Wörter): Vorteile und Risiken des Homeoffice für Arbeitnehmer und Arbeitgeber. Beziehen Sie klar Stellung.",

@@ -154,6 +154,10 @@ export interface Hoerdialog {
 export interface Schreibaufgabe {
   id: string;
   level: Level;
+  /** صيغة الامتحان (E4): brief = إطار رسالة (تحية/ختام جزء من الإنجاز)، frei = نص حر */
+  format?: "brief" | "frei";
+  /** طول الهدف الرسمي بالكلمات إن وُسم في البنك */
+  zielWort?: number;
   titleDe: string;
   titleAr: string;
   taskDe: string;
