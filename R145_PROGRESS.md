@@ -353,6 +353,17 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R198 — KI-Sprechbegleiter (BYOK-Rollenspiel) — abgeschlossen ✅
+
+- `llmGespraech` in lib/grader.ts (einziger Fetch-Pfad, K122c unangetastet) +
+  `lib/sprechbegleiter.ts` (6 Szenarien, Systemprompt ohne Aussprache-Urteil,
+  💡-Tipp-Trennung) + `components/sprechbegleiter.tsx` (Chat, TTS-Antworten,
+  Mikro nur hinter cloudSpracheFrei, Verlauf nur im Speicher).
+- Station in /ueben nach muendlich (K112a dokumentiert erweitert).
+- Ehrlichkeit: ohne Schlüssel+Zustimmung keine Eingabe (C1); Sprach-Hinweise als
+  KI-Einschätzung markiert; **nicht live mit echtem Schlüssel getestet** (wie R170).
+- **Nachweise**: tsc ✓ · smoke **1770/0** (K291a-b) · interaktiv **725/0** (C1-2) · audit 0 · build ✓.
+
 ## R197 — Fachsprache Pflege: eigenständiger Zusatz-Track — abgeschlossen ✅
 
 - Neue Bank `content/pflege.json` (Bankdateien 51→52, K257a dokumentiert erweitert):

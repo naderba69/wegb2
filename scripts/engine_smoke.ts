@@ -50,6 +50,7 @@ import {
   FEHLER_KAT,
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER } from "../lib/grader";
+import { SPRECH_SZENARIEN, teileAntwort } from "../lib/sprechbegleiter";
 import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
 import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisExamen } from "../lib/bereitschaft";
 import { bewerteKriterien } from "../lib/kriterien";
@@ -2024,8 +2025,8 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197: امتداد بنيوي موثّق داخل مجموعة المهارات) ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,tiefen,katalog"'),
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198: امتداد بنيوي موثّق) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← تذوّق ← معجم ← كاتالوج");
     const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
@@ -13333,6 +13334,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("ليست امتحانًا رسميًا") &&
      !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
     "K290b المحطة مركّبة في /ueben كإضافة اختيارية، والخطة ذات الـ378 يومًا لا تعرف عنها شيئًا — الجسر لا يهزّ العمود الفقري");
+}
+
+// ===== K291 (R198 · KI-Sprechbegleiter): BYOK-Rollenspiel fürs Sprechen —
+// einziger Fetch bleibt llmGespraech in grader.ts (K122c unverändert), kein
+// Senden ohne llmBereit, kein Aussprache-Urteil, Verlauf nur im Speicher,
+// Mikrofon nur hinter cloudSpracheFrei (K122e greift automatisch). =====
+{
+  const sbSrc = readFileSync("lib/sprechbegleiter.ts", "utf8");
+  const compSrc = readFileSync("components/sprechbegleiter.tsx", "utf8");
+  const gradSrc = readFileSync("lib/grader.ts", "utf8");
+  ok(SPRECH_SZENARIEN.length === 6 && SPRECH_SZENARIEN.every((s) => s.startDe && s.rolleDe) &&
+     sbSrc.includes("Sprich NIEMALS über Aussprache") && !sbSrc.includes("fetch(") &&
+     gradSrc.includes("export async function llmGespraech") && teileAntwort("Antwort.\n💡 أحسنت").tipp === "أحسنت" &&
+     teileAntwort("Nur Text").tipp === null,
+    "K291a ستة سيناريوهات بدور وسطر بداية، والموجّه يحرّم كلام النطق، وفصل الملاحظة يعمل — وكل ذلك بلا fetch خارج grader");
+  ok(compSrc.includes("llmBereit") && compSrc.includes('data-testid="begleiter-nicht-bereit"') &&
+     compSrc.includes("لا حكم على النطق") && compSrc.includes("/einstellungen") &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("<SprechBegleiter />"),
+    "K291b المحطة لا تفتح حوارًا بلا مفتاح+موافقة، وتفصح عن حدّها، ومركّبة في /ueben");
 }
 
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den

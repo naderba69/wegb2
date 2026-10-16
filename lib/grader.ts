@@ -472,6 +472,36 @@ export async function llmKorrigieren(
   }
 }
 
+/** 🗣️ محادثة حرّة مع رفيق ذكاء اصطناعي (R198) — نفس مسار fetch الوحيد (K122c) وبوابة llmBereit نفسها.
+ *  يعيد نصّ الردّ كما هو؛ التفسير والعرض مسؤولية المستدعي. بلا مفتاح/موافقة: null بصمت. */
+export async function llmGespraech(
+  cfg: LlmCfg,
+  nachrichten: { role: "system" | "user" | "assistant"; content: string }[]
+): Promise<string | null> {
+  if (!llmBereit(cfg)) return null; // R170/R198: مفتاح بلا موافقة = لا إرسال
+  try {
+    const base = (cfg.baseUrl || "https://api.openai.com/v1").replace(/\/+$/, "");
+    const res = await fetch(`${base}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: cfg.model || "gpt-4o-mini",
+        temperature: 0.6,
+        messages: nachrichten,
+      }),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const raw: string = data?.choices?.[0]?.message?.content ?? "";
+    return raw.trim() ? raw : null;
+  } catch {
+    return null;
+  }
+}
+
 /* ── E4/R173: تقييم اختياري بمعايير Goethe الأربعة عبر المدرّس الذكي (BYOK + موافقة فقط) ── */
 
 export interface LlmKriterien {

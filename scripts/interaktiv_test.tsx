@@ -3395,6 +3395,16 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(txt().includes("Vitalzeichen kontrolliert"), "XCIX3 نموذج التوثيق يُكشف عند الطلب مع قائمة فحصه");
   }
 
+  /* ═══ C — رفيق المحادثة (R198): مغلق بلا BYOK، ولا إرسال صامت ═══ */
+  {
+    const { SprechBegleiter } = await import("../components/sprechbegleiter");
+    mount(React.createElement(SprechBegleiter));
+    ok(!!rootEl.querySelector('[data-testid="begleiter-nicht-bereit"]') && !rootEl.querySelector('[data-testid="begleiter-eingabe"]'),
+      "C1 بلا مفتاح وموافقة لا حقل إدخال ولا محادثة — فقط شرح وزرّ إلى الإعدادات");
+    ok(txt().includes("لا حكم على النطق") && txt().includes("تسليم وردية"),
+      "C2 الإفصاح عن حدّ النطق والسيناريوهات الستة (تمريض أولًا) ظاهر قبل أيّ تفعيل");
+  }
+
   /* ═══ XCVI — وصولية U5 تحت الإصبع: لغة الألماني معلنة وتخطٍّ وتركيز ═══ */
   {
     const { De, DeBlock } = await import("../components/De");

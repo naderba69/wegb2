@@ -23,6 +23,7 @@ import { KatalogLeiste } from "@/components/katalog";
 import { EinstufungTest } from "@/components/einstufung";
 import { ShadowingStation } from "@/components/shadowing";
 import { PflegeStation } from "@/components/pflege";
+import { SprechBegleiter } from "@/components/sprechbegleiter";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
@@ -33,7 +34,7 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,tiefen,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
@@ -44,6 +45,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   hoeren: { icon: "🎧", titel: "معمل الاستماع", unter: "تدرّب على فهم النص المسموع." },
   lueck: { icon: "📝", titel: "إكمال الجمل", unter: "أكمل الكلمات الناقصة في الجملة." },
   muendlich: { icon: "🗣️", titel: "التدريب الشفوي", unter: "تحدّث ثم راجع الملاحظات المتاحة." },
+  begleiter: { icon: "🤖", titel: "رفيق المحادثة الذكي", unter: "حوار حرّ مع شريك ذكاء اصطناعي بأدوار مهنية — بمفتاحك وموافقتك فقط." },
   schatten: { icon: "🎙️", titel: "التظليل الصوتي", unter: "ردّد مع النموذج وقارن موجتك وإيقاعك زمنيًا — لا حكم نطق." },
   vortrag: { icon: "🎤", titel: "التحدّث أمام الجمهور", unter: "تدرّب على عرض قصير ضمن وقت محدد." },
   interview: { icon: "🤝", titel: "مقابلة العمل", unter: "تدرّب على الإجابة عن أسئلة المقابلة." },
@@ -69,7 +71,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-skills",
     title: "تدرّب على المهارات",
     description: "اختر مهارة أو طبّق ما تعلّمته في موقف.",
-    items: ["hoeren", "hoerneu", "lueck", "muendlich", "schatten", "vortrag", "interview", "briefe", "szenarien", "pflege", "leseleiter", "redemittel", "vertiefung"],
+    items: ["hoeren", "hoerneu", "lueck", "muendlich", "begleiter", "schatten", "vortrag", "interview", "briefe", "szenarien", "pflege", "leseleiter", "redemittel", "vertiefung"],
   },
   {
     id: "ueben-reference",
@@ -203,6 +205,7 @@ export default function Ueben() {
           {offen === "einstufung" && <EinstufungTest />}
           {offen === "schatten" && <ShadowingStation />}
           {offen === "pflege" && <PflegeStation />}
+          {offen === "begleiter" && <SprechBegleiter />}
           {offen === "katalog" && <KatalogLeiste />}
         </section>
       </div>
