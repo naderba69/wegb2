@@ -3,7 +3,8 @@
 هذا السجلّ هو ردّ التنفيذ على `AUDIT_STUDENT_TEACHER_2026-10-15.md` بأمر «ابدا الاصلاح».
 القاعدة الحاكمة (RULES.md): لا تُعطَّل بوابة أبداً؛ لا يُحدَّث قفل رقمي إلا بعد إثبات تغيّر البنك؛
 كل إصلاح موثق بمُرساة دليل + بوابة تحرسه.
-> Status nach R192: **ROADMAP VOLLSTÄNDIG — Axis E ✅ · Axis C ✅ · Axis M ✅ · Axis U ✅ (R171–R192)**
+> Status nach R193: **Roadmap R171–R192 vollständig · Redesign läuft: R193 ✅ (Pfad-Startseite)**
+> R193 — alle Gates grün (smoke 1762/0, interaktiv 718/0). Weiter: R194–R196 Redesign.
 > R192 (U6 Zieltempo) — alle Gates grün (smoke 1760/0, interaktiv 715/0). Offen: Abschlussverifikation + mögliche Bonus-Runden nur auf Besitzer-Wunsch.
 > R191 (U5 A11y) — alle Gates grün (smoke 1756/0, interaktiv 715/0). Weiter: U6 (letzte Roadmap-Runde R192), danach Abschluss-Audit.
 > R190 (U4 Lehrermodus) — alle Gates grün (smoke 1754/0). Weiter: U5, U6.
@@ -351,6 +352,16 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
+
+## R193 — Redesign Etappe 1: Startseite als Lernpfad — abgeschlossen ✅
+
+- **Besitzer-Vorgabe**: Oberflächen überladen, Didaktik abschreckend → Richtung «visueller
+  Lernpfad», voller Redesign-Spielraum bei unverändertem Motor/Coverage/Gates.
+- **Neu**: `components/lernpath.tsx` (18 Abschnitte, Knoten aus geschlossenen Tagen, heutiger
+  Knoten scrollt zur Sitzung); Wochen-Zielkarte + Wochenplan von der Startseite in die
+  Fortschritts-Station «الأسبوع» verlegt (K281c als Verlegung aktualisiert, Ableitung gleich).
+- **Nachweise**: tsc ✓ · smoke **1762/0** (K286a/b) · interaktiv **718/0** (XCVII1–3) · audit 0 · build ✓.
+  Weiter: R194 Sitzungsplayer entschlacken, R195 Stationen, R196 Praxis-zuerst + Abwechslung.
 
 ## R192 — U6 Zieltempo mit Prüfdatum — abgeschlossen ✅ · **Roadmap R171–R192 vollständig**
 

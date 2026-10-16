@@ -3380,6 +3380,26 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "XCVI2 رابط التخطّي يشير إلى هدفٍ موجود (#main-content) في الهيكل نفسه");
   }
 
+  /* ═══ XCVII — مسار التعلّم (R193): عُقد من السجلّ وزرّ اليوم ═══ */
+  {
+    const { LernPfad } = await import("../components/lernpath");
+    const { CURRICULUM_SECTIONS } = await import("../lib/curriculum");
+    const abschnitt = CURRICULUM_SECTIONS[1]; // unit-A1-1: 11..31
+    const prog = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 15, days: {
+      11: { closed: true, score: 8, total: 10, tasksDone: 5, tasksTotal: 6, at: "2026-10-01T10:00:00.000Z" },
+      12: { closed: true, score: 9, total: 10, tasksDone: 6, tasksTotal: 6, at: "2026-10-02T10:00:00.000Z" },
+    } } };
+    mount(React.createElement(LernPfad, { progress: prog as never }));
+    const pfad = rootEl.querySelector('[data-testid="lern-pfad"]');
+    ok(!!pfad && (abschnitt.to - abschnitt.from + 1) === 21, "XCVII1 المسار يُركَّب وقسم A1 الأول 21 يومًا كما في المنهج");
+    const heute = rootEl.querySelector('[data-testid="pfad-heute"]') as HTMLElement | null;
+    const zu = rootEl.querySelectorAll('[data-testid="pfad-zu"]');
+    ok(!!heute && (heute.textContent ?? "").includes("15") && zu.length === 2,
+      "XCVII2 عقدة اليوم تحمل 15، وعقدتا المغلق ✓ من السجلّ تمامًا");
+    ok((pfad?.textContent ?? "").includes("أُغلق 2/21") && (pfad?.textContent ?? "").includes("لا ينقلك بين الأيام"),
+      "XCVII3 عدّاد القسم من السجلّ وإفصاح عدم-التنقّل ظاهر للمتعلم");
+  }
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

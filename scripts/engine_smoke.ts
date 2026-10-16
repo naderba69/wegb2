@@ -13177,9 +13177,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K281b بسجلّ فارغ: أصفار صادقة وهدف بداية معلَن (3) لا يتنكّر كإيقاع مقاس");
   const mvSrc = readFileSync("components/motivation.tsx", "utf8");
   const pgSrc2 = readFileSync("app/page.tsx", "utf8");
-  ok(pgSrc2.includes("<WochenZielKarte progress={progress} />") && mvSrc.includes("من سجلّك") &&
-     mvSrc.includes("لا نقدّم نقاطًا") && !/(XP|عملات|coins)/.test(mvSrc),
-    "K281c البطاقة على الرئيسية، وأرقامها موسومة بمصدرها السجلّي، وبلا نقاط زينة إطلاقًا");
+  const fortSrc2 = readFileSync("app/fortschritt/page.tsx", "utf8");
+  ok(fortSrc2.includes("<WochenZielKarte progress={progress} />") && !pgSrc2.includes("WochenZielKarte") &&
+     mvSrc.includes("من سجلّك") && mvSrc.includes("لا نقدّم نقاطًا") && !/(XP|عملات|coins)/.test(mvSrc),
+    "K281c البطاقة في محطة الأسبوع بصفحة التقدّم (نُقلت من الرئيسية المكدّسة في R193 دون تغيير اشتقاقها)، وأرقامها موسومة بمصدرها السجلّي، وبلا نقاط زينة إطلاقًا");
 }
 
 // ===== K282 (R189 · U3): Offline-PWA — SW deckt Shell, banks.json (SWR) und
@@ -13250,6 +13251,26 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K285c بطاقة الإيقاع في قسم الموعد وتحذير الاستحالة الصريح حاضر");
   ok(ztSrc.includes("لن نكسر سقوف الأيام ولا نحذف تغطية") && ztSrc.includes("تقديرات الخطة المخطّطة"),
     "K285d الإفصاحان ملازمان: لا كسر سقوف/لا حذف تغطية، والدقائق تقديرات مخططة لا وعود");
+}
+
+// ===== K286 (R193 · Redesign Etappe 1): Startseite ist ein Lernpfad — die 17
+// Curriculum-Abschnitte als Weg, heutiger Tag als einziger Aktions-Knoten; die
+// Wochenkarten leben jetzt in der Fortschritts-Station (gleiche Ableitung). =====
+{
+  let lueckenlos = CURRICULUM_SECTIONS.length === 18 && CURRICULUM_SECTIONS[0].from === 1 &&
+    CURRICULUM_SECTIONS[CURRICULUM_SECTIONS.length - 1].to === TOTAL_DAYS;
+  for (let i = 1; i < CURRICULUM_SECTIONS.length; i++) {
+    if (CURRICULUM_SECTIONS[i].from !== CURRICULUM_SECTIONS[i - 1].to + 1) lueckenlos = false;
+  }
+  ok(lueckenlos, "K286a أقسام المسار 18 (17 وحدة + ختام) تغطي الأيام 1..378 متصلة بلا فجوة ولا تداخل");
+  const homeSrc = readFileSync("app/page.tsx", "utf8");
+  const pfadSrc = readFileSync("components/lernpath.tsx", "utf8");
+  const pfadAt = homeSrc.indexOf("<LernPfad");
+  const spielerAt = homeSrc.indexOf("<Klassenzimmer");
+  ok(pfadAt >= 0 && spielerAt > pfadAt && !homeSrc.includes("<Wochenplan") &&
+     pfadSrc.includes('data-testid="lern-pfad"') && pfadSrc.includes('data-testid="pfad-heute"') &&
+     pfadSrc.includes("progress.plan.days[d]?.closed") && pfadSrc.includes("لا ينقلك بين الأيام"),
+    "K286b الرئيسية تعرض المسار قبل المشغّل، وخطة الأسبوع غادرتها، وعُقد المسار مشتقّة من الأيام المغلقة مع إفصاح عدم-التنقّل");
 }
 
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den

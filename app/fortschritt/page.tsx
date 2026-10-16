@@ -12,6 +12,7 @@ import { LernStrategieZentrum } from "@/components/lernstrategie";
 import { ElternPaket } from "@/components/elternpaket";
 import { KontraktCard } from "@/components/kontrakt";
 import { Wochenplan } from "@/components/wochen";
+import { WochenZielKarte } from "@/components/motivation";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
@@ -81,7 +82,7 @@ export default function Fortschritt() {
           {offen === "lernstrategie" && <LernStrategieZentrum progress={progress} />}
           {offen === "eltern" && <ElternPaket progress={progress} name={activeProfile().name} />}
           {offen === "kontrakt" && <KontraktCard progress={progress} />}
-          {offen === "wochen" && <Wochenplan progress={progress} />}
+          {offen === "wochen" && (<div style={{ display: "grid", gap: "0.9rem" }}><WochenZielKarte progress={progress} /><Wochenplan progress={progress} /></div>)}
         </section>
       </div>
     );
