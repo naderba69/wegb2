@@ -13425,10 +13425,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   };
   const pfSrc3 = readFileSync("components/pflege.tsx", "utf8");
   const lwSrc2 = readFileSync("components/lebenswelt.tsx", "utf8");
-  ok(pf3.fachwissen.length === 20 && pf3.fachwissen.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3 && f.erklaerungAr.length > 30) &&
-     new Set(pf3.fachwissen.map((f) => f.frage)).size === 20 &&
+  ok(pf3.fachwissen.length === 40 && pf3.fachwissen.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3 && f.erklaerungAr.length > 30) &&
+     new Set(pf3.fachwissen.map((f) => f.frage)).size === 40 && // R216: بنك المعرفة 20→40 سؤالًا
      pfSrc3.includes('data-testid="pflege-fachwissen"') && pfSrc3.includes("تحدّدها ولايتك"),
-    "K296a بنك المعرفة المهنية: 20 سؤالًا فريدًا بسليم الخيارات وشرح عربي، موسومًا تدريبًا لا أسئلة ولاية رسمية");
+    "K296a بنك المعرفة المهنية: 40 سؤالًا فريدًا (R216: +20 في الوضعيات الجانبية والوقايات والحقوق والقيم) بسليم الخيارات وشرح عربي، موسومًا تدريبًا لا أسئلة ولاية رسمية");
   ok(lwSrc2.includes('data-testid="berufsstart"') && lwSrc2.includes("weg-berufsstart") &&
      !lwSrc2.includes("saveProgress") && !lwSrc2.includes("update(") &&
      readFileSync("lib/lebenswelt.ts", "utf8").includes("BERUFSSTART_SCHRITTE"),

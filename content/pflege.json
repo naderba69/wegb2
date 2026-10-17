@@ -2970,6 +2970,206 @@
    ],
    "richtig": 1,
    "erklaerungAr": "بعد السقوط: لا تحرّك عند اشتباه كسر، قيّم وقيّس، أبلغ الطبيب، وثّق بمحضر سقوط."
+  },
+  {
+   "frage": "Ein bewusstloser Patient atmet normal. Welche Lagerung ist richtig?",
+   "optionen": [
+    "Rückenlage mit hoch gelagerten Beinen",
+    "Stabile Seitenlage",
+    "Bauchlage"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الوضع الجانبي المستقر يحمي فاقد الوعي الذي يتنفس طبيعيًا من الاختناق بالقيء أو اللسان، حتى وصول المساعدة."
+  },
+  {
+   "frage": "Was gehört zur Kontrakturenprophylaxe?",
+   "optionen": [
+    "Gelenke möglichst ruhig stellen",
+    "Regelmäßige Bewegung und Lagerungswechsel",
+    "Nur Medikamente geben"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الوقاية من تصلّب المفاصل تكون بالحركة المنتظمة وتغيير التموضع وتحريك المفاصل ضمن مداها، لا بتثبيتها."
+  },
+  {
+   "frage": "Was ist beim Essen zur Aspirationsprophylaxe am wichtigsten?",
+   "optionen": [
+    "Schnell essen, solange es warm ist",
+    "Aufrechte Sitzposition und Schlucken beobachten",
+    "Im Liegen kleine Schlucke Wasser geben"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الجلوس المستقيم ولقيمات صغيرة ومراقبة البلع تقلّل خطر دخول الطعام إلى مجرى الهواء (الاستنشاق)."
+  },
+  {
+   "frage": "Welches Hautzeichen spricht für einen beginnenden Dekubitus (Stadium I)?",
+   "optionen": [
+    "Eine Rötung, die sich nicht wegdrücken lässt",
+    "Trockene Haut ohne Rötung",
+    "Ein blauer Fleck nach einem Stoß"
+   ],
+   "richtig": 0,
+   "erklaerungAr": "احمرار لا يزول بالضغط الخفيف على الجلد السليم هو العلامة الأولى لقرحة الضغط — يجب تخفيف الضغط فورًا وتوثيقها."
+  },
+  {
+   "frage": "Wie viele Pflegegrade gibt es und wer stellt sie fest?",
+   "optionen": [
+    "3 Grade, der Hausarzt allein",
+    "5 Grade, Begutachtung u. a. durch den Medizinischen Dienst",
+    "10 Grade, das Krankenhaus"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "درجات الرعاية خمس (1–5) وتُحدَّد بعد تقييم الاستقلالية من الجهة الطبية المختصة (MD) وقرار صندوق التأمين."
+  },
+  {
+   "frage": "Was regelt eine Vorsorgevollmacht?",
+   "optionen": [
+    "Das Erbe nach dem Tod",
+    "Wer entscheiden darf, wenn man selbst nicht mehr entscheiden kann",
+    "Die Höhe des Pflegegelds"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "وكالة الاحتياط تسمّي من يمثّل الشخص في القرارات الصحية والمالية عندما يعجز عن التعبير بنفسه."
+  },
+  {
+   "frage": "Ein Patient stuft seinen Schmerz mit 8 auf der Skala 0–10 ein. Was bedeutet das?",
+   "optionen": [
+    "Leichter Schmerz, keine Maßnahme nötig",
+    "Starker Schmerz — melden, Maßnahme nach Plan, Wirkung kontrollieren",
+    "Der Patient übertreibt sicher"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "مقياس الألم العددي: 0 لا ألم و10 الأشد. قيمة 8 ألم قوي يستلزم إبلاغًا وإجراءً وفق الخطة وإعادة تقييم."
+  },
+  {
+   "frage": "Welche Atemfrequenz ist bei Erwachsenen in Ruhe normal?",
+   "optionen": [
+    "Etwa 12–18 Atemzüge pro Minute",
+    "Etwa 30–40 pro Minute",
+    "Etwa 5–8 pro Minute"
+   ],
+   "richtig": 0,
+   "erklaerungAr": "معدل التنفس الطبيعي للبالغ في الراحة نحو 12–18 في الدقيقة؛ الانحراف الواضح علامة تستحق الملاحظة والإبلاغ."
+  },
+  {
+   "frage": "Was gilt für die Sauerstoffgabe?",
+   "optionen": [
+    "Jede Pflegekraft darf sie eigenständig starten",
+    "Nur nach ärztlicher Anordnung mit Zielwert",
+    "Nur bei jungen Patienten erlaubt"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الأكسجين دواء: يُعطى بأمر الطبيب مع قيمة استهداف للتشبع، وتُراقب الاستجابة وتُوثَّق."
+  },
+  {
+   "frage": "Was ist bei einer Antibiotikatherapie zu beachten?",
+   "optionen": [
+    "Absetzen, sobald es besser geht",
+    "Vollständig und zu den festen Zeiten einnehmen",
+    "Dosis bei Fieber selbst verdoppeln"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "المضاد الحيوي يُؤخذ كاملًا وفي أوقات ثابتة حتى نهاية الخطة، حتى لا تنشأ مقاومة أو يعود الالتهاب."
+  },
+  {
+   "frage": "Was ist bei Insulininjektionen zur Hautpflege wichtig?",
+   "optionen": [
+    "Immer genau dieselbe Stelle nutzen",
+    "Einstichstellen regelmäßig wechseln (z. B. Bauch, Oberschenkel)",
+    "Nur in den Arm spritzen"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "تدوير مواضع الحقن يمنع تصلّب الدهون تحت الجلد (ليبوديستروفي) الذي يفسد امتصاص الإنسولين."
+  },
+  {
+   "frage": "Was ist Biografiearbeit in der Demenzpflege?",
+   "optionen": [
+    "Die Lebensgeschichte des Menschen für Vertrauen und Alltag nutzen",
+    "Nur Medikamente nach Uhrzeit geben",
+    "Den Patienten über seine Fehler aufklären"
+   ],
+   "richtig": 0,
+   "erklaerungAr": "العمل بالسيرة يستخدم ماضي الشخص ومهنته وهواياته لبناء ثقة وتهدئة وتنظيم يوم يلائمه."
+  },
+  {
+   "frage": "Was steht im Mittelpunkt der Sterbebegleitung?",
+   "optionen": [
+    "Möglichst viele Untersuchungen durchführen",
+    "Wünsche und Würde des Menschen respektieren, Angehörige einbeziehen",
+    "Besuche grundsätzlich vermeiden"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "مرافقة الاحتضار تركّز على الراحة واحترام رغبات الشخص وكرامته وإشراك الأهل، لا على إطالة الإجراءات."
+  },
+  {
+   "frage": "Welches ist ein Warnzeichen für Mangelernährung?",
+   "optionen": [
+    "Ungewollter Gewichtsverlust und lockere Kleidung",
+    "Stabiler Appetit",
+    "Einmal ausgelassenes Frühstück"
+   ],
+   "richtig": 0,
+   "erklaerungAr": "فقدان وزن غير مقصود واتساع الملابس ونقص الشهية المستمر علامات سوء تغذية تستلزم إبلاغًا وتقييمًا."
+  },
+  {
+   "frage": "Was schützt die Haut bei Inkontinenz am besten?",
+   "optionen": [
+    "Haut lange feucht lassen",
+    "Haut schonend reinigen, gut trocknen, Schutzcreme nutzen",
+    "Nur starkes Reiben beim Waschen"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "تنظيف لطيف وتجفيف جيد وكريم حماية وتغيير منتظم يمنع التهاب الجلد المصاحب للسلس."
+  },
+  {
+   "frage": "Was zeigt eine gut heilende Wunde?",
+   "optionen": [
+    "Starker Geruch und viel Eiter",
+    "Rosiges, feuchtes Granulationsgewebe ohne üblen Geruch",
+    "Zunehmende Schmerzen und Rötung"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "نسيج حبيبي وردي رطب بلا رائحة كريهة علامة التئام جيد؛ الرائحة والقيح وازدياد الألم علامات التهاب."
+  },
+  {
+   "frage": "Auf Station gibt es mehrere Fälle von Norovirus-Verdacht. Was ist richtig?",
+   "optionen": [
+    "Weiterarbeiten wie üblich",
+    "Betroffene isolieren und Hygienefachkraft/Gesundheitsamt informieren",
+    "Nur Handschuhe wechseln"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الاشتباه بتفشّي نوروفيروس يستلزم عزلًا ونظافة صارمة وإبلاغ إدارة النظافة والجهات الصحية وفق قانون الحماية من العدوى."
+  },
+  {
+   "frage": "Welcher Nüchtern-Blutzucker gilt bei Erwachsenen ungefähr als normal?",
+   "optionen": [
+    "Etwa 70–99 mg/dl",
+    "Etwa 200–250 mg/dl",
+    "Immer unter 40 mg/dl"
+   ],
+   "richtig": 0,
+   "erklaerungAr": "سكر الصائم الطبيعي نحو 70–99 ملغ/دل؛ القيم الأعلى باستمرار أو الأقل من 70 تستحق المتابعة والإبلاغ."
+  },
+  {
+   "frage": "Wie wird ein Rollator richtig eingestellt?",
+   "optionen": [
+    "So niedrig wie möglich",
+    "Griffe etwa auf Höhe der Handgelenke bei hängenden Armen",
+    "Griffe auf Schulterhöhe"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "مقابض المشاية على ارتفاع الرسغ والذراع متدلية، فيمشي المستخدم مستقيمًا دون انحناء."
+  },
+  {
+   "frage": "Was ist eine Patientenverfügung?",
+   "optionen": [
+    "Eine Rechnung der Krankenkasse",
+    "Schriftliche Wünsche zur Behandlung, wenn man sich nicht mehr äußern kann",
+    "Ein Dienstplan für Patienten"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "إقرار المريض وثيقة مكتوبة بحدود العلاج التي يريدها أو يرفضها عندما يعجز عن التعبير لاحقًا."
   }
  ],
  "phrasen": [
