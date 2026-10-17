@@ -741,3 +741,4 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 - R243: Kampagne Punkt 1 — s-b2-88…97 aufgenommen (neu 218/494, offen 276), Diktat 398.
 - R244: Kampagne Punkt 1 — s-b2-98 + s-b1-99…107 aufgenommen (neu 228/494, offen 266), Diktat 408.
 - R245: Kampagne Punkt 1 — s-b1-108…117 aufgenommen (neu 238/494, offen 256), Diktat 418.
+- R246: Kampagne Punkt 1 — s-b1-118…120 + s-b2-99…105 aufgenommen (neu 248/494, offen 246), Diktat 428.
