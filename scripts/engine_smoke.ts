@@ -13328,12 +13328,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   };
   const pfSrc = readFileSync("components/pflege.tsx", "utf8");
   const planSrc2 = readFileSync("lib/plan.ts", "utf8");
-  ok(pf.wortschatz.length === 115 && pf.wortschatz.every((w) => w.de && w.ar && w.bsp) &&
-     new Set(pf.wortschatz.map((w) => w.id)).size === 115 &&
+  ok(pf.wortschatz.length === 131 && pf.wortschatz.every((w) => w.de && w.ar && w.bsp) &&
+     new Set(pf.wortschatz.map((w) => w.id)).size === 131 &&
      pf.dialoge.length === 8 && pf.dialoge.every((d) => d.zeilen.length >= 6 && d.zeilen.every((z) => z.de && z.ar)) &&
-     pf.dokumentation.length === 6 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
+     pf.dokumentation.length === 8 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
      pf.pruefung.length === 3,
-    "K290a بنك التمريض مكتمل البنية: 115 كلمة بمثال (R199: تعميق أدوية/يوم عمل/طوارئ/تشريح/نتائج)، 8 حوارات ثنائية اللغة، 6 نماذج توثيق بقوائم فحص، 3 بطاقات صيغة");
+    "K290a بنك التمريض مكتمل البنية: 131 كلمة بمثال (R199 تعميق + R204 أزواج لاتينية ومصطلحات دقيقة)، 8 حوارات ثنائية اللغة، 8 نماذج توثيق بقوائم فحص، 3 بطاقات صيغة");
   ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("ليست امتحانًا رسميًا") &&
      !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
     "K290b المحطة مركّبة في /ueben كإضافة اختيارية، والخطة ذات الـ378 يومًا لا تعرف عنها شيئًا — الجسر لا يهزّ العمود الفقري");
@@ -13432,6 +13432,24 @@ function collectR262(dir: string, out: string[] = []): string[] {
      !lwSrc2.includes("saveProgress") && !lwSrc2.includes("update(") &&
      readFileSync("lib/lebenswelt.ts", "utf8").includes("BERUFSSTART_SCHRITTE"),
     "K296b قائمة البدء المهني (8 خطوات) محلية التخزين فقط — لا تكتب في تقدّم الخطة ولا نتائجها");
+}
+
+// ===== K297 (R204 · Lücken aus dem Pflege-Kompetenzbericht geschlossen):
+// 12 Deutsch↔Latein-Dubletten mit latein-Feld, 4 benannte Mikrobegriffe
+// (Fieberthermometer/Tropfen/Verstopfung/Schwäche), Anamnese- und
+// Überleitungs-Muster, 10 Bettsatz-Phrasen für A1. =====
+{
+  const pf4 = JSON.parse(readFileSync("content/pflege.json", "utf8")) as {
+    wortschatz: { id: string; de: string; latein?: string; thema: string }[];
+    dokumentation: { id: string }[];
+    phrasen: { de: string; ar: string }[];
+  };
+  const dub = pf4.wortschatz.filter((w) => w.thema === "dubletten");
+  ok(dub.length === 12 && dub.every((w) => !!w.latein) &&
+     ["das Fieberthermometer", "die Tropfen", "die Verstopfung", "die Schwäche"].every((t) => pf4.wortschatz.some((w) => w.de === t)) &&
+     pf4.dokumentation.some((x) => x.id === "pf-w7") && pf4.dokumentation.some((x) => x.id === "pf-w8") &&
+     pf4.phrasen.length === 10 && pf4.phrasen.every((s) => s.de && s.ar),
+    "K297 أزواج ألماني↔لاتيني الاثنا عشر بمقابلها الطبي، والمصطلحات الدقيقة الأربعة، ونموذجا السيرة والتحويل، وعبارات A1 العشر — فجوات تقرير الكفاءة مغلقة بالاسم");
 }
 
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den

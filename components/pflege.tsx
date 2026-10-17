@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung, pflegeMedizin, pflegeFachwissen } from "@/lib/pflege";
+import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung, pflegeMedizin, pflegeFachwissen, pflegePhrasen } from "@/lib/pflege";
 import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
@@ -21,6 +21,7 @@ const THEMEN: Record<string, string> = {
   notfall: "🚨 الطوارئ",
   anatomie: "🦴 تشريح أعمق",
   befund: "📋 نتائج وإدارة",
+  dubletten: "🔤 ألماني ↔ لاتيني طبي",
 };
 
 /** ⏱️ محاكاة Medizin مؤقّتة (R199): 12 بندًا (قراءة+استماع) بزمن مقترح ونتيجة صريحة المصدر. */
@@ -185,6 +186,7 @@ export function PflegeStation() {
             <article key={w.id} data-testid={`pflege-wort-${w.id}`} className="card" style={{ padding: "0.6rem 0.8rem" }}>
               <div style={{ display: "flex", gap: "0.5rem", alignItems: "baseline", flexWrap: "wrap" }}>
                 <De style={{ fontWeight: 800 }}>{w.de}</De>
+                {w.latein && <span className="chip" title="المصطلح الطبي اللاتيني">🏥 <De>{w.latein}</De></span>}
                 {w.plural && w.plural !== "—" && <span className="tiny muted">جمع: <De>{w.plural}</De></span>}
                 <span className="chip">{w.stufe}</span>
                 <span className="chip">{THEMEN[w.thema]}</span>
@@ -196,6 +198,21 @@ export function PflegeStation() {
               </div>
               <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{w.bspAr}</div>
             </article>
+          ))}
+        </div>
+      </section>
+
+      {/* ── عبارات بجانب السرير A1 ── */}
+      <section data-testid="pflege-phrasen">
+        <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>🛏️ عبارات بجانب السرير — من اليوم الأول (A1)</h3>
+        <div style={{ display: "grid", gap: "0.4rem" }}>
+          {pflegePhrasen.map((s) => (
+            <div key={s.de} style={{ display: "flex", gap: "0.45rem", alignItems: "center", flexWrap: "wrap", borderInlineStart: "3px solid var(--color-a1)", paddingInlineStart: "0.6rem" }}>
+              <De style={{ fontWeight: 700 }}>{s.de}</De>
+              <button type="button" className="chip" style={{ cursor: "pointer", minHeight: "36px" }} onClick={() => speakAny(s.de)} aria-label="استمع إلى العبارة">🔊</button>
+              <span style={{ fontSize: "0.85rem" }}>{s.ar}</span>
+              <span style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>({s.situation})</span>
+            </div>
           ))}
         </div>
       </section>

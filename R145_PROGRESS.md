@@ -353,6 +353,15 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R204 — Kompetenzbericht-Lücken geschlossen — abgeschlossen ✅
+
+- Pflege-Bank: +12 Deutsch↔Latein-Dubletten (latein-Feld), +4 Mikrobegriffe
+  (Fieberthermometer, Tropfen, Verstopfung, Schwäche), +2 Doku-Muster
+  (Anamnesebericht pf-w7, Überleitung pf-w8), +10 A1-Bettphrasen.
+  Wortschatz jetzt 131, Dokumentation 8.
+- **Nachweise**: tsc ✓ · smoke **1777/0** (K297, K290a aktualisiert) ·
+  interaktiv **732/0** (XCIX1 aktualisiert) · audit 0 · build ✓.
+
 ## R203 — Kenntnisprüfungs-Wissen + Berufsstart-Checkliste — abgeschlossen ✅
 
 - `content/pflege.json`: + 20 Fachwissens-Fragen (sofortiges Feedback,

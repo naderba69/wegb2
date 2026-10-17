@@ -1163,6 +1163,178 @@
    "bspAr": "من فضلك أظهر بطاقة تأمينك.",
    "stufe": "B1",
    "thema": "befund"
+  },
+  {
+   "id": "pf-v11",
+   "de": "das Fieberthermometer",
+   "plural": "die Fieberthermometer",
+   "ar": "ميزان الحرارة",
+   "bsp": "Das Fieberthermometer zeigt 38,4 Grad.",
+   "bspAr": "ميزان الحرارة يُظهر 38.4 درجة.",
+   "stufe": "A2",
+   "thema": "versorgung"
+  },
+  {
+   "id": "pf-m16",
+   "de": "die Tropfen",
+   "plural": "die Tropfen",
+   "ar": "القطرات (دواء)",
+   "bsp": "Dreimal täglich zehn Tropfen einnehmen.",
+   "bspAr": "تناول عشر قطرات ثلاث مرات يوميًا.",
+   "stufe": "B1",
+   "thema": "medikamente"
+  },
+  {
+   "id": "pf-s11",
+   "de": "die Verstopfung",
+   "plural": "die Verstopfungen",
+   "ar": "الإمساك",
+   "bsp": "Die Verstopfung dauert schon drei Tage.",
+   "bspAr": "الإمساك مستمر منذ ثلاثة أيام.",
+   "stufe": "B1",
+   "thema": "symptome"
+  },
+  {
+   "id": "pf-s12",
+   "de": "die Schwäche",
+   "plural": "—",
+   "ar": "الوهن / الضعف العام",
+   "bsp": "Er klagt über allgemeine Schwäche.",
+   "bspAr": "يشتكي من وهن عام.",
+   "stufe": "B1",
+   "thema": "symptome"
+  },
+  {
+   "id": "pf-x01",
+   "de": "der Bluthochdruck",
+   "plural": "—",
+   "ar": "ارتفاع ضغط الدم",
+   "latein": "die Hypertonie",
+   "bsp": "Der Bluthochdruck muss regelmäßig kontrolliert werden.",
+   "bspAr": "يجب ضبط ارتفاع ضغط الدم بانتظام.",
+   "stufe": "B1",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x02",
+   "de": "die Zuckerkrankheit",
+   "plural": "die Zuckerkrankheiten",
+   "ar": "مرض السكّري",
+   "latein": "der Diabetes mellitus",
+   "bsp": "Die Zuckerkrankheit erfordert eine genaue Blutzuckerkontrolle.",
+   "bspAr": "يتطلب السكري ضبطًا دقيقًا لسكر الدم.",
+   "stufe": "B1",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x03",
+   "de": "der Gehirnschlag",
+   "plural": "die Gehirnschläge",
+   "ar": "السكتة الدماغية",
+   "latein": "der Apoplex / der Insult",
+   "bsp": "Nach dem Gehirnschlag beginnt die frühe Mobilisation.",
+   "bspAr": "بعد السكتة يبدأ التحريك المبكر.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x04",
+   "de": "die Herzschwäche",
+   "plural": "—",
+   "ar": "ضعف القلب / قصور القلب",
+   "latein": "die Herzinsuffizienz",
+   "bsp": "Bei Herzschwäche wird das Gewicht täglich kontrolliert.",
+   "bspAr": "في قصور القلب يُوزن المريض يوميًا.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x05",
+   "de": "die Kurzatmigkeit",
+   "plural": "—",
+   "ar": "ضيق التنفس (عند الجهد)",
+   "latein": "die Dyspnoe",
+   "bsp": "Die Kurzatmigkeit tritt schon bei kleiner Belastung auf.",
+   "bspAr": "يظهر ضيق النفس حتى مع جهد صغير.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x06",
+   "de": "die Unterzuckerung",
+   "plural": "die Unterzuckerungen",
+   "ar": "نقص سكر الدم",
+   "latein": "die Hypoglykämie",
+   "bsp": "Bei Unterzuckerung hilft schneller Zucker nach Anordnung.",
+   "bspAr": "عند نقص السكر يساعد سكر سريع حسب التعليمات.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x07",
+   "de": "die Überzuckerung",
+   "plural": "die Überzuckerungen",
+   "ar": "ارتفاع سكر الدم",
+   "latein": "die Hyperglykämie",
+   "bsp": "Die Überzuckerung wird mit Insulin nach Schema behandelt.",
+   "bspAr": "يُعالج ارتفاع السكر بالإنسولين حسب جدول.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x08",
+   "de": "die Lungenentzündung",
+   "plural": "die Lungenentzündungen",
+   "ar": "الالتهاب الرئوي",
+   "latein": "die Pneumonie",
+   "bsp": "Die Lungenentzündung wird mit Antibiotika behandelt.",
+   "bspAr": "يُعالج الالتهاب الرئوي بالمضادات الحيوية.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x09",
+   "de": "die Blinddarmentzündung",
+   "plural": "die Blinddarmentzündungen",
+   "ar": "التهاب الزائدة",
+   "latein": "die Appendizitis",
+   "bsp": "Bei Blinddarmentzündung ist oft eine Operation nötig.",
+   "bspAr": "في التهاب الزائدة غالبًا تلزم عملية.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x10",
+   "de": "die Gelbsucht",
+   "plural": "—",
+   "ar": "اليرقان",
+   "latein": "der Ikterus",
+   "bsp": "Die Gelbsucht ist ein Zeichen, keine eigene Krankheit.",
+   "bspAr": "اليرقان علامة لا مرض مستقل.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x11",
+   "de": "das Blutgerinnsel",
+   "plural": "die Blutgerinnsel",
+   "ar": "الجلطة الدموية",
+   "latein": "der Thrombus",
+   "bsp": "Ein Blutgerinnsel kann ein Gefäß verschließen.",
+   "bspAr": "يمكن لجلطة أن تسدّ وعاءً.",
+   "stufe": "B2",
+   "thema": "dubletten"
+  },
+  {
+   "id": "pf-x12",
+   "de": "die Blutvergiftung",
+   "plural": "die Blutvergiftungen",
+   "ar": "تسمّم الدم",
+   "latein": "die Sepsis",
+   "bsp": "Eine Blutvergiftung ist ein medizinischer Notfall.",
+   "bspAr": "تسمم الدم طارئ طبي.",
+   "stufe": "B2",
+   "thema": "dubletten"
   }
  ],
  "dialoge": [
@@ -1563,6 +1735,30 @@
     "هل ما سُلّم للمريضة (تقرير/دواء) واضح؟",
     "هل متابعة طبيب الأسرة موثّقة؟"
    ]
+  },
+  {
+   "id": "pf-w7",
+   "titel": "Anamnesebericht (Aufnahme)",
+   "ar": "تقرير السيرة المرضية عند الاستقبال",
+   "aufgabeDe": "Schreiben Sie eine kurze Aufnahmeanamnese: Frau Demirel, 74 Jahre, Aufnahme wegen Lungenentzündung. Bekannte Allergie: Penicillin. Medikamente zu Hause: Blutdruckmittel morgens. Sie lebt allein, Tochter ist Ansprechpartnerin.",
+   "muster": "Aufnahmeanamnese: Frau Demirel, 74 Jahre, Aufnahme mit der Diagnose Pneumonie. Aktuelle Beschwerden: Husten, Fieber bis 38,6 °C, Kurzatmigkeit bei Belastung. Allergien: Penicillin (Hautausschlag). Häusliche Medikation: ein Blutdruckmittel morgens. Soziale Situation: lebt allein, Tochter ist erste Ansprechpartnerin. Patientin ist orientiert und mobil mit Unterstützung.",
+   "punkte": [
+    "هل التشخيص والشكاوى الحالية موجودة؟",
+    "هل الحساسية والدواء المنزلي موثّقان بوضوح؟",
+    "هل الوضع الاجتماعي وجهة الاتصال مذكوران؟"
+   ]
+  },
+  {
+   "id": "pf-w8",
+   "titel": "Überleitung in eine andere Einrichtung",
+   "ar": "نموذج تحويل مريض إلى جهة أخرى",
+   "aufgabeDe": "Fassen Sie die Überleitung zusammen: Herr Yilmaz wird morgen in die Reha verlegt. Aktuell: mobil mit Rollator, Wunde heilt, Medikamente laut Plan, Blutdruck stabil.",
+   "muster": "Überleitung: Herr Yilmaz wird morgen in die Rehabilitationsklinik verlegt. Aktueller Zustand: mobil mit Rollator über kurze Strecken, Operationswunde trocken und heilend. Medikation nach aktuellem Plan, Blutdruck stabil (zuletzt 125/75 mmHg). Besondere Hinweise: Lagerung nach Plan fortsetzen, Schmerzangabe abends erfragen. Arztbrief und Medikamentenplan liegen bei.",
+   "punkte": [
+    "هل سبب/وجهة التحويل وتوقيته واضحان؟",
+    "هل الحالة الحالية والتنقّل ملخّصان؟",
+    "هل المرفقات (تقرير/خطة دواء) مذكورة؟"
+   ]
   }
  ],
  "pruefung": [
@@ -1931,6 +2127,58 @@
    ],
    "richtig": 1,
    "erklaerungAr": "بعد السقوط: لا تحرّك عند اشتباه كسر، قيّم وقيّس، أبلغ الطبيب، وثّق بمحضر سقوط."
+  }
+ ],
+ "phrasen": [
+  {
+   "de": "Wie geht es Ihnen heute?",
+   "ar": "كيف حالك اليوم؟ (بصيغة الاحترام)",
+   "situation": "بداية أيّ لقاء مع مريض"
+  },
+  {
+   "de": "Haben Sie Schmerzen?",
+   "ar": "هل عندك آلام؟",
+   "situation": "السؤال الأول عند أيّ شكوى"
+  },
+  {
+   "de": "Ich hole Ihnen ein Glas Wasser.",
+   "ar": "سأحضر لك كوب ماء.",
+   "situation": "خدمة بسيطة بجانب السرير"
+  },
+  {
+   "de": "Ich helfe Ihnen beim Aufstehen.",
+   "ar": "سأساعدك في النهوض.",
+   "situation": "قبل تحريك المريض"
+  },
+  {
+   "de": "Bitte setzen Sie sich langsam hin.",
+   "ar": "من فضلك اجلس ببطء.",
+   "situation": "بعد النهوض، وقاية من الدوار"
+  },
+  {
+   "de": "Ich bin gleich wieder da.",
+   "ar": "سأعود فورًا.",
+   "situation": "عند مغادرة الغرفة لحظات"
+  },
+  {
+   "de": "Das Frühstück kommt um acht Uhr.",
+   "ar": "الفطور يأتي في الثامنة.",
+   "situation": "معلومة يومية مطمئنة"
+  },
+  {
+   "de": "Brauchen Sie noch etwas?",
+   "ar": "هل تحتاج شيئًا آخر؟",
+   "situation": "ختام أيّ خدمة"
+  },
+  {
+   "de": "Ich sage der Schwester Bescheid.",
+   "ar": "سأُعلم الممرّضة.",
+   "situation": "عند طلب خارج صلاحيتك"
+  },
+  {
+   "de": "Gute Nacht, schlafen Sie gut.",
+   "ar": "ليلة سعيدة، نومًا هانئًا.",
+   "situation": "ختام الوردية المسائية"
   }
  ]
 }
