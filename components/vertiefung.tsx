@@ -134,10 +134,10 @@ export function Vertiefung() {
     <section className="card" style={{ padding: "1rem 1.1rem", background: "var(--color-paper2)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", flexWrap: "wrap" }}>
         <h3 style={{ margin: 0 }}>📚 مكتبة التذوّق B2+/C1</h3>
-        <span className="card" style={{ padding: "0.15rem 0.6rem", fontWeight: 700 }}>بعد B2 · تذوّق C1</span>
+        <span className="card" style={{ padding: "0.15rem 0.6rem", fontWeight: 700 }}>بعد B2 · مسار C1 مصغّر</span>
       </div>
       <p className="small" style={{ marginTop: "0.5rem", lineHeight: 1.9 }}>
-        هذه المكتبة <b>خارج خطة الـ378 يومًا</b>: نصوص وحوارات على مستوى C1 لمن أنهى مستوى B2 ويريد
+        هذه المكتبة <b>خارج خطة الـ378 يومًا</b>: مسار C1 مصغّر (12 نصًا و8 حوارات بمسارد وأسئلة تأويلية) لمن أنهى مستوى B2 ويريد
         تجربة المستوى التالي بلا ضغط امتحان. لا تدخل في حساب تقدّمك ولا في عتبات النجاح، ونتائج
         الأسئلة فيها تبقى في جلستك فقط.
       </p>

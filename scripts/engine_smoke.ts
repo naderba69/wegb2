@@ -12879,10 +12879,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
 
 // ===== K271 (R178 · C2): Vertiefungsbibliothek B2+/C1 — STRIKT ausserhalb der 378 Tage.
 // Kein Eintrag darf in buildDay/Phasen/Plaenen auftauchen; die Plan-Abdeckung bleibt exakt.
-// Inhalt: 8 C1-Texte (230-380 Woerter, Glossar aus dem Text, 4 Fragen) + 6 C1-Dialoge. =====
+// Inhalt: 12 C1-Texte (230-380 Woerter, Glossar aus dem Text, 4 Fragen) + 8 C1-Dialoge (R219: +4/+2). =====
 {
   const worteZ = (s: string) => s.split(/\s+/).filter(Boolean).length;
-  const formOk = vertiefungTexte.length === 8 && vertiefungDialoge.length === 6 &&
+  const formOk = vertiefungTexte.length === 12 && vertiefungDialoge.length === 8 && // R219: C1-Vertiefung zum Mini-Pfad ausgebaut (12/8, war 8/6)
     vertiefungTexte.every((t) => t.level === "C1" && worteZ(t.de) >= 230 && worteZ(t.de) <= 380 && t.glossar.length >= 6 &&
       t.fragen.length === 4 && t.fragen.every((f) => f.options.includes(f.answer) && new Set(f.options).size === f.options.length)) &&
     vertiefungDialoge.every((d) => d.level === "C1" && d.lines.length >= 10 && d.fragen.length === 3 &&
@@ -12915,10 +12915,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
     `K271c صفر تسرّب: لا مرجعَ في plan.ts ولا جدولةَ لأيّ vf في 378 يومًا؛ التغطية ثابتة (${txS.size}/${dgS.size}/${wrS.size})`);
   const vfSrc = readFileSync("components/vertiefung.tsx", "utf8");
   const uebSrc2 = readFileSync("app/ueben/page.tsx", "utf8");
-  ok(vfSrc.includes("بعد B2 · تذوّق C1") && vfSrc.includes("خارج خطة الـ378 يومًا") && vfSrc.includes("نطق آلي من متصفّحك") &&
+  ok(vfSrc.includes("بعد B2 · مسار C1 مصغّر") && vfSrc.includes("خارج خطة الـ378 يومًا") && vfSrc.includes("نطق آلي من متصفّحك") &&
      vfSrc.includes("speakDe") && !vfSrc.includes("fetch(") && !vfSrc.includes("update(") &&
      uebSrc2.includes('"vertiefung"') && uebSrc2.includes("<Vertiefung />"),
-    "K271d المكتبة موصولة في «تدرّب» بوسام «بعد B2 · تذوّق C1» صريح، نطقها آليٌّ موسوم، وبلا كتابة تقدّم وبلا fetch");
+    "K271d المكتبة موصولة في «تدرّب» بوسام «بعد B2 · مسار C1 مصغّر» صريح (R219: كان «تذوّق» قبل أن يصير مسارًا)، نطقها آليٌّ موسوم، وبلا كتابة تقدّم وبلا fetch");
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),
