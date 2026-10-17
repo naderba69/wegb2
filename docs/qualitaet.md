@@ -288,3 +288,16 @@ Belege: tsc ✓ · smoke **1778/0** · interaktiv 732/0 · audit «العيوب 
 **Ergebnis: erledigt — die Lücken des Bescheids sind geschlossen.** Die zwei fehlenden Strukturbegriffe sind jetzt Wortschatz-Karten (131→**133**, pf-d11/pf-d12) **und** wie alle Stationswörter in die allgemeinen Decks verwoben (vpfl-92/93 mit Kollokationen + Deckungssatz s-pfl-63; Invariante «jedes Stationswort lebt im Alltag» bleibt wahr: 133/133). Die fehlende Bewegungs-Redewendung **«Bitte legen Sie sich hin.»** ergänzt die Bettseiten-Phrasen (10→11) und ist als s-pfl-64 (A1) im Satzbank verwoben. Zähler dokumentiert: Vokabeln **3592**, eindeutig 3544, Sätze **742**, Kollokationen 2277/5000.
 
 Belege (R211–R214): tsc ✓ · smoke **1779/0** (+K299) · interaktiv 732/0 · audit «العيوب البنيوية المؤكدة: صفر» · Build ✓.
+## R215 — Schreib-/Sprech-Simulation mit Timer in der Station
+
+**Ergebnis: erledigt.** Neuer Bankblock `simulation` in pflege.json (4 getimte Schreibaufgaben mit Modell + Checkliste zum Selbstvergleich, 4 Sprechaufträge mit Redemitteln und Timer): Verlaufseintrag nach Sturz, Nacht-Übergabe, Aufnahmenotiz, Hausarzt-Kurzbericht; Schmerz erfragen, Angehörigentelefonat, Fallvorstellung, Beruhigung. Komponente `Simulationstraining` (data-testid `pflege-sim`) mit ehrlicher Kennzeichnung: kein Automatik-Feedback, keine Aussprachebewertung. Gate K301.
+
+## R216 — Fachwissen 20 → 40
+
+**Ergebnis: erledigt.** 20 weitere Kenntnisprüfungs-nahe Fragen mit arabischer Erklärung: stabile Seitenlage, Kontraktur-/Aspirationsprophylaxe, Dekubitus Stadium I, Pflegegrade/MD, Vorsorgevollmacht, Patientenverfügung, Schmerzskala, Atemfrequenz, Sauerstoff nur nach Anordnung, Antibiotika-Disziplin, Insulin-Rotation, Biografiearbeit, Sterbebegleitung, Mangelernährung, Inkontinenz-Hautschutz, Wundheilung, Norovirus/IfSG, Nüchtern-BZ, Rollator-Einstellung. K296a fortgeschrieben.
+
+## R217 — Schreibbank 90 → 100
+
+**Ergebnis: erledigt.** Zehn neue Prüfungs-Schreibaufgaben mit vollem Muster im Längenband (B1 80–170, B2 120–260 Wörter; K85b 12→22 «neu»): Bürgeramt-Termin, Krankenkassen-Anfrage, Nachbarschaftseinladung, Praktikumsbericht, Auto-Forumsbeitrag (B1); Digitalisierungs-Forum, Team-Problem-Mail, Pflegeberuf-Erörterung, Wohnungsnot-Leserbrief, Stationsbericht (B2). Deckungsnachweise dokumentiert fortgeschrieben (K125f, K260c, K266d 32→37 Briefe, K271c: 157/164/100 — die Rotation zieht die neuen Aufgaben automatisch in die 378 Tage).
+
+Belege (R215–R217): tsc ✓ · smoke **1780/0** (+K301) · interaktiv 732/0 · audit «العيوب البنيوية المؤكدة: صفر» · Build ✓.

@@ -2542,7 +2542,7 @@ void 0;
     const neuW = writingTasks.filter((w) => (w as { neu?: boolean }).neu);
     ok(["A1", "A2", "B1", "B2"].every((L) => writingTasks.filter((w) => w.level === L).length >= 10), `K85a مهامُّ الكتابةِ لكلِّ مستوى ≥10 (${["A1", "A2", "B1", "B2"].map((L) => writingTasks.filter((w) => w.level === L).length).join("/")})`);
     const LEN: Record<string, [number, number]> = { A1: [25, 80], A2: [50, 130], B1: [80, 170], B2: [120, 260] };
-    ok(neuW.length === 12 && neuW.every((w) => w.criteria.length >= 3 && w.criteria.every((c) => /[\u0600-\u06FF]/.test(c)) && /[\u0600-\u06FF]/.test(w.taskAr) && !/[\u0600-\u06FF]/.test(w.sample) && w.sample.split(/\s+/).length >= LEN[w.level][0] && w.sample.split(/\s+/).length <= LEN[w.level][1]), "K85b 12 مهمةً جديدة: ≥3 معاييرَ عربيّة، نموذجٌ ألمانيٌّ بطولِ المستوى");
+    ok(neuW.length === 22 && neuW.every((w) => w.criteria.length >= 3 && w.criteria.every((c) => /[\u0600-\u06FF]/.test(c)) && /[\u0600-\u06FF]/.test(w.taskAr) && !/[\u0600-\u06FF]/.test(w.sample) && w.sample.split(/\s+/).length >= LEN[w.level][0] && w.sample.split(/\s+/).length <= LEN[w.level][1]), "K85b 22 مهمةً جديدة: ≥3 معاييرَ عربيّة، نموذجٌ ألمانيٌّ بطولِ المستوى") // R217: +10 مهام B1/B2 بنماذج كاملة (22، كانت 12);
     ok(neuW.every((w) => !/\d{1,3}\s?(%|Prozent)|\b(1[89]\d\d|20[0-4]\d)\b/.test(w.sample)), "K85c لا نسبَ ولا سنواتٍ في نماذجِ الكتابةِ الجديدة");
     ok(new Set(writingTasks.map((w) => w.id)).size === writingTasks.length, "K85d معرِّفاتُ الكتابةِ فريدة");
   }
@@ -2967,7 +2967,7 @@ void 0;
     `K125d تغطيةُ الرادارِ من الدالةِ نفسِها: ${abR.mitSignal}/${abR.dialoge} إشارات · ${abR.mitFalle} مضلل (${nAb})`);
   ok(lies.includes(`(${nDr} تمريناً`) , `K125e تمارينُ الأذنِ من الدالةِ نفسِها (${nDr})`);
   const nS2 = J("content/sentences.json"), nW = J("content/writing.json"), nV = J("content/verben.json");
-  ok(nS2 === 742 && nW === 90 && nV === 126 && lies.includes("742") && lies.includes("writing **90**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (742: 64 جملة تمريض منسوجة في البنك العام — R206–R214 مفردات/تغطية + عبارات + R209/R214 سرير المريض A1؛ كانت 678 منذ R145)`);
+  ok(nS2 === 742 && nW === 100 && nV === 126 && lies.includes("742") && lies.includes("writing **100**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (742: 64 جملة تمريض منسوجة في البنك العام — R206–R214 مفردات/تغطية + عبارات + R209/R214 سرير المريض A1؛ كانت 678 منذ R145)`);
   const nKt = J("content/kollokationen.json");
   const nLue = (JSON.parse(readFileSync("content/luecken.json", "utf8")).items as { gaps: unknown[] }[]).reduce((n, it) => n + it.gaps.length, 0);
   ok(nKt === 2277 && nLue === 216 && lies.includes("2277") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`) // R206: +24 بطاقة منسوجة بمتلازمات حقيقية (2215، كانت 2191);
@@ -12614,7 +12614,7 @@ void 0;
     for (const t of pl.tasks) { if (t.textId) tx.add(t.textId); if (t.dialogueId) dg.add(t.dialogueId); if (t.writeId) wr.add(t.writeId); }
     if (d >= PHASEN.B2.von && d <= PHASEN.B2.bis && pl.type === "festigung" && !pl.tasks.some((t) => t.titleDe === "Festigungs-Check" && (t.quiz?.length ?? 0) >= 8)) festOk = false;
   }
-  ok(tx.size === 157 && dg.size === 164 && wr.size === 90 && festOk,
+  ok(tx.size === 157 && dg.size === 164 && wr.size === 100 && festOk, // R217: الكتابة 90→100 والتناوب يغطيها كلها
     `K260c لا بندَ بنكياً فريداً سقطَ بكشطِ D1-B: ${tx.size} نصّاً و${dg.size} حواراً و${wr.size} مهمّةَ كتابةٍ مجدولةً (كخطِّ الأساسِ قبلَ التغيير)، وفحصُ التثبيتِ الأسبوعيُّ في B2 سليمٌ بأسئلتِه`);
 }
 
@@ -12773,9 +12773,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
      gradSrc.includes("export async function llmKriterien") && gradSrc.includes("KRITERIEN_NAMEN") &&
      schrSrc.includes("KriterienPanel") && schrSrc.includes('art={task.format === "brief" ? "brief" : "forum"}'),
     "K266c اللوحة موصولة بورشة الكتابة معلنةً آليّتها، ومستشار المعايير اختياريّ خلف llmBereit بلا إرسال صامت");
-  const alleMarkiert = writingTasks.length === 90 && writingTasks.every((w) => w.format === "brief" || w.format === "frei");
+  const alleMarkiert = writingTasks.length === 100 && writingTasks.every((w) => w.format === "brief" || w.format === "frei"); // R217: 100 مهمة (كانت 90)
   const briefBank = writingTasks.filter((w) => w.format === "brief");
-  ok(alleMarkiert && briefBank.length === 32 && briefBank.filter((w) => w.level === "B2").length >= 5 &&
+  ok(alleMarkiert && briefBank.length === 37 && briefBank.filter((w) => w.level === "B2").length >= 5 &&
      schrSrc.includes("task.zielWort ?? cfg!.ziel") && writingTasks.every((w) => !w.zielWort || w.zielWort >= 20),
     `K266d بنك الكتابة موسومٌ بصيغة الامتحان: ${briefBank.length} مهمة رسائل (تحية/ختام في الإنجاز) والباقي نص حر، والهدف من zielWort البنك`);
 }
@@ -12860,7 +12860,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const waehle = (bed: (t: (typeof writingTasks)[number]) => boolean) => writingTasks.filter(bed).length;
   const proNiveau: Record<string, number> = {};
   for (const t of writingTasks) proNiveau[t.level] = (proNiveau[t.level] ?? 0) + 1;
-  ok(proNiveau.A0 === 6 && proNiveau.A1 === 19 && proNiveau.A2 === 20 && proNiveau.B1 === 22 && proNiveau.B2 === 23 && writingTasks.length === 90,
+  ok(proNiveau.A0 === 6 && proNiveau.A1 === 19 && proNiveau.A2 === 20 && proNiveau.B1 === 27 && proNiveau.B2 === 28 && writingTasks.length === 100, // R217: +5 B1 +5 B2
     `K270a مزيج المستويات 6/19/20/22/23 صحيح: ${JSON.stringify(proNiveau)}`);
   const NEU_IDS = ["w-b2-15", "w-b2-16", "w-b2-17", "w-b2-18", "w-b2-19", "w-b2-20", "w-b2-21", "w-b2-22", "w-b2-23", "w-b1-14", "w-b1-15", "w-b1-16", "w-b1-17", "w-b1-18", "w-b1-19", "w-b1-20", "w-b1-21", "w-b1-22", "w-a2-13", "w-a2-14", "w-a2-15", "w-a2-16", "w-a2-17", "w-a2-18", "w-a2-19", "w-a2-20", "w-a1-14", "w-a1-15", "w-a1-16", "w-a1-17", "w-a1-18", "w-a1-19"];
   const NEU = writingTasks.filter((t) => NEU_IDS.includes(t.id));
@@ -12910,7 +12910,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
     }
   }
   const leckt = [...txS, ...dgS, ...wrS].some((id) => vfIds.has(id));
-  ok(!plSrc.includes("vertiefung") && !plSrc.includes("vf-") && !leckt && txS.size === 157 && dgS.size === 164 && wrS.size === 90,
+  ok(!plSrc.includes("vertiefung") && !plSrc.includes("vf-") && !leckt && txS.size === 157 && dgS.size === 164 && wrS.size === 100, // R217
     `K271c صفر تسرّب: لا مرجعَ في plan.ts ولا جدولةَ لأيّ vf في 378 يومًا؛ التغطية ثابتة (${txS.size}/${dgS.size}/${wrS.size})`);
   const vfSrc = readFileSync("components/vertiefung.tsx", "utf8");
   const uebSrc2 = readFileSync("app/ueben/page.tsx", "utf8");

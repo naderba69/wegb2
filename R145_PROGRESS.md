@@ -705,3 +705,7 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 ### R211–R214 — Lücken des ausführlichen Leitfadens geschlossen
 
 ✅ erledigt (lokal verifiziert; CI folgt): R211 Doku-Leiter: `stufe` an allen 11 Modellen + pf-w9 (A1 Stichworte) / pf-w10 (A2 Sätze) / pf-w11 (B2 Passiv-Bericht), Anzeige sortiert mit Level-Chip. R212: +2 A2-Dialoge (pf-g9/g10) → 10 Stationsdialoge. R213: Pflegedokumentation + Patientenakte als Karten (133) und verwoben (vpfl-92/93, s-pfl-63) — 133/133 im Alltag. R214: Phrase «Bitte legen Sie sich hin» (11) + s-pfl-64 verwoben. Zähler: Vokabeln 3592, Sätze 742, Kollokationen 2277/5000 (K290a/K297/K298/K299/K131b u. a. dokumentiert). smoke 1779/0 · interaktiv 732/0 · audit 0 · build ✓.
+
+### R215–R217 — Restpläne produziert (Simulation, Wissen, Schreiben)
+
+✅ erledigt (lokal verifiziert; CI folgt): R215 getimte Schreib-/Sprech-Simulation in der Pflege-Station (4+4, Selbstvergleich, ehrlich ohne Automatik; K301). R216 Fachwissen 20→40 (K296a). R217 Schreibbank 90→100 (B1 27/B2 28, Muster im Band; K85b/K125f/K260c/K266d/K271c dokumentiert). smoke 1780/0 · interaktiv 732/0 · audit 0 · build ✓.
