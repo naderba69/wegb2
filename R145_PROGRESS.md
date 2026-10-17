@@ -721,3 +721,4 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 - R223: Diktat-Stimme Charge 3 — s-pfl-11…20 aufgenommen (30/64 verwoben), Diktat 210, Audio 549.
 - R224: Diktat-Stimme Charge 4 — s-pfl-21…30 aufgenommen (40/64 verwoben), Diktat 220, Audio 559.
 - R225: Diktat-Stimme Charge 5 — s-pfl-31…40 aufgenommen (50/64 verwoben), Diktat 230, Audio 569.
+- R226: Diktat-Stimme Charge 6 — s-pfl-41…50 aufgenommen (60/64 verwoben), Diktat 240, Audio 579.

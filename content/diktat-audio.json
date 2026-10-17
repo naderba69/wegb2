@@ -1610,6 +1610,76 @@
    "voice": "voice-06 (de)",
    "level": "B2",
    "bytes": 35335
+  },
+  {
+   "id": "s-pfl-41",
+   "file": "/audio/diktat/s-pfl-41.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 29902
+  },
+  {
+   "id": "s-pfl-42",
+   "file": "/audio/diktat/s-pfl-42.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 34708
+  },
+  {
+   "id": "s-pfl-43",
+   "file": "/audio/diktat/s-pfl-43.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 26349
+  },
+  {
+   "id": "s-pfl-44",
+   "file": "/audio/diktat/s-pfl-44.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 35544
+  },
+  {
+   "id": "s-pfl-45",
+   "file": "/audio/diktat/s-pfl-45.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 36589
+  },
+  {
+   "id": "s-pfl-46",
+   "file": "/audio/diktat/s-pfl-46.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 30947
+  },
+  {
+   "id": "s-pfl-47",
+   "file": "/audio/diktat/s-pfl-47.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 30947
+  },
+  {
+   "id": "s-pfl-48",
+   "file": "/audio/diktat/s-pfl-48.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 36380
+  },
+  {
+   "id": "s-pfl-49",
+   "file": "/audio/diktat/s-pfl-49.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 27394
+  },
+  {
+   "id": "s-pfl-50",
+   "file": "/audio/diktat/s-pfl-50.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 34708
   }
  ]
 }

@@ -329,3 +329,6 @@ Belege (R218–R220): tsc ✓ · smoke **1781/0** (+K302) · interaktiv **734/0*
 ## R225 — Diktat-Stimme, fünfte Charge (s-pfl-31…40)
 
 **Ergebnis: erledigt (Charge 5).** Zehn weitere verwobene Sätze (s-pfl-31…40) als MP3s (voice-06) — Diktat **230**, Audio gesamt **569**. Stand: **50/64** verwobene Sätze aufgenommen; restliche 14 (s-pfl-41…52, 63, 64) folgen in zwei Runden, bis dahin deklariertes Geräte-TTS. Gates dokumentiert fortgeschrieben (C2/K27a/K27f/K125c/K258c/VII6). Belege: tsc ✓ · smoke **1778/0** · interaktiv **734/0** · audit صفر · Build ✓.
+## R226 — Diktat-Stimme, sechste Charge (s-pfl-41…50)
+
+**Ergebnis: erledigt (Charge 6).** Zehn weitere verwobene Sätze (s-pfl-41…50) als MP3s (voice-06) — Diktat **240**, Audio gesamt **579**. Stand: **60/64** verwobene Sätze aufgenommen; nur noch 4 offen (s-pfl-51, 52, 63, 64) — eine Schlussrunde, bis dahin deklariertes Geräte-TTS. Gates dokumentiert fortgeschrieben (C2/K27a/K27f/K125c/K258c/VII6). Belege: tsc ✓ · smoke **1778/0** · interaktiv **734/0** · audit صفر · Build ✓.
