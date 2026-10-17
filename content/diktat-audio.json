@@ -1680,6 +1680,34 @@
    "voice": "voice-06 (de)",
    "level": "B2",
    "bytes": 34708
+  },
+  {
+   "id": "s-pfl-51",
+   "file": "/audio/diktat/s-pfl-51.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 41187
+  },
+  {
+   "id": "s-pfl-52",
+   "file": "/audio/diktat/s-pfl-52.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B2",
+   "bytes": 34917
+  },
+  {
+   "id": "s-pfl-63",
+   "file": "/audio/diktat/s-pfl-63.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 43485
+  },
+  {
+   "id": "s-pfl-64",
+   "file": "/audio/diktat/s-pfl-64.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A1",
+   "bytes": 21960
   }
  ]
 }

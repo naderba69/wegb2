@@ -332,3 +332,6 @@ Belege (R218–R220): tsc ✓ · smoke **1781/0** (+K302) · interaktiv **734/0*
 ## R226 — Diktat-Stimme, sechste Charge (s-pfl-41…50)
 
 **Ergebnis: erledigt (Charge 6).** Zehn weitere verwobene Sätze (s-pfl-41…50) als MP3s (voice-06) — Diktat **240**, Audio gesamt **579**. Stand: **60/64** verwobene Sätze aufgenommen; nur noch 4 offen (s-pfl-51, 52, 63, 64) — eine Schlussrunde, bis dahin deklariertes Geräte-TTS. Gates dokumentiert fortgeschrieben (C2/K27a/K27f/K125c/K258c/VII6). Belege: tsc ✓ · smoke **1778/0** · interaktiv **734/0** · audit صفر · Build ✓.
+## R227 — Diktat-Stimme, Schlusscharge: verwobene Sätze 64/64 aufgenommen
+
+**Ergebnis: erledigt — Zielkorpus komplett.** Die letzten vier verwobenen Sätze (s-pfl-51, 52, 63, 64) als MP3s (voice-06). Damit haben **alle 64 verwobenen Pflegesätze** (s-pfl-01…64) echte Aufnahmen statt Geräte-TTS — Diktat-Bank **244**, Audiodateien gesamt **583**. Ehrlicher Rest, unverändert deklariert: Die übrigen 430 neu-Sätze außerhalb des Webkorpus bleiben vorerst Geräte-TTS (in der App als solches gekennzeichnet); ihre Aufnahme ist ein eigenes, größeres Vorhaben und wird nicht behauptet. Gates dokumentiert fortgeschrieben (C2/K27a/K27f/K125c/K258c/VII6 — VII6 nennt den kompletten Webkorpus 64/64). Belege: tsc ✓ · smoke **1778/0** · interaktiv **734/0** · audit صفر · Build ✓.
