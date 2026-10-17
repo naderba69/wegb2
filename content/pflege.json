@@ -3028,5 +3028,116 @@
    "ar": "من فضلك استلقِ.",
    "situation": "توجيه حركة أساسي قبل الفحص أو للراحة"
   }
- ]
+ ],
+ "simulation": {
+  "hinweisAr": "تدريب محاكاة داخلي بمؤقّت على صيغتي الكتابة والتحدّث في فحوص مهنية: اكتب في الوقت المحدّد ثم قارن بالنموذج وقائمة الفحص بنفسك، ونفّذ مهمة التحدّث بصوت مرتفع. ليست صيغة امتحان رسمي ولا تصحيح آلي هنا — المقارنة الذاتية بالنموذج هي التقييم.",
+  "schreiben": [
+   {
+    "id": "pf-ss1",
+    "titel": "Verlaufseintrag nach einem Sturz",
+    "ar": "تدوين مسار بعد سقوط (20 دقيقة)",
+    "zeitMin": 20,
+    "szenarioDe": "Herr Braun, Zimmer 15, ist um 06:10 Uhr auf dem Weg zur Toilette gestürzt. Keine sichtbaren Verletzungen, keine Schmerzen. Blutdruck 128/76 mmHg, Puls 72/min. Er wurde ins Bett begleitet, ein Sturzprotokoll wurde ausgefüllt und der Frühdienst informiert. Schreiben Sie den Verlaufseintrag.",
+    "muster": "06:10 Uhr: Herr Braun (Zimmer 15) wurde nach einem Sturz auf dem Weg zur Toilette auf dem Stationsflur sitzend vorgefunden. Keine sichtbaren Verletzungen, keine Schmerzen angegeben. Blutdruck 128/76 mmHg, Puls 72/min. Der Patient wurde ins Bett begleitet, das Sturzprotokoll wurde ausgefüllt und der Frühdienst wurde informiert.",
+    "punkte": [
+     "Uhrzeit, Ort und Fundzustand zuerst",
+     "Verletzungen und Schmerzen ausdrücklich verneinen oder beschreiben",
+     "Vitalwerte mit Einheiten, danach Maßnahmen und Information notieren"
+    ]
+   },
+   {
+    "id": "pf-ss2",
+    "titel": "Schriftliche Übergabe: Nacht an Früh",
+    "ar": "تسليم مكتوب من الليل إلى الصباح (15 دقيقة)",
+    "zeitMin": 15,
+    "szenarioDe": "Frau Kaya, Zimmer 5, hat um 02:00 Uhr wegen Übelkeit geklingelt. Keine Schmerzen, kein Fieber. Sie bekam Wasser, das Fenster wurde geöffnet. Um 06:00 Uhr war sie beschwerdefrei. Schreiben Sie die Übergabe an den Frühdienst.",
+    "muster": "Übergabe Zimmer 5: Frau Kaya klingelte um 02:00 Uhr wegen Übelkeit. Keine Schmerzen, kein Fieber. Wasser wurde angeboten und das Fenster geöffnet. Bei anhaltender Übelkeit bitte den Blutdruck kontrollieren und die Nachtdienst-Ärztin informieren. Um 06:00 Uhr war die Patientin beschwerdefrei.",
+    "punkte": [
+     "Ereignis mit Uhrzeit und Beschwerde beginnen",
+     "Getroffene Maßnahmen in Reihenfolge",
+     "Offenen Auftrag an die nächste Schicht klar formulieren"
+    ]
+   },
+   {
+    "id": "pf-ss3",
+    "titel": "Aufnahme-Notiz: neuer Patient",
+    "ar": "ملاحظة استقبال مريض جديد (20 دقيقة)",
+    "zeitMin": 20,
+    "szenarioDe": "Herr Saleh, 74 Jahre, wurde heute aufgenommen, Zimmer 21. Allergie gegen Nüsse. Er geht mit dem Rollator und braucht nachts Hilfe für die Toilette. Seine Tochter wünscht einen Anruf bei Fragen. Schreiben Sie die Aufnahme-Notiz.",
+    "muster": "Aufnahme Zimmer 21: Herr Saleh, 74 Jahre, wurde heute aufgenommen. Wichtig: Allergie gegen Nüsse (auch im Aufnahmebericht vermerkt). Mobilität: geht mit Rollator, braucht nachts Hilfe für die Toilette. Die Tochter bittet um einen Anruf bei Fragen, die Telefonnummer liegt im Dienstzimmer bereit.",
+    "punkte": [
+     "Allergien immer an sichtbarer Stelle (Wichtig:)",
+     "Mobilität und nächtlicher Hilfebedarf konkret",
+     "Kontaktwunsch der Angehörigen mit Ablageort der Nummer"
+    ]
+   },
+   {
+    "id": "pf-ss4",
+    "titel": "Kurzbericht an den Hausarzt",
+    "ar": "تقرير قصير لطبيب الأسرة عند الخروج (25 دقيقة)",
+    "zeitMin": 25,
+    "szenarioDe": "Frau Peters, Zimmer 3, wird am Freitag entlassen. Die Wunde heilt gut. Die Medikation bleibt unverändert. Zweimal täglich kommt der ambulante Pflegedienst. Schreiben Sie einen kurzen Bericht an den Hausarzt.",
+    "muster": "Sehr geehrter Herr Dr. Sommer, Frau Peters (Zimmer 3) wird am Freitag in die häusliche Pflege entlassen. Die Operationswunde heilt gut und ist reizlos. Die Medikation bleibt unverändert, der aktuelle Plan liegt bei. Die weitere Versorgung übernimmt zweimal täglich der ambulante Pflegedienst. Bei Fragen erreichen Sie uns auf Station 2. Mit freundlichen Grüßen, das Pflegeteam.",
+    "punkte": [
+     "Anrede und Entlassungsziel im ersten Satz",
+     "Heilungszustand und unveränderte Medikation nennen",
+     "Weiterversorgung und Kontaktmöglichkeit schließen den Bericht"
+    ]
+   }
+  ],
+  "sprechen": [
+   {
+    "id": "pf-sp1",
+    "titel": "Schmerz gezielt erfragen",
+    "ar": "استجواب الألم بدقة عند مريض (5 دقائق)",
+    "zeitMin": 5,
+    "auftragDe": "Sie sprechen mit einem Patienten mit Knieschmerzen. Fragen Sie gezielt: Wo genau? Wie stark (0–10)? Seit wann? Was hilft? Fassen Sie am Ende kurz zusammen.",
+    "redemittel": [
+     "Wo genau tut es weh?",
+     "Wie stark ist der Schmerz auf einer Skala von 0 bis 10?",
+     "Seit wann haben Sie diese Schmerzen?",
+     "Wird es besser, wenn Sie sich ausruhen?"
+    ]
+   },
+   {
+    "id": "pf-sp2",
+    "titel": "Angehörige am Telefon informieren",
+    "ar": "إعلام الأهل هاتفيًا وتهدئتهم (5 دقائق)",
+    "zeitMin": 5,
+    "auftragDe": "Eine besorgte Tochter ruft an. Informieren Sie ruhig über den Zustand ihres Vaters (besser als gestern, isst wieder) und bieten Sie einen Rückruf der Ärztin um 15 Uhr an.",
+    "redemittel": [
+     "Guten Tag, hier ist Station 2, Sie sprechen mit …",
+     "Ihrem Vater geht es heute schon besser.",
+     "Die Ärztin ruft Sie um 15 Uhr gern zurück.",
+     "Möchten Sie sonst noch etwas wissen?"
+    ]
+   },
+   {
+    "id": "pf-sp3",
+    "titel": "Fall bei der Visite vorstellen",
+    "ar": "تقديم حالة في الجولة الطبية (7 دقائق)",
+    "zeitMin": 7,
+    "auftragDe": "Stellen Sie Frau Peters (68, Zimmer 5) bei der Visite vor: Operation am Montag, Wunde gerötet, Temperatur 38,4 °C, Vorschlag: Wundabstrich und Antibiotikum mit dem Arzt besprechen.",
+    "redemittel": [
+     "Ich stelle Ihnen Frau Peters vor, 68 Jahre, Zimmer 5.",
+     "Sie wurde am Montag operiert.",
+     "Die Wunde ist gerötet, die Temperatur liegt bei 38,4 Grad.",
+     "Wir schlagen einen Wundabstrich vor."
+    ]
+   },
+   {
+    "id": "pf-sp4",
+    "titel": "Ängstliche Patientin beruhigen",
+    "ar": "تهدئة مريضة خائفة قبل عملية (5 دقائق)",
+    "zeitMin": 5,
+    "auftragDe": "Eine Patientin hat große Angst vor ihrer Operation morgen. Beruhigen Sie sie: Ablauf erklären (etwa eine Stunde), Begleitung zusagen, Wunsch nach Anruf bei der Tochter aufnehmen.",
+    "redemittel": [
+     "Ich verstehe gut, dass Sie Angst haben.",
+     "Die Operation dauert etwa eine Stunde.",
+     "Sie sind nicht allein — wir sind für Sie da.",
+     "Möchten Sie, dass ich Ihre Tochter anrufe?"
+    ]
+   }
+  ]
+ }
 }

@@ -30,6 +30,13 @@ export interface PflegeFachfrage { frage: string; optionen: string[]; richtig: n
 /** بنك معرفة مهنية بأسلوب أسئلة Kenntnisprüfung (R203) — تدريب لا مواد رسمية لأيّ ولاية. */
 export const pflegeFachwissen: PflegeFachfrage[] = [];
 
+export interface PflegeSimSchreiben { id: string; titel: string; ar: string; szenarioDe: string; zeitMin: number; muster: string; punkte: string[] }
+export interface PflegeSimSprechen { id: string; titel: string; ar: string; auftragDe: string; zeitMin: number; redemittel: string[] }
+/** محاكاة كتابة/تحدّث داخلية بمؤقّت (R215) — مقارنة ذاتية بالنموذج، لا تصحيح آلي ولا تقييم نطق. */
+export const pflegeSimulation: { hinweisAr: string; schreiben: PflegeSimSchreiben[]; sprechen: PflegeSimSprechen[] } = {
+  hinweisAr: "", schreiben: [], sprechen: [],
+};
+
 export interface PflegePhrase { de: string; ar: string; situation: string }
 /** عبارات بجانب السرير لمستوى A1 (R204) — جاهزة للحفظ والاستعمال الفوري. */
 export const pflegePhrasen: PflegePhrase[] = [];
@@ -45,6 +52,7 @@ function fuellePflege(): void {
     medizinpruefung?: { hinweisAr: string; lesen: PflegeMedLesen[]; hoeren: PflegeMedHoeren[] };
     fachwissen?: PflegeFachfrage[];
     phrasen?: PflegePhrase[];
+    simulation?: { hinweisAr: string; schreiben: PflegeSimSchreiben[]; sprechen: PflegeSimSprechen[] };
   } | undefined;
   if (!roh) return;
   if (roh.wortschatz?.length && pflegeWoerter.length === 0) pflegeWoerter.splice(0, 0, ...roh.wortschatz);
@@ -53,6 +61,11 @@ function fuellePflege(): void {
   if (roh.pruefung?.length && pflegePruefung.length === 0) pflegePruefung.splice(0, 0, ...roh.pruefung);
   if (roh.fachwissen?.length && pflegeFachwissen.length === 0) pflegeFachwissen.splice(0, 0, ...roh.fachwissen);
   if (roh.phrasen?.length && pflegePhrasen.length === 0) pflegePhrasen.splice(0, 0, ...roh.phrasen);
+  if (roh.simulation && pflegeSimulation.schreiben.length === 0) {
+    pflegeSimulation.hinweisAr = roh.simulation.hinweisAr;
+    pflegeSimulation.schreiben.splice(0, 0, ...roh.simulation.schreiben);
+    pflegeSimulation.sprechen.splice(0, 0, ...roh.simulation.sprechen);
+  }
   if (roh.medizinpruefung && pflegeMedizin.lesen.length === 0) {
     pflegeMedizin.hinweisAr = roh.medizinpruefung.hinweisAr;
     pflegeMedizin.lesen.splice(0, 0, ...roh.medizinpruefung.lesen);

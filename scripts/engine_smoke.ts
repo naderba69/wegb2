@@ -13475,6 +13475,24 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K299 سلّم التوثيق مدرّج فعليًا: كل نموذج موسوم بمستواه، والمستويات الأربع ممثّلة، وقمّة B2 بالمبني للمجهول والأسلوب الاسمي، وحوارا تمريض على A2");
 }
 
+// ===== K301 (R215 · Schreib-/Sprech-Simulation mit Timer): Vier getimte
+// Schreibaufgaben (Modell + Checkliste zum Selbstvergleich) und vier
+// Sprechaufträge mit Redemitteln — ehrlich als internes Training markiert,
+// kein Automatik-Feedback, keine Aussprachebewertung. =====
+{
+  const pf6 = JSON.parse(readFileSync("content/pflege.json", "utf8")) as {
+    simulation?: { hinweisAr: string; schreiben: { muster: string; punkte: string[]; zeitMin: number }[]; sprechen: { redemittel: string[]; zeitMin: number }[] };
+  };
+  const sim = pf6.simulation;
+  const pfSrc6 = readFileSync("components/pflege.tsx", "utf8");
+  ok(!!sim && sim.schreiben.length === 4 && sim.sprechen.length === 4 &&
+     sim.schreiben.every((s) => s.muster.length > 80 && s.punkte.length >= 3 && s.zeitMin >= 10) &&
+     sim.sprechen.every((s) => s.redemittel.length >= 4 && s.zeitMin >= 5) &&
+     sim.hinweisAr.includes("ليست صيغة امتحان رسمي") &&
+     pfSrc6.includes('data-testid="pflege-sim"') && pfSrc6.includes("لا تسجيل ولا تقييم نطق"),
+    "K301 محاكاة الكتابة والتحدّث: 4 مهام كتابة بمؤقّت ونموذج وقائمة فحص، و4 مهام تحدّث بوسائل تعبير — موسومة تدريبًا داخليًا بلا تصحيح آلي ولا تقييم نطق");
+}
+
   const dub = pf4.wortschatz.filter((w) => w.thema === "dubletten");
   ok(dub.length === 12 && dub.every((w) => !!w.latein) &&
      ["das Fieberthermometer", "die Tropfen", "die Verstopfung", "die Schwäche"].every((t) => pf4.wortschatz.some((w) => w.de === t)) &&

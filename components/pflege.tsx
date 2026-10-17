@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung, pflegeMedizin, pflegeFachwissen, pflegePhrasen } from "@/lib/pflege";
+import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung, pflegeMedizin, pflegeFachwissen, pflegePhrasen, pflegeSimulation } from "@/lib/pflege";
 import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
@@ -156,6 +156,85 @@ function FachwissenQuiz() {
   );
 }
 
+
+function SimTimer({ minuten }: { minuten: number }) {
+  const [aktiv, setAktiv] = useState(false);
+  const [sek, setSek] = useState(minuten * 60);
+  useEffect(() => {
+    if (!aktiv) return;
+    const t = setInterval(() => setSek((s) => {
+      if (s <= 1) { setAktiv(false); return 0; }
+      return s - 1;
+    }), 1000);
+    return () => clearInterval(t);
+  }, [aktiv]);
+  return (
+    <span style={{ display: "inline-flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+      <button type="button" className="btn btn-ghost" style={{ minHeight: "44px" }}
+        onClick={() => { setSek(minuten * 60); setAktiv(true); }}>
+        ▶ ابدأ المؤقّت ({minuten} دقيقة)
+      </button>
+      {(aktiv || sek < minuten * 60) && (
+        <span>⏱️ {Math.floor(sek / 60)}:{String(sek % 60).padStart(2, "0")}{!aktiv && sek === 0 ? " — انتهى الوقت" : ""}</span>
+      )}
+    </span>
+  );
+}
+
+/** محاكاة كتابة/تحدّث داخلية بمؤقّت (R215): مقارنة ذاتية بالنموذج — لا تصحيح آلي ولا تقييم نطق. */
+function Simulationstraining() {
+  const [offen, setOffen] = useState<Record<string, boolean>>({});
+  if (!pflegeSimulation.schreiben.length) return null;
+  return (
+    <section data-testid="pflege-sim" style={{ marginTop: "1.2rem" }}>
+      <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>🖊️🎙️ محاكاة الكتابة والتحدّث بمؤقّت (تدريب داخلي)</h3>
+      <p style={{ fontSize: "0.85rem", color: "var(--color-ink2)", margin: "0 0 0.6rem" }}>{pflegeSimulation.hinweisAr}</p>
+      <h4 style={{ fontWeight: 800, margin: "0.6rem 0 0.4rem" }}>✍️ كتابة مهنية مؤقّتة — اكتب ثم قارن</h4>
+      <div style={{ display: "grid", gap: "0.6rem" }}>
+        {pflegeSimulation.schreiben.map((s) => (
+          <article key={s.id} className="card" style={{ padding: "0.7rem 0.9rem" }} data-testid={`pflege-sim-schreiben-${s.id}`}>
+            <div style={{ fontWeight: 800 }}>{s.titel}</div>
+            <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>{s.ar}</div>
+            <div style={{ margin: "0.4rem 0" }}><SimTimer minuten={s.zeitMin} /></div>
+            <De style={{ display: "block", fontSize: "0.9rem" }}>{s.szenarioDe}</De>
+            <textarea className="field" rows={6} placeholder="اكتب نصّك الألماني هنا في الوقت المحدّد…" aria-label={s.titel} style={{ width: "100%", marginTop: "0.4rem" }} />
+            <button type="button" className="btn btn-ghost" style={{ marginTop: "0.4rem", minHeight: "44px" }}
+              onClick={() => setOffen((o) => ({ ...o, [s.id]: !o[s.id] }))}>
+              {offen[s.id] ? "🙈 أخفِ النموذج" : "👁 قارن بالنموذج وقائمة الفحص"}
+            </button>
+            {offen[s.id] && (
+              <div style={{ marginTop: "0.5rem" }}>
+                <De style={{ display: "block", background: "var(--color-paper2)", padding: "0.6rem 0.8rem", borderRadius: "0.5rem", lineHeight: 1.9 }}>{s.muster}</De>
+                <ul style={{ margin: "0.4rem 0 0", paddingInlineStart: "1.1rem", fontSize: "0.85rem" }}>
+                  {s.punkte.map((pt) => <li key={pt}>{pt}</li>)}
+                </ul>
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+      <h4 style={{ fontWeight: 800, margin: "0.8rem 0 0.4rem" }}>🎙️ تحدّث مؤقّت — نفّذ الدور بصوت مرتفع</h4>
+      <div style={{ display: "grid", gap: "0.6rem" }}>
+        {pflegeSimulation.sprechen.map((s) => (
+          <article key={s.id} className="card" style={{ padding: "0.7rem 0.9rem" }} data-testid={`pflege-sim-sprechen-${s.id}`}>
+            <div style={{ fontWeight: 800 }}>{s.titel}</div>
+            <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>{s.ar}</div>
+            <div style={{ margin: "0.4rem 0" }}><SimTimer minuten={s.zeitMin} /></div>
+            <De style={{ display: "block", fontSize: "0.9rem" }}>{s.auftragDe}</De>
+            <div style={{ fontSize: "0.85rem", marginTop: "0.4rem" }}>وسائل تعبير داعمة:</div>
+            <ul style={{ margin: "0.3rem 0 0", paddingInlineStart: "1.1rem", fontSize: "0.88rem", lineHeight: 1.9 }}>
+              {s.redemittel.map((r) => <li key={r}><De>{r}</De></li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+      <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", marginTop: "0.6rem" }}>
+        بصراحة: هنا لا تسجيل ولا تقييم نطق ولا تصحيح آلي — تتدرّب بالمؤقّت وتقارن بنفسك بالنموذج وقوائم الفحص؛ وإن فعّلت رفيق التحدّث بمفتاحك الخاص يمكنك تنفيذ الحوار معه.
+      </p>
+    </section>
+  );
+}
+
 export function PflegeStation() {
   const [stufe, setStufe] = useState<string>("alle");
   const [dialogId, setDialogId] = useState<string>(pflegeDialoge[0]?.id ?? "");
@@ -282,6 +361,7 @@ export function PflegeStation() {
       </section>
 
       <MedizinSimulation />
+      <Simulationstraining />
 
       <FachwissenQuiz />
 
