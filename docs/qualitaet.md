@@ -358,3 +358,6 @@ Zehn weitere neu-Sätze aufgenommen (voice-06) — neu **98/494**, offen 396; Di
 ## R232 — Kampagne Punkt 1, Charge (s-a1-46…55)
 
 Zehn weitere neu-Sätze (A1) aufgenommen (voice-06) — neu **108/494**, offen 386; Diktat gesamt **288/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
+## R233 — Kampagne Punkt 1, Charge (s-a1-56…60 + s-a2-48…52)
+
+Zehn weitere neu-Sätze aufgenommen (voice-06) — neu **118/494**, offen 376; Diktat gesamt **298/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
