@@ -403,7 +403,7 @@ const vocabRepeatAudit = (() => {
     ["texts", texts.filter((t) => !(t as { neu?: boolean }).neu).length >= 80 ? texts.filter((t) => !(t as { neu?: boolean }).neu).length : 0, texts.filter((t) => !(t as { neu?: boolean }).neu).length],
     ["dialogues", dialogues.filter((d) => !(d as { neu?: boolean }).neu).length >= 80 ? dialogues.filter((d) => !(d as { neu?: boolean }).neu).length : 0, dialogues.filter((d) => !(d as { neu?: boolean }).neu).length],
     ["writing", writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length >= 30 ? writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length : 0, writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length],
-    ["vocab", alleVokabeln.length, 3499],
+    ["vocab", alleVokabeln.length, 3525], // R206: +26 Pflege-Wörter in Alltags-Decks verwoben (3525, vorher 3499)
     ["fehler", fehlerList.length, 196],
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
@@ -443,10 +443,10 @@ const vocabRepeatAudit = (() => {
   const GOETHE_UNITS = ["Beziehungen", "Gesundheit", "Gesellschaft", "Wohnen", "Digital", "Wissenschaft", "Schönheit", "Kunst"];
   ok(GOETHE_UNITS.every((u) => vortrag.some((x) => x.unit === u)), "K21c كل لوحة Goethe لها موضوعان على المنصة");
 
-  ok(alleVokabeln.length === 3499, "K21d بنك المفردات: 3499 بطاقة عبر 80 حزمةً؛ يتطابق العدد مع القرص والفهرس");
+  ok(alleVokabeln.length === 3525, "K21d بنك المفردات: 3525 بطاقة عبر 80 حزمةً (R206: نُسجت 26 كلمة تمريض في حزم الصحة/العمل العامة، كانت 3499)؛ يتطابق العدد مع القرص والفهرس");
   ok(GOETHE_UNITS.every((u) => { const key = { Beziehungen: "beziehungen", Gesundheit: "gesundheit", Gesellschaft: "gesellschaft", Wohnen: "wohnen", Digital: "digital", Wissenschaft: "wissenschaft", Schönheit: "schoenheit", Kunst: "kunst-kultur" }[u] as string; return alleVokabeln.filter((c) => c.tags?.includes(key)).length >= 40; }), "K21e تغطية موضوعية: ≥40 كلمة لكل لوحة Goethe");
-  ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3451,
-    `K21f التكرار المعجمي إما موثّق لإعادة الاسترجاع عبر المستويات أو معدوم (${vocabRepeatAudit.groups} مجموعة/48؛ ${vocabRepeatAudit.unique}/3451 فريداً)`);
+  ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3477 /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
+    `K21f التكرار المعجمي إما موثّق لإعادة الاسترجاع عبر المستويات أو معدوم (${vocabRepeatAudit.groups} مجموعة/48؛ ${vocabRepeatAudit.unique}/3477 فريداً)`);
 
   const LUECKEN = ["b2-futur-ii", "b2-relativ-generalisierend", "b2-doppelkonnektoren"];
   ok(LUECKEN.every((k) => grammarMap[k] && grammarMap[k].exercises.length >= 5 && grammarMap[k].level === "B2"), "K21g فجوات القواعد الثلاث سُدّت بمواضيع كاملة (≥5 تمارين B2)");
@@ -659,8 +659,8 @@ const vocabRepeatAudit = (() => {
       ok(ikarten.every((c) => /[\u0600-\u06ff]/.test(c.ar) && !/[A-Za-z]/.test(c.ar)), "K29c عربيةٌ خالصة: لا لاتينيةً في شرحٍ ولا شرحَ بلا عربية");
       ok(ikarten.every((c) => /^(der|die|das) /.test(c.de) ? (c.article === c.de.split(" ")[0] && (!c.plural || /^(der|die|das) /.test(c.plural))) : (!c.article && !c.plural)), "K29d الأداةُ والجمعُ منضبطان — والفعلُ والصفةُ عاريان منهما");
       ok(alleVokabeln.filter((c) => c.tags?.some((t) => ITAGS.includes(t))).length === ikarten.length, "K29e الرقعةُ مسطَّحةٌ في البنك: كل بطاقةٍ يراها محركُ SRS بلا واسطة");
-      ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3451,
-        `K29f رقعةُ المفردات لا تضيف تكراراً غير موثّق (${vocabRepeatAudit.groups} مجموعة مقصودة؛ ${vocabRepeatAudit.unique}/3451 فريداً)`);
+      ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3477 /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
+        `K29f رقعةُ المفردات لا تضيف تكراراً غير موثّق (${vocabRepeatAudit.groups} مجموعة مقصودة؛ ${vocabRepeatAudit.unique}/3477 فريداً)`);
     }
     {
       const wr = JSON.parse(readFileSync("content/writing.json", "utf8")) as unknown as { id: string; level: string; sample: string; noteAr?: string[] }[];
@@ -1287,7 +1287,7 @@ const vocabRepeatAudit = (() => {
     ok((proL["A1"] ?? 0) + (proL["A2"] ?? 0) + (proL["B1"] ?? 0) >= 2400, `K49a3 الرصيدُ التراكميُّ حتى B1 عبرَ ٢٤٠٠ المرجعيةَ (${(proL["A1"] ?? 0) + (proL["A2"] ?? 0) + (proL["B1"] ?? 0)})`);
     ok((proL["A1"] ?? 0) + (proL["A2"] ?? 0) >= 1300, `K49a2 الرصيدُ التراكميُّ A1+A2 عبرَ ١٣٠٠ المرجعيةَ لمستوى A2 (${(proL["A1"] ?? 0) + (proL["A2"] ?? 0)})`);
     ok(alleVokabeln.length >= 3356, `K49c مجموعُ البطاقاتِ من البنكِ لا من التقدير (${alleVokabeln.length})`);
-    ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3451,
+    ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3477 /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
       `K49d التكرارات المقصودة موثّقة بأمثلة مختلفة وعبر مستويات متباينة (${vocabRepeatAudit.groups} مجموعة؛ ${vocabRepeatAudit.unique}/${alleVokabeln.length} فريداً)`);
     const idSet = new Set(alleVokabeln.map((v) => v.id));
     ok(idSet.size === alleVokabeln.length, "K49e ولا معرِّفَ مكرَّرٌ يُفسِدُ جدولَ المراجعة");
@@ -2967,10 +2967,10 @@ void 0;
     `K125d تغطيةُ الرادارِ من الدالةِ نفسِها: ${abR.mitSignal}/${abR.dialoge} إشارات · ${abR.mitFalle} مضلل (${nAb})`);
   ok(lies.includes(`(${nDr} تمريناً`) , `K125e تمارينُ الأذنِ من الدالةِ نفسِها (${nDr})`);
   const nS2 = J("content/sentences.json"), nW = J("content/writing.json"), nV = J("content/verben.json");
-  ok(nS2 === 678 && nW === 90 && nV === 126 && lies.includes("678") && lies.includes("writing **90**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (678 بعد جملتَي يتيمتَي B2 — R145)`);
+  ok(nS2 === 707 && nW === 90 && nV === 126 && lies.includes("707") && lies.includes("writing **90**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (707: 29 جملة تمريض منسوجة في البنك العام — R206، منها 17 جملة تغطية تربط البطاقات الجديدة بالنصوص/الجمل فلا يتيم؛ كانت 678 منذ R145)`);
   const nKt = J("content/kollokationen.json");
   const nLue = (JSON.parse(readFileSync("content/luecken.json", "utf8")).items as { gaps: unknown[] }[]).reduce((n, it) => n + it.gaps.length, 0);
-  ok(nKt === 2191 && nLue === 216 && lies.includes("2191") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`);
+  ok(nKt === 2215 && nLue === 216 && lies.includes("2215") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`) // R206: +24 بطاقة منسوجة بمتلازمات حقيقية (2215، كانت 2191);
 }
 
 
@@ -2989,7 +2989,7 @@ void 0;
   walk2(v);
   const ohnePos = karten.filter((c) => !c.pos);
   const fremdPos = karten.filter((c) => c.pos && !POS12.includes(c.pos));
-  ok(karten.length === 3499 && ohnePos.length === 0 && fremdPos.length === 0, `K126a كلُّ بطاقةٍ موسومةٌ من المفرداتِ المحكومة (${karten.length}/3499؛ بلا نوع: ${ohnePos.length}؛ نوعٌ مجهول: ${fremdPos.length})`);
+  ok(karten.length === 3525 && ohnePos.length === 0 && fremdPos.length === 0, `K126a كلُّ بطاقةٍ موسومةٌ من المفرداتِ المحكومة (${karten.length}/3525؛ بلا نوع: ${ohnePos.length}؛ نوعٌ مجهول: ${fremdPos.length})`) // R206: 3525 بعد نسج 26 كلمة تمريض في الحزم العامة (كانت 3499);
   const posVon = (de: string) => karten.find((c) => c.de === de)?.pos;
   ok(posVon("heißen") === "Verb" && posVon("die Schule") === "Nomen" && posVon("heute") === "Adverb" && posVon("groß") === "Adjektiv" && posVon("und") === "Konjunktion" && posVon("mit") === "Präposition" && posVon("eins") === "Zahl" && posVon("hallo") === "Interjektion" && posVon("Guten Tag") === "Wendung" && posVon("Ich weiß nicht") === "Satz",
     "K126b عشرُ عيّناتٍ يدويةٍ في مواضعِها عبرَ عشرةِ أنواع");
@@ -3104,7 +3104,7 @@ void 0;
   const st = JSON.parse(readFileSync("content/sentences.json", "utf8")) as any;
   const stl = (Array.isArray(st) ? st : st.sentences) as any[];
   const byIdS = (id: string) => stl.find((x) => x.id === id);
-  ok(stl.length === 678 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 678 (جملتا يتيمتَي B2 — R145)");
+  ok(stl.length === 707 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 707 (R206: 29 جملة s-pfl منسوجة؛ كانت 678 منذ R145)");
   ok(!JSON.stringify(stl).includes("konjunktor"), "K129c وسم konjunktor مصحّح");
   const gg2 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   let dupAns = 0;
@@ -3626,8 +3626,8 @@ void 0;
       !!target && card.syn?.includes(target) === true && phrases.includes(bank[card.de]?.[target]?.basisKollokation);
   });
   const a1Supported = Object.keys(kollokationen).filter((id) => ids.get(id)?.level === "A1").length;
-  ok(entries.length === 5 && added.length === 10 && Object.keys(kollokationen).length === 2191 &&
-    a1Supported === 199 && all.length === 4828 && new Set(added).size === 10 && new Set(all).size === all.length && valid,
+  ok(entries.length === 5 && added.length === 10 && Object.keys(kollokationen).length === 2215 /* R206 */ &&
+    a1Supported === 199 && all.length === 4876 /* R206: +48 عبارة للبطاقات المنسوجة */ && new Set(added).size === 10 && new Set(all).size === all.length && valid,
     `K151a دعم R77 بقي محفوظاً؛ بنك المتلازمات النهائي ${Object.keys(kollokationen).length} / A1 ${a1Supported}`);
 }
 
@@ -3715,7 +3715,7 @@ void 0;
   const a2Supported = Object.keys(kollokationen).filter((id) => ids.get(id)?.level === "A2").length;
   ok(Object.keys(expectedA1).length === 4 && Object.keys(expectedA2New).length === 3 &&
     supportPhrases.length === 14 && new Set(supportPhrases).size === 14 && new Set(allPhrases).size === allPhrases.length &&
-    Object.keys(kollokationen).length === 2191 && allPhrases.length === 4828 &&
+    Object.keys(kollokationen).length === 2215 /* R206 */ && allPhrases.length === 4876 /* R206 */ &&
     a1Supported === 199 && a2Supported === 248 && core.A1.karten.length === 170 && core.A2.karten.length === 245 &&
     newA1Valid && newA2Valid && appendA2Valid,
     `K153a دعم 4 بطاقات A1 و5 بطاقات A2 بمتلازمات قابلة للاختبار، بلا تغيير SOLL أو تكرار؛ البنك ${Object.keys(kollokationen).length} / ${allPhrases.length} عبارة`);
@@ -13445,6 +13445,20 @@ function collectR262(dir: string, out: string[] = []): string[] {
     dokumentation: { id: string }[];
     phrasen: { de: string; ar: string }[];
   };
+// ===== K298 (R206 · Pflege in den Alltag verwoben): 26 Berufswörter leben
+// jetzt in den allgemeinen Gesundheits-/Arbeits-Decks und 12 Pflegesätze im
+// allgemeinen Satzbank — der Lernende trifft sie in normalen Tagesaufgaben,
+// nicht nur in der Station. Zähler K21d/K125f/K129f dokumentiert erweitert. =====
+{
+  const alleKarten = Object.values(vocabMap as Record<string, { cards: { id: string }[] }>).flatMap((d) => d.cards);
+  const vpfl = alleKarten.filter((k) => k.id.startsWith("vpfl-"));
+  const satzIds = (bankRoh("sentences.json") as { id: string }[]).map((s) => s.id).filter((i) => i.startsWith("s-pfl-"));
+  const pfSrc4 = readFileSync("components/pflege.tsx", "utf8");
+  ok(vpfl.length === 26 && new Set(vpfl.map((k) => k.id)).size === 26 && satzIds.length === 29 &&
+     pfSrc4.includes("منسوجة أيضًا في حزم مفرداتك اليومية"),
+    "K298 التمريض منسوج في العام: 26 بطاقة vpfl داخل حزم الصحة/العمل اليومية و29 جملة s-pfl (12 موضوعية + 17 تغطية مكثّفة ≥3 بطاقات/جملة وفق K83b) في بنك الجمل — تصل في المهام العادية لا في محطة منفصلة فقط");
+}
+
   const dub = pf4.wortschatz.filter((w) => w.thema === "dubletten");
   ok(dub.length === 12 && dub.every((w) => !!w.latein) &&
      ["das Fieberthermometer", "die Tropfen", "die Verstopfung", "die Schwäche"].every((t) => pf4.wortschatz.some((w) => w.de === t)) &&
