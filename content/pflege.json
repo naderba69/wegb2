@@ -1785,7 +1785,7 @@
   }
  ],
  "medizinpruefung": {
-  "hinweisAr": "محاكاة تدريبية داخلية على أنواع بنود telc Medizin/Pflege — ليست امتحان telc رسميًا ولا تستخدم موادّه. الاستماع هنا بصوت متصفح آلي، وفي الامتحان الحقيقي تسجيلات أصلية.",
+  "hinweisAr": "محاكاة تدريبية داخلية موسّعة (36 بندًا: 18 قراءة و18 استماعًا) على أنواع بنود telc Medizin/Pflege — ليست امتحان telc رسميًا ولا تستخدم موادّه. الاستماع هنا بصوت متصفح آلي، وفي الامتحان الحقيقي تسجيلات أصلية بسرعات طبيعية.",
   "lesen": [
    {
     "id": "pf-l1",
@@ -1850,6 +1850,142 @@
        "Die Besuchszeiten",
        "Zeitpunkt und Maßnahmen",
        "Die Zimmernummer des Arztes"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-l3",
+    "titel": "Aushang: Dienstplan und Tausch",
+    "text": "Liebe Kolleginnen und Kollegen, der neue Dienstplan für den nächsten Monat hängt ab sofort im Stationsbüro aus. Wer einen Dienst tauschen möchte, trägt den Wunsch bitte bis zum 20. in die Tauschliste ein und informiert die Stationsleitung. Nachtdienste dürfen nur mit Kolleginnen und Kollegen derselben Qualifikation getauscht werden. Änderungen nach dem 25. sind nur in Ausnahmefällen möglich. Vielen Dank!",
+    "fragen": [
+     {
+      "frage": "Bis wann muss ein Tauschwunsch eingetragen werden?",
+      "optionen": [
+       "Bis zum 10.",
+       "Bis zum 20.",
+       "Bis zum Monatsende"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wer darf Nachtdienste tauschen?",
+      "optionen": [
+       "Alle Mitarbeiter frei",
+       "Nur Kollegen mit derselben Qualifikation",
+       "Nur die Stationsleitung"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wo hängt der neue Dienstplan?",
+      "optionen": [
+       "Im Stationsbüro",
+       "An der Eingangstür",
+       "Im Pausenraum"
+      ],
+      "richtig": 0
+     }
+    ]
+   },
+   {
+    "id": "pf-l4",
+    "titel": "Beipackzettel (Auszug): Schmerzmittel",
+    "text": "Anwendung: Erwachsene nehmen bei Bedarf eine Tablette (500 mg), höchstens vier Tabletten in 24 Stunden. Nehmen Sie die Tablette mit einem Glas Wasser ein. Häufige Nebenwirkungen sind Magenschmerzen und Übelkeit. Bei Lebererkrankungen fragen Sie vor der Einnahme Ihren Arzt. Bewahren Sie das Medikament außerhalb der Reichweite von Kindern auf.",
+    "fragen": [
+     {
+      "frage": "Wie viele Tabletten sind pro Tag höchstens erlaubt?",
+      "optionen": [
+       "Zwei",
+       "Vier",
+       "Acht"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Welche Nebenwirkungen werden genannt?",
+      "optionen": [
+       "Kopfschmerzen und Fieber",
+       "Magenschmerzen und Übelkeit",
+       "Hautausschlag und Juckreiz"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wer soll vor der Einnahme den Arzt fragen?",
+      "optionen": [
+       "Menschen mit Lebererkrankungen",
+       "Alle Erwachsenen",
+       "Kinder"
+      ],
+      "richtig": 0
+     }
+    ]
+   },
+   {
+    "id": "pf-l5",
+    "titel": "Hygieneplan (Auszug): Händedesinfektion",
+    "text": "Die hygienische Händedesinfektion dauert 30 Sekunden. Geben Sie ausreichend Desinfektionsmittel auf die trockenen Hände und reiben Sie alle Flächen ein, auch die Fingerzwischenräume und die Daumen. Schmuck an Händen und Unterarmen ist während des Dienstes nicht erlaubt. Nach sichtbarer Verschmutzung werden die Hände zuerst gewaschen und danach desinfiziert. Die Spender finden Sie an jedem Bett und an den Türen.",
+    "fragen": [
+     {
+      "frage": "Wie lange dauert die Händedesinfektion?",
+      "optionen": [
+       "10 Sekunden",
+       "30 Sekunden",
+       "2 Minuten"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was gilt für Schmuck im Dienst?",
+      "optionen": [
+       "Nur Ringe sind erlaubt",
+       "Schmuck an Händen und Unterarmen ist nicht erlaubt",
+       "Schmuck muss nur sauber sein"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was geschieht zuerst bei sichtbar schmutzigen Händen?",
+      "optionen": [
+       "Nur desinfizieren",
+       "Zuerst waschen, dann desinfizieren",
+       "Handschuhe anziehen"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-l6",
+    "titel": "Patienteninformation: Sturz vermeiden",
+    "text": "Liebe Patientin, lieber Patient, nach einer Operation oder bei neuen Medikamenten kann Ihnen beim Aufstehen schwindelig werden. Setzen Sie sich zuerst langsam an die Bettkante und warten Sie eine Minute. Benutzen Sie die Klingel an Ihrem Bett — wir begleiten Sie gern zur Toilette. Tragen Sie feste, geschlossene Schuhe und lassen Sie den Weg zum Bad frei von Taschen und Kabeln.",
+    "fragen": [
+     {
+      "frage": "Was sollen Patienten zuerst tun, wenn sie aufstehen?",
+      "optionen": [
+       "Sofort losgehen",
+       "Langsam an die Bettkante setzen und warten",
+       "Die Augen schließen"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wozu dient die Klingel am Bett?",
+      "optionen": [
+       "Um das Essen zu bestellen",
+       "Um Begleitung zur Toilette zu rufen",
+       "Um Besucher anzumelden"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Welche Schuhe werden empfohlen?",
+      "optionen": [
+       "Offene Hausschuhe",
+       "Feste, geschlossene Schuhe",
+       "Barfuß ist am besten"
       ],
       "richtig": 1
      }
@@ -1922,6 +2058,142 @@
        "Die Operation beginnt"
       ],
       "richtig": 0
+     }
+    ]
+   },
+   {
+    "id": "pf-h3",
+    "titel": "Telefon: ärztliche Anordnung",
+    "transkript": "Hallo, hier spricht Dr. Yilmaz. Für Frau Kaya bitte ab heute Abend das neue Blutdruckmittel geben, eine Tablette um 20 Uhr. Kontrollieren Sie den Blutdruck morgen früh und mittags und tragen Sie die Werte ein. Wenn der obere Wert über 160 steigt, rufen Sie mich bitte an.",
+    "fragen": [
+     {
+      "frage": "Wann soll das neue Medikament gegeben werden?",
+      "optionen": [
+       "Morgens um 8 Uhr",
+       "Abends um 20 Uhr",
+       "Mittags um 12 Uhr"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wie oft wird der Blutdruck morgen kontrolliert?",
+      "optionen": [
+       "Einmal",
+       "Zweimal",
+       "Viermal"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Ab welchem Wert soll der Arzt angerufen werden?",
+      "optionen": [
+       "Über 140 oben",
+       "Über 160 oben",
+       "Über 120 oben"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-h4",
+    "titel": "Angehörige: Frage zur Entlassung",
+    "transkript": "Guten Tag, hier ist die Tochter von Herrn Yilmaz. Ich wollte fragen, ob mein Vater am Freitag nach Hause kann. Er braucht zu Hause Hilfe beim Waschen. Können Sie mir sagen, wer uns dabei unterstützt? Und wann bekomme ich den Arztbrief?",
+    "fragen": [
+     {
+      "frage": "Wer ruft an?",
+      "optionen": [
+       "Die Ehefrau",
+       "Die Tochter",
+       "Die Nachbarin"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wobei braucht Herr Yilmaz zu Hause Hilfe?",
+      "optionen": [
+       "Beim Kochen",
+       "Beim Waschen",
+       "Beim Fahren"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was möchte die Tochter noch bekommen?",
+      "optionen": [
+       "Den Arztbrief",
+       "Einen neuen Termin",
+       "Die Versichertenkarte"
+      ],
+      "richtig": 0
+     }
+    ]
+   },
+   {
+    "id": "pf-h5",
+    "titel": "Notfall: kurze Meldung",
+    "transkript": "Achtung, Notfall in Zimmer 7! Herr Berger, 70 Jahre, klagt über starken Druck auf der Brust und Atemnot. Ich habe ihn aufgesetzt und den Notruf gedrückt. Der Blutdruck ist 90 zu 60, der Puls schnell. Bitte kommen Sie sofort und bringen Sie den Notfallwagen mit!",
+    "fragen": [
+     {
+      "frage": "Was ist das Problem von Herrn Berger?",
+      "optionen": [
+       "Starke Bauchschmerzen",
+       "Druck auf der Brust und Atemnot",
+       "Hohes Fieber"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wie wurde der Patient gelagert?",
+      "optionen": [
+       "Flach auf dem Rücken",
+       "Aufgesetzt",
+       "Auf die Seite"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was soll mitgebracht werden?",
+      "optionen": [
+       "Der Rollstuhl",
+       "Der Notfallwagen",
+       "Der Arztbrief"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-h6",
+    "titel": "Übergabe: Patient mit Diabetes",
+    "transkript": "Übergabe zu Herrn Braun, Zimmer 4. Er hat Diabetes und bekommt Insulin vor den Mahlzeiten. Der Blutzucker war vor dem Abendessen bei 180. Er isst gut, aber er vergisst manchmal sein Tablett. Bitte messen Sie morgen früh den Nüchternwert und schreiben Sie ihn in die Kurve.",
+    "fragen": [
+     {
+      "frage": "Wann bekommt Herr Braun Insulin?",
+      "optionen": [
+       "Nach den Mahlzeiten",
+       "Vor den Mahlzeiten",
+       "Nur nachts"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wie hoch war der Blutzucker vor dem Abendessen?",
+      "optionen": [
+       "Bei 120",
+       "Bei 180",
+       "Bei 240"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was soll morgen früh gemessen werden?",
+      "optionen": [
+       "Der Blutdruck",
+       "Der Nüchternwert (Blutzucker)",
+       "Die Temperatur"
+      ],
+      "richtig": 1
      }
     ]
    }

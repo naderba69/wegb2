@@ -353,6 +353,15 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R205 — Medizin-Simulation erweitert (12 → 36 Items) — abgeschlossen ✅
+
+- `medizinpruefung` in pflege.json: 6 Lese- + 6 Hörtexte à 3 Fragen = 36 Items
+  (Dienstplan, Beipackzettel, Hygieneplan, Sturzprophylaxe; Telefon-Anordnung,
+  Angehörigenfrage, Notfallmeldung, Diabetes-Übergabe u. a.).
+- Timer auf 60 Minuten vorgeschlagen, Fragenanzahl dynamisch aus der Bank,
+  Transkript-Enthüllung erst nach Abgabe; ehrliche interne Kennzeichnung bleibt.
+- **Nachweise**: tsc ✓ · smoke **1777/0** (K292 aktualisiert) · interaktiv 732/0 · audit 0 · build ✓.
+
 ## R204 — Kompetenzbericht-Lücken geschlossen — abgeschlossen ✅
 
 - Pflege-Bank: +12 Deutsch↔Latein-Dubletten (latein-Feld), +4 Mikrobegriffe

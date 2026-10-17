@@ -13349,11 +13349,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const med = pf2.medizinpruefung;
   const alleFragen = [...med.lesen, ...med.hoeren].flatMap((x) => x.fragen);
   const pfSrc2 = readFileSync("components/pflege.tsx", "utf8");
-  ok(med.lesen.length === 2 && med.hoeren.length === 2 && alleFragen.length === 12 &&
+  ok(med.lesen.length === 6 && med.hoeren.length === 6 && alleFragen.length === 36 &&
      alleFragen.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3) &&
      med.hoeren.every((h) => h.transkript.length > 60) &&
-     pfSrc2.includes('data-testid="pflege-medizin"') && pfSrc2.includes("محاكاة داخلية، لا نتيجة telc"),
-    "K292 محاكاة Medizin: 12 بندًا سليم البنية بمؤقّت وتسليم ونتيجة موسومة داخلية — بلا ادّعاء رسمية");
+     pfSrc2.includes('data-testid="pflege-medizin"') && pfSrc2.includes("محاكاة داخلية، لا نتيجة telc") &&
+     pfSrc2.includes("60 دقيقة مقترحة"),
+    "K292 محاكاة Medizin الموسّعة (R205): 36 بندًا (6+6) سليم البنية بمؤقّت 60 دقيقة وتسليم ونتيجة موسومة داخلية — بلا ادّعاء رسمية");
 }
 
 // ===== K291 (R198 · KI-Sprechbegleiter): BYOK-Rollenspiel fürs Sprechen —
