@@ -29,7 +29,7 @@ function MedizinSimulation() {
   const [aktiv, setAktiv] = useState(false);
   const [antworten, setAntworten] = useState<Record<string, number>>({});
   const [fertig, setFertig] = useState(false);
-  const [sekunden, setSekunden] = useState(60 * 60);
+  const [sekunden, setSekunden] = useState(90 * 60);
   const gesamtFragen = pflegeMedizin.lesen.reduce((a, l) => a + l.fragen.length, 0) + pflegeMedizin.hoeren.reduce((a, h) => a + h.fragen.length, 0);
   useEffect(() => {
     if (!aktiv || fertig) return;
@@ -68,11 +68,11 @@ function MedizinSimulation() {
   );
   return (
     <section data-testid="pflege-medizin">
-      <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>⏱️ محاكاة telc Medizin/Pflege الموسّعة — قراءة واستماع (60 دقيقة مقترحة)</h3>
+      <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>⏱️ محاكاة telc Medizin/Pflege الموسّعة — قراءة واستماع (90 دقيقة مقترحة)</h3>
       <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0 0 0.5rem" }}>{pflegeMedizin.hinweisAr}</p>
       {!aktiv ? (
         <button type="button" className="btn btn-primary" style={{ minHeight: "46px" }} data-testid="pflege-medizin-start"
-          onClick={() => { setAktiv(true); setFertig(false); setAntworten({}); setSekunden(60 * 60); }}>
+          onClick={() => { setAktiv(true); setFertig(false); setAntworten({}); setSekunden(90 * 60); }}>
           ▶ ابدأ المحاكاة ({gesamtFragen} سؤالًا)
         </button>
       ) : (

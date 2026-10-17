@@ -266,3 +266,14 @@ Belege: tsc ✓ · smoke **1778/0** (K298 erweitert) · interaktiv 732/0 · audi
 **Ergebnis: erledigt — die Verwebung ist vollständig.** Letzte Charge `vpfl-64…91`: 5 B1-Wörter (desinfizieren/beobachten/begleiten/nüchtern/stabil), 20 B2-Gesundheitswörter (Infusion, Antibiotikum, Einnahme, Verabreichung, Wirkstoff, Blutverdünner, Defibrillator, Sauerstoffsättigung, Nerv, bewusstlos + alle 10 deutschen Dubletten-Krankheitsnamen Gehirnschlag…Blutvergiftung) in g02-gesundheit und 3 B2-Arbeitsverben (eintragen/lagern/alarmieren) in h01-arbeit-beruf. Damit existieren **alle 131 Wörter des Pflege-Tracks auch als Karten der allgemeinen Decks** auf ihrem Niveau (66 waren schon vorher Alltags-Karten, 65 in R206–R208 verwoben). 28 echte Kollokationen (→ 2275/4996; zwei Phrasen-Kollisionen mit R207-Einträgen aufgelöst), 3 Adjektive mit Antonymen (K126d 290→293, K126f-Antonymschloss 266→269, dokumentiert), **10 dichte Deckungssätze `s-pfl-43…52`** (Sätze 730) — keine Waise. Stations-Notiz jetzt vollständig ehrlich: alle 131 verwoben + 52 Berufssätze, Station = optionale Vertiefung (Dialoge/Doku/Simulation/Fachwissen). Zähler: Vokabeln **3590**, eindeutig 3542.
 
 Belege: tsc ✓ · smoke **1778/0** · interaktiv 732/0 · audit «العيوب البنيوية المؤكدة: صفر» · Build ✓.
+## R209 — Die 10 Bettseiten-Sätze in den ersten Tagen
+
+**Ergebnis: erledigt.** Die zehn A1-Bettseiten-Redewendungen der Pflege-Station (Wie geht es Ihnen heute? … Gute Nacht, schlafen Sie gut.) leben jetzt zusätzlich als `s-pfl-53…62` im allgemeinen Satzbank auf A1 — dort erreichen sie die Lernenden in den normalen Satzbau-/Diktat-Aufgaben der frühen Tage, ohne Stationsbesuch. Jede erfüllt K83b (≥3 A1-Karten über `waisen`; wo die Stammform des Infinitivs nicht wörtlich vorkommt — gehen/geht — wurde der Satz natürlich erweitert, nie die Kanon-Form verfälscht). Satzbank 730→**740** (A1 107→117; K131b dokumentiert nachgezogen: A1-Gesamt 117, die 40 Original-`neu` per ID unverändert). Stations-Notiz: 62 Berufssätze.
+
+Belege: tsc ✓ · smoke **1778/0** · interaktiv 732/0 (mit R210) · audit صفر · Build ✓.
+
+## R210 — Medizin-Simulation 36 → 72 Items
+
+**Ergebnis: erledigt.** Die interne Simulationsbank verdoppelt: +6 Lesen (Visitennotiz, Medikamentenplan-Änderung, Angehörigengespräch-Einladung, Händehygiene-Aushang, Entlassungsplanung, Haut/Lagerung) und +6 Hören (telefonische Arztanordnung, Nachtdienst-Übelkeit, Besuchszeit-Frage, Sturz ohne Verletzung, Essenwunsch, Neuaufnahme mit Allergie), je 3 Fragen — **24 Abschnitte, 72 Fragen**, alle Antworten strikt aus Text/Transkript ableitbar, Transkripte weiter bis zur Abgabe verdeckt. Zeitvorschlag 60→**90 Minuten** (Anzeige dynamisch), Kennzeichnung «محاكاة داخلية، لا نتيجة telc» unverändert; `hinweisAr` nennt jetzt ehrlich 72 Items. K292 dokumentiert fortgeschrieben (R199: 12/20 Min → R205: 36/60 → R210: 72/90).
+
+Belege: tsc ✓ · smoke **1778/0** · interaktiv 732/0 · audit «العيوب البنيوية المؤكدة: صفر» · Build ✓.

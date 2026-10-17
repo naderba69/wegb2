@@ -692,4 +692,12 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 
 ### R208 — Pflege-Verwebung Finale (+28; alle 131 im Alltagsfluss)
 
-✅ erledigt (lokal verifiziert; CI folgt): vpfl-64…91 (B1 Verben/Adjektive, B2 Klinik-/Krankheitsnamen inkl. aller deutschen Dubletten, B2 Arbeitsverben) → **131/131** Pflege-Wörter auch in allgemeinen Decks; +28 Kollokationen (2275/4996), +10 Sätze s-pfl-43…52 (730). Neu gelernt/verankert: Kollokations-Phrasen global eindeutig (K73d), Adjektive brauchen Antonym (K126d-Schloss 293; Antonyme 269 in K126f). Station-Notiz vollständig. smoke 1778/0 · interaktiv 732/0 · audit 0 · build ✓. (R207-CI: `39023541327` success.)
+✅ erledigt + CI `39024615387` success: vpfl-64…91 (B1 Verben/Adjektive, B2 Klinik-/Krankheitsnamen inkl. aller deutschen Dubletten, B2 Arbeitsverben) → **131/131** Pflege-Wörter auch in allgemeinen Decks; +28 Kollokationen (2275/4996), +10 Sätze s-pfl-43…52 (730). Neu gelernt/verankert: Kollokations-Phrasen global eindeutig (K73d), Adjektive brauchen Antonym (K126d-Schloss 293; Antonyme 269 in K126f). Station-Notiz vollständig. smoke 1778/0 · interaktiv 732/0 · audit 0 · build ✓. (R207-CI: `39023541327` success.)
+
+### R209 — Bettseiten-Sätze in den ersten Tagen
+
+✅ erledigt (CI folgt mit R210): 10 A1-Pflege-Redewendungen als s-pfl-53…62 im allgemeinen Satzbank (740; A1 117), K83b-konform (Stamm-Treffer geprüft, nötigenfalls natürlich erweitert). K131b/K125f/K129b/K298 dokumentiert.
+
+### R210 — Medizin-Simulation 36→72 Items
+
+✅ erledigt (lokal verifiziert; CI folgt): +6 Lesen +6 Hören à 3 Fragen (pf-l7…l12, pf-h7…h12), 90-Minuten-Vorschlag, Hinweis ehrlich auf 72 fortgeschrieben; K292 dokumentiert (12/20 → 36/60 → 72/90). smoke 1778/0 · interaktiv 732/0 · audit 0 · build ✓.

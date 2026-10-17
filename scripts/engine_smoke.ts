@@ -13339,9 +13339,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K290b المحطة مركّبة في /ueben كإضافة اختيارية، والخطة ذات الـ378 يومًا لا تعرف عنها شيئًا — الجسر لا يهزّ العمود الفقري");
 }
 
-// ===== K292 (R199 · Vertiefung + Medizin-Simulation): Die Prüfungs-Simulation
-// hat 12 Items (2×3 Lesen, 2×3 Hören) mit genau einer richtigen Option je
-// Frage und ehrlicher Kennzeichnung als interne Simulation. =====
+// ===== K292 (R199 · Vertiefung + Medizin-Simulation, R205 36 Items, R210 72):
+// 24 Abschnitte (12 Lesen + 12 Hören) à 3 Fragen mit genau einer richtigen
+// Option und ehrlicher Kennzeichnung als interne Simulation. =====
 {
   const pf2 = JSON.parse(readFileSync("content/pflege.json", "utf8")) as {
     medizinpruefung: { lesen: { fragen: { optionen: string[]; richtig: number }[] }[]; hoeren: { transkript: string; fragen: { optionen: string[]; richtig: number }[] }[] };
@@ -13349,12 +13349,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const med = pf2.medizinpruefung;
   const alleFragen = [...med.lesen, ...med.hoeren].flatMap((x) => x.fragen);
   const pfSrc2 = readFileSync("components/pflege.tsx", "utf8");
-  ok(med.lesen.length === 6 && med.hoeren.length === 6 && alleFragen.length === 36 &&
+  ok(med.lesen.length === 12 && med.hoeren.length === 12 && alleFragen.length === 72 &&
      alleFragen.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3) &&
      med.hoeren.every((h) => h.transkript.length > 60) &&
      pfSrc2.includes('data-testid="pflege-medizin"') && pfSrc2.includes("محاكاة داخلية، لا نتيجة telc") &&
-     pfSrc2.includes("60 دقيقة مقترحة"),
-    "K292 محاكاة Medizin الموسّعة (R205): 36 بندًا (6+6) سليم البنية بمؤقّت 60 دقيقة وتسليم ونتيجة موسومة داخلية — بلا ادّعاء رسمية");
+     pfSrc2.includes("90 دقيقة مقترحة"),
+    "K292 محاكاة Medizin الموسّعة (R210): 72 بندًا (12+12) سليم البنية بمؤقّت 90 دقيقة وتسليم ونتيجة موسومة داخلية — بلا ادّعاء رسمية (R205: 36/60 دقيقة، R199: 12/20)");
 }
 
 // ===== K291 (R198 · KI-Sprechbegleiter): BYOK-Rollenspiel fürs Sprechen —

@@ -1785,7 +1785,7 @@
   }
  ],
  "medizinpruefung": {
-  "hinweisAr": "محاكاة تدريبية داخلية موسّعة (36 بندًا: 18 قراءة و18 استماعًا) على أنواع بنود telc Medizin/Pflege — ليست امتحان telc رسميًا ولا تستخدم موادّه. الاستماع هنا بصوت متصفح آلي، وفي الامتحان الحقيقي تسجيلات أصلية بسرعات طبيعية.",
+  "hinweisAr": "محاكاة تدريبية داخلية موسّعة (72 بندًا: 36 قراءة و36 استماعًا) على أنواع بنود telc Medizin/Pflege — ليست امتحان telc رسميًا ولا تستخدم موادّه. الاستماع هنا بصوت متصفح آلي، وفي الامتحان الحقيقي تسجيلات أصلية بسرعات طبيعية.",
   "lesen": [
    {
     "id": "pf-l1",
@@ -1988,6 +1988,210 @@
        "Barfuß ist am besten"
       ],
       "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-l7",
+    "titel": "Notiz: Pflegevisite",
+    "text": "Pflegevisite, Zimmer 12: Die Wunde am linken Fuß von Frau Lindner ist kleiner geworden. Der Verband wird weiter jeden zweiten Tag gewechselt. Frau Lindner darf ab heute mit dem Rollator bis in den Garten gehen, aber nur mit Begleitung. Die nächste Wundkontrolle ist am Freitag um 10 Uhr.",
+    "fragen": [
+     {
+      "frage": "Was ist mit der Wunde passiert?",
+      "optionen": [
+       "Sie ist größer geworden",
+       "Sie ist kleiner geworden",
+       "Sie ist neu entstanden"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wie oft wird der Verband gewechselt?",
+      "optionen": [
+       "Jeden Tag",
+       "Jeden zweiten Tag",
+       "Einmal pro Woche"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was darf Frau Lindner ab heute?",
+      "optionen": [
+       "Alleine in den Garten gehen",
+       "Mit Begleitung und Rollator in den Garten gehen",
+       "Gar nicht aufstehen"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-l8",
+    "titel": "Mitteilung: Medikamentenplan geändert",
+    "text": "Änderung des Medikamentenplans für Herrn Yilmaz, Zimmer 7: Ab Montag bekommt Herr Yilmaz seine Blutdrucktablette nicht mehr morgens, sondern abends um 20 Uhr. Grund: Morgens ist sein Blutdruck oft zu niedrig, und ihm wird schwindelig. Alle anderen Medikamente bleiben gleich. Bitte tragen Sie die Änderung in die Dokumentation ein.",
+    "fragen": [
+     {
+      "frage": "Ab wann gilt die Änderung?",
+      "optionen": [
+       "Ab sofort",
+       "Ab Montag",
+       "Ab Freitag"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wann bekommt Herr Yilmaz die Blutdrucktablette jetzt?",
+      "optionen": [
+       "Morgens um 8 Uhr",
+       "Mittags um 12 Uhr",
+       "Abends um 20 Uhr"
+      ],
+      "richtig": 2
+     },
+     {
+      "frage": "Warum wurde die Zeit geändert?",
+      "optionen": [
+       "Er vergisst die Tablette morgens",
+       "Morgens ist sein Blutdruck oft zu niedrig",
+       "Die Tablette ist abends billiger"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-l9",
+    "titel": "Einladung: Angehörigengespräch",
+    "text": "Einladung zum Angehörigengespräch: Liebe Familie Saleh, wir laden Sie zu einem Gespräch über die weitere Pflege Ihres Vaters ein. Termin: Donnerstag, 15 Uhr, Zimmer 204 (Besprechungsraum). Themen: die Ergebnisse der Woche, der geplante Entlassungstermin und die Pflege zu Hause. Bitte bringen Sie Fragen gerne mit. Bei Verhinderung rufen Sie uns bitte an: Station 2, Telefon 44 21.",
+    "fragen": [
+     {
+      "frage": "Wann ist das Gespräch?",
+      "optionen": [
+       "Mittwoch, 10 Uhr",
+       "Donnerstag, 15 Uhr",
+       "Freitag, 15 Uhr"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wo findet das Gespräch statt?",
+      "optionen": [
+       "Im Zimmer des Vaters",
+       "Im Garten",
+       "Zimmer 204, Besprechungsraum"
+      ],
+      "richtig": 2
+     },
+     {
+      "frage": "Was ist eines der Themen?",
+      "optionen": [
+       "Die Rechnung für das Zimmer",
+       "Der geplante Entlassungstermin",
+       "Die neue Dienstkleidung"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-l10",
+    "titel": "Aushang: Händehygiene",
+    "text": "Händehygiene schützt alle! Desinfizieren Sie Ihre Hände: vor jedem Patientenkontakt, vor einer sauberen Tätigkeit (z. B. Verbandwechsel), nach Kontakt mit Körperflüssigkeiten, nach jedem Patientenkontakt und nach Kontakt mit der Umgebung des Patienten. Dauer: 30 Sekunden. Bei sichtbarer Verschmutzung bitte zuerst mit Wasser und Seife waschen.",
+    "fragen": [
+     {
+      "frage": "Wie lange dauert die Händedesinfektion?",
+      "optionen": [
+       "10 Sekunden",
+       "30 Sekunden",
+       "2 Minuten"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wann muss man die Hände zuerst waschen?",
+      "optionen": [
+       "Bei sichtbarer Verschmutzung",
+       "Immer morgens",
+       "Nach dem Essen"
+      ],
+      "richtig": 0
+     },
+     {
+      "frage": "Was ist ein Beispiel für eine saubere Tätigkeit?",
+      "optionen": [
+       "Müll entsorgen",
+       "Verbandwechsel",
+       "Zimmer putzen"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-l11",
+    "titel": "Planung: Entlassung am Freitag",
+    "text": "Entlassungsplanung für Frau Peters, Zimmer 3: Die Entlassung ist für Freitag geplant. Zu Hause kommt zweimal täglich der ambulante Pflegedienst. Ein Rollator und ein Duschstuhl wurden bestellt und werden am Donnerstag geliefert. Die Tochter holt Frau Peters am Freitag um 11 Uhr ab. Der Arztbrief wird am Donnerstag fertig.",
+    "fragen": [
+     {
+      "frage": "Wann ist die Entlassung?",
+      "optionen": [
+       "Donnerstag",
+       "Freitag",
+       "Montag"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wie oft kommt der Pflegedienst zu Hause?",
+      "optionen": [
+       "Einmal täglich",
+       "Zweimal täglich",
+       "Nur am Wochenende"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wer holt Frau Peters ab?",
+      "optionen": [
+       "Der Pflegedienst",
+       "Ihr Sohn",
+       "Ihre Tochter"
+      ],
+      "richtig": 2
+     }
+    ]
+   },
+   {
+    "id": "pf-l12",
+    "titel": "Dokumentation: Haut und Lagerung",
+    "text": "Hautbeobachtung, Herr Braun, Zimmer 15: Die Haut am Rücken und an den Fersen ist intakt, keine Rötungen. Herr Braun kann sich im Bett nur wenig selbst bewegen. Deshalb wird er alle drei Stunden umgelagert, auch in der Nacht. Die Lagerung wird jedes Mal in der Dokumentation eingetragen und abgezeichnet.",
+    "fragen": [
+     {
+      "frage": "Wie ist die Haut von Herrn Braun?",
+      "optionen": [
+       "Sie hat Rötungen an den Fersen",
+       "Sie ist intakt, ohne Rötungen",
+       "Sie ist am Rücken verletzt"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wie oft wird er umgelagert?",
+      "optionen": [
+       "Alle drei Stunden",
+       "Einmal pro Schicht",
+       "Nur am Tag"
+      ],
+      "richtig": 0
+     },
+     {
+      "frage": "Was passiert nach jeder Lagerung?",
+      "optionen": [
+       "Sie wird dokumentiert und abgezeichnet",
+       "Die Familie wird angerufen",
+       "Der Arzt kommt sofort"
+      ],
+      "richtig": 0
      }
     ]
    }
@@ -2194,6 +2398,210 @@
        "Die Temperatur"
       ],
       "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-h7",
+    "titel": "Telefon: Arztanordnung",
+    "transkript": "Guten Tag, hier ist Dr. Weber. Für Frau Lindner in Zimmer 12: Heute Abend bekommt sie ausnahmsweise nur 8 Einheiten Insulin statt 10, weil ihr Blutzucker heute sehr niedrig war. Bitte notieren Sie die Anordnung und lassen Sie sie von der Spätschicht gegenzeichnen.",
+    "fragen": [
+     {
+      "frage": "Wie viel Insulin bekommt Frau Lindner heute Abend?",
+      "optionen": [
+       "10 Einheiten",
+       "12 Einheiten",
+       "8 Einheiten"
+      ],
+      "richtig": 2
+     },
+     {
+      "frage": "Warum wird die Dosis geändert?",
+      "optionen": [
+       "Der Blutzucker war sehr niedrig",
+       "Sie hat das Insulin vergessen",
+       "Der Arzt ist im Urlaub"
+      ],
+      "richtig": 0
+     },
+     {
+      "frage": "Was soll die Pflegekraft tun?",
+      "optionen": [
+       "Die Anordnung notieren und gegenzeichnen lassen",
+       "Sofort den Notarzt rufen",
+       "Die Dosis selbst weiter senken"
+      ],
+      "richtig": 0
+     }
+    ]
+   },
+   {
+    "id": "pf-h8",
+    "titel": "Nachtdienst: einer Patientin ist übel",
+    "transkript": "Nachtdienst, Zimmer 5. Frau Kaya hat um 2 Uhr geklingelt. Ihr ist übel, aber sie hat keine Schmerzen und kein Fieber. Ich habe ihr Wasser gegeben und das Fenster geöffnet. Bitte übernimm das in die Übergabe: Wenn die Übelkeit um 4 Uhr noch da ist, informieren wir die Nachtschwester und messen den Blutdruck.",
+    "fragen": [
+     {
+      "frage": "Was hat Frau Kaya?",
+      "optionen": [
+       "Fieber",
+       "Übelkeit",
+       "Starke Schmerzen"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was hat die Pflegekraft schon gemacht?",
+      "optionen": [
+       "Wasser gegeben und das Fenster geöffnet",
+       "Eine Spritze gegeben",
+       "Den Arzt angerufen"
+      ],
+      "richtig": 0
+     },
+     {
+      "frage": "Was passiert, wenn die Übelkeit um 4 Uhr bleibt?",
+      "optionen": [
+       "Die Patientin wird entlassen",
+       "Die Nachtschwester wird informiert und der Blutdruck gemessen",
+       "Sie bekommt sofort ein Antibiotikum"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-h9",
+    "titel": "Angehörige fragt nach der Besuchszeit",
+    "transkript": "Guten Tag, ich bin die Frau von Herrn Berger aus Zimmer 9. Kann ich heute schon um 13 Uhr kommen? Ach so, Besuchszeit ist erst ab 14 Uhr. Gut, dann komme ich um 14 Uhr. Darf ich Blumen mitbringen? Gut, dann bringe ich welche ohne Erde mit. Vielen Dank!",
+    "fragen": [
+     {
+      "frage": "Wann wollte die Frau zuerst kommen?",
+      "optionen": [
+       "Um 13 Uhr",
+       "Um 14 Uhr",
+       "Um 15 Uhr"
+      ],
+      "richtig": 0
+     },
+     {
+      "frage": "Ab wann ist Besuchszeit?",
+      "optionen": [
+       "Ab 12 Uhr",
+       "Ab 13 Uhr",
+       "Ab 14 Uhr"
+      ],
+      "richtig": 2
+     },
+     {
+      "frage": "Welche Blumen darf sie mitbringen?",
+      "optionen": [
+       "Blumen mit Erde",
+       "Blumen ohne Erde",
+       "Gar keine Blumen"
+      ],
+      "richtig": 1
+     }
+    ]
+   },
+   {
+    "id": "pf-h10",
+    "titel": "Meldung: Sturz ohne Verletzung",
+    "transkript": "Ich melde einen Sturz: Herr Braun aus Zimmer 15 ist um 6 Uhr auf dem Weg zur Toilette gefallen. Er hat keine sichtbaren Verletzungen und keine Schmerzen. Blutdruck und Puls waren normal. Er ist jetzt wieder im Bett. Ich schreibe ein Sturzprotokoll und informiere den Frühdienst.",
+    "fragen": [
+     {
+      "frage": "Wann ist Herr Braun gefallen?",
+      "optionen": [
+       "Um 6 Uhr",
+       "Um 8 Uhr",
+       "In der Nacht um 2 Uhr"
+      ],
+      "richtig": 0
+     },
+     {
+      "frage": "Wie geht es ihm nach dem Sturz?",
+      "optionen": [
+       "Er hat starke Schmerzen",
+       "Er hat keine Verletzungen und keine Schmerzen",
+       "Er muss operiert werden"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was macht die Pflegekraft jetzt?",
+      "optionen": [
+       "Sie schreibt ein Sturzprotokoll",
+       "Sie ruft die Familie an",
+       "Sie gibt ihm eine Spritze"
+      ],
+      "richtig": 0
+     }
+    ]
+   },
+   {
+    "id": "pf-h11",
+    "titel": "Patientenwunsch: Essen",
+    "transkript": "Guten Morgen, Herr Yilmaz. Was möchten Sie heute zu Mittag essen? Vegetarisch wäre gut, sagen Sie. Kein Schweinefleisch, verstanden. Ich trage Ihren Wunsch in den Speiseplan ein und sage in der Küche Bescheid. Möchten Sie dazu Wasser oder Tee? Gut, ein Wasser kommt dazu.",
+    "fragen": [
+     {
+      "frage": "Was möchte Herr Yilmaz zu Mittag?",
+      "optionen": [
+       "Ein Gericht mit Schweinefleisch",
+       "Ein vegetarisches Gericht",
+       "Nur Suppe"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was tut die Pflegekraft mit dem Wunsch?",
+      "optionen": [
+       "Sie trägt ihn in den Speiseplan ein und informiert die Küche",
+       "Sie kocht selbst",
+       "Sie ruft die Tochter an"
+      ],
+      "richtig": 0
+     },
+     {
+      "frage": "Was möchte er trinken?",
+      "optionen": [
+       "Tee",
+       "Kaffee",
+       "Wasser"
+      ],
+      "richtig": 2
+     }
+    ]
+   },
+   {
+    "id": "pf-h12",
+    "titel": "Übergabe: neuer Bewohner",
+    "transkript": "Übergabe: Heute ist Herr Saleh neu bei uns eingezogen, Zimmer 21. Wichtig: Er hat eine Allergie gegen Nüsse, das steht auch im Aufnahmebericht. Er geht mit dem Rollator und braucht nachts Hilfe für die Toilette. Seine Tochter bittet um einen Anruf, wenn es Fragen gibt. Die Telefonnummer liegt im Dienstzimmer.",
+    "fragen": [
+     {
+      "frage": "Welche Allergie hat Herr Saleh?",
+      "optionen": [
+       "Gegen Milch",
+       "Gegen Nüsse",
+       "Gegen Penicillin"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Wobei braucht er nachts Hilfe?",
+      "optionen": [
+       "Beim Essen",
+       "Für die Toilette",
+       "Beim Anziehen"
+      ],
+      "richtig": 1
+     },
+     {
+      "frage": "Was wünscht die Tochter?",
+      "optionen": [
+       "Einen Anruf bei Fragen",
+       "Einen Besuch jeden Tag",
+       "Ein anderes Zimmer"
+      ],
+      "richtig": 0
      }
     ]
    }
