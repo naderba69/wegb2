@@ -352,3 +352,6 @@ Belege R228: tsc ✓ · smoke/interaktiv/audit/build folgen im Kampagnen-Commit.
 ## R230 — Kampagne Punkt 1, Charge (s-b2-48…57)
 
 Zehn weitere neu-Sätze (B2) aufgenommen (voice-06) — neu **88/494**, offen 406; Diktat gesamt **268/742**. Nächste Chargen folgen à 10/Runde. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
+## R231 — Kampagne Punkt 1, Charge (s-b2-58…60 + s-a1-39…45)
+
+Zehn weitere neu-Sätze aufgenommen (voice-06) — neu **98/494**, offen 396; Diktat gesamt **278/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
