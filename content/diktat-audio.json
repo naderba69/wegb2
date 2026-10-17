@@ -2856,6 +2856,76 @@
    "voice": "voice-06 (de)",
    "level": "B1",
    "bytes": 49337
+  },
+  {
+   "id": "s-b1-108",
+   "file": "/audio/diktat/s-b1-108.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 52053
+  },
+  {
+   "id": "s-b1-109",
+   "file": "/audio/diktat/s-b1-109.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 65428
+  },
+  {
+   "id": "s-b1-110",
+   "file": "/audio/diktat/s-b1-110.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 57487
+  },
+  {
+   "id": "s-b1-111",
+   "file": "/audio/diktat/s-b1-111.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 48919
+  },
+  {
+   "id": "s-b1-112",
+   "file": "/audio/diktat/s-b1-112.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 59159
+  },
+  {
+   "id": "s-b1-113",
+   "file": "/audio/diktat/s-b1-113.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 51635
+  },
+  {
+   "id": "s-b1-114",
+   "file": "/audio/diktat/s-b1-114.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 60204
+  },
+  {
+   "id": "s-b1-115",
+   "file": "/audio/diktat/s-b1-115.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 54770
+  },
+  {
+   "id": "s-b1-116",
+   "file": "/audio/diktat/s-b1-116.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 61875
+  },
+  {
+   "id": "s-b1-117",
+   "file": "/audio/diktat/s-b1-117.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 54352
   }
  ]
 }
