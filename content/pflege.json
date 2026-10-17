@@ -1661,6 +1661,102 @@
      "ar": "سأعطيك شيئًا ضد الألم وأبلغ الطبيب فورًا."
     }
    ]
+  },
+  {
+   "id": "pf-g9",
+   "titel": "Beim Waschen helfen",
+   "ar": "مساعدة مريض في الاغتسال — A2",
+   "stufe": "A2",
+   "zeilen": [
+    {
+     "r": "Pfleger",
+     "de": "Guten Morgen, Frau Bauer. Ich möchte Ihnen heute beim Waschen helfen. Ist das in Ordnung?",
+     "ar": "صباح الخير سيدة باور. أودّ مساعدتك اليوم في الاغتسال. هل هذا مناسب؟"
+    },
+    {
+     "r": "Patientin",
+     "de": "Ja, gerne. Aber vieles kann ich auch selbst.",
+     "ar": "نعم، بكل سرور. لكن كثيرًا أستطيع فعله بنفسي."
+    },
+    {
+     "r": "Pfleger",
+     "de": "Das ist gut. Ich helfe Ihnen nur mit dem Rücken. Möchten Sie duschen oder sich am Waschbecken waschen?",
+     "ar": "هذا جيد. أساعدك فقط في الظهر. هل تفضّلين الدش أم الاغتسال عند المغسلة؟"
+    },
+    {
+     "r": "Patientin",
+     "de": "Am Waschbecken, bitte.",
+     "ar": "عند المغسلة، من فضلك."
+    },
+    {
+     "r": "Pfleger",
+     "de": "Gut. Hier ist Ihr Waschlappen. Ist das Wasser warm genug?",
+     "ar": "حسنًا. هذه منشفتك الصغيرة. هل الماء دافئ بما يكفي؟"
+    },
+    {
+     "r": "Patientin",
+     "de": "Ja, es ist angenehm. Vielen Dank.",
+     "ar": "نعم، مريح. شكرًا جزيلًا."
+    },
+    {
+     "r": "Pfleger",
+     "de": "Brauchen Sie noch ein frisches Handtuch?",
+     "ar": "هل تحتاجين منشفة نظيفة إضافية؟"
+    },
+    {
+     "r": "Patientin",
+     "de": "Ja, bitte. Und danach möchte ich frühstücken.",
+     "ar": "نعم، من فضلك. وبعدها أريد أن أفطر."
+    }
+   ]
+  },
+  {
+   "id": "pf-g10",
+   "titel": "Blutdruck und Puls messen",
+   "ar": "قياس الضغط والنبض عند السرير — A2",
+   "stufe": "A2",
+   "zeilen": [
+    {
+     "r": "Pfleger",
+     "de": "Hallo, Herr Yilmaz. Ich muss jetzt Ihren Blutdruck und Puls messen.",
+     "ar": "مرحبًا سيد يلماز. يجب أن أقيس الآن ضغط دمك ونبضك."
+    },
+    {
+     "r": "Patient",
+     "de": "Ja, bitte. Mein Kopf tut heute ein bisschen weh.",
+     "ar": "نعم، من فضلك. رأسي يؤلمني قليلًا اليوم."
+    },
+    {
+     "r": "Pfleger",
+     "de": "Bitte geben Sie mir Ihren rechten Arm und setzen Sie sich ruhig hin.",
+     "ar": "من فضلك أعطني ذراعك اليمنى واجلس بهدوء."
+    },
+    {
+     "r": "Patient",
+     "de": "So, hier ist mein Arm.",
+     "ar": "حسنًا، هذه ذراعي."
+    },
+    {
+     "r": "Pfleger",
+     "de": "Danke. Der Blutdruck ist etwas hoch: 145 zu 90. Haben Sie auch Schwindel?",
+     "ar": "شكرًا. الضغط مرتفع قليلًا: 145 على 90. هل عندك دوار أيضًا؟"
+    },
+    {
+     "r": "Patient",
+     "de": "Nein, nur Kopfschmerzen.",
+     "ar": "لا، فقط صداع."
+    },
+    {
+     "r": "Pfleger",
+     "de": "Okay. Ich gebe dem Arzt Bescheid. Bleiben Sie bitte noch kurz sitzen.",
+     "ar": "حسنًا. سأبلغ الطبيب. ابقَ جالسًا قليلًا من فضلك."
+    },
+    {
+     "r": "Patient",
+     "de": "Ist gut. Vielen Dank.",
+     "ar": "حسنًا. شكرًا جزيلًا."
+    }
+   ]
   }
  ],
  "dokumentation": [
@@ -1674,7 +1770,8 @@
     "هل الوقت والقيم الحيوية موجودة بدقّة؟",
     "هل التعبير موضوعي بلا آراء شخصية؟",
     "هل لاحظت استخدام Passiv/صيغ رسمية (wurde kontrolliert)؟"
-   ]
+   ],
+   "stufe": "B1"
   },
   {
    "id": "pf-w2",
@@ -1686,7 +1783,8 @@
     "هل خطر السقوط مذكور صراحة؟",
     "هل موعد سحب الدم مع (nüchtern) واضح؟",
     "هل الجمل قصيرة وقابلة للمسح السريع؟"
-   ]
+   ],
+   "stufe": "B1"
   },
   {
    "id": "pf-w3",
@@ -1698,7 +1796,8 @@
     "هل الزمان والمكان والسبب مذكورة؟",
     "هل الإجراءات المتخذة (إبلاغ الطبيب) موثّقة؟",
     "هل نبرة المحضر وقائعية تمامًا بلا لوم؟"
-   ]
+   ],
+   "stufe": "B2"
   },
   {
    "id": "pf-w4",
@@ -1710,7 +1809,8 @@
     "هل نوع الدواء والتوقيت موجودان؟",
     "هل فحص الأثر بعد الإعطاء موثّق بوقته؟",
     "هل الأرقام على مقياس الألم واضحة؟"
-   ]
+   ],
+   "stufe": "B1"
   },
   {
    "id": "pf-w5",
@@ -1722,7 +1822,8 @@
     "هل تسلسل الأحداث زمنيًا واضح؟",
     "هل القيم المقاسة مدوّنة؟",
     "هل إبلاغ الطبيب والملاحظة اللاحقة مذكوران؟"
-   ]
+   ],
+   "stufe": "B1"
   },
   {
    "id": "pf-w6",
@@ -1734,7 +1835,8 @@
     "هل الحالة العامة عند الخروج مذكورة؟",
     "هل ما سُلّم للمريضة (تقرير/دواء) واضح؟",
     "هل متابعة طبيب الأسرة موثّقة؟"
-   ]
+   ],
+   "stufe": "B1"
   },
   {
    "id": "pf-w7",
@@ -1746,7 +1848,8 @@
     "هل التشخيص والشكاوى الحالية موجودة؟",
     "هل الحساسية والدواء المنزلي موثّقان بوضوح؟",
     "هل الوضع الاجتماعي وجهة الاتصال مذكوران؟"
-   ]
+   ],
+   "stufe": "B2"
   },
   {
    "id": "pf-w8",
@@ -1758,6 +1861,46 @@
     "هل سبب/وجهة التحويل وتوقيته واضحان؟",
     "هل الحالة الحالية والتنقّل ملخّصان؟",
     "هل المرفقات (تقرير/خطة دواء) مذكورة؟"
+   ],
+   "stufe": "B2"
+  },
+  {
+   "id": "pf-w9",
+   "titel": "Vitalwerte eintragen (Stichworte)",
+   "ar": "تدوين العلامات الحيوية بكلمات مفردة — مستوى A1",
+   "stufe": "A1",
+   "aufgabeDe": "Tragen Sie stichwortartig ein: Blutdruck 120/80, Puls 72, Temperatur 36,8 °C. Der Patient schläft und hat keine Schmerzen.",
+   "muster": "14:00 Uhr: Blutdruck: 120/80 mmHg. Puls: 72/min. Temperatur: 36,8 °C. Patient schläft ruhig. Keine Schmerzen. Keine Besonderheiten.",
+   "punkte": [
+    "Auf A1 nur Stichworte, Zahlen und Einheiten — keine ganzen Sätze nötig",
+    "Jeder Wert mit Einheit: mmHg, /min, °C",
+    "Uhrzeit immer voranstellen"
+   ]
+  },
+  {
+   "id": "pf-w10",
+   "titel": "Einfacher Eintrag in ganzen Sätzen",
+   "ar": "تدوين بسيط بجمل كاملة — مستوى A2",
+   "stufe": "A2",
+   "aufgabeDe": "Dokumentieren Sie in einfachen ganzen Sätzen: Frau Bauer hat gefrühstückt. Blutdruck gemessen: 145/90. Der Arzt wurde informiert. Sie hat sich am Waschbecken gewaschen.",
+   "muster": "08:15 Uhr: Frau Bauer hat selbstständig gefrühstückt. Der Blutdruck wurde gemessen: 145/90 mmHg. Der Arzt wurde daraufhin informiert. Danach hat sich die Patientin am Waschbecken gewaschen.",
+   "punkte": [
+    "Ganze, einfache Sätze in der Vergangenheit (Perfekt/Passiv-Grundform)",
+    "Messwerte immer mit Uhrzeit eintragen",
+    "Wer informiert wurde, wird ausdrücklich notiert"
+   ]
+  },
+  {
+   "id": "pf-w11",
+   "titel": "Postoperativer Verlauf (Bericht)",
+   "ar": "تقرير مسار ما بعد الجراحة بالمبني للمجهول والأسلوب الاسمي — مستوى B2",
+   "stufe": "B2",
+   "aufgabeDe": "Schreiben Sie einen postoperativen Verlaufseintrag im Passiv und Nominalstil: Patientin Peters, Zimmer 5. Morgens Verbandswechsel: Wundränder gerötet, eitriges Sekret. Temperatur 38,4 °C. Nach Rücksprache mit Dr. Becker: Wundabstrich. I.v.-Antibiotikatherapie vorbereitet.",
+   "muster": "Postoperativer Verlauf bei Patientin Peters (Zimmer 5): Beim morgendlichen Verbandswechsel wurde eine Rötung der Wundränder mit Sekretion von eitrigem Exsudat festgestellt. Ein Anstieg der Körpertemperatur auf 38,4 °C wurde dokumentiert. Nach Rücksprache mit dem Stationsarzt Dr. Becker wurde ein Wundabstrich zur mikrobiologischen Untersuchung entnommen. Die verordnete intravenöse Antibiotikatherapie wurde vorbereitet und begonnen. Der Vitalstatus bleibt weiterhin engmaschig zu kontrollieren.",
+   "punkte": [
+    "Passiv und Nominalstil statt Ich-Form (wurde festgestellt, beim Verbandswechsel)",
+    "Reihenfolge: Befund → Maßnahme → Verlaufskontrolle",
+    "Fachbegriffe mit konkreten Werten verbinden (38,4 °C, Zimmer 5)"
    ]
   }
  ],

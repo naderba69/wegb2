@@ -255,10 +255,11 @@ export function PflegeStation() {
       {/* ── التوثيق المهني ── */}
       <section>
         <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>✍️ التوثيق المهني — اكتب ثم قارن بالنموذج</h3>
+        <p style={{ fontSize: "0.85rem", color: "var(--color-ink2)", margin: "0 0 0.5rem" }}>سلّمٌ مدرّج: من كلمات مفردة وأرقام (A1) عبر جمل بسيطة (A2) وتقارير مترابطة (B1) إلى تقرير احترافي بالمبني للمجهول والأسلوب الاسمي (B2).</p>
         <div style={{ display: "grid", gap: "0.6rem" }}>
-          {pflegeDoku.map((d) => (
+          {[...pflegeDoku].sort((a, b) => ({ A1: 0, A2: 1, B1: 2, B2: 3 }[a.stufe ?? "B1"] ?? 2) - ({ A1: 0, A2: 1, B1: 2, B2: 3 }[b.stufe ?? "B1"] ?? 2)).map((d) => (
             <article key={d.id} className="card" style={{ padding: "0.7rem 0.9rem" }}>
-              <div style={{ fontWeight: 800 }}>{d.titel}</div>
+              <div style={{ fontWeight: 800 }}>{d.titel}{d.stufe ? <span data-testid={`pflege-doku-stufe-${d.id}`} style={{ marginInlineStart: "0.5rem", fontSize: "0.75rem", background: "var(--color-paper2)", borderRadius: "999px", padding: "0.1rem 0.55rem" }}>{d.stufe}</span> : null}</div>
               <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>{d.ar}</div>
               <De style={{ display: "block", margin: "0.4rem 0", fontSize: "0.9rem" }}>{d.aufgabeDe}</De>
               <textarea className="field" rows={4} placeholder="اكتب تدوينك الألماني هنا…" aria-label={d.titel} style={{ width: "100%" }} />

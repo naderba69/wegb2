@@ -15,7 +15,7 @@ export interface PflegeWort {
 }
 export interface PflegeDialogZeile { r: string; de: string; ar: string }
 export interface PflegeDialog { id: string; titel: string; ar: string; stufe: string; zeilen: PflegeDialogZeile[] }
-export interface PflegeDoku { id: string; titel: string; ar: string; aufgabeDe: string; muster: string; punkte: string[] }
+export interface PflegeDoku { id: string; titel: string; ar: string; aufgabeDe: string; muster: string; punkte: string[]; stufe?: string }
 export interface PflegePruefung { id: string; titel: string; ar: string; formatAr: string; uebungAr: string }
 
 export interface PflegeMedFrage { frage: string; optionen: string[]; richtig: number }

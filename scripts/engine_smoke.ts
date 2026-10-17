@@ -13330,10 +13330,10 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const planSrc2 = readFileSync("lib/plan.ts", "utf8");
   ok(pf.wortschatz.length === 131 && pf.wortschatz.every((w) => w.de && w.ar && w.bsp) &&
      new Set(pf.wortschatz.map((w) => w.id)).size === 131 &&
-     pf.dialoge.length === 8 && pf.dialoge.every((d) => d.zeilen.length >= 6 && d.zeilen.every((z) => z.de && z.ar)) &&
-     pf.dokumentation.length === 8 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
+     pf.dialoge.length === 10 && pf.dialoge.every((d) => d.zeilen.length >= 6 && d.zeilen.every((z) => z.de && z.ar)) &&
+     pf.dokumentation.length === 11 && pf.dokumentation.every((d) => d.muster.length > 80 && d.punkte.length >= 3) &&
      pf.pruefung.length === 3,
-    "K290a بنك التمريض مكتمل البنية: 131 كلمة بمثال (R199 تعميق + R204 أزواج لاتينية ومصطلحات دقيقة)، 8 حوارات ثنائية اللغة، 8 نماذج توثيق بقوائم فحص، 3 بطاقات صيغة");
+    "K290a بنك التمريض مكتمل البنية: 131 كلمة بمثال (R199 تعميق + R204 أزواج لاتينية ومصطلحات دقيقة)، 10 حوارات ثنائية اللغة (R212: +2 على A2)، 11 نموذج توثيق مدرّجًا بقوائم فحص (R211)، 3 بطاقات صيغة");
   ok(pfSrc.includes('data-testid="pflege-station"') && pfSrc.includes("ليست امتحانًا رسميًا") &&
      !planSrc2.includes("pflege") && readFileSync("app/ueben/page.tsx", "utf8").includes('<PflegeStation />'),
     "K290b المحطة مركّبة في /ueben كإضافة اختيارية، والخطة ذات الـ378 يومًا لا تعرف عنها شيئًا — الجسر لا يهزّ العمود الفقري");
@@ -13457,6 +13457,22 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(vpfl.length === 91 && new Set(vpfl.map((k) => k.id)).size === 91 && satzIds.length === 62 &&
      pfSrc4.includes("منسوجة أيضًا في حزم مفرداتك اليومية"),
     "K298 التمريض منسوج في العام: 91 بطاقة vpfl (R206–R208) داخل حزم الصحة/العمل اليومية و62 جملة s-pfl (52 تغطيةً مكثّفة ≥3 بطاقات/جملة وفق K83b + 10 عبارات سرير مريض A1 من R209) — كل كلمات المحطة الـ131 في التدفق العام في بنك الجمل — تصل في المهام العادية لا في محطة منفصلة فقط");
+}
+
+// ===== K299 (R211/R212 · Dokumentations-Leiter + A2-Dialoge): Die Doku-Modelle
+// sind jetzt als Leiter A1 (Stichworte/Zahlen) → A2 (einfache Sätze) → B1 →
+// B2 (Passiv/Nominalstil-Bericht) gestuft, und die Stationsdialoge beginnen
+// schon auf A2 (Waschen helfen, Vitalwerte messen). =====
+{
+  const pf5 = JSON.parse(readFileSync("content/pflege.json", "utf8")) as {
+    dokumentation: { id: string; stufe?: string; muster: string }[];
+    dialoge: { id: string; stufe: string }[];
+  };
+  const stufen = new Set(pf5.dokumentation.map((d) => d.stufe));
+  ok(pf5.dokumentation.every((d) => !!d.stufe) && ["A1", "A2", "B1", "B2"].every((s) => stufen.has(s)) &&
+     pf5.dokumentation.some((d) => d.id === "pf-w11" && d.muster.includes("wurde") && d.muster.includes("Beim")) &&
+     pf5.dialoge.filter((d) => d.stufe === "A2").length === 2,
+    "K299 سلّم التوثيق مدرّج فعليًا: كل نموذج موسوم بمستواه، والمستويات الأربع ممثّلة، وقمّة B2 بالمبني للمجهول والأسلوب الاسمي، وحوارا تمريض على A2");
 }
 
   const dub = pf4.wortschatz.filter((w) => w.thema === "dubletten");
