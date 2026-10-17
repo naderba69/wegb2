@@ -2967,7 +2967,7 @@ void 0;
     `K125d تغطيةُ الرادارِ من الدالةِ نفسِها: ${abR.mitSignal}/${abR.dialoge} إشارات · ${abR.mitFalle} مضلل (${nAb})`);
   ok(lies.includes(`(${nDr} تمريناً`) , `K125e تمارينُ الأذنِ من الدالةِ نفسِها (${nDr})`);
   const nS2 = J("content/sentences.json"), nW = J("content/writing.json"), nV = J("content/verben.json");
-  ok(nS2 === 730 && nW === 90 && nV === 126 && lies.includes("730") && lies.includes("writing **90**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (730: 52 جملة تمريض منسوجة في البنك العام — R206–R208، كلها تغطية مكثّفة فلا يتيم جديد؛ كانت 678 منذ R145)`);
+  ok(nS2 === 740 && nW === 90 && nV === 126 && lies.includes("740") && lies.includes("writing **90**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (740: 62 جملة تمريض منسوجة في البنك العام — R206–R208 مفردات/تغطية + R209 عبارات سرير المريض العشر A1؛ كانت 678 منذ R145)`);
   const nKt = J("content/kollokationen.json");
   const nLue = (JSON.parse(readFileSync("content/luecken.json", "utf8")).items as { gaps: unknown[] }[]).reduce((n, it) => n + it.gaps.length, 0);
   ok(nKt === 2275 && nLue === 216 && lies.includes("2275") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`) // R206: +24 بطاقة منسوجة بمتلازمات حقيقية (2215، كانت 2191);
@@ -3104,7 +3104,7 @@ void 0;
   const st = JSON.parse(readFileSync("content/sentences.json", "utf8")) as any;
   const stl = (Array.isArray(st) ? st : st.sentences) as any[];
   const byIdS = (id: string) => stl.find((x) => x.id === id);
-  ok(stl.length === 730 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 730 (R206–R208: 52 جملة s-pfl منسوجة؛ كانت 678 منذ R145)");
+  ok(stl.length === 740 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 740 (R206–R209: 62 جملة s-pfl منسوجة؛ كانت 678 منذ R145)");
   ok(!JSON.stringify(stl).includes("konjunktor"), "K129c وسم konjunktor مصحّح");
   const gg2 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   let dupAns = 0;
@@ -3153,7 +3153,7 @@ void 0;
     const sents = require("../content/sentences.json") as { id: string; level: string; neu?: boolean }[];
     const a1 = sents.filter((s) => s.level === "A1");
     const neu40 = sents.filter((s) => /^s-a1-(6[3-9]|[7-9]\d|10[0-2])$/.test(s.id));
-    ok(a1.length === 107 && neu40.length === 40 && neu40.every((s) => s.neu === true), `K131b إتمامُ A1: 107 جملٍ، والأربعونَ الجديدةُ موسومةٌ neu (${a1.length})`);
+    ok(a1.length === 117 && neu40.length === 40 && neu40.every((s) => s.neu === true), `K131b إتمامُ A1: 117 جملةً (منها الأربعون الأصلية موسومةٌ neu بالمعرّفات) (${a1.length})`) // R209: +10 جمل A1 (عبارات سرير المريض) — المجموع 117 (كان 107)، والأربعون الأصلية ثابتة;
   }
   {
     const n = (l: string) => FALSCHE_FREUNDE.filter((f) => f.level === l).length;
@@ -13454,9 +13454,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const vpfl = alleKarten.filter((k) => k.id.startsWith("vpfl-"));
   const satzIds = (bankRoh("sentences.json") as { id: string }[]).map((s) => s.id).filter((i) => i.startsWith("s-pfl-"));
   const pfSrc4 = readFileSync("components/pflege.tsx", "utf8");
-  ok(vpfl.length === 91 && new Set(vpfl.map((k) => k.id)).size === 91 && satzIds.length === 52 &&
+  ok(vpfl.length === 91 && new Set(vpfl.map((k) => k.id)).size === 91 && satzIds.length === 62 &&
      pfSrc4.includes("منسوجة أيضًا في حزم مفرداتك اليومية"),
-    "K298 التمريض منسوج في العام: 91 بطاقة vpfl (R206–R208) داخل حزم الصحة/العمل اليومية و52 جملة s-pfl تغطيةً مكثّفة (≥3 بطاقات/جملة وفق K83b) — كل كلمات المحطة الـ131 في التدفق العام في بنك الجمل — تصل في المهام العادية لا في محطة منفصلة فقط");
+    "K298 التمريض منسوج في العام: 91 بطاقة vpfl (R206–R208) داخل حزم الصحة/العمل اليومية و62 جملة s-pfl (52 تغطيةً مكثّفة ≥3 بطاقات/جملة وفق K83b + 10 عبارات سرير مريض A1 من R209) — كل كلمات المحطة الـ131 في التدفق العام في بنك الجمل — تصل في المهام العادية لا في محطة منفصلة فقط");
 }
 
   const dub = pf4.wortschatz.filter((w) => w.thema === "dubletten");

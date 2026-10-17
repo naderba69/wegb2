@@ -9895,5 +9895,159 @@
    "die Wiederbelebung",
    "bewusstlos"
   ]
+ },
+ {
+  "id": "s-pfl-53",
+  "level": "A1",
+  "de": "Wie geht es Ihnen heute? Brauchen Sie etwas?",
+  "ar": "كيف حالك اليوم؟ هل تحتاج شيئًا؟",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "heute",
+   "wie",
+   "brauchen",
+   "etwas"
+  ]
+ },
+ {
+  "id": "s-pfl-54",
+  "level": "A1",
+  "de": "Haben Sie Schmerzen? Ich hole Ihnen ein Glas Wasser.",
+  "ar": "هل عندك آلام؟ سأحضر لك كوب ماء.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "holen",
+   "das Glas",
+   "das Wasser"
+  ]
+ },
+ {
+  "id": "s-pfl-55",
+  "level": "A1",
+  "de": "Ich hole Ihnen ein Glas Wasser.",
+  "ar": "سأحضر لك كوب ماء.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "holen",
+   "das Glas",
+   "das Wasser"
+  ]
+ },
+ {
+  "id": "s-pfl-56",
+  "level": "A1",
+  "de": "Ich helfe Ihnen beim Aufstehen. Bitte langsam!",
+  "ar": "سأساعدك في النهوض. ببطء من فضلك!",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "helfen",
+   "aufstehen",
+   "langsam",
+   "bitte"
+  ]
+ },
+ {
+  "id": "s-pfl-57",
+  "level": "A1",
+  "de": "Bitte setzen Sie sich langsam hin.",
+  "ar": "من فضلك اجلس ببطء.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "bitte",
+   "setzen",
+   "langsam"
+  ]
+ },
+ {
+  "id": "s-pfl-58",
+  "level": "A1",
+  "de": "Ich bin gleich wieder da. Bitte warten Sie hier.",
+  "ar": "سأعود فورًا. انتظر هنا من فضلك.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "gleich",
+   "wieder",
+   "warten",
+   "hier"
+  ]
+ },
+ {
+  "id": "s-pfl-59",
+  "level": "A1",
+  "de": "Das Frühstück kommt um acht Uhr.",
+  "ar": "الفطور يأتي في الثامنة.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Frühstück",
+   "kommen",
+   "acht",
+   "die Uhr"
+  ]
+ },
+ {
+  "id": "s-pfl-60",
+  "level": "A1",
+  "de": "Brauchen Sie noch etwas?",
+  "ar": "هل تحتاج شيئًا آخر؟",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "brauchen",
+   "noch",
+   "etwas"
+  ]
+ },
+ {
+  "id": "s-pfl-61",
+  "level": "A1",
+  "de": "Ich sage der Schwester heute Bescheid.",
+  "ar": "سأُعلم الممرّضة اليوم.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "sagen",
+   "die Schwester",
+   "heute"
+  ]
+ },
+ {
+  "id": "s-pfl-62",
+  "level": "A1",
+  "de": "Gute Nacht, schlafen Sie gut. Wir sehen uns morgen.",
+  "ar": "ليلة سعيدة، نومًا هانئًا. نراك غدًا.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "schlafen",
+   "sehen",
+   "der Morgen"
+  ]
  }
 ]
