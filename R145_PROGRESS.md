@@ -727,3 +727,4 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 - R229: Kampagne Punkt 2 GESCHLOSSEN — HoerNeu 14 Items/16 Clips stufenbalanciert (A1 vertreten), QC 0 Anomalien; Punkt 1 bei 78/494 (s-b1-59…62).
 - R230: Kampagne Punkt 1 — s-b2-48…57 aufgenommen (neu 88/494, offen 406), Diktat 268.
 - R231: Kampagne Punkt 1 — s-b2-58…60 + s-a1-39…45 aufgenommen (neu 98/494, offen 396), Diktat 278.
+- R232: Kampagne Punkt 1 — s-a1-46…55 aufgenommen (neu 108/494, offen 386), Diktat 288.
