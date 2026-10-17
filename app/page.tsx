@@ -192,7 +192,7 @@ export default function Today() {
             <ul style={{ paddingInlineStart: "1.2rem", lineHeight: 1.9, marginTop: "0.5rem", marginBottom: 0 }}>
               <li>استمر بالتسميع اليومي (Shadowing) ونصوص B2 الثقيلة.</li>
               <li>خُض نموذج Goethe-Zertifikat B2 الرسمي كاملًا بتوقيت حقيقي.</li>
-              <li>واصل نحو C1: كتابة أكاديمية + Konjunktiv في النصوص الأدبية + محادثات طويلة.</li>
+              <li>عمّق B2 حتى الإتقان: نصوص ثقيلة ومحادثات طويلة وكتابة رسمية بلا أخطاء متكررة.</li>
               <li>ابدأ مسارًا جديدًا في أي وقت من الإعدادات (تصفير) — الخطة تتكرر بعينها حتمياً.</li>
             </ul>
           </div>

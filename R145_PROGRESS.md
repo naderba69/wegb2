@@ -713,3 +713,7 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 ### R218–R220 — Vollprüfung, C1-Pfad, Diktat-Stimme
 
 ✅ erledigt (lokal verifiziert; CI folgt): R218 komplette 4-Fertigkeiten-Sitzung mit Gesamttimer + Sammelergebnis als Station `vollpruefung` (K302, CV1/2; K112 dokumentiert). R219 C1: 12 Texte + 8 Dialoge, «مسار C1 مصغّر» (K271a/d). R220: 10 Bettseiten-Sätze mit echten MP3s (voice-06; Diktat 190, Audio 529; Rest 54 verwobene Sätze offen deklariert). smoke 1781/0 · interaktiv 734/0 · audit 0 · build ✓.
+
+### R221 — C1 entfernt (Besitzer-Entscheid)
+
+❌ C1 komplett gestrichen: Vertiefungs-Bank/Komponente/Station/Loader weg, Pfad endet bei B2, K303 blockiert Wiederauftauchen. smoke 1778/0 · interaktiv 734/0 · audit 0 · build ✓ (Details: docs/qualitaet.md «R221»).

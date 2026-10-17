@@ -12,7 +12,6 @@ import { HoerLabor, LueckDiktat } from "@/components/hoeren";
 import { MündlichLabor } from "@/components/muendlich";
 import { LeseLeiter } from "@/components/leseleiter";
 import { RedemittelBank } from "@/components/redemittel";
-import { Vertiefung } from "@/components/vertiefung";
 import { HoerNeu } from "@/components/hoerneu";
 import { VortragsBühne } from "@/components/vortrag";
 import { InterviewArena } from "@/components/interview2";
@@ -36,7 +35,7 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,vertiefung,leben,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
@@ -57,7 +56,6 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   vollpruefung: { icon: "🧪", titel: "جلسة امتحان كاملة", unter: "قراءة واستماع وكتابة وتحدّث في جلسة واحدة بمؤقّت ونتيجة مجمّعة — محاكاة داخلية." },
   leseleiter: { icon: "🪜", titel: "سلّم القراءة", unter: "نصوص قصيرة متدرّجة بين A0 وA1 بمسرد وأسئلة من النصّ." },
   redemittel: { icon: "🧰", titel: "بنك وسائل التعبير", unter: "عبارات الامتحان مصنّفة بالوظيفة والجزء، مع تدريب استرجاع." },
-  vertiefung: { icon: "📚", titel: "مسار C1 المصغّر B2+/C1", unter: "12 نصًا و8 حوارات C1 بمسارد وأسئلة تأويلية بعد B2 — خارج الخطة." },
   hoerneu: { icon: "🎧", titel: "استماع متنوّع", unter: "أخبار وإعلانات ومقابلات بصوت KI موسوم وسرعات من المشغّل." },
   leben: { icon: "🌍", titel: "الحياة في ألمانيا والاعتراف المهني", unter: "مؤسسات وأوراق وعادات، ومسار Anerkennung التمريض، ولغة شارع بسياقها." },
   tiefen: { icon: "📖", titel: "معجم المفردات", unter: "ابحث عن كلمة أو معنى عند الحاجة." },
@@ -75,7 +73,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-skills",
     title: "تدرّب على المهارات",
     description: "اختر مهارة أو طبّق ما تعلّمته في موقف.",
-    items: ["hoeren", "hoerneu", "lueck", "muendlich", "begleiter", "schatten", "vortrag", "interview", "briefe", "szenarien", "pflege", "vollpruefung", "leseleiter", "redemittel", "vertiefung"],
+    items: ["hoeren", "hoerneu", "lueck", "muendlich", "begleiter", "schatten", "vortrag", "interview", "briefe", "szenarien", "pflege", "vollpruefung", "leseleiter", "redemittel"],
   },
   {
     id: "ueben-reference",
@@ -203,7 +201,6 @@ export default function Ueben() {
           {offen === "szenarien" && <LebensSzenarien progress={progress} />}
           {offen === "leseleiter" && <LeseLeiter />}
           {offen === "redemittel" && <RedemittelBank />}
-          {offen === "vertiefung" && <Vertiefung />}
           {offen === "hoerneu" && <HoerNeu />}
           {offen === "tiefen" && <TiefenLexikon progress={progress} />}
           {offen === "einstufung" && <EinstufungTest />}

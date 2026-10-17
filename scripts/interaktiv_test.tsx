@@ -100,7 +100,7 @@ async function main() {
     const { BlitzDrill } = await import("../components/blitz");
     mount(React.createElement(BlitzDrill, { progress: { ...emptyProgress } }));
     ok(txt().includes("العينة الأصعب"), "I1 شاشة الرقع تعرض رقعة العينة الأصعب");
-    ok(txt().includes("فخاخ B2/C1"), "I2 الوصف العربي للرقعة");
+    ok(txt().includes("فخاخ B2"), "I2 الوصف العربي للرقعة");
     const start = btn("العينة الأصعب");
     ok(!!start, "I3 زر بدء رقعة 🥵 موجود");
     if (!start) { fehler++; } else {

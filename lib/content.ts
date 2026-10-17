@@ -232,27 +232,6 @@ export interface LeiterText {
   fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
 }
 export const leseleiter: LeiterText[] = [];
-/** 📚 نصّ تذوّقٍ C1 (C2/R178): مكتبةُ إثراءٍ ما بعد B2 — خارجَ خطّة الـ378 يومًا تمامًا */
-export interface VertiefungText {
-  id: string;
-  level: "C1";
-  titelDe: string;
-  titelAr: string;
-  de: string;
-  ar: string;
-  glossar: { de: string; ar: string }[];
-  fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
-}
-/** 💬 حوار تذوّقٍ C1 (C2/R178) */
-export interface VertiefungDialog {
-  id: string;
-  level: "C1";
-  titelDe: string;
-  titelAr: string;
-  lines: { who: string; de: string; ar: string }[];
-  fragen: { id: string; promptDe: string; promptAr: string; options: string[]; answer: string; explanationAr: string }[];
-}
-export const vertiefungTexte: VertiefungText[] = [];
 /** 🎧 مادة استماع متنوّعة (C5/R179): أخبار/إعلانات/مقابلات بصوت KI موسوم — خارج الخطة */
 export interface HoerNeuItem {
   id: string;
@@ -288,7 +267,6 @@ export interface SynonymVertiefungItem {
 }
 export const kollokVertiefung: KollokVertiefungItem[] = [];
 export const synonymVertiefung: SynonymVertiefungItem[] = [];
-export const vertiefungDialoge: VertiefungDialog[] = [];
 /** 🧰 عبارة تعبير وظيفية (C3): مصنّفة بوظيفتها وبأجزاء الامتحان التي تخدمها */
 export interface RedemittelItem {
   id: string;
@@ -372,8 +350,6 @@ function fuelleAusBanken(): void {
   luecken.splice(0, luecken.length, ...(bankRoh("luecken.json") as { items: LkItem[] }).items);
   leseleiter.splice(0, leseleiter.length, ...((bankRoh("leseleiter.json") as { texte: LeiterText[] } | undefined)?.texte ?? []));
   redemittelBank.splice(0, redemittelBank.length, ...((bankRoh("redemittel.json") as { items: RedemittelItem[] } | undefined)?.items ?? []));
-  vertiefungTexte.splice(0, vertiefungTexte.length, ...((bankRoh("vertiefung.json") as { texte: VertiefungText[] } | undefined)?.texte ?? []));
-  vertiefungDialoge.splice(0, vertiefungDialoge.length, ...((bankRoh("vertiefung.json") as { dialoge: VertiefungDialog[] } | undefined)?.dialoge ?? []));
   hoerneu.splice(0, hoerneu.length, ...((bankRoh("hoerneu.json") as { items: HoerNeuItem[] } | undefined)?.items ?? []));
   kollokVertiefung.splice(0, kollokVertiefung.length, ...((bankRoh("kollok-vertiefung.json") as { items: KollokVertiefungItem[] } | undefined)?.items ?? []));
   synonymVertiefung.splice(0, synonymVertiefung.length, ...((bankRoh("synonym-vertiefung.json") as { items: SynonymVertiefungItem[] } | undefined)?.items ?? []));

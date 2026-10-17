@@ -31,7 +31,7 @@ const DECKS: { id: Deck; emoji: string; titel: string; ar: string; comp: "Wortsc
   { id: "vergl", emoji: "⚖️", titel: "المقارنة والفضلى", ar: "klein · kleiner · am kleinsten — والشواذ", comp: "Grammatik" },
   { id: "imperativ", emoji: "🫡", titel: "الأمر الثلاثي", ar: "du! · ihr! · Sie! من تصريفاتك", comp: "Grammatik" },
   { id: "fehler", emoji: "🩴", titel: "أخطاؤك أنت", ar: "دفترك — الأعتق عناداً أولاً", comp: null },
-  { id: "haerte", emoji: "🥵", titel: "العينة الأصعب", ar: "فخاخ B2/C1: desto · lassen · Konjunktiv II", comp: "Grammatik" },
+  { id: "haerte", emoji: "🥵", titel: "العينة الأصعب", ar: "فخاخ B2: desto · lassen · Konjunktiv II", comp: "Grammatik" },
 ];
 
 interface Karte {
