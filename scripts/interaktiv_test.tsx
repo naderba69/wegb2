@@ -3435,7 +3435,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     mount(React.createElement(VollPruefung));
     const startBtn = rootEl.querySelector('[data-testid="vollpruefung-start"]') as HTMLButtonElement | null;
     ok(!!startBtn && !startBtn.disabled, "CV1 جلسة الامتحان الكاملة تُركَّب وزرّ بدئها مفعّل بالبنوك المحمّلة");
-    startBtn?.click();
+    if (startBtn) click(startBtn);
     const radios = rootEl.querySelectorAll('input[type="radio"]');
     ok(radios.length >= 3 && !!rootEl.querySelector('[data-testid="vollpruefung"]'),
       `CV2 بدء الجلسة يعرض أسئلة القسم الأول فورًا (${radios.length} خيارًا)`);
