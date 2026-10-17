@@ -570,7 +570,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 3562, "XIX1 بنكُ المفرداتِ 3562 بطاقةً كما في الجرد الحيّ (R206+R207: 63 كلمة تمريض منسوجة في الحزم العامة)");
+    ok(alleVokabeln.length === 3590, "XIX1 بنكُ المفرداتِ 3590 بطاقةً كما في الجرد الحيّ (R206–R208: كلمات التمريض الـ131 كلها في الحزم العامة)");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
     const falschMarkiert = neu.filter((c) => c.pos === "Nomen"

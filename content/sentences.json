@@ -9745,5 +9745,155 @@
    "die Wirbelsäule",
    "die Arterie"
   ]
+ },
+ {
+  "id": "s-pfl-43",
+  "level": "B1",
+  "de": "Wir desinfizieren die Hände und beobachten den Puls.",
+  "ar": "نطهّر اليدين ونراقب النبض.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "desinfizieren",
+   "beobachten",
+   "der Puls"
+  ]
+ },
+ {
+  "id": "s-pfl-44",
+  "level": "B1",
+  "de": "Der Patient bleibt nüchtern und stabil; wir begleiten ihn zur Untersuchung.",
+  "ar": "المريض يبقى صائمًا ومستقرًا؛ نرافقه إلى الفحص.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "nüchtern",
+   "stabil",
+   "begleiten"
+  ]
+ },
+ {
+  "id": "s-pfl-45",
+  "level": "B2",
+  "de": "Die Infusion läuft, und das Antibiotikum wirkt gegen die Lungenentzündung.",
+  "ar": "المحلول الوريدي يسري، والمضاد الحيوي يعمل ضد الالتهاب الرئوي.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Infusion",
+   "das Antibiotikum",
+   "die Lungenentzündung"
+  ]
+ },
+ {
+  "id": "s-pfl-46",
+  "level": "B2",
+  "de": "Einnahme, Verabreichung und Wirkstoff stehen im Medikamentenplan.",
+  "ar": "الإعطاء والتناول والمادة الفعالة في خطة الأدوية.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Einnahme",
+   "die Verabreichung",
+   "der Wirkstoff"
+  ]
+ },
+ {
+  "id": "s-pfl-47",
+  "level": "B2",
+  "de": "Blutverdünner, Blutgerinnsel und Blutvergiftung stehen im Befund.",
+  "ar": "مميّع الدم وجلطة الدم وتسمم الدم في التقرير.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Blutverdünner",
+   "das Blutgerinnsel",
+   "die Blutvergiftung"
+  ]
+ },
+ {
+  "id": "s-pfl-48",
+  "level": "B2",
+  "de": "Gehirnschlag, Herzschwäche und Kurzatmigkeit sind ernste Warnzeichen.",
+  "ar": "السكتة الدماغية وقصور القلب وضيق النفس علامات إنذار خطيرة.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Gehirnschlag",
+   "die Herzschwäche",
+   "die Kurzatmigkeit"
+  ]
+ },
+ {
+  "id": "s-pfl-49",
+  "level": "B2",
+  "de": "Unterzuckerung, Überzuckerung und Gelbsucht stehen im Bericht.",
+  "ar": "نقص سكر الدم وارتفاعه واليرقان في التقرير.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Unterzuckerung",
+   "die Überzuckerung",
+   "die Gelbsucht"
+  ]
+ },
+ {
+  "id": "s-pfl-50",
+  "level": "B2",
+  "de": "Blinddarmentzündung, Sauerstoffsättigung und Nerv werden dokumentiert.",
+  "ar": "التهاب الزائدة وتشبع الأكسجين والعصب تُوَثَّق.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Blinddarmentzündung",
+   "die Sauerstoffsättigung",
+   "der Nerv"
+  ]
+ },
+ {
+  "id": "s-pfl-51",
+  "level": "B2",
+  "de": "Den Patienten lagern, alles eintragen und den Notarzt alarmieren — das ist der Ablauf.",
+  "ar": "تموضع المريض وتدوين كل شيء واستدعاء طبيب الطوارئ — هذا هو الإجراء.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "lagern",
+   "eintragen",
+   "alarmieren"
+  ]
+ },
+ {
+  "id": "s-pfl-52",
+  "level": "B2",
+  "de": "Der Defibrillator hilft bei der Wiederbelebung, wenn der Patient bewusstlos ist.",
+  "ar": "مزيل الرجفان يساعد في الإنعاش عندما يكون المريض فاقدًا للوعي.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Defibrillator",
+   "die Wiederbelebung",
+   "bewusstlos"
+  ]
  }
 ]

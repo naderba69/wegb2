@@ -5117,6 +5117,353 @@
     "exampleAr": "الاستقبال يكون عند الاستعلامات.",
     "article": "die",
     "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-64",
+    "de": "desinfizieren",
+    "ar": "يعقّم / يطهّر (فعل)",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Bitte desinfizieren Sie die Hände.",
+    "exampleAr": "من فضلك عقّم اليدين.",
+    "pos": "Verb"
+   },
+   {
+    "id": "vpfl-65",
+    "de": "beobachten",
+    "ar": "يلاحظ / يراقب (فعل)",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Wir beobachten die Wunde genau.",
+    "exampleAr": "نراقب الجرح بدقة.",
+    "pos": "Verb"
+   },
+   {
+    "id": "vpfl-66",
+    "de": "begleiten",
+    "ar": "يرافق (فعل)",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Ich begleite Sie zur Untersuchung.",
+    "exampleAr": "سأرافقك إلى الفحص.",
+    "pos": "Verb"
+   },
+   {
+    "id": "vpfl-67",
+    "de": "nüchtern",
+    "ar": "على الريق (قبل الأكل)",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Bitte bleiben Sie ab Mitternacht nüchtern.",
+    "exampleAr": "من فضلك ابقَ على الريق من منتصف الليل.",
+    "pos": "Adjektiv",
+    "ant": [
+     "satt"
+    ]
+   },
+   {
+    "id": "vpfl-68",
+    "de": "stabil",
+    "ar": "مستقرّ",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Der Patient ist wieder stabil.",
+    "exampleAr": "المريض مستقر من جديد.",
+    "pos": "Adjektiv",
+    "ant": [
+     "instabil"
+    ]
+   },
+   {
+    "id": "vpfl-69",
+    "de": "die Infusion",
+    "ar": "المحلول الوريدي",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Infusion läuft noch zwei Stunden.",
+    "exampleAr": "المحلول سيبقى ساعتين بعد.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-70",
+    "de": "das Antibiotikum",
+    "ar": "المضاد الحيوي",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Das Antibiotikum läuft über die Infusion.",
+    "exampleAr": "المضاد الحيوي يُعطى عبر المحلول.",
+    "pos": "Nomen",
+    "article": "das",
+    "farbe": "GRÜN"
+   },
+   {
+    "id": "vpfl-71",
+    "de": "die Einnahme",
+    "ar": "تناول الدواء",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Einnahme erfolgt nach dem Essen.",
+    "exampleAr": "يكون التناول بعد الأكل.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-72",
+    "de": "die Verabreichung",
+    "ar": "إعطاء الدواء",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Verabreichung wird dokumentiert.",
+    "exampleAr": "يُوثَّق إعطاء الدواء.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-73",
+    "de": "der Wirkstoff",
+    "ar": "المادّة الفعّالة",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Der Wirkstoff senkt den Blutdruck.",
+    "exampleAr": "المادة الفعالة تخفض الضغط.",
+    "pos": "Nomen",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-74",
+    "de": "der Blutverdünner",
+    "ar": "مخفّف الدم",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Er nimmt täglich einen Blutverdünner.",
+    "exampleAr": "يأخذ مخفف دم يوميًا.",
+    "pos": "Nomen",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-75",
+    "de": "der Defibrillator",
+    "ar": "جهاز الصدمات القلبية",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Holen Sie den Defibrillator!",
+    "exampleAr": "أحضر جهاز الصدمات!",
+    "pos": "Nomen",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-76",
+    "de": "die Sauerstoffsättigung",
+    "ar": "تشبّع الأكسجين",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Sauerstoffsättigung liegt bei 96 Prozent.",
+    "exampleAr": "تشبع الأكسجين 96 بالمئة.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-77",
+    "de": "der Nerv",
+    "ar": "العصب",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Der Nerv ist gereizt.",
+    "exampleAr": "العصب متهيّج.",
+    "pos": "Nomen",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-78",
+    "de": "der Gehirnschlag",
+    "ar": "السكتة الدماغية",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Nach dem Gehirnschlag beginnt die frühe Mobilisation.",
+    "exampleAr": "بعد السكتة يبدأ التحريك المبكر.",
+    "pos": "Nomen",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-79",
+    "de": "die Herzschwäche",
+    "ar": "ضعف القلب / قصور القلب",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Bei Herzschwäche wird das Gewicht täglich kontrolliert.",
+    "exampleAr": "في قصور القلب يُوزن المريض يوميًا.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-80",
+    "de": "die Kurzatmigkeit",
+    "ar": "ضيق التنفس (عند الجهد)",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Kurzatmigkeit tritt schon bei kleiner Belastung auf.",
+    "exampleAr": "يظهر ضيق النفس حتى مع جهد صغير.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-81",
+    "de": "die Unterzuckerung",
+    "ar": "نقص سكر الدم",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Bei Unterzuckerung hilft schneller Zucker nach Anordnung.",
+    "exampleAr": "عند نقص السكر يساعد سكر سريع حسب التعليمات.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-82",
+    "de": "die Überzuckerung",
+    "ar": "ارتفاع سكر الدم",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Überzuckerung wird mit Insulin nach Schema behandelt.",
+    "exampleAr": "يُعالج ارتفاع السكر بالإنسولين حسب جدول.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-83",
+    "de": "die Lungenentzündung",
+    "ar": "الالتهاب الرئوي",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Lungenentzündung wird mit Antibiotika behandelt.",
+    "exampleAr": "يُعالج الالتهاب الرئوي بالمضادات الحيوية.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-84",
+    "de": "die Blinddarmentzündung",
+    "ar": "التهاب الزائدة",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Bei Blinddarmentzündung ist oft eine Operation nötig.",
+    "exampleAr": "في التهاب الزائدة غالبًا تلزم عملية.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-85",
+    "de": "die Gelbsucht",
+    "ar": "اليرقان",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Gelbsucht ist ein Zeichen, keine eigene Krankheit.",
+    "exampleAr": "اليرقان علامة لا مرض مستقل.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-86",
+    "de": "das Blutgerinnsel",
+    "ar": "الجلطة الدموية",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Ein Blutgerinnsel kann ein Gefäß verschließen.",
+    "exampleAr": "يمكن لجلطة أن تسدّ وعاءً.",
+    "pos": "Nomen",
+    "article": "das",
+    "farbe": "GRÜN"
+   },
+   {
+    "id": "vpfl-87",
+    "de": "die Blutvergiftung",
+    "ar": "تسمّم الدم",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Eine Blutvergiftung ist ein medizinischer Notfall.",
+    "exampleAr": "تسمم الدم طارئ طبي.",
+    "pos": "Nomen",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-88",
+    "de": "bewusstlos",
+    "ar": "فاقد الوعي",
+    "level": "B2",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Der Patient ist bewusstlos.",
+    "exampleAr": "المريض فاقد الوعي.",
+    "pos": "Adjektiv",
+    "ant": [
+     "wach"
+    ]
    }
   ]
  },
@@ -10333,6 +10680,42 @@
     "exampleAr": "فُحص العمود الفقري.",
     "article": "die",
     "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-89",
+    "de": "eintragen",
+    "ar": "يدوّن / يُدخل في السجل (فعل)",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Ich trage die Werte sofort ein.",
+    "exampleAr": "أدوّن القيم فورًا.",
+    "pos": "Verb"
+   },
+   {
+    "id": "vpfl-90",
+    "de": "lagern",
+    "ar": "يُقلّب / يضع بوضعية (فعل)",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Der Patient wird alle zwei Stunden gelagert.",
+    "exampleAr": "يُقلَّب المريض كل ساعتين.",
+    "pos": "Verb"
+   },
+   {
+    "id": "vpfl-91",
+    "de": "alarmieren",
+    "ar": "يُنذر / يستدعي (فعل)",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Alarmieren Sie den Notarzt!",
+    "exampleAr": "استدعِ طبيب الطوارئ!",
+    "pos": "Verb"
    }
   ]
  },

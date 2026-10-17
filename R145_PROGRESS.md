@@ -689,3 +689,7 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 ### R207 — Pflege-Verwebung Runde 2 (+37 Wörter)
 
 ✅ erledigt (lokal verifiziert; CI folgt): vpfl-27…63 in allgemeinen Decks (A2 Körper/Station, B1 Symptome/Anatomie/Dienste, B2 Notfall/Doku/Anatomie) → 63/131 Pflege-Wörter im Alltagsfluss; +32 Kollokationen (2247/4940), +13 Deckungssätze s-pfl-30…42 (Sätze 720). Zähler dokumentiert: Vokabeln 3562, eindeutig 3514 (K21d/K21f/K29f/K49d/K125f/K125g/K126a/K129b/K298/XIX1). Station-Notiz: 63 Wörter. smoke 1778/0 · interaktiv 732/0 · audit 0 · build ✓. (R206-CI: `39022756717` success.)
+
+### R208 — Pflege-Verwebung Finale (+28; alle 131 im Alltagsfluss)
+
+✅ erledigt (lokal verifiziert; CI folgt): vpfl-64…91 (B1 Verben/Adjektive, B2 Klinik-/Krankheitsnamen inkl. aller deutschen Dubletten, B2 Arbeitsverben) → **131/131** Pflege-Wörter auch in allgemeinen Decks; +28 Kollokationen (2275/4996), +10 Sätze s-pfl-43…52 (730). Neu gelernt/verankert: Kollokations-Phrasen global eindeutig (K73d), Adjektive brauchen Antonym (K126d-Schloss 293; Antonyme 269 in K126f). Station-Notiz vollständig. smoke 1778/0 · interaktiv 732/0 · audit 0 · build ✓. (R207-CI: `39023541327` success.)
