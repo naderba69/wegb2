@@ -1778,6 +1778,34 @@
    "voice": "voice-06 (de)",
    "level": "B1",
    "bytes": 35544
+  },
+  {
+   "id": "s-b1-59",
+   "file": "/audio/diktat/s-b1-59.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 43903
+  },
+  {
+   "id": "s-b1-60",
+   "file": "/audio/diktat/s-b1-60.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 41395
+  },
+  {
+   "id": "s-b1-61",
+   "file": "/audio/diktat/s-b1-61.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 54770
+  },
+  {
+   "id": "s-b1-62",
+   "file": "/audio/diktat/s-b1-62.mp3",
+   "voice": "voice-06 (de)",
+   "level": "B1",
+   "bytes": 42231
   }
  ]
 }

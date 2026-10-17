@@ -1,560 +1,956 @@
 {
-  "items": [
+ "items": [
+  {
+   "id": "hn-01",
+   "format": "nachrichten",
+   "level": "B2",
+   "titelDe": "Kurznachrichten am Mittag",
+   "titelAr": "موجز أخبار الظهيرة",
+   "zeilen": [
     {
-      "id": "hn-01",
-      "format": "nachrichten",
-      "level": "B2",
-      "titelDe": "Kurznachrichten am Mittag",
-      "titelAr": "موجز أخبار الظهيرة",
-      "zeilen": [
-        {
-          "who": "Sprecherin",
-          "de": "Willkommen zu den Kurznachrichten am Mittag. Die Stadtverwaltung hat heute angekündigt, dass das Freibad am Stadtpark ab dem kommenden Wochenende wieder täglich geöffnet ist. Nach den Reparaturen am Becken steht den Besuchern auch das neue Kinderbecken zur Verfügung. Der Eintritt bleibt in diesem Sommer unverändert. Außerdem teilt die Verkehrsgesellschaft mit, dass die Buslinie zwölf wegen einer Baustelle bis Ende August umgeleitet wird. Fahrgäste werden gebeten, die Ersatzhaltestelle in der Gartenstraße zu nutzen. Und das Wetter: Nach einem regnerischen Vormittag klart es am Nachmittag auf, die Temperaturen steigen auf bis zu 22 Grad.",
-          "ar": "مرحبًا بكم في موجز أخبار الظهيرة. أعلنت إدارة المدينة اليوم أنّ المسبح الخارجي في حديقة المدينة سيفتح مجددًا يوميًا اعتبارًا من عطلة نهاية الأسبوع القادمة. وبعد أعمال الإصلاح في الحوض، يتوفر للزوار أيضًا حوض الأطفال الجديد. ويبقى الدخول هذا الصيف دون تغيير. كما تفيد شركة النقل بأنّ خط الحافلات اثني عشر سيُحوَّل بسبب موقع بناء حتى نهاية أغسطس. ويُطلب من الركاب استخدام المحطة البديلة في شارع الحديقة. والطقس: بعد صباح ماطر، تصفو السماء بعد الظهر وترتفع درجات الحرارة حتى 22 درجة."
-        }
-      ],
-      "clips": [
-        {
-          "zeilen": [
-            0
-          ],
-          "stimme": "A",
-          "datei": "/audio/hoerneu/ki-hn-01.mp3",
-          "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 303038
-        }
-      ],
-      "fragen": [
-        {
-          "id": "hn-01-q1",
-          "promptDe": "Was ist ab dem Wochenende wieder geöffnet?",
-          "promptAr": "ما الذي يُفتح مجددًا اعتبارًا من عطلة الأسبوع؟",
-          "options": [
-            "Die Stadtbibliothek",
-            "Das Freibad am Stadtpark",
-            "Das Rathaus",
-            "Die Gartenstraße"
-          ],
-          "answer": "Das Freibad am Stadtpark",
-          "explanationAr": "تقول الأخبار: «dass das Freibad am Stadtpark ab dem kommenden Wochenende wieder täglich geöffnet ist»."
-        },
-        {
-          "id": "hn-01-q2",
-          "promptDe": "Warum wird die Buslinie zwölf umgeleitet?",
-          "promptAr": "لماذا يُحوَّل خط الحافلات اثني عشر؟",
-          "options": [
-            "Wegen eines Unfalls",
-            "Wegen einer Baustelle",
-            "Wegen des Wetters",
-            "Wegen eines Festes"
-          ],
-          "answer": "Wegen einer Baustelle",
-          "explanationAr": "النص: «wegen einer Baustelle bis Ende August umgeleitet»."
-        },
-        {
-          "id": "hn-01-q3",
-          "promptDe": "Wie wird das Wetter am Nachmittag?",
-          "promptAr": "كيف يصبح الطقس بعد الظهر؟",
-          "options": [
-            "Es regnet weiter",
-            "Es klart auf und wird bis zu 22 Grad warm",
-            "Es gibt ein Gewitter",
-            "Es wird kälter"
-          ],
-          "answer": "Es klart auf und wird bis zu 22 Grad warm",
-          "explanationAr": "النص: «klart es am Nachmittag auf, die Temperaturen steigen auf bis zu 22 Grad»."
-        }
-      ]
-    },
-    {
-      "id": "hn-02",
-      "format": "nachrichten",
-      "level": "B1",
-      "titelDe": "Neues aus der Region",
-      "titelAr": "جديد المنطقة",
-      "zeilen": [
-        {
-          "who": "Sprecherin",
-          "de": "Hier sind die Nachrichten aus der Region. Die Grundschule in Lindenberg sucht ab sofort freiwillige Helfer für die Nachmittagsbetreuung. Interessierte können sich im Schulbüro melden, eine Ausbildung ist nicht nötig. Außerdem hat der Wochenmarkt ab Juni neue Öffnungszeiten: Er findet jetzt jeden Mittwoch und Samstag von acht bis vierzehn Uhr statt. Zum Schluss eine Meldung der Polizei: In der Nacht zum Sonntag wurde in der Bahnhofstraße ein Fahrrad gestohlen. Zeugen werden gebeten, sich zu melden.",
-          "ar": "إليكم أخبار المنطقة. تبحث المدرسة الابتدائية في ليندنبرغ اعتبارًا من الآن عن متطوعين لرعاية ما بعد الظهر. ويمكن للمهتمين التسجيل في مكتب المدرسة، ولا يلزم تدريب. كما أنّ لسوق الأسبوع اعتبارًا من يونيو مواعيد جديدة: إذ يُقام الآن كل أربعاء وسبت من الثامنة حتى الثانية ظهرًا. وأخيرًا خبر من الشرطة: في ليلة الأحد سُرق دراجة في شارع المحطة. ويُطلب من الشهود الإبلاغ."
-        }
-      ],
-      "clips": [
-        {
-          "zeilen": [
-            0
-          ],
-          "stimme": "A",
-          "datei": "/audio/hoerneu/ki-hn-02.mp3",
-          "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 216938
-        }
-      ],
-      "fragen": [
-        {
-          "id": "hn-02-q1",
-          "promptDe": "Wen sucht die Grundschule?",
-          "promptAr": "عمّن تبحث المدرسة الابتدائية؟",
-          "options": [
-            "Neue Lehrer",
-            "Freiwillige Helfer für die Nachmittagsbetreuung",
-            "Einen Hausmeister",
-            "Kinder für die erste Klasse"
-          ],
-          "answer": "Freiwillige Helfer für die Nachmittagsbetreuung",
-          "explanationAr": "النص: «sucht ab sofort freiwillige Helfer für die Nachmittagsbetreuung»."
-        },
-        {
-          "id": "hn-02-q2",
-          "promptDe": "Wann findet der Wochenmarkt ab Juni statt?",
-          "promptAr": "متى يُقام السوق الأسبوعي اعتبارًا من يونيو؟",
-          "options": [
-            "Jeden Tag von 8 bis 14 Uhr",
-            "Mittwochs und samstags von 8 bis 14 Uhr",
-            "Nur samstags",
-            "Freitags und sonntags"
-          ],
-          "answer": "Mittwochs und samstags von 8 bis 14 Uhr",
-          "explanationAr": "النص: «jeden Mittwoch und Samstag von acht bis vierzehn Uhr»."
-        },
-        {
-          "id": "hn-02-q3",
-          "promptDe": "Was wurde gestohlen?",
-          "promptAr": "ما الذي سُرق؟",
-          "options": [
-            "Ein Auto",
-            "Ein Fahrrad",
-            "Ein Handy",
-            "Eine Tasche"
-          ],
-          "answer": "Ein Fahrrad",
-          "explanationAr": "النص: «wurde in der Bahnhofstraße ein Fahrrad gestohlen»."
-        }
-      ]
-    },
-    {
-      "id": "hn-03",
-      "format": "nachrichten",
-      "level": "B2",
-      "titelDe": "Wirtschaft und Umwelt in Kürze",
-      "titelAr": "الاقتصاد والبيئة باختصار",
-      "zeilen": [
-        {
-          "who": "Sprecher",
-          "de": "Wirtschaft und Umwelt in Kürze. Die Zahl der neu zugelassenen Elektroautos ist im vergangenen Quartal erneut deutlich gestiegen. Fachleute führen das vor allem auf gesunkene Preise und ein dichteres Netz an Ladestationen zurück. Gleichzeitig warnen Umweltorganisationen davor, den Ausbau der Bahn zu vernachlässigen. Nur wenn auch der öffentliche Verkehr attraktiver werde, könne der Verkehrssektor seine Klimaziele erreichen. Die Bundesregierung kündigte unterdessen an, die Förderung für den Schienenverkehr im kommenden Haushalt zu erhöhen. Konkrete Zahlen wurden noch nicht genannt.",
-          "ar": "الاقتصاد والبيئة باختصار. ارتفع عدد السيارات الكهربائية المسجلة حديثًا في الربع الماضي بشكل واضح مجددًا. ويرجع الخبراء ذلك قبل كل شيء إلى أسعار منخفضة وشبكة أكثف من محطات الشحن. وفي الوقت نفسه تحذر منظمات بيئية من إهمال توسيع السكك الحديدية. فلا يمكن لقطاع النقل أن يحقق أهدافه المناخية إلا إذا أصبح النقل العام أكثر جاذبية أيضًا. وفي هذه الأثناء أعلنت الحكومة الاتحادية زيادة دعم النقل بالسكك في الميزانية القادمة. ولم تُذكر أرقام ملموسة بعد."
-        }
-      ],
-      "clips": [
-        {
-          "zeilen": [
-            0
-          ],
-          "stimme": "B",
-          "datei": "/audio/hoerneu/ki-hn-03.mp3",
-          "stimmeLabel": "voice-05 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 251002
-        }
-      ],
-      "fragen": [
-        {
-          "id": "hn-03-q1",
-          "promptDe": "Warum steigen die Elektroauto-Zulassungen?",
-          "promptAr": "لماذا ترتفع تسجيلات السيارات الكهربائية؟",
-          "options": [
-            "Wegen neuer Gesetze",
-            "Wegen gesunkener Preise und mehr Ladestationen",
-            "Wegen billigem Benzin",
-            "Wegen Werbung"
-          ],
-          "answer": "Wegen gesunkener Preise und mehr Ladestationen",
-          "explanationAr": "النص: «vor allem auf gesunkene Preise und ein dichteres Netz an Ladestationen»."
-        },
-        {
-          "id": "hn-03-q2",
-          "promptDe": "Wovor warnen Umweltorganisationen?",
-          "promptAr": "ممّا تحذر المنظمات البيئية؟",
-          "options": [
-            "Vor zu vielen Autos",
-            "Davor, den Ausbau der Bahn zu vernachlässigen",
-            "Vor hohen Preisen",
-            "Vor Ladestationen"
-          ],
-          "answer": "Davor, den Ausbau der Bahn zu vernachlässigen",
-          "explanationAr": "النص: «warnen Umweltorganisationen davor, den Ausbau der Bahn zu vernachlässigen»."
-        },
-        {
-          "id": "hn-03-q3",
-          "promptDe": "Was kündigte die Bundesregierung an?",
-          "promptAr": "ما الذي أعلنته الحكومة الاتحادية؟",
-          "options": [
-            "Ein Autoverbot",
-            "Die Förderung für den Schienenverkehr zu erhöhen",
-            "Neue Straßen",
-            "Niedrigere Steuern"
-          ],
-          "answer": "Die Förderung für den Schienenverkehr zu erhöhen",
-          "explanationAr": "النص: «die Förderung für den Schienenverkehr im kommenden Haushalt zu erhöhen»."
-        }
-      ]
-    },
-    {
-      "id": "hn-04",
-      "format": "durchsage",
-      "level": "B1",
-      "titelDe": "Durchsage am Bahnhof",
-      "titelAr": "إعلان في محطة القطار",
-      "zeilen": [
-        {
-          "who": "Bahnhofsansage",
-          "de": "Achtung, bitte! Eine Durchsage für die Reisenden des Regionalexpress nach Hamburg. Der Zug hat heute wegen einer technischen Störung etwa zwanzig Minuten Verspätung. Er fährt voraussichtlich um fünfzehn Uhr vierzig von Gleis sieben ab. Bitte achten Sie auf die Anzeige. Wir danken für Ihr Verständnis.",
-          "ar": "انتباه من فضلكم! إعلان لمسافري القطار الإقليمي السريع إلى هامبورغ. يتأخر القطار اليوم نحو عشرين دقيقة بسبب عطل تقني. وسيغادر على الأرجح في الثالثة وأربعين دقيقة من الرصيف سبعة. انتبهوا إلى لوحة العرض. شكرًا لتفهمكم."
-        }
-      ],
-      "clips": [
-        {
-          "zeilen": [
-            0
-          ],
-          "stimme": "B",
-          "datei": "/audio/hoerneu/ki-hn-04.mp3",
-          "stimmeLabel": "voice-05 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 122271
-        }
-      ],
-      "fragen": [
-        {
-          "id": "hn-04-q1",
-          "promptDe": "Wie viel Verspätung hat der Zug?",
-          "promptAr": "كم تأخير القطار؟",
-          "options": [
-            "Zehn Minuten",
-            "Etwa zwanzig Minuten",
-            "Eine Stunde",
-            "Er fällt aus"
-          ],
-          "answer": "Etwa zwanzig Minuten",
-          "explanationAr": "النص: «etwa zwanzig Minuten Verspätung»."
-        },
-        {
-          "id": "hn-04-q2",
-          "promptDe": "Von welchem Gleis fährt der Zug ab?",
-          "promptAr": "من أي رصيف يغادر القطار؟",
-          "options": [
-            "Gleis drei",
-            "Gleis zwölf",
-            "Gleis sieben",
-            "Gleis eins"
-          ],
-          "answer": "Gleis sieben",
-          "explanationAr": "النص: «von Gleis sieben ab»."
-        },
-        {
-          "id": "hn-04-q3",
-          "promptDe": "Was ist der Grund für die Verspätung?",
-          "promptAr": "ما سبب التأخير؟",
-          "options": [
-            "Das Wetter",
-            "Eine technische Störung",
-            "Ein Streik",
-            "Zu viele Fahrgäste"
-          ],
-          "answer": "Eine technische Störung",
-          "explanationAr": "النص: «wegen einer technischen Störung»."
-        }
-      ]
-    },
-    {
-      "id": "hn-05",
-      "format": "durchsage",
-      "level": "A2",
-      "titelDe": "Am Flughafen: Gate-Wechsel",
-      "titelAr": "في المطار: تغيير بوابة",
-      "zeilen": [
-        {
-          "who": "Flughafenansage",
-          "de": "Liebe Passagiere, hier eine wichtige Information zum Flug LH 204 nach Wien. Das Gate hat sich geändert. Der Abflug erfolgt heute von Gate B zwölf statt von Gate B fünf. Der Einstieg beginnt in zwanzig Minuten. Bitte begeben Sie sich nun zum neuen Gate und halten Sie Ihre Bordkarte bereit. Vielen Dank.",
-          "ar": "أعزاءنا المسافرون، إليكم معلومة مهمة عن الرحلة LH 204 إلى فيينا. لقد تغيرت البوابة. تتم المغادرة اليوم من البوابة B اثني عشر بدلًا من البوابة B خمسة. يبدأ الصعود بعد عشرين دقيقة. توجهوا الآن إلى البوابة الجديدة وجهّزوا بطاقات الصعود. شكرًا جزيلًا."
-        }
-      ],
-      "clips": [
-        {
-          "zeilen": [
-            0
-          ],
-          "stimme": "A",
-          "datei": "/audio/hoerneu/ki-hn-05.mp3",
-          "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 149647
-        }
-      ],
-      "fragen": [
-        {
-          "id": "hn-05-q1",
-          "promptDe": "Wohin fliegt LH 204?",
-          "promptAr": "إلى أين تطير الرحلة LH 204؟",
-          "options": [
-            "Nach Berlin",
-            "Nach Wien",
-            "Nach Hamburg",
-            "Nach Prag"
-          ],
-          "answer": "Nach Wien",
-          "explanationAr": "النص: «zum Flug LH 204 nach Wien»."
-        },
-        {
-          "id": "hn-05-q2",
-          "promptDe": "Von welchem Gate erfolgt der Abflug jetzt?",
-          "promptAr": "من أي بوابة تتم المغادرة الآن؟",
-          "options": [
-            "Gate B fünf",
-            "Gate A zwölf",
-            "Gate B zwölf",
-            "Gate C fünf"
-          ],
-          "answer": "Gate B zwölf",
-          "explanationAr": "النص: «Der Abflug erfolgt heute von Gate B zwölf»."
-        },
-        {
-          "id": "hn-05-q3",
-          "promptDe": "Wann beginnt der Einstieg?",
-          "promptAr": "متى يبدأ الصعود؟",
-          "options": [
-            "Sofort",
-            "In zwanzig Minuten",
-            "In einer Stunde",
-            "Nach dem Mittag"
-          ],
-          "answer": "In zwanzig Minuten",
-          "explanationAr": "النص: «Der Einstieg beginnt in zwanzig Minuten»."
-        }
-      ]
-    },
-    {
-      "id": "hn-06",
-      "format": "werbung",
-      "level": "B1",
-      "titelDe": "Radiowerbung: Möbelhaus Sonnenschein",
-      "titelAr": "إعلان إذاعي: متجر الأثاث",
-      "zeilen": [
-        {
-          "who": "Werbestimme",
-          "de": "Ihr Zuhause verdient mehr! Beim Möbelhaus Sonnenschein erhalten Sie ab sofort bis zu vierzig Prozent Rabatt auf alle Sofas und Schränke. Und das Beste: Wir liefern kostenlos zu Ihnen nach Hause und nehmen Ihre alten Möbel gleich mit. Besuchen Sie uns in der Ringstraße vierzehn oder online. Möbelhaus Sonnenschein – wohnen Sie schöner! Das Angebot gilt nur bis Sonntag.",
-          "ar": "بيتك يستحق المزيد! في متجر أثاث سوننشاين تحصل اعتبارًا من الآن على خصم حتى أربعين بالمئة على جميع الأرائك والخزائن. والأفضل: نوصل مجانًا إلى بيتك ونأخذ أثاثك القديم معنا مباشرة. زرنا في شارع الرينغ أربعة عشر أو عبر الإنترنت. متجر أثاث سوننشاين – عِش أجمل! العرض سارٍ حتى الأحد فقط."
-        }
-      ],
-      "clips": [
-        {
-          "zeilen": [
-            0
-          ],
-          "stimme": "A",
-          "datei": "/audio/hoerneu/ki-hn-06.mp3",
-          "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 177232
-        }
-      ],
-      "fragen": [
-        {
-          "id": "hn-06-q1",
-          "promptDe": "Wie hoch ist der Rabatt?",
-          "promptAr": "كم يبلغ الخصم؟",
-          "options": [
-            "Zehn Prozent",
-            "Bis zu vierzig Prozent",
-            "Fünfzig Prozent auf alles",
-            "Kein Rabatt"
-          ],
-          "answer": "Bis zu vierzig Prozent",
-          "explanationAr": "النص: «bis zu vierzig Prozent Rabatt auf alle Sofas und Schränke»."
-        },
-        {
-          "id": "hn-06-q2",
-          "promptDe": "Was ist kostenlos?",
-          "promptAr": "ما الذي هو مجاني؟",
-          "options": [
-            "Die Möbel",
-            "Die Lieferung nach Hause",
-            "Die Beratung am Telefon",
-            "Der Kaffee im Geschäft"
-          ],
-          "answer": "Die Lieferung nach Hause",
-          "explanationAr": "النص: «Wir liefern kostenlos zu Ihnen nach Hause»."
-        },
-        {
-          "id": "hn-06-q3",
-          "promptDe": "Bis wann gilt das Angebot?",
-          "promptAr": "حتى متى يسري العرض؟",
-          "options": [
-            "Bis Ende des Monats",
-            "Nur bis Sonntag",
-            "Bis Weihnachten",
-            "Immer"
-          ],
-          "answer": "Nur bis Sonntag",
-          "explanationAr": "النص: «Das Angebot gilt nur bis Sonntag»."
-        }
-      ]
-    },
-    {
-      "id": "hn-07",
-      "format": "interview",
-      "level": "B2",
-      "titelDe": "Interview: Ein Arzt über Vorsorge",
-      "titelAr": "مقابلة: طبيب عن الوقاية الصحية",
-      "zeilen": [
-        {
-          "who": "Moderatorin",
-          "de": "Guten Morgen, Herr Doktor Yilmaz. Viele Menschen gehen erst zum Arzt, wenn es weh tut. Warum ist Vorsorge so wichtig?",
-          "ar": "صباح الخير، دكتور إيلماز. كثير من الناس لا يذهب إلى الطبيب إلا حين يؤلم. لماذا الوقاية مهمة جدًا؟"
-        },
-        {
-          "who": "Dr. Yilmaz",
-          "de": "Weil viele Krankheiten lange keine Beschwerden machen. Wer regelmäßig zur Vorsorge geht, erkennt Risiken früh – und kann oft mit kleinen Veränderungen im Alltag viel erreichen, statt später Medikamente zu brauchen. Entscheidend ist, dass die Angebote einfach und ohne lange Wartezeiten erreichbar sind.",
-          "ar": "لأن أمراضًا كثيرة لا تسبب آلامًا لفترة طويلة. ومن يذهب بانتظام إلى الوقاية يكتشف المخاطر مبكرًا – وغالبًا ما يحقق الكثير بتغييرات صغيرة في الحياة اليومية، بدل أن يحتاج أدوية لاحقًا. والحاسم أن تكون العروض بسيطة ومتاحة دون أوقات انتظار طويلة."
-        }
-      ],
-      "clips": [
-        {
-          "zeilen": [
-            0
-          ],
-          "stimme": "A",
-          "datei": "/audio/hoerneu/ki-hn-07a.mp3",
-          "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 61249
-        },
-        {
-          "zeilen": [
-            1
-          ],
-          "stimme": "B",
-          "datei": "/audio/hoerneu/ki-hn-07b.mp3",
-          "stimmeLabel": "voice-05 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 123315
-        }
-      ],
-      "fragen": [
-        {
-          "id": "hn-07-q1",
-          "promptDe": "Warum ist Vorsorge laut dem Arzt wichtig?",
-          "promptAr": "لماذا الوقاية مهمة بحسب الطبيب؟",
-          "options": [
-            "Weil Ärzte sonst wenig zu tun haben",
-            "Weil viele Krankheiten lange keine Beschwerden machen",
-            "Weil sie kostenlos ist",
-            "Weil alle es machen"
-          ],
-          "answer": "Weil viele Krankheiten lange keine Beschwerden machen",
-          "explanationAr": "تقول: «Weil viele Krankheiten lange keine Beschwerden machen»."
-        },
-        {
-          "id": "hn-07-q2",
-          "promptDe": "Was kann man mit kleinen Veränderungen erreichen?",
-          "promptAr": "ما الذي يمكن تحقيقه بتغييرات صغيرة؟",
-          "options": [
-            "Risiken früh erkennen und oft Medikamente vermeiden",
-            "Nie wieder krank werden",
-            "Geld sparen beim Einkaufen",
-            "Länger schlafen"
-          ],
-          "answer": "Risiken früh erkennen und oft Medikamente vermeiden",
-          "explanationAr": "تقول: «kann oft mit kleinen Veränderungen im Alltag viel erreichen, statt später Medikamente zu brauchen»."
-        },
-        {
-          "id": "hn-07-q3",
-          "promptDe": "Was ist für die Angebote entscheidend?",
-          "promptAr": "ما الحاسم في عروض الوقاية؟",
-          "options": [
-            "Dass sie teuer sind",
-            "Dass sie einfach und ohne lange Wartezeiten erreichbar sind",
-            "Dass sie nur für Ältere sind",
-            "Dass sie beworben werden"
-          ],
-          "answer": "Dass sie einfach und ohne lange Wartezeiten erreichbar sind",
-          "explanationAr": "تقول: «dass die Angebote einfach und ohne lange Wartezeiten erreichbar sind»."
-        }
-      ]
-    },
-    {
-      "id": "hn-08",
-      "format": "interview",
-      "level": "B1",
-      "titelDe": "Interview: Nach dem Marathon",
-      "titelAr": "مقابلة: بعد الماراثون",
-      "zeilen": [
-        {
-          "who": "Moderator",
-          "de": "Herzlichen Glückwunsch, Frau Costa! Sie haben heute Ihren ersten Marathon geschafft. Wie fühlen Sie sich jetzt?",
-          "ar": "تهانينا، سيدة كوستا! لقد أنجزتِ اليوم أول ماراثون لك. كيف تشعرين الآن؟"
-        },
-        {
-          "who": "Frau Costa",
-          "de": "Ehrlich gesagt: total müde, aber überglücklich. Die letzten fünf Kilometer waren hart. Aber die Zuschauer an der Strecke haben uns Läufer so toll angefeuert, dass Aufgeben keine Option war. Nächstes Jahr bin ich auf jeden Fall wieder dabei!",
-          "ar": "بصراحة: متعبة تمامًا، لكن سعيدة للغاية. الكيلومترات الخمسة الأخيرة كانت صعبة. لكن الجمهور على طول الطريق شجّعنا نحن العدّائين بشكل رائع، حتى إن الاستسلام لم يكن خيارًا. والسنة القادمة سأشارك بالتأكيد مجددًا!"
-        }
-      ],
-      "clips": [
-        {
-          "zeilen": [
-            0
-          ],
-          "stimme": "B",
-          "datei": "/audio/hoerneu/ki-hn-08a.mp3",
-          "stimmeLabel": "voice-05 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 49964
-        },
-        {
-          "zeilen": [
-            1
-          ],
-          "stimme": "A",
-          "datei": "/audio/hoerneu/ki-hn-08b.mp3",
-          "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
-          "bytes": 125405
-        }
-      ],
-      "fragen": [
-        {
-          "id": "hn-08-q1",
-          "promptDe": "Was hat Frau Costa heute geschafft?",
-          "promptAr": "ما الذي أنجزته السيدة كوستا اليوم؟",
-          "options": [
-            "Einen Schwimmwettkampf",
-            "Ihren ersten Marathon",
-            "Ein Fußballspiel",
-            "Eine Prüfung"
-          ],
-          "answer": "Ihren ersten Marathon",
-          "explanationAr": "يقول المقدم: «Sie haben heute Ihren ersten Marathon geschafft»."
-        },
-        {
-          "id": "hn-08-q2",
-          "promptDe": "Warum war Aufgeben keine Option?",
-          "promptAr": "لماذا لم يكن الاستسلام خيارًا؟",
-          "options": [
-            "Wegen des Preisgeldes",
-            "Die Zuschauer feuerten die Läufer so toll an",
-            "Wegen des Wetters",
-            "Wegen ihres Trainers"
-          ],
-          "answer": "Die Zuschauer feuerten die Läufer so toll an",
-          "explanationAr": "تقول: «die Zuschauer an der Strecke haben uns Läufer so toll angefeuert, dass Aufgeben keine Option war»."
-        },
-        {
-          "id": "hn-08-q3",
-          "promptDe": "Was plant Frau Costa?",
-          "promptAr": "ما الذي تخطط له السيدة كوستا؟",
-          "options": [
-            "Mit dem Sport aufhören",
-            "Nächstes Jahr wieder teilnehmen",
-            "Trainerin werden",
-            "Einen kürzeren Lauf machen"
-          ],
-          "answer": "Nächstes Jahr wieder teilnehmen",
-          "explanationAr": "تقول: «Nächstes Jahr bin ich auf jeden Fall wieder dabei!»"
-        }
-      ]
+     "who": "Sprecherin",
+     "de": "Willkommen zu den Kurznachrichten am Mittag. Die Stadtverwaltung hat heute angekündigt, dass das Freibad am Stadtpark ab dem kommenden Wochenende wieder täglich geöffnet ist. Nach den Reparaturen am Becken steht den Besuchern auch das neue Kinderbecken zur Verfügung. Der Eintritt bleibt in diesem Sommer unverändert. Außerdem teilt die Verkehrsgesellschaft mit, dass die Buslinie zwölf wegen einer Baustelle bis Ende August umgeleitet wird. Fahrgäste werden gebeten, die Ersatzhaltestelle in der Gartenstraße zu nutzen. Und das Wetter: Nach einem regnerischen Vormittag klart es am Nachmittag auf, die Temperaturen steigen auf bis zu 22 Grad.",
+     "ar": "مرحبًا بكم في موجز أخبار الظهيرة. أعلنت إدارة المدينة اليوم أنّ المسبح الخارجي في حديقة المدينة سيفتح مجددًا يوميًا اعتبارًا من عطلة نهاية الأسبوع القادمة. وبعد أعمال الإصلاح في الحوض، يتوفر للزوار أيضًا حوض الأطفال الجديد. ويبقى الدخول هذا الصيف دون تغيير. كما تفيد شركة النقل بأنّ خط الحافلات اثني عشر سيُحوَّل بسبب موقع بناء حتى نهاية أغسطس. ويُطلب من الركاب استخدام المحطة البديلة في شارع الحديقة. والطقس: بعد صباح ماطر، تصفو السماء بعد الظهر وترتفع درجات الحرارة حتى 22 درجة."
     }
-  ]
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-01.mp3",
+     "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 303038
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-01-q1",
+     "promptDe": "Was ist ab dem Wochenende wieder geöffnet?",
+     "promptAr": "ما الذي يُفتح مجددًا اعتبارًا من عطلة الأسبوع؟",
+     "options": [
+      "Die Stadtbibliothek",
+      "Das Freibad am Stadtpark",
+      "Das Rathaus",
+      "Die Gartenstraße"
+     ],
+     "answer": "Das Freibad am Stadtpark",
+     "explanationAr": "تقول الأخبار: «dass das Freibad am Stadtpark ab dem kommenden Wochenende wieder täglich geöffnet ist»."
+    },
+    {
+     "id": "hn-01-q2",
+     "promptDe": "Warum wird die Buslinie zwölf umgeleitet?",
+     "promptAr": "لماذا يُحوَّل خط الحافلات اثني عشر؟",
+     "options": [
+      "Wegen eines Unfalls",
+      "Wegen einer Baustelle",
+      "Wegen des Wetters",
+      "Wegen eines Festes"
+     ],
+     "answer": "Wegen einer Baustelle",
+     "explanationAr": "النص: «wegen einer Baustelle bis Ende August umgeleitet»."
+    },
+    {
+     "id": "hn-01-q3",
+     "promptDe": "Wie wird das Wetter am Nachmittag?",
+     "promptAr": "كيف يصبح الطقس بعد الظهر؟",
+     "options": [
+      "Es regnet weiter",
+      "Es klart auf und wird bis zu 22 Grad warm",
+      "Es gibt ein Gewitter",
+      "Es wird kälter"
+     ],
+     "answer": "Es klart auf und wird bis zu 22 Grad warm",
+     "explanationAr": "النص: «klart es am Nachmittag auf, die Temperaturen steigen auf bis zu 22 Grad»."
+    }
+   ]
+  },
+  {
+   "id": "hn-02",
+   "format": "nachrichten",
+   "level": "B1",
+   "titelDe": "Neues aus der Region",
+   "titelAr": "جديد المنطقة",
+   "zeilen": [
+    {
+     "who": "Sprecherin",
+     "de": "Hier sind die Nachrichten aus der Region. Die Grundschule in Lindenberg sucht ab sofort freiwillige Helfer für die Nachmittagsbetreuung. Interessierte können sich im Schulbüro melden, eine Ausbildung ist nicht nötig. Außerdem hat der Wochenmarkt ab Juni neue Öffnungszeiten: Er findet jetzt jeden Mittwoch und Samstag von acht bis vierzehn Uhr statt. Zum Schluss eine Meldung der Polizei: In der Nacht zum Sonntag wurde in der Bahnhofstraße ein Fahrrad gestohlen. Zeugen werden gebeten, sich zu melden.",
+     "ar": "إليكم أخبار المنطقة. تبحث المدرسة الابتدائية في ليندنبرغ اعتبارًا من الآن عن متطوعين لرعاية ما بعد الظهر. ويمكن للمهتمين التسجيل في مكتب المدرسة، ولا يلزم تدريب. كما أنّ لسوق الأسبوع اعتبارًا من يونيو مواعيد جديدة: إذ يُقام الآن كل أربعاء وسبت من الثامنة حتى الثانية ظهرًا. وأخيرًا خبر من الشرطة: في ليلة الأحد سُرق دراجة في شارع المحطة. ويُطلب من الشهود الإبلاغ."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-02.mp3",
+     "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 216938
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-02-q1",
+     "promptDe": "Wen sucht die Grundschule?",
+     "promptAr": "عمّن تبحث المدرسة الابتدائية؟",
+     "options": [
+      "Neue Lehrer",
+      "Freiwillige Helfer für die Nachmittagsbetreuung",
+      "Einen Hausmeister",
+      "Kinder für die erste Klasse"
+     ],
+     "answer": "Freiwillige Helfer für die Nachmittagsbetreuung",
+     "explanationAr": "النص: «sucht ab sofort freiwillige Helfer für die Nachmittagsbetreuung»."
+    },
+    {
+     "id": "hn-02-q2",
+     "promptDe": "Wann findet der Wochenmarkt ab Juni statt?",
+     "promptAr": "متى يُقام السوق الأسبوعي اعتبارًا من يونيو؟",
+     "options": [
+      "Jeden Tag von 8 bis 14 Uhr",
+      "Mittwochs und samstags von 8 bis 14 Uhr",
+      "Nur samstags",
+      "Freitags und sonntags"
+     ],
+     "answer": "Mittwochs und samstags von 8 bis 14 Uhr",
+     "explanationAr": "النص: «jeden Mittwoch und Samstag von acht bis vierzehn Uhr»."
+    },
+    {
+     "id": "hn-02-q3",
+     "promptDe": "Was wurde gestohlen?",
+     "promptAr": "ما الذي سُرق؟",
+     "options": [
+      "Ein Auto",
+      "Ein Fahrrad",
+      "Ein Handy",
+      "Eine Tasche"
+     ],
+     "answer": "Ein Fahrrad",
+     "explanationAr": "النص: «wurde in der Bahnhofstraße ein Fahrrad gestohlen»."
+    }
+   ]
+  },
+  {
+   "id": "hn-03",
+   "format": "nachrichten",
+   "level": "B2",
+   "titelDe": "Wirtschaft und Umwelt in Kürze",
+   "titelAr": "الاقتصاد والبيئة باختصار",
+   "zeilen": [
+    {
+     "who": "Sprecher",
+     "de": "Wirtschaft und Umwelt in Kürze. Die Zahl der neu zugelassenen Elektroautos ist im vergangenen Quartal erneut deutlich gestiegen. Fachleute führen das vor allem auf gesunkene Preise und ein dichteres Netz an Ladestationen zurück. Gleichzeitig warnen Umweltorganisationen davor, den Ausbau der Bahn zu vernachlässigen. Nur wenn auch der öffentliche Verkehr attraktiver werde, könne der Verkehrssektor seine Klimaziele erreichen. Die Bundesregierung kündigte unterdessen an, die Förderung für den Schienenverkehr im kommenden Haushalt zu erhöhen. Konkrete Zahlen wurden noch nicht genannt.",
+     "ar": "الاقتصاد والبيئة باختصار. ارتفع عدد السيارات الكهربائية المسجلة حديثًا في الربع الماضي بشكل واضح مجددًا. ويرجع الخبراء ذلك قبل كل شيء إلى أسعار منخفضة وشبكة أكثف من محطات الشحن. وفي الوقت نفسه تحذر منظمات بيئية من إهمال توسيع السكك الحديدية. فلا يمكن لقطاع النقل أن يحقق أهدافه المناخية إلا إذا أصبح النقل العام أكثر جاذبية أيضًا. وفي هذه الأثناء أعلنت الحكومة الاتحادية زيادة دعم النقل بالسكك في الميزانية القادمة. ولم تُذكر أرقام ملموسة بعد."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "B",
+     "datei": "/audio/hoerneu/ki-hn-03.mp3",
+     "stimmeLabel": "voice-05 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 251002
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-03-q1",
+     "promptDe": "Warum steigen die Elektroauto-Zulassungen?",
+     "promptAr": "لماذا ترتفع تسجيلات السيارات الكهربائية؟",
+     "options": [
+      "Wegen neuer Gesetze",
+      "Wegen gesunkener Preise und mehr Ladestationen",
+      "Wegen billigem Benzin",
+      "Wegen Werbung"
+     ],
+     "answer": "Wegen gesunkener Preise und mehr Ladestationen",
+     "explanationAr": "النص: «vor allem auf gesunkene Preise und ein dichteres Netz an Ladestationen»."
+    },
+    {
+     "id": "hn-03-q2",
+     "promptDe": "Wovor warnen Umweltorganisationen?",
+     "promptAr": "ممّا تحذر المنظمات البيئية؟",
+     "options": [
+      "Vor zu vielen Autos",
+      "Davor, den Ausbau der Bahn zu vernachlässigen",
+      "Vor hohen Preisen",
+      "Vor Ladestationen"
+     ],
+     "answer": "Davor, den Ausbau der Bahn zu vernachlässigen",
+     "explanationAr": "النص: «warnen Umweltorganisationen davor, den Ausbau der Bahn zu vernachlässigen»."
+    },
+    {
+     "id": "hn-03-q3",
+     "promptDe": "Was kündigte die Bundesregierung an?",
+     "promptAr": "ما الذي أعلنته الحكومة الاتحادية؟",
+     "options": [
+      "Ein Autoverbot",
+      "Die Förderung für den Schienenverkehr zu erhöhen",
+      "Neue Straßen",
+      "Niedrigere Steuern"
+     ],
+     "answer": "Die Förderung für den Schienenverkehr zu erhöhen",
+     "explanationAr": "النص: «die Förderung für den Schienenverkehr im kommenden Haushalt zu erhöhen»."
+    }
+   ]
+  },
+  {
+   "id": "hn-04",
+   "format": "durchsage",
+   "level": "B1",
+   "titelDe": "Durchsage am Bahnhof",
+   "titelAr": "إعلان في محطة القطار",
+   "zeilen": [
+    {
+     "who": "Bahnhofsansage",
+     "de": "Achtung, bitte! Eine Durchsage für die Reisenden des Regionalexpress nach Hamburg. Der Zug hat heute wegen einer technischen Störung etwa zwanzig Minuten Verspätung. Er fährt voraussichtlich um fünfzehn Uhr vierzig von Gleis sieben ab. Bitte achten Sie auf die Anzeige. Wir danken für Ihr Verständnis.",
+     "ar": "انتباه من فضلكم! إعلان لمسافري القطار الإقليمي السريع إلى هامبورغ. يتأخر القطار اليوم نحو عشرين دقيقة بسبب عطل تقني. وسيغادر على الأرجح في الثالثة وأربعين دقيقة من الرصيف سبعة. انتبهوا إلى لوحة العرض. شكرًا لتفهمكم."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "B",
+     "datei": "/audio/hoerneu/ki-hn-04.mp3",
+     "stimmeLabel": "voice-05 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 122271
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-04-q1",
+     "promptDe": "Wie viel Verspätung hat der Zug?",
+     "promptAr": "كم تأخير القطار؟",
+     "options": [
+      "Zehn Minuten",
+      "Etwa zwanzig Minuten",
+      "Eine Stunde",
+      "Er fällt aus"
+     ],
+     "answer": "Etwa zwanzig Minuten",
+     "explanationAr": "النص: «etwa zwanzig Minuten Verspätung»."
+    },
+    {
+     "id": "hn-04-q2",
+     "promptDe": "Von welchem Gleis fährt der Zug ab?",
+     "promptAr": "من أي رصيف يغادر القطار؟",
+     "options": [
+      "Gleis drei",
+      "Gleis zwölf",
+      "Gleis sieben",
+      "Gleis eins"
+     ],
+     "answer": "Gleis sieben",
+     "explanationAr": "النص: «von Gleis sieben ab»."
+    },
+    {
+     "id": "hn-04-q3",
+     "promptDe": "Was ist der Grund für die Verspätung?",
+     "promptAr": "ما سبب التأخير؟",
+     "options": [
+      "Das Wetter",
+      "Eine technische Störung",
+      "Ein Streik",
+      "Zu viele Fahrgäste"
+     ],
+     "answer": "Eine technische Störung",
+     "explanationAr": "النص: «wegen einer technischen Störung»."
+    }
+   ]
+  },
+  {
+   "id": "hn-05",
+   "format": "durchsage",
+   "level": "A2",
+   "titelDe": "Am Flughafen: Gate-Wechsel",
+   "titelAr": "في المطار: تغيير بوابة",
+   "zeilen": [
+    {
+     "who": "Flughafenansage",
+     "de": "Liebe Passagiere, hier eine wichtige Information zum Flug LH 204 nach Wien. Das Gate hat sich geändert. Der Abflug erfolgt heute von Gate B zwölf statt von Gate B fünf. Der Einstieg beginnt in zwanzig Minuten. Bitte begeben Sie sich nun zum neuen Gate und halten Sie Ihre Bordkarte bereit. Vielen Dank.",
+     "ar": "أعزاءنا المسافرون، إليكم معلومة مهمة عن الرحلة LH 204 إلى فيينا. لقد تغيرت البوابة. تتم المغادرة اليوم من البوابة B اثني عشر بدلًا من البوابة B خمسة. يبدأ الصعود بعد عشرين دقيقة. توجهوا الآن إلى البوابة الجديدة وجهّزوا بطاقات الصعود. شكرًا جزيلًا."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-05.mp3",
+     "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 149647
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-05-q1",
+     "promptDe": "Wohin fliegt LH 204?",
+     "promptAr": "إلى أين تطير الرحلة LH 204؟",
+     "options": [
+      "Nach Berlin",
+      "Nach Wien",
+      "Nach Hamburg",
+      "Nach Prag"
+     ],
+     "answer": "Nach Wien",
+     "explanationAr": "النص: «zum Flug LH 204 nach Wien»."
+    },
+    {
+     "id": "hn-05-q2",
+     "promptDe": "Von welchem Gate erfolgt der Abflug jetzt?",
+     "promptAr": "من أي بوابة تتم المغادرة الآن؟",
+     "options": [
+      "Gate B fünf",
+      "Gate A zwölf",
+      "Gate B zwölf",
+      "Gate C fünf"
+     ],
+     "answer": "Gate B zwölf",
+     "explanationAr": "النص: «Der Abflug erfolgt heute von Gate B zwölf»."
+    },
+    {
+     "id": "hn-05-q3",
+     "promptDe": "Wann beginnt der Einstieg?",
+     "promptAr": "متى يبدأ الصعود؟",
+     "options": [
+      "Sofort",
+      "In zwanzig Minuten",
+      "In einer Stunde",
+      "Nach dem Mittag"
+     ],
+     "answer": "In zwanzig Minuten",
+     "explanationAr": "النص: «Der Einstieg beginnt in zwanzig Minuten»."
+    }
+   ]
+  },
+  {
+   "id": "hn-06",
+   "format": "werbung",
+   "level": "B1",
+   "titelDe": "Radiowerbung: Möbelhaus Sonnenschein",
+   "titelAr": "إعلان إذاعي: متجر الأثاث",
+   "zeilen": [
+    {
+     "who": "Werbestimme",
+     "de": "Ihr Zuhause verdient mehr! Beim Möbelhaus Sonnenschein erhalten Sie ab sofort bis zu vierzig Prozent Rabatt auf alle Sofas und Schränke. Und das Beste: Wir liefern kostenlos zu Ihnen nach Hause und nehmen Ihre alten Möbel gleich mit. Besuchen Sie uns in der Ringstraße vierzehn oder online. Möbelhaus Sonnenschein – wohnen Sie schöner! Das Angebot gilt nur bis Sonntag.",
+     "ar": "بيتك يستحق المزيد! في متجر أثاث سوننشاين تحصل اعتبارًا من الآن على خصم حتى أربعين بالمئة على جميع الأرائك والخزائن. والأفضل: نوصل مجانًا إلى بيتك ونأخذ أثاثك القديم معنا مباشرة. زرنا في شارع الرينغ أربعة عشر أو عبر الإنترنت. متجر أثاث سوننشاين – عِش أجمل! العرض سارٍ حتى الأحد فقط."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-06.mp3",
+     "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 177232
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-06-q1",
+     "promptDe": "Wie hoch ist der Rabatt?",
+     "promptAr": "كم يبلغ الخصم؟",
+     "options": [
+      "Zehn Prozent",
+      "Bis zu vierzig Prozent",
+      "Fünfzig Prozent auf alles",
+      "Kein Rabatt"
+     ],
+     "answer": "Bis zu vierzig Prozent",
+     "explanationAr": "النص: «bis zu vierzig Prozent Rabatt auf alle Sofas und Schränke»."
+    },
+    {
+     "id": "hn-06-q2",
+     "promptDe": "Was ist kostenlos?",
+     "promptAr": "ما الذي هو مجاني؟",
+     "options": [
+      "Die Möbel",
+      "Die Lieferung nach Hause",
+      "Die Beratung am Telefon",
+      "Der Kaffee im Geschäft"
+     ],
+     "answer": "Die Lieferung nach Hause",
+     "explanationAr": "النص: «Wir liefern kostenlos zu Ihnen nach Hause»."
+    },
+    {
+     "id": "hn-06-q3",
+     "promptDe": "Bis wann gilt das Angebot?",
+     "promptAr": "حتى متى يسري العرض؟",
+     "options": [
+      "Bis Ende des Monats",
+      "Nur bis Sonntag",
+      "Bis Weihnachten",
+      "Immer"
+     ],
+     "answer": "Nur bis Sonntag",
+     "explanationAr": "النص: «Das Angebot gilt nur bis Sonntag»."
+    }
+   ]
+  },
+  {
+   "id": "hn-07",
+   "format": "interview",
+   "level": "B2",
+   "titelDe": "Interview: Ein Arzt über Vorsorge",
+   "titelAr": "مقابلة: طبيب عن الوقاية الصحية",
+   "zeilen": [
+    {
+     "who": "Moderatorin",
+     "de": "Guten Morgen, Herr Doktor Yilmaz. Viele Menschen gehen erst zum Arzt, wenn es weh tut. Warum ist Vorsorge so wichtig?",
+     "ar": "صباح الخير، دكتور إيلماز. كثير من الناس لا يذهب إلى الطبيب إلا حين يؤلم. لماذا الوقاية مهمة جدًا؟"
+    },
+    {
+     "who": "Dr. Yilmaz",
+     "de": "Weil viele Krankheiten lange keine Beschwerden machen. Wer regelmäßig zur Vorsorge geht, erkennt Risiken früh – und kann oft mit kleinen Veränderungen im Alltag viel erreichen, statt später Medikamente zu brauchen. Entscheidend ist, dass die Angebote einfach und ohne lange Wartezeiten erreichbar sind.",
+     "ar": "لأن أمراضًا كثيرة لا تسبب آلامًا لفترة طويلة. ومن يذهب بانتظام إلى الوقاية يكتشف المخاطر مبكرًا – وغالبًا ما يحقق الكثير بتغييرات صغيرة في الحياة اليومية، بدل أن يحتاج أدوية لاحقًا. والحاسم أن تكون العروض بسيطة ومتاحة دون أوقات انتظار طويلة."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-07a.mp3",
+     "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 61249
+    },
+    {
+     "zeilen": [
+      1
+     ],
+     "stimme": "B",
+     "datei": "/audio/hoerneu/ki-hn-07b.mp3",
+     "stimmeLabel": "voice-05 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 123315
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-07-q1",
+     "promptDe": "Warum ist Vorsorge laut dem Arzt wichtig?",
+     "promptAr": "لماذا الوقاية مهمة بحسب الطبيب؟",
+     "options": [
+      "Weil Ärzte sonst wenig zu tun haben",
+      "Weil viele Krankheiten lange keine Beschwerden machen",
+      "Weil sie kostenlos ist",
+      "Weil alle es machen"
+     ],
+     "answer": "Weil viele Krankheiten lange keine Beschwerden machen",
+     "explanationAr": "تقول: «Weil viele Krankheiten lange keine Beschwerden machen»."
+    },
+    {
+     "id": "hn-07-q2",
+     "promptDe": "Was kann man mit kleinen Veränderungen erreichen?",
+     "promptAr": "ما الذي يمكن تحقيقه بتغييرات صغيرة؟",
+     "options": [
+      "Risiken früh erkennen und oft Medikamente vermeiden",
+      "Nie wieder krank werden",
+      "Geld sparen beim Einkaufen",
+      "Länger schlafen"
+     ],
+     "answer": "Risiken früh erkennen und oft Medikamente vermeiden",
+     "explanationAr": "تقول: «kann oft mit kleinen Veränderungen im Alltag viel erreichen, statt später Medikamente zu brauchen»."
+    },
+    {
+     "id": "hn-07-q3",
+     "promptDe": "Was ist für die Angebote entscheidend?",
+     "promptAr": "ما الحاسم في عروض الوقاية؟",
+     "options": [
+      "Dass sie teuer sind",
+      "Dass sie einfach und ohne lange Wartezeiten erreichbar sind",
+      "Dass sie nur für Ältere sind",
+      "Dass sie beworben werden"
+     ],
+     "answer": "Dass sie einfach und ohne lange Wartezeiten erreichbar sind",
+     "explanationAr": "تقول: «dass die Angebote einfach und ohne lange Wartezeiten erreichbar sind»."
+    }
+   ]
+  },
+  {
+   "id": "hn-08",
+   "format": "interview",
+   "level": "B1",
+   "titelDe": "Interview: Nach dem Marathon",
+   "titelAr": "مقابلة: بعد الماراثون",
+   "zeilen": [
+    {
+     "who": "Moderator",
+     "de": "Herzlichen Glückwunsch, Frau Costa! Sie haben heute Ihren ersten Marathon geschafft. Wie fühlen Sie sich jetzt?",
+     "ar": "تهانينا، سيدة كوستا! لقد أنجزتِ اليوم أول ماراثون لك. كيف تشعرين الآن؟"
+    },
+    {
+     "who": "Frau Costa",
+     "de": "Ehrlich gesagt: total müde, aber überglücklich. Die letzten fünf Kilometer waren hart. Aber die Zuschauer an der Strecke haben uns Läufer so toll angefeuert, dass Aufgeben keine Option war. Nächstes Jahr bin ich auf jeden Fall wieder dabei!",
+     "ar": "بصراحة: متعبة تمامًا، لكن سعيدة للغاية. الكيلومترات الخمسة الأخيرة كانت صعبة. لكن الجمهور على طول الطريق شجّعنا نحن العدّائين بشكل رائع، حتى إن الاستسلام لم يكن خيارًا. والسنة القادمة سأشارك بالتأكيد مجددًا!"
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "B",
+     "datei": "/audio/hoerneu/ki-hn-08a.mp3",
+     "stimmeLabel": "voice-05 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 49964
+    },
+    {
+     "zeilen": [
+      1
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-08b.mp3",
+     "stimmeLabel": "voice-04 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 125405
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-08-q1",
+     "promptDe": "Was hat Frau Costa heute geschafft?",
+     "promptAr": "ما الذي أنجزته السيدة كوستا اليوم؟",
+     "options": [
+      "Einen Schwimmwettkampf",
+      "Ihren ersten Marathon",
+      "Ein Fußballspiel",
+      "Eine Prüfung"
+     ],
+     "answer": "Ihren ersten Marathon",
+     "explanationAr": "يقول المقدم: «Sie haben heute Ihren ersten Marathon geschafft»."
+    },
+    {
+     "id": "hn-08-q2",
+     "promptDe": "Warum war Aufgeben keine Option?",
+     "promptAr": "لماذا لم يكن الاستسلام خيارًا؟",
+     "options": [
+      "Wegen des Preisgeldes",
+      "Die Zuschauer feuerten die Läufer so toll an",
+      "Wegen des Wetters",
+      "Wegen ihres Trainers"
+     ],
+     "answer": "Die Zuschauer feuerten die Läufer so toll an",
+     "explanationAr": "تقول: «die Zuschauer an der Strecke haben uns Läufer so toll angefeuert, dass Aufgeben keine Option war»."
+    },
+    {
+     "id": "hn-08-q3",
+     "promptDe": "Was plant Frau Costa?",
+     "promptAr": "ما الذي تخطط له السيدة كوستا؟",
+     "options": [
+      "Mit dem Sport aufhören",
+      "Nächstes Jahr wieder teilnehmen",
+      "Trainerin werden",
+      "Einen kürzeren Lauf machen"
+     ],
+     "answer": "Nächstes Jahr wieder teilnehmen",
+     "explanationAr": "تقول: «Nächstes Jahr bin ich auf jeden Fall wieder dabei!»"
+    }
+   ]
+  },
+  {
+   "id": "hn-09",
+   "format": "nachrichten",
+   "level": "A1",
+   "titelDe": "Morgennachrichten kurz",
+   "titelAr": "أخبار الصباح القصيرة",
+   "zeilen": [
+    {
+     "who": "Sprecher",
+     "de": "Guten Morgen, hier sind die Nachrichten. Heute ist das Wetter gut. Die Sonne scheint und es ist warm, bis 24 Grad. Der Bus Nummer fünf fährt heute nicht. Es gibt einen Ersatzbus am Bahnhof. Morgen ist ein Fest in der Stadt. Das Fest beginnt um zehn Uhr auf dem Marktplatz. Viele Menschen kommen mit Musik und Essen.",
+     "ar": "صباح الخير، إليكم الأخبار. الطقس اليوم جيد. الشمس مشرقة والجو دافئ حتى 24 درجة. الحافلة رقم خمسة لا تسير اليوم. توجد حافلة بديلة عند المحطة. غدًا يقام مهرجان في المدينة. يبدأ المهرجان في العاشرة على ساحة السوق. يأتي كثير من الناس مع الموسيقى والطعام."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-09.mp3",
+     "stimmeLabel": "voice-06 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 150901
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-09-q1",
+     "promptDe": "Wie ist das Wetter heute?",
+     "promptAr": "كيف الطقس اليوم؟",
+     "options": [
+      "Es regnet den ganzen Tag",
+      "Die Sonne scheint und es ist warm",
+      "Es schneit",
+      "Es ist sehr kalt"
+     ],
+     "answer": "Die Sonne scheint und es ist warm",
+     "explanationAr": "يقول النص: الشمس مشرقة والجو دافئ حتى 24 درجة."
+    },
+    {
+     "id": "hn-09-q2",
+     "promptDe": "Was fährt heute nicht?",
+     "promptAr": "ما الذي لا يسير اليوم؟",
+     "options": [
+      "Der Zug nach Berlin",
+      "Der Bus Nummer fünf",
+      "Das Taxi",
+      "Das Fahrrad"
+     ],
+     "answer": "Der Bus Nummer fünf",
+     "explanationAr": "الحافلة رقم خمسة لا تسير، وهناك حافلة بديلة عند المحطة."
+    },
+    {
+     "id": "hn-09-q3",
+     "promptDe": "Wann beginnt das Fest?",
+     "promptAr": "متى يبدأ المهرجان؟",
+     "options": [
+      "Heute um acht Uhr",
+      "Morgen um zehn Uhr",
+      "Am Sonntag um zwölf Uhr",
+      "Heute Abend"
+     ],
+     "answer": "Morgen um zehn Uhr",
+     "explanationAr": "يبدأ المهرجان غدًا في العاشرة على ساحة السوق."
+    }
+   ]
+  },
+  {
+   "id": "hn-10",
+   "format": "durchsage",
+   "level": "A1",
+   "titelDe": "Ansage am Bahnhof",
+   "titelAr": "إعلان في محطة القطار",
+   "zeilen": [
+    {
+     "who": "Ansage",
+     "de": "Achtung, eine Ansage: Der Zug nach Berlin fährt um neun Uhr von Gleis drei ab. Bitte steigen Sie schnell ein. Der Zug nach München ist heute spät. Er kommt zwanzig Minuten später. Wir sagen: Entschuldigung und danke für Ihr Verständnis!",
+     "ar": "انتباه، إعلان: قطار برلين يغادر في التاسعة من الرصيف ثلاثة. يُرجى الصعود بسرعة. قطار ميونيخ متأخر اليوم. يصل بعد عشرين دقيقة. نقول: عذرًا وشكرًا لتفهّمكم!"
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-10.mp3",
+     "stimmeLabel": "voice-06 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 121017
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-10-q1",
+     "promptDe": "Von welchem Gleis fährt der Zug nach Berlin ab?",
+     "promptAr": "من أي رصيف يغادر قطار برلين؟",
+     "options": [
+      "Gleis eins",
+      "Gleis drei",
+      "Gleis fünf",
+      "Gleis neun"
+     ],
+     "answer": "Gleis drei",
+     "explanationAr": "يغادر قطار برلين من الرصيف ثلاثة في التاسعة."
+    },
+    {
+     "id": "hn-10-q2",
+     "promptDe": "Wann fährt der Zug nach Berlin ab?",
+     "promptAr": "متى يغادر قطار برلين؟",
+     "options": [
+      "Um acht Uhr",
+      "Um neun Uhr",
+      "Um zehn Uhr",
+      "Um zwanzig Uhr"
+     ],
+     "answer": "Um neun Uhr",
+     "explanationAr": "موعد المغادرة التاسعة تمامًا."
+    },
+    {
+     "id": "hn-10-q3",
+     "promptDe": "Was ist mit dem Zug nach München?",
+     "promptAr": "ما حال قطار ميونيخ؟",
+     "options": [
+      "Er fährt nicht",
+      "Er ist zwanzig Minuten spät",
+      "Er ist zu früh",
+      "Er fährt von Gleis drei"
+     ],
+     "answer": "Er ist zwanzig Minuten spät",
+     "explanationAr": "قطار ميونيخ متأخر عشرين دقيقة اليوم."
+    }
+   ]
+  },
+  {
+   "id": "hn-11",
+   "format": "durchsage",
+   "level": "A2",
+   "titelDe": "Durchsage am Flughafen",
+   "titelAr": "إعلان في المطار",
+   "zeilen": [
+    {
+     "who": "Information",
+     "de": "Guten Tag, liebe Passagiere. Hier spricht die Information. Der Flug nach Wien startet heute mit einer Verspätung von dreißig Minuten. Der neue Abflug ist um vierzehn Uhr zwanzig. Bitte kommen Sie um dreizehn Uhr fünfzig zum Gate B sieben. Passagiere nach Rom melden sich bitte sofort am Schalter vier. Wir wünschen Ihnen einen guten Flug.",
+     "ar": "نهاركم سعيد أيها المسافرون. هنا تتحدث المعلومات. رحلة فيينا تنطلق اليوم بتأخير ثلاثين دقيقة. الإقلاع الجديد في الثانية عشرة وأربعين دقيقة (14:20). يُرجى الحضور في 13:50 إلى البوابة B7. مسافرو روما يُرجى التوجّه فورًا إلى المكتب أربعة. نتمنى لكم رحلة طيبة."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-11.mp3",
+     "stimmeLabel": "voice-06 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 153618
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-11-q1",
+     "promptDe": "Wie groß ist die Verspätung nach Wien?",
+     "promptAr": "كم مقدار تأخير رحلة فيينا؟",
+     "options": [
+      "Zehn Minuten",
+      "Dreißig Minuten",
+      "Eine Stunde",
+      "Zwei Stunden"
+     ],
+     "answer": "Dreißig Minuten",
+     "explanationAr": "التأخير ثلاثون دقيقة كما في الإعلان."
+    },
+    {
+     "id": "hn-11-q2",
+     "promptDe": "Wann ist der neue Abflug?",
+     "promptAr": "متى الإقلاع الجديد؟",
+     "options": [
+      "Um 13:50 Uhr",
+      "Um 14:20 Uhr",
+      "Um 15:00 Uhr",
+      "Um 12:30 Uhr"
+     ],
+     "answer": "Um 14:20 Uhr",
+     "explanationAr": "الإقلاع الجديد في 14:20، والحضور إلى البوابة في 13:50."
+    },
+    {
+     "id": "hn-11-q3",
+     "promptDe": "Wer soll sich sofort am Schalter vier melden?",
+     "promptAr": "من يجب أن يتوجّه فورًا إلى المكتب أربعة؟",
+     "options": [
+      "Passagiere nach Wien",
+      "Passagiere nach Rom",
+      "Alle Kinder",
+      "Die Piloten"
+     ],
+     "answer": "Passagiere nach Rom",
+     "explanationAr": "مسافرو روما هم المطلوبون فورًا عند المكتب أربعة."
+    }
+   ]
+  },
+  {
+   "id": "hn-12",
+   "format": "nachrichten",
+   "level": "A2",
+   "titelDe": "Nachrichten aus unserer Stadt",
+   "titelAr": "أخبار مدينتنا",
+   "zeilen": [
+    {
+     "who": "Sprecherin",
+     "de": "Hier sind die Nachrichten aus unserer Stadt. Die Stadt öffnet am Montag eine neue Bibliothek in der Bahnhofstraße. Die Bibliothek ist von Montag bis Samstag geöffnet und hat auch am Sonntag von zehn bis vierzehn Uhr auf. Außerdem baut die Stadt einen neuen Spielplatz im Park. Die Arbeiten dauern bis Oktober. Und eine Meldung der Polizei: Die Hauptstraße ist am Sonntag wegen eines Marathons geschlossen. Autos müssen eine andere Straße nehmen.",
+     "ar": "إليكم أخبار مدينتنا. تفتتح المدينة يوم الاثنين مكتبة جديدة في شارع المحطة. المكتبة مفتوحة من الاثنين إلى السبت، وأيضًا الأحد من العاشرة حتى الثانية. كما تبني المدينة ملعب أطفال جديدًا في الحديقة. تستمر الأعمال حتى أكتوبر. وخبر من الشرطة: الشارع الرئيسي مغلق يوم الأحد بسبب ماراثون. على السيارات أخذ شارع آخر."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-12.mp3",
+     "stimmeLabel": "voice-06 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 199802
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-12-q1",
+     "promptDe": "Was öffnet die Stadt am Montag?",
+     "promptAr": "ما الذي تفتتحه المدينة يوم الاثنين؟",
+     "options": [
+      "Ein neues Schwimmbad",
+      "Eine neue Bibliothek",
+      "Ein neues Rathaus",
+      "Eine neue Schule"
+     ],
+     "answer": "Eine neue Bibliothek",
+     "explanationAr": "مكتبة جديدة في شارع المحطة."
+    },
+    {
+     "id": "hn-12-q2",
+     "promptDe": "Bis wann dauern die Arbeiten am Spielplatz?",
+     "promptAr": "حتى متى تستمر أعمال الملعب؟",
+     "options": [
+      "Bis August",
+      "Bis Oktober",
+      "Bis Dezember",
+      "Bis Montag"
+     ],
+     "answer": "Bis Oktober",
+     "explanationAr": "الأعمال تستمر حتى أكتوبر."
+    },
+    {
+     "id": "hn-12-q3",
+     "promptDe": "Warum ist die Hauptstraße am Sonntag geschlossen?",
+     "promptAr": "لماذا الشارع الرئيسي مغلق الأحد؟",
+     "options": [
+      "Wegen einer Baustelle",
+      "Wegen eines Marathons",
+      "Wegen des Wetters",
+      "Wegen eines Festes"
+     ],
+     "answer": "Wegen eines Marathons",
+     "explanationAr": "الإغلاق بسبب ماراثون كما أفادت الشرطة."
+    }
+   ]
+  },
+  {
+   "id": "hn-13",
+   "format": "werbung",
+   "level": "B1",
+   "titelDe": "Werbung: Sprachschule LinguaPlus",
+   "titelAr": "إعلان: مدرسة لغات",
+   "zeilen": [
+    {
+     "who": "Werbesprecher",
+     "de": "Möchten Sie endlich sicher Deutsch sprechen? Dann kommen Sie zur Sprachschule LinguaPlus! Wir bieten Kurse für alle Niveaus, vom Anfänger bis zum Fortgeschrittenen. Lernen Sie in kleinen Gruppen mit erfahrenen Lehrern, morgens oder abends, auch am Wochenende. In diesem Monat erhalten alle neuen Teilnehmer zwanzig Prozent Rabatt und ein kostenloses Lehrbuch. Rufen Sie uns an oder besuchen Sie uns in der Goethestraße zwölf. LinguaPlus – Ihre Sprache, Ihre Zukunft!",
+     "ar": "هل تريد أخيرًا التحدث بالألمانية بثقة؟ تعال إلى مدرسة LinguaPlus! نقدّم دورات لكل المستويات من المبتدئ إلى المتقدم. تعلّم في مجموعات صغيرة مع معلمين ذوي خبرة، صباحًا أو مساءً، وأيضًا في عطلة الأسبوع. هذا الشهر يحصل كل المشاركين الجدد على خصم عشرين بالمئة وكتاب مجاني. اتصل بنا أو زرنا في شارع غوته اثني عشر. LinguaPlus – لغتك، مستقبلك!"
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-13.mp3",
+     "stimmeLabel": "voice-06 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 216938
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-13-q1",
+     "promptDe": "Was erhalten neue Teilnehmer in diesem Monat?",
+     "promptAr": "ماذا يحصل عليه المشاركون الجدد هذا الشهر؟",
+     "options": [
+      "Ein kostenloses Auto",
+      "Zwanzig Prozent Rabatt und ein kostenloses Lehrbuch",
+      "Einen kostenlosen Kurs für ein Jahr",
+      "Ein Handy"
+     ],
+     "answer": "Zwanzig Prozent Rabatt und ein kostenloses Lehrbuch",
+     "explanationAr": "العرض: خصم 20٪ وكتاب مجاني للمشاركين الجدد."
+    },
+    {
+     "id": "hn-13-q2",
+     "promptDe": "Wie lernt man bei LinguaPlus?",
+     "promptAr": "كيف يكون التعلّم في LinguaPlus؟",
+     "options": [
+      "Nur allein zu Hause",
+      "In kleinen Gruppen mit erfahrenen Lehrern",
+      "Nur am Telefon",
+      "In sehr großen Gruppen"
+     ],
+     "answer": "In kleinen Gruppen mit erfahrenen Lehrern",
+     "explanationAr": "التعلّم في مجموعات صغيرة مع معلمين ذوي خبرة."
+    },
+    {
+     "id": "hn-13-q3",
+     "promptDe": "Wo befindet sich die Schule?",
+     "promptAr": "أين تقع المدرسة؟",
+     "options": [
+      "In der Bahnhofstraße",
+      "In der Goethestraße zwölf",
+      "Am Marktplatz",
+      "Im Park"
+     ],
+     "answer": "In der Goethestraße zwölf",
+     "explanationAr": "العنوان: شارع غوته 12."
+    }
+   ]
+  },
+  {
+   "id": "hn-14",
+   "format": "nachrichten",
+   "level": "B2",
+   "titelDe": "Abendnachrichten",
+   "titelAr": "نشرة أخبار المساء",
+   "zeilen": [
+    {
+     "who": "Sprecher",
+     "de": "Guten Abend, meine Damen und Herren. Die Bundesregierung hat heute ein neues Gesetz zum Ausbau der erneuerbaren Energien verabschiedet. Ziel ist es, den Anteil von Wind- und Solarstrom bis zum Jahr 2030 deutlich zu erhöhen. Kritiker bezweifeln jedoch, ob die geplanten Maßnahmen ausreichen, um die Klimaziele zu erreichen. Außerdem wurde bekannt, dass die Zahl der Studienanfänger an deutschen Universitäten erneut gestiegen ist, insbesondere in den Bereichen Informatik und Medizin. Zum Abschluss das Wetter: Ein Tiefdruckgebiet bringt morgen im Norden starken Regen, während es im Süden freundlich bleibt.",
+     "ar": "مساء الخير سيداتي وسادتي. أقرّت الحكومة الاتحادية اليوم قانونًا جديدًا لتوسيع الطاقات المتجددة. الهدف رفع حصة طاقة الرياح والشمس بوضوح حتى عام 2030. غير أنّ منتقدين يشكّكون فيما إذا كانت الإجراءات المخططة كافية لتحقيق أهداف المناخ. كما عُرف أنّ عدد الطلاب الجدد في الجامعات الألمانية ارتفع مجددًا، ولا سيما في مجالي المعلوماتية والطب. وفي الختام الطقس: منخفض جوي يجلب غدًا أمطارًا غزيرة إلى الشمال، بينما يبقى الجو لطيفًا في الجنوب."
+    }
+   ],
+   "clips": [
+    {
+     "zeilen": [
+      0
+     ],
+     "stimme": "A",
+     "datei": "/audio/hoerneu/ki-hn-14.mp3",
+     "stimmeLabel": "voice-06 (de-DE, Arena TTS, KI) · صوت مولّد بالذكاء الاصطناعي",
+     "bytes": 270019
+    }
+   ],
+   "fragen": [
+    {
+     "id": "hn-14-q1",
+     "promptDe": "Was hat die Bundesregierung heute verabschiedet?",
+     "promptAr": "ما الذي أقرّته الحكومة اليوم؟",
+     "options": [
+      "Ein Gesetz zum Ausbau der erneuerbaren Energien",
+      "Ein neues Steuergesetz",
+      "Ein Verbot von Windrädern",
+      "Ein Gesetz für mehr Autos"
+     ],
+     "answer": "Ein Gesetz zum Ausbau der erneuerbaren Energien",
+     "explanationAr": "قانون لتوسيع الطاقات المتجددة."
+    },
+    {
+     "id": "hn-14-q2",
+     "promptDe": "Was bezweifeln die Kritiker?",
+     "promptAr": "فيما يشكّك المنتقدون؟",
+     "options": [
+      "Ob die Maßnahmen für die Klimaziele ausreichen",
+      "Ob es genug Studierende gibt",
+      "Ob das Wetter besser wird",
+      "Ob die Energien zu billig sind"
+     ],
+     "answer": "Ob die Maßnahmen für die Klimaziele ausreichen",
+     "explanationAr": "يشكّكون في كفاية الإجراءات لتحقيق أهداف المناخ."
+    },
+    {
+     "id": "hn-14-q3",
+     "promptDe": "In welchen Bereichen gibt es besonders mehr Studienanfänger?",
+     "promptAr": "في أي مجالات ازداد الطلاب الجدد خصوصًا؟",
+     "options": [
+      "In Geschichte und Kunst",
+      "In Informatik und Medizin",
+      "In Sport und Musik",
+      "In Sprachen und Recht"
+     ],
+     "answer": "In Informatik und Medizin",
+     "explanationAr": "المعلوماتية والطب هما المجالان المذكوران."
+    }
+   ]
+  }
+ ]
 }
