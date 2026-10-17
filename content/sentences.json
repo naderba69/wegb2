@@ -10049,5 +10049,35 @@
    "sehen",
    "der Morgen"
   ]
+ },
+ {
+  "id": "s-pfl-63",
+  "level": "B1",
+  "de": "Die Pflegedokumentation und die Patientenakte liegen bereit; der Puls wird noch gemessen.",
+  "ar": "التوثيق التمريضي وملف المريض جاهزان؛ النبض سيُقاس بعد.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Pflegedokumentation",
+   "die Patientenakte",
+   "der Puls"
+  ]
+ },
+ {
+  "id": "s-pfl-64",
+  "level": "A1",
+  "de": "Bitte legen Sie sich hier hin und schlafen Sie gut.",
+  "ar": "من فضلك استلقِ هنا ونم جيدًا.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "legen",
+   "hier",
+   "schlafen"
+  ]
  }
 ]

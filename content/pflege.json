@@ -1335,6 +1335,26 @@
    "bspAr": "تسمم الدم طارئ طبي.",
    "stufe": "B2",
    "thema": "dubletten"
+  },
+  {
+   "id": "pf-d11",
+   "de": "die Pflegedokumentation",
+   "plural": "die Pflegedokumentationen",
+   "ar": "التوثيق التمريضي",
+   "bsp": "Die Pflegedokumentation muss vollständig und sachlich sein.",
+   "bspAr": "يجب أن يكون التوثيق التمريضي كاملًا وموضوعيًا.",
+   "stufe": "B1",
+   "thema": "doku"
+  },
+  {
+   "id": "pf-d12",
+   "de": "die Patientenakte",
+   "plural": "die Patientenakten",
+   "ar": "ملف المريض",
+   "bsp": "Die Patientenakte liegt im Dienstzimmer bereit.",
+   "bspAr": "ملف المريض جاهز في غرفة المناوبة.",
+   "stufe": "B1",
+   "thema": "doku"
   }
  ],
  "dialoge": [
@@ -3002,6 +3022,11 @@
    "de": "Gute Nacht, schlafen Sie gut.",
    "ar": "ليلة سعيدة، نومًا هانئًا.",
    "situation": "ختام الوردية المسائية"
+  },
+  {
+   "de": "Bitte legen Sie sich hin.",
+   "ar": "من فضلك استلقِ.",
+   "situation": "توجيه حركة أساسي قبل الفحص أو للراحة"
   }
  ]
 }

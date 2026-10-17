@@ -9544,5 +9544,13 @@
  "vpfl-91": [
   "die Ärztin alarmieren",
   "den Notdienst alarmieren"
+ ],
+ "vpfl-92": [
+  "die Pflegedokumentation führen",
+  "die Pflegedokumentation vollständig ausfüllen"
+ ],
+ "vpfl-93": [
+  "die Patientenakte lesen",
+  "in die Patientenakte eintragen"
  ]
 }

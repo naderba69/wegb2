@@ -570,7 +570,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 3590, "XIX1 بنكُ المفرداتِ 3590 بطاقةً كما في الجرد الحيّ (R206–R208: كلمات التمريض الـ131 كلها في الحزم العامة)");
+    ok(alleVokabeln.length === 3592, "XIX1 بنكُ المفرداتِ 3592 بطاقةً كما في الجرد الحيّ (R206–R213: كلمات التمريض الـ133 كلها في الحزم العامة)");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
     const falschMarkiert = neu.filter((c) => c.pos === "Nomen"
@@ -3385,10 +3385,10 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { PflegeStation } = await import("../components/pflege");
     const { pflegeWoerter, pflegeDialoge } = await import("../lib/pflege");
     mount(React.createElement(PflegeStation));
-    ok(pflegeWoerter.length === 131 && !!rootEl.querySelector('[data-testid="pflege-station"]') &&
+    ok(pflegeWoerter.length === 133 && !!rootEl.querySelector('[data-testid="pflege-station"]') && // R213: +Pflegedokumentation/Patientenakte
        !!rootEl.querySelector('[data-testid="pflege-phrasen"]') &&
        !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]') && !!rootEl.querySelector('[data-testid="pflege-medizin-start"]'),
-      "XCIX1 محطة التمريض تعرض بنكها المهني المعمّق (131 كلمة مع الأزواج اللاتينية) وعبارات A1 وزرّ بدء محاكاة Medizin منذ أول تركيب");
+      "XCIX1 محطة التمريض تعرض بنكها المهني المعمّق (133 كلمة مع الأزواج اللاتينية) وعبارات A1 وزرّ بدء محاكاة Medizin منذ أول تركيب");
     ok(rootEl.querySelectorAll('[data-testid="pflege-zeile"]').length === (pflegeDialoge[0]?.zeilen.length ?? 0),
       "XCIX2 حوار الجولة الطبية معروض بكل سطوره ثنائية اللغة");
     const musterBtn = rootEl.querySelector('[data-testid="pflege-muster-pf-w1"]') as HTMLElement | null;

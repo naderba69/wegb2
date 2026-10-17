@@ -5464,6 +5464,34 @@
     "ant": [
      "wach"
     ]
+   },
+   {
+    "id": "vpfl-92",
+    "de": "die Pflegedokumentation",
+    "ar": "التوثيق التمريضي",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Pflegedokumentation muss vollständig und sachlich sein.",
+    "exampleAr": "يجب أن يكون التوثيق التمريضي كاملًا وموضوعيًا.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-93",
+    "de": "die Patientenakte",
+    "ar": "ملف المريض",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Patientenakte liegt im Dienstzimmer bereit.",
+    "exampleAr": "ملف المريض جاهز في غرفة المناوبة.",
+    "article": "die",
+    "farbe": "ROT"
    }
   ]
  },
