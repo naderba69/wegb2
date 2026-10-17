@@ -320,3 +320,6 @@ Belege (R218–R220): tsc ✓ · smoke **1781/0** (+K302) · interaktiv **734/0*
 ## R222 — Diktat-Stimme, zweite Charge (s-pfl-01…10)
 
 **Ergebnis: erledigt (Charge 2 von 7).** Weitere zehn verwobene Pflegesätze (s-pfl-01…10, A2–B2) als echte MP3s mit der besitzergewählten Stimme voice-06 — Diktat-Bank 190→**200**, Audiodateien gesamt 529→**539**. Von 64 verwobenen Sätzen sind jetzt 20 aufgenommen; die restlichen 44 (s-pfl-11…52, 63, 64) folgen in weiteren Chargen à 10 (Plattform-Limit pro Runde), weiterhin ehrlich als Geräte-TTS deklariert, bis sie aufgenommen sind. Gates dokumentiert fortgeschrieben: C2/K27a/K27f/K125c/K258c/VII6 (VII6 nennt jetzt 20 Aufnahmen beim Namen). Belege: tsc ✓ · smoke **1778/0** · interaktiv **734/0** · audit صفر · Build ✓.
+## R223 — Diktat-Stimme, dritte Charge (s-pfl-11…20)
+
+**Ergebnis: erledigt (Charge 3).** Zehn weitere verwobene Sätze (s-pfl-11…20) als MP3s (voice-06) — Diktat **210**, Audio gesamt **549**. Stand: **30/64** verwobene Sätze aufgenommen; restliche 34 (s-pfl-21…52, 63, 64) folgen weiter à 10 pro Runde, bis dahin deklariertes Geräte-TTS. Gates wie gehabt dokumentiert fortgeschrieben (C2/K27a/K27f/K125c/K258c/VII6). Belege: tsc ✓ · smoke **1778/0** · interaktiv **734/0** · audit صفر · Build ✓.

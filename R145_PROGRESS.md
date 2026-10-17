@@ -718,3 +718,4 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 
 ❌ C1 komplett gestrichen: Vertiefungs-Bank/Komponente/Station/Loader weg, Pfad endet bei B2, K303 blockiert Wiederauftauchen. smoke 1778/0 · interaktiv 734/0 · audit 0 · build ✓ (Details: docs/qualitaet.md «R221»).
 - R222: Diktat-Stimme Charge 2 — s-pfl-01…10 aufgenommen (20/64 verwoben), Diktat 200, Audio 539.
+- R223: Diktat-Stimme Charge 3 — s-pfl-11…20 aufgenommen (30/64 verwoben), Diktat 210, Audio 549.
