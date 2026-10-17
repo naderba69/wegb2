@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung, pflegeMedizin } from "@/lib/pflege";
+import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung, pflegeMedizin, pflegeFachwissen } from "@/lib/pflege";
 import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
@@ -106,6 +106,50 @@ function MedizinSimulation() {
           )}
         </div>
       )}
+    </section>
+  );
+}
+
+/** 🧠 بنك معرفة مهنية (R203): إجابة فورية بشرح عربي — تدريب على نمط أسئلة Kenntnisprüfung. */
+function FachwissenQuiz() {
+  const [antworten, setAntworten] = useState<Record<number, number>>({});
+  const beantwortet = Object.keys(antworten).length;
+  const richtigZahl = pflegeFachwissen.filter((f, i) => antworten[i] === f.richtig).length;
+  const fertig = beantwortet === pflegeFachwissen.length && pflegeFachwissen.length > 0;
+  return (
+    <section data-testid="pflege-fachwissen">
+      <h3 style={{ fontWeight: 800, margin: "0.2rem 0 0.5rem" }}>🧠 معرفة مهنية بأسلوب Kenntnisprüfung ({pflegeFachwissen.length} سؤالًا)</h3>
+      <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0 0 0.6rem" }}>
+        أسئلة معرفة تمريضية أساسية (نظافة، وقاية، أدوية، طوارئ، حقوق) بإجابة فورية وشرح.
+        تدريب من تأليف المشروع — أسئلة Kenntnisprüfung الحقيقية تحدّدها ولايتك وجهة امتحانها.
+        {beantwortet > 0 && <> · أجبتَ عن {beantwortet}/{pflegeFachwissen.length}، الصحيح {richtigZahl}</>}
+        {fertig && <strong data-testid="pflege-fachwissen-ergebnis"> · النتيجة النهائية: {richtigZahl}/{pflegeFachwissen.length} ({Math.round((richtigZahl / pflegeFachwissen.length) * 100)}%)</strong>}
+      </p>
+      <div style={{ display: "grid", gap: "0.55rem" }}>
+        {pflegeFachwissen.map((f, i) => {
+          const gewaehlt = antworten[i];
+          return (
+            <fieldset key={i} style={{ border: "1px solid var(--color-line)", borderRadius: "0.6rem", padding: "0.55rem 0.75rem" }}>
+              <legend style={{ fontWeight: 700, fontSize: "0.88rem" }}>{i + 1}. <De>{f.frage}</De></legend>
+              {f.optionen.map((o, oi) => {
+                const istWahl = gewaehlt === oi;
+                const zeigen = gewaehlt !== undefined;
+                return (
+                  <label key={oi} style={{ display: "flex", gap: "0.45rem", alignItems: "center", minHeight: "40px", cursor: zeigen ? "default" : "pointer", fontWeight: zeigen && oi === f.richtig ? 800 : 400, color: zeigen && istWahl && oi !== f.richtig ? "var(--color-cola)" : undefined }}>
+                    <input type="radio" name={`fw-${i}`} checked={istWahl} disabled={zeigen}
+                      data-testid={i === 0 ? `pflege-fw-${oi}` : undefined}
+                      onChange={() => setAntworten((a) => ({ ...a, [i]: oi }))} />
+                    <De>{o}</De>{zeigen && oi === f.richtig ? " ✓" : zeigen && istWahl ? " ✗" : ""}
+                  </label>
+                );
+              })}
+              {gewaehlt !== undefined && (
+                <p style={{ fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0.3rem 0 0" }}>💡 {f.erklaerungAr}</p>
+              )}
+            </fieldset>
+          );
+        })}
+      </div>
     </section>
   );
 }
@@ -217,6 +261,8 @@ export function PflegeStation() {
       </section>
 
       <MedizinSimulation />
+
+      <FachwissenQuiz />
 
       {/* ── صيغة الامتحان المهني ── */}
       <section>

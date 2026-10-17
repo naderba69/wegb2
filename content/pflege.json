@@ -1730,5 +1730,207 @@
     ]
    }
   ]
- }
+ },
+ "fachwissen": [
+  {
+   "frage": "Wie oft sollten die Hände im Pflegealltag desinfiziert werden? (5-Momente-Konzept)",
+   "optionen": [
+    "Nur morgens und abends",
+    "Vor und nach jedem Patientenkontakt sowie nach Kontakt mit Körperflüssigkeiten",
+    "Nur wenn sie sichtbar schmutzig sind"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "اللحظات الخمس لنظافة اليدين (WHO): قبل لمس المريض وبعده، قبل مهمة معقّمة، بعد سوائل الجسم، وبعد لمس محيط المريض. التطهير ~30 ثانية."
+  },
+  {
+   "frage": "Welche Lagerung dient der Dekubitusprophylaxe?",
+   "optionen": [
+    "Der Patient bleibt den ganzen Tag auf dem Rücken",
+    "Regelmäßiger Positionswechsel, z. B. alle 2–3 Stunden, plus Hautkontrolle",
+    "Nur eine weiche Matratze genügt"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الوقاية من قرح الضغط: تغيير وضعية منتظم وفحص جلد ودعم غذائي — الوسادة وحدها لا تكفي."
+  },
+  {
+   "frage": "Was bedeutet die 5-R-Regel bei der Medikamentengabe?",
+   "optionen": [
+    "Richtiger Patient, richtiges Medikament, richtige Dosis, richtige Applikation, richtiger Zeitpunkt",
+    "Ruhig, rasch, regelmäßig, richtig, rund",
+    "Fünfmal täglich kontrollieren"
+   ],
+   "richtig": 0,
+   "erklaerungAr": "قاعدة الخمسة الصحيحة: المريض الصحيح، الدواء الصحيح، الجرعة الصحيحة، طريقة الإعطاء الصحيحة، الوقت الصحيح — قبل كل إعطاء."
+  },
+  {
+   "frage": "Welcher Blutdruckwert gilt als normal?",
+   "optionen": [
+    "Etwa 120/80 mmHg",
+    "Etwa 160/100 mmHg",
+    "Etwa 90/50 mmHg"
+   ],
+   "richtig": 0,
+   "erklaerungAr": "الطبيعي حول 120/80؛ 160/100 مرتفع ويحتاج متابعة وإبلاغًا."
+  },
+  {
+   "frage": "Ein Patient wirkt verwirrt, schwitzt und zittert. Er hat Diabetes. Was ist wahrscheinlich?",
+   "optionen": [
+    "Unterzuckerung (Hypoglykämie) — Blutzucker messen und ärztliche Anordnung beachten",
+    "Überzuckerung — sofort Insulin ohne Messung geben",
+    "Nur Müdigkeit — ignorieren"
+   ],
+   "richtig": 0,
+   "erklaerungAr": "أعراض نقص السكر: ارتباك وتعرّق ورعشة. أول خطوة: قياس السكر والتصرف حسب تعليمات الطبيب — لا إنسولين بلا قياس."
+  },
+  {
+   "frage": "Wie ist das Verhältnis bei der Herz-Lungen-Wiederbelebung (Erwachsene)?",
+   "optionen": [
+    "15 Kompressionen zu 2 Beatmungen",
+    "30 Kompressionen zu 2 Beatmungen, Tiefe 5–6 cm, Frequenz 100–120/Min",
+    "5 Kompressionen zu 1 Beatmung"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "إنعاش البالغين: 30 ضغطة إلى نفختين، عمق 5–6 سم، سرعة 100–120 بالدقيقة، بلا انقطاعات طويلة."
+  },
+  {
+   "frage": "Was gehört zur Thromboseprophylaxe?",
+   "optionen": [
+    "Bettruhe ohne Bewegung",
+    "Frühe Mobilisation, Bewegung und ggf. Kompressionsstrümpfe nach Anordnung",
+    "Nur viel trinken verbieten"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الوقاية من الخثار: تحريك مبكر وتمارين ساق وجوارب ضغط عند وصفها وشرب كافٍ ما لم يُمنع."
+  },
+  {
+   "frage": "Ein Patient mit MRSA wird gepflegt. Was ist wichtig?",
+   "optionen": [
+    "Keine besonderen Maßnahmen",
+    "Isolierung und Schutzkleidung (Kittel, Handschuhe, ggf. Mundschutz) plus strenge Händehygiene",
+    "Nur das Zimmer lüften"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "MRSA: عزل وحماية (مئزر وقفازات وكمامة عند اللزوم) ونظافة يديْن صارمة وتوثيق."
+  },
+  {
+   "frage": "Wie verläuft der Pflegeprozess (nach Fiechter/Meier) richtig?",
+   "optionen": [
+    "Maßnahmen → Probleme → Ziele",
+    "Informationssammlung → Probleme/Ressourcen → Ziele → Maßnahmen → Durchführung → Evaluation",
+    "Evaluation → Ziele → Information"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "العملية التمريضية ست خطوات: جمع معلومات، مشاكل/موارد، أهداف، إجراءات، تنفيذ، تقييم — ثم تبدأ من جديد."
+  },
+  {
+   "frage": "Was ist bei der Dokumentation am wichtigsten?",
+   "optionen": [
+    "Spät am Wochenende alles nachtragen",
+    "Zeitnah, sachlich, vollständig und nachvollziehbar dokumentieren",
+    "Meinungen über den Patienten notieren"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "التوثيق: فوري وموضوعي وكامل وقابل للتتبع — الوقائع لا الآراء، وكل إعطاء دواء يُوقَّع."
+  },
+  {
+   "frage": "Welche Aussage zur Schweigepflicht stimmt?",
+   "optionen": [
+    "Im Team darf alles erzählt werden, auch zu Hause",
+    "Patientendaten unterliegen der Schweigepflicht (§ 203 StGB) — auch nach Dienstende",
+    "Nur der Arzt muss schweigen"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "السرية المهنية تُلزم كل الفريق ودائمًا — بيانات المرضى لا تغادر مكان العمل."
+  },
+  {
+   "frage": "Ein Patient möchte nicht aufstehen. Was tun Sie?",
+   "optionen": [
+    "Ihn zwingen, es ist angeordnet",
+    "Seinen Wunsch respektieren, Gründe erfragen, motivieren und dokumentieren",
+    "Ihn den ganzen Tag ignorieren"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "احترام الاستقلالية: اسأل عن السبب، اشرح الفائدة، حفّز بلطف، ووثّق الرفض والمتابعة."
+  },
+  {
+   "frage": "Was ist bei freiheitsentziehenden Maßnahmen (z. B. Bettgitter gegen den Willen) zu beachten?",
+   "optionen": [
+    "Die Familie darf das allein erlauben",
+    "Sie brauchen in der Regel eine richterliche Genehmigung und müssen dokumentiert werden",
+    "Die Pflegekraft entscheidet allein"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الإجراءات المقيّدة للحرية تحتاج عادة إذنًا قضائيًا، آخر وسيلة دائمًا، مع توثيق ومراجعة."
+  },
+  {
+   "frage": "Wie schützen Sie die Intimsphäre bei der Körperpflege?",
+   "optionen": [
+    "Tür offen lassen für Sicherheit",
+    "Vorhänge/Tür schließen, nur nötige Körperteile aufdecken, Vorgehen ankündigen",
+    "Schnell arbeiten ohne Erklärung"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الخصوصية: أغلق الستارة/الباب، اكشف فقط ما يلزم، واشرح كل خطوة قبلها."
+  },
+  {
+   "frage": "Ein Patient klagt über plötzliche Atemnot und Brustschmerz. Ihr erstes Handeln?",
+   "optionen": [
+    "Erst die Dokumentation fertig schreiben",
+    "Notfall: Oberkörper hochlagern, Notruf/Arzt alarmieren, Vitalzeichen prüfen, nicht allein lassen",
+    "Ihm Wasser geben und abwarten"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "ضيق نفَس وألم صدر = طارئ: ارفع الجذع، أنذر فورًا، قِس العلامات، ولا تترك المريض وحده."
+  },
+  {
+   "frage": "Was ist bei Insulin vor dem Essen wichtig?",
+   "optionen": [
+    "Es wird intramuskulär gespritzt",
+    "Subkutan spritzen, Zeitpunkt und Mahlzeit abstimmen, Injektionsstellen wechseln",
+    "Insulin wird immer mit Antibiotika gemischt"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الإنسولين تحت الجلد، يتناسق مع موعد الأكل، وتبديل مواضع الحقن يمنع تلف النسيج."
+  },
+  {
+   "frage": "Welche Temperatur gilt als Fieber (Erwachsene)?",
+   "optionen": [
+    "Ab 37,0 °C",
+    "Ab 38,0 °C (erhöhte Temperatur ab ca. 37,5 °C)",
+    "Ab 39,5 °C erst"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "الحمّى من 38.0 تقريبًا، وبين 37.5–38 ارتفاع بسيط (subfebril) يستحق الملاحظة."
+  },
+  {
+   "frage": "Ein dementer Patient ruft nachts ständig nach seiner Mutter. Wie reagieren Sie angemessen?",
+   "optionen": [
+    "Ihm sagen, dass die Mutter tot ist, immer wieder",
+    "Gefühle ernst nehmen, beruhigen, Sicherheit geben (Validation) statt zu korrigieren",
+    "Ihn ignorieren, bis er aufhört"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "مع الخرف: خذ المشاعر بجدية وطمئن ووفّر أمانًا (Validation) — التصحيح المتكرر يزيد القلق."
+  },
+  {
+   "frage": "Wie viel sollte ein Patient ohne Einschränkung etwa trinken?",
+   "optionen": [
+    "Etwa 0,5 Liter pro Tag",
+    "Etwa 1,5–2 Liter pro Tag, angepasst an Anordnung und Zustand",
+    "So wenig wie möglich"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "القاعدة 1.5–2 لتر يوميًا ما لم توجد موانع (قلب/كلى) أو تعليمات أخرى — مع توثيق الكمية عند الحاجة."
+  },
+  {
+   "frage": "Was tun Sie bei einem Sturz eines Patienten zuerst?",
+   "optionen": [
+    "Sofort aufheben und zurück ins Bett bringen",
+    "Nicht bewegen bei Verdacht auf Verletzungen, Vitalzeichen prüfen, Arzt informieren, Sturzprotokoll erstellen",
+    "Nichts — das gehört zum Alltag"
+   ],
+   "richtig": 1,
+   "erklaerungAr": "بعد السقوط: لا تحرّك عند اشتباه كسر، قيّم وقيّس، أبلغ الطبيب، وثّق بمحضر سقوط."
+  }
+ ]
 }

@@ -353,6 +353,17 @@ Erster Baustein der Inhaltsachse C: neue Bank `content/leseleiter.json` mit 18 B
 **Beleg:** tsc sauber · smoke **1711/0** (neu K268a–d; K257a-Zähler 45→46 und K112a-Reihenfolge offen mitgezogen) · interaktiv **709/0** · audit:content null strukturelle Defekte · Build erfolgreich. Autorenskripte: `scripts/patches/_ll_draft.py` + `_ll_texte.json` (Prüfspiegel der Bank).
 
 
+## R203 — Kenntnisprüfungs-Wissen + Berufsstart-Checkliste — abgeschlossen ✅
+
+- `content/pflege.json`: + 20 Fachwissens-Fragen (sofortiges Feedback,
+  arabische Erklärung) — Training im Stil der Kenntnisprüfung, ehrlich als
+  nicht-offiziell markiert (Länder bestimmen die echten Fragen).
+- `BERUFSSTART_SCHRITTE` (8 Schritte B2 → Fachsprache → Unterlagen →
+  Anerkennung → Ausgleich → Bewerbung → Vertrag → Ankunft) als Checkliste
+  in der Lebenswelt-Station; nur localStorage `weg-berufsstart`, kein
+  Eingriff in Plan/Ergebnisse (K296b).
+- **Nachweise**: tsc ✓ · smoke **1776/0** (K296a-b) · interaktiv **732/0** (CIV1-3) · audit 0 · build ✓.
+
 ## R202 — Offline: optionaler Voll-Download aller Audios — abgeschlossen ✅
 
 - `scripts/copy_banks.mjs` erzeugt `public/audio-manifest.json` aus public/audio

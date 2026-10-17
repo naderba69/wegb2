@@ -24,6 +24,10 @@ export const pflegeMedizin: { hinweisAr: string; lesen: PflegeMedLesen[]; hoeren
   hinweisAr: "", lesen: [], hoeren: [],
 };
 
+export interface PflegeFachfrage { frage: string; optionen: string[]; richtig: number; erklaerungAr: string }
+/** بنك معرفة مهنية بأسلوب أسئلة Kenntnisprüfung (R203) — تدريب لا مواد رسمية لأيّ ولاية. */
+export const pflegeFachwissen: PflegeFachfrage[] = [];
+
 export const pflegeWoerter: PflegeWort[] = [];
 export const pflegeDialoge: PflegeDialog[] = [];
 export const pflegeDoku: PflegeDoku[] = [];
@@ -33,12 +37,14 @@ function fuellePflege(): void {
   const roh = bankRoh("pflege.json") as {
     wortschatz?: PflegeWort[]; dialoge?: PflegeDialog[]; dokumentation?: PflegeDoku[]; pruefung?: PflegePruefung[];
     medizinpruefung?: { hinweisAr: string; lesen: PflegeMedLesen[]; hoeren: PflegeMedHoeren[] };
+    fachwissen?: PflegeFachfrage[];
   } | undefined;
   if (!roh) return;
   if (roh.wortschatz?.length && pflegeWoerter.length === 0) pflegeWoerter.splice(0, 0, ...roh.wortschatz);
   if (roh.dialoge?.length && pflegeDialoge.length === 0) pflegeDialoge.splice(0, 0, ...roh.dialoge);
   if (roh.dokumentation?.length && pflegeDoku.length === 0) pflegeDoku.splice(0, 0, ...roh.dokumentation);
   if (roh.pruefung?.length && pflegePruefung.length === 0) pflegePruefung.splice(0, 0, ...roh.pruefung);
+  if (roh.fachwissen?.length && pflegeFachwissen.length === 0) pflegeFachwissen.splice(0, 0, ...roh.fachwissen);
   if (roh.medizinpruefung && pflegeMedizin.lesen.length === 0) {
     pflegeMedizin.hinweisAr = roh.medizinpruefung.hinweisAr;
     pflegeMedizin.lesen.splice(0, 0, ...roh.medizinpruefung.lesen);

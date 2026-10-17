@@ -3428,6 +3428,25 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "CIII1 بطاقة عدم الاتصال تعرض تنزيل الصوت الكامل بحجمه الحقيقي قبل أيّ نقرة");
   }
 
+  /* ═══ CIV — معرفة مهنية + قائمة بدء مهني (R203) ═══ */
+  {
+    const { PflegeStation } = await import("../components/pflege");
+    const { pflegeFachwissen } = await import("../lib/pflege");
+    mount(React.createElement(PflegeStation));
+    ok(pflegeFachwissen.length === 20 && !!rootEl.querySelector('[data-testid="pflege-fachwissen"]'),
+      "CIV1 بنك المعرفة المهنية (20 سؤالًا) معروض في محطة التمريض");
+    const richtig = pflegeFachwissen[0].richtig;
+    const radio = rootEl.querySelector(`[data-testid="pflege-fw-${richtig}"]`) as HTMLElement | null;
+    if (radio) click(radio);
+    ok(txt().includes("اللحظات الخمس"), "CIV2 الإجابة الصحيحة تُظهر الشرح العربي فورًا");
+    const { LebensweltStation } = await import("../components/lebenswelt");
+    mount(React.createElement(LebensweltStation));
+    const box = rootEl.querySelector('[data-testid="berufsstart-bs-sprache"] input[type="checkbox"]') as HTMLElement | null;
+    if (box) click(box);
+    ok((localStorage.getItem("weg-berufsstart") ?? "").includes("bs-sprache"),
+      "CIV3 تعليم خطوة البدء المهني يُحفظ محليًا في قائمته الخاصة");
+  }
+
   /* ═══ XCVI — وصولية U5 تحت الإصبع: لغة الألماني معلنة وتخطٍّ وتركيز ═══ */
   {
     const { De, DeBlock } = await import("../components/De");

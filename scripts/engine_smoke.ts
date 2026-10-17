@@ -13414,6 +13414,26 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K295 تنزيل الصوت الكامل صار قرارًا صريحًا بحجم معلن وبيان مبنيّ من الملفات نفسها — والتقدّم خارج المخزن كعهد K282");
 }
 
+// ===== K296 (R203 · Kenntnisprüfungs-Wissen + Berufsstart-Checkliste):
+// 20 Fachfragen mit genau einer richtigen Option und arabischer Erklärung,
+// ehrlich als Training markiert; die Checkliste lebt nur in localStorage
+// und schreibt niemals in den Plan-Fortschritt. =====
+{
+  const pf3 = JSON.parse(readFileSync("content/pflege.json", "utf8")) as {
+    fachwissen: { frage: string; optionen: string[]; richtig: number; erklaerungAr: string }[];
+  };
+  const pfSrc3 = readFileSync("components/pflege.tsx", "utf8");
+  const lwSrc2 = readFileSync("components/lebenswelt.tsx", "utf8");
+  ok(pf3.fachwissen.length === 20 && pf3.fachwissen.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3 && f.erklaerungAr.length > 30) &&
+     new Set(pf3.fachwissen.map((f) => f.frage)).size === 20 &&
+     pfSrc3.includes('data-testid="pflege-fachwissen"') && pfSrc3.includes("تحدّدها ولايتك"),
+    "K296a بنك المعرفة المهنية: 20 سؤالًا فريدًا بسليم الخيارات وشرح عربي، موسومًا تدريبًا لا أسئلة ولاية رسمية");
+  ok(lwSrc2.includes('data-testid="berufsstart"') && lwSrc2.includes("weg-berufsstart") &&
+     !lwSrc2.includes("saveProgress") && !lwSrc2.includes("update(") &&
+     readFileSync("lib/lebenswelt.ts", "utf8").includes("BERUFSSTART_SCHRITTE"),
+    "K296b قائمة البدء المهني (8 خطوات) محلية التخزين فقط — لا تكتب في تقدّم الخطة ولا نتائجها");
+}
+
 // ===== K284 (R191 · U5): Barrierefreiheit rechnerisch — WCAG-Kontraste aus den
 // echten CSS-Tokens, de-Sprachkennzeichnung für Screenreader, Fokus/​Skip-Link. =====
 {
