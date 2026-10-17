@@ -9304,5 +9304,133 @@
  "vpfl-26": [
   "an Zuckerkrankheit leiden",
   "die Zuckerkrankheit behandeln"
+ ],
+ "vpfl-32": [
+  "eine Schwellung feststellen",
+  "eine Schwellung kühlen"
+ ],
+ "vpfl-33": [
+  "unter Müdigkeit leiden",
+  "Müdigkeit verspüren"
+ ],
+ "vpfl-34": [
+  "ein Schmerzmittel geben",
+  "ein Schmerzmittel einnehmen"
+ ],
+ "vpfl-35": [
+  "eine Salbe auftragen",
+  "eine Salbe verschreiben"
+ ],
+ "vpfl-36": [
+  "eine Blutung stillen",
+  "eine Blutung stoppen"
+ ],
+ "vpfl-37": [
+  "einen Knochenbruch versorgen",
+  "einen Knochenbruch feststellen"
+ ],
+ "vpfl-38": [
+  "eine Verbrennung kühlen",
+  "eine Verbrennung behandeln"
+ ],
+ "vpfl-39": [
+  "den Notarzt rufen",
+  "den Notarzt alarmieren"
+ ],
+ "vpfl-40": [
+  "einen Knochen brechen",
+  "die Knochen stärken"
+ ],
+ "vpfl-41": [
+  "ein Gelenk bewegen",
+  "ein Gelenk untersuchen"
+ ],
+ "vpfl-42": [
+  "den Darm untersuchen",
+  "den Darm entlasten"
+ ],
+ "vpfl-43": [
+  "die Blase entleeren",
+  "die Blase untersuchen"
+ ],
+ "vpfl-44": [
+  "das Gehirn untersuchen",
+  "das Gehirn schützen"
+ ],
+ "vpfl-45": [
+  "die Entlassung vorbereiten",
+  "die Entlassung planen"
+ ],
+ "vpfl-46": [
+  "die Aufnahme durchführen",
+  "die Aufnahme dokumentieren"
+ ],
+ "vpfl-47": [
+  "den Dienstplan erstellen",
+  "den Dienstplan ändern"
+ ],
+ "vpfl-48": [
+  "Nachtdienst haben",
+  "den Nachtdienst übernehmen"
+ ],
+ "vpfl-49": [
+  "Frühdienst haben",
+  "den Frühdienst übernehmen"
+ ],
+ "vpfl-50": [
+  "Spätdienst haben",
+  "den Spätdienst übernehmen"
+ ],
+ "vpfl-51": [
+  "einen Bewohner betreuen",
+  "einen Bewohner begleiten"
+ ],
+ "vpfl-52": [
+  "einen Kittel tragen",
+  "den Kittel wechseln"
+ ],
+ "vpfl-53": [
+  "einen Sturz vermeiden",
+  "einen Sturz melden"
+ ],
+ "vpfl-54": [
+  "einen Zwischenfall melden",
+  "einen Zwischenfall dokumentieren"
+ ],
+ "vpfl-55": [
+  "den Beipackzettel lesen",
+  "den Beipackzettel beachten"
+ ],
+ "vpfl-56": [
+  "die Dosierung prüfen",
+  "die Dosierung anpassen"
+ ],
+ "vpfl-57": [
+  "eine Wiederbelebung beginnen",
+  "die Wiederbelebung durchführen"
+ ],
+ "vpfl-58": [
+  "einen Schlaganfall erkennen",
+  "einen Schlaganfall behandeln"
+ ],
+ "vpfl-59": [
+  "einen Herzinfarkt erkennen",
+  "einen Herzinfarkt behandeln"
+ ],
+ "vpfl-60": [
+  "die Leber untersuchen",
+  "die Leberwerte prüfen"
+ ],
+ "vpfl-61": [
+  "eine Vene punktieren",
+  "die Vene treffen"
+ ],
+ "vpfl-62": [
+  "die Arterie abdrücken",
+  "eine Arterie verletzen"
+ ],
+ "vpfl-63": [
+  "die Wirbelsäule untersuchen",
+  "die Wirbelsäule schonen"
  ]
 }

@@ -685,3 +685,7 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 ### R206 — Pflege in den Alltag verwoben (Owner-Wunsch „nicht als separates Pflege-Lernen spüren“)
 
 ✅ erledigt (lokal verifiziert; CI folgt): 26 Pflege-Wörter (vpfl-01…26) als vollwertige Karten in den allgemeinen Gesundheits-/Arbeitsdecks (A2/B1/B2) + 29 Sätze (s-pfl-01…29) im allgemeinen Satzbank → Ankunft in normalen Tagesaufgaben; 24 echte Kollokations-Einträge; 17 dichte Deckungssätze nach K83b, Verknüpfung ohne neue Waisen (K81/K234/K235 grün). Zähler dokumentiert: Vokabeln 3525, Sätze 707, Kollokationen 2215/4876 (K21f/K29f/K49d/K125f/K125g/K126a/K129b/K151/XIX1 nachgezogen, kein Gate abgeschwächt). Pflege-Station = optionale Vertiefung mit ehrlicher Notiz. smoke 1778/0 (neu K298) · interaktiv 732/0 · audit 0 · build ✓.
+
+### R207 — Pflege-Verwebung Runde 2 (+37 Wörter)
+
+✅ erledigt (lokal verifiziert; CI folgt): vpfl-27…63 in allgemeinen Decks (A2 Körper/Station, B1 Symptome/Anatomie/Dienste, B2 Notfall/Doku/Anatomie) → 63/131 Pflege-Wörter im Alltagsfluss; +32 Kollokationen (2247/4940), +13 Deckungssätze s-pfl-30…42 (Sätze 720). Zähler dokumentiert: Vokabeln 3562, eindeutig 3514 (K21d/K21f/K29f/K49d/K125f/K125g/K126a/K129b/K298/XIX1). Station-Notiz: 63 Wörter. smoke 1778/0 · interaktiv 732/0 · audit 0 · build ✓. (R206-CI: `39022756717` success.)

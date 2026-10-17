@@ -9545,5 +9545,205 @@
    "der Arztbrief",
    "die Visite"
   ]
+ },
+ {
+  "id": "s-pfl-30",
+  "level": "A2",
+  "de": "Der Patient drückt die Klingel auf der Station.",
+  "ar": "المريض يضغط جرس النداء في القسم.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Patient",
+   "die Klingel",
+   "die Station"
+  ]
+ },
+ {
+  "id": "s-pfl-31",
+  "level": "A2",
+  "de": "Die Schulter und das Knie tun dem Patienten weh.",
+  "ar": "الكتف والركبة يؤلمان المريض.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Schulter",
+   "das Knie",
+   "der Patient"
+  ]
+ },
+ {
+  "id": "s-pfl-32",
+  "level": "B1",
+  "de": "Die Schwellung, die Müdigkeit und die Blutung muss der Notarzt sehen.",
+  "ar": "التورّم والإرهاق والنزيف يجب أن يراها طبيب الطوارئ.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Schwellung",
+   "die Müdigkeit",
+   "die Blutung",
+   "der Notarzt"
+  ]
+ },
+ {
+  "id": "s-pfl-33",
+  "level": "B1",
+  "de": "Das Schmerzmittel und die Salbe helfen gegen die Schwellung.",
+  "ar": "المسكّن والمرهم يساعدان ضد التورّم.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Schmerzmittel",
+   "die Salbe",
+   "die Schwellung"
+  ]
+ },
+ {
+  "id": "s-pfl-34",
+  "level": "B1",
+  "de": "Der Knochenbruch, die Verbrennung und das Gelenk werden untersucht.",
+  "ar": "كسر العظم والحرق والمفصل تُفحص.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Knochenbruch",
+   "die Verbrennung",
+   "das Gelenk"
+  ]
+ },
+ {
+  "id": "s-pfl-35",
+  "level": "B1",
+  "de": "Knochen, Darm, Blase und Gehirn gehören zum Körper.",
+  "ar": "العظام والأمعاء والمثانة والدماغ تنتمي إلى الجسم.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Knochen",
+   "der Darm",
+   "die Blase",
+   "das Gehirn"
+  ]
+ },
+ {
+  "id": "s-pfl-36",
+  "level": "B1",
+  "de": "Nach der Aufnahme plant die Klinik die Entlassung, und der Bewohner freut sich.",
+  "ar": "بعد القبول تخطّط العيادة للخروج، والمقيم سعيد.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Aufnahme",
+   "die Entlassung",
+   "der Bewohner"
+  ]
+ },
+ {
+  "id": "s-pfl-37",
+  "level": "B1",
+  "de": "Der Dienstplan zeigt Frühdienst, Spätdienst und Nachtdienst.",
+  "ar": "جدول المناوبات يبيّن المناوبة الصباحية والمسائية والليلية.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Dienstplan",
+   "der Frühdienst",
+   "der Spätdienst",
+   "der Nachtdienst"
+  ]
+ },
+ {
+  "id": "s-pfl-38",
+  "level": "B1",
+  "de": "Der Bewohner trägt einen Kittel und wartet auf den Frühdienst.",
+  "ar": "المقيم يرتدي مريولًا وينتظر المناوبة الصباحية.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Bewohner",
+   "der Kittel",
+   "der Frühdienst"
+  ]
+ },
+ {
+  "id": "s-pfl-39",
+  "level": "B2",
+  "de": "Nach dem Sturz werden Zwischenfall, Dokumentation und Arztbrief geprüft.",
+  "ar": "بعد السقوط تُراجع الحادثة العارضة والتوثيق وتقرير الطبيب.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Sturz",
+   "der Zwischenfall",
+   "die Dokumentation",
+   "der Arztbrief"
+  ]
+ },
+ {
+  "id": "s-pfl-40",
+  "level": "B2",
+  "de": "Die Dosierung steht im Beipackzettel, die Wiederbelebung im Notfallplan.",
+  "ar": "الجرعة مكتوبة في نشرة الدواء، والإنعاش في خطة الطوارئ.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Dosierung",
+   "der Beipackzettel",
+   "die Wiederbelebung"
+  ]
+ },
+ {
+  "id": "s-pfl-41",
+  "level": "B2",
+  "de": "Bei Schlaganfall und Herzinfarkt zählen Vene, Arterie und Zeit.",
+  "ar": "عند السكتة الدماغية والنوبة القلبية يهمّ الوريد والشريان والوقت.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Schlaganfall",
+   "der Herzinfarkt",
+   "die Vene",
+   "die Arterie"
+  ]
+ },
+ {
+  "id": "s-pfl-42",
+  "level": "B2",
+  "de": "Die Leber, die Wirbelsäule und die Arterie werden genau untersucht.",
+  "ar": "الكبد والعمود الفقري والشريان تُفحص بدقة.",
+  "tags": [
+   "Pflege"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Leber",
+   "die Wirbelsäule",
+   "die Arterie"
+  ]
  }
 ]

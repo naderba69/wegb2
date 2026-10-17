@@ -4907,6 +4907,216 @@
     "exampleAr": "يُفحص الدم في المختبر.",
     "article": "das",
     "farbe": "GRÜN"
+   },
+   {
+    "id": "vpfl-32",
+    "de": "die Schwellung",
+    "ar": "التورّم",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Schwellung geht langsam zurück.",
+    "exampleAr": "التورّم يتراجع ببطء.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-33",
+    "de": "die Müdigkeit",
+    "ar": "التعب",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Müdigkeit ist eine Nebenwirkung.",
+    "exampleAr": "التعب أثر جانبي.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-34",
+    "de": "das Schmerzmittel",
+    "ar": "مسكّن الألم",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Bei Bedarf bekommen Sie ein Schmerzmittel.",
+    "exampleAr": "عند الحاجة ستحصل على مسكّن.",
+    "article": "das",
+    "farbe": "GRÜN"
+   },
+   {
+    "id": "vpfl-35",
+    "de": "die Salbe",
+    "ar": "المرهم",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Salbe wird dünn aufgetragen.",
+    "exampleAr": "يُدهن المرهم بطبقة رقيقة.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-36",
+    "de": "die Blutung",
+    "ar": "النزيف",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Blutung muss gestoppt werden.",
+    "exampleAr": "يجب إيقاف النزيف.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-37",
+    "de": "der Knochenbruch",
+    "ar": "كسر العظام",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Der Knochenbruch wird geröntgt.",
+    "exampleAr": "سيُصوَّر الكسر بالأشعة.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-38",
+    "de": "die Verbrennung",
+    "ar": "الحرق",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Verbrennung ist nur leicht.",
+    "exampleAr": "الحرق خفيف فقط.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-39",
+    "de": "der Notarzt",
+    "ar": "طبيب الطوارئ",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Der Notarzt ist unterwegs.",
+    "exampleAr": "طبيب الطوارئ في الطريق.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-40",
+    "de": "der Knochen",
+    "ar": "العظم",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Der Knochen heilt in sechs Wochen.",
+    "exampleAr": "يلتئم العظم في ستة أسابيع.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-41",
+    "de": "das Gelenk",
+    "ar": "المفصل",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Das Gelenk ist geschwollen.",
+    "exampleAr": "المفصل متورّم.",
+    "article": "das",
+    "farbe": "GRÜN"
+   },
+   {
+    "id": "vpfl-42",
+    "de": "der Darm",
+    "ar": "الأمعاء",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Der Darm braucht Ruhe.",
+    "exampleAr": "الأمعاء تحتاج راحة.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-43",
+    "de": "die Blase",
+    "ar": "المثانة",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Blase ist voll.",
+    "exampleAr": "المثانة ممتلئة.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-44",
+    "de": "das Gehirn",
+    "ar": "الدماغ",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Das Gehirn braucht Sauerstoff.",
+    "exampleAr": "الدماغ يحتاج أكسجين.",
+    "article": "das",
+    "farbe": "GRÜN"
+   },
+   {
+    "id": "vpfl-45",
+    "de": "die Entlassung",
+    "ar": "الخروج من المستشفى",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Entlassung ist für Freitag geplant.",
+    "exampleAr": "الخروج مخطط ليوم الجمعة.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-46",
+    "de": "die Aufnahme",
+    "ar": "الاستقبال / الدخول",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "gesundheit"
+    ],
+    "exampleDe": "Die Aufnahme erfolgt an der Rezeption.",
+    "exampleAr": "الاستقبال يكون عند الاستعلامات.",
+    "article": "die",
+    "farbe": "ROT"
    }
   ]
  },
@@ -9884,6 +10094,244 @@
     "exampleAr": "يتطلب السكري ضبطًا دقيقًا لسكر الدم.",
     "article": "die",
     "plural": "die Zuckerkrankheiten",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-47",
+    "de": "der Dienstplan",
+    "ar": "جدول الورديات",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Der neue Dienstplan hängt im Büro.",
+    "exampleAr": "جدول الورديات الجديد معلّق في المكتب.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-48",
+    "de": "der Nachtdienst",
+    "ar": "الوردية الليلية",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Ich habe diese Woche Nachtdienst.",
+    "exampleAr": "عندي وردية ليلية هذا الأسبوع.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-49",
+    "de": "der Frühdienst",
+    "ar": "الوردية الصباحية",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Der Frühdienst beginnt um 6 Uhr.",
+    "exampleAr": "تبدأ الوردية الصباحية 6:00.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-50",
+    "de": "der Spätdienst",
+    "ar": "الوردية المسائية",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Im Spätdienst sind wir zu dritt.",
+    "exampleAr": "في الوردية المسائية نحن ثلاثة.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-51",
+    "de": "der Bewohner",
+    "ar": "المقيم (في دار الرعاية)",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Der Bewohner möchte im Garten sitzen.",
+    "exampleAr": "يريد المقيم الجلوس في الحديقة.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-52",
+    "de": "der Kittel",
+    "ar": "المئزر الطبي",
+    "pos": "Nomen",
+    "level": "B1",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Der Kittel wird täglich gewechselt.",
+    "exampleAr": "يُغيَّر المئزر يوميًا.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-53",
+    "de": "der Sturz",
+    "ar": "السقوط",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Nach dem Sturz wurde ein Protokoll erstellt.",
+    "exampleAr": "بعد السقوط حُرّر محضر.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-54",
+    "de": "der Zwischenfall",
+    "ar": "الحادث العارض",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Jeder Zwischenfall wird dokumentiert.",
+    "exampleAr": "كلّ حادث عارض يُوثَّق.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-55",
+    "de": "der Beipackzettel",
+    "ar": "منشور الدواء",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Lesen Sie den Beipackzettel genau.",
+    "exampleAr": "اقرأ منشور الدواء بدقة.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-56",
+    "de": "die Dosierung",
+    "ar": "تحديد الجرعة",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Die Dosierung hängt vom Gewicht ab.",
+    "exampleAr": "تتعلق الجرعة بالوزن.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-57",
+    "de": "die Wiederbelebung",
+    "ar": "الإنعاش",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Die Wiederbelebung beginnt sofort.",
+    "exampleAr": "يبدأ الإنعاش فورًا.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-58",
+    "de": "der Schlaganfall",
+    "ar": "السكتة الدماغية",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Bei einem Schlaganfall zählt jede Minute.",
+    "exampleAr": "في السكتة الدماغية كل دقيقة تهمّ.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-59",
+    "de": "der Herzinfarkt",
+    "ar": "النوبة القلبية",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Die Schmerzen können ein Herzinfarkt sein.",
+    "exampleAr": "قد يكون الألم نوبة قلبية.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-60",
+    "de": "die Leber",
+    "ar": "الكبد",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Die Leberwerte sind erhöht.",
+    "exampleAr": "قيم الكبد مرتفعة.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-61",
+    "de": "die Vene",
+    "ar": "الوريد",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Die Infusion läuft über die Vene.",
+    "exampleAr": "المحلول يسير عبر الوريد.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-62",
+    "de": "die Arterie",
+    "ar": "الشريان",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Die Arterie ist frei.",
+    "exampleAr": "الشريان مفتوح.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-63",
+    "de": "die Wirbelsäule",
+    "ar": "العمود الفقري",
+    "pos": "Nomen",
+    "level": "B2",
+    "tags": [
+     "arbeit-beruf"
+    ],
+    "exampleDe": "Die Wirbelsäule wurde untersucht.",
+    "exampleAr": "فُحص العمود الفقري.",
+    "article": "die",
     "farbe": "ROT"
    }
   ]
@@ -35815,6 +36263,76 @@
     "article": "der",
     "plural": "die Mägen",
     "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-27",
+    "de": "die Schulter",
+    "ar": "الكتف",
+    "pos": "Nomen",
+    "level": "A2",
+    "tags": [
+     "geld"
+    ],
+    "exampleDe": "Die Schulter schmerzt beim Heben.",
+    "exampleAr": "الكتف يؤلم عند الرفع.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-28",
+    "de": "das Knie",
+    "ar": "الركبة",
+    "pos": "Nomen",
+    "level": "A2",
+    "tags": [
+     "geld"
+    ],
+    "exampleDe": "Das Knie wurde gestern operiert.",
+    "exampleAr": "أُجريت عملية للركبة أمس.",
+    "article": "das",
+    "farbe": "GRÜN"
+   },
+   {
+    "id": "vpfl-29",
+    "de": "der Patient",
+    "ar": "المريض",
+    "pos": "Nomen",
+    "level": "A2",
+    "tags": [
+     "geld"
+    ],
+    "exampleDe": "Der Patient wartet auf die Visite.",
+    "exampleAr": "المريض ينتظر الجولة الطبية.",
+    "article": "der",
+    "farbe": "BLAU"
+   },
+   {
+    "id": "vpfl-30",
+    "de": "die Station",
+    "ar": "القسم / الجناح",
+    "pos": "Nomen",
+    "level": "A2",
+    "tags": [
+     "geld"
+    ],
+    "exampleDe": "Unsere Station hat zwanzig Betten.",
+    "exampleAr": "قسمنا فيه عشرون سريرًا.",
+    "article": "die",
+    "farbe": "ROT"
+   },
+   {
+    "id": "vpfl-31",
+    "de": "die Klingel",
+    "ar": "جرس النداء",
+    "pos": "Nomen",
+    "level": "A2",
+    "tags": [
+     "geld"
+    ],
+    "exampleDe": "Drücken Sie die Klingel, wenn Sie etwas brauchen.",
+    "exampleAr": "اضغط الجرس عندما تحتاج شيئًا.",
+    "article": "die",
+    "farbe": "ROT"
    }
   ]
  },
