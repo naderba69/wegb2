@@ -3434,8 +3434,8 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { PflegeStation } = await import("../components/pflege");
     const { pflegeFachwissen } = await import("../lib/pflege");
     mount(React.createElement(PflegeStation));
-    ok(pflegeFachwissen.length === 20 && !!rootEl.querySelector('[data-testid="pflege-fachwissen"]'),
-      "CIV1 بنك المعرفة المهنية (20 سؤالًا) معروض في محطة التمريض");
+    ok(pflegeFachwissen.length === 40 && !!rootEl.querySelector('[data-testid="pflege-fachwissen"]'), // R216: 40 سؤالًا
+      "CIV1 بنك المعرفة المهنية (40 سؤالًا منذ R216) معروض في محطة التمريض");
     const richtig = pflegeFachwissen[0].richtig;
     const radio = rootEl.querySelector(`[data-testid="pflege-fw-${richtig}"]`) as HTMLElement | null;
     if (radio) click(radio);
