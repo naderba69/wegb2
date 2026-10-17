@@ -349,3 +349,6 @@ Belege R228: tsc ✓ · smoke/interaktiv/audit/build folgen im Kampagnen-Commit.
 ## R229 — Punkt 2 geschlossen: HoerNeu 8→14 Items, Stufenbalanciert
 
 **Ergebnis: Punkt 2 der Kampagne geschlossen.** Sechs neue Hörmaterialien mit echten KI-Aufnahmen (voice-06, als KI gekennzeichnet): hn-09 (A1 Nachrichten), hn-10 (A1 Bahnhofsdurchsage), hn-11 (A2 Flughafendurchsage), hn-12 (A2 Stadtnachrichten), hn-13 (B1 Werbung), hn-14 (B2 Abendnachrichten) — Bestand jetzt **14 Items / 16 Clips**, Stufen A1×2, A2×3, B1×5, B2×4; Formate Nachrichten×6, Durchsage×4, Werbung×2, Interview×2. Maschinen-QC ehrlich nachgemessen (miniaudio-Dekodierung: Dauer/Peak/RMS/Stille; alle 16 Dateien ok, Zeichen/Sekunde 15,7–18,0, Anomalien 0) — Maschinenmessung, **keine** menschliche Hörprüfung. Nebenbei Punkt 1 weiter: s-b1-59…62 aufgenommen (neu 78/494, offen 416; Diktat 258/742). Gates: K272a um Stufen-Balance erweitert (dokumentiert), C2/K27a/K27f/K125c/K258c/VII6 fortgeschrieben. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
+## R230 — Kampagne Punkt 1, Charge (s-b2-48…57)
+
+Zehn weitere neu-Sätze (B2) aufgenommen (voice-06) — neu **88/494**, offen 406; Diktat gesamt **268/742**. Nächste Chargen folgen à 10/Runde. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
