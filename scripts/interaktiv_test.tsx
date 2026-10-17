@@ -322,7 +322,9 @@ async function main() {
     // R145: الإعلان الصادق = المانيفست نفسه: 180 جملةً قديمةً مسجّلة تُرَدّ ملفُها، وما عداها (قديمٌ لم يُسجَّل وجديد) يُرَدّ null بلا اختلاق
     const { diktatAudio } = await import("../lib/content");
     const manifestIds = new Set(Object.keys(diktatAudio));
-    ok(manifestIds.size === 180 && sBank.every((sx) => (diktatSrc(sx.id) !== null) === manifestIds.has(sx.id)) && sBank.filter((sx) => (sx as { neu?: boolean }).neu).every((sx) => diktatSrc(sx.id) === null) && diktatSrc("s-x-999") === null, "VII6 إعلانُ القفل: المانيفستُ مرآةُ ما يُرَدّ — 180 ملفاً مُعلناً يصل، وكلُّ ما عداه null بصدق، والشبحُ null — لا كتمانَ حضورٍ ولا اختلاقَ غياب");
+    // R220: عشر جمل سرير منسوجة (s-pfl-53..62) صارت مسجّلة بصوت معتمد — تُستثنى بالاسم، وما عداها من الجديد null بصدق
+    const bettAudio = ["s-pfl-53", "s-pfl-54", "s-pfl-55", "s-pfl-56", "s-pfl-57", "s-pfl-58", "s-pfl-59", "s-pfl-60", "s-pfl-61", "s-pfl-62"];
+    ok(manifestIds.size === 190 && sBank.every((sx) => (diktatSrc(sx.id) !== null) === manifestIds.has(sx.id)) && sBank.filter((sx) => (sx as { neu?: boolean }).neu && !bettAudio.includes(sx.id)).every((sx) => diktatSrc(sx.id) === null) && bettAudio.every((id) => diktatSrc(id) === `/audio/diktat/${id}.mp3`) && diktatSrc("s-x-999") === null, "VII6 إعلانُ القفل: المانيفستُ مرآةُ ما يُرَدّ — 190 ملفاً مُعلناً يصل (منها 10 جمل سرير منسوجة مسجّلة منذ R220)، وكلُّ ما عداه null بصدق، والشبحُ null — لا كتمانَ حضورٍ ولا اختلاقَ غياب");
 const hasFile = txt().includes("صوتٌ من الدار");
     const hasFall = txt().includes("📟");
     ok(hasFile !== hasFall, "VII7 شارةُ المصدر واحدةٌ دائماً لا ثنتان ولا صفر: حضورُ الملف يُعلَن وغيابُه يُعلَن — أياً كانت قرعةُ الجولة، فلا تقلّبَ ولا وميضَ كاذب");

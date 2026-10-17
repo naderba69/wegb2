@@ -301,3 +301,16 @@ Belege (R211–R214): tsc ✓ · smoke **1779/0** (+K299) · interaktiv 732/0 ·
 **Ergebnis: erledigt.** Zehn neue Prüfungs-Schreibaufgaben mit vollem Muster im Längenband (B1 80–170, B2 120–260 Wörter; K85b 12→22 «neu»): Bürgeramt-Termin, Krankenkassen-Anfrage, Nachbarschaftseinladung, Praktikumsbericht, Auto-Forumsbeitrag (B1); Digitalisierungs-Forum, Team-Problem-Mail, Pflegeberuf-Erörterung, Wohnungsnot-Leserbrief, Stationsbericht (B2). Deckungsnachweise dokumentiert fortgeschrieben (K125f, K260c, K266d 32→37 Briefe, K271c: 157/164/100 — die Rotation zieht die neuen Aufgaben automatisch in die 378 Tage).
 
 Belege (R215–R217): tsc ✓ · smoke **1780/0** (+K301) · interaktiv 732/0 · audit «العيوب البنيوية المؤكدة: صفر» · Build ✓.
+## R218 — Komplette Prüfungssitzung (4 Fertigkeiten, ein Timer)
+
+**Ergebnis: erledigt.** Neue Station `vollpruefung` in /ueben: eine ganze Simulationssitzung — Lesen (2 echte Texte mit Fragen) → Hören (2 echte Dialoge mit MP3, Transkript bis zum Ergebnis verdeckt) → Schreiben (echte Aufgabe, Selbstcheck gegen Muster + Kriterien) → Sprechen (echte Mündlich-Karte mit Stützen, Selbstcheck) — mit einem Gesamttimer (A2 100 / B1 130 / B2 160 Minuten) und Sammelergebnis nach der Projektregel (80 % gesamt, 60 % je Fertigkeit). Montiert aus den vorhandenen Banken (`lib/vollpruefung.ts`), schreibt nichts in den Plan, ehrlich als interne Simulation markiert — keine offizielle Goethe/telc-Wertung, kein Aussprache-Urteil. Gates K302 + CV1/CV2.
+
+## R219 — C1-Vertiefung wird Mini-Pfad (8+6 → 12+8)
+
+**Ergebnis: erledigt.** Vier neue C1-Texte im Formband (230–380 Wörter, Glossar aus dem Text, 4 Fragen): Gedächtnis/Vergessen, hybride Teams, Sprachwandel, KI in der Medizin; zwei neue C1-Dialoge (≥10 Zeilen, 3 Fragen): Kolloquium (These verteidigen), Dienstbesprechung (Personalnot). Station heißt jetzt ehrlich «مسار C1 مصغّر» (Badge + Karten-Untertitel); K271a/K271d fortgeschrieben.
+
+## R220 — Aufgenommene Diktat-Stimme für die verwobenen Bettseiten-Sätze (erste Charge)
+
+**Ergebnis: erste Charge erledigt, Rest offen deklariert.** Die zehn A1-Bettseiten-Sätze s-pfl-53…62 haben jetzt echte MP3s (`public/audio/diktat/`, Stimme voice-06 vom Besitzer ausgewählt) statt Geräte-TTS — Diktat-Bank 180→**190**, Gesamt-Audiodateien 519→**529**. Ehrlich: Die übrigen 54 verwobenen Sätze (s-pfl-01…52, 63, 64) folgen in weiteren Chargen (Plattform-Limit: 10 Clips pro Runde); alle übrigen neu-Sätze bleiben vorerst deklariertes Geräte-TTS. Gates C2/K27a/K125c/K258c/K27f/VII6 dokumentiert fortgeschrieben (VII6 nennt die zehn Aufnahmen jetzt beim Namen).
+
+Belege (R218–R220): tsc ✓ · smoke **1781/0** (+K302) · interaktiv **734/0** (+CV1/CV2) · audit «العيوب البنيوية المؤكدة: صفر» · Build ✓ (audio-manifest 529 Dateien).

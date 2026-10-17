@@ -709,3 +709,7 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 ### R215–R217 — Restpläne produziert (Simulation, Wissen, Schreiben)
 
 ✅ erledigt (lokal verifiziert; CI folgt): R215 getimte Schreib-/Sprech-Simulation in der Pflege-Station (4+4, Selbstvergleich, ehrlich ohne Automatik; K301). R216 Fachwissen 20→40 (K296a). R217 Schreibbank 90→100 (B1 27/B2 28, Muster im Band; K85b/K125f/K260c/K266d/K271c dokumentiert). smoke 1780/0 · interaktiv 732/0 · audit 0 · build ✓.
+
+### R218–R220 — Vollprüfung, C1-Pfad, Diktat-Stimme
+
+✅ erledigt (lokal verifiziert; CI folgt): R218 komplette 4-Fertigkeiten-Sitzung mit Gesamttimer + Sammelergebnis als Station `vollpruefung` (K302, CV1/2; K112 dokumentiert). R219 C1: 12 Texte + 8 Dialoge, «مسار C1 مصغّر» (K271a/d). R220: 10 Bettseiten-Sätze mit echten MP3s (voice-06; Diktat 190, Audio 529; Rest 54 verwobene Sätze offen deklariert). smoke 1781/0 · interaktiv 734/0 · audit 0 · build ✓.
