@@ -2025,7 +2025,8 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,leben,tiefen,katalog"'),
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,vertiefung,leben,tiefen,katalog"'),
+      // R218: محطة «vollpruefung» (جلسة امتحان كاملة) أُدرجت بعد التمريض — امتداد موثّق للترتيب
       "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← تذوّق ← حياة في ألمانيا (R200: امتداد بنيوي موثّق في المراجع) ← معجم ← كاتالوج");
     const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<Vertiefung />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
@@ -13473,6 +13474,20 @@ function collectR262(dir: string, out: string[] = []): string[] {
      pf5.dokumentation.some((d) => d.id === "pf-w11" && d.muster.includes("wurde") && d.muster.includes("Beim")) &&
      pf5.dialoge.filter((d) => d.stufe === "A2").length === 2,
     "K299 سلّم التوثيق مدرّج فعليًا: كل نموذج موسوم بمستواه، والمستويات الأربع ممثّلة، وقمّة B2 بالمبني للمجهول والأسلوب الاسمي، وحوارا تمريض على A2");
+}
+
+// ===== K302 (R218 · Vollprüfung): Eine komplette Simulationssitzung
+// (Lesen+Hören+Schreiben+Sprechen) mit einem Gesamttimer und Sammelergebnis,
+// aus den echten Banken montiert, ehrlich intern markiert, ohne Plan-Schreibung. =====
+{
+  const vpSrc = readFileSync("components/vollpruefung.tsx", "utf8");
+  const vpLib = readFileSync("lib/vollpruefung.ts", "utf8");
+  ok(vpSrc.includes('data-testid="vollpruefung"') && vpSrc.includes('data-testid="vollpruefung-start"') &&
+     vpSrc.includes("ليست نتيجة Goethe أو telc رسمية") && vpSrc.includes("لا تسجيل ولا تقييم نطق") &&
+     vpSrc.includes('data-testid="vollpruefung-ergebnis"') && !vpSrc.includes("useProgress") && !vpSrc.includes("speichere") &&
+     vpLib.includes('bankRoh("texts.json")') && vpLib.includes('bankRoh("dialogues.json")') &&
+     vpLib.includes('bankRoh("writing.json")') && vpLib.includes('bankRoh("muendlich.json")'),
+    "K302 جلسة الامتحان الكاملة مركّبة من البنوك الحقيقية (نصوص/حوارات/كتابة/شفوي) بمؤقّت ونتيجة مجمّعة — محاكاة داخلية لا تكتب في الخطة ولا تدّعي رسمية");
 }
 
 // ===== K301 (R215 · Schreib-/Sprech-Simulation mit Timer): Vier getimte

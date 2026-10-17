@@ -25,6 +25,7 @@ import { ShadowingStation } from "@/components/shadowing";
 import { PflegeStation } from "@/components/pflege";
 import { SprechBegleiter } from "@/components/sprechbegleiter";
 import { LebensweltStation } from "@/components/lebenswelt";
+import { VollPruefung } from "@/components/vollpruefung";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
@@ -35,7 +36,7 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,leseleiter,redemittel,vertiefung,leben,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,vertiefung,leben,tiefen,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
@@ -53,6 +54,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   briefe: { icon: "✉️", titel: "كتابة الرسائل", unter: "اكتب رسالة تناسب الموقف." },
   szenarien: { icon: "🏙️", titel: "مواقف من الحياة", unter: "طبّق ما تعلّمته في مواقف واقعية." },
   pflege: { icon: "🩺", titel: "ألمانية التمريض (Pflege)", unter: "مفردات وحوارات وتوثيق للعمل في الرعاية الصحية — مسار إضافي خارج الخطة." },
+  vollpruefung: { icon: "🧪", titel: "جلسة امتحان كاملة", unter: "قراءة واستماع وكتابة وتحدّث في جلسة واحدة بمؤقّت ونتيجة مجمّعة — محاكاة داخلية." },
   leseleiter: { icon: "🪜", titel: "سلّم القراءة", unter: "نصوص قصيرة متدرّجة بين A0 وA1 بمسرد وأسئلة من النصّ." },
   redemittel: { icon: "🧰", titel: "بنك وسائل التعبير", unter: "عبارات الامتحان مصنّفة بالوظيفة والجزء، مع تدريب استرجاع." },
   vertiefung: { icon: "📚", titel: "مكتبة التذوّق B2+/C1", unter: "نصوص وحوارات C1 إثرائية بعد B2 — خارج الخطة." },
@@ -73,7 +75,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-skills",
     title: "تدرّب على المهارات",
     description: "اختر مهارة أو طبّق ما تعلّمته في موقف.",
-    items: ["hoeren", "hoerneu", "lueck", "muendlich", "begleiter", "schatten", "vortrag", "interview", "briefe", "szenarien", "pflege", "leseleiter", "redemittel", "vertiefung"],
+    items: ["hoeren", "hoerneu", "lueck", "muendlich", "begleiter", "schatten", "vortrag", "interview", "briefe", "szenarien", "pflege", "vollpruefung", "leseleiter", "redemittel", "vertiefung"],
   },
   {
     id: "ueben-reference",
@@ -207,6 +209,7 @@ export default function Ueben() {
           {offen === "einstufung" && <EinstufungTest />}
           {offen === "schatten" && <ShadowingStation />}
           {offen === "pflege" && <PflegeStation />}
+          {offen === "vollpruefung" && <VollPruefung />}
           {offen === "begleiter" && <SprechBegleiter />}
           {offen === "leben" && <LebensweltStation />}
           {offen === "katalog" && <KatalogLeiste />}

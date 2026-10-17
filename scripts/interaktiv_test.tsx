@@ -3429,6 +3429,18 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "CIII1 بطاقة عدم الاتصال تعرض تنزيل الصوت الكامل بحجمه الحقيقي قبل أيّ نقرة");
   }
 
+  /* ═══ CV — جلسة امتحان كاملة (R218) ═══ */
+  {
+    const { VollPruefung } = await import("../components/vollpruefung");
+    mount(React.createElement(VollPruefung));
+    const startBtn = rootEl.querySelector('[data-testid="vollpruefung-start"]') as HTMLButtonElement | null;
+    ok(!!startBtn && !startBtn.disabled, "CV1 جلسة الامتحان الكاملة تُركَّب وزرّ بدئها مفعّل بالبنوك المحمّلة");
+    startBtn?.click();
+    const radios = rootEl.querySelectorAll('input[type="radio"]');
+    ok(radios.length >= 3 && !!rootEl.querySelector('[data-testid="vollpruefung"]'),
+      `CV2 بدء الجلسة يعرض أسئلة القسم الأول فورًا (${radios.length} خيارًا)`);
+  }
+
   /* ═══ CIV — معرفة مهنية + قائمة بدء مهني (R203) ═══ */
   {
     const { PflegeStation } = await import("../components/pflege");
