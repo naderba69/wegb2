@@ -323,8 +323,8 @@ async function main() {
     const { diktatAudio } = await import("../lib/content");
     const manifestIds = new Set(Object.keys(diktatAudio));
     // R220: عشر جمل سرير منسوجة (s-pfl-53..62) صارت مسجّلة بصوت معتمد — تُستثنى بالاسم، وما عداها من الجديد null بصدق
-    const bettAudio = ["s-pfl-53", "s-pfl-54", "s-pfl-55", "s-pfl-56", "s-pfl-57", "s-pfl-58", "s-pfl-59", "s-pfl-60", "s-pfl-61", "s-pfl-62"];
-    ok(manifestIds.size === 190 && sBank.every((sx) => (diktatSrc(sx.id) !== null) === manifestIds.has(sx.id)) && sBank.filter((sx) => (sx as { neu?: boolean }).neu && !bettAudio.includes(sx.id)).every((sx) => diktatSrc(sx.id) === null) && bettAudio.every((id) => diktatSrc(id) === `/audio/diktat/${id}.mp3`) && diktatSrc("s-x-999") === null, "VII6 إعلانُ القفل: المانيفستُ مرآةُ ما يُرَدّ — 190 ملفاً مُعلناً يصل (منها 10 جمل سرير منسوجة مسجّلة منذ R220)، وكلُّ ما عداه null بصدق، والشبحُ null — لا كتمانَ حضورٍ ولا اختلاقَ غياب");
+    const bettAudio = ["s-pfl-01", "s-pfl-02", "s-pfl-03", "s-pfl-04", "s-pfl-05", "s-pfl-06", "s-pfl-07", "s-pfl-08", "s-pfl-09", "s-pfl-10", "s-pfl-53", "s-pfl-54", "s-pfl-55", "s-pfl-56", "s-pfl-57", "s-pfl-58", "s-pfl-59", "s-pfl-60", "s-pfl-61", "s-pfl-62"];
+    ok(manifestIds.size === 200 && sBank.every((sx) => (diktatSrc(sx.id) !== null) === manifestIds.has(sx.id)) && sBank.filter((sx) => (sx as { neu?: boolean }).neu && !bettAudio.includes(sx.id)).every((sx) => diktatSrc(sx.id) === null) && bettAudio.every((id) => diktatSrc(id) === `/audio/diktat/${id}.mp3`) && diktatSrc("s-x-999") === null, "VII6 إعلانُ القفل: المانيفستُ مرآةُ ما يُرَدّ — 200 ملفٍ مُعلنٍ يصل (منها 20 جملة منسوجة مسجّلة في R220+R222)، وكلُّ ما عداه null بصدق، والشبحُ null — لا كتمانَ حضورٍ ولا اختلاقَ غياب");
 const hasFile = txt().includes("صوتٌ من الدار");
     const hasFall = txt().includes("📟");
     ok(hasFile !== hasFall, "VII7 شارةُ المصدر واحدةٌ دائماً لا ثنتان ولا صفر: حضورُ الملف يُعلَن وغيابُه يُعلَن — أياً كانت قرعةُ الجولة، فلا تقلّبَ ولا وميضَ كاذب");
