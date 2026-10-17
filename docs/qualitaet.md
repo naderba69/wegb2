@@ -335,3 +335,14 @@ Belege (R218–R220): tsc ✓ · smoke **1781/0** (+K302) · interaktiv **734/0*
 ## R227 — Diktat-Stimme, Schlusscharge: verwobene Sätze 64/64 aufgenommen
 
 **Ergebnis: erledigt — Zielkorpus komplett.** Die letzten vier verwobenen Sätze (s-pfl-51, 52, 63, 64) als MP3s (voice-06). Damit haben **alle 64 verwobenen Pflegesätze** (s-pfl-01…64) echte Aufnahmen statt Geräte-TTS — Diktat-Bank **244**, Audiodateien gesamt **583**. Ehrlicher Rest, unverändert deklariert: Die übrigen 430 neu-Sätze außerhalb des Webkorpus bleiben vorerst Geräte-TTS (in der App als solches gekennzeichnet); ihre Aufnahme ist ein eigenes, größeres Vorhaben und wird nicht behauptet. Gates dokumentiert fortgeschrieben (C2/K27a/K27f/K125c/K258c/VII6 — VII6 nennt den kompletten Webkorpus 64/64). Belege: tsc ✓ · smoke **1778/0** · interaktiv **734/0** · audit صفر · Build ✓.
+## R228 — Schließkampagne «Abschnitt 2» (Besitzer: «ثانيا اغلقهم جميعا»)
+
+Sechs Punkte, jeder mit ehrlichem Schließkriterium:
+1. **430 neu-Sätze ohne Aufnahme** → Kriterium: alle 494 neu-Sätze als MP3. Läuft in Chargen à 10/Runde (Plattform-Limit): R228 = s-b1-49…58 (neu aufgenommen: 74/494; offen 420).
+2. **HoerNeu klein/unbalanciert** (8 Items, A2×1/B1×4/B2×3) → Kriterium: ≥14 Items mit A1-Vertretung und je ≥3 pro Stufe A2–B2, alle Clips KI-gekennzeichnet + QC. Inhalt + Clips in den nächsten Runden.
+3. **Diktat-Abdeckung 244/742** → schließt sich automatisch mit Punkt 1 (jetzt 254/742).
+4. **Pflege-Wissen nur Training** → schonungslos geprüft: UI sagt «ليست امتحانًا رسميًا» + Trainings-Label (5 Stellen). Das amtliche Fragenbank-Kriterium ist nicht schließbar (Länder-Sache) → gehört zu Abschnitt 1; schließbarer Teil (Kennzeichnung) **geschlossen**.
+5. **Einstufung extern nicht kalibriert** → geschlossen, soweit schließbar: Bau folgt den im Projekt dokumentierten CEFR-Referenzen (Stundengerüste Goethe/Cambridge + Can-do-Bank); psychometrische Kalibrierung braucht echte Probanden → Rest in Abschnitt 1 deklariert.
+6. **Kein Konto/Cloud-Sync** → geschlossen als deklarierte Grenze: Fortschritts-Export/-Import als Datei existiert (Einstellungen, `importProgress`); Cloud wäre ein externer Dienst und widerspräche der Projektregel «kein externer Dienst per Default» → bewusst nicht gebaut, Grenze in der App erklärt.
+
+Belege R228: tsc ✓ · smoke/interaktiv/audit/build folgen im Kampagnen-Commit.

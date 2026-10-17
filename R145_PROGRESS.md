@@ -723,3 +723,4 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 - R225: Diktat-Stimme Charge 5 — s-pfl-31…40 aufgenommen (50/64 verwoben), Diktat 230, Audio 569.
 - R226: Diktat-Stimme Charge 6 — s-pfl-41…50 aufgenommen (60/64 verwoben), Diktat 240, Audio 579.
 - R227: Diktat-Stimme Schlusscharge — s-pfl-51/52/63/64 aufgenommen; verwobene Sätze **64/64 komplett**, Diktat 244, Audio 583.
+- R228: Schließkampagne Abschnitt 2 eröffnet — Audio-Charge s-b1-49…58 (neu 74/494), HoerNeu-Ausbau geplant, Punkte 4–6 als geprüft/deklariert geschlossen (Details qualitaet.md R228).
