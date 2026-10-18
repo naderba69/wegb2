@@ -51,6 +51,8 @@ import { simBand } from "../lib/simband";
 import { effektiveRate, rateFuerLevel } from "../lib/rate";
 import { skillUmschichtung } from "../lib/skillplan";
 import { kritischeKarten as kritKarten312, resumeAusloesen, resumePlan, resumeZustand } from "../lib/wiedereinstieg";
+import { kartenAusreisser, skillTrends } from "../lib/kalibrierung";
+import { erledigeWiederschreiben, planeWiederschreiben } from "../lib/wiederschreiben";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13085,6 +13087,41 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/wiedereinstieg.tsx", "utf8").includes('data-testid="wiedereinstieg-banner"'),
     `K312 ثلاثية R287: هيمنة قراءة ${(schicht312.anteil * 100).toFixed(0)}٪ في 14 يومًا تُنتج إعادة توزيع 20 دقيقة (M3)، وتيرة B2 تلقائية ${effektiveRate(pB2)}× واليدوية محفوظة (M7)، وخطة استئناف ${reduz312.tasks.length}/${voll312.tasks.length} مهمة مراجعة فقط بعد غياب (M15)`);
 }
+// ===== K313 (R288 · M4+M8+M9): Daten-Kalibrierung, Fehlerkarten-Bestätigung, 48h-Wiederschreiben =====
+{
+  const jetzt313 = new Date("2026-10-18T10:00:00Z");
+  const eintrag313 = (d: string, ok313: boolean) => ({ h: "Lesen" as const, ok: ok313, d });
+  const log313 = [
+    ...Array.from({ length: 10 }, (_, i) => eintrag313("2026-10-10", i < 9)),
+    ...Array.from({ length: 10 }, (_, i) => eintrag313("2026-09-25", i < 4)),
+  ];
+  const trend313 = skillTrends({ ...emptyProgress, kompetenzLog: log313 } as Progress, jetzt313).find((t) => t.hand === "Lesen");
+  const jetztIso = jetzt313.toISOString();
+  const srs313 = {
+    hart1: { ease: 2.5, interval: 2, due: jetztIso, reps: 5, lapses: 3, introduced: jetztIso, stab: 2 },
+    fest1: { ease: 2.5, interval: 60, due: jetztIso, reps: 5, lapses: 0, introduced: jetztIso, stab: 60 },
+  } as Progress["srs"];
+  const aus313 = kartenAusreisser({ ...emptyProgress, srs: srs313 } as Progress, jetzt313);
+  const text313 = "Sehr geehrte Damen und Herren, ich schreibe Ihnen heute wegen meiner Bewerbung und ich bleibe höflich.";
+  const pWs313 = planeWiederschreiben({ ...emptyProgress } as Progress, text313, jetzt313);
+  const pWs313b = planeWiederschreiben(pWs313, text313, jetzt313);
+  const eintragWs313 = pWs313.wiederschreiben?.[0];
+  const pWsFertig313 = eintragWs313
+    ? erledigeWiederschreiben(pWs313, eintragWs313.id, "Ich schreibe Ihnen heute wegen meiner Bewerbung.", jetzt313)
+    : pWs313;
+  const vergleich313 = pWsFertig313.wiederschreiben?.[0]?.vergleich;
+  ok(!!trend313 && trend313.richtung === "schwerer" && Math.abs((trend313.aktuell ?? 0) - 0.9) < 0.01 &&
+     aus313.hartnaeckig.length === 1 && aus313.hartnaeckig[0].id === "hart1" && aus313.sicherAnzahl === 1 &&
+     pWs313.wiederschreiben?.length === 1 && pWs313b.wiederschreiben?.length === 1 &&
+     !!eintragWs313 && Math.round((new Date(eintragWs313.faellig).getTime() - jetzt313.getTime()) / 3600000) === 48 &&
+     pWsFertig313.wiederschreiben?.[0]?.status === "erledigt" && !!vergleich313 &&
+     readFileSync("components/schreibkorrektur.tsx", "utf8").includes("FehlerKartenWahl") &&
+     readFileSync("components/lehrer.tsx", "utf8").includes("FehlerKartenWahl") &&
+     readFileSync("components/schreiben.tsx", "utf8").includes("WiederschreibenKarte") &&
+     readFileSync("components/berichte.tsx", "utf8").includes("KalibrierungPanel"),
+    `K313 ثلاثية R288: اتجاه مهارة ${trend313?.richtung} من نسبتي نجاح زمنيتين (M4) وبطاقة عنيدة ${aus313.hartnaeckig[0]?.id}، تحويل أخطاء مؤكدة فرديًا إلى بطاقات (M8)، وإعادة كتابة مجدولة بعد 48 ساعة قورنت آليًا (M9)`);
+}
+
 
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),

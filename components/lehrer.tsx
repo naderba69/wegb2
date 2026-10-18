@@ -21,6 +21,7 @@ import { loadProgress } from "@/lib/store";
 import { speakLine, speakAny, stopSpeech } from "@/lib/speech";
 import ExerciseSet from "./exercises";
 import { De } from "./De";
+import { FehlerKartenWahl } from "./fehlerkarten";
 
 // ═══════════════ صحّح الخطأ — تدريب على الصيغ الألمانية ═══════════════
 
@@ -410,6 +411,11 @@ export function SchreibBerater({ text, taskDe }: { text: string; taskDe: string 
             </ul>
           )}
           {llm.bewertung && <div style={{ marginTop: "0.4rem", fontWeight: 700 }}>🎓 {llm.bewertung}</div>}
+          <FehlerKartenWahl
+            quelle="LehrerKorrektur (BYOK)"
+            eintraege={deepReview(text, llm.korrigiert).fehler.slice(0, 8).map((f) => ({ falsch: f.wrong, richtig: f.right, ar: f.erklaerungAr, art: f.art }))}
+          />
+          <div style={{ fontSize: "0.76rem", color: "var(--color-ink2)" }}>أزواج الأخطاء أعلاه مشتقّة محليًا بفارق الكلمات بين نصّك والنصّ المصحَّح — اخترتَ وأكّدتَ بنفسك ما يدخل دفترك.</div>
         </div>
       )}
     </div>

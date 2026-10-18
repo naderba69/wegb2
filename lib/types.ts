@@ -232,6 +232,17 @@ export interface KontextPaket {
   modelle: { titel: string; zeilen: string[] }[];
 }
 
+export interface WiederEintrag {
+  id: string;
+  erstellt: string;
+  faellig: string;
+  absatz: string;
+  spalten: string[];
+  status: "offen" | "erledigt";
+  erledigtAm?: string;
+  vergleich?: { behoben: string[]; geblieben: string[]; neuHinzu: string[] };
+}
+
 export interface DayTask {
   id: string;
   kind: TaskKind;
@@ -416,6 +427,8 @@ export interface Progress {
   streak: { last: string | null; count: number };
   /** 🌱 M15/R287: وضع الاستئناف بعد غياب — جلستا عودة مخفّضتان تُسجَّلان بتاريخَيهما */
   resume?: { startDatum: string; startTag: number; sitzungen: string[]; gapDays: number };
+  /** 🔁 M9/R288: إعادة كتابة محسّنة مجدولة بعد 48 ساعة من كل تصحيح */
+  wiederschreiben?: WiederEintrag[];
   /** يوم سيّئ: بصمة المستخدم أنّ اليوم كان صعباً → تُجمَّد السلسلة بدون عقاب ولا ديون */
   badDay?: string;
   settings: {

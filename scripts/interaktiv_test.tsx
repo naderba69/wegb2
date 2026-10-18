@@ -1345,12 +1345,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(/الدرجة: \d+\/100/.test(t), "XLIII6 ودرجةٌ من مئةٍ تُحسَبُ من المرصود");
     ok(t.includes("الموضعِ الثاني"), "XLIII7 والخطأُ الحقيقيُّ «Morgen ich gehe» ظاهرٌ في العمودِ الصحيح");
     ok(t.includes("علاجُ"), "XLIII8 ومع الخطأِ تماري��ُ علاجيةٌ لا تشخيصٌ وحدَه");
-    const nb = btn("أضِف الأخطاء إلى دفتري");
-    ok(!!nb, "XLIII9 وزرُّ الإضافةِ إلى دفترِ الأخطاءِ متاح");
-    if (nb) click(nb as HTMLElement);
+    // R288/M8: أُعيد توجيه XLIII9–11 — كان الزر دفعة واحدة بلا تأكيد، والصيغة الجديدة تأكيد فردي لكل خطأ قبل دخوله الدفتر (تغيير بنيوي حقيقي لا تخفيف)
+    const nb2 = rootEl.querySelector('[data-testid="fehlerkarten-umwandeln"]') as HTMLElement | null;
+    ok(!!nb2 && !!rootEl.querySelector('[data-testid="fehlerkarten-wahl"]'), "XLIII9 قائمةُ تأكيد تحويل الأخطاء إلى بطاقات مختبر متاحة");
+    if (nb2) click(nb2);
     const p = (await import("../lib/store")).loadProgress();
-    ok(Object.keys(p.fehler ?? {}).length > 0, "XLIII10 والأخطاءُ تُدفَنُ في الدفترِ فتعودُ بعدَ ثلاثةِ أيام");
-    ok(txt().includes("أُضيفت إلى دفتر الأخطاء"), "XLIII11 والمتعلِّمُ يرى تأكيدَ الإضافة");
+    ok(Object.keys(p.fehler ?? {}).length > 0, "XLIII10 والأخطاءُ المؤكَّدة تُدفَنُ في الدفترِ فتعودُ بجدولة متباعدة");
+    ok(txt().includes("دخلت المؤكَّدة دفترَ أخطائك"), "XLIII11 والمتعلِّمُ يرى تأكيدَ الإضافة");
   }
 
 
@@ -2137,6 +2138,46 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const b2auto = effektiveRate({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 } } as never);
     const b2hand = effektiveRate({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 }, settings: { ...emptyProgress.settings, rateMode: "manual", rate: 0.8 } } as never);
     ok(b2auto === 1.05 && b2hand === 0.8, "R287c وتيرة المستوى (M7): B2 تلقائي 1.05× والخيار اليدوي محفوظ 0.80×");
+  }
+
+  /* ═══════════ R288 — M8 تأكيد البطاقات + M9 إعادة كتابة 48س + M4 معايرة ═══════════ */
+  {
+    const { loadProgress, saveProgress } = await import("../lib/store");
+    saveProgress({ ...loadProgress(), fehler: {} });
+    const { FehlerKartenWahl } = await import("../components/fehlerkarten");
+    mount(React.createElement(FehlerKartenWahl, {
+      quelle: "Test",
+      eintraege: [
+        { falsch: "Ich habe müde", richtig: "Ich bin müde", ar: "الصفات مع sein", art: "konstruktion" },
+        { falsch: "der Hundin", richtig: "die Hündin", ar: "جنس الاسم", art: "artikel" },
+      ],
+    }));
+    ok(!!rootEl.querySelector('[data-testid="fehlerkarten-wahl"]'), "R288a قائمة تأكيد بطاقات الأخطاء (M8) تُرسم بخيارات فردية");
+    const erste = rootEl.querySelector('[data-testid="fehlerkarte-0"]') as HTMLInputElement | null;
+    if (erste) click(erste);
+    click(rootEl.querySelector('[data-testid="fehlerkarten-umwandeln"]') as HTMLElement);
+    const fehlerDanach = Object.values(loadProgress().fehler ?? {}) as { falsch: string }[];
+    ok(fehlerDanach.length === 1 && fehlerDanach[0].falsch === "der Hundin", "R288b المؤكَّد وحده يدخل دفتر الأخطاء — وما أُلغي تأكيده لا يدخل");
+
+    saveProgress({ ...loadProgress(), wiederschreiben: [{ id: "ws-test", erstellt: "2026-10-15T10:00:00.000Z", faellig: "2026-10-17T10:00:00.000Z", absatz: "Ich habe müde und ich gehe nach Hause.", spalten: ["grammatik"], status: "offen" as const }] });
+    const { WiederschreibenKarte } = await import("../components/wiederschreiben");
+    mount(React.createElement(WiederschreibenKarte, { quelleText: "" }));
+    const eingabe = rootEl.querySelector('[data-testid="wiederschreiben-input-ws-test"]') as HTMLTextAreaElement | null;
+    ok(!!rootEl.querySelector('[data-testid="wiederschreiben-karte"]') && !!eingabe, "R288c بطاقة إعادة الكتابة المستحقّة (M9) تُرسم مع فقرة الأصل");
+    if (eingabe) typeIn(eingabe, "Ich bin heute zu Hause und lerne Deutsch.");
+    click(rootEl.querySelector('[data-testid="wiederschreiben-vergleich-ws-test"]') as HTMLElement);
+    const ergEl = rootEl.querySelector('[data-testid="wiederschreiben-ergebnis"]');
+    ok(!!ergEl && (ergEl.textContent ?? "").includes("أُنجزت"), "R288d المقارنة الآلية بأنماط الأخطاء السابقة تظهر بعد الإعادة");
+
+    const { alleVokabeln } = await import("../lib/content");
+    const ersteKarte = alleVokabeln[0];
+    const jetIso = new Date().toISOString();
+    saveProgress({ ...loadProgress(), srs: { [ersteKarte.id]: { ease: 2.5, interval: 2, due: jetIso, reps: 5, lapses: 3, introduced: jetIso, stab: 2 } } });
+    const { KalibrierungPanel } = await import("../components/kalibrierung");
+    mount(React.createElement(KalibrierungPanel, { progress: loadProgress() as never }));
+    ok(!!rootEl.querySelector('[data-testid="kalibrierung-panel"]') && txt().includes(ersteKarte.de), "R288e لوحة المعايرة (M4) تعرض البطاقة العنيدة باسمها وزرَّي إصلاحها");
+    click(rootEl.querySelector(`[data-testid="ausreisser-reset-${ersteKarte.id}"]`) as HTMLElement);
+    ok(loadProgress().srs[ersteKarte.id] === undefined, "R288f زر «أعد تعلّمها من الصفر» يعيد ضبط حالة البطاقة فعليًا");
   }
 
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
