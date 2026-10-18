@@ -487,3 +487,6 @@ Zehn weitere Alt-Sätze aufgenommen (voice-06) — Alt-Ist 20/68, offen 48; Dikt
 ## R275 — Altbestand-Vervollständigung, Charge 3 (s-b1-205…211 + s-b2-200…202)
 
 Zehn weitere Alt-Sätze aufgenommen (voice-06) — Alt-Ist 30/68, offen 38; Diktat gesamt **704/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit); Audio-QC-Bericht per audio_qc_all.py auf 1049 Dateien nachgeführt (K304).
+## R276 — Altbestand-Vervollständigung, Charge 4 (s-b2-203…210 + sat-a0-031…032)
+
+Zehn weitere Alt-Sätze aufgenommen (voice-06) — Alt-Ist 40/68, offen 28; Diktat gesamt **714/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit); Audio-QC-Bericht per audio_qc_all.py auf 1059 Dateien nachgeführt (K304).
