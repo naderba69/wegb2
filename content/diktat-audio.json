@@ -5138,6 +5138,62 @@
    "voice": "voice-06 (de)",
    "level": "A1",
    "bytes": 11093
+  },
+  {
+   "id": "sat-a1-105",
+   "file": "/audio/diktat/sat-a1-105.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A1",
+   "bytes": 17990
+  },
+  {
+   "id": "sat-a1-106",
+   "file": "/audio/diktat/sat-a1-106.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A1",
+   "bytes": 19871
+  },
+  {
+   "id": "sat-a1-107",
+   "file": "/audio/diktat/sat-a1-107.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A1",
+   "bytes": 18199
+  },
+  {
+   "id": "sat-a2-111",
+   "file": "/audio/diktat/sat-a2-111.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A2",
+   "bytes": 21333
+  },
+  {
+   "id": "sat-a2-112",
+   "file": "/audio/diktat/sat-a2-112.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A2",
+   "bytes": 17572
+  },
+  {
+   "id": "sat-a2-113",
+   "file": "/audio/diktat/sat-a2-113.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A2",
+   "bytes": 16318
+  },
+  {
+   "id": "sat-a2-114",
+   "file": "/audio/diktat/sat-a2-114.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A2",
+   "bytes": 22378
+  },
+  {
+   "id": "sat-a2-115",
+   "file": "/audio/diktat/sat-a2-115.mp3",
+   "voice": "voice-06 (de)",
+   "level": "A2",
+   "bytes": 16945
   }
  ]
 }

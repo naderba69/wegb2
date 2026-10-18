@@ -496,3 +496,6 @@ Zehn weitere Alt-Sätze (A0) aufgenommen (voice-06) — Alt-Ist 50/68, offen 18;
 ## R278 — Altbestand-Vervollständigung, Charge 6 (sat-a0-043…050 + sat-a1-103…104)
 
 Zehn weitere Alt-Sätze aufgenommen (voice-06) — Alt-Ist 60/68, offen 8; Diktat gesamt **734/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit); Audio-QC-Bericht per audio_qc_all.py auf 1079 Dateien nachgeführt (K304).
+## R279 — Altbestand ABGESCHLOSSEN: Diktat-Abdeckung 742/742 (sat-a1-105…107 + sat-a2-111…115)
+
+Die letzten acht Alt-Sätze aufgenommen (voice-06) — Alt-Ist 68/68, offen 0. **Damit ist jede der 742 Bank-Sätze aufgezeichnet** (180 Bestand + 494 neu aus R220–R271 + 68 Alt-Vervollständigung R273–R279); keine Satz mehr auf Geräte-TTS angewiesen. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit); Audio-QC-Bericht per audio_qc_all.py auf 1087 Dateien nachgeführt (K304).

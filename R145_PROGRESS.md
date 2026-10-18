@@ -774,3 +774,4 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 - R276: Altbestand-Vervollständigung 4 — s-b2-203…210 + sat-a0-031…032 aufgenommen (alt 40/68, offen 28), Diktat 714; Audio-QC auf 1059 Dateien nachgeführt.
 - R277: Altbestand-Vervollständigung 5 — sat-a0-033…042 aufgenommen (alt 50/68, offen 18), Diktat 724; Audio-QC auf 1069 Dateien nachgeführt.
 - R278: Altbestand-Vervollständigung 6 — sat-a0-043…050 + sat-a1-103…104 aufgenommen (alt 60/68, offen 8), Diktat 734; Audio-QC auf 1079 Dateien nachgeführt.
+- R279: Altbestand ABGESCHLOSSEN — sat-a1-105…107 + sat-a2-111…115 aufgenommen; Diktat-Abdeckung 742/742 (kein Satz mehr ohne Aufnahme); Audio-QC auf 1087 Dateien nachgeführt.

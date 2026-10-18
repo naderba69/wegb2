@@ -202,7 +202,7 @@ const vocabRepeatAudit = (() => {
   ok(good === sentences.length, `C1 كل فجوات الـ${sentences.length} صالحة (نجح ${good})`);
   const legacy = sentences.filter((x) => !(x as { neu?: boolean }).neu);
   const recorded = sentences.filter((x) => diktatSrc(x.id) !== null).length;
-  ok(legacy.length === 248 && recorded === 734 && sentences.length >= 553, `C2 حجم البنك: ${legacy.length} قديمة، منها ${recorded} بصوت؛ ${sentences.length - legacy.length} جديدة (كل الجمل الجديدة مسجّلة 494/494؛ وإكمالُ القديم 60 من 68 حتى R278، تبقّى 8) = ${sentences.length} — تثبيت انحدار`);
+  ok(legacy.length === 248 && recorded === 742 && sentences.length >= 553, `C2 حجم البنك: ${legacy.length} قديمة، منها ${recorded} بصوت؛ ${sentences.length - legacy.length} جديدة (كلُّ جملِ البنك مسجّلة 742/742 حتى R279 — الجديدة 494/494 والقديمة 68/68، ولا جملة بلا تسجيل) = ${sentences.length} — تثبيت انحدار`);
 }
 
 /* ═══ D · buildDay والدورة اليومية ═══ */
@@ -636,13 +636,13 @@ const vocabRepeatAudit = (() => {
       "K26n دفعة R164b: آخر نصين A2 وعدّهما مطابق؛ voice-00 وID3/إطارات/بايتات سليمة في مانيفستو HörLabor وحده");
     const dman = JSON.parse(require("fs").readFileSync("content/diktat-audio.json", "utf8")) as { einsaetze: { id: string; file: string; level: string; bytes: number }[] };
     const ddisk = require("fs").readdirSync("public/audio/diktat").filter((f: string) => f.endsWith(".mp3")).map((f: string) => f.replace(/\.mp3$/, "")).sort();
-    ok(dman.einsaetze.length === ddisk.length && dman.einsaetze.every((e) => ddisk.includes(e.id)) && ddisk.length === 734, "K27a المصنع مقفل: 734/734 — العددُ جُمِّد إقراراً بالتمام كما فُعِل في hoeren (R220–R278: الجمل الجديدة كاملة 494/494، وإكمال القديم 60/68 — تبقّى 8)، بعد أن كان حياً في الطريق");
+    ok(dman.einsaetze.length === ddisk.length && dman.einsaetze.every((e) => ddisk.includes(e.id)) && ddisk.length === 742, "K27a المصنع مقفل: 742/742 — العددُ جُمِّد إقراراً بالتمام كما فُعِل في hoeren (R220–R279: اكتمل تسجيل كل جمل البنك 742/742 — لا جملة بلا ملف)، بعد أن كان حياً في الطريق");
     ok(dman.einsaetze.every((e) => existsSync("public" + e.file)), "K27b كل معلن إملائي موجود على القرص — لا شبح في مخزن الدikte");
     ok(dman.einsaetze.every((e) => Math.abs(require("fs").statSync(`public${e.file}`).size - e.bytes) < 1), "K27c حجوم الإملاء truthful بايتاً ببايت");
     ok(dman.einsaetze.every((e) => e.file === `/audio/diktat/${e.id}.mp3` && !e.file.startsWith("http")), "K27d المسار مطابقةٌ تامةٌ لمعرف الجملة — أديكاستيا سارياتٌ على s-b1-21b كما على سواها، وبلا مضيف خارجي");
     ok(dman.einsaetze.every((e) => sentences.some((sx) => sx.id === e.id)), "K27e لا صوت لجملة مجهولة — كل مدخل مشدودٌ إلى البنك");
     const diktatIds = Object.keys(diktatAudio);
-    ok(diktatIds.length === ddisk.length && diktatIds.length === 734 && diktatIds.every((id) => sentences.some((sx) => sx.id === id)) && diktatSrc("s-x-999") === null, `K27f قفلُ المصنع (R220–R278: 734 تسجيلًا): كلُّ ملفٍ مرتبطٌ بجملةٍ من البنك (${diktatIds.length} تسجيلاً)، والمعرفُ الشبحُ يُردُّ صفراً — الجملُ غيرُ المسجَّلة تبقى متاحةً نصياً`);
+    ok(diktatIds.length === ddisk.length && diktatIds.length === 742 && diktatIds.every((id) => sentences.some((sx) => sx.id === id)) && diktatSrc("s-x-999") === null, `K27f قفلُ المصنع (R220–R279: 742 تسجيلًا): كلُّ ملفٍ مرتبطٌ بجملةٍ من البنك (${diktatIds.length} تسجيلاً)، والمعرفُ الشبحُ يُردُّ صفراً — الجملُ غيرُ المسجَّلة تبقى متاحةً نصياً`);
     ok(existsSync("scripts/archive/expand_vocab.py") && existsSync("scripts/archive/expand_vocab2.py") && !existsSync("scripts/expand_vocab.py") && !existsSync("scripts/expand_vocab2.py"), "K28a مولّدا التوسعة مسجونان في الأرشيف — لا يداً طالت ولا يدٌ ستطال");
     {
       const pkg = JSON.parse(readFileSync("package.json", "utf8")) as { scripts: Record<string, string> };
@@ -2959,8 +2959,8 @@ void 0;
   ok(nD === 164 && lies.includes("dialogues **164**"), `K125b الحواراتُ 164 في القرصِ والسطرِ والفهرس (${nD}) — R146 أربعةً طويلة وR162 أربعةً عميقة (واحدٌ لكلِّ مستوى)`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 164 && nH === 157 && nH + nG + nK + nS === 1063 && lies.includes("157 ملفاً صوتياً") && lies.includes("1063 ملفات صوتية"),
-    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 1063`);
+  ok(nG === 164 && nH === 157 && nH + nG + nK + nS === 1071 && lies.includes("157 ملفاً صوتياً") && lies.includes("1071 ملفات صوتية"),
+    `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 1071`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
   const nAb = dialogues.flatMap((d) => ablenker(d)).length;
@@ -12136,7 +12136,7 @@ void 0;
     reviewR168.audio.otherManifests.dialogAudioEntriesForTargets === 0 && reviewR168.audio.otherManifests.diktatAudioEntriesForTargets === 0,
     "K237d لقطة R168 التاريخية 147/157 وملفاتها محفوظة؛ كل دفعة لاحقة تختبر التغطية الحالية مستقلاً");
 
-  ok(noCrossManifest && dialogManifest.count === dialogManifest.einsaetze.length && dialogManifest.count >= 80 && diktatManifest.einsaetze.length === 734 &&
+  ok(noCrossManifest && dialogManifest.count === dialogManifest.einsaetze.length && dialogManifest.count >= 80 && diktatManifest.einsaetze.length === 742 &&
     reviewR168.audio.otherManifests.dialogManifestUntouched === true &&
     reviewR168.audio.otherManifests.diktatManifestUntouched === true &&
     coverageAfter.hoerenAudio === 147 && coverageAfter.B2 === "30/40" &&
@@ -12543,7 +12543,7 @@ void 0;
     "K258b الوسمُ صارمٌ في الاتجاهين: الـki-* أحاديُّ الصوتِ موسومٌ، والبيتيُّ ≥2 صوت ولا ki-* فيه — لا خلطَ ولا تمويه");
   const mp3Dialog258 = readdirSync("public/audio/dialog").filter((f) => f.endsWith(".mp3")).length;
   const mp3Alle258 = ["hoeren", "dialog", "diktat", "sprichwort"].reduce((n, d) => n + readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length, 0);
-  ok(mp3Dialog258 === 164 && mp3Alle258 === 1063 && man258.einsaetze.every((e) => existsSync("public" + e.file) && readFileSync("public" + e.file).byteLength === e.bytes),
+  ok(mp3Dialog258 === 164 && mp3Alle258 === 1071 && man258.einsaetze.every((e) => existsSync("public" + e.file) && readFileSync("public" + e.file).byteLength === e.bytes),
     `K258c القرصُ يطابقُ المانيفستو بايتاً بايتًا: ${mp3Dialog258} ملفَّ حوارٍ و${mp3Alle258} ملفاً صوتياً إجمالاً`);
 }
 
@@ -12898,14 +12898,14 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const platten304 = new Set<string>();
   for (const v of verz304) for (const f of readdirSync("public/audio/" + v)) if (f.endsWith(".mp3")) platten304.add("/audio/" + v + "/" + f);
   const berichtet304 = new Set<string>(qcAll.dateien.map((d: any) => d.datei));
-  const gruppen304 = qcAll.gruppen.dialog.anzahl === 164 && qcAll.gruppen.diktat.anzahl === 734 &&
+  const gruppen304 = qcAll.gruppen.dialog.anzahl === 164 && qcAll.gruppen.diktat.anzahl === 742 &&
     qcAll.gruppen.hoeren.anzahl === 157 && qcAll.gruppen.hoerneu.anzahl === 16 && qcAll.gruppen.sprichwort.anzahl === 8;
-  ok(existsSync("scripts/audio_qc_all.py") && qcAll.dateien.length === 1079 && platten304.size === 1079 &&
+  ok(existsSync("scripts/audio_qc_all.py") && qcAll.dateien.length === 1087 && platten304.size === 1087 &&
      [...platten304].every((p) => berichtet304.has(p)) && gruppen304 && qcAll.anomalienGesamt === 0 &&
      qcAll.abdeckung.luecken.length === 0 && qcAll.dateien.every((d: any) => d.ok) &&
      qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
      String(qcAll.grenzEhrlichkeit).includes("Kein menschliches Anhören"),
-    "K304 مراجعةُ الصوتِ الآليةُ الشاملةُ R272: ‏1079/1079 ملفاً مفكوكاً ومقيساً (المدة/الصمت/المستوى/السرعة مقابل نصّ البنك) بلا شذوذٍ ولا ثغراتِ تغطية — قياسٌ آليٌّ مُعلَن، لا استماعَ بشريٌّ ولا حكمَ نطق");
+    "K304 مراجعةُ الصوتِ الآليةُ الشاملةُ R272: ‏1087/1087 ملفاً مفكوكاً ومقيساً (المدة/الصمت/المستوى/السرعة مقابل نصّ البنك) بلا شذوذٍ ولا ثغراتِ تغطية — قياسٌ آليٌّ مُعلَن، لا استماعَ بشريٌّ ولا حكمَ نطق");
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),
