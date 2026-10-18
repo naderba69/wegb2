@@ -2,9 +2,10 @@
 // 🪜 سلّم القراءة (C1/R175): نصوص جسرية قصيرة بين A0 وA1 — مفردات مقيدة ببطاقات
 // A0/A1، وكلّ جديد في مسرد النص، وأسئلة من متن النص نفسه، بلا أيّ صوت مُرفوع:
 // الاستماع بصوت جهازك الآلي كما هو موسوم.
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useProgress } from "@/lib/store";
 import { leseleiter, type LeiterText } from "@/lib/content";
+import { leseWpm, FLUENZ_ZIEL } from "@/lib/fluenz";
 import {
   LEITER_STUFEN,
   leiterFortschritt,
@@ -33,8 +34,13 @@ export function LeseLeiter() {
   const text: LeiterText | null = useMemo(() => leseleiter.find((t) => t.id === textId) ?? null, [textId]);
   const richtig = text ? text.fragen.filter((f) => antworten[f.id] === f.answer).length : 0;
 
+  const startRef = useRef(0);
+  const [fluenzJetzt, setFluenzJetzt] = useState<{ wpm: number; ziel: { von: number; bis: number } } | null>(null);
+
   const waehleText = (t: LeiterText) => {
     stopSpeech();
+    startRef.current = Date.now();
+    setFluenzJetzt(null);
     setTextId(t.id);
     setAntworten({});
     setGezeigt(false);
@@ -45,10 +51,16 @@ export function LeseLeiter() {
     if (!text) return;
     const g = text.fragen.length;
     setGezeigt(true);
+    // A3/R283: Lesefluenz messen (Oeffnen bis Abgabe, ehrlich als Gesamtzeit deklariert)
+    const sek = (Date.now() - startRef.current) / 1000;
+    const woerter = text.de.trim().split(/\s+/).filter(Boolean).length;
+    const wpm = leseWpm(woerter, sek);
+    if (wpm > 0) setFluenzJetzt({ wpm, ziel: FLUENZ_ZIEL[text.stufe] ?? FLUENZ_ZIEL[3] });
     update((p) => {
       const alt = p.leseleiter?.[text.id];
       const neu = !alt || richtig > alt.r ? { r: richtig, g } : alt;
-      return logK({ ...p, leseleiter: { ...(p.leseleiter ?? {}), [text.id]: neu } }, "Lesen", richtig / g >= 2 / 3);
+      const fl = wpm > 0 ? { datum: new Date().toISOString(), wpm, stufe: text.stufe } : null;
+      return logK({ ...p, leseleiter: { ...(p.leseleiter ?? {}), [text.id]: neu }, ...(fl ? { fluenz: [...(p.fluenz ?? []), fl].slice(-50) } : {}) }, "Lesen", richtig / g >= 2 / 3);
     });
   };
 
@@ -175,6 +187,12 @@ export function LeseLeiter() {
             <div style={{ marginTop: "0.6rem", display: "flex", gap: "0.4rem", flexWrap: "wrap", alignItems: "center" }}>
               <strong>
                 نتيجتك: <span className="rtl-num">{richtig}/{text.fragen.length}</span>
+                {fluenzJetzt && (
+                  <div data-testid="leseleiter-fluenz" style={{ marginTop: "0.35rem" }}>
+                    ⏱️ سرعة قراءتك المقاسة: <strong className="rtl-num">{fluenzJetzt.wpm}</strong> كلمة/دقيقة
+                    (نطاق هذه المحطة التوجيهي <span className="rtl-num">{fluenzJetzt.ziel.von}–{fluenzJetzt.ziel.bis}</span>؛ تشمل زمن الأسئلة — قياس آلي للوتيرة لا حكم مستوى)
+                  </div>
+                )}
                 {richtig / text.fragen.length >= 2 / 3 ? " — نصٌّ مُتقن ✅" : " — أعد القراءة وحاول من جديد"}
               </strong>
               <button type="button" className="btn btn-ghost" onClick={() => waehleText(text)}>↺ إعادة المحاولة</button>

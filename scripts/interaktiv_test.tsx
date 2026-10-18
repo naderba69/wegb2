@@ -2000,6 +2000,46 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!btn("أظهر النص"), "R282h بعد التسليم يُفتح النص للمراجعة");
   }
 
+  /* ═══════════ R283 — M12 شارة الجنس + A18 خريطة + A11 كتابة عملية + A3 عرض الطلاقة ═══════════ */
+  {
+    const { LernLandkarte } = await import("../components/landkarte");
+    const prog283 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 100, days: { 11: { closed: true, score: 1, total: 1, tasksDone: 1, tasksTotal: 1, at: "2026-01-01" }, 95: { closed: true, score: 1, total: 1, tasksDone: 1, tasksTotal: 1, at: "2026-04-01" } } } };
+    mount(React.createElement(LernLandkarte, { progress: prog283 as never }));
+    ok(!!rootEl.querySelector('[data-testid="landkarte"]') && txt().includes("أنت هنا") && txt().includes("A2"), "R283a خريطة الإنجاز (A18) تُرسم وعلامة الموضع الحالي على A2");
+
+    const { SchreibAlltag } = await import("../components/schreiballtag");
+    mount(React.createElement(SchreibAlltag, {}));
+    ok(!!rootEl.querySelector('[data-testid="schreiballtag"]'), "R283b قسم الكتابة العملية (A11) يُرسم");
+    const musterBtn = rootEl.querySelector('[data-testid="schreiballtag-muster"]') as HTMLButtonElement | null;
+    ok(!!musterBtn && musterBtn.disabled, "R283c النموذج مقفل قبل محاولة من 30 كلمة");
+    const flaeche = rootEl.querySelector("textarea") as HTMLTextAreaElement;
+    typeIn(flaeche, "Sehr geehrte Damen und Herren, ich schreibe Ihnen heute wegen der defekten Heizung in meiner Wohnung. Seit drei Tagen ist es sehr kalt bei uns. Ich habe schon zweimal angerufen, aber nichts ist passiert. Bitte helfen Sie uns schnell. Mit freundlichen Grüßen");
+    ok(!(rootEl.querySelector('[data-testid="schreiballtag-muster"]') as HTMLButtonElement).disabled, "R283d بعد 30 كلمة يُفتح النموذج");
+    click(rootEl.querySelector('[data-testid="schreiballtag-muster"]') as HTMLElement);
+    ok(txt().includes("Mit freundlichen Grüßen"), "R283e النموذج يظهر للمقارنة بعد المحاولة");
+
+    const { BerichteZentrum } = await import("../components/berichte");
+    const progFl = { ...emptyProgress, fluenz: [{ datum: "2026-06-15T10:00:00.000Z", wpm: 82, stufe: 3 }] };
+    mount(React.createElement(BerichteZentrum, { progress: progFl as never, name: "سارة النموذج" }));
+    const hdrF = btn("BerichteZentrum");
+    if (hdrF) click(hdrF);
+    const fl = rootEl.querySelector('[data-testid="metrik-fluenz"]');
+    ok(!!fl && (fl.textContent ?? "").includes("82"), "R283f بطاقة طلاقة القراءة (A3) تعرض آخر قياس كلمات/دقيقة");
+
+    const { getDeck, vocabMap } = await import("../lib/content");
+    const { default: TaskView } = await import("../components/tasks");
+    const deckNomen = Object.keys(vocabMap).map((id) => getDeck(id)).find((d) => d && d.cards[0]?.article);
+    ok(!!deckNomen, "R283g وُجدت حزمة تبدأ باسم معرّف للاختبار");
+    if (deckNomen) {
+      mount(React.createElement(TaskView, {
+        task: { id: "t-genus", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deckNomen.id },
+        lang: "ar" as const, day: 8, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1, tempo: "leicht" as const,
+      }));
+      const genus = rootEl.querySelector('[data-testid="karte-genus"]');
+      ok(!!genus && /[●▲■]/.test(genus.textContent ?? ""), "R283h شارة الجنس المزدوجة (شكل + حرف، M12) على وجه البطاقة بجانب الأداة");
+    }
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

@@ -37,6 +37,9 @@ import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, k
 import { prognose } from "../lib/prognose";
 import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
 import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
+import { genusCode } from "../lib/genus";
+import { leseWpm, fluenzBand } from "../lib/fluenz";
+import { SCHREIB_ALLTAG } from "../lib/schreiballtag";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -12968,6 +12971,24 @@ function collectR262(dir: string, out: string[] = []): string[] {
      tasks307.includes('data-testid="hoeren-pruefung-toggle"') && tasks307.includes('data-testid="hoeren-abgabe"') &&
      ueben307.includes('phonetik: { icon:') && ueben307.includes('offen === "phonetik"'),
     `K307 ثلاثية R282: عدّاد تحدّث = ${sz307.sek}ث/هدف ${SPRECH_ZIEL_SEK}ث (A4)، ${PHONETIK_EINHEITEN.length} وحدات صوتيات A0→A2 بأزواج دنيا كاملة (A5)، ووضع امتحان الاستماع بمقابضه في المهام والتسجيل في التدريب (A9)`);
+}
+
+// ===== K308 (R283 · A3+A11+A18+M12): Fluenz, Alltags-Schreiben, Landkarte, Genus-Doppelkodierung =====
+{
+  const alleKarten308 = Object.values(vocabMap).flatMap((d) => d.cards);
+  const nomen308 = alleKarten308.filter((k) => k.article);
+  const genres308 = new Set(SCHREIB_ALLTAG.map((x) => x.genreDe));
+  const fort308 = readFileSync("app/fortschritt/page.tsx", "utf8");
+  ok(genusCode("der")?.symbol === "●" && genusCode("die")?.letter === "f" && genusCode("das")?.symbol === "■" && genusCode(undefined) === null &&
+     nomen308.length > 1000 && nomen308.every((k) => genusCode(k.article) !== null) &&
+     leseWpm(120, 60) === 120 && leseWpm(90, 120) === 45 && fluenzBand(70, 3) === "im-band" && fluenzBand(20, 3) === "unter" &&
+     SCHREIB_ALLTAG.length === 12 && genres308.has("Beschwerde an die Hausverwaltung") && genres308.has("Reklamation (Online-Kauf)") && genres308.has("Widerspruch (kurz, sachlich)") &&
+     SCHREIB_ALLTAG.every((x) => x.bausteine.length >= 5 && x.checkliste.length >= 4 && x.muster.length >= 200) &&
+     readFileSync("components/tasks.tsx", "utf8").includes('data-testid="karte-genus"') &&
+     readFileSync("components/leseleiter.tsx", "utf8").includes('data-testid="leseleiter-fluenz"') &&
+     readFileSync("components/briefe.tsx", "utf8").includes("<SchreibAlltag />") &&
+     fort308.includes('offen === "landkarte"') && fort308.includes("LernLandkarte"),
+    `K308 رباعية R283: ترميز جنس مزدوج ●m/▲f/■n يغطي ${nomen308.length} اسمًا (M12)، حساب طلاقة القراءة وحدودها (A3)، ${SCHREIB_ALLTAG.length} موقف كتابة عملية بنماذج وقوائم فحص (A11)، وخريطة إنجاز مسجّلة في تقدّمي (A18)`);
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),

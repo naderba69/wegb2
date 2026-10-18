@@ -438,6 +438,8 @@ export interface Progress {
   simulationen?: { datum: string; seed: number; format?: string; punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number }; bestanden: boolean }[];
   /** 🎙️ سجلّ بطاقات المحادثة المسجّلة (E5): بيانات وصفية فقط (بطاقة/تقدير ذاتي/مدّة) — الصوت نفسه لا يُخزَّن أبداً */
   sprechUebungen?: { datum: string; level: string; teil: number; karteId: string; dauerS: number; punkte: number }[];
+  /** ⏱️ A3/R283: قياسات سرعة القراءة (كلمات/دقيقة) من سلّم القراءة — قياس زمني آلي لا حكم مستوى رسمي */
+  fluenz?: { datum: string; wpm: number; stufe: number }[];
   /** 🔁 حلقات الكتابة (M5/R185): مسودّة وإعادة كتابتها محفوظتان محليًا للمقارنة الكلمية — آخر ٨ حلقات */
   schreibEntwuerfe?: { id: string; taskId: string; datum: string; v1: string; v2?: string }[];
   /** 🪜 تقدّم سلّم القراءة (C1): النص ← أفضل نتيجة (صحيحة/كلية) — المحطة التالية تُفتح بإتمام السابقة */

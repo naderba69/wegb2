@@ -7,6 +7,7 @@ import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwo
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
+import { genusCode } from "@/lib/genus";
 import { addFehlerNow, markiereSchriftlich, loadProgress, saveProgress } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
 import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
@@ -720,6 +721,11 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
               <>
                 {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
                 <De>{deFormOf(card, false)}</De>
+                {genusCode(card.article) && (
+                  <span className="chip" data-testid="karte-genus" title={`الجنس: ${genusCode(card.article)!.ar}`} style={{ fontSize: "0.8rem", marginInlineStart: "0.4rem" }}>
+                    {genusCode(card.article)!.symbol} {genusCode(card.article)!.letter}
+                  </span>
+                )}
               </>
             )}
           </div>

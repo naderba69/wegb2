@@ -14,6 +14,7 @@ import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "@/lib/metriken";
 import { noteFromPct } from "@/lib/grader";
 import { prognose } from "@/lib/prognose";
 import { sprechHeute } from "@/lib/sprechziel";
+import { FLUENZ_ZIEL } from "@/lib/fluenz";
 import { levelOfXp } from "@/lib/spiel";
 import { De } from "./De";
 import { StundenVertrag } from "./stundenvertrag";
@@ -252,6 +253,23 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
                     </>
                   )}
                 </div>
+              </div>
+            );
+          })()}
+
+          {/* ⏱️ طلاقة القراءة المقاسة (A3/R283): من سلّم القراءة — آخر قياس وعدد القياسات */}
+          {(() => {
+            const fl = progress.fluenz ?? [];
+            const letzt = fl[fl.length - 1];
+            const ziel = letzt ? FLUENZ_ZIEL[letzt.stufe] ?? FLUENZ_ZIEL[3] : null;
+            return (
+              <div data-testid="metrik-fluenz" className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)", fontSize: "0.85rem" }}>
+                ⏱️ <strong>طلاقة القراءة (A3):</strong>{" "}
+                {!letzt || !ziel ? (
+                  <span style={{ color: "var(--color-ink2)" }}>لا قياس بعد — تُقاس سرعتك (كلمات/دقيقة) في «سلّم القراءة» عند تسليم أي نصّ.</span>
+                ) : (
+                  <>آخر قياس: <strong className="rtl-num">{letzt.wpm}</strong> كلمة/دقيقة في محطة سلّم {letzt.stufe} (نطاقها التوجيهي <span className="rtl-num">{ziel.von}–{ziel.bis}</span>) · من <span className="rtl-num">{fl.length}</span> قياسًا محفوظًا. <span style={{ color: "var(--color-ink2)" }}>(تقيس الوتيرة لا الفهم؛ فهمك يُقاس بأسئلة النصّ نفسها.)</span></>
+                )}
               </div>
             );
           })()}

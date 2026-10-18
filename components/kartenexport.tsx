@@ -6,6 +6,7 @@ import { exportKarten, karteninCsv, allesInCsv } from "@/lib/karten-export";
 import { De } from "@/components/De";
 
 const FARB_STIL: Record<string, string> = { BLAU: "#1d4ed8", ROT: "#be123c", "GRÜN": "#15803d" };
+const FARB_SYMBOL: Record<string, string> = { BLAU: "● m", ROT: "▲ f", "GRÜN": "■ n" }; // M12: Form+Buchstabe neben der Farbe
 
 export default function KartenExport() {
   const decks = useMemo(
@@ -52,7 +53,7 @@ export default function KartenExport() {
             {karten.slice(0, 12).map((k, i) => (
               <tr key={i}>
                 <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}>
-                  <De style={{ fontWeight: 800, color: FARB_STIL[k.farbe.split(" ")[0]] ?? "inherit" }}>{k.vorne}</De>
+                  <De style={{ fontWeight: 800, color: FARB_STIL[k.farbe.split(" ")[0]] ?? "inherit" }}>{FARB_SYMBOL[k.farbe.split(" ")[0]] ? `${FARB_SYMBOL[k.farbe.split(" ")[0]]} · ` : ""}{k.vorne}</De>
                 </td>
                 <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}>{k.farbe}</td>
                 <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}>{k.hinten}</td>
