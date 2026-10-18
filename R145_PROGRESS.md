@@ -768,3 +768,4 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 - R270: Kampagne Punkt 1 — s-a1-89…98 aufgenommen (neu 488/494, offen 6), Diktat 668.
 - R271: Kampagne Punkt 1 ABGESCHLOSSEN — s-a1-99…102 + s-b2-211…212 aufgenommen; alle 494 neu-Sätze aufgezeichnet (offen 0), Diktat 674/742.
 - R272: Vollautomatisierte Audio-Review — scripts/audio_qc_all.py misst alle 1019 MP3s (0 Anomalien, 0 Lücken), Bericht docs/audio-qc-all-2026-10-18.json, K304.
+- R273: Altbestand-Vervollständigung 1 — s-a0-16…25 aufgenommen (alt 10/68, offen 58), Diktat 684/742; Audio-QC auf 1029 Dateien nachgeführt.

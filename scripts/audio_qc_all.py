@@ -46,7 +46,7 @@ SCHWELLEN = {
     "hoerneu":    dict(GEMEINSAM, minDauerS=3.0, zeichenProSekunde=[5.0, 22.0]),
 }
 GRUPPEN_DATEIEN = {  # gruppe -> (verzeichnis, erwartete anzahl)
-    "dialog": ("dialog", 164), "diktat": ("diktat", 674), "hoeren": ("hoeren", 157),
+    "dialog": ("dialog", 164), "diktat": ("diktat", 684), "hoeren": ("hoeren", 157),
     "hoerneu": ("hoerneu", 16), "sprichwort": ("sprichwort", 8),
 }
 
