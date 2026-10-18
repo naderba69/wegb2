@@ -449,7 +449,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     const { levelOf } = await import("../lib/plan");
     const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
-    mount(React.createElement(HoerLabor, { progress: p1 }));
+    mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
     ok(txt().includes("🔊 صوت مُنتَج"), "XII13 نصُ اليومِ الأوّل يحملُ شارةَ الصوتِ المُنتَج — لا TTS جهاز");
     const aud = d0.querySelector("audio");
     ok(!!aud && (aud.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(1).toLowerCase()}-`), "XII14 عنصر ‹audio› موصولٌ بلوحِه الحقّ t-${levelOf(1).toLowerCase()}- من public");
@@ -3869,6 +3869,23 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok((pfad?.textContent ?? "").includes("أُغلق 2/21") && (pfad?.textContent ?? "").includes("لا ينقلك بين الأيام"),
       "XCVII3 عدّاد القسم من السجلّ وإفصاح عدم-التنقّل ظاهر للمتعلم");
   }
+
+
+// ── R296: A16 مدخل حرّ + A20 لوحة التفرّع + A6 مفتاح مصدر الصوت ──
+{
+  const { FreiesInput } = await import("../components/freiesinput");
+  const { VerzweigungPanel } = await import("../components/verzweigung");
+  mount(React.createElement(FreiesInput));
+  ok(!!rootEl.querySelector('[data-testid="freies-input"]') && txt().includes("مدخل حرّ موسّع") && !!rootEl.querySelector('[data-testid="input-neu"]'), "R296a المدخل الحرّ الموسّع يُعرض ببنوده ومفتاح التشكيلة");
+  ok(txt().includes("جلستك:"), "R296b ملخص الجلسة يظهر بعدد البنود والدقائق");
+  mount(React.createElement(VerzweigungPanel, { progress: { ...emptyProgress } }));
+  ok(!!rootEl.querySelector('[data-testid="verzweigung-panel"]') && txt().includes("تفرّع الإتقان") && txt().includes("لا تتغيّر"), "R296c لوحة التفرّع: بارد ⇒ عادي مع إعلان عدم مساس الخطة");
+  const { HoerLabor } = await import("../components/hoeren");
+  mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
+  ok(!!rootEl.querySelector('[data-testid="stimme-geraet"]') && !!rootEl.querySelector('[data-testid="stimme-aufnahme"]'), "R296d مختبر السماع يعرض مفتاح مصدر الصوت (مسجّل/جهاز)");
+  click(rootEl.querySelector('[data-testid="stimme-geraet"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="stimme-geraet"]'), "R296e النقر على صوت الجهاز لا يكسر المختبر");
+}
 
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }

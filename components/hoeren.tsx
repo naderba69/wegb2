@@ -23,6 +23,8 @@ export function HoerLabor({ progress }: { progress: Progress }) {
   const { update } = useProgress();
   const [modus, setModus] = useState<Modus>("training");
   const [tempo, setTempo] = useState<Tempo>("lern");
+  // 🔊 A6 (R296): مصدر الصوت — التسجيل أو صوت جهاز ثانٍ للنص نفسه
+  const [stimme, setStimme] = useState<"aufnahme" | "geraet">("aufnahme");
   const [rundeNr, setRundeNr] = useState(0);
   const runde = useMemo(() => bauHoerRunde(progress.plan.day + rundeNr * 13), [progress.plan.day, rundeNr]);
   const [plays, setPlays] = useState(0);
@@ -49,6 +51,10 @@ export function HoerLabor({ progress }: { progress: Progress }) {
     setPlays((n) => n + 1);
     setStarted(true);
     const el = audioRef.current;
+    if (stimme === "geraet") {
+      speakAny(runde.de, { rate: RATE[tempo] });
+      return;
+    }
     if (mitAudio && el) {
       el.playbackRate = RATE[tempo];
       el.currentTime = 0;
@@ -112,6 +118,8 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         <ModusUmschalter modus={modus} onWechsel={reset} />
         <button className="chip" style={{ cursor: "pointer", background: tempo === "lern" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "lern" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("lern")}>🐢 {RATE.lern}×</button>
         <button className="chip" style={{ cursor: "pointer", background: tempo === "pruefung" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("pruefung")}>⚡ {RATE.pruefung}× Prüfungstempo</button>
+        <button type="button" className="chip" data-testid="stimme-aufnahme" style={{ cursor: "pointer", background: stimme === "aufnahme" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "aufnahme" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("aufnahme")}>🔊 الصوت المسجّل</button>
+        <button type="button" className="chip" data-testid="stimme-geraet" style={{ cursor: "pointer", background: stimme === "geraet" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "geraet" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("geraet")}>🗣 صوت الجهاز — صوت ثانٍ للنص نفسه</button>
       </div>
 
       {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="auto" />}

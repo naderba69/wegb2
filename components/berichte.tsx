@@ -18,6 +18,7 @@ import { FLUENZ_ZIEL } from "@/lib/fluenz";
 import { skillBilanz } from "@/lib/skillbilanz";
 import { wochenBericht } from "@/lib/wochenbericht";
 import { KalibrierungPanel } from "./kalibrierung";
+import { VerzweigungPanel } from "./verzweigung";
 import { wartungsBericht } from "@/lib/wartung";
 import { wochenBilanz } from "@/lib/motivation";
 import { levelOfXp } from "@/lib/spiel";
@@ -336,6 +337,7 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
 
           {/* 🎚️ معايرة صعوبة من البيانات + بطاقات عنيدة (M4/R288) */}
           <KalibrierungPanel progress={progress} />
+          <VerzweigungPanel progress={progress} />
 
           {/* 🔧 صيانة المستويات المنتهية (A17/R284): ما أُتقن لا يتحلّل بصمت */}
           {(() => {

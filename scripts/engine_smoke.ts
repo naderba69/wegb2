@@ -68,6 +68,8 @@ import { FEHLERATLAS, atlasEintraege } from "../lib/fehleratlas";
 import { FSP_AUSRICHTUNG } from "../lib/fsp";
 import { kollokProduktion, partnerOk } from "../lib/kollokproduktion";
 import { b2Luecke, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
+import { inputPaket } from "../lib/freiesinput";
+import { planVerzweigung } from "../lib/verzweigung";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13911,6 +13913,36 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok((deSrc.match(/lang="de"/g) ?? []).length >= 2 && css.includes(":focus-visible") && css.includes("--ui-focus") &&
      dsSrc.includes('href="#main-content"') && css.includes(".ui-skip-link") && css.includes("prefers-reduced-motion"),
     "K284b النص الألماني موسوم lang=«de» لقارئات الشاشة، وقاعدة تركيز مرئية عالمية، ورابط تخطٍّ، واحترام تقليل الحركة");
+}
+
+
+// ── K321 (R296): A6 تنويع الأصوات + A16 مدخل حرّ موسّع + A20 تفرّع إتقان + A31 ميزانية أداء ──
+{
+  const paket20 = inputPaket("alle", 20, 7);
+  ok(paket20.length >= 6 && paket20.reduce((a, i) => a + i.minuten, 0) >= 14, "K321a مدخل حرّ: 20 دقيقة ⇒ ≥6 بنود و≥14 دقيقة مقدّرة");
+  ok(paket20.every((i) => i.art !== "dialog" || i.ki === (dialogAudioArt(i.id) === "ki")), "K321b كل حوار موسوم KI يطابق سجلّ الأصوات (المنزل بلا وسم)");
+  ok(inputPaket("B1", 30, 3).every((i) => i.level === "B1" || i.level === "B2"), "K321c ترشيح المستوى يعمل");
+  const jetzt321 = new Date();
+  const iso321 = (t: Date) => t.toISOString();
+  const lvl321 = levelAmTag(150);
+  const karten321 = alleVokabeln.filter((k) => k.level === lvl321).slice(0, 30);
+  const basis321 = (stab: number, tageZurueck: number) => Object.fromEntries(karten321.map((k) => [k.id, { ...newCard(), reps: 6, stab, diff: 5, last: iso321(new Date(jetzt321.getTime() - tageZurueck * 86400000)), due: iso321(new Date(jetzt321.getTime() + 86400000)), introduced: iso321(new Date(jetzt321.getTime() - 90 * 86400000)) }]));
+  const p0 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 150 } } as Progress;
+  const kalt = planVerzweigung(p0, jetzt321);
+  ok(kalt.art === "normal" && kalt.karten === 0 && p0.plan.day === 150, "K321d بارد بلا بيانات ⇒ عادي، والخطة لا تُلمس");
+  const pStark = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 150 }, srs: basis321(60, 0) } as Progress;
+  ok(planVerzweigung(pStark, jetzt321).art === "beschleunigen", "K321e احتفاظ مرتفع ناضج ⇒ تسريع مقترح");
+  const pFest = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 150 }, srs: basis321(0.5, 30) } as Progress;
+  ok(planVerzweigung(pFest, jetzt321).art === "festigen", "K321f احتفاظ منخفض ⇒ تثبيت مقترح");
+  ok(existsSync("docs/PERFORMANCE_BUDGET.md"), "K321g وثيقة ميزانية الأداء موجودة");
+  const banksGroesse = require("fs").statSync("public/banks.json").size;
+  ok(banksGroesse <= 5_000_000, "K321h banks.json ≤5MB (مقاس: " + banksGroesse + ")");
+  const audioRoot = "public/audio";
+  const alle = readdirSync(audioRoot, { recursive: true }).filter((f) => String(f).endsWith(".mp3"));
+  let maxA = 0; for (const f of alle) { const g = require("fs").statSync(audioRoot + "/" + f).size; if (g > maxA) maxA = g; }
+  ok(alle.length === 1087 && maxA <= 512 * 1024, "K321i الجرد الصوتي 1087 وأكبر ملف ≤512KB (مقاس: " + alle.length + "/" + maxA + ")");
+  const hoerenSrc = readFileSync("components/hoeren.tsx", "utf8");
+  ok(hoerenSrc.includes("stimme-geraet") && hoerenSrc.includes('stimme === "geraet"'), "K321j مختبر السماع: مصدر صوت جهاز ثانٍ (A6) دون مساس بعدّ الامتحان");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
