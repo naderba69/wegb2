@@ -17,6 +17,7 @@ import { pickLk } from "@/lib/luecken";
 import { normalize } from "@/lib/grader";
 import { bauHoerRunde, darfSpielen, fragenFrei, werteItem, werteRunde, hoerNote, RATE, type Modus, type Tempo } from "@/lib/hoeren";
 import { ModusUmschalter } from "./modus";
+import { HoerStrategienKarte } from "./hoerstrategien";
 
 export function HoerLabor({ progress }: { progress: Progress }) {
   const { update } = useProgress();
@@ -106,6 +107,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         </div>
       )}
 
+      <HoerStrategienKarte started={started} geprueft={geprueft} />
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
         <ModusUmschalter modus={modus} onWechsel={reset} />
         <button className="chip" style={{ cursor: "pointer", background: tempo === "lern" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "lern" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("lern")}>🐢 {RATE.lern}×</button>

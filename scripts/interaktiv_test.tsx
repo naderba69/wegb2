@@ -2232,6 +2232,27 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!leer && (leer.textContent ?? "").includes("أكمل المهمة التالية"), "R291b وبالفعل الواحد الواضح: ما تفعله الآن");
   }
 
+  /* ═══════════ R292 — A8 استراتيجيات + A10 قراءة سريعة + A32 ضجيج ═══════════ */
+  {
+    const { HoerStrategienKarte } = await import("../components/hoerstrategien");
+    mount(React.createElement(HoerStrategienKarte, { started: false, geprueft: false }));
+    ok(!!rootEl.querySelector('[data-testid="hoerstrategien"]') && !!rootEl.querySelector('[data-testid="strategie-vor"]') && !!rootEl.querySelector('[data-testid="strategie-nach"]'), "R292a بطاقة استراتيجيات الاستماع (A8) بمراحلها الثلاث");
+    const schritt = rootEl.querySelector('[data-testid="strategie-schritt-vor-0"]') as HTMLInputElement | null;
+    ok(!!schritt, "R292b خطوات قبل-الاستماع قابلة للتأشير");
+    if (schritt) click(schritt);
+    ok((rootEl.querySelector('[data-testid="strategie-schritt-vor-0"]') as HTMLInputElement)?.checked === true, "R292c تأشير الخطوة يثبت في الجلسة");
+
+    const { SchnellLesen } = await import("../components/schnellesen");
+    mount(React.createElement(SchnellLesen, {}));
+    ok(!!rootEl.querySelector('[data-testid="schnellesen"]') && !!rootEl.querySelector('[data-testid="schnellesen-start"]'), "R292d محطة القراءة السريعة المؤقتة (A10) تُرسم بزر بدء التوقيت");
+    click(rootEl.querySelector('[data-testid="schnellesen-start"]') as HTMLElement);
+    ok(!!rootEl.querySelector('[data-testid="schnellesen-zeit"]') && !!rootEl.querySelector('[data-testid="schnellesen-opt-gist-0"]'), "R292e التوقيت يعمل وسؤال المسح بجواباته ظاهر");
+
+    const { RauschSteuerung } = await import("../components/rauschen");
+    mount(React.createElement(RauschSteuerung, {}));
+    ok(!!rootEl.querySelector('[data-testid="rauschen-toggle"]') || !!rootEl.querySelector('[data-testid="rauschen-aus"]'), "R292f تحكم الضجيج المولّد (A32) حاضر أو معلن تعذّره بصراحة");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

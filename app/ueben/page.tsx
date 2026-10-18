@@ -11,6 +11,7 @@ import { BlitzDrill, KurzSession } from "@/components/blitz";
 import { HoerLabor, LueckDiktat } from "@/components/hoeren";
 import { MündlichLabor } from "@/components/muendlich";
 import { LeseLeiter } from "@/components/leseleiter";
+import { SchnellLesen } from "@/components/schnellesen";
 import { RedemittelBank } from "@/components/redemittel";
 import { HoerNeu } from "@/components/hoerneu";
 import { VortragsBühne } from "@/components/vortrag";
@@ -201,7 +202,7 @@ export default function Ueben() {
           {offen === "interview" && <InterviewArena progress={progress} />}
           {offen === "briefe" && <BriefSchmiede progress={progress} />}
           {offen === "szenarien" && <LebensSzenarien progress={progress} />}
-          {offen === "leseleiter" && <LeseLeiter />}
+          {offen === "leseleiter" && (<div style={{ display: "grid", gap: "0.9rem" }}><LeseLeiter /><SchnellLesen /></div>)}
           {offen === "redemittel" && <RedemittelBank />}
           {offen === "hoerneu" && <HoerNeu />}
           {offen === "tiefen" && <TiefenLexikon progress={progress} />}

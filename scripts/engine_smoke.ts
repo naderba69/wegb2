@@ -57,6 +57,9 @@ import { pruefeImportText, sicherungFaellig } from "../lib/backup";
 import { bemerkenFrage, wochenNeueRegeln } from "../lib/bemerken";
 import { wochenBericht } from "../lib/wochenbericht";
 import { MELDUNGEN } from "../lib/meldungen";
+import { HOERSTRATEGIEN, strategiePhase } from "../lib/hoerstrategien";
+import { scanRunde } from "../lib/schnellesen";
+import { RAUSCH_VORLAGEN, rauschenPuffer } from "../lib/rauschen";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13198,6 +13201,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
      css316.includes('"Cairo"') && css316.includes('"Geeza Pro"'),
     `K316 ثنائية R291: سجلّ رسائل بفعل واحد واضح في خمس حالات فراغ (M17)، وتباين محسوب آليًا نص/خلفية ${kon316.toFixed(1)} وخافت/سطح ${konMuted316.toFixed(1)} فوق AA مع لمس 44px وتركيز ظاهر وخط عربي أولًا (M18)`);
 }
+// ===== K317 (R292 · A8+A10+A32): Hörstrategien, Schnelllesen, Rauschen =====
+{
+  let runde317 = null as ReturnType<typeof scanRunde>;
+  for (let s = 1; s <= 60 && !runde317; s++) runde317 = scanRunde(s);
+  const puffer317a = rauschenPuffer(7, 1, 8000);
+  const puffer317b = rauschenPuffer(7, 1, 8000);
+  const puffer317c = rauschenPuffer(8, 1, 8000);
+  ok(HOERSTRATEGIEN.length === 3 && HOERSTRATEGIEN.every((p) => p.schritte.length === 3) &&
+     strategiePhase(false, false) === "vor" && strategiePhase(true, false) === "waehrend" && strategiePhase(true, true) === "nach" &&
+     !!runde317 && runde317.gistOptionen.length === 3 && runde317.scan.length >= 2 &&
+     runde317.scan.every((f) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3) &&
+     puffer317a.length === 8000 && puffer317a[100] === puffer317b[100] && puffer317a[100] !== puffer317c[100] &&
+     [...puffer317a].every((x) => Math.abs(x) <= 1) && RAUSCH_VORLAGEN.length === 3 &&
+     readFileSync("components/hoeren.tsx", "utf8").includes("HoerStrategienKarte") &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("SchnellLesen") &&
+     readFileSync("components/hoerneu.tsx", "utf8").includes("RauschSteuerung"),
+    `K317 ثلاثية R292: استراتيجيات استماع ثلاث مراحل (A8)، جولة قراءة سريعة من نص «${runde317?.titelDe}» بـ${runde317?.scan.length} أسئلة بحث (A10)، وذاكرة ضجيج حتمية بثلاثة محيطات (A32)`);
+}
+
 
 
 

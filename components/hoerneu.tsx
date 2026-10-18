@@ -8,6 +8,7 @@ import { gemischteOptionen } from "@/lib/optionen";
 import { speakDe } from "@/lib/speech";
 import type { Modus } from "@/lib/hoeren";
 import { ModusAbzeichen, ModusUmschalter } from "./modus";
+import { RauschSteuerung } from "./rauschen";
 import { De } from "./De";
 
 const FORMAT_AR: Record<HoerNeuItem["format"], string> = {
@@ -89,6 +90,7 @@ function ItemAnsicht({ item }: { item: HoerNeuItem }) {
             ))}
           </select>
         </label>
+        <RauschSteuerung />
         <button type="button" className="btn btn-ghost" disabled={pruefungGesperrt} onClick={() => setSkript((s) => !s)}>
           {pruefungGesperrt ? "🔒 النص مقفل حتى كشف النتيجة" : skript ? "إخفاء النص" : "إظهار النص (بعد الاستماع أولًا)"}
         </button>
