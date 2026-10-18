@@ -3910,6 +3910,27 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!rootEl.querySelector('[data-testid="vollpruefung-variante"]'), "R299b زرّ تشكيلة امتحان أخرى ظاهر في شاشة البدء");
 }
 
+
+// ── R300: محطة القراءة الحرة + ألعاب الكلمات ──
+{
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-station"]') && !!rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]'), "R300a محطة القراءة الحرة تعرض نصوص A0");
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-lesen"]') && !!rootEl.querySelector('[data-testid="lesestoff-fragen-frei-a0-hund"]'), "R300b فتح النصّ يعرض الفقرات وأسئلة الفهم");
+  click(rootEl.querySelector('[data-testid="lesestoff-opt-frei-a0-hund-0-0"]') as HTMLElement);
+  ok((rootEl.textContent ?? "").includes("أحسنت"), "R300c الإجابة الصحيحة تُظهر شرحًا مشجّعًا");
+  click(rootEl.querySelector('[data-testid="lesestoff-fertig"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-cafe"]'), "R300d بعد التعليم منتهيًا تظهر قائمة الحوارات من جديد");
+  const { SpieleStation } = await import("../components/spiele");
+  mount(React.createElement(SpieleStation));
+  ok(!!rootEl.querySelector('[data-testid="spiel-gitter"]') && !!rootEl.querySelector('[data-testid="spiel-gitter-zelle-0-0"]'), "R300e لعبة شبكة الكلمات تعرض شبكة 10×10");
+  click(rootEl.querySelector('[data-testid="spiel-tab-dialog"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="spiel-dialog"]'), "R300f لعبة أكمل الحوار تعرض حوارًا بفجوة");
+  click(rootEl.querySelector('[data-testid="spiel-tab-uebersetz"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="spiel-uebersetz-input"]'), "R300g لعبة ترجم بنفسك تعرض خانة كتابة");
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

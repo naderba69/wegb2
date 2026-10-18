@@ -16,6 +16,8 @@ import { PragmatikKarte } from "@/components/pragmatik";
 import { WortfamilienStation } from "@/components/wortfamilien";
 import { KollokProduktionStation } from "@/components/kollokproduktion";
 import { ErweiterungStation } from "@/components/erweiterung";
+import { LeseStoffStation } from "@/components/lesestoff";
+import { SpieleStation } from "@/components/spiele";
 import { ReferenzPanel } from "@/components/referenz";
 import { FreiesInput } from "@/components/freiesinput";
 import { FehlerAtlas } from "@/components/fehleratlas";
@@ -45,7 +47,7 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
@@ -70,6 +72,8 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   hoerneu: { icon: "🎧", titel: "استماع متنوّع", unter: "أخبار وإعلانات ومقابلات بصوت KI موسوم وسرعات من المشغّل." },
   leben: { icon: "🌍", titel: "الحياة في ألمانيا والاعتراف المهني", unter: "مؤسسات وأوراق وعادات، ومسار Anerkennung التمريض، ولغة شارع بسياقها." },
   tiefen: { icon: "📖", titel: "معجم المفردات", unter: "ابحث عن كلمة أو معنى عند الحاجة." },
+  lesestoff: { icon: "📚", titel: "قراءة وحوارات حرة", unter: "قصص ونصوص وحوارات جديدة لكل المستويات مع أسئلة فهم (R300 — خارج الخطة)." },
+  spiele: { icon: "🎮", titel: "ألعاب الكلمات", unter: "شبكة كلمات من مفرداتك، أكمل الحوار، وترجم بكتابتك (R300 — خارج الخطة)." },
   katalog: { icon: "🗃️", titel: "دليل التدريبات", unter: "استعرض التدريبات المتاحة في الأكاديمية." },
 };
 
@@ -90,7 +94,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-reference",
     title: "مراجع إضافية",
     description: "للبحث والاستكشاف عند الحاجة.",
-    items: ["leben", "tiefen", "katalog"],
+    items: ["leben", "tiefen", "lesestoff", "spiele", "katalog"],
   },
 ];
 
@@ -221,6 +225,8 @@ export default function Ueben() {
           {offen === "vollpruefung" && <VollPruefung />}
           {offen === "begleiter" && <SprechBegleiter />}
           {offen === "leben" && <LebensweltStation />}
+          {offen === "lesestoff" && <LeseStoffStation />}
+          {offen === "spiele" && <SpieleStation />}
           {offen === "katalog" && <KatalogLeiste />}
         </section>
       </div>

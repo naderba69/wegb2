@@ -71,6 +71,8 @@ import { b2Luecke, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
 import { inputPaket } from "../lib/freiesinput";
 import { erweiterungDecks, erweiterungSitzung, erweiterungFortschritt } from "../lib/erweiterung";
 import { parseSprechBewertung, SPRECH_KRITERIEN as BEWERTUNG_KRITERIEN } from "../lib/sprechbewertung";
+import { FREIE_TEXTE, FREIE_DIALOGE, texteFuer, dialogeFuer, STOFF_STUFEN } from "../lib/lesestoff";
+import { baueWortgitter, dialogLuecke, uebersetzQuote, fehlendeWoerter as spielFehlende, gitterWort } from "../lib/spiele";
 import { SPRECH_SZENARIEN, teileAntwort } from "../lib/sprechbegleiter";
 import { planVerzweigung } from "../lib/verzweigung";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
@@ -2065,9 +2067,10 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,katalog"'),
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog"'),
       // R218: محطة «vollpruefung» (جلسة امتحان كاملة) أُدرجت بعد التمريض — امتداد موثّق للترتيب
-      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← حياة في ألمانيا (R200: امتداد بنيوي موثّق في المراجع) ← معجم ← كاتالوج");
+      // R300: محطتا «lesestoff» (قراءة وحوارات حرة) و«spiele» (ألعاب كلمات) أُدرجتا قبل الكاتالوج بطلب صريح من المالك — امتداد بنيوي موثّق، دون مساس بالترتيب الأصلي ولا بالخطة
+      "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← حياة في ألمانيا (R200: امتداد بنيوي موثّق في المراجع) ← معجم ← قراءة وحوارات حرة (R300) ← ألعاب كلمات (R300) ← كاتالوج");
     const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
     const naoMontiert = montiert.filter((m) => !ueben.includes(m));
     ok(naoMontiert.length === 0, "K112b اثنتا عشرةُ محطّةُ تدريبٍ مركَّبةٌ فعلاً في التبويب — ناقص: " + (naoMontiert.join(" · ") || "لا شيء"));
@@ -14001,6 +14004,33 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(hoerenSrc324.includes("stimme-profil-") && hoerenSrc324.includes("\"de-AT\"") && hoerenSrc324.includes("\"de-CH\""), "K324f ملامح صوت الجهاز (نمساوي/سويسري) في مختبر السماع");
   ok(readFileSync("components/vollpruefung.tsx", "utf8").includes("vollpruefung-variante"), "K324g زرّ تشكيلة امتحان أخرى في المحاكاة الكاملة");
   ok(readFileSync("components/lehrer.tsx", "utf8").includes("lehrer-verbessert"), "K324h زرّ نسخة بأسلوب أعلى بعد تصحيح المدرّس الذكي");
+}
+
+
+// ── K325 (R300): قراءة وحوارات حرة (مالك: محتوى جديد) + ألعاب كلمات (مالك: تمارين وألعاب) ──
+{
+  const arabisch = /[\u0600-\u06FF]/;
+  ok(FREIE_TEXTE.length === 15 && FREIE_DIALOGE.length === 10 && STOFF_STUFEN.length === 5, "K325a 15 نصًّا حرًّا و10 حوارات حرة عبر 5 مستويات");
+  ok(STOFF_STUFEN.every((st) => texteFuer(st).length === 3 && dialogeFuer(st).length === 2), "K325b كل مستوى: 3 نصوص وحواران بالضبط");
+  const fragenOk = (f: { optionen: string[]; richtig: number; erklaerAr: string }) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3 && arabisch.test(f.erklaerAr);
+  ok(FREIE_TEXTE.every((t) => t.fragen.length === 3 && t.fragen.every(fragenOk) && t.absaetze.length >= 2 && t.absaetze.every((a) => a.trim().length > 30)), "K325c كل نص: قص/فقرتان+ و3 أسئلة بثلاثة خيارات وشرح عربي");
+  ok(FREIE_DIALOGE.every((d) => d.zeilen.length >= 6 && d.zeilen.every((z) => z.de && arabisch.test(z.ar)) && d.fragen.length === 3 && d.fragen.every(fragenOk)), "K325d كل حوار: 6 أسطر+ مترجمة و3 أسئلة سليمة");
+  const ids = [...FREIE_TEXTE, ...FREIE_DIALOGE].map((x) => x.id);
+  ok(new Set(ids).size === ids.length, "K325e معرّفات المحتوى الحرّ فريدة");
+  const pool = ["Wasser", "Schule", "laufen", "der Apfel", "das Brot", "schnell", "die Lampe", "trinken", "der Garten", "lesen", "die Blume", "das Fenster"].map((w) => ({ wort: w, ar: "معنى" }));
+  const g1 = baueWortgitter(pool, 7);
+  const g2 = baueWortgitter(pool, 7);
+  ok(JSON.stringify(g1.gitter) === JSON.stringify(g2.gitter) && g1.gitter.length === 10 && g1.gitter.every((z) => z.length === 10), "K325f شبكة الكلمات حتمية بالبذرة نفسها، 10×10");
+  ok(g1.treffer.length >= 5 && g1.treffer.every((t) => t.zellen.map(([r, c]) => g1.gitter[r][c]).join("") === t.wort), "K325g كل كلمة موضوعة تصدُق حروفها على خلايا الشبكة");
+  ok(gitterWort("der Apfel") === "APFEL" && gitterWort("das Brot!") === "BROT", "K325h تنظيف كلمة الشبكة يزيل الأداة وعلامات الترقيم");
+  const mkDialog = (id: string, level: "A1", n: number) => ({ id, level, titleDe: "T", titleAr: "ت", questions: [], dictation: [], lines: Array.from({ length: n }, (_, i) => ({ who: i % 2 ? "B" : "A", de: `Satz ${id} ${i}`, ar: "جملة" })) });
+  const dlgPool = [mkDialog("d1", "A1", 8), mkDialog("d2", "A1", 8), mkDialog("d3", "A1", 8)];
+  const luecke = dialogLuecke(dlgPool as never, 11);
+  ok(!!luecke && luecke.loch > 0 && luecke.loch < luecke.dialog.lines.length - 1 && luecke.optionen.length === 3 && luecke.optionen.includes(luecke.richtig) && new Set(luecke.optionen).size === 3, "K325i أكمل الحوار: فجوة داخلية و3 خيارات فريدة تشمل الصحيحة");
+  ok(uebersetzQuote("Ich gehe nach Hause", "Ich gehe nach Hause") === 100 && uebersetzQuote("", "Ich gehe") === 0 && uebersetzQuote("Ich gehe", "Ich gehe nach Hause heute") < 60, "K325j نسبة الترجمة الكتابية: كاملة 100 وجزئية متناسبة");
+  ok(spielFehlende("Ich gehe", "Ich gehe nach Hause").includes("Hause"), "K325k الكلمات الناقصة من النموذج تُستخرج");
+  const uebenSrc = readFileSync("app/ueben/page.tsx", "utf8");
+  ok(uebenSrc.includes("<LeseStoffStation />") && uebenSrc.includes("<SpieleStation />") && uebenSrc.includes("lesestoff: {") && uebenSrc.includes("spiele: {"), "K325l محطتا القراءة الحرة والألعاب مركّبتان في تبويب «تدرّب»");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
