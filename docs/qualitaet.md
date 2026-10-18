@@ -484,3 +484,6 @@ Nach Kampagnen-Abschluss (494/494 neu) werden jetzt auch die 68 verbliebenen Alt
 ## R274 — Altbestand-Vervollständigung, Charge 2 (s-a0-26…30 + s-b1-200…204)
 
 Zehn weitere Alt-Sätze aufgenommen (voice-06) — Alt-Ist 20/68, offen 48; Diktat gesamt **694/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit); Audio-QC-Bericht per audio_qc_all.py auf 1039 Dateien nachgeführt (K304).
+## R275 — Altbestand-Vervollständigung, Charge 3 (s-b1-205…211 + s-b2-200…202)
+
+Zehn weitere Alt-Sätze aufgenommen (voice-06) — Alt-Ist 30/68, offen 38; Diktat gesamt **704/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit); Audio-QC-Bericht per audio_qc_all.py auf 1049 Dateien nachgeführt (K304).
