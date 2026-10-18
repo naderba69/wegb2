@@ -1900,7 +1900,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const total = () => rootEl.querySelector('[data-testid="vocab-queue-count"]')?.textContent?.trim() ?? "";
     const yesterday = new Date(Date.now() - 86400000).toISOString();
     const dueCard = deck.cards[0], notDueCard = deck.cards[1];
-    const due = { ...newCard(), reps: 1, introduced: yesterday, due: yesterday };
+    const due = { ...newCard(), reps: 2, introduced: yesterday, due: yesterday }; // reps gerade = Erkennungsrichtung (M2/R280)
     const notDue = { ...newCard(), introduced: yesterday, due: new Date(Date.now() + 86400000).toISOString() };
     mount(React.createElement(TaskView, {
       task: { id: "t-tempo-due", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
@@ -1937,7 +1937,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     const dueBeforePendingCard = deck.cards[3];
     const pendingAfterDueCard = deck.cards[4];
-    const dueBeforePending = { ...newCard(), reps: 1, introduced: yesterday, due: yesterday };
+    const dueBeforePending = { ...newCard(), reps: 2, introduced: yesterday, due: yesterday }; // gerade = Erkennen (M2/R280)
     const pendingAfterDue = { ...newCard(), reps: 0, introduced: new Date().toISOString() };
     mount(React.createElement(TaskView, {
       task: { id: "t-tempo-review-before-resume", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
@@ -1947,6 +1947,18 @@ const hasFile = txt().includes("صوتٌ من الدار");
     click(btn("اكشف المعنى")!);
     click(btn("سهّل! (4)")!);
     ok(dueWasFirst && txt().includes(pendingAfterDueCard.de), "LX0e المراجعة المستحقّة تسبق البطاقة غير المُقيَّمة ثم تُستأنف بعدها");
+
+    // M2 (R280): ungerade Reps = Produktionsrichtung AR→DE — Deutsch bleibt vor dem Aufdecken verdeckt
+    const prodCard = deck.cards[5];
+    mount(React.createElement(TaskView, {
+      task: { id: "t-tempo-prod", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
+      ...base, srs: { [prodCard.id]: { ...newCard(), reps: 1, introduced: yesterday, due: yesterday } }, tempo: "leicht" as const,
+    }));
+    ok(!!rootEl.querySelector('[data-testid="karte-produktiv"]') && txt().includes(prodCard.ar) && !!btn("اكشف اللفظ الألماني") && !btn("اكشف المعنى"),
+      "LX0f جولة الإنتاج (M2): العربية أولاً وزرّ الكشف «اكشف اللفظ الألماني» — اللفظ محجوب حتى الكشف");
+    click(btn("اكشف اللفظ الألماني")!);
+    ok(txt().includes(prodCard.de) && !!rootEl.querySelector('[data-testid="karte-stufe"]'),
+      "LX0g بعد الكشف يظهر اللفظ وشارة مرحلة البطاقة (تعرّف/تثبيت/إنتاج)");
   }
 
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */

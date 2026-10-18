@@ -6,7 +6,7 @@ import { POS_AR } from "@/lib/types";
 import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
-import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday } from "@/lib/srs";
+import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
 import { addFehlerNow, markiereSchriftlich, loadProgress, saveProgress } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
 import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
@@ -666,10 +666,11 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
 
   if (!deck && task.deckId) return <Empty title="حزمة غير موجودة" />;
 
+  const produktiv = !!card && ((srs[card.id]?.reps ?? 0) % 2 === 1);
   const rateCard = (q: 0 | 2 | 4) => {
     if (!card) return;
     const prev = srs[card.id] ?? newCard();
-    onSrs(card.id, reviewCard(prev, q));
+    onSrs(card.id, reviewCard(prev, q, { produktiv }));
     if (q === 0) {
       addFehlerNow({
         falsch: deFormOf(card),
@@ -713,9 +714,19 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
             />
           )}
           <div style={{ fontSize: "1.7rem", fontWeight: 900 }}>
-            {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
-            <De>{deFormOf(card, false)}</De>
+            {produktiv && !flipped ? (
+              <span>{card.ar}</span>
+            ) : (
+              <>
+                {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
+                <De>{deFormOf(card, false)}</De>
+              </>
+            )}
           </div>
+          {produktiv && !flipped && (
+            <div className="chip" data-testid="karte-produktiv" style={{ marginTop: "0.3rem" }}>🎯 إنتاج: تذكّر اللفظ الألماني بنفسك ثم اكشفه</div>
+          )}
+          {(!produktiv || flipped) && (
           <button
             className="btn btn-ghost"
             style={{ margin: "0.5rem" }}
@@ -726,13 +737,19 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
           >
             🔊 اسمع النطق
           </button>
+          )}
           {!flipped ? (
             <div>
-              <button className="btn btn-primary" onClick={(e) => { e.stopPropagation(); setFlipped(true); }}>اكشف المعنى</button>
+              <button className="btn btn-primary" onClick={(e) => { e.stopPropagation(); setFlipped(true); }}>{produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}</button>
             </div>
           ) : (
             <div className="fadein">
               <div style={{ fontSize: "1.15rem", color: "var(--color-cola)" }}>{card.ar}</div>
+              <div style={{ marginTop: "0.35rem" }}>
+                <span className="chip" data-testid="karte-stufe" style={{ fontSize: "0.75rem" }}>
+                  🪜 مرحلة البطاقة: {KARTENSTUFE_AR[karteStufe(srs[card.id])]}{produktiv ? " · هذه الجولة إنتاج (عربي←ألماني)" : ""}
+                </span>
+              </div>
               {card.pos && (
                 <div style={{ marginTop: "0.35rem" }}>
                   <span data-testid="karte-pos" className="chip" style={{ fontSize: "0.75rem" }}>

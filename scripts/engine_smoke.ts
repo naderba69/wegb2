@@ -33,7 +33,7 @@ import {
   planStundenBis,
   planStundenGesamt,
 } from "../lib/plan";
-import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday } from "../lib/srs";
+import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe } from "../lib/srs";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -230,16 +230,18 @@ const vocabRepeatAudit = (() => {
   ok(planPct(R({ ...empty(), plan: { ...empty().plan, day: TOTAL + 5 } })) === 100, "D11 planPct مقصوص عند 100");
 }
 
-/* ═══ E · SRS SM-2 ═══ */
+/* ═══ E · SRS FSRS-6 (R280/M1 — ersetzt SM-2; Schwellen mit dem echten Umbau umgepinnt) ═══ */
 {
   let c = newCard();
   ok(c.ease === 2.5 && c.interval === 0 && c.learning === true, "E1 بطاقة جديدة");
   c = reviewCard(c, 4);
-  ok(!c.learning && c.interval === 1, "E2 أول ناجحة ← يوم واحد");
+  ok(!c.learning && c.interval === 8 && (c.stab ?? 0) > 8, `E2 أول «سهل» FSRS: S₀=8.3 ← فاصل ${c.interval} أيام`);
+  const e2stab = c.stab ?? 0;
   c = reviewCard(c, 4);
-  ok(c.interval === 3, "E3 الثانية ← 3 أيام");
+  ok(c.interval > 8 && c.interval <= 90 && (c.stab ?? 0) > e2stab, `E3 الثانية (قصيرة الأمد FSRS): الثبات ينمو ${e2stab.toFixed(1)}←${(c.stab ?? 0).toFixed(1)} والفاصل ${c.interval}`);
+  const e3int = c.interval;
   c = reviewCard(c, 4);
-  ok(c.interval === Math.round(3 * 2.7), `E4 الثالثة = ×ease (${Math.round(3 * 2.7)}، جاء ${c.interval})`);
+  ok(c.interval > e3int && c.interval <= 90, `E4 الثالثة: الفاصل يتّسع FSRS (${e3int}←${c.interval}، جاء ${c.interval})`);
   const before = c;
   c = reviewCard(c, 0);
   ok(c.interval === 0 && c.lapses === before.lapses + 1 && c.learning === true, "E5 سقوط: تصفير + lapses + وضع تعلّم");
@@ -12906,6 +12908,24 @@ function collectR262(dir: string, out: string[] = []): string[] {
      qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
      String(qcAll.grenzEhrlichkeit).includes("Kein menschliches Anhören"),
     "K304 مراجعةُ الصوتِ الآليةُ الشاملةُ R272: ‏1087/1087 ملفاً مفكوكاً ومقيساً (المدة/الصمت/المستوى/السرعة مقابل نصّ البنك) بلا شذوذٍ ولا ثغراتِ تغطية — قياسٌ آليٌّ مُعلَن، لا استماعَ بشريٌّ ولا حكمَ نطق");
+}
+
+// ===== K305 (R280 · M1+M2): FSRS-6-Scheduler + Meisterungsstufen Erkennen/Produktion =====
+{
+  const t0 = new Date("2026-01-01T00:00:00.000Z");
+  const cEasy = reviewCard(newCard(), 4, { now: t0 });
+  const cGood = reviewCard(newCard(), 2, { now: t0 });
+  const cAgain = reviewCard(newCard(), 0, { now: t0 });
+  const legacy305: SrsState = { ease: 2.5, interval: 30, due: "2026-01-01T00:00:00.000Z", reps: 5, lapses: 0, introduced: "2025-12-01T00:00:00.000Z" };
+  const mig305 = reviewCard(legacy305, 4, { now: t0 });
+  const reif305: SrsState = { ease: 2.5, interval: 40, due: "2026-01-01T00:00:00.000Z", reps: 6, lapses: 0, stab: 40, diff: 5, prod: 2 };
+  const srsSrc305 = readFileSync("lib/srs.ts", "utf8");
+  ok(cEasy.interval > cGood.interval && cGood.interval >= 2 && cAgain.learning === true && cAgain.lapses === 1 &&
+     (cEasy.stab ?? 0) > (cGood.stab ?? 0) && mig305.stab !== undefined && mig305.diff !== undefined &&
+     mig305.interval >= 1 && mig305.interval <= 90 && karteStufe(reif305) === "produktiv" &&
+     karteStufe({ ...reif305, prod: 1 }) === "festigen" && karteStufe(newCard()) === "neu" &&
+     srsSrc305.includes("FSRS-6") && srsSrc305.includes("FSRS_ZIEL_RETENTION"),
+    `K305 المجدول FSRS-6 (R280/M1): سهل ${cEasy.interval}ي > جيد ${cGood.interval}ي، والنسيان يعيد للتعلم، وترحيل القدماء يعمل (S=${(mig305.stab ?? 0).toFixed(1)})؛ ومرحلة «إنتاج متقن» (M2) تشترط ثبات ≥21ي و≥2 نجاح إنتاجي — لا إتقان من التعرّف وحده`);
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),

@@ -327,6 +327,13 @@ export interface SrsState {
   reps: number;
   lapses: number;
   learning?: boolean;
+  /** FSRS-6 (R280): Stabilitaet in Tagen / Schwierigkeit 1..10 — optional (Migration alter Karten). */
+  stab?: number;
+  diff?: number;
+  /** Zeitpunkt der letzten Bewertung (ISO) — fuer verstrichene Tage im FSRS. */
+  last?: string;
+  /** Produktive Erfolge (AR→DE-Richtung, M2): Zaehler fuer die Meisterungsstufe. */
+  prod?: number;
   /** تاريخ إدخال البطاقة (لمراجعة أولى بعد 24 ساعة) */
   introduced?: string;
 }

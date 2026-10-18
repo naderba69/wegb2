@@ -3,6 +3,7 @@
 // التقدير = 70% أداء مسجَّل حديثاً + 30% مؤشرات تراكمية — حتمي وموثّق بلا خوادم.
 
 import type { Progress, Kompetenz, TaskKind } from "./types";
+import { stufenWert } from "./srs";
 
 export const KOMPETENZEN: Kompetenz[] = ["Lesen", "Hoeren", "Schreiben", "Sprechen", "Grammatik", "Wortschatz"];
 
@@ -77,7 +78,7 @@ function proxy(h: Kompetenz, p: Progress): number {
     }
     case "Wortschatz": {
       const kartei = Object.values(p.srs || {});
-      const reif = kartei.length ? kartei.reduce((s, x) => s + Math.min(1, x.reps / 6), 0) / kartei.length : 0;
+      const reif = kartei.length ? kartei.reduce((s, x) => s + stufenWert(x), 0) / kartei.length : 0;
       return clamp(reif * 55 + kindPassed(p, "wortschatz") * 8 + kindPassed(p, "wiederholen") * 5 + Math.min(20, (p.canDo ? Object.keys(p.canDo).length : 0) * 3) - fehlerN(p, ["wortschatz", "falsche-freunde"]) * 2);
     }
   }
@@ -142,7 +143,7 @@ export function pruefungsBereitschaft(p: Progress): {
 
   // نضج البطاقات: متوسط نضج SRS
   const karten = Object.values(p.srs || {});
-  const reif = karten.length ? karten.reduce((s, x) => s + Math.min(1, x.reps / 6), 0) / karten.length : 0;
+  const reif = karten.length ? karten.reduce((s, x) => s + stufenWert(x), 0) / karten.length : 0;
   const srsWert = clamp(reif * 100);
 
   const teile = [
