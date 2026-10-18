@@ -66,6 +66,8 @@ import { PRAGMATIK } from "../lib/pragmatik";
 import { DIALOGSZENARIEN } from "../lib/dialogszenarien";
 import { FEHLERATLAS, atlasEintraege } from "../lib/fehleratlas";
 import { FSP_AUSRICHTUNG } from "../lib/fsp";
+import { kollokProduktion, partnerOk } from "../lib/kollokproduktion";
+import { b2Luecke, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13254,6 +13256,23 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/pflege.tsx", "utf8").includes('data-testid="fsp-ausrichtung"'),
     `K319 ثلاثية R294: أربعة سيناريوهات تحدّث بـ12 جولة حركات (A7)، أطلس تبايني 18 مدخلًا بست عائلات + أصدقاء كاذبون (A15)، وخريطة FSP بسبعة أجزاء وسطر غائب معلن (A24)`);
 }
+// ===== K320 (R295 · A14+A21+A29): Kollok-Produktion, Referenzprüfung, Rezeptiv-Decke =====
+{
+  const prod320 = kollokProduktion(5, 6);
+  const bericht320 = referenzBericht();
+  const b1Zeile320 = bericht320.find((z) => z.level === "B1");
+  const luecke320 = b2Luecke();
+  const schnell320 = schnellsteRezeptiv(emptyProgress as Progress, 5);
+  ok(prod320.length === 6 && prod320.every((x) => x.rahmen.includes("_____") && x.kollok.includes(x.partner)) &&
+     partnerOk("  wort ", "wort") && !partnerOk("laufen", "treffen") && partnerOk("treffen", "treffen") &&
+     bericht320.length === 5 && !!b1Zeile320 && b1Zeile320.kumuliert === 2564 && b1Zeile320.status === "darueber" &&
+     luecke320.kumuliert === 3592 && luecke320.luecke > 800 &&
+     schnell320.length === 5 && schnell320.every((x) => x.n > 0) &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("KollokProduktionStation") &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("ReferenzPanel"),
+    `K320 ثلاثية R295: ست متلازمات إنتاج بإطارات مبتورة الشريك (A14)، تراكمي B1 عند ${b1Zeile320?.kumuliert} فوق مرجعه المنشور (A21)، وفجوة سقف B2 بـ${luecke320.luecke} بطاقة معلنة بخطة أسرع-رفع (A29)`);
+}
+
 
 
 

@@ -2301,6 +2301,26 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(FSP_AUSRICHTUNG.length === 7 && FSP_AUSRICHTUNG.some((z) => z.status === "fehlt"), "R294e خريطة محاذاة FSP (A24) تُعلن الجزء الغائب بدل إخفائه");
   }
 
+  /* ═══════════ R295 — A14 إنتاج متلازمات + A21/A29 لوحة مرجعية ═══════════ */
+  {
+    const { kollokProduktion } = await import("../lib/kollokproduktion");
+    const items295 = kollokProduktion(5, 6);
+    const { KollokProduktionStation } = await import("../components/kollokproduktion");
+    mount(React.createElement(KollokProduktionStation, {}));
+    ok(items295.length === 6 && !!rootEl.querySelector('[data-testid="kollokproduktion"]'), "R295a محطة إنتاج المتلازمات (A14) بجولتها من البنك");
+    const ziel = items295[0];
+    const eingabe = rootEl.querySelector('[data-testid="kollokprod-input-0"]') as HTMLInputElement | null;
+    ok(!!eingabe, "R295b حقل كتابة الشريك من الذاكرة حاضر");
+    if (eingabe && ziel) typeIn(eingabe, ziel.partner);
+    click(rootEl.querySelector('[data-testid="kollokprod-pruefen"]') as HTMLElement);
+    const erg295 = rootEl.querySelector('[data-testid="kollokprod-ergebnis"]');
+    ok(!!erg295 && (erg295.textContent ?? "").includes("/6"), "R295c التصحيح يحسب المنتَج من الذاكرة فعلًا");
+
+    const { ReferenzPanel } = await import("../components/referenz");
+    mount(React.createElement(ReferenzPanel, { progress: { ...emptyProgress } as never }));
+    ok(!!rootEl.querySelector('[data-testid="referenz-panel"]') && txt().includes("فجوة محتوى"), "R295d لوحة الفحص المرجعي (A21) تعلن فجوة سقف B2 (A29) بلا إخفاء");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

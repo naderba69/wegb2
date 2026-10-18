@@ -14,6 +14,8 @@ import { LeseLeiter } from "@/components/leseleiter";
 import { SchnellLesen } from "@/components/schnellesen";
 import { PragmatikKarte } from "@/components/pragmatik";
 import { WortfamilienStation } from "@/components/wortfamilien";
+import { KollokProduktionStation } from "@/components/kollokproduktion";
+import { ReferenzPanel } from "@/components/referenz";
 import { FehlerAtlas } from "@/components/fehleratlas";
 import { DialogSzenarien } from "@/components/dialogszenarien";
 import { RedemittelBank } from "@/components/redemittel";
@@ -209,7 +211,7 @@ export default function Ueben() {
           {offen === "leseleiter" && (<div style={{ display: "grid", gap: "0.9rem" }}><LeseLeiter /><SchnellLesen /></div>)}
           {offen === "redemittel" && (<div style={{ display: "grid", gap: "0.9rem" }}><RedemittelBank /><PragmatikKarte /></div>)}
           {offen === "hoerneu" && <HoerNeu />}
-          {offen === "tiefen" && (<div style={{ display: "grid", gap: "0.9rem" }}><TiefenLexikon progress={progress} /><WortfamilienStation /></div>)}
+          {offen === "tiefen" && (<div style={{ display: "grid", gap: "0.9rem" }}><TiefenLexikon progress={progress} /><WortfamilienStation /><KollokProduktionStation /><ReferenzPanel progress={progress} /></div>)}
           {offen === "einstufung" && <EinstufungTest />}
           {offen === "schatten" && <ShadowingStation />}
           {offen === "phonetik" && <PhonetikStation />}
