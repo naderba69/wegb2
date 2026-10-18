@@ -584,7 +584,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 3592, "XIX1 بنكُ المفرداتِ 3592 بطاقةً كما في الجرد الحيّ (R206–R213: كلمات التمريض الـ133 كلها في الحزم العامة)");
+    ok(alleVokabeln.length === 4504, "XIX1 بنكُ المفرداتِ 4504 بطاقةً كما في الجرد الحيّ (R298: +912 بطاقة توسعة B2 استقبالية، وكلمات التمريض الـ133 كلها في الحزم العامة)");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
     const falschMarkiert = neu.filter((c) => c.pos === "Nomen"
@@ -3885,6 +3885,17 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!rootEl.querySelector('[data-testid="stimme-geraet"]') && !!rootEl.querySelector('[data-testid="stimme-aufnahme"]'), "R296d مختبر السماع يعرض مفتاح مصدر الصوت (مسجّل/جهاز)");
   click(rootEl.querySelector('[data-testid="stimme-geraet"]') as HTMLElement);
   ok(!!rootEl.querySelector('[data-testid="stimme-geraet"]'), "R296e النقر على صوت الجهاز لا يكسر المختبر");
+}
+
+
+// ── R298: محطة توسعة B2 الاستقبالية ──
+{
+  const { ErweiterungStation } = await import("../components/erweiterung");
+  mount(React.createElement(ErweiterungStation));
+  ok(!!rootEl.querySelector('[data-testid="erweiterung-station"]') && txt().includes("توسعة B2 الاستقبالية"), "R298a محطة التوسعة تُعرض بحزمها الست عشرة");
+  ok(!!rootEl.querySelector('[data-testid="erweiterung-deck-j01-arbeit-vertieft"]'), "R298b زرّ أول حزمة توسعة موجود");
+  click(rootEl.querySelector('[data-testid="erweiterung-deck-j01-arbeit-vertieft"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="erweiterung-frage"]'), "R298c اختيار حزمة يفتح سؤال تعرّف");
 }
 
   console.log(`\n${beste} نجح · ${fehler} فشل`);

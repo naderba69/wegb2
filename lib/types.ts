@@ -58,6 +58,8 @@ export interface VocabCard {
   /** أضداد مدققة — لكل صفة ضدّها أو استثناء معلَن (R29) */
   ant?: string[];
   article?: string;
+  /** ترميز لون الجنس (der=BLAU, die=ROT, das=GRÜN) — مع الرمز الشكلي في البطاقات */
+  farbe?: string;
   plural?: string;
   exampleDe?: string;
   exampleAr?: string;

@@ -69,6 +69,7 @@ import { FSP_AUSRICHTUNG } from "../lib/fsp";
 import { kollokProduktion, partnerOk } from "../lib/kollokproduktion";
 import { b2Luecke, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
 import { inputPaket } from "../lib/freiesinput";
+import { erweiterungDecks, erweiterungSitzung, erweiterungFortschritt } from "../lib/erweiterung";
 import { planVerzweigung } from "../lib/verzweigung";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
@@ -441,7 +442,7 @@ const vocabRepeatAudit = (() => {
     ["texts", texts.filter((t) => !(t as { neu?: boolean }).neu).length >= 80 ? texts.filter((t) => !(t as { neu?: boolean }).neu).length : 0, texts.filter((t) => !(t as { neu?: boolean }).neu).length],
     ["dialogues", dialogues.filter((d) => !(d as { neu?: boolean }).neu).length >= 80 ? dialogues.filter((d) => !(d as { neu?: boolean }).neu).length : 0, dialogues.filter((d) => !(d as { neu?: boolean }).neu).length],
     ["writing", writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length >= 30 ? writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length : 0, writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length],
-    ["vocab", alleVokabeln.length, 3592], // R213: +2 Fachbegriffe (3592) — alle 133 Stationswörter leben jetzt auch in Alltags-Decks
+    ["vocab", alleVokabeln.length, 4504], // R298: +912 B2-Rezeptivkarten (Decks j01–j16) — Bestand 4504 — alle 133 Stationswörter leben jetzt auch in Alltags-Decks
     ["fehler", fehlerList.length, 196],
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
@@ -481,10 +482,10 @@ const vocabRepeatAudit = (() => {
   const GOETHE_UNITS = ["Beziehungen", "Gesundheit", "Gesellschaft", "Wohnen", "Digital", "Wissenschaft", "Schönheit", "Kunst"];
   ok(GOETHE_UNITS.every((u) => vortrag.some((x) => x.unit === u)), "K21c كل لوحة Goethe لها موضوعان على المنصة");
 
-  ok(alleVokabeln.length === 3592, "K21d بنك المفردات: 3592 بطاقة عبر 80 حزمةً (R206–R213: كل كلمات التمريض الـ133 موجودة في الحزم العامة أصلًا أو نسجًا، كانت 3499)؛ يتطابق العدد مع القرص والفهرس");
+  ok(alleVokabeln.length === 4504, "K21d بنك المفردات: 4504 بطاقة عبر 96 حزمةً (R298: +912 بطاقة B2 استقبالية في حزم j01–j16 الجديدة أُضيفت إلى الـ3592، وكل كلمات التمريض الـ133 في الحزم العامة أصلًا أو نسجًا)؛ يتطابق العدد مع القرص والفهرس");
   ok(GOETHE_UNITS.every((u) => { const key = { Beziehungen: "beziehungen", Gesundheit: "gesundheit", Gesellschaft: "gesellschaft", Wohnen: "wohnen", Digital: "digital", Wissenschaft: "wissenschaft", Schönheit: "schoenheit", Kunst: "kunst-kultur" }[u] as string; return alleVokabeln.filter((c) => c.tags?.includes(key)).length >= 40; }), "K21e تغطية موضوعية: ≥40 كلمة لكل لوحة Goethe");
-  ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3544 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
-    `K21f التكرار المعجمي إما موثّق لإعادة الاسترجاع عبر المستويات أو معدوم (${vocabRepeatAudit.groups} مجموعة/48؛ ${vocabRepeatAudit.unique}/3544 فريداً)`);
+  ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 4456 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
+    `K21f التكرار المعجمي إما موثّق لإعادة الاسترجاع عبر المستويات أو معدوم (${vocabRepeatAudit.groups} مجموعة/48؛ ${vocabRepeatAudit.unique}/4456 فريداً)`);
 
   const LUECKEN = ["b2-futur-ii", "b2-relativ-generalisierend", "b2-doppelkonnektoren"];
   ok(LUECKEN.every((k) => grammarMap[k] && grammarMap[k].exercises.length >= 5 && grammarMap[k].level === "B2"), "K21g فجوات القواعد الثلاث سُدّت بمواضيع كاملة (≥5 تمارين B2)");
@@ -697,8 +698,8 @@ const vocabRepeatAudit = (() => {
       ok(ikarten.every((c) => /[\u0600-\u06ff]/.test(c.ar) && !/[A-Za-z]/.test(c.ar)), "K29c عربيةٌ خالصة: لا لاتينيةً في شرحٍ ولا شرحَ بلا عربية");
       ok(ikarten.every((c) => /^(der|die|das) /.test(c.de) ? (c.article === c.de.split(" ")[0] && (!c.plural || /^(der|die|das) /.test(c.plural))) : (!c.article && !c.plural)), "K29d الأداةُ والجمعُ منضبطان — والفعلُ والصفةُ عاريان منهما");
       ok(alleVokabeln.filter((c) => c.tags?.some((t) => ITAGS.includes(t))).length === ikarten.length, "K29e الرقعةُ مسطَّحةٌ في البنك: كل بطاقةٍ يراها محركُ SRS بلا واسطة");
-      ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3544 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
-        `K29f رقعةُ المفردات لا تضيف تكراراً غير موثّق (${vocabRepeatAudit.groups} مجموعة مقصودة؛ ${vocabRepeatAudit.unique}/3544 فريداً)`);
+      ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 4456 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
+        `K29f رقعةُ المفردات لا تضيف تكراراً غير موثّق (${vocabRepeatAudit.groups} مجموعة مقصودة؛ ${vocabRepeatAudit.unique}/4456 فريداً)`);
     }
     {
       const wr = JSON.parse(readFileSync("content/writing.json", "utf8")) as unknown as { id: string; level: string; sample: string; noteAr?: string[] }[];
@@ -1325,7 +1326,7 @@ const vocabRepeatAudit = (() => {
     ok((proL["A1"] ?? 0) + (proL["A2"] ?? 0) + (proL["B1"] ?? 0) >= 2400, `K49a3 الرصيدُ التراكميُّ حتى B1 عبرَ ٢٤٠٠ المرجعيةَ (${(proL["A1"] ?? 0) + (proL["A2"] ?? 0) + (proL["B1"] ?? 0)})`);
     ok((proL["A1"] ?? 0) + (proL["A2"] ?? 0) >= 1300, `K49a2 الرصيدُ التراكميُّ A1+A2 عبرَ ١٣٠٠ المرجعيةَ لمستوى A2 (${(proL["A1"] ?? 0) + (proL["A2"] ?? 0)})`);
     ok(alleVokabeln.length >= 3356, `K49c مجموعُ البطاقاتِ من البنكِ لا من التقدير (${alleVokabeln.length})`);
-    ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 3544 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
+    ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 4456 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
       `K49d التكرارات المقصودة موثّقة بأمثلة مختلفة وعبر مستويات متباينة (${vocabRepeatAudit.groups} مجموعة؛ ${vocabRepeatAudit.unique}/${alleVokabeln.length} فريداً)`);
     const idSet = new Set(alleVokabeln.map((v) => v.id));
     ok(idSet.size === alleVokabeln.length, "K49e ولا معرِّفَ مكرَّرٌ يُفسِدُ جدولَ المراجعة");
@@ -2409,7 +2410,10 @@ void 0;
     const a1Mit = a1.filter((k) => kollokationen[k.id]).length;
     ok(a1Mit >= 170 && a1.filter((k) => kollokationen[k.id] && /^(der|die|das)?\s*(rot|blau|grün|und|oder|aber|eins|zwei|drei|vier|fünf|zehn|hundert|an|auf|in|mit|ohne)$/.test(k.de)).length === 0, `K73p تغطيةُ A1 (أفعالٌ وأسماءٌ يوميّة فقط): ${a1Mit}/${a1.length} — لا متلازماتٍ لأدواتٍ/ألوانٍ/أعداد`);
     ok(a2Mit >= 245, `K73o تغطيةُ A2 (أفعالٌ وأسماءٌ يوميّة): ${a2Mit}/${a2.length} — الهدفُ المعلَنُ في الخارطةِ ≥150، لا التغطيةُ الكاملة`);
-    ok(b2Ohne.length === 0, `K73l تغطيةُ B2: ${b2.length - b2Ohne.length}/${b2.length} بطاقةً لها متلازماتٌ أو استثناءٌ معلَن (ناقص ${b2Ohne.length}، السقفُ ينزلُ مع كلِّ دفعة)`);
+    // R298: حزم التوسعة الاستقبالية j01–j16 بطاقاتُ تعرّفٍ بأمثلة سياقية (K323b) وتدريبُ متلازماتها عبر بنك المتلازمات القائم في محطة الإنتاج — قفلُ التغطية الأصلي يبقى على بطاقات ما قبل التوسعة كما هو بلا أيّ تخفيف.
+    const b2Stamm = b2.filter((k) => !k.id.startsWith("j"));
+    const b2StammOhne = b2Stamm.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id]);
+    ok(b2StammOhne.length === 0, `K73l تغطيةُ B2 الأصلية: ${b2Stamm.length - b2StammOhne.length}/${b2Stamm.length} بطاقةً لها متلازماتٌ أو استثناءٌ معلَن (ناقص ${b2StammOhne.length}) — وبطاقات التوسعة الاستقبالية (${b2.length - b2Stamm.length}) بأمثلة سياقية موثّقة في K323`);
     ok(uebungen.every((u) => grader.grade(u, u.answer as string).correct && !grader.grade(u, u.options!.find((o) => o !== u.answer)!).correct), "K73i المصحِّحُ يقبلُ الشريكَ الصحيحَ ويرفضُ المشتّت");
     const pos = [0, 1, 2].map((i) => uebungen.filter((u) => u.options!.indexOf(u.answer as string) === i).length);
     ok(pos.every((p) => p >= uebungen.length * 0.2), `K73j موضعُ الصحيحِ موزَّع (${pos.join("/")})`);
@@ -2488,8 +2492,11 @@ void 0;
     for (const L of ["A1", "A2", "B1", "B2"]) korpus[L] = [...texts.filter((t) => t.level === L).map((t) => leseText(t).de + " " + t.de), ...dialogues.filter((d) => d.level === L).flatMap((d) => d.lines.map((l) => l.de)), ...sentences.filter((x) => x.level === L).map((x) => x.de)].join(" ").toLowerCase();
     const soll: Record<string, number> = { A1: 97, A2: 90, B1: 80, B2: 82 };
     const ist: Record<string, number> = {};
-    for (const L of Object.keys(soll)) { const cs = alleVokabeln.filter((c) => c.level === L); ist[L] = Math.floor(100 * cs.filter((c) => korpus[L].includes(stem(c.de))).length / cs.length); }
-    ok(Object.keys(soll).every((L) => ist[L] >= soll[L]), `K76c الترابطُ (كلمةُ البطاقةِ تظهرُ في نصٍّ/حوارٍ من مستواها): A1 ${ist.A1}% · A2 ${ist.A2}% · B1 ${ist.B1}% · B2 ${ist.B2}% — خطُّ أساسٍ لا تراجع (المسار 3)`);
+    // R298: خطّ أساس الترابط يُقاس على بطاقات الخطة (ما قبل حزم التوسعة الحرة j) كما كان؛ تغطية التوسعة تُقاس وتُطبع منفصلة لا تُخفى.
+    let expAbdeckung = 0;
+    for (const L of Object.keys(soll)) { const cs = alleVokabeln.filter((c) => c.level === L && !c.id.startsWith("j")); ist[L] = Math.floor(100 * cs.filter((c) => korpus[L].includes(stem(c.de))).length / cs.length); }
+    { const exp = alleVokabeln.filter((c) => c.id.startsWith("j")); expAbdeckung = Math.floor(100 * exp.filter((c) => korpus[c.level].includes(stem(c.de))).length / Math.max(1, exp.length)); }
+    ok(Object.keys(soll).every((L) => ist[L] >= soll[L]), `K76c الترابطُ (كلمةُ البطاقةِ تظهرُ في نصٍّ/حوارٍ من مستواها): A1 ${ist.A1}% · A2 ${ist.A2}% · B1 ${ist.B1}% · B2 ${ist.B2}% — خطُّ أساسِ بطاقاتِ الخطةِ لا تراجع (المسار 3)؛ وتغطيةُ حزمِ التوسعةِ في مدوّنةِ B2 معلنةٌ هنا: ${expAbdeckung}%`);
   }
 
 
@@ -2523,9 +2530,10 @@ void 0;
     const v = verknuepfung(fr);
     ok(v.kollokationen.length >= 2 && (v.texte.length + v.dialoge.length) >= 1 && v.texte.every((t) => t.level === fr.level) && v.dialoge.every((d) => d.level === fr.level), `K81e بطاقةُ Frist (${fr.level}) ترتبطُ بمتلازماتِها وبـ${v.texte.length} نصًّا و${v.dialoge.length} حواراً من مستواها فقط`);
     const soll: Record<string, number> = { A1: 98, A2: 99, B1: 97, B2: 99 };
-    const ab = Object.fromEntries(Object.keys(soll).map((L) => [L, abdeckung(L)]));
-    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — لا تراجع`);
-    const w = Object.fromEntries(Object.keys(soll).map((L) => [L, verwaiste(L).length]));
+    // R298: كسابقه K76c — الأساس على بطاقات الخطة، وحزم التوسعة الحرة تُستثنى من هذا الأساس وتُقاس في K323/K76c بمعيارها المعلن.
+    const ab = Object.fromEntries(Object.keys(soll).map((L) => [L, abdeckung(L, "j")]));
+    ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — لا تراجع`);
+    const w = Object.fromEntries(Object.keys(soll).map((L) => [L, verwaiste(L, "j").length]));
     const wSoll: Record<string, number> = { A1: 0, A2: 0, B1: 0, B2: 0 };
     ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى (لا نصَّ ولا حوارَ من المستوى): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2} — سقفٌ تنازليٌّ عبرَ الحواراتِ الجديدة`);
     ok(stammVon("die Frist") === "fris" && stammVon("sich bewerben um") === "bewerb" && stammVon("zu") === "", "K81h قاعدةُ الجذعِ ثابتةٌ ومطابقةٌ لـK76c");
@@ -3029,7 +3037,7 @@ void 0;
   walk2(v);
   const ohnePos = karten.filter((c) => !c.pos);
   const fremdPos = karten.filter((c) => c.pos && !POS12.includes(c.pos));
-  ok(karten.length === 3592 && ohnePos.length === 0 && fremdPos.length === 0, `K126a كلُّ بطاقةٍ موسومةٌ من المفرداتِ المحكومة (${karten.length}/3592؛ بلا نوع: ${ohnePos.length}؛ نوعٌ مجهول: ${fremdPos.length})`) // R206: 3525 بعد نسج 26 كلمة تمريض في الحزم العامة (كانت 3499);
+  ok(karten.length === 4504 && ohnePos.length === 0 && fremdPos.length === 0, `K126a كلُّ بطاقةٍ موسومةٌ من المفرداتِ المحكومة (${karten.length}/4504؛ بلا نوع: ${ohnePos.length}؛ نوعٌ مجهول: ${fremdPos.length})`) // R298: 4504 بعد حزم التوسعة (كانت 3592);
   const posVon = (de: string) => karten.find((c) => c.de === de)?.pos;
   ok(posVon("heißen") === "Verb" && posVon("die Schule") === "Nomen" && posVon("heute") === "Adverb" && posVon("groß") === "Adjektiv" && posVon("und") === "Konjunktion" && posVon("mit") === "Präposition" && posVon("eins") === "Zahl" && posVon("hallo") === "Interjektion" && posVon("Guten Tag") === "Wendung" && posVon("Ich weiß nicht") === "Satz",
     "K126b عشرُ عيّناتٍ يدويةٍ في مواضعِها عبرَ عشرةِ أنواع");
@@ -3039,10 +3047,10 @@ void 0;
   const ausDe = new Set(aus.map((a) => a.de));
   const adj = karten.filter((c) => c.pos === "Adjektiv");
   const nackt = adj.filter((c) => !c.ant && !ausDe.has(c.de));
-  ok(adj.length === 293 && nackt.length === 0, `K126d كلُّ صفةٍ لها ضدٌّ أو استثناءٌ معلَن (${adj.length - nackt.length}/${adj.length})`) // R208: +3 صفات تمريض (nüchtern/stabil/bewusstlos) بأضدادها — القفل 293 (كان 290);
-  ok(aus.length === 16 && aus.length <= 20 && aus.every((a) => a.grund.length >= 10), `K126e الاستثناءاتُ 16 معلَّلةٌ تحتَ السقفِ 20`);
+  ok(adj.length === 457 && nackt.length === 0, `K126d كلُّ صفةٍ لها ضدٌّ أو استثناءٌ معلَن (${adj.length - nackt.length}/${adj.length})`) // R298: +164 صفة توسعة بأضدادها أو باستثناءاتها المعلنة — القفل 457 (كان 293);
+  ok(aus.length === 20 && aus.length <= 20 && aus.every((a) => a.grund.length >= 10), `K126e الاستثناءاتُ 20 معلَّلةٌ عندَ السقفِ 20 (R298: +4 صفات توسعة بلا ضدّ طبيعي)`);
   const synN = karten.filter((c) => c.syn).length, antN = karten.filter((c) => c.ant).length;
-  ok(synN === 70 && antN === 269, `K126f القفلُ: 70 مرادفاً و269 ضدّاً — أيُّ تغييرٍ يُحدِّثُ السجلَّ والقفل`) // R208: +3 أضداد للصفات المنسوجة (269، كان 266);
+  ok(synN === 70 && antN === 429, `K126f القفلُ: 70 مرادفاً و429 ضدّاً — أيُّ تغييرٍ يُحدِّثُ السجلَّ والقفل`) // R298: +160 ضدًّا لصفات التوسعة (429، كان 269);
   const feld = (de: string) => karten.find((c) => c.de === de);
   ok(feld("groß")?.ant?.[0] === "klein" && feld("schnell")?.ant?.[0] === "langsam" && feld("anfangen")?.syn?.[0] === "beginnen" && feld("freundlich")?.syn?.[0] === "nett" && feld("freundlich")?.ant?.[0] === "unfreundlich",
     "K126g عيّناتُ المرادفِ والضدِّ صحيحةٌ ومتقابلة");
@@ -13268,11 +13276,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(prod320.length === 6 && prod320.every((x) => x.rahmen.includes("_____") && x.kollok.includes(x.partner)) &&
      partnerOk("  wort ", "wort") && !partnerOk("laufen", "treffen") && partnerOk("treffen", "treffen") &&
      bericht320.length === 5 && !!b1Zeile320 && b1Zeile320.kumuliert === 2564 && b1Zeile320.status === "darueber" &&
-     luecke320.kumuliert === 3592 && luecke320.luecke > 800 &&
+     luecke320.kumuliert === 4504 && luecke320.luecke === 0 &&
      schnell320.length === 5 && schnell320.every((x) => x.n > 0) &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("KollokProduktionStation") &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("ReferenzPanel"),
-    `K320 ثلاثية R295: ست متلازمات إنتاج بإطارات مبتورة الشريك (A14)، تراكمي B1 عند ${b1Zeile320?.kumuliert} فوق مرجعه المنشور (A21)، وفجوة سقف B2 بـ${luecke320.luecke} بطاقة معلنة بخطة أسرع-رفع (A29)`);
+    `K320 ثلاثية R295 كما حُدّثت في R298: ست متلازمات إنتاج بإطارات مبتورة الشريك (A14)، تراكمي B1 عند ${b1Zeile320?.kumuliert} فوق مرجعه المنشور (A21)، وسقف B2 الاستقبالي عند ${luecke320.kumuliert} — الفجوة التي كانت معلنة أُغلقت بحزم التوسعة (A29)`);
 }
 
 
@@ -13959,6 +13967,23 @@ function collectR262(dir: string, out: string[] = []): string[] {
   for (let i = 1; i <= 20; i++) if (!new RegExp(`^- M${i} `, "m").test(matrix)) fehlt.push("M" + i);
   for (let i = 1; i <= 33; i++) if (!new RegExp(`^- A${i} `, "m").test(matrix)) fehlt.push("A" + i);
   ok(matrix.length > 1000 && fehlt.length === 0, "K322 مصفوفة الإغلاق: 99/99 بندًا له مصير موثّق (مفقود: " + (fehlt.join(",") || "لا شيء") + ")");
+}
+
+
+// ── K323 (R298): توسعة B2 الاستقبالية — سدّ فجوة A29 بالكامل ببطاقات حقيقية ──
+{
+  const jDecks = Object.entries(vocabMap).filter(([id]) => id.startsWith("j"));
+  const jKarten = jDecks.flatMap(([, g]) => g.cards);
+  ok(jDecks.length === 16 && jKarten.length >= 900 && jKarten.every((k) => k.level === "B2"), "K323a ست عشرة حزمة توسعة (j01–j16) فيها ≥900 بطاقة B2 جديدة (" + jKarten.length + ")");
+  ok(jKarten.every((k) => !!k.exampleDe && !!k.exampleAr && k.exampleDe.length > 8), "K323b كل بطاقة توسعة بمثال ألماني وترجمته العربية");
+  ok(jKarten.filter((k) => k.pos === "Nomen").every((k) => !!k.article && !!k.farbe && ((k.article === "der" && k.farbe === "BLAU") || (k.article === "die" && k.farbe === "ROT") || (k.article === "das" && k.farbe === "GRÜN"))), "K323c أسماء التوسعة بأدواتها وترميز لون الجنس الصحيح");
+  const alleIds = alleVokabeln.map((k) => k.id);
+  ok(new Set(alleIds).size === alleIds.length, "K323d معرّفات كل البطاقات وحيدة بلا تكرار");
+  ok(b2Luecke().luecke === 0 && b2Luecke().kumuliert >= 4500, "K323e فجوة السقف الاستقبالي مغلقة: التراكمي " + b2Luecke().kumuliert + " ≥ 4500");
+  const decks323 = erweiterungDecks();
+  const sitzung323 = erweiterungSitzung(decks323[0].id, emptyProgress as Progress, 3);
+  ok(decks323.length === 16 && sitzung323.length === 8 && sitzung323.every((f) => f.optionen.length === 4 && new Set(f.optionen).size === 4 && f.optionen.includes(f.richtig)), "K323f جلسة التوسعة: 8 أسئلة × 4 خيارات وحيدة بلا تكرار، والصحيح بينها دائمًا");
+  ok(erweiterungFortschritt(emptyProgress as Progress).gesamt >= 900, "K323g عدّاد التوسعة يغطي الحزم كلها");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
