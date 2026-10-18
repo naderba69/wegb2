@@ -466,3 +466,6 @@ Zehn weitere neu-Sätze aufgenommen (voice-06) — neu **458/494**, offen 36; Di
 ## R268 — Kampagne Punkt 1, Charge (s-a1-69…78)
 
 Zehn weitere neu-Sätze (A1) aufgenommen (voice-06) — neu **468/494**, offen 26; Diktat gesamt **648/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
+## R269 — Kampagne Punkt 1, Charge (s-a1-79…88)
+
+Zehn weitere neu-Sätze (A1) aufgenommen (voice-06) — neu **478/494**, offen 16; Diktat gesamt **658/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
