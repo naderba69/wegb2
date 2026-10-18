@@ -15,6 +15,7 @@ import { OfflineKarte } from "@/components/offline";
 import { KlassenAnsicht } from "@/components/klassenansicht";
 import { ZielTempoKarte } from "@/components/zieltempo";
 import type { UiLang, Tempo, Level } from "@/lib/types";
+import { effektiveRate, rateFuerLevel, rateModus } from "@/lib/rate";
 
 export default function Einstellungen() {
   const { progress, update, importProgress, reset } = useProgress();
@@ -205,25 +206,52 @@ export default function Einstellungen() {
                 </option>
               ))}
             </select>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.7rem" }}>
-              <span style={{ minWidth: "6rem" }}>سرعة النطق:</span>
-              <input
-                type="range"
-                min={0.65}
-                max={1.0}
-                step={0.05}
-                value={Math.max(0.65, Math.min(1.0, progress.settings.rate))}
-                onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, rate: Math.max(0.65, Math.min(1.0, Number(e.target.value))) } }))}
-                style={{ flex: 1 }}
-              />
-              <span className="rtl-num">{Math.max(0.65, Math.min(1.0, progress.settings.rate)).toFixed(2)}×</span>
-            </div>
-            <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--color-ink2)" }}>
-              النطاق من <strong>0.65×</strong> (بطيء واضح للمبتدئين) إلى <strong>1.0×</strong> (سرعة طبيعية). لا سرعة أسرع من الطبيعي في الخطة الأساسية.
-            </p>
-            <button className="btn btn-primary" style={{ minHeight: "48px" }} onClick={() => speakDe("Hallo! Ich bin dein Lehrer. Heute lernen wir gemeinsam.", { voiceName: progress.settings.voiceName, rate: progress.settings.rate })}>
-              ▶️ تجربة النطق
-            </button>
+            {(() => {
+              const stufe = levelAmTag(progress.plan.day);
+              const modus = rateModus(progress.settings);
+              const wirkRate = effektiveRate(progress);
+              return (
+                <>
+                  <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+                    <button
+                      className={modus === "auto" ? "btn btn-primary" : "btn"}
+                      data-testid="rate-auto"
+                      onClick={() => update((p) => ({ ...p, settings: { ...p.settings, rateMode: "auto" } }))}
+                    >
+                      🤖 تلقائي حسب المستوى ({stufe}: {rateFuerLevel(stufe).toFixed(2)}×)
+                    </button>
+                    <button
+                      className={modus === "manual" ? "btn btn-primary" : "btn"}
+                      data-testid="rate-manual"
+                      onClick={() => update((p) => ({ ...p, settings: { ...p.settings, rateMode: "manual", rate: effektiveRate(p) } }))}
+                    >
+                      🎚 يدوي محفوظ
+                    </button>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.7rem" }}>
+                    <span style={{ minWidth: "6rem" }}>سرعة النطق:</span>
+                    <input
+                      type="range"
+                      min={0.65}
+                      max={1.1}
+                      step={0.05}
+                      disabled={modus === "auto"}
+                      value={wirkRate}
+                      data-testid="rate-slider"
+                      onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, rateMode: "manual", rate: Math.max(0.65, Math.min(1.1, Number(e.target.value))) } }))}
+                      style={{ flex: 1 }}
+                    />
+                    <span className="rtl-num">{wirkRate.toFixed(2)}×</span>
+                  </div>
+                  <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--color-ink2)" }}>
+                    الافتراضي متدرّج: A1 ‏0.90× وصولًا إلى B2 ‏1.0–1.1×. اليدوي (0.65–1.1×) يبقى متاحًا دائمًا ويُحفظ اختيارك ولا يُستبدل تلقائيًا.
+                  </p>
+                  <button className="btn btn-primary" style={{ minHeight: "48px" }} onClick={() => speakDe("Hallo! Ich bin dein Lehrer. Heute lernen wir gemeinsam.", { voiceName: progress.settings.voiceName, rate: wirkRate })}>
+                    ▶️ تجربة النطق
+                  </button>
+                </>
+              );
+            })()}
           </div>
         </details>
 

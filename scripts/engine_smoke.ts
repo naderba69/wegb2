@@ -48,6 +48,9 @@ import { LANDES_EINHEITEN } from "../lib/landeskunde";
 import { frequenzVonWort, frequenzStufe } from "../lib/frequenz";
 import { sucheAlles } from "../lib/suche";
 import { simBand } from "../lib/simband";
+import { effektiveRate, rateFuerLevel } from "../lib/rate";
+import { skillUmschichtung } from "../lib/skillplan";
+import { kritischeKarten as kritKarten312, resumeAusloesen, resumePlan, resumeZustand } from "../lib/wiedereinstieg";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13059,6 +13062,30 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/kartenexport.tsx", "utf8").includes('data-testid="kartenexport-frequenz"'),
     `K311 ثلاثية R286: مجال ثقة المحاكاة (M5) قراءة ${lesen311?.mittel}±${lesen311?.band} من محاولتين، تردد مدونة التطبيق (M11) — «${haeufig311?.k.de}» ظهر ${haeufig311?.f.n} مرة، وبحث موحّد (M14) يعيد ${suche311.trefferGesamt} نتيجة لـ«Haus»`);
 }
+// ===== K312 (R287 · M3+M7+M15): Skill-Umschichtung, Niveau-Tempo, Wiedereinstieg =====
+{
+  const jetzt312 = new Date("2026-10-18T10:00:00Z");
+  const mkEintrag = (h: string, n: number) => Array.from({ length: n }, () => ({ h: h as never, ok: true, d: "2026-10-12" }));
+  const pM3 = { ...emptyProgress, kompetenzLog: [...mkEintrag("Lesen", 26), ...mkEintrag("Wortschatz", 7), ...mkEintrag("Hoeren", 7)] } as Progress;
+  const schicht312 = skillUmschichtung(pM3, jetzt312);
+  const pB2 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 } } as Progress;
+  const pB2Manuell = { ...pB2, settings: { ...pB2.settings, rateMode: "manual" as const, rate: 0.8 } } as Progress;
+  const pRueck = { ...emptyProgress, streak: { last: "2026-10-10", count: 9 } } as Progress;
+  const pRueckAktiv = resumeAusloesen(pRueck, jetzt312);
+  const voll312 = buildDay(60, pRueckAktiv);
+  const reduz312 = resumePlan(voll312, pRueckAktiv, jetzt312);
+  ok(schicht312.dominant === "Lesen" && schicht312.anteil > 0.6 && schicht312.vonMinuten === 20 && schicht312.ziele.length === 2 &&
+     rateFuerLevel("A1") === 0.9 && rateFuerLevel("B2") === 1.05 && effektiveRate(pB2) === 1.05 && effektiveRate(pB2Manuell) === 0.8 &&
+     resumeZustand(pRueckAktiv, jetzt312).aktiv && resumeZustand(pRueckAktiv, jetzt312).sitzung === 1 &&
+     reduz312.tasks.length < voll312.tasks.length && reduz312.tasks.every((t) => t.mandatory || t.exam || t.kind === "wiederholen") &&
+     reduz312.zielMin === Math.ceil(voll312.zielMin / 2) && kritKarten312(pRueckAktiv, jetzt312) === 0 &&
+     readFileSync("app/einstellungen/page.tsx", "utf8").includes('data-testid="rate-auto"') &&
+     readFileSync("app/page.tsx", "utf8").includes("resumePlan") &&
+     readFileSync("components/skillplan.tsx", "utf8").includes('data-testid="skill-balance-plan"') &&
+     readFileSync("components/wiedereinstieg.tsx", "utf8").includes('data-testid="wiedereinstieg-banner"'),
+    `K312 ثلاثية R287: هيمنة قراءة ${(schicht312.anteil * 100).toFixed(0)}٪ في 14 يومًا تُنتج إعادة توزيع 20 دقيقة (M3)، وتيرة B2 تلقائية ${effektiveRate(pB2)}× واليدوية محفوظة (M7)، وخطة استئناف ${reduz312.tasks.length}/${voll312.tasks.length} مهمة مراجعة فقط بعد غياب (M15)`);
+}
+
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),
 // KI-Stimme gekennzeichnet, maschinelle QC (R169-Werkzeug, eigene Schwellenakte), Tempi aus

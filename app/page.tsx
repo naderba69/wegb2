@@ -13,6 +13,9 @@ import { KindIcon } from "@/components/dirb/icons";
 import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
+import { resumeAusloesen, resumeBedarf, resumePlan, resumeZustand } from "@/lib/wiedereinstieg";
+import { SkillBalancePlan } from "@/components/skillplan";
+import { WiedereinstiegBanner } from "@/components/wiedereinstieg";
 
 const TYPE_LABEL: Record<string, string> = {
   lerntag: "يوم تعلّم",
@@ -51,7 +54,12 @@ function clearPartialTaskState(taskId: string) {
 export default function Today() {
   const { progress, ready, submitTask, closeDay, setSrs, saveExam, update } = useProgress();
   const day = progress.plan.day;
-  const plan = useMemo(() => buildDay(day, progress), [day, progress]);
+  const basePlan = useMemo(() => buildDay(day, progress), [day, progress]);
+  const resumeAktiv = resumeZustand(progress).aktiv;
+  const plan = useMemo(
+    () => (resumeAktiv ? resumePlan(basePlan, progress) : basePlan),
+    [basePlan, progress, resumeAktiv]
+  );
   const [step, setStep] = useState(0);
   const [stepRestoredDay, setStepRestoredDay] = useState<number | null>(null);
   const [points, setPoints] = useState<TaskPoints>({});
@@ -95,6 +103,11 @@ export default function Today() {
     setPoints(restored);
     setPointsLoadedDay(day);
   }, [ready, day]);
+
+  // 🌱 M15/R287: عند أول فتح بعد غياب تُسجَّل جلسة الاستئناف قبل أي تحديث آخر
+  useEffect(() => {
+    if (ready && resumeBedarf(progress)) update((p) => resumeAusloesen(p));
+  }, [ready, progress, update]);
 
   useEffect(() => {
     if (!ready || pointsLoadedDay !== day) return;
@@ -476,6 +489,9 @@ export default function Today() {
         </div>
       </details>
       <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف 90 دقيقة افتراضي للجلسة فقط؛ مجموع تقديرات الخطة مستقل عنه. احفظ التوقّف وعد لاحقاً؛ لن يتحوّل ما لم تسلّمه إلى فشل أو تعويض.</p>
+
+      <SkillBalancePlan progress={progress} />
+      <WiedereinstiegBanner progress={progress} minuten={totalMinutes} normaleMinuten={basePlan.tasks.reduce((a, t) => a + t.minutes, 0)} />
 
       <LernPfad progress={progress} />
 

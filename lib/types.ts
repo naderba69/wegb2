@@ -414,11 +414,15 @@ export interface Progress {
   srs: Record<string, SrsState>;
   canDo: Record<string, boolean>;
   streak: { last: string | null; count: number };
+  /** 🌱 M15/R287: وضع الاستئناف بعد غياب — جلستا عودة مخفّضتان تُسجَّلان بتاريخَيهما */
+  resume?: { startDatum: string; startTag: number; sitzungen: string[]; gapDays: number };
   /** يوم سيّئ: بصمة المستخدم أنّ اليوم كان صعباً → تُجمَّد السلسلة بدون عقاب ولا ديون */
   badDay?: string;
   settings: {
     uiLang: "auto" | UiLang;
     rate: number;
+    /** 🔊 M7/R287: سرعة التشغيل تلقائية حسب المستوى أو يدوية محفوظة */
+    rateMode?: "auto" | "manual";
     tempo: Tempo;
     voiceName?: string;
     /** مدرّس LLM اختياري (OpenAI-compatible) — يبقى محلياً في متصفحك */

@@ -520,3 +520,18 @@ Die letzten acht Alt-Sätze aufgenommen (voice-06) — Alt-Ist 68/68, offen 0. *
 ## R286 — Experten-Audit M5+M11+M14
 
 **M5:** lib/simband.ts — je Fertigkeit Mittelwert ± halbe Spannweite aus den eigenen Simulationen (bereitschaft.tsx, sim-band), ehrlich als Streuung eigener Trainingswerte deklariert (kein Messfehler, keine Prognose; bei 1 Versuch kein Band). **M11:** lib/frequenz.ts zählt Lemma-Vorkommen im App-Korpus (157 Texte + 164 Dialoge + 742 Sätze, stammVon-normalisiert) und stuft Karten ein (sehr häufig/häufig/selten/nicht im Korpus) — Badge in Kartenexport-Tabelle + Sortier-Umschalter + in Suchtreffern; ehrlich als App-Korpus-Frequenz markiert (Listen-Abgleich bleibt A21). **M14:** lib/suche.ts — eine Suche über Vokabeln/Kollokationen/Grammatik/Redemittel (Teilstring de/ar, je max 6, Gesamtzahl), Suchfeld im TiefenLexikon (suche-input/suche-ergebnis). Tore: K311, R286a–c.
+
+## R287 — M3 توزيع المهارات + M7 وتيرة المستوى + M15 استئناف بعد غياب (من تدقيق الخبير)
+
+وصلاتٌ حيّة بلا مساس بجوهر الخطة (لا تغيير في 378 يومًا ولا التغطية ولا سقوف D1-B):
+**M3** `lib/skillplan.ts` يحلّل المحاولات **المؤرّخة** لآخر 14 يومًا؛ فوق 60٪ لمهارة واحدة
+يقترح خصم 20 دقيقة منها وتوزيع 10+10 على أضعف مهارتين — مع السبب معلنًا (لا تعويض بين
+المهارات في الامتحان) ووسمه «فرضًا ناعمًا» صادقًا: المهام الإلزامية لا تتغيّر (A30 الصارمة
+بقيت كما هي). **M7** `lib/rate.ts`: تلقائي A0 0.85/A1 0.90/A2 0.95/B1 1.00/B2 1.05 في
+Klassenzimmer والإملاء، ووضع يدوي محفوظ (0.65–1.1×) لا يُستبدل أبدًا؛ الإرث بلا وضع يُقرأ
+0.85 منه تلقائيًا وأي قيمة أخرى يدويًا. **M15** `lib/wiedereinstieg.ts`: غياب >5 أيام يسجّل
+جلستي عودة في `Progress.resume`؛ خطّة اليوم المعروضة عندها مراجعات حرجة/إلزامية فقط وهدف
+الجلسة منقوص النصف، وما أُجّل لا يتحوّل دينًا عقابيًا (الخطة الكنسية `buildDay` نفسها لم
+تتغيّر)، مع عدّ البطاقات الحرجة المستحقّة. أُقفل بـK312 (محرك) وR287a–c (تفاعلي).
+الفحص: tsc ✓ · smoke ‏1787/0 · interaktiv ‏772/0 · audit 0 · build ✓.
+

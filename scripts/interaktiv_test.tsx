@@ -2114,6 +2114,31 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!band && (band.textContent ?? "").includes("70"), "R286c مجال تذبذب المحاكاة (M5) يعرض المتوسط والمجال من محاولات المتعلم");
   }
 
+  /* ═══════════ R287 — M3 اقتراح إعادة توزيع + M15 لافتة استئناف + M7 وتيرة ═══════════ */
+  {
+    const { SkillBalancePlan } = await import("../components/skillplan");
+    const heute287 = new Date().toISOString().slice(0, 10);
+    const log287 = [
+      ...Array.from({ length: 26 }, () => ({ h: "Lesen" as const, ok: true, d: heute287 })),
+      ...Array.from({ length: 7 }, () => ({ h: "Wortschatz" as const, ok: true, d: heute287 })),
+      ...Array.from({ length: 7 }, () => ({ h: "Hoeren" as const, ok: true, d: heute287 })),
+    ];
+    mount(React.createElement(SkillBalancePlan, { progress: { ...emptyProgress, kompetenzLog: log287 } as never }));
+    const bp = rootEl.querySelector('[data-testid="skill-balance-plan"]');
+    ok(!!bp && (bp.textContent ?? "").includes("إعادة توزيع") && (bp.textContent ?? "").includes("65"), "R287a اقتراح إعادة التوزيع (M3) يظهر بالسبب والنسبة عند هيمنة مهارة فوق 60٪");
+
+    const { WiedereinstiegBanner } = await import("../components/wiedereinstieg");
+    const letzte = new Date(Date.now() - 8 * 86400000).toISOString().slice(0, 10);
+    mount(React.createElement(WiedereinstiegBanner, { progress: { ...emptyProgress, streak: { last: letzte, count: 4 } } as never, minuten: 45, normaleMinuten: 160 }));
+    const wb = rootEl.querySelector('[data-testid="wiedereinstieg-banner"]');
+    ok(!!wb && (wb.textContent ?? "").includes("وضع الاستئناف") && (wb.textContent ?? "").includes("8"), "R287b لافتة الاستئناف (M15) تعلن الغياب والحمل المخفّض والمراجعات الحرجة");
+
+    const { effektiveRate } = await import("../lib/rate");
+    const b2auto = effektiveRate({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 } } as never);
+    const b2hand = effektiveRate({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 }, settings: { ...emptyProgress.settings, rateMode: "manual", rate: 0.8 } } as never);
+    ok(b2auto === 1.05 && b2hand === 0.8, "R287c وتيرة المستوى (M7): B2 تلقائي 1.05× والخيار اليدوي محفوظ 0.80×");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

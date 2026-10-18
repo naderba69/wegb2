@@ -7,6 +7,7 @@ import { sentences, diktatSrc } from "@/lib/content";
 import { levelOf, pickN, rng } from "@/lib/plan";
 import { normalize } from "@/lib/grader";
 import { addFehlerNow, useProgress } from "@/lib/store";
+import { effektiveRate } from "@/lib/rate";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
@@ -39,7 +40,7 @@ export function DiktatBootcamp({ progress }: { progress: Progress }) {
     const el = audioRef.current;
     if (src && el) {
       el.currentTime = 0;
-      el.playbackRate = progress.settings.rate ?? 0.9;
+      el.playbackRate = effektiveRate(progress); // M7/R287
       const pr = el.play();
       if (pr && typeof pr.catch === "function") pr.catch(() => {});
     } else speakAny(it.de);

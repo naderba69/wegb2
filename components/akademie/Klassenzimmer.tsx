@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { FehlerRevue } from "./FehlerRevue";
 import { loadProgress, saveProgress } from "@/lib/store";
+import { effektiveRate } from "@/lib/rate";
 import {
   type DayPlan,
   type DayTask,
@@ -91,7 +92,7 @@ export function Klassenzimmer({
   showCurrentHero = true,
 }: KlassenzimmerProps) {
   const voiceName = progress.settings.voiceName;
-  const rate = progress.settings.rate;
+  const rate = effektiveRate(progress); // M7/R287: Auto-Tempo nach Niveau, manuelle Wahl bleibt
   const lang = progress.settings.uiLang === "auto" ? "ar" : progress.settings.uiLang;
   const [pauseSaved, setPauseSaved] = useState(false);
   // 🎬 R187/U1: وضع الجلسة المتسلسلة — مهمّة ← تسليم ← التالية بزرٍّ واحد، وحرية الرقائق باقية
