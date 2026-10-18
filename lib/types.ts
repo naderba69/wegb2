@@ -425,6 +425,8 @@ export interface Progress {
   srs: Record<string, SrsState>;
   canDo: Record<string, boolean>;
   streak: { last: string | null; count: number };
+  /** 💾 M16/R289: تاريخ آخر تصدير نسخة احتياطية — للتذكير الشهري المحلي */
+  letzteSicherung?: string;
   /** 🌱 M15/R287: وضع الاستئناف بعد غياب — جلستا عودة مخفّضتان تُسجَّلان بتاريخَيهما */
   resume?: { startDatum: string; startTag: number; sitzungen: string[]; gapDays: number };
   /** 🔁 M9/R288: إعادة كتابة محسّنة مجدولة بعد 48 ساعة من كل تصحيح */

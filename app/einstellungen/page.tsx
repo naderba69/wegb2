@@ -16,6 +16,7 @@ import { KlassenAnsicht } from "@/components/klassenansicht";
 import { ZielTempoKarte } from "@/components/zieltempo";
 import type { UiLang, Tempo, Level } from "@/lib/types";
 import { effektiveRate, rateFuerLevel, rateModus } from "@/lib/rate";
+import { pruefeImportText, sicherungFaellig } from "@/lib/backup";
 
 export default function Einstellungen() {
   const { progress, update, importProgress, reset } = useProgress();
@@ -48,17 +49,21 @@ export default function Einstellungen() {
     a.download = `weg-b2-progress-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
+    update((p) => ({ ...p, letzteSicherung: new Date().toISOString() }));
     setMsg("تم تصدير ملف التقدّم — احفظه في مكان آمن.");
   };
 
   const onImport = (file: File) => {
     const reader = new FileReader();
     reader.onload = () => {
+      const text = String(reader.result ?? "");
+      const urteil = pruefeImportText(text);
+      if (!urteil.ok) { setMsg(`⛔ ${urteil.fehlerAr}`); return; }
       try {
-        importProgress(String(reader.result));
+        importProgress(text);
         setMsg("تم استيراد التقدّم بنجاح ✓");
       } catch {
-        setMsg("ملف غير صالح — تأكد أنه ملف JSON مُصدَّر من التطبيق.");
+        setMsg("⛔ تعذّر تطبيق الملف رغم سلامة بنيته — لم يتغيّر تقدّمك الحالي.");
       }
     };
     reader.readAsText(file);
@@ -323,6 +328,11 @@ export default function Einstellungen() {
           <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.7rem", lineHeight: 1.9 }}>
             كل شيء في متصفحك — بدون خوادم ولا حسابات. صدّر نسخة قبل تنظيف المتصفح أو تغيير الجهاز.
           </p>
+          {sicherungFaellig(progress) && (
+            <p data-testid="sicherung-erinnerung" style={{ color: "var(--color-cola)", fontWeight: 700, fontSize: "0.88rem", margin: "0 0 0.6rem" }}>
+              ⏰ تذكير شهري: {progress.letzteSicherung ? "مرّ أكثر من شهر على آخر نسخة احتياطية" : "لم تصدّر نسخة احتياطية بعد"} — تقدّمك كله في هذا المتصفح؛ صدّر نسخة الآن واحفظها خارج الجهاز.
+            </p>
+          )}
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             <button className="btn btn-primary" style={{ minHeight: "48px" }} onClick={exportJson}>⬇️ تصدير (JSON)</button>
             <button className="btn btn-ghost" style={{ minHeight: "48px" }} onClick={() => fileRef.current?.click()}>⬆️ استيراد</button>

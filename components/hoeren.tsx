@@ -16,6 +16,7 @@ import { hoerenAudio, type LkGap } from "@/lib/content";
 import { pickLk } from "@/lib/luecken";
 import { normalize } from "@/lib/grader";
 import { bauHoerRunde, darfSpielen, fragenFrei, werteItem, werteRunde, hoerNote, RATE, type Modus, type Tempo } from "@/lib/hoeren";
+import { ModusUmschalter } from "./modus";
 
 export function HoerLabor({ progress }: { progress: Progress }) {
   const { update } = useProgress();
@@ -106,8 +107,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
       )}
 
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
-        <button className="chip" style={{ cursor: "pointer", background: modus === "training" ? "var(--color-cola)" : "var(--ui-surface-raised)", color: modus === "training" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => reset("training")}>🎓 تدريب — مرات بلا حد</button>
-        <button className="chip" style={{ cursor: "pointer", background: modus === "pruefung" ? "var(--color-cola)" : "var(--ui-surface-raised)", color: modus === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => reset("pruefung")}>⚙️ امتحان — استماعة واحدة 🔒</button>
+        <ModusUmschalter modus={modus} onWechsel={reset} />
         <button className="chip" style={{ cursor: "pointer", background: tempo === "lern" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "lern" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("lern")}>🐢 {RATE.lern}×</button>
         <button className="chip" style={{ cursor: "pointer", background: tempo === "pruefung" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("pruefung")}>⚡ {RATE.pruefung}× Prüfungstempo</button>
       </div>

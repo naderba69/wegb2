@@ -6,6 +6,8 @@ import { useMemo, useRef, useState } from "react";
 import { hoerneu, type HoerNeuItem } from "@/lib/content";
 import { gemischteOptionen } from "@/lib/optionen";
 import { speakDe } from "@/lib/speech";
+import type { Modus } from "@/lib/hoeren";
+import { ModusAbzeichen, ModusUmschalter } from "./modus";
 import { De } from "./De";
 
 const FORMAT_AR: Record<HoerNeuItem["format"], string> = {
@@ -24,6 +26,11 @@ function clipText(item: HoerNeuItem, clipIdx: number): string {
 function ItemAnsicht({ item }: { item: HoerNeuItem }) {
   const [antworten, setAntworten] = useState<Record<string, string>>({});
   const [gezeigt, setGezeigt] = useState(false);
+  // 🎓/⚙️ M6+M20 (R289): وضع امتحان معمَّم — استماعة واحدة ونص مقفل حتى كشف النتيجة
+  const [modus, setModus] = useState<Modus>("training");
+  const [plays, setPlays] = useState(0);
+  const pruefungGesperrt = modus === "pruefung" && !gezeigt;
+  const wechselModus = (m: Modus) => { setModus(m); setPlays(0); setSkript(false); setSpielt(false); };
   const [skript, setSkript] = useState(false);
   const [tempo, setTempo] = useState<number>(1);
   const [spielt, setSpielt] = useState(false);
@@ -45,6 +52,8 @@ function ItemAnsicht({ item }: { item: HoerNeuItem }) {
   };
 
   const abspielen = () => {
+    if (pruefungGesperrt && plays >= 1) return;
+    setPlays((z) => z + 1);
     if (hatDateien) spieleClip(0, tempo);
     else speakDe(item.zeilen.map((z) => z.de).join(" "), { rate: tempo });
   };
@@ -58,8 +67,10 @@ function ItemAnsicht({ item }: { item: HoerNeuItem }) {
     <div>
       <audio ref={audioRef} onEnded={onEnded} preload="none" />
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center", margin: "0.6rem 0" }}>
-        <button type="button" className="btn btn-primary" onClick={abspielen}>
-          {spielt ? "↻ إعادة الاستماع" : "▶ استمع"}
+        <ModusUmschalter modus={modus} onWechsel={wechselModus} />
+        <ModusAbzeichen modus={modus} />
+        <button type="button" className="btn btn-primary" onClick={abspielen} disabled={pruefungGesperrt && plays >= 1}>
+          {pruefungGesperrt && plays >= 1 ? "🔒 استُمعت المرة الواحدة (وضع الامتحان)" : spielt ? "↻ إعادة الاستماع" : "▶ استمع"}
         </button>
         <label className="small">
           السرعة:{" "}
@@ -78,8 +89,8 @@ function ItemAnsicht({ item }: { item: HoerNeuItem }) {
             ))}
           </select>
         </label>
-        <button type="button" className="btn btn-ghost" onClick={() => setSkript((s) => !s)}>
-          {skript ? "إخفاء النص" : "إظهار النص (بعد الاستماع أولًا)"}
+        <button type="button" className="btn btn-ghost" disabled={pruefungGesperrt} onClick={() => setSkript((s) => !s)}>
+          {pruefungGesperrt ? "🔒 النص مقفل حتى كشف النتيجة" : skript ? "إخفاء النص" : "إظهار النص (بعد الاستماع أولًا)"}
         </button>
       </div>
       {!hatDateien && (

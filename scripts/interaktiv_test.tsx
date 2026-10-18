@@ -2180,6 +2180,27 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(loadProgress().srs[ersteKarte.id] === undefined, "R288f زر «أعد تعلّمها من الصفر» يعيد ضبط حالة البطاقة فعليًا");
   }
 
+  /* ═══════════ R289 — M6/M20 وضع امتحان في HörNeu + M16 فحص استيراد ═══════════ */
+  {
+    const { HoerNeu } = await import("../components/hoerneu");
+    mount(React.createElement(HoerNeu, {}));
+    const ersteMaterial = [...rootEl.querySelectorAll("button")].find((b) => (b.textContent ?? "").includes("أسئلة")) as HTMLElement | undefined;
+    if (ersteMaterial) click(ersteMaterial);
+    ok(!!rootEl.querySelector('[data-testid="modus-pruefung"]') && !!rootEl.querySelector('[data-testid="modus-abzeichen"]'), "R289a مبدّل الوضع الموحّد (M20) وعلمه في مواد الاستماع المتنوعة");
+    const pruefChip = rootEl.querySelector('[data-testid="modus-pruefung"]') as HTMLElement | null;
+    if (pruefChip) click(pruefChip);
+    const spielKnopf = [...rootEl.querySelectorAll("button")].find((b) => (b.textContent ?? "").includes("استمع")) as HTMLButtonElement | undefined;
+    ok(!!spielKnopf, "R289b زر الاستماع موجود في وضع الامتحان");
+    if (spielKnopf) click(spielKnopf);
+    const spielDanach = [...rootEl.querySelectorAll("button")].find((b) => (b.textContent ?? "").includes("استُمعت المرة الواحدة")) as HTMLButtonElement | undefined;
+    ok(!!spielDanach && spielDanach.disabled, "R289c بعد استماعة واحدة يُقفل التشغيل في وضع الامتحان (M6)");
+    ok(txt().includes("النص مقفل حتى كشف النتيجة"), "R289d النص مكتوب مقفل حتى كشف النتيجة في وضع الامتحان");
+
+    const { pruefeImportText } = await import("../lib/backup");
+    const fremd = pruefeImportText(JSON.stringify({ hallo: "welt" }));
+    ok(!fremd.ok && !fremd.ok && fremd.fehlerAr.includes("لا يحتوي خطة الأيام"), "R289e فحص الاستيراد (M16) يرفض ملفًا غريبًا برسالة عربية تسمّي الفعل المطلوب");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

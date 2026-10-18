@@ -53,6 +53,7 @@ import { skillUmschichtung } from "../lib/skillplan";
 import { kritischeKarten as kritKarten312, resumeAusloesen, resumePlan, resumeZustand } from "../lib/wiedereinstieg";
 import { kartenAusreisser, skillTrends } from "../lib/kalibrierung";
 import { erledigeWiederschreiben, planeWiederschreiben } from "../lib/wiederschreiben";
+import { pruefeImportText, sicherungFaellig } from "../lib/backup";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13121,6 +13122,27 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/berichte.tsx", "utf8").includes("KalibrierungPanel"),
     `K313 ثلاثية R288: اتجاه مهارة ${trend313?.richtung} من نسبتي نجاح زمنيتين (M4) وبطاقة عنيدة ${aus313.hartnaeckig[0]?.id}، تحويل أخطاء مؤكدة فرديًا إلى بطاقات (M8)، وإعادة كتابة مجدولة بعد 48 ساعة قورنت آليًا (M9)`);
 }
+// ===== K314 (R289 · M6+M20+M16): Prüfungsmodus überall, Modus-Trennung, Backup-Prüfung =====
+{
+  const urteilLeer = pruefeImportText("");
+  const urteilKaputt = pruefeImportText("{kein json");
+  const urteilFremd = pruefeImportText(JSON.stringify({ foo: 1 }));
+  const urteilTag = pruefeImportText(JSON.stringify({ plan: { day: 999 } }));
+  const urteilOk = pruefeImportText(JSON.stringify({ plan: { day: 42 }, srs: {} }));
+  const neu314 = { ...emptyProgress } as Progress;
+  const alt314 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 10 } } as Progress;
+  const frisch314 = { ...alt314, letzteSicherung: new Date().toISOString() } as Progress;
+  const veraltet314 = { ...alt314, letzteSicherung: new Date(Date.now() - 40 * 86400000).toISOString() } as Progress;
+  ok(!urteilLeer.ok && !urteilKaputt.ok && !urteilFremd.ok && !urteilTag.ok && urteilOk.ok &&
+     !sicherungFaellig(neu314) && sicherungFaellig(alt314) && !sicherungFaellig(frisch314) && sicherungFaellig(veraltet314) &&
+     readFileSync("components/hoerneu.tsx", "utf8").includes("ModusUmschalter") &&
+     readFileSync("components/hoerneu.tsx", "utf8").includes("pruefungGesperrt") &&
+     readFileSync("components/hoeren.tsx", "utf8").includes("ModusUmschalter") &&
+     readFileSync("app/einstellungen/page.tsx", "utf8").includes("pruefeImportText") &&
+     readFileSync("app/einstellungen/page.tsx", "utf8").includes('data-testid="sicherung-erinnerung"'),
+    `K314 ثلاثية R289: امتحان معمَّم في مواد الاستماع المتنوعة (M6) بمبدّل وضع موحّد (M20)، وفحص استيراد بخمس رسائل عربية مفهومة وتذكير نسخ شهري (M16)`);
+}
+
 
 
 
