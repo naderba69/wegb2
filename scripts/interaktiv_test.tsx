@@ -2092,6 +2092,28 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(txt().includes("أجبت عن") || txt().includes("صحيح") || txt().includes("الصحيح:"), "R285f الإجابة تُسجَّل بتغذية فورية");
   }
 
+  /* ═══════════ R286 — M14 بحث موحّد + M5 مجال ثقة ═══════════ */
+  {
+    const { TiefenLexikon } = await import("../components/tiefenlex");
+    mount(React.createElement(TiefenLexikon, { progress: { ...emptyProgress } as never }));
+    const hdr286 = btn("TiefenLexikon");
+    if (hdr286) click(hdr286);
+    const eingabe = rootEl.querySelector('[data-testid="suche-input"]') as HTMLInputElement | null;
+    ok(!!eingabe, "R286a صندوق البحث الموحّد (M14) في العمق المعجمي");
+    if (eingabe) typeIn(eingabe, "Haus");
+    const erg = rootEl.querySelector('[data-testid="suche-ergebnis"]');
+    ok(!!erg && (erg.textContent ?? "").length > 10, "R286b البحث يعيد نتائج مجمّعة من البنوك");
+
+    const { Bereitschaft } = await import("../components/bereitschaft");
+    const progSim = { ...emptyProgress, simulationen: [
+      { datum: "2026-06-01", seed: 1, punkte: { lesen: 60, hoeren: 50, schreiben: 55, sprechen: 65 }, bestanden: false },
+      { datum: "2026-06-08", seed: 2, punkte: { lesen: 80, hoeren: 70, schreiben: 75, sprechen: 85 }, bestanden: true },
+    ] };
+    mount(React.createElement(Bereitschaft, { progress: progSim as never }));
+    const band = rootEl.querySelector('[data-testid="sim-band"]');
+    ok(!!band && (band.textContent ?? "").includes("70"), "R286c مجال تذبذب المحاكاة (M5) يعرض المتوسط والمجال من محاولات المتعلم");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

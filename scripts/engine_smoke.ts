@@ -45,6 +45,9 @@ import { wartungsBericht } from "../lib/wartung";
 import { schreibFehlerBilanz } from "../lib/schreibfehler";
 import { isoWoche, absichtStatus } from "../lib/absicht";
 import { LANDES_EINHEITEN } from "../lib/landeskunde";
+import { frequenzVonWort, frequenzStufe } from "../lib/frequenz";
+import { sucheAlles } from "../lib/suche";
+import { simBand } from "../lib/simband";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13036,6 +13039,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/blitz.tsx", "utf8").includes("export function KurzSession") && readFileSync("components/blitz.tsx", "utf8").includes("const KURZ_SEK = 300") &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("<KurzSession"),
     `K310 ثلاثية R285: ${amt310.length} وحدات حياة وظيفية + ${tn310.length} وحدات مسار تونس (A23/A26) بخطوات وعبارات، وجلسة 5 دقائق بعدّادها في محطة الجولة السريعة (A28)`);
+}
+
+// ===== K311 (R286 · M5+M11+M14): Vertrauensband, Korpus-Frequenz, Einheitssuche =====
+{
+  const pSim = { ...emptyProgress, simulationen: [
+    { datum: "2026-06-01", seed: 1, punkte: { lesen: 60, hoeren: 50, schreiben: 55, sprechen: 65 }, bestanden: false },
+    { datum: "2026-06-08", seed: 2, punkte: { lesen: 80, hoeren: 70, schreiben: 75, sprechen: 85 }, bestanden: true },
+  ] } as Progress;
+  const band311 = simBand(pSim);
+  const lesen311 = band311.find((z) => z.key === "lesen");
+  const haeufig311 = alleVokabeln.map((k) => ({ k, f: frequenzStufe(k) })).find((x) => x.f.n >= 10);
+  const suche311 = sucheAlles("Haus");
+  ok(!!lesen311 && lesen311.mittel === 70 && lesen311.band === 10 && lesen311.n === 2 &&
+     !!haeufig311 && haeufig311.f.stufe === "sehr-haeufig" && frequenzVonWort("Xylophonquark").stufe === "nicht-im-korpus" &&
+     suche311.vokabeln.length > 0 && suche311.trefferGesamt >= suche311.vokabeln.length &&
+     readFileSync("components/bereitschaft.tsx", "utf8").includes('data-testid="sim-band"') &&
+     readFileSync("components/tiefenlex.tsx", "utf8").includes('data-testid="suche-input"') &&
+     readFileSync("components/kartenexport.tsx", "utf8").includes('data-testid="kartenexport-frequenz"'),
+    `K311 ثلاثية R286: مجال ثقة المحاكاة (M5) قراءة ${lesen311?.mittel}±${lesen311?.band} من محاولتين، تردد مدونة التطبيق (M11) — «${haeufig311?.k.de}» ظهر ${haeufig311?.f.n} مرة، وبحث موحّد (M14) يعيد ${suche311.trefferGesamt} نتيجة لـ«Haus»`);
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),

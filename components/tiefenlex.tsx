@@ -9,6 +9,8 @@
 import { useMemo, useState } from "react";
 import type { Exercise, Level, Progress, VocabCard } from "@/lib/types";
 import { sentences, tiefenlex, alleVokabeln, kollokVertiefung, synonymVertiefung } from "@/lib/content";
+import { sucheAlles } from "@/lib/suche";
+import { frequenzVonWort, FREQUENZ_AR } from "@/lib/frequenz";
 import { levelOf, pickN, rng } from "@/lib/plan";
 import { gemischteOptionen } from "@/lib/optionen";
 import { addFehlerNow, useProgress } from "@/lib/store";
@@ -223,6 +225,7 @@ const TABS = [
 ] as const;
 
 export function TiefenLexikon({ progress }: { progress: Progress }) {
+  const [suchtext, setSuchtext] = useState("");
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("k");
   const [runde, setRunde] = useState(0);
@@ -260,6 +263,36 @@ export function TiefenLexikon({ progress }: { progress: Progress }) {
       )}
       {open && (
         <>
+          <div data-testid="suche-box" style={{ marginBottom: "0.8rem" }}>
+            <input
+              data-testid="suche-input"
+              value={suchtext}
+              onChange={(e) => setSuchtext(e.target.value)}
+              placeholder="🔎 بحث موحّد: كلمة، متلازمة، قاعدة، وسيلة تعبير… (M14)"
+              style={{ width: "100%", minHeight: 44, borderRadius: 10, padding: "0.4rem 0.7rem" }}
+            />
+            {suchtext.trim().length >= 2 && (() => {
+              const r = sucheAlles(suchtext);
+              return (
+                <div data-testid="suche-ergebnis" style={{ fontSize: "0.85rem", display: "grid", gap: "0.3rem", marginTop: "0.45rem" }}>
+                  {r.trefferGesamt === 0 && <span style={{ color: "var(--color-ink2)" }}>لا نتائج — جرّب كلمة ألمانية أو عربية أخرى.</span>}
+                  {r.vokabeln.map((v) => (
+                    <div key={"v" + v.de}>🗂️ <strong dir="ltr" style={{ unicodeBidi: "isolate" }}>{v.de}</strong> = {v.ar} {v.level && <span className="chip" style={{ fontSize: "0.68rem" }}>{v.level}</span>} <span className="chip" style={{ fontSize: "0.68rem" }}>📊 {FREQUENZ_AR[frequenzVonWort(v.de).stufe]}</span></div>
+                  ))}
+                  {r.kollok.map((k) => (
+                    <div key={"k" + k.phrase}>🧩 <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{k.phrase}</span>{k.karteAr && <span style={{ color: "var(--color-ink2)" }}> — بطاقة: {k.karteAr}</span>}</div>
+                  ))}
+                  {r.grammatik.map((g) => (
+                    <div key={"g" + g.id}>📐 {g.titelAr} <span style={{ color: "var(--color-ink2)" }}>({g.titelDe})</span></div>
+                  ))}
+                  {r.redemittel.map((x) => (
+                    <div key={"r" + x.de}>🧰 <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{x.de}</span> = {x.ar}</div>
+                  ))}
+                  {r.trefferGesamt > 0 && <span style={{ color: "var(--color-ink2)" }}>المجموع {r.trefferGesamt} نتيجة في أربع بنوك (تُعرض أول 6 من كل بنك).</span>}
+                </div>
+              );
+            })()}
+          </div>
           <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "0.7rem" }}>
             {TABS.map((t) => (
               <button

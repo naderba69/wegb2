@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { SIM_FORMATE, type SimFormatId } from "@/lib/simulation";
+import { simBand } from "@/lib/simband";
 import {
   FERT_AR,
   FERT_SELBST,
@@ -71,6 +72,29 @@ export function Bereitschaft({ progress }: { progress: Progress }) {
             )}
             .
           </div>
+
+          {(() => {
+            const band = simBand(progress).filter((z) => z.n > 0);
+            return band.length > 0 ? (
+              <div data-testid="sim-band" className="card" style={{ padding: "0.6rem 0.8rem", marginBottom: "0.6rem", fontSize: "0.86rem" }}>
+                <strong>🎯 مجال تذبذب نتائجك (M5)</strong>
+                {band.map((z) => (
+                  <div key={z.key} style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem", padding: "0.15rem 0" }}>
+                    <span>{FERT_AR[z.key] ?? z.key}</span>
+                    <span>
+                      متوسط <b className="rtl-num">{z.mittel}</b>
+                      {z.band === null ? (
+                        <span style={{ color: "var(--color-ink2)" }}> — محاولة واحدة لا تكفي لمجال</span>
+                      ) : (
+                        <> ± <b className="rtl-num">{z.band}</b> <span style={{ color: "var(--color-ink2)" }}>(من <span className="rtl-num">{z.min}</span> إلى <span className="rtl-num">{z.max}</span> في <span className="rtl-num">{z.n}</span> محاولات)</span></>
+                      )}
+                    </span>
+                  </div>
+                ))}
+                <div style={{ color: "var(--color-ink2)", fontSize: "0.76rem" }}>مجال تباين نتائج تدريبك أنت — ليس خطأ قياس معايرًا ولا توقّعًا لنتيجتك الحقيقية.</div>
+              </div>
+            ) : null;
+          })()}
 
           <div style={{ display: "grid", gap: "0.45rem" }}>
             {bilanzen.map((b) => (

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { vocabMap } from "@/lib/content";
 import { exportKarten, karteninCsv, allesInCsv } from "@/lib/karten-export";
+import { frequenzVonWort, FREQUENZ_AR } from "@/lib/frequenz";
 import { De } from "@/components/De";
 
 const FARB_STIL: Record<string, string> = { BLAU: "#1d4ed8", ROT: "#be123c", "GRÜN": "#15803d" };
@@ -16,8 +17,13 @@ export default function KartenExport() {
     []
   );
   const [deckId, setDeckId] = useState(decks[0]?.id ?? "");
+  const [nachFrequenz, setNachFrequenz] = useState(false);
   const [offen, setOffen] = useState(false);
-  const karten = useMemo(() => exportKarten(deckId), [deckId]);
+  const kartenRoh = useMemo(() => exportKarten(deckId), [deckId]);
+  const karten = useMemo(
+    () => (nachFrequenz ? [...kartenRoh].sort((a, b) => frequenzVonWort(b.vorne).n - frequenzVonWort(a.vorne).n) : kartenRoh),
+    [kartenRoh, nachFrequenz]
+  );
   const csv = useMemo(() => karteninCsv(deckId), [deckId]);
 
   const kopieren = async (text: string) => {
@@ -40,11 +46,17 @@ export default function KartenExport() {
         </select>
       </label>
 
+      <div style={{ display: "flex", gap: "0.4rem", alignItems: "center", flexWrap: "wrap" }}>
+        <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>الترتيب:</span>
+        <button className="chip" style={{ cursor: "pointer", fontWeight: nachFrequenz ? 400 : 900 }} onClick={() => setNachFrequenz(false)}>كما في الحزمة</button>
+        <button className="chip" data-testid="kartenexport-frequenz" style={{ cursor: "pointer", fontWeight: nachFrequenz ? 900 : 400 }} onClick={() => setNachFrequenz(true)}>📊 حسب ترددها في نصوص التطبيق (M11)</button>
+      </div>
+
       <div style={{ overflowX: "auto" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
           <thead>
             <tr>
-              {["الوجه", "مرساة اللون", "الظهر", "الكتلة السياقية", "مرادفات سياقية", "النطق"].map((h) => (
+              {["الوجه", "مرساة اللون", "الظهر", "التردد", "الكتلة السياقية", "مرادفات سياقية", "النطق"].map((h) => (
                 <th key={h} style={{ borderBottom: "2px solid var(--color-line)", padding: "0.35rem", textAlign: "start" }}>{h}</th>
               ))}
             </tr>
@@ -57,6 +69,7 @@ export default function KartenExport() {
                 </td>
                 <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}>{k.farbe}</td>
                 <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}>{k.hinten}</td>
+                <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}><span className="chip" style={{ fontSize: "0.68rem" }}>📊 {FREQUENZ_AR[frequenzVonWort(k.vorne).stufe]}</span></td>
                 <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}>{k.chunk}</td>
                 <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}>{k.synonyme}</td>
                 <td style={{ padding: "0.35rem", borderBottom: "1px solid var(--color-line)" }}>{k.aussprache}</td>
