@@ -472,3 +472,6 @@ Zehn weitere neu-Sätze (A1) aufgenommen (voice-06) — neu **478/494**, offen 1
 ## R270 — Kampagne Punkt 1, Charge (s-a1-89…98)
 
 Zehn weitere neu-Sätze (A1) aufgenommen (voice-06) — neu **488/494**, offen 6; Diktat gesamt **668/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
+## R271 — Kampagne Punkt 1 ABGESCHLOSSEN (s-a1-99…102 + s-b2-211…212)
+
+Die letzten sechs neu-Sätze aufgenommen (voice-06): **alle 494 neu-Sätze sind jetzt aufgezeichnet (494/494), offen 0** — Kampagnenpunkt 1 ist geschlossen. Diktat-Abdeckung gesamt **674/742**; die verbleibenden 68 nicht aufgezeichneten Sätze sind Altbestand ohne `neu`-Markierung (vor der Kampagne) und werden ehrlich per Geräte-TTS gelesen; Kampagnenpunkt 3 (Abdeckung über Punkt 1 heben) ist damit im definierten Umfang erfüllt. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
