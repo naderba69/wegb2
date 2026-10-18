@@ -54,6 +54,8 @@ import { kritischeKarten as kritKarten312, resumeAusloesen, resumePlan, resumeZu
 import { kartenAusreisser, skillTrends } from "../lib/kalibrierung";
 import { erledigeWiederschreiben, planeWiederschreiben } from "../lib/wiederschreiben";
 import { pruefeImportText, sicherungFaellig } from "../lib/backup";
+import { bemerkenFrage, wochenNeueRegeln } from "../lib/bemerken";
+import { wochenBericht } from "../lib/wochenbericht";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13142,6 +13144,35 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("app/einstellungen/page.tsx", "utf8").includes('data-testid="sicherung-erinnerung"'),
     `K314 ثلاثية R289: امتحان معمَّم في مواد الاستماع المتنوعة (M6) بمبدّل وضع موحّد (M20)، وفحص استيراد بخمس رسائل عربية مفهومة وتذكير نسخ شهري (M16)`);
 }
+// ===== K315 (R290 · M10+M13+M19): Noticing im Text, Audio auf Abruf, Wochenbericht =====
+{
+  const text315 = "Der Brief wird heute von der Sekretärin geschrieben. Die Sonne scheint hell über der Stadt. Wir trinken Kaffee im Garten.";
+  const frage315 = bemerkenFrage(text315, [{ id: "b1-passiv", titelDe: "Passiv", titelAr: "المبني للمجهول" }]);
+  const heute315 = new Date().toISOString();
+  const karte315 = alleVokabeln[0];
+  const p315 = {
+    ...emptyProgress,
+    plan: {
+      ...emptyProgress.plan, day: 10,
+      tasks: { "10:t1": { done: true, passed: true, score: 3, total: 3, attempts: 1, kind: "lesen" as const, at: heute315, geplantMin: 30 } },
+    },
+    srs: { [karte315.id]: { ease: 2.5, interval: 4, due: heute315, reps: 3, lapses: 0, introduced: heute315 } },
+    fehler: { f1: { key: "f1", falsch: "Ich habe müde", richtig: "Ich bin müde", art: "konstruktion", ar: "صفة", treffer: 3, first: heute315.slice(0, 10), srs: { ease: 2.5, interval: 1, due: heute315, reps: 1, lapses: 0, introduced: heute315 } } },
+  } as Progress;
+  const bericht315 = wochenBericht(p315);
+  // M13: الصوت عند الطلب في كل المشغّلات؛ الاستثناء الوحيد المعلن ملف الجولة الحالية في معمل الاستماع (K26h — نقرة لا تنتظر)
+  const keinePreloadAuto = !readFileSync("components/diktat.tsx", "utf8").includes('preload="auto"') && readFileSync("components/hoeren.tsx", "utf8").includes('preload="auto"');
+  ok(!!frage315 && frage315.belegSatz.includes("wird") && frage315.saetze[frage315.richtig] === frage315.belegSatz &&
+     wochenNeueRegeln(p315, 10).length >= 0 &&
+     bericht315.minutenProArt.some((m) => m.art === "قراءة" && m.minuten === 30) &&
+     bericht315.produktivNeu.anzahl === 1 && bericht315.fehlerWiederholt.length === 1 &&
+     bericht315.naechsteWoche.length === 7 && bericht315.naechsteWoche[0].day === 11 &&
+     keinePreloadAuto &&
+     readFileSync("components/tasks.tsx", "utf8").includes("BemerkenKarte") &&
+     readFileSync("components/offline.tsx", "utf8").includes("messeErstStart"),
+    `K315 ثلاثية R290: سؤال ملاحظة يصيب جملة الشاهد «${frage315?.beleg}» (M10)، صفر preload=auto في مشغّلات الصوت (M13)، وتقرير أسبوعي: ${bericht315.minutenProArt[0]?.art} ${bericht315.minutenProArt[0]?.minuten} دقيقة + إنتاجي جديد ${bericht315.produktivNeu.anzahl} + خطة ${bericht315.naechsteWoche.length} أيام (M19)`);
+}
+
 
 
 

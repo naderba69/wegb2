@@ -2201,6 +2201,25 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!fremd.ok && !fremd.ok && fremd.fehlerAr.includes("لا يحتوي خطة الأيام"), "R289e فحص الاستيراد (M16) يرفض ملفًا غريبًا برسالة عربية تسمّي الفعل المطلوب");
   }
 
+  /* ═══════════ R290 — M10 سؤال ملاحظة + M19 تقرير أسبوعي قابل للطباعة ═══════════ */
+  {
+    const { BemerkenKarte } = await import("../components/bemerken");
+    const { bemerkenFrage } = await import("../lib/bemerken");
+    const text290 = "Der Brief wird heute von der Sekretärin geschrieben. Die Sonne scheint hell über der Stadt. Wir trinken Kaffee im Garten.";
+    const regeln290 = [{ id: "b1-passiv", titelDe: "Passiv", titelAr: "المبني للمجهول (Passiv)" }];
+    const f290 = bemerkenFrage(text290, regeln290);
+    mount(React.createElement(BemerkenKarte, { textDe: text290, regeln: regeln290 }));
+    ok(!!rootEl.querySelector('[data-testid="bemerken-karte"]') && txt().includes("لاحظ القاعدة الجديدة"), "R290a بطاقة الملاحظة (M10) تعرض أول ظهور ملوّنًا وسؤالًا واحدًا");
+    ok(!!f290, "R290b مولّد سؤال الملاحظة يجد شاهد القاعدة في النص");
+    if (f290) click(rootEl.querySelector(`[data-testid="bemerken-option-${f290.richtig}"]`) as HTMLElement);
+    const fb290 = rootEl.querySelector('[data-testid="bemerken-feedback"]');
+    ok(!!fb290 && (fb290.textContent ?? "").includes("صحيح"), "R290c اختيار جملة الشاهد يُقابَل بتغذية فورية صحيحة");
+
+    const { wochenKarteHtml } = await import("../components/berichte");
+    const html290 = wochenKarteHtml({ ...emptyProgress } as never, "اختبار");
+    ok(html290.includes("دقائق هذا الأسبوع بحسب نوع المهمة") && html290.includes("كلمات إنتاجية جديدة") && html290.includes("خطة الأسبوع القادم"), "R290d التقرير الأسبوعي القابل للطباعة (M19) يحمل دقائق الأنواع والإنتاج الجديد والأخطاء المتكررة وخطة القادم");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

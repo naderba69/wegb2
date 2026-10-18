@@ -16,6 +16,7 @@ import { prognose } from "@/lib/prognose";
 import { sprechHeute } from "@/lib/sprechziel";
 import { FLUENZ_ZIEL } from "@/lib/fluenz";
 import { skillBilanz } from "@/lib/skillbilanz";
+import { wochenBericht } from "@/lib/wochenbericht";
 import { KalibrierungPanel } from "./kalibrierung";
 import { wartungsBericht } from "@/lib/wartung";
 import { wochenBilanz } from "@/lib/motivation";
@@ -179,6 +180,10 @@ export function wochenKarteHtml(p: Progress, name: string): string {
   const pr = prognose(p.srs ?? {});
   const sb = skillBilanz(p);
   const fl = (p.fluenz ?? []).slice(-1)[0];
+  const bericht = wochenBericht(p);
+  const minRows = bericht.minutenProArt.map((m) => `<tr><td>${m.art}</td><td class="n">${m.minuten}</td></tr>`).join("");
+  const fehlerRows = bericht.fehlerWiederholt.map((f) => `<tr><td>${f.falsch}</td><td>${f.richtig}</td><td class="n">${f.treffer}</td></tr>`).join("");
+  const planRows = bericht.naechsteWoche.map((d) => `<tr><td class="n">${d.day}</td><td>${d.phase}</td><td>${d.typ}</td><td class="n">${d.minuten}</td></tr>`).join("");
   const rows = sb.zeilen.map((z) => `<tr><td>${KOMPETENZ_AR[z.hand] ?? z.hand}</td><td class="n">${z.versuche}</td><td class="n">${Math.round(z.anteil * 100)}٪</td><td class="n">${z.quote === null ? "—" : z.quote + "٪"}</td></tr>`).join("");
   return `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>بطاقة تقدّم الأسبوع — ${name}</title>
 <style>body{font-family:system-ui,sans-serif;margin:2rem;color:#222}table{border-collapse:collapse;width:100%}td,th{border:1px solid #bbb;padding:.4rem .6rem;text-align:right}td.n{text-align:center}h1{font-size:1.3rem}</style></head><body>
@@ -189,6 +194,14 @@ export function wochenKarteHtml(p: Progress, name: string): string {
 <h2>توازن المهارات (${sb.fenster === "7-tage" ? "آخر 7 أيام" : "آخر المحاولات"})</h2>
 <table><tr><th>المهارة</th><th>محاولات</th><th>الحصة</th><th>الإصابة</th></tr>${rows}</table>
 ${sb.warnung ? `<p>⚖️ ${sb.warnung}</p>` : ""}
+<h2>دقائق هذا الأسبوع بحسب نوع المهمة (مقاسة حيث توفّرت، وإلا مخططة معلنة)</h2>
+<table><tr><th>النوع</th><th>دقائق</th></tr>${minRows || '<tr><td colspan="2">لا مهام مسلّمة هذا الأسبوع بعد</td></tr>'}</table>
+<h2>كلمات إنتاجية جديدة هذا الأسبوع: ${bericht.produktivNeu.anzahl}</h2>
+<p>${bericht.produktivNeu.woerter.join(" · ") || "—"}</p>
+<h2>أخطاء متكررة (ظهرت مرتين فأكثر)</h2>
+<table><tr><th>خطأك</th><th>الصواب</th><th>مرات</th></tr>${fehlerRows || '<tr><td colspan="3">لا أخطاء متكررة هذا الأسبوع</td></tr>'}</table>
+<h2>خطة الأسبوع القادم (من اليوم ${p.plan.day + 1})</h2>
+<table><tr><th>اليوم</th><th>المستوى</th><th>النوع</th><th>دقائق مخططة</th></tr>${planRows}</table>
 </body></html>`;
 }
 

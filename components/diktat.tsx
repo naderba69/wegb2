@@ -94,7 +94,7 @@ export function DiktatBootcamp({ progress }: { progress: Progress }) {
       </div>
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
         <button className="btn btn-gold" onClick={horen} disabled={hmac >= 3}>🔊 اسمع — {3 - hmac}/3</button>
-        {src && <audio ref={audioRef} src={src} preload="auto" />}
+        {src && <audio ref={audioRef} src={src} preload="none" />}
         <input
           className="field"
           style={{ direction: "ltr", flex: 1, minWidth: "12rem" }}

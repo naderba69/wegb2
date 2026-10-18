@@ -37,8 +37,30 @@ async function messe(): Promise<OfflineZustand> {
 /** مقطع صوتي واحد من بيان التنزيل الكامل (public/audio-manifest.json يُبنى من public/audio). */
 interface AudioEintrag { p: string; b: number }
 
+/** 📏 M13 (R290): حجم أول تشغيل مقاس — بنوك المحتوى من ترويسة الخادم، والصوت كله من بيانه.
+ *  الصوت لا يدخل أول تشغيل: يُنزَّل عند الطلب ملفًا ملفًا (preload=none في كل المشغّلات). */
+async function messeErstStart(): Promise<{ bankenMb: number | null; audioMb: number; audioDateien: number }> {
+  let bankenMb: number | null = null;
+  try {
+    const kopf = await fetch("/banks.json", { method: "HEAD" });
+    const laenge = Number(kopf.headers.get("content-length") ?? 0);
+    if (laenge > 0) bankenMb = Math.round((laenge / 1048576) * 10) / 10;
+  } catch { /* القياس اختياري العرض */ }
+  let audioMb = 0; let audioDateien = 0;
+  try {
+    const res = await fetch("/audio-manifest.json");
+    if (res.ok) {
+      const eintraege = (await res.json()) as AudioEintrag[];
+      audioDateien = eintraege.length;
+      audioMb = Math.round((eintraege.reduce((a2, x) => a2 + x.b, 0) / 1048576) * 10) / 10;
+    }
+  } catch { /* البيان قد لا يُبنى في بيئة التطوير */ }
+  return { bankenMb, audioMb, audioDateien };
+}
+
 export function OfflineKarte() {
   const [zustand, setZustand] = useState<OfflineZustand | null>(null);
+  const [erstStart, setErstStart] = useState<{ bankenMb: number | null; audioMb: number; audioDateien: number } | null>(null);
   const [meldung, setMeldung] = useState("");
   const [laedtVoll, setLaedtVoll] = useState<null | { n: number; gesamt: number; mbGesamt: number }>(null);
   const abbrechenRef = useRef(false);
@@ -46,6 +68,7 @@ export function OfflineKarte() {
   useEffect(() => {
     let lebt = true;
     messe().then((z) => { if (lebt) setZustand(z); }).catch(() => undefined);
+    messeErstStart().then((z) => { if (lebt) setErstStart(z); }).catch(() => undefined);
     return () => { lebt = false; };
   }, []);
 
@@ -106,6 +129,9 @@ export function OfflineKarte() {
           عامل الخدمة: <strong>{zustand.swAktiv ? "نشط ✓" : "سيُفعَّل عند إعادة التحميل"}</strong> ·
           ملفات مخزّنة: <strong>{zustand.eintraege}</strong>
           {zustand.mb !== null && <> · الحجم المقاس: نحو <strong>{zustand.mb}</strong> MB (تقدير متصفحك لاستعمال هذا الأصل)</>}
+          {erstStart && (
+            <> · 📏 حجم أول تشغيل: بنوك المحتوى <strong>{erstStart.bankenMb !== null ? `نحو ${erstStart.bankenMb}` : "—"}</strong> MB، والصوت كله ({erstStart.audioDateien} ملفًا، نحو {erstStart.audioMb} MB) <strong>لا يُنزَّل إلا عند الطلب</strong> — تسمع ملفًا فيُنزَّل وحده.</>
+          )}
         </p>
       ) : (
         <p className="tiny muted" style={{ margin: 0 }}>جارٍ قياس المخزن…</p>

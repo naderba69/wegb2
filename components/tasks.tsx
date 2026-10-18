@@ -23,6 +23,7 @@ import { KompositaWerkstatt } from "./komposita";
 import { SignalRadar } from "./signalradar";
 import { StilWechsler } from "./stilwechsler";
 import { grammatikImText } from "@/lib/grammatikRadar";
+import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
 const alleGrammatik = Object.values(grammarMap);
@@ -72,12 +73,14 @@ interface TaskProps {
   voiceName?: string;
   rate?: number;
   tempo?: Tempo;
+  /** 🔎 M10/R290: قواعد الأسبوع الجديدة للملاحظة داخل نص القراءة */
+  bemerkenRegeln?: { id: string; titelDe: string; titelAr: string }[];
   /** بادئة تخزينٍ مؤقّتة لمحاولات المهمة، تُحذف عند تسليمها. */
   persistKey?: string;
 }
 
 /** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
-export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis }: TaskProps) {
+export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
   // تسميع الإملاء: مستمع عام يعمل في كل المهام
   useEffect(() => {
     const onSpeak = (e: Event) => {
@@ -97,7 +100,7 @@ export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceN
     case "hoeren":
       return <HoerenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
     case "lesen":
-      return <LesenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
+      return <LesenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} bemerkenRegeln={bemerkenRegeln} />;
     case "schreiben":
       return <SchreibenTask task={task} onPoints={onPoints} persistKey={persistKey} />;
     case "sprechen":
@@ -962,7 +965,7 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
 }
 
 // ── قراءة ───────────────────────────────────────────────────────────────
-function LesenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
+function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const text = getText(task.textId ?? "");
   const [showTr, setShowTr] = useState(false);
   if (!text) return <Empty title="نص غير موجود" />;
@@ -985,6 +988,7 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPro
           <p key={i} style={{ margin: i === 0 ? 0 : "0.8rem 0 0" }}><WortLinkText text={p} level={text.level} testid={`wortlink-${i}`} /></p>
         ))}
       </article>
+      {bemerkenRegeln && bemerkenRegeln.length > 0 && <BemerkenKarte textDe={lese.de} regeln={bemerkenRegeln} />}
       {radar.length > 0 && (
         <div data-testid="grammatik-radar" style={{ margin: "0.8rem 0 0.4rem", padding: "0.6rem 0.8rem", borderRadius: "8px", background: "var(--color-paper)", borderInlineStart: "4px solid var(--color-b1)", fontSize: "0.82rem" }}>
           <div style={{ fontWeight: 800, marginBottom: "0.3rem", color: "var(--color-ink)" }}>

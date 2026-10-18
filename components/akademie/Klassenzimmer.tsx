@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FehlerRevue } from "./FehlerRevue";
 import { loadProgress, saveProgress } from "@/lib/store";
 import { effektiveRate } from "@/lib/rate";
+import { wochenNeueRegeln } from "@/lib/bemerken";
 import {
   type DayPlan,
   type DayTask,
@@ -429,6 +430,7 @@ export function Klassenzimmer({
               tempo={progress.settings.tempo}
               persistKey={`wegb2:partial:${currentTask.id}`}
               onKapselErgebnis={onKapselErgebnis}
+              bemerkenRegeln={wochenNeueRegeln(progress, day)}
             />
 
             <div className="dirb-actions">
