@@ -14,6 +14,8 @@ import { LeseLeiter } from "@/components/leseleiter";
 import { SchnellLesen } from "@/components/schnellesen";
 import { PragmatikKarte } from "@/components/pragmatik";
 import { WortfamilienStation } from "@/components/wortfamilien";
+import { FehlerAtlas } from "@/components/fehleratlas";
+import { DialogSzenarien } from "@/components/dialogszenarien";
 import { RedemittelBank } from "@/components/redemittel";
 import { HoerNeu } from "@/components/hoerneu";
 import { VortragsBühne } from "@/components/vortrag";
@@ -194,7 +196,7 @@ export default function Ueben() {
           </div>
         )}
         <section className="dirb-station">
-          {offen === "fehlerlabor" && <FehlerLabor progress={progress} />}
+          {offen === "fehlerlabor" && (<div style={{ display: "grid", gap: "0.9rem" }}><FehlerLabor progress={progress} /><FehlerAtlas /></div>)}
           {offen === "uebungen" && <UebungenCard progress={progress} />}
           {offen === "blitz" && (<div style={{ display: "grid", gap: "0.9rem" }}><BlitzDrill progress={progress} /><KurzSession progress={progress} /></div>)}
           {offen === "hoeren" && <HoerLabor progress={progress} />}
@@ -203,7 +205,7 @@ export default function Ueben() {
           {offen === "vortrag" && <VortragsBühne progress={progress} />}
           {offen === "interview" && <InterviewArena progress={progress} />}
           {offen === "briefe" && <BriefSchmiede progress={progress} />}
-          {offen === "szenarien" && <LebensSzenarien progress={progress} />}
+          {offen === "szenarien" && (<div style={{ display: "grid", gap: "0.9rem" }}><LebensSzenarien progress={progress} /><DialogSzenarien /></div>)}
           {offen === "leseleiter" && (<div style={{ display: "grid", gap: "0.9rem" }}><LeseLeiter /><SchnellLesen /></div>)}
           {offen === "redemittel" && (<div style={{ display: "grid", gap: "0.9rem" }}><RedemittelBank /><PragmatikKarte /></div>)}
           {offen === "hoerneu" && <HoerNeu />}

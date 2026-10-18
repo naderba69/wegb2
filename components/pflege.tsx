@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { pflegeWoerter, pflegeDialoge, pflegeDoku, pflegePruefung, pflegeMedizin, pflegeFachwissen, pflegePhrasen, pflegeSimulation } from "@/lib/pflege";
+import { FSP_AUSRICHTUNG, FSP_STATUS_AR } from "@/lib/fsp";
 import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
@@ -361,6 +362,16 @@ export function PflegeStation() {
       </section>
 
       <MedizinSimulation />
+      <section className="card" data-testid="fsp-ausrichtung" style={{ padding: "0.8rem 1rem", display: "grid", gap: "0.4rem", marginTop: "0.7rem" }}>
+        <strong>🎯 محاذاة امتحان اللغة المهنية (Fachsprachenprüfung) — A24</strong>
+        <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>خريطة صادقة: كل جزء حقيقي وبماذا يُدرَّب هنا. صيغ الامتحانات تتغيّر — المرجع دائمًا إطار telc/الغرفة الحالي.</div>
+        {FSP_AUSRICHTUNG.map((z) => (
+          <div key={z.teilDe} style={{ display: "grid", gap: "0.1rem", fontSize: "0.86rem" }}>
+            <div><strong>{z.teilAr}</strong> · {FSP_STATUS_AR[z.status]}</div>
+            <div style={{ color: "var(--color-ink2)" }}>{z.hierAr}</div>
+          </div>
+        ))}
+      </section>
       <Simulationstraining />
 
       <FachwissenQuiz />

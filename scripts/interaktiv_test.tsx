@@ -2280,6 +2280,27 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(ics293.includes("BEGIN:VCALENDAR") && ics293.includes("BEGIN:VEVENT"), "R293g ملف .ics يتولد من الخطة المحلية");
   }
 
+  /* ═══════════ R294 — A7 سيناريوهات + A15 أطلس + A24 محاذاة ═══════════ */
+  {
+    const { DialogSzenarien } = await import("../components/dialogszenarien");
+    const { DIALOGSZENARIEN } = await import("../lib/dialogszenarien");
+    mount(React.createElement(DialogSzenarien, {}));
+    ok(!!rootEl.querySelector('[data-testid="dialogszenarien"]') && txt().includes("شريكك"), "R294a سيناريوهات التحدث التفاعلية (A7) تعرض الشريك وحركاتك");
+    const starkIdx = DIALOGSZENARIEN[0].zuege[0].optionen.findIndex((o) => o.stufe === "stark");
+    click(rootEl.querySelector(`[data-testid="szenario-opt-${starkIdx}"]`) as HTMLElement);
+    const fb294 = rootEl.querySelector('[data-testid="szenario-feedback"]');
+    ok(!!fb294 && (fb294.textContent ?? "").includes("حركة قوية"), "R294b الحركة القوية تُقابَل بتغذية تشرح لماذا تنجح تفاوضيًا");
+
+    const { FehlerAtlas } = await import("../components/fehleratlas");
+    mount(React.createElement(FehlerAtlas, {}));
+    ok(!!rootEl.querySelector('[data-testid="fehleratlas"]') && txt().includes("الفعل في الموضع الثاني"), "R294c أطلس الأخطاء التباينية (A15) يعرض عائلة ترتيب الكلمات بقاعدتها");
+    click(rootEl.querySelector('[data-testid="atlas-kat-kasus"]') as HTMLElement);
+    ok(txt().includes("أفعال الـDativ"), "R294d تبديل العائلة يعرض أخطاء الحالات العربية النمطية");
+
+    const { FSP_AUSRICHTUNG } = await import("../lib/fsp");
+    ok(FSP_AUSRICHTUNG.length === 7 && FSP_AUSRICHTUNG.some((z) => z.status === "fehlt"), "R294e خريطة محاذاة FSP (A24) تُعلن الجزء الغائب بدل إخفائه");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

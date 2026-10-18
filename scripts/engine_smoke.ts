@@ -63,6 +63,9 @@ import { RAUSCH_VORLAGEN, rauschenPuffer } from "../lib/rauschen";
 import { erinnerungFaellig, icsText } from "../lib/erinnerung";
 import { ableitungsFrage, wortfamilien } from "../lib/wortfamilien";
 import { PRAGMATIK } from "../lib/pragmatik";
+import { DIALOGSZENARIEN } from "../lib/dialogszenarien";
+import { FEHLERATLAS, atlasEintraege } from "../lib/fehleratlas";
+import { FSP_AUSRICHTUNG } from "../lib/fsp";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13239,6 +13242,19 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("app/ueben/page.tsx", "utf8").includes("WortfamilienStation"),
     `K318 ثلاثية R293: تقويم .ics بثمانية أحداث وتذكير وقتي دقيق (A27)، ${familien318.length} عائلة كلمات من البنك بسؤال اشتقاق (A22)، وعشرة مواقف براغماتية بست فئات (A25)`);
 }
+// ===== K319 (R294 · A7+A15+A24): Dialogszenarien, Fehleratlas, FSP-Ausrichtung =====
+{
+  ok(DIALOGSZENARIEN.length === 4 && DIALOGSZENARIEN.every((s) => s.zuege.length === 3 && s.zuege.every((z) => z.optionen.length === 3 && z.optionen.filter((o) => o.stufe === "stark").length === 1)) &&
+     new Set(DIALOGSZENARIEN.map((s) => s.kategorie)).size === 4 &&
+     FEHLERATLAS.length === 18 && atlasEintraege("falsche-freunde").length === 8 &&
+     new Set(FEHLERATLAS.map((e) => e.kategorie)).size === 6 &&
+     FSP_AUSRICHTUNG.length === 7 && FSP_AUSRICHTUNG.some((z) => z.status === "fehlt" && z.hierAr.includes("لا توجد هنا")) &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("DialogSzenarien") &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("FehlerAtlas") &&
+     readFileSync("components/pflege.tsx", "utf8").includes('data-testid="fsp-ausrichtung"'),
+    `K319 ثلاثية R294: أربعة سيناريوهات تحدّث بـ12 جولة حركات (A7)، أطلس تبايني 18 مدخلًا بست عائلات + أصدقاء كاذبون (A15)، وخريطة FSP بسبعة أجزاء وسطر غائب معلن (A24)`);
+}
+
 
 
 
