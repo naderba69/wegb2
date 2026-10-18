@@ -424,3 +424,6 @@ Zehn weitere neu-Sätze aufgenommen (voice-06) — neu **318/494**, offen 176; D
 ## R254 — Kampagne Punkt 1, Charge (s-b1-145…154)
 
 Zehn weitere neu-Sätze (B1) aufgenommen (voice-06) — neu **328/494**, offen 166; Diktat gesamt **508/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
+## R255 — Kampagne Punkt 1, Charge (s-b1-155…160 + s-b2-137…140)
+
+Zehn weitere neu-Sätze aufgenommen (voice-06) — neu **338/494**, offen 156; Diktat gesamt **518/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit).
