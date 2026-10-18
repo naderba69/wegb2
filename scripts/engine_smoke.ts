@@ -44,6 +44,7 @@ import { skillBilanz } from "../lib/skillbilanz";
 import { wartungsBericht } from "../lib/wartung";
 import { schreibFehlerBilanz } from "../lib/schreibfehler";
 import { isoWoche, absichtStatus } from "../lib/absicht";
+import { LANDES_EINHEITEN } from "../lib/landeskunde";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13021,6 +13022,20 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/briefe.tsx", "utf8").includes("<SchreibFehlerPanel") &&
      readFileSync("app/fortschritt/page.tsx", "utf8").includes("<AbsichtKarte />"),
     `K309 خماسية R284: سجلّ كفاءات مؤرّخ وتوازن مهارات بتحذير هيمنة (A30)، صيانة A1 مستحقّة في يوم 200 (A17)، أخطاء كتابة تراكمية من دفتر حقيقي (A12)، نية أسبوع ${isoWoche(new Date(2026, 0, 1))} ومراجعة مفتوحة (A19)، وبطاقة أسبوع قابلة للطباعة (A33)`);
+}
+
+// ===== K310 (R285 · A23+A26+A28): Landeskunde-Einheiten, Tunesien-Pfad, 5-Minuten-Sitzung =====
+{
+  const amt310 = LANDES_EINHEITEN.filter((e) => e.gruppe === "amt");
+  const tn310 = LANDES_EINHEITEN.filter((e) => e.gruppe === "tunesien");
+  ok(amt310.length === 5 && tn310.length === 4 &&
+     LANDES_EINHEITEN.every((e) => e.schritte.length >= 4 && e.saetze.length >= 4 && e.woerter.length >= 4 && e.introAr.length > 30) &&
+     tn310.some((e) => e.schritte.join(" ").includes("anabin")) && tn310.some((e) => e.schritte.join(" ").includes("Goethe")) &&
+     amt310.some((e) => e.id === "lk-buergeramt") && amt310.some((e) => e.id === "lk-mietvertrag") &&
+     readFileSync("components/lebenswelt.tsx", "utf8").includes("<Landeskunde />") &&
+     readFileSync("components/blitz.tsx", "utf8").includes("export function KurzSession") && readFileSync("components/blitz.tsx", "utf8").includes("const KURZ_SEK = 300") &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("<KurzSession"),
+    `K310 ثلاثية R285: ${amt310.length} وحدات حياة وظيفية + ${tn310.length} وحدات مسار تونس (A23/A26) بخطوات وعبارات، وجلسة 5 دقائق بعدّادها في محطة الجولة السريعة (A28)`);
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),

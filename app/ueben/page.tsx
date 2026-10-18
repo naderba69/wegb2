@@ -7,7 +7,7 @@ import { grammarMap } from "@/lib/content";
 import ExerciseSet from "@/components/exercises";
 import { FehlerLabor } from "@/components/fehlerlabor";
 import { UebungenCard } from "@/components/trainer";
-import { BlitzDrill } from "@/components/blitz";
+import { BlitzDrill, KurzSession } from "@/components/blitz";
 import { HoerLabor, LueckDiktat } from "@/components/hoeren";
 import { MündlichLabor } from "@/components/muendlich";
 import { LeseLeiter } from "@/components/leseleiter";
@@ -193,7 +193,7 @@ export default function Ueben() {
         <section className="dirb-station">
           {offen === "fehlerlabor" && <FehlerLabor progress={progress} />}
           {offen === "uebungen" && <UebungenCard progress={progress} />}
-          {offen === "blitz" && <BlitzDrill progress={progress} />}
+          {offen === "blitz" && (<div style={{ display: "grid", gap: "0.9rem" }}><BlitzDrill progress={progress} /><KurzSession progress={progress} /></div>)}
           {offen === "hoeren" && <HoerLabor progress={progress} />}
           {offen === "lueck" && <LueckDiktat progress={progress} />}
           {offen === "muendlich" && <MündlichLabor progress={progress} />}

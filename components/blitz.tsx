@@ -352,3 +352,110 @@ export function BlitzDrill({ progress }: { progress: Progress }) {
     </div>
   );
 }
+
+// ─── ⏱️ A28 (R285): جلسة قصيرة 5 دقائق — بطاقات سريعة الخيارات لأيام الانشغال ───
+const KURZ_SEK = 300;
+
+export function KurzSession({ progress }: { progress: Progress }) {
+  const { update } = useProgress();
+  const [phase, setPhase] = useState<"idle" | "lauft" | "ende">("idle");
+  const [rest, setRest] = useState(KURZ_SEK);
+  const [idx, setIdx] = useState(0);
+  const [score, setScore] = useState({ n: 0, hits: 0 });
+  const [flash, setFlash] = useState<string | null>(null);
+  const geloggtRef = useRef(false);
+
+  const pool = useMemo(
+    () => alleVokabeln.filter((k) => k.ar && k.de && (k.pos === "Nomen" || k.pos === "Verb" || k.pos === "Adjektiv")),
+    []
+  );
+  const startOffset = pool.length ? (progress.plan.day * 7) % pool.length : 0;
+  const karte = pool.length ? pool[(startOffset + idx) % pool.length] : null;
+  const optionen = useMemo(() => {
+    if (!karte || pool.length < 4) return [] as { text: string; ok: boolean }[];
+    const falsch1 = pool[(startOffset + idx + 13) % pool.length];
+    const falsch2 = pool[(startOffset + idx + 29) % pool.length];
+    const arr = [
+      { text: karte.ar, ok: true },
+      { text: falsch1.ar, ok: false },
+      { text: falsch2.ar, ok: false },
+    ];
+    const r = (idx * 7 + progress.plan.day) % 3;
+    return [arr[r], arr[(r + 1) % 3], arr[(r + 2) % 3]];
+  }, [karte, idx, pool, startOffset, progress.plan.day]);
+
+  useEffect(() => {
+    if (phase !== "lauft") return;
+    const t = setInterval(() => setRest((z) => Math.max(0, z - 1)), 1000);
+    return () => clearInterval(t);
+  }, [phase]);
+
+  useEffect(() => {
+    if (phase === "lauft" && rest <= 0) {
+      setPhase("ende");
+      if (!geloggtRef.current && score.n > 0) {
+        geloggtRef.current = true;
+        update((p) => logK(p, "Wortschatz", score.n > 0 && score.hits / score.n >= 0.6));
+      }
+    }
+  }, [rest, phase, score, update]);
+
+  const starten = () => {
+    geloggtRef.current = false;
+    setScore({ n: 0, hits: 0 });
+    setIdx(0);
+    setRest(KURZ_SEK);
+    setFlash(null);
+    setPhase("lauft");
+  };
+
+  const antworten = (ok: boolean) => {
+    setScore((s) => ({ n: s.n + 1, hits: s.hits + (ok ? 1 : 0) }));
+    setFlash(ok ? "✅ صحيح" : `❌ الصحيح: ${karte?.ar ?? ""}`);
+    setTimeout(() => { setFlash(null); setIdx((i) => i + 1); }, 450);
+  };
+
+  const mmss = `${Math.floor(rest / 60)}:${String(rest % 60).padStart(2, "0")}`;
+
+  return (
+    <section className="card fadein" data-testid="kurz-session" style={{ padding: "1rem 1.2rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
+        <strong>⏱️ جلسة قصيرة — 5 دقائق فقط (A28)</strong>
+        {phase === "lauft" && <span className="chip rtl-num" style={{ fontWeight: 900 }}>{mmss}</span>}
+      </div>
+      <p style={{ fontSize: "0.83rem", color: "var(--color-ink2)" }}>
+        لأيام الانشغال: بطاقات سريعة من مفرداتك تُبقي السلسلة حيّة. جلسة إنقاذ لا بديل عن خطة اليوم — نتيجتها تُسجَّل في شبكة كفاءاتك بصدق.
+      </p>
+      {phase === "idle" && (
+        <button className="btn btn-primary" data-testid="kurz-start" onClick={starten} disabled={pool.length < 4}>
+          ▶️ ابدأ 5 دقائق
+        </button>
+      )}
+      {phase === "lauft" && karte && (
+        <div style={{ display: "grid", gap: "0.55rem" }}>
+          <div style={{ fontSize: "1.35rem", fontWeight: 900, textAlign: "center" }}>
+            {karte.article ? `${karte.article} ` : ""}{karte.de.replace(/^(der|die|das)\s+/i, "")}
+          </div>
+          <div style={{ display: "flex", gap: "0.45rem", flexWrap: "wrap", justifyContent: "center" }}>
+            {optionen.map((o, i) => (
+              <button key={i} className="btn btn-ghost" data-testid={`kurz-option-${i}`} onClick={() => antworten(o.ok)}>{o.text}</button>
+            ))}
+          </div>
+          <div style={{ textAlign: "center", fontSize: "0.85rem", minHeight: "1.4em" }}>
+            {flash ?? <>أجبت عن <span className="rtl-num">{score.n}</span> · إصابات <span className="rtl-num">{score.hits}</span></>}
+          </div>
+          <button className="btn btn-ghost" onClick={() => { setRest(0); }}>⏹ أنهِ الجلسة الآن</button>
+        </div>
+      )}
+      {phase === "ende" && (
+        <div data-testid="kurz-ergebnis" style={{ fontSize: "0.92rem" }}>
+          🏁 انتهت الجلسة: أجبت عن <strong className="rtl-num">{score.n}</strong> بطاقة وأصبت <strong className="rtl-num">{score.hits}</strong>
+          {score.n > 0 && <> (<span className="rtl-num">{Math.round((score.hits / score.n) * 100)}٪</span>)</>}. خمس دقائق صادقة خير من يوم صفر.
+          <div style={{ marginTop: "0.5rem" }}>
+            <button className="btn btn-primary" onClick={starten}>🔁 جلسة أخرى</button>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}

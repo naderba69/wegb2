@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Landeskunde } from "./landeskunde";
 import { lebensweltThemen, umgangBank, BERUFSSTART_SCHRITTE } from "@/lib/lebenswelt";
 import { useEffect } from "react";
 import { speakAny } from "@/lib/speech";
@@ -102,6 +103,7 @@ export function LebensweltStation() {
           </div>
         )}
       </section>
+      <Landeskunde />
     </div>
   );
 }

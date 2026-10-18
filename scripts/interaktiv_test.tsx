@@ -2073,6 +2073,25 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!sfEl && (sfEl.textContent ?? "").includes("بنية الرسالة"), "R284g لوحة أخطاء الكتابة التراكمية (A12) تعرض النمط من الدفتر");
   }
 
+  /* ═══════════ R285 — A23/A26 داخل Lebenswelt + A28 جلسة قصيرة ═══════════ */
+  {
+    const { LebensweltStation } = await import("../components/lebenswelt");
+    mount(React.createElement(LebensweltStation, {}));
+    ok(!!rootEl.querySelector('[data-testid="landeskunde"]') && txt().includes("مسارك من تونس"), "R285a وحدات الحياة الوظيفية (A23) ومسار تونس (A26) داخل محطة الحياة");
+    ok(!!rootEl.querySelector('[data-testid="landeskunde-lk-tn-anerkennung"]') && txt().includes("anabin"), "R285b وحدة الاعتراف التونسية بخطوتها المرجعية anabin");
+
+    const { KurzSession } = await import("../components/blitz");
+    mount(React.createElement(KurzSession, { progress: { ...emptyProgress } as never }));
+    ok(!!rootEl.querySelector('[data-testid="kurz-session"]'), "R285c جلسة الخمس دقائق (A28) تُرسم");
+    const start = rootEl.querySelector('[data-testid="kurz-start"]') as HTMLElement | null;
+    ok(!!start, "R285d زر بدء الجلسة موجود");
+    if (start) click(start);
+    ok(!!rootEl.querySelector('[data-testid="kurz-option-0"]') && !!rootEl.querySelector('[data-testid="kurz-option-2"]'), "R285e الأسئلة بخياراتها الثلاثة تبدأ فورًا");
+    const opt = rootEl.querySelector('[data-testid="kurz-option-0"]') as HTMLElement | null;
+    if (opt) click(opt);
+    ok(txt().includes("أجبت عن") || txt().includes("صحيح") || txt().includes("الصحيح:"), "R285f الإجابة تُسجَّل بتغذية فورية");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");
