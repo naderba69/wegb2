@@ -13949,6 +13949,18 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(hoerenSrc.includes("stimme-geraet") && hoerenSrc.includes('stimme === "geraet"'), "K321j مختبر السماع: مصدر صوت جهاز ثانٍ (A6) دون مساس بعدّ الامتحان");
 }
 
+
+// ── K322 (R297): مصفوفة إغلاق التدقيق الخبير — كل بند من الـ99 له مصير موثّق ──
+{
+  const auditDok = readFileSync("docs/EXPERT_AUDIT_2026-10-18.md", "utf8");
+  const matrix = auditDok.slice(auditDok.indexOf("مصفوفة الإغلاق النهائية"));
+  const fehlt: string[] = [];
+  for (let i = 1; i <= 46; i++) if (!new RegExp(`^- N${i} `, "m").test(matrix)) fehlt.push("N" + i);
+  for (let i = 1; i <= 20; i++) if (!new RegExp(`^- M${i} `, "m").test(matrix)) fehlt.push("M" + i);
+  for (let i = 1; i <= 33; i++) if (!new RegExp(`^- A${i} `, "m").test(matrix)) fehlt.push("A" + i);
+  ok(matrix.length > 1000 && fehlt.length === 0, "K322 مصفوفة الإغلاق: 99/99 بندًا له مصير موثّق (مفقود: " + (fehlt.join(",") || "لا شيء") + ")");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);
