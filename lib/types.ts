@@ -449,6 +449,8 @@ export interface Progress {
     placed?: boolean;
     /** 🪪 نتيجة التشخيص التكيّفي (M3/R183): تقدير كلّ مهارة واليوم المطبَّق وتاريخه — تقدير آلي من بنوك التطبيق لا اختبار رسمي */
     einstufung?: { lesen: string; hoeren: string; grammatik: string; wortschatz: string; tag: number; datum: string };
+    /** 🔔 A27/R293: تذكير يومي محلي بإشعار متصفح (بلا خادم) */
+    erinnerung?: { aktiv: boolean; uhrzeit: string };
     /** موعد الامتحان الخارجي (YYYY-MM-DD) + اسمه */
     examDate?: string;
     examName?: string;

@@ -60,6 +60,9 @@ import { MELDUNGEN } from "../lib/meldungen";
 import { HOERSTRATEGIEN, strategiePhase } from "../lib/hoerstrategien";
 import { scanRunde } from "../lib/schnellesen";
 import { RAUSCH_VORLAGEN, rauschenPuffer } from "../lib/rauschen";
+import { erinnerungFaellig, icsText } from "../lib/erinnerung";
+import { ableitungsFrage, wortfamilien } from "../lib/wortfamilien";
+import { PRAGMATIK } from "../lib/pragmatik";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -13219,6 +13222,24 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/hoerneu.tsx", "utf8").includes("RauschSteuerung"),
     `K317 ثلاثية R292: استراتيجيات استماع ثلاث مراحل (A8)، جولة قراءة سريعة من نص «${runde317?.titelDe}» بـ${runde317?.scan.length} أسئلة بحث (A10)، وذاكرة ضجيج حتمية بثلاثة محيطات (A32)`);
 }
+// ===== K318 (R293 · A27+A22+A25): Erinnerungen, Wortfamilien, Pragmatik =====
+{
+  const p318 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 20 }, settings: { ...emptyProgress.settings, erinnerung: { aktiv: true, uhrzeit: "18:00" }, examDate: "2027-06-15", examName: "Goethe B2" } } as Progress;
+  const ics318 = icsText(p318, new Date(2026, 9, 18, 10, 0));
+  const familien318 = wortfamilien(3, 12);
+  const frage318 = familien318.length > 0 ? ableitungsFrage(familien318[0], 0) : null;
+  ok(ics318.includes("BEGIN:VCALENDAR") && (ics318.match(/BEGIN:VEVENT/g) ?? []).length === 8 && ics318.includes("اليوم 20") && ics318.includes("موعد الامتحان الخارجي") &&
+     erinnerungFaellig(p318, new Date(2026, 9, 18, 18, 0)) && !erinnerungFaellig(p318, new Date(2026, 9, 18, 18, 1)) &&
+     familien318.length >= 3 && familien318.every((f) => f.mitglieder.length >= 3) && !!frage318 && frage318.optionen.length === 3 &&
+     PRAGMATIK.length === 10 && PRAGMATIK.every((x) => x.optionen.length === 3 && x.richtig >= 0 && x.richtig < 3) &&
+     new Set(PRAGMATIK.map((x) => x.kategorie)).size === 6 &&
+     readFileSync("app/layout.tsx", "utf8").includes("ErinnerungsWache") &&
+     readFileSync("app/einstellungen/page.tsx", "utf8").includes("ErinnerungKarte") &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("PragmatikKarte") &&
+     readFileSync("app/ueben/page.tsx", "utf8").includes("WortfamilienStation"),
+    `K318 ثلاثية R293: تقويم .ics بثمانية أحداث وتذكير وقتي دقيق (A27)، ${familien318.length} عائلة كلمات من البنك بسؤال اشتقاق (A22)، وعشرة مواقف براغماتية بست فئات (A25)`);
+}
+
 
 
 

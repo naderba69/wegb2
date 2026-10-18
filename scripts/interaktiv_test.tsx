@@ -2253,6 +2253,33 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(!!rootEl.querySelector('[data-testid="rauschen-toggle"]') || !!rootEl.querySelector('[data-testid="rauschen-aus"]'), "R292f تحكم الضجيج المولّد (A32) حاضر أو معلن تعذّره بصراحة");
   }
 
+  /* ═══════════ R293 — A22 عائلات + A25 براغماتية + A27 تذكير ═══════════ */
+  {
+    const { WortfamilienStation } = await import("../components/wortfamilien");
+    mount(React.createElement(WortfamilienStation, {}));
+    ok(!!rootEl.querySelector('[data-testid="wortfamilien"]'), "R293a محطة عائلات الكلمات (A22) تُرسم من البنك");
+    const falscheOpt = [...rootEl.querySelectorAll('[data-testid^="ableitung-opt-"]')].find((b) => !(b as HTMLElement).style.border.includes("good")) as HTMLElement | undefined;
+    const opt0 = rootEl.querySelector('[data-testid="ableitung-opt-0"]') as HTMLElement | null;
+    ok(!!opt0, "R293b سؤال الاشتقاق بخياراته حاضر");
+    if (opt0) click(opt0);
+    ok(!!rootEl.querySelector('[data-testid="ableitung-feedback"]'), "R293c التغذية على اختيار الشكل تظهر");
+
+    const { PragmatikKarte } = await import("../components/pragmatik");
+    mount(React.createElement(PragmatikKarte, {}));
+    ok(!!rootEl.querySelector('[data-testid="pragmatik"]') && txt().includes("ماذا تقول"), "R293d بطاقة البراغماتية (A25) تعرض موقفًا وخيارات");
+    click(rootEl.querySelector('[data-testid="pragmatik-opt-1"]') as HTMLElement);
+    const fb293 = rootEl.querySelector('[data-testid="pragmatik-feedback"]');
+    ok(!!fb293 && ((fb293.textContent ?? "").includes("✓") || (fb293.textContent ?? "").includes("ليست الأنسب")), "R293e التغذية البراغماتية تشرح لماذا الصيغة ألطف");
+
+    const { ErinnerungKarte } = await import("../components/erinnerung");
+    mount(React.createElement(ErinnerungKarte, {}));
+    ok(!!rootEl.querySelector('[data-testid="erinnerung-karte"]') && !!rootEl.querySelector('[data-testid="erinnerung-ics"]'), "R293f بطاقة التذكيرات (A27) بزر تصدير التقويم");
+    const { icsText } = await import("../lib/erinnerung");
+    const { loadProgress } = await import("../lib/store");
+    const ics293 = icsText(loadProgress() as never, new Date(2026, 9, 18));
+    ok(ics293.includes("BEGIN:VCALENDAR") && ics293.includes("BEGIN:VEVENT"), "R293g ملف .ics يتولد من الخطة المحلية");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

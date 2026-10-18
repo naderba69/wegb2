@@ -12,6 +12,8 @@ import { HoerLabor, LueckDiktat } from "@/components/hoeren";
 import { MündlichLabor } from "@/components/muendlich";
 import { LeseLeiter } from "@/components/leseleiter";
 import { SchnellLesen } from "@/components/schnellesen";
+import { PragmatikKarte } from "@/components/pragmatik";
+import { WortfamilienStation } from "@/components/wortfamilien";
 import { RedemittelBank } from "@/components/redemittel";
 import { HoerNeu } from "@/components/hoerneu";
 import { VortragsBühne } from "@/components/vortrag";
@@ -203,9 +205,9 @@ export default function Ueben() {
           {offen === "briefe" && <BriefSchmiede progress={progress} />}
           {offen === "szenarien" && <LebensSzenarien progress={progress} />}
           {offen === "leseleiter" && (<div style={{ display: "grid", gap: "0.9rem" }}><LeseLeiter /><SchnellLesen /></div>)}
-          {offen === "redemittel" && <RedemittelBank />}
+          {offen === "redemittel" && (<div style={{ display: "grid", gap: "0.9rem" }}><RedemittelBank /><PragmatikKarte /></div>)}
           {offen === "hoerneu" && <HoerNeu />}
-          {offen === "tiefen" && <TiefenLexikon progress={progress} />}
+          {offen === "tiefen" && (<div style={{ display: "grid", gap: "0.9rem" }}><TiefenLexikon progress={progress} /><WortfamilienStation /></div>)}
           {offen === "einstufung" && <EinstufungTest />}
           {offen === "schatten" && <ShadowingStation />}
           {offen === "phonetik" && <PhonetikStation />}

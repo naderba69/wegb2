@@ -17,6 +17,7 @@ import { ZielTempoKarte } from "@/components/zieltempo";
 import type { UiLang, Tempo, Level } from "@/lib/types";
 import { effektiveRate, rateFuerLevel, rateModus } from "@/lib/rate";
 import { pruefeImportText, sicherungFaellig } from "@/lib/backup";
+import { ErinnerungKarte } from "@/components/erinnerung";
 
 export default function Einstellungen() {
   const { progress, update, importProgress, reset } = useProgress();
@@ -351,6 +352,13 @@ export default function Einstellungen() {
             </button>
           </div>
           {msg && <p style={{ marginTop: "0.7rem", color: "var(--color-a1)", fontWeight: 700 }}>{msg}</p>}
+        </details>
+
+        <details className="dirb-details">
+          <summary>🔔 التذكيرات والتنويم (A27)</summary>
+          <div style={{ marginTop: "0.6rem" }}>
+            <ErinnerungKarte />
+          </div>
         </details>
 
         <div className="dirb-kicker" style={{ marginTop: "0.4rem" }}>⚙️ المحرك والذكاء الاصطناعي — متقدم، عند الحاجة فقط</div>
