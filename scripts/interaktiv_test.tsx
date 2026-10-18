@@ -1973,6 +1973,33 @@ const hasFile = txt().includes("صوتٌ من الدار");
       "LX0g بعد الكشف يظهر اللفظ وشارة مرحلة البطاقة (تعرّف/تثبيت/إنتاج)");
   }
 
+  /* ═══════════ R282 — A5 صوتيات تفاعلية + A9 قفل وضع الامتحان ═══════════ */
+  {
+    const { PhonetikStation } = await import("../components/phonetik");
+    mount(React.createElement(PhonetikStation, {}));
+    ok(!!rootEl.querySelector('[data-testid="phonetik-station"]') && txt().includes("طول الحركة"), "R282a محطة الصوتيات تُرسم بوحداتها المتدرجة");
+    const rateBtn = [...rootEl.querySelectorAll("button")].find((x) => (x.textContent ?? "").includes("اختبر سمعك")) as HTMLElement | undefined;
+    ok(!!rateBtn, "R282b زر اختبار السمع موجود");
+    if (rateBtn) click(rateBtn);
+    const antA = rootEl.querySelector('[data-testid="phonetik-antwort-a"]') as HTMLElement | null;
+    ok(!!antA && !!rootEl.querySelector('[data-testid="phonetik-antwort-b"]'), "R282c خيارا الإجابة يظهران بعد التشغيل");
+    if (antA) click(antA);
+    ok(!!rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]'), "R282d تغذية التمييز السمعي تظهر بعد الإجابة (بلا حكم نطق)");
+
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 200, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: { id: "t-h-a9", kind: "hoeren" as const, dialogueId: "d-b1-15", titleDe: "H", titleAr: "س", minutes: 15 }, ...props }));
+    const umschalter = rootEl.querySelector('[data-testid="hoeren-pruefung-toggle"]') as HTMLElement | null;
+    ok(!!umschalter, "R282e مفتاح وضع الامتحان (A9) موجود في مهمة الاستماع");
+    if (umschalter) click(umschalter);
+    const sperre = [...rootEl.querySelectorAll("button")].find((x) => (x.textContent ?? "").includes("النص مقفل حتى التسليم")) as HTMLButtonElement | undefined;
+    ok(!!sperre && sperre.disabled && txt().includes("••••••"), "R282f في وضع الامتحان: النص مقفل ومحجوب حتى التسليم");
+    const abgabe = rootEl.querySelector('[data-testid="hoeren-abgabe"]') as HTMLElement | null;
+    ok(!!abgabe, "R282g زر التسليم يفتح المراجعة");
+    if (abgabe) click(abgabe);
+    ok(!!btn("أظهر النص"), "R282h بعد التسليم يُفتح النص للمراجعة");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

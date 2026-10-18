@@ -13,6 +13,7 @@ import { planPct } from "@/lib/plan";
 import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "@/lib/metriken";
 import { noteFromPct } from "@/lib/grader";
 import { prognose } from "@/lib/prognose";
+import { sprechHeute } from "@/lib/sprechziel";
 import { levelOfXp } from "@/lib/spiel";
 import { De } from "./De";
 import { StundenVertrag } from "./stundenvertrag";
@@ -275,6 +276,21 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
                     ))}
                     <div style={{ color: "var(--color-ink2)", fontSize: "0.78rem" }}>أرقام نموذج FSRS من حالات بطاقاتك المحلية — تقدير آلي لضبط الإيقاع، لا قياس بشري ولا حكم إتقان.</div>
                   </div>
+                )}
+              </div>
+            );
+          })()}
+
+          {/* 🎙️ هدف التحدّث اليومي (A4/R282): يُقاس من بطاقات التحدّث المسجّلة محليًا فقط */}
+          {(() => {
+            const sz = sprechHeute(progress);
+            return (
+              <div data-testid="metrik-sprechen" className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)", fontSize: "0.85rem" }}>
+                🎙️ <strong>هدف التحدّث اليومي (A4):</strong>{" "}
+                {sz.sek === 0 ? (
+                  <span style={{ color: "var(--color-ink2)" }}>لا تحدّث مسجّل اليوم بعد — الهدف <span className="rtl-num">{Math.round(sz.ziel / 60)}</span> دقائق من بطاقات التحدّث المسجّلة.</span>
+                ) : (
+                  <>سجّلت اليوم <strong className="rtl-num">{Math.floor(sz.sek / 60)}:{String(sz.sek % 60).padStart(2, "0")}</strong> دقيقة تحدّث في <span className="rtl-num">{sz.eintraege}</span> بطاقة {sz.erreicht ? "— ✅ بلغت هدف الـ5 دقائق" : <>— تبقّى <span className="rtl-num">{Math.ceil((sz.ziel - sz.sek) / 60)}</span> دقيقة للهدف</>}. <span style={{ color: "var(--color-ink2)" }}>(يُقاس المسجّل فقط؛ الكلام الحرّ بلا تسجيل لا نراه ولا ندّعيه.)</span></>
                 )}
               </div>
             );

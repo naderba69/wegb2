@@ -827,6 +827,10 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
   const dlg = getDialogue(task.dialogueId ?? "");
   const [playing, setPlaying] = useState(false);
   const [showText, setShowText] = useState(false);
+  // A9 (R282): Pruefungsmodus — ein Abspielvorgang, Text erst nach Abgabe
+  const [pruefung, setPruefung] = useState(false);
+  const [plays, setPlays] = useState(0);
+  const [abgegeben, setAbgegeben] = useState(false);
   const [lineIdx, setLineIdx] = useState(-1);
   const [voReady, setVoReady] = useState(false);
   // R138/P-13: Hörverstehen-Modi mit Anweisung
@@ -850,7 +854,9 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
       setLineIdx(-1);
       return;
     }
+    if (pruefung && !abgegeben && plays >= 1) return; // A9: nur ein Durchlauf
     setPlaying(true);
+    setPlays((p) => p + 1);
     let i = 0;
     const next = () => {
       if (i >= dlg.lines.length) {
@@ -888,12 +894,20 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
         </p>
       )}
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", margin: "0.6rem 0" }}>
-        <button className="btn btn-primary" onClick={playAll}>
-          {playing ? "⏹ أوقف" : "▶️ شغّل الحوار كاملاً"}
+        <button className="btn btn-primary" onClick={playAll} disabled={pruefung && !abgegeben && plays >= 1}>
+          {playing ? "⏹ أوقف" : pruefung && !abgegeben && plays >= 1 ? "🔒 استُمع مرة واحدة (وضع الامتحان)" : "▶️ شغّل الحوار كاملاً"}
         </button>
-        <button className="btn btn-ghost" onClick={() => setShowText((s) => !s)}>
-          {showText ? "🙈 أخفِ النص (أول استماع)" : "👁 أظهر النص"}
+        <button className="btn btn-ghost" onClick={() => setShowText((s) => !s)} disabled={pruefung && !abgegeben}>
+          {pruefung && !abgegeben ? "🔒 النص مقفل حتى التسليم" : showText ? "🙈 أخفِ النص (أول استماع)" : "👁 أظهر النص"}
         </button>
+        <button className="btn btn-ghost" data-testid="hoeren-pruefung-toggle" onClick={() => { setPruefung((p) => !p); setShowText(false); }}>
+          {pruefung ? "🎓 وضع الامتحان: يعمل (أوقف)" : "🎓 فعّل وضع الامتحان (A9)"}
+        </button>
+        {pruefung && !abgegeben && (
+          <button className="btn btn-ghost" data-testid="hoeren-abgabe" onClick={() => setAbgegeben(true)}>
+            📨 سلّمت إجابتي — افتح النص والمراجعة
+          </button>
+        )}
       </div>
 
       <div style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
@@ -913,7 +927,8 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
             <button
               className="chip"
               style={{ cursor: "pointer" }}
-              onClick={() => speakLine(l.de, undefined, { voiceName, rate })}
+              disabled={pruefung && !abgegeben}
+              onClick={() => { if (pruefung && !abgegeben) return; speakLine(l.de, undefined, { voiceName, rate }); }}
               title="اسمع السطر"
             >
               🔊

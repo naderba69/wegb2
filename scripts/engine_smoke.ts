@@ -35,6 +35,8 @@ import {
 } from "../lib/plan";
 import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit } from "../lib/srs";
 import { prognose } from "../lib/prognose";
+import { PHONETIK_EINHEITEN } from "../lib/phonetikdaten";
+import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -2028,7 +2030,7 @@ void 0;
     const wiz = existsSync("components/akademie/LektionWizard.tsx") ? readFileSync("components/akademie/LektionWizard.tsx", "utf8") : "";
 
     // K112: ترتيبُ الأولوية معلنٌ حرفياً — الأخطاء أولاً ثم التدريب الحرّ ثم المهارات
-    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,katalog"'),
+    ok(ueben.includes('const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,katalog"'),
       // R218: محطة «vollpruefung» (جلسة امتحان كاملة) أُدرجت بعد التمريض — امتداد موثّق للترتيب
       "K112a ترتيبُ الأولويةِ معلنٌ حرفياً: تحديد المستوى (R183) ← الزائد ← أخطاؤك ← التدريب الحرّ ← برقّ ← استماع ← استماع متنوّع ← فجوات ← كلام ← رفيق محادثة ذكي (R198) ← تظليل صوتي (R184) ← عرض ← مقابلة ← رسائل ← سيناريوهات ← تمريض (R197) ← سلّم قراءة ← وسائل تعبير ← حياة في ألمانيا (R200: امتداد بنيوي موثّق في المراجع) ← معجم ← كاتالوج");
     const montiert = ["<FehlerLabor progress={progress} />", "<UebungenCard progress={progress} />", "<BlitzDrill progress={progress} />", "<HoerLabor progress={progress} />", "<LueckDiktat progress={progress} />", "<MündlichLabor progress={progress} />", "<VortragsBühne progress={progress} />", "<InterviewArena progress={progress} />", "<BriefSchmiede progress={progress} />", "<LebensSzenarien progress={progress} />", "<LeseLeiter />", "<RedemittelBank />", "<HoerNeu />", "<TiefenLexikon progress={progress} />", "<KatalogLeiste />", "<EinstufungTest />", "<ShadowingStation />"];
@@ -12947,6 +12949,25 @@ function collectR262(dir: string, out: string[] = []): string[] {
      pr306.kohorten[0].n === 2 && (pr306.kohorten[0].quote ?? 0) >= 0.99 && pr306.kohorten[1].n === 0 &&
      readFileSync("components/berichte.tsx", "utf8").includes('data-testid="retention-panel"'),
     `K306 توقّع الاحتفاظ (A2) وفحصا 30/90 (A13): R الآن ${(r306 * 100).toFixed(0)}٪، مستحقّ الغد ${pr306.tage[1].faellig}، منحنى 30 يومًا يهبط كما يجب، وفئة 30 يومًا ${pr306.kohorten[0].n} بطاقة — اشتقاق FSRS محلي بلا خادم`);
+}
+
+// ===== K307 (R282 · A4+A5+A9): Sprechziel-Zaehler, Phonetik-Pfad, Hoer-Pruefungsmodus =====
+{
+  const p307 = { ...emptyProgress, sprechUebungen: [
+    { datum: "2026-06-15T08:00:00.000Z", level: "A1", teil: 1, karteId: "x", dauerS: 200, punkte: 80 },
+    { datum: "2026-06-15T09:00:00.000Z", level: "A1", teil: 2, karteId: "y", dauerS: 150, punkte: 70 },
+    { datum: "2026-06-14T09:00:00.000Z", level: "A1", teil: 1, karteId: "z", dauerS: 999, punkte: 60 },
+  ] } as Progress;
+  const sz307 = sprechHeute(p307, "2026-06-15");
+  const stufen307 = new Set(PHONETIK_EINHEITEN.map((e) => e.stufe));
+  const tasks307 = readFileSync("components/tasks.tsx", "utf8");
+  const ueben307 = readFileSync("app/ueben/page.tsx", "utf8");
+  ok(sz307.sek === 350 && sz307.erreicht && sz307.eintraege === 2 && SPRECH_ZIEL_SEK === 300 &&
+     PHONETIK_EINHEITEN.length === 8 && stufen307.has("A0") && stufen307.has("A1") && stufen307.has("A2") &&
+     PHONETIK_EINHEITEN.every((e) => e.paare.length >= 3 && e.saetze.length === 2 && e.paare.every((p) => p.a !== p.b && p.aAr.length > 0 && p.bAr.length > 0)) &&
+     tasks307.includes('data-testid="hoeren-pruefung-toggle"') && tasks307.includes('data-testid="hoeren-abgabe"') &&
+     ueben307.includes('phonetik: { icon:') && ueben307.includes('offen === "phonetik"'),
+    `K307 ثلاثية R282: عدّاد تحدّث = ${sz307.sek}ث/هدف ${SPRECH_ZIEL_SEK}ث (A4)، ${PHONETIK_EINHEITEN.length} وحدات صوتيات A0→A2 بأزواج دنيا كاملة (A5)، ووضع امتحان الاستماع بمقابضه في المهام والتسجيل في التدريب (A9)`);
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),

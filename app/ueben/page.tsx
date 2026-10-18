@@ -25,6 +25,7 @@ import { PflegeStation } from "@/components/pflege";
 import { SprechBegleiter } from "@/components/sprechbegleiter";
 import { LebensweltStation } from "@/components/lebenswelt";
 import { VollPruefung } from "@/components/vollpruefung";
+import { PhonetikStation } from "@/components/phonetik";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
@@ -35,7 +36,7 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
@@ -48,6 +49,7 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   muendlich: { icon: "🗣️", titel: "التدريب الشفوي", unter: "تحدّث ثم راجع الملاحظات المتاحة." },
   begleiter: { icon: "🤖", titel: "رفيق المحادثة الذكي", unter: "حوار حرّ مع شريك ذكاء اصطناعي بأدوار مهنية — بمفتاحك وموافقتك فقط." },
   schatten: { icon: "🎙️", titel: "التظليل الصوتي", unter: "ردّد مع النموذج وقارن موجتك وإيقاعك زمنيًا — لا حكم نطق." },
+  phonetik: { icon: "🔊", titel: "مسار الصوتيات", unter: "تمييز سمعي متدرج A0→A2: طول الحركات، أوملاوت، ich/ach، ‏R — نطق جهازي معلن." },
   vortrag: { icon: "🎤", titel: "التحدّث أمام الجمهور", unter: "تدرّب على عرض قصير ضمن وقت محدد." },
   interview: { icon: "🤝", titel: "مقابلة العمل", unter: "تدرّب على الإجابة عن أسئلة المقابلة." },
   briefe: { icon: "✉️", titel: "كتابة الرسائل", unter: "اكتب رسالة تناسب الموقف." },
@@ -73,7 +75,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-skills",
     title: "تدرّب على المهارات",
     description: "اختر مهارة أو طبّق ما تعلّمته في موقف.",
-    items: ["hoeren", "hoerneu", "lueck", "muendlich", "begleiter", "schatten", "vortrag", "interview", "briefe", "szenarien", "pflege", "vollpruefung", "leseleiter", "redemittel"],
+    items: ["hoeren", "hoerneu", "lueck", "muendlich", "begleiter", "schatten", "phonetik", "vortrag", "interview", "briefe", "szenarien", "pflege", "vollpruefung", "leseleiter", "redemittel"],
   },
   {
     id: "ueben-reference",
@@ -205,6 +207,7 @@ export default function Ueben() {
           {offen === "tiefen" && <TiefenLexikon progress={progress} />}
           {offen === "einstufung" && <EinstufungTest />}
           {offen === "schatten" && <ShadowingStation />}
+          {offen === "phonetik" && <PhonetikStation />}
           {offen === "pflege" && <PflegeStation />}
           {offen === "vollpruefung" && <VollPruefung />}
           {offen === "begleiter" && <SprechBegleiter />}
