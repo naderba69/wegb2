@@ -15,6 +15,9 @@ import { noteFromPct } from "@/lib/grader";
 import { prognose } from "@/lib/prognose";
 import { sprechHeute } from "@/lib/sprechziel";
 import { FLUENZ_ZIEL } from "@/lib/fluenz";
+import { skillBilanz } from "@/lib/skillbilanz";
+import { wartungsBericht } from "@/lib/wartung";
+import { wochenBilanz } from "@/lib/motivation";
 import { levelOfXp } from "@/lib/spiel";
 import { De } from "./De";
 import { StundenVertrag } from "./stundenvertrag";
@@ -168,6 +171,26 @@ function ladeCsv(text: string) {
   URL.revokeObjectURL(a.href);
 }
 
+/** 🗓️ A33 (R284): بطاقة تقدّم أسبوعية قابلة للطباعة/المشاركة — كل رقم من سجلّ المتعلم المحلي */
+export function wochenKarteHtml(p: Progress, name: string): string {
+  const heute = new Date().toISOString().slice(0, 10);
+  const wb = wochenBilanz(p, heute);
+  const pr = prognose(p.srs ?? {});
+  const sb = skillBilanz(p);
+  const fl = (p.fluenz ?? []).slice(-1)[0];
+  const rows = sb.zeilen.map((z) => `<tr><td>${KOMPETENZ_AR[z.hand] ?? z.hand}</td><td class="n">${z.versuche}</td><td class="n">${Math.round(z.anteil * 100)}٪</td><td class="n">${z.quote === null ? "—" : z.quote + "٪"}</td></tr>`).join("");
+  return `<!doctype html><html dir="rtl"><head><meta charset="utf-8"><title>بطاقة تقدّم الأسبوع — ${name}</title>
+<style>body{font-family:system-ui,sans-serif;margin:2rem;color:#222}table{border-collapse:collapse;width:100%}td,th{border:1px solid #bbb;padding:.4rem .6rem;text-align:right}td.n{text-align:center}h1{font-size:1.3rem}</style></head><body>
+<h1>🗓️ بطاقة تقدّم الأسبوع — ${name}</h1>
+<p>الأسبوع ابتداءً من ${wb.montag} · حتى ${heute} — أرقام محلية من سجلّ التعلّم، لا نتيجة رسمية.</p>
+<p>أيام مغلقة: <b>${wb.aktiveTage}/${wb.zielTage}</b> · مهام منجزة: <b>${wb.aufgabenErledigt}</b> · دقائق مقاسة بالمؤقّت: <b>${wb.minutenGemessen}</b></p>
+<p>احتفاظ البطاقات الحالي (نموذج FSRS): <b>${pr.retention === null ? "—" : Math.round(pr.retention * 100) + "٪"}</b> · آخر سرعة قراءة: <b>${fl ? fl.wpm + " كلمة/دقيقة" : "—"}</b></p>
+<h2>توازن المهارات (${sb.fenster === "7-tage" ? "آخر 7 أيام" : "آخر المحاولات"})</h2>
+<table><tr><th>المهارة</th><th>محاولات</th><th>الحصة</th><th>الإصابة</th></tr>${rows}</table>
+${sb.warnung ? `<p>⚖️ ${sb.warnung}</p>` : ""}
+</body></html>`;
+}
+
 export function BerichteZentrum({ progress, name = "المتعلّم" }: { progress: Progress; name?: string }) {
   const [open, setOpen] = useState(false);
   const bereit = useMemo(() => pruefungsBereitschaft(progress), [progress]);
@@ -269,6 +292,52 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
                   <span style={{ color: "var(--color-ink2)" }}>لا قياس بعد — تُقاس سرعتك (كلمات/دقيقة) في «سلّم القراءة» عند تسليم أي نصّ.</span>
                 ) : (
                   <>آخر قياس: <strong className="rtl-num">{letzt.wpm}</strong> كلمة/دقيقة في محطة سلّم {letzt.stufe} (نطاقها التوجيهي <span className="rtl-num">{ziel.von}–{ziel.bis}</span>) · من <span className="rtl-num">{fl.length}</span> قياسًا محفوظًا. <span style={{ color: "var(--color-ink2)" }}>(تقيس الوتيرة لا الفهم؛ فهمك يُقاس بأسئلة النصّ نفسها.)</span></>
+                )}
+              </div>
+            );
+          })()}
+
+          {/* ⚖️ توازن المهارات (A30/R284): حارس أسبوعي من سجلّ محاولاتك المؤرّخ */}
+          {(() => {
+            const sb = skillBilanz(progress);
+            return (
+              <div data-testid="skill-balance" className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)", fontSize: "0.85rem" }}>
+                <div style={{ fontWeight: 900, marginBottom: "0.3rem" }}>⚖️ توازن المهارات ({sb.fenster === "7-tage" ? "آخر 7 أيام" : "نافذة آخر المحاولات"})</div>
+                {sb.eintraege === 0 ? (
+                  <span style={{ color: "var(--color-ink2)" }}>لا محاولات مسجّلة بعد في شبكة الكفاءات.</span>
+                ) : (
+                  <div style={{ display: "grid", gap: "0.25rem" }}>
+                    {sb.zeilen.map((z) => (
+                      <div key={z.hand} style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem" }}>
+                        <span>{KOMPETENZ_AR[z.hand] ?? z.hand}</span>
+                        <span><span className="rtl-num">{z.versuche}</span> محاولة · <span className="rtl-num">{Math.round(z.anteil * 100)}٪</span>{z.quote !== null && <> · إصابة <span className="rtl-num">{z.quote}٪</span></>}</span>
+                      </div>
+                    ))}
+                    {sb.warnung && <div style={{ color: "var(--color-cola)" }}>⚠️ {sb.warnung}</div>}
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
+          {/* 🔧 صيانة المستويات المنتهية (A17/R284): ما أُتقن لا يتحلّل بصمت */}
+          {(() => {
+            const wb2 = wartungsBericht(progress);
+            return (
+              <div data-testid="wartung-panel" className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)", fontSize: "0.85rem" }}>
+                <div style={{ fontWeight: 900, marginBottom: "0.3rem" }}>🔧 صيانة المستويات المنتهية (A17)</div>
+                {wb2.zeilen.length === 0 ? (
+                  <span style={{ color: "var(--color-ink2)" }}>لا بطاقات مُدخلة بعد — تبدأ الصيانة مع أول مستوى يُدرَس.</span>
+                ) : (
+                  <div style={{ display: "grid", gap: "0.25rem" }}>
+                    {wb2.zeilen.map((z) => (
+                      <div key={z.level} style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem" }}>
+                        <span>{z.level}{z.abgeschlossen ? " ✅ منتهٍ" : ""}</span>
+                        <span><span className="rtl-num">{z.karten}</span> بطاقة · احتفاظ {z.retention === null ? "—" : `${Math.round(z.retention * 100)}٪`} · مستحقّ الآن <span className="rtl-num">{z.faellig}</span></span>
+                      </div>
+                    ))}
+                    <div style={{ color: "var(--color-ink2)", fontSize: "0.78rem" }}>البطاقات المستحقّة تدخل طابور مراجعتك اليومي أولًا تلقائيًا — الصيانة تعمل ما دمت تراجع.</div>
+                  </div>
                 )}
               </div>
             );
@@ -378,6 +447,18 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
               📜 الورقة الرسمية A4
             </button>
             <button className="btn btn-ghost" onClick={() => ladeCsv(csvHtml(progress))}>📥 CSV للأرقام</button>
+            <button
+              className="btn btn-ghost"
+              data-testid="wochenkarte-btn"
+              onClick={() => {
+                const win = window.open("", "_blank");
+                if (!win) return;
+                win.document.write(wochenKarteHtml(progress, name));
+                win.document.close();
+              }}
+            >
+              🗓️ بطاقة تقدّم الأسبوع (A33)
+            </button>
           </div>
         </div>
       )}

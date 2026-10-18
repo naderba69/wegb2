@@ -13,6 +13,7 @@
 
 import { useState } from "react";
 import { SchreibAlltag } from "./schreiballtag";
+import { SchreibFehlerPanel } from "./schreibfehler";
 import type { Progress } from "@/lib/types";
 import { useProgress, addFehlerNow } from "@/lib/store";
 import { normalize } from "@/lib/grader";
@@ -272,6 +273,7 @@ ${res.pct >= 60 ? "BESTANDEN ✓" : "Nicht bestanden — nach 4-Punkte-Regel üb
         </div>
       )}
       <SchreibAlltag />
+      <SchreibFehlerPanel progress={progress} />
     </div>
   );
 }

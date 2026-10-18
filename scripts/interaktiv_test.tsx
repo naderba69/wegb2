@@ -2040,6 +2040,39 @@ const hasFile = txt().includes("صوتٌ من الدار");
     }
   }
 
+  /* ═══════════ R284 — A30/A17/A33 في التقارير + A19 نية + A12 لوحة كتابة ═══════════ */
+  {
+    const { BerichteZentrum } = await import("../components/berichte");
+    const heute284 = new Date().toISOString().slice(0, 10);
+    const prog284 = { ...emptyProgress, kompetenzLog: Array.from({ length: 20 }, () => ({ h: "Lesen" as const, ok: true, d: heute284 })) };
+    mount(React.createElement(BerichteZentrum, { progress: prog284 as never, name: "سارة النموذج" }));
+    const hdr284 = btn("BerichteZentrum");
+    if (hdr284) click(hdr284);
+    const sbEl = rootEl.querySelector('[data-testid="skill-balance"]');
+    ok(!!sbEl && ((sbEl.textContent ?? "").includes("شبه غائبة") || (sbEl.textContent ?? "").includes("تهيمن")), "R284a لوحة توازن المهارات (A30) تُرسم وتصدر تحذير اختلال (غياب/هيمنة)");
+    ok(!!rootEl.querySelector('[data-testid="wartung-panel"]'), "R284b لوحة صيانة المستويات (A17) حاضرة");
+    const vorher = gedruckt.length;
+    const karteBtn = rootEl.querySelector('[data-testid="wochenkarte-btn"]') as HTMLElement | null;
+    ok(!!karteBtn, "R284c زر بطاقة تقدّم الأسبوع (A33) موجود");
+    if (karteBtn) click(karteBtn);
+    ok(gedruckt.length === vorher + 1 && (gedruckt[gedruckt.length - 1] ?? "").includes("بطاقة تقدّم الأسبوع"), "R284d البطاقة الأسبوعية تُكتب في نافذة الطباعة من السجلّ المحلي");
+
+    const { AbsichtKarte } = await import("../components/absicht");
+    mount(React.createElement(AbsichtKarte, {}));
+    ok(!!rootEl.querySelector('[data-testid="absicht-karte"]'), "R284e بطاقة نية التنفيذ (A19) تُرسم");
+    typeIn(rootEl.querySelector('[data-testid="absicht-was"]') as HTMLInputElement, "20 بطاقة وإملاء");
+    typeIn(rootEl.querySelector('[data-testid="absicht-wann"]') as HTMLInputElement, "بعد الفطور");
+    typeIn(rootEl.querySelector('[data-testid="absicht-wo"]') as HTMLInputElement, "المكتب");
+    click(rootEl.querySelector('[data-testid="absicht-speichern"]') as HTMLElement);
+    ok(txt().includes("خطّتك:") && txt().includes("20 بطاقة وإملاء"), "R284f النية تُحفظ وتُعرض للأسبوع الحالي");
+
+    const { SchreibFehlerPanel } = await import("../components/schreibfehler");
+    const progF = { ...emptyProgress, fehler: { f1: { key: "f1", falsch: "x", richtig: "y", art: "konstruktion", ar: "بنية الرسالة", quelle: "BriefSchmiede", treffer: 2, srs: { ease: 2.5, interval: 1, due: new Date().toISOString(), reps: 1, lapses: 0, introduced: new Date().toISOString() } } } };
+    mount(React.createElement(SchreibFehlerPanel, { progress: progF as never }));
+    const sfEl = rootEl.querySelector('[data-testid="schreibfehler-panel"]');
+    ok(!!sfEl && (sfEl.textContent ?? "").includes("بنية الرسالة"), "R284g لوحة أخطاء الكتابة التراكمية (A12) تعرض النمط من الدفتر");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");

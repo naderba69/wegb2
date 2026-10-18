@@ -40,6 +40,10 @@ import { sprechHeute, SPRECH_ZIEL_SEK } from "../lib/sprechziel";
 import { genusCode } from "../lib/genus";
 import { leseWpm, fluenzBand } from "../lib/fluenz";
 import { SCHREIB_ALLTAG } from "../lib/schreiballtag";
+import { skillBilanz } from "../lib/skillbilanz";
+import { wartungsBericht } from "../lib/wartung";
+import { schreibFehlerBilanz } from "../lib/schreibfehler";
+import { isoWoche, absichtStatus } from "../lib/absicht";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -12989,6 +12993,34 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/briefe.tsx", "utf8").includes("<SchreibAlltag />") &&
      fort308.includes('offen === "landkarte"') && fort308.includes("LernLandkarte"),
     `K308 رباعية R283: ترميز جنس مزدوج ●m/▲f/■n يغطي ${nomen308.length} اسمًا (M12)، حساب طلاقة القراءة وحدودها (A3)، ${SCHREIB_ALLTAG.length} موقف كتابة عملية بنماذج وقوائم فحص (A11)، وخريطة إنجاز مسجّلة في تقدّمي (A18)`);
+}
+
+// ===== K309 (R284 · A12+A17+A19+A30+A33): Skill-Balance, Wartung, Schreibfehler, Absicht, Wochenkarte =====
+{
+  const heute309 = new Date().toISOString().slice(0, 10);
+  const geloggt309 = logK(emptyProgress, "Lesen", true);
+  const log309 = geloggt309.kompetenzLog ?? [];
+  const p309 = { ...emptyProgress, kompetenzLog: Array.from({ length: 20 }, () => ({ h: "Lesen" as const, ok: true, d: heute309 })) } as Progress;
+  const sb309 = skillBilanz(p309);
+  const karteA1 = alleVokabeln.find((k) => k.level === "A1");
+  const pWart = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 200 }, srs: karteA1 ? { [karteA1.id]: { ...newCard(), reps: 3, stab: 12, diff: 5, introduced: new Date(Date.now() - 40 * 86400000).toISOString(), last: new Date(Date.now() - 2 * 86400000).toISOString(), due: new Date(Date.now() - 86400000).toISOString() } } : {} } as Progress;
+  const wb309 = wartungsBericht(pWart);
+  const pFehler = { ...emptyProgress, fehler: {
+    f1: { key: "f1", falsch: "x", richtig: "y", art: "konstruktion", ar: "بنية الرسالة", quelle: "BriefSchmiede", treffer: 3, srs: { ...newCard(), reps: 1, introduced: new Date().toISOString() } },
+    f2: { key: "f2", falsch: "x", richtig: "y", art: "kasus", ar: "حالة إعراب", quelle: "Diktat", treffer: 9, srs: { ...newCard(), reps: 1, introduced: new Date().toISOString() } },
+  } } as unknown as Progress;
+  const sf309 = schreibFehlerBilanz(pFehler);
+  const beri309 = readFileSync("components/berichte.tsx", "utf8");
+  ok(log309.length === 1 && log309[0].d === heute309 &&
+     sb309.fenster === "7-tage" && sb309.zeilen.find((z) => z.hand === "Lesen")?.anteil === 1 && !!sb309.warnung &&
+     !!karteA1 && wb309.zeilen.some((z) => z.level === "A1" && z.karten === 1 && z.faellig === 1 && z.abgeschlossen) &&
+     sf309.gesamt === 1 && sf309.muster[0]?.treffer === 3 && sf309.offen === 1 &&
+     isoWoche(new Date(2026, 0, 1)) === "2026-W01" && isoWoche(new Date(2025, 11, 29)) === "2026-W01" &&
+     absichtStatus({ ...emptyProgress, absicht: { woche: "2020-W01", wann: "x", wo: "y", was: "z" } }).rueckblickOffen === true &&
+     beri309.includes('data-testid="skill-balance"') && beri309.includes('data-testid="wartung-panel"') && beri309.includes('data-testid="wochenkarte-btn"') && beri309.includes("wochenKarteHtml") &&
+     readFileSync("components/briefe.tsx", "utf8").includes("<SchreibFehlerPanel") &&
+     readFileSync("app/fortschritt/page.tsx", "utf8").includes("<AbsichtKarte />"),
+    `K309 خماسية R284: سجلّ كفاءات مؤرّخ وتوازن مهارات بتحذير هيمنة (A30)، صيانة A1 مستحقّة في يوم 200 (A17)، أخطاء كتابة تراكمية من دفتر حقيقي (A12)، نية أسبوع ${isoWoche(new Date(2026, 0, 1))} ومراجعة مفتوحة (A19)، وبطاقة أسبوع قابلة للطباعة (A33)`);
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),

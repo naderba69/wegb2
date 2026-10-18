@@ -440,6 +440,8 @@ export interface Progress {
   sprechUebungen?: { datum: string; level: string; teil: number; karteId: string; dauerS: number; punkte: number }[];
   /** ⏱️ A3/R283: قياسات سرعة القراءة (كلمات/دقيقة) من سلّم القراءة — قياس زمني آلي لا حكم مستوى رسمي */
   fluenz?: { datum: string; wpm: number; stufe: number }[];
+  /** 🎯 A19/R284: نية تنفيذ أسبوعية (متى/أين/ماذا) + علم إنجازها — محلية فقط */
+  absicht?: { woche: string; wann: string; wo: string; was: string; erfuellt?: boolean };
   /** 🔁 حلقات الكتابة (M5/R185): مسودّة وإعادة كتابتها محفوظتان محليًا للمقارنة الكلمية — آخر ٨ حلقات */
   schreibEntwuerfe?: { id: string; taskId: string; datum: string; v1: string; v2?: string }[];
   /** 🪜 تقدّم سلّم القراءة (C1): النص ← أفضل نتيجة (صحيحة/كلية) — المحطة التالية تُفتح بإتمام السابقة */
@@ -472,7 +474,7 @@ export interface Progress {
   /** الأوسمة المكسوبة: id ← تاريخ المنح */
   abzeichen?: Record<string, string>;
   /** سجلّ الكفاءات الموحّد: محاولات موزّعة على شبكة CEFR (logK) */
-  kompetenzLog?: { h: Kompetenz; ok: boolean }[];
+  kompetenzLog?: { h: Kompetenz; ok: boolean; d?: string }[];
   /** صحّة التعلّم (Modul U): حارس 20-20-20 ووضع المريض */
   gesundheit?: {
     augenPause?: boolean;

@@ -48,7 +48,7 @@ export const FEHLER_ZU_KOMPETENZ: Record<string, Kompetenz> = {
 
 /** تسجيل محاولة (ناجحة/خاطئة) على شبكة الكفاءات. */
 export function logK(p: Progress, h: Kompetenz, ok: boolean): Progress {
-  const arr = [...(p.kompetenzLog || []), { h, ok }];
+  const arr = [...(p.kompetenzLog || []), { h, ok, d: new Date().toISOString().slice(0, 10) }]; // R284/A30: Datum fuer Wochen-Bilanz
   return { ...p, kompetenzLog: arr.slice(-600) };
 }
 

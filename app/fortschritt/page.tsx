@@ -4,6 +4,7 @@ import { useProgress } from "@/lib/store";
 import { activeProfile } from "@/lib/profiles";
 import { BerichteZentrum } from "@/components/berichte";
 import { LernLandkarte } from "@/components/landkarte";
+import { AbsichtKarte } from "@/components/absicht";
 import { WegWeiser } from "@/components/wegweiser";
 import { RadarKarte } from "@/components/katalog";
 import { Fehlerkartei } from "@/components/fehler-ui";
@@ -85,7 +86,7 @@ export default function Fortschritt() {
           {offen === "lernstrategie" && <LernStrategieZentrum progress={progress} />}
           {offen === "eltern" && <ElternPaket progress={progress} name={activeProfile().name} />}
           {offen === "kontrakt" && <KontraktCard progress={progress} />}
-          {offen === "wochen" && (<div style={{ display: "grid", gap: "0.9rem" }}><WochenZielKarte progress={progress} /><Wochenplan progress={progress} /></div>)}
+          {offen === "wochen" && (<div style={{ display: "grid", gap: "0.9rem" }}><WochenZielKarte progress={progress} /><AbsichtKarte /><Wochenplan progress={progress} /></div>)}
         </section>
       </div>
     );
