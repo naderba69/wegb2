@@ -12888,6 +12888,26 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K303 لا C1 في المشروع: لا بنكَ تذوّقَ ولا مكوّنَ ولا محطةَ في «تدرّب» ولا مُحمِّل — المسار ينتهي عند B2 (قرار المالك R221)");
 }
 
+// ===== K304 (R272): Vollstaendige maschinelle Audio-QC des gesamten Audio-Bestands
+// (Besitzer-Entscheid: keine menschliche Anhoerung — die Pruefung ist vollautomatisiert
+// und ehrlich als Maschinenmessung gekennzeichnet; scripts/audio_qc_all.py, Bericht
+// docs/audio-qc-all-2026-10-18.json). Jede MP3 auf der Platte genau einmal geprueft. =====
+{
+  const qcAll = JSON.parse(readFileSync("docs/audio-qc-all-2026-10-18.json", "utf8")) as any;
+  const verz304 = ["dialog", "diktat", "hoeren", "hoerneu", "sprichwort"];
+  const platten304 = new Set<string>();
+  for (const v of verz304) for (const f of readdirSync("public/audio/" + v)) if (f.endsWith(".mp3")) platten304.add("/audio/" + v + "/" + f);
+  const berichtet304 = new Set<string>(qcAll.dateien.map((d: any) => d.datei));
+  const gruppen304 = qcAll.gruppen.dialog.anzahl === 164 && qcAll.gruppen.diktat.anzahl === 674 &&
+    qcAll.gruppen.hoeren.anzahl === 157 && qcAll.gruppen.hoerneu.anzahl === 16 && qcAll.gruppen.sprichwort.anzahl === 8;
+  ok(existsSync("scripts/audio_qc_all.py") && qcAll.dateien.length === 1019 && platten304.size === 1019 &&
+     [...platten304].every((p) => berichtet304.has(p)) && gruppen304 && qcAll.anomalienGesamt === 0 &&
+     qcAll.abdeckung.luecken.length === 0 && qcAll.dateien.every((d: any) => d.ok) &&
+     qcAll.schwellen.diktat.maxStilleAnteil === 0.65 && qcAll.schwellen.diktat.maxStilleLochS === 4.0 &&
+     String(qcAll.grenzEhrlichkeit).includes("Kein menschliches Anhören"),
+    "K304 مراجعةُ الصوتِ الآليةُ الشاملةُ R272: ‏1019/1019 ملفاً مفكوكاً ومقيساً (المدة/الصمت/المستوى/السرعة مقابل نصّ البنك) بلا شذوذٍ ولا ثغراتِ تغطية — قياسٌ آليٌّ مُعلَن، لا استماعَ بشريٌّ ولا حكمَ نطق");
+}
+
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),
 // KI-Stimme gekennzeichnet, maschinelle QC (R169-Werkzeug, eigene Schwellenakte), Tempi aus
 // dem Player (playbackRate), strikte ausserhalb der 378 Tage. =====

@@ -12,7 +12,8 @@
     "start": "next start",
     "banken": "node scripts/copy_banks.mjs",
     "prebuild": "npm run banken",
-    "predev": "npm run banken"
+    "predev": "npm run banken",
+    "audio:qc": "python3 scripts/audio_qc_all.py"
   },
   "dependencies": {
     "next": "^15.5.27",
