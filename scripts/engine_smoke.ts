@@ -56,6 +56,7 @@ import { erledigeWiederschreiben, planeWiederschreiben } from "../lib/wiederschr
 import { pruefeImportText, sicherungFaellig } from "../lib/backup";
 import { bemerkenFrage, wochenNeueRegeln } from "../lib/bemerken";
 import { wochenBericht } from "../lib/wochenbericht";
+import { MELDUNGEN } from "../lib/meldungen";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -2844,8 +2845,9 @@ void 0;
   const gD = readFileSync("components/tasks.tsx", "utf8");
   ok(/if\s*\(\s*!topic\s*\)[\s\S]{0,500}task\.quiz/.test(gD),
     "K119a GrammarTask يستقبِلُ مهمةَ الأسبوعِ بلا topicId ويُعرِضُ quiz بدلَ شاشةِ «قاعدة غير موجودة» — لا شاشةٍ خاويةٍ في يومِ من الأيام");
-  ok(gD.includes('return <Empty title="قاعدة غير موجودة" />'),
-    "K119b ويبقى بابُ الاحتياطِ: غابتِ الدرسُ والأسئلةُ معاً فالشاشةُ تُعلِنُ نقصةها بصراحة");
+  // R291/M17: أُعيد توجيه K119b — صارت رسالة الفراغ من سجلّ الرسائل الموحّد بفعل واضح (تغيّر بنيوي موثّق، لا تخفيف)
+  ok(gD.includes('meldung("regel-fehlt")') && gD.includes('data-testid="empty-meldung"'),
+    "K119b ويبقى بابُ الاحتياطِ: غابتِ الدرسُ والأسئلةُ معاً فالشاشةُ تُعلِنُ نقصَها من سجلّ M17 بفعلٍ واضح");
 }
 
 /* ═══ K120 — سجلُّ القواعدِ يفحصُ نفسَه: كلُّ دليلٍ «ملف:سطر» مذكورٍ موجودٌ حرفياً ═══ */
@@ -13172,6 +13174,31 @@ function collectR262(dir: string, out: string[] = []): string[] {
      readFileSync("components/offline.tsx", "utf8").includes("messeErstStart"),
     `K315 ثلاثية R290: سؤال ملاحظة يصيب جملة الشاهد «${frage315?.beleg}» (M10)، صفر preload=auto في مشغّلات الصوت (M13)، وتقرير أسبوعي: ${bericht315.minutenProArt[0]?.art} ${bericht315.minutenProArt[0]?.minuten} دقيقة + إنتاجي جديد ${bericht315.produktivNeu.anzahl} + خطة ${bericht315.naechsteWoche.length} أيام (M19)`);
 }
+// ===== K316 (R291 · M17+M18): Meldungs-Register + berechnete AA-Kontraste =====
+{
+  const lum316 = (hex: string) => {
+    const h = hex.replace("#", "");
+    const f = (c: number) => { const v = c / 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+    return 0.2126 * f(parseInt(h.slice(0, 2), 16)) + 0.7152 * f(parseInt(h.slice(2, 4), 16)) + 0.0722 * f(parseInt(h.slice(4, 6), 16));
+  };
+  const ratio316 = (a: string, b: string) => { const x = lum316(a); const y = lum316(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+  const css316 = readFileSync("app/globals.css", "utf8");
+  const token316 = (name: string) => new RegExp(`${name}:\\s*(#[0-9a-fA-F]{6})`).exec(css316)?.[1] ?? "";
+  const bg316 = token316("--ui-bg"); const surf316 = token316("--ui-surface");
+  const text316 = token316("--ui-text"); const muted316 = token316("--ui-muted");
+  const kon316 = ratio316(text316, bg316); const konMuted316 = ratio316(muted316, surf316);
+  const tasks316 = readFileSync("components/tasks.tsx", "utf8");
+  const verboten316 = ["Something went wrong", "Try again", "No data found", "Nicht gefunden", "Fehler ist aufgetreten", "Loading..."];
+  const fund316 = verboten316.filter((v) => tasks316.includes(v) || readFileSync("components/berichte.tsx", "utf8").includes(v));
+  ok(Object.values(MELDUNGEN).every((m) => m.titel.length > 5 && m.aktion.includes("أكمل")) &&
+     (tasks316.match(/meldung\("/g) ?? []).length >= 5 && tasks316.includes('data-testid="empty-meldung"') &&
+     fund316.length === 0 &&
+     kon316 >= 7 && konMuted316 >= 4.5 && ratio316(token316("--ui-gold"), bg316) >= 4.5 && ratio316("#06140b", token316("--ui-green")) >= 4.5 &&
+     css316.includes("@media (pointer: coarse)") && css316.includes(":where(a, button, input, textarea, select, summary, [tabindex]):focus-visible") &&
+     css316.includes('"Cairo"') && css316.includes('"Geeza Pro"'),
+    `K316 ثنائية R291: سجلّ رسائل بفعل واحد واضح في خمس حالات فراغ (M17)، وتباين محسوب آليًا نص/خلفية ${kon316.toFixed(1)} وخافت/سطح ${konMuted316.toFixed(1)} فوق AA مع لمس 44px وتركيز ظاهر وخط عربي أولًا (M18)`);
+}
+
 
 
 

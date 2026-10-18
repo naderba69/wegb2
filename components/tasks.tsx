@@ -23,6 +23,7 @@ import { KompositaWerkstatt } from "./komposita";
 import { SignalRadar } from "./signalradar";
 import { StilWechsler } from "./stilwechsler";
 import { grammatikImText } from "@/lib/grammatikRadar";
+import { meldung } from "@/lib/meldungen";
 import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
@@ -442,7 +443,7 @@ function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: 
         </section>
       );
     }
-    return <Empty title="قاعدة غير موجودة" />;
+    return <Empty title={meldung("regel-fehlt").titel} aktion={meldung("regel-fehlt").aktion} />;
   }
   const entdecken = !!frage && induktionMoeglich(topic);
   const offen = !entdecken || ergebnis !== null;
@@ -668,7 +669,7 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
       .filter(Boolean) as Exercise[];
   }, [task.sentenceIds, task.id]);
 
-  if (!deck && task.deckId) return <Empty title="حزمة غير موجودة" />;
+  if (!deck && task.deckId) return <Empty title={meldung("deck-fehlt").titel} aktion={meldung("deck-fehlt").aktion} />;
 
   const produktiv = !!card && ((srs[card.id]?.reps ?? 0) % 2 === 1);
   const rateCard = (q: 0 | 2 | 4) => {
@@ -854,7 +855,7 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
     warmVoices(() => setVoReady(true));
   }, []);
 
-  if (!dlg) return <Empty title="حوار غير موجود" />;
+  if (!dlg) return <Empty title={meldung("dialog-fehlt").titel} aktion={meldung("dialog-fehlt").aktion} />;
 
   const playAll = () => {
     if (playing) {
@@ -968,7 +969,7 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
 function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const text = getText(task.textId ?? "");
   const [showTr, setShowTr] = useState(false);
-  if (!text) return <Empty title="نص غير موجود" />;
+  if (!text) return <Empty title={meldung("text-fehlt").titel} aktion={meldung("text-fehlt").aktion} />;
   // 📜 النسخةُ الطويلةُ (طول CEFR حقيقي) إن وُجدت؛ وإلا النصُّ القصير
   const lese = leseText(text);
   const absaetze = lese.de.split(/\n\n+/);
@@ -1027,7 +1028,7 @@ function SchreibenTask({ task, onPoints, persistKey }: Omit<TaskProps, "lang" | 
   });
   const { text, checks, submitted } = draft;
   if (!draftReady) return <div className="card" role="status">⏳ جارٍ استعادة مسودّة الكتابة…</div>;
-  if (!w) return <Empty title="مهمة كتابة غير موجودة" />;
+  if (!w) return <Empty title={meldung("schreiben-fehlt").titel} aktion={meldung("schreiben-fehlt").aktion} />;
   const selfScore = w.criteria.filter((_, i) => checks[i]).length;
 
   return (
@@ -1403,10 +1404,11 @@ function Head({ icon, de, ar }: { icon: string; de: string; ar: string }) {
   );
 }
 
-function Empty({ title }: { title: string }) {
+function Empty({ title, aktion }: { title: string; aktion?: string }) {
   return (
-    <div className="card" style={{ padding: "1.2rem" }}>
+    <div className="card" style={{ padding: "1.2rem" }} data-testid="empty-meldung">
       <strong>{title}</strong>
+      {aktion && <div style={{ color: "var(--color-ink2)", marginTop: "0.35rem" }}>{aktion}</div>}
     </div>
   );
 }

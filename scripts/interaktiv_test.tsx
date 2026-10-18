@@ -2220,6 +2220,18 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(html290.includes("دقائق هذا الأسبوع بحسب نوع المهمة") && html290.includes("كلمات إنتاجية جديدة") && html290.includes("خطة الأسبوع القادم"), "R290d التقرير الأسبوعي القابل للطباعة (M19) يحمل دقائق الأنواع والإنتاج الجديد والأخطاء المتكررة وخطة القادم");
   }
 
+  /* ═══════════ R291 — M17 رسالة فراغ بفعل واضح ═══════════ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    mount(React.createElement(TaskView, {
+      task: { id: "291:t1", kind: "lesen", titleDe: "X", titleAr: "ص", minutes: 5, textId: "gibts-nicht-291" },
+      lang: "ar", day: 10, srs: {}, onSrs: () => {}, onPoints: () => {},
+    } as never));
+    const leer = rootEl.querySelector('[data-testid="empty-meldung"]');
+    ok(!!leer && (leer.textContent ?? "").includes("غير متاح"), "R291a رسالة الفراغ (M17) تسمّي ما حدث");
+    ok(!!leer && (leer.textContent ?? "").includes("أكمل المهمة التالية"), "R291b وبالفعل الواحد الواضح: ما تفعله الآن");
+  }
+
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
   {
     const { default: ExerciseSet } = await import("../components/exercises");
