@@ -13935,8 +13935,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const pFest = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 150 }, srs: basis321(0.5, 30) } as Progress;
   ok(planVerzweigung(pFest, jetzt321).art === "festigen", "K321f احتفاظ منخفض ⇒ تثبيت مقترح");
   ok(existsSync("docs/PERFORMANCE_BUDGET.md"), "K321g وثيقة ميزانية الأداء موجودة");
-  const banksGroesse = require("fs").statSync("public/banks.json").size;
-  ok(banksGroesse <= 5_000_000, "K321h banks.json ≤5MB (مقاس: " + banksGroesse + ")");
+  // banks.json selbst ist generiert (nicht versioniert) — gemessen wird an der versionierten Quelle content/** mit derselben Minifizierung wie scripts/copy_banks.mjs.
+  const bankDateien = [...readdirSync("content").filter((f) => f.endsWith(".json")).map((f) => "content/" + f), ...readdirSync("content/lang").filter((f) => f.endsWith(".json")).map((f) => "content/lang/" + f)];
+  const banksObj: Record<string, unknown> = {};
+  for (const f of bankDateien) banksObj[f.replace(/^content\//, "")] = JSON.parse(readFileSync(f, "utf8"));
+  const banksGroesse = JSON.stringify(banksObj).length;
+  ok(banksGroesse <= 5_000_000, "K321h banks.json (aus content/** erzeugt) ≤5MB (gemessen: " + banksGroesse + ")");
   const audioRoot = "public/audio";
   const alle = readdirSync(audioRoot, { recursive: true }).filter((f) => String(f).endsWith(".mp3"));
   let maxA = 0; for (const f of alle) { const g = require("fs").statSync(audioRoot + "/" + f).size; if (g > maxA) maxA = g; }
