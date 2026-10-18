@@ -776,3 +776,4 @@ Funktionale Ausdrucksbank `content/redemittel.json` mit 115 Phrasen in 11 Funkti
 - R278: Altbestand-Vervollständigung 6 — sat-a0-043…050 + sat-a1-103…104 aufgenommen (alt 60/68, offen 8), Diktat 734; Audio-QC auf 1079 Dateien nachgeführt.
 - R279: Altbestand ABGESCHLOSSEN — sat-a1-105…107 + sat-a2-111…115 aufgenommen; Diktat-Abdeckung 742/742 (kein Satz mehr ohne Aufnahme); Audio-QC auf 1087 Dateien nachgeführt.
 - R280: Experten-Audit M1+M2 — FSRS-6-Scheduler (lib/srs.ts, Referenzformeln, Ziel-Retention 90 %) + Kartenstufen Erkennen/Produktion (AR→DE-Runden, karteStufe/stufenWert), K305.
+- R281: Experten-Audit A2+A13 — lib/prognose.ts (aktuelle Retention, 7-Tage-Fälligkeitsprognose, Kurve +7/+14/+30, Kohorten 30/90) + Panel im BerichteZentrum, K306. A1 als Bestand (zieltempo) verifiziert.

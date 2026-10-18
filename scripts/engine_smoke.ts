@@ -33,7 +33,8 @@ import {
   planStundenBis,
   planStundenGesamt,
 } from "../lib/plan";
-import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe } from "../lib/srs";
+import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, karteStufe, abrufbarkeit } from "../lib/srs";
+import { prognose } from "../lib/prognose";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
   normKey,
@@ -12926,6 +12927,26 @@ function collectR262(dir: string, out: string[] = []): string[] {
      karteStufe({ ...reif305, prod: 1 }) === "festigen" && karteStufe(newCard()) === "neu" &&
      srsSrc305.includes("FSRS-6") && srsSrc305.includes("FSRS_ZIEL_RETENTION"),
     `K305 المجدول FSRS-6 (R280/M1): سهل ${cEasy.interval}ي > جيد ${cGood.interval}ي، والنسيان يعيد للتعلم، وترحيل القدماء يعمل (S=${(mig305.stab ?? 0).toFixed(1)})؛ ومرحلة «إنتاج متقن» (M2) تشترط ثبات ≥21ي و≥2 نجاح إنتاجي — لا إتقان من التعرّف وحده`);
+}
+
+// ===== K306 (R281 · A2+A13): Retentions-/Fälligkeits-Prognose + Kohorten aus FSRS-Zustaenden =====
+{
+  const jetzt = new Date("2026-06-15T12:00:00.000Z");
+  const alt = new Date(jetzt.getTime() - 5 * 86400000).toISOString();
+  const morgen = new Date(jetzt.getTime() + 86400000).toISOString();
+  const vor30 = new Date(jetzt.getTime() - 30 * 86400000).toISOString();
+  const srs306: Record<string, SrsState> = {
+    a: { ease: 2.5, interval: 10, due: morgen, reps: 3, lapses: 0, stab: 10, diff: 5, last: alt, introduced: vor30 },
+    b: { ease: 2.5, interval: 20, due: morgen, reps: 4, lapses: 0, stab: 20, diff: 5, last: new Date(jetzt.getTime() - 86400000).toISOString(), introduced: vor30 },
+  };
+  const pr306 = prognose(srs306, jetzt);
+  const r306 = abrufbarkeit(srs306.a, jetzt) ?? 0;
+  ok(pr306.karten === 2 && r306 > 0.9 && r306 < 0.97 && (pr306.retention ?? 0) > 0.9 &&
+     pr306.tage[1].faellig === 2 && pr306.ueberfaellig === 0 && pr306.spitze === 2 && !pr306.spitzenWarnung &&
+     pr306.kurve[2].retention !== null && (pr306.kurve[2].retention ?? 1) < (pr306.retention ?? 0) &&
+     pr306.kohorten[0].n === 2 && (pr306.kohorten[0].quote ?? 0) >= 0.99 && pr306.kohorten[1].n === 0 &&
+     readFileSync("components/berichte.tsx", "utf8").includes('data-testid="retention-panel"'),
+    `K306 توقّع الاحتفاظ (A2) وفحصا 30/90 (A13): R الآن ${(r306 * 100).toFixed(0)}٪، مستحقّ الغد ${pr306.tage[1].faellig}، منحنى 30 يومًا يهبط كما يجب، وفئة 30 يومًا ${pr306.kohorten[0].n} بطاقة — اشتقاق FSRS محلي بلا خادم`);
 }
 
 // ===== K272 (R179 · C5): Neue Hoermaterialien (Nachrichten/Durchsagen/Werbung/Interviews),

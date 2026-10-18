@@ -12,6 +12,7 @@ import { fehlerFamilien, resistenteFehler, schwere, weakTopics, URSACHEN, ursach
 import { planPct } from "@/lib/plan";
 import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "@/lib/metriken";
 import { noteFromPct } from "@/lib/grader";
+import { prognose } from "@/lib/prognose";
 import { levelOfXp } from "@/lib/spiel";
 import { De } from "./De";
 import { StundenVertrag } from "./stundenvertrag";
@@ -250,6 +251,31 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
                     </>
                   )}
                 </div>
+              </div>
+            );
+          })()}
+
+          {/* 📈 الاحتفاظ والتوقّع (A2+A13/R281): نموذج FSRS من حالات بطاقاتك — تقدير آلي لا ملاحظة بشرية */}
+          {(() => {
+            const pr = prognose(progress.srs ?? {});
+            const pct = (x: number | null) => (x === null ? "—" : `${Math.round(x * 100)}٪`);
+            return (
+              <div data-testid="retention-panel" className="card" style={{ padding: "0.9rem 1.1rem", background: "var(--color-paper)" }}>
+                <div style={{ fontWeight: 900, marginBottom: "0.35rem" }}>📈 الاحتفاظ والتوقّع (نموذج FSRS)</div>
+                {pr.karten === 0 ? (
+                  <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>لا بطاقات مُدخلة بعد — يبدأ القياس مع أول بطاقة تُراجَع.</div>
+                ) : (
+                  <div style={{ fontSize: "0.85rem", display: "grid", gap: "0.3rem" }}>
+                    <div>احتمال استدعاء بطاقاتك الآن (متوسط <span className="rtl-num">{pr.karten}</span> بطاقة): <strong>{pct(pr.retention)}</strong></div>
+                    <div>متأخرة اليوم: <strong className="rtl-num">{pr.ueberfaellig}</strong> · ذروة الأيام السبعة القادمة: <strong className="rtl-num">{pr.spitze}</strong> بطاقة/يوم{pr.spitzenWarnung ? " ⚠️ فوق سقف 150 — وزّع الجديد اليوم" : ""}</div>
+                    <div>المستحقّ قادمًا: {pr.tage.map((t) => `${t.datum.slice(5)}: ${t.faellig}`).join(" · ")}</div>
+                    <div>إن توقّفت عن المراجعة: بعد 7 أيام {pct(pr.kurve[0].retention)} · 14 يومًا {pct(pr.kurve[1].retention)} · 30 يومًا {pct(pr.kurve[2].retention)}</div>
+                    {pr.kohorten.map((k) => (
+                      <div key={k.tage}>فحص احتفاظ {k.tage} يومًا (A13): {k.n === 0 ? "لا بطاقات في هذه الفئة العمرية بعد" : <>من <span className="rtl-num">{k.n}</span> بطاقة قُدّمت قبل ~{k.tage} يومًا ما زال <strong>{pct(k.quote)}</strong> فوق عتبة 85٪</>}</div>
+                    ))}
+                    <div style={{ color: "var(--color-ink2)", fontSize: "0.78rem" }}>أرقام نموذج FSRS من حالات بطاقاتك المحلية — تقدير آلي لضبط الإيقاع، لا قياس بشري ولا حكم إتقان.</div>
+                  </div>
+                )}
               </div>
             );
           })()}

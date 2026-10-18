@@ -162,6 +162,12 @@ function vergangeneTage(state: SrsState, now: Date): number {
   return Number.isFinite(t) ? Math.max(0, t) : 999;
 }
 
+/** Aktuelle Abrufwahrscheinlichkeit (FSRS-R) einer Karte — null, wenn (noch) keine Stabilitaet bekannt. */
+export function abrufbarkeit(st: SrsState | undefined, now = new Date(), plusTage = 0): number | null {
+  if (!st || st.reps === 0 || st.stab === undefined) return null;
+  return fsrsR(vergangeneTage(st, now) + Math.max(0, plusTage), st.stab);
+}
+
 export function isDue(state: SrsState, now = new Date()): boolean {
   return new Date(state.due).getTime() <= now.getTime();
 }

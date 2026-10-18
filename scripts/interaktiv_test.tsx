@@ -152,6 +152,18 @@ async function main() {
     ok(/WB2-\d{3}-\d{4}/.test(html), "II5 ختم التحقق الحتمي WB2-xxx-xxxx");
     ok(html.includes("جاهزية الامتحان") && html.includes("انضباط الخطة"), "II6 إحصاءات الجاهزية والانضباط");
     ok(html.includes("Grammatik") || html.includes("قواعد") || html.includes("(grammatik)"), "II7 جدول الكفاءات بخمسة أسطر");
+
+    // R281 (A2/A13): Retentions-Panel aus FSRS-Zustaenden
+    const jetztMs = Date.now();
+    const srs281: Record<string, object> = {
+      "v-x1": { ease: 2.5, interval: 10, due: new Date(jetztMs + 86400000).toISOString(), reps: 3, lapses: 0, stab: 10, diff: 5, last: new Date(jetztMs - 2 * 86400000).toISOString(), introduced: new Date(jetztMs - 30 * 86400000).toISOString() },
+    };
+    mount(React.createElement(BerichteZentrum, { progress: { ...emptyProgress, srs: srs281 } as never, name: "سارة النموذج" }));
+    const hdr2 = btn("BerichteZentrum");
+    if (hdr2) click(hdr2);
+    const panel = rootEl.querySelector('[data-testid="retention-panel"]');
+    ok(!!panel && (panel.textContent ?? "").includes("الاحتفاظ والتوقّع") && (panel.textContent ?? "").includes("فحص احتفاظ 30 يومًا"),
+      "II8 لوحة الاحتفاظ والتوقّع (A2+A13) تُرسم من حالات FSRS وتعرض فحص 30 يومًا");
   }
 
   /* ---------- III — دخان التركيب لثلاثة مراكز ---------- */
