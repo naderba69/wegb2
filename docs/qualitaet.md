@@ -481,3 +481,6 @@ Neues Werkzeug **scripts/audio_qc_all.py** (npm: `audio:qc`; miniaudio+numpy im 
 ## R273 — Altbestand-Vervollständigung, Charge 1 (s-a0-16…25)
 
 Nach Kampagnen-Abschluss (494/494 neu) werden jetzt auch die 68 verbliebenen Alt-Sätze ohne `neu`-Markierung aufgenommen (Ziel 742/742): Charge 1 = s-a0-16…25 (A0, voice-06) — Alt-Ist 10/68, offen 58; Diktat gesamt **684/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit); Audio-QC-Bericht wird per audio_qc_all.py auf 1029 Dateien nachgeführt (K304).
+## R274 — Altbestand-Vervollständigung, Charge 2 (s-a0-26…30 + s-b1-200…204)
+
+Zehn weitere Alt-Sätze aufgenommen (voice-06) — Alt-Ist 20/68, offen 48; Diktat gesamt **694/742**. Belege: tsc · smoke · interaktiv · audit · Build (Kampagnen-Commit); Audio-QC-Bericht per audio_qc_all.py auf 1039 Dateien nachgeführt (K304).
