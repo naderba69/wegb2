@@ -25,6 +25,8 @@ export function HoerLabor({ progress }: { progress: Progress }) {
   const [tempo, setTempo] = useState<Tempo>("lern");
   // 🔊 A6 (R296): مصدر الصوت — التسجيل أو صوت جهاز ثانٍ للنص نفسه
   const [stimme, setStimme] = useState<"aufnahme" | "geraet">("aufnahme");
+  // 🗣 R299: ملامح صوت الجهاز (قياسي/نمساوي/سويسري/درجة صوت) — أصوات جهاز المتعلم الفعلية فقط
+  const [profil, setProfil] = useState<string>("de-DE");
   const [rundeNr, setRundeNr] = useState(0);
   const runde = useMemo(() => bauHoerRunde(progress.plan.day + rundeNr * 13), [progress.plan.day, rundeNr]);
   const [plays, setPlays] = useState(0);
@@ -52,7 +54,9 @@ export function HoerLabor({ progress }: { progress: Progress }) {
     setStarted(true);
     const el = audioRef.current;
     if (stimme === "geraet") {
-      speakAny(runde.de, { rate: RATE[tempo] });
+      const pitch = profil === "tief" ? 0.8 : profil === "hoch" ? 1.15 : undefined;
+      const lang = profil === "tief" || profil === "hoch" ? "de-DE" : profil;
+      speakAny(runde.de, { rate: RATE[tempo], lang, pitch });
       return;
     }
     if (mitAudio && el) {
@@ -120,6 +124,14 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         <button className="chip" style={{ cursor: "pointer", background: tempo === "pruefung" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("pruefung")}>⚡ {RATE.pruefung}× Prüfungstempo</button>
         <button type="button" className="chip" data-testid="stimme-aufnahme" style={{ cursor: "pointer", background: stimme === "aufnahme" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "aufnahme" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("aufnahme")}>🔊 الصوت المسجّل</button>
         <button type="button" className="chip" data-testid="stimme-geraet" style={{ cursor: "pointer", background: stimme === "geraet" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "geraet" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("geraet")}>🗣 صوت الجهاز — صوت ثانٍ للنص نفسه</button>
+        {stimme === "geraet" && (
+          <>
+            {[["de-DE", "قياسي"], ["de-AT", "نمساوي"], ["de-CH", "سويسري"], ["tief", "صوت أعمق"], ["hoch", "صوت أخف"]].map(([id, ar]) => (
+              <button key={id} type="button" className="chip" data-testid={`stimme-profil-${id}`} style={{ cursor: "pointer", background: profil === id ? "var(--color-gold)" : "var(--ui-surface-raised)", color: profil === id ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setProfil(id)}>🗣 {ar}</button>
+            ))}
+            <span style={{ fontSize: "0.74rem", color: "var(--color-ink2)" }}>أصوات جهازك الفعلية؛ إن غاب الصوت النمساوي/السويسري عن جهازك سمعت القياسي — لا أصوات مخترعة.</span>
+          </>
+        )}
       </div>
 
       {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="auto" />}

@@ -70,6 +70,8 @@ import { kollokProduktion, partnerOk } from "../lib/kollokproduktion";
 import { b2Luecke, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
 import { inputPaket } from "../lib/freiesinput";
 import { erweiterungDecks, erweiterungSitzung, erweiterungFortschritt } from "../lib/erweiterung";
+import { parseSprechBewertung, SPRECH_KRITERIEN as BEWERTUNG_KRITERIEN } from "../lib/sprechbewertung";
+import { SPRECH_SZENARIEN, teileAntwort } from "../lib/sprechbegleiter";
 import { planVerzweigung } from "../lib/verzweigung";
 import { FALSCHE_FREUNDE } from "../lib/falsche-freunde";
 import {
@@ -87,7 +89,6 @@ import {
   FEHLER_KAT,
 } from "../lib/fehler";
 import { normalize, diffWoerter, konfidenz, grader, deepReview, noteFromPct, LLM_ANBIETER } from "../lib/grader";
-import { SPRECH_SZENARIEN, teileAntwort } from "../lib/sprechbegleiter";
 import { SIM_FORM, SIM_FORMATE, baueSimulation, antwortRichtig, punkteAusAnteil, modulBestanden, simulationBestanden, rubrikPunkte, schreibenZuKurz, schreibenPunkte, bewerteSimulation } from "../lib/simulation";
 import { fertigkeitenBilanz, schwaechsteFertigkeit, bereitschaftsFazit, tageBisExamen } from "../lib/bereitschaft";
 import { bewerteKriterien } from "../lib/kriterien";
@@ -13739,11 +13740,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const sbSrc = readFileSync("lib/sprechbegleiter.ts", "utf8");
   const compSrc = readFileSync("components/sprechbegleiter.tsx", "utf8");
   const gradSrc = readFileSync("lib/grader.ts", "utf8");
-  ok(SPRECH_SZENARIEN.length === 6 && SPRECH_SZENARIEN.every((s) => s.startDe && s.rolleDe) &&
+  ok(SPRECH_SZENARIEN.length === 12 && SPRECH_SZENARIEN.every((s) => s.startDe && s.rolleDe) &&
      sbSrc.includes("Sprich NIEMALS über Aussprache") && !sbSrc.includes("fetch(") &&
      gradSrc.includes("export async function llmGespraech") && teileAntwort("Antwort.\n💡 أحسنت").tipp === "أحسنت" &&
      teileAntwort("Nur Text").tipp === null,
-    "K291a ستة سيناريوهات بدور وسطر بداية، والموجّه يحرّم كلام النطق، وفصل الملاحظة يعمل — وكل ذلك بلا fetch خارج grader");
+    "K291a اثنا عشر سيناريو (R299: توسعة معتمدة مالكًا — 6 حياة يومية/مهنية/امتحان جديدة فوق الستة الأصلية) بدور وسطر بداية، والموجّه يحرّم كلام النطق، وفصل الملاحظة يعمل — وكل ذلك بلا fetch خارج grader");
   ok(compSrc.includes("llmBereit") && compSrc.includes('data-testid="begleiter-nicht-bereit"') &&
      compSrc.includes("لا حكم على النطق") && compSrc.includes("/einstellungen") &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("<SprechBegleiter />"),
@@ -13984,6 +13985,22 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const sitzung323 = erweiterungSitzung(decks323[0].id, emptyProgress as Progress, 3);
   ok(decks323.length === 16 && sitzung323.length === 8 && sitzung323.every((f) => f.optionen.length === 4 && new Set(f.optionen).size === 4 && f.optionen.includes(f.richtig)), "K323f جلسة التوسعة: 8 أسئلة × 4 خيارات وحيدة بلا تكرار، والصحيح بينها دائمًا");
   ok(erweiterungFortschritt(emptyProgress as Progress).gesamt >= 900, "K323g عدّاد التوسعة يغطي الحزم كلها");
+}
+
+
+// ── K324 (R299): تقييم محادثة KI + سيناريوهات أوسع + أملامح صوت جهاز + تشكيلات امتحان ──
+{
+  ok(SPRECH_SZENARIEN.length === 12, "K324a سيناريوهات الرفيق 12 (6 مهنية/امتحان + 6 حياة يومية جديدة)");
+  const gut = parseSprechBewertung('{"kriterien":[{"name":"Gesprächsführung","punkte":70,"kommentar":"x"},{"name":"Wortschatz","punkte":60,"kommentar":"y"},{"name":"Grammatik","punkte":55,"kommentar":"z"},{"name":"Höflichkeit und Register","punkte":80,"kommentar":"w"}],"fazit":"f","naechsteUebung":"u"}');
+  ok(!!gut && gut.kriterien.length === 4 && gut.kriterien[0].punkte === 70, "K324b محلّل تقييم المحادثة يقرأ JSON الصارم");
+  ok(parseSprechBewertung("kein json") === null && parseSprechBewertung('{"kriterien":[]}') === null, "K324c الردود الفاسدة تُرفض بلا انهيار");
+  ok(BEWERTUNG_KRITERIEN.length === 4, "K324d معايير التقييم الأربعة ثابتة (قيادة حوار/مفردات/قواعد/أدب) — لا معيار نطق");
+  const begleiterSrc = readFileSync("components/sprechbegleiter.tsx", "utf8");
+  ok(begleiterSrc.includes("begleiter-bewerten") && begleiterSrc.includes("begleiter-bewertung") && begleiterSrc.includes("ولا يقيس النطق أبدًا"), "K324e زرّ إنهاء وتقييم ولوحته بإعلان «لا نطق» في الرفيق");
+  const hoerenSrc324 = readFileSync("components/hoeren.tsx", "utf8");
+  ok(hoerenSrc324.includes("stimme-profil-") && hoerenSrc324.includes("\"de-AT\"") && hoerenSrc324.includes("\"de-CH\""), "K324f ملامح صوت الجهاز (نمساوي/سويسري) في مختبر السماع");
+  ok(readFileSync("components/vollpruefung.tsx", "utf8").includes("vollpruefung-variante"), "K324g زرّ تشكيلة امتحان أخرى في المحاكاة الكاملة");
+  ok(readFileSync("components/lehrer.tsx", "utf8").includes("lehrer-verbessert"), "K324h زرّ نسخة بأسلوب أعلى بعد تصحيح المدرّس الذكي");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

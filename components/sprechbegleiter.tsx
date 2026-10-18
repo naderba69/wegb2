@@ -4,6 +4,7 @@ import Link from "next/link";
 import { loadProgress } from "@/lib/store";
 import { llmBereit, type LlmCfg } from "@/lib/grader";
 import { SPRECH_SZENARIEN, begleiterAntworten, type BegleiterZeile, type SprechSzenario } from "@/lib/sprechbegleiter";
+import { sprechBewerten, type SprechBewertung } from "@/lib/sprechbewertung";
 import { speakAny, listenDe, cloudSpracheFrei } from "@/lib/speech";
 import { CLOUD_SPEECH_DISCLOSURE } from "@/components/trainer";
 import { De } from "@/components/De";
@@ -21,6 +22,8 @@ export function SprechBegleiter() {
   const [eingabe, setEingabe] = useState("");
   const [laedt, setLaedt] = useState(false);
   const [fehler, setFehler] = useState<string | null>(null);
+  const [bewertung, setBewertung] = useState<SprechBewertung | null>(null);
+  const [bewertet, setBewertet] = useState(false);
   const [micAn, setMicAn] = useState(false);
   const stopMic = useRef<() => void>(() => {});
   const bereit = llmBereit(cfg);
@@ -32,6 +35,8 @@ export function SprechBegleiter() {
 
   const starten = (s: SprechSzenario) => {
     setSzenario(s);
+    setBewertung(null);
+    setBewertet(false);
     setVerlauf([{ wer: "ki", text: s.startDe }]);
     setFehler(null);
     setEingabe("");
@@ -157,6 +162,41 @@ export function SprechBegleiter() {
                 <span style={{ fontSize: "0.76rem", color: "var(--color-ink2)", display: "block", marginTop: "0.35rem" }}>
                   🎤 الإملاء الصوتي مقفل: فعّل «الإذن بإرسال الصوت» من الإعدادات إن أردته — الكتابة تعمل دائمًا.
                 </span>
+              )}
+              {verlauf.filter((z) => z.wer === "ich").length >= 3 && !bewertung && (
+                <button type="button" className="btn btn-gold" data-testid="begleiter-bewerten" disabled={bewertet}
+                  style={{ minHeight: "48px", marginTop: "0.6rem" }}
+                  onClick={async () => {
+                    if (!cfg || !szenario) return;
+                    setBewertet(true);
+                    const res = await sprechBewerten(cfg, szenario, verlauf);
+                    if (res) setBewertung(res);
+                    else { setFehler("تعذّر الحصول على التقييم — تحقّق من المفتاح والاتصال وحاول ثانية."); setBewertet(false); }
+                  }}>
+                  {bewertet ? "… النموذج يقيّم محادثتك" : "🏁 إنهاء وتقييم المحادثة"}
+                </button>
+              )}
+              {bewertung && (
+                <div data-testid="begleiter-bewertung" className="card fadein" style={{ marginTop: "0.6rem", padding: "0.8rem 1rem", background: "var(--color-gold-soft)", display: "grid", gap: "0.45rem" }}>
+                  <div style={{ fontWeight: 800 }}>🏁 تقييم النموذج الذكي لمحادثتك</div>
+                  <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>
+                    تقييم تدريبي داخلي من نموذج ذكاء اصطناعي يقرأ كلامك المكتوب (أو المُفرّغ صوتيًا) — يقيس المضمون والمفردات والقواعد والأدب في الحوار،
+                    <strong> ولا يقيس النطق أبدًا</strong> لأنه لا يسمع صوتك. ليست نتيجة telc/Goethe.
+                  </div>
+                  {bewertung.kriterien.map((k) => (
+                    <div key={k.name} style={{ fontSize: "0.86rem" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem" }}>
+                        <span>{k.name}</span><strong className="rtl-num">{k.punkte}/100</strong>
+                      </div>
+                      <div style={{ height: "8px", background: "var(--color-line)", borderRadius: "4px", overflow: "hidden" }}>
+                        <div style={{ width: `${k.punkte}%`, height: "100%", background: "var(--color-mid)" }} />
+                      </div>
+                      <div style={{ color: "var(--color-ink2)", fontSize: "0.8rem" }}>{k.kommentar}</div>
+                    </div>
+                  ))}
+                  {bewertung.fazit && <div style={{ fontSize: "0.88rem" }}>🎓 {bewertung.fazit}</div>}
+                  {bewertung.naechsteUebung && <div style={{ fontSize: "0.84rem" }}>➡️ تمرينك التالي: {bewertung.naechsteUebung}</div>}
+                </div>
               )}
               <p style={{ fontSize: "0.76rem", color: "var(--color-ink2)", margin: "0.5rem 0 0" }}>
                 🔒 تُرسل رسائلك النصية إلى المزوّد الذي اخترته ومفتاحك المسجّل في الإعدادات بموافقتك؛

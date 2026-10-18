@@ -411,11 +411,45 @@ export function SchreibBerater({ text, taskDe }: { text: string; taskDe: string 
             </ul>
           )}
           {llm.bewertung && <div style={{ marginTop: "0.4rem", fontWeight: 700 }}>🎓 {llm.bewertung}</div>}
+          <VerbesserteFassung cfg={loadProgress().settings.llm ?? null} korrigiert={llm.korrigiert} />
           <FehlerKartenWahl
             quelle="LehrerKorrektur (BYOK)"
             eintraege={deepReview(text, llm.korrigiert).fehler.slice(0, 8).map((f) => ({ falsch: f.wrong, richtig: f.right, ar: f.erklaerungAr, art: f.art }))}
           />
           <div style={{ fontSize: "0.76rem", color: "var(--color-ink2)" }}>أزواج الأخطاء أعلاه مشتقّة محليًا بفارق الكلمات بين نصّك والنصّ المصحَّح — اخترتَ وأكّدتَ بنفسك ما يدخل دفترك.</div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** ✨ R299: نسخة بأسلوب أعلى — النموذج يعيد صياغة النص المصحَّح بروابط وتعبيرات أغنى (KI موسوم) */
+function VerbesserteFassung({ cfg, korrigiert }: { cfg: import("@/lib/grader").LlmCfg | null; korrigiert: string }) {
+  const [text, setText] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const start = async () => {
+    if (!cfg || !llmBereit(cfg)) { setErr("فعّل المدرّس الذكي بموافقتك من الإعدادات أولًا."); return; }
+    setBusy(true); setErr("");
+    const { llmGespraech } = await import("@/lib/grader");
+    const res = await llmGespraech(cfg, [
+      { role: "system", content: "Du schreibst denselben Inhalt auf gehobenem B2-Niveau um: reichere Konnektoren (dennoch, folglich, im Gegensatz dazu), präzisere Verben und Kollokationen, gleicher Inhalt, keine neuen Fakten. Antworte nur mit dem umgeschriebenen deutschen Text." },
+      { role: "user", content: korrigiert },
+    ]);
+    setBusy(false);
+    if (res) setText(res.trim());
+    else setErr("تعذّر الوصول إلى المزوّد — حاول ثانية.");
+  };
+  return (
+    <div style={{ marginTop: "0.6rem" }}>
+      <button type="button" className="btn btn-ghost" data-testid="lehrer-verbessert" style={{ minHeight: "44px" }} disabled={busy} onClick={() => void start()}>
+        {busy ? "… النموذج يعيد الصياغة" : "✨ اطلب نسخة بأسلوب أعلى (B2)"}
+      </button>
+      {err && <div style={{ color: "var(--color-cola)", fontSize: "0.84rem", marginTop: "0.3rem" }}>{err}</div>}
+      {text && (
+        <div className="fadein" style={{ marginTop: "0.5rem" }}>
+          <div style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--color-ink2)" }}>🤖 نسخة مولّدة بالذكاء الاصطناعي بأسلوب أعلى — قارِنها بنصّك وتعلّم الروابط، ولا تنسخها في امتحان:</div>
+          <article className="de" style={{ display: "block", lineHeight: 1.85, marginTop: "0.3rem" }}>{text}</article>
         </div>
       )}
     </div>

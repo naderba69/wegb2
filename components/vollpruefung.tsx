@@ -60,7 +60,9 @@ export function VollPruefung() {
   const [sekunden, setSekunden] = useState(GESAMT_MIN.B1 * 60);
   const setAntworten = (f: (a: Record<string, string>) => Record<string, string>) => setAntwortenState(f);
 
-  const samen = useMemo(() => Math.floor(Date.now() / 86400000), []);
+  const [variante, setVariante] = useState(0);
+  const tagesSamen = useMemo(() => Math.floor(Date.now() / 86400000), []);
+  const samen = tagesSamen + variante * 101;
   const pick = <T,>(pool: T[], anzahl: number): T[] => {
     if (!pool.length) return [];
     const start = (samen * 7) % pool.length;
@@ -141,6 +143,10 @@ export function VollPruefung() {
           <button type="button" className="btn btn-primary" style={{ minHeight: "48px" }}
             data-testid="vollpruefung-start" onClick={start} disabled={!bereit}>
             ▶ ابدأ الجلسة الكاملة ({stufe})
+          </button>
+          <button type="button" className="btn btn-ghost" style={{ minHeight: "44px" }}
+            data-testid="vollpruefung-variante" onClick={() => setVariante((x) => x + 1)}>
+            🔀 تشكيلة امتحان أخرى (رقم {variante + 1}) — نصوص وحوارات مختلفة من البنوك
           </button>
           {!bereit && <div style={{ fontSize: "0.82rem" }}>البنوك تُحمَّل… أعد المحاولة بعد لحظات.</div>}
         </div>

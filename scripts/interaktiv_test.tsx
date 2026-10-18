@@ -3898,6 +3898,18 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!rootEl.querySelector('[data-testid="erweiterung-frage"]'), "R298c اختيار حزمة يفتح سؤال تعرّف");
 }
 
+
+// ── R299: أملامح صوت الجهاز + تشكيلة الامتحان ──
+{
+  const { HoerLabor } = await import("../components/hoeren");
+  mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
+  click(rootEl.querySelector('[data-testid="stimme-geraet"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="stimme-profil-de-AT"]') && !!rootEl.querySelector('[data-testid="stimme-profil-de-CH"]'), "R299a اختيار صوت الجهاز يُظهر ملامح (نمساوي/سويسري/أعمق/أخف)");
+  const { VollPruefung } = await import("../components/vollpruefung");
+  mount(React.createElement(VollPruefung));
+  ok(!!rootEl.querySelector('[data-testid="vollpruefung-variante"]'), "R299b زرّ تشكيلة امتحان أخرى ظاهر في شاشة البدء");
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);
