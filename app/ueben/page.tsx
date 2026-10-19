@@ -148,6 +148,29 @@ export default function Ueben() {
     );
   }
 
+  // ── R302/ت1: المحطّتان الحرّتان الاستكشافيّتان (قراءة/ألعاب) مفتوحتان قبل الإغلاق — لا تنافسان الطابور ──
+  if (!abend && (offen === "lesestoff" || offen === "spiele")) {
+    const k = KARTE[offen];
+    return (
+      <div className="today-screen fadein dirb ui-page">
+        <button type="button" className="dirb-back" data-testid="ueben-zurueck" onClick={() => setOffen(null)}>
+          → رجوع
+        </button>
+        {k && (
+          <div className="dirb-station-head">
+            <div className="dirb-kicker">{k.icon} محطة تدريب حرّة</div>
+            <h1 className="dirb-station-title">{k.titel}</h1>
+            <div className="dirb-station-sub">{k.unter}</div>
+          </div>
+        )}
+        <section className="dirb-station">
+          {offen === "lesestoff" && <LeseStoffStation />}
+          {offen === "spiele" && <SpieleStation />}
+        </section>
+      </div>
+    );
+  }
+
   // ── الباب المقفل: سببٌ معلن وبابٌ واحد (K113b) ──
   if (!abend) {
     return (
@@ -165,6 +188,13 @@ export default function Ueben() {
           <Link href="/" className="dirb-start" style={{ textDecoration: "none" }}>
             ↩ عُد إلى «اليوم» وأكمل طابورك
           </Link>
+          <div style={{ marginTop: "1rem", display: "grid", gap: "0.5rem", justifyItems: "center" }}>
+            <div className="dirb-sub" style={{ fontSize: "0.85rem" }}>أو استكشف الآن بحرّية — لا يمسّ طابور يومك:</div>
+            <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" }}>
+              <button type="button" className="btn btn-ghost" data-testid="ueben-frei-lesestoff" style={{ minHeight: "48px" }} onClick={() => setOffen("lesestoff")}>📚 قراءة وحوارات حرة</button>
+              <button type="button" className="btn btn-ghost" data-testid="ueben-frei-spiele" style={{ minHeight: "48px" }} onClick={() => setOffen("spiele")}>🎮 ألعاب الكلمات</button>
+            </div>
+          </div>
         </div>
       </div>
     );

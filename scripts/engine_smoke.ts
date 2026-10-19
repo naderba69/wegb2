@@ -14054,6 +14054,23 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(exportSrc.includes("kartenexport-drucken") && exportSrc.includes("window.print"), "K326h زر طباعة البطاقات الورقية في مصدّر البطاقات");
 }
 
+
+// ── K327 (R302): دفعة التلميذ من تدقيق 2026-10-19 — ت1/ت2/ت3/ت6/ت9 ──
+{
+  const uebenSrc = readFileSync("app/ueben/page.tsx", "utf8");
+  ok(uebenSrc.includes("ueben-frei-lesestoff") && uebenSrc.includes("ueben-frei-spiele") && uebenSrc.includes('!abend && (offen === "lesestoff" || offen === "spiele")'), "K327a ت1: القراءة الحرّة والألعاب مفتوحتان استكشافيًا قبل إغلاق اليوم دون مساس بقفل محطات الطابور");
+  const leseSrc = readFileSync("components/lesestoff.tsx", "utf8");
+  ok(leseSrc.includes("lesestoff-stimm-hinweis") && leseSrc.includes("لا يوجد صوت ألماني"), "K327b ت2: صمت الصوت الجهازي في القراءة الحرّة يُعلَن بتنبيه عربي لا يمرّ بصمت");
+  const gradSrc2 = readFileSync("lib/grader.ts", "utf8");
+  const einstSrc = readFileSync("app/einstellungen/page.tsx", "utf8");
+  ok(gradSrc2.includes("llmVerbindungTesten") && einstSrc.includes("llm-schritte") && einstSrc.includes("اختبر مفتاحي") && einstSrc.includes("المفتاح مرفوض") && einstSrc.includes("اسم النموذج غير موجود"), "K327c ت3: معالج خطوات المفتاح المرقّم + اختبار اتصال برسائل خطأ مفرّقة (مفتاح/نموذج/شبكة)");
+  ok(leseSrc.includes("logK(") && readFileSync("components/spiele.tsx", "utf8").includes("logK("), "K327d ت6: جهد القراءة الحرّة والألعاب يُسجَّل في سجلّ الكفاءات ويظهر في التقدم");
+  const mkD = (id: string, n: number) => ({ id, level: "A1" as const, titleDe: "T", titleAr: "ت", questions: [], dictation: [], lines: Array.from({ length: n }, (_, i) => ({ who: i % 2 ? "B" : "A", de: `Satz ${id} ${i}`, ar: "معنى" })) });
+  const poolD = [mkD("d1", 8), mkD("d2", 8), mkD("d3", 8)];
+  const lk = dialogLuecke(poolD as never, 23);
+  ok(!!lk && lk.optionen.some((o) => o.startsWith(`Satz ${lk.dialog.id} `) && o !== lk.richtig), "K327e خ10/ت9: مشتّت «أكمل الحوار» الأول من الحوار نفسه (أنصف سياقيًا وأصعب)");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

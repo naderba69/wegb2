@@ -420,6 +420,34 @@ export function llmBereit(cfg?: LlmCfg | null): boolean {
   return !!cfg?.apiKey?.trim() && !!cfg?.zugestimmt && !!cfg?.baseUrl?.trim();
 }
 
+/** 🔌 R302/ت3: اختبار اتصال برسائل خطأ مفرّقة (مفتاح/نموذج/شبكة) — نفس مسار fetch الوحيد */
+export type LlmTestErgebnis = "ok" | "leer" | "schluessel" | "modell" | "netz";
+
+export async function llmVerbindungTesten(cfg: LlmCfg): Promise<LlmTestErgebnis> {
+  if (!cfg?.apiKey?.trim() || !cfg?.baseUrl?.trim()) return "leer";
+  try {
+    const base = (cfg.baseUrl || "https://api.openai.com/v1").replace(/\/+$/, "");
+    const res = await fetch(`${base}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: cfg.model || "gpt-4o-mini",
+        temperature: 0,
+        messages: [{ role: "user", content: "Antworte nur: OK" }],
+      }),
+    });
+    if (res.ok) return "ok";
+    if (res.status === 401 || res.status === 403) return "schluessel";
+    if (res.status === 404 || res.status === 400) return "modell";
+    return "netz";
+  } catch {
+    return "netz";
+  }
+}
+
 export interface LlmKorrektur {
   korrigiert: string;
   notizen: string[];

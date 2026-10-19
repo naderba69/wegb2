@@ -6,6 +6,8 @@ import { bankenBereit, beiBankenBereit } from "@/lib/bankload";
 import { baueWortgitter, dialogLuecke, uebersetzRunde, uebersetzQuote, fehlendeWoerter } from "@/lib/spiele";
 import { STOFF_STUFEN } from "@/lib/lesestoff";
 import { De } from "@/components/De";
+import { useProgress } from "@/lib/store";
+import { logK } from "@/lib/kompetenz";
 import type { Level } from "@/lib/types";
 
 type Spiel = "gitter" | "dialog" | "uebersetz";
@@ -18,6 +20,7 @@ const SPIELE: { id: Spiel; titel: string }[] = [
 
 /* ─────────────────────────── شبكة الكلمات ─────────────────────────── */
 function WortGitterSpiel({ stufe }: { stufe: Level }) {
+  const { update } = useProgress();
   const [samen, setSamen] = useState(1);
   const [auswahl, setAuswahl] = useState<[number, number][]>([]);
   const [gefundene, setGefundene] = useState<string[]>([]);
@@ -62,6 +65,7 @@ function WortGitterSpiel({ stufe }: { stufe: Level }) {
     const rueck = [...wort].reverse().join("");
     const treffer = runde.treffer.find((t) => !gefundene.includes(t.wort) && (t.wort === wort || t.wort === rueck));
     if (treffer) {
+      if (gefundene.length + 1 === runde.treffer.length) update((p) => logK(p, "Wortschatz", true));
       setGefundene((g) => [...g, treffer.wort]);
       setMeldung(`✅ وجدتَ «${treffer.wort}» — ${treffer.ar}`);
     } else {
@@ -121,6 +125,7 @@ function WortGitterSpiel({ stufe }: { stufe: Level }) {
 
 /* ─────────────────────────── أكمل الحوار ─────────────────────────── */
 function DialogSpiel({ stufe }: { stufe: Level }) {
+  const { update } = useProgress();
   const [samen, setSamen] = useState(1);
   const [wahl, setWahl] = useState<string | null>(null);
   const runde = useMemo(
@@ -155,7 +160,7 @@ function DialogSpiel({ stufe }: { stufe: Level }) {
           const istFalsch = wahl === opt && opt !== richtig;
           return (
             <button key={opt} type="button" className="btn btn-ghost" data-testid={`spiel-dialog-opt-${opt.slice(0, 12)}`}
-              disabled={wahl !== null} onClick={() => setWahl(opt)}
+              disabled={wahl !== null} onClick={() => { setWahl(opt); update((p) => logK(p, "Lesen", opt === richtig)); }}
               style={{ minHeight: "48px", textAlign: "start", background: istRichtig ? "var(--color-mint, #d1fae5)" : istFalsch ? "var(--color-blush, #fee2e2)" : undefined }}>
               <De>{opt}</De> {istRichtig ? "✓" : istFalsch ? "✗" : ""}
             </button>
@@ -163,8 +168,9 @@ function DialogSpiel({ stufe }: { stufe: Level }) {
         })}
       </div>
       {wahl && (
-        <div style={{ fontSize: "0.86rem", lineHeight: 1.8 }}>
-          {wahl === richtig ? "✅ أحسنت! هذه هي الجملة الأصلية من الحوار." : `💡 الجملة الصحيحة: «${richtig}» — لاحظ كيف تربط ما قبلها بما بعدها.`}
+        <div style={{ fontSize: "0.86rem", lineHeight: 1.8 }} data-testid="spiel-dialog-feedback">
+          {wahl === richtig ? "✅ أحسنت! هذه هي الجملة الأصلية من الحوار." : `💡 الجملة الصحيحة: «${richtig}» — ولاحظ معناها وارتباطها بما قبلها وبعدها.`}
+          <div>المعنى: {dialog.lines[loch].ar}</div>
           <div>
             <button type="button" className="btn btn-primary" data-testid="spiel-dialog-neu" style={{ minHeight: "44px", marginTop: "0.35rem" }} onClick={() => setSamen((s) => s + 1)}>🔀 حوار آخر</button>
           </div>
@@ -176,6 +182,7 @@ function DialogSpiel({ stufe }: { stufe: Level }) {
 
 /* ─────────────────────────── ترجم بنفسك ─────────────────────────── */
 function UebersetzSpiel({ stufe }: { stufe: Level }) {
+  const { update } = useProgress();
   const [samen, setSamen] = useState(1);
   const [eingabe, setEingabe] = useState("");
   const [ergebnis, setErgebnis] = useState<number | null>(null);
@@ -196,7 +203,7 @@ function UebersetzSpiel({ stufe }: { stufe: Level }) {
       <div style={{ display: "flex", gap: "0.45rem", flexWrap: "wrap" }}>
         <button type="button" className="btn btn-primary" data-testid="spiel-uebersetz-pruefen" style={{ minHeight: "46px" }}
           disabled={!eingabe.trim()}
-          onClick={() => setErgebnis(uebersetzQuote(eingabe, satz.de))}>✔ صحّح</button>
+          onClick={() => { const q = uebersetzQuote(eingabe, satz.de); setErgebnis(q); update((p) => logK(p, "Schreiben", q >= 85)); }}>✔ صحّح</button>
         <button type="button" className="btn btn-ghost" data-testid="spiel-uebersetz-neu" style={{ minHeight: "46px" }} onClick={() => setSamen((s) => s + 1)}>🔀 جملة أخرى</button>
       </div>
       {ergebnis !== null && (

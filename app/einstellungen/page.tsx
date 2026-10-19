@@ -425,6 +425,15 @@ export default function Einstellungen() {
               </a>
             )}
             {llmCfg?.anbieter && (
+              <ol style={{ margin: "0.2rem 0", paddingInlineStart: "1.3rem", fontSize: "0.9rem", lineHeight: 2 }} data-testid="llm-schritte">
+                <li>افتح صفحة المفتاح المجاني من زرّ «احصل على مفتاح مجاني» وسجّل دخولك هناك.</li>
+                <li>أنشئ مفتاحًا جديدًا وانسخه كاملًا كما هو.</li>
+                <li>الصقه في حقل «API Key» هنا في الأعلى.</li>
+                <li>ضع علامة الموافقة في البطاقة التالية.</li>
+                <li>اضغط «اختبر مفتاحي» — سنخبرك بالضبط إن كان هناك خطأ وأين هو.</li>
+              </ol>
+            )}
+            {llmCfg?.anbieter && (
               <div className="card" style={{ padding: "0.7rem 0.9rem", fontSize: "0.88rem", lineHeight: 1.9 }}>
                 <div>📤 <strong>ما يُرسَل:</strong> نصّ كتابتك ونصّ المهمّة فقط، وحين تطلب التصحيح بنفسك فقط.</div>
                 <div>🏢 <strong>إلى مَن:</strong> {aktiverAnbieter.nameAr} — {aktiverAnbieter.hinweisAr}</div>
@@ -447,12 +456,20 @@ export default function Einstellungen() {
                 if (!cfg?.apiKey) return setMsg("أدخل مفتاح API أولاً.");
                 if (!cfg?.zugestimmt) return setMsg("فعّل موافقة الإرسال أولاً — بلا موافقة لا يغادر أيّ نصّ جهازك.");
                 setMsg("جارٍ الاختبار…");
-                const { llmKorrigieren } = await import("@/lib/grader");
-                const res = await llmKorrigieren(cfg, "Schreibe 2 Sätze über dich.", "Ich habe müde und ich bin arbeiten.");
-                setMsg(res ? "✅ الاتصال يعمل — المدرّس الذكي جاهز في مستشار الكتابة." : "❌ لم ينجح الاتصال — راجع القيم والمفتاح والنموذج.");
+                const { llmVerbindungTesten } = await import("@/lib/grader");
+                const res = await llmVerbindungTesten(cfg);
+                setMsg(
+                  res === "ok"
+                    ? "✅ الاتصال يعمل — مفتاحك سليم والمدرّس الذكي جاهز."
+                    : res === "schluessel"
+                      ? "❌ المفتاح مرفوض من المزوّد — انسخ المفتاح كاملًا كما هو دون مسافات زائدة، أو أنشئ مفتاحًا جديدًا."
+                      : res === "modell"
+                        ? "❌ اسم النموذج غير موجود عند المزوّد — أعد اختيار المزوّد من القائمة ليُملأ الاسم الافتراضي الصحيح."
+                        : "❌ لا اتصال بالمزوّد — تحقّق من اتصالك بالإنترنت ومن رابط Base URL."
+                );
               }}
             >
-              ▶️ اختبر الاتصال
+              🔌 اختبر مفتاحي
             </button>
           </div>
         </details>

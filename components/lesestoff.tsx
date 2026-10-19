@@ -10,6 +10,8 @@ import {
   type StoffFrage,
 } from "@/lib/lesestoff";
 import { speakAny } from "@/lib/speech";
+import { useProgress } from "@/lib/store";
+import { logK } from "@/lib/kompetenz";
 import { De } from "@/components/De";
 import type { Level } from "@/lib/types";
 
@@ -61,6 +63,8 @@ function FragenBlock({ fragen, praefix }: { fragen: StoffFrage[]; praefix: strin
 export function LeseStoffStation() {
   const [stufe, setStufe] = useState<Level>("A0");
   const [offenId, setOffenId] = useState<string | null>(null);
+  const [stimmHinweis, setStimmHinweis] = useState(false);
+  const { update } = useProgress();
   const [fertig, setFertig] = useState<string[]>([]);
 
   useEffect(() => {
@@ -70,13 +74,19 @@ export function LeseStoffStation() {
     } catch { /* تجاهل */ }
   }, []);
 
-  const markieren = (id: string) => {
+  const hoeren = (text: string, rate?: number) => {
+    // ت2: صمت الصوت الجهازي كان يمرّ بلا أثر — الآن تنبيه عربي واضح
+    if (!speakAny(text, rate ? { rate } : undefined)) setStimmHinweis(true);
+  };
+
+  const markieren = (id: string, kompetenz: "Lesen" | "Hoeren") => {
     setFertig((alt) => {
       if (alt.includes(id)) return alt;
       const neu = [...alt, id];
       try { localStorage.setItem(LS_KEY, JSON.stringify(neu)); } catch { /* تجاهل */ }
       return neu;
     });
+    update((p) => logK(p, kompetenz, true));
   };
 
   const texte = useMemo(() => texteFuer(stufe), [stufe]);
@@ -102,6 +112,13 @@ export function LeseStoffStation() {
           </button>
         ))}
       </div>
+
+      {stimmHinweis && (
+        <div className="card" data-testid="lesestoff-stimm-hinweis" style={{ padding: "0.6rem 0.9rem", fontSize: "0.85rem", lineHeight: 1.9, background: "var(--color-gold-soft)" }}>
+          🔇 لا يوجد صوت ألماني على جهازك الآن، فلم يُسمَع شيء — فعّل صوتًا ألمانيًا من إعدادات جهازك (إمكانية الوصول/النصوص والأصوات) أو تابع القراءة دون استماع.
+          <button type="button" className="chip" style={{ cursor: "pointer", marginInlineStart: "0.5rem" }} onClick={() => setStimmHinweis(false)}>حسنًا</button>
+        </div>
+      )}
 
       {!offenerText && !offenerDialog && (
         <div style={{ display: "grid", gap: "0.4rem" }}>
@@ -135,7 +152,7 @@ export function LeseStoffStation() {
             <div key={i} style={{ display: "grid", gap: "0.3rem" }}>
               <De style={{ display: "block", lineHeight: 1.95, fontSize: "1.02rem" }}>{a}</De>
               <button type="button" className="chip" data-testid={`lesestoff-hoeren-${i}`}
-                onClick={() => speakAny(a)}
+                onClick={() => hoeren(a)}
                 style={{ cursor: "pointer", minHeight: "40px", justifySelf: "start" }}>
                 🔊 استمع لهذه الفقرة (صوت جهازك)
               </button>
@@ -144,7 +161,7 @@ export function LeseStoffStation() {
           <FragenBlock fragen={offenerText.fragen} praefix={offenerText.id} />
           <button type="button" className="btn btn-primary" data-testid="lesestoff-fertig"
             style={{ minHeight: "48px", justifySelf: "start" }}
-            onClick={() => { markieren(offenerText.id); setOffenId(null); }}>
+            onClick={() => { markieren(offenerText.id, "Lesen"); setOffenId(null); }}>
             ✅ علّم كمنتهٍ وعد إلى القائمة
           </button>
         </div>
@@ -167,7 +184,7 @@ export function LeseStoffStation() {
                   <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>{z.ar}</span>
                 </div>
                 <button type="button" className="chip" data-testid={`lesestoff-zeile-hoeren-${i}`}
-                  onClick={() => speakAny(z.de)} aria-label="استمع لهذه الجملة"
+                  onClick={() => hoeren(z.de)} aria-label="استمع لهذه الجملة"
                   style={{ cursor: "pointer", minHeight: "40px" }}>🔊</button>
               </div>
             ))}
@@ -175,7 +192,7 @@ export function LeseStoffStation() {
           <FragenBlock fragen={offenerDialog.fragen} praefix={offenerDialog.id} />
           <button type="button" className="btn btn-primary" data-testid="lesestoff-fertig"
             style={{ minHeight: "48px", justifySelf: "start" }}
-            onClick={() => { markieren(offenerDialog.id); setOffenId(null); }}>
+            onClick={() => { markieren(offenerDialog.id, "Hoeren"); setOffenId(null); }}>
             ✅ علّم كمنتهٍ وعد إلى القائمة
           </button>
         </div>

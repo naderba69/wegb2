@@ -3949,6 +3949,23 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!rootEl.querySelector('[data-testid="kartenexport-drucken"]'), "R301e زر طباعة البطاقات الورقية ظاهر في المصدّر");
 }
 
+
+// ── R302: تنبيه الصوت + تغذية أكمل الحوار ──
+{
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]') as HTMLElement);
+  click(rootEl.querySelector('[data-testid="lesestoff-hoeren-0"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-stimm-hinweis"]'), "R302a بلا صوت جهازي يظهر تنبيه «لا يوجد صوت ألماني» بدل الصمت");
+  const { SpieleStation } = await import("../components/spiele");
+  mount(React.createElement(SpieleStation));
+  click(rootEl.querySelector('[data-testid="spiel-tab-dialog"]') as HTMLElement);
+  const optBtn = rootEl.querySelector('[data-testid^="spiel-dialog-opt-"]') as HTMLElement;
+  click(optBtn);
+  const fb = rootEl.querySelector('[data-testid="spiel-dialog-feedback"]');
+  ok(!!fb && (fb.textContent ?? "").includes("المعنى:"), "R302b تغذية «أكمل الحوار» تعرض معنى الجملة الصحيحة بالعربية");
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

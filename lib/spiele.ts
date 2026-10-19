@@ -104,11 +104,19 @@ export function dialogLuecke(dialoge: Hoerdialog[], seed: number): DialogLuecke 
   const loch = 1 + Math.floor(rand() * (dialog.lines.length - 2));
   const richtig = dialog.lines[loch].de;
 
+  // R302/خ10+ت9: مشتّت من نفس الحوار أولًا (أصعب وأنصف سياقيًا) ثم من حوارات المستوى
+  const eigene = dialog.lines
+    .filter((_, i) => Math.abs(i - loch) > 1)
+    .map((l) => l.de)
+    .filter((de) => de !== richtig);
   const fremde = dialoge
     .filter((d) => d.id !== dialog.id && d.level === dialog.level)
     .flatMap((d) => d.lines.map((l) => l.de))
     .filter((de) => de !== richtig);
-  const ablenker = pickN([...new Set(fremde)], 2, rand);
+  const ablenker: string[] = [];
+  if (eigene.length > 0) ablenker.push(...pickN([...new Set(eigene)], 1, rand));
+  ablenker.push(...pickN([...new Set(fremde)].filter((d) => !ablenker.includes(d)), 2 - ablenker.length, rand));
+  if (ablenker.length < 2) ablenker.push(...pickN([...new Set(eigene)].filter((d) => !ablenker.includes(d)), 2 - ablenker.length, rand));
   const optionen = [richtig, ...ablenker];
   // Fisher-Yates mit derselben Zufallsquelle
   for (let i = optionen.length - 1; i > 0; i--) {
