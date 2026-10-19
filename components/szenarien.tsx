@@ -228,7 +228,7 @@ function Rolle({ s }: { s: Szenario }) {
   );
 }
 
-export function LebensSzenarien({ progress }: { progress: Progress }) {
+export function LebensSzenarien({ progress: _progress }: { progress: Progress }) {
   const [open, setOpen] = useState(false);
   const [sid, setSid] = useState(szenarien[0].id);
   const [tab, setTab] = useState<Tab>("saetze");

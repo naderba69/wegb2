@@ -3,15 +3,19 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useProgress, saveProgress, loadProgress, planeVerifikation } from "@/lib/store";
 import { buildDay, dayScore, debtsFrom, modulOf } from "@/lib/plan";
+import { kapselVerbuche } from "@/lib/kapsel";
 import { TOTAL_DAYS } from "@/lib/types";
 import { useSessionClock } from "@/hooks/use-session-clock";
 import { sessionGoalReached, sessionMinuteTenth } from "@/lib/session-clock";
 import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
 import { KindIcon } from "@/components/dirb/icons";
-import { Wochenplan } from "@/components/wochen";
+import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
+import { resumeAusloesen, resumeBedarf, resumePlan, resumeZustand } from "@/lib/wiedereinstieg";
+import { SkillBalancePlan } from "@/components/skillplan";
+import { WiedereinstiegBanner } from "@/components/wiedereinstieg";
 
 const TYPE_LABEL: Record<string, string> = {
   lerntag: "يوم تعلّم",
@@ -50,7 +54,12 @@ function clearPartialTaskState(taskId: string) {
 export default function Today() {
   const { progress, ready, submitTask, closeDay, setSrs, saveExam, update } = useProgress();
   const day = progress.plan.day;
-  const plan = useMemo(() => buildDay(day, progress), [day, progress]);
+  const basePlan = useMemo(() => buildDay(day, progress), [day, progress]);
+  const resumeAktiv = resumeZustand(progress).aktiv;
+  const plan = useMemo(
+    () => (resumeAktiv ? resumePlan(basePlan, progress) : basePlan),
+    [basePlan, progress, resumeAktiv]
+  );
   const [step, setStep] = useState(0);
   const [stepRestoredDay, setStepRestoredDay] = useState<number | null>(null);
   const [points, setPoints] = useState<TaskPoints>({});
@@ -94,6 +103,11 @@ export default function Today() {
     setPoints(restored);
     setPointsLoadedDay(day);
   }, [ready, day]);
+
+  // 🌱 M15/R287: عند أول فتح بعد غياب تُسجَّل جلسة الاستئناف قبل أي تحديث آخر
+  useEffect(() => {
+    if (ready && resumeBedarf(progress)) update((p) => resumeAusloesen(p));
+  }, [ready, progress, update]);
 
   useEffect(() => {
     if (!ready || pointsLoadedDay !== day) return;
@@ -191,7 +205,7 @@ export default function Today() {
             <ul style={{ paddingInlineStart: "1.2rem", lineHeight: 1.9, marginTop: "0.5rem", marginBottom: 0 }}>
               <li>استمر بالتسميع اليومي (Shadowing) ونصوص B2 الثقيلة.</li>
               <li>خُض نموذج Goethe-Zertifikat B2 الرسمي كاملًا بتوقيت حقيقي.</li>
-              <li>واصل نحو C1: كتابة أكاديمية + Konjunktiv في النصوص الأدبية + محادثات طويلة.</li>
+              <li>عمّق B2 حتى الإتقان: نصوص ثقيلة ومحادثات طويلة وكتابة رسمية بلا أخطاء متكررة.</li>
               <li>ابدأ مسارًا جديدًا في أي وقت من الإعدادات (تصفير) — الخطة تتكرر بعينها حتمياً.</li>
             </ul>
           </div>
@@ -476,7 +490,10 @@ export default function Today() {
       </details>
       <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف 90 دقيقة افتراضي للجلسة فقط؛ مجموع تقديرات الخطة مستقل عنه. احفظ التوقّف وعد لاحقاً؛ لن يتحوّل ما لم تسلّمه إلى فشل أو تعويض.</p>
 
-      <Wochenplan progress={progress} />
+      <SkillBalancePlan progress={progress} />
+      <WiedereinstiegBanner progress={progress} minuten={totalMinutes} normaleMinuten={basePlan.tasks.reduce((a, t) => a + t.minutes, 0)} />
+
+      <LernPfad progress={progress} />
 
       <div id="aufgabe-spieler" style={{ scrollMarginTop: "0.8rem" }}>
         <Klassenzimmer
@@ -489,6 +506,7 @@ export default function Today() {
           resultOf={resultOf}
           localOf={localOf}
           onPoints={onPoints}
+          onKapselErgebnis={(sid, ok) => update((pr) => ({ ...pr, kapselStand: kapselVerbuche(pr.kapselStand, sid, day, ok) }))}
           submitCurrent={submitCurrent}
           doCloseDay={doCloseDay}
           badDayToday={badDayToday}

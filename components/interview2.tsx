@@ -143,7 +143,7 @@ export function InterviewArena({ progress }: { progress: Progress }) {
   const rotation = useMemo(() => {
     const rand = rng(progress.plan.day * 311 + 5);
     return a.fragen.map((f) => ({ ...f, kw: f.kw })).sort(() => rand() - 0.5);
-  }, [a.id, progress.plan.day]);
+  }, [a.fragen, progress.plan.day]);
   const qRot = rotation[qi % rotation.length];
 
   function pruefen() {

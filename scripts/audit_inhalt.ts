@@ -70,7 +70,15 @@ for (const t of texts) {
 for (const d of dialogues) {
   if (!d.questions?.length) add("dialog:keineFragen", d.id);
   for (const q of d.questions ?? []) pruefeExercise(q, d.id);
-  if (d.lines.length < 4) hinweis("dialog:kurz — سياق A0 يحتاج حكماً بشرياً", `${d.id} ${d.lines.length} Zeilen`);
+  // R167 (D2/D3, Besitzerentscheid 2026-10-16): «kurz» meint echte Dialoge. Hör-Ansagen
+  // (hoer-*/ *-ht*, ein Sprecher) sind gattungstypisch kurz; d-a0-02/d-a0-03 sind als
+  // funktional vollständige A0-Mikrodialoge genehmigt — sie wandern in die Info-Sektion.
+  const kurzSprecher = new Set(d.lines.map((l) => l.who));
+  const istAnsage = d.id.startsWith("hoer-") || d.id.includes("-ht") || kurzSprecher.size <= 1;
+  if (d.lines.length < 4 && !istAnsage && !["d-a0-02", "d-a0-03"].includes(d.id))
+    hinweis("dialog:kurz — سياق A0 يحتاج حكماً بشرياً", `${d.id} ${d.lines.length} Zeilen`);
+  else if (d.lines.length < 4)
+    info("dialog:kurz-geprüft", `${d.id} ${d.lines.length} Zeilen — Ansage/Mikrodialog, per D2/D3 (2026-10-16) genehmigt`);
   for (const l of d.lines) if (AR.test(l.de) || !l.ar) add("dialog:zeile", `${d.id} «${l.de}»`);
 }
 /* audio — الصيغة {generated,count,einsaetze:[{id,file,…}]} */
@@ -101,7 +109,12 @@ for (const c of alleVokabeln) {
 }
 const dups = [...dupDe.entries()].filter(([, n]) => n > 1);
 info("vocab:stat", `${alleVokabeln.length} Karten · ohne exampleDe ${ohneBeispiel} · ohne pos ${ohnePos} · Nomen-Kandidaten ohne Artikel (heuristisch) ${artikelKandidat} · doppelte de ${dups.length} (z.B. ${dups.slice(0, 8).map(([d, n]) => d + "×" + n).join(", ")})`);
-if (nomenOhneArtikel.length) hinweis("vocab:Nomen ohne Artikel — قائمة مرشّحين heuristic لا حكم لغوي", nomenOhneArtikel.join(" · "));
+// R169: البلدان الثلاثة بلا أداة بقرار المالك D4-B وبمراجعة موثّقة (قاعدة أسماء البلدان: السائد المحايد بلا أداة) — معلومة لا بند مراجعة.
+const LAENDER_ART_OK = new Set(["vz-welt-b-000", "vz-welt-b-001", "vz-welt-b-003"]); // Deutschland · Österreich · Tunesien
+const nomenLaender169 = nomenOhneArtikel.filter((x) => LAENDER_ART_OK.has(x.split(" ")[0]));
+const nomenRest169 = nomenOhneArtikel.filter((x) => !LAENDER_ART_OK.has(x.split(" ")[0]));
+if (nomenLaender169.length) info("vocab:länder-artikel-geprüft (D4-B/R169)", `${nomenLaender169.join(" · ")} — بلا أداة تعريف بشكل صحيح وموثّق (docs/PEDAGOGIK_REVIEW_2026-10-16.md)`);
+if (nomenRest169.length) hinweis("vocab:Nomen ohne Artikel — قائمة مرشّحين heuristic لا حكم لغوي", nomenRest169.join(" · "));
 /* sentences */
 for (const s of sentences) { if (AR.test(s.de) || !AR.test(s.ar)) add("satz:sprache", s.id); if (!/[.!?]$/.test(s.de.trim())) add("satz:ohneSatzzeichen", `${s.id} «${s.de}»`); }
 /* eselsbruecken */
@@ -115,6 +128,7 @@ for (const w of writingTasks) { const x = w as unknown as Record<string, unknown
 const { getDeck, getText, getDialogue, getWriting, getSatz } = require("../lib/content") as typeof import("../lib/content");
 const genutzt = { text: new Set<string>(), dialog: new Set<string>(), topic: new Set<string>(), write: new Set<string>() };
 let minGesamt = 0; const proTag: number[] = [];
+let ueberDeckel169 = 0, geprueft169 = 0;
 for (let d = 1; d <= TOTAL_DAYS; d++) {
   let p; try { p = buildDay(d, emptyProgress); } catch (e) { add("plan:buildDay wirft", `Tag ${d}: ${(e as Error).message}`); continue; }
   let m = 0;
@@ -130,10 +144,15 @@ for (let d = 1; d <= TOTAL_DAYS; d++) {
     if (t.minutes <= 0) add("plan:minuten≤0", `Tag ${d} ${t.id}`);
   }
   proTag.push(m); minGesamt += m;
-  // >200 min is a workload estimate, not proof of a structural defect or actual study time.
-  // Keep it visible for pedagogical review; never equate it with the independent 90-minute session target.
-  if (m > 200) hinweis("plan:Tag>200min — مجموع تقديرات يحتاج مراجعة تربوية", `Tag ${d}: ${m} Minuten geschätzt (لا يثبت وقتاً فعلياً ولا عيباً بنيوياً)`);
+  // R169: أُنجزت المراجعة التربوية بملفّ docs/PEDAGOGIK_REVIEW_2026-10-16.md (مراجع Goethe/Cambridge/BAMF):
+  // الأيام داخل سقوف D1-B المعتمدة من المالك مراجَعة وموثّقة فتُعرَض معلومةً (plan:last-geprüft)،
+  // ولا يبقى بندُ مراجعةٍ إلا ما تجاوز سقفَ مرحلته. التقديرات لا تثبت وقتاً فعلياً ولا عيباً بنيوياً،
+  // ولا تُقاس بهدف الجلسة المستقل (90 دقيقة).
+  const deckel169 = p.phase === "B1" ? 240 : 270; // D1_B1/D1_B2_DECKEL_MIN (lib/phasen.ts); ‏270 = مظروف مكثّف 6 UE لبقية المراحل
+  if (m > deckel169) { hinweis("plan:Tag über Phasendeckel — تجاوز سقف المرحلة المعتمد (D1-B)", `Tag ${d}: ${m} Minuten geschätzt > Deckel ${deckel169} (Phase ${p.phase})`); ueberDeckel169++; }
+  else geprueft169++;
 }
+info("plan:last-geprüft (R169)", `${geprueft169} Tage innerhalb der Besitzer-Deckel B1≤240/B2≤270 (übrige Phasen ≤270) — مراجعة موثّقة في docs/PEDAGOGIK_REVIEW_2026-10-16.md بمراجع Goethe/Cambridge/BAMF؛ ${ueberDeckel169} Tage darüber; Schätzwerte aus buildDay, keine Feldmessung`);
 info("plan:stat", `Ø ${(minGesamt / TOTAL_DAYS).toFixed(0)} min/Tag · max ${Math.max(...proTag)} · min ${Math.min(...proTag)}`);
 const texteUnbenutzt = texts.filter((t) => !genutzt.text.has(t.id)).map((t) => t.id);
 const dialogeUnbenutzt = dialogues.filter((d) => !genutzt.dialog.has(d.id)).map((d) => d.id);

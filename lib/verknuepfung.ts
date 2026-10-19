@@ -135,15 +135,15 @@ export function verknuepfung(card: VocabCard): Verknuepfung {
 }
 
 /** البطاقاتُ اليتيمة: لا تظهرُ كلمتُها في أيِّ نصٍّ أو حوارٍ من مستواها — مدخلُ إنتاجِ الحواراتِ الجديدة */
-export function verwaiste(level: string): VocabCard[] {
+export function verwaiste(level: string, ohnePrefix?: string): VocabCard[] {
   const idx = index();
-  return alleVokabeln.filter((c) => c.level === level && stammVon(c.de) && !STOPP.has(stammVon(c.de))).filter((c) => { const v = idx.vorkommen.get(c.id)!; return v.texte.length === 0 && v.dialoge.length === 0 && v.saetze.length === 0; });
+  return alleVokabeln.filter((c) => c.level === level && (!ohnePrefix || !c.id.startsWith(ohnePrefix)) && stammVon(c.de) && !STOPP.has(stammVon(c.de))).filter((c) => { const v = idx.vorkommen.get(c.id)!; return v.texte.length === 0 && v.dialoge.length === 0 && v.saetze.length === 0; });
 }
 
 /** نسبةُ الترابطِ لكلِّ مستوى — نفسُ الرقمِ الذي تعرضُه K76c */
-export function abdeckung(level: string): { mit: number; gesamt: number; prozent: number } {
+export function abdeckung(level: string, ohnePrefix?: string): { mit: number; gesamt: number; prozent: number } {
   const idx = index();
-  const cs = alleVokabeln.filter((c) => c.level === level);
+  const cs = alleVokabeln.filter((c) => c.level === level && (!ohnePrefix || !c.id.startsWith(ohnePrefix)));
   const mit = cs.filter((c) => { const v = idx.vorkommen.get(c.id); return v && (v.texte.length || v.dialoge.length || v.saetze.length); }).length;
   return { mit, gesamt: cs.length, prozent: cs.length ? Math.floor((100 * mit) / cs.length) : 0 };
 }

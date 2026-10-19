@@ -19,7 +19,7 @@ export function TagesKapsel({ day, voiceName, rate }: { day: number; voiceName?:
         <div>
           <strong>🌙 كبسولة الليلة — 3 جمل قبل النوم</strong>
           <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>
-            {eigen ? "من دروس اليوم نفسه" : "من مخزون مستواك (يومٌ بلا مهمّة جمل)"} · ستُسألها بعينها غداً في بوابة الجلسة — لا زرَّ «قرأتها»: البرهانُ أداءُ الغد.
+            {eigen ? "من دروس اليوم نفسه" : "من مخزون مستواك (يومٌ بلا مهمّة جمل)"} · ستُسألها بعينها غداً في بوابة الجلسة — لا زرَّ «قرأتها»: البرهانُ أداءُ الغد. وفواصلُ عودتها بعدها تتكيّف مع أدائك: خطأٌ يعيدها أبكرَ، وصوابٌ يُبعدها درجةً (1←3←7←30←90 يومًا) — ولا جملةَ تختفي نهائيًا.
           </div>
         </div>
         <button className="btn btn-ghost" onClick={() => setOffen((o) => !o)} aria-expanded={offen} data-testid="kapsel-toggle">

@@ -34,6 +34,20 @@
         "answer": "In Berlin",
         "explanationAr": "النص يقول: Ich wohne in Berlin.",
         "id": "t-a0-01-q2"
+      },
+      {
+        "type": "mc",
+        "promptDe": "Woher kommt Ali?",
+        "promptAr": "من أين يأتي علي؟",
+        "options": [
+          "Aus Berlin",
+          "Aus Tunesien",
+          "Aus München",
+          "Aus Köln"
+        ],
+        "answer": "Aus Tunesien",
+        "explanationAr": "النص يقول: «Ich komme aus Tunesien».",
+        "id": "t-a0-01-q3"
       }
     ]
   },
@@ -72,6 +86,16 @@
         "answer": "zwölf",
         "explanationAr": "الدليل في النص: «Eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn.» — في السلسلة الأولى تُذكر الأعداد بالكلمات من eins bis zehn؛ أما zwölf فلا يظهر فيها.",
         "id": "t-a0-02-q2"
+      },
+      {
+        "type": "fill",
+        "promptDe": "Meine ___ ist 0176 12345678.",
+        "promptAr": "أكمل الفراغ بالكلمة المناسبة من النص.",
+        "answer": [
+          "Telefonnummer"
+        ],
+        "explanationAr": "النص يقول: «Meine Telefonnummer ist 0176 12345678».",
+        "id": "t-a0-02-q3"
       }
     ]
   },
@@ -110,6 +134,20 @@
         "answer": "E",
         "explanationAr": "بعد D يأتي E.",
         "id": "t-a0-03-q2"
+      },
+      {
+        "type": "mc",
+        "promptDe": "In welcher Straße wohnt Fatima?",
+        "promptAr": "في أيّ شارع تسكن فاطمة؟",
+        "options": [
+          "In der Schulstraße",
+          "In der Goethestraße",
+          "In der Bahnhofstraße",
+          "In der Gartenstraße"
+        ],
+        "answer": "In der Goethestraße",
+        "explanationAr": "النص يقول: «Ich wohne in der Goethestraße».",
+        "id": "t-a0-03-q3"
       }
     ]
   },
@@ -148,6 +186,20 @@
         "answer": "Die Milch",
         "explanationAr": "النص يقول: Die Milch ist weiß.",
         "id": "t-a0-04-q2"
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welche Farbe hat die Schokolade?",
+        "promptAr": "ما لون الشوكولاتة؟",
+        "options": [
+          "weiß",
+          "grün",
+          "braun",
+          "schwarz"
+        ],
+        "answer": "braun",
+        "explanationAr": "النص يقول: «Die Schokolade ist braun».",
+        "id": "t-a0-04-q3"
       }
     ]
   },
@@ -186,6 +238,20 @@
         "answer": "Der Vater",
         "explanationAr": "النص يقول: Mein Vater ist Arzt.",
         "id": "t-a0-05-q2"
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wo wohnen Karim und seine Familie?",
+        "promptAr": "أين يسكن كريم وعائلته؟",
+        "options": [
+          "In Berlin",
+          "In Hamburg",
+          "In Köln",
+          "In München"
+        ],
+        "answer": "In Köln",
+        "explanationAr": "النص يقول: «Wir wohnen in Köln».",
+        "id": "t-a0-05-q3"
       }
     ]
   },
@@ -8071,6 +8137,20 @@
         ],
         "answer": "Deutsch",
         "explanationAr": "«Wir sprechen zusammen Deutsch.» — يتحدثون الألمانية معاً."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie ist die Lehrerin?",
+        "promptAr": "كيف هي المعلمة؟",
+        "options": [
+          "streng",
+          "sehr nett",
+          "alt",
+          "laut"
+        ],
+        "answer": "sehr nett",
+        "explanationAr": "النص يقول: «Sie ist sehr nett».",
+        "id": "t-a0-06-q3"
       }
     ]
   },
@@ -8109,6 +8189,20 @@
         ],
         "answer": "Am Sonntag",
         "explanationAr": "«Am Sonntag besuche ich meine Familie.» — أزور عائلتي يوم الأحد."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Was macht er am Donnerstag?",
+        "promptAr": "ماذا يفعل يوم الخميس؟",
+        "options": [
+          "Er geht zur Arbeit",
+          "Er kauft ein",
+          "Er trifft seine Freunde",
+          "Er schläft lange"
+        ],
+        "answer": "Er trifft seine Freunde",
+        "explanationAr": "النص يقول: «Am Donnerstag treffe ich meine Freunde».",
+        "id": "t-a0-07-q3"
       }
     ]
   },
@@ -8147,6 +8241,20 @@
         ],
         "answer": "Obst",
         "explanationAr": "«Zum Abendbrot trinke ich Tee und esse Obst.» — أشرب الشاي وآكل الفاكهة في وجبة العشاء."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Was trinkt er zum Abendbrot?",
+        "promptAr": "ماذا يشرب في العشاء؟",
+        "options": [
+          "Kaffee",
+          "Tee",
+          "Wasser",
+          "Saft"
+        ],
+        "answer": "Tee",
+        "explanationAr": "النص يقول: «Zum Abendbrot trinke ich Tee».",
+        "id": "t-a0-08-q3"
       }
     ]
   },
@@ -8185,6 +8293,20 @@
         ],
         "answer": "Um 17 Uhr",
         "explanationAr": "«Um 17 Uhr gehe ich nach Hause.» — أعود إلى البيت عند الخامسة مساءً."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Um wie viel Uhr geht er ins Bett?",
+        "promptAr": "في أيّ ساعة يذهب إلى الفراش؟",
+        "options": [
+          "Um 19 Uhr",
+          "Um 17 Uhr",
+          "Um 12 Uhr",
+          "Um 23 Uhr"
+        ],
+        "answer": "Um 23 Uhr",
+        "explanationAr": "النص يقول: «Um 23 Uhr gehe ich ins Bett».",
+        "id": "t-a0-09-q3"
       }
     ]
   },
@@ -8223,6 +8345,20 @@
         ],
         "answer": "Eine dicke Jacke",
         "explanationAr": "«Ich trage eine dicke Jacke.» — أرتدي سترة سميكة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Welche Jahreszeit mag er am liebsten?",
+        "promptAr": "أيّ فصل يحبّه أكثر؟",
+        "options": [
+          "Den Winter",
+          "Den Frühling",
+          "Den Sommer",
+          "Den Herbst"
+        ],
+        "answer": "Den Frühling",
+        "explanationAr": "النص يقول: «Ich mag den Frühling am liebsten».",
+        "id": "t-a0-10-q3"
       }
     ]
   },
@@ -8260,6 +8396,20 @@
         ],
         "answer": "In die Schule",
         "explanationAr": "«Ich nehme sie jeden Morgen in die Schule.» — آخذها إلى المدرسة كل صباح."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wie viele Hefte sind in der Tasche?",
+        "promptAr": "كم دفتراً في الحقيبة؟",
+        "options": [
+          "zwei",
+          "drei",
+          "vier",
+          "fünf"
+        ],
+        "answer": "drei",
+        "explanationAr": "النص يقول: «In der Tasche sind drei Hefte».",
+        "id": "t-a0-011-q3"
       }
     ]
   },
@@ -8297,6 +8447,20 @@
         ],
         "answer": "Mit meinem Hund",
         "explanationAr": "«Am Nachmittag gehe ich mit meinem Hund im Park spazieren.» — أتمشى مع كلبي في الحديقة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Wen besucht er am Sonntag?",
+        "promptAr": "مَن يزور يوم الأحد؟",
+        "options": [
+          "Seinen Hund",
+          "Seine Freunde",
+          "Seine Mutter",
+          "Seinen Vater"
+        ],
+        "answer": "Seine Mutter",
+        "explanationAr": "النص يقول: «Am Sonntag besuche ich meine Mutter».",
+        "id": "t-a0-012-q3"
       }
     ]
   },
@@ -8334,6 +8498,20 @@
         ],
         "answer": "Ein T-Shirt und eine Jeans",
         "explanationAr": "«Ich ziehe ein T-Shirt und eine Jeans an.» — أرتدي قميصاً وبنطال جينز."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Was braucht er heute nicht?",
+        "promptAr": "ما الذي لا يحتاجه اليوم؟",
+        "options": [
+          "Ein T-Shirt",
+          "Eine Jeans",
+          "Eine Jacke",
+          "Einen Garten"
+        ],
+        "answer": "Eine Jacke",
+        "explanationAr": "النص يقول: «Ich brauche keine Jacke».",
+        "id": "t-a0-013-q3"
       }
     ]
   },
@@ -8371,6 +8549,20 @@
         ],
         "answer": "Eine Suppe und ein Schnitzel mit Kartoffeln",
         "explanationAr": "«Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln.» — أطلب حساءً وقطعة شنيتسل مع البطاطس."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Was bestellt er heute?",
+        "promptAr": "ماذا يطلب اليوم؟",
+        "options": [
+          "Eine Pizza",
+          "Einen Salat",
+          "Ein Brot",
+          "Eine Suppe und ein Schnitzel"
+        ],
+        "answer": "Eine Suppe und ein Schnitzel",
+        "explanationAr": "النص يقول: «Heute bestelle ich eine Suppe und ein Schnitzel mit Kartoffeln».",
+        "id": "t-a0-014-q3"
       }
     ]
   },
@@ -8408,6 +8600,20 @@
         ],
         "answer": "Ein Sofa",
         "explanationAr": "«Im Wohnzimmer steht ein Sofa vor dem Fernseher.» — توجد أريكة أمام التلفاز في غرفة المعيشة."
+      },
+      {
+        "type": "mc",
+        "promptDe": "Was macht er in der Küche?",
+        "promptAr": "ماذا يفعل في المطبخ؟",
+        "options": [
+          "Er schläft",
+          "Er macht Kaffee",
+          "Er sieht fern",
+          "Er liest ein Buch"
+        ],
+        "answer": "Er macht Kaffee",
+        "explanationAr": "النص يقول: «In der Küche mache ich Kaffee».",
+        "id": "t-a0-015-q3"
       }
     ]
   },

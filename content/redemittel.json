@@ -1,0 +1,1437 @@
+{
+  "items": [
+    {
+      "id": "rm-001",
+      "de": "Ich spreche heute über das Thema …",
+      "ar": "أتحدث اليوم عن موضوع…",
+      "beispielDe": "Ich spreche heute über das Thema Homeoffice.",
+      "beispielAr": "أتحدث اليوم عن موضوع العمل من المنزل.",
+      "funktion": "einleitung",
+      "teile": [
+        "sprechen2",
+        "forum"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-002",
+      "de": "Zuerst möchte ich sagen, dass …",
+      "ar": "أولًا أودّ أن أقول إنّ…",
+      "beispielDe": "Zuerst möchte ich sagen, dass Sport sehr wichtig ist.",
+      "beispielAr": "أولًا أود أن أقول إن الرياضة مهمة جدًا.",
+      "funktion": "einleitung",
+      "teile": [
+        "sprechen2",
+        "sprechen3",
+        "forum"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-003",
+      "de": "Es geht um die Frage, ob …",
+      "ar": "الأمر يتعلق بسؤال ما إذا…",
+      "beispielDe": "Es geht um die Frage, ob Kinder Handys brauchen.",
+      "beispielAr": "الأمر يتعلق بسؤال ما إذا كان الأطفال يحتاجون هواتف.",
+      "funktion": "einleitung",
+      "teile": [
+        "sprechen2",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-004",
+      "de": "Ich habe das Thema … gewählt, weil …",
+      "ar": "اخترت موضوع… لأنّ…",
+      "beispielDe": "Ich habe das Thema Reisen gewählt, weil ich gern reise.",
+      "beispielAr": "اخترت موضوع السفر لأنني أحب السفر.",
+      "funktion": "einleitung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-005",
+      "de": "In meinem Vortrag geht es um …",
+      "ar": "في عرضي يدور الحديث عن…",
+      "beispielDe": "In meinem Vortrag geht es um gesunde Ernährung.",
+      "beispielAr": "في عرضي يدور الحديث عن الغذاء الصحي.",
+      "funktion": "einleitung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-006",
+      "de": "Ich möchte kurz erklären, warum …",
+      "ar": "أودّ أن أشرح باختصار لماذا…",
+      "beispielDe": "Ich möchte kurz erklären, warum ich Deutsch lerne.",
+      "beispielAr": "أود أن أشرح باختصار لماذا أتعلم الألمانية.",
+      "funktion": "einleitung",
+      "teile": [
+        "sprechen2",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-007",
+      "de": "Sehr geehrte Damen und Herren,",
+      "ar": "حضرات السيدات والسادة، (افتتاح رسالة رسمية)",
+      "beispielDe": "Sehr geehrte Damen und Herren, ich schreibe Ihnen, weil …",
+      "beispielAr": "حضرات السيدات والسادة، أكتب إليكم لأنّ…",
+      "funktion": "einleitung",
+      "teile": [
+        "brief"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-008",
+      "de": "Ich wende mich an Sie, weil …",
+      "ar": "أتوجّه إليكم لأنّ…",
+      "beispielDe": "Ich wende mich an Sie, weil mein Paket nicht angekommen ist.",
+      "beispielAr": "أتوجه إليكم لأن طردي لم يصل.",
+      "funktion": "einleitung",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-009",
+      "de": "Meiner Meinung nach …",
+      "ar": "في رأيي…",
+      "beispielDe": "Meiner Meinung nach ist Radfahren gesund.",
+      "beispielAr": "في رأيي ركوب الدراجة صحي.",
+      "funktion": "meinung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-010",
+      "de": "Ich denke, dass …",
+      "ar": "أعتقد أنّ…",
+      "beispielDe": "Ich denke, dass Kinder mehr spielen sollen.",
+      "beispielAr": "أعتقد أن الأطفال يجب أن يلعبوا أكثر.",
+      "funktion": "meinung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-011",
+      "de": "Ich glaube, dass …",
+      "ar": "أظنّ أنّ…",
+      "beispielDe": "Ich glaube, dass die Stadt zu laut ist.",
+      "beispielAr": "أظن أن المدينة صاخبة جدًا.",
+      "funktion": "meinung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-012",
+      "de": "Ich bin der Meinung, dass …",
+      "ar": "أنا على رأي أنّ…",
+      "beispielDe": "Ich bin der Meinung, dass man Geld sparen muss.",
+      "beispielAr": "أنا على رأي أنه يجب ادخار المال.",
+      "funktion": "meinung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-013",
+      "de": "Ich bin davon überzeugt, dass …",
+      "ar": "أنا مقتنع بأنّ…",
+      "beispielDe": "Ich bin davon überzeugt, dass Sport glücklich macht.",
+      "beispielAr": "أنا مقتنع بأن الرياضة تجعل الإنسان سعيدًا.",
+      "funktion": "meinung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-014",
+      "de": "Aus meiner Erfahrung weiß ich, dass …",
+      "ar": "من تجربتي أعرف أنّ…",
+      "beispielDe": "Aus meiner Erfahrung weiß ich, dass Übung hilft.",
+      "beispielAr": "من تجربتي أعرف أن التدريب يساعد.",
+      "funktion": "meinung",
+      "teile": [
+        "sprechen2",
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-015",
+      "de": "Für mich ist es wichtig, dass …",
+      "ar": "بالنسبة لي مهمّ أنّ…",
+      "beispielDe": "Für mich ist es wichtig, dass die Arbeit Spaß macht.",
+      "beispielAr": "بالنسبة لي مهم أن يكون العمل ممتعًا.",
+      "funktion": "meinung",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-016",
+      "de": "Ich finde es gut/schlecht, dass …",
+      "ar": "أجد من الجيد/السيئ أنّ…",
+      "beispielDe": "Ich finde es gut, dass der Kurs online ist.",
+      "beispielAr": "أجد من الجيد أن الدورة عبر الإنترنت.",
+      "funktion": "meinung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-017",
+      "de": "Meiner Ansicht nach überwiegen die Vorteile.",
+      "ar": "في رأيي الغلبة للمزايا.",
+      "beispielDe": "Meiner Ansicht nach überwiegen die Vorteile des Homeoffice.",
+      "beispielAr": "في رأيي الغلبة لمزايا العمل من المنزل.",
+      "funktion": "meinung",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-018",
+      "de": "Es lässt sich nicht leugnen, dass …",
+      "ar": "لا يمكن إنكار أنّ…",
+      "beispielDe": "Es lässt sich nicht leugnen, dass Handys unser Leben verändern.",
+      "beispielAr": "لا يمكن إنكار أن الهواتف تغيّر حياتنا.",
+      "funktion": "meinung",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-019",
+      "de": "Ich vertrete den Standpunkt, dass …",
+      "ar": "أتبنّى الموقف القائل إنّ…",
+      "beispielDe": "Ich vertrete den Standpunkt, dass Schuluniformen sinnvoll sind.",
+      "beispielAr": "أتبنى الموقف القائل إن الزي المدرسي معقول.",
+      "funktion": "meinung",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-020",
+      "de": "Persönlich halte ich … für sinnvoll.",
+      "ar": "شخصيًا أعتبر… معقولًا.",
+      "beispielDe": "Persönlich halte ich ein Jahr im Ausland für sinnvoll.",
+      "beispielAr": "شخصيًا أعتبر سنة في الخارج معقولة.",
+      "funktion": "meinung",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-021",
+      "de": "…, weil …",
+      "ar": "… لأنّ… (الفعل في آخر الجملة الفرعية)",
+      "beispielDe": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will.",
+      "beispielAr": "أتعلم الألمانية لأنني أريد العمل في ألمانيا.",
+      "funktion": "begruendung",
+      "teile": [
+        "sprechen3",
+        "forum",
+        "brief"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-022",
+      "de": "…, denn …",
+      "ar": "… إذ إنّ… (جملة رئيسية بعدها)",
+      "beispielDe": "Ich bleibe zu Hause, denn ich bin krank.",
+      "beispielAr": "أبقى في البيت إذ إنني مريض.",
+      "funktion": "begruendung",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-023",
+      "de": "Deshalb / Daher …",
+      "ar": "لذلك…",
+      "beispielDe": "Es regnet. Deshalb bleibe ich zu Hause.",
+      "beispielAr": "إنها تمطر. لذلك أبقى في البيت.",
+      "funktion": "begruendung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-024",
+      "de": "Aus diesem Grund …",
+      "ar": "لهذا السبب…",
+      "beispielDe": "Aus diesem Grund spare ich jeden Monat Geld.",
+      "beispielAr": "لهذا السبب أدخر المال كل شهر.",
+      "funktion": "begruendung",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-025",
+      "de": "Der Grund dafür ist, dass …",
+      "ar": "السبب في ذلك أنّ…",
+      "beispielDe": "Der Grund dafür ist, dass die Stadt sehr teuer ist.",
+      "beispielAr": "السبب في ذلك أن المدينة غالية جدًا.",
+      "funktion": "begruendung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-026",
+      "de": "Ein Grund ist zum Beispiel, dass …",
+      "ar": "أحد الأسباب مثلًا أنّ…",
+      "beispielDe": "Ein Grund ist zum Beispiel, dass man Zeit spart.",
+      "beispielAr": "أحد الأسباب مثلًا أن المرء يوفّر الوقت.",
+      "funktion": "begruendung",
+      "teile": [
+        "sprechen2",
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-027",
+      "de": "Das hat den Vorteil, dass …",
+      "ar": "لهذا ميزة أنّ…",
+      "beispielDe": "Das hat den Vorteil, dass man flexibel arbeitet.",
+      "beispielAr": "لهذا ميزة أن المرء يعمل بمرونة.",
+      "funktion": "begruendung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-028",
+      "de": "Das führt dazu, dass …",
+      "ar": "هذا يؤدّي إلى أنّ…",
+      "beispielDe": "Das führt dazu, dass viele Menschen gestresst sind.",
+      "beispielAr": "هذا يؤدي إلى أن كثيرًا من الناس متوترون.",
+      "funktion": "begruendung",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-029",
+      "de": "Nicht zuletzt, weil …",
+      "ar": "وليس آخرًا لأنّ…",
+      "beispielDe": "Nicht zuletzt, weil es unserer Gesundheit schadet.",
+      "beispielAr": "وليس آخرًا لأنه يضرّ بصحتنا.",
+      "funktion": "begruendung",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-030",
+      "de": "Je …, desto …",
+      "ar": "كلّما… ازداد…",
+      "beispielDe": "Je mehr man übt, desto besser spricht man.",
+      "beispielAr": "كلما تدرب المرء أكثر تحدث بشكل أفضل.",
+      "funktion": "begruendung",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-031",
+      "de": "Da hast du recht.",
+      "ar": "معك حقّ. (للمخاطب المفرد)",
+      "beispielDe": "Da hast du recht, der Preis ist zu hoch.",
+      "beispielAr": "معك حق، السعر مرتفع جدًا.",
+      "funktion": "zustimmung",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-032",
+      "de": "Das sehe ich genauso.",
+      "ar": "أرى الأمر بالطريقة نفسها.",
+      "beispielDe": "Das sehe ich genauso, wir brauchen mehr Grün in der Stadt.",
+      "beispielAr": "أرى الأمر بالطريقة نفسها، نحتاج مزيدًا من الخضرة في المدينة.",
+      "funktion": "zustimmung",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-033",
+      "de": "Ich stimme dir/Ihnen zu.",
+      "ar": "أوافقك الرأي.",
+      "beispielDe": "Ich stimme dir zu, das ist eine gute Idee.",
+      "beispielAr": "أوافقك الرأي، هذه فكرة جيدة.",
+      "funktion": "zustimmung",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-034",
+      "de": "Genau, und außerdem …",
+      "ar": "تمامًا، وعلاوة على ذلك…",
+      "beispielDe": "Genau, und außerdem spart man Zeit.",
+      "beispielAr": "تمامًا، وعلاوة على ذلك يوفّر المرء الوقت.",
+      "funktion": "zustimmung",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-035",
+      "de": "Das ist ein gutes Argument.",
+      "ar": "هذه حجة جيدة.",
+      "beispielDe": "Das ist ein gutes Argument, daran habe ich nicht gedacht.",
+      "beispielAr": "هذه حجة جيدة، لم أفكر في ذلك.",
+      "funktion": "zustimmung",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-036",
+      "de": "Einverstanden!",
+      "ar": "اتفقنا! / موافق!",
+      "beispielDe": "Einverstanden! Wir treffen uns um acht Uhr.",
+      "beispielAr": "اتفقنا! نلتقي في الثامنة.",
+      "funktion": "zustimmung",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-037",
+      "de": "Da bin ich ganz deiner/Ihrer Meinung.",
+      "ar": "أنا تمامًا على رأيك.",
+      "beispielDe": "Da bin ich ganz deiner Meinung, wir sollten früher anfangen.",
+      "beispielAr": "أنا تمامًا على رأيك، يجب أن نبدأ أبكر.",
+      "funktion": "zustimmung",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-038",
+      "de": "Dem kann ich nur zustimmen.",
+      "ar": "لا يسعني إلا الموافقة على ذلك.",
+      "beispielDe": "Dem kann ich nur zustimmen, Bildung ist der Schlüssel.",
+      "beispielAr": "لا يسعني إلا الموافقة، التعليم هو المفتاح.",
+      "funktion": "zustimmung",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-039",
+      "de": "Da bin ich anderer Meinung.",
+      "ar": "أنا على رأي آخر في ذلك.",
+      "beispielDe": "Da bin ich anderer Meinung, Autos sind in der Stadt nötig.",
+      "beispielAr": "أنا على رأي آخر، السيارات ضرورية في المدينة.",
+      "funktion": "widerspruch",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-040",
+      "de": "Das sehe ich anders.",
+      "ar": "أرى الأمر بشكل مختلف.",
+      "beispielDe": "Das sehe ich anders, Online-Kurse sind nicht immer besser.",
+      "beispielAr": "أرى الأمر بشكل مختلف، الدورات عبر الإنترنت ليست دائمًا أفضل.",
+      "funktion": "widerspruch",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-041",
+      "de": "Einerseits …, andererseits …",
+      "ar": "من جهة… ومن جهة أخرى…",
+      "beispielDe": "Einerseits ist es billig, andererseits ist die Qualität schlecht.",
+      "beispielAr": "من جهة هو رخيص، ومن جهة أخرى الجودة سيئة.",
+      "funktion": "widerspruch",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-042",
+      "de": "Trotzdem finde ich, dass …",
+      "ar": "مع ذلك أرى أنّ…",
+      "beispielDe": "Trotzdem finde ich, dass die Stadt besser ist.",
+      "beispielAr": "مع ذلك أرى أن المدينة أفضل.",
+      "funktion": "widerspruch",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-043",
+      "de": "Das stimmt, aber …",
+      "ar": "هذا صحيح، لكن…",
+      "beispielDe": "Das stimmt, aber der Zug ist oft zu spät.",
+      "beispielAr": "هذا صحيح، لكن القطار يتأخر غالبًا.",
+      "funktion": "widerspruch",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-044",
+      "de": "Ich bin nicht sicher, ob …",
+      "ar": "لست متأكدًا ما إذا…",
+      "beispielDe": "Ich bin nicht sicher, ob das für alle gut ist.",
+      "beispielAr": "لست متأكدًا ما إذا كان هذا جيدًا للجميع.",
+      "funktion": "widerspruch",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-045",
+      "de": "Dem möchte ich widersprechen.",
+      "ar": "أودّ أن أعترض على ذلك. (رسمي)",
+      "beispielDe": "Dem möchte ich widersprechen, die Zahlen zeigen etwas anderes.",
+      "beispielAr": "أود أن أعترض على ذلك، الأرقام تُظهر شيئًا آخر.",
+      "funktion": "widerspruch",
+      "teile": [
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-046",
+      "de": "Das mag sein, jedoch …",
+      "ar": "قد يكون ذلك، غير أنّ…",
+      "beispielDe": "Das mag sein, jedoch sind die Kosten zu hoch.",
+      "beispielAr": "قد يكون ذلك، غير أن التكاليف مرتفعة جدًا.",
+      "funktion": "widerspruch",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-047",
+      "de": "Im Gegenteil: …",
+      "ar": "على العكس:…",
+      "beispielDe": "Im Gegenteil: Die Stadt wird immer grüner.",
+      "beispielAr": "على العكس: المدينة تصبح أكثر خضرة باستمرار.",
+      "funktion": "widerspruch",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-048",
+      "de": "Hier muss man unterscheiden zwischen … und …",
+      "ar": "هنا يجب التمييز بين… و…",
+      "beispielDe": "Hier muss man unterscheiden zwischen Stadt und Land.",
+      "beispielAr": "هنا يجب التمييز بين المدينة والريف.",
+      "funktion": "widerspruch",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-049",
+      "de": "… ist größer/besser als …",
+      "ar": "… أكبر/أفضل من…",
+      "beispielDe": "Die Stadt ist größer als mein Dorf.",
+      "beispielAr": "المدينة أكبر من قريتي.",
+      "funktion": "vergleich",
+      "teile": [
+        "sprechen2",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-050",
+      "de": "Im Vergleich zu …",
+      "ar": "بالمقارنة مع…",
+      "beispielDe": "Im Vergleich zu früher ist alles teurer.",
+      "beispielAr": "بالمقارنة مع السابق كل شيء أغلى.",
+      "funktion": "vergleich",
+      "teile": [
+        "sprechen2",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-051",
+      "de": "Sowohl … als auch …",
+      "ar": "كِلا… و… / … أيضًا",
+      "beispielDe": "Sowohl Kinder als auch Erwachsene lernen gern.",
+      "beispielAr": "الأطفال والبالغون على السواء يحبون التعلم.",
+      "funktion": "vergleich",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-052",
+      "de": "Während …, …",
+      "ar": "بينما…، … (للمقابلة)",
+      "beispielDe": "Während mein Bruder liest, spiele ich Fußball.",
+      "beispielAr": "بينما يقرأ أخي ألعب كرة القدم.",
+      "funktion": "vergleich",
+      "teile": [
+        "forum",
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-053",
+      "de": "Der Unterschied ist, dass …",
+      "ar": "الفرق هو أنّ…",
+      "beispielDe": "Der Unterschied ist, dass man im Homeoffice allein ist.",
+      "beispielAr": "الفرق هو أن المرء في العمل المنزلي وحيد.",
+      "funktion": "vergleich",
+      "teile": [
+        "sprechen2",
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-054",
+      "de": "Genau wie …, so auch …",
+      "ar": "تمامًا كما…، كذلك…",
+      "beispielDe": "Genau wie in meiner Heimat, so feiert man auch hier Feste.",
+      "beispielAr": "تمامًا كما في وطني، كذلك يحتفل الناس هنا بالأعياد.",
+      "funktion": "vergleich",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-055",
+      "de": "… unterscheidet sich von … dadurch, dass …",
+      "ar": "… يختلف عن… في أنّ…",
+      "beispielDe": "Das Land unterscheidet sich von der Stadt dadurch, dass es ruhiger ist.",
+      "beispielAr": "تختلف القرية عن المدينة في أنها أهدأ.",
+      "funktion": "vergleich",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-056",
+      "de": "Nicht nur …, sondern auch …",
+      "ar": "ليس فقط… بل أيضًا…",
+      "beispielDe": "Nicht nur Kinder, sondern auch Erwachsene nutzen das Angebot.",
+      "beispielAr": "ليس الأطفال فقط بل البالغون أيضًا يستخدمون العرض.",
+      "funktion": "vergleich",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-057",
+      "de": "Auf dem Bild sehe ich links/rechts …",
+      "ar": "في الصورة أرى يسارًا/يمينًا…",
+      "beispielDe": "Auf dem Bild sehe ich links eine Familie und rechts Kinder.",
+      "beispielAr": "في الصورة أرى يسارًا عائلة ويمينًا أطفالًا.",
+      "funktion": "vergleich",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-058",
+      "de": "Im Vordergrund / Im Hintergrund …",
+      "ar": "في المقدّمة / في الخلفية…",
+      "beispielDe": "Im Vordergrund spielt ein Kind, im Hintergrund sieht man Berge.",
+      "beispielAr": "في المقدمة يلعب طفل، وفي الخلفية تُرى جبال.",
+      "funktion": "vergleich",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-059",
+      "de": "Ich schlage vor, dass wir …",
+      "ar": "أقترح أن… (نحن)",
+      "beispielDe": "Ich schlage vor, dass wir am Samstag kochen.",
+      "beispielAr": "أقترح أن نطبخ يوم السبت.",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-060",
+      "de": "Was hältst du von …?",
+      "ar": "ما رأيك في…؟",
+      "beispielDe": "Was hältst du von einem Picknick im Park?",
+      "beispielAr": "ما رأيك في نزهة في الحديقة؟",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-061",
+      "de": "Wie wäre es mit …?",
+      "ar": "ما رأيك لو…؟ / ماذا عن…؟",
+      "beispielDe": "Wie wäre es mit einem Film am Abend?",
+      "beispielAr": "ماذا عن فيلم في المساء؟",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-062",
+      "de": "Wir könnten …",
+      "ar": "يمكننا أن…",
+      "beispielDe": "Wir könnten zusammen lernen.",
+      "beispielAr": "يمكننا أن نتعلم معًا.",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-063",
+      "de": "Lass uns …!",
+      "ar": "هيّا بنا…!",
+      "beispielDe": "Lass uns morgen früh anfangen!",
+      "beispielAr": "هيا بنا نبدأ غدًا صباحًا!",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-064",
+      "de": "Ich würde vorschlagen, … zu …",
+      "ar": "كنت سأقترح أن… (أدب)",
+      "beispielDe": "Ich würde vorschlagen, früher zu kommen.",
+      "beispielAr": "كنت سأقترح أن نأتي أبكر.",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-065",
+      "de": "Könnten wir uns darauf einigen, dass …?",
+      "ar": "هل يمكن أن نتفق على أنّ…؟",
+      "beispielDe": "Könnten wir uns darauf einigen, dass wir um neun beginnen?",
+      "beispielAr": "هل يمكن أن نتفق على أن نبدأ في التاسعة؟",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-066",
+      "de": "Als Kompromiss könnten wir …",
+      "ar": "كحلّ وسط يمكننا…",
+      "beispielDe": "Als Kompromiss könnten wir zwei Tage zu Hause arbeiten.",
+      "beispielAr": "كحل وسط يمكننا العمل يومين من المنزل.",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-067",
+      "de": "Zuerst …, dann …, am Ende …",
+      "ar": "أولًا… ثم… وفي النهاية… (خطة)",
+      "beispielDe": "Zuerst kaufen wir ein, dann kochen wir, am Ende essen wir zusammen.",
+      "beispielAr": "أولًا نتسوق، ثم نطبخ، وفي النهاية نأكل معًا.",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen3",
+        "sprechen1"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-068",
+      "de": "Ich kümmere mich um …, und du …?",
+      "ar": "سأتولّى…، وأنت…؟",
+      "beispielDe": "Ich kümmere mich um das Essen, und du um die Getränke?",
+      "beispielAr": "سأتولى الطعام، وأنت المشروبات؟",
+      "funktion": "vorschlag",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-069",
+      "de": "Zusammenfassend kann man sagen, dass …",
+      "ar": "وخلاصة القول يمكن أن نقول إنّ…",
+      "beispielDe": "Zusammenfassend kann man sagen, dass Sport für alle wichtig ist.",
+      "beispielAr": "وخلاصة القول يمكن أن نقول إن الرياضة مهمة للجميع.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "sprechen2",
+        "sprechen3",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-070",
+      "de": "Zum Schluss möchte ich sagen, dass …",
+      "ar": "في الختام أودّ أن أقول إنّ…",
+      "beispielDe": "Zum Schluss möchte ich sagen, dass ich viel gelernt habe.",
+      "beispielAr": "في الختام أود أن أقول إنني تعلمت الكثير.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "sprechen2",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-071",
+      "de": "Alles in allem …",
+      "ar": "بالمحصّلة… / إجمالًا…",
+      "beispielDe": "Alles in allem war die Reise ein Erfolg.",
+      "beispielAr": "بالمحصلة كانت الرحلة ناجحة.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "forum",
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-072",
+      "de": "Abschließend lässt sich sagen, dass …",
+      "ar": "ختامًا يمكن القول إنّ…",
+      "beispielDe": "Abschließend lässt sich sagen, dass beide Seiten wichtig sind.",
+      "beispielAr": "ختامًا يمكن القول إن كلا الجانبين مهم.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "forum"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-073",
+      "de": "Die wichtigsten Punkte sind: erstens …, zweitens …",
+      "ar": "أهمّ النقاط: أولًا…، ثانيًا…",
+      "beispielDe": "Die wichtigsten Punkte sind: erstens die Zeit, zweitens das Geld.",
+      "beispielAr": "أهم النقاط: أولًا الوقت، ثانيًا المال.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "sprechen2",
+        "forum"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-074",
+      "de": "Damit bin ich am Ende meines Vortrags.",
+      "ar": "وبهذا أصل إلى نهاية عرضي.",
+      "beispielDe": "Damit bin ich am Ende meines Vortrags. Vielen Dank.",
+      "beispielAr": "وبهذا أصل إلى نهاية عرضي. شكرًا جزيلًا.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-075",
+      "de": "Ich danke Ihnen für Ihre Aufmerksamkeit.",
+      "ar": "أشكركم على انتباهكم.",
+      "beispielDe": "Ich danke Ihnen für Ihre Aufmerksamkeit und Ihre Fragen.",
+      "beispielAr": "أشكركم على انتباهكم وأسئلتكم.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-076",
+      "de": "Mit freundlichen Grüßen",
+      "ar": "مع خالص التحيات (ختام رسالة)",
+      "beispielDe": "Mit freundlichen Grüßen, Sara Amri.",
+      "beispielAr": "مع خالص التحيات، سارة عمري.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "brief"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-077",
+      "de": "Ich würde mich über eine Antwort freuen.",
+      "ar": "يسعدني تلقّي ردّكم.",
+      "beispielDe": "Ich würde mich über eine Antwort freuen.",
+      "beispielAr": "يسعدني تلقي ردكم.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-078",
+      "de": "Für Rückfragen stehe ich Ihnen gern zur Verfügung.",
+      "ar": "لأيّ استفسارات إضافية أنا رهن تصرّفكم.",
+      "beispielDe": "Für Rückfragen stehe ich Ihnen gern zur Verfügung.",
+      "beispielAr": "لأي استفسارات إضافية أنا رهن تصرفكم.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "brief"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-079",
+      "de": "Ich möchte mich über … beschweren.",
+      "ar": "أودّ أن أشكو من…",
+      "beispielDe": "Ich möchte mich über den Lärm beschweren.",
+      "beispielAr": "أود أن أشكو من الضجيج.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-080",
+      "de": "Leider musste ich feststellen, dass …",
+      "ar": "للأسف اضطررت أن ألاحظ أنّ…",
+      "beispielDe": "Leider musste ich feststellen, dass das Zimmer nicht sauber war.",
+      "beispielAr": "للأسف اضطررت أن ألاحظ أن الغرفة لم تكن نظيفة.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-081",
+      "de": "Am … habe ich bei Ihnen … bestellt/gebucht.",
+      "ar": "في يوم… طلبت/حجزت لديكم…",
+      "beispielDe": "Am 3. Mai habe ich bei Ihnen ein Zimmer gebucht.",
+      "beispielAr": "في 3 مايو حجزت لديكم غرفة.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-082",
+      "de": "Das Produkt funktioniert leider nicht.",
+      "ar": "المنتج لا يعمل للأسف.",
+      "beispielDe": "Das Produkt funktioniert leider nicht und macht Geräusche.",
+      "beispielAr": "المنتج لا يعمل للأسف ويصدر أصواتًا.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-083",
+      "de": "Ich bitte Sie, … zu …",
+      "ar": "أرجو منكم أن…",
+      "beispielDe": "Ich bitte Sie, den Schaden zu reparieren.",
+      "beispielAr": "أرجو منكم إصلاح الضرر.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-084",
+      "de": "Ich bitte um Rückerstattung des Betrags.",
+      "ar": "أطلب استرداد المبلغ.",
+      "beispielDe": "Ich bitte um Rückerstattung des Betrags von 89 Euro.",
+      "beispielAr": "أطلب استرداد مبلغ 89 يورو.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-085",
+      "de": "Andernfalls sehe ich mich gezwungen, …",
+      "ar": "وإلا أجد نفسي مضطرًا إلى… (تصعيد مهذّب)",
+      "beispielDe": "Andernfalls sehe ich mich gezwungen, den Vertrag zu kündigen.",
+      "beispielAr": "وإلا أجد نفسي مضطرًا إلى إنهاء العقد.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-086",
+      "de": "Ich erwarte Ihre Antwort bis zum …",
+      "ar": "أتوقّع ردّكم حتى يوم…",
+      "beispielDe": "Ich erwarte Ihre Antwort bis zum 20. Juni.",
+      "beispielAr": "أتوقع ردكم حتى 20 يونيو.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-087",
+      "de": "Die Heizung ist seit … defekt.",
+      "ar": "التدفئة معطّلة منذ…",
+      "beispielDe": "Die Heizung ist seit Montag defekt und die Wohnung ist kalt.",
+      "beispielAr": "التدفئة معطلة منذ الاثنين والشقة باردة.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-088",
+      "de": "Ich wäre Ihnen dankbar, wenn Sie …",
+      "ar": "سأكون شاكرًا لكم لو…",
+      "beispielDe": "Ich wäre Ihnen dankbar, wenn Sie mir bald antworten.",
+      "beispielAr": "سأكون شاكرًا لكم لو أجبتموني قريبًا.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-089",
+      "de": "Ich hätte eine Frage: …",
+      "ar": "عندي سؤال:…",
+      "beispielDe": "Ich hätte eine Frage: Wann beginnt der Kurs?",
+      "beispielAr": "عندي سؤال: متى تبدأ الدورة؟",
+      "funktion": "nachfrage",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-090",
+      "de": "Kannst du das bitte wiederholen?",
+      "ar": "هل يمكنك تكرار ذلك من فضلك؟",
+      "beispielDe": "Kannst du das bitte wiederholen? Ich habe es nicht verstanden.",
+      "beispielAr": "هل يمكنك تكرار ذلك من فضلك؟ لم أفهمه.",
+      "funktion": "nachfrage",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-091",
+      "de": "Was bedeutet …?",
+      "ar": "ما معنى…؟",
+      "beispielDe": "Was bedeutet das Wort „Gebühr“?",
+      "beispielAr": "ما معنى كلمة «Gebühr» (رسوم)؟",
+      "funktion": "nachfrage",
+      "teile": [
+        "sprechen1"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-092",
+      "de": "Wie bitte? Das habe ich nicht verstanden.",
+      "ar": "عفوًا؟ لم أفهم ذلك.",
+      "beispielDe": "Wie bitte? Das habe ich nicht verstanden.",
+      "beispielAr": "عفوًا؟ لم أفهم ذلك.",
+      "funktion": "nachfrage",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-093",
+      "de": "Könnten Sie das bitte langsamer sagen?",
+      "ar": "هل يمكنكم قول ذلك ببطء أكثر؟ (رسمي)",
+      "beispielDe": "Könnten Sie das bitte langsamer sagen?",
+      "beispielAr": "هل يمكنكم قول ذلك ببطء أكثر؟",
+      "funktion": "nachfrage",
+      "teile": [
+        "sprechen1"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-094",
+      "de": "Ich hätte gern gewusst, ob …",
+      "ar": "كنت أودّ أن أعرف ما إذا… (أدب)",
+      "beispielDe": "Ich hätte gern gewusst, ob noch Plätze frei sind.",
+      "beispielAr": "كنت أود أن أعرف ما إذا كانت هناك أماكن شاغرة.",
+      "funktion": "nachfrage",
+      "teile": [
+        "brief"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-095",
+      "de": "Könnten Sie mir bitte mitteilen, …?",
+      "ar": "هل يمكنكم إعلامي من فضلكم…؟",
+      "beispielDe": "Könnten Sie mir bitte mitteilen, wann der Termin ist?",
+      "beispielAr": "هل يمكنكم إعلامي متى الموعد؟",
+      "funktion": "nachfrage",
+      "teile": [
+        "brief"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-096",
+      "de": "Darf ich fragen, …?",
+      "ar": "هل لي أن أسأل…؟",
+      "beispielDe": "Darf ich fragen, wie viel das kostet?",
+      "beispielAr": "هل لي أن أسأل كم يكلف ذلك؟",
+      "funktion": "nachfrage",
+      "teile": [
+        "sprechen1",
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-097",
+      "de": "Entschuldigung, ich habe eine Frage zum Thema …",
+      "ar": "عذرًا، عندي سؤال حول موضوع…",
+      "beispielDe": "Entschuldigung, ich habe eine Frage zum Thema Arbeitszeiten.",
+      "beispielAr": "عذرًا، عندي سؤال حول موضوع أوقات العمل.",
+      "funktion": "nachfrage",
+      "teile": [
+        "sprechen1"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-098",
+      "de": "Meinst du damit, dass …?",
+      "ar": "هل تعني بذلك أنّ…؟ (تحقّق من الفهم)",
+      "beispielDe": "Meinst du damit, dass wir früher kommen sollen?",
+      "beispielAr": "هل تعني بذلك أن علينا الحضور أبكر؟",
+      "funktion": "nachfrage",
+      "teile": [
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-099",
+      "de": "Das Bild zeigt …",
+      "ar": "الصورة تُظهر…",
+      "beispielDe": "Das Bild zeigt eine Familie im Park.",
+      "beispielAr": "الصورة تُظهر عائلة في حديقة.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-100",
+      "de": "Auf dem Bild sehe ich …",
+      "ar": "في الصورة أرى…",
+      "beispielDe": "Auf dem Bild sehe ich viele Menschen am Strand.",
+      "beispielAr": "في الصورة أرى أناسًا كثيرين على الشاطئ.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-101",
+      "de": "Oben / Unten / In der Mitte …",
+      "ar": "في الأعلى / في الأسفل / في الوسط…",
+      "beispielDe": "Oben sieht man die Sonne, in der Mitte ein Boot.",
+      "beispielAr": "في الأعلى تُرى الشمس، وفي الوسط قارب.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-102",
+      "de": "Die Person auf der linken Seite …",
+      "ar": "الشخص على الجانب الأيسر…",
+      "beispielDe": "Die Person auf der linken Seite trägt eine Jacke.",
+      "beispielAr": "الشخص على الجانب الأيسر يرتدي سترة.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-103",
+      "de": "Es sieht so aus, als ob …",
+      "ar": "يبدو وكأنّ…",
+      "beispielDe": "Es sieht so aus, als ob die Kinder Spaß haben.",
+      "beispielAr": "يبدو وكأن الأطفال مستمتعون.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-104",
+      "de": "Vermutlich handelt es sich um …",
+      "ar": "يُرجّح أنّ الأمر يتعلق بـ… (تخمين)",
+      "beispielDe": "Vermutlich handelt es sich um eine Schulklasse.",
+      "beispielAr": "يُرجّح أن الأمر يتعلق بفصل مدرسي.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-105",
+      "de": "Das erinnert mich an …",
+      "ar": "هذا يُذكّرني بـ…",
+      "beispielDe": "Das erinnert mich an meine Kindheit auf dem Land.",
+      "beispielAr": "هذا يذكّرني بطفولتي في الريف.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2",
+        "sprechen3"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-106",
+      "de": "Besonders auffällig ist, dass …",
+      "ar": "اللافت بشكل خاص أنّ…",
+      "beispielDe": "Besonders auffällig ist, dass alle lachen.",
+      "beispielAr": "اللافت بشكل خاص أن الجميع يضحكون.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-107",
+      "de": "Man kann erkennen, dass …",
+      "ar": "يمكن ملاحظة أنّ…",
+      "beispielDe": "Man kann erkennen, dass die Stimmung gut ist.",
+      "beispielAr": "يمكن ملاحظة أن الأجواء جيدة.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-108",
+      "de": "Im Vergleich zum ersten Bild …",
+      "ar": "بالمقارنة مع الصورة الأولى…",
+      "beispielDe": "Im Vergleich zum ersten Bild ist hier alles moderner.",
+      "beispielAr": "بالمقارنة مع الصورة الأولى كل شيء هنا أحدث.",
+      "funktion": "beschreibung",
+      "teile": [
+        "sprechen2"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-109",
+      "de": "Betreff: Beschwerde über …",
+      "ar": "الموضوع: شكوى بخصوص… (سطر موضوع الرسالة)",
+      "beispielDe": "Betreff: Beschwerde über die defekte Heizung",
+      "beispielAr": "الموضوع: شكوى بخصوص التدفئة المعطّلة",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-110",
+      "de": "Ich beziehe mich auf Ihre Anzeige vom …",
+      "ar": "أشير إلى إعلانكم المؤرّخ في…",
+      "beispielDe": "Ich beziehe mich auf Ihre Anzeige vom 2. Mai.",
+      "beispielAr": "أشير إلى إعلانكم المؤرخ في 2 مايو.",
+      "funktion": "einleitung",
+      "teile": [
+        "brief"
+      ],
+      "level": "B2"
+    },
+    {
+      "id": "rm-111",
+      "de": "Bitte teilen Sie mir mit, ob …",
+      "ar": "يرجى إعلامي ما إذا…",
+      "beispielDe": "Bitte teilen Sie mir mit, ob der Termin noch frei ist.",
+      "beispielAr": "يرجى إعلامي ما إذا كان الموعد ما زال شاغرًا.",
+      "funktion": "nachfrage",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-112",
+      "de": "Gern sende ich Ihnen … zu.",
+      "ar": "يسعدني أن أرسل إليكم…",
+      "beispielDe": "Gern sende ich Ihnen meine Unterlagen zu.",
+      "beispielAr": "يسعدني أن أرسل إليكم مستنداتي.",
+      "funktion": "beschwerde",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-113",
+      "de": "Vielen Dank für Ihr Verständnis.",
+      "ar": "شكرًا جزيلًا على تفهّمكم.",
+      "beispielDe": "Vielen Dank für Ihr Verständnis und Ihre Hilfe.",
+      "beispielAr": "شكرًا جزيلًا على تفهمكم ومساعدتكم.",
+      "funktion": "zusammenfassung",
+      "teile": [
+        "brief"
+      ],
+      "level": "B1"
+    },
+    {
+      "id": "rm-114",
+      "de": "Darf ich mich vorstellen? Ich heiße …",
+      "ar": "هل لي أن أقدّم نفسي؟ اسمي…",
+      "beispielDe": "Darf ich mich vorstellen? Ich heiße Benali und komme aus Tunesien.",
+      "beispielAr": "هل لي أن أقدم نفسي؟ اسمي بن علي وأنا من تونس.",
+      "funktion": "einleitung",
+      "teile": [
+        "sprechen1"
+      ],
+      "level": "A2"
+    },
+    {
+      "id": "rm-115",
+      "de": "Ich komme aus …, wohne aber jetzt in …",
+      "ar": "أنا من…، لكنّي أسكن الآن في…",
+      "beispielDe": "Ich komme aus Syrien, wohne aber jetzt in Berlin.",
+      "beispielAr": "أنا من سوريا، لكنني أسكن الآن في برلين.",
+      "funktion": "einleitung",
+      "teile": [
+        "sprechen1"
+      ],
+      "level": "A2"
+    }
+  ]
+}

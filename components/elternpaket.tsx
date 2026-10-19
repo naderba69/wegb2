@@ -9,12 +9,11 @@ import type { Progress } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
 import { sentences } from "@/lib/content";
 import { levelOf, pickN, rng } from "@/lib/plan";
-import { kompetenzWerte, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN } from "@/lib/kompetenz";
-import { resistenteFehler, fehlerFamilien } from "@/lib/fehler";
+import { kompetenzWerte, b2Score, pruefungsBereitschaft, KOMPETENZEN } from "@/lib/kompetenz";
+import { resistenteFehler } from "@/lib/fehler";
 import { empfehlungen } from "./berichte";
 import { useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
-import { De } from "./De";
 
 const EN_SKILL: Record<string, string> = {
   Lesen: "Reading", Hoeren: "Listening", Schreiben: "Writing", Sprechen: "Speaking", Grammatik: "Grammar", Wortschatz: "Vocabulary",
@@ -22,9 +21,8 @@ const EN_SKILL: Record<string, string> = {
 const EN_BAND = (v: number) =>
   v >= 80 ? "Ready for the exam" : v >= 65 ? "Nearly ready" : v >= 40 ? "On the way" : "Early stage — building foundations";
 
-const NAMES: Record<string, string> = { Lesen: "reading", Hoeren: "listening", Schreiben: "writing", Sprechen: "speaking", Grammatik: "grammar", Wortschatz: "vocabulary" };
 
-function druckeHtml(html: string, titel: string) {
+function druckeHtml(html: string, _titel: string) {
   const fenster = window.open("", "_blank");
   if (!fenster) return;
   fenster.document.write(html);

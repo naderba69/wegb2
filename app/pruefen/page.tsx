@@ -8,6 +8,9 @@ import { ProbeklausurCard } from "@/components/klausur";
 import { PruefungsZentrum } from "@/components/pruefung";
 import { SelbstTestZentrum } from "@/components/selbsttest";
 import { SchulSimulator } from "@/components/schulsim";
+import Simulation from "@/components/simulation";
+import { Bereitschaft } from "@/components/bereitschaft";
+import { SprechKartenStudio } from "@/components/sprechkarten";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
@@ -21,6 +24,9 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   zentrum: { icon: "🏛️", titel: "مركز الاختبارات", unter: "اختبارات المراحل وسجلّ النتائج." },
   selbsttest: { icon: "🪞", titel: "الاختبار الذاتي", unter: "راجع ما تتقنه وما يحتاج إلى تدريب." },
   schulsim: { icon: "🏫", titel: "محاكاة المدرسة", unter: "تدرّب على يوم اختبار كامل." },
+  simulation: { icon: "🎓", titel: "محاكاة الامتحانات", unter: "Goethe B2/B1 · ‏telc B2 · ‏DTZ — وحدات موقوتة بصيغ رسمية من بنوك مستواك." },
+  bereitschaft: { icon: "📈", titel: "تحليلات الاستعداد", unter: "حصيلة مهاراتك من نتائج محاكاتك المسجّلة فقط — بلا تنبؤ." },
+  sprechkarten: { icon: "🎙️", titel: "بطاقات محادثة مسجّلة", unter: "أجزاء الامتحان الثلاثة · تحضير موقوت · تسجيل محلي لا يغادر جهازك وتقييم ذاتي." },
 };
 
 export default function Pruefen() {
@@ -51,12 +57,15 @@ export default function Pruefen() {
           {offen === "zentrum" && <PruefungsZentrum progress={progress} />}
           {offen === "selbsttest" && <SelbstTestZentrum progress={progress} />}
           {offen === "schulsim" && <SchulSimulator progress={progress} />}
+          {offen === "simulation" && <Simulation />}
+          {offen === "bereitschaft" && <Bereitschaft progress={progress} />}
+          {offen === "sprechkarten" && <SprechKartenStudio />}
         </section>
       </div>
     );
   }
 
-  const ids = ["tor", "probeklausur", "zentrum", "selbsttest", "schulsim"];
+  const ids = ["tor", "probeklausur", "zentrum", "selbsttest", "schulsim", "simulation", "bereitschaft", "sprechkarten"];
   const renderCard = (id: string) => {
     const k = KARTE[id];
     if (!k) return null;

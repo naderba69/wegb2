@@ -1,15 +1,38 @@
-// Minimal service worker for WegB2 — app-shell cache so the app boots offline after first load.
-// No runtime caching of data: everything is localStorage-driven; we only cache static
-// JS/CSS/fonts and document shell so the PWA can be opened without network.
-const CACHE = "wegb2-v1";
+// WegB2 Service Worker (U3/R189) — التطبيق كامل بلا شبكة بعد أول تحميل.
+// الاستراتيجية (نفس الأصل حصرًا — أي طلب خارجي يمرّ بلا اعتراض):
+//  • التنقّلات: الشبكة أولًا، وعند غيابها النسخة المخزّنة (حتى تعمل الصفحات المُزارة دون اتصال).
+//  • /banks.json (بنوك المحتوى): stale-while-revalidate — تُعرَض المخزّنة فورًا وتُحدَّث في الخلفية،
+//    فلا يتعطّل المحتوى بلا شبكة ولا يتيبّس بعد تحديث خادم.
+//  • الأصول الثابتة والصوتيات والصور: cache-first، فكلّ صوت يُسمَع مرة يُحفَظ ليعمل بعدها بلا شبكة (الصوتيات المستعملة).
+// لا تُخزَّن بيانات مستخدم هنا: التقدّم في localStorage كما كان دائمًا، وهذا مخزن أصول فقط قابل للمسح من الإعدادات.
+const CACHE = "wegb2-v3";
+// R303/ب7: سقف لكاش الصوت — أقدم الملفات تُحذف أولًا حتى لا يبتلع التخزين
+const AUDIO_MAX = 200;
+async function trimmeCache(c) {
+  try {
+    const keys = await c.keys();
+    const audio = keys.filter((r) => new URL(r.url).pathname.startsWith("/audio/"));
+    for (let i = 0; i < audio.length - AUDIO_MAX; i++) await c.delete(audio[i]);
+  } catch (e) {
+    /* التقليص best-effort: فشله لا يكسر التشغيل */
+  }
+}
 const SHELL = [
   "/",
+  "/ueben",
+  "/fortschritt",
+  "/pruefen",
+  "/einstellungen",
   "/manifest.webmanifest",
+  "/banks.json",
 ];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(SHELL)).catch(() => undefined)
+    caches.open(CACHE).then(async (c) => {
+      // best-effort: فشل صفحة واحدة لا يقتل التثبيت كله
+      await Promise.allSettled(SHELL.map((u) => c.add(u)));
+    })
   );
   self.skipWaiting();
 });
@@ -43,6 +66,25 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  // banks.json: stale-while-revalidate
+  if (url.pathname === "/banks.json") {
+    event.respondWith(
+      caches.match(req).then((cached) => {
+        const netz = fetch(req)
+          .then((res) => {
+            if (res.ok) {
+              const copy = res.clone();
+              caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => undefined);
+            }
+            return res;
+          })
+          .catch(() => cached);
+        return cached || netz;
+      })
+    );
+    return;
+  }
+
   // Cache-first for static assets (JS/CSS/fonts/images/audio/mp3).
   if (
     url.pathname.startsWith("/_next/static") ||
@@ -56,7 +98,10 @@ self.addEventListener("fetch", (event) => {
         return fetch(req).then((res) => {
           if (res.ok) {
             const copy = res.clone();
-            caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => undefined);
+            caches.open(CACHE).then(async (c) => {
+              await c.put(req, copy);
+              if (url.pathname.startsWith("/audio/")) await trimmeCache(c);
+            }).catch(() => undefined);
           }
           return res;
         }).catch(() => cached);

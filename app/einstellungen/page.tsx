@@ -3,14 +3,23 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useProgress, loadProgress } from "@/lib/store";
 import { LANG_LABEL, effectiveLang } from "@/lib/i18n";
-import { noteFromPct } from "@/lib/grader";
+import { noteFromPct, LLM_ANBIETER } from "@/lib/grader";
 import { TEMPO_LABEL } from "@/lib/types";
 import { Fehlerkartei, Lernstrategien } from "@/components/fehler-ui";
 import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
 import { ProfilVerwaltung } from "@/components/profil";
-import { speakDe, germanVoices, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
+import { KomfortEinstellungen } from "@/components/komfort";
+import { KOMFORT_KEY, ladeKomfort, wendeKomfortAn } from "@/lib/komfort";
+import { speakDe, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
 import LocalSpeechPilot from "@/components/LocalSpeechPilot";
-import type { UiLang, Tempo } from "@/lib/types";
+import { PHASE_START, levelAmTag } from "@/lib/phasen";
+import { OfflineKarte } from "@/components/offline";
+import { KlassenAnsicht } from "@/components/klassenansicht";
+import { ZielTempoKarte } from "@/components/zieltempo";
+import type { UiLang, Tempo, Level } from "@/lib/types";
+import { effektiveRate, rateFuerLevel, rateModus } from "@/lib/rate";
+import { pruefeImportText, sicherungFaellig } from "@/lib/backup";
+import { ErinnerungKarte } from "@/components/erinnerung";
 
 export default function Einstellungen() {
   const { progress, update, importProgress, reset } = useProgress();
@@ -18,13 +27,29 @@ export default function Einstellungen() {
   const [msg, setMsg] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const lang = effectiveLang(progress);
+  // R170: إعدادات مدرّس الذكاء الاختياري (BYOK) — تحديث جزئي واحد لكل الحقول
+  const setLlm = (patch: Partial<{ baseUrl: string; apiKey: string; model: string; anbieter: string; zugestimmt: boolean }>) =>
+    update((pr) => ({
+      ...pr,
+      settings: {
+        ...pr.settings,
+        llm: { baseUrl: "", apiKey: "", model: "", ...(pr.settings.llm ?? {}), ...patch },
+      },
+    }));
+  const llmCfg = progress.settings.llm;
+  const aktiverAnbieter = LLM_ANBIETER.find((a) => a.id === llmCfg?.anbieter) ?? LLM_ANBIETER[LLM_ANBIETER.length - 1];
 
   useEffect(() => {
     warmVoices((vs) => setVoices(vs));
   }, []);
 
   const exportJson = () => {
-    const data = JSON.stringify(loadProgress(), null, 2);
+    // R303/ب6: النسخة تحمل أيضًا عدّاد القراءة الحرّة وإعدادات الراحة (مفاتيح weg-* الفرعية)
+    let zusatz: { komfort: string | null; lesestoff: string | null } = { komfort: null, lesestoff: null };
+    try {
+      zusatz = { komfort: localStorage.getItem(KOMFORT_KEY), lesestoff: localStorage.getItem("weg-lesestoff-v1") };
+    } catch { /* بيئة بلا localStorage — نسخة تقدّم فقط */ }
+    const data = JSON.stringify({ progress: loadProgress(), zusatz }, null, 2);
     const blob = new Blob([data], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -32,17 +57,29 @@ export default function Einstellungen() {
     a.download = `weg-b2-progress-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
+    update((p) => ({ ...p, letzteSicherung: new Date().toISOString() }));
     setMsg("تم تصدير ملف التقدّم — احفظه في مكان آمن.");
   };
 
   const onImport = (file: File) => {
     const reader = new FileReader();
     reader.onload = () => {
+      const text = String(reader.result ?? "");
+      const urteil = pruefeImportText(text);
+      if (!urteil.ok) { setMsg(`⛔ ${urteil.fehlerAr}`); return; }
       try {
-        importProgress(String(reader.result));
+        const geparsed = JSON.parse(text) as { progress?: unknown; zusatz?: { komfort?: string | null; lesestoff?: string | null } };
+        importProgress(geparsed.progress ? JSON.stringify(geparsed.progress) : text);
+        if (geparsed.zusatz) {
+          try {
+            if (geparsed.zusatz.komfort) localStorage.setItem(KOMFORT_KEY, geparsed.zusatz.komfort);
+            if (geparsed.zusatz.lesestoff) localStorage.setItem("weg-lesestoff-v1", geparsed.zusatz.lesestoff);
+            wendeKomfortAn(ladeKomfort());
+          } catch { /* الاستيراد الأساسي نجح — الفرعيات اختيارية */ }
+        }
         setMsg("تم استيراد التقدّم بنجاح ✓");
       } catch {
-        setMsg("ملف غير صالح — تأكد أنه ملف JSON مُصدَّر من التطبيق.");
+        setMsg("⛔ تعذّر تطبيق الملف رغم سلامة بنيته — لم يتغيّر تقدّمك الحالي.");
       }
     };
     reader.readAsText(file);
@@ -76,8 +113,36 @@ export default function Einstellungen() {
 
       <div className="dirb-hero-anim-2" style={{ display: "grid", gap: "0.9rem" }}>
         <ProfilVerwaltung />
+        <KomfortEinstellungen />
 
         <div className="dirb-kicker" style={{ marginTop: "0.4rem" }}>☀️ الأساسيات اليومية — ما تحتاجه كل يوم</div>
+
+        <details className="dirb-details">
+          <summary>🚀 نقطة الانطلاق — ابدأ من مستواك الحقيقي</summary>
+          <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.8rem", lineHeight: 1.9 }}>
+            تعرف ألمانية من قبل؟ لا تبدأ من الصفر: اختر مستوى الانطلاق فتنتقل خطتك إلى أول يوم فيه.
+            أنت اليوم في <strong>اليوم {progress.plan.day}</strong> (المستوى {levelAmTag(progress.plan.day)}).
+            الانتقال يغيّر موضعك في الخطة فقط — بطاقاتك ودفتر أخطائك ونقاطك تبقى كما هي، ويمكنك العودة متى شئت.
+          </p>
+          <p style={{ margin: "0 0 0.6rem" }}>
+            <Link href="/ueben">🪪 أو حدّد مستواك بالتشخيص التكيّفي (أربع مهارات، دقائق معدودة) ←</Link>
+          </p>
+          <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }} data-testid="einstieg-wahl">
+            {(["A1", "A2", "B1", "B2"] as Level[]).map((lvl) => (
+              <button
+                key={lvl}
+                className="btn"
+                style={{ minHeight: "48px", padding: "0.6rem 1rem" }}
+                onClick={() => {
+                  update((p) => ({ ...p, plan: { ...p.plan, day: PHASE_START[lvl] }, settings: { ...p.settings, placed: true } }));
+                  setMsg(`تم ضبط نقطة الانطلاق على المستوى ${lvl} (اليوم ${PHASE_START[lvl]}) ✓`);
+                }}
+              >
+                ابدأ من {lvl} — اليوم {PHASE_START[lvl]}
+              </button>
+            ))}
+          </div>
+        </details>
 
         <details className="dirb-details" open>
           <summary>🎚️ إيقاع المحتوى اليومي</summary>
@@ -129,6 +194,7 @@ export default function Einstellungen() {
               onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, examName: e.target.value || undefined } }))}
             />
           </div>
+          <ZielTempoKarte progress={progress} />
           {progress.settings.examDate && (
             <div style={{ marginTop: "0.6rem", fontWeight: 700, color: "var(--color-b2)" }}>
               📅{" "}
@@ -162,25 +228,52 @@ export default function Einstellungen() {
                 </option>
               ))}
             </select>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.7rem" }}>
-              <span style={{ minWidth: "6rem" }}>سرعة النطق:</span>
-              <input
-                type="range"
-                min={0.65}
-                max={1.0}
-                step={0.05}
-                value={Math.max(0.65, Math.min(1.0, progress.settings.rate))}
-                onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, rate: Math.max(0.65, Math.min(1.0, Number(e.target.value))) } }))}
-                style={{ flex: 1 }}
-              />
-              <span className="rtl-num">{Math.max(0.65, Math.min(1.0, progress.settings.rate)).toFixed(2)}×</span>
-            </div>
-            <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--color-ink2)" }}>
-              النطاق من <strong>0.65×</strong> (بطيء واضح للمبتدئين) إلى <strong>1.0×</strong> (سرعة طبيعية). لا سرعة أسرع من الطبيعي في الخطة الأساسية.
-            </p>
-            <button className="btn btn-primary" style={{ minHeight: "48px" }} onClick={() => speakDe("Hallo! Ich bin dein Lehrer. Heute lernen wir gemeinsam.", { voiceName: progress.settings.voiceName, rate: progress.settings.rate })}>
-              ▶️ تجربة النطق
-            </button>
+            {(() => {
+              const stufe = levelAmTag(progress.plan.day);
+              const modus = rateModus(progress.settings);
+              const wirkRate = effektiveRate(progress);
+              return (
+                <>
+                  <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+                    <button
+                      className={modus === "auto" ? "btn btn-primary" : "btn"}
+                      data-testid="rate-auto"
+                      onClick={() => update((p) => ({ ...p, settings: { ...p.settings, rateMode: "auto" } }))}
+                    >
+                      🤖 تلقائي حسب المستوى ({stufe}: {rateFuerLevel(stufe).toFixed(2)}×)
+                    </button>
+                    <button
+                      className={modus === "manual" ? "btn btn-primary" : "btn"}
+                      data-testid="rate-manual"
+                      onClick={() => update((p) => ({ ...p, settings: { ...p.settings, rateMode: "manual", rate: effektiveRate(p) } }))}
+                    >
+                      🎚 يدوي محفوظ
+                    </button>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.7rem" }}>
+                    <span style={{ minWidth: "6rem" }}>سرعة النطق:</span>
+                    <input
+                      type="range"
+                      min={0.65}
+                      max={1.1}
+                      step={0.05}
+                      disabled={modus === "auto"}
+                      value={wirkRate}
+                      data-testid="rate-slider"
+                      onChange={(e) => update((p) => ({ ...p, settings: { ...p.settings, rateMode: "manual", rate: Math.max(0.65, Math.min(1.1, Number(e.target.value))) } }))}
+                      style={{ flex: 1 }}
+                    />
+                    <span className="rtl-num">{wirkRate.toFixed(2)}×</span>
+                  </div>
+                  <p style={{ margin: 0, fontSize: "0.78rem", color: "var(--color-ink2)" }}>
+                    الافتراضي متدرّج: A1 ‏0.90× وصولًا إلى B2 ‏1.0–1.1×. اليدوي (0.65–1.1×) يبقى متاحًا دائمًا ويُحفظ اختيارك ولا يُستبدل تلقائيًا.
+                  </p>
+                  <button className="btn btn-primary" style={{ minHeight: "48px" }} onClick={() => speakDe("Hallo! Ich bin dein Lehrer. Heute lernen wir gemeinsam.", { voiceName: progress.settings.voiceName, rate: wirkRate })}>
+                    ▶️ تجربة النطق
+                  </button>
+                </>
+              );
+            })()}
           </div>
         </details>
 
@@ -238,10 +331,25 @@ export default function Einstellungen() {
         </details>
 
         <details className="dirb-details">
+          <summary>🧑‍🏫 وضع المعلّم — نظرة الصفّ المحلية</summary>
+          <KlassenAnsicht />
+        </details>
+
+        <details className="dirb-details">
+          <summary>📴 العمل بلا اتصال (PWA)</summary>
+          <OfflineKarte />
+        </details>
+
+        <details className="dirb-details">
           <summary>💾 التقدّم والنسخ الاحتياطي</summary>
           <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.7rem", lineHeight: 1.9 }}>
             كل شيء في متصفحك — بدون خوادم ولا حسابات. صدّر نسخة قبل تنظيف المتصفح أو تغيير الجهاز.
           </p>
+          {sicherungFaellig(progress) && (
+            <p data-testid="sicherung-erinnerung" style={{ color: "var(--color-cola)", fontWeight: 700, fontSize: "0.88rem", margin: "0 0 0.6rem" }}>
+              ⏰ تذكير شهري: {progress.letzteSicherung ? "مرّ أكثر من شهر على آخر نسخة احتياطية" : "لم تصدّر نسخة احتياطية بعد"} — تقدّمك كله في هذا المتصفح؛ صدّر نسخة الآن واحفظها خارج الجهاز.
+            </p>
+          )}
           <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
             <button className="btn btn-primary" style={{ minHeight: "48px" }} onClick={exportJson}>⬇️ تصدير (JSON)</button>
             <button className="btn btn-ghost" style={{ minHeight: "48px" }} onClick={() => fileRef.current?.click()}>⬆️ استيراد</button>
@@ -262,95 +370,120 @@ export default function Einstellungen() {
           {msg && <p style={{ marginTop: "0.7rem", color: "var(--color-a1)", fontWeight: 700 }}>{msg}</p>}
         </details>
 
+        <details className="dirb-details">
+          <summary>🔔 التذكيرات والتنويم (A27)</summary>
+          <div style={{ marginTop: "0.6rem" }}>
+            <ErinnerungKarte />
+          </div>
+        </details>
+
         <div className="dirb-kicker" style={{ marginTop: "0.4rem" }}>⚙️ المحرك والذكاء الاصطناعي — متقدم، عند الحاجة فقط</div>
 
         <details className="dirb-details">
           <summary>🧠 محرك التصحيح</summary>
           <p style={{ fontSize: "0.9rem", lineHeight: 1.9, margin: "0.6rem 0 0.2rem" }}>
             deterministic (مطابقة، تطبيع، ترتيب، كلمات مفتاحية، تسميع ≥85%) عبر <code>lib/grader.ts</code> بواجهة{" "}
-            <code>Grader</code> جاهزة لاستبدالها بـ <code>LLMGrader</code> لاحقاً دون تغيير أي شاشة. صفر خدمات خارجية اليوم.
+            <code>Grader</code> جاهزة لاستبدالها بـ <code>LLMGrader</code> دون تغيير أي شاشة. افتراضيًا صفر خدمات خارجية: كلّ شيء محلي، والخارجي الوحيد اختياريّ بمفتاحك المجاني وموافقتك الصريحة (قسم «مدرّس الذكاء الاصطناعي» هنا).
             يرافقه «مراجعة المدرّس العميقة»: مقارنة كلمة-بكلمة مع تصنيف الخطأ (أداة/إملاء/همزة/فعل/ترتيب…) وشرح عربي.
           </p>
         </details>
 
         <details className="dirb-details">
-          <summary>🤖 مدرّس الذكاء الاصطناعي (اختياري)</summary>
+          <summary>🤖 مدرّس الذكاء الاصطناعي (اختياري — بمفتاحك المجاني)</summary>
           <p style={{ color: "var(--color-ink2)", fontSize: "0.9rem", margin: "0.6rem 0 0.7rem", lineHeight: 1.9 }}>
-            أضف خدمة متوافقة مع OpenAI لتحصل على تصحيح تحريري لمقالاتك وملاحظات مفصّلة. يعمل التطبيق كاملاً بدونها،
-            والمفتاح يبقى في متصفحك فقط (لا خوادم لنا).
+            اقتراحٌ معتمَد من المالك (R170): تصحيح تحريري أعمق لنصوصك عبر مزوّد ذكاء اصطناعي مجاني
+            <strong> بمفتاحك أنت (BYOK)</strong>. لا يُرسَل أيّ شيء في الخلفية أبدًا — الإرسال يحدث فقط حين تطلب
+            التصحيح بنفسك وبعد موافقتك الصريحة هنا. المفتاح يبقى في متصفحك فقط (لا خوادم لنا)،
+            والتطبيق كامل الوظائف محليًا بدون هذه الميزة.
           </p>
           <div style={{ display: "grid", gap: "0.5rem" }}>
+            <select
+              className="field"
+              value={llmCfg?.anbieter ?? ""}
+              onChange={(e) => {
+                const a2 = LLM_ANBIETER.find((x) => x.id === e.target.value);
+                if (!a2) { setLlm({ anbieter: "", zugestimmt: false }); return; }
+                setLlm({ anbieter: a2.id, baseUrl: a2.baseUrl || (llmCfg?.baseUrl ?? ""), model: a2.modell || (llmCfg?.model ?? "") });
+              }}
+            >
+              <option value="">— مطفأ (محلي فقط) —</option>
+              {LLM_ANBIETER.map((a2) => (
+                <option key={a2.id} value={a2.id}>{a2.nameAr}</option>
+              ))}
+            </select>
             <input
               className="field"
               dir="ltr"
-              placeholder="Base URL — مثال: https://api.openai.com/v1"
-              value={progress.settings.llm?.baseUrl ?? ""}
-              onChange={(e) =>
-                update((p) => ({
-                  ...p,
-                  settings: {
-                    ...p.settings,
-                    llm: {
-                      baseUrl: e.target.value,
-                      apiKey: p.settings.llm?.apiKey ?? "",
-                      model: p.settings.llm?.model ?? "",
-                    },
-                  },
-                }))
-              }
+              placeholder="Base URL"
+              value={llmCfg?.baseUrl ?? ""}
+              onChange={(e) => setLlm({ baseUrl: e.target.value })}
             />
             <input
               className="field"
               dir="ltr"
               type="password"
               placeholder="API Key (يبقى محلياً في متصفحك)"
-              value={progress.settings.llm?.apiKey ?? ""}
-              onChange={(e) =>
-                update((p) => ({
-                  ...p,
-                  settings: {
-                    ...p.settings,
-                    llm: {
-                      baseUrl: p.settings.llm?.baseUrl ?? "",
-                      apiKey: e.target.value,
-                      model: p.settings.llm?.model ?? "",
-                    },
-                  },
-                }))
-              }
+              value={llmCfg?.apiKey ?? ""}
+              onChange={(e) => setLlm({ apiKey: e.target.value })}
             />
             <input
               className="field"
               dir="ltr"
-              placeholder="Model — مثال: gpt-4o-mini"
-              value={progress.settings.llm?.model ?? ""}
-              onChange={(e) =>
-                update((p) => ({
-                  ...p,
-                  settings: {
-                    ...p.settings,
-                    llm: {
-                      baseUrl: p.settings.llm?.baseUrl ?? "",
-                      apiKey: p.settings.llm?.apiKey ?? "",
-                      model: e.target.value,
-                    },
-                  },
-                }))
-              }
+              placeholder="Model"
+              value={llmCfg?.model ?? ""}
+              onChange={(e) => setLlm({ model: e.target.value })}
             />
+            {llmCfg?.anbieter && aktiverAnbieter.schluesselUrl && (
+              <a className="btn btn-ghost" style={{ minHeight: "44px" }} href={aktiverAnbieter.schluesselUrl} target="_blank" rel="noreferrer">
+                🔑 احصل على مفتاح مجاني
+              </a>
+            )}
+            {llmCfg?.anbieter && (
+              <ol style={{ margin: "0.2rem 0", paddingInlineStart: "1.3rem", fontSize: "0.9rem", lineHeight: 2 }} data-testid="llm-schritte">
+                <li>افتح صفحة المفتاح المجاني من زرّ «احصل على مفتاح مجاني» وسجّل دخولك هناك.</li>
+                <li>أنشئ مفتاحًا جديدًا وانسخه كاملًا كما هو.</li>
+                <li>الصقه في حقل «API Key» هنا في الأعلى.</li>
+                <li>ضع علامة الموافقة في البطاقة التالية.</li>
+                <li>اضغط «اختبر مفتاحي» — سنخبرك بالضبط إن كان هناك خطأ وأين هو.</li>
+              </ol>
+            )}
+            {llmCfg?.anbieter && (
+              <div className="card" style={{ padding: "0.7rem 0.9rem", fontSize: "0.88rem", lineHeight: 1.9 }}>
+                <div>📤 <strong>ما يُرسَل:</strong> نصّ كتابتك ونصّ المهمّة فقط، وحين تطلب التصحيح بنفسك فقط.</div>
+                <div>🏢 <strong>إلى مَن:</strong> {aktiverAnbieter.nameAr} — {aktiverAnbieter.hinweisAr}</div>
+                <label style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", marginTop: "0.5rem", cursor: "pointer" }}>
+                  <input
+                    type="checkbox"
+                    checked={!!llmCfg?.zugestimmt}
+                    onChange={(e) => setLlm({ zugestimmt: e.target.checked })}
+                    style={{ marginTop: "0.35rem" }}
+                  />
+                  <span><strong>أوافق على إرسال نصوص كتابتي إلى المزوّد المختار</strong> عند طلبي التصحيح صراحةً، وأعلم أنّ الناتج ذكاءٌ اصطناعيٌّ قد يخطئ فأراجعه بعينٍ ناقدة.</span>
+                </label>
+              </div>
+            )}
             <button
               className="btn btn-primary"
               style={{ minHeight: "48px" }}
               onClick={async () => {
                 const cfg = progress.settings.llm;
                 if (!cfg?.apiKey) return setMsg("أدخل مفتاح API أولاً.");
+                if (!cfg?.zugestimmt) return setMsg("فعّل موافقة الإرسال أولاً — بلا موافقة لا يغادر أيّ نصّ جهازك.");
                 setMsg("جارٍ الاختبار…");
-                const { llmKorrigieren } = await import("@/lib/grader");
-                const res = await llmKorrigieren(cfg, "Schreibe 2 Sätze über dich.", "Ich habe müde und ich bin arbeiten.");
-                setMsg(res ? "✅ الاتصال يعمل — المدرّس الذكي جاهز في مستشار الكتابة." : "❌ لم ينجح الاتصال — راجع القيم.");
+                const { llmVerbindungTesten } = await import("@/lib/grader");
+                const res = await llmVerbindungTesten(cfg);
+                setMsg(
+                  res === "ok"
+                    ? "✅ الاتصال يعمل — مفتاحك سليم والمدرّس الذكي جاهز."
+                    : res === "schluessel"
+                      ? "❌ المفتاح مرفوض من المزوّد — انسخ المفتاح كاملًا كما هو دون مسافات زائدة، أو أنشئ مفتاحًا جديدًا."
+                      : res === "modell"
+                        ? "❌ اسم النموذج غير موجود عند المزوّد — أعد اختيار المزوّد من القائمة ليُملأ الاسم الافتراضي الصحيح."
+                        : "❌ لا اتصال بالمزوّد — تحقّق من اتصالك بالإنترنت ومن رابط Base URL."
+                );
               }}
             >
-              ▶️ اختبر الاتصال
+              🔌 اختبر مفتاحي
             </button>
           </div>
         </details>

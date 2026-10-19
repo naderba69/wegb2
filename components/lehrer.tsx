@@ -12,6 +12,7 @@ import { getText, getDialogue, getWriting } from "@/lib/content";
 import {
   deepReview,
   llmKorrigieren,
+  llmBereit,
   noteFromPct,
   normalize,
   type LlmKorrektur,
@@ -20,6 +21,7 @@ import { loadProgress } from "@/lib/store";
 import { speakLine, speakAny, stopSpeech } from "@/lib/speech";
 import ExerciseSet from "./exercises";
 import { De } from "./De";
+import { FehlerKartenWahl } from "./fehlerkarten";
 
 // ═══════════════ صحّح الخطأ — تدريب على الصيغ الألمانية ═══════════════
 
@@ -81,7 +83,6 @@ export function FehlerFinden({
       if (changed) setSecs({ ...nx });
     }, 1000);
     return () => clearInterval(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (!items.length) return null;
 
@@ -366,6 +367,10 @@ export function SchreibBerater({ text, taskDe }: { text: string; taskDe: string 
       setErr("لم تُفعَّل خدمة المدرّس الذكي بعد — أضف مفتاح API من الإعدادات (اختياري).");
       return;
     }
+    if (!llmBereit(cfg)) {
+      setErr("اخترتَ مزوّدًا لكنك لم تُفعّل موافقة الإرسال في الإعدادات — بلا موافقتك الصريحة لا يغادر أيّ نصّ جهازك.");
+      return;
+    }
     setBusy(true);
     setErr("");
     const res = await llmKorrigieren(cfg, taskDe, text);
@@ -392,6 +397,9 @@ export function SchreibBerater({ text, taskDe }: { text: string; taskDe: string 
       {err && <div style={{ color: "var(--color-cola)", fontSize: "0.88rem", marginTop: "0.4rem" }}>{err}</div>}
       {llm && (
         <div className="card fadein" style={{ marginTop: "0.6rem", padding: "0.8rem 1rem", background: "var(--color-gold-soft)" }}>
+          <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--color-ink2)", marginBottom: "0.3rem" }}>
+            🤖 تصحيح مولّد بالذكاء الاصطناعي عبر مزوّد خارجي بمفتاحك (R170) — ليس تصحيحًا بشريًا؛ راجعه بعينٍ ناقدة.
+          </div>
           <div style={{ fontWeight: 800 }}>✏️ النص المصحَّح:</div>
           <article className="de" style={{ display: "block", lineHeight: 1.85, margin: "0.3rem 0" }}>{llm.korrigiert}</article>
           {llm.notizen.length > 0 && (
@@ -402,6 +410,45 @@ export function SchreibBerater({ text, taskDe }: { text: string; taskDe: string 
             </ul>
           )}
           {llm.bewertung && <div style={{ marginTop: "0.4rem", fontWeight: 700 }}>🎓 {llm.bewertung}</div>}
+          <VerbesserteFassung cfg={loadProgress().settings.llm ?? null} korrigiert={llm.korrigiert} />
+          <FehlerKartenWahl
+            quelle="LehrerKorrektur (BYOK)"
+            eintraege={deepReview(text, llm.korrigiert).fehler.slice(0, 8).map((f) => ({ falsch: f.wrong, richtig: f.right, ar: f.erklaerungAr, art: f.art }))}
+          />
+          <div style={{ fontSize: "0.76rem", color: "var(--color-ink2)" }}>أزواج الأخطاء أعلاه مشتقّة محليًا بفارق الكلمات بين نصّك والنصّ المصحَّح — اخترتَ وأكّدتَ بنفسك ما يدخل دفترك.</div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** ✨ R299: نسخة بأسلوب أعلى — النموذج يعيد صياغة النص المصحَّح بروابط وتعبيرات أغنى (KI موسوم) */
+function VerbesserteFassung({ cfg, korrigiert }: { cfg: import("@/lib/grader").LlmCfg | null; korrigiert: string }) {
+  const [text, setText] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const start = async () => {
+    if (!cfg || !llmBereit(cfg)) { setErr("فعّل المدرّس الذكي بموافقتك من الإعدادات أولًا."); return; }
+    setBusy(true); setErr("");
+    const { llmGespraech } = await import("@/lib/grader");
+    const res = await llmGespraech(cfg, [
+      { role: "system", content: "Du schreibst denselben Inhalt auf gehobenem B2-Niveau um: reichere Konnektoren (dennoch, folglich, im Gegensatz dazu), präzisere Verben und Kollokationen, gleicher Inhalt, keine neuen Fakten. Antworte nur mit dem umgeschriebenen deutschen Text." },
+      { role: "user", content: korrigiert },
+    ]);
+    setBusy(false);
+    if (res) setText(res.trim());
+    else setErr("تعذّر الوصول إلى المزوّد — حاول ثانية.");
+  };
+  return (
+    <div style={{ marginTop: "0.6rem" }}>
+      <button type="button" className="btn btn-ghost" data-testid="lehrer-verbessert" style={{ minHeight: "44px" }} disabled={busy} onClick={() => void start()}>
+        {busy ? "… النموذج يعيد الصياغة" : "✨ اطلب نسخة بأسلوب أعلى (B2)"}
+      </button>
+      {err && <div style={{ color: "var(--color-cola)", fontSize: "0.84rem", marginTop: "0.3rem" }}>{err}</div>}
+      {text && (
+        <div className="fadein" style={{ marginTop: "0.5rem" }}>
+          <div style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--color-ink2)" }}>🤖 نسخة مولّدة بالذكاء الاصطناعي بأسلوب أعلى — قارِنها بنصّك وتعلّم الروابط، ولا تنسخها في امتحان:</div>
+          <article className="de" style={{ display: "block", lineHeight: 1.85, marginTop: "0.3rem" }}>{text}</article>
         </div>
       )}
     </div>

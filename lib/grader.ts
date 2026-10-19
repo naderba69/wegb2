@@ -361,6 +361,91 @@ export interface LlmCfg {
   baseUrl: string;
   apiKey: string;
   model: string;
+  /** مزوّد مختار من LLM_ANBIETER (أو "custom") — R170 */
+  anbieter?: string;
+  /** موافقة صريحة على إرسال نصّ الكتابة إلى المزوّد الخارجي — بلا موافقة لا إرسال (R170) */
+  zugestimmt?: boolean;
+}
+
+/**
+ * مزوّدو ذكاء اصطناعي اختياريون بمفتاح المتعلّم نفسه (BYOK) — اقتراح المالك R170.
+ * الافتراضي: مطفأ تمامًا؛ التطبيق كامل الوظائف محليًا بدون أيٍّ منها (R24).
+ * لا مفتاح ولا عنوان سرّي في الكود أبدًا — المفتاح يعيش في متصفح المتعلّم فقط.
+ * Gemini هنا عبر واجهته المتوافقة مع OpenAI رسميًا (ai.google.dev/gemini-api/docs/openai)،
+ * فيكفي مسار fetch الوحيد القائم في هذا الملف (K122c) للمزوّدين معًا.
+ */
+export interface LlmAnbieter {
+  id: string;
+  nameAr: string;
+  baseUrl: string;
+  /** نموذج افتراضي مجاني — قابل للتحرير؛ توفّر النماذج المجانية يتغيّر عند المزوّد */
+  modell: string;
+  /** صفحة الحصول على مفتاح مجاني */
+  schluesselUrl: string;
+  /** إفصاح بيانات خاص بالمزوّد يُعرَض قبل الموافقة */
+  hinweisAr: string;
+}
+
+export const LLM_ANBIETER: LlmAnbieter[] = [
+  {
+    id: "openrouter",
+    nameAr: "OpenRouter — نماذج مجانية (:free)",
+    baseUrl: "https://openrouter.ai/api/v1",
+    modell: "meta-llama/llama-3.3-70b-instruct:free",
+    schluesselUrl: "https://openrouter.ai/keys",
+    hinweisAr:
+      "OpenRouter وسيط يوجّه طلبك إلى مستضيف النموذج المجاني الذي تختاره؛ قد تُسجَّل النصوص المرسلة لدى الوسيط/المستضيف وفق سياساتهم، والنماذج المجانية قد تتغيّر أو تُحدّ بمعدّل طلبات.",
+  },
+  {
+    id: "gemini",
+    nameAr: "Google Gemini — الطبقة المجانية",
+    baseUrl: "https://generativelanguage.googleapis.com/v1beta/openai",
+    modell: "gemini-2.5-flash",
+    schluesselUrl: "https://aistudio.google.com/apikey",
+    hinweisAr:
+      "في طبقة Gemini المجانية قد تستخدم Google محتوى واجهة البرمجة (بما فيه نصّك المرسل) لتحسين منتجاتها وفق شروط خدماتها غير المدفوعة — لا ترسل نصوصًا حسّاسة.",
+  },
+  {
+    id: "custom",
+    nameAr: "خدمة مخصّصة متوافقة مع OpenAI",
+    baseUrl: "",
+    modell: "",
+    schluesselUrl: "",
+    hinweisAr: "خدمة تختارها بنفسك؛ أنت المسؤول عن معرفة سياسة بياناتها قبل إرسال أيّ نصّ.",
+  },
+];
+
+/** لا إرسال إلا بمفتاح + موافقة صريحة مسجّلة — بلا أيٍّ منهما يعود null بصمت (سلوك محلي كامل) */
+export function llmBereit(cfg?: LlmCfg | null): boolean {
+  return !!cfg?.apiKey?.trim() && !!cfg?.zugestimmt && !!cfg?.baseUrl?.trim();
+}
+
+/** 🔌 R302/ت3: اختبار اتصال برسائل خطأ مفرّقة (مفتاح/نموذج/شبكة) — نفس مسار fetch الوحيد */
+export type LlmTestErgebnis = "ok" | "leer" | "schluessel" | "modell" | "netz";
+
+export async function llmVerbindungTesten(cfg: LlmCfg): Promise<LlmTestErgebnis> {
+  if (!cfg?.apiKey?.trim() || !cfg?.baseUrl?.trim()) return "leer";
+  try {
+    const base = (cfg.baseUrl || "https://api.openai.com/v1").replace(/\/+$/, "");
+    const res = await fetch(`${base}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: cfg.model || "gpt-4o-mini",
+        temperature: 0,
+        messages: [{ role: "user", content: "Antworte nur: OK" }],
+      }),
+    });
+    if (res.ok) return "ok";
+    if (res.status === 401 || res.status === 403) return "schluessel";
+    if (res.status === 404 || res.status === 400) return "modell";
+    return "netz";
+  } catch {
+    return "netz";
+  }
 }
 
 export interface LlmKorrektur {
@@ -374,7 +459,7 @@ export async function llmKorrigieren(
   aufgabeDe: string,
   text: string
 ): Promise<LlmKorrektur | null> {
-  if (!cfg?.apiKey) return null;
+  if (!llmBereit(cfg)) return null; // R170: مفتاح بلا موافقة = لا إرسال
   try {
     const base = (cfg.baseUrl || "https://api.openai.com/v1").replace(/\/+$/, "");
     const res = await fetch(`${base}/chat/completions`, {
@@ -410,6 +495,108 @@ export async function llmKorrigieren(
       notizen: Array.isArray(p.notizen) ? p.notizen.map(String) : [],
       bewertung: String(p.bewertung ?? ""),
     };
+  } catch {
+    return null;
+  }
+}
+
+/** 🗣️ محادثة حرّة مع رفيق ذكاء اصطناعي (R198) — نفس مسار fetch الوحيد (K122c) وبوابة llmBereit نفسها.
+ *  يعيد نصّ الردّ كما هو؛ التفسير والعرض مسؤولية المستدعي. بلا مفتاح/موافقة: null بصمت. */
+export async function llmGespraech(
+  cfg: LlmCfg,
+  nachrichten: { role: "system" | "user" | "assistant"; content: string }[]
+): Promise<string | null> {
+  if (!llmBereit(cfg)) return null; // R170/R198: مفتاح بلا موافقة = لا إرسال
+  try {
+    const base = (cfg.baseUrl || "https://api.openai.com/v1").replace(/\/+$/, "");
+    const res = await fetch(`${base}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: cfg.model || "gpt-4o-mini",
+        temperature: 0.6,
+        messages: nachrichten,
+      }),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const raw: string = data?.choices?.[0]?.message?.content ?? "";
+    return raw.trim() ? raw : null;
+  } catch {
+    return null;
+  }
+}
+
+/* ── E4/R173: تقييم اختياري بمعايير Goethe الأربعة عبر المدرّس الذكي (BYOK + موافقة فقط) ── */
+
+export interface LlmKriterien {
+  /** اسم المعيار بالألمانية كما في شبكة Goethe */
+  name: string;
+  /** 0..100 */
+  punkte: number;
+  kommentar: string;
+}
+
+export interface LlmKriterienErgebnis {
+  kriterien: LlmKriterien[];
+  fazit: string;
+}
+
+const KRITERIEN_NAMEN = ["Erfüllung", "Wortschatz", "Strukturen", "Kohärenz"];
+
+/**
+ * يطلب من نموذج المتعلّم (مفتاحه وموافقته فقط — R170) تقديرًا بالمعايير الأربعة.
+ * الإخراج JSON صارم يُقرأ دفاعيًا؛ أيّ فشل = null ويبقى التقدير المحلي وحده ظاهرًا.
+ */
+export async function llmKriterien(
+  cfg: LlmCfg,
+  aufgabeDe: string,
+  text: string,
+  zielWorte: number
+): Promise<LlmKriterienErgebnis | null> {
+  if (!llmBereit(cfg)) return null; // مفتاح بلا موافقة = لا إرسال (R170)
+  try {
+    const base = (cfg.baseUrl || "https://api.openai.com/v1").replace(/\/+$/, "");
+    const res = await fetch(`${base}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cfg.apiKey}`,
+      },
+      body: JSON.stringify({
+        model: cfg.model || "gpt-4o-mini",
+        temperature: 0.2,
+        messages: [
+          {
+            role: "system",
+            content:
+              'أنت مصحّح معتمد لامتحانات Goethe للناطقين بالعربية. قيّم نص المتعلم بالمعايير الأربعة الرسمية: Erfüllung (إنجاز المهمة والطول)، Wortschatz (المفردات)، Strukturen (التراكيب)، Kohärenz (التماسك). كل معيار 0-100 نقطة؛ ودون نصف عدد الكلمات المطلوب يكون Erfüllung صفرًا. علّق بالعربية بلطف ودقّة. أعد JSON فقط: {"kriterien":[{"name":"Erfüllung","punkte":0,"kommentar":"..."},{"name":"Wortschatz","punkte":0,"kommentar":"..."},{"name":"Strukturen","punkte":0,"kommentar":"..."},{"name":"Kohärenz","punkte":0,"kommentar":"..."}],"fazit":"جملة ختامية بالعربية"}',
+          },
+          {
+            role: "user",
+            content: `المهمة: ${aufgabeDe}\nعدد الكلمات المطلوب تقريبًا: ${zielWorte}\n\nنص المتعلم:\n${text}`,
+          },
+        ],
+      }),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const raw: string = data?.choices?.[0]?.message?.content ?? "";
+    const m = raw.match(/\{[\s\S]*\}/);
+    if (!m) return null;
+    const p = JSON.parse(m[0]);
+    const liste: LlmKriterien[] = (Array.isArray(p.kriterien) ? p.kriterien : [])
+      .map((k: { name?: unknown; punkte?: unknown; kommentar?: unknown }) => ({
+        name: String(k?.name ?? ""),
+        punkte: Math.max(0, Math.min(100, Math.round(Number(k?.punkte) || 0))),
+        kommentar: String(k?.kommentar ?? ""),
+      }))
+      .filter((k: LlmKriterien) => KRITERIEN_NAMEN.includes(k.name));
+    if (liste.length < 4) return null;
+    return { kriterien: liste, fazit: String(p.fazit ?? "") };
   } catch {
     return null;
   }

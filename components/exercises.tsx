@@ -4,7 +4,8 @@
 // كل هذا يعيش في طبقة التصحيح الموحّدة — فيستفيد كل تمرين في التطبيق دفعةً واحدة.
 import { useEffect, useState } from "react";
 import type { Exercise } from "@/lib/types";
-import { grader, deepReview, konfidenz, diffWoerter } from "@/lib/grader";
+import { grader, deepReview, konfidenz } from "@/lib/grader";
+import { gemischteOptionen } from "@/lib/optionen";
 import { addFehlerNow, logSicherheitNow } from "@/lib/store";
 import { speakAny } from "@/lib/speech";
 import { VertrauensBalken, AntwortDiff } from "./ui";
@@ -20,6 +21,8 @@ export interface ExerciseProgress {
 interface Props {
   items: Exercise[];
   onPoints?: (points: number, max: number) => void;
+  /** نتيجة كلّ تمرين عند احتسابه أوّل مرّة (M1: حجز فواصل الكبسولة المتكيفة). */
+  onErgebnis?: (ex: Exercise, ok: boolean) => void;
   /** حفظ اختياري لحالة المحاولة عند مغادرة الخطوة والعودة إليها. */
   storageKey?: string;
   /** تقرير التقدّم الفعلي، لا مجرد النقر على زرّ. */
@@ -50,7 +53,7 @@ function exerciseStateKey(ex: Exercise, index: number): string {
 }
 
 /** عارض التمارين — تصحيح فوري عبر Grader (قابل للاستبدال بـ LLM) */
-export default function ExerciseSet({ items, onPoints, storageKey, onProgress }: Props) {
+export default function ExerciseSet({ items, onPoints, storageKey, onProgress, onErgebnis }: Props) {
   const [states, setStates] = useState<Record<string, ItemState>>({});
   const [storageReady, setStorageReady] = useState(!storageKey);
 
@@ -115,6 +118,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
         sicher: st?.sicher,
       });
       if (!gezaehlt) onPoints?.(halb ? Math.round(res.maxPoints / 2) : res.points, res.maxPoints);
+      if (!gezaehlt) onErgebnis?.(ex, !halb);
       if (!gezaehlt && ex.type === "mc" && st?.sicher !== undefined) logSicherheitNow({ t: new Date().toISOString(), id: stateId, sicher: st.sicher, correct: !halb });
       return;
     }
@@ -131,6 +135,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
     // ❌ الكشف النهائي: Diff + ثقة + فحص المدرّس + دفتر الأخطاء
     setState(stateId, { response, checked: true, correct: false, versuche, gezaehlt: true, feedback: res.feedbackAr, sicher: st?.sicher });
     if (!gezaehlt) onPoints?.(0, res.maxPoints);
+    if (!gezaehlt) onErgebnis?.(ex, false);
     const ueberkonfident = ex.type === "mc" && st?.sicher === true;
     if (!gezaehlt && ex.type === "mc" && st?.sicher !== undefined) logSicherheitNow({ t: new Date().toISOString(), id: stateId, sicher: st.sicher, correct: false });
     const given = givenOf({ response, checked: true, correct: false, versuche, gezaehlt: true });
@@ -181,6 +186,11 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
       {items.map((ex, i) => {
         const stateId = exerciseStateKey(ex, i);
         const st = states[stateId];
+        // R145: ترتيب عرض مخلوط حتمياً ببذرة السؤال — يكسر انحياز موضع الجواب في البنوك
+        const mcOptionen = ex.type === "mc" && ex.options ? gemischteOptionen(ex.options, `mc:${stateId}`) : null;
+        const tfOptionen = ex.type === "truefalse"
+          ? gemischteOptionen(ex.options && ex.options.length === 2 ? ex.options : ["richtig", "falsch"], `tf:${stateId}`)
+          : null;
         const liveWert = getippt(ex) && st && !st.checked ? konfidenz(givenOf(st), refOf(ex)) : null;
         return (
           <div
@@ -226,7 +236,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
             )}
             {ex.type === "mc" && ex.options && (
               <div style={{ display: "grid", gap: "0.4rem" }}>
-                {ex.options.map((opt) => {
+                {(mcOptionen ?? ex.options).map((opt) => {
                   const selected = st?.response === opt;
                   return (
                     <button
@@ -251,7 +261,7 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress }:
 
             {ex.type === "truefalse" && (
               <div style={{ display: "flex", gap: "0.5rem" }}>
-                {(ex.options && ex.options.length === 2 ? ex.options : ["richtig", "falsch"]).map((opt) => {
+                {(tfOptionen ?? ["richtig", "falsch"]).map((opt) => {
                   const selected = st?.response === opt;
                   return (
                     <button

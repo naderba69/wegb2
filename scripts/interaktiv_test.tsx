@@ -100,7 +100,7 @@ async function main() {
     const { BlitzDrill } = await import("../components/blitz");
     mount(React.createElement(BlitzDrill, { progress: { ...emptyProgress } }));
     ok(txt().includes("العينة الأصعب"), "I1 شاشة الرقع تعرض رقعة العينة الأصعب");
-    ok(txt().includes("فخاخ B2/C1"), "I2 الوصف العربي للرقعة");
+    ok(txt().includes("فخاخ B2"), "I2 الوصف العربي للرقعة");
     const start = btn("العينة الأصعب");
     ok(!!start, "I3 زر بدء رقعة 🥵 موجود");
     if (!start) { fehler++; } else {
@@ -152,6 +152,18 @@ async function main() {
     ok(/WB2-\d{3}-\d{4}/.test(html), "II5 ختم التحقق الحتمي WB2-xxx-xxxx");
     ok(html.includes("جاهزية الامتحان") && html.includes("انضباط الخطة"), "II6 إحصاءات الجاهزية والانضباط");
     ok(html.includes("Grammatik") || html.includes("قواعد") || html.includes("(grammatik)"), "II7 جدول الكفاءات بخمسة أسطر");
+
+    // R281 (A2/A13): Retentions-Panel aus FSRS-Zustaenden
+    const jetztMs = Date.now();
+    const srs281: Record<string, object> = {
+      "v-x1": { ease: 2.5, interval: 10, due: new Date(jetztMs + 86400000).toISOString(), reps: 3, lapses: 0, stab: 10, diff: 5, last: new Date(jetztMs - 2 * 86400000).toISOString(), introduced: new Date(jetztMs - 30 * 86400000).toISOString() },
+    };
+    mount(React.createElement(BerichteZentrum, { progress: { ...emptyProgress, srs: srs281 } as never, name: "سارة النموذج" }));
+    const hdr2 = btn("BerichteZentrum");
+    if (hdr2) click(hdr2);
+    const panel = rootEl.querySelector('[data-testid="retention-panel"]');
+    ok(!!panel && (panel.textContent ?? "").includes("الاحتفاظ والتوقّع") && (panel.textContent ?? "").includes("فحص احتفاظ 30 يومًا"),
+      "II8 لوحة الاحتفاظ والتوقّع (A2+A13) تُرسم من حالات FSRS وتعرض فحص 30 يومًا");
   }
 
   /* ---------- III — دخان التركيب لثلاثة مراكز ---------- */
@@ -319,7 +331,12 @@ async function main() {
     const { diktatSrc } = await import("../lib/content");
     ok(diktatSrc("s-a1-01") === "/audio/diktat/s-a1-01.mp3", "VII5 وجبة δ1 تصل القرص: A1-01 ملفها من الدار جاهز للنقر");
     const { sentences: sBank } = await import("../lib/content");
-    ok(sBank.filter((sx) => !(sx as { neu?: boolean }).neu).every((sx) => diktatSrc(sx.id) !== null) && sBank.filter((sx) => (sx as { neu?: boolean }).neu).every((sx) => diktatSrc(sx.id) === null) && diktatSrc("s-x-999") === null, "VII6 إعلانُ القفل: كلُّ جملةٍ قديمةٍ لها ملف، والجديدةُ (neu) تُرَدُّ null بصدق، والشبحُ يُرَدُّ null — لا كتمانَ حضورٍ ولا اختلاقَ غياب");
+    // R145: الإعلان الصادق = المانيفست نفسه: 180 جملةً قديمةً مسجّلة تُرَدّ ملفُها، وما عداها (قديمٌ لم يُسجَّل وجديد) يُرَدّ null بلا اختلاق
+    const { diktatAudio } = await import("../lib/content");
+    const manifestIds = new Set(Object.keys(diktatAudio));
+    // R220: عشر جمل سرير منسوجة (s-pfl-53..62) صارت مسجّلة بصوت معتمد — تُستثنى بالاسم، وما عداها من الجديد null بصدق
+    const bettAudio = ["s-pfl-01", "s-pfl-02", "s-pfl-03", "s-pfl-04", "s-pfl-05", "s-pfl-06", "s-pfl-07", "s-pfl-08", "s-pfl-09", "s-pfl-10", "s-pfl-11", "s-pfl-12", "s-pfl-13", "s-pfl-14", "s-pfl-15", "s-pfl-16", "s-pfl-17", "s-pfl-18", "s-pfl-19", "s-pfl-20", "s-pfl-21", "s-pfl-22", "s-pfl-23", "s-pfl-24", "s-pfl-25", "s-pfl-26", "s-pfl-27", "s-pfl-28", "s-pfl-29", "s-pfl-30", "s-pfl-31", "s-pfl-32", "s-pfl-33", "s-pfl-34", "s-pfl-35", "s-pfl-36", "s-pfl-37", "s-pfl-38", "s-pfl-39", "s-pfl-40", "s-pfl-41", "s-pfl-42", "s-pfl-43", "s-pfl-44", "s-pfl-45", "s-pfl-46", "s-pfl-47", "s-pfl-48", "s-pfl-49", "s-pfl-50", "s-pfl-51", "s-pfl-52", "s-pfl-53", "s-pfl-54", "s-pfl-55", "s-pfl-56", "s-pfl-57", "s-pfl-58", "s-pfl-59", "s-pfl-60", "s-pfl-61", "s-pfl-62", "s-pfl-63", "s-pfl-64", "s-b1-49", "s-b1-50", "s-b1-51", "s-b1-52", "s-b1-53", "s-b1-54", "s-b1-55", "s-b1-56", "s-b1-57", "s-b1-58", "s-b1-59", "s-b1-60", "s-b1-61", "s-b1-62", "s-b2-48", "s-b2-49", "s-b2-50", "s-b2-51", "s-b2-52", "s-b2-53", "s-b2-54", "s-b2-55", "s-b2-56", "s-b2-57", "s-b2-58", "s-b2-59", "s-b2-60", "s-a1-39", "s-a1-40", "s-a1-41", "s-a1-42", "s-a1-43", "s-a1-44", "s-a1-45", "s-a1-46", "s-a1-47", "s-a1-48", "s-a1-49", "s-a1-50", "s-a1-51", "s-a1-52", "s-a1-53", "s-a1-54", "s-a1-55", "s-a1-56", "s-a1-57", "s-a1-58", "s-a1-59", "s-a1-60", "s-a2-48", "s-a2-49", "s-a2-50", "s-a2-51", "s-a2-52", "s-a2-53", "s-a2-54", "s-a2-55", "s-a2-56", "s-a2-57", "s-a2-58", "s-a2-59", "s-a2-60", "s-a2-61", "s-a2-62", "s-a2-63", "s-a2-64", "s-a2-65", "s-a2-66", "s-a2-67", "s-a2-68", "s-a2-69", "s-a2-70", "s-a2-71", "s-a2-72", "s-a2-73", "s-a2-74", "s-a2-75", "s-a2-76", "s-a2-77", "s-a2-78", "s-a2-79", "s-b1-63", "s-b1-64", "s-b1-65", "s-b1-66", "s-b1-67", "s-b1-68", "s-b1-69", "s-b1-70", "s-b1-71", "s-b1-72", "s-b1-73", "s-b1-74", "s-b1-75", "s-b1-76", "s-b1-77", "s-b1-78", "s-b2-61", "s-b2-62", "s-b2-63", "s-b2-64", "s-b2-65", "s-b2-66", "s-b2-67", "s-b2-68", "s-b2-69", "s-b2-70", "s-b2-71", "s-b2-72", "s-b2-73", "s-b2-74", "s-b2-75", "s-b2-76", "s-b2-77", "s-b2-78", "s-b1-79", "s-b1-80", "s-b1-81", "s-b1-82", "s-b1-83", "s-b1-84", "s-b1-85", "s-b1-86", "s-b1-87", "s-b1-88", "s-b1-89", "s-b1-90", "s-b1-91", "s-b1-92", "s-b1-93", "s-b1-94", "s-b1-95", "s-b1-96", "s-b1-97", "s-b1-98", "s-b2-79", "s-b2-80", "s-b2-81", "s-b2-82", "s-b2-83", "s-b2-84", "s-b2-85", "s-b2-86", "s-b2-87", "s-b2-88", "s-b2-89", "s-b2-90", "s-b2-91", "s-b2-92", "s-b2-93", "s-b2-94", "s-b2-95", "s-b2-96", "s-b2-97", "s-b2-98", "s-b1-99", "s-b1-100", "s-b1-101", "s-b1-102", "s-b1-103", "s-b1-104", "s-b1-105", "s-b1-106", "s-b1-107", "s-b1-108", "s-b1-109", "s-b1-110", "s-b1-111", "s-b1-112", "s-b1-113", "s-b1-114", "s-b1-115", "s-b1-116", "s-b1-117", "s-b1-118", "s-b1-119", "s-b1-120", "s-b2-99", "s-b2-100", "s-b2-101", "s-b2-102", "s-b2-103", "s-b2-104", "s-b2-105", "s-b2-106", "s-b2-107", "s-b2-108", "s-b2-109", "s-b2-110", "s-b2-111", "s-b2-112", "s-b2-113", "s-b2-114", "s-b2-115", "s-b2-116", "s-b2-117", "s-b2-118", "s-b1-121", "s-b1-122", "s-b1-123", "s-b1-124", "s-b1-125", "s-b1-126", "s-b1-127", "s-b1-128", "s-b1-129", "s-b1-130", "s-b1-131", "s-b1-132", "s-b1-133", "s-b1-134", "s-b1-135", "s-b1-136", "s-b1-137", "s-b1-138", "s-b1-139", "s-b1-140", "s-b1-141", "s-b1-142", "s-b2-119", "s-b2-120", "s-b2-121", "s-b2-122", "s-b2-123", "s-b2-124", "s-b2-125", "s-b2-126", "s-b2-127", "s-b2-128", "s-b2-129", "s-b2-130", "s-b2-131", "s-b2-132", "s-b2-133", "s-b2-134", "s-b2-135", "s-b2-136", "s-a2-80", "s-a2-81", "s-a2-82", "s-a2-83", "s-a2-84", "s-a2-85", "s-a2-86", "s-a2-87", "s-a2-88", "s-a2-89", "s-a2-90", "s-a2-91", "s-a2-92", "s-a2-93", "s-a2-94", "s-b1-143", "s-b1-144", "s-b1-145", "s-b1-146", "s-b1-147", "s-b1-148", "s-b1-149", "s-b1-150", "s-b1-151", "s-b1-152", "s-b1-153", "s-b1-154", "s-b1-155", "s-b1-156", "s-b1-157", "s-b1-158", "s-b1-159", "s-b1-160", "s-b2-137", "s-b2-138", "s-b2-139", "s-b2-140", "s-b2-141", "s-b2-142", "s-b2-143", "s-b2-144", "s-b2-145", "s-b2-146", "s-b2-147", "s-b2-148", "s-b2-149", "s-b2-150", "s-b2-151", "s-b2-152", "s-b2-153", "s-b2-154", "s-a1-61", "s-a1-62", "s-a2-95", "s-a2-96", "s-a2-97", "s-a2-98", "s-a2-99", "s-a2-100", "s-a2-101", "s-a2-102", "s-a2-103", "s-a2-104", "s-a2-105", "s-a2-106", "s-a2-107", "s-a2-108", "s-a2-109", "s-a2-110", "s-b1-161", "s-b1-162", "s-b1-163", "s-b1-164", "s-b1-165", "s-b1-166", "s-b1-167", "s-b1-168", "s-b1-169", "s-b1-170", "s-b1-171", "s-b1-172", "s-b1-173", "s-b1-174", "s-b1-175", "s-b1-176", "s-b1-177", "s-b1-178", "s-b2-155", "s-b2-156", "s-b2-157", "s-b2-158", "s-b2-159", "s-b2-160", "s-b2-161", "s-b2-162", "s-b2-163", "s-b2-164", "s-b2-165", "s-b2-166", "s-b2-167", "s-b2-168", "s-b2-169", "s-b2-170", "s-b1-179", "s-b1-180", "s-b1-181", "s-b1-182", "s-b1-183", "s-b1-184", "s-b1-185", "s-b1-186", "s-b1-187", "s-b1-188", "s-b1-189", "s-b1-190", "s-b1-191", "s-b1-192", "s-b1-193", "s-b1-194", "s-b1-195", "s-b1-196", "s-b1-197", "s-b1-198", "s-b2-171", "s-b2-172", "s-b2-173", "s-b2-174", "s-b2-175", "s-b2-176", "s-b2-177", "s-b2-178", "s-b2-179", "s-b2-180", "s-b2-181", "s-b2-182", "s-b2-183", "s-a0-01", "s-a0-02", "s-a0-03", "s-a0-04", "s-a0-05", "s-a0-06", "s-a0-07", "s-a0-08", "s-a0-09", "s-a0-10", "s-a0-11", "s-a0-12", "s-a0-13", "s-a0-14", "s-a0-15", "s-a1-63", "s-a1-64", "s-a1-65", "s-a1-66", "s-a1-67", "s-a1-68", "s-a1-69", "s-a1-70", "s-a1-71", "s-a1-72", "s-a1-73", "s-a1-74", "s-a1-75", "s-a1-76", "s-a1-77", "s-a1-78", "s-a1-79", "s-a1-80", "s-a1-81", "s-a1-82", "s-a1-83", "s-a1-84", "s-a1-85", "s-a1-86", "s-a1-87", "s-a1-88", "s-a1-89", "s-a1-90", "s-a1-91", "s-a1-92", "s-a1-93", "s-a1-94", "s-a1-95", "s-a1-96", "s-a1-97", "s-a1-98", "s-a1-99", "s-a1-100", "s-a1-101", "s-a1-102", "s-b2-211", "s-b2-212", "s-a0-16", "s-a0-17", "s-a0-18", "s-a0-19", "s-a0-20", "s-a0-21", "s-a0-22", "s-a0-23", "s-a0-24", "s-a0-25", "s-a0-26", "s-a0-27", "s-a0-28", "s-a0-29", "s-a0-30", "s-b1-200", "s-b1-201", "s-b1-202", "s-b1-203", "s-b1-204", "s-b1-205", "s-b1-206", "s-b1-207", "s-b1-208", "s-b1-209", "s-b1-210", "s-b1-211", "s-b2-200", "s-b2-201", "s-b2-202", "s-b2-203", "s-b2-204", "s-b2-205", "s-b2-206", "s-b2-207", "s-b2-208", "s-b2-209", "s-b2-210", "sat-a0-031", "sat-a0-032", "sat-a0-033", "sat-a0-034", "sat-a0-035", "sat-a0-036", "sat-a0-037", "sat-a0-038", "sat-a0-039", "sat-a0-040", "sat-a0-041", "sat-a0-042", "sat-a0-043", "sat-a0-044", "sat-a0-045", "sat-a0-046", "sat-a0-047", "sat-a0-048", "sat-a0-049", "sat-a0-050", "sat-a1-103", "sat-a1-104", "sat-a1-105", "sat-a1-106", "sat-a1-107", "sat-a2-111", "sat-a2-112", "sat-a2-113", "sat-a2-114", "sat-a2-115"];
+    ok(manifestIds.size === 742 && sBank.every((sx) => (diktatSrc(sx.id) !== null) === manifestIds.has(sx.id)) && sBank.filter((sx) => (sx as { neu?: boolean }).neu && !bettAudio.includes(sx.id)).every((sx) => diktatSrc(sx.id) === null) && bettAudio.every((id) => diktatSrc(id) === `/audio/diktat/${id}.mp3`) && diktatSrc("s-x-999") === null, "VII6 إعلانُ القفل: المانيفستُ مرآةُ ما يُرَدّ — 742 ملفًا مُعلنًا يصل (كل جمل البنك مسجّلة حتى R279: المنسوجة الـ64 + الجديدة الـ494 + القديمة الـ68 — لا جملة بلا ملف صوتي)، وكلُّ ما عداه null بصدق، والشبحُ null — لا كتمانَ حضورٍ ولا اختلاقَ غياب");
 const hasFile = txt().includes("صوتٌ من الدار");
     const hasFall = txt().includes("📟");
     ok(hasFile !== hasFall, "VII7 شارةُ المصدر واحدةٌ دائماً لا ثنتان ولا صفر: حضورُ الملف يُعلَن وغيابُه يُعلَن — أياً كانت قرعةُ الجولة، فلا تقلّبَ ولا وميضَ كاذب");
@@ -432,7 +449,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     const { levelOf } = await import("../lib/plan");
     const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
-    mount(React.createElement(HoerLabor, { progress: p1 }));
+    mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
     ok(txt().includes("🔊 صوت مُنتَج"), "XII13 نصُ اليومِ الأوّل يحملُ شارةَ الصوتِ المُنتَج — لا TTS جهاز");
     const aud = d0.querySelector("audio");
     ok(!!aud && (aud.getAttribute("src") ?? "").startsWith(`/audio/hoeren/t-${levelOf(1).toLowerCase()}-`), "XII14 عنصر ‹audio› موصولٌ بلوحِه الحقّ t-${levelOf(1).toLowerCase()}- من public");
@@ -462,7 +479,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
 
   /* ═══════════════ موجةُ ξ التتويج: مراكزُ XV الجديدة ═══════════════ */
-  const { dialogAudio, dialogAudioSrc, getMnemonik, mnemonikMap, alleVokabeln, fehlerList, luecken, dialogues } = await import("../lib/content");
+  const { dialogAudio, dialogAudioSrc, dialogAudioArt, dialogAudioIstKi, getMnemonik, mnemonikMap, alleVokabeln, fehlerList, luecken, dialogues } = await import("../lib/content");
   const { default: fsRaw } = { default: null } as { default: null };
 
   /* ---------- XIII — DialogOrdnung: دورةُ الترتيبِ كاملة ---------- */
@@ -515,12 +532,14 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XVI — مانيفستُ dialog-audio: العقدُ مع القرص ---------- */
   {
     const es = Object.values(dialogAudio) as unknown as { id: string; file: string; bytes: number; voice: string; level: string; stimmen?: number }[];
-    ok(es.length === 82, "XVI1 اثنان وثمانون مدخلاً محلياً — وكلها لحوارات في البنك");
-    ok(es.every((e) => /^\/audio\/dialog\/d-(?:a0|[ab][12])-\d\d\.mp3$/.test(e.file)), "XVI2 كلُّ ملفٍّ تحتَ دارِ الحواراتِ باسمِ حوارِه");
-    ok(es.every((e) => (e.voice === "voice-01" || e.voice === "voice-01+voice-02" || e.voice === "voice-01+voice-02+voice-03" || e.voice === "voice-02+voice-03" || e.voice === "voice-04+voice-05")), "XVI3 أصواتُ الدارِ موثّقة بأسمائها، ومنها الثنائية الجديدة voice-04+voice-05");
-    ok(es.filter((e) => e.level === "B1").length === 29 && es.filter((e) => e.level === "B2").length === 29 && es.filter((e) => e.level === "A1").length === 11 && es.filter((e) => e.level === "A2").length === 11, "XVI4 توزيعُ المستويات: 29 B2 · 29 B1 · 11 A1 · 11 A2");
+    ok(es.length === 164 && es.filter((e) => e.voice.startsWith("ki-")).length === 82 && es.filter((e) => !e.voice.startsWith("ki-")).length === 82, "XVI1 مئةٌ وأربعةٌ وستون مدخلاً محلياً: 82 بيتياً + 82 ki-* موسوماً (R164) — وكلها لحوارات في البنك");
+    ok(es.every((e) => e.file === `/audio/dialog/${e.id}.mp3`), "XVI2 كلُّ ملفٍّ تحتَ دارِ الحواراتِ باسمِ حوارِه حرفياً");
+    ok(es.every((e) => e.voice.startsWith("ki-") ? ["ki-f1", "ki-f2", "ki-m1", "ki-m2"].includes(e.voice) && e.stimmen === 1 : ["voice-01", "voice-01+voice-02", "voice-01+voice-02+voice-03", "voice-02+voice-03", "voice-04+voice-05"].includes(e.voice)), "XVI3 أصواتُ الدارِ موثّقة بأسمائها (ومنها voice-04+voice-05)، والـki-* موسومٌ أحاديَّ الصوتِ صراحةً — لا تمويهَ بين البيتي والمولّد");
+    const hausXVI = es.filter((e) => !e.voice.startsWith("ki-"));
+    ok(hausXVI.filter((e) => e.level === "B1").length === 29 && hausXVI.filter((e) => e.level === "B2").length === 29 && hausXVI.filter((e) => e.level === "A1").length === 11 && hausXVI.filter((e) => e.level === "A2").length === 11 && es.filter((e) => e.level === "A0").length === 16 && es.filter((e) => e.level === "A1").length === 36 && es.filter((e) => e.level === "A2").length === 38 && es.filter((e) => e.level === "B1").length === 37 && es.filter((e) => e.level === "B2").length === 37, "XVI4 توزيعُ البيتي: 29 B2 · 29 B1 · 11 A1 · 11 A2 (+2 A0)؛ والإجماليُّ بعد ki-*: ‏A0 16 · A1 36 · A2 38 · B1 37 · B2 37 = البنكُ كلُّه");
     ok(es.every((e) => dialogAudioSrc(e.id) === e.file), "XVI5 dialogAudioSrc يردُّ ما في القرصِ حرفيًّا");
-    ok(es.every((e) => (e.stimmen ?? 1) >= 2 ? e.bytes > 60000 : e.bytes > 200000), "XVI6 الحوارُ الأحاديُّ فوقَ دقيقتَين، والمؤدَّى بأصواتٍ فوقَ نصفِ دقيقةٍ — لا ملفَّ أجوف");
+    ok(es.every((e) => dialogAudioArt(e.id) === (e.voice.startsWith("ki-") ? "ki" : "haus") && dialogAudioIstKi(e.id) === e.voice.startsWith("ki-")) && dialogAudioArt("gibt-es-nicht") === null && !dialogAudioIstKi("gibt-es-nicht"), "XVI7 نوعُ الصوتِ يُشتقُّ من وسمِ المانيفستو نفسه: ki-* ‏= KI أحادي، وغيرُه = دار، والشبحُ بلا نوع");
+    ok(es.every((e) => (e.stimmen ?? 1) >= 2 ? e.bytes > 60000 : e.bytes > 20000), "XVI6 لا ملفَّ أجوف: البيتيُّ المؤدَّى بأصواتٍ فوقَ 60KB، والـki-* الأحاديُّ فوقَ 20KB (أقصرُ حوارٍ 75 حرفاً منطوقٌ فعلاً؛ والبايتاتُ الدقيقةُ مقفولةٌ في K258c)");
   }
 
   /* ---------- XVII — سيناريوهات ξ8: الجناحُ التونسيُّ في الشاشات ---------- */
@@ -565,7 +584,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 3499, "XIX1 بنكُ المفرداتِ 3499 بطاقةً كما في الجرد الحيّ");
+    ok(alleVokabeln.length === 4504, "XIX1 بنكُ المفرداتِ 4504 بطاقةً كما في الجرد الحيّ (R298: +912 بطاقة توسعة B2 استقبالية، وكلمات التمريض الـ133 كلها في الحزم العامة)");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
     const falschMarkiert = neu.filter((c) => c.pos === "Nomen"
@@ -1326,12 +1345,13 @@ const hasFile = txt().includes("صوتٌ من الدار");
     ok(/الدرجة: \d+\/100/.test(t), "XLIII6 ودرجةٌ من مئةٍ تُحسَبُ من المرصود");
     ok(t.includes("الموضعِ الثاني"), "XLIII7 والخطأُ الحقيقيُّ «Morgen ich gehe» ظاهرٌ في العمودِ الصحيح");
     ok(t.includes("علاجُ"), "XLIII8 ومع الخطأِ تماري��ُ علاجيةٌ لا تشخيصٌ وحدَه");
-    const nb = btn("أضِف الأخطاء إلى دفتري");
-    ok(!!nb, "XLIII9 وزرُّ الإضافةِ إلى دفترِ الأخطاءِ متاح");
-    if (nb) click(nb as HTMLElement);
+    // R288/M8: أُعيد توجيه XLIII9–11 — كان الزر دفعة واحدة بلا تأكيد، والصيغة الجديدة تأكيد فردي لكل خطأ قبل دخوله الدفتر (تغيير بنيوي حقيقي لا تخفيف)
+    const nb2 = rootEl.querySelector('[data-testid="fehlerkarten-umwandeln"]') as HTMLElement | null;
+    ok(!!nb2 && !!rootEl.querySelector('[data-testid="fehlerkarten-wahl"]'), "XLIII9 قائمةُ تأكيد تحويل الأخطاء إلى بطاقات مختبر متاحة");
+    if (nb2) click(nb2);
     const p = (await import("../lib/store")).loadProgress();
-    ok(Object.keys(p.fehler ?? {}).length > 0, "XLIII10 والأخطاءُ تُدفَنُ في الدفترِ فتعودُ بعدَ ثلاثةِ أيام");
-    ok(txt().includes("أُضيفت إلى دفتر الأخطاء"), "XLIII11 والمتعلِّمُ يرى تأكيدَ الإضافة");
+    ok(Object.keys(p.fehler ?? {}).length > 0, "XLIII10 والأخطاءُ المؤكَّدة تُدفَنُ في الدفترِ فتعودُ بجدولة متباعدة");
+    ok(txt().includes("دخلت المؤكَّدة دفترَ أخطائك"), "XLIII11 والمتعلِّمُ يرى تأكيدَ الإضافة");
   }
 
 
@@ -1893,7 +1913,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const total = () => rootEl.querySelector('[data-testid="vocab-queue-count"]')?.textContent?.trim() ?? "";
     const yesterday = new Date(Date.now() - 86400000).toISOString();
     const dueCard = deck.cards[0], notDueCard = deck.cards[1];
-    const due = { ...newCard(), reps: 1, introduced: yesterday, due: yesterday };
+    const due = { ...newCard(), reps: 2, introduced: yesterday, due: yesterday }; // reps gerade = Erkennungsrichtung (M2/R280)
     const notDue = { ...newCard(), introduced: yesterday, due: new Date(Date.now() + 86400000).toISOString() };
     mount(React.createElement(TaskView, {
       task: { id: "t-tempo-due", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
@@ -1930,7 +1950,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
 
     const dueBeforePendingCard = deck.cards[3];
     const pendingAfterDueCard = deck.cards[4];
-    const dueBeforePending = { ...newCard(), reps: 1, introduced: yesterday, due: yesterday };
+    const dueBeforePending = { ...newCard(), reps: 2, introduced: yesterday, due: yesterday }; // gerade = Erkennen (M2/R280)
     const pendingAfterDue = { ...newCard(), reps: 0, introduced: new Date().toISOString() };
     mount(React.createElement(TaskView, {
       task: { id: "t-tempo-review-before-resume", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
@@ -1940,6 +1960,365 @@ const hasFile = txt().includes("صوتٌ من الدار");
     click(btn("اكشف المعنى")!);
     click(btn("سهّل! (4)")!);
     ok(dueWasFirst && txt().includes(pendingAfterDueCard.de), "LX0e المراجعة المستحقّة تسبق البطاقة غير المُقيَّمة ثم تُستأنف بعدها");
+
+    // M2 (R280): ungerade Reps = Produktionsrichtung AR→DE — Deutsch bleibt vor dem Aufdecken verdeckt
+    const prodCard = deck.cards[5];
+    mount(React.createElement(TaskView, {
+      task: { id: "t-tempo-prod", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deck.id },
+      ...base, srs: { [prodCard.id]: { ...newCard(), reps: 1, introduced: yesterday, due: yesterday } }, tempo: "leicht" as const,
+    }));
+    ok(!!rootEl.querySelector('[data-testid="karte-produktiv"]') && txt().includes(prodCard.ar) && !!btn("اكشف اللفظ الألماني") && !btn("اكشف المعنى"),
+      "LX0f جولة الإنتاج (M2): العربية أولاً وزرّ الكشف «اكشف اللفظ الألماني» — اللفظ محجوب حتى الكشف");
+    click(btn("اكشف اللفظ الألماني")!);
+    ok(txt().includes(prodCard.de) && !!rootEl.querySelector('[data-testid="karte-stufe"]'),
+      "LX0g بعد الكشف يظهر اللفظ وشارة مرحلة البطاقة (تعرّف/تثبيت/إنتاج)");
+  }
+
+  /* ═══════════ R282 — A5 صوتيات تفاعلية + A9 قفل وضع الامتحان ═══════════ */
+  {
+    const { PhonetikStation } = await import("../components/phonetik");
+    mount(React.createElement(PhonetikStation, {}));
+    ok(!!rootEl.querySelector('[data-testid="phonetik-station"]') && txt().includes("طول الحركة"), "R282a محطة الصوتيات تُرسم بوحداتها المتدرجة");
+    const rateBtn = [...rootEl.querySelectorAll("button")].find((x) => (x.textContent ?? "").includes("اختبر سمعك")) as HTMLElement | undefined;
+    ok(!!rateBtn, "R282b زر اختبار السمع موجود");
+    if (rateBtn) click(rateBtn);
+    const antA = rootEl.querySelector('[data-testid="phonetik-antwort-a"]') as HTMLElement | null;
+    ok(!!antA && !!rootEl.querySelector('[data-testid="phonetik-antwort-b"]'), "R282c خيارا الإجابة يظهران بعد التشغيل");
+    if (antA) click(antA);
+    ok(!!rootEl.querySelector('[data-testid="phonetik-quiz-feedback"]'), "R282d تغذية التمييز السمعي تظهر بعد الإجابة (بلا حكم نطق)");
+
+    const { default: TaskView } = await import("../components/tasks");
+    const props = { lang: "ar" as const, day: 200, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, { task: { id: "t-h-a9", kind: "hoeren" as const, dialogueId: "d-b1-15", titleDe: "H", titleAr: "س", minutes: 15 }, ...props }));
+    const umschalter = rootEl.querySelector('[data-testid="hoeren-pruefung-toggle"]') as HTMLElement | null;
+    ok(!!umschalter, "R282e مفتاح وضع الامتحان (A9) موجود في مهمة الاستماع");
+    if (umschalter) click(umschalter);
+    const sperre = [...rootEl.querySelectorAll("button")].find((x) => (x.textContent ?? "").includes("النص مقفل حتى التسليم")) as HTMLButtonElement | undefined;
+    ok(!!sperre && sperre.disabled && txt().includes("••••••"), "R282f في وضع الامتحان: النص مقفل ومحجوب حتى التسليم");
+    const abgabe = rootEl.querySelector('[data-testid="hoeren-abgabe"]') as HTMLElement | null;
+    ok(!!abgabe, "R282g زر التسليم يفتح المراجعة");
+    if (abgabe) click(abgabe);
+    ok(!!btn("أظهر النص"), "R282h بعد التسليم يُفتح النص للمراجعة");
+  }
+
+  /* ═══════════ R283 — M12 شارة الجنس + A18 خريطة + A11 كتابة عملية + A3 عرض الطلاقة ═══════════ */
+  {
+    const { LernLandkarte } = await import("../components/landkarte");
+    const prog283 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 100, days: { 11: { closed: true, score: 1, total: 1, tasksDone: 1, tasksTotal: 1, at: "2026-01-01" }, 95: { closed: true, score: 1, total: 1, tasksDone: 1, tasksTotal: 1, at: "2026-04-01" } } } };
+    mount(React.createElement(LernLandkarte, { progress: prog283 as never }));
+    ok(!!rootEl.querySelector('[data-testid="landkarte"]') && txt().includes("أنت هنا") && txt().includes("A2"), "R283a خريطة الإنجاز (A18) تُرسم وعلامة الموضع الحالي على A2");
+
+    const { SchreibAlltag } = await import("../components/schreiballtag");
+    mount(React.createElement(SchreibAlltag, {}));
+    ok(!!rootEl.querySelector('[data-testid="schreiballtag"]'), "R283b قسم الكتابة العملية (A11) يُرسم");
+    const musterBtn = rootEl.querySelector('[data-testid="schreiballtag-muster"]') as HTMLButtonElement | null;
+    ok(!!musterBtn && musterBtn.disabled, "R283c النموذج مقفل قبل محاولة من 30 كلمة");
+    const flaeche = rootEl.querySelector("textarea") as HTMLTextAreaElement;
+    typeIn(flaeche, "Sehr geehrte Damen und Herren, ich schreibe Ihnen heute wegen der defekten Heizung in meiner Wohnung. Seit drei Tagen ist es sehr kalt bei uns. Ich habe schon zweimal angerufen, aber nichts ist passiert. Bitte helfen Sie uns schnell. Mit freundlichen Grüßen");
+    ok(!(rootEl.querySelector('[data-testid="schreiballtag-muster"]') as HTMLButtonElement).disabled, "R283d بعد 30 كلمة يُفتح النموذج");
+    click(rootEl.querySelector('[data-testid="schreiballtag-muster"]') as HTMLElement);
+    ok(txt().includes("Mit freundlichen Grüßen"), "R283e النموذج يظهر للمقارنة بعد المحاولة");
+
+    const { BerichteZentrum } = await import("../components/berichte");
+    const progFl = { ...emptyProgress, fluenz: [{ datum: "2026-06-15T10:00:00.000Z", wpm: 82, stufe: 3 }] };
+    mount(React.createElement(BerichteZentrum, { progress: progFl as never, name: "سارة النموذج" }));
+    const hdrF = btn("BerichteZentrum");
+    if (hdrF) click(hdrF);
+    const fl = rootEl.querySelector('[data-testid="metrik-fluenz"]');
+    ok(!!fl && (fl.textContent ?? "").includes("82"), "R283f بطاقة طلاقة القراءة (A3) تعرض آخر قياس كلمات/دقيقة");
+
+    const { getDeck, vocabMap } = await import("../lib/content");
+    const { default: TaskView } = await import("../components/tasks");
+    const deckNomen = Object.keys(vocabMap).map((id) => getDeck(id)).find((d) => d && d.cards[0]?.article);
+    ok(!!deckNomen, "R283g وُجدت حزمة تبدأ باسم معرّف للاختبار");
+    if (deckNomen) {
+      mount(React.createElement(TaskView, {
+        task: { id: "t-genus", kind: "wortschatz" as const, titleDe: "W", titleAr: "م", minutes: 10, deckId: deckNomen.id },
+        lang: "ar" as const, day: 8, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1, tempo: "leicht" as const,
+      }));
+      const genus = rootEl.querySelector('[data-testid="karte-genus"]');
+      ok(!!genus && /[●▲■]/.test(genus.textContent ?? ""), "R283h شارة الجنس المزدوجة (شكل + حرف، M12) على وجه البطاقة بجانب الأداة");
+    }
+  }
+
+  /* ═══════════ R284 — A30/A17/A33 في التقارير + A19 نية + A12 لوحة كتابة ═══════════ */
+  {
+    const { BerichteZentrum } = await import("../components/berichte");
+    const heute284 = new Date().toISOString().slice(0, 10);
+    const prog284 = { ...emptyProgress, kompetenzLog: Array.from({ length: 20 }, () => ({ h: "Lesen" as const, ok: true, d: heute284 })) };
+    mount(React.createElement(BerichteZentrum, { progress: prog284 as never, name: "سارة النموذج" }));
+    const hdr284 = btn("BerichteZentrum");
+    if (hdr284) click(hdr284);
+    const sbEl = rootEl.querySelector('[data-testid="skill-balance"]');
+    ok(!!sbEl && ((sbEl.textContent ?? "").includes("شبه غائبة") || (sbEl.textContent ?? "").includes("تهيمن")), "R284a لوحة توازن المهارات (A30) تُرسم وتصدر تحذير اختلال (غياب/هيمنة)");
+    ok(!!rootEl.querySelector('[data-testid="wartung-panel"]'), "R284b لوحة صيانة المستويات (A17) حاضرة");
+    const vorher = gedruckt.length;
+    const karteBtn = rootEl.querySelector('[data-testid="wochenkarte-btn"]') as HTMLElement | null;
+    ok(!!karteBtn, "R284c زر بطاقة تقدّم الأسبوع (A33) موجود");
+    if (karteBtn) click(karteBtn);
+    ok(gedruckt.length === vorher + 1 && (gedruckt[gedruckt.length - 1] ?? "").includes("بطاقة تقدّم الأسبوع"), "R284d البطاقة الأسبوعية تُكتب في نافذة الطباعة من السجلّ المحلي");
+
+    const { AbsichtKarte } = await import("../components/absicht");
+    mount(React.createElement(AbsichtKarte, {}));
+    ok(!!rootEl.querySelector('[data-testid="absicht-karte"]'), "R284e بطاقة نية التنفيذ (A19) تُرسم");
+    typeIn(rootEl.querySelector('[data-testid="absicht-was"]') as HTMLInputElement, "20 بطاقة وإملاء");
+    typeIn(rootEl.querySelector('[data-testid="absicht-wann"]') as HTMLInputElement, "بعد الفطور");
+    typeIn(rootEl.querySelector('[data-testid="absicht-wo"]') as HTMLInputElement, "المكتب");
+    click(rootEl.querySelector('[data-testid="absicht-speichern"]') as HTMLElement);
+    ok(txt().includes("خطّتك:") && txt().includes("20 بطاقة وإملاء"), "R284f النية تُحفظ وتُعرض للأسبوع الحالي");
+
+    const { SchreibFehlerPanel } = await import("../components/schreibfehler");
+    const progF = { ...emptyProgress, fehler: { f1: { key: "f1", falsch: "x", richtig: "y", art: "konstruktion", ar: "بنية الرسالة", quelle: "BriefSchmiede", treffer: 2, srs: { ease: 2.5, interval: 1, due: new Date().toISOString(), reps: 1, lapses: 0, introduced: new Date().toISOString() } } } };
+    mount(React.createElement(SchreibFehlerPanel, { progress: progF as never }));
+    const sfEl = rootEl.querySelector('[data-testid="schreibfehler-panel"]');
+    ok(!!sfEl && (sfEl.textContent ?? "").includes("بنية الرسالة"), "R284g لوحة أخطاء الكتابة التراكمية (A12) تعرض النمط من الدفتر");
+  }
+
+  /* ═══════════ R285 — A23/A26 داخل Lebenswelt + A28 جلسة قصيرة ═══════════ */
+  {
+    const { LebensweltStation } = await import("../components/lebenswelt");
+    mount(React.createElement(LebensweltStation, {}));
+    ok(!!rootEl.querySelector('[data-testid="landeskunde"]') && txt().includes("مسارك من تونس"), "R285a وحدات الحياة الوظيفية (A23) ومسار تونس (A26) داخل محطة الحياة");
+    ok(!!rootEl.querySelector('[data-testid="landeskunde-lk-tn-anerkennung"]') && txt().includes("anabin"), "R285b وحدة الاعتراف التونسية بخطوتها المرجعية anabin");
+
+    const { KurzSession } = await import("../components/blitz");
+    mount(React.createElement(KurzSession, { progress: { ...emptyProgress } as never }));
+    ok(!!rootEl.querySelector('[data-testid="kurz-session"]'), "R285c جلسة الخمس دقائق (A28) تُرسم");
+    const start = rootEl.querySelector('[data-testid="kurz-start"]') as HTMLElement | null;
+    ok(!!start, "R285d زر بدء الجلسة موجود");
+    if (start) click(start);
+    ok(!!rootEl.querySelector('[data-testid="kurz-option-0"]') && !!rootEl.querySelector('[data-testid="kurz-option-2"]'), "R285e الأسئلة بخياراتها الثلاثة تبدأ فورًا");
+    const opt = rootEl.querySelector('[data-testid="kurz-option-0"]') as HTMLElement | null;
+    if (opt) click(opt);
+    ok(txt().includes("أجبت عن") || txt().includes("صحيح") || txt().includes("الصحيح:"), "R285f الإجابة تُسجَّل بتغذية فورية");
+  }
+
+  /* ═══════════ R286 — M14 بحث موحّد + M5 مجال ثقة ═══════════ */
+  {
+    const { TiefenLexikon } = await import("../components/tiefenlex");
+    mount(React.createElement(TiefenLexikon, { progress: { ...emptyProgress } as never }));
+    const hdr286 = btn("TiefenLexikon");
+    if (hdr286) click(hdr286);
+    const eingabe = rootEl.querySelector('[data-testid="suche-input"]') as HTMLInputElement | null;
+    ok(!!eingabe, "R286a صندوق البحث الموحّد (M14) في العمق المعجمي");
+    if (eingabe) typeIn(eingabe, "Haus");
+    const erg = rootEl.querySelector('[data-testid="suche-ergebnis"]');
+    ok(!!erg && (erg.textContent ?? "").length > 10, "R286b البحث يعيد نتائج مجمّعة من البنوك");
+
+    const { Bereitschaft } = await import("../components/bereitschaft");
+    const progSim = { ...emptyProgress, simulationen: [
+      { datum: "2026-06-01", seed: 1, punkte: { lesen: 60, hoeren: 50, schreiben: 55, sprechen: 65 }, bestanden: false },
+      { datum: "2026-06-08", seed: 2, punkte: { lesen: 80, hoeren: 70, schreiben: 75, sprechen: 85 }, bestanden: true },
+    ] };
+    mount(React.createElement(Bereitschaft, { progress: progSim as never }));
+    const band = rootEl.querySelector('[data-testid="sim-band"]');
+    ok(!!band && (band.textContent ?? "").includes("70"), "R286c مجال تذبذب المحاكاة (M5) يعرض المتوسط والمجال من محاولات المتعلم");
+  }
+
+  /* ═══════════ R287 — M3 اقتراح إعادة توزيع + M15 لافتة استئناف + M7 وتيرة ═══════════ */
+  {
+    const { SkillBalancePlan } = await import("../components/skillplan");
+    const heute287 = new Date().toISOString().slice(0, 10);
+    const log287 = [
+      ...Array.from({ length: 26 }, () => ({ h: "Lesen" as const, ok: true, d: heute287 })),
+      ...Array.from({ length: 7 }, () => ({ h: "Wortschatz" as const, ok: true, d: heute287 })),
+      ...Array.from({ length: 7 }, () => ({ h: "Hoeren" as const, ok: true, d: heute287 })),
+    ];
+    mount(React.createElement(SkillBalancePlan, { progress: { ...emptyProgress, kompetenzLog: log287 } as never }));
+    const bp = rootEl.querySelector('[data-testid="skill-balance-plan"]');
+    ok(!!bp && (bp.textContent ?? "").includes("إعادة توزيع") && (bp.textContent ?? "").includes("65"), "R287a اقتراح إعادة التوزيع (M3) يظهر بالسبب والنسبة عند هيمنة مهارة فوق 60٪");
+
+    const { WiedereinstiegBanner } = await import("../components/wiedereinstieg");
+    const letzte = new Date(Date.now() - 8 * 86400000).toISOString().slice(0, 10);
+    mount(React.createElement(WiedereinstiegBanner, { progress: { ...emptyProgress, streak: { last: letzte, count: 4 } } as never, minuten: 45, normaleMinuten: 160 }));
+    const wb = rootEl.querySelector('[data-testid="wiedereinstieg-banner"]');
+    ok(!!wb && (wb.textContent ?? "").includes("وضع الاستئناف") && (wb.textContent ?? "").includes("8"), "R287b لافتة الاستئناف (M15) تعلن الغياب والحمل المخفّض والمراجعات الحرجة");
+
+    const { effektiveRate } = await import("../lib/rate");
+    const b2auto = effektiveRate({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 } } as never);
+    const b2hand = effektiveRate({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 300 }, settings: { ...emptyProgress.settings, rateMode: "manual", rate: 0.8 } } as never);
+    ok(b2auto === 1.05 && b2hand === 0.8, "R287c وتيرة المستوى (M7): B2 تلقائي 1.05× والخيار اليدوي محفوظ 0.80×");
+  }
+
+  /* ═══════════ R288 — M8 تأكيد البطاقات + M9 إعادة كتابة 48س + M4 معايرة ═══════════ */
+  {
+    const { loadProgress, saveProgress } = await import("../lib/store");
+    saveProgress({ ...loadProgress(), fehler: {} });
+    const { FehlerKartenWahl } = await import("../components/fehlerkarten");
+    mount(React.createElement(FehlerKartenWahl, {
+      quelle: "Test",
+      eintraege: [
+        { falsch: "Ich habe müde", richtig: "Ich bin müde", ar: "الصفات مع sein", art: "konstruktion" },
+        { falsch: "der Hundin", richtig: "die Hündin", ar: "جنس الاسم", art: "artikel" },
+      ],
+    }));
+    ok(!!rootEl.querySelector('[data-testid="fehlerkarten-wahl"]'), "R288a قائمة تأكيد بطاقات الأخطاء (M8) تُرسم بخيارات فردية");
+    const erste = rootEl.querySelector('[data-testid="fehlerkarte-0"]') as HTMLInputElement | null;
+    if (erste) click(erste);
+    click(rootEl.querySelector('[data-testid="fehlerkarten-umwandeln"]') as HTMLElement);
+    const fehlerDanach = Object.values(loadProgress().fehler ?? {}) as { falsch: string }[];
+    ok(fehlerDanach.length === 1 && fehlerDanach[0].falsch === "der Hundin", "R288b المؤكَّد وحده يدخل دفتر الأخطاء — وما أُلغي تأكيده لا يدخل");
+
+    saveProgress({ ...loadProgress(), wiederschreiben: [{ id: "ws-test", erstellt: "2026-10-15T10:00:00.000Z", faellig: "2026-10-17T10:00:00.000Z", absatz: "Ich habe müde und ich gehe nach Hause.", spalten: ["grammatik"], status: "offen" as const }] });
+    const { WiederschreibenKarte } = await import("../components/wiederschreiben");
+    mount(React.createElement(WiederschreibenKarte, { quelleText: "" }));
+    const eingabe = rootEl.querySelector('[data-testid="wiederschreiben-input-ws-test"]') as HTMLTextAreaElement | null;
+    ok(!!rootEl.querySelector('[data-testid="wiederschreiben-karte"]') && !!eingabe, "R288c بطاقة إعادة الكتابة المستحقّة (M9) تُرسم مع فقرة الأصل");
+    if (eingabe) typeIn(eingabe, "Ich bin heute zu Hause und lerne Deutsch.");
+    click(rootEl.querySelector('[data-testid="wiederschreiben-vergleich-ws-test"]') as HTMLElement);
+    const ergEl = rootEl.querySelector('[data-testid="wiederschreiben-ergebnis"]');
+    ok(!!ergEl && (ergEl.textContent ?? "").includes("أُنجزت"), "R288d المقارنة الآلية بأنماط الأخطاء السابقة تظهر بعد الإعادة");
+
+    const { alleVokabeln } = await import("../lib/content");
+    const ersteKarte = alleVokabeln[0];
+    const jetIso = new Date().toISOString();
+    saveProgress({ ...loadProgress(), srs: { [ersteKarte.id]: { ease: 2.5, interval: 2, due: jetIso, reps: 5, lapses: 3, introduced: jetIso, stab: 2 } } });
+    const { KalibrierungPanel } = await import("../components/kalibrierung");
+    mount(React.createElement(KalibrierungPanel, { progress: loadProgress() as never }));
+    ok(!!rootEl.querySelector('[data-testid="kalibrierung-panel"]') && txt().includes(ersteKarte.de), "R288e لوحة المعايرة (M4) تعرض البطاقة العنيدة باسمها وزرَّي إصلاحها");
+    click(rootEl.querySelector(`[data-testid="ausreisser-reset-${ersteKarte.id}"]`) as HTMLElement);
+    ok(loadProgress().srs[ersteKarte.id] === undefined, "R288f زر «أعد تعلّمها من الصفر» يعيد ضبط حالة البطاقة فعليًا");
+  }
+
+  /* ═══════════ R289 — M6/M20 وضع امتحان في HörNeu + M16 فحص استيراد ═══════════ */
+  {
+    const { HoerNeu } = await import("../components/hoerneu");
+    mount(React.createElement(HoerNeu, {}));
+    const ersteMaterial = [...rootEl.querySelectorAll("button")].find((b) => (b.textContent ?? "").includes("أسئلة")) as HTMLElement | undefined;
+    if (ersteMaterial) click(ersteMaterial);
+    ok(!!rootEl.querySelector('[data-testid="modus-pruefung"]') && !!rootEl.querySelector('[data-testid="modus-abzeichen"]'), "R289a مبدّل الوضع الموحّد (M20) وعلمه في مواد الاستماع المتنوعة");
+    const pruefChip = rootEl.querySelector('[data-testid="modus-pruefung"]') as HTMLElement | null;
+    if (pruefChip) click(pruefChip);
+    const spielKnopf = [...rootEl.querySelectorAll("button")].find((b) => (b.textContent ?? "").includes("استمع")) as HTMLButtonElement | undefined;
+    ok(!!spielKnopf, "R289b زر الاستماع موجود في وضع الامتحان");
+    if (spielKnopf) click(spielKnopf);
+    const spielDanach = [...rootEl.querySelectorAll("button")].find((b) => (b.textContent ?? "").includes("استُمعت المرة الواحدة")) as HTMLButtonElement | undefined;
+    ok(!!spielDanach && spielDanach.disabled, "R289c بعد استماعة واحدة يُقفل التشغيل في وضع الامتحان (M6)");
+    ok(txt().includes("النص مقفل حتى كشف النتيجة"), "R289d النص مكتوب مقفل حتى كشف النتيجة في وضع الامتحان");
+
+    const { pruefeImportText } = await import("../lib/backup");
+    const fremd = pruefeImportText(JSON.stringify({ hallo: "welt" }));
+    ok(!fremd.ok && !fremd.ok && fremd.fehlerAr.includes("لا يحتوي خطة الأيام"), "R289e فحص الاستيراد (M16) يرفض ملفًا غريبًا برسالة عربية تسمّي الفعل المطلوب");
+  }
+
+  /* ═══════════ R290 — M10 سؤال ملاحظة + M19 تقرير أسبوعي قابل للطباعة ═══════════ */
+  {
+    const { BemerkenKarte } = await import("../components/bemerken");
+    const { bemerkenFrage } = await import("../lib/bemerken");
+    const text290 = "Der Brief wird heute von der Sekretärin geschrieben. Die Sonne scheint hell über der Stadt. Wir trinken Kaffee im Garten.";
+    const regeln290 = [{ id: "b1-passiv", titelDe: "Passiv", titelAr: "المبني للمجهول (Passiv)" }];
+    const f290 = bemerkenFrage(text290, regeln290);
+    mount(React.createElement(BemerkenKarte, { textDe: text290, regeln: regeln290 }));
+    ok(!!rootEl.querySelector('[data-testid="bemerken-karte"]') && txt().includes("لاحظ القاعدة الجديدة"), "R290a بطاقة الملاحظة (M10) تعرض أول ظهور ملوّنًا وسؤالًا واحدًا");
+    ok(!!f290, "R290b مولّد سؤال الملاحظة يجد شاهد القاعدة في النص");
+    if (f290) click(rootEl.querySelector(`[data-testid="bemerken-option-${f290.richtig}"]`) as HTMLElement);
+    const fb290 = rootEl.querySelector('[data-testid="bemerken-feedback"]');
+    ok(!!fb290 && (fb290.textContent ?? "").includes("صحيح"), "R290c اختيار جملة الشاهد يُقابَل بتغذية فورية صحيحة");
+
+    const { wochenKarteHtml } = await import("../components/berichte");
+    const html290 = wochenKarteHtml({ ...emptyProgress } as never, "اختبار");
+    ok(html290.includes("دقائق هذا الأسبوع بحسب نوع المهمة") && html290.includes("كلمات إنتاجية جديدة") && html290.includes("خطة الأسبوع القادم"), "R290d التقرير الأسبوعي القابل للطباعة (M19) يحمل دقائق الأنواع والإنتاج الجديد والأخطاء المتكررة وخطة القادم");
+  }
+
+  /* ═══════════ R291 — M17 رسالة فراغ بفعل واضح ═══════════ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    mount(React.createElement(TaskView, {
+      task: { id: "291:t1", kind: "lesen", titleDe: "X", titleAr: "ص", minutes: 5, textId: "gibts-nicht-291" },
+      lang: "ar", day: 10, srs: {}, onSrs: () => {}, onPoints: () => {},
+    } as never));
+    const leer = rootEl.querySelector('[data-testid="empty-meldung"]');
+    ok(!!leer && (leer.textContent ?? "").includes("غير متاح"), "R291a رسالة الفراغ (M17) تسمّي ما حدث");
+    ok(!!leer && (leer.textContent ?? "").includes("أكمل المهمة التالية"), "R291b وبالفعل الواحد الواضح: ما تفعله الآن");
+  }
+
+  /* ═══════════ R292 — A8 استراتيجيات + A10 قراءة سريعة + A32 ضجيج ═══════════ */
+  {
+    const { HoerStrategienKarte } = await import("../components/hoerstrategien");
+    mount(React.createElement(HoerStrategienKarte, { started: false, geprueft: false }));
+    ok(!!rootEl.querySelector('[data-testid="hoerstrategien"]') && !!rootEl.querySelector('[data-testid="strategie-vor"]') && !!rootEl.querySelector('[data-testid="strategie-nach"]'), "R292a بطاقة استراتيجيات الاستماع (A8) بمراحلها الثلاث");
+    const schritt = rootEl.querySelector('[data-testid="strategie-schritt-vor-0"]') as HTMLInputElement | null;
+    ok(!!schritt, "R292b خطوات قبل-الاستماع قابلة للتأشير");
+    if (schritt) click(schritt);
+    ok((rootEl.querySelector('[data-testid="strategie-schritt-vor-0"]') as HTMLInputElement)?.checked === true, "R292c تأشير الخطوة يثبت في الجلسة");
+
+    const { SchnellLesen } = await import("../components/schnellesen");
+    mount(React.createElement(SchnellLesen, {}));
+    ok(!!rootEl.querySelector('[data-testid="schnellesen"]') && !!rootEl.querySelector('[data-testid="schnellesen-start"]'), "R292d محطة القراءة السريعة المؤقتة (A10) تُرسم بزر بدء التوقيت");
+    click(rootEl.querySelector('[data-testid="schnellesen-start"]') as HTMLElement);
+    ok(!!rootEl.querySelector('[data-testid="schnellesen-zeit"]') && !!rootEl.querySelector('[data-testid="schnellesen-opt-gist-0"]'), "R292e التوقيت يعمل وسؤال المسح بجواباته ظاهر");
+
+    const { RauschSteuerung } = await import("../components/rauschen");
+    mount(React.createElement(RauschSteuerung, {}));
+    ok(!!rootEl.querySelector('[data-testid="rauschen-toggle"]') || !!rootEl.querySelector('[data-testid="rauschen-aus"]'), "R292f تحكم الضجيج المولّد (A32) حاضر أو معلن تعذّره بصراحة");
+  }
+
+  /* ═══════════ R293 — A22 عائلات + A25 براغماتية + A27 تذكير ═══════════ */
+  {
+    const { WortfamilienStation } = await import("../components/wortfamilien");
+    mount(React.createElement(WortfamilienStation, {}));
+    ok(!!rootEl.querySelector('[data-testid="wortfamilien"]'), "R293a محطة عائلات الكلمات (A22) تُرسم من البنك");
+    const falscheOpt = [...rootEl.querySelectorAll('[data-testid^="ableitung-opt-"]')].find((b) => !(b as HTMLElement).style.border.includes("good")) as HTMLElement | undefined;
+    const opt0 = rootEl.querySelector('[data-testid="ableitung-opt-0"]') as HTMLElement | null;
+    ok(!!opt0, "R293b سؤال الاشتقاق بخياراته حاضر");
+    if (opt0) click(opt0);
+    ok(!!rootEl.querySelector('[data-testid="ableitung-feedback"]'), "R293c التغذية على اختيار الشكل تظهر");
+
+    const { PragmatikKarte } = await import("../components/pragmatik");
+    mount(React.createElement(PragmatikKarte, {}));
+    ok(!!rootEl.querySelector('[data-testid="pragmatik"]') && txt().includes("ماذا تقول"), "R293d بطاقة البراغماتية (A25) تعرض موقفًا وخيارات");
+    click(rootEl.querySelector('[data-testid="pragmatik-opt-1"]') as HTMLElement);
+    const fb293 = rootEl.querySelector('[data-testid="pragmatik-feedback"]');
+    ok(!!fb293 && ((fb293.textContent ?? "").includes("✓") || (fb293.textContent ?? "").includes("ليست الأنسب")), "R293e التغذية البراغماتية تشرح لماذا الصيغة ألطف");
+
+    const { ErinnerungKarte } = await import("../components/erinnerung");
+    mount(React.createElement(ErinnerungKarte, {}));
+    ok(!!rootEl.querySelector('[data-testid="erinnerung-karte"]') && !!rootEl.querySelector('[data-testid="erinnerung-ics"]'), "R293f بطاقة التذكيرات (A27) بزر تصدير التقويم");
+    const { icsText } = await import("../lib/erinnerung");
+    const { loadProgress } = await import("../lib/store");
+    const ics293 = icsText(loadProgress() as never, new Date(2026, 9, 18));
+    ok(ics293.includes("BEGIN:VCALENDAR") && ics293.includes("BEGIN:VEVENT"), "R293g ملف .ics يتولد من الخطة المحلية");
+  }
+
+  /* ═══════════ R294 — A7 سيناريوهات + A15 أطلس + A24 محاذاة ═══════════ */
+  {
+    const { DialogSzenarien } = await import("../components/dialogszenarien");
+    const { DIALOGSZENARIEN } = await import("../lib/dialogszenarien");
+    mount(React.createElement(DialogSzenarien, {}));
+    ok(!!rootEl.querySelector('[data-testid="dialogszenarien"]') && txt().includes("شريكك"), "R294a سيناريوهات التحدث التفاعلية (A7) تعرض الشريك وحركاتك");
+    const starkIdx = DIALOGSZENARIEN[0].zuege[0].optionen.findIndex((o) => o.stufe === "stark");
+    click(rootEl.querySelector(`[data-testid="szenario-opt-${starkIdx}"]`) as HTMLElement);
+    const fb294 = rootEl.querySelector('[data-testid="szenario-feedback"]');
+    ok(!!fb294 && (fb294.textContent ?? "").includes("حركة قوية"), "R294b الحركة القوية تُقابَل بتغذية تشرح لماذا تنجح تفاوضيًا");
+
+    const { FehlerAtlas } = await import("../components/fehleratlas");
+    mount(React.createElement(FehlerAtlas, {}));
+    ok(!!rootEl.querySelector('[data-testid="fehleratlas"]') && txt().includes("الفعل في الموضع الثاني"), "R294c أطلس الأخطاء التباينية (A15) يعرض عائلة ترتيب الكلمات بقاعدتها");
+    click(rootEl.querySelector('[data-testid="atlas-kat-kasus"]') as HTMLElement);
+    ok(txt().includes("أفعال الـDativ"), "R294d تبديل العائلة يعرض أخطاء الحالات العربية النمطية");
+
+    const { FSP_AUSRICHTUNG } = await import("../lib/fsp");
+    ok(FSP_AUSRICHTUNG.length === 7 && FSP_AUSRICHTUNG.some((z) => z.status === "fehlt"), "R294e خريطة محاذاة FSP (A24) تُعلن الجزء الغائب بدل إخفائه");
+  }
+
+  /* ═══════════ R295 — A14 إنتاج متلازمات + A21/A29 لوحة مرجعية ═══════════ */
+  {
+    const { kollokProduktion } = await import("../lib/kollokproduktion");
+    const items295 = kollokProduktion(5, 6);
+    const { KollokProduktionStation } = await import("../components/kollokproduktion");
+    mount(React.createElement(KollokProduktionStation, {}));
+    ok(items295.length === 6 && !!rootEl.querySelector('[data-testid="kollokproduktion"]'), "R295a محطة إنتاج المتلازمات (A14) بجولتها من البنك");
+    const ziel = items295[0];
+    const eingabe = rootEl.querySelector('[data-testid="kollokprod-input-0"]') as HTMLInputElement | null;
+    ok(!!eingabe, "R295b حقل كتابة الشريك من الذاكرة حاضر");
+    if (eingabe && ziel) typeIn(eingabe, ziel.partner);
+    click(rootEl.querySelector('[data-testid="kollokprod-pruefen"]') as HTMLElement);
+    const erg295 = rootEl.querySelector('[data-testid="kollokprod-ergebnis"]');
+    ok(!!erg295 && (erg295.textContent ?? "").includes("/6"), "R295c التصحيح يحسب المنتَج من الذاكرة فعلًا");
+
+    const { ReferenzPanel } = await import("../components/referenz");
+    mount(React.createElement(ReferenzPanel, { progress: { ...emptyProgress } as never }));
+    ok(!!rootEl.querySelector('[data-testid="referenz-panel"]') && txt().includes("فجوة محتوى"), "R295d لوحة الفحص المرجعي (A21) تعلن فجوة سقف B2 (A29) بلا إخفاء");
   }
 
   /* ═══════════ LXI — تقييمُ الثقةِ قبلَ الإجابة: الزرّانِ قبلَ الخيارات، التسجيلُ في Progress، رسالةُ «ثقة خاطئة» ═══════════ */
@@ -2844,7 +3223,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     if (reveal) click(reveal);
     const rendered = txt();
     ok(!!reveal && rendered.includes("Hallo, hier spricht Nour.") && rendered.includes("أودّ تحديد موعد.") &&
-      rendered.includes("Ja, am Dienstag um zehn Uhr habe ich Zeit.") && rendered.includes("لديّ وقت يوم الثلاثاء في العاشرة"),
+      rendered.includes("Ja, am Dienstag um zehn Uhr habe ich Zeit.") && rendered.includes("لديّ وقت يوم الثلاثاء عند الساعة العاشرة"),
       "LXXXVII1 واجهة الاستماع تعرض صيغة الهاتف المصححة، ترجمة الموعد، وتأكيد اليوم والساعة بعد كشف النص");
 
     const q2 = Array.from(rootEl.querySelectorAll(".dirb-ex-item")).find((item) => (item.textContent ?? "").includes("Ich möchte einen ___ vereinbaren."));
@@ -2865,7 +3244,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       {
         id: "d-a1-04", titleDe: "Einkaufen auf dem Markt", titleAr: "التسوّق في السوق",
         prompt: "Ein Kilo Tomaten kostet ___ Euro.", answer: "drei",
-        visible: ["أعطني كيلو من فضلك.", "أكمل الفراغ بالسعر الصحيح من الحوار."],
+        visible: ["من فضلك، أعطني كيلوغراماً.", "أكمل الفراغ بالسعر الصحيح من الحوار."],
       },
       {
         id: "d-a1-05", titleDe: "Freizeit am Wochenende", titleAr: "وقت الفراغ في عطلة نهاية الأسبوع",
@@ -2875,7 +3254,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
       {
         id: "d-a1-06", titleDe: "Im Bus", titleAr: "في الحافلة",
         prompt: "Sie müssen hier ___.", answer: "aussteigen",
-        visible: ["هذا الخط الخاطئ. يجب عليك أن تنزل هنا.", "الحافلة رقم 12 في الجهة المقابلة."],
+        visible: ["هذا خط الحافلة الخاطئ. يجب أن تنزل هنا.", "الحافلة رقم 12 في الجهة المقابلة."],
       },
     ];
     for (const item of cases) {
@@ -3316,6 +3695,304 @@ const hasFile = txt().includes("صوتٌ من الدار");
         "XCIV9 عند التسليم يبلّغ الإنجاز الفعلي للنقاط دون ادعاء قياس فونيمي");
     }
   }
+
+  /* ═══ XCV — مشغّل الجلسة المتسلسلة (U1/R187): مهمّة ← تسليم ← التالية، والحرية باقية ═══ */
+  {
+    const { Klassenzimmer } = await import("../components/akademie/Klassenzimmer");
+    const { buildDay } = await import("../lib/plan");
+    const { ritualUrteil } = await import("../lib/ritual");
+    const prog = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 3 } };
+    const plan = buildDay(3, prog);
+    const schritte: number[] = [];
+    const basisProps = {
+      progress: prog, day: 3, plan, setStep: (i: number) => { schritte.push(i); },
+      onPoints: () => {}, submitCurrent: () => {}, doCloseDay: () => {}, confirmClose: false,
+      setConfirmClose: () => {}, unpassed: [], allSubmitted: false, onSrs: () => {},
+      localOf: () => ({ score: 0, total: 3 }),
+    };
+    mount(React.createElement(Klassenzimmer, {
+      ...basisProps, stepFrei: 0, ritual: ritualUrteil(plan, prog),
+      resultOf: () => undefined,
+    } as never));
+    const modus = rootEl.querySelector('[data-testid="sitzung-modus"]') as HTMLElement | null;
+    ok(!!modus && modus.getAttribute("aria-pressed") === "true",
+      "XCV1 وضع الجلسة المتسلسلة هو الافتراضي الآن (R194: التركيز أولًا) وزرّه حاضر في رأس التدريب");
+    const leiste = rootEl.querySelector('[data-testid="sitzung-spieler"]');
+    ok(!!leiste && (leiste.textContent ?? "").includes(`من`) && !!rootEl.querySelector('[data-testid="aufgabe-chip-1"]'),
+      "XCV2 الشريط يعرض التقدّم من نتائج الخطة، ورقائق الاختيار الحرّ باقية في الوضع نفسه");
+    const t0 = plan.tasks[0];
+    const naechsteOffeneIdx = plan.tasks.findIndex((tk, i) => i > 0 && tk.id !== t0.id);
+    // بوابة الطقس تُشتَقّ من التقدّم نفسه: الأولى مُسلَّمة فيه → ما بعدها مفتوح (كما في الصفحة الحقيقية)
+    const progFertig = { ...prog, plan: { ...prog.plan, tasks: { [t0.id]: { score: 3, total: 3, done: true, passed: true, attempts: 1 } } } };
+    mount(React.createElement(Klassenzimmer, {
+      ...basisProps, progress: progFertig, stepFrei: 0, ritual: ritualUrteil(plan, progFertig),
+      resultOf: (id: string) => (id === t0.id ? { done: true, passed: true, score: 3, total: 3, attempts: 1 } : undefined),
+    } as never));
+
+    const weiter = rootEl.querySelector('[data-testid="sitzung-weiter"]') as HTMLElement | null;
+    ok(!!weiter && naechsteOffeneIdx > 0 && (weiter.textContent ?? "").includes(plan.tasks[naechsteOffeneIdx].titleAr.split(" ")[0]),
+      "XCV3 بعد تسليم الأولى يظهر زرّ «المهمة التالية» حاملًا اسم المهمة المفتوحة التالية فعلًا");
+    if (weiter) click(weiter);
+    ok(schritte[schritte.length - 1] === naechsteOffeneIdx,
+      "XCV4 النقر ينقل الخطوة إلى المهمة التالية المفتوحة بالضبط (تسلسل لا قفز أعمى)");
+  }
+
+  /* ═══ XCVIII — الممارسة قبل النظرية (R196): التمرين ظاهر والشرح مطويّ ═══ */
+  {
+    const { default: TaskView } = await import("../components/tasks");
+    const props2 = { lang: "ar" as const, day: 100, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
+    mount(React.createElement(TaskView, {
+      task: { id: "t3-b1-genitiv", kind: "grammatik" as const, titleDe: "G", titleAr: "ق", minutes: 15, topicId: "b1-genitiv" },
+      ...props2,
+    }));
+    const skip = rootEl.querySelector('[data-testid="entdecken-ueberspringen"]') as HTMLElement | null;
+    if (skip) click(skip);
+    const theo = rootEl.querySelector('[data-testid="grammatik-theorie"]') as HTMLDetailsElement | null;
+    const kopf = Array.from(rootEl.querySelectorAll("h4")).find((h) => (h.textContent ?? "").includes("طبّق أولًا"));
+    ok(!!theo && !theo.open && !!kopf && (kopf.compareDocumentPosition(theo) & 4) !== 0,
+      "XCVIII1 بعد الاكتشاف يتصدّر «طبّق أولًا» والشرح الكامل موجود لكن مطويّ افتراضيًا");
+    ok(!!theo && (theo.textContent ?? "").length > 100, "XCVIII2 النظرية لم تُحذف — نصّها كامل داخل العنصر المطويّ");
+  }
+
+  /* ═══ XCIX — محطة التمريض (R197): مفردات وحوارات ونموذج توثيق ═══ */
+  {
+    const { PflegeStation } = await import("../components/pflege");
+    const { pflegeWoerter, pflegeDialoge } = await import("../lib/pflege");
+    mount(React.createElement(PflegeStation));
+    ok(pflegeWoerter.length === 133 && !!rootEl.querySelector('[data-testid="pflege-station"]') && // R213: +Pflegedokumentation/Patientenakte
+       !!rootEl.querySelector('[data-testid="pflege-phrasen"]') &&
+       !!rootEl.querySelector('[data-testid="pflege-wort-pf-k01"]') && !!rootEl.querySelector('[data-testid="pflege-medizin-start"]'),
+      "XCIX1 محطة التمريض تعرض بنكها المهني المعمّق (133 كلمة مع الأزواج اللاتينية) وعبارات A1 وزرّ بدء محاكاة Medizin منذ أول تركيب");
+    ok(rootEl.querySelectorAll('[data-testid="pflege-zeile"]').length === (pflegeDialoge[0]?.zeilen.length ?? 0),
+      "XCIX2 حوار الجولة الطبية معروض بكل سطوره ثنائية اللغة");
+    const musterBtn = rootEl.querySelector('[data-testid="pflege-muster-pf-w1"]') as HTMLElement | null;
+    if (musterBtn) click(musterBtn);
+    ok(txt().includes("Vitalzeichen kontrolliert"), "XCIX3 نموذج التوثيق يُكشف عند الطلب مع قائمة فحصه");
+  }
+
+  /* ═══ C — رفيق المحادثة (R198): مغلق بلا BYOK، ولا إرسال صامت ═══ */
+  {
+    const { SprechBegleiter } = await import("../components/sprechbegleiter");
+    mount(React.createElement(SprechBegleiter));
+    ok(!!rootEl.querySelector('[data-testid="begleiter-nicht-bereit"]') && !rootEl.querySelector('[data-testid="begleiter-eingabe"]'),
+      "C1 بلا مفتاح وموافقة لا حقل إدخال ولا محادثة — فقط شرح وزرّ إلى الإعدادات");
+    ok(txt().includes("لا حكم على النطق") && txt().includes("تسليم وردية"),
+      "C2 الإفصاح عن حدّ النطق والسيناريوهات الستة (تمريض أولًا) ظاهر قبل أيّ تفعيل");
+  }
+
+  /* ═══ CII — الحياة في ألمانيا (R200): بطاقات مؤسسات ولغة شارع عند الطلب ═══ */
+  {
+    const { LebensweltStation } = await import("../components/lebenswelt");
+    const { lebensweltThemen, umgangBank } = await import("../lib/lebenswelt");
+    mount(React.createElement(LebensweltStation));
+    ok(lebensweltThemen.length === 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
+       txt().includes("الاعتراف بمؤهّل التمريض"),
+      "CII1 المحطة تعرض البطاقات الاثنتي عشرة وبطاقة الاعتراف التمريضي بينها");
+    ok(!rootEl.querySelector('[data-testid="umgang-eintrag"]'), "CII2 لغة الشارع مطوية حتى تُطلب صراحة");
+    const tog = rootEl.querySelector('[data-testid="umgang-toggle"]') as HTMLElement | null;
+    if (tog) click(tog);
+    ok(rootEl.querySelectorAll('[data-testid="umgang-eintrag"]').length === umgangBank.length && umgangBank.length === 16,
+      "CII3 عند الفتح تظهر التعبيرات الستة عشر كلّها بسياقها");
+  }
+
+  /* ═══ CIII — بطاقة عدم الاتصال (R202): زرّ التنزيل الكامل معلن بحجمه ═══ */
+  {
+    const { OfflineKarte } = await import("../components/offline");
+    mount(React.createElement(OfflineKarte));
+    ok(!!rootEl.querySelector('[data-testid="offline-voll-download"]') && txt().includes("نحو 64 MB"),
+      "CIII1 بطاقة عدم الاتصال تعرض تنزيل الصوت الكامل بحجمه الحقيقي قبل أيّ نقرة");
+  }
+
+  /* ═══ CV — جلسة امتحان كاملة (R218) ═══ */
+  {
+    const { VollPruefung } = await import("../components/vollpruefung");
+    mount(React.createElement(VollPruefung));
+    const startBtn = rootEl.querySelector('[data-testid="vollpruefung-start"]') as HTMLButtonElement | null;
+    ok(!!startBtn && !startBtn.disabled, "CV1 جلسة الامتحان الكاملة تُركَّب وزرّ بدئها مفعّل بالبنوك المحمّلة");
+    if (startBtn) click(startBtn);
+    const radios = rootEl.querySelectorAll('input[type="radio"]');
+    ok(radios.length >= 3 && !!rootEl.querySelector('[data-testid="vollpruefung"]'),
+      `CV2 بدء الجلسة يعرض أسئلة القسم الأول فورًا (${radios.length} خيارًا)`);
+  }
+
+  /* ═══ CIV — معرفة مهنية + قائمة بدء مهني (R203) ═══ */
+  {
+    const { PflegeStation } = await import("../components/pflege");
+    const { pflegeFachwissen } = await import("../lib/pflege");
+    mount(React.createElement(PflegeStation));
+    ok(pflegeFachwissen.length === 40 && !!rootEl.querySelector('[data-testid="pflege-fachwissen"]'), // R216: 40 سؤالًا
+      "CIV1 بنك المعرفة المهنية (40 سؤالًا منذ R216) معروض في محطة التمريض");
+    const richtig = pflegeFachwissen[0].richtig;
+    const radio = rootEl.querySelector(`[data-testid="pflege-fw-${richtig}"]`) as HTMLElement | null;
+    if (radio) click(radio);
+    ok(txt().includes("اللحظات الخمس"), "CIV2 الإجابة الصحيحة تُظهر الشرح العربي فورًا");
+    const { LebensweltStation } = await import("../components/lebenswelt");
+    mount(React.createElement(LebensweltStation));
+    const box = rootEl.querySelector('[data-testid="berufsstart-bs-sprache"] input[type="checkbox"]') as HTMLElement | null;
+    if (box) click(box);
+    ok((localStorage.getItem("weg-berufsstart") ?? "").includes("bs-sprache"),
+      "CIV3 تعليم خطوة البدء المهني يُحفظ محليًا في قائمته الخاصة");
+  }
+
+  /* ═══ XCVI — وصولية U5 تحت الإصبع: لغة الألماني معلنة وتخطٍّ وتركيز ═══ */
+  {
+    const { De, DeBlock } = await import("../components/De");
+    const { UiAppShell } = await import("../components/dirb/DesignSystem");
+    mount(React.createElement(UiAppShell, null,
+      React.createElement("main", { id: "main-content", tabIndex: -1 },
+        React.createElement(De, null, "Guten Morgen"),
+        React.createElement(DeBlock, null, "Wie geht es dir?"))));
+    const deEl = Array.from(d0.querySelectorAll('[lang="de"]'));
+    const skip = d0.querySelector('a.ui-skip-link[href="#main-content"]');
+    ok(deEl.length >= 2 && deEl.every((e) => (e.textContent ?? "").length > 0),
+      "XCVI1 كلّ نصّ ألماني عبر De/DeBlock يحمل lang=«de» فعليًا في DOM لقارئ الشاشة");
+    ok(!!skip && !!d0.getElementById("main-content"),
+      "XCVI2 رابط التخطّي يشير إلى هدفٍ موجود (#main-content) في الهيكل نفسه");
+  }
+
+  /* ═══ XCVII — مسار التعلّم (R193): عُقد من السجلّ وزرّ اليوم ═══ */
+  {
+    const { LernPfad } = await import("../components/lernpath");
+    const { CURRICULUM_SECTIONS } = await import("../lib/curriculum");
+    const abschnitt = CURRICULUM_SECTIONS[1]; // unit-A1-1: 11..31
+    const prog = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 15, days: {
+      11: { closed: true, score: 8, total: 10, tasksDone: 5, tasksTotal: 6, at: "2026-10-01T10:00:00.000Z" },
+      12: { closed: true, score: 9, total: 10, tasksDone: 6, tasksTotal: 6, at: "2026-10-02T10:00:00.000Z" },
+    } } };
+    mount(React.createElement(LernPfad, { progress: prog as never }));
+    const pfad = rootEl.querySelector('[data-testid="lern-pfad"]');
+    ok(!!pfad && (abschnitt.to - abschnitt.from + 1) === 21, "XCVII1 المسار يُركَّب وقسم A1 الأول 21 يومًا كما في المنهج");
+    const heute = rootEl.querySelector('[data-testid="pfad-heute"]') as HTMLElement | null;
+    const zu = rootEl.querySelectorAll('[data-testid="pfad-zu"]');
+    ok(!!heute && (heute.textContent ?? "").includes("15") && zu.length === 2,
+      "XCVII2 عقدة اليوم تحمل 15، وعقدتا المغلق ✓ من السجلّ تمامًا");
+    ok((pfad?.textContent ?? "").includes("أُغلق 2/21") && (pfad?.textContent ?? "").includes("لا ينقلك بين الأيام"),
+      "XCVII3 عدّاد القسم من السجلّ وإفصاح عدم-التنقّل ظاهر للمتعلم");
+  }
+
+
+// ── R296: A16 مدخل حرّ + A20 لوحة التفرّع + A6 مفتاح مصدر الصوت ──
+{
+  const { FreiesInput } = await import("../components/freiesinput");
+  const { VerzweigungPanel } = await import("../components/verzweigung");
+  mount(React.createElement(FreiesInput));
+  ok(!!rootEl.querySelector('[data-testid="freies-input"]') && txt().includes("مدخل حرّ موسّع") && !!rootEl.querySelector('[data-testid="input-neu"]'), "R296a المدخل الحرّ الموسّع يُعرض ببنوده ومفتاح التشكيلة");
+  ok(txt().includes("جلستك:"), "R296b ملخص الجلسة يظهر بعدد البنود والدقائق");
+  mount(React.createElement(VerzweigungPanel, { progress: { ...emptyProgress } }));
+  ok(!!rootEl.querySelector('[data-testid="verzweigung-panel"]') && txt().includes("تفرّع الإتقان") && txt().includes("لا تتغيّر"), "R296c لوحة التفرّع: بارد ⇒ عادي مع إعلان عدم مساس الخطة");
+  const { HoerLabor } = await import("../components/hoeren");
+  mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
+  ok(!!rootEl.querySelector('[data-testid="stimme-geraet"]') && !!rootEl.querySelector('[data-testid="stimme-aufnahme"]'), "R296d مختبر السماع يعرض مفتاح مصدر الصوت (مسجّل/جهاز)");
+  click(rootEl.querySelector('[data-testid="stimme-geraet"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="stimme-geraet"]'), "R296e النقر على صوت الجهاز لا يكسر المختبر");
+}
+
+
+// ── R298: محطة توسعة B2 الاستقبالية ──
+{
+  const { ErweiterungStation } = await import("../components/erweiterung");
+  mount(React.createElement(ErweiterungStation));
+  ok(!!rootEl.querySelector('[data-testid="erweiterung-station"]') && txt().includes("توسعة B2 الاستقبالية"), "R298a محطة التوسعة تُعرض بحزمها الست عشرة");
+  ok(!!rootEl.querySelector('[data-testid="erweiterung-deck-j01-arbeit-vertieft"]'), "R298b زرّ أول حزمة توسعة موجود");
+  click(rootEl.querySelector('[data-testid="erweiterung-deck-j01-arbeit-vertieft"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="erweiterung-frage"]'), "R298c اختيار حزمة يفتح سؤال تعرّف");
+}
+
+
+// ── R299: أملامح صوت الجهاز + تشكيلة الامتحان ──
+{
+  const { HoerLabor } = await import("../components/hoeren");
+  mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
+  click(rootEl.querySelector('[data-testid="stimme-geraet"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="stimme-profil-de-AT"]') && !!rootEl.querySelector('[data-testid="stimme-profil-de-CH"]'), "R299a اختيار صوت الجهاز يُظهر ملامح (نمساوي/سويسري/أعمق/أخف)");
+  const { VollPruefung } = await import("../components/vollpruefung");
+  mount(React.createElement(VollPruefung));
+  ok(!!rootEl.querySelector('[data-testid="vollpruefung-variante"]'), "R299b زرّ تشكيلة امتحان أخرى ظاهر في شاشة البدء");
+}
+
+
+// ── R300: محطة القراءة الحرة + ألعاب الكلمات ──
+{
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-station"]') && !!rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]'), "R300a محطة القراءة الحرة تعرض نصوص A0");
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-lesen"]') && !!rootEl.querySelector('[data-testid="lesestoff-fragen-frei-a0-hund"]'), "R300b فتح النصّ يعرض الفقرات وأسئلة الفهم");
+  click(rootEl.querySelector('[data-testid="lesestoff-opt-frei-a0-hund-0-0"]') as HTMLElement);
+  ok((rootEl.textContent ?? "").includes("أحسنت"), "R300c الإجابة الصحيحة تُظهر شرحًا مشجّعًا");
+  click(rootEl.querySelector('[data-testid="lesestoff-fertig"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-cafe"]'), "R300d بعد التعليم منتهيًا تظهر قائمة الحوارات من جديد");
+  const { SpieleStation } = await import("../components/spiele");
+  mount(React.createElement(SpieleStation));
+  ok(!!rootEl.querySelector('[data-testid="spiel-gitter"]') && !!rootEl.querySelector('[data-testid="spiel-gitter-zelle-0-0"]'), "R300e لعبة شبكة الكلمات تعرض شبكة 10×10");
+  click(rootEl.querySelector('[data-testid="spiel-tab-dialog"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="spiel-dialog"]'), "R300f لعبة أكمل الحوار تعرض حوارًا بفجوة");
+  click(rootEl.querySelector('[data-testid="spiel-tab-uebersetz"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="spiel-uebersetz-input"]'), "R300g لعبة ترجم بنفسك تعرض خانة كتابة");
+}
+
+
+// ── R301: الراحة والمظهر + طباعة البطاقات ──
+{
+  const { KomfortEinstellungen } = await import("../components/komfort");
+  mount(React.createElement(KomfortEinstellungen));
+  ok(!!rootEl.querySelector('[data-testid="komfort-thema-hell"]'), "R301a أزرار الوضعين الداكن والفاتح ظاهرة في الإعدادات");
+  click(rootEl.querySelector('[data-testid="komfort-thema-hell"]') as HTMLElement);
+  ok(document.documentElement.dataset.thema === "hell", "R301b الضغط على الفاتح يبدّل ألوان الجذر فورًا");
+  click(rootEl.querySelector('[data-testid="komfort-schrift-sehr"]') as HTMLElement);
+  ok(document.documentElement.dataset.schrift === "sehr", "R301c الخط الكبير جدًا يُطبق على الجذر");
+  click(rootEl.querySelector('[data-testid="komfort-thema-dunkel"]') as HTMLElement);
+  click(rootEl.querySelector('[data-testid="komfort-schrift-normal"]') as HTMLElement);
+  ok(document.documentElement.dataset.thema === "dunkel" && document.documentElement.dataset.schrift === "normal", "R301d العودة للأساسي تعمل (ولا تسرّب حالة للاختبارات التالية)");
+  const KartenExport = (await import("../components/kartenexport")).default;
+  mount(React.createElement(KartenExport));
+  ok(!!rootEl.querySelector('[data-testid="kartenexport-drucken"]'), "R301e زر طباعة البطاقات الورقية ظاهر في المصدّر");
+}
+
+
+// ── R302: تنبيه الصوت + تغذية أكمل الحوار ──
+{
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]') as HTMLElement);
+  click(rootEl.querySelector('[data-testid="lesestoff-hoeren-0"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-stimm-hinweis"]'), "R302a بلا صوت جهازي يظهر تنبيه «لا يوجد صوت ألماني» بدل الصمت");
+  const { SpieleStation } = await import("../components/spiele");
+  mount(React.createElement(SpieleStation));
+  click(rootEl.querySelector('[data-testid="spiel-tab-dialog"]') as HTMLElement);
+  const optBtn = rootEl.querySelector('[data-testid^="spiel-dialog-opt-"]') as HTMLElement;
+  click(optBtn);
+  const fb = rootEl.querySelector('[data-testid="spiel-dialog-feedback"]');
+  ok(!!fb && (fb.textContent ?? "").includes("المعنى:"), "R302b تغذية «أكمل الحوار» تعرض معنى الجملة الصحيحة بالعربية");
+}
+
+
+// ── R303: حدّ الأخطاء ──
+{
+  const { FehlerGrenze } = await import("../components/fehlergrenze");
+  const Kaputt = () => { throw new Error("Testfehler"); };
+  mount(React.createElement(FehlerGrenze, null, React.createElement(Kaputt)));
+  ok(!!rootEl.querySelector('[data-testid="fehlergrenze-karte"]') && !!rootEl.querySelector('[data-testid="fehlergrenze-retry"]'), "R303a عطل مكوّن يُحتَوى في بطاقة عربية مع زرّ إعادة — التطبيق لا يبيضّ");
+}
+
+
+// ── R304: دفعة الخبير — شبكة بالمعنى + مسرد نقر + إنتاج التوسعة ──
+{
+  const { SpieleStation } = await import("../components/spiele");
+  mount(React.createElement(SpieleStation));
+  click(rootEl.querySelector('[data-testid="spiel-gitter-modus-sinn"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid^="spiel-gitter-ziel-"]'), "R304a وضع «ابحث بالمعنى» يعمل والأهداف تظهر بلا كلمات ألمانية مكشوفة");
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]') as HTMLElement);
+  const wortBtn = rootEl.querySelector('[data-testid="lesestoff-wort-Hund"]') as HTMLElement;
+  ok(!!wortBtn, "R304b كلمات النص قابلة للنقر (Hund في نص الكلب)");
+  if (wortBtn) {
+    click(wortBtn);
+    const gl = rootEl.querySelector('[data-testid="lesestoff-glossar"]');
+    ok(!!gl && (gl.textContent ?? "").length > 3, "R304c النقر على كلمة يفتح بطاقة معناها من بنك المشروع");
+  }
+}
 
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }

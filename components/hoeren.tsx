@@ -11,15 +11,22 @@ import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { speakAny, stopSpeech, speechAvailable } from "@/lib/speech";
+import { gemischteOptionen } from "@/lib/optionen";
 import { hoerenAudio, type LkGap } from "@/lib/content";
 import { pickLk } from "@/lib/luecken";
 import { normalize } from "@/lib/grader";
 import { bauHoerRunde, darfSpielen, fragenFrei, werteItem, werteRunde, hoerNote, RATE, type Modus, type Tempo } from "@/lib/hoeren";
+import { ModusUmschalter } from "./modus";
+import { HoerStrategienKarte } from "./hoerstrategien";
 
 export function HoerLabor({ progress }: { progress: Progress }) {
   const { update } = useProgress();
   const [modus, setModus] = useState<Modus>("training");
   const [tempo, setTempo] = useState<Tempo>("lern");
+  // 🔊 A6 (R296): مصدر الصوت — التسجيل أو صوت جهاز ثانٍ للنص نفسه
+  const [stimme, setStimme] = useState<"aufnahme" | "geraet">("aufnahme");
+  // 🗣 R299: ملامح صوت الجهاز (قياسي/نمساوي/سويسري/درجة صوت) — أصوات جهاز المتعلم الفعلية فقط
+  const [profil, setProfil] = useState<string>("de-DE");
   const [rundeNr, setRundeNr] = useState(0);
   const runde = useMemo(() => bauHoerRunde(progress.plan.day + rundeNr * 13), [progress.plan.day, rundeNr]);
   const [plays, setPlays] = useState(0);
@@ -46,6 +53,12 @@ export function HoerLabor({ progress }: { progress: Progress }) {
     setPlays((n) => n + 1);
     setStarted(true);
     const el = audioRef.current;
+    if (stimme === "geraet") {
+      const pitch = profil === "tief" ? 0.8 : profil === "hoch" ? 1.15 : undefined;
+      const lang = profil === "tief" || profil === "hoch" ? "de-DE" : profil;
+      speakAny(runde.de, { rate: RATE[tempo], lang, pitch });
+      return;
+    }
     if (mitAudio && el) {
       el.playbackRate = RATE[tempo];
       el.currentTime = 0;
@@ -104,11 +117,22 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         </div>
       )}
 
+      <HoerStrategienKarte started={started} geprueft={geprueft} />
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", marginBottom: "0.6rem" }}>
-        <button className="chip" style={{ cursor: "pointer", background: modus === "training" ? "var(--color-cola)" : "var(--ui-surface-raised)", color: modus === "training" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => reset("training")}>🎓 تدريب — مرات بلا حد</button>
-        <button className="chip" style={{ cursor: "pointer", background: modus === "pruefung" ? "var(--color-cola)" : "var(--ui-surface-raised)", color: modus === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.75rem", minHeight: "44px" }} onClick={() => reset("pruefung")}>⚙️ امتحان — استماعة واحدة 🔒</button>
+        <ModusUmschalter modus={modus} onWechsel={reset} />
         <button className="chip" style={{ cursor: "pointer", background: tempo === "lern" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "lern" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("lern")}>🐢 {RATE.lern}×</button>
         <button className="chip" style={{ cursor: "pointer", background: tempo === "pruefung" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: tempo === "pruefung" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setTempo("pruefung")}>⚡ {RATE.pruefung}× Prüfungstempo</button>
+        <button type="button" className="chip" data-testid="stimme-aufnahme" style={{ cursor: "pointer", background: stimme === "aufnahme" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "aufnahme" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("aufnahme")}>🔊 الصوت المسجّل</button>
+        <button type="button" className="chip" data-testid="stimme-geraet" style={{ cursor: "pointer", background: stimme === "geraet" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "geraet" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("geraet")}>🗣 صوت الجهاز — صوت ثانٍ للنص نفسه</button>
+        {stimme === "geraet" && (
+          <>
+            {(runde.level === "B1" || runde.level === "B2" ? [["de-DE", "قياسي"], ["de-AT", "نمساوي"], ["de-CH", "سويسري"], ["tief", "صوت أعمق"], ["hoch", "صوت أخف"]] : [["de-DE", "قياسي"], ["de-AT", "نمساوي"], ["de-CH", "سويسري"]]).map(([id, ar]) => (
+              <button key={id} type="button" className="chip" data-testid={`stimme-profil-${id}`} style={{ cursor: "pointer", background: profil === id ? "var(--color-gold)" : "var(--ui-surface-raised)", color: profil === id ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setProfil(id)}>🗣 {ar}</button>
+            ))}
+            <span style={{ fontSize: "0.74rem", color: "var(--color-ink2)" }}>أصوات جهازك الفعلية؛ إن غاب الصوت النمساوي/السويسري عن جهازك سمعت القياسي — لا أصوات مخترعة.</span>
+            {(runde.level !== "B1" && runde.level !== "B2") && <span style={{ fontSize: "0.74rem", color: "var(--color-ink2)" }} data-testid="hoeren-pitch-hinweis">ملفا «صوت أعمق/أخف» يظهران من مستوى B1 فأعلى — في مستواك الحالي يكفي الصوت الطبيعي الواضح.</span>}
+          </>
+        )}
       </div>
 
       {mitAudio && <audio ref={audioRef} src={hoerenAudio[runde.textId].file} preload="auto" />}
@@ -149,7 +173,7 @@ export function HoerLabor({ progress }: { progress: Progress }) {
               </div>
               {it.options ? (
                 <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-                  {it.options.map((o) => (
+                  {gemischteOptionen(it.options, it.id).map((o) => (
                     <button
                       key={o}
                       className="btn btn-ghost"

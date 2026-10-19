@@ -8,7 +8,7 @@
  *  مرجعية — أي أنّ الوعد لم يكن يتحقّق.
  *
  *  المبدأ الأكاديمي (Goethe-Institut / telc، ساعات الإرشاد التراكمية):
- *      A1 ≈ 60–150 · A2 ≈ 150–300 · B1 ≈ 350–500 · B2 ≈ 600–800
+ *      A1 ≈ 60–150 · A2 ≈ 150–260 · B1 ≈ 260–490 · B2 ≈ 450–600 ساعة (Goethe؛ R169 وحّد الوحدات)
  *  الزيادة من مستوى إلى الذي يليه ليست متساوية بل متصاعدة (منتصفات النطاق):
  *      A1 +105 · A2 +120 · B1 +200 · B2 +275   ⇒  15% · 17% · 29% · 39%
  *  لأنّ كلّ مستوى يتطلّب ضعف ما قبله تقريباً من المفردات والبنى، ولأنّ
@@ -60,6 +60,11 @@ export const PHASEN: Record<Exclude<Level, "B2"> extends never ? never : Level, 
 export const ABSCHLUSS_VON = 375;
 export const TOTAL_DAYS = 378;
 
+/** سقفا الحمل اليومي المخطط (D1-B · قرار المالك 2026-10-16 · R168) — دقائق مخطَّطة من buildDay لا زمن مقيس ميدانياً.
+ *  B1 داخل سقفها بالقياس أصلاً؛ B2 تُكشَط ذرواتها داخل lib/plan.ts بقطع محتوى مراجعة متكرر حقيقي (K260). */
+export const D1_B1_DECKEL_MIN = 240;
+export const D1_B2_DECKEL_MIN = 270;
+
 /** أول يوم في كل مستوى */
 export const PHASE_START: Record<Level, number> = {
   A0: PHASEN.A0.von, A1: PHASEN.A1.von, A2: PHASEN.A2.von, B1: PHASEN.B1.von, B2: PHASEN.B2.von,
@@ -79,9 +84,10 @@ export const PHASEN_PRUEFUNGSTAGE: number[] = [PHASEN.A0.bis, PHASEN.A1.bis, PHA
  * مُعايرة 2026-10: A0 0.7، A1 1.0، A2 1.25، B1 1.6، B2 2.0 — لكي تصل الساعات التراكمية
  * إلى نطاق CEFR عند نهاية كل مرحلة (A1≈105، A2≈225، B1≈420، B2≈620 ساعة).
  */
-// R138/P-04: Lastkurve (Load Curve) nach DaF-Standards — A0 behutsam, dann Anstieg bis 90 Minuten vor der Prüfung.
-// Ergibt ca. 620 Gesamtstunden (A0→B2) = im Rahmen des Goethe-Richtwerts (400–700 h für L1-arabische Lernende mit Begleitung).
-export const LERNLAST: Record<Level, number> = { A0: 0.45, A1: 0.6, A2: 0.7, B1: 0.85, B2: 0.9 };
+// R145: أُعيدت معايرة 2026-10 الموثقة أعلاه (0.7/1.0/1.25/1.65/2.2). منحنى R138/P-04 (0.45–0.9)
+// قاس فعلياً 604 ساعات تراكمية فقط ودقائق منكمشة في B2، فنقض وعدَه ووعدَ K63e/f/h؛
+// المعايرة الأصلية تعطي ≈644 ساعة وب2 فوق 620 بهامش ≥20 ساعة كما في قياس الترويسة.
+export const LERNLAST: Record<Level, number> = { A0: 0.7, A1: 1.0, A2: 1.25, B1: 1.65, B2: 2.2 };
 
 /** المستوى الذي يقع فيه اليوم */
 export function levelAmTag(day: number): Level {

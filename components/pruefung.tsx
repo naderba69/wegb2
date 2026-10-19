@@ -8,7 +8,7 @@
 // كل محاولة تمرّ بخطّي الأنبوب: شبكة الكفاءات (logK) ودفتر الأخطاء (addFehlerNow).
 import { useMemo, useRef, useState } from "react";
 import type { Exercise, Level, Progress, Satz, VocabCard } from "@/lib/types";
-import { sentences, texts, dialogues, grammarMap, vocabMap, dialogAudioSrc, leseText } from "@/lib/content";
+import { sentences, texts, dialogues, grammarMap, vocabMap, dialogAudioSrc, dialogAudioIstKi, leseText } from "@/lib/content";
 import { levelOf, pickN, rng, clozeFromSatz } from "@/lib/plan";
 import { normalize, konfidenz } from "@/lib/grader";
 import { klausurNote } from "@/lib/klausur";
@@ -16,6 +16,7 @@ import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK, KOMPETENZ_AR } from "@/lib/kompetenz";
 import { speakAny } from "@/lib/speech";
+import { gemischteOptionen } from "@/lib/optionen";
 import { VertrauensBalken, AntwortDiff } from "./ui";
 import { De } from "./De";
 
@@ -194,7 +195,10 @@ export function DialogOrdnung({ level, onFertig }: { level: Level; onFertig: (ok
   const { d, n, gemischt } = dlg;
   if (!d) return null;
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const src = dialogAudioSrc(d.id);
+  // R145: تسجيلٌ يفشل تحميلُه يُعامَل كغيابِه — صوتُ المتصفح مع إعلانٍ صادق، لا ادّعاءَ تسجيل
+  const [srcDefekt, setSrcDefekt] = useState(false);
+  const src = srcDefekt ? null : dialogAudioSrc(d.id);
+  const istKi = dialogAudioIstKi(d.id);
 
   const fertig = wahl.length === n;
   const punkte = geprueft ? wahl.filter((v, i) => v === i).length : 0;
@@ -215,6 +219,7 @@ export function DialogOrdnung({ level, onFertig }: { level: Level; onFertig: (ok
     onFertig(punkte, n);
   };
   const neu = () => {
+    setSrcDefekt(false);
     setRunde((r) => r + 1);
     setWahl([]);
     setGeprueft(false);
@@ -253,6 +258,7 @@ export function DialogOrdnung({ level, onFertig }: { level: Level; onFertig: (ok
           <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.6rem", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
             <button
               className="btn btn-ghost"
+              data-audio-kind={src ? (istKi ? "ki" : "haus") : "tts"}
               style={{ minHeight: 44, padding: "0.4rem 0.9rem" }}
               onClick={() => {
                 const el = audioRef.current;
@@ -260,11 +266,11 @@ export function DialogOrdnung({ level, onFertig }: { level: Level; onFertig: (ok
                 else speakAny(d.lines.map((l) => l.de).join(" "));
               }}
             >
-              ▶️ استمع للحوار كاملًا {src ? "" : "(بصوت المتصفح — الملفُّ لم يُفرَغ بعد)"}
+              ▶️ استمع للحوار كاملًا {src ? (istKi ? "(بصوت ذكاء اصطناعي مولّد — صوت واحد يقرأ كل الأدوار)" : "") : "(بصوت المتصفح — الملفُّ لم يُفرَغ بعد)"}
             </button>
             <button className="btn btn-primary" style={{ minHeight: 44 }} onClick={neu}>حوار جديد ←</button>
           </div>
-          {src && <audio ref={audioRef} src={src} preload="none" />}
+          {src && <audio ref={audioRef} src={src} preload="none" onError={() => setSrcDefekt(true)} />}
         </div>
       )}
       {!geprueft && (
@@ -355,7 +361,7 @@ function WochenTest({ level, woche, onFertig }: { level: Level; woche: number; o
           </div>
           {q.ex.options ? (
             <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
-              {q.ex.options.map((o) => {
+              {gemischteOptionen(q.ex.options, q.ex.id).map((o) => {
                 const gewaehlt = antworten[q.ex.id] === o;
                 const richtig = done && gradeItem(q.ex, o);
                 return (
@@ -529,7 +535,7 @@ function MonatsMock({ level, tag }: { level: Level; tag: number }) {
                 </div>
                 {q.ex.options ? (
                   <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
-                    {q.ex.options.map((o) => {
+                    {gemischteOptionen(q.ex.options, q.ex.id).map((o) => {
                       const gewaehlt = antworten[q.ex.id] === o;
                       const richtig = done && gradeItem(q.ex, o);
                       return (

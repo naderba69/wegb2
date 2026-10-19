@@ -780,6 +780,10 @@
         {
           "de": "Nahrungsmittel-Wortschatz",
           "ar": "مفردات الطعام"
+        },
+        {
+          "de": "Meinung mit „Ich mag …“",
+          "ar": "إبداء الإعجاب بـIch mag"
         }
       ],
       "zeit_s": 90
@@ -806,6 +810,10 @@
         {
           "de": "Temporaladverbien",
           "ar": "ظروف الزمان"
+        },
+        {
+          "de": "Reihenfolge: zuerst/dann",
+          "ar": "تسلسل الخطوات بـzuerst/dann"
         }
       ],
       "zeit_s": 90
@@ -832,6 +840,10 @@
         {
           "de": "Reaktion geschildert",
           "ar": "وصف رد الفعل"
+        },
+        {
+          "de": "Gefühle benannt",
+          "ar": "تسمية المشاعر بوضوح"
         }
       ],
       "zeit_s": 120
@@ -858,6 +870,10 @@
         {
           "de": "eine Vermutung mit vielleicht",
           "ar": "تخمين بـvielleicht"
+        },
+        {
+          "de": "Schluss mit Folge (also)",
+          "ar": "خاتمة بنتيجة بـalso"
         }
       ],
       "zeit_s": 120

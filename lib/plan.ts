@@ -13,15 +13,12 @@ import type {
 } from "./types";
 import { TOTAL_DAYS, emptyProgress } from "./types";
 import { DEFAULT_SESSION_GOAL_MINUTES } from "./session-clock";
-import type { Tempo } from "./types";
 import {
   grammarMap,
-  vocabMap,
   sentences,
   texts,
   dialogues,
   writingTasks,
-  getSatz,
   getDeck,
   fehlerList,
   partnerKarten,
@@ -30,8 +27,8 @@ import {
 } from "./content";
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
-import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten } from "./phasen";
-import { kapselIds, kapselIdsAbend, kapselQuiz } from "./kapsel";
+import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B2_DECKEL_MIN } from "./phasen";
+import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
 import { baueKompositaWoche } from "./komposita-aufgabe";
@@ -163,7 +160,7 @@ export const MODULE: Modul[] = [
   { nr: 1, level: "A1", von: 11, bis: 31,  titelDe: "Lektion 1–2: Begrüßung & Zahlen",  titelAr: "التعارف والأرقام",      inhalteAr: "التحيات · sein/haben · تصريف منتظم · ضمائر · أرقام 0-100 · Ja/nein/W-Fragen" },
   { nr: 2, level: "A1", von: 32, bis: 52,  titelDe: "Lektion 3–4: Familie & Gegenstände", titelAr: "العائلة والأشياء",      inhalteAr: "العائلة · أدوات الملكية · أفعال شاذة · der/die/das/kein · ألوان · صفات" },
   { nr: 3, level: "A1", von: 53, bis: 73,  titelDe: "Lektion 5–6: Zeit & Essen",        titelAr: "الوقت والطعام",        inhalteAr: "الساعة · أفعال منفصلة · جر الوقت · المأكولات · Akkusativ · möchten" },
-  { nr: 4, level: "A1", von: 74, bis: 94,  titelDe: "Lektion 7–8: Hobbys & Wohnen",     titelAr: "الهوايات والسكن",      inhalteAr: "الهوايات · können · الطقس · الشقة · Dativ أساسي · Wechselpräpositionen · Modalverben · مقدمة Perfekt/Futur · Imperativ" },
+  { nr: 4, level: "A1", von: 74, bis: 94,  titelDe: "Lektion 7–8: Hobbys & Wohnen",     titelAr: "الهوايات والسكن",      inhalteAr: "الهوايات · können · الطقس · الشقة · Dativ أساسي · Wechselpräpositionen · Modalverben · مقدمة Perfekt · Imperativ" },
   // ── A2: 12 Wochen / 84 Tage ──
   { nr: 1, level: "A2", von: 95,  bis: 115, titelDe: "Lektion 9–10: Vergangenheit & Orientierung", titelAr: "الماضي والتوجّه",  inhalteAr: "Perfekt كامل · Präteritum للناقصة · Dativ كامل · وصف الطريق · المواصلات" },
   { nr: 2, level: "A2", von: 116, bis: 136, titelDe: "Lektion 11–12: Gesundheit & Kleidung", titelAr: "الصحة والملابس",       inhalteAr: "الطبيب · أفعال انعكاسية · تبديل الجر · صيغة الأمر (تثبيت) · المقارنة · الملابس والألوان" },
@@ -173,7 +170,7 @@ export const MODULE: Modul[] = [
   { nr: 1, level: "B1", von: 179, bis: 203, titelDe: "Lektion 17–18: Beziehungen & Ausbildung", titelAr: "العلاقات والتعليم",  inhalteAr: "الصداقات والنزاعات · Relativsätze · obwohl/trotzdem · السيرة الذاتية · Präteritum كامل · تصريف الصفات" },
   { nr: 2, level: "B1", von: 204, bis: 228, titelDe: "Lektion 19–20: Bewerbung & Umwelt", titelAr: "البحث عن عمل والبيئة",   inhalteAr: "Konjunktiv II حاضر · um…zu/damit · Passiv بكل الأزمنة · أفعال بحروف جر · البيئة والطبيعة" },
   { nr: 3, level: "B1", von: 229, bis: 252, titelDe: "Lektion 21–22: Konsum & Gesundheit", titelAr: "الاستهلاك والصحة",      inhalteAr: "Genitiv كامل · Futur I · Infinitiv mit zu · الصحة النفسية واللياقة · Nominalisierung أساسي" },
-  { nr: 4, level: "B1", von: 253, bis: 276, titelDe: "Lektion 23–24: Politik & Zukunft", titelAr: "السياسة والمستقبل",      inhalteAr: "الروابط الزمنية · صفات كأسماء · Konjunktiv II ماضي (مقدمة) · الأسئلة غير المباشرة · Partizip I · أحلام ومستقبل · مراجعة B1" },
+  { nr: 4, level: "B1", von: 253, bis: 276, titelDe: "Lektion 23–24: Politik & Zukunft", titelAr: "السياسة والمستقبل",      inhalteAr: "الروابط الزمنية · صفات كأسماء · Konjunktiv II ماضي (مقدمة) · الأسئلة غير المباشرة · تصريف الصفات كاملاً · أحلام ومستقبل · مراجعة B1" },
   // ── B2: 14 Wochen / 98 Tage ──
   { nr: 1, level: "B2", von: 277, bis: 301, titelDe: "Lektion 25–26: Globalisierung & Arbeitswelt", titelAr: "العولمة وسوق العمل", inhalteAr: "الروابط المزدوجة · Funktionsverbgefüge · بدائل Passiv · الشركات الناشئة · الذكاء الاصطناعي · اندماج حروف جر" },
   { nr: 2, level: "B2", von: 302, bis: 326, titelDe: "Lektion 27–28: Hochschule & Medien", titelAr: "الجامعة والإعلام",       inhalteAr: "الجامعة والبحث · Konjunktiv I (كلام غير مباشر) · Partizipattribute مطوّلة · الصحافة ووسائل التواصل · حرية الصحافة" },
@@ -195,6 +192,29 @@ export function phaseOf(day: number): Phase {
   for (const p of PHASE_RANGES) if (day >= p.from && day <= p.to) return p.phase;
   return "Abschluss";
 }
+// R177: أساسُ دورانِ الكتابة التراكميّ — عددُ سحوباتِ nextWrite في أيامِ [بداية المستوى، day)
+// بتقويمِ تقدّمٍ فارغ، محسوبٌ مرّةً واحدةً لكلِّ مستوى ومحفوظ. إعادةُ التشغيلِ تعدُّ المواقعَ
+// لا المحتوى، فتبقى صحيحةً مهما تغيّر حجمُ البنك (التدوير modulo عند السحب نفسه).
+const schreibBasisCache = new Map<string, number[]>();
+let schreibReplay: { tag: number; zaehler: number } | null = null;
+function schreibBasis(day: number, level: Level): number {
+  const range = PHASE_RANGES.find((p) => p.level === level);
+  if (!range) return 0;
+  let basis = schreibBasisCache.get(level);
+  if (!basis) {
+    basis = [0];
+    for (let d = range.from; d <= range.to; d++) {
+      schreibReplay = { tag: d, zaehler: 0 };
+      buildDay(d, emptyProgress);
+      basis.push(basis[basis.length - 1] + schreibReplay.zaehler);
+      schreibReplay = null;
+    }
+    schreibBasisCache.set(level, basis);
+  }
+  const idx = day - range.from;
+  return idx >= 0 && idx < basis.length ? basis[idx] : basis[basis.length - 1];
+}
+
 export function levelOf(day: number): Level {
   for (const p of PHASE_RANGES) if (day >= p.from && day <= p.to) return p.level;
   return "B2";
@@ -380,16 +400,6 @@ export function clozeFromSatz(s: Satz, idx: number, rand: () => number): Exercis
   };
 }
 
-function dictationFromSatz(s: Satz, idx: number): Exercise {
-  return {
-    id: `${s.id}-di${idx}`,
-    type: "dictation",
-    promptDe: "اسمع واكتب ما سمعته",
-    promptAr: s.ar,
-    answer: [s.de],
-    explanationDe: s.de,
-  };
-}
 
 export function translateFromSatz(s: Satz, idx: number): Exercise {
   const keyWords = s.de
@@ -630,6 +640,18 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   };
   const nextDialog = () => dialogsOfLevel.length ? dialogsOfLevel[(dialogRang + dialogSlot++) % dialogsOfLevel.length] : undefined;
   const writesOfLevel = writingTasks.filter((w) => w.level === level);
+  // 🔁 R146→R177: دورانٌ تراكميٌّ حتميٌّ لمهامِّ الكتابة — المؤشّرُ هو العددُ الكلّيُّ لسحوباتِ الكتابة
+  // في أيامِ المستوى السابقة (تقويمٌ فارغُ التقدّم، محفوظٌ في schreibBasis)؛ كلُّ مواقعِ السحبِ تعتمد
+  // على نوعِ اليوم/يومِ الأسبوع/المرحلة فقط، لا على التقدّم، فتبلغُ الدورةُ كلَّ مهمّةٍ متى فاقَ
+  // عددُ السحوباتِ حجمَ البنك (وهو حاصلٌ في كلِّ مستوى) — بلا يتامى وبلا تكرارٍ قبل استنفادِ البنك.
+  let writeSlot = 0;
+  const nextWrite = () => {
+    // أثناء إعادة التشغيل لا تُعَدّ إلا سحوبات اليوم الموسوم نفسه — فالأيام المتداخلة
+    // (كبسولة الأمس تبني أيامًا مجاورة عبر lib/kapsel) لا تُلوّث عدّاد هذا اليوم.
+    if (schreibReplay) { if (day === schreibReplay.tag) schreibReplay.zaehler++; return writesOfLevel[0]; }
+    if (!writesOfLevel.length) return undefined;
+    return writesOfLevel[(schreibBasis(day, level) + writeSlot++) % writesOfLevel.length];
+  };
   const satzOfLevel = sentences.filter((s) => s.level === level);
 
   if (type === "lerntag") {
@@ -667,8 +689,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         // ولو زادَ عددُ الحزمِ على خاناتِ درسِ المفرداتِ الأسبوعية
         deckId: phaseDecks[(day - 1) % Math.max(phaseDecks.length, 1)],
         // 🌙 حلقة الكبسولة: مزيج التباعد المكاني 1/7/30 يومًا (lib/kapsel.ts)
-        sentenceIds: kapselIds(day),
-        quiz: kapselQuiz(day),
+        sentenceIds: kapselIdsAdaptiv(progress, day),
+        quiz: kapselQuizAdaptiv(progress, day),
       });
     }
 
@@ -804,7 +826,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Kurz schreiben",
           titleAr: "كتابة قصيرة (10 دقائق)",
           minutes: 25,
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         });
       } else {
         tasks.push({
@@ -873,7 +895,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Schreibtraining",
         titleAr: "تدريب كتابة",
         minutes: level === "B2" ? 40 : 35,
-        writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+        writeId: nextWrite()?.id,
       });
       // R138/P-13: Hörverstehen-Modi — global/selektiv/detailliert rotierend nach Niveau
       const hoerenModi: ("global" | "selektiv" | "detailliert")[] = level === "A0" || level === "A1"
@@ -920,8 +942,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleDe: lightReview ? "Leichte Wiederholung" : "Wochen-Wiederholung",
       titleAr: lightReview ? "مراجعة خفيفة (خريطة ذهنية)" : "مراجعة الأسبوع كاملاً (كبسولة متباعدة)",
       minutes: lightReview ? 15 : 30,
-      sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة 1/7/30
-      quiz: [...kapselQuiz(day), ...(lightReview ? [] : buildQuiz(day - 2, phase, 5, progress, "wdfest"))],
+      sentenceIds: kapselIdsAdaptiv(progress, day), // 🌙 كبسولة متباعدة 1/7/30
+      quiz: [...kapselQuizAdaptiv(progress, day), ...(lightReview ? [] : buildQuiz(day - 2, phase, 5, progress, "wdfest"))],
     });
     if (lightReview) {
       // في اليوم الخفيف: خريطة ذهنية للمفردات بدل الكتابة
@@ -943,7 +965,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           ? "كتابة جمل بسيطة (تعبير موجّه)"
           : "كتابة نصّ كامل (المعيار: معايير التقييم)",
         minutes: level === "A0" ? 15 : 40,
-        writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+        writeId: nextWrite()?.id,
       });
     }
     // K-SilentPeriod: لا تحدّث حر قبل أواخر A2
@@ -974,7 +996,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         titleDe: "Brief/E-Mail der Woche",
         titleAr: "رسالة رسمية قصيرة (تدريب كتابة)",
         minutes: 15,
-        writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+        writeId: nextWrite()?.id,
       });
       if (level === "B1" || level === "B2") {
         tasks.push({
@@ -1066,7 +1088,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
             exam: true,
             textId: nextText()?.id,
             dialogueId: nextDialog()?.id,
-            writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+            writeId: nextWrite()?.id,
           }
         : {
             id: tid(1),
@@ -1118,7 +1140,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
         ? "جملة الأسبوع (3 جمل عن أسبوعك)"
         : "جملة/فقرة الأسبوع (5 جمل تلخّص ما تعلّمته)",
       minutes: level === "B2" ? 15 : level === "A0" ? 8 : level === "A1" ? 10 : 12,
-      writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+      writeId: nextWrite()?.id,
     });
     if (level === "B2") {
       tasks.push({
@@ -1136,8 +1158,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       titleDe: "Ich-kann & Ausblick",
       titleAr: "أستطيع أن… + كبسولة متباعدة للأسبوع القادم",
       minutes: 15,
-      sentenceIds: kapselIds(day), // 🌙 كبسولة متباعدة
-      quiz: [...kapselQuiz(day), ...buildQuiz(day - 2, phase, 4, progress, "wk").slice(0, 4)],
+      sentenceIds: kapselIdsAdaptiv(progress, day), // 🌙 كبسولة متباعدة
+      quiz: [...kapselQuizAdaptiv(progress, day), ...buildQuiz(day - 2, phase, 4, progress, "wk").slice(0, 4)],
     });
   } else {
     // أيام الختام 375-378 — تستخدم الكبسولة المتباعدة لآخر البنك
@@ -1153,7 +1175,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           minutes: 50,
           sentenceIds: gesternKapsel,
           quiz: buildQuiz(374, "B2", 15, progress, "final374"),
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         },
         {
           id: tid(2),
@@ -1187,7 +1209,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Abschluss-Schreiben (Kurzform)",
           titleAr: "تدريب كتابة ختامي قصير",
           minutes: 15,
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         },
         {
           id: tid(5),
@@ -1253,7 +1275,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           exam: true,
           textId: nextText()?.id,
           dialogueId: nextDialog()?.id,
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         },
         {
           id: tid(6),
@@ -1261,7 +1283,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Abschluss-Schreiben (letzter Teil)",
           titleAr: "قسم الكتابة الختامي",
           minutes: 15,
-          writeId: pickN(writesOfLevel, 1, rand)[0]?.id,
+          writeId: nextWrite()?.id,
         },
         {
           id: tid(2),
@@ -1269,8 +1291,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleDe: "Bilanz & Ausblick",
           titleAr: "الحصيلة وخطة ما بعد B2",
           minutes: 10,
-          sentenceIds: kapselIds(day),
-          quiz: [...kapselQuiz(day), ...buildQuiz(378, "Abschluss", 5, progress, "wk2").slice(0, 5)],
+          sentenceIds: kapselIdsAdaptiv(progress, day),
+          quiz: [...kapselQuizAdaptiv(progress, day), ...buildQuiz(378, "Abschluss", 5, progress, "wk2").slice(0, 5)],
         },
       ],
     };
@@ -1314,16 +1336,16 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     }
   }
 
-  // R143b: keep the four writing prompts missed by the seeded rotation in the
-  // default curriculum too; each is a real, level-appropriate Schreibtask.
-  const extraWritingByDay: Record<number, string[]> = {
-    [PHASEN.A0.von + 5]: ["w-a0-02"],
-    [PHASEN.A0.von + 6]: ["w-a0-04"],
-    [PHASEN.A0.von + 7]: ["w-a0-05"],
-    [PHASEN.A2.von]: ["w-a2-06"],
+  // R143b→R178: مهمّة كتابة إضافية في أيام ثابتة — كانت بأيدي مرقّعة لإنقاذ ما فات الدورانَ
+  // القديم، والآن تسحب من الدوران التراكميّ نفسه (R177) فتتقدّم التغطية بدل تكرار مهمّة بعينها.
+  const extraWritingByDay: Record<number, number> = {
+    [PHASEN.A0.von + 5]: 1,
+    [PHASEN.A0.von + 6]: 1,
+    [PHASEN.A0.von + 7]: 1,
+    [PHASEN.A2.von]: 1,
   };
-  for (const [index, writingId] of (extraWritingByDay[day] ?? []).entries()) {
-    const extraWriting = writesOfLevel.find((writing) => writing.id === writingId);
+  for (let index = 0; index < (extraWritingByDay[day] ?? 0); index++) {
+    const extraWriting = nextWrite();
     if (!extraWriting) continue;
     tasks.push({
       id: tid(93 + index),
@@ -1401,6 +1423,57 @@ export function buildDay(day: number, progress: Progress): DayPlan {
 
   // ⚖️ تقديرات كل مهمة مستقلة عن هدف الجلسة وإيقاع البطاقات؛ لا نضغط مجموعها ولا نمدّه.
   for (const t of tasks) if (!t.mandatory) t.minutes = lastMinuten(t.minutes, level);
+
+  // ⚖️ D1-B (R168 · قرارُ المالك 2026-10-16 باعتماد D1-B): سقفُ الحملِ اليوميِّ المخطَّط في B2 عندَ D1_B2_DECKEL_MIN
+  //    (وB1 داخلُ سقفِها بالقياسِ أصلاً — يُقفِلُه K260a). الكشطُ حقيقيٌّ لا إعادةُ تسمية: تُخفَّضُ
+  //    دقائقُ مهامِّ المراجعةِ المتكرِّرةِ أوّلاً (wiederholen) ثم فحصِ اليومِ عندَ الحاجة، ويُقطَعُ محتواها
+  //    (أسئلةُ الاختبار/جملُ الكبسولة/فخاخُ الأخطاء) بالنسبةِ نفسِها — فالمهمّةُ المعروضةُ أصغرُ فعلاً.
+  //    لا يُمَسُّ أيُّ بندٍ بنكيٍّ فريد: القواعدُ والنصوصُ والحواراتُ والكتابةُ والمحادثةُ والامتحاناتُ خارجُ
+  //    الكشطِ بتاتاً، والإلزاميّاتُ (دَينُ التعويض/تحقُّقُ الاستقلال) لا تُخفَّض. ما يُقطَعُ يتكرَّرُ بطبيعتِه
+  //    (استرجاعٌ متباعدٌ أسبوعي/يومي) فيعودُ في دوراتٍ لاحقة. الأرقامُ تقديراتٌ مخطَّطةٌ من buildDay
+  //    لا زمنُ تعلُّمٍ مقيسٌ ميدانياً — كما وثَّقَ R166/D1. يُقفَلُ بسقوف K260a/b وسلامةِ التغطية K260c.
+  if (phase === "B2") {
+    const D1_DECKEL = D1_B2_DECKEL_MIN; // من lib/phasen.ts — مصدر الثوابت الأوحد
+    const ausgang = new Map(tasks.map((t) => [t, { m: t.minutes, q: t.quiz?.length ?? 0, s: t.sentenceIds?.length ?? 0, f: t.fehlerItems?.length ?? 0 }]));
+    const kuerzeInhalt = (t: DayTask) => {
+      const u = ausgang.get(t);
+      if (!u || u.m <= 0) return;
+      const anteil = t.minutes / u.m;
+      if (t.quiz && u.q > 0) t.quiz = t.quiz.slice(0, Math.max(1, Math.round(u.q * anteil)));
+      // جملُ الكبسولة (sentenceIds) لا تُقطَع أبداً — حلقةُ التباعدِ المكانيِّ K65c مقفلةٌ عليها.
+      if (t.fehlerItems && u.f > 0) t.fehlerItems = t.fehlerItems.slice(0, Math.max(2, Math.round(u.f * anteil)));
+    };
+    let summe = tasks.reduce((a, t) => a + t.minutes, 0);
+    for (const art of ["wiederholen", "check"] as const) {
+      if (summe <= D1_DECKEL) break;
+      const boden = art === "wiederholen" ? 15 : 20;
+      const ziele = tasks
+        .filter((t) => !t.mandatory && !t.exam && t.kind === art)
+        .sort((a, b) => b.minutes - a.minutes);
+      while (summe > D1_DECKEL && ziele.some((t) => t.minutes > boden)) {
+        for (const t of ziele) {
+          if (summe <= D1_DECKEL) break;
+          if (t.minutes > boden) { t.minutes -= 5; summe -= 5; kuerzeInhalt(t); }
+        }
+      }
+    }
+  }
+  // ═══ R182/M2 · الافتتاحية الاسترجاعية أولًا في كلّ يوم (تعميم طقس البدء) ═══
+  // قبل R182 كانت مهام الاسترجاع تتأخر خلف فحص الأسبوع ونصوصه الجديدة (56 يومًا).
+  // القاعدة الآن: بعد مهام الرأس الإلزامية/الامتحانية (ففي الفحص الأسبوعي الامتحانُ
+  // نفسه استرجاع) تأتي كلُّ مهام الاسترجاع قبل أيّ محتوى جديد — في كلّ يومٍ ≥2.
+  // إعادة ترتيب مستقرة بلا تغيير في المحتوى؛ تُعاد ترقيم المعرفات الموضعية.
+  if (day > 1) {
+    let kopf = 0;
+    while (kopf < tasks.length && (tasks[kopf].mandatory || tasks[kopf].exam || tasks[kopf].kind === "check")) kopf++;
+    const abruf = tasks.filter((t, i) => i >= kopf && t.kind === "wiederholen");
+    if (abruf.length > 0) {
+      const rest = tasks.filter((t, i) => i >= kopf && t.kind !== "wiederholen");
+      const neu = [...tasks.slice(0, kopf), ...abruf, ...rest];
+      neu.forEach((t, i) => { t.id = `${day}:t${i + 1}`; });
+      tasks.splice(0, tasks.length, ...neu);
+    }
+  }
   const tempo = progress.settings.tempo ?? "regelmaessig";
   return { day, week, weekday, phase, type, tasks, tempo, zielMin: DEFAULT_SESSION_GOAL_MINUTES };
 }
@@ -1414,7 +1487,7 @@ export function isPassed(r?: TaskResult): boolean {
   return !!r && r.passed;
 }
 
-export function canCloseDay(plan: DayPlan, taskState: Record<string, TaskResult>): boolean {
+export function canCloseDay(_plan: DayPlan, _taskState: Record<string, TaskResult>): boolean {
   // يمكن إنهاء اليوم دائماً، لكن الواجب يُرحَّل — القفل هو: لا غد قبل الإغلاق
   return true;
 }

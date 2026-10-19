@@ -1,17 +1,19 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { istPhasenPruefung } from "@/lib/phasen";
-import type { DayTask, Exercise, SrsState, UiLang, VocabCard, Schreibaufgabe, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
+import type { DayTask, Exercise, SrsState, UiLang, VocabCard, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
 import { POS_AR } from "@/lib/types";
 import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
 import { WortLinkText } from "./wortlink";
-import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday } from "@/lib/srs";
+import { newCard, reviewCard, isDue, newCardCap, countNewCardsIntroducedToday, wasIntroducedToday, karteStufe, KARTENSTUFE_AR } from "@/lib/srs";
+import { genusCode } from "@/lib/genus";
 import { addFehlerNow, markiereSchriftlich, loadProgress, saveProgress } from "@/lib/store";
 import { speakDe, speakAny, speakLine, stopSpeech, speechAvailable, germanVoices, warmVoices } from "@/lib/speech";
 import { levelOf, clozeFromSatz, rng } from "@/lib/plan";
 import { buildBrueckeItems } from "@/lib/bruecken";
 import ExerciseSet from "./exercises";
+import { satzIdAusUebung } from "@/lib/kapsel";
 import { FehlerFinden, RollenDialog, SchreibBerater, Pruefung } from "./lehrer";
 import { FehlerFallen, Fehlerheft } from "./fehler-ui";
 import { De } from "./De";
@@ -21,6 +23,8 @@ import { KompositaWerkstatt } from "./komposita";
 import { SignalRadar } from "./signalradar";
 import { StilWechsler } from "./stilwechsler";
 import { grammatikImText } from "@/lib/grammatikRadar";
+import { meldung } from "@/lib/meldungen";
+import { BemerkenKarte } from "./bemerken";
 import { entdeckungsFrage, induktionMoeglich, ergebnisText, type EntdeckungsErgebnis } from "@/lib/induktion";
 import { grammarMap } from "@/lib/content";
 const alleGrammatik = Object.values(grammarMap);
@@ -65,15 +69,19 @@ interface TaskProps {
   srs: Record<string, SrsState>;
   onSrs: (cardId: string, state: SrsState) => void;
   onPoints: (points: number, max: number) => void;
+  /** نتيجة استرجاع جملة كبسولة (M1): تُحجز في فواصل المتعلم المتكيفة. */
+  onKapselErgebnis?: (satzId: string, ok: boolean) => void;
   voiceName?: string;
   rate?: number;
   tempo?: Tempo;
+  /** 🔎 M10/R290: قواعد الأسبوع الجديدة للملاحظة داخل نص القراءة */
+  bemerkenRegeln?: { id: string; titelDe: string; titelAr: string }[];
   /** بادئة تخزينٍ مؤقّتة لمحاولات المهمة، تُحذف عند تسليمها. */
   persistKey?: string;
 }
 
 /** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
-export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey }: TaskProps) {
+export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
   // تسميع الإملاء: مستمع عام يعمل في كل المهام
   useEffect(() => {
     const onSpeak = (e: Event) => {
@@ -93,7 +101,7 @@ export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceN
     case "hoeren":
       return <HoerenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
     case "lesen":
-      return <LesenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />;
+      return <LesenTask task={task} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} bemerkenRegeln={bemerkenRegeln} />;
     case "schreiben":
       return <SchreibenTask task={task} onPoints={onPoints} persistKey={persistKey} />;
     case "sprechen":
@@ -110,7 +118,7 @@ export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceN
       ) : task.fehlerItems?.length ? (
         <FehlerFallen items={task.fehlerItems} onPoints={onPoints} />
       ) : (
-        <WiederholenTask task={task} day={day} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} />
+        <WiederholenTask task={task} day={day} srs={srs} onSrs={onSrs} onPoints={onPoints} voiceName={voiceName} rate={rate} persistKey={persistKey} onKapselErgebnis={onKapselErgebnis} />
       );
     case "check":
       return task.exam ? (
@@ -435,7 +443,7 @@ function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: 
         </section>
       );
     }
-    return <Empty title="قاعدة غير موجودة" />;
+    return <Empty title={meldung("regel-fehlt").titel} aktion={meldung("regel-fehlt").aktion} />;
   }
   const entdecken = !!frage && induktionMoeglich(topic);
   const offen = !entdecken || ergebnis !== null;
@@ -499,6 +507,17 @@ function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: 
       )}
 
       {offen && (<>
+      {/* 🏃 R196 — الممارسة قبل النظرية: التثبيت الفوري أولًا، والشرح الكامل مطويّ لمن يحتاجه */}
+      <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.3rem" }}>🏃 طبّق أولًا — ثبّت بالمحاولة قبل قراءة الشرح</h4>
+      <p style={{ fontSize: "0.83rem", color: "var(--color-ink2)", margin: "0 0 0.6rem" }}>
+        حاول بنفسك الآن؛ الخطأ هنا وقودُ التعلّم. الشرح والقواعد كاملةً مطويّة أسفل التمرين — افتحها بعد محاولتك أو متى احتجتَها.
+      </p>
+      <ExerciseSet items={topic.exercises} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:grammar` : undefined} />
+
+      <details data-testid="grammatik-theorie" style={{ marginTop: "0.9rem" }}>
+        <summary style={{ cursor: "pointer", fontWeight: 800, minHeight: "44px", display: "flex", alignItems: "center" }}>
+          📘 الشرح والقواعد والأمثلة كاملةً — افتح عند الحاجة
+        </summary>
       <p style={{ lineHeight: 1.9 }}>{topic.summaryAr}</p>
 
       <BrueckenBlock gramId={topic.id} srs={srs} />
@@ -578,8 +597,7 @@ function GrammarTask({ task, srs, onPoints, persistKey }: { task: DayTask; srs: 
         <FehlerFinden pitfalls={topic.pitfalls} onPoints={onPoints} />
       )}
 
-      <h4 style={{ fontWeight: 800, margin: "1rem 0 0.6rem" }}>تثبيت فوري</h4>
-      <ExerciseSet items={topic.exercises} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:grammar` : undefined} />
+      </details>
 
       {/* 🔁 الحلقة الثلاثية: تعرّف → إكمال → إنتاج حر */}
       <TriplePractice topic={topic} seed={Array.from(task.id).reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 41)} onPoints={onPoints} persistKey={persistKey} />
@@ -651,12 +669,13 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
       .filter(Boolean) as Exercise[];
   }, [task.sentenceIds, task.id]);
 
-  if (!deck && task.deckId) return <Empty title="حزمة غير موجودة" />;
+  if (!deck && task.deckId) return <Empty title={meldung("deck-fehlt").titel} aktion={meldung("deck-fehlt").aktion} />;
 
+  const produktiv = !!card && ((srs[card.id]?.reps ?? 0) % 2 === 1);
   const rateCard = (q: 0 | 2 | 4) => {
     if (!card) return;
     const prev = srs[card.id] ?? newCard();
-    onSrs(card.id, reviewCard(prev, q));
+    onSrs(card.id, reviewCard(prev, q, { produktiv }));
     if (q === 0) {
       addFehlerNow({
         falsch: deFormOf(card),
@@ -700,9 +719,24 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
             />
           )}
           <div style={{ fontSize: "1.7rem", fontWeight: 900 }}>
-            {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
-            <De>{deFormOf(card, false)}</De>
+            {produktiv && !flipped ? (
+              <span>{card.ar}</span>
+            ) : (
+              <>
+                {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
+                <De>{deFormOf(card, false)}</De>
+                {genusCode(card.article) && (
+                  <span className="chip" data-testid="karte-genus" title={`الجنس: ${genusCode(card.article)!.ar}`} style={{ fontSize: "0.8rem", marginInlineStart: "0.4rem" }}>
+                    {genusCode(card.article)!.symbol} {genusCode(card.article)!.letter}
+                  </span>
+                )}
+              </>
+            )}
           </div>
+          {produktiv && !flipped && (
+            <div className="chip" data-testid="karte-produktiv" style={{ marginTop: "0.3rem" }}>🎯 إنتاج: تذكّر اللفظ الألماني بنفسك ثم اكشفه</div>
+          )}
+          {(!produktiv || flipped) && (
           <button
             className="btn btn-ghost"
             style={{ margin: "0.5rem" }}
@@ -713,13 +747,19 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
           >
             🔊 اسمع النطق
           </button>
+          )}
           {!flipped ? (
             <div>
-              <button className="btn btn-primary" onClick={(e) => { e.stopPropagation(); setFlipped(true); }}>اكشف المعنى</button>
+              <button className="btn btn-primary" onClick={(e) => { e.stopPropagation(); setFlipped(true); }}>{produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}</button>
             </div>
           ) : (
             <div className="fadein">
               <div style={{ fontSize: "1.15rem", color: "var(--color-cola)" }}>{card.ar}</div>
+              <div style={{ marginTop: "0.35rem" }}>
+                <span className="chip" data-testid="karte-stufe" style={{ fontSize: "0.75rem" }}>
+                  🪜 مرحلة البطاقة: {KARTENSTUFE_AR[karteStufe(srs[card.id])]}{produktiv ? " · هذه الجولة إنتاج (عربي←ألماني)" : ""}
+                </span>
+              </div>
               {card.pos && (
                 <div style={{ marginTop: "0.35rem" }}>
                   <span data-testid="karte-pos" className="chip" style={{ fontSize: "0.75rem" }}>
@@ -797,8 +837,12 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
   const dlg = getDialogue(task.dialogueId ?? "");
   const [playing, setPlaying] = useState(false);
   const [showText, setShowText] = useState(false);
+  // A9 (R282): Pruefungsmodus — ein Abspielvorgang, Text erst nach Abgabe
+  const [pruefung, setPruefung] = useState(false);
+  const [plays, setPlays] = useState(0);
+  const [abgegeben, setAbgegeben] = useState(false);
   const [lineIdx, setLineIdx] = useState(-1);
-  const [voReady, setVoReady] = useState(false);
+  const [, setVoReady] = useState(false);
   // R138/P-13: Hörverstehen-Modi mit Anweisung
   const modus = task.hoerenModus ?? "global";
   const MODUS_INFO: Record<string, { labelDe: string; labelAr: string; instrAr: string }> = {
@@ -811,7 +855,7 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
     warmVoices(() => setVoReady(true));
   }, []);
 
-  if (!dlg) return <Empty title="حوار غير موجود" />;
+  if (!dlg) return <Empty title={meldung("dialog-fehlt").titel} aktion={meldung("dialog-fehlt").aktion} />;
 
   const playAll = () => {
     if (playing) {
@@ -820,7 +864,9 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
       setLineIdx(-1);
       return;
     }
+    if (pruefung && !abgegeben && plays >= 1) return; // A9: nur ein Durchlauf
     setPlaying(true);
+    setPlays((p) => p + 1);
     let i = 0;
     const next = () => {
       if (i >= dlg.lines.length) {
@@ -858,12 +904,20 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
         </p>
       )}
       <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", margin: "0.6rem 0" }}>
-        <button className="btn btn-primary" onClick={playAll}>
-          {playing ? "⏹ أوقف" : "▶️ شغّل الحوار كاملاً"}
+        <button className="btn btn-primary" onClick={playAll} disabled={pruefung && !abgegeben && plays >= 1}>
+          {playing ? "⏹ أوقف" : pruefung && !abgegeben && plays >= 1 ? "🔒 استُمع مرة واحدة (وضع الامتحان)" : "▶️ شغّل الحوار كاملاً"}
         </button>
-        <button className="btn btn-ghost" onClick={() => setShowText((s) => !s)}>
-          {showText ? "🙈 أخفِ النص (أول استماع)" : "👁 أظهر النص"}
+        <button className="btn btn-ghost" onClick={() => setShowText((s) => !s)} disabled={pruefung && !abgegeben}>
+          {pruefung && !abgegeben ? "🔒 النص مقفل حتى التسليم" : showText ? "🙈 أخفِ النص (أول استماع)" : "👁 أظهر النص"}
         </button>
+        <button className="btn btn-ghost" data-testid="hoeren-pruefung-toggle" onClick={() => { setPruefung((p) => !p); setShowText(false); }}>
+          {pruefung ? "🎓 وضع الامتحان: يعمل (أوقف)" : "🎓 فعّل وضع الامتحان (A9)"}
+        </button>
+        {pruefung && !abgegeben && (
+          <button className="btn btn-ghost" data-testid="hoeren-abgabe" onClick={() => setAbgegeben(true)}>
+            📨 سلّمت إجابتي — افتح النص والمراجعة
+          </button>
+        )}
       </div>
 
       <div style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
@@ -883,7 +937,8 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
             <button
               className="chip"
               style={{ cursor: "pointer" }}
-              onClick={() => speakLine(l.de, undefined, { voiceName, rate })}
+              disabled={pruefung && !abgegeben}
+              onClick={() => { if (pruefung && !abgegeben) return; speakLine(l.de, undefined, { voiceName, rate }); }}
               title="اسمع السطر"
             >
               🔊
@@ -911,10 +966,10 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
 }
 
 // ── قراءة ───────────────────────────────────────────────────────────────
-function LesenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
+function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const text = getText(task.textId ?? "");
   const [showTr, setShowTr] = useState(false);
-  if (!text) return <Empty title="نص غير موجود" />;
+  if (!text) return <Empty title={meldung("text-fehlt").titel} aktion={meldung("text-fehlt").aktion} />;
   // 📜 النسخةُ الطويلةُ (طول CEFR حقيقي) إن وُجدت؛ وإلا النصُّ القصير
   const lese = leseText(text);
   const absaetze = lese.de.split(/\n\n+/);
@@ -934,6 +989,7 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPro
           <p key={i} style={{ margin: i === 0 ? 0 : "0.8rem 0 0" }}><WortLinkText text={p} level={text.level} testid={`wortlink-${i}`} /></p>
         ))}
       </article>
+      {bemerkenRegeln && bemerkenRegeln.length > 0 && <BemerkenKarte textDe={lese.de} regeln={bemerkenRegeln} />}
       {radar.length > 0 && (
         <div data-testid="grammatik-radar" style={{ margin: "0.8rem 0 0.4rem", padding: "0.6rem 0.8rem", borderRadius: "8px", background: "var(--color-paper)", borderInlineStart: "4px solid var(--color-b1)", fontSize: "0.82rem" }}>
           <div style={{ fontWeight: 800, marginBottom: "0.3rem", color: "var(--color-ink)" }}>
@@ -972,7 +1028,7 @@ function SchreibenTask({ task, onPoints, persistKey }: Omit<TaskProps, "lang" | 
   });
   const { text, checks, submitted } = draft;
   if (!draftReady) return <div className="card" role="status">⏳ جارٍ استعادة مسودّة الكتابة…</div>;
-  if (!w) return <Empty title="مهمة كتابة غير موجودة" />;
+  if (!w) return <Empty title={meldung("schreiben-fehlt").titel} aktion={meldung("schreiben-fehlt").aktion} />;
   const selfScore = w.criteria.filter((_, i) => checks[i]).length;
 
   return (
@@ -1177,9 +1233,10 @@ function WiederholenTask({
   srs,
   onSrs,
   onPoints,
-  voiceName,
-  rate,
+  voiceName: _voiceName,
+  rate: _rate,
   persistKey,
+  onKapselErgebnis,
 }: Omit<TaskProps, "lang">) {
   const level = levelOf(Math.max(day - 1, 1));
   const isPhaseEnd = istPhasenPruefung(day); // أيام نهاية المرحلة: تقرير كامل
@@ -1214,13 +1271,13 @@ function WiederholenTask({
       {satzItems.length > 0 && (
         <>
           <h4 style={{ fontWeight: 800, margin: "0.4rem 0 0.5rem" }}>ترجم واسترجع</h4>
-          <ExerciseSet items={satzItems} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:sentences` : undefined} />
+          <ExerciseSet items={satzItems} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:sentences` : undefined} onErgebnis={(ex, ok) => { const sid = satzIdAusUebung(ex.id); if (sid && (task.sentenceIds ?? []).includes(sid)) onKapselErgebnis?.(sid, ok); }} />
         </>
       )}
       {task.quiz && task.quiz.length > 0 && (
         <>
           <h4 style={{ fontWeight: 800, margin: "1rem 0 0.5rem" }}>استرجاع سريع من أيام سابقة</h4>
-          <ExerciseSet items={task.quiz} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} />
+          <ExerciseSet items={task.quiz} onPoints={onPoints} storageKey={persistKey ? `${persistKey}:quiz` : undefined} onErgebnis={(ex, ok) => { const sid = satzIdAusUebung(ex.id); if (sid && (task.sentenceIds ?? []).includes(sid)) onKapselErgebnis?.(sid, ok); }} />
         </>
       )}
       {(task.sentenceIds ?? []).length === 0 && !task.quiz?.length && (
@@ -1347,10 +1404,11 @@ function Head({ icon, de, ar }: { icon: string; de: string; ar: string }) {
   );
 }
 
-function Empty({ title }: { title: string }) {
+function Empty({ title, aktion }: { title: string; aktion?: string }) {
   return (
-    <div className="card" style={{ padding: "1.2rem" }}>
+    <div className="card" style={{ padding: "1.2rem" }} data-testid="empty-meldung">
       <strong>{title}</strong>
+      {aktion && <div style={{ color: "var(--color-ink2)", marginTop: "0.35rem" }}>{aktion}</div>}
     </div>
   );
 }

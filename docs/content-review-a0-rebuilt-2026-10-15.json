@@ -1,0 +1,2693 @@
+{
+  "reviewRule": "R146",
+  "date": "2026-10-15",
+  "batch": "A0-rebuilt",
+  "method": "مراجعة آلية بنيوية بنداً بنداً: اكتمال حقول، صلاحية مفاتيح (mc داخل الخيارات/تعبئة غير فارغة)، إسناد الإملاء حرفياً، فرادة المعرفات. ليست مراجعة لغوية بشرية ولا حكماً على طبيعية الترجمة أو النطق؛ ما يحتاج حكماً وُسم «غير محسوم».",
+  "limits": {
+    "human": false,
+    "linguisticReview": false,
+    "note": "لا مراجعة بشرية ولا اعتماد لغة؛ الترجمة والنطق خارج نطاق هذا السجل"
+  },
+  "coverage": {
+    "totalTrackedItems": 331
+  },
+  "statusCounts": {
+    "سليم بنيوياً": 327,
+    "غير محسوم": 4
+  },
+  "sources": [
+    {
+      "id": "engine_smoke",
+      "path": "scripts/engine_smoke.ts",
+      "proves": "بوابات K158/K209/K121a التي تحرس هذا البنك"
+    },
+    {
+      "id": "audit_inhalt",
+      "path": "scripts/audit_inhalt.ts",
+      "proves": "صفر عيوب بنيوية؛ ملحوظات dialog:kurz للحكم البشري"
+    },
+    {
+      "id": "a0_rebuilt_registry_r146",
+      "path": "scripts/patches/a0_rebuilt_registry_r146.py",
+      "proves": "مولّد هذا السجل نفسه"
+    }
+  ],
+  "items": [
+    {
+      "id": "a0-begrussung",
+      "kind": "grammar-topic",
+      "status": "سليم بنيوياً",
+      "finding": "موضوع بقواعد وتمارين وتحققين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-begrussung-ex01",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-begrussung-ex02",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-begrussung-ex03",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-begrussung-ex04",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-begrussung-f4",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-begrussung-t1",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-begrussung-v1",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-begrussung-v2",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-buchstaben",
+      "kind": "grammar-topic",
+      "status": "سليم بنيوياً",
+      "finding": "موضوع بقواعد وتمارين وتحققين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-buchstaben-q1",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-buchstaben-q2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-buchstaben-q3",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-buchstaben-q4",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-buchstaben-r143-e05",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-buchstaben-v1",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-buchstaben-v2",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-zahlen",
+      "kind": "grammar-topic",
+      "status": "سليم بنيوياً",
+      "finding": "موضوع بقواعد وتمارين وتحققين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-zahlen-q1",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-zahlen-q2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-zahlen-q3",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-zahlen-q4",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-zahlen-r143-e05",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-zahlen-v1",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-zahlen-v2",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel",
+      "kind": "grammar-topic",
+      "status": "سليم بنيوياً",
+      "finding": "موضوع بقواعد وتمارين وتحققين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel-v1",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel-v2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel-v3",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel-r141e-prod",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel-r141e-prod2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel-v1-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel-v2-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-artikel-v3-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie",
+      "kind": "grammar-topic",
+      "status": "سليم بنيوياً",
+      "finding": "موضوع بقواعد وتمارين وتحققين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie-v1",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie-v2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie-v3",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie-r141e-prod",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie-r141e-prod2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie-v1-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie-v2-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-du-sie-v3-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-vowels",
+      "kind": "grammar-topic",
+      "status": "سليم بنيوياً",
+      "finding": "موضوع بقواعد وتمارين وتحققين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-av-v1",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-av-v2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-vowels-r141e-e03",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-vowels-r141e-prod",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-vowels-r141e-prod2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-av-v1-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-av-v2-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-umlaut",
+      "kind": "grammar-topic",
+      "status": "سليم بنيوياً",
+      "finding": "موضوع بقواعد وتمارين وتحققين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-au-v1",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-umlaut-r141e-e02",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-umlaut-r141e-e03",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-umlaut-r141e-e04",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-umlaut-r141e-e05",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-umlaut-r141e-prod",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-aussprache-umlaut-r141e-prod2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-au-v1-check",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-au-v2",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau",
+      "kind": "grammar-topic",
+      "status": "سليم بنيوياً",
+      "finding": "موضوع بقواعد وتمارين وتحققين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-r141e-e01",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-r141e-e02",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-r141e-e03",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-r141e-e04",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-r141e-e05",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-r141e-prod",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-r141e-prod2",
+      "kind": "grammar-exercise",
+      "status": "سليم بنيوياً",
+      "finding": "تمرين مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-v1",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "a0-satzbau-v2",
+      "kind": "grammar-verify",
+      "status": "سليم بنيوياً",
+      "finding": "تحقق مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-01",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-01-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-01-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-01-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-02",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-02-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-02-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-02-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-03",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-03-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-03-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-03-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-04",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-04-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-04-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-04-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-05",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-05-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-05-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-05-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-06",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-06-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-06-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-06-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-07",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-07-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-07-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-07-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-08",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-08-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-08-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-08-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-09",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-09-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-09-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-09-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-10",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-10-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-10-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-10-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-011",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-011-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-011-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-011-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-012",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-012-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-012-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-012-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-013",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-013-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-013-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-013-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-014",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-014-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-014-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-014-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-015",
+      "kind": "text",
+      "status": "سليم بنيوياً",
+      "finding": "نص بعنوانين ومتنين وسؤالين على الأقل",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-015-q1",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-015-q2",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "t-a0-015-q3",
+      "kind": "text-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال قراءة مكتمل المفتاح والشرح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.lines[4]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.lines[5]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01-q3",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.dictation[1]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-01.dictation[2]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02",
+      "kind": "dialogue",
+      "status": "غير محسوم",
+      "finding": "حوار قصير جداً (≤3 أسطر): كفايته السياقية حكم بشري (audit: dialog:kurz)",
+      "checks": [
+        "lines<4"
+      ],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02-q3",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02.dictation[1]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-02.dictation[2]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03",
+      "kind": "dialogue",
+      "status": "غير محسوم",
+      "finding": "حوار قصير جداً (≤3 أسطر): كفايته السياقية حكم بشري (audit: dialog:kurz)",
+      "checks": [
+        "lines<4"
+      ],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03-q3",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03.dictation[1]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-03.dictation[2]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04.lines[4]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04.lines[5]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-04.dictation[1]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05.lines[4]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05.lines[5]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-05.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06.lines[4]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06.lines[5]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-06.dictation[1]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07.lines[4]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-07.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-08.dictation[1]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09.lines[4]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-09.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-10",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-10.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-10.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-10.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-10.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-10-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-10-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-10.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11.lines[4]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-11.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-12",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-12.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-12.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-12.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-12.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-12-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-12-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-12.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-13",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-13.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-13.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-13.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-13.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-13-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-13-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-13.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht01",
+      "kind": "dialogue",
+      "status": "غير محسوم",
+      "finding": "حوار قصير جداً (≤3 أسطر): كفايته السياقية حكم بشري (audit: dialog:kurz)",
+      "checks": [
+        "lines<4"
+      ],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht01.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht01.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht01-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht01-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht01.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht02",
+      "kind": "dialogue",
+      "status": "غير محسوم",
+      "finding": "حوار قصير جداً (≤3 أسطر): كفايته السياقية حكم بشري (audit: dialog:kurz)",
+      "checks": [
+        "lines<4"
+      ],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht02.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht02-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht02-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht02.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht03",
+      "kind": "dialogue",
+      "status": "سليم بنيوياً",
+      "finding": "حوار مكتمل الأسطر والأسئلة",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht03.lines[0]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht03.lines[1]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht03.lines[2]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht03.lines[3]",
+      "kind": "dialogue-line",
+      "status": "سليم بنيوياً",
+      "finding": "سطر ألماني بترجمته",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht03-q1",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht03-q2",
+      "kind": "dialogue-question",
+      "status": "سليم بنيوياً",
+      "finding": "سؤال استماع مكتمل المفتاح",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "d-a0-ht03.dictation[0]",
+      "kind": "dialogue-dictation",
+      "status": "سليم بنيوياً",
+      "finding": "مقطع إملاء مسند حرفياً لسطر",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "w-a0-01",
+      "kind": "writing-task",
+      "status": "سليم بنيوياً",
+      "finding": "مهمة كتابة بمعايير تقييم",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "w-a0-02",
+      "kind": "writing-task",
+      "status": "سليم بنيوياً",
+      "finding": "مهمة كتابة بمعايير تقييم",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "w-a0-03",
+      "kind": "writing-task",
+      "status": "سليم بنيوياً",
+      "finding": "مهمة كتابة بمعايير تقييم",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "w-a0-04",
+      "kind": "writing-task",
+      "status": "سليم بنيوياً",
+      "finding": "مهمة كتابة بمعايير تقييم",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "w-a0-05",
+      "kind": "writing-task",
+      "status": "سليم بنيوياً",
+      "finding": "مهمة كتابة بمعايير تقييم",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "w-a0-06",
+      "kind": "writing-task",
+      "status": "سليم بنيوياً",
+      "finding": "مهمة كتابة بمعايير تقييم",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-01",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-02",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-03",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-04",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-05",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-06",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-07",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-08",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-09",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-10",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-11",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-12",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-13",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-14",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-15",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-16",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-17",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-18",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-19",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-20",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-21",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-22",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-23",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-24",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-25",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-26",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-27",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-28",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-29",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "s-a0-30",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-031",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-032",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-033",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-034",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-035",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-036",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-037",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-038",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-039",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-040",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-041",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-042",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-043",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-044",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-045",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-046",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-047",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-048",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-049",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    },
+    {
+      "id": "sat-a0-050",
+      "kind": "sentence",
+      "status": "سليم بنيوياً",
+      "finding": "جملة ألمانية بترجمتها",
+      "checks": [],
+      "reviewed": "آلي-بنيوي"
+    }
+  ]
+}

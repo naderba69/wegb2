@@ -9,3 +9,7 @@ next-env.d.ts
 __pycache__/
 public/sync/*.bundle
 content/.grammar.bak
+# R163: erzeugt aus content/ (Quelle der Wahrheit)
+public/banks.json
+# R202: erzeugt aus public/audio (Quelle der Wahrheit)
+public/audio-manifest.json

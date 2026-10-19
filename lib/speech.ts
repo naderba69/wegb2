@@ -19,22 +19,27 @@ export function germanVoices(): SpeechSynthesisVoice[] {
   return cached;
 }
 
-export function pickVoice(name?: string): SpeechSynthesisVoice | null {
+export function pickVoice(name?: string, langPraefix?: string): SpeechSynthesisVoice | null {
   const vs = germanVoices();
   if (name) {
     const found = vs.find((v) => v.name === name);
     if (found) return found;
   }
+  if (langPraefix) {
+    const regional = vs.find((v) => v.lang.toLowerCase().startsWith(langPraefix.toLowerCase()));
+    if (regional) return regional;
+  }
   return vs[0] ?? null;
 }
 
 /** ينطق نصاً ألمانياً */
-export function speakDe(text: string, opts?: { rate?: number; voiceName?: string }): boolean {
+export function speakDe(text: string, opts?: { rate?: number; voiceName?: string; lang?: string; pitch?: number }): boolean {
   if (!speechAvailable()) return false;
   const u = new SpeechSynthesisUtterance(text);
-  u.lang = "de-DE";
-  const v = pickVoice(opts?.voiceName);
-  if (v) u.voice = v;
+  u.lang = opts?.lang ?? "de-DE";
+  const v = pickVoice(opts?.voiceName, opts?.lang);
+  if (v) { u.voice = v; u.lang = v.lang; }
+  if (opts?.pitch) u.pitch = opts.pitch;
   u.rate = opts?.rate ?? 0.9;
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(u);
@@ -144,11 +149,11 @@ export function recognitionAvailable(): boolean {
 }
 export function speakAny(
   text: string | string[] | null | undefined,
-  opts?: { rate?: number; voiceName?: string }
+  opts?: { rate?: number; voiceName?: string; lang?: string; pitch?: number }
 ): boolean {
   const s = Array.isArray(text) ? text[0] : text;
   if (!s) return false;
-  if (opts?.voiceName !== undefined || opts?.rate !== undefined) {
+  if (opts?.voiceName !== undefined || opts?.rate !== undefined || opts?.lang !== undefined || opts?.pitch !== undefined) {
     return speakDe(String(s), opts);
   }
   const st = loadProgress().settings;

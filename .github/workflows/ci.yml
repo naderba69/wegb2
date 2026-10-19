@@ -1,0 +1,31 @@
+# CI (R201): كل بوابات المشروع تعمل آليًا على كل دفع وطلب سحب —
+# لم يعد «شغّل الاختبارات محليًا» وعدًا يدويًا.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Abhängigkeiten installieren
+        run: npm ci
+      - name: TypeScript
+        run: ./node_modules/.bin/tsc --noEmit
+      - name: ESLint (toter Code, R303)
+        run: npm run lint
+      - name: Engine-Smoke (Inhalts- und Motor-Tore)
+        run: npm run smoke
+      - name: Interaktiv-Tests (DOM)
+        run: npm run interaktiv
+      - name: Inhalts-Audit
+        run: npm run audit:content
+      - name: Produktions-Build
+        run: npm run build

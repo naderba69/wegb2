@@ -1,0 +1,340 @@
+{
+  "items": [
+    {
+      "id": "sv-01",
+      "basis": "bekommen",
+      "ziel": "erhalten",
+      "satz": "Sehr geehrte Damen und Herren, ich habe Ihr Schreiben vom 3. Mai ___.",
+      "satzAr": "سيداتي وسادتي المحترمين، لقد تلقّيت رسالتكم بتاريخ 3 مايو.",
+      "optionen": [
+        "erhalten",
+        "bekommen",
+        "gekriegt",
+        "geholt"
+      ],
+      "nuanceAr": "في الرسائل الرسمية: erhalten (تلقّى من جهة) أرقى أسلوبًا من bekommen اليومية، وgekriegt عامية مرفوضة كتابيًا."
+    },
+    {
+      "id": "sv-02",
+      "basis": "machen",
+      "ziel": "durchführen",
+      "satz": "Das Institut wird die Befragung im Herbst ___.",
+      "satzAr": "سيجري المعهد الاستطلاع في الخريف.",
+      "optionen": [
+        "durchführen",
+        "machen",
+        "tun",
+        "schaffen"
+      ],
+      "nuanceAr": "إجراء الدراسات والاستطلاعات: durchführen — machen عامة جدًا في التقارير العلمية."
+    },
+    {
+      "id": "sv-03",
+      "basis": "sagen",
+      "ziel": "äußern",
+      "satz": "Er wollte seine Meinung zu dem Vorfall nicht ___.",
+      "satzAr": "لم يرد أن يُبدي رأيه في الحادثة.",
+      "optionen": [
+        "äußern",
+        "sagen",
+        "sprechen",
+        "reden"
+      ],
+      "nuanceAr": "إبداء الرأي رسميًا: sich äußern / seine Meinung äußern — sagen محايدة، reden حديثية."
+    },
+    {
+      "id": "sv-04",
+      "basis": "helfen",
+      "ziel": "unterstützen",
+      "satz": "Die Stiftung ___ junge Forscher mit Stipendien.",
+      "satzAr": "تدعم المؤسسة الباحثين الشباب بمنح.",
+      "optionen": [
+        "unterstützen",
+        "helfen",
+        "retten",
+        "dienen"
+      ],
+      "nuanceAr": "الدعم المؤسسي المالي والمعنوي: unterstützen — helfen عامة للمساعدة المباشرة."
+    },
+    {
+      "id": "sv-05",
+      "basis": "zeigen",
+      "ziel": "darstellen",
+      "satz": "Die Grafik ___ die Entwicklung der letzten zehn Jahre.",
+      "satzAr": "يُظهر الرسم البياني تطوّر السنوات العشر الأخيرة.",
+      "optionen": [
+        "darstellen",
+        "zeigen",
+        "malen",
+        "gucken"
+      ],
+      "nuanceAr": "عرض البيانات والحقائق: darstellen — zeigen عامة (أريه بيدي)."
+    },
+    {
+      "id": "sv-06",
+      "basis": "fragen",
+      "ziel": "sich erkundigen",
+      "satz": "Er ___ sich am Schalter nach dem Fahrplan.",
+      "satzAr": "استفسر عند الشباك عن جدول الرحلات.",
+      "optionen": [
+        "sich erkundigen",
+        "fragen",
+        "bitten",
+        "rufen"
+      ],
+      "nuanceAr": "الاستفسار المهذّب الرسمي: sich erkundigen nach + Dativ."
+    },
+    {
+      "id": "sv-07",
+      "basis": "antworten",
+      "ziel": "erwidern",
+      "satz": "Auf die Kritik ___ sie ruhig und sachlich.",
+      "satzAr": "ردّت على النقد بهدوء وموضوعية.",
+      "optionen": [
+        "erwidern",
+        "antworten",
+        "erzählen",
+        "rufen"
+      ],
+      "nuanceAr": "الردّ في السرد الأدبي والرسمي: erwidern — antworten محايدة على سؤال مباشر."
+    },
+    {
+      "id": "sv-08",
+      "basis": "sehen",
+      "ziel": "betrachten",
+      "satz": "Wir müssen das Problem aus einer anderen Perspektive ___.",
+      "satzAr": "علينا أن ننظر إلى المشكلة من منظور آخر.",
+      "optionen": [
+        "betrachten",
+        "sehen",
+        "gucken",
+        "schauen"
+      ],
+      "nuanceAr": "النظر التأملي المنهجي: betrachten — gucken عامية، schauen يومية."
+    },
+    {
+      "id": "sv-09",
+      "basis": "benutzen",
+      "ziel": "verwenden",
+      "satz": "Für den Versuch ___ wir ein neues Verfahren.",
+      "satzAr": "في التجربة نستخدم إجراءً جديدًا.",
+      "optionen": [
+        "verwenden",
+        "benutzen",
+        "nehmen",
+        "machen"
+      ],
+      "nuanceAr": "الاستخدام المنهجي في العلم والإدارة: verwenden — benutzen يومية شائعة."
+    },
+    {
+      "id": "sv-10",
+      "basis": "kaufen",
+      "ziel": "erwerben",
+      "satz": "Das Museum konnte das Gemälde günstig ___.",
+      "satzAr": "استطاع المتحف اقتناء اللوحة بسعر مناسب.",
+      "optionen": [
+        "erwerben",
+        "kaufen",
+        "holen",
+        "nehmen"
+      ],
+      "nuanceAr": "الاقتناء الرسمي (ممتلكات/حقوق/شهادات): erwerben — kaufen للسوق اليومي."
+    },
+    {
+      "id": "sv-11",
+      "basis": "geben",
+      "ziel": "überreichen",
+      "satz": "Der Direktor ___ ihr die Urkunde persönlich.",
+      "satzAr": "سلّمها المدير الشهادة شخصيًا.",
+      "optionen": [
+        "überreichen",
+        "geben",
+        "bringen",
+        "zeigen"
+      ],
+      "nuanceAr": "التسليم الاحتفالي الرسمي: überreichen (شهادات وجوائز)."
+    },
+    {
+      "id": "sv-12",
+      "basis": "brauchen",
+      "ziel": "benötigen",
+      "satz": "Für den Antrag ___ wir Ihre Unterschrift.",
+      "satzAr": "نحتاج إلى توقيعك للطلب.",
+      "optionen": [
+        "benötigen",
+        "brauchen",
+        "wollen",
+        "nehmen"
+      ],
+      "nuanceAr": "الاحتياج الرسمي في الطلبات: benötigen — brauchen يومية."
+    },
+    {
+      "id": "sv-13",
+      "basis": "erlauben",
+      "ziel": "gestatten",
+      "satz": "___ Sie, dass ich mich kurz vorstelle?",
+      "satzAr": "أتسمح لي أن أقدّم نفسي باختصار؟",
+      "optionen": [
+        "gestatten",
+        "erlauben",
+        "lassen",
+        "machen"
+      ],
+      "nuanceAr": "صيغة أدب ثابتة: Gestatten Sie ...؟ — أرقى من Erlauben Sie في التقديم الرسمي."
+    },
+    {
+      "id": "sv-14",
+      "basis": "erzählen",
+      "ziel": "berichten",
+      "satz": "Die Zeitung ___ ausführlich über den Unfall.",
+      "satzAr": "تروي الصحيفة / تورد بالتفصيل عن الحادث.",
+      "optionen": [
+        "berichten",
+        "erzählen",
+        "sagen",
+        "malen"
+      ],
+      "nuanceAr": "السرد الإخباري والرسمي: berichten über — erzählen للقصص الشخصية."
+    },
+    {
+      "id": "sv-15",
+      "basis": "meinen",
+      "ziel": "erwägen",
+      "satz": "Wir ___ ernsthaft einen Umzug ins Ausland.",
+      "satzAr": "نفكّر جديًا في الانتقال إلى الخارج.",
+      "optionen": [
+        "erwägen",
+        "meinen",
+        "glauben",
+        "sagen"
+      ],
+      "nuanceAr": "التفكير في خيار ودراسته: erwägen — meinen للرأي، glauben للاعتقاد. فرق معنوي لا أسلوبي فقط."
+    },
+    {
+      "id": "sv-16",
+      "basis": "prüfen",
+      "ziel": "untersuchen",
+      "satz": "Die Polizei ___ den Fall seit Wochen.",
+      "satzAr": "تحقّق الشرطة في القضية منذ أسابيع.",
+      "optionen": [
+        "untersuchen",
+        "prüfen",
+        "machen",
+        "sehen"
+      ],
+      "nuanceAr": "التحقيق والفحص المعمّق: untersuchen (قضية/مريض/عينة) — prüfen لمراجعة سريعة."
+    },
+    {
+      "id": "sv-17",
+      "basis": "ändern",
+      "ziel": "anpassen",
+      "satz": "Wir müssen den Zeitplan an die neue Lage ___.",
+      "satzAr": "علينا تكييف الجدول مع الوضع الجديد.",
+      "optionen": [
+        "anpassen",
+        "ändern",
+        "machen",
+        "tun"
+      ],
+      "nuanceAr": "التكييف مع ظرف: etwas an etwas (Akk.) anpassen — ändern تغيير عام."
+    },
+    {
+      "id": "sv-18",
+      "basis": "stark",
+      "ziel": "erheblich",
+      "satz": "Die Preise sind im letzten Jahr ___ gestiegen.",
+      "satzAr": "ارتفعت الأسعار بشكل كبير في السنة الماضية.",
+      "optionen": [
+        "erheblich",
+        "stark",
+        "sehr",
+        "viel"
+      ],
+      "nuanceAr": "في التقارير: erheblich صفة مقدار رسمية قبل الأفعال (erheblich steigen/sinken)."
+    },
+    {
+      "id": "sv-19",
+      "basis": "alt",
+      "ziel": "ehemalig",
+      "satz": "Der ___ Direktor der Schule besuchte uns gestern.",
+      "satzAr": "زارنا مدير المدرسة السابق أمس.",
+      "optionen": [
+        "ehemalig",
+        "alt",
+        "jung",
+        "groß"
+      ],
+      "nuanceAr": "فرق معنوي: ehemalig = السابق في المنصب، alt = عجوز/قديم. لشخص لم يعد مديرًا: ehemalig."
+    },
+    {
+      "id": "sv-20",
+      "basis": "neu",
+      "ziel": "aktuell",
+      "satz": "Der ___ Stand der Forschung ist eindeutig.",
+      "satzAr": "أحدث ما وصل إليه البحث واضح (وضع البحث الحالي).",
+      "optionen": [
+        "aktuell",
+        "neu",
+        "frisch",
+        "jung"
+      ],
+      "nuanceAr": "تركيب ثابت: der aktuelle Stand / die aktuelle Lage — aktuell للحاضر الجاري، neu لشيء صُنع حديثًا."
+    },
+    {
+      "id": "sv-21",
+      "basis": "schnell",
+      "ziel": "umgehend",
+      "satz": "Wir bitten um ___ Antwort bis Freitag.",
+      "satzAr": "نرجو الردّ الفوري حتى الجمعة.",
+      "optionen": [
+        "umgehend",
+        "schnell",
+        "bald",
+        "rasch"
+      ],
+      "nuanceAr": "في مراسلات العمل: umgehend صيغة طلب رسمية ثابتة (sofort, ohne Verzögerung)."
+    },
+    {
+      "id": "sv-22",
+      "basis": "geben",
+      "ziel": "erteilen",
+      "satz": "Auskunft kann Ihnen nur die Pressestelle ___.",
+      "satzAr": "لا يستطيع إعطاءك المعلومات إلا المكتب الصحفي.",
+      "optionen": [
+        "erteilen",
+        "geben",
+        "machen",
+        "sagen"
+      ],
+      "nuanceAr": "تركيب رسمي ثابت: Auskunft erteilen — geben هنا يومية."
+    },
+    {
+      "id": "sv-23",
+      "basis": "Job",
+      "ziel": "Tätigkeit",
+      "satz": "Sie sucht eine neue berufliche ___.",
+      "satzAr": "تبحث عن نشاط مهني جديد.",
+      "optionen": [
+        "Tätigkeit",
+        "Job",
+        "Arbeit",
+        "Sache"
+      ],
+      "nuanceAr": "في السير الذاتية والتقارير: Tätigkeit (نشاط مهني رسمي) — Job حديثية من الإنجليزية."
+    },
+    {
+      "id": "sv-24",
+      "basis": "Geld",
+      "ziel": "Finanzmittel",
+      "satz": "Für den Ausbau der Schule fehlen die nötigen ___.",
+      "satzAr": "لأعمال توسيع المدرسة تنقص الوسائل المالية اللازمة.",
+      "optionen": [
+        "Finanzmittel",
+        "Geld",
+        "Sachen",
+        "Stücke"
+      ],
+      "nuanceAr": "في لغة المؤسسات: Finanzmittel (موارد مالية مخصصة) — Geld عام."
+    }
+  ]
+}

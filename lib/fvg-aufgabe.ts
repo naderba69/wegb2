@@ -2,7 +2,7 @@
  * يولّد تدريباً أسبوعياً على Funktionsverbgefüge (B2 فقط) — سؤال اختيار من متعدد
  * على الفعل الوظيفي المناسب.
  */
-import { FVG_LIST, fvgOf, type FVG } from "./fvg";
+import { fvgOf, type FVG } from "./fvg";
 import type { Exercise, Level } from "./types";
 
 const VERBEN = ["treffen", "stellen", "stehen", "kommen", "nehmen", "üben", "ergreifen",

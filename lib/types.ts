@@ -58,6 +58,8 @@ export interface VocabCard {
   /** أضداد مدققة — لكل صفة ضدّها أو استثناء معلَن (R29) */
   ant?: string[];
   article?: string;
+  /** ترميز لون الجنس (der=BLAU, die=ROT, das=GRÜN) — مع الرمز الشكلي في البطاقات */
+  farbe?: string;
   plural?: string;
   exampleDe?: string;
   exampleAr?: string;
@@ -154,6 +156,10 @@ export interface Hoerdialog {
 export interface Schreibaufgabe {
   id: string;
   level: Level;
+  /** صيغة الامتحان (E4): brief = إطار رسالة (تحية/ختام جزء من الإنجاز)، frei = نص حر */
+  format?: "brief" | "frei";
+  /** طول الهدف الرسمي بالكلمات إن وُسم في البنك */
+  zielWort?: number;
   titleDe: string;
   titleAr: string;
   taskDe: string;
@@ -226,6 +232,17 @@ export interface KontextPaket {
   saetze: { de: string; ar: string }[];
   dialog: { titel: string; lines: { who: "A" | "B"; role: string; de: string; ar: string }[] };
   modelle: { titel: string; zeilen: string[] }[];
+}
+
+export interface WiederEintrag {
+  id: string;
+  erstellt: string;
+  faellig: string;
+  absatz: string;
+  spalten: string[];
+  status: "offen" | "erledigt";
+  erledigtAm?: string;
+  vergleich?: { behoben: string[]; geblieben: string[]; neuHinzu: string[] };
 }
 
 export interface DayTask {
@@ -323,6 +340,13 @@ export interface SrsState {
   reps: number;
   lapses: number;
   learning?: boolean;
+  /** FSRS-6 (R280): Stabilitaet in Tagen / Schwierigkeit 1..10 — optional (Migration alter Karten). */
+  stab?: number;
+  diff?: number;
+  /** Zeitpunkt der letzten Bewertung (ISO) — fuer verstrichene Tage im FSRS. */
+  last?: string;
+  /** Produktive Erfolge (AR→DE-Richtung, M2): Zaehler fuer die Meisterungsstufe. */
+  prod?: number;
   /** تاريخ إدخال البطاقة (لمراجعة أولى بعد 24 ساعة) */
   introduced?: string;
 }
@@ -403,24 +427,51 @@ export interface Progress {
   srs: Record<string, SrsState>;
   canDo: Record<string, boolean>;
   streak: { last: string | null; count: number };
+  /** 💾 M16/R289: تاريخ آخر تصدير نسخة احتياطية — للتذكير الشهري المحلي */
+  letzteSicherung?: string;
+  /** 🌱 M15/R287: وضع الاستئناف بعد غياب — جلستا عودة مخفّضتان تُسجَّلان بتاريخَيهما */
+  resume?: { startDatum: string; startTag: number; sitzungen: string[]; gapDays: number };
+  /** 🔁 M9/R288: إعادة كتابة محسّنة مجدولة بعد 48 ساعة من كل تصحيح */
+  wiederschreiben?: WiederEintrag[];
   /** يوم سيّئ: بصمة المستخدم أنّ اليوم كان صعباً → تُجمَّد السلسلة بدون عقاب ولا ديون */
   badDay?: string;
   settings: {
     uiLang: "auto" | UiLang;
     rate: number;
+    /** 🔊 M7/R287: سرعة التشغيل تلقائية حسب المستوى أو يدوية محفوظة */
+    rateMode?: "auto" | "manual";
     tempo: Tempo;
     voiceName?: string;
     /** مدرّس LLM اختياري (OpenAI-compatible) — يبقى محلياً في متصفحك */
-    llm?: { baseUrl: string; apiKey: string; model: string };
+    llm?: { baseUrl: string; apiKey: string; model: string; anbieter?: string; zugestimmt?: boolean };
     /** 🎙️ التعرّف السحابي على الكلام (Web Speech API) — يُرسِل الصوتَ إلى خدمة المتصفّح الخارجية.
      *  اختياريٌّ صريح: إن عُطِّل فُتح المسارُ المحلّيُّ البديل ولا يُحسبُ شيءٌ في الشبكة. */
     cloudSpeech?: boolean;
     /** أُكِّد اختبار تحديد المستوى */
     placed?: boolean;
+    /** 🪪 نتيجة التشخيص التكيّفي (M3/R183): تقدير كلّ مهارة واليوم المطبَّق وتاريخه — تقدير آلي من بنوك التطبيق لا اختبار رسمي */
+    einstufung?: { lesen: string; hoeren: string; grammatik: string; wortschatz: string; tag: number; datum: string };
+    /** 🔔 A27/R293: تذكير يومي محلي بإشعار متصفح (بلا خادم) */
+    erinnerung?: { aktiv: boolean; uhrzeit: string };
     /** موعد الامتحان الخارجي (YYYY-MM-DD) + اسمه */
     examDate?: string;
     examName?: string;
   };
+  /** 🎓 نتائج محاكاة الامتحان (E1/R171): أحدث 30 محاولة بنقاط الوحدات الأربع وحكمها — محاكاة لا نتيجة رسمية */
+  simulationen?: { datum: string; seed: number; format?: string; punkte: { lesen: number; hoeren: number; schreiben: number; sprechen: number }; bestanden: boolean }[];
+  /** 🎙️ سجلّ بطاقات المحادثة المسجّلة (E5): بيانات وصفية فقط (بطاقة/تقدير ذاتي/مدّة) — الصوت نفسه لا يُخزَّن أبداً */
+  sprechUebungen?: { datum: string; level: string; teil: number; karteId: string; dauerS: number; punkte: number }[];
+  /** ⏱️ A3/R283: قياسات سرعة القراءة (كلمات/دقيقة) من سلّم القراءة — قياس زمني آلي لا حكم مستوى رسمي */
+  fluenz?: { datum: string; wpm: number; stufe: number }[];
+  /** 🎯 A19/R284: نية تنفيذ أسبوعية (متى/أين/ماذا) + علم إنجازها — محلية فقط */
+  absicht?: { woche: string; wann: string; wo: string; was: string; erfuellt?: boolean };
+  /** 🔁 حلقات الكتابة (M5/R185): مسودّة وإعادة كتابتها محفوظتان محليًا للمقارنة الكلمية — آخر ٨ حلقات */
+  schreibEntwuerfe?: { id: string; taskId: string; datum: string; v1: string; v2?: string }[];
+  /** 🪜 تقدّم سلّم القراءة (C1): النص ← أفضل نتيجة (صحيحة/كلية) — المحطة التالية تُفتح بإتمام السابقة */
+  leseleiter?: Record<string, { r: number; g: number }>;
+  /** 🌙 سجلّ فواصل الكبسولة المتكيفة (M1/R181): الجملة ← درجة السلّم (0..4 على 1/3/7/30/90 يومًا) وآخر يوم تدرّب وعدد الأخطاء.
+   *  الخطأ يعيد الجملة غدًا، والصواب يُبعدها درجةً — ولا جملة تختفي أبدًا (الدرجة القصوى تُستدعى بعد 90 يومًا). */
+  kapselStand?: Record<string, { s: number; t: number; f: number }>;
   /** نتائج امتحانات المراحل: اليوم ← الدرجة المئوية ونجاح */
   exams?: Record<number, { score: number; passed: boolean }>;
   /** 🎯 طابور تحقق الاستقلال: الدرس ← يوم الاستحقاق (التدريب+3) ونتيجة التحقق.
@@ -446,7 +497,7 @@ export interface Progress {
   /** الأوسمة المكسوبة: id ← تاريخ المنح */
   abzeichen?: Record<string, string>;
   /** سجلّ الكفاءات الموحّد: محاولات موزّعة على شبكة CEFR (logK) */
-  kompetenzLog?: { h: Kompetenz; ok: boolean }[];
+  kompetenzLog?: { h: Kompetenz; ok: boolean; d?: string }[];
   /** صحّة التعلّم (Modul U): حارس 20-20-20 ووضع المريض */
   gesundheit?: {
     augenPause?: boolean;

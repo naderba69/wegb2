@@ -7,15 +7,37 @@ import { grammarMap } from "@/lib/content";
 import ExerciseSet from "@/components/exercises";
 import { FehlerLabor } from "@/components/fehlerlabor";
 import { UebungenCard } from "@/components/trainer";
-import { BlitzDrill } from "@/components/blitz";
+import { BlitzDrill, KurzSession } from "@/components/blitz";
 import { HoerLabor, LueckDiktat } from "@/components/hoeren";
 import { MündlichLabor } from "@/components/muendlich";
+import { LeseLeiter } from "@/components/leseleiter";
+import { SchnellLesen } from "@/components/schnellesen";
+import { PragmatikKarte } from "@/components/pragmatik";
+import { WortfamilienStation } from "@/components/wortfamilien";
+import { KollokProduktionStation } from "@/components/kollokproduktion";
+import { ErweiterungStation } from "@/components/erweiterung";
+import { LeseStoffStation } from "@/components/lesestoff";
+import { SpieleStation } from "@/components/spiele";
+import { FehlerGrenze } from "@/components/fehlergrenze";
+import { ReferenzPanel } from "@/components/referenz";
+import { FreiesInput } from "@/components/freiesinput";
+import { FehlerAtlas } from "@/components/fehleratlas";
+import { DialogSzenarien } from "@/components/dialogszenarien";
+import { RedemittelBank } from "@/components/redemittel";
+import { HoerNeu } from "@/components/hoerneu";
 import { VortragsBühne } from "@/components/vortrag";
 import { InterviewArena } from "@/components/interview2";
 import { BriefSchmiede } from "@/components/briefe";
 import { LebensSzenarien } from "@/components/szenarien";
 import { TiefenLexikon } from "@/components/tiefenlex";
 import { KatalogLeiste } from "@/components/katalog";
+import { EinstufungTest } from "@/components/einstufung";
+import { ShadowingStation } from "@/components/shadowing";
+import { PflegeStation } from "@/components/pflege";
+import { SprechBegleiter } from "@/components/sprechbegleiter";
+import { LebensweltStation } from "@/components/lebenswelt";
+import { VollPruefung } from "@/components/vollpruefung";
+import { PhonetikStation } from "@/components/phonetik";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
@@ -26,9 +48,10 @@ import { MenuSection } from "@/components/dirb/MenuSection";
  * · زائد التمارين (>3) يَرتحلُ من المعالج إلى «تدريب إضافي» هنا (K114).
  * شاشة واحدة في كل مرة: القائمة أو محطة واحدة بباب رجوع.
  */
-const UEBEN_REIHENFOLGE = "zusatz,fehlerlabor,uebungen,blitz,hoeren,lueck,muendlich,vortrag,interview,briefe,szenarien,tiefen,katalog";
+const UEBEN_REIHENFOLGE = "einstufung,zusatz,fehlerlabor,uebungen,blitz,hoeren,hoerneu,lueck,muendlich,begleiter,schatten,phonetik,vortrag,interview,briefe,szenarien,pflege,vollpruefung,leseleiter,redemittel,leben,tiefen,lesestoff,spiele,katalog";
 
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
+  einstufung: { icon: "🪪", titel: "تحديد المستوى التكيّفي", unter: "تشخيص بأربع مهارات يقترح يوم دخولٍ آمنًا في الخطة." },
   zusatz: { icon: "➕", titel: "تدريب إضافي", unter: "تمارين أخرى بقيت من درس اليوم." },
   fehlerlabor: { icon: "🔬", titel: "معمل تحليل الخطأ", unter: "افهم سبب الخطأ وتدرّب على تصحيحه." },
   uebungen: { icon: "🗂️", titel: "التدريب الحرّ", unter: "راجع المفردات والبطاقات وفق حاجتك." },
@@ -36,11 +59,22 @@ const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   hoeren: { icon: "🎧", titel: "معمل الاستماع", unter: "تدرّب على فهم النص المسموع." },
   lueck: { icon: "📝", titel: "إكمال الجمل", unter: "أكمل الكلمات الناقصة في الجملة." },
   muendlich: { icon: "🗣️", titel: "التدريب الشفوي", unter: "تحدّث ثم راجع الملاحظات المتاحة." },
+  begleiter: { icon: "🤖", titel: "رفيق المحادثة الذكي", unter: "حوار حرّ مع شريك ذكاء اصطناعي بأدوار مهنية — بمفتاحك وموافقتك فقط." },
+  schatten: { icon: "🎙️", titel: "التظليل الصوتي", unter: "ردّد مع النموذج وقارن موجتك وإيقاعك زمنيًا — لا حكم نطق." },
+  phonetik: { icon: "🔊", titel: "مسار الصوتيات", unter: "تمييز سمعي متدرج A0→A2: طول الحركات، أوملاوت، ich/ach، ‏R — نطق جهازي معلن." },
   vortrag: { icon: "🎤", titel: "التحدّث أمام الجمهور", unter: "تدرّب على عرض قصير ضمن وقت محدد." },
   interview: { icon: "🤝", titel: "مقابلة العمل", unter: "تدرّب على الإجابة عن أسئلة المقابلة." },
   briefe: { icon: "✉️", titel: "كتابة الرسائل", unter: "اكتب رسالة تناسب الموقف." },
   szenarien: { icon: "🏙️", titel: "مواقف من الحياة", unter: "طبّق ما تعلّمته في مواقف واقعية." },
+  pflege: { icon: "🩺", titel: "ألمانية التمريض (Pflege)", unter: "مفردات وحوارات وتوثيق للعمل في الرعاية الصحية — مسار إضافي خارج الخطة." },
+  vollpruefung: { icon: "🧪", titel: "جلسة امتحان كاملة", unter: "قراءة واستماع وكتابة وتحدّث في جلسة واحدة بمؤقّت ونتيجة مجمّعة — محاكاة داخلية." },
+  leseleiter: { icon: "🪜", titel: "سلّم القراءة", unter: "نصوص قصيرة متدرّجة بين A0 وA1 بمسرد وأسئلة من النصّ." },
+  redemittel: { icon: "🧰", titel: "بنك وسائل التعبير", unter: "عبارات الامتحان مصنّفة بالوظيفة والجزء، مع تدريب استرجاع." },
+  hoerneu: { icon: "🎧", titel: "استماع متنوّع", unter: "أخبار وإعلانات ومقابلات بصوت KI موسوم وسرعات من المشغّل." },
+  leben: { icon: "🌍", titel: "الحياة في ألمانيا والاعتراف المهني", unter: "مؤسسات وأوراق وعادات، ومسار Anerkennung التمريض، ولغة شارع بسياقها." },
   tiefen: { icon: "📖", titel: "معجم المفردات", unter: "ابحث عن كلمة أو معنى عند الحاجة." },
+  lesestoff: { icon: "📚", titel: "قراءة وحوارات حرة", unter: "قصص ونصوص وحوارات جديدة لكل المستويات مع أسئلة فهم (R300 — خارج الخطة)." },
+  spiele: { icon: "🎮", titel: "ألعاب الكلمات", unter: "شبكة كلمات من مفرداتك، أكمل الحوار، وترجم بكتابتك (R300 — خارج الخطة)." },
   katalog: { icon: "🗃️", titel: "دليل التدريبات", unter: "استعرض التدريبات المتاحة في الأكاديمية." },
 };
 
@@ -49,19 +83,19 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "ueben-priority",
     title: "ابدأ بالأهم",
     description: "ابدأ بما بقي من الدرس، ثم راجع الأخطاء.",
-    items: ["zusatz", "fehlerlabor", "uebungen", "blitz"],
+    items: ["einstufung", "zusatz", "fehlerlabor", "uebungen", "blitz"],
   },
   {
     id: "ueben-skills",
     title: "تدرّب على المهارات",
     description: "اختر مهارة أو طبّق ما تعلّمته في موقف.",
-    items: ["hoeren", "lueck", "muendlich", "vortrag", "interview", "briefe", "szenarien"],
+    items: ["hoeren", "hoerneu", "lueck", "muendlich", "begleiter", "schatten", "phonetik", "vortrag", "interview", "briefe", "szenarien", "pflege", "vollpruefung", "leseleiter", "redemittel"],
   },
   {
     id: "ueben-reference",
     title: "مراجع إضافية",
     description: "للبحث والاستكشاف عند الحاجة.",
-    items: ["tiefen", "katalog"],
+    items: ["leben", "tiefen", "lesestoff", "spiele", "katalog"],
   },
 ];
 
@@ -69,6 +103,7 @@ export default function Ueben() {
   const { progress } = useProgress();
   const [abend, setAbend] = useState(false);
   const [offen, setOffen] = useState<string | null>(null);
+  const [suchtext, setSuchtext] = useState("");
   const [geladen, setGeladen] = useState(false);
 
   useEffect(() => {
@@ -114,6 +149,31 @@ export default function Ueben() {
     );
   }
 
+  // ── R302/ت1: المحطّتان الحرّتان الاستكشافيّتان (قراءة/ألعاب) مفتوحتان قبل الإغلاق — لا تنافسان الطابور ──
+  if (!abend && (offen === "lesestoff" || offen === "spiele")) {
+    const k = KARTE[offen];
+    return (
+      <div className="today-screen fadein dirb ui-page">
+        <button type="button" className="dirb-back" data-testid="ueben-zurueck" onClick={() => setOffen(null)}>
+          → رجوع
+        </button>
+        {k && (
+          <div className="dirb-station-head">
+            <div className="dirb-kicker">{k.icon} محطة تدريب حرّة</div>
+            <h1 className="dirb-station-title">{k.titel}</h1>
+            <div className="dirb-station-sub">{k.unter}</div>
+          </div>
+        )}
+        <section className="dirb-station">
+          <FehlerGrenze>
+            {offen === "lesestoff" && <LeseStoffStation />}
+            {offen === "spiele" && <SpieleStation />}
+          </FehlerGrenze>
+        </section>
+      </div>
+    );
+  }
+
   // ── الباب المقفل: سببٌ معلن وبابٌ واحد (K113b) ──
   if (!abend) {
     return (
@@ -131,6 +191,13 @@ export default function Ueben() {
           <Link href="/" className="dirb-start" style={{ textDecoration: "none" }}>
             ↩ عُد إلى «اليوم» وأكمل طابورك
           </Link>
+          <div style={{ marginTop: "1rem", display: "grid", gap: "0.5rem", justifyItems: "center" }}>
+            <div className="dirb-sub" style={{ fontSize: "0.85rem" }}>أو استكشف الآن بحرّية — لا يمسّ طابور يومك:</div>
+            <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", justifyContent: "center" }}>
+              <button type="button" className="btn btn-ghost" data-testid="ueben-frei-lesestoff" style={{ minHeight: "48px" }} onClick={() => setOffen("lesestoff")}>📚 قراءة وحوارات حرة</button>
+              <button type="button" className="btn btn-ghost" data-testid="ueben-frei-spiele" style={{ minHeight: "48px" }} onClick={() => setOffen("spiele")}>🎮 ألعاب الكلمات</button>
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -170,18 +237,32 @@ export default function Ueben() {
           </div>
         )}
         <section className="dirb-station">
-          {offen === "fehlerlabor" && <FehlerLabor progress={progress} />}
+          <FehlerGrenze>
+          {offen === "fehlerlabor" && (<div style={{ display: "grid", gap: "0.9rem" }}><FehlerLabor progress={progress} /><FehlerAtlas /></div>)}
           {offen === "uebungen" && <UebungenCard progress={progress} />}
-          {offen === "blitz" && <BlitzDrill progress={progress} />}
+          {offen === "blitz" && (<div style={{ display: "grid", gap: "0.9rem" }}><BlitzDrill progress={progress} /><KurzSession progress={progress} /></div>)}
           {offen === "hoeren" && <HoerLabor progress={progress} />}
           {offen === "lueck" && <LueckDiktat progress={progress} />}
           {offen === "muendlich" && <MündlichLabor progress={progress} />}
           {offen === "vortrag" && <VortragsBühne progress={progress} />}
           {offen === "interview" && <InterviewArena progress={progress} />}
           {offen === "briefe" && <BriefSchmiede progress={progress} />}
-          {offen === "szenarien" && <LebensSzenarien progress={progress} />}
-          {offen === "tiefen" && <TiefenLexikon progress={progress} />}
+          {offen === "szenarien" && (<div style={{ display: "grid", gap: "0.9rem" }}><LebensSzenarien progress={progress} /><DialogSzenarien /></div>)}
+          {offen === "leseleiter" && (<div style={{ display: "grid", gap: "0.9rem" }}><LeseLeiter /><SchnellLesen /></div>)}
+          {offen === "redemittel" && (<div style={{ display: "grid", gap: "0.9rem" }}><RedemittelBank /><PragmatikKarte /></div>)}
+          {offen === "hoerneu" && (<div style={{ display: "grid", gap: "0.9rem" }}><HoerNeu /><FreiesInput /></div>)}
+          {offen === "tiefen" && (<div style={{ display: "grid", gap: "0.9rem" }}><TiefenLexikon progress={progress} /><WortfamilienStation /><KollokProduktionStation /><ErweiterungStation /><ReferenzPanel progress={progress} /></div>)}
+          {offen === "einstufung" && <EinstufungTest />}
+          {offen === "schatten" && <ShadowingStation />}
+          {offen === "phonetik" && <PhonetikStation />}
+          {offen === "pflege" && <PflegeStation />}
+          {offen === "vollpruefung" && <VollPruefung />}
+          {offen === "begleiter" && <SprechBegleiter />}
+          {offen === "leben" && <LebensweltStation />}
+          {offen === "lesestoff" && <LeseStoffStation />}
+          {offen === "spiele" && <SpieleStation />}
           {offen === "katalog" && <KatalogLeiste />}
+          </FehlerGrenze>
         </section>
       </div>
     );
@@ -189,8 +270,10 @@ export default function Ueben() {
 
   // ── القائمة حسب ترتيب الأولوية؛ التقسيم لا يغيّر ترتيبها (K112a) ──
   const ids = UEBEN_REIHENFOLGE.split(",").filter((id) => id !== "zusatz" || hatZusatz);
+  const q = suchtext.trim();
+  const sichtbareIds = ids.filter((id) => !q || (KARTE[id] && `${KARTE[id].titel} ${KARTE[id].unter}`.includes(q)));
   const groups = MENU_GROUPS
-    .map((group) => ({ ...group, items: group.items.filter((id) => ids.includes(id)) }))
+    .map((group) => ({ ...group, items: group.items.filter((id) => sichtbareIds.includes(id)) }))
     .filter((group) => group.items.length > 0);
   const renderCard = (id: string) => {
     const k = KARTE[id];
@@ -226,18 +309,36 @@ export default function Ueben() {
         </div>
       )}
 
+      <div style={{ marginBottom: "0.7rem" }}>
+        <input
+          className="field"
+          type="search"
+          value={suchtext}
+          onChange={(e) => setSuchtext(e.target.value)}
+          placeholder="ابحث في المحطات… (استماع، كتابة، أخطاء)"
+          aria-label="ابحث في محطات التدريب"
+          data-testid="ueben-suche"
+          style={{ width: "100%", minHeight: "48px" }}
+        />
+      </div>
+
       <div className="dirb-menu-groups dirb-hero-anim-2">
-        {groups.map((group) => (
+        {groups.map((group, gi) => (
           <MenuSection
-            key={group.id}
+            key={`${group.id}-${q ? "suche" : "liste"}`}
             id={group.id}
             title={group.title}
             description={group.description}
             count={group.items.length}
+            einklappbar
+            startOffen={gi === 0 || !!q}
           >
             {group.items.map(renderCard)}
           </MenuSection>
         ))}
+        {groups.length === 0 && (
+          <p className="tiny muted" role="status">لا محطة تطابق «{q}» — جرّب كلمة أخرى أو امسح البحث.</p>
+        )}
       </div>
     </div>
   );

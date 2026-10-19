@@ -7,17 +7,17 @@
 //   🧩 Funktionsverbgefüge: التراكيب الخفيفة الرسمية (12 تعبيراً)
 // كل خطأ ← دفتر الأخطاء بفئته · كل جولة ← شبكة الكفاءات (Wortschatz).
 import { useMemo, useState } from "react";
-import type { Exercise, Level, Progress, VocabCard } from "@/lib/types";
-import { sentences, tiefenlex, alleVokabeln } from "@/lib/content";
+import type { Level, Progress } from "@/lib/types";
+import { sentences, tiefenlex, alleVokabeln, kollokVertiefung, synonymVertiefung } from "@/lib/content";
+import { sucheAlles } from "@/lib/suche";
+import { frequenzVonWort, FREQUENZ_AR } from "@/lib/frequenz";
 import { levelOf, pickN, rng } from "@/lib/plan";
+import { gemischteOptionen } from "@/lib/optionen";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { De } from "./De";
 
-function gradeItem(ex: Exercise, resp: string): boolean {
-  return resp === String(Array.isArray(ex.answer) ? ex.answer[0] : ex.answer);
-}
 
 type Challenge = {
   id: string;
@@ -107,6 +107,34 @@ function bauFvg(runde: number): Challenge[] {
   }));
 }
 
+// ───────────────── ⑤ Kollokationen B2 im Kontext (C6/R180) ─────────────────
+function bauKollokVertiefung(runde: number): Challenge[] {
+  const rnd = rng(runde * 733 + 41);
+  return pickN(kollokVertiefung, 6, rnd).map((k) => ({
+    id: `kv-${k.id}`,
+    frage: "أيّ كلمة تتمّم هذا التلازم؟",
+    kontext: k.satz,
+    options: pickN(k.optionen, k.optionen.length, rnd),
+    answer: k.antwort,
+    erklaerung: `${k.kollokation} — ${k.ar}. ${k.noteAr}`,
+    art: "kollokation",
+  }));
+}
+
+// ───────────────── ⑥ Register-Synonyme B2 im Kontext (C6/R180) ─────────────────
+function bauSynonymVertiefung(runde: number): Challenge[] {
+  const rnd = rng(runde * 421 + 53);
+  return pickN(synonymVertiefung, 6, rnd).map((x) => ({
+    id: `sv-${x.id}`,
+    frage: `أيّ كلمة أرقى أسلوبًا هنا بدلًا من «${x.basis}»؟`,
+    kontext: x.satz,
+    options: pickN(x.optionen, x.optionen.length, rnd),
+    answer: x.ziel,
+    erklaerung: `${x.basis} ← ${x.ziel}. ${x.nuanceAr}`,
+    art: "synonym",
+  }));
+}
+
 function Runde({ items, titel, onFertig }: { items: Challenge[]; titel: string; onFertig: (ok: number, n: number) => void }) {
   const { update } = useProgress();
   const [i, setI] = useState(0);
@@ -157,7 +185,7 @@ function Runde({ items, titel, onFertig }: { items: Challenge[]; titel: string; 
       </div>
       {antwort === null ? (
         <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-          {c.options.map((o) => (
+          {gemischteOptionen(c.options, c.id).map((o) => (
             <button key={o} className="chip" style={{ cursor: "pointer", fontSize: "1rem", padding: "0.45rem 1rem" }} onClick={() => waehle(o)}>
               {o}
             </button>
@@ -189,9 +217,12 @@ const TABS = [
   { id: "n", emoji: "🪞", name: "Nuancen", unter: "فروق المتقارب" },
   { id: "v", emoji: "🔗", name: "Verb + Präp", unter: "20 فعل بجرّه الثابت" },
   { id: "f", emoji: "🧩", name: "Funktionsverben", unter: "12 تركيباً رسمياً" },
+  { id: "kv", emoji: "🔗", name: "Kollokationen B2", unter: "31 تلازماً بالسياق" },
+  { id: "sv", emoji: "✒️", name: "Register-Synonyme", unter: "24 مرادفاً رسمياً بالسياق" },
 ] as const;
 
 export function TiefenLexikon({ progress }: { progress: Progress }) {
+  const [suchtext, setSuchtext] = useState("");
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<(typeof TABS)[number]["id"]>("k");
   const [runde, setRunde] = useState(0);
@@ -204,6 +235,8 @@ export function TiefenLexikon({ progress }: { progress: Progress }) {
       case "n": return bauNuancen(runde);
       case "v": return bauVerben(runde);
       case "f": return bauFvg(runde);
+      case "kv": return bauKollokVertiefung(runde);
+      case "sv": return bauSynonymVertiefung(runde);
     }
   }, [tab, runde, level]);
 
@@ -218,7 +251,7 @@ export function TiefenLexikon({ progress }: { progress: Progress }) {
         <span className="chip">{open ? "إخفاء ▲" : "إظهار ▼"}</span>
       </button>
       <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)", margin: "0.2rem 0 0.6rem" }}>
-        أربعة أعماق معجمية: المعنى بالسياق · فروق المتقارب (Nuancen) · أفعال بجرّها الثابت · التراكيب الخفيفة (Funktionsverben) — تحت المجهر لا فوق القوائم.
+        ستّة أعماق معجمية: المعنى بالسياق · فروق المتقارب (Nuancen) · أفعال بجرّها الثابت · التراكيب الخفيفة (Funktionsverben) · تلازمات B2 بالسياق · مرادفات السجلّ الرسمي — تحت المجهر لا فوق القوائم.
       </div>
       {stat.n > 0 && (
         <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginBottom: "0.4rem" }}>
@@ -227,6 +260,36 @@ export function TiefenLexikon({ progress }: { progress: Progress }) {
       )}
       {open && (
         <>
+          <div data-testid="suche-box" style={{ marginBottom: "0.8rem" }}>
+            <input
+              data-testid="suche-input"
+              value={suchtext}
+              onChange={(e) => setSuchtext(e.target.value)}
+              placeholder="🔎 بحث موحّد: كلمة، متلازمة، قاعدة، وسيلة تعبير… (M14)"
+              style={{ width: "100%", minHeight: 44, borderRadius: 10, padding: "0.4rem 0.7rem" }}
+            />
+            {suchtext.trim().length >= 2 && (() => {
+              const r = sucheAlles(suchtext);
+              return (
+                <div data-testid="suche-ergebnis" style={{ fontSize: "0.85rem", display: "grid", gap: "0.3rem", marginTop: "0.45rem" }}>
+                  {r.trefferGesamt === 0 && <span style={{ color: "var(--color-ink2)" }}>لا نتائج — جرّب كلمة ألمانية أو عربية أخرى.</span>}
+                  {r.vokabeln.map((v) => (
+                    <div key={"v" + v.de}>🗂️ <strong dir="ltr" style={{ unicodeBidi: "isolate" }}>{v.de}</strong> = {v.ar} {v.level && <span className="chip" style={{ fontSize: "0.68rem" }}>{v.level}</span>} <span className="chip" style={{ fontSize: "0.68rem" }}>📊 {FREQUENZ_AR[frequenzVonWort(v.de).stufe]}</span></div>
+                  ))}
+                  {r.kollok.map((k) => (
+                    <div key={"k" + k.phrase}>🧩 <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{k.phrase}</span>{k.karteAr && <span style={{ color: "var(--color-ink2)" }}> — بطاقة: {k.karteAr}</span>}</div>
+                  ))}
+                  {r.grammatik.map((g) => (
+                    <div key={"g" + g.id}>📐 {g.titelAr} <span style={{ color: "var(--color-ink2)" }}>({g.titelDe})</span></div>
+                  ))}
+                  {r.redemittel.map((x) => (
+                    <div key={"r" + x.de}>🧰 <span dir="ltr" style={{ unicodeBidi: "isolate" }}>{x.de}</span> = {x.ar}</div>
+                  ))}
+                  {r.trefferGesamt > 0 && <span style={{ color: "var(--color-ink2)" }}>المجموع {r.trefferGesamt} نتيجة في أربع بنوك (تُعرض أول 6 من كل بنك).</span>}
+                </div>
+              );
+            })()}
+          </div>
           <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "0.7rem" }}>
             {TABS.map((t) => (
               <button

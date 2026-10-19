@@ -1,6 +1,6 @@
 "use client";
 // ✍️ Schreib-Werkstatt — كتابة بتوقيت امتحان (Teil 1: 15د · Teil 2: 28د) مع مستشار الكتابة
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import type { Progress, Schreibaufgabe } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
 import { writingTasks } from "@/lib/content";
@@ -9,6 +9,11 @@ import { useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { SchreibBerater } from "./lehrer";
+import { redemittelFuerTeil } from "@/lib/redemittel";
+import { saatAusText } from "@/lib/optionen";
+import { KriterienPanel } from "./kriterienpanel";
+import { SchreibSchleife } from "./schreibschleife";
+import { WiederschreibenKarte } from "./wiederschreiben";
 import { De } from "./De";
 
 type Teil = "T1" | "T2" | "T3";
@@ -96,6 +101,16 @@ export function SchreibWerkstatt({ progress }: { progress: Progress }) {
             <De>{task.taskDe}</De>
             <div style={{ fontSize: "0.85rem", marginTop: "0.2rem" }}>{task.taskAr}</div>
           </div>
+          <details style={{ margin: "0.4rem 0" }}>
+            <summary style={{ cursor: "pointer", fontWeight: 700 }}>🧰 وسائل تعبير لصيغة هذه المهمة ({task.format === "brief" ? "رسالة" : "منتدى/رأي"})</summary>
+            <div style={{ display: "grid", gap: "0.25rem", marginTop: "0.35rem" }}>
+              {redemittelFuerTeil(task.format === "brief" ? "brief" : "forum", saatAusText(task.id), 6).map((x) => (
+                <div key={x.id} style={{ fontSize: "0.85rem" }}>
+                  <De>{x.de}</De> <span style={{ color: "var(--color-ink2)" }}>— {x.ar}</span>
+                </div>
+              ))}
+            </div>
+          </details>
           <textarea
             className="field"
             rows={8}
@@ -141,7 +156,10 @@ export function SchreibWerkstatt({ progress }: { progress: Progress }) {
                   </ul>
                 ) : null}
               </details>
+              <KriterienPanel text={text} ziel={task.zielWort ?? cfg!.ziel} art={task.format === "brief" ? "brief" : "forum"} taskDe={task.taskDe} />
               <SchreibBerater text={text} taskDe={task.taskDe} />
+              <SchreibSchleife key={task.id} taskId={task.id} v1={text} />
+              <WiederschreibenKarte quelleText={text} />
               <button className="btn btn-ghost" style={{ marginTop: "0.6rem" }} onClick={() => setTeil(null)}>
                 ← جولة جديدة
               </button>

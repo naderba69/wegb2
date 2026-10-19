@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useProgress } from "@/lib/store";
 import { activeProfile } from "@/lib/profiles";
 import { BerichteZentrum } from "@/components/berichte";
+import { LernLandkarte } from "@/components/landkarte";
+import { AbsichtKarte } from "@/components/absicht";
 import { WegWeiser } from "@/components/wegweiser";
 import { RadarKarte } from "@/components/katalog";
 import { Fehlerkartei } from "@/components/fehler-ui";
@@ -12,15 +14,17 @@ import { LernStrategieZentrum } from "@/components/lernstrategie";
 import { ElternPaket } from "@/components/elternpaket";
 import { KontraktCard } from "@/components/kontrakt";
 import { Wochenplan } from "@/components/wochen";
+import { WochenZielKarte } from "@/components/motivation";
 import { MenuSection } from "@/components/dirb/MenuSection";
 
 /**
  * 📈 وجهة «تقدّمي» (P4): مشاهدةٌ سلبيةٌ محضة (K116b — صفر href وصفر Link).
- * عشرُ محطاتِ إحصاءٍ تعرضُ ما صنعتَه ولا تدعوكَ إلى محتوى — الطابورُ وحده
+ * محطاتُ إحصاءٍ تعرضُ ما صنعتَه ولا تدعوكَ إلى محتوى — الطابورُ وحده
  * يملكُ الأبواب. زرُّ الرجوعِ زرٌّ داخليٌّ لا رابط.
  */
 const KARTE: Record<string, { icon: string; titel: string; unter: string }> = {
   berichte: { icon: "📊", titel: "تقارير المدرّس", unter: "ملخّص لما أتقنته وما يحتاج إلى مراجعة." },
+  landkarte: { icon: "🗺️", titel: "خريطة الإنجاز", unter: "طريقك من A0 إلى B2 محطةً محطة بنسب إتمام من أيامك المغلقة." },
   radar: { icon: "📡", titel: "رادار الوحدات", unter: "تابع تقدّمك عبر وحدات المنهج." },
   wegweiser: { icon: "🧭", titel: "البوصلة", unter: "ثلاث خطوات مقترحة وفق مرحلتك." },
   fehlerkartei: { icon: "🗂️", titel: "فهرس الأخطاء", unter: "راجع الأخطاء التي سُجّلت لك." },
@@ -37,7 +41,7 @@ const MENU_GROUPS: { id: string; title: string; description: string; items: stri
     id: "fortschritt-overview",
     title: "نظرة على التقدّم",
     description: "ملخّص الوحدات والنتائج وخطة الأسبوع.",
-    items: ["berichte", "radar", "wegweiser", "wochen"],
+    items: ["berichte", "landkarte", "radar", "wegweiser", "wochen"],
   },
   {
     id: "fortschritt-records",
@@ -73,6 +77,7 @@ export default function Fortschritt() {
         )}
         <section className="dirb-station">
           {offen === "berichte" && <BerichteZentrum progress={progress} name={activeProfile().name} />}
+          {offen === "landkarte" && <LernLandkarte progress={progress} />}
           {offen === "radar" && <RadarKarte progress={progress} />}
           {offen === "wegweiser" && <WegWeiser progress={progress} />}
           {offen === "fehlerkartei" && <Fehlerkartei />}
@@ -81,13 +86,13 @@ export default function Fortschritt() {
           {offen === "lernstrategie" && <LernStrategieZentrum progress={progress} />}
           {offen === "eltern" && <ElternPaket progress={progress} name={activeProfile().name} />}
           {offen === "kontrakt" && <KontraktCard progress={progress} />}
-          {offen === "wochen" && <Wochenplan progress={progress} />}
+          {offen === "wochen" && (<div style={{ display: "grid", gap: "0.9rem" }}><WochenZielKarte progress={progress} /><AbsichtKarte /><Wochenplan progress={progress} /></div>)}
         </section>
       </div>
     );
   }
 
-  const ids = ["berichte", "radar", "wegweiser", "fehlerkartei", "abzeichen", "gesundheit", "lernstrategie", "eltern", "kontrakt", "wochen"];
+  const ids = ["berichte", "landkarte", "radar", "wegweiser", "fehlerkartei", "abzeichen", "gesundheit", "lernstrategie", "eltern", "kontrakt", "wochen"];
   const groups = MENU_GROUPS
     .map((group) => ({ ...group, items: group.items.filter((id) => ids.includes(id)) }))
     .filter((group) => group.items.length > 0);
@@ -120,13 +125,15 @@ export default function Fortschritt() {
       </header>
 
       <div className="dirb-menu-groups dirb-hero-anim-2">
-        {groups.map((group) => (
+        {groups.map((group, gi) => (
           <MenuSection
             key={group.id}
             id={group.id}
             title={group.title}
             description={group.description}
             count={group.items.length}
+            einklappbar
+            startOffen={gi === 0}
           >
             {group.items.map(renderCard)}
           </MenuSection>

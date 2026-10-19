@@ -8,8 +8,9 @@ import {
   buildModulPruefung, bewerte, darfWiederholen, modulFrei, modulIndex, rettungsplan,
   GESAMT_SCHWELLE, FACH_SCHWELLE, TEIL_AR, type PruefTeil, type PruefErgebnis,
 } from "@/lib/modulpruefung";
-import { getDialogue, dialogAudioSrc } from "@/lib/content";
+import { getDialogue, dialogAudioSrc, dialogAudioIstKi } from "@/lib/content";
 import { speakAny } from "@/lib/speech";
+import { gemischteOptionen } from "@/lib/optionen";
 
 const LEER: Record<PruefTeil, number> = { lesen: 0, hoeren: 0, schreiben: 0, sprechen: 0 };
 
@@ -24,6 +25,8 @@ export default function ModulTor({ day }: { day: number }) {
   const [text, setText] = useState("");
   const [selbst, setSelbst] = useState<Record<string, boolean>>({});
   const [erg, setErg] = useState<PruefErgebnis | null>(null);
+  // R145: تسجيلٌ تعذّر تشغيلُه يتراجع إلى صوت المتصفح بإعلانٍ صريح — لا مشغّل صامت في الامتحان
+  const [audioDefekt, setAudioDefekt] = useState<Record<string, boolean>>({});
   const versuch = stand?.versuche ?? 0;
   const pruefung = useMemo(() => buildModulPruefung(idx, versuch), [idx, versuch]);
 
@@ -103,7 +106,7 @@ export default function ModulTor({ day }: { day: number }) {
                       <De style={{ fontSize: "0.88rem" }}>{f.promptDe}</De>
                       {f.options ? (
                         <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap", marginTop: "0.2rem" }}>
-                          {f.options.map((o) => (
+                          {gemischteOptionen(f.options, f.id).map((o) => (
                             <button key={o} className="chip" style={{ minHeight: "44px", borderColor: antworten[f.id] === o ? "var(--color-cola)" : undefined }}
                               onClick={() => setAntworten({ ...antworten, [f.id]: o })}>{o}</button>
                           ))}
@@ -121,10 +124,19 @@ export default function ModulTor({ day }: { day: number }) {
                 <>
                   {ab.dialogIds.map((id) => {
                     const src = dialogAudioSrc(id);
+                    const istKi = dialogAudioIstKi(id);
                     const dialog = getDialogue(id);
                     const spokenText = dialog?.lines.map((line) => line.de).join(" ") ?? "";
-                    return src ? (
-                      <audio key={id} controls src={src} style={{ width: "100%", marginBottom: "0.3rem" }} />
+                    return src && !audioDefekt[id] ? (
+                      <div key={id} style={{ marginBottom: "0.3rem" }}>
+                        <audio controls src={src} style={{ width: "100%" }}
+                          onError={() => setAudioDefekt((s) => ({ ...s, [id]: true }))} />
+                        {istKi && (
+                          <div data-audio-kind="ki" style={{ fontSize: "0.78rem", color: "var(--color-ink2)", marginTop: "0.2rem" }}>
+                            🎙️ صوت مولّد بالذكاء الاصطناعي (صوت واحد يقرأ كل الأدوار) — ليس تسجيلًا بشريًا بأداء أدوار.
+                          </div>
+                        )}
+                      </div>
                     ) : (
                       <button
                         key={id}
@@ -136,7 +148,7 @@ export default function ModulTor({ day }: { day: number }) {
                         aria-label={`الاستماع إلى ${dialog?.titleDe ?? "الحوار"} بصوت المتصفح`}
                         style={{ width: "100%", marginBottom: "0.3rem", textAlign: "start" }}
                       >
-                        🔊 استمع بصوت المتصفح — لا يوجد تسجيل لهذا الحوار
+                        🔊 استمع بصوت المتصفح — {audioDefekt[id] ? "تعذّر تشغيل التسجيل" : "لا يوجد تسجيل لهذا الحوار"}
                       </button>
                     );
                   })}
@@ -144,7 +156,7 @@ export default function ModulTor({ day }: { day: number }) {
                     <div key={f.id} style={{ marginBottom: "0.35rem" }}>
                       <De style={{ fontSize: "0.88rem" }}>{f.promptDe}</De>
                       <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap", marginTop: "0.2rem" }}>
-                        {(f.options ?? ["richtig", "falsch"]).map((o) => (
+                        {gemischteOptionen(f.options ?? ["richtig", "falsch"], f.id).map((o) => (
                           <button key={o} className="chip" style={{ minHeight: "44px", borderColor: antworten[f.id] === o ? "var(--color-cola)" : undefined }}
                             onClick={() => setAntworten({ ...antworten, [f.id]: o })}>{o}</button>
                         ))}

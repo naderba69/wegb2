@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { FehlerRevue } from "./FehlerRevue";
 import { loadProgress, saveProgress } from "@/lib/store";
+import { effektiveRate } from "@/lib/rate";
+import { wochenNeueRegeln } from "@/lib/bemerken";
 import {
   type DayPlan,
   type DayTask,
@@ -13,6 +15,7 @@ import {
 import { grammarMap, getDeck } from "@/lib/content";
 import TaskView from "@/components/tasks";
 import { TagesKapsel } from "@/components/kapsel";
+import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { kapselSaetzeAbend } from "@/lib/kapsel";
 import { speakDe } from "@/lib/speech";
 import { aufgabeGesperrt, sperrText, type RitualUrteil } from "@/lib/ritual";
@@ -29,6 +32,8 @@ interface KlassenzimmerProps {
   resultOf: (id: string) => TaskResult | undefined;
   localOf: (id: string) => { score: number; total: number };
   onPoints: (p: number, m: number) => void;
+  /** نتيجة استرجاع كبسولة (M1) تُحجز في فواصل المتعلم. */
+  onKapselErgebnis?: (satzId: string, ok: boolean) => void;
   submitCurrent: () => void;
   doCloseDay: () => void;
   badDayToday?: () => void;
@@ -75,6 +80,7 @@ export function Klassenzimmer({
   resultOf,
   localOf,
   onPoints,
+  onKapselErgebnis,
   submitCurrent,
   doCloseDay,
   badDayToday,
@@ -87,9 +93,11 @@ export function Klassenzimmer({
   showCurrentHero = true,
 }: KlassenzimmerProps) {
   const voiceName = progress.settings.voiceName;
-  const rate = progress.settings.rate;
+  const rate = effektiveRate(progress); // M7/R287: Auto-Tempo nach Niveau, manuelle Wahl bleibt
   const lang = progress.settings.uiLang === "auto" ? "ar" : progress.settings.uiLang;
   const [pauseSaved, setPauseSaved] = useState(false);
+  // 🎬 R187/U1: وضع الجلسة المتسلسلة — مهمّة ← تسليم ← التالية بزرٍّ واحد، وحرية الرقائق باقية
+  const [spieler, setSpieler] = useState(true);
   const savePause = () => {
     onPauseSession?.();
     try { localStorage.setItem(`wegb2:day-step:${day}`, String(stepFrei)); } catch { /* قد يكون التخزين محظوراً */ }
@@ -113,6 +121,15 @@ export function Klassenzimmer({
   const warmupSaetze = day > 1 ? kapselSaetzeAbend(day - 1) : [];
 
   const fertig = plan.tasks.length > 0 && plan.tasks.every((tk) => resultOf(tk.id));
+  // 🎬 U1: حسابات شريط المشغّل — من نتائج الخطة ودقائقها المخططة لا من ادّعاء
+  const erledigtZahl = plan.tasks.filter((tk) => resultOf(tk.id)).length;
+  const naechsteOffene = plan.tasks.findIndex((tk, i) => i > stepFrei && !resultOf(tk.id) && !aufgabeGesperrt(ritual, i));
+  const naechsteOffeneGesamt = naechsteOffene >= 0 ? naechsteOffene : plan.tasks.findIndex((tk, i) => i !== stepFrei && !resultOf(tk.id) && !aufgabeGesperrt(ritual, i));
+  const restMinuten = plan.tasks.filter((tk) => !resultOf(tk.id)).reduce((s, tk) => s + tk.minutes, 0);
+  // 🧭 تقطيع اليوم محطاتٍ قصيرة (R196): موقع المهمة الحالية داخل محطّتها الستّ
+  const stationJetzt = currentTask ? stationOfTask(currentTask) : null;
+  const stationAlle = stationJetzt ? plan.tasks.filter((tk) => stationOfTask(tk) === stationJetzt) : [];
+  const stationFertig = stationAlle.filter((tk) => resultOf(tk.id)).length;
   const kicker = !currentTask
     ? "🎉 لا مهامَّ اليوم"
     : fertig
@@ -151,6 +168,14 @@ export function Klassenzimmer({
           🔐 <strong>{sperrText(ritual)}</strong>
           <small>الاسترجاعُ قبل الجديد — سلّم مهمّة الاسترجاع أولاً لتنفتح باقي المهام.</small>
         </div>
+      )}
+
+      {/* ── 🔁 R182/M2: زمن الافتتاحية الاسترجاعية معلَن دائمًا ── */}
+      {day > 1 && ritual.torMinuten > 0 && (
+        <p className="tiny muted" data-testid="abruf-eroeffnung" style={{ margin: 0 }}>
+          🔁 يُفتتح يومك باسترجاعٍ قبل أيّ جديد: نحو <strong>{ritual.torMinuten} دقيقة</strong> مخططة
+          {ritual.grund === "wochencheck" ? " (امتحان الأسبوع نفسه + استرجاع)" : ""} — الاسترجاع أولًا دائمًا.
+        </p>
       )}
 
       {/* ── 🦸 البطل: مهمّتك الآن ── */}
@@ -228,7 +253,7 @@ export function Klassenzimmer({
 
       {/* ── 🔥 إحماء الاسترجاع: يظهر مع مهمّة الاسترجاع فقط ── */}
       {currentTask?.kind === "wiederholen" && warmupSaetze.length > 0 && (
-        <details className="dirb-details" open>
+        <details className="dirb-details">
           <summary>🔥 إحماء: جمل مساء الأمس — استمع واستحضر قبل أن تُسترجَع</summary>
           <div style={{ display: "grid", gap: "0.5rem", marginTop: "0.6rem" }}>
             {warmupSaetze.map((s) => (
@@ -271,10 +296,81 @@ export function Klassenzimmer({
           <span className="dirb-training-count">
             المهمة {stepFrei + 1}/{plan.tasks.length}
           </span>
+          <button
+            type="button"
+            className="chip"
+            data-testid="sitzung-modus"
+            aria-pressed={spieler}
+            onClick={() => setSpieler((s) => !s)}
+            style={{ minHeight: "40px", cursor: "pointer", fontWeight: 800 }}
+          >
+            {spieler ? "🎬 وضع الجلسة: يعمل" : "🎬 وضع الجلسة المتسلسلة"}
+          </button>
         </div>
 
-        {/* ── رقائق مهام اليوم ── */}
-        <div className="dirb-chiprow" role="list" aria-label="مهام اليوم">
+        {/* ── 🎬 R187/U1: شريط المشغّل المتسلسل — مهمّة ‹ تسليم ‹ التالية ── */}
+        {spieler && (
+          <div className="dirb-hero-anim-2" data-testid="sitzung-spieler" style={{ display: "grid", gap: "0.45rem", marginBottom: "0.6rem" }}>
+            <div style={{ fontSize: "0.92rem" }}>
+              🎬 <strong>جلسة اليوم متسلسلة:</strong> أنجزت <span className="rtl-num">{erledigtZahl}</span> من{" "}
+              <span className="rtl-num">{plan.tasks.length}</span> مهام
+              {restMinuten > 0 && <> · متبقٍّ مخططًا نحو <span className="rtl-num">{restMinuten}</span> دقيقة</>}
+              {" "}· اختر أيّ رقاقة متى شئت — التسلسل لا يلغي حريتك.
+            </div>
+            {stationJetzt && (
+              <div data-testid="sitzung-station" style={{ fontSize: "0.85rem", fontWeight: 700 }}>
+                {STATIONEN[stationJetzt].icon} محطّة «{STATIONEN[stationJetzt].ar}»: أنجزتَ {stationFertig} من {stationAlle.length} — يومُك ستُّ محطاتٍ قصيرة لا كتلةً واحدة
+              </div>
+            )}
+            <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap" }} data-testid="sitzung-fortschritt" role="list" aria-label="تقدّم مهام اليوم">
+              {plan.tasks.map((tk, i) => {
+                const r = resultOf(tk.id);
+                const jetzt = i === stepFrei;
+                return (
+                  <span
+                    key={tk.id}
+                    role="listitem"
+                    title={`${i + 1}. ${tk.titleAr}${r ? " — مُسلَّمة" : jetzt ? " — الحالية" : ""}`}
+                    aria-label={`المهمة ${i + 1}${r ? " مُسلَّمة" : jetzt ? " الحالية" : ""}`}
+                    style={{
+                      width: "30px", height: "30px", borderRadius: "50%",
+                      display: "inline-flex", alignItems: "center", justifyContent: "center",
+                      fontSize: "0.72rem", fontWeight: 800,
+                      border: jetzt ? "3px solid var(--color-gold)" : "1px solid var(--color-line)",
+                      background: r ? "var(--color-a1)" : jetzt ? "var(--color-cola)" : "transparent",
+                      color: r || jetzt ? "var(--ui-on-accent)" : "var(--color-ink2)",
+                    }}
+                  >
+                    {r ? "✓" : i + 1}
+                  </span>
+                );
+              })}
+            </div>
+            {currentTask && resultOf(currentTask.id) && naechsteOffeneGesamt >= 0 && (
+              <button
+                type="button"
+                className="btn btn-primary"
+                data-testid="sitzung-weiter"
+                style={{ minHeight: "52px", fontWeight: 900 }}
+                onClick={() => { setStep(naechsteOffeneGesamt); scrollNach("dirb-training"); }}
+              >
+                ▶ المهمة التالية: {plan.tasks[naechsteOffeneGesamt].titleAr}
+              </button>
+            )}
+            {currentTask && resultOf(currentTask.id) && naechsteOffeneGesamt < 0 && (
+              <div data-testid="sitzung-fertig" style={{ fontWeight: 800 }}>
+                🏁 لا مهام مفتوحة بعد في هذا اليوم — الجلسة مكتملة، وزرّ إغلاق اليوم في الأسفل حين تريد.
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ── رقائق مهام اليوم: مطوية في وضع الجلسة المركّز، مفتوحة في الوضع الحرّ (R194) ── */}
+        <details key={spieler ? "sitzung" : "frei"} data-testid="aufgaben-details" {...(spieler ? {} : { open: true })}>
+          <summary style={{ cursor: "pointer", fontWeight: 700, minHeight: "44px", display: "flex", alignItems: "center" }}>
+            🗂️ مهام اليوم ({plan.tasks.length}) — اختر أيّ مهمة بحرّية متى شئت
+          </summary>
+        <div className="dirb-chiprow" role="list" aria-label="مهام اليوم" style={{ marginTop: "0.4rem" }}>
           {plan.tasks.map((tk, i) => {
             const r = resultOf(tk.id);
             const passed = r?.passed;
@@ -304,6 +400,7 @@ export function Klassenzimmer({
             );
           })}
         </div>
+        </details>
 
         {currentTask && (
           <div style={{ display: "grid", gap: "0.8rem" }}>
@@ -332,6 +429,8 @@ export function Klassenzimmer({
               rate={rate}
               tempo={progress.settings.tempo}
               persistKey={`wegb2:partial:${currentTask.id}`}
+              onKapselErgebnis={onKapselErgebnis}
+              bemerkenRegeln={wochenNeueRegeln(progress, day)}
             />
 
             <div className="dirb-actions">

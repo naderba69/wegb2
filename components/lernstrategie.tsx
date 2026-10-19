@@ -197,11 +197,12 @@ function PomoCoach() {
 
   // 4-7-8
   const [atm, setAtm] = useState<number | null>(null);
+  const atemLaeuft = atm !== null;
   useEffect(() => {
-    if (atm === null) return;
+    if (!atemLaeuft) return;
     const t = setInterval(() => setAtm((a) => (a === null ? null : a + 1)), 1000);
     return () => clearInterval(t);
-  }, [atm !== null]);
+  }, [atemLaeuft]);
   const zyklus = atm === null ? null : atm % 19;
   const atemPhase = zyklus === null ? "" : zyklus < 4 ? "شهيق من الأنف 👃" : zyklus < 11 ? "احبس 🤫" : "زفير بطيء من الفم 😮‍💨";
   const runde = atm === null ? 0 : Math.min(4, Math.floor(atm / 19) + 1);
@@ -449,7 +450,6 @@ const UMLAUT: [RegExp, (m: RegExpMatchArray) => string][] = [
   [/\bgroesse\b/gi, () => "Größe"],
 ];
 
-const ENDVERB = new Set(["sein", "haben", "werden", "können", "müssen", "dürfen", "sollen", "wollen", "mögen", "machen", "gehen", "kommen", "sagen", "denken", "glauben", "brauchen", "bleiben", "heissen", "heißen", "lernen", "arbeiten", "wohnen", "spielen", "fahren", "lesen", "schreiben", "verstehen", "sprechen", "treffen", "bestellen", "abholen", "einladen", "vorstellen", "anfangen", "bitten", "gehören"]);
 /* أدوات تجريد ملزِمة-الفاصلة فقط — «seit» استُبعدت: كحرف جر (seit einem Jahr) لا تأخذ فاصلة أصلاً */
 const KONJ = ["weil", "dass", "obwohl", "wenn", "damit", "während", "bevor", "nachdem", "falls"];
 

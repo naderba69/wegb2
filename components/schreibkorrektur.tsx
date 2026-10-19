@@ -2,12 +2,12 @@
 // ✍️ التصحيح ثلاثيّ الأعمدة + الحلقة العلاجية: خطأ ← قاعدة ← ثلاثة تمارين ← دفتر الأخطاء
 import { useMemo, useState } from "react";
 import { De } from "@/components/De";
-import { loadProgress, saveProgress, disputeRegel } from "@/lib/store";
-import { upsertFehler } from "@/lib/fehler";
+import { loadProgress, disputeRegel } from "@/lib/store";
+import { FehlerKartenWahl } from "./fehlerkarten";
 import { grammarMap } from "@/lib/content";
 import {
   pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen, effektiveSchwere, DISPUT_SCHWELLE,
-  SPALTE_AR, SCHWERE_AR, type Befund, type Spalte,
+  SPALTE_AR, SCHWERE_AR, type Spalte,
 } from "@/lib/schreibpruefer";
 
 const SPALTEN: Spalte[] = ["grammatik", "syntax", "wortwahl"];
@@ -28,19 +28,6 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "
   const note = bewerteSchreiben(befunde, disputes);
   const woerter = text.trim().split(/\s+/).filter(Boolean).length;
 
-  const insDefter = () => {
-    let p = loadProgress();
-    for (const f of eff.filter((x) => x.schwere !== "stil")) {
-      p = upsertFehler(p, {
-        falsch: f.stelle, richtig: f.vorschlagDe ?? "—", ar: f.meldungAr,
-        art: f.spalte === "syntax" ? "wortstellung" : f.spalte === "wortwahl" ? "wortschatz" : "konstruktion",
-        quelle: "Schreibkorrektur",
-      });
-    }
-    saveProgress(p);
-    setGespeichert(true);
-  };
-  const [gespeichert, setGespeichert] = useState(false);
 
   return (
     <section className="card" data-test="schreibkorrektur" style={{ padding: "1rem 1.2rem", display: "grid", gap: "0.6rem" }}>
@@ -54,7 +41,7 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "
       </p>
 
       <textarea
-        dir="ltr" rows={7} value={text} onChange={(e) => { setText(e.target.value); setGeprueft(false); setGespeichert(false); }}
+        dir="ltr" rows={7} value={text} onChange={(e) => { setText(e.target.value); setGeprueft(false); }}
         placeholder="Sehr geehrte Damen und Herren, …"
         style={{ width: "100%", padding: "0.5rem", fontSize: "0.95rem", borderRadius: "0.5rem" }}
       />
@@ -119,9 +106,15 @@ export default function SchreibKorrektur({ minWoerter = 50, aufgabeAr, level = "
           ))}
 
           {eff.some((b) => b.schwere !== "stil") && (
-            <button className="btn" onClick={insDefter} disabled={gespeichert}>
-              {gespeichert ? "✅ أُضيفت إلى دفتر الأخطاء" : "📓 أضِف الأخطاء إلى دفتري (تعود بعد ٣ أيام)"}
-            </button>
+            <FehlerKartenWahl
+              quelle="Schreibkorrektur"
+              eintraege={eff.filter((x) => x.schwere !== "stil").map((f) => ({
+                falsch: f.stelle,
+                richtig: f.vorschlagDe ?? "—",
+                ar: f.meldungAr,
+                art: f.spalte === "syntax" ? "wortstellung" : f.spalte === "wortwahl" ? "wortschatz" : "konstruktion",
+              }))}
+            />
           )}
         </>
       )}

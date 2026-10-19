@@ -1,4 +1,4 @@
-import raw from "@/content/synonyme-kontext.json";
+import { bankRoh, beiBankenBereit } from "./bankload";
 import type { VocabCard } from "./types";
 
 export type SynonymKontextEintrag = {
@@ -12,7 +12,14 @@ export type SynonymKontextEintrag = {
 };
 
 type SynonymKontextBank = Record<string, Record<string, SynonymKontextEintrag>>;
-const bank = raw as SynonymKontextBank;
+const bank = {} as SynonymKontextBank;
+/** R163: in Node sofort befüllt, im Browser nach /banks.json. */
+function fuelleSynonyme(): void {
+  const r = bankRoh("synonyme-kontext.json");
+  if (r) Object.assign(bank, r);
+}
+fuelleSynonyme();
+beiBankenBereit(fuelleSynonyme);
 
 const norm = (value: string) => value.trim().toLowerCase();
 const bankNachQuelle = new Map(Object.entries(bank).map(([quelle, eintraege]) => [norm(quelle), eintraege]));
