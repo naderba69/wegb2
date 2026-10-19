@@ -5,6 +5,7 @@ import { UiAppShell } from "@/components/dirb/DesignSystem";
 import RegisterSW from "@/components/RegisterSW";
 import BankenStart from "@/components/BankenStart";
 import { ErinnerungsWache } from "@/components/erinnerung";
+import { KomfortInit } from "@/components/komfort";
 
 export const metadata: Metadata = {
   title: "طريقي إلى B2 — Mein Weg bis B2",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </BankenStart>
         <RegisterSW />
         <ErinnerungsWache />
+        <KomfortInit />
       </body>
     </html>
   );

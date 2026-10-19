@@ -72,6 +72,7 @@ import { inputPaket } from "../lib/freiesinput";
 import { erweiterungDecks, erweiterungSitzung, erweiterungFortschritt } from "../lib/erweiterung";
 import { parseSprechBewertung, SPRECH_KRITERIEN as BEWERTUNG_KRITERIEN } from "../lib/sprechbewertung";
 import { FREIE_TEXTE, FREIE_DIALOGE, texteFuer, dialogeFuer, STOFF_STUFEN } from "../lib/lesestoff";
+import { normalisiereKomfort, KOMFORT_STANDARD } from "../lib/komfort";
 import { baueWortgitter, dialogLuecke, uebersetzQuote, fehlendeWoerter as spielFehlende, gitterWort } from "../lib/spiele";
 import { SPRECH_SZENARIEN, teileAntwort } from "../lib/sprechbegleiter";
 import { planVerzweigung } from "../lib/verzweigung";
@@ -14031,6 +14032,26 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(spielFehlende("Ich gehe", "Ich gehe nach Hause").includes("Hause"), "K325k الكلمات الناقصة من النموذج تُستخرج");
   const uebenSrc = readFileSync("app/ueben/page.tsx", "utf8");
   ok(uebenSrc.includes("<LeseStoffStation />") && uebenSrc.includes("<SpieleStation />") && uebenSrc.includes("lesestoff: {") && uebenSrc.includes("spiele: {"), "K325l محطتا القراءة الحرة والألعاب مركّبتان في تبويب «تدرّب»");
+}
+
+
+// ── K326 (R301): الراحة والمظهر — وضع فاتح + حجم خط + طباعة بطاقات (طلب المالك) ──
+{
+  const k1 = normalisiereKomfort({ thema: "hell", schrift: "sehr" });
+  ok(k1.thema === "hell" && k1.schrift === "sehr", "K326a إعداد راحة صالح يُقبل كما هو");
+  const k2 = normalisiereKomfort('{"thema":"hell","schrift":"gross"}');
+  ok(k2.thema === "hell" && k2.schrift === "gross", "K326b نص JSON محفوظ يُقرأ صحيحًا");
+  const k3 = normalisiereKomfort("kaputt{") ;
+  const k4 = normalisiereKomfort({ thema: "blau", schrift: "riesig" });
+  ok(k3.thema === KOMFORT_STANDARD.thema && k3.schrift === "normal" && k4.thema === "dunkel" && k4.schrift === "normal", "K326c القيم الفاسدة تعود للأساسي دون انهيار");
+  const komfortSrc = readFileSync("lib/komfort.ts", "utf8");
+  ok(komfortSrc.includes("weg-komfort-v1") && komfortSrc.includes("dataset.thema"), "K326d التخزين محلي بمفتاح موثّق ويُطبق على الجذر");
+  const css = readFileSync("app/globals.css", "utf8");
+  ok(css.includes('html[data-thema="hell"]') && css.includes('html[data-schrift="gross"]') && css.includes('html[data-schrift="sehr"]'), "K326e الوضع الفاتح وحجما الخط في الأنماط عبر متغيرات فقط");
+  ok(readFileSync("app/layout.tsx", "utf8").includes("<KomfortInit />"), "K326f مُطبّق الراحة مركّب في الجذر");
+  ok(readFileSync("app/einstellungen/page.tsx", "utf8").includes("<KomfortEinstellungen />"), "K326g قسم الراحة مركّب في الإعدادات");
+  const exportSrc = readFileSync("components/kartenexport.tsx", "utf8");
+  ok(exportSrc.includes("kartenexport-drucken") && exportSrc.includes("window.print"), "K326h زر طباعة البطاقات الورقية في مصدّر البطاقات");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

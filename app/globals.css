@@ -1425,3 +1425,54 @@ body:has(.ui-app-shell) {
   .ui-main { width: auto; min-height: 0; max-width: none; margin: 0; padding: 0; }
   .ui-page--print { width: auto; max-width: none; margin: 0; padding: 0; box-shadow: none; }
 }
+
+/* ══════════════ R301 · Komfort: helles Thema + Schriftgrößen (Besitzer-Wunsch) ══════════════
+   Aktiviert über html[data-thema="hell"] / html[data-schrift="gross"|"sehr"],
+   gesetzt von lib/komfort.ts. Nur Variablen-Overrides — keine Komponente wird angefasst. */
+html[data-thema="hell"] {
+  color-scheme: light;
+  --ui-bg: #f4f7fb;
+  --ui-bg-raised: #ffffff;
+  --ui-surface: #ffffff;
+  --ui-surface-raised: #edf1f8;
+  --ui-surface-hover: #e0e9f4;
+  --ui-border: #bfcfe0;
+  --ui-text: #152238;
+  --ui-muted: #47617f;
+  --ui-green: #15803d;
+  --ui-green-bright: #16a34a;
+  --ui-green-deep: #166534;
+  --ui-green-soft: rgb(21 128 61 / 0.1);
+  --ui-focus: #15803d;
+  --ui-gold: #b45309;
+  --ui-gold-soft: rgb(180 83 9 / 0.12);
+  --ui-danger: #dc2626;
+  --ui-danger-soft: rgb(220 38 38 / 0.1);
+  --ui-on-accent: #ffffff;
+  --ui-shadow: 0 12px 32px rgb(21 34 56 / 0.14);
+  --color-cola-soft: #d9f2e2;
+  --color-gold-soft: #f6e8c3;
+  --color-rosa-soft: #fbe0ea;
+  --color-amber-soft: #f3ead0;
+  --color-warn-soft: #f6e8c3;
+  --color-a2: #2563eb;
+  --color-b2: #7c3aed;
+  --color-mid: #2563eb;
+  --color-der: #1d4ed8;
+  --color-der-bg: rgb(29 78 216 / 0.08);
+  --color-der-border: rgb(29 78 216 / 0.35);
+  --color-die: #be123c;
+  --color-die-bg: rgb(190 18 60 / 0.08);
+  --color-die-border: rgb(190 18 60 / 0.35);
+  --color-das: #15803d;
+  --color-das-bg: rgb(21 128 61 / 0.08);
+  --color-das-border: rgb(21 128 61 / 0.35);
+  --color-plural: #b45309;
+  --color-plural-bg: rgb(180 83 9 / 0.1);
+  --color-plural-border: rgb(180 83 9 / 0.35);
+}
+html[data-thema="hell"] .today-screen { color-scheme: light; }
+html[data-thema="hell"] body { background: var(--ui-bg); }
+
+html[data-schrift="gross"] { font-size: 112.5%; }
+html[data-schrift="sehr"] { font-size: 125%; }

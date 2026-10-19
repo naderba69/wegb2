@@ -3931,6 +3931,24 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!rootEl.querySelector('[data-testid="spiel-uebersetz-input"]'), "R300g لعبة ترجم بنفسك تعرض خانة كتابة");
 }
 
+
+// ── R301: الراحة والمظهر + طباعة البطاقات ──
+{
+  const { KomfortEinstellungen } = await import("../components/komfort");
+  mount(React.createElement(KomfortEinstellungen));
+  ok(!!rootEl.querySelector('[data-testid="komfort-thema-hell"]'), "R301a أزرار الوضعين الداكن والفاتح ظاهرة في الإعدادات");
+  click(rootEl.querySelector('[data-testid="komfort-thema-hell"]') as HTMLElement);
+  ok(document.documentElement.dataset.thema === "hell", "R301b الضغط على الفاتح يبدّل ألوان الجذر فورًا");
+  click(rootEl.querySelector('[data-testid="komfort-schrift-sehr"]') as HTMLElement);
+  ok(document.documentElement.dataset.schrift === "sehr", "R301c الخط الكبير جدًا يُطبق على الجذر");
+  click(rootEl.querySelector('[data-testid="komfort-thema-dunkel"]') as HTMLElement);
+  click(rootEl.querySelector('[data-testid="komfort-schrift-normal"]') as HTMLElement);
+  ok(document.documentElement.dataset.thema === "dunkel" && document.documentElement.dataset.schrift === "normal", "R301d العودة للأساسي تعمل (ولا تسرّب حالة للاختبارات التالية)");
+  const KartenExport = (await import("../components/kartenexport")).default;
+  mount(React.createElement(KartenExport));
+  ok(!!rootEl.querySelector('[data-testid="kartenexport-drucken"]'), "R301e زر طباعة البطاقات الورقية ظاهر في المصدّر");
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

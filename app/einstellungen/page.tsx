@@ -8,6 +8,7 @@ import { TEMPO_LABEL } from "@/lib/types";
 import { Fehlerkartei, Lernstrategien } from "@/components/fehler-ui";
 import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
 import { ProfilVerwaltung } from "@/components/profil";
+import { KomfortEinstellungen } from "@/components/komfort";
 import { speakDe, germanVoices, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
 import LocalSpeechPilot from "@/components/LocalSpeechPilot";
 import { PHASE_START, levelAmTag } from "@/lib/phasen";
@@ -98,6 +99,7 @@ export default function Einstellungen() {
 
       <div className="dirb-hero-anim-2" style={{ display: "grid", gap: "0.9rem" }}>
         <ProfilVerwaltung />
+        <KomfortEinstellungen />
 
         <div className="dirb-kicker" style={{ marginTop: "0.4rem" }}>☀️ الأساسيات اليومية — ما تحتاجه كل يوم</div>
 
