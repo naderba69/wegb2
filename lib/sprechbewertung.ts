@@ -11,6 +11,22 @@ import type { BegleiterZeile, SprechSzenario } from "./sprechbegleiter";
  * Ergebnis ist eine interne Trainings-Einschätzung, kein offizielles Urteil.
  */
 export interface SprechKriterium { name: string; punkte: number; kommentar: string }
+/** خ5 (R304): نطاق لفظي لكل نتيجة 0–100 — بلا ربط CEFR صارم (تقييم داخلي داخلي فقط). */
+export function sprechBand(punkte: number): { labelAr: string; farbe: string } {
+  if (punkte >= 80) return { labelAr: "قويّ جدًا", farbe: "var(--good, #3f9e4d)" };
+  if (punkte >= 60) return { labelAr: "جيّد — على الطريق", farbe: "var(--green, #7ab648)" };
+  if (punkte >= 40) return { labelAr: "يبني الأساس", farbe: "var(--gold, #c9a227)" };
+  return { labelAr: "بداية — واصل", farbe: "var(--warn, #d2691e)" };
+}
+
+/** خطوة تحسين واحدة عملية لكل معيار — ثابتة وقابلة للتنفيذ فورًا. */
+export const KRITERIUM_SCHRITT: Record<string, string> = {
+  "Gesprächsführung": "خطوتك: اختم كل ردّ بسؤال يعيد الكرة لشريكك (مثلاً: Und was meinen Sie dazu؟)",
+  "Wortschatz": "خطوتك: استعمل في المحادثة التالية 3 كلمات جديدة من آخر درس تعلّمته",
+  "Grammatik": "خطوتك: اكتب جملك قصيرة بفعلٍ في الموضع الثاني (Verb-Zweit) — جملة قصيرة صحيحة خير من طويلة مربكة",
+  "Höflichkeit und Register": "خطوتك: التزم صيغة الاحترام (Sie + «Ich würde gerne…») في كل طلب",
+};
+
 export interface SprechBewertung { kriterien: SprechKriterium[]; fazit: string; naechsteUebung: string }
 
 export const SPRECH_KRITERIEN = ["Gesprächsführung", "Wortschatz", "Grammatik", "Höflichkeit und Register"] as const;

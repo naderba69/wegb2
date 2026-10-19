@@ -69,8 +69,9 @@ import { FSP_AUSRICHTUNG } from "../lib/fsp";
 import { kollokProduktion, partnerOk } from "../lib/kollokproduktion";
 import { b2Luecke, referenzBericht, schnellsteRezeptiv } from "../lib/referenz";
 import { inputPaket } from "../lib/freiesinput";
-import { erweiterungDecks, erweiterungSitzung, erweiterungFortschritt } from "../lib/erweiterung";
-import { parseSprechBewertung, SPRECH_KRITERIEN as BEWERTUNG_KRITERIEN } from "../lib/sprechbewertung";
+import { erweiterungDecks, erweiterungSitzung, erweiterungFortschritt , erweiterungLuecken } from "../lib/erweiterung";
+import { parseSprechBewertung, SPRECH_KRITERIEN as BEWERTUNG_KRITERIEN, sprechBand, KRITERIUM_SCHRITT } from "../lib/sprechbewertung";
+
 import { FREIE_TEXTE, FREIE_DIALOGE, texteFuer, dialogeFuer, STOFF_STUFEN } from "../lib/lesestoff";
 import { normalisiereKomfort, KOMFORT_STANDARD } from "../lib/komfort";
 import { baueWortgitter, dialogLuecke, uebersetzQuote, fehlendeWoerter as spielFehlende, gitterWort } from "../lib/spiele";
@@ -13744,7 +13745,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const sbSrc = readFileSync("lib/sprechbegleiter.ts", "utf8");
   const compSrc = readFileSync("components/sprechbegleiter.tsx", "utf8");
   const gradSrc = readFileSync("lib/grader.ts", "utf8");
-  ok(SPRECH_SZENARIEN.length === 12 && SPRECH_SZENARIEN.every((s) => s.startDe && s.rolleDe) &&
+  ok(SPRECH_SZENARIEN.length === 14 && SPRECH_SZENARIEN.every((s) => s.startDe && s.rolleDe) &&
      sbSrc.includes("Sprich NIEMALS über Aussprache") && !sbSrc.includes("fetch(") &&
      gradSrc.includes("export async function llmGespraech") && teileAntwort("Antwort.\n💡 أحسنت").tipp === "أحسنت" &&
      teileAntwort("Nur Text").tipp === null,
@@ -13994,7 +13995,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
 
 // ── K324 (R299): تقييم محادثة KI + سيناريوهات أوسع + أملامح صوت جهاز + تشكيلات امتحان ──
 {
-  ok(SPRECH_SZENARIEN.length === 12, "K324a سيناريوهات الرفيق 12 (6 مهنية/امتحان + 6 حياة يومية جديدة)");
+  ok(SPRECH_SZENARIEN.length === 14, "K324a سيناريوهات الرفيق 14 (R304/خ12: +وردية ليلية و+طلب إجازة — سيناريوان مهنيّان للرعاية، إعادة تعيين موثّقة)");
   const gut = parseSprechBewertung('{"kriterien":[{"name":"Gesprächsführung","punkte":70,"kommentar":"x"},{"name":"Wortschatz","punkte":60,"kommentar":"y"},{"name":"Grammatik","punkte":55,"kommentar":"z"},{"name":"Höflichkeit und Register","punkte":80,"kommentar":"w"}],"fazit":"f","naechsteUebung":"u"}');
   ok(!!gut && gut.kriterien.length === 4 && gut.kriterien[0].punkte === 70, "K324b محلّل تقييم المحادثة يقرأ JSON الصارم");
   ok(parseSprechBewertung("kein json") === null && parseSprechBewertung('{"kriterien":[]}') === null, "K324c الردود الفاسدة تُرفض بلا انهيار");
@@ -14014,7 +14015,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(FREIE_TEXTE.length === 15 && FREIE_DIALOGE.length === 10 && STOFF_STUFEN.length === 5, "K325a 15 نصًّا حرًّا و10 حوارات حرة عبر 5 مستويات");
   ok(STOFF_STUFEN.every((st) => texteFuer(st).length === 3 && dialogeFuer(st).length === 2), "K325b كل مستوى: 3 نصوص وحواران بالضبط");
   const fragenOk = (f: { optionen: string[]; richtig: number; erklaerAr: string }) => f.optionen.length === 3 && f.richtig >= 0 && f.richtig < 3 && arabisch.test(f.erklaerAr);
-  ok(FREIE_TEXTE.every((t) => t.fragen.length === 3 && t.fragen.every(fragenOk) && t.absaetze.length >= 2 && t.absaetze.every((a) => a.trim().length > 30)), "K325c كل نص: قص/فقرتان+ و3 أسئلة بثلاثة خيارات وشرح عربي");
+  ok(FREIE_TEXTE.every((t) => t.fragen.length === (t.stufe === "B1" || t.stufe === "B2" ? 4 : 3) && t.fragen.every(fragenOk) && t.absaetze.length >= 2 && t.absaetze.every((a) => a.trim().length > 30)), "K325c كل نص: 3 أسئلة (4 في B1/B2 مع سؤال استنتاج — R304/خ9) بثلاثة خيارات وشرح عربي وفقرتان+");
   ok(FREIE_DIALOGE.every((d) => d.zeilen.length >= 6 && d.zeilen.every((z) => z.de && arabisch.test(z.ar)) && d.fragen.length === 3 && d.fragen.every(fragenOk)), "K325d كل حوار: 6 أسطر+ مترجمة و3 أسئلة سليمة");
   const ids = [...FREIE_TEXTE, ...FREIE_DIALOGE].map((x) => x.id);
   ok(new Set(ids).size === ids.length, "K325e معرّفات المحتوى الحرّ فريدة");
@@ -14089,6 +14090,28 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const pkg = readFileSync("package.json", "utf8");
   const ci = readFileSync(".github/workflows/ci.yml", "utf8");
   ok(pkg.includes('"lint": "eslint app components lib"') && ci.includes("npm run lint"), "K328g ب4: ESLint بقاعدة الكود الميّت خطوة إلزامية في CI");
+}
+
+
+// ── K329 (R304): دفعة الخبير من تدقيق 2026-10-19 — خ1/خ2/خ4/خ5/خ6/خ7/خ8/خ9/خ11/خ12/خ13 ──
+{
+  const wc = (t: (typeof FREIE_TEXTE)[number]) => t.absaetze.join(" ").split(/\s+/).filter(Boolean).length;
+  ok(FREIE_TEXTE.filter((t) => t.stufe === "B1").every((t) => wc(t) >= 140) && FREIE_TEXTE.filter((t) => t.stufe === "B2").every((t) => wc(t) >= 220), "K329a خ1: نصوص B1 الحرة ≥140 كلمة وB2 ≥220 كلمة (معيار المشروع نفسه للنصوص الطويلة)");
+  ok(FREIE_TEXTE.filter((t) => t.stufe === "B1" || t.stufe === "B2").every((t) => t.fragen.length === 4), "K329b خ9: لكل نص B1/B2 سؤال رابع — والبوابة K325c تحرس الاستنتاجية بنيويًا");
+  const arzt = FREIE_DIALOGE.find((d) => d.id === "frei-a1-arzttermin");
+  ok(!!arzt && arzt.zeilen.length >= 8, "K329c خ11: حوار موعد الطبيب A1 صار 8 أسطر (كان 6 رقيقة)");
+  ok(SPRECH_SZENARIEN.some((x) => x.id === "sb-pflege-nachtdienst") && SPRECH_SZENARIEN.some((x) => x.id === "sb-pflege-dienstplan"), "K329d خ12: سيناريوها الرعاية الجديدان (وردية ليلية + طلب إجازة) موجودان بشكل الحقول الصحيح");
+  ok(sprechBand(85).labelAr.length > 2 && sprechBand(30).labelAr !== sprechBand(85).labelAr && Object.keys(KRITERIUM_SCHRITT).length === 4 && Object.values(KRITERIUM_SCHRITT).every((v) => v.length > 10), "K329e خ5: لكل نتيجة نطاق لفظي ولكل معيار خطوة تحسين عملية");
+  const lueckenProbe = erweiterungDecks().flatMap((d) => erweiterungLuecken(d.id, emptyProgress, 7, 6));
+  ok(lueckenProbe.length >= 20 && lueckenProbe.every((l) => l.optionen.length === 4 && l.optionen.includes(l.richtig) && (l.vorher + l.nachher).length > 10), "K329f خ2: فراغات الإنتاج من جمل الأمثلة نفسها — 4 خيارات ألمانية والصحيح بينها");
+  const spieleSrc = readFileSync("components/spiele.tsx", "utf8");
+  ok(spieleSrc.includes("spiel-gitter-modus-sinn") && spieleSrc.includes("spiel-uebersetz-ki") && spieleSrc.includes("llmGespraech"), "K329g خ3+خ4: وضع «ابحث بالمعنى» في الشبكة وزرّ تقييم الترجمة بمفتاح المستخدم في محطة الألعاب");
+  const leseSrc = readFileSync("components/lesestoff.tsx", "utf8");
+  ok(leseSrc.includes("lesestoff-glossar") && leseSrc.includes("wiederFaellig") && leseSrc.includes("lesestoff-tempo-langsam") && leseSrc.includes("fertigAm"), "K329h خ7+خ8+خ13: مسرد النقر وتذكير الإعادة بعد 7 أيام ومبدّل سرعة الصوت في محطة القراءة");
+  const hoerenSrc = readFileSync("components/hoeren.tsx", "utf8");
+  ok(hoerenSrc.includes("runde.level") && hoerenSrc.includes("hoeren-pitch-hinweis"), "K329i خ6: ملفا درجة الصوت يظهران من B1 فأعلى فقط (runde.level) مع تنبيه صريح للمبتدئ");
+  const erwSrc = readFileSync("components/erweiterung.tsx", "utf8");
+  ok(erwSrc.includes("erweiterung-modus-luecke") && erwSrc.includes("erweiterungLuecken"), "K329j خ2: وضع الإنتاج مبدَّل في واجهة التوسعة (تعرّف/إنتاج)");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

@@ -126,10 +126,11 @@ export function HoerLabor({ progress }: { progress: Progress }) {
         <button type="button" className="chip" data-testid="stimme-geraet" style={{ cursor: "pointer", background: stimme === "geraet" ? "var(--color-mid)" : "var(--ui-surface-raised)", color: stimme === "geraet" ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setStimme("geraet")}>🗣 صوت الجهاز — صوت ثانٍ للنص نفسه</button>
         {stimme === "geraet" && (
           <>
-            {[["de-DE", "قياسي"], ["de-AT", "نمساوي"], ["de-CH", "سويسري"], ["tief", "صوت أعمق"], ["hoch", "صوت أخف"]].map(([id, ar]) => (
+            {(runde.level === "B1" || runde.level === "B2" ? [["de-DE", "قياسي"], ["de-AT", "نمساوي"], ["de-CH", "سويسري"], ["tief", "صوت أعمق"], ["hoch", "صوت أخف"]] : [["de-DE", "قياسي"], ["de-AT", "نمساوي"], ["de-CH", "سويسري"]]).map(([id, ar]) => (
               <button key={id} type="button" className="chip" data-testid={`stimme-profil-${id}`} style={{ cursor: "pointer", background: profil === id ? "var(--color-gold)" : "var(--ui-surface-raised)", color: profil === id ? "var(--ui-on-accent)" : undefined, padding: "0.45rem 0.7rem", minHeight: "44px" }} onClick={() => setProfil(id)}>🗣 {ar}</button>
             ))}
             <span style={{ fontSize: "0.74rem", color: "var(--color-ink2)" }}>أصوات جهازك الفعلية؛ إن غاب الصوت النمساوي/السويسري عن جهازك سمعت القياسي — لا أصوات مخترعة.</span>
+            {(runde.level !== "B1" && runde.level !== "B2") && <span style={{ fontSize: "0.74rem", color: "var(--color-ink2)" }} data-testid="hoeren-pitch-hinweis">ملفا «صوت أعمق/أخف» يظهران من مستوى B1 فأعلى — في مستواك الحالي يكفي الصوت الطبيعي الواضح.</span>}
           </>
         )}
       </div>

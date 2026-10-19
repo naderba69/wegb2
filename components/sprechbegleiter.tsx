@@ -4,7 +4,7 @@ import Link from "next/link";
 import { loadProgress } from "@/lib/store";
 import { llmBereit, type LlmCfg } from "@/lib/grader";
 import { SPRECH_SZENARIEN, begleiterAntworten, type BegleiterZeile, type SprechSzenario } from "@/lib/sprechbegleiter";
-import { sprechBewerten, type SprechBewertung } from "@/lib/sprechbewertung";
+import { sprechBewerten, type SprechBewertung , sprechBand, KRITERIUM_SCHRITT } from "@/lib/sprechbewertung";
 import { speakAny, listenDe, cloudSpracheFrei } from "@/lib/speech";
 import { CLOUD_SPEECH_DISCLOSURE } from "@/components/trainer";
 import { De } from "@/components/De";
@@ -186,12 +186,17 @@ export function SprechBegleiter() {
                   {bewertung.kriterien.map((k) => (
                     <div key={k.name} style={{ fontSize: "0.86rem" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", gap: "0.5rem" }}>
-                        <span>{k.name}</span><strong className="rtl-num">{k.punkte}/100</strong>
+                        <span>{k.name}</span>
+                        <span>
+                          <span data-testid="bewertung-band" style={{ fontSize: "0.72rem", fontWeight: 800, padding: "0.05rem 0.45rem", borderRadius: "999px", background: sprechBand(k.punkte).farbe, color: "#fff" }}>{sprechBand(k.punkte).labelAr}</span>{" "}
+                          <strong className="rtl-num">{k.punkte}/100</strong>
+                        </span>
                       </div>
                       <div style={{ height: "8px", background: "var(--color-line)", borderRadius: "4px", overflow: "hidden" }}>
                         <div style={{ width: `${k.punkte}%`, height: "100%", background: "var(--color-mid)" }} />
                       </div>
                       <div style={{ color: "var(--color-ink2)", fontSize: "0.8rem" }}>{k.kommentar}</div>
+                      {KRITERIUM_SCHRITT[k.name] && <div data-testid="bewertung-schritt" style={{ fontSize: "0.8rem" }}>🪜 {KRITERIUM_SCHRITT[k.name]}</div>}
                     </div>
                   ))}
                   {bewertung.fazit && <div style={{ fontSize: "0.88rem" }}>🎓 {bewertung.fazit}</div>}

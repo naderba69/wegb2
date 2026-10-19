@@ -114,6 +114,21 @@ export const SPRECH_SZENARIEN: SprechSzenario[] = [
     rolleDe: "ein Prüfungspartner in einer B2-Diskussion. Du vertrittst eine eigene Meinung zum Thema (z. B. Pflegeberuf oder Arbeitsleben) und fragst nach der Meinung des Lernenden.",
     startDe: "Unser Thema heute: Immer mehr Pflegekräfte kommen aus dem Ausland. Was denken Sie darüber?",
     niveau: "B2",
+  },  {
+    id: "sb-pflege-nachtdienst",
+    titelAr: "الوردية الليلية: مقيم يريد النهوض وحده",
+    beschreibungAr: "الذكاء مقيم مسنّ في الليل يضغط الجرس ويريد الذهاب إلى الحمّام وحده رغم خطر السقوط؛ مهمّتك الحضور والمساعدة الآمنة والتهدئة.",
+    rolleDe: "ein 84-jähriger Bewohner im Pflegeheim in der Nacht. Du hast an die Klingel gedrückt, willst allein zur Toilette, bist ungeduldig und etwas verwirrt.",
+    startDe: "Hallo? Ist da jemand? Ich muss aufstehen, ich kann nicht mehr liegen.",
+    niveau: "B1",
+  },
+  {
+    id: "sb-pflege-dienstplan",
+    titelAr: "طلب إجازة وتبديل وردية مع رئيسة المحطة",
+    beschreibungAr: "الذكاء رئيسة المحطة؛ اطلب إجازة/تبديل وردية بلطف ومهنية واقترح بديلًا عمليًا.",
+    rolleDe: "die Stationsleiterin eines Pflegeheims. Du bist freundlich, aber beschäftigt, und musst die Besetzung der Dienste sichern.",
+    startDe: "Guten Morgen, Sie wollten mich sprechen? Worum geht es?",
+    niveau: "B1",
   },
 ];
 

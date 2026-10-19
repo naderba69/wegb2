@@ -186,11 +186,13 @@ export const FREIE_TEXTE: FreierText[] = [
     absaetze: [
       "Seit einigen Jahren arbeiten viele Menschen von zu Hause. Das hat klare Vorteile: Man spart Zeit und Geld für den Weg zur Arbeit. Außerdem kann man seine Arbeitszeit oft flexibler planen und mehr Zeit mit der Familie verbringen.",
       "Aber es gibt auch Nachteile. Zu Hause fehlen die Kollegen, und manche Menschen fühlen sich einsam. Es ist auch nicht immer leicht, Arbeit und Freizeit zu trennen. Experten sagen deshalb: Eine Mischung aus Büro und Homeoffice ist für viele die beste Lösung.",
+      "Auch der Körper spielt eine Rolle. Wer zu Hause arbeitet, sitzt oft noch länger als im Büro und bewegt sich weniger. Ärzte raten deshalb zu festen Pausen: Jede Stunde kurz aufstehen, mittags eine Runde spazieren gehen und am Abend den Laptop wirklich zuklappen. So bleibt der Kopf frisch und der Rücken gesund. Viele Firmen geben ihren Mitarbeitern deshalb Tipps für gesundes Arbeiten zu Hause.",
     ],
     fragen: [
       { frageDe: "Welcher Vorteil wird NICHT genannt?", optionen: ["Man spart Zeit und Geld", "Man bekommt mehr Gehalt", "Man kann die Zeit flexibler planen"], richtig: 1, erklaerAr: "النص لا يذكر راتبًا أعلى — يذكر توفير الوقت والمال والمرونة." },
       { frageDe: "Warum fühlen sich manche Menschen zu Hause schlecht?", optionen: ["Die Wohnung ist zu klein", "Der Computer ist alt", "Die Kollegen fehlen"], richtig: 2, erklaerAr: "يفتقدون الزملاء ويشعر بعضهم بالوحدة." },
       { frageDe: "Was empfehlen Experten?", optionen: ["Eine Mischung aus Büro und Homeoffice", "Nur noch Homeoffice", "Nur noch Büro"], richtig: 0, erklaerAr: "المزج بين المكتب والبيت هو الحل الأفضل لكثيرين." },
+      { frageDe: "Welche Haltung hat der Autor zum Homeoffice?", optionen: ["Er ist komplett dagegen", "Er sieht Vorteile und Nachteile und findet eine Mischung gut", "Er will, dass alle nur noch zu Hause arbeiten"], richtig: 1, erklaerAr: "موقف متوازن: يرى الحسنات والسيئات ويرجّح المزج." },
     ],
   },
   {
@@ -202,11 +204,13 @@ export const FREIE_TEXTE: FreierText[] = [
     absaetze: [
       "Wo lebt man besser: in der Stadt oder auf dem Dorf? In der Stadt gibt es viele Geschäfte, Kinos und Restaurants. Die Wege sind kurz, und man braucht oft kein Auto. Aber die Wohnungen sind teuer und klein, und es ist fast immer laut.",
       "Auf dem Dorf ist es ruhig und die Luft ist sauber. Die Menschen kennen ihre Nachbarn und helfen einander. Dafür gibt es weniger Arbeit und weniger Freizeitangebote. Am Ende hängt die Entscheidung vom Menschen ab: Wer Ruhe sucht, wählt das Dorf. Wer Abwechslung liebt, bleibt in der Stadt.",
+      "Viele Menschen wechseln im Leben sogar mehrmals: Junge Leute ziehen für Ausbildung oder Studium in die Stadt, weil es dort mehr Chancen gibt. Später, mit Kindern, wünschen sich viele ein Haus mit Garten und ziehen zurück aufs Land. Die Frage ist also nicht nur «Stadt oder Dorf?», sondern auch «Was brauche ich in dieser Phase meines Lebens?»",
     ],
     fragen: [
       { frageDe: "Was ist ein Nachteil der Stadt?", optionen: ["Es gibt keine Geschäfte", "Wohnungen sind teuer und klein", "Die Wege sind zu lang"], richtig: 1, erklaerAr: "الشقق غالية وصغيرة والضجيج دائم تقريبًا." },
       { frageDe: "Was ist ein Vorteil des Dorfes?", optionen: ["Viele Kinos", "Kurze Wege zur Arbeit", "Ruhe und saubere Luft"], richtig: 2, erklaerAr: "الهدوء والهواء النقي ومعرفة الجيران." },
       { frageDe: "Wovon hängt die Entscheidung laut Text ab?", optionen: ["Vom Menschen selbst", "Vom Wetter", "Vom Gehalt allein"], richtig: 0, erklaerAr: "القرار يعتمد على الإنسان: من يبحث عن الهدوء يختار القرية." },
+      { frageDe: "Was ist die wichtigste Aussage des Textes?", optionen: ["Die Stadt ist immer besser", "Das Dorf ist immer besser", "Es gibt keine beste Antwort für alle — es hängt vom Menschen und seiner Lebensphase ab"], richtig: 2, erklaerAr: "النص يختم بأن القرار يعتمد على الإنسان ومرحلة حياته." },
     ],
   },
   {
@@ -218,11 +222,13 @@ export const FREIE_TEXTE: FreierText[] = [
     absaetze: [
       "Es war spät am Abend, als Jonas nach Hause kam. Er suchte in seiner Tasche nach dem Schlüssel, aber er fand ihn nicht. Sein Handy war fast leer, und es begann zu regnen. Jonas wurde nervös: Alle Nachbarn waren schon im Bett, und er wollte niemanden wecken.",
       "Plötzlich hörte er eine Stimme: „Suchst du etwas?“ Es war Frau Sommer, die alte Nachbarin. Sie hatte seinen Schlüssel am Nachmittag vor dem Haus gefunden und aufgehoben. Jonas war so erleichtert, dass er lachen musste. Am nächsten Tag brachte er ihr einen Blumenstrauß und dankte ihr herzlich.",
+      "Seit diesem Abend hat Frau Sommer einen Ersatzschlüssel für Jonas' Wohnung, und er hat einen von ihrer Wohnung. «So sind wir beide sicher», sagt sie. Jonas hat gelernt: Gute Nachbarn sind wie eine zweite Familie — man muss sie nur kennen und ihnen vertrauen. Heute grüßt er sie jeden Morgen mit einem Lächeln im Treppenhaus.",
     ],
     fragen: [
       { frageDe: "Warum war Jonas nervös?", optionen: ["Er hatte seinen Schlüssel verloren und wollte niemanden wecken", "Er hatte Angst vor dem Regen allein", "Er war zu spät zur Arbeit"], richtig: 0, erklaerAr: "فقد المفتاح وكان هاتفه يفرغ والمطر بدأ — ولم يرد إيقاظ أحد." },
       { frageDe: "Wer hatte den Schlüssel gefunden?", optionen: ["Ein Kind", "Frau Sommer, die Nachbarin", "Der Hausmeister"], richtig: 1, erklaerAr: "الجارة العجوز السيدة زومر وجدته بعد الظهر واحتفظت به." },
       { frageDe: "Wie dankte Jonas ihr?", optionen: ["Er lud sie zum Essen ein", "Er gab ihr Geld", "Er brachte ihr einen Blumenstrauß"], richtig: 2, erklaerAr: "أحضر لها باقة زهور في اليوم التالي." },
+      { frageDe: "Was hat Jonas aus diesem Abend gelernt?", optionen: ["Man soll immer zwei Handys haben", "Gute Nachbarn sind sehr wertvoll", "Man soll nie spät nach Hause kommen"], richtig: 1, erklaerAr: "تعلّم أن الجيران الطيبين مثل عائلة ثانية." },
     ],
   },
   {
@@ -235,11 +241,13 @@ export const FREIE_TEXTE: FreierText[] = [
       "Künstliche Intelligenz ist längst kein Thema mehr nur für Experten. Sie steckt in unseren Handys, hilft beim Übersetzen, schlägt Musik vor und beantwortet Fragen in wenigen Sekunden. Viele Menschen nutzen sie täglich, oft ohne es zu bemerken. Befürworter betonen, dass KI uns langweilige Aufgaben abnimmt und uns mehr Zeit für kreative und menschliche Tätigkeiten lässt.",
       "Kritiker warnen dagegen vor den Risiken. Sie fragen: Was passiert mit unseren Daten? Können Maschinen Fehler machen, die niemand bemerkt? Und was geschieht mit Berufen, die durch KI ersetzt werden könnten? Diese Sorgen sind berechtigt, denn neue Technik verändert die Gesellschaft immer schneller, als Gesetze darauf reagieren können.",
       "Entscheidend ist deshalb ein bewusster Umgang. KI sollte ein Werkzeug bleiben, das den Menschen unterstützt, und keine Autorität, der man blind vertraut. Wer ihre Antworten prüft, ihre Grenzen kennt und Verantwortung übernimmt, kann von ihr profitieren, ohne die Kontrolle zu verlieren.",
+      "Besonders sichtbar wird der Wandel in der Schule und an der Universität. Schüler lassen sich von der KI Texte erklären, und manche schreiben ihre Hausaufgaben fast vollständig mit ihr. Lehrer müssen deshalb neue Aufgaben stellen, bei denen eigenes Denken zählt. Auch im Beruf verändert sich viel: Im Büro schreibt die KI erste Entwürfe für E-Mails und Berichte, und in der Medizin hilft sie Ärzten, Bilder schneller auszuwerten. Die Entscheidung trifft aber weiterhin der Mensch — und genau das muss so bleiben, sagen viele Fachleute.",
     ],
     fragen: [
       { frageDe: "Was betonen die Befürworter der KI?", optionen: ["Sie macht alle Berufe überflüssig", "Sie nimmt uns langweilige Aufgaben ab", "Sie ist fehlerfrei"], richtig: 1, erklaerAr: "المؤيدون يقولون إنها تريحنا من المهام المملة وتترك وقتًا للإبداع." },
       { frageDe: "Welche Sorge der Kritiker wird genannt?", optionen: ["KI ist zu langsam", "KI ist zu teuer für alle", "Umgang mit Daten und ersetzte Berufe"], richtig: 2, erklaerAr: "المخاوف: بياناتنا، أخطاء لا يلاحظها أحد، ووظائف قد تُستبدل." },
       { frageDe: "Was empfiehlt der Text am Ende?", optionen: ["KI vollständig verbieten", "KI bewusst als Werkzeug nutzen und Antworten prüfen", "Nur Experten dürfen KI nutzen"], richtig: 1, erklaerAr: "التعامل الواعي: أداة مساعدة لا سلطة نثق بها عمياءً، مع فحص الأجوبة." },
+      { frageDe: "Wie ist die Grundhaltung des Textes zur KI?", optionen: ["Begeistert ohne Kritik", "Positiv, aber vorsichtig: ein Werkzeug, keine Autorität", "Ablehnend: KI sollte verboten werden"], richtig: 1, erklaerAr: "النبرة إيجابية بحذر: أداة نافعة لا سلطة نثق بها عمياءً." },
     ],
   },
   {
@@ -252,11 +260,13 @@ export const FREIE_TEXTE: FreierText[] = [
       "In vielen deutschen Großstädten steigen die Mieten seit Jahren. Besonders junge Menschen, Studierende und Familien mit kleinem Einkommen finden kaum noch bezahlbare Wohnungen. Oft gehen mehr als ein Drittel des Gehalts allein für die Miete drauf. Die Ursachen sind vielfältig: Es werden zu wenige neue Wohnungen gebaut, gleichzeitig ziehen immer mehr Menschen in die Städte, weil es dort Arbeit und Universitäten gibt.",
       "Die Folgen sind im Alltag spürbar. Manche Menschen fahren jeden Tag lange Strecken vom Umland in die Stadt. Andere teilen sich kleine Wohnungen oder bleiben länger bei den Eltern wohnen. Auch für die Städte selbst ist das ein Problem: Wenn Pflegekräfte, Erzieherinnen und Busfahrer sich das Leben in der Stadt nicht mehr leisten können, fehlt wichtiges Personal.",
       "Als Lösungen werden mehr Neubauten, schnellere Genehmigungen und Regeln gegen extreme Mietsteigerungen diskutiert. Einig sind sich die meisten Experten nur in einem Punkt: Ohne mehr Wohnraum wird sich die Lage nicht entspannen.",
+      "Die Politik diskutiert seit Jahren über Auswege. Einige Städte bauen wieder mehr Sozialwohnungen, andere begrenzen mit einer Mietpreisbremse, wie stark Mieten bei einem neuen Vertrag steigen dürfen. Doch Experten warnen: Solche Regeln helfen nur kurz, wenn nicht gleichzeitig viel mehr gebaut wird. Ein weiteres Problem sind die langen Genehmigungen: Oft dauert es Jahre, bis ein Bauprojekt starten darf. Schnellere Verfahren und mehr Bauland gelten deshalb als wichtigste Schritte. Bis es so weit ist, werden viele Menschen weiter einen großen Teil ihres Gehalts für die Miete ausgeben müssen.",
     ],
     fragen: [
       { frageDe: "Warum ziehen viele Menschen in die Städte?", optionen: ["Weil es dort Arbeit und Universitäten gibt", "Weil die Mieten dort billiger sind", "Weil das Wetter besser ist"], richtig: 0, erklaerAr: "لأن العمل والجامعات في المدن، بينما البناء الجديد قليل." },
       { frageDe: "Welche Berufsgruppen werden als Beispiel genannt?", optionen: ["Ärzte und Anwälte", "Pflegekräfte, Erzieherinnen und Busfahrer", "Programmierer und Banker"], richtig: 1, erklaerAr: "النص يذكر طواقم التمريض ومربيات الأطفال وسائقي الحافلات." },
       { frageDe: "Worin sind sich die Experten einig?", optionen: ["Mieten müssen verboten werden", "Alle sollen aufs Land ziehen", "Ohne mehr Wohnraum entspannt sich die Lage nicht"], richtig: 2, erklaerAr: "الاتفاق الوحيد: بلا مساكن أكثر لن يتحسّن الوضع." },
+      { frageDe: "Was ist die Hauptaussage des Textes?", optionen: ["Die Mieten sollen vom Staat festgelegt werden", "Ohne deutlich mehr neue Wohnungen wird Wohnen in der Stadt teuer bleiben", "Alle Menschen sollen aufs Land ziehen"], richtig: 1, erklaerAr: "الخلاصة: بلا بناء أكثر بكثير لن تنخفض الأزمة." },
     ],
   },
   {
@@ -269,11 +279,13 @@ export const FREIE_TEXTE: FreierText[] = [
       "Millionen Menschen in Deutschland engagieren sich ehrenamtlich, also freiwillig und ohne Bezahlung. Sie trainieren Kinder im Sportverein, helfen bei der Feuerwehr, begleiten ältere Menschen oder geben Nachhilfe. Ohne dieses Engagement würden viele Angebote gar nicht existieren, weil der Staat sie allein nicht finanzieren könnte.",
       "Wer sich ehrenamtlich engagiert, gibt Zeit, bekommt aber auch viel zurück: neue Kontakte, praktische Erfahrungen und das Gefühl, gebraucht zu werden. Gerade für Menschen, die neu in einer Stadt oder in einem Land sind, kann ein Ehrenamt der schnellste Weg sein, Menschen kennenzulernen und die Sprache im echten Leben zu üben.",
       "Natürlich braucht freiwillige Arbeit auch gute Bedingungen: Anerkennung, klare Aufgaben und manchmal eine kleine Aufwandsentschädigung. Denn Engagement soll Freude machen und nicht zur Belastung werden. Wer regelmäßig ein paar Stunden schenkt, stärkt nicht nur andere, sondern die ganze Gesellschaft.",
+      "Die Orte, an denen Freiwillige arbeiten, sind überall: bei der Tafel, die Lebensmittel an arme Menschen verteilt, im Sprachcafé, wo Ehrenamtliche mit Geflüchteten Deutsch üben, oder im Krankenhaus, wo sie Patienten besuchen und ihnen vorlesen. Eine von ihnen ist die 68-jährige Frau Berg. Seit ihrer Rente hilft sie zweimal pro Woche im Sprachcafé. «Ich schenke Zeit», sagt sie, «aber ich bekomme Freundschaft und das Gefühl zurück, noch gebraucht zu werden.» Für viele Freiwillige ist das Ehrenamt auch ein Weg, nach der Rente aktiv und mit anderen Menschen verbunden zu bleiben.",
     ],
     fragen: [
       { frageDe: "Was bedeutet „ehrenamtlich“?", optionen: ["Freiwillig und ohne Bezahlung", "Nur für Rentner", "Vom Staat bezahlt"], richtig: 0, erklaerAr: "تطوعي وبلا أجر — كما يشرح النص نفسه." },
       { frageDe: "Warum ist ein Ehrenamt für neue Menschen in einer Stadt besonders wertvoll?", optionen: ["Man bekommt sofort eine Wohnung", "Man lernt Menschen kennen und übt die Sprache im echten Leben", "Man muss keine Steuern zahlen"], richtig: 1, erklaerAr: "علاقات جديدة وخبرة — وممارسة اللغة في الحياة الحقيقية." },
       { frageDe: "Was braucht freiwillige Arbeit laut Text?", optionen: ["Nur mehr Geld vom Staat", "Weniger Aufgaben", "Anerkennung und klare Aufgaben"], richtig: 2, erklaerAr: "تقدير ومهام واضحة وأحيانًا تعويض صغير عن المصاريف." },
+      { frageDe: "Warum ist das Ehrenamt laut Text für die ganze Gesellschaft wichtig?", optionen: ["Weil der Staat dadurch Steuern spart und sonst nichts", "Weil viele Angebote ohne Freiwillige gar nicht existieren würden", "Weil Ehrenamtliche bezahlte Arbeiter ersetzen sollen"], richtig: 1, erklaerAr: "لأن عروضًا كثيرة (طعام المحتاجين، مقاهي اللغة) ما كانت لتوجد بلا متطوعين." },
     ],
   },
 ];
@@ -353,6 +365,8 @@ export const FREIE_DIALOGE: FreierDialog[] = [
       { wer: "Arzthelferin", de: "Das tut mir leid. Passt Ihnen morgen um zehn Uhr?", ar: "أتمنى لك الشفاء. هل يناسبك غدًا في العاشرة؟" },
       { wer: "Patient", de: "Ja, das passt gut. Muss ich etwas mitbringen?", ar: "نعم، مناسب جدًا. هل عليّ إحضار شيء؟" },
       { wer: "Arzthelferin", de: "Bitte bringen Sie Ihre Versicherungskarte mit.", ar: "أحضر بطاقة التأمين من فضلك." },
+      { wer: "Patient", de: "Und wenn die Schmerzen schlimmer werden?", ar: "وإذا اشتدّ الألم؟" },
+      { wer: "Arzthelferin", de: "Dann rufen Sie bitte sofort an oder kommen direkt in die Praxis.", ar: "حينها اتصل فورًا أو تعال مباشرة إلى العيادة." },
       { wer: "Patient", de: "Mache ich. Vielen Dank und auf Wiederhören.", ar: "سأفعل. شكرًا وإلى اللقاء." },
     ],
     fragen: [

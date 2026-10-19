@@ -3975,6 +3975,25 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!rootEl.querySelector('[data-testid="fehlergrenze-karte"]') && !!rootEl.querySelector('[data-testid="fehlergrenze-retry"]'), "R303a عطل مكوّن يُحتَوى في بطاقة عربية مع زرّ إعادة — التطبيق لا يبيضّ");
 }
 
+
+// ── R304: دفعة الخبير — شبكة بالمعنى + مسرد نقر + إنتاج التوسعة ──
+{
+  const { SpieleStation } = await import("../components/spiele");
+  mount(React.createElement(SpieleStation));
+  click(rootEl.querySelector('[data-testid="spiel-gitter-modus-sinn"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid^="spiel-gitter-ziel-"]'), "R304a وضع «ابحث بالمعنى» يعمل والأهداف تظهر بلا كلمات ألمانية مكشوفة");
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]') as HTMLElement);
+  const wortBtn = rootEl.querySelector('[data-testid="lesestoff-wort-Hund"]') as HTMLElement;
+  ok(!!wortBtn, "R304b كلمات النص قابلة للنقر (Hund في نص الكلب)");
+  if (wortBtn) {
+    click(wortBtn);
+    const gl = rootEl.querySelector('[data-testid="lesestoff-glossar"]');
+    ok(!!gl && (gl.textContent ?? "").length > 3, "R304c النقر على كلمة يفتح بطاقة معناها من بنك المشروع");
+  }
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

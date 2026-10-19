@@ -45,6 +45,39 @@ export function erweiterungSitzung(deckId: string, p: Progress, seed: number, an
   });
 }
 
+export interface ErweiterungLuecke { karte: VocabCard; vorher: string; nachher: string; optionen: string[]; richtig: string }
+
+/**
+ * ✍️ خ2 (R304): إنتاج بدل التعرّف فقط — جملة مثال البطاقة نفسها مع إخفاء الكلمة،
+ * والمشتّتات من الحزمة نفسها. البطاقات التي لا يظهر جذعها في مثالها تُتخطّى بصدق.
+ */
+export function erweiterungLuecken(deckId: string, p: Progress, seed: number, anzahl = 6): ErweiterungLuecke[] {
+  const deck = vocabMap[deckId];
+  if (!deck) return [];
+  const treffer: ErweiterungLuecke[] = [];
+  for (const karte of misch(deck.cards, seed)) {
+    const lemma = karte.de.replace(/^(der|die|das)\s+/i, "").split(/[\s(]/)[0];
+    if (lemma.length < 4 || !karte.exampleDe) continue;
+    const stamm = lemma.toLowerCase().slice(0, Math.max(4, lemma.length - 2));
+    const re = new RegExp(`\\b[A-Za-zÄÖÜäöüß-]*${stamm}[A-Za-zÄÖÜäöüß-]*`, "i");
+    const m = karte.exampleDe.match(re);
+    if (!m || m.index === undefined) continue;
+    const idx = m.index;
+    const andere = misch(deck.cards.filter((c) => c.id !== karte.id && c.de !== karte.de), seed + treffer.length * 11 + 3)
+      .slice(0, 3).map((c) => c.de);
+    if (andere.length < 3) continue;
+    treffer.push({
+      karte,
+      vorher: karte.exampleDe.slice(0, idx),
+      nachher: karte.exampleDe.slice(idx + m[0].length),
+      optionen: misch([karte.de, ...andere], seed + treffer.length * 17 + 9),
+      richtig: karte.de,
+    });
+    if (treffer.length >= anzahl) break;
+  }
+  return treffer;
+}
+
 export function erweiterungFortschritt(p: Progress): { eingefuehrt: number; gesamt: number } {
   const decks = erweiterungDecks();
   const gesamt = decks.reduce((a, d) => a + d.anzahl, 0);

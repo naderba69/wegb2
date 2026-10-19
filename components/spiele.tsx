@@ -8,6 +8,8 @@ import { STOFF_STUFEN } from "@/lib/lesestoff";
 import { De } from "@/components/De";
 import { useProgress } from "@/lib/store";
 import { logK } from "@/lib/kompetenz";
+import { llmBereit, llmGespraech, type LlmCfg } from "@/lib/grader";
+import { loadProgress } from "@/lib/store";
 import type { Level } from "@/lib/types";
 
 type Spiel = "gitter" | "dialog" | "uebersetz";
@@ -25,6 +27,7 @@ function WortGitterSpiel({ stufe }: { stufe: Level }) {
   const [auswahl, setAuswahl] = useState<[number, number][]>([]);
   const [gefundene, setGefundene] = useState<string[]>([]);
   const [meldung, setMeldung] = useState("");
+  const [modus, setModus] = useState<"wort" | "sinn">("wort");
 
   const pool = useMemo(() => {
     const out: { wort: string; ar: string }[] = [];
@@ -81,9 +84,16 @@ function WortGitterSpiel({ stufe }: { stufe: Level }) {
         وجدتَ <strong className="rtl-num">{gefundene.length}</strong> من <strong className="rtl-num">{runde.treffer.length}</strong>.
       </div>
       <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
+        <button type="button" className="chip" data-testid="spiel-gitter-modus-wort" style={{ cursor: "pointer", minHeight: "44px", background: modus === "wort" ? "var(--color-gold)" : undefined, color: modus === "wort" ? "var(--ui-on-accent)" : undefined }}
+          onClick={() => setModus("wort")}>🔤 ابحث عن الكلمة</button>
+        <button type="button" className="chip" data-testid="spiel-gitter-modus-sinn" style={{ cursor: "pointer", minHeight: "44px", background: modus === "sinn" ? "var(--color-gold)" : undefined, color: modus === "sinn" ? "var(--ui-on-accent)" : undefined }}
+          onClick={() => setModus("sinn")}>🧠 ابحث بالمعنى (استرجاع)</button>
+      </div>
+      {modus === "sinn" && <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>في هذا الوضع لا ترى الكلمات الألمانية — اقرأ المعنى العربي، تذكّر الكلمة الألمانية بنفسك، ثم اعثر عليها في الشبكة. هذا تذكّر نشط أقوى من البحث البصري.</div>}
+      <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
         {runde.treffer.map((t) => (
-          <span key={t.wort} className="chip" style={{ textDecoration: gefundene.includes(t.wort) ? "line-through" : undefined, opacity: gefundene.includes(t.wort) ? 0.6 : 1 }}>
-            {gefundene.includes(t.wort) ? "✓ " : ""}<De style={{ fontWeight: 700 }}>{t.wort}</De> · {t.ar}
+          <span key={t.wort} className="chip" data-testid={`spiel-gitter-ziel-${t.wort}`} style={{ textDecoration: gefundene.includes(t.wort) ? "line-through" : undefined, opacity: gefundene.includes(t.wort) ? 0.6 : 1 }}>
+            {gefundene.includes(t.wort) || modus === "wort" ? <>{gefundene.includes(t.wort) ? "✓ " : ""}<De style={{ fontWeight: 700 }}>{t.wort}</De> · {t.ar}</> : <>❓ ({t.wort.length} <span>حروف</span>) · {t.ar}</>}
           </span>
         ))}
       </div>
@@ -181,6 +191,19 @@ function DialogSpiel({ stufe }: { stufe: Level }) {
 /* ─────────────────────────── ترجم بنفسك ─────────────────────────── */
 function UebersetzSpiel({ stufe }: { stufe: Level }) {
   const { update } = useProgress();
+  const [kiText, setKiText] = useState<string | null>(null);
+  const [kiLaedt, setKiLaedt] = useState(false);
+  const kiBewerten = async () => {
+    const cfg: LlmCfg | null = loadProgress().settings.llm ?? null;
+    if (!llmBereit(cfg) || !cfg || !eingabe.trim() || !satz) return;
+    setKiLaedt(true); setKiText(null);
+    const antwort = await llmGespraech(cfg, [
+      { role: "system", content: "Du bist ein geduldiger Deutschlehrer. Bewerte die deutsche Übersetzung eines arabischen Lernenden: Sage kurz auf Arabisch (3-5 Sätze), ob die Bedeutung stimmt, nenne die wichtigste grammatische Korrektur mit richtiger Form, und einen natürlichen Alternativvorschlag auf Deutsch. Sei ehrlich und freundlich. Kein Wort zur Aussprache." },
+      { role: "user", content: `Arabischer Ausgangssatz: ${satz.ar}\nDeutsche Übersetzung des Lernenden: ${eingabe}\nMusterlösung aus dem Lehrmaterial: ${satz.de}` },
+    ]);
+    setKiLaedt(false);
+    setKiText(antwort ?? "تعذّر الوصول إلى النموذج الآن — التصحيح الآلي أعلاه يبقى متاحًا.");
+  };
   const [samen, setSamen] = useState(1);
   const [eingabe, setEingabe] = useState("");
   const [ergebnis, setErgebnis] = useState<number | null>(null);
@@ -213,6 +236,16 @@ function UebersetzSpiel({ stufe }: { stufe: Level }) {
           <div>الجملة النموذجية من البنك: <De style={{ fontWeight: 700 }}>{satz.de}</De></div>
           {fehlend.length > 0 && <div>كلمات ناقصة في ترجمتك: <De>{fehlend.join(" · ")}</De></div>}
           <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>التصحيح هنا آليّ بعدّ الكلمات المطابقة (يتسامح مع كتابة ae/oe/ue) — لا يقيّم كل بدائل الترجمة الصحيحة الممكنة.</div>
+          {llmBereit(loadProgress().settings.llm) ? (
+            <div style={{ display: "grid", gap: "0.35rem" }}>
+              <button type="button" className="btn btn-ghost" data-testid="spiel-uebersetz-ki" style={{ minHeight: "46px", justifySelf: "start" }} disabled={kiLaedt || !eingabe.trim()} onClick={kiBewerten}>
+                {kiLaedt ? "⏳ النموذج يقيّم…" : "🤖 قيّم ترجمتي بالذكاء (مفتاحي)"}
+              </button>
+              {kiText && <div data-testid="spiel-uebersetz-ki-text" style={{ background: "var(--color-gold-soft)", borderRadius: "10px", padding: "0.55rem 0.8rem" }}>🤖 تقييم نموذج ذكاء اصطناعي (مفتاحك أنت — تقييم تدريبي لا نتيجة رسمية):<br />{kiText}</div>}
+            </div>
+          ) : (
+            <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>💡 لأن العدّ الآلي لا يعرف الترجمات الصحيحة البديلة: فعّل مفتاح ذكاء مجانيًا من صفحة الإعدادات إن أردت تقييمًا أذكى لترجمتك.</div>
+          )}
         </div>
       )}
     </div>
