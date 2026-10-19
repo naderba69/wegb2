@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { istPhasenPruefung } from "@/lib/phasen";
-import type { DayTask, Exercise, SrsState, UiLang, VocabCard, Schreibaufgabe, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
+import type { DayTask, Exercise, SrsState, UiLang, VocabCard, GrammarTopic, Eselsbruecke, Tempo } from "@/lib/types";
 import { POS_AR } from "@/lib/types";
 import { eselsbruecken, getBrueckenFor, getBrueckenForWort, getGrammar, sprichwortSrc, getDeck, getText, leseText, getDialogue, getWriting, getSatz, getMnemonik, candoMap, vocabMap, deFormOf, partnerKarten, kontaktKarten, muendlich } from "@/lib/content";
 import { kollokationenFuer, kollokationUebung } from "@/lib/kollokationen";
@@ -81,7 +81,7 @@ interface TaskProps {
 }
 
 /** عارض مهمة اليوم حسب نوعها — كل شيء داخلي (TTS بدل الملفات) */
-export default function TaskView({ task, lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
+export default function TaskView({ task, lang: _lang, day, srs, onSrs, onPoints, voiceName, rate, tempo = "regelmaessig", persistKey, onKapselErgebnis, bemerkenRegeln }: TaskProps) {
   // تسميع الإملاء: مستمع عام يعمل في كل المهام
   useEffect(() => {
     const onSpeak = (e: Event) => {
@@ -842,7 +842,7 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
   const [plays, setPlays] = useState(0);
   const [abgegeben, setAbgegeben] = useState(false);
   const [lineIdx, setLineIdx] = useState(-1);
-  const [voReady, setVoReady] = useState(false);
+  const [, setVoReady] = useState(false);
   // R138/P-13: Hörverstehen-Modi mit Anweisung
   const modus = task.hoerenModus ?? "global";
   const MODUS_INFO: Record<string, { labelDe: string; labelAr: string; instrAr: string }> = {
@@ -1233,8 +1233,8 @@ function WiederholenTask({
   srs,
   onSrs,
   onPoints,
-  voiceName,
-  rate,
+  voiceName: _voiceName,
+  rate: _rate,
   persistKey,
   onKapselErgebnis,
 }: Omit<TaskProps, "lang">) {

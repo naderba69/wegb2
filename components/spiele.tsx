@@ -48,14 +48,12 @@ function WortGitterSpiel({ stufe }: { stufe: Level }) {
   const tippen = (r: number, c: number) => {
     setMeldung("");
     setAuswahl((alt) => {
-      const key = (x: [number, number]) => `${x[0]}-${x[1]}`;
       const idx = alt.findIndex((x) => x[0] === r && x[1] === c);
       if (idx >= 0) return alt.slice(0, idx); // إعادة النقر تلغي من هنا
       if (alt.length > 0) {
         const [lr, lc] = alt[alt.length - 1];
         if (Math.abs(lr - r) > 1 || Math.abs(lc - c) > 1) return alt; // يجب أن تكون مجاورة
       }
-      void key;
       return [...alt, [r, c] as [number, number]];
     });
   };

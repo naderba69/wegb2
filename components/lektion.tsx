@@ -6,10 +6,10 @@
 // كل حصة مصمّمة على منهج Tagesplan: بناء ثم إنتاج — وتغذّي خطوط الأنابيب الأربعة.
 import { useEffect, useMemo, useState } from "react";
 import type { Exercise, Level, Progress, KontextPaket } from "@/lib/types";
-import { grammarMap, alleVokabeln, dialogues, writingTasks, pakete, sentences } from "@/lib/content";
-import { levelOf, pickN, rng, clozeFromSatz } from "@/lib/plan";
+import { grammarMap, alleVokabeln, dialogues, writingTasks, pakete } from "@/lib/content";
+import { levelOf, pickN, rng } from "@/lib/plan";
 import { normalize, konfidenz } from "@/lib/grader";
-import { fehlerFamilien, fehlerDesMonats, schwere } from "@/lib/fehler";
+import { fehlerFamilien, fehlerDesMonats } from "@/lib/fehler";
 import { addFehlerNow, useProgress } from "@/lib/store";
 import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";

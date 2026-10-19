@@ -19,10 +19,6 @@ const FORMAT_AR: Record<HoerNeuItem["format"], string> = {
 };
 const TEMPI = [0.75, 0.9, 1, 1.15] as const;
 
-function clipText(item: HoerNeuItem, clipIdx: number): string {
-  const c = item.clips[clipIdx];
-  return c ? c.zeilen.map((z) => item.zeilen[z]?.de ?? "").join(" ") : "";
-}
 
 function ItemAnsicht({ item }: { item: HoerNeuItem }) {
   const [antworten, setAntworten] = useState<Record<string, string>>({});

@@ -104,7 +104,7 @@ export function korrelation(a: number[], b: number[]): number {
 }
 
 /** الوقفات: مقاطع دون العتبة بطول ≥ ٣ نوافذ (١٥٠ م.ث) */
-export function pausenZaehlen(kurve: number[], fensterMs = 50, schwelle = 0.12): number {
+export function pausenZaehlen(kurve: number[], _fensterMs = 50, schwelle = 0.12): number {
   let pausen = 0; let lauf = 0;
   for (const v of kurve) {
     if (v < schwelle) { lauf++; } else { if (lauf >= 3) pausen++; lauf = 0; }

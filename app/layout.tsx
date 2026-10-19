@@ -22,6 +22,14 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        {/* 🛠️ R303/ب5: تطبيق سمات الراحة قبل أول رسم — لا وميض داكنًا لمستخدم الوضع الفاتح */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var c=JSON.parse(localStorage.getItem("weg-komfort-v1")||"null");if(c){var d=document.documentElement;d.dataset.thema=c.thema==="hell"?"hell":"dunkel";d.dataset.schrift=(c.schrift==="gross"||c.schrift==="sehr")?c.schrift:"normal";}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body>
         <BankenStart>
         <UiAppShell data-ui-shell="ui-app-shell">

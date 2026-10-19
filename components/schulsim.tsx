@@ -37,7 +37,7 @@ export function drucke(html: string, titel: string) {
 
 /* ------------------------------------------- 169 · Entschuldigung */
 
-function Entschuldigung({ progress }: { progress: Progress }) {
+function Entschuldigung({ progress: _progress }: { progress: Progress }) {
   const { update } = useProgress();
   const name = activeProfile().name;
   const heute = new Date();
@@ -147,7 +147,7 @@ const PUNKTE: [string, RegExp, string][] = [
   ["④ Notfallkontakt — رقم للطوارئ", /notfall\w*|telefon|\d{5,}|erreichen|eltern/i, "هاتف الأبوين"],
 ];
 
-function Antrag({ progress }: { progress: Progress }) {
+function Antrag({ progress: _progress }: { progress: Progress }) {
   const { update } = useProgress();
   const [text, setText] = useState("");
   const [geprueft, setGeprueft] = useState<null | (boolean | null)[]>(null);

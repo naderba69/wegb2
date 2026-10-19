@@ -14071,6 +14071,26 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(!!lk && lk.optionen.some((o) => o.startsWith(`Satz ${lk.dialog.id} `) && o !== lk.richtig), "K327e خ10/ت9: مشتّت «أكمل الحوار» الأول من الحوار نفسه (أنصف سياقيًا وأصعب)");
 }
 
+
+// ── K328 (R303): دفعة المتانة من تدقيق 2026-10-19 — ب1/ب4/ب5/ب6/ب7 ──
+{
+  const fgSrc = readFileSync("components/fehlergrenze.tsx", "utf8");
+  const uebenSrc2 = readFileSync("app/ueben/page.tsx", "utf8");
+  const lernenSrc = readFileSync("app/lernen/page.tsx", "utf8");
+  ok(fgSrc.includes("getDerivedStateFromError") && fgSrc.includes("fehlergrenze-karte") && uebenSrc2.includes("<FehlerGrenze>") && lernenSrc.includes("<FehlerGrenze>"), "K328a ب1: حدّ أخطاء ببطاقة استرداد عربية يلفّ محطات التدرّب والدرس");
+  const layoutSrc = readFileSync("app/layout.tsx", "utf8");
+  ok(layoutSrc.includes('localStorage.getItem("weg-komfort-v1")') && layoutSrc.includes("d.dataset.schrift") && layoutSrc.includes("<KomfortInit />"), "K328b ب5: سمات الراحة تُضبط قبل أول رسم (لا وميض) مع شبكة أمان عند الفتح");
+  ok(pruefeImportText(JSON.stringify({ plan: { day: 5 } })).ok && pruefeImportText(JSON.stringify({ progress: { plan: { day: 5 } }, zusatz: { komfort: "{}", lesestoff: "[]" } })).ok && !pruefeImportText(JSON.stringify({ progress: { plan: { day: 999 } } })).ok, "K328c ب6: الاستيراد يقبل النسخ المغلّفة والخام ويرفض التالف");
+  const einstSrc2 = readFileSync("app/einstellungen/page.tsx", "utf8");
+  ok(einstSrc2.includes("zusatz") && einstSrc2.includes("KOMFORT_KEY") && einstSrc2.includes("weg-lesestoff-v1"), "K328d ب6: التصدير/الاستيراد يحملان عدّاد القراءة الحرّة وإعدادات الراحة");
+  const swSrc = readFileSync("public/sw.js", "utf8");
+  ok(swSrc.includes("AUDIO_MAX") && swSrc.includes("trimmeCache") && swSrc.includes('wegb2-v3'), "K328e ب7: سقف لكاش الصوت في SW مع تقليص أقدم الملفات");
+  ok(!readFileSync("components/spiele.tsx", "utf8").includes("void key"), "K328f ب4: لا كود ميّت متبقٍّ في محطة الألعاب");
+  const pkg = readFileSync("package.json", "utf8");
+  const ci = readFileSync(".github/workflows/ci.yml", "utf8");
+  ok(pkg.includes('"lint": "eslint app components lib"') && ci.includes("npm run lint"), "K328g ب4: ESLint بقاعدة الكود الميّت خطوة إلزامية في CI");
+}
+
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);
 if (fails.length) {
   for (const f of fails) console.log("  ✗ " + f);

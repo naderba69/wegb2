@@ -18,6 +18,7 @@ import { KollokProduktionStation } from "@/components/kollokproduktion";
 import { ErweiterungStation } from "@/components/erweiterung";
 import { LeseStoffStation } from "@/components/lesestoff";
 import { SpieleStation } from "@/components/spiele";
+import { FehlerGrenze } from "@/components/fehlergrenze";
 import { ReferenzPanel } from "@/components/referenz";
 import { FreiesInput } from "@/components/freiesinput";
 import { FehlerAtlas } from "@/components/fehleratlas";
@@ -164,8 +165,10 @@ export default function Ueben() {
           </div>
         )}
         <section className="dirb-station">
-          {offen === "lesestoff" && <LeseStoffStation />}
-          {offen === "spiele" && <SpieleStation />}
+          <FehlerGrenze>
+            {offen === "lesestoff" && <LeseStoffStation />}
+            {offen === "spiele" && <SpieleStation />}
+          </FehlerGrenze>
         </section>
       </div>
     );
@@ -234,6 +237,7 @@ export default function Ueben() {
           </div>
         )}
         <section className="dirb-station">
+          <FehlerGrenze>
           {offen === "fehlerlabor" && (<div style={{ display: "grid", gap: "0.9rem" }}><FehlerLabor progress={progress} /><FehlerAtlas /></div>)}
           {offen === "uebungen" && <UebungenCard progress={progress} />}
           {offen === "blitz" && (<div style={{ display: "grid", gap: "0.9rem" }}><BlitzDrill progress={progress} /><KurzSession progress={progress} /></div>)}
@@ -258,6 +262,7 @@ export default function Ueben() {
           {offen === "lesestoff" && <LeseStoffStation />}
           {offen === "spiele" && <SpieleStation />}
           {offen === "katalog" && <KatalogLeiste />}
+          </FehlerGrenze>
         </section>
       </div>
     );

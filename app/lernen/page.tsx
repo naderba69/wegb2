@@ -5,6 +5,7 @@ import { useProgress } from "@/lib/store";
 import { buildDay, grammarAssignmentForDay, COURSE_TOPIC_ORDER } from "@/lib/plan";
 import { grammarMap } from "@/lib/content";
 import { LektionWizard } from "@/components/akademie/LektionWizard";
+import { FehlerGrenze } from "@/components/fehlergrenze";
 
 /**
  * 📖 وجهة «الدرس» (P2): بابُ المعالج الخمسي.
@@ -62,7 +63,7 @@ export default function Lernen() {
           ))}
         </select>
       </label>
-      <LektionWizard topicId={topicId} />
+      <FehlerGrenze><LektionWizard topicId={topicId} /></FehlerGrenze>
     </div>
   );
 }

@@ -13,15 +13,12 @@ import type {
 } from "./types";
 import { TOTAL_DAYS, emptyProgress } from "./types";
 import { DEFAULT_SESSION_GOAL_MINUTES } from "./session-clock";
-import type { Tempo } from "./types";
 import {
   grammarMap,
-  vocabMap,
   sentences,
   texts,
   dialogues,
   writingTasks,
-  getSatz,
   getDeck,
   fehlerList,
   partnerKarten,
@@ -31,7 +28,7 @@ import {
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
 import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B2_DECKEL_MIN } from "./phasen";
-import { kapselIds, kapselIdsAbend, kapselQuiz, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
+import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
 import { baueKompositaWoche } from "./komposita-aufgabe";
@@ -403,16 +400,6 @@ export function clozeFromSatz(s: Satz, idx: number, rand: () => number): Exercis
   };
 }
 
-function dictationFromSatz(s: Satz, idx: number): Exercise {
-  return {
-    id: `${s.id}-di${idx}`,
-    type: "dictation",
-    promptDe: "اسمع واكتب ما سمعته",
-    promptAr: s.ar,
-    answer: [s.de],
-    explanationDe: s.de,
-  };
-}
 
 export function translateFromSatz(s: Satz, idx: number): Exercise {
   const keyWords = s.de
@@ -1500,7 +1487,7 @@ export function isPassed(r?: TaskResult): boolean {
   return !!r && r.passed;
 }
 
-export function canCloseDay(plan: DayPlan, taskState: Record<string, TaskResult>): boolean {
+export function canCloseDay(_plan: DayPlan, _taskState: Record<string, TaskResult>): boolean {
   // يمكن إنهاء اليوم دائماً، لكن الواجب يُرحَّل — القفل هو: لا غد قبل الإغلاق
   return true;
 }

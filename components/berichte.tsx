@@ -8,7 +8,7 @@ import { useMemo, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
 import { kompetenzWerte, b2Score, pruefungsBereitschaft, bereitBand, KOMPETENZEN, KOMPETENZ_AR, band } from "@/lib/kompetenz";
-import { fehlerFamilien, resistenteFehler, schwere, weakTopics, URSACHEN, ursacheVon } from "@/lib/fehler";
+import { fehlerFamilien, resistenteFehler, schwere, URSACHEN, ursacheVon } from "@/lib/fehler";
 import { planPct } from "@/lib/plan";
 import { feedbackQuote, fehlerHeilung, pruefungsKurve } from "@/lib/metriken";
 import { noteFromPct } from "@/lib/grader";
@@ -22,7 +22,6 @@ import { VerzweigungPanel } from "./verzweigung";
 import { wartungsBericht } from "@/lib/wartung";
 import { wochenBilanz } from "@/lib/motivation";
 import { levelOfXp } from "@/lib/spiel";
-import { De } from "./De";
 import { StundenVertrag } from "./stundenvertrag";
 
 const HAND: Record<string, string> = { Lesen: "📖", Hoeren: "👂", Schreiben: "✍️", Sprechen: "🗣️", Grammatik: "🧩", Wortschatz: "🗂️" };
@@ -210,7 +209,6 @@ export function BerichteZentrum({ progress, name = "المتعلّم" }: { progr
   const [open, setOpen] = useState(false);
   const bereit = useMemo(() => pruefungsBereitschaft(progress), [progress]);
   const bb = bereitBand(bereit.gesamt);
-  const w = kompetenzWerte(progress);
   const gaps = empfehlungen(progress);
   const fams = fehlerFamilien(progress);
   const b2 = b2Score(progress);

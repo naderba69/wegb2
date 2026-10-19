@@ -18,7 +18,6 @@ import { logK, KIND_KOMPETENZ, FEHLER_ZU_KOMPETENZ } from "./kompetenz";
 import { progressKeyActive } from "./profiles";
 import { migrateCurriculumSchedule } from "./curriculum-schedule";
 
-const KEY = "weg-b2-progress";
 export const PROGRESS_EVENT = "weg-progress-changed";
 
 /** Move legacy, source-unknown minute totals out of the measured-time field. Before the session timer,

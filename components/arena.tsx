@@ -35,7 +35,7 @@ interface Item {
 function buildItems(mode: Mode, seed: number): Item[] {
   const rand = rng(seed);
   if (mode === "deklination") {
-    return pickN(arenaMap.nomen, 10, rand).map((n, i) => {
+    return pickN(arenaMap.nomen, 10, rand).map((n, _i) => {
       const kasus = Faelle[Math.floor(rand() * Faelle.length)];
       const correct = ARTIKEL[n.gen][kasus];
       const alle = ["der", "die", "das", "dem", "den", "des"];

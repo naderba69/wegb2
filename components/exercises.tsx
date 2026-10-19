@@ -4,7 +4,7 @@
 // كل هذا يعيش في طبقة التصحيح الموحّدة — فيستفيد كل تمرين في التطبيق دفعةً واحدة.
 import { useEffect, useState } from "react";
 import type { Exercise } from "@/lib/types";
-import { grader, deepReview, konfidenz, diffWoerter } from "@/lib/grader";
+import { grader, deepReview, konfidenz } from "@/lib/grader";
 import { gemischteOptionen } from "@/lib/optionen";
 import { addFehlerNow, logSicherheitNow } from "@/lib/store";
 import { speakAny } from "@/lib/speech";

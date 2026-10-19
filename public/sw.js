@@ -5,7 +5,18 @@
 //    فلا يتعطّل المحتوى بلا شبكة ولا يتيبّس بعد تحديث خادم.
 //  • الأصول الثابتة والصوتيات والصور: cache-first، فكلّ صوت يُسمَع مرة يُحفَظ ليعمل بعدها بلا شبكة (الصوتيات المستعملة).
 // لا تُخزَّن بيانات مستخدم هنا: التقدّم في localStorage كما كان دائمًا، وهذا مخزن أصول فقط قابل للمسح من الإعدادات.
-const CACHE = "wegb2-v2";
+const CACHE = "wegb2-v3";
+// R303/ب7: سقف لكاش الصوت — أقدم الملفات تُحذف أولًا حتى لا يبتلع التخزين
+const AUDIO_MAX = 200;
+async function trimmeCache(c) {
+  try {
+    const keys = await c.keys();
+    const audio = keys.filter((r) => new URL(r.url).pathname.startsWith("/audio/"));
+    for (let i = 0; i < audio.length - AUDIO_MAX; i++) await c.delete(audio[i]);
+  } catch (e) {
+    /* التقليص best-effort: فشله لا يكسر التشغيل */
+  }
+}
 const SHELL = [
   "/",
   "/ueben",
@@ -87,7 +98,10 @@ self.addEventListener("fetch", (event) => {
         return fetch(req).then((res) => {
           if (res.ok) {
             const copy = res.clone();
-            caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => undefined);
+            caches.open(CACHE).then(async (c) => {
+              await c.put(req, copy);
+              if (url.pathname.startsWith("/audio/")) await trimmeCache(c);
+            }).catch(() => undefined);
           }
           return res;
         }).catch(() => cached);

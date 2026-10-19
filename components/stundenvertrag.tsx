@@ -25,7 +25,6 @@ import {
   erreichbaresNiveau,
   minutenEffektiv,
   minutenZuStunden,
-  clampMinuten,
   MAX_MIN_PRO_TASK,
 } from "@/lib/cefr";
 import { bucheMinuten, loadProgress, PROGRESS_EVENT } from "@/lib/store";

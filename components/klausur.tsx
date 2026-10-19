@@ -8,7 +8,7 @@ import { normalize } from "@/lib/grader";
 import { gemischteOptionen } from "@/lib/optionen";
 import { addFehlerNow, logKN } from "@/lib/store";
 import type { Kompetenz } from "@/lib/types";
-import { speakAny, speakLine, stopSpeech, listenDe, recognitionAvailable, cloudSpracheFrei } from "@/lib/speech";
+import { speakLine, stopSpeech, listenDe, recognitionAvailable, cloudSpracheFrei } from "@/lib/speech";
 import { CLOUD_SPEECH_DISCLOSURE } from "./trainer";
 import { De } from "./De";
 

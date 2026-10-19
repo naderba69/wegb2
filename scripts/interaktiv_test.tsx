@@ -3966,6 +3966,15 @@ const hasFile = txt().includes("صوتٌ من الدار");
   ok(!!fb && (fb.textContent ?? "").includes("المعنى:"), "R302b تغذية «أكمل الحوار» تعرض معنى الجملة الصحيحة بالعربية");
 }
 
+
+// ── R303: حدّ الأخطاء ──
+{
+  const { FehlerGrenze } = await import("../components/fehlergrenze");
+  const Kaputt = () => { throw new Error("Testfehler"); };
+  mount(React.createElement(FehlerGrenze, null, React.createElement(Kaputt)));
+  ok(!!rootEl.querySelector('[data-testid="fehlergrenze-karte"]') && !!rootEl.querySelector('[data-testid="fehlergrenze-retry"]'), "R303a عطل مكوّن يُحتَوى في بطاقة عربية مع زرّ إعادة — التطبيق لا يبيضّ");
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
   process.exit(0);

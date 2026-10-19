@@ -13,8 +13,8 @@ import { rng } from "@/lib/plan";
 export function Fehlerheft({
   fehlerKeys,
   onPoints,
-  voiceName,
-  rate,
+  voiceName: _voiceName,
+  rate: _rate,
 }: {
   fehlerKeys: string[];
   onPoints: (p: number, m: number) => void;
@@ -68,7 +68,7 @@ export function Fehlerheft({
                   {istUeberkonfident(f) && <strong style={{ color: "var(--color-cola)" }}>⚠️ ثقة خاطئة سابقاً · </strong>}
                   {FEHLER_KAT[f.art] ?? f.art} · تكرّر {f.treffer} مرة — سؤالٌ جديدٌ على الكلمةِ نفسِها ({tr.art === "kollokation" ? "متلازمة" : "جملة"}): <span dir="ltr">{f.richtig}</span>
                 </div>
-                <ExerciseSet items={[tr.ex]} onPoints={(p, m) => { const ok = p > 0; setState((s) => ({ ...s, [f.key]: { choice: ok ? f.richtig : f.falsch, ok } })); gradeFehlerNow(f.key, ok); onPoints(ok ? 1 : 0, 1); }} />
+                <ExerciseSet items={[tr.ex]} onPoints={(p, _m) => { const ok = p > 0; setState((s) => ({ ...s, [f.key]: { choice: ok ? f.richtig : f.falsch, ok } })); gradeFehlerNow(f.key, ok); onPoints(ok ? 1 : 0, 1); }} />
                 {st && (
                   <div data-testid="fehler-transfer-ergebnis" style={{ marginTop: "0.5rem", fontSize: "0.9rem", lineHeight: 1.8 }}>
                     {st.ok ? "✅ نُقلت المعرفة إلى سياق جديد — يبتعد موعد هذا الخطأ." : "❌ الخطأ ما زال حيّاً في سياق جديد — يعود غداً."} <span style={{ color: "var(--color-ink2)" }}>{f.ar}</span>

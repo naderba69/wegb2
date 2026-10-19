@@ -1,4 +1,4 @@
-import type { SrsState, Progress, Tempo } from "./types";
+import type { SrsState, Tempo } from "./types";
 import { NEW_CARDS_PER_DAY } from "./types";
 
 /**

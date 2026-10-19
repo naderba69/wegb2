@@ -20,7 +20,9 @@ export function pruefeImportText(text: string): ImportUrteil {
   if (!daten || typeof daten !== "object" || Array.isArray(daten)) {
     return { ok: false, fehlerAr: "محتوى الملف ليس بيانات تقدّم من هذا التطبيق — تأكد أنك اخترت الملف الصحيح." };
   }
-  const p = daten as Partial<Progress>;
+  // R303/ب6: نسخ أحدث قد تغلّف التقدّم ({progress, zusatz}) — تُقبل الصيغتان
+  const huelle = daten as { progress?: unknown };
+  const p = (huelle.progress && typeof huelle.progress === "object" ? huelle.progress : daten) as Partial<Progress>;
   if (!p.plan || typeof p.plan !== "object") {
     return { ok: false, fehlerAr: "الملف ناقص: لا يحتوي خطة الأيام (plan) — ليس نسخة احتياطية من هذا التطبيق." };
   }

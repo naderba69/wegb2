@@ -7,7 +7,7 @@
 //   🧩 Funktionsverbgefüge: التراكيب الخفيفة الرسمية (12 تعبيراً)
 // كل خطأ ← دفتر الأخطاء بفئته · كل جولة ← شبكة الكفاءات (Wortschatz).
 import { useMemo, useState } from "react";
-import type { Exercise, Level, Progress, VocabCard } from "@/lib/types";
+import type { Level, Progress } from "@/lib/types";
 import { sentences, tiefenlex, alleVokabeln, kollokVertiefung, synonymVertiefung } from "@/lib/content";
 import { sucheAlles } from "@/lib/suche";
 import { frequenzVonWort, FREQUENZ_AR } from "@/lib/frequenz";
@@ -18,9 +18,6 @@ import { checkAbzeichen } from "@/lib/spiel";
 import { logK } from "@/lib/kompetenz";
 import { De } from "./De";
 
-function gradeItem(ex: Exercise, resp: string): boolean {
-  return resp === String(Array.isArray(ex.answer) ? ex.answer[0] : ex.answer);
-}
 
 type Challenge = {
   id: string;

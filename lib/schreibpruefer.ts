@@ -26,8 +26,6 @@ export const SCHWERE_AR: Record<Schwere, string> = {
 /* ═══ جداولُ القاعدة — كلُّها صريحةٌ قابلةٌ للمراجعة ═══ */
 const AKK_PRAEP = ["für", "ohne", "gegen", "durch", "um"];
 const DAT_PRAEP = ["mit", "bei", "seit", "von", "zu", "aus", "nach", "gegenüber"];
-const DAT_ART = ["dem", "der", "den"];   // der = مؤنّثٌ داتيف
-const AKK_ART = ["den", "das", "die", "einen"];
 const NEBEN_KONJ = ["weil", "dass", "wenn", "obwohl", "damit", "während", "seitdem", "bevor", "nachdem", "sobald", "falls", "ob"];
 const POSITION_ANFANG = ["morgen", "heute", "gestern", "jetzt", "dann", "danach", "später", "manchmal", "oft", "immer", "vielleicht", "leider", "deshalb", "trotzdem", "zuerst"];
 const PRONOMEN = ["ich", "du", "er", "sie", "es", "wir", "ihr", "man"];

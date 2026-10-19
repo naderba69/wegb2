@@ -101,7 +101,6 @@ export function SprechKartenStudio() {
   useEffect(() => {
     mountedRef.current = true;
     return () => { mountedRef.current = false; raeumeAuf(); };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const resetSchritt = () => {
@@ -129,7 +128,6 @@ export function SprechKartenStudio() {
       if (aktuell && vergangen >= aktuell.budgetS) stopAufnahme();
     }, 400);
     return () => clearInterval(t);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recStatus, aktuell]);
 
   const startAufnahme = async () => {

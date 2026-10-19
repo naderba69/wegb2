@@ -83,7 +83,6 @@ export function FehlerFinden({
       if (changed) setSecs({ ...nx });
     }, 1000);
     return () => clearInterval(id);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   if (!items.length) return null;
 

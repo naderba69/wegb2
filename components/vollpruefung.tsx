@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { De } from "./De";
 import { vpTexte, vpDialoge, vpSchreiben, vpSprechen, type VpFrage } from "@/lib/vollpruefung";
 
@@ -63,15 +63,15 @@ export function VollPruefung() {
   const [variante, setVariante] = useState(0);
   const tagesSamen = useMemo(() => Math.floor(Date.now() / 86400000), []);
   const samen = tagesSamen + variante * 101;
-  const pick = <T,>(pool: T[], anzahl: number): T[] => {
+  const pick = useCallback(<T,>(pool: T[], anzahl: number): T[] => {
     if (!pool.length) return [];
     const start = (samen * 7) % pool.length;
     return Array.from({ length: Math.min(anzahl, pool.length) }, (_, i) => pool[(start + i) % pool.length]);
-  };
-  const texte = useMemo(() => pick(vpTexte.filter((t) => t.level === stufe), 2), [stufe, samen]);
-  const dialoge = useMemo(() => pick(vpDialoge.filter((d) => d.level === stufe), 2), [stufe, samen]);
-  const schreibAufgabe = useMemo(() => pick(vpSchreiben.filter((w) => w.level === stufe), 1)[0], [stufe, samen]);
-  const sprechKarte = useMemo(() => pick(vpSprechen.filter((k) => !k.level || k.level === stufe), 1)[0] ?? vpSprechen[samen % Math.max(1, vpSprechen.length)], [stufe, samen]);
+  }, [samen]);
+  const texte = useMemo(() => pick(vpTexte.filter((t) => t.level === stufe), 2), [stufe, pick]);
+  const dialoge = useMemo(() => pick(vpDialoge.filter((d) => d.level === stufe), 2), [stufe, pick]);
+  const schreibAufgabe = useMemo(() => pick(vpSchreiben.filter((w) => w.level === stufe), 1)[0], [stufe, pick]);
+  const sprechKarte = useMemo(() => pick(vpSprechen.filter((k) => !k.level || k.level === stufe), 1)[0] ?? vpSprechen[samen % Math.max(1, vpSprechen.length)], [stufe, pick, samen]);
 
   const laueft = phase !== "start" && phase !== "ergebnis";
   useEffect(() => {

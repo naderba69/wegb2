@@ -393,7 +393,6 @@ export function freundeByLevel(level: "A1"|"A2"|"B1"|"B2", max = 5): FalscherFre
   // استنتاج أول ظهور: نمر على دفاتر المفردات مرتّبة حسب المستوى (A1→B2) ثم تسلسلياً.
   const firstDay = new Map<string, number>();
   try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { vocabMap } = require("./content") as typeof import("./content");
     const decks = Object.values(vocabMap).sort((a, b) => (ord[a.level] ?? 0) - (ord[b.level] ?? 0));
     let seq = 0;

@@ -1,6 +1,6 @@
 "use client";
 // ✍️ Schreib-Werkstatt — كتابة بتوقيت امتحان (Teil 1: 15د · Teil 2: 28د) مع مستشار الكتابة
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import type { Progress, Schreibaufgabe } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
 import { writingTasks } from "@/lib/content";

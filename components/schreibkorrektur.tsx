@@ -2,12 +2,12 @@
 // ✍️ التصحيح ثلاثيّ الأعمدة + الحلقة العلاجية: خطأ ← قاعدة ← ثلاثة تمارين ← دفتر الأخطاء
 import { useMemo, useState } from "react";
 import { De } from "@/components/De";
-import { loadProgress, saveProgress, disputeRegel } from "@/lib/store";
+import { loadProgress, disputeRegel } from "@/lib/store";
 import { FehlerKartenWahl } from "./fehlerkarten";
 import { grammarMap } from "@/lib/content";
 import {
   pruefeText, pruefeBrief, bewerteSchreiben, heilUebungen, effektiveSchwere, DISPUT_SCHWELLE,
-  SPALTE_AR, SCHWERE_AR, type Befund, type Spalte,
+  SPALTE_AR, SCHWERE_AR, type Spalte,
 } from "@/lib/schreibpruefer";
 
 const SPALTEN: Spalte[] = ["grammatik", "syntax", "wortwahl"];

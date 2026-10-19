@@ -9,7 +9,8 @@ import { Fehlerkartei, Lernstrategien } from "@/components/fehler-ui";
 import { AbzeichenKarte, ElternBriefView, XpBar } from "@/components/wochen";
 import { ProfilVerwaltung } from "@/components/profil";
 import { KomfortEinstellungen } from "@/components/komfort";
-import { speakDe, germanVoices, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
+import { KOMFORT_KEY, ladeKomfort, wendeKomfortAn } from "@/lib/komfort";
+import { speakDe, warmVoices, speechAvailable , recognitionAvailable } from "@/lib/speech";
 import LocalSpeechPilot from "@/components/LocalSpeechPilot";
 import { PHASE_START, levelAmTag } from "@/lib/phasen";
 import { OfflineKarte } from "@/components/offline";
@@ -43,7 +44,12 @@ export default function Einstellungen() {
   }, []);
 
   const exportJson = () => {
-    const data = JSON.stringify(loadProgress(), null, 2);
+    // R303/ب6: النسخة تحمل أيضًا عدّاد القراءة الحرّة وإعدادات الراحة (مفاتيح weg-* الفرعية)
+    let zusatz: { komfort: string | null; lesestoff: string | null } = { komfort: null, lesestoff: null };
+    try {
+      zusatz = { komfort: localStorage.getItem(KOMFORT_KEY), lesestoff: localStorage.getItem("weg-lesestoff-v1") };
+    } catch { /* بيئة بلا localStorage — نسخة تقدّم فقط */ }
+    const data = JSON.stringify({ progress: loadProgress(), zusatz }, null, 2);
     const blob = new Blob([data], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -62,7 +68,15 @@ export default function Einstellungen() {
       const urteil = pruefeImportText(text);
       if (!urteil.ok) { setMsg(`⛔ ${urteil.fehlerAr}`); return; }
       try {
-        importProgress(text);
+        const geparsed = JSON.parse(text) as { progress?: unknown; zusatz?: { komfort?: string | null; lesestoff?: string | null } };
+        importProgress(geparsed.progress ? JSON.stringify(geparsed.progress) : text);
+        if (geparsed.zusatz) {
+          try {
+            if (geparsed.zusatz.komfort) localStorage.setItem(KOMFORT_KEY, geparsed.zusatz.komfort);
+            if (geparsed.zusatz.lesestoff) localStorage.setItem("weg-lesestoff-v1", geparsed.zusatz.lesestoff);
+            wendeKomfortAn(ladeKomfort());
+          } catch { /* الاستيراد الأساسي نجح — الفرعيات اختيارية */ }
+        }
         setMsg("تم استيراد التقدّم بنجاح ✓");
       } catch {
         setMsg("⛔ تعذّر تطبيق الملف رغم سلامة بنيته — لم يتغيّر تقدّمك الحالي.");
