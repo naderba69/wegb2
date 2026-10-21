@@ -14,7 +14,8 @@ export const TOOL_183 = {
 } as const;
 
 export function adjustDifficulty(currentErrorRate: number, currentDifficulty: number): number {
-  const target = TOOL_183.optimalErrorRate;
+  const _target = TOOL_183.optimalErrorRate;
+  void _target;
   if (currentErrorRate < 0.12) return currentDifficulty * 1.15; // too easy → harder
   if (currentErrorRate > 0.28) return currentDifficulty * 0.85; // too hard → easier
   return currentDifficulty;

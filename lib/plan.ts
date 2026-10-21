@@ -40,7 +40,7 @@ import { generationPrompt as tool194Prompt } from "./tool-194"; // R354
 import { contrastHint as tool210Hint } from "./tool-210"; // R355
 import { tbltPrompt as tool216Prompt } from "./tool-216"; // R356 TBLT
 import { dictoglossPrompt as tool224Prompt } from "./tool-224"; // R357 Dictogloss
-import { shadowingDelay as tool231Delay } from "./tool-231"; // R358
+import { shadowingDelay as _tool231Delay } from "./tool-231"; // R358 — reserved for future listening stage (N6/N15)
 import { tool281Check as tool281Load } from "./tool-281"; // R363 CLT
 import { tool291Gain as tool291Goal } from "./tool-291"; // R363 Goal
 import { tool311Gain as tool311Intercultural } from "./tool-311"; // R364

@@ -2646,15 +2646,15 @@ void 0;
     ok(pakete.length === 4 && pakete.some((x) => x.id === "b2-debatte" && x.saetze.length === 12), "K128b 4 حزم (b2-debatte 12 جملة) — M2 B2 Themen مغلقة");
     // K128c — Tools R334: Overlearning/Schlaf/Portfolio موجودة
     {
-      const o = await import("../lib/overlearning.js");
-      const s = await import("../lib/schlaf.js");
-      const pf = await import("../lib/portfolio.js");
+      const o = require("../lib/overlearning.js");
+      const s = require("../lib/schlaf.js");
+      const pf = require("../lib/portfolio.js");
       ok(o.OVERLEARNING_RATIO === 1.15 && o.extraDueDays(10).join() === "12,17", "K128c Overlearning 1.15 + delays 2/7");
       ok(s.SCHLAF_FENSTER_START === 21 && s.inSchlafFenster(22) && !s.inSchlafFenster(20), "K128d Schlaf Fenster 21-23.5");
       ok(pf.portfolioFortschritt({ version: 1, eintraege: [] }).total === 0, "K128e Portfolio leer=0");
-      const story = await import("../lib/mnemonic-story.js");
-      const palace = await import("../lib/memory-palace.js");
-      const pi = await import("../lib/processing-instruction.js");
+      const story = require("../lib/mnemonic-story.js");
+      const palace = require("../lib/memory-palace.js");
+      const pi = require("../lib/processing-instruction.js");
       ok(story.baueStory([{ de: "Haus", ar: "بيت", bild: "بيت أزرق" }]).textAr.includes("تخيّل"), "K128f Mnemonic Story erzeugt");
       ok(palace.PALACE_RAEUME.length === 7 && palace.palacePosition(0).raum === "Eingang", "K128g Memory Palace 7 Räume");
       ok(pi.piItemsFor("a2-weil-dass").length === 1 && pi.piAuswahl(pi.piItemsFor("a2-weil-dass")[0], 0), "K128h Processing Instruction weil");

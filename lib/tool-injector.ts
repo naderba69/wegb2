@@ -21,9 +21,9 @@ export interface InjectedTask {
 
 /**
  * اختيار حتمي (deterministic) — نفس اليوم = نفس الأدوات دائماً
- * seed = day * 2654435761 mod
+ * seed = day * 2654435761 mod — محفوظ كـ utility عام (يستخدم مستقبلاً في اختيار المحتوى العشوائي الحتمي)
  */
-function pick<T>(arr: T[], seed: number, count: number): T[] {
+function _pick<T>(arr: T[], seed: number, count: number): T[] {
   if (!arr.length) return [];
   const out: T[] = [];
   let s = seed >>> 0;
