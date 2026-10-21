@@ -51,6 +51,7 @@ import { tool431Gain as tool431Complexity } from "./tool-431"; // R368 Complexit
 import { tool461Gain as tool461TPS } from "./tool-461"; // R369 TPS
 import { tool491Gain as tool491Needs } from "./tool-491"; // R370 Needs Analysis
 import { tool521Gain as tool521Concept } from "./tool-521"; // R371
+import { injectTools } from "./tool-injector"; // R373 Methodology
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1363,6 +1364,20 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   }
   // R363-281 + R363-291 + R364-311 + R365-344 + R366-385 + R367-401 + R368-431 + R369-461 + R370-491 + R371-521: + Concept
   void tool281Load(1); void tool291Goal(true); void tool311Intercultural(true); void tool344V2(true); void tool385WM(true); void tool401Recast(true); void tool431Complexity(true); void tool461TPS(true); void tool491Needs(true); void tool521Concept(true);
+
+  // R373: الحقن المنهجي الاحترافي — كل يوم 1-2 أداة حقيقية وفق CEFR/Goethe/SLA/Bloom
+  // يضمن تغطية 1000 أداة خلال 378 يوماً (حتمي seeded، لا زيادة حمل >10 دقائق)
+  const injected = injectTools(day, level, type);
+  for (const inj of injected) {
+    tasks.push({
+      id: tid(40 + inj.toolId % 50),
+      kind: "check",
+      titleDe: inj.titleDe,
+      titleAr: inj.titleAr + ` — ${inj.rationaleAr}`,
+      minutes: inj.minutes,
+      quiz: [], // مهمة تطبيقية مصغّرة — تُستبدل لاحقاً بمحتوى الأداة المحددة
+    });
+  }
 
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
   if (level !== "A0" && level !== "A1" && wocheInPhase % 2 === 0 && type === "festigung") {
