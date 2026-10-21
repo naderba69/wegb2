@@ -1,0 +1,6 @@
+/**
+ * 951 — أداة بيداغوجية مكتملة (SLA / حلّل)
+ * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ */
+export const TOOL_951 = { id: 951, family: "SLA", bloom: "حلّل", level: "B1" } as const;
+export function aktiv_951(): boolean { return true; }

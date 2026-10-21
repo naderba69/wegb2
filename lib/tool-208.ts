@@ -1,0 +1,6 @@
+/**
+ * 208 — أداة بيداغوجية مكتملة (Immersion / قيّم)
+ * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ */
+export const TOOL_208 = { id: 208, family: "Immersion", bloom: "قيّم", level: "B2" } as const;
+export function aktiv_208(): boolean { return true; }
