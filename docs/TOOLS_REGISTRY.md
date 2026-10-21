@@ -56,11 +56,11 @@
 | 050 | تلقين | Project مشروع | ✅ | B2 | أنشئ | `lib/project.ts` | R336b |
 | 051 | تلقين | Jigsaw تعاوني | ✅ | B1-B2 | طبّق | `lib/jigsaw.ts` | R339 |
 | 052 | تلقين | Peer Teaching تدريس أقران | ✅ | A1-B2 | أنشئ | `lib/fehlerbank2.ts` | شرح الخطأ للآخر |
-| 053 | تلقين | Think-Pair-Share | 🔲 | A1-B2 | طبّق | — | P4 |
+| 053 | تلقين | Think-Pair-Share | ✅ | A1-B2 | طبّق | `lib/think-pair-share.ts` | R340 |
 | 054 | تلقين | Dictogloss إملاء جماعي | ✅ | A1-B2 | فهم | `content/diktat-audio.json` | إملاء + إعادة بناء |
-| 055 | تلقين | Running Dictation | 🔲 | A1 | طبّق | — | P4 |
+| 055 | تلقين | Running Dictation | ✅ | A1 | طبّق | `lib/running-dictation.ts` | R340 |
 | 056 | تلقين | Information Gap فجوة | ✅ | A1-B2 | طبّق | `content/dialogues.json` | حوار بمعلومة ناقصة |
-| 057 | تلقين | Strip Story شريط قصة | 🔲 | A2 | فهم | — | P4 |
+| 057 | تلقين | Strip Story شريط قصة | ✅ | A2 | فهم | `lib/strip-story.ts` | R340 |
 | 058 | تلقين | Storytelling سرد | ✅ | A1-B2 | أنشئ | `content/texts.json` 157 نص | 157 نص سردي |
 | 059 | تلقين | Shadowing تظليل | ✅ | A1-B2 | طبّق | `lib/shadowing.ts` | ترديد متزامن |
 | 060 | تلقين | Minimal Pairs أزواج دنيا | ✅ | A0 | فهم | `lib/phonetikdaten.ts` | ch/r/sp-st/ä-ö-ü |
@@ -107,7 +107,7 @@
 
 > ما بعد 100 هو تفريع لكل أداة (مثال 026 Feedback = 6 أدوات فرعية، 105 Gamification = 8). السجل يُوسّع حتى 1000 بنفس النسق.
 
-**المجموع الحالي: 100 أداة أساسية — 82 ✅ موجودة (82%) — 18 🔲 مقترحة (18%)**
+**المجموع الحالي: 100 أداة أساسية — 85 ✅ موجودة (85%) — 15 🔲 مقترحة (15%)**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
