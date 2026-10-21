@@ -178,6 +178,20 @@
 | 150 | طرائق | Lexical Deep معجمي عميق | ✅ | A1-B2 | تذكّر | `lib/lexical-deep.ts` | R348 |
 
 **المجموع التراكمي: 150 / 1000 (15%) — 100 أساسية + 50 فرعية**
+
+### تفصيل 100 → 1000 — الدفعة R349 (151→160)
+| 151 | تلقين | Role-play Variants متغيرات التمثيل | ✅ | A1-B2 | طبّق | `lib/roleplay-variants.ts` | R349 |
+| 152 | تلقين | Simulation Variants متغيرات المحاكاة | ✅ | B1-B2 | طبّق | `lib/simulation-variants.ts` | R349 |
+| 153 | تلقين | Debate Formats صيغ المناظرة | ✅ | B2 | قيّم | `lib/debate-formats.ts` | R349 |
+| 154 | تلقين | Case Study Variants متغيرات الحالة | ✅ | B2 | حلّل | `lib/case-study-var.ts` | R349 |
+| 155 | تلقين | Project Variants متغيرات المشروع | ✅ | B2 | أنشئ | `lib/project-var.ts` | R349 |
+| 156 | تلقين | Jigsaw Variants متغيرات جيغسو | ✅ | B1-B2 | طبّق | `lib/jigsaw-var.ts` | R349 |
+| 157 | تلقين | Peer Teaching Variants تدريس أقران | ✅ | A1-B2 | أنشئ | `lib/peer-teaching-var.ts` | R349 |
+| 158 | تلقين | Dictogloss Variants إملاء جماعي | ✅ | A1-B2 | فهم | `lib/dictogloss-var.ts` | R349 |
+| 159 | تلقين | Information Gap Variants فجوة | ✅ | A1-B2 | طبّق | `lib/information-gap-var.ts` | R349 |
+| 160 | تلقين | Storytelling Variants سرد | ✅ | A1-B2 | أنشئ | `lib/storytelling-var.ts` | R349 |
+
+**المجموع التراكمي: 160 / 1000 (16%) — 100 أساسية + 60 فرعية**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
