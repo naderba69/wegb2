@@ -782,36 +782,36 @@
 | 728 | طرائق | Inclusive Education — دامج | ✅حقيقي | A0-B2 | قيّم | `lib/tool-728.ts` | R380 |
 | 729 | Immersion | Multicultural Education — متعدد | ✅حقيقي | A1-B2 | فهم | `lib/tool-729.ts` | R380 |
 | 730 | Immersion | Global Citizenship — مواطنة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-730.ts` | R380 |
-| 731 | طرائق | Tool 731 Concept — مفهوم 731 | ✅حقيقي | A1-B2 | فهم | `lib/tool-731.ts` | R372 |
-| 732 | طرائق | Tool 732 Concept — مفهوم 732 | ✅حقيقي | A1-B2 | فهم | `lib/tool-732.ts` | R372 |
-| 733 | طرائق | Tool 733 Concept — مفهوم 733 | ✅حقيقي | A1-B2 | فهم | `lib/tool-733.ts` | R372 |
-| 734 | طرائق | Tool 734 Concept — مفهوم 734 | ✅حقيقي | A1-B2 | فهم | `lib/tool-734.ts` | R372 |
-| 735 | طرائق | Tool 735 Concept — مفهوم 735 | ✅حقيقي | A1-B2 | فهم | `lib/tool-735.ts` | R372 |
-| 736 | طرائق | Tool 736 Concept — مفهوم 736 | ✅حقيقي | A1-B2 | فهم | `lib/tool-736.ts` | R372 |
-| 737 | طرائق | Tool 737 Concept — مفهوم 737 | ✅حقيقي | A1-B2 | فهم | `lib/tool-737.ts` | R372 |
-| 738 | طرائق | Tool 738 Concept — مفهوم 738 | ✅حقيقي | A1-B2 | فهم | `lib/tool-738.ts` | R372 |
-| 739 | طرائق | Tool 739 Concept — مفهوم 739 | ✅حقيقي | A1-B2 | فهم | `lib/tool-739.ts` | R372 |
-| 740 | طرائق | Tool 740 Concept — مفهوم 740 | ✅حقيقي | A1-B2 | فهم | `lib/tool-740.ts` | R372 |
-| 741 | طرائق | Tool 741 Concept — مفهوم 741 | ✅حقيقي | A1-B2 | فهم | `lib/tool-741.ts` | R372 |
-| 742 | طرائق | Tool 742 Concept — مفهوم 742 | ✅حقيقي | A1-B2 | فهم | `lib/tool-742.ts` | R372 |
-| 743 | طرائق | Tool 743 Concept — مفهوم 743 | ✅حقيقي | A1-B2 | فهم | `lib/tool-743.ts` | R372 |
-| 744 | طرائق | Tool 744 Concept — مفهوم 744 | ✅حقيقي | A1-B2 | فهم | `lib/tool-744.ts` | R372 |
-| 745 | طرائق | Tool 745 Concept — مفهوم 745 | ✅حقيقي | A1-B2 | فهم | `lib/tool-745.ts` | R372 |
-| 746 | طرائق | Tool 746 Concept — مفهوم 746 | ✅حقيقي | A1-B2 | فهم | `lib/tool-746.ts` | R372 |
-| 747 | طرائق | Tool 747 Concept — مفهوم 747 | ✅حقيقي | A1-B2 | فهم | `lib/tool-747.ts` | R372 |
-| 748 | طرائق | Tool 748 Concept — مفهوم 748 | ✅حقيقي | A1-B2 | فهم | `lib/tool-748.ts` | R372 |
-| 749 | طرائق | Tool 749 Concept — مفهوم 749 | ✅حقيقي | A1-B2 | فهم | `lib/tool-749.ts` | R372 |
-| 750 | طرائق | Tool 750 Concept — مفهوم 750 | ✅حقيقي | A1-B2 | فهم | `lib/tool-750.ts` | R372 |
-| 751 | طرائق | Tool 751 Concept — مفهوم 751 | ✅حقيقي | A1-B2 | فهم | `lib/tool-751.ts` | R372 |
-| 752 | طرائق | Tool 752 Concept — مفهوم 752 | ✅حقيقي | A1-B2 | فهم | `lib/tool-752.ts` | R372 |
-| 753 | طرائق | Tool 753 Concept — مفهوم 753 | ✅حقيقي | A1-B2 | فهم | `lib/tool-753.ts` | R372 |
-| 754 | طرائق | Tool 754 Concept — مفهوم 754 | ✅حقيقي | A1-B2 | فهم | `lib/tool-754.ts` | R372 |
-| 755 | طرائق | Tool 755 Concept — مفهوم 755 | ✅حقيقي | A1-B2 | فهم | `lib/tool-755.ts` | R372 |
-| 756 | طرائق | Tool 756 Concept — مفهوم 756 | ✅حقيقي | A1-B2 | فهم | `lib/tool-756.ts` | R372 |
-| 757 | طرائق | Tool 757 Concept — مفهوم 757 | ✅حقيقي | A1-B2 | فهم | `lib/tool-757.ts` | R372 |
-| 758 | طرائق | Tool 758 Concept — مفهوم 758 | ✅حقيقي | A1-B2 | فهم | `lib/tool-758.ts` | R372 |
-| 759 | طرائق | Tool 759 Concept — مفهوم 759 | ✅حقيقي | A1-B2 | فهم | `lib/tool-759.ts` | R372 |
-| 760 | طرائق | Tool 760 Concept — مفهوم 760 | ✅حقيقي | A1-B2 | فهم | `lib/tool-760.ts` | R372 |
+| 731 | Immersion | Intercultural Competence Deardorff — بين ثقافية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-731.ts` | R381 |
+| 732 | Immersion | Transcultural Competence — عبر | ✅حقيقي | B1-B2 | فهم | `lib/tool-732.ts` | R381 |
+| 733 | Immersion | Cosmopolitanism — كونية | ✅حقيقي | B1-B2 | فهم | `lib/tool-733.ts` | R381 |
+| 734 | Immersion | Third Space Kramsch — فضاء ثالث | ✅حقيقي | B1-B2 | حلّل | `lib/tool-734.ts` | R381 |
+| 735 | Immersion | Symbolic Competence — رمزية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-735.ts` | R381 |
+| 736 | Immersion | Languaculture Agar — ثقافة لغة | ✅حقيقي | A1-B2 | فهم | `lib/tool-736.ts` | R381 |
+| 737 | Immersion | Intercultural Citizenship — مواطنة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-737.ts` | R381 |
+| 738 | طرائق | Plurilingual Education — متعدد لغات | ✅حقيقي | A0-B2 | فهم | `lib/tool-738.ts` | R381 |
+| 739 | طرائق | Content and Language Integration — تكامل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-739.ts` | R381 |
+| 740 | طرائق | Bilingual Education Baker — ثنائي | ✅حقيقي | A1-B2 | فهم | `lib/tool-740.ts` | R381 |
+| 741 | طرائق | Immersion Education — انغماسي | ✅حقيقي | A1-B2 | فهم | `lib/tool-741.ts` | R381 |
+| 742 | Immersion | Study Abroad — بالخارج | ✅حقيقي | B1-B2 | فهم | `lib/tool-742.ts` | R381 |
+| 743 | Immersion | Teletandem — تبادل | ✅حقيقي | B1-B2 | طبّق | `lib/tool-743.ts` | R381 |
+| 744 | Immersion | eTwinning — توأمة | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-744.ts` | R381 |
+| 745 | Immersion | Virtual Mobility — تنقل افتراضي | ✅حقيقي | B1-B2 | فهم | `lib/tool-745.ts` | R381 |
+| 746 | Immersion | Blended Mobility — مدمج | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-746.ts` | R381 |
+| 747 | طرائق | Service Learning — خدمي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-747.ts` | R381 |
+| 748 | طرائق | Project-Based Global — عالمي | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-748.ts` | R381 |
+| 749 | Immersion | Collaborative Online International Learning — دولي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-749.ts` | R381 |
+| 750 | SLA | Intercomprehension — متبادل | ✅حقيقي | B1-B2 | فهم | `lib/tool-750.ts` | R381 |
+| 751 | SLA | Receptive Multilingualism — استقبالية | ✅حقيقي | A2-B2 | فهم | `lib/tool-751.ts` | R381 |
+| 752 | SLA | Code-Meshing Canagarajah — مزج | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-752.ts` | R381 |
+| 753 | طرائق | Translanguaging Pedagogy — ترجمة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-753.ts` | R381 |
+| 754 | SLA | Heteroglossia Bakhtin — تعدد أصوات | ✅حقيقي | B1-B2 | حلّل | `lib/tool-754.ts` | R381 |
+| 755 | طرائق | Voice Ivanič — صوت | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-755.ts` | R381 |
+| 756 | تلقين | Autobiography Pavlenko — سيرة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-756.ts` | R381 |
+| 757 | تلقين | Narrative Inquiry — سرد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-757.ts` | R381 |
+| 758 | SLA | Language and Identity — هوية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-758.ts` | R381 |
+| 759 | SLA | Investment 2.0 Darvin — استثمار | ✅حقيقي | B1-B2 | حلّل | `lib/tool-759.ts` | R381 |
+| 760 | SLA | Imagined Communities Kanno — متخيلة | ✅حقيقي | B1-B2 | فهم | `lib/tool-760.ts` | R381 |
 | 761 | طرائق | Tool 761 Concept — مفهوم 761 | ✅حقيقي | A1-B2 | فهم | `lib/tool-761.ts` | R372 |
 | 762 | طرائق | Tool 762 Concept — مفهوم 762 | ✅حقيقي | A1-B2 | فهم | `lib/tool-762.ts` | R372 |
 | 763 | طرائق | Tool 763 Concept — مفهوم 763 | ✅حقيقي | A1-B2 | فهم | `lib/tool-763.ts` | R372 |

@@ -1,8 +1,8 @@
 /**
- * 757 — Tool 757 Concept — مفهوم 757
- * Research 757: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 757 — Narrative Inquiry — سرد استقصائي
+ * Barkhuizen 2014: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: تلقين
  */
-export const TOOL_757 = { id: 757, titleDe: "Tool 757 Concept", titleAr: "مفهوم 757", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 757", desc: "Tool 757" } as const;
+export const TOOL_757 = { id: 757, titleDe: "Narrative Inquiry", titleAr: "سرد استقصائي", family: "تلقين", bloom: "حلّل", level: "B1-B2", research: "Barkhuizen 2014", desc: "Narrative Inquiry" } as const;
 export function tool757Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool757Check(v:number):boolean{return v>0;}

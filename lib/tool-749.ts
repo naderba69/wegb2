@@ -1,8 +1,8 @@
 /**
- * 749 — Tool 749 Concept — مفهوم 749
- * Research 749: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 749 — Collaborative Online International Learning — تعلم دولي مشترك
+ * Rubin 2017: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: Immersion
  */
-export const TOOL_749 = { id: 749, titleDe: "Tool 749 Concept", titleAr: "مفهوم 749", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 749", desc: "Tool 749" } as const;
+export const TOOL_749 = { id: 749, titleDe: "Collaborative Online International Learning", titleAr: "تعلم دولي مشترك", family: "Immersion", bloom: "أنشئ", level: "B1-B2", research: "Rubin 2017", desc: "Collaborative Online International Learning" } as const;
 export function tool749Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool749Check(v:number):boolean{return v>0;}
