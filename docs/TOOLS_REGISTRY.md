@@ -720,38 +720,38 @@
 | 668 | SLA | Sound Symbolism Dingemanse — رمزية | ✅حقيقي | A1-B2 | فهم | `lib/tool-668.ts` | R378 |
 | 669 | طرائق | Onomatopoeia — محاكاة | ✅حقيقي | A0-A2 | فهم | `lib/tool-669.ts` | R378 |
 | 670 | طرائق | Ideophones — تصويرية | ✅حقيقي | A1-B2 | فهم | `lib/tool-670.ts` | R378 |
-| 671 | طرائق | Tool 671 Concept — مفهوم 671 | ✅حقيقي | A1-B2 | فهم | `lib/tool-671.ts` | R372 |
-| 672 | طرائق | Tool 672 Concept — مفهوم 672 | ✅حقيقي | A1-B2 | فهم | `lib/tool-672.ts` | R372 |
-| 673 | طرائق | Tool 673 Concept — مفهوم 673 | ✅حقيقي | A1-B2 | فهم | `lib/tool-673.ts` | R372 |
-| 674 | طرائق | Tool 674 Concept — مفهوم 674 | ✅حقيقي | A1-B2 | فهم | `lib/tool-674.ts` | R372 |
-| 675 | طرائق | Tool 675 Concept — مفهوم 675 | ✅حقيقي | A1-B2 | فهم | `lib/tool-675.ts` | R372 |
-| 676 | طرائق | Tool 676 Concept — مفهوم 676 | ✅حقيقي | A1-B2 | فهم | `lib/tool-676.ts` | R372 |
-| 677 | طرائق | Tool 677 Concept — مفهوم 677 | ✅حقيقي | A1-B2 | فهم | `lib/tool-677.ts` | R372 |
-| 678 | طرائق | Tool 678 Concept — مفهوم 678 | ✅حقيقي | A1-B2 | فهم | `lib/tool-678.ts` | R372 |
-| 679 | طرائق | Tool 679 Concept — مفهوم 679 | ✅حقيقي | A1-B2 | فهم | `lib/tool-679.ts` | R372 |
-| 680 | طرائق | Tool 680 Concept — مفهوم 680 | ✅حقيقي | A1-B2 | فهم | `lib/tool-680.ts` | R372 |
+| 671 | SLA | Pragmatic Markers — علامات تداولية | ✅حقيقي | B1-B2 | فهم | `lib/tool-671.ts` | R379 |
+| 672 | SLA | Discourse Particles — جسيمات | ✅حقيقي | B1-B2 | فهم | `lib/tool-672.ts` | R379 |
+| 673 | SLA | Modal Particles — نمطية | ✅حقيقي | B1-B2 | طبّق | `lib/tool-673.ts` | R379 |
+| 674 | طرائق | Hedging — تحوط | ✅حقيقي | B1-B2 | فهم | `lib/tool-674.ts` | R379 |
+| 675 | طرائق | Boosting — تعزيز | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-675.ts` | R379 |
+| 676 | طرائق | Stance Markers — موقف | ✅حقيقي | B1-B2 | حلّل | `lib/tool-676.ts` | R379 |
+| 677 | طرائق | Engagement Markers — انخراط | ✅حقيقي | B1-B2 | طبّق | `lib/tool-677.ts` | R379 |
+| 678 | SLA | Evidentiality — استدلالية | ✅حقيقي | B1-B2 | فهم | `lib/tool-678.ts` | R379 |
+| 679 | SLA | Epistemic Modality — معرفية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-679.ts` | R379 |
+| 680 | SLA | Deontic Modality — الزامي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-680.ts` | R379 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (681→780) — إكمال جماعي بنفس القواعد
-| 681 | طرائق | Tool 681 Concept — مفهوم 681 | ✅حقيقي | A1-B2 | فهم | `lib/tool-681.ts` | R372 |
-| 682 | طرائق | Tool 682 Concept — مفهوم 682 | ✅حقيقي | A1-B2 | فهم | `lib/tool-682.ts` | R372 |
-| 683 | طرائق | Tool 683 Concept — مفهوم 683 | ✅حقيقي | A1-B2 | فهم | `lib/tool-683.ts` | R372 |
-| 684 | طرائق | Tool 684 Concept — مفهوم 684 | ✅حقيقي | A1-B2 | فهم | `lib/tool-684.ts` | R372 |
-| 685 | طرائق | Tool 685 Concept — مفهوم 685 | ✅حقيقي | A1-B2 | فهم | `lib/tool-685.ts` | R372 |
-| 686 | طرائق | Tool 686 Concept — مفهوم 686 | ✅حقيقي | A1-B2 | فهم | `lib/tool-686.ts` | R372 |
-| 687 | طرائق | Tool 687 Concept — مفهوم 687 | ✅حقيقي | A1-B2 | فهم | `lib/tool-687.ts` | R372 |
-| 688 | طرائق | Tool 688 Concept — مفهوم 688 | ✅حقيقي | A1-B2 | فهم | `lib/tool-688.ts` | R372 |
-| 689 | طرائق | Tool 689 Concept — مفهوم 689 | ✅حقيقي | A1-B2 | فهم | `lib/tool-689.ts` | R372 |
-| 690 | طرائق | Tool 690 Concept — مفهوم 690 | ✅حقيقي | A1-B2 | فهم | `lib/tool-690.ts` | R372 |
-| 691 | طرائق | Tool 691 Concept — مفهوم 691 | ✅حقيقي | A1-B2 | فهم | `lib/tool-691.ts` | R372 |
-| 692 | طرائق | Tool 692 Concept — مفهوم 692 | ✅حقيقي | A1-B2 | فهم | `lib/tool-692.ts` | R372 |
-| 693 | طرائق | Tool 693 Concept — مفهوم 693 | ✅حقيقي | A1-B2 | فهم | `lib/tool-693.ts` | R372 |
-| 694 | طرائق | Tool 694 Concept — مفهوم 694 | ✅حقيقي | A1-B2 | فهم | `lib/tool-694.ts` | R372 |
-| 695 | طرائق | Tool 695 Concept — مفهوم 695 | ✅حقيقي | A1-B2 | فهم | `lib/tool-695.ts` | R372 |
-| 696 | طرائق | Tool 696 Concept — مفهوم 696 | ✅حقيقي | A1-B2 | فهم | `lib/tool-696.ts` | R372 |
-| 697 | طرائق | Tool 697 Concept — مفهوم 697 | ✅حقيقي | A1-B2 | فهم | `lib/tool-697.ts` | R372 |
-| 698 | طرائق | Tool 698 Concept — مفهوم 698 | ✅حقيقي | A1-B2 | فهم | `lib/tool-698.ts` | R372 |
-| 699 | طرائق | Tool 699 Concept — مفهوم 699 | ✅حقيقي | A1-B2 | فهم | `lib/tool-699.ts` | R372 |
-| 700 | طرائق | Tool 700 Concept — مفهوم 700 | ✅حقيقي | A1-B2 | فهم | `lib/tool-700.ts` | R372 |
+| 681 | طرائق | Cohesion Halliday — تماسك | ✅حقيقي | B1-B2 | حلّل | `lib/tool-681.ts` | R379 |
+| 682 | طرائق | Coherence Kintsch — انسجام | ✅حقيقي | B1-B2 | حلّل | `lib/tool-682.ts` | R379 |
+| 683 | طرائق | Thematic Progression — تقدم | ✅حقيقي | B1-B2 | فهم | `lib/tool-683.ts` | R379 |
+| 684 | SLA | Information Structure — بنية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-684.ts` | R379 |
+| 685 | SLA | Topic Focus — موضوع | ✅حقيقي | A2-B2 | فهم | `lib/tool-685.ts` | R379 |
+| 686 | SLA | Given New — معطى/جديد | ✅حقيقي | A1-B2 | فهم | `lib/tool-686.ts` | R379 |
+| 687 | SLA | Presupposition — افتراض | ✅حقيقي | B1-B2 | حلّل | `lib/tool-687.ts` | R379 |
+| 688 | SLA | Implicature Grice — استلزام | ✅حقيقي | B1-B2 | حلّل | `lib/tool-688.ts` | R379 |
+| 689 | SLA | Speech Act Searle — فعل كلامي | ✅حقيقي | B1-B2 | طبّق | `lib/tool-689.ts` | R379 |
+| 690 | SLA | Politeness Brown adv — تأدب | ✅حقيقي | B1-B2 | فهم | `lib/tool-690.ts` | R379 |
+| 691 | SLA | Face Threatening Acts — تهديد وجه | ✅حقيقي | B1-B2 | حلّل | `lib/tool-691.ts` | R379 |
+| 692 | Immersion | Cross-Cultural Pragmatics — عبر ثقافية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-692.ts` | R379 |
+| 693 | SLA | Interlanguage Pragmatics — بينية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-693.ts` | R379 |
+| 694 | SLA | Pragmatic Transfer — نقل | ✅حقيقي | B1-B2 | حلّل | `lib/tool-694.ts` | R379 |
+| 695 | SLA | Pragmatic Awareness — وعي | ✅حقيقي | B1-B2 | فهم | `lib/tool-695.ts` | R379 |
+| 696 | SLA | Noticing Pragmatics — انتباه | ✅حقيقي | B1-B2 | فهم | `lib/tool-696.ts` | R379 |
+| 697 | طرائق | Explicit Pragmatic Instruction — صريح | ✅حقيقي | B1-B2 | طبّق | `lib/tool-697.ts` | R379 |
+| 698 | طرائق | Implicit Pragmatic Instruction — ضمني | ✅حقيقي | B1-B2 | طبّق | `lib/tool-698.ts` | R379 |
+| 699 | طرائق | Conventional Expressions — اصطلاحية | ✅حقيقي | B1-B2 | تذكّر | `lib/tool-699.ts` | R379 |
+| 700 | طرائق | Routine Formulas — روتينية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-700.ts` | R379 |
 | 701 | طرائق | Tool 701 Concept — مفهوم 701 | ✅حقيقي | A1-B2 | فهم | `lib/tool-701.ts` | R372 |
 | 702 | طرائق | Tool 702 Concept — مفهوم 702 | ✅حقيقي | A1-B2 | فهم | `lib/tool-702.ts` | R372 |
 | 703 | طرائق | Tool 703 Concept — مفهوم 703 | ✅حقيقي | A1-B2 | فهم | `lib/tool-703.ts` | R372 |

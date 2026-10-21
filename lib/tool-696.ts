@@ -1,8 +1,8 @@
 /**
- * 696 — Tool 696 Concept — مفهوم 696
- * Research 696: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 696 — Noticing Pragmatics — انتباه تداولية
+ * Bardovi-Harlig 2001: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_696 = { id: 696, titleDe: "Tool 696 Concept", titleAr: "مفهوم 696", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 696", desc: "Tool 696" } as const;
+export const TOOL_696 = { id: 696, titleDe: "Noticing Pragmatics", titleAr: "انتباه تداولية", family: "SLA", bloom: "فهم", level: "B1-B2", research: "Bardovi-Harlig 2001", desc: "Noticing Pragmatics" } as const;
 export function tool696Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool696Check(v:number):boolean{return v>0;}
