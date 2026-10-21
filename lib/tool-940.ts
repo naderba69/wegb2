@@ -1,8 +1,8 @@
 /**
- * 940 — Tool 940 Concept — مفهوم 940
- * Research 940: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 940 — Virtual Exchange Design — تصميم تبادل افتراضي
+ * Helm 2015: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_940 = { id: 940, titleDe: "Tool 940 Concept", titleAr: "مفهوم 940", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 940", desc: "Tool 940" } as const;
+export const TOOL_940 = { id: 940, titleDe: "Virtual Exchange Design", titleAr: "تصميم تبادل افتراضي", family: "طرائق", bloom: "أنشئ", level: "B1-B2", research: "Helm 2015", desc: "Virtual Exchange Design" } as const;
 export function tool940Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool940Check(v:number):boolean{return v>0;}

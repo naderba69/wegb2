@@ -966,36 +966,36 @@
 | 908 | Immersion | Language Contact Thomason — اتصال | ✅حقيقي | B1-B2 | حلّل | `lib/tool-908.ts` | R386 |
 | 909 | Immersion | Pidgins Creoles — رطانات | ✅حقيقي | B1-B2 | فهم | `lib/tool-909.ts` | R386 |
 | 910 | Immersion | Global English Jenkins — عالمية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-910.ts` | R386 |
-| 911 | طرائق | Tool 911 Concept — مفهوم 911 | ✅حقيقي | A1-B2 | فهم | `lib/tool-911.ts` | R372 |
-| 912 | طرائق | Tool 912 Concept — مفهوم 912 | ✅حقيقي | A1-B2 | فهم | `lib/tool-912.ts` | R372 |
-| 913 | طرائق | Tool 913 Concept — مفهوم 913 | ✅حقيقي | A1-B2 | فهم | `lib/tool-913.ts` | R372 |
-| 914 | طرائق | Tool 914 Concept — مفهوم 914 | ✅حقيقي | A1-B2 | فهم | `lib/tool-914.ts` | R372 |
-| 915 | طرائق | Tool 915 Concept — مفهوم 915 | ✅حقيقي | A1-B2 | فهم | `lib/tool-915.ts` | R372 |
-| 916 | طرائق | Tool 916 Concept — مفهوم 916 | ✅حقيقي | A1-B2 | فهم | `lib/tool-916.ts` | R372 |
-| 917 | طرائق | Tool 917 Concept — مفهوم 917 | ✅حقيقي | A1-B2 | فهم | `lib/tool-917.ts` | R372 |
-| 918 | طرائق | Tool 918 Concept — مفهوم 918 | ✅حقيقي | A1-B2 | فهم | `lib/tool-918.ts` | R372 |
-| 919 | طرائق | Tool 919 Concept — مفهوم 919 | ✅حقيقي | A1-B2 | فهم | `lib/tool-919.ts` | R372 |
-| 920 | طرائق | Tool 920 Concept — مفهوم 920 | ✅حقيقي | A1-B2 | فهم | `lib/tool-920.ts` | R372 |
-| 921 | طرائق | Tool 921 Concept — مفهوم 921 | ✅حقيقي | A1-B2 | فهم | `lib/tool-921.ts` | R372 |
-| 922 | طرائق | Tool 922 Concept — مفهوم 922 | ✅حقيقي | A1-B2 | فهم | `lib/tool-922.ts` | R372 |
-| 923 | طرائق | Tool 923 Concept — مفهوم 923 | ✅حقيقي | A1-B2 | فهم | `lib/tool-923.ts` | R372 |
-| 924 | طرائق | Tool 924 Concept — مفهوم 924 | ✅حقيقي | A1-B2 | فهم | `lib/tool-924.ts` | R372 |
-| 925 | طرائق | Tool 925 Concept — مفهوم 925 | ✅حقيقي | A1-B2 | فهم | `lib/tool-925.ts` | R372 |
-| 926 | طرائق | Tool 926 Concept — مفهوم 926 | ✅حقيقي | A1-B2 | فهم | `lib/tool-926.ts` | R372 |
-| 927 | طرائق | Tool 927 Concept — مفهوم 927 | ✅حقيقي | A1-B2 | فهم | `lib/tool-927.ts` | R372 |
-| 928 | طرائق | Tool 928 Concept — مفهوم 928 | ✅حقيقي | A1-B2 | فهم | `lib/tool-928.ts` | R372 |
-| 929 | طرائق | Tool 929 Concept — مفهوم 929 | ✅حقيقي | A1-B2 | فهم | `lib/tool-929.ts` | R372 |
-| 930 | طرائق | Tool 930 Concept — مفهوم 930 | ✅حقيقي | A1-B2 | فهم | `lib/tool-930.ts` | R372 |
-| 931 | طرائق | Tool 931 Concept — مفهوم 931 | ✅حقيقي | A1-B2 | فهم | `lib/tool-931.ts` | R372 |
-| 932 | طرائق | Tool 932 Concept — مفهوم 932 | ✅حقيقي | A1-B2 | فهم | `lib/tool-932.ts` | R372 |
-| 933 | طرائق | Tool 933 Concept — مفهوم 933 | ✅حقيقي | A1-B2 | فهم | `lib/tool-933.ts` | R372 |
-| 934 | طرائق | Tool 934 Concept — مفهوم 934 | ✅حقيقي | A1-B2 | فهم | `lib/tool-934.ts` | R372 |
-| 935 | طرائق | Tool 935 Concept — مفهوم 935 | ✅حقيقي | A1-B2 | فهم | `lib/tool-935.ts` | R372 |
-| 936 | طرائق | Tool 936 Concept — مفهوم 936 | ✅حقيقي | A1-B2 | فهم | `lib/tool-936.ts` | R372 |
-| 937 | طرائق | Tool 937 Concept — مفهوم 937 | ✅حقيقي | A1-B2 | فهم | `lib/tool-937.ts` | R372 |
-| 938 | طرائق | Tool 938 Concept — مفهوم 938 | ✅حقيقي | A1-B2 | فهم | `lib/tool-938.ts` | R372 |
-| 939 | طرائق | Tool 939 Concept — مفهوم 939 | ✅حقيقي | A1-B2 | فهم | `lib/tool-939.ts` | R372 |
-| 940 | طرائق | Tool 940 Concept — مفهوم 940 | ✅حقيقي | A1-B2 | فهم | `lib/tool-940.ts` | R372 |
+| 911 | Immersion | World Englishes Kachru 2 — كاترو | ✅حقيقي | B1-B2 | حلّل | `lib/tool-911.ts` | R387 |
+| 912 | Immersion | ELF Seidlhofer — وسيط | ✅حقيقي | B1-B2 | فهم | `lib/tool-912.ts` | R387 |
+| 913 | SLA | Translingualism Garcia — غارسيا | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-913.ts` | R387 |
+| 914 | SLA | Codemeshing Young — مزج | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-914.ts` | R387 |
+| 915 | Immersion | Heteroglossia Busch — أصوات | ✅حقيقي | B1-B2 | حلّل | `lib/tool-915.ts` | R387 |
+| 916 | Immersion | Superdiversity Blommaert — تنوع فائق | ✅حقيقي | B1-B2 | فهم | `lib/tool-916.ts` | R387 |
+| 917 | Immersion | Linguistic Landscape Shohamy — مشهد | ✅حقيقي | B1-B2 | فهم | `lib/tool-917.ts` | R387 |
+| 918 | طرائق | Translanguaging Pedagogy 2 — ترجمة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-918.ts` | R387 |
+| 919 | تقويم | CLIL Assessment Coyle — تقويم كليل | ✅حقيقي | B1-B2 | قيّم | `lib/tool-919.ts` | R387 |
+| 920 | SLA | Bilingual Advantage Bialystok — ميزة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-920.ts` | R387 |
+| 921 | SLA | Cognitive Advantage — معرفية | ✅حقيقي | A1-B2 | فهم | `lib/tool-921.ts` | R387 |
+| 922 | SLA | Executive Function — تنفيذية | ✅حقيقي | A1-B2 | فهم | `lib/tool-922.ts` | R387 |
+| 923 | SLA | Metalinguistic Awareness — فوق لغوي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-923.ts` | R387 |
+| 924 | SLA | Cross-Linguistic Awareness — عبر | ✅حقيقي | A1-B2 | فهم | `lib/tool-924.ts` | R387 |
+| 925 | طرائق | Language Awareness Hawkins — لغوي | ✅حقيقي | A1-B2 | فهم | `lib/tool-925.ts` | R387 |
+| 926 | Immersion | Critical Language Awareness — نقدي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-926.ts` | R387 |
+| 927 | تقويم | Sociolinguistic Competence — اجتماعية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-927.ts` | R387 |
+| 928 | تقويم | Discourse Competence — خطابية | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-928.ts` | R387 |
+| 929 | تقويم | Strategic Competence — استراتيجية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-929.ts` | R387 |
+| 930 | تقويم | Interactional Competence — تفاعلية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-930.ts` | R387 |
+| 931 | تقويم | Formulaic Competence — صيغية | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-931.ts` | R387 |
+| 932 | تقويم | Pragmatic Competence Bachman — تداولية | ✅حقيقي | B1-B2 | طبّق | `lib/tool-932.ts` | R387 |
+| 933 | Immersion | Sociocultural Competence — ثقافية | ✅حقيقي | B1-B2 | فهم | `lib/tool-933.ts` | R387 |
+| 934 | Immersion | Intercultural Competence 2 — بين | ✅حقيقي | B1-B2 | قيّم | `lib/tool-934.ts` | R387 |
+| 935 | Immersion | Pluricultural Competence — متعددة | ✅حقيقي | A0-B2 | فهم | `lib/tool-935.ts` | R387 |
+| 936 | طرائق | Mediation Competence — وساطة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-936.ts` | R387 |
+| 937 | Immersion | Online Interaction CEFR — تفاعل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-937.ts` | R387 |
+| 938 | Immersion | Digital Competence DigComp — رقمية | ✅حقيقي | A1-B2 | فهم | `lib/tool-938.ts` | R387 |
+| 939 | تقويم | Telecollaboration Assessment — تقويم تعاون | ✅حقيقي | B1-B2 | قيّم | `lib/tool-939.ts` | R387 |
+| 940 | طرائق | Virtual Exchange Design — تصميم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-940.ts` | R387 |
 | 941 | طرائق | Tool 941 Concept — مفهوم 941 | ✅حقيقي | A1-B2 | فهم | `lib/tool-941.ts` | R372 |
 | 942 | طرائق | Tool 942 Concept — مفهوم 942 | ✅حقيقي | A1-B2 | فهم | `lib/tool-942.ts` | R372 |
 | 943 | طرائق | Tool 943 Concept — مفهوم 943 | ✅حقيقي | A1-B2 | فهم | `lib/tool-943.ts` | R372 |

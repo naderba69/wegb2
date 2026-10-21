@@ -1,8 +1,8 @@
 /**
- * 914 — Tool 914 Concept — مفهوم 914
- * Research 914: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 914 — Codemeshing Young — مزج شفرات يونغ
+ * Young 2011: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: SLA
  */
-export const TOOL_914 = { id: 914, titleDe: "Tool 914 Concept", titleAr: "مفهوم 914", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 914", desc: "Tool 914" } as const;
+export const TOOL_914 = { id: 914, titleDe: "Codemeshing Young", titleAr: "مزج شفرات يونغ", family: "SLA", bloom: "أنشئ", level: "B1-B2", research: "Young 2011", desc: "Codemeshing Young" } as const;
 export function tool914Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool914Check(v:number):boolean{return v>0;}

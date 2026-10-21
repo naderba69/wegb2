@@ -1,8 +1,8 @@
 /**
- * 927 — Tool 927 Concept — مفهوم 927
- * Research 927: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 927 — Sociolinguistic Competence — كفاءة اجتماعية
+ * Canale 1983: classroom application
+ * Level: B1-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_927 = { id: 927, titleDe: "Tool 927 Concept", titleAr: "مفهوم 927", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 927", desc: "Tool 927" } as const;
+export const TOOL_927 = { id: 927, titleDe: "Sociolinguistic Competence", titleAr: "كفاءة اجتماعية", family: "تقويم", bloom: "قيّم", level: "B1-B2", research: "Canale 1983", desc: "Sociolinguistic Competence" } as const;
 export function tool927Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool927Check(v:number):boolean{return v>0;}
