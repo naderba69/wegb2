@@ -452,9 +452,39 @@
             "role": "طالب B2",
             "de": "Genau — und deshalb vertrete ich den Standpunkt, dass nachhaltiges Wirtschaften kein Luxus ist. Im Vergleich zu kurzfristigen Gewinnen überwiegen die langfristigen Vorteile.",
             "ar": "تمامًا — ولذلك أتبنى الموقف أن الاقتصاد المستدام ليس رفاهية. بالمقارنة مع الأرباح قصيرة المدى ترجح المزايا طويلة المدى."
+          },
+          {
+            "who": "B",
+            "role": "محاور",
+            "de": "Abschließend würde ich sagen: Trotz aller Herausforderungen überwiegen die Chancen — lassen wir uns nicht entmutigen.",
+            "ar": "ختاماً أقول: رغم كل التحديات ترجح الفرص — فلا نُحبط."
           }
         ]
-      }
+      },
+      "modelle": [
+        {
+          "titel": "Erörterung: Energiewende — Pro und Contra",
+          "zeilen": [
+            "Einleitung: Der Klimawandel ist eine der größten Herausforderungen unserer Zeit.",
+            "Argument 1: Die Energiewende schafft langfristig Arbeitsplätze und sichert die Zukunft.",
+            "Argument 2: Kurzfristig steigen die Kosten, besonders für kleine Unternehmen.",
+            "Gegenargument: Subventionen und Qualifizierung können die Belastung abfedern.",
+            "Schluss: Trotz Herausforderungen überwiegen die Chancen — nachhaltiges Wirtschaften ist notwendig.",
+            "Mit freundlichen Grüßen\nSami Ben Salah"
+          ]
+        },
+        {
+          "titel": "Stellungnahme: Vier-Tage-Woche — بيان موقف",
+          "zeilen": [
+            "Betreff: Stellungnahme zur Vier-Tage-Woche",
+            "Sehr geehrte Damen und Herren,",
+            "ich vertrete den Standpunkt, dass flexible Arbeitsmodelle die Produktivität nicht senken.",
+            "Studien zeigen: Je früher in Bildung investiert wird, desto geringer die späteren Sozialkosten.",
+            "Daher plädiere ich für Anreize statt Verbote — nachhaltiges Verhalten braucht Ermutigung.",
+            "Mit freundlichen Grüßen\nSami Ben Salah"
+          ]
+        }
+      ]
     }
   ]
 }

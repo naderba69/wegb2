@@ -452,7 +452,7 @@ const vocabRepeatAudit = (() => {
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
     ["szenarien", szenarien.length, 12],
-    ["eselsbruecken", eselsbruecken.length, 83],
+    ["eselsbruecken", eselsbruecken.length, 84],
     ["sprichwort-audio", Object.keys(sprichwortAudio).length, 8],
       ["mnemonik", Object.keys(mnemonikMap).length, 120],
     ["pakete", pakete.length, 4],
@@ -1557,7 +1557,7 @@ const vocabRepeatAudit = (() => {
     {
       const bb = eselsbruecken;
       const gids = Object.keys(grammarMap);
-      ok(bb.length === 83 && new Set(bb.map((b) => b.id)).size === 83, "K39a ثلاثٌ وثمانونَ تركةً بمعرّفاتٍ فريدة — بعد استكمالِ تغطيةِ الدروس");
+      ok(bb.length === 84 && new Set(bb.map((b) => b.id)).size === 84, "K39a أربعٌ وثمانونَ تركةً بمعرّفاتٍ فريدة — بعد استكمالِ تغطيةِ الدروس (R392 b2-n-deklination)");
       ok(bb.every((b) => b.gramIds.length > 0 && b.gramIds.every((g) => gids.includes(g))), "K39b كلُّ تركةٍ معلَّقةٌ بدرسٍ موجودٍ فعلاً — لا شفرةٌ يتيمةٌ ولا إشارةٌ إلى درسٍ وهميّ");
       ok(bb.every((b) => getBrueckenFor(b.gramIds[0]).some((x) => x.id === b.id)), "K39c الطريقُ عكسيٌّ أيضاً: getBrueckenFor تُرجِعُ التركةَ لدرسِها — السلكُ حيٌّ لا مُعلَن");
       ok(bb.every((b) => /[\u0600-\u06ff]/.test(b.titleAr) && /[\u0600-\u06ff]/.test(b.storyAr) && b.storyAr.length >= 40), "K39d لكلِّ شفرةٍ قصةٌ عربيةٌ مسهبةٌ لا عنوانٌ أجرد");
@@ -2040,7 +2040,7 @@ void 0;
   const ids = Object.keys(grammarMap);
   const uncovered = ids.filter((id) => getBrueckenFor(id).length === 0);
   const wizardCuts = /getBrueckenFor\(topicId\)\.slice|b\.zeilen[^\n]*\.slice/.test(wizard);
-  ok(ids.length === 82 && uncovered.length === 0, `K140a لكل درس قواعد شفرة مرتبطة (${ids.length}/82؛ بلا شفرة: ${uncovered.join(",") || "لا شيء"})`);
+  ok(ids.length === 83 && uncovered.length === 0, `K140a لكل درس قواعد شفرة مرتبطة (${ids.length}/83؛ بلا شفرة: ${uncovered.join(",") || "لا شيء"}) — R392 b2-n-deklination`);
   ok(wizard.includes("sortiert.map((b)") && wizard.includes("b.zeilen.map") && !wizardCuts,
     "K140b معالج الدرس يرسم كل شفرة وأسطرها بلا قصّ لأول عنصرين/ثلاثة");
   ok(wizard.includes("isDue(srs[`bru:${b.id}`])") && wizard.includes("wizard-bruecke-due-${b.id}") &&
@@ -3278,7 +3278,7 @@ void 0;
   const prereqs = ["a1-akkusativ", "a2-dativ", "a2-demo"];
   ok(phaseA2.indexOf("a2-wasfuer") > phaseA2.indexOf("a2-dativ") && prereqs.every((id) => prereqDay[id] !== undefined && prereqDay[id] < prereqDay["a2-wasfuer"]),
     `K132f الدرسُ مجدولٌ بعدَ متطلباته (${prereqs.map((id) => `${id}@${prereqDay[id]}`).join(" · ")} → a2-wasfuer@${prereqDay["a2-wasfuer"]})`);
-  ok(eselsbruecken.length === 83 && getBrueckenFor("a2-wasfuer").some((b) => b.id === "e-wasfuer"), "K132g تركةُ Was-für معلَّقةٌ بدرسها؛ إجماليُّ التركات 83");
+  ok(eselsbruecken.length === 84 && getBrueckenFor("a2-wasfuer").some((b) => b.id === "e-wasfuer"), "K132g تركةُ Was-für معلَّقةٌ بدرسها؛ إجماليُّ التركات 84 — R392 b2-n-deklination");
   const dueDay = 23;
   const dueProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 20 }, verify: { ...(emptyProgress.verify ?? {}), "a2-wasfuer": { dueDay } } };
   const early = dueVerify(dueProgress, dueDay - 1).some((v) => v.lessonId === "a2-wasfuer");

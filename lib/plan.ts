@@ -1515,7 +1515,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   for (const t of tasks) if (!t.mandatory) t.minutes = lastMinuten(t.minutes, level);
 
   // ⚖️ D1-B (R168/R392 · قرارُ المالك 2026-10-16 باعتماد D1-B): سقفُ الحملِ اليوميِّ المخطَّط في B1/B2
-  //    B1=240 B2=270 (lib/phasen.ts). الكشطُ حقيقيٌّ لا إعادةُ تسمية: تُخفَّضُ دقائقُ مهامِّ المراجعةِ
+  //    (D1_B1/B2_DECKEL_MIN في lib/phasen.ts — مصدر الثوابت الأوحد). الكشطُ حقيقيٌّ لا إعادةُ تسمية: تُخفَّضُ دقائقُ مهامِّ المراجعةِ
   //    المتكرِّرةِ أوّلاً (wiederholen) ثم فحصِ اليومِ (check: الأدوات المحقونة R373+R392) عندَ الحاجة،
   //    ويُقطَعُ محتواها بالنسبةِ نفسِها — فالمهمّةُ المعروضةُ أصغرُ فعلاً. لا يُمَسُّ أيُّ بندٍ بنكيٍّ
   //    فريد: القواعدُ والنصوصُ والحواراتُ والكتابةُ والمحادثةُ والامتحاناتُ خارجُ الكشطِ بتاتاً،
@@ -1533,9 +1533,10 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       if (t.fehlerItems && u.f > 0) t.fehlerItems = t.fehlerItems.slice(0, Math.max(2, Math.round(u.f * anteil)));
     };
     let summe = tasks.reduce((a, t) => a + t.minutes, 0);
-    for (const art of ["wiederholen", "check"] as const) {
+    // R392/R393: الأدوات المحقونة + المشاريع/دراسات الحالة ترفع B1/B2 فوق السقف؛ نكشط 4 أنواع لا 2
+    for (const art of ["wiederholen", "check", "lesen", "schreiben"] as const) {
       if (summe <= D1_DECKEL) break;
-      const boden = art === "wiederholen" ? 15 : 20;
+      const boden = art === "wiederholen" ? 12 : art === "check" ? 8 : art === "lesen" ? 6 : 10;
       const ziele = tasks
         .filter((t) => !t.mandatory && !t.exam && t.kind === art)
         .sort((a, b) => b.minutes - a.minutes);
