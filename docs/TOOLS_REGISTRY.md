@@ -64,7 +64,7 @@
 | 058 | تلقين | Storytelling سرد | ✅ | A1-B2 | أنشئ | `content/texts.json` 157 نص | 157 نص سردي |
 | 059 | تلقين | Shadowing تظليل | ✅ | A1-B2 | طبّق | `lib/shadowing.ts` | ترديد متزامن |
 | 060 | تلقين | Minimal Pairs أزواج دنيا | ✅ | A0 | فهم | `lib/phonetikdaten.ts` | ch/r/sp-st/ä-ö-ü |
-| 061 | تلقين | Back-Chaining تقطيع عكسي | 🔲 | A1 | طبّق | — | P4 |
+| 061 | تلقين | Back-Chaining تقطيع عكسي | ✅ | A1 | طبّق | `lib/back-chaining.ts` | R341 |
 | 062 | تلقين | Elicitation استنباط | ✅ | A1-B2 | حلّل | `components/lernstrategie` | سؤال لا إلقاء |
 | 063 | تلقين | CCQ تحقق المفهوم | ✅ | A1-B2 | قيّم | `content/grammar.json` verify | سؤال Verif لكل درس |
 | 064 | تلقين | ICQ تحقق التعليمات | ✅ | A0-B2 | فهم | `components/*` | زر "هل فهمت؟" |
@@ -77,12 +77,12 @@
 | 071 | تقويم | Criterion-referenced محكي | ✅ | A0-B2 | قيّم | `scripts/engine_smoke.ts` K80 | soll-matrix |
 | 072 | تقويم | Portfolio محفظة | ✅ | A0-B2 | أنشئ | — | P3 |
 | 073 | تقويم | Self-assessment ذاتي | ✅ | A0-B2 | قيّم | `content/cando.json` 44 | Can-Do 44 |
-| 074 | تقويم | Peer assessment أقران | 🔲 | B1-B2 | قيّم | — | P4 |
+| 074 | تقويم | Peer assessment أقران | ✅ | B1-B2 | قيّم | `lib/peer-assessment.ts` | R341 |
 | 075 | تقويم | Ipsative (تقدم الذات) | ✅ | A0-B2 | قيّم | `lib/metriken.ts` | منحنى تقدم |
 | 076 | تقويم | Dynamic Assessment دينامي | ✅ | B1-B2 | قيّم | `lib/dynamic-assessment.ts` | R336b |
 | 077 | تقويم | Error Analysis تحليل أخطاء | ✅ | A0-B2 | حلّل | `lib/fehleratlas.ts` | 10 فئات + 200 مثال |
 | 078 | تقويم | Contrastive Analysis تقابلي | ✅ | A0-B2 | حلّل | `lib/arabinterferenz.ts` | عربي↔ألماني |
-| 079 | تقويم | Rasch/IRT | 🔲 | B2 | قيّم | — | P4 |
+| 079 | تقويم | Rasch/IRT | ✅ | B2 | قيّم | `lib/rasch.ts` | R341 |
 | 080 | تقويم | Rubric شبكة معايير | ✅ | B1-B2 | قيّم | `lib/kriterien.ts` | 4 معايير × 5 مستويات |
 | 081 | تقويم | Checklist قائمة تحقق | ✅ | A0-B2 | قيّم | `lib/writing.json` criteria | كل كتابة لها checklist |
 | 082 | تقويم | Rating Scale سلم تقدير | ✅ | A0-B2 | قيّم | `lib/kompetenz.ts` band | 0-100 + band |
@@ -107,7 +107,7 @@
 
 > ما بعد 100 هو تفريع لكل أداة (مثال 026 Feedback = 6 أدوات فرعية، 105 Gamification = 8). السجل يُوسّع حتى 1000 بنفس النسق.
 
-**المجموع الحالي: 100 أداة أساسية — 85 ✅ موجودة (85%) — 15 🔲 مقترحة (15%)**
+**المجموع الحالي: 100 أداة أساسية — 88 ✅ موجودة (88%) — 12 🔲 مقترحة (12%)**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
