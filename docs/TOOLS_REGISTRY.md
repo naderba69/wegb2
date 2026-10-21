@@ -192,6 +192,20 @@
 | 160 | تلقين | Storytelling Variants سرد | ✅ | A1-B2 | أنشئ | `lib/storytelling-var.ts` | R349 |
 
 **المجموع التراكمي: 160 / 1000 (16%) — 100 أساسية + 60 فرعية**
+
+### تفصيل 100 → 1000 — الدفعة R350 (161→170)
+| 161 | تلقين | Shadowing Variants تظليل | ✅ | A1-B2 | طبّق | `lib/shadowing-var.ts` | R350 |
+| 162 | تلقين | Minimal Pairs Variants أزواج دنيا | ✅ | A0 | فهم | `lib/minimal-pairs-var.ts` | R350 |
+| 163 | تلقين | Elicitation Variants استنباط | ✅ | A1-B2 | حلّل | `lib/elicitation-var.ts` | R350 |
+| 164 | تلقين | CCQ Variants تحقق المفهوم | ✅ | A1-B2 | قيّم | `lib/ccq-var.ts` | R350 |
+| 165 | تلقين | ICQ Variants تحقق التعليمات | ✅ | A0-B2 | فهم | `lib/icq-var.ts` | R350 |
+| 166 | تلقين | Drill Variants حفر | ✅ | A1-B2 | طبّق | `lib/drill-var.ts` | R350 |
+| 167 | تقويم | Diagnostic Variants تشخيصي | ✅ | A0 | قيّم | `lib/diagnostic-var.ts` | R350 |
+| 168 | تقويم | Formative Variants تكويني | ✅ | A0-B2 | قيّم | `lib/formative-var.ts` | R350 |
+| 169 | تقويم | Summative Variants ختامي | ✅ | A0-B2 | قيّم | `lib/summative-var.ts` | R350 |
+| 170 | تقويم | CEFR Variants معياري | ✅ | A0-B2 | قيّم | `lib/cefr-var.ts` | R350 |
+
+**المجموع التراكمي: 170 / 1000 (17%) — 100 أساسية + 70 فرعية**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
