@@ -1535,7 +1535,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       if (t.fehlerItems && u.f > 0) t.fehlerItems = t.fehlerItems.slice(0, Math.max(2, Math.round(u.f * anteil)));
     };
     let summe = tasks.reduce((a, t) => a + t.minutes, 0);
-    // R393/R394: D1 كاب B1(240)/B2(270) مع الحقن المنهجي 820 أداة — لا يُمَسُّ البنك الفريد (K260c: 157 نص/164 حوار/100 كتابة)
+    // R393/R394: D1 كاب B1/B2 مع الحقن المنهجي 820 أداة — لا يُمَسُّ البنك الفريد (K260c: 157 نص/164 حوار/100 كتابة)
     // الحل: الأدوات المحقونة (check بمعرف 40+) دقائقها تُصفَّر أولاً عند التجاوز (منهجية لا محتوى فريد)، ثم wiederholen يُكشَط بعمق.
     // لا يُقطَع lesen/schreiben الجديد أبداً — وإلا سقط بند فريد وحطم K260c.
     const istInjiziert = (t: DayTask) => String(t.id).startsWith("95-") || String(t.id).startsWith("40-") || String(t.id).startsWith("96-") || String(t.id).startsWith("97-");
@@ -1543,8 +1543,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     if (summe > D1_DECKEL) {
       for (const t of tasks.filter(istInjiziert).sort((a, b) => b.minutes - a.minutes)) {
         if (summe <= D1_DECKEL) break;
-        const spare = t.minutes - 2; // إبقاء 2 دقائق رمزية لا 0 كي يبقى قابلاً للنقر
-        if (spare > 0) { t.minutes = 2; summe -= spare; }
+        const spare = t.minutes - 1; // إبقاء 1 دقيقة رمزية لا 0 كي يبقى قابلاً للنقر — R394: 5 دقائق حاسمة للسقف
+        if (spare > 0) { t.minutes = 1; summe -= spare; }
       }
     }
     // 2) اكشط المراجعة المتكررة بعمق (wiederholen) حتى السقف

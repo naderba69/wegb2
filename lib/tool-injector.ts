@@ -46,7 +46,7 @@ function _pick<T>(arr: T[], seed: number, count: number): T[] {
  * مع الحفاظ على الملاءمة المستوى عبر rationale (يُعرض المستوى الملائم لكل أداة)
  */
 export function injectTools(day: number, level: Level, type: DayType): InjectedTask[] {
-  if (type === "abschluss") return [];
+  if (type === "abschluss" || day <= 10) return []; // الأيام 1-10 بلا حقن كي لا تكسر بوابة التعويض K64f/g (Tor = دين+استرجاع فقط)
   const total = TOOL_CATALOG.length;
   const picks = type === "lerntag" ? 3 : type === "festigung" ? 2 : 3; // wochencheck 3 لضمان examRelevant + تغطية
 
