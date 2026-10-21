@@ -1,8 +1,8 @@
 /**
- * 798 — Tool 798 Concept — مفهوم 798
- * Research 798: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 798 — Multilingual Turn Conteh — منعطف متعدد
+ * Conteh 2014: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_798 = { id: 798, titleDe: "Tool 798 Concept", titleAr: "مفهوم 798", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 798", desc: "Tool 798" } as const;
+export const TOOL_798 = { id: 798, titleDe: "Multilingual Turn Conteh", titleAr: "منعطف متعدد", family: "SLA", bloom: "فهم", level: "B1-B2", research: "Conteh 2014", desc: "Multilingual Turn Conteh" } as const;
 export function tool798Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool798Check(v:number):boolean{return v>0;}

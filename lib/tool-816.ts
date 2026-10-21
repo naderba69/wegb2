@@ -1,8 +1,8 @@
 /**
- * 816 — Tool 816 Concept — مفهوم 816
- * Research 816: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 816 — Prompts Lyster — توجيه ليستر
+ * Lyster 2004: classroom application
+ * Level: A1-B2 | Bloom: طبّق | Family: SLA
  */
-export const TOOL_816 = { id: 816, titleDe: "Tool 816 Concept", titleAr: "مفهوم 816", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 816", desc: "Tool 816" } as const;
+export const TOOL_816 = { id: 816, titleDe: "Prompts Lyster", titleAr: "توجيه ليستر", family: "SLA", bloom: "طبّق", level: "A1-B2", research: "Lyster 2004", desc: "Prompts Lyster" } as const;
 export function tool816Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool816Check(v:number):boolean{return v>0;}

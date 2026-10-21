@@ -1,8 +1,8 @@
 /**
- * 810 — Tool 810 Concept — مفهوم 810
- * Research 810: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 810 — Interaction Hypothesis Long — فرضية تفاعل لونغ
+ * Long 1996: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_810 = { id: 810, titleDe: "Tool 810 Concept", titleAr: "مفهوم 810", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 810", desc: "Tool 810" } as const;
+export const TOOL_810 = { id: 810, titleDe: "Interaction Hypothesis Long", titleAr: "فرضية تفاعل لونغ", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Long 1996", desc: "Interaction Hypothesis Long" } as const;
 export function tool810Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool810Check(v:number):boolean{return v>0;}

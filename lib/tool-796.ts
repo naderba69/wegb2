@@ -1,8 +1,8 @@
 /**
- * 796 — Tool 796 Concept — مفهوم 796
- * Research 796: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 796 — Critical Literacy Freire — محو نقدي فريري
+ * Freire 1970: classroom application
+ * Level: B1-B2 | Bloom: قيّم | Family: طرائق
  */
-export const TOOL_796 = { id: 796, titleDe: "Tool 796 Concept", titleAr: "مفهوم 796", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 796", desc: "Tool 796" } as const;
+export const TOOL_796 = { id: 796, titleDe: "Critical Literacy Freire", titleAr: "محو نقدي فريري", family: "طرائق", bloom: "قيّم", level: "B1-B2", research: "Freire 1970", desc: "Critical Literacy Freire" } as const;
 export function tool796Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool796Check(v:number):boolean{return v>0;}
