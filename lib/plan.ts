@@ -39,6 +39,7 @@ import { shouldPreTest as tool193Pre } from "./tool-193"; // R354
 import { generationPrompt as tool194Prompt } from "./tool-194"; // R354
 import { contrastHint as tool210Hint } from "./tool-210"; // R355
 import { tbltPrompt as tool216Prompt } from "./tool-216"; // R356 TBLT
+import { dictoglossPrompt as tool224Prompt } from "./tool-224"; // R357 Dictogloss
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1341,12 +1342,13 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     tasks.push({ id: tid(32), kind: "wiederholen", titleDe: `Evening Review ${sleepSlot.lernenStart}`, titleAr: `مراجعة مسائية ${sleepSlot.lernenStart} قبل النوم`, minutes: 5, sentenceIds: kapselIdsAdaptiv(progress, day).slice(0,2) });
   }
 
-  // R354-193 + R355-210 + R356-216: Forward Testing + Contrastive + TBLT
+  // R354-193 + R355-210 + R356-216 + R357-224: Forward Testing + Contrastive + TBLT + Dictogloss
   if (type === "lerntag" && grammarAssignment?.status === "new" && tool193Pre(day, day - 1)) {
     const prompt = tool194Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Grammatik");
     const kontrast = tool210Hint(grammarAssignment.topicId ?? "");
     const tblt = tool216Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Aufgabe");
-    tasks.push({ id: tid(33), kind: "check", titleDe: `Vortest: ${prompt}`, titleAr: `اختبار قبلي: ${prompt} — ${kontrast} — ${tblt}`, minutes: 3, quiz: [] });
+    const dg = tool224Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Text");
+    tasks.push({ id: tid(33), kind: "check", titleDe: `Vortest: ${prompt}`, titleAr: `اختبار قبلي: ${prompt} — ${kontrast} — ${tblt} — ${dg}`, minutes: 3, quiz: [] });
   }
 
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung

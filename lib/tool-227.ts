@@ -1,6 +1,17 @@
 /**
- * 227 — أداة بيداغوجية مكتملة (Narrative / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 227 — Peer Teaching — التدريس المتبادل
+ * Bargh & Schul 1980: explaining to others → deeper processing (protégé effect)
+ * Level: A2-B2 | Bloom: قيّم | Family: طرائق
  */
-export const TOOL_227 = { id: 227, family: "Narrative", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_227(): boolean { return true; }
+export const TOOL_227 = {
+  id: 227,
+  titleDe: "Peer Teaching",
+  titleAr: "التدريس المتبادل",
+  family: "طرائق",
+  bloom: "قيّم",
+  level: "A2-B2",
+  research: "Bargh 1980",
+  effect: "Wer lehrt, lernt besser",
+} as const;
+export function peerTeachPrompt(topic: string): string { return `Erkläre ${topic} einem Partner — er stellt Fragen!`; }
+export function teachingGain(explained: boolean): number { return explained?1.35:1.0; }
