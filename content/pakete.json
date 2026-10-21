@@ -363,6 +363,98 @@
           ]
         }
       ]
+    },
+    {
+      "id": "b2-debatte",
+      "emoji": "🎙️",
+      "nameDe": "Debatte B2",
+      "nameAr": "المناظرة B2 — عمل · سياسة · بيئة",
+      "nutzung": "مناظرة B2 الحقيقية: Umwelt/Nachhaltigkeit · Politik/Gesellschaft · Wirtschaft/Arbeit — 12 جملة + حوار B2 كامل.",
+      "saetze": [
+        {
+          "de": "Es lässt sich nicht leugnen, dass der Klimawandel unser Leben massiv verändert.",
+          "ar": "لا يمكن إنكار أن تغير المناخ يغير حياتنا بشكل هائل."
+        },
+        {
+          "de": "Meiner Ansicht nach überwiegen die Vorteile der Energiewende die kurzfristigen Kosten.",
+          "ar": "في رأيي تميل كفة مزايا تحول الطاقة على التكاليف قصيرة المدى."
+        },
+        {
+          "de": "Der Bericht zeigt, dass trotz steigender Löhne die Kaufkraft seit 2020 gesunken ist.",
+          "ar": "يُظهر التقرير أنه رغم ارتفاع الأجور انخفضت القوة الشرائية منذ 2020."
+        },
+        {
+          "de": "Wegen des Fachkräftemangels müssen Unternehmen flexiblere Arbeitsmodelle anbieten.",
+          "ar": "بسبب نقص العمالة الماهرة يجب على الشركات تقديم نماذج عمل أكثر مرونة."
+        },
+        {
+          "de": "Ich vertrete den Standpunkt, dass Homeoffice die Produktivität nicht automatisch senkt.",
+          "ar": "أتبنى الموقف القائل إن العمل من المنزل لا يخفض الإنتاجية تلقائيًا."
+        },
+        {
+          "de": "Die Regierung plant, aufgrund des demografischen Wandels das Rentensystem zu reformieren.",
+          "ar": "تخطط الحكومة لإصلاح نظام التقاعد بناءً على التغير الديموغرافي."
+        },
+        {
+          "de": "Obwohl die Digitalisierung Chancen bietet, verstärkt sie auch soziale Ungleichheit.",
+          "ar": "رغم أن الرقمنة تتيح فرصًا إلا أنها تعزز أيضًا عدم المساواة الاجتماعية."
+        },
+        {
+          "de": "Wir sollten nicht nur über Verbote diskutieren, sondern Anreize für nachhaltiges Verhalten schaffen.",
+          "ar": "يجب ألا نناقش المحظورات فقط بل نخلق حوافز للسلوك المستدام."
+        },
+        {
+          "de": "Dem Vorschlag der Opposition zufolge würde eine Vier-Tage-Woche die Work-Life-Balance verbessern.",
+          "ar": "وفقًا لمقترح المعارضة فإن أسبوع الأربعة أيام سيُحسن التوازن بين العمل والحياة."
+        },
+        {
+          "de": "Je früher wir in Bildung investieren, desto geringer sind die späteren Sozialkosten.",
+          "ar": "كلما بكرنا بالاستثمار في التعليم قلت التكاليف الاجتماعية اللاحقة."
+        },
+        {
+          "de": "Es geht um die Frage, ob künstliche Intelligenz Arbeitsplätze schafft oder vernichtet.",
+          "ar": "الأمر يتعلق بسؤال ما إذا كان الذكاء الاصطناعي يخلق وظائف أو يدمرها."
+        },
+        {
+          "de": "Zusammenfassend lässt sich sagen, dass nachhaltiges Wirtschaften kein Luxus, sondern eine Notwendigkeit ist.",
+          "ar": "خلاصة القول إن الاقتصاد المستدام ليس رفاهية بل ضرورة."
+        }
+      ],
+      "dialog": {
+        "titel": "مناظرة B2: تحول الطاقة والعمل (B2-Debatte: Energiewende & Arbeit)",
+        "lines": [
+          {
+            "who": "A",
+            "role": "طالب B2",
+            "de": "Meiner Meinung nach ist die Energiewende zwar teuer, aber langfristig unvermeidlich — wegen des Klimawandels haben wir keine Alternative.",
+            "ar": "في رأيي تحول الطاقة مكلف لكنه حتمي على المدى الطويل — بسبب تغير المناخ لا بديل لنا."
+          },
+          {
+            "who": "B",
+            "role": "محاور",
+            "de": "Da hast du recht, aber der Vorschlag der Regierung belastet kleine Unternehmen überproportional. Trotz Subventionen steigen die Kosten.",
+            "ar": "معك حق لكن مقترح الحكومة يثقل كاهل الشركات الصغيرة بشكل غير متناسب. رغم الدعم ترتفع التكاليف."
+          },
+          {
+            "who": "A",
+            "role": "طالب B2",
+            "de": "Das ist ein gutes Argument. Dennoch zeigen Studien: Wegen des Fachkräftemangels profitieren Firmen, die früh in Qualifizierung investieren.",
+            "ar": "هذه حجة جيدة. ومع ذلك تُظهر الدراسات: بسبب نقص العمالة تستفيد الشركات التي تستثمر مبكرًا في التأهيل."
+          },
+          {
+            "who": "B",
+            "role": "محاور",
+            "de": "Es lässt sich nicht leugnen, dass Bildung der Schlüssel ist. Je mehr wir in Ausbildung investieren, desto besser meistern wir den demografischen Wandel.",
+            "ar": "لا يمكن إنكار أن التعليم هو المفتاح. كلما استثمرنا أكثر في التدريب أتقنا التحول الديموغرافي بشكل أفضل."
+          },
+          {
+            "who": "A",
+            "role": "طالب B2",
+            "de": "Genau — und deshalb vertrete ich den Standpunkt, dass nachhaltiges Wirtschaften kein Luxus ist. Im Vergleich zu kurzfristigen Gewinnen überwiegen die langfristigen Vorteile.",
+            "ar": "تمامًا — ولذلك أتبنى الموقف أن الاقتصاد المستدام ليس رفاهية. بالمقارنة مع الأرباح قصيرة المدى ترجح المزايا طويلة المدى."
+          }
+        ]
+      }
     }
   ]
 }
