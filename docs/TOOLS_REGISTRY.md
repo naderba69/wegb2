@@ -150,6 +150,20 @@
 | 130 | Memory | Retrieval Recognition تعرّف | ✅ | A0-B2 | تذكّر | `lib/retrieval-recognition.ts` | R346 |
 
 **المجموع التراكمي: 130 / 1000 (13%) — 100 أساسية + 30 فرعية**
+
+### تفصيل 100 → 1000 — الدفعة R347 (131→140)
+| 131 | Memory | Spaced vs Massed مباعد/مكثف | ✅ | A0-B2 | فهم | `lib/spaced-vs-massed.ts` | R347 |
+| 132 | Memory | Context Variation Deep سياق عميق | ✅ | A0-B2 | تذكّر | `lib/context-variation-deep.ts` | R347 |
+| 133 | Memory | Keyword Method Variants متغيرات المفتاح | ✅ | A0-B2 | تذكّر | `lib/keyword-method-var.ts` | R347 |
+| 134 | Memory | Image Mnemonic صورة ذهنية | ✅ | A0-B2 | تذكّر | `lib/image-mnemonic.ts` | R347 |
+| 135 | Memory | Loci Advanced قصر متقدم | ✅ | A0-B2 | تذكّر | `lib/loci-advanced.ts` | R347 |
+| 136 | Memory | Chunking Advanced تجميع متقدم | ✅ | A0-B2 | تذكّر | `lib/chunking-advanced.ts` | R347 |
+| 137 | Memory | Sleep Optimization تحسين النوم | ✅ | A0-B2 | تذكّر | `lib/sleep-optimization.ts` | R347 |
+| 138 | SLA | Input i+1 Fine دقيق | ✅ | A0-B2 | فهم | `lib/input-1plus.ts` | R347 |
+| 139 | SLA | Noticing Deep لفت عميق | ✅ | A1-B2 | حلّل | `lib/noticing-deep.ts` | R347 |
+| 140 | SLA | Interaction Deep تفاوض معنى | ✅ | A1-B2 | طبّق | `lib/interaction-deep.ts` | R347 |
+
+**المجموع التراكمي: 140 / 1000 (14%) — 100 أساسية + 40 فرعية**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
