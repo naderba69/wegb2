@@ -812,38 +812,38 @@
 | 758 | SLA | Language and Identity — هوية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-758.ts` | R381 |
 | 759 | SLA | Investment 2.0 Darvin — استثمار | ✅حقيقي | B1-B2 | حلّل | `lib/tool-759.ts` | R381 |
 | 760 | SLA | Imagined Communities Kanno — متخيلة | ✅حقيقي | B1-B2 | فهم | `lib/tool-760.ts` | R381 |
-| 761 | طرائق | Tool 761 Concept — مفهوم 761 | ✅حقيقي | A1-B2 | فهم | `lib/tool-761.ts` | R372 |
-| 762 | طرائق | Tool 762 Concept — مفهوم 762 | ✅حقيقي | A1-B2 | فهم | `lib/tool-762.ts` | R372 |
-| 763 | طرائق | Tool 763 Concept — مفهوم 763 | ✅حقيقي | A1-B2 | فهم | `lib/tool-763.ts` | R372 |
-| 764 | طرائق | Tool 764 Concept — مفهوم 764 | ✅حقيقي | A1-B2 | فهم | `lib/tool-764.ts` | R372 |
-| 765 | طرائق | Tool 765 Concept — مفهوم 765 | ✅حقيقي | A1-B2 | فهم | `lib/tool-765.ts` | R372 |
-| 766 | طرائق | Tool 766 Concept — مفهوم 766 | ✅حقيقي | A1-B2 | فهم | `lib/tool-766.ts` | R372 |
-| 767 | طرائق | Tool 767 Concept — مفهوم 767 | ✅حقيقي | A1-B2 | فهم | `lib/tool-767.ts` | R372 |
-| 768 | طرائق | Tool 768 Concept — مفهوم 768 | ✅حقيقي | A1-B2 | فهم | `lib/tool-768.ts` | R372 |
-| 769 | طرائق | Tool 769 Concept — مفهوم 769 | ✅حقيقي | A1-B2 | فهم | `lib/tool-769.ts` | R372 |
-| 770 | طرائق | Tool 770 Concept — مفهوم 770 | ✅حقيقي | A1-B2 | فهم | `lib/tool-770.ts` | R372 |
-| 771 | طرائق | Tool 771 Concept — مفهوم 771 | ✅حقيقي | A1-B2 | فهم | `lib/tool-771.ts` | R372 |
-| 772 | طرائق | Tool 772 Concept — مفهوم 772 | ✅حقيقي | A1-B2 | فهم | `lib/tool-772.ts` | R372 |
-| 773 | طرائق | Tool 773 Concept — مفهوم 773 | ✅حقيقي | A1-B2 | فهم | `lib/tool-773.ts` | R372 |
-| 774 | طرائق | Tool 774 Concept — مفهوم 774 | ✅حقيقي | A1-B2 | فهم | `lib/tool-774.ts` | R372 |
-| 775 | طرائق | Tool 775 Concept — مفهوم 775 | ✅حقيقي | A1-B2 | فهم | `lib/tool-775.ts` | R372 |
-| 776 | طرائق | Tool 776 Concept — مفهوم 776 | ✅حقيقي | A1-B2 | فهم | `lib/tool-776.ts` | R372 |
-| 777 | طرائق | Tool 777 Concept — مفهوم 777 | ✅حقيقي | A1-B2 | فهم | `lib/tool-777.ts` | R372 |
-| 778 | طرائق | Tool 778 Concept — مفهوم 778 | ✅حقيقي | A1-B2 | فهم | `lib/tool-778.ts` | R372 |
-| 779 | طرائق | Tool 779 Concept — مفهوم 779 | ✅حقيقي | A1-B2 | فهم | `lib/tool-779.ts` | R372 |
-| 780 | طرائق | Tool 780 Concept — مفهوم 780 | ✅حقيقي | A1-B2 | فهم | `lib/tool-780.ts` | R372 |
+| 761 | SLA | Language Socialization — تنشئة | ✅حقيقي | A1-B2 | فهم | `lib/tool-761.ts` | R382 |
+| 762 | Immersion | Language Ecology — إيكولوجيا | ✅حقيقي | A1-B2 | فهم | `lib/tool-762.ts` | R382 |
+| 763 | Immersion | Linguistic Landscape — مشهد | ✅حقيقي | A1-B2 | فهم | `lib/tool-763.ts` | R382 |
+| 764 | Immersion | Superdiversity — تنوع فائق | ✅حقيقي | A1-B2 | فهم | `lib/tool-764.ts` | R382 |
+| 765 | Immersion | Metrolingualism — حضري | ✅حقيقي | B1-B2 | فهم | `lib/tool-765.ts` | R382 |
+| 766 | SLA | Translingual Practice — عبر لغوية | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-766.ts` | R382 |
+| 767 | Immersion | English as Lingua Franca — وسيط | ✅حقيقي | B1-B2 | فهم | `lib/tool-767.ts` | R382 |
+| 768 | Immersion | World Englishes Kachru — عالمية | ✅حقيقي | B1-B2 | فهم | `lib/tool-768.ts` | R382 |
+| 769 | SLA | Translanguaging Space — فضاء | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-769.ts` | R382 |
+| 770 | SLA | Flexible Bilingualism — مرنة | ✅حقيقي | A1-B2 | فهم | `lib/tool-770.ts` | R382 |
+| 771 | طرائق | Pluriliteracies — محويات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-771.ts` | R382 |
+| 772 | طرائق | Deep Learning Coyle — عميق | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-772.ts` | R382 |
+| 773 | طرائق | CLIL Matrix Coyle — مصفوفة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-773.ts` | R382 |
+| 774 | طرائق | Language Triptych — ثلاثية | ✅حقيقي | B1-B2 | فهم | `lib/tool-774.ts` | R382 |
+| 775 | طرائق | 4Cs Framework — 4Cs | ✅حقيقي | B1-B2 | فهم | `lib/tool-775.ts` | R382 |
+| 776 | طرائق | BICS CALP Cummins — بيكس | ✅حقيقي | B1-B2 | حلّل | `lib/tool-776.ts` | R382 |
+| 777 | SLA | Threshold Hypothesis — عتبة | ✅حقيقي | B1-B2 | فهم | `lib/tool-777.ts` | R382 |
+| 778 | SLA | Interdependence Hypothesis — اعتماد | ✅حقيقي | B1-B2 | فهم | `lib/tool-778.ts` | R382 |
+| 779 | SLA | Common Underlying Proficiency — مشتركة | ✅حقيقي | A1-B2 | فهم | `lib/tool-779.ts` | R382 |
+| 780 | SLA | Additive Bilingualism — إضافية | ✅حقيقي | A1-B2 | فهم | `lib/tool-780.ts` | R382 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (781→880) — إكمال جماعي بنفس القواعد
-| 781 | طرائق | Tool 781 Concept — مفهوم 781 | ✅حقيقي | A1-B2 | فهم | `lib/tool-781.ts` | R372 |
-| 782 | طرائق | Tool 782 Concept — مفهوم 782 | ✅حقيقي | A1-B2 | فهم | `lib/tool-782.ts` | R372 |
-| 783 | طرائق | Tool 783 Concept — مفهوم 783 | ✅حقيقي | A1-B2 | فهم | `lib/tool-783.ts` | R372 |
-| 784 | طرائق | Tool 784 Concept — مفهوم 784 | ✅حقيقي | A1-B2 | فهم | `lib/tool-784.ts` | R372 |
-| 785 | طرائق | Tool 785 Concept — مفهوم 785 | ✅حقيقي | A1-B2 | فهم | `lib/tool-785.ts` | R372 |
-| 786 | طرائق | Tool 786 Concept — مفهوم 786 | ✅حقيقي | A1-B2 | فهم | `lib/tool-786.ts` | R372 |
-| 787 | طرائق | Tool 787 Concept — مفهوم 787 | ✅حقيقي | A1-B2 | فهم | `lib/tool-787.ts` | R372 |
-| 788 | طرائق | Tool 788 Concept — مفهوم 788 | ✅حقيقي | A1-B2 | فهم | `lib/tool-788.ts` | R372 |
-| 789 | طرائق | Tool 789 Concept — مفهوم 789 | ✅حقيقي | A1-B2 | فهم | `lib/tool-789.ts` | R372 |
-| 790 | طرائق | Tool 790 Concept — مفهوم 790 | ✅حقيقي | A1-B2 | فهم | `lib/tool-790.ts` | R372 |
+| 781 | SLA | Subtractive Bilingualism — انتقاصية | ✅حقيقي | A1-B2 | فهم | `lib/tool-781.ts` | R382 |
+| 782 | Immersion | Language Conflict — صراع | ✅حقيقي | B1-B2 | حلّل | `lib/tool-782.ts` | R382 |
+| 783 | Immersion | Language Shift — تحول | ✅حقيقي | A1-B2 | فهم | `lib/tool-783.ts` | R382 |
+| 784 | Immersion | Language Maintenance — صيانة | ✅حقيقي | A1-B2 | فهم | `lib/tool-784.ts` | R382 |
+| 785 | Immersion | Language Revitalization — إحياء | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-785.ts` | R382 |
+| 786 | Immersion | Endangered Languages — مهددة | ✅حقيقي | A1-B2 | فهم | `lib/tool-786.ts` | R382 |
+| 787 | Immersion | Linguistic Human Rights — حقوق | ✅حقيقي | B1-B2 | قيّم | `lib/tool-787.ts` | R382 |
+| 788 | Immersion | Language Policy Spolsky — سياسة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-788.ts` | R382 |
+| 789 | Immersion | Family Language Policy — أسرة | ✅حقيقي | A1-B2 | فهم | `lib/tool-789.ts` | R382 |
+| 790 | Immersion | Heritage Language Policy — تراثية | ✅حقيقي | A1-B2 | حلّل | `lib/tool-790.ts` | R382 |
 | 791 | طرائق | Tool 791 Concept — مفهوم 791 | ✅حقيقي | A1-B2 | فهم | `lib/tool-791.ts` | R372 |
 | 792 | طرائق | Tool 792 Concept — مفهوم 792 | ✅حقيقي | A1-B2 | فهم | `lib/tool-792.ts` | R372 |
 | 793 | طرائق | Tool 793 Concept — مفهوم 793 | ✅حقيقي | A1-B2 | فهم | `lib/tool-793.ts` | R372 |
