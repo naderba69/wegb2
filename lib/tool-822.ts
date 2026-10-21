@@ -1,8 +1,8 @@
 /**
- * 822 — Tool 822 Concept — مفهوم 822
- * Research 822: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 822 — Negotiation of Meaning — تفاوض معنى
+ * Pica 1994: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_822 = { id: 822, titleDe: "Tool 822 Concept", titleAr: "مفهوم 822", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 822", desc: "Tool 822" } as const;
+export const TOOL_822 = { id: 822, titleDe: "Negotiation of Meaning", titleAr: "تفاوض معنى", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Pica 1994", desc: "Negotiation of Meaning" } as const;
 export function tool822Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool822Check(v:number):boolean{return v>0;}

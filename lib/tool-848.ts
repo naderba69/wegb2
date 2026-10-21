@@ -1,8 +1,8 @@
 /**
- * 848 — Tool 848 Concept — مفهوم 848
- * Research 848: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 848 — Levels of Processing — مستويات معالجة
+ * Craik 1975: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_848 = { id: 848, titleDe: "Tool 848 Concept", titleAr: "مفهوم 848", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 848", desc: "Tool 848" } as const;
+export const TOOL_848 = { id: 848, titleDe: "Levels of Processing", titleAr: "مستويات معالجة", family: "الذاكرة", bloom: "فهم", level: "A1-B2", research: "Craik 1975", desc: "Levels of Processing" } as const;
 export function tool848Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool848Check(v:number):boolean{return v>0;}

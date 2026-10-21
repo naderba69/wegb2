@@ -874,36 +874,36 @@
 | 818 | SLA | Explicit Feedback — صريحة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-818.ts` | R383 |
 | 819 | SLA | Implicit Feedback — ضمنية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-819.ts` | R383 |
 | 820 | SLA | Uptake Lyster — استيعاب | ✅حقيقي | A1-B2 | قيّم | `lib/tool-820.ts` | R383 |
-| 821 | طرائق | Tool 821 Concept — مفهوم 821 | ✅حقيقي | A1-B2 | فهم | `lib/tool-821.ts` | R372 |
-| 822 | طرائق | Tool 822 Concept — مفهوم 822 | ✅حقيقي | A1-B2 | فهم | `lib/tool-822.ts` | R372 |
-| 823 | طرائق | Tool 823 Concept — مفهوم 823 | ✅حقيقي | A1-B2 | فهم | `lib/tool-823.ts` | R372 |
-| 824 | طرائق | Tool 824 Concept — مفهوم 824 | ✅حقيقي | A1-B2 | فهم | `lib/tool-824.ts` | R372 |
-| 825 | طرائق | Tool 825 Concept — مفهوم 825 | ✅حقيقي | A1-B2 | فهم | `lib/tool-825.ts` | R372 |
-| 826 | طرائق | Tool 826 Concept — مفهوم 826 | ✅حقيقي | A1-B2 | فهم | `lib/tool-826.ts` | R372 |
-| 827 | طرائق | Tool 827 Concept — مفهوم 827 | ✅حقيقي | A1-B2 | فهم | `lib/tool-827.ts` | R372 |
-| 828 | طرائق | Tool 828 Concept — مفهوم 828 | ✅حقيقي | A1-B2 | فهم | `lib/tool-828.ts` | R372 |
-| 829 | طرائق | Tool 829 Concept — مفهوم 829 | ✅حقيقي | A1-B2 | فهم | `lib/tool-829.ts` | R372 |
-| 830 | طرائق | Tool 830 Concept — مفهوم 830 | ✅حقيقي | A1-B2 | فهم | `lib/tool-830.ts` | R372 |
-| 831 | طرائق | Tool 831 Concept — مفهوم 831 | ✅حقيقي | A1-B2 | فهم | `lib/tool-831.ts` | R372 |
-| 832 | طرائق | Tool 832 Concept — مفهوم 832 | ✅حقيقي | A1-B2 | فهم | `lib/tool-832.ts` | R372 |
-| 833 | طرائق | Tool 833 Concept — مفهوم 833 | ✅حقيقي | A1-B2 | فهم | `lib/tool-833.ts` | R372 |
-| 834 | طرائق | Tool 834 Concept — مفهوم 834 | ✅حقيقي | A1-B2 | فهم | `lib/tool-834.ts` | R372 |
-| 835 | طرائق | Tool 835 Concept — مفهوم 835 | ✅حقيقي | A1-B2 | فهم | `lib/tool-835.ts` | R372 |
-| 836 | طرائق | Tool 836 Concept — مفهوم 836 | ✅حقيقي | A1-B2 | فهم | `lib/tool-836.ts` | R372 |
-| 837 | طرائق | Tool 837 Concept — مفهوم 837 | ✅حقيقي | A1-B2 | فهم | `lib/tool-837.ts` | R372 |
-| 838 | طرائق | Tool 838 Concept — مفهوم 838 | ✅حقيقي | A1-B2 | فهم | `lib/tool-838.ts` | R372 |
-| 839 | طرائق | Tool 839 Concept — مفهوم 839 | ✅حقيقي | A1-B2 | فهم | `lib/tool-839.ts` | R372 |
-| 840 | طرائق | Tool 840 Concept — مفهوم 840 | ✅حقيقي | A1-B2 | فهم | `lib/tool-840.ts` | R372 |
-| 841 | طرائق | Tool 841 Concept — مفهوم 841 | ✅حقيقي | A1-B2 | فهم | `lib/tool-841.ts` | R372 |
-| 842 | طرائق | Tool 842 Concept — مفهوم 842 | ✅حقيقي | A1-B2 | فهم | `lib/tool-842.ts` | R372 |
-| 843 | طرائق | Tool 843 Concept — مفهوم 843 | ✅حقيقي | A1-B2 | فهم | `lib/tool-843.ts` | R372 |
-| 844 | طرائق | Tool 844 Concept — مفهوم 844 | ✅حقيقي | A1-B2 | فهم | `lib/tool-844.ts` | R372 |
-| 845 | طرائق | Tool 845 Concept — مفهوم 845 | ✅حقيقي | A1-B2 | فهم | `lib/tool-845.ts` | R372 |
-| 846 | طرائق | Tool 846 Concept — مفهوم 846 | ✅حقيقي | A1-B2 | فهم | `lib/tool-846.ts` | R372 |
-| 847 | طرائق | Tool 847 Concept — مفهوم 847 | ✅حقيقي | A1-B2 | فهم | `lib/tool-847.ts` | R372 |
-| 848 | طرائق | Tool 848 Concept — مفهوم 848 | ✅حقيقي | A1-B2 | فهم | `lib/tool-848.ts` | R372 |
-| 849 | طرائق | Tool 849 Concept — مفهوم 849 | ✅حقيقي | A1-B2 | فهم | `lib/tool-849.ts` | R372 |
-| 850 | طرائق | Tool 850 Concept — مفهوم 850 | ✅حقيقي | A1-B2 | فهم | `lib/tool-850.ts` | R372 |
+| 821 | SLA | Repair Schegloff — إصلاح | ✅حقيقي | B1-B2 | حلّل | `lib/tool-821.ts` | R384 |
+| 822 | SLA | Negotiation of Meaning — تفاوض | ✅حقيقي | A1-B2 | حلّل | `lib/tool-822.ts` | R384 |
+| 823 | SLA | Comprehensible Input Krashen — مفهومة | ✅حقيقي | A0-B2 | فهم | `lib/tool-823.ts` | R384 |
+| 824 | SLA | Comprehensible Output Swain — مخرجات | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-824.ts` | R384 |
+| 825 | SLA | i+1 Krashen — +1 | ✅حقيقي | A1-B2 | فهم | `lib/tool-825.ts` | R384 |
+| 826 | SLA | Affective Filter — وجداني | ✅حقيقي | A1-B2 | فهم | `lib/tool-826.ts` | R384 |
+| 827 | SLA | Monitor Model — مراقب | ✅حقيقي | B1-B2 | فهم | `lib/tool-827.ts` | R384 |
+| 828 | SLA | Natural Order — طبيعي | ✅حقيقي | B1-B2 | فهم | `lib/tool-828.ts` | R384 |
+| 829 | SLA | Silent Period — صمت | ✅حقيقي | A0-A2 | فهم | `lib/tool-829.ts` | R384 |
+| 830 | طرائق | Total Physical Response Asher — جسدية | ✅حقيقي | A0-A2 | طبّق | `lib/tool-830.ts` | R384 |
+| 831 | طرائق | Natural Approach — طبيعية | ✅حقيقي | A0-B1 | فهم | `lib/tool-831.ts` | R384 |
+| 832 | طرائق | Communicative Language Teaching — تواصلي | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-832.ts` | R384 |
+| 833 | طرائق | Task-Based Learning Willis — مهام | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-833.ts` | R384 |
+| 834 | طرائق | Content-Based Instruction — محتوى | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-834.ts` | R384 |
+| 835 | طرائق | Sheltered Instruction — محمي | ✅حقيقي | B1-B2 | فهم | `lib/tool-835.ts` | R384 |
+| 836 | طرائق | SIOP Model — سيوب | ✅حقيقي | B1-B2 | حلّل | `lib/tool-836.ts` | R384 |
+| 837 | طرائق | CLIL 4Cs Coyle 2 — 4Cs | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-837.ts` | R384 |
+| 838 | طرائق | Lexical Approach Lewis — معجمية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-838.ts` | R384 |
+| 839 | تقويم | Collocational Competence — تصاحبية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-839.ts` | R384 |
+| 840 | الذاكرة | Formulaic Sequences — صيغية | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-840.ts` | R384 |
+| 841 | الذاكرة | Chunks Boers — كتل | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-841.ts` | R384 |
+| 842 | طرائق | Lexical Chunks Lewis — كتل معجمية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-842.ts` | R384 |
+| 843 | الذاكرة | Vocabulary Notebook — دفتر | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-843.ts` | R384 |
+| 844 | الذاكرة | Word Cards — بطاقات | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-844.ts` | R384 |
+| 845 | الذاكرة | Keyword Method — مفتاحية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-845.ts` | R384 |
+| 846 | الذاكرة | Dual Coding Paivio — مزدوج | ✅حقيقي | A0-B2 | فهم | `lib/tool-846.ts` | R384 |
+| 847 | الذاكرة | Depth of Processing Craik — عمق | ✅حقيقي | A1-B2 | حلّل | `lib/tool-847.ts` | R384 |
+| 848 | الذاكرة | Levels of Processing — مستويات | ✅حقيقي | A1-B2 | فهم | `lib/tool-848.ts` | R384 |
+| 849 | الذاكرة | Elaboration Craik — تفصيل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-849.ts` | R384 |
+| 850 | الذاكرة | Generation Effect — توليد | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-850.ts` | R384 |
 | 851 | طرائق | Tool 851 Concept — مفهوم 851 | ✅حقيقي | A1-B2 | فهم | `lib/tool-851.ts` | R372 |
 | 852 | طرائق | Tool 852 Concept — مفهوم 852 | ✅حقيقي | A1-B2 | فهم | `lib/tool-852.ts` | R372 |
 | 853 | طرائق | Tool 853 Concept — مفهوم 853 | ✅حقيقي | A1-B2 | فهم | `lib/tool-853.ts` | R372 |
