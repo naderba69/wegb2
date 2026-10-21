@@ -1,8 +1,8 @@
 /**
- * 553 — Tool 553 Concept — مفهوم 553
- * Research 553: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 553 — Diagnostic Assessment adv — تشخيصي متقدم
+ * Brindley 2001: classroom application
+ * Level: A0-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_553 = { id: 553, titleDe: "Tool 553 Concept", titleAr: "مفهوم 553", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 553", desc: "Tool 553" } as const;
+export const TOOL_553 = { id: 553, titleDe: "Diagnostic Assessment adv", titleAr: "تشخيصي متقدم", family: "تقويم", bloom: "قيّم", level: "A0-B2", research: "Brindley 2001", desc: "Diagnostic Assessment adv" } as const;
 export function tool553Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool553Check(v:number):boolean{return v>0;}

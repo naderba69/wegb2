@@ -1,8 +1,8 @@
 /**
- * 567 — Tool 567 Concept — مفهوم 567
- * Research 567: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 567 — E-Tandem — ثنائي إلكتروني
+ * Brammerts 2013: classroom application
+ * Level: A2-B2 | Bloom: طبّق | Family: Immersion
  */
-export const TOOL_567 = { id: 567, titleDe: "Tool 567 Concept", titleAr: "مفهوم 567", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 567", desc: "Tool 567" } as const;
+export const TOOL_567 = { id: 567, titleDe: "E-Tandem", titleAr: "ثنائي إلكتروني", family: "Immersion", bloom: "طبّق", level: "A2-B2", research: "Brammerts 2013", desc: "E-Tandem" } as const;
 export function tool567Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool567Check(v:number):boolean{return v>0;}

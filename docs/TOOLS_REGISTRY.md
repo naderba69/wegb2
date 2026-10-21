@@ -598,36 +598,36 @@
 | 548 | تلقين | Critical Thinking adv — نقدي متقدم | ✅حقيقي | B1-B2 | قيّم | `lib/tool-548.ts` | R374 |
 | 549 | تلقين | Reflective Thinking — تأملي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-549.ts` | R374 |
 | 550 | تلقين | Creative Thinking — إبداعي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-550.ts` | R374 |
-| 551 | طرائق | Tool 551 Concept — مفهوم 551 | ✅حقيقي | A1-B2 | فهم | `lib/tool-551.ts` | R372 |
-| 552 | طرائق | Tool 552 Concept — مفهوم 552 | ✅حقيقي | A1-B2 | فهم | `lib/tool-552.ts` | R372 |
-| 553 | طرائق | Tool 553 Concept — مفهوم 553 | ✅حقيقي | A1-B2 | فهم | `lib/tool-553.ts` | R372 |
-| 554 | طرائق | Tool 554 Concept — مفهوم 554 | ✅حقيقي | A1-B2 | فهم | `lib/tool-554.ts` | R372 |
-| 555 | طرائق | Tool 555 Concept — مفهوم 555 | ✅حقيقي | A1-B2 | فهم | `lib/tool-555.ts` | R372 |
-| 556 | طرائق | Tool 556 Concept — مفهوم 556 | ✅حقيقي | A1-B2 | فهم | `lib/tool-556.ts` | R372 |
-| 557 | طرائق | Tool 557 Concept — مفهوم 557 | ✅حقيقي | A1-B2 | فهم | `lib/tool-557.ts` | R372 |
-| 558 | طرائق | Tool 558 Concept — مفهوم 558 | ✅حقيقي | A1-B2 | فهم | `lib/tool-558.ts` | R372 |
-| 559 | طرائق | Tool 559 Concept — مفهوم 559 | ✅حقيقي | A1-B2 | فهم | `lib/tool-559.ts` | R372 |
-| 560 | طرائق | Tool 560 Concept — مفهوم 560 | ✅حقيقي | A1-B2 | فهم | `lib/tool-560.ts` | R372 |
-| 561 | طرائق | Tool 561 Concept — مفهوم 561 | ✅حقيقي | A1-B2 | فهم | `lib/tool-561.ts` | R372 |
-| 562 | طرائق | Tool 562 Concept — مفهوم 562 | ✅حقيقي | A1-B2 | فهم | `lib/tool-562.ts` | R372 |
-| 563 | طرائق | Tool 563 Concept — مفهوم 563 | ✅حقيقي | A1-B2 | فهم | `lib/tool-563.ts` | R372 |
-| 564 | طرائق | Tool 564 Concept — مفهوم 564 | ✅حقيقي | A1-B2 | فهم | `lib/tool-564.ts` | R372 |
-| 565 | طرائق | Tool 565 Concept — مفهوم 565 | ✅حقيقي | A1-B2 | فهم | `lib/tool-565.ts` | R372 |
-| 566 | طرائق | Tool 566 Concept — مفهوم 566 | ✅حقيقي | A1-B2 | فهم | `lib/tool-566.ts` | R372 |
-| 567 | طرائق | Tool 567 Concept — مفهوم 567 | ✅حقيقي | A1-B2 | فهم | `lib/tool-567.ts` | R372 |
-| 568 | طرائق | Tool 568 Concept — مفهوم 568 | ✅حقيقي | A1-B2 | فهم | `lib/tool-568.ts` | R372 |
-| 569 | طرائق | Tool 569 Concept — مفهوم 569 | ✅حقيقي | A1-B2 | فهم | `lib/tool-569.ts` | R372 |
-| 570 | طرائق | Tool 570 Concept — مفهوم 570 | ✅حقيقي | A1-B2 | فهم | `lib/tool-570.ts` | R372 |
-| 571 | طرائق | Tool 571 Concept — مفهوم 571 | ✅حقيقي | A1-B2 | فهم | `lib/tool-571.ts` | R372 |
-| 572 | طرائق | Tool 572 Concept — مفهوم 572 | ✅حقيقي | A1-B2 | فهم | `lib/tool-572.ts` | R372 |
-| 573 | طرائق | Tool 573 Concept — مفهوم 573 | ✅حقيقي | A1-B2 | فهم | `lib/tool-573.ts` | R372 |
-| 574 | طرائق | Tool 574 Concept — مفهوم 574 | ✅حقيقي | A1-B2 | فهم | `lib/tool-574.ts` | R372 |
-| 575 | طرائق | Tool 575 Concept — مفهوم 575 | ✅حقيقي | A1-B2 | فهم | `lib/tool-575.ts` | R372 |
-| 576 | طرائق | Tool 576 Concept — مفهوم 576 | ✅حقيقي | A1-B2 | فهم | `lib/tool-576.ts` | R372 |
-| 577 | طرائق | Tool 577 Concept — مفهوم 577 | ✅حقيقي | A1-B2 | فهم | `lib/tool-577.ts` | R372 |
-| 578 | طرائق | Tool 578 Concept — مفهوم 578 | ✅حقيقي | A1-B2 | فهم | `lib/tool-578.ts` | R372 |
-| 579 | طرائق | Tool 579 Concept — مفهوم 579 | ✅حقيقي | A1-B2 | فهم | `lib/tool-579.ts` | R372 |
-| 580 | طرائق | Tool 580 Concept — مفهوم 580 | ✅حقيقي | A1-B2 | فهم | `lib/tool-580.ts` | R372 |
+| 551 | تقويم | Formative Assessment adv — تكويني متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-551.ts` | R375 |
+| 552 | تقويم | Summative Assessment adv — ختامي متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-552.ts` | R375 |
+| 553 | تقويم | Diagnostic Assessment adv — تشخيصي متقدم | ✅حقيقي | A0-B2 | قيّم | `lib/tool-553.ts` | R375 |
+| 554 | تقويم | Dynamic Assessment FEUERSTEIN — دينامي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-554.ts` | R375 |
+| 555 | تقويم | Portfolio Assessment adv — محفظة متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-555.ts` | R375 |
+| 556 | تقويم | Self-Assessment adv — ذاتي متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-556.ts` | R375 |
+| 557 | تقويم | Peer Assessment adv — أقران متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-557.ts` | R375 |
+| 558 | تقويم | Moderation adv — مواءمة متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-558.ts` | R375 |
+| 559 | تقويم | Standard Setting — تحديد معيار | ✅حقيقي | B1-B2 | قيّم | `lib/tool-559.ts` | R375 |
+| 560 | تقويم | Rater Training — تدريب مقيم | ✅حقيقي | B1-B2 | طبّق | `lib/tool-560.ts` | R375 |
+| 561 | Immersion | VR Immersion adv — انغماس متقدم | ✅حقيقي | A1-B2 | طبّق | `lib/tool-561.ts` | R375 |
+| 562 | Immersion | AR Language Learning — واقع معزز | ✅حقيقي | A0-A2 | طبّق | `lib/tool-562.ts` | R375 |
+| 563 | Immersion | 360 Video — فيديو 360 | ✅حقيقي | A1-B2 | فهم | `lib/tool-563.ts` | R375 |
+| 564 | Immersion | Virtual Exchange 2.0 — تبادل 2.0 | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-564.ts` | R375 |
+| 565 | Immersion | Telecollaboration adv — تعاون متقدم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-565.ts` | R375 |
+| 566 | Immersion | Tandem 2.0 — ثنائي 2.0 | ✅حقيقي | A2-B2 | طبّق | `lib/tool-566.ts` | R375 |
+| 567 | Immersion | E-Tandem — ثنائي إلكتروني | ✅حقيقي | A2-B2 | طبّق | `lib/tool-567.ts` | R375 |
+| 568 | Immersion | Intercultural Telecollab — تفاعل ثقافي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-568.ts` | R375 |
+| 569 | Immersion | Cultural Intelligence — ذكاء ثقافي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-569.ts` | R375 |
+| 570 | Immersion | Intercultural Sensitivity — حساسية ثقافية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-570.ts` | R375 |
+| 571 | Immersion | Decentering — نزع تمركز | ✅حقيقي | B1-B2 | حلّل | `lib/tool-571.ts` | R375 |
+| 572 | Immersion | Perspective Taking — منظور | ✅حقيقي | B1-B2 | حلّل | `lib/tool-572.ts` | R375 |
+| 573 | Immersion | Empathy in Language — تعاطف | ✅حقيقي | A1-B2 | فهم | `lib/tool-573.ts` | R375 |
+| 574 | SLA | Identity and Language — هوية ولغة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-574.ts` | R375 |
+| 575 | SLA | Investment — استثمار | ✅حقيقي | B1-B2 | فهم | `lib/tool-575.ts` | R375 |
+| 576 | SLA | Imagined Communities — مجتمعات متخيلة | ✅حقيقي | B1-B2 | فهم | `lib/tool-576.ts` | R375 |
+| 577 | تلقين | Motivation Dörnyei — دافعية | ✅حقيقي | A1-B2 | قيّم | `lib/tool-577.ts` | R375 |
+| 578 | تلقين | L2 Motivational Self — ذات دافعية | ✅حقيقي | A1-B2 | حلّل | `lib/tool-578.ts` | R375 |
+| 579 | تلقين | Ideal L2 Self — ذات مثالية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-579.ts` | R375 |
+| 580 | تلقين | Ought-to L2 Self — ذات يجب | ✅حقيقي | A1-B2 | فهم | `lib/tool-580.ts` | R375 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (581→680) — إكمال جماعي بنفس القواعد
 | 581 | طرائق | Tool 581 Concept — مفهوم 581 | ✅حقيقي | A1-B2 | فهم | `lib/tool-581.ts` | R372 |
