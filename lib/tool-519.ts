@@ -1,6 +1,8 @@
 /**
- * 519 — أداة بيداغوجية مكتملة (Ethik / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 519 — Word Frequency Lists — قوائم تكرار
+ * Nation 2006: classroom application
+ * Level: A0-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_519 = { id: 519, family: "Ethik", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_519(): boolean { return true; }
+export const TOOL_519 = { id: 519, titleDe: "Word Frequency Lists", titleAr: "قوائم تكرار", family: "طرائق", bloom: "فهم", level: "A0-B2", research: "Nation 2006", desc: "Word Frequency Lists" } as const;
+export function tool519Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool519Check(v:number):boolean{return v>0;}

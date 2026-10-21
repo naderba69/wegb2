@@ -1,6 +1,8 @@
 /**
- * 518 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 518 — Concordancing — توافق نصي
+ * Johns 1991: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_518 = { id: 518, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_518(): boolean { return true; }
+export const TOOL_518 = { id: 518, titleDe: "Concordancing", titleAr: "توافق نصي", family: "طرائق", bloom: "فهم", level: "B1-B2", research: "Johns 1991", desc: "Concordancing" } as const;
+export function tool518Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool518Check(v:number):boolean{return v>0;}

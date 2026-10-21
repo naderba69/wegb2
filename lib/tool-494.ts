@@ -1,6 +1,8 @@
 /**
- * 494 — أداة بيداغوجية مكتملة (تقويم / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 494 — CEFR Alignment — مواءمة CEFR
+ * Council 2001: classroom application
+ * Level: A0-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_494 = { id: 494, family: "تقويم", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_494(): boolean { return true; }
+export const TOOL_494 = { id: 494, titleDe: "CEFR Alignment", titleAr: "مواءمة CEFR", family: "تقويم", bloom: "قيّم", level: "A0-B2", research: "Council 2001", desc: "CEFR Alignment" } as const;
+export function tool494Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool494Check(v:number):boolean{return v>0;}

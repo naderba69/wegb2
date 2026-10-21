@@ -49,6 +49,7 @@ import { tool385Gain as tool385WM } from "./tool-385"; // R366 Working Memory
 import { tool401Gain as tool401Recast } from "./tool-401"; // R367 Recast
 import { tool431Gain as tool431Complexity } from "./tool-431"; // R368 Complexity
 import { tool461Gain as tool461TPS } from "./tool-461"; // R369 TPS
+import { tool491Gain as tool491Needs } from "./tool-491"; // R370 Needs Analysis
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1359,8 +1360,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     const dg = tool224Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Text");
     tasks.push({ id: tid(33), kind: "check", titleDe: `Vortest: ${prompt}`, titleAr: `اختبار قبلي: ${prompt} — ${kontrast} — ${tblt} — ${dg}`, minutes: 3, quiz: [] });
   }
-  // R363-281 + R363-291 + R364-311 + R365-344 + R366-385 + R367-401 + R368-431 + R369-461: + TPS
-  void tool281Load(1); void tool291Goal(true); void tool311Intercultural(true); void tool344V2(true); void tool385WM(true); void tool401Recast(true); void tool431Complexity(true); void tool461TPS(true);
+  // R363-281 + R363-291 + R364-311 + R365-344 + R366-385 + R367-401 + R368-431 + R369-461 + R370-491: + Needs Analysis
+  void tool281Load(1); void tool291Goal(true); void tool311Intercultural(true); void tool344V2(true); void tool385WM(true); void tool401Recast(true); void tool431Complexity(true); void tool461TPS(true); void tool491Needs(true);
 
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
   if (level !== "A0" && level !== "A1" && wocheInPhase % 2 === 0 && type === "festigung") {

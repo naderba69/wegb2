@@ -1,6 +1,8 @@
 /**
- * 514 — أداة بيداغوجية مكتملة (تقويم / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 514 — Cross-Linguistic Influence — تأثير عبر لغوي
+ * Jarvis 2008: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_514 = { id: 514, family: "تقويم", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_514(): boolean { return true; }
+export const TOOL_514 = { id: 514, titleDe: "Cross-Linguistic Influence", titleAr: "تأثير عبر لغوي", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Jarvis 2008", desc: "Cross-Linguistic Influence" } as const;
+export function tool514Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool514Check(v:number):boolean{return v>0;}
