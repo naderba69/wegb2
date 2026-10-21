@@ -122,6 +122,20 @@
 | 110 | Gamification | Levels مستويات | ✅ | A0-B2 | — | `lib/gamification-levels.ts` | R344 |
 
 **المجموع التراكمي: 110 / 1000 (11%) — 100 أساسية + 10 فرعية**
+
+### تفصيل 100 → 1000 — الدفعة R345 (111→120)
+| 111 | Gamification | Streak Freeze تجميد | ✅ | A0-B2 | — | `lib/gamification-streak-freeze.ts` | R345 |
+| 112 | Gamification | XP Boost مضاعف | ✅ | A0-B2 | — | `lib/gamification-xp-boost.ts` | R345 |
+| 113 | Gamification | Daily Quest يومية | ✅ | A0-B2 | — | `lib/gamification-daily-quest.ts` | R345 |
+| 114 | Gamification | Weekly Challenge أسبوعي | ✅ | A0-B2 | — | `lib/gamification-weekly-challenge.ts` | R345 |
+| 115 | Narrative | Narrative Arc قوس قصصي | ✅ | A1-B2 | أنشئ | `lib/narrative-arc.ts` | R345 |
+| 116 | Narrative | Branching Dialogue متفرع | ✅ | B1-B2 | طبّق | `lib/branching-dialogue.ts` | R345 |
+| 117 | Immersion | VR Classroom فصل افتراضي | ✅ | A2-B2 | طبّق | `lib/vr-classroom.ts` | R345 |
+| 118 | Immersion | AR Word Hunt صيد كلمات | ✅ | A0-A1 | تذكّر | `lib/ar-word-hunt.ts` | R345 |
+| 119 | Ethik | Voice Ethics أخلاقيات الصوت | ✅ | A0-B2 | قيّم | `lib/voice-ethics.ts` | R345 |
+| 120 | Ethik | AI Transparency شفافية | ✅ | A0-B2 | قيّم | `lib/ai-tutor-transparency.ts` | R345 |
+
+**المجموع التراكمي: 120 / 1000 (12%) — 100 أساسية + 20 فرعية**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
