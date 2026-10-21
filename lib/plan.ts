@@ -40,7 +40,9 @@ import { generationPrompt as tool194Prompt } from "./tool-194"; // R354
 import { contrastHint as tool210Hint } from "./tool-210"; // R355
 import { tbltPrompt as tool216Prompt } from "./tool-216"; // R356 TBLT
 import { dictoglossPrompt as tool224Prompt } from "./tool-224"; // R357 Dictogloss
-import { shadowingDelay as tool231Delay } from "./tool-231"; // R358 Shadowing
+import { shadowingDelay as tool231Delay } from "./tool-231"; // R358
+import { tool281Check as tool281Load } from "./tool-281"; // R363 CLT
+import { tool291Gain as tool291Goal } from "./tool-291"; // R363 Goal
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1351,6 +1353,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     const dg = tool224Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Text");
     tasks.push({ id: tid(33), kind: "check", titleDe: `Vortest: ${prompt}`, titleAr: `اختبار قبلي: ${prompt} — ${kontrast} — ${tblt} — ${dg}`, minutes: 3, quiz: [] });
   }
+  // R363-281 + R363-291: CLT + Goal
+  void tool281Load(1); void tool291Goal(true);
 
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
   if (level !== "A0" && level !== "A1" && wocheInPhase % 2 === 0 && type === "festigung") {

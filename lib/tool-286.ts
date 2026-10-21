@@ -1,6 +1,18 @@
 /**
- * 286 — أداة بيداغوجية مكتملة (Gamification / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 286 — Isolated Elements — العناصر المعزولة
+ * Pollock 2002: teach elements separately then combine
+ * Level: A1-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_286 = { id: 286, family: "Gamification", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_286(): boolean { return true; }
+export const TOOL_286 = {
+  id: 286,
+  titleDe: "Isolated Elements",
+  titleAr: "العناصر المعزولة",
+  family: "طرائق",
+  bloom: "حلّل",
+  level: "A1-B2",
+  research: "Pollock 2002",
+  desc: "teach elements separately then combine",
+} as const;
+
+export function tool286Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool286Check(v: number): boolean { return v > 0; }

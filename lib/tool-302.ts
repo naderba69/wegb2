@@ -1,6 +1,18 @@
 /**
- * 302 — أداة بيداغوجية مكتملة (طرائق / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 302 — WTC Willingness — الاستعداد للتواصل
+ * MacIntyre 1998: WTC = confidence + desire → speak more
+ * Level: B1-B2 | Bloom: طبّق | Family: SLA
  */
-export const TOOL_302 = { id: 302, family: "طرائق", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_302(): boolean { return true; }
+export const TOOL_302 = {
+  id: 302,
+  titleDe: "WTC Willingness",
+  titleAr: "الاستعداد للتواصل",
+  family: "SLA",
+  bloom: "طبّق",
+  level: "B1-B2",
+  research: "MacIntyre 1998",
+  desc: "WTC = confidence + desire → speak more",
+} as const;
+
+export function tool302Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool302Check(v: number): boolean { return v > 0; }
