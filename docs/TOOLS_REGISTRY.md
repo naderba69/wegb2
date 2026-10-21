@@ -164,6 +164,20 @@
 | 140 | SLA | Interaction Deep تفاوض معنى | ✅ | A1-B2 | طبّق | `lib/interaction-deep.ts` | R347 |
 
 **المجموع التراكمي: 140 / 1000 (14%) — 100 أساسية + 40 فرعية**
+
+### تفصيل 100 → 1000 — الدفعة R348 (141→150)
+| 141 | SLA | Output Deep إنتاج عميق | ✅ | A1-B2 | أنشئ | `lib/output-deep.ts` | R348 |
+| 142 | SLA | Focus on Form Deep شكل عميق | ✅ | A1-B2 | حلّل | `lib/focus-on-form-deep.ts` | R348 |
+| 143 | SLA | Input Enhancement Deep تمييز عميق | ✅ | A1-B2 | فهم | `lib/input-enhancement-deep.ts` | R348 |
+| 144 | SLA | Scaffolding Deep سقالة عميقة | ✅ | A0-B2 | طبّق | `lib/scaffolding-deep.ts` | R348 |
+| 145 | SLA | Affective Filter Deep قلق عميق | ✅ | A0-B2 | طبّق | `lib/affective-filter-deep.ts` | R348 |
+| 146 | SLA | Automatization Deep أتمتة عميقة | ✅ | A0-B2 | طبّق | `lib/automatization-deep.ts` | R348 |
+| 147 | طرائق | PPP Deep عرض عميق | ✅ | A0-B2 | طبّق | `lib/ppp-deep.ts` | R348 |
+| 148 | طرائق | TBLT Deep مهام عميقة | ✅ | A1-B2 | أنشئ | `lib/tblt-deep.ts` | R348 |
+| 149 | طرائق | CLT Deep تواصلي عميق | ✅ | A1-B2 | طبّق | `lib/clt-deep.ts` | R348 |
+| 150 | طرائق | Lexical Deep معجمي عميق | ✅ | A1-B2 | تذكّر | `lib/lexical-deep.ts` | R348 |
+
+**المجموع التراكمي: 150 / 1000 (15%) — 100 أساسية + 50 فرعية**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
