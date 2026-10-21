@@ -455,7 +455,7 @@ const vocabRepeatAudit = (() => {
     ["eselsbruecken", eselsbruecken.length, 83],
     ["sprichwort-audio", Object.keys(sprichwortAudio).length, 8],
       ["mnemonik", Object.keys(mnemonikMap).length, 120],
-    ["pakete", pakete.length, 3],
+    ["pakete", pakete.length, 4],
   ];
   for (const [name, got, want] of counts) ok(got === want, `K-${name}: توقّع ${want} وجد ${got}`);
   ok(pakete.every((x) => x.saetze.length === 12 && x.dialog.lines.length === 6 && x.modelle.length === 2), "K11 بنية الحزم 12+6+2");
@@ -2646,15 +2646,15 @@ void 0;
     ok(pakete.length === 4 && pakete.some((x) => x.id === "b2-debatte" && x.saetze.length === 12), "K128b 4 حزم (b2-debatte 12 جملة) — M2 B2 Themen مغلقة");
     // K128c — Tools R334: Overlearning/Schlaf/Portfolio موجودة
     {
-      const o = require("../lib/overlearning.js");
-      const s = require("../lib/schlaf.js");
-      const pf = require("../lib/portfolio.js");
+      const o = require("../lib/overlearning");
+      const s = require("../lib/schlaf");
+      const pf = require("../lib/portfolio");
       ok(o.OVERLEARNING_RATIO === 1.15 && o.extraDueDays(10).join() === "12,17", "K128c Overlearning 1.15 + delays 2/7");
       ok(s.SCHLAF_FENSTER_START === 21 && s.inSchlafFenster(22) && !s.inSchlafFenster(20), "K128d Schlaf Fenster 21-23.5");
       ok(pf.portfolioFortschritt({ version: 1, eintraege: [] }).total === 0, "K128e Portfolio leer=0");
-      const story = require("../lib/mnemonic-story.js");
-      const palace = require("../lib/memory-palace.js");
-      const pi = require("../lib/processing-instruction.js");
+      const story = require("../lib/mnemonic-story");
+      const palace = require("../lib/memory-palace");
+      const pi = require("../lib/processing-instruction");
       ok(story.baueStory([{ de: "Haus", ar: "بيت", bild: "بيت أزرق" }]).textAr.includes("تخيّل"), "K128f Mnemonic Story erzeugt");
       ok(palace.PALACE_RAEUME.length === 7 && palace.palacePosition(0).raum === "Eingang", "K128g Memory Palace 7 Räume");
       ok(pi.piItemsFor("a2-weil-dass").length === 1 && pi.piAuswahl(pi.piItemsFor("a2-weil-dass")[0], 0), "K128h Processing Instruction weil");
@@ -3215,7 +3215,7 @@ void 0;
 {
   const NEU = ["a1-plural", "a1-zeitpraep", "a2-neben", "a2-demo", "b1-absicht", "b1-konj2-vergangenheit", "b2-textkonnektoren"];
   const alle66 = Object.keys(grammarMap);
-  ok(alle66.length === 82 && NEU.every((id) => !!grammarMap[id]), "K130a دروسُ N1–N7 باقيةٌ، وبنك القواعد يحوي 82 درساً بعدَ K132");
+  ok(alle66.length === 83 && NEU.every((id) => !!grammarMap[id]), "K130a دروسُ N1–N7 باقيةٌ، وبنك القواعد يحوي 83 درساً بعدَ K132 (b2-n-deklination)");
   ok(NEU.every((id) => { const t = grammarMap[id]; return t.exercises.length >= 7 && (t.pitfalls ?? []).length >= 3 && (t.verify ?? []).length === 2 && (t.examples ?? []).length >= 3 && (t.rules ?? []).length >= 3 && !!t.ziel && (t.voraus ?? []).length >= 1; }),
     "K130b كلُّ جديدٍ كاملُ البنية (≥7 تمارين · 3 فخاخ · 2 تحقق · 3 أمثلة · 3 قواعد · هدفٌ ومتطلب)");
   const progN = loadProgress();

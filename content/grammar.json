@@ -16305,7 +16305,8 @@
         "answer": [
           "den Praktikanten"
         ],
-        "explanationAr": "suchen + Akk → den Praktikanten."
+        "explanationAr": "في حالة النصب (Akkusativ) بعد الفعل suchen تأخذ الأسماء الضعيفة n: den Praktikanten.",
+        "explanationDe": "في حالة النصب (Akkusativ) بعد الفعل suchen تأخذ الأسماء الضعيفة n: den Praktikanten."
       },
       {
         "id": "b2-n-dekl-e2",
@@ -16315,7 +16316,8 @@
         "answer": [
           "des Experten"
         ],
-        "explanationAr": "Genitiv → des Experten."
+        "explanationAr": "في حالة الإضافة (Genitiv) تأخذ الأسماء الضعيفة s: des Experten.",
+        "explanationDe": "في حالة الإضافة (Genitiv) تأخذ الأسماء الضعيفة s: des Experten."
       },
       {
         "id": "b2-n-dekl-e3",
@@ -16325,7 +16327,8 @@
         "answer": [
           "dem Kunden"
         ],
-        "explanationAr": "mit + Dativ → dem Kunden."
+        "explanationAr": "بعد حرف الجر mit المجرور (Dativ) → dem Kunden (n زائدة).",
+        "explanationDe": "بعد حرف الجر mit المجرور (Dativ) → dem Kunden (n زائدة)."
       },
       {
         "id": "b2-n-dekl-e4",
@@ -16335,7 +16338,8 @@
         "answer": [
           "den Kollegen"
         ],
-        "explanationAr": "Akk → den Kollegen."
+        "explanationAr": "في حالة النصب → den Kollegen (n زائدة).",
+        "explanationDe": "في حالة النصب → den Kollegen (n زائدة)."
       },
       {
         "id": "b2-n-dekl-e5",
@@ -16353,7 +16357,7 @@
         "id": "b2-n-dekl-e6",
         "type": "umformung",
         "quelleDe": "Der Polizist hilft dem Mann.",
-        "promptDe": "Setze 'Polizist' in den Akkusativ: Ich kenne ___ .",
+        "promptDe": "Setze 'Polizist' in den Akkusativ: Ich kenne ___.",
         "answer": "Ich kenne den Polizisten.",
         "mussEnthalten": [
           "polizisten"
@@ -16361,8 +16365,9 @@
         "darfNicht": [
           "polizist hilft"
         ],
-        "explanationAr": "Akk: den Polizisten.",
-        "points": 2
+        "explanationAr": "حالة النصب للأسماء الضعيفة: Polizist → den Polizisten.",
+        "points": 2,
+        "explanationDe": "حالة النصب للأسماء الضعيفة: Polizist → den Polizisten."
       }
     ]
   }
