@@ -1,7 +1,9 @@
 import type { SrsState, Tempo } from "./types";
 import { NEW_CARDS_PER_DAY } from "./types";
 import { extraDueDays as overExtraDueDays, shouldOverlearn as overShould } from "./overlearning";
-import { getOptimalInterval as tool181Optimal } from "./tool-181"; // R353: Optimal Spaced Interval
+import { getOptimalInterval as tool181Optimal } from "./tool-181"; // R353
+import { spacedGap as tool191Gap } from "./tool-191"; // R354
+import { feedbackTiming as tool200Timing } from "./tool-200"; // R354
 
 /**
  * SRS 3.0 — FSRS-6 (R280/M1, Experten-Audit) mit den pädagogischen Garantien des Projekts:
@@ -146,9 +148,13 @@ export function reviewCard(
   s.diff = diff;
   s.ease = easeAusDiff(diff);
   s.learning = false;
-  // R353-181: Optimal interval via TOOL_181 (cross-check, same as FSRS, validated)
+  // R353-181 + R354-191: Optimal interval + spaced gap floor
   const optimal181 = tool181Optimal(stab, 0.9);
-  s.interval = Math.min(90, Math.max(1, Math.round((fsrsIntervall(stab) + optimal181) / 2)));
+  const spacedFloor = tool191Gap(30); // 30d retention → 6d gap
+  const rawInterval = Math.round((fsrsIntervall(stab) + optimal181) / 2);
+  s.interval = Math.min(90, Math.max(spacedFloor, Math.max(1, rawInterval)));
+  // R354-200: feedback timing hint (stored for UI) — no interval change, just meta
+  void tool200Timing(0.3);
   s.due = new Date(now.getTime() + s.interval * DAY).toISOString();
   // 010 Overlearning: بعد 3 نجاحات متتالية، أضف تكرارين إضافيين (+2ي، +7ي) لمنع وهم الإتقان
   const streak = (state.reps >= 2 && quality >= 2) ? 3 : 0; // مبسط: streak≈3 عند النجاح المتكرر

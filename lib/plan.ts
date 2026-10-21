@@ -34,7 +34,9 @@ import { palacePosition } from "./memory-palace";
 import { piItemsFor } from "./processing-instruction";
 import { fallFuerLevel } from "./case-study";
 import { projektFuerLevel } from "./project";
-import { getEveningReviewSlot as tool182Slot } from "./tool-182"; // R353: Sleep Protocol
+import { getEveningReviewSlot as tool182Slot } from "./tool-182"; // R353
+import { shouldPreTest as tool193Pre } from "./tool-193"; // R354 Forward Testing
+import { generationPrompt as tool194Prompt } from "./tool-194"; // R354 Generation
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1335,6 +1337,12 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   const sleepSlot = tool182Slot(day);
   if (sleepSlot && type !== "abschluss" && !tasks.some(t => t.kind === "wiederholen" && t.titleAr.includes("مسائية"))) {
     tasks.push({ id: tid(32), kind: "wiederholen", titleDe: `Evening Review ${sleepSlot.lernenStart}`, titleAr: `مراجعة مسائية ${sleepSlot.lernenStart} قبل النوم`, minutes: 5, sentenceIds: kapselIdsAdaptiv(progress, day).slice(0,2) });
+  }
+
+  // R354-193: Forward Testing — pretest before new grammar block (when recent test exists)
+  if (type === "lerntag" && grammarAssignment?.status === "new" && tool193Pre(day, day - 1)) {
+    const prompt = tool194Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Grammatik");
+    tasks.push({ id: tid(33), kind: "check", titleDe: `Vortest: ${prompt}`, titleAr: `اختبار قبلي: ${prompt}`, minutes: 3, quiz: [] });
   }
 
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
