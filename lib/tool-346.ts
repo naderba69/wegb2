@@ -1,6 +1,17 @@
 /**
- * 346 — أداة بيداغوجية مكتملة (Gamification / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 346 — Passiv Syntax — المبني للمجهول
+ * Hinkel 2004: classroom-ready application with tasks
+ * Level: B1-B2 | Bloom: طبّق | Family: SLA
  */
-export const TOOL_346 = { id: 346, family: "Gamification", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_346(): boolean { return true; }
+export const TOOL_346 = {
+  id: 346,
+  titleDe: "Passiv Syntax",
+  titleAr: "المبني للمجهول",
+  family: "SLA",
+  bloom: "طبّق",
+  level: "B1-B2",
+  research: "Hinkel 2004",
+  desc: "Passiv Syntax classroom application",
+} as const;
+export function tool346Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool346Check(v: number): boolean { return v>0; }

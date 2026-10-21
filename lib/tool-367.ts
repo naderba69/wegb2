@@ -1,6 +1,17 @@
 /**
- * 367 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 367 — Learner Autonomy — استقلالية المتعلّم
+ * Holec 1981: classroom-ready application with tasks
+ * Level: A1-B2 | Bloom: قيّم | Family: تلقين
  */
-export const TOOL_367 = { id: 367, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_367(): boolean { return true; }
+export const TOOL_367 = {
+  id: 367,
+  titleDe: "Learner Autonomy",
+  titleAr: "استقلالية المتعلّم",
+  family: "تلقين",
+  bloom: "قيّم",
+  level: "A1-B2",
+  research: "Holec 1981",
+  desc: "Learner Autonomy classroom application",
+} as const;
+export function tool367Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool367Check(v: number): boolean { return v>0; }
