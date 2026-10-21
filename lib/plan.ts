@@ -28,6 +28,12 @@ import {
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
 import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B2_DECKEL_MIN } from "./phasen";
+import { inSchlafFenster, schlafEmpfehlung } from "./schlaf";
+import { baueStory } from "./mnemonic-story";
+import { palacePosition } from "./memory-palace";
+import { piItemsFor } from "./processing-instruction";
+import { fallFuerLevel } from "./case-study";
+import { projektFuerLevel } from "./project";
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -91,7 +97,7 @@ export const PHASE_TOPICS: Record<Phase, string[]> = {
   // R138/P-07: Partizip I aus B1 entfernt — gehört zu B2 (Partizipialattribute).
   B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-konj2-vergangenheit", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben", "b1-absicht", "b1-adjektivendungen", "b1-pruefungsstrategie"],
   // R138/P-06/P-07/P-08/P-20: Partizip I hierher verschoben; Genitivpräpositionen, Konzessivsätze, Relativsätze mit deren/dessen + Prüfungsstrategie.
-  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-genitiv-praep", "b2-konzessiv", "b2-partizip", "b2-adjektiv-partizip", "b1-partizip1", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-relativ-genitiv", "b2-nominalstil", "b2-redew", "b2-textkonnektoren", "b2-pruefungsstrategie"],
+  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-genitiv-praep", "b2-konzessiv", "b2-partizip", "b2-adjektiv-partizip", "b1-partizip1", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-relativ-genitiv", "b2-nominalstil", "b2-n-deklination", "b2-redew", "b2-textkonnektoren", "b2-pruefungsstrategie"],
   Abschluss: [],
 };
 
@@ -601,6 +607,11 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       });
     });
 
+  // 011 Schlaf: نافذة المساء — أضف تلميحاً ولو بطاقة مراجعة قصيرة
+  const jetztStunde = new Date().getHours() + new Date().getMinutes() / 60;
+  const schlafOn = inSchlafFenster(jetztStunde) && (progress.settings.schlafReminder !== false);
+  const _schlafTipp = schlafOn ? schlafEmpfehlung(5, jetztStunde) : null; void _schlafTipp;
+
   const tid = (n: number) => `${day}:t${n}`;
   const phaseTopics = PHASE_TOPICS[phase];
   const grammarAssignment = grammarAssignmentForDay(day, progress);
@@ -705,6 +716,9 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           ? `Wiederholung: ${topicTitle}`
           : legacyScheduleDay ? topicTitle : `Neue Grammatik: ${topicTitle}`;
         const statusArabic = assignment.status === "new" ? "قاعدة جديدة" : "مراجعة وتثبيت";
+        // 024 Processing Instruction: if topic is weil/dass/obwohl, attach PI hint
+        let piHinweis: string | undefined;
+        try { const pi = piItemsFor(topicId); if (pi.length) piHinweis = pi[0].promptDe; } catch {}
         tasks.push({
           id: tid(2),
           kind: "grammatik",
@@ -712,11 +726,28 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleAr: `${statusArabic}: ${grammarMap[topicId]?.titleAr ?? ""}`,
           minutes: 30,
           topicId,
+          piHinweis,
         });
       }
+      // 013 Mnemonic Story + 014 Palace: enrich wortschatz with story/palace hints (lightweight, non-breaking)
+      const deckForStory = weekday === 1 ? phaseDeckA : phaseDeckB;
+      let storyHint: string | undefined; let palaceHint: string | undefined;
+      try {
+        const deckData = getDeck(deckForStory);
+        const deckCards = deckData?.cards?.slice(0, 3) ?? [];
+        if (deckCards.length >= 2) {
+          const story = baueStory(deckCards.map((c: any) => ({ de: c.de, ar: c.ar, bild: c.de })));
+          storyHint = story.textAr.slice(0, 120);
+          const pos = palacePosition((day % 20));
+          palaceHint = pos ? `${pos.raum} #${pos.slot}` : undefined;
+        }
+      } catch {}
       tasks.push({
         id: tid(3),
         kind: "wortschatz",
+        // attach hints
+        storyId: storyHint,
+        palaceRaum: palaceHint,
         titleDe: "Neue Wörter",
         titleAr: "مفردات جديدة + تثبيت",
         minutes: 25,
@@ -1297,6 +1328,16 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       ],
     };
     tasks.push(...(finals[day] ?? finals[378]));
+  }
+
+  // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
+  if (level !== "A0" && level !== "A1" && wocheInPhase % 2 === 0 && type === "festigung") {
+    const fall = fallFuerLevel(level);
+    if (fall) tasks.push({ id: tid(30), kind: "lesen", titleDe: `Fallstudie: ${fall.titelDe}`, titleAr: `دراسة حالة: ${fall.titelAr}`, minutes: 12, textId: textsOfLevel[0]?.id });
+  }
+  if ((level === "B1" || level === "B2") && wocheInPhase % 4 === 0 && type === "festigung") {
+    const proj = projektFuerLevel(level);
+    if (proj) tasks.push({ id: tid(31), kind: "schreiben", titleDe: `Projekt: ${proj.titelDe}`, titleAr: `مشروع: ${proj.titelAr}`, minutes: 20, writeId: nextWrite()?.id });
   }
 
   // R143/A0: المرحلة أقصر من البنك؛ نضيف خانة قراءة واحدة كل يوم،

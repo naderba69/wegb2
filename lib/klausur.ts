@@ -64,48 +64,67 @@ export function buildKlausur(day: number): Klausur {
 
   const w = pickN(writingTasks.filter((x) => x.level === lvl), 1, rand)[0];
 
+  // ── توقيت Goethe الحقيقي (65/40/60-75/15) — B1=60 كتابة، B2=75، A-levels مختصرة تربويًا
+  const schreibenMin = lvl === "B2" ? 75 : lvl === "B1" ? 60 : lvl === "A2" ? 30 : 20;
+  // sprechenMin مدمجة في Sprechen-Teile (8+7=15)
+  const muendlichPool2 = muendlich.filter((x) => x.teil === 2 && (x as any).level === lvl);
+  const muendlichPool3 = muendlich.filter((x) => x.teil === 3 && (x as any).level === lvl);
+  // fallback: إن لم توجد بطاقات مستوى دقيق، خذ أي مستوى
+  const c2 = (muendlichPool2[0] ?? muendlich.filter((x) => x.teil === 2)[d0 % Math.max(muendlich.filter((x) => x.teil === 2).length, 1)]);
+  const c3 = (muendlichPool3[0] ?? muendlich.filter((x) => x.teil === 3)[(d0 * 7 + 3) % Math.max(muendlich.filter((x) => x.teil === 3).length, 1)]);
+  const sprechenSections: KlausurSection[] = [];
+  if (c2) sprechenSections.push({
+    key: "Sprechen" as const, titleDe: "Sprechen — Präsentation", titleAr: "العرض — «" + c2.titel_ar + "»",
+    minutes: 8, realExamHint: "Goethe الحقيقي: 15 دقيقة تحضير + 15 دقيقة امتحان (عرض 4د + نقاش 5د) — هنا 8د (عرض + أسئلة).", items: [], sprechen: { titelDe: c2.titel_de, titelAr: c2.titel_ar, auftrag: c2.auftrag_de ?? "", stuetzen: c2.stuetzen ?? [], kriterien: c2.kriterien ?? [], zeit_s: 240, teil: 2 },
+  });
+  if (c3) sprechenSections.push({
+    key: "Sprechen" as const, titleDe: "Sprechen — Diskussion", titleAr: "النقاش", minutes: 7,
+    realExamHint: "Goethe: 5د نقاش مع الشريك — اقتراح + موافقة/اعتراض + سؤال.", items: [], sprechen: { titelDe: c3.titel_de, titelAr: c3.titel_ar, auftrag: c3.auftrag_de ?? "", stuetzen: c3.stuetzen ?? [], kriterien: c3.kriterien ?? [], zeit_s: 300, teil: 3 },
+  });
+  const allSections: KlausurSection[] = [
+    {
+      key: "Lesen",
+      titleDe: "Lesen",
+      titleAr: "القراءة — نصّان و4 أسئلة (Goethe: 65د)",
+      minutes: 65,
+      realExamHint: "Goethe الحقيقي B1/B2: 65 دقيقة · 5 أجزاء · 30 مهمة (Blog/E-Mail/Anzeige/Zeitung/Vorschrift) — هنا تدريب بنفس التوقيت.",
+      items: lesen,
+      passages: ts.map((t) => ({ titleDe: t.titleDe, de: leseText(t).de })),
+    },
+    {
+      key: "Hören",
+      titleDe: "Hören",
+      titleAr: "الاستماع — حوار + أسئلة + إملاء (Goethe: 40د)",
+      minutes: 40,
+      realExamHint: "Goethe الحقيقي: 40 دقيقة · 4 أجزاء (Durchsagen/Vortrag/Gespräch/Diskussion) — سماع 1×/2× حسب الجزء.",
+      items: hoeren,
+      dialogueId: dlg?.id,
+    },
+    {
+      key: "Struktur",
+      titleDe: "Grammatik & Wortschatz",
+      titleAr: "القواعد والمفردات — 9 تمارين (مدمجة في Goethe)",
+      minutes: 15,
+      realExamHint: "في Goethe لا قسم مستقل — القواعد موزعة على Lesen/Schreiben — هنا تدرّبها معزولة 15د إضافية للتقوية.",
+      items: struktur,
+    },
+    {
+      key: "Schreiben",
+      titleDe: "Schreiben",
+      titleAr: lvl === "B2" ? "الكتابة — Goethe 75د (Forum 150W + Nachricht 100W)" : lvl === "B1" ? "الكتابة — Goethe 60د (3 نصوص: 80/80/40W)" : "الكتابة — مهمة كاملة",
+      minutes: schreibenMin,
+      realExamHint: lvl === "B2" ? "Goethe B2 الحقيقي: 75 دقيقة (Forum ≥150W + Nachricht 100W) — هنا نفس التوقيت." : lvl === "B1" ? "Goethe B1 الحقيقي: 60 دقيقة (E-Mail 80W + Forum 80W + E-Mail 40W) — هنا 60د." : "مستوى A: مهمة كتابة واحدة بالتوقيت المختصر.",
+      items: [],
+      write: w
+        ? { taskDe: w.taskDe, taskAr: w.taskAr, criteria: w.criteria, sample: w.sample, noteAr: w.noteAr }
+        : undefined,
+    },
+    ...sprechenSections,
+  ];
   return {
     level: lvl,
-    total: 70,
-    sections: [
-      {
-        key: "Lesen",
-        titleDe: "Lesen",
-        titleAr: "القراءة — نصّان و4 أسئلة",
-        minutes: 15,
-        realExamHint: "في امتحان Goethe الحقيقي: 65 دقيقة وأجزاء أطول — هنا تدريب مركّز على الاستراتيجية نفسها.",
-        items: lesen,
-        passages: ts.map((t) => ({ titleDe: t.titleDe, de: leseText(t).de })),
-      },
-      {
-        key: "Hören",
-        titleDe: "Hören",
-        titleAr: "الاستماع — حوار وأسئلة وإملاء",
-        minutes: 12,
-        realExamHint: "في Goethe الحقيقي: نحو 40 دقيقة و3 أجزاء — الاستماع بلا نص هو القاعدة.",
-        items: hoeren,
-        dialogueId: dlg?.id,
-      },
-      {
-        key: "Struktur",
-        titleDe: "Grammatik & Wortschatz",
-        titleAr: "القواعد والمفردات — 9 تمارين",
-        minutes: 15,
-        realExamHint: "القواعد تتوزّع في Goethe على أقسام Lesen/Schreiben — هنا تدرّبها معزولة.",
-        items: struktur,
-      },
-      {
-        key: "Schreiben",
-        titleDe: "Schreiben",
-        titleAr: "الكتابة — مهمة كاملة بمعايير Goethe",
-        minutes: 28,
-        realExamHint: "في Goethe الحقيقي: 75 دقيقة لجزءين (E-Mail + Aufsatz) — هنا جزء واحد بالتوقيت الحقيقي.",
-        items: [],
-        write: w
-          ? { taskDe: w.taskDe, taskAr: w.taskAr, criteria: w.criteria, sample: w.sample, noteAr: w.noteAr }
-          : undefined,
-      },
-    ],
+    total: allSections.reduce((n, s) => n + s.minutes, 0),
+    sections: allSections,
   };
 }
 

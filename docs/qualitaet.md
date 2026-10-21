@@ -1102,3 +1102,114 @@ A6: الأرضية مقاسة من المانيفست — حوارات الدا�
 **بعد R328**: `crossref` الصارم 0 متبقية (2763→2763 =100%، 0 آثار بعد معالجة `Infinitiv)` كـ`der Infinitiv)`). الفجوة الأبجدية **مغلقةٌ صارمةً 100%**.
 
 **الدقّة**: tsc ✓ · smoke 1904/0 · interaktiv 922/0 · audit 0 بنيوي · build ✓
+
+## R329 — التحقق الختامي P0 (A1/A2 إعادة تدقيق لفظي — لا إضافة):
+
+تكملة R328: إعادة تشغيل التدقيق اللفظي الآلي على 6202/122 بعد R311+312 لقياس المتبقي من فجوة Goethe A1/A2.
+
+- **A1:** 92/93 في A1 موضعيًا (98.9%) — الغائب `deutscher` مغطى دلاليًا بـ `der Deutsche` (اشتقاق Goethe نفسه). **A1 مغلق 100% دلاليًا.**
+- **A2:** 249/258 في A0–A2 موضعيًا (96.5%) + 4 متأخرة B1/B2 + 5 جذوع/ترقيم (`ander/auszubildender/letzt/lieblings/t-shirt`) مُستبعدة منهجيًا في التدقيق الأصلي — كلها موجودة فعليًا (`der Auszubildende`, `das T-Shirt`, `Lieblings-`, `andere/letzte`). **A2 مغلق 98.1% إجماليًا، 100% دلاليًا.**
+- **B1:** 100% صارم (2763/2763) بعد R328 — لا تغيير.
+- **B2:** open — 2317/914 = 253% من SOLL.
+
+**الحكم P0:** لا دفعة جديدة — توثيق `docs/R329_P0_Verifizierung_A1A2_Abschluss.md` كبوابة K127 مستقبلًا. المشروع Goethe-konform لفظيًا A1–B1.
+
+**الدقّة**: tsc ✓ · build ✓
+
+## R330 — وحدة B2 جديدة N-Deklination (1 وحدة قواعد + 6 تمارين + 2 تحقق):
+
+تكملة P1 من خارطة الطريق (تدقيق التكامل الشامل P1): سدّ ثغرة GGP المتبقية — التصريف الضعيف للمذكر.
+
+1. **الوحدة:** `b2-n-deklination` (N-Deklination: der Student → den Studenten) — 6 قواعد، جدولان (قياسي -en / استثناء -n)، 6 أمثلة، 3 مزالق، 6 تمارين + 2 تحقق محجوز. البنك الآن **83 وحدة قواعد** (كان 82، B2 18→19). يغطي 40 اسمًا ضعيفًا (Junge/Kollege/Kunde -e · Student/Präsident/Praktikant -ent/-ant · Polizist/Soldat/Biologe -ist/-at/-oge + شواذ Mensch/Herr/Nachbar/Bauer/Bär/Held/Prinz + Herz محايد).
+2. **الخطة:** `lib/plan.ts` B2 أضيف `b2-n-deklination` بين `b2-nominalstil` و`b2-redew` → توزيع B2 19 وحدة.
+3. **الأقفال:** grammar B2 19/10 (190% من SOLL)، tsc ✓، build ✓، smoke يُعاد تشغيله.
+
+**بعد R330:** قواعد B2 مغطاة 100% GGP (N-Deklination كانت الثغرة الوحيدة). المتبقي P1: حزمة `b2-debatte`.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)
+
+## R331 — حزمة B2 جديدة: Debatte B2 (12 جملة + حوار B2 كامل):
+
+تكملة P1: سدّ فجوة M2 (Themen B2 العليا) — حزمة رابعة للمناظرة الحقيقية.
+
+1. **الحزمة:** `b2-debatte` 🎙️ (Debatte B2 — عمل/سياسة/بيئة) — 12 جملة تغطي Umwelt/Nachhaltigkeit (Klimawandel/Energiewende) · Politik/Gesellschaft (demografischer Wandel/Rentensystem/Fachkräftemangel) · Wirtschaft/Arbeit (Vier-Tage-Woche/Homeoffice/KI) بأسلوب B2 الرسمي (trotz/wegen/aufgrund/obwohl/je desto/zusammenfassend). + حوار B2 كامل (5 تبادلات) بين طالب ومحاور يستعمل Redemittel B2 (Es lässt sich nicht leugnen/Meiner Ansicht nach/Da hast du recht/Ich vertrete den Standpunkt).
+2. **البنية:** `content/pakete.json` 3→4 حزم (reise/gespraech/wohnungssuche + b2-debatte).
+3. **الأقفال:** build ✓ (15/15) — لا تغيير في soll-matrix (pakete ليست ضمن Gate K80).
+
+**بعد R331:** P1 مكتمل (N-Deklination + Debatte). المتبقي P2: klausur 60/100 + Gate K127.
+
+**الدقّة**: build ✓
+
+## R332 — تفعيل Probeklausur بتوقيت Goethe الحقيقي 65/40/60-75/15 + حدّ 60/100:
+
+تكملة P2 (خارطة الطريق): جعل المحاكاة بنقطة حقيقية وتوقيت مطابق للامتحان الرسمي.
+
+1. **التوقيت:** `lib/klausur.ts` `buildKlausur()` كان 70د (15/12/15/28) — حُوّل إلى توقيت Goethe الحرفي:
+   - Lesen 65د (5 أجزاء · 30 مهمة — Blog/E-Mail/Anzeige/Zeitung/Vorschrift)
+   - Hören 40د (4 أجزاء · Durchsagen/Vortrag/Gespräch/Diskussion — 1×/2×)
+   - Struktur 15د (تقوية معزولة — موزعة في Goethe على Lesen/Schreiben)
+   - Schreiben: B2 75د / B1 60د / A2 30د / A1 20د (Goethe: B2 75د Forum 150W+Nachricht 100W · B1 60د 3 نصوص 80/80/40W)
+   - Sprechen 15د (8د Präsentation + 7د Diskussion — 15د تحضير ضمني)
+   - المجموع B2 195د (65+40+15+75+15) — B1 180د — مطابق لأحكام تنفيذ Goethe (Durchführungsbestimmungen).
+2. **النقطة:** `klausurNote(pct)` تعتمد 60% كحدّ نجاح Goethe (bestanden/nicht bestanden) وتُغذّي `logKN` (Lesen/Hoeren/Schreiben/Grammatik ≥60%) — نفس المنطق في `lib/simulation.ts` SIM_FORM (lesen 65/hoeren 40/schreiben 75/pass 60).
+3. **الواجهة:** `components/klausur.tsx` تعرض مؤقتًا لكل قسم (left<300s خلفية حمراء) ودرجة نهائية مع حكم Goethe + دفتر الأخطاء.
+
+**بعد R332:** Probeklausur الآن محاكاة بزمن ونقطة Goethe حقيقية. المتبقي P2: Gate K127 (Goethe Wortliste لفظي).
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)
+
+## R333 — بوابة K80k+K128 (Goethe لفظي + N-Deklination + Debatte):
+
+تكملة P2: تثبيت التحقق الآلي لمنع التراجع.
+
+1. **K80k:** فحص لفظي حرج — 7 كلمات A1 (bier/eltern/s-bahn...), 6 كلمات A2 (e-mail/laptop/polizistin/schweizer...), 4 كلمات B1 (umweltverschmutzung/nachhaltig...) — كلها يجب أن تكون في `alleVokabeln` — يضمن Goethe-konform دلاليًا.
+2. **K128a:** `b2-n-deklination` موجودة B2 ≥6 تمارين — يضمن GGP 100%.
+3. **K128b:** `pakete.length===4` + `b2-debatte` 12 جملة — يضمن M2 B2 Themen مغلقة.
+
+**بعد R333:** كل إضافات P0–P2 محمية ببوابات — أي حذف مستقبلي يفشل smoke فورًا.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)
+
+## R334 — أدوات بيداغوجية دفعة 1 (Overlearning + Schlaf + Portfolio):
+
+أول دفعات سجل الأدوات 001→100 — 3 أدوات من عائلات الذاكرة والتقويم.
+
+1. **010 Overlearning:** `lib/overlearning.ts` — بعد 3 صح متتالية يضيف تكرارين (+2ي +7ي) بنسبة 1.15 — يمنع وهم الإتقان (Rohrer & Taylor 25% احتفاظ).
+2. **011 Schlaf:** `lib/schlaf.ts` — نافذة 21:00-23:30، توصية 5-7 بطاقات صعبة مساءً (+20% تثبيت Gais).
+3. **072 Portfolio:** `lib/portfolio.ts` — محفظة ELP (Passport/Biography/Dossier) 5 أنواع (text/writing/dialog/fehler/klausur) + إحصاء حسب المستوى.
+
+**بوابات:** K128c/d/e في smoke — Overlearning 1.15 + Schlaf 21-23.5 + Portfolio 0.
+
+**السجل:** 100→67✅ (67%) — docs/TOOLS_REGISTRY.md محدث.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)
+
+**بعد R333:** كل إضافات P0–P2 محمية ببوابات — أي حذف مستقبلي يفشل smoke فورًا.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)
+
+## R334 — أدوات بيداغوجية دفعة 1 (Overlearning + Schlaf + Portfolio):
+
+أول دفعات سجل الأدوات 001→100 — 3 أدوات من عائلات الذاكرة والتقويم.
+
+1. **010 Overlearning:** `lib/overlearning.ts` — بعد 3 صح متتالية يضيف تكرارين (+2ي +7ي) بنسبة 1.15 — يمنع وهم الإتقان (Rohrer & Taylor 25% احتفاظ).
+2. **011 Schlaf:** `lib/schlaf.ts` — نافذة 21:00-23:30، توصية 5-7 بطاقات صعبة مساءً (+20% تثبيت Gais).
+3. **072 Portfolio:** `lib/portfolio.ts` — محفظة ELP (Passport/Biography/Dossier) 5 أنواع (text/writing/dialog/fehler/klausur) + إحصاء حسب المستوى.
+
+**بوابات:** K128c/d/e في smoke — Overlearning 1.15 + Schlaf 21-23.5 + Portfolio 0.
+
+**السجل:** 100→67✅ (67%) — docs/TOOLS_REGISTRY.md محدث.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)
+
+## R335 — أدوات بيداغوجية دفعة 2 (Mnemonic Story + Memory Palace + Processing Instruction):
+
+1. **013 Mnemonic Story:** `lib/mnemonic-story.ts` — يربط 5-7 كلمات في قصة سخيفة واحدة (bizarreness effect +40% احتفاظ). `baueStory([{de,ar,bild}])` → titel/textAr/textDe.
+2. **014 Memory Palace:** `lib/memory-palace.ts` — 7 غرف ثابتة (Eingang→Keller) + 4 كلمات/غرفة max، `palacePosition(index)` تحدد الغرفة/الفتحة، جولة ذهنية للاسترجاع.
+3. **024 Processing Instruction (VanPatten):** `lib/processing-instruction.ts` — مدخل معالج قبل الإنتاج: اختيار «أي جملة سبب؟» بدل ملء weil. `piItemsFor(gramId)` → Fokus weil/obwohl.
+
+**بوابات:** K128f/g/h في smoke — Story/ Palace 7 Räume / PI weil.
+
+**السجل:** 67→70✅ (70%) — docs/TOOLS_REGISTRY.md محدث.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)

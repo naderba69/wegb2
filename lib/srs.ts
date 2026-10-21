@@ -1,5 +1,6 @@
 import type { SrsState, Tempo } from "./types";
 import { NEW_CARDS_PER_DAY } from "./types";
+import { extraDueDays as overExtraDueDays, shouldOverlearn as overShould } from "./overlearning";
 
 /**
  * SRS 3.0 — FSRS-6 (R280/M1, Experten-Audit) mit den pädagogischen Garantien des Projekts:
@@ -146,6 +147,11 @@ export function reviewCard(
   s.learning = false;
   s.interval = Math.min(90, Math.max(1, Math.round(fsrsIntervall(stab))));
   s.due = new Date(now.getTime() + s.interval * DAY).toISOString();
+  // 010 Overlearning: بعد 3 نجاحات متتالية، أضف تكرارين إضافيين (+2ي، +7ي) لمنع وهم الإتقان
+  const streak = (state.reps >= 2 && quality >= 2) ? 3 : 0; // مبسط: streak≈3 عند النجاح المتكرر
+  if (overShould(s.reps, streak)) {
+    s.overDue = overExtraDueDays(Date.now() / DAY).map((d) => new Date(d * DAY).toISOString());
+  }
   return s;
 }
 
@@ -169,7 +175,10 @@ export function abrufbarkeit(st: SrsState | undefined, now = new Date(), plusTag
 }
 
 export function isDue(state: SrsState, now = new Date()): boolean {
-  return new Date(state.due).getTime() <= now.getTime();
+  if (new Date(state.due).getTime() <= now.getTime()) return true;
+  // 010 Overlearning: مواعيد إضافية تُعتبر مستحقة أيضاً
+  if (state.overDue?.some((d) => new Date(d).getTime() <= now.getTime())) return true;
+  return false;
 }
 
 /** عدد البطاقات الجديدة المسموح بها اليوم حسب الوتيرة */

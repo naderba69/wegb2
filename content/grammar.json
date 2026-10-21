@@ -16113,5 +16113,257 @@
         "explanationAr": "الترتيب الثابت: فاعل ثم فعل ثم المكان: Ich wohne in Berlin."
       }
     ]
+  },
+  "b2-n-deklination": {
+    "id": "b2-n-deklination",
+    "titleDe": "N-Deklination: der Student, den Studenten",
+    "titleAr": "التصريف الضعيف للأسماء المذكرة (N-Deklination) — der Student → den Studenten",
+    "level": "B2",
+    "ziel": "تميّز 40 اسمًا مذكرًا ضعيفًا (Student/Kollege/Nachbar/Herr…) وتصرّفها بـ -(e)n في كل الحالات ما عدا نوميناتيف المفرد، وتتجنب الخطأ الشائع *den Student.",
+    "voraus": [
+      "b2-nominalstil",
+      "b1-genitiv"
+    ],
+    "anwendung": {
+      "ar": "اكتب 6 جمل تستخدم فيها 6 أسماء ضعيفة مختلفة في حالات إعرابية مختلفة (Akk/Dat/Gen) — ثم صححها.",
+      "de": "Schreibe 6 Sätze mit 6 verschiedenen N-Wörtern in verschiedenen Kasus (Akk/Dat/Gen).",
+      "candoIds": [
+        "B2-C2",
+        "B2-C5"
+      ]
+    },
+    "verify": [
+      {
+        "id": "b2-n-dekl-v1",
+        "type": "fill",
+        "promptDe": "Ich helfe ___ (der Nachbar) beim Umzug.",
+        "text": "Ich helfe ___ (der Nachbar) beim Umzug.",
+        "answer": [
+          "dem Nachbarn"
+        ],
+        "explanationAr": "helfen + Dativ → dem Nachbarn (N-Deklination: -n، الاستثناء غير القياسي)."
+      },
+      {
+        "id": "b2-n-dekl-v2",
+        "type": "mc",
+        "promptDe": "Kennst du ___ (der Kollege) von Anna?",
+        "options": [
+          "den Kollege",
+          "den Kollegen",
+          "dem Kollegen"
+        ],
+        "answer": "den Kollegen",
+        "explanationAr": "kennen + Akk → den Kollegen (N-Deklination -en)."
+      }
+    ],
+    "summaryAr": "قاعدة التصريف الضعيف (N-Deklination) تخصّ أسماءً مذكرة محددة تأخذ -(e)n في كل الحالات ما عدا نوميناتيف المفرد. القاعدة الذهبية: النهاية في المفرد (غير النوميناتيف) = نهاية الجمع. فإذا كان الجمع Studenten فالمفرد المنصوب/المجرور Studenten، وإذا كان الجمع Nachbarn فالمفرد Nachbarn. تشمل: 1) كل مذكر ينتهي بـ -e ويُسمّي إنسانًا/حيوانًا (Junge, Kollege, Kunde, Löwe, Franzose)، 2) لواحق لاتينية/يونانية -ent/-ant/-and/-ist/-at/-oge/-graf/-soph (Student, Präsident, Praktikant, Polizist, Soldat, Biologe)، 3) كلمات شاذة قليلة: Mensch, Herr, Nachbar, Bauer, Bär, Held, Prinz. الأخطاء الشائعة عند العرب: *den Student/*dem Kollege — لأن العربية لا تصرّف الاسم بهذه الطريقة فيكتبون النوميناتيف في كل موضع.",
+    "summaryDe": "N-Deklination: schwache Maskulina bekommen -(e)n in allen Kasus außer Nom. Sg. — Endung = Pluralendung.",
+    "rules": [
+      {
+        "de": "der Junge → den Jungen, dem Jungen, des Jungen (Plural: die Jungen)",
+        "ar": "مذكر -e للإنسان/الحيوان: Junge/Kollege/Kunde/Löwe/Franzose → كل الحالات -n"
+      },
+      {
+        "de": "der Student → den Studenten (Plural Studenten: -en → Singular -en)",
+        "ar": "-ent/-ant/-and: Student, Präsident, Elefant, Praktikant, Demonstrant → -en"
+      },
+      {
+        "de": "der Polizist → den Polizisten (Plural Polizisten)",
+        "ar": "-ist/-at/-oge/-graf/-soph: Polizist, Journalist, Soldat, Biologe, Fotograf, Philosoph → -en"
+      },
+      {
+        "de": "der Mensch → den Menschen; der Herr → den Herrn; der Nachbar → den Nachbarn (-n لا -en)",
+        "ar": "شواذ: Mensch/Herr/Nachbar/Bauer/Bär/Held/Prinz — الاستثناء Nachbar/Bauer/Herr تأخذ -n فقط لا -en في المفرد"
+      },
+      {
+        "de": "Nominativ Singular bleibt unverändert: der Student hilft mir (nicht *den Studenten!)",
+        "ar": "الاستثناء الوحيد: نوميناتيف المفرد لا يتغير — der Student ist hier (فاعل) لكن den Studenten sehe ich (مفعول)"
+      },
+      {
+        "de": "Herz (n): das Herz → des Herzens, dem Herzen (einzige N-Deklination im Neutrum)",
+        "ar": "حالة نادرة محايدة: das Herz → des Herzens (N-Deklination محايدة وحيدة — تُذكر للاكتمال)"
+      }
+    ],
+    "tables": [
+      {
+        "captionAr": "التصريف الضعيف القياسي (-en = نهاية الجمع -en)",
+        "headers": [
+          "Kasus",
+          "Singular",
+          "Plural",
+          "ملاحظة"
+        ],
+        "rows": [
+          [
+            "Nominativ",
+            "der Student",
+            "die Studenten",
+            "بدون إضافة (الحالة الوحيدة)"
+          ],
+          [
+            "Akkusativ",
+            "den Studenten",
+            "die Studenten",
+            "+en = جمع"
+          ],
+          [
+            "Dativ",
+            "dem Studenten",
+            "den Studenten",
+            "+en"
+          ],
+          [
+            "Genitiv",
+            "des Studenten",
+            "der Studenten",
+            "+en"
+          ]
+        ]
+      },
+      {
+        "captionAr": "الاستثناء -n (الجمع -n)",
+        "headers": [
+          "Kasus",
+          "Singular",
+          "Plural",
+          "ملاحظة"
+        ],
+        "rows": [
+          [
+            "Nominativ",
+            "der Nachbar",
+            "die Nachbarn",
+            "بدون إضافة"
+          ],
+          [
+            "Akkusativ",
+            "den Nachbarn",
+            "die Nachbarn",
+            "+n (الجمع -n)"
+          ],
+          [
+            "Dativ",
+            "dem Nachbarn",
+            "den Nachbarn",
+            "+n"
+          ],
+          [
+            "Genitiv",
+            "des Nachbarn",
+            "der Nachbarn",
+            "+n (قديمًا Nachbars أيضًا)"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "de": "Ich sehe den Studenten in der Bibliothek.",
+        "ar": "أرى الطالب في المكتبة — Akk → den Studenten."
+      },
+      {
+        "de": "Der Kollege hilft dem Kunden.",
+        "ar": "الزميل يساعد الزبون — dem Kunden (Dativ + N-Deklination)."
+      },
+      {
+        "de": "Die Frau des Präsidenten kommt morgen.",
+        "ar": "زوجة الرئيس تأتي غدًا — des Präsidenten (Genitiv)."
+      },
+      {
+        "de": "Ich spreche mit dem Nachbarn über den Lärm.",
+        "ar": "أتحدث مع الجار عن الضجيج — dem Nachbarn (-n)."
+      },
+      {
+        "de": "Kennst du den Journalisten aus Berlin?",
+        "ar": "هل تعرف الصحفي من برلين؟ — den Journalisten."
+      },
+      {
+        "de": "Das Herz des Patienten schlägt schnell.",
+        "ar": "قلب المريض ينبض سريعًا — des Patienten (و Herz محايد نادر)."
+      }
+    ],
+    "pitfalls": [
+      {
+        "de": "*Ich helfe den Student (falsch → dem Studenten, Dativ!)",
+        "ar": "الخطأ الشائع 1: نسيان -en في Dativ/Akk. الصواب: Ich helfe dem Studenten."
+      },
+      {
+        "de": "*den Nachbaren (falsch → den Nachbarn, nur -n!)",
+        "ar": "الخطأ 2: إضافة -en للاستثناءات -n: Nachbar → Nachbarn لا Nachbaren."
+      },
+      {
+        "de": "*der Studenten ist hier (falsch → der Student, Nominativ ohne Endung!)",
+        "ar": "الخطأ 3: إضافة -en في النوميناتيف الفاعل: der Student ist hier."
+      }
+    ],
+    "exercises": [
+      {
+        "id": "b2-n-dekl-e1",
+        "type": "fill",
+        "promptDe": "Ich suche ___ (der Praktikant) aus Hamburg.",
+        "text": "Ich suche ___ (der Praktikant) aus Hamburg.",
+        "answer": [
+          "den Praktikanten"
+        ],
+        "explanationAr": "suchen + Akk → den Praktikanten."
+      },
+      {
+        "id": "b2-n-dekl-e2",
+        "type": "fill",
+        "promptDe": "Die Meinung ___ (der Experte) ist wichtig.",
+        "text": "Die Meinung ___ (der Experte) ist wichtig.",
+        "answer": [
+          "des Experten"
+        ],
+        "explanationAr": "Genitiv → des Experten."
+      },
+      {
+        "id": "b2-n-dekl-e3",
+        "type": "fill",
+        "promptDe": "Wir sprechen mit ___ (der Kunde) über den Vertrag.",
+        "text": "Wir sprechen mit ___ (der Kunde) über den Vertrag.",
+        "answer": [
+          "dem Kunden"
+        ],
+        "explanationAr": "mit + Dativ → dem Kunden."
+      },
+      {
+        "id": "b2-n-dekl-e4",
+        "type": "fill",
+        "promptDe": "Hast du ___ (der Kollege) gesehen?",
+        "text": "Hast du ___ (der Kollege) gesehen?",
+        "answer": [
+          "den Kollegen"
+        ],
+        "explanationAr": "Akk → den Kollegen."
+      },
+      {
+        "id": "b2-n-dekl-e5",
+        "type": "mc",
+        "promptDe": "___ Herr Müller ist nicht da.",
+        "options": [
+          "Der Herr",
+          "Den Herrn",
+          "Dem Herrn"
+        ],
+        "answer": "Der Herr",
+        "explanationAr": "Nominativ (فاعل) لا إضافة: Der Herr Müller ist nicht da."
+      },
+      {
+        "id": "b2-n-dekl-e6",
+        "type": "umformung",
+        "quelleDe": "Der Polizist hilft dem Mann.",
+        "promptDe": "Setze 'Polizist' in den Akkusativ: Ich kenne ___ .",
+        "answer": "Ich kenne den Polizisten.",
+        "mussEnthalten": [
+          "polizisten"
+        ],
+        "darfNicht": [
+          "polizist hilft"
+        ],
+        "explanationAr": "Akk: den Polizisten.",
+        "points": 2
+      }
+    ]
   }
 }

@@ -276,6 +276,11 @@ export interface DayTask {
   fehlerItems?: { falsch: string; richtig: string; ar: string; art?: string }[];
   /** وسم تدريب النقطة الضعيفة */
   schwach?: string;
+  /** 013 Story / 014 Palace / 024 PI / 011 Schlaf — إثراءات بيداغوجية */
+  storyId?: string;
+  palaceRaum?: string;
+  piHinweis?: string;
+  schlafTipp?: string;
   /** 🎯 تحقق استقلال: ID الدرس الذي تتحقق منه هذه المهمة (مهمة جديدة لا إعادة) */
   verifyFor?: string;
 }
@@ -349,6 +354,8 @@ export interface SrsState {
   prod?: number;
   /** تاريخ إدخال البطاقة (لمراجعة أولى بعد 24 ساعة) */
   introduced?: string;
+  /** 010 Overlearning: مواعيد الترسيخ الزائد الإضافية (أيام) */
+  overDue?: string[];
 }
 
 /** خطأ مسجَّل في دفتر الأخطاء */
@@ -447,6 +454,8 @@ export interface Progress {
     /** 🎙️ التعرّف السحابي على الكلام (Web Speech API) — يُرسِل الصوتَ إلى خدمة المتصفّح الخارجية.
      *  اختياريٌّ صريح: إن عُطِّل فُتح المسارُ المحلّيُّ البديل ولا يُحسبُ شيءٌ في الشبكة. */
     cloudSpeech?: boolean;
+    /** 011 Schlaf-Reminder aktiv */
+    schlafReminder?: boolean;
     /** أُكِّد اختبار تحديد المستوى */
     placed?: boolean;
     /** 🪪 نتيجة التشخيص التكيّفي (M3/R183): تقدير كلّ مهارة واليوم المطبَّق وتاريخه — تقدير آلي من بنوك التطبيق لا اختبار رسمي */
@@ -494,6 +503,8 @@ export interface Progress {
   xp?: number;
   /** 🔒 عقد الانضباط اليومي (Modul O) — وقّع، إغلاق، غرامة رمزية من سجلّ المتعلم نفسه */
   kontrakt?: Kontrakt;
+  /** 072 Portfolio ELP */
+  portfolio?: { eintraege: { id: string; typ: string; level: string; datum: string; titelDe: string }[] };
   /** الأوسمة المكسوبة: id ← تاريخ المنح */
   abzeichen?: Record<string, string>;
   /** سجلّ الكفاءات الموحّد: محاولات موزّعة على شبكة CEFR (logK) */
