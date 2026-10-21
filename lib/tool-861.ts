@@ -1,8 +1,8 @@
 /**
- * 861 — Tool 861 Concept — مفهوم 861
- * Research 861: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 861 — Enactment Engelkamp — تمثيل إنغلكامب
+ * Engelkamp 1998: classroom application
+ * Level: A0-A2 | Bloom: طبّق | Family: الذاكرة
  */
-export const TOOL_861 = { id: 861, titleDe: "Tool 861 Concept", titleAr: "مفهوم 861", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 861", desc: "Tool 861" } as const;
+export const TOOL_861 = { id: 861, titleDe: "Enactment Engelkamp", titleAr: "تمثيل إنغلكامب", family: "الذاكرة", bloom: "طبّق", level: "A0-A2", research: "Engelkamp 1998", desc: "Enactment Engelkamp" } as const;
 export function tool861Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool861Check(v:number):boolean{return v>0;}

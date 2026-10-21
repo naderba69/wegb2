@@ -904,36 +904,36 @@
 | 848 | الذاكرة | Levels of Processing — مستويات | ✅حقيقي | A1-B2 | فهم | `lib/tool-848.ts` | R384 |
 | 849 | الذاكرة | Elaboration Craik — تفصيل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-849.ts` | R384 |
 | 850 | الذاكرة | Generation Effect — توليد | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-850.ts` | R384 |
-| 851 | طرائق | Tool 851 Concept — مفهوم 851 | ✅حقيقي | A1-B2 | فهم | `lib/tool-851.ts` | R372 |
-| 852 | طرائق | Tool 852 Concept — مفهوم 852 | ✅حقيقي | A1-B2 | فهم | `lib/tool-852.ts` | R372 |
-| 853 | طرائق | Tool 853 Concept — مفهوم 853 | ✅حقيقي | A1-B2 | فهم | `lib/tool-853.ts` | R372 |
-| 854 | طرائق | Tool 854 Concept — مفهوم 854 | ✅حقيقي | A1-B2 | فهم | `lib/tool-854.ts` | R372 |
-| 855 | طرائق | Tool 855 Concept — مفهوم 855 | ✅حقيقي | A1-B2 | فهم | `lib/tool-855.ts` | R372 |
-| 856 | طرائق | Tool 856 Concept — مفهوم 856 | ✅حقيقي | A1-B2 | فهم | `lib/tool-856.ts` | R372 |
-| 857 | طرائق | Tool 857 Concept — مفهوم 857 | ✅حقيقي | A1-B2 | فهم | `lib/tool-857.ts` | R372 |
-| 858 | طرائق | Tool 858 Concept — مفهوم 858 | ✅حقيقي | A1-B2 | فهم | `lib/tool-858.ts` | R372 |
-| 859 | طرائق | Tool 859 Concept — مفهوم 859 | ✅حقيقي | A1-B2 | فهم | `lib/tool-859.ts` | R372 |
-| 860 | طرائق | Tool 860 Concept — مفهوم 860 | ✅حقيقي | A1-B2 | فهم | `lib/tool-860.ts` | R372 |
-| 861 | طرائق | Tool 861 Concept — مفهوم 861 | ✅حقيقي | A1-B2 | فهم | `lib/tool-861.ts` | R372 |
-| 862 | طرائق | Tool 862 Concept — مفهوم 862 | ✅حقيقي | A1-B2 | فهم | `lib/tool-862.ts` | R372 |
-| 863 | طرائق | Tool 863 Concept — مفهوم 863 | ✅حقيقي | A1-B2 | فهم | `lib/tool-863.ts` | R372 |
-| 864 | طرائق | Tool 864 Concept — مفهوم 864 | ✅حقيقي | A1-B2 | فهم | `lib/tool-864.ts` | R372 |
-| 865 | طرائق | Tool 865 Concept — مفهوم 865 | ✅حقيقي | A1-B2 | فهم | `lib/tool-865.ts` | R372 |
-| 866 | طرائق | Tool 866 Concept — مفهوم 866 | ✅حقيقي | A1-B2 | فهم | `lib/tool-866.ts` | R372 |
-| 867 | طرائق | Tool 867 Concept — مفهوم 867 | ✅حقيقي | A1-B2 | فهم | `lib/tool-867.ts` | R372 |
-| 868 | طرائق | Tool 868 Concept — مفهوم 868 | ✅حقيقي | A1-B2 | فهم | `lib/tool-868.ts` | R372 |
-| 869 | طرائق | Tool 869 Concept — مفهوم 869 | ✅حقيقي | A1-B2 | فهم | `lib/tool-869.ts` | R372 |
-| 870 | طرائق | Tool 870 Concept — مفهوم 870 | ✅حقيقي | A1-B2 | فهم | `lib/tool-870.ts` | R372 |
-| 871 | طرائق | Tool 871 Concept — مفهوم 871 | ✅حقيقي | A1-B2 | فهم | `lib/tool-871.ts` | R372 |
-| 872 | طرائق | Tool 872 Concept — مفهوم 872 | ✅حقيقي | A1-B2 | فهم | `lib/tool-872.ts` | R372 |
-| 873 | طرائق | Tool 873 Concept — مفهوم 873 | ✅حقيقي | A1-B2 | فهم | `lib/tool-873.ts` | R372 |
-| 874 | طرائق | Tool 874 Concept — مفهوم 874 | ✅حقيقي | A1-B2 | فهم | `lib/tool-874.ts` | R372 |
-| 875 | طرائق | Tool 875 Concept — مفهوم 875 | ✅حقيقي | A1-B2 | فهم | `lib/tool-875.ts` | R372 |
-| 876 | طرائق | Tool 876 Concept — مفهوم 876 | ✅حقيقي | A1-B2 | فهم | `lib/tool-876.ts` | R372 |
-| 877 | طرائق | Tool 877 Concept — مفهوم 877 | ✅حقيقي | A1-B2 | فهم | `lib/tool-877.ts` | R372 |
-| 878 | طرائق | Tool 878 Concept — مفهوم 878 | ✅حقيقي | A1-B2 | فهم | `lib/tool-878.ts` | R372 |
-| 879 | طرائق | Tool 879 Concept — مفهوم 879 | ✅حقيقي | A1-B2 | فهم | `lib/tool-879.ts` | R372 |
-| 880 | طرائق | Tool 880 Concept — مفهوم 880 | ✅حقيقي | A1-B2 | فهم | `lib/tool-880.ts` | R372 |
+| 851 | الذاكرة | Testing Effect Karpicke — اختبار | ✅حقيقي | A1-B2 | قيّم | `lib/tool-851.ts` | R385 |
+| 852 | الذاكرة | Retrieval Practice — استرجاع | ✅حقيقي | A1-B2 | طبّق | `lib/tool-852.ts` | R385 |
+| 853 | الذاكرة | Distributed Practice — موزعة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-853.ts` | R385 |
+| 854 | الذاكرة | Interleaving Rohrer — تداخل | ✅حقيقي | A1-B2 | حلّل | `lib/tool-854.ts` | R385 |
+| 855 | الذاكرة | Variability Encoding — تنوع | ✅حقيقي | A1-B2 | فهم | `lib/tool-855.ts` | R385 |
+| 856 | الذاكرة | Context Dependent Memory — سياقية | ✅حقيقي | A1-B2 | فهم | `lib/tool-856.ts` | R385 |
+| 857 | الذاكرة | State Dependent Memory — حالة | ✅حقيقي | A1-B2 | فهم | `lib/tool-857.ts` | R385 |
+| 858 | الذاكرة | Mood Congruent Memory — مزاجية | ✅حقيقي | A1-B2 | فهم | `lib/tool-858.ts` | R385 |
+| 859 | تلقين | Embodied Cognition Glenberg — مجسدة | ✅حقيقي | A1-B2 | فهم | `lib/tool-859.ts` | R385 |
+| 860 | تلقين | Grounded Cognition Barsalou — مؤرضة | ✅حقيقي | A1-B2 | فهم | `lib/tool-860.ts` | R385 |
+| 861 | الذاكرة | Enactment Engelkamp — تمثيل | ✅حقيقي | A0-A2 | طبّق | `lib/tool-861.ts` | R385 |
+| 862 | الذاكرة | Action Memory — فعل | ✅حقيقي | A0-B1 | طبّق | `lib/tool-862.ts` | R385 |
+| 863 | الذاكرة | Production Effect MacLeod — إنتاج | ✅حقيقي | A1-B2 | طبّق | `lib/tool-863.ts` | R385 |
+| 864 | الذاكرة | Generation Effect 2 — توليد | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-864.ts` | R385 |
+| 865 | الذاكرة | Self-Reference Rogers — ذاتي | ✅حقيقي | A1-B2 | فهم | `lib/tool-865.ts` | R385 |
+| 866 | الذاكرة | Survival Processing — بقاء | ✅حقيقي | A1-B2 | فهم | `lib/tool-866.ts` | R385 |
+| 867 | الذاكرة | Animacy Effect — حيوية | ✅حقيقي | A1-B2 | فهم | `lib/tool-867.ts` | R385 |
+| 868 | الذاكرة | Bizarreness Effect — غرابة | ✅حقيقي | A1-B2 | فهم | `lib/tool-868.ts` | R385 |
+| 869 | تلقين | Humor Effect — فكاهة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-869.ts` | R385 |
+| 870 | الذاكرة | Von Restorff Effect — فون رسطورف | ✅حقيقي | A1-B2 | فهم | `lib/tool-870.ts` | R385 |
+| 871 | الذاكرة | Spacing Effect Ebbinghaus — تباعد | ✅حقيقي | A1-B2 | طبّق | `lib/tool-871.ts` | R385 |
+| 872 | الذاكرة | Lag Effect Cepeda — تأخير | ✅حقيقي | A1-B2 | حلّل | `lib/tool-872.ts` | R385 |
+| 873 | الذاكرة | Forgetting Curve Ebbinghaus — نسيان | ✅حقيقي | A1-B2 | حلّل | `lib/tool-873.ts` | R385 |
+| 874 | الذاكرة | Desirable Difficulties Bjork — صعوبات | ✅حقيقي | A1-B2 | حلّل | `lib/tool-874.ts` | R385 |
+| 875 | الذاكرة | Transfer Appropriate Processing — مناسبة | ✅حقيقي | A1-B2 | فهم | `lib/tool-875.ts` | R385 |
+| 876 | الذاكرة | Encoding Specificity Tulving — خصوصية | ✅حقيقي | A1-B2 | فهم | `lib/tool-876.ts` | R385 |
+| 877 | الذاكرة | Levels of Processing 2 — مستويات | ✅حقيقي | A1-B2 | حلّل | `lib/tool-877.ts` | R385 |
+| 878 | الذاكرة | Involvement Load Laufer — انخراط | ✅حقيقي | A1-B2 | قيّم | `lib/tool-878.ts` | R385 |
+| 879 | الذاكرة | Technique Feature Nation — سمة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-879.ts` | R385 |
+| 880 | طرائق | Four Strands Nation — خيوط | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-880.ts` | R385 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (881→980) — إكمال جماعي بنفس القواعد
 | 881 | طرائق | Tool 881 Concept — مفهوم 881 | ✅حقيقي | A1-B2 | فهم | `lib/tool-881.ts` | R372 |
