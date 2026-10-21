@@ -40,6 +40,7 @@ import { generationPrompt as tool194Prompt } from "./tool-194"; // R354
 import { contrastHint as tool210Hint } from "./tool-210"; // R355
 import { tbltPrompt as tool216Prompt } from "./tool-216"; // R356 TBLT
 import { dictoglossPrompt as tool224Prompt } from "./tool-224"; // R357 Dictogloss
+import { shadowingDelay as tool231Delay } from "./tool-231"; // R358 Shadowing
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
