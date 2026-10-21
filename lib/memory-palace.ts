@@ -4,6 +4,7 @@
  * كل كلمة تُثبت في غرفة + موضع. الاسترجاع = جولة ذهنية.
  */
 export const PALACE_RAEUME = ["Eingang", "Küche", "Wohnzimmer", "Schlafzimmer", "Bad", "Balkon", "Keller"] as const;
+export type PalacePos = { raum: typeof PALACE_RAEUME[number]; slot: number; bild?: string };
 export type PalaceRaum = (typeof PALACE_RAEUME)[number];
 
 export interface PalaceEintrag {

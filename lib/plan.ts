@@ -28,6 +28,10 @@ import {
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
 import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B2_DECKEL_MIN } from "./phasen";
+import { inSchlafFenster, schlafEmpfehlung } from "./schlaf";
+import { baueStory } from "./mnemonic-story";
+import { palacePosition } from "./memory-palace";
+import { piItemsFor } from "./processing-instruction";
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -601,6 +605,11 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       });
     });
 
+  // 011 Schlaf: نافذة المساء — أضف تلميحاً ولو بطاقة مراجعة قصيرة
+  const jetztStunde = new Date().getHours() + new Date().getMinutes() / 60;
+  const schlafOn = inSchlafFenster(jetztStunde) && (progress.settings.schlafReminder !== false);
+  const _schlafTipp = schlafOn ? schlafEmpfehlung(5, jetztStunde) : null; void _schlafTipp;
+
   const tid = (n: number) => `${day}:t${n}`;
   const phaseTopics = PHASE_TOPICS[phase];
   const grammarAssignment = grammarAssignmentForDay(day, progress);
@@ -705,6 +714,9 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           ? `Wiederholung: ${topicTitle}`
           : legacyScheduleDay ? topicTitle : `Neue Grammatik: ${topicTitle}`;
         const statusArabic = assignment.status === "new" ? "قاعدة جديدة" : "مراجعة وتثبيت";
+        // 024 Processing Instruction: if topic is weil/dass/obwohl, attach PI hint
+        let piHinweis: string | undefined;
+        try { const pi = piItemsFor(topicId); if (pi.length) piHinweis = pi[0].promptDe; } catch {}
         tasks.push({
           id: tid(2),
           kind: "grammatik",
@@ -712,11 +724,28 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           titleAr: `${statusArabic}: ${grammarMap[topicId]?.titleAr ?? ""}`,
           minutes: 30,
           topicId,
+          piHinweis,
         });
       }
+      // 013 Mnemonic Story + 014 Palace: enrich wortschatz with story/palace hints (lightweight, non-breaking)
+      const deckForStory = weekday === 1 ? phaseDeckA : phaseDeckB;
+      let storyHint: string | undefined; let palaceHint: string | undefined;
+      try {
+        const deckData = getDeck(deckForStory);
+        const deckCards = deckData?.cards?.slice(0, 3) ?? [];
+        if (deckCards.length >= 2) {
+          const story = baueStory(deckCards.map((c: any) => ({ de: c.de, ar: c.ar, bild: c.de })));
+          storyHint = story.textAr.slice(0, 120);
+          const pos = palacePosition((day % 20));
+          palaceHint = pos ? `${pos.raum} #${pos.slot}` : undefined;
+        }
+      } catch {}
       tasks.push({
         id: tid(3),
         kind: "wortschatz",
+        // attach hints
+        storyId: storyHint,
+        palaceRaum: palaceHint,
         titleDe: "Neue Wörter",
         titleAr: "مفردات جديدة + تثبيت",
         minutes: 25,
