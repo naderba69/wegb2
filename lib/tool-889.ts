@@ -1,8 +1,8 @@
 /**
- * 889 — Tool 889 Concept — مفهوم 889
- * Research 889: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 889 — Corpus Consultation — استشارة مدونة
+ * Yoon 2011: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_889 = { id: 889, titleDe: "Tool 889 Concept", titleAr: "مفهوم 889", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 889", desc: "Tool 889" } as const;
+export const TOOL_889 = { id: 889, titleDe: "Corpus Consultation", titleAr: "استشارة مدونة", family: "طرائق", bloom: "حلّل", level: "B1-B2", research: "Yoon 2011", desc: "Corpus Consultation" } as const;
 export function tool889Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool889Check(v:number):boolean{return v>0;}

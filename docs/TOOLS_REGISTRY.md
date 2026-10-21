@@ -936,36 +936,36 @@
 | 880 | طرائق | Four Strands Nation — خيوط | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-880.ts` | R385 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (881→980) — إكمال جماعي بنفس القواعد
-| 881 | طرائق | Tool 881 Concept — مفهوم 881 | ✅حقيقي | A1-B2 | فهم | `lib/tool-881.ts` | R372 |
-| 882 | طرائق | Tool 882 Concept — مفهوم 882 | ✅حقيقي | A1-B2 | فهم | `lib/tool-882.ts` | R372 |
-| 883 | طرائق | Tool 883 Concept — مفهوم 883 | ✅حقيقي | A1-B2 | فهم | `lib/tool-883.ts` | R372 |
-| 884 | طرائق | Tool 884 Concept — مفهوم 884 | ✅حقيقي | A1-B2 | فهم | `lib/tool-884.ts` | R372 |
-| 885 | طرائق | Tool 885 Concept — مفهوم 885 | ✅حقيقي | A1-B2 | فهم | `lib/tool-885.ts` | R372 |
-| 886 | طرائق | Tool 886 Concept — مفهوم 886 | ✅حقيقي | A1-B2 | فهم | `lib/tool-886.ts` | R372 |
-| 887 | طرائق | Tool 887 Concept — مفهوم 887 | ✅حقيقي | A1-B2 | فهم | `lib/tool-887.ts` | R372 |
-| 888 | طرائق | Tool 888 Concept — مفهوم 888 | ✅حقيقي | A1-B2 | فهم | `lib/tool-888.ts` | R372 |
-| 889 | طرائق | Tool 889 Concept — مفهوم 889 | ✅حقيقي | A1-B2 | فهم | `lib/tool-889.ts` | R372 |
-| 890 | طرائق | Tool 890 Concept — مفهوم 890 | ✅حقيقي | A1-B2 | فهم | `lib/tool-890.ts` | R372 |
-| 891 | طرائق | Tool 891 Concept — مفهوم 891 | ✅حقيقي | A1-B2 | فهم | `lib/tool-891.ts` | R372 |
-| 892 | طرائق | Tool 892 Concept — مفهوم 892 | ✅حقيقي | A1-B2 | فهم | `lib/tool-892.ts` | R372 |
-| 893 | طرائق | Tool 893 Concept — مفهوم 893 | ✅حقيقي | A1-B2 | فهم | `lib/tool-893.ts` | R372 |
-| 894 | طرائق | Tool 894 Concept — مفهوم 894 | ✅حقيقي | A1-B2 | فهم | `lib/tool-894.ts` | R372 |
-| 895 | طرائق | Tool 895 Concept — مفهوم 895 | ✅حقيقي | A1-B2 | فهم | `lib/tool-895.ts` | R372 |
-| 896 | طرائق | Tool 896 Concept — مفهوم 896 | ✅حقيقي | A1-B2 | فهم | `lib/tool-896.ts` | R372 |
-| 897 | طرائق | Tool 897 Concept — مفهوم 897 | ✅حقيقي | A1-B2 | فهم | `lib/tool-897.ts` | R372 |
-| 898 | طرائق | Tool 898 Concept — مفهوم 898 | ✅حقيقي | A1-B2 | فهم | `lib/tool-898.ts` | R372 |
-| 899 | طرائق | Tool 899 Concept — مفهوم 899 | ✅حقيقي | A1-B2 | فهم | `lib/tool-899.ts` | R372 |
-| 900 | طرائق | Tool 900 Concept — مفهوم 900 | ✅حقيقي | A1-B2 | فهم | `lib/tool-900.ts` | R372 |
-| 901 | طرائق | Tool 901 Concept — مفهوم 901 | ✅حقيقي | A1-B2 | فهم | `lib/tool-901.ts` | R372 |
-| 902 | طرائق | Tool 902 Concept — مفهوم 902 | ✅حقيقي | A1-B2 | فهم | `lib/tool-902.ts` | R372 |
-| 903 | طرائق | Tool 903 Concept — مفهوم 903 | ✅حقيقي | A1-B2 | فهم | `lib/tool-903.ts` | R372 |
-| 904 | طرائق | Tool 904 Concept — مفهوم 904 | ✅حقيقي | A1-B2 | فهم | `lib/tool-904.ts` | R372 |
-| 905 | طرائق | Tool 905 Concept — مفهوم 905 | ✅حقيقي | A1-B2 | فهم | `lib/tool-905.ts` | R372 |
-| 906 | طرائق | Tool 906 Concept — مفهوم 906 | ✅حقيقي | A1-B2 | فهم | `lib/tool-906.ts` | R372 |
-| 907 | طرائق | Tool 907 Concept — مفهوم 907 | ✅حقيقي | A1-B2 | فهم | `lib/tool-907.ts` | R372 |
-| 908 | طرائق | Tool 908 Concept — مفهوم 908 | ✅حقيقي | A1-B2 | فهم | `lib/tool-908.ts` | R372 |
-| 909 | طرائق | Tool 909 Concept — مفهوم 909 | ✅حقيقي | A1-B2 | فهم | `lib/tool-909.ts` | R372 |
-| 910 | طرائق | Tool 910 Concept — مفهوم 910 | ✅حقيقي | A1-B2 | فهم | `lib/tool-910.ts` | R372 |
+| 881 | طرائق | Meaning-Focused Input Nation — مدخلات | ✅حقيقي | A1-B2 | فهم | `lib/tool-881.ts` | R386 |
+| 882 | طرائق | Meaning-Focused Output — مخرجات | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-882.ts` | R386 |
+| 883 | طرائق | Language-Focused Learning — مركّز | ✅حقيقي | A1-B2 | حلّل | `lib/tool-883.ts` | R386 |
+| 884 | طرائق | Fluency Development — طلاقة | ✅حقيقي | A2-B2 | طبّق | `lib/tool-884.ts` | R386 |
+| 885 | الذاكرة | Vocabulary Learning Strategies Gu — غو | ✅حقيقي | A1-B2 | حلّل | `lib/tool-885.ts` | R386 |
+| 886 | الذاكرة | Vocabulary Strategies Schmitt — شميت | ✅حقيقي | A1-B2 | حلّل | `lib/tool-886.ts` | R386 |
+| 887 | الذاكرة | Guessing from Context — تخمين | ✅حقيقي | A1-B2 | طبّق | `lib/tool-887.ts` | R386 |
+| 888 | الذاكرة | Dictionary Use Summers — قاموس | ✅حقيقي | A1-B2 | طبّق | `lib/tool-888.ts` | R386 |
+| 889 | طرائق | Corpus Consultation — استشارة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-889.ts` | R386 |
+| 890 | طرائق | Data-Driven Learning Johns adv — بيانات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-890.ts` | R386 |
+| 891 | طرائق | Concordancing Tribble — توافق | ✅حقيقي | B1-B2 | حلّل | `lib/tool-891.ts` | R386 |
+| 892 | طرائق | Pattern Hunting — صيد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-892.ts` | R386 |
+| 893 | الذاكرة | Noticing Collocation — تصاحب | ✅حقيقي | B1-B2 | فهم | `lib/tool-893.ts` | R386 |
+| 894 | الذاكرة | Lexical Notebook rev — دفتر | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-894.ts` | R386 |
+| 895 | تقويم | Vocabulary Portfolio — محفظة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-895.ts` | R386 |
+| 896 | SLA | Word Formation Bauer — تكوين | ✅حقيقي | B1-B2 | حلّل | `lib/tool-896.ts` | R386 |
+| 897 | SLA | Affixation Bauer — إلصاق | ✅حقيقي | A2-B2 | فهم | `lib/tool-897.ts` | R386 |
+| 898 | SLA | Compounding Booij — تركيب | ✅حقيقي | B1-B2 | فهم | `lib/tool-898.ts` | R386 |
+| 899 | SLA | Conversion Bauer — تحويل | ✅حقيقي | B1-B2 | فهم | `lib/tool-899.ts` | R386 |
+| 900 | SLA | Blending Lehrer — مزج | ✅حقيقي | B1-B2 | فهم | `lib/tool-900.ts` | R386 |
+| 901 | SLA | Clipping Lappe — اقتطاع | ✅حقيقي | A1-B2 | فهم | `lib/tool-901.ts` | R386 |
+| 902 | SLA | Back-Formation — عكسي | ✅حقيقي | B1-B2 | فهم | `lib/tool-902.ts` | R386 |
+| 903 | طرائق | Acronymy Cannon — اختصار | ✅حقيقي | B1-B2 | فهم | `lib/tool-903.ts` | R386 |
+| 904 | Immersion | Neologism Metcalf — محدثات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-904.ts` | R386 |
+| 905 | Immersion | Loanwords Haspelmath — مقترضات | ✅حقيقي | A1-B2 | فهم | `lib/tool-905.ts` | R386 |
+| 906 | SLA | Code-Switching Cost — تكلفة | ✅حقيقي | A1-B2 | فهم | `lib/tool-906.ts` | R386 |
+| 907 | Immersion | Borrowing Myers-Scotton — اقتراض | ✅حقيقي | A1-B2 | فهم | `lib/tool-907.ts` | R386 |
+| 908 | Immersion | Language Contact Thomason — اتصال | ✅حقيقي | B1-B2 | حلّل | `lib/tool-908.ts` | R386 |
+| 909 | Immersion | Pidgins Creoles — رطانات | ✅حقيقي | B1-B2 | فهم | `lib/tool-909.ts` | R386 |
+| 910 | Immersion | Global English Jenkins — عالمية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-910.ts` | R386 |
 | 911 | طرائق | Tool 911 Concept — مفهوم 911 | ✅حقيقي | A1-B2 | فهم | `lib/tool-911.ts` | R372 |
 | 912 | طرائق | Tool 912 Concept — مفهوم 912 | ✅حقيقي | A1-B2 | فهم | `lib/tool-912.ts` | R372 |
 | 913 | طرائق | Tool 913 Concept — مفهوم 913 | ✅حقيقي | A1-B2 | فهم | `lib/tool-913.ts` | R372 |

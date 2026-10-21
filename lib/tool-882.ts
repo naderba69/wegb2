@@ -1,8 +1,8 @@
 /**
- * 882 — Tool 882 Concept — مفهوم 882
- * Research 882: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 882 — Meaning-Focused Output — مخرجات معنوية
+ * Nation 2007: classroom application
+ * Level: A2-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_882 = { id: 882, titleDe: "Tool 882 Concept", titleAr: "مفهوم 882", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 882", desc: "Tool 882" } as const;
+export const TOOL_882 = { id: 882, titleDe: "Meaning-Focused Output", titleAr: "مخرجات معنوية", family: "طرائق", bloom: "أنشئ", level: "A2-B2", research: "Nation 2007", desc: "Meaning-Focused Output" } as const;
 export function tool882Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool882Check(v:number):boolean{return v>0;}

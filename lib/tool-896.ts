@@ -1,8 +1,8 @@
 /**
- * 896 — Tool 896 Concept — مفهوم 896
- * Research 896: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 896 — Word Formation Bauer — تكوين كلمات باور
+ * Bauer 1983: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_896 = { id: 896, titleDe: "Tool 896 Concept", titleAr: "مفهوم 896", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 896", desc: "Tool 896" } as const;
+export const TOOL_896 = { id: 896, titleDe: "Word Formation Bauer", titleAr: "تكوين كلمات باور", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Bauer 1983", desc: "Word Formation Bauer" } as const;
 export function tool896Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool896Check(v:number):boolean{return v>0;}
