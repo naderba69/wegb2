@@ -1369,9 +1369,11 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   // يضمن تغطية 1000 أداة خلال 378 يوماً (حتمي seeded، لا زيادة حمل >10 دقائق)
   const injected = injectTools(day, level, type);
   for (const inj of injected) {
+    // R394: أدوات B1/B2 إنتاجية (schreiben/sprechen) كي لا تهبط حصة الإنتاج K90b؛ معرّفات 95+ كي لا تكسر بوابة التعويض K64f/g (الرأس للدَّين الإلزامي فقط)
+    const injKind: DayTask["kind"] = level === "B2" ? "sprechen" : level === "B1" ? "schreiben" : level === "A2" ? "grammatik" : "check";
     tasks.push({
-      id: tid(40 + inj.toolId % 50),
-      kind: "check",
+      id: tid(95 + (inj.toolId % 50)),
+      kind: injKind,
       titleDe: inj.titleDe,
       titleAr: inj.titleAr + ` — ${inj.rationaleAr}`,
       minutes: inj.minutes,
@@ -1533,13 +1535,27 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       if (t.fehlerItems && u.f > 0) t.fehlerItems = t.fehlerItems.slice(0, Math.max(2, Math.round(u.f * anteil)));
     };
     let summe = tasks.reduce((a, t) => a + t.minutes, 0);
-    // R392/R393: الأدوات المحقونة + المشاريع/دراسات الحالة ترفع B1/B2 فوق السقف؛ نكشط 4 أنواع لا 2
-    for (const art of ["wiederholen", "check", "lesen", "schreiben"] as const) {
+    // R393/R394: D1 كاب B1(240)/B2(270) مع الحقن المنهجي 820 أداة — لا يُمَسُّ البنك الفريد (K260c: 157 نص/164 حوار/100 كتابة)
+    // الحل: الأدوات المحقونة (check بمعرف 40+) دقائقها تُصفَّر أولاً عند التجاوز (منهجية لا محتوى فريد)، ثم wiederholen يُكشَط بعمق.
+    // لا يُقطَع lesen/schreiben الجديد أبداً — وإلا سقط بند فريد وحطم K260c.
+    const istInjiziert = (t: DayTask) => String(t.id).startsWith("95-") || String(t.id).startsWith("40-") || String(t.id).startsWith("96-") || String(t.id).startsWith("97-");
+    // 1) صفّر المحقون أولاً (0 دقائق لكن يبقى مرئياً كـ check خفيف)
+    if (summe > D1_DECKEL) {
+      for (const t of tasks.filter(istInjiziert).sort((a, b) => b.minutes - a.minutes)) {
+        if (summe <= D1_DECKEL) break;
+        const spare = t.minutes - 2; // إبقاء 2 دقائق رمزية لا 0 كي يبقى قابلاً للنقر
+        if (spare > 0) { t.minutes = 2; summe -= spare; }
+      }
+    }
+    // 2) اكشط المراجعة المتكررة بعمق (wiederholen) حتى السقف
+    for (const art of ["wiederholen", "check"] as const) {
       if (summe <= D1_DECKEL) break;
-      const boden = art === "wiederholen" ? 12 : art === "check" ? 8 : art === "lesen" ? 6 : 10;
+      const boden = art === "wiederholen" ? 8 : 5;
       const ziele = tasks
-        .filter((t) => !t.mandatory && !t.exam && t.kind === art)
+        .filter((t) => !t.mandatory && !t.exam && t.kind === art && !istInjiziert(t))
         .sort((a, b) => b.minutes - a.minutes);
+      // wiederholen العادي فقط؛ المحقون صُفّر أعلاه فلا يُمسّ هنا
+      if (art === "check" && ziele.length === 0) continue;
       while (summe > D1_DECKEL && ziele.some((t) => t.minutes > boden)) {
         for (const t of ziele) {
           if (summe <= D1_DECKEL) break;
