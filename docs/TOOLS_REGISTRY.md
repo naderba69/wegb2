@@ -752,36 +752,36 @@
 | 698 | طرائق | Implicit Pragmatic Instruction — ضمني | ✅حقيقي | B1-B2 | طبّق | `lib/tool-698.ts` | R379 |
 | 699 | طرائق | Conventional Expressions — اصطلاحية | ✅حقيقي | B1-B2 | تذكّر | `lib/tool-699.ts` | R379 |
 | 700 | طرائق | Routine Formulas — روتينية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-700.ts` | R379 |
-| 701 | طرائق | Tool 701 Concept — مفهوم 701 | ✅حقيقي | A1-B2 | فهم | `lib/tool-701.ts` | R372 |
-| 702 | طرائق | Tool 702 Concept — مفهوم 702 | ✅حقيقي | A1-B2 | فهم | `lib/tool-702.ts` | R372 |
-| 703 | طرائق | Tool 703 Concept — مفهوم 703 | ✅حقيقي | A1-B2 | فهم | `lib/tool-703.ts` | R372 |
-| 704 | طرائق | Tool 704 Concept — مفهوم 704 | ✅حقيقي | A1-B2 | فهم | `lib/tool-704.ts` | R372 |
-| 705 | طرائق | Tool 705 Concept — مفهوم 705 | ✅حقيقي | A1-B2 | فهم | `lib/tool-705.ts` | R372 |
-| 706 | طرائق | Tool 706 Concept — مفهوم 706 | ✅حقيقي | A1-B2 | فهم | `lib/tool-706.ts` | R372 |
-| 707 | طرائق | Tool 707 Concept — مفهوم 707 | ✅حقيقي | A1-B2 | فهم | `lib/tool-707.ts` | R372 |
-| 708 | طرائق | Tool 708 Concept — مفهوم 708 | ✅حقيقي | A1-B2 | فهم | `lib/tool-708.ts` | R372 |
-| 709 | طرائق | Tool 709 Concept — مفهوم 709 | ✅حقيقي | A1-B2 | فهم | `lib/tool-709.ts` | R372 |
-| 710 | طرائق | Tool 710 Concept — مفهوم 710 | ✅حقيقي | A1-B2 | فهم | `lib/tool-710.ts` | R372 |
-| 711 | طرائق | Tool 711 Concept — مفهوم 711 | ✅حقيقي | A1-B2 | فهم | `lib/tool-711.ts` | R372 |
-| 712 | طرائق | Tool 712 Concept — مفهوم 712 | ✅حقيقي | A1-B2 | فهم | `lib/tool-712.ts` | R372 |
-| 713 | طرائق | Tool 713 Concept — مفهوم 713 | ✅حقيقي | A1-B2 | فهم | `lib/tool-713.ts` | R372 |
-| 714 | طرائق | Tool 714 Concept — مفهوم 714 | ✅حقيقي | A1-B2 | فهم | `lib/tool-714.ts` | R372 |
-| 715 | طرائق | Tool 715 Concept — مفهوم 715 | ✅حقيقي | A1-B2 | فهم | `lib/tool-715.ts` | R372 |
-| 716 | طرائق | Tool 716 Concept — مفهوم 716 | ✅حقيقي | A1-B2 | فهم | `lib/tool-716.ts` | R372 |
-| 717 | طرائق | Tool 717 Concept — مفهوم 717 | ✅حقيقي | A1-B2 | فهم | `lib/tool-717.ts` | R372 |
-| 718 | طرائق | Tool 718 Concept — مفهوم 718 | ✅حقيقي | A1-B2 | فهم | `lib/tool-718.ts` | R372 |
-| 719 | طرائق | Tool 719 Concept — مفهوم 719 | ✅حقيقي | A1-B2 | فهم | `lib/tool-719.ts` | R372 |
-| 720 | طرائق | Tool 720 Concept — مفهوم 720 | ✅حقيقي | A1-B2 | فهم | `lib/tool-720.ts` | R372 |
-| 721 | طرائق | Tool 721 Concept — مفهوم 721 | ✅حقيقي | A1-B2 | فهم | `lib/tool-721.ts` | R372 |
-| 722 | طرائق | Tool 722 Concept — مفهوم 722 | ✅حقيقي | A1-B2 | فهم | `lib/tool-722.ts` | R372 |
-| 723 | طرائق | Tool 723 Concept — مفهوم 723 | ✅حقيقي | A1-B2 | فهم | `lib/tool-723.ts` | R372 |
-| 724 | طرائق | Tool 724 Concept — مفهوم 724 | ✅حقيقي | A1-B2 | فهم | `lib/tool-724.ts` | R372 |
-| 725 | طرائق | Tool 725 Concept — مفهوم 725 | ✅حقيقي | A1-B2 | فهم | `lib/tool-725.ts` | R372 |
-| 726 | طرائق | Tool 726 Concept — مفهوم 726 | ✅حقيقي | A1-B2 | فهم | `lib/tool-726.ts` | R372 |
-| 727 | طرائق | Tool 727 Concept — مفهوم 727 | ✅حقيقي | A1-B2 | فهم | `lib/tool-727.ts` | R372 |
-| 728 | طرائق | Tool 728 Concept — مفهوم 728 | ✅حقيقي | A1-B2 | فهم | `lib/tool-728.ts` | R372 |
-| 729 | طرائق | Tool 729 Concept — مفهوم 729 | ✅حقيقي | A1-B2 | فهم | `lib/tool-729.ts` | R372 |
-| 730 | طرائق | Tool 730 Concept — مفهوم 730 | ✅حقيقي | A1-B2 | فهم | `lib/tool-730.ts` | R372 |
+| 701 | طرائق | Genre Swales — نوع نصي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-701.ts` | R380 |
+| 702 | طرائق | Move Analysis — خطوات | ✅حقيقي | B1-B2 | حلّل | `lib/tool-702.ts` | R380 |
+| 703 | طرائق | Rhetorical Structure — بلاغية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-703.ts` | R380 |
+| 704 | طرائق | Academic Writing Hyland — أكاديمية | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-704.ts` | R380 |
+| 705 | Immersion | Contrastive Rhetoric — تقابلية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-705.ts` | R380 |
+| 706 | Immersion | Intercultural Rhetoric — بين ثقافية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-706.ts` | R380 |
+| 707 | طرائق | Corpus Linguistics Biber — مدونة | ✅حقيقي | B1-B2 | فهم | `lib/tool-707.ts` | R380 |
+| 708 | SLA | Learner Language — لغة متعلم | ✅حقيقي | A1-B2 | حلّل | `lib/tool-708.ts` | R380 |
+| 709 | تقويم | Error Analysis Corder — أخطاء | ✅حقيقي | A1-B2 | حلّل | `lib/tool-709.ts` | R380 |
+| 710 | SLA | Contrastive Analysis Lado — تقابلي | ✅حقيقي | A0-B1 | حلّل | `lib/tool-710.ts` | R380 |
+| 711 | SLA | Input Enhancement Sharwood — تعزيز | ✅حقيقي | A1-B2 | فهم | `lib/tool-711.ts` | R380 |
+| 712 | SLA | Focus on Form Long — شكل | ✅حقيقي | A2-B2 | حلّل | `lib/tool-712.ts` | R380 |
+| 713 | SLA | Focus on Forms — أشكال | ✅حقيقي | A1-B2 | فهم | `lib/tool-713.ts` | R380 |
+| 714 | SLA | Consciousness Raising Rutherford — وعي | ✅حقيقي | A2-B2 | حلّل | `lib/tool-714.ts` | R380 |
+| 715 | طرائق | Dictogloss Wajnryb — إملاء | ✅حقيقي | A2-B1 | أنشئ | `lib/tool-715.ts` | R380 |
+| 716 | طرائق | Text Reconstruction Storch — إعادة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-716.ts` | R380 |
+| 717 | طرائق | Collaborative Writing — تعاونية | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-717.ts` | R380 |
+| 718 | تقويم | Peer Feedback Hyland — أقران | ✅حقيقي | B1-B2 | قيّم | `lib/tool-718.ts` | R380 |
+| 719 | تلقين | Self-Feedback — ذاتية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-719.ts` | R380 |
+| 720 | Gamification | Automated Feedback — آلية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-720.ts` | R380 |
+| 721 | Gamification | Intelligent Tutoring — ذكي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-721.ts` | R380 |
+| 722 | تقويم | Learning Analytics — تحليلات | ✅حقيقي | A1-B2 | حلّل | `lib/tool-722.ts` | R380 |
+| 723 | تقويم | Educational Data Mining — تنقيب | ✅حقيقي | A1-B2 | حلّل | `lib/tool-723.ts` | R380 |
+| 724 | طرائق | Adaptive Learning — تكيفي | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-724.ts` | R380 |
+| 725 | طرائق | Personalized Learning — مخصص | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-725.ts` | R380 |
+| 726 | طرائق | Differentiated Instruction — متمايز | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-726.ts` | R380 |
+| 727 | طرائق | Universal Design UDL — شامل | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-727.ts` | R380 |
+| 728 | طرائق | Inclusive Education — دامج | ✅حقيقي | A0-B2 | قيّم | `lib/tool-728.ts` | R380 |
+| 729 | Immersion | Multicultural Education — متعدد | ✅حقيقي | A1-B2 | فهم | `lib/tool-729.ts` | R380 |
+| 730 | Immersion | Global Citizenship — مواطنة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-730.ts` | R380 |
 | 731 | طرائق | Tool 731 Concept — مفهوم 731 | ✅حقيقي | A1-B2 | فهم | `lib/tool-731.ts` | R372 |
 | 732 | طرائق | Tool 732 Concept — مفهوم 732 | ✅حقيقي | A1-B2 | فهم | `lib/tool-732.ts` | R372 |
 | 733 | طرائق | Tool 733 Concept — مفهوم 733 | ✅حقيقي | A1-B2 | فهم | `lib/tool-733.ts` | R372 |

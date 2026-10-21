@@ -1,8 +1,8 @@
 /**
- * 715 — Tool 715 Concept — مفهوم 715
- * Research 715: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 715 — Dictogloss Wajnryb — إملاء تفاعلي
+ * Wajnryb 1990: classroom application
+ * Level: A2-B1 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_715 = { id: 715, titleDe: "Tool 715 Concept", titleAr: "مفهوم 715", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 715", desc: "Tool 715" } as const;
+export const TOOL_715 = { id: 715, titleDe: "Dictogloss Wajnryb", titleAr: "إملاء تفاعلي", family: "طرائق", bloom: "أنشئ", level: "A2-B1", research: "Wajnryb 1990", desc: "Dictogloss Wajnryb" } as const;
 export function tool715Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool715Check(v:number):boolean{return v>0;}
