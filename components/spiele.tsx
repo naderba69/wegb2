@@ -97,7 +97,11 @@ function WortGitterSpiel({ stufe }: { stufe: Level }) {
           </span>
         ))}
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(10, 1fr)", gap: "3px", maxWidth: "430px" }} role="grid" aria-label="شبكة الكلمات">
+      {/* ♿ R305/ب10: دور «grid» (role=grid) كان يُستخدَم هنا بلا بنية row/gridcell المطلوبة لهذا الدور (ARIA
+          aria-required-children) — كشفها فحص axe-core الآلي. هذه شبكة أزرار بصريّة (CSS Grid)
+          لا أداة شبكية تفاعلية بتنقّل أسهم ARIA حقيقي، فـrole="group" هو الوصف الدقيق فعلاً،
+          ويطابق الاصطلاح المستخدم في بقية هذا الملف (مثال: مجموعة أزرار المستوى أدناه). */}
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(10, 1fr)", gap: "3px", maxWidth: "430px" }} role="group" aria-label="شبكة الكلمات">
         {runde.gitter.map((zeile, r) =>
           zeile.map((buchstabe, c) => {
             const gewaehlt = auswahl.some(([ar, ac]) => ar === r && ac === c);

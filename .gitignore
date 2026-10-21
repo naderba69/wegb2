@@ -13,3 +13,10 @@ content/.grammar.bak
 public/banks.json
 # R202: erzeugt aus public/audio (Quelle der Wahrheit)
 public/audio-manifest.json
+
+# temp work dirs
+.audit_tmp/
+.audit_tmp2/
+.audit_tmp3/
+check_*.ts
+check_final_orph.ts

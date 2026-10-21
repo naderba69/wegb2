@@ -92,19 +92,20 @@ export function LernPfad({ progress }: { progress: Progress }) {
                     opacity: !zu && !heute && d > day ? 0.45 : 1,
                   };
                   if (heute) {
+                    // ♿ R305/ب14: role="listitem" انتقل من <button> نفسه إلى غلاف غير تفاعلي
                     return (
-                      <button
-                        key={d}
-                        type="button"
-                        role="listitem"
-                        data-testid="pfad-heute"
-                        onClick={zuHeute}
-                        aria-label={`اليوم ${d} — يومك الحالي، انزل إلى الجلسة`}
-                        title={`اليوم ${d} — انزل إلى جلستك`}
-                        style={{ ...basis, cursor: "pointer" }}
-                      >
-                        {zu ? "✓" : d}
-                      </button>
+                      <div key={d} role="listitem" style={{ display: "contents" }}>
+                        <button
+                          type="button"
+                          data-testid="pfad-heute"
+                          onClick={zuHeute}
+                          aria-label={`اليوم ${d} — يومك الحالي، انزل إلى الجلسة`}
+                          title={`اليوم ${d} — انزل إلى جلستك`}
+                          style={{ ...basis, cursor: "pointer" }}
+                        >
+                          {zu ? "✓" : d}
+                        </button>
+                      </div>
                     );
                   }
                   return (

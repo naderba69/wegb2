@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, lazy, Suspense } from "react";
 import Link from "next/link";
 import { useProgress, saveProgress, loadProgress, planeVerifikation } from "@/lib/store";
 import { buildDay, dayScore, debtsFrom, modulOf } from "@/lib/plan";
@@ -10,12 +10,23 @@ import { sessionGoalReached, sessionMinuteTenth } from "@/lib/session-clock";
 import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
 import { KindIcon } from "@/components/dirb/icons";
+import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
 import { Klassenzimmer } from "@/components/akademie/Klassenzimmer";
 import { resumeAusloesen, resumeBedarf, resumePlan, resumeZustand } from "@/lib/wiedereinstieg";
 import { SkillBalancePlan } from "@/components/skillplan";
 import { WiedereinstiegBanner } from "@/components/wiedereinstieg";
+import { tagGesperrt } from "@/lib/modulpruefung";
+import ModulTor from "@/components/modultor";
+import ExerciseSet from "@/components/exercises";
+import { heutigesGrammatikThema, parkedExercisesFor } from "@/lib/parkuebungen";
+import { FehlerGrenze } from "@/components/fehlergrenze";
+
+// ⚡ R308: تحميلٌ كسولٌ حقيقي — لا تُجلَب شيفرتا «تدرّب»/«اختبر» الثقيلتان (عشرات المحطات)
+// ضمن حزمة صفحة «اليوم» (الأكثر زيارةً بفارق كبير) إلا عند فتح القسم فعليًا.
+const UebenSeite = lazy(() => import("./ueben/page"));
+const PruefenSeite = lazy(() => import("./pruefen/page"));
 
 const TYPE_LABEL: Record<string, string> = {
   lerntag: "يوم تعلّم",
@@ -66,6 +77,12 @@ export default function Today() {
   const [pointsLoadedDay, setPointsLoadedDay] = useState<number | null>(null);
   const [confirmClose, setConfirmClose] = useState(false);
   const [sessionSaved, setSessionSaved] = useState(false);
+  // ➕ R307: حالتا طيّ القسمين الجديدين المُدمَجين من «اختبر»/«تدرّب» في تدفّق اليوم نفسه.
+  const [examOpen, setExamOpen] = useState(false);
+  const [zusatzOffen, setZusatzOffen] = useState(false);
+  // ⚡ R308: حالتا فتح القسمين المُدمَجين — يتحكّمان بالتركيب الفعلي (lazy) لا بالعرض البصري فقط
+  const [uebenGeoeffnet, setUebenGeoeffnet] = useState(false);
+  const [pruefenGeoeffnet, setPruefenGeoeffnet] = useState(false);
   const session = useSessionClock(day, plan.tasks[step]?.id, ready);
 
   useEffect(() => {
@@ -146,6 +163,30 @@ export default function Today() {
           : held.kind === "wiederholen"
             ? "مراجعة قصيرة قبل الانتقال إلى الجديد."
             : "هذه هي الخطوة التالية في خطتك.";
+  // 🗺️ R306: أهداف درس اليوم بصيغة محطّات — من نفس تصنيف STATIONEN الذي يستخدمه
+  // المشغّل المتسلسل أسفل الصفحة (لا تصنيف منافس جديد)، ومُشتقّة من مهام اليوم الفعلية فقط.
+  const heuteStationen: { id: string; icon: string; ar: string }[] = [];
+  {
+    const seen = new Set<string>();
+    for (const tk of plan.tasks) {
+      const s = stationOfTask(tk);
+      if (!seen.has(s)) {
+        seen.add(s);
+        heuteStationen.push({ id: s, icon: STATIONEN[s].icon, ar: STATIONEN[s].ar });
+      }
+    }
+  }
+  // 🔒 R307: بوّابة الوحدة (القاعدة الصريحة في lib/modulpruefung.ts: «لا تُفتَحُ وحدةٌ
+  // قبلَ اجتيازِ امتحانِ سابقتِها») كانت مُختبَرةً (K57m) لكن غير ظاهرة في أيّ شاشة حقيقية —
+  // الآن تُعرَض هنا صراحةً مع بوّابة الامتحان نفسها مدمجةً في نفس صفحة اليوم، دون حجب
+  // مهامّ اليوم الجارية (لا قفل قسري يهدم تغطية الاختبارات القائمة على مئات الأيام).
+  // R309: الفحصُ على اليوم التالي (day+1) لا اليوم الحالي — فيلتقط بدقّةٍ اللحظةَ الحرجةَ
+  // (آخر يومٍ في الوحدة) حيث يحتاج *الإغلاقُ* إلى الاختبار، لا مجرّد عرض اليوم الحالي.
+  const modulGate = tagGesperrt(progress, day + 1);
+  // ➕ R307: «زائد الدرس» — نفس تمارين موضوع القواعد المُرحَّلة التي كانت حبيسة «تدرّب»
+  // خلف قفل المساء؛ تُعرَض هنا أيضًا فور توفّرها، ضمن تسلسل اليوم نفسه.
+  const topicIdHeute = heutigesGrammatikThema(plan);
+  const zusatzUebungen = parkedExercisesFor(topicIdHeute);
   const scrollToTraining = () => {
     document.getElementById("dirb-training")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -251,7 +292,16 @@ export default function Today() {
     if (step < plan.tasks.length - 1) setStep(step + 1);
   };
 
+  // R309: القفل الفعلي — فتحٌ مباشر لبوّابة الامتحان بدل الإغلاق المحظور، مع تمرير واضح إليها
+  const oeffneModulPruefungJetzt = () => {
+    setExamOpen(true);
+    document.getElementById("modul-pruefung-mahnung")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const doCloseDay = () => {
+    // 🔒 R309: لا تُفتَحُ وحدةٌ قبلَ اجتيازِ امتحانِ سابقتِها (lib/modulpruefung.ts) —
+    // قفلٌ فعلي حقيقي هنا لا مطالبة إعلامية فقط: الإغلاق يتوقّف فعلًا عند هذه الحدود.
+    if (modulGate.gesperrt) { oeffneModulPruefungJetzt(); return; }
     session.pause();
     const merged: Record<string, { done: boolean; passed: boolean; score: number; total: number; attempts: number }> = {};
     for (const tk of plan.tasks) {
@@ -290,6 +340,8 @@ export default function Today() {
 
   /** 🧘 «يوم سيّئ»: تجميد السلسلة وعبور اليوم بلا ديون ولا عقاب (K-badDay) */
   const badDayToday = () => {
+    // 🔒 R309: «يوم سيّئ» لا يلتف حول بوّابة الوحدة — نفس القفل الحقيقي يسري هنا أيضًا
+    if (modulGate.gesperrt) { oeffneModulPruefungJetzt(); return; }
     session.pause();
     const today = new Date().toISOString().slice(0, 10);
     update((p) => ({
@@ -320,12 +372,47 @@ export default function Today() {
 
   return (
     <div className="today-screen fadein dirb ui-page ui-page--today" data-testid="today-screen">
+      {modulGate.gesperrt && (
+        <section
+          id="modul-pruefung-mahnung"
+          className="card fadein"
+          data-testid="modul-pruefung-mahnung"
+          role="note"
+          aria-label="اختبار الوحدة السابقة بانتظارك"
+          style={{ padding: "0.9rem 1.1rem", marginBottom: "0.8rem", borderInlineStart: "5px solid var(--color-gold)", background: "var(--color-gold-soft)" }}
+        >
+          <div style={{ fontWeight: 900 }}>📋 اختبار الوحدة {modulGate.wartendeModulNr} بانتظارك</div>
+          <p style={{ margin: "0.3rem 0 0.5rem", fontSize: "0.88rem", lineHeight: 1.8 }}>
+            🧑‍🏫 <strong>مدرّبك:</strong> يمكنك إكمال مهامّ اليوم كما هي، لكن <strong>إغلاق اليوم والانتقال إلى الوحدة
+            التالية مقفلان فعليًا</strong> حتى تجتاز امتحان هذه الوحدة — بحكم القاعدة نفسها، لا استثناء ولا تجاوز بـ«يوم سيّئ».
+            خذه الآن من هنا مباشرةً دون مغادرة الصفحة.
+          </p>
+          <button
+            type="button"
+            className="btn btn-ghost"
+            data-testid="modul-pruefung-toggle"
+            onClick={() => setExamOpen((o) => !o)}
+            style={{ minHeight: "44px" }}
+          >
+            {examOpen ? "إخفاء الاختبار" : "📋 ابدأ اختبار الوحدة الآن"}
+          </button>
+          {examOpen && <div style={{ marginTop: "0.7rem" }}><ModulTor day={day} /></div>}
+        </section>
+      )}
       <header className="dirb-hero-anim">
         <div className="dirb-date-row">
           <span className="dirb-date">{dateAr}</span>
           <span className="dirb-pill">اليوم الدراسي <span className="rtl-num">{day}</span> / <span className="rtl-num">{TOTAL_DAYS}</span></span>
         </div>
         <h1 className="dirb-giant">خطوتك اليوم</h1>
+        {heuteStationen.length > 0 && (
+          <div className="dirb-chips" data-testid="today-ziele" aria-label="أهداف درس اليوم — محطّات اليوم">
+            <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "var(--color-ink2)" }}>🗺️ أهداف اليوم:</span>
+            {heuteStationen.map((s) => (
+              <span key={s.id} className="chip" style={{ fontSize: "0.78rem" }}>{s.icon} {s.ar}</span>
+            ))}
+          </div>
+        )}
       </header>
 
       {held && (
@@ -337,7 +424,7 @@ export default function Today() {
           <div className="dirb-held-meta">
             ⏱ <span className="rtl-num">{held.minutes}</span> دقيقة · <span lang="de" dir="ltr">{plan.phase}</span>
           </div>
-          <div className="dirb-held-grund">💡 {heldGrund}</div>
+          <div className="dirb-held-grund" data-testid="today-coach-grund">🧑‍🏫 <strong>مدرّبك:</strong> {heldGrund}</div>
           {heldFertig && <div className="dirb-held-done">✓ أُنجزت هذه الخطوة</div>}
           <button type="button" className="dirb-start" onClick={startToday} data-testid="held-start">
             {allTodayDone
@@ -467,23 +554,25 @@ export default function Today() {
             const fertig = !!resultOf(tk.id);
             const jetzt = i === stepFrei;
             return (
-              <button
-                key={tk.id}
-                type="button"
-                role="listitem"
-                disabled={gesperrt}
-                data-testid={`held-mini-${i}`}
-                className={"dirb-mini" + (jetzt ? " dirb-mini-jetzt" : "") + (fertig ? " dirb-mini-fertig" : "")}
-                onClick={() => springeZu(i)}
-                aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : fertig ? (progress.schriftlich?.[tk.id] ? " (مسلَّمة كتابياً — إنجاز لا نطق)" : " (مسلَّمة)") : ""}`}
-              >
-                <KindIcon kind={tk.kind} className="dirb-mini-icon" />
-                <span className="dirb-mini-skill">
-                  {gesperrt ? "🔒 " : fertig ? "✓ " : ""}
-                  {SKILL_AR[tk.kind] ?? tk.kind}
-                </span>
-                <span className="dirb-mini-min"><span className="rtl-num">{tk.minutes}</span> دقيقة</span>
-              </button>
+              // ♿ R305/ب14: role="listitem" كان على <button> نفسه (عنصر تفاعلي بدور غير
+              // تفاعلي — نمط ARIA غير سليم)؛ الدور الآن على غلاف غير تفاعلي، والزر تفاعلي صرف.
+              <div key={tk.id} role="listitem" style={{ display: "contents" }}>
+                <button
+                  type="button"
+                  disabled={gesperrt}
+                  data-testid={`held-mini-${i}`}
+                  className={"dirb-mini" + (jetzt ? " dirb-mini-jetzt" : "") + (fertig ? " dirb-mini-fertig" : "")}
+                  onClick={() => springeZu(i)}
+                  aria-label={`${SKILL_AR[tk.kind] ?? tk.kind} — ${tk.minutes} دقائق${gesperrt ? " (مقفولة: سلِّم الاسترجاع أولاً)" : fertig ? (progress.schriftlich?.[tk.id] ? " (مسلَّمة كتابياً — إنجاز لا نطق)" : " (مسلَّمة)") : ""}`}
+                >
+                  <KindIcon kind={tk.kind} className="dirb-mini-icon" />
+                  <span className="dirb-mini-skill">
+                    {gesperrt ? "🔒 " : fertig ? "✓ " : ""}
+                    {SKILL_AR[tk.kind] ?? tk.kind}
+                  </span>
+                  <span className="dirb-mini-min"><span className="rtl-num">{tk.minutes}</span> دقيقة</span>
+                </button>
+              </div>
             );
           })}
         </div>
@@ -517,8 +606,81 @@ export default function Today() {
           onSrs={setSrs}
           showCurrentHero={false}
           onPauseSession={pauseAndSaveSession}
+          modulGesperrt={modulGate.gesperrt}
+          modulGesperrtNr={modulGate.wartendeModulNr}
+          oeffneModulPruefung={oeffneModulPruefungJetzt}
         />
       </div>
+
+      {zusatzUebungen.length > 0 && (
+        <section className="card fadein" data-testid="today-zusatz" style={{ padding: "1rem 1.1rem", marginTop: "0.8rem" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.6rem", flexWrap: "wrap" }}>
+            <div>
+              <div style={{ fontWeight: 900 }}>➕ تدريب إضافي من درس اليوم</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)" }}>
+                تمارين زائدة من موضوع القواعد نفسه — <span className="rtl-num">{zusatzUebungen.length}</span> تمرين، اختياري.
+              </div>
+            </div>
+            <button
+              type="button"
+              className="btn btn-ghost"
+              data-testid="today-zusatz-toggle"
+              onClick={() => setZusatzOffen((o) => !o)}
+              style={{ minHeight: "44px" }}
+            >
+              {zusatzOffen ? "إخفِ" : "افتح التدريب الإضافي"}
+            </button>
+          </div>
+          {zusatzOffen && (
+            <div style={{ marginTop: "0.7rem" }}>
+              <ExerciseSet items={zusatzUebungen} onPoints={() => {}} />
+            </div>
+          )}
+        </section>
+      )}
+
+      {/* ── R308: دمجٌ لا تشتّت — «تدرّب» و«اختبر» كاملتان هنا، مطويّتان افتراضيًا (K136) ── */}
+      {/* نفس مكوّني الصفحتين الحقيقيين بلا نسخة موازية؛ لا حاجة لمغادرة «اليوم» لبلوغ أيّ محطة. */}
+      {/* تركيبٌ كسولٌ فعلي (lazy + تركيب شرطي لا مجرّد إخفاء بصري): لا تُجلَب ولا تُركَّب حتى الفتح. */}
+      <details
+        className="dirb-extra"
+        data-testid="today-ueben-eingebettet"
+        onToggle={(e) => setUebenGeoeffnet((e.target as HTMLDetailsElement).open)}
+      >
+        <summary>
+          <span>💪 تدرّب — كل محطّات التدريب هنا</span>
+          <span className="dirb-extra-hint">بلا مغادرة صفحة اليوم</span>
+        </summary>
+        <div className="dirb-extra-content">
+          {uebenGeoeffnet && (
+            <FehlerGrenze>
+              <Suspense fallback={<div role="status" aria-live="polite">⏳ يُحمَّل التدريب…</div>}>
+                <UebenSeite />
+              </Suspense>
+            </FehlerGrenze>
+          )}
+        </div>
+      </details>
+
+      <details
+        className="dirb-extra"
+        data-testid="today-pruefen-eingebettet"
+        onToggle={(e) => setPruefenGeoeffnet((e.target as HTMLDetailsElement).open)}
+      >
+        <summary>
+          <span>🎯 اختبر — بوّابة الوحدة وكل محطّات الاختبار هنا</span>
+          <span className="dirb-extra-hint">بلا مغادرة صفحة اليوم</span>
+        </summary>
+        <div className="dirb-extra-content">
+          {pruefenGeoeffnet && (
+            <FehlerGrenze>
+              <Suspense fallback={<div role="status" aria-live="polite">⏳ يُحمَّل الاختبار…</div>}>
+                <PruefenSeite />
+              </Suspense>
+            </FehlerGrenze>
+          )}
+        </div>
+      </details>
     </div>
   );
 }
