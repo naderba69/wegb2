@@ -1,6 +1,8 @@
 /**
- * 476 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 476 — Narrative Branching — تفرع سردي
+ * Cover 2010: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: Narrative
  */
-export const TOOL_476 = { id: 476, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_476(): boolean { return true; }
+export const TOOL_476 = { id: 476, titleDe: "Narrative Branching", titleAr: "تفرع سردي", family: "Narrative", bloom: "أنشئ", level: "B1-B2", research: "Cover 2010", desc: "Narrative Branching" } as const;
+export function tool476Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool476Check(v:number):boolean{return v>0;}
