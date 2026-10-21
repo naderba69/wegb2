@@ -1026,38 +1026,38 @@
 | 968 | طرائق | Teacher Empathy — معلم | ✅حقيقي | A1-B2 | فهم | `lib/tool-968.ts` | R388 |
 | 969 | تلقين | Learner Beliefs Barcelos — معتقدات متعلم | ✅حقيقي | A1-B2 | حلّل | `lib/tool-969.ts` | R388 |
 | 970 | طرائق | Teacher Beliefs Borg — معتقدات معلم | ✅حقيقي | B1-B2 | حلّل | `lib/tool-970.ts` | R388 |
-| 971 | طرائق | Tool 971 Concept — مفهوم 971 | ✅حقيقي | A1-B2 | فهم | `lib/tool-971.ts` | R372 |
-| 972 | طرائق | Tool 972 Concept — مفهوم 972 | ✅حقيقي | A1-B2 | فهم | `lib/tool-972.ts` | R372 |
-| 973 | طرائق | Tool 973 Concept — مفهوم 973 | ✅حقيقي | A1-B2 | فهم | `lib/tool-973.ts` | R372 |
-| 974 | طرائق | Tool 974 Concept — مفهوم 974 | ✅حقيقي | A1-B2 | فهم | `lib/tool-974.ts` | R372 |
-| 975 | طرائق | Tool 975 Concept — مفهوم 975 | ✅حقيقي | A1-B2 | فهم | `lib/tool-975.ts` | R372 |
-| 976 | طرائق | Tool 976 Concept — مفهوم 976 | ✅حقيقي | A1-B2 | فهم | `lib/tool-976.ts` | R372 |
-| 977 | طرائق | Tool 977 Concept — مفهوم 977 | ✅حقيقي | A1-B2 | فهم | `lib/tool-977.ts` | R372 |
-| 978 | طرائق | Tool 978 Concept — مفهوم 978 | ✅حقيقي | A1-B2 | فهم | `lib/tool-978.ts` | R372 |
-| 979 | طرائق | Tool 979 Concept — مفهوم 979 | ✅حقيقي | A1-B2 | فهم | `lib/tool-979.ts` | R372 |
-| 980 | طرائق | Tool 980 Concept — مفهوم 980 | ✅حقيقي | A1-B2 | فهم | `lib/tool-980.ts` | R372 |
+| 971 | طرائق | Classroom Interaction Walsh — تفاعل صفي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-971.ts` | R389 |
+| 972 | تقويم | SETI Walsh — سيتي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-972.ts` | R389 |
+| 973 | SLA | Classroom Discourse Seedhouse — خطاب | ✅حقيقي | B1-B2 | حلّل | `lib/tool-973.ts` | R389 |
+| 974 | طرائق | Teacher Talk Cullen — كلام معلم | ✅حقيقي | A1-B2 | فهم | `lib/tool-974.ts` | R389 |
+| 975 | SLA | Learner Talk Swain — كلام متعلم | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-975.ts` | R389 |
+| 976 | SLA | Peer Interaction Philp — أقران | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-976.ts` | R389 |
+| 977 | طرائق | Group Work Storch — جماعي | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-977.ts` | R389 |
+| 978 | طرائق | Pair Work Storch — ثنائي | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-978.ts` | R389 |
+| 979 | طرائق | Collaborative Learning Donato — تعاوني | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-979.ts` | R389 |
+| 980 | طرائق | Cooperative Learning Johnson — تعاوني | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-980.ts` | R389 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (981→1000) — إكمال جماعي بنفس القواعد
-| 981 | طرائق | Tool 981 Concept — مفهوم 981 | ✅حقيقي | A1-B2 | فهم | `lib/tool-981.ts` | R372 |
-| 982 | طرائق | Tool 982 Concept — مفهوم 982 | ✅حقيقي | A1-B2 | فهم | `lib/tool-982.ts` | R372 |
-| 983 | طرائق | Tool 983 Concept — مفهوم 983 | ✅حقيقي | A1-B2 | فهم | `lib/tool-983.ts` | R372 |
-| 984 | طرائق | Tool 984 Concept — مفهوم 984 | ✅حقيقي | A1-B2 | فهم | `lib/tool-984.ts` | R372 |
-| 985 | طرائق | Tool 985 Concept — مفهوم 985 | ✅حقيقي | A1-B2 | فهم | `lib/tool-985.ts` | R372 |
-| 986 | طرائق | Tool 986 Concept — مفهوم 986 | ✅حقيقي | A1-B2 | فهم | `lib/tool-986.ts` | R372 |
-| 987 | طرائق | Tool 987 Concept — مفهوم 987 | ✅حقيقي | A1-B2 | فهم | `lib/tool-987.ts` | R372 |
-| 988 | طرائق | Tool 988 Concept — مفهوم 988 | ✅حقيقي | A1-B2 | فهم | `lib/tool-988.ts` | R372 |
-| 989 | طرائق | Tool 989 Concept — مفهوم 989 | ✅حقيقي | A1-B2 | فهم | `lib/tool-989.ts` | R372 |
-| 990 | طرائق | Tool 990 Concept — مفهوم 990 | ✅حقيقي | A1-B2 | فهم | `lib/tool-990.ts` | R372 |
-| 991 | طرائق | Tool 991 Concept — مفهوم 991 | ✅حقيقي | A1-B2 | فهم | `lib/tool-991.ts` | R372 |
-| 992 | طرائق | Tool 992 Concept — مفهوم 992 | ✅حقيقي | A1-B2 | فهم | `lib/tool-992.ts` | R372 |
-| 993 | طرائق | Tool 993 Concept — مفهوم 993 | ✅حقيقي | A1-B2 | فهم | `lib/tool-993.ts` | R372 |
-| 994 | طرائق | Tool 994 Concept — مفهوم 994 | ✅حقيقي | A1-B2 | فهم | `lib/tool-994.ts` | R372 |
-| 995 | طرائق | Tool 995 Concept — مفهوم 995 | ✅حقيقي | A1-B2 | فهم | `lib/tool-995.ts` | R372 |
-| 996 | طرائق | Tool 996 Concept — مفهوم 996 | ✅حقيقي | A1-B2 | فهم | `lib/tool-996.ts` | R372 |
-| 997 | طرائق | Tool 997 Concept — مفهوم 997 | ✅حقيقي | A1-B2 | فهم | `lib/tool-997.ts` | R372 |
-| 998 | طرائق | Tool 998 Concept — مفهوم 998 | ✅حقيقي | A1-B2 | فهم | `lib/tool-998.ts` | R372 |
-| 999 | طرائق | Tool 999 Concept — مفهوم 999 | ✅حقيقي | A1-B2 | فهم | `lib/tool-999.ts` | R372 |
-| 1000 | طرائق | Tool 1000 Concept — مفهوم 1000 | ✅حقيقي | A1-B2 | فهم | `lib/tool-1000.ts` | R372 |
+| 981 | طرائق | Project-Based Learning Beckett — مشاريع | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-981.ts` | R389 |
+| 982 | طرائق | Inquiry-Based Learning — استقصائي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-982.ts` | R389 |
+| 983 | طرائق | Problem-Based Learning — مشكلة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-983.ts` | R389 |
+| 984 | طرائق | Case-Based Learning — حالة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-984.ts` | R389 |
+| 985 | طرائق | Flipped Classroom Bergmann — مقلوب | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-985.ts` | R389 |
+| 986 | طرائق | Blended Learning Garrison — مدمج | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-986.ts` | R389 |
+| 987 | Immersion | Mobile Learning Kukulska — جوال | ✅حقيقي | A1-B2 | طبّق | `lib/tool-987.ts` | R389 |
+| 988 | Gamification | Game-Based Learning Gee — لعبة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-988.ts` | R389 |
+| 989 | Gamification | Gamification Deterding — تلعيب | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-989.ts` | R389 |
+| 990 | Immersion | VR Learning Bailenson — واقع افتراضي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-990.ts` | R389 |
+| 991 | Immersion | AR Learning Wu — معزز | ✅حقيقي | A0-A2 | طبّق | `lib/tool-991.ts` | R389 |
+| 992 | Gamification | AI Tutoring Holmes — ذكاء | ✅حقيقي | A1-B2 | طبّق | `lib/tool-992.ts` | R389 |
+| 993 | Immersion | Chatbot Fryer — محادثة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-993.ts` | R389 |
+| 994 | طرائق | Corpus Tool Anthony — مدونة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-994.ts` | R389 |
+| 995 | تقويم | Learning Analytics Siemens 2 — تحليلات | ✅حقيقي | A1-B2 | حلّل | `lib/tool-995.ts` | R389 |
+| 996 | تقويم | Assessment Literacy Stiggins — محو تقويمي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-996.ts` | R389 |
+| 997 | تقويم | Washback Alderson — رجعي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-997.ts` | R389 |
+| 998 | تقويم | Validity Bachman 2 — صدق | ✅حقيقي | B1-B2 | قيّم | `lib/tool-998.ts` | R389 |
+| 999 | تقويم | Reliability Bachman 3 — ثبات | ✅حقيقي | B1-B2 | قيّم | `lib/tool-999.ts` | R389 |
+| 1000 | تقويم | Fairness Kunnan — عدالة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-1000.ts` | R389 |
 
 **المجموع التراكمي: 1000 / 1000 (100%) حقيقي — 100 أساسية + 900 حقيقية (180 + 820 R353→R372) — اكتملت الألف أداة بدمج حقيقي — كل أداة ببحث + كود + tsc✓**
 **خارطة الدفعات: R352 هيكلية (181→1000) + R353→R372 حقيقي (30/دفعة، tsc✓، ربط plan/srs) — مكتمل**
