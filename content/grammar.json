@@ -16165,14 +16165,14 @@
       },
       {
         "de": "der Student → den Studenten (Plural Studenten: -en → Singular -en)",
-        "ar": "-ent/-ant/-and: Student, Präsident, Elefant, Praktikant, Demonstrant → -en"
+        "ar": "نهايات لاتينية -ent/-ant/-and: Student, Präsident, Elefant, Praktikant, Demonstrant → -en"
       },
       {
         "de": "der Polizist → den Polizisten (Plural Polizisten)",
-        "ar": "-ist/-at/-oge/-graf/-soph: Polizist, Journalist, Soldat, Biologe, Fotograf, Philosoph → -en"
+        "ar": "نهايات المهن والعلوم -ist/-at/-oge/-graf/-soph: Polizist, Journalist, Soldat, Biologe, Fotograf, Philosoph → -en"
       },
       {
-        "de": "der Mensch → den Menschen; der Herr → den Herrn; der Nachbar → den Nachbarn (-n لا -en)",
+        "de": "der Mensch → den Menschen; der Herr → den Herrn; der Nachbar → den Nachbarn (-n, nicht -en)",
         "ar": "شواذ: Mensch/Herr/Nachbar/Bauer/Bär/Held/Prinz — الاستثناء Nachbar/Bauer/Herr تأخذ -n فقط لا -en في المفرد"
       },
       {
@@ -16306,7 +16306,8 @@
           "den Praktikanten"
         ],
         "explanationAr": "في حالة النصب (Akkusativ) بعد الفعل suchen تأخذ الأسماء الضعيفة n: den Praktikanten.",
-        "explanationDe": "في حالة النصب (Akkusativ) بعد الفعل suchen تأخذ الأسماء الضعيفة n: den Praktikanten."
+        "explanationDe": "في حالة النصب (Akkusativ) بعد الفعل suchen تأخذ الأسماء الضعيفة n: den Praktikanten.",
+        "quelleDe": "Ich suche den Praktikanten aus Hamburg."
       },
       {
         "id": "b2-n-dekl-e2",
@@ -16317,7 +16318,8 @@
           "des Experten"
         ],
         "explanationAr": "في حالة الإضافة (Genitiv) تأخذ الأسماء الضعيفة s: des Experten.",
-        "explanationDe": "في حالة الإضافة (Genitiv) تأخذ الأسماء الضعيفة s: des Experten."
+        "explanationDe": "في حالة الإضافة (Genitiv) تأخذ الأسماء الضعيفة s: des Experten.",
+        "quelleDe": "Die Meinung des Experten ist wichtig."
       },
       {
         "id": "b2-n-dekl-e3",
@@ -16328,7 +16330,8 @@
           "dem Kunden"
         ],
         "explanationAr": "بعد حرف الجر mit المجرور (Dativ) → dem Kunden (n زائدة).",
-        "explanationDe": "بعد حرف الجر mit المجرور (Dativ) → dem Kunden (n زائدة)."
+        "explanationDe": "بعد حرف الجر mit المجرور (Dativ) → dem Kunden (n زائدة).",
+        "quelleDe": "Wir sprechen mit dem Kunden über den Vertrag."
       },
       {
         "id": "b2-n-dekl-e4",
@@ -16339,7 +16342,8 @@
           "den Kollegen"
         ],
         "explanationAr": "في حالة النصب → den Kollegen (n زائدة).",
-        "explanationDe": "في حالة النصب → den Kollegen (n زائدة)."
+        "explanationDe": "في حالة النصب → den Kollegen (n زائدة).",
+        "quelleDe": "Hast du den Kollegen gesehen?"
       },
       {
         "id": "b2-n-dekl-e5",
@@ -16351,7 +16355,8 @@
           "Dem Herrn"
         ],
         "answer": "Der Herr",
-        "explanationAr": "Nominativ (فاعل) لا إضافة: Der Herr Müller ist nicht da."
+        "explanationAr": "Nominativ (فاعل) لا إضافة: Der Herr Müller ist nicht da.",
+        "quelleDe": "Der Herr Müller ist nicht da."
       },
       {
         "id": "b2-n-dekl-e6",

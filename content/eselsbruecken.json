@@ -2856,5 +2856,50 @@
       "b2-relativ-genitiv"
     ],
     "warnung": "الجنس والعدد يتبعان الاسم السابق؛ لا الشيء المملوك بعد dessen/deren."
+  },
+  {
+    "id": "n-deklination",
+    "emoji": "👨‍🎓",
+    "sektion": "deklination",
+    "level": "B2",
+    "titleAr": "N-Deklination — الأسماء الضعيفة تأخذ n/-en دائماً",
+    "storyAr": "تخيل طالباً ضعيفاً (schwacher Mann) يحمل حقيبة ثقيلة — كل حركة يضيف n إلى اسمه: den Studenten, dem Kunden, des Experten, den Polizisten. فقط Nominativ Singular يبقى خفيفاً: der Student.",
+    "zeilen": [
+      {
+        "code": "Junge/Kollege/Kunde",
+        "de": "der Junge → den Jungen",
+        "ar": "مذكر -e للإنسان: Junge, Kollege, Kunde, Löwe — كل الحالات n"
+      },
+      {
+        "code": "Student/Präsident",
+        "de": "der Student → den Studenten",
+        "ar": "نهايات -ent/-ant: Student, Präsident, Elefant"
+      },
+      {
+        "code": "Polizist/Biologe",
+        "de": "der Polizist → den Polizisten",
+        "ar": "نهايات -ist/-at/-oge/-graf: Polizist, Biologe, Fotograf"
+      },
+      {
+        "code": "Mensch/Herr/Nachbar",
+        "de": "der Mensch → den Menschen",
+        "ar": "شواذ: Mensch, Herr, Nachbar, Bauer — Herr/Nachbar/Bauer تأخذ n فقط لا en"
+      },
+      {
+        "code": "Plural gleich",
+        "de": "Plural: die Studenten → den Studenten",
+        "ar": "في الجمع كل الأسماء تأخذ n تلقائياً فلا N-Deklination مميزة"
+      },
+      {
+        "code": "Herz Ausnahme",
+        "de": "das Herz → des Herzens",
+        "ar": "المحايد الوحيد: das Herz → des Herzens (genitiv ens)"
+      }
+    ],
+    "gramIds": [
+      "b2-n-deklination"
+    ],
+    "warnung": "لا تخلط مع Genitiv-s: des Studenten (N-Deklination) ≠ des Mannes (Genitiv-s) — الأول يضيف n، الثاني s.",
+    "stichwort": "N-Deklination: الضعيف يحمل n"
   }
 ]

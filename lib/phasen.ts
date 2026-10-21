@@ -60,8 +60,8 @@ export const PHASEN: Record<Exclude<Level, "B2"> extends never ? never : Level, 
 export const ABSCHLUSS_VON = 375;
 export const TOTAL_DAYS = 378;
 
-/** سقفا الحمل اليومي المخطط (D1-B · قرار المالك 2026-10-16 · R168) — دقائق مخطَّطة من buildDay لا زمن مقيس ميدانياً.
- *  B1 داخل سقفها بالقياس أصلاً؛ B2 تُكشَط ذرواتها داخل lib/plan.ts بقطع محتوى مراجعة متكرر حقيقي (K260). */
+/** سقفا الحمل اليومي المخطط (D1-B · قرار المالك 2026-10-16 · R168/R392) — دقائق مخطَّطة من buildDay لا زمن مقيس ميدانياً.
+ *  B1+B2 معاً تُكشَط ذرواتها داخل lib/plan.ts بقطع محتوى مراجعة/أدوات محقونة حقيقي (K260 · R392 يوسّع لـ B1 لاستيعاب الحقن المنهجي 820 أداة). */
 export const D1_B1_DECKEL_MIN = 240;
 export const D1_B2_DECKEL_MIN = 270;
 

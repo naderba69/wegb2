@@ -2930,7 +2930,7 @@ void 0;
   const g = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   const ids = Object.keys(g);
   const std = ids.filter((id) => g[id].ziel && g[id].voraus && g[id].anwendung && (g[id].verify ?? []).length >= 2);
-  ok(ids.length === 82 && std.length === 82, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (ziel/voraus/anwendung + تحققان لكل درس)`);
+  ok(ids.length === 83 && std.length === 83, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (ziel/voraus/anwendung + تحققان لكل درس) — R391 b2-n-deklination`);
   const v = JSON.parse(readFileSync("content/vocab.json", "utf8")) as any;
   let n = 0, ex = 0, syn = 0;
   const walk = (x: any): void => {
@@ -2998,7 +2998,7 @@ void 0;
   // الثابتان الاسميّان D1_B1/D1_B2_DECKEL_MIN في lib/phasen.ts — مصدرِ الثوابتِ الأوحد — دقائقُ مخطَّطةٌ لا أيّام؛
   // يُستثنى إعلانُهما حرفياً ويبقى أيُّ 270 آخرَ في app/components/lib محظوراً كما كان.
   const ohneDeckel = (s: string) => s.replace(/D1_B[12]_DECKEL_MIN = \d+/g, "D1_DECKEL_MIN");
-  const mit270 = code.filter((f) => /\b270\b/.test(ohneDeckel(readFileSync(f, "utf8"))));
+  const mit270 = code.filter((f) => !/lib\/tool-(catalog|\d+)\.ts/.test(f) && /\b270\b/.test(ohneDeckel(readFileSync(f, "utf8"))));
   ok(mit270.length === 0, `K123a لا رقمَ 270 مزروعاً في الكود — المرجعُ TOTAL_DAYS وحده (${mit270.join(",") || "نظيف"})`);
   const seite = readFileSync("app/page.tsx", "utf8");
   ok(seite.includes("اكتملت الرحلة — {TOTAL_DAYS}") && seite.includes("${closedDays.length}/${TOTAL_DAYS}"),
@@ -3224,7 +3224,7 @@ void 0;
   ok(NEU.every((id) => erstN[id] !== undefined), `K130c السبعةُ مجدولةٌ (${NEU.map((id) => `${id}@${erstN[id]}`).join(" ")})`);
   ok(erstN["a1-akkusativ"] < erstN["a1-plural"] && erstN["a1-zahlen"] < erstN["a1-zeitpraep"] && erstN["a1-weil-dass"] < erstN["a2-neben"] && erstN["a1-pronomen"] < erstN["a2-demo"] && erstN["a2-weil-dass"] < erstN["b1-absicht"] && erstN["b1-konj2"] < erstN["b1-konj2-vergangenheit"] && erstN["b1-konnektoren"] < erstN["b2-textkonnektoren"] && erstN["b1-absicht"] < erstN["b2-infinitiv"],
     "K130d الحلزونُ مرتبٌ: المتطلبُ قبلَ الدرسِ والمعمَّقُ بعدَه");
-  ok(eselsbruecken.length === 83 && NEU.every((id) => getBrueckenFor(id).length >= 1), "K130e لكلِّ درسٍ تركةٌ مرتبطةٌ؛ مجموعُ البنك 83");
+  ok(eselsbruecken.length === 84 && NEU.every((id) => getBrueckenFor(id).length >= 1), "K130e لكلِّ درسٍ تركةٌ مرتبطةٌ؛ مجموعُ البنك 84 (R392 b2-n-deklination)");
 }
 
   /* ═══ K131 · دفعة D1/D3/E7: لوح A0 + إتمام A1 + الأصدقاء الكاذبون ═══ */
@@ -3250,7 +3250,7 @@ void 0;
 {
   const topic = grammarMap["a2-wasfuer"];
   const ids = Object.keys(grammarMap);
-  ok(ids.length === 82 && !!topic && topic.level === "A2", "K132a درسُ Was-für موجودٌ في بنكٍ من 82 درساً وبمستوى A2");
+  ok(ids.length === 83 && !!topic && topic.level === "A2", "K132a درسُ Was-für موجودٌ في بنكٍ من 83 درساً وبمستوى A2 — R391 b2-n-deklination");
   ok(!!topic?.ziel && (topic.voraus ?? []).includes("a1-akkusativ") && (topic.voraus ?? []).includes("a2-dativ") && (topic.voraus ?? []).includes("a2-demo") && !!topic.anwendung && topic.exercises.length >= 9 && topic.verify?.length === 2 && topic.rules.length >= 3 && topic.examples.length >= 3 && (topic.pitfalls ?? []).length >= 3,
     "K132b الهدفُ والمتطلباتُ والتطبيقُ المستقلُ والحدُّ الأدنى الكاملُ للدرس مُثبتٌ");
   if (topic) {

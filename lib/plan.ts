@@ -27,7 +27,7 @@ import {
 } from "./content";
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
-import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B2_DECKEL_MIN } from "./phasen";
+import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B1_DECKEL_MIN, D1_B2_DECKEL_MIN } from "./phasen";
 import { inSchlafFenster, schlafEmpfehlung } from "./schlaf";
 import { baueStory } from "./mnemonic-story";
 import { palacePosition } from "./memory-palace";
@@ -1514,16 +1514,15 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   // ⚖️ تقديرات كل مهمة مستقلة عن هدف الجلسة وإيقاع البطاقات؛ لا نضغط مجموعها ولا نمدّه.
   for (const t of tasks) if (!t.mandatory) t.minutes = lastMinuten(t.minutes, level);
 
-  // ⚖️ D1-B (R168 · قرارُ المالك 2026-10-16 باعتماد D1-B): سقفُ الحملِ اليوميِّ المخطَّط في B2 عندَ D1_B2_DECKEL_MIN
-  //    (وB1 داخلُ سقفِها بالقياسِ أصلاً — يُقفِلُه K260a). الكشطُ حقيقيٌّ لا إعادةُ تسمية: تُخفَّضُ
-  //    دقائقُ مهامِّ المراجعةِ المتكرِّرةِ أوّلاً (wiederholen) ثم فحصِ اليومِ عندَ الحاجة، ويُقطَعُ محتواها
-  //    (أسئلةُ الاختبار/جملُ الكبسولة/فخاخُ الأخطاء) بالنسبةِ نفسِها — فالمهمّةُ المعروضةُ أصغرُ فعلاً.
-  //    لا يُمَسُّ أيُّ بندٍ بنكيٍّ فريد: القواعدُ والنصوصُ والحواراتُ والكتابةُ والمحادثةُ والامتحاناتُ خارجُ
-  //    الكشطِ بتاتاً، والإلزاميّاتُ (دَينُ التعويض/تحقُّقُ الاستقلال) لا تُخفَّض. ما يُقطَعُ يتكرَّرُ بطبيعتِه
-  //    (استرجاعٌ متباعدٌ أسبوعي/يومي) فيعودُ في دوراتٍ لاحقة. الأرقامُ تقديراتٌ مخطَّطةٌ من buildDay
-  //    لا زمنُ تعلُّمٍ مقيسٌ ميدانياً — كما وثَّقَ R166/D1. يُقفَلُ بسقوف K260a/b وسلامةِ التغطية K260c.
-  if (phase === "B2") {
-    const D1_DECKEL = D1_B2_DECKEL_MIN; // من lib/phasen.ts — مصدر الثوابت الأوحد
+  // ⚖️ D1-B (R168/R392 · قرارُ المالك 2026-10-16 باعتماد D1-B): سقفُ الحملِ اليوميِّ المخطَّط في B1/B2
+  //    B1=240 B2=270 (lib/phasen.ts). الكشطُ حقيقيٌّ لا إعادةُ تسمية: تُخفَّضُ دقائقُ مهامِّ المراجعةِ
+  //    المتكرِّرةِ أوّلاً (wiederholen) ثم فحصِ اليومِ (check: الأدوات المحقونة R373+R392) عندَ الحاجة،
+  //    ويُقطَعُ محتواها بالنسبةِ نفسِها — فالمهمّةُ المعروضةُ أصغرُ فعلاً. لا يُمَسُّ أيُّ بندٍ بنكيٍّ
+  //    فريد: القواعدُ والنصوصُ والحواراتُ والكتابةُ والمحادثةُ والامتحاناتُ خارجُ الكشطِ بتاتاً،
+  //    والإلزاميّاتُ لا تُخفَّض. ما يُقطَعُ يتكرَّرُ بطبيعتِه في دوراتٍ لاحقة. R392 يوسّع الكاب لـ B1
+  //    لاستيعاب الحقن المنهجي 820 أداة دون تجاوز 240 (كان B1 يُفترض داخل السقف قبل الحقن).
+  if (phase === "B1" || phase === "B2") {
+    const D1_DECKEL = phase === "B1" ? D1_B1_DECKEL_MIN : D1_B2_DECKEL_MIN;
     const ausgang = new Map(tasks.map((t) => [t, { m: t.minutes, q: t.quiz?.length ?? 0, s: t.sentenceIds?.length ?? 0, f: t.fehlerItems?.length ?? 0 }]));
     const kuerzeInhalt = (t: DayTask) => {
       const u = ausgang.get(t);
