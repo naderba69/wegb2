@@ -2644,6 +2644,15 @@ void 0;
     // ── K128 — إضافات R330/R331: N-Deklination + Debatte Paket
     ok(!!grammarMap["b2-n-deklination"] && grammarMap["b2-n-deklination"].level === "B2" && grammarMap["b2-n-deklination"].exercises.length >= 6, "K128a B2 N-Deklination موجودة (B2 · 6 تمارين)");
     ok(pakete.length === 4 && pakete.some((x) => x.id === "b2-debatte" && x.saetze.length === 12), "K128b 4 حزم (b2-debatte 12 جملة) — M2 B2 Themen مغلقة");
+    // K128c — Tools R334: Overlearning/Schlaf/Portfolio موجودة
+    {
+      const o = await import("../lib/overlearning.js");
+      const s = await import("../lib/schlaf.js");
+      const pf = await import("../lib/portfolio.js");
+      ok(o.OVERLEARNING_RATIO === 1.15 && o.extraDueDays(10).join() === "12,17", "K128c Overlearning 1.15 + delays 2/7");
+      ok(s.SCHLAF_FENSTER_START === 21 && s.inSchlafFenster(22) && !s.inSchlafFenster(20), "K128d Schlaf Fenster 21-23.5");
+      ok(pf.portfolioFortschritt({ version: 1, eintraege: [] }).total === 0, "K128e Portfolio leer=0");
+    }
   }
 
   /* ═══ K86 · رادارُ القواعدِ في النصوص: كلُّ نصِّ B1/B2 يسمّي ≥2 موضوعين نحويَّين مع شواهدَ حرفيّة ═══ */
