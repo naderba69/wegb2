@@ -1,8 +1,8 @@
 /**
- * 646 — Tool 646 Concept — مفهوم 646
- * Research 646: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 646 — Vocabulary Size Nation — حجم مفردات ناشن
+ * Nation 2006: classroom application
+ * Level: A0-B2 | Bloom: قيّم | Family: الذاكرة
  */
-export const TOOL_646 = { id: 646, titleDe: "Tool 646 Concept", titleAr: "مفهوم 646", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 646", desc: "Tool 646" } as const;
+export const TOOL_646 = { id: 646, titleDe: "Vocabulary Size Nation", titleAr: "حجم مفردات ناشن", family: "الذاكرة", bloom: "قيّم", level: "A0-B2", research: "Nation 2006", desc: "Vocabulary Size Nation" } as const;
 export function tool646Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool646Check(v:number):boolean{return v>0;}

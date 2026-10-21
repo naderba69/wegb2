@@ -1,8 +1,8 @@
 /**
- * 660 — Tool 660 Concept — مفهوم 660
- * Research 660: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 660 — Construction Grammar Goldberg adv — نحو بناء غولدبرغ متقدم
+ * Goldberg 2006: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_660 = { id: 660, titleDe: "Tool 660 Concept", titleAr: "مفهوم 660", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 660", desc: "Tool 660" } as const;
+export const TOOL_660 = { id: 660, titleDe: "Construction Grammar Goldberg adv", titleAr: "نحو بناء غولدبرغ متقدم", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Goldberg 2006", desc: "Construction Grammar Goldberg adv" } as const;
 export function tool660Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool660Check(v:number):boolean{return v>0;}

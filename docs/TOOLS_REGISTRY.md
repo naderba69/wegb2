@@ -690,36 +690,36 @@
 | 638 | SLA | Psychotypology — تصنيف نفسي | ✅حقيقي | A1-B2 | فهم | `lib/tool-638.ts` | R377 |
 | 639 | SLA | Multilingual Awareness — وعي متعدد | ✅حقيقي | A1-B2 | حلّل | `lib/tool-639.ts` | R377 |
 | 640 | SLA | Third Language Modelling — نمذجة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-640.ts` | R377 |
-| 641 | طرائق | Tool 641 Concept — مفهوم 641 | ✅حقيقي | A1-B2 | فهم | `lib/tool-641.ts` | R372 |
-| 642 | طرائق | Tool 642 Concept — مفهوم 642 | ✅حقيقي | A1-B2 | فهم | `lib/tool-642.ts` | R372 |
-| 643 | طرائق | Tool 643 Concept — مفهوم 643 | ✅حقيقي | A1-B2 | فهم | `lib/tool-643.ts` | R372 |
-| 644 | طرائق | Tool 644 Concept — مفهوم 644 | ✅حقيقي | A1-B2 | فهم | `lib/tool-644.ts` | R372 |
-| 645 | طرائق | Tool 645 Concept — مفهوم 645 | ✅حقيقي | A1-B2 | فهم | `lib/tool-645.ts` | R372 |
-| 646 | طرائق | Tool 646 Concept — مفهوم 646 | ✅حقيقي | A1-B2 | فهم | `lib/tool-646.ts` | R372 |
-| 647 | طرائق | Tool 647 Concept — مفهوم 647 | ✅حقيقي | A1-B2 | فهم | `lib/tool-647.ts` | R372 |
-| 648 | طرائق | Tool 648 Concept — مفهوم 648 | ✅حقيقي | A1-B2 | فهم | `lib/tool-648.ts` | R372 |
-| 649 | طرائق | Tool 649 Concept — مفهوم 649 | ✅حقيقي | A1-B2 | فهم | `lib/tool-649.ts` | R372 |
-| 650 | طرائق | Tool 650 Concept — مفهوم 650 | ✅حقيقي | A1-B2 | فهم | `lib/tool-650.ts` | R372 |
-| 651 | طرائق | Tool 651 Concept — مفهوم 651 | ✅حقيقي | A1-B2 | فهم | `lib/tool-651.ts` | R372 |
-| 652 | طرائق | Tool 652 Concept — مفهوم 652 | ✅حقيقي | A1-B2 | فهم | `lib/tool-652.ts` | R372 |
-| 653 | طرائق | Tool 653 Concept — مفهوم 653 | ✅حقيقي | A1-B2 | فهم | `lib/tool-653.ts` | R372 |
-| 654 | طرائق | Tool 654 Concept — مفهوم 654 | ✅حقيقي | A1-B2 | فهم | `lib/tool-654.ts` | R372 |
-| 655 | طرائق | Tool 655 Concept — مفهوم 655 | ✅حقيقي | A1-B2 | فهم | `lib/tool-655.ts` | R372 |
-| 656 | طرائق | Tool 656 Concept — مفهوم 656 | ✅حقيقي | A1-B2 | فهم | `lib/tool-656.ts` | R372 |
-| 657 | طرائق | Tool 657 Concept — مفهوم 657 | ✅حقيقي | A1-B2 | فهم | `lib/tool-657.ts` | R372 |
-| 658 | طرائق | Tool 658 Concept — مفهوم 658 | ✅حقيقي | A1-B2 | فهم | `lib/tool-658.ts` | R372 |
-| 659 | طرائق | Tool 659 Concept — مفهوم 659 | ✅حقيقي | A1-B2 | فهم | `lib/tool-659.ts` | R372 |
-| 660 | طرائق | Tool 660 Concept — مفهوم 660 | ✅حقيقي | A1-B2 | فهم | `lib/tool-660.ts` | R372 |
-| 661 | طرائق | Tool 661 Concept — مفهوم 661 | ✅حقيقي | A1-B2 | فهم | `lib/tool-661.ts` | R372 |
-| 662 | طرائق | Tool 662 Concept — مفهوم 662 | ✅حقيقي | A1-B2 | فهم | `lib/tool-662.ts` | R372 |
-| 663 | طرائق | Tool 663 Concept — مفهوم 663 | ✅حقيقي | A1-B2 | فهم | `lib/tool-663.ts` | R372 |
-| 664 | طرائق | Tool 664 Concept — مفهوم 664 | ✅حقيقي | A1-B2 | فهم | `lib/tool-664.ts` | R372 |
-| 665 | طرائق | Tool 665 Concept — مفهوم 665 | ✅حقيقي | A1-B2 | فهم | `lib/tool-665.ts` | R372 |
-| 666 | طرائق | Tool 666 Concept — مفهوم 666 | ✅حقيقي | A1-B2 | فهم | `lib/tool-666.ts` | R372 |
-| 667 | طرائق | Tool 667 Concept — مفهوم 667 | ✅حقيقي | A1-B2 | فهم | `lib/tool-667.ts` | R372 |
-| 668 | طرائق | Tool 668 Concept — مفهوم 668 | ✅حقيقي | A1-B2 | فهم | `lib/tool-668.ts` | R372 |
-| 669 | طرائق | Tool 669 Concept — مفهوم 669 | ✅حقيقي | A1-B2 | فهم | `lib/tool-669.ts` | R372 |
-| 670 | طرائق | Tool 670 Concept — مفهوم 670 | ✅حقيقي | A1-B2 | فهم | `lib/tool-670.ts` | R372 |
+| 641 | طرائق | Formulaic Language Wray — صيغية | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-641.ts` | R378 |
+| 642 | طرائق | Lexical Bundles Biber — حزم | ✅حقيقي | B1-B2 | فهم | `lib/tool-642.ts` | R378 |
+| 643 | طرائق | Collocation Sinclair — تصاحب | ✅حقيقي | A2-B2 | طبّق | `lib/tool-643.ts` | R378 |
+| 644 | طرائق | Idiom Boers — تعابير | ✅حقيقي | B1-B2 | فهم | `lib/tool-644.ts` | R378 |
+| 645 | طرائق | Metaphor Littlemore — استعارة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-645.ts` | R378 |
+| 646 | الذاكرة | Vocabulary Size Nation — حجم | ✅حقيقي | A0-B2 | قيّم | `lib/tool-646.ts` | R378 |
+| 647 | طرائق | Frequency Lists Brezina — تكرار | ✅حقيقي | A0-B2 | فهم | `lib/tool-647.ts` | R378 |
+| 648 | الذاكرة | Word Associations — ارتباطات | ✅حقيقي | A1-B2 | فهم | `lib/tool-648.ts` | R378 |
+| 649 | الذاكرة | Lexical Availability — توفر | ✅حقيقي | A1-B2 | فهم | `lib/tool-649.ts` | R378 |
+| 650 | تقويم | Lexical Diversity Malvern — تنوع | ✅حقيقي | B1-B2 | قيّم | `lib/tool-650.ts` | R378 |
+| 651 | تقويم | Lexical Sophistication — رقي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-651.ts` | R378 |
+| 652 | طرائق | Academic Vocabulary Coxhead — أكاديمية | ✅حقيقي | B1-B2 | فهم | `lib/tool-652.ts` | R378 |
+| 653 | طرائق | Technical Vocabulary — تقنية | ✅حقيقي | B1-B2 | فهم | `lib/tool-653.ts` | R378 |
+| 654 | طرائق | Multiword Units — وحدات | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-654.ts` | R378 |
+| 655 | SLA | Phrasal Verbs Garnier — مركبة | ✅حقيقي | B1-B2 | طبّق | `lib/tool-655.ts` | R378 |
+| 656 | SLA | Prepositional Verbs — حرفية | ✅حقيقي | A2-B2 | طبّق | `lib/tool-656.ts` | R378 |
+| 657 | SLA | Colligation Hoey — نحوي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-657.ts` | R378 |
+| 658 | SLA | Pattern Grammar Hunston — أنماط | ✅حقيقي | B1-B2 | حلّل | `lib/tool-658.ts` | R378 |
+| 659 | SLA | Valency Herbst — تكافؤ | ✅حقيقي | B1-B2 | حلّل | `lib/tool-659.ts` | R378 |
+| 660 | SLA | Construction Grammar Goldberg adv — بناء | ✅حقيقي | B1-B2 | حلّل | `lib/tool-660.ts` | R378 |
+| 661 | SLA | Cognitive Grammar Langacker — معرفي | ✅حقيقي | B1-B2 | فهم | `lib/tool-661.ts` | R378 |
+| 662 | SLA | Frame Semantics Fillmore — إطار | ✅حقيقي | B1-B2 | فهم | `lib/tool-662.ts` | R378 |
+| 663 | تلقين | Conceptual Blending Fauconnier — مزج | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-663.ts` | R378 |
+| 664 | تلقين | Mental Spaces — فضاءات | ✅حقيقي | B1-B2 | فهم | `lib/tool-664.ts` | R378 |
+| 665 | تلقين | Embodied Semantics — مجسدة | ✅حقيقي | A1-B2 | فهم | `lib/tool-665.ts` | R378 |
+| 666 | طرائق | Gesture McNeill — إيماء | ✅حقيقي | A0-B1 | طبّق | `lib/tool-666.ts` | R378 |
+| 667 | SLA | Iconicity Perniss — أيقونية | ✅حقيقي | A1-B2 | فهم | `lib/tool-667.ts` | R378 |
+| 668 | SLA | Sound Symbolism Dingemanse — رمزية | ✅حقيقي | A1-B2 | فهم | `lib/tool-668.ts` | R378 |
+| 669 | طرائق | Onomatopoeia — محاكاة | ✅حقيقي | A0-A2 | فهم | `lib/tool-669.ts` | R378 |
+| 670 | طرائق | Ideophones — تصويرية | ✅حقيقي | A1-B2 | فهم | `lib/tool-670.ts` | R378 |
 | 671 | طرائق | Tool 671 Concept — مفهوم 671 | ✅حقيقي | A1-B2 | فهم | `lib/tool-671.ts` | R372 |
 | 672 | طرائق | Tool 672 Concept — مفهوم 672 | ✅حقيقي | A1-B2 | فهم | `lib/tool-672.ts` | R372 |
 | 673 | طرائق | Tool 673 Concept — مفهوم 673 | ✅حقيقي | A1-B2 | فهم | `lib/tool-673.ts` | R372 |
