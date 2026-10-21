@@ -107,7 +107,21 @@
 
 > ما بعد 100 هو تفريع لكل أداة (مثال 026 Feedback = 6 أدوات فرعية، 105 Gamification = 8). السجل يُوسّع حتى 1000 بنفس النسق.
 
-**المجموع الحالي: 100 أداة أساسية — 100 ✅ موجودة (100%) — 0 🔲 مقترحة (0%) — اكتملت المائة الأولى**
+**المجموع الحالي: 100 أداة أساسية — 100 ✅ موجودة (100%) — 0 🔲 — اكتملت المائة الأولى**
+
+### تفصيل 100 → 1000 — الدفعة R344 (101→110)
+| 101 | SLA-Feedback | Recast إعادة صياغة | ✅ | A1-B2 | قيّم | `lib/feedback-recast.ts` | R344 |
+| 102 | SLA-Feedback | Explicit Correction | ✅ | A1-B2 | قيّم | `lib/feedback-explicit.ts` | R344 |
+| 103 | SLA-Feedback | Clarification Request | ✅ | A1-B2 | قيّم | `lib/feedback-clarification.ts` | R344 |
+| 104 | SLA-Feedback | Metalinguistic | ✅ | A1-B2 | قيّم | `lib/feedback-metalinguistic.ts` | R344 |
+| 105 | SLA-Feedback | Elicitation | ✅ | A1-B2 | قيّم | `lib/feedback-elicitation.ts` | R344 |
+| 106 | SLA-Feedback | Repetition | ✅ | A1-B2 | قيّم | `lib/feedback-repetition.ts` | R344 |
+| 107 | Gamification | Points/XP | ✅ | A0-B2 | — | `lib/gamification-points.ts` | R344 |
+| 108 | Gamification | Badges أوسمة | ✅ | A0-B2 | — | `lib/gamification-badges.ts` | R344 |
+| 109 | Gamification | Leaderboard | ✅ | A0-B2 | — | `lib/gamification-leaderboard.ts` | R344 |
+| 110 | Gamification | Levels مستويات | ✅ | A0-B2 | — | `lib/gamification-levels.ts` | R344 |
+
+**المجموع التراكمي: 110 / 1000 (11%) — 100 أساسية + 10 فرعية**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
