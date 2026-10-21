@@ -206,6 +206,20 @@
 | 170 | تقويم | CEFR Variants معياري | ✅ | A0-B2 | قيّم | `lib/cefr-var.ts` | R350 |
 
 **المجموع التراكمي: 170 / 1000 (17%) — 100 أساسية + 70 فرعية**
+
+### تفصيل 100 → 1000 — الدفعة R351 (171→180)
+| 171 | تقويم | Portfolio Variants محفظة | ✅ | A0-B2 | أنشئ | `lib/portfolio-var.ts` | R351 |
+| 172 | تقويم | Self-assessment Variants ذاتي | ✅ | A0-B2 | قيّم | `lib/self-assessment-var.ts` | R351 |
+| 173 | تقويم | Peer Assessment V2 أقران | ✅ | B1-B2 | قيّم | `lib/peer-assessment-var2.ts` | R351 |
+| 174 | تقويم | Dynamic Assessment Variants دينامي | ✅ | B1-B2 | قيّم | `lib/dynamic-assessment-var.ts` | R351 |
+| 175 | تقويم | Error Analysis Variants تحليل أخطاء | ✅ | A0-B2 | حلّل | `lib/error-analysis-var.ts` | R351 |
+| 176 | تقويم | Contrastive Variants تقابلي | ✅ | A0-B2 | حلّل | `lib/contrastive-var.ts` | R351 |
+| 177 | تقويم | Benchmarking Variants مرجعية | ✅ | A0-B2 | قيّم | `lib/benchmarking-var.ts` | R351 |
+| 178 | تقويم | Washback Variants أثر رجعي | ✅ | B1-B2 | قيّم | `lib/washback-var.ts` | R351 |
+| 179 | تقويم | Moderation Variants معايرة | ✅ | B2 | قيّم | `lib/moderation-var.ts` | R351 |
+| 180 | تقويم | Rubric Variants شبكة معايير | ✅ | B1-B2 | قيّم | `lib/rubric-var.ts` | R351 |
+
+**المجموع التراكمي: 180 / 1000 (18%) — 100 أساسية + 80 فرعية**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
