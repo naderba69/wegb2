@@ -32,6 +32,8 @@ import { inSchlafFenster, schlafEmpfehlung } from "./schlaf";
 import { baueStory } from "./mnemonic-story";
 import { palacePosition } from "./memory-palace";
 import { piItemsFor } from "./processing-instruction";
+import { fallFuerLevel } from "./case-study";
+import { projektFuerLevel } from "./project";
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1326,6 +1328,16 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       ],
     };
     tasks.push(...(finals[day] ?? finals[378]));
+  }
+
+  // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
+  if (level !== "A0" && level !== "A1" && wocheInPhase % 2 === 0 && type === "festigung") {
+    const fall = fallFuerLevel(level);
+    if (fall) tasks.push({ id: tid(30), kind: "lesen", titleDe: `Fallstudie: ${fall.titelDe}`, titleAr: `دراسة حالة: ${fall.titelAr}`, minutes: 12, textId: textsOfLevel[0]?.id });
+  }
+  if ((level === "B1" || level === "B2") && wocheInPhase % 4 === 0 && type === "festigung") {
+    const proj = projektFuerLevel(level);
+    if (proj) tasks.push({ id: tid(31), kind: "schreiben", titleDe: `Projekt: ${proj.titelDe}`, titleAr: `مشروع: ${proj.titelAr}`, minutes: 20, writeId: nextWrite()?.id });
   }
 
   // R143/A0: المرحلة أقصر من البنك؛ نضيف خانة قراءة واحدة كل يوم،

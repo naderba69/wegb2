@@ -52,8 +52,8 @@
 | 046 | تلقين | Simulation محاكاة | ✅ | B1-B2 | طبّق | `lib/simulation.ts` | Goethe 65/40/75/15 |
 | 047 | تلقين | Drama | 🔲 | B2 | أنشئ | — | P4 |
 | 048 | تلقين | Debate مناظرة | ✅ | B2 | قيّم | `content/pakete.json` b2-debatte | 12+حوار B2 |
-| 049 | تلقين | دراسة حالة Case | 🔲 | B2 | حلّل | — | P4 |
-| 050 | تلقين | Project مشروع | 🔲 | B2 | أنشئ | — | P4 |
+| 049 | تلقين | دراسة حالة Case | ✅ | B2 | حلّل | `lib/case-study.ts` | R336b |
+| 050 | تلقين | Project مشروع | ✅ | B2 | أنشئ | `lib/project.ts` | R336b |
 | 051 | تلقين | Jigsaw تعاوني | 🔲 | B1-B2 | طبّق | — | P4 |
 | 052 | تلقين | Peer Teaching تدريس أقران | ✅ | A1-B2 | أنشئ | `lib/fehlerbank2.ts` | شرح الخطأ للآخر |
 | 053 | تلقين | Think-Pair-Share | 🔲 | A1-B2 | طبّق | — | P4 |
@@ -79,7 +79,7 @@
 | 073 | تقويم | Self-assessment ذاتي | ✅ | A0-B2 | قيّم | `content/cando.json` 44 | Can-Do 44 |
 | 074 | تقويم | Peer assessment أقران | 🔲 | B1-B2 | قيّم | — | P4 |
 | 075 | تقويم | Ipsative (تقدم الذات) | ✅ | A0-B2 | قيّم | `lib/metriken.ts` | منحنى تقدم |
-| 076 | تقويم | Dynamic Assessment دينامي | 🔲 | B1-B2 | قيّم | — | P4 |
+| 076 | تقويم | Dynamic Assessment دينامي | ✅ | B1-B2 | قيّم | `lib/dynamic-assessment.ts` | R336b |
 | 077 | تقويم | Error Analysis تحليل أخطاء | ✅ | A0-B2 | حلّل | `lib/fehleratlas.ts` | 10 فئات + 200 مثال |
 | 078 | تقويم | Contrastive Analysis تقابلي | ✅ | A0-B2 | حلّل | `lib/arabinterferenz.ts` | عربي↔ألماني |
 | 079 | تقويم | Rasch/IRT | 🔲 | B2 | قيّم | — | P4 |
@@ -107,7 +107,7 @@
 
 > ما بعد 100 هو تفريع لكل أداة (مثال 026 Feedback = 6 أدوات فرعية، 105 Gamification = 8). السجل يُوسّع حتى 1000 بنفس النسق.
 
-**المجموع الحالي: 100 أداة أساسية — 70 ✅ موجودة (70%) — 30 🔲 مقترحة (30%)**
+**المجموع الحالي: 100 أداة أساسية — 73 ✅ موجودة (73%) — 27 🔲 مقترحة (27%)**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
