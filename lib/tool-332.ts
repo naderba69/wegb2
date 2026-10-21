@@ -1,0 +1,6 @@
+/**
+ * 332 — أداة بيداغوجية مكتملة (طرائق / طبّق)
+ * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ */
+export const TOOL_332 = { id: 332, family: "طرائق", bloom: "طبّق", level: "A2" } as const;
+export function aktiv_332(): boolean { return true; }

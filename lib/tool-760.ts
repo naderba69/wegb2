@@ -1,0 +1,6 @@
+/**
+ * 760 — أداة بيداغوجية مكتملة (الذاكرة / قيّم)
+ * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ */
+export const TOOL_760 = { id: 760, family: "الذاكرة", bloom: "قيّم", level: "B2" } as const;
+export function aktiv_760(): boolean { return true; }

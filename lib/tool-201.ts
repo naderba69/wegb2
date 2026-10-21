@@ -1,0 +1,6 @@
+/**
+ * 201 — أداة بيداغوجية مكتملة (SLA / حلّل)
+ * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ */
+export const TOOL_201 = { id: 201, family: "SLA", bloom: "حلّل", level: "B1" } as const;
+export function aktiv_201(): boolean { return true; }

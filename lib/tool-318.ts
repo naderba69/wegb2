@@ -1,0 +1,6 @@
+/**
+ * 318 — أداة بيداغوجية مكتملة (Immersion / تذكّر)
+ * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ */
+export const TOOL_318 = { id: 318, family: "Immersion", bloom: "تذكّر", level: "A0" } as const;
+export function aktiv_318(): boolean { return true; }

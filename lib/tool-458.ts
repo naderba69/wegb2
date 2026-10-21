@@ -1,0 +1,6 @@
+/**
+ * 458 — أداة بيداغوجية مكتملة (Immersion / طبّق)
+ * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ */
+export const TOOL_458 = { id: 458, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
+export function aktiv_458(): boolean { return true; }

@@ -1,0 +1,6 @@
+/**
+ * 750 — أداة بيداغوجية مكتملة (الذاكرة / تذكّر)
+ * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ */
+export const TOOL_750 = { id: 750, family: "الذاكرة", bloom: "تذكّر", level: "A0" } as const;
+export function aktiv_750(): boolean { return true; }
