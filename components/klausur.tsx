@@ -335,7 +335,11 @@ function KlausurApp({ progress, onClose, skill }: { progress: Progress; onClose:
                 </div>
                 <div style={{ fontWeight: 700, margin: "0.6rem 0 0.3rem", fontSize: "0.9rem" }}>قيِّمْ نفسَك بصدق — كما ستفعل اللجنة:</div>
                 {sec.sprechen.kriterien.map((c, i) => (
-                  <label key={c.de} style={{ display: "flex", gap: "0.5rem", cursor: "pointer", margin: "0.2rem 0", minHeight: "44px", alignItems: "center" }}>
+                  <label
+                    key={c.de}
+                    aria-label={`${c.de} — ${c.ar}`}
+                    style={{ display: "flex", gap: "0.5rem", cursor: "pointer", margin: "0.2rem 0", minHeight: "44px", alignItems: "center" }}
+                  >
                     <input type="checkbox" checked={!!wrChecks[`${secIdx}:${i}`]} onChange={() => setWrChecks((ch) => ({ ...ch, [`${secIdx}:${i}`]: !ch[`${secIdx}:${i}`] }))} />
                     <span>
                       <De>{c.de}</De> <span style={{ color: "var(--color-ink2)", fontSize: "0.85rem" }}>— {c.ar}</span>

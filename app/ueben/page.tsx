@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useProgress } from "@/lib/store";
 import { buildDay } from "@/lib/plan";
-import { grammarMap } from "@/lib/content";
+import { heutigesGrammatikThema, parkedExercisesFor } from "@/lib/parkuebungen";
 import ExerciseSet from "@/components/exercises";
 import { FehlerLabor } from "@/components/fehlerlabor";
 import { UebungenCard } from "@/components/trainer";
@@ -115,23 +115,10 @@ export default function Ueben() {
   const plan = useMemo(() => buildDay(day, progress), [day, progress]);
   const offenBleibt = plan.tasks.some((tk) => !progress.plan.tasks[tk.id]);
 
-  // المَرتحَل: زائدُ تمارينِ درسِ اليوم (weg-park- يكتبه المعالج)
-  const gramTask = plan.tasks.find((t) => t.kind === "grammatik" && t.topicId);
-  const topicId = gramTask?.topicId ?? null;
-  const parkIds = useMemo(() => {
-    if (!topicId) return [] as string[];
-    try {
-      const raw = localStorage.getItem(`weg-park-${topicId}`);
-      const ids = raw ? (JSON.parse(raw) as string[]) : [];
-      return Array.isArray(ids) ? ids : [];
-    } catch { return []; }
-  }, [topicId]);
-  const parkExercises = useMemo(() => {
-    if (!topicId || parkIds.length === 0) return [];
-    const t = grammarMap[topicId];
-    if (!t) return [];
-    return t.exercises.filter((e) => parkIds.includes(e.id));
-  }, [topicId, parkIds]);
+  // المَرتحَل: زائدُ تمارينِ درسِ اليوم (weg-park- يكتبه المعالج) — مُستخرَجٌ الآن
+  // في lib/parkuebungen.ts (R307) فتستعمله أيضًا صفحة «اليوم» دمجًا في التدفّق اليومي.
+  const topicId = useMemo(() => heutigesGrammatikThema(plan), [plan]);
+  const parkExercises = useMemo(() => parkedExercisesFor(topicId), [topicId]);
   const hatZusatz = parkExercises.length > 0;
 
   if (!geladen) {

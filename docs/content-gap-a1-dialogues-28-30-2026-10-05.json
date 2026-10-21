@@ -63,7 +63,7 @@
   "orphanCardTrace": {
     "vocabPath": "content/vocab.json",
     "a1DeckCount": 11,
-    "a1CardCount": 650,
+    "a1CardCount": 729,
     "dialogueSources": {
       "10-18": {
         "dialogueIds": [

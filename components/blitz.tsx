@@ -306,6 +306,8 @@ export function BlitzDrill({ progress }: { progress: Progress }) {
           <div style={{ fontSize: "0.76rem", color: "var(--color-ink2)", margin: "2px 0 8px" }} dir="rtl">{k.qAr}</div>
           {flash && !flash.ok && <div className="de" style={{ background: "var(--color-card)", border: "1px solid var(--color-a1)", borderRadius: 8, padding: "0.25rem 0.5rem", fontSize: "0.78rem", fontWeight: 900, marginBottom: 6 }}>{flash.text}</div>}
           <div style={{ display: "flex", gap: 6 }}>
+            {/* eslint-disable-next-line jsx-a11y/no-autofocus -- درس سرعة متكرر: المستخدم بدأه بزر
+                صريح، وإعادة التركيز على حقل الإجابة كل جولة هي جوهر تجربة «الوميض» الكتابية */}
             <input ref={inputRef} className="field" style={{ direction: "ltr", flex: 1 }} value={gab} onChange={(e) => setGab(e.target.value)} onKeyDown={(e) => e.key === "Enter" && (flash && !flash.ok ? weiter() : antworten())} placeholder="اكتب أو رقم الخيار (1–4) ثم ⏎" autoFocus />
             {flash && !flash.ok ? (
               <button className="btn btn-ghost" onClick={weiter}>التالي ↵</button>

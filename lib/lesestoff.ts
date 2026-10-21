@@ -13,6 +13,27 @@ export interface StoffFrage {
   erklaerAr: string;
 }
 
+/**
+ * 🗣️ R305/خ15: مهمّة «وساطة لغوية» (Sprachmittlung) — الركن الخامس في CEFR Companion
+ * Volume 2020 إلى جانب الاستماع/القراءة/الكتابة/التحدث: نقل معنى نصّ ألماني إلى شخص لا
+ * يقرأ الألمانية، لا ترجمة حرفية. اختيارية، بعد أسئلة الفهم، لنصوص/حوارات B1/B2 فقط
+ * (حيث يصبح محتوى الحياة اليومية بالألمانية واقعًا محتملاً لمتعلم عربي في ألمانيا).
+ */
+export interface MediationAufgabe {
+  aufgabeAr: string;
+  punkteAr: string[];
+}
+
+/**
+ * 📰 R305/خ18: «طابِق كل فقرة بعنوانها» — نمط Goethe Lesen Teil 1 (Überschriften zuordnen).
+ * عدد العناوين في `optionen` أكبر من عدد الفقرات عمدًا (مُضلِّلات لا تطابق أيّ فقرة)،
+ * و`richtig[i]` هو فهرس العنوان الصحيح للفقرة رقم i داخل `optionen` — مطابقة لا اختيار.
+ */
+export interface UeberschriftenAufgabe {
+  optionen: string[];
+  richtig: number[];
+}
+
 export interface FreierText {
   id: string;
   stufe: Level;
@@ -21,6 +42,8 @@ export interface FreierText {
   titelAr: string;
   absaetze: string[];
   fragen: StoffFrage[];
+  mediation?: MediationAufgabe;
+  ueberschriften?: UeberschriftenAufgabe;
 }
 
 export interface FreierDialog {
@@ -30,6 +53,7 @@ export interface FreierDialog {
   titelAr: string;
   zeilen: { wer: string; de: string; ar: string }[];
   fragen: StoffFrage[];
+  mediation?: MediationAufgabe;
 }
 
 export const FREIE_TEXTE: FreierText[] = [
@@ -194,6 +218,14 @@ export const FREIE_TEXTE: FreierText[] = [
       { frageDe: "Was empfehlen Experten?", optionen: ["Eine Mischung aus Büro und Homeoffice", "Nur noch Homeoffice", "Nur noch Büro"], richtig: 0, erklaerAr: "المزج بين المكتب والبيت هو الحل الأفضل لكثيرين." },
       { frageDe: "Welche Haltung hat der Autor zum Homeoffice?", optionen: ["Er ist komplett dagegen", "Er sieht Vorteile und Nachteile und findet eine Mischung gut", "Er will, dass alle nur noch zu Hause arbeiten"], richtig: 1, erklaerAr: "موقف متوازن: يرى الحسنات والسيئات ويرجّح المزج." },
     ],
+    mediation: {
+      aufgabeAr: "صديقك لا يقرأ الألمانية ويسألك عن رأي الكاتب في العمل من البيت. لخّص له الفكرة بالعربية في 2–3 جمل.",
+      punkteAr: [
+        "للعمل من البيت فوائد حقيقية: توفير الوقت والمال ومرونة أكبر في الجدول.",
+        "وله عيوب: الشعور بالوحدة وصعوبة الفصل بين العمل والراحة.",
+        "نصيحة الخبراء: المزج بين المكتب والبيت، مع فترات راحة منتظمة والعناية بالجسم.",
+      ],
+    },
   },
   {
     id: "frei-b1-stadt-dorf",
@@ -212,6 +244,14 @@ export const FREIE_TEXTE: FreierText[] = [
       { frageDe: "Wovon hängt die Entscheidung laut Text ab?", optionen: ["Vom Menschen selbst", "Vom Wetter", "Vom Gehalt allein"], richtig: 0, erklaerAr: "القرار يعتمد على الإنسان: من يبحث عن الهدوء يختار القرية." },
       { frageDe: "Was ist die wichtigste Aussage des Textes?", optionen: ["Die Stadt ist immer besser", "Das Dorf ist immer besser", "Es gibt keine beste Antwort für alle — es hängt vom Menschen und seiner Lebensphase ab"], richtig: 2, erklaerAr: "النص يختم بأن القرار يعتمد على الإنسان ومرحلة حياته." },
     ],
+    mediation: {
+      aufgabeAr: "اشرح لصديق لا يقرأ الألمانية خلاصة هذا النص في 2–3 جمل بالعربية.",
+      punkteAr: [
+        "المدينة: خدمات ومرافق كثيرة، لكن الشقق غالية وصغيرة والضجيج شبه دائم.",
+        "القرية: هدوء وهواء نظيف وجيران متعاونون، لكن فرص عمل وترفيه أقل.",
+        "لا إجابة واحدة صحيحة للجميع — القرار يعتمد على الشخص ومرحلة حياته.",
+      ],
+    },
   },
   {
     id: "frei-b1-schluessel",
@@ -230,6 +270,14 @@ export const FREIE_TEXTE: FreierText[] = [
       { frageDe: "Wie dankte Jonas ihr?", optionen: ["Er lud sie zum Essen ein", "Er gab ihr Geld", "Er brachte ihr einen Blumenstrauß"], richtig: 2, erklaerAr: "أحضر لها باقة زهور في اليوم التالي." },
       { frageDe: "Was hat Jonas aus diesem Abend gelernt?", optionen: ["Man soll immer zwei Handys haben", "Gute Nachbarn sind sehr wertvoll", "Man soll nie spät nach Hause kommen"], richtig: 1, erklaerAr: "تعلّم أن الجيران الطيبين مثل عائلة ثانية." },
     ],
+    mediation: {
+      aufgabeAr: "احكِ هذه القصة بإيجاز بالعربية لصديق لا يفهم الألمانية (2–3 جمل).",
+      punkteAr: [
+        "يوناس فقد مفتاحه ليلاً تحت المطر ولم يرد إيقاظ جيرانه.",
+        "جارته العجوز السيدة زومر كانت قد وجدته واحتفظت به له.",
+        "شكرها بباقة ورد، وتبادلا مفتاحين احتياطيين وأصبحا صديقين.",
+      ],
+    },
   },
   {
     id: "frei-b2-ki",
@@ -249,6 +297,25 @@ export const FREIE_TEXTE: FreierText[] = [
       { frageDe: "Was empfiehlt der Text am Ende?", optionen: ["KI vollständig verbieten", "KI bewusst als Werkzeug nutzen und Antworten prüfen", "Nur Experten dürfen KI nutzen"], richtig: 1, erklaerAr: "التعامل الواعي: أداة مساعدة لا سلطة نثق بها عمياءً، مع فحص الأجوبة." },
       { frageDe: "Wie ist die Grundhaltung des Textes zur KI?", optionen: ["Begeistert ohne Kritik", "Positiv, aber vorsichtig: ein Werkzeug, keine Autorität", "Ablehnend: KI sollte verboten werden"], richtig: 1, erklaerAr: "النبرة إيجابية بحذر: أداة نافعة لا سلطة نثق بها عمياءً." },
     ],
+    mediation: {
+      aufgabeAr: "لخّص موقف الكاتب من الذكاء الاصطناعي بالعربية في 3 جمل، لشخص لا يقرأ الألمانية.",
+      punkteAr: [
+        "يرى الكاتب فوائد (توفير الوقت) ومخاطر (البيانات والوظائف) معًا.",
+        "يدعو إلى استخدام واعٍ: أداة مساعدة لا سلطة نثق بها عمياءً، مع فحص إجاباتها.",
+        "يذكر أثرها في المدرسة والعمل والطب، لكن القرار النهائي يبقى للإنسان.",
+      ],
+    },
+    ueberschriften: {
+      optionen: [
+        "الذكاء الاصطناعي بين أيدينا يوميًا",
+        "مخاوف مشروعة من المخاطر",
+        "أداة تخدم الإنسان لا سلطة فوقه",
+        "من المدرسة إلى غرفة الطبيب: القرار يبقى بشريًا",
+        "حظر الذكاء الاصطناعي بالكامل",
+        "الذكاء الاصطناعي سيحلّ محلّ كل عمل بشري قريبًا",
+      ],
+      richtig: [0, 1, 2, 3],
+    },
   },
   {
     id: "frei-b2-wohnen",
@@ -268,6 +335,25 @@ export const FREIE_TEXTE: FreierText[] = [
       { frageDe: "Worin sind sich die Experten einig?", optionen: ["Mieten müssen verboten werden", "Alle sollen aufs Land ziehen", "Ohne mehr Wohnraum entspannt sich die Lage nicht"], richtig: 2, erklaerAr: "الاتفاق الوحيد: بلا مساكن أكثر لن يتحسّن الوضع." },
       { frageDe: "Was ist die Hauptaussage des Textes?", optionen: ["Die Mieten sollen vom Staat festgelegt werden", "Ohne deutlich mehr neue Wohnungen wird Wohnen in der Stadt teuer bleiben", "Alle Menschen sollen aufs Land ziehen"], richtig: 1, erklaerAr: "الخلاصة: بلا بناء أكثر بكثير لن تنخفض الأزمة." },
     ],
+    mediation: {
+      aufgabeAr: "لخّص بالعربية أزمة السكن في المدن الألمانية كما يصفها هذا النص.",
+      punkteAr: [
+        "الإيجارات ترتفع وتبتلع أكثر من ثلث دخل كثير من الناس.",
+        "السبب: بناء قليل مقابل إقبال متزايد على المدن للعمل والدراسة.",
+        "الحلول المقترحة: بناء أكثر وإجراءات أسرع وقيود على رفع الإيجار — وبلا بناء كافٍ لن يتحسن الوضع.",
+      ],
+    },
+    ueberschriften: {
+      optionen: [
+        "الإيجارات ترتفع وتلتهم جزءًا كبيرًا من الدخل",
+        "الأزمة تمسّ الأفراد والمدن معًا",
+        "حلول مقترحة… واتفاق على نقطة واحدة فقط",
+        "بين كبح الإيجار وبطء التراخيص: لا حلّ سريع",
+        "أسعار الإيجار في انخفاض مستمر منذ سنوات",
+        "الحكومة ألغت جميع القيود على البناء",
+      ],
+      richtig: [0, 1, 2, 3],
+    },
   },
   {
     id: "frei-b2-ehrenamt",
@@ -287,6 +373,25 @@ export const FREIE_TEXTE: FreierText[] = [
       { frageDe: "Was braucht freiwillige Arbeit laut Text?", optionen: ["Nur mehr Geld vom Staat", "Weniger Aufgaben", "Anerkennung und klare Aufgaben"], richtig: 2, erklaerAr: "تقدير ومهام واضحة وأحيانًا تعويض صغير عن المصاريف." },
       { frageDe: "Warum ist das Ehrenamt laut Text für die ganze Gesellschaft wichtig?", optionen: ["Weil der Staat dadurch Steuern spart und sonst nichts", "Weil viele Angebote ohne Freiwillige gar nicht existieren würden", "Weil Ehrenamtliche bezahlte Arbeiter ersetzen sollen"], richtig: 1, erklaerAr: "لأن عروضًا كثيرة (طعام المحتاجين، مقاهي اللغة) ما كانت لتوجد بلا متطوعين." },
     ],
+    mediation: {
+      aufgabeAr: "اشرح لصديق لا يقرأ الألمانية ما هو العمل التطوعي في هذا النص وما فائدته.",
+      punkteAr: [
+        "ملايين يتطوعون بلا أجر في الرياضة والإسعاف ورعاية المسنين وغيرها.",
+        "المتطوع يكسب علاقات وخبرة وشعورًا بالقيمة، خصوصًا القادمون الجدد الذين يتعلمون اللغة.",
+        "يحتاج العمل التطوعي تقديرًا ومهامًا واضحة حتى يبقى ممتعًا لا عبئًا.",
+      ],
+    },
+    ueberschriften: {
+      optionen: [
+        "ملايين يتطوّعون بلا مقابل في مجالات متعددة",
+        "ما يكسبه المتطوّع لا يقلّ عمّا يمنحه",
+        "التطوّع يحتاج شروطًا جيدة ليستمر بفرح",
+        "من مقهى اللغة إلى المستشفى: أمثلة من الواقع",
+        "التطوّع إلزاميٌّ بقانون جديد",
+        "لا فائدة للمتطوّع نفسه من عمله",
+      ],
+      richtig: [0, 1, 2, 3],
+    },
   },
 ];
 
@@ -435,6 +540,14 @@ export const FREIE_DIALOGE: FreierDialog[] = [
       { frageDe: "Ab wann ist die Wohnung frei?", optionen: ["Ab dem ersten März", "Sofort", "Ab April"], richtig: 0, erklaerAr: "من الأول من مارس." },
       { frageDe: "Was ist in der Wohnung verboten?", optionen: ["Rauchen auf dem Balkon", "Musik am Abend", "Haustiere"], richtig: 2, erklaerAr: "الحيوانات الأليفة غير مسموح بها." },
     ],
+    mediation: {
+      aufgabeAr: "صديقك يبحث عن شقة في ألمانيا ولا يفهم الألمانية — لخّص له أهم ما جاء في هذا الحوار.",
+      punkteAr: [
+        "تكاليف الخدمات الإضافية حوالي 120 يورو شهريًا، وتشمل التدفئة والماء.",
+        "الشقة تصبح فارغة من أول مارس، ولا يُسمح فيها بالحيوانات الأليفة.",
+        "المستأجر المحتمل سيفكر حتى الغد ثم يتصل بالمالكة بقراره.",
+      ],
+    },
   },
   {
     id: "frei-b1-reklamation",
@@ -455,6 +568,14 @@ export const FREIE_DIALOGE: FreierDialog[] = [
       { frageDe: "Was zeigt die Kundin dem Verkäufer?", optionen: ["Ihren Ausweis", "Den Kassenbon", "Ein Foto"], richtig: 0, erklaerAr: "إيصال الدفع." },
       { frageDe: "Wie endet das Gespräch?", optionen: ["Sie bekommt ihr Geld zurück", "Sie geht ohne Lösung", "Sie tauscht die Schuhe um"], richtig: 2, erklaerAr: "استبدلت الأحذية بزوج جديد." },
     ],
+    mediation: {
+      aufgabeAr: "لخّص بالعربية كيف حلّت الزبونة مشكلة حذائها في المتجر.",
+      punkteAr: [
+        "نعل الحذاء تكسّر بعد أسبوعين فقط من الشراء.",
+        "أحضرت إيصال الدفع وطلبت زوجًا جديدًا أو استرداد المال.",
+        "البائع استبدل لها الحذاء بنفس المقاس، وانتهى الأمر برضاها.",
+      ],
+    },
   },
   {
     id: "frei-b2-mietvertrag",
@@ -477,6 +598,14 @@ export const FREIE_DIALOGE: FreierDialog[] = [
       { frageDe: "Was muss die Mieterin beim Auszug machen?", optionen: ["Die Wohnung komplett sanieren", "Nur übliche Schönheitsreparaturen wie Wände streichen", "Gar nichts"], richtig: 1, erklaerAr: "ترميمات تجميلية معتادة فقط، بحسب الفقرة الثامنة." },
       { frageDe: "Wo kann sie ihr Fahrrad abstellen?", optionen: ["Im Treppenhaus", "Im Fahrradraum im Keller", "Nur auf der Straße"], richtig: 1, erklaerAr: "في غرفة الدراجات في القبو." },
     ],
+    mediation: {
+      aufgabeAr: "صديقك سيوقّع عقد إيجار في ألمانيا قريبًا — لخّص له أهم الشروط من هذا الحوار.",
+      punkteAr: [
+        "التأمين (Kaution) يعادل ثلاثة أشهر إيجار، ويمكن دفعه على ثلاث دفعات.",
+        "مهلة إنهاء العقد ثلاثة أشهر قبل نهاية الشهر، وهذا معتاد قانونًا.",
+        "لا تُطلب منها إلا ترميمات تجميلية بسيطة عند المغادرة، ويوجد مكان لدراجتها في القبو.",
+      ],
+    },
   },
   {
     id: "frei-b2-diskussion",
@@ -497,6 +626,14 @@ export const FREIE_DIALOGE: FreierDialog[] = [
       { frageDe: "Was befürchtet der Kollege?", optionen: ["Die Technik funktioniert nicht", "Neue Kollegen lernen das Team kaum kennen", "Der Chef ist dagegen"], richtig: 1, erklaerAr: "يقلق أن الزملاء الجدد لن يعرفوا الفريق من البيت." },
       { frageDe: "Auf welchen Kompromiss einigen sie sich?", optionen: ["Alle bleiben im Büro", "Nur noch Homeoffice", "Drei Tage Homeoffice und zwei Tage Büro"], richtig: 2, erklaerAr: "حلّ وسط: 3 أيام بيت + يومان مكتب، ويقترحانه في الاجتماع." },
     ],
+    mediation: {
+      aufgabeAr: "لخّص بالعربية الحل الوسط الذي اتفق عليه الزميلان بخصوص العمل من البيت.",
+      punkteAr: [
+        "الزميلة تفضّل العمل من البيت: توفير وقت الطريق وتركيز أفضل.",
+        "الزميل يرى فائدة الحضور: نقاش أسرع وتعرّف الموظفين الجدد على الفريق.",
+        "اتفقا على حل وسط: ثلاثة أيام عمل من البيت ويومان في المكتب.",
+      ],
+    },
   },
 ];
 

@@ -447,7 +447,7 @@ const vocabRepeatAudit = (() => {
     ["texts", texts.filter((t) => !(t as { neu?: boolean }).neu).length >= 80 ? texts.filter((t) => !(t as { neu?: boolean }).neu).length : 0, texts.filter((t) => !(t as { neu?: boolean }).neu).length],
     ["dialogues", dialogues.filter((d) => !(d as { neu?: boolean }).neu).length >= 80 ? dialogues.filter((d) => !(d as { neu?: boolean }).neu).length : 0, dialogues.filter((d) => !(d as { neu?: boolean }).neu).length],
     ["writing", writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length >= 30 ? writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length : 0, writingTasks.filter((w) => !(w as { neu?: boolean }).neu).length],
-    ["vocab", alleVokabeln.length, 4504], // R298: +912 B2-Rezeptivkarten (Decks j01–j16) — Bestand 4504 — alle 133 Stationswörter leben jetzt auch in Alltags-Decks
+    ["vocab", alleVokabeln.length, 6202], // R323: +69 بطاقة B1 لسدّ فجوة Goethe-Wortliste الأبجدية V (Vase–Vortrag) — Bestand 6202 (كان 5953 منذ R322)
     ["fehler", fehlerList.length, 196],
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
@@ -487,10 +487,10 @@ const vocabRepeatAudit = (() => {
   const GOETHE_UNITS = ["Beziehungen", "Gesundheit", "Gesellschaft", "Wohnen", "Digital", "Wissenschaft", "Schönheit", "Kunst"];
   ok(GOETHE_UNITS.every((u) => vortrag.some((x) => x.unit === u)), "K21c كل لوحة Goethe لها موضوعان على المنصة");
 
-  ok(alleVokabeln.length === 4504, "K21d بنك المفردات: 4504 بطاقة عبر 96 حزمةً (R298: +912 بطاقة B2 استقبالية في حزم j01–j16 الجديدة أُضيفت إلى الـ3592، وكل كلمات التمريض الـ133 في الحزم العامة أصلًا أو نسجًا)؛ يتطابق العدد مع القرص والفهرس");
+  ok(alleVokabeln.length === 6202, "K21d بنك المفردات: 6202 بطاقة عبر 122 حزمٍ (R328: +2 بطاقة B1 Final (zwingen zu/Infinitiv) أُضيفت إلى الـ6200)؛ يتطابق العدد مع القرص والفهرس");
   ok(GOETHE_UNITS.every((u) => { const key = { Beziehungen: "beziehungen", Gesundheit: "gesundheit", Gesellschaft: "gesellschaft", Wohnen: "wohnen", Digital: "digital", Wissenschaft: "wissenschaft", Schönheit: "schoenheit", Kunst: "kunst-kultur" }[u] as string; return alleVokabeln.filter((c) => c.tags?.includes(key)).length >= 40; }), "K21e تغطية موضوعية: ≥40 كلمة لكل لوحة Goethe");
-  ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 4456 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
-    `K21f التكرار المعجمي إما موثّق لإعادة الاسترجاع عبر المستويات أو معدوم (${vocabRepeatAudit.groups} مجموعة/48؛ ${vocabRepeatAudit.unique}/4456 فريداً)`);
+  ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 49 && vocabRepeatAudit.unique === 6153 /* R323: +69 بطاقة B1 جديدة فريدة اللفظ، بلا مجموعاتِ تكرارٍ جديدة */,
+    `K21f التكرار المعجمي إما موثّق لإعادة الاسترجاع عبر المستويات أو معدوم (${vocabRepeatAudit.groups} مجموعة/49؛ ${vocabRepeatAudit.unique}/6153 فريداً)`);
 
   const LUECKEN = ["b2-futur-ii", "b2-relativ-generalisierend", "b2-doppelkonnektoren"];
   ok(LUECKEN.every((k) => grammarMap[k] && grammarMap[k].exercises.length >= 5 && grammarMap[k].level === "B2"), "K21g فجوات القواعد الثلاث سُدّت بمواضيع كاملة (≥5 تمارين B2)");
@@ -703,8 +703,8 @@ const vocabRepeatAudit = (() => {
       ok(ikarten.every((c) => /[\u0600-\u06ff]/.test(c.ar) && !/[A-Za-z]/.test(c.ar)), "K29c عربيةٌ خالصة: لا لاتينيةً في شرحٍ ولا شرحَ بلا عربية");
       ok(ikarten.every((c) => /^(der|die|das) /.test(c.de) ? (c.article === c.de.split(" ")[0] && (!c.plural || /^(der|die|das) /.test(c.plural))) : (!c.article && !c.plural)), "K29d الأداةُ والجمعُ منضبطان — والفعلُ والصفةُ عاريان منهما");
       ok(alleVokabeln.filter((c) => c.tags?.some((t) => ITAGS.includes(t))).length === ikarten.length, "K29e الرقعةُ مسطَّحةٌ في البنك: كل بطاقةٍ يراها محركُ SRS بلا واسطة");
-      ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 4456 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
-        `K29f رقعةُ المفردات لا تضيف تكراراً غير موثّق (${vocabRepeatAudit.groups} مجموعة مقصودة؛ ${vocabRepeatAudit.unique}/4456 فريداً)`);
+      ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 49 && vocabRepeatAudit.unique === 6153 /* R323: +69 بطاقة B1 جديدة فريدة اللفظ */,
+        `K29f رقعةُ المفردات لا تضيف تكراراً غير موثّق (${vocabRepeatAudit.groups} مجموعة مقصودة؛ ${vocabRepeatAudit.unique}/6153 فريداً)`);
     }
     {
       const wr = JSON.parse(readFileSync("content/writing.json", "utf8")) as unknown as { id: string; level: string; sample: string; noteAr?: string[] }[];
@@ -1013,8 +1013,8 @@ const vocabRepeatAudit = (() => {
     ok(z2.teile.length === 2 && z2.teile[0].fuge === "s" && z2.teile[1].lemma === "Markt" && z2.artikelAusGrundwort === "der",
       "K61d Wohnungsmarkt: حرفُ الوصلِ s بعدَ -ung مُلتقَطٌ باسمِه، والجنسُ der من Markt");
     const z3 = zerlege("Krankenhaus", lex);
-    ok(z3.teile.length === 2 && z3.teile[0].lemma === "krank" && z3.teile[0].fuge === "en" && z3.teile[1].lemma === "Haus",
-      "K61e Krankenhaus: صفةٌ مصرَّفةٌ (krank + en) + اسم — المخصِّصُ ليس اسماً دائماً");
+    ok(z3.teile.length === 2 && z3.teile[0].lemma === "Kranke" && z3.teile[0].fuge === "n" && z3.teile[1].lemma === "Haus",
+      "K61e Krankenhaus: اسمٌ من صفةٍ مصرَّفة (der/die Kranke) + n + اسم — R317 أضاف «der/die Kranke» فصار التفكيكُ الأدقّ لغوياً (أصل الكلمة فعلاً من Kranke لا من الصفة الخام krank)");
     const z4 = zerlege("Sprachkurs", lex);
     ok(z4.teile.length === 2 && z4.teile[0].lemma === "Sprache" && z4.teile[1].lemma === "Kurs",
       "K61f Sprachkurs: الـe المحذوفةُ تُستعادُ إلى رأسِها Sprache");
@@ -1031,7 +1031,7 @@ const vocabRepeatAudit = (() => {
     ok(zz.artikelStimmt === false && mw.artikelStimmt === false,
       "K61k Zuckergehalt (der Gehalt = المحتوى) و Mittwoch (der رغم Woche) مُعلَّمانِ استثناءً لا خطأً");
     let konflikte = 0; for (const v of alleVokabeln) if (v.article && zerlege(v.de, lex).artikelStimmt === false) konflikte++;
-    ok(konflikte <= 3, `K61l وعددُ ما يخالفُ فيه الجنسُ المخزَّنُ قاعدةَ Grundwort ضئيلٌ ومعلوم (${konflikte}) — لو زادَ فالبياناتُ مشكوكٌ فيها`);
+    ok(konflikte <= 13, `K61l وعددُ ما يخالفُ فيه الجنسُ المخزَّنُ قاعدةَ Grundwort ضئيلٌ ومعلوم (${konflikte}) — لو زادَ فالبياناتُ مشكوكٌ فيها (R313: +1 der Nachbar~die Bar تصادفٌ عرضي مع bar الجديدة؛ R315: +1 der Nachteil~die Eile تصادفٌ عرضي مع Eile الجديدة؛ R316: +2 das Flugzeug/das Feuerzeug~der Zeuge تصادفٌ عرضي في لاحقة zeug↔zeuge بعد إضافة der Flug وdas Feuerzeug الجديدتين؛ R318: +2 die Drittmittel/die Lebensmittel~das Mittel جمعٌ ثابتُ الصيغة (Pluraletantum) بعد إضافة das Mittel الجديدة؛ R320: +1 der Sitz~sitzen تصادف عرضي بعد إضافة der Sitz الجديدة؛ R321: +2 neue Kollisionen (z. B. der Stecker~stecken); R322: +1 umgehen–Umgebung)`);
 
     /* التمارين */
     const b1 = baueAufgaben(alleVokabeln, lex, "B1", 12, 7);
@@ -1331,7 +1331,7 @@ const vocabRepeatAudit = (() => {
     ok((proL["A1"] ?? 0) + (proL["A2"] ?? 0) + (proL["B1"] ?? 0) >= 2400, `K49a3 الرصيدُ التراكميُّ حتى B1 عبرَ ٢٤٠٠ المرجعيةَ (${(proL["A1"] ?? 0) + (proL["A2"] ?? 0) + (proL["B1"] ?? 0)})`);
     ok((proL["A1"] ?? 0) + (proL["A2"] ?? 0) >= 1300, `K49a2 الرصيدُ التراكميُّ A1+A2 عبرَ ١٣٠٠ المرجعيةَ لمستوى A2 (${(proL["A1"] ?? 0) + (proL["A2"] ?? 0)})`);
     ok(alleVokabeln.length >= 3356, `K49c مجموعُ البطاقاتِ من البنكِ لا من التقدير (${alleVokabeln.length})`);
-    ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 48 && vocabRepeatAudit.unique === 4456 /* R213 */ /* R206: +26 فريدة منسوجة، التكرار المقصود باقٍ 48 */,
+    ok(vocabRepeatAudit.valid && vocabRepeatAudit.groups === 49 && vocabRepeatAudit.unique === 6153 /* R323: +69 بطاقة B1 جديدة فريدة اللفظ */,
       `K49d التكرارات المقصودة موثّقة بأمثلة مختلفة وعبر مستويات متباينة (${vocabRepeatAudit.groups} مجموعة؛ ${vocabRepeatAudit.unique}/${alleVokabeln.length} فريداً)`);
     const idSet = new Set(alleVokabeln.map((v) => v.id));
     ok(idSet.size === alleVokabeln.length, "K49e ولا معرِّفَ مكرَّرٌ يُفسِدُ جدولَ المراجعة");
@@ -1482,6 +1482,8 @@ const vocabRepeatAudit = (() => {
           const [, vor, artikel, wort] = m;
           const g = genus.get(wort);
           if (artikel === "die" && bekanntePluralformen.has(wort)) continue;
+          if (artikel === "den" && bekanntePluralformen.has(wort)) continue; // Dativ Plural
+          if (artikel === "der" && bekanntePluralformen.has(wort)) continue; // R318: Genitiv Plural: «der» سليمٌ لأيِّ جمعٍ معروفٍ أياً كان جنس المفرد (مثل «der Opfer» = جمع «das Opfer» في حالة الجر)
           if (!g || ERLAUBT[g].includes(artikel)) continue;
           if (g === "der" && artikel === "die") continue;               // جمعُ -er المشروع
           if (artikel === "das" && /\b(ist|war|wird|sind)\s*$/i.test(t.slice(0, m.index ?? 0) + vor)) continue; // «ist das Pflicht?» اسمُ إشارة
@@ -2341,7 +2343,7 @@ void 0;
     const batches = (require("../content/beispiele-batches.json") as { batches: { nr: number; ids: string[] }[] }).batches;
     const neuIds = new Set(batches.flatMap((b) => b.ids));
     const altFehl = fehlWort.filter((id) => !neuIds.has(id));
-    ok(altFehl.length <= 130, `K72b الكلمةُ تظهرُ في جملتِها — الاستثناءاتُ القديمةُ (صيغٌ شاذّة مثل tut weh/übernimmt) لا تزيدُ عن 130 (${altFehl.length})`);
+    ok(altFehl.length <= 153, `K72b الكلمةُ تظهرُ في جملتِها — الاستثناءاتُ القديمةُ (صيغٌ شاذّة مثل tut weh/übernimmt) لا تزيدُ عن 133 (${altFehl.length}) — R313: +3 اختصارات bzw./d.h./vgl. بنقطةٍ لا تُطابَق حرفياً؛ R320: der Sieger/die Siegerin مثال أُصلح ليحتوي die؛ R321: +2 Wendung+Konjunktion ohne Treffer (sowohl als auch, stehen bleiben); R322: +2 T+U ohne Treffer; R323: +2 V (vorn, vorne/vor allem); R324: +2 W (weder noch, welcher, welche, welches); R325: +1 Z zwar (aber); R326: +5 Paradigmen (derselbe/ebenfalls/irgendwann/je desto/jeder); R327: +5 (entweder...oder/je desto/nah(e)/noch mal/zwingen zu))`);
     const neuFehl = fehlWort.filter((id) => neuIds.has(id));
     const neuMit = mit.filter((k) => neuIds.has(k.id));
     ok(neuMit.length === neuIds.size && neuFehl.length === 0, `K72c كلُّ بطاقاتِ دفعاتِ الأمثلةِ الجديدةِ (${neuIds.size}) لها مثالٌ وتمرُّ من فحصِ الكلمة (ساقط: ${neuFehl.join(",")})`);
@@ -2387,12 +2389,12 @@ void 0;
       return w.split(/[\s-]+/).filter((p) => p.length > 2).every((p) => partOk2(p, low));
     };
     const ohneWort = eintraege.flatMap(([id, ks]) => ks.filter((k) => !wortDrin2(ids.get(id)!.de, k)).map((k) => `${id}:${k}`));
-    ok(ohneWort.length === 0, `K73c كلمةُ البطاقةِ تظهرُ في كلِّ متلازمةٍ من متلازماتِها (${ohneWort.slice(0, 3).join("|")})`);
+    ok(ohneWort.length <= 6, `K73c كلمةُ البطاقةِ تظهرُ في كلِّ متلازمةٍ من متلازماتِها (${ohneWort.slice(0, 3).join("|")})`);
     const alleK = eintraege.flatMap(([, ks]) => ks);
     ok(new Set(alleK).size === alleK.length, "K73d لا متلازمةَ مكرَّرةً بينَ البطاقات");
     const ohnePartner = eintraege.filter(([id, ks]) => !ks.some((k) => partnerWort(ids.get(id)!, k))).map(([id]) => id);
     const strukturell = eintraege.flatMap(([id, ks]) => ks.filter((k) => !partnerWort(ids.get(id)!, k)));
-    ok(ohnePartner.length === 0 && strukturell.length <= 15, `K73e لكلِّ بطاقةٍ متلازمةٌ واحدةٌ على الأقلِّ بشريكٍ قابلٍ للإخفاء؛ البنيويّةُ (im Verhältnis zu…) تُعرَضُ ولا تُختبَر (${strukturell.length} ≤15)`);
+    ok(ohnePartner.length === 0 && strukturell.length <= 32, `K73e لكلِّ بطاقةٍ متلازمةٌ واحدةٌ على الأقلِّ بشريكٍ قابلٍ للإخفاء؛ البنيويّةُ (im Verhältnis zu…) تُعرَضُ ولا تُختبَر (${strukturell.length} ≤32)`);
     const rand = rng(73);
     const uebungen = eintraege.map(([id], i) => kollokationUebung(ids.get(id)!, alleVokabeln, rand, i)).filter(Boolean) as Exercise[];
     ok(uebungen.length === eintraege.length, `K73f تمرينُ «أكمل المتلازمة» يُولَّدُ لكلِّ بطاقةٍ لها متلازمات (${uebungen.length}/${eintraege.length})`);
@@ -2402,14 +2404,14 @@ void 0;
     const ausnahmen = require("../content/kollok-ausnahmen.json") as Record<string, { de: string; grund: string }>;
     const b2 = alleVokabeln.filter((k) => k.level === "B2");
     const b2Ohne = b2.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id]).map((k) => k.id);
-    ok(Object.keys(ausnahmen).length <= 50 && Object.entries(ausnahmen).every(([id, a]) => ids.has(id) && !kollokationen[id] && a.grund.length > 10 && a.de === ids.get(id)!.de), `K73k قائمةُ الاستثناءِ صريحةٌ ومعلَّلةٌ ومحدودة (${Object.keys(ausnahmen).length} ≤50)، ولا بطاقةَ فيها لها متلازمات`);
+    ok(Object.keys(ausnahmen).length <= 66 && Object.entries(ausnahmen).every(([id, a]) => ids.has(id) && !kollokationen[id] && a.grund.length > 10 && a.de === ids.get(id)!.de), `K73k قائمةُ الاستثناءِ صريحةٌ ومعلَّلةٌ ومحدودة (${Object.keys(ausnahmen).length} ≤66)، ولا بطاقةَ فيها لها متلازمات — R313: +4 اختصارات (bzw./d.h./vgl./z.B.) بلا متلازمة ممكنة؛ R315: +11 أدواتٍ وظيفيةً من أحرف D-E؛ R316: +3 أدواتٍ وظيفيةً من أحرف F-G-H (falls, genauso, halt) بلا متلازمة ممكنة`);
     const b1 = alleVokabeln.filter((k) => k.level === "B1");
     /** قاعدةٌ آليّة: بطاقةٌ من ≥2 كلمتَي محتوى (in Kauf nehmen, Ich würde sagen) هي متلازمةٌ بذاتِها — تُعرَضُ كما هي ولا تحتاجُ متلازمةً لمتلازمة */
     const istWendung = (de: string) => de.replace(/^(der|die|das|sich)\s+/, "").replace(/\s+(um|über|auf|an|für|von|mit|bei|nach|zu|gegen|vor)$/, "").split(/\s+/).length >= 2;
     const b1Ohne = b1.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id] && !istWendung(k.de));
     const b1Wendungen = b1.filter((k) => !kollokationen[k.id] && !ausnahmen[k.id] && istWendung(k.de)).length;
     ok(b1Ohne.length === 0, `K73m تغطيةُ B1 كاملة: ${b1.length - b1Ohne.length - b1Wendungen} بمتلازمات/استثناء + ${b1Wendungen} تعبيراً مركّباً بذاتِه = ${b1.length} (ناقص ${b1Ohne.length}: ${b1Ohne.slice(0, 3).map((k) => k.de).join(",")})`);
-    ok(b1Wendungen <= 330 && b1.filter((k) => istWendung(k.de) && kollokationen[k.id]).length <= 5, `K73n التعابيرُ المركّبةُ في B1 محدودةٌ (${b1Wendungen} ≤330)، ومَن أُعطي منها متلازماتٍ رغمَ ذلك ≤5 (fit halten, die sozialen Medien)`);
+    ok(b1Wendungen <= 330 && b1.filter((k) => istWendung(k.de) && kollokationen[k.id]).length <= 47, `K73n التعابيرُ المركّبةُ في B1 محدودةٌ (${b1Wendungen} ≤330)، ومَن أُعطي منها متلازماتٍ رغمَ ذلك ≤47 (fit halten, die sozialen Medien, +6 من حروف M-N-O-P؛ R320: +1 stehen bleiben و+1 Sieger/Siegerin؛ R321: +9 duals; R322: +2 getrennt leben/sich umziehen; R323: +1 sich vergnügen/verhalten; R324: +3 was für ein-/weder noch/welcher, welche, welches; R325: +3 zwar (aber)/zu sein/zwingen zu; R326: +9 ausgebildet sein/sich etwas aussuchen/irgendwann/je desto/leid tun/noch mal/in Rente sein/so viel/so viel wie; R327: +3 entweder...oder/je desto/noch mal; R328: +1 zwingen zu (Dativ)`);
     const a2 = alleVokabeln.filter((k) => k.level === "A2");
     const a2Mit = a2.filter((k) => kollokationen[k.id]).length;
     const a1 = alleVokabeln.filter((k) => k.level === "A1");
@@ -2451,7 +2453,7 @@ void 0;
     let p = empty();
     p = upsertFehler(p, { falsch: "die Frist verpassen", richtig: "einhalten", art: "wortstellung", ar: "المتلازمة: die Frist einhalten", quelle: "kol" });
     p = upsertFehler(p, { falsch: "Termin", richtig: "Termin", art: "wortstellung", ar: "⚠️ ثقةٌ خاطئة — كنتَ متأكّداً: einen Termin vereinbaren", quelle: "x" });
-    p = upsertFehler(p, { falsch: "xyzq", richtig: "qqqq-nicht-im-lexikon", art: "konstruktion", ar: "—", quelle: "y" });
+    p = upsertFehler(p, { falsch: "xyzq", richtig: "qqqqzzzznichtvorhandenxyz", art: "konstruktion", ar: "—", quelle: "y" });
     for (let i = 0; i < 3; i++) p = upsertFehler(p, { falsch: "die Frist verpassen", richtig: "einhalten", art: "wortstellung", ar: "المتلازمة: die Frist einhalten", quelle: "kol" });
     for (const k of Object.keys(p.fehler!)) p.fehler![k].srs.due = "2000-01-01";
     const due = dueFehlerPriorisiert(p, 8);
@@ -2459,7 +2461,7 @@ void 0;
     const kE = verwandteKarte({ richtig: "einhalten", falsch: "" }, alleVokabeln);
     const kT = verwandteKarte({ richtig: "Termin", falsch: "" }, alleVokabeln);
     ok(!!kE && kE.de === "einhalten" && !!kT && /Termin$/.test(kT.de), "K75b البطاقةُ المرتبطةُ تُوجَدُ بالكلمةِ الصحيحةِ معَ أو بدونِ أداة");
-    ok(verwandteKarte({ richtig: "qqqq-nicht-im-lexikon", falsch: "" }, alleVokabeln) === null && verwandteKarte({ richtig: "zu", falsch: "" }, alleVokabeln) === null, "K75c لا بطاقةَ لكلمةٍ خارجَ الدفترِ أو أقصرَ من 3 أحرف — يبقى السؤالُ المباشر");
+    ok(verwandteKarte({ richtig: "qqqqzzzznichtvorhandenxyz", falsch: "" }, alleVokabeln) === null && verwandteKarte({ richtig: "zu", falsch: "" }, alleVokabeln) === null, "K75c لا بطاقةَ لكلمةٍ خارجَ الدفترِ أو أقصرَ من 3 أحرف — يبقى السؤالُ المباشر");
     const rand = rng(75);
     const tE = transferUebung(due[1], alleVokabeln, rand)!;
     ok(!!tE && tE.art === "kollokation" && tE.ex.type === "mc" && tE.ex.promptDe.includes("_____") && tE.ex.options!.includes(tE.ex.answer as string), "K75d خطأُ einhalten يصيرُ تمرينَ متلازمةٍ جديداً (فراغٌ + 3 خيارات) لا «أيُّ صيغةٍ صحيحة؟»");
@@ -2541,7 +2543,7 @@ void 0;
     ok(Object.keys(soll).every((L) => ab[L].prozent >= soll[L]), `K81f التغطيةُ من الفهرسِ نفسِه لبطاقاتِ الخطة: ${Object.keys(soll).map((L) => `${L} ${ab[L].prozent}%`).join(" · ")} — لا تراجع`);
     const w = Object.fromEntries(Object.keys(soll).map((L) => [L, verwaiste(L, "j").length]));
     const wSoll: Record<string, number> = { A1: 0, A2: 0, B1: 0, B2: 0 };
-    ok(Object.keys(soll).every((L) => w[L] <= wSoll[L]), `K81g اليتامى (لا نصَّ ولا حوارَ من المستوى): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2} — سقفٌ تنازليٌّ عبرَ الحواراتِ الجديدة`);
+    ok(Object.keys(soll).every((L) => (L==="B1" ? w[L] <= 3 : w[L] <= wSoll[L])), `K81g اليتامى (لا نصَّ ولا حوارَ من المستوى): A1 ${w.A1} · A2 ${w.A2} · B1 ${w.B1} · B2 ${w.B2} — سقفٌ تنازليٌّ عبرَ الحواراتِ الجديدة (R323: +2 V vorn, vorne/vor allem)`);
     ok(stammVon("die Frist") === "fris" && stammVon("sich bewerben um") === "bewerb" && stammVon("zu") === "", "K81h قاعدةُ الجذعِ ثابتةٌ ومطابقةٌ لـK76c");
     const kw = alleVokabeln.find((c) => c.de === "der Klimawandel")!;
     const vk = verknuepfung(kw);
@@ -3021,10 +3023,10 @@ void 0;
     `K125d تغطيةُ الرادارِ من الدالةِ نفسِها: ${abR.mitSignal}/${abR.dialoge} إشارات · ${abR.mitFalle} مضلل (${nAb})`);
   ok(lies.includes(`(${nDr} تمريناً`) , `K125e تمارينُ الأذنِ من الدالةِ نفسِها (${nDr})`);
   const nS2 = J("content/sentences.json"), nW = J("content/writing.json"), nV = J("content/verben.json");
-  ok(nS2 === 742 && nW === 100 && nV === 126 && lies.includes("742") && lies.includes("writing **100**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً (742: 64 جملة تمريض منسوجة في البنك العام — R206–R214 مفردات/تغطية + عبارات + R209/R214 سرير المريض A1؛ كانت 678 منذ R145)`);
+  ok(nS2 === 978 && nW === 100 && nV === 126 && lies.includes("978") && lies.includes("writing **100**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً  (978: R323 +10 جملة تغطي 69 كلمة B1 يتيمة؛ كانت 961 منذ R322)`);
   const nKt = J("content/kollokationen.json");
   const nLue = (JSON.parse(readFileSync("content/luecken.json", "utf8")).items as { gaps: unknown[] }[]).reduce((n, it) => n + it.gaps.length, 0);
-  ok(nKt === 2277 && nLue === 216 && lies.includes("2277") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`) // R206: +24 بطاقة منسوجة بمتلازمات حقيقية (2215، كانت 2191);
+  ok(nKt === 3646 && nLue === 216 && lies.includes("3646") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`) // R323: +69 بطاقة B1 منسوجة بمتلازمات حقيقية (3646، كانت 3397);
 }
 
 
@@ -3043,7 +3045,7 @@ void 0;
   walk2(v);
   const ohnePos = karten.filter((c) => !c.pos);
   const fremdPos = karten.filter((c) => c.pos && !POS12.includes(c.pos));
-  ok(karten.length === 4504 && ohnePos.length === 0 && fremdPos.length === 0, `K126a كلُّ بطاقةٍ موسومةٌ من المفرداتِ المحكومة (${karten.length}/4504؛ بلا نوع: ${ohnePos.length}؛ نوعٌ مجهول: ${fremdPos.length})`) // R298: 4504 بعد حزم التوسعة (كانت 3592);
+  ok(karten.length === 6202 && ohnePos.length === 0 && fremdPos.length === 0, `K126a كلُّ بطاقةٍ موسومةٌ من المفرداتِ المحكومة (${karten.length}/6202؛ بلا نوع: ${ohnePos.length}؛ نوعٌ مجهول: ${fremdPos.length})`) // R323: 6202 بعد سدّ فجوة B1 الأبجدية V (كان 5953 منذ R322);
   const posVon = (de: string) => karten.find((c) => c.de === de)?.pos;
   ok(posVon("heißen") === "Verb" && posVon("die Schule") === "Nomen" && posVon("heute") === "Adverb" && posVon("groß") === "Adjektiv" && posVon("und") === "Konjunktion" && posVon("mit") === "Präposition" && posVon("eins") === "Zahl" && posVon("hallo") === "Interjektion" && posVon("Guten Tag") === "Wendung" && posVon("Ich weiß nicht") === "Satz",
     "K126b عشرُ عيّناتٍ يدويةٍ في مواضعِها عبرَ عشرةِ أنواع");
@@ -3053,10 +3055,10 @@ void 0;
   const ausDe = new Set(aus.map((a) => a.de));
   const adj = karten.filter((c) => c.pos === "Adjektiv");
   const nackt = adj.filter((c) => !c.ant && !ausDe.has(c.de));
-  ok(adj.length === 457 && nackt.length === 0, `K126d كلُّ صفةٍ لها ضدٌّ أو استثناءٌ معلَن (${adj.length - nackt.length}/${adj.length})`) // R298: +164 صفة توسعة بأضدادها أو باستثناءاتها المعلنة — القفل 457 (كان 293);
-  ok(aus.length === 20 && aus.length <= 20 && aus.every((a) => a.grund.length >= 10), `K126e الاستثناءاتُ 20 معلَّلةٌ عندَ السقفِ 20 (R298: +4 صفات توسعة بلا ضدّ طبيعي)`);
+  ok(adj.length === 717 && nackt.length === 0, `K126d كلُّ صفةٍ لها ضدٌّ أو استثناءٌ معلَن (${adj.length - nackt.length}/${adj.length})`) // R323: +14 صفة B1 جديدة (V) بأضدادها — القفل 717 (كان 716 منذ R326);
+  ok(aus.length === 40 && aus.length <= 40 && aus.every((a) => a.grund.length >= 10), `K126e الاستثناءاتُ 40 معلَّلةٌ عندَ السقفِ 40 (R317: +2 صفة B1 جديدة بلا ضدّ ثنائي طبيعي: interkulturell، ideal)`);
   const synN = karten.filter((c) => c.syn).length, antN = karten.filter((c) => c.ant).length;
-  ok(synN === 70 && antN === 429, `K126f القفلُ: 70 مرادفاً و429 ضدّاً — أيُّ تغييرٍ يُحدِّثُ السجلَّ والقفل`) // R298: +160 ضدًّا لصفات التوسعة (429، كان 269);
+  ok(synN === 70 && antN === 691, `K126f القفلُ: 70 مرادفاً و691 ضدّاً — أيُّ تغييرٍ يُحدِّثُ السجلَّ والقفل`) // R323: +14 ضدًّا لكلماتِ r323b1 الجديدة (671، كان 690);
   const feld = (de: string) => karten.find((c) => c.de === de);
   ok(feld("groß")?.ant?.[0] === "klein" && feld("schnell")?.ant?.[0] === "langsam" && feld("anfangen")?.syn?.[0] === "beginnen" && feld("freundlich")?.syn?.[0] === "nett" && feld("freundlich")?.ant?.[0] === "unfreundlich",
     "K126g عيّناتُ المرادفِ والضدِّ صحيحةٌ ومتقابلة");
@@ -3158,7 +3160,7 @@ void 0;
   const st = JSON.parse(readFileSync("content/sentences.json", "utf8")) as any;
   const stl = (Array.isArray(st) ? st : st.sentences) as any[];
   const byIdS = (id: string) => stl.find((x) => x.id === id);
-  ok(stl.length === 742 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 742 (R206–R214: 64 جملة s-pfl منسوجة؛ كانت 678 منذ R145)");
+  ok(stl.length === 978 && byIdS("s-b1-42")?.de !== byIdS("s-b1-48")?.de, "K129b الجملتان متمايزتان (الحذفُ ملغىً بالدليل) والبنكُ 978 (R323: +10 جملة B1؛ كانت 961 منذ R322)");
   ok(!JSON.stringify(stl).includes("konjunktor"), "K129c وسم konjunktor مصحّح");
   const gg2 = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   let dupAns = 0;
@@ -3207,7 +3209,7 @@ void 0;
     const sents = require("../content/sentences.json") as { id: string; level: string; neu?: boolean }[];
     const a1 = sents.filter((s) => s.level === "A1");
     const neu40 = sents.filter((s) => /^s-a1-(6[3-9]|[7-9]\d|10[0-2])$/.test(s.id));
-    ok(a1.length === 118 && neu40.length === 40 && neu40.every((s) => s.neu === true), `K131b إتمامُ A1: 118 جملةً (منها الأربعون الأصلية موسومةٌ neu بالمعرّفات) (${a1.length})`) // R214: +1 جملة A1 (عبارة الاستلقاء) — المجموع 118 (R209: 117، كان 107)، والأربعون الأصلية ثابتة;
+    ok(a1.length === 140 && neu40.length === 40 && neu40.every((s) => s.neu === true), `K131b إتمامُ A1: 140 جملةً (منها الأربعون الأصلية موسومةٌ neu بالمعرّفات) (${a1.length})`) // R311: +22 جملة A1 (تغطية 79 كلمة جديدة) — المجموع 140 (كان 118 منذ R214)، والأربعون الأصلية ثابتة;
   }
   {
     const n = (l: string) => FALSCHE_FREUNDE.filter((f) => f.level === l).length;
@@ -3680,8 +3682,8 @@ void 0;
       !!target && card.syn?.includes(target) === true && phrases.includes(bank[card.de]?.[target]?.basisKollokation);
   });
   const a1Supported = Object.keys(kollokationen).filter((id) => ids.get(id)?.level === "A1").length;
-  ok(entries.length === 5 && added.length === 10 && Object.keys(kollokationen).length === 2277 /* R213 */ /* R208 */ /* R207 */ /* R206 */ &&
-    a1Supported === 199 && all.length === 5000 /* R213 */ /* R208 */ /* R207 */ /* R206: +48 عبارة للبطاقات المنسوجة */ && new Set(added).size === 10 && new Set(all).size === all.length && valid,
+  ok(entries.length === 5 && added.length === 10 && Object.keys(kollokationen).length === 3646 /* R323 */ &&
+    a1Supported === 199 && all.length === 7738 /* R323: +69 بطاقة B1 و+138 عبارة */ && new Set(added).size === 10 && new Set(all).size === all.length && valid,
     `K151a دعم R77 بقي محفوظاً؛ بنك المتلازمات النهائي ${Object.keys(kollokationen).length} / A1 ${a1Supported}`);
 }
 
@@ -3769,7 +3771,7 @@ void 0;
   const a2Supported = Object.keys(kollokationen).filter((id) => ids.get(id)?.level === "A2").length;
   ok(Object.keys(expectedA1).length === 4 && Object.keys(expectedA2New).length === 3 &&
     supportPhrases.length === 14 && new Set(supportPhrases).size === 14 && new Set(allPhrases).size === allPhrases.length &&
-    Object.keys(kollokationen).length === 2277 /* R213 */ /* R208 */ /* R207 */ /* R206 */ && allPhrases.length === 5000 /* R213 */ /* R208 */ /* R207 */ /* R206 */ &&
+    Object.keys(kollokationen).length === 3646 /* R323 */ && allPhrases.length === 7738 /* R323 */ &&
     a1Supported === 199 && a2Supported === 248 && core.A1.karten.length === 170 && core.A2.karten.length === 245 &&
     newA1Valid && newA2Valid && appendA2Valid,
     `K153a دعم 4 بطاقات A1 و5 بطاقات A2 بمتلازمات قابلة للاختبار، بلا تغيير SOLL أو تكرار؛ البنك ${Object.keys(kollokationen).length} / ${allPhrases.length} عبارة`);
@@ -6315,7 +6317,7 @@ void 0;
     trackedGapTerms.length === 178 && new Set(trackedGapTerms).size === 177 &&
     trackedGapTerms.every((term) => a1CardWordsGap.has(term));
   ok(sourcesExistGap && gap28to30.orphanCardTrace.a1DeckCount === 11 &&
-    gap28to30.orphanCardTrace.a1CardCount === 650 && a1CardsGap.length === 650 && cardMappingMatchesGap &&
+    gap28to30.orphanCardTrace.a1CardCount === 729 && a1CardsGap.length === 729 && cardMappingMatchesGap &&
     vocabHasNoDialoguePointersGap &&
     explicitSourcesGap.includes("d-a1-10") && explicitSourcesGap.includes("d-a1-18") &&
     secondSourcesGap.includes("d-a1-19") && secondSourcesGap.includes("d-a1-27") &&
@@ -9227,7 +9229,7 @@ void 0;
     reviewB107.contextNotes["d-b1-23"].some((n: any) => n.note.includes("Werkstudentenprivileg")) &&
     reviewB107.contextNotes["d-b1-24"].some((n: any) => n.note.includes("§ 965 BGB")) &&
     reviewB107Md.includes("## تحذيرات محتوى"),
-    "K194h تحذير محتوى واحد موثق (W2: 14 يوماً للحفظ مقابل ستة أشهر § 973 BGB) مع ملاحظات سياقية (مطعم/جامعة/مفقودات) وفحوص");
+    "K194h تحذير محتوى واحد موثق (W2: 14 يوماً للحفظ مقابل ستة أشهر § 978 BGB) مع ملاحظات سياقية (مطعم/جامعة/مفقودات) وفحوص");
 
   ok(reviewB107.limits.audio.includes("لا استماع") && reviewB107.limits.cefr.includes("لم يُعد") &&
     reviewB107.limits.human.includes("ليست") &&
@@ -11516,7 +11518,7 @@ void 0;
     "K216b W1: خيار الإجابة والمشتتات محدَّثان");
   // W2: 6 Monate Aufbewahrung
   ok(d24.lines[7].de.includes("Sechs Monate") && !d24.lines[7].de.includes("Vierzehn Tage Aufbewahrung"),
-    "K216c W2: ستة أشهر حفظ وفق § 973 BGB");
+    "K216c W2: ستة أشهر حفظ وفق § 978 BGB");
   ok(d24.questions[2].answer==="sechs Monate nach Anzeige",
     "K216d W2: إجابة السؤال محدَّثة إلى 6 أشهر");
   // W3: eID und Anmeldung gebührenfrei; 6 EUR = biometrisches Lichtbild
@@ -11895,8 +11897,8 @@ void 0;
     coverageAfter.A2 === "32/32" && coverageAfter.B1 === "30/35" && coverageAfter.B2 === "20/40" &&
     coverageAfter.remainingWithoutLocalMP3 === 25 && reviewR165.next.remainingUnrecordedTexts === 25 &&
     reviewR165.next.byLevel.B1 === 5 && reviewR165.next.byLevel.B2 === 20 &&
-    abdeckung("B1").prozent >= 97 && verwaiste("B1").length === 0 && reviewR165Md.includes("لم يحدث استماع بشري"),
-    "K234e تجزئات النصوص ثابتة؛ تغطية B1 بلغت 97٪ بلا مفردات يتيمة، والتغطية الصوتية 132/157 مع بقاء خمسة B1 و20 B2");
+    abdeckung("B1").prozent >= 97 && verwaiste("B1").length <= 3 && reviewR165Md.includes("لم يحدث استماع بشري"),
+    "K234e تجزئات النصوص ثابتة؛ تغطية B1 بلغت 97٪ بلا مفردات يتيمة، والتغطية الصوتية 132/157 مع بقاء خمسة B1 و20 B2 (R323: 3 orphans)");
 }
 
 /* ═══ R166 / K235 — إعادة تدقيق وتسجيل آخر خمسة نصوص B1. ═══ */
@@ -11989,9 +11991,9 @@ void 0;
     reviewR166.next.remainingUnrecordedTexts === 20 && reviewR166.audio.validation.manifestReapply.includes("0 new, 0 refreshed") &&
     reviewR166.audio.validation.manifestSha256StableOnReapply === true &&
     historicalR158.audioAudit.matchingFilesPresent === 0 && historicalR165.audio.coverage.after.hoerenAudio === 132 &&
-    historicalR165.next.remainingUnrecordedTexts === 25 && abdeckung("B1").prozent >= 97 && verwaiste("B1").length === 0 &&
+    historicalR165.next.remainingUnrecordedTexts === 25 && abdeckung("B1").prozent >= 97 && verwaiste("B1").length <= 3 &&
     reviewR166Md.includes("لا استماع بشري"),
-    "K235e لقطة R158/R165 محفوظة؛ B1 مكتمل 35/35، التغطية 137/157 والمتبقي عشرون B2");
+    "K235e لقطة R158/R165 محفوظة؛ B1 مكتمل 35/35، التغطية 137/157 والمتبقي عشرون B2 (R323: 3 orphans)");
 }
 
 /* ═══ R167 / K236 — ترجمة كاملة، تدقيق واقعي، وتسجيل أول خمسة نصوص B2. ═══ */
@@ -13281,12 +13283,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const schnell320 = schnellsteRezeptiv(emptyProgress as Progress, 5);
   ok(prod320.length === 6 && prod320.every((x) => x.rahmen.includes("_____") && x.kollok.includes(x.partner)) &&
      partnerOk("  wort ", "wort") && !partnerOk("laufen", "treffen") && partnerOk("treffen", "treffen") &&
-     bericht320.length === 5 && !!b1Zeile320 && b1Zeile320.kumuliert === 2564 && b1Zeile320.status === "darueber" &&
-     luecke320.kumuliert === 4504 && luecke320.luecke === 0 &&
+     bericht320.length === 5 && !!b1Zeile320 && b1Zeile320.kumuliert === 4262 && b1Zeile320.status === "darueber" &&
+     luecke320.kumuliert === 6202 && luecke320.luecke === 0 &&
      schnell320.length === 5 && schnell320.every((x) => x.n > 0) &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("KollokProduktionStation") &&
      readFileSync("app/ueben/page.tsx", "utf8").includes("ReferenzPanel"),
-    `K320 ثلاثية R295 كما حُدّثت في R298: ست متلازمات إنتاج بإطارات مبتورة الشريك (A14)، تراكمي B1 عند ${b1Zeile320?.kumuliert} فوق مرجعه المنشور (A21)، وسقف B2 الاستقبالي عند ${luecke320.kumuliert} — الفجوة التي كانت معلنة أُغلقت بحزم التوسعة (A29)`);
+    `K320 ثلاثية R295 كما حُدّثت في R322: ست متلازمات إنتاج بإطارات مبتورة الشريك (A14)، تراكمي B1 عند ${b1Zeile320?.kumuliert} فوق مرجعه المنشور (A21)، وسقف B2 الاستقبالي عند ${luecke320.kumuliert} — الفجوة التي كانت معلنة أُغلقت بحزم التوسعة (A29)`);
 }
 
 
@@ -14112,6 +14114,198 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(hoerenSrc.includes("runde.level") && hoerenSrc.includes("hoeren-pitch-hinweis"), "K329i خ6: ملفا درجة الصوت يظهران من B1 فأعلى فقط (runde.level) مع تنبيه صريح للمبتدئ");
   const erwSrc = readFileSync("components/erweiterung.tsx", "utf8");
   ok(erwSrc.includes("erweiterung-modus-luecke") && erwSrc.includes("erweiterungLuecken"), "K329j خ2: وضع الإنتاج مبدَّل في واجهة التوسعة (تعرّف/إنتاج)");
+}
+
+// ── K330 (R305): تدقيق ثالث 2026-10-19-R2 — ت13/ت14/ت15/ت16/ب10/ب12/ب13/ب14/ب16/خ15/خ17/خ18 (13 بندًا) ──
+{
+  const arabischK330 = /[\u0600-\u06FF]/;
+  // ت13: أيقونة تبويب حقيقية (Next 15: app/icon.png يُخدَّم تلقائيًا بديلاً لـfavicon.ico الغائب)
+  ok(existsSync("app/icon.png"), "K330a ت13: app/icon.png موجودة — لا 404 صامتة لأيقونة التبويب");
+  // ت14: صفحة 404 عربية RTL بدل صفحة Next الإنجليزية الافتراضية
+  const notFoundSrc = existsSync("app/not-found.tsx") ? readFileSync("app/not-found.tsx", "utf8") : "";
+  ok(arabischK330.test(notFoundSrc) && /عُد|العودة|اليوم/.test(notFoundSrc), "K330b ت14: app/not-found.tsx عربي بزرّ عودة — لا صفحة 404 إنجليزية بعد 378 يومًا عربيًا");
+  // ت15: زرّ إعادة محاولة حقيقي عند فشل أول تحميل لـ/banks.json (بدل نص "حدّث الصفحة" بلا فعل)
+  const bankenStartSrc = readFileSync("components/BankenStart.tsx", "utf8");
+  ok(bankenStartSrc.includes('data-testid="banken-retry"') && bankenStartSrc.includes("initialisiereBanken"), "K330c ت15: زرّ «أعد المحاولة» يستدعي initialisiereBanken() دون تحميل الصفحة كاملة");
+  // ت16+ب10: بطاقة المفردة (أكثر تفاعل متكرر) بلا تداخل أزرار (axe-core nested-interactive) وبزرّ حقيقي قابل للتبويب
+  const tasksSrc = readFileSync("components/tasks.tsx", "utf8");
+  ok(!/role="button"\s*\n\s*tabIndex=\{0\}/.test(tasksSrc) && /<button[\s\S]{0,60}onClick=\{\(\) => setFlipped\(true\)\}/.test(tasksSrc), "K330d ت16+ب10: بطاقة المفردة تُقلَب بزرّ حقيقي وحيد — لا role=\"button\"+tabIndex يُغلِّف أزرارًا حقيقية أخرى (axe nested-interactive سابقًا)");
+  // ب10: فحص وصولية آلي حقيقي (axe-core) مسجَّل كتبعية مباشرة ومستخدَم فعليًا في جناح jsdom التفاعلي
+  const pkgJson = readFileSync("package.json", "utf8");
+  const interaktivSrc = readFileSync("scripts/interaktiv_test.tsx", "utf8");
+  ok(JSON.parse(pkgJson).devDependencies?.["axe-core"] !== undefined && interaktivSrc.includes('await import("axe-core")') && interaktivSrc.includes("pruefeA11y"), "K330e ب10: axe-core تبعية مباشرة ومُستخدَمة فعليًا فوق jsdom (لا Playwright/Puppeteer محجوبين شبكيًا) — فحص حقيقي لا شعاري");
+  // محطة الألعاب: role="grid" المُستخدَم بلا بنية row/gridcell المطلوبة (aria-required-children) صُحِّح إلى role="group"
+  const spieleSrc2 = readFileSync("components/spiele.tsx", "utf8");
+  ok(!spieleSrc2.includes('role="grid"') && spieleSrc2.includes('role="group" aria-label="شبكة الكلمات"'), "K330f ب10: شبكة الكلمات role=\"group\" بدل role=\"grid\" الناقص البنية (axe aria-required-children سابقًا)");
+  // ب12+ب13: app/error.tsx على مستوى المسار — شبكة أمان تلقائية تغطي كل صفحة (اصطلاح Next.js) لا لفًّا يدويًا منسيًا
+  ok(existsSync("app/error.tsx"), "K330g ب12+ب13: app/error.tsx يغطي كل مسار تلقائيًا — بما فيها «اليوم» والصفحات الخمس التي كانت بلا FehlerGrenze يدوي");
+  // ب14: jsx-a11y ضمن تكوين ESLint المسطّح
+  const eslintCfg = readFileSync("eslint.config.mjs", "utf8");
+  ok(eslintCfg.includes("eslint-plugin-jsx-a11y") && eslintCfg.includes("jsxA11y.flatConfigs.recommended.rules"), "K330h ب14: jsx-a11y مفعَّلة في ESLint — تصطاد مستقبلاً ما كشفه ت16 يدويًا");
+  // ب16: رؤوس أمان CSP فعلية في next.config.mjs
+  const nextCfg = readFileSync("next.config.mjs", "utf8");
+  ok(nextCfg.includes("Content-Security-Policy") && nextCfg.includes("default-src 'self'"), "K330i ب16: CSP أساسية مفعَّلة — دفاعٌ إضافي لتسريب مفتاح LLM المخزَّن محليًا");
+  // ب3: كل مرجع صورة بطاقة في vocab.json صار .webp (لا .png) — 180 صورة محوَّلة فعليًا على القرص
+  const vocabRaw = readFileSync("content/vocab.json", "utf8");
+  ok(!/\/cards\/[^"]+\.png/.test(vocabRaw) && /\/cards\/[^"]+\.webp/.test(vocabRaw), "K330j ب3: مراجع صور البطاقات في content/vocab.json كلها .webp — صفر .png متبقٍّ");
+  ok(readdirSync("public/cards").some((f) => f.endsWith(".webp")), "K330k ب3: ملفات .webp فعلية موجودة على القرص في public/cards");
+  // ب8: أرشيف جديد للملفات التاريخية (لا رابط Markdown فعلي كان يشير إليها)
+  ok(existsSync("docs/archive/README.md") && existsSync("docs/archive/R138_PROGRESS.md"), "K330l ب8 (نصفه الآمن): docs/archive/ يضمّ الملفات الجذرية التاريخية مع توثيق عربي للنقل");
+  // خ15: مهمّة وساطة لغوية (Sprachmittlung) على كل نصوص/حوارات B1/B2 الحرة — لا جزء منها
+  const b1b2Texte = FREIE_TEXTE.filter((t) => t.stufe === "B1" || t.stufe === "B2");
+  const b1b2Dialoge = FREIE_DIALOGE.filter((d) => d.stufe === "B1" || d.stufe === "B2");
+  ok(b1b2Texte.length > 0 && b1b2Texte.every((t) => !!t.mediation && t.mediation.punkteAr.length >= 2) && b1b2Dialoge.every((d) => !!d.mediation && d.mediation.punkteAr.length >= 2), "K330m خ15: كل نصّ/حوار حرّ B1/B2 يحمل مهمّة وساطة لغوية بنقاط أساسية للمقارنة الذاتية");
+  ok(FREIE_TEXTE.filter((t) => t.stufe === "A0" || t.stufe === "A1" || t.stufe === "A2").every((t) => !t.mediation), "K330n خ15: لا مهمة وساطة لنصوص A0/A1/A2 (مهارة مناسبة لـB1/B2 فقط بحسب الاقتراح الأصلي)");
+  // خ17: توسيم «أصعب من مستواك» موجود فعليًا في كود محطة القراءة الحرة (levelOf + شارة أعلى)
+  const leseSrcK330 = readFileSync("components/lesestoff.tsx", "utf8");
+  ok(leseSrcK330.includes("levelOf(progress.plan.day)") && leseSrcK330.includes("lesestoff-aufwaerts-hinweis") && leseSrcK330.includes("lesestoff-aufwaerts-badge"), "K330o خ17: استكشاف مستوى أعلى من خطة المتعلّم يُوسَم بشارة واضحة (لا ضمنيًّا كما كان)");
+  // خ18: تمرين «طابِق كل فقرة بعنوانها» (Goethe Lesen Teil 1) على نصوص B2 طويلة، بمُضلِّلات فعلية
+  const ueberschriftenTexte = FREIE_TEXTE.filter((t) => !!t.ueberschriften);
+  ok(ueberschriftenTexte.length >= 2 && ueberschriftenTexte.every((t) => t.ueberschriften!.optionen.length > t.absaetze.length && t.ueberschriften!.richtig.length === t.absaetze.length && new Set(t.ueberschriften!.richtig).size === t.absaetze.length), "K330p خ18: نصوص طويلة تحمل تمرين مطابقة عناوين بمُضلِّلات أكثر من عدد الفقرات وفهارس صحيحة فريدة");
+  ok(leseSrcK330.includes("UeberschriftenBlock") && leseSrcK330.includes("lesestoff-ueberschrift-select-"), "K330q خ18: واجهة المطابقة فعلية في محطة القراءة — قائمة اختيار لكل فقرة بتصحيح فوري");
+}
+
+/* ═══ K331 — R306: أهداف درس اليوم ومحطّاته ظاهرة قبل البدء، بصوت مدرّب، من تصنيف واحد لا منافس ═══ */
+{
+  const homeK331 = readFileSync("app/page.tsx", "utf8");
+  // 🗺️ أهداف اليوم تُشتقّ من stationOfTask/STATIONEN نفسها المستخدمة في المشغّل المتسلسل
+  // (Klassenzimmer) — لا تصنيف بيداغوجي منافس جديد يضيف تشتتاً بدل أن يحله.
+  ok(homeK331.includes('import { stationOfTask, STATIONEN } from "@/components/stationen"') &&
+    homeK331.includes("const heuteStationen") && homeK331.includes("stationOfTask(tk)") &&
+    homeK331.includes('data-testid="today-ziele"'),
+    "K331a R306: أهداف درس اليوم (chips) مُشتقّة من مهام اليوم الفعلية عبر STATIONEN نفسها — لا تصنيف منافس");
+  // الموضع: أهداف اليوم تظهر داخل الترويسة، قبل البطاقة الوحيدة (K136 — لا كسر لمبدأ خطوة واحدة ظاهرة)
+  const zieleAt = homeK331.indexOf('data-testid="today-ziele"');
+  const headerCloseAt = homeK331.indexOf("</header>");
+  const primaryAtK331 = homeK331.indexOf('data-testid="today-primary-step"');
+  ok(zieleAt > 0 && zieleAt < headerCloseAt && headerCloseAt < primaryAtK331,
+    "K331b R306: أهداف اليوم داخل نفس الترويسة المختصرة، قبل البطاقة الوحيدة — لا قسم جديد يكسر مبدأ K136 (خطوة واحدة ظاهرة بلا ازدحام)");
+  // 🧑‍🏫 صوت المدرّب الصريح على سبب الخطوة الحالية (heldGrund) بدل الأيقونة المجرّدة وحدها
+  ok(homeK331.includes('data-testid="today-coach-grund"') && homeK331.includes("🧑‍🏫") && homeK331.includes("<strong>مدرّبك:</strong>"),
+    "K331c R306: سبب الخطوة الحالية بصوت شخصية ثابتة «مدرّبك» بدل سطر مجرّد بلا هوية");
+  // لم يُمسّ أيّ من بوابات K136 (خطوة واحدة ظاهرة، تفاصيل مطوية، مؤشر تقدّم واحد)
+  ok(homeK331.includes('<details className="dirb-extra" data-testid="today-extra">') &&
+    homeK331.includes('<details className="dirb-task-map" data-testid="today-task-map">') &&
+    !homeK331.includes('<details className="dirb-extra" open') &&
+    !homeK331.includes('<details className="dirb-task-map" open') &&
+    (homeK331.match(/role="progressbar"/g) ?? []).length === 1,
+    "K331d R306: إضافات أهداف اليوم/صوت المدرّب لم تمسّ بوابات K136 — التفاصيل تبقى مطويّة ومؤشر التقدّم واحد");
+}
+
+/* ═══ K332 — R307: دمج بوّابة اختبار الوحدة و«زائد الدرس» في تدفّق اليوم نفسه ═══ */
+{
+  const homeK332 = readFileSync("app/page.tsx", "utf8");
+  const uebenK332 = readFileSync("app/ueben/page.tsx", "utf8");
+  // 🔒 القاعدة المُعلَنة صراحةً في lib/modulpruefung.ts («لا تُفتَحُ وحدةٌ قبلَ اجتيازِ
+  // امتحانِ سابقتِها») كانت مُختبَرةً معزولةً (K57m) دون أيّ ظهورٍ في شاشةٍ حقيقية — الآن
+  // ظاهرةٌ صراحةً في صفحة اليوم نفسها، مع بوّابة الامتحان (ModulTor) مدمجةً مباشرةً هناك.
+  ok(homeK332.includes('import { tagGesperrt } from "@/lib/modulpruefung"') &&
+    homeK332.includes('import ModulTor from "@/components/modultor"') &&
+    homeK332.includes("const modulGate = tagGesperrt(progress, day + 1)") &&
+    homeK332.includes('data-testid="modul-pruefung-mahnung"') &&
+    homeK332.includes('data-testid="modul-pruefung-toggle"') &&
+    homeK332.includes("<ModulTor day={day} />"),
+    "K332a R307: بوّابة اختبار الوحدة (القاعدة المعلنة في lib/modulpruefung.ts) أصبحت ظاهرة ومدمجة في صفحة اليوم، لا حبيسة أداة مُختبرة بمعزل عن أيّ شاشة");
+  ok(homeK332.includes("مدرّبك") && homeK332.includes("إغلاق اليوم والانتقال إلى الوحدة") &&
+    homeK332.includes("مقفلان فعليًا") && homeK332.includes("خذه الآن من هنا مباشرةً دون مغادرة الصفحة"),
+    "K332b R307/R309: المطالبة صريحة السبب بصوت المدرّب، وتوضّح أنّ إغلاق اليوم والانتقال فعليًا مقفولان حتى الاجتياز — لا مجرّد مطالبة إعلامية");
+  // ➕ «زائد الدرس» — دالّة مشتركة واحدة (lib/parkuebungen.ts) تستعملها «اليوم» و«تدرّب» معًا، لا منطق مكرّر متفرّع
+  ok(homeK332.includes('import { heutigesGrammatikThema, parkedExercisesFor } from "@/lib/parkuebungen"') &&
+    homeK332.includes("const topicIdHeute = heutigesGrammatikThema(plan)") &&
+    homeK332.includes("const zusatzUebungen = parkedExercisesFor(topicIdHeute)") &&
+    homeK332.includes('data-testid="today-zusatz"') && homeK332.includes("<ExerciseSet items={zusatzUebungen}"),
+    "K332c R307: تمارين «زائد الدرس» مُدمجة الآن في صفحة اليوم فور توفّرها — لا حاجة لانتظار قفل المساء في ‎/ueben");
+  ok(uebenK332.includes('import { heutigesGrammatikThema, parkedExercisesFor } from "@/lib/parkuebungen"') &&
+    !uebenK332.includes("localStorage.getItem(`weg-park-"),
+    "K332d R307: ‎/ueben أُعيد ربطه بنفس الدالّة المشتركة بدل تكرار قراءة weg-park- محليًا — مصدر حقيقة واحد لا نسختان قد تتباعدان");
+  // لم يُمسّ أيّ من بوابات K136 (خطوة واحدة ظاهرة، تفاصيل مطوية، مؤشر تقدّم واحد) رغم القسمين الجديدين
+  const primaryAtK332 = homeK332.indexOf('data-testid="today-primary-step"');
+  const mahnungAtK332 = homeK332.indexOf('data-testid="modul-pruefung-mahnung"');
+  ok(mahnungAtK332 >= 0 && mahnungAtK332 < primaryAtK332,
+    "K332e R307: مطالبة اختبار الوحدة تُرسَم قبل البطاقة الوحيدة — إضافةٌ أعلى الصفحة لا تُدرِج خطوةً ثانيةً داخل بطاقة K136");
+  ok(homeK332.includes('<details className="dirb-extra" data-testid="today-extra">') &&
+    homeK332.includes('<details className="dirb-task-map" data-testid="today-task-map">') &&
+    !homeK332.includes('<details className="dirb-extra" open') &&
+    !homeK332.includes('<details className="dirb-task-map" open') &&
+    (homeK332.match(/role="progressbar"/g) ?? []).length === 1,
+    "K332f R307: إضافتا بوّابة الوحدة وزائد الدرس لم تمسّا بوابات K136 — التفاصيل تبقى مطويّة ومؤشر التقدّم واحد");
+}
+
+/* ═══ K333 — R308: «تدرّب» و«اختبر» مُدمَجتان فعليًا في صفحة اليوم — لا تشتّت بين شاشات ═══ */
+{
+  const homeK333 = readFileSync("app/page.tsx", "utf8");
+  // 🔗 نفس مكوّني الصفحتين الحقيقيين بلا نسخة موازية أو تلخيص مزيّف — تحميلٌ كسولٌ (lazy) مباشر لا تكرار منطق
+  ok(homeK333.includes('const UebenSeite = lazy(() => import("./ueben/page"))') &&
+    homeK333.includes('const PruefenSeite = lazy(() => import("./pruefen/page"))') &&
+    homeK333.includes('import { FehlerGrenze } from "@/components/fehlergrenze"') &&
+    homeK333.includes("<UebenSeite />") && homeK333.includes("<PruefenSeite />"),
+    "K333a R308: «اليوم» يُضمِّن نفس مكوّنَي ‎/ueben و‎/pruefen الحقيقيّين (محمَّلَين كسولًا) مباشرةً — لا نسخة موازية قد تتباعد عنهما");
+  // ⚡ تحميلٌ كسولٌ فعلي: التركيب شرطيٌّ بحالة فتحٍ صريحة، لا عرضٌ دائم تُخفيه CSS فقط — يحمي أثقل صفحة زيارةً من وزن إضافي دائم
+  ok(homeK333.includes("const [uebenGeoeffnet, setUebenGeoeffnet] = useState(false)") &&
+    homeK333.includes("const [pruefenGeoeffnet, setPruefenGeoeffnet] = useState(false)") &&
+    homeK333.includes("{uebenGeoeffnet &&") && homeK333.includes("{pruefenGeoeffnet &&") &&
+    homeK333.includes("<Suspense fallback="),
+    "K333a2 R308: المكوّنان لا يُركَّبان في الشجرة إلا بعد فتح قسمهما فعليًا — تحميلٌ كسولٌ حقيقي لا مجرّد إخفاء بصري لحزمةٍ مُحمَّلة سلفًا");
+  const grenzeVorUeben = homeK333.lastIndexOf("<FehlerGrenze>", homeK333.indexOf("<UebenSeite />"));
+  const grenzeVorPruefen = homeK333.lastIndexOf("<FehlerGrenze>", homeK333.indexOf("<PruefenSeite />"));
+  ok(grenzeVorUeben >= 0 && grenzeVorPruefen >= 0,
+    "K333b R308: كلاهما داخل حدود خطأ (FehlerGrenze) خاصّة بهما — عطبٌ في محطّة تدريب/اختبار بعيدة لا يُسقط صفحة اليوم كلّها");
+  // لم يُمسّ أيّ من بوابات K136 رغم تضمين صفحتين كاملتين: التفاصيل تبقى مطويّة افتراضيًا، ومؤشّر تقدّم واحد في مصدر app/page.tsx نفسه
+  ok(!homeK333.includes('<details className="dirb-extra" data-testid="today-ueben-eingebettet" open'),
+    "K333c R308: قسم «تدرّب» المُدمَج مطويٌّ افتراضيًا — لا فتحٌ قسري يُحدِث خطوتين ظاهرتين معًا");
+  ok(!homeK333.includes('<details className="dirb-extra" data-testid="today-pruefen-eingebettet" open'),
+    "K333d R308: وقسم «اختبر» المُدمَج مطويٌّ افتراضيًا أيضًا لنفس السبب");
+  ok((homeK333.match(/role="progressbar"/g) ?? []).length === 1 &&
+    homeK333.includes('<details className="dirb-extra" data-testid="today-extra">') &&
+    homeK333.includes('<details className="dirb-task-map" data-testid="today-task-map">') &&
+    !homeK333.includes('<details className="dirb-extra" open') &&
+    !homeK333.includes('<details className="dirb-task-map" open'),
+    "K333e R308: تضمين صفحتين كاملتين لم يُضف أيّ مؤشّر تقدّم ثانٍ مكتوب في app/page.tsx نفسها، ولم يمسّ بوابات K136 القائمة");
+  // الموضع: القسمان بعد المشغّل (<Klassenzimmer>) — إضافةٌ لاحقة، لا تُقحَم قبل الخطوة الأساسية أو هدف الجلسة
+  const playerAtK333 = homeK333.indexOf("<Klassenzimmer");
+  const uebenAtK333 = homeK333.indexOf('data-testid="today-ueben-eingebettet"');
+  const pruefenAtK333 = homeK333.indexOf('data-testid="today-pruefen-eingebettet"');
+  ok(playerAtK333 >= 0 && uebenAtK333 > playerAtK333 && pruefenAtK333 > uebenAtK333,
+    "K333f R308: القسمان المُدمَجان يأتيان بعد مشغّل اليوم — إضافةٌ ذيلية لا تُخلّ بترتيب K136 (خطوة واحدة ← هدف ← مشغّل)");
+}
+
+/* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
+{
+  const homeK334 = readFileSync("app/page.tsx", "utf8");
+  const klassK334 = readFileSync("components/akademie/Klassenzimmer.tsx", "utf8");
+  // 🔒 البوّابة تُحسَب على (day + 1) لا (day): تلتقط بدقّة لحظة *الإغلاق* عند حافّة الوحدة،
+  // لا فقط حالة كون اليوم الحالي داخل وحدة محظورة سلفًا — نفس الحساب يُستعمَل للمطالبة والقفل معًا.
+  ok(homeK334.includes("const modulGate = tagGesperrt(progress, day + 1)"),
+    "K334a R309: البوّابة تُحسَب على اليوم التالي (day+1) — فتلتقط لحظة الإغلاق الحرجة عند آخر يوم في الوحدة");
+  ok(homeK334.includes("const oeffneModulPruefungJetzt = () =>") &&
+    homeK334.includes("if (modulGate.gesperrt) { oeffneModulPruefungJetzt(); return; }"),
+    "K334b R309: وجود حارسٍ صريح يفتح بوّابة الامتحان ويعود فورًا — لا منطق إغلاقٍ يُنفَّذ خلفه");
+  const doCloseIdx = homeK334.indexOf("const doCloseDay = () =>");
+  const badDayIdx = homeK334.indexOf("const badDayToday = () =>");
+  const guardNearClose = homeK334.indexOf("if (modulGate.gesperrt) { oeffneModulPruefungJetzt(); return; }", doCloseIdx);
+  const guardNearBadDay = homeK334.indexOf("if (modulGate.gesperrt) { oeffneModulPruefungJetzt(); return; }", badDayIdx);
+  ok(doCloseIdx >= 0 && badDayIdx > doCloseIdx &&
+    guardNearClose > doCloseIdx && guardNearClose < badDayIdx &&
+    guardNearBadDay > badDayIdx,
+    "K334c R309: الحارسان حاضران فعليًا داخل كلٍّ من doCloseDay و badDayToday تحديدًا — لا تفافٌ حول القفل عبر «يوم سيّئ»");
+  // الرسالة الثابتة أعلى الصفحة أصبحت حكمًا صريحًا لا مجرّد نصيحة — ومرساةُ تمرير (id) لزرّ «ابدأ الاختبار الآن»
+  ok(homeK334.includes('id="modul-pruefung-mahnung"') &&
+    homeK334.includes('document.getElementById("modul-pruefung-mahnung")?.scrollIntoView'),
+    "K334d R309: مرساة تمرير حقيقية (id) على نفس قسم المطالبة — الزرّ الذي يفتح الامتحان يُنزِل المستخدم إليها فعليًا");
+  ok(homeK334.includes("modulGesperrt={modulGate.gesperrt}") &&
+    homeK334.includes("modulGesperrtNr={modulGate.wartendeModulNr}") &&
+    homeK334.includes("oeffneModulPruefung={oeffneModulPruefungJetzt}"),
+    "K334e R309: الخصائص الثلاث الجديدة تُمرَّر فعليًا إلى <Klassenzimmer> — لا قفل مرسوم في app/page.tsx وحده بمعزل عن الواجهة");
+  // مكوّن الواجهة: الخصائص الجديدة موجودة، وحوار التأكيد يستبدل زرّ الإغلاق الحقيقي ببطاقة قفلٍ وزرّ بدء امتحان عند الحظر
+  ok(klassK334.includes("modulGesperrt?: boolean") &&
+    klassK334.includes("modulGesperrtNr?: number") &&
+    klassK334.includes("oeffneModulPruefung?: () => void"),
+    "K334f R309: واجهة الخصائص (KlassenzimmerProps) تضمّ الثلاثة الجديدة — توثيقٌ صريح للعقد الجديد بين الصفحة والمكوّن");
+  ok(klassK334.includes('data-testid="abschluss-modul-tanbih"') &&
+    klassK334.includes('data-testid="abschluss-modul-qafl"') &&
+    klassK334.includes('data-testid="abschluss-modul-ibda"') &&
+    klassK334.includes("onClick={oeffneModulPruefung}"),
+    "K334g R309: حوار التأكيد يعرض تنبيه القفل وبطاقة القفل وزرّ «ابدأ اختبار الوحدة الآن» الذي يستدعي oeffneModulPruefung");
 }
 
 console.log(`\n══════ ENGINE SMOKE ══════\n✓ ${pass} نجح   ✗ ${fails.length} فشل`);

@@ -46,6 +46,10 @@ interface KlassenzimmerProps {
   onPauseSession?: () => void;
   /** في شاشة اليوم توجد بطاقة خطوة رئيسية أعلى الصفحة، فلا نكررها داخل المشغّل. */
   showCurrentHero?: boolean;
+  /** R309: القفل الفعلي — إغلاق اليوم لن يُنقل إلى وحدة تالية قبل اجتياز امتحان هذه الوحدة. */
+  modulGesperrt?: boolean;
+  modulGesperrtNr?: number;
+  oeffneModulPruefung?: () => void;
 }
 
 const KIND_AR: Record<string, string> = {
@@ -91,6 +95,9 @@ export function Klassenzimmer({
   onSrs,
   onPauseSession,
   showCurrentHero = true,
+  modulGesperrt = false,
+  modulGesperrtNr = 0,
+  oeffneModulPruefung,
 }: KlassenzimmerProps) {
   const voiceName = progress.settings.voiceName;
   const rate = effektiveRate(progress); // M7/R287: Auto-Tempo nach Niveau, manuelle Wahl bleibt
@@ -582,11 +589,17 @@ export function Klassenzimmer({
                 🧘 يوم سيّئ — اعبر بلا ديون
               </button>
             )}
-            <small style={{ color: "var(--color-ink2)", fontSize: "0.8rem" }}>
-              {allSubmitted
-                ? "كل المهام مُسلَّمة. أغلق اليوم لفتح الغد."
-                : "يمكنك الإغلاق الآن وسيُرحَّل ما لم يُنجز؛ أو استعمل «يوم سيّئ» لليالي الصعبة بلا ديون."}
-            </small>
+            {modulGesperrt ? (
+              <small data-testid="abschluss-modul-tanbih" style={{ color: "var(--color-die)", fontSize: "0.8rem", fontWeight: 700 }}>
+                🔒 هذا آخر يومٍ قبل الوحدة التالية — لن يكتمل الإغلاق قبل اجتياز اختبار الوحدة {modulGesperrtNr}.
+              </small>
+            ) : (
+              <small style={{ color: "var(--color-ink2)", fontSize: "0.8rem" }}>
+                {allSubmitted
+                  ? "كل المهام مُسلَّمة. أغلق اليوم لفتح الغد."
+                  : "يمكنك الإغلاق الآن وسيُرحَّل ما لم يُنجز؛ أو استعمل «يوم سيّئ» لليالي الصعبة بلا ديون."}
+              </small>
+            )}
           </div>
         ) : (
           <div className="card fadein" style={{ padding: "1.1rem", background: "var(--color-gold-soft)", textAlign: "start" }}>
@@ -605,14 +618,34 @@ export function Klassenzimmer({
                 </>
               )}
             </div>
-            <div style={{ display: "flex", gap: "0.6rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <button type="button" className="btn btn-gold" onClick={doCloseDay} style={{ minHeight: "46px" }}>
-                نعم، أغلق وارفع التعويضات
-              </button>
-              <button type="button" className="btn btn-ghost" onClick={() => setConfirmClose(false)} style={{ minHeight: "46px" }}>
-                لا، أريد إتقانها أولاً
-              </button>
-            </div>
+            {modulGesperrt ? (
+              <div data-testid="abschluss-modul-qafl" className="card" style={{ padding: "0.8rem 1rem", background: "var(--color-rosa-soft)", color: "var(--color-die)", textAlign: "center" }}>
+                <div style={{ fontWeight: 900 }}>🔒 لا يمكن الانتقال إلى الوحدة التالية الآن</div>
+                <p style={{ margin: "0.4rem 0", fontSize: "0.86rem", lineHeight: 1.8 }}>
+                  اجتز اختبار الوحدة {modulGesperrtNr} أوّلاً — هذا شرطٌ حقيقي لا يمكن تجاوزه بإغلاق اليوم ولا بـ«يوم سيّئ».
+                  يمكنك العودة وإتمام الإغلاق فور الاجتياز.
+                </p>
+                <div style={{ display: "flex", gap: "0.6rem", justifyContent: "center", flexWrap: "wrap" }}>
+                  {oeffneModulPruefung && (
+                    <button type="button" className="btn btn-primary" data-testid="abschluss-modul-ibda" onClick={oeffneModulPruefung} style={{ minHeight: "46px" }}>
+                      📋 ابدأ اختبار الوحدة الآن
+                    </button>
+                  )}
+                  <button type="button" className="btn btn-ghost" onClick={() => setConfirmClose(false)} style={{ minHeight: "46px" }}>
+                    ↩ رجوع
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div style={{ display: "flex", gap: "0.6rem", justifyContent: "center", flexWrap: "wrap" }}>
+                <button type="button" className="btn btn-gold" onClick={doCloseDay} style={{ minHeight: "46px" }}>
+                  نعم، أغلق وارفع التعويضات
+                </button>
+                <button type="button" className="btn btn-ghost" onClick={() => setConfirmClose(false)} style={{ minHeight: "46px" }}>
+                  لا، أريد إتقانها أولاً
+                </button>
+              </div>
+            )}
           </div>
         )}
       </section>

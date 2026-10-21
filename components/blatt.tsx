@@ -1,6 +1,6 @@
 "use client";
 // 🖨️ ورقة العمل الأسبوعية (Arbeitsblatt) — قابلة للطباعة، حتمية من خطة الأسبوع
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Progress } from "@/lib/types";
 import { TOTAL_DAYS } from "@/lib/types";
 import { buildDay, levelOf, pickN, rng } from "@/lib/plan";
@@ -19,6 +19,15 @@ export function ArbeitsblattButton({ progress }: { progress: Progress }) {
 }
 
 function Arbeitsblatt({ progress, onClose }: { progress: Progress; onClose: () => void }) {
+  // ♿ R305/ت16-ملحق: زرّ Escape لإغلاق هذه النافذة المنبثقة — كانت الطريقة الوحيدة
+  // بلوحة المفاتيح هي التبويب حتى زرّ «إغلاق» في آخر الورقة.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
   const day = Math.min(progress.plan.day, TOTAL_DAYS);
   const week = Math.ceil(day / 7);
   const start = (week - 1) * 7 + 1;
@@ -56,9 +65,12 @@ function Arbeitsblatt({ progress, onClose }: { progress: Progress; onClose: () =
       </div>
     ) : null;
 
+  // ستارة خلفية لإغلاق النافذة بنقرة خارجها (نمط شائع)؛ المعادل بلوحة المفاتيح هو زرّ
+  // Escape أعلاه (useEffect) وزرّ «إغلاق» الصريح أسفل الورقة — كلاهما يعمل فعلاً.
   return (
     <div
       className="weg-print-hide"
+      role="presentation"
       style={{ position: "fixed", inset: 0, background: "rgba(20,33,61,0.55)", zIndex: 50, overflow: "auto", padding: "1rem" }}
       onClick={onClose}
     >
@@ -68,9 +80,13 @@ function Arbeitsblatt({ progress, onClose }: { progress: Progress; onClose: () =
         .weg-arbeitsblatt { position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; max-height: none !important; overflow: visible !important; box-shadow: none !important; margin: 0 !important; }
         .weg-print-hide { display: none !important; }
       }`}</style>
+      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions -- يوقف فقاعة النقر إلى الستارة فقط، ليس تفاعلاً بذاته */}
       <div
         className="card weg-arbeitsblatt"
         dir="rtl"
+        role="dialog"
+        aria-modal="true"
+        aria-label="ورقة العمل الأسبوعية"
         onClick={(e) => e.stopPropagation()}
         style={{
           background: "white",

@@ -13,11 +13,26 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "ar",
     dir: "rtl",
     icons: [
+      // R305/ت13: أيقونات PNG حقيقية بدل SVG مضمَّن — تُظهر محتواها كاملاً على أندرويد
+      // (purpose "any") ولا تُقصّ عند قناع الأيقونة التكيّفية (purpose "maskable": محتوى
+      // منكمِش إلى منطقة أمان ~70% من اللوحة).
       {
-        src: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='96' fill='%230b1020'/><text x='50%25' y='54%25' font-size='280' text-anchor='middle' dominant-baseline='middle' font-family='system-ui,Arial,sans-serif'>🇩🇪</text><text x='50%25' y='88%25' font-size='72' text-anchor='middle' fill='white' font-family='system-ui,Arial,sans-serif' font-weight='700'>B2</text></svg>",
+        src: "/icons/icon-512.png",
         sizes: "512x512",
-        type: "image/svg+xml",
+        type: "image/png",
         purpose: "any",
+      },
+      {
+        src: "/icons/icon-180.png",
+        sizes: "180x180",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/icons/icon-512-maskable.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
       },
     ],
     categories: ["education", "language"],

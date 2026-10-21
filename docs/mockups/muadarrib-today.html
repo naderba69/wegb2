@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>نموذج — شاشة اليوم بصوت المدرّب (معاينة فقط، بيانات وهمية)</title>
+<style>
+  :root{
+    --paper:#0b1020; --paper2:#111a2b; --card:#15213a;
+    --ink:#f3f6fb; --ink2:#a4b2c7;
+    --cola:#22c55e; --cola-soft:#123322;
+    --gold:#f2c866; --gold-soft:#332b18;
+    --line:#26354c; --on-accent:#06140b;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Cairo","Segoe UI Arabic","Segoe UI",Tahoma,sans-serif;
+    padding-bottom:5rem;
+  }
+  .notice{
+    background:var(--gold-soft); color:var(--gold); border-bottom:1px solid var(--line);
+    padding:.5rem 1rem; font-size:.78rem; text-align:center; font-weight:700;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:1rem 1rem 2rem;}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:1.1rem;
+    padding:1rem 1.1rem; margin-bottom:.9rem;
+  }
+  /* ── المدرّب ── */
+  .coach{
+    display:flex; gap:.7rem; align-items:flex-start;
+    background:linear-gradient(135deg, var(--cola-soft), var(--card));
+    border:1px solid var(--cola); border-radius:1.2rem; padding:1rem 1.1rem;
+  }
+  .coach-avatar{
+    width:46px; height:46px; border-radius:50%; background:var(--cola);
+    display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex:0 0 auto;
+  }
+  .coach-bubble{font-size:.95rem; line-height:1.9;}
+  .coach-bubble b{color:var(--cola);}
+  .coach-reason{font-size:.78rem; color:var(--ink2); margin-top:.3rem;}
+  /* ── شريط هدف الجلسة ── */
+  .goal-top{display:flex; justify-content:space-between; align-items:baseline; font-size:.85rem; margin-bottom:.4rem;}
+  .goal-bar{background:#2a2f38; border-radius:999px; height:1.4rem; overflow:hidden;}
+  .goal-fill{background:var(--cola); height:100%; width:38%; transition:width .4s;}
+  /* ── المحطات ── */
+  .stations{display:grid; grid-template-columns:repeat(6,1fr); gap:5px; margin:.2rem 0;}
+  .station{
+    text-align:center; font-size:.68rem; padding:.4rem .15rem; border-radius:.6rem;
+    border:1px solid var(--line); color:var(--ink2); background:var(--paper2);
+  }
+  .station.done{border-color:var(--cola); color:var(--cola);}
+  .station.active{border-color:var(--gold); color:var(--gold); background:var(--gold-soft); font-weight:800;}
+  /* ── قاعدة نحوية ── */
+  .lesson-kicker{font-size:.72rem; color:var(--ink2); font-weight:800; text-transform:uppercase; letter-spacing:.03em;}
+  .lesson-title{font-size:1.1rem; font-weight:900; margin:.2rem 0 .5rem;}
+  .rule-table{width:100%; border-collapse:collapse; font-size:.85rem; margin:.5rem 0;}
+  .rule-table td, .rule-table th{border:1px solid var(--line); padding:.4rem .5rem; text-align:center;}
+  .rule-table th{background:var(--paper2); color:var(--gold);}
+  .example-de{direction:ltr; text-align:left; font-weight:700; color:var(--ink);}
+  .example-ar{font-size:.85rem; color:var(--ink2);}
+  /* ── خطوة التمرين ── */
+  .step-divider{
+    display:flex; align-items:center; gap:.5rem; margin:.9rem 0 .5rem;
+    font-size:.82rem; color:var(--ink2);
+  }
+  .step-divider::before, .step-divider::after{content:""; flex:1; height:1px; background:var(--line);}
+  .task-card .kicker{font-size:.72rem; color:var(--ink2); font-weight:800;}
+  .task-q{font-size:1.05rem; font-weight:700; margin:.4rem 0 .7rem;}
+  .choices{display:grid; gap:.5rem;}
+  .choice{
+    border:1px solid var(--line); border-radius:.8rem; padding:.65rem .9rem;
+    background:var(--paper2); cursor:pointer; font-size:.92rem; text-align:start;
+  }
+  .choice:hover{border-color:var(--cola);}
+  .choice.correct{border-color:var(--cola); background:var(--cola-soft); color:var(--cola);}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.4rem;
+    border-radius:999px; padding:.6rem 1.1rem; font-weight:800; font-size:.9rem;
+    border:1px solid var(--line); cursor:pointer; background:transparent; color:var(--ink);
+  }
+  .btn-primary{background:var(--cola); color:var(--on-accent); border-color:var(--cola);}
+  .btn-gold{background:var(--gold); color:var(--on-accent); border-color:var(--gold);}
+  .btn-row{display:flex; gap:.5rem; flex-wrap:wrap; margin-top:.7rem;}
+  /* ── تفاصيل قابلة للطي ── */
+  details.extra{border:1px solid var(--line); border-radius:1rem; padding:.7rem .9rem; margin-bottom:.9rem;}
+  details.extra summary{cursor:pointer; font-weight:800; font-size:.92rem;}
+  .chip-row{display:flex; gap:.45rem; flex-wrap:wrap; margin-top:.6rem;}
+  .chip{
+    border:1px solid var(--line); border-radius:999px; padding:.4rem .8rem;
+    font-size:.82rem; background:var(--paper2); cursor:pointer;
+  }
+  .chip:hover{border-color:var(--gold);}
+  /* ── خريطة المسار المطوية ── */
+  .path-mini{display:flex; flex-wrap:wrap; gap:4px; margin-top:.5rem;}
+  .path-dot{
+    width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-size:.62rem; font-weight:800; border:1px solid var(--line); color:var(--ink2);
+  }
+  .path-dot.done{background:var(--cola); color:var(--on-accent); border-color:var(--cola);}
+  .path-dot.today{border-color:var(--gold); color:var(--gold); border-width:2px;}
+  /* ── تنقّل سفلي مبسّط ── */
+  .bottom-nav{
+    position:fixed; bottom:0; inset-inline:0; background:var(--paper2); border-top:1px solid var(--line);
+    display:flex; justify-content:space-around; padding:.5rem 0 .7rem;
+  }
+  .nav-item{display:flex; flex-direction:column; align-items:center; gap:.15rem; font-size:.72rem; color:var(--ink2);}
+  .nav-item.active{color:var(--cola); font-weight:800;}
+  .nav-icon{font-size:1.2rem;}
+  .tiny{font-size:.74rem; color:var(--ink2); line-height:1.8;}
+  .badge-removed{
+    display:inline-block; font-size:.7rem; color:#ff8080; text-decoration:line-through; margin-inline-start:.3rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="notice">⚠️ هذه معاينة ساكنة لمناقشة التصميم فقط — بيانات وهمية، غير متصلة بالتطبيق الحقيقي</div>
+
+<div class="wrap">
+
+  <!-- 1) افتتاحية المدرّب -->
+  <div class="coach">
+    <div class="coach-avatar">👨‍🏫</div>
+    <div>
+      <div class="coach-bubble">
+        <b>مدرّبك:</b> صباح الخير! اليوم يومك رقم <b>47</b> من 378 — مرحلة <b>A1</b>.
+        هدف اليوم: قاعدة «حالة النصب Akkusativ» + 8 كلمات جديدة عن العائلة.
+      </div>
+      <div class="coach-reason">💡 ليش هالقاعدة بالذات اليوم؟ لأنها أساس أي جملة فيها مفعول به، وبُنيت على درس أمس عن الأفعال.</div>
+    </div>
+  </div>
+
+  <!-- 2) هدف الجلسة -->
+  <div class="card">
+    <div class="goal-top">
+      <strong>🎯 هدف الجلسة — 90 دقيقة</strong>
+      <span class="tiny" dir="ltr" style="font-weight:700;">34 / 90 د</span>
+    </div>
+    <div class="goal-bar"><div class="goal-fill"></div></div>
+    <div class="tiny" style="margin-top:.4rem;">احفظ التوقّف وعُد لاحقًا — ما يتحوّل اللي ما سلّمته لفشل أو تعويض.</div>
+  </div>
+
+  <!-- 3) محطات اليوم -->
+  <div class="card">
+    <div class="tiny" style="margin-bottom:.4rem; font-weight:800; color:var(--ink);">محطات درس اليوم</div>
+    <div class="stations">
+      <div class="station done">☀️<br>إحماء</div>
+      <div class="station active">🧠<br>قواعد</div>
+      <div class="station">🧩<br>مفردات</div>
+      <div class="station">👂📖<br>استماع</div>
+      <div class="station">🗣<br>إنتاج</div>
+      <div class="station">✅<br>فحص</div>
+    </div>
+  </div>
+
+  <!-- 4) الدرس النحوي مدمج هنا مباشرة (بدل الذهاب لصفحة منفصلة) -->
+  <div class="card">
+    <div class="lesson-kicker">📖 قاعدة اليوم — مدمجة هنا، لا حاجة لمغادرة الصفحة</div>
+    <div class="lesson-title">حالة النصب Akkusativ — متى نستعملها؟</div>
+    <p class="tiny" style="font-size:.88rem; color:var(--ink);">تُستعمل حالة النصب مع المفعول به المباشر — الشيء أو الشخص الذي يقع عليه الفعل مباشرة.</p>
+    <table class="rule-table">
+      <tr><th>المذكّر (der)</th><th>المؤنث (die)</th><th>المحايد (das)</th><th>الجمع</th></tr>
+      <tr><td>den</td><td>die</td><td>das</td><td>die</td></tr>
+    </table>
+    <div class="example-de">Ich sehe <b>den</b> Mann.</div>
+    <div class="example-ar">أنا أرى الرجل. ← Mann مذكّر، فأصبح der → den</div>
+    <div class="btn-row">
+      <button class="btn btn-primary">فهمت، لنتدرّب ←</button>
+      <button class="btn">أعطني مثالاً آخر</button>
+    </div>
+  </div>
+
+  <div class="step-divider">أحسنت! ننتقل الآن إلى تمرين يثبّت نفس القاعدة</div>
+
+  <!-- 5) خطوة تمرين -->
+  <div class="card task-card">
+    <div class="kicker">🧩 مفردات + قواعد · مهمة 2 من 6</div>
+    <div class="task-q">اختر الكلمة الصحيحة: „Ich besuche ___ Bruder.“</div>
+    <div class="choices">
+      <div class="choice correct">den ✓</div>
+      <div class="choice">der</div>
+      <div class="choice">das</div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-primary">التالي ←</button>
+    </div>
+  </div>
+
+  <!-- 6) تدريب إضافي اختياري — داخل نفس الصفحة -->
+  <details class="extra">
+    <summary>🎮 خلّصت درس اليوم؟ تحب تتدرّب أكثر (اختياري)</summary>
+    <p class="tiny">بدون ما تغادر — هذي أنشطة إضافية حرّة، ما إلها علاقة بخطتك الإلزامية.</p>
+    <div class="chip-row">
+      <span class="chip">🧩 لعبة الكلمات</span>
+      <span class="chip">⚡ Blitz — مراجعة سريعة</span>
+      <span class="chip">🗣 محادثة حرّة</span>
+      <span class="chip">📖 نص قراءة إضافي</span>
+    </div>
+  </details>
+
+  <!-- 7) فحص/امتحان كجزء من نفس المسار -->
+  <details class="extra">
+    <summary>🏁 تحدٍّ اختياري: محاكاة امتحان كامل <span class="badge-removed">بدل زيارة صفحة منفصلة</span></summary>
+    <p class="tiny">متاح لك الآن، لكن غير مطلوب إلا في يوم الفحص الأسبوعي المبرمج (الأحد القادم).</p>
+    <button class="btn btn-gold">ابدأ محاكاة قصيرة (10 د)</button>
+  </details>
+
+  <!-- 8) خريطة المسار الكاملة — مطوية بآخر الصفحة -->
+  <details class="extra">
+    <summary>🗺️ مسارك الكامل من A0 إلى B2 (معلومة سياقية فقط)</summary>
+    <p class="tiny">مصدر واحد للتقسيم في كل شاشات التطبيق — لا أرقام متضاربة بعد اليوم.</p>
+    <div class="path-mini" id="pathMini"></div>
+    <script>
+      const el = document.getElementById('pathMini');
+      for (let i = 1; i <= 60; i++) {
+        const d = document.createElement('div');
+        d.className = 'path-dot' + (i < 47 ? ' done' : i === 47 ? ' today' : '');
+        d.textContent = i === 47 ? '●' : (i < 47 ? '✓' : i);
+        el.appendChild(d);
+      }
+    </script>
+  </details>
+
+</div>
+
+<div class="bottom-nav">
+  <div class="nav-item active"><span class="nav-icon">🏠</span>اليوم</div>
+  <div class="nav-item"><span class="nav-icon">📚</span>مكتبة الدروس</div>
+  <div class="nav-item"><span class="nav-icon">📊</span>تقدّمي</div>
+</div>
+
+</body>
+</html>

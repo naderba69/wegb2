@@ -704,35 +704,53 @@ function VocabTask({ task, srs, onSrs, onPoints, voiceName, rate, tempo = "regel
         <strong>بطاقات اليوم:</strong> <span className="rtl-num">{queue.length}</span> في الدفعة الحالية · مراجعات مستحقة إجمالاً: <span className="rtl-num">{queueStats.due}</span> · بطاقات جديدة متبقية في الحزمة: <span className="rtl-num">{queueStats.fresh}</span> · بطاقات جديدة قُدّمت اليوم: <span className="rtl-num">{queueStats.introduced}</span>/<span className="rtl-num">{queueStats.cap}</span>
       </p>
       {card ? (
-        <div className="card" style={{ padding: "1.4rem", textAlign: "center", background: "var(--color-paper2)", cursor: "pointer" }} onClick={() => setFlipped(true)}>
+        // ♿ R305/ت16+ب10: كانت هذه البطاقة <div onClick> بلا أي دعم للوحة المفاتيح — أكثر
+        // تفاعل متكرر في كامل المنهج (مراجعة SRS اليومية). أُضيف role="button"/tabIndex حينها،
+        // لكن فحص axe-core الآلي (R305/ب10) كشف أن هذا يُنتج مخالفة «nested-interactive»:
+        // أزرار حقيقية (🔊 اسمع النطق، اكشف المعنى، لم أعرف/بجهد/سهّل) متداخلة داخل عنصر له
+        // دور ARIA «زر» أيضًا — يربك قارئ الشاشة وترتيب التبويب. الإصلاح النهائي: الحاوية
+        // الخارجية حاوية بصريّة محضة (لا onClick ولا دور)، وواجهُ البطاقة (الصورة + الكلمة)
+        // أصبح ‎<button>‎ حقيقيًّا واحدًا بذاته — قابل للتبويب والتفعيل بالفأرة/اللمس/لوحة
+        // المفاتيح أصلًا بلا أي كود إضافي، ولا يحوي أزرارًا أخرى بداخله فلا تداخل إطلاقًا.
+        <div className="card" style={{ padding: "1.4rem", textAlign: "center", background: "var(--color-paper2)" }}>
           <div className="chip" data-testid="vocab-queue-count" style={{ marginBottom: "0.6rem" }}>
             <span className="rtl-num">{doneCount + 1}</span> / <span className="rtl-num">{doneCount + queue.length}</span>
           </div>
-          {card.img && (
-            <img
-              src={card.img}
-              alt={card.de}
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
-              style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "var(--color-card)" }}
-            />
-          )}
-          <div style={{ fontSize: "1.7rem", fontWeight: 900 }}>
-            {produktiv && !flipped ? (
-              <span>{card.ar}</span>
-            ) : (
-              <>
-                {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
-                <De>{deFormOf(card, false)}</De>
-                {genusCode(card.article) && (
-                  <span className="chip" data-testid="karte-genus" title={`الجنس: ${genusCode(card.article)!.ar}`} style={{ fontSize: "0.8rem", marginInlineStart: "0.4rem" }}>
-                    {genusCode(card.article)!.symbol} {genusCode(card.article)!.letter}
-                  </span>
-                )}
-              </>
+          <button
+            type="button"
+            onClick={() => setFlipped(true)}
+            aria-label={flipped ? "وجه البطاقة" : produktiv ? "اكشف اللفظ الألماني" : "اكشف المعنى"}
+            style={{ display: "block", width: "100%", minHeight: "44px", background: "none", border: "none", padding: 0, margin: 0, font: "inherit", color: "inherit", cursor: "pointer" }}
+          >
+            {card.img && (
+              // alt="" مقصودة: الصورة إيضاح بصريّ مرافق للكلمة المعروضة نصًّا أسفلها مباشرة
+              // داخل نفس الزرّ — تكرار النطق عبر alt يُضاعف اسم الزرّ لقارئ الشاشة (axe-core
+              // image-redundant-alt، R305/ب10)، والزرّ نفسه يحمل aria-label واضحًا بالفعل.
+              <img
+                src={card.img}
+                alt=""
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.display = "none";
+                }}
+                style={{ display: "block", margin: "0 auto 0.6rem", width: "100%", maxWidth: 230, height: 150, objectFit: "contain", borderRadius: 12, background: "var(--color-card)" }}
+              />
             )}
-          </div>
+            <div style={{ fontSize: "1.7rem", fontWeight: 900 }}>
+              {produktiv && !flipped ? (
+                <span>{card.ar}</span>
+              ) : (
+                <>
+                  {card.article && <span style={{ color: "var(--color-gold)" }}>{card.article} </span>}
+                  <De>{deFormOf(card, false)}</De>
+                  {genusCode(card.article) && (
+                    <span className="chip" data-testid="karte-genus" title={`الجنس: ${genusCode(card.article)!.ar}`} style={{ fontSize: "0.8rem", marginInlineStart: "0.4rem" }}>
+                      {genusCode(card.article)!.symbol} {genusCode(card.article)!.letter}
+                    </span>
+                  )}
+                </>
+              )}
+            </div>
+          </button>
           {produktiv && !flipped && (
             <div className="chip" data-testid="karte-produktiv" style={{ marginTop: "0.3rem" }}>🎯 إنتاج: تذكّر اللفظ الألماني بنفسك ثم اكشفه</div>
           )}
@@ -1356,7 +1374,11 @@ function CanDoList({ level, full }: { level: "A0" | "A1" | "A2" | "B1" | "B2"; f
       </h4>
       <div style={{ display: "grid", gap: "0.35rem" }}>
         {(full ? items : items.slice(0, 4)).map((c) => (
-          <label key={c.id} style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", cursor: "pointer", border: "1px solid var(--color-line)", borderRadius: "0.6rem", padding: "0.5rem 0.7rem" }}>
+          <label
+            key={c.id}
+            aria-label={`${c.de} — ${c.ar}`}
+            style={{ display: "flex", gap: "0.5rem", alignItems: "flex-start", cursor: "pointer", border: "1px solid var(--color-line)", borderRadius: "0.6rem", padding: "0.5rem 0.7rem" }}
+          >
             <input type="checkbox" onChange={() => toggleCanDoNow(c.id)} style={{ marginTop: "0.25rem" }} />
             <span>
               <De>{c.de}</De>

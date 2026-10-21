@@ -141,7 +141,7 @@ export const PHASE_DECKS: Record<Phase, string[]> = {
   A0: ["a0-start", "a0-zahlen", "a0-farben", "a0-obst-gemuese", "a0-klassenzimmer"],
   A1: ["a1-start", "a1-familie-alltag", "a1-zeit-zahlen", "a1-essen-trinken", "a1-koerper-kleidung", "a1-stadt-wege", "a1-haus-schule", "a1-natur-freizeit", "a1-welt-beruf", "a1-modal-ort", "a1-menschen-abschluss"],
   A2: ["a2-komplett", "a2-arbeit-buero", "a2-alltag-dienste", "a2-leben-technik", "a2-schreiben-dienste", "a2-mensch-beziehung", "a2-reise-feste", "a2-medien-bildung", "a2-geld-gesundheit", "a2-wohnen-vertrag", "a2-arbeit-umwelt", "a2-kueche-haushalt", "a2-erzaehlen-zeit", "a2-redemittel", "a2-kultur-digital", "a2-b1-bruecke"],
-  B1: ["b1-gesellschaft", "b1-staat-argument", "b1-karriere-psyche", "b1-gesundheit-technik", "b1-projekt-rede", "b1-stadt-recht", "b1-funktionsverben", "b1-bildung-migration-familie", "b1-dienst-natur-bild", "b1-brief-wirtschaft", "b1-wissen-zeit-wendungen", "b1-essen-kunst-hoeflichkeit", "b1-gesund-wohnen-praep", "b1-job-auto-praefix", "b1-geld-gemeinschaft-adj", "b1-digital-kauf-nomen", "b1-pruefung-text-reflexiv", "b1-klima-sport-komposita", "b1-medien-reise-verben", "b1-verwaltung-handwerk", "b1-arbeit-familie-geld", "a2-b1-bruecke"],
+  B1: ["b1-projekt-rede", "b1-staat-argument", "b1-karriere-psyche", "b1-gesundheit-technik", "b1-gesellschaft", "b1-stadt-recht", "b1-funktionsverben", "b1-bildung-migration-familie", "b1-dienst-natur-bild", "b1-brief-wirtschaft", "b1-wissen-zeit-wendungen", "b1-essen-kunst-hoeflichkeit", "b1-gesund-wohnen-praep", "b1-job-auto-praefix", "b1-geld-gemeinschaft-adj", "b1-digital-kauf-nomen", "b1-pruefung-text-reflexiv", "b1-klima-sport-komposita", "b1-medien-reise-verben", "b1-verwaltung-handwerk", "b1-arbeit-familie-geld", "b1-az-a", "b1-az-b", "b1-az-c", "b1-az-d", "b1-az-e", "b1-az-f", "b1-az-g", "b1-az-h", "b1-az-i", "b1-az-j", "b1-az-k", "b1-az-l", "b1-az-m", "b1-az-n", "b1-az-o", "b1-az-p", "b1-az-qr", "b1-az-s1", "b1-az-s2", "b1-az-t", "b1-az-u", "b1-az-v", "b1-az-w", "b1-az-z", "b1-az-rest", "b1-az-final", "a2-b1-bruecke"],
   B2: ["b2-medien-schule", "b2-politik-demokratie", "g01-beziehungen", "g02-gesundheit", "g03-gesellschaft", "g04-wohnen", "g05-digital", "g06-wissenschaft", "g07-schoenheit", "g08-kunst-kultur", "h01-arbeit-beruf", "h02-umwelt-klima", "h03-konsum-geld", "h04-mobilitaet-verkehr", "h05-staat-recht", "h06-studium-lernen", "h07-gefuehle-psyche", "h08-sport-freizeit", "i01-medien-meinung", "i02-bildung-politik", "i03-sozialstaat-ehrenamt", "i04-energie-wende", "i05-ernaehrung-verbraucherschutz", "i06-stadtentwicklung", "i07-migration-integration", "i08-erinnerungskultur", "b2-wissenschaft-zukunft"],
   Abschluss: [],
 };
@@ -605,8 +605,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   const phaseTopics = PHASE_TOPICS[phase];
   const grammarAssignment = grammarAssignmentForDay(day, progress);
   const phaseDecks = PHASE_DECKS[phase];
-  const phaseDeckA = phaseDecks[((week - 1) * 2) % Math.max(phaseDecks.length, 1)];
-  const phaseDeckB = phaseDecks[((week - 1) * 2 + 1) % Math.max(phaseDecks.length, 1)];
+  const phaseDeckA = phaseDecks[((wocheInPhase - 1) * 2) % Math.max(phaseDecks.length, 1)];
+  const phaseDeckB = phaseDecks[((wocheInPhase - 1) * 2 + 1) % Math.max(phaseDecks.length, 1)];
 
   const textsOfLevel = texts.filter((t) => t.level === level);
   const dialogsOfLevel = dialogues.filter((d) => d.level === level);

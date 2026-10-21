@@ -93,6 +93,21 @@ async function main() {
   const enter = (el: HTMLElement) =>
     act(() => el.dispatchEvent(new dom.window.KeyboardEvent("keydown", { key: "Enter", bubbles: true, cancelable: true })));
 
+  /**
+   * 🩺 R305/ب10: فحص وصولية آلي حقيقي (axe-core) — لا متصفح حقيقي مطلوب (Playwright/Puppeteer
+   * محجوبان شبكيًا في هذا الصندوق)، لكن axe-core يعمل فوق jsdom نفسه الذي تُركَّب فيه كل هذه
+   * الاختبارات أصلًا. يُفحَص فرع DOM المركَّب فعليًا (لا الصفحة كلها) فتُستبعَد قواعد المستوى
+   * الصفحي (عنوان/لغة/معالم) التي لا تنطبق على مكوّن منفرد؛ وتُطلَب المخالفات فقط (لا الحالات
+   * «غير الحاسمة» مثل تباين الألوان التي تحتاج محرّك تخطيط حقيقي لا يوفّره jsdom).
+   */
+  const axeMod = (await import("axe-core")) as unknown as { default?: { run: (ctx: unknown, opts: unknown) => Promise<{ violations: { id: string; nodes: unknown[] }[] }> } } & { run: (ctx: unknown, opts: unknown) => Promise<{ violations: { id: string; nodes: unknown[] }[] }> };
+  const axe = axeMod.default ?? axeMod;
+  async function pruefeA11y(label: string, ignore: string[] = []) {
+    const { violations } = await axe.run(rootEl, { resultTypes: ["violations"] });
+    const echte = violations.filter((v) => !ignore.includes(v.id));
+    ok(echte.length === 0, `${label} — صفر مخالفات وصولية (axe-core)${echte.length ? `: ${echte.map((v) => `${v.id}×${v.nodes.length}`).join(", ")}` : ""}`);
+  }
+
   console.log("🧪 تفاعل jsdom — نقرات حقيقية على المكوّنات\n");
 
   /* ---------- I — Blitz 🥵 دورة كاملة ---------- */
@@ -584,7 +599,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
   /* ---------- XIX — الرقعةُ 1415: لا يتيمةٌ ولا مزدوجة ---------- */
   {
     const bare = new Set(alleVokabeln.map((c: { de: string }) => c.de.replace(/^(der|die|das)\s+/, "").trim()));
-    ok(alleVokabeln.length === 4504, "XIX1 بنكُ المفرداتِ 4504 بطاقةً كما في الجرد الحيّ (R298: +912 بطاقة توسعة B2 استقبالية، وكلمات التمريض الـ133 كلها في الحزم العامة)");
+    ok(alleVokabeln.length === 6202, "XIX1 بنكُ المفرداتِ 6202 بطاقةً كما في الجرد الحيّ (R322: +93 بطاقة B1 لسدّ فجوة Goethe-Wortliste الأبجدية T+U Tabelle–ursprünglich؛ كانت 5860 منذ R321)");
     ok(Object.keys(mnemonikMap).every((w) => bare.has(w)), "XIX2 لا حيلةٌ تُعلَّمُ بلا بطاقةٍ تُذكَرُ عليها");
     const neu = alleVokabeln.filter((c: { id: string }) => /^v14\d\d$/.test(c.id)) as { id: string; de: string; article?: string; pos?: string }[];
     const falschMarkiert = neu.filter((c) => c.pos === "Nomen"
@@ -2357,9 +2372,9 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { Fehlerheft } = await import("../components/fehler-ui");
     let p = loadProgress();
     p = upsertFehler(p, { falsch: "die Frist verpassen", richtig: "einhalten", art: "wortstellung", ar: "⚠️ ثقةٌ خاطئة — كنتَ متأكّداً: die Frist einhalten", quelle: "kol" });
-    p = upsertFehler(p, { falsch: "xyzq", richtig: "qqqq-nicht-im-lexikon", art: "konstruktion", ar: "—", quelle: "y" });
+    p = upsertFehler(p, { falsch: "xyzq", richtig: "qqqq-zzzz-wwww", art: "konstruktion", ar: "—", quelle: "y" });
     const { normKey } = await import("../lib/fehler");
-    const keys = [normKey("die Frist verpassen|einhalten"), normKey("xyzq|qqqq-nicht-im-lexikon")];
+    const keys = [normKey("die Frist verpassen|einhalten"), normKey("xyzq|qqqq-zzzz-wwww")];
     for (const k of keys) p.fehler![k].srs.due = "2000-01-01";
     saveProgress(p);
     const kE = keys.find((k) => k.includes("einhalten"))!; const kQ = keys.find((k) => k.includes("qqqq"))!;
@@ -2367,7 +2382,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const tr = rootEl.querySelectorAll('[data-testid="fehler-transfer"]');
     if (tr.length !== 1) console.log("   ⤷ LXII debug:", tr.length, txt().slice(0, 300));
     ok(tr.length === 1 && (tr[0].textContent ?? "").includes("_____") && (tr[0].textContent ?? "").includes("ثقة خاطئة سابقاً"), "LXII1 خطأُ einhalten يُعرَضُ كتمرينِ متلازمةٍ جديدٍ موسومٍ بالثقةِ الخاطئة؛ خطأُ الكلمةِ المجهولةِ يبقى مباشراً");
-    ok(txt().includes("أيّ صيغة صحيحة؟") && !!btn("qqqq-nicht-im-lexikon"), "LXII2 السؤالُ المباشرُ ما زالَ موجوداً لمن لا بطاقةَ له");
+    ok(txt().includes("أيّ صيغة صحيحة؟") && !!btn("qqqq-zzzz-wwww"), "LXII2 السؤالُ المباشرُ ما زالَ موجوداً لمن لا بطاقةَ له");
     if (!tr[0]) { ok(false, "LXII3 (تخطٍّ — لا تمرينَ نقل)"); } else {
     const opts = () => Array.from(tr[0].querySelectorAll("button")).filter((b) => !/متأكّد|تحقّق|اسمع/.test(b.textContent ?? "") && (b.textContent ?? "").trim().length > 1 && !b.hasAttribute("disabled"));
     const pruefBtn = () => Array.from(tr[0].querySelectorAll("button")).find((b) => (b.textContent ?? "").startsWith("تحقّق"));
@@ -3994,8 +4009,361 @@ const hasFile = txt().includes("صوتٌ من الدار");
   }
 }
 
+// ── R305/خ15: مهمة الوساطة اللغوية (Sprachmittlung) لنصوص/حوارات B1/B2 ──
+{
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  // A0 لا تحمل مهمة وساطة — يجب ألا يظهر القسم إطلاقًا
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-a0-hund"]') as HTMLElement);
+  ok(!rootEl.querySelector('[data-testid^="lesestoff-mediation-"]'), "R305a لا تظهر مهمة الوساطة لنصوص A0 (لا تحمل حقل mediation)");
+  click(rootEl.querySelector('[data-testid="lesestoff-zurueck"]') as HTMLElement);
+  click(rootEl.querySelector('[data-testid="lesestoff-stufe-B1"]') as HTMLElement);
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-b1-homeoffice"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-mediation-frei-b1-homeoffice"]'), "R305b نص B1 يعرض قسم مهمة الوساطة اللغوية");
+  ok((rootEl.textContent ?? "").includes("مهمة وساطة لغوية"), "R305c عنوان المهمة بالعربية ظاهر");
+  const txt = rootEl.querySelector('[data-testid="lesestoff-mediation-textarea-frei-b1-homeoffice"]') as HTMLTextAreaElement;
+  ok(!!txt, "R305d حقل كتابة التلخيص موجود");
+  click(rootEl.querySelector('[data-testid="lesestoff-mediation-zeigen-frei-b1-homeoffice"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-mediation-punkte-frei-b1-homeoffice"]'), "R305e زرّ المقارنة يكشف النقاط الأساسية");
+  click(rootEl.querySelector('[data-testid="lesestoff-mediation-fertig-frei-b1-homeoffice"]') as HTMLElement);
+  ok((rootEl.textContent ?? "").includes("سُجِّلت ضمن كفاءة الكتابة"), "R305f تعليم المهمة كمنتهية يؤكّد التسجيل ضمن كفاءة الكتابة");
+}
+
+// ── R305/خ17: توسيم «أصعب من مستواك» عند التصفح الحرّ لمستوى أعلى من خطة المتعلّم ──
+{
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation)); // تقدّم فارغ ⇒ day=1 ⇒ المستوى الفعلي A0
+  ok(!rootEl.querySelector('[data-testid="lesestoff-aufwaerts-hinweis"]'), "R305g لا توسيم عند تصفّح المستوى الحالي نفسه (A0)");
+  click(rootEl.querySelector('[data-testid="lesestoff-stufe-B1"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-aufwaerts-hinweis"]'), "R305h توسيمٌ واضح يظهر عند اختيار مستوى أعلى من خطة المتعلّم (B1 > A0)");
+  ok((rootEl.textContent ?? "").includes("استكشاف حرّ"), "R305i نصّ التوسيم يوضّح أنه استكشاف حرّ لا تقييم فشل");
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-b1-homeoffice"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-aufwaerts-badge"]'), "R305j شارة «أصعب من مستواك» تظهر أيضًا على رأس النصّ المفتوح نفسه");
+}
+
+// ── R305/خ18: «طابِق كل فقرة بعنوانها» (نمط Goethe Lesen Teil 1) ──
+{
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  click(rootEl.querySelector('[data-testid="lesestoff-stufe-B2"]') as HTMLElement);
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-b2-ki"]') as HTMLElement);
+  ok(!!rootEl.querySelector('[data-testid="lesestoff-ueberschriften-frei-b2-ki"]'), "R305k نصّ B2 طويل (4 فقرات) يعرض تمرين مطابقة العناوين");
+  const sel0 = rootEl.querySelector('[data-testid="lesestoff-ueberschrift-select-frei-b2-ki-0"]') as HTMLSelectElement;
+  ok(!!sel0 && sel0.options.length > 5, "R305l قائمة العناوين تضمّ مُضلِّلات أكثر من عدد الفقرات (6 عناوين لـ4 فقرات)");
+  if (sel0) {
+    act(() => {
+      const setter = Object.getOwnPropertyDescriptor(dom.window.HTMLSelectElement.prototype, "value")!.set!;
+      setter.call(sel0, "0");
+      sel0.dispatchEvent(new dom.window.Event("change", { bubbles: true }));
+    });
+    ok(!!rootEl.querySelector('[data-testid="lesestoff-ueberschrift-ergebnis-frei-b2-ki-0"]'), "R305m اختيار عنوان يُظهر تصحيحًا فوريًا لتلك الفقرة");
+    ok((rootEl.textContent ?? "").includes("✅"), "R305n الاختيار الصحيح (فهرس 0) يُعلَّم بعلامة صح");
+  }
+}
+
+// ── R305/ب10: فحص وصولية آلي حقيقي (axe-core فوق jsdom) على محطات عالية الاستخدام ──
+{
+  const { default: TaskView } = await import("../components/tasks");
+  const { vocabMap } = await import("../lib/content");
+  const deckId = Object.keys(vocabMap)[0];
+  mount(
+    React.createElement(TaskView, {
+      task: { id: "t-a11y-voc", kind: "wortschatz" as const, titleDe: "W", titleAr: "مفردات", minutes: 10, deckId },
+      lang: "ar" as const, day: 3, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1,
+    })
+  );
+  await pruefeA11y("R305-a11y-1 بطاقة مراجعة المفردات (أكثر شاشة استخدامًا — ت16)");
+  const kashfBtn = btn("اكشف المعنى") ?? btn("اكشف اللفظ الألماني");
+  ok(!!kashfBtn, "R305-a11y-1b زرّ الكشف الصريح موجودٌ وقابلٌ للتبويب حقيقةً (لا دور ARIA مكرَّر على الحاوية)");
+  if (kashfBtn) { click(kashfBtn); await pruefeA11y("R305-a11y-2 بطاقة المفردات بعد الكشف بزرٍّ حقيقي (لا تداخل أزرار)"); }
+
+  const { LeseStoffStation } = await import("../components/lesestoff");
+  mount(React.createElement(LeseStoffStation));
+  await pruefeA11y("R305-a11y-3 محطة القراءة الحرة — قائمة النصوص");
+  click(rootEl.querySelector('[data-testid="lesestoff-stufe-B1"]') as HTMLElement);
+  click(rootEl.querySelector('[data-testid="lesestoff-item-frei-b1-homeoffice"]') as HTMLElement);
+  await pruefeA11y("R305-a11y-4 محطة القراءة الحرة — نصّ مفتوح مع مهمة الوساطة (خ15)");
+
+  const { HoerLabor } = await import("../components/hoeren");
+  mount(React.createElement(HoerLabor, { progress: { ...emptyProgress } }));
+  await pruefeA11y("R305-a11y-5 مختبر الاستماع");
+
+  const { SpieleStation } = await import("../components/spiele");
+  mount(React.createElement(SpieleStation));
+  await pruefeA11y("R305-a11y-6 محطة الألعاب — شبكة الكلمات");
+
+  const { BlitzDrill } = await import("../components/blitz");
+  mount(React.createElement(BlitzDrill, { progress: { ...emptyProgress } }));
+  await pruefeA11y("R305-a11y-7 تدريبات الرقع السريعة (Blitz)");
+
+  const { ProbeklausurCard } = await import("../components/klausur");
+  mount(React.createElement(ProbeklausurCard, { progress: { ...emptyProgress } }));
+  await pruefeA11y("R305-a11y-8 شاشة بدء الامتحان التجريبي");
+}
+
+// ── R306: أهداف درس اليوم + صوت «مدرّبك» + نصوص/حوارات مُدمجة فعليًا في تسلسل اليوم ──
+// فحصٌ حقيقي على الصفحة المركّبة لا على نصّ المصدر فقط (يكمل K331 في engine_smoke.ts).
+{
+  const { saveProgress } = await import("../lib/store");
+  const { progressKeyActive } = await import("../lib/profiles");
+  const { buildDay } = await import("../lib/plan");
+  const { getText, getDialogue } = await import("../lib/content");
+  const { stationOfTask, STATIONEN } = await import("../components/stationen");
+  (globalThis as unknown as { self?: unknown }).self = globalThis;
+  const { default: Heim } = await import("../app/page");
+
+  const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
+  act(() => { saveProgress(p1); });
+  const plan1 = buildDay(1, p1);
+  mount(React.createElement(Heim));
+
+  // 1) أهداف اليوم (محطّات حقيقية) ظاهرة فعليًا أعلى الصفحة — لا في نصّ المصدر فقط
+  const zieleEl = rootEl.querySelector('[data-testid="today-ziele"]');
+  ok(!!zieleEl && (zieleEl.textContent ?? "").includes("أهداف اليوم"), "R306-1 شريط «أهداف اليوم» مرسومٌ فعليًا أعلى الصفحة");
+  const erwarteteStationen = new Set(plan1.tasks.map((t) => STATIONEN[stationOfTask(t)].ar));
+  for (const ar of erwarteteStationen) {
+    ok((zieleEl?.textContent ?? "").includes(ar), `R306-2 محطة «${ar}» من مهام اليوم الفعلية ظاهرة ضمن شريط الأهداف`);
+  }
+
+  // 2) صوت «مدرّبك» على الخطوة الحالية، مع سبب فعلي لا تسمية فارغة
+  const coachEl = rootEl.querySelector('[data-testid="today-coach-grund"]');
+  ok(!!coachEl && (coachEl.textContent ?? "").includes("مدرّبك"), "R306-3 سطر «مدرّبك» مرسومٌ فعليًا حول الخطوة الحالية");
+  ok(!!coachEl && (coachEl!.textContent ?? "").trim().length > 10, "R306-4 ومعه سببٌ فعلي مكتوب لا تسمية فارغة");
+
+  // 3) القفز لمهمّة القراءة يعرض نصّ القراءة الحقيقي كاملاً — ضمن نفس تسلسل اليوم، بلا تنقّل لصفحة أخرى
+  const lesenIdx = plan1.tasks.findIndex((t) => t.kind === "lesen" && t.textId);
+  ok(lesenIdx >= 0, "R306-5 يوم 1 يحوي مهمّة قراءة حقيقية ضمن تسلسله");
+  if (lesenIdx >= 0) {
+    const chipLesen = rootEl.querySelector(`[data-testid="aufgabe-chip-${lesenIdx}"]`) as HTMLElement | null;
+    ok(!!chipLesen, "R306-6 رقاقة مهمّة القراءة موجودة في نفس شريط التسلسل");
+    if (chipLesen) click(chipLesen);
+    const erwarteterText = getText(plan1.tasks[lesenIdx].textId!);
+    ok(!!erwarteterText, "R306-7a نص القراءة المُسنَد فعلاً موجودٌ في بنك المحتوى");
+    ok(!!erwarteterText && txt().includes(erwarteterText!.titleAr), "R306-7 عنوان نص القراءة الحقيقي ظهر فعليًا بعد القفز داخل نفس الصفحة");
+    ok(!!rootEl.querySelector("article.de"), "R306-8 جسم النص الألماني الكامل مرسومٌ كمقالة واحدة متصلة — لا ملخّص");
+  }
+
+  // 4) القفز لمهمّة الاستماع يعرض الحوار الحقيقي كاملاً — ضمن نفس تسلسل اليوم، بلا تنقّل لصفحة أخرى
+  const hoerenIdx = plan1.tasks.findIndex((t) => t.kind === "hoeren" && t.dialogueId);
+  ok(hoerenIdx >= 0, "R306-9 يوم 1 يحوي مهمّة استماع (حوار) حقيقية ضمن تسلسله");
+  if (hoerenIdx >= 0) {
+    const chipHoeren = rootEl.querySelector(`[data-testid="aufgabe-chip-${hoerenIdx}"]`) as HTMLElement | null;
+    ok(!!chipHoeren, "R306-10 رقاقة مهمّة الاستماع موجودة في نفس شريط التسلسل");
+    if (chipHoeren) click(chipHoeren);
+    const erwarteterDialog = getDialogue(plan1.tasks[hoerenIdx].dialogueId!);
+    ok(!!erwarteterDialog, "R306-11a الحوار المُسنَد فعلاً موجودٌ في بنك المحتوى");
+    ok(!!erwarteterDialog && txt().includes(erwarteterDialog!.titleAr), "R306-11 عنوان الحوار الحقيقي ظهر فعليًا بعد القفز داخل نفس الصفحة");
+    ok(!!erwarteterDialog && erwarteterDialog!.lines.length > 0 && !!rootEl.querySelector('button[title="اسمع السطر"]'), "R306-12 أسطر الحوار وأزرار نطقها مرسومة فعليًا — الحوار كاملًا لا ملخّصًا");
+  }
+
+  act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
+}
+
+// ── R307: دمجُ بوّابة اختبار الوحدة و«زائد الدرس» في تدفّق اليوم نفسه — فحصٌ حقيقي ──
+{
+  const { saveProgress } = await import("../lib/store");
+  const { progressKeyActive } = await import("../lib/profiles");
+  const { buildDay } = await import("../lib/plan");
+  const { grammarMap } = await import("../lib/content");
+  (globalThis as unknown as { self?: unknown }).self = globalThis;
+  const { default: Heim } = await import("../app/page");
+
+  // 1) يومٌ 1 (الوحدة الأولى): لا بوّابة اختبار — الوحدةُ الأولى مفتوحةٌ دائمًا
+  act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } }); });
+  mount(React.createElement(Heim));
+  ok(!rootEl.querySelector('[data-testid="modul-pruefung-mahnung"]'), "R307-1 يوم 1 (الوحدة الأولى) بلا مطالبة اختبار — لا وحدة سابقة يُنتظر اجتيازها");
+
+  // 2) يومٌ 11 (أوّل أيام الوحدة الثانية) بتقدّمٍ فارغ: البوّابة ظاهرة فعلًا وتحمل سببها
+  act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 11 } }); });
+  mount(React.createElement(Heim));
+  const mahnung = rootEl.querySelector('[data-testid="modul-pruefung-mahnung"]');
+  ok(!!mahnung && (mahnung.textContent ?? "").includes("اختبار الوحدة") && (mahnung.textContent ?? "").includes("مدرّبك"),
+    "R307-2 يوم 11: مطالبةُ اختبار الوحدة السابقة ظاهرةٌ فعليًا بصوت المدرّب — القاعدة المعلنة في lib/modulpruefung.ts أصبحت مرئية لا مدفونة");
+  ok(!rootEl.querySelector('[data-testid="today-screen"]')!.textContent!.includes("لا تُستطيع إكمال مهامّ اليوم") , "R307-2b والمطالبةُ لا تحجب مهامّ اليوم — لا قفلٌ قسري يكسر التقدّم القائم");
+  ok(!!rootEl.querySelector('[data-testid="today-primary-step"]'), "R307-2c وخطوة اليوم الأساسية لا تزال مرسومة بجانب المطالبة — دمجٌ لا استبدال");
+
+  // 3) النقر على «ابدأ اختبار الوحدة الآن» يفتح بوّابة الوحدة فعليًا هنا، في نفس الصفحة
+  const toggle = rootEl.querySelector('[data-testid="modul-pruefung-toggle"]') as HTMLElement | null;
+  ok(!!toggle, "R307-3 زرّ فتح الاختبار موجود");
+  if (toggle) click(toggle);
+  ok(!!rootEl.querySelector('[data-test="modultor"]'), "R307-4 بوّابة الوحدة (ModulTor) الحقيقية مرسومةٌ الآن داخل صفحة اليوم نفسها — بلا تنقّل إلى ‎/pruefen");
+  ok(txt().includes("بوّابة الوحدة 1"), "R307-5 وتحمل رقم الوحدة السابقة الصحيح (1) لا رقمًا عشوائيًا");
+  if (toggle) click(toggle);
+  ok(!rootEl.querySelector('[data-test="modultor"]'), "R307-6 وتُطوى من جديد بنقرة ثانية — لا ازدحام دائم على الشاشة");
+
+  // 4) اجتياز امتحان الوحدة يُسقط المطالبة فورًا من نفس الصفحة (بلا إعادة تحميل)
+  act(() => {
+    const p = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 11 }, modulPruefungen: { 1: { versuche: 1, best: 90, bestanden: true, zuletzt: new Date().toISOString() } } };
+    saveProgress(p as never);
+  });
+  mount(React.createElement(Heim));
+  ok(!rootEl.querySelector('[data-testid="modul-pruefung-mahnung"]'), "R307-7 بعد اجتياز اختبار الوحدة 1، تختفي المطالبة من يوم 11 كما يجب");
+
+  // 5) «زائد الدرس»: تمارين موضوع قواعد اليوم نفسه، مُدمَجة هنا لا حبيسة «تدرّب» خلف قفل المساء
+  const p1 = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } };
+  act(() => { saveProgress(p1); });
+  const plan1 = buildDay(1, p1);
+  const gramTask = plan1.tasks.find((t) => t.kind === "grammatik" && t.topicId);
+  ok(!!gramTask, "R307-8 يوم 1 يحوي مهمّة قواعد حقيقية لموضوعٍ حقيقي");
+  const topicId = gramTask!.topicId!;
+  const alleUebungen = grammarMap[topicId].exercises;
+  ok(alleUebungen.length >= 2, "R307-8b وموضوع اليوم يحوي تمرينين فعليين على الأقل لاختبار الترحيل");
+  const geparkt = alleUebungen.slice(0, 2).map((e) => e.id);
+  act(() => { dom.window.localStorage.setItem(`weg-park-${topicId}`, JSON.stringify(geparkt)); });
+  mount(React.createElement(Heim));
+  const zusatz = rootEl.querySelector('[data-testid="today-zusatz"]');
+  ok(!!zusatz && (zusatz.textContent ?? "").includes("تدريب إضافي") && (zusatz.textContent ?? "").includes(String(geparkt.length)),
+    "R307-9 قسم «تدريب إضافي من درس اليوم» ظاهرٌ هنا فعليًا بعدد التمارين المُرحَّلة الصحيح — لا حاجة لزيارة ‎/ueben ولا لانتظار المساء");
+  const zusatzToggle = rootEl.querySelector('[data-testid="today-zusatz-toggle"]') as HTMLElement | null;
+  ok(!!zusatzToggle, "R307-10 زرّ فتح التدريب الإضافي موجود");
+  if (zusatzToggle) click(zusatzToggle);
+  ok(txt().includes(alleUebungen[0].promptDe), "R307-11 ونصّ التمرين المُرحَّل الحقيقي ذاته ظاهرٌ بعد الفتح — لا ملخّص ولا نص بديل");
+
+  // 6) وعند غياب أيّ ترحيل، لا يظهر القسم إطلاقًا — لا قسم فارغ يزدحم الشاشة
+  act(() => { dom.window.localStorage.removeItem(`weg-park-${topicId}`); });
+  mount(React.createElement(Heim));
+  ok(!rootEl.querySelector('[data-testid="today-zusatz"]'), "R307-12 وبلا تمارين مُرحَّلة، القسم غائبٌ تمامًا — لا صندوق فارغ");
+
+  act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
+}
+
+// ── R308: «تدرّب» و«اختبر» كاملتان مُدمَجتان فعليًا داخل صفحة اليوم — لا تشتّت بين شاشات ──
+{
+  const { saveProgress } = await import("../lib/store");
+  const { progressKeyActive } = await import("../lib/profiles");
+  (globalThis as unknown as { self?: unknown }).self = globalThis;
+  const { default: Heim } = await import("../app/page");
+
+  // ⚡ المكوّنان مُحمَّلان كسولًا (React.lazy) — نطوي الدورة الصغرى (microtask) بعد كل فتحٍ قبل الفحص
+  async function oeffneDetails(el: HTMLDetailsElement) {
+    act(() => {
+      el.open = true;
+      el.dispatchEvent(new dom.window.Event("toggle"));
+    });
+    await act(async () => { await Promise.resolve(); await Promise.resolve(); await Promise.resolve(); });
+  }
+
+  act(() => { dom.window.localStorage.removeItem("weg-abend"); });
+  act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 1 } }); });
+  mount(React.createElement(Heim));
+
+  // 1) القسمان موجودان، ومطويّان افتراضيًا — لا يكسران مبدأ K136 (خطوة واحدة ظاهرة)
+  const uebenDetails = rootEl.querySelector('[data-testid="today-ueben-eingebettet"]') as HTMLDetailsElement | null;
+  const pruefenDetails = rootEl.querySelector('[data-testid="today-pruefen-eingebettet"]') as HTMLDetailsElement | null;
+  ok(!!uebenDetails && !!pruefenDetails, "R308-1 قسما «تدرّب» و«اختبر» المُدمَجان موجودان في صفحة اليوم");
+  ok(!!uebenDetails && uebenDetails!.open === false && !!pruefenDetails && pruefenDetails!.open === false,
+    "R308-2 وكلاهما مطويّان افتراضيًا — لا ازدحام يكسر K136");
+  ok(!rootEl.querySelector('[data-testid="ueben-liste"]') && !rootEl.querySelector('[data-testid="ueben-gesperrt"]') &&
+    !rootEl.querySelector('[data-testid="pruefen-liste"]'),
+    "R308-2b وقبل أيّ فتح، لا شيء من محتواهما مُركَّبٌ فعليًا في الشجرة — تحميلٌ كسولٌ حقيقي لا إخفاءٌ بصري فقط");
+
+  // 2) فتح «تدرّب» يعرض المكوّن الحقيقي نفسه (لا نسخة موازية) — هنا بحالته الحقيقية المقفلة قبل إغلاق اليوم
+  await oeffneDetails(uebenDetails!);
+  ok(!!rootEl.querySelector('[data-testid="ueben-gesperrt"]'), "R308-3 المكوّن الحقيقي لـ«تدرّب» يُرسَم بحالته الصحيحة (مقفول قبل إغلاق اليوم) — لا تلخيص مزيّف");
+  ok(!!rootEl.querySelector('[data-testid="ueben-frei-lesestoff"]') && !!rootEl.querySelector('[data-testid="ueben-frei-spiele"]'),
+    "R308-4 ومحطّتا الاستكشاف الحرّ (قراءة/ألعاب) داخله تعملان من نفس صفحة اليوم مباشرةً");
+
+  // 3) محاكاة «مساء ما بعد الإغلاق»: نفس المكوّن المُدمَج يتحوّل فورًا إلى قائمة المحطّات الكاملة
+  act(() => { dom.window.localStorage.setItem("weg-abend", "1"); });
+  mount(React.createElement(Heim));
+  const uebenDetails2 = rootEl.querySelector('[data-testid="today-ueben-eingebettet"]') as HTMLDetailsElement;
+  await oeffneDetails(uebenDetails2);
+  ok(!!rootEl.querySelector('[data-testid="ueben-liste"]') && !!rootEl.querySelector('[data-testid="ueben-karte-blitz"]'),
+    "R308-5 بعد فتح باب «المساء»، كل محطّات «تدرّب» (بما فيها بطاقاتها الحقيقية) ظاهرة هنا فعليًا داخل صفحة اليوم");
+  act(() => { dom.window.localStorage.removeItem("weg-abend"); });
+
+  // 4) فتح «اختبر» يعرض بوّابة الوحدة والمحاكاة الحقيقية كاملة، من نفس الصفحة
+  mount(React.createElement(Heim));
+  const pruefenDetails2 = rootEl.querySelector('[data-testid="today-pruefen-eingebettet"]') as HTMLDetailsElement;
+  await oeffneDetails(pruefenDetails2);
+  ok(!!rootEl.querySelector('[data-testid="pruefen-liste"]') && !!rootEl.querySelector('[data-testid="pruefen-karte-tor"]'),
+    "R308-6 قائمة «اختبر» الحقيقية الكاملة (بوّابة الوحدة فأعلى) ظاهرة داخل صفحة اليوم نفسها — بلا تنقّل إلى ‎/pruefen");
+  const torKarte = rootEl.querySelector('[data-testid="pruefen-karte-tor"]') as HTMLElement;
+  click(torKarte);
+  ok(!!rootEl.querySelector('[data-test="modultor"]'), "R308-7 والنقر على بطاقة بوّابة الوحدة من هنا يفتح الامتحان الحقيقي نفسه — تدفّقٌ واحدٌ متصل لا شاشات متفرّقة");
+
+  act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
+  act(() => { dom.window.localStorage.removeItem("weg-abend"); });
+}
+
+// ── R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حافّة الوحدة ممنوعٌ، لا منصوحٌ به فقط ──
+{
+  const { saveProgress, loadProgress } = await import("../lib/store");
+  const { progressKeyActive } = await import("../lib/profiles");
+  (globalThis as unknown as { self?: unknown }).self = globalThis;
+  const { default: Heim } = await import("../app/page");
+
+  act(() => { dom.window.localStorage.removeItem("weg-abend"); });
+
+  // 1) يوم 10 (آخر يوم في الوحدة الأولى A0) بامتحانٍ غير مُجتاز: المطالبة ظاهرة قبل أيّ نقر
+  act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 10 } }); });
+  mount(React.createElement(Heim));
+  ok(!!rootEl.querySelector('[data-testid="modul-pruefung-mahnung"]'), "R309-1 يوم 10: المطالبة ظاهرة سلفًا لأنّ الإغلاق سينقل إلى وحدةٍ مقفولة (day+1=11)");
+
+  // 2) قبل أيّ نقر: تنبيهٌ صريح بدل النص المعتاد في شاشة ما قبل التأكيد
+  const tanbih = rootEl.querySelector('[data-testid="abschluss-modul-tanbih"]');
+  ok(!!tanbih && (tanbih.textContent ?? "").includes("لن يكتمل الإغلاق"), "R309-3 تنبيهٌ صريح ظاهرٌ قبل التأكيد — لا نص إغلاق معتاد");
+
+  // النقر يدخل شاشة التأكيد
+  const schliessenBtn = btn("🛑 إنهاء اليوم وحفظ التقدّم");
+  ok(!!schliessenBtn, "R309-2 زرّ إنهاء اليوم موجود");
+  if (schliessenBtn) click(schliessenBtn);
+
+  // 3) التأكيد: بطاقة القفل تحلّ محلّ زرّ الإغلاق الحقيقي كليًا — لا طريق خفي للإغلاق
+  // (النقرة الأولى على "🛑 إنهاء اليوم" أعلاه حوّلت الحالة confirmClose إلى true فعليًا)
+  const qaflKarte = rootEl.querySelector('[data-testid="abschluss-modul-qafl"]');
+  ok(!!qaflKarte, "R309-4 بطاقة القفل ظاهرة بعد تأكيد النيّة — لا زرّ «نعم، أغلق» حقيقي بجانبها");
+  ok(!txt().includes("نعم، أغلق وارفع التعويضات"), "R309-4b زرّ الإغلاق الحقيقي غائبٌ تمامًا من هذه الشاشة — لا مسار بديل للالتفاف");
+
+  // 4) النقر على «ابدأ اختبار الوحدة الآن» يفتح بوّابة الوحدة الحقيقية فعليًا، ويُمرّر نحو المطالبة
+  scrollHits = [];
+  const ibdaBtn = rootEl.querySelector('[data-testid="abschluss-modul-ibda"]') as HTMLElement | null;
+  ok(!!ibdaBtn, "R309-5 زرّ «ابدأ اختبار الوحدة الآن» موجود في بطاقة القفل");
+  if (ibdaBtn) click(ibdaBtn);
+  ok(!!rootEl.querySelector('[data-test="modultor"]'), "R309-6 والنقر عليه يفتح بوّابة الوحدة الحقيقية (ModulTor) من نفس الصفحة فورًا");
+  ok(scrollHits.includes("modul-pruefung-mahnung"), "R309-6b ويُنزِل المستخدم فعليًا إلى مرساة المطالبة (id حقيقي، لا تمرير وهمي)");
+  ok(loadProgress().plan.day === 10, "R309-7 ويوم الخطّة لم يتقدّم قيد أنملة — لا إغلاقٌ ضمنيٌّ خلف الكواليس");
+
+  // 5) «يوم سيّئ» لا يلتف حول نفس القفل: نفس الحظر يسري عليه تمامًا
+  mount(React.createElement(Heim));
+  const badDayBtn = btn("🧘 يوم سيّئ — اعبر بلا ديون");
+  ok(!!badDayBtn, "R309-8 زرّ «يوم سيّئ» موجود");
+  if (badDayBtn) click(badDayBtn);
+  ok(loadProgress().plan.day === 10, "R309-9 و«يوم سيّئ» لم يُفلت من القفل أيضًا — يوم الخطّة لا يزال 10");
+  ok(!!rootEl.querySelector('[data-test="modultor"]'), "R309-9b بل فتح بوّابة الوحدة الحقيقية هو الآخر، تمامًا كالإغلاق العادي");
+
+  // 6) بعد اجتياز امتحان الوحدة فعليًا: نفس الإغلاق يكتمل الآن، ويتقدّم اليوم كما يُفترض
+  act(() => {
+    const p = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 10 }, modulPruefungen: { 1: { versuche: 1, best: 90, bestanden: true, zuletzt: new Date().toISOString() } } };
+    saveProgress(p as never);
+  });
+  mount(React.createElement(Heim));
+  ok(!rootEl.querySelector('[data-testid="modul-pruefung-mahnung"]'), "R309-10 بعد الاجتياز، لا مطالبة قفلٍ متبقّية في يوم 10");
+  const schliessenBtn2 = btn("🛑 إنهاء اليوم وحفظ التقدّم");
+  if (schliessenBtn2) click(schliessenBtn2);
+  ok(!rootEl.querySelector('[data-testid="abschluss-modul-qafl"]'), "R309-11 وبطاقة القفل غائبة الآن؛ زرّ الإغلاق الحقيقي عاد للظهور");
+  const echterSchliessen = btn("نعم، أغلق وارفع التعويضات");
+  ok(!!echterSchliessen, "R309-11b زرّ الإغلاق الحقيقي ظاهرٌ فعلاً بعد الاجتياز");
+  if (echterSchliessen) click(echterSchliessen);
+  ok(loadProgress().plan.day === 11, "R309-12 والإغلاق اكتمل فعليًا هذه المرّة — اليوم تقدّم من 10 إلى 11 كما يُفترض بعد اجتياز الامتحان");
+
+  // 7) يومٌ عاديٌّ غير حدّي (منتصف الوحدة): الإغلاق يعمل كالمعتاد بلا أيّ تدخّل من القفل الجديد
+  act(() => { saveProgress({ ...emptyProgress, plan: { ...emptyProgress.plan, day: 5 } }); });
+  mount(React.createElement(Heim));
+  ok(!rootEl.querySelector('[data-testid="modul-pruefung-mahnung"]'), "R309-13 يوم 5 (منتصف الوحدة) بلا أيّ مطالبة — لا حافّة وحدة هنا");
+  const schliessenBtn3 = btn("🛑 إنهاء اليوم وحفظ التقدّم");
+  if (schliessenBtn3) click(schliessenBtn3);
+  const echterSchliessen3 = btn("نعم، أغلق وارفع التعويضات");
+  ok(!!echterSchliessen3, "R309-14 زرّ الإغلاق الحقيقي ظاهرٌ طبيعيًا في الأيام غير الحدّية");
+  if (echterSchliessen3) click(echterSchliessen3);
+  ok(loadProgress().plan.day === 6, "R309-15 ويتقدّم اليوم بلا أيّ اعتراضٍ من قفل الوحدة — القفل يسري فقط عند الحافّة الفعلية");
+
+  act(() => { dom.window.localStorage.removeItem(progressKeyActive()); });
+}
+
   console.log(`\n${beste} نجح · ${fehler} فشل`);
   if (fails.length) { console.log("الفاشلون:", fails.join(" | ")); process.exit(1); }
+
   process.exit(0);
 }
 

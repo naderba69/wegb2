@@ -8,10 +8,13 @@ import {
   texteFuer,
   dialogeFuer,
   type StoffFrage,
+  type MediationAufgabe,
+  type UeberschriftenAufgabe,
 } from "@/lib/lesestoff";
 import { speakAny } from "@/lib/speech";
 import { alleVokabeln } from "@/lib/content";
 import { bankenBereit, beiBankenBereit } from "@/lib/bankload";
+import { levelOf } from "@/lib/plan";
 import { useProgress } from "@/lib/store";
 import { logK } from "@/lib/kompetenz";
 import { De } from "@/components/De";
@@ -62,11 +65,106 @@ function FragenBlock({ fragen, praefix }: { fragen: StoffFrage[]; praefix: strin
   );
 }
 
+/**
+ * 📰 R305/خ18: «طابِق كل فقرة بعنوانها» — نمط Goethe Lesen Teil 1 (Überschriften zuordnen).
+ * عدد العناوين أكبر من عدد الفقرات (مُضلِّلات)؛ تصحيح فوري لكل اختيار كـFragenBlock.
+ */
+function UeberschriftenBlock({ absaetze, aufgabe, praefix }: { absaetze: string[]; aufgabe: UeberschriftenAufgabe; praefix: string }) {
+  const [wahl, setWahl] = useState<Record<number, number>>({});
+  const alleBeantwortet = absaetze.every((_, i) => wahl[i] !== undefined);
+  const richtigCount = absaetze.filter((_, i) => wahl[i] === aufgabe.richtig[i]).length;
+  return (
+    <div className="card" data-testid={`lesestoff-ueberschriften-${praefix}`} style={{ padding: "0.7rem 0.9rem", background: "var(--color-paper)", display: "grid", gap: "0.5rem" }}>
+      <strong>📰 طابِق كل فقرة بعنوانها (قبل القراءة التفصيلية)</strong>
+      <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>
+        عدد العناوين أكبر من عدد الفقرات عمدًا — بعضها مُضلِّل لا يطابق أيّ فقرة، تمامًا كنمط الجزء الأول من قراءة Goethe B2.
+      </div>
+      {absaetze.map((_, i) => (
+        <div key={i} style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+          <label htmlFor={`uebsch-${praefix}-${i}`} style={{ fontSize: "0.85rem", fontWeight: 700 }}>الفقرة {i + 1}:</label>
+          <select
+            id={`uebsch-${praefix}-${i}`}
+            data-testid={`lesestoff-ueberschrift-select-${praefix}-${i}`}
+            value={wahl[i] ?? ""}
+            disabled={wahl[i] !== undefined}
+            onChange={(e) => setWahl((w) => ({ ...w, [i]: Number(e.target.value) }))}
+            style={{ minHeight: "40px", borderRadius: "8px", flex: 1, minWidth: "200px" }}
+          >
+            <option value="" disabled>اختر عنوانًا…</option>
+            {aufgabe.optionen.map((o, oi) => (
+              <option key={oi} value={oi}>{o}</option>
+            ))}
+          </select>
+          {wahl[i] !== undefined && (
+            <span data-testid={`lesestoff-ueberschrift-ergebnis-${praefix}-${i}`}>
+              {wahl[i] === aufgabe.richtig[i] ? "✅" : `✗ الصحيح: ${aufgabe.optionen[aufgabe.richtig[i]]}`}
+            </span>
+          )}
+        </div>
+      ))}
+      {alleBeantwortet && (
+        <div style={{ fontSize: "0.88rem" }}>
+          نتيجتك: <span className="rtl-num">{richtigCount}</span>/<span className="rtl-num">{absaetze.length}</span> —{" "}
+          {richtigCount === absaetze.length ? "🏆 طابقتَ كل الفقرات بعناوينها الصحيحة!" : "🏁 راجع الفقرات التي أخطأتَها — لا بأس، هذا تدريبٌ على القراءة السريعة (Skimming)."}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
+ * 🗣️ R305/خ15: مهمّة وساطة لغوية اختيارية — نقل المعنى إلى شخص لا يقرأ الألمانية، لا
+ * ترجمة حرفية. تقييم ذاتي (لا تصحيح آلي): يكتب المتعلم تلخيصه ثم يقارنه بالنقاط الأساسية.
+ */
+function MediationBlock({ mediation, praefix, onErledigt }: { mediation: MediationAufgabe; praefix: string; onErledigt: () => void }) {
+  const [text, setText] = useState("");
+  const [zeigen, setZeigen] = useState(false);
+  const [erledigt, setErledigt] = useState(false);
+  return (
+    <div className="card" data-testid={`lesestoff-mediation-${praefix}`} style={{ padding: "0.7rem 0.9rem", background: "var(--color-paper)", display: "grid", gap: "0.5rem" }}>
+      <strong>🗣️ مهمة وساطة لغوية (اختيارية)</strong>
+      <div style={{ fontSize: "0.88rem", lineHeight: 1.9 }}>{mediation.aufgabeAr}</div>
+      <textarea data-testid={`lesestoff-mediation-textarea-${praefix}`} value={text} onChange={(e) => setText(e.target.value)} rows={3}
+        placeholder="اكتب تلخيصك هنا بالعربية…"
+        style={{ width: "100%", borderRadius: "10px", padding: "0.5rem 0.7rem", font: "inherit", resize: "vertical" }} />
+      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", alignItems: "center" }}>
+        <button type="button" className="chip" data-testid={`lesestoff-mediation-zeigen-${praefix}`}
+          style={{ cursor: "pointer", minHeight: "40px" }} onClick={() => setZeigen((v) => !v)}>
+          {zeigen ? "إخفاء النقاط الأساسية" : "👁️ قارن مع النقاط الأساسية"}
+        </button>
+        {!erledigt ? (
+          <button type="button" className="btn btn-ghost" data-testid={`lesestoff-mediation-fertig-${praefix}`}
+            style={{ cursor: "pointer", minHeight: "40px" }}
+            onClick={() => { setErledigt(true); onErledigt(); }}>
+            ✅ أنهيت هذه المهمة
+          </button>
+        ) : (
+          <span style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>✅ سُجِّلت ضمن كفاءة الكتابة</span>
+        )}
+      </div>
+      {zeigen && (
+        <ul style={{ margin: 0, paddingInlineStart: "1.2rem", fontSize: "0.85rem", lineHeight: 1.9, color: "var(--color-ink2)" }} data-testid={`lesestoff-mediation-punkte-${praefix}`}>
+          {mediation.punkteAr.map((p, i) => <li key={i}>{p}</li>)}
+        </ul>
+      )}
+      <div style={{ fontSize: "0.76rem", color: "var(--color-ink2)" }}>
+        💡 لا تصحيح آلي هنا: الهدف نقل المعنى الأساسي بأسلوبك، ثم المقارنة الذاتية مع النقاط الأساسية — وليس الترجمة الحرفية.
+      </div>
+    </div>
+  );
+}
+
 export function LeseStoffStation() {
   const [stufe, setStufe] = useState<Level>("A0");
   const [offenId, setOffenId] = useState<string | null>(null);
   const [stimmHinweis, setStimmHinweis] = useState(false);
-  const { update } = useProgress();
+  const { progress, update } = useProgress();
+  // 🧭 R305/خ17: التصفح هنا حرٌّ عمدًا (ت1/R302) — خارج قفل اليوم، لكل المستويات دفعةً
+  // واحدة. بلا توسيم، قد يفسّر متعلّمٌ مبتدئ صعوبةَ نصٍّ B2 استكشافيٍّ كفشلٍ في أساسياته.
+  // مستواه الفعلي يُشتقّ من يوم خطته (lib/plan.levelOf) — لا افتراضَ ولا سؤالَ إضافيّ.
+  const meineStufe = useMemo(() => levelOf(progress.plan.day), [progress.plan.day]);
+  const stufeChkIdx = (s: Level) => STOFF_STUFEN.indexOf(s);
+  const aufwaerts = (s: Level) => stufeChkIdx(s) > stufeChkIdx(meineStufe);
   const [fertigAm, setFertigAm] = useState<Record<string, string>>({});
   const [bereit, setBereit] = useState(false);
   const [langsam, setLangsam] = useState(false);
@@ -114,7 +212,7 @@ export function LeseStoffStation() {
     update((p) => logK(p, kompetenz, true));
   };
 
-  // خ7: مسرد نقر — بحث فوري في بنك كلمات المشروع (4504)
+  // خ7: مسرد نقر — بحث فوري في بنك كلمات المشروع (4583)
   const glossarKarte = useMemo(() => {
     if (!bereit) return new Map<string, { de: string; ar: string; beispiel: string }>();
     const m = new Map<string, { de: string; ar: string; beispiel: string }>();
@@ -152,10 +250,16 @@ export function LeseStoffStation() {
           <button key={s} type="button" className="chip" data-testid={`lesestoff-stufe-${s}`}
             onClick={() => { setStufe(s); setOffenId(null); }}
             style={{ cursor: "pointer", minHeight: "44px", background: stufe === s ? "var(--color-gold)" : undefined, color: stufe === s ? "var(--ui-on-accent)" : undefined }}>
-            {s}
+            {s}{aufwaerts(s) ? " ⬆️" : ""}
           </button>
         ))}
       </div>
+      {aufwaerts(stufe) && (
+        <div className="chip" data-testid="lesestoff-aufwaerts-hinweis" style={{ fontSize: "0.8rem", lineHeight: 1.8, background: "var(--color-gold-soft)", alignSelf: "start" }}>
+          ⬆️ أنت الآن في خطتك عند مستوى <strong>{meineStufe}</strong> — هذا استكشاف حرّ لمستوى <strong>{stufe}</strong> الأعلى، خارج اليوم المجدول.
+          لا بأس إن صعُب: هذا طبيعيٌّ تمامًا ولا يعني تقصيرًا في أساسياتك.
+        </div>
+      )}
 
       <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", alignItems: "center" }} role="group" aria-label="سرعة الاستماع">
         <span style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>سرعة الصوت:</span>
@@ -213,6 +317,9 @@ export function LeseStoffStation() {
             <button type="button" className="btn btn-ghost" data-testid="lesestoff-zurueck" style={{ minHeight: "44px" }} onClick={() => setOffenId(null)}>→ القائمة</button>
             <strong><De>{offenerText.titelDe}</De> — {offenerText.titelAr}</strong>
             <span className="chip">{offenerText.stufe} · {ART_ICON[offenerText.art]}</span>
+            {aufwaerts(offenerText.stufe) && (
+              <span className="chip" data-testid="lesestoff-aufwaerts-badge" style={{ background: "var(--color-gold-soft)" }}>⬆️ أصعب من مستواك الحالي ({meineStufe})</span>
+            )}
           </div>
           {offenerText.absaetze.map((a, i) => (
             <div key={i} style={{ display: "grid", gap: "0.3rem" }}>
@@ -242,7 +349,14 @@ export function LeseStoffStation() {
             </div>
           )}
           <div style={{ fontSize: "0.78rem", color: "var(--color-ink2)" }}>💡 انقر أيّ كلمة ألمانية في النص لترى معناها من بنك كلمات المشروع.</div>
+          {offenerText.ueberschriften && (
+            <UeberschriftenBlock absaetze={offenerText.absaetze} aufgabe={offenerText.ueberschriften} praefix={offenerText.id} />
+          )}
           <FragenBlock fragen={offenerText.fragen} praefix={offenerText.id} />
+          {offenerText.mediation && (
+            <MediationBlock mediation={offenerText.mediation} praefix={offenerText.id}
+              onErledigt={() => update((p) => logK(p, "Schreiben", true))} />
+          )}
           <button type="button" className="btn btn-primary" data-testid="lesestoff-fertig"
             style={{ minHeight: "48px", justifySelf: "start" }}
             onClick={() => { markieren(offenerText.id, "Lesen"); setOffenId(null); }}>
@@ -257,6 +371,9 @@ export function LeseStoffStation() {
             <button type="button" className="btn btn-ghost" data-testid="lesestoff-zurueck" style={{ minHeight: "44px" }} onClick={() => setOffenId(null)}>→ القائمة</button>
             <strong><De>{offenerDialog.titelDe}</De> — {offenerDialog.titelAr}</strong>
             <span className="chip">{offenerDialog.stufe} · 💬 حوار</span>
+            {aufwaerts(offenerDialog.stufe) && (
+              <span className="chip" data-testid="lesestoff-aufwaerts-badge" style={{ background: "var(--color-gold-soft)" }}>⬆️ أصعب من مستواك الحالي ({meineStufe})</span>
+            )}
           </div>
           <div style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>🔊 الاستماع هنا بصوت جهازك (نطق الجهاز)، لا تسجيلات بشرية.</div>
           <div style={{ display: "grid", gap: "0.45rem" }}>
@@ -274,6 +391,10 @@ export function LeseStoffStation() {
             ))}
           </div>
           <FragenBlock fragen={offenerDialog.fragen} praefix={offenerDialog.id} />
+          {offenerDialog.mediation && (
+            <MediationBlock mediation={offenerDialog.mediation} praefix={offenerDialog.id}
+              onErledigt={() => update((p) => logK(p, "Schreiben", true))} />
+          )}
           <button type="button" className="btn btn-primary" data-testid="lesestoff-fertig"
             style={{ minHeight: "48px", justifySelf: "start" }}
             onClick={() => { markieren(offenerDialog.id, "Hoeren"); setOffenId(null); }}>

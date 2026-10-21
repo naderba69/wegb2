@@ -301,7 +301,12 @@ export default function Einstellungen() {
             هذا هو الاتصالُ الخارجيُّ الوحيدُ في المشروعِ كلِّه، وهو <strong>بإذنِك وحدَك</strong> ومغلقٌ ما لم تفتحه.
             الخدمة <strong>مجّانية 100٪</strong> (لا مفاتيح API، لا اشتراك، لا حساب، ولا بيانات تُجمَّع من طرف التطبيق) ولا يُرسَل أيُّ صوتٍ ما دام المفتاحُ مغلقاً.
           </p>
-          <label style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", cursor: "pointer", minHeight: "44px" }}>
+          {/* ♿ R305/ب14: aria-label صريح — النص المرئي متداخل في <strong>/<span> شرطي
+              لا يراه فحص jsx-a11y الآلي، فقد تمر مشكلة وصولية حقيقية بلا رصد (ت16) */}
+          <label
+            aria-label="أُذِن بإرسال صوتي إلى خدمة التعرّف الخارجية"
+            style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", cursor: "pointer", minHeight: "44px" }}
+          >
             <input
               type="checkbox"
               style={{ marginTop: "0.25rem", width: "20px", height: "20px" }}

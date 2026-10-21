@@ -47,6 +47,7 @@ export function LebensweltStation() {
         <div style={{ display: "grid", gap: "0.4rem" }}>
           {BERUFSSTART_SCHRITTE.map((s, i) => (
             <label key={s.id} data-testid={`berufsstart-${s.id}`}
+              aria-label={`${i + 1}. ${s.titelAr} — ${s.detailAr}`}
               style={{ display: "flex", gap: "0.55rem", alignItems: "flex-start", minHeight: "44px", cursor: "pointer", padding: "0.45rem 0.55rem", borderRadius: "0.55rem", background: bsStand[s.id] ? "var(--color-paper2)" : undefined }}>
               <input type="checkbox" checked={!!bsStand[s.id]} onChange={() => bsToggle(s.id)}
                 style={{ width: "22px", height: "22px", marginTop: "0.15rem", flexShrink: 0 }} />

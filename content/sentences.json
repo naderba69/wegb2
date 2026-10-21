@@ -10079,5 +10079,3790 @@
    "hier",
    "schlafen"
   ]
+ },
+ {
+  "id": "s-r311a1-01",
+  "level": "A1",
+  "de": "Einen herzlichen Gruß an Herrn Fischer und die Dame neben ihm!",
+  "ar": "تحية حارة للسيد فيشر والسيدة بجانبه!",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Gruß",
+   "der Herr",
+   "die Dame"
+  ]
+ },
+ {
+  "id": "s-r311a1-02",
+  "level": "A1",
+  "de": "Auf Wiederhören, ich rufe euer Büro in circa einer Stunde wieder an.",
+  "ar": "إلى اللقاء عبر الهاتف، سأتصل بمكتبكم مرة أخرى بعد نحو ساعة.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "Auf Wiederhören",
+   "euer",
+   "circa"
+  ]
+ },
+ {
+  "id": "s-r311a1-03",
+  "level": "A1",
+  "de": "Meine Eltern und meine Großeltern wohnen bei uns; meine Mutter ist Hausfrau und mein Onkel ist Hausmann.",
+  "ar": "والداي وأجدادي يسكنون عندنا؛ أمي ربة منزل وعمي رب منزل.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Eltern",
+   "die Großeltern",
+   "die Hausfrau",
+   "der Hausmann"
+  ]
+ },
+ {
+  "id": "s-r311a1-04",
+  "level": "A1",
+  "de": "Meine Großeltern haben vor langer Zeit geheiratet; mein Großvater ist vor vielen Jahren geboren und vor zwei Jahren gestorben, seitdem ist er tot.",
+  "ar": "تزوج جداي منذ زمن بعيد؛ وُلد جدي منذ سنوات عديدة وتوفي قبل سنتين، وهو ميت منذ ذلك الحين.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "heiraten",
+   "geboren",
+   "gestorben",
+   "tot"
+  ]
+ },
+ {
+  "id": "s-r311a1-05",
+  "level": "A1",
+  "de": "Meine Partnerin bringt unseren Sohn in den Kindergarten; im Formular dort steht nur: Erwachsene, männlich oder weiblich.",
+  "ar": "شريكتي تأخذ ابننا إلى روضة الأطفال؛ في الاستمارة هناك مكتوب فقط: بالغ، ذكر أم أنثى.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Partnerin",
+   "der Kindergarten",
+   "der Erwachsene",
+   "männlich",
+   "weiblich"
+  ]
+ },
+ {
+  "id": "s-r311a1-06",
+  "level": "A1",
+  "de": "Der Beamte im Rathaus kennt den Doktor aus der internationalen und kulturellen Gesellschaft der Stadt.",
+  "ar": "الموظف الحكومي في البلدية يعرف الطبيب من الجمعية الدولية والثقافية في المدينة.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Beamte",
+   "der Doktor",
+   "international",
+   "kulturell"
+  ]
+ },
+ {
+  "id": "s-r311a1-07",
+  "level": "A1",
+  "de": "Dieses lokale Restaurant kocht auch ausländische Gerichte, aber mir schmeckt das fremde Essen nicht so gut.",
+  "ar": "هذا المطعم المحلي يطبخ أيضًا أطباقًا أجنبية، لكن الطعام الغريب لا يعجبني كثيرًا.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "lokal",
+   "ausländisch",
+   "fremd"
+  ]
+ },
+ {
+  "id": "s-r311a1-08",
+  "level": "A1",
+  "de": "Viele Europäer reisen gern durch europäische Länder, und mein Nachbar, ein Deutscher, macht das jedes Jahr.",
+  "ar": "يحب كثير من الأوروبيين السفر عبر الدول الأوروبية، وجاري، وهو ألماني، يفعل ذلك كل عام.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Europäer",
+   "europäisch",
+   "der Deutsche"
+  ]
+ },
+ {
+  "id": "s-r311a1-09",
+  "level": "A1",
+  "de": "Im Osten der Stadt kann man viele Leute kennenlernen, und die Cafés dort möchten günstigen Kaffee anbieten.",
+  "ar": "في شرق المدينة يمكن التعرف على أناس كثيرين، وتريد المقاهي هناك تقديم قهوة بسعر مناسب.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Osten",
+   "kennenlernen",
+   "anbieten"
+  ]
+ },
+ {
+  "id": "s-r311a1-10",
+  "level": "A1",
+  "de": "Der Absender steht oben links, der Empfänger unten rechts; wenn niemand ans Telefon geht, schicken Sie ein Fax oder sprechen Sie auf den Anrufbeantworter.",
+  "ar": "يُكتب المرسل أعلى اليسار والمستلم أسفل اليمين؛ وإذا لم يرد أحد على الهاتف، أرسل فاكسًا أو تحدث على جهاز الرد الآلي.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Absender",
+   "der Empfänger",
+   "das Fax",
+   "der Anrufbeantworter"
+  ]
+ },
+ {
+  "id": "s-r311a1-11",
+  "level": "A1",
+  "de": "Ich wähle zuerst die Vorwahl und telefoniere mit dem Amt, dann nenne ich meinen Familiennamen und meinen Familienstand.",
+  "ar": "أطلب أولاً رمز الاتصال وأهاتف المكتب، ثم أذكر اسم عائلتي وحالتي الاجتماعية.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Vorwahl",
+   "telefonieren",
+   "der Familienname",
+   "der Familienstand"
+  ]
+ },
+ {
+  "id": "s-r311a1-12",
+  "level": "A1",
+  "de": "Im Formular stehen mein Geburtsort und mein Vorname; die restlichen Papiere hole ich gleich am Automaten.",
+  "ar": "في الاستمارة مكتوب مكان ميلادي واسمي الأول؛ وسأحضر باقي الأوراق الرسمية من الآلة الذاتية حالًا.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Geburtsort",
+   "der Vorname",
+   "die Papiere",
+   "der Automat"
+  ]
+ },
+ {
+  "id": "s-r311a1-13",
+  "level": "A1",
+  "de": "Am Zoll heißt es: Vorsicht, bitte zuerst das Formular ankreuzen, dann kriegen Sie Ihren Koffer zurück.",
+  "ar": "في الجمارك يُقال: احذر، ضع العلامات في الاستمارة أولاً، ثم ستحصل على حقيبتك.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Zoll",
+   "die Vorsicht",
+   "ankreuzen",
+   "kriegen"
+  ]
+ },
+ {
+  "id": "s-r311a1-14",
+  "level": "A1",
+  "de": "Ich fahre mit der S-Bahn und der Straßenbahn zum Reisebüro, denn mein Flug soll morgen früh abfliegen und ich muss noch meinen Koffer mitnehmen.",
+  "ar": "أذهب بقطار الضواحي والترام إلى مكتب السفر، لأن رحلتي يفترض أن تقلع غدًا صباحًا ويجب أن آخذ حقيبتي معي.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die S-Bahn",
+   "die Straßenbahn",
+   "das Reisebüro",
+   "abfliegen",
+   "mitnehmen"
+  ]
+ },
+ {
+  "id": "s-r311a1-15",
+  "level": "A1",
+  "de": "Zum Essen trinkt mein Vater ein Bier, meine Mutter trinkt Wein, und die Kinder trinken lieber Saft.",
+  "ar": "مع الطعام يشرب أبي كأس بيرة، وتشرب أمي نبيذًا، بينما يفضل الأطفال شرب العصير.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Bier",
+   "der Wein",
+   "der Saft"
+  ]
+ },
+ {
+  "id": "s-r311a1-16",
+  "level": "A1",
+  "de": "Auf dem Teller sind Brot, Schinken und eine Birne, dazu bestelle ich noch ein kaltes Getränk.",
+  "ar": "على الطبق خبز ولحم مقدّد وإجاصة، وسأطلب أيضًا مشروبًا باردًا.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Schinken",
+   "die Birne",
+   "das Getränk"
+  ]
+ },
+ {
+  "id": "s-r311a1-17",
+  "level": "A1",
+  "de": "Am Wochenende grillen wir im Garten und machen dazu Pommes frites; die Lebensmittel kaufen wir freitags ein.",
+  "ar": "في نهاية الأسبوع نشوي اللحم في الحديقة ونعدّ بطاطا مقلية؛ ونشتري المواد الغذائية يوم الجمعة.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Pommes frites",
+   "grillen",
+   "die Lebensmittel"
+  ]
+ },
+ {
+  "id": "s-r311a1-18",
+  "level": "A1",
+  "de": "Das Wort hat sieben Buchstaben; leider ist der Drucker kaputt, also brenne ich die Datei auf eine CD.",
+  "ar": "الكلمة تتكون من سبعة أحرف؛ للأسف الطابعة معطلة، لذا سأنسخ الملف على قرص مدمج.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Buchstabe",
+   "der Drucker",
+   "die CD"
+  ]
+ },
+ {
+  "id": "s-r311a1-19",
+  "level": "A1",
+  "de": "Wir kaufen neue Möbel für unser kleines Apartment, das direkt neben dem Schwimmbad liegt.",
+  "ar": "نشتري أثاثًا جديدًا لشقتنا الصغيرة الواقعة مباشرة بجانب المسبح.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Möbel",
+   "das Apartment",
+   "das Schwimmbad"
+  ]
+ },
+ {
+  "id": "s-r311a1-20",
+  "level": "A1",
+  "de": "Vor der Disco liegt ein Prospekt mit den Preisen, und auf dem letzten Bogen Papier steht die Adresse.",
+  "ar": "أمام الملهى يوجد كتيب يحمل الأسعار، وعلى آخر فرخ ورق مكتوب العنوان.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Disco",
+   "der Prospekt",
+   "der Bogen"
+  ]
+ },
+ {
+  "id": "s-r311a1-21",
+  "level": "A1",
+  "de": "Die Blumen riechen gut, draußen sind es 30 Grad, niemand raucht eine Zigarette im Park, und ich freue mich über diesen schönen Tag.",
+  "ar": "رائحة الزهور جميلة، والحرارة في الخارج 30 درجة، ولا أحد يدخن سيجارة في الحديقة، وأنا سعيد بهذا اليوم الجميل.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "riechen",
+   "der Grad",
+   "die Zigarette",
+   "sich freuen"
+  ]
+ },
+ {
+  "id": "s-r311a1-22",
+  "level": "A1",
+  "de": "Die Straße hier ist breit und das Wetter ist wunderbar, aber ich habe es eilig, weil ich mich um meine kranke Schwester kümmern muss.",
+  "ar": "الشارع هنا عريض والطقس رائع، لكنني مستعجل لأنني يجب أن أعتني بأختي المريضة.",
+  "tags": [
+   "r311-a1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "breit",
+   "wunderbar",
+   "eilig",
+   "sich kümmern"
+  ]
+ },
+ {
+  "id": "s-r312a2-01",
+  "level": "A2",
+  "de": "Die Auszubildende arbeitet im Büro, und der Auszubildende lernt den Beruf der Kauffrau oder des Kaufmanns.",
+  "ar": "المتدرّبة تعمل في المكتب، والمتدرّب يتعلّم مهنة البائعة التجارية أو البائع التجاري.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Auszubildende",
+   "der Auszubildende",
+   "die Kauffrau",
+   "der Kaufmann"
+  ]
+ },
+ {
+  "id": "s-r312a2-02",
+  "level": "A2",
+  "de": "Nach einem langen Arbeitstag genießt sie den Feierabend, bevor sie im Sekretariat des Unternehmens anruft.",
+  "ar": "بعد يوم عمل طويل تستمتع بوقت الفراغ بعد العمل، قبل أن تتّصل بأمانة سرّ الشركة.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Arbeitstag",
+   "der Feierabend",
+   "das Sekretariat",
+   "das Unternehmen"
+  ]
+ },
+ {
+  "id": "s-r312a2-03",
+  "level": "A2",
+  "de": "Die Prüferin bittet die Kandidaten, ihre Kontaktdaten auf dem Antwortbogen einzutragen und alle Fragen zu beantworten.",
+  "ar": "الممتحِنة تطلب من المرشّحين تدوين بيانات الاتصال الخاصة بهم في ورقة الإجابة والإجابة عن كل الأسئلة.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Prüferin",
+   "die Kontaktdaten",
+   "der Antwortbogen",
+   "beantworten"
+  ]
+ },
+ {
+  "id": "s-r312a2-04",
+  "level": "A2",
+  "de": "In unserer Familie gibt es viele Berufe: Die Friseurin schneidet Haare, die Polizistin kontrolliert den Verkehr, der Krankenpfleger hilft im Krankenhaus, und die Köchin kocht im Restaurant.",
+  "ar": "في عائلتنا مهن كثيرة: الحلاقة تقصّ الشعر، والشرطية تنظّم المرور، والممرّض يساعد في المستشفى، والطباخة تطبخ في المطعم.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Friseurin",
+   "die Polizistin",
+   "der Krankenpfleger",
+   "die Köchin"
+  ]
+ },
+ {
+  "id": "s-r312a2-05",
+  "level": "A2",
+  "de": "Die Kellnerin im Café kennt den Babysitter gut, weil die Technikerin und die Musikerin oft dort Kaffee trinken.",
+  "ar": "النادلة في المقهى تعرف جليس الأطفال جيداً، لأن الفنية والموسيقية تشربان القهوة هناك كثيراً.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Kellnerin",
+   "der Babysitter",
+   "die Technikerin",
+   "die Musikerin"
+  ]
+ },
+ {
+  "id": "s-r312a2-06",
+  "level": "A2",
+  "de": "Die Sängerin und die Autorin kennen einen Rentner und eine Rentnerin aus der Nachbarschaft.",
+  "ar": "المغنّية والكاتبة تعرفان متقاعداً ومتقاعدة من الحي.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Sängerin",
+   "die Autorin",
+   "der Rentner",
+   "die Rentnerin"
+  ]
+ },
+ {
+  "id": "s-r312a2-07",
+  "level": "A2",
+  "de": "Ich lese einen Blog, kaufe ein E-Book, aktualisiere meine Homepage und kaufe einen neuen Laptop.",
+  "ar": "أقرأ مدوّنة، وأشتري كتاباً إلكترونياً، وأحدّث موقعي الإلكتروني، وأشتري حاسوباً محمولاً جديداً.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Blog",
+   "das E-Book",
+   "die Homepage",
+   "der Laptop"
+  ]
+ },
+ {
+  "id": "s-r312a2-08",
+  "level": "A2",
+  "de": "Auf meiner Mailbox ist eine Nachricht, mein Mobiltelefon zeigt eine neue SMS, und der Apparat klingelt.",
+  "ar": "في بريدي الصوتي رسالة، وهاتفي المحمول يُظهر رسالة نصية جديدة، والجهاز يرنّ.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Mailbox",
+   "das Mobiltelefon",
+   "die SMS",
+   "der Apparat"
+  ]
+ },
+ {
+  "id": "s-r312a2-09",
+  "level": "A2",
+  "de": "Mit dem Fotoapparat fotografiere ich den Motorroller, dann fahre ich mit dem ICE in die Stadt zum neuen Club.",
+  "ar": "بآلة التصوير أصوّر الدراجة النارية الصغيرة، ثم أذهب بالقطار السريع إلى المدينة إلى النادي الجديد.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Fotoapparat",
+   "der Motorroller",
+   "der ICE",
+   "der Club"
+  ]
+ },
+ {
+  "id": "s-r312a2-10",
+  "level": "A2",
+  "de": "Ich schreibe eine Postkarte, notiere die Adresse, markiere das Datum und löse danach noch ein Rätsel.",
+  "ar": "أكتب بطاقة بريدية، وأدوّن العنوان، وأحدّد التاريخ، ثم أحلّ بعد ذلك لغزاً.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Postkarte",
+   "notieren",
+   "markieren",
+   "das Rätsel"
+  ]
+ },
+ {
+  "id": "s-r312a2-11",
+  "level": "A2",
+  "de": "Mein Papa und meine Mama lösen gern ein Quiz, meine Enkelin gibt ihnen einen Tipp dazu.",
+  "ar": "أبي وأمي يحبّان حلّ مسابقة، وحفيدتي تعطيهما نصيحة حول ذلك.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Quiz",
+   "der Tipp",
+   "die Enkelin",
+   "der Papa",
+   "die Mama"
+  ]
+ },
+ {
+  "id": "s-r312a2-12",
+  "level": "A2",
+  "de": "Meine Kollegin ist schwanger, ihr Nachbar ist geschieden, aber beide finden einander sympathisch und fantastisch.",
+  "ar": "زميلتي حامل، وجارها مطلّق، لكن كلاهما يجد الآخر لطيفاً ورائعاً.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "schwanger",
+   "geschieden",
+   "sympathisch",
+   "fantastisch"
+  ]
+ },
+ {
+  "id": "s-r312a2-13",
+  "level": "A2",
+  "de": "Er findet den Witz nicht blöd, sondern dumm, weil er selbst faul ist, obwohl er intelligent sein will.",
+  "ar": "هو لا يجد النكتة غبية بل سخيفة، لأنه كسول بنفسه رغم أنه يريد أن يكون ذكياً.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "blöd",
+   "dumm",
+   "faul",
+   "intelligent"
+  ]
+ },
+ {
+  "id": "s-r312a2-14",
+  "level": "A2",
+  "de": "Der Film war romantisch, das Ende war schrecklich traurig, die Hauptfigur war witzig, aber die Musik fand ich furchtbar.",
+  "ar": "كان الفيلم رومانسياً، وكانت النهاية حزينة بشكل مرعب، وكانت الشخصية الرئيسية مضحكة، لكنني وجدت الموسيقى فظيعة.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "romantisch",
+   "schrecklich",
+   "witzig",
+   "furchtbar"
+  ]
+ },
+ {
+  "id": "s-r312a2-15",
+  "level": "A2",
+  "de": "Beim Karneval feiern viele Leute, zu Neujahr und an Silvester gibt es oft eine große Veranstaltung in der Stadt.",
+  "ar": "في الكرنفال يحتفل كثير من الناس، وفي رأس السنة وليلة رأس السنة غالباً ما تكون هناك فعالية كبيرة في المدينة.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Karneval",
+   "das Neujahr",
+   "Silvester",
+   "die Veranstaltung"
+  ]
+ },
+ {
+  "id": "s-r312a2-16",
+  "level": "A2",
+  "de": "Im Sommer will meine Familie verreisen, zuerst besuchen wir einen Flohmarkt, dann fahren wir an die Nordsee und ich lese dort einen Comic.",
+  "ar": "في الصيف تريد عائلتي السفر، أولاً نزور سوقاً للأشياء المستعملة، ثم نذهب إلى بحر الشمال وأقرأ هناك قصة مصورة.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "verreisen",
+   "der Flohmarkt",
+   "die Nordsee",
+   "der Comic"
+  ]
+ },
+ {
+  "id": "s-r312a2-17",
+  "level": "A2",
+  "de": "Im Fernsehen läuft ein Krimi, danach kommt ein Interview, und in der Schule habe ich Biologie und Geografie.",
+  "ar": "في التلفاز يُعرض فيلم بوليسي، وبعده تأتي مقابلة، وفي المدرسة لدي أحياء وجغرافيا.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Krimi",
+   "das Interview",
+   "die Biologie",
+   "die Geografie"
+  ]
+ },
+ {
+  "id": "s-r312a2-18",
+  "level": "A2",
+  "de": "In der Schule lernen wir Latein, Physik, Religion und Sozialkunde.",
+  "ar": "في المدرسة نتعلّم اللاتينية والفيزياء والتربية الدينية والتربية الاجتماعية.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "Latein",
+   "die Physik",
+   "die Religion",
+   "die Sozialkunde"
+  ]
+ },
+ {
+  "id": "s-r312a2-19",
+  "level": "A2",
+  "de": "Über die Brücke erreicht man das obere Stockwerk des Einkaufszentrums, wo auch eine Cafeteria ist.",
+  "ar": "عبر الجسر يصل المرء إلى الطابق العلوي من مركز التسوق، حيث توجد أيضاً كافتيريا.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Brücke",
+   "das Stockwerk",
+   "das Einkaufszentrum",
+   "die Cafeteria"
+  ]
+ },
+ {
+  "id": "s-r312a2-20",
+  "level": "A2",
+  "de": "Im Kaufhaus neben dem Sportplatz hat sie ihre Geldbörse verloren, in der auch ein Parfüm war.",
+  "ar": "في المتجر الكبير بجانب الملعب فقدت محفظتها، التي كانت فيها أيضاً عطر.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Kaufhaus",
+   "der Sportplatz",
+   "die Geldbörse",
+   "das Parfüm"
+  ]
+ },
+ {
+  "id": "s-r312a2-21",
+  "level": "A2",
+  "de": "Diese Kosmetik kann der Haut wehtun, wenn man sie falsch benutzt, und ohne Wasser würde sogar eine Bohne bald sterben.",
+  "ar": "يمكن لهذه المستحضرات التجميلية أن تؤذي البشرة إذا استُخدمت بشكل خاطئ، وبدون ماء حتى الفاصولياء ستموت قريباً.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Kosmetik",
+   "wehtun",
+   "sterben",
+   "die Bohne"
+  ]
+ },
+ {
+  "id": "s-r312a2-22",
+  "level": "A2",
+  "de": "Ich muss die Nudeln, die Torte und das Rindfleisch noch einpacken.",
+  "ar": "عليّ أن أعبّئ المعكرونة والكعكة ولحم البقر بعد.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Nudel",
+   "die Torte",
+   "das Rind",
+   "einpacken"
+  ]
+ },
+ {
+  "id": "s-r312a2-23",
+  "level": "A2",
+  "de": "Vormittags ist es im Frühjahr oft kühl, aber wenigstens regnet es nirgends in der Stadt.",
+  "ar": "في الفترة الصباحية غالباً ما يكون الجو بارداً في الربيع، لكن على الأقل لا تمطر في أي مكان في المدينة.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "vormittags",
+   "das Frühjahr",
+   "wenigstens",
+   "nirgends"
+  ]
+ },
+ {
+  "id": "s-r312a2-24",
+  "level": "A2",
+  "de": "Das Fest soll drüben im Park stattfinden, das finde ich total gut, also gehen wir schnell vorwärts.",
+  "ar": "من المفترض أن يُقام الحفل هناك في الحديقة، وأجد هذا جيداً تماماً، لذا لنتقدّم بسرعة.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "drüben",
+   "total",
+   "vorwärts",
+   "stattfinden"
+  ]
+ },
+ {
+  "id": "s-r312a2-25",
+  "level": "A2",
+  "de": "Die Firma will bunte Taschen herstellen, aber es ist nicht notwendig zu lügen, wenn etwas falsch ist.",
+  "ar": "تريد الشركة تصنيع حقائب ملوّنة، لكن ليس من الضروري الكذب إذا كان هناك خطأ.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "bunt",
+   "notwendig",
+   "lügen",
+   "herstellen"
+  ]
+ },
+ {
+  "id": "s-r312a2-26",
+  "level": "A2",
+  "de": "Die Zwillinge sehen verschieden aus, die eine ist blond, und abends wollen beide das Fenster aufmachen, bevor sie ausgehen.",
+  "ar": "التوأم يبدوان مختلفين، إحداهما شقراء، وفي المساء تريدان كلتاهما فتح النافذة قبل أن تخرجا.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "verschieden",
+   "blond",
+   "aufmachen",
+   "ausgehen"
+  ]
+ },
+ {
+  "id": "s-r312a2-27",
+  "level": "A2",
+  "de": "Der Postbote muss die Pakete noch austragen, bevor er seine Arbeit beenden kann, denn die schwierige Situation im Büro kann ihm leidtun.",
+  "ar": "على ساعي البريد أن يوزّع الطرود بعد قبل أن ينهي عمله، لأن الوضع الصعب في المكتب قد يؤسفه.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "austragen",
+   "beenden",
+   "die Situation",
+   "leidtun"
+  ]
+ },
+ {
+  "id": "s-r312a2-28",
+  "level": "A2",
+  "de": "Der Lehrer schimpft, weil niemand Lust hat zu lernen, aber ein Schweizer und eine Schweizerin helfen gern.",
+  "ar": "المعلّم يوبّخ لأن لا أحد لديه رغبة في التعلّم، لكن سويسرياً وسويسرية يساعدان بسرور.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "schimpfen",
+   "die Lust",
+   "der Schweizer",
+   "die Schweizerin"
+  ]
+ },
+ {
+  "id": "s-r312a2-29",
+  "level": "A2",
+  "de": "Der Käse ist schweizerisch, der Österreicher und die Österreicherin finden ihn trotzdem nicht so gut wie österreichisches Brot.",
+  "ar": "الجبن سويسري، لكن النمساوي والنمساوية يجدانه مع ذلك ليس جيداً مثل الخبز النمساوي.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "schweizerisch",
+   "der Österreicher",
+   "die Österreicherin",
+   "österreichisch"
+  ]
+ },
+ {
+  "id": "s-r312a2-30",
+  "level": "A2",
+  "de": "Die Europäerin kommt aus Luxemburg, ihr Bruder ist Luxemburger, und ihre Schwester ist Luxemburgerin.",
+  "ar": "الأوروبية تأتي من لوكسمبورغ، أخوها لوكسمبورغي، وأختها لوكسمبورغية.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Europäerin",
+   "Luxemburg",
+   "der Luxemburger",
+   "die Luxemburgerin"
+  ]
+ },
+ {
+  "id": "s-r312a2-31",
+  "level": "A2",
+  "de": "Die Speisekarte ist luxemburgisch und französisch, danach spielen die Kinder Basketball oder basteln etwas Schönes.",
+  "ar": "قائمة الطعام لوكسمبورغية وفرنسية، وبعد ذلك يلعب الأطفال كرة السلة أو يصنعون شيئاً جميلاً بأيديهم.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "luxemburgisch",
+   "französisch",
+   "der Basketball",
+   "basteln"
+  ]
+ },
+ {
+  "id": "s-r312a2-32",
+  "level": "A2",
+  "de": "Im Winter fahren wir Ski, im Sommer spielen wir Tennis und Volleyball, weil unsere ganze Familie sehr sportlich ist.",
+  "ar": "في الشتاء نتزلج على الجليد، وفي الصيف نلعب التنس والكرة الطائرة، لأن عائلتنا كلها رياضية جداً.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Ski",
+   "Tennis",
+   "der Volleyball",
+   "sportlich"
+  ]
+ },
+ {
+  "id": "s-r312a2-33",
+  "level": "A2",
+  "de": "Zum Geburtstag bekommt sie ein neues T-Shirt, eine Jeans, Stiefel, eine schöne Bluse und eine rote Rose; danach bringt sie die Fundsachen zum Büro zurück.",
+  "ar": "في عيد ميلادها تحصل على قميص جديد، وبنطال جينز، وحذاء طويل، وبلوزة جميلة، ووردة حمراء؛ ثم تُعيد المفقودات إلى المكتب.",
+  "tags": [
+   "r312-a2-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das T-Shirt",
+   "die Jeans",
+   "der Stiefel",
+   "die Bluse",
+   "die Rose",
+   "die Fundsachen"
+  ]
+ },
+ {
+  "id": "s-r313b1-01",
+  "level": "B1",
+  "de": "Die Türkin spricht fließend Türkisch, ihr Mann ist Türke und sagt, dass türkisches Essen in der Türkei sehr beliebt ist.",
+  "ar": "التركية تتحدث التركية بطلاقة، وزوجها تركي ويقول إن الأكل التركي مشهور جداً في تركيا.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Türkin",
+   "der Türke",
+   "türkisch",
+   "die Türkei"
+  ]
+ },
+ {
+  "id": "s-r313b1-02",
+  "level": "B1",
+  "de": "Die Ukrainerin kam aus der Ukraine, spricht Ukrainisch und erzählt, dass die ukrainische Küche viel Brot und Suppe kennt.",
+  "ar": "الأوكرانية جاءت من أوكرانيا، تتحدث الأوكرانية، وتروي أن المطبخ الأوكراني يعرف الكثير من الخبز والشوربة.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Ukrainerin",
+   "der Ukrainer",
+   "die Ukraine",
+   "ukrainisch"
+  ]
+ },
+ {
+  "id": "s-r313b1-03",
+  "level": "B1",
+  "de": "Griechenland ist die Heimat des Griechen und der Griechin, die beide griechisch sprechen und zu Hause Griechisch unterrichten.",
+  "ar": "اليونان هي وطن اليوناني واليونانية، وكلاهما يتحدث اليونانية ويدرّس اللغة اليونانية في البيت.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "Griechenland",
+   "der Grieche",
+   "die Griechin",
+   "griechisch"
+  ]
+ },
+ {
+  "id": "s-r313b1-04",
+  "level": "B1",
+  "de": "Die Bundeskanzlerin trifft den Bundespräsidenten, danach besucht sie ein Bundesland und erklärt, wie die Bundesrepublik Deutschland regiert wird.",
+  "ar": "المستشارة الاتحادية تلتقي بالرئيس الاتحادي، ثم تزور ولاية اتحادية وتشرح كيف تُحكم جمهورية ألمانيا الاتحادية.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Bundeskanzlerin",
+   "der Bundeskanzler",
+   "der Bundespräsident",
+   "die Bundespräsidentin",
+   "das Bundesland",
+   "Bundesrepublik Deutschland"
+  ]
+ },
+ {
+  "id": "s-r313b1-05",
+  "level": "B1",
+  "de": "Die Europäische Union hat ihr eigenes Parlament, das Europäische Parlament, in dem konservative und liberale Abgeordnete zusammenarbeiten.",
+  "ar": "للاتحاد الأوروبي برلمانه الخاص، البرلمان الأوروبي، حيث يتعاون نواب محافظون وليبراليون.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Europäische Union",
+   "das Europäische Parlament",
+   "konservativ",
+   "liberal"
+  ]
+ },
+ {
+  "id": "s-r313b1-06",
+  "level": "B1",
+  "de": "Der Minister und die Ministerin stellen dem Bund heute ein neues Gesetz vor, über das jede Gemeinde bald abstimmen soll.",
+  "ar": "الوزير والوزيرة يعرضان اليوم على الاتحاد قانوناً جديداً، ستصوّت عليه كل بلدية قريباً.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Minister",
+   "die Ministerin",
+   "der Bund"
+  ]
+ },
+ {
+  "id": "s-r313b1-07",
+  "level": "B1",
+  "de": "Das Baby besucht die Krippe, später geht es auf die Mittelschule, dann auf die Realschule oder die Berufsschule.",
+  "ar": "الرضيع يذهب إلى الحضانة، ثم يلتحق لاحقاً بالمدرسة المتوسطة، ثم بالمدرسة الثانوية الواقعية أو بالمدرسة المهنية.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Krippe",
+   "die Mittelschule",
+   "die Realschule",
+   "die Berufsschule"
+  ]
+ },
+ {
+  "id": "s-r313b1-08",
+  "level": "B1",
+  "de": "Manche Kinder lernen an der Sonderschule, andere studieren später an der Fachhochschule oder besuchen Kurse an der Volkshochschule.",
+  "ar": "بعض الأطفال يتعلمون في مدرسة التربية الخاصة، وآخرون يدرسون لاحقاً في كلية التطبيقية أو يحضرون دورات في الجامعة الشعبية.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Sonderschule",
+   "die Fachhochschule",
+   "die Volkshochschule"
+  ]
+ },
+ {
+  "id": "s-r313b1-09",
+  "level": "B1",
+  "de": "Sie liebt Mathematik, ihr Bruder interessiert sich mehr für Philosophie, und ihre Schwester mag am liebsten Chemie.",
+  "ar": "هي تحب الرياضيات، وأخوها يهتم أكثر بالفلسفة، وأختها تفضّل الكيمياء على الأرجح.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Mathematik",
+   "die Philosophie",
+   "die Chemie"
+  ]
+ },
+ {
+  "id": "s-r313b1-10",
+  "level": "B1",
+  "de": "Der Wind kommt heute aus dem Süden, morgen weht er südlich der Berge, übermorgen eher nördlich und dann wieder östlich oder westlich.",
+  "ar": "الرياح تأتي اليوم من الجنوب، وغداً تهبّ جنوب الجبال، وبعد غد أكثر من الشمال ثم مجدداً من الشرق أو الغرب.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Süden",
+   "südlich",
+   "nördlich",
+   "östlich",
+   "westlich"
+  ]
+ },
+ {
+  "id": "s-r313b1-11",
+  "level": "B1",
+  "de": "Im Zoo sieht man einen Elefanten, eine Giraffe, ein Krokodil und einen Löwen, der laut brüllt.",
+  "ar": "في حديقة الحيوان نرى فيلاً وزرافة وتمساحاً وأسداً يزأر بصوت عالٍ.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Elefant",
+   "die Giraffe",
+   "das Krokodil",
+   "der Löwe"
+  ]
+ },
+ {
+  "id": "s-r313b1-12",
+  "level": "B1",
+  "de": "Eine Fliege landet auf dem Tisch, eine Mücke sticht mich, ein Pinguin schwimmt im Wasser und eine Schildkröte kriecht langsam vorbei.",
+  "ar": "ذبابة تحطّ على الطاولة، وبعوضة تلسعني، وبطريق يسبح في الماء، وسلحفاة تزحف ببطء من هناك.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Fliege",
+   "die Mücke",
+   "der Pinguin",
+   "die Schildkröte"
+  ]
+ },
+ {
+  "id": "s-r313b1-13",
+  "level": "B1",
+  "de": "Das Dorf zählt einundzwanzig Familien, die kleine Schule hat einhundertundeins Schüler, und die Bibliothek besitzt zweihundert alte Bücher.",
+  "ar": "تضم القرية واحداً وعشرين عائلة، وتضم المدرسة الصغيرة مئة وواحداً من التلاميذ، وتملك المكتبة مئتي كتاب قديم.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "einundzwanzig",
+   "einhundertundeins",
+   "zweihundert"
+  ]
+ },
+ {
+  "id": "s-r313b1-14",
+  "level": "B1",
+  "de": "Tagsüber trainiert sie viermal die Woche, nimmt die doppelte, also zweifache Menge an Übungen und rechnet dabei immer ein Plus an Energie ein.",
+  "ar": "خلال النهار تتمرن أربع مرات في الأسبوع، وتأخذ الكمية المضاعفة أي الثنائية من التمارين، وتحسب دائماً زيادة في الطاقة.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "tagsüber",
+   "viermal",
+   "zweifach",
+   "plus"
+  ]
+ },
+ {
+  "id": "s-r313b1-15",
+  "level": "B1",
+  "de": "An jedem Werktag fährt der Bus stündlich, an Pfingsten oder am Nationalfeiertag aber bleibt er stehen; vgl. dazu den Kalender bzw. die offizielle Liste der Feiertage, und seit einem ganzen Jahrtausend streicht man die alten Fenster violett.",
+  "ar": "في كل يوم عمل تسير الحافلة كل ساعة، لكن في عيد العنصرة أو العيد الوطني تتوقف؛ قارن ذلك بالتقويم أو بالقائمة الرسمية للأعياد، ومنذ ألفية كاملة يُطلى هذا المكان نوافذه القديمة باللون البنفسجي.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Werktag",
+   "stündlich",
+   "Pfingsten",
+   "der Nationalfeiertag",
+   "das Jahrtausend",
+   "violett"
+  ]
+ },
+ {
+  "id": "s-r313b1-16",
+  "level": "B1",
+  "de": "Das kleine Kfz hat wenig Platz für Gepäck, aber der große Lkw transportiert Waren, die oft viele Zentimeter breit und mehrere Kilogramm schwer sind.",
+  "ar": "السيارة الصغيرة لا تتسع لحمولة كبيرة، أما الشاحنة الكبيرة فتنقل بضائع كثيراً ما يبلغ عرضها عدة سنتيمترات ووزنها عدة كيلوغرامات.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Kfz",
+   "der Lkw",
+   "der Zentimeter",
+   "das Kilogramm"
+  ]
+ },
+ {
+  "id": "s-r313b1-17",
+  "level": "B1",
+  "de": "Sie hat ein Abo für Filme, kauft trotzdem noch eine DVD, bloggt darüber im Internet und hört Musik mit ihrem alten CD-Player.",
+  "ar": "لديها اشتراك للأفلام، لكنها تشتري مع ذلك قرص دي في دي، وتدوّن عن ذلك على الإنترنت، وتستمع للموسيقى بمشغل الأقراص المدمجة القديم.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Abo",
+   "die DVD",
+   "bloggen",
+   "der CD-Player"
+  ]
+ },
+ {
+  "id": "s-r313b1-18",
+  "level": "B1",
+  "de": "Im Chatroom diskutiert der Manager mit Kunden, während ihr Smartphone gerade einen neuen Chip bekommen hat.",
+  "ar": "في غرفة الدردشة يناقش المدير التنفيذي مع الزبائن، بينما حصل هاتفها الذكي للتو على شريحة جديدة.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Chatroom",
+   "der Manager",
+   "das Smartphone",
+   "der Chip"
+  ]
+ },
+ {
+  "id": "s-r313b1-19",
+  "level": "B1",
+  "de": "Sie twittert täglich, googelt Nachrichten aus aller Welt, denkt dabei global und schreibt am Ende noch eine kurze Einleitung dazu.",
+  "ar": "تغرّد يومياً، وتبحث في غوغل عن أخبار من أنحاء العالم، وتفكر بشكل عالمي، وتكتب في النهاية مقدمة قصيرة لذلك.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "twittern",
+   "googeln",
+   "global",
+   "die Einleitung"
+  ]
+ },
+ {
+  "id": "s-r313b1-20",
+  "level": "B1",
+  "de": "Der Moderator nutzt digitale Hilfsmittel, erklärt ein neues Modul im Kurs und analysiert danach den Textaufbau genau.",
+  "ar": "المقدّم يستخدم وسائل رقمية مساعدة، ويشرح وحدة جديدة في الدورة، ثم يحلّل بناء النص بدقة بعد ذلك.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Moderator",
+   "das Hilfsmittel",
+   "das Modul",
+   "der Textaufbau"
+  ]
+ },
+ {
+  "id": "s-r313b1-21",
+  "level": "B1",
+  "de": "Die Lehrerin lässt die Schüler Begriffe zuordnen; die Noten reichen von befriedigend über mangelhaft bis hin zu ungenügend.",
+  "ar": "المعلمة تطلب من التلاميذ مطابقة المصطلحات؛ والدرجات تتراوح من مقبول إلى ضعيف وصولاً إلى غير كافٍ.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "zuordnen",
+   "befriedigend",
+   "mangelhaft",
+   "ungenügend"
+  ]
+ },
+ {
+  "id": "s-r313b1-22",
+  "level": "B1",
+  "de": "Er findet es cool, abends Jazz zu hören, nachdem er den ganzen Tag gejobbt hat und noch schnell ein Dokument faxen musste.",
+  "ar": "يجده رائعاً أن يستمع للجاز في المساء، بعد أن عمل بدوام جزئي طوال اليوم واضطر لإرسال مستند بالفاكس بسرعة.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "cool",
+   "der Jazz",
+   "jobben",
+   "faxen"
+  ]
+ },
+ {
+  "id": "s-r313b1-23",
+  "level": "B1",
+  "de": "Zum Sandwich isst er Ketchup, danach löst er ein Puzzle, schaut einen Film über einen Killer und grillt am Abend noch ein Steak.",
+  "ar": "مع الساندويتش يأكل الكاتشب، ثم يحلّ لغزاً، ويشاهد فيلماً عن قاتل، ويشوي في المساء شريحة لحم أخرى.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Sandwich",
+   "der Ketchup",
+   "das Puzzle",
+   "der Killer",
+   "das Steak"
+  ]
+ },
+ {
+  "id": "s-r313b1-24",
+  "level": "B1",
+  "de": "Im Sommer packt sie ihren Bikini ein, fährt ins Camp am See, campt dort eine Woche und besucht danach die City.",
+  "ar": "في الصيف تحزم ملابس السباحة، وتذهب إلى المخيم عند البحيرة، وتخيّم هناك أسبوعاً، ثم تزور وسط المدينة بعد ذلك.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Bikini",
+   "das Camp",
+   "campen",
+   "die City"
+  ]
+ },
+ {
+  "id": "s-r313b1-25",
+  "level": "B1",
+  "de": "Er trinkt eine Cola, liest einen Comics, fährt mit dem E-Bike zur Halle und schaut sich dort eine lustige Show an.",
+  "ar": "يشرب الكولا، ويقرأ قصة مصورة، ويذهب بالدراجة الكهربائية إلى القاعة، ويشاهد هناك عرضاً مسلياً.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Cola",
+   "der Comics",
+   "das E-Bike",
+   "die Show"
+  ]
+ },
+ {
+  "id": "s-r313b1-26",
+  "level": "B1",
+  "de": "Im Radio läuft ein neuer Song, dazwischen ein kurzer Spot, während sie im Swimmingpool schwimmt oder gemütlich im Internet surft.",
+  "ar": "في الراديو تُذاع أغنية جديدة، وبينها إعلان قصير، بينما تسبح في المسبح أو تتصفح الإنترنت بهدوء.",
+  "tags": [
+   "r313-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Song",
+   "der Spot",
+   "der Swimmingpool",
+   "surfen"
+  ]
+ },
+ {
+  "id": "s-r314b1-01",
+  "level": "B1",
+  "de": "Auf dem Abenteuer in den Bergen durfte niemand die Route einfach von der Karte abschreiben, und alle mussten vorher den Treffpunkt genau abmachen.",
+  "ar": "في تلك المغامرة في الجبال لم يكن لأحد أن ينسخ المسار من الخريطة ببساطة، وكان على الجميع أن يتّفقوا مسبقًا على نقطة اللقاء بدقّة.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Abenteuer",
+   "abschreiben",
+   "abmachen"
+  ]
+ },
+ {
+  "id": "s-r314b1-02",
+  "level": "B1",
+  "de": "Der Pfad führte steil abwärts, und wir hatten keine Ahnung, welche Aktivität uns unten erwartete.",
+  "ar": "كان الممرّ ينحدر بشدّة نزولًا، ولم تكن لدينا أدنى فكرة عن النشاط الذي ينتظرنا في الأسفل.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "abwärts",
+   "die Ahnung",
+   "die Aktivität"
+  ]
+ },
+ {
+  "id": "s-r314b1-03",
+  "level": "B1",
+  "de": "Mitten in der Nacht ging der Alarm los, weil jemand nach zu viel Alkohol versucht hatte, das ganze Alphabet rückwärts aufzusagen.",
+  "ar": "في منتصف الليل انطلق الإنذار، لأن شخصًا ما بعد تناول الكثير من الكحول حاول أن يقول الأبجدية كاملة بالمقلوب.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Alarm",
+   "der Alkohol",
+   "das Alphabet"
+  ]
+ },
+ {
+  "id": "s-r314b1-04",
+  "level": "B1",
+  "de": "Meine Großmutter lebt im Altenheim und ihr Bruder im Altersheim nebenan, denn für beide gab es keine alternative Lösung und keine bessere Alternative.",
+  "ar": "تعيش جدّتي في دار المسنين ويعيش أخوها في دار المسنين المجاورة، إذ لم يكن أمام الاثنين حلٌّ بديل ولا بديل أفضل.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Altenheim",
+   "das Altersheim",
+   "alternativ",
+   "die Alternative"
+  ]
+ },
+ {
+  "id": "s-r314b1-05",
+  "level": "B1",
+  "de": "Auf dem Familienfest amüsierten sich alle, besonders ein naher Angehöriger und eine enge Angehörige der Braut.",
+  "ar": "في حفل العائلة استمتع الجميع، خصوصًا قريب مقرّب وقريبة مقرّبة من العروس.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "sich amüsieren",
+   "der Angehörige",
+   "die Angehörige"
+  ]
+ },
+ {
+  "id": "s-r314b1-06",
+  "level": "B1",
+  "de": "Der Kapitän muss gleich ankündigen, dass alle Passagiere sich anschnallen müssen, während die Crew eine neue Uniform anhaben muss.",
+  "ar": "سيعلن القبطان بعد قليل أنّ على جميع الركّاب ربط أحزمة الأمان، بينما يجب على الطاقم ارتداء زيّ جديد.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "anhaben",
+   "ankündigen",
+   "anschnallen"
+  ]
+ },
+ {
+  "id": "s-r314b1-07",
+  "level": "B1",
+  "de": "Die Chefin will sich jede Bewerbung genau ansehen, bevor sie jemanden anstellen kann, und erwartet, dass alle Kandidaten pünktlich anwesend sind.",
+  "ar": "تريد المديرة أن تنظر بدقّة في كلّ طلب توظيف قبل أن توظّف أحدًا، وتتوقّع أن يكون جميع المرشّحين حاضرين في الموعد.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "ansehen",
+   "anstellen",
+   "anwesend"
+  ]
+ },
+ {
+  "id": "s-r314b1-08",
+  "level": "B1",
+  "de": "Eine große Anzahl von Kollegen kam zum Abschied, kurz bevor er an seiner neuen Arbeitsstelle begann.",
+  "ar": "حضر عدد كبير من الزملاء حفل الوداع قبل أن يبدأ عمله في مكان عمله الجديد بقليل.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Anzahl",
+   "der Abschied",
+   "die Arbeitsstelle"
+  ]
+ },
+ {
+  "id": "s-r314b1-09",
+  "level": "B1",
+  "de": "Es wird sofort auffallen, wenn der Lehrer die Klasse auffordern muss, einer klaren Aufforderung endlich zu folgen.",
+  "ar": "سيُلاحَظ الأمر فورًا عندما يضطرّ المعلّم إلى مطالبة الصفّ باتّباع طلب واضح أخيرًا.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "auffallen",
+   "auffordern",
+   "die Aufforderung"
+  ]
+ },
+ {
+  "id": "s-r314b1-10",
+  "level": "B1",
+  "de": "Der Unfall konnte den Verkehr lange aufhalten, danach musste die Polizei die Menschenmenge auflösen und alles auf Video aufnehmen.",
+  "ar": "استطاع الحادث أن يعيق حركة المرور طويلًا، ثم اضطرّت الشرطة إلى تفريق الحشد وتسجيل كلّ شيء بالفيديو.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "aufhalten",
+   "auflösen",
+   "aufnehmen"
+  ]
+ },
+ {
+  "id": "s-r314b1-11",
+  "level": "B1",
+  "de": "Sie konnte kaum aufwachen, doch im nächsten Augenblick war sie wach wie eine gut ausgebildete Sportlerin.",
+  "ar": "بالكاد استطاعت أن تستيقظ، لكن في اللحظة التالية كانت مستيقظة تمامًا مثل رياضية مدرَّبة جيدًا.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "aufwachen",
+   "der Augenblick",
+   "ausgebildet"
+  ]
+ },
+ {
+  "id": "s-r314b1-12",
+  "level": "B1",
+  "de": "Sein Gesicht zeigte einen traurigen Ausdruck, kurz bevor er die nächste Ausfahrt verpasste, obwohl er sonst ein ausgezeichneter Fahrer ist.",
+  "ar": "أظهر وجهه تعبيرًا حزينًا قبل أن يفوّت المخرج التالي بقليل، رغم أنه عادةً سائق ممتاز.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Ausdruck",
+   "die Ausfahrt",
+   "ausgezeichnet"
+  ]
+ },
+ {
+  "id": "s-r314b1-13",
+  "level": "B1",
+  "de": "Die neue Aushilfe sollte dem Chef nur eine Nachricht ausrichten, doch sie konnte einen Fehler dabei nicht ausschließen.",
+  "ar": "كان على المساعدة المؤقتة الجديدة أن تنقل رسالة فقط إلى المدير، لكنها لم تستطع استبعاد وقوع خطأ في ذلك.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Aushilfe",
+   "ausrichten",
+   "ausschließen"
+  ]
+ },
+ {
+  "id": "s-r314b1-14",
+  "level": "B1",
+  "de": "Dieses Angebot gilt ausschließlich für Mitglieder, die äußerlich ruhig wirken und sich ihr Geschenk selbst aussuchen dürfen.",
+  "ar": "هذا العرض مخصّص حصريًا للأعضاء الذين يبدون هادئين من الخارج ويحقّ لهم اختيار هديّتهم بأنفسهم.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "ausschließlich",
+   "äußerlich",
+   "sich aussuchen"
+  ]
+ },
+ {
+  "id": "s-r314b1-15",
+  "level": "B1",
+  "de": "Der Brief war direkt an die Firma adressiert, deren Ausbildung international anerkannt ist und die für neue Ideen aufgeschlossen bleibt.",
+  "ar": "كانت الرسالة موجَّهة مباشرة إلى الشركة التي يحظى تدريبها باعتراف دولي والتي تبقى منفتحة على الأفكار الجديدة.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "adressiert",
+   "anerkannt",
+   "aufgeschlossen"
+  ]
+ },
+ {
+  "id": "s-r314b1-16",
+  "level": "B1",
+  "de": "Das Kind spielte zuerst mit einem Ball in der Badewanne, bevor es abends zum Ballett musste.",
+  "ar": "لعب الطفل أولًا بكرة في حوض الاستحمام، قبل أن يضطرّ إلى الذهاب إلى الباليه مساءً.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Badewanne",
+   "der Ball",
+   "das Ballett"
+  ]
+ },
+ {
+  "id": "s-r314b1-17",
+  "level": "B1",
+  "de": "Auf dem Formular musste sie die Bankleitzahl eintragen, dann eine neue Batterie kaufen, bevor die Familie zum Bauernhof fuhr.",
+  "ar": "في الاستمارة كان عليها كتابة الرمز المصرفي، ثم شراء بطارية جديدة، قبل أن تذهب العائلة إلى المزرعة.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Bankleitzahl",
+   "die Batterie",
+   "der Bauernhof"
+  ]
+ },
+ {
+  "id": "s-r314b1-18",
+  "level": "B1",
+  "de": "Das Hotel soll sich direkt am Strand befinden, wo Gäste vom Alltag befreit sind und oft netten Menschen begegnen.",
+  "ar": "يُفترض أن يقع الفندق مباشرة على الشاطئ، حيث يتحرّر الضيوف من روتين الحياة اليومية ويلتقون غالبًا بأشخاص لطفاء.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "sich befinden",
+   "befreit",
+   "begegnen"
+  ]
+ },
+ {
+  "id": "s-r314b1-19",
+  "level": "B1",
+  "de": "Der Gastgeber wollte alle Gäste persönlich begrüßen, aber beinahe hätte der Hund des Nachbarn jemanden beißen wollen.",
+  "ar": "أراد المضيف أن يرحّب بجميع الضيوف شخصيًا، لكن كلب الجار كاد أن يعضّ أحدهم.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "begrüßen",
+   "beinahe",
+   "beißen"
+  ]
+ },
+ {
+  "id": "s-r314b1-20",
+  "level": "B1",
+  "de": "Seine Frau ist wieder berufstätig und hat eine feste Beschäftigung gefunden, deshalb mussten sie gemeinsam beschließen, wer die Kinder abholt.",
+  "ar": "عادت زوجته إلى العمل ووجدت وظيفة ثابتة، لذلك كان عليهما أن يقرّرا معًا من سيصطحب الأطفال.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "berufstätig",
+   "die Beschäftigung",
+   "beschließen"
+  ]
+ },
+ {
+  "id": "s-r314b1-21",
+  "level": "B1",
+  "de": "Die Firma musste die Anzahl der Praktikanten beschränken, nachdem man fast alle Plätze besetzen wollte, und legte dafür einen bestimmten Termin fest.",
+  "ar": "اضطرّت الشركة إلى الحدّ من عدد المتدرّبين بعد أن أراد الجميع شغل كلّ الأماكن تقريبًا، وحدّدت لذلك موعدًا معيّنًا.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "beschränken",
+   "besetzen",
+   "bestimmt"
+  ]
+ },
+ {
+  "id": "s-r314b1-22",
+  "level": "B1",
+  "de": "Der Mann war sichtlich betrunken, als er versuchte, mit einem Bleistift zu schreiben, fast blind vor Müdigkeit.",
+  "ar": "كان الرجل ثملًا بوضوح عندما حاول الكتابة بقلم رصاص، وكأنه أعمى من شدّة التعب.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "betrunken",
+   "der Bleistift",
+   "blind"
+  ]
+ },
+ {
+  "id": "s-r314b1-23",
+  "level": "B1",
+  "de": "Am Himmel begann es zu blitzen, und sie wollten bloß noch schnell mit dem Boot ans Ufer zurück.",
+  "ar": "بدأ البرق يلمع في السماء، ولم يريدوا سوى العودة بسرعة بالقارب إلى الشاطئ.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "blitzen",
+   "bloß",
+   "das Boot"
+  ]
+ },
+ {
+  "id": "s-r314b1-24",
+  "level": "B1",
+  "de": "Das Fahrrad hatte eine kaputte Bremse, deshalb ging er zu Fuß zum Briefkasten und warf dort einen Briefumschlag ein.",
+  "ar": "كانت فرامل الدراجة معطّلة، لذلك ذهب مشيًا إلى صندوق البريد وألقى هناك ظرف رسالة.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Bremse",
+   "der Briefkasten",
+   "der Briefumschlag"
+  ]
+ },
+ {
+  "id": "s-r314b1-25",
+  "level": "B1",
+  "de": "Im Zug verlor er seine Brieftasche samt einer Broschüre über die Stadt, die ihm ein kleiner Bub gegeben hatte.",
+  "ar": "في القطار فقد محفظته مع كتيّب عن المدينة كان قد أعطاه إياه صبيّ صغير.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Brieftasche",
+   "die Broschüre",
+   "der Bub"
+  ]
+ },
+ {
+  "id": "s-r314b1-26",
+  "level": "B1",
+  "de": "Am Buffet stand eine saubere Bürste neben den Tellern, und dort trafen sich zwei seit Jahren befreundete Familien.",
+  "ar": "بجانب البوفيه كانت هناك فرشاة نظيفة إلى جانب الأطباق، وهناك التقت عائلتان صديقتان منذ سنوات.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Buffet",
+   "die Bürste",
+   "befreundet"
+  ]
+ },
+ {
+  "id": "s-r314b1-27",
+  "level": "B1",
+  "de": "Niemand wollte sich über die bequeme Couch beklagen, auch wenn sich der Stil der Wohnung auf diesen einen charakteristischen Sessel beschränken musste.",
+  "ar": "لم يرغب أحد في الشكوى من الأريكة المريحة، حتى لو كان على طابع الشقّة أن يقتصر على هذا المقعد المميّز وحده.",
+  "tags": [
+   "r314-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "sich beklagen",
+   "sich beschränken",
+   "die Couch",
+   "charakteristisch"
+  ]
+ },
+ {
+  "id": "s-r315b1-1",
+  "level": "B1",
+  "de": "Das Regal steht gleich daneben; wir wollten das Zimmer dekorieren und brauchten dafür eine genaue Darstellung des Plans.",
+  "ar": "الرفّ موجود بجانبه؛ أردنا تزيين الغرفة واحتجنا من أجل ذلك إلى عرضٍ دقيقٍ للخطة.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "daneben",
+   "dekorieren",
+   "die Darstellung"
+  ]
+ },
+ {
+  "id": "s-r315b1-2",
+  "level": "B1",
+  "de": "Sie hält eine strenge Diät, und deswegen erklärte der Arzt jedes Detail des Ernährungsplans genau.",
+  "ar": "تتّبع حميةً صارمة، ولذلك شرح الطبيب كلّ تفصيلٍ من خطة التغذية بدقة.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "deswegen",
+   "das Detail",
+   "die Diät"
+  ]
+ },
+ {
+  "id": "s-r315b1-3",
+  "level": "B1",
+  "de": "Im Dialog zwischen den Studenten hörte man einen starken Dialekt, bevor beide stolz ihr Diplom zeigten.",
+  "ar": "في الحوار بين الطالبين سُمعت لهجة قوية، قبل أن يُظهر كلاهما شهادته بفخر.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Dialekt",
+   "der Dialog",
+   "das Diplom"
+  ]
+ },
+ {
+  "id": "s-r315b1-4",
+  "level": "B1",
+  "de": "Nach der Nacht in der Diskothek lag überall Dreck, und die Polizei fand sogar eine verbotene Droge.",
+  "ar": "بعد ليلة في الملهى الليلي كان الوسخ منتشرًا في كل مكان، ووجدت الشرطة حتى مخدِّرًا ممنوعًا.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Diskothek",
+   "der Dreck",
+   "die Droge"
+  ]
+ },
+ {
+  "id": "s-r315b1-5",
+  "level": "B1",
+  "de": "Weil er nach dem Sport sehr durstig war, kaufte er in der Drogerie Wasser und nahm danach eine lange Dusche.",
+  "ar": "لأنه كان عطشانًا جدًا بعد الرياضة، اشترى ماءً من محل العناية ثم أخذ دشًا طويلًا بعد ذلك.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Drogerie",
+   "durstig",
+   "die Dusche"
+  ]
+ },
+ {
+  "id": "s-r315b1-6",
+  "level": "B1",
+  "de": "In diesem Büro duzen sich alle Kollegen, obwohl dort letzte Woche ein Einbrecher einbrechen wollte.",
+  "ar": "في هذا المكتب يخاطب الزملاء بعضهم بصيغة du، رغم أن لصًا حاول اقتحام المكان الأسبوع الماضي.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "duzen",
+   "einbrechen",
+   "der Einbrecher"
+  ]
+ },
+ {
+  "id": "s-r315b1-7",
+  "level": "B1",
+  "de": "Nach dem Einbruch wollte ihr plötzlich ein wichtiges Detail einfallen, das sie schnell in den Bericht einfügen musste.",
+  "ar": "بعد عملية السطو خطر لها فجأة تفصيل مهم، كان عليها إضافته بسرعة إلى التقرير.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Einbruch",
+   "einfallen",
+   "einfügen"
+  ]
+ },
+ {
+  "id": "s-r315b1-8",
+  "level": "B1",
+  "de": "Die Einführung des neuen Systems soll einheitlich für alle Filialen gelten, bevor man die Büros neu einrichten kann.",
+  "ar": "من المفترض أن يكون إدخال النظام الجديد موحَّدًا لجميع الفروع، قبل أن يُمكن تجهيز المكاتب من جديد.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Einführung",
+   "einheitlich",
+   "einrichten"
+  ]
+ },
+ {
+  "id": "s-r315b1-9",
+  "level": "B1",
+  "de": "Die moderne Einrichtung der Küche kostete viel, einschließlich der Geräte, die man nur einschalten musste.",
+  "ar": "كلّف تأثيث المطبخ الحديث الكثير، شاملاً الأجهزة التي كان يكفي فقط تشغيلها.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Einrichtung",
+   "einschalten",
+   "einschließlich"
+  ]
+ },
+ {
+  "id": "s-r315b1-10",
+  "level": "B1",
+  "de": "Ein Einwohner der Stadt brachte ein Einschreiben zur Post, kurz bevor er in das neue Rathaus eintreten wollte.",
+  "ar": "أحضر أحد سكان المدينة رسالةً مسجَّلةً إلى مكتب البريد، قبل أن يدخل مبنى البلدية الجديد بقليل.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Einschreiben",
+   "eintreten",
+   "der Einwohner"
+  ]
+ },
+ {
+  "id": "s-r315b1-11",
+  "level": "B1",
+  "de": "Bei der Einzahlung am Automaten erklärte der Mitarbeiter jede Einzelheit des elektrisch gesteuerten Geräts.",
+  "ar": "عند الإيداع في الجهاز الآلي شرح الموظف كل تفصيل من تفاصيل الجهاز الذي يُدار كهربائيًا.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Einzahlung",
+   "die Einzelheit",
+   "elektrisch"
+  ]
+ },
+ {
+  "id": "s-r315b1-12",
+  "level": "B1",
+  "de": "Beim Empfang im Hotel konnte man die Schlüsselkarte elektronisch empfangen, sobald man an der Rezeption angemeldet war.",
+  "ar": "عند الاستقبال في الفندق كان يمكن استلام بطاقة المفتاح إلكترونيًا، بمجرد التسجيل في مكتب الاستقبال.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "elektronisch",
+   "empfangen",
+   "der Empfang"
+  ]
+ },
+ {
+  "id": "s-r315b1-13",
+  "level": "B1",
+  "de": "Auf Empfehlung eines Freundes fuhren wir trotz der großen Entfernung dorthin, weil der Besitzer uns beim Preis entgegenkommen wollte.",
+  "ar": "بناءً على توصية صديق ذهبنا إلى هناك رغم المسافة الكبيرة، لأن المالك أراد أن يتجاوب معنا بخصوص السعر.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Empfehlung",
+   "die Entfernung",
+   "entgegenkommen"
+  ]
+ },
+ {
+  "id": "s-r315b1-14",
+  "level": "B1",
+  "de": "Der Unfall konnte sich entweder am Morgen oder am Abend ereignet haben, aber danach fanden wir die Fahrt trotzdem entspannend.",
+  "ar": "ربما وقع الحادث إما في الصباح أو في المساء، لكننا مع ذلك وجدنا الرحلة بعد ذلك مريحة.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "entspannend",
+   "entweder … oder",
+   "sich ereignen"
+  ]
+ },
+ {
+  "id": "s-r315b1-15",
+  "level": "B1",
+  "de": "Auf der Reise wollten sie etwas Neues erleben, doch ein lauter Donner ließ alle ernsthaft erschrecken.",
+  "ar": "في الرحلة أرادوا أن يعيشوا تجربة جديدة، لكن رعدًا عاليًا جعل الجميع يفزع بجدية.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "erleben",
+   "ernsthaft",
+   "erschrecken"
+  ]
+ },
+ {
+  "id": "s-r315b1-16",
+  "level": "B1",
+  "de": "Die erwachsenen Kinder wollten gemeinsam eine Liste erstellen, die angeblich ewig gültig bleiben sollte.",
+  "ar": "أراد الأبناء البالغون إعداد قائمة معًا، يُفترض أنها تبقى صالحة إلى الأبد.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "erstellen",
+   "erwachsen",
+   "ewig"
+  ]
+ },
+ {
+  "id": "s-r315b1-17",
+  "level": "B1",
+  "de": "Für den Export in andere Länder ist diese Firma bekannt; manche Politiker sind dafür, andere sind strikt dagegen.",
+  "ar": "تشتهر هذه الشركة بالتصدير إلى بلدان أخرى؛ بعض السياسيين مؤيدون لذلك، وآخرون معارضون له بشدة.",
+  "tags": [
+   "r315-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Export",
+   "dafür",
+   "dagegen"
+  ]
+ },
+ {
+  "id": "s-r316b1-1",
+  "level": "B1",
+  "de": "Der Fachmann kontrollierte die Fahrbahn, und seine Fantasie half ihm, eine schnelle Lösung zu finden.",
+  "ar": "فحص الخبير المختصّ مسار الطريق، وساعده خياله على إيجاد حلّ سريع.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Fachmann / die Fachfrau",
+   "die Fahrbahn",
+   "die Fantasie"
+  ]
+ },
+ {
+  "id": "s-r316b1-2",
+  "level": "B1",
+  "de": "Beim Fasching trug sie ein farbiges Kostüm, bevor alle am Nachmittag nur noch faulenzen wollten.",
+  "ar": "ارتدت زيًا ملوّنًا في كرنفال الفاشينج، قبل أن يريد الجميع بعد الظهر أن يتكاسلوا فقط.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "farbig",
+   "der Fasching",
+   "faulenzen"
+  ]
+ },
+ {
+  "id": "s-r316b1-3",
+  "level": "B1",
+  "de": "Er wollte die Fernbedienung und die externe Festplatte gut festhalten, damit nichts herunterfällt.",
+  "ar": "أراد أن يمسك جيّدًا بجهاز التحكّم عن بُعد والقرص الصلب الخارجي حتى لا يسقط شيء.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Fernbedienung",
+   "die Festplatte",
+   "festhalten"
+  ]
+ },
+ {
+  "id": "s-r316b1-4",
+  "level": "B1",
+  "de": "Die Polizei wollte den Verdächtigen festnehmen, einen neuen Termin festsetzen und damit ihre Ermittlung festigen.",
+  "ar": "أرادت الشرطة أن تقبض على المشتبه به وأن تحدّد موعدًا جديدًا وبذلك ترسّخ تحقيقها.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "festnehmen",
+   "festsetzen",
+   "festigen"
+  ]
+ },
+ {
+  "id": "s-r316b1-5",
+  "level": "B1",
+  "de": "Es sollte längst feststehen, dass dieses fette Essen nicht gesund ist, während das Feuerzeug auf dem Tisch lag.",
+  "ar": "كان ينبغي أن يكون مؤكَّدًا منذ وقت طويل أنّ هذا الطعام الدسم غير صحّي، بينما كانت الولّاعة على الطاولة.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "feststehen",
+   "fett",
+   "das Feuerzeug"
+  ]
+ },
+ {
+  "id": "s-r316b1-6",
+  "level": "B1",
+  "de": "Auf dem Teppich war ein dunkler Fleck, seit die Katze bei der Flucht vor dem Hund fliehen musste.",
+  "ar": "كانت هناك بقعة داكنة على السجّادة، منذ أن اضطرّت القطّة إلى الهروب والفرار من الكلب.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Fleck",
+   "die Flucht",
+   "fliehen"
+  ]
+ },
+ {
+  "id": "s-r316b1-7",
+  "level": "B1",
+  "de": "Im Forum empfahl jemand, diese Flüssigkeit mit einer frischen Frucht zu mischen.",
+  "ar": "نصح أحدهم في المنتدى بمزج هذا السائل بثمرة طازجة.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Forum",
+   "die Flüssigkeit",
+   "die Frucht"
+  ]
+ },
+ {
+  "id": "s-r316b1-8",
+  "level": "B1",
+  "de": "Nach dem Besuch der Galerie brachte sie den Schlüssel zum Fundbüro, bevor sie zu Hause die Katze füttern musste.",
+  "ar": "بعد زيارة صالة العرض أحضرت المفتاح إلى مكتب المفقودات، قبل أن تضطرّ إلى إطعام القطّة في البيت.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Galerie",
+   "das Fundbüro",
+   "füttern"
+  ]
+ },
+ {
+  "id": "s-r316b1-9",
+  "level": "B1",
+  "de": "Das Gasthaus konnte eine saubere Garderobe garantieren.",
+  "ar": "استطاع النزل أن يضمن خزانة ملابس نظيفة.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Gasthaus",
+   "die Garderobe",
+   "garantieren"
+  ]
+ },
+ {
+  "id": "s-r316b1-10",
+  "level": "B1",
+  "de": "In dieser Gaststätte am Fuß des Gebirges sollte ihr Kind eigentlich geboren werden.",
+  "ar": "كان من المفترض أن يولد طفلها في هذا المطعم عند سفح السلسلة الجبلية.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Gaststätte",
+   "das Gebirge",
+   "geboren werden"
+  ]
+ },
+ {
+  "id": "s-r316b1-11",
+  "level": "B1",
+  "de": "Die Gebrauchsanweisung für diesen Gegenstand lag zufällig auf dem Gehsteig.",
+  "ar": "كان دليل استخدام هذا الغرض موجودًا بالصدفة على الرصيف.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Gebrauchsanweisung",
+   "der Gegenstand",
+   "der Gehsteig"
+  ]
+ },
+ {
+  "id": "s-r316b1-12",
+  "level": "B1",
+  "de": "Niemand kannte das Geschlecht des Fahrers, als der Unfall trotz der Geschwindigkeitsbeschränkung geschehen konnte.",
+  "ar": "لم يعرف أحد جنس السائق عندما أمكن أن يحدث الحادث رغم تحديد السرعة القصوى.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "geschehen",
+   "die Geschwindigkeitsbeschränkung",
+   "das Geschlecht"
+  ]
+ },
+ {
+  "id": "s-r316b1-13",
+  "level": "B1",
+  "de": "Gespannt wartete sie auf den Glückwunsch ihrer Freundin und antwortete am Ende nur mit gleichfalls.",
+  "ar": "انتظرت بتحمّس تهنئة صديقتها وردّت في النهاية فقط بكلمة ولك بالمثل.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "gespannt",
+   "der Glückwunsch",
+   "gleichfalls"
+  ]
+ },
+ {
+  "id": "s-r316b1-14",
+  "level": "B1",
+  "de": "Zur Gratulation bekam der Gewinner eine Medaille aus Gold, nachdem er die Golf-Meisterschaft gewonnen hatte.",
+  "ar": "حصل الفائز على ميدالية من الذهب تهنئةً له، بعد أن فاز ببطولة الغولف.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Gratulation",
+   "das Gold",
+   "das Golf"
+  ]
+ },
+ {
+  "id": "s-r316b1-15",
+  "level": "B1",
+  "de": "Wegen der Grippe konnte sie weder aus dem Fenster gucken noch ihre Gymnastik machen.",
+  "ar": "بسبب الإنفلونزا لم تستطع أن تنظر من النافذة ولا أن تمارس تمارين الجمباز.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Grippe",
+   "gucken",
+   "die Gymnastik"
+  ]
+ },
+ {
+  "id": "s-r316b1-16",
+  "level": "B1",
+  "de": "Als es draußen anfing zu hageln, bereitete sie drinnen Hackfleisch und ein Hühnchen zu.",
+  "ar": "عندما بدأ البَرَد يتساقط في الخارج، حضّرت في الداخل لحمًا مفرومًا ودجاجة.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "hageln",
+   "das Hackfleisch",
+   "das Hühnchen"
+  ]
+ },
+ {
+  "id": "s-r316b1-17",
+  "level": "B1",
+  "de": "Seit sie halbtags arbeitet, geht sie öfter ins Hallenbad und repariert mit einem Hammer das Regal.",
+  "ar": "منذ أن تعمل لنصف الدوام، تذهب إلى المسبح المغطّى أكثر وتصلح الرفّ بمطرقة.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "halbtags",
+   "das Hallenbad",
+   "der Hammer"
+  ]
+ },
+ {
+  "id": "s-r316b1-18",
+  "level": "B1",
+  "de": "Häufig reist er heimlich in die Hauptstadt, ohne es seiner Familie zu sagen.",
+  "ar": "كثيرًا ما يسافر سرًّا إلى العاصمة دون أن يخبر عائلته.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "häufig",
+   "heimlich",
+   "die Hauptstadt"
+  ]
+ },
+ {
+  "id": "s-r316b1-19",
+  "level": "B1",
+  "de": "Der Held des Buches wollte herausfinden, welcher Hersteller die Maschine gebaut hatte.",
+  "ar": "أراد بطل الكتاب أن يكتشف أيّة شركة مصنِّعة صنعت الآلة.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Held / die Heldin",
+   "herausfinden",
+   "der Hersteller"
+  ]
+ },
+ {
+  "id": "s-r316b1-20",
+  "level": "B1",
+  "de": "Bevor du hierher kommst, solltest du den Computer herunterfahren und das alte Papier nicht einfach hinunterwerfen.",
+  "ar": "قبل أن تأتي إلى هنا، ينبغي أن تُطفئ الحاسوب وألّا ترمي الورق القديم إلى الأسفل ببساطة.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "hierher",
+   "herunterfahren",
+   "hinunterwerfen"
+  ]
+ },
+ {
+  "id": "s-r316b1-21",
+  "level": "B1",
+  "de": "Er wollte eine Nachricht hinterlassen und lief hinterher los, um noch etwas Holz zu holen.",
+  "ar": "أراد أن يترك رسالة ثمّ أسرع بعد ذلك لإحضار بعض الخشب.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "hinterlassen",
+   "hinterher",
+   "das Holz"
+  ]
+ },
+ {
+  "id": "s-r316b1-22",
+  "level": "B1",
+  "de": "Der Honig schmeckte süß, die kleine Küche sah hübsch aus, und der Gastgeber hatte viel Humor.",
+  "ar": "كان طعم العسل حلوًا، وبدا المطبخ الصغير جميلًا، وكان لدى المضيف روح دعابة كبيرة.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Honig",
+   "hübsch",
+   "der Humor"
+  ]
+ },
+ {
+  "id": "s-r316b1-23",
+  "level": "B1",
+  "de": "Das Boot wollte kurz hupen, bevor es im Hafen anlegte, ganz in der Nähe der kleinen Hütte am Strand.",
+  "ar": "أراد القارب أن يستعمل بوقه للحظة قبل أن يرسو في الميناء، قرب الكوخ الصغير على الشاطئ.",
+  "tags": [
+   "r316-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "hupen",
+   "die Hütte",
+   "der Hafen"
+  ]
+ },
+ {
+  "id": "s-r317b1-1",
+  "level": "B1",
+  "de": "Der Zoll stoppte den illegalen Import direkt vor dem Imbiss.",
+  "ar": "أوقفت الجمارك الاستيراد غير القانوني أمام مطعم الوجبات السريعة مباشرة.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "illegal",
+   "der Imbiss",
+   "der Import"
+  ]
+ },
+ {
+  "id": "s-r317b1-2",
+  "level": "B1",
+  "de": "Im Inserat für den Intensivkurs geht es um interkulturelle Kommunikation.",
+  "ar": "يتعلّق الإعلان عن الدورة المكثّفة بالتواصل بين الثقافات.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Inserat",
+   "der Intensivkurs",
+   "interkulturell"
+  ]
+ },
+ {
+  "id": "s-r317b1-3",
+  "level": "B1",
+  "de": "Man kann sich bei der Wahl irgendeines Weges irren, selbst wenn er ideal erscheint.",
+  "ar": "قد يُخطئ المرء في اختيار أيِّ طريقٍ، حتى لو بدا مثاليًّا.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "irgendein",
+   "sich irren",
+   "ideal"
+  ]
+ },
+ {
+  "id": "s-r317b1-4",
+  "level": "B1",
+  "de": "Jederzeit kann man die Kabine nutzen, die Gäste wechseln sich jeweils ab.",
+  "ar": "يمكن استخدام المقصورة في أيِّ وقت، ويتناوب الضيوف عليها في كلِّ مرّة.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "jederzeit",
+   "jeweils",
+   "die Kabine"
+  ]
+ },
+ {
+  "id": "s-r317b1-5",
+  "level": "B1",
+  "de": "Im Kaffeehaus trinkt er heißen Kakao und kämpft innerlich gegen den Stress.",
+  "ar": "في المقهى يشرب كاكاو ساخنًا ويكافح داخليًّا ضدّ التوتّر.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Kaffeehaus",
+   "der Kakao",
+   "kämpfen"
+  ]
+ },
+ {
+  "id": "s-r317b1-6",
+  "level": "B1",
+  "de": "Er wollte nicht den Kanal wechseln oder sein Spielzeug kaputtmachen, während er eine Karotte aß.",
+  "ar": "لم يُرِد تغيير القناة أو إتلاف لعبته بينما كان يأكل جزرة.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Kanal",
+   "kaputtmachen",
+   "die Karotte"
+  ]
+ },
+ {
+  "id": "s-r317b1-7",
+  "level": "B1",
+  "de": "Mit der Chipkarte bezahlte sie den alten Katalog und eine Kassette im Laden.",
+  "ar": "دفعت بالبطاقة الذكية ثمن الكتالوج القديم وشريط كاسيت في المتجر.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Chipkarte",
+   "die Kassette",
+   "der Katalog"
+  ]
+ },
+ {
+  "id": "s-r317b1-8",
+  "level": "B1",
+  "de": "Nach der Katastrophe zündeten die Menschen eine Kerze vor dem Kiosk an.",
+  "ar": "بعد الكارثة أشعل الناس شمعةً أمام الكشك.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Katastrophe",
+   "die Kerze",
+   "der Kiosk"
+  ]
+ },
+ {
+  "id": "s-r317b1-9",
+  "level": "B1",
+  "de": "Während die Klimaanlage lief, hörte sie das Telefon klingeln und griff nach dem Kissen.",
+  "ar": "بينما كان المكيّف يعمل، سمعت الهاتف يرنّ وأمسكت بالوسادة.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Kissen",
+   "die Klimaanlage",
+   "klingeln"
+  ]
+ },
+ {
+  "id": "s-r317b1-10",
+  "level": "B1",
+  "de": "In der Kneipe erzählte er klug, warum der Kloß so besonders schmeckt.",
+  "ar": "في الحانة حكى بذكاءٍ لماذا كُبّة العجين لذيذةٌ بشكلٍ خاصّ.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Kloß",
+   "klug",
+   "die Kneipe"
+  ]
+ },
+ {
+  "id": "s-r317b1-11",
+  "level": "B1",
+  "de": "Beim Gespräch im Konsulat ging es um gute Kommunikation und sogar um Knödel aus der Heimat.",
+  "ar": "في الحديث داخل القنصلية دار الكلام عن التواصل الجيّد وحتى عن كُبّة الوطن.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Knödel",
+   "die Kommunikation",
+   "das Konsulat"
+  ]
+ },
+ {
+  "id": "s-r317b1-12",
+  "level": "B1",
+  "de": "Sie wollte die Seite korrekt kopieren, aber der Kopierer war kaputt.",
+  "ar": "أرادت نسخ الصفحة بشكلٍ صحيح، لكنّ آلة النسخ كانت معطّلة.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "kopieren",
+   "der Kopierer",
+   "korrekt"
+  ]
+ },
+ {
+  "id": "s-r317b1-13",
+  "level": "B1",
+  "de": "Im Korridor parkte ein kleines Kraftfahrzeug, das der Künstler kreativ bemalt hatte.",
+  "ar": "في الممرّ كانت تقف مركبةٌ آليّة صغيرة رسمها الفنّان بإبداع.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Korridor",
+   "das Kraftfahrzeug",
+   "kreativ"
+  ]
+ },
+ {
+  "id": "s-r317b1-14",
+  "level": "B1",
+  "de": "Die Kriminalpolizei notierte alles mit einem Kugelschreiber, nicht mit einem Kuli.",
+  "ar": "دوّنت الشرطة الجنائية كلَّ شيءٍ بقلم حبرٍ جافٍّ رسمي، لا بقلمٍ عاديّ.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Kriminalpolizei",
+   "der Kugelschreiber",
+   "der Kuli"
+  ]
+ },
+ {
+  "id": "s-r317b1-15",
+  "level": "B1",
+  "de": "Der Kursleiter erklärte, wie man Kunststoff in der engen Kurve richtig verarbeitet.",
+  "ar": "شرح مدرّب الدورة كيفية معالجة البلاستيك بشكلٍ صحيح في المنعطف الضيّق.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "der Kunststoff",
+   "der Kursleiter / die Kursleiterin",
+   "die Kurve"
+  ]
+ },
+ {
+  "id": "s-r317b1-16",
+  "level": "B1",
+  "de": "Kürzlich wollte er seine Frau küssen, obwohl sich die Kinder dabei langweilten.",
+  "ar": "أراد مؤخَّرًا أن يُقبِّل زوجته، رغم أنّ الأطفال شعروا بالملل حينها.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "kürzlich",
+   "küssen",
+   "sich langweilen"
+  ]
+ },
+ {
+  "id": "s-r317b1-17",
+  "level": "B1",
+  "de": "Das Laufwerk war kaputt, der Lautsprecher knackte, und die Tasche aus Leder lag daneben.",
+  "ar": "كان محرّك الأقراص معطّلًا، ومكبّر الصوت يُصدر طقطقة، والحقيبة الجلديّة موضوعةٌ بجانبهما.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "das Laufwerk",
+   "der Lautsprecher",
+   "das Leder"
+  ]
+ },
+ {
+  "id": "s-r317b1-18",
+  "level": "B1",
+  "de": "Sie suchte eine Lehrstelle, schlug dabei im Lexikon nach und fuhr dann mit dem Lift nach oben.",
+  "ar": "بحثت عن مكان تدريبٍ مهنيّ، وراجعت المعجم، ثمّ صعدت بالمصعد.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Lehrstelle",
+   "das Lexikon",
+   "der Lift"
+  ]
+ },
+ {
+  "id": "s-r317b1-19",
+  "level": "B1",
+  "de": "Bevor sie losfahren wollten, tranken sie Limonade und wischten sich die Lippen ab.",
+  "ar": "قبل أن يرغبوا في الانطلاق، شربوا الليموناضة ومسحوا شفاههم.",
+  "tags": [
+   "r317-b1-gap"
+  ],
+  "neu": true,
+  "waisen": [
+   "die Limonade",
+   "die Lippe",
+   "losfahren"
+  ]
+ },
+ {
+  "id": "s-r318b1-01",
+  "de": "Das Magazin erzählte ein Märchen über die alte Mauer am Rande der Metropole.",
+  "ar": "حكت المجلّة حكايةً خرافيّةً عن الجدار القديم على أطراف المدينة الكبرى.",
+  "level": "B1",
+  "waisen": [
+   "das Magazin",
+   "das Märchen",
+   "die Mauer",
+   "die Metropole"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-02",
+  "de": "Mageres Fleisch mit frischer Möhre und etwas Margarine schmeckt minimal besser.",
+  "ar": "لحمٌ قليل الدهن مع جزرةٍ طازجة وقليلٍ من المرغرين طعمه أفضل بشكلٍ طفيف.",
+  "level": "B1",
+  "waisen": [
+   "mager",
+   "die Möhre",
+   "die Margarine",
+   "minimal"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-03",
+  "de": "Wegen der Marmelade vergaß sie meinetwegen das Menü für das Müsli zu bestellen.",
+  "ar": "بسبب المربّى نسيت أن تطلب قائمة الوجبات للموسلي من أجلي.",
+  "level": "B1",
+  "waisen": [
+   "die Marmelade",
+   "meinetwegen",
+   "das Menü",
+   "das Müsli"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-04",
+  "de": "Der merkwürdige Metzger verkauft teures Metall neben dem kleinen Ofen.",
+  "ar": "الجزّار الغريب يبيع معدنًا غاليًا بجوار الفرن الصغير.",
+  "level": "B1",
+  "waisen": [
+   "merkwürdig",
+   "der Metzger",
+   "das Metall",
+   "der Ofen"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-05",
+  "de": "Die Migrantin erklärte der neuen Mitarbeiterin, wie man sich mündlich mitteilt.",
+  "ar": "شرحت المهاجرة للموظّفة الجديدة كيف يُعبّر المرء عن نفسه شفهيًّا.",
+  "level": "B1",
+  "waisen": [
+   "die Migrantin",
+   "die Mitarbeiterin",
+   "mündlich",
+   "mitteilen"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-06",
+  "de": "Nach der missverstandenen Migration gründete sie eine Organisation für musikalische Kinder.",
+  "ar": "بعد الهجرة التي أُسيء فهمها، أسست منظّمةً للأطفال الموسيقيين.",
+  "level": "B1",
+  "waisen": [
+   "missverstanden",
+   "die Migration",
+   "die Organisation",
+   "musikalisch"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-07",
+  "de": "Der Monitor neben dem Motor zeigte, dass das Motorrad durch die Müllabfuhr blockiert war.",
+  "ar": "أظهرت الشاشة بجوار المحرّك أنّ الدرّاجة النارية محجوبة بسيارة النفايات.",
+  "level": "B1",
+  "waisen": [
+   "der Monitor",
+   "der Motor",
+   "das Motorrad",
+   "die Müllabfuhr"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-08",
+  "de": "Mit viel Mühe sammelte sie seltene Münzen und wollte über die Preise nachdenken.",
+  "ar": "بجهدٍ كبيرٍ جمعت عملاتٍ نادرةً وأرادت التفكير في الأسعار.",
+  "level": "B1",
+  "waisen": [
+   "die Mühe",
+   "die Münze",
+   "nachdenken"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-09",
+  "de": "Für den Nachwuchs kaufte der Verein neue Nahrungsmittel und stellte einen jungen Neffen ein.",
+  "ar": "من أجل الجيل القادم، اشترى النادي موادًّا غذائيةً جديدةً ووظّف ابن أخٍ شابٍ.",
+  "level": "B1",
+  "waisen": [
+   "der Nachwuchs",
+   "das Nahrungsmittel",
+   "der Neffe"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-10",
+  "de": "Die Neuigkeit war nämlich negativ, aber der niedrige Preis blieb offenbar unverändert.",
+  "ar": "كان الخبر الجديد سلبيًّا في الواقع، لكنّ السعر المنخفض بدا دون تغيير.",
+  "level": "B1",
+  "waisen": [
+   "die Neuigkeit",
+   "nämlich",
+   "negativ",
+   "niedrig",
+   "offenbar"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-11",
+  "de": "Nochmals erklärte die Nichte dem Nichtraucher, wie man das Rezept nochmal kocht.",
+  "ar": "شرحت ابنة الأخ لغير المدخّن مجدّدًا كيف يُعاد طبخ الوصفة.",
+  "level": "B1",
+  "waisen": [
+   "die Nichte",
+   "der Nichtraucher / die Nichtraucherin",
+   "nochmal",
+   "nochmals"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-12",
+  "de": "Normalerweise backt der Opa mit dem Ofen frisches Brot für das fröhliche Picknick.",
+  "ar": "عادةً يخبز الجدّ خبزًا طازجًا في الفرن للنزهة المبهجة.",
+  "level": "B1",
+  "waisen": [
+   "normalerweise",
+   "der Opa",
+   "der Ofen",
+   "das Picknick"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-13",
+  "de": "Die Pille und das Pflaster halfen der Patientin nach dem kleinen Eingriff im Krankenhaus.",
+  "ar": "ساعدت الحبّة واللاصقة المريضة بعد العملية الصغيرة في المستشفى.",
+  "level": "B1",
+  "waisen": [
+   "die Pille",
+   "das Pflaster",
+   "die Patientin"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-14",
+  "de": "Der Pilz neben der welken Pflanze wuchs parallel zum alten Zaun im Garten.",
+  "ar": "نما الفطر بجوار النبتة الذابلة بمحاذاة السياج القديم في الحديقة.",
+  "level": "B1",
+  "waisen": [
+   "der Pilz",
+   "die Pflanze",
+   "parallel"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-15",
+  "de": "Sein Pech mit der Pension brachte ihn dazu, den Beruf des Piloten populär zu finden.",
+  "ar": "سوء حظّه مع بيت الضيافة جعله يجد مهنة الطيّار رائجة.",
+  "level": "B1",
+  "waisen": [
+   "das Pech",
+   "die Pension",
+   "populär"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-16",
+  "de": "Der Ozean war so gewaltig, dass die Passagiere und Piloten den Flug parallel planten.",
+  "ar": "كان المحيط هائلًا لدرجة أنّ الركّاب والطيّارين خطّطوا للرحلة بشكلٍ متوازٍ.",
+  "level": "B1",
+  "waisen": [
+   "der Ozean",
+   "der Passagier / die Passagierin",
+   "parallel"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-17",
+  "de": "Die Personalien auf dem neuen Personenstand zeigten, dass er als Praktikant bei der Post arbeitete.",
+  "ar": "أظهرت البيانات الشخصية في الحالة المدنية الجديدة أنّه عمل كمتدرّبٍ في البريد.",
+  "level": "B1",
+  "waisen": [
+   "die Personalien",
+   "der Personenstand",
+   "der Praktikant / die Praktikantin"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-18",
+  "de": "Das Portemonnaie lag neben der zerrissenen Pflaume auf dem bunten Pullover der Puppe.",
+  "ar": "كانت المحفظة بجوار البرقوقة الممزّقة على سترة الدمية الملونة.",
+  "level": "B1",
+  "waisen": [
+   "das Portemonnaie",
+   "die Pflaume",
+   "der Pullover",
+   "die Puppe"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-19",
+  "de": "Sie will Ergebnisse präsentieren, Artikel für die Presse produzieren und die Produktion leiten.",
+  "ar": "تريد أن تعرض النتائج، وتُنتج مقالاتٍ للصحافة، وتدير الإنتاج.",
+  "level": "B1",
+  "waisen": [
+   "präsentieren",
+   "die Presse",
+   "produzieren",
+   "die Produktion"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r318b1-20",
+  "de": "Der Profisportler bleibt trotz Niederlage optimistisch und nutzt jede Pause zum Trainieren.",
+  "ar": "يظلّ الرياضيّ المحترف متفائلًا رغم الهزيمة ويستغلّ كلّ استراحةٍ للتدريب.",
+  "level": "B1",
+  "waisen": [
+   "der Profisportler / die Profisportlerin",
+   "optimistisch",
+   "nutzen"
+  ],
+  "tags": [
+   "r318-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r319b1-01",
+  "level": "B1",
+  "de": "Quer über den frischen Rasen will sich der junge Mann rasieren, und der Ratschlag seiner Schwester hilft ihm dabei.",
+  "ar": "يريد الشابّ أن يحلق ذقنه عبر العشب الطازج بشكلٍ مائل، وتساعده نصيحة أخته في ذلك.",
+  "waisen": [
+   "quer",
+   "der Rasen",
+   "sich rasieren",
+   "der Ratschlag"
+  ],
+  "tags": [
+   "r319-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r319b1-02",
+  "level": "B1",
+  "de": "Er will seinen Traum realisieren und hofft, dass die Realität seinem Referat entspricht.",
+  "ar": "يريد تحقيق حلمه ويأمل أن يطابق الواقع عرضه التقديمي.",
+  "waisen": [
+   "realisieren",
+   "die Realität",
+   "das Referat"
+  ],
+  "tags": [
+   "r319-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r319b1-03",
+  "level": "B1",
+  "de": "Die Reklame für die neue Reportage ist relativ teuer und überall sichtbar.",
+  "ar": "إعلان التقرير الجديد غالٍ نسبيًّا ومرئيٌّ في كلّ مكان.",
+  "waisen": [
+   "die Reklame",
+   "relativ",
+   "die Reportage"
+  ],
+  "tags": [
+   "r319-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r319b1-04",
+  "level": "B1",
+  "de": "Der Reporter freut sich über das riesige Interesse und gibt seine Rufnummer weiter.",
+  "ar": "يفرح المراسل بالاهتمام الضخم ويمرّر رقم هاتفه.",
+  "waisen": [
+   "der Reporter / die Reporterin",
+   "riesig",
+   "die Rufnummer"
+  ],
+  "tags": [
+   "r319-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r320b1-01",
+  "level": "B1",
+  "de": "In dieser Saison serviert der Salon sämtlich frische Schlagsahne.",
+  "ar": "في هذا الموسم يقدّم الصالون كل الكريمة المخفوقة الطازجة.",
+  "waisen": [
+   "die Schlagsahne",
+   "die Saison",
+   "der Salon",
+   "sämtlich"
+  ],
+  "tags": [
+   "r320-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r320b1-02",
+  "level": "B1",
+  "de": "Die Schachtel steht im Schatten und zeigt das bunte Schaufenster.",
+  "ar": "العلبة تقف في الظلّ وتُظهر واجهة العرض الملوّنة.",
+  "waisen": [
+   "die Schachtel",
+   "der Schatten",
+   "das Schaufenster"
+  ],
+  "tags": [
+   "r320-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r320b1-03",
+  "level": "B1",
+  "de": "Er will nicht schießen und isst lieber ein Schnitzel gegen den Schnupfen.",
+  "ar": "لا يريد أن يطلق النار ويفضّل أكل شريحة لحم ضدّ الزكام.",
+  "waisen": [
+   "schießen",
+   "das Schnitzel",
+   "der Schnupfen"
+  ],
+  "tags": [
+   "r320-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r320b1-04",
+  "level": "B1",
+  "de": "Wegen der Schwangerschaft muss sie oft den Kopf schütteln und schwitzt stark.",
+  "ar": "بسبب الحمل يجب أن تهزّ رأسها كثيرًا وتعرق بشدّة.",
+  "waisen": [
+   "schütteln",
+   "die Schwangerschaft",
+   "schwitzen"
+  ],
+  "tags": [
+   "r320-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r320b1-05",
+  "level": "B1",
+  "de": "Die Sekretärin hilft selbstverständlich den Senioren im Büro.",
+  "ar": "تساعد السكرتيرة كبار السنّ في المكتب بشكلٍ بديهي.",
+  "waisen": [
+   "der Sekretär / die Sekretärin",
+   "selbstverständlich",
+   "die Senioren"
+  ],
+  "tags": [
+   "r320-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r320b1-06",
+  "level": "B1",
+  "de": "Die Spieler stehen senkrecht und wollen als Siegerin siegen.",
+  "ar": "اللاعبون يقفون عموديًّا ويريدون الفوز كفائزين.",
+  "waisen": [
+   "senkrecht",
+   "siegen",
+   "der Sieger / die Siegerin"
+  ],
+  "tags": [
+   "r320-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r320b1-07",
+  "level": "B1",
+  "de": "Alle müssen sich siezen, aber das ist sinnlos für die sogenannte Lösung.",
+  "ar": "يجب على الجميع مخاطبة بعضهم بصيغة رسمية، لكنّ ذلك بلا جدوى للحلّ المزعوم.",
+  "waisen": [
+   "siezen",
+   "sinnlos",
+   "sogenannt"
+  ],
+  "tags": [
+   "r320-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r321b1-01",
+  "level": "B1",
+  "de": "Er sorgt sich sogar solange er sonst soviel arbeitet, sondern kauft sowieso ein Souvenir.",
+  "ar": "هو قلقٌ حتى طالما يعمل كثيرًا في أوقات أخرى، بل يشتري تذكارًا على أيّ حال.",
+  "waisen": [
+   "sogar",
+   "solange",
+   "sondern",
+   "sonst",
+   "sorgen",
+   "das Souvenir",
+   "soviel",
+   "sowieso"
+  ],
+  "tags": [
+   "r321-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r321b1-02",
+  "level": "B1",
+  "de": "Sowohl als auch sozial engagierte Sozialarbeiter haben spätestens nach dem Spaziergang im Speisewagen mit dem Spezialisten viel Spaß.",
+  "ar": "سواءً هذا أو ذاك، الأخصائيون الاجتماعيون المنخرطون اجتماعيًّا يقضون وقتًا ممتعًا على أبعد تقدير بعد النزهة في عربة الطعام مع الأخصائي.",
+  "waisen": [
+   "sowohl als auch",
+   "sozial",
+   "der Sozialarbeiter / die Sozialarbeiterin",
+   "der Spaß",
+   "spätestens",
+   "der Spaziergang",
+   "der Speisewagen",
+   "der Spezialist / die Spezialistin"
+  ],
+  "tags": [
+   "r321-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r321b1-03",
+  "level": "B1",
+  "de": "Der Spieler zeigt vor dem Spiegel auf dem Spielplatz mit dem Spielzeug eine spitze Aktion, während der Sportler als Sportart der Spur folgt.",
+  "ar": "يُظهر اللاعب أمام المرآة في ملعب اللعب باللعبة حركةً مدبّبةً، بينما يتّبع الرياضي الأثر كنوعٍ رياضي.",
+  "waisen": [
+   "der Spiegel",
+   "der Spieler / die Spielerin",
+   "der Spielplatz",
+   "das Spielzeug",
+   "spitz",
+   "die Sportart",
+   "der Sportler / die Sportlerin",
+   "die Spur"
+  ],
+  "tags": [
+   "r321-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r321b1-04",
+  "level": "B1",
+  "de": "Im städtischen Stadion spüren wir ständig starken Wind, bevor wir starten und den Start statistisch erfassen.",
+  "ar": "في الملعب الحضري نشعر برياحٍ قويةٍ باستمرار قبل أن ننطلق ونسجّل الانطلاقة إحصائيًّا.",
+  "waisen": [
+   "spüren",
+   "das Stadion",
+   "städtisch",
+   "ständig",
+   "stark",
+   "starten",
+   "der Start",
+   "statistisch"
+  ],
+  "tags": [
+   "r321-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r321b1-05",
+  "level": "B1",
+  "de": "Der Stecker steckt in der Steckdose und könnte stechen, aber wir bleiben stehen und der Steward gibt dem Mann, der stehlen wollte, einen Stempel.",
+  "ar": "القابس عالقٌ في المقبس وقد يلسع، لكننا نبقى واقفين والمضيف يعطي الرجل الذي أراد السرقة ختمًا.",
+  "waisen": [
+   "stechen",
+   "stecken",
+   "die Steckdose",
+   "der Stecker",
+   "stehen bleiben",
+   "stehlen",
+   "der Stempel",
+   "der Steward / die Stewardess"
+  ],
+  "tags": [
+   "r321-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r321b1-06",
+  "level": "B1",
+  "de": "Stilistisch still zu stimmen ist schwer, wenn es stinkt, der Zug nicht stoppt und der Nachbar stört, sodass man sich leicht stoßen kann, was strafbar sein kann.",
+  "ar": "من الصعب الموافقة بأسلوبٍ هادئ عندما تفوح رائحة كريهة ولا يتوقّف القطار ويزعج الجار، فيسهل أن تصطدم، وقد يكون ذلك معاقَبًا عليه.",
+  "waisen": [
+   "stilistisch",
+   "still",
+   "stimmen",
+   "stinken",
+   "stoppen",
+   "stören",
+   "sich stoßen",
+   "strafbar"
+  ],
+  "tags": [
+   "r321-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r321b1-07",
+  "level": "B1",
+  "de": "Das Streichholz ist streng verboten, doch der Student strickt einen warmen Strumpf für die Studierende im Studio, bleibt stumm und stürzt fast.",
+  "ar": "عود الثقاب ممنوعٌ بصرامة، لكنّ الطالب يحيك جوربًا دافئًا للطالبة في الاستوديو ويبقى صامتًا ويكاد يسقط.",
+  "waisen": [
+   "das Streichholz",
+   "streng",
+   "der Strumpf",
+   "der Student / die Studentin",
+   "der Studierende / die Studierende",
+   "das Studio",
+   "stumm",
+   "stürzen"
+  ],
+  "tags": [
+   "r321-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r321b1-08",
+  "level": "B1",
+  "de": "Die Summe für das Suchtmittel wird mit einem Symbol im System erklärt.",
+  "ar": "يُشرح المبلغ للمادة المسبّبة للإدمان برمزٍ في النظام.",
+  "waisen": [
+   "das Suchtmittel",
+   "die Summe",
+   "das Symbol",
+   "das System"
+  ],
+  "tags": [
+   "r321-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322b1-01",
+  "level": "B1",
+  "de": "Die Tabelle zeigt den Tagesablauf des Talents an der Tankstelle nach dem Tanz mit Taschentuch, Taste und Tat.",
+  "ar": "يُظهر الجدول روتين يوم الموهوب في محطّة الوقود بعد الرقص مع المنديل وزرّ والفعل.",
+  "waisen": [
+   "die Tabelle",
+   "der Tagesablauf",
+   "das Talent",
+   "die Tankstelle",
+   "der Tanz",
+   "das Taschentuch",
+   "die Taste",
+   "die Tat"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322b1-02",
+  "level": "B1",
+  "de": "Der Täter und die Täterin sprechen über die Tätigkeit, obwohl er taub ist, und sie tauchen und tauschen die Technik, die technisch ist.",
+  "ar": "يتحدّث الجاني والجانية عن النشاط رغم أنّه أصمّ، ويغوصان ويتبادلان التقنية التي هي تقنية.",
+  "waisen": [
+   "der Täter",
+   "die Täterin",
+   "die Tätigkeit",
+   "taub",
+   "tauchen",
+   "tauschen",
+   "die Technik",
+   "technisch"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322b1-03",
+  "level": "B1",
+  "de": "Die Technologie ist ein Teil des Projekts, wo der Teilnehmer und die Teilnehmerin am Telefon über Tempo, Teppich und Terminkalender sprechen.",
+  "ar": "التكنولوجيا جزء من المشروع حيث يتحدّث المشارك والمشاركة على الهاتف عن السرعة والسجّادة ومفكّرة المواعيد.",
+  "waisen": [
+   "die Technologie",
+   "der Teil",
+   "der Teilnehmer",
+   "die Teilnehmerin",
+   "das Telefon",
+   "das Tempo",
+   "der Teppich",
+   "der Terminkalender"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322b1-04",
+  "level": "B1",
+  "de": "Auf der Terrasse testen wir den Test zum Thema, das theoretisch ist, im Tierpark tippen wir kurz, trotz des Todes.",
+  "ar": "على الشرفة نختبر الاختبار حول الموضوع النظري، في حديقة الحيوانات نكتب بسرعة رغم الموت.",
+  "waisen": [
+   "die Terrasse",
+   "testen",
+   "der Test",
+   "das Thema",
+   "theoretisch",
+   "der Tierpark",
+   "tippen",
+   "der Tod"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322b1-05",
+  "level": "B1",
+  "de": "Das tödliche Tor für den Toten zeigt, dass Tourismus traditionell ist und die Trainerin mit der Tram eine Träne trocknet.",
+  "ar": "البوّابة القاتلة للمتوفّى تُظهر أنّ السياحة تقليدية وأنّ المدرّبة بالترام تجفّف دمعة.",
+  "waisen": [
+   "tödlich",
+   "das Tor",
+   "der Tote",
+   "der Tourismus",
+   "traditionell",
+   "die Trainerin",
+   "die Tram",
+   "die Träne"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322b1-06",
+  "level": "B1",
+  "de": "Wir transportieren den Transport zum Treffpunkt, treiben Sport, leben getrennt, treten trotz des Tuchs vor.",
+  "ar": "ننقل النقل إلى نقطة اللقاء، نمارس الرياضة، نعيش منفصلين، نتقدّم رغم القماش.",
+  "waisen": [
+   "transportieren",
+   "der Transport",
+   "der Treffpunkt",
+   "treiben",
+   "getrennt leben",
+   "treten",
+   "trotz",
+   "das Tuch"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322b1-07",
+  "level": "B1",
+  "de": "Was willst du am Turm mit der Tüte tun? Der Typ ist typisch neugierig.",
+  "ar": "ماذا تريد أن تفعل عند البرج بالكيس؟ ذلك النوع فضوليّ بشكل نموذجي.",
+  "waisen": [
+   "tun",
+   "der Turm",
+   "die Tüte",
+   "der Typ",
+   "typisch"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322u1-01",
+  "level": "B1",
+  "de": "Wer überfahren will, muss überhaupt nicht überlegen, sondern die Daten überprüfen und die Straße überqueren, denn die Überraschung kommt schnell.",
+  "ar": "من يريد أن يدهس يجب ألا يفكّر على الإطلاق بل يتحقّق من البيانات ويعبر الشارع لأنّ المفاجأة تأتي بسرعة.",
+  "waisen": [
+   "überfahren",
+   "überhaupt",
+   "überlegen",
+   "überprüfen",
+   "überqueren",
+   "die Überraschung",
+   "überreden"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322u1-02",
+  "level": "B1",
+  "de": "Die Überschrift der Übersetzerin ist üblich, aber übrig bleibt übrigens ein Gruß, wenn wir uns umarmen und das Blatt umdrehen.",
+  "ar": "عنوان المترجمة معتاد لكن يبقى بالمناسبة تحيّة حين نعانق ونقلب الورقة.",
+  "waisen": [
+   "die Überschrift",
+   "der Übersetzer",
+   "die Übersetzerin",
+   "üblich",
+   "übrig",
+   "übrigens",
+   "umarmen",
+   "umdrehen"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322u1-03",
+  "level": "B1",
+  "de": "Die Umgebung zeigt, wie man mit Stress umgeht: umgekehrt gilt umso mehr Einsatz, umsonst ist nichts, der Umweltschutz bleibt wichtig und man muss sich umziehen.",
+  "ar": "المحيط يُظهر كيف نتعامل مع الضغط: عكسيّاً، بقدر ما يزيد الجهد، ليس عبثاً، وحماية البيئة تبقى مهمّة ويجب تغيير الملابس.",
+  "waisen": [
+   "die Umgebung",
+   "umgehen",
+   "umgekehrt",
+   "umso",
+   "umsonst",
+   "der Umweltschutz",
+   "sich umziehen"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322u1-04",
+  "level": "B1",
+  "de": "Unbedingt musst du ungefähr abschätzen, ob das Wetter ungewöhnlich oder unglaublich ist, denn das Unglück wirkt unheimlich und die Uniform ist nass.",
+  "ar": "حتماً يجب أن تقدّر تقريباً إن كان الطقس غير عادي أو لا يُصدّق لأنّ المصيبة تبدو مخيفة والزيّ الرسمي مبتلّ.",
+  "waisen": [
+   "unbedingt",
+   "ungefähr",
+   "ungewöhnlich",
+   "unglaublich",
+   "das Unglück",
+   "unheimlich",
+   "die Uniform"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322u1-05",
+  "level": "B1",
+  "de": "Wir unterhalten uns, unterlassen Fehler, der Unternehmer und die Unternehmerin unterrichten täglich, obwohl Rauchen untersagt und Meinungen unterschiedlich sind.",
+  "ar": "نتحادث ونمتنع عن الأخطاء، رجل الأعمال وسيّدة الأعمال يُدرّسان يوميّاً رغم أنّ التدخين ممنوع والآراء مختلفة.",
+  "waisen": [
+   "unterhalten",
+   "unterlassen",
+   "der Unternehmer",
+   "die Unternehmerin",
+   "unterrichten",
+   "untersagt",
+   "unterschiedlich"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r322u1-06",
+  "level": "B1",
+  "de": "Bitte unterstreichen Sie den Text, denn unterwegs ist die Urkunde ursprünglich wichtig.",
+  "ar": "الرجاء وضع خطّ تحت النصّ لأنّ الوثيقة في الطريق مهمّة في الأصل.",
+  "waisen": [
+   "unterstreichen",
+   "unterwegs",
+   "die Urkunde",
+   "ursprünglich"
+  ],
+  "tags": [
+   "r322-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-01",
+  "level": "B1",
+  "de": "Die Vase steht bereit, wir verabreden uns, alles ist verabredet, wir verabschieden uns, verändern nichts und sind verantwortlich, doch die Verbrecherin fehlt.",
+  "ar": "المزهرية جاهزة، نتفق على موعد، كل شيء متفق عليه، نودّع، لا نغيّر شيئاً ونحن مسؤولون لكن المجرمة غائبة.",
+  "waisen": [
+   "die Vase",
+   "verabreden",
+   "verabredet",
+   "verabschieden",
+   "verändern",
+   "verantwortlich",
+   "die Verbrecherin"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-02",
+  "level": "B1",
+  "de": "Das Holz kann verbrennen, wir verbringen Zeit, der Verdacht bleibt, alles wirkt verdächtig, wir verfügen über Geld, vergeblich war der Vergleich nicht.",
+  "ar": "الخشب قد يحترق، نقضي وقتاً، الشك باقٍ، كل شيء يبدو مشبوهاً، نمتلك المال، المقارنة لم تكن عبثاً.",
+  "waisen": [
+   "verbrennen",
+   "verbringen",
+   "der Verdacht",
+   "verdächtig",
+   "verfügen",
+   "vergeblich",
+   "der Vergleich"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-03",
+  "level": "B1",
+  "de": "Wir vergnügen uns, das Vergnügen ist groß, alle sind vergnügt, wir vergrößern das Foto, die Polizei will verhaften, doch er verhält sich ruhig und das Verhalten ist gut.",
+  "ar": "نستمتع، المتعة كبيرة، الجميع مسرور، نكبّر الصورة، الشرطة تريد الاعتقال لكنه يتصرّف بهدوء وسلوكه جيّد.",
+  "waisen": [
+   "sich vergnügen",
+   "das Vergnügen",
+   "vergnügt",
+   "vergrößern",
+   "verhaften",
+   "sich verhalten",
+   "das Verhalten"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-04",
+  "level": "B1",
+  "de": "Das Verkehrszeichen ist neu, er verlangt Respekt, wir verlassen das Haus nicht, niemand wird verletzt, der Verlierer weint, die Verliererin auch, die Vermieterin hilft.",
+  "ar": "إشارة المرور جديدة، يطلب احتراماً، لا نغادر المنزل، لا أحد يُجرح، الخاسر يبكي، الخاسرة أيضاً، المؤجّرة تساعد.",
+  "waisen": [
+   "das Verkehrszeichen",
+   "verlangen",
+   "verlassen",
+   "verletzen",
+   "der Verlierer",
+   "die Verliererin",
+   "die Vermieterin"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-05",
+  "level": "B1",
+  "de": "Die Vermietung läuft, alles ist vernünftig, wir verpflegen die Gäste, er ist verpflichtet zu kommen, niemand will verraten, nichts ist verrückt und die Versammlung beginnt.",
+  "ar": "التأجير يسير، كل شيء معقول، نعتني بالضيوف، هو ملزم بالمجيء، لا أحد يريد الخيانة، لا شيء مجنون والاجتماع يبدأ.",
+  "waisen": [
+   "die Vermietung",
+   "vernünftig",
+   "verpflegen",
+   "verpflichtet",
+   "verraten",
+   "verrückt",
+   "die Versammlung"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-06",
+  "level": "B1",
+  "de": "Wir versäumen nichts, er verschwindet nicht, wir versichern das Haus, alles ist verständlich, wir verstecken nichts, verteilen Flyer und der Vertreter kommt.",
+  "ar": "لا نفوّت شيئاً، لا يختفي، نؤمّن المنزل، كل شيء مفهوم، لا نخبّئ شيئاً، نوزّع منشورات والممثل يأتي.",
+  "waisen": [
+   "versäumen",
+   "verschwinden",
+   "versichern",
+   "verständlich",
+   "verstecken",
+   "verteilen",
+   "der Vertreter"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-07",
+  "level": "B1",
+  "de": "Die Vertreterin spricht, das Gericht wird verurteilen, wir sind verwandt, bitte nicht verwechseln, wir verwenden Salz und bitten um Verzeihung, das Video läuft.",
+  "ar": "الممثلة تتحدث، المحكمة ستدين، نحن أقرباء، الرجاء عدم الخلط، نستخدم الملح ونطلب العفو، الفيديو يعمل.",
+  "waisen": [
+   "die Vertreterin",
+   "verurteilen",
+   "verwandt",
+   "verwechseln",
+   "verwenden",
+   "die Verzeihung",
+   "das Video"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-08",
+  "level": "B1",
+  "de": "Viele Leute sind da, das Treffen ist virtuell, der Virus ist weg, die Visitenkarte ist neu, das Vitamin hilft und alles ist völlig klar, wir lernen voneinander.",
+  "ar": "كثير من الناس موجودون، الاجتماع افتراضي، الفيروس ذهب، بطاقة الزيارة جديدة، الفيتامين يساعد وكل شيء واضح تماماً، نتعلّم من بعضنا.",
+  "waisen": [
+   "viele",
+   "virtuell",
+   "der Virus",
+   "die Visitenkarte",
+   "das Vitamin",
+   "völlig",
+   "voneinander"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-09",
+  "level": "B1",
+  "de": "Vor allem im Winter planen wir voraus, voraussichtlich bleibt es kalt, die Zeit ist nicht vorbei, wir haben viel vor, vorher war es warm und vorhin hat es geschneit.",
+  "ar": "خاصة في الشتاء نخطط مقدّماً، من المتوقع أن يبقى بارداً، الوقت لم ينته، لدينا خطط كثيرة، قبل ذلك كان دافئاً وقبل قليل ثلجت.",
+  "waisen": [
+   "vor allem",
+   "voraus",
+   "voraussichtlich",
+   "vorbei",
+   "vorhaben",
+   "vorher",
+   "vorhin"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r323b1-10",
+  "level": "B1",
+  "de": "Das kommt oft vor, vorn, vorne ist der Eingang, der Vorort ist schön, sei vorsichtig, wir stellen uns vor und der Vortrag beginnt.",
+  "ar": "هذا يحدث كثيراً، في الأمام المدخل، الضاحية جميلة، كن حذراً، نقدّم أنفسنا والمحاضرة تبدأ.",
+  "waisen": [
+   "vorkommen",
+   "vorn, vorne",
+   "der Vorort",
+   "vorsichtig",
+   "vorstellen",
+   "der Vortrag"
+  ],
+  "tags": [
+   "r323-b1-gap"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r324b1-01",
+  "de": "Mein Bruder will mich überreden, sein Vorhaben nicht zu vergessen, obwohl es oft vorkommen kann, dass er waagerecht arbeitet, wahnsinnig viel Waschmittel kauft und alte Papiere für wertlos hält.",
+  "ar": "يحاول أخي إقناعي ألّا أنسى خطّته، رغم أنّه قد يحدث كثيرًا أن يعمل أفقيًّا ويشتري كميةً هائلةً من مسحوق الغسيل ويعتبر الأوراق القديمة بلا قيمة.",
+  "level": "B1",
+  "tags": [
+   "b1-w"
+  ],
+  "waisen": [
+   "überreden",
+   "vorhaben",
+   "vorkommen",
+   "waagerecht",
+   "wahnsinnig",
+   "das Waschmittel",
+   "wertlos"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r324b1-02",
+  "de": "Der Wetterbericht und die Wettervorhersage zeigen, dass die Wirklichkeit der Aussage der Wissenschaftlerin entspricht, die an ihrem Wohnort einen wunderschön blühenden Garten hat und oft Wurst zum Frühstück isst.",
+  "ar": "تُظهر نشرة الطقس وتوقّع الطقس أنّ الواقع يطابق قول العالِمة التي لديها في مكان سكنها حديقةٌ مزهرةٌ جميلةٌ جدًّا وتأكل النقانق غالبًا على الفطور.",
+  "level": "B1",
+  "tags": [
+   "b1-w"
+  ],
+  "waisen": [
+   "der Wetterbericht",
+   "die Wettervorhersage",
+   "die Wirklichkeit",
+   "die Wissenschaftlerin",
+   "der Wohnort",
+   "wunderschön",
+   "die Wurst"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r325b1-01",
+  "de": "Trotz zahlreicher Probleme hat er die Zahncreme und die Zahnpasta mit der Zange aus dem Schrank geholt, bevor er in den Zirkus ging und dort eine Zitrone kaufte.",
+  "ar": "رغم المشاكل العديدة أخرج معجون الأسنان بشكليه بالكمّاشة من الخزانة قبل أن يذهب إلى السيرك ويشتري ليمونةً هناك.",
+  "level": "B1",
+  "tags": [
+   "b1-z"
+  ],
+  "waisen": [
+   "zahlreich",
+   "die Zahncreme",
+   "die Zahnpasta",
+   "die Zange",
+   "der Zirkus",
+   "die Zitrone"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r325b1-02",
+  "de": "Die Bibliothek ist leicht zugänglich, aber die Zuhörerin will das Fenster nicht zumachen, zumindest nicht jetzt, obwohl sie sonst gut zurechtkommen kann, aber heute zurückhaltend wirkt.",
+  "ar": "المكتبة سهلة الوصول، لكنّ المستمعة لا تريد إغلاق النافذة، على الأقلّ ليس الآن، رغم أنّها عادةً تتأقلم جيّدًا، لكنّها تبدو متحفّظةً اليوم.",
+  "level": "B1",
+  "tags": [
+   "b1-z"
+  ],
+  "waisen": [
+   "zugänglich",
+   "die Zuhörerin",
+   "zumachen",
+   "zumindest",
+   "zurechtkommen",
+   "zurückhaltend"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r325b1-03",
+  "de": "Beim Spiel wollen viele Kinder nur zuschauen, aber die Zuschauerin braucht die Zustimmung der Eltern, um Deutsch als Zweitsprache zu lernen, obwohl sie sich manchmal zwingen muss und niemand sie zwingen zu bleiben will.",
+  "ar": "في اللعبة يريد كثيرٌ من الأطفال المشاهدة فقط، لكنّ المتفرّجة تحتاج موافقة الوالدين لتتعلّم الألمانية كلغةٍ ثانيةٍ، رغم أنّها أحيانًا تضطرّ لإجبار نفسها ولا يريد أحدٌ إجبارها على البقاء.",
+  "level": "B1",
+  "tags": [
+   "b1-z"
+  ],
+  "waisen": [
+   "zuschauen",
+   "die Zuschauerin",
+   "die Zustimmung",
+   "die Zweitsprache",
+   "sich zwingen",
+   "zwingen zu"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r326b1-01",
+  "de": "Die Fachfrau schaut das Golfspiel, während die Lernerin der Pflegerin hilft, das Portmonee zu finden, das die Stewardess verloren hat.",
+  "ar": "تشاهد الخبيرة مباراة الغولف بينما تساعد المتعلّمة الممرّضة في العثور على المحفظة التي أضاعتها المضيفة.",
+  "level": "B1",
+  "tags": [
+   "b1-rest"
+  ],
+  "waisen": [
+   "die Fachfrau",
+   "das Golfspiel",
+   "die Lernerin",
+   "die Pflegerin",
+   "das Portmonee",
+   "die Stewardess"
+  ],
+  "neu": true
+ },
+ {
+  "id": "s-r327b1-01",
+  "de": "Nach dem Essen will er ausruhen und über Phantasie an der Reception bei Sauce mit dem Suchmittel sprechen.",
+  "ar": "بعد الأكل يريد أن يرتاح ويتحدّث عن الخيال في الاستقبال مع الصلصة بوسيلة البحث.",
+  "level": "B1",
+  "tags": [
+   "b1-final"
+  ],
+  "waisen": [
+   "ausruhen",
+   "die Phantasie",
+   "die Reception",
+   "die Sauce",
+   "das Suchmittel"
+  ],
+  "neu": true
  }
 ]
