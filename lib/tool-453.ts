@@ -1,6 +1,8 @@
 /**
- * 453 — أداة بيداغوجية مكتملة (تلقين / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 453 — Diagram Use — استخدام المخططات
+ * Larkin 1987: classroom application
+ * Level: A2-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_453 = { id: 453, family: "تلقين", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_453(): boolean { return true; }
+export const TOOL_453 = { id: 453, titleDe: "Diagram Use", titleAr: "استخدام المخططات", family: "طرائق", bloom: "فهم", level: "A2-B2", research: "Larkin 1987", desc: "Diagram Use" } as const;
+export function tool453Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool453Check(v:number):boolean{return v>0;}

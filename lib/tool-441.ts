@@ -1,6 +1,8 @@
 /**
- * 441 — أداة بيداغوجية مكتملة (SLA / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 441 — Usage-Based Acquisition — اكتساب قائم على الاستعمال
+ * Tomasello 2003: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_441 = { id: 441, family: "SLA", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_441(): boolean { return true; }
+export const TOOL_441 = { id: 441, titleDe: "Usage-Based Acquisition", titleAr: "اكتساب قائم على الاستعمال", family: "SLA", bloom: "فهم", level: "A1-B2", research: "Tomasello 2003", desc: "Usage-Based Acquisition" } as const;
+export function tool441Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool441Check(v:number):boolean{return v>0;}

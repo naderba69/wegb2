@@ -1,6 +1,8 @@
 /**
- * 446 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 446 — Metaphor Awareness — وعي الاستعارة
+ * Littlemore 2004: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_446 = { id: 446, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_446(): boolean { return true; }
+export const TOOL_446 = { id: 446, titleDe: "Metaphor Awareness", titleAr: "وعي الاستعارة", family: "طرائق", bloom: "حلّل", level: "B1-B2", research: "Littlemore 2004", desc: "Metaphor Awareness" } as const;
+export function tool446Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool446Check(v:number):boolean{return v>0;}

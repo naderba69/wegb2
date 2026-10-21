@@ -1,6 +1,8 @@
 /**
- * 432 — أداة بيداغوجية مكتملة (طرائق / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 432 — Cognition Hypothesis — فرضية الإدراك
+ * Robinson 2011: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_432 = { id: 432, family: "طرائق", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_432(): boolean { return true; }
+export const TOOL_432 = { id: 432, titleDe: "Cognition Hypothesis", titleAr: "فرضية الإدراك", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Robinson 2011", desc: "Cognition Hypothesis" } as const;
+export function tool432Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool432Check(v:number):boolean{return v>0;}

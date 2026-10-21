@@ -1,6 +1,8 @@
 /**
- * 459 — أداة بيداغوجية مكتملة (Ethik / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 459 — Questioning Taxonomy — تصنيف الأسئلة
+ * Bloom 1956: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_459 = { id: 459, family: "Ethik", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_459(): boolean { return true; }
+export const TOOL_459 = { id: 459, titleDe: "Questioning Taxonomy", titleAr: "تصنيف الأسئلة", family: "طرائق", bloom: "حلّل", level: "A1-B2", research: "Bloom 1956", desc: "Questioning Taxonomy" } as const;
+export function tool459Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool459Check(v:number):boolean{return v>0;}
