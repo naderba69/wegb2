@@ -136,6 +136,20 @@
 | 120 | Ethik | AI Transparency شفافية | ✅ | A0-B2 | قيّم | `lib/ai-tutor-transparency.ts` | R345 |
 
 **المجموع التراكمي: 120 / 1000 (12%) — 100 أساسية + 20 فرعية**
+
+### تفصيل 100 → 1000 — الدفعة R346 (121→130)
+| 121 | Memory | SRS Algorithm Compare مقارنة خوارزميات | ✅ | A0-B2 | قيّم | `lib/srs-algorithm-compare.ts` | R346 |
+| 122 | Memory | Desirable Difficulties صعوبات مرغوبة | ✅ | A0-B2 | طبّق | `lib/desirable-difficulties.ts` | R346 |
+| 123 | Memory | Interleaving Variations تنويع الخلط | ✅ | A0-B2 | طبّق | `lib/interleaving-var.ts` | R346 |
+| 124 | Memory | Elaborative Interrogation سؤال لماذا | ✅ | B1-B2 | حلّل | `lib/elaborative-interrogation.ts` | R346 |
+| 125 | Memory | Concrete Examples أمثلة ملموسة | ✅ | A0-B2 | فهم | `lib/concrete-examples.ts` | R346 |
+| 126 | Memory | Dual Coding Image صورة | ✅ | A0-B2 | تذكّر | `lib/dual-coding-image.ts` | R346 |
+| 127 | Memory | Dual Coding Audio صوت | ✅ | A0-B2 | تذكّر | `lib/dual-coding-audio.ts` | R346 |
+| 128 | Memory | Retrieval Free Recall حر | ✅ | B1-B2 | تذكّر | `lib/retrieval-free-recall.ts` | R346 |
+| 129 | Memory | Retrieval Cued Recall موجه | ✅ | A1-B2 | تذكّر | `lib/retrieval-cued-recall.ts` | R346 |
+| 130 | Memory | Retrieval Recognition تعرّف | ✅ | A0-B2 | تذكّر | `lib/retrieval-recognition.ts` | R346 |
+
+**المجموع التراكمي: 130 / 1000 (13%) — 100 أساسية + 30 فرعية**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
