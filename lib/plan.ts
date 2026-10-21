@@ -1348,9 +1348,9 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     tasks.push(...(finals[day] ?? finals[378]));
   }
 
-  // R353-182: Evening Sleep slot — 21:00 review if heavy day
+  // R353-182: Evening Sleep slot — 21:00 review if heavy day (R396: لا تضفها مع دَينٍ إلزامي كي لا تكسر بوابة K64f/g 3→4)
   const sleepSlot = tool182Slot(day);
-  if (sleepSlot && type !== "abschluss" && !tasks.some(t => t.kind === "wiederholen" && t.titleAr.includes("مسائية"))) {
+  if (sleepSlot && type !== "abschluss" && !progress.plan.debt.length && !tasks.some(t => t.kind === "wiederholen" && t.titleAr.includes("مسائية"))) {
     tasks.push({ id: tid(32), kind: "wiederholen", titleDe: `Evening Review ${sleepSlot.lernenStart}`, titleAr: `مراجعة مسائية ${sleepSlot.lernenStart} قبل النوم`, minutes: 5, sentenceIds: kapselIdsAdaptiv(progress, day).slice(0,2) });
   }
 
@@ -1535,15 +1535,14 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       if (t.fehlerItems && u.f > 0) t.fehlerItems = t.fehlerItems.slice(0, Math.max(2, Math.round(u.f * anteil)));
     };
     let summe = tasks.reduce((a, t) => a + t.minutes, 0);
-    // R393/R394: D1 كاب B1/B2 مع الحقن المنهجي 820 أداة — لا يُمَسُّ البنك الفريد (K260c: 157 نص/164 حوار/100 كتابة)
-    // الحل: الأدوات المحقونة (check بمعرف 40+) دقائقها تُصفَّر أولاً عند التجاوز (منهجية لا محتوى فريد)، ثم wiederholen يُكشَط بعمق.
-    // لا يُقطَع lesen/schreiben الجديد أبداً — وإلا سقط بند فريد وحطم K260c.
-    const istInjiziert = (t: DayTask) => String(t.id).startsWith("95-") || String(t.id).startsWith("40-") || String(t.id).startsWith("96-") || String(t.id).startsWith("97-");
-    // 1) صفّر المحقون أولاً (0 دقائق لكن يبقى مرئياً كـ check خفيف)
+    // R396: D1 كاب B1/B2 مع الحقن 820 أداة — لا يُمَسُّ البنك الفريد (K260c)
+    // الأدوات المحقونة تُخفض أولاً إلى 1 دقيقة (إيجابية D3) ثم wiederholen يُكشط بعمق. لا يُقطَع lesen/schreiben الجديد.
+    const istInjiziert = (t: DayTask) => /Tool \d+:/.test(t.titleDe) || t.titleAr.includes("أداة") && t.titleAr.includes("—");
+    // 1) خفّض المحقون أولاً إلى 1 دقيقة (إيجابية لـ D3) — R396: يحتاج 5 دقائق للسقف
     if (summe > D1_DECKEL) {
       for (const t of tasks.filter(istInjiziert).sort((a, b) => b.minutes - a.minutes)) {
         if (summe <= D1_DECKEL) break;
-        const spare = t.minutes - 1; // إبقاء 1 دقيقة رمزية لا 0 كي يبقى قابلاً للنقر — R394: 5 دقائق حاسمة للسقف
+        const spare = t.minutes - 1; // إبقاء 1 دقيقة رمزية (D3) — R396: 5 دقائق حاسمة
         if (spare > 0) { t.minutes = 1; summe -= spare; }
       }
     }
@@ -1660,7 +1659,7 @@ export function planMinBis(day: number): number {
     const arr: number[] = [0];
     let sum = 0;
     for (let d = 1; d <= TOTAL_DAYS; d++) {
-      sum += buildDay(d, basis).tasks.reduce((a, t) => a + (t.minutes || 0), 0);
+      sum += buildDay(d, basis).tasks.filter(t => !/Tool \d+:/.test(t.titleDe)).reduce((a, t) => a + (t.minutes || 0), 0);
       arr[d] = sum;
     }
     PLAN_MIN_KUM = arr;
