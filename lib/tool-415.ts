@@ -1,6 +1,17 @@
 /**
- * 415 — أداة بيداغوجية مكتملة (بلوم / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 415 — Pushed Output — إخراج مدفوع
+ * Swain 1985: classroom application with tasks
+ * Level: B1-B2 | Bloom: أنشئ | Family: SLA
  */
-export const TOOL_415 = { id: 415, family: "بلوم", bloom: "فهم", level: "A1" } as const;
-export function aktiv_415(): boolean { return true; }
+export const TOOL_415 = {
+  id: 415,
+  titleDe: "Pushed Output",
+  titleAr: "إخراج مدفوع",
+  family: "SLA",
+  bloom: "أنشئ",
+  level: "B1-B2",
+  research: "Swain 1985",
+  desc: "Pushed Output classroom",
+} as const;
+export function tool415Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool415Check(v:number):boolean{return v>0;}

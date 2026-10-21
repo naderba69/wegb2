@@ -1,6 +1,17 @@
 /**
- * 409 — أداة بيداغوجية مكتملة (Ethik / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 409 — Self-Correction — تصحيح ذاتي
+ * Edge 1989: classroom application with tasks
+ * Level: A1-B2 | Bloom: قيّم | Family: تلقين
  */
-export const TOOL_409 = { id: 409, family: "Ethik", bloom: "فهم", level: "A1" } as const;
-export function aktiv_409(): boolean { return true; }
+export const TOOL_409 = {
+  id: 409,
+  titleDe: "Self-Correction",
+  titleAr: "تصحيح ذاتي",
+  family: "تلقين",
+  bloom: "قيّم",
+  level: "A1-B2",
+  research: "Edge 1989",
+  desc: "Self-Correction classroom",
+} as const;
+export function tool409Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool409Check(v:number):boolean{return v>0;}

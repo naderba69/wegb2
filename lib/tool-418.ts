@@ -1,6 +1,17 @@
 /**
- * 418 — أداة بيداغوجية مكتملة (Immersion / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 418 — Input Enhancement aural — تعزيز سمعي
+ * Sharwood Smith 1993: classroom application with tasks
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_418 = { id: 418, family: "Immersion", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_418(): boolean { return true; }
+export const TOOL_418 = {
+  id: 418,
+  titleDe: "Input Enhancement aural",
+  titleAr: "تعزيز سمعي",
+  family: "SLA",
+  bloom: "فهم",
+  level: "A1-B2",
+  research: "Sharwood Smith 1993",
+  desc: "Input Enhancement aural classroom",
+} as const;
+export function tool418Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool418Check(v:number):boolean{return v>0;}

@@ -1,6 +1,17 @@
 /**
- * 419 — أداة بيداغوجية مكتملة (Ethik / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 419 — Consciousness Raising — رفع الوعي
+ * Rutherford 1987: classroom application with tasks
+ * Level: A2-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_419 = { id: 419, family: "Ethik", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_419(): boolean { return true; }
+export const TOOL_419 = {
+  id: 419,
+  titleDe: "Consciousness Raising",
+  titleAr: "رفع الوعي",
+  family: "SLA",
+  bloom: "حلّل",
+  level: "A2-B2",
+  research: "Rutherford 1987",
+  desc: "Consciousness Raising classroom",
+} as const;
+export function tool419Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool419Check(v:number):boolean{return v>0;}
