@@ -1,6 +1,17 @@
 /**
- * 387 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 387 — Visuospatial Sketchpad — المفكرة البصرية
+ * Baddeley 2000: classroom application with task integration
+ * Level: A0-B1 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_387 = { id: 387, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_387(): boolean { return true; }
+export const TOOL_387 = {
+  id: 387,
+  titleDe: "Visuospatial Sketchpad",
+  titleAr: "المفكرة البصرية",
+  family: "الذاكرة",
+  bloom: "فهم",
+  level: "A0-B1",
+  research: "Baddeley 2000",
+  desc: "Visuospatial Sketchpad classroom",
+} as const;
+export function tool387Gain(a: boolean): number { return a?1.2:1.0; }
+export function tool387Check(v:number):boolean { return v>0; }

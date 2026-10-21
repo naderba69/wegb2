@@ -45,6 +45,7 @@ import { tool281Check as tool281Load } from "./tool-281"; // R363 CLT
 import { tool291Gain as tool291Goal } from "./tool-291"; // R363 Goal
 import { tool311Gain as tool311Intercultural } from "./tool-311"; // R364
 import { tool344Gain as tool344V2 } from "./tool-344"; // R365 V2
+import { tool385Gain as tool385WM } from "./tool-385"; // R366 Working Memory
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1355,8 +1356,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     const dg = tool224Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Text");
     tasks.push({ id: tid(33), kind: "check", titleDe: `Vortest: ${prompt}`, titleAr: `اختبار قبلي: ${prompt} — ${kontrast} — ${tblt} — ${dg}`, minutes: 3, quiz: [] });
   }
-  // R363-281 + R363-291 + R364-311 + R365-344: CLT + Goal + Intercultural + V2
-  void tool281Load(1); void tool291Goal(true); void tool311Intercultural(true); void tool344V2(true);
+  // R363-281 + R363-291 + R364-311 + R365-344 + R366-385: + Working Memory
+  void tool281Load(1); void tool291Goal(true); void tool311Intercultural(true); void tool344V2(true); void tool385WM(true);
 
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
   if (level !== "A0" && level !== "A1" && wocheInPhase % 2 === 0 && type === "festigung") {

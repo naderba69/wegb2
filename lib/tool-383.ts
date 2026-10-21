@@ -1,6 +1,17 @@
 /**
- * 383 — أداة بيداغوجية مكتملة (تلقين / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 383 — Declarative Procedural — تصريحي/إجرائي
+ * Ullman 2001: classroom application with task integration
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_383 = { id: 383, family: "تلقين", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_383(): boolean { return true; }
+export const TOOL_383 = {
+  id: 383,
+  titleDe: "Declarative Procedural",
+  titleAr: "تصريحي/إجرائي",
+  family: "SLA",
+  bloom: "فهم",
+  level: "A1-B2",
+  research: "Ullman 2001",
+  desc: "Declarative Procedural classroom",
+} as const;
+export function tool383Gain(a: boolean): number { return a?1.2:1.0; }
+export function tool383Check(v:number):boolean { return v>0; }

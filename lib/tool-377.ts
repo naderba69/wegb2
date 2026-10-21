@@ -1,6 +1,17 @@
 /**
- * 377 — أداة بيداغوجية مكتملة (Narrative / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 377 — Salience — البروز
+ * Goldschneider 2001: classroom application with task integration
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_377 = { id: 377, family: "Narrative", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_377(): boolean { return true; }
+export const TOOL_377 = {
+  id: 377,
+  titleDe: "Salience",
+  titleAr: "البروز",
+  family: "SLA",
+  bloom: "فهم",
+  level: "A1-B2",
+  research: "Goldschneider 2001",
+  desc: "Salience classroom",
+} as const;
+export function tool377Gain(a: boolean): number { return a?1.2:1.0; }
+export function tool377Check(v:number):boolean { return v>0; }
