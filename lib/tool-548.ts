@@ -1,8 +1,8 @@
 /**
- * 548 — Tool 548 Concept — مفهوم 548
- * Research 548: classroom application
- * Level: A1-B2 | Bloom: طبّق | Family: الذاكرة
+ * 548 — Critical Thinking adv — تفكير نقدي متقدم
+ * Ennis 2011: classroom application with research-based tasks
+ * Level: B1-B2 | Bloom: قيّم | Family: تلقين
  */
-export const TOOL_548 = { id: 548, titleDe: "Tool 548 Concept", titleAr: "مفهوم 548", family: "الذاكرة", bloom: "طبّق", level: "A1-B2", research: "Research 548", desc: "Tool 548 Concept" } as const;
+export const TOOL_548 = { id: 548, titleDe: "Critical Thinking adv", titleAr: "تفكير نقدي متقدم", family: "تلقين", bloom: "قيّم", level: "B1-B2", research: "Ennis 2011", desc: "Critical Thinking adv" } as const;
 export function tool548Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool548Check(v:number):boolean{return v>0;}

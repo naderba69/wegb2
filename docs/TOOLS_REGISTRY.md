@@ -568,36 +568,36 @@
 | 518 | طرائق | Concordancing — توافق | ✅حقيقي | B1-B2 | فهم | `lib/tool-518.ts` | R372 |
 | 519 | طرائق | Word Frequency Lists — تكرار | ✅حقيقي | A0-B2 | فهم | `lib/tool-519.ts` | R372 |
 | 520 | تقويم | Vocabulary Size Test — حجم مفردات | ✅حقيقي | A0-B2 | قيّم | `lib/tool-520.ts` | R372 |
-| 521 | طرائق | Tool 521 Concept — مفهوم 521 | ✅حقيقي | A1-B2 | فهم | `lib/tool-521.ts` | R372 |
-| 522 | طرائق | Tool 522 Concept — مفهوم 522 | ✅حقيقي | A1-B2 | فهم | `lib/tool-522.ts` | R372 |
-| 523 | طرائق | Tool 523 Concept — مفهوم 523 | ✅حقيقي | A1-B2 | فهم | `lib/tool-523.ts` | R372 |
-| 524 | طرائق | Tool 524 Concept — مفهوم 524 | ✅حقيقي | A1-B2 | فهم | `lib/tool-524.ts` | R372 |
-| 525 | طرائق | Tool 525 Concept — مفهوم 525 | ✅حقيقي | A1-B2 | فهم | `lib/tool-525.ts` | R372 |
-| 526 | طرائق | Tool 526 Concept — مفهوم 526 | ✅حقيقي | A1-B2 | فهم | `lib/tool-526.ts` | R372 |
-| 527 | طرائق | Tool 527 Concept — مفهوم 527 | ✅حقيقي | A1-B2 | فهم | `lib/tool-527.ts` | R372 |
-| 528 | طرائق | Tool 528 Concept — مفهوم 528 | ✅حقيقي | A1-B2 | فهم | `lib/tool-528.ts` | R372 |
-| 529 | طرائق | Tool 529 Concept — مفهوم 529 | ✅حقيقي | A1-B2 | فهم | `lib/tool-529.ts` | R372 |
-| 530 | طرائق | Tool 530 Concept — مفهوم 530 | ✅حقيقي | A1-B2 | فهم | `lib/tool-530.ts` | R372 |
-| 531 | طرائق | Tool 531 Concept — مفهوم 531 | ✅حقيقي | A1-B2 | فهم | `lib/tool-531.ts` | R372 |
-| 532 | طرائق | Tool 532 Concept — مفهوم 532 | ✅حقيقي | A1-B2 | فهم | `lib/tool-532.ts` | R372 |
-| 533 | طرائق | Tool 533 Concept — مفهوم 533 | ✅حقيقي | A1-B2 | فهم | `lib/tool-533.ts` | R372 |
-| 534 | طرائق | Tool 534 Concept — مفهوم 534 | ✅حقيقي | A1-B2 | فهم | `lib/tool-534.ts` | R372 |
-| 535 | طرائق | Tool 535 Concept — مفهوم 535 | ✅حقيقي | A1-B2 | فهم | `lib/tool-535.ts` | R372 |
-| 536 | طرائق | Tool 536 Concept — مفهوم 536 | ✅حقيقي | A1-B2 | فهم | `lib/tool-536.ts` | R372 |
-| 537 | طرائق | Tool 537 Concept — مفهوم 537 | ✅حقيقي | A1-B2 | فهم | `lib/tool-537.ts` | R372 |
-| 538 | طرائق | Tool 538 Concept — مفهوم 538 | ✅حقيقي | A1-B2 | فهم | `lib/tool-538.ts` | R372 |
-| 539 | طرائق | Tool 539 Concept — مفهوم 539 | ✅حقيقي | A1-B2 | فهم | `lib/tool-539.ts` | R372 |
-| 540 | طرائق | Tool 540 Concept — مفهوم 540 | ✅حقيقي | A1-B2 | فهم | `lib/tool-540.ts` | R372 |
-| 541 | طرائق | Tool 541 Concept — مفهوم 541 | ✅حقيقي | A1-B2 | فهم | `lib/tool-541.ts` | R372 |
-| 542 | طرائق | Tool 542 Concept — مفهوم 542 | ✅حقيقي | A1-B2 | فهم | `lib/tool-542.ts` | R372 |
-| 543 | طرائق | Tool 543 Concept — مفهوم 543 | ✅حقيقي | A1-B2 | فهم | `lib/tool-543.ts` | R372 |
-| 544 | طرائق | Tool 544 Concept — مفهوم 544 | ✅حقيقي | A1-B2 | فهم | `lib/tool-544.ts` | R372 |
-| 545 | طرائق | Tool 545 Concept — مفهوم 545 | ✅حقيقي | A1-B2 | فهم | `lib/tool-545.ts` | R372 |
-| 546 | طرائق | Tool 546 Concept — مفهوم 546 | ✅حقيقي | A1-B2 | فهم | `lib/tool-546.ts` | R372 |
-| 547 | طرائق | Tool 547 Concept — مفهوم 547 | ✅حقيقي | A1-B2 | فهم | `lib/tool-547.ts` | R372 |
-| 548 | طرائق | Tool 548 Concept — مفهوم 548 | ✅حقيقي | A1-B2 | فهم | `lib/tool-548.ts` | R372 |
-| 549 | طرائق | Tool 549 Concept — مفهوم 549 | ✅حقيقي | A1-B2 | فهم | `lib/tool-549.ts` | R372 |
-| 550 | طرائق | Tool 550 Concept — مفهوم 550 | ✅حقيقي | A1-B2 | فهم | `lib/tool-550.ts` | R372 |
+| 521 | طرائق | CLT Advanced — التواصلية متقدم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-521.ts` | R374 |
+| 522 | طرائق | Action-Oriented CEFR — مقاربة فعلية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-522.ts` | R374 |
+| 523 | طرائق | TBLT Advanced — مهامي متقدم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-523.ts` | R374 |
+| 524 | طرائق | CLIL — محتوى ولغة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-524.ts` | R374 |
+| 525 | طرائق | Dogme Unplugged — بلا كتاب | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-525.ts` | R374 |
+| 526 | طرائق | Lexical Approach adv — معجمي متقدم | ✅حقيقي | B1-B2 | طبّق | `lib/tool-526.ts` | R374 |
+| 527 | طرائق | Corpus-Informed — مستند لمدونة | ✅حقيقي | B1-B2 | فهم | `lib/tool-527.ts` | R374 |
+| 528 | طرائق | DDL Advanced — بيانات متقدم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-528.ts` | R374 |
+| 529 | تقويم | Learner Corpus Use — مدونة متعلم | ✅حقيقي | B1-B2 | حلّل | `lib/tool-529.ts` | R374 |
+| 530 | SLA | Contrastive Interlanguage adv — بينية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-530.ts` | R374 |
+| 531 | SLA | Input Processing adv — معالجة | ✅حقيقي | A2-B2 | حلّل | `lib/tool-531.ts` | R374 |
+| 532 | SLA | Implicit Learning — ضمني | ✅حقيقي | A1-B2 | فهم | `lib/tool-532.ts` | R374 |
+| 533 | SLA | Explicit Learning — صريح | ✅حقيقي | A1-B2 | حلّل | `lib/tool-533.ts` | R374 |
+| 534 | الذاكرة | Incidental Learning — عرضي | ✅حقيقي | A1-B2 | فهم | `lib/tool-534.ts` | R374 |
+| 535 | الذاكرة | Intentional Learning — مقصود | ✅حقيقي | A1-B2 | طبّق | `lib/tool-535.ts` | R374 |
+| 536 | الذاكرة | Involvement Load — عبء انخراط | ✅حقيقي | B1-B2 | حلّل | `lib/tool-536.ts` | R374 |
+| 537 | الذاكرة | Need Search Evaluate — حاجة بحث تقييم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-537.ts` | R374 |
+| 538 | الذاكرة | Depth of Processing — عمق | ✅حقيقي | A1-B2 | حلّل | `lib/tool-538.ts` | R374 |
+| 539 | الذاكرة | Levels of Processing — مستويات | ✅حقيقي | A1-B2 | فهم | `lib/tool-539.ts` | R374 |
+| 540 | الذاكرة | Elaboration — تفصيل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-540.ts` | R374 |
+| 541 | تلقين | Organization Strategies — تنظيم | ✅حقيقي | A1-B2 | حلّل | `lib/tool-541.ts` | R374 |
+| 542 | الذاكرة | Rehearsal Strategies — تدريب | ✅حقيقي | A0-A2 | طبّق | `lib/tool-542.ts` | R374 |
+| 543 | تلقين | Metacognitive Regulation — تنظيم ما وراء | ✅حقيقي | B1-B2 | قيّم | `lib/tool-543.ts` | R374 |
+| 544 | تلقين | Self-Explanation adv — شرح ذاتي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-544.ts` | R374 |
+| 545 | طرائق | Peer Explanation — شرح أقران | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-545.ts` | R374 |
+| 546 | طرائق | Collaborative Explanation — تعاوني | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-546.ts` | R374 |
+| 547 | طرائق | Argumentation — حجاج | ✅حقيقي | B1-B2 | قيّم | `lib/tool-547.ts` | R374 |
+| 548 | تلقين | Critical Thinking adv — نقدي متقدم | ✅حقيقي | B1-B2 | قيّم | `lib/tool-548.ts` | R374 |
+| 549 | تلقين | Reflective Thinking — تأملي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-549.ts` | R374 |
+| 550 | تلقين | Creative Thinking — إبداعي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-550.ts` | R374 |
 | 551 | طرائق | Tool 551 Concept — مفهوم 551 | ✅حقيقي | A1-B2 | فهم | `lib/tool-551.ts` | R372 |
 | 552 | طرائق | Tool 552 Concept — مفهوم 552 | ✅حقيقي | A1-B2 | فهم | `lib/tool-552.ts` | R372 |
 | 553 | طرائق | Tool 553 Concept — مفهوم 553 | ✅حقيقي | A1-B2 | فهم | `lib/tool-553.ts` | R372 |

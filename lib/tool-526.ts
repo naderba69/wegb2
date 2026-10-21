@@ -1,8 +1,8 @@
 /**
- * 526 — Tool 526 Concept — مفهوم 526
- * Research 526: classroom application
- * Level: A1-B2 | Bloom: طبّق | Family: SLA
+ * 526 — Lexical Approach adv — معجمي متقدم
+ * Lewis 2000: classroom application with research-based tasks
+ * Level: B1-B2 | Bloom: طبّق | Family: طرائق
  */
-export const TOOL_526 = { id: 526, titleDe: "Tool 526 Concept", titleAr: "مفهوم 526", family: "SLA", bloom: "طبّق", level: "A1-B2", research: "Research 526", desc: "Tool 526 Concept" } as const;
+export const TOOL_526 = { id: 526, titleDe: "Lexical Approach adv", titleAr: "معجمي متقدم", family: "طرائق", bloom: "طبّق", level: "B1-B2", research: "Lewis 2000", desc: "Lexical Approach adv" } as const;
 export function tool526Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool526Check(v:number):boolean{return v>0;}

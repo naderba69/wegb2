@@ -1,8 +1,8 @@
 /**
- * 546 — Tool 546 Concept — مفهوم 546
- * Research 546: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 546 — Collaborative Explanation — شرح تعاوني
+ * Coleman 1998: classroom application with research-based tasks
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_546 = { id: 546, titleDe: "Tool 546 Concept", titleAr: "مفهوم 546", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 546", desc: "Tool 546 Concept" } as const;
+export const TOOL_546 = { id: 546, titleDe: "Collaborative Explanation", titleAr: "شرح تعاوني", family: "طرائق", bloom: "أنشئ", level: "B1-B2", research: "Coleman 1998", desc: "Collaborative Explanation" } as const;
 export function tool546Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool546Check(v:number):boolean{return v>0;}

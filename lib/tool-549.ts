@@ -1,8 +1,8 @@
 /**
- * 549 — Tool 549 Concept — مفهوم 549
- * Research 549: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 549 — Reflective Thinking — تفكير تأملي
+ * Dewey 1933: classroom application with research-based tasks
+ * Level: B1-B2 | Bloom: قيّم | Family: تلقين
  */
-export const TOOL_549 = { id: 549, titleDe: "Tool 549 Concept", titleAr: "مفهوم 549", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 549", desc: "Tool 549 Concept" } as const;
+export const TOOL_549 = { id: 549, titleDe: "Reflective Thinking", titleAr: "تفكير تأملي", family: "تلقين", bloom: "قيّم", level: "B1-B2", research: "Dewey 1933", desc: "Reflective Thinking" } as const;
 export function tool549Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool549Check(v:number):boolean{return v>0;}

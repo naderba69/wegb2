@@ -1,8 +1,8 @@
 /**
- * 545 — Tool 545 Concept — مفهوم 545
- * Research 545: classroom application
- * Level: A1-B2 | Bloom: طبّق | Family: الذاكرة
+ * 545 — Peer Explanation — شرح أقران
+ * Webb 1989: classroom application with research-based tasks
+ * Level: A2-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_545 = { id: 545, titleDe: "Tool 545 Concept", titleAr: "مفهوم 545", family: "الذاكرة", bloom: "طبّق", level: "A1-B2", research: "Research 545", desc: "Tool 545 Concept" } as const;
+export const TOOL_545 = { id: 545, titleDe: "Peer Explanation", titleAr: "شرح أقران", family: "طرائق", bloom: "أنشئ", level: "A2-B2", research: "Webb 1989", desc: "Peer Explanation" } as const;
 export function tool545Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool545Check(v:number):boolean{return v>0;}
