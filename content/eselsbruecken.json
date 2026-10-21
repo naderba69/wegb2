@@ -2901,5 +2901,145 @@
     ],
     "warnung": "لا تخلط مع Genitiv-s: des Studenten (N-Deklination) ≠ des Mannes (Genitiv-s) — الأول يضيف n، الثاني s.",
     "stichwort": "N-Deklination: الضعيف يحمل n"
+  },
+  {
+    "id": "e-b2-passiv",
+    "emoji": "🏗️",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "المبني للمجهول — من الفاعل إلى الحدث أو النتيجة",
+    "storyAr": "تخيل تقريراً إخبارياً: wird gebaut = العمل جارٍ، ist gebaut = المبنى جاهز. كل زمن له مجهوله: Präsens wird, Präteritum wurde, Perfekt ist ... worden. von للفاعل، durch للوسيلة.",
+    "zeilen": [
+      {
+        "code": "Präsens",
+        "de": "Das Haus wird gebaut.",
+        "ar": "wird + Partizip II — الحدث الآن."
+      },
+      {
+        "code": "Präteritum",
+        "de": "Das Haus wurde gebaut.",
+        "ar": "wurde + PII — الحدث في الماضي السردي."
+      },
+      {
+        "code": "Perfekt",
+        "de": "Das Haus ist gebaut worden.",
+        "ar": "ist + PII + worden — ولا تنسَ worden."
+      },
+      {
+        "code": "Zustand",
+        "de": "Die Tür ist geöffnet.",
+        "ar": "ist + PII = النتيجة (مفتوحة)، ليس الحدث."
+      }
+    ],
+    "gramIds": [
+      "b2-passiv"
+    ],
+    "warnung": "Zustandspassiv = sein + PII (النتيجة)، Vorgangspassiv = werden + PII (الحدث) — لا تخلط.",
+    "stichwort": "Passiv: wird/wurde/worden vs ist"
+  },
+  {
+    "id": "e-b2-k2vht",
+    "emoji": "💭",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "التمني في الماضي — hätte/wäre + اسم مفعول",
+    "storyAr": "للندم على الماضي: Hätte ich gelernt, hätte ich bestanden. أفعال الحركة مع wäre، والباقي مع hätte. المحكي يحب würde gemacht haben، الكتابي يفضل hätte/wäre.",
+    "zeilen": [
+      {
+        "code": "hätte",
+        "de": "Hätte ich gelernt, hätte ich bestanden.",
+        "ar": "hätte + PII — تمنٍ ماضٍ مع الناقص hätte."
+      },
+      {
+        "code": "wäre",
+        "de": "Wäre ich gekommen, hätte ich dich getroffen.",
+        "ar": "حركة → wäre + PII."
+      },
+      {
+        "code": "Modal",
+        "de": "Ich hätte das machen können.",
+        "ar": "ناقص في الماضي: hätte + مصدر + können."
+      },
+      {
+        "code": "حذر",
+        "de": "Ich würde das gemacht haben.",
+        "ar": "محكي فقط: würde + اسم مفعول محكي؛ الكتابي يفضّل hätte/wäre."
+      }
+    ],
+    "gramIds": [
+      "b2-konjunktiv2-vht"
+    ],
+    "warnung": "في التمني الماضي لا تستخدم würde مع الماضي في الكتابة الرسمية — استخدم hätte/wäre + PII.",
+    "stichwort": "KII Vergangenheit: hätte/wäre + PII"
+  },
+  {
+    "id": "e-b2-nominal",
+    "emoji": "📄",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "التحويل الاسمي — من الجملة إلى الاسم",
+    "storyAr": "لغة B2 الرسمية تحب الأسماء: weil er krank war → wegen seiner Krankheit. dass er kommt → die Tatsache, dass ... مهم → Wichtigkeit. لأن الاسم أقصر وأرسم.",
+    "zeilen": [
+      {
+        "code": "weil→wegen",
+        "de": "Wegen seiner Krankheit blieb er.",
+        "ar": "weil + جملة → wegen + مضاف إليه."
+      },
+      {
+        "code": "dass",
+        "de": "Die Tatsache, dass er kommt, freut mich.",
+        "ar": "dass → Tatsache, dass (الاسم)."
+      },
+      {
+        "code": "Adjektiv",
+        "de": "wichtig → die Wichtigkeit",
+        "ar": "صفة → اسم: Wichtigkeit."
+      },
+      {
+        "code": "um…zu",
+        "de": "zum Zweck der Prüfung",
+        "ar": "غرض: zum Zweck + Genitiv رسمي."
+      }
+    ],
+    "gramIds": [
+      "b2-nominalisierung"
+    ],
+    "warnung": "wegen يتبعها دائماً Genitiv في B2 (مضاف إليه)، لا Dativ.",
+    "stichwort": "Nominalisierung: weil→wegen, dass→Tatsache"
+  },
+  {
+    "id": "e-b2-partizipial",
+    "emoji": "🧩",
+    "sektion": "b2",
+    "level": "B2",
+    "titleAr": "الصفات المشتقة من الأسماء الموصولة — Partizipialattribute",
+    "storyAr": "اختصر جملة الوصل: der Brief, der gestern ankam → der gestern angekommene Brief. Partizip I للحدث المتزامن (lesend)، Partizip II للمنتهي (gelesen).",
+    "zeilen": [
+      {
+        "code": "PI",
+        "de": "das weinende Kind (= das Kind, das weint)",
+        "ar": "اسم فاعل: weinend + نهاية."
+      },
+      {
+        "code": "PII",
+        "de": "der gestern angekommene Brief",
+        "ar": "اسم مفعول: angekommen = وصل وانتهى."
+      },
+      {
+        "code": "erweitert",
+        "de": "die in Berlin gekaufte Tasche",
+        "ar": "موسّع: صفة + تتمة قبل الاسم."
+      },
+      {
+        "code": "فاصلة",
+        "de": "Partizipialgruppe mit Eigenhandlung → Komma",
+        "ar": "إذا كان للصفة فعلها الخاص، الفاصلة اختيارية."
+      }
+    ],
+    "gramIds": [
+      "b2-partizipial"
+    ],
+    "warnung": "الاسم المشتق يأخذ إعراب الصفة: der angekommene Brief, des angekommenen Briefes — لا تنسَ النهاية.",
+    "stichwort": "Partizipialattribut: angekommene, weinende"
   }
 ]

@@ -452,7 +452,7 @@ const vocabRepeatAudit = (() => {
     ["grammar", Object.keys(grammarMap).length, Object.keys(grammarMap).length >= 38 ? Object.keys(grammarMap).length : 0],
     ["verben", verben.length, 126],
     ["szenarien", szenarien.length, 12],
-    ["eselsbruecken", eselsbruecken.length, 84],
+    ["eselsbruecken", eselsbruecken.length, 88],
     ["sprichwort-audio", Object.keys(sprichwortAudio).length, 8],
       ["mnemonik", Object.keys(mnemonikMap).length, 120],
     ["pakete", pakete.length, 4],
@@ -1557,7 +1557,7 @@ const vocabRepeatAudit = (() => {
     {
       const bb = eselsbruecken;
       const gids = Object.keys(grammarMap);
-      ok(bb.length === 84 && new Set(bb.map((b) => b.id)).size === 84, "K39a أربعٌ وثمانونَ تركةً بمعرّفاتٍ فريدة — بعد استكمالِ تغطيةِ الدروس (R392 b2-n-deklination)");
+      ok(bb.length === 88 && new Set(bb.map((b) => b.id)).size === 88, "K39a أربعٌ وثمانونَ تركةً بمعرّفاتٍ فريدة — بعد استكمالِ تغطيةِ الدروس (R392 b2-n-deklination)");
       ok(bb.every((b) => b.gramIds.length > 0 && b.gramIds.every((g) => gids.includes(g))), "K39b كلُّ تركةٍ معلَّقةٌ بدرسٍ موجودٍ فعلاً — لا شفرةٌ يتيمةٌ ولا إشارةٌ إلى درسٍ وهميّ");
       ok(bb.every((b) => getBrueckenFor(b.gramIds[0]).some((x) => x.id === b.id)), "K39c الطريقُ عكسيٌّ أيضاً: getBrueckenFor تُرجِعُ التركةَ لدرسِها — السلكُ حيٌّ لا مُعلَن");
       ok(bb.every((b) => /[\u0600-\u06ff]/.test(b.titleAr) && /[\u0600-\u06ff]/.test(b.storyAr) && b.storyAr.length >= 40), "K39d لكلِّ شفرةٍ قصةٌ عربيةٌ مسهبةٌ لا عنوانٌ أجرد");
@@ -2040,7 +2040,7 @@ void 0;
   const ids = Object.keys(grammarMap);
   const uncovered = ids.filter((id) => getBrueckenFor(id).length === 0);
   const wizardCuts = /getBrueckenFor\(topicId\)\.slice|b\.zeilen[^\n]*\.slice/.test(wizard);
-  ok(ids.length === 83 && uncovered.length === 0, `K140a لكل درس قواعد شفرة مرتبطة (${ids.length}/83؛ بلا شفرة: ${uncovered.join(",") || "لا شيء"}) — R392 b2-n-deklination`);
+  ok(ids.length === 87 && uncovered.length === 0, `K140a لكل درس قواعد شفرة مرتبطة (${ids.length}/87؛ بلا شفرة: ${uncovered.join(",") || "لا شيء"}) — R392 b2-n-deklination`);
   ok(wizard.includes("sortiert.map((b)") && wizard.includes("b.zeilen.map") && !wizardCuts,
     "K140b معالج الدرس يرسم كل شفرة وأسطرها بلا قصّ لأول عنصرين/ثلاثة");
   ok(wizard.includes("isDue(srs[`bru:${b.id}`])") && wizard.includes("wizard-bruecke-due-${b.id}") &&
@@ -2930,7 +2930,7 @@ void 0;
   const g = JSON.parse(readFileSync("content/grammar.json", "utf8")) as Record<string, any>;
   const ids = Object.keys(g);
   const std = ids.filter((id) => g[id].ziel && g[id].voraus && g[id].anwendung && (g[id].verify ?? []).length >= 2);
-  ok(ids.length === 83 && std.length === 83, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (ziel/voraus/anwendung + تحققان لكل درس) — R391 b2-n-deklination`);
+  ok(ids.length === 87 && std.length === 87, `K121a توحيدُ الدروس: ${std.length}/${ids.length} (ziel/voraus/anwendung + تحققان لكل درس) — R391 b2-n-deklination`);
   const v = JSON.parse(readFileSync("content/vocab.json", "utf8")) as any;
   let n = 0, ex = 0, syn = 0;
   const walk = (x: any): void => {
@@ -3215,7 +3215,7 @@ void 0;
 {
   const NEU = ["a1-plural", "a1-zeitpraep", "a2-neben", "a2-demo", "b1-absicht", "b1-konj2-vergangenheit", "b2-textkonnektoren"];
   const alle66 = Object.keys(grammarMap);
-  ok(alle66.length === 83 && NEU.every((id) => !!grammarMap[id]), "K130a دروسُ N1–N7 باقيةٌ، وبنك القواعد يحوي 83 درساً بعدَ K132 (b2-n-deklination)");
+  ok(alle66.length === 87 && NEU.every((id) => !!grammarMap[id]), "K130a دروسُ N1–N7 باقيةٌ، وبنك القواعد يحوي 87 درساً بعدَ K132 (b2-n-deklination)");
   ok(NEU.every((id) => { const t = grammarMap[id]; return t.exercises.length >= 7 && (t.pitfalls ?? []).length >= 3 && (t.verify ?? []).length === 2 && (t.examples ?? []).length >= 3 && (t.rules ?? []).length >= 3 && !!t.ziel && (t.voraus ?? []).length >= 1; }),
     "K130b كلُّ جديدٍ كاملُ البنية (≥7 تمارين · 3 فخاخ · 2 تحقق · 3 أمثلة · 3 قواعد · هدفٌ ومتطلب)");
   const progN = loadProgress();
@@ -3224,7 +3224,7 @@ void 0;
   ok(NEU.every((id) => erstN[id] !== undefined), `K130c السبعةُ مجدولةٌ (${NEU.map((id) => `${id}@${erstN[id]}`).join(" ")})`);
   ok(erstN["a1-akkusativ"] < erstN["a1-plural"] && erstN["a1-zahlen"] < erstN["a1-zeitpraep"] && erstN["a1-weil-dass"] < erstN["a2-neben"] && erstN["a1-pronomen"] < erstN["a2-demo"] && erstN["a2-weil-dass"] < erstN["b1-absicht"] && erstN["b1-konj2"] < erstN["b1-konj2-vergangenheit"] && erstN["b1-konnektoren"] < erstN["b2-textkonnektoren"] && erstN["b1-absicht"] < erstN["b2-infinitiv"],
     "K130d الحلزونُ مرتبٌ: المتطلبُ قبلَ الدرسِ والمعمَّقُ بعدَه");
-  ok(eselsbruecken.length === 84 && NEU.every((id) => getBrueckenFor(id).length >= 1), "K130e لكلِّ درسٍ تركةٌ مرتبطةٌ؛ مجموعُ البنك 84 (R392 b2-n-deklination)");
+  ok(eselsbruecken.length === 88 && NEU.every((id) => getBrueckenFor(id).length >= 1), "K130e لكلِّ درسٍ تركةٌ مرتبطةٌ؛ مجموعُ البنك 84 (R392 b2-n-deklination)");
 }
 
   /* ═══ K131 · دفعة D1/D3/E7: لوح A0 + إتمام A1 + الأصدقاء الكاذبون ═══ */
@@ -3250,7 +3250,7 @@ void 0;
 {
   const topic = grammarMap["a2-wasfuer"];
   const ids = Object.keys(grammarMap);
-  ok(ids.length === 83 && !!topic && topic.level === "A2", "K132a درسُ Was-für موجودٌ في بنكٍ من 83 درساً وبمستوى A2 — R391 b2-n-deklination");
+  ok(ids.length === 87 && !!topic && topic.level === "A2", "K132a درسُ Was-für موجودٌ في بنكٍ من 87 درساً وبمستوى A2 — R391 b2-n-deklination");
   ok(!!topic?.ziel && (topic.voraus ?? []).includes("a1-akkusativ") && (topic.voraus ?? []).includes("a2-dativ") && (topic.voraus ?? []).includes("a2-demo") && !!topic.anwendung && topic.exercises.length >= 9 && topic.verify?.length === 2 && topic.rules.length >= 3 && topic.examples.length >= 3 && (topic.pitfalls ?? []).length >= 3,
     "K132b الهدفُ والمتطلباتُ والتطبيقُ المستقلُ والحدُّ الأدنى الكاملُ للدرس مُثبتٌ");
   if (topic) {
@@ -3278,7 +3278,7 @@ void 0;
   const prereqs = ["a1-akkusativ", "a2-dativ", "a2-demo"];
   ok(phaseA2.indexOf("a2-wasfuer") > phaseA2.indexOf("a2-dativ") && prereqs.every((id) => prereqDay[id] !== undefined && prereqDay[id] < prereqDay["a2-wasfuer"]),
     `K132f الدرسُ مجدولٌ بعدَ متطلباته (${prereqs.map((id) => `${id}@${prereqDay[id]}`).join(" · ")} → a2-wasfuer@${prereqDay["a2-wasfuer"]})`);
-  ok(eselsbruecken.length === 84 && getBrueckenFor("a2-wasfuer").some((b) => b.id === "e-wasfuer"), "K132g تركةُ Was-für معلَّقةٌ بدرسها؛ إجماليُّ التركات 84 — R392 b2-n-deklination");
+  ok(eselsbruecken.length === 88 && getBrueckenFor("a2-wasfuer").some((b) => b.id === "e-wasfuer"), "K132g تركةُ Was-für معلَّقةٌ بدرسها؛ إجماليُّ التركات 84 — R392 b2-n-deklination");
   const dueDay = 23;
   const dueProgress = { ...emptyProgress, plan: { ...emptyProgress.plan, day: 20 }, verify: { ...(emptyProgress.verify ?? {}), "a2-wasfuer": { dueDay } } };
   const early = dueVerify(dueProgress, dueDay - 1).some((v) => v.lessonId === "a2-wasfuer");

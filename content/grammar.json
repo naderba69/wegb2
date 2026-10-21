@@ -16409,12 +16409,12 @@
         "ar": "تام مجهول: ist + PII + worden (بدون ge-)."
       },
       {
-        "de": "von + Agens (الفاعل الأصلي) vs durch + Mittel: von den Ingenieuren / durch einen Fehler",
-        "ar": "von للفاعل، durch للوسيلة."
+        "de": "von + Agens vs durch + Mittel: von den Ingenieuren / durch einen Fehler",
+        "ar": "von للفاعل الأصلي، durch للوسيلة: von den Ingenieuren / durch einen Fehler."
       },
       {
         "de": "Zustandspassiv: ist + PII — Die Tür ist geöffnet (= Ergebnis).",
-        "ar": "حالة النتيجة: sein + PII = ist geöffnet (مفتوحة الآن)."
+        "ar": "حالة النتيجة: sein + PII — ist geöffnet (النتيجة) ≠ wird geöffnet (الحدث)."
       }
     ],
     "tables": [
@@ -16511,7 +16511,11 @@
           "diskutiert"
         ],
         "explanationAr": "wird + PII في الحاضر.",
-        "points": 2
+        "points": 2,
+        "promptAr": "أجب حسب القاعدة.",
+        "darfNicht": [
+          "Man diskutiert das Problem seit Wochen."
+        ]
       },
       {
         "id": "b2-passiv-e2",
@@ -16521,18 +16525,18 @@
         "answer": [
           "wurde"
         ],
-        "explanationAr": "Präteritum Passiv: wurde + PII."
+        "explanationAr": "ماضٍ مجهول: wurde + اسم مفعول — في Präteritum نقول wurde geschlossen."
       },
       {
         "id": "b2-passiv-e3",
         "type": "fill",
-        "promptDe": "Das Auto ___ gestohlen ___ . (sein, Perfekt Passiv)",
+        "promptDe": "Das Auto ___ gestohlen ___. (sein, Perfekt Passiv)",
         "text": "Das Auto ___ gestohlen ___.",
         "answer": [
           "ist worden",
           "ist ... worden"
         ],
-        "explanationAr": "Perfekt Passiv: ist + PII + worden."
+        "explanationAr": "تام مجهول: ist + اسم مفعول + worden — لا تنسَ worden في نهاية الجملة."
       },
       {
         "id": "b2-passiv-e4",
@@ -16544,7 +16548,7 @@
           "Die Tür wurde geöffnet."
         ],
         "answer": "Die Tür ist geöffnet.",
-        "explanationAr": "ist + PII = Zustand.",
+        "explanationAr": "حالة النتيجة: ist + اسم مفعول (ist geöffnet) تعني النتيجة، ليس الحدث.",
         "promptAr": "اختر مجهول النتيجة."
       },
       {
@@ -16558,8 +16562,12 @@
           "zerstört",
           "worden"
         ],
-        "explanationAr": "Perfekt Passiv mit von + Agens.",
-        "points": 2
+        "explanationAr": "تام مجهول مع الفاعل: Das Dach ist von + فاعل + Partizip II + worden — لأن الفاعل الأصلي يبقى بـ von.",
+        "points": 2,
+        "promptAr": "حوّل إلى مجهول تام مع ذكر الفاعل بـ von.",
+        "darfNicht": [
+          "Der Sturm hat das Dach zerstört."
+        ]
       },
       {
         "id": "b2-passiv-e6",
@@ -16594,7 +16602,8 @@
           "getroffen"
         ],
         "explanationAr": "wurde ثانياً، von + Agens، PII آخراً.",
-        "points": 2
+        "points": 2,
+        "promptAr": "أجب حسب القاعدة."
       }
     ]
   },
@@ -16619,19 +16628,19 @@
     "rules": [
       {
         "de": "hätte + PII: Hätte ich gelernt, hätte ich bestanden.",
-        "ar": "hätte + PII لأغلب الأفعال: hätte gelernt."
+        "ar": "لو درستُ لنجحتُ: hätte + اسم مفعول — للندم على الماضي."
       },
       {
         "de": "wäre + PII: Wäre ich früher gekommen, hätte ich dich getroffen.",
-        "ar": "wäre + PII لأفعال sein: wäre gekommen."
+        "ar": "حركة في الماضي مع sein: wäre gekommen/gewesen — مع أفعال الحركة."
       },
       {
         "de": "Modal im KII Vergangenheit: hätte … machen können/müssen/sollen",
-        "ar": "الناقص في الماضي التخيلي: hätte + مصدر + können: hätte kommen können."
+        "ar": "الأفعال الناقصة في ماضي التمني: hätte + مصدر + können/müssen/sollen."
       },
       {
-        "de": "würde + PII محكي: Ich würde das gemacht haben (mündlich ok, schriftlich hätte)",
-        "ar": "würde + PII محكي لا معياري."
+        "de": "würde + PII umgangssprachlich: Ich würde das gemacht haben",
+        "ar": "محكي: würde + اسم مفعول؛ الكتابي يفضّل hätte/wäre + PII."
       }
     ],
     "examples": [
@@ -16691,7 +16700,7 @@
         "answer": [
           "angerufen"
         ],
-        "explanationAr": "hätte + PII: hätte angerufen."
+        "explanationAr": "تمنٍ ماضٍ: hätte + اسم مفعول — hätte angerufen تعني لو اتصلتُ لكان أفضل."
       },
       {
         "id": "b2-k2vht-e2",
@@ -16713,18 +16722,20 @@
           "würde"
         ],
         "answer": "hätte",
-        "explanationAr": "Modal KII Vergangenheit: hätte + Inf + können."
+        "explanationAr": "الماضي الناقص: hätte + مصدر + können — hätte machen können تعني كان بإمكاني.",
+        "promptAr": "اختر صيغة الفعل الناقص في الماضي الافتراضي."
       },
       {
         "id": "b2-k2vht-e4",
         "type": "truefalse",
         "promptDe": "„Ich wäre gegangen“ ist KII Vergangenheit.",
         "answer": "richtig",
-        "explanationAr": "wäre + PII = KII Vergangenheit.",
+        "explanationAr": "wäre + اسم مفعول = ماضٍ افتراضي: wäre gegangen تعني لو ذهب.",
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "هل هذه جملة افتراضية في الماضي؟"
       },
       {
         "id": "b2-k2vht-e5",
@@ -16738,7 +16749,11 @@
           "bestanden"
         ],
         "explanationAr": "الماضي التخيلي بـ hätte + PII في الطرفين.",
-        "points": 2
+        "points": 2,
+        "promptAr": "أجب حسب القاعدة.",
+        "darfNicht": [
+          "Ich habe nicht gelernt. Ich habe nicht bestanden."
+        ]
       },
       {
         "id": "b2-k2vht-e6",
@@ -16759,18 +16774,23 @@
         "answer": [
           "hätte"
         ],
-        "explanationAr": "hätte + PII: hätte geschafft."
+        "explanationAr": "شرط ماضٍ: hätte + اسم مفعول — hätte geschafft تعني لو نجحتُ."
       },
       {
         "id": "b2-k2vht-e8",
         "type": "order",
         "promptDe": "Ordne: Hätte / ich / gewusst / wäre / ich / geblieben",
         "answer": [
-          "Hätte ich gewusst",
-          "wäre ich geblieben"
+          "Hätte",
+          "ich",
+          "gewusst,",
+          "wäre",
+          "ich",
+          "geblieben."
         ],
-        "explanationAr": "Jussive: hätte gewusst → wäre geblieben.",
-        "points": 2
+        "explanationAr": "جملة شرطية ماضية: Hätte ich gewusst, wäre ich geblieben — الترتيب مهم.",
+        "points": 2,
+        "promptAr": "رتّب كلمات الشرط الماضي."
       }
     ]
   },
@@ -16781,8 +16801,8 @@
     "level": "B2",
     "ziel": "تحوّل الجمل الفعلية إلى اسمية (dass → die Tatsache, dass / weil → wegen + Genitiv) وتكتب بأسلوب Nominalstil.",
     "voraus": [
-      "b2-genitiv-praep",
-      "b1-nominalisierung"
+      "b2-nominalstil",
+      "b1-konnektoren"
     ],
     "anwendung": {
       "ar": "حوّل فقرة فعلية 5 جمل إلى أسلوب اسمي (مثال: weil er krank ist → wegen seiner Krankheit).",
@@ -16795,7 +16815,7 @@
     "rules": [
       {
         "de": "weil-Satz → wegen + Genitiv: Wegen seiner Krankheit blieb er zu Hause.",
-        "ar": "weil → wegen + Genitiv."
+        "ar": "تعليل weil → wegen + مضاف إليه: Wegen seiner Krankheit."
       },
       {
         "de": "dass-Satz → Nominal: die Tatsache, dass er kommt",
@@ -16869,8 +16889,12 @@
           "wegen",
           "krankheit"
         ],
-        "explanationAr": "weil → wegen + Genitiv.",
-        "points": 2
+        "explanationAr": "تحويل weil → wegen + مضاف إليه — wegen + ضمير مضاف: wegen seiner Krankheit.",
+        "points": 2,
+        "promptAr": "حوّل جملة weil إلى عبارة wegen + مضاف إليه.",
+        "darfNicht": [
+          "Weil er krank war, blieb er."
+        ]
       },
       {
         "id": "b2-nom-e2",
@@ -16892,7 +16916,7 @@
           "Weil seiner Krankheit"
         ],
         "answer": "Wegen seiner Krankheit",
-        "explanationAr": "Nominalstil = wegen + Genitiv.",
+        "explanationAr": "الأسلوب الاسمي: wegen + Genitiv هو الأسلوب الرسمي المقابل لـ weil.",
         "promptAr": "اختر الأسلوب الاسمي."
       },
       {
@@ -16903,7 +16927,7 @@
         "answer": [
           "Wichtigkeit"
         ],
-        "explanationAr": "wichtig → Wichtigkeit (Nominalisierung)."
+        "explanationAr": "تحويل الصفة إلى اسم: wichtig → die Wichtigkeit — كثير B2 يحب الأسماء."
       },
       {
         "id": "b2-nom-e5",
@@ -16914,7 +16938,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "أجب حسب القاعدة."
       },
       {
         "id": "b2-nom-e6",
@@ -16925,8 +16950,9 @@
           "wurde",
           "abgesagt"
         ],
-        "explanationAr": "wieder Dativ→Genitiv Nominal.",
-        "points": 2
+        "explanationAr": "ترتيب Nominalstil: Wegen + المضاف إليه + الفعل — انتبه لحالة Genitiv.",
+        "points": 2,
+        "promptAr": "رتّب جملة Nominalstil مع wegen."
       },
       {
         "id": "b2-nom-e7",
@@ -16938,8 +16964,12 @@
           "tatsache",
           "dass"
         ],
-        "explanationAr": "dass → Nominal mit Tatsache.",
-        "points": 2
+        "explanationAr": "تحويل dass → Tatsache, dass — النمط B2: Die Tatsache, dass ...",
+        "points": 2,
+        "promptAr": "حوّل جملة dass إلى عبارة اسمية مع Tatsache.",
+        "darfNicht": [
+          "Dass er kommt, freut mich."
+        ]
       },
       {
         "id": "b2-nom-e8",
@@ -16949,7 +16979,7 @@
         "answer": [
           "Zum Zweck"
         ],
-        "explanationAr": "Nominalstil: zum Zweck + Genitiv."
+        "explanationAr": "غرض: zum Zweck + Genitiv أو für + حالة نصب — الأسلوب الرسمي."
       }
     ]
   },
@@ -16960,8 +16990,8 @@
     "level": "B2",
     "ziel": "تبني Partizip I/II كصفة موسعة (der gestern angekommene Brief) وتحوّلها لموصولة.",
     "voraus": [
-      "b2-partizip",
-      "b1-relativ"
+      "b1-partizip1",
+      "b2-partizip"
     ],
     "anwendung": {
       "ar": "اختصر 3 جمل موصولة إلى صفات تشاركية (Der Brief, der gestern ankam → Der gestern angekommene Brief).",
@@ -17055,7 +17085,7 @@
         "answer": [
           "lesende"
         ],
-        "explanationAr": "Partizip I = d: lesende."
+        "explanationAr": "اسم فاعل I: lesend → lesende — مع أداة تعريف يأخذ نهاية."
       },
       {
         "id": "b2-ptz-e3",
@@ -17067,7 +17097,11 @@
           "beschlossenen maßnahmen"
         ],
         "explanationAr": "موصولة → تشاركية بلا wurde.",
-        "points": 2
+        "points": 2,
+        "promptAr": "أجب حسب القاعدة.",
+        "darfNicht": [
+          "Die Maßnahmen, die von der Regierung beschlossen wurden, …"
+        ]
       },
       {
         "id": "b2-ptz-e4",
@@ -17078,7 +17112,8 @@
         "options": [
           "richtig",
           "falsch"
-        ]
+        ],
+        "promptAr": "أجب حسب القاعدة."
       },
       {
         "id": "b2-ptz-e5",
@@ -17090,7 +17125,8 @@
           "geht"
         ],
         "explanationAr": "Nعت تشاركي قبل الاسم.",
-        "points": 2
+        "points": 2,
+        "promptAr": "أجب حسب القاعدة."
       },
       {
         "id": "b2-ptz-e6",
@@ -17112,7 +17148,7 @@
           "lesen"
         ],
         "answer": "gelesen",
-        "explanationAr": "gelesen = Partizip II.",
+        "explanationAr": "اسم مفعول II: gelesen هو Partizip II من lesen — ليس المضارع.",
         "promptAr": "اختر اسم المفعول."
       },
       {
@@ -17124,8 +17160,12 @@
         "mussEnthalten": [
           "weinende kind"
         ],
-        "explanationAr": "Partizip I: weinende.",
-        "points": 2
+        "explanationAr": "اختصار جملة الوصل: das Kind, das weint → das weinende Kind — اسم فاعل يسبق الاسم.",
+        "points": 2,
+        "promptAr": "اختصر جملة الوصل باستخدام اسم الفاعل.",
+        "darfNicht": [
+          "das Kind, das weint"
+        ]
       }
     ]
   }
