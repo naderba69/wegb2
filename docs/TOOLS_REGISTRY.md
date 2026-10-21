@@ -87,12 +87,12 @@
 | 081 | تقويم | Checklist قائمة تحقق | ✅ | A0-B2 | قيّم | `lib/writing.json` criteria | كل كتابة لها checklist |
 | 082 | تقويم | Rating Scale سلم تقدير | ✅ | A0-B2 | قيّم | `lib/kompetenz.ts` band | 0-100 + band |
 | 083 | تقويم | Benchmarking مقارنة مرجعية | ✅ | A0-B2 | قيّم | `lib/referenz.ts` | Goethe/ÖSD |
-| 084 | تقويم | Washback أثر رجعي | 🔲 | B1-B2 | قيّم | — | P4 |
-| 085 | تقويم | Moderation معايرة | 🔲 | B2 | قيّم | — | P4 |
+| 084 | تقويم | Washback أثر رجعي | ✅ | B1-B2 | قيّم | `lib/washback.ts` | R342 |
+| 085 | تقويم | Moderation معايرة | ✅ | B2 | قيّم | `lib/moderation.ts` | R342 |
 | 086 | تقويم | Standard Setting 60/100 | ✅ | B1-B2 | قيّم | `lib/klausur.ts` 60% | Goethe 60 نقطة |
 | 087 | بلوم | Bloom تذكر→إبداع | ✅ | A0-B2 | — | `lib/plan.ts` | كل يوم يتدرج |
 | 088 | بلوم | Anderson تفكير عليا | ✅ | B1-B2 | حلّل/قيّم/أنشئ | `lib/simulation.ts` | محاكاة B2 تفكير عليا |
-| 089 | بلوم | SOLO | 🔲 | B2 | قيّم | — | P4 |
+| 089 | بلوم | SOLO | ✅ | B2 | قيّم | `lib/solo.ts` | R342 |
 | 090 | بلوم | Metacognition ما وراء معرفة | ✅ | A0-B2 | قيّم | `lib/einstufung.ts` | تأمل ذاتي |
 | 091 | بلوم | Self-Regulated ذاتي تنظيم | ✅ | A0-B2 | طبّق | `lib/kontrakt.ts` | عقد تعلم |
 | 092 | بلوم | Learning Strategies Oxford 6 | ✅ | A0-B2 | طبّق | `lib/lernstrategie` | 6 استراتيجيات |
@@ -107,7 +107,7 @@
 
 > ما بعد 100 هو تفريع لكل أداة (مثال 026 Feedback = 6 أدوات فرعية، 105 Gamification = 8). السجل يُوسّع حتى 1000 بنفس النسق.
 
-**المجموع الحالي: 100 أداة أساسية — 88 ✅ موجودة (88%) — 12 🔲 مقترحة (12%)**
+**المجموع الحالي: 100 أداة أساسية — 91 ✅ موجودة (91%) — 9 🔲 مقترحة (9%)**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
