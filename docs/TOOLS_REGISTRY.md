@@ -996,36 +996,36 @@
 | 938 | Immersion | Digital Competence DigComp — رقمية | ✅حقيقي | A1-B2 | فهم | `lib/tool-938.ts` | R387 |
 | 939 | تقويم | Telecollaboration Assessment — تقويم تعاون | ✅حقيقي | B1-B2 | قيّم | `lib/tool-939.ts` | R387 |
 | 940 | طرائق | Virtual Exchange Design — تصميم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-940.ts` | R387 |
-| 941 | طرائق | Tool 941 Concept — مفهوم 941 | ✅حقيقي | A1-B2 | فهم | `lib/tool-941.ts` | R372 |
-| 942 | طرائق | Tool 942 Concept — مفهوم 942 | ✅حقيقي | A1-B2 | فهم | `lib/tool-942.ts` | R372 |
-| 943 | طرائق | Tool 943 Concept — مفهوم 943 | ✅حقيقي | A1-B2 | فهم | `lib/tool-943.ts` | R372 |
-| 944 | طرائق | Tool 944 Concept — مفهوم 944 | ✅حقيقي | A1-B2 | فهم | `lib/tool-944.ts` | R372 |
-| 945 | طرائق | Tool 945 Concept — مفهوم 945 | ✅حقيقي | A1-B2 | فهم | `lib/tool-945.ts` | R372 |
-| 946 | طرائق | Tool 946 Concept — مفهوم 946 | ✅حقيقي | A1-B2 | فهم | `lib/tool-946.ts` | R372 |
-| 947 | طرائق | Tool 947 Concept — مفهوم 947 | ✅حقيقي | A1-B2 | فهم | `lib/tool-947.ts` | R372 |
-| 948 | طرائق | Tool 948 Concept — مفهوم 948 | ✅حقيقي | A1-B2 | فهم | `lib/tool-948.ts` | R372 |
-| 949 | طرائق | Tool 949 Concept — مفهوم 949 | ✅حقيقي | A1-B2 | فهم | `lib/tool-949.ts` | R372 |
-| 950 | طرائق | Tool 950 Concept — مفهوم 950 | ✅حقيقي | A1-B2 | فهم | `lib/tool-950.ts` | R372 |
-| 951 | طرائق | Tool 951 Concept — مفهوم 951 | ✅حقيقي | A1-B2 | فهم | `lib/tool-951.ts` | R372 |
-| 952 | طرائق | Tool 952 Concept — مفهوم 952 | ✅حقيقي | A1-B2 | فهم | `lib/tool-952.ts` | R372 |
-| 953 | طرائق | Tool 953 Concept — مفهوم 953 | ✅حقيقي | A1-B2 | فهم | `lib/tool-953.ts` | R372 |
-| 954 | طرائق | Tool 954 Concept — مفهوم 954 | ✅حقيقي | A1-B2 | فهم | `lib/tool-954.ts` | R372 |
-| 955 | طرائق | Tool 955 Concept — مفهوم 955 | ✅حقيقي | A1-B2 | فهم | `lib/tool-955.ts` | R372 |
-| 956 | طرائق | Tool 956 Concept — مفهوم 956 | ✅حقيقي | A1-B2 | فهم | `lib/tool-956.ts` | R372 |
-| 957 | طرائق | Tool 957 Concept — مفهوم 957 | ✅حقيقي | A1-B2 | فهم | `lib/tool-957.ts` | R372 |
-| 958 | طرائق | Tool 958 Concept — مفهوم 958 | ✅حقيقي | A1-B2 | فهم | `lib/tool-958.ts` | R372 |
-| 959 | طرائق | Tool 959 Concept — مفهوم 959 | ✅حقيقي | A1-B2 | فهم | `lib/tool-959.ts` | R372 |
-| 960 | طرائق | Tool 960 Concept — مفهوم 960 | ✅حقيقي | A1-B2 | فهم | `lib/tool-960.ts` | R372 |
-| 961 | طرائق | Tool 961 Concept — مفهوم 961 | ✅حقيقي | A1-B2 | فهم | `lib/tool-961.ts` | R372 |
-| 962 | طرائق | Tool 962 Concept — مفهوم 962 | ✅حقيقي | A1-B2 | فهم | `lib/tool-962.ts` | R372 |
-| 963 | طرائق | Tool 963 Concept — مفهوم 963 | ✅حقيقي | A1-B2 | فهم | `lib/tool-963.ts` | R372 |
-| 964 | طرائق | Tool 964 Concept — مفهوم 964 | ✅حقيقي | A1-B2 | فهم | `lib/tool-964.ts` | R372 |
-| 965 | طرائق | Tool 965 Concept — مفهوم 965 | ✅حقيقي | A1-B2 | فهم | `lib/tool-965.ts` | R372 |
-| 966 | طرائق | Tool 966 Concept — مفهوم 966 | ✅حقيقي | A1-B2 | فهم | `lib/tool-966.ts` | R372 |
-| 967 | طرائق | Tool 967 Concept — مفهوم 967 | ✅حقيقي | A1-B2 | فهم | `lib/tool-967.ts` | R372 |
-| 968 | طرائق | Tool 968 Concept — مفهوم 968 | ✅حقيقي | A1-B2 | فهم | `lib/tool-968.ts` | R372 |
-| 969 | طرائق | Tool 969 Concept — مفهوم 969 | ✅حقيقي | A1-B2 | فهم | `lib/tool-969.ts` | R372 |
-| 970 | طرائق | Tool 970 Concept — مفهوم 970 | ✅حقيقي | A1-B2 | فهم | `lib/tool-970.ts` | R372 |
+| 941 | طرائق | Task Design Ellis — تصميم مهام | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-941.ts` | R388 |
+| 942 | SLA | Task Complexity Robinson — تعقيد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-942.ts` | R388 |
+| 943 | SLA | Cognition Hypothesis — معرفة | ✅حقيقي | B1-B2 | فهم | `lib/tool-943.ts` | R388 |
+| 944 | SLA | Trade-off Skehan — مقايضة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-944.ts` | R388 |
+| 945 | تقويم | CAF Framework Housen — CAF | ✅حقيقي | B1-B2 | قيّم | `lib/tool-945.ts` | R388 |
+| 946 | تقويم | Complexity Accuracy Fluency — CAF | ✅حقيقي | B1-B2 | قيّم | `lib/tool-946.ts` | R388 |
+| 947 | تقويم | Fluency Segalowitz — طلاقة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-947.ts` | R388 |
+| 948 | تقويم | Accuracy Foster — دقة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-948.ts` | R388 |
+| 949 | تقويم | Complexity Norris — تعقيد | ✅حقيقي | B1-B2 | قيّم | `lib/tool-949.ts` | R388 |
+| 950 | SLA | Willingness to Communicate 2 — استعداد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-950.ts` | R388 |
+| 951 | تلقين | Motivation Dörnyei 2 — دافعية | ✅حقيقي | A1-B2 | قيّم | `lib/tool-951.ts` | R388 |
+| 952 | تلقين | Ideal L2 Self 2 — مثالية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-952.ts` | R388 |
+| 953 | تلقين | Ought-to L2 Self 2 — يجب | ✅حقيقي | A1-B2 | فهم | `lib/tool-953.ts` | R388 |
+| 954 | تلقين | L2 Learning Experience — خبرة | ✅حقيقي | A1-B2 | فهم | `lib/tool-954.ts` | R388 |
+| 955 | تلقين | Directed Motivational Currents — تيارات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-955.ts` | R388 |
+| 956 | تلقين | Vision Theory — رؤية | ✅حقيقي | B1-B2 | فهم | `lib/tool-956.ts` | R388 |
+| 957 | تلقين | Future Self Guides — ذات مستقبلية | ✅حقيقي | A1-B2 | حلّل | `lib/tool-957.ts` | R388 |
+| 958 | تلقين | Possible Selves Markus — ممكنة | ✅حقيقي | A1-B2 | فهم | `lib/tool-958.ts` | R388 |
+| 959 | تلقين | Self-Determination Deci — تقرير ذاتي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-959.ts` | R388 |
+| 960 | تلقين | Autonomy Little — استقلالية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-960.ts` | R388 |
+| 961 | تلقين | Engagement Philp — انخراط | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-961.ts` | R388 |
+| 962 | تلقين | Flow Csikszentmihalyi — تدفق | ✅حقيقي | A1-B2 | فهم | `lib/tool-962.ts` | R388 |
+| 963 | تلقين | Grit Duckworth — مثابرة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-963.ts` | R388 |
+| 964 | تلقين | Mindset Dweck — عقلية | ✅حقيقي | A1-B2 | قيّم | `lib/tool-964.ts` | R388 |
+| 965 | تلقين | Resilience Oxford — صمود | ✅حقيقي | A1-B2 | قيّم | `lib/tool-965.ts` | R388 |
+| 966 | تلقين | Wellbeing Oxford — رفاهية | ✅حقيقي | A0-B2 | فهم | `lib/tool-966.ts` | R388 |
+| 967 | Immersion | Empathy Mercer — تعاطف | ✅حقيقي | A1-B2 | فهم | `lib/tool-967.ts` | R388 |
+| 968 | طرائق | Teacher Empathy — معلم | ✅حقيقي | A1-B2 | فهم | `lib/tool-968.ts` | R388 |
+| 969 | تلقين | Learner Beliefs Barcelos — معتقدات متعلم | ✅حقيقي | A1-B2 | حلّل | `lib/tool-969.ts` | R388 |
+| 970 | طرائق | Teacher Beliefs Borg — معتقدات معلم | ✅حقيقي | B1-B2 | حلّل | `lib/tool-970.ts` | R388 |
 | 971 | طرائق | Tool 971 Concept — مفهوم 971 | ✅حقيقي | A1-B2 | فهم | `lib/tool-971.ts` | R372 |
 | 972 | طرائق | Tool 972 Concept — مفهوم 972 | ✅حقيقي | A1-B2 | فهم | `lib/tool-972.ts` | R372 |
 | 973 | طرائق | Tool 973 Concept — مفهوم 973 | ✅حقيقي | A1-B2 | فهم | `lib/tool-973.ts` | R372 |
