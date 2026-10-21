@@ -1,6 +1,8 @@
 /**
- * 927 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 927 — Tool 927 Concept — مفهوم 927
+ * Research 927: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_927 = { id: 927, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_927(): boolean { return true; }
+export const TOOL_927 = { id: 927, titleDe: "Tool 927 Concept", titleAr: "مفهوم 927", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 927", desc: "Tool 927" } as const;
+export function tool927Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool927Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 877 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 877 — Tool 877 Concept — مفهوم 877
+ * Research 877: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_877 = { id: 877, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_877(): boolean { return true; }
+export const TOOL_877 = { id: 877, titleDe: "Tool 877 Concept", titleAr: "مفهوم 877", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 877", desc: "Tool 877" } as const;
+export function tool877Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool877Check(v:number):boolean{return v>0;}

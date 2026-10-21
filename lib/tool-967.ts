@@ -1,6 +1,8 @@
 /**
- * 967 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 967 — Tool 967 Concept — مفهوم 967
+ * Research 967: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_967 = { id: 967, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_967(): boolean { return true; }
+export const TOOL_967 = { id: 967, titleDe: "Tool 967 Concept", titleAr: "مفهوم 967", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 967", desc: "Tool 967" } as const;
+export function tool967Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool967Check(v:number):boolean{return v>0;}

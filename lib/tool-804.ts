@@ -1,6 +1,8 @@
 /**
- * 804 — أداة بيداغوجية مكتملة (تقويم / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 804 — Tool 804 Concept — مفهوم 804
+ * Research 804: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_804 = { id: 804, family: "تقويم", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_804(): boolean { return true; }
+export const TOOL_804 = { id: 804, titleDe: "Tool 804 Concept", titleAr: "مفهوم 804", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 804", desc: "Tool 804" } as const;
+export function tool804Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool804Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 654 — أداة بيداغوجية مكتملة (تقويم / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 654 — Tool 654 Concept — مفهوم 654
+ * Research 654: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_654 = { id: 654, family: "تقويم", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_654(): boolean { return true; }
+export const TOOL_654 = { id: 654, titleDe: "Tool 654 Concept", titleAr: "مفهوم 654", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 654", desc: "Tool 654" } as const;
+export function tool654Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool654Check(v:number):boolean{return v>0;}

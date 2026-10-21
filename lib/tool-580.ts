@@ -1,6 +1,8 @@
 /**
- * 580 — أداة بيداغوجية مكتملة (الذاكرة / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 580 — Tool 580 Concept — مفهوم 580
+ * Research 580: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_580 = { id: 580, family: "الذاكرة", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_580(): boolean { return true; }
+export const TOOL_580 = { id: 580, titleDe: "Tool 580 Concept", titleAr: "مفهوم 580", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 580", desc: "Tool 580" } as const;
+export function tool580Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool580Check(v:number):boolean{return v>0;}

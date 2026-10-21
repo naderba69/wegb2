@@ -1,6 +1,8 @@
 /**
- * 794 — أداة بيداغوجية مكتملة (تقويم / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 794 — Tool 794 Concept — مفهوم 794
+ * Research 794: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_794 = { id: 794, family: "تقويم", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_794(): boolean { return true; }
+export const TOOL_794 = { id: 794, titleDe: "Tool 794 Concept", titleAr: "مفهوم 794", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 794", desc: "Tool 794" } as const;
+export function tool794Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool794Check(v:number):boolean{return v>0;}

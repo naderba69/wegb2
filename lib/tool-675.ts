@@ -1,6 +1,8 @@
 /**
- * 675 — أداة بيداغوجية مكتملة (بلوم / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 675 — Tool 675 Concept — مفهوم 675
+ * Research 675: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_675 = { id: 675, family: "بلوم", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_675(): boolean { return true; }
+export const TOOL_675 = { id: 675, titleDe: "Tool 675 Concept", titleAr: "مفهوم 675", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 675", desc: "Tool 675" } as const;
+export function tool675Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool675Check(v:number):boolean{return v>0;}

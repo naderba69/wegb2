@@ -1,6 +1,8 @@
 /**
- * 959 — أداة بيداغوجية مكتملة (Ethik / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 959 — Tool 959 Concept — مفهوم 959
+ * Research 959: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_959 = { id: 959, family: "Ethik", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_959(): boolean { return true; }
+export const TOOL_959 = { id: 959, titleDe: "Tool 959 Concept", titleAr: "مفهوم 959", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 959", desc: "Tool 959" } as const;
+export function tool959Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool959Check(v:number):boolean{return v>0;}

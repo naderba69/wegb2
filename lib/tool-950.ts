@@ -1,6 +1,8 @@
 /**
- * 950 — أداة بيداغوجية مكتملة (الذاكرة / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 950 — Tool 950 Concept — مفهوم 950
+ * Research 950: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_950 = { id: 950, family: "الذاكرة", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_950(): boolean { return true; }
+export const TOOL_950 = { id: 950, titleDe: "Tool 950 Concept", titleAr: "مفهوم 950", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 950", desc: "Tool 950" } as const;
+export function tool950Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool950Check(v:number):boolean{return v>0;}

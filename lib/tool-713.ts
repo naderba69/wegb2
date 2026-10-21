@@ -1,6 +1,8 @@
 /**
- * 713 — أداة بيداغوجية مكتملة (تلقين / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 713 — Tool 713 Concept — مفهوم 713
+ * Research 713: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_713 = { id: 713, family: "تلقين", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_713(): boolean { return true; }
+export const TOOL_713 = { id: 713, titleDe: "Tool 713 Concept", titleAr: "مفهوم 713", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 713", desc: "Tool 713" } as const;
+export function tool713Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool713Check(v:number):boolean{return v>0;}

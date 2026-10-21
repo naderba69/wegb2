@@ -1,6 +1,8 @@
 /**
- * 955 — أداة بيداغوجية مكتملة (بلوم / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 955 — Tool 955 Concept — مفهوم 955
+ * Research 955: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_955 = { id: 955, family: "بلوم", bloom: "فهم", level: "A1" } as const;
-export function aktiv_955(): boolean { return true; }
+export const TOOL_955 = { id: 955, titleDe: "Tool 955 Concept", titleAr: "مفهوم 955", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 955", desc: "Tool 955" } as const;
+export function tool955Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool955Check(v:number):boolean{return v>0;}

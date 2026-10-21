@@ -1,6 +1,8 @@
 /**
- * 986 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 986 — Tool 986 Concept — مفهوم 986
+ * Research 986: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_986 = { id: 986, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_986(): boolean { return true; }
+export const TOOL_986 = { id: 986, titleDe: "Tool 986 Concept", titleAr: "مفهوم 986", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 986", desc: "Tool 986" } as const;
+export function tool986Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool986Check(v:number):boolean{return v>0;}

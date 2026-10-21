@@ -1,6 +1,8 @@
 /**
- * 997 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 997 — Tool 997 Concept — مفهوم 997
+ * Research 997: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_997 = { id: 997, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_997(): boolean { return true; }
+export const TOOL_997 = { id: 997, titleDe: "Tool 997 Concept", titleAr: "مفهوم 997", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 997", desc: "Tool 997" } as const;
+export function tool997Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool997Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 938 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 938 — Tool 938 Concept — مفهوم 938
+ * Research 938: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_938 = { id: 938, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_938(): boolean { return true; }
+export const TOOL_938 = { id: 938, titleDe: "Tool 938 Concept", titleAr: "مفهوم 938", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 938", desc: "Tool 938" } as const;
+export function tool938Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool938Check(v:number):boolean{return v>0;}

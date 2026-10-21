@@ -1,6 +1,8 @@
 /**
- * 572 — أداة بيداغوجية مكتملة (طرائق / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 572 — Tool 572 Concept — مفهوم 572
+ * Research 572: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_572 = { id: 572, family: "طرائق", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_572(): boolean { return true; }
+export const TOOL_572 = { id: 572, titleDe: "Tool 572 Concept", titleAr: "مفهوم 572", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 572", desc: "Tool 572" } as const;
+export function tool572Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool572Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 573 — أداة بيداغوجية مكتملة (تلقين / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 573 — Tool 573 Concept — مفهوم 573
+ * Research 573: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_573 = { id: 573, family: "تلقين", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_573(): boolean { return true; }
+export const TOOL_573 = { id: 573, titleDe: "Tool 573 Concept", titleAr: "مفهوم 573", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 573", desc: "Tool 573" } as const;
+export function tool573Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool573Check(v:number):boolean{return v>0;}

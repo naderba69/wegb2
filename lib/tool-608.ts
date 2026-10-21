@@ -1,6 +1,8 @@
 /**
- * 608 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 608 — Tool 608 Concept — مفهوم 608
+ * Research 608: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_608 = { id: 608, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_608(): boolean { return true; }
+export const TOOL_608 = { id: 608, titleDe: "Tool 608 Concept", titleAr: "مفهوم 608", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 608", desc: "Tool 608" } as const;
+export function tool608Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool608Check(v:number):boolean{return v>0;}

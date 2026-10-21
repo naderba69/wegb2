@@ -1,6 +1,8 @@
 /**
- * 729 — أداة بيداغوجية مكتملة (Ethik / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 729 — Tool 729 Concept — مفهوم 729
+ * Research 729: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_729 = { id: 729, family: "Ethik", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_729(): boolean { return true; }
+export const TOOL_729 = { id: 729, titleDe: "Tool 729 Concept", titleAr: "مفهوم 729", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 729", desc: "Tool 729" } as const;
+export function tool729Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool729Check(v:number):boolean{return v>0;}

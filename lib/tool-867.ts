@@ -1,6 +1,8 @@
 /**
- * 867 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 867 — Tool 867 Concept — مفهوم 867
+ * Research 867: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_867 = { id: 867, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_867(): boolean { return true; }
+export const TOOL_867 = { id: 867, titleDe: "Tool 867 Concept", titleAr: "مفهوم 867", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 867", desc: "Tool 867" } as const;
+export function tool867Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool867Check(v:number):boolean{return v>0;}

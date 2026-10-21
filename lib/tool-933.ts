@@ -1,6 +1,8 @@
 /**
- * 933 — أداة بيداغوجية مكتملة (تلقين / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 933 — Tool 933 Concept — مفهوم 933
+ * Research 933: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_933 = { id: 933, family: "تلقين", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_933(): boolean { return true; }
+export const TOOL_933 = { id: 933, titleDe: "Tool 933 Concept", titleAr: "مفهوم 933", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 933", desc: "Tool 933" } as const;
+export function tool933Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool933Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 819 — أداة بيداغوجية مكتملة (Ethik / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 819 — Tool 819 Concept — مفهوم 819
+ * Research 819: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_819 = { id: 819, family: "Ethik", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_819(): boolean { return true; }
+export const TOOL_819 = { id: 819, titleDe: "Tool 819 Concept", titleAr: "مفهوم 819", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 819", desc: "Tool 819" } as const;
+export function tool819Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool819Check(v:number):boolean{return v>0;}

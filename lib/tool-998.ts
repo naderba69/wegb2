@@ -1,6 +1,8 @@
 /**
- * 998 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 998 — Tool 998 Concept — مفهوم 998
+ * Research 998: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_998 = { id: 998, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_998(): boolean { return true; }
+export const TOOL_998 = { id: 998, titleDe: "Tool 998 Concept", titleAr: "مفهوم 998", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 998", desc: "Tool 998" } as const;
+export function tool998Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool998Check(v:number):boolean{return v>0;}

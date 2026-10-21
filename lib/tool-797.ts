@@ -1,6 +1,8 @@
 /**
- * 797 — أداة بيداغوجية مكتملة (Narrative / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 797 — Tool 797 Concept — مفهوم 797
+ * Research 797: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_797 = { id: 797, family: "Narrative", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_797(): boolean { return true; }
+export const TOOL_797 = { id: 797, titleDe: "Tool 797 Concept", titleAr: "مفهوم 797", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 797", desc: "Tool 797" } as const;
+export function tool797Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool797Check(v:number):boolean{return v>0;}

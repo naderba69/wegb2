@@ -1,6 +1,8 @@
 /**
- * 908 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 908 — Tool 908 Concept — مفهوم 908
+ * Research 908: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_908 = { id: 908, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_908(): boolean { return true; }
+export const TOOL_908 = { id: 908, titleDe: "Tool 908 Concept", titleAr: "مفهوم 908", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 908", desc: "Tool 908" } as const;
+export function tool908Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool908Check(v:number):boolean{return v>0;}

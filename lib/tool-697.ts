@@ -1,6 +1,8 @@
 /**
- * 697 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 697 — Tool 697 Concept — مفهوم 697
+ * Research 697: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_697 = { id: 697, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_697(): boolean { return true; }
+export const TOOL_697 = { id: 697, titleDe: "Tool 697 Concept", titleAr: "مفهوم 697", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 697", desc: "Tool 697" } as const;
+export function tool697Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool697Check(v:number):boolean{return v>0;}

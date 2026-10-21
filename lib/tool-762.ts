@@ -1,6 +1,8 @@
 /**
- * 762 — أداة بيداغوجية مكتملة (طرائق / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 762 — Tool 762 Concept — مفهوم 762
+ * Research 762: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_762 = { id: 762, family: "طرائق", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_762(): boolean { return true; }
+export const TOOL_762 = { id: 762, titleDe: "Tool 762 Concept", titleAr: "مفهوم 762", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 762", desc: "Tool 762" } as const;
+export function tool762Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool762Check(v:number):boolean{return v>0;}
