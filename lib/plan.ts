@@ -34,6 +34,7 @@ import { palacePosition } from "./memory-palace";
 import { piItemsFor } from "./processing-instruction";
 import { fallFuerLevel } from "./case-study";
 import { projektFuerLevel } from "./project";
+import { getEveningReviewSlot as tool182Slot } from "./tool-182"; // R353: Sleep Protocol
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -1328,6 +1329,12 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       ],
     };
     tasks.push(...(finals[day] ?? finals[378]));
+  }
+
+  // R353-182: Evening Sleep slot — 21:00 review if heavy day
+  const sleepSlot = tool182Slot(day);
+  if (sleepSlot && type !== "abschluss" && !tasks.some(t => t.kind === "wiederholen" && t.titleAr.includes("مسائية"))) {
+    tasks.push({ id: tid(32), kind: "wiederholen", titleDe: `Evening Review ${sleepSlot.lernenStart}`, titleAr: `مراجعة مسائية ${sleepSlot.lernenStart} قبل النوم`, minutes: 5, sentenceIds: kapselIdsAdaptiv(progress, day).slice(0,2) });
   }
 
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung

@@ -1,6 +1,25 @@
 /**
- * 189 — أداة بيداغوجية مكتملة (Ethik / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 189 — Variation Theory (Marton) — نظرية التباين
+ * Marton & Booth 1997: learning = discerning variation (same vs different)
+ * Level: B1 | Bloom: حلّل
  */
-export const TOOL_189 = { id: 189, family: "Ethik", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_189(): boolean { return true; }
+export const TOOL_189 = {
+  id: 189,
+  titleDe: "Variationstheorie",
+  titleAr: "نظرية التباين",
+  principle: "Zeige was gleich bleibt und was variiert",
+} as const;
+
+export interface VariationPair {
+  invariant: string; // stays same
+  variant: string; // changes
+  frageAr: string;
+}
+
+export function variationFrage(invariant: string, variant: string): VariationPair {
+  return {
+    invariant,
+    variant,
+    frageAr: `ما الذي تغيّر بين "${invariant}" و "${variant}"؟`,
+  };
+}
