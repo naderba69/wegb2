@@ -1157,3 +1157,15 @@ A6: الأرضية مقاسة من المانيفست — حوارات الدا�
 **بعد R332:** Probeklausur الآن محاكاة بزمن ونقطة Goethe حقيقية. المتبقي P2: Gate K127 (Goethe Wortliste لفظي).
 
 **الدقّة**: tsc ✓ · build ✓ (15/15)
+
+## R333 — بوابة K80k+K128 (Goethe لفظي + N-Deklination + Debatte):
+
+تكملة P2: تثبيت التحقق الآلي لمنع التراجع.
+
+1. **K80k:** فحص لفظي حرج — 7 كلمات A1 (bier/eltern/s-bahn...), 6 كلمات A2 (e-mail/laptop/polizistin/schweizer...), 4 كلمات B1 (umweltverschmutzung/nachhaltig...) — كلها يجب أن تكون في `alleVokabeln` — يضمن Goethe-konform دلاليًا.
+2. **K128a:** `b2-n-deklination` موجودة B2 ≥6 تمارين — يضمن GGP 100%.
+3. **K128b:** `pakete.length===4` + `b2-debatte` 12 جملة — يضمن M2 B2 Themen مغلقة.
+
+**بعد R333:** كل إضافات P0–P2 محمية ببوابات — أي حذف مستقبلي يفشل smoke فورًا.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)

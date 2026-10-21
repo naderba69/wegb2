@@ -2630,6 +2630,20 @@ void 0;
     const a1a2Soll = require("../content/kollok-a1a2-soll.json") as { A1: { sollAnzahl: number; karten: { id: string }[] }; A2: { sollAnzahl: number; karten: { id: string }[] } };
     ok(a1a2Soll.A1.karten.length === 170 && a1a2Soll.A1.karten.every((k) => !!kollokationen[k.id]), "K80i قائمةُ متلازماتِ A1 المعلنة 170/170 في kollokationen.json");
     ok(a1a2Soll.A2.karten.length === 245 && a1a2Soll.A2.karten.every((k) => !!kollokationen[k.id]), "K80j قائمةُ متلازماتِ A2 المعلنة 245/245 في kollokationen.json");
+    // ── K80k — Goethe Wortliste لفظي (R329 P0): A1/A2/B1 100% دلالي — تحقق عبر كلمات حرجة لا يجوز غيابها
+    {
+      const kritA1 = ["bier", "eltern", "geschwister", "s-bahn", "straßenbahn", "familienname", "anrufbeantworter"];
+      const kritA2 = ["e-mail", "laptop", "polizistin", "anrufbeantworter", "schweizer", "österreicher"];
+      const kritB1 = ["umweltverschmutzung", "nachhaltig", "bewerbung", "lebenslauf"];
+      const allDeLower = alleVokabeln.map((c) => c.de.toLowerCase());
+      const has = (w: string) => allDeLower.some((d) => d.includes(w));
+      ok(kritA1.every(has), `K80k·A1 Goethe حرجة موجودة: ${kritA1.join(", ")}`);
+      ok(kritA2.every(has), `K80k·A2 Goethe حرجة موجودة: ${kritA2.join(", ")}`);
+      ok(kritB1.every(has), `K80k·B1 Goethe حرجة موجودة: ${kritB1.join(", ")}`);
+    }
+    // ── K128 — إضافات R330/R331: N-Deklination + Debatte Paket
+    ok(!!grammarMap["b2-n-deklination"] && grammarMap["b2-n-deklination"].level === "B2" && grammarMap["b2-n-deklination"].exercises.length >= 6, "K128a B2 N-Deklination موجودة (B2 · 6 تمارين)");
+    ok(pakete.length === 4 && pakete.some((x) => x.id === "b2-debatte" && x.saetze.length === 12), "K128b 4 حزم (b2-debatte 12 جملة) — M2 B2 Themen مغلقة");
   }
 
   /* ═══ K86 · رادارُ القواعدِ في النصوص: كلُّ نصِّ B1/B2 يسمّي ≥2 موضوعين نحويَّين مع شواهدَ حرفيّة ═══ */
