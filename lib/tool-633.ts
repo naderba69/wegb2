@@ -1,8 +1,8 @@
 /**
- * 633 — Tool 633 Concept — مفهوم 633
- * Research 633: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 633 — Cross-Linguistic Influence adv — تأثير عبر متقدم
+ * Jarvis 2010: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_633 = { id: 633, titleDe: "Tool 633 Concept", titleAr: "مفهوم 633", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 633", desc: "Tool 633" } as const;
+export const TOOL_633 = { id: 633, titleDe: "Cross-Linguistic Influence adv", titleAr: "تأثير عبر متقدم", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Jarvis 2010", desc: "Cross-Linguistic Influence adv" } as const;
 export function tool633Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool633Check(v:number):boolean{return v>0;}

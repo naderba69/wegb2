@@ -660,36 +660,36 @@
 | 608 | Immersion | Digital Literacy — محو رقمي | ✅حقيقي | A1-B2 | فهم | `lib/tool-608.ts` | R376 |
 | 609 | Immersion | Telecollaboration 2.0 — تعاون | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-609.ts` | R376 |
 | 610 | تقويم | Virtual Exchange Assessment — تقويم تبادل | ✅حقيقي | B1-B2 | قيّم | `lib/tool-610.ts` | R376 |
-| 611 | طرائق | Tool 611 Concept — مفهوم 611 | ✅حقيقي | A1-B2 | فهم | `lib/tool-611.ts` | R372 |
-| 612 | طرائق | Tool 612 Concept — مفهوم 612 | ✅حقيقي | A1-B2 | فهم | `lib/tool-612.ts` | R372 |
-| 613 | طرائق | Tool 613 Concept — مفهوم 613 | ✅حقيقي | A1-B2 | فهم | `lib/tool-613.ts` | R372 |
-| 614 | طرائق | Tool 614 Concept — مفهوم 614 | ✅حقيقي | A1-B2 | فهم | `lib/tool-614.ts` | R372 |
-| 615 | طرائق | Tool 615 Concept — مفهوم 615 | ✅حقيقي | A1-B2 | فهم | `lib/tool-615.ts` | R372 |
-| 616 | طرائق | Tool 616 Concept — مفهوم 616 | ✅حقيقي | A1-B2 | فهم | `lib/tool-616.ts` | R372 |
-| 617 | طرائق | Tool 617 Concept — مفهوم 617 | ✅حقيقي | A1-B2 | فهم | `lib/tool-617.ts` | R372 |
-| 618 | طرائق | Tool 618 Concept — مفهوم 618 | ✅حقيقي | A1-B2 | فهم | `lib/tool-618.ts` | R372 |
-| 619 | طرائق | Tool 619 Concept — مفهوم 619 | ✅حقيقي | A1-B2 | فهم | `lib/tool-619.ts` | R372 |
-| 620 | طرائق | Tool 620 Concept — مفهوم 620 | ✅حقيقي | A1-B2 | فهم | `lib/tool-620.ts` | R372 |
-| 621 | طرائق | Tool 621 Concept — مفهوم 621 | ✅حقيقي | A1-B2 | فهم | `lib/tool-621.ts` | R372 |
-| 622 | طرائق | Tool 622 Concept — مفهوم 622 | ✅حقيقي | A1-B2 | فهم | `lib/tool-622.ts` | R372 |
-| 623 | طرائق | Tool 623 Concept — مفهوم 623 | ✅حقيقي | A1-B2 | فهم | `lib/tool-623.ts` | R372 |
-| 624 | طرائق | Tool 624 Concept — مفهوم 624 | ✅حقيقي | A1-B2 | فهم | `lib/tool-624.ts` | R372 |
-| 625 | طرائق | Tool 625 Concept — مفهوم 625 | ✅حقيقي | A1-B2 | فهم | `lib/tool-625.ts` | R372 |
-| 626 | طرائق | Tool 626 Concept — مفهوم 626 | ✅حقيقي | A1-B2 | فهم | `lib/tool-626.ts` | R372 |
-| 627 | طرائق | Tool 627 Concept — مفهوم 627 | ✅حقيقي | A1-B2 | فهم | `lib/tool-627.ts` | R372 |
-| 628 | طرائق | Tool 628 Concept — مفهوم 628 | ✅حقيقي | A1-B2 | فهم | `lib/tool-628.ts` | R372 |
-| 629 | طرائق | Tool 629 Concept — مفهوم 629 | ✅حقيقي | A1-B2 | فهم | `lib/tool-629.ts` | R372 |
-| 630 | طرائق | Tool 630 Concept — مفهوم 630 | ✅حقيقي | A1-B2 | فهم | `lib/tool-630.ts` | R372 |
-| 631 | طرائق | Tool 631 Concept — مفهوم 631 | ✅حقيقي | A1-B2 | فهم | `lib/tool-631.ts` | R372 |
-| 632 | طرائق | Tool 632 Concept — مفهوم 632 | ✅حقيقي | A1-B2 | فهم | `lib/tool-632.ts` | R372 |
-| 633 | طرائق | Tool 633 Concept — مفهوم 633 | ✅حقيقي | A1-B2 | فهم | `lib/tool-633.ts` | R372 |
-| 634 | طرائق | Tool 634 Concept — مفهوم 634 | ✅حقيقي | A1-B2 | فهم | `lib/tool-634.ts` | R372 |
-| 635 | طرائق | Tool 635 Concept — مفهوم 635 | ✅حقيقي | A1-B2 | فهم | `lib/tool-635.ts` | R372 |
-| 636 | طرائق | Tool 636 Concept — مفهوم 636 | ✅حقيقي | A1-B2 | فهم | `lib/tool-636.ts` | R372 |
-| 637 | طرائق | Tool 637 Concept — مفهوم 637 | ✅حقيقي | A1-B2 | فهم | `lib/tool-637.ts` | R372 |
-| 638 | طرائق | Tool 638 Concept — مفهوم 638 | ✅حقيقي | A1-B2 | فهم | `lib/tool-638.ts` | R372 |
-| 639 | طرائق | Tool 639 Concept — مفهوم 639 | ✅حقيقي | A1-B2 | فهم | `lib/tool-639.ts` | R372 |
-| 640 | طرائق | Tool 640 Concept — مفهوم 640 | ✅حقيقي | A1-B2 | فهم | `lib/tool-640.ts` | R372 |
+| 611 | SLA | Sociocultural Theory — اجتماعية ثقافية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-611.ts` | R377 |
+| 612 | SLA | Activity Theory — نشاط | ✅حقيقي | B1-B2 | حلّل | `lib/tool-612.ts` | R377 |
+| 613 | SLA | Communities of Practice — مجتمعات | ✅حقيقي | A1-B2 | فهم | `lib/tool-613.ts` | R377 |
+| 614 | SLA | Legitimate Peripheral Participation — هامشية | ✅حقيقي | A1-B2 | فهم | `lib/tool-614.ts` | R377 |
+| 615 | SLA | Ecological SLA — بيئي | ✅حقيقي | A1-B2 | فهم | `lib/tool-615.ts` | R377 |
+| 616 | SLA | Complex Dynamic Systems — ديناميكية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-616.ts` | R377 |
+| 617 | الذاكرة | Dynamic Systems Vocabulary — دينامية مفردات | ✅حقيقي | A1-B2 | فهم | `lib/tool-617.ts` | R377 |
+| 618 | SLA | Usage-Based Phonology — صوتيات استعمالية | ✅حقيقي | A1-B2 | فهم | `lib/tool-618.ts` | R377 |
+| 619 | SLA | Exemplar Phonology — أمثولية | ✅حقيقي | B1-B2 | فهم | `lib/tool-619.ts` | R377 |
+| 620 | SLA | Gestural Phonology — إيمائية | ✅حقيقي | A0-A2 | طبّق | `lib/tool-620.ts` | R377 |
+| 621 | SLA | Articulatory Phonology — نطقية | ✅حقيقي | A0-A2 | فهم | `lib/tool-621.ts` | R377 |
+| 622 | SLA | Perceptual Assimilation — استيعاب | ✅حقيقي | A1-B2 | فهم | `lib/tool-622.ts` | R377 |
+| 623 | SLA | Speech Learning Model — نموذج كلام | ✅حقيقي | A1-B2 | حلّل | `lib/tool-623.ts` | R377 |
+| 624 | SLA | Native Language Magnet — مغناطيس | ✅حقيقي | A0-A2 | فهم | `lib/tool-624.ts` | R377 |
+| 625 | SLA | Critical Period Hypothesis — فترة حرجة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-625.ts` | R377 |
+| 626 | SLA | Age Effects — أثر عمر | ✅حقيقي | B1-B2 | حلّل | `lib/tool-626.ts` | R377 |
+| 627 | SLA | Maturational Constraints — قيود نضج | ✅حقيقي | B1-B2 | فهم | `lib/tool-627.ts` | R377 |
+| 628 | SLA | Bilingual First Language — ثنائية أولى | ✅حقيقي | A0-B2 | فهم | `lib/tool-628.ts` | R377 |
+| 629 | SLA | Child L2 Acquisition — طفل | ✅حقيقي | A1-B2 | فهم | `lib/tool-629.ts` | R377 |
+| 630 | SLA | Adult L2 Acquisition — كبير | ✅حقيقي | A1-B2 | حلّل | `lib/tool-630.ts` | R377 |
+| 631 | SLA | Heritage Language Acquisition — تراثية | ✅حقيقي | A1-B2 | فهم | `lib/tool-631.ts` | R377 |
+| 632 | SLA | Third Language Acquisition adv — ثالثة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-632.ts` | R377 |
+| 633 | SLA | Cross-Linguistic Influence adv — عبر | ✅حقيقي | B1-B2 | حلّل | `lib/tool-633.ts` | R377 |
+| 634 | SLA | Transferability — قابلية نقل | ✅حقيقي | A1-B2 | فهم | `lib/tool-634.ts` | R377 |
+| 635 | SLA | Markedness — تميّز | ✅حقيقي | B1-B2 | فهم | `lib/tool-635.ts` | R377 |
+| 636 | SLA | Typological Primacy — أسبقية نمطية | ✅حقيقي | B1-B2 | فهم | `lib/tool-636.ts` | R377 |
+| 637 | SLA | Linguistic Proximity — تقارب | ✅حقيقي | A1-B2 | فهم | `lib/tool-637.ts` | R377 |
+| 638 | SLA | Psychotypology — تصنيف نفسي | ✅حقيقي | A1-B2 | فهم | `lib/tool-638.ts` | R377 |
+| 639 | SLA | Multilingual Awareness — وعي متعدد | ✅حقيقي | A1-B2 | حلّل | `lib/tool-639.ts` | R377 |
+| 640 | SLA | Third Language Modelling — نمذجة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-640.ts` | R377 |
 | 641 | طرائق | Tool 641 Concept — مفهوم 641 | ✅حقيقي | A1-B2 | فهم | `lib/tool-641.ts` | R372 |
 | 642 | طرائق | Tool 642 Concept — مفهوم 642 | ✅حقيقي | A1-B2 | فهم | `lib/tool-642.ts` | R372 |
 | 643 | طرائق | Tool 643 Concept — مفهوم 643 | ✅حقيقي | A1-B2 | فهم | `lib/tool-643.ts` | R372 |
