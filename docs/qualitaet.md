@@ -1183,3 +1183,33 @@ A6: الأرضية مقاسة من المانيفست — حوارات الدا�
 **السجل:** 100→67✅ (67%) — docs/TOOLS_REGISTRY.md محدث.
 
 **الدقّة**: tsc ✓ · build ✓ (15/15)
+
+**بعد R333:** كل إضافات P0–P2 محمية ببوابات — أي حذف مستقبلي يفشل smoke فورًا.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)
+
+## R334 — أدوات بيداغوجية دفعة 1 (Overlearning + Schlaf + Portfolio):
+
+أول دفعات سجل الأدوات 001→100 — 3 أدوات من عائلات الذاكرة والتقويم.
+
+1. **010 Overlearning:** `lib/overlearning.ts` — بعد 3 صح متتالية يضيف تكرارين (+2ي +7ي) بنسبة 1.15 — يمنع وهم الإتقان (Rohrer & Taylor 25% احتفاظ).
+2. **011 Schlaf:** `lib/schlaf.ts` — نافذة 21:00-23:30، توصية 5-7 بطاقات صعبة مساءً (+20% تثبيت Gais).
+3. **072 Portfolio:** `lib/portfolio.ts` — محفظة ELP (Passport/Biography/Dossier) 5 أنواع (text/writing/dialog/fehler/klausur) + إحصاء حسب المستوى.
+
+**بوابات:** K128c/d/e في smoke — Overlearning 1.15 + Schlaf 21-23.5 + Portfolio 0.
+
+**السجل:** 100→67✅ (67%) — docs/TOOLS_REGISTRY.md محدث.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)
+
+## R335 — أدوات بيداغوجية دفعة 2 (Mnemonic Story + Memory Palace + Processing Instruction):
+
+1. **013 Mnemonic Story:** `lib/mnemonic-story.ts` — يربط 5-7 كلمات في قصة سخيفة واحدة (bizarreness effect +40% احتفاظ). `baueStory([{de,ar,bild}])` → titel/textAr/textDe.
+2. **014 Memory Palace:** `lib/memory-palace.ts` — 7 غرف ثابتة (Eingang→Keller) + 4 كلمات/غرفة max، `palacePosition(index)` تحدد الغرفة/الفتحة، جولة ذهنية للاسترجاع.
+3. **024 Processing Instruction (VanPatten):** `lib/processing-instruction.ts` — مدخل معالج قبل الإنتاج: اختيار «أي جملة سبب؟» بدل ملء weil. `piItemsFor(gramId)` → Fokus weil/obwohl.
+
+**بوابات:** K128f/g/h في smoke — Story/ Palace 7 Räume / PI weil.
+
+**السجل:** 67→70✅ (70%) — docs/TOOLS_REGISTRY.md محدث.
+
+**الدقّة**: tsc ✓ · build ✓ (15/15)

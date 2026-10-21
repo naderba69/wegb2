@@ -16,8 +16,8 @@
 | 010 | الذاكرة | Overlearning ترسيخ زائد | ✅ | B2 | تذكّر | — | P3 |
 | 011 | الذاكرة | النوم والترسيخ Sleep | ✅ | A0-B2 | تذكّر | — | P3 |
 | 012 | الذاكرة | Context-Dependent تغيير السياق | ✅ | A0-B2 | تذكّر | `lib/plan.ts` rng | نفس اليوم بحروف عشوائية |
-| 013 | الذاكرة | Mnemonic Story قصة | 🔲 | A0-B2 | تذكّر | — | P3 |
-| 014 | الذاكرة | Memory Palace / Loci | 🔲 | A0-B2 | تذكّر | — | P3 |
+| 013 | الذاكرة | Mnemonic Story قصة | ✅ | A0-B2 | تذكّر | — | P3 |
+| 014 | الذاكرة | Memory Palace / Loci | ✅ | A0-B2 | تذكّر | — | P3 |
 | 015 | الذاكرة | Keyword Method كلمة مفتاحية | ✅ | A0-B2 | تذكّر | `lib/eselsbruecken.ts` | Eselsbrücken عربية |
 | 016 | الذاكرة | التصور الفونيمي | ✅ | A0 | تذكّر | `lib/phonetikdaten.ts` | 6 وحدات نطق |
 | 017 | الذاكرة | الإيقاع والأغنية Prosody | 🔲 | A0-A1 | تذكّر | — | P4 |
@@ -27,7 +27,7 @@
 | 021 | SLA | Interaction مراوضة المعنى | ✅ | A1-B2 | طبّق | `content/dialogues.json` 164 | فجوة معلومات |
 | 022 | SLA | Output إنتاج مصحح | ✅ | A1-B2 | أنشئ | `content/writing.json` 100 | كل كتابة مصححة |
 | 023 | SLA | Focus on Form | ✅ | A1-B2 | حلّل | `content/grammar.json` 83 | قاعدة داخل سياق |
-| 024 | SLA | Processing Instruction | 🔲 | A2-B1 | حلّل | — | P3 |
+| 024 | SLA | Processing Instruction | ✅ | A2-B1 | حلّل | — | P3 |
 | 025 | SLA | Input Enhancement تمييز بصري | ✅ | A1-B2 | فهم | `components/*` | ألوان وخط عريض |
 | 026 | SLA | Corrective Feedback 6 أنواع | ✅ | A0-B2 | قيّم | `lib/fehlerbank2.ts` | إعادة صياغة+توضيح+تلميح |
 | 027 | SLA | Scaffolding ZPD | ✅ | A0-B2 | طبّق | `lib/plan.ts` voraus | كل درس له متطلبات |
@@ -107,7 +107,7 @@
 
 > ما بعد 100 هو تفريع لكل أداة (مثال 026 Feedback = 6 أدوات فرعية، 105 Gamification = 8). السجل يُوسّع حتى 1000 بنفس النسق.
 
-**المجموع الحالي: 100 أداة أساسية — 67 ✅ موجودة (67%) — 33 🔲 مقترحة (36%)**
+**المجموع الحالي: 100 أداة أساسية — 70 ✅ موجودة (70%) — 30 🔲 مقترحة (30%)**
 **خارطة الدفعات القادمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR
