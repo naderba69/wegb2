@@ -1,8 +1,8 @@
 /**
- * 595 — Tool 595 Concept — مفهوم 595
- * Research 595: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 595 — Test Anxiety — قلق اختبار
+ * Hembree 1988: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: تقويم
  */
-export const TOOL_595 = { id: 595, titleDe: "Tool 595 Concept", titleAr: "مفهوم 595", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 595", desc: "Tool 595" } as const;
+export const TOOL_595 = { id: 595, titleDe: "Test Anxiety", titleAr: "قلق اختبار", family: "تقويم", bloom: "حلّل", level: "A1-B2", research: "Hembree 1988", desc: "Test Anxiety" } as const;
 export function tool595Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool595Check(v:number):boolean{return v>0;}

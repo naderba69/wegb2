@@ -1,8 +1,8 @@
 /**
- * 587 — Tool 587 Concept — مفهوم 587
- * Research 587: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 587 — Buoyancy Martin — مرونة أكاديمية
+ * Martin 2013: classroom application
+ * Level: A1-B2 | Bloom: قيّم | Family: تلقين
  */
-export const TOOL_587 = { id: 587, titleDe: "Tool 587 Concept", titleAr: "مفهوم 587", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 587", desc: "Tool 587" } as const;
+export const TOOL_587 = { id: 587, titleDe: "Buoyancy Martin", titleAr: "مرونة أكاديمية", family: "تلقين", bloom: "قيّم", level: "A1-B2", research: "Martin 2013", desc: "Buoyancy Martin" } as const;
 export function tool587Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool587Check(v:number):boolean{return v>0;}

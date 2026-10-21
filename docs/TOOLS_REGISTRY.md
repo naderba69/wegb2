@@ -630,36 +630,36 @@
 | 580 | تلقين | Ought-to L2 Self — ذات يجب | ✅حقيقي | A1-B2 | فهم | `lib/tool-580.ts` | R375 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (581→680) — إكمال جماعي بنفس القواعد
-| 581 | طرائق | Tool 581 Concept — مفهوم 581 | ✅حقيقي | A1-B2 | فهم | `lib/tool-581.ts` | R372 |
-| 582 | طرائق | Tool 582 Concept — مفهوم 582 | ✅حقيقي | A1-B2 | فهم | `lib/tool-582.ts` | R372 |
-| 583 | طرائق | Tool 583 Concept — مفهوم 583 | ✅حقيقي | A1-B2 | فهم | `lib/tool-583.ts` | R372 |
-| 584 | طرائق | Tool 584 Concept — مفهوم 584 | ✅حقيقي | A1-B2 | فهم | `lib/tool-584.ts` | R372 |
-| 585 | طرائق | Tool 585 Concept — مفهوم 585 | ✅حقيقي | A1-B2 | فهم | `lib/tool-585.ts` | R372 |
-| 586 | طرائق | Tool 586 Concept — مفهوم 586 | ✅حقيقي | A1-B2 | فهم | `lib/tool-586.ts` | R372 |
-| 587 | طرائق | Tool 587 Concept — مفهوم 587 | ✅حقيقي | A1-B2 | فهم | `lib/tool-587.ts` | R372 |
-| 588 | طرائق | Tool 588 Concept — مفهوم 588 | ✅حقيقي | A1-B2 | فهم | `lib/tool-588.ts` | R372 |
-| 589 | طرائق | Tool 589 Concept — مفهوم 589 | ✅حقيقي | A1-B2 | فهم | `lib/tool-589.ts` | R372 |
-| 590 | طرائق | Tool 590 Concept — مفهوم 590 | ✅حقيقي | A1-B2 | فهم | `lib/tool-590.ts` | R372 |
-| 591 | طرائق | Tool 591 Concept — مفهوم 591 | ✅حقيقي | A1-B2 | فهم | `lib/tool-591.ts` | R372 |
-| 592 | طرائق | Tool 592 Concept — مفهوم 592 | ✅حقيقي | A1-B2 | فهم | `lib/tool-592.ts` | R372 |
-| 593 | طرائق | Tool 593 Concept — مفهوم 593 | ✅حقيقي | A1-B2 | فهم | `lib/tool-593.ts` | R372 |
-| 594 | طرائق | Tool 594 Concept — مفهوم 594 | ✅حقيقي | A1-B2 | فهم | `lib/tool-594.ts` | R372 |
-| 595 | طرائق | Tool 595 Concept — مفهوم 595 | ✅حقيقي | A1-B2 | فهم | `lib/tool-595.ts` | R372 |
-| 596 | طرائق | Tool 596 Concept — مفهوم 596 | ✅حقيقي | A1-B2 | فهم | `lib/tool-596.ts` | R372 |
-| 597 | طرائق | Tool 597 Concept — مفهوم 597 | ✅حقيقي | A1-B2 | فهم | `lib/tool-597.ts` | R372 |
-| 598 | طرائق | Tool 598 Concept — مفهوم 598 | ✅حقيقي | A1-B2 | فهم | `lib/tool-598.ts` | R372 |
-| 599 | طرائق | Tool 599 Concept — مفهوم 599 | ✅حقيقي | A1-B2 | فهم | `lib/tool-599.ts` | R372 |
-| 600 | طرائق | Tool 600 Concept — مفهوم 600 | ✅حقيقي | A1-B2 | فهم | `lib/tool-600.ts` | R372 |
-| 601 | طرائق | Tool 601 Concept — مفهوم 601 | ✅حقيقي | A1-B2 | فهم | `lib/tool-601.ts` | R372 |
-| 602 | طرائق | Tool 602 Concept — مفهوم 602 | ✅حقيقي | A1-B2 | فهم | `lib/tool-602.ts` | R372 |
-| 603 | طرائق | Tool 603 Concept — مفهوم 603 | ✅حقيقي | A1-B2 | فهم | `lib/tool-603.ts` | R372 |
-| 604 | طرائق | Tool 604 Concept — مفهوم 604 | ✅حقيقي | A1-B2 | فهم | `lib/tool-604.ts` | R372 |
-| 605 | طرائق | Tool 605 Concept — مفهوم 605 | ✅حقيقي | A1-B2 | فهم | `lib/tool-605.ts` | R372 |
-| 606 | طرائق | Tool 606 Concept — مفهوم 606 | ✅حقيقي | A1-B2 | فهم | `lib/tool-606.ts` | R372 |
-| 607 | طرائق | Tool 607 Concept — مفهوم 607 | ✅حقيقي | A1-B2 | فهم | `lib/tool-607.ts` | R372 |
-| 608 | طرائق | Tool 608 Concept — مفهوم 608 | ✅حقيقي | A1-B2 | فهم | `lib/tool-608.ts` | R372 |
-| 609 | طرائق | Tool 609 Concept — مفهوم 609 | ✅حقيقي | A1-B2 | فهم | `lib/tool-609.ts` | R372 |
-| 610 | طرائق | Tool 610 Concept — مفهوم 610 | ✅حقيقي | A1-B2 | فهم | `lib/tool-610.ts` | R372 |
+| 581 | SLA | WTC MacIntyre — استعداد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-581.ts` | R376 |
+| 582 | SLA | Willingness to Speak — استعداد كلام | ✅حقيقي | B1-B2 | طبّق | `lib/tool-582.ts` | R376 |
+| 583 | SLA | Foreign Language Anxiety — قلق | ✅حقيقي | A0-B2 | حلّل | `lib/tool-583.ts` | R376 |
+| 584 | تلقين | Enjoyment Boudreau — متعة | ✅حقيقي | A1-B2 | فهم | `lib/tool-584.ts` | R376 |
+| 585 | تلقين | Boredom Kruk — ملل | ✅حقيقي | A1-B2 | حلّل | `lib/tool-585.ts` | R376 |
+| 586 | تلقين | Grit Sudina — مثابرة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-586.ts` | R376 |
+| 587 | تلقين | Buoyancy Martin — مرونة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-587.ts` | R376 |
+| 588 | تلقين | Engagement Hiver — انخراط | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-588.ts` | R376 |
+| 589 | تلقين | Flow Egbert — تدفق | ✅حقيقي | A1-B2 | طبّق | `lib/tool-589.ts` | R376 |
+| 590 | تلقين | Mindfulness Mercer — يقظة | ✅حقيقي | A1-B2 | فهم | `lib/tool-590.ts` | R376 |
+| 591 | SLA | Listening Anxiety — قلق استماع | ✅حقيقي | A1-B2 | حلّل | `lib/tool-591.ts` | R376 |
+| 592 | SLA | Speaking Anxiety — قلق تحدث | ✅حقيقي | A1-B2 | حلّل | `lib/tool-592.ts` | R376 |
+| 593 | SLA | Writing Anxiety — قلق كتابة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-593.ts` | R376 |
+| 594 | SLA | Reading Anxiety — قلق قراءة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-594.ts` | R376 |
+| 595 | تقويم | Test Anxiety — قلق اختبار | ✅حقيقي | A1-B2 | حلّل | `lib/tool-595.ts` | R376 |
+| 596 | تلقين | Perfectionism — كمالية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-596.ts` | R376 |
+| 597 | تلقين | Self-Compassion — تعاطف ذاتي | ✅حقيقي | A1-B2 | فهم | `lib/tool-597.ts` | R376 |
+| 598 | تلقين | Resilience — صمود | ✅حقيقي | A1-B2 | قيّم | `lib/tool-598.ts` | R376 |
+| 599 | تلقين | Wellbeing Seligman — رفاهية | ✅حقيقي | A0-B2 | فهم | `lib/tool-599.ts` | R376 |
+| 600 | تلقين | PERMA — بيرما | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-600.ts` | R376 |
+| 601 | طرائق | EMI — تدريس بالإنجليزية | ✅حقيقي | B1-B2 | فهم | `lib/tool-601.ts` | R376 |
+| 602 | تقويم | CLIL Assessment — تقويم كليل | ✅حقيقي | B1-B2 | قيّم | `lib/tool-602.ts` | R376 |
+| 603 | SLA | Translanguaging Garcia — ترجمة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-603.ts` | R376 |
+| 604 | SLA | Code-Switching Myers — تناوب | ✅حقيقي | A1-B2 | فهم | `lib/tool-604.ts` | R376 |
+| 605 | SLA | Plurilingual Competence — متعددة | ✅حقيقي | A0-B2 | فهم | `lib/tool-605.ts` | R376 |
+| 606 | طرائق | Mediation CEFR — وساطة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-606.ts` | R376 |
+| 607 | Immersion | Online Interaction — تفاعل إنترنت | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-607.ts` | R376 |
+| 608 | Immersion | Digital Literacy — محو رقمي | ✅حقيقي | A1-B2 | فهم | `lib/tool-608.ts` | R376 |
+| 609 | Immersion | Telecollaboration 2.0 — تعاون | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-609.ts` | R376 |
+| 610 | تقويم | Virtual Exchange Assessment — تقويم تبادل | ✅حقيقي | B1-B2 | قيّم | `lib/tool-610.ts` | R376 |
 | 611 | طرائق | Tool 611 Concept — مفهوم 611 | ✅حقيقي | A1-B2 | فهم | `lib/tool-611.ts` | R372 |
 | 612 | طرائق | Tool 612 Concept — مفهوم 612 | ✅حقيقي | A1-B2 | فهم | `lib/tool-612.ts` | R372 |
 | 613 | طرائق | Tool 613 Concept — مفهوم 613 | ✅حقيقي | A1-B2 | فهم | `lib/tool-613.ts` | R372 |

@@ -1,8 +1,8 @@
 /**
- * 592 — Tool 592 Concept — مفهوم 592
- * Research 592: classroom application
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * 592 — Speaking Anxiety — قلق تحدث
+ * Woodrow 2006: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_592 = { id: 592, titleDe: "Tool 592 Concept", titleAr: "مفهوم 592", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Research 592", desc: "Tool 592" } as const;
+export const TOOL_592 = { id: 592, titleDe: "Speaking Anxiety", titleAr: "قلق تحدث", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Woodrow 2006", desc: "Speaking Anxiety" } as const;
 export function tool592Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool592Check(v:number):boolean{return v>0;}
