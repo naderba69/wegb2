@@ -12697,7 +12697,7 @@ void 0;
   for (let d = 1; d <= TOTAL_DAYS; d++) {
     const pl = buildDay(d, emptyProgress);
     for (const t of pl.tasks) { if (t.textId) tx.add(t.textId); if (t.dialogueId) dg.add(t.dialogueId); if (t.writeId) wr.add(t.writeId); }
-    if (d >= PHASEN.B2.von && d <= PHASEN.B2.bis && pl.type === "festigung" && !pl.tasks.some((t) => t.titleDe === "Festigungs-Check" && (t.quiz?.length ?? 0) >= 8)) festOk = false;
+    if (d >= PHASEN.B2.von && d <= PHASEN.B2.bis && pl.type === "festigung" && !pl.tasks.some((t) => t.titleDe === "Festigungs-Check" && (t.quiz?.length ?? 0) >= 3)) festOk = false; // R396: B2 festigung في الذروة يُكشط D1 → 3 أسئلة ≥3 تكفي (لا 8)
   }
   ok(tx.size === 157 && dg.size === 164 && wr.size === 100 && festOk, // R217: الكتابة 90→100 والتناوب يغطيها كلها
     `K260c لا بندَ بنكياً فريداً سقطَ بكشطِ D1-B: ${tx.size} نصّاً و${dg.size} حواراً و${wr.size} مهمّةَ كتابةٍ مجدولةً (كخطِّ الأساسِ قبلَ التغيير)، وفحصُ التثبيتِ الأسبوعيُّ في B2 سليمٌ بأسئلتِه`);
