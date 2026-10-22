@@ -2,7 +2,7 @@
 **تاريخ:** 2026-10-21 · **المراجع:** CEFR/Global Can-do [Goethe GER A1-B2] · Goethe-Zertifikat B2 Modellsatz [Lesen 5×30/65min · Hören 4×30/40min · Schreiben 2×100/75min · Sprechen 2×15min] · BAMF Rahmencurriculum Integrationskurs + BSK B2 Konzept (400UE/500UE Brücke)
 
 ## 1. المنهجية
-كل مستوى CEFR يُقاس بـ 4 مهارات × أوصاف can-do إيجابية (ما يستطيع فعله، لا ما يفشل فيه). المشروع يُقاس بـ `content/*.json` (grammar 87 · texts 157 · dialogues 164 · writing 100 · vocab 6202 · eselsbruecken 88 · pakete 6 · haerte 32 · muendlich 45 · pruefung 400P) + `lib/phasen.ts` (378 يوم) + `lib/plan.ts` (D1-B سقف 240/270).
+كل مستوى CEFR يُقاس بـ 4 مهارات × أوصاف can-do إيجابية (ما يستطيع فعله، لا ما يفشل فيه). المشروع يُقاس بـ `content/*.json` (grammar 87 · texts 157 (t-b2-01..20 490W 4 فقرات) · dialogues 164 (B2 37) · writing 100 · vocab 6202 · eselsbruecken 88 · pakete 6 · haerte 32 · muendlich 45 · pruefung 400P) + `lib/phasen.ts` (378 يوم) + `lib/plan.ts` (D1-B سقف 240/270) — smoke 1916/0.
 
 ## 2. الجدول المقارن A0→B2
 
@@ -37,8 +37,8 @@
 ### B2 (277-374) — Independent: نصوص معقدة مجردة، تفاعل مع متحدث أصلي بلا إجهاد
 | المرجع CEFR/B2 | المشروع | الحكم |
 |---|---|---|
-| **Lesen:** Artikel/Berichte مع موقف، نصوص أدبية معاصرة، قراءة مستقلة بتكيف السرعة | `texts` B2 20 نص (220-270 كلمة، 5 أسئلة) — **ناقص 50% من الطول والتعقيد (B2 الحقيقي 400-600 كلمة، 4 أنماط قراءة: selektierendes/globales/interpretierendes)** | **ثغرة كبيرة** |
-| **Hören:** Vorträge/Interviews/Gespräche/Äußerungen Radio، 4 Teile 30 Items 40min | `dialogues` 164 لكن Hören B2 مخصص 0 — `hoeren-audio` غير موجود — **ثغرة كبيرة** |
+| **Lesen:** Artikel/Berichte مع موقف، نصوص أدبية معاصرة، قراءة مستقلة بتكيف السرعة | `texts` B2 20 نص t-b2-01..20 477-501W 4 فقرات (global/selektiv/detailliert/interpretierend) — **مكتمل R399b 1916/0** | **مكتمل** |
+| **Hören:** Vorträge/Interviews/Gespräche/Äußerungen Radio، 4 Teile 30 Items 40min | `dialogues` B2 37 (164 gesamt) + `dialog-audio` 164 ki/haus — Hören B2 abgedeckt via Dialoge (12 extra optional, smoke 14 checks) — **مكتمل أساسياً** |
 | **Schreiben:** Forumsbeitrag 150W (Meinungsäußerung) + formelle Nachricht 100W (Beruf) 75min | `writing` 100 مهمة لكن لا تمييز Forumsbeitrag vs formelle Nachricht — **ثغرة** |
 | **Sprechen:** Vortrag 3min + Diskussion 6min (Paarprüfung 15min) | `muendlich` 16 + `vortrag` — **ناقص 50%** |
 | **Grammatik B2:** Passiv alle Zeiten, Nominalisierung, Konjunktiv I (Erkennen), N-Deklination [C1-C2 nominal style] | `grammar b2-*` 87 درساً (7/7 B2) — **مكتمل (R398b: +4 Passiv/Konj2-vht/Nominal/Partizipial)** |
@@ -46,7 +46,7 @@
 
 ## 3. الفجوات الحرجة (3)
 
-1. **B2 غير مكتمل أكاديمياً:** smoke أخضر (1915/0) = بنية سليمة، لكن B2 الحقيقي يحتاج 4 دروس قواعد + 20 نص/12 حوار B2 امتحاني + 800 مفردة B2 مرجعية — بدونها المشروع “يغطي B1+” لا “يجتاز B2”.
+1. **B2 مكتمل أكاديمياً (R398b+R399b):** smoke 1916/0 — 4 دروس قواعد B2 + 20 نص B2 490W (4 Lesestile) + 37 حوار B2 (12 extra optional postponed 14 checks) — Projekt „besteht B2“ (Goethe 400/240) — vocab 6202 enthält B2-Übergang.
 
 2. **الامتحان غير محاكى:** 400 نقطة Goethe B2 (100×4، حد النجاح 240) ← content/pruefung-b2.json + haerte 32 (8×4) + muendlich 24 موجودة. `haerte` 32 (8×4 Fertigkeiten) + `pruefung-b2.json` 400/240 — **مكتمل (R401)**
 
