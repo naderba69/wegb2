@@ -455,7 +455,7 @@ const vocabRepeatAudit = (() => {
     ["eselsbruecken", eselsbruecken.length, 88],
     ["sprichwort-audio", Object.keys(sprichwortAudio).length, 8],
       ["mnemonik", Object.keys(mnemonikMap).length, 120],
-    ["pakete", pakete.length, 4],
+    ["pakete", pakete.length, 6],
   ];
   for (const [name, got, want] of counts) ok(got === want, `K-${name}: توقّع ${want} وجد ${got}`);
   ok(pakete.every((x) => x.saetze.length === 12 && x.dialog.lines.length === 6 && x.modelle.length === 2), "K11 بنية الحزم 12+6+2");
@@ -2643,7 +2643,7 @@ void 0;
     }
     // ── K128 — إضافات R330/R331: N-Deklination + Debatte Paket
     ok(!!grammarMap["b2-n-deklination"] && grammarMap["b2-n-deklination"].level === "B2" && grammarMap["b2-n-deklination"].exercises.length >= 6, "K128a B2 N-Deklination موجودة (B2 · 6 تمارين)");
-    ok(pakete.length === 4 && pakete.some((x) => x.id === "b2-debatte" && x.saetze.length === 12), "K128b 4 حزم (b2-debatte 12 جملة) — M2 B2 Themen مغلقة");
+    ok(pakete.length === 6 && pakete.some((x) => x.id === "b2-debatte" && x.saetze.length === 12) && pakete.some((x) => x.id === "behoerde") && pakete.some((x) => x.id === "pflege-beruf"), "K128b 6 حزم (b2-debatte 12 جملة + behoerde/pflege-beruf BSK B2) — M2 B2 Themen مغلقة");
     // K128c — Tools R334: Overlearning/Schlaf/Portfolio موجودة
     {
       const o = require("../lib/overlearning");

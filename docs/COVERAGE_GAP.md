@@ -42,7 +42,7 @@
 | **Schreiben:** Forumsbeitrag 150W (Meinungsäußerung) + formelle Nachricht 100W (Beruf) 75min | `writing` 100 مهمة لكن لا تمييز Forumsbeitrag vs formelle Nachricht — **ثغرة** |
 | **Sprechen:** Vortrag 3min + Diskussion 6min (Paarprüfung 15min) | `muendlich` 16 + `vortrag` — **ناقص 50%** |
 | **Grammatik B2:** Passiv alle Zeiten, Nominalisierung, Konjunktiv I (Erkennen), N-Deklination [C1-C2 nominal style] | `grammar b2-*` 3 دروس فقط (n-deklination, textkonnektoren, partizip) — **ثغرة 60%** |
-| **Beruf BSK B2 400UE:** Arbeitssuche, Arbeitsantritt, innerbetrieblich, Außenkontakte, Regularien, Fortbildung | `pakete b2-debatte` 12+6+2 واحد فقط — **ثغرة كبيرة** |
+| **Beruf BSK B2 400UE:** Arbeitssuche, Arbeitsantritt, innerbetrieblich, Außenkontakte, Regularien, Fortbildung | `pakete 4→6` (behoerde + pflege-beruf) مكتمل — BSK B2 Arbeitstypen VI + Pflege — **ثغرة كبيرة** |
 
 ## 3. الفجوات الحرجة (3)
 

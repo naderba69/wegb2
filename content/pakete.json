@@ -485,6 +485,254 @@
           ]
         }
       ]
+    },
+    {
+      "id": "behoerde",
+      "emoji": "🏛️",
+      "nameDe": "Behörde & Alltag",
+      "nameAr": "الإدارة واليوميات",
+      "nutzung": "BSK B2 Arbeitstyp VI: Regularien, Außenkontakte — Onlinezugangsgesetz, Termin, Anmeldung, Behördenschreiben verstehen.",
+      "saetze": [
+        {
+          "de": "Ich brauche einen Termin beim Bürgeramt für die Anmeldung.",
+          "ar": "أحتاج موعداً في مكتب المواطنين للتسجيل."
+        },
+        {
+          "de": "Kann ich das online über das Serviceportal beantragen?",
+          "ar": "هل أستطيع تقديم الطلب عبر بوابة الخدمات إلكترونياً؟"
+        },
+        {
+          "de": "Bitte bringen Sie Ausweis, Meldebescheinigung und Mietvertrag mit.",
+          "ar": "رجاءً أحضر الهوية وشهادة السكن وعقد الإيجار."
+        },
+        {
+          "de": "Der Antrag wurde digital eingereicht, die Bestätigung kommt per Post.",
+          "ar": "الطلب قُدّم رقمياً، والتأكيد يأتي بالبريد."
+        },
+        {
+          "de": "Die Bearbeitungszeit beträgt derzeit etwa drei Wochen.",
+          "ar": "مدة المعالجة حالياً نحو ثلاثة أسابيع."
+        },
+        {
+          "de": "Falls Unterlagen fehlen, erhalten Sie eine Aufforderung zur Nachreichung.",
+          "ar": "إن نقصت وثائق، تصلك دعوة للاستكمال."
+        },
+        {
+          "de": "Widerspruch können Sie innerhalb eines Monats schriftlich einlegen.",
+          "ar": "يمكنك الاعتراض كتابياً خلال شهر."
+        },
+        {
+          "de": "Die Gebühr kann per Lastschrift oder Überweisung bezahlt werden.",
+          "ar": "يمكن دفع الرسوم بالخصم الآلي أو التحويل."
+        },
+        {
+          "de": "Ihr Anliegen wurde zuständigkeitshalber an das Fachamt weitergeleitet.",
+          "ar": "أُحيل موضوعك إلى المكتب المختص بحسب الاختصاص."
+        },
+        {
+          "de": "Bitte prüfen Sie die Rechtsbehelfsbelehrung am Ende des Bescheids.",
+          "ar": "رجاءً راجع إرشادات الطعن في نهاية القرار."
+        },
+        {
+          "de": "Ein Dolmetscher kann auf Wunsch hinzugezogen werden.",
+          "ar": "يمكن الاستعانة بمترجم عند الرغبة."
+        },
+        {
+          "de": "Vielen Dank für Ihr Verständnis — wir melden uns, sobald der Bescheid vorliegt.",
+          "ar": "شكراً لتفهمك — نتواصل حال الانتهاء من القرار."
+        }
+      ],
+      "dialog": {
+        "titel": "Beim Bürgeramt: Anmeldung & Serviceportal (Behörde)",
+        "lines": [
+          {
+            "who": "A",
+            "role": "Antragstellerin",
+            "de": "Guten Tag, ich möchte mich anmelden und gleichzeitig einen Bewohnerparkausweis beantragen.",
+            "ar": "مرحباً، أريد التسجيل وطلب تصريح وقوف للسكان معاً."
+          },
+          {
+            "who": "B",
+            "role": "Sachbearbeiter",
+            "de": "Gerne. Haben Sie schon ein Online-Konto? Dann könnten wir vieles digital erledigen.",
+            "ar": "بكل سرور. هل لديك حساب إلكتروني؟ حينها ننجز الكثير رقمياً."
+          },
+          {
+            "who": "A",
+            "role": "Antragstellerin",
+            "de": "Ja, aber ich finde den Antrag für den Parkausweis nicht. Können Sie mir den Pfad zeigen?",
+            "ar": "نعم، لكن لا أجد طلب تصريح الوقوف. هل تريني المسار؟"
+          },
+          {
+            "who": "B",
+            "role": "Sachbearbeiter",
+            "de": "Klar: Startseite → „Auto & Verkehr“ → „Bewohnerparken“ → dann Upload von Ausweis und Fahrzeugschein.",
+            "ar": "واضح: الرئيسة → «سيارة ومرور» → «وقوف السكان» → ثم رفع الهوية ورخصة المركبة."
+          },
+          {
+            "who": "A",
+            "role": "Antragstellerin",
+            "de": "Und falls ich etwas falsch hochlade, bekomme ich eine Rückmeldung?",
+            "ar": "وإن حمّلت شيئاً بالخطأ، هل تصلني ملاحظة؟"
+          },
+          {
+            "who": "B",
+            "role": "Sachbearbeiter",
+            "de": "Ja, das System sendet eine Nachforderung. Sie können den Antrag innerhalb von 14 Tagen ergänzen.",
+            "ar": "نعم، النظام يرسل طلب استكمال. يمكنك إكمال الطلب خلال 14 يوماً."
+          }
+        ]
+      },
+      "modelle": [
+        {
+          "titel": "E-Mail: Terminanfrage Bürgeramt — طلب موعد بلدية",
+          "zeilen": [
+            "Betreff: Terminanfrage Anmeldung + Bewohnerparkausweis",
+            "Sehr geehrte Damen und Herren,",
+            "ich bin am 15.03. nach Berlin gezogen (Musterstr. 7, 12047).",
+            "Für die Anmeldung und den Bewohnerparkausweis bitte ich um einen Termin.",
+            "Anbei Ausweis (Scan) und Mietvertrag.",
+            "Mit freundlichen Grüßen",
+            "Leila Mansouri"
+          ]
+        },
+        {
+          "titel": "Widerspruch: Ablehnung Parkausweis — اعتراض على رفض تصريح",
+          "zeilen": [
+            "Betreff: Widerspruch gegen Bescheid vom 10.04. (AZ 42-18/9)",
+            "Sehr geehrte Damen und Herren,",
+            "gegen Ihren Bescheid vom 10.04. lege ich fristgerecht Widerspruch ein.",
+            "Die Ablehnung stützt sich auf fehlenden Hauptwohnsitz — dieser liegt aber seit 15.03. in Berlin vor (Anlage Meldebescheinigung).",
+            "Ich bitte um erneute Prüfung.",
+            "Mit freundlichen Grüßen",
+            "Leila Mansouri"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pflege-beruf",
+      "emoji": "🏥",
+      "nameDe": "Pflege & Gesundheit im Beruf",
+      "nameAr": "الرعاية والصحة مهنياً",
+      "nutzung": "BSK B2 Berufsfeld Pflege: innere Kommunikation, Übergabe, Dokumentation, Außenkontakte Patient/Angehörige (400UE Typ III-V).",
+      "saetze": [
+        {
+          "de": "Die Übergabe findet um 14 Uhr im Dienstzimmer statt.",
+          "ar": "التسليم يبدأ الثانية ظهراً في غرفة المناوبة."
+        },
+        {
+          "de": "Patientin in Zimmer 12 klagt über starke Rückenschmerzen.",
+          "ar": "مريضة الغرفة 12 تشتكي آلام ظهر شديدة."
+        },
+        {
+          "de": "Bitte dokumentieren Sie Vitalzeichen und Medikation lückenlos.",
+          "ar": "رجاءً وثّقي العلامات الحيوية والأدوية دون فجوات."
+        },
+        {
+          "de": "Der Arzt hat eine Physiotherapie und ein Röntgen angeordnet.",
+          "ar": "الطبيب طلب علاجاً فيزيائياً وأشعة سينية."
+        },
+        {
+          "de": "Angehörige warten im Flur und benötigen ein kurzes Gespräch.",
+          "ar": "الأهل ينتظرون في الممر ويحتاجون حديثاً قصيراً."
+        },
+        {
+          "de": "Datenschutz: Keine Patientendaten am Telefon ohne Legitimation.",
+          "ar": "حماية البيانات: لا بيانات مرضى بالهاتف بلا تخويل."
+        },
+        {
+          "de": "Der Dienstplan für nächste Woche hängt am Schwarzen Brett — bitte bestätigen.",
+          "ar": "جدول المناوبات للأسبوع القادم معلق — رجاءً أكّدي."
+        },
+        {
+          "de": "Bei Notfällen wählen Sie intern 2222 und nennen Station und Zimmer.",
+          "ar": "عند الطوارئ اتصلي داخلياً 2222 واذكري القسم والغرفة."
+        },
+        {
+          "de": "Die Pflegevisite beginnt morgen um 10 Uhr mit der Stationsleitung.",
+          "ar": "جولة الرعاية تبدأ غداً العاشرة مع مسؤولة القسم."
+        },
+        {
+          "de": "Morgen findet eine Fortbildung zu Wundversorgung statt — Anmeldung erforderlich.",
+          "ar": "غداً تدريب عن رعاية الجروح — التسجيل لازم."
+        },
+        {
+          "de": "Bitte beachten Sie Hygienevorschriften und Händedesinfektion vor Kontakt.",
+          "ar": "رجاءً التزم لوائح النظافة وتعقيم اليدين قبل التماس."
+        },
+        {
+          "de": "Vielen Dank für die gute Zusammenarbeit — trotz hoher Belastung.",
+          "ar": "شكراً للتعاون الجيد رغم الضغط العالي."
+        }
+      ],
+      "dialog": {
+        "titel": "Übergabe Spätdienst: Pflege (Schichtübergabe)",
+        "lines": [
+          {
+            "who": "A",
+            "role": "Pflegefachkraft Früh",
+            "de": "Übergabe Zimmer 12: Frau Kowalska, 78, Zustand nach Hüft-OP, mobilisiert mit Rollator, Schmerzen 6/10 trotz Bedarfsmedikation.",
+            "ar": "تسليم الغرفة 12: سيدة كوالسكا 78، بعد عملية ورك، تتنقل بالمشاية، ألم 6/10 رغم دواء عند اللزوم."
+          },
+          {
+            "who": "B",
+            "role": "Pflegefachkraft Spät",
+            "de": "Danke. Wurde die Physiotherapie heute durchgeführt? Und wie ist die Wunde?",
+            "ar": "شكراً. هل أُجري العلاج الفيزيائي اليوم؟ وكيف الجرح؟"
+          },
+          {
+            "who": "A",
+            "role": "Pflegefachkraft Früh",
+            "de": "Physiotherapie ja, 20 Minuten Mobilisation. Wunde reizlos, Verband trocken. Laborwerte unauffällig.",
+            "ar": "نعم، 20 دقيقة تحريك. الجرح هادئ، الضماد جاف. التحاليل طبيعية."
+          },
+          {
+            "who": "B",
+            "role": "Pflegefachkraft Spät",
+            "de": "Angehörige waren da, wollten Prognose wissen. Was hast du gesagt?",
+            "ar": "الأهل كانوا هنا وطلبوا معرفة المآل. ماذا قلتِ؟"
+          },
+          {
+            "who": "A",
+            "role": "Pflegefachkraft Früh",
+            "de": "Ich habe allgemein über Rehabilitationsphasen informiert, keine Prognose gegeben und an das Arztgespräch morgen verwiesen.",
+            "ar": "أخبرتهم عموماً بمراحل التأهيل، لم أعطِ تنبؤاً وأحلتُهم لحديث الطبيب غداً."
+          },
+          {
+            "who": "B",
+            "role": "Pflegefachkraft Spät",
+            "de": "Perfekt, danke. Ich dokumentiere und übernehme.",
+            "ar": "ممتاز، شكراً. سأوثّق وأتسلّم."
+          }
+        ]
+      },
+      "modelle": [
+        {
+          "titel": "Dokumentation: Übergabeprotokoll — تقرير تسليم مناوبة",
+          "zeilen": [
+            "Datum: 12.04. — Station 3B, Spätdienst",
+            "Patientin: Kowalska, A., 78J, Z.12 — Z.n. Hüft-TEP",
+            "Vital: RR 135/85, HF 78, Temp 37,1 — Schmerzen NRS 6/10",
+            "Maßnahmen: Mobilisation mit Rollator, Physiotherapie 20min, Verbandskontrolle reizlos",
+            "Kommunikation: Angehörige informiert (allg.), Verweis Arztgespräch 13.04. 10:00",
+            "Unterschrift: S. Meyer, Pflegefachkraft"
+          ]
+        },
+        {
+          "titel": "E-Mail: Dienstplan-Tausch — تبديل مناوبة",
+          "zeilen": [
+            "Betreff: Tausch Spätdienst 14.04. — Bitte um Bestätigung",
+            "Liebe Stationsleitung,",
+            "kann ich meinen Spätdienst am 14.04. mit Frau Becker (Frühdienst) tauschen?",
+            "Grund: Arzttermin mit Angehöriger — kurzfristig, aber planbar.",
+            "Beide Schichten wären voll besetzt, Übergabe gesichert.",
+            "Vielen Dank für die Rückmeldung bis 12.04.",
+            "Mit freundlichen Grüßen",
+            "S. Meyer"
+          ]
+        }
+      ]
     }
   ]
 }
