@@ -651,7 +651,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   // 🔁 دورانٌ حتميٌّ بدلَ القرعة: كلُّ نصٍّ وكلُّ حوارٍ من المستوى يصلُ المتعلِّمَ
   // (القرعةُ القديمةُ تركت 20 نصاً و20 حواراً بلا موعدٍ في 378 يوماً)
   // خاناتُ النصِّ/الحوارِ لكلِّ يومِ أسبوع (حدٌّ أعلى) → رتبةُ اليومِ داخلَ مستواه = مجموعُ خاناتِ الأيامِ السابقة
-  const TEXT_SLOTS = [1, 0, 0, 1, 0, 0, 2], DIALOG_SLOTS = level === "A1" ? [1, 1, 1, 1, 1, 0, 0] : level === "A2" ? [0, 1, 1, 1, 1, 0, 0] : [0, 1, 1, 0, 1, 0, 0];
+  const TEXT_SLOTS = [1, 0, 0, 1, 0, 0, 2], DIALOG_SLOTS = level === "A1" ? [1, 1, 1, 1, 1, 0, 0] : level === "A2" ? [0, 1, 1, 1, 1, 0, 0] : level === "B2" ? [0, 1, 1, 1, 1, 0, 0] : [0, 1, 1, 0, 1, 0, 0];
   const levelStart = PHASE_RANGES.find((p) => p.level === level)?.from ?? 1;
   const rangVor = (slots: number[]) => { let n = 0; for (let d = levelStart; d < day; d++) n += slots[(d - 1) % 7]; return n; };
   const textRang = rangVor(TEXT_SLOTS), dialogRang = rangVor(DIALOG_SLOTS);

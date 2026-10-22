@@ -13547,5 +13547,905 @@
       "Die Maschine macht Vorschläge, mehr nicht",
       "Technik soll helfen, nicht ersetzen"
     ]
+  },
+  {
+    "id": "d-b2-38",
+    "titleDe": "Wohnungsmarkt und Mietpreisbremse",
+    "titleAr": "سوق السكن وكبح الإيجارات",
+    "ort": "Diskussionsrunde",
+    "lines": [
+      {
+        "who": "Moderator",
+        "de": "Frau Weber, wie beurteilen Sie die aktuelle Lage auf dem Wohnungsmarkt?",
+        "ar": "سيدة فيبر، كيف تقيّمين الوضع الحالي في سوق الإسكان؟"
+      },
+      {
+        "who": "Weber",
+        "de": "Die Mieten sind in den letzten zwei Jahren deutlich gestiegen, aber die Politik reagiert nur zögerlich.",
+        "ar": "ارتفعت الإيجارات بوضوح في العامين الماضيين، لكن السياسة تتحرك بتردد فقط."
+      },
+      {
+        "who": "Moderator",
+        "de": "Die Regierung spricht dagegen von einer erfolgreichen Mietpreisbremse.",
+        "ar": "في المقابل، تتحدث الحكومة عن إجراءات ناجحة لكبح الإيجارات."
+      },
+      {
+        "who": "Weber",
+        "de": "Diese Darstellung ist, gelinde gesagt, irreführend, denn die Zahlen belegen das Gegenteil.",
+        "ar": "هذا الطرح، بلغة مهذبة، مضلل، لأن الأرقام تثبت العكس."
+      },
+      {
+        "who": "Moderator",
+        "de": "Was fordern Sie konkret für die Zukunft?",
+        "ar": "ماذا تطلبين تحديدًا للمستقبل؟"
+      },
+      {
+        "who": "Weber",
+        "de": "Wir brauchen mehr soziale Wohnungen, sonst bleibt bezahlbares Wohnen illusorisch.",
+        "ar": "نحتاج إلى مزيد من السكن الاجتماعي، وإلّا سيبقى السكن الميسور وهمًا."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-38-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert Frau Weber?",
+        "promptAr": "ماذا تنتقد السيدة فيبر؟",
+        "options": [
+          "die zögerliche Reaktion der Politik",
+          "die erfolgreiche Mietpreisbremse",
+          "die Zahlen der Regierung"
+        ],
+        "answer": "die zögerliche Reaktion der Politik",
+        "explanationAr": "الدليل: «reagiert nur zögerlich». الفخّ: «Mietpreisbremse» تمدحها الحكومة في السطر «von einer erfolgreichen Mietpreisbremse» لا فيبر.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-38-q2",
+        "type": "mc",
+        "promptDe": "Was fordert Weber für die Zukunft?",
+        "promptAr": "ماذا تطالب فيبر للمستقبل؟",
+        "options": [
+          "mehr soziale Wohnungen",
+          "eine irreführende Darstellung",
+          "deutlich gestiegene Mieten"
+        ],
+        "answer": "mehr soziale Wohnungen",
+        "explanationAr": "الدليل: «Wir brauchen mehr soziale Wohnungen». الفخّ: «Diese Darstellung ist, gelinde gesagt, irreführend» وصف لخطاب الحكومة لا مطلبها.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Die Mieten sind in den letzten zwei Jahren deutlich gestiegen, aber die Politik reagiert nur zögerlich.",
+      "Diese Darstellung ist, gelinde gesagt, irreführend, denn die Zahlen belegen das Gegenteil.",
+      "Wir brauchen mehr soziale Wohnungen, sonst bleibt bezahlbares Wohnen illusorisch."
+    ],
+    "cultural_theme": "Wohnen",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-39",
+    "titleDe": "Digitalisierung am Arbeitsplatz",
+    "titleAr": "الرقمنة في مكان العمل",
+    "ort": "Büro",
+    "lines": [
+      {
+        "who": "Leiter",
+        "de": "Unser Team hat die neue Software zwar getestet, jedoch gibt es noch erhebliche Bedenken.",
+        "ar": "اختبر فريقنا البرنامج الجديد، لكن لا تزال هناك مخاوف كبيرة."
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Ich finde die Technologie eigentlich hilfreich, aber die Einführung war zu kurzfristig.",
+        "ar": "أجد التقنية مفيدة في حد ذاتها، لكن التطبيق كان متسرعًا جدًا."
+      },
+      {
+        "who": "Leiter",
+        "de": "Die Geschäftsführung behauptet dagegen, die Umstellung sei reibungslos verlaufen.",
+        "ar": "في المقابل، تدّعي الإدارة أن الانتقال جرى بسلاسة."
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Dieser Optimismus ist schwer nachvollziehbar, denn viele Kollegen haben noch keinen Zugang.",
+        "ar": "هذا التفاؤل صعب الفهم، إذ لا يزال كثير من الزملاء بلا وصول."
+      },
+      {
+        "who": "Leiter",
+        "de": "Was schlagen Sie vor, um die Situation zu verbessern?",
+        "ar": "ماذا تقترحين لتحسين الوضع؟"
+      },
+      {
+        "who": "Mitarbeiterin",
+        "de": "Wir brauchen mehr Zeit für Schulungen, sonst bleibt das Projekt ineffizient.",
+        "ar": "نحتاج مزيدًا من الوقت للتدريب، وإلّا سيبقى المشروع غير فعّال."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-39-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert die Mitarbeiterin?",
+        "promptAr": "ماذا تنتقد الموظفة؟",
+        "options": [
+          "die kurzfristige Einführung",
+          "die reibungslose Umstellung",
+          "den Zugang der Kollegen"
+        ],
+        "answer": "die kurzfristige Einführung",
+        "explanationAr": "الدليل: «die Einführung war zu kurzfristig». الفخّ: «reibungslos verlaufen» قول الإدارة لا الموظفة.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-39-q2",
+        "type": "mc",
+        "promptDe": "Was fordert sie?",
+        "promptAr": "ماذا تطالب؟",
+        "options": [
+          "mehr Zeit für Schulungen",
+          "erhebliche Bedenken",
+          "die neue Software"
+        ],
+        "answer": "mehr Zeit für Schulungen",
+        "explanationAr": "الدليل: «Wir brauchen mehr Zeit für Schulungen». الفخّ: «erhebliche Bedenken» وصف عام لا مطلب محدد.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Unser Team hat die neue Software zwar getestet, jedoch gibt es noch erhebliche Bedenken.",
+      "Dieser Optimismus ist schwer nachvollziehbar, denn viele Kollegen haben noch keinen Zugang.",
+      "Wir brauchen mehr Zeit für Schulungen, sonst bleibt das Projekt ineffizient."
+    ],
+    "cultural_theme": "Arbeit",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-40",
+    "titleDe": "Umweltschutz und Konsum",
+    "titleAr": "حماية البيئة والاستهلاك",
+    "ort": "Podium",
+    "lines": [
+      {
+        "who": "Aktivist",
+        "de": "Viele Menschen reden zwar über Klimaschutz, handeln aber nur selten konsequent.",
+        "ar": "كثيرون يتحدثون عن حماية المناخ، لكن قليلًا ما يتصرفون بثبات."
+      },
+      {
+        "who": "Publikum",
+        "de": "Aber ist nachhaltiger Konsum nicht viel teurer?",
+        "ar": "لكن أليس الاستهلاك المستدام أغلى بكثير؟"
+      },
+      {
+        "who": "Aktivist",
+        "de": "Die Preise sind eigentlich nicht höher, jedoch fehlt oft die Information.",
+        "ar": "الأسعار ليست أعلى في الواقع، لكن غالبًا ما تغيب المعلومة."
+      },
+      {
+        "who": "Publikum",
+        "de": "Die Industrie behauptet dagegen, die Kunden wollten keine Veränderung.",
+        "ar": "في المقابل، تزعم الصناعة أن العملاء لا يريدون تغييرًا."
+      },
+      {
+        "who": "Aktivist",
+        "de": "Diese Behauptung ist kaum haltbar, denn Umfragen zeigen das Gegenteil.",
+        "ar": "هذا الزعم بالكاد يمكن الدفاع عنه، فالاستطلاعات تظهر العكس."
+      },
+      {
+        "who": "Publikum",
+        "de": "Was können wir also konkret tun?",
+        "ar": "إذن ماذا يمكننا أن نفعل عمليًا؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-40-q1",
+        "type": "mc",
+        "promptDe": "Was sagt der Aktivist über Klimaschutz?",
+        "promptAr": "ماذا يقول الناشط عن حماية المناخ؟",
+        "options": [
+          "viele reden, handeln aber selten konsequent",
+          "die Kunden wollten keine Veränderung",
+          "die Preise sind viel teurer"
+        ],
+        "answer": "viele reden, handeln aber selten konsequent",
+        "explanationAr": "الدليل: «reden zwar über Klimaschutz, handeln aber nur selten konsequent». الفخّ: «wollten keine Veränderung» قول الصناعة لا الناشط.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-40-q2",
+        "type": "mc",
+        "promptDe": "Warum ist nachhaltiger Konsum schwierig?",
+        "promptAr": "لماذا الاستهلاك المستدام صعب؟",
+        "options": [
+          "die Information fehlt oft",
+          "die Kunden wollten keine Veränderung",
+          "die Preise sind nicht höher"
+        ],
+        "answer": "die Information fehlt oft",
+        "explanationAr": "الدليل: «jedoch fehlt oft die Information». الفخّ: «wollten keine Veränderung» وصف للصناعة لا السبب الحقيقي.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Viele Menschen reden zwar über Klimaschutz, handeln aber nur selten konsequent.",
+      "Die Preise sind eigentlich nicht höher, jedoch fehlt oft die Information.",
+      "Diese Behauptung ist kaum haltbar, denn Umfragen zeigen das Gegenteil."
+    ],
+    "cultural_theme": "Umwelt",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-41",
+    "titleDe": "Ausbildung und Berufswahl",
+    "titleAr": "التدريب واختيار المهنة",
+    "ort": "Beratungsstelle",
+    "lines": [
+      {
+        "who": "Berater",
+        "de": "Viele Jugendliche wählen zwar einen Beruf, brechen die Ausbildung aber früh ab.",
+        "ar": "كثير من الشباب يختارون مهنة، لكنهم يقطعون التدريب مبكرًا."
+      },
+      {
+        "who": "Eltern",
+        "de": "Aber ist das nicht ein Zeichen für falsche Erwartungen?",
+        "ar": "لكن أليس ذلك علامة على توقعات خاطئة؟"
+      },
+      {
+        "who": "Berater",
+        "de": "Die Erwartungen sind oft unrealistisch, jedoch fehlt auch die Begleitung im Betrieb.",
+        "ar": "التوقعات غالبًا غير واقعية، لكن يغيب أيضًا الدعم داخل الشركة."
+      },
+      {
+        "who": "Eltern",
+        "de": "Die Firmen sagen dagegen, die Jugendlichen seien nicht motiviert.",
+        "ar": "في المقابل، تقول الشركات إن الشباب غير متحفزين."
+      },
+      {
+        "who": "Berater",
+        "de": "Diese Aussage ist nur teilweise richtig, denn die Zahlen zeigen auch fehlende Unterstützung.",
+        "ar": "هذا القول صحيح جزئيًا فقط، لأن الأرقام تظهر أيضًا نقص الدعم."
+      },
+      {
+        "who": "Eltern",
+        "de": "Was empfehlen Sie uns als Eltern?",
+        "ar": "بماذا تنصحنا كآباء؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-41-q1",
+        "type": "mc",
+        "promptDe": "Warum brechen Jugendliche ab?",
+        "promptAr": "لماذا يترك الشباب التدريب؟",
+        "options": [
+          "unrealistische Erwartungen und fehlende Begleitung",
+          "die Jugendlichen seien nicht motiviert",
+          "falsche Erwartungen allein"
+        ],
+        "answer": "unrealistische Erwartungen und fehlende Begleitung",
+        "explanationAr": "الدليل: «Erwartungen sind oft unrealistisch, jedoch fehlt auch die Begleitung». الفخّ: «nicht motiviert» قول الشركات لا الحقيقة الكاملة.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-41-q2",
+        "type": "mc",
+        "promptDe": "Was sagen die Firmen?",
+        "promptAr": "ماذا تقول الشركات؟",
+        "options": [
+          "die Jugendlichen seien nicht motiviert",
+          "die Begleitung im Betrieb fehlt",
+          "die Ausbildung werde früh abgebrochen"
+        ],
+        "answer": "die Jugendlichen seien nicht motiviert",
+        "explanationAr": "الدليل: «die Jugendlichen seien nicht motiviert». الفخّ: «fehlt auch die Begleitung» تحليل المستشار لا قول الشركات.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Viele Jugendliche wählen zwar einen Beruf, brechen die Ausbildung aber früh ab.",
+      "Die Erwartungen sind oft unrealistisch, jedoch fehlt auch die Begleitung im Betrieb.",
+      "Diese Aussage ist nur teilweise richtig, denn die Zahlen zeigen auch fehlende Unterstützung."
+    ],
+    "cultural_theme": "Bildung",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-42",
+    "titleDe": "Gesundheitssystem und Pflege",
+    "titleAr": "نظام الصحة والرعاية",
+    "ort": "Klinik",
+    "lines": [
+      {
+        "who": "Pfleger",
+        "de": "Wir haben zwar mehr Patienten, aber deutlich weniger Personal als früher.",
+        "ar": "لدينا مرضى أكثر، لكن طاقمًا أقل بوضوح من السابق."
+      },
+      {
+        "who": "Leitung",
+        "de": "Aber die Qualität ist doch gleich geblieben?",
+        "ar": "لكن الجودة بقيت نفسها أليس كذلك؟"
+      },
+      {
+        "who": "Pfleger",
+        "de": "Die Qualität leidet leider, denn die Zeit pro Patient ist stark gesunken.",
+        "ar": "للأسف الجودة تتأثر، لأن الوقت لكل مريض انخفض كثيرًا."
+      },
+      {
+        "who": "Leitung",
+        "de": "Die Politik spricht dagegen von einer erfolgreichen Reform.",
+        "ar": "في المقابل، تتحدث السياسة عن إصلاح ناجح."
+      },
+      {
+        "who": "Pfleger",
+        "de": "Diese Reform ist in der Praxis kaum spürbar, denn die Belastung bleibt hoch.",
+        "ar": "هذا الإصلاح بالكاد ملموس عمليًا، لأن العبء لا يزال مرتفعًا."
+      },
+      {
+        "who": "Leitung",
+        "de": "Was würden Sie konkret ändern?",
+        "ar": "ماذا تغيّر تحديدًا؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-42-q1",
+        "type": "mc",
+        "promptDe": "Was beschreibt der Pfleger?",
+        "promptAr": "ماذا يصف الممرض؟",
+        "options": [
+          "mehr Patienten und weniger Personal",
+          "eine erfolgreiche Reform",
+          "die Zeit pro Patient ist gestiegen"
+        ],
+        "answer": "mehr Patienten und weniger Personal",
+        "explanationAr": "الدليل: «mehr Patienten, aber deutlich weniger Personal». الفخّ: «einer erfolgreichen Reform» قول السياسة لا الواقع.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-42-q2",
+        "type": "mc",
+        "promptDe": "Wie beurteilt er die Reform?",
+        "promptAr": "كيف يقيّم الإصلاح؟",
+        "options": [
+          "kaum spürbar und Belastung bleibt hoch",
+          "die Qualität ist gleich geblieben",
+          "die Politik spricht von einer Reform"
+        ],
+        "answer": "kaum spürbar und Belastung bleibt hoch",
+        "explanationAr": "الدليل: «kaum spürbar, denn die Belastung bleibt hoch». الفخّ: «die Qualität ist doch gleich geblieben» سؤال الإدارة لا إجابته.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Wir haben zwar mehr Patienten, aber deutlich weniger Personal als früher.",
+      "Die Qualität leidet leider, denn die Zeit pro Patient ist stark gesunken.",
+      "Diese Reform ist in der Praxis kaum spürbar, denn die Belastung bleibt hoch."
+    ],
+    "cultural_theme": "Gesundheit",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-43",
+    "titleDe": "Medien und Informationsflut",
+    "titleAr": "الإعلام وتدفق المعلومات",
+    "ort": "Redaktion",
+    "lines": [
+      {
+        "who": "Journalistin",
+        "de": "Viele Leser fühlen sich zwar informiert, sind aber eigentlich überfordert.",
+        "ar": "كثير من القراء يشعرون أنهم مطلعون، لكنهم في الواقع مثقلون."
+      },
+      {
+        "who": "Kollege",
+        "de": "Aber ist das nicht ein Widerspruch?",
+        "ar": "لكن أليس هذا تناقضًا؟"
+      },
+      {
+        "who": "Journalistin",
+        "de": "Die Menge ist riesig, jedoch fehlt oft der Überblick.",
+        "ar": "الكمية هائلة، لكن غالبًا ما تغيب النظرة الشاملة."
+      },
+      {
+        "who": "Kollege",
+        "de": "Die Verlage behaupten dagegen, die Leser wollten nur Unterhaltung.",
+        "ar": "في المقابل، تزعم دور النشر أن القراء يريدون الترفيه فقط."
+      },
+      {
+        "who": "Journalistin",
+        "de": "Diese Behauptung ist verkürzt, denn Studien zeigen auch Interesse an Tiefe.",
+        "ar": "هذا الزعم مختزل، فالدراسات تظهر اهتمامًا بالعمق أيضًا."
+      },
+      {
+        "who": "Kollege",
+        "de": "Wie sollten wir darauf reagieren?",
+        "ar": "كيف ينبغي أن نتفاعل مع ذلك؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-43-q1",
+        "type": "mc",
+        "promptDe": "Was sagt die Journalistin über Leser?",
+        "promptAr": "ماذا تقول الصحفية عن القراء؟",
+        "options": [
+          "informiert, aber eigentlich überfordert",
+          "die Leser wollten nur Unterhaltung",
+          "die Menge ist riesig"
+        ],
+        "answer": "informiert, aber eigentlich überfordert",
+        "explanationAr": "الدليل: «fühlen sich zwar informiert, sind aber eigentlich überfordert». الفخّ: «wollten nur Unterhaltung» قول الناشرين لا الصحفية.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-43-q2",
+        "type": "mc",
+        "promptDe": "Was behaupten die Verlage?",
+        "promptAr": "ماذا تزعم دور النشر؟",
+        "options": [
+          "die Leser wollten nur Unterhaltung",
+          "Studien zeigen auch Interesse an Tiefe",
+          "der Überblick fehlt oft"
+        ],
+        "answer": "die Leser wollten nur Unterhaltung",
+        "explanationAr": "الدليل: «die Leser wollten nur Unterhaltung». الفخّ: «Interesse an Tiefe» نتيجة الدراسات لا قول الناشرين.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Viele Leser fühlen sich zwar informiert, sind aber eigentlich überfordert.",
+      "Die Menge ist riesig, jedoch fehlt oft der Überblick.",
+      "Diese Behauptung ist verkürzt, denn Studien zeigen auch Interesse an Tiefe."
+    ],
+    "cultural_theme": "Medien",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-44",
+    "titleDe": "Integration und Sprache",
+    "titleAr": "الاندماج واللغة",
+    "ort": "Integrationskurs",
+    "lines": [
+      {
+        "who": "Lehrerin",
+        "de": "Viele Teilnehmende lernen zwar fleißig, sprechen aber selten außerhalb des Kurses.",
+        "ar": "كثير من المشاركين يتعلمون بجد، لكنهم نادرًا ما يتحدثون خارج الدورة."
+      },
+      {
+        "who": "Teilnehmer",
+        "de": "Aber ist das nicht normal am Anfang?",
+        "ar": "لكن أليس هذا طبيعيًا في البداية؟"
+      },
+      {
+        "who": "Lehrerin",
+        "de": "Am Anfang ja, jedoch braucht Integration auch Kontakte im Alltag.",
+        "ar": "في البداية نعم، لكن الاندماج يحتاج أيضًا لتواصل يومي."
+      },
+      {
+        "who": "Teilnehmer",
+        "de": "Die Behörden sagen dagegen, der Kurs allein reiche aus.",
+        "ar": "في المقابل، تقول الجهات الرسمية إن الدورة وحدها تكفي."
+      },
+      {
+        "who": "Lehrerin",
+        "de": "Diese Ansicht ist zu eng, denn Sprache lernt man durch Anwendung.",
+        "ar": "هذا الرأي ضيق، فاللغة تُتعلم بالممارسة."
+      },
+      {
+        "who": "Teilnehmer",
+        "de": "Was empfehlen Sie konkret?",
+        "ar": "بماذا تنصحين تحديدًا؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-44-q1",
+        "type": "mc",
+        "promptDe": "Was beobachtet die Lehrerin?",
+        "promptAr": "ماذا تلاحظ المعلمة؟",
+        "options": [
+          "lernen fleißig, sprechen aber selten außerhalb",
+          "die Behörden sagen der Kurs reiche aus",
+          "Integration braucht Kontakte"
+        ],
+        "answer": "lernen fleißig, sprechen aber selten außerhalb",
+        "explanationAr": "الدليل: «lernen zwar fleißig, sprechen aber selten außerhalb». الفخّ: «Kurs allein reiche» قول الجهات لا ملاحظتها.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-44-q2",
+        "type": "mc",
+        "promptDe": "Was sagt sie über Integration?",
+        "promptAr": "ماذا تقول عن الاندماج؟",
+        "options": [
+          "Sprache lernt man durch Anwendung",
+          "am Anfang ist das normal",
+          "der Kurs allein reiche aus"
+        ],
+        "answer": "Sprache lernt man durch Anwendung",
+        "explanationAr": "الدليل: «Sprache lernt man durch Anwendung». الفخّ: «Kurs allein» رأي الجهات الذي تنتقده.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Viele Teilnehmende lernen zwar fleißig, sprechen aber selten außerhalb des Kurses.",
+      "Am Anfang ja, jedoch braucht Integration auch Kontakte im Alltag.",
+      "Diese Ansicht ist zu eng, denn Sprache lernt man durch Anwendung."
+    ],
+    "cultural_theme": "Integration",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-45",
+    "titleDe": "Verkehrswende in der Stadt",
+    "titleAr": "تحول النقل في المدينة",
+    "ort": "Stadtrat",
+    "lines": [
+      {
+        "who": "Stadträtin",
+        "de": "Wir haben zwar viele Autos, aber zu wenig sichere Radwege.",
+        "ar": "لدينا سيارات كثيرة، لكن مسارات دراجات آمنة قليلة جدًا."
+      },
+      {
+        "who": "Bürger",
+        "de": "Aber braucht man nicht beides?",
+        "ar": "لكن ألا نحتاج الاثنين؟"
+      },
+      {
+        "who": "Stadträtin",
+        "de": "Beides ja, jedoch ist der Platz begrenzt, deshalb braucht es Prioritäten.",
+        "ar": "نعم الاثنين، لكن المكان محدود لذا نحتاج أولويات."
+      },
+      {
+        "who": "Bürger",
+        "de": "Die Opposition behauptet dagegen, die Pläne seien unrealistisch.",
+        "ar": "في المقابل، تزعم المعارضة أن الخطط غير واقعية."
+      },
+      {
+        "who": "Stadträtin",
+        "de": "Diese Kritik ist nicht neu, denn jede Veränderung erzeugt Widerstand.",
+        "ar": "هذا النقد ليس جديدًا، فكل تغيير يولد مقاومة."
+      },
+      {
+        "who": "Bürger",
+        "de": "Wann beginnt der Umbau?",
+        "ar": "متى يبدأ التحويل؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-45-q1",
+        "type": "mc",
+        "promptDe": "Was beschreibt die Stadträtin?",
+        "promptAr": "ماذا تصف المستشارة؟",
+        "options": [
+          "viele Autos, aber zu wenig sichere Radwege",
+          "die Pläne seien unrealistisch",
+          "der Platz ist begrenzt"
+        ],
+        "answer": "viele Autos, aber zu wenig sichere Radwege",
+        "explanationAr": "الدليل: «viele Autos, aber zu wenig sichere Radwege». الفخّ: «unrealistisch» قول المعارضة لا وصفها.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-45-q2",
+        "type": "mc",
+        "promptDe": "Wie reagiert sie auf Kritik?",
+        "promptAr": "كيف ترد على النقد؟",
+        "options": [
+          "jede Veränderung erzeugt Widerstand",
+          "die Pläne seien unrealistisch",
+          "wir haben viele Autos"
+        ],
+        "answer": "jede Veränderung erzeugt Widerstand",
+        "explanationAr": "الدليل: «jede Veränderung erzeugt Widerstand». الفخّ: «unrealistisch» اتهام المعارضة لا ردها.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Wir haben zwar viele Autos, aber zu wenig sichere Radwege.",
+      "Beides ja, jedoch ist der Platz begrenzt, deshalb braucht es Prioritäten.",
+      "Diese Kritik ist nicht neu, denn jede Veränderung erzeugt Widerstand."
+    ],
+    "cultural_theme": "Mobilität",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-46",
+    "titleDe": "Arbeitswelt im Wandel",
+    "titleAr": "عالم العمل في تغيّر",
+    "ort": "Konferenz",
+    "lines": [
+      {
+        "who": "Expertin",
+        "de": "Viele Firmen bieten zwar Homeoffice an, erwarten aber ständige Erreichbarkeit.",
+        "ar": "كثير من الشركات تتيح العمل من المنزل، لكنها تتوقع تواجدًا دائمًا."
+      },
+      {
+        "who": "Moderator",
+        "de": "Aber ist das nicht ein Widerspruch?",
+        "ar": "لكن أليس هذا تناقضًا؟"
+      },
+      {
+        "who": "Expertin",
+        "de": "Genau, deshalb ist das Ergebnis oft Stress, nicht mehr Freiheit.",
+        "ar": "تمامًا، لذا النتيجة غالبًا ضغط لا حرية إضافية."
+      },
+      {
+        "who": "Moderator",
+        "de": "Die Arbeitgeber behaupten dagegen, die Flexibilität sei ein Vorteil.",
+        "ar": "في المقابل، يزعم أصحاب العمل أن المرونة ميزة."
+      },
+      {
+        "who": "Expertin",
+        "de": "Diese Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko.",
+        "ar": "هذه المرونة غالبًا أحادية، فالموظفون يتحملون المخاطرة."
+      },
+      {
+        "who": "Moderator",
+        "de": "Was wäre eine faire Lösung?",
+        "ar": "ما الحل العادل؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-46-q1",
+        "type": "mc",
+        "promptDe": "Was beobachtet die Expertin?",
+        "promptAr": "ماذا تلاحظ الخبيرة؟",
+        "options": [
+          "Homeoffice, aber ständige Erreichbarkeit",
+          "die Flexibilität sei ein Vorteil",
+          "das Ergebnis ist mehr Freiheit"
+        ],
+        "answer": "Homeoffice, aber ständige Erreichbarkeit",
+        "explanationAr": "الدليل: «bieten zwar Homeoffice an, erwarten aber ständige Erreichbarkeit». الفخّ: «Vorteil» قول أصحاب العمل لا ملاحظتها.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-46-q2",
+        "type": "mc",
+        "promptDe": "Wie bewertet sie Flexibilität?",
+        "promptAr": "كيف تقيّم المرونة؟",
+        "options": [
+          "oft einseitig und risikoreich für Beschäftigte",
+          "die Arbeitgeber behaupten Flexibilität sei Vorteil",
+          "das Ergebnis ist oft Stress"
+        ],
+        "answer": "oft einseitig und risikoreich für Beschäftigte",
+        "explanationAr": "الدليل: «Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko». الفخّ: «Vorteil» ادعاء أصحاب العمل لا تقييمها.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Viele Firmen bieten zwar Homeoffice an, erwarten aber ständige Erreichbarkeit.",
+      "Genau, deshalb ist das Ergebnis oft Stress, nicht mehr Freiheit.",
+      "Diese Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko."
+    ],
+    "cultural_theme": "Arbeit",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-47",
+    "titleDe": "Künstliche Intelligenz in der Bildung",
+    "titleAr": "الذكاء الاصطناعي في التعليم",
+    "ort": "Hochschule",
+    "lines": [
+      {
+        "who": "Professor",
+        "de": "Viele Studierende nutzen zwar KI-Tools, verstehen aber die Grundlagen kaum.",
+        "ar": "كثير من الطلبة يستخدمون أدوات الذكاء الاصطناعي، لكنهم بالكاد يفهمون الأساسيات."
+      },
+      {
+        "who": "Studentin",
+        "de": "Aber helfen die Tools nicht beim Lernen?",
+        "ar": "لكن ألا تساعد الأدوات في التعلم؟"
+      },
+      {
+        "who": "Professor",
+        "de": "Sie helfen teilweise, jedoch ersetzen sie nicht das eigene Denken.",
+        "ar": "تساعد جزئيًا، لكنها لا تعوّض التفكير الذاتي."
+      },
+      {
+        "who": "Studentin",
+        "de": "Die Hochschulen behaupten dagegen, die Nutzung sei bereits geregelt.",
+        "ar": "في المقابل، تزعم الجامعات أن الاستخدام منظم سلفًا."
+      },
+      {
+        "who": "Professor",
+        "de": "Diese Regelung ist lückenhaft, denn die Praxis entwickelt sich schneller als die Regeln.",
+        "ar": "هذا التنظيم ناقص، فالممارسة تتطور أسرع من القواعد."
+      },
+      {
+        "who": "Studentin",
+        "de": "Was empfehlen Sie uns?",
+        "ar": "بماذا تنصحنا؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-47-q1",
+        "type": "mc",
+        "promptDe": "Was beobachtet der Professor?",
+        "promptAr": "ماذا يلاحظ الأستاذ؟",
+        "options": [
+          "nutzen KI-Tools, verstehen aber Grundlagen kaum",
+          "die Tools helfen beim Lernen",
+          "die Nutzung sei bereits geregelt"
+        ],
+        "answer": "nutzen KI-Tools, verstehen aber Grundlagen kaum",
+        "explanationAr": "الدليل: «nutzen zwar KI-Tools, verstehen aber die Grundlagen kaum». الفخّ: «bereits geregelt» قول الجامعات لا ملاحظته.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-47-q2",
+        "type": "mc",
+        "promptDe": "Wie bewertet er die Regelung?",
+        "promptAr": "كيف يقيّم التنظيم؟",
+        "options": [
+          "lückenhaft, Praxis schneller als Regeln",
+          "die Tools ersetzen das Denken",
+          "die Hochschulen behaupten Nutzung sei geregelt"
+        ],
+        "answer": "lückenhaft, Praxis schneller als Regeln",
+        "explanationAr": "الدليل: «Regelung ist lückenhaft, denn die Praxis entwickelt sich schneller». الفخّ: «geregelt» ادعاء الجامعات لا تقييمه.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Viele Studierende nutzen zwar KI-Tools, verstehen aber die Grundlagen kaum.",
+      "Sie helfen teilweise, jedoch ersetzen sie nicht das eigene Denken.",
+      "Diese Regelung ist lückenhaft, denn die Praxis entwickelt sich schneller als die Regeln."
+    ],
+    "cultural_theme": "Bildung",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-48",
+    "titleDe": "Ehrenamt und Gesellschaft",
+    "titleAr": "العمل التطوعي والمجتمع",
+    "ort": "Verein",
+    "lines": [
+      {
+        "who": "Vorsitzende",
+        "de": "Viele Menschen wollen zwar helfen, finden aber keinen passenden Einsatz.",
+        "ar": "كثيرون يرغبون في المساعدة، لكنهم لا يجدون مهمة مناسبة."
+      },
+      {
+        "who": "Mitglied",
+        "de": "Aber gibt es nicht genug Angebote?",
+        "ar": "لكن ألا توجد عروض كافية؟"
+      },
+      {
+        "who": "Vorsitzende",
+        "de": "Die Angebote sind zahlreich, jedoch fehlt oft die Vermittlung.",
+        "ar": "العروض كثيرة، لكن غالبًا ما تغيب الوساطة."
+      },
+      {
+        "who": "Mitglied",
+        "de": "Die Stadt behauptet dagegen, das Ehrenamt sei stark.",
+        "ar": "في المقابل، تزعم المدينة أن العمل التطوعي قوي."
+      },
+      {
+        "who": "Vorsitzende",
+        "de": "Diese Aussage ist zu allgemein, denn die Zahlen sinken in vielen Bereichen.",
+        "ar": "هذا القول عام جدًا، فالأرقام تتراجع في مجالات كثيرة."
+      },
+      {
+        "who": "Mitglied",
+        "de": "Wie können wir mehr Menschen gewinnen?",
+        "ar": "كيف نكسب مزيدًا من الناس؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-48-q1",
+        "type": "mc",
+        "promptDe": "Was beobachtet die Vorsitzende?",
+        "promptAr": "ماذا تلاحظ الرئيسة؟",
+        "options": [
+          "wollen helfen, finden aber keinen Einsatz",
+          "das Ehrenamt sei stark",
+          "die Zahlen sinken"
+        ],
+        "answer": "wollen helfen, finden aber keinen Einsatz",
+        "explanationAr": "الدليل: «wollen zwar helfen, finden aber keinen passenden Einsatz». الفخّ: «stark» قول المدينة لا ملاحظتها.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-48-q2",
+        "type": "mc",
+        "promptDe": "Wie bewertet sie die Aussage der Stadt?",
+        "promptAr": "كيف تقيّم قول المدينة؟",
+        "options": [
+          "zu allgemein, Zahlen sinken",
+          "die Angebote sind zahlreich",
+          "viele wollen helfen"
+        ],
+        "answer": "zu allgemein, Zahlen sinken",
+        "explanationAr": "الدليل: «zu allgemein, denn die Zahlen sinken». الفخّ: «zahlreich» وصف للعروض لا تقييم قول المدينة.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Viele Menschen wollen zwar helfen, finden aber keinen passenden Einsatz.",
+      "Die Angebote sind zahlreich, jedoch fehlt oft die Vermittlung.",
+      "Diese Aussage ist zu allgemein, denn die Zahlen sinken in vielen Bereichen."
+    ],
+    "cultural_theme": "Gesellschaft",
+    "level": "B2"
+  },
+  {
+    "id": "d-b2-49",
+    "titleDe": "Demokratie und Beteiligung",
+    "titleAr": "الديمقراطية والمشاركة",
+    "ort": "Bürgerforum",
+    "lines": [
+      {
+        "who": "Bürgermeister",
+        "de": "Viele Bürger interessieren sich zwar für Politik, beteiligen sich aber selten aktiv.",
+        "ar": "كثير من المواطنين يهتمون بالسياسة، لكن نادرًا ما يشاركون بفاعلية."
+      },
+      {
+        "who": "Bürgerin",
+        "de": "Aber liegt das nicht an fehlenden Möglichkeiten?",
+        "ar": "لكن أليس السبب في غياب الفرص؟"
+      },
+      {
+        "who": "Bürgermeister",
+        "de": "Die Möglichkeiten gibt es, jedoch fehlt oft das Vertrauen.",
+        "ar": "الفرص موجودة، لكن غالبًا ما تغيب الثقة."
+      },
+      {
+        "who": "Bürgerin",
+        "de": "Die Parteien behaupten dagegen, die Bürger seien politikverdrossen.",
+        "ar": "في المقابل، تزعم الأحزاب أن المواطنين ناقمون على السياسة."
+      },
+      {
+        "who": "Bürgermeister",
+        "de": "Diese Diagnose ist verkürzt, denn viele wollen mitgestalten, finden aber keinen Zugang.",
+        "ar": "هذا التشخيص مختزل، فكثيرون يريدون المشاركة لكن لا يجدون مدخلًا."
+      },
+      {
+        "who": "Bürgerin",
+        "de": "Was kann die Stadt konkret tun?",
+        "ar": "ماذا يمكن للمدينة أن تفعل عمليًا؟"
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-49-q1",
+        "type": "mc",
+        "promptDe": "Was beobachtet der Bürgermeister?",
+        "promptAr": "ماذا يلاحظ رئيس البلدية؟",
+        "options": [
+          "interessieren sich, beteiligen sich aber selten aktiv",
+          "die Bürger seien politikverdrossen",
+          "die Möglichkeiten gibt es"
+        ],
+        "answer": "interessieren sich, beteiligen sich aber selten aktiv",
+        "explanationAr": "الدليل: «interessieren sich zwar für Politik, beteiligen sich aber selten aktiv». الفخّ: «politikverdrossen» قول الأحزاب لا ملاحظته.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-49-q2",
+        "type": "mc",
+        "promptDe": "Wie bewertet er die Diagnose der Parteien?",
+        "promptAr": "كيف يقيّم تشخيص الأحزاب؟",
+        "options": [
+          "verkürzt, viele wollen mitgestalten",
+          "die Bürger seien politikverdrossen",
+          "die Möglichkeiten gibt es"
+        ],
+        "answer": "verkürzt, viele wollen mitgestalten",
+        "explanationAr": "الدليل: «Diagnose ist verkürzt, denn viele wollen mitgestalten». الفخّ: «politikverdrossen» هو قول الأحزاب نفسه.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Viele Bürger interessieren sich zwar für Politik, beteiligen sich aber selten aktiv.",
+      "Die Möglichkeiten gibt es, jedoch fehlt oft das Vertrauen.",
+      "Diese Diagnose ist verkürzt, denn viele wollen mitgestalten, finden aber keinen Zugang."
+    ],
+    "cultural_theme": "Politik",
+    "level": "B2"
   }
 ]
