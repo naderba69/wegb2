@@ -3052,7 +3052,7 @@ void 0;
     `K125d تغطيةُ الرادارِ من الدالةِ نفسِها: ${abR.mitSignal}/${abR.dialoge} إشارات · ${abR.mitFalle} مضلل (${nAb})`);
   ok(lies.includes(`(${nDr} تمريناً`) , `K125e تمارينُ الأذنِ من الدالةِ نفسِها (${nDr})`);
   const nS2 = J("content/sentences.json"), nW = J("content/writing.json"), nV = J("content/verben.json");
-  ok(nS2 === 978 && nW === 100 && nV === 126 && lies.includes("978") && lies.includes("writing **100**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً  (978: R323 +10 جملة تغطي 69 كلمة B1 يتيمة؛ كانت 961 منذ R322)`);
+  ok(nS2 === 978 && nW === 105 && nV === 126 && lies.includes("978") && lies.includes("writing **105**"), `K125f الفهرسُ: ${nS2} جملة · ${nW} كتابة · ${nV} فعلاً  (978: R323 +10 جملة تغطي 69 كلمة B1 يتيمة؛ كانت 961 منذ R322)`);
   const nKt = J("content/kollokationen.json");
   const nLue = (JSON.parse(readFileSync("content/luecken.json", "utf8")).items as { gaps: unknown[] }[]).reduce((n, it) => n + it.gaps.length, 0);
   ok(nKt === 3646 && nLue === 216 && lies.includes("3646") && lies.includes("216 فراغاً"), `K125g المتلازماتُ ${nKt} والفراغاتُ ${nLue}`) // R323: +69 بطاقة B1 منسوجة بمتلازمات حقيقية (3646، كانت 3397);
@@ -12699,7 +12699,7 @@ void 0;
     for (const t of pl.tasks) { if (t.textId) tx.add(t.textId); if (t.dialogueId) dg.add(t.dialogueId); if (t.writeId) wr.add(t.writeId); }
     if (d >= PHASEN.B2.von && d <= PHASEN.B2.bis && pl.type === "festigung" && !pl.tasks.some((t) => t.titleDe === "Festigungs-Check" && (t.quiz?.length ?? 0) >= 3)) festOk = false; // R396: B2 festigung في الذروة يُكشط D1 → 3 أسئلة ≥3 تكفي (لا 8)
   }
-  ok(tx.size === 157 && dg.size === 166 && wr.size === 100 && festOk, // R217: الكتابة 90→100 والتناوب يغطيها كلها
+  ok(tx.size === 157 && dg.size === 166 && wr.size === 105 && festOk, // R217: الكتابة 90→100 والتناوب يغطيها كلها
     `K260c لا بندَ بنكياً فريداً سقطَ بكشطِ D1-B: ${tx.size} نصّاً و${dg.size} حواراً و${wr.size} مهمّةَ كتابةٍ مجدولةً (كخطِّ الأساسِ قبلَ التغيير)، وفحصُ التثبيتِ الأسبوعيُّ في B2 سليمٌ بأسئلتِه`);
 }
 
@@ -12858,9 +12858,9 @@ function collectR262(dir: string, out: string[] = []): string[] {
      gradSrc.includes("export async function llmKriterien") && gradSrc.includes("KRITERIEN_NAMEN") &&
      schrSrc.includes("KriterienPanel") && schrSrc.includes('art={task.format === "brief" ? "brief" : "forum"}'),
     "K266c اللوحة موصولة بورشة الكتابة معلنةً آليّتها، ومستشار المعايير اختياريّ خلف llmBereit بلا إرسال صامت");
-  const alleMarkiert = writingTasks.length === 100 && writingTasks.every((w) => w.format === "brief" || w.format === "frei"); // R217: 100 مهمة (كانت 90)
+  const alleMarkiert = writingTasks.length === 105 && writingTasks.every((w) => w.format === "brief" || w.format === "frei"); // R217: 105 مهمة (كانت 90)
   const briefBank = writingTasks.filter((w) => w.format === "brief");
-  ok(alleMarkiert && briefBank.length === 37 && briefBank.filter((w) => w.level === "B2").length >= 5 &&
+  ok(alleMarkiert && briefBank.length === 39 && briefBank.filter((w) => w.level === "B2").length >= 5 &&
      schrSrc.includes("task.zielWort ?? cfg!.ziel") && writingTasks.every((w) => !w.zielWort || w.zielWort >= 20),
     `K266d بنك الكتابة موسومٌ بصيغة الامتحان: ${briefBank.length} مهمة رسائل (تحية/ختام في الإنجاز) والباقي نص حر، والهدف من zielWort البنك`);
 }
@@ -12945,12 +12945,12 @@ function collectR262(dir: string, out: string[] = []): string[] {
   const waehle = (bed: (t: (typeof writingTasks)[number]) => boolean) => writingTasks.filter(bed).length;
   const proNiveau: Record<string, number> = {};
   for (const t of writingTasks) proNiveau[t.level] = (proNiveau[t.level] ?? 0) + 1;
-  ok(proNiveau.A0 === 6 && proNiveau.A1 === 19 && proNiveau.A2 === 20 && proNiveau.B1 === 27 && proNiveau.B2 === 28 && writingTasks.length === 100, // R217: +5 B1 +5 B2
-    `K270a مزيج المستويات 6/19/20/22/23 صحيح: ${JSON.stringify(proNiveau)}`);
-  const NEU_IDS = ["w-b2-15", "w-b2-16", "w-b2-17", "w-b2-18", "w-b2-19", "w-b2-20", "w-b2-21", "w-b2-22", "w-b2-23", "w-b1-14", "w-b1-15", "w-b1-16", "w-b1-17", "w-b1-18", "w-b1-19", "w-b1-20", "w-b1-21", "w-b1-22", "w-a2-13", "w-a2-14", "w-a2-15", "w-a2-16", "w-a2-17", "w-a2-18", "w-a2-19", "w-a2-20", "w-a1-14", "w-a1-15", "w-a1-16", "w-a1-17", "w-a1-18", "w-a1-19"];
+  ok(proNiveau.A0 === 6 && proNiveau.A1 === 19 && proNiveau.A2 === 20 && proNiveau.B1 === 27 && proNiveau.B2 === 33 && writingTasks.length === 105, // R217: +5 B1 +5 B2 +5 neu
+    `K270a مزيج المستويات 6/19/20/27/33 صحيح: ${JSON.stringify(proNiveau)}`);
+  const NEU_IDS = ["w-b2-15", "w-b2-16", "w-b2-17", "w-b2-18", "w-b2-19", "w-b2-20", "w-b2-21", "w-b2-22", "w-b2-23", "w-b2-41", "w-b2-42", "w-b2-43", "w-b2-44", "w-b2-45", "w-b1-14", "w-b1-15", "w-b1-16", "w-b1-17", "w-b1-18", "w-b1-19", "w-b1-20", "w-b1-21", "w-b1-22", "w-a2-13", "w-a2-14", "w-a2-15", "w-a2-16", "w-a2-17", "w-a2-18", "w-a2-19", "w-a2-20", "w-a1-14", "w-a1-15", "w-a1-16", "w-a1-17", "w-a1-18", "w-a1-19"];
   const NEU = writingTasks.filter((t) => NEU_IDS.includes(t.id));
-  ok(NEU.length === 32 && NEU.every((t) => (t.noteAr?.length ?? 0) >= 2 && t.criteria.length >= (t.level === "B1" || t.level === "B2" ? 4 : 3)),
-    `K270b 32 مهمّة جديدة بـ≥2 ملاحظة و≥4 معايير: ${NEU.length}`);
+  ok(NEU.length === 37 && NEU.every((t) => (t.noteAr?.length ?? 0) >= 2 && t.criteria.length >= (t.level === "B1" || t.level === "B2" ? 4 : 3)),
+    `K270b 37 مهمّة جديدة بـ≥2 ملاحظة و≥4 معايير: ${NEU.length}`);
   const worte = (s: string) => s.split(/\s+/).filter(Boolean).length;
   const modellOk = NEU.every((t) => { const n = worte(t.sample); const z = t.zielWort ?? 0; return n >= z * 0.85 && n <= z * 1.6; });
   ok(modellOk, "K270c إجابات النماذج الجديدة في نطاق [0.85،1.6]×هدف الكلمات");
