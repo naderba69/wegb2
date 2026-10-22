@@ -1,0 +1,62 @@
+{
+  "titelDe": "Goethe-Zertifikat B2 — 400-Punkte-Schema",
+  "titelAr": "شهادة غوته B2 — نظام 400 نقطة",
+  "beschreibung": "4 Fertigkeiten ×100 Punkte =400 total, Bestehen ab 240 (60%), kein Modul unter 0. Goethe verlangt Bestehen jedes Moduls getrennt nicht, BAMF BSK verlangt Gesamt 60%.",
+  "gesamt": 400,
+  "bestehen": 240,
+  "bestehenProzent": 60,
+  "module": [
+    {
+      "id": "lesen",
+      "de": "Lesen",
+      "ar": "القراءة",
+      "punkte": 100,
+      "bestehen": 60,
+      "teile": 5,
+      "dauerMin": 65,
+      "items": 30,
+      "hinweis": "Teil1 Anzeigen 9 + Teil2 selektierend 6 + Teil3 global 6 + Teil4 detailliert 6 + Teil5 Sprachbausteine 3"
+    },
+    {
+      "id": "hoeren",
+      "de": "Hören",
+      "ar": "الاستماع",
+      "punkte": 100,
+      "bestehen": 60,
+      "teile": 4,
+      "dauerMin": 40,
+      "items": 30,
+      "hinweis": "Teil1 Vortrag 4 + Teil2 Interview 6 + Teil3 Gespräch 6 + Teil4 Radioäußerungen 2"
+    },
+    {
+      "id": "schreiben",
+      "de": "Schreiben",
+      "ar": "الكتابة",
+      "punkte": 100,
+      "bestehen": 60,
+      "teile": 2,
+      "dauerMin": 75,
+      "items": 2,
+      "hinweis": "Teil1 Forumsbeitrag 40P (150W Meinung) + Teil2 formelle Nachricht/Beschwerde 60P (120W Beruf)"
+    },
+    {
+      "id": "sprechen",
+      "de": "Sprechen",
+      "ar": "المحادثة",
+      "punkte": 100,
+      "bestehen": 60,
+      "teile": 2,
+      "dauerMin": 15,
+      "vorbereitungMin": 15,
+      "items": 2,
+      "hinweis": "Teil1 Präsentation 3-4min + Teil2 Diskussion 5-6min (Paarprüfung 15min)"
+    }
+  ],
+  "noteDe": "Dieses Schema ist für Übung und Selbsteinschätzung gedacht; die echte Goethe-Prüfung wird von externen Prüfern bewertet. Quelle: Goethe-Zertifikat B2 Modellsatz 2024.",
+  "noteAr": "هذا المخطط للتدريب والتقييم الذاتي؛ الامتحان الحقيقي يصححه ممتحنون خارجيون. المصدر: نموذج غوته B2 2024.",
+  "quelle": [
+    "https://www.goethe.de/de/spr/prf/gzb2.html",
+    "https://www.bamf.de/DE/themenIntegration/berufsbezsprachf/bsb-b2/bsb-b2_node.html"
+  ],
+  "updated": "2026-10-22"
+}

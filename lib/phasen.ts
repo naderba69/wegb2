@@ -59,6 +59,8 @@ export const PHASEN: Record<Exclude<Level, "B2"> extends never ? never : Level, 
 /** أيام الختام (تقرير + امتحان نهائي) */
 export const ABSCHLUSS_VON = 375;
 export const TOTAL_DAYS = 378;
+export const PRUEFUNG_B2_GESAMT = 400;
+export const PRUEFUNG_B2_BESTEHEN = 240;
 
 /** سقفا الحمل اليومي المخطط (D1-B · قرار المالك 2026-10-16 · R168/R392) — دقائق مخطَّطة من buildDay لا زمن مقيس ميدانياً.
  *  B1+B2 معاً تُكشَط ذرواتها داخل lib/plan.ts بقطع محتوى مراجعة/أدوات محقونة حقيقي (K260 · R392 يوسّع لـ B1 لاستيعاب الحقن المنهجي 820 أداة). */

@@ -1280,6 +1280,326 @@
         }
       ],
       "zeit_s": 240
+    },
+    {
+      "id": "mm13",
+      "teil": 2,
+      "level": "B2",
+      "titel_de": "Volle U-Bahn morgens — Pendeln ohne Sitzplatz",
+      "titel_ar": "مترو مزدحم صباحاً — تنقّل بلا مقعد",
+      "auftrag_de": "Beschreiben Sie das Bild: volle U-Bahn, wer steht, wer sitzt, was tun die Fahrgäste? Spekulieren Sie, wohin sie fahren, und schließen Sie mit Ihrer Meinung zu Stoßzeitenpreisen.",
+      "auftrag_ar": "مترو مزدحم صباحاً — تنقّل بلا مقعد",
+      "stuetzen": [
+        "Im Vordergrund drängen sich …",
+        "Vermutlich fahren die meisten zur Arbeit, weil …",
+        "Auffällig ist, dass kaum jemand …",
+        "Meiner Meinung nach wäre ein gestaffelter Arbeitsbeginn …"
+      ],
+      "kriterien": [
+        {
+          "ar": "وصف الازدحام (drängen/stehen)",
+          "de": "Dichte beschrieben"
+        },
+        {
+          "ar": "تخمين مبرّر للهدف",
+          "de": "Ziel begründet vermutet"
+        },
+        {
+          "ar": "ملاحظة سلوك واحد غير متوقع",
+          "de": "ungewöhnliches Detail"
+        },
+        {
+          "ar": "اقتراح ملموس للتحسين",
+          "de": "konkreter Vorschlag"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm14",
+      "teil": 2,
+      "level": "B2",
+      "titel_de": "Büro mit zwei Bildschirmen — konzentriert oder abgelenkt?",
+      "titel_ar": "مكتب بشاشتين — تركيز أم تشتيت؟",
+      "auftrag_de": "Beschreiben Sie den Arbeitsplatz: Was steht auf dem Schreibtisch, wie wirkt die Person? Erörtern Sie, ob zwei Bildschirme die Produktivität steigern oder senken.",
+      "auftrag_ar": "مكتب بشاشتين — تركيز أم تشتيت؟",
+      "stuetzen": [
+        "Links ist zu erkennen, dass …",
+        "Es wirkt so, als ob …",
+        "Im Hintergrund sind … zu sehen",
+        "Ob das wirklich effizienter ist, bezweifle ich, weil …"
+      ],
+      "kriterien": [
+        {
+          "ar": "تفصيل مكاني دقيق",
+          "de": "Lageangaben präzise"
+        },
+        {
+          "ar": "تفسير الحالة النفسية",
+          "de": "Stimmung gedeutet"
+        },
+        {
+          "ar": "حجة مؤيدة ومعارضة",
+          "de": "Pro/Contra abgewogen"
+        },
+        {
+          "ar": "حكم شخصي مبرّر",
+          "de": "begründete Position"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm15",
+      "teil": 2,
+      "level": "B2",
+      "titel_de": "Warteschlange vor dem Bürgeramt — digital wäre schneller",
+      "titel_ar": "طابور أمام مصلحة المواطنين — الرقمي أسرع",
+      "auftrag_de": "Beschreiben Sie die Schlange: Wie lang, wer wartet, wie ist die Stimmung? Diskutieren Sie, ob Online-Services Warteschlangen wirklich abschaffen können.",
+      "auftrag_ar": "طابور أمام مصلحة المواطنين — الرقمي أسرع",
+      "stuetzen": [
+        "Im Vordergrund stehen …",
+        "Die Stimmung wirkt …",
+        "Man könnte meinen, dass …",
+        "Ich selbst habe erlebt, dass …"
+      ],
+      "kriterien": [
+        {
+          "ar": "وصف الطابور والوجوه",
+          "de": "Schlange & Stimmung"
+        },
+        {
+          "ar": "افتراض سبب الانتظار",
+          "de": "Grund vermutet"
+        },
+        {
+          "ar": "تجربة شخصية قصيرة",
+          "de": "eigene Erfahrung"
+        },
+        {
+          "ar": "تقييم للحل الرقمي",
+          "de": "Online-Lösung bewertet"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm16",
+      "teil": 2,
+      "level": "B2",
+      "titel_de": "Pflegeheim — Mensch im Mittelpunkt oder Zeitdruck?",
+      "titel_ar": "دار رعاية — الإنسان في المحور أم ضغط الوقت؟",
+      "auftrag_de": "Beschreiben Sie das Bild im Pflegeheim: Wer kümmert sich um wen, was fällt an der Umgebung auf? Nehmen Sie Stellung, was gute Pflege braucht.",
+      "auftrag_ar": "دار رعاية — الإنسان في المحور أم ضغط الوقت؟",
+      "stuetzen": [
+        "Auffällig ist, dass …",
+        "Im Hintergrund ist zu sehen, dass …",
+        "Es könnte sein, dass …",
+        "Aus meiner Sicht braucht gute Pflege vor allem …"
+      ],
+      "kriterien": [
+        {
+          "ar": "وصف العلاقة مقدم/مؤخر",
+          "de": "Beziehung beschrieben"
+        },
+        {
+          "ar": "تفسير الإشارات غير اللفظية",
+          "de": "Signale gedeutet"
+        },
+        {
+          "ar": "معيار للجودة مقترح",
+          "de": "Qualitätskriterium genannt"
+        },
+        {
+          "ar": "موقف إنساني معلَّل",
+          "de": "menschliche Position begründet"
+        }
+      ],
+      "zeit_s": 240
+    },
+    {
+      "id": "mm17",
+      "teil": 3,
+      "level": "B2",
+      "titel_de": "Vier-Tage-Woche — weniger Arbeit, mehr Leben?",
+      "titel_ar": "أسبوع بأربعة أيام — عمل أقل، حياة أكثر؟",
+      "auftrag_de": "Diskutieren Sie: Soll die Vier-Tage-Woche flächendeckend eingeführt werden? Nennen Sie Vor- und Nachteile, reagieren Sie auf Ihren Partner und finden Sie einen Kompromiss.",
+      "auftrag_ar": "أسبوع بأربعة أيام — عمل أقل، حياة أكثر؟",
+      "stuetzen": [
+        "Ich bin überzeugt, dass …",
+        "Einerseits …, andererseits …",
+        "Da muss ich widersprechen, weil …",
+        "Könnten wir uns darauf einigen, dass …?"
+      ],
+      "kriterien": [
+        {
+          "ar": "موقف واضح مبكراً",
+          "de": "klare Position"
+        },
+        {
+          "ar": "حجتان من كل طرف",
+          "de": "Pro/Contra je 2"
+        },
+        {
+          "ar": "رد مباشر على الشريك",
+          "de": "auf Partner reagiert"
+        },
+        {
+          "ar": "صياغة تسوية محددة",
+          "de": "Kompromiss formuliert"
+        }
+      ],
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm17-einwand-1",
+          "de": "Eine kürzere Woche klingt gut, aber wer bezahlt den Lohnausgleich? Kleine Betriebe könnten das kaum finanzieren.",
+          "ar": "أسبوع أقصر يبدو جيداً، لكن من يمول تعويض الأجر؟ الشركات الصغيرة قد تعجز."
+        },
+        {
+          "id": "mm17-einwand-2",
+          "de": "Weniger Arbeitstage bedeuten nicht automatisch weniger Stress — oft wird die gleiche Arbeit in weniger Zeit gepresst. Wie verhindern Sie das?",
+          "ar": "أيام عمل أقل لا تعني ضغطاً أقل تلقائياً؛ قد يُضغط نفس العمل في وقت أقل. كيف تمنعون ذلك؟"
+        }
+      ]
+    },
+    {
+      "id": "mm18",
+      "teil": 3,
+      "level": "B2",
+      "titel_de": "Bargeld abschaffen — Fortschritt oder Risiko?",
+      "titel_ar": "إلغاء النقد — تقدم أم مخاطرة؟",
+      "auftrag_de": "Diskutieren Sie: Soll Bargeld abgeschafft werden? Berücksichtigen Sie Datenschutz, Teilhabe und Kriminalität und finden Sie eine Regel, die beide Seiten akzeptieren können.",
+      "auftrag_ar": "إلغاء النقد — تقدم أم مخاطرة؟",
+      "stuetzen": [
+        "Aus Sicht von … ist das …",
+        "Was du sagst, deutet darauf hin, dass …",
+        "Ein Kompromiss könnte …",
+        "Lass uns festhalten, dass …"
+      ],
+      "kriterien": [
+        {
+          "ar": "وجهتا نظر (مسنّ/شاب)",
+          "de": "zwei Gruppen bedacht"
+        },
+        {
+          "ar": "تلخيص كلام الشريك",
+          "de": "paraphrasiert"
+        },
+        {
+          "ar": "اقتراح وسط (z. B. Bargeld erhalten aber …)",
+          "de": "Mittelweg"
+        },
+        {
+          "ar": "إعلان الاتفاق",
+          "de": "Einigung benannt"
+        }
+      ],
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm18-einwand-1",
+          "de": "Digitales Zahlen hinterlässt Spuren — nicht jeder möchte, dass jede Transaktion nachvollziehbar ist. Wie schützen Sie die Privatsphäre?",
+          "ar": "الدفع الرقمي يترك آثاراً؛ ليس الجميع يريد تتبع كل معاملة. كيف تحمون الخصوصية؟"
+        },
+        {
+          "id": "mm18-einwand-2",
+          "de": "Ohne Bargeld sind manche Gruppen ausgeschlossen, z. B. ältere Menschen ohne Smartphone. Wie gewährleisten Sie Teilhabe?",
+          "ar": "بدون نقد تُقصى فئات، كالمسنين بلا هاتف ذكي. كيف تضمنون المشاركة؟"
+        }
+      ]
+    },
+    {
+      "id": "mm19",
+      "teil": 3,
+      "level": "B2",
+      "titel_de": "Noten abschaffen — motiviert das wirklich?",
+      "titel_ar": "إلغاء الدرجات — هل يحفز حقاً؟",
+      "auftrag_de": "Diskutieren Sie: Sollen Schulnoten abgeschafft werden? Wägen Sie Motivation, Vergleichbarkeit und Zukunftschancen ab und einigen Sie sich auf ein Modell.",
+      "auftrag_ar": "إلغاء الدرجات — هل يحفز حقاً؟",
+      "stuetzen": [
+        "Gewichtet man …, dann …",
+        "Zuzugeben ist, dass …",
+        "Wie siehst du …?",
+        "Unter dem Strich …"
+      ],
+      "kriterien": [
+        {
+          "ar": "موازنة بين الدافع والمقارنة",
+          "de": "Motivation vs Vergleichbarkeit"
+        },
+        {
+          "ar": "اعتراف بحجة الخصم",
+          "de": "Zugeständnis"
+        },
+        {
+          "ar": "سؤال حقيقي للشريك",
+          "de": "echte Rückfrage"
+        },
+        {
+          "ar": "نموذج بديل مقترح",
+          "de": "Alternativmodell"
+        }
+      ],
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm19-einwand-1",
+          "de": "Ohne Noten fehlt ein klarer Maßstab — wie wollen Sie Leistung vergleichen, etwa bei Bewerbungen?",
+          "ar": "بدون درجات يغيب معيار واضح؛ كيف تقارنون الأداء في التوظيف؟"
+        },
+        {
+          "id": "mm19-einwand-2",
+          "de": "Noten können demotivieren, aber auch anspornen. Wie stellen Sie sicher, dass schwächere Schüler nicht abgehängt werden?",
+          "ar": "الدرجات قد تحبط وقد تحفز؛ كيف تضمنون عدم تهميش الضعفاء؟"
+        }
+      ]
+    },
+    {
+      "id": "mm20",
+      "teil": 3,
+      "level": "B2",
+      "titel_de": "Autonomes Fahren — wem vertrauen wir das Steuer an?",
+      "titel_ar": "القيادة الذاتية — لمن نأتمن المقود؟",
+      "auftrag_de": "Diskutieren Sie: Soll autonomes Fahren schnell eingeführt werden? Betrachten Sie Sicherheit, Haftung und Arbeitsplätze und finden Sie einen Kompromiss.",
+      "auftrag_ar": "القيادة الذاتية — لمن نأتمن المقود؟",
+      "stuetzen": [
+        "Einerseits verspricht …, andererseits …",
+        "Das überzeugt mich nicht ganz, weil …",
+        "Ein guter Kompromiss wäre …",
+        "Also halten wir fest: …"
+      ],
+      "kriterien": [
+        {
+          "ar": "التكنولوجيا مقابل المسؤولية",
+          "de": "Technik vs Haftung"
+        },
+        {
+          "ar": "أثر على السائقين كمهنة",
+          "de": "Berufseffekt bedacht"
+        },
+        {
+          "ar": "أمان مقابل تحكم",
+          "de": "Sicherheit vs Kontrolle"
+        },
+        {
+          "ar": "خطة مرحلية مقترحة",
+          "de": "Stufenplan"
+        }
+      ],
+      "zeit_s": 300,
+      "einwaende": [
+        {
+          "id": "mm20-einwand-1",
+          "de": "Autonome Systeme machen Fehler — wer haftet bei einem Unfall, Hersteller oder Halter?",
+          "ar": "الأنظمة الذاتية تخطئ؛ من يتحمل المسؤولية عند حادث، المصنّع أم المالك؟"
+        },
+        {
+          "id": "mm20-einwand-2",
+          "de": "Wenn viele Fahrzeuge autonom fahren, fallen Jobs im Transport weg. Wie federn Sie das sozial ab?",
+          "ar": "مع انتشار المركبات الذاتية تضيع وظائف النقل؛ كيف تخففون الأثر اجتماعياً؟"
+        }
+      ]
     }
   ],
   "partner": [

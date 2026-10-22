@@ -459,12 +459,12 @@ const vocabRepeatAudit = (() => {
   ];
   for (const [name, got, want] of counts) ok(got === want, `K-${name}: توقّع ${want} وجد ${got}`);
   ok(pakete.every((x) => x.saetze.length === 12 && x.dialog.lines.length === 6 && x.modelle.length === 2), "K11 بنية الحزم 12+6+2");
-  ok(haerte.length === 16, "K15a بنك العينة الأصعب: 16 ركيزة");
+  ok(haerte.length === 32 && haerte.filter((x: any) => x.skill === "lesen").length === 8 && haerte.filter((x: any) => x.skill === "hoeren").length === 8 && haerte.filter((x: any) => x.skill === "schreiben").length === 8 && haerte.filter((x: any) => x.skill === "sprechen").length === 8, "K15a بنك العينة الأصعب: 32 ركيزة (8×4 Fertigkeiten)");
   ok(haerte.every((x) => x.options.length === 4 && x.answer >= 0 && x.answer < 4 && x.frage.includes("___") && new Set(x.options).size === 4 && x.ar.length > 5), "K15b العينة: خيارات 4 فريدة · مؤشّر صالح · فجوة · شرح");
 
   const t2 = muendlich.filter((x) => x.teil === 2).length;
   const t3 = muendlich.filter((x) => x.teil === 3).length;
-  ok(muendlich.length >= 12 && t2 >= 6 && t3 >= 6, `K18a بنك الشفهي: ${muendlich.length} بطاقة (Teil2=${t2} Teil3=${t3}) — ≥12 إجمالاً`);
+  ok(muendlich.length >= 24 && t2 >= 12 && t3 >= 10, `K18a بنك الشفهي: ${muendlich.length} بطاقة (Teil2=${t2} Teil3=${t3}) — ≥24 إجمالاً`);
   ok(muendlich.every((x) => (x.zeit_s ?? 0) >= 60 && (x.kriterien ?? []).length >= 2 && (x.stuetzen ?? []).length >= 1 && (x.auftrag_de ?? "").length > 10), "K18b الشفهي: مؤقّت · معايير · دعامات · أمر كامل");
   ok(!muendlich.some((x) => /[\u4e00-\u9fff]/.test((x.auftrag_de ?? "") + x.titel_ar + (x.stuetzen ?? []).join(""))), "K18c الشفهي نظيف من التلوّث الكتابي");
   ok(!muendlich.some((x) => !/^[a-z]{2}/.test(x.id) || x.id.length < 4), "K18d معرّفات منتظمة");
@@ -3295,19 +3295,19 @@ void 0;
   // R145: الاعتراضات المفاجئة عقدُ بطاقاتِ الامتحان (300 ثانية)؛ بطاقاتُ التدرّب الموسومة بالمستوى أقصر وبلا اعتراضات
   const teil3 = teil3Alle.filter((karte) => karte.zeit_s === 300);
   const ids = teil3.flatMap((karte) => (karte.einwaende ?? []).map((einwand) => einwand.id));
-  const inhaltGilt = teil3.length === 6 && teil3.every((karte) =>
+  const inhaltGilt = teil3.length === 10 && teil3.every((karte) =>
     karte.einwaende?.length === 2 && karte.einwaende.every((einwand) =>
       !!einwand.id && einwand.de.length >= 45 && !!einwand.ar && !/[\u0600-\u06ff]/.test(einwand.de),
     ),
   ) && teil3Alle.filter((karte) => karte.zeit_s !== 300).every((karte) => !karte.einwaende?.length)
-  && new Set(ids).size === 12 && teil2.every((karte) => !karte.einwaende?.length);
-  ok(inhaltGilt, "K133a ستُّ بطاقاتِ Teil 3 امتحانية (300ث) لها اعتراضان ألمانيان سياقيان وترجمتان؛ بطاقات التدرّب و Teil 2 بلا اعتراضات");
+  && new Set(ids).size === 20 && teil2.every((karte) => !karte.einwaende?.length);
+  ok(inhaltGilt, "K133a عشرُ بطاقاتِ Teil 3 امتحانية (300ث) لها اعتراضان ألمانيان سياقيان وترجمتان؛ بطاقات التدرّب و Teil 2 بلا اعتراضات");
 
   const plaene = teil3.flatMap((karte) => [1, 42, 378].map((day) =>
     [0, 1].map((zug) => planeEinwand(karte.id, karte.einwaende ?? [], day, zug)),
   ));
   const planListe = plaene.flat(2);
-  const planGueltig = planListe.length === 36 && planListe.every((plan) =>
+  const planGueltig = planListe.length === 60 && planListe.every((plan) =>
     !!plan && plan.nachSekunden >= 60 && plan.nachSekunden <= 120 &&
     plan.einwand.id.startsWith("mm") && plan.einwand.de.length >= 45,
   );
@@ -14297,6 +14297,14 @@ function collectR262(dir: string, out: string[] = []): string[] {
   ok(playerAtK333 >= 0 && uebenAtK333 > playerAtK333 && pruefenAtK333 > uebenAtK333,
     "K333f R308: القسمان المُدمَجان يأتيان بعد مشغّل اليوم — إضافةٌ ذيلية لا تُخلّ بترتيب K136 (خطوة واحدة ← هدف ← مشغّل)");
 }
+
+
+/* ═══ K400 — B2 Prüfungsschema 400 Punkte (R401) ═══ */
+{
+  const pruef = JSON.parse(readFileSync("content/pruefung-b2.json","utf8")) as { gesamt:number; bestehen:number; module:{id:string; punkte:number; bestehen:number}[] };
+  ok(pruef.gesamt === 400 && pruef.bestehen === 240 && pruef.module.length === 4 && pruef.module.every((m) => m.punkte === 100 && m.bestehen === 60), "K400 B2-Prüfung 400 Punkte (100×4) Bestehen 240 — haerte 32 + muendlich 24 + pakete 6 stützen es");
+}
+
 
 /* ═══ K334 — R309: القفل الفعلي الحقيقي — إغلاقُ اليوم عند حدود الوحدة ممنوعٌ لا منصوحٌ به فقط ═══ */
 {

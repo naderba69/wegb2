@@ -11,7 +11,8 @@
       ],
       "answer": 0,
       "ar": "الفعل بعد lassen يأتي مصدراً بلا zu: «أدع شعري يُقصّ» — lassen + Infinitiv.",
-      "de": "lassen + Infinitiv ohne zu: Ich lasse die Haare schneiden."
+      "de": "lassen + Infinitiv ohne zu: Ich lasse die Haare schneiden.",
+      "skill": "lesen"
     },
     {
       "id": "h02",
@@ -24,7 +25,8 @@
       ],
       "answer": 0,
       "ar": "بعد als في «als ob» المُخفَّفة نستخدم Konjunktiv II — wüsste لا wusste.",
-      "de": "Nach »als« im irrealen Vergleich steht Konjunktiv II: als wüsste er…"
+      "de": "Nach »als« im irrealen Vergleich steht Konjunktiv II: als wüsste er…",
+      "skill": "lesen"
     },
     {
       "id": "h03",
@@ -37,7 +39,8 @@
       ],
       "answer": 0,
       "ar": "الزوج الأبدي: je … desto (أو umso). من وضع desto فالفعل يأتي بعده مباشرة.",
-      "de": "Je … desto/umso — und nach »desto« rückt das Verb auf Platz 1."
+      "de": "Je … desto/umso — und nach »desto« rückt das Verb auf Platz 1.",
+      "skill": "lesen"
     },
     {
       "id": "h04",
@@ -50,7 +53,8 @@
       ],
       "answer": 0,
       "ar": "«lässt sich + Infinitiv» = صيغة قدرة راقية بديلة عن kann: لا يُبالَغ فيه بسهولة.",
-      "de": "»Es lässt sich + Infinitiv« ist die gehobene Kann-Form."
+      "de": "»Es lässt sich + Infinitiv« ist die gehobene Kann-Form.",
+      "skill": "lesen"
     },
     {
       "id": "h05",
@@ -63,7 +67,8 @@
       ],
       "answer": 0,
       "ar": "ت despite مع Genitiv؛ «wegen/ aufgrund» معناهما السبب لا التناقض.",
-      "de": "»trotz« + Genitiv drückt Widerspruch aus."
+      "de": "»trotz« + Genitiv drückt Widerspruch aus.",
+      "skill": "hoeren"
     },
     {
       "id": "h06",
@@ -76,7 +81,8 @@
       ],
       "answer": 0,
       "ar": "sich sicher sein + dass؛ bewusst تطلب «dessen»: Ich bin mir dessen bewusst.",
-      "de": "»sicher sein, dass…« — »bewusst« verlangt Genitiv (dessen bewusst)."
+      "de": "»sicher sein, dass…« — »bewusst« verlangt Genitiv (dessen bewusst).",
+      "skill": "hoeren"
     },
     {
       "id": "h07",
@@ -89,7 +95,8 @@
       ],
       "answer": 0,
       "ar": "anstatt/statt + zu + Infinitiv عند اتفاق الفاعلين؛ وأنّ-clause فقط لاختلافهما.",
-      "de": "anstatt + zu + Infinitiv bei gleichem Subjekt."
+      "de": "anstatt + zu + Infinitiv bei gleichem Subjekt.",
+      "skill": "hoeren"
     },
     {
       "id": "h08",
@@ -102,7 +109,8 @@
       ],
       "answer": 0,
       "ar": "التركيب الثابت: es kommt darauf an, ob — البرونوم «da-» يلتهم الحرف «an» فيصبح darauf، لا daran ولا davon.",
-      "de": "»Es kommt darauf an, ob…« — an + Akkusativ, Korrelat »darauf«."
+      "de": "»Es kommt darauf an, ob…« — an + Akkusativ, Korrelat »darauf«.",
+      "skill": "hoeren"
     },
     {
       "id": "h09",
@@ -115,7 +123,8 @@
       ],
       "answer": 0,
       "ar": "النفي kein… + مثل: so … wie (لا als) — als للقياس المُتفاوِت فقط.",
-      "de": "Gleichheit nach Negation: so … wie (nicht »als«)."
+      "de": "Gleichheit nach Negation: so … wie (nicht »als«).",
+      "skill": "schreiben"
     },
     {
       "id": "h10",
@@ -128,7 +137,8 @@
       ],
       "answer": 0,
       "ar": "an|gehen + Akk: «لا يخصّك» — فعل منفصل يبتلع الضمير.",
-      "de": "»Das geht dich nichts an« — abtrennbares »angehen«."
+      "de": "»Das geht dich nichts an« — abtrennbares »angehen«.",
+      "skill": "schreiben"
     },
     {
       "id": "h11",
@@ -141,7 +151,8 @@
       ],
       "answer": 0,
       "ar": "sein + صفة + zu + Infinitiv: «يصعب فهمه» — بنية راقية تحل محل man-البناء.",
-      "de": "sein + Adjektiv + zu + Infinitiv: »schwer zu verstehen«."
+      "de": "sein + Adjektiv + zu + Infinitiv: »schwer zu verstehen«.",
+      "skill": "schreiben"
     },
     {
       "id": "h12",
@@ -154,7 +165,8 @@
       ],
       "answer": 0,
       "ar": "الرابطة الثابتة: im Gegensatz zu + Dat — لا تُخلط مع «vs.» الإنجليزية.",
-      "de": "Feste Präposition: »im Gegensatz zu« + Dativ."
+      "de": "Feste Präposition: »im Gegensatz zu« + Dativ.",
+      "skill": "schreiben"
     },
     {
       "id": "h13",
@@ -167,7 +179,8 @@
       ],
       "answer": 0,
       "ar": "موصول مِلكيّ لمحايد الجمع-مفرد مذكر: dessen. deren للعلاقة المؤنثة.",
-      "de": "Relativpronomen im Genitiv: »dessen« für das Buch."
+      "de": "Relativpronomen im Genitiv: »dessen« für das Buch.",
+      "skill": "sprechen"
     },
     {
       "id": "h14",
@@ -180,7 +193,8 @@
       ],
       "answer": 0,
       "ar": "sich lohnen دائماً بانعكاس: Es lohnt sich + zu + Inf.",
-      "de": "»sich lohnen« ist reflexiv: Es lohnt sich, …"
+      "de": "»sich lohnen« ist reflexiv: Es lohnt sich, …",
+      "skill": "sprechen"
     },
     {
       "id": "h15",
@@ -193,7 +207,8 @@
       ],
       "answer": 0,
       "ar": "بعد umso/je يأتي als سببية-زمنية («حين») لا wenn الشرطية.",
-      "de": "Nach Steigerungs-»umso« folgt temporales »als«."
+      "de": "Nach Steigerungs-»umso« folgt temporales »als«.",
+      "skill": "sprechen"
     },
     {
       "id": "h16",
@@ -206,7 +221,232 @@
       ],
       "answer": 0,
       "ar": "geschehen يُصرَّف مع sein في Perfect: «Was ist geschehen?» — من أفعال الحركة والتغيّر، لا تعرف haben.",
-      "de": "Perfekt von geschehen mit sein, nicht haben."
+      "de": "Perfekt von geschehen mit sein, nicht haben.",
+      "skill": "sprechen"
+    },
+    {
+      "id": "h17",
+      "skill": "lesen",
+      "frage": "Die Studie wurde ___ durchgeführt, bevor die Ergebnisse veröffentlicht wurden.",
+      "options": [
+        "sorgfältig",
+        "sorgfältige",
+        "sorgfältigem",
+        "sorgfältigen"
+      ],
+      "answer": 0,
+      "ar": "الصفة بعد الفعل تُصرَّف كظرف لا تحتاج نهاية: sorgfältig durchgeführt.",
+      "de": "Adverbiale Adjektive bleiben unflektiert: sorgfältig durchgeführt."
+    },
+    {
+      "id": "h18",
+      "skill": "lesen",
+      "frage": "___ die Zahlen steigen, bleibt die Unsicherheit groß.",
+      "options": [
+        "Obwohl",
+        "Weil",
+        "Dass",
+        "Als"
+      ],
+      "answer": 0,
+      "ar": "obwohl رابطة تنازع: رغم أن الأرقام ترتفع، يبقى عدم اليقين.",
+      "de": "Konsekutiv/Konzessiv: »Obwohl ... steigt, bleibt ...«"
+    },
+    {
+      "id": "h19",
+      "skill": "lesen",
+      "frage": "Es handelt sich ___ einen Kompromiss, der alle Seiten berücksichtigt.",
+      "options": [
+        "um",
+        "über",
+        "auf",
+        "an"
+      ],
+      "answer": 0,
+      "ar": "sich handeln um + Akk — تركيب ثابت: يدور الأمر حول تسوية.",
+      "de": "»Es handelt sich um ...« + Akkusativ."
+    },
+    {
+      "id": "h20",
+      "skill": "lesen",
+      "frage": "Die Entscheidung ___ davon ab, ob genügend Personal vorhanden ist.",
+      "options": [
+        "hängt",
+        "geht",
+        "kommt",
+        "liegt"
+      ],
+      "answer": 0,
+      "ar": "es hängt davon ab, ob — يعبّر عن الشرط: يعتمد على توفر الموظفين.",
+      "de": "»Es hängt davon ab, ob ...«"
+    },
+    {
+      "id": "h21",
+      "skill": "hoeren",
+      "frage": "Entschuldigung, könnten Sie das bitte ___ wiederholen?",
+      "options": [
+        "noch einmal",
+        "nochmal",
+        "wieder",
+        "noch"
+      ],
+      "answer": 0,
+      "ar": "in Hören-Prüfung: Bitte um Wiederholung höflich mit „noch einmal“ — nicht „nochmal“ Umgangssprache.",
+      "de": "Höfliche Bitte: »noch einmal wiederholen« (nicht »nochmal«)."
+    },
+    {
+      "id": "h22",
+      "skill": "hoeren",
+      "frage": "Ich habe nicht alles verstanden — ___ die Verbindung war schlecht.",
+      "options": [
+        "anscheinend",
+        "scheinbar",
+        "vielleicht",
+        "eventuell"
+      ],
+      "answer": 0,
+      "ar": "anscheinend = يبدو أن الاتصال كان سيئاً؛ scheinbar = ظاهراً لكن ليس حقيقة.",
+      "de": "»anscheinend« = wie es scheint; »scheinbar« = nur scheinbar."
+    },
+    {
+      "id": "h23",
+      "skill": "hoeren",
+      "frage": "Der Sprecher betonte, ___ die Maßnahme freiwillig sei.",
+      "options": [
+        "dass",
+        "weil",
+        "obwohl",
+        "wenn"
+      ],
+      "answer": 0,
+      "ar": "indirekte Rede nach betonen + dass: أكد المتحدث أن الإجراء طوعي.",
+      "de": "»betonen, dass ...« — indirekte Rede mit »dass«."
+    },
+    {
+      "id": "h24",
+      "skill": "hoeren",
+      "frage": "Haben Sie gesagt, ___ der Zug um 18:30 abfährt?",
+      "options": [
+        "dass",
+        "ob",
+        "weil",
+        "damit"
+      ],
+      "answer": 0,
+      "ar": "Hören-Teil 1: nachfragen mit dass-Satz — هل قلت إن القطار يغادر 18:30؟",
+      "de": "Prüfung Hören: Nachfrage mit »dass«-Satz."
+    },
+    {
+      "id": "h25",
+      "skill": "schreiben",
+      "frage": "Sehr geehrte Damen und Herren, hiermit ___ ich mich für die Stelle.",
+      "options": [
+        "bewerbe",
+        "bewirbe",
+        "werbe",
+        "melde"
+      ],
+      "answer": 0,
+      "ar": "formelles Schreiben B2: sich bewerben um — أتقدّم للوظيفة بكذا.",
+      "de": "Formeller Brief: »hiermit bewerbe ich mich für ...«"
+    },
+    {
+      "id": "h26",
+      "skill": "schreiben",
+      "frage": "Im Anhang ___ Sie meinen Lebenslauf und meine Zeugnisse.",
+      "options": [
+        "finden",
+        "sehen",
+        "haben",
+        "bekommen"
+      ],
+      "answer": 0,
+      "ar": "مرفق تجدون سيرتي وشهاداتي — صيغة رسمية ثابتة.",
+      "de": "Formell: »Im Anhang finden Sie ...«"
+    },
+    {
+      "id": "h27",
+      "skill": "schreiben",
+      "frage": "Über eine ___ würde ich mich sehr freuen.",
+      "options": [
+        "Rückmeldung",
+        "Antwort",
+        "Nachricht",
+        "Meldung"
+      ],
+      "answer": 0,
+      "ar": "ختام طلب رسمي: Über eine Rückmeldung würde ich mich freuen.",
+      "de": "Schlusssatz Bewerbung: »Über eine Rückmeldung freue ich mich.«"
+    },
+    {
+      "id": "h28",
+      "skill": "schreiben",
+      "frage": "Meiner ___ nach sollte der Vorschlag überprüft werden.",
+      "options": [
+        "Meinung",
+        "Ansicht",
+        "Sicht",
+        "Einsicht"
+      ],
+      "answer": 0,
+      "ar": "تعبير رأي كتابي: meiner Meinung nach — من وجهة نظري.",
+      "de": "»Meiner Meinung nach ...« — feste Wendung."
+    },
+    {
+      "id": "h29",
+      "skill": "sprechen",
+      "frage": "___ gesagt finde ich den Vorschlag überzeugend, aber teuer.",
+      "options": [
+        "Offen",
+        "Ehrlich",
+        "Klar",
+        "Sicher"
+      ],
+      "answer": 0,
+      "ar": "مقدّمة رأي شفهي: Offen gesagt — بصراحة، أجد المقترح مقنعاً لكن مكلفاً.",
+      "de": "»Offen gesagt ...« — Einleitung Stellungnahme."
+    },
+    {
+      "id": "h30",
+      "skill": "sprechen",
+      "frage": "Einerseits spart man Zeit, ___ erhöht sich die Arbeitsbelastung.",
+      "options": [
+        "andererseits",
+        "trotzdem",
+        "dennoch",
+        "hingegen"
+      ],
+      "answer": 0,
+      "ar": "موازنة شفهية: einerseits … andererseits — من جهة توفير وقت، من جهة أخرى يزيد العبء.",
+      "de": "»Einerseits ... andererseits ...« — Pro/Contra."
+    },
+    {
+      "id": "h31",
+      "skill": "sprechen",
+      "frage": "Da gebe ich Ihnen ___, jedoch sehe ich das anders.",
+      "options": [
+        "recht",
+        "Recht",
+        "richtig",
+        "zustimmung"
+      ],
+      "answer": 0,
+      "ar": "ردّ مهذب في النقاش: Da gebe ich Ihnen recht, jedoch ...",
+      "de": "»Da gebe ich Ihnen recht ...« — Zustimmung + Widerspruch."
+    },
+    {
+      "id": "h32",
+      "skill": "sprechen",
+      "frage": "Könnten wir uns ___ einigen, den Versuch drei Monate zu testen?",
+      "options": [
+        "darauf",
+        "damit",
+        "daran",
+        "hierauf"
+      ],
+      "answer": 0,
+      "ar": "اقتراح تسوية شفهي: sich darauf einigen — هل نتفق على تجريب ثلاثة أشهر؟",
+      "de": "»sich darauf einigen, ...« — Kompromiss."
     }
   ]
 }
