@@ -296,3 +296,21 @@ git push origin vB2.0-perfect
 
 > **الخلاصة:** المشروع **ممتاز لـ A1-B1، ناقص لـ B2 ميدانيًا** قبل R400، و**B2 حقيقي بعد R400/R401** مع 12 حوارًا و5 كتابات جديدة. تثبيت `vB2.0-perfect` الآن ثم الميدان 4 أسابيع هو الكمال الحرفي لا الكمال الورقي.
 
+---
+
+## تحديث R402 — 2026-10-22 08:20 (ما بعد التدقيق)
+
+**الإصلاح المنفذ فورًا (P0 #1):**
+- `lib/plan.ts:886` — أضيف `|| level === \"B2\"` لخانة Thu (Kurzes Hörtraining) → B2 أصبح 4/أسبوع (Tue/Wed/Thu/Fri) = 56 slot لـ49 حوارًا → `audit:content abdeckung:dialoge 10→0` (`176/176` مجدولة)
+- `scripts/engine_smoke.ts:12698` — `K260c 166→176` (R402) ليعكس الإصلاح — `smoke 1916/0` عاد خلال 170s (يتطلب timeout ≥180s)
+- `next.config.mjs:11` — `frame-ancestors 'self' https://*.e2b.app` (R402) — يمنع clickjacking مع بقاء معاينة e2b حيّة
+- `HANDOFF.md` — حدثت إلى `R402 vB2.0-perfect` (176/157/105/6202) — push `d9bf4d5`
+- `app/globals.css` — وجد theme hell كاملًا عند `R301` (`html[data-thema=\"hell\"]`) + `prefers-reduced-motion` عند السطر 1 — لا نقص كما ظن التدقيق
+
+**المتبقي (مُوثق لا مُهمَل):**
+- 13 ملف `d-b2-01.mp3` مكرر (md5 9913a2c4) — صوت placeholder بلا TTS حقيقي — يحتاج دفعة TTS حقيقية (Arena-TTS 12 صوتًا) — `docs/audio-qc-all` يمرّ لأنه يقيس 15.79 ح/ث فقط
+- vocab 49 تكرار `de` + 11 heuristic Nomen ohne Artikel — مقصود جزئيًا لإعادة الاسترجاع، لكن يستحق تنظيف `vocab-repeats.json`
+- `tool-*.ts 822` مكرر 16k — يحتاج مولد YAML — P2
+
+**الحالة بعد R402:** `smoke 1916/0` `audit:content 1 heuristic` `tsc 0` `176/176 dialoge` `157/157 texte` `105/105 writing` — `vB2.0-perfect` قابل للدفع إلى `main`.
+
