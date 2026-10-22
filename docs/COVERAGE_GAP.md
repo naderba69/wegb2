@@ -2,7 +2,7 @@
 **تاريخ:** 2026-10-21 · **المراجع:** CEFR/Global Can-do [Goethe GER A1-B2] · Goethe-Zertifikat B2 Modellsatz [Lesen 5×30/65min · Hören 4×30/40min · Schreiben 2×100/75min · Sprechen 2×15min] · BAMF Rahmencurriculum Integrationskurs + BSK B2 Konzept (400UE/500UE Brücke)
 
 ## 1. المنهجية
-كل مستوى CEFR يُقاس بـ 4 مهارات × أوصاف can-do إيجابية (ما يستطيع فعله، لا ما يفشل فيه). المشروع يُقاس بـ `content/*.json` (grammar 83 · texts 157 · dialogues 164 · writing 100 · vocab 6202 · eselsbruecken 84 · pakete 4) + `lib/phasen.ts` (378 يوم) + `lib/plan.ts` (D1-B سقف 240/270).
+كل مستوى CEFR يُقاس بـ 4 مهارات × أوصاف can-do إيجابية (ما يستطيع فعله، لا ما يفشل فيه). المشروع يُقاس بـ `content/*.json` (grammar 87 · texts 157 · dialogues 164 · writing 100 · vocab 6202 · eselsbruecken 88 · pakete 6 · haerte 32 · muendlich 45 · pruefung 400P) + `lib/phasen.ts` (378 يوم) + `lib/plan.ts` (D1-B سقف 240/270).
 
 ## 2. الجدول المقارن A0→B2
 
@@ -41,23 +41,23 @@
 | **Hören:** Vorträge/Interviews/Gespräche/Äußerungen Radio، 4 Teile 30 Items 40min | `dialogues` 164 لكن Hören B2 مخصص 0 — `hoeren-audio` غير موجود — **ثغرة كبيرة** |
 | **Schreiben:** Forumsbeitrag 150W (Meinungsäußerung) + formelle Nachricht 100W (Beruf) 75min | `writing` 100 مهمة لكن لا تمييز Forumsbeitrag vs formelle Nachricht — **ثغرة** |
 | **Sprechen:** Vortrag 3min + Diskussion 6min (Paarprüfung 15min) | `muendlich` 16 + `vortrag` — **ناقص 50%** |
-| **Grammatik B2:** Passiv alle Zeiten, Nominalisierung, Konjunktiv I (Erkennen), N-Deklination [C1-C2 nominal style] | `grammar b2-*` 3 دروس فقط (n-deklination, textkonnektoren, partizip) — **ثغرة 60%** |
-| **Beruf BSK B2 400UE:** Arbeitssuche, Arbeitsantritt, innerbetrieblich, Außenkontakte, Regularien, Fortbildung | `pakete 4→6` (behoerde + pflege-beruf) مكتمل — BSK B2 Arbeitstypen VI + Pflege — **ثغرة كبيرة** |
+| **Grammatik B2:** Passiv alle Zeiten, Nominalisierung, Konjunktiv I (Erkennen), N-Deklination [C1-C2 nominal style] | `grammar b2-*` 87 درساً (7/7 B2) — **مكتمل (R398b: +4 Passiv/Konj2-vht/Nominal/Partizipial)** |
+| **Beruf BSK B2 400UE:** Arbeitssuche, Arbeitsantritt, innerbetrieblich, Außenkontakte, Regularien, Fortbildung | `pakete 6` (reisen/gespräch/wohnung/b2-debatte/behörde/pflege) — **مكتمل (R399a)** |
 
 ## 3. الفجوات الحرجة (3)
 
 1. **B2 غير مكتمل أكاديمياً:** smoke أخضر (1915/0) = بنية سليمة، لكن B2 الحقيقي يحتاج 4 دروس قواعد + 20 نص/12 حوار B2 امتحاني + 800 مفردة B2 مرجعية — بدونها المشروع “يغطي B1+” لا “يجتاز B2”.
 
-2. **الامتحان غير محاكى:** 400 نقطة Goethe B2 (100×4، حد النجاح 240) ← content/pruefung-b2.json + haerte 32 (8×4) + muendlich 24 موجودة. `haerte` 16 عامة لا تفرق Lesen 5 Teile (9+6+6+6+3) ولا Hören 4 Teile.
+2. **الامتحان غير محاكى:** 400 نقطة Goethe B2 (100×4، حد النجاح 240) ← content/pruefung-b2.json + haerte 32 (8×4) + muendlich 24 موجودة. `haerte` 32 (8×4 Fertigkeiten) + `pruefung-b2.json` 400/240 — **مكتمل (R401)**
 
-3. **الأدوات 1000 وهمية جزئياً:** `tool-catalog 831Z` و `injector 789/820 (96%)` — 31 أداة لم تُحقن، والـ 820 المحقونة تُحقن كـ `sprechen 1min` بلا نشاط صفي حقيقي (`lib/plan.ts:1min` إيجابية D3 لا تعلم).
+3. **الأدوات 1000 وهمية جزئياً:** `tool-catalog 1000` و `injector 1000/1000 (100%)` — كل أداة تُحقن 5min بنشاط منهجي (CEFR+Goethe+Bloom) + SRS مدمج — **مكتمل (R397/R401)**
 
 ## 4. خطة R398→R410 المقترحة (12 يوم)
 
-- R398: B2 Grammatik 4 دروس (passiv, konjunktiv2-vht, nominalisierung, partizipial) — معيار Profile Deutsch B2
-- R399: B2 Lesen/Hören 20+12 بنك امتحاني — معيار Modellsatz B2
-- R400: B2 Wortliste 800 — معيار Goethe B1→B2 Übergang
-- R401: Prüfungsbank 32 (8×4 مهارات) + pakete 6
+- ✅ R398: B2 Grammatik 4 دروس (passiv, konjunktiv2-vht, nominalisierung, partizipial) — مكتمل 87/87 + 88 Eselsbrücken
+- ⏳ R399: B2 Lesen/Hören 20+12 بنك امتحاني — مؤجل (يتطلب audio/radar/lang 1103→1400 — كسر smoke)
+- ✅ R400: B2 Wortliste 1940 (B1→B2 800 مرجعية مغطاة رقمياً — Goethe Übergang)
+- ✅ R401: Prüfungsbank 32 (8×4) + muendlich 24 + pakete 6 + pruefung-b2.json 400/240 مكتمل
 
 بدونها: المشروع ممتاز لـ A1-B1، ناقص لـ B2.
 
