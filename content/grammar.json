@@ -2148,7 +2148,7 @@
     ],
     "pitfalls": [
       {
-        "de": "„Ich gehe in der Schule.“ ✗ (هذا يعني: أتنقّل داخل المدرسة)",
+        "de": "„Ich gehe in der Schule.“ ✗",
         "ar": "للذهاب إلى المدرسة: in die Schule (اتجاه) — فرّق بينهما!"
       }
     ],
@@ -2312,7 +2312,7 @@
         "ar": "لا zu مع الأفعال الناقصة!"
       },
       {
-        "de": "„Ich möchte gehen“ ✓ ≠ „Ich will gehen\" — الأولى ألطف",
+        "de": "„Ich möchte gehen“ ✓ ≠ „Ich will gehen\"",
         "ar": "möchte مهذّبة وألطف في الطلب"
       }
     ],
@@ -2466,7 +2466,7 @@
     ],
     "pitfalls": [
       {
-        "de": "Konjunktiv II ≠ Vergangenheit: „würde gemacht“ ليس ماضياً!",
+        "de": "Konjunktiv II ≠ Vergangenheit: „würde gemacht“",
         "ar": "الماضي = habe gemacht. أما würde + مصدر فللتخيل"
       }
     ],
@@ -2647,7 +2647,7 @@
     ],
     "pitfalls": [
       {
-        "de": "„Die Frau, die ich sehe…“ — die لأن die Frau مؤنث، مهما كانت وظيفتها",
+        "de": "„Die Frau, die ich sehe…“ — die",
         "ar": "لا تخلط بين جنس الاسم وحالة الضمير!"
       }
     ],
@@ -2944,7 +2944,7 @@
     ],
     "pitfalls": [
       {
-        "de": "„Nachdem er gegessen hat…“ ضعيف في الكتابة",
+        "de": "„Nachdem er gegessen hat…“",
         "ar": "في الكتابة القياسية: nachdem + hatte"
       }
     ],
@@ -3129,7 +3129,7 @@
         "ar": "في المنقول الصحافي: «…, die Lage sei stabil» (Konjunktiv I)"
       },
       {
-        "de": "العربية تستعمل «إنّ» مضمّنة؛ الألمانية تحتاج فعلاً متصدراً يأخذ النهاية",
+        "de": "",
         "ar": "اتبع القاعدة الميكانيكية: فعل المنقول دائماً في النهاية"
       }
     ],
@@ -4061,7 +4061,7 @@
         "ar": "mit + Dativ دائماً: die تصبح der"
       },
       {
-        "de": "„Ich gebe das Buch meinem Bruder.“ ✗ (ترتيب) → „Ich gebe meinem Bruder das Buch.“ ✓",
+        "de": "„Ich gebe das Buch meinem Bruder.“ ✗",
         "ar": "الشخص (Dativ) يسبق الشيء (Akkusativ) في الأصل"
       }
     ],
@@ -4714,7 +4714,7 @@
         "ar": "freuen يحتاج حرف الجر: auf للمستقبل، über للسبب"
       },
       {
-        "de": "„Ich setze auf den Stuhl.“ ✗ (بلا sich) → „Ich setze mich auf den Stuhl.“ ✓",
+        "de": "„Ich setze auf den Stuhl.“ ✗",
         "ar": "setzen انعكاسي = يجلس؛ بلا sich = يضع شيئاً"
       },
       {
@@ -5148,7 +5148,7 @@
         "ar": "المصدر في آخر الجملة، وnicht قبله مباشرة"
       },
       {
-        "de": "„Ich werde müde.“ ✗ (بمعنى مستقبل) → „Ich bin müde.“ ✓",
+        "de": "„Ich werde müde.“ ✗",
         "ar": "werden + صفة = يصبح (تحول) وليس «أكون الآن»"
       },
       {
@@ -5921,11 +5921,11 @@
         "ar": "خطآن: نسيان -s- بعد -ung، وأخذ الجنس من Wohnung. الأخيرة Markt مذكّر."
       },
       {
-        "de": "Zuckergehalt: der (المحتوى) لا das (الراتب)",
+        "de": "Zuckergehalt: der",
         "ar": "بعض الكلمات ثنائية الجنس بمعنيين: das Gehalt = الراتب، der Gehalt = المحتوى/النسبة. Zuckergehalt (نسبة السكر) = der."
       },
       {
-        "de": "Mittwoch: der — رغم die Woche",
+        "de": "Mittwoch: der",
         "ar": "استثناء تاريخي: أيام الأسبوع كلّها der. Mittwoch من «منتصف الأسبوع» لكنه أخذ جنس الأيام لا جنس Woche."
       }
     ],
@@ -6432,7 +6432,7 @@
         "ar": "teilnehmen: an + Dativ، و«teil» في آخر الجملة"
       },
       {
-        "de": "„Ich denke über dich nach.“ ✗ (بمعنى أفكر في) → „Ich denke an dich.“ ✓",
+        "de": "„Ich denke über dich nach.“ ✗",
         "ar": "nachdenken über = يتأمّل؛ denken an = يفكّر في"
       }
     ],
@@ -6653,7 +6653,7 @@
     ],
     "pitfalls": [
       {
-        "de": "„Das Haus wird gebaut sein.“ ✗ (بحالة) → „Das Haus ist gebaut.“ ✓",
+        "de": "„Das Haus wird gebaut sein.“ ✗",
         "ar": "الحالة = ist + P.II وليس wird"
       },
       {
@@ -6913,15 +6913,15 @@
     ],
     "pitfalls": [
       {
-        "de": "„Mach einfach mal doch!“ ✗ (فوضى) → „Mach das doch einfach mal!“ ✓",
+        "de": "„Mach einfach mal doch!“ ✗",
         "ar": "الترتيب: بعد الفعل مباشرة، وحدّ أقصى جسيمين في الجملة"
       },
       {
-        "de": "استعمال ja بمعنى «نعم» في وسط الجملة ✗ → Partikel يا ألماني، ja=نعم جواب مستقل",
+        "de": "",
         "ar": "امنع الالتباس: Ja! (جواب) ≠ Du bist ja müde (جسيم)"
       },
       {
-        "de": "„Das ist doch.“ ✗ (نهاية) → „Das ist doch klar!“ ✓",
+        "de": "„Das ist doch.“ ✗",
         "ar": "الجسيم لا يبقى وحده — يرافق معنى دائماً"
       }
     ],
@@ -10515,11 +10515,11 @@
         "ar": "W الألمانية صوتها /v/ مثل v الإنجليزية (Wasser). أما V فكثيراً ما يُنطق /f/ في Vater، وقد يُنطق /v/ في كلمات دخيلة مثل Vase."
       },
       {
-        "de": "✗ Z = «زد» → ✓ Z = «tset» (تس)",
+        "de": "✗ Z = «",
         "ar": "Z تُنطق «تس» لا «ز»: Zeit = «تسايت» — والـS وحدها هي «ز» بين حركتين"
       },
       {
-        "de": "✗ ie = حرفان → ✓ ie = i طويلة (wie = «ڤي»)",
+        "de": "✗ ie =",
         "ar": "ie صوت واحد طويل لا حرفين: Brief = «بريف» بمدّ — عكس ei تماماً (Mein = «ماين»)"
       }
     ]
@@ -10672,11 +10672,11 @@
     ],
     "pitfalls": [
       {
-        "de": "✗ sechzehn → ✓ sechzehn (بلا s!)",
+        "de": "✗ sechzehn → ✓ sechzehn",
         "ar": "sechs تفقد الـs قبل -zehn/-zig: sechzehn, sechzig — أشهر خطأ إملائي في الأرقام"
       },
       {
-        "de": "✗ siebzehn → ✓ siebzehn (بلا en!)",
+        "de": "✗ siebzehn → ✓ siebzehn",
         "ar": "sieben تفقد الـ-en: siebzehn, siebzig — احفظ الاستثناءين معاً (6 و7)"
       },
       {
@@ -10839,11 +10839,11 @@
     ],
     "pitfalls": [
       {
-        "de": "✗ Ich will einen Kaffee. (طلب بأدب) → ✓ Ich hätte gern einen Kaffee.",
+        "de": "✗ Ich will einen Kaffee.",
         "ar": "الطلب المهذب ليس wollen بل hätte gern / würde gern — «أريد» المباشرة وقحة في المطعم والمكتب"
       },
       {
-        "de": "✗ Können Sie mir helfen? (صيغة مهذبة) → ✓ Könnten Sie mir helfen?",
+        "de": "✗ Können Sie mir helfen?",
         "ar": "الأدب = Konjunktiv II: könnten/würden لا können/werden — حرف واحد (Umlaut) يصنع الفرق"
       },
       {
@@ -11012,7 +11012,7 @@
         "ar": "sich freuen über + Akkusativ: der Besuch ← deinen — الحرف ثابت والحالة تُصرَّف"
       },
       {
-        "de": "✗ denken an = denken über → فرّق!",
+        "de": "✗ denken an = denken über →",
         "ar": "نفس الفعل + حرف مختلف = معنى مختلف: denken an (يفكر في/يشتاق) ≠ denken über (يكّون رأياً حول) — الحرف جزء من المعنى"
       }
     ]

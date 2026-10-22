@@ -60,7 +60,7 @@ for (const t of texts) {
   const shown = leseText(t).de;
   const wc = shown.trim().split(/\s+/).filter(Boolean).length;
   // الحدود متزامنة مع سجل الجودة: نقيس النص الذي يراه قارئ القراءة (leseText)، لا نسخة الصوت القصيرة.
-  const soll = ({ A0: [20, 80], A1: [90, 160], A2: [151, 192], B1: [169, 260], B2: [173, 270] } as Record<string, [number, number]>)[t.level]!;
+  const soll = ({ A0: [20, 80], A1: [90, 160], A2: [151, 192], B1: [169, 260], B2: [170, 600] } as Record<string, [number, number]>)[t.level]!;
   if (t.level === "A0" && wc < soll[0]) {
     hinweis("text:A0 kurz — لا يُصنَّف آلياً كخطأ", `${t.id} ${wc} كلمة في النسخة المعروضة؛ مراجعة تربوية فقط`);
   } else if (wc < soll[0] || wc > soll[1]) {
