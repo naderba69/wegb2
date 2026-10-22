@@ -1102,7 +1102,8 @@
         "explanationAr": "النصُّ يقول: «Ohne pädagogisches Konzept … bliebe der Effekt gering».",
         "promptAr": "هل تؤثر الوسائط الرقمية بقوة بدون مفهوم تربوي حسب النص؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-02",
@@ -1158,7 +1159,8 @@
         "explanationAr": "الدليل حرفياً: «Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.» — الوزيرُ يقولُ منتظمةٌ وموثوقة، والعمدةُ تنقلُ تجربةً مغايرة — وهذا كلامٌ منقولٌ بصيغةِ Konjunktiv I.",
         "promptAr": "هل يقيم الوزير والعميدة الوضع بشكل مختلف؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-03",
@@ -1216,7 +1218,8 @@
         "explanationAr": "في النصِّ حرفياً: «Wer hier noch Abwarten propagiert, handelt verantwortungslos».",
         "promptAr": "هل يرى النص الانتظار مسؤولاً في مسألة المناخ؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-04",
@@ -1275,7 +1278,8 @@
         "explanationAr": "«Einzig die Figuren bleiben etwas blass» — العيبُ الوحيدُ المذكور.",
         "promptAr": "هل أُشيد بالشخصيات كأنها مرسومة بقوة خاصة؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-05",
@@ -1330,7 +1334,8 @@
         "explanationAr": "في النصِّ حرفياً: «Fachwissen allein genügt längst nicht mehr».",
         "promptAr": "هل تكفي المعرفة المتخصصة وحدها للمهن الحديثة حسب النص؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-a1-06",
@@ -1699,7 +1704,8 @@
         "explanationAr": "في النصِّ حرفياً: «Wer dagegen bis spät in die Nacht büffelt, erzielt oft das Gegenteil».",
         "promptAr": "هل يحقق من يسهر ليلاً في التعلم عكس ما يريد حسب النص؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-07",
@@ -1757,7 +1763,8 @@
         "explanationAr": "في النصِّ حرفياً: «Es geht nicht darum, Bremsen zu legen, sondern darum, Ziele zu definieren».",
         "promptAr": "هل يطالب النص بإبطاء الرقمنة؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-a1-08",
@@ -2168,7 +2175,8 @@
         "explanationAr": "الدليل حرفياً: «Experten empfehlen, drei Fragen zu stellen: Wer schreibt das? Welche Quellen werden genannt? Stehen die Fakten auch woanders?» — مَن يكتب؟ أيُّ مصادرَ تُذكَر؟ أترِدُ الوقائعُ في مكانٍ آخر؟",
         "promptAr": "هل يذكر النص ثلاثة أسئلة لفحص الأخبار؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-09",
@@ -2231,7 +2239,8 @@
         "explanationAr": "في النصِّ حرفياً: «Früher endete die Ausbildung mit der Schule, heute nicht mehr».",
         "promptAr": "هل تنتهي التربية اليوم بانتهاء المدرسة حسب النص؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-a1-10",
@@ -3806,7 +3815,8 @@
         "explanationAr": "الدليل حرفياً: «Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen» — Konjunktiv I في نقل الاعتراض.",
         "promptAr": "هل يشكك النقاد في قابلية نقل التجربة إلى المصانع؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-11",
@@ -3867,7 +3877,8 @@
         "explanationAr": "في النصِّ حرفياً: «Eingeweihte schweigen die Kehrseite nicht tot: Statik, Pflegekosten …».",
         "promptAr": "هل يكتم النص مساوئ السقوف الخضراء؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-12",
@@ -3928,7 +3939,8 @@
         "explanationAr": "بالعكس: «nie so viel gelesen wurde wie heute» — لكنَّ الشكلَ تغيَّر.",
         "promptAr": "هل تزعم الدراسة أن الناس يقرأون أقل من السابق؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-13",
@@ -3989,7 +4001,8 @@
         "explanationAr": "الدليل حرفياً: «Skandinavische Zahlen, wo Gebühren mit Darlehen gekoppelt sind, zeigen beides nicht so klar – wohl aber ein Phänomen: Studierende aus Akademikerhaushalten nutzen die Gebührenfreiheit überproportional.» — هذه هي الظاهرةُ التي تُظهِرُها الأرقامُ الاسكندنافية.",
         "promptAr": "هل يستفيد أبناء الأكاديميين من الإعفاء أكثر من اللازم؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-14",
@@ -4050,7 +4063,8 @@
         "explanationAr": "في النصِّ حرفياً: «Gegen Feinstaub gibt es Grenzwerte …, gegen Schall fast nichts».",
         "promptAr": "هل للضجيج حدود واضحة كما للجسيمات الدقيقة حسب النص؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-15",
@@ -4111,7 +4125,8 @@
         "explanationAr": "في النصِّ حرفياً: «Wer Fehler bestraft, bekommt weniger gemeldete Fehler, nicht weniger Fehler».",
         "promptAr": "هل يحصل من يُعاقب على الأخطاء على تبليغات أقل حسب النص؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-16",
@@ -4172,7 +4187,8 @@
         "explanationAr": "في النصِّ حرفياً: «die Auslastung zu Stoßzeiten verschlechterte sich vielerorts».",
         "promptAr": "هل تحسّن الإشغال في أوقات الذروة بعد التذكرة؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-17",
@@ -4233,7 +4249,8 @@
         "explanationAr": "الدليل حرفياً: «Die «Finanzierung» decke bestenfalls die Rahmen, nicht die beheizten Glaskästen» — Konjunktiv I في الاعتراض، وعلامتا التنصيص حول Finanzierung تشكيك.",
         "promptAr": "هل يشكك المحللون في أن الإعلان يموّن المحطات فعلاً؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-18",
@@ -4294,7 +4311,8 @@
         "explanationAr": "في النصِّ حرفياً: «nicht wegen der Technik, sondern weil die Behörde weiter persönlich die Identität prüfen muss».",
         "promptAr": "هل يكمن التأخير في التقنية أساساً حسب النص؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-a1-19",
@@ -4679,7 +4697,8 @@
         "explanationAr": "في النصِّ حرفياً: «lässt sich nicht auf eine einzige Ursache zurückführen».",
         "promptAr": "هل لنقص الكفاءات سبب واحد حسب النص؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-20",
@@ -4738,7 +4757,8 @@
         "explanationAr": "«sie schütze Bestandsmieter» — نقلٌ بصيغةِ Konjunktiv I.",
         "promptAr": "هل يرى داعمو تحديد الإيجار فيه حمايةً لساكني الشقق القائمة؟"
       }
-    ]
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   },
   {
     "id": "t-b2-21",
