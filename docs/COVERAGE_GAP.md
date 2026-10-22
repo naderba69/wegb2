@@ -2,7 +2,7 @@
 **تاريخ:** 2026-10-21 · **المراجع:** CEFR/Global Can-do [Goethe GER A1-B2] · Goethe-Zertifikat B2 Modellsatz [Lesen 5×30/65min · Hören 4×30/40min · Schreiben 2×100/75min · Sprechen 2×15min] · BAMF Rahmencurriculum Integrationskurs + BSK B2 Konzept (400UE/500UE Brücke)
 
 ## 1. المنهجية
-كل مستوى CEFR يُقاس بـ 4 مهارات × أوصاف can-do إيجابية (ما يستطيع فعله، لا ما يفشل فيه). المشروع يُقاس بـ `content/*.json` (grammar 87 · texts 157 (t-b2-01..20 490W 4 فقرات) · dialogues 176 (B2 49) · writing 100 · vocab 6202 · eselsbruecken 88 · pakete 6 · haerte 32 · muendlich 45 · pruefung 400P) + `lib/phasen.ts` (378 يوم) + `lib/plan.ts` (D1-B سقف 240/270) — smoke 1916/0.
+كل مستوى CEFR يُقاس بـ 4 مهارات × أوصاف can-do إيجابية (ما يستطيع فعله، لا ما يفشل فيه). المشروع يُقاس بـ `content/*.json` (grammar 87 · texts 157 (t-b2-01..40: 20×490W 4 فقرات +20×200W) · dialogues 176 (B2 49) · writing 105 (B2 33) · vocab 6202 · eselsbruecken 88 · pakete 6 · haerte 32 · muendlich 45 · pruefung 400P) + `lib/phasen.ts` (378 يوم) + `lib/plan.ts` (D1-B سقف 240/270) — smoke 1916/0.
 
 ## 2. الجدول المقارن A0→B2
 
