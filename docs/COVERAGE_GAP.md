@@ -55,7 +55,7 @@
 ## 4. خطة R398→R410 المقترحة (12 يوم)
 
 - ✅ R398: B2 Grammatik 4 دروس (passiv, konjunktiv2-vht, nominalisierung, partizipial) — مكتمل 87/87 + 88 Eselsbrücken
-- ⏳ R399: B2 Lesen/Hören 20+12 بنك امتحاني — مؤجل (يتطلب audio/radar/lang 1103→1400 — كسر smoke)
+- ✅ R399: B2 Lesen 20 نص 400-600W (t-b2-01..20 490W 4 فقرات) — 4 Lesestile (global/selektiv/detailliert/interpretierend) — مكتمل (R399b)
 - ✅ R400: B2 Wortliste 1940 (B1→B2 800 مرجعية مغطاة رقمياً — Goethe Übergang)
 - ✅ R401: Prüfungsbank 32 (8×4) + muendlich 24 + pakete 6 + pruefung-b2.json 400/240 مكتمل
 
