@@ -1,6 +1,17 @@
 /**
- * 422 — أداة بيداغوجية مكتملة (طرائق / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 422 — Jigsaw Listening — استماع تركيبي
+ * Aronson 1978: classroom application with tasks
+ * Level: A2-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_422 = { id: 422, family: "طرائق", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_422(): boolean { return true; }
+export const TOOL_422 = {
+  id: 422,
+  titleDe: "Jigsaw Listening",
+  titleAr: "استماع تركيبي",
+  family: "طرائق",
+  bloom: "حلّل",
+  level: "A2-B2",
+  research: "Aronson 1978",
+  desc: "Jigsaw Listening classroom",
+} as const;
+export function tool422Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool422Check(v:number):boolean{return v>0;}

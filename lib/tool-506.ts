@@ -1,6 +1,8 @@
 /**
- * 506 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 506 — fMRI Language — تصوير دماغي
+ * Ullman 2005: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: الذاكرة
  */
-export const TOOL_506 = { id: 506, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_506(): boolean { return true; }
+export const TOOL_506 = { id: 506, titleDe: "fMRI Language", titleAr: "تصوير دماغي", family: "الذاكرة", bloom: "حلّل", level: "A1-B2", research: "Ullman 2005", desc: "fMRI Language" } as const;
+export function tool506Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool506Check(v:number):boolean{return v>0;}

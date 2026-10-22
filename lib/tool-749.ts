@@ -1,6 +1,8 @@
 /**
- * 749 — أداة بيداغوجية مكتملة (Ethik / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 749 — Collaborative Online International Learning — تعلم دولي مشترك
+ * Rubin 2017: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: Immersion
  */
-export const TOOL_749 = { id: 749, family: "Ethik", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_749(): boolean { return true; }
+export const TOOL_749 = { id: 749, titleDe: "Collaborative Online International Learning", titleAr: "تعلم دولي مشترك", family: "Immersion", bloom: "أنشئ", level: "B1-B2", research: "Rubin 2017", desc: "Collaborative Online International Learning" } as const;
+export function tool749Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool749Check(v:number):boolean{return v>0;}

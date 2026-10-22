@@ -1,6 +1,8 @@
 /**
- * 945 — أداة بيداغوجية مكتملة (بلوم / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 945 — CAF Framework Housen — إطار CAF هاوسن
+ * Housen 2012: classroom application
+ * Level: B1-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_945 = { id: 945, family: "بلوم", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_945(): boolean { return true; }
+export const TOOL_945 = { id: 945, titleDe: "CAF Framework Housen", titleAr: "إطار CAF هاوسن", family: "تقويم", bloom: "قيّم", level: "B1-B2", research: "Housen 2012", desc: "CAF Framework Housen" } as const;
+export function tool945Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool945Check(v:number):boolean{return v>0;}

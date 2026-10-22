@@ -1,6 +1,8 @@
 /**
- * 858 — أداة بيداغوجية مكتملة (Immersion / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 858 — Mood Congruent Memory — ذاكرة مزاجية
+ * Bower 1981: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_858 = { id: 858, family: "Immersion", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_858(): boolean { return true; }
+export const TOOL_858 = { id: 858, titleDe: "Mood Congruent Memory", titleAr: "ذاكرة مزاجية", family: "الذاكرة", bloom: "فهم", level: "A1-B2", research: "Bower 1981", desc: "Mood Congruent Memory" } as const;
+export function tool858Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool858Check(v:number):boolean{return v>0;}

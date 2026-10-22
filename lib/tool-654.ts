@@ -1,6 +1,8 @@
 /**
- * 654 — أداة بيداغوجية مكتملة (تقويم / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 654 — Multiword Units — وحدات متعددة
+ * Siyanova 2008: classroom application
+ * Level: A2-B2 | Bloom: تذكّر | Family: طرائق
  */
-export const TOOL_654 = { id: 654, family: "تقويم", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_654(): boolean { return true; }
+export const TOOL_654 = { id: 654, titleDe: "Multiword Units", titleAr: "وحدات متعددة", family: "طرائق", bloom: "تذكّر", level: "A2-B2", research: "Siyanova 2008", desc: "Multiword Units" } as const;
+export function tool654Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool654Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 679 — أداة بيداغوجية مكتملة (Ethik / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 679 — Epistemic Modality — نمطية معرفية
+ * Palmer 2001: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_679 = { id: 679, family: "Ethik", bloom: "فهم", level: "A1" } as const;
-export function aktiv_679(): boolean { return true; }
+export const TOOL_679 = { id: 679, titleDe: "Epistemic Modality", titleAr: "نمطية معرفية", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Palmer 2001", desc: "Epistemic Modality" } as const;
+export function tool679Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool679Check(v:number):boolean{return v>0;}

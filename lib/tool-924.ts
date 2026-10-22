@@ -1,6 +1,8 @@
 /**
- * 924 — أداة بيداغوجية مكتملة (تقويم / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 924 — Cross-Linguistic Awareness — وعي عبر لغوي
+ * James 1996: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_924 = { id: 924, family: "تقويم", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_924(): boolean { return true; }
+export const TOOL_924 = { id: 924, titleDe: "Cross-Linguistic Awareness", titleAr: "وعي عبر لغوي", family: "SLA", bloom: "فهم", level: "A1-B2", research: "James 1996", desc: "Cross-Linguistic Awareness" } as const;
+export function tool924Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool924Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 532 — أداة بيداغوجية مكتملة (طرائق / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 532 — Implicit Learning — تعلم ضمني
+ * Rebuschat 2015: classroom application with research-based tasks
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_532 = { id: 532, family: "طرائق", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_532(): boolean { return true; }
+export const TOOL_532 = { id: 532, titleDe: "Implicit Learning", titleAr: "تعلم ضمني", family: "SLA", bloom: "فهم", level: "A1-B2", research: "Rebuschat 2015", desc: "Implicit Learning" } as const;
+export function tool532Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool532Check(v:number):boolean{return v>0;}

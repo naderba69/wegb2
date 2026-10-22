@@ -1,6 +1,8 @@
 /**
- * 747 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 747 — Service Learning — تعلم خدمي
+ * Bringle 1995: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_747 = { id: 747, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_747(): boolean { return true; }
+export const TOOL_747 = { id: 747, titleDe: "Service Learning", titleAr: "تعلم خدمي", family: "طرائق", bloom: "أنشئ", level: "B1-B2", research: "Bringle 1995", desc: "Service Learning" } as const;
+export function tool747Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool747Check(v:number):boolean{return v>0;}

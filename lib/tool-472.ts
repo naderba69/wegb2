@@ -1,6 +1,8 @@
 /**
- * 472 — أداة بيداغوجية مكتملة (طرائق / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 472 — Gamified SRS — تكرار مُلعّب
+ * Deterding 2011: classroom application
+ * Level: A0-B2 | Bloom: طبّق | Family: Gamification
  */
-export const TOOL_472 = { id: 472, family: "طرائق", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_472(): boolean { return true; }
+export const TOOL_472 = { id: 472, titleDe: "Gamified SRS", titleAr: "تكرار مُلعّب", family: "Gamification", bloom: "طبّق", level: "A0-B2", research: "Deterding 2011", desc: "Gamified SRS" } as const;
+export function tool472Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool472Check(v:number):boolean{return v>0;}

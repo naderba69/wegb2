@@ -1,6 +1,8 @@
 /**
- * 577 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 577 — Motivation Dörnyei — دافعية Dörnyei
+ * Dörnyei 2009: classroom application
+ * Level: A1-B2 | Bloom: قيّم | Family: تلقين
  */
-export const TOOL_577 = { id: 577, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_577(): boolean { return true; }
+export const TOOL_577 = { id: 577, titleDe: "Motivation Dörnyei", titleAr: "دافعية Dörnyei", family: "تلقين", bloom: "قيّم", level: "A1-B2", research: "Dörnyei 2009", desc: "Motivation Dörnyei" } as const;
+export function tool577Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool577Check(v:number):boolean{return v>0;}

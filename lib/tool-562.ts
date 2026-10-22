@@ -1,6 +1,8 @@
 /**
- * 562 — أداة بيداغوجية مكتملة (طرائق / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 562 — AR Language Learning — واقع معزز لغوي
+ * Liu 2019: classroom application
+ * Level: A0-A2 | Bloom: طبّق | Family: Immersion
  */
-export const TOOL_562 = { id: 562, family: "طرائق", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_562(): boolean { return true; }
+export const TOOL_562 = { id: 562, titleDe: "AR Language Learning", titleAr: "واقع معزز لغوي", family: "Immersion", bloom: "طبّق", level: "A0-A2", research: "Liu 2019", desc: "AR Language Learning" } as const;
+export function tool562Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool562Check(v:number):boolean{return v>0;}

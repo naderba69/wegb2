@@ -1,6 +1,8 @@
 /**
- * 620 — أداة بيداغوجية مكتملة (الذاكرة / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 620 — Gestural Phonology — صوتيات إيمائية
+ * Browman 1992: classroom application
+ * Level: A0-A2 | Bloom: طبّق | Family: SLA
  */
-export const TOOL_620 = { id: 620, family: "الذاكرة", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_620(): boolean { return true; }
+export const TOOL_620 = { id: 620, titleDe: "Gestural Phonology", titleAr: "صوتيات إيمائية", family: "SLA", bloom: "طبّق", level: "A0-A2", research: "Browman 1992", desc: "Gestural Phonology" } as const;
+export function tool620Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool620Check(v:number):boolean{return v>0;}

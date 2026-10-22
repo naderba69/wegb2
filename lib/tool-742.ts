@@ -1,6 +1,8 @@
 /**
- * 742 — أداة بيداغوجية مكتملة (طرائق / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 742 — Study Abroad — دراسة بالخارج
+ * Kinginger 2011: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: Immersion
  */
-export const TOOL_742 = { id: 742, family: "طرائق", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_742(): boolean { return true; }
+export const TOOL_742 = { id: 742, titleDe: "Study Abroad", titleAr: "دراسة بالخارج", family: "Immersion", bloom: "فهم", level: "B1-B2", research: "Kinginger 2011", desc: "Study Abroad" } as const;
+export function tool742Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool742Check(v:number):boolean{return v>0;}

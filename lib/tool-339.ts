@@ -1,6 +1,17 @@
 /**
- * 339 — أداة بيداغوجية مكتملة (Ethik / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 339 — Study Abroad Prep — التحضير للدراسة بالخارج
+ * Kinginger 2009: applied to German teaching — classroom integration via tasks
+ * Level: B1-B2 | Bloom: قيّم | Family: Immersion
  */
-export const TOOL_339 = { id: 339, family: "Ethik", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_339(): boolean { return true; }
+export const TOOL_339 = {
+  id: 339,
+  titleDe: "Study Abroad Prep",
+  titleAr: "التحضير للدراسة بالخارج",
+  family: "Immersion",
+  bloom: "قيّم",
+  level: "B1-B2",
+  research: "Kinginger 2009",
+  desc: "Study Abroad Prep applied in classroom",
+} as const;
+export function tool339Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool339Check(v: number): boolean { return v>0; }

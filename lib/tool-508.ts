@@ -1,6 +1,8 @@
 /**
- * 508 — أداة بيداغوجية مكتملة (Immersion / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 508 — Bilingual Advantage — ميزة ثنائية اللغة
+ * Bialystok 2009: classroom application
+ * Level: A0-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_508 = { id: 508, family: "Immersion", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_508(): boolean { return true; }
+export const TOOL_508 = { id: 508, titleDe: "Bilingual Advantage", titleAr: "ميزة ثنائية اللغة", family: "SLA", bloom: "فهم", level: "A0-B2", research: "Bialystok 2009", desc: "Bilingual Advantage" } as const;
+export function tool508Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool508Check(v:number):boolean{return v>0;}

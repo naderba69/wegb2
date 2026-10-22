@@ -1,6 +1,8 @@
 /**
- * 517 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 517 — Learner Corpus — مدونة متعلمين
+ * Granger 2008: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: تقويم
  */
-export const TOOL_517 = { id: 517, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_517(): boolean { return true; }
+export const TOOL_517 = { id: 517, titleDe: "Learner Corpus", titleAr: "مدونة متعلمين", family: "تقويم", bloom: "حلّل", level: "A1-B2", research: "Granger 2008", desc: "Learner Corpus" } as const;
+export function tool517Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool517Check(v:number):boolean{return v>0;}

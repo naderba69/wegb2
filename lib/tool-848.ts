@@ -1,6 +1,8 @@
 /**
- * 848 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 848 — Levels of Processing — مستويات معالجة
+ * Craik 1975: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_848 = { id: 848, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_848(): boolean { return true; }
+export const TOOL_848 = { id: 848, titleDe: "Levels of Processing", titleAr: "مستويات معالجة", family: "الذاكرة", bloom: "فهم", level: "A1-B2", research: "Craik 1975", desc: "Levels of Processing" } as const;
+export function tool848Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool848Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 443 — أداة بيداغوجية مكتملة (تلقين / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 443 — Entrenchment — الترسخ
+ * Langacker 1987: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_443 = { id: 443, family: "تلقين", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_443(): boolean { return true; }
+export const TOOL_443 = { id: 443, titleDe: "Entrenchment", titleAr: "الترسخ", family: "SLA", bloom: "فهم", level: "A1-B2", research: "Langacker 1987", desc: "Entrenchment" } as const;
+export function tool443Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool443Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 992 — أداة بيداغوجية مكتملة (طرائق / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 992 — AI Tutoring Holmes — تدريس ذكاء هولمز
+ * Holmes 2019: classroom application
+ * Level: A1-B2 | Bloom: طبّق | Family: Gamification
  */
-export const TOOL_992 = { id: 992, family: "طرائق", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_992(): boolean { return true; }
+export const TOOL_992 = { id: 992, titleDe: "AI Tutoring Holmes", titleAr: "تدريس ذكاء هولمز", family: "Gamification", bloom: "طبّق", level: "A1-B2", research: "Holmes 2019", desc: "AI Tutoring Holmes" } as const;
+export function tool992Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool992Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 946 — أداة بيداغوجية مكتملة (Gamification / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 946 — Complexity Accuracy Fluency — تعقيد/دقة/طلاقة
+ * Skehan 1998: classroom application
+ * Level: B1-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_946 = { id: 946, family: "Gamification", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_946(): boolean { return true; }
+export const TOOL_946 = { id: 946, titleDe: "Complexity Accuracy Fluency", titleAr: "تعقيد/دقة/طلاقة", family: "تقويم", bloom: "قيّم", level: "B1-B2", research: "Skehan 1998", desc: "Complexity Accuracy Fluency" } as const;
+export function tool946Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool946Check(v:number):boolean{return v>0;}

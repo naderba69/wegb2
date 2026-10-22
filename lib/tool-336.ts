@@ -1,6 +1,17 @@
 /**
- * 336 — أداة بيداغوجية مكتملة (Gamification / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 336 — Wiki Collaboration — التعاون الويكي
+ * Wheeler 2008: applied to German teaching — classroom integration via tasks
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_336 = { id: 336, family: "Gamification", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_336(): boolean { return true; }
+export const TOOL_336 = {
+  id: 336,
+  titleDe: "Wiki Collaboration",
+  titleAr: "التعاون الويكي",
+  family: "طرائق",
+  bloom: "أنشئ",
+  level: "B1-B2",
+  research: "Wheeler 2008",
+  desc: "Wiki Collaboration applied in classroom",
+} as const;
+export function tool336Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool336Check(v: number): boolean { return v>0; }

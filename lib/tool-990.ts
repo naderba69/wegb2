@@ -1,6 +1,8 @@
 /**
- * 990 — أداة بيداغوجية مكتملة (الذاكرة / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 990 — VR Learning Bailenson — تعلم واقع افتراضي
+ * Bailenson 2018: classroom application
+ * Level: A1-B2 | Bloom: طبّق | Family: Immersion
  */
-export const TOOL_990 = { id: 990, family: "الذاكرة", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_990(): boolean { return true; }
+export const TOOL_990 = { id: 990, titleDe: "VR Learning Bailenson", titleAr: "تعلم واقع افتراضي", family: "Immersion", bloom: "طبّق", level: "A1-B2", research: "Bailenson 2018", desc: "VR Learning Bailenson" } as const;
+export function tool990Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool990Check(v:number):boolean{return v>0;}

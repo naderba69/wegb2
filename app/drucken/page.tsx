@@ -9,10 +9,11 @@ const SEKTIONEN: { key: string; titel: string }[] = [
   { key: "satzbau", titel: "③ ترتيبُ الجملةِ والروابط" },
   { key: "verb", titel: "④ الأفعالُ والأزمنة" },
   { key: "adjektiv", titel: "⑤ الصفاتُ والنفي" },
-  { key: "b2", titel: "⑥ تركيباتُ B2" },
-  { key: "sprichwort", titel: "⑦ أمثالٌ بقاعدةٍ مدمجة" },
-  { key: "aussprache", titel: "⑧ النطق والأصوات" },
-  { key: "pruefung", titel: "⑨ استراتيجيات الامتحان" },
+  { key: "deklination", titel: "⑥ الإعراب و N-Deklination" },
+  { key: "b2", titel: "⑦ تركيباتُ B2" },
+  { key: "sprichwort", titel: "⑧ أمثالٌ بقاعدةٍ مدمجة" },
+  { key: "aussprache", titel: "⑨ النطق والأصوات" },
+  { key: "pruefung", titel: "⑩ استراتيجيات الامتحان" },
 ];
 
 export default function DruckSeite() {

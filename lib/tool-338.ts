@@ -1,6 +1,17 @@
 /**
- * 338 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 338 — Telecollaboration — التعاون عن بعد
+ * O Dowd 2007: applied to German teaching — classroom integration via tasks
+ * Level: B1-B2 | Bloom: طبّق | Family: Immersion
  */
-export const TOOL_338 = { id: 338, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_338(): boolean { return true; }
+export const TOOL_338 = {
+  id: 338,
+  titleDe: "Telecollaboration",
+  titleAr: "التعاون عن بعد",
+  family: "Immersion",
+  bloom: "طبّق",
+  level: "B1-B2",
+  research: "O Dowd 2007",
+  desc: "Telecollaboration applied in classroom",
+} as const;
+export function tool338Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool338Check(v: number): boolean { return v>0; }

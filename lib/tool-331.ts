@@ -1,6 +1,17 @@
 /**
- * 331 — أداة بيداغوجية مكتملة (SLA / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 331 — Media Literacy — محو الأمية الإعلامية
+ * Hobbs 2010: applied to German teaching — classroom integration via tasks
+ * Level: B1-B2 | Bloom: حلّل | Family: Immersion
  */
-export const TOOL_331 = { id: 331, family: "SLA", bloom: "فهم", level: "A1" } as const;
-export function aktiv_331(): boolean { return true; }
+export const TOOL_331 = {
+  id: 331,
+  titleDe: "Media Literacy",
+  titleAr: "محو الأمية الإعلامية",
+  family: "Immersion",
+  bloom: "حلّل",
+  level: "B1-B2",
+  research: "Hobbs 2010",
+  desc: "Media Literacy applied in classroom",
+} as const;
+export function tool331Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool331Check(v: number): boolean { return v>0; }

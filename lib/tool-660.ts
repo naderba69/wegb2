@@ -1,6 +1,8 @@
 /**
- * 660 — أداة بيداغوجية مكتملة (الذاكرة / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 660 — Construction Grammar Goldberg adv — نحو بناء غولدبرغ متقدم
+ * Goldberg 2006: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_660 = { id: 660, family: "الذاكرة", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_660(): boolean { return true; }
+export const TOOL_660 = { id: 660, titleDe: "Construction Grammar Goldberg adv", titleAr: "نحو بناء غولدبرغ متقدم", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Goldberg 2006", desc: "Construction Grammar Goldberg adv" } as const;
+export function tool660Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool660Check(v:number):boolean{return v>0;}

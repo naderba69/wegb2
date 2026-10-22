@@ -1,6 +1,8 @@
 /**
- * 631 — أداة بيداغوجية مكتملة (SLA / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 631 — Heritage Language Acquisition — تراثية
+ * Montrul 2016: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_631 = { id: 631, family: "SLA", bloom: "فهم", level: "A1" } as const;
-export function aktiv_631(): boolean { return true; }
+export const TOOL_631 = { id: 631, titleDe: "Heritage Language Acquisition", titleAr: "تراثية", family: "SLA", bloom: "فهم", level: "A1-B2", research: "Montrul 2016", desc: "Heritage Language Acquisition" } as const;
+export function tool631Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool631Check(v:number):boolean{return v>0;}

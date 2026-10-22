@@ -1,6 +1,8 @@
 /**
- * 977 — أداة بيداغوجية مكتملة (Narrative / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 977 — Group Work Storch — عمل جماعي ستورش
+ * Storch 2013: classroom application
+ * Level: A1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_977 = { id: 977, family: "Narrative", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_977(): boolean { return true; }
+export const TOOL_977 = { id: 977, titleDe: "Group Work Storch", titleAr: "عمل جماعي ستورش", family: "طرائق", bloom: "أنشئ", level: "A1-B2", research: "Storch 2013", desc: "Group Work Storch" } as const;
+export function tool977Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool977Check(v:number):boolean{return v>0;}

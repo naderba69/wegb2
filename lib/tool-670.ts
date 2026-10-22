@@ -1,6 +1,8 @@
 /**
- * 670 — أداة بيداغوجية مكتملة (الذاكرة / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 670 — Ideophones — كلمات تصويرية
+ * Dingemanse 2018: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_670 = { id: 670, family: "الذاكرة", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_670(): boolean { return true; }
+export const TOOL_670 = { id: 670, titleDe: "Ideophones", titleAr: "كلمات تصويرية", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Dingemanse 2018", desc: "Ideophones" } as const;
+export function tool670Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool670Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 748 — أداة بيداغوجية مكتملة (Immersion / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 748 — Project-Based Global — مشاريع عالمية
+ * Kokotsaki 2016: classroom application
+ * Level: A2-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_748 = { id: 748, family: "Immersion", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_748(): boolean { return true; }
+export const TOOL_748 = { id: 748, titleDe: "Project-Based Global", titleAr: "مشاريع عالمية", family: "طرائق", bloom: "أنشئ", level: "A2-B2", research: "Kokotsaki 2016", desc: "Project-Based Global" } as const;
+export function tool748Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool748Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 976 — أداة بيداغوجية مكتملة (Gamification / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 976 — Peer Interaction Philp — تفاعل أقران فيلب
+ * Philp 2014: classroom application
+ * Level: A1-B2 | Bloom: أنشئ | Family: SLA
  */
-export const TOOL_976 = { id: 976, family: "Gamification", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_976(): boolean { return true; }
+export const TOOL_976 = { id: 976, titleDe: "Peer Interaction Philp", titleAr: "تفاعل أقران فيلب", family: "SLA", bloom: "أنشئ", level: "A1-B2", research: "Philp 2014", desc: "Peer Interaction Philp" } as const;
+export function tool976Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool976Check(v:number):boolean{return v>0;}

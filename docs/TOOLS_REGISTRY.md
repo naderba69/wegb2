@@ -222,845 +222,845 @@
 **المجموع التراكمي: 180 / 1000 (18%) — 100 أساسية + 80 فرعية**
 
 ### تفصيل 100 → 1000 — الدفعة R352 (181→280) — إكمال جماعي بنفس القواعد
-| 181 | SLA | أداة 181 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-181.ts` | R352 |
-| 182 | طرائق | أداة 182 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-182.ts` | R352 |
-| 183 | تلقين | أداة 183 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-183.ts` | R352 |
-| 184 | تقويم | أداة 184 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-184.ts` | R352 |
-| 185 | بلوم | أداة 185 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-185.ts` | R352 |
-| 186 | Gamification | أداة 186 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-186.ts` | R352 |
-| 187 | Narrative | أداة 187 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-187.ts` | R352 |
-| 188 | Immersion | أداة 188 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-188.ts` | R352 |
-| 189 | Ethik | أداة 189 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-189.ts` | R352 |
-| 190 | الذاكرة | أداة 190 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-190.ts` | R352 |
-| 191 | SLA | أداة 191 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-191.ts` | R352 |
-| 192 | طرائق | أداة 192 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-192.ts` | R352 |
-| 193 | تلقين | أداة 193 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-193.ts` | R352 |
-| 194 | تقويم | أداة 194 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-194.ts` | R352 |
-| 195 | بلوم | أداة 195 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-195.ts` | R352 |
-| 196 | Gamification | أداة 196 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-196.ts` | R352 |
-| 197 | Narrative | أداة 197 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-197.ts` | R352 |
-| 198 | Immersion | أداة 198 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-198.ts` | R352 |
-| 199 | Ethik | أداة 199 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-199.ts` | R352 |
-| 200 | الذاكرة | أداة 200 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-200.ts` | R352 |
-| 201 | SLA | أداة 201 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-201.ts` | R352 |
-| 202 | طرائق | أداة 202 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-202.ts` | R352 |
-| 203 | تلقين | أداة 203 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-203.ts` | R352 |
-| 204 | تقويم | أداة 204 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-204.ts` | R352 |
-| 205 | بلوم | أداة 205 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-205.ts` | R352 |
-| 206 | Gamification | أداة 206 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-206.ts` | R352 |
-| 207 | Narrative | أداة 207 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-207.ts` | R352 |
-| 208 | Immersion | أداة 208 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-208.ts` | R352 |
-| 209 | Ethik | أداة 209 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-209.ts` | R352 |
-| 210 | الذاكرة | أداة 210 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-210.ts` | R352 |
-| 211 | SLA | أداة 211 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-211.ts` | R352 |
-| 212 | طرائق | أداة 212 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-212.ts` | R352 |
-| 213 | تلقين | أداة 213 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-213.ts` | R352 |
-| 214 | تقويم | أداة 214 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-214.ts` | R352 |
-| 215 | بلوم | أداة 215 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-215.ts` | R352 |
-| 216 | Gamification | أداة 216 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-216.ts` | R352 |
-| 217 | Narrative | أداة 217 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-217.ts` | R352 |
-| 218 | Immersion | أداة 218 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-218.ts` | R352 |
-| 219 | Ethik | أداة 219 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-219.ts` | R352 |
-| 220 | الذاكرة | أداة 220 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-220.ts` | R352 |
-| 221 | SLA | أداة 221 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-221.ts` | R352 |
-| 222 | طرائق | أداة 222 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-222.ts` | R352 |
-| 223 | تلقين | أداة 223 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-223.ts` | R352 |
-| 224 | تقويم | أداة 224 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-224.ts` | R352 |
-| 225 | بلوم | أداة 225 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-225.ts` | R352 |
-| 226 | Gamification | أداة 226 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-226.ts` | R352 |
-| 227 | Narrative | أداة 227 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-227.ts` | R352 |
-| 228 | Immersion | أداة 228 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-228.ts` | R352 |
-| 229 | Ethik | أداة 229 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-229.ts` | R352 |
-| 230 | الذاكرة | أداة 230 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-230.ts` | R352 |
-| 231 | SLA | أداة 231 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-231.ts` | R352 |
-| 232 | طرائق | أداة 232 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-232.ts` | R352 |
-| 233 | تلقين | أداة 233 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-233.ts` | R352 |
-| 234 | تقويم | أداة 234 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-234.ts` | R352 |
-| 235 | بلوم | أداة 235 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-235.ts` | R352 |
-| 236 | Gamification | أداة 236 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-236.ts` | R352 |
-| 237 | Narrative | أداة 237 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-237.ts` | R352 |
-| 238 | Immersion | أداة 238 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-238.ts` | R352 |
-| 239 | Ethik | أداة 239 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-239.ts` | R352 |
-| 240 | الذاكرة | أداة 240 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-240.ts` | R352 |
-| 241 | SLA | أداة 241 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-241.ts` | R352 |
-| 242 | طرائق | أداة 242 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-242.ts` | R352 |
-| 243 | تلقين | أداة 243 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-243.ts` | R352 |
-| 244 | تقويم | أداة 244 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-244.ts` | R352 |
-| 245 | بلوم | أداة 245 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-245.ts` | R352 |
-| 246 | Gamification | أداة 246 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-246.ts` | R352 |
-| 247 | Narrative | أداة 247 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-247.ts` | R352 |
-| 248 | Immersion | أداة 248 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-248.ts` | R352 |
-| 249 | Ethik | أداة 249 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-249.ts` | R352 |
-| 250 | الذاكرة | أداة 250 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-250.ts` | R352 |
-| 251 | SLA | أداة 251 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-251.ts` | R352 |
-| 252 | طرائق | أداة 252 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-252.ts` | R352 |
-| 253 | تلقين | أداة 253 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-253.ts` | R352 |
-| 254 | تقويم | أداة 254 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-254.ts` | R352 |
-| 255 | بلوم | أداة 255 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-255.ts` | R352 |
-| 256 | Gamification | أداة 256 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-256.ts` | R352 |
-| 257 | Narrative | أداة 257 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-257.ts` | R352 |
-| 258 | Immersion | أداة 258 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-258.ts` | R352 |
-| 259 | Ethik | أداة 259 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-259.ts` | R352 |
-| 260 | الذاكرة | أداة 260 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-260.ts` | R352 |
-| 261 | SLA | أداة 261 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-261.ts` | R352 |
-| 262 | طرائق | أداة 262 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-262.ts` | R352 |
-| 263 | تلقين | أداة 263 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-263.ts` | R352 |
-| 264 | تقويم | أداة 264 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-264.ts` | R352 |
-| 265 | بلوم | أداة 265 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-265.ts` | R352 |
-| 266 | Gamification | أداة 266 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-266.ts` | R352 |
-| 267 | Narrative | أداة 267 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-267.ts` | R352 |
-| 268 | Immersion | أداة 268 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-268.ts` | R352 |
-| 269 | Ethik | أداة 269 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-269.ts` | R352 |
-| 270 | الذاكرة | أداة 270 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-270.ts` | R352 |
-| 271 | SLA | أداة 271 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-271.ts` | R352 |
-| 272 | طرائق | أداة 272 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-272.ts` | R352 |
-| 273 | تلقين | أداة 273 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-273.ts` | R352 |
-| 274 | تقويم | أداة 274 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-274.ts` | R352 |
-| 275 | بلوم | أداة 275 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-275.ts` | R352 |
-| 276 | Gamification | أداة 276 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-276.ts` | R352 |
-| 277 | Narrative | أداة 277 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-277.ts` | R352 |
-| 278 | Immersion | أداة 278 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-278.ts` | R352 |
-| 279 | Ethik | أداة 279 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-279.ts` | R352 |
-| 280 | الذاكرة | أداة 280 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-280.ts` | R352 |
+| 181 | الذاكرة | Optimal Interval FSRS — الفاصل الأمثل | ✅حقيقي | B2 | طبّق | `lib/tool-181.ts` | R372 |
+| 182 | الذاكرة | Sleep Consolidation — المراجعة قبل النوم | ✅حقيقي | A0-B2 | طبّق | `lib/tool-182.ts` | R372 |
+| 183 | الذاكرة | Desirable Difficulty — الصعوبة المرغوبة | ✅حقيقي | B1 | حلّل | `lib/tool-183.ts` | R372 |
+| 184 | الذاكرة | Expanding Retrieval — الاسترجاع الموسّع | ✅حقيقي | B2 | قيّم | `lib/tool-184.ts` | R372 |
+| 185 | طرائق | Interleaving Math — التشابك الرياضي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-185.ts` | R372 |
+| 186 | تلقين | Why-Questions — أسئلة لماذا | ✅حقيقي | B1 | حلّل | `lib/tool-186.ts` | R372 |
+| 187 | الذاكرة | Sketchnoting — الرسم التخطيطي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-187.ts` | R372 |
+| 188 | تلقين | Concrete Examples — الأمثلة المحسوسة | ✅حقيقي | A2-B2 | فهم | `lib/tool-188.ts` | R372 |
+| 189 | طرائق | Variation Theory — نظرية التباين | ✅حقيقي | B1 | حلّل | `lib/tool-189.ts` | R372 |
+| 190 | الذاكرة | Transfer-Appropriate Processing — المعالجة المناسبة للنقل | ✅حقيقي | B2 | قيّم | `lib/tool-190.ts` | R372 |
+| 191 | الذاكرة | Spaced vs Massed — التباعد مقابل الحشد | ✅حقيقي | A1-B2 | فهم | `lib/tool-191.ts` | R372 |
+| 192 | الذاكرة | Retrieval-Induced Forgetting Shield — درع النسيان | ✅حقيقي | B1 | حلّل | `lib/tool-192.ts` | R372 |
+| 193 | طرائق | Forward Testing Effect — أثر الاختبار الأمامي | ✅حقيقي | B2 | طبّق | `lib/tool-193.ts` | R372 |
+| 194 | تلقين | Generation Effect — أثر التوليد | ✅حقيقي | A2-B1 | أنشئ | `lib/tool-194.ts` | R372 |
+| 195 | الذاكرة | Production Effect — القراءة الجهرية | ✅حقيقي | A0-A2 | طبّق | `lib/tool-195.ts` | R372 |
+| 196 | طرائق | Enactment & Gesture — التجسيد والإيماء | ✅حقيقي | A1-B1 | طبّق | `lib/tool-196.ts` | R372 |
+| 197 | الذاكرة | Bilingual Dual Coding — الترميز ثلاثي اللغة | ✅حقيقي | A0-A1 | فهم | `lib/tool-197.ts` | R372 |
+| 198 | تقويم | Errorful Generation — التوليد الخاطئ المفيد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-198.ts` | R372 |
+| 199 | تقويم | Pre-testing — الاختبار القبلي | ✅حقيقي | B1 | قيّم | `lib/tool-199.ts` | R372 |
+| 200 | تقويم | Feedback Timing — توقيت التغذية الراجعة | ✅حقيقي | A2-B2 | قيّم | `lib/tool-200.ts` | R372 |
+| 201 | الذاكرة | JOL — أحكام التعلّم | ✅حقيقي | B1-B2 | قيّم | `lib/tool-201.ts` | R372 |
+| 202 | تلقين | Self-Explanation — الشرح الذاتي | ✅حقيقي | A2-B2 | حلّل | `lib/tool-202.ts` | R372 |
+| 203 | طرائق | Worked Examples Fading — تلاشي الأمثلة | ✅حقيقي | A1-B1 | طبّق | `lib/tool-203.ts` | R372 |
+| 204 | طرائق | Expertise Reversal — انعكاس الخبرة | ✅حقيقي | A0-B2 | حلّل | `lib/tool-204.ts` | R372 |
+| 205 | Gamification | Cooperative Learning — التعلّم التعاوني | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-205.ts` | R372 |
+| 206 | تقويم | Peer Feedback — تغذية الأقران | ✅حقيقي | B1-B2 | قيّم | `lib/tool-206.ts` | R372 |
+| 207 | تقويم | Washback — الأثر الارتجاعي | ✅حقيقي | B2 | قيّم | `lib/tool-207.ts` | R372 |
+| 208 | تقويم | Dynamic Assessment ZPD — التقويم الديناميكي | ✅حقيقي | A2-B2 | حلّل | `lib/tool-208.ts` | R372 |
+| 209 | SLA | Korrektur-Timing — توقيت التصحيح | ✅حقيقي | A1-B2 | طبّق | `lib/tool-209.ts` | R372 |
+| 210 | SLA | Kontrastanalyse AR-DE — التحليل التقابلي | ✅حقيقي | A0-B1 | حلّل | `lib/tool-210.ts` | R372 |
+| 211 | SLA | Input Enhancement — تعزيز المدخلات | ✅حقيقي | A1-B2 | فهم | `lib/tool-211.ts` | R372 |
+| 212 | SLA | Noticing Hypothesis — فرضية الانتباه | ✅حقيقي | A2-B1 | فهم | `lib/tool-212.ts` | R372 |
+| 213 | SLA | Interaction Hypothesis — فرضية التفاعل | ✅حقيقي | B1 | طبّق | `lib/tool-213.ts` | R372 |
+| 214 | SLA | Output Hypothesis — فرضية الإخراج | ✅حقيقي | B1-B2 | طبّق | `lib/tool-214.ts` | R372 |
+| 215 | SLA | Focus on Form — التركيز على الشكل | ✅حقيقي | A2-B2 | حلّل | `lib/tool-215.ts` | R372 |
+| 216 | طرائق | TBLT — التعلّم بالمهام | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-216.ts` | R372 |
+| 217 | طرائق | PPP — العرض-الممارسة-الإنتاج | ✅حقيقي | A0-A2 | طبّق | `lib/tool-217.ts` | R372 |
+| 218 | طرائق | Lexical Approach — المدخل المعجمي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-218.ts` | R372 |
+| 219 | طرائق | Grammar-Translation modern — الترجمة النحوية | ✅حقيقي | A0-B1 | فهم | `lib/tool-219.ts` | R372 |
+| 220 | طرائق | CLT — المقاربة التواصلية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-220.ts` | R372 |
+| 221 | طرائق | Extensive Reading — القراءة الموسعة | ✅حقيقي | A2-B2 | فهم | `lib/tool-221.ts` | R372 |
+| 222 | طرائق | Narrow Reading — القراءة الضيقة | ✅حقيقي | B1-B2 | فهم | `lib/tool-222.ts` | R372 |
+| 223 | طرائق | Graded Readers — القراءات المتدرجة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-223.ts` | R372 |
+| 224 | طرائق | Dictogloss — الإملاء التفاعلي | ✅حقيقي | A2-B1 | أنشئ | `lib/tool-224.ts` | R372 |
+| 225 | طرائق | Information Gap — فجوة المعلومات | ✅حقيقي | A1-B2 | طبّق | `lib/tool-225.ts` | R372 |
+| 226 | طرائق | Jigsaw Reading — القراءة التركيبية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-226.ts` | R372 |
+| 227 | طرائق | Peer Teaching — التدريس المتبادل | ✅حقيقي | A2-B2 | قيّم | `lib/tool-227.ts` | R372 |
+| 228 | Narrative | Storytelling — السرد القصصي | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-228.ts` | R372 |
+| 229 | طرائق | Rollenspiel — لعب الأدوار | ✅حقيقي | A1-B2 | طبّق | `lib/tool-229.ts` | R372 |
+| 230 | طرائق | Debatte — المناظرة والنقاش | ✅حقيقي | B1-B2 | قيّم | `lib/tool-230.ts` | R372 |
+| 231 | طرائق | Shadowing — التظليل الصوتي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-231.ts` | R372 |
+| 232 | طرائق | Minimal Pairs — الأزواج الدنيا | ✅حقيقي | A1-A2 | فهم | `lib/tool-232.ts` | R372 |
+| 233 | طرائق | Elicitation — الاستنباط | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-233.ts` | R372 |
+| 234 | طرائق | CCQ — التحقق من المفهوم | ✅حقيقي | A1-B2 | حلّل | `lib/tool-234.ts` | R372 |
+| 235 | طرائق | ICQ — التحقق من التعليمات | ✅حقيقي | A0-B2 | فهم | `lib/tool-235.ts` | R372 |
+| 236 | طرائق | Drilling — التدريب التكراري | ✅حقيقي | A0-A2 | طبّق | `lib/tool-236.ts` | R372 |
+| 237 | تقويم | Diagnostic Assessment — التشخيصي | ✅حقيقي | A0-B2 | قيّم | `lib/tool-237.ts` | R372 |
+| 238 | تقويم | Formative Assessment — التكويني | ✅حقيقي | A1-B2 | قيّم | `lib/tool-238.ts` | R372 |
+| 239 | تقويم | Summative Assessment — الختامي | ✅حقيقي | A1-B2 | قيّم | `lib/tool-239.ts` | R372 |
+| 240 | تقويم | CEFR Self-Assessment — التقويم الذاتي | ✅حقيقي | A0-B2 | قيّم | `lib/tool-240.ts` | R372 |
+| 241 | تقويم | Portfolio — ملف الإنجاز | ✅حقيقي | A1-B2 | قيّم | `lib/tool-241.ts` | R372 |
+| 242 | تقويم | Self-Assessment — التقويم الذاتي | ✅حقيقي | A1-B2 | قيّم | `lib/tool-242.ts` | R372 |
+| 243 | تقويم | Peer Assessment — تقييم الأقران | ✅حقيقي | B1-B2 | قيّم | `lib/tool-243.ts` | R372 |
+| 244 | SLA | Fehleranalyse — تحليل الأخطاء | ✅حقيقي | A1-B2 | حلّل | `lib/tool-244.ts` | R372 |
+| 245 | SLA | Kontrastive Analyse adv — التقابلي المتقدم | ✅حقيقي | B1-B2 | حلّل | `lib/tool-245.ts` | R372 |
+| 246 | تقويم | Benchmarking — المعايرة المرجعية | ✅حقيقي | A0-B2 | قيّم | `lib/tool-246.ts` | R372 |
+| 247 | تقويم | Washback Design — تصميم الارتجاع | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-247.ts` | R372 |
+| 248 | تقويم | Moderation — المواءمة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-248.ts` | R372 |
+| 249 | تقويم | Rubric Design — سلم التقدير | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-249.ts` | R372 |
+| 250 | Gamification | Gamification Basics — التلعيب | ✅حقيقي | A0-B2 | طبّق | `lib/tool-250.ts` | R372 |
+| 251 | Gamification | Punkte & Level — النقاط والمستويات | ✅حقيقي | A0-B2 | طبّق | `lib/tool-251.ts` | R372 |
+| 252 | Gamification | Abzeichen — الشارات | ✅حقيقي | A0-B2 | تذكّر | `lib/tool-252.ts` | R372 |
+| 253 | Gamification | Ranglisten — لوحات الصدارة | ✅حقيقي | A1-B2 | فهم | `lib/tool-253.ts` | R372 |
+| 254 | Gamification | Quests — المهام المغامرة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-254.ts` | R372 |
+| 255 | Narrative | Narrative Quests — السرد المغامر | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-255.ts` | R372 |
+| 256 | Immersion | Virtuelle Immersion — الانغماس الافتراضي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-256.ts` | R372 |
+| 257 | Immersion | AR-Overlays — التراكب المعزز | ✅حقيقي | A0-A2 | فهم | `lib/tool-257.ts` | R372 |
+| 258 | Immersion | Tandem — التعلّم الثنائي | ✅حقيقي | A2-B2 | طبّق | `lib/tool-258.ts` | R372 |
+| 259 | Ethik | Digitale Ethik — الأخلاق الرقمية | ✅حقيقي | A0-B2 | قيّم | `lib/tool-259.ts` | R372 |
+| 260 | Ethik | KI-Tutor Ethik — أخلاقيات المدرّس الذكي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-260.ts` | R372 |
+| 261 | الذاكرة | Leitner vs FSRS — مقارنة الأنظمة | ✅حقيقي | A0-B2 | حلّل | `lib/tool-261.ts` | R372 |
+| 262 | الذاكرة | Desirable Difficulty Calib — معايرة الصعوبة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-262.ts` | R372 |
+| 263 | الذاكرة | Interleaving vs Blocking — التشابك | ✅حقيقي | A1-B2 | طبّق | `lib/tool-263.ts` | R372 |
+| 264 | تلقين | Elaborative Interrogation — الاستجواب | ✅حقيقي | B1-B2 | حلّل | `lib/tool-264.ts` | R372 |
+| 265 | تلقين | Concrete Examples Deep — أمثلة عميقة | ✅حقيقي | A1-B2 | فهم | `lib/tool-265.ts` | R372 |
+| 266 | الذاكرة | Dual Coding Image — ترميز صوري | ✅حقيقي | A0-B1 | فهم | `lib/tool-266.ts` | R372 |
+| 267 | الذاكرة | Dual Coding Audio — ترميز صوتي | ✅حقيقي | A0-B2 | فهم | `lib/tool-267.ts` | R372 |
+| 268 | الذاكرة | Free Recall — الاستدعاء الحر | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-268.ts` | R372 |
+| 269 | الذاكرة | Cued Recall — الاستدعاء الموجه | ✅حقيقي | A1-B2 | طبّق | `lib/tool-269.ts` | R372 |
+| 270 | الذاكرة | Recognition vs Recall — التعرف | ✅حقيقي | A0-B2 | تذكّر | `lib/tool-270.ts` | R372 |
+| 271 | طرائق | Kontext-Variation — تغاير السياق | ✅حقيقي | A1-B2 | حلّل | `lib/tool-271.ts` | R372 |
+| 272 | الذاكرة | Keyword Variants — الكلمة المفتاحية | ✅حقيقي | A1-A2 | طبّق | `lib/tool-272.ts` | R372 |
+| 273 | الذاكرة | Bild-Mnemonik tief — التصور العميق | ✅حقيقي | A0-B1 | طبّق | `lib/tool-273.ts` | R372 |
+| 274 | الذاكرة | Loci Advanced — قصر الذاكرة متقدم | ✅حقيقي | A1-B2 | طبّق | `lib/tool-274.ts` | R372 |
+| 275 | الذاكرة | Chunking Advanced — التكتيل متقدم | ✅حقيقي | A1-B2 | فهم | `lib/tool-275.ts` | R372 |
+| 276 | الذاكرة | Schlaf-Optimierung — تحسين النوم | ✅حقيقي | A0-B2 | طبّق | `lib/tool-276.ts` | R372 |
+| 277 | SLA | Input i+1 fein — المدخلات المضبوطة | ✅حقيقي | A1-B2 | فهم | `lib/tool-277.ts` | R372 |
+| 278 | SLA | Affektiver Filter — المرشح الوجداني | ✅حقيقي | A0-B2 | طبّق | `lib/tool-278.ts` | R372 |
+| 279 | SLA | Automatisierung — الأتمتة | ✅حقيقي | A2-B2 | طبّق | `lib/tool-279.ts` | R372 |
+| 280 | SLA | Lücken bemerken — ملاحظة الفجوة | ✅حقيقي | A2-B2 | حلّل | `lib/tool-280.ts` | R372 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (281→380) — إكمال جماعي بنفس القواعد
-| 281 | SLA | أداة 281 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-281.ts` | R352 |
-| 282 | طرائق | أداة 282 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-282.ts` | R352 |
-| 283 | تلقين | أداة 283 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-283.ts` | R352 |
-| 284 | تقويم | أداة 284 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-284.ts` | R352 |
-| 285 | بلوم | أداة 285 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-285.ts` | R352 |
-| 286 | Gamification | أداة 286 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-286.ts` | R352 |
-| 287 | Narrative | أداة 287 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-287.ts` | R352 |
-| 288 | Immersion | أداة 288 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-288.ts` | R352 |
-| 289 | Ethik | أداة 289 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-289.ts` | R352 |
-| 290 | الذاكرة | أداة 290 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-290.ts` | R352 |
-| 291 | SLA | أداة 291 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-291.ts` | R352 |
-| 292 | طرائق | أداة 292 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-292.ts` | R352 |
-| 293 | تلقين | أداة 293 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-293.ts` | R352 |
-| 294 | تقويم | أداة 294 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-294.ts` | R352 |
-| 295 | بلوم | أداة 295 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-295.ts` | R352 |
-| 296 | Gamification | أداة 296 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-296.ts` | R352 |
-| 297 | Narrative | أداة 297 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-297.ts` | R352 |
-| 298 | Immersion | أداة 298 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-298.ts` | R352 |
-| 299 | Ethik | أداة 299 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-299.ts` | R352 |
-| 300 | الذاكرة | أداة 300 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-300.ts` | R352 |
-| 301 | SLA | أداة 301 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-301.ts` | R352 |
-| 302 | طرائق | أداة 302 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-302.ts` | R352 |
-| 303 | تلقين | أداة 303 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-303.ts` | R352 |
-| 304 | تقويم | أداة 304 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-304.ts` | R352 |
-| 305 | بلوم | أداة 305 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-305.ts` | R352 |
-| 306 | Gamification | أداة 306 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-306.ts` | R352 |
-| 307 | Narrative | أداة 307 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-307.ts` | R352 |
-| 308 | Immersion | أداة 308 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-308.ts` | R352 |
-| 309 | Ethik | أداة 309 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-309.ts` | R352 |
-| 310 | الذاكرة | أداة 310 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-310.ts` | R352 |
-| 311 | SLA | أداة 311 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-311.ts` | R352 |
-| 312 | طرائق | أداة 312 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-312.ts` | R352 |
-| 313 | تلقين | أداة 313 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-313.ts` | R352 |
-| 314 | تقويم | أداة 314 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-314.ts` | R352 |
-| 315 | بلوم | أداة 315 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-315.ts` | R352 |
-| 316 | Gamification | أداة 316 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-316.ts` | R352 |
-| 317 | Narrative | أداة 317 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-317.ts` | R352 |
-| 318 | Immersion | أداة 318 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-318.ts` | R352 |
-| 319 | Ethik | أداة 319 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-319.ts` | R352 |
-| 320 | الذاكرة | أداة 320 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-320.ts` | R352 |
-| 321 | SLA | أداة 321 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-321.ts` | R352 |
-| 322 | طرائق | أداة 322 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-322.ts` | R352 |
-| 323 | تلقين | أداة 323 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-323.ts` | R352 |
-| 324 | تقويم | أداة 324 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-324.ts` | R352 |
-| 325 | بلوم | أداة 325 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-325.ts` | R352 |
-| 326 | Gamification | أداة 326 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-326.ts` | R352 |
-| 327 | Narrative | أداة 327 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-327.ts` | R352 |
-| 328 | Immersion | أداة 328 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-328.ts` | R352 |
-| 329 | Ethik | أداة 329 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-329.ts` | R352 |
-| 330 | الذاكرة | أداة 330 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-330.ts` | R352 |
-| 331 | SLA | أداة 331 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-331.ts` | R352 |
-| 332 | طرائق | أداة 332 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-332.ts` | R352 |
-| 333 | تلقين | أداة 333 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-333.ts` | R352 |
-| 334 | تقويم | أداة 334 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-334.ts` | R352 |
-| 335 | بلوم | أداة 335 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-335.ts` | R352 |
-| 336 | Gamification | أداة 336 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-336.ts` | R352 |
-| 337 | Narrative | أداة 337 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-337.ts` | R352 |
-| 338 | Immersion | أداة 338 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-338.ts` | R352 |
-| 339 | Ethik | أداة 339 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-339.ts` | R352 |
-| 340 | الذاكرة | أداة 340 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-340.ts` | R352 |
-| 341 | SLA | أداة 341 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-341.ts` | R352 |
-| 342 | طرائق | أداة 342 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-342.ts` | R352 |
-| 343 | تلقين | أداة 343 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-343.ts` | R352 |
-| 344 | تقويم | أداة 344 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-344.ts` | R352 |
-| 345 | بلوم | أداة 345 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-345.ts` | R352 |
-| 346 | Gamification | أداة 346 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-346.ts` | R352 |
-| 347 | Narrative | أداة 347 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-347.ts` | R352 |
-| 348 | Immersion | أداة 348 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-348.ts` | R352 |
-| 349 | Ethik | أداة 349 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-349.ts` | R352 |
-| 350 | الذاكرة | أداة 350 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-350.ts` | R352 |
-| 351 | SLA | أداة 351 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-351.ts` | R352 |
-| 352 | طرائق | أداة 352 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-352.ts` | R352 |
-| 353 | تلقين | أداة 353 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-353.ts` | R352 |
-| 354 | تقويم | أداة 354 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-354.ts` | R352 |
-| 355 | بلوم | أداة 355 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-355.ts` | R352 |
-| 356 | Gamification | أداة 356 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-356.ts` | R352 |
-| 357 | Narrative | أداة 357 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-357.ts` | R352 |
-| 358 | Immersion | أداة 358 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-358.ts` | R352 |
-| 359 | Ethik | أداة 359 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-359.ts` | R352 |
-| 360 | الذاكرة | أداة 360 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-360.ts` | R352 |
-| 361 | SLA | أداة 361 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-361.ts` | R352 |
-| 362 | طرائق | أداة 362 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-362.ts` | R352 |
-| 363 | تلقين | أداة 363 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-363.ts` | R352 |
-| 364 | تقويم | أداة 364 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-364.ts` | R352 |
-| 365 | بلوم | أداة 365 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-365.ts` | R352 |
-| 366 | Gamification | أداة 366 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-366.ts` | R352 |
-| 367 | Narrative | أداة 367 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-367.ts` | R352 |
-| 368 | Immersion | أداة 368 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-368.ts` | R352 |
-| 369 | Ethik | أداة 369 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-369.ts` | R352 |
-| 370 | الذاكرة | أداة 370 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-370.ts` | R352 |
-| 371 | SLA | أداة 371 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-371.ts` | R352 |
-| 372 | طرائق | أداة 372 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-372.ts` | R352 |
-| 373 | تلقين | أداة 373 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-373.ts` | R352 |
-| 374 | تقويم | أداة 374 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-374.ts` | R352 |
-| 375 | بلوم | أداة 375 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-375.ts` | R352 |
-| 376 | Gamification | أداة 376 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-376.ts` | R352 |
-| 377 | Narrative | أداة 377 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-377.ts` | R352 |
-| 378 | Immersion | أداة 378 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-378.ts` | R352 |
-| 379 | Ethik | أداة 379 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-379.ts` | R352 |
-| 380 | الذاكرة | أداة 380 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-380.ts` | R352 |
+| 281 | طرائق | Cognitive Load Theory — العبء المعرفي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-281.ts` | R372 |
+| 282 | طرائق | Split-Attention — انقسام الانتباه | ✅حقيقي | A1-B2 | فهم | `lib/tool-282.ts` | R372 |
+| 283 | طرائق | Redundancy Principle — التكرار الزائد | ✅حقيقي | A1-B2 | فهم | `lib/tool-283.ts` | R372 |
+| 284 | طرائق | Worked Example — المثال المحلول | ✅حقيقي | A0-A2 | طبّق | `lib/tool-284.ts` | R372 |
+| 285 | طرائق | Guidance Fading — تلاشي التوجيه | ✅حقيقي | A1-B1 | طبّق | `lib/tool-285.ts` | R372 |
+| 286 | طرائق | Isolated Elements — العناصر المعزولة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-286.ts` | R372 |
+| 287 | طرائق | Variability Effect — أثر التنوع | ✅حقيقي | B1-B2 | طبّق | `lib/tool-287.ts` | R372 |
+| 288 | طرائق | Transient Information — المعلومات العابرة | ✅حقيقي | A1-B2 | فهم | `lib/tool-288.ts` | R372 |
+| 289 | طرائق | Expertise-Appropriate — مناسب للخبرة | ✅حقيقي | A0-B2 | حلّل | `lib/tool-289.ts` | R372 |
+| 290 | تلقين | Self-Management — الإدارة الذاتية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-290.ts` | R372 |
+| 291 | تلقين | Goal Setting — تحديد الأهداف | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-291.ts` | R372 |
+| 292 | تلقين | Growth Mindset — عقلية النمو | ✅حقيقي | A0-B2 | قيّم | `lib/tool-292.ts` | R372 |
+| 293 | تلقين | Attribution Theory — نظرية العزو | ✅حقيقي | B1-B2 | حلّل | `lib/tool-293.ts` | R372 |
+| 294 | تلقين | Self-Efficacy — الكفاءة الذاتية | ✅حقيقي | A0-B2 | قيّم | `lib/tool-294.ts` | R372 |
+| 295 | تلقين | SDT Motivation — الدافعية الذاتية | ✅حقيقي | A0-B2 | فهم | `lib/tool-295.ts` | R372 |
+| 296 | تلقين | Autonomy Support — دعم الاستقلالية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-296.ts` | R372 |
+| 297 | تلقين | Competence Support — دعم الكفاءة | ✅حقيقي | A2-B2 | طبّق | `lib/tool-297.ts` | R372 |
+| 298 | تلقين | Relatedness Support — دعم الترابط | ✅حقيقي | A0-B2 | فهم | `lib/tool-298.ts` | R372 |
+| 299 | تلقين | Flow Theory — نظرية التدفق | ✅حقيقي | A1-B2 | طبّق | `lib/tool-299.ts` | R372 |
+| 300 | تلقين | Grit & Perseverance — المثابرة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-300.ts` | R372 |
+| 301 | SLA | Language Anxiety — قلق اللغة | ✅حقيقي | A0-B2 | حلّل | `lib/tool-301.ts` | R372 |
+| 302 | SLA | WTC Willingness — الاستعداد للتواصل | ✅حقيقي | B1-B2 | طبّق | `lib/tool-302.ts` | R372 |
+| 303 | SLA | Oxford Learning Strategies — استراتيجيات | ✅حقيقي | A1-B2 | فهم | `lib/tool-303.ts` | R372 |
+| 304 | SLA | Metacognitive Strategies — ما وراء معرفية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-304.ts` | R372 |
+| 305 | SLA | Cognitive Strategies — المعرفية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-305.ts` | R372 |
+| 306 | SLA | Socio-Affective — اجتماعية وجدانية | ✅حقيقي | A0-B2 | طبّق | `lib/tool-306.ts` | R372 |
+| 307 | SLA | Compensation Strategies — التعويضية | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-307.ts` | R372 |
+| 308 | الذاكرة | Memory Strategies — استراتيجيات الذاكرة | ✅حقيقي | A0-B2 | تذكّر | `lib/tool-308.ts` | R372 |
+| 309 | SLA | Social Strategies — الاجتماعية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-309.ts` | R372 |
+| 310 | تقويم | Test-Taking Strategies — استراتيجيات الاختبار | ✅حقيقي | B1-B2 | طبّق | `lib/tool-310.ts` | R372 |
+| 311 | Immersion | Intercultural Competence — الكفاءة بين الثقافية | ✅حقيقي | A1-B2 | حلّل | `lib/tool-311.ts` | R372 |
+| 312 | SLA | Pragmatic Competence — الكفاءة التداولية | ✅حقيقي | B1-B2 | طبّق | `lib/tool-312.ts` | R372 |
+| 313 | SLA | Speech Acts — الأفعال الكلامية | ✅حقيقي | A2-B2 | طبّق | `lib/tool-313.ts` | R372 |
+| 314 | SLA | Politeness Theory — نظرية التأدب | ✅حقيقي | B1-B2 | فهم | `lib/tool-314.ts` | R372 |
+| 315 | طرائق | Discourse Markers — روابط الخطاب | ✅حقيقي | A2-B2 | طبّق | `lib/tool-315.ts` | R372 |
+| 316 | طرائق | Cohesion & Coherence — التماسك | ✅حقيقي | B1-B2 | حلّل | `lib/tool-316.ts` | R372 |
+| 317 | طرائق | Genre Analysis — تحليل النوع النصي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-317.ts` | R372 |
+| 318 | طرائق | Corpus-Based — التعلّم بالمدونة | ✅حقيقي | B1-B2 | فهم | `lib/tool-318.ts` | R372 |
+| 319 | طرائق | Data-Driven Learning — مستند للبيانات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-319.ts` | R372 |
+| 320 | طرائق | Lexical Bundles — الحزم المعجمية | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-320.ts` | R372 |
+| 321 | طرائق | Phraseology — علم العبارات | ✅حقيقي | A2-B2 | فهم | `lib/tool-321.ts` | R372 |
+| 322 | طرائق | Colligation — التصاحب النحوي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-322.ts` | R372 |
+| 323 | طرائق | Collocation Deep — التصاحب العميق | ✅حقيقي | A2-B2 | طبّق | `lib/tool-323.ts` | R372 |
+| 324 | طرائق | Idioms — التعابير الاصطلاحية | ✅حقيقي | B1-B2 | فهم | `lib/tool-324.ts` | R372 |
+| 325 | Narrative | Proverbs — الأمثال | ✅حقيقي | B1-B2 | فهم | `lib/tool-325.ts` | R372 |
+| 326 | تلقين | Humor in Learning — الفكاهة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-326.ts` | R372 |
+| 327 | Narrative | Story Grammar — قواعد القصة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-327.ts` | R372 |
+| 328 | Narrative | Narrative Competence — كفاءة السرد | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-328.ts` | R372 |
+| 329 | طرائق | Argumentation Toulmin — الحجاج | ✅حقيقي | B1-B2 | قيّم | `lib/tool-329.ts` | R372 |
+| 330 | تلقين | Critical Thinking — التفكير النقدي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-330.ts` | R372 |
+| 331 | Immersion | Media Literacy — محو إعلامي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-331.ts` | R372 |
+| 332 | Narrative | Digital Storytelling — السرد الرقمي | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-332.ts` | R372 |
+| 333 | Immersion | Podcast Production — بودكاست | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-333.ts` | R372 |
+| 334 | Immersion | Video Vlog — إنتاج الفيديو | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-334.ts` | R372 |
+| 335 | طرائق | Blog E-Portfolio — مدونة | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-335.ts` | R372 |
+| 336 | طرائق | Wiki Collaboration — ويكي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-336.ts` | R372 |
+| 337 | Immersion | Chat Authenticity — أصالة الدردشة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-337.ts` | R372 |
+| 338 | Immersion | Telecollaboration — تعاون عن بعد | ✅حقيقي | B1-B2 | طبّق | `lib/tool-338.ts` | R372 |
+| 339 | Immersion | Study Abroad Prep — تحضير | ✅حقيقي | B1-B2 | قيّم | `lib/tool-339.ts` | R372 |
+| 340 | SLA | Plurilingualism — تعدد اللغات | ✅حقيقي | A0-B2 | فهم | `lib/tool-340.ts` | R372 |
+| 341 | SLA | Segmental Phonology — القطعية | ✅حقيقي | A1-A2 | فهم | `lib/tool-341.ts` | R372 |
+| 342 | SLA | Suprasegmental — النبر/التنغيم | ✅حقيقي | A1-B2 | طبّق | `lib/tool-342.ts` | R372 |
+| 343 | SLA | Morphology Awareness — الوعي الصرفي | ✅حقيقي | A2-B1 | حلّل | `lib/tool-343.ts` | R372 |
+| 344 | SLA | Syntax V2 — ترتيب الكلمات | ✅حقيقي | A1-B2 | طبّق | `lib/tool-344.ts` | R372 |
+| 345 | SLA | Nebensatz — الجملة الفرعية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-345.ts` | R372 |
+| 346 | SLA | Passiv — المبني للمجهول | ✅حقيقي | B1-B2 | طبّق | `lib/tool-346.ts` | R372 |
+| 347 | SLA | Polysemie — تعدد المعاني | ✅حقيقي | B1-B2 | فهم | `lib/tool-347.ts` | R372 |
+| 348 | SLA | Konnotation — إيحائية | ✅حقيقي | B1-B2 | فهم | `lib/tool-348.ts` | R372 |
+| 349 | SLA | Implicature — الاستلزام | ✅حقيقي | B1-B2 | حلّل | `lib/tool-349.ts` | R372 |
+| 350 | طرائق | Turn-Taking — تناوب الأدوار | ✅حقيقي | A2-B2 | طبّق | `lib/tool-350.ts` | R372 |
+| 351 | طرائق | Top-Down Hören — استماع علوي | ✅حقيقي | A1-B2 | فهم | `lib/tool-351.ts` | R372 |
+| 352 | طرائق | Bottom-Up Hören — استماع سفلي | ✅حقيقي | A1-B2 | فهم | `lib/tool-352.ts` | R372 |
+| 353 | طرائق | Skimming — تصفح سريع | ✅حقيقي | A2-B2 | فهم | `lib/tool-353.ts` | R372 |
+| 354 | طرائق | Scanning — مسح باحث | ✅حقيقي | A2-B2 | طبّق | `lib/tool-354.ts` | R372 |
+| 355 | طرائق | Intensiv/Extensiv Lesen — قراءة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-355.ts` | R372 |
+| 356 | طرائق | Schreibprozess — عملية الكتابة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-356.ts` | R372 |
+| 357 | تقويم | Peer Review Schreiben — مراجعة كتابة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-357.ts` | R372 |
+| 358 | SLA | Fluency vs Accuracy — طلاقة/دقة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-358.ts` | R372 |
+| 359 | SLA | Intelligibility ELF — مفهومية | ✅حقيقي | A1-B2 | فهم | `lib/tool-359.ts` | R372 |
+| 360 | SLA | Corrective Feedback — تصحيح | ✅حقيقي | A1-B2 | طبّق | `lib/tool-360.ts` | R372 |
+| 361 | SLA | Uptake & Repair — التقاط وإصلاح | ✅حقيقي | A2-B2 | حلّل | `lib/tool-361.ts` | R372 |
+| 362 | SLA | Negotiation for Meaning — تفاوض | ✅حقيقي | A1-B2 | طبّق | `lib/tool-362.ts` | R372 |
+| 363 | طرائق | Scaffolding ZPD adv — سقالات | ✅حقيقي | A0-B2 | طبّق | `lib/tool-363.ts` | R372 |
+| 364 | طرائق | Differentiation — تمايز | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-364.ts` | R372 |
+| 365 | تلقين | Learning Styles Myth — أسطورة أنماط | ✅حقيقي | A0-B2 | قيّم | `lib/tool-365.ts` | R372 |
+| 366 | تلقين | Multiple Intelligences Crit — ذكاءات | ✅حقيقي | A0-B2 | حلّل | `lib/tool-366.ts` | R372 |
+| 367 | تلقين | Learner Autonomy — استقلالية | ✅حقيقي | A1-B2 | قيّم | `lib/tool-367.ts` | R372 |
+| 368 | تلقين | Self-Regulation — تنظيم ذاتي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-368.ts` | R372 |
+| 369 | تلقين | Self-Directed Learning — موجه ذاتياً | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-369.ts` | R372 |
+| 370 | تلقين | Lifelong Learning — مدى الحياة | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-370.ts` | R372 |
+| 371 | SLA | Affective Filter Low — خفض المرشح | ✅حقيقي | A0-B2 | طبّق | `lib/tool-371.ts` | R372 |
+| 372 | SLA | Input Flood — إغراق المدخلات | ✅حقيقي | A1-B2 | طبّق | `lib/tool-372.ts` | R372 |
+| 373 | SLA | Input Processing — معالجة المدخلات | ✅حقيقي | A2-B1 | حلّل | `lib/tool-373.ts` | R372 |
+| 374 | SLA | Processing Instruction — تعليم المعالجة | ✅حقيقي | A2-B1 | طبّق | `lib/tool-374.ts` | R372 |
+| 375 | SLA | Garden Path — مسار الحديقة | ✅حقيقي | B1-B2 | فهم | `lib/tool-375.ts` | R372 |
+| 376 | SLA | Frequency Effects — أثر التكرار | ✅حقيقي | A1-B2 | فهم | `lib/tool-376.ts` | R372 |
+| 377 | SLA | Salience — البروز | ✅حقيقي | A1-B2 | فهم | `lib/tool-377.ts` | R372 |
+| 378 | SLA | Noticing Adv — انتباه متقدم | ✅حقيقي | A2-B1 | حلّل | `lib/tool-378.ts` | R372 |
+| 379 | SLA | Awareness Levels — مستويات الوعي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-379.ts` | R372 |
+| 380 | SLA | Implicit vs Explicit — ضمني/صريح | ✅حقيقي | A1-B2 | حلّل | `lib/tool-380.ts` | R372 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (381→480) — إكمال جماعي بنفس القواعد
-| 381 | SLA | أداة 381 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-381.ts` | R352 |
-| 382 | طرائق | أداة 382 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-382.ts` | R352 |
-| 383 | تلقين | أداة 383 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-383.ts` | R352 |
-| 384 | تقويم | أداة 384 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-384.ts` | R352 |
-| 385 | بلوم | أداة 385 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-385.ts` | R352 |
-| 386 | Gamification | أداة 386 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-386.ts` | R352 |
-| 387 | Narrative | أداة 387 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-387.ts` | R352 |
-| 388 | Immersion | أداة 388 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-388.ts` | R352 |
-| 389 | Ethik | أداة 389 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-389.ts` | R352 |
-| 390 | الذاكرة | أداة 390 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-390.ts` | R352 |
-| 391 | SLA | أداة 391 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-391.ts` | R352 |
-| 392 | طرائق | أداة 392 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-392.ts` | R352 |
-| 393 | تلقين | أداة 393 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-393.ts` | R352 |
-| 394 | تقويم | أداة 394 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-394.ts` | R352 |
-| 395 | بلوم | أداة 395 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-395.ts` | R352 |
-| 396 | Gamification | أداة 396 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-396.ts` | R352 |
-| 397 | Narrative | أداة 397 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-397.ts` | R352 |
-| 398 | Immersion | أداة 398 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-398.ts` | R352 |
-| 399 | Ethik | أداة 399 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-399.ts` | R352 |
-| 400 | الذاكرة | أداة 400 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-400.ts` | R352 |
-| 401 | SLA | أداة 401 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-401.ts` | R352 |
-| 402 | طرائق | أداة 402 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-402.ts` | R352 |
-| 403 | تلقين | أداة 403 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-403.ts` | R352 |
-| 404 | تقويم | أداة 404 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-404.ts` | R352 |
-| 405 | بلوم | أداة 405 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-405.ts` | R352 |
-| 406 | Gamification | أداة 406 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-406.ts` | R352 |
-| 407 | Narrative | أداة 407 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-407.ts` | R352 |
-| 408 | Immersion | أداة 408 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-408.ts` | R352 |
-| 409 | Ethik | أداة 409 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-409.ts` | R352 |
-| 410 | الذاكرة | أداة 410 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-410.ts` | R352 |
-| 411 | SLA | أداة 411 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-411.ts` | R352 |
-| 412 | طرائق | أداة 412 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-412.ts` | R352 |
-| 413 | تلقين | أداة 413 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-413.ts` | R352 |
-| 414 | تقويم | أداة 414 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-414.ts` | R352 |
-| 415 | بلوم | أداة 415 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-415.ts` | R352 |
-| 416 | Gamification | أداة 416 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-416.ts` | R352 |
-| 417 | Narrative | أداة 417 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-417.ts` | R352 |
-| 418 | Immersion | أداة 418 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-418.ts` | R352 |
-| 419 | Ethik | أداة 419 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-419.ts` | R352 |
-| 420 | الذاكرة | أداة 420 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-420.ts` | R352 |
-| 421 | SLA | أداة 421 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-421.ts` | R352 |
-| 422 | طرائق | أداة 422 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-422.ts` | R352 |
-| 423 | تلقين | أداة 423 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-423.ts` | R352 |
-| 424 | تقويم | أداة 424 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-424.ts` | R352 |
-| 425 | بلوم | أداة 425 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-425.ts` | R352 |
-| 426 | Gamification | أداة 426 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-426.ts` | R352 |
-| 427 | Narrative | أداة 427 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-427.ts` | R352 |
-| 428 | Immersion | أداة 428 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-428.ts` | R352 |
-| 429 | Ethik | أداة 429 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-429.ts` | R352 |
-| 430 | الذاكرة | أداة 430 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-430.ts` | R352 |
-| 431 | SLA | أداة 431 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-431.ts` | R352 |
-| 432 | طرائق | أداة 432 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-432.ts` | R352 |
-| 433 | تلقين | أداة 433 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-433.ts` | R352 |
-| 434 | تقويم | أداة 434 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-434.ts` | R352 |
-| 435 | بلوم | أداة 435 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-435.ts` | R352 |
-| 436 | Gamification | أداة 436 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-436.ts` | R352 |
-| 437 | Narrative | أداة 437 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-437.ts` | R352 |
-| 438 | Immersion | أداة 438 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-438.ts` | R352 |
-| 439 | Ethik | أداة 439 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-439.ts` | R352 |
-| 440 | الذاكرة | أداة 440 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-440.ts` | R352 |
-| 441 | SLA | أداة 441 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-441.ts` | R352 |
-| 442 | طرائق | أداة 442 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-442.ts` | R352 |
-| 443 | تلقين | أداة 443 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-443.ts` | R352 |
-| 444 | تقويم | أداة 444 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-444.ts` | R352 |
-| 445 | بلوم | أداة 445 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-445.ts` | R352 |
-| 446 | Gamification | أداة 446 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-446.ts` | R352 |
-| 447 | Narrative | أداة 447 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-447.ts` | R352 |
-| 448 | Immersion | أداة 448 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-448.ts` | R352 |
-| 449 | Ethik | أداة 449 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-449.ts` | R352 |
-| 450 | الذاكرة | أداة 450 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-450.ts` | R352 |
-| 451 | SLA | أداة 451 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-451.ts` | R352 |
-| 452 | طرائق | أداة 452 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-452.ts` | R352 |
-| 453 | تلقين | أداة 453 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-453.ts` | R352 |
-| 454 | تقويم | أداة 454 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-454.ts` | R352 |
-| 455 | بلوم | أداة 455 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-455.ts` | R352 |
-| 456 | Gamification | أداة 456 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-456.ts` | R352 |
-| 457 | Narrative | أداة 457 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-457.ts` | R352 |
-| 458 | Immersion | أداة 458 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-458.ts` | R352 |
-| 459 | Ethik | أداة 459 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-459.ts` | R352 |
-| 460 | الذاكرة | أداة 460 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-460.ts` | R352 |
-| 461 | SLA | أداة 461 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-461.ts` | R352 |
-| 462 | طرائق | أداة 462 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-462.ts` | R352 |
-| 463 | تلقين | أداة 463 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-463.ts` | R352 |
-| 464 | تقويم | أداة 464 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-464.ts` | R352 |
-| 465 | بلوم | أداة 465 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-465.ts` | R352 |
-| 466 | Gamification | أداة 466 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-466.ts` | R352 |
-| 467 | Narrative | أداة 467 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-467.ts` | R352 |
-| 468 | Immersion | أداة 468 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-468.ts` | R352 |
-| 469 | Ethik | أداة 469 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-469.ts` | R352 |
-| 470 | الذاكرة | أداة 470 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-470.ts` | R352 |
-| 471 | SLA | أداة 471 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-471.ts` | R352 |
-| 472 | طرائق | أداة 472 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-472.ts` | R352 |
-| 473 | تلقين | أداة 473 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-473.ts` | R352 |
-| 474 | تقويم | أداة 474 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-474.ts` | R352 |
-| 475 | بلوم | أداة 475 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-475.ts` | R352 |
-| 476 | Gamification | أداة 476 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-476.ts` | R352 |
-| 477 | Narrative | أداة 477 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-477.ts` | R352 |
-| 478 | Immersion | أداة 478 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-478.ts` | R352 |
-| 479 | Ethik | أداة 479 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-479.ts` | R352 |
-| 480 | الذاكرة | أداة 480 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-480.ts` | R352 |
+| 381 | SLA | Interface Hypothesis — تداخل | ✅حقيقي | B1-B2 | حلّل | `lib/tool-381.ts` | R372 |
+| 382 | SLA | Skill Acquisition — اكتساب مهارة | ✅حقيقي | A2-B2 | طبّق | `lib/tool-382.ts` | R372 |
+| 383 | SLA | Declarative Procedural — تصريحي/إجرائي | ✅حقيقي | A1-B2 | فهم | `lib/tool-383.ts` | R372 |
+| 384 | الذاكرة | Memory Systems — أنظمة الذاكرة | ✅حقيقي | A1-B2 | فهم | `lib/tool-384.ts` | R372 |
+| 385 | الذاكرة | Working Memory — العاملة | ✅حقيقي | A0-B2 | فهم | `lib/tool-385.ts` | R372 |
+| 386 | الذاكرة | Phonological Loop — حلقة صوتية | ✅حقيقي | A0-A2 | فهم | `lib/tool-386.ts` | R372 |
+| 387 | الذاكرة | Visuospatial Sketchpad — مفكرة بصرية | ✅حقيقي | A0-B1 | فهم | `lib/tool-387.ts` | R372 |
+| 388 | الذاكرة | Episodic Buffer — مخزن عرضي | ✅حقيقي | A1-B2 | فهم | `lib/tool-388.ts` | R372 |
+| 389 | الذاكرة | Central Executive — منفذ مركزي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-389.ts` | R372 |
+| 390 | الذاكرة | Long-Term Memory — طويلة المدى | ✅حقيقي | A0-B2 | فهم | `lib/tool-390.ts` | R372 |
+| 391 | الذاكرة | Semantic Memory — دلالية | ✅حقيقي | A1-B2 | فهم | `lib/tool-391.ts` | R372 |
+| 392 | الذاكرة | Episodic Memory — عرضية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-392.ts` | R372 |
+| 393 | الذاكرة | Procedural Memory — إجرائية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-393.ts` | R372 |
+| 394 | الذاكرة | Priming — تهيئة | ✅حقيقي | A1-B2 | فهم | `lib/tool-394.ts` | R372 |
+| 395 | الذاكرة | Spacing Effect adv — تباعد متقدم | ✅حقيقي | A1-B2 | طبّق | `lib/tool-395.ts` | R372 |
+| 396 | الذاكرة | Testing Effect adv — اختبار متقدم | ✅حقيقي | A1-B2 | طبّق | `lib/tool-396.ts` | R372 |
+| 397 | الذاكرة | Generation Effect adv — توليد | ✅حقيقي | A2-B1 | أنشئ | `lib/tool-397.ts` | R372 |
+| 398 | الذاكرة | Variation Encoding — تنويع ترميز | ✅حقيقي | A1-B2 | حلّل | `lib/tool-398.ts` | R372 |
+| 399 | الذاكرة | Retrieval Effort — جهد استرجاع | ✅حقيقي | B1-B2 | حلّل | `lib/tool-399.ts` | R372 |
+| 400 | الذاكرة | Forgetting Curve — منحنى نسيان | ✅حقيقي | A0-B2 | فهم | `lib/tool-400.ts` | R372 |
+| 401 | SLA | Recast Feedback — استرجاعية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-401.ts` | R372 |
+| 402 | SLA | Explicit Correction — صريح | ✅حقيقي | A1-B2 | طبّق | `lib/tool-402.ts` | R372 |
+| 403 | SLA | Prompt Feedback — تلميح | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-403.ts` | R372 |
+| 404 | SLA | Clarification Request — طلب توضيح | ✅حقيقي | A1-B2 | فهم | `lib/tool-404.ts` | R372 |
+| 405 | SLA | Repetition Feedback — تكرار | ✅حقيقي | A1-B2 | فهم | `lib/tool-405.ts` | R372 |
+| 406 | SLA | Elicitation Feedback — استنباط | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-406.ts` | R372 |
+| 407 | SLA | Metalinguistic Feedback — ما وراء لغوي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-407.ts` | R372 |
+| 408 | تقويم | Peer Correction — تصحيح أقران | ✅حقيقي | A2-B2 | قيّم | `lib/tool-408.ts` | R372 |
+| 409 | تلقين | Self-Correction — ذاتي | ✅حقيقي | A1-B2 | قيّم | `lib/tool-409.ts` | R372 |
+| 410 | SLA | Learner Uptake — التقاط | ✅حقيقي | A1-B2 | حلّل | `lib/tool-410.ts` | R372 |
+| 411 | SLA | Interaction Hypothesis adv — تفاعل | ✅حقيقي | B1-B2 | حلّل | `lib/tool-411.ts` | R372 |
+| 412 | SLA | Negotiation Meaning adv — تفاوض | ✅حقيقي | A1-B2 | طبّق | `lib/tool-412.ts` | R372 |
+| 413 | SLA | Modified Output — إخراج معدّل | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-413.ts` | R372 |
+| 414 | SLA | Comprehensible Output — مفهوم | ✅حقيقي | A2-B2 | طبّق | `lib/tool-414.ts` | R372 |
+| 415 | SLA | Pushed Output — مدفوع | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-415.ts` | R372 |
+| 416 | SLA | Focus on Form/Forms — شكل | ✅حقيقي | A2-B2 | حلّل | `lib/tool-416.ts` | R372 |
+| 417 | SLA | Input Enhancement textual — نصي | ✅حقيقي | A1-B2 | فهم | `lib/tool-417.ts` | R372 |
+| 418 | SLA | Input Enhancement aural — سمعي | ✅حقيقي | A1-B2 | فهم | `lib/tool-418.ts` | R372 |
+| 419 | SLA | Consciousness Raising — رفع وعي | ✅حقيقي | A2-B2 | حلّل | `lib/tool-419.ts` | R372 |
+| 420 | طرائق | Dictogloss Variants — تنويعات | ✅حقيقي | A2-B1 | أنشئ | `lib/tool-420.ts` | R372 |
+| 421 | طرائق | Text Reconstruction — إعادة بناء | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-421.ts` | R372 |
+| 422 | طرائق | Jigsaw Listening — استماع تركيبي | ✅حقيقي | A2-B2 | حلّل | `lib/tool-422.ts` | R372 |
+| 423 | طرائق | Info Gap Listening — فجوة استماع | ✅حقيقي | A1-B2 | طبّق | `lib/tool-423.ts` | R372 |
+| 424 | طرائق | Interview Survey — مقابلة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-424.ts` | R372 |
+| 425 | طرائق | Presentation Skills — عرض | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-425.ts` | R372 |
+| 426 | طرائق | Debate Advanced — مناظرة متقدمة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-426.ts` | R372 |
+| 427 | طرائق | Role Play Advanced — أدوار متقدمة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-427.ts` | R372 |
+| 428 | طرائق | Simulation — محاكاة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-428.ts` | R372 |
+| 429 | طرائق | Case Study adv — دراسة حالة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-429.ts` | R372 |
+| 430 | طرائق | Project-Based adv — مشروعي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-430.ts` | R372 |
+| 431 | SLA | Task Complexity Robinson — تعقيد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-431.ts` | R372 |
+| 432 | SLA | Cognition Hypothesis — إدراك | ✅حقيقي | B1-B2 | حلّل | `lib/tool-432.ts` | R372 |
+| 433 | SLA | Trade-off Hypothesis — مقايضة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-433.ts` | R372 |
+| 434 | SLA | Limited Capacity — سعة محدودة | ✅حقيقي | A1-B2 | فهم | `lib/tool-434.ts` | R372 |
+| 435 | SLA | Attention to Form — انتباه شكل | ✅حقيقي | A2-B1 | فهم | `lib/tool-435.ts` | R372 |
+| 436 | SLA | Noticing Gaps adv — فجوات | ✅حقيقي | B1-B2 | حلّل | `lib/tool-436.ts` | R372 |
+| 437 | SLA | Frequency & Salience — تكرار/بروز | ✅حقيقي | A1-B2 | فهم | `lib/tool-437.ts` | R372 |
+| 438 | طرائق | Formulaic Sequences — صيغية | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-438.ts` | R372 |
+| 439 | طرائق | Lexical Priming — تهيئة معجمية | ✅حقيقي | B1-B2 | فهم | `lib/tool-439.ts` | R372 |
+| 440 | SLA | Construction Grammar — نحو بناء | ✅حقيقي | B1-B2 | حلّل | `lib/tool-440.ts` | R372 |
+| 441 | SLA | Usage-Based — استعمالي | ✅حقيقي | A1-B2 | فهم | `lib/tool-441.ts` | R372 |
+| 442 | SLA | Exemplar Theory — أمثلة | ✅حقيقي | A1-B2 | فهم | `lib/tool-442.ts` | R372 |
+| 443 | SLA | Entrenchment — ترسخ | ✅حقيقي | A1-B2 | فهم | `lib/tool-443.ts` | R372 |
+| 444 | SLA | Schematization — قولبة | ✅حقيقي | B1-B2 | فهم | `lib/tool-444.ts` | R372 |
+| 445 | SLA | Categorization — تصنيف | ✅حقيقي | A1-B2 | فهم | `lib/tool-445.ts` | R372 |
+| 446 | طرائق | Metaphor Awareness — استعارة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-446.ts` | R372 |
+| 447 | طرائق | Metonymy Awareness — كناية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-447.ts` | R372 |
+| 448 | طرائق | Conceptual Metaphor — مفاهيمية | ✅حقيقي | B1-B2 | فهم | `lib/tool-448.ts` | R372 |
+| 449 | تلقين | Embodied Cognition — مجسد | ✅حقيقي | A1-B2 | فهم | `lib/tool-449.ts` | R372 |
+| 450 | طرائق | Gesture and Learning — إيماء | ✅حقيقي | A0-B1 | طبّق | `lib/tool-450.ts` | R372 |
+| 451 | Immersion | Multimodality — وسائط | ✅حقيقي | A1-B2 | فهم | `lib/tool-451.ts` | R372 |
+| 452 | الذاكرة | Visualization — تصور | ✅حقيقي | A0-B1 | فهم | `lib/tool-452.ts` | R372 |
+| 453 | طرائق | Diagram Use — مخططات | ✅حقيقي | A2-B2 | فهم | `lib/tool-453.ts` | R372 |
+| 454 | طرائق | Graphic Organizers — منظمات | ✅حقيقي | A1-B2 | طبّق | `lib/tool-454.ts` | R372 |
+| 455 | طرائق | Mind Mapping — خرائط ذهنية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-455.ts` | R372 |
+| 456 | طرائق | Concept Mapping — مفاهيمية | ✅حقيقي | A2-B2 | حلّل | `lib/tool-456.ts` | R372 |
+| 457 | طرائق | KWL Chart — KWL | ✅حقيقي | A1-B2 | فهم | `lib/tool-457.ts` | R372 |
+| 458 | طرائق | Anticipation Guide — توقع | ✅حقيقي | A2-B2 | فهم | `lib/tool-458.ts` | R372 |
+| 459 | طرائق | Questioning Taxonomy — أسئلة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-459.ts` | R372 |
+| 460 | طرائق | Socratic Questioning — سقراطية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-460.ts` | R372 |
+| 461 | طرائق | Think-Pair-Share — فكّر شارك | ✅حقيقي | A1-B2 | فهم | `lib/tool-461.ts` | R372 |
+| 462 | طرائق | Jigsaw Expert — خبير | ✅حقيقي | B1-B2 | حلّل | `lib/tool-462.ts` | R372 |
+| 463 | طرائق | Numbered Heads — رؤوس مرقمة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-463.ts` | R372 |
+| 464 | طرائق | Gallery Walk — جولة معرض | ✅حقيقي | A1-B2 | فهم | `lib/tool-464.ts` | R372 |
+| 465 | طرائق | Station Rotation — محطات | ✅حقيقي | A1-B2 | طبّق | `lib/tool-465.ts` | R372 |
+| 466 | طرائق | Flipped Classroom — مقلوب | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-466.ts` | R372 |
+| 467 | طرائق | Blended Learning — مدمج | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-467.ts` | R372 |
+| 468 | طرائق | Hybrid Learning — هجين | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-468.ts` | R372 |
+| 469 | Immersion | Mobile Learning — جوّال | ✅حقيقي | A0-B2 | طبّق | `lib/tool-469.ts` | R372 |
+| 470 | Immersion | Microlearning — مصغّر | ✅حقيقي | A0-B2 | فهم | `lib/tool-470.ts` | R372 |
+| 471 | الذاكرة | Spaced Mobile — متباعد جوّال | ✅حقيقي | A1-B2 | طبّق | `lib/tool-471.ts` | R372 |
+| 472 | Gamification | Gamified SRS — مُلعّب | ✅حقيقي | A0-B2 | طبّق | `lib/tool-472.ts` | R372 |
+| 473 | Gamification | Leaderboard Ethics — أخلاقيات | ✅حقيقي | A1-B2 | قيّم | `lib/tool-473.ts` | R372 |
+| 474 | Gamification | Badge Design — شارات | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-474.ts` | R372 |
+| 475 | Gamification | Quest Design adv — مهام | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-475.ts` | R372 |
+| 476 | Narrative | Narrative Branching — تفرع | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-476.ts` | R372 |
+| 477 | Immersion | VR Classroom — افتراضي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-477.ts` | R372 |
+| 478 | Immersion | AR Classroom — معزز | ✅حقيقي | A0-A2 | طبّق | `lib/tool-478.ts` | R372 |
+| 479 | Immersion | Tandem Online — ثنائي | ✅حقيقي | A2-B2 | طبّق | `lib/tool-479.ts` | R372 |
+| 480 | Immersion | Virtual Exchange adv — تبادل | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-480.ts` | R372 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (481→580) — إكمال جماعي بنفس القواعد
-| 481 | SLA | أداة 481 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-481.ts` | R352 |
-| 482 | طرائق | أداة 482 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-482.ts` | R352 |
-| 483 | تلقين | أداة 483 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-483.ts` | R352 |
-| 484 | تقويم | أداة 484 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-484.ts` | R352 |
-| 485 | بلوم | أداة 485 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-485.ts` | R352 |
-| 486 | Gamification | أداة 486 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-486.ts` | R352 |
-| 487 | Narrative | أداة 487 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-487.ts` | R352 |
-| 488 | Immersion | أداة 488 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-488.ts` | R352 |
-| 489 | Ethik | أداة 489 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-489.ts` | R352 |
-| 490 | الذاكرة | أداة 490 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-490.ts` | R352 |
-| 491 | SLA | أداة 491 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-491.ts` | R352 |
-| 492 | طرائق | أداة 492 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-492.ts` | R352 |
-| 493 | تلقين | أداة 493 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-493.ts` | R352 |
-| 494 | تقويم | أداة 494 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-494.ts` | R352 |
-| 495 | بلوم | أداة 495 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-495.ts` | R352 |
-| 496 | Gamification | أداة 496 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-496.ts` | R352 |
-| 497 | Narrative | أداة 497 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-497.ts` | R352 |
-| 498 | Immersion | أداة 498 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-498.ts` | R352 |
-| 499 | Ethik | أداة 499 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-499.ts` | R352 |
-| 500 | الذاكرة | أداة 500 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-500.ts` | R352 |
-| 501 | SLA | أداة 501 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-501.ts` | R352 |
-| 502 | طرائق | أداة 502 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-502.ts` | R352 |
-| 503 | تلقين | أداة 503 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-503.ts` | R352 |
-| 504 | تقويم | أداة 504 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-504.ts` | R352 |
-| 505 | بلوم | أداة 505 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-505.ts` | R352 |
-| 506 | Gamification | أداة 506 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-506.ts` | R352 |
-| 507 | Narrative | أداة 507 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-507.ts` | R352 |
-| 508 | Immersion | أداة 508 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-508.ts` | R352 |
-| 509 | Ethik | أداة 509 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-509.ts` | R352 |
-| 510 | الذاكرة | أداة 510 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-510.ts` | R352 |
-| 511 | SLA | أداة 511 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-511.ts` | R352 |
-| 512 | طرائق | أداة 512 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-512.ts` | R352 |
-| 513 | تلقين | أداة 513 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-513.ts` | R352 |
-| 514 | تقويم | أداة 514 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-514.ts` | R352 |
-| 515 | بلوم | أداة 515 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-515.ts` | R352 |
-| 516 | Gamification | أداة 516 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-516.ts` | R352 |
-| 517 | Narrative | أداة 517 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-517.ts` | R352 |
-| 518 | Immersion | أداة 518 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-518.ts` | R352 |
-| 519 | Ethik | أداة 519 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-519.ts` | R352 |
-| 520 | الذاكرة | أداة 520 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-520.ts` | R352 |
-| 521 | SLA | أداة 521 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-521.ts` | R352 |
-| 522 | طرائق | أداة 522 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-522.ts` | R352 |
-| 523 | تلقين | أداة 523 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-523.ts` | R352 |
-| 524 | تقويم | أداة 524 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-524.ts` | R352 |
-| 525 | بلوم | أداة 525 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-525.ts` | R352 |
-| 526 | Gamification | أداة 526 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-526.ts` | R352 |
-| 527 | Narrative | أداة 527 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-527.ts` | R352 |
-| 528 | Immersion | أداة 528 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-528.ts` | R352 |
-| 529 | Ethik | أداة 529 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-529.ts` | R352 |
-| 530 | الذاكرة | أداة 530 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-530.ts` | R352 |
-| 531 | SLA | أداة 531 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-531.ts` | R352 |
-| 532 | طرائق | أداة 532 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-532.ts` | R352 |
-| 533 | تلقين | أداة 533 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-533.ts` | R352 |
-| 534 | تقويم | أداة 534 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-534.ts` | R352 |
-| 535 | بلوم | أداة 535 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-535.ts` | R352 |
-| 536 | Gamification | أداة 536 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-536.ts` | R352 |
-| 537 | Narrative | أداة 537 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-537.ts` | R352 |
-| 538 | Immersion | أداة 538 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-538.ts` | R352 |
-| 539 | Ethik | أداة 539 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-539.ts` | R352 |
-| 540 | الذاكرة | أداة 540 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-540.ts` | R352 |
-| 541 | SLA | أداة 541 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-541.ts` | R352 |
-| 542 | طرائق | أداة 542 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-542.ts` | R352 |
-| 543 | تلقين | أداة 543 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-543.ts` | R352 |
-| 544 | تقويم | أداة 544 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-544.ts` | R352 |
-| 545 | بلوم | أداة 545 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-545.ts` | R352 |
-| 546 | Gamification | أداة 546 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-546.ts` | R352 |
-| 547 | Narrative | أداة 547 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-547.ts` | R352 |
-| 548 | Immersion | أداة 548 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-548.ts` | R352 |
-| 549 | Ethik | أداة 549 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-549.ts` | R352 |
-| 550 | الذاكرة | أداة 550 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-550.ts` | R352 |
-| 551 | SLA | أداة 551 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-551.ts` | R352 |
-| 552 | طرائق | أداة 552 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-552.ts` | R352 |
-| 553 | تلقين | أداة 553 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-553.ts` | R352 |
-| 554 | تقويم | أداة 554 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-554.ts` | R352 |
-| 555 | بلوم | أداة 555 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-555.ts` | R352 |
-| 556 | Gamification | أداة 556 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-556.ts` | R352 |
-| 557 | Narrative | أداة 557 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-557.ts` | R352 |
-| 558 | Immersion | أداة 558 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-558.ts` | R352 |
-| 559 | Ethik | أداة 559 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-559.ts` | R352 |
-| 560 | الذاكرة | أداة 560 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-560.ts` | R352 |
-| 561 | SLA | أداة 561 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-561.ts` | R352 |
-| 562 | طرائق | أداة 562 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-562.ts` | R352 |
-| 563 | تلقين | أداة 563 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-563.ts` | R352 |
-| 564 | تقويم | أداة 564 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-564.ts` | R352 |
-| 565 | بلوم | أداة 565 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-565.ts` | R352 |
-| 566 | Gamification | أداة 566 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-566.ts` | R352 |
-| 567 | Narrative | أداة 567 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-567.ts` | R352 |
-| 568 | Immersion | أداة 568 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-568.ts` | R352 |
-| 569 | Ethik | أداة 569 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-569.ts` | R352 |
-| 570 | الذاكرة | أداة 570 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-570.ts` | R352 |
-| 571 | SLA | أداة 571 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-571.ts` | R352 |
-| 572 | طرائق | أداة 572 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-572.ts` | R352 |
-| 573 | تلقين | أداة 573 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-573.ts` | R352 |
-| 574 | تقويم | أداة 574 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-574.ts` | R352 |
-| 575 | بلوم | أداة 575 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-575.ts` | R352 |
-| 576 | Gamification | أداة 576 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-576.ts` | R352 |
-| 577 | Narrative | أداة 577 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-577.ts` | R352 |
-| 578 | Immersion | أداة 578 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-578.ts` | R352 |
-| 579 | Ethik | أداة 579 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-579.ts` | R352 |
-| 580 | الذاكرة | أداة 580 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-580.ts` | R352 |
+| 481 | Immersion | Cultural Assimilator — مكيّف | ✅حقيقي | B1-B2 | فهم | `lib/tool-481.ts` | R372 |
+| 482 | Immersion | Critical Incident — حادثة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-482.ts` | R372 |
+| 483 | Immersion | Ethnographic Project — إثنوغرافي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-483.ts` | R372 |
+| 484 | طرائق | Idiomatic Awareness — اصطلاحي | ✅حقيقي | B1-B2 | فهم | `lib/tool-484.ts` | R372 |
+| 485 | SLA | Conceptual Fluency — مفاهيمية | ✅حقيقي | B1-B2 | فهم | `lib/tool-485.ts` | R372 |
+| 486 | SLA | Pragmatic Fluency — تداولية | ✅حقيقي | B1-B2 | طبّق | `lib/tool-486.ts` | R372 |
+| 487 | طرائق | Discourse Fluency — خطابية | ✅حقيقي | B1-B2 | طبّق | `lib/tool-487.ts` | R372 |
+| 488 | SLA | Interactional Competence — تفاعلية | ✅حقيقي | B1-B2 | طبّق | `lib/tool-488.ts` | R372 |
+| 489 | SLA | Strategic Competence — استراتيجية | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-489.ts` | R372 |
+| 490 | SLA | Sociolinguistic Competence — اجتماعية | ✅حقيقي | B1-B2 | فهم | `lib/tool-490.ts` | R372 |
+| 491 | تقويم | Needs Analysis — احتياجات | ✅حقيقي | A0-B2 | حلّل | `lib/tool-491.ts` | R372 |
+| 492 | طرائق | Syllabus Design — منهج | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-492.ts` | R372 |
+| 493 | تقويم | Curriculum Evaluation — تقويم منهج | ✅حقيقي | A0-B2 | قيّم | `lib/tool-493.ts` | R372 |
+| 494 | تقويم | CEFR Alignment — مواءمة | ✅حقيقي | A0-B2 | قيّم | `lib/tool-494.ts` | R372 |
+| 495 | تقويم | Can-Do Descriptors — واصفات | ✅حقيقي | A0-B2 | فهم | `lib/tool-495.ts` | R372 |
+| 496 | تقويم | Profil Deutsch — بروفيل | ✅حقيقي | A1-B2 | فهم | `lib/tool-496.ts` | R372 |
+| 497 | تقويم | GERS Tasks — مهام | ✅حقيقي | A1-B2 | طبّق | `lib/tool-497.ts` | R372 |
+| 498 | تقويم | Telc Format — Telc | ✅حقيقي | A1-B2 | فهم | `lib/tool-498.ts` | R372 |
+| 499 | تقويم | TestDaF Prep — تحضير | ✅حقيقي | B1-B2 | طبّق | `lib/tool-499.ts` | R372 |
+| 500 | تقويم | DSH Prep — DSH | ✅حقيقي | B1-B2 | طبّق | `lib/tool-500.ts` | R372 |
+| 501 | SLA | Elicited Imitation — محاكاة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-501.ts` | R372 |
+| 502 | SLA | Grammaticality Judgment — حكم نحوي | ✅حقيقي | A2-B2 | قيّم | `lib/tool-502.ts` | R372 |
+| 503 | SLA | Self-Paced Reading — قراءة ذاتية | ✅حقيقي | B1-B2 | فهم | `lib/tool-503.ts` | R372 |
+| 504 | SLA | Eye-Tracking — تتبع عين | ✅حقيقي | B1-B2 | حلّل | `lib/tool-504.ts` | R372 |
+| 505 | الذاكرة | ERP N400 P600 — جهد دماغي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-505.ts` | R372 |
+| 506 | الذاكرة | fMRI Language — دماغي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-506.ts` | R372 |
+| 507 | الذاكرة | Lesion Studies — إصابة | ✅حقيقي | B1-B2 | فهم | `lib/tool-507.ts` | R372 |
+| 508 | SLA | Bilingual Advantage — ميزة ثنائية | ✅حقيقي | A0-B2 | فهم | `lib/tool-508.ts` | R372 |
+| 509 | SLA | Code Switching — تناوب | ✅حقيقي | A1-B2 | فهم | `lib/tool-509.ts` | R372 |
+| 510 | SLA | Translanguaging — ترجمة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-510.ts` | R372 |
+| 511 | SLA | Heritage Language — تراثية | ✅حقيقي | A1-B2 | فهم | `lib/tool-511.ts` | R372 |
+| 512 | SLA | Third Language Acquisition — ثالثة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-512.ts` | R372 |
+| 513 | الذاكرة | Multilingual Lexicon — معجم متعدد | ✅حقيقي | A1-B2 | فهم | `lib/tool-513.ts` | R372 |
+| 514 | SLA | Cross-Linguistic Influence — عبر لغوي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-514.ts` | R372 |
+| 515 | SLA | Contrastive Interlanguage — بينية | ✅حقيقي | A1-B2 | حلّل | `lib/tool-515.ts` | R372 |
+| 516 | تقويم | Error Tagging — وسم أخطاء | ✅حقيقي | A1-B2 | حلّل | `lib/tool-516.ts` | R372 |
+| 517 | تقويم | Learner Corpus — مدونة متعلمين | ✅حقيقي | A1-B2 | حلّل | `lib/tool-517.ts` | R372 |
+| 518 | طرائق | Concordancing — توافق | ✅حقيقي | B1-B2 | فهم | `lib/tool-518.ts` | R372 |
+| 519 | طرائق | Word Frequency Lists — تكرار | ✅حقيقي | A0-B2 | فهم | `lib/tool-519.ts` | R372 |
+| 520 | تقويم | Vocabulary Size Test — حجم مفردات | ✅حقيقي | A0-B2 | قيّم | `lib/tool-520.ts` | R372 |
+| 521 | طرائق | CLT Advanced — التواصلية متقدم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-521.ts` | R374 |
+| 522 | طرائق | Action-Oriented CEFR — مقاربة فعلية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-522.ts` | R374 |
+| 523 | طرائق | TBLT Advanced — مهامي متقدم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-523.ts` | R374 |
+| 524 | طرائق | CLIL — محتوى ولغة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-524.ts` | R374 |
+| 525 | طرائق | Dogme Unplugged — بلا كتاب | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-525.ts` | R374 |
+| 526 | طرائق | Lexical Approach adv — معجمي متقدم | ✅حقيقي | B1-B2 | طبّق | `lib/tool-526.ts` | R374 |
+| 527 | طرائق | Corpus-Informed — مستند لمدونة | ✅حقيقي | B1-B2 | فهم | `lib/tool-527.ts` | R374 |
+| 528 | طرائق | DDL Advanced — بيانات متقدم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-528.ts` | R374 |
+| 529 | تقويم | Learner Corpus Use — مدونة متعلم | ✅حقيقي | B1-B2 | حلّل | `lib/tool-529.ts` | R374 |
+| 530 | SLA | Contrastive Interlanguage adv — بينية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-530.ts` | R374 |
+| 531 | SLA | Input Processing adv — معالجة | ✅حقيقي | A2-B2 | حلّل | `lib/tool-531.ts` | R374 |
+| 532 | SLA | Implicit Learning — ضمني | ✅حقيقي | A1-B2 | فهم | `lib/tool-532.ts` | R374 |
+| 533 | SLA | Explicit Learning — صريح | ✅حقيقي | A1-B2 | حلّل | `lib/tool-533.ts` | R374 |
+| 534 | الذاكرة | Incidental Learning — عرضي | ✅حقيقي | A1-B2 | فهم | `lib/tool-534.ts` | R374 |
+| 535 | الذاكرة | Intentional Learning — مقصود | ✅حقيقي | A1-B2 | طبّق | `lib/tool-535.ts` | R374 |
+| 536 | الذاكرة | Involvement Load — عبء انخراط | ✅حقيقي | B1-B2 | حلّل | `lib/tool-536.ts` | R374 |
+| 537 | الذاكرة | Need Search Evaluate — حاجة بحث تقييم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-537.ts` | R374 |
+| 538 | الذاكرة | Depth of Processing — عمق | ✅حقيقي | A1-B2 | حلّل | `lib/tool-538.ts` | R374 |
+| 539 | الذاكرة | Levels of Processing — مستويات | ✅حقيقي | A1-B2 | فهم | `lib/tool-539.ts` | R374 |
+| 540 | الذاكرة | Elaboration — تفصيل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-540.ts` | R374 |
+| 541 | تلقين | Organization Strategies — تنظيم | ✅حقيقي | A1-B2 | حلّل | `lib/tool-541.ts` | R374 |
+| 542 | الذاكرة | Rehearsal Strategies — تدريب | ✅حقيقي | A0-A2 | طبّق | `lib/tool-542.ts` | R374 |
+| 543 | تلقين | Metacognitive Regulation — تنظيم ما وراء | ✅حقيقي | B1-B2 | قيّم | `lib/tool-543.ts` | R374 |
+| 544 | تلقين | Self-Explanation adv — شرح ذاتي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-544.ts` | R374 |
+| 545 | طرائق | Peer Explanation — شرح أقران | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-545.ts` | R374 |
+| 546 | طرائق | Collaborative Explanation — تعاوني | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-546.ts` | R374 |
+| 547 | طرائق | Argumentation — حجاج | ✅حقيقي | B1-B2 | قيّم | `lib/tool-547.ts` | R374 |
+| 548 | تلقين | Critical Thinking adv — نقدي متقدم | ✅حقيقي | B1-B2 | قيّم | `lib/tool-548.ts` | R374 |
+| 549 | تلقين | Reflective Thinking — تأملي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-549.ts` | R374 |
+| 550 | تلقين | Creative Thinking — إبداعي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-550.ts` | R374 |
+| 551 | تقويم | Formative Assessment adv — تكويني متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-551.ts` | R375 |
+| 552 | تقويم | Summative Assessment adv — ختامي متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-552.ts` | R375 |
+| 553 | تقويم | Diagnostic Assessment adv — تشخيصي متقدم | ✅حقيقي | A0-B2 | قيّم | `lib/tool-553.ts` | R375 |
+| 554 | تقويم | Dynamic Assessment FEUERSTEIN — دينامي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-554.ts` | R375 |
+| 555 | تقويم | Portfolio Assessment adv — محفظة متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-555.ts` | R375 |
+| 556 | تقويم | Self-Assessment adv — ذاتي متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-556.ts` | R375 |
+| 557 | تقويم | Peer Assessment adv — أقران متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-557.ts` | R375 |
+| 558 | تقويم | Moderation adv — مواءمة متقدم | ✅حقيقي | A1-B2 | قيّم | `lib/tool-558.ts` | R375 |
+| 559 | تقويم | Standard Setting — تحديد معيار | ✅حقيقي | B1-B2 | قيّم | `lib/tool-559.ts` | R375 |
+| 560 | تقويم | Rater Training — تدريب مقيم | ✅حقيقي | B1-B2 | طبّق | `lib/tool-560.ts` | R375 |
+| 561 | Immersion | VR Immersion adv — انغماس متقدم | ✅حقيقي | A1-B2 | طبّق | `lib/tool-561.ts` | R375 |
+| 562 | Immersion | AR Language Learning — واقع معزز | ✅حقيقي | A0-A2 | طبّق | `lib/tool-562.ts` | R375 |
+| 563 | Immersion | 360 Video — فيديو 360 | ✅حقيقي | A1-B2 | فهم | `lib/tool-563.ts` | R375 |
+| 564 | Immersion | Virtual Exchange 2.0 — تبادل 2.0 | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-564.ts` | R375 |
+| 565 | Immersion | Telecollaboration adv — تعاون متقدم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-565.ts` | R375 |
+| 566 | Immersion | Tandem 2.0 — ثنائي 2.0 | ✅حقيقي | A2-B2 | طبّق | `lib/tool-566.ts` | R375 |
+| 567 | Immersion | E-Tandem — ثنائي إلكتروني | ✅حقيقي | A2-B2 | طبّق | `lib/tool-567.ts` | R375 |
+| 568 | Immersion | Intercultural Telecollab — تفاعل ثقافي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-568.ts` | R375 |
+| 569 | Immersion | Cultural Intelligence — ذكاء ثقافي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-569.ts` | R375 |
+| 570 | Immersion | Intercultural Sensitivity — حساسية ثقافية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-570.ts` | R375 |
+| 571 | Immersion | Decentering — نزع تمركز | ✅حقيقي | B1-B2 | حلّل | `lib/tool-571.ts` | R375 |
+| 572 | Immersion | Perspective Taking — منظور | ✅حقيقي | B1-B2 | حلّل | `lib/tool-572.ts` | R375 |
+| 573 | Immersion | Empathy in Language — تعاطف | ✅حقيقي | A1-B2 | فهم | `lib/tool-573.ts` | R375 |
+| 574 | SLA | Identity and Language — هوية ولغة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-574.ts` | R375 |
+| 575 | SLA | Investment — استثمار | ✅حقيقي | B1-B2 | فهم | `lib/tool-575.ts` | R375 |
+| 576 | SLA | Imagined Communities — مجتمعات متخيلة | ✅حقيقي | B1-B2 | فهم | `lib/tool-576.ts` | R375 |
+| 577 | تلقين | Motivation Dörnyei — دافعية | ✅حقيقي | A1-B2 | قيّم | `lib/tool-577.ts` | R375 |
+| 578 | تلقين | L2 Motivational Self — ذات دافعية | ✅حقيقي | A1-B2 | حلّل | `lib/tool-578.ts` | R375 |
+| 579 | تلقين | Ideal L2 Self — ذات مثالية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-579.ts` | R375 |
+| 580 | تلقين | Ought-to L2 Self — ذات يجب | ✅حقيقي | A1-B2 | فهم | `lib/tool-580.ts` | R375 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (581→680) — إكمال جماعي بنفس القواعد
-| 581 | SLA | أداة 581 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-581.ts` | R352 |
-| 582 | طرائق | أداة 582 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-582.ts` | R352 |
-| 583 | تلقين | أداة 583 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-583.ts` | R352 |
-| 584 | تقويم | أداة 584 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-584.ts` | R352 |
-| 585 | بلوم | أداة 585 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-585.ts` | R352 |
-| 586 | Gamification | أداة 586 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-586.ts` | R352 |
-| 587 | Narrative | أداة 587 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-587.ts` | R352 |
-| 588 | Immersion | أداة 588 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-588.ts` | R352 |
-| 589 | Ethik | أداة 589 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-589.ts` | R352 |
-| 590 | الذاكرة | أداة 590 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-590.ts` | R352 |
-| 591 | SLA | أداة 591 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-591.ts` | R352 |
-| 592 | طرائق | أداة 592 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-592.ts` | R352 |
-| 593 | تلقين | أداة 593 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-593.ts` | R352 |
-| 594 | تقويم | أداة 594 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-594.ts` | R352 |
-| 595 | بلوم | أداة 595 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-595.ts` | R352 |
-| 596 | Gamification | أداة 596 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-596.ts` | R352 |
-| 597 | Narrative | أداة 597 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-597.ts` | R352 |
-| 598 | Immersion | أداة 598 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-598.ts` | R352 |
-| 599 | Ethik | أداة 599 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-599.ts` | R352 |
-| 600 | الذاكرة | أداة 600 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-600.ts` | R352 |
-| 601 | SLA | أداة 601 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-601.ts` | R352 |
-| 602 | طرائق | أداة 602 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-602.ts` | R352 |
-| 603 | تلقين | أداة 603 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-603.ts` | R352 |
-| 604 | تقويم | أداة 604 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-604.ts` | R352 |
-| 605 | بلوم | أداة 605 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-605.ts` | R352 |
-| 606 | Gamification | أداة 606 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-606.ts` | R352 |
-| 607 | Narrative | أداة 607 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-607.ts` | R352 |
-| 608 | Immersion | أداة 608 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-608.ts` | R352 |
-| 609 | Ethik | أداة 609 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-609.ts` | R352 |
-| 610 | الذاكرة | أداة 610 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-610.ts` | R352 |
-| 611 | SLA | أداة 611 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-611.ts` | R352 |
-| 612 | طرائق | أداة 612 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-612.ts` | R352 |
-| 613 | تلقين | أداة 613 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-613.ts` | R352 |
-| 614 | تقويم | أداة 614 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-614.ts` | R352 |
-| 615 | بلوم | أداة 615 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-615.ts` | R352 |
-| 616 | Gamification | أداة 616 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-616.ts` | R352 |
-| 617 | Narrative | أداة 617 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-617.ts` | R352 |
-| 618 | Immersion | أداة 618 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-618.ts` | R352 |
-| 619 | Ethik | أداة 619 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-619.ts` | R352 |
-| 620 | الذاكرة | أداة 620 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-620.ts` | R352 |
-| 621 | SLA | أداة 621 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-621.ts` | R352 |
-| 622 | طرائق | أداة 622 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-622.ts` | R352 |
-| 623 | تلقين | أداة 623 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-623.ts` | R352 |
-| 624 | تقويم | أداة 624 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-624.ts` | R352 |
-| 625 | بلوم | أداة 625 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-625.ts` | R352 |
-| 626 | Gamification | أداة 626 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-626.ts` | R352 |
-| 627 | Narrative | أداة 627 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-627.ts` | R352 |
-| 628 | Immersion | أداة 628 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-628.ts` | R352 |
-| 629 | Ethik | أداة 629 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-629.ts` | R352 |
-| 630 | الذاكرة | أداة 630 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-630.ts` | R352 |
-| 631 | SLA | أداة 631 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-631.ts` | R352 |
-| 632 | طرائق | أداة 632 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-632.ts` | R352 |
-| 633 | تلقين | أداة 633 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-633.ts` | R352 |
-| 634 | تقويم | أداة 634 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-634.ts` | R352 |
-| 635 | بلوم | أداة 635 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-635.ts` | R352 |
-| 636 | Gamification | أداة 636 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-636.ts` | R352 |
-| 637 | Narrative | أداة 637 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-637.ts` | R352 |
-| 638 | Immersion | أداة 638 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-638.ts` | R352 |
-| 639 | Ethik | أداة 639 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-639.ts` | R352 |
-| 640 | الذاكرة | أداة 640 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-640.ts` | R352 |
-| 641 | SLA | أداة 641 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-641.ts` | R352 |
-| 642 | طرائق | أداة 642 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-642.ts` | R352 |
-| 643 | تلقين | أداة 643 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-643.ts` | R352 |
-| 644 | تقويم | أداة 644 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-644.ts` | R352 |
-| 645 | بلوم | أداة 645 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-645.ts` | R352 |
-| 646 | Gamification | أداة 646 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-646.ts` | R352 |
-| 647 | Narrative | أداة 647 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-647.ts` | R352 |
-| 648 | Immersion | أداة 648 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-648.ts` | R352 |
-| 649 | Ethik | أداة 649 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-649.ts` | R352 |
-| 650 | الذاكرة | أداة 650 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-650.ts` | R352 |
-| 651 | SLA | أداة 651 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-651.ts` | R352 |
-| 652 | طرائق | أداة 652 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-652.ts` | R352 |
-| 653 | تلقين | أداة 653 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-653.ts` | R352 |
-| 654 | تقويم | أداة 654 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-654.ts` | R352 |
-| 655 | بلوم | أداة 655 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-655.ts` | R352 |
-| 656 | Gamification | أداة 656 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-656.ts` | R352 |
-| 657 | Narrative | أداة 657 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-657.ts` | R352 |
-| 658 | Immersion | أداة 658 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-658.ts` | R352 |
-| 659 | Ethik | أداة 659 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-659.ts` | R352 |
-| 660 | الذاكرة | أداة 660 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-660.ts` | R352 |
-| 661 | SLA | أداة 661 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-661.ts` | R352 |
-| 662 | طرائق | أداة 662 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-662.ts` | R352 |
-| 663 | تلقين | أداة 663 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-663.ts` | R352 |
-| 664 | تقويم | أداة 664 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-664.ts` | R352 |
-| 665 | بلوم | أداة 665 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-665.ts` | R352 |
-| 666 | Gamification | أداة 666 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-666.ts` | R352 |
-| 667 | Narrative | أداة 667 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-667.ts` | R352 |
-| 668 | Immersion | أداة 668 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-668.ts` | R352 |
-| 669 | Ethik | أداة 669 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-669.ts` | R352 |
-| 670 | الذاكرة | أداة 670 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-670.ts` | R352 |
-| 671 | SLA | أداة 671 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-671.ts` | R352 |
-| 672 | طرائق | أداة 672 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-672.ts` | R352 |
-| 673 | تلقين | أداة 673 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-673.ts` | R352 |
-| 674 | تقويم | أداة 674 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-674.ts` | R352 |
-| 675 | بلوم | أداة 675 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-675.ts` | R352 |
-| 676 | Gamification | أداة 676 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-676.ts` | R352 |
-| 677 | Narrative | أداة 677 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-677.ts` | R352 |
-| 678 | Immersion | أداة 678 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-678.ts` | R352 |
-| 679 | Ethik | أداة 679 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-679.ts` | R352 |
-| 680 | الذاكرة | أداة 680 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-680.ts` | R352 |
+| 581 | SLA | WTC MacIntyre — استعداد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-581.ts` | R376 |
+| 582 | SLA | Willingness to Speak — استعداد كلام | ✅حقيقي | B1-B2 | طبّق | `lib/tool-582.ts` | R376 |
+| 583 | SLA | Foreign Language Anxiety — قلق | ✅حقيقي | A0-B2 | حلّل | `lib/tool-583.ts` | R376 |
+| 584 | تلقين | Enjoyment Boudreau — متعة | ✅حقيقي | A1-B2 | فهم | `lib/tool-584.ts` | R376 |
+| 585 | تلقين | Boredom Kruk — ملل | ✅حقيقي | A1-B2 | حلّل | `lib/tool-585.ts` | R376 |
+| 586 | تلقين | Grit Sudina — مثابرة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-586.ts` | R376 |
+| 587 | تلقين | Buoyancy Martin — مرونة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-587.ts` | R376 |
+| 588 | تلقين | Engagement Hiver — انخراط | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-588.ts` | R376 |
+| 589 | تلقين | Flow Egbert — تدفق | ✅حقيقي | A1-B2 | طبّق | `lib/tool-589.ts` | R376 |
+| 590 | تلقين | Mindfulness Mercer — يقظة | ✅حقيقي | A1-B2 | فهم | `lib/tool-590.ts` | R376 |
+| 591 | SLA | Listening Anxiety — قلق استماع | ✅حقيقي | A1-B2 | حلّل | `lib/tool-591.ts` | R376 |
+| 592 | SLA | Speaking Anxiety — قلق تحدث | ✅حقيقي | A1-B2 | حلّل | `lib/tool-592.ts` | R376 |
+| 593 | SLA | Writing Anxiety — قلق كتابة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-593.ts` | R376 |
+| 594 | SLA | Reading Anxiety — قلق قراءة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-594.ts` | R376 |
+| 595 | تقويم | Test Anxiety — قلق اختبار | ✅حقيقي | A1-B2 | حلّل | `lib/tool-595.ts` | R376 |
+| 596 | تلقين | Perfectionism — كمالية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-596.ts` | R376 |
+| 597 | تلقين | Self-Compassion — تعاطف ذاتي | ✅حقيقي | A1-B2 | فهم | `lib/tool-597.ts` | R376 |
+| 598 | تلقين | Resilience — صمود | ✅حقيقي | A1-B2 | قيّم | `lib/tool-598.ts` | R376 |
+| 599 | تلقين | Wellbeing Seligman — رفاهية | ✅حقيقي | A0-B2 | فهم | `lib/tool-599.ts` | R376 |
+| 600 | تلقين | PERMA — بيرما | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-600.ts` | R376 |
+| 601 | طرائق | EMI — تدريس بالإنجليزية | ✅حقيقي | B1-B2 | فهم | `lib/tool-601.ts` | R376 |
+| 602 | تقويم | CLIL Assessment — تقويم كليل | ✅حقيقي | B1-B2 | قيّم | `lib/tool-602.ts` | R376 |
+| 603 | SLA | Translanguaging Garcia — ترجمة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-603.ts` | R376 |
+| 604 | SLA | Code-Switching Myers — تناوب | ✅حقيقي | A1-B2 | فهم | `lib/tool-604.ts` | R376 |
+| 605 | SLA | Plurilingual Competence — متعددة | ✅حقيقي | A0-B2 | فهم | `lib/tool-605.ts` | R376 |
+| 606 | طرائق | Mediation CEFR — وساطة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-606.ts` | R376 |
+| 607 | Immersion | Online Interaction — تفاعل إنترنت | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-607.ts` | R376 |
+| 608 | Immersion | Digital Literacy — محو رقمي | ✅حقيقي | A1-B2 | فهم | `lib/tool-608.ts` | R376 |
+| 609 | Immersion | Telecollaboration 2.0 — تعاون | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-609.ts` | R376 |
+| 610 | تقويم | Virtual Exchange Assessment — تقويم تبادل | ✅حقيقي | B1-B2 | قيّم | `lib/tool-610.ts` | R376 |
+| 611 | SLA | Sociocultural Theory — اجتماعية ثقافية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-611.ts` | R377 |
+| 612 | SLA | Activity Theory — نشاط | ✅حقيقي | B1-B2 | حلّل | `lib/tool-612.ts` | R377 |
+| 613 | SLA | Communities of Practice — مجتمعات | ✅حقيقي | A1-B2 | فهم | `lib/tool-613.ts` | R377 |
+| 614 | SLA | Legitimate Peripheral Participation — هامشية | ✅حقيقي | A1-B2 | فهم | `lib/tool-614.ts` | R377 |
+| 615 | SLA | Ecological SLA — بيئي | ✅حقيقي | A1-B2 | فهم | `lib/tool-615.ts` | R377 |
+| 616 | SLA | Complex Dynamic Systems — ديناميكية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-616.ts` | R377 |
+| 617 | الذاكرة | Dynamic Systems Vocabulary — دينامية مفردات | ✅حقيقي | A1-B2 | فهم | `lib/tool-617.ts` | R377 |
+| 618 | SLA | Usage-Based Phonology — صوتيات استعمالية | ✅حقيقي | A1-B2 | فهم | `lib/tool-618.ts` | R377 |
+| 619 | SLA | Exemplar Phonology — أمثولية | ✅حقيقي | B1-B2 | فهم | `lib/tool-619.ts` | R377 |
+| 620 | SLA | Gestural Phonology — إيمائية | ✅حقيقي | A0-A2 | طبّق | `lib/tool-620.ts` | R377 |
+| 621 | SLA | Articulatory Phonology — نطقية | ✅حقيقي | A0-A2 | فهم | `lib/tool-621.ts` | R377 |
+| 622 | SLA | Perceptual Assimilation — استيعاب | ✅حقيقي | A1-B2 | فهم | `lib/tool-622.ts` | R377 |
+| 623 | SLA | Speech Learning Model — نموذج كلام | ✅حقيقي | A1-B2 | حلّل | `lib/tool-623.ts` | R377 |
+| 624 | SLA | Native Language Magnet — مغناطيس | ✅حقيقي | A0-A2 | فهم | `lib/tool-624.ts` | R377 |
+| 625 | SLA | Critical Period Hypothesis — فترة حرجة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-625.ts` | R377 |
+| 626 | SLA | Age Effects — أثر عمر | ✅حقيقي | B1-B2 | حلّل | `lib/tool-626.ts` | R377 |
+| 627 | SLA | Maturational Constraints — قيود نضج | ✅حقيقي | B1-B2 | فهم | `lib/tool-627.ts` | R377 |
+| 628 | SLA | Bilingual First Language — ثنائية أولى | ✅حقيقي | A0-B2 | فهم | `lib/tool-628.ts` | R377 |
+| 629 | SLA | Child L2 Acquisition — طفل | ✅حقيقي | A1-B2 | فهم | `lib/tool-629.ts` | R377 |
+| 630 | SLA | Adult L2 Acquisition — كبير | ✅حقيقي | A1-B2 | حلّل | `lib/tool-630.ts` | R377 |
+| 631 | SLA | Heritage Language Acquisition — تراثية | ✅حقيقي | A1-B2 | فهم | `lib/tool-631.ts` | R377 |
+| 632 | SLA | Third Language Acquisition adv — ثالثة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-632.ts` | R377 |
+| 633 | SLA | Cross-Linguistic Influence adv — عبر | ✅حقيقي | B1-B2 | حلّل | `lib/tool-633.ts` | R377 |
+| 634 | SLA | Transferability — قابلية نقل | ✅حقيقي | A1-B2 | فهم | `lib/tool-634.ts` | R377 |
+| 635 | SLA | Markedness — تميّز | ✅حقيقي | B1-B2 | فهم | `lib/tool-635.ts` | R377 |
+| 636 | SLA | Typological Primacy — أسبقية نمطية | ✅حقيقي | B1-B2 | فهم | `lib/tool-636.ts` | R377 |
+| 637 | SLA | Linguistic Proximity — تقارب | ✅حقيقي | A1-B2 | فهم | `lib/tool-637.ts` | R377 |
+| 638 | SLA | Psychotypology — تصنيف نفسي | ✅حقيقي | A1-B2 | فهم | `lib/tool-638.ts` | R377 |
+| 639 | SLA | Multilingual Awareness — وعي متعدد | ✅حقيقي | A1-B2 | حلّل | `lib/tool-639.ts` | R377 |
+| 640 | SLA | Third Language Modelling — نمذجة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-640.ts` | R377 |
+| 641 | طرائق | Formulaic Language Wray — صيغية | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-641.ts` | R378 |
+| 642 | طرائق | Lexical Bundles Biber — حزم | ✅حقيقي | B1-B2 | فهم | `lib/tool-642.ts` | R378 |
+| 643 | طرائق | Collocation Sinclair — تصاحب | ✅حقيقي | A2-B2 | طبّق | `lib/tool-643.ts` | R378 |
+| 644 | طرائق | Idiom Boers — تعابير | ✅حقيقي | B1-B2 | فهم | `lib/tool-644.ts` | R378 |
+| 645 | طرائق | Metaphor Littlemore — استعارة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-645.ts` | R378 |
+| 646 | الذاكرة | Vocabulary Size Nation — حجم | ✅حقيقي | A0-B2 | قيّم | `lib/tool-646.ts` | R378 |
+| 647 | طرائق | Frequency Lists Brezina — تكرار | ✅حقيقي | A0-B2 | فهم | `lib/tool-647.ts` | R378 |
+| 648 | الذاكرة | Word Associations — ارتباطات | ✅حقيقي | A1-B2 | فهم | `lib/tool-648.ts` | R378 |
+| 649 | الذاكرة | Lexical Availability — توفر | ✅حقيقي | A1-B2 | فهم | `lib/tool-649.ts` | R378 |
+| 650 | تقويم | Lexical Diversity Malvern — تنوع | ✅حقيقي | B1-B2 | قيّم | `lib/tool-650.ts` | R378 |
+| 651 | تقويم | Lexical Sophistication — رقي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-651.ts` | R378 |
+| 652 | طرائق | Academic Vocabulary Coxhead — أكاديمية | ✅حقيقي | B1-B2 | فهم | `lib/tool-652.ts` | R378 |
+| 653 | طرائق | Technical Vocabulary — تقنية | ✅حقيقي | B1-B2 | فهم | `lib/tool-653.ts` | R378 |
+| 654 | طرائق | Multiword Units — وحدات | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-654.ts` | R378 |
+| 655 | SLA | Phrasal Verbs Garnier — مركبة | ✅حقيقي | B1-B2 | طبّق | `lib/tool-655.ts` | R378 |
+| 656 | SLA | Prepositional Verbs — حرفية | ✅حقيقي | A2-B2 | طبّق | `lib/tool-656.ts` | R378 |
+| 657 | SLA | Colligation Hoey — نحوي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-657.ts` | R378 |
+| 658 | SLA | Pattern Grammar Hunston — أنماط | ✅حقيقي | B1-B2 | حلّل | `lib/tool-658.ts` | R378 |
+| 659 | SLA | Valency Herbst — تكافؤ | ✅حقيقي | B1-B2 | حلّل | `lib/tool-659.ts` | R378 |
+| 660 | SLA | Construction Grammar Goldberg adv — بناء | ✅حقيقي | B1-B2 | حلّل | `lib/tool-660.ts` | R378 |
+| 661 | SLA | Cognitive Grammar Langacker — معرفي | ✅حقيقي | B1-B2 | فهم | `lib/tool-661.ts` | R378 |
+| 662 | SLA | Frame Semantics Fillmore — إطار | ✅حقيقي | B1-B2 | فهم | `lib/tool-662.ts` | R378 |
+| 663 | تلقين | Conceptual Blending Fauconnier — مزج | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-663.ts` | R378 |
+| 664 | تلقين | Mental Spaces — فضاءات | ✅حقيقي | B1-B2 | فهم | `lib/tool-664.ts` | R378 |
+| 665 | تلقين | Embodied Semantics — مجسدة | ✅حقيقي | A1-B2 | فهم | `lib/tool-665.ts` | R378 |
+| 666 | طرائق | Gesture McNeill — إيماء | ✅حقيقي | A0-B1 | طبّق | `lib/tool-666.ts` | R378 |
+| 667 | SLA | Iconicity Perniss — أيقونية | ✅حقيقي | A1-B2 | فهم | `lib/tool-667.ts` | R378 |
+| 668 | SLA | Sound Symbolism Dingemanse — رمزية | ✅حقيقي | A1-B2 | فهم | `lib/tool-668.ts` | R378 |
+| 669 | طرائق | Onomatopoeia — محاكاة | ✅حقيقي | A0-A2 | فهم | `lib/tool-669.ts` | R378 |
+| 670 | طرائق | Ideophones — تصويرية | ✅حقيقي | A1-B2 | فهم | `lib/tool-670.ts` | R378 |
+| 671 | SLA | Pragmatic Markers — علامات تداولية | ✅حقيقي | B1-B2 | فهم | `lib/tool-671.ts` | R379 |
+| 672 | SLA | Discourse Particles — جسيمات | ✅حقيقي | B1-B2 | فهم | `lib/tool-672.ts` | R379 |
+| 673 | SLA | Modal Particles — نمطية | ✅حقيقي | B1-B2 | طبّق | `lib/tool-673.ts` | R379 |
+| 674 | طرائق | Hedging — تحوط | ✅حقيقي | B1-B2 | فهم | `lib/tool-674.ts` | R379 |
+| 675 | طرائق | Boosting — تعزيز | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-675.ts` | R379 |
+| 676 | طرائق | Stance Markers — موقف | ✅حقيقي | B1-B2 | حلّل | `lib/tool-676.ts` | R379 |
+| 677 | طرائق | Engagement Markers — انخراط | ✅حقيقي | B1-B2 | طبّق | `lib/tool-677.ts` | R379 |
+| 678 | SLA | Evidentiality — استدلالية | ✅حقيقي | B1-B2 | فهم | `lib/tool-678.ts` | R379 |
+| 679 | SLA | Epistemic Modality — معرفية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-679.ts` | R379 |
+| 680 | SLA | Deontic Modality — الزامي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-680.ts` | R379 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (681→780) — إكمال جماعي بنفس القواعد
-| 681 | SLA | أداة 681 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-681.ts` | R352 |
-| 682 | طرائق | أداة 682 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-682.ts` | R352 |
-| 683 | تلقين | أداة 683 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-683.ts` | R352 |
-| 684 | تقويم | أداة 684 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-684.ts` | R352 |
-| 685 | بلوم | أداة 685 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-685.ts` | R352 |
-| 686 | Gamification | أداة 686 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-686.ts` | R352 |
-| 687 | Narrative | أداة 687 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-687.ts` | R352 |
-| 688 | Immersion | أداة 688 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-688.ts` | R352 |
-| 689 | Ethik | أداة 689 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-689.ts` | R352 |
-| 690 | الذاكرة | أداة 690 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-690.ts` | R352 |
-| 691 | SLA | أداة 691 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-691.ts` | R352 |
-| 692 | طرائق | أداة 692 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-692.ts` | R352 |
-| 693 | تلقين | أداة 693 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-693.ts` | R352 |
-| 694 | تقويم | أداة 694 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-694.ts` | R352 |
-| 695 | بلوم | أداة 695 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-695.ts` | R352 |
-| 696 | Gamification | أداة 696 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-696.ts` | R352 |
-| 697 | Narrative | أداة 697 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-697.ts` | R352 |
-| 698 | Immersion | أداة 698 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-698.ts` | R352 |
-| 699 | Ethik | أداة 699 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-699.ts` | R352 |
-| 700 | الذاكرة | أداة 700 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-700.ts` | R352 |
-| 701 | SLA | أداة 701 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-701.ts` | R352 |
-| 702 | طرائق | أداة 702 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-702.ts` | R352 |
-| 703 | تلقين | أداة 703 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-703.ts` | R352 |
-| 704 | تقويم | أداة 704 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-704.ts` | R352 |
-| 705 | بلوم | أداة 705 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-705.ts` | R352 |
-| 706 | Gamification | أداة 706 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-706.ts` | R352 |
-| 707 | Narrative | أداة 707 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-707.ts` | R352 |
-| 708 | Immersion | أداة 708 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-708.ts` | R352 |
-| 709 | Ethik | أداة 709 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-709.ts` | R352 |
-| 710 | الذاكرة | أداة 710 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-710.ts` | R352 |
-| 711 | SLA | أداة 711 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-711.ts` | R352 |
-| 712 | طرائق | أداة 712 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-712.ts` | R352 |
-| 713 | تلقين | أداة 713 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-713.ts` | R352 |
-| 714 | تقويم | أداة 714 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-714.ts` | R352 |
-| 715 | بلوم | أداة 715 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-715.ts` | R352 |
-| 716 | Gamification | أداة 716 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-716.ts` | R352 |
-| 717 | Narrative | أداة 717 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-717.ts` | R352 |
-| 718 | Immersion | أداة 718 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-718.ts` | R352 |
-| 719 | Ethik | أداة 719 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-719.ts` | R352 |
-| 720 | الذاكرة | أداة 720 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-720.ts` | R352 |
-| 721 | SLA | أداة 721 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-721.ts` | R352 |
-| 722 | طرائق | أداة 722 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-722.ts` | R352 |
-| 723 | تلقين | أداة 723 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-723.ts` | R352 |
-| 724 | تقويم | أداة 724 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-724.ts` | R352 |
-| 725 | بلوم | أداة 725 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-725.ts` | R352 |
-| 726 | Gamification | أداة 726 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-726.ts` | R352 |
-| 727 | Narrative | أداة 727 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-727.ts` | R352 |
-| 728 | Immersion | أداة 728 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-728.ts` | R352 |
-| 729 | Ethik | أداة 729 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-729.ts` | R352 |
-| 730 | الذاكرة | أداة 730 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-730.ts` | R352 |
-| 731 | SLA | أداة 731 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-731.ts` | R352 |
-| 732 | طرائق | أداة 732 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-732.ts` | R352 |
-| 733 | تلقين | أداة 733 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-733.ts` | R352 |
-| 734 | تقويم | أداة 734 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-734.ts` | R352 |
-| 735 | بلوم | أداة 735 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-735.ts` | R352 |
-| 736 | Gamification | أداة 736 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-736.ts` | R352 |
-| 737 | Narrative | أداة 737 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-737.ts` | R352 |
-| 738 | Immersion | أداة 738 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-738.ts` | R352 |
-| 739 | Ethik | أداة 739 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-739.ts` | R352 |
-| 740 | الذاكرة | أداة 740 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-740.ts` | R352 |
-| 741 | SLA | أداة 741 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-741.ts` | R352 |
-| 742 | طرائق | أداة 742 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-742.ts` | R352 |
-| 743 | تلقين | أداة 743 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-743.ts` | R352 |
-| 744 | تقويم | أداة 744 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-744.ts` | R352 |
-| 745 | بلوم | أداة 745 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-745.ts` | R352 |
-| 746 | Gamification | أداة 746 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-746.ts` | R352 |
-| 747 | Narrative | أداة 747 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-747.ts` | R352 |
-| 748 | Immersion | أداة 748 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-748.ts` | R352 |
-| 749 | Ethik | أداة 749 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-749.ts` | R352 |
-| 750 | الذاكرة | أداة 750 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-750.ts` | R352 |
-| 751 | SLA | أداة 751 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-751.ts` | R352 |
-| 752 | طرائق | أداة 752 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-752.ts` | R352 |
-| 753 | تلقين | أداة 753 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-753.ts` | R352 |
-| 754 | تقويم | أداة 754 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-754.ts` | R352 |
-| 755 | بلوم | أداة 755 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-755.ts` | R352 |
-| 756 | Gamification | أداة 756 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-756.ts` | R352 |
-| 757 | Narrative | أداة 757 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-757.ts` | R352 |
-| 758 | Immersion | أداة 758 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-758.ts` | R352 |
-| 759 | Ethik | أداة 759 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-759.ts` | R352 |
-| 760 | الذاكرة | أداة 760 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-760.ts` | R352 |
-| 761 | SLA | أداة 761 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-761.ts` | R352 |
-| 762 | طرائق | أداة 762 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-762.ts` | R352 |
-| 763 | تلقين | أداة 763 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-763.ts` | R352 |
-| 764 | تقويم | أداة 764 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-764.ts` | R352 |
-| 765 | بلوم | أداة 765 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-765.ts` | R352 |
-| 766 | Gamification | أداة 766 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-766.ts` | R352 |
-| 767 | Narrative | أداة 767 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-767.ts` | R352 |
-| 768 | Immersion | أداة 768 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-768.ts` | R352 |
-| 769 | Ethik | أداة 769 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-769.ts` | R352 |
-| 770 | الذاكرة | أداة 770 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-770.ts` | R352 |
-| 771 | SLA | أداة 771 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-771.ts` | R352 |
-| 772 | طرائق | أداة 772 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-772.ts` | R352 |
-| 773 | تلقين | أداة 773 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-773.ts` | R352 |
-| 774 | تقويم | أداة 774 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-774.ts` | R352 |
-| 775 | بلوم | أداة 775 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-775.ts` | R352 |
-| 776 | Gamification | أداة 776 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-776.ts` | R352 |
-| 777 | Narrative | أداة 777 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-777.ts` | R352 |
-| 778 | Immersion | أداة 778 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-778.ts` | R352 |
-| 779 | Ethik | أداة 779 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-779.ts` | R352 |
-| 780 | الذاكرة | أداة 780 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-780.ts` | R352 |
+| 681 | طرائق | Cohesion Halliday — تماسك | ✅حقيقي | B1-B2 | حلّل | `lib/tool-681.ts` | R379 |
+| 682 | طرائق | Coherence Kintsch — انسجام | ✅حقيقي | B1-B2 | حلّل | `lib/tool-682.ts` | R379 |
+| 683 | طرائق | Thematic Progression — تقدم | ✅حقيقي | B1-B2 | فهم | `lib/tool-683.ts` | R379 |
+| 684 | SLA | Information Structure — بنية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-684.ts` | R379 |
+| 685 | SLA | Topic Focus — موضوع | ✅حقيقي | A2-B2 | فهم | `lib/tool-685.ts` | R379 |
+| 686 | SLA | Given New — معطى/جديد | ✅حقيقي | A1-B2 | فهم | `lib/tool-686.ts` | R379 |
+| 687 | SLA | Presupposition — افتراض | ✅حقيقي | B1-B2 | حلّل | `lib/tool-687.ts` | R379 |
+| 688 | SLA | Implicature Grice — استلزام | ✅حقيقي | B1-B2 | حلّل | `lib/tool-688.ts` | R379 |
+| 689 | SLA | Speech Act Searle — فعل كلامي | ✅حقيقي | B1-B2 | طبّق | `lib/tool-689.ts` | R379 |
+| 690 | SLA | Politeness Brown adv — تأدب | ✅حقيقي | B1-B2 | فهم | `lib/tool-690.ts` | R379 |
+| 691 | SLA | Face Threatening Acts — تهديد وجه | ✅حقيقي | B1-B2 | حلّل | `lib/tool-691.ts` | R379 |
+| 692 | Immersion | Cross-Cultural Pragmatics — عبر ثقافية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-692.ts` | R379 |
+| 693 | SLA | Interlanguage Pragmatics — بينية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-693.ts` | R379 |
+| 694 | SLA | Pragmatic Transfer — نقل | ✅حقيقي | B1-B2 | حلّل | `lib/tool-694.ts` | R379 |
+| 695 | SLA | Pragmatic Awareness — وعي | ✅حقيقي | B1-B2 | فهم | `lib/tool-695.ts` | R379 |
+| 696 | SLA | Noticing Pragmatics — انتباه | ✅حقيقي | B1-B2 | فهم | `lib/tool-696.ts` | R379 |
+| 697 | طرائق | Explicit Pragmatic Instruction — صريح | ✅حقيقي | B1-B2 | طبّق | `lib/tool-697.ts` | R379 |
+| 698 | طرائق | Implicit Pragmatic Instruction — ضمني | ✅حقيقي | B1-B2 | طبّق | `lib/tool-698.ts` | R379 |
+| 699 | طرائق | Conventional Expressions — اصطلاحية | ✅حقيقي | B1-B2 | تذكّر | `lib/tool-699.ts` | R379 |
+| 700 | طرائق | Routine Formulas — روتينية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-700.ts` | R379 |
+| 701 | طرائق | Genre Swales — نوع نصي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-701.ts` | R380 |
+| 702 | طرائق | Move Analysis — خطوات | ✅حقيقي | B1-B2 | حلّل | `lib/tool-702.ts` | R380 |
+| 703 | طرائق | Rhetorical Structure — بلاغية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-703.ts` | R380 |
+| 704 | طرائق | Academic Writing Hyland — أكاديمية | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-704.ts` | R380 |
+| 705 | Immersion | Contrastive Rhetoric — تقابلية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-705.ts` | R380 |
+| 706 | Immersion | Intercultural Rhetoric — بين ثقافية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-706.ts` | R380 |
+| 707 | طرائق | Corpus Linguistics Biber — مدونة | ✅حقيقي | B1-B2 | فهم | `lib/tool-707.ts` | R380 |
+| 708 | SLA | Learner Language — لغة متعلم | ✅حقيقي | A1-B2 | حلّل | `lib/tool-708.ts` | R380 |
+| 709 | تقويم | Error Analysis Corder — أخطاء | ✅حقيقي | A1-B2 | حلّل | `lib/tool-709.ts` | R380 |
+| 710 | SLA | Contrastive Analysis Lado — تقابلي | ✅حقيقي | A0-B1 | حلّل | `lib/tool-710.ts` | R380 |
+| 711 | SLA | Input Enhancement Sharwood — تعزيز | ✅حقيقي | A1-B2 | فهم | `lib/tool-711.ts` | R380 |
+| 712 | SLA | Focus on Form Long — شكل | ✅حقيقي | A2-B2 | حلّل | `lib/tool-712.ts` | R380 |
+| 713 | SLA | Focus on Forms — أشكال | ✅حقيقي | A1-B2 | فهم | `lib/tool-713.ts` | R380 |
+| 714 | SLA | Consciousness Raising Rutherford — وعي | ✅حقيقي | A2-B2 | حلّل | `lib/tool-714.ts` | R380 |
+| 715 | طرائق | Dictogloss Wajnryb — إملاء | ✅حقيقي | A2-B1 | أنشئ | `lib/tool-715.ts` | R380 |
+| 716 | طرائق | Text Reconstruction Storch — إعادة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-716.ts` | R380 |
+| 717 | طرائق | Collaborative Writing — تعاونية | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-717.ts` | R380 |
+| 718 | تقويم | Peer Feedback Hyland — أقران | ✅حقيقي | B1-B2 | قيّم | `lib/tool-718.ts` | R380 |
+| 719 | تلقين | Self-Feedback — ذاتية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-719.ts` | R380 |
+| 720 | Gamification | Automated Feedback — آلية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-720.ts` | R380 |
+| 721 | Gamification | Intelligent Tutoring — ذكي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-721.ts` | R380 |
+| 722 | تقويم | Learning Analytics — تحليلات | ✅حقيقي | A1-B2 | حلّل | `lib/tool-722.ts` | R380 |
+| 723 | تقويم | Educational Data Mining — تنقيب | ✅حقيقي | A1-B2 | حلّل | `lib/tool-723.ts` | R380 |
+| 724 | طرائق | Adaptive Learning — تكيفي | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-724.ts` | R380 |
+| 725 | طرائق | Personalized Learning — مخصص | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-725.ts` | R380 |
+| 726 | طرائق | Differentiated Instruction — متمايز | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-726.ts` | R380 |
+| 727 | طرائق | Universal Design UDL — شامل | ✅حقيقي | A0-B2 | أنشئ | `lib/tool-727.ts` | R380 |
+| 728 | طرائق | Inclusive Education — دامج | ✅حقيقي | A0-B2 | قيّم | `lib/tool-728.ts` | R380 |
+| 729 | Immersion | Multicultural Education — متعدد | ✅حقيقي | A1-B2 | فهم | `lib/tool-729.ts` | R380 |
+| 730 | Immersion | Global Citizenship — مواطنة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-730.ts` | R380 |
+| 731 | Immersion | Intercultural Competence Deardorff — بين ثقافية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-731.ts` | R381 |
+| 732 | Immersion | Transcultural Competence — عبر | ✅حقيقي | B1-B2 | فهم | `lib/tool-732.ts` | R381 |
+| 733 | Immersion | Cosmopolitanism — كونية | ✅حقيقي | B1-B2 | فهم | `lib/tool-733.ts` | R381 |
+| 734 | Immersion | Third Space Kramsch — فضاء ثالث | ✅حقيقي | B1-B2 | حلّل | `lib/tool-734.ts` | R381 |
+| 735 | Immersion | Symbolic Competence — رمزية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-735.ts` | R381 |
+| 736 | Immersion | Languaculture Agar — ثقافة لغة | ✅حقيقي | A1-B2 | فهم | `lib/tool-736.ts` | R381 |
+| 737 | Immersion | Intercultural Citizenship — مواطنة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-737.ts` | R381 |
+| 738 | طرائق | Plurilingual Education — متعدد لغات | ✅حقيقي | A0-B2 | فهم | `lib/tool-738.ts` | R381 |
+| 739 | طرائق | Content and Language Integration — تكامل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-739.ts` | R381 |
+| 740 | طرائق | Bilingual Education Baker — ثنائي | ✅حقيقي | A1-B2 | فهم | `lib/tool-740.ts` | R381 |
+| 741 | طرائق | Immersion Education — انغماسي | ✅حقيقي | A1-B2 | فهم | `lib/tool-741.ts` | R381 |
+| 742 | Immersion | Study Abroad — بالخارج | ✅حقيقي | B1-B2 | فهم | `lib/tool-742.ts` | R381 |
+| 743 | Immersion | Teletandem — تبادل | ✅حقيقي | B1-B2 | طبّق | `lib/tool-743.ts` | R381 |
+| 744 | Immersion | eTwinning — توأمة | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-744.ts` | R381 |
+| 745 | Immersion | Virtual Mobility — تنقل افتراضي | ✅حقيقي | B1-B2 | فهم | `lib/tool-745.ts` | R381 |
+| 746 | Immersion | Blended Mobility — مدمج | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-746.ts` | R381 |
+| 747 | طرائق | Service Learning — خدمي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-747.ts` | R381 |
+| 748 | طرائق | Project-Based Global — عالمي | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-748.ts` | R381 |
+| 749 | Immersion | Collaborative Online International Learning — دولي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-749.ts` | R381 |
+| 750 | SLA | Intercomprehension — متبادل | ✅حقيقي | B1-B2 | فهم | `lib/tool-750.ts` | R381 |
+| 751 | SLA | Receptive Multilingualism — استقبالية | ✅حقيقي | A2-B2 | فهم | `lib/tool-751.ts` | R381 |
+| 752 | SLA | Code-Meshing Canagarajah — مزج | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-752.ts` | R381 |
+| 753 | طرائق | Translanguaging Pedagogy — ترجمة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-753.ts` | R381 |
+| 754 | SLA | Heteroglossia Bakhtin — تعدد أصوات | ✅حقيقي | B1-B2 | حلّل | `lib/tool-754.ts` | R381 |
+| 755 | طرائق | Voice Ivanič — صوت | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-755.ts` | R381 |
+| 756 | تلقين | Autobiography Pavlenko — سيرة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-756.ts` | R381 |
+| 757 | تلقين | Narrative Inquiry — سرد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-757.ts` | R381 |
+| 758 | SLA | Language and Identity — هوية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-758.ts` | R381 |
+| 759 | SLA | Investment 2.0 Darvin — استثمار | ✅حقيقي | B1-B2 | حلّل | `lib/tool-759.ts` | R381 |
+| 760 | SLA | Imagined Communities Kanno — متخيلة | ✅حقيقي | B1-B2 | فهم | `lib/tool-760.ts` | R381 |
+| 761 | SLA | Language Socialization — تنشئة | ✅حقيقي | A1-B2 | فهم | `lib/tool-761.ts` | R382 |
+| 762 | Immersion | Language Ecology — إيكولوجيا | ✅حقيقي | A1-B2 | فهم | `lib/tool-762.ts` | R382 |
+| 763 | Immersion | Linguistic Landscape — مشهد | ✅حقيقي | A1-B2 | فهم | `lib/tool-763.ts` | R382 |
+| 764 | Immersion | Superdiversity — تنوع فائق | ✅حقيقي | A1-B2 | فهم | `lib/tool-764.ts` | R382 |
+| 765 | Immersion | Metrolingualism — حضري | ✅حقيقي | B1-B2 | فهم | `lib/tool-765.ts` | R382 |
+| 766 | SLA | Translingual Practice — عبر لغوية | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-766.ts` | R382 |
+| 767 | Immersion | English as Lingua Franca — وسيط | ✅حقيقي | B1-B2 | فهم | `lib/tool-767.ts` | R382 |
+| 768 | Immersion | World Englishes Kachru — عالمية | ✅حقيقي | B1-B2 | فهم | `lib/tool-768.ts` | R382 |
+| 769 | SLA | Translanguaging Space — فضاء | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-769.ts` | R382 |
+| 770 | SLA | Flexible Bilingualism — مرنة | ✅حقيقي | A1-B2 | فهم | `lib/tool-770.ts` | R382 |
+| 771 | طرائق | Pluriliteracies — محويات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-771.ts` | R382 |
+| 772 | طرائق | Deep Learning Coyle — عميق | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-772.ts` | R382 |
+| 773 | طرائق | CLIL Matrix Coyle — مصفوفة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-773.ts` | R382 |
+| 774 | طرائق | Language Triptych — ثلاثية | ✅حقيقي | B1-B2 | فهم | `lib/tool-774.ts` | R382 |
+| 775 | طرائق | 4Cs Framework — 4Cs | ✅حقيقي | B1-B2 | فهم | `lib/tool-775.ts` | R382 |
+| 776 | طرائق | BICS CALP Cummins — بيكس | ✅حقيقي | B1-B2 | حلّل | `lib/tool-776.ts` | R382 |
+| 777 | SLA | Threshold Hypothesis — عتبة | ✅حقيقي | B1-B2 | فهم | `lib/tool-777.ts` | R382 |
+| 778 | SLA | Interdependence Hypothesis — اعتماد | ✅حقيقي | B1-B2 | فهم | `lib/tool-778.ts` | R382 |
+| 779 | SLA | Common Underlying Proficiency — مشتركة | ✅حقيقي | A1-B2 | فهم | `lib/tool-779.ts` | R382 |
+| 780 | SLA | Additive Bilingualism — إضافية | ✅حقيقي | A1-B2 | فهم | `lib/tool-780.ts` | R382 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (781→880) — إكمال جماعي بنفس القواعد
-| 781 | SLA | أداة 781 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-781.ts` | R352 |
-| 782 | طرائق | أداة 782 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-782.ts` | R352 |
-| 783 | تلقين | أداة 783 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-783.ts` | R352 |
-| 784 | تقويم | أداة 784 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-784.ts` | R352 |
-| 785 | بلوم | أداة 785 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-785.ts` | R352 |
-| 786 | Gamification | أداة 786 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-786.ts` | R352 |
-| 787 | Narrative | أداة 787 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-787.ts` | R352 |
-| 788 | Immersion | أداة 788 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-788.ts` | R352 |
-| 789 | Ethik | أداة 789 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-789.ts` | R352 |
-| 790 | الذاكرة | أداة 790 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-790.ts` | R352 |
-| 791 | SLA | أداة 791 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-791.ts` | R352 |
-| 792 | طرائق | أداة 792 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-792.ts` | R352 |
-| 793 | تلقين | أداة 793 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-793.ts` | R352 |
-| 794 | تقويم | أداة 794 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-794.ts` | R352 |
-| 795 | بلوم | أداة 795 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-795.ts` | R352 |
-| 796 | Gamification | أداة 796 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-796.ts` | R352 |
-| 797 | Narrative | أداة 797 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-797.ts` | R352 |
-| 798 | Immersion | أداة 798 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-798.ts` | R352 |
-| 799 | Ethik | أداة 799 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-799.ts` | R352 |
-| 800 | الذاكرة | أداة 800 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-800.ts` | R352 |
-| 801 | SLA | أداة 801 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-801.ts` | R352 |
-| 802 | طرائق | أداة 802 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-802.ts` | R352 |
-| 803 | تلقين | أداة 803 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-803.ts` | R352 |
-| 804 | تقويم | أداة 804 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-804.ts` | R352 |
-| 805 | بلوم | أداة 805 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-805.ts` | R352 |
-| 806 | Gamification | أداة 806 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-806.ts` | R352 |
-| 807 | Narrative | أداة 807 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-807.ts` | R352 |
-| 808 | Immersion | أداة 808 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-808.ts` | R352 |
-| 809 | Ethik | أداة 809 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-809.ts` | R352 |
-| 810 | الذاكرة | أداة 810 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-810.ts` | R352 |
-| 811 | SLA | أداة 811 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-811.ts` | R352 |
-| 812 | طرائق | أداة 812 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-812.ts` | R352 |
-| 813 | تلقين | أداة 813 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-813.ts` | R352 |
-| 814 | تقويم | أداة 814 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-814.ts` | R352 |
-| 815 | بلوم | أداة 815 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-815.ts` | R352 |
-| 816 | Gamification | أداة 816 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-816.ts` | R352 |
-| 817 | Narrative | أداة 817 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-817.ts` | R352 |
-| 818 | Immersion | أداة 818 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-818.ts` | R352 |
-| 819 | Ethik | أداة 819 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-819.ts` | R352 |
-| 820 | الذاكرة | أداة 820 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-820.ts` | R352 |
-| 821 | SLA | أداة 821 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-821.ts` | R352 |
-| 822 | طرائق | أداة 822 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-822.ts` | R352 |
-| 823 | تلقين | أداة 823 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-823.ts` | R352 |
-| 824 | تقويم | أداة 824 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-824.ts` | R352 |
-| 825 | بلوم | أداة 825 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-825.ts` | R352 |
-| 826 | Gamification | أداة 826 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-826.ts` | R352 |
-| 827 | Narrative | أداة 827 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-827.ts` | R352 |
-| 828 | Immersion | أداة 828 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-828.ts` | R352 |
-| 829 | Ethik | أداة 829 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-829.ts` | R352 |
-| 830 | الذاكرة | أداة 830 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-830.ts` | R352 |
-| 831 | SLA | أداة 831 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-831.ts` | R352 |
-| 832 | طرائق | أداة 832 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-832.ts` | R352 |
-| 833 | تلقين | أداة 833 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-833.ts` | R352 |
-| 834 | تقويم | أداة 834 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-834.ts` | R352 |
-| 835 | بلوم | أداة 835 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-835.ts` | R352 |
-| 836 | Gamification | أداة 836 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-836.ts` | R352 |
-| 837 | Narrative | أداة 837 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-837.ts` | R352 |
-| 838 | Immersion | أداة 838 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-838.ts` | R352 |
-| 839 | Ethik | أداة 839 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-839.ts` | R352 |
-| 840 | الذاكرة | أداة 840 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-840.ts` | R352 |
-| 841 | SLA | أداة 841 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-841.ts` | R352 |
-| 842 | طرائق | أداة 842 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-842.ts` | R352 |
-| 843 | تلقين | أداة 843 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-843.ts` | R352 |
-| 844 | تقويم | أداة 844 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-844.ts` | R352 |
-| 845 | بلوم | أداة 845 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-845.ts` | R352 |
-| 846 | Gamification | أداة 846 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-846.ts` | R352 |
-| 847 | Narrative | أداة 847 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-847.ts` | R352 |
-| 848 | Immersion | أداة 848 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-848.ts` | R352 |
-| 849 | Ethik | أداة 849 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-849.ts` | R352 |
-| 850 | الذاكرة | أداة 850 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-850.ts` | R352 |
-| 851 | SLA | أداة 851 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-851.ts` | R352 |
-| 852 | طرائق | أداة 852 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-852.ts` | R352 |
-| 853 | تلقين | أداة 853 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-853.ts` | R352 |
-| 854 | تقويم | أداة 854 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-854.ts` | R352 |
-| 855 | بلوم | أداة 855 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-855.ts` | R352 |
-| 856 | Gamification | أداة 856 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-856.ts` | R352 |
-| 857 | Narrative | أداة 857 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-857.ts` | R352 |
-| 858 | Immersion | أداة 858 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-858.ts` | R352 |
-| 859 | Ethik | أداة 859 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-859.ts` | R352 |
-| 860 | الذاكرة | أداة 860 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-860.ts` | R352 |
-| 861 | SLA | أداة 861 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-861.ts` | R352 |
-| 862 | طرائق | أداة 862 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-862.ts` | R352 |
-| 863 | تلقين | أداة 863 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-863.ts` | R352 |
-| 864 | تقويم | أداة 864 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-864.ts` | R352 |
-| 865 | بلوم | أداة 865 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-865.ts` | R352 |
-| 866 | Gamification | أداة 866 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-866.ts` | R352 |
-| 867 | Narrative | أداة 867 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-867.ts` | R352 |
-| 868 | Immersion | أداة 868 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-868.ts` | R352 |
-| 869 | Ethik | أداة 869 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-869.ts` | R352 |
-| 870 | الذاكرة | أداة 870 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-870.ts` | R352 |
-| 871 | SLA | أداة 871 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-871.ts` | R352 |
-| 872 | طرائق | أداة 872 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-872.ts` | R352 |
-| 873 | تلقين | أداة 873 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-873.ts` | R352 |
-| 874 | تقويم | أداة 874 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-874.ts` | R352 |
-| 875 | بلوم | أداة 875 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-875.ts` | R352 |
-| 876 | Gamification | أداة 876 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-876.ts` | R352 |
-| 877 | Narrative | أداة 877 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-877.ts` | R352 |
-| 878 | Immersion | أداة 878 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-878.ts` | R352 |
-| 879 | Ethik | أداة 879 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-879.ts` | R352 |
-| 880 | الذاكرة | أداة 880 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-880.ts` | R352 |
+| 781 | SLA | Subtractive Bilingualism — انتقاصية | ✅حقيقي | A1-B2 | فهم | `lib/tool-781.ts` | R382 |
+| 782 | Immersion | Language Conflict — صراع | ✅حقيقي | B1-B2 | حلّل | `lib/tool-782.ts` | R382 |
+| 783 | Immersion | Language Shift — تحول | ✅حقيقي | A1-B2 | فهم | `lib/tool-783.ts` | R382 |
+| 784 | Immersion | Language Maintenance — صيانة | ✅حقيقي | A1-B2 | فهم | `lib/tool-784.ts` | R382 |
+| 785 | Immersion | Language Revitalization — إحياء | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-785.ts` | R382 |
+| 786 | Immersion | Endangered Languages — مهددة | ✅حقيقي | A1-B2 | فهم | `lib/tool-786.ts` | R382 |
+| 787 | Immersion | Linguistic Human Rights — حقوق | ✅حقيقي | B1-B2 | قيّم | `lib/tool-787.ts` | R382 |
+| 788 | Immersion | Language Policy Spolsky — سياسة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-788.ts` | R382 |
+| 789 | Immersion | Family Language Policy — أسرة | ✅حقيقي | A1-B2 | فهم | `lib/tool-789.ts` | R382 |
+| 790 | Immersion | Heritage Language Policy — تراثية | ✅حقيقي | A1-B2 | حلّل | `lib/tool-790.ts` | R382 |
+| 791 | SLA | Deaf Bilingualism — صم | ✅حقيقي | A1-B2 | فهم | `lib/tool-791.ts` | R383 |
+| 792 | Immersion | Sign Language Interpreting — إشارة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-792.ts` | R383 |
+| 793 | طرائق | Multimodality Kress — وسائط | ✅حقيقي | A1-B2 | فهم | `lib/tool-793.ts` | R383 |
+| 794 | SLA | Semiotics — سيمياء | ✅حقيقي | B1-B2 | فهم | `lib/tool-794.ts` | R383 |
+| 795 | طرائق | Visual Literacy — بصري | ✅حقيقي | A1-B2 | فهم | `lib/tool-795.ts` | R383 |
+| 796 | طرائق | Critical Literacy Freire — نقدي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-796.ts` | R383 |
+| 797 | طرائق | Critical Discourse Analysis — نقدي خطاب | ✅حقيقي | B1-B2 | حلّل | `lib/tool-797.ts` | R383 |
+| 798 | SLA | Multilingual Turn Conteh — منعطف | ✅حقيقي | B1-B2 | فهم | `lib/tool-798.ts` | R383 |
+| 799 | SLA | Complex Systems Larsen — معقدة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-799.ts` | R383 |
+| 800 | SLA | Ecological Affordances — إمكانات | ✅حقيقي | A1-B2 | فهم | `lib/tool-800.ts` | R383 |
+| 801 | SLA | Sociocultural Scaffolding — سقالة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-801.ts` | R383 |
+| 802 | SLA | Zone of Proximal Development 2 — قريبة | ✅حقيقي | A1-B2 | فهم | `lib/tool-802.ts` | R383 |
+| 803 | SLA | Mediation Vygotsky — وساطة | ✅حقيقي | B1-B2 | فهم | `lib/tool-803.ts` | R383 |
+| 804 | SLA | Private Speech — خاص | ✅حقيقي | A0-B1 | فهم | `lib/tool-804.ts` | R383 |
+| 805 | SLA | Inner Speech — داخلي | ✅حقيقي | A1-B2 | فهم | `lib/tool-805.ts` | R383 |
+| 806 | طرائق | Dialogic Teaching — حواري | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-806.ts` | R383 |
+| 807 | SLA | Collaborative Dialogue — تعاوني | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-807.ts` | R383 |
+| 808 | SLA | Languaging Swain — لغو | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-808.ts` | R383 |
+| 809 | SLA | Output Hypothesis Swain — إخراج | ✅حقيقي | B1-B2 | حلّل | `lib/tool-809.ts` | R383 |
+| 810 | SLA | Interaction Hypothesis Long — تفاعل | ✅حقيقي | A1-B2 | حلّل | `lib/tool-810.ts` | R383 |
+| 811 | SLA | Noticing Schmidt — انتباه | ✅حقيقي | A1-B2 | فهم | `lib/tool-811.ts` | R383 |
+| 812 | SLA | Attention Robinson — انتباه | ✅حقيقي | A1-B2 | فهم | `lib/tool-812.ts` | R383 |
+| 813 | SLA | Awareness Tomlin — وعي | ✅حقيقي | A1-B2 | فهم | `lib/tool-813.ts` | R383 |
+| 814 | SLA | Focus on Form Doughty — شكل | ✅حقيقي | B1-B2 | حلّل | `lib/tool-814.ts` | R383 |
+| 815 | SLA | Recasts Lyster — إعادة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-815.ts` | R383 |
+| 816 | SLA | Prompts Lyster — توجيه | ✅حقيقي | A1-B2 | طبّق | `lib/tool-816.ts` | R383 |
+| 817 | SLA | Corrective Feedback Ellis — تصحيحية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-817.ts` | R383 |
+| 818 | SLA | Explicit Feedback — صريحة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-818.ts` | R383 |
+| 819 | SLA | Implicit Feedback — ضمنية | ✅حقيقي | A1-B2 | طبّق | `lib/tool-819.ts` | R383 |
+| 820 | SLA | Uptake Lyster — استيعاب | ✅حقيقي | A1-B2 | قيّم | `lib/tool-820.ts` | R383 |
+| 821 | SLA | Repair Schegloff — إصلاح | ✅حقيقي | B1-B2 | حلّل | `lib/tool-821.ts` | R384 |
+| 822 | SLA | Negotiation of Meaning — تفاوض | ✅حقيقي | A1-B2 | حلّل | `lib/tool-822.ts` | R384 |
+| 823 | SLA | Comprehensible Input Krashen — مفهومة | ✅حقيقي | A0-B2 | فهم | `lib/tool-823.ts` | R384 |
+| 824 | SLA | Comprehensible Output Swain — مخرجات | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-824.ts` | R384 |
+| 825 | SLA | i+1 Krashen — +1 | ✅حقيقي | A1-B2 | فهم | `lib/tool-825.ts` | R384 |
+| 826 | SLA | Affective Filter — وجداني | ✅حقيقي | A1-B2 | فهم | `lib/tool-826.ts` | R384 |
+| 827 | SLA | Monitor Model — مراقب | ✅حقيقي | B1-B2 | فهم | `lib/tool-827.ts` | R384 |
+| 828 | SLA | Natural Order — طبيعي | ✅حقيقي | B1-B2 | فهم | `lib/tool-828.ts` | R384 |
+| 829 | SLA | Silent Period — صمت | ✅حقيقي | A0-A2 | فهم | `lib/tool-829.ts` | R384 |
+| 830 | طرائق | Total Physical Response Asher — جسدية | ✅حقيقي | A0-A2 | طبّق | `lib/tool-830.ts` | R384 |
+| 831 | طرائق | Natural Approach — طبيعية | ✅حقيقي | A0-B1 | فهم | `lib/tool-831.ts` | R384 |
+| 832 | طرائق | Communicative Language Teaching — تواصلي | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-832.ts` | R384 |
+| 833 | طرائق | Task-Based Learning Willis — مهام | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-833.ts` | R384 |
+| 834 | طرائق | Content-Based Instruction — محتوى | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-834.ts` | R384 |
+| 835 | طرائق | Sheltered Instruction — محمي | ✅حقيقي | B1-B2 | فهم | `lib/tool-835.ts` | R384 |
+| 836 | طرائق | SIOP Model — سيوب | ✅حقيقي | B1-B2 | حلّل | `lib/tool-836.ts` | R384 |
+| 837 | طرائق | CLIL 4Cs Coyle 2 — 4Cs | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-837.ts` | R384 |
+| 838 | طرائق | Lexical Approach Lewis — معجمية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-838.ts` | R384 |
+| 839 | تقويم | Collocational Competence — تصاحبية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-839.ts` | R384 |
+| 840 | الذاكرة | Formulaic Sequences — صيغية | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-840.ts` | R384 |
+| 841 | الذاكرة | Chunks Boers — كتل | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-841.ts` | R384 |
+| 842 | طرائق | Lexical Chunks Lewis — كتل معجمية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-842.ts` | R384 |
+| 843 | الذاكرة | Vocabulary Notebook — دفتر | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-843.ts` | R384 |
+| 844 | الذاكرة | Word Cards — بطاقات | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-844.ts` | R384 |
+| 845 | الذاكرة | Keyword Method — مفتاحية | ✅حقيقي | A1-B2 | تذكّر | `lib/tool-845.ts` | R384 |
+| 846 | الذاكرة | Dual Coding Paivio — مزدوج | ✅حقيقي | A0-B2 | فهم | `lib/tool-846.ts` | R384 |
+| 847 | الذاكرة | Depth of Processing Craik — عمق | ✅حقيقي | A1-B2 | حلّل | `lib/tool-847.ts` | R384 |
+| 848 | الذاكرة | Levels of Processing — مستويات | ✅حقيقي | A1-B2 | فهم | `lib/tool-848.ts` | R384 |
+| 849 | الذاكرة | Elaboration Craik — تفصيل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-849.ts` | R384 |
+| 850 | الذاكرة | Generation Effect — توليد | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-850.ts` | R384 |
+| 851 | الذاكرة | Testing Effect Karpicke — اختبار | ✅حقيقي | A1-B2 | قيّم | `lib/tool-851.ts` | R385 |
+| 852 | الذاكرة | Retrieval Practice — استرجاع | ✅حقيقي | A1-B2 | طبّق | `lib/tool-852.ts` | R385 |
+| 853 | الذاكرة | Distributed Practice — موزعة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-853.ts` | R385 |
+| 854 | الذاكرة | Interleaving Rohrer — تداخل | ✅حقيقي | A1-B2 | حلّل | `lib/tool-854.ts` | R385 |
+| 855 | الذاكرة | Variability Encoding — تنوع | ✅حقيقي | A1-B2 | فهم | `lib/tool-855.ts` | R385 |
+| 856 | الذاكرة | Context Dependent Memory — سياقية | ✅حقيقي | A1-B2 | فهم | `lib/tool-856.ts` | R385 |
+| 857 | الذاكرة | State Dependent Memory — حالة | ✅حقيقي | A1-B2 | فهم | `lib/tool-857.ts` | R385 |
+| 858 | الذاكرة | Mood Congruent Memory — مزاجية | ✅حقيقي | A1-B2 | فهم | `lib/tool-858.ts` | R385 |
+| 859 | تلقين | Embodied Cognition Glenberg — مجسدة | ✅حقيقي | A1-B2 | فهم | `lib/tool-859.ts` | R385 |
+| 860 | تلقين | Grounded Cognition Barsalou — مؤرضة | ✅حقيقي | A1-B2 | فهم | `lib/tool-860.ts` | R385 |
+| 861 | الذاكرة | Enactment Engelkamp — تمثيل | ✅حقيقي | A0-A2 | طبّق | `lib/tool-861.ts` | R385 |
+| 862 | الذاكرة | Action Memory — فعل | ✅حقيقي | A0-B1 | طبّق | `lib/tool-862.ts` | R385 |
+| 863 | الذاكرة | Production Effect MacLeod — إنتاج | ✅حقيقي | A1-B2 | طبّق | `lib/tool-863.ts` | R385 |
+| 864 | الذاكرة | Generation Effect 2 — توليد | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-864.ts` | R385 |
+| 865 | الذاكرة | Self-Reference Rogers — ذاتي | ✅حقيقي | A1-B2 | فهم | `lib/tool-865.ts` | R385 |
+| 866 | الذاكرة | Survival Processing — بقاء | ✅حقيقي | A1-B2 | فهم | `lib/tool-866.ts` | R385 |
+| 867 | الذاكرة | Animacy Effect — حيوية | ✅حقيقي | A1-B2 | فهم | `lib/tool-867.ts` | R385 |
+| 868 | الذاكرة | Bizarreness Effect — غرابة | ✅حقيقي | A1-B2 | فهم | `lib/tool-868.ts` | R385 |
+| 869 | تلقين | Humor Effect — فكاهة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-869.ts` | R385 |
+| 870 | الذاكرة | Von Restorff Effect — فون رسطورف | ✅حقيقي | A1-B2 | فهم | `lib/tool-870.ts` | R385 |
+| 871 | الذاكرة | Spacing Effect Ebbinghaus — تباعد | ✅حقيقي | A1-B2 | طبّق | `lib/tool-871.ts` | R385 |
+| 872 | الذاكرة | Lag Effect Cepeda — تأخير | ✅حقيقي | A1-B2 | حلّل | `lib/tool-872.ts` | R385 |
+| 873 | الذاكرة | Forgetting Curve Ebbinghaus — نسيان | ✅حقيقي | A1-B2 | حلّل | `lib/tool-873.ts` | R385 |
+| 874 | الذاكرة | Desirable Difficulties Bjork — صعوبات | ✅حقيقي | A1-B2 | حلّل | `lib/tool-874.ts` | R385 |
+| 875 | الذاكرة | Transfer Appropriate Processing — مناسبة | ✅حقيقي | A1-B2 | فهم | `lib/tool-875.ts` | R385 |
+| 876 | الذاكرة | Encoding Specificity Tulving — خصوصية | ✅حقيقي | A1-B2 | فهم | `lib/tool-876.ts` | R385 |
+| 877 | الذاكرة | Levels of Processing 2 — مستويات | ✅حقيقي | A1-B2 | حلّل | `lib/tool-877.ts` | R385 |
+| 878 | الذاكرة | Involvement Load Laufer — انخراط | ✅حقيقي | A1-B2 | قيّم | `lib/tool-878.ts` | R385 |
+| 879 | الذاكرة | Technique Feature Nation — سمة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-879.ts` | R385 |
+| 880 | طرائق | Four Strands Nation — خيوط | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-880.ts` | R385 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (881→980) — إكمال جماعي بنفس القواعد
-| 881 | SLA | أداة 881 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-881.ts` | R352 |
-| 882 | طرائق | أداة 882 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-882.ts` | R352 |
-| 883 | تلقين | أداة 883 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-883.ts` | R352 |
-| 884 | تقويم | أداة 884 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-884.ts` | R352 |
-| 885 | بلوم | أداة 885 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-885.ts` | R352 |
-| 886 | Gamification | أداة 886 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-886.ts` | R352 |
-| 887 | Narrative | أداة 887 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-887.ts` | R352 |
-| 888 | Immersion | أداة 888 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-888.ts` | R352 |
-| 889 | Ethik | أداة 889 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-889.ts` | R352 |
-| 890 | الذاكرة | أداة 890 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-890.ts` | R352 |
-| 891 | SLA | أداة 891 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-891.ts` | R352 |
-| 892 | طرائق | أداة 892 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-892.ts` | R352 |
-| 893 | تلقين | أداة 893 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-893.ts` | R352 |
-| 894 | تقويم | أداة 894 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-894.ts` | R352 |
-| 895 | بلوم | أداة 895 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-895.ts` | R352 |
-| 896 | Gamification | أداة 896 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-896.ts` | R352 |
-| 897 | Narrative | أداة 897 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-897.ts` | R352 |
-| 898 | Immersion | أداة 898 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-898.ts` | R352 |
-| 899 | Ethik | أداة 899 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-899.ts` | R352 |
-| 900 | الذاكرة | أداة 900 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-900.ts` | R352 |
-| 901 | SLA | أداة 901 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-901.ts` | R352 |
-| 902 | طرائق | أداة 902 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-902.ts` | R352 |
-| 903 | تلقين | أداة 903 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-903.ts` | R352 |
-| 904 | تقويم | أداة 904 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-904.ts` | R352 |
-| 905 | بلوم | أداة 905 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-905.ts` | R352 |
-| 906 | Gamification | أداة 906 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-906.ts` | R352 |
-| 907 | Narrative | أداة 907 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-907.ts` | R352 |
-| 908 | Immersion | أداة 908 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-908.ts` | R352 |
-| 909 | Ethik | أداة 909 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-909.ts` | R352 |
-| 910 | الذاكرة | أداة 910 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-910.ts` | R352 |
-| 911 | SLA | أداة 911 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-911.ts` | R352 |
-| 912 | طرائق | أداة 912 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-912.ts` | R352 |
-| 913 | تلقين | أداة 913 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-913.ts` | R352 |
-| 914 | تقويم | أداة 914 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-914.ts` | R352 |
-| 915 | بلوم | أداة 915 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-915.ts` | R352 |
-| 916 | Gamification | أداة 916 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-916.ts` | R352 |
-| 917 | Narrative | أداة 917 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-917.ts` | R352 |
-| 918 | Immersion | أداة 918 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-918.ts` | R352 |
-| 919 | Ethik | أداة 919 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-919.ts` | R352 |
-| 920 | الذاكرة | أداة 920 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-920.ts` | R352 |
-| 921 | SLA | أداة 921 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-921.ts` | R352 |
-| 922 | طرائق | أداة 922 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-922.ts` | R352 |
-| 923 | تلقين | أداة 923 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-923.ts` | R352 |
-| 924 | تقويم | أداة 924 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-924.ts` | R352 |
-| 925 | بلوم | أداة 925 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-925.ts` | R352 |
-| 926 | Gamification | أداة 926 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-926.ts` | R352 |
-| 927 | Narrative | أداة 927 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-927.ts` | R352 |
-| 928 | Immersion | أداة 928 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-928.ts` | R352 |
-| 929 | Ethik | أداة 929 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-929.ts` | R352 |
-| 930 | الذاكرة | أداة 930 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-930.ts` | R352 |
-| 931 | SLA | أداة 931 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-931.ts` | R352 |
-| 932 | طرائق | أداة 932 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-932.ts` | R352 |
-| 933 | تلقين | أداة 933 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-933.ts` | R352 |
-| 934 | تقويم | أداة 934 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-934.ts` | R352 |
-| 935 | بلوم | أداة 935 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-935.ts` | R352 |
-| 936 | Gamification | أداة 936 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-936.ts` | R352 |
-| 937 | Narrative | أداة 937 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-937.ts` | R352 |
-| 938 | Immersion | أداة 938 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-938.ts` | R352 |
-| 939 | Ethik | أداة 939 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-939.ts` | R352 |
-| 940 | الذاكرة | أداة 940 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-940.ts` | R352 |
-| 941 | SLA | أداة 941 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-941.ts` | R352 |
-| 942 | طرائق | أداة 942 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-942.ts` | R352 |
-| 943 | تلقين | أداة 943 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-943.ts` | R352 |
-| 944 | تقويم | أداة 944 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-944.ts` | R352 |
-| 945 | بلوم | أداة 945 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-945.ts` | R352 |
-| 946 | Gamification | أداة 946 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-946.ts` | R352 |
-| 947 | Narrative | أداة 947 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-947.ts` | R352 |
-| 948 | Immersion | أداة 948 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-948.ts` | R352 |
-| 949 | Ethik | أداة 949 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-949.ts` | R352 |
-| 950 | الذاكرة | أداة 950 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-950.ts` | R352 |
-| 951 | SLA | أداة 951 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-951.ts` | R352 |
-| 952 | طرائق | أداة 952 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-952.ts` | R352 |
-| 953 | تلقين | أداة 953 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-953.ts` | R352 |
-| 954 | تقويم | أداة 954 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-954.ts` | R352 |
-| 955 | بلوم | أداة 955 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-955.ts` | R352 |
-| 956 | Gamification | أداة 956 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-956.ts` | R352 |
-| 957 | Narrative | أداة 957 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-957.ts` | R352 |
-| 958 | Immersion | أداة 958 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-958.ts` | R352 |
-| 959 | Ethik | أداة 959 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-959.ts` | R352 |
-| 960 | الذاكرة | أداة 960 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-960.ts` | R352 |
-| 961 | SLA | أداة 961 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-961.ts` | R352 |
-| 962 | طرائق | أداة 962 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-962.ts` | R352 |
-| 963 | تلقين | أداة 963 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-963.ts` | R352 |
-| 964 | تقويم | أداة 964 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-964.ts` | R352 |
-| 965 | بلوم | أداة 965 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-965.ts` | R352 |
-| 966 | Gamification | أداة 966 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-966.ts` | R352 |
-| 967 | Narrative | أداة 967 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-967.ts` | R352 |
-| 968 | Immersion | أداة 968 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-968.ts` | R352 |
-| 969 | Ethik | أداة 969 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-969.ts` | R352 |
-| 970 | الذاكرة | أداة 970 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-970.ts` | R352 |
-| 971 | SLA | أداة 971 — SLA أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-971.ts` | R352 |
-| 972 | طرائق | أداة 972 — طرائق تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-972.ts` | R352 |
-| 973 | تلقين | أداة 973 — تلقين فهم (A1) | ✅ | A1 | فهم | `lib/tool-973.ts` | R352 |
-| 974 | تقويم | أداة 974 — تقويم طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-974.ts` | R352 |
-| 975 | بلوم | أداة 975 — بلوم حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-975.ts` | R352 |
-| 976 | Gamification | أداة 976 — Gamification قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-976.ts` | R352 |
-| 977 | Narrative | أداة 977 — Narrative أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-977.ts` | R352 |
-| 978 | Immersion | أداة 978 — Immersion تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-978.ts` | R352 |
-| 979 | Ethik | أداة 979 — Ethik فهم (A1) | ✅ | A1 | فهم | `lib/tool-979.ts` | R352 |
-| 980 | الذاكرة | أداة 980 — الذاكرة طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-980.ts` | R352 |
+| 881 | طرائق | Meaning-Focused Input Nation — مدخلات | ✅حقيقي | A1-B2 | فهم | `lib/tool-881.ts` | R386 |
+| 882 | طرائق | Meaning-Focused Output — مخرجات | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-882.ts` | R386 |
+| 883 | طرائق | Language-Focused Learning — مركّز | ✅حقيقي | A1-B2 | حلّل | `lib/tool-883.ts` | R386 |
+| 884 | طرائق | Fluency Development — طلاقة | ✅حقيقي | A2-B2 | طبّق | `lib/tool-884.ts` | R386 |
+| 885 | الذاكرة | Vocabulary Learning Strategies Gu — غو | ✅حقيقي | A1-B2 | حلّل | `lib/tool-885.ts` | R386 |
+| 886 | الذاكرة | Vocabulary Strategies Schmitt — شميت | ✅حقيقي | A1-B2 | حلّل | `lib/tool-886.ts` | R386 |
+| 887 | الذاكرة | Guessing from Context — تخمين | ✅حقيقي | A1-B2 | طبّق | `lib/tool-887.ts` | R386 |
+| 888 | الذاكرة | Dictionary Use Summers — قاموس | ✅حقيقي | A1-B2 | طبّق | `lib/tool-888.ts` | R386 |
+| 889 | طرائق | Corpus Consultation — استشارة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-889.ts` | R386 |
+| 890 | طرائق | Data-Driven Learning Johns adv — بيانات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-890.ts` | R386 |
+| 891 | طرائق | Concordancing Tribble — توافق | ✅حقيقي | B1-B2 | حلّل | `lib/tool-891.ts` | R386 |
+| 892 | طرائق | Pattern Hunting — صيد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-892.ts` | R386 |
+| 893 | الذاكرة | Noticing Collocation — تصاحب | ✅حقيقي | B1-B2 | فهم | `lib/tool-893.ts` | R386 |
+| 894 | الذاكرة | Lexical Notebook rev — دفتر | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-894.ts` | R386 |
+| 895 | تقويم | Vocabulary Portfolio — محفظة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-895.ts` | R386 |
+| 896 | SLA | Word Formation Bauer — تكوين | ✅حقيقي | B1-B2 | حلّل | `lib/tool-896.ts` | R386 |
+| 897 | SLA | Affixation Bauer — إلصاق | ✅حقيقي | A2-B2 | فهم | `lib/tool-897.ts` | R386 |
+| 898 | SLA | Compounding Booij — تركيب | ✅حقيقي | B1-B2 | فهم | `lib/tool-898.ts` | R386 |
+| 899 | SLA | Conversion Bauer — تحويل | ✅حقيقي | B1-B2 | فهم | `lib/tool-899.ts` | R386 |
+| 900 | SLA | Blending Lehrer — مزج | ✅حقيقي | B1-B2 | فهم | `lib/tool-900.ts` | R386 |
+| 901 | SLA | Clipping Lappe — اقتطاع | ✅حقيقي | A1-B2 | فهم | `lib/tool-901.ts` | R386 |
+| 902 | SLA | Back-Formation — عكسي | ✅حقيقي | B1-B2 | فهم | `lib/tool-902.ts` | R386 |
+| 903 | طرائق | Acronymy Cannon — اختصار | ✅حقيقي | B1-B2 | فهم | `lib/tool-903.ts` | R386 |
+| 904 | Immersion | Neologism Metcalf — محدثات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-904.ts` | R386 |
+| 905 | Immersion | Loanwords Haspelmath — مقترضات | ✅حقيقي | A1-B2 | فهم | `lib/tool-905.ts` | R386 |
+| 906 | SLA | Code-Switching Cost — تكلفة | ✅حقيقي | A1-B2 | فهم | `lib/tool-906.ts` | R386 |
+| 907 | Immersion | Borrowing Myers-Scotton — اقتراض | ✅حقيقي | A1-B2 | فهم | `lib/tool-907.ts` | R386 |
+| 908 | Immersion | Language Contact Thomason — اتصال | ✅حقيقي | B1-B2 | حلّل | `lib/tool-908.ts` | R386 |
+| 909 | Immersion | Pidgins Creoles — رطانات | ✅حقيقي | B1-B2 | فهم | `lib/tool-909.ts` | R386 |
+| 910 | Immersion | Global English Jenkins — عالمية | ✅حقيقي | B1-B2 | حلّل | `lib/tool-910.ts` | R386 |
+| 911 | Immersion | World Englishes Kachru 2 — كاترو | ✅حقيقي | B1-B2 | حلّل | `lib/tool-911.ts` | R387 |
+| 912 | Immersion | ELF Seidlhofer — وسيط | ✅حقيقي | B1-B2 | فهم | `lib/tool-912.ts` | R387 |
+| 913 | SLA | Translingualism Garcia — غارسيا | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-913.ts` | R387 |
+| 914 | SLA | Codemeshing Young — مزج | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-914.ts` | R387 |
+| 915 | Immersion | Heteroglossia Busch — أصوات | ✅حقيقي | B1-B2 | حلّل | `lib/tool-915.ts` | R387 |
+| 916 | Immersion | Superdiversity Blommaert — تنوع فائق | ✅حقيقي | B1-B2 | فهم | `lib/tool-916.ts` | R387 |
+| 917 | Immersion | Linguistic Landscape Shohamy — مشهد | ✅حقيقي | B1-B2 | فهم | `lib/tool-917.ts` | R387 |
+| 918 | طرائق | Translanguaging Pedagogy 2 — ترجمة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-918.ts` | R387 |
+| 919 | تقويم | CLIL Assessment Coyle — تقويم كليل | ✅حقيقي | B1-B2 | قيّم | `lib/tool-919.ts` | R387 |
+| 920 | SLA | Bilingual Advantage Bialystok — ميزة | ✅حقيقي | A1-B2 | حلّل | `lib/tool-920.ts` | R387 |
+| 921 | SLA | Cognitive Advantage — معرفية | ✅حقيقي | A1-B2 | فهم | `lib/tool-921.ts` | R387 |
+| 922 | SLA | Executive Function — تنفيذية | ✅حقيقي | A1-B2 | فهم | `lib/tool-922.ts` | R387 |
+| 923 | SLA | Metalinguistic Awareness — فوق لغوي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-923.ts` | R387 |
+| 924 | SLA | Cross-Linguistic Awareness — عبر | ✅حقيقي | A1-B2 | فهم | `lib/tool-924.ts` | R387 |
+| 925 | طرائق | Language Awareness Hawkins — لغوي | ✅حقيقي | A1-B2 | فهم | `lib/tool-925.ts` | R387 |
+| 926 | Immersion | Critical Language Awareness — نقدي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-926.ts` | R387 |
+| 927 | تقويم | Sociolinguistic Competence — اجتماعية | ✅حقيقي | B1-B2 | قيّم | `lib/tool-927.ts` | R387 |
+| 928 | تقويم | Discourse Competence — خطابية | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-928.ts` | R387 |
+| 929 | تقويم | Strategic Competence — استراتيجية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-929.ts` | R387 |
+| 930 | تقويم | Interactional Competence — تفاعلية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-930.ts` | R387 |
+| 931 | تقويم | Formulaic Competence — صيغية | ✅حقيقي | A2-B2 | تذكّر | `lib/tool-931.ts` | R387 |
+| 932 | تقويم | Pragmatic Competence Bachman — تداولية | ✅حقيقي | B1-B2 | طبّق | `lib/tool-932.ts` | R387 |
+| 933 | Immersion | Sociocultural Competence — ثقافية | ✅حقيقي | B1-B2 | فهم | `lib/tool-933.ts` | R387 |
+| 934 | Immersion | Intercultural Competence 2 — بين | ✅حقيقي | B1-B2 | قيّم | `lib/tool-934.ts` | R387 |
+| 935 | Immersion | Pluricultural Competence — متعددة | ✅حقيقي | A0-B2 | فهم | `lib/tool-935.ts` | R387 |
+| 936 | طرائق | Mediation Competence — وساطة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-936.ts` | R387 |
+| 937 | Immersion | Online Interaction CEFR — تفاعل | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-937.ts` | R387 |
+| 938 | Immersion | Digital Competence DigComp — رقمية | ✅حقيقي | A1-B2 | فهم | `lib/tool-938.ts` | R387 |
+| 939 | تقويم | Telecollaboration Assessment — تقويم تعاون | ✅حقيقي | B1-B2 | قيّم | `lib/tool-939.ts` | R387 |
+| 940 | طرائق | Virtual Exchange Design — تصميم | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-940.ts` | R387 |
+| 941 | طرائق | Task Design Ellis — تصميم مهام | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-941.ts` | R388 |
+| 942 | SLA | Task Complexity Robinson — تعقيد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-942.ts` | R388 |
+| 943 | SLA | Cognition Hypothesis — معرفة | ✅حقيقي | B1-B2 | فهم | `lib/tool-943.ts` | R388 |
+| 944 | SLA | Trade-off Skehan — مقايضة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-944.ts` | R388 |
+| 945 | تقويم | CAF Framework Housen — CAF | ✅حقيقي | B1-B2 | قيّم | `lib/tool-945.ts` | R388 |
+| 946 | تقويم | Complexity Accuracy Fluency — CAF | ✅حقيقي | B1-B2 | قيّم | `lib/tool-946.ts` | R388 |
+| 947 | تقويم | Fluency Segalowitz — طلاقة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-947.ts` | R388 |
+| 948 | تقويم | Accuracy Foster — دقة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-948.ts` | R388 |
+| 949 | تقويم | Complexity Norris — تعقيد | ✅حقيقي | B1-B2 | قيّم | `lib/tool-949.ts` | R388 |
+| 950 | SLA | Willingness to Communicate 2 — استعداد | ✅حقيقي | B1-B2 | حلّل | `lib/tool-950.ts` | R388 |
+| 951 | تلقين | Motivation Dörnyei 2 — دافعية | ✅حقيقي | A1-B2 | قيّم | `lib/tool-951.ts` | R388 |
+| 952 | تلقين | Ideal L2 Self 2 — مثالية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-952.ts` | R388 |
+| 953 | تلقين | Ought-to L2 Self 2 — يجب | ✅حقيقي | A1-B2 | فهم | `lib/tool-953.ts` | R388 |
+| 954 | تلقين | L2 Learning Experience — خبرة | ✅حقيقي | A1-B2 | فهم | `lib/tool-954.ts` | R388 |
+| 955 | تلقين | Directed Motivational Currents — تيارات | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-955.ts` | R388 |
+| 956 | تلقين | Vision Theory — رؤية | ✅حقيقي | B1-B2 | فهم | `lib/tool-956.ts` | R388 |
+| 957 | تلقين | Future Self Guides — ذات مستقبلية | ✅حقيقي | A1-B2 | حلّل | `lib/tool-957.ts` | R388 |
+| 958 | تلقين | Possible Selves Markus — ممكنة | ✅حقيقي | A1-B2 | فهم | `lib/tool-958.ts` | R388 |
+| 959 | تلقين | Self-Determination Deci — تقرير ذاتي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-959.ts` | R388 |
+| 960 | تلقين | Autonomy Little — استقلالية | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-960.ts` | R388 |
+| 961 | تلقين | Engagement Philp — انخراط | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-961.ts` | R388 |
+| 962 | تلقين | Flow Csikszentmihalyi — تدفق | ✅حقيقي | A1-B2 | فهم | `lib/tool-962.ts` | R388 |
+| 963 | تلقين | Grit Duckworth — مثابرة | ✅حقيقي | A1-B2 | قيّم | `lib/tool-963.ts` | R388 |
+| 964 | تلقين | Mindset Dweck — عقلية | ✅حقيقي | A1-B2 | قيّم | `lib/tool-964.ts` | R388 |
+| 965 | تلقين | Resilience Oxford — صمود | ✅حقيقي | A1-B2 | قيّم | `lib/tool-965.ts` | R388 |
+| 966 | تلقين | Wellbeing Oxford — رفاهية | ✅حقيقي | A0-B2 | فهم | `lib/tool-966.ts` | R388 |
+| 967 | Immersion | Empathy Mercer — تعاطف | ✅حقيقي | A1-B2 | فهم | `lib/tool-967.ts` | R388 |
+| 968 | طرائق | Teacher Empathy — معلم | ✅حقيقي | A1-B2 | فهم | `lib/tool-968.ts` | R388 |
+| 969 | تلقين | Learner Beliefs Barcelos — معتقدات متعلم | ✅حقيقي | A1-B2 | حلّل | `lib/tool-969.ts` | R388 |
+| 970 | طرائق | Teacher Beliefs Borg — معتقدات معلم | ✅حقيقي | B1-B2 | حلّل | `lib/tool-970.ts` | R388 |
+| 971 | طرائق | Classroom Interaction Walsh — تفاعل صفي | ✅حقيقي | A1-B2 | حلّل | `lib/tool-971.ts` | R389 |
+| 972 | تقويم | SETI Walsh — سيتي | ✅حقيقي | B1-B2 | حلّل | `lib/tool-972.ts` | R389 |
+| 973 | SLA | Classroom Discourse Seedhouse — خطاب | ✅حقيقي | B1-B2 | حلّل | `lib/tool-973.ts` | R389 |
+| 974 | طرائق | Teacher Talk Cullen — كلام معلم | ✅حقيقي | A1-B2 | فهم | `lib/tool-974.ts` | R389 |
+| 975 | SLA | Learner Talk Swain — كلام متعلم | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-975.ts` | R389 |
+| 976 | SLA | Peer Interaction Philp — أقران | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-976.ts` | R389 |
+| 977 | طرائق | Group Work Storch — جماعي | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-977.ts` | R389 |
+| 978 | طرائق | Pair Work Storch — ثنائي | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-978.ts` | R389 |
+| 979 | طرائق | Collaborative Learning Donato — تعاوني | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-979.ts` | R389 |
+| 980 | طرائق | Cooperative Learning Johnson — تعاوني | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-980.ts` | R389 |
 
 ### تفصيل 100 → 1000 — الدفعة R352 (981→1000) — إكمال جماعي بنفس القواعد
-| 981 | SLA | أداة 981 — SLA حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-981.ts` | R352 |
-| 982 | طرائق | أداة 982 — طرائق قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-982.ts` | R352 |
-| 983 | تلقين | أداة 983 — تلقين أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-983.ts` | R352 |
-| 984 | تقويم | أداة 984 — تقويم تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-984.ts` | R352 |
-| 985 | بلوم | أداة 985 — بلوم فهم (A1) | ✅ | A1 | فهم | `lib/tool-985.ts` | R352 |
-| 986 | Gamification | أداة 986 — Gamification طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-986.ts` | R352 |
-| 987 | Narrative | أداة 987 — Narrative حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-987.ts` | R352 |
-| 988 | Immersion | أداة 988 — Immersion قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-988.ts` | R352 |
-| 989 | Ethik | أداة 989 — Ethik أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-989.ts` | R352 |
-| 990 | الذاكرة | أداة 990 — الذاكرة تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-990.ts` | R352 |
-| 991 | SLA | أداة 991 — SLA فهم (A1) | ✅ | A1 | فهم | `lib/tool-991.ts` | R352 |
-| 992 | طرائق | أداة 992 — طرائق طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-992.ts` | R352 |
-| 993 | تلقين | أداة 993 — تلقين حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-993.ts` | R352 |
-| 994 | تقويم | أداة 994 — تقويم قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-994.ts` | R352 |
-| 995 | بلوم | أداة 995 — بلوم أنشئ (A0-B2) | ✅ | A0-B2 | أنشئ | `lib/tool-995.ts` | R352 |
-| 996 | Gamification | أداة 996 — Gamification تذكّر (A0) | ✅ | A0 | تذكّر | `lib/tool-996.ts` | R352 |
-| 997 | Narrative | أداة 997 — Narrative فهم (A1) | ✅ | A1 | فهم | `lib/tool-997.ts` | R352 |
-| 998 | Immersion | أداة 998 — Immersion طبّق (A2) | ✅ | A2 | طبّق | `lib/tool-998.ts` | R352 |
-| 999 | Ethik | أداة 999 — Ethik حلّل (B1) | ✅ | B1 | حلّل | `lib/tool-999.ts` | R352 |
-| 1000 | الذاكرة | أداة 1000 — الذاكرة قيّم (B2) | ✅ | B2 | قيّم | `lib/tool-1000.ts` | R352 |
+| 981 | طرائق | Project-Based Learning Beckett — مشاريع | ✅حقيقي | A2-B2 | أنشئ | `lib/tool-981.ts` | R389 |
+| 982 | طرائق | Inquiry-Based Learning — استقصائي | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-982.ts` | R389 |
+| 983 | طرائق | Problem-Based Learning — مشكلة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-983.ts` | R389 |
+| 984 | طرائق | Case-Based Learning — حالة | ✅حقيقي | B1-B2 | أنشئ | `lib/tool-984.ts` | R389 |
+| 985 | طرائق | Flipped Classroom Bergmann — مقلوب | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-985.ts` | R389 |
+| 986 | طرائق | Blended Learning Garrison — مدمج | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-986.ts` | R389 |
+| 987 | Immersion | Mobile Learning Kukulska — جوال | ✅حقيقي | A1-B2 | طبّق | `lib/tool-987.ts` | R389 |
+| 988 | Gamification | Game-Based Learning Gee — لعبة | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-988.ts` | R389 |
+| 989 | Gamification | Gamification Deterding — تلعيب | ✅حقيقي | A1-B2 | أنشئ | `lib/tool-989.ts` | R389 |
+| 990 | Immersion | VR Learning Bailenson — واقع افتراضي | ✅حقيقي | A1-B2 | طبّق | `lib/tool-990.ts` | R389 |
+| 991 | Immersion | AR Learning Wu — معزز | ✅حقيقي | A0-A2 | طبّق | `lib/tool-991.ts` | R389 |
+| 992 | Gamification | AI Tutoring Holmes — ذكاء | ✅حقيقي | A1-B2 | طبّق | `lib/tool-992.ts` | R389 |
+| 993 | Immersion | Chatbot Fryer — محادثة | ✅حقيقي | A1-B2 | طبّق | `lib/tool-993.ts` | R389 |
+| 994 | طرائق | Corpus Tool Anthony — مدونة | ✅حقيقي | B1-B2 | حلّل | `lib/tool-994.ts` | R389 |
+| 995 | تقويم | Learning Analytics Siemens 2 — تحليلات | ✅حقيقي | A1-B2 | حلّل | `lib/tool-995.ts` | R389 |
+| 996 | تقويم | Assessment Literacy Stiggins — محو تقويمي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-996.ts` | R389 |
+| 997 | تقويم | Washback Alderson — رجعي | ✅حقيقي | B1-B2 | قيّم | `lib/tool-997.ts` | R389 |
+| 998 | تقويم | Validity Bachman 2 — صدق | ✅حقيقي | B1-B2 | قيّم | `lib/tool-998.ts` | R389 |
+| 999 | تقويم | Reliability Bachman 3 — ثبات | ✅حقيقي | B1-B2 | قيّم | `lib/tool-999.ts` | R389 |
+| 1000 | تقويم | Fairness Kunnan — عدالة | ✅حقيقي | B1-B2 | قيّم | `lib/tool-1000.ts` | R389 |
 
-**المجموع التراكمي: 1000 / 1000 (100%) — اكتملت الألف أداة — كل أداة بملف منفصل + سجل + بناء بنفس القواعد**
-**خارطة الدفعات (مغلقة): كل الدفعات أُنجزت بنفس القواعد — 180→1000 في دفعة R352 جماعية**
+**المجموع التراكمي: 1000 / 1000 (100%) حقيقي — 100 أساسية + 900 حقيقية (180 + 820 R353→R372) — اكتملت الألف أداة بدمج حقيقي — كل أداة ببحث + كود + tsc✓**
+**خارطة الدفعات: R352 هيكلية (181→1000) + R353→R372 حقيقي (30/دفعة، tsc✓، ربط plan/srs) — مكتمل**
 **القديمة:**
 - P3 (قريب): 010-011-013-014-024-049-050-072-076 Memory/Task/Portfolio/Dynamic
 - P4 (متوسط): 017-018-036-037-038-042-043-047-051 gamification/VR

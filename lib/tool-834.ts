@@ -1,6 +1,8 @@
 /**
- * 834 — أداة بيداغوجية مكتملة (تقويم / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 834 — Content-Based Instruction — تعليم مبني محتوى
+ * Brinton 1989: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_834 = { id: 834, family: "تقويم", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_834(): boolean { return true; }
+export const TOOL_834 = { id: 834, titleDe: "Content-Based Instruction", titleAr: "تعليم مبني محتوى", family: "طرائق", bloom: "أنشئ", level: "B1-B2", research: "Brinton 1989", desc: "Content-Based Instruction" } as const;
+export function tool834Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool834Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 728 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 728 — Inclusive Education — تعليم دامج
+ * Florian 2014: classroom application
+ * Level: A0-B2 | Bloom: قيّم | Family: طرائق
  */
-export const TOOL_728 = { id: 728, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_728(): boolean { return true; }
+export const TOOL_728 = { id: 728, titleDe: "Inclusive Education", titleAr: "تعليم دامج", family: "طرائق", bloom: "قيّم", level: "A0-B2", research: "Florian 2014", desc: "Inclusive Education" } as const;
+export function tool728Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool728Check(v:number):boolean{return v>0;}

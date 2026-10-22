@@ -1,6 +1,8 @@
 /**
- * 682 — أداة بيداغوجية مكتملة (طرائق / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 682 — Coherence Kintsch — انسجام كينتش
+ * Kintsch 1998: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_682 = { id: 682, family: "طرائق", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_682(): boolean { return true; }
+export const TOOL_682 = { id: 682, titleDe: "Coherence Kintsch", titleAr: "انسجام كينتش", family: "طرائق", bloom: "حلّل", level: "B1-B2", research: "Kintsch 1998", desc: "Coherence Kintsch" } as const;
+export function tool682Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool682Check(v:number):boolean{return v>0;}

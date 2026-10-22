@@ -1,6 +1,8 @@
 /**
- * 633 — أداة بيداغوجية مكتملة (تلقين / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 633 — Cross-Linguistic Influence adv — تأثير عبر متقدم
+ * Jarvis 2010: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_633 = { id: 633, family: "تلقين", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_633(): boolean { return true; }
+export const TOOL_633 = { id: 633, titleDe: "Cross-Linguistic Influence adv", titleAr: "تأثير عبر متقدم", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Jarvis 2010", desc: "Cross-Linguistic Influence adv" } as const;
+export function tool633Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool633Check(v:number):boolean{return v>0;}

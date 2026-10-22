@@ -1,6 +1,17 @@
 /**
- * 429 — أداة بيداغوجية مكتملة (Ethik / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 429 — Case Study Variants adv — تنويعات دراسة حالة
+ * Yin 2009: classroom application with tasks
+ * Level: B1-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_429 = { id: 429, family: "Ethik", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_429(): boolean { return true; }
+export const TOOL_429 = {
+  id: 429,
+  titleDe: "Case Study Variants adv",
+  titleAr: "تنويعات دراسة حالة",
+  family: "طرائق",
+  bloom: "حلّل",
+  level: "B1-B2",
+  research: "Yin 2009",
+  desc: "Case Study Variants adv classroom",
+} as const;
+export function tool429Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool429Check(v:number):boolean{return v>0;}

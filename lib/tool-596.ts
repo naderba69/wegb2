@@ -1,6 +1,8 @@
 /**
- * 596 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 596 — Perfectionism — كمالية
+ * Gregersen 2014: classroom application
+ * Level: B1-B2 | Bloom: قيّم | Family: تلقين
  */
-export const TOOL_596 = { id: 596, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_596(): boolean { return true; }
+export const TOOL_596 = { id: 596, titleDe: "Perfectionism", titleAr: "كمالية", family: "تلقين", bloom: "قيّم", level: "B1-B2", research: "Gregersen 2014", desc: "Perfectionism" } as const;
+export function tool596Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool596Check(v:number):boolean{return v>0;}

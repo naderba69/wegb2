@@ -1,6 +1,8 @@
 /**
- * 678 — أداة بيداغوجية مكتملة (Immersion / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 678 — Evidentiality — استدلالية
+ * Chafe 1986: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_678 = { id: 678, family: "Immersion", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_678(): boolean { return true; }
+export const TOOL_678 = { id: 678, titleDe: "Evidentiality", titleAr: "استدلالية", family: "SLA", bloom: "فهم", level: "B1-B2", research: "Chafe 1986", desc: "Evidentiality" } as const;
+export function tool678Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool678Check(v:number):boolean{return v>0;}

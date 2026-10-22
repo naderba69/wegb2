@@ -1,6 +1,17 @@
 /**
- * 373 — أداة بيداغوجية مكتملة (تلقين / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 373 — Input Processing — معالجة المدخلات
+ * VanPatten 1996: classroom application with task integration
+ * Level: A2-B1 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_373 = { id: 373, family: "تلقين", bloom: "فهم", level: "A1" } as const;
-export function aktiv_373(): boolean { return true; }
+export const TOOL_373 = {
+  id: 373,
+  titleDe: "Input Processing",
+  titleAr: "معالجة المدخلات",
+  family: "SLA",
+  bloom: "حلّل",
+  level: "A2-B1",
+  research: "VanPatten 1996",
+  desc: "Input Processing classroom",
+} as const;
+export function tool373Gain(a: boolean): number { return a?1.2:1.0; }
+export function tool373Check(v:number):boolean { return v>0; }

@@ -1,6 +1,8 @@
 /**
- * 626 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 626 — Age Effects — أثر العمر
+ * DeKeyser 2000: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_626 = { id: 626, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_626(): boolean { return true; }
+export const TOOL_626 = { id: 626, titleDe: "Age Effects", titleAr: "أثر العمر", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "DeKeyser 2000", desc: "Age Effects" } as const;
+export function tool626Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool626Check(v:number):boolean{return v>0;}

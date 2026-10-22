@@ -136,6 +136,7 @@ export interface HaerteRung {
   answer: number;
   ar: string;
   de: string;
+  skill?: "lesen" | "hoeren" | "schreiben" | "sprechen";
 }
 export const haerte: HaerteRung[] = [];
 
@@ -196,7 +197,7 @@ export interface PartnerKarte {
   titel_de?: string;
   titel_ar?: string;
 }
-/** 🗣️ مختبر الشفهي — 12 بطاقة: 6 وصف صورة + 6 مناقشة (Modul AA) */
+/** 🗣️ مختبر الشفهي — 24 بطاقة B2 + 21 A1/A2/B1 (Modul AA): 14 وصف صورة + 10 مناقشة B2 */
 export const muendlich: MuendlichKarte[] = [];
 export const partnerKarten: PartnerKarte[] = [];
 export const kontaktKarten: KontaktKarte[] = [];

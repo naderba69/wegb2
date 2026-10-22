@@ -1,6 +1,8 @@
 /**
- * 956 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 956 — Vision Theory — نظرية رؤية
+ * Dörnyei 2014: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: تلقين
  */
-export const TOOL_956 = { id: 956, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_956(): boolean { return true; }
+export const TOOL_956 = { id: 956, titleDe: "Vision Theory", titleAr: "نظرية رؤية", family: "تلقين", bloom: "فهم", level: "B1-B2", research: "Dörnyei 2014", desc: "Vision Theory" } as const;
+export function tool956Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool956Check(v:number):boolean{return v>0;}

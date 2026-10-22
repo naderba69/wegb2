@@ -1,6 +1,17 @@
 /**
- * 268 — أداة بيداغوجية مكتملة (Immersion / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 268 — Free Recall — الاستدعاء الحر
+ * Tulving 1968: free recall reveals organization; clustering shows learning
+ * Level: B1-B2 | Bloom: أنشئ | Family: الذاكرة
  */
-export const TOOL_268 = { id: 268, family: "Immersion", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_268(): boolean { return true; }
+export const TOOL_268 = {
+  id: 268,
+  titleDe: "Freier Abruf",
+  titleAr: "الاستدعاء الحر",
+  family: "الذاكرة",
+  bloom: "أنشئ",
+  level: "B1-B2",
+  research: "Tulving 1968",
+  task: "Schreibe alle Wörter zum Thema ... auf!",
+} as const;
+export function freeRecallPrompt(topic: string): string { return `Freier Abruf: Alle Wörter zu ${topic} — los!`; }
+export function recallScore(recalled: number, total: number): number { return total?recalled/total:0; }

@@ -1,6 +1,17 @@
 /**
- * 217 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 217 — PPP — العرض والممارسة والإنتاج
+ * Byrne 1986: Presentation → Practice → Production still useful for beginners
+ * Level: A0-A2 | Bloom: طبّق | Family: طرائق
  */
-export const TOOL_217 = { id: 217, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_217(): boolean { return true; }
+export const TOOL_217 = {
+  id: 217,
+  titleDe: "PPP (Präsentation-Übung-Produktion)",
+  titleAr: "العرض-الممارسة-الإنتاج",
+  family: "طرائق",
+  bloom: "طبّق",
+  level: "A0-A2",
+  research: "Byrne 1986",
+  when: "Anfänger: PPP gut; Fortgeschrittene: TBLT besser",
+} as const;
+export type PppPhase = "presentation" | "practice" | "production";
+export function pppPhase(dayInWeek: number): PppPhase { return dayInWeek<=2?"presentation":dayInWeek<=4?"practice":"production"; }

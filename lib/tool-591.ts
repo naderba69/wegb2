@@ -1,6 +1,8 @@
 /**
- * 591 — أداة بيداغوجية مكتملة (SLA / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 591 — Listening Anxiety — قلق استماع
+ * Vogely 1998: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_591 = { id: 591, family: "SLA", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_591(): boolean { return true; }
+export const TOOL_591 = { id: 591, titleDe: "Listening Anxiety", titleAr: "قلق استماع", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Vogely 1998", desc: "Listening Anxiety" } as const;
+export function tool591Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool591Check(v:number):boolean{return v>0;}

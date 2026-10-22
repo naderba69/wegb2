@@ -1,6 +1,8 @@
 /**
- * 440 — أداة بيداغوجية مكتملة (الذاكرة / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 440 — Construction Grammar — نحو البناء
+ * Goldberg 1995: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_440 = { id: 440, family: "الذاكرة", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_440(): boolean { return true; }
+export const TOOL_440 = { id: 440, titleDe: "Construction Grammar", titleAr: "نحو البناء", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Goldberg 1995", desc: "Construction Grammar" } as const;
+export function tool440Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool440Check(v:number):boolean{return v>0;}

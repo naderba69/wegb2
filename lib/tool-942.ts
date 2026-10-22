@@ -1,6 +1,8 @@
 /**
- * 942 — أداة بيداغوجية مكتملة (طرائق / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 942 — Task Complexity Robinson — تعقيد مهام روبنسون
+ * Robinson 2011: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_942 = { id: 942, family: "طرائق", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_942(): boolean { return true; }
+export const TOOL_942 = { id: 942, titleDe: "Task Complexity Robinson", titleAr: "تعقيد مهام روبنسون", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Robinson 2011", desc: "Task Complexity Robinson" } as const;
+export function tool942Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool942Check(v:number):boolean{return v>0;}

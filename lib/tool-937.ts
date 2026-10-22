@@ -1,6 +1,8 @@
 /**
- * 937 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 937 — Online Interaction CEFR — تفاعل إنترنت CEFR
+ * Council 2018: classroom application
+ * Level: A1-B2 | Bloom: أنشئ | Family: Immersion
  */
-export const TOOL_937 = { id: 937, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_937(): boolean { return true; }
+export const TOOL_937 = { id: 937, titleDe: "Online Interaction CEFR", titleAr: "تفاعل إنترنت CEFR", family: "Immersion", bloom: "أنشئ", level: "A1-B2", research: "Council 2018", desc: "Online Interaction CEFR" } as const;
+export function tool937Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool937Check(v:number):boolean{return v>0;}

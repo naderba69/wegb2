@@ -1,6 +1,22 @@
 /**
- * 206 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 206 — Peer Feedback — تغذية الأقران الراجعة
+ * Topping 2009: peer feedback improves both giver and receiver
+ * Level: B1-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_206 = { id: 206, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_206(): boolean { return true; }
+export const TOOL_206 = {
+  id: 206,
+  titleDe: "Peer-Feedback",
+  titleAr: "تغذية الأقران",
+  family: "تقويم",
+  bloom: "قيّم",
+  level: "B1-B2",
+  research: "Topping 2009",
+  rule: "2 Sterne + 1 Wunsch",
+} as const;
+
+export function peerFeedbackTemplate(): string {
+  return "2 Sterne (was gut) + 1 Wunsch (was besser)";
+}
+export function peerGain(gaveFeedback: boolean): number {
+  return gaveFeedback ? 1.15 : 1.0;
+}

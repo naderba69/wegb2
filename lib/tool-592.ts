@@ -1,6 +1,8 @@
 /**
- * 592 — أداة بيداغوجية مكتملة (طرائق / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 592 — Speaking Anxiety — قلق تحدث
+ * Woodrow 2006: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_592 = { id: 592, family: "طرائق", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_592(): boolean { return true; }
+export const TOOL_592 = { id: 592, titleDe: "Speaking Anxiety", titleAr: "قلق تحدث", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Woodrow 2006", desc: "Speaking Anxiety" } as const;
+export function tool592Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool592Check(v:number):boolean{return v>0;}

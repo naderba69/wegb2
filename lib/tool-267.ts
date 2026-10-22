@@ -1,6 +1,17 @@
 /**
- * 267 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 267 — Dual Coding Audio — الترميز المزدوج بالصوت
+ * Mayer 2009: spoken + written + image > written alone (but avoid redundancy overload)
+ * Level: A0-B2 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_267 = { id: 267, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_267(): boolean { return true; }
+export const TOOL_267 = {
+  id: 267,
+  titleDe: "Dual Coding (Audio)",
+  titleAr: "الترميز المزدوج بالصوت",
+  family: "الذاكرة",
+  bloom: "فهم",
+  level: "A0-B2",
+  research: "Mayer 2009",
+  optimal: "Bild + Audio ODER Bild + Text, nicht alle drei gleichzeitig",
+} as const;
+export function audioDual(word: string, audio: boolean): string { return `${word} ${audio?"🔊":""} — höre + lies`; }
+export function redundancyRisk(modalities: number): boolean { return modalities>2; }

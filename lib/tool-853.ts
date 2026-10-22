@@ -1,6 +1,8 @@
 /**
- * 853 — أداة بيداغوجية مكتملة (تلقين / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 853 — Distributed Practice — ممارسة موزعة
+ * Cepeda 2006: classroom application
+ * Level: A1-B2 | Bloom: طبّق | Family: الذاكرة
  */
-export const TOOL_853 = { id: 853, family: "تلقين", bloom: "فهم", level: "A1" } as const;
-export function aktiv_853(): boolean { return true; }
+export const TOOL_853 = { id: 853, titleDe: "Distributed Practice", titleAr: "ممارسة موزعة", family: "الذاكرة", bloom: "طبّق", level: "A1-B2", research: "Cepeda 2006", desc: "Distributed Practice" } as const;
+export function tool853Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool853Check(v:number):boolean{return v>0;}

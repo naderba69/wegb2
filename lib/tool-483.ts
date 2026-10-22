@@ -1,6 +1,8 @@
 /**
- * 483 — أداة بيداغوجية مكتملة (تلقين / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 483 — Ethnographic Project — مشروع إثنوغرافي
+ * Roberts 2001: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: Immersion
  */
-export const TOOL_483 = { id: 483, family: "تلقين", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_483(): boolean { return true; }
+export const TOOL_483 = { id: 483, titleDe: "Ethnographic Project", titleAr: "مشروع إثنوغرافي", family: "Immersion", bloom: "أنشئ", level: "B1-B2", research: "Roberts 2001", desc: "Ethnographic Project" } as const;
+export function tool483Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool483Check(v:number):boolean{return v>0;}

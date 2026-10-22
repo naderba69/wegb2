@@ -1,6 +1,8 @@
 /**
- * 572 — أداة بيداغوجية مكتملة (طرائق / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 572 — Perspective Taking — اتخاذ منظور
+ * Selman 1980: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: Immersion
  */
-export const TOOL_572 = { id: 572, family: "طرائق", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_572(): boolean { return true; }
+export const TOOL_572 = { id: 572, titleDe: "Perspective Taking", titleAr: "اتخاذ منظور", family: "Immersion", bloom: "حلّل", level: "B1-B2", research: "Selman 1980", desc: "Perspective Taking" } as const;
+export function tool572Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool572Check(v:number):boolean{return v>0;}

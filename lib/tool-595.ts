@@ -1,6 +1,8 @@
 /**
- * 595 — أداة بيداغوجية مكتملة (بلوم / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 595 — Test Anxiety — قلق اختبار
+ * Hembree 1988: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: تقويم
  */
-export const TOOL_595 = { id: 595, family: "بلوم", bloom: "فهم", level: "A1" } as const;
-export function aktiv_595(): boolean { return true; }
+export const TOOL_595 = { id: 595, titleDe: "Test Anxiety", titleAr: "قلق اختبار", family: "تقويم", bloom: "حلّل", level: "A1-B2", research: "Hembree 1988", desc: "Test Anxiety" } as const;
+export function tool595Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool595Check(v:number):boolean{return v>0;}

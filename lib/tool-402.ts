@@ -1,6 +1,17 @@
 /**
- * 402 — أداة بيداغوجية مكتملة (طرائق / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 402 — Explicit Correction — تصحيح صريح
+ * Lyster 1998: classroom application with tasks
+ * Level: A1-B2 | Bloom: طبّق | Family: SLA
  */
-export const TOOL_402 = { id: 402, family: "طرائق", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_402(): boolean { return true; }
+export const TOOL_402 = {
+  id: 402,
+  titleDe: "Explicit Correction",
+  titleAr: "تصحيح صريح",
+  family: "SLA",
+  bloom: "طبّق",
+  level: "A1-B2",
+  research: "Lyster 1998",
+  desc: "Explicit Correction classroom",
+} as const;
+export function tool402Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool402Check(v:number):boolean{return v>0;}

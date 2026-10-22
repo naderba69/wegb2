@@ -1,6 +1,8 @@
 /**
- * 529 — أداة بيداغوجية مكتملة (Ethik / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 529 — Learner Corpus Use — استخدام مدونة متعلم
+ * Granger 2015: classroom application with research-based tasks
+ * Level: B1-B2 | Bloom: حلّل | Family: تقويم
  */
-export const TOOL_529 = { id: 529, family: "Ethik", bloom: "فهم", level: "A1" } as const;
-export function aktiv_529(): boolean { return true; }
+export const TOOL_529 = { id: 529, titleDe: "Learner Corpus Use", titleAr: "استخدام مدونة متعلم", family: "تقويم", bloom: "حلّل", level: "B1-B2", research: "Granger 2015", desc: "Learner Corpus Use" } as const;
+export function tool529Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool529Check(v:number):boolean{return v>0;}

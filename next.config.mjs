@@ -1,7 +1,8 @@
-// 🛡️ R305/ب16: رؤوس أمان أساسية — دفاع إضافي لا إصلاح عطل قائم. المفتاح وعنوانه
+// 🛡️ R305/ب16 + R402: رؤوس أمان أساسية — دفاع إضافي لا إصلاح عطل قائم. المفتاح وعنوانه
 // (BYOK) يبقيان بتصميمهما الحالي (المستخدم يختار مزوّده بحرية)، فـconnect-src يسمح
 // بأي https: بدل حصره بمزوّدَين فقط حتى لا يكسر مزوّدًا مخصّصًا يضيفه المستخدم.
-// لا frame-ancestors/X-Frame-Options هنا عمداً: قد يمنعان عرض المعاينة الحيّة بإطار.
+// R402: أضيف frame-ancestors للمتصفح فقط للحماية من clickjacking مع السماح بمعاينة e2b الحيّة.
+// unsafe-inline يبقى لـ Next.js hydration + Tailwind @theme؛ nonce مؤجّل إلى Next 16 middleware.
 const CSP = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline'",
@@ -13,6 +14,7 @@ const CSP = [
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
+  "frame-ancestors 'self' https://*.e2b.app",
 ].join("; ");
 
 /** @type {import('next').NextConfig} */

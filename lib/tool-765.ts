@@ -1,6 +1,8 @@
 /**
- * 765 — أداة بيداغوجية مكتملة (بلوم / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 765 — Metrolingualism — تنوع حضري
+ * Otsuji 2010: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: Immersion
  */
-export const TOOL_765 = { id: 765, family: "بلوم", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_765(): boolean { return true; }
+export const TOOL_765 = { id: 765, titleDe: "Metrolingualism", titleAr: "تنوع حضري", family: "Immersion", bloom: "فهم", level: "B1-B2", research: "Otsuji 2010", desc: "Metrolingualism" } as const;
+export function tool765Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool765Check(v:number):boolean{return v>0;}

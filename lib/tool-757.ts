@@ -1,6 +1,8 @@
 /**
- * 757 — أداة بيداغوجية مكتملة (Narrative / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 757 — Narrative Inquiry — سرد استقصائي
+ * Barkhuizen 2014: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: تلقين
  */
-export const TOOL_757 = { id: 757, family: "Narrative", bloom: "فهم", level: "A1" } as const;
-export function aktiv_757(): boolean { return true; }
+export const TOOL_757 = { id: 757, titleDe: "Narrative Inquiry", titleAr: "سرد استقصائي", family: "تلقين", bloom: "حلّل", level: "B1-B2", research: "Barkhuizen 2014", desc: "Narrative Inquiry" } as const;
+export function tool757Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool757Check(v:number):boolean{return v>0;}

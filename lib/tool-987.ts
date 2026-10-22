@@ -1,6 +1,8 @@
 /**
- * 987 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 987 — Mobile Learning Kukulska — تعلم جوال كوكولسكا
+ * Kukulska-Hulme 2009: classroom application
+ * Level: A1-B2 | Bloom: طبّق | Family: Immersion
  */
-export const TOOL_987 = { id: 987, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_987(): boolean { return true; }
+export const TOOL_987 = { id: 987, titleDe: "Mobile Learning Kukulska", titleAr: "تعلم جوال كوكولسكا", family: "Immersion", bloom: "طبّق", level: "A1-B2", research: "Kukulska-Hulme 2009", desc: "Mobile Learning Kukulska" } as const;
+export function tool987Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool987Check(v:number):boolean{return v>0;}

@@ -1,6 +1,17 @@
 /**
- * 242 — أداة بيداغوجية مكتملة (طرائق / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 242 — Self-Assessment — التقويم الذاتي
+ * Oscarson 1989: learner self-rates predict proficiency r=0.6; boosts autonomy
+ * Level: A1-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_242 = { id: 242, family: "طرائق", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_242(): boolean { return true; }
+export const TOOL_242 = {
+  id: 242,
+  titleDe: "Selbsteinschätzung",
+  titleAr: "التقويم الذاتي",
+  family: "تقويم",
+  bloom: "قيّم",
+  level: "A1-B2",
+  research: "Oscarson 1989 r=0.6",
+  scale: "★★★/★★☆/★☆☆",
+} as const;
+export function selfRate(skill: string, stars: number): string { return `${skill}: ${"★".repeat(stars)}${"☆".repeat(3-stars)}`; }
+export function calibrate(self: number, teacher: number): number { return Math.abs(self-teacher); }

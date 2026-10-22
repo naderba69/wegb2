@@ -1,6 +1,8 @@
 /**
- * 854 — أداة بيداغوجية مكتملة (تقويم / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 854 — Interleaving Rohrer — تداخل
+ * Rohrer 2012: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: الذاكرة
  */
-export const TOOL_854 = { id: 854, family: "تقويم", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_854(): boolean { return true; }
+export const TOOL_854 = { id: 854, titleDe: "Interleaving Rohrer", titleAr: "تداخل", family: "الذاكرة", bloom: "حلّل", level: "A1-B2", research: "Rohrer 2012", desc: "Interleaving Rohrer" } as const;
+export function tool854Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool854Check(v:number):boolean{return v>0;}

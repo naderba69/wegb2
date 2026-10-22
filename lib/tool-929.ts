@@ -1,6 +1,8 @@
 /**
- * 929 — أداة بيداغوجية مكتملة (Ethik / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 929 — Strategic Competence — كفاءة استراتيجية
+ * Canale 1983: classroom application
+ * Level: A1-B2 | Bloom: أنشئ | Family: تقويم
  */
-export const TOOL_929 = { id: 929, family: "Ethik", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_929(): boolean { return true; }
+export const TOOL_929 = { id: 929, titleDe: "Strategic Competence", titleAr: "كفاءة استراتيجية", family: "تقويم", bloom: "أنشئ", level: "A1-B2", research: "Canale 1983", desc: "Strategic Competence" } as const;
+export function tool929Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool929Check(v:number):boolean{return v>0;}

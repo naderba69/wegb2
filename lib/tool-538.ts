@@ -1,6 +1,8 @@
 /**
- * 538 — أداة بيداغوجية مكتملة (Immersion / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 538 — Depth of Processing — عمق معالجة
+ * Craik 1972: classroom application with research-based tasks
+ * Level: A1-B2 | Bloom: حلّل | Family: الذاكرة
  */
-export const TOOL_538 = { id: 538, family: "Immersion", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_538(): boolean { return true; }
+export const TOOL_538 = { id: 538, titleDe: "Depth of Processing", titleAr: "عمق معالجة", family: "الذاكرة", bloom: "حلّل", level: "A1-B2", research: "Craik 1972", desc: "Depth of Processing" } as const;
+export function tool538Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool538Check(v:number):boolean{return v>0;}

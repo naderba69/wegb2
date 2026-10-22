@@ -1,6 +1,22 @@
 /**
- * 195 — أداة بيداغوجية مكتملة (بلوم / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 195 — Production Effect — أثر الإنتاج (القراءة بصوت عالٍ)
+ * MacLeod 2010: reading aloud > silent, +15% distinctiveness
+ * Level: A0-A2 | Bloom: طبّق | Family: الذاكرة
  */
-export const TOOL_195 = { id: 195, family: "بلوم", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_195(): boolean { return true; }
+export const TOOL_195 = {
+  id: 195,
+  titleDe: "Produktionseffekt",
+  titleAr: "أثر الإنتاج الجهري",
+  family: "الذاكرة",
+  bloom: "طبّق",
+  level: "A0-A2",
+  research: "MacLeod 2010",
+  instruction: "lies laut vor",
+} as const;
+
+export function productionGain(readAloud: boolean): number {
+  return readAloud ? 1.15 : 1.0;
+}
+export function shouldProduceAloud(phase: string): boolean {
+  return phase === "A0" || phase === "A1";
+}

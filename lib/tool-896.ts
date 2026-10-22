@@ -1,6 +1,8 @@
 /**
- * 896 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 896 — Word Formation Bauer — تكوين كلمات باور
+ * Bauer 1983: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_896 = { id: 896, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_896(): boolean { return true; }
+export const TOOL_896 = { id: 896, titleDe: "Word Formation Bauer", titleAr: "تكوين كلمات باور", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Bauer 1983", desc: "Word Formation Bauer" } as const;
+export function tool896Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool896Check(v:number):boolean{return v>0;}

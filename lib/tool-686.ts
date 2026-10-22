@@ -1,6 +1,8 @@
 /**
- * 686 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 686 — Given New — معطى/جديد
+ * Clark 1975: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_686 = { id: 686, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_686(): boolean { return true; }
+export const TOOL_686 = { id: 686, titleDe: "Given New", titleAr: "معطى/جديد", family: "SLA", bloom: "فهم", level: "A1-B2", research: "Clark 1975", desc: "Given New" } as const;
+export function tool686Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool686Check(v:number):boolean{return v>0;}

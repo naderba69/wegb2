@@ -1,6 +1,8 @@
 /**
- * 668 — أداة بيداغوجية مكتملة (Immersion / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 668 — Sound Symbolism Dingemanse — رمزية صوتية
+ * Dingemanse 2012: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_668 = { id: 668, family: "Immersion", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_668(): boolean { return true; }
+export const TOOL_668 = { id: 668, titleDe: "Sound Symbolism Dingemanse", titleAr: "رمزية صوتية", family: "SLA", bloom: "فهم", level: "A1-B2", research: "Dingemanse 2012", desc: "Sound Symbolism Dingemanse" } as const;
+export function tool668Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool668Check(v:number):boolean{return v>0;}

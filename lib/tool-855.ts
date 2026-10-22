@@ -1,6 +1,8 @@
 /**
- * 855 — أداة بيداغوجية مكتملة (بلوم / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 855 — Variability Encoding — تنوع ترميز
+ * Raviv 2020: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_855 = { id: 855, family: "بلوم", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_855(): boolean { return true; }
+export const TOOL_855 = { id: 855, titleDe: "Variability Encoding", titleAr: "تنوع ترميز", family: "الذاكرة", bloom: "فهم", level: "A1-B2", research: "Raviv 2020", desc: "Variability Encoding" } as const;
+export function tool855Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool855Check(v:number):boolean{return v>0;}

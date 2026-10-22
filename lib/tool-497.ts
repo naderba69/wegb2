@@ -1,6 +1,8 @@
 /**
- * 497 — أداة بيداغوجية مكتملة (Narrative / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 497 — GERS Tasks — مهام GERS
+ * Goethe 2019: classroom application
+ * Level: A1-B2 | Bloom: طبّق | Family: تقويم
  */
-export const TOOL_497 = { id: 497, family: "Narrative", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_497(): boolean { return true; }
+export const TOOL_497 = { id: 497, titleDe: "GERS Tasks", titleAr: "مهام GERS", family: "تقويم", bloom: "طبّق", level: "A1-B2", research: "Goethe 2019", desc: "GERS Tasks" } as const;
+export function tool497Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool497Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 804 — أداة بيداغوجية مكتملة (تقويم / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 804 — Private Speech — كلام خاص
+ * Vygotsky 1986: classroom application
+ * Level: A0-B1 | Bloom: فهم | Family: SLA
  */
-export const TOOL_804 = { id: 804, family: "تقويم", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_804(): boolean { return true; }
+export const TOOL_804 = { id: 804, titleDe: "Private Speech", titleAr: "كلام خاص", family: "SLA", bloom: "فهم", level: "A0-B1", research: "Vygotsky 1986", desc: "Private Speech" } as const;
+export function tool804Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool804Check(v:number):boolean{return v>0;}

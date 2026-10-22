@@ -1,6 +1,17 @@
 /**
- * 214 — أداة بيداغوجية مكتملة (تقويم / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 214 — Output Hypothesis — فرضية الإخراج
+ * Swain 1985: producing language forces syntactic processing; noticing gaps
+ * Level: B1-B2 | Bloom: طبّق | Family: SLA
  */
-export const TOOL_214 = { id: 214, family: "تقويم", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_214(): boolean { return true; }
+export const TOOL_214 = {
+  id: 214,
+  titleDe: "Output-Hypothese",
+  titleAr: "فرضية الإخراج",
+  family: "SLA",
+  bloom: "طبّق",
+  level: "B1-B2",
+  research: "Swain 1985",
+  functions: "noticing, hypothesis testing, metalinguistic",
+} as const;
+export function outputPrompt(topic: string): string { return `Produziere: Schreibe 3 Sätze über ${topic}`; }
+export function pushedOutput(complexity: number): boolean { return complexity > 0.6; }

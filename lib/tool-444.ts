@@ -1,6 +1,8 @@
 /**
- * 444 — أداة بيداغوجية مكتملة (تقويم / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 444 — Schematization — القولبة
+ * Langacker 2008: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_444 = { id: 444, family: "تقويم", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_444(): boolean { return true; }
+export const TOOL_444 = { id: 444, titleDe: "Schematization", titleAr: "القولبة", family: "SLA", bloom: "فهم", level: "B1-B2", research: "Langacker 2008", desc: "Schematization" } as const;
+export function tool444Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool444Check(v:number):boolean{return v>0;}

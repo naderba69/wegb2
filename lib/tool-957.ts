@@ -1,6 +1,8 @@
 /**
- * 957 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 957 — Future Self Guides — مرشدات ذات مستقبلية
+ * Dörnyei 2009: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: تلقين
  */
-export const TOOL_957 = { id: 957, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_957(): boolean { return true; }
+export const TOOL_957 = { id: 957, titleDe: "Future Self Guides", titleAr: "مرشدات ذات مستقبلية", family: "تلقين", bloom: "حلّل", level: "A1-B2", research: "Dörnyei 2009", desc: "Future Self Guides" } as const;
+export function tool957Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool957Check(v:number):boolean{return v>0;}

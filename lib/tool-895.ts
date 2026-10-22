@@ -1,6 +1,8 @@
 /**
- * 895 — أداة بيداغوجية مكتملة (بلوم / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 895 — Vocabulary Portfolio — محفظة مفردات
+ * Little 2002: classroom application
+ * Level: A1-B2 | Bloom: أنشئ | Family: تقويم
  */
-export const TOOL_895 = { id: 895, family: "بلوم", bloom: "فهم", level: "A1" } as const;
-export function aktiv_895(): boolean { return true; }
+export const TOOL_895 = { id: 895, titleDe: "Vocabulary Portfolio", titleAr: "محفظة مفردات", family: "تقويم", bloom: "أنشئ", level: "A1-B2", research: "Little 2002", desc: "Vocabulary Portfolio" } as const;
+export function tool895Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool895Check(v:number):boolean{return v>0;}

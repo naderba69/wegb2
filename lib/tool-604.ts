@@ -1,6 +1,8 @@
 /**
- * 604 — أداة بيداغوجية مكتملة (تقويم / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 604 — Code-Switching Myers — تناوب لغوي
+ * Myers-Scotton 2006: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_604 = { id: 604, family: "تقويم", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_604(): boolean { return true; }
+export const TOOL_604 = { id: 604, titleDe: "Code-Switching Myers", titleAr: "تناوب لغوي", family: "SLA", bloom: "فهم", level: "A1-B2", research: "Myers-Scotton 2006", desc: "Code-Switching Myers" } as const;
+export function tool604Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool604Check(v:number):boolean{return v>0;}

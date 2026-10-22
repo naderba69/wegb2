@@ -1,6 +1,8 @@
 /**
- * 823 — أداة بيداغوجية مكتملة (تلقين / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 823 — Comprehensible Input Krashen — مدخلات مفهومة
+ * Krashen 1985: classroom application
+ * Level: A0-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_823 = { id: 823, family: "تلقين", bloom: "فهم", level: "A1" } as const;
-export function aktiv_823(): boolean { return true; }
+export const TOOL_823 = { id: 823, titleDe: "Comprehensible Input Krashen", titleAr: "مدخلات مفهومة", family: "SLA", bloom: "فهم", level: "A0-B2", research: "Krashen 1985", desc: "Comprehensible Input Krashen" } as const;
+export function tool823Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool823Check(v:number):boolean{return v>0;}

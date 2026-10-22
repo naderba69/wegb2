@@ -1,6 +1,8 @@
 /**
- * 865 — أداة بيداغوجية مكتملة (بلوم / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 865 — Self-Reference Rogers — مرجع ذاتي روجرز
+ * Rogers 1977: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_865 = { id: 865, family: "بلوم", bloom: "فهم", level: "A1" } as const;
-export function aktiv_865(): boolean { return true; }
+export const TOOL_865 = { id: 865, titleDe: "Self-Reference Rogers", titleAr: "مرجع ذاتي روجرز", family: "الذاكرة", bloom: "فهم", level: "A1-B2", research: "Rogers 1977", desc: "Self-Reference Rogers" } as const;
+export function tool865Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool865Check(v:number):boolean{return v>0;}

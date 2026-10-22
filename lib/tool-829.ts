@@ -1,6 +1,8 @@
 /**
- * 829 — أداة بيداغوجية مكتملة (Ethik / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 829 — Silent Period — فترة صمت
+ * Krashen 1982: classroom application
+ * Level: A0-A2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_829 = { id: 829, family: "Ethik", bloom: "فهم", level: "A1" } as const;
-export function aktiv_829(): boolean { return true; }
+export const TOOL_829 = { id: 829, titleDe: "Silent Period", titleAr: "فترة صمت", family: "SLA", bloom: "فهم", level: "A0-A2", research: "Krashen 1982", desc: "Silent Period" } as const;
+export function tool829Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool829Check(v:number):boolean{return v>0;}

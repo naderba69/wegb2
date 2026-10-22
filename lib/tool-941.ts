@@ -1,6 +1,8 @@
 /**
- * 941 — أداة بيداغوجية مكتملة (SLA / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 941 — Task Design Ellis — تصميم مهام إليس
+ * Ellis 2003: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_941 = { id: 941, family: "SLA", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_941(): boolean { return true; }
+export const TOOL_941 = { id: 941, titleDe: "Task Design Ellis", titleAr: "تصميم مهام إليس", family: "طرائق", bloom: "أنشئ", level: "B1-B2", research: "Ellis 2003", desc: "Task Design Ellis" } as const;
+export function tool941Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool941Check(v:number):boolean{return v>0;}

@@ -1,6 +1,18 @@
 /**
- * 287 — أداة بيداغوجية مكتملة (Narrative / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 287 — Variability Effect — أثر التنوع
+ * Paas 1994: varied examples → transfer
+ * Level: B1-B2 | Bloom: طبّق | Family: طرائق
  */
-export const TOOL_287 = { id: 287, family: "Narrative", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_287(): boolean { return true; }
+export const TOOL_287 = {
+  id: 287,
+  titleDe: "Variability Effect",
+  titleAr: "أثر التنوع",
+  family: "طرائق",
+  bloom: "طبّق",
+  level: "B1-B2",
+  research: "Paas 1994",
+  desc: "varied examples → transfer",
+} as const;
+
+export function tool287Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool287Check(v: number): boolean { return v > 0; }

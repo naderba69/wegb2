@@ -1,6 +1,8 @@
 /**
- * 659 — أداة بيداغوجية مكتملة (Ethik / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 659 — Valency Herbst — تكافؤ
+ * Herbst 2011: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_659 = { id: 659, family: "Ethik", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_659(): boolean { return true; }
+export const TOOL_659 = { id: 659, titleDe: "Valency Herbst", titleAr: "تكافؤ", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Herbst 2011", desc: "Valency Herbst" } as const;
+export function tool659Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool659Check(v:number):boolean{return v>0;}

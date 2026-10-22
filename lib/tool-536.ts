@@ -1,6 +1,8 @@
 /**
- * 536 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 536 — Involvement Load — عبء انخراط
+ * Laufer 2001: classroom application with research-based tasks
+ * Level: B1-B2 | Bloom: حلّل | Family: الذاكرة
  */
-export const TOOL_536 = { id: 536, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_536(): boolean { return true; }
+export const TOOL_536 = { id: 536, titleDe: "Involvement Load", titleAr: "عبء انخراط", family: "الذاكرة", bloom: "حلّل", level: "B1-B2", research: "Laufer 2001", desc: "Involvement Load" } as const;
+export function tool536Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool536Check(v:number):boolean{return v>0;}

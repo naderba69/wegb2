@@ -1,6 +1,8 @@
 /**
- * 704 — أداة بيداغوجية مكتملة (تقويم / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 704 — Academic Writing Hyland — كتابة أكاديمية
+ * Hyland 2006: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_704 = { id: 704, family: "تقويم", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_704(): boolean { return true; }
+export const TOOL_704 = { id: 704, titleDe: "Academic Writing Hyland", titleAr: "كتابة أكاديمية", family: "طرائق", bloom: "أنشئ", level: "B1-B2", research: "Hyland 2006", desc: "Academic Writing Hyland" } as const;
+export function tool704Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool704Check(v:number):boolean{return v>0;}

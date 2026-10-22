@@ -1,6 +1,8 @@
 /**
- * 958 — أداة بيداغوجية مكتملة (Immersion / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 958 — Possible Selves Markus — ذوات ممكنة ماركوس
+ * Markus 1986: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: تلقين
  */
-export const TOOL_958 = { id: 958, family: "Immersion", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_958(): boolean { return true; }
+export const TOOL_958 = { id: 958, titleDe: "Possible Selves Markus", titleAr: "ذوات ممكنة ماركوس", family: "تلقين", bloom: "فهم", level: "A1-B2", research: "Markus 1986", desc: "Possible Selves Markus" } as const;
+export function tool958Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool958Check(v:number):boolean{return v>0;}

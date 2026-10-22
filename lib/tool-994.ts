@@ -1,6 +1,8 @@
 /**
- * 994 — أداة بيداغوجية مكتملة (تقويم / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 994 — Corpus Tool Anthony — أداة مدونة أنتوني
+ * Anthony 2019: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_994 = { id: 994, family: "تقويم", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_994(): boolean { return true; }
+export const TOOL_994 = { id: 994, titleDe: "Corpus Tool Anthony", titleAr: "أداة مدونة أنتوني", family: "طرائق", bloom: "حلّل", level: "B1-B2", research: "Anthony 2019", desc: "Corpus Tool Anthony" } as const;
+export function tool994Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool994Check(v:number):boolean{return v>0;}

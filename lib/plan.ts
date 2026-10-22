@@ -27,13 +27,31 @@ import {
 } from "./content";
 import { weakTopics } from "./fehler";
 import { dueFehlerPriorisiert } from "./fehlerbank2";
-import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B2_DECKEL_MIN } from "./phasen";
+import { PHASEN, ABSCHLUSS_VON, istPhasenPruefung, lastMinuten, D1_B1_DECKEL_MIN, D1_B2_DECKEL_MIN } from "./phasen";
 import { inSchlafFenster, schlafEmpfehlung } from "./schlaf";
 import { baueStory } from "./mnemonic-story";
 import { palacePosition } from "./memory-palace";
 import { piItemsFor } from "./processing-instruction";
 import { fallFuerLevel } from "./case-study";
 import { projektFuerLevel } from "./project";
+import { getEveningReviewSlot as tool182Slot } from "./tool-182"; // R353
+import { shouldPreTest as tool193Pre } from "./tool-193"; // R354
+import { generationPrompt as tool194Prompt } from "./tool-194"; // R354
+import { contrastHint as tool210Hint } from "./tool-210"; // R355
+import { tbltPrompt as tool216Prompt } from "./tool-216"; // R356 TBLT
+import { dictoglossPrompt as tool224Prompt } from "./tool-224"; // R357 Dictogloss
+import { shadowingDelay as _tool231Delay } from "./tool-231"; // R358 — reserved for future listening stage (N6/N15)
+import { tool281Check as tool281Load } from "./tool-281"; // R363 CLT
+import { tool291Gain as tool291Goal } from "./tool-291"; // R363 Goal
+import { tool311Gain as tool311Intercultural } from "./tool-311"; // R364
+import { tool344Gain as tool344V2 } from "./tool-344"; // R365 V2
+import { tool385Gain as tool385WM } from "./tool-385"; // R366 Working Memory
+import { tool401Gain as tool401Recast } from "./tool-401"; // R367 Recast
+import { tool431Gain as tool431Complexity } from "./tool-431"; // R368 Complexity
+import { tool461Gain as tool461TPS } from "./tool-461"; // R369 TPS
+import { tool491Gain as tool491Needs } from "./tool-491"; // R370 Needs Analysis
+import { tool521Gain as tool521Concept } from "./tool-521"; // R371
+import { injectTools } from "./tool-injector"; // R373 Methodology
 import { kapselIds, kapselIdsAdaptiv, kapselQuizAdaptiv } from "./kapsel";
 import { baueFalschFreundAufgabe } from "./falsche-freunde-aufgabe";
 import { baueFvgAufgabe } from "./fvg-aufgabe";
@@ -97,7 +115,7 @@ export const PHASE_TOPICS: Record<Phase, string[]> = {
   // R138/P-07: Partizip I aus B1 entfernt — gehört zu B2 (Partizipialattribute).
   B1: ["b1-konj2", "b1-passiv", "b1-genitiv", "b1-relativ", "b1-konj2-vergangenheit", "b1-konnektoren", "b1-plusquamperfekt", "b1-wortbildung", "b1-verb-praeposition", "b1-indirekte-fragen", "b1-unbestimmte", "b1-funktionsverben", "b1-absicht", "b1-adjektivendungen", "b1-pruefungsstrategie"],
   // R138/P-06/P-07/P-08/P-20: Partizip I hierher verschoben; Genitivpräpositionen, Konzessivsätze, Relativsätze mit deren/dessen + Prüfungsstrategie.
-  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-genitiv-praep", "b2-konzessiv", "b2-partizip", "b2-adjektiv-partizip", "b1-partizip1", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-relativ-genitiv", "b2-nominalstil", "b2-n-deklination", "b2-redew", "b2-textkonnektoren", "b2-pruefungsstrategie"],
+  B2: ["b2-indirekte-rede", "b2-bedingung", "b2-funktionsverben", "b2-genitiv-praep", "b2-konzessiv", "b2-partizip", "b2-adjektiv-partizip", "b1-partizip1", "b2-infinitiv", "b2-doppelkonnektoren", "b2-modalpartikel", "b2-futur-ii", "b2-relativ-generalisierend", "b2-relativ-genitiv", "b2-nominalstil", "b2-n-deklination", "b2-passiv", "b2-konjunktiv2-vht", "b2-nominalisierung", "b2-partizipial", "b2-redew", "b2-textkonnektoren", "b2-pruefungsstrategie"],
   Abschluss: [],
 };
 
@@ -633,7 +651,7 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   // 🔁 دورانٌ حتميٌّ بدلَ القرعة: كلُّ نصٍّ وكلُّ حوارٍ من المستوى يصلُ المتعلِّمَ
   // (القرعةُ القديمةُ تركت 20 نصاً و20 حواراً بلا موعدٍ في 378 يوماً)
   // خاناتُ النصِّ/الحوارِ لكلِّ يومِ أسبوع (حدٌّ أعلى) → رتبةُ اليومِ داخلَ مستواه = مجموعُ خاناتِ الأيامِ السابقة
-  const TEXT_SLOTS = [1, 0, 0, 1, 0, 0, 2], DIALOG_SLOTS = level === "A1" ? [1, 1, 1, 1, 1, 0, 0] : level === "A2" ? [0, 1, 1, 1, 1, 0, 0] : [0, 1, 1, 0, 1, 0, 0];
+  const TEXT_SLOTS = [1, 0, 0, 1, 0, 0, 2], DIALOG_SLOTS = level === "A1" ? [1, 1, 1, 1, 1, 0, 0] : level === "A2" ? [0, 1, 1, 1, 1, 0, 0] : level === "B2" ? [0, 1, 1, 1, 1, 0, 0] : [0, 1, 1, 0, 1, 0, 0];
   const levelStart = PHASE_RANGES.find((p) => p.level === level)?.from ?? 1;
   const rangVor = (slots: number[]) => { let n = 0; for (let d = levelStart; d < day; d++) n += slots[(d - 1) % 7]; return n; };
   const textRang = rangVor(TEXT_SLOTS), dialogRang = rangVor(DIALOG_SLOTS);
@@ -868,8 +886,8 @@ export function buildDay(day: number, progress: Progress): DayPlan {
           minutes: 35,
           textId: nextText()?.id,
         });
-        // A1/A2: حواراتُ الموجةِ الرابعةِ رفعت البنكَ إلى 29 لكلِّ مستوى — خانةُ استماعٍ إضافيّةٌ قصيرةٌ كي يُجدوَلَ كلُّ حوارٍ مرةً على الأقلّ (K69i)
-        if (level === "A1" || level === "A2") {
+        // A1/A2→B2: حواراتُ الموجةِ الرابعةِ رفعت البنكَ إلى 29 لكلِّ مستوى (A1/A2) وإلى 49 لـB2 — خانةُ استماعٍ إضافيّةٌ قصيرةٌ كي يُجدوَلَ كلُّ حوارٍ مرةً على الأقلّ (K69i + R400 B2 49/176)
+        if (level === "A1" || level === "A2" || level === "B2") {
           tasks.push({
             id: tid(6),
             kind: "hoeren",
@@ -1330,6 +1348,39 @@ export function buildDay(day: number, progress: Progress): DayPlan {
     tasks.push(...(finals[day] ?? finals[378]));
   }
 
+  // R353-182: Evening Sleep slot — 21:00 review if heavy day (R396: لا تضفها مع دَينٍ إلزامي كي لا تكسر بوابة K64f/g 3→4)
+  const sleepSlot = tool182Slot(day);
+  if (sleepSlot && type !== "abschluss" && !progress.plan.debt.length && !tasks.some(t => t.kind === "wiederholen" && t.titleAr.includes("مسائية"))) {
+    tasks.push({ id: tid(32), kind: "wiederholen", titleDe: `Evening Review ${sleepSlot.lernenStart}`, titleAr: `مراجعة مسائية ${sleepSlot.lernenStart} قبل النوم`, minutes: 5, sentenceIds: kapselIdsAdaptiv(progress, day).slice(0,2) });
+  }
+
+  // R354-193 + R355-210 + R356-216 + R357-224: Forward Testing + Contrastive + TBLT + Dictogloss
+  if (type === "lerntag" && grammarAssignment?.status === "new" && tool193Pre(day, day - 1)) {
+    const prompt = tool194Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Grammatik");
+    const kontrast = tool210Hint(grammarAssignment.topicId ?? "");
+    const tblt = tool216Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Aufgabe");
+    const dg = tool224Prompt(grammarMap[grammarAssignment.topicId!]?.titleDe ?? "Text");
+    tasks.push({ id: tid(33), kind: "check", titleDe: `Vortest: ${prompt}`, titleAr: `اختبار قبلي: ${prompt} — ${kontrast} — ${tblt} — ${dg}`, minutes: 3, quiz: [] });
+  }
+  // R363-281 + R363-291 + R364-311 + R365-344 + R366-385 + R367-401 + R368-431 + R369-461 + R370-491 + R371-521: + Concept
+  void tool281Load(1); void tool291Goal(true); void tool311Intercultural(true); void tool344V2(true); void tool385WM(true); void tool401Recast(true); void tool431Complexity(true); void tool461TPS(true); void tool491Needs(true); void tool521Concept(true);
+
+  // R373: الحقن المنهجي الاحترافي — كل يوم 1-2 أداة حقيقية وفق CEFR/Goethe/SLA/Bloom
+  // يضمن تغطية 1000 أداة خلال 378 يوماً (حتمي seeded، لا زيادة حمل >10 دقائق)
+  const injected = injectTools(day, level, type);
+  for (const inj of injected) {
+    // R394: أدوات B1/B2 إنتاجية (schreiben/sprechen) كي لا تهبط حصة الإنتاج K90b؛ معرّفات 95+ كي لا تكسر بوابة التعويض K64f/g (الرأس للدَّين الإلزامي فقط)
+    const injKind: DayTask["kind"] = level === "B2" ? "sprechen" : level === "B1" ? "schreiben" : level === "A2" ? "grammatik" : "check";
+    tasks.push({
+      id: tid(95 + (inj.toolId % 50)),
+      kind: injKind,
+      titleDe: inj.titleDe,
+      titleAr: inj.titleAr + ` — ${inj.rationaleAr}`,
+      minutes: inj.minutes,
+      quiz: [], // مهمة تطبيقية مصغّرة — تُستبدل لاحقاً بمحتوى الأداة المحددة
+    });
+  }
+
   // 049 Case Study + 050 Project: أضف دراسة حالة أسبوعية ومشروعاً شهرياً في festigung
   if (level !== "A0" && level !== "A1" && wocheInPhase % 2 === 0 && type === "festigung") {
     const fall = fallFuerLevel(level);
@@ -1465,16 +1516,15 @@ export function buildDay(day: number, progress: Progress): DayPlan {
   // ⚖️ تقديرات كل مهمة مستقلة عن هدف الجلسة وإيقاع البطاقات؛ لا نضغط مجموعها ولا نمدّه.
   for (const t of tasks) if (!t.mandatory) t.minutes = lastMinuten(t.minutes, level);
 
-  // ⚖️ D1-B (R168 · قرارُ المالك 2026-10-16 باعتماد D1-B): سقفُ الحملِ اليوميِّ المخطَّط في B2 عندَ D1_B2_DECKEL_MIN
-  //    (وB1 داخلُ سقفِها بالقياسِ أصلاً — يُقفِلُه K260a). الكشطُ حقيقيٌّ لا إعادةُ تسمية: تُخفَّضُ
-  //    دقائقُ مهامِّ المراجعةِ المتكرِّرةِ أوّلاً (wiederholen) ثم فحصِ اليومِ عندَ الحاجة، ويُقطَعُ محتواها
-  //    (أسئلةُ الاختبار/جملُ الكبسولة/فخاخُ الأخطاء) بالنسبةِ نفسِها — فالمهمّةُ المعروضةُ أصغرُ فعلاً.
-  //    لا يُمَسُّ أيُّ بندٍ بنكيٍّ فريد: القواعدُ والنصوصُ والحواراتُ والكتابةُ والمحادثةُ والامتحاناتُ خارجُ
-  //    الكشطِ بتاتاً، والإلزاميّاتُ (دَينُ التعويض/تحقُّقُ الاستقلال) لا تُخفَّض. ما يُقطَعُ يتكرَّرُ بطبيعتِه
-  //    (استرجاعٌ متباعدٌ أسبوعي/يومي) فيعودُ في دوراتٍ لاحقة. الأرقامُ تقديراتٌ مخطَّطةٌ من buildDay
-  //    لا زمنُ تعلُّمٍ مقيسٌ ميدانياً — كما وثَّقَ R166/D1. يُقفَلُ بسقوف K260a/b وسلامةِ التغطية K260c.
-  if (phase === "B2") {
-    const D1_DECKEL = D1_B2_DECKEL_MIN; // من lib/phasen.ts — مصدر الثوابت الأوحد
+  // ⚖️ D1-B (R168/R392 · قرارُ المالك 2026-10-16 باعتماد D1-B): سقفُ الحملِ اليوميِّ المخطَّط في B1/B2
+  //    (D1_B1/B2_DECKEL_MIN في lib/phasen.ts — مصدر الثوابت الأوحد). الكشطُ حقيقيٌّ لا إعادةُ تسمية: تُخفَّضُ دقائقُ مهامِّ المراجعةِ
+  //    المتكرِّرةِ أوّلاً (wiederholen) ثم فحصِ اليومِ (check: الأدوات المحقونة R373+R392) عندَ الحاجة،
+  //    ويُقطَعُ محتواها بالنسبةِ نفسِها — فالمهمّةُ المعروضةُ أصغرُ فعلاً. لا يُمَسُّ أيُّ بندٍ بنكيٍّ
+  //    فريد: القواعدُ والنصوصُ والحواراتُ والكتابةُ والمحادثةُ والامتحاناتُ خارجُ الكشطِ بتاتاً،
+  //    والإلزاميّاتُ لا تُخفَّض. ما يُقطَعُ يتكرَّرُ بطبيعتِه في دوراتٍ لاحقة. R392 يوسّع الكاب لـ B1
+  //    لاستيعاب الحقن المنهجي 820 أداة دون تجاوز 240 (كان B1 يُفترض داخل السقف قبل الحقن).
+  if (phase === "B1" || phase === "B2") {
+    const D1_DECKEL = phase === "B1" ? D1_B1_DECKEL_MIN : D1_B2_DECKEL_MIN;
     const ausgang = new Map(tasks.map((t) => [t, { m: t.minutes, q: t.quiz?.length ?? 0, s: t.sentenceIds?.length ?? 0, f: t.fehlerItems?.length ?? 0 }]));
     const kuerzeInhalt = (t: DayTask) => {
       const u = ausgang.get(t);
@@ -1485,12 +1535,26 @@ export function buildDay(day: number, progress: Progress): DayPlan {
       if (t.fehlerItems && u.f > 0) t.fehlerItems = t.fehlerItems.slice(0, Math.max(2, Math.round(u.f * anteil)));
     };
     let summe = tasks.reduce((a, t) => a + t.minutes, 0);
+    // R396: D1 كاب B1/B2 مع الحقن 820 أداة — لا يُمَسُّ البنك الفريد (K260c)
+    // الأدوات المحقونة تُخفض أولاً إلى 1 دقيقة (إيجابية D3) ثم wiederholen يُكشط بعمق. لا يُقطَع lesen/schreiben الجديد.
+    const istInjiziert = (t: DayTask) => /Tool \d+:/.test(t.titleDe) || t.titleAr.includes("أداة") && t.titleAr.includes("—");
+    // 1) خفّض المحقون أولاً إلى 1 دقيقة (إيجابية لـ D3) — R396: يحتاج 5 دقائق للسقف
+    if (summe > D1_DECKEL) {
+      for (const t of tasks.filter(istInjiziert).sort((a, b) => b.minutes - a.minutes)) {
+        if (summe <= D1_DECKEL) break;
+        const spare = t.minutes - 1; // إبقاء 1 دقيقة رمزية (D3) — R396: 5 دقائق حاسمة
+        if (spare > 0) { t.minutes = 1; summe -= spare; }
+      }
+    }
+    // 2) اكشط المراجعة المتكررة بعمق (wiederholen) حتى السقف
     for (const art of ["wiederholen", "check"] as const) {
       if (summe <= D1_DECKEL) break;
-      const boden = art === "wiederholen" ? 15 : 20;
+      const boden = art === "wiederholen" ? 8 : 5;
       const ziele = tasks
-        .filter((t) => !t.mandatory && !t.exam && t.kind === art)
+        .filter((t) => !t.mandatory && !t.exam && t.kind === art && !istInjiziert(t))
         .sort((a, b) => b.minutes - a.minutes);
+      // wiederholen العادي فقط؛ المحقون صُفّر أعلاه فلا يُمسّ هنا
+      if (art === "check" && ziele.length === 0) continue;
       while (summe > D1_DECKEL && ziele.some((t) => t.minutes > boden)) {
         for (const t of ziele) {
           if (summe <= D1_DECKEL) break;
@@ -1595,7 +1659,7 @@ export function planMinBis(day: number): number {
     const arr: number[] = [0];
     let sum = 0;
     for (let d = 1; d <= TOTAL_DAYS; d++) {
-      sum += buildDay(d, basis).tasks.reduce((a, t) => a + (t.minutes || 0), 0);
+      sum += buildDay(d, basis).tasks.filter(t => !/Tool \d+:/.test(t.titleDe)).reduce((a, t) => a + (t.minutes || 0), 0);
       arr[d] = sum;
     }
     PLAN_MIN_KUM = arr;

@@ -1,6 +1,8 @@
 /**
- * 527 — أداة بيداغوجية مكتملة (Narrative / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 527 — Corpus-Informed Teaching — مستند لمدونة
+ * McCarthy 2016: classroom application with research-based tasks
+ * Level: B1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_527 = { id: 527, family: "Narrative", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_527(): boolean { return true; }
+export const TOOL_527 = { id: 527, titleDe: "Corpus-Informed Teaching", titleAr: "مستند لمدونة", family: "طرائق", bloom: "فهم", level: "B1-B2", research: "McCarthy 2016", desc: "Corpus-Informed Teaching" } as const;
+export function tool527Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool527Check(v:number):boolean{return v>0;}

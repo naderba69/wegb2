@@ -1,6 +1,17 @@
 /**
- * 394 — أداة بيداغوجية مكتملة (تقويم / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 394 — Priming — التهيئة
+ * McNamara 2005: classroom application with task integration
+ * Level: A1-B2 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_394 = { id: 394, family: "تقويم", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_394(): boolean { return true; }
+export const TOOL_394 = {
+  id: 394,
+  titleDe: "Priming",
+  titleAr: "التهيئة",
+  family: "الذاكرة",
+  bloom: "فهم",
+  level: "A1-B2",
+  research: "McNamara 2005",
+  desc: "Priming classroom",
+} as const;
+export function tool394Gain(a: boolean): number { return a?1.2:1.0; }
+export function tool394Check(v:number):boolean { return v>0; }

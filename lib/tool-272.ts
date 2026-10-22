@@ -1,6 +1,17 @@
 /**
- * 272 — أداة بيداغوجية مكتملة (طرائق / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 272 — Keyword Method Variants — تنويعات الكلمة المفتاحية
+ * Atkinson 1975: foreign word → keyword (similar sounding L1) → image linking
+ * Level: A1-A2 | Bloom: طبّق | Family: الذاكرة
  */
-export const TOOL_272 = { id: 272, family: "طرائق", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_272(): boolean { return true; }
+export const TOOL_272 = {
+  id: 272,
+  titleDe: "Schlüsselwort-Methode (Varianten)",
+  titleAr: "طريقة الكلمة المفتاحية",
+  family: "الذاكرة",
+  bloom: "طبّق",
+  level: "A1-A2",
+  research: "Atkinson 1975",
+  steps: "Fremdwort → Schlüsselwort → Bild",
+} as const;
+export function keywordFor(de: string, ar: string): string { return `${de} klingt wie ${ar} → Bild: ${de} + ${ar}`; }
+export function keywordGain(used: boolean): number { return used?1.4:1.0; }

@@ -1,6 +1,8 @@
 /**
- * 810 — أداة بيداغوجية مكتملة (الذاكرة / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 810 — Interaction Hypothesis Long — فرضية تفاعل لونغ
+ * Long 1996: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_810 = { id: 810, family: "الذاكرة", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_810(): boolean { return true; }
+export const TOOL_810 = { id: 810, titleDe: "Interaction Hypothesis Long", titleAr: "فرضية تفاعل لونغ", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Long 1996", desc: "Interaction Hypothesis Long" } as const;
+export function tool810Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool810Check(v:number):boolean{return v>0;}

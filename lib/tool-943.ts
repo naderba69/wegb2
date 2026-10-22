@@ -1,6 +1,8 @@
 /**
- * 943 — أداة بيداغوجية مكتملة (تلقين / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 943 — Cognition Hypothesis — فرضية معرفة
+ * Robinson 2001: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_943 = { id: 943, family: "تلقين", bloom: "فهم", level: "A1" } as const;
-export function aktiv_943(): boolean { return true; }
+export const TOOL_943 = { id: 943, titleDe: "Cognition Hypothesis", titleAr: "فرضية معرفة", family: "SLA", bloom: "فهم", level: "B1-B2", research: "Robinson 2001", desc: "Cognition Hypothesis" } as const;
+export function tool943Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool943Check(v:number):boolean{return v>0;}

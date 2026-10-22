@@ -1,6 +1,8 @@
 /**
- * 893 — أداة بيداغوجية مكتملة (تلقين / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 893 — Noticing Collocation — انتباه تصاحب
+ * Lewis 2000: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: الذاكرة
  */
-export const TOOL_893 = { id: 893, family: "تلقين", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_893(): boolean { return true; }
+export const TOOL_893 = { id: 893, titleDe: "Noticing Collocation", titleAr: "انتباه تصاحب", family: "الذاكرة", bloom: "فهم", level: "B1-B2", research: "Lewis 2000", desc: "Noticing Collocation" } as const;
+export function tool893Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool893Check(v:number):boolean{return v>0;}

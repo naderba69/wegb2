@@ -1,6 +1,8 @@
 /**
- * 694 — أداة بيداغوجية مكتملة (تقويم / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 694 — Pragmatic Transfer — نقل تداولي
+ * Ishihara 2010: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_694 = { id: 694, family: "تقويم", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_694(): boolean { return true; }
+export const TOOL_694 = { id: 694, titleDe: "Pragmatic Transfer", titleAr: "نقل تداولي", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Ishihara 2010", desc: "Pragmatic Transfer" } as const;
+export function tool694Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool694Check(v:number):boolean{return v>0;}

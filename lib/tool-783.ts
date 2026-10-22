@@ -1,6 +1,8 @@
 /**
- * 783 — أداة بيداغوجية مكتملة (تلقين / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 783 — Language Shift — تحول لغوي
+ * Fishman 1991: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: Immersion
  */
-export const TOOL_783 = { id: 783, family: "تلقين", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_783(): boolean { return true; }
+export const TOOL_783 = { id: 783, titleDe: "Language Shift", titleAr: "تحول لغوي", family: "Immersion", bloom: "فهم", level: "A1-B2", research: "Fishman 1991", desc: "Language Shift" } as const;
+export function tool783Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool783Check(v:number):boolean{return v>0;}

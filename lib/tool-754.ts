@@ -1,6 +1,8 @@
 /**
- * 754 — أداة بيداغوجية مكتملة (تقويم / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 754 — Heteroglossia Bakhtin — تعدد أصوات
+ * Bakhtin 1981: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_754 = { id: 754, family: "تقويم", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_754(): boolean { return true; }
+export const TOOL_754 = { id: 754, titleDe: "Heteroglossia Bakhtin", titleAr: "تعدد أصوات", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "Bakhtin 1981", desc: "Heteroglossia Bakhtin" } as const;
+export function tool754Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool754Check(v:number):boolean{return v>0;}

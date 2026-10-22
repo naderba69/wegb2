@@ -1,6 +1,8 @@
 /**
- * 920 — أداة بيداغوجية مكتملة (الذاكرة / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 920 — Bilingual Advantage Bialystok — ميزة ثنائية بيالستوك
+ * Bialystok 2011: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_920 = { id: 920, family: "الذاكرة", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_920(): boolean { return true; }
+export const TOOL_920 = { id: 920, titleDe: "Bilingual Advantage Bialystok", titleAr: "ميزة ثنائية بيالستوك", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Bialystok 2011", desc: "Bilingual Advantage Bialystok" } as const;
+export function tool920Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool920Check(v:number):boolean{return v>0;}

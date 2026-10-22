@@ -1,6 +1,8 @@
 /**
- * 790 — أداة بيداغوجية مكتملة (الذاكرة / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 790 — Heritage Language Policy — سياسة تراثية
+ * Wiley 2014: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: Immersion
  */
-export const TOOL_790 = { id: 790, family: "الذاكرة", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_790(): boolean { return true; }
+export const TOOL_790 = { id: 790, titleDe: "Heritage Language Policy", titleAr: "سياسة تراثية", family: "Immersion", bloom: "حلّل", level: "A1-B2", research: "Wiley 2014", desc: "Heritage Language Policy" } as const;
+export function tool790Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool790Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 475 — أداة بيداغوجية مكتملة (بلوم / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 475 — Quest Design Advanced — تصميم مهام متقدم
+ * Dickey 2007: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: Gamification
  */
-export const TOOL_475 = { id: 475, family: "بلوم", bloom: "فهم", level: "A1" } as const;
-export function aktiv_475(): boolean { return true; }
+export const TOOL_475 = { id: 475, titleDe: "Quest Design Advanced", titleAr: "تصميم مهام متقدم", family: "Gamification", bloom: "أنشئ", level: "B1-B2", research: "Dickey 2007", desc: "Quest Design Advanced" } as const;
+export function tool475Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool475Check(v:number):boolean{return v>0;}

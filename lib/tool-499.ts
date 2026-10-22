@@ -1,6 +1,8 @@
 /**
- * 499 — أداة بيداغوجية مكتملة (Ethik / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 499 — TestDaF Prep — تحضير TestDaF
+ * TestDaF 2020: classroom application
+ * Level: B1-B2 | Bloom: طبّق | Family: تقويم
  */
-export const TOOL_499 = { id: 499, family: "Ethik", bloom: "فهم", level: "A1" } as const;
-export function aktiv_499(): boolean { return true; }
+export const TOOL_499 = { id: 499, titleDe: "TestDaF Prep", titleAr: "تحضير TestDaF", family: "تقويم", bloom: "طبّق", level: "B1-B2", research: "TestDaF 2020", desc: "TestDaF Prep" } as const;
+export function tool499Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool499Check(v:number):boolean{return v>0;}

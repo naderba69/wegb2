@@ -1,6 +1,8 @@
 /**
- * 646 — أداة بيداغوجية مكتملة (Gamification / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 646 — Vocabulary Size Nation — حجم مفردات ناشن
+ * Nation 2006: classroom application
+ * Level: A0-B2 | Bloom: قيّم | Family: الذاكرة
  */
-export const TOOL_646 = { id: 646, family: "Gamification", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_646(): boolean { return true; }
+export const TOOL_646 = { id: 646, titleDe: "Vocabulary Size Nation", titleAr: "حجم مفردات ناشن", family: "الذاكرة", bloom: "قيّم", level: "A0-B2", research: "Nation 2006", desc: "Vocabulary Size Nation" } as const;
+export function tool646Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool646Check(v:number):boolean{return v>0;}

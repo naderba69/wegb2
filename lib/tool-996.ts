@@ -1,6 +1,8 @@
 /**
- * 996 — أداة بيداغوجية مكتملة (Gamification / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 996 — Assessment Literacy Stiggins — محو تقويمي ستيغنز
+ * Stiggins 1991: classroom application
+ * Level: B1-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_996 = { id: 996, family: "Gamification", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_996(): boolean { return true; }
+export const TOOL_996 = { id: 996, titleDe: "Assessment Literacy Stiggins", titleAr: "محو تقويمي ستيغنز", family: "تقويم", bloom: "قيّم", level: "B1-B2", research: "Stiggins 1991", desc: "Assessment Literacy Stiggins" } as const;
+export function tool996Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool996Check(v:number):boolean{return v>0;}

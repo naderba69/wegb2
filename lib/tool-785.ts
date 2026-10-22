@@ -1,6 +1,8 @@
 /**
- * 785 — أداة بيداغوجية مكتملة (بلوم / أنشئ)
- * المستوى: A0-B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 785 — Language Revitalization — إحياء لغوي
+ * Hinton 2001: classroom application
+ * Level: A1-B2 | Bloom: أنشئ | Family: Immersion
  */
-export const TOOL_785 = { id: 785, family: "بلوم", bloom: "أنشئ", level: "A0-B2" } as const;
-export function aktiv_785(): boolean { return true; }
+export const TOOL_785 = { id: 785, titleDe: "Language Revitalization", titleAr: "إحياء لغوي", family: "Immersion", bloom: "أنشئ", level: "A1-B2", research: "Hinton 2001", desc: "Language Revitalization" } as const;
+export function tool785Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool785Check(v:number):boolean{return v>0;}

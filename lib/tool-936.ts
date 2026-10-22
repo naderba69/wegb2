@@ -1,6 +1,8 @@
 /**
- * 936 — أداة بيداغوجية مكتملة (Gamification / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 936 — Mediation Competence — كفاءة وساطة
+ * Council 2018: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_936 = { id: 936, family: "Gamification", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_936(): boolean { return true; }
+export const TOOL_936 = { id: 936, titleDe: "Mediation Competence", titleAr: "كفاءة وساطة", family: "طرائق", bloom: "أنشئ", level: "B1-B2", research: "Council 2018", desc: "Mediation Competence" } as const;
+export function tool936Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool936Check(v:number):boolean{return v>0;}

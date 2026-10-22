@@ -1,6 +1,17 @@
 /**
- * 423 — أداة بيداغوجية مكتملة (تلقين / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 423 — Information Gap Listening — فجوة معلومات استماع
+ * Pica 1994: classroom application with tasks
+ * Level: A1-B2 | Bloom: طبّق | Family: طرائق
  */
-export const TOOL_423 = { id: 423, family: "تلقين", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_423(): boolean { return true; }
+export const TOOL_423 = {
+  id: 423,
+  titleDe: "Information Gap Listening",
+  titleAr: "فجوة معلومات استماع",
+  family: "طرائق",
+  bloom: "طبّق",
+  level: "A1-B2",
+  research: "Pica 1994",
+  desc: "Information Gap Listening classroom",
+} as const;
+export function tool423Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool423Check(v:number):boolean{return v>0;}

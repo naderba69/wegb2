@@ -1,6 +1,8 @@
 /**
- * 724 — أداة بيداغوجية مكتملة (تقويم / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 724 — Adaptive Learning — تعلم تكيفي
+ * Brusilovsky 2001: classroom application
+ * Level: A1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_724 = { id: 724, family: "تقويم", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_724(): boolean { return true; }
+export const TOOL_724 = { id: 724, titleDe: "Adaptive Learning", titleAr: "تعلم تكيفي", family: "طرائق", bloom: "أنشئ", level: "A1-B2", research: "Brusilovsky 2001", desc: "Adaptive Learning" } as const;
+export function tool724Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool724Check(v:number):boolean{return v>0;}

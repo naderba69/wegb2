@@ -1,6 +1,8 @@
 /**
- * 639 — أداة بيداغوجية مكتملة (Ethik / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 639 — Multilingual Awareness — وعي متعدد
+ * Jessner 2006: classroom application
+ * Level: A1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_639 = { id: 639, family: "Ethik", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_639(): boolean { return true; }
+export const TOOL_639 = { id: 639, titleDe: "Multilingual Awareness", titleAr: "وعي متعدد", family: "SLA", bloom: "حلّل", level: "A1-B2", research: "Jessner 2006", desc: "Multilingual Awareness" } as const;
+export function tool639Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool639Check(v:number):boolean{return v>0;}

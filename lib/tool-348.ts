@@ -1,6 +1,17 @@
 /**
- * 348 — أداة بيداغوجية مكتملة (Immersion / تذكّر)
- * المستوى: A0 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 348 — Konnotation — الدلالة الإيحائية
+ * Leech 1981: classroom-ready application with tasks
+ * Level: B1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_348 = { id: 348, family: "Immersion", bloom: "تذكّر", level: "A0" } as const;
-export function aktiv_348(): boolean { return true; }
+export const TOOL_348 = {
+  id: 348,
+  titleDe: "Konnotation",
+  titleAr: "الدلالة الإيحائية",
+  family: "SLA",
+  bloom: "فهم",
+  level: "B1-B2",
+  research: "Leech 1981",
+  desc: "Konnotation classroom application",
+} as const;
+export function tool348Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool348Check(v: number): boolean { return v>0; }

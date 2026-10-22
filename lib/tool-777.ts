@@ -1,6 +1,8 @@
 /**
- * 777 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 777 — Threshold Hypothesis — فرضية عتبة
+ * Cummins 1976: classroom application
+ * Level: B1-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_777 = { id: 777, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_777(): boolean { return true; }
+export const TOOL_777 = { id: 777, titleDe: "Threshold Hypothesis", titleAr: "فرضية عتبة", family: "SLA", bloom: "فهم", level: "B1-B2", research: "Cummins 1976", desc: "Threshold Hypothesis" } as const;
+export function tool777Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool777Check(v:number):boolean{return v>0;}

@@ -1,6 +1,8 @@
 /**
- * 495 — أداة بيداغوجية مكتملة (بلوم / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 495 — Can-Do Descriptors — واصفات كان-دو
+ * CEFR 2001: classroom application
+ * Level: A0-B2 | Bloom: فهم | Family: تقويم
  */
-export const TOOL_495 = { id: 495, family: "بلوم", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_495(): boolean { return true; }
+export const TOOL_495 = { id: 495, titleDe: "Can-Do Descriptors", titleAr: "واصفات كان-دو", family: "تقويم", bloom: "فهم", level: "A0-B2", research: "CEFR 2001", desc: "Can-Do Descriptors" } as const;
+export function tool495Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool495Check(v:number):boolean{return v>0;}

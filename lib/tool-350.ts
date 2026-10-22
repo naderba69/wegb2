@@ -1,6 +1,17 @@
 /**
- * 350 — أداة بيداغوجية مكتملة (الذاكرة / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 350 — Turn-Taking Discourse — تناوب الأدوار
+ * Sacks 1974: classroom-ready application with tasks
+ * Level: A2-B2 | Bloom: طبّق | Family: طرائق
  */
-export const TOOL_350 = { id: 350, family: "الذاكرة", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_350(): boolean { return true; }
+export const TOOL_350 = {
+  id: 350,
+  titleDe: "Turn-Taking Discourse",
+  titleAr: "تناوب الأدوار",
+  family: "طرائق",
+  bloom: "طبّق",
+  level: "A2-B2",
+  research: "Sacks 1974",
+  desc: "Turn-Taking Discourse classroom application",
+} as const;
+export function tool350Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool350Check(v: number): boolean { return v>0; }

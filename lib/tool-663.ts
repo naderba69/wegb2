@@ -1,6 +1,8 @@
 /**
- * 663 — أداة بيداغوجية مكتملة (تلقين / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 663 — Conceptual Blending Fauconnier — مزج مفاهيمي
+ * Fauconnier 2002: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: تلقين
  */
-export const TOOL_663 = { id: 663, family: "تلقين", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_663(): boolean { return true; }
+export const TOOL_663 = { id: 663, titleDe: "Conceptual Blending Fauconnier", titleAr: "مزج مفاهيمي", family: "تلقين", bloom: "أنشئ", level: "B1-B2", research: "Fauconnier 2002", desc: "Conceptual Blending Fauconnier" } as const;
+export function tool663Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool663Check(v:number):boolean{return v>0;}

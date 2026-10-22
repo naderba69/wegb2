@@ -1,6 +1,8 @@
 /**
- * 567 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 567 — E-Tandem — ثنائي إلكتروني
+ * Brammerts 2013: classroom application
+ * Level: A2-B2 | Bloom: طبّق | Family: Immersion
  */
-export const TOOL_567 = { id: 567, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_567(): boolean { return true; }
+export const TOOL_567 = { id: 567, titleDe: "E-Tandem", titleAr: "ثنائي إلكتروني", family: "Immersion", bloom: "طبّق", level: "A2-B2", research: "Brammerts 2013", desc: "E-Tandem" } as const;
+export function tool567Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool567Check(v:number):boolean{return v>0;}

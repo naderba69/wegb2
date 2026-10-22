@@ -1,6 +1,8 @@
 /**
- * 740 — أداة بيداغوجية مكتملة (الذاكرة / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 740 — Bilingual Education Baker — تعليم ثنائي بيكر
+ * Baker 2011: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_740 = { id: 740, family: "الذاكرة", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_740(): boolean { return true; }
+export const TOOL_740 = { id: 740, titleDe: "Bilingual Education Baker", titleAr: "تعليم ثنائي بيكر", family: "طرائق", bloom: "فهم", level: "A1-B2", research: "Baker 2011", desc: "Bilingual Education Baker" } as const;
+export function tool740Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool740Check(v:number):boolean{return v>0;}

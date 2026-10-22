@@ -1,6 +1,8 @@
 /**
- * 716 — أداة بيداغوجية مكتملة (Gamification / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 716 — Text Reconstruction Storch — إعادة بناء نص
+ * Storch 1999: classroom application
+ * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
  */
-export const TOOL_716 = { id: 716, family: "Gamification", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_716(): boolean { return true; }
+export const TOOL_716 = { id: 716, titleDe: "Text Reconstruction Storch", titleAr: "إعادة بناء نص", family: "طرائق", bloom: "أنشئ", level: "B1-B2", research: "Storch 1999", desc: "Text Reconstruction Storch" } as const;
+export function tool716Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool716Check(v:number):boolean{return v>0;}

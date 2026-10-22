@@ -1,6 +1,8 @@
 /**
- * 628 — أداة بيداغوجية مكتملة (Immersion / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 628 — Bilingual First Language Acquisition — ثنائية أولى
+ * De Houwer 2009: classroom application
+ * Level: A0-B2 | Bloom: فهم | Family: SLA
  */
-export const TOOL_628 = { id: 628, family: "Immersion", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_628(): boolean { return true; }
+export const TOOL_628 = { id: 628, titleDe: "Bilingual First Language Acquisition", titleAr: "ثنائية أولى", family: "SLA", bloom: "فهم", level: "A0-B2", research: "De Houwer 2009", desc: "Bilingual First Language Acquisition" } as const;
+export function tool628Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool628Check(v:number):boolean{return v>0;}

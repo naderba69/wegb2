@@ -1,6 +1,17 @@
 /**
- * 265 — أداة بيداغوجية مكتملة (بلوم / فهم)
- * المستوى: A1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 265 — Concrete Examples Deep — أمثلة محسوسة عميقة
+ * Rawson 2015: concrete > abstract by 15%; mix both for transfer
+ * Level: A1-B2 | Bloom: فهم | Family: تلقين
  */
-export const TOOL_265 = { id: 265, family: "بلوم", bloom: "فهم", level: "A1" } as const;
-export function aktiv_265(): boolean { return true; }
+export const TOOL_265 = {
+  id: 265,
+  titleDe: "Konkrete Beispiele (tief)",
+  titleAr: "أمثلة محسوسة عميقة",
+  family: "تلقين",
+  bloom: "فهم",
+  level: "A1-B2",
+  research: "Rawson 2015",
+  rule: "konkret + abstrakt mischen",
+} as const;
+export function concreteExample(abstractRule: string): string { return `Abstrakt: ${abstractRule} → Konkret: z.B. "Ich gebe dem Mann das Buch"`; }
+export function mixRatio(): string { return "2 konkret : 1 abstrakt"; }

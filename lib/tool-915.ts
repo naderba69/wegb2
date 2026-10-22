@@ -1,6 +1,8 @@
 /**
- * 915 — أداة بيداغوجية مكتملة (بلوم / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 915 — Heteroglossia Busch — تعدد أصوات بوش
+ * Busch 2017: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: Immersion
  */
-export const TOOL_915 = { id: 915, family: "بلوم", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_915(): boolean { return true; }
+export const TOOL_915 = { id: 915, titleDe: "Heteroglossia Busch", titleAr: "تعدد أصوات بوش", family: "Immersion", bloom: "حلّل", level: "B1-B2", research: "Busch 2017", desc: "Heteroglossia Busch" } as const;
+export function tool915Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool915Check(v:number):boolean{return v>0;}

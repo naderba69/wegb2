@@ -1,6 +1,8 @@
 /**
- * 447 — أداة بيداغوجية مكتملة (Narrative / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 447 — Metonymy Awareness — وعي الكناية
+ * Panther 2003: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: طرائق
  */
-export const TOOL_447 = { id: 447, family: "Narrative", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_447(): boolean { return true; }
+export const TOOL_447 = { id: 447, titleDe: "Metonymy Awareness", titleAr: "وعي الكناية", family: "طرائق", bloom: "حلّل", level: "B1-B2", research: "Panther 2003", desc: "Metonymy Awareness" } as const;
+export function tool447Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool447Check(v:number):boolean{return v>0;}

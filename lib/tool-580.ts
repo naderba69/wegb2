@@ -1,6 +1,8 @@
 /**
- * 580 — أداة بيداغوجية مكتملة (الذاكرة / قيّم)
- * المستوى: B2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 580 — Ought-to L2 Self — ذات يجب
+ * Dörnyei 2005: classroom application
+ * Level: A1-B2 | Bloom: فهم | Family: تلقين
  */
-export const TOOL_580 = { id: 580, family: "الذاكرة", bloom: "قيّم", level: "B2" } as const;
-export function aktiv_580(): boolean { return true; }
+export const TOOL_580 = { id: 580, titleDe: "Ought-to L2 Self", titleAr: "ذات يجب", family: "تلقين", bloom: "فهم", level: "A1-B2", research: "Dörnyei 2005", desc: "Ought-to L2 Self" } as const;
+export function tool580Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool580Check(v:number):boolean{return v>0;}

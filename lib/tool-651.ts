@@ -1,6 +1,8 @@
 /**
- * 651 — أداة بيداغوجية مكتملة (SLA / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 651 — Lexical Sophistication — رقي معجمي
+ * Laufer 1995: classroom application
+ * Level: B1-B2 | Bloom: قيّم | Family: تقويم
  */
-export const TOOL_651 = { id: 651, family: "SLA", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_651(): boolean { return true; }
+export const TOOL_651 = { id: 651, titleDe: "Lexical Sophistication", titleAr: "رقي معجمي", family: "تقويم", bloom: "قيّم", level: "B1-B2", research: "Laufer 1995", desc: "Lexical Sophistication" } as const;
+export function tool651Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool651Check(v:number):boolean{return v>0;}

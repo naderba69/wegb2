@@ -1,6 +1,17 @@
 /**
- * 321 — أداة بيداغوجية مكتملة (SLA / حلّل)
- * المستوى: B1 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 321 — Phraseology — علم العبارات
+ * Cowie 1998: applied to German teaching — classroom integration via tasks
+ * Level: A2-B2 | Bloom: فهم | Family: طرائق
  */
-export const TOOL_321 = { id: 321, family: "SLA", bloom: "حلّل", level: "B1" } as const;
-export function aktiv_321(): boolean { return true; }
+export const TOOL_321 = {
+  id: 321,
+  titleDe: "Phraseology",
+  titleAr: "علم العبارات",
+  family: "طرائق",
+  bloom: "فهم",
+  level: "A2-B2",
+  research: "Cowie 1998",
+  desc: "Phraseology applied in classroom",
+} as const;
+export function tool321Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
+export function tool321Check(v: number): boolean { return v>0; }

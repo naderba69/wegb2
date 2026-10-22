@@ -1,6 +1,8 @@
 /**
- * 950 — أداة بيداغوجية مكتملة (الذاكرة / طبّق)
- * المستوى: A2 — ضمن خطة 1000 أداة — نفس القواعد: ملف منفصل + سجل + بناء.
+ * 950 — Willingness to Communicate 2 — استعداد تواصل 2
+ * MacIntyre 1998: classroom application
+ * Level: B1-B2 | Bloom: حلّل | Family: SLA
  */
-export const TOOL_950 = { id: 950, family: "الذاكرة", bloom: "طبّق", level: "A2" } as const;
-export function aktiv_950(): boolean { return true; }
+export const TOOL_950 = { id: 950, titleDe: "Willingness to Communicate 2", titleAr: "استعداد تواصل 2", family: "SLA", bloom: "حلّل", level: "B1-B2", research: "MacIntyre 1998", desc: "Willingness to Communicate 2" } as const;
+export function tool950Gain(a:boolean):number{return a?1.2:1.0;}
+export function tool950Check(v:number):boolean{return v>0;}
