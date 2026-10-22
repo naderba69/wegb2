@@ -111,9 +111,21 @@ const dups = [...dupDe.entries()].filter(([, n]) => n > 1);
 info("vocab:stat", `${alleVokabeln.length} Karten · ohne exampleDe ${ohneBeispiel} · ohne pos ${ohnePos} · Nomen-Kandidaten ohne Artikel (heuristisch) ${artikelKandidat} · doppelte de ${dups.length} (z.B. ${dups.slice(0, 8).map(([d, n]) => d + "×" + n).join(", ")})`);
 // R169: البلدان الثلاثة بلا أداة بقرار المالك D4-B وبمراجعة موثّقة (قاعدة أسماء البلدان: السائد المحايد بلا أداة) — معلومة لا بند مراجعة.
 const LAENDER_ART_OK = new Set(["vz-welt-b-000", "vz-welt-b-001", "vz-welt-b-003"]); // Deutschland · Österreich · Tunesien
+const EIGENTLICH_ARTFREI_OK = new Set([
+  "r313b1-163", // Pfingsten
+  "r312a2-093", // Ostern
+  "r312a2-094", // Silvester
+  "r312a2-110", // Latein
+  "r312a2-187", // Luxemburg
+  "r312a2-198", // Tennis
+  "r313b1-126", // Bundesrepublik Deutschland
+  "r313b1-108", // Griechenland
+]); // Feste/Sport/Sprachen/Staaten/Komposita mit Eigenname — Duden/Amtlich ohne Artikel
 const nomenLaender169 = nomenOhneArtikel.filter((x) => LAENDER_ART_OK.has(x.split(" ")[0]));
-const nomenRest169 = nomenOhneArtikel.filter((x) => !LAENDER_ART_OK.has(x.split(" ")[0]));
+const nomenRest169 = nomenOhneArtikel.filter((x) => !LAENDER_ART_OK.has(x.split(" ")[0]) && !EIGENTLICH_ARTFREI_OK.has(x.split(" ")[0]));
+const nomenEigentlichFrei = nomenOhneArtikel.filter((x) => EIGENTLICH_ARTFREI_OK.has(x.split(" ")[0]));
 if (nomenLaender169.length) info("vocab:länder-artikel-geprüft (D4-B/R169)", `${nomenLaender169.join(" · ")} — بلا أداة تعريف بشكل صحيح وموثّق (docs/PEDAGOGIK_REVIEW_2026-10-16.md)`);
+if (nomenEigentlichFrei.length) info("vocab:artfrei-geprüft (Duden)", `${nomenEigentlichFrei.join(" · ")} — أسماء أعياد/لغات/رياضات/دول/مركبات علمية بلا أداة حسب Duden`);
 if (nomenRest169.length) hinweis("vocab:Nomen ohne Artikel — قائمة مرشّحين heuristic لا حكم لغوي", nomenRest169.join(" · "));
 /* sentences */
 for (const s of sentences) { if (AR.test(s.de) || !AR.test(s.ar)) add("satz:sprache", s.id); if (!/[.!?]$/.test(s.de.trim())) add("satz:ohneSatzzeichen", `${s.id} «${s.de}»`); }
