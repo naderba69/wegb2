@@ -16695,8 +16695,8 @@
       {
         "id": "b2-k2vht-e1",
         "type": "fill",
-        "promptDe": "Hätte ich nur früher ___ ! (anrufen)",
-        "text": "Hätte ich nur früher ___ !",
+        "promptDe": "Hätte ich nur früher ___! (anrufen)",
+        "text": "Hätte ich nur früher ___!",
         "answer": [
           "angerufen"
         ],
