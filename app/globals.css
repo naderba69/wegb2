@@ -1838,6 +1838,7 @@ body:has(.ui-app-shell) {
 .lesson-table--signaled th { position: relative; }
 .lesson-summary--map { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .lesson-summary--map .chip { background: var(--ui-surface-raised); }
+.ggp-chip { display: inline-flex; align-items: center; padding: 0.12rem 0.45rem; border-radius: 999px; font-size: 0.69rem; font-weight: 800; background: rgb(99 102 241 / 0.10); color: #6366f1; border: 1px solid rgb(99 102 241 / 0.22); direction: ltr; }
 
 .lesson-pitfall { grid-template-columns: 1fr; }
 }
