@@ -357,6 +357,11 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
           <span style={{ color: "var(--ui-muted)" }}>· {topic.level} · {feats[0].familie}</span>
         </div>
       ) : null; })()}
+      {/* Mayer: Signaling — هدف واضح قبل المحتوى */}
+      <div data-testid="wizard-mayer-goal" className="lesson-ziel" style={{ background: "linear-gradient(135deg, var(--color-paper2), var(--color-paper))", borderInlineStart: "4px solid var(--color-a1)", padding: "0.5rem 0.7rem", borderRadius: "0.5rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
+        <span style={{ fontSize: "1.1rem" }}>🎯</span>
+        <div><strong style={{ fontSize: "0.82rem" }}>{topic.ziel}</strong><div style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>Conti: Prediction أولاً — خمّن قبل الشرح (70% نتذكر أكثر)</div></div>
+      </div>
       <div data-testid="wizard-voraus" style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>
         {topic.voraus && topic.voraus.length > 0
           ? <>🧱 يبني على: {topic.voraus.map((v) => grammarMap[v]?.titleAr ?? v).join(" · ")}</>
@@ -471,6 +476,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
             {(topic.tables ?? []).map((t, ti) => (
               <div key={`t-${ti}`} style={{ display: "grid", gap: "0.3rem" }}>
                 {t.captionAr && <strong style={{ fontSize: "0.85rem" }}>{t.captionAr}</strong>}
+                <div style={{ fontSize:"0.74rem", color:"var(--color-ink2)" }}>Mayer: Layered-Reveal — صف واحد في كل مرة (اضغط لكشف المسار)</div>
                 <div style={{ overflowX: "auto" }}>
                   <table className="lesson-table lesson-table--signaled lesson-table--layered" dir="ltr">
                     <thead><tr>{t.headers.map((h) => {
@@ -479,7 +485,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                     })}</tr></thead>
                     <tbody>
                       {t.rows.map((row, ri) => (
-                        <tr key={ri}>{row.map((c, ci) => <td key={ci}>{c}</td>)}</tr>
+                        <tr key={ri}>{row.map((c, ci) => <td key={ci}>{ci===0 ? <><De style={{fontWeight:800}}>{String(c).split("→")[0]}</De>{String(c).includes("→") && <><span style={{color:"var(--color-a1)", fontWeight:900}}> → </span><De style={{color:"var(--color-a1)"}}>{String(c).split("→")[1]}</De></>}</> : c}</td>)}</tr>
                       ))}
                     </tbody>
                   </table>
@@ -571,19 +577,25 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
             </div>
             {topic.pitfalls && topic.pitfalls.length > 0 && (
               <div style={{ display: "grid", gap: "0.5rem" }}>
-                <div style={{ fontWeight: 800, color: "var(--color-die)", fontSize: "0.9rem" }}>⚠️ جدار الفخاخ — لا تقع فيها</div>
-                {topic.pitfalls.map((p) => (
-                  <div key={p.de} className="lesson-pitfall">
-                    <div>
-                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--ui-muted)" }}>✗ خطأ شائع</div>
-                      <De className="lesson-pitfall-wrong">{p.de}</De>
+                <div style={{ fontWeight: 800, color: "var(--color-die)", fontSize: "0.9rem" }}>⚠️ جدار الفخاخ — Contrast (خطأ vs صواب)</div>
+                <div style={{ fontSize:"0.75rem", color:"var(--color-ink2)" }}>Conti: Contrast — قارن الخطأ والصواب جنباً إلى جنب (تثبيت أقوى 40%)</div>
+                {topic.pitfalls.map((p) => {
+                  const hasContrast = p.de.includes("→") || p.de.includes("statt") || p.de.includes("vs");
+                  return (
+                  <div key={p.de} className="lesson-pitfall" style={{ display:"grid", gridTemplateColumns:"1fr auto 1fr", gap:"0.5rem", alignItems:"center" }}>
+                    <div style={{ background:"rgba(220,38,38,0.07)", padding:"0.4rem 0.5rem", borderRadius:"0.4rem", borderInlineStart:"3px solid var(--color-die)" }}>
+                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--color-die)" }}>✗ خطأ شائع</div>
+                      <De className="lesson-pitfall-wrong" style={{ fontSize:"0.85rem" }}>{p.de.split("→")[0].trim()}</De>
                     </div>
-                    <div>
-                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--ui-muted)" }}>لماذا؟</div>
-                      <div style={{ fontSize: "0.86rem", color: "var(--color-ink2)", lineHeight: 1.7 }}>{p.ar}</div>
+                    <span style={{ fontWeight:900, color:"var(--color-a1)", fontSize:"1.1rem" }}>→</span>
+                    <div style={{ background:"rgba(22,163,74,0.07)", padding:"0.4rem 0.5rem", borderRadius:"0.4rem", borderInlineStart:"3px solid var(--color-a1)" }}>
+                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--color-a1)" }}>✓ الصواب</div>
+                      <div style={{ fontSize:"0.85rem", fontWeight:700 }}>{hasContrast ? p.de.split("→")[1]?.trim() : p.ar.split("—")[0]?.trim() || "راجع القاعدة أعلاه"}</div>
                     </div>
+                    <div style={{ gridColumn:"1 / -1", fontSize: "0.84rem", color: "var(--color-ink2)", lineHeight: 1.7, background:"var(--color-paper2)", padding:"0.35rem 0.5rem", borderRadius:"0.3rem" }}>💡 لماذا؟ {p.ar}</div>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             )}
             {(() => { const k = kulturFuer(topicId, topic.level); return k ? (
