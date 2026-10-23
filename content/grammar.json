@@ -5833,8 +5833,12 @@
         "ar": "**القاعدة الذهبية**: الكلمة الأخيرة تعطي الجنس والمعنى الأساس، وما قبلها يخصّص. Klimabewegung هي «حركةٌ» (die) من نوع «مناخ»."
       },
       {
-        "de": "Fugenelemente: -s- (Arbeitszeit), -n- (Straßenbahn), -en- (Studentenheim), -er- (Kinderarzt), -es- (Tageszeit), -e- (Hundehütte). Oft: Wort auf -ung/-heit/-keit/-schaft/-tät/-ion → -s-.",
-        "ar": "أحرف الوصل تُسهّل النطق. أوثق قاعدة: ما ينتهي بـ -ung/-heit/-keit/-schaft/-tät/-ion يأخذ **-s-** دائماً: Wohnungsmarkt، Freiheitsstatue."
+        "de": "Fugenelemente: -s- (Arbeitszeit), -n- (Straßenbahn), -en- (Studentenheim), -er- (Kinderarzt).",
+        "ar": "أحرف الوصل: -s- كما في Arbeitszeit، و-n- كما في Straßenbahn، و-en- كما في Studentenheim، و-er- كما في Kinderarzt."
+      },
+      {
+        "de": "Oft: Wort auf -ung/-heit/-keit/-schaft/-tät/-ion → -s-: Wohnungsmarkt, Freiheitsstatue.",
+        "ar": "أوثق قاعدة: ما ينتهي بـ -ung/-heit/-keit/-schaft/-tät/-ion يأخذ -s- دائماً: Wohnungsmarkt، Freiheitsstatue."
       },
       {
         "de": "Bestimmungswort kann Nomen (Haustür), Verb-Stamm (Waschmaschine), Adjektiv (Kühlschrank) oder Präposition (Vorwort) sein.",
@@ -10383,16 +10387,24 @@
     ],
     "rules": [
       {
-        "de": "Im gesprochenen Deutsch wird bei sein, haben und Modalverben häufig das Präteritum verwendet. Viele andere Vollverben stehen beim Erzählen oft im Perfekt; das ist eine Gebrauchstendenz, keine starre Regel. Beispiel: Ich war zu Hause; ich habe Brot gekauft.",
-        "ar": "في الكلام اليومي يشيع Präteritum مع sein وhaben والأفعال الناقصة؛ وكثيراً ما تُروى أفعال أخرى بـPerfekt. هذا ميل في الاستعمال لا قاعدة تمنع صيغةً أخرى."
+        "de": "Im gesprochenen Deutsch steht bei sein, haben und Modalverben oft das Präteritum. Viele Vollverben stehen dagegen im Perfekt.",
+        "ar": "في الكلام اليومي يشيع الماضي Präteritum مع sein وhaben والأفعال الناقصة؛ أما كثير من الأفعال التامة فتُروى غالباً بـPerfekt."
+      },
+      {
+        "de": "Das ist eine Gebrauchstendenz, keine starre Regel. Beispiel: Ich war zu Hause; ich habe Brot gekauft.",
+        "ar": "هذا ميلٌ في الاستعمال لا قاعدة صلبة. مثال: Ich war zu Hause؛ ich habe Brot gekauft."
       },
       {
         "de": "ich/er/sie/es → war/hatte/konnte/musste · du → warst/hattest/konntest/musstest · wir/sie (Plural)/Sie (formell) → waren/hatten/konnten/mussten · ihr → wart/hattet/konntet/musstet",
         "ar": "التصريف: ich وer/sie/es لهما الصيغة نفسها؛ du يأخذ -st؛ wir وsie الجمع وSie الرسمية يأخذون -en؛ ihr يأخذ -t. انتبه إلى الصيغ الخاصة wart وhattet."
       },
       {
-        "de": "Präsens → Präteritum (ich): ich bin → ich war · ich habe → ich hatte · ich kann → ich konnte · ich muss → ich musste · ich soll → ich sollte · ich will → ich wollte · ich darf → ich durfte · ich mag → ich mochte.",
-        "ar": "مقابلات المفرد بين الحاضر والماضي: ich bin → ich war، ich habe → ich hatte، ich kann → ich konnte، ich muss → ich musste، وهكذا في أمثلة الأفعال الناقصة."
+        "de": "Präsens → Präteritum (ich): ich bin → ich war · ich habe → ich hatte · ich kann → ich konnte · ich muss → ich musste.",
+        "ar": "الحاضر → الماضي (ich): ich bin → ich war، ich habe → ich hatte، ich kann → ich konnte، ich muss → ich musste."
+      },
+      {
+        "de": "Weiter: ich soll → ich sollte · ich will → ich wollte · ich darf → ich durfte · ich mag → ich mochte.",
+        "ar": "وتكملةً: ich soll → ich sollte، ich will → ich wollte، ich darf → ich durfte، ich mag → ich mochte."
       }
     ],
     "summaryAr": "في الكلام اليومي يشيع Präteritum مع sein وhaben والأفعال الناقصة: war, hatte, konnte, musste. مع الناقص يأتي الفعل الأساسي مصدراً في نهاية الجملة: Ich musste gestern arbeiten. ويمكن أيضاً استعمال Perfekt مع الناقص، مثل Ich habe gestern arbeiten müssen؛ هذا الدرس يركز على صيغة Präteritum."
@@ -10554,12 +10566,16 @@
     ],
     "rules": [
       {
-        "de": "Ein Funktionsverbgefüge (FVG) besteht aus einem Funktionsverb (bringen, stellen, nehmen, treffen, kommen, stehen, geben, üben …) und einem Substantiv (oft mit Präposition): z. B. „eine Entscheidung treffen“, „eine Frage stellen“, „in Bewegung kommen“. Das Substantiv trägt die eigentliche Bedeutung; das Funktionsverb bestimmt die „Handlungsart“ (Beginn, Dauer, Ende, Wirkung).",
-        "ar": "تركيب الفعل الوظيفي (FVG) = فعل وظيفي (treffen/stellen/nehmen/kommen …) + اسم (غالباً مع حرف جر) مثل «eine Frage stellen» (طرح سؤال). الاسم يحمل المعنى الأساسي، والفعل الوظيفي يحدد طريقة الحدث (بداية/استمرار/نهاية/تأثير)."
+        "de": "FVG = Funktionsverb + Substantiv (oft mit Präposition): „eine Entscheidung treffen“, „eine Frage stellen“, „in Bewegung kommen“.",
+        "ar": "تركيب الفعل الوظيفي FVG = فعل وظيفي + اسم (غالباً مع حرف جر): „eine Entscheidung treffen“، „eine Frage stellen“، „in Bewegung kommen“."
       },
       {
-        "de": "Die Wahl des Funktionsverbs ändert die Bedeutung (nicht beliebig austauschbar): Frage stellen ≠ Frage haben · Entscheidung treffen ≠ Entscheidung bringen · in Verbindung stehen ≠ in Verbindung bringen.",
-        "ar": "اختيار الفعل الوظيفي يغيّر المعنى: لا تبدّلها اعتباطاً."
+        "de": "Die Wahl des Funktionsverbs ändert die Bedeutung (nicht beliebig austauschbar): Frage stellen ≠ Frage haben.",
+        "ar": "اختيار الفعل يغيّر المعنى ولا يُبدّل اعتباطاً: Frage stellen ≠ Frage haben."
+      },
+      {
+        "de": "Weiter: Entscheidung treffen ≠ Entscheidung bringen · in Verbindung stehen ≠ in Verbindung bringen.",
+        "ar": "وكذلك: Entscheidung treffen ≠ Entscheidung bringen · in Verbindung stehen ≠ in Verbindung bringen."
       },
       {
         "de": "In B1 erkennst und verstehst du die häufigsten FVG; produktiv benutzen wirst du sie in B2 (insbesondere in Schrifttexten und offiziellen Briefen).",

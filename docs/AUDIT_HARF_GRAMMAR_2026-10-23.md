@@ -5,7 +5,7 @@
 ## الملخص الإحصائي
 - إجمالي الدروس: **87** (A0:8 · A1:19 · A2:22 · B1:15 · B2:23)
 - بجدول: 50 · بفخ: 87 · بهدف ziel: 87 · بتحقق verify: 87
-- مجموع rules: 313 · examples: 285 · exercises: 610 (معدل 7.0/درس)
+- مجموع rules: 317 · examples: 285 · exercises: 610 (معدل 7.0/درس)
 - ربط GGP: 87/87 — ناقص: لا شيء
 
 ## الأخطاء المصنفة
@@ -13,7 +13,7 @@
 |---------|-------|--------|
 | P0 قاتل (يمنع الفهم/ينجّح خطأ) | 0 | إصلاح فوري |
 | P1 منهجي (CEFR/GGP) | 0 | إصلاح بالسبرنت |
-| P2 أسلوبي | 32 | تحسين |
+| P2 أسلوبي | 27 | تحسين |
 
 ### P0 — تُصلّح الآن
 
@@ -32,7 +32,6 @@
 - [P2] `grammar.json:a2-futur` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:b1-genitiv` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:b1-adjektivendungen` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b1-wortbildung` — rule.de طويل جداً (185حرف) — صعب الحفظ
 - [P2] `grammar.json:b1-wortbildung` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:b1-unbestimmte` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:b1-verb-praeposition` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
@@ -41,10 +40,6 @@
 - [P2] `grammar.json:a2-praeteritum-grund` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:b1-indirekte-fragen` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:b2-redew` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a1-war-hatte` — rule.de طويل جداً (256حرف) — صعب الحفظ
-- [P2] `grammar.json:a1-war-hatte` — rule.de طويل جداً (212حرف) — صعب الحفظ
-- [P2] `grammar.json:b1-funktionsverben` — rule.de طويل جداً (377حرف) — صعب الحفظ
-- [P2] `grammar.json:b1-funktionsverben` — rule.de طويل جداً (201حرف) — صعب الحفظ
 - [P2] `grammar.json:a2-wasfuer` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:a0-aussprache-umlaut` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:a0-satzbau` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
