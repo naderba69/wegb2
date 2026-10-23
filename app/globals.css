@@ -1701,11 +1701,26 @@ body:has(.ui-app-shell) {
    ═══════════════════════════════════════════════════════════════════ */
 .lesson-hero {
   display: grid;
-  gap: 0.45rem;
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--ui-border);
+  gap: 0.5rem;
+  padding: 1rem 1.1rem 0.9rem;
+  border: 1px solid rgb(212 193 143 / 0.32);
   border-radius: 1rem;
-  background: linear-gradient(150deg, var(--ui-surface-raised), var(--ui-surface));
+  background:
+    radial-gradient(circle at 18% 0%, rgb(253 249 232 / 0.95), transparent 58%),
+    linear-gradient(180deg, #FFFCF0 0%, #FDF8E8 100%);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.04), 0 10px 28px rgb(92 78 32 / 0.07);
+  position: relative;
+  overflow: hidden;
+}
+.lesson-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  inset-inline: 1rem 1rem;
+  height: 3px;
+  background: linear-gradient(90deg, #113A5F, #C8A84E 45%, transparent 92%);
+  border-radius: 999px;
+  opacity: 0.9;
 }
 .lesson-level-badge {
   display: inline-flex;
@@ -1723,8 +1738,11 @@ body:has(.ui-app-shell) {
 .lesson-level-A2 { background: rgb(96 165 250 / 0.12); color: #60a5fa; border-color: rgb(96 165 250 / 0.35); }
 .lesson-level-B1 { background: rgb(242 200 102 / 0.14); color: #f2c866; border-color: rgb(242 200 102 / 0.4); }
 .lesson-level-B2 { background: rgb(167 139 250 / 0.14); color: #a78bfa; border-color: rgb(167 139 250 / 0.4); }
-.lesson-title-de { font-size: 1.35rem; font-weight: 900; color: var(--ui-text); direction: ltr; text-align: left; font-family: var(--font-german); }
-.lesson-title-ar { font-size: 1rem; font-weight: 800; color: var(--ui-text); line-height: 1.6; }
+.lesson-title-de { font-size: 1.45rem; font-weight: 900; color: #0F2A44; direction: ltr; text-align: left; font-family: var(--font-german); letter-spacing: -0.02em; line-height: 1.2; }
+.lesson-title-ar { font-size: 1.02rem; font-weight: 800; color: #1A2E4A; line-height: 1.65; }
+.lesson-title-de::after { content: " — Artikel"; display: block; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(148 132 92 / 0.75); font-family: system-ui, sans-serif; margin-top: 0.15rem; font-weight: 800; }
+.lesson-stage--b2 .lesson-hero { border-inline-start: 6px solid #6D5AE6; }
+.lesson-stage--b2 .lesson-title-de { color: #2E1F6B; }
 .lesson-ziel {
   display: flex;
   gap: 0.5rem;
