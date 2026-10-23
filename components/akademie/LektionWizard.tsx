@@ -18,6 +18,7 @@ import { useProgress, planeVerifikation } from "@/lib/store";
 import { De } from "@/components/De";
 import ExerciseSet, { type ExerciseProgress } from "@/components/exercises";
 import { ggpForTopic } from "@/lib/ggp";
+import { kulturFuer } from "@/lib/kultur";
 
 /** الخطوات الخمس — الترتيب نفسه هو الميثاق (K108a) */
 const SCHRITTE = ["خمّن", "قاعدة", "أمثلة", "تطبيق", "خلاصة"] as const;
@@ -585,15 +586,14 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                 ))}
               </div>
             )}
-            {(topic.level === "B1" || topic.level === "B2") && (
-              <div data-testid="wizard-kultur" className="card" style={{ padding: "0.6rem 0.85rem", background: "var(--ui-surface-raised)", borderInlineStart: "5px solid var(--color-b2)", display: "grid", gap: "0.3rem" }}>
+            {(() => { const k = kulturFuer(topicId, topic.level); return k ? (
+              <div data-testid="wizard-kultur" className="card" style={{ padding: "0.6rem 0.85rem", background: "var(--ui-surface-raised)", borderInlineStart: "5px solid var(--color-b2)", display: "grid", gap: "0.35rem" }}>
                 <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — لمسة ثقافية</strong>
-                <span style={{ fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-ink2)" }}>
-                  {topic.level === "B2" ? "في الكتابة الرسمية يُفضَّل Nominalstil ووصلات B2 (deshalb/trotzdem); في المحادثة اليومية يكفي Verbalstil البسيط — الامتحان يقيس المناسب للسياق." : "الألمان يقدّرون الدقة في الرسالة الرسمية: تحية + سبب + طلب واضح + خاتمة مهذبة — هذا النمط يكفيك في B1."}
-                </span>
-                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح ثقافي مختصر — لا يُمتحن، لكنه يقربك من الاستعمال الحقيقي.</span>
+                <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }} dir="ltr"><De>{k.de}</De></span>
+                <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }}>{k.ar}</span>
+                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح سياقي — يُظهر متى يُستعمل النمط، لا يُمتحن.</span>
               </div>
-            )}
+            ) : null; })()}
             <BrueckenLessonBlock bruecken={bruecken} srs={progress.srs ?? {}} />
             {topic.anwendung && (
               <IndependentApplication
