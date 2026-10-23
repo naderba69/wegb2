@@ -12,7 +12,7 @@ import type {
   Tiefenlex,
   Eselsbruecke,
 } from "./types";
-import { bankRoh, beiBankenBereit, BANK_DATEIEN } from "./bankload";
+import { bankRoh, beiBankenBereit, beiVertiefungBereit, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "./bankload";
 
 export const grammarMap = {} as Record<string, GrammarTopic>;
 export const vocabMap = {} as Record<
@@ -309,58 +309,57 @@ export const arenaMap = { nomen: [], konnektoren: [], passiv: [] } as unknown as
   passiv: ArenaPassiv[];
 };
 
-/** R163: Die Container oben werden an Ort und Stelle befüllt — in Node synchron beim
- *  Import (Tests/Prerender lesen content/ von der Platte), im Browser nach dem einmaligen
- *  /banks.json-Fetch über beiBankenBereit. Referenzen der Konsumenten bleiben gültig. */
+/** R163: Container werden an Ort und Stelle befüllt — Node synchron (alle 54 Banken), Browser stufenweise core→vertiefung→lang. */
 function fuelleAusBanken(): void {
-  if (!bankRoh("grammar.json")) return;
-  Object.assign(grammarMap, bankRoh("grammar.json"));
-  Object.assign(vocabMap, bankRoh("vocab.json"));
-  const saetze = bankRoh("sentences.json") as Satz[];
-  sentences.splice(0, sentences.length, ...saetze);
-  Object.assign(tiefenlex, bankRoh("tiefenlex.json"));
-  const sz = bankRoh("szenarien.json") as { szenarien: import("./types").Szenario[] };
-  szenarien.splice(0, szenarien.length, ...sz.szenarien);
-  const pk = bankRoh("pakete.json") as { pakete: import("./types").KontextPaket[] };
-  pakete.splice(0, pakete.length, ...pk.pakete);
-  alleVokabeln.splice(0, alleVokabeln.length, ...Object.values(vocabMap).flatMap((g) => g.cards));
-  for (const name of BANK_DATEIEN) {
-    if (name.startsWith("lang/")) Object.assign(langfassungen, bankRoh(name));
-  }
-  const texteRoh = bankRoh("texts.json") as Lesetext[];
-  texts.splice(0, texts.length, ...texteRoh.map((t) => (langfassungen[t.id] ? { ...t, lang: langfassungen[t.id] } : t)));
-  const dlg = bankRoh("dialogues.json") as Hoerdialog[];
-  dialogues.splice(0, dialogues.length, ...dlg);
-  const wt = bankRoh("writing.json") as Schreibaufgabe[];
-  writingTasks.splice(0, writingTasks.length, ...wt);
-  Object.assign(candoMap, bankRoh("cando.json"));
-  const fl = bankRoh("fehler.json") as (FehlerEintrag & { id: string; kat: string })[];
-  fehlerList.splice(0, fehlerList.length, ...fl);
-  Object.assign(mnemonikMap, bankRoh("mnemonik.json"));
-  Object.assign(sprichwortAudio, bankRoh("sprichwort-audio.json"));
-  const eb = bankRoh("eselsbruecken.json") as Eselsbruecke[];
-  eselsbruecken.splice(0, eselsbruecken.length, ...eb);
-  const vb = bankRoh("verben.json") as VerbParadigmen[];
-  verben.splice(0, verben.length, ...vb);
-  haerte.splice(0, haerte.length, ...(bankRoh("haerte.json") as { rungen: HaerteRung[] }).rungen);
-  const mu = bankRoh("muendlich.json") as { karten: MuendlichKarte[]; partner?: PartnerKarte[]; kontakt?: KontaktKarte[] };
-  muendlich.splice(0, muendlich.length, ...mu.karten);
-  partnerKarten.splice(0, partnerKarten.length, ...(mu.partner ?? []));
-  kontaktKarten.splice(0, kontaktKarten.length, ...(mu.kontakt ?? []));
-  vortrag.splice(0, vortrag.length, ...(bankRoh("vortrag.json") as { themen: VortragThema[] }).themen);
-  luecken.splice(0, luecken.length, ...(bankRoh("luecken.json") as { items: LkItem[] }).items);
-  leseleiter.splice(0, leseleiter.length, ...((bankRoh("leseleiter.json") as { texte: LeiterText[] } | undefined)?.texte ?? []));
-  redemittelBank.splice(0, redemittelBank.length, ...((bankRoh("redemittel.json") as { items: RedemittelItem[] } | undefined)?.items ?? []));
-  hoerneu.splice(0, hoerneu.length, ...((bankRoh("hoerneu.json") as { items: HoerNeuItem[] } | undefined)?.items ?? []));
-  kollokVertiefung.splice(0, kollokVertiefung.length, ...((bankRoh("kollok-vertiefung.json") as { items: KollokVertiefungItem[] } | undefined)?.items ?? []));
-  synonymVertiefung.splice(0, synonymVertiefung.length, ...((bankRoh("synonym-vertiefung.json") as { items: SynonymVertiefungItem[] } | undefined)?.items ?? []));
-  const hoer = bankRoh("hoeren-audio.json") as { einaetze?: HoerAudio[]; einsaetze: HoerAudio[] };
-  Object.assign(hoerenAudio, Object.fromEntries(hoer.einsaetze.map((e) => [e.id, e])));
-  const dik = bankRoh("diktat-audio.json") as { einsaetze: HoerAudio[] };
-  Object.assign(diktatAudio, Object.fromEntries(dik.einsaetze.map((e) => [e.id, e])));
-  const dia = bankRoh("dialog-audio.json") as { einsaetze: HoerAudio[] };
-  Object.assign(dialogAudio, Object.fromEntries(dia.einsaetze.map((e) => [e.id, e])));
-  Object.assign(arenaMap, bankRoh("arena.json"));
+  // Grammar: core+ b2 gemerged (Node voll, Browser stufenweise)
+  const grammarCore = bankRoh("grammar-core.json") as Record<string, unknown> | undefined;
+  const grammarB2 = bankRoh("grammar-b2.json") as Record<string, unknown> | undefined;
+  const grammarVoll = bankRoh("grammar.json") as Record<string, unknown> | undefined;
+  const grammarRoh2 = grammarVoll ?? (grammarCore && grammarB2 ? { ...grammarCore, ...grammarB2 } : grammarCore ?? grammarB2);
+  if (!grammarRoh2) return;
+  Object.assign(grammarMap, grammarRoh2);
+  // Vocab: core (A0-B1) sofort, B2 lazy — merge beide wenn vorhanden
+  const vocabCore = bankRoh("vocab-core.json") as Record<string, unknown> | undefined;
+  const vocabB2 = bankRoh("vocab-b2.json") as Record<string, unknown> | undefined;
+  const vocabVoll = bankRoh("vocab.json") as Record<string, unknown> | undefined;
+  const vocabRoh = vocabVoll ?? (vocabCore && vocabB2 ? { ...vocabCore, ...vocabB2 } : vocabCore ?? vocabB2);
+  if (vocabRoh) { Object.assign(vocabMap, vocabRoh); alleVokabeln.splice(0, alleVokabeln.length, ...Object.values(vocabMap).flatMap((g) => (g as { cards: VocabCard[] }).cards)); }
+  const tief = bankRoh("tiefenlex.json") as Tiefenlex | undefined; if (tief) Object.assign(tiefenlex, tief);
+  const candoRoh = bankRoh("cando.json") as Record<string, unknown> | undefined; if (candoRoh) Object.assign(candoMap, candoRoh);
+  const fehlerRoh = bankRoh("fehler.json") as unknown[] | undefined; if (fehlerRoh) fehlerList.splice(0, fehlerList.length, ...(fehlerRoh as typeof fehlerList));
+  const mnemo = bankRoh("mnemonik.json") as Record<string, unknown> | undefined; if (mnemo) Object.assign(mnemonikMap, mnemo);
+  const verbenRoh = bankRoh("verben.json") as VerbParadigmen[] | undefined; if (verbenRoh) verben.splice(0, verben.length, ...verbenRoh);
+  const haerteRoh = bankRoh("haerte.json") as { rungen: HaerteRung[] } | undefined; if (haerteRoh) haerte.splice(0, haerte.length, ...haerteRoh.rungen);
+  const arenaRoh = bankRoh("arena.json") as unknown | undefined; if (arenaRoh) Object.assign(arenaMap, arenaRoh);
+  // Langfassungen — sammle aus beiden Quellen falls vorhanden (Node: bereits da, Browser: nach lang-Lazy)
+  for (const name of LANG_DATEIEN) { const chunk = bankRoh(name) as Record<string, Langfassung> | undefined; if (chunk) Object.assign(langfassungen, chunk); }
+  const texteRoh = bankRoh("texts.json") as Lesetext[] | undefined;
+  if (texteRoh) texts.splice(0, texts.length, ...texteRoh.map((t) => (langfassungen[t.id] ? { ...t, lang: langfassungen[t.id] } : t)));
+  const dlg = bankRoh("dialogues.json") as Hoerdialog[] | undefined; if (dlg) dialogues.splice(0, dialogues.length, ...dlg);
+  const lese = bankRoh("leseleiter.json") as { texte: LeiterText[] } | undefined; if (lese) leseleiter.splice(0, leseleiter.length, ...lese.texte);
+  const rede = bankRoh("redemittel.json") as { items: RedemittelItem[] } | undefined; if (rede) redemittelBank.splice(0, redemittelBank.length, ...rede.items);
+  const hoerNeuRoh = bankRoh("hoerneu.json") as { items: HoerNeuItem[] } | undefined; if (hoerNeuRoh) hoerneu.splice(0, hoerneu.length, ...hoerNeuRoh.items);
+  const hoer = bankRoh("hoeren-audio.json") as { einsaetze: HoerAudio[] } | undefined; if (hoer) Object.assign(hoerenAudio, Object.fromEntries(hoer.einsaetze.map((e) => [e.id, e])));
+  const dik = bankRoh("diktat-audio.json") as { einsaetze: HoerAudio[] } | undefined; if (dik) Object.assign(diktatAudio, Object.fromEntries(dik.einsaetze.map((e) => [e.id, e])));
+  const dia = bankRoh("dialog-audio.json") as { einsaetze: HoerAudio[] } | undefined; if (dia) Object.assign(dialogAudio, Object.fromEntries(dia.einsaetze.map((e) => [e.id, e])));
+  const sprAudio = bankRoh("sprichwort-audio.json") as Record<string, unknown> | undefined; if (sprAudio) Object.assign(sprichwortAudio, sprAudio);
+  // Vertiefung — nur wenn bereits geladen (Node: sofort, Browser: nach initialisiereVertiefung)
+  const saetze = bankRoh("sentences.json") as Satz[] | undefined; if (saetze) sentences.splice(0, sentences.length, ...saetze);
+  const sz = bankRoh("szenarien.json") as { szenarien: import("./types").Szenario[] } | undefined; if (sz) szenarien.splice(0, szenarien.length, ...sz.szenarien);
+  const pk = bankRoh("pakete.json") as { pakete: import("./types").KontextPaket[] } | undefined; if (pk) pakete.splice(0, pakete.length, ...pk.pakete);
+  const wt = bankRoh("writing.json") as Schreibaufgabe[] | undefined; if (wt) writingTasks.splice(0, writingTasks.length, ...wt);
+  const eb = bankRoh("eselsbruecken.json") as Eselsbruecke[] | undefined; if (eb) eselsbruecken.splice(0, eselsbruecken.length, ...eb);
+  const mu = bankRoh("muendlich.json") as { karten: MuendlichKarte[]; partner?: PartnerKarte[]; kontakt?: KontaktKarte[] } | undefined;
+  if (mu) { muendlich.splice(0, muendlich.length, ...mu.karten); partnerKarten.splice(0, partnerKarten.length, ...(mu.partner ?? [])); kontaktKarten.splice(0, kontaktKarten.length, ...(mu.kontakt ?? [])); }
+  const vt = bankRoh("vortrag.json") as { themen: VortragThema[] } | undefined; if (vt) vortrag.splice(0, vortrag.length, ...vt.themen);
+  const lk = bankRoh("luecken.json") as { items: LkItem[] } | undefined; if (lk) luecken.splice(0, luecken.length, ...lk.items);
+  const kollV = bankRoh("kollok-vertiefung.json") as { items: KollokVertiefungItem[] } | undefined; if (kollV) kollokVertiefung.splice(0, kollokVertiefung.length, ...kollV.items);
+  const synV = bankRoh("synonym-vertiefung.json") as { items: SynonymVertiefungItem[] } | undefined; if (synV) synonymVertiefung.splice(0, synonymVertiefung.length, ...synV.items);
+  const synK = bankRoh("synonyme-kontext.json"); // legacy name falls vorhanden
+  const pflegeRoh = bankRoh("pflege.json") as unknown | undefined; // keep if exists as generic
+  // pflege is optional generic — no container currently, keep for future
+  void pflegeRoh; void synK; void BANK_DATEIEN; void VERTIEFUNG_DATEIEN; // silence unused
 }
 fuelleAusBanken();
 beiBankenBereit(fuelleAusBanken);
+beiVertiefungBereit(fuelleAusBanken);

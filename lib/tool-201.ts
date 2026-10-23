@@ -1,7 +1,7 @@
 /**
- * 201 — Judgments of Learning — أحكام التعلّم
- * Koriat 1997: JOL accuracy predicts retention; training JOL improves calibration
- * Level: B1-B2 | Bloom: قيّم | Family: الذاكرة
+ * 201 — Lernurteile (JOL) — أحكام التعلّم
+ * Family: الذاكرة | Bloom: قيّم | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_201 = {
   id: 201,

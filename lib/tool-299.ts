@@ -1,7 +1,7 @@
 /**
  * 299 — Flow Theory — نظرية التدفق
- * Csikszentmihalyi 1990: challenge=skill → flow; anxiety if challenge>skill
- * Level: A1-B2 | Bloom: طبّق | Family: تلقين
+ * Family: تلقين | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_299 = {
   id: 299,

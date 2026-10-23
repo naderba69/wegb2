@@ -1,7 +1,7 @@
 /**
- * 204 — Expertise Reversal Effect — انعكاس أثر الخبرة
- * Kalyuga 2003: scaffolding helps novices but harms experts — adapt to level
- * Level: A0-B2 | Bloom: حلّل | Family: طرائق
+ * 204 — Expertise-Umkehr — انعكاس الخبرة
+ * Family: طرائق | Bloom: حلّل | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_204 = {
   id: 204,

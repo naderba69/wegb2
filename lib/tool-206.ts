@@ -1,7 +1,7 @@
 /**
- * 206 — Peer Feedback — تغذية الأقران الراجعة
- * Topping 2009: peer feedback improves both giver and receiver
- * Level: B1-B2 | Bloom: قيّم | Family: تقويم
+ * 206 — Peer-Feedback — تغذية الأقران
+ * Family: تقويم | Bloom: قيّم | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_206 = {
   id: 206,

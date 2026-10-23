@@ -1,7 +1,7 @@
 /**
- * 219 — Grammar-Translation Reinterpreted — الترجمة النحوية المعاد تفسيرها
- * Modern: contrastive translation as noticing tool, not main method
- * Level: A0-B1 | Bloom: فهم | Family: طرائق
+ * 219 — Grammatik-Übersetzung (modern) — الترجمة النحوية (حديثة)
+ * Family: طرائق | Bloom: فهم | Level: A0-B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_219 = {
   id: 219,
@@ -13,5 +13,6 @@ export const TOOL_219 = {
   research: "Cook 2010",
   use: "Kontrastive Übersetzung als Noticing-Hilfe",
 } as const;
+
 export function contrastTranslation(de: string, ar: string): string { return `DE: ${de} ↔ AR: ${ar} — vergleiche Wortstellung!`; }
 export function shouldTranslate(level: string): boolean { return level==="A0"||level==="A1"; }

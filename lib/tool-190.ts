@@ -1,12 +1,15 @@
 /**
- * 190 — Transfer-Appropriate Processing — معالجة مناسبة للنقل
- * Morris et al. 1977: test conditions should match learning conditions
- * Level: B2 | Bloom: قيّم
+ * 190 — Transfergerechtes Üben — تدريب مطابق للاختبار
+ * Family: الذاكرة | Bloom: قيّم | Level: B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_190 = {
   id: 190,
   titleDe: "Transfergerechtes Üben",
   titleAr: "تدريب مطابق للاختبار",
+  family: "الذاكرة",
+  bloom: "قيّم",
+  level: "B2",
   principle: "Übe wie geprüft wird",
 } as const;
 

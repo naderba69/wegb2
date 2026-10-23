@@ -1,7 +1,7 @@
 /**
- * 262 — Desirable Difficulty Calibration — معايرة الصعوبة المرغوبة
- * Bjork 1994: optimal difficulty = 70-85% success; too easy/hard harms learning
- * Level: A1-B2 | Bloom: حلّل | Family: الذاكرة
+ * 262 — Desirable Difficulty — الصعوبة المرغوبة
+ * Family: الذاكرة | Bloom: حلّل | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_262 = {
   id: 262,
@@ -13,5 +13,6 @@ export const TOOL_262 = {
   research: "Bjork 1994",
   sweet: "70-85% Erfolgsquote = optimal",
 } as const;
+
 export function isDesirable(successRate: number): boolean { return successRate>=0.7 && successRate<=0.85; }
 export function adjustDifficulty(successRate: number, difficulty: number): number { if(successRate>0.85) return difficulty*1.1; if(successRate<0.7) return difficulty*0.9; return difficulty; }

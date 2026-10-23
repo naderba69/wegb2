@@ -1,7 +1,7 @@
 /**
  * 291 — Goal Setting — تحديد الأهداف
- * Locke 1990: specific + challenging + feedback → performance +20%
- * Level: A0-B2 | Bloom: أنشئ | Family: تلقين
+ * Family: تلقين | Bloom: أنشئ | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_291 = {
   id: 291,

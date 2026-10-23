@@ -1,7 +1,7 @@
 /**
- * 210 — Contrastive Analysis AR-DE — التحليل التقابلي عربي-ألماني
- * Lado 1957 modern: predict interference: AR lacks case/copula → DE errors
- * Level: A0-B1 | Bloom: حلّل | Family: SLA
+ * 210 — Kontrastanalyse AR-DE — التحليل التقابلي عربي-ألماني
+ * Family: SLA | Bloom: حلّل | Level: A0-B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_210 = {
   id: 210,

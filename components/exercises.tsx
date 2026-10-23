@@ -364,11 +364,18 @@ export default function ExerciseSet({ items, onPoints, storageKey, onProgress, o
                     {ex.type === "mc" && st.correct && st.sicher === false && (
                       <div data-testid="unterkonfidenz" style={{ marginTop: "0.3rem", color: "var(--color-ink2)" }}>🙂 كنتَ غيرَ متأكّد وأصبت — تعرفُ أكثر مما تظنّ.</div>
                     )}
-                  {/* 💡 الثقة النهائية + 🔍 المقارنة كلمةً كلمة */}
+                  {/* 💡 الثقة النهائية + 🔍 المقارنة كلمةً كلمة + 🎯 التغذية الثلاثية */}
                   {getippt(ex) && (
                     <div style={{ marginTop: "0.3rem" }}>
                       <VertrauensBalken wert={konfidenz(givenOf(st), refOf(ex))} />
                       {!st.correct && <AntwortDiff gegeben={givenOf(st)} referenz={refOf(ex)} />}
+                    </div>
+                  )}
+                  {st.checked && (
+                    <div data-testid="triple-feedback" style={{ marginTop: "0.45rem", padding: "0.5rem 0.7rem", borderRadius: "0.5rem", background: st.correct ? "rgb(34 197 94 / 0.08)" : "var(--color-gold-soft)", borderInlineStart: st.correct ? "3px solid var(--color-a1)" : "3px solid var(--color-gold)", fontSize: "0.84rem", lineHeight: 1.85 }}>
+                      <div><strong>{st.correct ? "✅ ما الصواب:" : "❌ ما الخطأ:"}</strong> {st.feedback ?? (st.correct ? "أصبت — حافظ على النمط." : "راجع الفرق أعلاه.")}</div>
+                      {ex.explanationAr && <div><strong>💡 لماذا:</strong> {ex.explanationAr}</div>}
+                      <div style={{ color: "var(--color-ink2)" }}><strong>➡️ الخطوة التالية:</strong> {st.correct ? "تابع للسؤال التالي — ثبّت النمط بصوت عالٍ." : "اقرأ القاعدة أعلاه ثم جرّب بجملة جديدة من ذاكرتك."}</div>
                     </div>
                   )}
                   {(() => {

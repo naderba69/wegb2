@@ -1,7 +1,7 @@
 /**
- * 199 — Pre-testing / Unsuccessful Retrieval — الاختبار القبلي
- * Kornell 2009: attempting answer before study improves later recall even when wrong
- * Level: B1 | Bloom: قيّم | Family: تقويم
+ * 199 — Vortest — الاختبار القبلي
+ * Family: تقويم | Bloom: قيّم | Level: B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_199 = {
   id: 199,

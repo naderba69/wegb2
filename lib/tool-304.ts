@@ -1,7 +1,7 @@
 /**
  * 304 — Metacognitive Strategies — ما وراء المعرفية
- * Flavell 1979: planning, monitoring, evaluating
- * Level: B1-B2 | Bloom: قيّم | Family: SLA
+ * Family: SLA | Bloom: قيّم | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_304 = {
   id: 304,

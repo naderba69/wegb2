@@ -5,7 +5,7 @@
 
 | البند | المقاس فعليًا | الميزانية | كيف يُحترم |
 |---|---|---|---|
-| بنوك المحتوى `public/banks.json` | 4.29 MB | ≤ 5 MB | تُحمَّل كسولًا عبر `lib/bankload.ts` (52 بنكًا عند الحاجة) |
+| بنوك المحتوى `public/banks.json` | 2.53 MB (0.72 MB gz) | ≤ 5 MB | P2: core 19 بنك 2.53MB (0.72 gz) + vertiefung 15 بنك 1.53MB (0.49 gz) lazy inkl. vocab-b2 43 Decks + grammar-b2 23 Lektionen + lang 20 بنك 0.42MB (0.14 gz) lazy — `lib/bankload.ts` B2-split A0-B1 sofort/B2 lazy (R402, Ziel 3.5M übertroffen: 4.55→2.53) |
 | الصوت الكلي (1087 ملفًا) | 87.2 MB | ≤ 95 MB مخزونًا | **0 MB في أول تشغيل**: كل المشغّلات `preload=none` (استثناء موثّق واحد K26h)؛ التنزيل الكامل اختياري من بطاقة عدم الاتصال |
 | أكبر ملف صوت مفرد | 460 KB | ≤ 512 KB | مقاطع قصيرة أصلًا؛ عامل الخدمة cache-first لما سُمع |
 | الخطوط | 0 KB خارجية | 0 | خطوط نظام عربية/ألمانية فقط — لا Google Fonts |

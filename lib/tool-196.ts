@@ -1,7 +1,7 @@
 /**
- * 196 — Enactment & Gesture — التجسيد والإيماء
- * Engelkamp 1998: performing action phrase > verbal only; gesture aids verb retention
- * Level: A1-B1 | Bloom: طبّق | Family: طرائق
+ * 196 — Handlung & Geste — التجسيد والإيماء
+ * Family: طرائق | Bloom: طبّق | Level: A1-B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_196 = {
   id: 196,

@@ -1,7 +1,7 @@
 /**
  * 309 — Social Strategies — الاجتماعية
- * Oxford 1990: asking questions, cooperating
- * Level: A1-B2 | Bloom: طبّق | Family: SLA
+ * Family: SLA | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_309 = {
   id: 309,

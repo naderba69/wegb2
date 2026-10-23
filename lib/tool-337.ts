@@ -1,7 +1,7 @@
 /**
  * 337 — Chat Authenticity — أصالة الدردشة
- * Blake 2000: applied to German teaching — classroom integration via tasks
- * Level: A1-B2 | Bloom: طبّق | Family: Immersion
+ * Family: Immersion | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_337 = {
   id: 337,
@@ -13,5 +13,6 @@ export const TOOL_337 = {
   research: "Blake 2000",
   desc: "Chat Authenticity applied in classroom",
 } as const;
+
 export function tool337Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool337Check(v: number): boolean { return v>0; }

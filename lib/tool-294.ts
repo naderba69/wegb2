@@ -1,7 +1,7 @@
 /**
  * 294 — Self-Efficacy — الكفاءة الذاتية
- * Bandura 1977: mastery experiences → strongest efficacy source
- * Level: A0-B2 | Bloom: قيّم | Family: تلقين
+ * Family: تلقين | Bloom: قيّم | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_294 = {
   id: 294,

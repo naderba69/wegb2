@@ -1,7 +1,7 @@
 /**
  * 223 — Graded Readers — القراءات المتدرجة
- * Nation 2009: 95-98% known words → i+1, vocabulary growth 5-10 per book
- * Level: A1-B2 | Bloom: طبّق | Family: طرائق
+ * Family: طرائق | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_223 = {
   id: 223,
@@ -13,6 +13,7 @@ export const TOOL_223 = {
   research: "Nation 2009",
   coverage: "95-98% bekannt = ideal",
 } as const;
+
 export function gradedLevel(knownPercent: number): string {
   if (knownPercent >= 98) return "zu leicht";
   if (knownPercent >= 95) return "ideal";

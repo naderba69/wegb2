@@ -1,7 +1,7 @@
 /**
  * 370 — Lifelong Learning — التعلّم مدى الحياة
- * EU 2006: classroom-ready application with tasks
- * Level: A0-B2 | Bloom: أنشئ | Family: تلقين
+ * Family: تلقين | Bloom: أنشئ | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_370 = {
   id: 370,
@@ -13,5 +13,6 @@ export const TOOL_370 = {
   research: "EU 2006",
   desc: "Lifelong Learning classroom application",
 } as const;
+
 export function tool370Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool370Check(v: number): boolean { return v>0; }

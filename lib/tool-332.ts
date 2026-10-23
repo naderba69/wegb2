@@ -1,7 +1,7 @@
 /**
  * 332 — Digital Storytelling — السرد الرقمي
- * Robin 2008: applied to German teaching — classroom integration via tasks
- * Level: A2-B2 | Bloom: أنشئ | Family: Narrative
+ * Family: Narrative | Bloom: أنشئ | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_332 = {
   id: 332,
@@ -13,5 +13,6 @@ export const TOOL_332 = {
   research: "Robin 2008",
   desc: "Digital Storytelling applied in classroom",
 } as const;
+
 export function tool332Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool332Check(v: number): boolean { return v>0; }

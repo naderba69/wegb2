@@ -1,7 +1,7 @@
 /**
  * 320 — Lexical Bundles — الحزم المعجمية
- * Biber 1999: applied to German teaching — classroom integration via tasks
- * Level: A2-B2 | Bloom: تذكّر | Family: طرائق
+ * Family: طرائق | Bloom: تذكّر | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_320 = {
   id: 320,
@@ -13,5 +13,6 @@ export const TOOL_320 = {
   research: "Biber 1999",
   desc: "Lexical Bundles applied in classroom",
 } as const;
+
 export function tool320Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool320Check(v: number): boolean { return v>0; }

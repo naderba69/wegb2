@@ -1,7 +1,7 @@
 /**
- * 261 — SRS Leitner vs FSRS — مقارنة أنظمة التكرار
- * Leitner 1972 boxes vs FSRS 2023 ML: FSRS 15% more efficient (same retention/time)
- * Level: A0-B2 | Bloom: حلّل | Family: الذاكرة
+ * 261 — Leitner vs FSRS Vergleich — مقارنة Leitner و FSRS
+ * Family: الذاكرة | Bloom: حلّل | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_261 = {
   id: 261,
@@ -13,5 +13,6 @@ export const TOOL_261 = {
   research: "Leitner 1972, FSRS 2023",
   winner: "FSRS gewinnt bei Zeit/Behalten",
 } as const;
+
 export function leitnerBox(correctStreak: number): number { return Math.min(5, Math.floor(correctStreak/2)+1); }
 export function fsrsVsLeitner(fsrsTime: number, leitnerTime: number): number { return leitnerTime/fsrsTime; }

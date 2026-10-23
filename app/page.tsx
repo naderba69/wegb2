@@ -10,6 +10,7 @@ import { sessionGoalReached, sessionMinuteTenth } from "@/lib/session-clock";
 import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
 import { KindIcon } from "@/components/dirb/icons";
+import TodayStepper from "@/components/akademie/TodayStepper";
 import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
@@ -417,8 +418,9 @@ export default function Today() {
 
       {held && (
         <section className="dirb-held dirb-hero-anim-2" aria-label="خطوتك التالية" data-testid="today-primary-step">
+          <div style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-ink2)", letterSpacing: "0.02em" }}>📋 مهمة اليوم — نفّذ الآن</div>
           <KindIcon kind={held.kind} className="dirb-held-icon" />
-          <div className="dirb-held-skill">{SKILL_AR[held.kind] ?? held.kind}</div>
+          <div className="dirb-held-skill">{day === 1 && held.titleDe.includes("Willkommen") ? "تهيئة" : (SKILL_AR[held.kind] ?? held.kind)}</div>
           <div className="dirb-held-ar">{held.titleAr}</div>
           <div className="dirb-held-lektion" lang="de" dir="ltr">{held.titleDe}</div>
           <div className="dirb-held-meta">
@@ -444,6 +446,17 @@ export default function Today() {
           </button>
         </section>
       )}
+
+      {/* 🗺️ Sprint 1B — Unified Today Stepper: 5 خطوات مرئية + مقفلة بصرياً (Hybrid Gated) */}
+      <TodayStepper
+        plan={plan}
+        progress={progress}
+        ritual={ritual}
+        stepFrei={stepFrei}
+        setStep={setStep}
+        resultOf={resultOf as any}
+        localOf={localOf}
+      />
 
       <section className="dirb-tagesziel dirb-hero-anim-2" aria-label="هدف الجلسة اليومي" data-testid="session-goal-panel">
         <div className="dirb-tagesziel-top">

@@ -1,7 +1,7 @@
 /**
- * 257 — AR Overlays — التراكب المعزز
- * Godwin-Jones 2016: AR labels on real objects → contextual vocabulary
- * Level: A0-A2 | Bloom: فهم | Family: Immersion
+ * 257 — AR-Overlays — التراكب المعزز
+ * Family: Immersion | Bloom: فهم | Level: A0-A2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_257 = {
   id: 257,
@@ -13,5 +13,6 @@ export const TOOL_257 = {
   research: "Godwin-Jones 2016",
   use: "Kamera auf Objekt → deutsches Wort erscheint",
 } as const;
+
 export function arLabel(object: string): string { return `AR: ${object} → deutsches Wort + Artikel + Bild`; }
 export function arGain(contextual: boolean): number { return contextual?1.15:1.0; }

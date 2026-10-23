@@ -1,7 +1,7 @@
 /**
  * 363 — Scaffolding ZPD Advanced — السقالات المتقدمة
- * Wood 1976: classroom-ready application with tasks
- * Level: A0-B2 | Bloom: طبّق | Family: طرائق
+ * Family: طرائق | Bloom: طبّق | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_363 = {
   id: 363,
@@ -13,5 +13,6 @@ export const TOOL_363 = {
   research: "Wood 1976",
   desc: "Scaffolding ZPD Advanced classroom application",
 } as const;
+
 export function tool363Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool363Check(v: number): boolean { return v>0; }

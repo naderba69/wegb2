@@ -1,7 +1,7 @@
 /**
  * 429 — Case Study Variants adv — تنويعات دراسة حالة
- * Yin 2009: classroom application with tasks
- * Level: B1-B2 | Bloom: حلّل | Family: طرائق
+ * Family: طرائق | Bloom: حلّل | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_429 = {
   id: 429,
@@ -13,5 +13,6 @@ export const TOOL_429 = {
   research: "Yin 2009",
   desc: "Case Study Variants adv classroom",
 } as const;
+
 export function tool429Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool429Check(v:number):boolean{return v>0;}

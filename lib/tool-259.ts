@@ -1,7 +1,7 @@
 /**
- * 259 — Digital Ethics — الأخلاق الرقمية
- * Floridi 2013: informierte Einwilligung, Datenschutz bei Lern-Analytics
- * Level: A0-B2 | Bloom: قيّم | Family: Ethik
+ * 259 — Digitale Ethik — الأخلاق الرقمية
+ * Family: Ethik | Bloom: قيّم | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_259 = {
   id: 259,
@@ -13,5 +13,6 @@ export const TOOL_259 = {
   research: "Floridi 2013",
   principles: "Einwilligung, Transparenz, Datensparsamkeit",
 } as const;
+
 export function ethicsCheck(consent: boolean, anonymized: boolean): boolean { return consent && anonymized; }
 export function dataMinimized(collected: number, needed: number): boolean { return collected <= needed*1.1; }

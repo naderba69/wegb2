@@ -1,7 +1,7 @@
 /**
- * 191 — Spaced vs Massed Contrast — التباعد مقابل الحشد
- * Cepeda et al. 2008 meta-analysis: spaced > massed, optimal gap ~10-30% of retention interval
- * Level: A1-B2 | Bloom: فهم | Family: الذاكرة
+ * 191 — Abstand vs Masse — التباعد مقابل الحشد
+ * Family: الذاكرة | Bloom: فهم | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_191 = {
   id: 191,

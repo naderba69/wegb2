@@ -1,14 +1,14 @@
 /**
- * 182 — Sleep-Dependent Consolidation Protocol — بروتوكول النوم
- * Diehl et al. 2014: 7-9h sleep + review 90min before sleep improves retention 20-40%
- * Integrated via lib/plan.ts: eveningReviewSlot()
- * Level: A0-B2 | Bloom: طبّق | Family: الذاكرة
+ * 182 — Schlafkonsolidierung — تثبيت أثناء النوم
+ * Family: الذاكرة | Bloom: طبّق | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_182 = {
   id: 182,
   titleDe: "Schlafkonsolidierung",
   titleAr: "تثبيت أثناء النوم",
   family: "الذاكرة",
+  bloom: "طبّق",
   level: "A0-B2",
   protocol: "Lernen 21:00-22:00 → Schlaf 23:00-07:00 → Abruf 07:30",
   gain: "+30% Retention",

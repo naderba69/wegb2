@@ -1,4 +1,4 @@
-import { bankRoh, beiBankenBereit } from "./bankload";
+import { bankRoh, beiBankenBereit, beiVertiefungBereit } from "./bankload";
 import type { VocabCard } from "./types";
 
 export type SynonymKontextEintrag = {
@@ -20,6 +20,7 @@ function fuelleSynonyme(): void {
 }
 fuelleSynonyme();
 beiBankenBereit(fuelleSynonyme);
+beiVertiefungBereit(fuelleSynonyme);
 
 const norm = (value: string) => value.trim().toLowerCase();
 const bankNachQuelle = new Map(Object.entries(bank).map(([quelle, eintraege]) => [norm(quelle), eintraege]));

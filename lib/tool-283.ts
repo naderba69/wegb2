@@ -1,7 +1,7 @@
 /**
  * 283 — Redundancy Principle — مبدأ التكرار الزائد
- * Kalyuga 1999: redundant text+audio harms; choose one
- * Level: A1-B2 | Bloom: فهم | Family: طرائق
+ * Family: طرائق | Bloom: فهم | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_283 = {
   id: 283,

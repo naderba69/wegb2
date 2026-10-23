@@ -1,7 +1,7 @@
 /**
- * 193 — Forward Testing Effect — أثر الاختبار الأمامي
- * Pastötter & Bäuml 2014: testing old material potentiates learning of new material
- * Level: B2 | Bloom: طبّق | Family: طرائق
+ * 193 — Vorwärts-Testeffekt — أثر الاختبار الأمامي
+ * Family: طرائق | Bloom: طبّق | Level: B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_193 = {
   id: 193,

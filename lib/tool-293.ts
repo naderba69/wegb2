@@ -1,7 +1,7 @@
 /**
  * 293 — Attribution Theory — نظرية العزو
- * Weiner 1985: attribute success to effort/strategy not luck
- * Level: B1-B2 | Bloom: حلّل | Family: تلقين
+ * Family: تلقين | Bloom: حلّل | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_293 = {
   id: 293,

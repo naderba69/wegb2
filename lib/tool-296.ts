@@ -1,7 +1,7 @@
 /**
  * 296 — Autonomy Support — دعم الاستقلالية
- * Reeve 2009: choice, rationale, acknowledge feelings
- * Level: A1-B2 | Bloom: طبّق | Family: تلقين
+ * Family: تلقين | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_296 = {
   id: 296,

@@ -1,7 +1,7 @@
 /**
  * 289 — Expertise-Appropriate — مناسب للخبرة
- * Kalyuga 2003: high guidance for novices, low for experts
- * Level: A0-B2 | Bloom: حلّل | Family: طرائق
+ * Family: طرائق | Bloom: حلّل | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_289 = {
   id: 289,

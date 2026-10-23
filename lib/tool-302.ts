@@ -1,7 +1,7 @@
 /**
  * 302 — WTC Willingness — الاستعداد للتواصل
- * MacIntyre 1998: WTC = confidence + desire → speak more
- * Level: B1-B2 | Bloom: طبّق | Family: SLA
+ * Family: SLA | Bloom: طبّق | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_302 = {
   id: 302,

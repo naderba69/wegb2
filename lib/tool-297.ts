@@ -1,7 +1,7 @@
 /**
  * 297 — Competence Support — دعم الكفاءة
- * Deci 2000: optimal challenge + feedback
- * Level: A2-B2 | Bloom: طبّق | Family: تلقين
+ * Family: تلقين | Bloom: طبّق | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_297 = {
   id: 297,

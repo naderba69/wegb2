@@ -1,7 +1,7 @@
 /**
  * 360 — Corrective Feedback Lyster — التغذية التصحيحية
- * Lyster 2007: classroom-ready application with tasks
- * Level: A1-B2 | Bloom: طبّق | Family: SLA
+ * Family: SLA | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_360 = {
   id: 360,
@@ -13,5 +13,6 @@ export const TOOL_360 = {
   research: "Lyster 2007",
   desc: "Corrective Feedback Lyster classroom application",
 } as const;
+
 export function tool360Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool360Check(v: number): boolean { return v>0; }

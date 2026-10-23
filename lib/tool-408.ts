@@ -1,7 +1,7 @@
 /**
  * 408 — Peer Correction — تصحيح الأقران
- * Edge 1989: classroom application with tasks
- * Level: A2-B2 | Bloom: قيّم | Family: تقويم
+ * Family: تقويم | Bloom: قيّم | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_408 = {
   id: 408,
@@ -13,5 +13,6 @@ export const TOOL_408 = {
   research: "Edge 1989",
   desc: "Peer Correction classroom",
 } as const;
+
 export function tool408Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool408Check(v:number):boolean{return v>0;}

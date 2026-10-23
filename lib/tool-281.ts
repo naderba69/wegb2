@@ -1,7 +1,7 @@
 /**
  * 281 — Cognitive Load Theory — العبء المعرفي
- * Sweller 1988: load = intrinsic + extraneous + germane; keep extraneous low
- * Level: A1-B2 | Bloom: حلّل | Family: طرائق
+ * Family: طرائق | Bloom: حلّل | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_281 = {
   id: 281,

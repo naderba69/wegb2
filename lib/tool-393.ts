@@ -1,7 +1,7 @@
 /**
  * 393 — Procedural Memory — الذاكرة الإجرائية
- * Cohen 1980: classroom application with task integration
- * Level: A1-B2 | Bloom: طبّق | Family: الذاكرة
+ * Family: الذاكرة | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_393 = {
   id: 393,
@@ -13,5 +13,6 @@ export const TOOL_393 = {
   research: "Cohen 1980",
   desc: "Procedural Memory classroom",
 } as const;
+
 export function tool393Gain(a: boolean): number { return a?1.2:1.0; }
 export function tool393Check(v:number):boolean { return v>0; }

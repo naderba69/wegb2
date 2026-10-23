@@ -1,7 +1,7 @@
 /**
  * 313 — Speech Acts — الأفعال الكلامية
- * Austin 1962: applied to German teaching — classroom integration via tasks
- * Level: A2-B2 | Bloom: طبّق | Family: SLA
+ * Family: SLA | Bloom: طبّق | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_313 = {
   id: 313,
@@ -13,5 +13,6 @@ export const TOOL_313 = {
   research: "Austin 1962",
   desc: "Speech Acts applied in classroom",
 } as const;
+
 export function tool313Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool313Check(v: number): boolean { return v>0; }

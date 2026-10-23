@@ -1,7 +1,7 @@
 /**
- * 195 — Production Effect — أثر الإنتاج (القراءة بصوت عالٍ)
- * MacLeod 2010: reading aloud > silent, +15% distinctiveness
- * Level: A0-A2 | Bloom: طبّق | Family: الذاكرة
+ * 195 — Produktionseffekt — أثر الإنتاج الجهري
+ * Family: الذاكرة | Bloom: طبّق | Level: A0-A2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_195 = {
   id: 195,

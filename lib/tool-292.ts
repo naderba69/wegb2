@@ -1,7 +1,7 @@
 /**
  * 292 — Growth Mindset — عقلية النمو
- * Dweck 2006: intelligence malleable → effort + strategies
- * Level: A0-B2 | Bloom: قيّم | Family: تلقين
+ * Family: تلقين | Bloom: قيّم | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_292 = {
   id: 292,

@@ -100,7 +100,7 @@ import { baueSprechRunde, selbstPunkte, SPRECH_KRITERIEN } from "../lib/sprechka
 import { LEITER_STUFEN, fehlendeWoerter, stufeFrei, stufeAbgeschlossen, textBestanden, woerterZaehlen as leiterWoerter } from "../lib/leseleiter";
 import { REDE_FUNKTIONEN, REDE_TEILE, redemittelFuerTeil, drillRunde } from "../lib/redemittel";
 import { kollokationen, kollokationenFuer, partnerWort, kollokationUebung } from "../lib/kollokationen";
-import { bankenBereit, bankRoh, BANK_DATEIEN } from "../lib/bankload";
+import { bankenBereit, bankRoh, BANK_DATEIEN, VERTIEFUNG_DATEIEN, LANG_DATEIEN } from "../lib/bankload";
 import { logSicherheit, sicherheitsStatistik, sicherheitsZeile, MAX_EINTRAEGE } from "../lib/sicherheit";
 import { karteFuerWort, verknuepfung, verwaiste, abdeckung, stammVon } from "../lib/verknuepfung";
 import { dueFehlerPriorisiert, verwandteKarte, transferUebung, beispielUebung, istUeberkonfident } from "../lib/fehlerbank2";
@@ -12599,8 +12599,8 @@ void 0;
 }
 /* ═══ K257 · R163: عمارةُ تحميلِ البنوك — لا وارداتٍ ثابتةَ JSON؛ Node يقرأ content/ مباشرة ═══ */
 {
-  ok(bankenBereit() && BANK_DATEIEN.length === 52 && !!bankRoh("vocab.json") && !!bankRoh("lang/b2-36-40.json"),
-    "K257a bankload جاهزٌ في Node: 53 ملفَّ بنكٍ تُقرأ من content/ مباشرةً (53 منذ R200: بنك الحياة في ألمانيا lebenswelt.json؛ كان 52 في R197) — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
+  ok(bankenBereit() && BANK_DATEIEN.length === 19 && VERTIEFUNG_DATEIEN.length === 15 && LANG_DATEIEN.length === 20 && !!bankRoh("vocab.json") && !!bankRoh("vocab-core.json") && !!bankRoh("vocab-b2.json") && !!bankRoh("grammar-core.json") && !!bankRoh("grammar-b2.json"),
+    "K257a bankload جاهزٌ في Node: 54 ملفَّ بنكٍ (19 core inkl. vocab-core+grammar-core + 15 vertiefung inkl. vocab-b2+grammar-b2 + 20 lang — R402 P2: 4.55→2.53MB main 0.72gz + 1.53MB vertiefung 0.49gz — vocab B2 43/grammar B2 23 lazy) — لا نسخةَ وسيطةَ قد تختلف في الاختبارات");
   const sammle = (dir: string, out: string[]): string[] => {
     for (const e of readdirSync(dir, { withFileTypes: true })) {
       const p2 = `${dir}/${e.name}`;

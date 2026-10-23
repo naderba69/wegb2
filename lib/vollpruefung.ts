@@ -1,4 +1,4 @@
-import { bankRoh, beiBankenBereit } from "./bankload";
+import { bankRoh, beiBankenBereit, beiVertiefungBereit } from "./bankload";
 
 /**
  * 🧪 جلسة امتحان كاملة تجريبية (R218): Lesen + Hören + Schreiben + Sprechen
@@ -49,3 +49,4 @@ function fuelle(): void {
 
 fuelle();
 beiBankenBereit(fuelle);
+beiVertiefungBereit(fuelle);

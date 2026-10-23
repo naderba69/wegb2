@@ -1,7 +1,7 @@
 /**
  * 298 — Relatedness Support — دعم الترابط
- * Deci 2000: belonging, connection to teacher/peers
- * Level: A0-B2 | Bloom: فهم | Family: تلقين
+ * Family: تلقين | Bloom: فهم | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_298 = {
   id: 298,

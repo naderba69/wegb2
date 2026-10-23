@@ -1,7 +1,7 @@
 /**
- * 197 — Bilingual Dual Coding — الترميز المزدوج ثنائي اللغة
- * Paivio 1986 extended: L1+L2+image triple code stronger than L2 alone
- * Level: A0-A1 | Bloom: فهم | Family: الذاكرة
+ * 197 — Bilinguales Dual Coding — الترميز المزدوج ثنائي اللغة
+ * Family: الذاكرة | Bloom: فهم | Level: A0-A1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_197 = {
   id: 197,
