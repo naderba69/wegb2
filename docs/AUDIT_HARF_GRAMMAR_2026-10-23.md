@@ -170,47 +170,9 @@
 - [P2] `grammar.json:b2-partizipial` — حروف لاتينية داخل ar: "الأطفال الضاحكون لعبوا — Partizip I."
 - [P2] `grammar.json:b2-partizipial` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 
-## الأفكار التحسينية (حتى 1000 — هنا أول 38)
+## الأفكار التحسينية (حتى 1000 — هنا أول 0)
 | الدرس | الفكرة |
 |-------|--------|
-| `grammar.json:b1-konj2` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-relativ` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-konnektoren` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-plusquamperfekt` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-indirekte-rede` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-partizip` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-bedingung` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-funktionsverben` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-infinitiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-genitiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-adjektivendungen` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-wortbildung` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-unbestimmte` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-verb-praeposition` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-passiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-modalpartikel` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-futur-ii` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-relativ-generalisierend` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-doppelkonnektoren` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-nominalstil` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-partizip1` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-indirekte-fragen` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-redew` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-funktionsverben` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-adjektiv-partizip` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-absicht` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-konj2-vergangenheit` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-textkonnektoren` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-genitiv-praep` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-konzessiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-relativ-genitiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b1-pruefungsstrategie` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-pruefungsstrategie` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-n-deklination` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-passiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-konjunktiv2-vht` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-nominalisierung` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:b2-partizipial` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
 
 ## خطة التنفيذ الواضحة (حرف-حرف على كل المحتوى)
 1. **الآن — القواعد (87 درس):** إصلاح P0 فوراً في هذا الـPR (حرف حرف) — لا دمج حتى 0 P0

@@ -2570,6 +2570,10 @@
         ],
         "explanationAr": "صيغة التمني Konjunktiv II: würden في المركز الثاني والمصدر reisen في آخر الجملة."
       }
+    ],
+    "resources": [
+      "deutsche-welle-nachrichten",
+      "goethe-institut-b1"
     ]
   },
   "b1-relativ": {
@@ -2722,6 +2726,10 @@
         "explanationAr": "helfen + Dativ ← der (مؤنث داتيف).",
         "points": 2
       }
+    ],
+    "resources": [
+      "tagesschau-leichte-sprache",
+      "bamf-orientierung-leben-in-deutschland"
     ]
   },
   "b1-konnektoren": {
@@ -2871,6 +2879,10 @@
         "explanationAr": "obwohl وtrotzdem لا يجتمعان.",
         "points": 2
       }
+    ],
+    "resources": [
+      "zeit-online",
+      "deutsch-perfekt"
     ]
   },
   "b1-plusquamperfekt": {
@@ -3045,6 +3057,10 @@
         ],
         "promptAr": "هل هذه الجملة Plusquamperfekt؟"
       }
+    ],
+    "resources": [
+      "duden-grammatik",
+      "goethe-b1-modelltest"
     ]
   },
   "b2-indirekte-rede": {
@@ -3219,6 +3235,10 @@
         "explanationAr": "habe (Konj. I) والضمير يتحول.",
         "points": 2
       }
+    ],
+    "resources": [
+      "tagesschau-konferenz",
+      "deutschlandfunk-interview"
     ]
   },
   "b2-partizip": {
@@ -3379,6 +3399,10 @@
         ],
         "explanationAr": "النعت الاسمي المشتق Partizipialattribut: يوضع قبل الاسم موصوفاً مع نهايات الصفات: Der von allen geschätzte Kollege."
       }
+    ],
+    "resources": [
+      "faz-artikel",
+      "bamf-berufssprache"
     ]
   },
   "b2-bedingung": {
@@ -3523,6 +3547,10 @@
         "explanationAr": "الشرط بلا wenn: الفعل أوّلاً.",
         "points": 2
       }
+    ],
+    "resources": [
+      "bundestag-drucksache",
+      "deutsche-welle-wirtschaft"
     ]
   },
   "b2-funktionsverben": {
@@ -3732,6 +3760,10 @@
         ],
         "explanationAr": "التركيب الفعلي Funktionsverbgefüge: eine Entscheidung treffen مع الفعل المساعد müssen."
       }
+    ],
+    "resources": [
+      "verwaltungssprache-bmi",
+      "arbeitsagentur-berufenet"
     ]
   },
   "b2-infinitiv": {
@@ -3891,6 +3923,10 @@
         ],
         "explanationAr": "جملة المصدر الممتدة مع zu: تأتي zu مباشرة قبل الفعل المصدري في نهاية الجملة: zu lernen."
       }
+    ],
+    "resources": [
+      "uni-daad-infoseite",
+      "goethe-b2-training"
     ]
   },
   "a2-dativ": {
@@ -5370,7 +5406,10 @@
         "ar": "المذكر/المحايد في Genitiv لا بدّ له من نهاية s/es"
       }
     ],
-    "resources": [],
+    "resources": [
+      "grundgesetz-artikel",
+      "einbuergerungstest-fragen"
+    ],
     "exercises": [
       {
         "id": "b1-gen-e1",
@@ -5615,7 +5654,10 @@
         "ar": "N-Deklination: Kollege يأخذ n في كل الحالات عدا Nominativ"
       }
     ],
-    "resources": [],
+    "resources": [
+      "duden-rechtschreibung",
+      "leo-woerterbuch"
+    ],
     "exercises": [
       {
         "id": "b1-adj-e1",
@@ -6067,6 +6109,10 @@
         ],
         "explanationAr": "تركيب الكلمات Komposita مع موضع الفعل الثاني: Die Fahrkarte liegt auf dem Schreibtisch."
       }
+    ],
+    "resources": [
+      "dwds-komposita",
+      "wortwarte-de"
     ]
   },
   "b1-unbestimmte": {
@@ -6200,7 +6246,10 @@
         "ar": "بعد etwas/nichts تأتي الصفة بالحروف الكبيرة: Neues"
       }
     ],
-    "resources": [],
+    "resources": [
+      "goethe-a2-uebung",
+      "bamf-rahmen-curriculum"
+    ],
     "exercises": [
       {
         "id": "b1-unb-e1",
@@ -6436,7 +6485,10 @@
         "ar": "nachdenken über = يتأمّل؛ denken an = يفكّر في"
       }
     ],
-    "resources": [],
+    "resources": [
+      "pons-verben-mit-praeposition",
+      "arbeitsagentur-bewerbung"
+    ],
     "exercises": [
       {
         "id": "b1-vp-e1",
@@ -6665,7 +6717,10 @@
         "ar": "في المجهول المركّب: geworden تفقد ge- وتبقى worden"
       }
     ],
-    "resources": [],
+    "resources": [
+      "tagesschau-video",
+      "industrie-4.0-plattform"
+    ],
     "exercises": [
       {
         "id": "b1-pas-e1",
@@ -6925,7 +6980,10 @@
         "ar": "الجسيم لا يبقى وحده — يرافق معنى دائماً"
       }
     ],
-    "resources": [],
+    "resources": [
+      "spoken-german-corpus",
+      "atlas-alltagssprache"
+    ],
     "exercises": [
       {
         "id": "b2-mp-e1",
@@ -7118,7 +7176,10 @@
         "ar": "أفعال الحركة والتغيّر مع sein حتى في Futur II"
       }
     ],
-    "resources": [],
+    "resources": [
+      "zeit-wissen-futur",
+      "duden-zukunft"
+    ],
     "exercises": [
       {
         "id": "gf2e1",
@@ -7321,7 +7382,10 @@
         "ar": "«Wer kommt, der ist willkommen» ✓؛ «Wer kommt, wer…» ✗ تكرار الواصل"
       }
     ],
-    "resources": [],
+    "resources": [
+      "grundgesetz-wer",
+      "goethe-b2-lesen"
+    ],
     "exercises": [
       {
         "id": "grge1",
@@ -7524,7 +7588,10 @@
         "ar": "النفي داخل الزوج — لا يُضاعف"
       }
     ],
-    "resources": [],
+    "resources": [
+      "deutschlandfunk-kultur",
+      "spiegel-online"
+    ],
     "exercises": [
       {
         "id": "gdke1",
@@ -7914,6 +7981,10 @@
         "explanationAr": "damit → zur + Verbesserung (مؤنث) + Genitiv للمفعول (der Luft).",
         "points": 2
       }
+    ],
+    "resources": [
+      "bundesregierung-presse",
+      "wissenschaftssprache-tubingen"
     ]
   },
   "a0-begrussung": {
@@ -9627,6 +9698,10 @@
         "de": "✗ …sehr interessanting. → ✓ …sehr interessant.",
         "ar": "فخ الإنجليزية (-ing): الألمانية -end لا -ing — interesting الإنجليزية = interessant الألمانية"
       }
+    ],
+    "resources": [
+      "vhs-lehrplan",
+      "goethe-b1-hoeren"
     ]
   },
   "b1-indirekte-fragen": {
@@ -9826,6 +9901,10 @@
         "de": "✗ …, wie viel kostet das? → ✓ Kannst du mir sagen, wie viel das kostet?",
         "ar": "حتى في الطلب المهذب (Kannst du mir sagen…) يبقى الفعل في النهاية — الأدب لا يغيّر الترتيب"
       }
+    ],
+    "resources": [
+      "buergeramt-berlin-faq",
+      "auswaertiges-amt-faq"
     ]
   },
   "b2-redew": {
@@ -10121,6 +10200,10 @@
         "de": "„Ich verstehe gar nichts“ ✗ (kein Idiom) → „Ich verstehe nur Bahnhof“ ✓",
         "ar": "الفخّ: جملة صحيحة نحويّاً لكنها ليست العبارة الاصطلالية المطلوبة — الامتحان يطلب Wendung لا وصفاً."
       }
+    ],
+    "resources": [
+      "redensarten-index",
+      "duden-redewendungen"
     ]
   },
   "a1-war-hatte": {
@@ -10483,7 +10566,11 @@
         "ar": "في B1 تتعرّف على أشهر التراكيب وتفهمها، ثم تتقن استعمالها إنتاجياً في B2 خاصة في الكتابة الرسمية."
       }
     ],
-    "summaryAr": "تراكيب الأفعال الوظيفية Funktionsverbgefüge"
+    "summaryAr": "تراكيب الأفعال الوظيفية Funktionsverbgefüge",
+    "resources": [
+      "diHK-ausbildung-lexikon",
+      "arbeitsvertrag-musste"
+    ]
   },
   "a0-buchstaben": {
     "id": "a0-buchstaben",
@@ -11473,7 +11560,10 @@
         "ar": "صفات محوَّلة إلى أسماء تُكتب بحرف كبير."
       }
     ],
-    "resources": [],
+    "resources": [
+      "faz-feuilleton",
+      "duden-partizipien"
+    ],
     "exercises": [
       {
         "id": "b2-adj-p1",
@@ -13151,6 +13241,10 @@
         "de": "✗ Ich helfe dir, um du bestehst → ✓ …, damit du bestehst",
         "ar": "فاعلان مختلفان ← damit!"
       }
+    ],
+    "resources": [
+      "bamf-integrationskurs-leitfaden",
+      "goethe-b1-brief"
     ]
   },
   "b1-konj2-vergangenheit": {
@@ -13355,6 +13449,10 @@
         "de": "✗ …, weil ich hätte nicht gelernt → ✓ …, weil ich nicht gelernt hätte",
         "ar": "hätte في نهاية التابع!"
       }
+    ],
+    "resources": [
+      "zeit-geschichte",
+      "spiegel-archiv"
     ]
   },
   "b2-textkonnektoren": {
@@ -13555,6 +13653,10 @@
         "de": "✗ desweiteren → ✓ des Weiteren",
         "ar": "كبير ومنفصل دائماً!"
       }
+    ],
+    "resources": [
+      "deutschlandfunk-essay",
+      "tagesspiegel-meinung"
     ]
   },
   "a0-artikel": {
@@ -15341,7 +15443,11 @@
       }
     ],
     "eselsbrueckeAr": "تذكير: هذه الأدوات في الكتابة الرسمية تأخذ دائماً Genitiv — كأنها «تُضيف» -s/-en إلى الاسم بعدها كما في الإنجليزية because of the rain.",
-    "pronTippAr": ""
+    "pronTippAr": "",
+    "resources": [
+      "verwaltung-bayern-service",
+      "bmi-behoerdendeutsch"
+    ]
   },
   "b2-konzessiv": {
     "id": "b2-konzessiv",
@@ -15560,7 +15666,11 @@
       }
     ],
     "eselsbrueckeAr": "trotzdem = trotzdem هي ظرف لا رابط: تحتاج نقطة/فاصلة قبلها، وبعدها يأتي الفعل ثانياً. أما obwohl فإنه يسحب الفعل إلى آخر الجملة.",
-    "pronTippAr": ""
+    "pronTippAr": "",
+    "resources": [
+      "taz-kommentar",
+      "zeit-debatte"
+    ]
   },
   "b2-relativ-genitiv": {
     "id": "b2-relativ-genitiv",
@@ -15743,7 +15853,11 @@
       }
     ],
     "eselsbrueckeAr": "dessen يُذكّرك بـhis/its (للمفرد)، deren بـher/their (للمؤنث والجمع).",
-    "pronTippAr": ""
+    "pronTippAr": "",
+    "resources": [
+      "standesamt-formular",
+      "mietvertrag-berlin"
+    ]
   },
   "a1-pruefungsstrategie": {
     "id": "a1-pruefungsstrategie",
@@ -16210,7 +16324,11 @@
       }
     ],
     "eselsbrueckeAr": "كلمة لإنقاذ نفسك عندما لا تعرف: «Könnten Sie das bitte wiederholen?» و«Ich bin nicht sicher, aber ich glaube,…».",
-    "pronTippAr": ""
+    "pronTippAr": "",
+    "resources": [
+      "goethe-modelltest-b1",
+      "telc-uebung-b1"
+    ]
   },
   "b2-pruefungsstrategie": {
     "id": "b2-pruefungsstrategie",
@@ -16364,7 +16482,11 @@
       }
     ],
     "eselsbrueckeAr": "في B2 يُقيّم التعقيد المناسب (Konjunktiv II، Nominalstil، Doppelkonnektoren) — لا تكتب جملاً أبسط من مستوى B2.",
-    "pronTippAr": ""
+    "pronTippAr": "",
+    "resources": [
+      "goethe-modelltest-b2",
+      "telc-uebung-b2"
+    ]
   },
   "a0-satzbau": {
     "id": "a0-satzbau",
@@ -16822,6 +16944,10 @@
         "points": 2,
         "explanationDe": "حالة النصب للأسماء الضعيفة: Polizist → den Polizisten."
       }
+    ],
+    "resources": [
+      "duden-n-deklination",
+      "canoonet-grammatik"
     ]
   },
   "b2-passiv": {
@@ -17053,6 +17179,10 @@
         "points": 2,
         "promptAr": "أجب حسب القاعدة."
       }
+    ],
+    "resources": [
+      "tagesschau-bundestag",
+      "bamf-berufsbezogen-b2"
     ]
   },
   "b2-konjunktiv2-vht": {
@@ -17240,6 +17370,10 @@
         "points": 2,
         "promptAr": "رتّب كلمات الشرط الماضي."
       }
+    ],
+    "resources": [
+      "zeit-zeugen-interview",
+      "deutschlandfunk-geschichte"
     ]
   },
   "b2-nominalisierung": {
@@ -17429,6 +17563,10 @@
         ],
         "explanationAr": "غرض: zum Zweck + Genitiv أو für + حالة نصب — الأسلوب الرسمي."
       }
+    ],
+    "resources": [
+      "bundestag-protokoll",
+      "wissenschaft-de-nominalstil"
     ]
   },
   "b2-partizipial": {
@@ -17615,6 +17753,10 @@
           "das Kind, das weint"
         ]
       }
+    ],
+    "resources": [
+      "faz-wissenschaft",
+      "uni-leipzig-korpus"
     ]
   }
 }
