@@ -1,7 +1,7 @@
 /**
- * 266 — Dual Coding Image — الترميز المزدوج بالصورة
- * Paivio 1971: word + image → two codes → recall +50% vs word alone
- * Level: A0-B1 | Bloom: فهم | Family: الذاكرة
+ * 266 — Dual Coding (Bild) — الترميز المزدوج بالصورة
+ * Family: الذاكرة | Bloom: فهم | Level: A0-B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_266 = {
   id: 266,
@@ -13,5 +13,6 @@ export const TOOL_266 = {
   research: "Paivio 1971 +50%",
   method: "Wort + Bild + Satz",
 } as const;
+
 export function dualCode(word: string, image: string): string { return `${word} ↔ 🖼️ ${image}`; }
 export function dualGain(withImage: boolean): number { return withImage?1.5:1.0; }

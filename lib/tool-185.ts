@@ -1,13 +1,15 @@
 /**
- * 185 — Interleaving Mathematics — رياضيات الخلط
- * Rohrer 2012: interleaved math improves transfer 43% vs blocked
- * Application: mix grammar topics within one lesson, not blocked AAAA BBBB
- * Level: A0-B2 | Bloom: أنشئ
+ * 185 — Mathematisches Interleaving — خلط رياضي
+ * Family: طرائق | Bloom: طبّق | Level: A1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_185 = {
   id: 185,
   titleDe: "Mathematisches Interleaving",
   titleAr: "خلط رياضي",
+  family: "طرائق",
+  bloom: "طبّق",
+  level: "A1",
   transferGain: 0.43,
   blockedVsInterleaved: "AAAA BBBB → ABAB ABAB",
 } as const;

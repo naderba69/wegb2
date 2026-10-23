@@ -1,7 +1,7 @@
 /**
  * 301 — Language Anxiety — قلق اللغة
- * Horwitz 1986: communication apprehension, test anxiety, fear
- * Level: A0-B2 | Bloom: حلّل | Family: SLA
+ * Family: SLA | Bloom: حلّل | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_301 = {
   id: 301,

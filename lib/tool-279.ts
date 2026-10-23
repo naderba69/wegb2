@@ -1,7 +1,7 @@
 /**
- * 279 — Automatization — الأتمتة
- * DeKeyser 2007: declarative → procedural via systematic practice → automatized
- * Level: A2-B2 | Bloom: طبّق | Family: SLA
+ * 279 — Automatisierung — الأتمتة
+ * Family: SLA | Bloom: طبّق | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_279 = {
   id: 279,
@@ -13,5 +13,6 @@ export const TOOL_279 = {
   research: "DeKeyser 2007",
   path: "deklarativ → prozedural → automatisiert",
 } as const;
+
 export function automatizationStage(reps: number): string { if(reps<5) return "deklarativ"; if(reps<20) return "prozedural"; return "automatisiert"; }
 export function needsPractice(reps: number): boolean { return reps<20; }

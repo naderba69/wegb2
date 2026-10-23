@@ -1,7 +1,7 @@
 /**
  * 303 — Learning Strategies Oxford — استراتيجيات التعلّم
- * Oxford 1990: direct + indirect strategies taxonomy
- * Level: A1-B2 | Bloom: فهم | Family: SLA
+ * Family: SLA | Bloom: فهم | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_303 = {
   id: 303,

@@ -1,16 +1,17 @@
 /**
- * 183 — Desirable Difficulty Calibration — معايرة الصعوبة المرغوبة
- * Bjork & Bjork 2011: difficulty should be 15-20% error rate for optimal learning
- * Integrated into lib/srs.ts: adjustDifficulty()
- * Level: B1 | Bloom: حلّل
+ * 183 — Schwierigkeitskalibrierung — معايرة الصعوبة
+ * Family: الذاكرة | Bloom: حلّل | Level: B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_183 = {
   id: 183,
   titleDe: "Schwierigkeitskalibrierung",
   titleAr: "معايرة الصعوبة",
   family: "الذاكرة",
+  bloom: "حلّل",
+  level: "B1",
   optimalErrorRate: 0.18,
-  range: [0.15, 0.25],
+  range: [0.15,0.25],
 } as const;
 
 export function adjustDifficulty(currentErrorRate: number, currentDifficulty: number): number {

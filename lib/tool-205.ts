@@ -1,7 +1,7 @@
 /**
- * 205 — Collaborative Grouping — التجميع التعاوني
- * Johnson & Johnson 2009: cooperative > competitive/individual, d=0.54
- * Level: B1-B2 | Bloom: أنشئ | Family: Gamification
+ * 205 — Kooperatives Lernen — التعلّم التعاوني
+ * Family: Gamification | Bloom: أنشئ | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_205 = {
   id: 205,

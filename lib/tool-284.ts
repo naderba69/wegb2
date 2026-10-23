@@ -1,7 +1,7 @@
 /**
  * 284 — Worked Example Effect — أثر المثال المحلول
- * Sweller 2006: study worked example > solve for novices
- * Level: A0-A2 | Bloom: طبّق | Family: طرائق
+ * Family: طرائق | Bloom: طبّق | Level: A0-A2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_284 = {
   id: 284,

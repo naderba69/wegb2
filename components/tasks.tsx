@@ -993,6 +993,7 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
   const absaetze = lese.de.split(/\n\n+/);
   const woerter = lese.de.split(/\s+/).length;
   const radar = useMemo(() => grammatikImText(lese.de), [lese.de]);
+  const splitSaetze = (txt: string) => txt.match(/[^.!?؟。]+[.!?؟۔]+/g)?.map((s) => s.trim()).filter(Boolean) ?? [txt];
   return (
     <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="📖" de={text.titleDe} ar={text.titleAr} />
@@ -1002,10 +1003,20 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
           <span>اقرأ مرّتين: الأولى للفكرة، الثانية للأسئلة — الأسئلة تأويلية لا حرفية</span>
         </div>
       )}
-      <article className="de" style={{ display: "block", width: "100%", lineHeight: 1.95, background: "var(--color-paper2)", padding: "1rem", borderRadius: "0.8rem" }}>
-        {absaetze.map((p, i) => (
-          <p key={i} style={{ margin: i === 0 ? 0 : "0.8rem 0 0" }}><WortLinkText text={p} level={text.level} testid={`wortlink-${i}`} /></p>
-        ))}
+      <article className="de authentic-reader" style={{ display: "block", width: "100%", lineHeight: 2.05, background: "var(--color-paper2)", padding: "1rem 1.1rem", borderRadius: "0.8rem", borderInlineStart: text.level === "A0" ? "4px solid #4ade80" : text.level === "A1" ? "4px solid #22c55e" : text.level === "A2" ? "4px solid #60a5fa" : text.level === "B1" ? "4px solid #f2c866" : "4px solid #a78bfa", fontSize: text.level === "B2" ? "0.98rem" : "0.92rem", letterSpacing: "0.01em" }}>
+        {absaetze.map((p, i) => {
+          const saetze = splitSaetze(p);
+          return (
+            <p key={i} style={{ margin: i === 0 ? 0 : "0.9rem 0 0" }}>
+              {saetze.map((satz, si) => (
+                <span key={si} className="authentic-satz" style={{ display: "inline-flex", gap: "0.35rem", alignItems: "baseline", marginInlineEnd: "0.35rem", marginBottom: "0.2rem" }}>
+                  <button className="chip authentic-satz-audio" aria-label={`استمع للجملة ${si + 1}`} data-testid={`lesen-satz-audio-${i}-${si}`} style={{ cursor: "pointer", minHeight: "28px", minWidth: "32px", padding: "0 0.35rem", fontSize: "0.75rem", flexShrink: 0 }} onClick={() => speakDe(satz, { voiceName, rate: (rate ?? 0.9) * 0.9 })}>🔊</button>
+                  <span style={{ flex: 1 }}><WortLinkText text={satz} level={text.level} testid={`wortlink-${i}-${si}`} /></span>
+                </span>
+              ))}
+            </p>
+          );
+        })}
       </article>
       {bemerkenRegeln && bemerkenRegeln.length > 0 && <BemerkenKarte textDe={lese.de} regeln={bemerkenRegeln} />}
       {radar.length > 0 && (
@@ -1020,6 +1031,11 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
               </span>
             ))}
           </div>
+        </div>
+      )}
+      {text.level === "B2" && (
+        <div style={{ margin: "0.8rem 0", padding: "0.6rem 0.85rem", borderRadius: "0.7rem", background: "rgb(167 139 250 / 0.08)", border: "1px solid rgb(167 139 250 / 0.3)", fontSize: "0.82rem", lineHeight: 1.9 }}>
+          <strong>🌍 في ألمانيا:</strong> هذا النص يعكس أسلوب {text.titleDe.includes("Zeitung") || text.titleDe.includes("Presse") ? "الصحافة الألمانية — جمل длинная و Nominalstil شائع." : text.level === "B2" ? "الكتابة الأكاديمية — انتبه لتحوّل weil → wegen و Passiv → sein + Partizip." : "الحياة اليومية — لاحظ كيف يُستعمل الكلام غير المباشر في التقارير."}
         </div>
       )}
       <div style={{ display: "flex", gap: "0.5rem", margin: "0.6rem 0", flexWrap: "wrap" }}>

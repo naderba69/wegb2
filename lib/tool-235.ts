@@ -1,7 +1,7 @@
 /**
- * 235 — ICQ — أسئلة التحقق من التعليمات
- * Scrivener 2011: ICQs ensure task understanding before execution: "What do you do first?"
- * Level: A0-B2 | Bloom: فهم | Family: طرائق
+ * 235 — ICQ (Instruction Check) — التحقق من التعليمات
+ * Family: طرائق | Bloom: فهم | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_235 = {
   id: 235,
@@ -13,5 +13,6 @@ export const TOOL_235 = {
   research: "Scrivener 2011",
   example: "Lest ihr allein oder zusammen?",
 } as const;
+
 export function icqFor(task: string): string { return `ICQ: ${task} — Was machst du zuerst?`; }
 export function icqPassed(asked: boolean): boolean { return asked; }

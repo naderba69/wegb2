@@ -1,7 +1,7 @@
 /**
  * 250 — Gamification Basics — أساسيات التلعيب
- * Deterding 2011: points/badges/leaderboards increase engagement when meaningful
- * Level: A0-B2 | Bloom: طبّق | Family: Gamification
+ * Family: Gamification | Bloom: طبّق | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_250 = {
   id: 250,
@@ -13,5 +13,6 @@ export const TOOL_250 = {
   research: "Deterding 2011",
   elements: "Punkte, Abzeichen, Rangliste, Quests",
 } as const;
+
 export function gameElements(): string[] { return ["Punkte","Abzeichen","Rangliste","Quest","Level-Up"]; }
 export function gamifyPoints(taskDone: boolean): number { return taskDone?10:0; }

@@ -1,7 +1,7 @@
 /**
- * 240 — CEFR Can-Do Self-Assessment — التقويم الذاتي CEFR
- * Council of Europe 2001: Ich-kann descriptors promote autonomy
- * Level: A0-B2 | Bloom: قيّم | Family: تقويم
+ * 240 — CEFR Selbsteinschätzung — التقويم الذاتي CEFR
+ * Family: تقويم | Bloom: قيّم | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_240 = {
   id: 240,
@@ -13,5 +13,6 @@ export const TOOL_240 = {
   research: "CEFR 2001",
   scale: "Ich kann ... mit Hilfe / selbstständig / flüssig",
 } as const;
+
 export function canDo(level: string, skill: string): string { return `Ich kann auf ${level} ${skill}`; }
 export function selfAssessLevel(score: number): string { if(score>=0.8) return "flüssig"; if(score>=0.6) return "selbstständig"; return "mit Hilfe"; }

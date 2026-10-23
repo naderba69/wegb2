@@ -1,7 +1,7 @@
 /**
  * 359 — Intelligibility ELF — المفهومية كلغة مشتركة
- * Jenkins 2000: classroom-ready application with tasks
- * Level: A1-B2 | Bloom: فهم | Family: SLA
+ * Family: SLA | Bloom: فهم | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_359 = {
   id: 359,
@@ -13,5 +13,6 @@ export const TOOL_359 = {
   research: "Jenkins 2000",
   desc: "Intelligibility ELF classroom application",
 } as const;
+
 export function tool359Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool359Check(v: number): boolean { return v>0; }

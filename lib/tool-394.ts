@@ -1,7 +1,7 @@
 /**
  * 394 — Priming — التهيئة
- * McNamara 2005: classroom application with task integration
- * Level: A1-B2 | Bloom: فهم | Family: الذاكرة
+ * Family: الذاكرة | Bloom: فهم | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_394 = {
   id: 394,
@@ -13,5 +13,6 @@ export const TOOL_394 = {
   research: "McNamara 2005",
   desc: "Priming classroom",
 } as const;
+
 export function tool394Gain(a: boolean): number { return a?1.2:1.0; }
 export function tool394Check(v:number):boolean { return v>0; }

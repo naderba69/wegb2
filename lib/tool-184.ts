@@ -1,13 +1,16 @@
 /**
- * 184 — Retrieval Practice Scheduling — جدولة الاسترجاع الموسع
- * Karpicke & Roediger 2008: expanding schedule 1-3-7-14 outperforms equal intervals
- * Level: B2 | Bloom: قيّم
+ * 184 — Expanding Retrieval — استرجاع موسع
+ * Family: الذاكرة | Bloom: قيّم | Level: B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_184 = {
   id: 184,
   titleDe: "Expanding Retrieval",
   titleAr: "استرجاع موسع",
-  schedule: [1, 3, 7, 14, 30], // days
+  family: "الذاكرة",
+  bloom: "قيّم",
+  level: "B2",
+  schedule: [1,3,7,14,30],
 } as const;
 
 export function getNextRetrievalInterval(successCount: number): number {

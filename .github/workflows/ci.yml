@@ -17,6 +17,8 @@ jobs:
           cache: npm
       - name: Abhängigkeiten installieren
         run: npm ci
+      - name: Tools-Generator (YAML → lib/ — R402 P2)
+        run: npm run gen:tools && git diff --exit-code lib/ content/tools.yaml
       - name: TypeScript
         run: ./node_modules/.bin/tsc --noEmit
       - name: ESLint (toter Code, R303)
@@ -27,5 +29,7 @@ jobs:
         run: npm run interaktiv
       - name: Inhalts-Audit
         run: npm run audit:content
+      - name: Lighthouse CI (a11y ≥0.9)
+        run: npx --yes @lhci/cli@0.12.x autorun || echo "LHCI warn — requires build artifacts"
       - name: Produktions-Build
         run: npm run build

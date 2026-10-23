@@ -1,12 +1,15 @@
 /**
- * 189 — Variation Theory (Marton) — نظرية التباين
- * Marton & Booth 1997: learning = discerning variation (same vs different)
- * Level: B1 | Bloom: حلّل
+ * 189 — Variationstheorie — نظرية التباين
+ * Family: طرائق | Bloom: حلّل | Level: B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_189 = {
   id: 189,
   titleDe: "Variationstheorie",
   titleAr: "نظرية التباين",
+  family: "طرائق",
+  bloom: "حلّل",
+  level: "B1",
   principle: "Zeige was gleich bleibt und was variiert",
 } as const;
 

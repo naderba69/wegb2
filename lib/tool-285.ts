@@ -1,7 +1,7 @@
 /**
  * 285 — Guidance Fading — تلاشي التوجيه
- * Renkl 2004: full guidance → faded → independent
- * Level: A1-B1 | Bloom: طبّق | Family: طرائق
+ * Family: طرائق | Bloom: طبّق | Level: A1-B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_285 = {
   id: 285,

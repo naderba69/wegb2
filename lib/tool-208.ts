@@ -1,7 +1,7 @@
 /**
- * 208 — Dynamic Assessment ZPD — التقويم الديناميكي
- * Lantolf 2004: graduated prompts reveal ZPD; predict future learning
- * Level: A2-B2 | Bloom: حلّل | Family: تقويم
+ * 208 — Dynamisches Assessment (ZPD) — التقويم الديناميكي
+ * Family: تقويم | Bloom: حلّل | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_208 = {
   id: 208,

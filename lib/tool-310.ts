@@ -1,7 +1,7 @@
 /**
  * 310 — Test-Taking Strategies — استراتيجيات الاختبار
- * Cohen 2006: time management, educated guessing, elimination
- * Level: B1-B2 | Bloom: طبّق | Family: تقويم
+ * Family: تقويم | Bloom: طبّق | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_310 = {
   id: 310,

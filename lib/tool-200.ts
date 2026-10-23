@@ -1,7 +1,7 @@
 /**
- * 200 — Feedback Timing — توقيت التغذية الراجعة
- * Butler 2007: immediate feedback for low performers, delayed for high performers (desirable difficulty)
- * Level: A2-B2 | Bloom: قيّم | Family: تقويم
+ * 200 — Feedback-Timing — توقيت التغذية الراجعة
+ * Family: تقويم | Bloom: قيّم | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_200 = {
   id: 200,

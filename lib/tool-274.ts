@@ -1,7 +1,7 @@
 /**
- * 274 — Loci Advanced — قصر الذاكرة المتقدم
- * Yates 1966: method of loci — 80 items in order with palace navigation
- * Level: A1-B2 | Bloom: طبّق | Family: الذاكرة
+ * 274 — Loci-Methode (fortgeschritten) — قصر الذاكرة المتقدم
+ * Family: الذاكرة | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_274 = {
   id: 274,
@@ -13,5 +13,6 @@ export const TOOL_274 = {
   research: "Yates 1966",
   palace: "20 Räume × 4 Slots = 80 Items",
 } as const;
+
 export function lociRoute(rooms: number): string[] { return Array.from({length: rooms}, (_,i)=> `Raum ${i+1}`); }
 export function lociPlace(word: string, room: string): string { return `${word} → ${room}`; }

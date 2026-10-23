@@ -1,7 +1,7 @@
 /**
  * 211 — Input Enhancement — تعزيز المدخلات
- * Sharwood Smith 1993: typographic enhancement (bold/color) draws attention to form
- * Level: A1-B2 | Bloom: فهم | Family: SLA
+ * Family: SLA | Bloom: فهم | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_211 = {
   id: 211,
@@ -13,6 +13,7 @@ export const TOOL_211 = {
   research: "Sharwood Smith 1993",
   technique: "fett/ farbig markieren",
 } as const;
+
 export function enhanceInput(sentence: string, target: string): string {
   return sentence.replace(target, `**${target}**`);
 }

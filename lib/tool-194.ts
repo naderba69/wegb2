@@ -1,7 +1,7 @@
 /**
- * 194 — Generation Effect — أثر التوليد
- * Slamecka & Graf 1978: generating > reading, 15-30% better recall
- * Level: A2-B1 | Bloom: أنشئ | Family: تلقين
+ * 194 — Generationseffekt — أثر التوليد
+ * Family: تلقين | Bloom: أنشئ | Level: A2-B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_194 = {
   id: 194,

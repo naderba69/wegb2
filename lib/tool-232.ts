@@ -1,7 +1,7 @@
 /**
- * 232 — Minimal Pairs — الأزواج الدنيا
- * Celce-Murcia 2010: contrasting /ɪ/-/i:/, /ʊ/-/u:/, /ç/-/x/ trains perception + production
- * Level: A1-A2 | Bloom: فهم | Family: طرائق
+ * 232 — Minimalpaare — الأزواج الدنيا
+ * Family: طرائق | Bloom: فهم | Level: A1-A2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_232 = {
   id: 232,
@@ -13,6 +13,7 @@ export const TOOL_232 = {
   research: "Celce-Murcia 2010",
   pairs: "bieten/bitten, Miete/Mitte, Küche/Kuchen",
 } as const;
+
 export function minimalPair(de: string): [string,string] {
   const m: Record<string,[string,string]>={ "bieten": ["bieten","bitten"], "Miete": ["Miete","Mitte"] };
   return m[de]??[de,de];

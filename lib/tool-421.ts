@@ -1,7 +1,7 @@
 /**
  * 421 — Text Reconstruction — إعادة بناء نص
- * Storch 1999: classroom application with tasks
- * Level: B1-B2 | Bloom: أنشئ | Family: طرائق
+ * Family: طرائق | Bloom: أنشئ | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_421 = {
   id: 421,
@@ -13,5 +13,6 @@ export const TOOL_421 = {
   research: "Storch 1999",
   desc: "Text Reconstruction classroom",
 } as const;
+
 export function tool421Gain(a:boolean):number{return a?1.2:1.0;}
 export function tool421Check(v:number):boolean{return v>0;}

@@ -1,7 +1,7 @@
 /**
  * 321 — Phraseology — علم العبارات
- * Cowie 1998: applied to German teaching — classroom integration via tasks
- * Level: A2-B2 | Bloom: فهم | Family: طرائق
+ * Family: طرائق | Bloom: فهم | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_321 = {
   id: 321,
@@ -13,5 +13,6 @@ export const TOOL_321 = {
   research: "Cowie 1998",
   desc: "Phraseology applied in classroom",
 } as const;
+
 export function tool321Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool321Check(v: number): boolean { return v>0; }

@@ -1,7 +1,7 @@
 /**
- * 202 — Self-Explanation Effect — أثر الشرح الذاتي
- * Chi 1989: explaining to self while studying examples → +30% problem solving
- * Level: A2-B2 | Bloom: حلّل | Family: تلقين
+ * 202 — Selbsterklärung — الشرح الذاتي
+ * Family: تلقين | Bloom: حلّل | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_202 = {
   id: 202,

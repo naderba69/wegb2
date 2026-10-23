@@ -1,8 +1,7 @@
 /**
- * 181 — Optimal Spaced Interval (FSRS) — الفاصل الأمثل
- * Based on Wozniak & Cedar 2023: optimal interval = stability * ln(retention)
- * Integrated into lib/srs.ts via getOptimalInterval()
- * Level: B2 | Bloom: طبّق | Family: الذاكرة
+ * 181 — Optimales Intervall (FSRS) — الفاصل الأمثل
+ * Family: الذاكرة | Bloom: طبّق | Level: B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_181 = {
   id: 181,

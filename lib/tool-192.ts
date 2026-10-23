@@ -1,7 +1,7 @@
 /**
- * 192 — Retrieval-Induced Forgetting Shield — درع النسيان المستحث بالاسترجاع
- * Anderson 1994: retrieving A inhibits B if same cue; shield by varying cues
- * Level: B1 | Bloom: حلّل | Family: الذاكرة
+ * 192 — Abruf-induziertes Vergessen — النسيان المستحث بالاسترجاع
+ * Family: الذاكرة | Bloom: حلّل | Level: B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_192 = {
   id: 192,

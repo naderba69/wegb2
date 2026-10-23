@@ -1,7 +1,7 @@
 /**
  * 358 — Fluency vs Accuracy — الطلاقة مقابل الدقة
- * Housen 2009: classroom-ready application with tasks
- * Level: A1-B2 | Bloom: حلّل | Family: SLA
+ * Family: SLA | Bloom: حلّل | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_358 = {
   id: 358,
@@ -13,5 +13,6 @@ export const TOOL_358 = {
   research: "Housen 2009",
   desc: "Fluency vs Accuracy classroom application",
 } as const;
+
 export function tool358Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool358Check(v: number): boolean { return v>0; }

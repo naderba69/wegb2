@@ -1,3 +1,23 @@
+/* ═══════════════════════════════════════════════════════════════════
+   WEG-B2 · UX Blueprint — نظام التصميم الاحترافي (v1 · 2026-10-22)
+   ─────────────────────────────────────────────────────────────────
+   الطبقات الست (اقرأ من أعلى إلى أسفل — لا تضف طبقة جديدة بلا سبب):
+
+   ① @theme  → جسر Tailwind فقط (legacy aliases). لا تضف لوناً هنا.
+   ② :root   → المصدر الوحيد للحقيقة: --ui-* (dark default). كل توكن
+              جديد يولد هنا فقط. --color-* و --dirb-* هما aliases فقط.
+   ③ html[data-thema="hell"] → overrides الفاتح (سطر ~1390).
+   ④ .ui-*  → مكونات الهيكل (shell, page, surface, bottom-nav, footer).
+   ⑤ .dirb  → مكونات اليوم (hero, bar, minis, held, details). scoped.
+   ⑥ print  → ورقة الشفرات بيضاء — لا تسريب داكن.
+
+   الإيقاع: صفحة 68rem centered / اليوم 48–52rem / عمود 28rem سابقاً
+   الألوان: navy #0b1020 + green #22c55e (فعل) + gold #f2c866 (تحذير)
+   الخطوط: Cairo/Readex (عربي) + Segoe UI (ألماني معزول بـ bdi/.de)
+   الوصولية: :focus-visible حلقة خضراء 2px + offset 3px + أهداف 44px
+   المرجع الكامل: docs/UX_BLUEPRINT_PROFI_2026-10-22.md
+   ═══════════════════════════════════════════════════════════════════ */
+
 @import "tailwindcss";
 
 @theme {
@@ -1162,7 +1182,16 @@ body:has(.ui-app-shell) {
   font-size: 0.72rem;
   line-height: 1.6;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem 0.15rem;
 }
+.ui-footer a { color: var(--ui-muted); transition: color 0.15s ease; }
+.ui-footer a:hover { color: var(--ui-text); }
+.ui-footer-dot { margin-inline: 0.5rem; opacity: 0.4; }
+.ui-footer-link { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .ui-page {
   display: grid;
   gap: 1rem;
@@ -1426,9 +1455,400 @@ body:has(.ui-app-shell) {
   .ui-page--print { width: auto; max-width: none; margin: 0; padding: 0; box-shadow: none; }
 }
 
+/* ═══════════════════════════════════════════════════════════════════
+   Unified Today Stepper — اليوم الموحّد: 5 خطوات خطية (Hybrid Gated Roadmap)
+   المرجع: docs/BUILD_UNIFIED_TODAY_2026-10-22.md §2 + §3
+   مميز لا مكرّر: Stepper عمودي + خط متصل + Navy editorial
+   ═══════════════════════════════════════════════════════════════════ */
+.today-stepper {
+  display: grid;
+  gap: 0.85rem;
+  padding: 0.9rem 0.95rem;
+  border: 1px solid var(--ui-border);
+  border-radius: 1rem;
+  background: linear-gradient(160deg, var(--ui-surface-raised), var(--ui-surface));
+}
+.today-stepper-head {
+  display: grid;
+  gap: 0.35rem;
+}
+.today-stepper-title {
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: var(--ui-text);
+}
+.today-stepper-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.today-stepper-bar {
+  flex: 1;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--ui-border);
+  overflow: hidden;
+}
+.today-stepper-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ui-green), var(--ui-green-bright));
+  transition: width 0.4s ease;
+}
+.today-stepper-pct {
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: var(--ui-muted);
+  min-width: 2.5rem;
+  text-align: end;
+}
+.today-stepper-hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--ui-muted);
+  line-height: 1.7;
+}
+.today-stepper-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+.today-step {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr);
+  gap: 0.65rem;
+  padding: 0.7rem 0.6rem;
+  border-radius: 0.9rem;
+  border: 1px solid transparent;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+.today-step--active {
+  border-color: var(--ui-green);
+  background: var(--ui-green-soft);
+}
+.today-step--done {
+  border-color: rgb(34 197 94 / 0.25);
+  background: rgb(34 197 94 / 0.06);
+  opacity: 0.88;
+}
+.today-step--locked {
+  border-color: var(--ui-border);
+  background: transparent;
+  opacity: 0.62;
+}
+.today-step--empty {
+  opacity: 0.55;
+}
+.today-step-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding-top: 0.15rem;
+}
+.today-step-dot {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 900;
+  border: 2px solid;
+  flex-shrink: 0;
+}
+.today-step-dot.is-active { background: var(--ui-green); color: var(--ui-on-accent); border-color: var(--ui-green); }
+.today-step-dot.is-done { background: var(--ui-surface-raised); color: var(--ui-green); border-color: var(--ui-green); }
+.today-step-dot.is-locked { background: var(--ui-surface); color: var(--ui-muted); border-color: var(--ui-border); }
+.today-step-line {
+  flex: 1;
+  width: 2px;
+  min-height: 1.2rem;
+  background: var(--ui-border);
+  border-radius: 999px;
+}
+.today-step-line.is-done { background: var(--ui-green); }
+.today-step-body {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+}
+.today-step-header {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.today-step-icon { font-size: 1.15rem; line-height: 1; }
+.today-step-titles { flex: 1; min-width: 0; display: grid; gap: 0.15rem; }
+.today-step-title { font-weight: 900; font-size: 0.92rem; color: var(--ui-text); line-height: 1.4; }
+.today-step-num { color: var(--ui-muted); }
+.today-step-de { font-size: 0.78rem; color: var(--ui-muted); font-weight: 700; }
+.today-step-desc { font-size: 0.78rem; color: var(--ui-muted); line-height: 1.6; }
+.today-step-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  border: 1px solid;
+  white-space: nowrap;
+}
+.today-step-badge.badge-active { background: var(--ui-green); color: var(--ui-on-accent); border-color: var(--ui-green); }
+.today-step-badge.badge-done { background: rgb(34 197 94 / 0.14); color: #4ade80; border-color: rgb(34 197 94 / 0.3); }
+.today-step-badge.badge-locked { background: var(--ui-surface); color: var(--ui-muted); border-color: var(--ui-border); }
+.today-step-tasks {
+  display: grid;
+  gap: 0.4rem;
+}
+.today-step-task {
+  display: grid;
+  grid-template-columns: 1.6rem minmax(0, 1fr) auto auto;
+  gap: 0.4rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--ui-border);
+  background: var(--ui-surface);
+  color: var(--ui-text);
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+  min-height: 44px;
+  transition: border-color 120ms ease, background 120ms ease;
+}
+.today-step-task:hover { border-color: var(--ui-green); background: var(--ui-surface-raised); }
+.today-step-task.is-current { border-color: var(--ui-green); background: var(--ui-green-soft); }
+.today-step-task.is-passed { border-color: rgb(34 197 94 / 0.35); background: rgb(34 197 94 / 0.08); }
+.today-step-task.is-gesperrt { cursor: not-allowed; opacity: 0.55; }
+.today-step-task-icon { width: 1.2rem; height: 1.2rem; }
+.today-step-task-title { font-size: 0.85rem; font-weight: 800; line-height: 1.4; }
+.today-step-task-meta { font-size: 0.72rem; color: var(--ui-muted); font-weight: 700; }
+.today-step-task-state { font-size: 0.85rem; }
+.lesson-preview-card {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.6rem;
+  background: var(--ui-surface-raised);
+  border: 1px solid var(--ui-border);
+  font-size: 0.82rem;
+}
+.lesson-preview-title { font-weight: 900; color: var(--ui-text); }
+.lesson-preview-ar { font-size: 0.78rem; color: var(--ui-muted); }
+.today-step-empty {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.6rem;
+  background: var(--ui-surface);
+  border: 1px dashed var(--ui-border);
+  font-size: 0.82rem;
+  color: var(--ui-muted);
+  line-height: 1.7;
+}
+.today-step-lock-msg {
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.5rem;
+  background: rgb(242 200 102 / 0.1);
+  border: 1px solid rgb(242 200 102 / 0.25);
+  font-size: 0.78rem;
+  color: var(--ui-muted);
+}
+.today-stepper-footnote {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--ui-muted);
+  line-height: 1.7;
+  text-align: center;
+}
+@media (max-width: 520px) {
+  .today-stepper { padding: 0.7rem 0.65rem; }
+  .today-step { grid-template-columns: 1.85rem minmax(0, 1fr); padding: 0.55rem 0.45rem; }
+  .today-step-task { grid-template-columns: 1.4rem minmax(0, 1fr) auto; }
+  .today-step-task-meta { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   Lesson Studio — شكل المحتوى الاحترافي (Blueprint 2026-10-22)
+   كل درس = مقال تحريري: هوية → مشهد → اكتشاف → شرح بصري → تدريب → فخاخ
+   المرجع: docs/LESSON_CONTENT_BLUEPRINT.md
+   ═══════════════════════════════════════════════════════════════════ */
+.lesson-hero {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--ui-border);
+  border-radius: 1rem;
+  background: linear-gradient(150deg, var(--ui-surface-raised), var(--ui-surface));
+}
+.lesson-level-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  border: 1px solid;
+  letter-spacing: 0.04em;
+}
+.lesson-level-A0 { background: rgb(34 197 94 / 0.12); color: #4ade80; border-color: rgb(34 197 94 / 0.3); }
+.lesson-level-A1 { background: rgb(34 197 94 / 0.14); color: #22c55e; border-color: rgb(34 197 94 / 0.4); }
+.lesson-level-A2 { background: rgb(96 165 250 / 0.12); color: #60a5fa; border-color: rgb(96 165 250 / 0.35); }
+.lesson-level-B1 { background: rgb(242 200 102 / 0.14); color: #f2c866; border-color: rgb(242 200 102 / 0.4); }
+.lesson-level-B2 { background: rgb(167 139 250 / 0.14); color: #a78bfa; border-color: rgb(167 139 250 / 0.4); }
+.lesson-title-de { font-size: 1.35rem; font-weight: 900; color: var(--ui-text); direction: ltr; text-align: left; font-family: var(--font-german); }
+.lesson-title-ar { font-size: 1rem; font-weight: 800; color: var(--ui-text); line-height: 1.6; }
+.lesson-ziel {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 0.6rem 0.85rem;
+  border-inline-start: 4px solid var(--ui-green);
+  border-radius: 0.7rem;
+  background: var(--ui-green-soft);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+.lesson-scene {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--ui-border);
+  border-radius: 0.85rem;
+  background: var(--ui-surface);
+}
+.lesson-scene-head { font-size: 0.82rem; font-weight: 800; color: var(--ui-muted); display: flex; align-items: center; gap: 0.35rem; }
+.lesson-bubble {
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 95%;
+}
+.lesson-bubble-a { background: rgb(34 197 94 / 0.1); border: 1px solid rgb(34 197 94 / 0.22); justify-self: start; }
+.lesson-bubble-b { background: var(--ui-surface-raised); border: 1px solid var(--ui-border); justify-self: end; }
+.lesson-rule {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--ui-border);
+  border-radius: 0.85rem;
+  background: linear-gradient(150deg, var(--ui-surface-raised), var(--ui-surface));
+  border-inline-start: 4px solid var(--ui-green);
+  display: grid;
+  gap: 0.35rem;
+}
+.lesson-rule-pattern { font-size: 1.05rem; font-weight: 900; direction: ltr; text-align: left; font-family: var(--font-german); color: var(--ui-text); }
+.lesson-rule-arrow { color: var(--ui-green); font-weight: 900; font-size: 0.85rem; }
+.lesson-table { width: 100%; border-collapse: separate; border-spacing: 0; border-radius: 0.7rem; overflow: hidden; border: 1px solid var(--ui-border); }
+.lesson-table th { background: var(--ui-surface-raised); color: var(--ui-green-bright); font-weight: 900; padding: 0.5rem 0.55rem; text-align: start; font-size: 0.82rem; border-bottom: 1px solid var(--ui-border); }
+.lesson-table td { padding: 0.45rem 0.55rem; font-size: 0.88rem; border-bottom: 1px solid rgb(38 53 76 / 0.5); }
+.lesson-table tr:last-child td { border-bottom: 0; }
+.lesson-table tr:nth-child(even) td { background: rgb(255 255 255 / 0.02); }
+.lesson-rule-main { display: grid; gap: 0.35rem; }
+.lesson-rule-example {
+  padding: 0.55rem 0.75rem;
+  border: 1px dashed var(--ui-border);
+  border-radius: 0.7rem;
+  background: var(--ui-surface);
+  display: grid;
+  gap: 0.3rem;
+}
+.lesson-table--layered tbody tr {
+  animation: lesson-reveal 0.45s ease both;
+}
+.lesson-table--layered tbody tr:nth-child(1) { animation-delay: 0.05s; }
+.lesson-table--layered tbody tr:nth-child(2) { animation-delay: 0.13s; }
+.lesson-table--layered tbody tr:nth-child(3) { animation-delay: 0.21s; }
+.lesson-table--layered tbody tr:nth-child(4) { animation-delay: 0.29s; }
+.lesson-table--layered tbody tr:nth-child(5) { animation-delay: 0.37s; }
+.lesson-table--layered tbody tr:nth-child(6) { animation-delay: 0.45s; }
+@keyframes lesson-reveal {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lesson-rule--paired { display: grid; gap: 0.5rem; }
+@media (min-width: 640px) {
+  .lesson-rule--paired { grid-template-columns: 1fr 1fr; align-items: start; }
+  .lesson-rule--paired .lesson-rule { height: 100%; }
+}
+.lesson-case-nom th:nth-child(1), .lesson-case-nom td:nth-child(1) { border-inline-start: 3px solid #60a5fa; }
+.lesson-case-akk th:nth-child(2), .lesson-case-akk td:nth-child(2) { border-inline-start: 3px solid #4ade80; }
+.lesson-case-dat th:nth-child(3), .lesson-case-dat td:nth-child(3) { border-inline-start: 3px solid #f2c866; }
+.lesson-case-gen th:nth-child(4), .lesson-case-gen td:nth-child(4) { border-inline-start: 3px solid #a78bfa; }
+.case-chip { display: inline-flex; align-items: center; padding: 0.12rem 0.4rem; border-radius: 999px; font-size: 0.68rem; font-weight: 900; border: 1px solid; }
+.case-chip-nom { background: rgb(96 165 250 / 0.14); color: #60a5fa; border-color: rgb(96 165 250 / 0.35); }
+.case-chip-akk { background: rgb(74 222 128 / 0.12); color: #4ade80; border-color: rgb(74 222 128 / 0.3); }
+.case-chip-dat { background: rgb(242 200 102 / 0.14); color: #f2c866; border-color: rgb(242 200 102 / 0.35); }
+.case-chip-gen { background: rgb(167 139 250 / 0.14); color: #a78bfa; border-color: rgb(167 139 250 / 0.35); }
+.lesson-table th.case-hl { background: var(--ui-surface-raised); }
+.lesson-table--signaled th { position: relative; }
+.lesson-concept-map { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.lesson-concept-chip { padding: 0.25rem 0.6rem; border-radius: 999px; background: var(--ui-surface-raised); border: 1px solid var(--ui-border); font-size: 0.8rem; font-weight: 700; direction: ltr; }
+.lesson-concept-chip--header { background: rgb(96 165 250 / 0.12); border-color: rgb(96 165 250 / 0.3); color: #60a5fa; }
+.lesson-summary--map { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.lesson-summary--map .chip { background: var(--ui-surface-raised); }
+
+.lesson-pitfall {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--ui-danger);
+  border-radius: 0.85rem;
+  background: var(--ui-danger-soft);
+}
+.lesson-pitfall-wrong { color: var(--ui-danger); font-weight: 800; text-decoration: line-through; }
+.lesson-pitfall-right { color: var(--ui-green); font-weight: 800; }
+.lesson-summary {
+  padding: 0.8rem 1rem;
+  border-radius: 0.85rem;
+  background: var(--ui-gold-soft);
+  border: 1px solid rgb(242 200 102 / 0.3);
+  line-height: 1.9;
+  font-size: 0.9rem;
+}
+@media (max-width: 520px) {
+  .lesson-hero { padding: 0.7rem 0.85rem; }
+  .lesson-title-de { font-size: 1.15rem; }
+  
+.lesson-rule--paired { display: grid; gap: 0.5rem; }
+@media (min-width: 640px) {
+  .lesson-rule--paired { grid-template-columns: 1fr 1fr; align-items: start; }
+  .lesson-rule--paired .lesson-rule { height: 100%; }
+}
+.lesson-case-nom th:nth-child(1), .lesson-case-nom td:nth-child(1) { border-inline-start: 3px solid #60a5fa; }
+.lesson-case-akk th:nth-child(2), .lesson-case-akk td:nth-child(2) { border-inline-start: 3px solid #4ade80; }
+.lesson-case-dat th:nth-child(3), .lesson-case-dat td:nth-child(3) { border-inline-start: 3px solid #f2c866; }
+.lesson-case-gen th:nth-child(4), .lesson-case-gen td:nth-child(4) { border-inline-start: 3px solid #a78bfa; }
+.case-chip { display: inline-flex; align-items: center; padding: 0.12rem 0.4rem; border-radius: 999px; font-size: 0.68rem; font-weight: 900; border: 1px solid; }
+.case-chip-nom { background: rgb(96 165 250 / 0.14); color: #60a5fa; border-color: rgb(96 165 250 / 0.35); }
+.case-chip-akk { background: rgb(74 222 128 / 0.12); color: #4ade80; border-color: rgb(74 222 128 / 0.3); }
+.case-chip-dat { background: rgb(242 200 102 / 0.14); color: #f2c866; border-color: rgb(242 200 102 / 0.35); }
+.case-chip-gen { background: rgb(167 139 250 / 0.14); color: #a78bfa; border-color: rgb(167 139 250 / 0.35); }
+.lesson-table th.case-hl { background: var(--ui-surface-raised); }
+.lesson-table--signaled th { position: relative; }
+.lesson-summary--map { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.lesson-summary--map .chip { background: var(--ui-surface-raised); }
+
+.lesson-pitfall { grid-template-columns: 1fr; }
+}
+
 /* ══════════════ R301 · Komfort: helles Thema + Schriftgrößen (Besitzer-Wunsch) ══════════════
    Aktiviert über html[data-thema="hell"] / html[data-schrift="gross"|"sehr"],
    gesetzt von lib/komfort.ts. Nur Variablen-Overrides — keine Komponente wird angefasst. */
+
+.lesson-table--layered tbody tr { opacity: 0.92; transition: background 140ms ease, opacity 140ms ease; }
+.lesson-table--layered tbody tr:hover { background: var(--ui-surface-raised); opacity: 1; }
+.lesson-table--layered tbody tr:focus-within { outline: 2px solid var(--ui-focus); outline-offset: -2px; }
 html[data-thema="hell"] {
   color-scheme: light;
   --ui-bg: #f4f7fb;
@@ -1476,3 +1896,17 @@ html[data-thema="hell"] body { background: var(--ui-bg); }
 
 html[data-schrift="gross"] { font-size: 112.5%; }
 html[data-schrift="sehr"] { font-size: 125%; }
+
+/* Level Identity — كل مستوى له هوية بصرية (Sprint3B) */
+.lesson-stage--a0 .lesson-hero { border-inline-start: 5px solid #22c55e; }
+.lesson-stage--a1 .lesson-hero { border-inline-start: 5px solid #22c55e; }
+.lesson-stage--a2 .lesson-hero { border-inline-start: 5px solid #60a5fa; }
+.lesson-stage--b1 .lesson-hero { border-inline-start: 5px solid #f2c866; }
+.lesson-stage--b2 .lesson-hero { border-inline-start: 5px solid #a78bfa; }
+.lesson-stage--b2 .lesson-rule-pattern { font-size: 1.15rem; letter-spacing: -0.01em; }
+/* Sprint3a Authentic Reader — typography + per-sentence audio */
+.authentic-reader { font-family: var(--font-german, ui-serif, Georgia), serif; }
+.authentic-satz { background: transparent; border-radius: 0.35rem; padding: 0.1rem 0; }
+.authentic-satz:hover { background: rgb(255 255 255 / 0.04); }
+.authentic-satz-audio { opacity: 0.7; transition: opacity 0.2s, transform 0.2s; }
+.authentic-satz-audio:hover { opacity: 1; transform: scale(1.05); }

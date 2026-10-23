@@ -1,12 +1,15 @@
 /**
- * 186 — Elaboration with Why-Questions — إسهاب بأسئلة لماذا
- * Pressley et al. 1988: "Warum gilt das?" improves comprehension 20%
- * Level: A0-B2 | Bloom: تذكّر
+ * 186 — Warum-Fragen Elaboration — إسهاب لماذا
+ * Family: تلقين | Bloom: حلّل | Level: B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_186 = {
   id: 186,
   titleDe: "Warum-Fragen Elaboration",
   titleAr: "إسهاب لماذا",
+  family: "تلقين",
+  bloom: "حلّل",
+  level: "B1",
   gain: "+20% Verständnis",
 } as const;
 

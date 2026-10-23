@@ -1,7 +1,7 @@
 /**
  * 300 — Grit & Perseverance — المثابرة
- * Duckworth 2007: perseverance + passion long-term
- * Level: A1-B2 | Bloom: قيّم | Family: تلقين
+ * Family: تلقين | Bloom: قيّم | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_300 = {
   id: 300,

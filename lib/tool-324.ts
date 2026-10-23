@@ -1,7 +1,7 @@
 /**
  * 324 — Idioms — التعابير الاصطلاحية
- * Nunberg 1994: applied to German teaching — classroom integration via tasks
- * Level: B1-B2 | Bloom: فهم | Family: طرائق
+ * Family: طرائق | Bloom: فهم | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_324 = {
   id: 324,
@@ -13,5 +13,6 @@ export const TOOL_324 = {
   research: "Nunberg 1994",
   desc: "Idioms applied in classroom",
 } as const;
+
 export function tool324Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool324Check(v: number): boolean { return v>0; }

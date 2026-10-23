@@ -1,7 +1,7 @@
 /**
  * 286 — Isolated Elements — العناصر المعزولة
- * Pollock 2002: teach elements separately then combine
- * Level: A1-B2 | Bloom: حلّل | Family: طرائق
+ * Family: طرائق | Bloom: حلّل | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_286 = {
   id: 286,

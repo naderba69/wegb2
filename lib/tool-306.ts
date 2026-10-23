@@ -1,7 +1,7 @@
 /**
  * 306 — Socio-Affective — اجتماعية-وجدانية
- * Oxford 1990: cooperation, empathizing, anxiety reduction
- * Level: A0-B2 | Bloom: طبّق | Family: SLA
+ * Family: SLA | Bloom: طبّق | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_306 = {
   id: 306,

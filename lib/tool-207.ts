@@ -1,7 +1,7 @@
 /**
- * 207 — Summative Washback — الأثر الارتجاعي للاختبار الختامي
- * Alderson 1993: test design drives learning behavior — align test to goals
- * Level: B2 | Bloom: قيّم | Family: تقويم
+ * 207 — Washback (Rückwirkung) — الأثر الارتجاعي للاختبار
+ * Family: تقويم | Bloom: قيّم | Level: B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_207 = {
   id: 207,

@@ -1,7 +1,7 @@
 /**
- * 203 — Worked Examples Fading — تلاشي الأمثلة المحلولة
- * Renkl 2002: full example → partial → solve; avoids cognitive overload
- * Level: A1-B1 | Bloom: طبّق | Family: طرائق
+ * 203 — Ausgearbeitete Beispiele (Fading) — تلاشي الأمثلة المحلولة
+ * Family: طرائق | Bloom: طبّق | Level: A1-B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_203 = {
   id: 203,

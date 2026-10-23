@@ -1,4 +1,4 @@
-import { bankRoh, beiBankenBereit } from "./bankload";
+import { bankRoh, beiBankenBereit, beiVertiefungBereit } from "./bankload";
 
 /**
  * 🩺 Fachsprache Pflege (R197) — مسار ألمانية التمريض الإضافي.
@@ -74,3 +74,4 @@ function fuellePflege(): void {
 }
 fuellePflege();
 beiBankenBereit(fuellePflege);
+beiVertiefungBereit(fuellePflege);

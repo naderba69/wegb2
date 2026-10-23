@@ -1,7 +1,7 @@
 /**
  * 290 — Self-Management — الإدارة الذاتية
- * Mirza 2016: teach learners to manage load themselves
- * Level: B1-B2 | Bloom: قيّم | Family: تلقين
+ * Family: تلقين | Bloom: قيّم | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_290 = {
   id: 290,

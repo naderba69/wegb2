@@ -1,7 +1,7 @@
 /**
  * 246 — Benchmarking — المعايرة المرجعية
- * North 2000: CEFR benchmarks enable cross-institution comparability
- * Level: A0-B2 | Bloom: قيّم | Family: تقويم
+ * Family: تقويم | Bloom: قيّم | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_246 = {
   id: 246,
@@ -13,5 +13,6 @@ export const TOOL_246 = {
   research: "North 2000",
   method: "Anker-Beispiele, Standard-Setting",
 } as const;
+
 export function benchmarkLevel(score: number): string { if(score>=90) return "B2"; if(score>=75) return "B1"; if(score>=60) return "A2"; if(score>=40) return "A1"; return "A0"; }
 export function isBenchmarked(score: number, level: string): boolean { return benchmarkLevel(score)===level; }

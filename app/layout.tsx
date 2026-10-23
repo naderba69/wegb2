@@ -38,7 +38,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Navigation />
           <footer className="ui-footer">
-            طريقي إلى B2 · خطتك وتقدّمك محفوظان في هذا المتصفح.
+            <span>طريقي إلى B2 · خطتك وتقدّمك محفوظان في هذا المتصفح.</span>
+            <span aria-hidden className="ui-footer-dot">·</span>
+            <a href="/masar" className="ui-footer-link">المسار</a>
+            <span aria-hidden className="ui-footer-dot">·</span>
+            <a href="/drucken" className="ui-footer-link">ورقة الشفرات</a>
           </footer>
         </UiAppShell>
         </BankenStart>

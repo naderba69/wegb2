@@ -1,7 +1,7 @@
 /**
  * 287 — Variability Effect — أثر التنوع
- * Paas 1994: varied examples → transfer
- * Level: B1-B2 | Bloom: طبّق | Family: طرائق
+ * Family: طرائق | Bloom: طبّق | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_287 = {
   id: 287,

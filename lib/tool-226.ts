@@ -1,7 +1,7 @@
 /**
- * 226 — Jigsaw Reading — القراءة التركيبية
- * Aronson 1978: each group member becomes expert on one segment → teach others
- * Level: B1-B2 | Bloom: حلّل | Family: طرائق
+ * 226 — Jigsaw (Puzzle-Lesen) — القراءة التركيبية
+ * Family: طرائق | Bloom: حلّل | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_226 = {
   id: 226,
@@ -13,6 +13,7 @@ export const TOOL_226 = {
   research: "Aronson 1978",
   steps: "Experten-Gruppe → Stamm-Gruppe → lehren",
 } as const;
+
 export function jigsawGroups(total: number, experts: number): number[][] {
   return Array.from({length: experts}, (_,i)=> Array.from({length: Math.ceil(total/experts)}, (_,j)=> i*3+j));
 }

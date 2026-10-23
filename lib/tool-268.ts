@@ -1,7 +1,7 @@
 /**
- * 268 — Free Recall — الاستدعاء الحر
- * Tulving 1968: free recall reveals organization; clustering shows learning
- * Level: B1-B2 | Bloom: أنشئ | Family: الذاكرة
+ * 268 — Freier Abruf — الاستدعاء الحر
+ * Family: الذاكرة | Bloom: أنشئ | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_268 = {
   id: 268,
@@ -13,5 +13,6 @@ export const TOOL_268 = {
   research: "Tulving 1968",
   task: "Schreibe alle Wörter zum Thema ... auf!",
 } as const;
+
 export function freeRecallPrompt(topic: string): string { return `Freier Abruf: Alle Wörter zu ${topic} — los!`; }
 export function recallScore(recalled: number, total: number): number { return total?recalled/total:0; }

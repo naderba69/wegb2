@@ -1,7 +1,7 @@
 /**
  * 224 — Dictogloss — الإملاء التفاعلي
- * Wajnryb 1990: listen → reconstruct → compare; focus on form + meaning
- * Level: A2-B1 | Bloom: أنشئ | Family: طرائق
+ * Family: طرائق | Bloom: أنشئ | Level: A2-B1
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_224 = {
   id: 224,
@@ -13,5 +13,6 @@ export const TOOL_224 = {
   research: "Wajnryb 1990",
   steps: "hören → Notizen → rekonstruieren → vergleichen",
 } as const;
+
 export function dictoglossSteps(): string[] { return ["hören (2x)","Notizen","rekonstruieren","vergleichen"]; }
 export function dictoglossPrompt(textTitle: string): string { return `Dictogloss: ${textTitle} — höre und rekonstruiere!`; }

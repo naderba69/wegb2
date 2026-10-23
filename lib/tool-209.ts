@@ -1,7 +1,7 @@
 /**
- * 209 — Error Correction Timing — توقيت تصحيح الخطأ
- * Lyster 2004: recast for fluency, explicit for accuracy; delayed > immediate for complexity
- * Level: A1-B2 | Bloom: طبّق | Family: SLA
+ * 209 — Korrektur-Timing — توقيت تصحيح الخطأ
+ * Family: SLA | Bloom: طبّق | Level: A1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_209 = {
   id: 209,

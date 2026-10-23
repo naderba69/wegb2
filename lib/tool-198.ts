@@ -1,7 +1,7 @@
 /**
- * 198 — Errorful Generation — التوليد الخاطئ المفيد
- * Potts & Shanks 2014: generating errors then feedback > passive study
- * Level: B1-B2 | Bloom: حلّل | Family: تقويم
+ * 198 — Fehlerhafte Generierung — التوليد الخاطئ المفيد
+ * Family: تقويم | Bloom: حلّل | Level: B1-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_198 = {
   id: 198,

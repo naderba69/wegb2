@@ -1,7 +1,7 @@
 /**
  * 350 — Turn-Taking Discourse — تناوب الأدوار
- * Sacks 1974: classroom-ready application with tasks
- * Level: A2-B2 | Bloom: طبّق | Family: طرائق
+ * Family: طرائق | Bloom: طبّق | Level: A2-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_350 = {
   id: 350,
@@ -13,5 +13,6 @@ export const TOOL_350 = {
   research: "Sacks 1974",
   desc: "Turn-Taking Discourse classroom application",
 } as const;
+
 export function tool350Gain(applied: boolean): number { return applied ? 1.2 : 1.0; }
 export function tool350Check(v: number): boolean { return v>0; }

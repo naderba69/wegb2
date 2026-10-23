@@ -1,12 +1,15 @@
 /**
- * 188 — Concrete Examples Principle — مبدأ الأمثلة الملموسة
- * Rawson et al. 2015: 2 concrete examples per rule > abstract definition alone
- * Level: A2 | Bloom: طبّق
+ * 188 — Konkrete Beispiele — أمثلة ملموسة
+ * Family: تلقين | Bloom: فهم | Level: A2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_188 = {
   id: 188,
   titleDe: "Konkrete Beispiele",
   titleAr: "أمثلة ملموسة",
+  family: "تلقين",
+  bloom: "فهم",
+  level: "A2",
   minExamples: 2,
 } as const;
 

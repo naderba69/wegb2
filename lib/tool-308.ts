@@ -1,7 +1,7 @@
 /**
  * 308 — Memory Strategies — استراتيجيات الذاكرة
- * Oxford 1990: grouping, imagery, structured review
- * Level: A0-B2 | Bloom: تذكّر | Family: الذاكرة
+ * Family: الذاكرة | Bloom: تذكّر | Level: A0-B2
+ * Auto-generated from content/tools.yaml — do not edit manually — run npm run gen:tools
  */
 export const TOOL_308 = {
   id: 308,
