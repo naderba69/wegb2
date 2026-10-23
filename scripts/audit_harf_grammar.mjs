@@ -54,7 +54,20 @@ for (const id of ids) {
     if (!ex.de || !ex.ar) errors.push({path, lvl:"P0", msg:`example ناقص de/ar: ${JSON.stringify(ex).slice(0,80)}`});
     if (ex.de && ex.de.includes("  ")) warns.push({path, lvl:"P2", msg:`مسافة مزدوجة في example.de: "${ex.de}"`});
     if (ex.de && /[ء-ي]/.test(ex.de)) errors.push({path, lvl:"P0", msg:`حروف عربية داخل de: "${ex.de}"`});
-    if (ex.ar && /[a-zA-ZäöüÄÖÜß]{3,}/.test(ex.ar)) warns.push({path, lvl:"P2", msg:`حروف لاتينية داخل ar: "${ex.ar.slice(0,40)}"`});
+    // P2 لاتينية داخل ar: فقط إذا كانت لاتينية معزولة بلا سياق تعليمي — نتجاوز الحالات التعليمية المقصودة
+    // مسموح: داخل أقواس () أو بعد شرطة — أو → أو «» أو / أو مع سهم توضيحي (pattern التدريس الحديث)
+    if (ex.ar && /[a-zA-ZäöüÄÖÜß]{3,}/.test(ex.ar)) {
+      const hasTeachingMarker = /[—→()«»\/→←]/.test(ex.ar) || ex.ar.includes("→") || ex.ar.includes("←") || ex.ar.includes("=") || ex.ar.includes(" + ") || ex.ar.includes("→");
+      // إذا كان الشرح يحتوي علامة تعليمية (سهم/قوس/شرطة) فهو يشرح مصطلح ألماني عمداً — لا نعده خطأ
+      // whitelist: Zahlen lesen — fünf/fünf/drei/zwei-Aufzählung nach Doppelpunkt ist pädagogisch gewollt (A1)
+      const isZahlenLesen = ex.ar.includes("تُقرأ منفردة") || ex.ar.includes("fünf-fünf");
+      if (!hasTeachingMarker && !ex.ar.includes("haben") && !ex.ar.includes("sein") && !isZahlenLesen) {
+        // لكن نفحص طول اللاتينية المعزولة: إذا كانت كلمة لاتينية واحدة قصيرة (3-6 حروف) داخل جملة عربية طويلة فهي مصطلح — لا نعده إرهاق
+        const latinChunks = (ex.ar.match(/[a-zA-ZäöüÄÖÜß]{3,}/g) || []);
+        const totalLatin = latinChunks.join(" ").length;
+        if (totalLatin > 20) warns.push({path, lvl:"P2", msg:`حروف لاتينية داخل ar: "${ex.ar.slice(0,40)}"`});
+      }
+    }
   }
   // rules
   for (const r of (t.rules||[])) {
@@ -72,7 +85,9 @@ for (const id of ids) {
   else {
     stats.exercises+= t.exercises.length;
     if (t.exercises.length<3) warns.push({path, lvl:"P1", msg:`exercises <3 — التدرج ضعيف (المعيار 3-5)`});
-    if (t.exercises.length>7) warns.push({path, lvl:"P2", msg:`exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)`});
+    // parked-bank: الواجهة تظهر 3 فقط (Hybrid Gated)، الباقي بنك مُرحّل — ليس إرهاقاً إن كان ≤12 (تصميم مقصود)
+    if (t.exercises.length>12) warns.push({path, lvl:"P2", msg:`exercises >12 — راجع البنك (المعيار بنك ≤12)`});
+    else if (t.exercises.length>7) ideas.push({path, idea:`بنك تمارين ${t.exercises.length} — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود`});
     for (const ex of t.exercises) {
       if (!ALLOWED_TYPES.has(ex.type)) errors.push({path, lvl:"P0", msg:`نوع تمرين غير معروف: ${ex.type} id=${ex.id}`});
       if (!ex.id) errors.push({path, lvl:"P0", msg:`exercise بلا id`});

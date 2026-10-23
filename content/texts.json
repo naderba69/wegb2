@@ -8710,5 +8710,57 @@
       }
     ],
     "wordCountDe": 168
+  },
+  {
+    "id": "t-b2-41",
+    "level": "B2",
+    "titleDe": "Nachhaltige Stadt: Warum Beteiligung wirkt",
+    "titleAr": "مدينة مستدامة: لماذا تؤثر المشاركة",
+    "theme": "Umwelt & Gesellschaft",
+    "source": "Verlag B2 — Original",
+    "de": "In vielen Städten wird über nachhaltige Entwicklung diskutiert, obwohl die Herausforderungen von Ort zu Ort sehr unterschiedlich sind. Während einige Kommunen bereits umfassende Konzepte umgesetzt haben, stehen andere noch am Anfang. Die zentrale Frage lautet daher nicht, ob Veränderungen notwendig sind, sondern wie sie so gestaltet werden können, dass sie von der Bevölkerung getragen werden.\n\nEin Blick auf aktuelle Projekte zeigt, warum Beteiligung ein Schlüsselbegriff geworden ist. Weil Entscheidungen oft weitreichende Folgen haben, reicht es nicht aus, sie allein im Rathaus zu treffen. Vielmehr müssen verschiedene Akteure — Verwaltung, Wirtschaft, Bildung und Zivilgesellschaft — an einen Tisch gebracht werden, damit unterschiedliche Perspektiven berücksichtigt werden. Obwohl dieser Prozess mehr Zeit in Anspruch nimmt, erhöht er die Akzeptanz deutlich. Studien belegen, dass Projekte, die frühzeitig transparent kommuniziert werden, seltener auf Widerstand stoßen.\n\nEin Beispiel aus Süddeutschland verdeutlicht den Unterschied. Dort wurde ein neues Mobilitätskonzept entwickelt, weil der Verkehr in der Innenstadt seit Jahren zunimmt. Anstatt sofort eine Lösung zu präsentieren, lud die Stadt alle Interessengruppen zu Workshops ein. Obwohl anfangs kontroverse Meinungen aufeinanderprallten, entstand nach mehreren Runden ein Kompromiss, der sowohl den Einzelhandel als auch die Anwohner überzeugte. Während Kritiker befürchtet hatten, dass die Diskussion zu keiner Entscheidung führen würde, zeigte sich, dass gerade die ausführliche Debatte die Qualität des Ergebnisses verbesserte.\n\nDamit solche Verfahren nicht als Alibi enden, müssen sie professionell moderiert werden, sodass jede Stimme gehört wird, obwohl nicht alle Wünsche erfüllt werden können. Wichtig ist, dass am Ende nicht nur ein Plan steht, sondern auch klare Kriterien für die Evaluation festgelegt werden — weil ohne Messbarkeit kein Lernen aus Erfahrung möglich ist. Nur wenn Transparenz und Beteiligung von Anfang an mitgedacht werden, kann nachhaltige Stadtentwicklung gelingen, obwohl Ressourcen begrenzt sind und Zeitdruck oft groß ist.",
+    "ar": "في مدن كثيرة يُناقَش التنمية المستدامة رغم اختلاف التحديات من مكان لآخر. بينما نفذت بعض البلديات مفاهيم شاملة، لا تزال أخرى في البداية. السؤال ليس هل التغيير ضروري، بل كيف يُصمَّم ليحظى بدعم السكان.\n\nتُظهر المشاريع الحالية لماذا أصبحت المشاركة مفتاحاً. لأن القرارات لها آثار بعيدة، لا يكفي اتخاذها في البلدية وحدها، بل يجب جمع مختلف الفاعلين. رغم أن هذه العملية تستغرق وقتاً أطول، فإنها تزيد القبول بوضوح.",
+    "questions": [
+      {
+        "type": "mc",
+        "promptDe": "Warum ist Beteiligung laut Text wichtig?",
+        "promptAr": "لماذا المشاركة مهمة حسب النص؟",
+        "options": [
+          "Weil sie Zeit spart",
+          "Weil sie Akzeptanz erhöht",
+          "Weil sie billiger ist",
+          "Weil sie gesetzlich vorgeschrieben ist"
+        ],
+        "answer": "Weil sie Akzeptanz erhöht",
+        "explanationAr": "النص: erhöht er die Akzeptanz deutlich — weil Akzeptanz.",
+        "id": "t-b2-41-q1"
+      },
+      {
+        "type": "mc",
+        "promptDe": "Was geschah in Süddeutschland trotz kontroverser Meinungen?",
+        "promptAr": "ماذا حدث في جنوب ألمانيا رغم الآراء المتضاربة؟",
+        "options": [
+          "Kein Kompromiss",
+          "Ein Kompromiss nach mehreren Runden",
+          "Sofortige Lösung aus dem Rathaus",
+          "Abbruch des Projekts"
+        ],
+        "answer": "Ein Kompromiss nach mehreren Runden",
+        "explanationAr": "obwohl kontroverse Meinungen → entstand ein Kompromiss.",
+        "id": "t-b2-41-q2"
+      },
+      {
+        "type": "truefalse",
+        "promptDe": "Ohne Evaluation ist Lernen aus Erfahrung nicht möglich.",
+        "promptAr": "بدون تقييم لا يمكن التعلم من التجربة.",
+        "options": [
+          "Richtig",
+          "Falsch"
+        ],
+        "answer": "Richtig",
+        "explanationAr": "weil ohne Messbarkeit kein Lernen möglich ist.",
+        "id": "t-b2-41-q3"
+      }
+    ]
   }
 ]

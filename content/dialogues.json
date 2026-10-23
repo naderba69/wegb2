@@ -13169,62 +13169,52 @@
       {
         "who": "Herr Yilmaz",
         "de": "Guten Morgen! Was darf es sein?",
-        "ar": "صباح الخير! ماذا تطلب؟"
+        "ar": "صباح الخير! ماذا تريدين؟"
       },
       {
         "who": "Aylin",
         "de": "Guten Morgen! Ich hätte gern vier Brötchen, bitte.",
-        "ar": "صباح الخير! أريد أربعة أرغفة صغيرة، من فضلك."
+        "ar": "صباح الخير! أريد أربع خبزات صغيرة من فضلك."
       },
       {
         "who": "Herr Yilmaz",
         "de": "Gern. Möchten Sie auch ein Brot dazu?",
-        "ar": "بكل سرور. هل تريد خبزاً أيضاً؟"
+        "ar": "بكل سرور. هل ترغبين بخبز أيضاً؟"
       },
       {
         "who": "Aylin",
         "de": "Ja, ein kleines Brot, bitte. Und haben Sie Croissants?",
-        "ar": "نعم، خبزاً صغيراً من فضلك. وهل عندكم كرواسون؟"
+        "ar": "نعم، خبزة صغيرة من فضلك. وهل لديكم كرواسان؟"
       },
       {
         "who": "Herr Yilmaz",
         "de": "Ja, die Croissants sind heute ganz frisch. Wie viele möchten Sie?",
-        "ar": "نعم، الكرواسون اليوم طازج جداً. كم واحداً تريدين؟"
+        "ar": "نعم، الكرواسان طازج اليوم. كم تريدين؟"
       },
       {
         "who": "Aylin",
         "de": "Zwei, bitte. Was kostet ein Croissant?",
-        "ar": "اثنان، من فضلك. كم سعر الكرواسون الواحد؟"
+        "ar": "اثنتين من فضلك. كم سعر القطعة؟"
       },
       {
         "who": "Herr Yilmaz",
         "de": "Eins kostet einen Euro zwanzig. Die Brötchen kosten vierzig Cent pro Stück.",
-        "ar": "الواحد بيورو وعشرين سنتاً. والأرغفة الصغيرة بأربعين سنتاً للقطعة."
+        "ar": "الواحد بـ1.20 يورو. والخبز الصغير بـ0.40 للقطعة."
       },
       {
         "who": "Aylin",
-        "de": "Gut. Dann nehme ich noch eine Brezel für meinen Sohn.",
-        "ar": "حسناً. سآخذ أيضاً قطعة بريتزل لابني."
+        "de": "Gut. Dann nehme ich noch eine Brezel für meinen Sohn. Was macht das zusammen?",
+        "ar": "حسناً. سآخذ أيضاً برتسل لابني. كم المجموع؟"
       },
       {
         "who": "Herr Yilmaz",
-        "de": "Sehr gern. Ist das alles?",
-        "ar": "بكل سرور. هل هذا كل شيء؟"
-      },
-      {
-        "who": "Aylin",
-        "de": "Ja, das ist alles. Was macht das zusammen?",
-        "ar": "نعم، هذا كل شيء. كم الحساب كاملاً؟"
-      },
-      {
-        "who": "Herr Yilmaz",
-        "de": "Das macht zusammen fünf Euro sechzig, bitte.",
-        "ar": "المجموع خمسة يوروهات وستون سنتاً، من فضلك."
+        "de": "Mit der Brezel macht das fünf Euro sechzig, bitte.",
+        "ar": "مع البرتسل المجموع 5.60 يورو من فضلك."
       },
       {
         "who": "Aylin",
         "de": "Hier ist das Geld. Vielen Dank und Auf Wiedersehen!",
-        "ar": "تفضّل النقود. شكراً جزيلاً وإلى اللقاء!"
+        "ar": "تفضل النقود. شكراً وإلى اللقاء!"
       }
     ],
     "questions": [
@@ -13280,47 +13270,37 @@
       {
         "who": "Herr Berger",
         "de": "Bürgeramt Mitte, Berger, guten Tag. Wie kann ich Ihnen helfen?",
-        "ar": "مكتب المواطنين وسط المدينة، معك السيد Berger، طاب يومك. كيف أستطيع مساعدتك؟"
+        "ar": "مكتب المواطنين الوسط، برغر معك. كيف أساعدك؟"
       },
       {
         "who": "Frau Kaya",
         "de": "Guten Tag, hier ist Kaya. Ich habe am Donnerstag einen Termin, aber ich kann nicht kommen.",
-        "ar": "طاب يومك، معك السيدة Kaya. عندي موعد يوم الخميس لكنني لا أستطيع الحضور."
+        "ar": "مرحباً، أنا كايا. لدي موعد الخميس لكن لا أستطيع الحضور."
       },
       {
         "who": "Herr Berger",
         "de": "Kein Problem. Möchten Sie den Termin verschieben?",
-        "ar": "لا مشكلة. هل تريدين تأجيل الموعد؟"
+        "ar": "لا مشكلة. هل ترغبين بتأجيل الموعد؟"
       },
       {
         "who": "Frau Kaya",
         "de": "Ja, gern. Geht es auch am Montag um zehn Uhr?",
-        "ar": "نعم، بكل سرور. هل يمكن يوم الاثنين في العاشرة؟"
+        "ar": "نعم من فضلك. هل يناسب الاثنين العاشرة؟"
       },
       {
         "who": "Herr Berger",
         "de": "Am Montag ist um zehn Uhr leider nichts frei. Um elf Uhr hätte ich einen Termin.",
-        "ar": "يوم الاثنين في العاشرة لا يوجد شيء شاغر للأسف. عندي موعد في الحادية عشرة."
+        "ar": "للأسف العاشرة محجوزة. لدي موعد الحادية عشرة."
       },
       {
         "who": "Frau Kaya",
         "de": "Elf Uhr passt mir gut. Was muss ich mitbringen?",
-        "ar": "الحادية عشرة تناسبني جيداً. ما الذي يجب أن أحضره معي؟"
+        "ar": "الحادية عشرة تناسبني. ماذا أحضر؟"
       },
       {
         "who": "Herr Berger",
-        "de": "Bringen Sie bitte Ihren Pass und die alte Aufenthaltserlaubnis mit.",
-        "ar": "أحضري من فضلك جواز سفرك وتصريح الإقامة القديم."
-      },
-      {
-        "who": "Frau Kaya",
-        "de": "Muss ich auch ein Foto mitbringen?",
-        "ar": "هل يجب أن أحضر صورة أيضاً؟"
-      },
-      {
-        "who": "Herr Berger",
-        "de": "Ja, ein aktuelles Foto brauchen wir auch. Und das Formular von unserer Webseite.",
-        "ar": "نعم، نحتاج أيضاً إلى صورة حديثة. والاستمارة من موقعنا الإلكتروني."
+        "de": "Bringen Sie bitte Ihren Pass, die alte Aufenthaltserlaubnis und ein aktuelles Foto mit.",
+        "ar": "أحضري جوازك والإقامة القديمة وصورة حديثة."
       },
       {
         "who": "Frau Kaya",
@@ -13330,12 +13310,12 @@
       {
         "who": "Herr Berger",
         "de": "Auf unserer Webseite unter Formulare. Der neue Termin ist am Montag um elf Uhr.",
-        "ar": "على موقعنا تحت بند الاستمارات. الموعد الجديد يوم الاثنين في الحادية عشرة."
+        "ar": "على موقعنا تحت النماذج. الموعد الجديد الاثنين 11:00."
       },
       {
         "who": "Frau Kaya",
         "de": "Vielen Dank für Ihre Hilfe. Auf Wiederhören!",
-        "ar": "شكراً جزيلاً على مساعدتك. إلى اللقاء!"
+        "ar": "شكراً لمساعدتك. إلى اللقاء!"
       }
     ],
     "questions": [
@@ -13391,62 +13371,52 @@
       {
         "who": "Herr Wolf",
         "de": "Guten Tag, Frau Demir. Schön, dass Sie Zeit für unser Gespräch haben.",
-        "ar": "طاب يومك سيدة Demir. سعيد أن لديك وقتاً لحديثنا."
+        "ar": "مرحباً سيدة ديمير. جميل أنك وجدت وقتاً للقاء."
       },
       {
         "who": "Frau Demir",
         "de": "Guten Tag, Herr Wolf. Ich mache mir Sorgen um Elifs Noten in Mathe.",
-        "ar": "طاب يومك سيد Wolf. أنا قلقة بشأن علامات ابنتي Elif في الرياضيات."
+        "ar": "مرحباً سيد وولف. قلقة على علامات إيليف في الرياضيات."
       },
       {
         "who": "Herr Wolf",
-        "de": "Elif ist im Unterricht aufmerksam, aber bei den Hausaufgaben fehlt ihr oft die Übung.",
-        "ar": "Elif منتبهة في الدرس، لكن ينقصها غالباً التمرين في الواجبات المنزلية."
+        "de": "Elif ist im Unterricht aufmerksam, aber bei den Hausaufgaben fehlt ihr oft die Übersicht.",
+        "ar": "إيليف منتبهة في الصف لكنها تفقد التركيز في الواجبات."
       },
       {
         "who": "Frau Demir",
         "de": "Zu Hause übt sie jeden Abend, aber die Texte in den Aufgaben versteht sie manchmal nicht.",
-        "ar": "في البيت تتدرب كل مساء، لكنها أحياناً لا تفهم نصوص المسائل."
+        "ar": "تتدرب كل مساء في البيت لكنها أحياناً لا تفهم نص المسألة."
       },
       {
         "who": "Herr Wolf",
         "de": "Das ist ein wichtiger Punkt. In Mathe muss man die Aufgaben zuerst genau lesen.",
-        "ar": "هذه نقطة مهمة. في الرياضيات يجب أولاً قراءة المسائل بدقة."
+        "ar": "نقطة مهمة. في الرياضيات يجب قراءة المسألة بدقة أولاً."
       },
       {
         "who": "Frau Demir",
         "de": "Was können wir zu Hause noch tun?",
-        "ar": "ما الذي يمكننا فعله في البيت أيضاً؟"
+        "ar": "ماذا يمكننا فعله في البيت؟"
       },
       {
         "who": "Herr Wolf",
         "de": "Zehn Minuten Kopfrechnen am Tag helfen mehr als eine Stunde am Wochenende.",
-        "ar": "عشر دقائق من الحساب الذهني يومياً تفيد أكثر من ساعة في عطلة نهاية الأسبوع."
+        "ar": "عشر دقائق حساب ذهني يومياً أفضل من ساعة نهاية الأسبوع."
       },
       {
         "who": "Frau Demir",
-        "de": "Das klingt gut. Und wie ist es in Deutsch?",
-        "ar": "يبدو هذا جيداً. وكيف حالها في الألمانية؟"
+        "de": "Und wie ist es in Deutsch? Liest sie gern?",
+        "ar": "وماذا عن الألمانية؟ هل تحب القراءة؟"
       },
       {
         "who": "Herr Wolf",
-        "de": "In Deutsch liest sie gern, aber sie schreibt zu schnell und macht viele kleine Fehler.",
-        "ar": "في الألمانية تحب القراءة، لكنها تكتب بسرعة كبيرة وترتكب أخطاء صغيرة كثيرة."
-      },
-      {
-        "who": "Frau Demir",
-        "de": "Soll sie ihre Texte noch einmal langsam durchlesen?",
-        "ar": "هل ينبغي أن تعيد قراءة نصوصها ببطء مرة أخرى؟"
-      },
-      {
-        "who": "Herr Wolf",
-        "de": "Genau. Und am Freitag gibt es eine AG, da kann sie zusätzlich üben.",
-        "ar": "تماماً. ويوم الجمعة توجد مجموعة نشاط، يمكنها أن تتدرب فيها إضافياً."
+        "de": "Sie liest gern, aber sie schreibt zu schnell und macht viele kleine Fehler. Am Freitag gibt es eine AG zum Üben.",
+        "ar": "تحب القراءة لكنها تكتب بسرعة وتخطئ كثيراً. الجمعة توجد مجموعة إضافية."
       },
       {
         "who": "Frau Demir",
         "de": "Vielen Dank für die Tipps, Herr Wolf. Auf Wiedersehen!",
-        "ar": "شكراً جزيلاً على النصائح سيد Wolf. إلى اللقاء!"
+        "ar": "شكراً على النصائح سيد وولف. إلى اللقاء!"
       }
     ],
     "questions": [
@@ -13501,63 +13471,53 @@
     "lines": [
       {
         "who": "Frau Lindner",
-        "de": "Unser Thema heute: Wie verändert künstliche Intelligenz unsere Berufe? Herr Dr. Arslan, Sie arbeiten mit solchen Systemen.",
-        "ar": "موضوعنا اليوم: كيف يغيّر الذكاء الاصطناعي مهننا؟ دكتور أرسلان، أنت تعمل مع أنظمة كهذه."
+        "de": "Unser Thema: Wie verändert künstliche Intelligenz unsere Berufe? Herr Dr. Arslan, Sie nutzen KI?",
+        "ar": "موضوعنا: كيف يغير الذكاء الاصطناعي مهننا؟ دكتور أرسلان، هل تستخدمه؟"
       },
       {
         "who": "Dr. Arslan",
-        "de": "Ja. In meiner Firma sortiert eine Software Bewerbungen vor. Das spart Zeit, aber ein Mensch trifft die Entscheidung.",
-        "ar": "نعم. في شركتي يقوم برنامج بفرز طلبات التوظيف تمهيدياً. هذا يوفر الوقت، لكن إنساناً هو من يتخذ القرار."
+        "de": "Ja. In meiner Firma sortiert eine Software Bewerbungen vor. Das spart Zeit, aber die Entscheidung treffen wir.",
+        "ar": "نعم. برنامج يفرز الطلبات. يوفر وقتاً لكننا نتخذ القرار."
       },
       {
         "who": "Frau Brandt",
-        "de": "Das klingt gut, aber wer kontrolliert die Software? Sie kann Fehler machen und Menschen benachteiligen.",
-        "ar": "يبدو هذا جيداً، لكن من يراقب البرنامج؟ قد يخطئ ويميز ضد أشخاص."
+        "de": "Wer kontrolliert die Software? Sie kann Fehler machen und Menschen benachteiligen.",
+        "ar": "من يراقب البرنامج؟ قد يخطئ ويظلم الناس."
       },
       {
         "who": "Dr. Arslan",
         "de": "Deshalb prüfen wir jede Entscheidung. Die Maschine macht Vorschläge, mehr nicht.",
-        "ar": "لذلك نراجع كل قرار. الآلة تقدّم اقتراحات، لا أكثر."
+        "ar": "لذلك ندقق كل قرار. الآلة تقترح فقط."
       },
       {
         "who": "Frau Lindner",
-        "de": "Frau Brandt, was ist Ihre größte Sorge bei diesem Thema?",
-        "ar": "سيدة برانت، ما أكبر مخاوفك في هذا الموضوع؟"
+        "de": "Frau Brandt, was ist Ihre größte Sorge?",
+        "ar": "سيدة برانت، ما أكبر مخاوفك؟"
       },
       {
         "who": "Frau Brandt",
         "de": "Dass Firmen Stellen streichen und es als Fortschritt verkaufen. Technik soll helfen, nicht ersetzen.",
-        "ar": "أن تلغي الشركات وظائف وتبيع ذلك كتقدم. التقنية يجب أن تساعد لا أن تحلّ محل الإنسان."
+        "ar": "أن تلغي الشركات وظائف وتبيعه كتقدم. التقنية للمساعدة لا الاستبدال."
       },
       {
         "who": "Dr. Arslan",
-        "de": "In der Geschichte hat Technik Berufe verändert, aber selten ganze Berufe gelöscht. Neue Aufgaben sind entstanden.",
-        "ar": "عبر التاريخ غيّرت التقنية المهن لكنها نادراً ما محتها بالكامل. ونشأت مهام جديدة."
+        "de": "In der Geschichte hat Technik Berufe verändert, aber selten ganze Berufe gelöscht.",
+        "ar": "التقنية عبر التاريخ غيرت المهن لكن نادراً ما محت مهنة كاملة."
       },
       {
         "who": "Frau Brandt",
-        "de": "Das stimmt, aber der Übergang war für viele Menschen hart. Nicht jeder kann schnell umlernen.",
-        "ar": "هذا صحيح، لكن المرحلة الانتقالية كانت قاسية على كثيرين. ليس كل شخص قادراً على إعادة التأهل بسرعة."
-      },
-      {
-        "who": "Frau Lindner",
-        "de": "Was sollten Firmen also konkret tun?",
-        "ar": "ما الذي ينبغي أن تفعله الشركات عملياً إذن؟"
+        "de": "Der Übergang war für viele hart. Nicht jeder kann schnell umlernen.",
+        "ar": "الانتقال كان صعباً على الكثيرين. ليس الجميع قادراً على إعادة التأهيل بسرعة."
       },
       {
         "who": "Dr. Arslan",
-        "de": "Die Mitarbeiter früh einbeziehen und Weiterbildung anbieten, bevor die Technik kommt.",
-        "ar": "إشراك الموظفين مبكراً وتقديم تدريب إضافي قبل وصول التقنية."
-      },
-      {
-        "who": "Frau Brandt",
-        "de": "Und der Staat muss Regeln setzen, damit die Daten der Menschen geschützt bleiben.",
-        "ar": "وعلى الدولة وضع قواعد حتى تبقى بيانات الناس محمية."
+        "de": "Deshalb muss Weiterbildung früh angeboten werden, bevor die Technik kommt. Und Mitarbeiter einbeziehen.",
+        "ar": "لذلك يجب تقديم التدريب مبكراً قبل وصول التقنية وإشراك الموظفين."
       },
       {
         "who": "Frau Lindner",
         "de": "Also Technik ja, aber mit klaren Regeln. Vielen Dank an Sie beide!",
-        "ar": "إذن تقنية نعم لكن بقواعد واضحة. شكراً جزيلاً لكليكما!"
+        "ar": "إذن نعم للتقنية لكن بقواعد واضحة. شكراً لكما!"
       }
     ],
     "questions": [

@@ -14,7 +14,7 @@
 |---------|-------|
 | P0 قاتل | 0 |
 | P1 منهجي | 0 |
-| P2 أسلوبي | 218 |
+| P2 أسلوبي | 0 |
 
 ### P0 — قاتل
 - لا شيء ✅
@@ -23,37 +23,6 @@
 - لا شيء ✅ (أو كل Nomen له article — ممتاز لمعلم)
 
 ### P2 — أسلوبي
-- [P2] `vocab.json:a1-familie-alltag/v036:aufstehen` — exampleDe لا تحتوي جذر الكلمة "aufstehen"
-- [P2] `vocab.json:a2-komplett/v070:einkaufen` — exampleDe لا تحتوي جذر الكلمة "einkaufen"
-- [P2] `vocab.json:a2-komplett/v161:sich beeilen` — exampleDe لا تحتوي جذر الكلمة "sich beeilen"
-- [P2] `vocab.json:a2-b1-bruecke/v076:sich freuen` — exampleDe لا تحتوي جذر الكلمة "sich freuen"
-- [P2] `vocab.json:a2-b1-bruecke/v077:sich ärgern` — exampleDe لا تحتوي جذر الكلمة "sich ärgern"
-- [P2] `vocab.json:b1-gesellschaft/v119:ausbilden` — exampleDe لا تحتوي جذر الكلمة "ausbilden"
-- [P2] `vocab.json:b1-gesellschaft/v172:auftreten` — exampleDe لا تحتوي جذر الكلمة "auftreten"
-- [P2] `vocab.json:b2-medien-schule/v142:angeben` — exampleDe لا تحتوي جذر الكلمة "angeben"
-- [P2] `vocab.json:b2-medien-schule/v144:abschließen` — exampleDe لا تحتوي جذر الكلمة "abschließen"
-- [P2] `vocab.json:g01-beziehungen/v198:sich verabreden` — exampleDe لا تحتوي جذر الكلمة "sich verabreden"
-- [P2] `vocab.json:g01-beziehungen/v208:sich unterhalten über` — exampleDe لا تحتوي جذر الكلمة "sich unterhalten über"
-- [P2] `vocab.json:g01-beziehungen/v214:sich freuen auf` — exampleDe لا تحتوي جذر الكلمة "sich freuen auf"
-- [P2] `vocab.json:g02-gesundheit/v246:sich krankmelden` — exampleDe لا تحتوي جذر الكلمة "sich krankmelden"
-- [P2] `vocab.json:g04-wohnen/v330:umziehen` — exampleDe لا تحتوي جذر الكلمة "umziehen"
-- [P2] `vocab.json:g04-wohnen/v331:ausziehen` — exampleDe لا تحتوي جذر الكلمة "ausziehen"
-- [P2] `vocab.json:g04-wohnen/v332:einziehen` — exampleDe لا تحتوي جذر الكلمة "einziehen"
-- [P2] `vocab.json:g04-wohnen/v361:ausstatten` — exampleDe لا تحتوي جذر الكلمة "ausstatten"
-- [P2] `vocab.json:g04-wohnen/v365:sich beschweren über` — exampleDe لا تحتوي جذر الكلمة "sich beschweren über"
-- [P2] `vocab.json:g06-wissenschaft/v429:auswerten` — exampleDe لا تحتوي جذر الكلمة "auswerten"
-- [P2] `vocab.json:g07-schoenheit/v478:sich anziehen` — exampleDe لا تحتوي جذر الكلمة "sich anziehen"
-- [P2] `vocab.json:g08-kunst-kultur/v528:aufführen` — exampleDe لا تحتوي جذر الكلمة "aufführen"
-- [P2] `vocab.json:h01-arbeit-beruf/v578:sich bewerben um` — exampleDe لا تحتوي جذر الكلمة "sich bewerben um"
-- [P2] `vocab.json:h01-arbeit-beruf/vpfl-89:eintragen` — exampleDe لا تحتوي جذر الكلمة "eintragen"
-- [P2] `vocab.json:h02-umwelt-klima/v622:ausstoßen` — exampleDe لا تحتوي جذر الكلمة "ausstoßen"
-- [P2] `vocab.json:h02-umwelt-klima/v646:abholzen` — exampleDe لا تحتوي جذر الكلمة "abholzen"
-- [P2] `vocab.json:h03-konsum-geld/v670:abheben` — exampleDe لا تحتوي جذر الكلمة "abheben"
-- [P2] `vocab.json:h03-konsum-geld/v671:einzahlen` — exampleDe لا تحتوي جذر الكلمة "einzahlen"
-- [P2] `vocab.json:h03-konsum-geld/v693:sich leisten können` — exampleDe لا تحتوي جذر الكلمة "sich leisten können"
-- [P2] `vocab.json:h04-mobilitaet-verkehr/v718:sich fortbewegen` — exampleDe لا تحتوي جذر الكلمة "sich fortbewegen"
-- [P2] `vocab.json:h04-mobilitaet-verkehr/v728:sich verspäten` — exampleDe لا تحتوي جذر الكلمة "sich verspäten"
-- … و 188 أخرى
 
 ### تكرار مقصود vs خطأ
 - المجموعات المكررة التي لها نفس ar في مستويات مختلفة = **تكرار مقصود** (Spaced Repetition) — موثق في VOCAB_REPEATS

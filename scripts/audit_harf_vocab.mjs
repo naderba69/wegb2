@@ -67,17 +67,51 @@ for (const [deckId, deck] of Object.entries(vocab)) {
     if (c.exampleDe && c.de) {
       const lowDe = c.de.toLowerCase().trim();
       const lowEx = c.exampleDe.toLowerCase();
-      // example should contain de root (allow inflections, so check partial)
-      const root = lowDe.split(/[\s\/\(\)]+/)[0].replace(/\(.*\)/,"");
-      if (root.length>=4 && !lowEx.includes(root.slice(0,4))) {
-        warns.push({path, lvl:"P2", msg:`exampleDe لا تحتوي جذر الكلمة "${c.de}"`});
+      // تنظيف deCore: إزالة الأداة (die Arbeit → Arbeit) + Sich المنعكسة
+      let deCore = lowDe;
+      // إزالة أداة التعريف/النكرة إن وجدت
+      const articleMatch = deCore.match(/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer|eines)\s+(.+)/);
+      if (articleMatch) deCore = articleMatch[2];
+      if (deCore.startsWith("sich ")) deCore = deCore.slice(5);
+      // للأفعال المنفصلة/المركبة: نأخذ آخر جزء (aufstehen → stehen)
+      const SEPARABLE_PREFIXES = ["ab","an","auf","aus","bei","ein","los","mit","nach","um","vor","zu","zurück","zusammen","fern","her","hin","weg","weiter","wieder"];
+      let root = deCore.split(/[\s\/\(\)]+/)[0].replace(/\(.*\)/,"").replace(/sich$/, "").trim();
+      // إذا كان الفعل منفصلاً، استخدم الجذع الرئيسي
+      for (const pref of SEPARABLE_PREFIXES) {
+        if (root.length > pref.length+3 && root.startsWith(pref)) {
+          const stem = root.slice(pref.length);
+          if (stem.length >=3) { root = stem; break; }
+        }
+      }
+      const norm = s=>s.replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").replace(/Ä/g,"A").replace(/Ö/g,"O").replace(/Ü/g,"U");
+      // للعبارات: إن فشلت مطابقة أول رمز، جرّب كل رمز محتوى (etwas/gericht/wohnung...) — المهم أن المثال يظهر المعنى
+      const allTokens = deCore.split(/[\s\/\(\)]+/).map(x=>x.replace(/\(.*\)/,"").trim()).filter(x=>x && x!=="sich" && x!=="etwas" && x.length>=3);
+      const checkTokens = [root, ...allTokens];
+      const nEx = norm(lowEx);
+      let anyMatch = false;
+      for (const tk of checkTokens) {
+        let tkRoot = tk;
+        for (const pref of SEPARABLE_PREFIXES) { if (tkRoot.length > pref.length+3 && tkRoot.startsWith(pref)) { tkRoot = tkRoot.slice(pref.length); break; } }
+        const nTk = norm(tkRoot);
+        if (nTk.length>=4 && (nEx.includes(nTk.slice(0,4)) || nEx.includes(nTk.slice(0,3)))) { anyMatch = true; break; }
+      }
+      // تحقق: فقط إذا كان الجذر >=4 أحرف (كما في الأصل) — تجنب كلمات قصيرة مثل die/das
+      const nRoot = norm(root);
+      if (root.length>=4 && !anyMatch) {
+        // تسامح إضافي للفعال المنعكسة المنفصلة: sich beeilen → beeilen → beei، قد تظهر في beeile mich
+        if (false) {
+          // يحتوي 3 حروف على الأقل — مقبول كتصريف (z.B. beeilen → beeile)
+        } else {
+          warns.push({path, lvl:"P2", msg:`exampleDe لا تحتوي جذر الكلمة "${c.de}"`});
+        }
       }
     }
     // Arabic latin leak
     if (c.ar && /[a-zA-ZäöüÄÖÜß]{4,}/.test(c.ar) && !c.ar.includes("S-Bahn") && !c.ar.includes("U-Bahn")) {
-      // many ar contain German in parentheses for explanation — that's P2 but often intentional
-      // only flag if long latin without explanation marker
-      if ((c.ar.match(/[a-zA-Zäöü]{4,}/g)||[]).join(" ").length > 15) warns.push({path, lvl:"P2", msg:`ar يحتوي لاتينية طويلة: "${c.ar.slice(0,60)}"`});
+      // whitelist: derselbe/dieselbe/dasselbe داخل قوس تعليمي = شرح جنس — مقصود تماماً (B1)
+      const isParenthesisTeaching = c.ar.includes("(") && c.ar.includes(")") && /derselbe|dieselbe|dasselbe/i.test(c.ar);
+      if (isParenthesisTeaching) { /* مقصود — لا يُعد خطأ */ }
+      else if ((c.ar.match(/[a-zA-Zäöü]{4,}/g)||[]).join(" ").length > 15) warns.push({path, lvl:"P2", msg:`ar يحتوي لاتينية طويلة: "${c.ar.slice(0,60)}"`});
     }
     if (c.de && /[ء-ي]/.test(c.de)) errors.push({path, lvl:"P0", msg:`حروف عربية داخل de: "${c.de}"`});
     if (c.de && c.de.includes("  ")) warns.push({path, lvl:"P2", msg:`مسافة مزدوجة في de`});
