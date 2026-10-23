@@ -5,7 +5,7 @@
 ## الملخص الإحصائي
 - إجمالي الدروس: **87** (A0:8 · A1:19 · A2:22 · B1:15 · B2:23)
 - بجدول: 50 · بفخ: 87 · بهدف ziel: 87 · بتحقق verify: 87
-- مجموع rules: 313 · examples: 285 · exercises: 581 (معدل 6.7/درس)
+- مجموع rules: 313 · examples: 285 · exercises: 610 (معدل 7.0/درس)
 - ربط GGP: 87/87 — ناقص: لا شيء
 
 ## الأخطاء المصنفة
@@ -13,7 +13,7 @@
 |---------|-------|--------|
 | P0 قاتل (يمنع الفهم/ينجّح خطأ) | 0 | إصلاح فوري |
 | P1 منهجي (CEFR/GGP) | 0 | إصلاح بالسبرنت |
-| P2 أسلوبي | 147 | تحسين |
+| P2 أسلوبي | 149 | تحسين |
 
 ### P0 — تُصلّح الآن
 
@@ -145,11 +145,13 @@
 - [P2] `grammar.json:a1-weil-dass` — حروف لاتينية داخل ar: "نبقى في البيت لأنّ الأطفال مرضى. — sind "
 - [P2] `grammar.json:a2-wasfuer` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:a0-aussprache-vowels` — حروف لاتينية داخل ar: "سرير — حوض زهور (e قصيرة في Bett وطويلة "
+- [P2] `grammar.json:a0-aussprache-umlaut` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:a1-aussprache-ch` — حروف لاتينية داخل ar: "عندي أيضاً كتاب. (ich ناعم، auch/Buch خش"
 - [P2] `grammar.json:a1-aussprache-r` — حروف لاتينية داخل ar: "راء بداية الكلمات Rita وreist وRom تُنطق"
 - [P2] `grammar.json:a1-aussprache-sp-st` — حروف لاتينية داخل ar: "في بداية المقطع: sp تُنطق shp، وst تُنطق"
 - [P2] `grammar.json:a1-aussprache-sp-st` — حروف لاتينية داخل ar: "في وسط الكلمة أو نهايتها لا تتحول sp/st "
 - [P2] `grammar.json:a0-satzbau` — حروف لاتينية داخل ar: "أسكن اليوم في تونس — بعد Heute يأتي الفع"
+- [P2] `grammar.json:a0-satzbau` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 - [P2] `grammar.json:b2-n-deklination` — حروف لاتينية داخل ar: "أرى الطالب في المكتبة — Akk → den Studen"
 - [P2] `grammar.json:b2-n-deklination` — حروف لاتينية داخل ar: "الزميل يساعد الزبون — dem Kunden (Dativ "
 - [P2] `grammar.json:b2-n-deklination` — حروف لاتينية داخل ar: "زوجة الرئيس تأتي غدًا — des Präsidenten "
@@ -168,7 +170,7 @@
 - [P2] `grammar.json:b2-partizipial` — حروف لاتينية داخل ar: "الأطفال الضاحكون لعبوا — Partizip I."
 - [P2] `grammar.json:b2-partizipial` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 
-## الأفكار التحسينية (حتى 1000 — هنا أول 50)
+## الأفكار التحسينية (حتى 1000 — هنا أول 38)
 | الدرس | الفكرة |
 |-------|--------|
 | `grammar.json:b1-konj2` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
@@ -191,38 +193,24 @@
 | `grammar.json:b2-relativ-generalisierend` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
 | `grammar.json:b2-doppelkonnektoren` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
 | `grammar.json:b2-nominalstil` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:a0-begrussung` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a1-modalverben` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a1-dativ` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a1-wechsel` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a1-futur-einf` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
 | `grammar.json:b1-partizip1` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
 | `grammar.json:b1-indirekte-fragen` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
 | `grammar.json:b2-redew` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:a1-war-hatte` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:b1-funktionsverben` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
 | `grammar.json:b1-funktionsverben` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:a0-buchstaben` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a0-zahlen` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a2-konj2-hoflich` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a2-adjektiv-einfach` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
 | `grammar.json:b2-adjektiv-partizip` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:a1-weil-dass` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a2-verschmolzene` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
 | `grammar.json:b1-absicht` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
 | `grammar.json:b1-konj2-vergangenheit` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
 | `grammar.json:b2-textkonnektoren` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
-| `grammar.json:a0-artikel` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a0-du-sie` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a0-aussprache-vowels` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a0-aussprache-umlaut` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a1-aussprache-ch` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a1-aussprache-r` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a1-aussprache-sp-st` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:a1-aussprache-auslaut` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-| `grammar.json:b2-genitiv-praep` | أضف umformung واحدة على الأقل — GGP يطلب إنتاج لا حفظ |
-
-_…و 17 فكرة إضافية محفوظة في السكربت — تُصدّر تباعاً بعد إصلاح P0._
+| `grammar.json:b2-genitiv-praep` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b2-konzessiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b2-relativ-genitiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b1-pruefungsstrategie` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b2-pruefungsstrategie` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b2-n-deklination` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b2-passiv` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b2-konjunktiv2-vht` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b2-nominalisierung` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
+| `grammar.json:b2-partizipial` | أضف resources (Zeitung/Behörde) — B1/B2 يحتاج Authentic |
 
 ## خطة التنفيذ الواضحة (حرف-حرف على كل المحتوى)
 1. **الآن — القواعد (87 درس):** إصلاح P0 فوراً في هذا الـPR (حرف حرف) — لا دمج حتى 0 P0

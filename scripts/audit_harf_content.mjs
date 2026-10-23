@@ -90,7 +90,8 @@ for (const w of writing) {
     if (n<exp-10) warns.push({path, lvl:"P1", msg:`sample قصير ${n} < ${exp} لـ ${w.level} — لا يغطي المطلوب`});
     if (w.level==="B2" && n<100) warns.push({path, lvl:"P1", msg:`B2 sample قصير ${n} < 100 — Forumsbeitrag يحتاج 150W`});
   }
-  if (w.level==="B2" && (!w.noteAr || typeof w.noteAr!=="string" || !w.noteAr.trim())) ideas.push({path, idea:"أضف noteAr ثقافي — Prüfungsstrategie B2"});
+  const hasNoteAr = w.noteAr && ( (typeof w.noteAr === "string" && w.noteAr.trim()) || (Array.isArray(w.noteAr) && w.noteAr.length>0 && w.noteAr.some(s=>String(s).trim())) );
+  if (w.level==="B2" && !hasNoteAr) ideas.push({path, idea:"أضف noteAr ثقافي — Prüfungsstrategie B2"});
 }
 
 let md=`# 🔍 مراجعة حرف-حرف — النصوص/الحوارات/الكتابة — ${new Date().toISOString().slice(0,10)}
