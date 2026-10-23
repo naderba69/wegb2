@@ -85,43 +85,105 @@ export default function Lernen() {
           {familieFilter && <div style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>الفصيلة: {familieFilter} — {GGP_FEATURES.filter((f) => f.familie === familieFilter && (!ggpFilter || f.level === ggpFilter)).length} بنية</div>}
         </div>
       </div>
-      <label style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
-        <span style={{ fontSize: "0.85rem", fontWeight: 700 }}>📚 افتح درساً آخر من المنهج (استكشاف حر — لا يغيّر يومك ولا خطّتك):</span>
-        <select
-          className="field"
-          data-testid="lektion-wahl"
-          value={wahl}
-          onChange={(e) => setWahl(e.target.value)}
-          style={{ minHeight: "48px", width: "100%" }}
-        >
-          <option value="">درس اليوم / آخر درس وصلتَ إليه</option>
-          {(Object.keys(COURSE_TOPIC_ORDER) as (keyof typeof COURSE_TOPIC_ORDER)[]).map((lvl) => {
-            if (ggpFilter && lvl !== ggpFilter) return null;
-            const visible = COURSE_TOPIC_ORDER[lvl].filter((id) => {
-              if (familieFilter) {
-                const feats = GGP_FEATURES.filter((f) => f.familie === familieFilter).map((f) => f.code);
-                const { TOPIC_GGP } = require("@/lib/ggp") as { TOPIC_GGP: Record<string, string[]> };
-                const hasFam = (TOPIC_GGP[id] ?? []).some((c: string) => feats.includes(c));
-                if (!hasFam) return false;
-              }
-              if (!qNorm) return true;
-              const t = grammarMap[id];
-              const hay = `${t?.titleAr ?? ""} ${t?.titleDe ?? ""} ${t?.id ?? ""} ${lvl}`.toLowerCase();
-              return hay.includes(qNorm);
-            });
-            if (visible.length === 0) return null;
-            return (
-              <optgroup key={lvl} label={`المستوى ${lvl} — ${visible.length}`}>
-                {visible.map((id) => (
-                  <option key={id} value={id}>
-                    {grammarMap[id]?.titleAr ?? id} — {grammarMap[id]?.titleDe ?? ""}
-                  </option>
-                ))}
-              </optgroup>
-            );
-          })}
-        </select>
-      </label>
+      {/* ── Sprint 3D — المكتبة البحثية: شبكة بطاقات فورية + العداد ── */}
+      {(() => {
+        const allLevels = Object.keys(COURSE_TOPIC_ORDER) as (keyof typeof COURSE_TOPIC_ORDER)[];
+        const filteredByAll = allLevels.flatMap((lvl) => {
+          if (ggpFilter && lvl !== ggpFilter) return [];
+          return COURSE_TOPIC_ORDER[lvl].filter((id) => {
+            if (familieFilter) {
+              const feats = GGP_FEATURES.filter((f) => f.familie === familieFilter).map((f) => f.code);
+              const { TOPIC_GGP } = require("@/lib/ggp") as { TOPIC_GGP: Record<string, string[]> };
+              const hasFam = (TOPIC_GGP[id] ?? []).some((c: string) => feats.includes(c));
+              if (!hasFam) return false;
+            }
+            if (!qNorm) return true;
+            const t = grammarMap[id];
+            const hay = `${t?.titleAr ?? ""} ${t?.titleDe ?? ""} ${t?.id ?? ""} ${lvl}`.toLowerCase();
+            return hay.includes(qNorm);
+          });
+        });
+        return (
+          <>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", margin: "0.7rem 0 0.3rem", fontSize: "0.8rem", color: "var(--ui-muted)" }}>
+              <span data-testid="bibliothek-zaehler">📚 {filteredByAll.length} / 87 درساً {qNorm || ggpFilter || familieFilter ? "· مفلتر" : ""}</span>
+              <span>{filteredByAll.length < 87 && "✨ بحث فوري"}</span>
+            </div>
+            <label style={{ display: "grid", gap: "0.35rem", margin: "0 0 0.6rem" }}>
+              <span style={{ fontSize: "0.85rem", fontWeight: 700 }}>📚 افتح درساً آخر من المنهج (استكشاف حر — لا يغيّر يومك ولا خطّتك):</span>
+              <select
+                className="field"
+                data-testid="lektion-wahl"
+                value={wahl}
+                onChange={(e) => setWahl(e.target.value)}
+                style={{ minHeight: "48px", width: "100%" }}
+              >
+                <option value="">درس اليوم / آخر درس وصلتَ إليه</option>
+                {allLevels.map((lvl) => {
+                  if (ggpFilter && lvl !== ggpFilter) return null;
+                  const visible = COURSE_TOPIC_ORDER[lvl].filter((id) => {
+                    if (familieFilter) {
+                      const feats = GGP_FEATURES.filter((f) => f.familie === familieFilter).map((f) => f.code);
+                      const { TOPIC_GGP } = require("@/lib/ggp") as { TOPIC_GGP: Record<string, string[]> };
+                      const hasFam = (TOPIC_GGP[id] ?? []).some((c: string) => feats.includes(c));
+                      if (!hasFam) return false;
+                    }
+                    if (!qNorm) return true;
+                    const t = grammarMap[id];
+                    const hay = `${t?.titleAr ?? ""} ${t?.titleDe ?? ""} ${t?.id ?? ""} ${lvl}`.toLowerCase();
+                    return hay.includes(qNorm);
+                  });
+                  if (visible.length === 0) return null;
+                  return (
+                    <optgroup key={lvl} label={`المستوى ${lvl} — ${visible.length}`}>
+                      {visible.map((id) => (
+                        <option key={id} value={id}>
+                          {grammarMap[id]?.titleAr ?? id} — {grammarMap[id]?.titleDe ?? ""}
+                        </option>
+                      ))}
+                    </optgroup>
+                  );
+                })}
+              </select>
+            </label>
+            {/* شبكة المكتبة — بطاقات سريعة */}
+            <div data-testid="bibliothek-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "0.6rem", margin: "0.6rem 0 0.8rem" }}>
+              {filteredByAll.slice(0, 48).map((id) => {
+                const t = grammarMap[id];
+                if (!t) return null;
+                const active = id === topicId;
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    data-testid={`bibliothek-card-${id}`}
+                    onClick={() => setWahl(id)}
+                    style={{
+                      textAlign: "start",
+                      padding: "0.6rem 0.75rem",
+                      borderRadius: "0.85rem",
+                      border: active ? "2px solid var(--ui-green)" : "1px solid var(--ui-border)",
+                      background: active ? "var(--ui-green-soft)" : "var(--ui-surface)",
+                      cursor: "pointer",
+                      display: "grid",
+                      gap: "0.3rem",
+                    }}
+                  >
+                    <span style={{ display: "flex", gap: "0.35rem", alignItems: "center", flexWrap: "wrap" }}>
+                      <span className={`lesson-level-badge lesson-level-${t.level}`} style={{ fontSize: "0.68rem", padding: "0.1rem 0.35rem" }}>{t.level}</span>
+                      <span className="ggp-chip" style={{ fontSize: "0.62rem" }}>{(require("@/lib/ggp") as { ggpForTopic: (x: string) => { code: string }[] }).ggpForTopic(id)[0]?.code ?? "GGP"}</span>
+                      {active && <span style={{ fontSize: "0.7rem", color: "var(--ui-green)", fontWeight: 800 }}>● مفتوح</span>}
+                    </span>
+                    <span style={{ fontWeight: 800, fontSize: "0.86rem", lineHeight: 1.4 }}>{t.titleAr}</span>
+                    <span style={{ fontSize: "0.78rem", color: "var(--ui-muted)", direction: "ltr" }}>{t.titleDe}</span>
+                  </button>
+                );
+              })}
+            </div>
+            {filteredByAll.length > 48 && <div style={{ fontSize: "0.78rem", color: "var(--ui-muted)", textAlign: "center", marginBottom: "0.6rem" }}>+ {filteredByAll.length - 48} نتيجة أخرى — ضيّق البحث لرؤيتها</div>}
+          </>
+        );
+      })()}
       <FehlerGrenze><LektionWizard topicId={topicId} /></FehlerGrenze>
     </div>
   );
