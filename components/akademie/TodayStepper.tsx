@@ -90,7 +90,7 @@ export default function TodayStepper({ plan, progress: _progress, ritual, stepFr
     return status;
   }, [grouped, resultOf, localOf, ritual, plan.tasks]);
 
-  const doneCount = Array.from(stepStatus.values()).filter((v) => v === "done").length;
+  const doneCount = Array.from(stepStatus.values()).filter((v) => v === "done").length; // B2 Prüfungsbadge: Schritt 4
   const totalSteps = 5;
   const progressPct = Math.round((doneCount / totalSteps) * 100);
 
