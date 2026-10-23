@@ -600,12 +600,21 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
             )}
             {(() => { const k = kulturFuer(topicId, topic.level); return k ? (
               <div data-testid="wizard-kultur" className="card" style={{ padding: "0.6rem 0.85rem", background: "var(--ui-surface-raised)", borderInlineStart: "5px solid var(--color-b2)", display: "grid", gap: "0.35rem" }}>
-                <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — لمسة ثقافية</strong>
+                <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — لمسة ثقافية {topic.level==="B2" ? "· B2 Lebenswelt" : ""}</strong>
                 <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }} dir="ltr"><De>{k.de}</De></span>
                 <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }}>{k.ar}</span>
-                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح سياقي — يُظهر متى يُستعمل النمط، لا يُمتحن.</span>
+                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح سياقي — يُظهر متى يُستعمل النمط، لا يُمتحن. {topic.level==="B2" ? "BAMF Handlungsfeld: Beruf & Alltag — تسجيل، تأمين، سكن." : ""}</span>
               </div>
             ) : null; })()}
+            {(topic as unknown as {resources?: string[]}).resources && ((topic as unknown as {resources?: string[]}).resources!.length>0) && (
+              <div className="card" data-testid="wizard-quellen" style={{ padding:"0.6rem 0.85rem", background:"var(--color-paper)", borderInlineStart:"4px solid var(--color-ink2)", display:"grid", gap:"0.3rem" }}>
+                <strong style={{ fontSize:"0.85rem" }}>📚 مصادر B2 — اقرأ الأصل</strong>
+                <div style={{ fontSize:"0.78rem", color:"var(--color-ink2)", lineHeight:1.8 }}>
+                  {((topic as unknown as {resources?: string[]}).resources!.slice(0,3).map((r: string)=> <div key={r} style={{ display:"flex", gap:"0.4rem" }}><span>—</span><span dir="ltr">{r}</span></div>))}
+                </div>
+                <div style={{ fontSize:"0.72rem", color:"var(--ui-muted)" }}>Verlag-Stil: المصادر ليست للامتحان بل للاستقلال — Duden · Goethe · BAMF</div>
+              </div>
+            )}
             <BrueckenLessonBlock bruecken={bruecken} srs={progress.srs ?? {}} />
             {topic.anwendung && (
               <IndependentApplication
