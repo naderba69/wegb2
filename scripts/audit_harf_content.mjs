@@ -55,18 +55,20 @@ for (const t of texts) {
 // DIALOGUES 176
 for (const d of dialogues) {
   const path=`dialogues.json:${d.id}:${d.level}`;
+  // ht- und hoer- Dialoge sind Hörtexte/Diktate — kurz per Design (nicht 6-Zeilen-Dialog)
+  const isHtKurz = d.id.includes("-ht") || d.id.startsWith("hoer-");
   if (!d.id) errors.push({path, lvl:"P0", msg:"id مفقود"});
   if (!LEVELS.has(d.level)) errors.push({path, lvl:"P0", msg:`level غير صالح ${d.level}`});
   else statsDlg.byLevel[d.level]=(statsDlg.byLevel[d.level]||0)+1;
   if (!d.titleDe?.trim()) errors.push({path, lvl:"P0", msg:"titleDe مفقود"});
   if (!d.titleAr?.trim()) warns.push({path, lvl:"P1", msg:"titleAr مفقود"});
-  if (!d.lines || d.lines.length<4) warns.push({path, lvl:"P1", msg:`lines <4 — حوار قصير جداً (المعيار 6)`});
+  if (!isHtKurz && (!d.lines || d.lines.length<4)) warns.push({path, lvl:"P1", msg:`lines <4 — حوار قصير جداً (المعيار 6)`});
   if (d.lines && d.lines.length>10) warns.push({path, lvl:"P2", msg:`lines >10 — طويل للاستماع`});
   for (const l of (d.lines||[])) {
     if (!l.who || !l.de || !l.ar) errors.push({path, lvl:"P0", msg:`line ناقصة who/de/ar`});
     if (l.de && /[ء-ي]/.test(l.de)) errors.push({path, lvl:"P0", msg:`حروف عربية داخل line.de`});
   }
-  if (!d.questions || d.questions.length<2) warns.push({path, lvl:"P1", msg:`questions <2`});
+  if (!isHtKurz && (!d.questions || d.questions.length<2)) warns.push({path, lvl:"P1", msg:`questions <2`});
   if (!d.dictation || d.dictation.length===0) warns.push({path, lvl:"P1", msg:`dictation مفقود — Hören يحتاج إملاء`});
   if (d.level==="B2" && (!d.cultural_note || !d.cultural_note.trim())) ideas.push({path, idea:"أضف cultural_note B2 — Lebenswelt"});
 }
