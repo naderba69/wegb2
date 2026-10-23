@@ -593,6 +593,16 @@ export default function Today() {
       <p className="dirb-time-hint" data-testid="zeit-hinweis">هدف 90 دقيقة افتراضي للجلسة فقط؛ مجموع تقديرات الخطة مستقل عنه. احفظ التوقّف وعد لاحقاً؛ لن يتحوّل ما لم تسلّمه إلى فشل أو تعويض.</p>
 
       <SkillBalancePlan progress={progress} />
+      {/* Pflege BSK — مسار مستقل لا يُحتسب في الخطة، لكنه ظاهر لمن اختاره */}
+      <section className="card" data-testid="pflege-bsk-teaser" style={{ padding: "0.75rem 0.95rem", background: "linear-gradient(180deg, #FFFCF0, #FDF8E8)", borderInlineStart: "4px solid #22c55e", display: "grid", gap: "0.45rem" }}>
+        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+          <span style={{ fontWeight: 900, color: "#0F2A44" }}>🩺 مسار التمريض BSK — اختياري</span>
+          <span style={{ fontSize: "0.72rem", background: "rgb(34 197 94 / 0.12)", padding: "0.15rem 0.5rem", borderRadius: "999px", fontWeight: 800, color: "#15803d" }}>B2 Pflege</span>
+        </div>
+        <div style={{ fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-ink2)" }}>
+          115 كلمة مهنية + 8 حوارات طوارئ (Visite/Übergabe) — يفتح في <b>تدرّب → ألمانية التمريض</b>. لا يدخل في الـ 378 يوماً ولا يُغيّر خطتك.
+        </div>
+      </section>
       <WiedereinstiegBanner progress={progress} minuten={totalMinutes} normaleMinuten={basePlan.tasks.reduce((a, t) => a + t.minutes, 0)} />
 
       <LernPfad progress={progress} />
