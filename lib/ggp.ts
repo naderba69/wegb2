@@ -180,6 +180,7 @@ export const TOPIC_GGP: Record<string, readonly string[]> = {
   // A1 19
   "a1-sein-haben": ["GGP-001"], "a1-pronomen": ["GGP-003"], "a1-praesens": ["GGP-002"], "a1-trennbar": ["GGP-006"],
   "a1-zahlen": ["GGP-009","GGP-029"], "a1-akkusativ": ["GGP-005"], "a1-plural": ["GGP-026"], "a1-modalverben": ["GGP-007","GGP-016"],
+  "a1-weil-dass": ["GGP-036"], "a1-futur-einf": ["GGP-041"],
   "a1-dativ": ["GGP-034"], "a1-wechsel": ["GGP-014"], "a1-imperativ": ["GGP-008"], "a1-perfekt-einf": ["GGP-017"],
   "a1-war-hatte": ["GGP-032"], "a1-zeitpraep": ["GGP-018"], "a1-pruefungsstrategie": ["GGP-030"],
   "a1-aussprache-ch": ["GGP-022"], "a1-aussprache-r": ["GGP-022"], "a1-aussprache-sp-st": ["GGP-021"], "a1-aussprache-auslaut": ["GGP-021"],
@@ -194,8 +195,9 @@ export const TOPIC_GGP: Record<string, readonly string[]> = {
   "b1-konj2": ["GGP-066","GGP-081"], "b1-passiv": ["GGP-068","GGP-083"], "b1-genitiv": ["GGP-069"], "b1-relativ": ["GGP-070"],
   "b1-konj2-vergangenheit": ["GGP-067"], "b1-konnektoren": ["GGP-073","GGP-088"], "b1-plusquamperfekt": ["GGP-071"],
   "b1-wortbildung": ["GGP-078","GGP-094"], "b1-verb-praeposition": ["GGP-079"], "b1-indirekte-fragen": ["GGP-072","GGP-096"],
-  "b1-unbestimmte": ["GGP-080"], "b1-funktionsverben": ["GGP-074"], "b1-absicht": ["GGP-082"], "b1-adjektivendungen": ["GGP-075","GGP-103"], "b1-pruefungsstrategie": ["GGP-105"],
+  "b1-partizip1": ["GGP-086"], "b1-unbestimmte": ["GGP-080"], "b1-funktionsverben": ["GGP-074"], "b1-absicht": ["GGP-082"], "b1-adjektivendungen": ["GGP-075","GGP-103"], "b1-pruefungsstrategie": ["GGP-105"],
   // B2 18 + ergänzungen
+  "b2-passiv": ["GGP-115"], "b2-konjunktiv2-vht": ["GGP-067"], "b2-partizipial": ["GGP-107"],
   "b2-indirekte-rede": ["GGP-106","GGP-124","GGP-132"], "b2-bedingung": ["GGP-123","GGP-129"], "b2-funktionsverben": ["GGP-125"],
   "b2-genitiv-praep": ["GGP-126","GGP-146"], "b2-konzessiv": ["GGP-110"], "b2-partizip": ["GGP-107","GGP-113"],
   "b2-adjektiv-partizip": ["GGP-120","GGP-133"], "b2-partizip1": ["GGP-121"], "b2-infinitiv": ["GGP-117","GGP-137"],
