@@ -1169,7 +1169,9 @@
       "Gleichwohl müssen wir anfangen.",
       "Die von uns geplanten Schulungen finden begleitend statt."
     ],
-    "cultural_theme": "Opinions"
+    "cultural_theme": "Digitalisierung & Verwaltung",
+    "cultural_note": "In deutschen Kommunen stoßen Digitalprojekte oft auf lückenhafte Infrastruktur: Während Großstädte Glasfaser ausbauen, fehlen im ländlichen Raum Zuständigkeiten. Deshalb sind begleitende Schulungen nicht Zusatz, sondern Voraussetzung — ohne sie bleibt das neue System ungenutzt, obwohl es beschlossen ist. Typisch ist das Pflichtenheft, das jede Abteilung vorab unterschreibt.",
+    "culturalNoteAr": "في البلديات الألمانية تصطدم مشاريع الرقمنة ببنية ناقصة: المدن الكبرى تمدد الألياف بينما يغيب التنسيق في الريف. لذا التدريب المرافق شرط لا إضافة."
   },
   {
     "id": "d-b2-03",
@@ -1229,7 +1231,9 @@
       "Wir sollten die Behauptung in Frage stellen.",
       "Ohne belastbare Daten ist die Schlussfolgerung hinfällig."
     ],
-    "cultural_theme": "Opinions"
+    "cultural_theme": "Medien & Pressekodex",
+    "cultural_note": "Medienkritik in Deutschland bezieht sich auf den Pressekodex: Trennung von Nachricht und Kommentar, Gegendarstellung und Richtigstellung. Weil soziale Netzwerke Klicks belohnen, obwohl Redaktionen Sorgfalt versprechen, entsteht Spannungsfeld zwischen Tempo und Prüfung. Typisch ist die Verifikation durch zwei unabhängige Quellen vor Abdruck.",
+    "culturalNoteAr": "نقد الإعلام في ألمانيا يستند إلى ميثاق الصحافة: فصل الخبر عن التعليق وحق الرد. شبكات التواصل تكافئ السرعة بينما تعد الصحافة بالتدقيق."
   },
   {
     "id": "d-b2-04",
@@ -1294,7 +1298,9 @@
       "Ich habe das Projekt erfolgreich abgeschlossen.",
       "Unter der Bedingung einer schriftlichen Zusage."
     ],
-    "cultural_theme": "Society"
+    "cultural_theme": "Arbeit & Tarif",
+    "cultural_note": "Gehaltsverhandlungen orientieren sich am Tarifvertrag: Entgeltgruppen, Jahressonderzahlung und 30 Tage Urlaub sind oft fest. Wer außerhalb des Tarifs verhandelt, argumentiert mit Marktwert, muss aber Brutto/Netto, Sozialabgaben und Überstundenkonto mitdenken. Typisch ist die Frage nach Entwicklungsstufen statt nur Einstiegsgehalt.",
+    "culturalNoteAr": "مفاوضات الرواتب تستند إلى الاتفاق الجماعي: فئات الأجور والمكافأة السنوية و30 يوم إجازة. خارج الاتفاق يُحتج بقيمة السوق مع حساب الصافي والضرائب."
   },
   {
     "id": "d-b2-05",
@@ -1829,7 +1835,9 @@
       "Wer nur noch Ergebnisse konsumiert, verlernt das Denken.",
       "Wir brauchen Urteilskraft als Lernziel."
     ],
-    "cultural_theme": "Society"
+    "cultural_theme": "Bildung & KI",
+    "cultural_note": "Die Kultusministerkonferenz empfiehlt, KI als Werkzeug zu lehren, nicht zu verbieten: Plagiatsprüfung, Quellenkritik und Datenschutz (DSGVO) gehören in die Unterrichtsplanung. Weil Schulen Landeshoheit haben, obwohl Lehrpläne bundesweit verglichen werden, unterscheiden sich Regeln je nach Bundesland. Typisch ist die schulinterne KI-Leitlinie mit Eltern-Infoabend.",
+    "culturalNoteAr": "توصي مؤتمر وزراء التعليم بتدريس الذكاء أداةً لا حظراً: فحص الانتحال ونقد المصادر وحماية البيانات. لاختلاف الولايات تختلف القواعد."
   },
   {
     "id": "d-b2-07",
@@ -2486,7 +2494,9 @@
       "Was ist Ihre größte Stärke?",
       "Ich arbeite strukturiert und bleibe auch unter Druck ruhig."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Bewerbung & Arbeit",
+    "cultural_note": "Das Vorstellungsgespräch folgt oft dem STAR-Schema: Situation, Aufgabe, Aktion, Ergebnis. Personaler achten auf Lücken im Lebenslauf und fragen nach Gehaltswunsch brutto jährlich. Weil Zeugnisse Formulierungen wie „stets zur vollen Zufriedenheit“ codiert nutzen, obwohl Noten fehlen, lohnt ein Blick in Zeugnissprache. Typisch ist die Gehaltsbande statt fixer Zahl.",
+    "culturalNoteAr": "مقابلة العمل تتبع نموذج STAR: وضع ومهمة وفعل ونتيجة. يهتمون بفجوات السيرة وسؤال الراتب السنوي الإجمالي. الشهادات تستخدم ترميزاً لغوياً."
   },
   {
     "id": "d-b1-10",
@@ -4476,7 +4486,9 @@
       "Dann bekommen Sie einen Anpassungslehrgang zugewiesen, höchstens 16 Monate Praxis.",
       "Regulär drei Monate; mit Ihrer Berufserlaubnis im Warteverfahren — ja, eingeschränkt."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Anerkennung & Beruf",
+    "cultural_note": "Die Anerkennung ausländischer Abschlüsse läuft über die Bezirksregierung oder IHK: Gleichwertigkeitsprüfung nach Berufsqualifikationsfeststellungsgesetz. Während der Prüfung darf man oft mit befristeter Erlaubnis arbeiten, obwohl die volle Berufserlaubnis noch fehlt. IQ-Beratungsstellen helfen kostenlos bei Übersetzung und Fächerübersicht. Typisch ist die Wartezeit bis drei Monate.",
+    "culturalNoteAr": "الاعتراف بالشهادات عبر الحكومة المحلية أو غرفة الصناعة: فحص التكافؤ قانوناً. أثناء الفحص يسمح بالعمل المؤقت. مراكز IQ تقدم استشارة مجانية."
   },
   {
     "id": "d-b2-13",
@@ -4573,7 +4585,9 @@
       "Ja — unteres Einkommen wird prozentual stärker ersetzt, bis 67 Prozent.",
       "Im Portal als PDF, je Monat ein Dokument — Scans ohne Stempel akzeptieren wir nicht."
     ],
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Familie & Elterngeld",
+    "cultural_note": "Elterngeld ersetzt 65% des Netto-Einkommens, maximal 1.800 €, und wird bei der Elterngeldstelle beantragt. Elternzeit muss sieben Wochen vorher schriftlich angezeigt werden, obwohl der Arbeitgeber sie nicht ablehnen darf. Wichtig ist die Aufteilung: 12+2 Monate bei Partnermonaten. Typisch ist der Beratungstermin beim Jugendamt.",
+    "culturalNoteAr": "بدل الوالدية يعوض 65% من الصافي حتى 1800€ ويُطلب من مكتب بدل الوالدية. إجازة الوالدية تُعلن قبل 7 أسابيع كتابةً ولا يمكن رفضها."
   },
   {
     "id": "d-b2-14",
@@ -4670,7 +4684,9 @@
       "Innerhalb eines Monats, aber nur mit geänderter Einkommensprognose.",
       "Mit Beratung verlängert sich die Frist automatisch bis April nächsten Jahres."
     ],
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Steuern & Finanzamt",
+    "cultural_note": "Die Steuererklärung für Arbeitnehmer war bis 31. Juli fällig (mit Steuerberater bis 30. April des übernächsten Jahres). ELSTER ist Pflicht für elektronische Abgabe, obwohl Belege nur auf Nachfrage eingereicht werden. Wer Pendlerpauschale nutzt, braucht den Arbeitsweg-Nachweis. Typisch ist der Bescheid mit Einspruchsfrist von einem Monat.",
+    "culturalNoteAr": "الإقرار الضريبي للموظف كان حتى 31 يوليو (مع مستشار حتى 30 أبريل بعد القادم). ELSTER إلزامي إلكترونياً رغم طلب الإثباتات عند الحاجة."
   },
   {
     "id": "d-b2-15",
@@ -4865,7 +4881,9 @@
       "Das Zertifikat setzt 80 Prozent Teilnahme voraus, nicht weniger.",
       "Bei Krankheit in der Prüfungswoche: Nachschreibtermin?"
     ],
-    "cultural_theme": "Culture"
+    "cultural_theme": "Bildung & VHS",
+    "cultural_note": "Volkshochschulen bieten Integrations- und Berufssprachkurse (BSK B2) mit BAMF-Zulassung an. Ein Tausch des Seminartermins braucht schriftliche Umbuchung, obwohl Wartelisten existieren. Mit Bildungsgutschein oder Aktivierungs- und Vermittlungsgutschein zahlt die Agentur für Arbeit. Typisch ist die Teilnahmebescheinigung mit Fehlzeitenquote.",
+    "culturalNoteAr": "المدارس الشعبية تقدم دورات اندماج ولغة مهنية B2 بترخيص BAMF. تغيير الموعد يحتاج حجزاً كتابياً رغم قوائم الانتظار. قسيمة التعليم تغطي التكاليف."
   },
   {
     "id": "d-b2-17",
@@ -4962,7 +4980,9 @@
       "Der Anspruch ruht; wir verlängern die Bindung um die Pause, nicht die Kosten.",
       "Bei Branchennähe ja; Rückzahlungsklausel bei Wechsel unter 24 Monaten."
     ],
-    "cultural_theme": "Innovation"
+    "cultural_theme": "Weiterbildung & Förderung",
+    "cultural_note": "Arbeitgeber können Weiterbildung über Qualifizierungschancengesetz fördern: bis 100% Lehrgangskosten plus Arbeitsentgeltzuschuss. Bildungsurlaub (5 Tage/Jahr) ist in fast allen Bundesländern Anspruch, obwohl der Antrag sechs Wochen vorher gestellt werden muss. Aufstiegs-BAföG deckt Meisterkurse ab. Typisch ist die Rückzahlungsklausel bei Kündigung kurz nach Abschluss.",
+    "culturalNoteAr": "يمكن لأصحاب العمل تمويل التدريب عبر قانون فرص التأهيل حتى 100% من الرسوم. الإجازة التعليمية 5 أيام سنوياً حق في معظم الولايات."
   },
   {
     "id": "d-b2-18",
@@ -5157,7 +5177,9 @@
       "Gut so. Dann setzen wir einen runden Tisch: jede Seite nennt drei Bedürfnisse.",
       "Konstruktiv. Wiedervorlage nach sechs Wochen — damit es nicht verpufft."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Betrieb & Konflikt",
+    "cultural_note": "Teamkonflikte moderiert die Führungskraft nach Betriebsvereinbarung: Alle hören zu, Interessen werden gesammelt, nicht Positionen verteidigt. Der Betriebsrat achtet darauf, dass keine Abmahnung ohne Anhörung erfolgt. Weil Feedback in Deutschland direkt formuliert wird, obwohl Beziehung wichtig bleibt, üben Teams gewaltfreie Kommunikation. Typisch ist das Protokoll mit Zuständigkeiten und Frist.",
+    "culturalNoteAr": "نزاع الفريق تديره القيادة حسب اتفاق المنشأة: استماع وجمع مصالح لا دفاع عن مواقف. لجنة العاملين تراقب عدم الإنذار بلا استماع."
   },
   {
     "id": "d-b2-20",
@@ -5352,7 +5374,9 @@
       "Karenzzeit bis 18 Monate möglich; die Zinsen laufen weiter, werden gestundet.",
       "Zwischen 120 und 200 Euro, abhängig vom Zinsnachlass bei Gehaltsüberweisung."
     ],
-    "cultural_theme": "Society"
+    "cultural_theme": "Studium & Finanzierung",
+    "cultural_note": "Der KfW-Studienkredit finanziert Lebenshaltungskosten bis 650 € monatlich, unabhängig vom Einkommen der Eltern. BAföG dagegen prüft Einkommen und Vermögen, obwohl beide kombinierbar sind. Die Rückzahlung beginnt 18 Monate nach letzter Auszahlung, gedeckelt bei 77 €. Typisch ist die Bonitätsprüfung mit Schufa-Eintrag.",
+    "culturalNoteAr": "قرض KfW الدراسي يمول المعيشة حتى 650€ شهرياً بلا دخل والدي. BAföG يفحص الدخل والثروة رغم إمكان الجمع. السداد بعد 18 شهراً بحد 77€."
   },
   {
     "id": "d-b2-22",
@@ -5449,7 +5473,9 @@
       "Wir stufen als akut ein: Dringlichkeitscode C auf dem Schein verkürzt die Wartezeit.",
       "Parallel ja, aber die Akten müssen austauschbar sein — mit Ihrem Einverständnis."
     ],
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Gesundheit & Überweisung",
+    "cultural_note": "Hausärzte überweisen mit Überweisungsschein (Muster 6) an Fachärzte; ohne ihn wartet man länger. Termine vermittelt die 116 117 (Terminservicestelle) binnen vier Wochen, wenn als dringlich markiert. Die elektronische Patientenakte (ePA) teilen Haus- und Facharzt, obwohl Zustimmung nötig ist. Typisch ist die 10 €-Praxisgebühr — abgeschafft, aber oft noch im Gespräch.",
+    "culturalNoteAr": "طبيب الأسرة يحيل بورقة تحويل نموذج 6؛ بدونها انتظار أطول. المواعيد عبر 116117 خلال 4 أسابيع إن وُسمت عاجلة. الملف الإلكتروني يتشاركه الطبيبان بموافقة."
   },
   {
     "id": "d-b2-23",
@@ -5546,7 +5572,9 @@
       "Frei im Block: zwei Tage plus Zuschlag pro Überstunde laut Tarif.",
       "Dann Einigungsstelle; der Spruch ersetzt die Weigerung des Arbeitgebers."
     ],
-    "cultural_theme": "Culture"
+    "cultural_theme": "Arbeit & Mitbestimmung",
+    "cultural_note": "Das Arbeitszeitgesetz erlaubt max. 10 Stunden täglich, im Schnitt 8 über sechs Monate. Der Betriebsrat wacht über das Arbeitszeitkonto (Betriebsverfassungsgesetz §87). Überstunden brauchen Betriebsvereinbarung oder Tariföffnungsklausel, obwohl kurzfristige Anordnung möglich ist. Typisch ist Freizeitausgleich 1:1 plus 25% Zuschlag ab 20. Stunde.",
+    "culturalNoteAr": "قانون وقت العمل يسمح بحد 10 ساعات يومياً ومتوسط 8 عبر 6 أشهر. لجنة العاملين تراقب حساب الوقت. الساعات الإضافية تحتاج اتفاق منشأة."
   },
   {
     "id": "d-b2-24",
@@ -5643,7 +5671,9 @@
       "Bestanden ist bestanden — das Zertifikat kommt nach vier Wochen per Post.",
       "Die Kursträger können die Gebühren halbieren — Antrag binnen zwei Wochen."
     ],
-    "cultural_theme": "Culture"
+    "cultural_theme": "Integration & Prüfung",
+    "cultural_note": "Integrationskurse (700 UE: 600 Sprache + 100 Orientierung) enden mit DTZ (A2/B1) und „Leben in Deutschland“. Eine Wiederholung von 300 UE ist auf Antrag möglich, wenn B1 knapp verfehlt wurde. BAMF zahlt 50% Kostenerstattung bei bestandener Prüfung binnen zwei Jahren. Typisch ist die Trägerbescheinigung für Einbürgerung.",
+    "culturalNoteAr": "دورات الاندماج 700 وحدة تنتهي باختبار DTZ و«الحياة في ألمانيا». إعادة 300 وحدة ممكنة بطلب إن أُخفق بفارق ضئيل. BAMF يرد 50% عند النجاح خلال سنتين."
   },
   {
     "id": "d-b2-25",
@@ -5838,7 +5868,9 @@
       "Dann unterschreiben beide den Wechsel; die alten Gutachten werden übertragen.",
       "Nein — er bleibt, es sei denn, Sie beantragen einen Aufschub."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Hochschule & Promotion",
+    "cultural_note": "Die Promotionsordnung regelt Exposé, Betreuungsvereinbarung und jährliches Kolloquium. Ein Wechsel der Betreuung braucht Zustimmung des Promotionsausschusses, obwohl gute Gründe (Themenwechsel, Ausland) anerkannt werden. Ohne Immatrikulation fehlt die Unfallversicherung über Hochschule. Typisch ist die Mitgliedschaft im Graduiertenkolleg mit Stipendium.",
+    "culturalNoteAr": "لائحة الدكتوراه تنظم المقترح واتفاق الإشراف والندوة السنوية. تغيير المشرف يحتاج موافقة لجنة الدكتوراه رغم قبول الأسباب الوجيهة."
   },
   {
     "id": "d-b2-27",
@@ -5945,7 +5977,9 @@
       "Vor der Klage gehört der Schlichtungsversuch zur Pflicht — dazu bin ich da.",
       "Katasterauszug, Fotos mit Maßstab, die Mahnung von damals, zwei Zeugen genügen."
     ],
-    "cultural_theme": "Opinions"
+    "cultural_theme": "Wohnen & Nachbarschaft",
+    "cultural_note": "Nachbarschaftsstreit lösen Schlichtungsstellen der Gemeinde vor Klage — in NRW und Berlin teils Pflicht. Die Hausordnung regelt Ruhezeiten (22–6 Uhr), Grillplatz und Fahrräder im Keller. Lärmprotokolle mit Datum/Uhrzeit sind Grundlage für Abmahnung durch Vermieter. Typisch ist der Mediationsversuch mit neutraler Moderation.",
+    "culturalNoteAr": "نزاع الجوار تحله هيئات الصلح البلدية قبل الدعوى — في ولايات إلزامي. نظام المنزل ينظم الهدوء والشواء والدراجات. محاضر الضوضاء أساس الإنذار."
   },
   {
     "id": "d-a1-31",
@@ -6447,7 +6481,9 @@
       "Das ist richtig. Ich habe in dieser Zeit meine Mutter gepflegt und nebenbei einen Fachkurs abgeschlossen.",
       "Inwiefern hat Sie diese Zeit beruflich weitergebracht?"
     ],
-    "cultural_theme": "Innovation"
+    "cultural_theme": "Bewerbung & Gespräch",
+    "cultural_note": "Kritische Fragen („Wo sehen Sie sich in fünf Jahren?“) testen Selbstreflexion, nicht perfekte Antwort. Personaler unterscheiden Pflicht- und Wunschkriterien aus Stellenanzeige und achten auf Gehaltsangabe als Brutto-Jahreszahl. Bewerber sollten Lücken erklären und Stärken mit Beleg nennen. Typisch ist die Rückfrage: „Haben Sie noch Fragen an uns?“",
+    "culturalNoteAr": "الأسئلة الحرجة تختبر التأمل الذاتي لا الجواب المثالي. يميزون معايير إلزامية ومرغوبة وينتبهون للراتب كإجمالي سنوي. الفجوات تُشرح بأدلة."
   },
   {
     "id": "d-b2-32",
@@ -11784,7 +11820,9 @@
       "Grundsätzlich ist die Nachfrage hoch, insbesondere in technischen Berufen und im Gesundheitswesen."
     ],
     "hoertext": true,
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Arbeit & Zuwanderung",
+    "cultural_note": "Der Arbeitsmarkt sucht Fachkräfte (MINT, Pflege): Blue Card ab ca. 45.300 € Brutto, Chancenkarte seit 2024 für Jobsuche. Anerkennung und Deutsch B1 beschleunigen Einstellung, obwohl Betriebe Einarbeitung zahlen. Typisch ist das beschleunigte Fachkräfteverfahren über Ausländerbehörde (3 Wochen).",
+    "culturalNoteAr": "سوق العمل يطلب كفاءات (MINT ورعاية): بطاقة زرقاء من 45300€ إجمالي وفرصة منذ 2024. الاعتراف وألمانية B1 تسرع التوظيف."
   },
   {
     "id": "d-a0-09",
@@ -12405,7 +12443,9 @@
     "dictation": [
       "Umweltaktivisten haben heute Morgen eine Autobahn in einer Großstadt blockiert, indem sie sich auf der Fahrbahn festklebten."
     ],
-    "cultural_theme": "Innovation"
+    "cultural_theme": "Versammlungsrecht & Klima",
+    "cultural_note": "Klimaproteste auf Autobahnen berühren Versammlungsrecht vs. Straßenverkehrsordnung: Versammlungen sind anzumelden, Blockaden nicht erlaubt. Polizei löst nach Verhältnismäßigkeitsprinzip auf, obwohl Berichterstattung Meinungsfreiheit schützt. Typisch ist die Abwägung zwischen Klimaschutz als Staatsziel (Art. 20a GG) und Eingriff in Grundrechte.",
+    "culturalNoteAr": "احتجاجات المناخ على الطرق تلامس قانون التجمع مقابل المرور: التجمعات تُسجل والحواجز ممنوعة. الشرطة تفض بالتناسب رغم حماية التغطية."
   },
   {
     "id": "d-b2-ht02",
@@ -12445,7 +12485,9 @@
     "dictation": [
       "Guten Tag, Sie haben unser Büro erreicht."
     ],
-    "cultural_theme": "Future plans"
+    "cultural_theme": "Büro & Service",
+    "cultural_note": "Bürozeiten und Anrufbeantworter verweisen nach Feierabend auf Notdienst: 116 117 ärztlich, 110 Polizei. Behörden schreiben „Bitte sehen Sie von Rückfragen ab“ — meint: Bitte nicht erneut anrufen, obwohl freundlich formuliert. Typisch ist die Bandansage mit Öffnungszeiten und E-Mail als Alternative.",
+    "culturalNoteAr": "ساعات المكتب والمجيب يحيلان بعد الدوام إلى طوارئ: 116117 طبياً و110 شرطة. الإدارات تكتب «يرجى عدم الاستفسار مجدداً» بلباقة."
   },
   {
     "id": "d-a0-ht02",
@@ -12754,7 +12796,9 @@
     "dictation": [
       "Betrachten wir ein Beispiel: Künstliche Intelligenz könnte berufliche Aufgaben verändern."
     ],
-    "cultural_theme": "Environment"
+    "cultural_theme": "Arbeit & KI",
+    "cultural_note": "KI am Arbeitsmarkt automatisiert Routine (Sortieren, Übersetzen), schafft aber neue Aufgaben: Prompting, Qualitätskontrolle, Datenschutz. IHKs bieten Zertifikate, obwohl Tarifverträge Umschulung noch selten regeln. Typisch ist die Betriebsvereinbarung zu KI, die Mitbestimmung nach §87 BetrVG sichert.",
+    "culturalNoteAr": "الذكاء يؤتمت الروتين ويخلق مهاماً جديدة: صياغة الأوامر وضبط الجودة وحماية البيانات. الغرف تقدم شهادات رغم ندرة التنظيم الاتفاقي."
   },
   {
     "id": "dlg-b1-wohnungssuche",
@@ -13558,7 +13602,10 @@
       "Wie verändert künstliche Intelligenz unsere Berufe",
       "Die Maschine macht Vorschläge, mehr nicht",
       "Technik soll helfen, nicht ersetzen"
-    ]
+    ],
+    "cultural_note": "Betriebe, die KI für Bewerbungen nutzen, brauchen Transparenz nach EU-KI-Verordnung (Hochrisiko). Der Betriebsrat hat Mitbestimmung bei Personalauswahl-Systemen, obwohl Geschäftsführung auf Effizienz drängt. Typisch ist die Prüfung auf Diskriminierung durch Testdatensätze. Ohne Erklärung bleibt die Software Blackbox — rechtlich unzulässig.",
+    "culturalNoteAr": "منشآت تستخدم الذكاء للتوظيف تحتاج شفافية حسب لائحة الاتحاد (عالي المخاطر). لجنة العاملين تشارك في أنظمة اختيار الموظفين.",
+    "cultural_theme": "KI & Mitbestimmung"
   },
   {
     "id": "d-b2-38",
@@ -13632,8 +13679,10 @@
       "Diese Darstellung ist, gelinde gesagt, irreführend, denn die Zahlen belegen das Gegenteil.",
       "Wir brauchen mehr soziale Wohnungen, sonst bleibt bezahlbares Wohnen illusorisch."
     ],
-    "cultural_theme": "Wohnen",
-    "level": "B2"
+    "cultural_theme": "Wohnen & Miete",
+    "level": "B2",
+    "cultural_note": "Die Mietpreisbremse deckelt Neuvermietung auf 10% über ortsüblicher Vergleichsmiete (Mietspiegel). Vermieter müssen Modernisierung 3 Monate vorher ankündigen, obwohl Mieterzustimmung bei Härtefall verweigert werden kann. Der Mieterverein berät gegen 90 € Jahresbeitrag. Typisch ist die Indexmiete mit jährlicher Anpassung an Verbraucherpreisindex.",
+    "culturalNoteAr": "كبح الإيجار يحدد الإيجار الجديد بـ10% فوق المعتاد حسب مؤشر الإيجار. يجب إعلان التحديث قبل 3 أشهر رغم إمكان الرفض لصعوبة."
   },
   {
     "id": "d-b2-39",
@@ -13707,8 +13756,10 @@
       "Dieser Optimismus ist schwer nachvollziehbar, denn viele Kollegen haben noch keinen Zugang.",
       "Wir brauchen mehr Zeit für Schulungen, sonst bleibt das Projekt ineffizient."
     ],
-    "cultural_theme": "Arbeit",
-    "level": "B2"
+    "cultural_theme": "Arbeit 4.0 & Homeoffice",
+    "level": "B2",
+    "cultural_note": "Das Arbeitsschutzgesetz gilt auch im Homeoffice: Gefährdungsbeurteilung, Arbeitszeitaufzeichnung und Unfallschutz (Wege vom Schreibtisch zur Küche versichert seit 2021). Arbeitgeber stellen Technik und zahlen anteilig Strom/Internet, obwohl Pauschale 6 €/Tag (max. 210 Tage) steuerlich gilt. Typisch ist die Betriebsvereinbarung zu Erreichbarkeit nach Feierabend.",
+    "culturalNoteAr": "قانون حماية العمل يشمل المنزل: تقييم مخاطر وتسجيل وقت وحماية حوادث. صاحب العمل يوفر التقنية ويساهم في الكهرباء/الإنترنت."
   },
   {
     "id": "d-b2-40",
@@ -13782,8 +13833,10 @@
       "Die Preise sind eigentlich nicht höher, jedoch fehlt oft die Information.",
       "Diese Behauptung ist kaum haltbar, denn Umfragen zeigen das Gegenteil."
     ],
-    "cultural_theme": "Umwelt",
-    "level": "B2"
+    "cultural_theme": "Umwelt & Konsum",
+    "level": "B2",
+    "cultural_note": "Deutsche Kreislaufwirtschaft nutzt Pfand: 8 Cent Einweg, 15–25 Cent Mehrweg, Rückgabe an jedem Händler. Der Grüne Punkt finanziert Sortierung, obwohl Verbraucher selbst trennen müssen (Gelb, Blau, Schwarz). Reparaturbonus in Thüringen/Sachsen erstattet 50% Kosten. Typisch ist die Kaufberatung über Umweltzeichen Blauer Engel.",
+    "culturalNoteAr": "الاقتصاد الدائري يستخدم الرهن: 8 سنت أحادي و15-25 متعدد، إرجاع عند كل تاجر. النقطة الخضراء تمول الفرز رغم وجوب فصل المستهلك."
   },
   {
     "id": "d-b2-41",
@@ -13857,8 +13910,10 @@
       "Die Erwartungen sind oft unrealistisch, jedoch fehlt auch die Begleitung im Betrieb.",
       "Diese Aussage ist nur teilweise richtig, denn die Zahlen zeigen auch fehlende Unterstützung."
     ],
-    "cultural_theme": "Bildung",
-    "level": "B2"
+    "cultural_theme": "Ausbildung & Beruf",
+    "level": "B2",
+    "cultural_note": "Die duale Ausbildung (Betrieb + Berufsschule) dauert 2–3,5 Jahre, IHK/HWK prüft. Azubis erhalten Ausbildungsvergütung und Berufsschulpflicht bis 18. Kündigung ist in Probezeit fristlos, danach nur aus wichtigem Grund möglich. Typisch ist der Berichtsheft-Nachweis täglich — ohne ihn keine Zulassung zur Abschlussprüfung.",
+    "culturalNoteAr": "التكوين المزدوج (شركة+مدرسة مهنية) 2-3.5 سنة وتختبره الغرف. المتدربون يتقاضون مكافأة ويلزمون بمدرسة حتى 18."
   },
   {
     "id": "d-b2-42",
@@ -13932,8 +13987,10 @@
       "Die Qualität leidet leider, denn die Zeit pro Patient ist stark gesunken.",
       "Diese Reform ist in der Praxis kaum spürbar, denn die Belastung bleibt hoch."
     ],
-    "cultural_theme": "Gesundheit",
-    "level": "B2"
+    "cultural_theme": "Gesundheit & Pflege",
+    "level": "B2",
+    "cultural_note": "Krankenversicherung ist Pflicht: GKV-Beitrag ca. 14,6% plus Zusatzbeitrag, Arbeitgeber zahlt Hälfte. Pflegegrade 1–5 bestimmen Leistungen: Pflegegeld, Tagespflege, Kurzzeitpflege. Entlastungsbetrag 131 € monatlich für Haushaltshilfe ist oft unbekannt. Typisch ist der Hausarzt als Gatekeeper mit Überweisungspflicht.",
+    "culturalNoteAr": "التأمين الصحي إلزامي: اشتراك 14.6% + إضافي وصاحب العمل نصف. درجات الرعاية 1-5 تحدد الخدمات. مبلغ الإعفاء 131€ شهرياً لمساعدة المنزل."
   },
   {
     "id": "d-b2-43",
@@ -14007,8 +14064,10 @@
       "Die Menge ist riesig, jedoch fehlt oft der Überblick.",
       "Diese Behauptung ist verkürzt, denn Studien zeigen auch Interesse an Tiefe."
     ],
-    "cultural_theme": "Medien",
-    "level": "B2"
+    "cultural_theme": "Medien & Desinformation",
+    "level": "B2",
+    "cultural_note": "Desinformation verbreitet sich 6-mal schneller als Fakten — Landesmedienanstalten lehren Quellen-Check: Autor, Datum, Beleg, Gegendarstellung. Der Digital Services Act verpflichtet Plattformen zur Löschung illegaler Inhalte binnen 24h. Typisch ist der Faktencheck mit Correctiv oder dpa-Faktencheck vor Teilen.",
+    "culturalNoteAr": "المعلومات المضللة تنتشر 6 أضعاف الحقائق — هيئات الإعلام تعلم فحص المصدر: كاتب وتاريخ ودليل ورد. قانون الخدمات الرقمية يلزم المنصات بالحذف خلال 24 ساعة."
   },
   {
     "id": "d-b2-44",
@@ -14082,8 +14141,10 @@
       "Am Anfang ja, jedoch braucht Integration auch Kontakte im Alltag.",
       "Diese Ansicht ist zu eng, denn Sprache lernt man durch Anwendung."
     ],
-    "cultural_theme": "Integration",
-    "level": "B2"
+    "cultural_theme": "Integration & Sprache",
+    "level": "B2",
+    "cultural_note": "Integrationskurs und Einbürgerung hängen zusammen: B1 plus „Leben in Deutschland“ (15/33 Punkte) sind Voraussetzung, seit 2024 auch bei 5 Jahren Aufenthalt möglich. Der Einbürgerungstest fragt Staatsordnung und Geschichte, obwohl Mehrstaatigkeit nun erlaubt ist. Typisch ist die Loyalitätserklärung und Bekenntnis zum GG.",
+    "culturalNoteAr": "دورة الاندماج والتجنس مرتبطة: B1 و«الحياة في ألمانيا» شرط، منذ 2024 بعد 5 سنوات. اختبار التجنس يسأل نظام الدولة والتاريخ رغم السماح بتعدد الجنسية."
   },
   {
     "id": "d-b2-45",
@@ -14157,8 +14218,10 @@
       "Beides ja, jedoch ist der Platz begrenzt, deshalb braucht es Prioritäten.",
       "Diese Kritik ist nicht neu, denn jede Veränderung erzeugt Widerstand."
     ],
-    "cultural_theme": "Mobilität",
-    "level": "B2"
+    "cultural_theme": "Mobilität & Verkehrswende",
+    "level": "B2",
+    "cultural_note": "Das 49‑Euro‑Ticket (Deutschlandticket) gilt bundesweit im Nahverkehr, obwohl Fernverkehr ausgenommen ist. Kommunen fördern Radverkehr mit Abstellanlagen an Bahnhöfen und JobRad-Leasing über Bruttoumwandlung. Verkehrswende meint: Priorität Umweltverbund (Fuß, Rad, ÖPNV) vor Auto. Typisch ist die Mobilitätsstation mit Sharing-Angebot.",
+    "culturalNoteAr": "تذكرة 49€ (ألمانيا) صالحة محلياً في كل البلاد رغم استثناء البعيد. البلديات تشجع الدراجات بمواقف في المحطات وتأجير عبر تحويل إجمالي."
   },
   {
     "id": "d-b2-46",
@@ -14232,8 +14295,10 @@
       "Genau, deshalb ist das Ergebnis oft Stress, nicht mehr Freiheit.",
       "Diese Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko."
     ],
-    "cultural_theme": "Arbeit",
-    "level": "B2"
+    "cultural_theme": "Arbeitswelt & Zeit",
+    "level": "B2",
+    "cultural_note": "Die 4‑Tage‑Woche wird in Pilotprojekten mit 32 Stunden bei vollem Lohn getestet — von 61 britischen Firmen blieben 91% dabei, weil Produktivität hielt. Tarifautonomie bedeutet: Gewerkschaft und Arbeitgeberverband verhandeln ohne Staat. Betriebsräte sichern Arbeitszeitkonten. Typisch ist Gleitzeit mit Kernzeit 9–15 Uhr.",
+    "culturalNoteAr": "أسبوع 4 أيام يُجرب بـ32 ساعة بأجر كامل — من 61 شركة بريطانية بقيت 91% لأن الإنتاجية ثبتت. استقلالية الأجور تعني تفاوض النقابة واتحاد أصحاب العمل بلا دولة."
   },
   {
     "id": "d-b2-47",
@@ -14307,8 +14372,10 @@
       "Sie helfen teilweise, jedoch ersetzen sie nicht das eigene Denken.",
       "Diese Regelung ist lückenhaft, denn die Praxis entwickelt sich schneller als die Regeln."
     ],
-    "cultural_theme": "Bildung",
-    "level": "B2"
+    "cultural_theme": "Bildung & Digitalpakt",
+    "level": "B2",
+    "cultural_note": "Der Digitalpakt Schule finanziert WLAN, Tablets und Lernplattformen (Moodle, itslearning). Datenschutz verlangt Auftragsverarbeitungsverträge, obwohl Lehrkräfte oft private Tools nutzen. Medienkompetenz ist Querschnittsthema in allen Fächern, nicht eigenes Fach. Typisch ist die Medienentwicklungsplanung pro Schule mit Fortbildungen.",
+    "culturalNoteAr": "ميثاق الرقمنة المدرسي يمول الشبكات والأجهزة ومنصات التعلم. حماية البيانات تتطلب عقود معالجة رغم استخدام المعلمين أدوات خاصة."
   },
   {
     "id": "d-b2-48",
@@ -14382,8 +14449,10 @@
       "Die Angebote sind zahlreich, jedoch fehlt oft die Vermittlung.",
       "Diese Aussage ist zu allgemein, denn die Zahlen sinken in vielen Bereichen."
     ],
-    "cultural_theme": "Gesellschaft",
-    "level": "B2"
+    "cultural_theme": "Ehrenamt & Verein",
+    "level": "B2",
+    "cultural_note": "25 Mio. Deutsche engagieren sich ehrenamtlich — meist im Verein (e.V.). Ehrenamtspauschale (840 € steuerfrei) und Übungsleiterpauschale (3.000 €) honorieren Aufwand, obwohl kein Lohn. Anerkennung: Urkunde vom Bundespräsidenten nach 20 Jahren. Typisch ist die Satzung mit Vorstand und Mitgliederversammlung.",
+    "culturalNoteAr": "25 مليون ألماني يتطوعون غالباً في جمعية مسجلة. بدل التطوع 840€ معفاة وبدل المدرب 3000€ يكرمان الجهد بلا أجر."
   },
   {
     "id": "d-b2-49",
@@ -14457,7 +14526,9 @@
       "Die Möglichkeiten gibt es, jedoch fehlt oft das Vertrauen.",
       "Diese Diagnose ist verkürzt, denn viele wollen mitgestalten, finden aber keinen Zugang."
     ],
-    "cultural_theme": "Politik",
-    "level": "B2"
+    "cultural_theme": "Demokratie & Beteiligung",
+    "level": "B2",
+    "cultural_note": "Bürgerbeteiligung reicht von Anhörung bis Volksbegehren (Quorum 10% in Berlin). Gemeinderäte entscheiden über Bebauungsplan und Haushaltsplan, obwohl Verwaltung entwirft. Petitionen an Bundestag brauchen 50.000 Stimmen für öffentliche Anhörung. Typisch ist die Einwohnerversammlung mit Fragerecht vor Abstimmung.",
+    "culturalNoteAr": "مشاركة المواطنين من استماع إلى استفتاء (نصاب 10% في برلين). المجالس البلدية تقرر مخطط البناء والميزانية رغم إعداد الإدارة."
   }
 ]
