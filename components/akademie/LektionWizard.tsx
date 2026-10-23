@@ -600,10 +600,10 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
             )}
             {(() => { const k = kulturFuer(topicId, topic.level); return k ? (
               <div data-testid="wizard-kultur" className="card" style={{ padding: "0.6rem 0.85rem", background: "var(--ui-surface-raised)", borderInlineStart: "5px solid var(--color-b2)", display: "grid", gap: "0.35rem" }}>
-                <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — لمسة ثقافية {topic.level==="B2" ? "· B2 Lebenswelt" : ""}</strong>
+                <strong style={{ fontSize: "0.85rem" }}>🌍 في ألمانيا — لمسة ثقافية {topic.level==="B2" ? "· B2 Lebenswelt" : ""} {topic.level==="B2" ? <span style={{ fontWeight:800, fontSize:"0.68rem", background:"rgb(167 139 250 / 0.14)", padding:"0.12rem 0.45rem", borderRadius:"999px", color:"#a78bfa", border:"1px solid rgb(167 139 250 / 0.3)" }}>BAMF I-VI</span> : null}</strong>
                 <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }} dir="ltr"><De>{k.de}</De></span>
                 <span style={{ fontSize: "0.82rem", lineHeight: 1.85, color: "var(--color-ink2)" }}>{k.ar}</span>
-                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح سياقي — يُظهر متى يُستعمل النمط، لا يُمتحن. {topic.level==="B2" ? "BAMF Handlungsfeld: Beruf & Alltag — تسجيل، تأمين، سكن." : ""}</span>
+                <span style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>تلميح سياقي — يُظهر متى يُستعمل النمط، لا يُمتحن. {topic.level==="B2" ? "BAMF Handlungsfeld: Beruf/Alltag — تسجيل (Anmeldung) · تأمين (Krankenkasse) · سكن (Mietvertrag) · عمل (Anerkennung)." : ""}</span>
               </div>
             ) : null; })()}
             {(topic as unknown as {resources?: string[]}).resources && ((topic as unknown as {resources?: string[]}).resources!.length>0) && (
