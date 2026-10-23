@@ -96,9 +96,9 @@ export default function TodayStepper({ plan, progress: _progress, ritual, stepFr
 
   return (
     <section className="today-stepper" aria-label="خريطة اليوم — 5 خطوات" data-testid="today-stepper">
-      {/* Progress header */}
+      {/* Progress header — Verlag-style: Karte nicht Spielbrett (distinctive, kein Duolingo-Klon) */}
       <div className="today-stepper-head">
-        <div className="today-stepper-title">🗺️ خريطة يومك — خط واحد واضح</div>
+        <div className="today-stepper-title">🗺️ خريطة يومك — خط واحد واضح <span style={{fontWeight:400, fontSize:"0.78rem", color:"var(--ui-muted)"}} dir="ltr">— Verlag: klar · ruhig · akademisch</span></div>
         <div className="today-stepper-progress" role="progressbar" aria-valuenow={progressPct} aria-valuemin={0} aria-valuemax={100} aria-label={`التقدم ${doneCount} من ${totalSteps}`}>
           <div className="today-stepper-bar">
             <div className="today-stepper-fill" style={{ width: `${progressPct}%` }} />
