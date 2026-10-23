@@ -17,6 +17,7 @@ import { speakAny } from "@/lib/speech";
 import { useProgress, planeVerifikation } from "@/lib/store";
 import { De } from "@/components/De";
 import ExerciseSet, { type ExerciseProgress } from "@/components/exercises";
+import { ggpForTopic } from "@/lib/ggp";
 
 /** الخطوات الخمس — الترتيب نفسه هو الميثاق (K108a) */
 const SCHRITTE = ["خمّن", "قاعدة", "أمثلة", "تطبيق", "خلاصة"] as const;
@@ -347,6 +348,14 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
         ))}
       </div>
 
+      {/* ── GGP 150 — شارة المرجع الأكاديمي (لا بيانات جديدة) ── */}
+      {(() => { const feats = ggpForTopic(topicId); return feats.length ? (
+        <div data-testid="wizard-ggp" style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", alignItems: "center", fontSize: "0.73rem" }}>
+          <span style={{ fontWeight: 900, color: "var(--ui-muted)" }}>📑 GGP:</span>
+          {feats.map((f) => <span key={f.code} className="ggp-chip" title={`${f.titelDe} — ${f.titelAr}`} data-testid={`ggp-${f.code}`}>{f.code} · {f.titelDe}</span>)}
+          <span style={{ color: "var(--ui-muted)" }}>· {topic.level} · {feats[0].familie}</span>
+        </div>
+      ) : null; })()}
       <div data-testid="wizard-voraus" style={{ fontSize: "0.8rem", color: "var(--color-ink2)" }}>
         {topic.voraus && topic.voraus.length > 0
           ? <>🧱 يبني على: {topic.voraus.map((v) => grammarMap[v]?.titleAr ?? v).join(" · ")}</>

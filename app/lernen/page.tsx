@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useProgress } from "@/lib/store";
 import { buildDay, grammarAssignmentForDay, COURSE_TOPIC_ORDER } from "@/lib/plan";
 import { grammarMap } from "@/lib/content";
+import { GGP_FEATURES, GGP_FAMILIEN } from "@/lib/ggp";
 import { LektionWizard } from "@/components/akademie/LektionWizard";
 import { FehlerGrenze } from "@/components/fehlergrenze";
 
@@ -20,6 +21,8 @@ export default function Lernen() {
   const plan = buildDay(day, progress);
   const [wahl, setWahl] = useState<string>("");
   const [q, setQ] = useState("");
+  const [ggpFilter, setGgpFilter] = useState<string>("");
+  const [familieFilter, setFamilieFilter] = useState<string>("");
   const qNorm = q.trim().toLowerCase();
 
   const gramTask = plan.tasks.find((t) => t.kind === "grammatik" && t.topicId);
@@ -65,6 +68,22 @@ export default function Lernen() {
             نتائج البحث تُفلتر القائمة أدناه — امسح الحقل لإظهار الكل.
           </div>
         )}
+        {/* GGP 150 Filter — لا بيانات جديدة، تصنيف عرضي فقط */}
+        <div style={{ display: "grid", gap: "0.4rem", marginTop: "0.4rem" }} data-testid="ggp-filter">
+          <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", alignItems: "center" }}>
+            <span style={{ fontSize: "0.78rem", fontWeight: 800 }}>📑 GGP 150:</span>
+            {["", "A1", "A2", "B1", "B2"].map((lvl) => (
+              <button key={lvl || "all"} type="button" data-testid={`ggp-level-${lvl || "all"}`} className="chip" style={{ minHeight: "36px", background: ggpFilter === lvl ? "var(--ui-green)" : undefined, color: ggpFilter === lvl ? "white" : undefined, fontWeight: ggpFilter === lvl ? 800 : 600 }} onClick={() => setGgpFilter(lvl)}>{lvl || "الكل"} {lvl ? `· ${GGP_FEATURES.filter((f) => f.level === lvl).length}` : `· 150`}</button>
+            ))}
+            {(ggpFilter || familieFilter) && <button type="button" className="chip" style={{ minHeight: "36px" }} onClick={() => { setGgpFilter(""); setFamilieFilter(""); setQ(""); }}>✕ مسح</button>}
+          </div>
+          <div style={{ display: "flex", gap: "0.3rem", flexWrap: "wrap" }}>
+            {GGP_FAMILIEN.map((fam) => (
+              <button key={fam} type="button" data-testid={`ggp-familie-${fam}`} className="chip" style={{ minHeight: "32px", fontSize: "0.74rem", background: familieFilter === fam ? "var(--color-gold-soft)" : undefined, borderColor: familieFilter === fam ? "var(--color-gold)" : undefined }} onClick={() => setFamilieFilter((v) => v === fam ? "" : fam)}>{fam}</button>
+            ))}
+          </div>
+          {familieFilter && <div style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>الفصيلة: {familieFilter} — {GGP_FEATURES.filter((f) => f.familie === familieFilter && (!ggpFilter || f.level === ggpFilter)).length} بنية</div>}
+        </div>
       </div>
       <label style={{ display: "grid", gap: "0.35rem", margin: "0.8rem 0" }}>
         <span style={{ fontSize: "0.85rem", fontWeight: 700 }}>📚 افتح درساً آخر من المنهج (استكشاف حر — لا يغيّر يومك ولا خطّتك):</span>
@@ -77,7 +96,14 @@ export default function Lernen() {
         >
           <option value="">درس اليوم / آخر درس وصلتَ إليه</option>
           {(Object.keys(COURSE_TOPIC_ORDER) as (keyof typeof COURSE_TOPIC_ORDER)[]).map((lvl) => {
+            if (ggpFilter && lvl !== ggpFilter) return null;
             const visible = COURSE_TOPIC_ORDER[lvl].filter((id) => {
+              if (familieFilter) {
+                const feats = GGP_FEATURES.filter((f) => f.familie === familieFilter).map((f) => f.code);
+                const { TOPIC_GGP } = require("@/lib/ggp") as { TOPIC_GGP: Record<string, string[]> };
+                const hasFam = (TOPIC_GGP[id] ?? []).some((c: string) => feats.includes(c));
+                if (!hasFam) return false;
+              }
               if (!qNorm) return true;
               const t = grammarMap[id];
               const hay = `${t?.titleAr ?? ""} ${t?.titleDe ?? ""} ${t?.id ?? ""} ${lvl}`.toLowerCase();
