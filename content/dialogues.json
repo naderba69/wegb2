@@ -10495,6 +10495,11 @@
         "de": "Danke!",
         "ar": "شكراً!",
         "who": "A"
+      },
+      {
+        "who": "B",
+        "de": "Bitte schön!",
+        "ar": "على الرحب! "
       }
     ],
     "questions": [
@@ -10542,7 +10547,8 @@
     "dictation": [
       "Wie viel ist eins plus zwei?",
       "Eins plus zwei ist drei.",
-      "Danke!"
+      "Danke!",
+      "Bitte schön!"
     ],
     "cultural_theme": "Greeting"
   },
@@ -10566,6 +10572,11 @@
         "de": "Danke!",
         "ar": "شكراً!",
         "who": "A"
+      },
+      {
+        "who": "A",
+        "de": "Willkommen, Ali!",
+        "ar": "أهلاً يا علي!"
       }
     ],
     "questions": [
@@ -10615,7 +10626,8 @@
     "dictation": [
       "Buchstabiere bitte deinen Namen!",
       "A – L – I. Ali.",
-      "Danke!"
+      "Danke!",
+      "Willkommen, Ali!"
     ],
     "cultural_theme": "Weihnachten - Christmas traditions",
     "cultural_note": "Theme: Weihnachten - Christmas traditions"

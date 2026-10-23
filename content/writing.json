@@ -140,7 +140,7 @@
       "الوقت والمكان بدقة",
       "جملة دعوة واحدة"
     ],
-    "sample": "Hallo Ahmed! Treffen wir uns am Freitag um achtzehn Uhr im Café Zentrum? Ich möchte dir ein Buch geben. Bitte schreib mir! Tschüss, Sami",
+    "sample": "Hallo Ahmed! Treffen wir uns am Freitag um achtzehn Uhr im Café Zentrum? Ich möchte dir ein Buch geben. Das Café ist in der Stadtmitte und hat guten Tee. Wir können dort zusammen lernen und sprechen. Bitte schreib mir! Ich warte auf deine Antwort. Tschüss, Sami",
     "noteAr": [
       "رسالة كاملة بأربع جمل: تحية، سؤالُ لقاءٍ بـ wir, معلومتا وقتٍ ومكان، خاتمة — كل معيارٍ في سطره",
       "«um achtzehn Uhr» منطوقةً بالألفاظ لا بالأرقام — كما في كتاب A1: الالتزامُ بالسياق مقدَّمٌ على الأناقة",
@@ -162,7 +162,7 @@
       "ظروف زمنية: gestern, am Morgen, dann",
       "جملة بفعل منفصل (aufgestanden / eingekauft)"
     ],
-    "sample": "Gestern bin ich früh aufgestanden. Ich habe schnell gefrühstückt und bin zur Arbeit gefahren. Am Mittag habe ich mit Kollegen gegessen. Am Nachmittag habe ich einen langen Bericht geschrieben. Am Abend bin ich müde nach Hause gegangen. Ich habe noch eine Stunde Deutsch gelernt.",
+    "sample": "Gestern bin ich früh aufgestanden. Ich habe schnell gefrühstückt und bin zur Arbeit gefahren. Am Mittag habe ich mit Kollegen gegessen. Am Nachmittag habe ich einen langen Bericht geschrieben. Am Abend bin ich müde nach Hause gegangen. Danach habe ich meine Tasche gepackt und bin früh schlafen gegangen. Ich habe noch eine Stunde Deutsch gelernt und heute sehr viel Energie.",
     "noteAr": [
       "ست جمل، خمسة Perfekt، وتناوبُ haben/sein مُطبَقٌ بلا شذوذ: bin…aufgestanden / habe…gegessen",
       "الفعل المنفصل في التام: aufgestanden — البادئة ge في منتصفها، الدرسُ كله في كلمة",
@@ -183,7 +183,7 @@
       "رأي شخصي واحد على الأقل",
       "كلمات ربط زمنية (zuerst, dann, natürlich)"
     ],
-    "sample": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik schwer ist. Ich finde sie aber interessant. Natürlich ist die Aussprache nicht leicht. Trotzdem lerne ich jeden Tag, weil man nur so Fortschritte macht.",
+    "sample": "Ich lerne Deutsch, weil ich nächstes Jahr in Deutschland studieren möchte. Meine Freundin sagt, dass die Grammatik schwer ist. Ich finde sie aber interessant. Natürlich ist die Aussprache nicht leicht. Trotzdem lerne ich jeden Tag, weil man nur so Fortschritte macht. Ich habe gestern einen Artikel gelesen, in dem stand, dass tägliches Üben sehr hilft. Deshalb höre ich jeden Abend einen Podcast und schreibe neue Wörter auf.",
     "noteAr": [
       "weil و dass في مواضعها، والفعلُ في القعر كل مرة — المعيارُ الذي يفصل A2 عن A1",
       "رأيٌ صريح واحد (Ich finde sie aber interessant) كما يطلب المعيار — لا نصيحةٌ بلا «أنا»",
@@ -204,7 +204,7 @@
       "Perfekt أو Futur I مرة واحدة",
       "معلومات السفر الأربع كاملة"
     ],
-    "sample": "Liebe Salma, wie geht es dir? Ich bin gestern nach München gefahren. Der Zug war pünktlich und bequem. Ich wohne in einem kleinen Hotel gegenüber vom Bahnhof. Nächstes Wochenende besuche ich das Museum. Schreib mir bald! Viele Grüße, Nour",
+    "sample": "Liebe Salma, wie geht es dir? Ich bin gestern nach München gefahren. Der Zug war pünktlich und bequem. Ich wohne in einem kleinen Hotel gegenüber vom Bahnhof. Am Abend habe ich im Restaurant gegessen und bin früh ins Bett gegangen. Morgen treffe ich einen Freund und wir fahren zum Englischen Garten. Ich habe gehört, dass es dort sehr schön ist. Schreib mir bald! Viele Grüße, Nour",
     "noteAr": [
       "بريدٌ كامل: Liebe… / محتوى / Schreib mir bald! / Viele Grüße — الهيكلُ يُدرَّس بالبنيان لا بالقوائم",
       "مرتان Perfekt (bin…gefahren / war) وجملة حاضرةٍ بالمستقبل الدلالي — توازنُ أزمنةٍ صغير لكنه مسجَّل",
@@ -225,7 +225,7 @@
       "weh tun مع الجسم",
       "طلب أو سؤال مهذّب للمطّب"
     ],
-    "sample": "Seit drei Tagen tut mir der Hals weh. Ich habe Fieber und bin sehr müde. Ich habe auch ein bisschen Husten. Was soll ich tun, Herr Doktor? Muss ich Medizin nehmen?",
+    "sample": "Seit drei Tagen tut mir der Hals weh. Ich habe Fieber und bin sehr müde. Ich habe auch ein bisschen Husten. In der Nacht habe ich schlecht geschlafen, weil der Husten so stark war. Ich habe noch keinen Tee mit Honig getrunken. Was soll ich tun, Herr Doktor? Soll ich zum Arzt kommen oder kann ich zu Hause bleiben? Muss ich Medizin nehmen?",
     "noteAr": [
       "seit + داتيف حيّة: Seit drei Tagen — حرفٌ واحد يُصلح ما يفسده الجميع",
       "جسمٌ مرفوعٌ مع weh tun: tut mir der Hals weh — الصيغةُ لا تُختَرع",
@@ -246,7 +246,7 @@
       "كل المعلومات الخمس",
       "نبرة ودّية + خاتمة"
     ],
-    "sample": "Liebe Amina, am Samstag feiere ich meinen Geburtstag! Die Party beginnt um achtzehn Uhr bei mir zu Hause. Es gibt Kuchen und Musik. Bring bitte deine Cousine mit! Ich freue mich auf dich. Viele Grüße, Nour",
+    "sample": "Liebe Amina, am Samstag feiere ich meinen Geburtstag! Die Party beginnt um achtzehn Uhr bei mir zu Hause. Es gibt Kuchen und Musik. Bring bitte deine Cousine mit! Wir haben viel Platz und du kannst auch deinen Bruder einladen. Nach dem Kuchen spielen wir Spiele und hören alte Lieder. Bitte sag mir bald Bescheid, ob du kommen kannst. Ich freue mich auf dich. Viele Grüße, Nour",
     "noteAr": [
       "خمس معلومات كاملة: مناسبة ويومٌ وساعةٌ ومكانٌ وما يُجلَب — لا تُرْمَز واحدةٌ بقرينة",
       "فعل أمرٌ ودعوة معاً: feiere…! / Bring bitte… — الأمرُ بالألمانية مهذبٌ بحرفٍ واحد",
@@ -377,7 +377,7 @@
       "خاتمة فيها توصية أو سؤال مفتوح",
       "بلا عامية (keine Umgangssprache)"
     ],
-    "sample": "Soziale Medien spielen in unserem Alltag eine große Rolle. Einerseits verbinden sie Menschen über Grenzen hinweg; andererseits stellen viele Studien ihre Wirkung auf die Zufriedenheit infrage. Ein Psychologe erklärte kürzlich, der ständige Vergleich mit inszenierten Leben führe nachweislich zu Unzufriedenheit, zumal der Algorithmus Empörung höher bewerte als Zufriedenheit. Dennoch wäre ein Verbot der falsche Weg – Verbote machen Neugier erst interessant. Entscheidender ist die Kompetenz der Nutzerinnen und Nutzer: Wer Werbung als Werbung erkennt, lässt sich seltener vermessen. Meines Erachtens sollte deshalb Medienbildung früher in die Lehrpläne, damit Jugendliche die Werkzeuge beherrschen, statt von ihnen beherrscht zu werden. Ob uns das schnell genug gelingt, steht freilich dahin.",
+    "sample": "Soziale Medien spielen in unserem Alltag eine große Rolle. Einerseits verbinden sie Menschen über Grenzen hinweg; andererseits stellen viele Studien ihre Wirkung auf die Zufriedenheit infrage. Ein Psychologe erklärte kürzlich, der ständige Vergleich mit inszenierten Leben führe nachweislich zu Unzufriedenheit, zumal der Algorithmus Empörung höher bewerte als Zufriedenheit. Dennoch wäre ein Verbot der falsche Weg – Verbote machen Neugier erst interessant. Entscheidender ist die Kompetenz der Nutzerinnen und Nutzer: Wer Werbung als Werbung erkennt, lässt sich seltener vermessen. Meines Erachtens sollte deshalb Medienbildung früher in die Lehrpläne, damit Jugendliche die Werkzeuge beherrschen, statt von ihnen beherrscht zu werden. Dabei spielt auch die Sprache eine Rolle: Wer sagt «Ich bin traurig, weil niemand mein Bild geliked hat», verwechselt Aufmerksamkeit mit Anerkennung. Die Forschung zeigt zugleich, dass moderater Konsum kaum schadet, solange das Gespräch im echten Leben nicht verstummt. Ob uns das schnell genug gelingt, steht freilich dahin.",
     "noteAr": [
       "منقولٌ بـ Konjunktiv I حيّ: führe… / bewerte… — لا تجميلٌ بل نقلُ أمانة",
       "الفعلُ الوظيفي مُزدوج: eine Rolle spielen + infrage stellen — المعيارُ مُنجَزٌ في أول سطرين",
@@ -399,7 +399,7 @@
       "um zu / ohne zu / statt zu مرة واحدة",
       "بنية: مقدمة ← سبب ← طلب ← خاتمة"
     ],
-    "sample": "Sehr geehrte Damen und Herren, mit großem Interesse habe ich Ihre Stellenanzeige gelesen. Die ausgeschriebene Stelle bringt zwei Dinge zusammen, die mich fachlich prägen: Projektarbeit und Datenanalyse. Ich möchte meine Erfahrung in der Prozessautomatisierung gern in Ihr Team einbringen. Um meine Eignung zu belegen, füge ich einen Kurzbericht zweier Projekte bei, die ohne technische Fremdwörter auskommen und deren Ergebnis sich in Zahlen messen lässt. Statt mich in Floskeln zu verlieren, trete ich lieber den Beweis selbst an: In einem Gespräch innerhalb der nächsten zwei Wochen lege ich gern dar, wie ich Ihrer Abteilung zur Entlastung verhelfen kann. Über eine Einladung freue ich mich. Mit freundlichen Grüßen, A. Mansour",
+    "sample": "Sehr geehrte Damen und Herren, mit großem Interesse habe ich Ihre Stellenanzeige gelesen. Die ausgeschriebene Stelle bringt zwei Dinge zusammen, die mich fachlich prägen: Projektarbeit und Datenanalyse. Ich möchte meine Erfahrung in der Prozessautomatisierung gern in Ihr Team einbringen. Um meine Eignung zu belegen, füge ich einen Kurzbericht zweier Projekte bei, die ohne technische Fremdwörter auskommen und deren Ergebnis sich in Zahlen messen lässt. In einem Projekt habe ich die Bearbeitungszeit von Anträgen um dreißig Prozent verringert, indem ich wiederkehrende Schritte automatisiert habe. Im zweiten habe ich ein Dashboard aufgebaut, das Fehler sichtbar macht, bevor sie teuer werden. Statt mich in Floskeln zu verlieren, trete ich lieber den Beweis selbst an: In einem Gespräch innerhalb der nächsten zwei Wochen lege ich gern dar, wie ich Ihrer Abteilung zur Entlastung verhelfen kann. Über eine Einladung freue ich mich. Mit freundlichen Grüßen, A. Mansour",
     "noteAr": [
       "ثلاثيةُ um zu / ohne… / statt zu في مواضعها النحوية الصحيحة — معيارٌ لا ينجو منه إلا من درَّب",
       "Funktionsverbgefüge ×2: einbringen + zur Entlastung verhelfen (وتَنجَز «den Beweis antreten») — ثلاثٌ إن حسبت",
@@ -487,7 +487,7 @@
       "نشاط واحد على الأقل",
       "خاتمة ودّية"
     ],
-    "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag gehe ich zum Strand. Das Essen ist sehr lecker. Viele Grüße, Sami",
+    "sample": "Liebe Salma! Ich bin jetzt in Hammamet. Das Wetter ist schön und sonnig. Jeden Tag gehe ich zum Strand und schwimme im Meer. Das Essen ist sehr lecker. Am Abend sitze ich im Café am Meer und lese ein Buch. Viele Grüße, Sami. Ich schicke dir bald ein Foto!",
     "noteAr": [
       "بطاقةُ بريده صغيرةٌ كعنوانها: خمسُ جمل لا تتزاحم",
       "الطقسُ جملة، النشاطُ جملة — معيارُ «واحدٌ على الأقل» مُنجَزٌ بالضبط، لا بالإفراط",
@@ -509,7 +509,7 @@
       "طلب محدد واحد",
       "بريد كامل بمقدمة وخاتمة"
     ],
-    "sample": "Sehr geehrte Damen und Herren, ich habe letzte Woche in Ihrem Hotel übernachtet. Leider hat das Zimmer neben dem Aufzug sehr viel Lärm gemacht. Ich habe drei Nächte schlecht geschlafen. Bitte erstatten Sie mir einen Teil des Preises. Mit freundlichen Grüßen, N. Mansour",
+    "sample": "Sehr geehrte Damen und Herren, ich habe letzte Woche in Ihrem Hotel übernachtet. Leider hat das Zimmer neben dem Aufzug sehr viel Lärm gemacht. Der Lärm hat um zweiundzwanzig Uhr angefangen und bis drei Uhr gedauert. Ich habe drei Nächte schlecht geschlafen. Ich habe an der Rezeption angerufen, aber niemand hat geantwortet. Bitte erstatten Sie mir einen Teil des Preises. Mit freundlichen Grüßen, N. Mansour",
     "noteAr": [
       "شكوى بلا غضب: leider + وصفٌ هادئ — النبرةُ تُقرَأ قبل الحجج",
       "Perfekt في صدر الوقائع: habe…übernachtet / hat…gemacht — الماضي المُنجَز لا المستمر",
@@ -598,7 +598,7 @@
       "اقتراح موعد",
       "خاتمة وتوقيع"
     ],
-    "sample": "Sehr geehrte Frau Klein, in meiner Küche ist der Wasserhahn kaputt. Das Wasser läuft ständig. Ich arbeite von acht bis sechzehn Uhr. Passt Ihnen Donnerstag um zehn Uhr? Mit freundlichen Grüßen, Karim Mansour",
+    "sample": "Sehr geehrte Frau Klein, in meiner Küche ist der Wasserhahn kaputt. Das Wasser läuft ständig und ich kann es nicht abstellen. Ich arbeite von acht bis sechzehn Uhr. Passt Ihnen Donnerstag um zehn Uhr? Ich habe schon versucht, das Wasser selbst abzustellen, aber es funktioniert nicht. Vielleicht können Sie einen Handwerker schicken. Ich bin am Freitag auch zu Hause. Mit freundlichen Grüßen, Karim Mansour",
     "noteAr": [
       "مقدمة ووصف وموعدٌ مقترح وتوقيع: أربعُ ركائز لا تضطرب",
       "Das Wasser läuft ständig — واقعةٌ واحدة بدقةٍ أفضل من فقرةِ انفعال",
@@ -620,7 +620,7 @@
       "5 جمل على الأقل",
       "أفعال متنوعة"
     ],
-    "sample": "Ich stehe um halb sieben auf. Am Vormittag habe ich Kurs und lerne Deutsch. Um eins esse ich in der Mensa. Am Nachmittag arbeite ich im Büro. Am Abend koche ich und rufe meine Familie an. Um elf Uhr schlafe ich ein.",
+    "sample": "Ich stehe um halb sieben auf. Am Vormittag habe ich Kurs und lerne Deutsch. Um eins esse ich in der Mensa. Am Nachmittag arbeite ich im Büro. Am Abend koche ich und rufe meine Familie an. Zwischen den Kursen trinke ich Kaffee mit Freunden und wiederhole neue Wörter. Am Wochenende spiele ich manchmal Fußball und besuche meine Cousine. Um elf Uhr schlafe ich ein.",
     "noteAr": [
       "نصف يومٍ موزون: Kurs/ Arbeit / Kochen — لا جملة أطول من أختها",
       "أفعال منفصلة في يومه (stehe…auf / rufe…an) — إعادةُ استعمالٍ ذكية لا حفظٌ منبري",
@@ -664,7 +664,7 @@
       "مطلب واضح مع أجل",
       "خاتمة رسمية"
     ],
-    "sample": "Sehr geehrte Damen und Herren, am 3. Mai habe ich Ihren Online-Kurs „Deutsch B2“ gekauft (Bestellnummer 4471, Rechnung 2210). Leider funktioniert der Zugang bis heute nicht: Trotz zweimaliger Rücksetzung erhalte ich ständig die Meldung „Passwort falsch“ – ein Fehler, den Ihr Support telefonisch bestätigt, aber bisher nicht behoben hat. Ich bitte Sie, den Zugang bis zum kommenden Freitag, den 22. Mai, freizuschalten. Andernfalls trete ich vom Vertrag zurück und bitte um vollständige Rückerstattung des Kursbetrags von 89 Euro binnen weiterer vierzehn Tage. Die Belege zu Zahlung und Supportanfragen halte ich bereit und reiche sie auf Wunsch nach. Mit freundlichen Grüßen, Layla Haddad",
+    "sample": "Sehr geehrte Damen und Herren, am 3. Mai habe ich Ihren Online-Kurs „Deutsch B2“ gekauft (Bestellnummer 4471, Rechnung 2210). Leider funktioniert der Zugang bis heute nicht: Trotz zweimaliger Rücksetzung erhalte ich ständig die Meldung „Passwort falsch“ – ein Fehler, den Ihr Support telefonisch bestätigt, aber bisher nicht behoben hat. Ich bitte Sie, den Zugang bis zum kommenden Freitag, den 22. Mai, freizuschalten. Andernfalls trete ich vom Vertrag zurück und bitte um vollständige Rückerstattung des Kursbetrags von 89 Euro binnen weiterer vierzehn Tage. Ich habe den Support am 10. Mai schriftlich kontaktiert und am 15. Mai erneut angerufen, jedoch ohne Erfolg. Der Fehler liegt nachweislich nicht bei meinem Gerät, da der Login auf zwei verschiedenen Browsern scheitert. Die Belege zu Zahlung und Supportanfragen halte ich bereit und reiche sie auf Wunsch nach. Mit freundlichen Grüßen, Layla Haddad",
     "noteAr": [
       "أرقام وأرقامٌ عكسية: طلب + أجل محدد (bis Freitag) ثم شرطان (Rücktritt / Erstattung binnen vierzehn Tagen) — الشكوىُ قانونٌ مُهذَّب",
       "دقة الوقائع: رقم طلب، رقم فاتورة، رسالة الخطأ حرفياً — لا «الوصولُ لا يعمل» بلا جثة دليل",
@@ -708,7 +708,7 @@
       "جملة بـ«kann … nicht kommen» (الفعل المساعد + المصدر في النهاية)",
       "سؤال واحد بعلامة استفهام"
     ],
-    "sample": "Liebe Frau Klein, ich bin krank und habe Fieber. Ich kann heute und morgen nicht zum Kurs kommen. Was sind die Hausaufgaben für Donnerstag? Viele Grüße, Omar",
+    "sample": "Liebe Frau Klein, ich bin krank und habe Fieber und Halsschmerzen. Ich kann heute und morgen nicht zum Kurs kommen. Der Arzt sagt, ich soll zwei Tage zu Hause bleiben. Was sind die Hausaufgaben für Donnerstag? Vielen Dank für Ihr Verständnis! Viele Grüße, Omar",
     "noteAr": [
       "«kann … kommen»: قوس الفعل المساعد والمصدر — أهمّ بنية في رسائل A1",
       "السؤال في النهاية يجعل الرسالة تواصلاً لا إعلاناً"
@@ -1751,7 +1751,7 @@
       "سبب قصير (ich muss arbeiten)",
       "طلب موعد جديد بأدب"
     ],
-    "sample": "Sehr geehrte Damen und Herren,\n\nich habe am Montag um 9 Uhr einen Termin bei Dr. Weber. Leider muss ich an diesem Tag arbeiten und kann nicht kommen. Ich bitte um einen neuen Termin, gern am Nachmittag. Vielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\nLina Mansour",
+    "sample": "Sehr geehrte Damen und Herren, ich habe am Montag um 9 Uhr einen Termin bei Dr. Weber. Leider muss ich an diesem Tag arbeiten und kann nicht kommen. Ich bitte um einen neuen Termin, gern am Nachmittag. Der neue Termin sollte möglichst nächste Woche sein, weil ich danach verreise. Bitte sagen Sie mir, welche Zeiten noch frei sind. Ich rufe auch gern noch einmal an. Vielen Dank für Ihr Verständnis. Mit freundlichen Grüßen Lina Mansour",
     "noteAr": [
       "إلغاء صريح من أول جملة (ich habe … leider muss ich)",
       "تفضيل بديل مرن (gern am Nachmittag) يسهّل الحل",

@@ -11,30 +11,14 @@
 | المستوى | العدد |
 |---------|-------|
 | P0 قاتل | 0 |
-| P1 منهجي | 17 |
+| P1 منهجي | 0 |
 | P2 أسلوبي | 4 |
 
 ### P0 — قاتل
 - لا شيء ✅
 
 ### P1 — منهجي
-- [P1] `dialogues.json:d-a0-02:A0` — lines <4 — حوار قصير جداً (المعيار 6)
-- [P1] `dialogues.json:d-a0-03:A0` — lines <4 — حوار قصير جداً (المعيار 6)
-- [P1] `writing.json:w-a1-05:A1` — sample قصير 24 < 40 لـ A1 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-01:A2` — sample قصير 44 < 60 لـ A2 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-02:A2` — sample قصير 41 < 60 لـ A2 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-03:A2` — sample قصير 39 < 60 لـ A2 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-04:A2` — sample قصير 31 < 60 لـ A2 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-05:A2` — sample قصير 36 < 60 لـ A2 — لا يغطي المطلوب
-- [P1] `writing.json:w-b2-01:B2` — sample قصير 107 < 120 لـ B2 — لا يغطي المطلوب
-- [P1] `writing.json:w-b2-02:B2` — sample قصير 108 < 120 لـ B2 — لا يغطي المطلوب
-- [P1] `writing.json:w-a1-06:A1` — sample قصير 27 < 40 لـ A1 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-06:A2` — sample قصير 43 < 60 لـ A2 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-07:A2` — sample قصير 33 < 60 لـ A2 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-08:A2` — sample قصير 42 < 60 لـ A2 — لا يغطي المطلوب
-- [P1] `writing.json:w-b2-07:B2` — sample قصير 102 < 120 لـ B2 — لا يغطي المطلوب
-- [P1] `writing.json:w-a1-08:A1` — sample قصير 27 < 40 لـ A1 — لا يغطي المطلوب
-- [P1] `writing.json:w-a2-17:A2` — sample قصير 47 < 60 لـ A2 — لا يغطي المطلوب
+- لا شيء ✅
 
 ### P2 — أسلوبي
 - [P2] `dialogues.json:dlg-a1-baeckerei:A1` — lines >10 — طويل للاستماع
