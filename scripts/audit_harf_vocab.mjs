@@ -83,10 +83,12 @@ for (const [deckId, deck] of Object.entries(vocab)) {
           if (stem.length >=3) { root = stem; break; }
         }
       }
+      const norm = s=>s.replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").replace(/Ä/g,"A").replace(/Ö/g,"O").replace(/Ü/g,"U");
       // تحقق: فقط إذا كان الجذر >=4 أحرف (كما في الأصل) — تجنب كلمات قصيرة مثل die/das
-      if (root.length>=4 && !lowEx.includes(root.slice(0,4))) {
+      const nRoot = norm(root); const nEx = norm(lowEx);
+      if (root.length>=4 && !nEx.includes(nRoot.slice(0,4))) {
         // تسامح إضافي للفعال المنعكسة المنفصلة: sich beeilen → beeilen → beei، قد تظهر في beeile mich
-        if (lowEx.includes(root.slice(0,3))) {
+        if (nEx.includes(nRoot.slice(0,3))) {
           // يحتوي 3 حروف على الأقل — مقبول كتصريف (z.B. beeilen → beeile)
         } else {
           warns.push({path, lvl:"P2", msg:`exampleDe لا تحتوي جذر الكلمة "${c.de}"`});
