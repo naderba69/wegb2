@@ -13,44 +13,43 @@
 |---------|-------|--------|
 | P0 قاتل (يمنع الفهم/ينجّح خطأ) | 0 | إصلاح فوري |
 | P1 منهجي (CEFR/GGP) | 0 | إصلاح بالسبرنت |
-| P2 أسلوبي | 27 | تحسين |
+| P2 أسلوبي | 0 | تحسين |
 
 ### P0 — تُصلّح الآن
 
 ### P1 — منهجي
 
 ### P2 — أسلوبي
-- [P2] `grammar.json:a1-sein-haben` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a1-zahlen` — حروف لاتينية داخل ar: "الأرقام تُقرأ منفردة: fünf-fünf-drei-zwe"
-- [P2] `grammar.json:a2-praeteritum` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-perfekt` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-dativ` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-negation` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-imperativ` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-reflexiv` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-steigerung` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-futur` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b1-genitiv` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b1-adjektivendungen` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b1-wortbildung` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b1-unbestimmte` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b1-verb-praeposition` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b1-passiv` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b2-modalpartikel` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-praeteritum-grund` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b1-indirekte-fragen` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b2-redew` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a2-wasfuer` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a0-aussprache-umlaut` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:a0-satzbau` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b2-passiv` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b2-konjunktiv2-vht` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b2-nominalisierung` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
-- [P2] `grammar.json:b2-partizipial` — exercises >7 — إرهاق (المعيار ≤3 في الواجهة + الباقي مُرحّل)
 
-## الأفكار التحسينية (حتى 1000 — هنا أول 0)
+## الأفكار التحسينية (حتى 1000 — هنا أول 26)
 | الدرس | الفكرة |
 |-------|--------|
+| `grammar.json:a1-sein-haben` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-praeteritum` | بنك تمارين 12 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-perfekt` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-dativ` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-negation` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-imperativ` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-reflexiv` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-steigerung` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-futur` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b1-genitiv` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b1-adjektivendungen` | بنك تمارين 12 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b1-wortbildung` | بنك تمارين 12 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b1-unbestimmte` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b1-verb-praeposition` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b1-passiv` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b2-modalpartikel` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-praeteritum-grund` | بنك تمارين 10 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b1-indirekte-fragen` | بنك تمارين 9 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b2-redew` | بنك تمارين 12 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a2-wasfuer` | بنك تمارين 10 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a0-aussprache-umlaut` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:a0-satzbau` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b2-passiv` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b2-konjunktiv2-vht` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b2-nominalisierung` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
+| `grammar.json:b2-partizipial` | بنك تمارين 8 — 3 في الواجهة + الباقي مُرحّل (Hybrid Gated) — مقصود |
 
 ## خطة التنفيذ الواضحة (حرف-حرف على كل المحتوى)
 1. **الآن — القواعد (87 درس):** إصلاح P0 فوراً في هذا الـPR (حرف حرف) — لا دمج حتى 0 P0

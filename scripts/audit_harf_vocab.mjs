@@ -108,9 +108,10 @@ for (const [deckId, deck] of Object.entries(vocab)) {
     }
     // Arabic latin leak
     if (c.ar && /[a-zA-ZäöüÄÖÜß]{4,}/.test(c.ar) && !c.ar.includes("S-Bahn") && !c.ar.includes("U-Bahn")) {
-      // many ar contain German in parentheses for explanation — that's P2 but often intentional
-      // only flag if long latin without explanation marker
-      if ((c.ar.match(/[a-zA-Zäöü]{4,}/g)||[]).join(" ").length > 15) warns.push({path, lvl:"P2", msg:`ar يحتوي لاتينية طويلة: "${c.ar.slice(0,60)}"`});
+      // whitelist: derselbe/dieselbe/dasselbe داخل قوس تعليمي = شرح جنس — مقصود تماماً (B1)
+      const isParenthesisTeaching = c.ar.includes("(") && c.ar.includes(")") && /derselbe|dieselbe|dasselbe/i.test(c.ar);
+      if (isParenthesisTeaching) { /* مقصود — لا يُعد خطأ */ }
+      else if ((c.ar.match(/[a-zA-Zäöü]{4,}/g)||[]).join(" ").length > 15) warns.push({path, lvl:"P2", msg:`ar يحتوي لاتينية طويلة: "${c.ar.slice(0,60)}"`});
     }
     if (c.de && /[ء-ي]/.test(c.de)) errors.push({path, lvl:"P0", msg:`حروف عربية داخل de: "${c.de}"`});
     if (c.de && c.de.includes("  ")) warns.push({path, lvl:"P2", msg:`مسافة مزدوجة في de`});
