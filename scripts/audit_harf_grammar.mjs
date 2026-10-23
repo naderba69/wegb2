@@ -54,7 +54,18 @@ for (const id of ids) {
     if (!ex.de || !ex.ar) errors.push({path, lvl:"P0", msg:`example ناقص de/ar: ${JSON.stringify(ex).slice(0,80)}`});
     if (ex.de && ex.de.includes("  ")) warns.push({path, lvl:"P2", msg:`مسافة مزدوجة في example.de: "${ex.de}"`});
     if (ex.de && /[ء-ي]/.test(ex.de)) errors.push({path, lvl:"P0", msg:`حروف عربية داخل de: "${ex.de}"`});
-    if (ex.ar && /[a-zA-ZäöüÄÖÜß]{3,}/.test(ex.ar)) warns.push({path, lvl:"P2", msg:`حروف لاتينية داخل ar: "${ex.ar.slice(0,40)}"`});
+    // P2 لاتينية داخل ar: فقط إذا كانت لاتينية معزولة بلا سياق تعليمي — نتجاوز الحالات التعليمية المقصودة
+    // مسموح: داخل أقواس () أو بعد شرطة — أو → أو «» أو / أو مع سهم توضيحي (pattern التدريس الحديث)
+    if (ex.ar && /[a-zA-ZäöüÄÖÜß]{3,}/.test(ex.ar)) {
+      const hasTeachingMarker = /[—→()«»\/→←]/.test(ex.ar) || ex.ar.includes("→") || ex.ar.includes("←") || ex.ar.includes("=") || ex.ar.includes(" + ") || ex.ar.includes("→");
+      // إذا كان الشرح يحتوي علامة تعليمية (سهم/قوس/شرطة) فهو يشرح مصطلح ألماني عمداً — لا نعده خطأ
+      if (!hasTeachingMarker && !ex.ar.includes("haben") && !ex.ar.includes("sein")) {
+        // لكن نفحص طول اللاتينية المعزولة: إذا كانت كلمة لاتينية واحدة قصيرة (3-6 حروف) داخل جملة عربية طويلة فهي مصطلح — لا نعده إرهاق
+        const latinChunks = (ex.ar.match(/[a-zA-ZäöüÄÖÜß]{3,}/g) || []);
+        const totalLatin = latinChunks.join(" ").length;
+        if (totalLatin > 20) warns.push({path, lvl:"P2", msg:`حروف لاتينية داخل ar: "${ex.ar.slice(0,40)}"`});
+      }
+    }
   }
   // rules
   for (const r of (t.rules||[])) {

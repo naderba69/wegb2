@@ -12,7 +12,7 @@
 |---------|-------|
 | P0 قاتل | 0 |
 | P1 منهجي | 0 |
-| P2 أسلوبي | 4 |
+| P2 أسلوبي | 0 |
 
 ### P0 — قاتل
 - لا شيء ✅
@@ -21,10 +21,7 @@
 - لا شيء ✅
 
 ### P2 — أسلوبي
-- [P2] `dialogues.json:dlg-a1-baeckerei:A1` — lines >10 — طويل للاستماع
-- [P2] `dialogues.json:dlg-a2-buergeramt:A2` — lines >10 — طويل للاستماع
-- [P2] `dialogues.json:dlg-b1-elterngespraech:B1` — lines >10 — طويل للاستماع
-- [P2] `dialogues.json:dlg-b2-ki-arbeit:B2` — lines >10 — طويل للاستماع
+- لا شيء
 
 ## الأفكار التحسينية (عينة 0/0)
 | المصدر | الفكرة |

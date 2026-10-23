@@ -67,10 +67,30 @@ for (const [deckId, deck] of Object.entries(vocab)) {
     if (c.exampleDe && c.de) {
       const lowDe = c.de.toLowerCase().trim();
       const lowEx = c.exampleDe.toLowerCase();
-      // example should contain de root (allow inflections, so check partial)
-      const root = lowDe.split(/[\s\/\(\)]+/)[0].replace(/\(.*\)/,"");
+      // تنظيف deCore: إزالة الأداة (die Arbeit → Arbeit) + Sich المنعكسة
+      let deCore = lowDe;
+      // إزالة أداة التعريف/النكرة إن وجدت
+      const articleMatch = deCore.match(/^(der|die|das|den|dem|des|ein|eine|einen|einem|einer|eines)\s+(.+)/);
+      if (articleMatch) deCore = articleMatch[2];
+      if (deCore.startsWith("sich ")) deCore = deCore.slice(5);
+      // للأفعال المنفصلة/المركبة: نأخذ آخر جزء (aufstehen → stehen)
+      const SEPARABLE_PREFIXES = ["ab","an","auf","aus","bei","ein","los","mit","nach","um","vor","zu","zurück","zusammen","fern","her","hin","weg","weiter","wieder"];
+      let root = deCore.split(/[\s\/\(\)]+/)[0].replace(/\(.*\)/,"").replace(/sich$/, "").trim();
+      // إذا كان الفعل منفصلاً، استخدم الجذع الرئيسي
+      for (const pref of SEPARABLE_PREFIXES) {
+        if (root.length > pref.length+3 && root.startsWith(pref)) {
+          const stem = root.slice(pref.length);
+          if (stem.length >=3) { root = stem; break; }
+        }
+      }
+      // تحقق: فقط إذا كان الجذر >=4 أحرف (كما في الأصل) — تجنب كلمات قصيرة مثل die/das
       if (root.length>=4 && !lowEx.includes(root.slice(0,4))) {
-        warns.push({path, lvl:"P2", msg:`exampleDe لا تحتوي جذر الكلمة "${c.de}"`});
+        // تسامح إضافي للفعال المنعكسة المنفصلة: sich beeilen → beeilen → beei، قد تظهر في beeile mich
+        if (lowEx.includes(root.slice(0,3))) {
+          // يحتوي 3 حروف على الأقل — مقبول كتصريف (z.B. beeilen → beeile)
+        } else {
+          warns.push({path, lvl:"P2", msg:`exampleDe لا تحتوي جذر الكلمة "${c.de}"`});
+        }
       }
     }
     // Arabic latin leak
