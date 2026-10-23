@@ -49,6 +49,13 @@ export default function Lernen() {
       <Link href="/masar" className="curriculum-entry-link" data-testid="curriculum-map-link">
         🧭 استكشف مسار المنهج الكامل · 378 يوماً
       </Link>
+      {/* B2 Authentic Hinweis — Verlag Editorial (Sprint 5D) */}
+      <div className="card" style={{ padding: "0.6rem 0.8rem", borderInlineStart: "4px solid #a78bfa", background: "linear-gradient(180deg, #FFFCF0, #FDF8E8)" }} data-testid="b2-authentic-hinweis">
+        <div style={{ fontSize: "0.84rem", fontWeight: 900, color: "#1A2E4A" }}>📖 الجديد B2: نص أصيل 286 كلمة — <span dir="ltr">Nachhaltige Stadt: Warum Beteiligung wirkt</span></div>
+        <div style={{ fontSize: "0.78rem", color: "var(--ui-muted)", lineHeight: 1.7 }}>
+          مع تظليل <span className="b2-konnektor b2-konnektor--weil">weil</span> و <span className="b2-konnektor b2-konnektor--obwohl">obwohl</span> — اقرأ في <Link href="/" style={{ color: "#113A5F", fontWeight: 800 }}>اليوم › الخطوة 3: Hören & Lesen</Link>
+        </div>
+      </div>
       <div className="card" style={{ padding: "0.6rem 0.8rem", marginTop: "0.7rem", display: "grid", gap: "0.45rem" }}>
         <label htmlFor="lernen-search" style={{ fontSize: "0.84rem", fontWeight: 800 }}>
           🔍 ابحث في الدروس (بالعربية أو الألمانية):
