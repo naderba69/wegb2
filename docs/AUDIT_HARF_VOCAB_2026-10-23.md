@@ -14,7 +14,7 @@
 |---------|-------|
 | P0 قاتل | 0 |
 | P1 منهجي | 0 |
-| P2 أسلوبي | 27 |
+| P2 أسلوبي | 1 |
 
 ### P0 — قاتل
 - لا شيء ✅
@@ -23,33 +23,7 @@
 - لا شيء ✅ (أو كل Nomen له article — ممتاز لمعلم)
 
 ### P2 — أسلوبي
-- [P2] `vocab.json:b2-medien-schule/v142:angeben` — exampleDe لا تحتوي جذر الكلمة "angeben"
-- [P2] `vocab.json:g01-beziehungen/v221:sich einigen auf` — exampleDe لا تحتوي جذر الكلمة "sich einigen auf"
-- [P2] `vocab.json:a1-haus-schule/vx-haus--034:geben` — exampleDe لا تحتوي جذر الكلمة "geben"
-- [P2] `vocab.json:a1-haus-schule/vx-haus--040:wissen` — exampleDe لا تحتوي جذر الكلمة "wissen"
-- [P2] `vocab.json:a1-natur-freizeit/vy-natur-047:mögen` — exampleDe لا تحتوي جذر الكلمة "mögen"
-- [P2] `vocab.json:a1-welt-beruf/vz-welt-b-042:weggehen` — exampleDe لا تحتوي جذر الكلمة "weggehen"
-- [P2] `vocab.json:a1-modal-ort/va-modort-000:können` — exampleDe لا تحتوي جذر الكلمة "können"
-- [P2] `vocab.json:a1-modal-ort/va-modort-002:dürfen` — exampleDe لا تحتوي جذر الكلمة "dürfen"
-- [P2] `vocab.json:a1-modal-ort/va-modort-003:wollen` — exampleDe لا تحتوي جذر الكلمة "wollen"
-- [P2] `vocab.json:a2-geld-gesundheit/vd-geld-k-022:sich etwas leisten` — exampleDe لا تحتوي جذر الكلمة "sich etwas leisten"
-- [P2] `vocab.json:a2-geld-gesundheit/r312a2-125:sterben` — exampleDe لا تحتوي جذر الكلمة "sterben"
-- [P2] `vocab.json:a2-kultur-digital/vf-kultd-309:aufgeben` — exampleDe لا تحتوي جذر الكلمة "aufgeben"
-- [P2] `vocab.json:b1-karriere-psyche/vg-psyche--020:vorwerfen` — exampleDe لا تحتوي جذر الكلمة "vorwerfen"
-- [P2] `vocab.json:b1-gesundheit-technik/vh-gesundh-014:sich etwas vornehmen` — exampleDe لا تحتوي جذر الكلمة "sich etwas vornehmen"
-- [P2] `vocab.json:b1-gesundheit-technik/vh-technik-022:zunehmen an` — exampleDe لا تحتوي جذر الكلمة "zunehmen an"
-- [P2] `vocab.json:b1-gesundheit-technik/vh-technik-023:abnehmen an` — exampleDe لا تحتوي جذر الكلمة "abnehmen an"
-- [P2] `vocab.json:b1-funktionsverben/vi-funktio-013:gelten als` — exampleDe لا تحتوي جذر الكلمة "gelten als"
-- [P2] `vocab.json:b1-wissen-zeit-wendungen/vm-b1z-027:etwas in Angriff nehmen` — exampleDe لا تحتوي جذر الكلمة "etwas in Angriff nehmen"
-- [P2] `vocab.json:b1-essen-kunst-hoeflichkeit/vn-b1w-011:das Gericht empfehlen` — exampleDe لا تحتوي جذر الكلمة "das Gericht empfehlen"
-- [P2] `vocab.json:b1-gesund-wohnen-praep/vo-b1v-017:die Wohnung untervermieten` — exampleDe لا تحتوي جذر الكلمة "die Wohnung untervermieten"
-- [P2] `vocab.json:b1-digital-kauf-nomen/vr-b1s-009:das Konto sperren lassen` — exampleDe لا تحتوي جذر الكلمة "das Konto sperren lassen"
-- [P2] `vocab.json:b1-pruefung-text-reflexiv/vs-b1r-033:sich etwas merken` — exampleDe لا تحتوي جذر الكلمة "sich etwas merken"
 - [P2] `vocab.json:b1-az-d/r315b1-014:derselbe` — ar يحتوي لاتينية طويلة: "نفسه / ذاته (derselbe، dieselbe، dasselbe)"
-- [P2] `vocab.json:b1-az-e/r315b1-061:sich einigen` — exampleDe لا تحتوي جذر الكلمة "sich einigen"
-- [P2] `vocab.json:b1-az-g/r316b1-072:sich etwas gefallen lassen` — exampleDe لا تحتوي جذر الكلمة "sich etwas gefallen lassen"
-- [P2] `vocab.json:b1-az-t/r322b1-046:treten` — exampleDe لا تحتوي جذر الكلمة "treten"
-- [P2] `vocab.json:b1-az-v/r323b1-061:vorhaben` — exampleDe لا تحتوي جذر الكلمة "vorhaben"
 
 ### تكرار مقصود vs خطأ
 - المجموعات المكررة التي لها نفس ar في مستويات مختلفة = **تكرار مقصود** (Spaced Repetition) — موثق في VOCAB_REPEATS

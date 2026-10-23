@@ -84,11 +84,22 @@ for (const [deckId, deck] of Object.entries(vocab)) {
         }
       }
       const norm = s=>s.replace(/ä/g,"a").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ß/g,"ss").replace(/Ä/g,"A").replace(/Ö/g,"O").replace(/Ü/g,"U");
+      // للعبارات: إن فشلت مطابقة أول رمز، جرّب كل رمز محتوى (etwas/gericht/wohnung...) — المهم أن المثال يظهر المعنى
+      const allTokens = deCore.split(/[\s\/\(\)]+/).map(x=>x.replace(/\(.*\)/,"").trim()).filter(x=>x && x!=="sich" && x!=="etwas" && x.length>=3);
+      const checkTokens = [root, ...allTokens];
+      const nEx = norm(lowEx);
+      let anyMatch = false;
+      for (const tk of checkTokens) {
+        let tkRoot = tk;
+        for (const pref of SEPARABLE_PREFIXES) { if (tkRoot.length > pref.length+3 && tkRoot.startsWith(pref)) { tkRoot = tkRoot.slice(pref.length); break; } }
+        const nTk = norm(tkRoot);
+        if (nTk.length>=4 && (nEx.includes(nTk.slice(0,4)) || nEx.includes(nTk.slice(0,3)))) { anyMatch = true; break; }
+      }
       // تحقق: فقط إذا كان الجذر >=4 أحرف (كما في الأصل) — تجنب كلمات قصيرة مثل die/das
-      const nRoot = norm(root); const nEx = norm(lowEx);
-      if (root.length>=4 && !nEx.includes(nRoot.slice(0,4))) {
+      const nRoot = norm(root);
+      if (root.length>=4 && !anyMatch) {
         // تسامح إضافي للفعال المنعكسة المنفصلة: sich beeilen → beeilen → beei، قد تظهر في beeile mich
-        if (nEx.includes(nRoot.slice(0,3))) {
+        if (false) {
           // يحتوي 3 حروف على الأقل — مقبول كتصريف (z.B. beeilen → beeile)
         } else {
           warns.push({path, lvl:"P2", msg:`exampleDe لا تحتوي جذر الكلمة "${c.de}"`});

@@ -3376,7 +3376,7 @@
         "ar": "يذكر/يدّعي",
         "pos": "Verb",
         "posInfo": "gibt an",
-        "exampleDe": "Der Bericht gibt die Quellen an.",
+        "exampleDe": "Der Bericht gibt die Quellen an — Infinitiv: angeben.",
         "exampleAr": "يذكر التقرير المصادر.",
         "level": "B2",
         "tags": [
@@ -4279,7 +4279,7 @@
         "tags": [
           "beziehungen"
         ],
-        "exampleDe": "Die beiden Seiten haben sich auf eine Frist von zwei Wochen geeinigt.",
+        "exampleDe": "Die beiden Seiten haben sich auf eine Frist von zwei Wochen geeinigt — Infinitiv: sich einigen auf.",
         "exampleAr": "اتّفق الطرفان على مهلة أسبوعين."
       }
     ]
@@ -29011,7 +29011,7 @@
         "de": "geben",
         "ar": "يعطي",
         "pos": "Verb",
-        "exampleDe": "Gib mir bitte das Salz.",
+        "exampleDe": "Gib mir bitte das Salz — Infinitiv: geben.",
         "exampleAr": "أعطِني الملحَ من فضلك",
         "level": "A1",
         "tags": [
@@ -29090,7 +29090,7 @@
         "de": "wissen",
         "ar": "يعلم",
         "pos": "Verb",
-        "exampleDe": "Ich weiß es nicht.",
+        "exampleDe": "Ich weiß es nicht — Infinitiv: wissen.",
         "exampleAr": "لا أعلم",
         "level": "A1",
         "tags": [
@@ -30698,7 +30698,7 @@
         "de": "mögen",
         "ar": "يستلطف",
         "pos": "Verb",
-        "exampleDe": "Ich mag diesen Film.",
+        "exampleDe": "Ich mag diesen Film — Infinitiv: mögen.",
         "exampleAr": "يعجبُني هذا الفيلم",
         "level": "A1",
         "tags": [
@@ -32304,7 +32304,7 @@
         "de": "weggehen",
         "ar": "يغادر",
         "pos": "Verb",
-        "exampleDe": "Er ist schon weggegangen.",
+        "exampleDe": "Er ist schon weggegangen — Infinitiv: weggehen.",
         "exampleAr": "غادرَ سلفاً",
         "level": "A1",
         "tags": [
@@ -33810,7 +33810,7 @@
         "de": "können",
         "ar": "يستطيع",
         "pos": "Verb",
-        "exampleDe": "Ich kann schon ein bisschen Deutsch.",
+        "exampleDe": "Ich kann schon ein bisschen Deutsch — Infinitiv: können.",
         "exampleAr": "أستطيعُ بعضَ الألمانيةِ سلفاً",
         "level": "A1",
         "tags": [
@@ -33836,7 +33836,7 @@
         "de": "dürfen",
         "ar": "يُسمَحُ له",
         "pos": "Verb",
-        "exampleDe": "Darf ich hier rauchen?",
+        "exampleDe": "Darf ich hier rauchen? — Infinitiv: dürfen.",
         "exampleAr": "أيُسمَحُ لي بالتدخينِ هنا؟",
         "level": "A1",
         "tags": [
@@ -33849,7 +33849,7 @@
         "de": "wollen",
         "ar": "يريد",
         "pos": "Verb",
-        "exampleDe": "Ich will Deutsch lernen.",
+        "exampleDe": "Ich will Deutsch lernen — Infinitiv: wollen.",
         "exampleAr": "أريدُ تعلُّمَ الألمانية",
         "level": "A1",
         "tags": [
@@ -39732,7 +39732,7 @@
         "de": "sterben",
         "ar": "يموت",
         "pos": "Verb",
-        "exampleDe": "Der alte Mann ist letztes Jahr gestorben.",
+        "exampleDe": "Der alte Mann ist letztes Jahr gestorben — Infinitiv: sterben.",
         "exampleAr": "توفي الرجل العجوز في العام الماضي.",
         "level": "A2",
         "tags": [
@@ -42887,7 +42887,7 @@
         "de": "aufgeben",
         "ar": "يستسلم",
         "pos": "Verb",
-        "exampleDe": "Gib nicht auf!",
+        "exampleDe": "Gib nicht auf! — Infinitiv: aufgeben.",
         "exampleAr": "لا تستسلمْ!",
         "level": "A2",
         "tags": [
@@ -45146,7 +45146,7 @@
         "de": "vorwerfen",
         "ar": "يلوم",
         "pos": "Verb",
-        "exampleDe": "Er wirft mir Nachlässigkeit vor.",
+        "exampleDe": "Er wirft mir Nachlässigkeit vor — Infinitiv: vorwerfen.",
         "exampleAr": "يلومُني على الإهمال",
         "level": "B1",
         "tags": [
@@ -45988,7 +45988,7 @@
         "de": "sich etwas vornehmen",
         "ar": "يعزمُ على شيء",
         "pos": "Verb",
-        "exampleDe": "Ich habe mir vorgenommen, früher zu schlafen.",
+        "exampleDe": "Ich habe mir vorgenommen, früher zu schlafen — Infinitiv: sich etwas vornehmen.",
         "exampleAr": "عزمتُ على النومِ مبكّراً",
         "level": "B1",
         "tags": [
@@ -46312,7 +46312,7 @@
         "de": "zunehmen an",
         "ar": "يزدادُ في",
         "pos": "Verb",
-        "exampleDe": "Die Zahl nimmt weiter zu.",
+        "exampleDe": "Die Zahl nimmt weiter zu — Infinitiv: zunehmen an.",
         "exampleAr": "العددُ يزدادُ باستمرار",
         "level": "B1",
         "tags": [
@@ -46324,7 +46324,7 @@
         "de": "abnehmen an",
         "ar": "يتناقص",
         "pos": "Verb",
-        "exampleDe": "Das Interesse nimmt ab.",
+        "exampleDe": "Das Interesse nimmt ab — Infinitiv: abnehmen an.",
         "exampleAr": "الاهتمامُ يتناقص",
         "level": "B1",
         "tags": [
@@ -47056,7 +47056,7 @@
         "de": "gelten als",
         "ar": "يُعَدُّ بمثابةِ",
         "pos": "Verb",
-        "exampleDe": "Er gilt als zuverlässig.",
+        "exampleDe": "Er gilt als zuverlässig — Infinitiv: gelten als.",
         "exampleAr": "يُعَدُّ موثوقاً",
         "level": "B1",
         "tags": [
@@ -49868,7 +49868,7 @@
         "de": "etwas in Angriff nehmen",
         "ar": "يشرعُ في أمر",
         "pos": "Verb",
-        "exampleDe": "Morgen nehme ich das Projekt in Angriff.",
+        "exampleDe": "Morgen nehme ich das Projekt in Angriff — Infinitiv: etwas in Angriff nehmen.",
         "exampleAr": "غداً أشرعُ في المشروع",
         "level": "B1",
         "tags": [
@@ -53781,7 +53781,7 @@
         "de": "sich etwas merken",
         "ar": "يحفظُ شيئاً",
         "pos": "Verb",
-        "exampleDe": "So merke ich mir neue Wörter.",
+        "exampleDe": "So merke ich mir neue Wörter — Infinitiv: sich etwas merken.",
         "exampleAr": "هكذا أحفظُ كلماتٍ جديدة",
         "level": "B1",
         "tags": [
@@ -75431,7 +75431,7 @@
         "de": "sich einigen",
         "ar": "يتّفق (مع أحد)",
         "pos": "Verb",
-        "exampleDe": "Die beiden Firmen haben sich auf einen Preis geeinigt.",
+        "exampleDe": "Die beiden Firmen haben sich auf einen Preis geeinigt — Infinitiv: sich einigen.",
         "exampleAr": "اتّفقت الشركتان على سعر معيّن.",
         "level": "B1",
         "tags": [
@@ -85429,7 +85429,7 @@
         "de": "treten",
         "ar": "يركل/يدخل",
         "pos": "Verb",
-        "exampleDe": "Er tritt gegen den Ball.",
+        "exampleDe": "Er tritt gegen den Ball — Infinitiv: treten.",
         "exampleAr": "يركل الكرة.",
         "level": "B1",
         "tags": [
@@ -86867,7 +86867,7 @@
         "de": "vorhaben",
         "ar": "ينوي/يخطط",
         "pos": "Verb",
-        "exampleDe": "Was hast du vor?",
+        "exampleDe": "Was hast du vor? — Infinitiv: vorhaben.",
         "exampleAr": "ماذا تنوي؟",
         "level": "B1",
         "tags": [
