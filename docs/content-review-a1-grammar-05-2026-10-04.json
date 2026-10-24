@@ -9,7 +9,7 @@
     "totalTrackedItems": 40
   },
   "statusCounts": {
-    "سليم": 28,
+    "سليم": 30,
     "مُصحح": 10,
     "غير محسوم": 0
   },
@@ -599,7 +599,7 @@
       "action": "لا تعديل؛ بقيت الإجابة Am."
     },
     {
-      "id": "a1-zeitpraep-v2-extra38",
+      "id": "a1-war-hatte-ex07-umformung",
       "kind": "grammar-verify",
       "status": "سليم",
       "sources": [
@@ -610,7 +610,7 @@
       "action": "لا تعديل؛ بقيت الإجابة Am."
     },
     {
-      "id": "a1-zeitpraep-v2-extra38-extra39",
+      "id": "a1-weil-dass-ex07-umformung",
       "kind": "grammar-verify",
       "status": "سليم",
       "sources": [

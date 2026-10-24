@@ -4675,7 +4675,12 @@ void 0;
   const auditById = new Map(audit.items.map((item) => [item.id, item]));
   const exerciseCount = topics.reduce((total, topic) => total + topic.exercises.length, 0);
   const verifyCount = topics.reduce((total, topic) => total + (topic.verify?.length ?? 0), 0);
-  ok(true,
+  ok(topicIds.length === 4 && exerciseCount === 28 && verifyCount === 8 &&
+    audit.date === "2026-10-04" && audit.batch === "A1-grammar-05" &&
+    audit.coverage.grammarTopics === 4 && audit.coverage.grammarExercises === 28 && audit.coverage.grammarVerify === 8 &&
+    expectedIds.length === 40 && new Set(expectedIds).size === 40 && audit.coverage.totalTrackedItems === 40 &&
+    auditIds.length === 40 && new Set(auditIds).size === 40 && expectedIds.every((id) => auditById.has(id)) &&
+    expectedIds.every((id) => auditMarkdown.includes(`| ${id} |`)),
     "K163a سجل A1-grammar-05 يغطي الموضوعات الأربعة وكل تمرين/تحقق في JSON وMarkdown بلا فقد أو تكرار");
 
   const sourceIds = new Set(audit.sources.map((source) => source.id));
@@ -4687,7 +4692,8 @@ void 0;
     ["سليم", "مُصحح", "غير محسوم"].includes(item.status) && item.sources.length > 0 &&
     item.sources.every((id) => sourceIds.has(id)) && item.finding.trim().length > 0 && item.action.trim().length > 0
   );
-  ok(true,
+  ok(completeEvidence && audit.items.every((item) => item.kind.trim().length > 0) &&
+    statusCounts["سليم"] + statusCounts["مُصحح"] + (statusCounts["غير محسوم"] ?? 0) === 40,
     "K163b لكل عنصر دليل وحكم ومصدر معروف وإجراء؛ لا تُسجل خانة مراجعة فارغة");
 
   const referencedSources = new Set(audit.items.flatMap((item) => item.sources));
@@ -4708,7 +4714,8 @@ void 0;
     "a1-plural", "a1-plural-n2", "a1-plural-v1", "a1-zeitpraep",
   ]);
   const expectedStatuses = audit.items.every((item) => item.status === (correctedIds.has(item.id) ? "مُصحح" : "سليم"));
-  ok(true,
+  ok(expectedStatuses && statusCounts["سليم"] === 30 && statusCounts["مُصحح"] === 10 && !statusCounts["غير محسوم"] &&
+    audit.statusCounts["سليم"] === 30 && audit.statusCounts["مُصحح"] === 10 && audit.statusCounts["غير محسوم"] === 0,
     "K163d أحكام الدفعة متطابقة: 28 سليماً و10 مصححاً ولا حالة غير محسومة");
 
   const warTopic = grammarMap["a1-war-hatte"];
