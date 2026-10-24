@@ -2,7 +2,7 @@
 import { useMemo } from "react";
 import type { DayPlan, DayTask, Progress, TaskResult } from "@/lib/types";
 import { KindIcon } from "@/components/dirb/icons";
-import { grammarMap } from "@/lib/content";
+import { grammarMap, getText, getDialogue } from "@/lib/content";
 import type { RitualUrteil } from "@/lib/ritual";
 import { aufgabeGesperrt } from "@/lib/ritual";
 
@@ -15,6 +15,29 @@ const STEP_META: Record<StepId, { icon: string; titleAr: string; titleDe: string
   4: { icon: "✍️", titleAr: "اكتب وتحدّث", titleDe: "Schreiben & Sprechen", descAr: "إنتاج حر — كتابة ومحادثة" },
   5: { icon: "✅", titleAr: "ثبّت واختبر", titleDe: "Festigen & Prüfen", descAr: "فحص اليوم + دفتر الأخطاء + الإغلاق" },
 };
+
+// BAMF BSK B2 — map theme substring → Lebenswelt label
+function bamfForTheme(theme: string): string | null {
+  const t = theme.toLowerCase();
+  if (t.includes("wohnen") || t.includes("stadt") || t.includes("miete")) return "🏠 Wohnen";
+  if (t.includes("arbeit") || t.includes("beruf") || t.includes("digital")) return "💼 Arbeit";
+  if (t.includes("mobilität") || t.includes("verkehr") || t.includes("pendeln") || t.includes("tiket")) return "🚃 Mobilität";
+  if (t.includes("notruf") || t.includes("gesund") || t.includes("pflege")) return "🏥 Gesundheit";
+  if (t.includes("kita") || t.includes("schule") || t.includes("familie")) return "👨‍👩‍👧 Familie";
+  if (t.includes("behörde") || t.includes("anerkennung") || t.includes("bürgeramt")) return "🏛️ Behörde";
+  if (t.includes("feiertag") || t.includes("urlaub") || t.includes("alltag")) return "📅 Alltag";
+  if (t.includes("recht") || t.includes("mietrecht")) return "🏠 Wohnen";
+  return null;
+}
+function themeForTask(task: DayTask): string | null {
+  if (task.textId) { const txt = getText(task.textId) as any; if (txt?.theme) return txt.theme; if (txt?.titleDe) return txt.titleDe; }
+  if (task.dialogueId) { const dlg = getDialogue(task.dialogueId) as any; if (dlg?.theme) return dlg.theme; if (dlg?.titleDe) return dlg.titleDe; }
+  return null;
+}
+function bamfBadge(task: DayTask): string | null {
+  const theme = themeForTask(task);
+  return theme ? bamfForTheme(theme) : null;
+}
 
 function stepOf(task: DayTask): StepId {
   if (task.kind === "wiederholen" || task.verifyFor) return 1;
@@ -163,6 +186,7 @@ export default function TodayStepper({ plan, progress: _progress, ritual, stepFr
                       const gesperrt = globalIdx >= 0 && aufgabeGesperrt(ritual, globalIdx);
                       const isCurrent = globalIdx === stepFrei;
 
+                      const badge = bamfBadge(t);
                       return (
                         <button
                           key={t.id}
@@ -176,15 +200,27 @@ export default function TodayStepper({ plan, progress: _progress, ritual, stepFr
                           }}
                           className={`today-step-task ${passed ? "is-passed" : submitted ? "is-submitted" : isCurrent ? "is-current" : ""} ${gesperrt ? "is-gesperrt" : ""}`}
                           data-testid={`today-step-${sid}-task-${globalIdx}`}
-                          aria-label={`${t.titleAr} — ${t.minutes} دقيقة${gesperrt ? " مقفلة" : passed ? " منجزة" : ""}`}
+                          aria-label={`${t.titleAr} — ${t.minutes} دقيقة${gesperrt ? " مقفلة" : passed ? " منجزة" : ""}${badge ? ` — ${badge}` : ""}`}
                         >
                           <KindIcon kind={t.kind} className="today-step-task-icon" />
                           <span className="today-step-task-title">{t.titleAr}</span>
+                          {badge && <span className="chip" style={{ fontSize:"0.65rem", padding:"0.1rem 0.35rem", background:"var(--color-paper2)" }}>{badge}</span>}
                           <span className="today-step-task-meta rtl-num">{t.minutes}د</span>
                           <span className="today-step-task-state">{gesperrt ? "🔒" : passed ? "✓" : submitted ? "◐" : "○"}</span>
                         </button>
                       );
                     })}
+                    {sid === 3 && (() => {
+                      const themen = [...new Set(tasks.map((x) => themeForTask(x)).filter(Boolean) as string[])];
+                      const bamfs = [...new Set(tasks.map((x) => bamfBadge(x)).filter(Boolean) as string[])];
+                      if (themen.length === 0) return null;
+                      return (
+                        <div data-testid={`today-step-${sid}-bamf`} style={{ marginTop:"0.4rem", padding:"0.45rem 0.6rem", borderRadius:"0.5rem", background:"var(--color-paper2)", borderInlineStart:"3px solid #3b82f6", fontSize:"0.78rem", display:"grid", gap:"0.25rem" }}>
+                          <div style={{ fontWeight:800, color:"#1e3a8a" }}>🌍 B2-Praxis heute — {bamfs.join(" · ")}</div>
+                          <div style={{ color:"var(--color-ink2)", lineHeight:1.7 }}>{themen.slice(0,2).join(" · ")} — BAMF Lebenswelt heute im Fokus → تدرّب في <span style={{ fontWeight:800 }}>تدرّب › 🌍 الحياة</span></div>
+                        </div>
+                      );
+                    })()}
                     {sid === 2 && tasks.some((t) => t.topicId) && (
                       <div className="today-step-lesson-preview" data-testid={`today-step-${sid}-lesson-preview`}>
                         {tasks

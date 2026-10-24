@@ -120,17 +120,19 @@ function MediationBlock({ mediation, praefix, onErledigt }: { mediation: Mediati
   const [text, setText] = useState("");
   const [zeigen, setZeigen] = useState(false);
   const [erledigt, setErledigt] = useState(false);
+  const [checked, setChecked] = useState<Record<number, boolean>>({});
+  const covered = Object.values(checked).filter(Boolean).length;
   return (
     <div className="card" data-testid={`lesestoff-mediation-${praefix}`} style={{ padding: "0.7rem 0.9rem", background: "var(--color-paper)", display: "grid", gap: "0.5rem" }}>
-      <strong>🗣️ مهمة وساطة لغوية (اختيارية)</strong>
+      <strong>🗣️ مهمة وساطة لغوية (اختيارية) — CEFR Mediation B1/B2</strong>
       <div style={{ fontSize: "0.88rem", lineHeight: 1.9 }}>{mediation.aufgabeAr}</div>
       <textarea data-testid={`lesestoff-mediation-textarea-${praefix}`} value={text} onChange={(e) => setText(e.target.value)} rows={3}
-        placeholder="اكتب تلخيصك هنا بالعربية…"
+        placeholder="اكتب تلخيصك هنا بالعربية… (2-3 جمل تنقل الفكرة لشخص لا يقرأ الألمانية)"
         style={{ width: "100%", borderRadius: "10px", padding: "0.5rem 0.7rem", font: "inherit", resize: "vertical" }} />
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", alignItems: "center" }}>
         <button type="button" className="chip" data-testid={`lesestoff-mediation-zeigen-${praefix}`}
-          style={{ cursor: "pointer", minHeight: "40px" }} onClick={() => setZeigen((v) => !v)}>
-          {zeigen ? "إخفاء النقاط الأساسية" : "👁️ قارن مع النقاط الأساسية"}
+          style={{ cursor: "pointer", minHeight: "40px", background: zeigen ? "var(--color-gold-soft)" : undefined }} onClick={() => setZeigen((v) => !v)}>
+          {zeigen ? "🙈 إخفاء النقاط الأساسية" : "👁️ قارن مع النقاط الأساسية — علّم ما غطّيت"}
         </button>
         {!erledigt ? (
           <button type="button" className="btn btn-ghost" data-testid={`lesestoff-mediation-fertig-${praefix}`}
@@ -143,12 +145,23 @@ function MediationBlock({ mediation, praefix, onErledigt }: { mediation: Mediati
         )}
       </div>
       {zeigen && (
-        <ul style={{ margin: 0, paddingInlineStart: "1.2rem", fontSize: "0.85rem", lineHeight: 1.9, color: "var(--color-ink2)" }} data-testid={`lesestoff-mediation-punkte-${praefix}`}>
-          {mediation.punkteAr.map((p, i) => <li key={i}>{p}</li>)}
-        </ul>
+        <div data-testid={`lesestoff-mediation-punkte-${praefix}`} style={{ display:"grid", gap:"0.4rem", background:"var(--color-paper2)", padding:"0.6rem 0.7rem", borderRadius:"0.6rem", border:"1px dashed var(--color-line)" }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", fontSize:"0.78rem", fontWeight:800 }}>
+            <span>📋 قائمة التحقق — علّم ما نقلته بأسلوبك:</span>
+            <span className="chip" style={{ fontSize:"0.72rem", background: covered===mediation.punkteAr.length ? "var(--color-a1)" : "var(--color-paper)", color: covered===mediation.punkteAr.length ? "#fff" : undefined }}>{covered}/{mediation.punkteAr.length} مغطاة</span>
+          </div>
+          {mediation.punkteAr.map((p, i) => (
+            <label key={i} data-testid={`lesestoff-mediation-check-${praefix}-${i}`} style={{ display:"flex", gap:"0.5rem", alignItems:"flex-start", cursor:"pointer", padding:"0.35rem 0.45rem", borderRadius:"0.4rem", background: checked[i] ? "rgba(22,163,74,0.08)" : "transparent", borderInlineStart: checked[i] ? "3px solid var(--color-a1)" : "3px solid transparent" }}>
+              <input type="checkbox" checked={!!checked[i]} onChange={() => setChecked((c) => ({ ...c, [i]: !c[i] }))} style={{ width:"18px", height:"18px", marginTop:"0.15rem", flexShrink:0 }} />
+              <span style={{ fontSize:"0.85rem", lineHeight:1.7, color: checked[i] ? "var(--color-ink)" : "var(--color-ink2)", textDecoration: checked[i] ? "none" : undefined, fontWeight: checked[i] ? 700 : 400 }}>{p} {checked[i] ? "✓" : ""}</span>
+            </label>
+          ))}
+          <div style={{ height:"6px", background:"var(--color-line)", borderRadius:"999px", overflow:"hidden" }}><div style={{ width:`${mediation.punkteAr.length ? (covered/mediation.punkteAr.length)*100 : 0}%`, height:"100%", background:"var(--color-a1)", transition:"width 0.3s" }} /></div>
+          {covered === mediation.punkteAr.length && covered>0 && <div style={{ fontSize:"0.82rem", fontWeight:800, color:"var(--color-a1)", textAlign:"center" }}>🏆 غطّيت كل النقاط الأساسية — وساطة ممتازة!</div>}
+        </div>
       )}
       <div style={{ fontSize: "0.76rem", color: "var(--color-ink2)" }}>
-        💡 لا تصحيح آلي هنا: الهدف نقل المعنى الأساسي بأسلوبك، ثم المقارنة الذاتية مع النقاط الأساسية — وليس الترجمة الحرفية.
+        💡 لا تصحيح آلي هنا: الهدف نقل المعنى الأساسي بأسلوبك، ثم المقارنة الذاتية مع النقاط الأساسية — وليس الترجمة الحرفية. التلوين والعدّاد للتحفيز فقط.
       </div>
     </div>
   );

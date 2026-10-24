@@ -69,6 +69,8 @@ async function main() {
     if (autoEntdecken) {
       const skip = rootEl.querySelector('[data-testid="entdecken-ueberspringen"]') as HTMLElement | null;
       if (skip) act(() => { skip.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true })); });
+      const predSkip = rootEl.querySelector('[data-testid="lesen-prediction-skip"]') as HTMLElement | null;
+      if (predSkip) act(() => { predSkip.dispatchEvent(new dom.window.MouseEvent("click", { bubbles: true })); });
     }
     return leave;
   }
@@ -1829,6 +1831,12 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { default: TaskView } = await import("../components/tasks");
     const props = { lang: "ar" as const, day: 200, srs: {}, onSrs: () => {}, onPoints: () => {}, voiceName: "", rate: 1 };
     mount(React.createElement(TaskView, { task: { id: "t-l", kind: "lesen" as const, titleDe: "L", titleAr: "ق", minutes: 25, textId: "t-b2-15" }, ...props }));
+    // B2 prediction gate: click skip if present
+    {
+      const skip = rootEl.querySelector('[data-testid="lesen-prediction-skip"]') as HTMLButtonElement | null;
+      const input = rootEl.querySelector('[data-testid="lesen-prediction-input"]') as HTMLInputElement | null;
+      if (skip && input) { click(skip); }
+    }
     ok(!!rootEl.querySelector('[data-testid="lesen-lang"]') && /\d+\s*كلمة/.test(txt()), "LVI1 نصُّ B2 يفتحُ بنسختِه الطويلةِ وعدّادِ كلمات");
     ok(rootEl.querySelectorAll("article p").length >= 3 && txt().includes("Fehler sind erlaubt"), "LVI2 فقراتٌ منفصلةٌ ونصٌّ طويلٌ حقيقيّ");
     ok(!txt().includes("ثقافة الخطأ الحقيقية"), "LVI3 الملخّصُ العربيُّ محجوبٌ قبلَ الطلب");

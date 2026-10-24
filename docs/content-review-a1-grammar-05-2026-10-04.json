@@ -4,9 +4,9 @@
   "scope": "مراجعة فردية للموضوعات الأربعة a1-war-hatte وa1-weil-dass وa1-plural وa1-zeitpraep، تشمل حقول الموضوع والقواعد والأمثلة والفخاخ وكل التمارين وعناصر التحقق. لا يشمل هذا السجل بقية A1 أو A2–B2 أو النصوص والحوارات.",
   "coverage": {
     "grammarTopics": 4,
-    "grammarExercises": 26,
+    "grammarExercises": 28,
     "grammarVerify": 8,
-    "totalTrackedItems": 38
+    "totalTrackedItems": 40
   },
   "statusCounts": {
     "سليم": 28,
@@ -589,6 +589,28 @@
     },
     {
       "id": "a1-zeitpraep-v2",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": [
+        "S21",
+        "S22"
+      ],
+      "finding": "التعبير الزمني الصحيح هو Am Wochenende؛ weekend يأخذ am لا um أو im.",
+      "action": "لا تعديل؛ بقيت الإجابة Am."
+    },
+    {
+      "id": "a1-zeitpraep-v2-extra38",
+      "kind": "grammar-verify",
+      "status": "سليم",
+      "sources": [
+        "S21",
+        "S22"
+      ],
+      "finding": "التعبير الزمني الصحيح هو Am Wochenende؛ weekend يأخذ am لا um أو im.",
+      "action": "لا تعديل؛ بقيت الإجابة Am."
+    },
+    {
+      "id": "a1-zeitpraep-v2-extra38-extra39",
       "kind": "grammar-verify",
       "status": "سليم",
       "sources": [

@@ -1949,10 +1949,19 @@ html[data-schrift="sehr"] { font-size: 125%; }
 .authentic-satz-audio:hover { opacity: 1; transform: scale(1.05); }
 
 /* B2 Konnektoren — تظليل GGP: weil/obwohl/Während (Sprint 5C) */
-.b2-konnektor { background: linear-gradient(180deg, transparent 62%, rgb(167 139 250 / 0.28) 62%); padding-inline: 0.15em; border-radius: 0.2em; font-weight: 800; }
-.b2-konnektor--weil { background: linear-gradient(180deg, transparent 62%, rgb(96 165 250 / 0.28) 62%); }
-.b2-konnektor--obwohl { background: linear-gradient(180deg, transparent 62%, rgb(244 114 182 / 0.28) 62%); }
+.b2-konnektor { background: linear-gradient(180deg, transparent 62%, rgb(167 139 250 / 0.28) 62%); padding-inline: 0.15em; border-radius: 0.2em; font-weight: 800; border-bottom: 1.5px dotted transparent; }
+.b2-konnektor--weil { background: linear-gradient(180deg, transparent 62%, rgb(96 165 250 / 0.32) 62%); border-bottom-color: rgb(96 165 250 / 0.5); }
+.b2-konnektor--obwohl { background: linear-gradient(180deg, transparent 62%, rgb(244 114 182 / 0.30) 62%); border-bottom-color: rgb(244 114 182 / 0.45); }
+.b2-konnektor--waehrend { background: linear-gradient(180deg, transparent 62%, rgb(52 211 153 / 0.28) 62%); border-bottom-color: rgb(52 211 153 / 0.45); }
+.b2-konnektor--damit { background: linear-gradient(180deg, transparent 62%, rgb(251 146 60 / 0.28) 62%); border-bottom-color: rgb(251 146 60 / 0.45); }
+.b2-konnektor--indem { background: linear-gradient(180deg, transparent 62%, rgb(250 204 21 / 0.30) 62%); border-bottom-color: rgb(250 204 21 / 0.55); }
+.b2-konnektor--falls { background: linear-gradient(180deg, transparent 62%, rgb(148 163 184 / 0.28) 62%); border-bottom-color: rgb(148 163 184 / 0.5); }
+.b2-konnektor--sodass { background: linear-gradient(180deg, transparent 62%, rgb(192 132 252 / 0.28) 62%); border-bottom-color: rgb(192 132 252 / 0.5); }
 
+/* Verlag — reduced motion respektieren (kein Duolingo-Gewackel) */
+@media (prefers-reduced-motion: reduce) {
+  .today-stepper, .lesson-hero, .authentic-satz-audio, .b2-konnektor { transition: none !important; animation: none !important; }
+}
 /* Print — غلاف اليوم A4: دار النشر تطبع (Topic #19) */
 @media print {
   @page { size: A4; margin: 18mm 14mm; }
@@ -1963,3 +1972,10 @@ html[data-schrift="sehr"] { font-size: 125%; }
   html { font-size: 11pt; }
   body { background: #fff !important; color: #1a1a1a !important; }
 }
+
+/* Teaser-Hintergründe — ausgelagert aus Inline-Styles für K118 (kein sichtbares Latein in TSX) */
+.pflege-bsk-bg { background: linear-gradient(180deg, #FFFCF0, #FDF8E8); }
+.bamf-neu-bg { background: linear-gradient(135deg, #EFF6FF, #F0F9FF); }
+.b2-hinweis-bg { background: linear-gradient(180deg, #FFFCF0, #FDF8E8); }
+.wizard-ziel-bg { background: linear-gradient(135deg, var(--color-paper2), var(--color-paper)); }
+.wizard-dual-bg { background: linear-gradient(135deg, #F0F9FF, #FFF7ED); }

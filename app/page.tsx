@@ -22,6 +22,7 @@ import { tagGesperrt } from "@/lib/modulpruefung";
 import ModulTor from "@/components/modultor";
 import ExerciseSet from "@/components/exercises";
 import { heutigesGrammatikThema, parkedExercisesFor } from "@/lib/parkuebungen";
+import { TodayB2Praxis } from "@/components/today-b2-praxis";
 import { FehlerGrenze } from "@/components/fehlergrenze";
 
 // ⚡ R308: تحميلٌ كسولٌ حقيقي — لا تُجلَب شيفرتا «تدرّب»/«اختبر» الثقيلتان (عشرات المحطات)
@@ -531,8 +532,8 @@ export default function Today() {
             )}
           </div>
           <div className="dirb-extra-actions">
-            <Link href="/drucken" className="dirb-extra-action">🖨 ورقة الشفرات</Link>
-            <Link href="/einstellungen" className="dirb-extra-action">⚙️ الإعدادات</Link>
+            <Link href={`/drucken`} className="dirb-extra-action">🖨 ورقة الشفرات</Link>
+            <Link href={`/einstellungen`} className="dirb-extra-action">⚙️ الإعدادات</Link>
             <button
               type="button"
               className="dirb-extra-action"
@@ -594,7 +595,7 @@ export default function Today() {
 
       <SkillBalancePlan progress={progress} />
       {/* Pflege BSK — مسار مستقل لا يُحتسب في الخطة، لكنه ظاهر لمن اختاره */}
-      <section className="card" data-testid="pflege-bsk-teaser" style={{ padding: "0.75rem 0.95rem", background: "linear-gradient(180deg, #FFFCF0, #FDF8E8)", borderInlineStart: "4px solid #22c55e", display: "grid", gap: "0.45rem" }}>
+      <section className="card pflege-bsk-bg" data-testid="pflege-bsk-teaser" style={{ padding: "0.75rem 0.95rem", borderInlineStart: "4px solid #22c55e", display: "grid", gap: "0.45rem" }}>
         <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
           <span style={{ fontWeight: 900, color: "#0F2A44" }}>🩺 مسار التمريض BSK — اختياري</span>
           <span style={{ fontSize: "0.72rem", background: "rgb(34 197 94 / 0.12)", padding: "0.15rem 0.5rem", borderRadius: "999px", fontWeight: 800, color: "#15803d" }}>B2 Pflege</span>
@@ -603,6 +604,23 @@ export default function Today() {
           115 كلمة مهنية + 8 حوارات طوارئ (Visite/Übergabe) — يفتح في <b>تدرّب → ألمانية التمريض</b>. لا يدخل في الـ 378 يوماً ولا يُغيّر خطتك.
         </div>
       </section>
+      {/* BAMF Lebenswelt — 12/12 neu: Schnellzugriff Heute → Üben Leben (Sprint 13) */}
+      <section className="card bamf-neu-bg" data-testid="bamf-neu-teaser" style={{ padding: "0.75rem 0.95rem", borderInlineStart: "4px solid #3b82f6", display: "grid", gap: "0.4rem" }}>
+        <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+          <span style={{ fontWeight: 900, color: "#1e3a8a" }}>🗺️ BAMF komplett: 57 حوارات B2 Lebenswelt</span>
+          <span style={{ fontSize: "0.72rem", background: "rgb(59 130 246 / 0.12)", padding: "0.15rem 0.5rem", borderRadius: "999px", fontWeight: 800, color: "#1d4ed8" }}>12/12 I-XII</span>
+          <span style={{ fontSize: "0.72rem", background: "#FEF3C7", padding: "0.15rem 0.4rem", borderRadius: "999px", fontWeight: 700, color: "#92400e" }}>neu: Verkehr · Notruf · Feiertage</span>
+        </div>
+        <div style={{ fontSize: "0.82rem", lineHeight: 1.8, color: "var(--color-ink2)" }}>
+          تدرّب على كل Lebenswelt فوراً: <Link href={`/ueben`} style={{ fontWeight: 800, color: "#1d4ed8" }}>تدرّب → 🌍 الحياة في ألمانيا</Link> — نفس الحوارات (d-b2-28…37) تعمل أيضاً في <b>اليوم › الخطوة 3: Hören & Lesen</b> عندما تأتي في الخطة. 7 Konnektoren farbcodiert: <span className="b2-konnektor b2-konnektor--weil">weil</span> · <span className="b2-konnektor b2-konnektor--obwohl">obwohl</span> · <span className="b2-konnektor b2-konnektor--waehrend">während</span> · <span className="b2-konnektor b2-konnektor--damit">damit</span> + فلتر BAMF جديد.
+        </div>
+        <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", fontSize: "0.74rem" }}>
+          <span className="chip">🚇 d-b2-35 Deutschlandticket</span>
+          <span className="chip">🚨 d-b2-36 Notruf 112/116117</span>
+          <span className="chip">🎄 d-b2-37 Feiertage & AU</span>
+        </div>
+      </section>
+      <TodayB2Praxis plan={plan} />
       <WiedereinstiegBanner progress={progress} minuten={totalMinutes} normaleMinuten={basePlan.tasks.reduce((a, t) => a + t.minutes, 0)} />
 
       <LernPfad progress={progress} />

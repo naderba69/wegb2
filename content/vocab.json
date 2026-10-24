@@ -84,7 +84,8 @@
           "vorstellen"
         ],
         "img": "/cards/heissen.webp",
-        "aussprache": "ei = «آي» لا «إي» · ß = «س» مشدَّدة"
+        "aussprache": "ei = «آي» لا «إي» · ß = «س» مشدَّدة",
+        "formen": "heißt, hieß, hat geheißen"
       },
       {
         "id": "v007",
@@ -100,7 +101,8 @@
         "img": "/cards/kommen.webp",
         "syn": [
           "ankommen"
-        ]
+        ],
+        "formen": "kommt, kam, ist gekommen"
       },
       {
         "id": "v008",
@@ -117,7 +119,8 @@
         "aussprache": "w = «ڤ»",
         "syn": [
           "leben"
-        ]
+        ],
+        "formen": "wohnt, wohnte, hat gewohnt"
       },
       {
         "id": "v009",
@@ -135,7 +138,8 @@
         "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "syn": [
           "reden"
-        ]
+        ],
+        "formen": "spricht, sprach, hat gesprochen"
       },
       {
         "id": "v010",
@@ -153,7 +157,8 @@
         "aussprache": "v = «ف»",
         "syn": [
           "begreifen"
-        ]
+        ],
+        "formen": "versteht, verstand, hat verstanden"
       },
       {
         "id": "v011",
@@ -166,7 +171,8 @@
         "tags": [
           "vorstellen"
         ],
-        "img": "/cards/lernen.webp"
+        "img": "/cards/lernen.webp",
+        "formen": "lernt, lernte, hat gelernt"
       },
       {
         "id": "v012",
@@ -180,7 +186,8 @@
           "vorstellen"
         ],
         "img": "/cards/arbeiten.webp",
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "arbeitet, arbeitete, hat gearbeitet"
       },
       {
         "id": "v013",
@@ -448,7 +455,8 @@
         "aussprache": "z = «تس»",
         "syn": [
           "begleichen"
-        ]
+        ],
+        "formen": "bezahlt, bezahlte, hat bezahlt"
       },
       {
         "id": "v150",
@@ -755,7 +763,8 @@
         "tags": [
           "alltag"
         ],
-        "img": "/cards/aufstehen.webp"
+        "img": "/cards/aufstehen.webp",
+        "formen": "steht auf, stand auf, ist aufgestanden"
       },
       {
         "id": "v037",
@@ -770,7 +779,8 @@
           "alltag"
         ],
         "img": "/cards/schlafen.webp",
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "formen": "schläft, schlief, hat geschlafen"
       },
       {
         "id": "v038",
@@ -784,7 +794,8 @@
         "tags": [
           "alltag"
         ],
-        "img": "/cards/essen.webp"
+        "img": "/cards/essen.webp",
+        "formen": "isst, aß, hat gegessen"
       },
       {
         "id": "v039",
@@ -798,7 +809,8 @@
         ],
         "img": "/cards/trinken.webp",
         "exampleDe": "Zum Frühstück trinke ich immer einen Tee mit Milch.",
-        "exampleAr": "على الفطور أشرب دائماً شاياً بالحليب."
+        "exampleAr": "على الفطور أشرب دائماً شاياً بالحليب.",
+        "formen": "trinkt, trank, hat getrunken"
       },
       {
         "id": "v040",
@@ -1241,7 +1253,8 @@
         "level": "A1",
         "tags": [
           "familie"
-        ]
+        ],
+        "formen": "heiratet, heiratete, hat geheiratet"
       },
       {
         "id": "r311a1-012",
@@ -1369,7 +1382,8 @@
         "tags": [
           "gesundheit"
         ],
-        "img": "/cards/wehtun.webp"
+        "img": "/cards/wehtun.webp",
+        "formen": "tut weh, tat weh, hat wehgetan"
       },
       {
         "id": "v051",
@@ -1483,7 +1497,8 @@
         "img": "/cards/umsteigen.webp",
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "In Frankfurt müssen Sie umsteigen, Gleis fünf.",
-        "exampleAr": "في فرانكفورت عليك تبديل القطار، الرصيف خمسة."
+        "exampleAr": "في فرانكفورت عليك تبديل القطار، الرصيف خمسة.",
+        "formen": "steigt um, stieg um, ist umgestiegen"
       },
       {
         "id": "v058",
@@ -1497,7 +1512,8 @@
         "img": "/cards/reservieren.webp",
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Ich möchte einen Tisch für vier Personen reservieren.",
-        "exampleAr": "أريد حجز طاولة لأربعة أشخاص."
+        "exampleAr": "أريد حجز طاولة لأربعة أشخاص.",
+        "formen": "reserviert, reservierte, hat reserviert"
       },
       {
         "id": "v059",
@@ -1547,7 +1563,8 @@
         "exampleAr": "ندّخر كل شهر مائة يورو للعطلة.",
         "syn": [
           "ansparen"
-        ]
+        ],
+        "formen": "spart, sparte, hat gespart"
       },
       {
         "id": "v062",
@@ -1593,7 +1610,8 @@
         ],
         "img": "/cards/regnen.webp",
         "exampleDe": "Nimm einen Schirm mit, es soll am Abend regnen.",
-        "exampleAr": "خذ مظلة معك، يُتوقّع أن تمطر مساءً."
+        "exampleAr": "خذ مظلة معك، يُتوقّع أن تمطر مساءً.",
+        "formen": "regnet, regnete, hat geregnet"
       },
       {
         "id": "v065",
@@ -1674,7 +1692,8 @@
         "img": "/cards/putzen.webp",
         "aussprache": "z = «تس»",
         "exampleDe": "Am Samstag putzen wir zusammen die Küche und das Bad.",
-        "exampleAr": "يوم السبت ننظّف معاً المطبخ والحمّام."
+        "exampleAr": "يوم السبت ننظّف معاً المطبخ والحمّام.",
+        "formen": "putzt, putzte, hat geputzt"
       },
       {
         "id": "v070",
@@ -1689,7 +1708,8 @@
         "img": "/cards/einkaufen.webp",
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Ich kaufe immer samstags auf dem Markt ein.",
-        "exampleAr": "أتسوّق دائماً يوم السبت في السوق."
+        "exampleAr": "أتسوّق دائماً يوم السبت في السوق.",
+        "formen": "kauft ein, kaufte ein, hat eingekauft"
       },
       {
         "id": "v071",
@@ -1803,7 +1823,8 @@
           "alltag"
         ],
         "img": "/cards/beeilen.webp",
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "beeilt sich, beeilte sich, hat sich beeilt"
       },
       {
         "id": "v162",
@@ -2022,7 +2043,8 @@
         "img": "/cards/glauben.webp",
         "syn": [
           "meinen"
-        ]
+        ],
+        "formen": "glaubt, glaubte, hat geglaubt"
       },
       {
         "id": "v076",
@@ -2037,7 +2059,8 @@
           "gefuehl"
         ],
         "img": "/cards/sich-freuen.webp",
-        "aussprache": "eu/äu = «أوي»"
+        "aussprache": "eu/äu = «أوي»",
+        "formen": "freut sich, freute sich, hat sich gefreut"
       },
       {
         "id": "v077",
@@ -2051,7 +2074,8 @@
         ],
         "img": "/cards/sich-aergern.webp",
         "exampleDe": "Ich ärgere mich über den Lärm der Nachbarn.",
-        "exampleAr": "أنزعج من ضجيج الجيران."
+        "exampleAr": "أنزعج من ضجيج الجيران.",
+        "formen": "ärgert sich, ärgerte sich, hat sich geärgert"
       },
       {
         "id": "v078",
@@ -2099,7 +2123,8 @@
           "gefuehl"
         ],
         "img": "/cards/sich-entschuldigen.webp",
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "formen": "entschuldigt, entschuldigte, hat entschuldigt"
       },
       {
         "id": "v081",
@@ -2129,7 +2154,8 @@
           "feier"
         ],
         "img": "/cards/gratulieren.webp",
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "gratuliert, gratulierte, hat gratuliert"
       },
       {
         "id": "v083",
@@ -2176,7 +2202,8 @@
         "img": "/cards/berichten.webp",
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Die Zeitung berichtet über den Streik bei der Bahn.",
-        "exampleAr": "الجريدة تُبلّغ عن إضراب السكك الحديدية."
+        "exampleAr": "الجريدة تُبلّغ عن إضراب السكك الحديدية.",
+        "formen": "berichtet, berichtete, hat berichtet"
       },
       {
         "id": "v086",
@@ -2194,7 +2221,8 @@
         "exampleAr": "احكِ لي عن يومك الأول في ألمانيا!",
         "syn": [
           "berichten"
-        ]
+        ],
+        "formen": "erzählt, erzählte, hat erzählt"
       },
       {
         "id": "v087",
@@ -2208,7 +2236,8 @@
         "img": "/cards/beschreiben.webp",
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Können Sie den Mann bitte genau beschreiben?",
-        "exampleAr": "هل يمكنك وصف الرجل بدقّة من فضلك؟"
+        "exampleAr": "هل يمكنك وصف الرجل بدقّة من فضلك؟",
+        "formen": "beschreibt, beschrieb, hat beschrieben"
       },
       {
         "id": "v088",
@@ -2255,7 +2284,8 @@
         ],
         "img": "/cards/hoffen.webp",
         "exampleDe": "Ich hoffe, dass der Zug pünktlich kommt.",
-        "exampleAr": "آمل أن يصل القطار في موعده."
+        "exampleAr": "آمل أن يصل القطار في موعده.",
+        "formen": "hofft, hoffte, hat gehofft"
       },
       {
         "id": "v091",
@@ -2286,7 +2316,8 @@
         ],
         "img": "/cards/empfehlen.webp",
         "exampleDe": "Ich empfehle dir das Café am Bahnhof, der Kuchen ist super.",
-        "exampleAr": "أنصحك بالمقهى قرب المحطة، الكعك ممتاز."
+        "exampleAr": "أنصحك بالمقهى قرب المحطة، الكعك ممتاز.",
+        "formen": "empfiehlt, empfahl, hat empfohlen"
       },
       {
         "id": "v093",
@@ -2415,7 +2446,8 @@
         "img": "/cards/erwarten.webp",
         "aussprache": "w = «ڤ»",
         "exampleDe": "Ich erwarte morgen ein Paket, bitte nehmen Sie es an.",
-        "exampleAr": "أنتظر طرداً غداً، من فضلك استلمه."
+        "exampleAr": "أنتظر طرداً غداً، من فضلك استلمه.",
+        "formen": "erwartet, erwartete, hat erwartet"
       },
       {
         "id": "v167",
@@ -2520,7 +2552,8 @@
           "diskussion"
         ],
         "img": "/cards/begruenden.webp",
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "begründet, begründete, hat begründet"
       },
       {
         "id": "v100",
@@ -2784,7 +2817,8 @@
         "img": "/cards/ueberzeugen.webp",
         "aussprache": "eu/äu = «أوي» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Mit guten Argumenten kannst du sie sicher überzeugen.",
-        "exampleAr": "بحجج جيدة يمكنك إقناعها بالتأكيد."
+        "exampleAr": "بحجج جيدة يمكنك إقناعها بالتأكيد.",
+        "formen": "überzeugt, überzeugte, hat überzeugt"
       },
       {
         "id": "v116",
@@ -2846,7 +2880,8 @@
         ],
         "img": "/cards/ausbilden.webp",
         "exampleDe": "Die Firma bildet jedes Jahr zehn junge Leute aus.",
-        "exampleAr": "الشركة تكوّن مهنياً كل سنة عشرة شبّان."
+        "exampleAr": "الشركة تكوّن مهنياً كل سنة عشرة شبّان.",
+        "formen": "bildet aus, bildete aus, hat ausgebildet"
       },
       {
         "id": "v120",
@@ -2927,7 +2962,8 @@
         "tags": [
           "arbeit"
         ],
-        "img": "/cards/auftreten.webp"
+        "img": "/cards/auftreten.webp",
+        "formen": "tritt auf, trat auf, ist aufgetreten"
       },
       {
         "id": "v173",
@@ -3107,7 +3143,8 @@
         "img": "/cards/recherchieren.webp",
         "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Dina hat zwei Tage recherchiert, bevor sie den Artikel veröffentlichte.",
-        "exampleAr": "دينا بحثت يومين قبل أن تنشر المقال."
+        "exampleAr": "دينا بحثت يومين قبل أن تنشر المقال.",
+        "formen": "recherchiert, recherchierte, hat recherchiert"
       },
       {
         "id": "v126",
@@ -3271,7 +3308,8 @@
         "img": "/cards/bewerten.webp",
         "aussprache": "w = «ڤ»",
         "exampleDe": "Die Jury bewertet nicht die Idee allein, sondern auch die Umsetzung.",
-        "exampleAr": "لجنة التحكيم لا تقيّم الفكرة وحدها بل تنفيذها أيضاً."
+        "exampleAr": "لجنة التحكيم لا تقيّم الفكرة وحدها بل تنفيذها أيضاً.",
+        "formen": "bewertet, bewertete, hat bewertet"
       },
       {
         "id": "v136",
@@ -3303,7 +3341,8 @@
           "arbeit"
         ],
         "img": "/cards/uebernehmen.webp",
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "übernimmt, übernahm, hat übernommen"
       },
       {
         "id": "v138",
@@ -3334,7 +3373,8 @@
         "img": "/cards/voraussetzen.webp",
         "aussprache": "v = «ف» · z = «تس»",
         "exampleDe": "Der Kurs setzt voraus, dass Sie B1 sicher beherrschen.",
-        "exampleAr": "الدورة تستلزم إتقانك لمستوى B1."
+        "exampleAr": "الدورة تستلزم إتقانك لمستوى B1.",
+        "formen": "setzt voraus, setzte voraus, hat vorausgesetzt"
       },
       {
         "id": "v140",
@@ -3382,7 +3422,8 @@
         "tags": [
           "medien"
         ],
-        "img": "/cards/angeben.webp"
+        "img": "/cards/angeben.webp",
+        "formen": "gibt an, gab an, hat angegeben"
       },
       {
         "id": "v143",
@@ -3414,7 +3455,8 @@
           "arbeit"
         ],
         "img": "/cards/abschliessen.webp",
-        "aussprache": "ie = «إي» ممدودة · sch = «ش» · ß = «س» مشدَّدة"
+        "aussprache": "ie = «إي» ممدودة · sch = «ش» · ß = «س» مشدَّدة",
+        "formen": "schließt ab, schloss ab, hat abgeschlossen"
       },
       {
         "id": "v175",
@@ -3475,7 +3517,8 @@
         ],
         "img": "/cards/umdenken.webp",
         "exampleDe": "Wer im Homeoffice arbeitet, muss beim Thema Pausen umdenken.",
-        "exampleAr": "من يعمل من البيت عليه إعادة التفكير في موضوع الاستراحات."
+        "exampleAr": "من يعمل من البيت عليه إعادة التفكير في موضوع الاستراحات.",
+        "formen": "denkt um, dachte um, hat umgedacht"
       },
       {
         "id": "v179",
@@ -3489,7 +3532,8 @@
           "argument"
         ],
         "img": "/cards/greifen.webp",
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "greift, griff, hat gegriffen"
       },
       {
         "id": "v180",
@@ -3801,7 +3845,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
         "exampleDe": "Die Nachbarn streiten sich oft wegen der Musik.",
-        "exampleAr": "الجيران يتشاجرون كثيراً بسبب الموسيقى."
+        "exampleAr": "الجيران يتشاجرون كثيراً بسبب الموسيقى.",
+        "formen": "streitet sich, stritt sich, hat sich gestritten"
       },
       {
         "id": "v189",
@@ -3814,7 +3859,8 @@
         ],
         "aussprache": "v = «ف» · ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Nach dem Gespräch am runden Tisch haben sich die beiden versöhnt.",
-        "exampleAr": "بعد حديث الطاولة المستديرة تصالح الاثنان."
+        "exampleAr": "بعد حديث الطاولة المستديرة تصالح الاثنان.",
+        "formen": "versöhnt sich, versöhnte sich, hat sich versöhnt"
       },
       {
         "id": "v190",
@@ -3873,7 +3919,8 @@
           "beziehungen"
         ],
         "exampleDe": "Nach fünf Jahren haben sie sich getrennt.",
-        "exampleAr": "بعد خمس سنوات انفصلا."
+        "exampleAr": "بعد خمس سنوات انفصلا.",
+        "formen": "trennt sich, trennte sich, hat sich getrennt"
       },
       {
         "id": "v194",
@@ -3948,7 +3995,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Wir haben uns für Samstag um zehn verabredet.",
-        "exampleAr": "حدّدنا موعداً يوم السبت في العاشرة."
+        "exampleAr": "حدّدنا موعداً يوم السبت في العاشرة.",
+        "formen": "verabredet sich, verabredete sich, hat sich verabredet"
       },
       {
         "id": "v199",
@@ -3993,7 +4041,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Im Team kommunizieren wir hauptsächlich per E-Mail.",
-        "exampleAr": "في الفريق نتواصل أساساً عبر الإيميل."
+        "exampleAr": "في الفريق نتواصل أساساً عبر الإيميل.",
+        "formen": "kommuniziert, kommunizierte, hat kommuniziert"
       },
       {
         "id": "v202",
@@ -4035,7 +4084,8 @@
           "beziehungen"
         ],
         "exampleDe": "Hedi kümmert sich um seinen Vater nach dem Schlaganfall.",
-        "exampleAr": "هادي يرعى والده بعد الجلطة."
+        "exampleAr": "هادي يرعى والده بعد الجلطة.",
+        "formen": "kümmert sich, kümmerte sich, hat sich gekümmert"
       },
       {
         "id": "v205",
@@ -4095,7 +4145,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Wir haben uns lange über den Film unterhalten.",
-        "exampleAr": "تحدثنا طويلاً عن الفيلم."
+        "exampleAr": "تحدثنا طويلاً عن الفيلم.",
+        "formen": "unterhält sich, unterhielt sich, hat sich unterhalten"
       },
       {
         "id": "v209",
@@ -4108,7 +4159,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Wer beim Zählerstand betrügt, riskiert die Kündigung des Vertrags.",
-        "exampleAr": "من يخدع في قراءة العدّاد يخاطر بفسخ العقد."
+        "exampleAr": "من يخدع في قراءة العدّاد يخاطر بفسخ العقد.",
+        "formen": "betrügt, betrog, hat betrogen"
       },
       {
         "id": "v210",
@@ -4152,7 +4204,8 @@
         ],
         "aussprache": "eu/äu = «أوي» · sch = «ش»",
         "exampleDe": "Ich will dich nicht enttäuschen, aber der Termin ist unrealistisch.",
-        "exampleAr": "لا أريد تخييب أملك، لكن الموعد غير واقعي."
+        "exampleAr": "لا أريد تخييب أملك، لكن الموعد غير واقعي.",
+        "formen": "enttäuscht, enttäuschte, hat enttäuscht"
       },
       {
         "id": "v213",
@@ -4180,7 +4233,8 @@
           "beziehungen"
         ],
         "exampleDe": "Ich freue mich schon auf den Urlaub an der Ostsee.",
-        "exampleAr": "أترقّب بفرح العطلة على بحر البلطيق."
+        "exampleAr": "أترقّب بفرح العطلة على بحر البلطيق.",
+        "formen": "freut sich, freute sich, hat sich gefreut"
       },
       {
         "id": "v215",
@@ -4208,7 +4262,8 @@
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Ich gönne ihr die Beförderung, sie hat jahrelang dafür gearbeitet.",
-        "exampleAr": "أتمنّى لها الترقية من قلبي، فقد عملت لها سنوات."
+        "exampleAr": "أتمنّى لها الترقية من قلبي، فقد عملت لها سنوات.",
+        "formen": "gönnt, gönnte, hat gegönnt"
       },
       {
         "id": "v217",
@@ -4268,7 +4323,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Der Vermieter wollte nicht nachgeben, akzeptierte aber die Ratenzahlung.",
-        "exampleAr": "المؤجّر لم يُرد التراجع، لكنه قبل الدفع بالتقسيط."
+        "exampleAr": "المؤجّر لم يُرد التراجع، لكنه قبل الدفع بالتقسيط.",
+        "formen": "gibt nach, gab nach, hat nachgegeben"
       },
       {
         "id": "v221",
@@ -4280,7 +4336,8 @@
           "beziehungen"
         ],
         "exampleDe": "Die beiden Seiten haben sich auf eine Frist von zwei Wochen geeinigt — Infinitiv: sich einigen auf.",
-        "exampleAr": "اتّفق الطرفان على مهلة أسبوعين."
+        "exampleAr": "اتّفق الطرفان على مهلة أسبوعين.",
+        "formen": "einigt sich, einigte sich, hat sich geeinigt"
       }
     ]
   },
@@ -4470,7 +4527,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Wie fühlen Sie sich heute? – Viel besser, danke.",
-        "exampleAr": "كيف تشعر اليوم؟ – أفضل بكثير، شكراً."
+        "exampleAr": "كيف تشعر اليوم؟ – أفضل بكثير، شكراً.",
+        "formen": "fühlt sich, fühlte sich, hat sich gefühlt"
       },
       {
         "id": "v236",
@@ -4527,7 +4585,8 @@
           "gesundheit"
         ],
         "exampleDe": "Diese Ärztin behandelt vor allem Kinder.",
-        "exampleAr": "هذه الطبيبة تعالج الأطفال بشكل أساسي."
+        "exampleAr": "هذه الطبيبة تعالج الأطفال بشكل أساسي.",
+        "formen": "behandelt, behandelte, hat behandelt"
       },
       {
         "id": "v241",
@@ -4540,7 +4599,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Das Knie muss operiert werden, sonst bleibt der Schmerz.",
-        "exampleAr": "الركبة يجب أن تُجرى لها عملية وإلا بقي الألم."
+        "exampleAr": "الركبة يجب أن تُجرى لها عملية وإلا بقي الألم.",
+        "formen": "operiert, operierte, hat operiert"
       },
       {
         "id": "v242",
@@ -4567,7 +4627,8 @@
           "gesundheit"
         ],
         "exampleDe": "Der Patient ist langsamer gesundet, als die Ärzte erwartet hatten.",
-        "exampleAr": "المريض تماثل للشفاء أبطأ مما توقّع الأطباء."
+        "exampleAr": "المريض تماثل للشفاء أبطأ مما توقّع الأطباء.",
+        "formen": "gesundet, gesundete, ist gesundet"
       },
       {
         "id": "v244",
@@ -4610,7 +4671,8 @@
           "gesundheit"
         ],
         "exampleDe": "Ich muss mich heute krankmelden, ich habe starke Kopfschmerzen.",
-        "exampleAr": "يجب أن أبلّغ بمرضي اليوم، عندي صداع شديد."
+        "exampleAr": "يجب أن أبلّغ بمرضي اليوم، عندي صداع شديد.",
+        "formen": "meldet sich krank, meldete sich krank, hat sich krankgemeldet"
       },
       {
         "id": "v248",
@@ -4760,7 +4822,8 @@
           "gesundheit"
         ],
         "exampleDe": "Wer Kollegen mobbt, riskiert eine Abmahnung.",
-        "exampleAr": "من ينمّر على زملائه يخاطر بإنذار."
+        "exampleAr": "من ينمّر على زملائه يخاطر بإنذار.",
+        "formen": "mobbt, mobbte, hat gemobbt"
       },
       {
         "id": "v258",
@@ -4882,7 +4945,8 @@
           "gesundheit"
         ],
         "exampleDe": "Ich halte mich mit Schwimmen und Radfahren fit.",
-        "exampleAr": "أحافظ على لياقتي بالسباحة وركوب الدراجة."
+        "exampleAr": "أحافظ على لياقتي بالسباحة وركوب الدراجة.",
+        "formen": "hält fit, hielt fit, hat fit gehalten"
       },
       {
         "id": "v266",
@@ -4894,7 +4958,8 @@
           "gesundheit"
         ],
         "exampleDe": "Wer sich gesund ernährt, braucht weniger Tabletten.",
-        "exampleAr": "من يتغذّى بشكل صحي يحتاج أقراصاً أقل."
+        "exampleAr": "من يتغذّى بشكل صحي يحتاج أقراصاً أقل.",
+        "formen": "ernährt sich, ernährte sich, hat sich ernährt"
       },
       {
         "id": "v267",
@@ -5397,7 +5462,8 @@
         ],
         "exampleDe": "Bitte desinfizieren Sie die Hände.",
         "exampleAr": "من فضلك عقّم اليدين.",
-        "pos": "Verb"
+        "pos": "Verb",
+        "formen": "desinfiziert, desinfizierte, hat desinfiziert"
       },
       {
         "id": "vpfl-65",
@@ -5409,7 +5475,8 @@
         ],
         "exampleDe": "Wir beobachten die Wunde genau.",
         "exampleAr": "نراقب الجرح بدقة.",
-        "pos": "Verb"
+        "pos": "Verb",
+        "formen": "beobachtet, beobachtete, hat beobachtet"
       },
       {
         "id": "vpfl-66",
@@ -5421,7 +5488,8 @@
         ],
         "exampleDe": "Ich begleite Sie zur Untersuchung.",
         "exampleAr": "سأرافقك إلى الفحص.",
-        "pos": "Verb"
+        "pos": "Verb",
+        "formen": "begleitet, begleitete, hat begleitet"
       },
       {
         "id": "vpfl-67",
@@ -5918,7 +5986,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Sich zu integrieren heißt nicht, die eigene Sprache aufzugeben.",
-        "exampleAr": "الاندماج لا يعني التخلّي عن اللغة الأم."
+        "exampleAr": "الاندماج لا يعني التخلّي عن اللغة الأم.",
+        "formen": "integriert sich, integrierte sich, hat sich integriert"
       },
       {
         "id": "v279",
@@ -5962,7 +6031,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Wer Bewerber wegen des Namens aussortiert, diskriminiert.",
-        "exampleAr": "من يستبعد المتقدّمين بسبب الاسم يمارس التمييز."
+        "exampleAr": "من يستبعد المتقدّمين بسبب الاسم يمارس التمييز.",
+        "formen": "diskriminiert, diskriminierte, hat diskriminiert"
       },
       {
         "id": "v282",
@@ -6022,7 +6092,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Ich akzeptiere deine Entscheidung, auch wenn ich anders denke.",
-        "exampleAr": "أقبل قرارك حتى لو كنت أفكّر بشكل مختلف."
+        "exampleAr": "أقبل قرارك حتى لو كنت أفكّر بشكل مختلف.",
+        "formen": "akzeptiert, akzeptierte, hat akzeptiert"
       },
       {
         "id": "v286",
@@ -6112,7 +6183,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Tausende demonstrieren heute für besseren Klimaschutz.",
-        "exampleAr": "الآلاف يتظاهرون اليوم من أجل حماية أفضل للمناخ."
+        "exampleAr": "الآلاف يتظاهرون اليوم من أجل حماية أفضل للمناخ.",
+        "formen": "demonstriert, demonstrierte, hat demonstriert"
       },
       {
         "id": "v292",
@@ -6155,7 +6227,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Lesen Sie den Vertrag, bevor Sie unterschreiben, besonders die Klausel unten.",
-        "exampleAr": "اقرأ العقد قبل أن توقّع، خاصة البند في الأسفل."
+        "exampleAr": "اقرأ العقد قبل أن توقّع، خاصة البند في الأسفل.",
+        "formen": "unterschreibt, unterschrieb, hat unterschrieben"
       },
       {
         "id": "v295",
@@ -6184,7 +6257,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Ab achtzehn darf man in Deutschland wählen.",
-        "exampleAr": "من سن الثامنة عشرة يمكن التصويت في ألمانيا."
+        "exampleAr": "من سن الثامنة عشرة يمكن التصويت في ألمانيا.",
+        "formen": "wählt, wählte, hat gewählt"
       },
       {
         "id": "v297",
@@ -6321,7 +6395,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Alte Batterien darf man nicht einfach wegwerfen.",
-        "exampleAr": "البطاريات القديمة لا يجوز رميها ببساطة."
+        "exampleAr": "البطاريات القديمة لا يجوز رميها ببساطة.",
+        "formen": "wirft weg, warf weg, hat weggeworfen"
       },
       {
         "id": "v307",
@@ -6427,7 +6502,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Die Doppelbelastung lässt sich nur mit einem klaren Plan bewältigen.",
-        "exampleAr": "العبء المزدوج لا يُجابَه إلا بخطة واضحة."
+        "exampleAr": "العبء المزدوج لا يُجابَه إلا بخطة واضحة.",
+        "formen": "bewältigt, bewältigte, hat bewältigt"
       },
       {
         "id": "v316",
@@ -6509,7 +6585,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Sie vermietet das kleine Zimmer an eine Studentin.",
-        "exampleAr": "هي تؤجّر الغرفة الصغيرة لطالبة."
+        "exampleAr": "هي تؤجّر الغرفة الصغيرة لطالبة.",
+        "formen": "vermietet, vermietete, hat vermietet"
       },
       {
         "id": "v323",
@@ -6633,7 +6710,8 @@
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Wir ziehen im März um, zwei Straßen weiter.",
         "exampleAr": "ننتقل في مارس، على بعد شارعين.",
-        "plural": "die Kooperationen"
+        "plural": "die Kooperationen",
+        "formen": "zieht um, zog um, ist umgezogen"
       },
       {
         "id": "v331",
@@ -6646,7 +6724,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Ende März ziehe ich aus der alten Wohnung aus.",
-        "exampleAr": "في نهاية مارس أخرج من الشقة القديمة."
+        "exampleAr": "في نهاية مارس أخرج من الشقة القديمة.",
+        "formen": "zieht aus, zog aus, ist ausgezogen"
       },
       {
         "id": "v332",
@@ -6659,7 +6738,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Am Ersten ziehen wir in die neue Wohnung ein.",
-        "exampleAr": "في الأول من الشهر ندخل الشقة الجديدة."
+        "exampleAr": "في الأول من الشهر ندخل الشقة الجديدة.",
+        "formen": "zieht ein, zog ein, ist eingezogen"
       },
       {
         "id": "v333",
@@ -6795,7 +6875,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Wie wollen Sie den Umbau finanzieren, mit Eigenkapital oder Kredit?",
-        "exampleAr": "كيف ستموّل التجديد، برأس مال ذاتي أم بقرض؟"
+        "exampleAr": "كيف ستموّل التجديد، برأس مال ذاتي أم بقرض؟",
+        "formen": "finanziert, finanzierte, hat finanziert"
       },
       {
         "id": "v342",
@@ -6823,7 +6904,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Der Vermieter will das Bad renovieren, während wir im Urlaub sind.",
-        "exampleAr": "المؤجّر يريد تجديد الحمّام بينما نحن في العطلة."
+        "exampleAr": "المؤجّر يريد تجديد الحمّام بينما نحن في العطلة.",
+        "formen": "renoviert, renovierte, hat renoviert"
       },
       {
         "id": "v344",
@@ -6836,7 +6918,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Nach dem Modernisieren darf die Miete nur begrenzt steigen.",
-        "exampleAr": "بعد التحديث لا يجوز أن يرتفع الإيجار إلا بحدود."
+        "exampleAr": "بعد التحديث لا يجوز أن يرتفع الإيجار إلا بحدود.",
+        "formen": "modernisiert, modernisierte, hat modernisiert"
       },
       {
         "id": "v345",
@@ -6881,7 +6964,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Wir haben die Wohnung zweimal besichtigt, einmal bei Tageslicht.",
-        "exampleAr": "عايّنا الشقة مرتين، مرة في ضوء النهار."
+        "exampleAr": "عايّنا الشقة مرتين، مرة في ضوء النهار.",
+        "formen": "besichtigt, besichtigte, hat besichtigt"
       },
       {
         "id": "v348",
@@ -6941,7 +7025,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Man kann den Vertrag nur schriftlich kündigen, mit sechs Wochen Frist.",
-        "exampleAr": "لا يمكن فسخ العقد إلا كتابياً بمهلة ستة أسابيع."
+        "exampleAr": "لا يمكن فسخ العقد إلا كتابياً بمهلة ستة أسابيع.",
+        "formen": "kündigt, kündigte, hat gekündigt"
       },
       {
         "id": "v352",
@@ -7033,7 +7118,8 @@
         ],
         "aussprache": "z = «تس»",
         "exampleDe": "Zusammenleben in einer WG funktioniert nur mit klaren Regeln.",
-        "exampleAr": "العيش معاً في سكن مشترك لا ينجح إلا بقواعد واضحة."
+        "exampleAr": "العيش معاً في سكن مشترك لا ينجح إلا بقواعد واضحة.",
+        "formen": "lebt zusammen, lebte zusammen, hat zusammengelebt"
       },
       {
         "id": "v358",
@@ -7090,7 +7176,8 @@
           "wohnen"
         ],
         "exampleDe": "Die Firma stattet jeden Arbeitsplatz mit zwei Bildschirmen aus.",
-        "exampleAr": "الشركة تجهّز كل مكان عمل بشاشتين."
+        "exampleAr": "الشركة تجهّز كل مكان عمل بشاشتين.",
+        "formen": "stattet aus, stattete aus, hat ausgestattet"
       },
       {
         "id": "v362",
@@ -7149,7 +7236,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ich möchte mich über den Lärm der Baustelle beschweren.",
         "exampleAr": "أريد أن أشتكي من ضجيج الورشة.",
-        "plural": "die Debatten"
+        "plural": "die Debatten",
+        "formen": "beschwert sich, beschwerte sich, hat sich beschwert"
       },
       {
         "id": "v366",
@@ -7246,7 +7334,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Wir chatten jeden Abend eine halbe Stunde auf Deutsch.",
-        "exampleAr": "ندردش كل مساء نصف ساعة بالألمانية."
+        "exampleAr": "ندردش كل مساء نصف ساعة بالألمانية.",
+        "formen": "chattet, chattete, hat gechattet"
       },
       {
         "id": "v373",
@@ -7336,7 +7425,8 @@
         ],
         "aussprache": "sp/st في البداية = «شب/شت»",
         "exampleDe": "Am Wochenende streamen wir eine deutsche Serie mit Untertiteln.",
-        "exampleAr": "في نهاية الأسبوع نشاهد مسلسلاً ألمانياً تدفّقياً مع ترجمة."
+        "exampleAr": "في نهاية الأسبوع نشاهد مسلسلاً ألمانياً تدفّقياً مع ترجمة.",
+        "formen": "streamt, streamte, hat gestreamt"
       },
       {
         "id": "v379",
@@ -7380,7 +7470,8 @@
           "digital"
         ],
         "exampleDe": "Für den Kurs müssen Sie sich online anmelden.",
-        "exampleAr": "للدورة يجب أن تسجّل عبر الإنترنت."
+        "exampleAr": "للدورة يجب أن تسجّل عبر الإنترنت.",
+        "formen": "meldet sich an, meldete sich an, hat sich angemeldet"
       },
       {
         "id": "v382",
@@ -7408,7 +7499,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Vergiss nicht, den Text zu speichern, bevor du das Programm schließt.",
-        "exampleAr": "لا تنسَ حفظ النص قبل إغلاق البرنامج."
+        "exampleAr": "لا تنسَ حفظ النص قبل إغلاق البرنامج.",
+        "formen": "speichert, speicherte, hat gespeichert"
       },
       {
         "id": "v384",
@@ -7621,7 +7713,8 @@
           "digital"
         ],
         "exampleDe": "Das Konto wurde gehackt, weil das Passwort auch für Spiele galt.",
-        "exampleAr": "الحساب اختُرق لأن كلمة المرور كانت نفسها للألعاب."
+        "exampleAr": "الحساب اختُرق لأن كلمة المرور كانت نفسها للألعاب.",
+        "formen": "hackt, hackte, hat gehackt"
       },
       {
         "id": "v398",
@@ -7707,7 +7800,8 @@
           "digital"
         ],
         "exampleDe": "Ich muss mein Handy aufladen, der Akku ist fast leer.",
-        "exampleAr": "يجب أن أشحن هاتفي، فالبطارية شبه فارغة."
+        "exampleAr": "يجب أن أشحن هاتفي، فالبطارية شبه فارغة.",
+        "formen": "lädt auf, lud auf, hat aufgeladen"
       },
       {
         "id": "v404",
@@ -7766,7 +7860,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Bitte aktualisieren Sie die App, sonst funktioniert die Anmeldung nicht.",
-        "exampleAr": "من فضلك حدّث التطبيق وإلا لن يعمل تسجيل الدخول."
+        "exampleAr": "من فضلك حدّث التطبيق وإلا لن يعمل تسجيل الدخول.",
+        "formen": "aktualisiert, aktualisierte, hat aktualisiert"
       },
       {
         "id": "v408",
@@ -7878,7 +7973,8 @@
         "aussprache": "sch = «ش»",
         "exampleDe": "Sie forscht seit Jahren zu Schlaf und Gedächtnis.",
         "exampleAr": "هي تبحث منذ سنوات في النوم والذاكرة.",
-        "plural": "die Maßnahmen"
+        "plural": "die Maßnahmen",
+        "formen": "forscht, forschte, hat geforscht"
       },
       {
         "id": "v416",
@@ -7907,7 +8003,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Der Arzt untersucht zuerst den Hals und dann die Ohren.",
-        "exampleAr": "الطبيب يفحص الحلق أولاً ثم الأذنين."
+        "exampleAr": "الطبيب يفحص الحلق أولاً ثم الأذنين.",
+        "formen": "untersucht, untersuchte, hat untersucht"
       },
       {
         "id": "v418",
@@ -8090,7 +8187,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Wir werten die Fragebögen erst nach der letzten Befragung aus.",
-        "exampleAr": "نحلّل الاستبيانات بعد آخر استجواب فقط."
+        "exampleAr": "نحلّل الاستبيانات بعد آخر استجواب فقط.",
+        "formen": "wertet aus, wertete aus, hat ausgewertet"
       },
       {
         "id": "v430",
@@ -8118,7 +8216,8 @@
           "wissenschaft"
         ],
         "exampleDe": "Die Studie hat tausend Haushalte telefonisch befragt.",
-        "exampleAr": "الدراسة استطلعت ألف أسرة هاتفياً."
+        "exampleAr": "الدراسة استطلعت ألف أسرة هاتفياً.",
+        "formen": "befragt, befragte, hat befragt"
       },
       {
         "id": "v433",
@@ -8164,7 +8263,8 @@
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Wer zitiert, muss die Quelle mit Seitenzahl angeben.",
         "exampleAr": "من يقتبس عليه ذكر المصدر مع رقم الصفحة.",
-        "plural": "die Demonstrationen"
+        "plural": "die Demonstrationen",
+        "formen": "zitiert, zitierte, hat zitiert"
       },
       {
         "id": "v437",
@@ -8176,7 +8276,8 @@
           "wissenschaft"
         ],
         "exampleDe": "Die Behauptung ist nicht belegt, es fehlt jede Quelle.",
-        "exampleAr": "الادّعاء غير مثبت، ولا يوجد أي مصدر."
+        "exampleAr": "الادّعاء غير مثبت، ولا يوجد أي مصدر.",
+        "formen": "belegt, belegte, hat belegt"
       },
       {
         "id": "v438",
@@ -8189,7 +8290,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
         "exampleDe": "Ohne Daten kann man diese Behauptung nicht beweisen.",
-        "exampleAr": "بلا بيانات لا يمكن البرهنة على هذا الادّعاء."
+        "exampleAr": "بلا بيانات لا يمكن البرهنة على هذا الادّعاء.",
+        "formen": "beweist, bewies, hat bewiesen"
       },
       {
         "id": "v439",
@@ -8300,7 +8402,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Wer die Frist nicht einhalten kann, zahlt eine neue Gebühr.",
         "exampleAr": "من لا يستطيع الالتزام بالمهلة يدفع رسوماً جديدة.",
-        "plural": "die Streiks"
+        "plural": "die Streiks",
+        "formen": "hält ein, hielt ein, hat eingehalten"
       },
       {
         "id": "v446",
@@ -8344,7 +8447,8 @@
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Die Stadt fördert Sprachkurse für Neuankömmlinge.",
-        "exampleAr": "المدينة تدعم دورات لغة للقادمين الجدد."
+        "exampleAr": "المدينة تدعم دورات لغة للقادمين الجدد.",
+        "formen": "fördert, förderte, hat gefördert"
       },
       {
         "id": "v449",
@@ -8389,7 +8493,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Nach dem Master will sie promovieren, am liebsten im Ausland.",
-        "exampleAr": "بعد الماستر تريد نيل الدكتوراه، ويفضَّل في الخارج."
+        "exampleAr": "بعد الماستر تريد نيل الدكتوراه، ويفضَّل في الخارج.",
+        "formen": "promoviert, promovierte, hat promoviert"
       },
       {
         "id": "v452",
@@ -8417,7 +8522,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Das Team publiziert die Ergebnisse frei zugänglich.",
-        "exampleAr": "الفريق ينشر النتائج بشكل مفتوح."
+        "exampleAr": "الفريق ينشر النتائج بشكل مفتوح.",
+        "formen": "publiziert, publizierte, hat publiziert"
       },
       {
         "id": "v454",
@@ -8612,7 +8718,8 @@
           "schoenheit"
         ],
         "exampleDe": "Im Winter muss man die Haut besonders pflegen.",
-        "exampleAr": "في الشتاء يجب العناية بالبشرة خاصة."
+        "exampleAr": "في الشتاء يجب العناية بالبشرة خاصة.",
+        "formen": "pflegt, pflegte, hat gepflegt"
       },
       {
         "id": "v465",
@@ -8655,7 +8762,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Sie schminkt sich nur für besondere Anlässe.",
-        "exampleAr": "هي تتزيّن فقط للمناسبات الخاصة."
+        "exampleAr": "هي تتزيّن فقط للمناسبات الخاصة.",
+        "formen": "schminkt sich, schminkte sich, hat sich geschminkt"
       },
       {
         "id": "v468",
@@ -8728,7 +8836,8 @@
           "schoenheit"
         ],
         "exampleDe": "Wir altern alle, die Frage ist nur, wie gesund.",
-        "exampleAr": "كلنا نشيخ، والسؤال فقط: بأي صحة."
+        "exampleAr": "كلنا نشيخ، والسؤال فقط: بأي صحة.",
+        "formen": "altert, alterte, ist gealtert"
       },
       {
         "id": "v473",
@@ -8819,7 +8928,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Zieh dich warm an, es sind nur acht Grad!",
-        "exampleAr": "ارتدِ ملابس دافئة، الحرارة ثماني درجات فقط!"
+        "exampleAr": "ارتدِ ملابس دافئة، الحرارة ثماني درجات فقط!",
+        "formen": "zieht sich an, zog sich an, hat sich angezogen"
       },
       {
         "id": "v479",
@@ -9004,7 +9114,8 @@
         "aussprache": "ie = «إي» ممدودة · sch = «ش»",
         "exampleDe": "Viele Magazine retuschieren Haut und Figur, ohne es zu kennzeichnen.",
         "exampleAr": "مجلات كثيرة تنمّق البشرة والقوام دون وسم ذلك.",
-        "plural": "die Ermittlungen"
+        "plural": "die Ermittlungen",
+        "formen": "retuschiert, retuschierte, hat retuschiert"
       },
       {
         "id": "v491",
@@ -9062,7 +9173,8 @@
           "schoenheit"
         ],
         "exampleDe": "Ruhige Stimmen wirken auf Kunden überzeugender als laute.",
-        "exampleAr": "الأصوات الهادئة تؤثّر في الزبائن أكثر إقناعاً من الصاخبة."
+        "exampleAr": "الأصوات الهادئة تؤثّر في الزبائن أكثر إقناعاً من الصاخبة.",
+        "formen": "wirkt auf, wirkte auf, hat aufgewirkt"
       },
       {
         "id": "v495",
@@ -9076,7 +9188,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Ihr ruhiges Auftreten hat die Personalchefin beeindruckt.",
         "exampleAr": "حضورها الهادئ أبهر مديرة الموارد البشرية.",
-        "plural": "die Sanktionen"
+        "plural": "die Sanktionen",
+        "formen": "beeindruckt, beeindruckte, hat beeindruckt"
       },
       {
         "id": "v496",
@@ -9152,7 +9265,8 @@
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Die Überschrift übertreibt, der Text selbst ist vorsichtig.",
         "exampleAr": "العنوان يبالغ، والنص نفسه حذر.",
-        "plural": "die Geldstrafen"
+        "plural": "die Geldstrafen",
+        "formen": "übertreibt, übertrieb, hat übertrieben"
       },
       {
         "id": "v501",
@@ -9280,7 +9394,8 @@
           "kunst-kultur"
         ],
         "exampleDe": "Am Wochenende male ich, um den Kopf frei zu bekommen.",
-        "exampleAr": "في نهاية الأسبوع أرسم لأصفّي ذهني."
+        "exampleAr": "في نهاية الأسبوع أرسم لأصفّي ذهني.",
+        "formen": "malt, malte, hat gemalt"
       },
       {
         "id": "v509",
@@ -9460,7 +9575,8 @@
         ],
         "exampleDe": "Der Regisseur hat den Film in nur drei Wochen gedreht.",
         "exampleAr": "المخرج صوّر الفيلم في ثلاثة أسابيع فقط.",
-        "plural": "die Bestimmungen"
+        "plural": "die Bestimmungen",
+        "formen": "dreht, drehte, hat gedreht"
       },
       {
         "id": "v521",
@@ -9583,7 +9699,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Die Schüler führen im Juni ein eigenes Stück auf.",
-        "exampleAr": "التلاميذ يعرضون في يونيو مسرحية من تأليفهم."
+        "exampleAr": "التلاميذ يعرضون في يونيو مسرحية من تأليفهم.",
+        "formen": "führt auf, führte auf, hat aufgeführt"
       },
       {
         "id": "v529",
@@ -9612,7 +9729,8 @@
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Sie kritisiert den Plan sachlich, ohne laut zu werden.",
         "exampleAr": "هي تنتقد الخطة بموضوعية دون رفع صوتها.",
-        "plural": "die Normen"
+        "plural": "die Normen",
+        "formen": "kritisiert, kritisierte, hat kritisiert"
       },
       {
         "id": "v531",
@@ -9625,7 +9743,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Wer ein Buch rezensiert, sollte es ganz gelesen haben.",
-        "exampleAr": "من يكتب نقداً لكتاب ينبغي أن يكون قد قرأه كاملاً."
+        "exampleAr": "من يكتب نقداً لكتاب ينبغي أن يكون قد قرأه كاملاً.",
+        "formen": "rezensiert, rezensierte, hat rezensiert"
       },
       {
         "id": "v532",
@@ -10223,7 +10342,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Wer aufsteigen will, muss auch unbequeme Aufgaben übernehmen.",
-        "exampleAr": "من يريد الترقي عليه تولّي مهام غير مريحة أيضاً."
+        "exampleAr": "من يريد الترقي عليه تولّي مهام غير مريحة أيضاً.",
+        "formen": "steigt auf, stieg auf, ist aufgestiegen"
       },
       {
         "id": "v570",
@@ -10359,7 +10479,8 @@
           "arbeit-beruf"
         ],
         "exampleDe": "Ich bewerbe mich um die Stelle als Techniker.",
-        "exampleAr": "أتقدّم لوظيفة فنّي."
+        "exampleAr": "أتقدّم لوظيفة فنّي.",
+        "formen": "bewirbt sich, bewarb sich, hat sich beworben"
       },
       {
         "id": "v579",
@@ -10466,7 +10587,8 @@
         "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
         "exampleDe": "Die Lokführer streiken seit Montag, die Züge fahren nicht.",
         "exampleAr": "سائقو القطارات مضربون منذ الاثنين، والقطارات لا تسير.",
-        "plural": "die Auswertungen"
+        "plural": "die Auswertungen",
+        "formen": "streikt, streikte, hat gestreikt"
       },
       {
         "id": "v586",
@@ -10511,7 +10633,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · eu/äu = «أوي»",
         "exampleDe": "Eine Bewerbung nur nach dem Foto zu beurteilen, ist unfair.",
-        "exampleAr": "تقييم طلب توظيف بحسب الصورة وحدها أمر غير عادل."
+        "exampleAr": "تقييم طلب توظيف بحسب الصورة وحدها أمر غير عادل.",
+        "formen": "beurteilt, beurteilte, hat beurteilt"
       },
       {
         "id": "v589",
@@ -10634,7 +10757,8 @@
           "arbeit-beruf"
         ],
         "exampleDe": "Mein Vater geht nächstes Jahr in den Ruhestand, nach vierzig Jahren.",
-        "exampleAr": "أبي يتقاعد السنة القادمة بعد أربعين سنة."
+        "exampleAr": "أبي يتقاعد السنة القادمة بعد أربعين سنة.",
+        "formen": "geht in den Ruhestand, ging in den Ruhestand, ist in den Ruhestand gegangen"
       },
       {
         "id": "vpfl-20",
@@ -10988,7 +11112,8 @@
         ],
         "exampleDe": "Ich trage die Werte sofort ein.",
         "exampleAr": "أدوّن القيم فورًا.",
-        "pos": "Verb"
+        "pos": "Verb",
+        "formen": "trägt ein, trug ein, hat eingetragen"
       },
       {
         "id": "vpfl-90",
@@ -11000,7 +11125,8 @@
         ],
         "exampleDe": "Der Patient wird alle zwei Stunden gelagert.",
         "exampleAr": "يُقلَّب المريض كل ساعتين.",
-        "pos": "Verb"
+        "pos": "Verb",
+        "formen": "lagert, lagerte, hat gelagert"
       },
       {
         "id": "vpfl-91",
@@ -11012,7 +11138,8 @@
         ],
         "exampleDe": "Alarmieren Sie den Notarzt!",
         "exampleAr": "استدعِ طبيب الطوارئ!",
-        "pos": "Verb"
+        "pos": "Verb",
+        "formen": "alarmiert, alarmierte, hat alarmiert"
       }
     ]
   },
@@ -11061,7 +11188,8 @@
         ],
         "aussprache": "sch = «ش» · v = «ف» · z = «تس»",
         "exampleDe": "Die Fabrik hat den Fluss jahrzehntelang verschmutzt.",
-        "exampleAr": "المصنع لوّث النهر عقوداً."
+        "exampleAr": "المصنع لوّث النهر عقوداً.",
+        "formen": "verschmutzt, verschmutzte, hat verschmutzt"
       },
       {
         "id": "v600",
@@ -11105,7 +11233,8 @@
           "umwelt-klima"
         ],
         "exampleDe": "In Deutschland recyceln wir Papier, Glas und Plastik getrennt.",
-        "exampleAr": "في ألمانيا نعيد تدوير الورق والزجاج والبلاستيك بشكل منفصل."
+        "exampleAr": "في ألمانيا نعيد تدوير الورق والزجاج والبلاستيك بشكل منفصل.",
+        "formen": "recycelt, recycelte, hat recycelt"
       },
       {
         "id": "v603",
@@ -11181,7 +11310,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Können Sie das Geschenk bitte schön verpacken?",
-        "exampleAr": "هل يمكنك تغليف الهدية بشكل جميل من فضلك؟"
+        "exampleAr": "هل يمكنك تغليف الهدية بشكل جميل من فضلك؟",
+        "formen": "verpackt, verpackte, hat verpackt"
       },
       {
         "id": "v608",
@@ -11210,7 +11340,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
         "exampleDe": "Alte Geräte verbrauchen viel mehr Strom als neue.",
-        "exampleAr": "الأجهزة القديمة تستهلك كهرباء أكثر بكثير من الجديدة."
+        "exampleAr": "الأجهزة القديمة تستهلك كهرباء أكثر بكثير من الجديدة.",
+        "formen": "verbraucht, verbrauchte, hat verbraucht"
       },
       {
         "id": "v610",
@@ -11409,7 +11540,8 @@
         ],
         "aussprache": "ß = «س» مشدَّدة",
         "exampleDe": "Ältere Busse stoßen deutlich mehr Feinstaub aus.",
-        "exampleAr": "الحافلات القديمة تُصدر جسيمات دقيقة أكثر بكثير."
+        "exampleAr": "الحافلات القديمة تُصدر جسيمات دقيقة أكثر بكثير.",
+        "formen": "stößt aus, stieß aus, hat ausgestoßen"
       },
       {
         "id": "v623",
@@ -11500,7 +11632,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Zu viel Salz auf den Straßen schädigt die Bäume am Rand.",
-        "exampleAr": "الملح الزائد على الطرق يُلحق ضرراً بالأشجار على الحافة."
+        "exampleAr": "الملح الزائد على الطرق يُلحق ضرراً بالأشجار على الحافة.",
+        "formen": "schädigt, schädigte, hat geschädigt"
       },
       {
         "id": "v629",
@@ -11512,7 +11645,8 @@
           "umwelt-klima"
         ],
         "exampleDe": "Der Bau der Straße würde das Biotop am See gefährden.",
-        "exampleAr": "بناء الشارع سيُعرّض الموطن البيئي قرب البحيرة للخطر."
+        "exampleAr": "بناء الشارع سيُعرّض الموطن البيئي قرب البحيرة للخطر.",
+        "formen": "gefährdet, gefährdete, hat gefährdet"
       },
       {
         "id": "v630",
@@ -11557,7 +11691,8 @@
         ],
         "aussprache": "sch = «ش» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Grüne Dächer schützen die Stadt ein wenig vor der Hitze.",
-        "exampleAr": "الأسطح الخضراء تحمي المدينة قليلاً من الحر."
+        "exampleAr": "الأسطح الخضراء تحمي المدينة قليلاً من الحر.",
+        "formen": "schützt, schützte, hat geschützt"
       },
       {
         "id": "v633",
@@ -11569,7 +11704,8 @@
           "umwelt-klima"
         ],
         "exampleDe": "Ohne Schutz würde diese Vogelart in der Region aussterben.",
-        "exampleAr": "بلا حماية سينقرض هذا النوع من الطيور في المنطقة."
+        "exampleAr": "بلا حماية سينقرض هذا النوع من الطيور في المنطقة.",
+        "formen": "stirbt aus, starb aus, ist ausgestorben"
       },
       {
         "id": "v634",
@@ -11768,7 +11904,8 @@
         ],
         "aussprache": "z = «تس»",
         "exampleDe": "Für die Plantage wurden hunderte Hektar Wald abgeholzt.",
-        "exampleAr": "من أجل المزرعة اجتُثّت مئات الهكتارات من الغابة."
+        "exampleAr": "من أجل المزرعة اجتُثّت مئات الهكتارات من الغابة.",
+        "formen": "holzt ab, holzte ab, hat abgeholzt"
       },
       {
         "id": "v647",
@@ -11936,7 +12073,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Die Anwohner protestieren gegen die neue Straße.",
-        "exampleAr": "السكان يحتجّون على الشارع الجديد."
+        "exampleAr": "السكان يحتجّون على الشارع الجديد.",
+        "formen": "protestiert, protestierte, hat protestiert"
       }
     ]
   },
@@ -11973,7 +12111,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Bitte überweisen Sie die Kaution auf das Sonderkonto.",
-        "exampleAr": "من فضلك حوّل الضمانة إلى الحساب الخاص."
+        "exampleAr": "من فضلك حوّل الضمانة إلى الحساب الخاص.",
+        "formen": "überweist, überwies, hat überwiesen"
       },
       {
         "id": "v660",
@@ -12065,7 +12204,8 @@
         "aussprache": "eu/äu = «أوي» · v = «ف»",
         "exampleDe": "Auch Einnahmen aus Nebenjobs muss man versteuern.",
         "exampleAr": "حتى دخل الأعمال الجانبية يخضع للضريبة.",
-        "plural": "die Portale"
+        "plural": "die Portale",
+        "formen": "versteuert, versteuerte, hat versteuert"
       },
       {
         "id": "v666",
@@ -12108,7 +12248,8 @@
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Ich möchte ein Konto bei Ihrer Bank eröffnen.",
-        "exampleAr": "أريد فتح حساب في بنككم."
+        "exampleAr": "أريد فتح حساب في بنككم.",
+        "formen": "eröffnet, eröffnete, hat eröffnet"
       },
       {
         "id": "v669",
@@ -12137,7 +12278,8 @@
         ],
         "exampleDe": "Ich hebe am Automaten hundert Euro ab.",
         "exampleAr": "أسحب من الصرّاف مائة يورو.",
-        "plural": "die Anwendungen"
+        "plural": "die Anwendungen",
+        "formen": "hebt ab, hob ab, hat abgehoben"
       },
       {
         "id": "v671",
@@ -12150,7 +12292,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · z = «تس»",
         "exampleDe": "Jeden Monat zahle ich fünfzig Euro auf das Sparkonto ein.",
-        "exampleAr": "كل شهر أودع خمسين يورو في حساب التوفير."
+        "exampleAr": "كل شهر أودع خمسين يورو في حساب التوفير.",
+        "formen": "zahlt ein, zahlte ein, hat eingezahlt"
       },
       {
         "id": "v672",
@@ -12191,7 +12334,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Am Monatsende rutscht das Konto oft ins Minus.",
-        "exampleAr": "في نهاية الشهر يُسحب من الحساب أكثر مما فيه غالباً."
+        "exampleAr": "في نهاية الشهر يُسحب من الحساب أكثر مما فيه غالباً.",
+        "formen": "rutscht ins Minus, rutschte ins Minus, ist ins Minus gerutscht"
       },
       {
         "id": "v675",
@@ -12438,7 +12582,8 @@
         "aussprache": "w = «ڤ»",
         "exampleDe": "Viele Firmen werben mit kostenloser Lieferung.",
         "exampleAr": "شركات كثيرة تروّج بالتوصيل المجاني.",
-        "plural": "die Strukturen"
+        "plural": "die Strukturen",
+        "formen": "wirbt, warb, hat geworben"
       },
       {
         "id": "v691",
@@ -12482,7 +12627,8 @@
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Eine Wohnung im Zentrum können wir uns nicht mehr leisten.",
-        "exampleAr": "شقة في المركز لم نعد نقدر على تكلفتها."
+        "exampleAr": "شقة في المركز لم نعد نقدر على تكلفتها.",
+        "formen": "leistet sich, leistete sich, hat sich geleistet"
       },
       {
         "id": "v694",
@@ -12571,7 +12717,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Kann ich den Pullover gegen Größe M umtauschen?",
-        "exampleAr": "هل يمكنني استبدال البلوفر بمقاس M؟"
+        "exampleAr": "هل يمكنني استبدال البلوفر بمقاس M؟",
+        "formen": "tauscht um, tauschte um, hat umgetauscht"
       },
       {
         "id": "v700",
@@ -12615,7 +12762,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Den defekten Wasserkocher habe ich sofort reklamiert.",
-        "exampleAr": "الغلاية المعطوبة قدّمت شكوى بها فوراً."
+        "exampleAr": "الغلاية المعطوبة قدّمت شكوى بها فوراً.",
+        "formen": "reklamiert, reklamierte, hat reklamiert"
       },
       {
         "id": "v703",
@@ -12659,7 +12807,8 @@
         "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Den Pullover kann ich mit Kassenzettel zurückgeben.",
         "exampleAr": "يمكنني إعادة البلوفر مع الإيصال.",
-        "plural": "die Methoden"
+        "plural": "die Methoden",
+        "formen": "gibt zurück, gab zurück, hat zurückgegeben"
       },
       {
         "id": "v706",
@@ -12672,7 +12821,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Wir konsumieren mehr, als wir wirklich brauchen.",
-        "exampleAr": "نستهلك أكثر مما نحتاج فعلاً."
+        "exampleAr": "نستهلك أكثر مما نحتاج فعلاً.",
+        "formen": "konsumiert, konsumierte, hat konsumiert"
       },
       {
         "id": "v707",
@@ -12861,7 +13011,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "In der Stadt bewege ich mich fast nur mit dem Rad fort.",
-        "exampleAr": "في المدينة أتنقّل بالدراجة تقريباً فقط."
+        "exampleAr": "في المدينة أتنقّل بالدراجة تقريباً فقط.",
+        "formen": "bewegt sich fort, bewegte sich fort, hat sich fortbewegt"
       },
       {
         "id": "v719",
@@ -12979,7 +13130,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Vergiss nicht, das Ticket vor der Fahrt zu entwerten.",
-        "exampleAr": "لا تنسَ ختم التذكرة قبل الرحلة."
+        "exampleAr": "لا تنسَ ختم التذكرة قبل الرحلة.",
+        "formen": "entwertet, entwertete, hat entwertet"
       },
       {
         "id": "v727",
@@ -13007,7 +13159,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Entschuldigung, ich habe mich verspätet, der Bus kam nicht.",
-        "exampleAr": "عذراً، تأخّرت، فالحافلة لم تأتِ."
+        "exampleAr": "عذراً، تأخّرت، فالحافلة لم تأتِ.",
+        "formen": "verspätet sich, verspätete sich, hat sich verspätet"
       },
       {
         "id": "v729",
@@ -13238,7 +13391,8 @@
           "mobilitaet-verkehr"
         ],
         "exampleDe": "Seit dem Umzug pendelt er vierzig Kilometer zur Arbeit.",
-        "exampleAr": "منذ الانتقال يتنقّل يومياً أربعين كيلومتراً إلى العمل."
+        "exampleAr": "منذ الانتقال يتنقّل يومياً أربعين كيلومتراً إلى العمل.",
+        "formen": "pendelt, pendelte, hat gependelt / ist gependelt"
       },
       {
         "id": "v744",
@@ -13386,7 +13540,8 @@
           "mobilitaet-verkehr"
         ],
         "exampleDe": "Alle müssen sich an die Verkehrsregeln halten, auch Radfahrer.",
-        "exampleAr": "على الجميع الالتزام بقواعد المرور، حتى راكبي الدراجات."
+        "exampleAr": "على الجميع الالتزام بقواعد المرور، حتى راكبي الدراجات.",
+        "formen": "hält sich an, hielt sich an, hat sich gehalten an"
       },
       {
         "id": "v754",
@@ -13587,7 +13742,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Sie können online einchecken und das Gepäck am Schalter abgeben.",
-        "exampleAr": "يمكنك تسجيل الوصول عبر الإنترنت وتسليم الأمتعة عند الشباك."
+        "exampleAr": "يمكنك تسجيل الوصول عبر الإنترنت وتسليم الأمتعة عند الشباك.",
+        "formen": "checkt ein, checkte ein, hat eingecheckt"
       },
       {
         "id": "v767",
@@ -13794,7 +13950,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش» · v = «ف»",
         "exampleDe": "Das Gesetz schreibt vor, dass die Nebenkosten jährlich abgerechnet werden.",
-        "exampleAr": "القانون يُملي أن تُحاسَب المصاريف الجانبية سنوياً."
+        "exampleAr": "القانون يُملي أن تُحاسَب المصاريف الجانبية سنوياً.",
+        "formen": "schreibt vor, schrieb vor, hat vorgeschrieben"
       },
       {
         "id": "v780",
@@ -13868,7 +14025,8 @@
           "staat-recht"
         ],
         "exampleDe": "Sie müssen die Verlängerung schriftlich beantragen.",
-        "exampleAr": "يجب أن تطلب التمديد كتابياً."
+        "exampleAr": "يجب أن تطلب التمديد كتابياً.",
+        "formen": "beantragt, beantragte, hat beantragt"
       },
       {
         "id": "v785",
@@ -13882,7 +14040,8 @@
         "aussprache": "w = «ڤ»",
         "exampleDe": "Der Antrag auf Wohngeld wurde nach sechs Wochen bewilligt.",
         "exampleAr": "طلب إعانة السكن ووفق عليه بعد ستة أسابيع.",
-        "plural": "die Theorien"
+        "plural": "die Theorien",
+        "formen": "bewilligt, bewilligte, hat bewilligt"
       },
       {
         "id": "v786",
@@ -13925,7 +14084,8 @@
           "staat-recht"
         ],
         "exampleDe": "Die Stadt hat den Umbau genehmigt, mit Auflagen zum Lärmschutz.",
-        "exampleAr": "المدينة رخّصت التجديد بشروط للحماية من الضجيج."
+        "exampleAr": "المدينة رخّصت التجديد بشروط للحماية من الضجيج.",
+        "formen": "genehmigt, genehmigte, hat genehmigt"
       },
       {
         "id": "v789",
@@ -13938,7 +14098,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Die Hausordnung verbietet laute Musik nach zweiundzwanzig Uhr.",
-        "exampleAr": "نظام البناية يمنع الموسيقى الصاخبة بعد العاشرة مساءً."
+        "exampleAr": "نظام البناية يمنع الموسيقى الصاخبة بعد العاشرة مساءً.",
+        "formen": "verbietet, verbot, hat verboten"
       },
       {
         "id": "v790",
@@ -13981,7 +14142,8 @@
           "staat-recht"
         ],
         "exampleDe": "Die Behörde kann den Antrag ablehnen, muss es aber begründen.",
-        "exampleAr": "يمكن للإدارة رفض الطلب لكن عليها التعليل."
+        "exampleAr": "يمكن للإدارة رفض الطلب لكن عليها التعليل.",
+        "formen": "lehnt ab, lehnte ab, hat abgelehnt"
       },
       {
         "id": "v793",
@@ -14041,7 +14203,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
         "exampleDe": "Sie will dem Bescheid widersprechen und Belege beilegen.",
-        "exampleAr": "تريد الاعتراض على الإشعار وإرفاق الوثائق."
+        "exampleAr": "تريد الاعتراض على الإشعار وإرفاق الوثائق.",
+        "formen": "widerspricht, widersprach, hat widersprochen"
       },
       {
         "id": "v797",
@@ -14068,7 +14231,8 @@
           "staat-recht"
         ],
         "exampleDe": "Wer klagen will, sollte vorher die Kosten kennen.",
-        "exampleAr": "من يريد رفع دعوى عليه معرفة التكاليف مسبقاً."
+        "exampleAr": "من يريد رفع دعوى عليه معرفة التكاليف مسبقاً.",
+        "formen": "klagt, klagte, hat geklagt"
       },
       {
         "id": "v799",
@@ -14362,7 +14526,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Letztes Jahr wurden in der Stadt achthundert Menschen eingebürgert.",
-        "exampleAr": "السنة الماضية جُنّس في المدينة ثمانمائة شخص."
+        "exampleAr": "السنة الماضية جُنّس في المدينة ثمانمائة شخص.",
+        "formen": "bürgert ein, bürgerte ein, hat eingebürgert"
       },
       {
         "id": "v818",
@@ -14390,7 +14555,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · sch = «ش»",
         "exampleDe": "Niemanden darf man abschieben, ohne dass ein Gericht entscheidet.",
-        "exampleAr": "لا يجوز إبعاد أحد دون أن تقرر محكمة."
+        "exampleAr": "لا يجوز إبعاد أحد دون أن تقرر محكمة.",
+        "formen": "schiebt ab, schob ab, hat abgeschoben"
       },
       {
         "id": "v820",
@@ -14572,7 +14738,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Er versuchte, den Prüfer mit Geld zu bestechen.",
-        "exampleAr": "حاول رشوة المفتّش بالمال."
+        "exampleAr": "حاول رشوة المفتّش بالمال.",
+        "formen": "besticht, bestach, hat bestochen"
       },
       {
         "id": "v832",
@@ -14616,7 +14783,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Wer Unterlagen fälscht, verliert den Anspruch sofort.",
-        "exampleAr": "من يزوّر الوثائق يفقد الحق فوراً."
+        "exampleAr": "من يزوّر الوثائق يفقد الحق فوراً.",
+        "formen": "fälscht, fälschte, hat gefälscht"
       },
       {
         "id": "v835",
@@ -14645,7 +14813,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Der Arzt bescheinigt die Arbeitsunfähigkeit für drei Tage.",
-        "exampleAr": "الطبيب يشهد بعدم القدرة على العمل ثلاثة أيام."
+        "exampleAr": "الطبيب يشهد بعدم القدرة على العمل ثلاثة أيام.",
+        "formen": "bescheinigt, bescheinigte, hat bescheinigt"
       },
       {
         "id": "v837",
@@ -14674,7 +14843,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
         "exampleDe": "Sie muss nachweisen, dass sie zwölf Monate Praxis hat.",
-        "exampleAr": "عليها إثبات أن لديها اثني عشر شهراً من الممارسة."
+        "exampleAr": "عليها إثبات أن لديها اثني عشر شهراً من الممارسة.",
+        "formen": "weist nach, wies nach, hat nachgewiesen"
       },
       {
         "id": "v839",
@@ -14686,7 +14856,8 @@
           "staat-recht"
         ],
         "exampleDe": "Kopien von Zeugnissen muss man beglaubigen lassen.",
-        "exampleAr": "نسخ الشهادات يجب تصديقها رسمياً."
+        "exampleAr": "نسخ الشهادات يجب تصديقها رسمياً.",
+        "formen": "beglaubigt, beglaubigte, hat beglaubigt"
       },
       {
         "id": "v840",
@@ -14818,7 +14989,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Die Uni will nur Bewerber mit B2-Zertifikat zulassen.",
         "exampleAr": "الجامعة لا تريد قبول إلا المتقدمين بشهادة B2.",
-        "plural": "die Vorgaben"
+        "plural": "die Vorgaben",
+        "formen": "lässt zu, ließ zu, hat zugelassen"
       },
       {
         "id": "v846",
@@ -14955,7 +15127,8 @@
           "studium-lernen"
         ],
         "exampleDe": "Die Dozentin benotet die Arbeit nach Struktur, Quellen und Sprache.",
-        "exampleAr": "المحاضِرة تمنح العلامة حسب البنية والمصادر واللغة."
+        "exampleAr": "المحاضِرة تمنح العلامة حسب البنية والمصادر واللغة.",
+        "formen": "benotet, benotete, hat benotet"
       },
       {
         "id": "v855",
@@ -14983,7 +15156,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Wer durchfallen sollte, darf die Prüfung noch zweimal wiederholen.",
-        "exampleAr": "من قد يرسب يمكنه إعادة الامتحان مرتين أخريين."
+        "exampleAr": "من قد يرسب يمكنه إعادة الامتحان مرتين أخريين.",
+        "formen": "fällt durch, fiel durch, ist durchgefallen"
       },
       {
         "id": "v857",
@@ -14996,7 +15170,8 @@
         ],
         "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Von der Prüfung kann man mit Attest bis zum Vortag zurücktreten.",
-        "exampleAr": "يمكن الانسحاب من الامتحان بشهادة طبية حتى اليوم السابق."
+        "exampleAr": "يمكن الانسحاب من الامتحان بشهادة طبية حتى اليوم السابق.",
+        "formen": "tritt zurück, trat zurück, ist zurückgetreten"
       },
       {
         "id": "v858",
@@ -15041,7 +15216,8 @@
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Sie schreibt sich für Informatik ein, im Wintersemester.",
         "exampleAr": "تسجّل في الإعلامية في الفصل الشتوي.",
-        "plural": "die Bedingungen"
+        "plural": "die Bedingungen",
+        "formen": "schreibt sich ein, schrieb sich ein, hat sich eingeschrieben"
       },
       {
         "id": "v861",
@@ -15099,7 +15275,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Man darf bis zu zehn Bücher gleichzeitig ausleihen.",
-        "exampleAr": "يمكن استعارة حتى عشرة كتب في الوقت نفسه."
+        "exampleAr": "يمكن استعارة حتى عشرة كتب في الوقت نفسه.",
+        "formen": "leiht aus, lieh aus, hat ausgeliehen"
       },
       {
         "id": "v865",
@@ -15267,7 +15444,8 @@
         ],
         "exampleDe": "Das Handy auf dem Tisch lenkt ab, auch wenn es stumm ist.",
         "exampleAr": "الهاتف على الطاولة يشتّت حتى وهو صامت.",
-        "plural": "die Kompetenzen"
+        "plural": "die Kompetenzen",
+        "formen": "lenkt ab, lenkte ab, hat abgelenkt"
       },
       {
         "id": "v876",
@@ -15311,7 +15489,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Bitte unterbrechen Sie mich nicht, ich bin gleich fertig.",
-        "exampleAr": "من فضلك لا تقاطعني، سأنتهي حالاً."
+        "exampleAr": "من فضلك لا تقاطعني، سأنتهي حالاً.",
+        "formen": "unterbricht, unterbrach, hat unterbrochen"
       },
       {
         "id": "v879",
@@ -15419,7 +15598,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Ich überprüfe mich jeden Sonntag mit den Karten der Woche.",
         "exampleAr": "أختبر نفسي كل أحد ببطاقات الأسبوع.",
-        "plural": "die Fertigkeiten"
+        "plural": "die Fertigkeiten",
+        "formen": "überprüft sich, überprüfte sich, hat sich überprüft"
       },
       {
         "id": "v886",
@@ -15477,7 +15657,8 @@
           "studium-lernen"
         ],
         "exampleDe": "Man betont „umfahren“ je nach Bedeutung anders.",
-        "exampleAr": "يُوكَّد «umfahren» بشكل مختلف حسب المعنى."
+        "exampleAr": "يُوكَّد «umfahren» بشكل مختلف حسب المعنى.",
+        "formen": "betont, betonte, hat betont"
       },
       {
         "id": "v890",
@@ -15506,7 +15687,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Ich habe mich vertippt, es sollte „Frist“ heißen.",
-        "exampleAr": "أخطأت على لوحة المفاتيح، كان المقصود «Frist»."
+        "exampleAr": "أخطأت على لوحة المفاتيح، كان المقصود «Frist».",
+        "formen": "vertippt sich, vertippte sich, hat sich vertippt"
       },
       {
         "id": "v892",
@@ -15659,7 +15841,8 @@
         ],
         "aussprache": "eu/äu = «أوي»",
         "exampleDe": "Der Professor betreut nur fünf Arbeiten pro Semester.",
-        "exampleAr": "الأستاذ يشرف على خمس رسائل فقط في الفصل."
+        "exampleAr": "الأستاذ يشرف على خمس رسائل فقط في الفصل.",
+        "formen": "betreut, betreute, hat betreut"
       },
       {
         "id": "v902",
@@ -15821,7 +16004,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Ich ärgere mich über den Chat statt einer klaren Mail.",
-        "exampleAr": "يغيظني الشات بدل إيميل واضح."
+        "exampleAr": "يغيظني الشات بدل إيميل واضح.",
+        "formen": "ärgert sich, ärgerte sich, hat sich geärgert"
       },
       {
         "id": "v909",
@@ -15912,7 +16096,8 @@
         ],
         "aussprache": "sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Wir wollen Karim zum Geburtstag überraschen.",
-        "exampleAr": "نريد مفاجأة كريم في عيد ميلاده."
+        "exampleAr": "نريد مفاجأة كريم في عيد ميلاده.",
+        "formen": "überrascht, überraschte, hat überrascht"
       },
       {
         "id": "v915",
@@ -16078,7 +16263,8 @@
         ],
         "exampleDe": "Die Frage nach der Lücke im Lebenslauf belastet ihn noch immer.",
         "exampleAr": "سؤال الفجوة في السيرة الذاتية ما زال يثقل عليه.",
-        "plural": "die Anlässe"
+        "plural": "die Anlässe",
+        "formen": "belastet, belastete, hat belastet"
       },
       {
         "id": "v926",
@@ -16120,7 +16306,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Die Ärztin konnte den Vater mit ruhigen Worten beruhigen.",
-        "exampleAr": "الطبيبة استطاعت تهدئة الأب بكلمات هادئة."
+        "exampleAr": "الطبيبة استطاعت تهدئة الأب بكلمات هادئة.",
+        "formen": "beruhigt, beruhigte, hat beruhigt"
       },
       {
         "id": "v929",
@@ -16132,7 +16319,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Nach zehn Minuten hat sich das Kind beruhigt.",
-        "exampleAr": "بعد عشر دقائق هدأ الطفل."
+        "exampleAr": "بعد عشر دقائق هدأ الطفل.",
+        "formen": "beruhigt sich, beruhigte sich, hat sich beruhigt"
       },
       {
         "id": "v930",
@@ -16223,7 +16411,8 @@
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Wer die Frist ignoriert, riskiert den Verlust des Anspruchs.",
         "exampleAr": "من يتجاهل المهلة يخاطر بفقدان الحق.",
-        "plural": "die Impulse"
+        "plural": "die Impulse",
+        "formen": "riskiert, riskierte, hat riskiert"
       },
       {
         "id": "v936",
@@ -16394,7 +16583,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Er hat die zweite Mahnung einfach ignoriert.",
-        "exampleAr": "تجاهل الإنذار الثاني ببساطة."
+        "exampleAr": "تجاهل الإنذار الثاني ببساطة.",
+        "formen": "ignoriert, ignorierte, hat ignoriert"
       },
       {
         "id": "v947",
@@ -16422,7 +16612,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Er schämt sich für seinen Akzent, dabei versteht ihn jeder.",
-        "exampleAr": "يخجل من لكنته مع أن الجميع يفهمه."
+        "exampleAr": "يخجل من لكنته مع أن الجميع يفهمه.",
+        "formen": "schämt sich, schämte sich, hat sich geschämt"
       },
       {
         "id": "v949",
@@ -16435,7 +16626,8 @@
         ],
         "aussprache": "ß = «س» مشدَّدة",
         "exampleDe": "Wer einen Kollegen vor allen bloßstellt, zerstört das Arbeitsklima.",
-        "exampleAr": "من يفضح زميلاً أمام الجميع يدمّر المناخ المهني."
+        "exampleAr": "من يفضح زميلاً أمام الجميع يدمّر المناخ المهني.",
+        "formen": "stellt bloß, stellte bloß, hat bloßgestellt"
       },
       {
         "id": "v950",
@@ -16462,7 +16654,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Sie wollte ihn nicht kränken, nur die Fakten nennen.",
-        "exampleAr": "لم تُرد جرحه، بل ذكر الوقائع فقط."
+        "exampleAr": "لم تُرد جرحه، بل ذكر الوقائع فقط.",
+        "formen": "kränkt, kränkte, hat gekränkt"
       },
       {
         "id": "v952",
@@ -16538,7 +16731,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Nach zwei Jahren sehnt er sich nach dem Freitagsessen bei den Eltern.",
-        "exampleAr": "بعد سنتين يتوق إلى غداء الجمعة عند الوالدين."
+        "exampleAr": "بعد سنتين يتوق إلى غداء الجمعة عند الوالدين.",
+        "formen": "sehnt sich, sehnte sich, hat sich gesehnt"
       },
       {
         "id": "v957",
@@ -16644,7 +16838,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Die Uni erkennt das tunesische Diplom nur teilweise an.",
-        "exampleAr": "الجامعة تعترف بالشهادة التونسية جزئياً فقط."
+        "exampleAr": "الجامعة تعترف بالشهادة التونسية جزئياً فقط.",
+        "formen": "erkennt an, erkannte an, hat anerkannt"
       },
       {
         "id": "v964",
@@ -16671,7 +16866,8 @@
         ],
         "exampleDe": "Der Lehrer lobt Sara, weil sie viel Fortschritte gemacht hat.",
         "exampleAr": "المعلّم يمدح سارة لأنها تقدّمت كثيراً.",
-        "plural": "die Effekte"
+        "plural": "die Effekte",
+        "formen": "lobt, lobte, hat gelobt"
       },
       {
         "id": "v966",
@@ -16697,7 +16893,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Die Lehrerin tadelt selten, aber wenn, dann deutlich.",
-        "exampleAr": "المعلّمة نادراً ما توبّخ، وحين تفعل فبوضوح."
+        "exampleAr": "المعلّمة نادراً ما توبّخ، وحين تفعل فبوضوح.",
+        "formen": "tadelt, tadelte, hat getadelt"
       },
       {
         "id": "v968",
@@ -16724,7 +16921,8 @@
         ],
         "aussprache": "v = «ف» · w = «ڤ»",
         "exampleDe": "Nadia möchte ihm nicht vorwerfen, die Absprache gebrochen zu haben.",
-        "exampleAr": "نادية لا تريد أن تعاتبه على خرق الاتفاق."
+        "exampleAr": "نادية لا تريد أن تعاتبه على خرق الاتفاق.",
+        "formen": "wirft vor, warf vor, hat vorgeworfen"
       },
       {
         "id": "v970",
@@ -16798,7 +16996,8 @@
           "gefuehle-psyche"
         ],
         "exampleDe": "Meine Mutter sorgt sich um mich, wenn ich nicht anrufe.",
-        "exampleAr": "أمي تقلق عليّ إذا لم أتصل."
+        "exampleAr": "أمي تقلق عليّ إذا لم أتصل.",
+        "formen": "sorgt sich, sorgte sich, hat sich gesorgt"
       },
       {
         "id": "v975",
@@ -16864,7 +17063,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Wir trainieren zweimal pro Woche, im Winter in der Halle.",
-        "exampleAr": "نتدرّب مرتين أسبوعياً، وفي الشتاء داخل القاعة."
+        "exampleAr": "نتدرّب مرتين أسبوعياً، وفي الشتاء داخل القاعة.",
+        "formen": "trainiert, trainierte, hat trainiert"
       },
       {
         "id": "v979",
@@ -16934,7 +17134,8 @@
           "sport-freizeit"
         ],
         "exampleDe": "Vor dem Laufen dehne ich mich zehn Minuten.",
-        "exampleAr": "قبل الجري أمطّ عضلاتي عشر دقائق."
+        "exampleAr": "قبل الجري أمطّ عضلاتي عشر دقائق.",
+        "formen": "dehnt sich, dehnte sich, hat sich gedehnt"
       },
       {
         "id": "v984",
@@ -17021,7 +17222,8 @@
           "sport-freizeit"
         ],
         "exampleDe": "Von der Erkältung hat er sich in einer Woche erholt.",
-        "exampleAr": "من الزكام تعافى في أسبوع."
+        "exampleAr": "من الزكام تعافى في أسبوع.",
+        "formen": "erholt sich, erholte sich, hat sich erholt"
       },
       {
         "id": "v990",
@@ -17050,7 +17252,8 @@
         ],
         "aussprache": "sp/st في البداية = «شب/شت» · ß = «س» مشدَّدة",
         "exampleDe": "Beim Marathon kann man bei Kilometer dreißig an seine Grenzen stoßen.",
-        "exampleAr": "في الماراثون قد يبلغ المرء أقصى ما يستطيع عند الكيلومتر الثلاثين."
+        "exampleAr": "في الماراثون قد يبلغ المرء أقصى ما يستطيع عند الكيلومتر الثلاثين.",
+        "formen": "stößt an, stieß an, hat angestoßen"
       },
       {
         "id": "v992",
@@ -17094,7 +17297,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Man muss die Belastung dosieren, sonst streikt der Körper.",
-        "exampleAr": "يجب تقدير جرعة الجهد وإلا أضرب الجسم."
+        "exampleAr": "يجب تقدير جرعة الجهد وإلا أضرب الجسم.",
+        "formen": "dosiert, dosierte, hat dosiert"
       },
       {
         "id": "v995",
@@ -17231,7 +17435,8 @@
         ],
         "aussprache": "eu/äu = «أوي»",
         "exampleDe": "Die Familie kam und feuerte die Mannschaft vom Rand aus an.",
-        "exampleAr": "العائلة جاءت وشجّعت الفريق من حافة الملعب."
+        "exampleAr": "العائلة جاءت وشجّعت الفريق من حافة الملعب.",
+        "formen": "feuert an, feuerte an, hat angefeuert"
       },
       {
         "id": "v1004",
@@ -17243,7 +17448,8 @@
           "sport-freizeit"
         ],
         "exampleDe": "Als das Tor fiel, jubelten selbst die ruhigsten Zuschauer.",
-        "exampleAr": "حين سُجّل الهدف صاح فرحاً حتى أهدأ المتفرجين."
+        "exampleAr": "حين سُجّل الهدف صاح فرحاً حتى أهدأ المتفرجين.",
+        "formen": "jubelt, jubelte, hat gejubelt"
       },
       {
         "id": "v1005",
@@ -17364,7 +17570,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Der Schiedsrichter muss pfeifen, bevor der Ball die Linie überquert.",
-        "exampleAr": "على الحكم أن يُطلق صافرته قبل أن تعبر الكرة الخط."
+        "exampleAr": "على الحكم أن يُطلق صافرته قبل أن تعبر الكرة الخط.",
+        "formen": "pfeift, pfiff, hat gepfiffen"
       },
       {
         "id": "v1013",
@@ -17440,7 +17647,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Sie engagiert sich seit zwei Jahren im Verein für Nachhilfe.",
-        "exampleAr": "هي منخرطة منذ سنتين في جمعية للدروس الخصوصية."
+        "exampleAr": "هي منخرطة منذ سنتين في جمعية للدروس الخصوصية.",
+        "formen": "engagiert sich, engagierte sich, hat sich engagiert"
       },
       {
         "id": "v1018",
@@ -17485,7 +17693,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Nach dem Umzug ist er dem Fußballverein im Stadtteil beigetreten.",
-        "exampleAr": "بعد الانتقال انضم إلى نادي كرة القدم في الحي."
+        "exampleAr": "بعد الانتقال انضم إلى نادي كرة القدم في الحي.",
+        "formen": "tritt bei, trat bei, ist beigetreten"
       },
       {
         "id": "v1021",
@@ -17512,7 +17721,8 @@
           "sport-freizeit"
         ],
         "exampleDe": "Wer austreten will, schickt eine E-Mail an den Vorstand.",
-        "exampleAr": "من يريد الانسحاب يرسل إيميلاً إلى المجلس."
+        "exampleAr": "من يريد الانسحاب يرسل إيميلاً إلى المجلس.",
+        "formen": "tritt aus, trat aus, ist ausgetreten"
       },
       {
         "id": "v1023",
@@ -17571,7 +17781,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Am Sonntag wandern wir drei Stunden in den Bergen.",
-        "exampleAr": "يوم الأحد نتنزّه مشياً ثلاث ساعات في الجبال."
+        "exampleAr": "يوم الأحد نتنزّه مشياً ثلاث ساعات في الجبال.",
+        "formen": "wandert, wanderte, ist gewandert / hat gewandert"
       },
       {
         "id": "v1027",
@@ -18356,7 +18567,8 @@
           "medien-meinung"
         ],
         "exampleDe": "Der Artikel behauptet, der Konzern habe die Zahlen geschönt.",
-        "exampleAr": "المقال يدّعي أن الشركة جمّلت الأرقام."
+        "exampleAr": "المقال يدّعي أن الشركة جمّلت الأرقام.",
+        "formen": "behauptet, behauptete, hat behauptet"
       },
       {
         "id": "v1078",
@@ -18369,7 +18581,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Die zweite Studie widerlegt die These der ersten.",
-        "exampleAr": "الدراسة الثانية تدحض أطروحة الأولى."
+        "exampleAr": "الدراسة الثانية تدحض أطروحة الأولى.",
+        "formen": "widerlegt, widerlegte, hat widerlegt"
       },
       {
         "id": "v1079",
@@ -18382,7 +18595,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش» · v = «ف»",
         "exampleDe": "Der Bericht verschweigt, wer die Umfrage bezahlt hat.",
-        "exampleAr": "التقرير يكتم من دفع ثمن الاستطلاع."
+        "exampleAr": "التقرير يكتم من دفع ثمن الاستطلاع.",
+        "formen": "verschweigt, verschwieg, hat verschwiegen"
       },
       {
         "id": "v1080",
@@ -18395,7 +18609,8 @@
         ],
         "aussprache": "z = «تس»",
         "exampleDe": "Die Überschrift spitzt die Aussage stark zu.",
-        "exampleAr": "العنوان يبالغ في تحديد المقولة."
+        "exampleAr": "العنوان يبالغ في تحديد المقولة.",
+        "formen": "spitzt zu, spitzte zu, hat zugespitzt"
       },
       {
         "id": "v1081",
@@ -18408,7 +18623,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Eine gute Redaktion ordnet die Zahl in den Zeitraum ein.",
-        "exampleAr": "التحرير الجيد يضع الرقم في سياقه الزمني."
+        "exampleAr": "التحرير الجيد يضع الرقم في سياقه الزمني.",
+        "formen": "ordnet ein, ordnete ein, hat eingeordnet"
       },
       {
         "id": "v1082",
@@ -18421,7 +18637,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
         "exampleDe": "Ich kann nachvollziehen, warum du unter Zeitdruck so entschieden hast.",
-        "exampleAr": "أستطيع أن أفهم لماذا قررت هكذا تحت ضغط الوقت."
+        "exampleAr": "أستطيع أن أفهم لماذا قررت هكذا تحت ضغط الوقت.",
+        "formen": "zieht nach, zog nach, hat nachvollzogen"
       },
       {
         "id": "v1083",
@@ -19182,7 +19399,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Wer in zwei Hauptfächern mangelhaft steht, kann sitzen bleiben.",
-        "exampleAr": "من يكون ضعيفاً في مادتين رئيسيتين قد يرسب."
+        "exampleAr": "من يكون ضعيفاً في مادتين رئيسيتين قد يرسب.",
+        "formen": "bleibt sitzen, blieb sitzen, ist sitzen geblieben"
       },
       {
         "id": "v1132",
@@ -19902,7 +20120,8 @@
         ],
         "aussprache": "sp/st في البداية = «شب/شت»",
         "exampleDe": "Am Ende des Jahres spenden wir an die Tafel.",
-        "exampleAr": "في نهاية السنة نتبرع لمائدة المتطوعين."
+        "exampleAr": "في نهاية السنة نتبرع لمائدة المتطوعين.",
+        "formen": "spendet, spendete, hat gespendet"
       },
       {
         "id": "v1176",
@@ -20498,7 +20717,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Überschüssigen Solarstrom kann man ins Netz einspeisen.",
-        "exampleAr": "الكهرباء الشمسية الفائضة يمكن ضخّها في الشبكة."
+        "exampleAr": "الكهرباء الشمسية الفائضة يمكن ضخّها في الشبكة.",
+        "formen": "speist ein, speiste ein, hat eingespeist"
       },
       {
         "id": "v1214",
@@ -20511,7 +20731,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Das alte Kraftwerk wird nächstes Jahr abgeschaltet.",
-        "exampleAr": "المحطة القديمة ستُطفأ السنة القادمة."
+        "exampleAr": "المحطة القديمة ستُطفأ السنة القادمة.",
+        "formen": "schaltet ab, schaltete ab, hat abgeschaltet"
       },
       {
         "id": "v1215",
@@ -20524,7 +20745,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Nach der Wartung muss man das Kraftwerk langsam wieder hochfahren.",
-        "exampleAr": "بعد الصيانة يجب إعادة المحطة إلى العمل تدريجياً."
+        "exampleAr": "بعد الصيانة يجب إعادة المحطة إلى العمل تدريجياً.",
+        "formen": "fährt hoch, fuhr hoch, hat hochgefahren"
       },
       {
         "id": "v1216",
@@ -20536,7 +20758,8 @@
           "energie-wende"
         ],
         "exampleDe": "Bei zu viel Wind muss der Betreiber die Anlagen abregeln.",
-        "exampleAr": "عند الرياح الزائدة يجب على المشغّل كبح المنشآت."
+        "exampleAr": "عند الرياح الزائدة يجب على المشغّل كبح المنشآت.",
+        "formen": "regelt ab, regelte ab, hat abgeregelt"
       },
       {
         "id": "v1217",
@@ -21287,7 +21510,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
         "exampleDe": "Hersteller müssen Zucker und Fett auf der Packung kennzeichnen.",
-        "exampleAr": "على المصنّعين وسم السكر والدهون على العبوة."
+        "exampleAr": "على المصنّعين وسم السكر والدهون على العبوة.",
+        "formen": "kennzeichnet, kennzeichnete, hat gekennzeichnet"
       },
       {
         "id": "v1265",
@@ -21299,7 +21523,8 @@
           "ernaehrung-verbraucherschutz"
         ],
         "exampleDe": "Verbraucherzentralen können Firmen wegen falscher Werbung abmahnen.",
-        "exampleAr": "مراكز حماية المستهلك يمكنها إنذار الشركات قانونياً بسبب إعلان كاذب."
+        "exampleAr": "مراكز حماية المستهلك يمكنها إنذار الشركات قانونياً بسبب إعلان كاذب.",
+        "formen": "mahnt ab, mahnte ab, hat abgemahnt"
       },
       {
         "id": "v1266",
@@ -21312,7 +21537,8 @@
         ],
         "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Der Hersteller musste die Charge wegen Glassplittern zurückrufen.",
-        "exampleAr": "المصنّع اضطر لاستدعاء الدفعة بسبب شظايا زجاج."
+        "exampleAr": "المصنّع اضطر لاستدعاء الدفعة بسبب شظايا زجاج.",
+        "formen": "ruft zurück, rief zurück, hat zurückgerufen"
       },
       {
         "id": "v1267",
@@ -22023,7 +22249,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
         "exampleDe": "Die Stadt will das Viertel verdichten, ohne Grünflächen zu opfern.",
-        "exampleAr": "المدينة تريد حشو الحي بالبناء دون التضحية بالمساحات الخضراء."
+        "exampleAr": "المدينة تريد حشو الحي بالبناء دون التضحية بالمساحات الخضراء.",
+        "formen": "verdichtet, verdichtete, hat verdichtet"
       },
       {
         "id": "v1311",
@@ -22036,7 +22263,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Das Haus wurde energetisch saniert, die Miete stieg um zwölf Prozent.",
-        "exampleAr": "المبنى رُمّم طاقياً وارتفع الإيجار اثني عشر بالمائة."
+        "exampleAr": "المبنى رُمّم طاقياً وارتفع الإيجار اثني عشر بالمائة.",
+        "formen": "saniert, sanierte, hat saniert"
       },
       {
         "id": "v1312",
@@ -22049,7 +22277,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Die Stadt will leere Büros in Wohnungen umwandeln.",
-        "exampleAr": "المدينة تريد تحويل المكاتب الفارغة إلى شقق."
+        "exampleAr": "المدينة تريد تحويل المكاتب الفارغة إلى شقق.",
+        "formen": "wandelt um, wandelte um, hat umgewandelt"
       },
       {
         "id": "v1313",
@@ -22062,7 +22291,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Wer ein Viertel aufwertet, muss an die alten Mieter denken.",
-        "exampleAr": "من يرتقي بحي عليه التفكير في المستأجرين القدامى."
+        "exampleAr": "من يرتقي بحي عليه التفكير في المستأجرين القدامى.",
+        "formen": "wertet auf, wertete auf, hat aufgewertet"
       },
       {
         "id": "v1314",
@@ -22659,7 +22889,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Nach einem Jahr habe ich mich in Leipzig eingelebt.",
-        "exampleAr": "بعد سنة استأنست في لايبزغ."
+        "exampleAr": "بعد سنة استأنست في لايبزغ.",
+        "formen": "lebt sich ein, lebte sich ein, hat sich eingelebt"
       },
       {
         "id": "v1352",
@@ -22672,7 +22903,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Sie hat sich schnell in das Team eingefügt, ohne sich zu verbiegen.",
-        "exampleAr": "اندمجت بسرعة في الفريق دون أن تتنازل عن نفسها."
+        "exampleAr": "اندمجت بسرعة في الفريق دون أن تتنازل عن نفسها.",
+        "formen": "fügt sich ein, fügte sich ein, hat sich eingefügt"
       },
       {
         "id": "v1353",
@@ -22685,7 +22917,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Ein Verein integriert schneller als jeder Kurs.",
-        "exampleAr": "الجمعية تدمج أسرع من أي دورة."
+        "exampleAr": "الجمعية تدمج أسرع من أي دورة.",
+        "formen": "integriert, integrierte, hat integriert"
       },
       {
         "id": "v1354",
@@ -23338,7 +23571,8 @@
           "erinnerungskultur"
         ],
         "exampleDe": "Am Sonntag gedenkt die Stadt der Opfer des Hochwassers.",
-        "exampleAr": "يوم الأحد تستذكر المدينة ضحايا الفيضان."
+        "exampleAr": "يوم الأحد تستذكر المدينة ضحايا الفيضان.",
+        "formen": "gedenkt, gedachte, hat gedacht"
       },
       {
         "id": "v1396",
@@ -23351,7 +23585,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Er verdrängt das Problem, statt darüber zu sprechen.",
-        "exampleAr": "هو يكبت المشكلة بدل التحدث عنها."
+        "exampleAr": "هو يكبت المشكلة بدل التحدث عنها.",
+        "formen": "verdrängt, verdrängte, hat verdrängt"
       },
       {
         "id": "v1397",
@@ -23364,7 +23599,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Der Verein will seine eigene Geschichte aufarbeiten, mit Historikern.",
-        "exampleAr": "الجمعية تريد استقصاء تاريخها الخاص مع مؤرخين."
+        "exampleAr": "الجمعية تريد استقصاء تاريخها الخاص مع مؤرخين.",
+        "formen": "arbeitet auf, arbeitete auf, hat aufgearbeitet"
       },
       {
         "id": "v1398",
@@ -23377,7 +23613,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Wer Verbrechen relativieren will, beginnt oft mit „aber“.",
-        "exampleAr": "من يريد المقارنة لغسل الجرائم يبدأ غالباً بـ«لكن»."
+        "exampleAr": "من يريد المقارنة لغسل الجرائم يبدأ غالباً بـ«لكن».",
+        "formen": "relativiert, relativierte, hat relativiert"
       },
       {
         "id": "v1399",
@@ -23770,7 +24007,8 @@
         "tags": [
           "essen"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "kocht, kochte, hat gekocht"
       },
       {
         "id": "vw-a1ess-037",
@@ -23782,7 +24020,8 @@
         "level": "A1",
         "tags": [
           "essen"
-        ]
+        ],
+        "formen": "bäckt, backte/buk, hat gebacken"
       },
       {
         "id": "vw-a1ess-038",
@@ -23795,7 +24034,8 @@
         "tags": [
           "essen"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "formen": "schmeckt, schmeckte, hat geschmeckt"
       },
       {
         "id": "vw-a1ess-039",
@@ -23807,7 +24047,8 @@
         "level": "A1",
         "tags": [
           "essen"
-        ]
+        ],
+        "formen": "bestellt, bestellte, hat bestellt"
       },
       {
         "id": "vw-a1ess-042",
@@ -24187,7 +24428,8 @@
         "level": "A1",
         "tags": [
           "essen"
-        ]
+        ],
+        "formen": "grillt, grillte, hat gegrillt"
       },
       {
         "id": "r311a1-060",
@@ -24625,7 +24867,8 @@
         "level": "A1",
         "tags": [
           "kleidung"
-        ]
+        ],
+        "formen": "trägt, trug, hat getragen"
       },
       {
         "id": "vw-a1koe-033",
@@ -24638,7 +24881,8 @@
         "tags": [
           "kleidung"
         ],
-        "aussprache": "ie = «إي» ممدودة · z = «تس»"
+        "aussprache": "ie = «إي» ممدودة · z = «تس»",
+        "formen": "zieht an, zog an, hat angezogen"
       },
       {
         "id": "vw-a1koe-035",
@@ -24650,7 +24894,8 @@
         "level": "A1",
         "tags": [
           "kleidung"
-        ]
+        ],
+        "formen": "passt, passte, hat gepasst"
       },
       {
         "id": "vw-a1koe-036",
@@ -24662,7 +24907,8 @@
         "level": "A1",
         "tags": [
           "kleidung"
-        ]
+        ],
+        "formen": "kostet, kostete, hat gekostet"
       },
       {
         "id": "vw-a1koe-037",
@@ -24843,7 +25089,8 @@
         "tags": [
           "kleidung"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ»"
+        "aussprache": "sch = «ش» · w = «ڤ»",
+        "formen": "wäscht, wusch, hat gewaschen"
       },
       {
         "id": "vw-a1koe-050",
@@ -25147,7 +25394,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "formen": "fährt, fuhr, ist gefahren"
       },
       {
         "id": "vw-a1sta-020",
@@ -25159,7 +25407,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "formen": "läuft, lief, ist gelaufen"
       },
       {
         "id": "vw-a1sta-021",
@@ -25172,7 +25421,8 @@
         "tags": [
           "verkehr"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "fliegt, flog, ist geflogen"
       },
       {
         "id": "vw-a1sta-022",
@@ -25184,7 +25434,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "formen": "kommt an, kam an, ist angekommen"
       },
       {
         "id": "vw-a1sta-023",
@@ -25196,7 +25447,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "formen": "fährt ab, fuhr ab, ist abgefahren"
       },
       {
         "id": "vw-a1sta-026",
@@ -25326,7 +25578,8 @@
         "level": "A1",
         "tags": [
           "weg"
-        ]
+        ],
+        "formen": "fragt, fragte, hat gefragt"
       },
       {
         "id": "vw-a1sta-036",
@@ -25339,7 +25592,8 @@
         "tags": [
           "weg"
         ],
-        "aussprache": "ei = «آي» لا «إي» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · z = «تس»",
+        "formen": "zeigt, zeigte, hat gezeigt"
       },
       {
         "id": "vw-a1sta-037",
@@ -25352,7 +25606,8 @@
         "tags": [
           "weg"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "sucht, suchte, hat gesucht"
       },
       {
         "id": "vw-a1sta-038",
@@ -25367,7 +25622,8 @@
         ],
         "syn": [
           "entdecken"
-        ]
+        ],
+        "formen": "findet, fand, hat gefunden"
       },
       {
         "id": "vw-a1sta-040",
@@ -25394,7 +25650,8 @@
         "level": "A1",
         "tags": [
           "einkauf"
-        ]
+        ],
+        "formen": "kauft, kaufte, hat gekauft"
       },
       {
         "id": "vw-a1sta-042",
@@ -25407,7 +25664,8 @@
         "tags": [
           "einkauf"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "verkauft, verkaufte, hat verkauft"
       },
       {
         "id": "vw-a1sta-043",
@@ -25679,7 +25937,8 @@
         "level": "A1",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "formen": "fliegt ab, flog ab, ist abgeflogen"
       },
       {
         "id": "r311a1-051",
@@ -25691,7 +25950,8 @@
         "level": "A1",
         "tags": [
           "weg"
-        ]
+        ],
+        "formen": "nimmt mit, nahm mit, hat mitgenommen"
       }
     ]
   },
@@ -25729,7 +25989,8 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "bewirbt sich, bewarb sich, hat sich beworben"
       },
       {
         "id": "vw-a2arb-019",
@@ -25742,7 +26003,8 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "ie = «إي» ممدودة · v = «ف»"
+        "aussprache": "ie = «إي» ممدودة · v = «ف»",
+        "formen": "verdient, verdiente, hat verdient"
       },
       {
         "id": "vw-a2arb-022",
@@ -25769,7 +26031,8 @@
         "level": "A2",
         "tags": [
           "buero"
-        ]
+        ],
+        "formen": "sagt ab, sagte ab, hat abgesagt"
       },
       {
         "id": "vw-a2arb-024",
@@ -25782,7 +26045,8 @@
         "tags": [
           "buero"
         ],
-        "aussprache": "ie = «إي» ممدودة · sch = «ش» · v = «ف»"
+        "aussprache": "ie = «إي» ممدودة · sch = «ش» · v = «ف»",
+        "formen": "verschiebt, verschob, hat verschoben"
       },
       {
         "id": "vw-a2arb-025",
@@ -25824,7 +26088,8 @@
         "tags": [
           "buero"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "füllt aus, füllte aus, hat ausgefüllt"
       },
       {
         "id": "vw-a2arb-035",
@@ -25849,7 +26114,8 @@
         "level": "A2",
         "tags": [
           "bildung"
-        ]
+        ],
+        "formen": "besteht, bestand, hat bestanden"
       },
       {
         "id": "vw-a2arb-040",
@@ -25862,7 +26128,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "ie = «إي» ممدودة · w = «ڤ»"
+        "aussprache": "ie = «إي» ممدودة · w = «ڤ»",
+        "formen": "wiederholt, wiederholte, hat wiederholt"
       },
       {
         "id": "vw-a2arb-041",
@@ -25907,7 +26174,8 @@
         ],
         "syn": [
           "erläutern"
-        ]
+        ],
+        "formen": "erklärt, erklärte, hat erklärt"
       },
       {
         "id": "vw-a2arb-046",
@@ -25920,7 +26188,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "übt, übte, hat geübt"
       },
       {
         "id": "vw-a2arb-049",
@@ -26171,7 +26440,8 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "stellt sich vor, stellte sich vor, hat sich vorgestellt"
       },
       {
         "id": "vw-a2arb-082",
@@ -26184,7 +26454,8 @@
         "tags": [
           "arbeit"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "fragt nach, fragte nach, hat nachgefragt"
       },
       {
         "id": "vw-a2arb-083",
@@ -26196,7 +26467,8 @@
         "level": "A2",
         "tags": [
           "arbeit"
-        ]
+        ],
+        "formen": "meldet sich, meldete sich, hat sich gemeldet"
       },
       {
         "id": "vw-a2arb-085",
@@ -26491,7 +26763,8 @@
         "level": "A2",
         "tags": [
           "arbeit"
-        ]
+        ],
+        "formen": "beantwortet, beantwortete, hat beantwortet"
       }
     ]
   },
@@ -26557,7 +26830,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "repariert, reparierte, hat repariert"
       },
       {
         "id": "vw-a2all-011",
@@ -26584,7 +26858,8 @@
         "level": "A2",
         "tags": [
           "wohnen"
-        ]
+        ],
+        "formen": "trennt, trennte, hat getrennt"
       },
       {
         "id": "vw-a2all-013",
@@ -26597,7 +26872,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "eu/äu = «أوي»"
+        "aussprache": "eu/äu = «أوي»",
+        "formen": "räumt auf, räumte auf, hat aufgeräumt"
       },
       {
         "id": "vw-a2all-014",
@@ -26639,7 +26915,8 @@
         "level": "A2",
         "tags": [
           "kommunikation"
-        ]
+        ],
+        "formen": "ruft an, rief an, hat angerufen"
       },
       {
         "id": "vw-a2all-019",
@@ -26652,7 +26929,8 @@
         "tags": [
           "kommunikation"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "formen": "schickt, schickte, hat geschickt"
       },
       {
         "id": "vw-a2all-020",
@@ -26665,7 +26943,8 @@
         "tags": [
           "kommunikation"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "erreicht, erreichte, hat erreicht"
       },
       {
         "id": "vw-a2all-021",
@@ -26677,7 +26956,8 @@
         "level": "A2",
         "tags": [
           "kommunikation"
-        ]
+        ],
+        "formen": "sagt Bescheid, sagte Bescheid, hat Bescheid gesagt"
       },
       {
         "id": "vw-a2all-023",
@@ -26690,7 +26970,8 @@
         "tags": [
           "kommunikation"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "spricht ab, sprach ab, hat abgesprochen"
       },
       {
         "id": "vw-a2all-025",
@@ -26703,7 +26984,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "lädt ein, lud ein, hat eingeladen"
       },
       {
         "id": "vw-a2all-026",
@@ -26716,7 +26998,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "muss absagen, musste absagen, hat absagen müssen"
       },
       {
         "id": "vw-a2all-028",
@@ -26729,7 +27012,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "formen": "entschuldigt sich, entschuldigte sich, hat sich entschuldigt"
       },
       {
         "id": "vw-a2all-030",
@@ -26773,7 +27057,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة"
+        "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة",
+        "formen": "feiert, feierte, hat gefeiert"
       },
       {
         "id": "vw-a2all-035",
@@ -26955,7 +27240,8 @@
         "tags": [
           "freizeit"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "bucht, buchte, hat gebucht"
       },
       {
         "id": "vw-a2all-051",
@@ -26983,7 +27269,8 @@
         "level": "A2",
         "tags": [
           "freizeit"
-        ]
+        ],
+        "formen": "packt, packte, hat gepackt"
       },
       {
         "id": "vw-a2all-053",
@@ -27091,7 +27378,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "lüftet, lüftete, hat gelüftet"
       },
       {
         "id": "vw-a2all-067",
@@ -27118,7 +27406,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ»"
+        "aussprache": "sch = «ش» · w = «ڤ»",
+        "formen": "beschwert sich, beschwerte sich, hat sich beschwert"
       },
       {
         "id": "vw-a2all-069",
@@ -27193,7 +27482,8 @@
         "tags": [
           "kommunikation"
         ],
-        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»"
+        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
+        "formen": "leitet weiter, leitete weiter, hat weitergeleitet"
       },
       {
         "id": "vw-a2all-074",
@@ -27240,7 +27530,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "sch = «ش» · v = «ف»"
+        "aussprache": "sch = «ش» · v = «ف»",
+        "formen": "schlägt vor, schlug vor, hat vorgeschlagen"
       },
       {
         "id": "vw-a2all-079",
@@ -27253,7 +27544,8 @@
         "tags": [
           "sozial"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "sagt zu, sagte zu, hat zugesagt"
       },
       {
         "id": "vw-a2all-080",
@@ -27265,7 +27557,8 @@
         "level": "A2",
         "tags": [
           "sozial"
-        ]
+        ],
+        "formen": "bedankt sich, bedankte sich, hat sich bedankt"
       },
       {
         "id": "vw-a2all-081",
@@ -28935,7 +29228,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "formen": "liest, las, hat gelesen"
       },
       {
         "id": "vx-haus--029",
@@ -28951,7 +29245,8 @@
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "syn": [
           "verfassen"
-        ]
+        ],
+        "formen": "schreibt, schrieb, hat geschrieben"
       },
       {
         "id": "vx-haus--030",
@@ -28964,7 +29259,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "formen": "hört, hörte, hat gehört"
       },
       {
         "id": "vx-haus--031",
@@ -28979,7 +29275,8 @@
         ],
         "syn": [
           "schauen"
-        ]
+        ],
+        "formen": "sieht, sah, hat gesehen"
       },
       {
         "id": "vx-haus--032",
@@ -28991,7 +29288,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "formen": "geht, ging, ist gegangen"
       },
       {
         "id": "vx-haus--033",
@@ -29004,7 +29302,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "macht, machte, hat gemacht"
       },
       {
         "id": "vx-haus--034",
@@ -29016,7 +29315,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "formen": "gibt, gab, hat gegeben"
       },
       {
         "id": "vx-haus--035",
@@ -29028,7 +29328,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "formen": "nimmt, nahm, hat genommen"
       },
       {
         "id": "vx-haus--036",
@@ -29043,7 +29344,8 @@
         ],
         "syn": [
           "mitteilen"
-        ]
+        ],
+        "formen": "sagt, sagte, hat gesagt"
       },
       {
         "id": "vx-haus--037",
@@ -29055,7 +29357,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "formen": "bringt, brachte, hat gebracht"
       },
       {
         "id": "vx-haus--038",
@@ -29070,7 +29373,8 @@
         ],
         "syn": [
           "unterstützen"
-        ]
+        ],
+        "formen": "hilft, half, hat geholfen"
       },
       {
         "id": "vx-haus--039",
@@ -29083,7 +29387,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "braucht, brauchte, hat gebraucht"
       },
       {
         "id": "vx-haus--040",
@@ -29096,7 +29401,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "weiß, wusste, hat gewusst"
       },
       {
         "id": "vx-haus--041",
@@ -29108,7 +29414,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "formen": "kennt, kannte, hat gekannt"
       },
       {
         "id": "vx-haus--042",
@@ -29123,7 +29430,8 @@
         ],
         "syn": [
           "glauben"
-        ]
+        ],
+        "formen": "denkt, dachte, hat gedacht"
       },
       {
         "id": "vx-haus--043",
@@ -29136,7 +29444,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "bleibt, blieb, ist geblieben"
       },
       {
         "id": "vx-haus--044",
@@ -29149,7 +29458,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "formen": "öffnet, öffnete, hat geöffnet"
       },
       {
         "id": "vx-haus--045",
@@ -29162,7 +29472,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ie = «إي» ممدودة · sch = «ش» · ß = «س» مشدَّدة"
+        "aussprache": "ie = «إي» ممدودة · sch = «ش» · ß = «س» مشدَّدة",
+        "formen": "schließt, schloss, hat geschlossen"
       },
       {
         "id": "vx-haus--046",
@@ -29177,7 +29488,8 @@
         ],
         "syn": [
           "beginnen"
-        ]
+        ],
+        "formen": "fängt an, fing an, hat angefangen"
       },
       {
         "id": "vx-haus--047",
@@ -29190,7 +29502,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "formen": "hört auf, hörte auf, hat aufgehört"
       },
       {
         "id": "vx-haus--048",
@@ -29203,7 +29516,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "vergisst, vergaß, hat vergessen"
       },
       {
         "id": "vx-haus--049",
@@ -29215,7 +29529,8 @@
         "level": "A1",
         "tags": [
           "verb"
-        ]
+        ],
+        "formen": "erinnert, erinnerte, hat erinnert"
       },
       {
         "id": "vx-haus--050",
@@ -29228,7 +29543,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "wartet, wartete, hat gewartet"
       },
       {
         "id": "vx-haus--051",
@@ -29241,7 +29557,8 @@
         "tags": [
           "verb"
         ],
-        "aussprache": "ie = «إي» ممدودة · sp/st في البداية = «شب/شت»"
+        "aussprache": "ie = «إي» ممدودة · sp/st في البداية = «شب/شت»",
+        "formen": "spielt, spielte, hat gespielt"
       },
       {
         "id": "vx-haus--052",
@@ -30384,7 +30701,8 @@
         "tags": [
           "freizeit"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ»"
+        "aussprache": "sch = «ش» · w = «ڤ»",
+        "formen": "schwimmt, schwamm, hat geschwommen / ist geschwommen"
       },
       {
         "id": "vy-natur-025",
@@ -30397,7 +30715,8 @@
         "tags": [
           "freizeit"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "tanzt, tanzte, hat getanzt"
       },
       {
         "id": "vy-natur-026",
@@ -30409,7 +30728,8 @@
         "level": "A1",
         "tags": [
           "freizeit"
-        ]
+        ],
+        "formen": "singt, sang, hat gesungen"
       },
       {
         "id": "vy-natur-027",
@@ -30487,7 +30807,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "syn": [
           "verreisen"
-        ]
+        ],
+        "formen": "reist, reiste, ist gereist"
       },
       {
         "id": "vy-natur-034",
@@ -30503,7 +30824,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "syn": [
           "aufsuchen"
-        ]
+        ],
+        "formen": "besucht, besuchte, hat besucht"
       },
       {
         "id": "vy-natur-035",
@@ -30518,7 +30840,8 @@
         ],
         "syn": [
           "begegnen"
-        ]
+        ],
+        "formen": "trifft, traf, hat getroffen"
       },
       {
         "id": "vy-natur-036",
@@ -30530,7 +30853,8 @@
         "level": "A1",
         "tags": [
           "freizeit"
-        ]
+        ],
+        "formen": "geht spazieren, ging spazieren, ist spazieren gegangen"
       },
       {
         "id": "vy-natur-037",
@@ -30662,7 +30986,8 @@
         "tags": [
           "gefuehl"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "lacht, lachte, hat gelacht"
       },
       {
         "id": "vy-natur-045",
@@ -30675,7 +31000,8 @@
         "tags": [
           "gefuehl"
         ],
-        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»"
+        "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
+        "formen": "weint, weinte, hat geweint"
       },
       {
         "id": "vy-natur-046",
@@ -30691,7 +31017,8 @@
         "aussprache": "ie = «إي» ممدودة",
         "syn": [
           "liebhaben"
-        ]
+        ],
+        "formen": "liebt, liebte, hat geliebt"
       },
       {
         "id": "vy-natur-047",
@@ -30707,7 +31034,8 @@
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "syn": [
           "gern haben"
-        ]
+        ],
+        "formen": "mag, mochte, hat gemocht"
       },
       {
         "id": "vy-natur-048",
@@ -30722,7 +31050,8 @@
         ],
         "syn": [
           "verabscheuen"
-        ]
+        ],
+        "formen": "hasst, hasste, hat gehasst"
       },
       {
         "id": "vy-natur-049",
@@ -30734,7 +31063,8 @@
         "level": "A1",
         "tags": [
           "gefuehl"
-        ]
+        ],
+        "formen": "hat Angst, hatte Angst, hat Angst gehabt"
       },
       {
         "id": "vy-natur-050",
@@ -30795,7 +31125,8 @@
         "tags": [
           "haushalt"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "formen": "duscht, duschte, hat geduscht"
       },
       {
         "id": "vy-natur-054",
@@ -30807,7 +31138,8 @@
         "level": "A1",
         "tags": [
           "haushalt"
-        ]
+        ],
+        "formen": "kehrt, kehrte, hat gekehrt"
       },
       {
         "id": "vy-natur-055",
@@ -30835,7 +31167,8 @@
         "tags": [
           "haushalt"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "bügelt, bügelte, hat gebügelt"
       },
       {
         "id": "vy-natur-057",
@@ -30893,7 +31226,8 @@
         "tags": [
           "haushalt"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
+        "formen": "schneidet, schnitt, hat geschnitten"
       },
       {
         "id": "vy-natur-061",
@@ -30920,7 +31254,8 @@
         "level": "A1",
         "tags": [
           "natur"
-        ]
+        ],
+        "formen": "riecht, roch, hat gerochen"
       },
       {
         "id": "r311a1-071",
@@ -31062,7 +31397,8 @@
         "tags": [
           "meinung"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sch = «ش»"
+        "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
+        "formen": "entscheidet sich, entschied sich, hat sich entschieden"
       },
       {
         "id": "vy-leben-010",
@@ -31075,7 +31411,8 @@
         "tags": [
           "meinung"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»"
+        "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
+        "formen": "vergleicht, verglich, hat verglichen"
       },
       {
         "id": "vy-leben-011",
@@ -31088,7 +31425,8 @@
         "tags": [
           "meinung"
         ],
-        "aussprache": "eu/äu = «أوي»"
+        "aussprache": "eu/äu = «أوي»",
+        "formen": "bedeutet, bedeutete, hat bedeutet"
       },
       {
         "id": "vy-leben-012",
@@ -31100,7 +31438,8 @@
         "level": "A2",
         "tags": [
           "meinung"
-        ]
+        ],
+        "formen": "erlaubt, erlaubte, hat erlaubt"
       },
       {
         "id": "vy-leben-014",
@@ -31112,7 +31451,8 @@
         "level": "A2",
         "tags": [
           "alltag"
-        ]
+        ],
+        "formen": "gewöhnt sich, gewöhnte sich, hat sich gewöhnt"
       },
       {
         "id": "vy-leben-016",
@@ -31125,7 +31465,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "interessiert sich, interessierte sich, hat sich interessiert"
       },
       {
         "id": "vy-leben-017",
@@ -31137,7 +31478,8 @@
         "level": "A2",
         "tags": [
           "alltag"
-        ]
+        ],
+        "formen": "achtet auf, achtete auf, hat geachtet auf"
       },
       {
         "id": "vy-leben-018",
@@ -31149,7 +31491,8 @@
         "level": "A2",
         "tags": [
           "alltag"
-        ]
+        ],
+        "formen": "passt auf, passte auf, hat aufgepasst"
       },
       {
         "id": "vy-leben-019",
@@ -31162,7 +31505,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
+        "formen": "verspricht, versprach, hat versprochen"
       },
       {
         "id": "vy-leben-021",
@@ -31253,7 +31597,8 @@
         "tags": [
           "technik"
         ],
-        "aussprache": "sch = «ش» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "sch = «ش» · ö = بينَ الضمّةِ والكسرة",
+        "formen": "löscht, löschte, hat gelöscht"
       },
       {
         "id": "vy-leben-030",
@@ -31265,7 +31610,8 @@
         "level": "A2",
         "tags": [
           "technik"
-        ]
+        ],
+        "formen": "lädt herunter, lud herunter, hat heruntergeladen"
       },
       {
         "id": "vy-leben-031",
@@ -31336,7 +31682,8 @@
         "level": "A2",
         "tags": [
           "gesundheit"
-        ]
+        ],
+        "formen": "nimmt ab, nahm ab, hat abgenommen"
       },
       {
         "id": "vy-leben-046",
@@ -31349,7 +31696,8 @@
         "tags": [
           "gesundheit"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "nimmt zu, nahm zu, hat zugenommen"
       },
       {
         "id": "vy-leben-047",
@@ -31945,7 +32293,8 @@
         "tags": [
           "sprache"
         ],
-        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "übersetzt, übersetzte, hat übersetzt"
       },
       {
         "id": "vz-welt-b-015",
@@ -31958,7 +32307,8 @@
         "tags": [
           "sprache"
         ],
-        "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "buchstabiert, buchstabierte, hat buchstabiert"
       },
       {
         "id": "vz-welt-b-016",
@@ -31971,7 +32321,8 @@
         "tags": [
           "sprache"
         ],
-        "img": "/cards/bitte.webp"
+        "img": "/cards/bitte.webp",
+        "formen": "wiederholt, wiederholte, hat wiederholt"
       },
       {
         "id": "vz-welt-b-017",
@@ -31985,7 +32336,8 @@
           "sprache"
         ],
         "img": "/cards/sprechen.webp",
-        "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "spricht langsamer, sprach langsamer, hat langsamer gesprochen"
       },
       {
         "id": "vz-welt-b-018",
@@ -32158,7 +32510,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت»"
+        "aussprache": "sp/st في البداية = «شب/شت»",
+        "formen": "steht, stand, hat gestanden"
       },
       {
         "id": "vz-welt-b-031",
@@ -32171,7 +32524,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "sitzt, saß, hat gesessen"
       },
       {
         "id": "vz-welt-b-032",
@@ -32184,7 +32538,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "liegt, lag, hat gelegen"
       },
       {
         "id": "vz-welt-b-033",
@@ -32197,7 +32552,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت»"
+        "aussprache": "sp/st في البداية = «شب/شت»",
+        "formen": "stellt, stellte, hat gestellt"
       },
       {
         "id": "vz-welt-b-034",
@@ -32209,7 +32565,8 @@
         "level": "A1",
         "tags": [
           "bewegung"
-        ]
+        ],
+        "formen": "legt, legte, hat gelegt"
       },
       {
         "id": "vz-welt-b-035",
@@ -32222,7 +32579,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "setzt, setzte, hat gesetzt"
       },
       {
         "id": "vz-welt-b-036",
@@ -32234,7 +32592,8 @@
         "level": "A1",
         "tags": [
           "bewegung"
-        ]
+        ],
+        "formen": "hängt, hing, hat gehangen"
       },
       {
         "id": "vz-welt-b-037",
@@ -32246,7 +32605,8 @@
         "level": "A1",
         "tags": [
           "bewegung"
-        ]
+        ],
+        "formen": "fällt, fiel, ist gefallen"
       },
       {
         "id": "vz-welt-b-038",
@@ -32259,7 +32619,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»"
+        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
+        "formen": "steigt, stieg, ist gestiegen"
       },
       {
         "id": "vz-welt-b-039",
@@ -32272,7 +32633,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "steigt aus, stieg aus, ist ausgestiegen"
       },
       {
         "id": "vz-welt-b-040",
@@ -32284,7 +32646,8 @@
         "level": "A1",
         "tags": [
           "bewegung"
-        ]
+        ],
+        "formen": "kommt mit, kam mit, ist mitgekommen"
       },
       {
         "id": "vz-welt-b-041",
@@ -32297,7 +32660,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "kommt zurück, kam zurück, ist zurückgekommen"
       },
       {
         "id": "vz-welt-b-042",
@@ -32310,7 +32674,8 @@
         "tags": [
           "bewegung"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "geht weg, ging weg, ist weggegangen"
       },
       {
         "id": "vz-welt-b-043",
@@ -32325,7 +32690,8 @@
         ],
         "syn": [
           "abholen"
-        ]
+        ],
+        "formen": "holt, holte, hat geholt"
       },
       {
         "id": "vz-welt-b-044",
@@ -33116,7 +33482,8 @@
         "level": "A1",
         "tags": [
           "phrase"
-        ]
+        ],
+        "formen": "lernt kennen, lernte kennen, hat kennengelernt"
       },
       {
         "id": "r311a1-030",
@@ -33128,7 +33495,8 @@
         "level": "A1",
         "tags": [
           "beruf"
-        ]
+        ],
+        "formen": "bietet an, bot an, hat angeboten"
       }
     ]
   },
@@ -33238,7 +33606,8 @@
         "tags": [
           "schreiben"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "formuliert höflich, formulierte höflich, hat höflich formuliert"
       },
       {
         "id": "vz-schrei-009",
@@ -33251,7 +33620,8 @@
         "tags": [
           "meinung"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "stimmt zu, stimmte zu, hat zugestimmt"
       },
       {
         "id": "vz-schrei-011",
@@ -33439,7 +33809,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "informiert sich, informierte sich, hat sich informiert"
       },
       {
         "id": "vz-schrei-026",
@@ -33452,7 +33823,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "nimmt teil, nahm teil, hat teilgenommen"
       },
       {
         "id": "vz-schrei-027",
@@ -33512,7 +33884,8 @@
         "level": "A2",
         "tags": [
           "einkauf"
-        ]
+        ],
+        "formen": "bestellt und holt ab, bestellte und holte ab, hat bestellt und abgeholt"
       },
       {
         "id": "vz-schrei-036",
@@ -33667,7 +34040,8 @@
         "level": "A2",
         "tags": [
           "schreiben"
-        ]
+        ],
+        "formen": "liest Korrektur, las Korrektur, hat Korrektur gelesen"
       },
       {
         "id": "r312a2-054",
@@ -33724,7 +34098,8 @@
         "level": "A2",
         "tags": [
           "schreiben"
-        ]
+        ],
+        "formen": "notiert, notierte, hat notiert"
       },
       {
         "id": "r312a2-058",
@@ -33736,7 +34111,8 @@
         "level": "A2",
         "tags": [
           "schreiben"
-        ]
+        ],
+        "formen": "markiert, markierte, hat markiert"
       },
       {
         "id": "r312a2-059",
@@ -33816,7 +34192,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "formen": "kann, konnte, hat gekonnt"
       },
       {
         "id": "va-modort-001",
@@ -33829,7 +34206,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "muss, musste, hat gemusst"
       },
       {
         "id": "va-modort-002",
@@ -33842,7 +34220,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "darf, durfte, hat gedurft"
       },
       {
         "id": "va-modort-003",
@@ -33855,7 +34234,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "will, wollte, hat gewollt"
       },
       {
         "id": "va-modort-004",
@@ -33867,7 +34247,8 @@
         "level": "A1",
         "tags": [
           "modal"
-        ]
+        ],
+        "formen": "soll, sollte, hat gesollt"
       },
       {
         "id": "va-modort-005",
@@ -33880,7 +34261,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ö = بينَ الضمّةِ والكسرة",
+        "formen": "möchte, wollte, hat gewollt"
       },
       {
         "id": "va-modort-006",
@@ -33893,7 +34275,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "muss nicht, musste nicht, hat nicht gemusst"
       },
       {
         "id": "va-modort-007",
@@ -33906,7 +34289,8 @@
         "tags": [
           "modal"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "darf nicht, durfte nicht, hat nicht gedurft"
       },
       {
         "id": "va-modort-008",
@@ -34530,7 +34914,8 @@
         "level": "A1",
         "tags": [
           "digital"
-        ]
+        ],
+        "formen": "klickt, klickte, hat geklickt"
       },
       {
         "id": "va-modort-057",
@@ -34543,7 +34928,8 @@
         "tags": [
           "digital"
         ],
-        "img": "/cards/internet.webp"
+        "img": "/cards/internet.webp",
+        "formen": "sucht im Internet, suchte im Internet, hat im Internet gesucht"
       },
       {
         "id": "va-modort-058",
@@ -34629,7 +35015,8 @@
         "level": "A1",
         "tags": [
           "arzt"
-        ]
+        ],
+        "formen": "ruht sich aus, ruhte sich aus, hat sich ausgeruht"
       },
       {
         "id": "va-modort-068",
@@ -34723,7 +35110,8 @@
         "level": "A1",
         "tags": [
           "post"
-        ]
+        ],
+        "formen": "holt ab, holte ab, hat abgeholt"
       },
       {
         "id": "va-modort-074",
@@ -34768,7 +35156,8 @@
           "bank"
         ],
         "img": "/cards/bezahlen.webp",
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "bezahlt bar, bezahlte bar, hat bar bezahlt"
       },
       {
         "id": "va-modort-079",
@@ -34781,7 +35170,8 @@
         "tags": [
           "bank"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "zahlt mit Karte, zahlte mit Karte, hat mit Karte gezahlt"
       },
       {
         "id": "va-modort-081",
@@ -34842,7 +35232,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "leiht, lieh, hat geliehen"
       },
       {
         "id": "va-modort-086",
@@ -34855,7 +35246,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "teilt, teilte, hat geteilt"
       },
       {
         "id": "va-modort-087",
@@ -34868,7 +35260,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
+        "formen": "wechselt, wechselte, hat gewechselt"
       },
       {
         "id": "va-modort-088",
@@ -34880,7 +35273,8 @@
         "level": "A1",
         "tags": [
           "alltag"
-        ]
+        ],
+        "formen": "bringt mit, brachte mit, hat mitgebracht"
       },
       {
         "id": "va-modort-089",
@@ -34893,7 +35287,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "macht aus, machte aus, hat ausgemacht"
       },
       {
         "id": "va-modort-090",
@@ -34906,7 +35301,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "macht an, machte an, hat angemacht"
       },
       {
         "id": "va-modort-091",
@@ -35060,7 +35456,8 @@
         "level": "A1",
         "tags": [
           "alltag"
-        ]
+        ],
+        "formen": "geht kaputt, ging kaputt, ist kaputtgegangen"
       },
       {
         "id": "va-modort-101",
@@ -35073,7 +35470,8 @@
         "tags": [
           "alltag"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "funktioniert, funktionierte, hat funktioniert"
       },
       {
         "id": "va-modort-102",
@@ -35172,7 +35570,8 @@
         "level": "A1",
         "tags": [
           "post"
-        ]
+        ],
+        "formen": "telefoniert, telefonierte, hat telefoniert"
       },
       {
         "id": "r311a1-037",
@@ -35300,7 +35699,8 @@
         "level": "A1",
         "tags": [
           "amt"
-        ]
+        ],
+        "formen": "kreuzt an, kreuzte an, hat angekreuzt"
       },
       {
         "id": "r311a1-046",
@@ -35312,7 +35712,8 @@
         "level": "A1",
         "tags": [
           "amt"
-        ]
+        ],
+        "formen": "kriegt, kriegte, hat gekriegt"
       }
     ]
   },
@@ -35417,7 +35818,8 @@
         "aussprache": "w = «ڤ»",
         "syn": [
           "beantworten"
-        ]
+        ],
+        "formen": "antwortet, antwortete, hat geantwortet"
       },
       {
         "id": "vb-abschl-007",
@@ -35460,7 +35862,8 @@
         "level": "A1",
         "tags": [
           "schule"
-        ]
+        ],
+        "formen": "liest laut, las laut, hat laut gelesen"
       },
       {
         "id": "vb-abschl-010",
@@ -35473,7 +35876,8 @@
         "tags": [
           "schule"
         ],
-        "img": "/cards/lernen.webp"
+        "img": "/cards/lernen.webp",
+        "formen": "lernt auswendig, lernte auswendig, hat auswendig gelernt"
       },
       {
         "id": "vb-abschl-011",
@@ -35684,7 +36088,8 @@
         "tags": [
           "verkehr"
         ],
-        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "fährt zurück, fuhr zurück, ist zurückgefahren"
       },
       {
         "id": "vb-abschl-026",
@@ -35712,7 +36117,8 @@
         "tags": [
           "verkehr"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "ist pünktlich, war pünktlich, ist pünktlich gewesen"
       },
       {
         "id": "vb-abschl-029",
@@ -36053,7 +36459,8 @@
           "sozial"
         ],
         "img": "/cards/wohnen.webp",
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "wohnt zusammen, wohnte zusammen, hat zusammen gewohnt"
       },
       {
         "id": "vb-abschl-052",
@@ -36108,7 +36515,8 @@
         "tags": [
           "alltag",
           "Wiederholung"
-        ]
+        ],
+        "formen": "freut sich, freute sich, hat sich gefreut"
       },
       {
         "id": "r311a1-079",
@@ -36120,7 +36528,8 @@
         "level": "A1",
         "tags": [
           "alltag"
-        ]
+        ],
+        "formen": "kümmert sich, kümmerte sich, hat sich gekümmert"
       }
     ]
   },
@@ -36315,7 +36724,8 @@
           "person"
         ],
         "img": "/cards/verstehen.webp",
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "versteht sich, verstand sich, hat sich verstanden"
       },
       {
         "id": "vc-mensch-020",
@@ -36328,7 +36738,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "vertraut, vertraute, hat vertraut"
       },
       {
         "id": "vc-mensch-022",
@@ -36420,7 +36831,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "entschuldigt sich, entschuldigte sich, hat sich entschuldigt"
       },
       {
         "id": "vc-mensc-800",
@@ -36459,7 +36871,8 @@
         "level": "A2",
         "tags": [
           "person"
-        ]
+        ],
+        "formen": "verlässt sich, verließ sich, hat sich verlassen"
       },
       {
         "id": "vc-mensc-803",
@@ -36514,7 +36927,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "macht sich Sorgen, machte sich Sorgen, hat sich Sorgen gemacht"
       },
       {
         "id": "vc-mensc-807",
@@ -36527,7 +36941,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "formen": "tröstet, tröstete, hat getröstet"
       },
       {
         "id": "vc-mensc-808",
@@ -36566,7 +36981,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "z = «تس» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "z = «تس» · ö = بينَ الضمّةِ والكسرة",
+        "formen": "hört zu, hörte zu, hat zugehört"
       },
       {
         "id": "vc-mensc-811",
@@ -36607,7 +37023,8 @@
         "tags": [
           "person"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "wirkt, wirkte, hat gewirkt"
       },
       {
         "id": "vc-mensc-880",
@@ -37274,7 +37691,8 @@
         "tags": [
           "reise"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "verläuft sich, verlief sich, hat sich verlaufen"
       },
       {
         "id": "vc-reise--016",
@@ -37376,7 +37794,8 @@
         "level": "A2",
         "tags": [
           "fest"
-        ]
+        ],
+        "formen": "gratuliert, gratulierte, hat gratuliert"
       },
       {
         "id": "vc-reise--024",
@@ -37389,7 +37808,8 @@
         "tags": [
           "fest"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "lädt ein, lud ein, hat eingeladen"
       },
       {
         "id": "vc-reise--025",
@@ -37461,7 +37881,8 @@
         "tags": [
           "fest"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف»"
+        "aussprache": "ei = «آي» لا «إي» · v = «ف»",
+        "formen": "bereitet vor, bereitete vor, hat vorbereitet"
       },
       {
         "id": "vc-reise-800",
@@ -37547,7 +37968,8 @@
         "tags": [
           "fest"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "probiert, probierte, hat probiert"
       },
       {
         "id": "vc-reise-806",
@@ -37560,7 +37982,8 @@
         "tags": [
           "fest"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "wird satt, wurde satt, ist satt geworden"
       },
       {
         "id": "vc-reise-807",
@@ -37697,7 +38120,8 @@
         "level": "A2",
         "tags": [
           "reise"
-        ]
+        ],
+        "formen": "verreist, verreiste, ist verreist"
       },
       {
         "id": "r312a2-100",
@@ -37838,7 +38262,8 @@
         "tags": [
           "medien"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف» · ö = بينَ الضمّةِ والكسرة",
+        "formen": "veröffentlicht, veröffentlichte, hat veröffentlicht"
       },
       {
         "id": "vc-medien-008",
@@ -37912,7 +38337,8 @@
         "tags": [
           "medien"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "kommentiert, kommentierte, hat kommentiert"
       },
       {
         "id": "vc-medien-014",
@@ -38066,7 +38492,8 @@
         "level": "A2",
         "tags": [
           "schule"
-        ]
+        ],
+        "formen": "fehlt, fehlte, hat gefehlt"
       },
       {
         "id": "vc-medien-026",
@@ -38078,7 +38505,8 @@
         "level": "A2",
         "tags": [
           "schule"
-        ]
+        ],
+        "formen": "konzentriert sich, konzentrierte sich, hat sich konzentriert"
       },
       {
         "id": "vc-medien-027",
@@ -38090,7 +38518,8 @@
         "level": "A2",
         "tags": [
           "schule"
-        ]
+        ],
+        "formen": "bereitet sich vor, bereitete sich vor, hat sich vorbereitet"
       },
       {
         "id": "vc-medien-028",
@@ -38102,7 +38531,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "formen": "wartet auf, wartete auf, hat gewartet auf"
       },
       {
         "id": "vc-medien-030",
@@ -38115,7 +38545,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
+        "formen": "freut sich, freute sich, hat sich gefreut"
       },
       {
         "id": "vc-medien-031",
@@ -38127,7 +38558,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "formen": "denkt an, dachte an, hat gedacht an"
       },
       {
         "id": "vc-medien-032",
@@ -38140,7 +38572,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
+        "formen": "spricht über, sprach über, hat gesprochen über"
       },
       {
         "id": "vc-medien-034",
@@ -38152,7 +38585,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "formen": "bittet um, bat um, hat gebeten um"
       },
       {
         "id": "vc-medien-035",
@@ -38165,7 +38599,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "dankt für, dankte für, hat gedankt für"
       },
       {
         "id": "vc-medien-036",
@@ -38178,7 +38613,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "hat Angst vor, hatte Angst vor, hat Angst gehabt vor"
       },
       {
         "id": "vc-medien-037",
@@ -38190,7 +38626,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "formen": "ist zufrieden, war zufrieden, ist zufrieden gewesen"
       },
       {
         "id": "vc-medien-038",
@@ -38202,7 +38639,8 @@
         "level": "A2",
         "tags": [
           "praep"
-        ]
+        ],
+        "formen": "erinnert sich, erinnerte sich, hat sich erinnert"
       },
       {
         "id": "vc-medien-039",
@@ -38215,7 +38653,8 @@
         "tags": [
           "praep"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "hängt ab, hing ab, hat abgehangen"
       },
       {
         "id": "vc-medie-800",
@@ -38228,7 +38667,8 @@
         "tags": [
           "medien"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "prüft, prüfte, hat geprüft"
       },
       {
         "id": "vc-medie-801",
@@ -38636,7 +39076,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "streicht, strich, hat gestrichen"
       },
       {
         "id": "vd-wohnen-018",
@@ -38680,7 +39121,8 @@
         "level": "A2",
         "tags": [
           "wohnen"
-        ]
+        ],
+        "formen": "kündigt, kündigte, hat gekündigt"
       },
       {
         "id": "vd-wohnen-021",
@@ -38784,7 +39226,8 @@
         "tags": [
           "wohnen"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · z = «تس»",
+        "formen": "zahlt nach, zahlte nach, hat nachgezahlt"
       },
       {
         "id": "vd-wohnen-028",
@@ -38907,7 +39350,8 @@
         "level": "A2",
         "tags": [
           "wohnen"
-        ]
+        ],
+        "formen": "zieht aus, zog aus, ist ausgezogen"
       },
       {
         "id": "vd-wohnv-900",
@@ -39164,7 +39608,8 @@
         "tags": [
           "geld"
         ],
-        "aussprache": "sch = «ش» · v = «ف» · w = «ڤ»"
+        "aussprache": "sch = «ش» · v = «ف» · w = «ڤ»",
+        "formen": "verschwendet, verschwendete, hat verschwendet"
       },
       {
         "id": "vd-geld-k-014",
@@ -39238,7 +39683,8 @@
         "tags": [
           "geld"
         ],
-        "aussprache": "ie = «إي» ممدودة · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ie = «إي» ممدودة · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "überzieht, überzog, hat überzogen"
       },
       {
         "id": "vd-geld-k-021",
@@ -39267,7 +39713,8 @@
         "tags": [
           "geld"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "leistet sich, leistete sich, hat sich geleistet"
       },
       {
         "id": "vd-geld-k-023",
@@ -39311,7 +39758,8 @@
         "aussprache": "w = «ڤ»",
         "syn": [
           "siegen"
-        ]
+        ],
+        "formen": "gewinnt, gewann, hat gewonnen"
       },
       {
         "id": "vd-gesund-007",
@@ -39324,7 +39772,8 @@
         "tags": [
           "sport"
         ],
-        "aussprache": "ie = «إي» ممدودة · v = «ف»"
+        "aussprache": "ie = «إي» ممدودة · v = «ف»",
+        "formen": "verliert, verlor, hat verloren"
       },
       {
         "id": "vd-gesund-008",
@@ -39353,7 +39802,8 @@
         "tags": [
           "sport"
         ],
-        "aussprache": "v = «ف» · z = «تس»"
+        "aussprache": "v = «ف» · z = «تس»",
+        "formen": "verletzt sich, verletzte sich, hat sich verletzt"
       },
       {
         "id": "vd-gesund-012",
@@ -39539,7 +39989,8 @@
         "level": "A2",
         "tags": [
           "gesundheit"
-        ]
+        ],
+        "formen": "entspannt, entspannte, hat entspannt"
       },
       {
         "id": "vd-gesund-027",
@@ -39568,7 +40019,8 @@
         "tags": [
           "gesundheit"
         ],
-        "aussprache": "ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "ö = بينَ الضمّةِ والكسرة",
+        "formen": "hört auf zu rauchen, hörte auf zu rauchen, hat aufgehört zu rauchen"
       },
       {
         "id": "vpfl-01",
@@ -39725,7 +40177,8 @@
         "level": "A2",
         "tags": [
           "gesundheit"
-        ]
+        ],
+        "formen": "tut weh, tat weh, hat wehgetan"
       },
       {
         "id": "r312a2-125",
@@ -39737,7 +40190,8 @@
         "level": "A2",
         "tags": [
           "gesundheit"
-        ]
+        ],
+        "formen": "stirbt, starb, ist gestorben"
       }
     ]
   },
@@ -39786,7 +40240,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "sch = «ش»"
+        "aussprache": "sch = «ش»",
+        "formen": "mischt, mischte, hat gemischt"
       },
       {
         "id": "ve-kueche--003",
@@ -39812,7 +40267,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "formen": "brät, briet, hat gebraten"
       },
       {
         "id": "ve-kueche--005",
@@ -39824,7 +40280,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "formen": "lässt kochen, ließ kochen, hat kochen lassen"
       },
       {
         "id": "ve-kueche--006",
@@ -39837,7 +40294,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "kühlt ab, kühlte ab, hat abgekühlt"
       },
       {
         "id": "ve-kueche--007",
@@ -39850,7 +40308,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "w = «ڤ» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "w = «ڤ» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "würzt, würzte, hat gewürzt"
       },
       {
         "id": "ve-kueche--008",
@@ -39974,7 +40433,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ»"
+        "aussprache": "sch = «ش» · w = «ڤ»",
+        "formen": "wäscht ab, wusch ab, hat abgewaschen"
       },
       {
         "id": "ve-kueche--016",
@@ -40018,7 +40478,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "verdirbt, verdarb, ist verdorben"
       },
       {
         "id": "ve-kueche--020",
@@ -40031,7 +40492,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة"
+        "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة",
+        "formen": "friert ein, fror ein, hat eingefroren"
       },
       {
         "id": "ve-kueche--021",
@@ -40043,7 +40505,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "formen": "taut auf, taute auf, hat aufgetaut"
       },
       {
         "id": "ve-kueche--022",
@@ -40116,7 +40579,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · v = «ف» · z = «تس»",
+        "formen": "heizt vor, heizte vor, hat vorgeheizt"
       },
       {
         "id": "ve-kueche-802",
@@ -40161,7 +40625,8 @@
         "tags": [
           "kueche"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "rührt um, rührte um, hat umgerührt"
       },
       {
         "id": "ve-kueche-805",
@@ -40186,7 +40651,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "formen": "lässt abtropfen, ließ abtropfen, hat abtropfen lassen"
       },
       {
         "id": "ve-kueche-807",
@@ -40367,7 +40833,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "formen": "schenkt, schenkte, hat geschenkt"
       },
       {
         "id": "r312a2-134",
@@ -40379,7 +40846,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "formen": "packt ein, packte ein, hat eingepackt"
       },
       {
         "id": "r312a2-135",
@@ -40391,7 +40859,8 @@
         "level": "A2",
         "tags": [
           "kueche"
-        ]
+        ],
+        "formen": "klappt, klappte, hat geklappt"
       }
     ]
   },
@@ -40678,7 +41147,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "w = «ڤ»"
+        "aussprache": "w = «ڤ»",
+        "formen": "entwickelt sich, entwickelte sich, hat sich entwickelt"
       },
       {
         "id": "ve-erzaehl-021",
@@ -40691,7 +41161,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "verändert sich, veränderte sich, hat sich verändert"
       },
       {
         "id": "ve-erzaehl-022",
@@ -40811,7 +41282,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "w = «ڤ» · ö = بينَ الضمّةِ والكسرة"
+        "aussprache": "w = «ڤ» · ö = بينَ الضمّةِ والكسرة",
+        "formen": "gewöhnt sich, gewöhnte sich, hat sich gewöhnt"
       },
       {
         "id": "ve-erzaeh-806",
@@ -40840,7 +41312,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "überwindet, überwand, hat überwunden"
       },
       {
         "id": "ve-erzaeh-808",
@@ -40853,7 +41326,8 @@
         "tags": [
           "erzaehlen"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "erzählt stolz, erzählte stolz, hat stolz erzählt"
       },
       {
         "id": "ve-erzaeh-809",
@@ -41042,7 +41516,8 @@
         "level": "A2",
         "tags": [
           "erzaehlen"
-        ]
+        ],
+        "formen": "passiert, passierte, ist passiert"
       },
       {
         "id": "r312a2-150",
@@ -41054,7 +41529,8 @@
         "level": "A2",
         "tags": [
           "erzaehlen"
-        ]
+        ],
+        "formen": "findet statt, fand statt, hat stattgefunden"
       },
       {
         "id": "r312a2-151",
@@ -41066,7 +41542,8 @@
         "level": "A2",
         "tags": [
           "erzaehlen"
-        ]
+        ],
+        "formen": "träumt, träumte, hat geträumt"
       },
       {
         "id": "r312a2-152",
@@ -41078,7 +41555,8 @@
         "level": "A2",
         "tags": [
           "erzaehlen"
-        ]
+        ],
+        "formen": "lügt, log, hat gelogen"
       },
       {
         "id": "r312a2-153",
@@ -41302,7 +41780,8 @@
         "level": "A2",
         "tags": [
           "schutz"
-        ]
+        ],
+        "formen": "befolgt, befolgte, hat befolgt"
       },
       {
         "id": "ve-arbeits-017",
@@ -41314,7 +41793,8 @@
         "level": "A2",
         "tags": [
           "schutz"
-        ]
+        ],
+        "formen": "meldet, meldete, hat gemeldet"
       },
       {
         "id": "ve-arbeits-018",
@@ -41435,7 +41915,8 @@
         "tags": [
           "umwelt"
         ],
-        "aussprache": "ei = «آي» لا «إي» · z = «تس»"
+        "aussprache": "ei = «آي» لا «إي» · z = «تس»",
+        "formen": "heizt sparsam, heizte sparsam, hat sparsam geheizt"
       },
       {
         "id": "ve-umwelt--007",
@@ -41489,7 +41970,8 @@
         "tags": [
           "umwelt"
         ],
-        "aussprache": "ie = «إي» ممدودة · v = «ف» · w = «ڤ»"
+        "aussprache": "ie = «إي» ممدودة · v = «ف» · w = «ڤ»",
+        "formen": "verwendet wieder, verwendete wieder, hat wiederverwendet"
       },
       {
         "id": "ve-umwelt--014",
@@ -41502,7 +41984,8 @@
         "tags": [
           "umwelt"
         ],
-        "aussprache": "ei = «آي» لا «إي» · v = «ف»"
+        "aussprache": "ei = «آي» لا «إي» · v = «ف»",
+        "formen": "vermeidet, vermied, hat vermieden"
       },
       {
         "id": "ve-umwelt--016",
@@ -41606,7 +42089,8 @@
         "tags": [
           "umwelt"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "trägt bei, trug bei, hat beigetragen"
       },
       {
         "id": "r312a2-154",
@@ -41618,7 +42102,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "formen": "stellt her, stellte her, hat hergestellt"
       },
       {
         "id": "r312a2-155",
@@ -41644,7 +42129,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "formen": "schneit, schneite, hat geschneit"
       },
       {
         "id": "r312a2-157",
@@ -41761,7 +42247,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "formen": "macht auf, machte auf, hat aufgemacht"
       },
       {
         "id": "r312a2-165",
@@ -41773,7 +42260,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "formen": "geht aus, ging aus, ist ausgegangen"
       },
       {
         "id": "r312a2-166",
@@ -41785,7 +42273,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "formen": "trägt aus, trug aus, hat ausgetragen"
       },
       {
         "id": "r312a2-167",
@@ -41797,7 +42286,8 @@
         "level": "A2",
         "tags": [
           "umwelt"
-        ]
+        ],
+        "formen": "beendet, beendete, hat beendet"
       }
     ]
   },
@@ -42338,7 +42828,8 @@
         "level": "A2",
         "tags": [
           "rede"
-        ]
+        ],
+        "formen": "tut leid, tat leid, hat leidgetan"
       },
       {
         "id": "r312a2-174",
@@ -42350,7 +42841,8 @@
         "level": "A2",
         "tags": [
           "rede"
-        ]
+        ],
+        "formen": "schimpft, schimpfte, hat geschimpft"
       },
       {
         "id": "r312a2-175",
@@ -42362,7 +42854,8 @@
         "level": "A2",
         "tags": [
           "rede"
-        ]
+        ],
+        "formen": "rechnet, rechnete, hat gerechnet"
       },
       {
         "id": "r312a2-176",
@@ -42374,7 +42867,8 @@
         "level": "A2",
         "tags": [
           "rede"
-        ]
+        ],
+        "formen": "weckt, weckte, hat geweckt"
       },
       {
         "id": "r312a2-177",
@@ -42550,7 +43044,8 @@
         "tags": [
           "aussehen"
         ],
-        "aussprache": "z = «تس»"
+        "aussprache": "z = «تس»",
+        "formen": "sitzt bequem, saß bequem, hat bequem gesessen"
       },
       {
         "id": "vf-kultur-013",
@@ -42563,7 +43058,8 @@
         "tags": [
           "aussehen"
         ],
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "probiert an, probierte an, hat anprobiert"
       },
       {
         "id": "vf-kultur-014",
@@ -42676,7 +43172,8 @@
         "tags": [
           "digital"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "loggt sich ein, loggte sich ein, hat sich eingeloggt"
       },
       {
         "id": "vf-kultur-033",
@@ -42689,7 +43186,8 @@
         "tags": [
           "digital"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "lädt hoch, lud hoch, hat hochgeladen"
       },
       {
         "id": "vf-kultur-034",
@@ -42716,7 +43214,8 @@
         "level": "A2",
         "tags": [
           "digital"
-        ]
+        ],
+        "formen": "druckt aus, druckte aus, hat ausgedruckt"
       },
       {
         "id": "vf-kultur-036",
@@ -42822,7 +43321,8 @@
         "level": "A2",
         "tags": [
           "bildung"
-        ]
+        ],
+        "formen": "gibt ab, gab ab, hat abgegeben"
       },
       {
         "id": "vf-kultd-305",
@@ -42848,7 +43348,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "holt nach, holte nach, hat nachgeholt"
       },
       {
         "id": "vf-kultd-307",
@@ -42892,7 +43393,8 @@
         "level": "A2",
         "tags": [
           "bildung"
-        ]
+        ],
+        "formen": "gibt auf, gab auf, hat aufgegeben"
       },
       {
         "id": "vf-kultd-310",
@@ -42905,7 +43407,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "bleibt dran, blieb dran, ist drangeblieben"
       },
       {
         "id": "vf-kultd-311",
@@ -42947,7 +43450,8 @@
         "tags": [
           "bildung"
         ],
-        "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة"
+        "aussprache": "sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
+        "formen": "spricht flüssig, sprach flüssig, hat flüssig gesprochen"
       },
       {
         "id": "vf-kultd-314",
@@ -43021,7 +43525,8 @@
         "tags": [
           "verkehr"
         ],
-        "aussprache": "sch = «ش» · w = «ڤ» · z = «تس»"
+        "aussprache": "sch = «ش» · w = «ڤ» · z = «تس»",
+        "formen": "fährt schwarz, fuhr schwarz, ist schwarzgefahren"
       },
       {
         "id": "vf-kultd-319",
@@ -43077,7 +43582,8 @@
         "level": "A2",
         "tags": [
           "verkehr"
-        ]
+        ],
+        "formen": "tankt, tankte, hat getankt"
       },
       {
         "id": "vf-kultd-323",
@@ -43180,7 +43686,8 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "v = «ف»"
+        "aussprache": "v = «ف»",
+        "formen": "verlängert, verlängerte, hat verlängert"
       },
       {
         "id": "vf-kultd-330",
@@ -43209,7 +43716,8 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "legt Widerspruch ein, legte Widerspruch ein, hat Widerspruch eingelegt"
       },
       {
         "id": "vf-kultd-332",
@@ -43320,7 +43828,8 @@
         "tags": [
           "behoerde"
         ],
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "ist zuständig, war zuständig, ist zuständig gewesen"
       },
       {
         "id": "vf-kultd-503",
@@ -43549,7 +44058,8 @@
         "level": "A2",
         "tags": [
           "kultur"
-        ]
+        ],
+        "formen": "bastelt, bastelte, hat gebastelt"
       },
       {
         "id": "r312a2-194",

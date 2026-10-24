@@ -1,0 +1,302 @@
+{
+  "t-b2-41": {
+    "de": "Wer in einer deutschen Gemeinde einen Spielplatz erweitern, eine Straße sanieren oder einen Bebauungsplan ändern will, muss früh Bürgerinnen und Bürger beteiligen, weil das Baugesetzbuch und viele Landesgesetze dies verlangen. Die Verwaltung lädt zu Einwohnerversammlungen, veröffentlicht Pläne online und sammelt Stellungnahmen, während Beiräte und Initiativen eigene Vorschläge einbringen. Obwohl viele Diskussionen kontrovers verlaufen, entsteht oft erst dadurch ein Kompromiss, weil verschiedene Interessen sichtbar und verhandelbar werden. Ohne diese Beteiligung fehlt die Legitimation, und spätere Klagen können Projekte jahrelang verzögern.\n\nBeispiele zeigen den Nutzen: In Süddeutschland führte eine Bürgerbefragung nach mehreren Runden zu einem Kompromiss über Flächennutzung, und in Berlin entstand nach trockenen, aber offenen Versammlungen eine Einigung mit Sozialwohnungen. Entscheidend ist, dass Konflikte früh sichtbar werden, weil Transparenz Misstrauen abbaut, obwohl der Prozess Zeit und Moderation kostet. Wer erst nach der Entscheidung informiert, erntet Protest und Vertrauensverlust. Auch kleine Gemeinden profitieren, wenn Jugendliche, Senioren und Familien getrennt angesprochen werden, weil ihre Bedarfe sich unterscheiden.\n\nDennoch braucht es realistische Erwartungen: Beteiligung bedeutet nicht, dass jede Forderung erfüllt wird. Ziel ist Abwägung, nicht Einstimmigkeit. Künftige Vorhaben sollten daher Beteiligung als Qualitätsinstrument nutzen: Verwaltung und Politik vereinbaren Ziele vorab, dokumentieren Einwände schriftlich und prüfen nach Umsetzung, ob Versprechen eingelöst wurden. Nur wenn Kontrolle und Einbeziehung zusammen gedacht werden, gewinnt die lokale Demokratie Glaubwürdigkeit, obwohl Ressourcen knapp bleiben und nicht jedes Projekt gleich viel Aufmerksamkeit erhält.",
+    "ar": "من يريد توسيع ملعب أو ترميم شارع أو تعديل مخطط بناء في بلدية ألمانية يجب أن يُشارك السكان مبكراً لأن قانون البناء وقوانين الولايات يفرض ذلك؛ تدعو الإدارة إلى اجتماعات الأهالي وتنشر الخطط على الإنترنت وتجمع الملاحظات بينما تقدم المجالس الاستشارية والمبادرات مقترحاتها الخاصة، ورغم الجدل يولد التسوية لأن المصالح المختلفة تصبح مرئية وقابلة للتفاوض، وبلا مشاركة تفقد المشاريع شرعيتها وتتأخر الدعاوى لاحقاً لسنوات. أظهرت أمثلة جنوب ألمانيا وبرلين فائدة النقاش: اتفاق على استخدام الأراضي وآخر مع سكن اجتماعي بعد جلسات علنية جافة، فالمفتاح ظهور النزاع مبكراً لأن الشفافية تبدد عدم الثقة رغم كلفة الوقت والإدارة، ومن يُبلغ بعد القرار يحصد احتجاجاً وفقدان ثقة. تحتاج التوقعات لواقعية: المشاركة لا تعني تلبية كل مطلب بل الموازنة لا الإجماع، ولذلك ينبغي أن تكون أداة جودة يلتزم فيها الإدارة والسياسة بأهداف مسبقة وتوثيق الاعتراضات وفحص تنفيذ الوعود بعد التنفيذ — عندها تكسب الديمقراطية المحلية مصداقية رغم ندرة الموارد.",
+    "questions": [
+      {
+        "id": "t-b2-41-l1",
+        "type": "mc",
+        "promptDe": "Warum muss die Gemeinde früh beteiligen?",
+        "options": [
+          "Weil Baugesetzbuch und Landesgesetze es verlangen und Legitimation sichern",
+          "Weil die Verwaltung keine Pläne hat",
+          "Weil Bürger nur online abstimmen"
+        ],
+        "answer": "Weil Baugesetzbuch und Landesgesetze es verlangen und Legitimation sichern",
+        "explanationAr": "الدليل: «weil das Baugesetzbuch und viele Landesgesetze dies verlangen» و«fehlt die Legitimation»."
+      },
+      {
+        "id": "t-b2-41-l2",
+        "type": "mc",
+        "promptDe": "Was zeigt das Süddeutschland-Beispiel?",
+        "options": [
+          "Einen Kompromiss nach mehreren Runden trotz kontroverser Meinungen",
+          "Einen sofortigen Beschluss ohne Diskussion",
+          "Einen Abbruch des Projekts"
+        ],
+        "answer": "Einen Kompromiss nach mehreren Runden trotz kontroverser Meinungen",
+        "explanationAr": "الدليل: «nach mehreren Runden zu einem Kompromiss» trotz Diskussion kontrovers."
+      },
+      {
+        "id": "t-b2-41-l3",
+        "type": "mc",
+        "promptDe": "Was sollten künftige Vorhaben als Beteiligung nutzen?",
+        "options": [
+          "Ein Qualitätsinstrument mit vorab vereinbarten Zielen und Nachprüfung",
+          "Eine Pflicht ohne Wirkung",
+          "Eine Abstimmung nur am Ende"
+        ],
+        "answer": "Ein Qualitätsinstrument mit vorab vereinbarten Zielen und Nachprüfung",
+        "explanationAr": "الدليل: «Beteiligung als Qualitätsinstrument nutzen: Verwaltung und Politik vereinbaren Ziele vorab»."
+      },
+      {
+        "id": "t-b2-41-l4",
+        "type": "truefalse",
+        "promptDe": "Ohne Beteiligung kann die Gemeinde Projekte schneller und ohne Risiko umsetzen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Ohne diese Beteiligung fehlt die Legitimation, und spätere Klagen können Projekte jahrelang verzögern»."
+      },
+      {
+        "id": "t-b2-41-l5",
+        "type": "fill",
+        "promptDe": "Entscheidend ist, dass Konflikte früh ___ werden, weil Transparenz Misstrauen abbaut.",
+        "answer": "sichtbar",
+        "explanationAr": "الدليل: «Entscheidend ist, dass Konflikte früh sichtbar werden, weil Transparenz Misstrauen abbaut»."
+      }
+    ]
+  },
+  "t-b2-42": {
+    "de": "Bezahlbares Wohnen ist in vielen deutschen Städten knapp, weil Nachfrage, Baukosten und energetische Sanierung gleichzeitig steigen, obwohl Einkommen nicht im gleichen Maß wachsen. Die Mietpreisbremse, 2015 eingeführt und später verschärft, deckelt Erhöhungen bei Neuvermietung in angespannten Wohnungsmärkten. Sie schützt Mieter vor Sprüngen, während Vermieter auf Erhalt und Modernisierung verweisen. Kritiker warnen, Investitionen blieben aus, obwohl die Bremse nur einen Teil des Markts betrifft. Empirisch zeigt sich ein gemischtes Bild: In angespannten Lagen bremst sie punktuell, löst aber keinen Neubau aus.\n\nDie Wohnungspolitik setzt daher auf zwei Hebel: Regulierung und Neubau. Beispiel Berlin verdeutlicht, dass trotz trockener Versammlungen ein Kompromiss mit Sozialwohnungen möglich ist, weil Beteiligung und Sozialbindung verknüpft wurden. Während Neubau als Lösung gilt, fehlen in wachsenden Städten Flächen, Handwerker und Genehmigungen, obwohl Bedarf besteht. Wer nur reguliert, riskiert Umgehung durch Indexmieten und möblierte Angebote, während reiner Neubau Jahre braucht. Auch Energieeffizienz erhöht Kosten, obwohl sie langfristig Nebenkosten senkt. Deshalb braucht es klare Regeln und verlässlichen Neubau zugleich.\n\nLangfristig braucht es beides: klare Regeln und verlässlichen Neubau. Nur wenn Kontrolle und Angebot zusammen gedacht werden, kann Wohnen bezahlbar bleiben, obwohl Druck durch Zuzug und knappe Flächen hoch bleibt. Zukünftige Regeln sollten kurzfristige Eingriffe und langfristige Strukturen unterscheiden, weil nur Neubau Entlastung schafft, obwohl Regulierung akute Härten lindert. Wer beide Hebel nutzt, gewinnt Vertrauen, weil sichtbar wird, dass Politik nicht nur verwaltet, sondern gestaltet.",
+    "ar": "السكن الميسور نادر في مدن ألمانية كثيرة لأن الطلب وتكاليف البناء والتحديث الطاقي ترتفع معاً بينما الدخل لا يواكب؛ كبح الإيجار المقدم 2015 والمشدد لاحقاً يحدّ زيادات الإيجار عند التأجير الجديد في أسواق مشدودة فيحمي المستأجر من القفزات بينما يشير المؤجرون إلى الصيانة والتحديث، ويحذر المنتقدون من ركود الاستثمار رغم أن الكبح يمسّ جزءاً فقط من السوق وتظهر الصورة مختلطة: يبطئ الكبح محلياً لكنه لا يخلق بناء جديداً. تعتمد سياسة السكن على رافعتين: التنظيم والبناء الجديد كما يبين مثال برلين حيث تحقق توافق مع سكن اجتماعي رغم الملل لأن المشاركة رُبطت بالالتزام الاجتماعي؛ وبينما يُعدّ البناء حلاً تنقص في المدن النامية الأراضي والحرفيون والتراخيص رغم الحاجة، ومن يكتفي بالتنظيم يواجه تحايلاً بإيجارات مؤشرة ومفروش، والبناء وحده يحتاج سنوات وكفاءة الطاقة ترفع الكلفة رغم خفضها المصاريف الثانوية مستقبلاً، لذا يلزم قواعد واضحة وبناء موثوق معاً، وتمييز تدخلات قصيرة وهياكل طويلة لأن البناء وحده يخفّف والتنظيم يخفّف المشقات الحادة وحده لا يكفي.",
+    "questions": [
+      {
+        "id": "t-b2-42-l1",
+        "type": "mc",
+        "promptDe": "Was bewirkt die Mietpreisbremse laut Text?",
+        "options": [
+          "Sie deckelt Erhöhungen bei Neuvermietung und bremst punktuell",
+          "Sie schafft sofort viele neue Wohnungen",
+          "Sie senkt alle Mieten überall gleich"
+        ],
+        "answer": "Sie deckelt Erhöhungen bei Neuvermietung und bremst punktuell",
+        "explanationAr": "الدليل: «deckelt Erhöhungen bei Neuvermietung in angespannten Wohnungsmärkten» و«bremst sie punktuell»."
+      },
+      {
+        "id": "t-b2-42-l2",
+        "type": "mc",
+        "promptDe": "Was zeigt das Berliner Beispiel?",
+        "options": [
+          "Einen Kompromiss mit Sozialwohnungen trotz trockener Versammlungen",
+          "Einen Baustopp für alle Projekte",
+          "Nur Gewerbeflächen ohne Wohnen"
+        ],
+        "answer": "Einen Kompromiss mit Sozialwohnungen trotz trockener Versammlungen",
+        "explanationAr": "الدليل: «trotz trockener Versammlungen ein Kompromiss mit Sozialwohnungen»."
+      },
+      {
+        "id": "t-b2-42-l3",
+        "type": "mc",
+        "promptDe": "Welche langfristige Doppelstrategie empfiehlt der Text?",
+        "options": [
+          "Klare Regeln und verlässlichen Neubau zusammen denken",
+          "Nur Regulierung ohne Neubau",
+          "Nur Neubau ohne Regeln"
+        ],
+        "answer": "Klare Regeln und verlässlichen Neubau zusammen denken",
+        "explanationAr": "الدليل: «Nur wenn Kontrolle und Angebot zusammen gedacht werden, kann Wohnen bezahlbar bleiben»."
+      },
+      {
+        "id": "t-b2-42-l4",
+        "type": "truefalse",
+        "promptDe": "Die Mietpreisbremse löst automatisch viel Neubau aus.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «löst aber keinen Neubau aus»."
+      },
+      {
+        "id": "t-b2-42-l5",
+        "type": "fill",
+        "promptDe": "Die Mietpreisbremse wurde 2015 eingeführt und später ___.",
+        "answer": "verschärft",
+        "explanationAr": "الدليل: «2015 eingeführt und später verschärft»."
+      }
+    ]
+  },
+  "t-b2-43": {
+    "de": "Künstliche Intelligenz hält in Büros, Fabriken und Kliniken Einzug, weil sie Routineaufgaben automatisiert und Daten schneller auswertet, obwohl Verantwortung und Haftung beim Menschen bleiben. In Deutschland muss die Einführung oft mitbestimmt werden, weil Systeme mit personenbezogenen Daten arbeiten und das Betriebsverfassungsgesetz Beteiligung vorsieht. Der Betriebsrat prüft, welche Daten verarbeitet, wie Entscheidungen erklärt und wie Beschäftigte qualifiziert werden. Ohne diese Mitbestimmung droht Misstrauen, und Innovation verläuft langsamer, obwohl Technik bereitsteht.\n\nEin Logistik-Fall zeigt den Nutzen: Trotz Skepsis entstand nach Workshops eine Betriebsvereinbarung, die Transparenz, Qualifizierung und Datenschutz regelt. Sie macht Konflikte früh sichtbar, weil Betroffene ihre Arbeitsabläufe beschreiben und Risiken benennen, obwohl Zeitdruck hoch ist. Mitbestimmung verbessert Qualität, weil Praktiker Fehlerquellen kennen, die Labor nicht sieht. Werden Beschäftigte nur informiert, entstehen Umgehungslösungen und teure Nachbesserungen. Auch kleine Betriebe profitieren, wenn sie einfache Regeln schriftlich festhalten, statt auf Zuruf zu entscheiden.\n\nZukünftige KI-Projekte sollten Mitbestimmung als Qualitätsinstrument verstehen: Ziele vorab gemeinsam definieren, Datenflüsse dokumentieren und Wirkung nach sechs Monaten offen prüfen. Vorteile und Nachteile müssen benannt werden, weil nur so Fairness und Tragfähigkeit entstehen, obwohl kurzfristige Effizienzgewinne locken. Wird Technik so eingeführt, stärkt sie nicht nur Produktivität, sondern auch Vertrauen und Beschäftigungssicherheit.\n\nAuch die Evaluation sollte vorher vereinbart werden: Welche Kennzahlen zeigen Erfolg, und welche Risiken werden beobachtet? Datenschutz ist dabei zentral, weil Protokolle Rückschlüsse auf Personen erlauben können, obwohl sie nur Prozesse verbessern sollen. Werden diese Fragen schriftlich festgehalten, lassen sich spätere Konflikte leichter lösen, weil Erwartungen transparent sind und Nachbesserungen gemeinsam beschlossen werden.",
+    "ar": "يدخل الذكاء الاصطناعي المكاتب والمصانع والعيادات لأنه يؤتمت المهام الروتينية ويحلل البيانات أسرع بينما تبقى المسؤولية عند الإنسان؛ في ألمانيا يجب أن يُشارَك في إدخاله لأنه يتعامل ببيانات شخصية وقانون تنظيم العمل يحتم مشاركة مجلس العمال الذي يفحص ما البيانات المعالجة وكيف تُفسَّر القرارات وكيف يُؤهَّل العاملون وبدونها يسود عدم الثقة ويتباطأ الابتكار رغم جاهزية التقنية. تُظهر حالة لوجستية الفائدة: رغم الشك نشأت بعد ورش اتفاقية تشغيل تنظم الشفافية والتأهيل وحماية البيانات فتجعل النزاعات مرئية مبكراً لأن المتأثرين يصفون سير عملهم ويحددون المخاطر رغم ضغط الوقت، وتحسّن المشاركة الجودة لأن الممارسين يعرفون مصادر الخطأ التي لا يراها المختبر؛ وإذا اكتُفي بإعلام العاملين تنشأ حلول ملتوية وتعديلات مكلفة. يجب فهم المشاركة كأداة جودة في مشاريع الذكاء المقبلة: تحديد أهداف مشتركة مسبقاً وتوثيق تدفقات البيانات وفحص الأثر بعد ستة أشهر بصراحة وذكر المزايا والمساوئ لأن العدالة والاستدامة لا تنشآن إلا بذلك رغم إغراء مكاسب الكفاءة قصيرة الأجل.",
+    "questions": [
+      {
+        "id": "t-b2-43-l1",
+        "type": "mc",
+        "promptDe": "Warum braucht KI-Einführung Mitbestimmung?",
+        "options": [
+          "Weil Systeme mit personenbezogenen Daten arbeiten und Gesetz Beteiligung vorsieht",
+          "Weil KI billig ist",
+          "Weil Chef allein entscheidet"
+        ],
+        "answer": "Weil Systeme mit personenbezogenen Daten arbeiten und Gesetz Beteiligung vorsieht",
+        "explanationAr": "الدليل: «weil Systeme mit personenbezogenen Daten arbeiten» و«Betriebsverfassungsgesetz Beteiligung vorsieht»."
+      },
+      {
+        "id": "t-b2-43-l2",
+        "type": "mc",
+        "promptDe": "Was entstand im Logistik-Fall trotz Skepsis?",
+        "options": [
+          "Eine Betriebsvereinbarung nach Workshops",
+          "Sofortiger Einsatz ohne Regeln",
+          "Abbruch des Projekts"
+        ],
+        "answer": "Eine Betriebsvereinbarung nach Workshops",
+        "explanationAr": "الدليل: «Trotz Skepsis entstand nach Workshops eine Betriebsvereinbarung»."
+      },
+      {
+        "id": "t-b2-43-l3",
+        "type": "mc",
+        "promptDe": "Wie sollte Mitbestimmung künftig verstanden werden?",
+        "options": [
+          "Als Qualitätsinstrument mit vorab gemeinsamen Zielen",
+          "Als reine Formalität",
+          "Als Verbot von KI"
+        ],
+        "answer": "Als Qualitätsinstrument mit vorab gemeinsamen Zielen",
+        "explanationAr": "الدليل: «sollten Mitbestimmung als Qualitätsinstrument verstehen: Ziele vorab gemeinsam definieren»."
+      },
+      {
+        "id": "t-b2-43-l4",
+        "type": "truefalse",
+        "promptDe": "Ohne Mitbestimmung verläuft Innovation immer schneller.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Ohne diese Mitbestimmung droht Misstrauen, und Innovation verläuft langsamer»."
+      },
+      {
+        "id": "t-b2-43-l5",
+        "type": "fill",
+        "promptDe": "Sie macht Konflikte früh ___, weil Betroffene ihre Arbeitsabläufe beschreiben.",
+        "answer": "sichtbar",
+        "explanationAr": "الدليل: «Sie macht Konflikte früh sichtbar, weil Betroffene ihre Arbeitsabläufe beschreiben»."
+      }
+    ]
+  },
+  "t-b2-44": {
+    "de": "In vielen deutschen Städten pendeln Berufstätige täglich mit Bus und Bahn, weil Wohnen in Zentren teuer und Parkraum knapp ist, obwohl das Auto flexibel wirkt. Seit Mai 2023 gibt es das Deutschlandticket für 49 Euro im Monat, später 58 Euro: Es gilt im gesamten Nah- und Regionalverkehr, während Fernzüge wie IC, ICE oder FlixTrain ausgeschlossen bleiben, obwohl viele Reisende das zunächst anders erwarteten. Während Verkehrsverbünde über Taktdichte und Pünktlichkeit streiten, fehlt auf dem Land oft der letzte Kilometer — Haltestellen sind weit, Anschlüsse selten, obwohl Bedarf besteht. Wer aus einem Nicht-EU-Land wie Tunesien zuzieht, darf mit seinem nationalen Führerschein nur sechs Monate nach der Anmeldung fahren, weil die Fahrerlaubnis-Verordnung diese Übergangsfrist klar regelt, obwohl langjährige Fahrpraxis vorliegt.\n\nDanach ist die Umschreibung Pflicht: Übersetzung des Führerscheins, Sehtest, Erste-Hilfe-Nachweis und Anmeldung in einer Fahrschule sind nötig, weil die Fahrerlaubnisbehörde die Gleichwertigkeit prüft, obwohl Berufserfahrung angerechnet werden kann. Viele unterschätzen Kosten und Wartezeiten, weil Fahrschulen ausgelastet sind und Behörden Termine knapp vergeben. Wer ohne Auto lebt, braucht eine verlässliche Verbindung zur nächsten Stadt, während ländliche Regionen oft nur stündlich bedient werden. Ein Semesterticket für Studierende variiert von Stadt zu Stadt, weil Hochschulen eigene Verträge mit Verkehrsverbünden haben, obwohl das Deutschlandticket als Alternative gilt. Auch Fahrrad und Carsharing ergänzen den Mix, ersetzen aber nicht jede Strecke.\n\nGemeinden sollten Verkehr und Angebote von Anfang an mitplanen: Welche Lösungen passen, hängt von den Bedingungen vor Ort ab. Wer ländliche Regionen stärken will, muss die Bedürfnisse der heutigen Bewohner und der neu Zugezogenen gleichermaßen berücksichtigen. Und solche Lösungen sollten regelmäßig überprüft werden, statt einmal beschlossen und dann vergessen zu werden. Pendeln bleibt ein Balanceakt zwischen Kosten, Zeit und Verfügbarkeit — wer früh plant und Fristen kennt, gewinnt Handlungsspielraum.",
+    "ar": "يتنقل عمال كثيرون يومياً بالحافلة والقطار في مدن ألمانية كثيرة لأن السكن في المراكز غالٍ والركن نادر رغم مرونة السيارة؛ منذ مايو 2023 توفر تذكرة ألمانيا بـ49 يورو شهرياً ثم 58 يورو وتسري في كل النقل المحلي والإقليمي بينما تُستثنى قطارات المسافات الطويلة كـIC وICE وFlixTrain رغم توقع مسافرين خلاف ذلك، وبينما تتجادل اتحادات النقل حول كثافة التقاطر والالتزام بالمواعيد يغيب في الريف كثيراً الكيلومتر الأخير — المواقف بعيدة والوصلات نادرة رغم الحاجة. من ينتقل من خارج الاتحاد الأوروبي كتونس لا يجوز له القيادة برخصته الوطنية إلا ستة أشهر من التسجيل لأن لائحة رخص القيادة تنظّم هذه المهلة الانتقالية صراحة رغم الخبرة الطويلة، وبعدها يجب تحويل الرخصة: ترجمة الرخصة وفحص بصر وشهادة إسعاف أولي وتسجيل في مدرسة قيادة ضرورية لأن سلطة الترخيص تفحص المعادلة رغم إمكانية احتساب خبرة مهنية، ويقلل كثيرون من شأن الكلفة وطول الانتظار لأن مدارس القيادة مشغولة والسلطات تعطي مواعيد شحيحة، ومن يعيش بلا سيارة يحتاج وصلة موثوقة لأقرب مدينة بينما المناطق الريفية تُخدم غالباً كل ساعة، وتختلف تذكرة الفصل للطلبة من مدينة لأخرى لأن الجامعات لديها عقود خاصة مع اتحادات النقل رغم اعتبار تذكرة ألمانيا بديلاً، والدراجة والمشاركة بالسيارة يكمّلان المزيج لكن لا يعوضان كل مسافة، وعلى البلديات تخطيط النقل والعروض منذ البداية بما يناسب ظروف كل مكان ومراعاة سكان اليوم والوافدين معاً ومراجعة الحلول دورياً.",
+    "questions": [
+      {
+        "id": "t-b2-44-l1",
+        "type": "mc",
+        "promptDe": "Wo gilt das Deutschlandticket?",
+        "options": [
+          "Im gesamten Nah- und Regionalverkehr, nicht in Fernzügen wie IC/ICE",
+          "Nur in Fernzügen wie ICE",
+          "Nur in Taxis"
+        ],
+        "answer": "Im gesamten Nah- und Regionalverkehr, nicht in Fernzügen wie IC/ICE",
+        "explanationAr": "الدليل: «Es gilt im gesamten Nah- und Regionalverkehr, während Fernzüge wie IC, ICE oder FlixTrain ausgeschlossen bleiben»."
+      },
+      {
+        "id": "t-b2-44-l2",
+        "type": "mc",
+        "promptDe": "Wie lange darf man mit Nicht-EU-Führerschein nach Anmeldung fahren?",
+        "options": [
+          "Nur sechs Monate nach der Anmeldung",
+          "Ein Jahr ohne Prüfung",
+          "Unbegrenzt mit Übersetzung"
+        ],
+        "answer": "Nur sechs Monate nach der Anmeldung",
+        "explanationAr": "الدليل: «nur sechs Monate nach der Anmeldung fahren, weil die Fahrerlaubnis-Verordnung diese Übergangsfrist klar regelt»."
+      },
+      {
+        "id": "t-b2-44-l3",
+        "type": "mc",
+        "promptDe": "Was braucht die Umschreibung der Fahrerlaubnis?",
+        "options": [
+          "Übersetzung, Sehtest, Erste-Hilfe-Nachweis und Fahrschule",
+          "Nur eine Kopie des Reisepasses",
+          "Nur eine neue Fotoserie"
+        ],
+        "answer": "Übersetzung, Sehtest, Erste-Hilfe-Nachweis und Fahrschule",
+        "explanationAr": "الدليل: «Übersetzung des Führerscheins, Sehtest, Erste-Hilfe-Nachweis und Anmeldung in einer Fahrschule sind nötig»."
+      },
+      {
+        "id": "t-b2-44-l4",
+        "type": "truefalse",
+        "promptDe": "Ein Semesterticket kostet überall in Deutschland gleich viel.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Ein Semesterticket für Studierende variiert von Stadt zu Stadt»."
+      },
+      {
+        "id": "t-b2-44-l5",
+        "type": "fill",
+        "promptDe": "Seit Mai 2023 gibt es das Deutschlandticket für 49 Euro im Monat, später ___ Euro.",
+        "answer": "58",
+        "explanationAr": "الدليل: «für 49 Euro im Monat, später 58 Euro»."
+      }
+    ]
+  },
+  "t-b2-45": {
+    "de": "Wer in Deutschland einen Notfall erlebt, muss die richtige Nummer wählen, weil jede Leitstelle andere Aufgaben hat, obwohl alle drei Nummern dreistellig sind. Die 112 ist für Rettungsdienst und Feuerwehr zuständig — bei Sturz mit Kopfblutung, Herzinfarkt oder Feuer, während die 110 ausschließlich die Polizei alarmiert. Obwohl viele beide verwechseln, entscheidet die Wahl über Minuten, weil Rettungswagen anders disponiert werden als Streifenwagen. Außerhalb der Sprechzeiten hilft die 116117, der ärztliche Bereitschaftsdienst, weil Hausärzte abends, nachts und am Wochenende nicht erreichbar sind, obwohl keine Lebensgefahr besteht.\n\nWer Fieber hat und keinen Termin bekommt, wird dort in eine Bereitschaftspraxis oder zum Hausbesuch vermittelt, während echte Notfälle weiterhin 112 brauchen. Während die Leitstelle 112 sofort Fahrzeuge schickt, klärt 116117 zunächst am Telefon, weil die Dringlichkeit gestuft werden muss, obwohl beide Dienste professionell arbeiten. Notapotheken sichern nachts und am Wochenende die Versorgung, weil reguläre Apotheken schließen, obwohl Medikamente dringend sein können. Apothekennotdienstpläne hängen in der Apotheke und online, doch viele kennen das System nicht. Während Städte mehrere Notapotheken haben, trägt auf dem Land oft eine Apotheke den Dienst für ein großes Gebiet. Auch hier gilt: Wer früh plant, gewinnt Zeit.\n\nNotapotheken sichern nachts die Versorgung, doch viele wissen nicht, wo sie sind, weil Information strukturierte Anleitung braucht, obwohl sie existiert. Ob sich ein Auto lohnt, hängt vom Wohnort ab, weil Parkgebühren, Kraftstoff und Versicherung variieren, obwohl alle Autos gleich aussehen. Gemeinden sollten deshalb Verkehr und Angebote von Anfang an mitplanen und Notfallwissen vermitteln: Jede Stufe — 112, 110, 116117 — hat ihre Stelle, und wer sie kennt, spart Minuten. Regelmäßige Überprüfung und einfache Merkhilfen helfen, weil im Notfall keine Zeit zum Suchen bleibt.",
+    "ar": "على من يواجه طارئاً في ألمانيا أن يختار الرقم الصحيح لأن كل مركز تحكم له مهام مختلفة رغم أن الأرقام الثلاثة من ثلاث خانات؛ 112 للإسعاف والإطفاء — عند سقوط بنزيف رأس أو احتشاء قلبي أو حريق — بينما 110 للشرطة فقط ورغم خلط كثيرين بينهما يقرر الاختيار دقائق لأن سيارات الإسعاف تُرسل بشكل مختلف عن سيارات الدوريات، وخارج أوقات العيادات تساعد 116117 خدمة الاستعداد الطبي لأن أطباء العائلة غير متاحين مساء وليلاً وعطلة نهاية الأسبوع رغم عدم وجود خطر على الحياة. من يعاني حمى بلا موعد يُحوَّل هناك إلى عيادة استعداد أو زيارة منزلية بينما تحتاج الطوارئ الحقيقية 112 دوماً، وبينما ترسل 112 مركبات فوراً تستوضح 116117 أولاً عبر الهاتف لأن خطورة الحالة يجب تدرجها رغم احترافية الخدمتين، وتؤمن صيدليات الطوارئ الخدمة ليلاً وعطلة نهاية الأسبوع لأن الصيدليات العادية تُغلق رغم حاجة الدواء الماسة، وتُعلَّق جداول مناوبة الصيدليات في الصيدلية وعلى الإنترنت لكن كثيرين لا يعرفون النظام، وفي المدن صيدليات طوارئ عدة بينما في الريف غالباً صيدلية واحدة تغطي منطقة واسعة، وصيدليات الطوارئ تؤمن الليل لكن كثيرين لا يعرفون أين هي لأن المعلومة تحتاج توجيهاً منظماً رغم وجودها، وجدوى السيارة ترتبط بمكان السكن لأن رسوم الركن والوقود والتأمين تتغير رغم تشابه السيارات ظاهراً، لذا على البلديات تخطيط النقل والعروض منذ البداية وتعليم معرفة الطوارئ: لكل مستوى — 112 و110 و116117 — موضعه ومن يعرفه يوفر دقائق وتساعد المراجعة الدورية ووسائل التذكر البسيطة لأنه في الطارئ لا وقت للبحث.",
+    "questions": [
+      {
+        "id": "t-b2-45-l1",
+        "type": "mc",
+        "promptDe": "Wofür ist die 112 zuständig?",
+        "options": [
+          "Für Rettungsdienst und Feuerwehr bei Sturz, Herzinfarkt oder Feuer",
+          "Nur für die Polizei",
+          "Nur für Hausärzte nachts"
+        ],
+        "answer": "Für Rettungsdienst und Feuerwehr bei Sturz, Herzinfarkt oder Feuer",
+        "explanationAr": "الدليل: «Die 112 ist für Rettungsdienst und Feuerwehr zuständig — bei Sturz mit Kopfblutung, Herzinfarkt oder Feuer»."
+      },
+      {
+        "id": "t-b2-45-l2",
+        "type": "mc",
+        "promptDe": "Wofür ist die 116117 zuständig?",
+        "options": [
+          "Für den ärztlichen Bereitschaftsdienst außerhalb der Sprechzeiten",
+          "Für die Feuerwehr bei Feuer",
+          "Für die Polizei bei Einbruch"
+        ],
+        "answer": "Für den ärztlichen Bereitschaftsdienst außerhalb der Sprechzeiten",
+        "explanationAr": "الدليل: «Außerhalb der Sprechzeiten hilft die 116117, der ärztliche Bereitschaftsdienst»."
+      },
+      {
+        "id": "t-b2-45-l3",
+        "type": "mc",
+        "promptDe": "Warum entscheidet die Wahl zwischen 112 und 110 über Minuten?",
+        "options": [
+          "Weil Rettungswagen anders disponiert werden als Streifenwagen",
+          "Weil beide Nummern zur gleichen Leitstelle gehen",
+          "Weil die Nummern gleich lang sind"
+        ],
+        "answer": "Weil Rettungswagen anders disponiert werden als Streifenwagen",
+        "explanationAr": "الدليل: «weil Rettungswagen anders disponiert werden als Streifenwagen»."
+      },
+      {
+        "id": "t-b2-45-l4",
+        "type": "truefalse",
+        "promptDe": "Notapotheken haben nachts geschlossen und es gibt keinen Dienst.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "الدليل: «Notapotheken sichern nachts und am Wochenende die Versorgung»."
+      },
+      {
+        "id": "t-b2-45-l5",
+        "type": "fill",
+        "promptDe": "Die 110 alarmiert ausschließlich die ___.",
+        "answer": "Polizei",
+        "explanationAr": "الدليل: «während die 110 ausschließlich die Polizei alarmiert»."
+      }
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { useProgress } from "@/lib/store";
 import { buildDay } from "@/lib/plan";
@@ -105,11 +106,20 @@ export default function Ueben() {
   const [offen, setOffen] = useState<string | null>(null);
   const [suchtext, setSuchtext] = useState("");
   const [geladen, setGeladen] = useState(false);
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     setAbend(localStorage.getItem("weg-abend") === "1");
     setGeladen(true);
   }, []);
+  // deep-link from TodayB2Praxis: ?filter=arbeit etc. → open Lebenswelt directly
+  useEffect(() => {
+    if (!geladen) return;
+    const f = searchParams?.get("filter");
+    if (f && ["wohnen","arbeit","behoerde","gesundheit","familie","mobilitaet","alltag","alle"].includes(f)) {
+      setOffen("leben");
+    }
+  }, [geladen, searchParams]);
 
   const day = progress.plan.day;
   const plan = useMemo(() => buildDay(day, progress), [day, progress]);

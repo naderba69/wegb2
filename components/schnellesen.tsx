@@ -49,7 +49,16 @@ export function SchnellLesen() {
             <span className="chip rtl-num" data-testid="schnellesen-zeit">⏱ {rest} ث</span>
             <span className="de" dir="ltr" style={{ fontWeight: 700 }}>{runde.titelDe}</span>
           </div>
-          <article className="de" dir="ltr" style={{ maxHeight: "16rem", overflowY: "auto", lineHeight: 1.9, background: "var(--color-paper)", padding: "0.8rem", borderRadius: "0.6rem" }}>{runde.textDe.split(/(weil|obwohl|Während|Weil|Obwohl)/g).map((part,i)=> /^(weil|obwohl|Während|Weil|Obwohl)$/.test(part) ? <mark key={i} className={`b2-konnektor ${/weil/i.test(part)?"b2-konnektor--weil":"b2-konnektor--obwohl"}`}>{part}</mark> : part)}</article>
+          <article className="de" dir="ltr" style={{ maxHeight: "16rem", overflowY: "auto", lineHeight: 1.9, background: "var(--color-paper)", padding: "0.8rem", borderRadius: "0.6rem" }}>{(() => {
+            const re = /(weil|obwohl|während|damit|indem|falls|sodass)/gi;
+            const clsFor = (w: string) => { const l=w.toLowerCase(); return l==="weil"?"b2-konnektor--weil":l==="obwohl"?"b2-konnektor--obwohl":l==="während"?"b2-konnektor--waehrend":l==="damit"?"b2-konnektor--damit":l==="indem"?"b2-konnektor--indem":l==="falls"?"b2-konnektor--falls":l==="sodass"?"b2-konnektor--sodass":""; };
+            const parts = runde.textDe.split(re);
+            return parts.map((part,i)=> {
+              const low = part.toLowerCase();
+              const isKon = ["weil","obwohl","während","damit","indem","falls","sodass"].includes(low);
+              return isKon ? <mark key={i} className={`b2-konnektor ${clsFor(part)}`}>{part}</mark> : <span key={i}>{part}</span>;
+            });
+          })()}</article>
           {fragen.map((f) => (
             <div key={f.id} style={{ display: "grid", gap: "0.3rem" }}>
               <div style={{ fontWeight: 700, fontSize: "0.9rem" }}>{f.frageAr}</div>

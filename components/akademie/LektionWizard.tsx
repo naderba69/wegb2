@@ -266,6 +266,8 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
     });
   }, []);
   const onApplicationSaved = useCallback((saved: boolean) => setAnwendungGespeichert(saved), []);
+  const [layeredRevealed, setLayeredRevealed] = useState<Record<number, number>>({});
+  const [pitfallRevealed, setPitfallRevealed] = useState<Record<number, boolean>>({});
 
   if (!topic) {
     return (
@@ -299,6 +301,19 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
     return "";
   };
   const hasCase = (headers: string[]) => headers.some((h) => /nominativ|akkusativ|dativ|genitiv/i.test(h));
+  // 🖼️ Mayer Dual-Coding + Paivio: Text + Bildanker in einem (Sprint 13)
+  const dualCodingInfo = (() => {
+    const id = topicId.toLowerCase();
+    if (id.includes("wechsel") || id.includes("dativ-akk") || id.includes("dativ/akk")) return { icon: "📍➡️", label: "WO? Dativ (Ort) vs WOHIN? Akkusativ (Richtung) — عربي", de: "auf dem Tisch (Dativ, Ort) → auf den Tisch (Akk, Bewegung) — عربي" };
+    if (id.includes("passiv")) return { icon: "🔄", label: "Aktiv → Passiv: Handelnder tritt zurück — عربي", de: "Der Arzt operiert → Es wird operiert (Passiv) — عربي" };
+    if (id.includes("konzessiv") || id.includes("obwohl")) return { icon: "⚖️", label: "Kontrast: obwohl X, trotzdem Y — Konzession — عربي", de: "obwohl krank, kam er zur Arbeit — عربي" };
+    if (id.includes("konjunktiv")) return { icon: "💭", label: "Wunsch / Unsicherheit → würde/könnte/sei — عربي", de: "Er sagt, er sei krank (Konjunktiv I) — عربي" };
+    if (id.includes("relativ")) return { icon: "🔗", label: "Bezug: der/die/das → Nebensatz verbindet — عربي", de: "die Frau, die dort wohnt, … — عربي" };
+    if (id.includes("nominal")) return { icon: "📦", label: "Verb → Nomen: Komprimierung (Nominalstil) — عربي", de: "entscheiden → die Entscheidung treffen — عربي" };
+    if (id.includes("perfekt") || id.includes("praeteritum")) return { icon: "⏳", label: "Zeitachse: Vergangenheit markieren — عربي", de: "gestern habe ich … / ich war … — عربي" };
+    if (id.includes("funktionsverb")) return { icon: "🧩", label: "Funktionsverb: leichtes Verb + starkes Nomen — عربي", de: "eine Entscheidung treffen (statt entscheiden) — عربي" };
+    return { icon: "🧠", label: "Muster: Regel → Beispiel → Anwendung — عربي", de: topic.titleDe };
+  })();
 
   return (
     <section className={`card ${levelStage}`} data-testid="lektion-wizard" data-level={topic.level} style={{ padding: "1.1rem 1.2rem", display: "grid", gap: "0.85rem" }}>
@@ -358,7 +373,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
         </div>
       ) : null; })()}
       {/* Mayer: Signaling — هدف واضح قبل المحتوى */}
-      <div data-testid="wizard-mayer-goal" className="lesson-ziel" style={{ background: "linear-gradient(135deg, var(--color-paper2), var(--color-paper))", borderInlineStart: "4px solid var(--color-a1)", padding: "0.5rem 0.7rem", borderRadius: "0.5rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
+      <div data-testid="wizard-mayer-goal" className="lesson-ziel wizard-ziel-bg" style={{ borderInlineStart: "4px solid var(--color-a1)", padding: "0.5rem 0.7rem", borderRadius: "0.5rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
         <span style={{ fontSize: "1.1rem" }}>🎯</span>
         <div><strong style={{ fontSize: "0.82rem" }}>{topic.ziel}</strong><div style={{ fontSize: "0.75rem", color: "var(--color-ink2)" }}>Conti: Prediction أولاً — خمّن قبل الشرح (70% نتذكر أكثر)</div></div>
       </div>
@@ -464,6 +479,15 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                 </div>
               );
             })}
+            {/* 🖼️ Dual-Coding Bildanker — Mayer: Verbal + Visual in einem (Sprint 13) */}
+            <div data-testid="wizard-dual-coding" className="card wizard-dual-bg" style={{ padding: "0.55rem 0.7rem", borderInlineStart: "4px solid #f59e0b", display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+              <span style={{ fontSize: "1.25rem" }}>{dualCodingInfo.icon}</span>
+              <div style={{ flex: 1, minWidth: "180px" }}>
+                <div style={{ fontWeight: 900, fontSize: "0.82rem" }}>🖼️ Bild-Anker: {dualCodingInfo.label}</div>
+                <div dir="ltr" style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}><De style={{ fontWeight: 700 }}>{dualCodingInfo.de}</De></div>
+              </div>
+              <span style={{ fontSize: "0.7rem", background: "rgba(245 158 11 / 0.15)", padding: "0.15rem 0.45rem", borderRadius: "999px", fontWeight: 800, color: "#B45309" }}>Mayer Dual-Coding</span>
+            </div>
             {(topic.tables ?? []).length > 0 && hasCase((topic.tables ?? []).flatMap((t) => t.headers)) && (
               <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", fontSize: "0.72rem", alignItems: "center" }}>
                 <span style={{ fontWeight: 800, color: "var(--ui-muted)" }}>🎨 تلوين الحالات:</span>
@@ -473,10 +497,13 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                 <span className="case-chip case-chip-gen">Genitiv</span>
               </div>
             )}
-            {(topic.tables ?? []).map((t, ti) => (
-              <div key={`t-${ti}`} style={{ display: "grid", gap: "0.3rem" }}>
+            {(topic.tables ?? []).map((t, ti) => {
+              const revealed = layeredRevealed[ti] ?? 1;
+              const rest = t.rows.length - revealed;
+              return (
+              <div key={`t-${ti}`} data-testid={`wizard-layered-${ti}`} style={{ display: "grid", gap: "0.3rem" }}>
                 {t.captionAr && <strong style={{ fontSize: "0.85rem" }}>{t.captionAr}</strong>}
-                <div style={{ fontSize:"0.74rem", color:"var(--color-ink2)" }}>Mayer: Layered-Reveal — صف واحد في كل مرة (اضغط لكشف المسار)</div>
+                <div style={{ fontSize:"0.74rem", color:"var(--color-ink2)" }}>Mayer Segmenting + Conti Retrieval — صف واحد في كل مرة (اكشف المسار خطوة بخطوة)</div>
                 <div style={{ overflowX: "auto" }}>
                   <table className="lesson-table lesson-table--signaled lesson-table--layered" dir="ltr">
                     <thead><tr>{t.headers.map((h) => {
@@ -484,14 +511,20 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
                       return <th key={h} className={c ? "case-hl" : undefined}><span className={c || undefined} style={c ? undefined : {}}>{h}</span></th>;
                     })}</tr></thead>
                     <tbody>
-                      {t.rows.map((row, ri) => (
+                      {t.rows.slice(0, revealed).map((row, ri) => (
                         <tr key={ri}>{row.map((c, ci) => <td key={ci}>{ci===0 ? <><De style={{fontWeight:800}}>{String(c).split("→")[0]}</De>{String(c).includes("→") && <><span style={{color:"var(--color-a1)", fontWeight:900}}> → </span><De style={{color:"var(--color-a1)"}}>{String(c).split("→")[1]}</De></>}</> : c}</td>)}</tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
+                {rest > 0 ? (
+                  <button type="button" className="btn btn-ghost" data-testid={`wizard-layered-reveal-${ti}`} onClick={() => setLayeredRevealed((m) => ({ ...m, [ti]: Math.min(t.rows.length, (m[ti] ?? 1) + 1) }))} style={{ justifySelf:"start", minHeight:"36px", fontSize:"0.82rem" }}>▶ اكشف الصف التالي — بقي {rest}</button>
+                ) : (
+                  <span data-testid={`wizard-layered-done-${ti}`} style={{ fontSize:"0.78rem", color:"var(--color-a1)", fontWeight:700 }}>✓ كل الصفوف مكشوفة — راجع النمط كاملاً</span>
+                )}
               </div>
-            ))}
+              );
+            })}
             <button type="button" className="btn btn-ghost" data-testid="wizard-regel-gelesen" onClick={() => tuer(1)}>
               راجعتُ الشرح — أرني النموذج المحلول
             </button>
@@ -576,23 +609,42 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
               <div style={{ fontSize: "0.75rem", color: "var(--ui-muted)" }}>💡 خريطة مفاهيم سريعة — احفظ النمط، لا النص</div>
             </div>
             {topic.pitfalls && topic.pitfalls.length > 0 && (
-              <div style={{ display: "grid", gap: "0.5rem" }}>
+              <div style={{ display: "grid", gap: "0.5rem" }} data-testid="wizard-contrast">
                 <div style={{ fontWeight: 800, color: "var(--color-die)", fontSize: "0.9rem" }}>⚠️ جدار الفخاخ — Contrast (خطأ vs صواب)</div>
-                <div style={{ fontSize:"0.75rem", color:"var(--color-ink2)" }}>Conti: Contrast — قارن الخطأ والصواب جنباً إلى جنب (تثبيت أقوى 40%)</div>
-                {topic.pitfalls.map((p) => {
+                <div style={{ fontSize:"0.75rem", color:"var(--color-ink2)" }}>Conti Contrast + Retrieval: اكتشف الخطأ أولاً ثم اكشف الصواب — التفاعل يثبّت 40% أكثر من القراءة</div>
+                {topic.pitfalls.map((p, idx) => {
                   const hasContrast = p.de.includes("→") || p.de.includes("statt") || p.de.includes("vs");
+                  const revealed = !!pitfallRevealed[idx];
+                  const wrong = p.de.split("→")[0].trim();
+                  const correct = hasContrast ? p.de.split("→")[1]?.trim() : p.ar.split("—")[0]?.trim() || "راجع القاعدة أعلاه";
                   return (
-                  <div key={p.de} className="lesson-pitfall" style={{ display:"grid", gridTemplateColumns:"1fr auto 1fr", gap:"0.5rem", alignItems:"center" }}>
-                    <div style={{ background:"rgba(220,38,38,0.07)", padding:"0.4rem 0.5rem", borderRadius:"0.4rem", borderInlineStart:"3px solid var(--color-die)" }}>
-                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--color-die)" }}>✗ خطأ شائع</div>
-                      <De className="lesson-pitfall-wrong" style={{ fontSize:"0.85rem" }}>{p.de.split("→")[0].trim()}</De>
+                  <div key={p.de} data-testid={`wizard-pitfall-${idx}`} className="lesson-pitfall card" style={{ padding:"0.55rem 0.65rem", background:"var(--color-paper)", display:"grid", gap:"0.4rem" }}>
+                    <div style={{ display:"grid", gridTemplateColumns:"1fr auto", gap:"0.5rem", alignItems:"center" }}>
+                      <div style={{ display:"flex", gap:"0.4rem", alignItems:"center", flexWrap:"wrap" }}>
+                        <span style={{ fontSize:"0.72rem", fontWeight:800, background:"rgba(220,38,38,0.1)", color:"var(--color-die)", padding:"0.15rem 0.45rem", borderRadius:"999px" }}>✗ خطأ شائع</span>
+                        <De style={{ fontWeight:700, fontSize:"0.9rem" }}>{wrong}</De>
+                      </div>
+                      <span className="chip" style={{ fontSize:"0.68rem", background:"var(--color-paper2)" }}>{revealed ? "مكشوف" : "مخفي"}</span>
                     </div>
-                    <span style={{ fontWeight:900, color:"var(--color-a1)", fontSize:"1.1rem" }}>→</span>
-                    <div style={{ background:"rgba(22,163,74,0.07)", padding:"0.4rem 0.5rem", borderRadius:"0.4rem", borderInlineStart:"3px solid var(--color-a1)" }}>
-                      <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "var(--color-a1)" }}>✓ الصواب</div>
-                      <div style={{ fontSize:"0.85rem", fontWeight:700 }}>{hasContrast ? p.de.split("→")[1]?.trim() : p.ar.split("—")[0]?.trim() || "راجع القاعدة أعلاه"}</div>
-                    </div>
-                    <div style={{ gridColumn:"1 / -1", fontSize: "0.84rem", color: "var(--color-ink2)", lineHeight: 1.7, background:"var(--color-paper2)", padding:"0.35rem 0.5rem", borderRadius:"0.3rem" }}>💡 لماذا؟ {p.ar}</div>
+                    {!revealed ? (
+                      <button type="button" className="btn btn-ghost" data-testid={`wizard-pitfall-reveal-${idx}`} onClick={() => setPitfallRevealed((m) => ({ ...m, [idx]: true }))} style={{ justifySelf:"start", minHeight:"36px", fontSize:"0.82rem", borderStyle:"dashed" }}>🔍 أين الخطأ؟ اكشف الصواب →</button>
+                    ) : (
+                      <div style={{ display:"grid", gridTemplateColumns:"1fr auto 1fr", gap:"0.5rem", alignItems:"center", animation:"fadein 0.25s" }}>
+                        <div style={{ background:"rgba(220,38,38,0.07)", padding:"0.4rem 0.5rem", borderRadius:"0.4rem", borderInlineStart:"3px solid var(--color-die)", opacity:0.85 }}>
+                          <div style={{ fontSize:"0.68rem", fontWeight:800, color:"var(--color-die)" }}>✗ الخطأ</div>
+                          <De style={{ fontSize:"0.82rem", textDecoration:"line-through", opacity:0.8 }}>{wrong}</De>
+                        </div>
+                        <span style={{ fontWeight:900, color:"var(--color-a1)", fontSize:"1.1rem" }}>→</span>
+                        <div style={{ background:"rgba(22,163,74,0.09)", padding:"0.4rem 0.5rem", borderRadius:"0.4rem", borderInlineStart:"3px solid var(--color-a1)" }}>
+                          <div style={{ fontSize:"0.68rem", fontWeight:800, color:"var(--color-a1)" }}>✓ الصواب</div>
+                          <div style={{ fontSize:"0.85rem", fontWeight:800 }}>{correct}</div>
+                        </div>
+                        <div style={{ gridColumn:"1 / -1", fontSize:"0.83rem", color:"var(--color-ink2)", lineHeight:1.7, background:"var(--color-paper2)", padding:"0.4rem 0.55rem", borderRadius:"0.4rem" }}>
+                          <strong>💡 لماذا؟</strong> {p.ar}
+                        </div>
+                        <button type="button" className="btn btn-ghost" data-testid={`wizard-pitfall-hide-${idx}`} onClick={() => setPitfallRevealed((m) => ({ ...m, [idx]: false }))} style={{ gridColumn:"1 / -1", justifySelf:"start", minHeight:"32px", fontSize:"0.75rem" }}>إخفاء ←</button>
+                      </div>
+                    )}
                   </div>
                   );
                 })}

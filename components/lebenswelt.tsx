@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Landeskunde } from "./landeskunde";
 import { lebensweltThemen, umgangBank, BERUFSSTART_SCHRITTE } from "@/lib/lebenswelt";
 import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { speakAny } from "@/lib/speech";
 import { De } from "@/components/De";
 
@@ -13,9 +14,28 @@ import { De } from "@/components/De";
  */
 const BS_KEY = "weg-berufsstart";
 
+// BAMF BSK B2 — 6 Handlungsfelder → filter chips für Lebenswelt
+const LEBENSWELT_FILTERS: { id: string; label: string; labelDe: string; ids: string[] }[] = [
+  { id: "alle", label: "الكل", labelDe: "Alle 12", ids: [] },
+  { id: "wohnen", label: "🏠 السكن", labelDe: "Wohnen", ids: ["lw-01", "lw-08"] },
+  { id: "behoerde", label: "🏛️ الأوراق", labelDe: "Behörde", ids: ["lw-02", "lw-03"] },
+  { id: "gesundheit", label: "🏥 الصحة", labelDe: "Gesundheit", ids: ["lw-04", "lw-11"] },
+  { id: "arbeit", label: "💼 العمل", labelDe: "Arbeit", ids: ["lw-05", "lw-06", "lw-07"] },
+  { id: "familie", label: "👨‍👩‍👧 الأسرة", labelDe: "Familie", ids: ["lw-09"] },
+  { id: "mobilitaet", label: "🚃 المواصلات", labelDe: "Mobilität", ids: ["lw-10"] },
+  { id: "alltag", label: "📅 العطل & الهدوء", labelDe: "Alltag", ids: ["lw-12"] },
+];
+
 export function LebensweltStation() {
+  const params = useSearchParams();
+  const urlFilter = (params?.get("filter") ?? "alle") as string;
   const [umgangOffen, setUmgangOffen] = useState(false);
+  const [filterId, setFilterId] = useState<string>(urlFilter);
   const [bsStand, setBsStand] = useState<Record<string, boolean>>({});
+  // deep-link: ?filter=arbeit etc. from TodayB2Praxis
+  useEffect(() => {
+    if (urlFilter && LEBENSWELT_FILTERS.some((f) => f.id === urlFilter)) setFilterId(urlFilter);
+  }, [urlFilter]);
   useEffect(() => {
     try {
       const roh = localStorage.getItem(BS_KEY);
@@ -30,6 +50,12 @@ export function LebensweltStation() {
     });
   };
   const bsFertig = BERUFSSTART_SCHRITTE.filter((s) => bsStand[s.id]).length;
+  const gefiltert = filterId === "alle"
+    ? lebensweltThemen
+    : lebensweltThemen.filter((t) => {
+        const f = LEBENSWELT_FILTERS.find((x) => x.id === filterId);
+        return f ? f.ids.includes(t.id) : true;
+      });
   return (
     <div data-testid="lebenswelt-station" style={{ display: "grid", gap: "1rem" }}>
       <p style={{ fontSize: "0.86rem", color: "var(--color-ink2)", margin: 0 }}>
@@ -60,8 +86,22 @@ export function LebensweltStation() {
         </div>
       </section>
 
+      {/* BAMF BSK B2 Filter — Handlungsfelder */}
+      <div data-testid="lebenswelt-filter" style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", alignItems: "center", padding: "0.4rem 0", borderBottom: "1px solid var(--color-line)" }}>
+        <span style={{ fontSize: "0.78rem", fontWeight: 800, color: "var(--color-ink2)" }}>🔎 فلترة BAMF:</span>
+        {LEBENSWELT_FILTERS.map((f) => (
+          <button key={f.id} type="button" data-testid={`lebenswelt-filter-${f.id}`}
+            onClick={() => setFilterId(f.id)}
+            className="chip"
+            style={{ cursor: "pointer", minHeight: "36px", fontSize: "0.78rem", background: filterId === f.id ? "var(--color-a1)" : undefined, color: filterId === f.id ? "#fff" : undefined, fontWeight: filterId === f.id ? 800 : 600 }}>
+            {f.label} · <span dir="ltr" style={{ opacity: 0.9 }}>{f.labelDe}</span> {f.id !== "alle" && `(${f.ids.length})`}
+          </button>
+        ))}
+        <span style={{ fontSize: "0.74rem", color: "var(--ui-muted)", marginInlineStart: "0.3rem" }}>{gefiltert.length} بطاقة</span>
+      </div>
+
       <section style={{ display: "grid", gap: "0.55rem" }}>
-        {lebensweltThemen.map((t) => (
+        {gefiltert.map((t) => (
           <details key={t.id} className="card" style={{ padding: "0.7rem 0.9rem" }} data-testid={`lebenswelt-${t.id}`}>
             <summary style={{ cursor: "pointer", fontWeight: 800, minHeight: "44px", display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
               <De>{t.titel}</De>
@@ -79,6 +119,7 @@ export function LebensweltStation() {
             </div>
           </details>
         ))}
+        {gefiltert.length === 0 && <div style={{ fontSize: "0.85rem", color: "var(--color-ink2)", padding: "0.6rem" }}>لا بطاقات في هذا الفلتر — جرّب «الكل».</div>}
       </section>
 
       <section>

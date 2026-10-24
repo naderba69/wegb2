@@ -25,7 +25,7 @@ export const LANG_DATEIEN: string[] = [
   "lang/a1-01-10.json", "lang/a1-11-20.json", "lang/a1-21-25.json", "lang/a1-26-30.json", "lang/a1-31-35.json",
   "lang/a2-01-10.json", "lang/a2-11-20.json", "lang/a2-21-26.json", "lang/a2-27-32.json",
   "lang/b1-01-10.json", "lang/b1-11-20.json", "lang/b1-21-25.json", "lang/b1-26-30.json", "lang/b1-31-35.json",
-  "lang/b2-01-10.json", "lang/b2-11-20.json", "lang/b2-21-25.json", "lang/b2-26-30.json", "lang/b2-31-35.json", "lang/b2-36-40.json",
+  "lang/b2-01-10.json", "lang/b2-11-20.json", "lang/b2-21-25.json", "lang/b2-26-30.json", "lang/b2-31-35.json", "lang/b2-36-40.json", "lang/b2-41-45.json",
 ];
 
 const roh: Record<string, unknown> = {};

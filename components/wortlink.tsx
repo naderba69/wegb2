@@ -45,6 +45,7 @@ export function WortKarte({ karte, onClose }: { karte: VocabCard; onClose: () =>
           <button type="button" className="chip" onClick={onClose} aria-label="إغلاق">✕</button>
         </span>
       </span>
+      {karte.formen && <span data-testid="wortkarte-formen" style={{ display: "block", fontSize: "0.82rem", color: "var(--color-ink2)", margin: "0.2rem 0" }}>🔄 <span dir="ltr" lang="de">{karte.formen}</span> <span style={{ fontSize: "0.72rem" }}>(Präsens 3., Präteritum, Perfekt)</span></span>}
       {karte.exampleDe && <span style={{ display: "block" }}><span lang="de" dir="ltr">{karte.exampleDe}</span><span style={{ display: "block", color: "var(--color-ink2)" }}>{karte.exampleAr}</span></span>}
       {(karte.ant?.length ?? 0) > 0 && (
         <span data-testid="wortkarte-synant" style={{ display: "block" }}>

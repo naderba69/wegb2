@@ -39,41 +39,41 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1140)
+## الأفكار التحسينية (عينة 30/654)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:a1-start/v007:kommen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a1-start/v008:wohnen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a1-start/v011:lernen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a1-start/v012:arbeiten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a1-start/v149:bezahlen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a1-familie-alltag/r311a1-011:heiraten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a2-komplett/v058:reservieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a2-komplett/v061:sparen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a2-komplett/v069:putzen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a2-b1-bruecke/v075:glauben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a2-b1-bruecke/v082:gratulieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a2-b1-bruecke/v087:beschreiben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a2-b1-bruecke/v166:erwarten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:b1-gesellschaft/v099:begründen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:b1-gesellschaft/v115:überzeugen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:b1-gesellschaft/v119:ausbilden` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:b2-medien-schule/v125:recherchieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:b2-medien-schule/v135:bewerten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:b2-medien-schule/v139:voraussetzen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:b2-medien-schule/v179:greifen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v188:sich streiten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v189:sich versöhnen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v193:sich trennen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v198:sich verabreden` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v201:kommunizieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v204:sich kümmern um` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v208:sich unterhalten über` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v209:betrügen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v212:enttäuschen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v214:sich freuen auf` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:a2-kultur-digital/r312a2-194:fotografieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:a2-kultur-digital/r312a2-195:joggen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:a2-kultur-digital/r312a2-196:reiten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-staat-argument/vg-argumen-008:einräumen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-staat-argument/vg-argumen-020:einschätzen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-staat-argument/vg-argumen-023:abwägen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-staat-argument/vg-staatx-701:sachlich bleiben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-arbeit--005:sich weiterentwickeln` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-arbeit--011:gründen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-arbeit--013:scheitern` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-arbeit--021:verhandeln` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-arbeit--029:belastbar bleiben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-psyche--012:sich wohlfühlen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-psyche--016:bereuen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-psyche--017:verzeihen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-psyche--020:vorwerfen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-psyche--021:beleidigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-psyche--022:sich durchsetzen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-psyche--024:vermitteln` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-karriere-psyche/vg-psyche--026:einlenken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-projekt-rede/vh-projekt-001:planen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-projekt-rede/vh-projekt-007:umsetzen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-projekt-rede/vh-projekt-016:loben für` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-projekt-rede/vh-projekt-017:verbessern` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-projekt-rede/vh-projekt-023:sich abstimmen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-gesundheit-technik/vh-gesundh-014:sich etwas vornehmen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-gesundheit-technik/vh-technik-014:verbreiten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-gesundheit-technik/vh-technik-021:betragen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-gesundheit-technik/vh-technik-022:zunehmen an` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:b1-gesundheit-technik/vh-technik-023:abnehmen an` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1110 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 624 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

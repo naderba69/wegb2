@@ -2284,5 +2284,77 @@
       "خاتمة بسؤال مفتوح"
     ],
     "zielWort": 150
+  },
+  {
+    "id": "w-b2-46",
+    "level": "B2",
+    "format": "frei",
+    "titleDe": "Forumsbeitrag: Mietpreisbremse — reicht sie?",
+    "titleAr": "مساهمة منتدى: كبح الإيجار — هل يكفي؟",
+    "taskDe": "Schreibe einen Forumsbeitrag (ca. 160 Wörter) zur Mietpreisbremse: 2 Argumente dafür/dagegen + 1 indirekte Rede + Fazit mit weil/obwohl. Verlinke t-b2-42.",
+    "taskAr": "اكتب مساهمة منتدى (160 كلمة) حول كبح الإيجار: حجتان مؤيد/معارض + منقول واحد + خلاصة بـ weil/obwohl. اربط بنص t-b2-42.",
+    "criteria": [
+      "Einleitung mit These",
+      "2 Argumente + Beispiel Wohnen",
+      "1× Konjunktiv I (seien gestiegen / würde gebaut)",
+      "Schluss mit Empfehlung weil/obwohl",
+      "≥140w B2-Niveau"
+    ],
+    "sample": "Die Mietpreisbremse wird kontrovers diskutiert. Einerseits schützt sie Mieter, weil sie Erhöhungen deckelt; andererseits warnen Eigentümer, dass Investitionen ausbleiben. Eine Mieterin erklärte kürzlich, die Mieten seien trotz Bremse weiter gestiegen, weil zu wenig gebaut werde. Während Neubau als Lösung gilt, fehlen in wachsenden Städten Flächen und Handwerker. Meines Erachtens braucht es beides: klare Regeln und verlässlichen Neubau. Nur wenn Kontrolle und Angebot zusammen gedacht werden, kann Wohnen in wachsenden Städten bezahlbar bleiben, obwohl der Druck durch Zuzug und knappe Flächen hoch bleibt. Diese Balance verdient mehr als Schlagzeilen — sie braucht überprüfbare Zusagen.  Dabei ist wichtig, zwischen kurzfristigen Eingriffen und langfristigen Strukturen zu unterscheiden, weil nur Neubau Entlastung schafft, obwohl Regulierung akute Härten lindert. Wer beide Hebel nutzt, gewinnt Vertrauen — weil sichtbar wird, dass Politik nicht nur verwaltet, sondern gestaltet.",
+    "noteAr": [
+      "منتدى B2: أطروحة → حجتان مع مثال سكني → منقول واحد → خاتمة بتوصية",
+      "المضارع الشرطي (يُزعم أنه) + weil/obwohl — مرتبط بنص القراءة t-b2-42",
+      "نصيحة تطبيقية: اقتبس صوت مستأجر حقيقي بدل إحصاء مخترع"
+    ],
+    "zielWort": 160,
+    "quelleTextId": "t-b2-42"
+  },
+  {
+    "id": "w-b2-47",
+    "level": "B2",
+    "format": "brief",
+    "titleDe": "Einspruch gegen die Kündigung",
+    "titleAr": "اعتراض على الفصل",
+    "taskDe": "Schreiben Sie einen formellen Brief (ca. 160 Wörter) an den Arbeitgeber: Sie widersprechen der betriebsbedingten Kündigung zum 31.03., bitten um Prüfung der Sozialauswahl und Kündigungsfrist, und lehnen den Aufhebungsvertrag ab, weil eine Sperrzeit droht. Verwenden Sie Passiv/ Nominalstil + weil/obwohl + 1× Konjunktiv I. Verlinke d-b2-30.",
+    "taskAr": "اكتب رسالة رسمية (160 كلمة) لصاحب العمل: تعترض على الفصل التشغيلي 31.3، تطلب مراجعة الاختيار الاجتماعي والمهلة، وترفض اتفاق التراضي لأن الحجب يهدد، مع مبني للمجهول/أسلوب اسمي + weil/obwohl + منقول واحد. اربط بحوار d-b2-30.",
+    "criteria": [
+      "Betreff + Anrede + strukturierte Absätze",
+      "Widerspruch mit Sozialauswahl + Fristprüfung",
+      "Ablehnung Aufhebungsvertrag weil Sperrzeit 12 Wochen",
+      "1× Konjunktiv I (sei angeboten / habe erklärt)",
+      "Passiv/Nominalstil + weil/obwohl — ≥140w"
+    ],
+    "sample": "Betreff: Widerspruch gegen die Kündigung zum 31.03.\n\nSehr geehrte Damen und Herren,\n\nIhrer Kündigung vom 15.02. widerspreche ich fristgerecht. Ein Berater der Agentur für Arbeit erklärte, die Sozialauswahl sei nicht nachvollziehbar dargelegt worden, obwohl sie bei betriebsbedingten Kündigungen vorgeschrieben sei. Zudem ist zu prüfen, ob die Kündigungsfrist von vier Wochen eingehalten wurde, weil mein Arbeitsvertrag eine längere Frist vorsieht.\n\nDen angebotenen Aufhebungsvertrag lehne ich ab, weil er eine Sperrzeit von zwölf Wochen beim Arbeitslosengeld auslösen würde, obwohl ich nicht selbst gekündigt habe. Eine solche Vereinbarung würde meine Ansprüche erheblich mindern, während das Kündigungsschutzgesetz gerade in dieser Lage Schutz bieten soll.\n\nIch bitte um schriftliche Stellungnahme und um die Auszahlung des Resturlaubs. Sollte keine Einigung möglich sein, werde ich fristgerecht Klage beim Arbeitsgericht erheben, obwohl ich an einer einvernehmlichen Lösung interessiert bleibe.\n\nMit freundlichen Grüßen\nMira Lehmann Eine gütliche Einigung — etwa durch Versetzung oder Qualifizierung — würde beiden Seiten helfen, weil Fachkräfte knapp sind, obwohl die Auftragslage schwankt.",
+    "noteAr": [
+      "رسالة B2: موضوع → اعتراض → تبرير (اختيار اجتماعي + مهلة) → طلب",
+      "المضارع الشرطي + مبني للمجهول/أسلوب اسمي + weil/obwohl — مرتبط بحوار d-b2-30",
+      "نصيحة: اذكر استشارة وكالة العمل بموضوعية؛ العاطفة لا تحمي الحق"
+    ],
+    "zielWort": 160,
+    "quelleTextId": "d-b2-30"
+  },
+  {
+    "id": "w-b2-48",
+    "level": "B2",
+    "format": "brief",
+    "titleDe": "Mängelanzeige: Schimmel in der Wohnung",
+    "titleAr": "بلاغ عيوب: عفن في الشقة",
+    "taskDe": "Schreiben Sie eine Mängelanzeige (ca. 160 Wörter) an die Hausverwaltung: Schimmel im Schlafzimmer seit 2 Wochen, Fotos anbei, Bitte um Frist (14 Tage) zur Beseitigung und Mietminderung prüfen. Nutzen Sie Passiv + weil/obwohl + 1× Konjunktiv I. Verlinke d-b2-33.",
+    "taskAr": "اكتب بلاغ عيوب (160 كلمة) للإدارة: عفن بغرفة النوم منذ أسبوعين، صور مرفقة، طلب مهلة 14 يومًا للإصلاح وبحث تخفيض الإيجار. استخدم مبني للمجهول + weil/obwohl + منقول واحد. اربط بحوار d-b2-33.",
+    "criteria": [
+      "Betreff + Mängelbeschreibung + Fotos",
+      "Frist 14 Tage + Mietminderung erwähnen",
+      "Begründung mit weil/obwohl",
+      "1× Konjunktiv I (sei entstanden / würde geprüft)",
+      "≥140w formell + Passiv — B2"
+    ],
+    "sample": "Betreff: Mängelanzeige — Schimmelbefall Schlafzimmer\n\nSehr geehrte Damen und Herren,\n\nseit etwa zwei Wochen wurde im Schlafzimmer Schimmel an der Außenwand festgestellt, weil trotz regelmäßigem Lüften Feuchtigkeit nicht abzieht, obwohl die Heizung durchgehend läuft. Fotos anbei zeigen einen Befall von ca. 40×60 cm in der Ecke.\n\nEin Techniker erklärte, der Schaden sei durch eine undichte Fuge entstanden, obwohl die Wohnung erst vor drei Jahren saniert worden sei. Die Ursache müsse daher fachmännisch geprüft werden, weil Gesundheitsgefahr nicht ausgeschlossen werden könne.\n\nIch bitte Sie, den Mangel innerhalb von 14 Tagen beseitigen zu lassen, weil Schlafen dort kaum zumutbar ist, obwohl wir das Zimmer weiterhin nutzen müssen. Sollte die Frist verstreichen, werde ich eine Mietminderung prüfen lassen, obwohl ich an einer schnellen Lösung interessiert bleibe.\n\nMit freundlichen Grüßen\nAmir Haddad Ein Angebot zur Besichtigung mit Handwerker nehme ich gern kurzfristig wahr, weil schnelle Klärung beiden Seiten nützt, obwohl mein Zeitplan eng ist.",
+    "noteAr": [
+      "بلاغ عيوب B2: وصف العيب → سبب → مهلة 14 يومًا → تلويح بتخفيض",
+      "مبني للمجهول + weil/obwohl + منقول واحد — مرتبط بحوار d-b2-33 السكني",
+      "نصيحة: أرفق صورًا وحدد مهلة كتابية؛ التوثيق هو دليلك"
+    ],
+    "zielWort": 160,
+    "quelleTextId": "d-b2-33"
   }
 ]

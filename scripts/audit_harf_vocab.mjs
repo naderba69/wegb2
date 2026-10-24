@@ -126,7 +126,7 @@ for (const [deckId, deck] of Object.entries(vocab)) {
     seenDe.get(key).push({id:c.id, level:c.level, deck:deckId, ar:c.ar});
     // ideas
     if (!c.exampleDe) ideas.push({path, idea:`أضف مثال سياقي — ${c.level} يحتاج Authentic`});
-    if (c.pos==="Verb" && !c.posInfo) ideas.push({path, idea:`أضف تصريف (spricht/gekommen) للفعل`});
+    if (c.pos==="Verb" && !c.posInfo && !c.formen) ideas.push({path, idea:`أضف تصريف (spricht/gekommen) للفعل`});
   }
 }
 

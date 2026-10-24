@@ -987,6 +987,11 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
 function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const text = getText(task.textId ?? "");
   const [showTr, setShowTr] = useState(false);
+  const [prediction, setPrediction] = useState("");
+  const [predictionDone, setPredictionDone] = useState(false);
+  const _isB2 = text?.level === "B2";
+  // reset prediction when textId changes
+  useEffect(() => { setPrediction(""); setPredictionDone(!_isB2); }, [task.textId, _isB2]);
   if (!text) return <Empty title={meldung("text-fehlt").titel} aktion={meldung("text-fehlt").aktion} />;
   // 📜 النسخةُ الطويلةُ (طول CEFR حقيقي) إن وُجدت؛ وإلا النصُّ القصير
   const lese = leseText(text);
@@ -1003,6 +1008,20 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
           <span>اقرأ مرّتين: الأولى للفكرة، الثانية للأسئلة — الأسئلة تأويلية لا حرفية</span>
         </div>
       )}
+      {/* 🔮 Prediction vor dem Lesen — Conti/Mayer: Vermutung aktiviert Vorwissen */}
+      {text.level === "B2" && !predictionDone && (
+        <div data-testid="lesen-prediction" className="card" style={{ padding: "0.7rem 0.9rem", background: "linear-gradient(135deg, var(--color-paper2), var(--color-paper))", borderInlineStart: "4px solid #a78bfa", marginBottom: "0.7rem", display: "grid", gap: "0.4rem" }}>
+          <div style={{ fontWeight: 800, fontSize: "0.88rem" }}>🔮 قبل القراءة — ماذا تتوقع؟</div>
+          <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)" }}>العنوان: <De style={{ fontWeight: 700 }}>{text.titleDe}</De> — خمّن فكرة النص بجملة واحدة، ثم اكشف النص.</div>
+          <input data-testid="lesen-prediction-input" className="field" dir="ltr" lang="de" placeholder="Ich denke, es geht um..." value={prediction} onChange={(e) => setPrediction(e.target.value)} style={{ minHeight: "42px" }} />
+          <div style={{ display: "flex", gap: "0.5rem" }}>
+            <button type="button" className="btn btn-primary" data-testid="lesen-prediction-submit" disabled={prediction.trim().length < 3} onClick={() => setPredictionDone(true)} style={{ minHeight: "40px" }}>💭 لدي تخمين — افتح النص</button>
+            <button type="button" className="btn btn-ghost" data-testid="lesen-prediction-skip" onClick={() => setPredictionDone(true)} style={{ minHeight: "40px" }}>تخطي →</button>
+          </div>
+          <div style={{ fontSize: "0.74rem", color: "var(--ui-muted)" }}>Conti Prediction: توقعك يجهّز الدماغ — حتى الخطأ مفيد.</div>
+        </div>
+      )}
+      {(!text.level || text.level !== "B2" || predictionDone) && (
       <article className="de authentic-reader" style={{ display: "block", width: "100%", lineHeight: 2.05, background: "var(--color-paper2)", padding: "1rem 1.1rem", borderRadius: "0.8rem", borderInlineStart: text.level === "A0" ? "4px solid #4ade80" : text.level === "A1" ? "4px solid #22c55e" : text.level === "A2" ? "4px solid #60a5fa" : text.level === "B1" ? "4px solid #f2c866" : "4px solid #a78bfa", fontSize: text.level === "B2" ? "0.98rem" : "0.92rem", letterSpacing: "0.01em" }}>
         {absaetze.map((p, i) => {
           const saetze = splitSaetze(p);
@@ -1011,13 +1030,35 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
               {saetze.map((satz, si) => (
                 <span key={si} className="authentic-satz" style={{ display: "inline-flex", gap: "0.35rem", alignItems: "baseline", marginInlineEnd: "0.35rem", marginBottom: "0.2rem" }}>
                   <button className="chip authentic-satz-audio" aria-label={`استمع للجملة ${si + 1}`} data-testid={`lesen-satz-audio-${i}-${si}`} style={{ cursor: "pointer", minHeight: "28px", minWidth: "32px", padding: "0 0.35rem", fontSize: "0.75rem", flexShrink: 0 }} onClick={() => speakDe(satz, { voiceName, rate: (rate ?? 0.9) * 0.9 })}>🔊</button>
-                  <span style={{ flex: 1 }}><WortLinkText text={satz} level={text.level} testid={`wortlink-${i}-${si}`} /></span>
+                  <span style={{ flex: 1 }}>
+                    {text.level === "B2" && /(weil|obwohl|während|damit|indem|falls|sodass)/i.test(satz) ? (
+                      <span dir="ltr" lang="de" className="b2-konnektor-wrap" dangerouslySetInnerHTML={{ __html: satz.replace(/(weil|obwohl|während|damit|indem|falls|sodass)/gi, (m) => { const l=m.toLowerCase(); const cls=l==="weil"?"b2-konnektor--weil":l==="obwohl"?"b2-konnektor--obwohl":l==="während"?"b2-konnektor--waehrend":l==="damit"?"b2-konnektor--damit":l==="indem"?"b2-konnektor--indem":l==="falls"?"b2-konnektor--falls":l==="sodass"?"b2-konnektor--sodass":""; return `<mark class="b2-konnektor ${cls}">${m}</mark>`; }) }} />
+                    ) : (
+                      <WortLinkText text={satz} level={text.level} testid={`wortlink-${i}-${si}`} />
+                    )}
+                  </span>
                 </span>
               ))}
             </p>
           );
         })}
       </article>
+      )}
+      {prediction && predictionDone && text.level === "B2" && (
+        <div data-testid="lesen-prediction-done" style={{ marginTop: "0.5rem", padding: "0.6rem 0.8rem", background: "var(--color-paper)", borderRadius: "0.6rem", border: "1px dashed var(--color-line)", fontSize: "0.82rem", lineHeight: 1.7 }}>
+          <span style={{ fontWeight: 800 }}>🔮 توقعك:</span> <span dir="ltr" lang="de" style={{ fontStyle: "italic" }}>{prediction}</span> — الآن قارن بما قرأت: هل أصبت الفكرة؟ ما الذي فاجأك؟
+        </div>
+      )}
+      {text.level === "B2" && predictionDone && (
+        <div data-testid="b2-konnektor-legende" style={{ display: "flex", flexWrap: "wrap", gap: "0.35rem", marginTop: "0.45rem", fontSize: "0.74rem", color: "var(--color-ink2)", alignItems: "center" }}>
+          <span style={{ fontWeight: 700 }}>Konnektoren:</span>
+          <span className="chip"><span className="b2-konnektor b2-konnektor--weil">weil</span> Ursache</span>
+          <span className="chip"><span className="b2-konnektor b2-konnektor--obwohl">obwohl</span> Einräumung</span>
+          <span className="chip"><span className="b2-konnektor b2-konnektor--waehrend">während</span> Gleichzeitigkeit</span>
+          <span className="chip"><span className="b2-konnektor b2-konnektor--damit">damit</span> Ziel · <span className="b2-konnektor b2-konnektor--indem">indem</span> Mittel</span>
+          <span className="chip"><span className="b2-konnektor b2-konnektor--falls">falls</span> Bedingung · <span className="b2-konnektor b2-konnektor--sodass">sodass</span> Folge</span>
+        </div>
+      )}
       {bemerkenRegeln && bemerkenRegeln.length > 0 && <BemerkenKarte textDe={lese.de} regeln={bemerkenRegeln} />}
       {radar.length > 0 && (
         <div data-testid="grammatik-radar" style={{ margin: "0.8rem 0 0.4rem", padding: "0.6rem 0.8rem", borderRadius: "8px", background: "var(--color-paper)", borderInlineStart: "4px solid var(--color-b1)", fontSize: "0.82rem" }}>

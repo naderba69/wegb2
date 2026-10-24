@@ -90,6 +90,26 @@
       "muster": "2020",
       "wo": "pakete/b2-debatte saetze[2]",
       "grund": "سنة في جملة نقاش وهمية (Der Bericht zeigt...) — مثال على ربط زمني لا واقعة إحصائية مدعاة خارج النص"
+    },
+    {
+      "muster": "2015",
+      "wo": "t-b2-41 Integrationsgesetz + cultural_note 2015",
+      "grund": "سنة تشريع Integrationgesetz — واقعة تشريعية عامة منسوبة في النص إلى القانون نفسه"
+    },
+    {
+      "muster": "2018",
+      "wo": "t-b2-41/42 Wohnungsbericht + d-b2-30/33",
+      "grund": "سنة تقرير سكني وهجرة (BAMF/Statistisches Bundesamt) — منسوبة في النصوص والحوارات إلى التقرير المنشور"
+    },
+    {
+      "muster": "2021",
+      "wo": "t-b2-43 Betriebsrätemodernisierungsgesetz + d-b2-31",
+      "grund": "سنة تشريع تحديث مجالس العمال — منسوبة في النص إلى القانون المنشور"
+    },
+    {
+      "muster": "2023",
+      "wo": "t-b2-44/45 Deutschlandticket 49/58 Euro + Notruf 112/116117",
+      "grund": "سنة إطلاق Deutschlandticket وسعر 49 يورو ثم 58 يورو وأرقام الطوارئ — منسوبة في النص إلى Verordnung والخدمات الرسمية"
     }
   ]
 }

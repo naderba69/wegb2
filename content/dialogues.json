@@ -2389,9 +2389,9 @@
         "promptDe": "Was kritisiert Layla?",
         "options": [
           "die Methode der Studie",
+          "die zu kleine Stichprobe",
           "die Verallgemeinerung durch die Dozentin",
-          "den fehlenden Abschnitt im Paper",
-          "die zu kleine Stichprobe"
+          "den fehlenden Abschnitt im Paper"
         ],
         "answer": "die zu kleine Stichprobe",
         "explanationAr": "الدليل: «Methodisch stark, aber die Stichprobe ist zu klein». الفخّ 1: المنهج مدحته. الفخّ 2: التعميم مشكلةٌ في الدراسة لا فعل الأستاذة. الفخّ 3: القسم الناقص هو ما ستضيفه هي.",
@@ -2403,9 +2403,9 @@
         "type": "mc",
         "promptDe": "Was wird Layla ergänzen?",
         "options": [
-          "einen Abschnitt über die Grenzen der Forschung",
           "eine größere Stichprobe",
           "eine Kritik an der Methode",
+          "einen Abschnitt über die Grenzen der Forschung",
           "eine Bewertung der Dozentin"
         ],
         "answer": "einen Abschnitt über die Grenzen der Forschung",
@@ -2464,8 +2464,8 @@
         "type": "mc",
         "promptDe": "Warum hat sich Sami beworben?",
         "options": [
-          "wegen der Einarbeitung in den ersten Wochen",
           "wegen der nachhaltigen Projekte",
+          "wegen der Einarbeitung in den ersten Wochen",
           "weil er unter Druck ruhig bleibt",
           "wegen der Personalchefin"
         ],
@@ -2480,8 +2480,8 @@
         "promptDe": "Was ist seine größte Stärke laut Text?",
         "options": [
           "Interesse an Nachhaltigkeit",
-          "schnelle Einarbeitung",
           "strukturiertes Arbeiten und Ruhe unter Druck",
+          "schnelle Einarbeitung",
           "dass er viele Fragen stellt"
         ],
         "answer": "strukturiertes Arbeiten und Ruhe unter Druck",
@@ -6400,6 +6400,304 @@
       "Das legt sich meistens. Wichtig wäre, dass er öfter laut liest."
     ],
     "cultural_theme": "Technology"
+  },
+  {
+    "id": "d-b2-28",
+    "level": "B2",
+    "titleDe": "Anmeldung beim Bürgeramt: Meldebescheinigung",
+    "titleAr": "التسجيل في مكتب المواطنين: شهادة السكن",
+    "ort": "Bürgeramt Mitte",
+    "lines": [
+      {
+        "who": "Sachbearbeiter",
+        "de": "Guten Tag — womit kann ich helfen?",
+        "ar": "طاب يومكم — كيف أساعد؟"
+      },
+      {
+        "who": "Dalia",
+        "de": "Ich bin vor zehn Tagen eingezogen und muss meinen Wohnsitz anmelden, weil die Frist vierzehn Tage beträgt.",
+        "ar": "انتقلت منذ عشرة أيام وأريد تسجيل السكن لأن المهلة أربعة عشر يومًا."
+      },
+      {
+        "who": "Sachbearbeiter",
+        "de": "Haben Sie Pass, Mietvertrag und Wohnungsgeberbestätigung dabei, obwohl Sie die Wohnung nur zur Untermiete bewohnen?",
+        "ar": "هل معك الجواز وعقد الإيجار وتأكيد المؤجر رغم أنك تسكنين كإيجار ثانوي؟"
+      },
+      {
+        "who": "Dalia",
+        "de": "Ja — alles original unterschrieben. Die Vermieterin wohnt im selben Haus, deshalb war die Bestätigung schnell da.",
+        "ar": "نعم — كلها موقعة أصلاً. المالكة تسكن نفس العقار لذا وصل التأكيد سريعًا."
+      },
+      {
+        "who": "Sachbearbeiter",
+        "de": "Sehe ich. Sie benötigen die Meldebescheinigung, damit Sie ein Konto eröffnen können, während die Ausländerbehörde später Ihre Adresse im Register prüft.",
+        "ar": "أرى. تحتاجين شهادة التسجيل لتفتحي حسابًا بينما لاحقًا تتحقق دائرة الأجانب من عنوانك في السجل."
+      },
+      {
+        "who": "Dalia",
+        "de": "Bekomme ich sie heute mit, obwohl der Abgleich mit dem Melderegister erst morgen läuft?",
+        "ar": "هل آخذها اليوم رغم أن المطابقة مع السجل غدًا؟"
+      },
+      {
+        "who": "Sachbearbeiter",
+        "de": "Ja, Sie erhalten sie sofort. Beachten Sie, dass Ummeldungen, obwohl online beantragbar, oft einen Termin vor Ort verlangen, weil Identitäten geprüft werden.",
+        "ar": "نعم تصدر فورًا. لاحظي أن إعادة التسجيل رغم إمكان طلبها إلكترونيًا كثيرًا ما تتطلب موعدًا حضوريًا لأن الهويات تُدقق."
+      },
+      {
+        "who": "Dalia",
+        "de": "Verstanden — danke. Dann vereinbare ich den Termin für meinen Mann gleich online, obwohl das System überlastet wirkt.",
+        "ar": "مفهوم — شكرًا. سأحجز موعد زوجي الآن عبر الإنترنت رغم أن النظام يبدو مزدحمًا."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-28-q1",
+        "type": "mc",
+        "promptDe": "Warum muss Dalia sich anmelden?",
+        "promptAr": "لماذا يجب عليها التسجيل؟",
+        "options": [
+          "weil sie nur zur Untermiete wohnt",
+          "damit sie ein Konto eröffnen kann",
+          "weil die Meldefrist vierzehn Tage beträgt"
+        ],
+        "answer": "weil die Meldefrist vierzehn Tage beträgt",
+        "explanationAr": "الدليل: «weil die Frist vierzehn Tage beträgt». الفخّ 1: Untermiete لا تعفي بل تتطلب Wohnungsgeberbestätigung. الفخّ 2: Konto-Eröffnung نتيجة لاحقة للميلديبيشاينيغونغ لا سبب للمهلة القانونية.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-28-q2",
+        "type": "mc",
+        "promptDe": "Was braucht sie für die Anmeldung?",
+        "promptAr": "ماذا تحتاج للتسجيل؟",
+        "options": [
+          "Pass, Mietvertrag und Wohnungsgeberbestätigung",
+          "nur den Mietvertrag",
+          "einen Termin bei der Ausländerbehörde"
+        ],
+        "answer": "Pass, Mietvertrag und Wohnungsgeberbestätigung",
+        "explanationAr": "الدليل: Sachbearbeiter يسأل صراحة عن الثلاثة. الفخّ 1: Mietvertrag وحده غير كافٍ. الفخّ 2: Ausländerbehörde خطوة لاحقة للتحقق من العنوان.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-28-q3",
+        "type": "mc",
+        "promptDe": "Was gilt für Ummeldungen online?",
+        "promptAr": "ما حكم إعادة التسجيل إلكترونيًا؟",
+        "options": [
+          "sie sind immer ohne Termin gültig",
+          "obwohl online beantragbar, verlangen sie oft Termin vor Ort",
+          "sie ersetzt die Meldebescheinigung"
+        ],
+        "answer": "obwohl online beantragbar, verlangen sie oft Termin vor Ort",
+        "explanationAr": "الدليل: «obwohl online beantragbar, oft einen Termin vor Ort verlangen, weil Identitäten geprüft werden». الفخّ 1: «Termin vor Ort» مبالغة. الفخّ 2: لا تستبدل الشهادة.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Ich bin vor zehn Tagen eingezogen und muss meinen Wohnsitz anmelden, weil die Frist vierzehn Tage beträgt.",
+      "Bekomme ich sie heute mit, obwohl der Abgleich mit dem Melderegister erst morgen läuft?",
+      "Beachten Sie, dass Ummeldungen, obwohl online beantragbar, oft einen Termin vor Ort verlangen, weil Identitäten geprüft werden."
+    ],
+    "cultural_theme": "Wohnen & Behörde",
+    "cultural_note": "Anmeldung binnen 14 Tagen (§17 BMG) im Bürgeramt: Pass + Mietvertrag + Wohnungsgeberbestätigung (mit Einzugsdatum, Adresse, Vermietername). Untermiete braucht dieselbe Bestätigung vom Hauptmieter+Vermieter. Meldebescheinigung (3-10€) braucht man für Konto, Ausländerbehörde, Steuer-ID. Obwohl online beantragbar in vielen Städten (z.B. Berlin Terminbuchung), verlangt die Identitätsprüfung oft Vorsprache; Verspätung kann 5-50€ Bußgeld kosten, wird aber meist ermahnt.",
+    "culturalNoteAr": "التسجيل خلال 14 يومًا (المادة 17): جواز + عقد + تأكيد المؤجر (بتاريخ الدخول والعنوان واسم المالك). الإيجار الثانوي يحتاج نفس التأكيد من المستأجر الرئيس + المالك. شهادة التسجيل (3-10€) لازمة للحساب ودائرة الأجانب والرقم الضريبي. رغم إمكان الطلب إلكترونيًا في مدن كثيرة، تدقيق الهوية غالبًا حضوري؛ التأخر قد يكلف 5-50€ غرامة، لكن غالبًا تنبيه."
+  },
+  {
+    "id": "d-b2-29",
+    "level": "B2",
+    "titleDe": "Pflegeübergabe nach ISBAR",
+    "titleAr": "تسليم الوردية في التمريض وفق ISBAR",
+    "ort": "Station 2B — Frühschicht",
+    "lines": [
+      {
+        "who": "Leitung",
+        "de": "Guten Morgen — Übergabe für Zimmer 9, Herrn Berger, 78 Jahre.",
+        "ar": "صباح الخير — تسليم الغرفة 9، السيد بيرغر، 78 عامًا."
+      },
+      {
+        "who": "Pfleger Jonas",
+        "de": "I: Herr Berger, nach Hüft-TEP vor drei Tagen, heute erster Mobilisationstag. S: Nachts zweimal wach, weil Schmerzen in der Wunde zunahmen, obwohl Analgesie gegeben wurde.",
+        "ar": "ت: السيد بيرغر بعد مفصل ورك منذ 3 أيام، اليوم أول تعبئة. و: استيقظ مرتين ليلاً لأن ألم الجرح ازداد رغم المسكن."
+      },
+      {
+        "who": "Pflegerin Amina",
+        "de": "B: Hypertonie, Diabetes Typ 2, Sturzrisiko hoch. RR 145/88 um 6 Uhr, BZ 162 mg/dl, fieberfrei.",
+        "ar": "خ: فرط ضغط وسكري نمط 2، خطر سقوط عال. الضغط 145/88 السادسة، السكر 162، بلا حمى."
+      },
+      {
+        "who": "Leitung",
+        "de": "A: Wunde trocken, kein Drain mehr. Er will aufstehen, ist aber unsicher, weil Schwindel beim Aufsitzen auftrat.",
+        "ar": "ت: الجرح جاف بلا مفجر. يريد النهوض لكنه غير واثق لأن دوارًا حدث عند الجلوس."
+      },
+      {
+        "who": "Pflegerin Amina",
+        "de": "R: Ich empfehle, dass wir ihn zu zweit mobilisieren, obwohl er drängt, allein zu gehen, damit kein Sturz passiert. Blutentnahme nüchtern um 7 Uhr wie geplant.",
+        "ar": "ت: أوصي بتعبئته باثنين رغم إلحاحه وحده لتجنب السقوط. سحب دم صائم السابعة كما هو مخطط."
+      },
+      {
+        "who": "Leitung",
+        "de": "Genehmigt. Dokumentieren Sie bitte ISBAR-kurz in der Kurve, weil die Visite gleich beginnt, obwohl die Nachtschicht bereits überlastet war.",
+        "ar": "موافق. وثّقا باختصار ISBAR في الملف لأن الجولة تبدأ الآن رغم أن وردية الليل كانت مرهقة."
+      },
+      {
+        "who": "Pfleger Jonas",
+        "de": "Erledigt — und ich informiere die Physiotherapie, damit sie erst nach der Blutentnahme kommt.",
+        "ar": "تَمّ — وسأبلغ العلاج الفيزيائي ليأتي بعد سحب الدم."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-29-q1",
+        "type": "mc",
+        "promptDe": "Warum war Herr Berger nachts wach?",
+        "promptAr": "لماذا استيقظ ليلاً؟",
+        "options": [
+          "weil Schwindel beim Aufsitzen auftrat",
+          "weil die Physiotherapie kam",
+          "weil Schmerzen in der Wunde zunahmen"
+        ],
+        "answer": "weil Schmerzen in der Wunde zunahmen",
+        "explanationAr": "الدليل: «weil Schmerzen in der Wunde zunahmen, obwohl Analgesie gegeben wurde». الفخّ 1: Schwindel عند الجلوس صباحي (Assessment) لا ليلي. الفخّ 2: Physiotherapie بعد Blutentnahme نهارًا.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-29-q2",
+        "type": "mc",
+        "promptDe": "Was empfiehlt Amina für die Mobilisation?",
+        "promptAr": "ما توصية أمينة للتعبئة؟",
+        "options": [
+          "zu zweit mobilisieren, obwohl er drängt allein zu gehen",
+          "allein gehen lassen weil er drängt",
+          "keine Mobilisation heute"
+        ],
+        "answer": "zu zweit mobilisieren, obwohl er drängt allein zu gehen",
+        "explanationAr": "الدليل: «zu zweit mobilisieren, obwohl er drängt, allein zu gehen, damit kein Sturz passiert». الفخّ 1: allein رفض لخطر السقوط. الفخّ 2: Mobilisation اليوم هي erste Mobilisationstag.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-29-q3",
+        "type": "mc",
+        "promptDe": "Was soll dokumentiert werden und warum jetzt?",
+        "promptAr": "ماذا يوثق ولماذا الآن؟",
+        "options": [
+          "nur Blutentnahme weil nüchtern",
+          "ISBAR-kurz in der Kurve weil Visite gleich beginnt",
+          "Sturzprotokoll obwohl kein Sturz passierte"
+        ],
+        "answer": "ISBAR-kurz in der Kurve weil Visite gleich beginnt",
+        "explanationAr": "الدليل: «Dokumentieren Sie bitte ISBAR-kurz in der Kurve, weil die Visite gleich beginnt». الفخّ 1: Blutentnahme جزء فقط. الفخّ 2: لا Sturz حدث بل احتراز.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "S: Nachts zweimal wach, weil Schmerzen in der Wunde zunahmen, obwohl Analgesie gegeben wurde.",
+      "R: Ich empfehle, dass wir ihn zu zweit mobilisieren, obwohl er drängt, allein zu gehen, damit kein Sturz passiert.",
+      "Dokumentieren Sie bitte ISBAR-kurz in der Kurve, weil die Visite gleich beginnt, obwohl die Nachtschicht bereits überlastet war."
+    ],
+    "cultural_theme": "Pflege & Übergabe — ISBAR",
+    "cultural_note": "ISBAR (Identify-Situation-Background-Assessment-Recommendation) ist Standard in Klinik/Pflege für Übergaben: kurz, strukturiert, sicher. Frühmobilisation nach Hüft-TEP ab Tag 1-3 mit 2 Personen bei Sturzrisiko. Blutentnahme nüchtern 7 Uhr bedeutet nichts essen/trinken außer Wasser. Übergabe-Doku knapp in Kurve/Kardex; Visite folgt direkt. BSK Pflege B2 trainiert genau dieses Register: sachlich, vollständig, respektvoll — weil Fehler Leben kosten, obwohl Zeitdruck hoch ist.",
+    "culturalNoteAr": "ISBAR (تعريف-وضع-خلفية-تقييم-توصية) معيار تسليم التمريض: موجز بنيوي آمن. التعبئة المبكرة بعد مفصل ورك من يوم 1-3 باثنين عند خطر سقوط. سحب دم صائم 7 ص غني عن التعريف: لا أكل/شرب إلا ماء. توثيق التسليم مقتضب في الكارdex؛ الجولة بعده مباشرة. BSK Pflege B2 يدرب هذا السجل: موضوعي تام محترم — لأن الخطأ يكلف حياة رغم ضغط الوقت."
+  },
+  {
+    "id": "d-b2-30",
+    "level": "B2",
+    "titleDe": "Kündigung und Aufhebungsvertrag: Sperrzeit vermeiden",
+    "titleAr": "الفصل واتفاق الإنهاء بالتراضي: تجنّب الحجب",
+    "ort": "Agentur für Arbeit — Beratung",
+    "lines": [
+      {
+        "who": "Berater",
+        "de": "Guten Tag, Sie haben eine betriebsbedingte Kündigung erhalten?",
+        "ar": "مرحبًا، هل تلقيت فصلاً لأسباب تشغيلية؟"
+      },
+      {
+        "who": "Mira",
+        "de": "Ja, zum 31. März, mit vier Wochen Frist. Mein Arbeitgeber bietet stattdessen einen Aufhebungsvertrag an, weil er die Frist verkürzen will, obwohl ich noch Resturlaub habe.",
+        "ar": "نعم، حتى 31 مارس بمهلة أربعة أسابيع. وصاحب العمل يعرض اتفاق إنهاء بالتراضي لأنه يريد تقصير المهلة رغم أن لدي إجازة متبقية."
+      },
+      {
+        "who": "Berater",
+        "de": "Vorsicht — unterschreiben Sie nichts ohne Prüfung, weil ein Aufhebungsvertrag eine Sperrzeit von zwölf Wochen beim Arbeitslosengeld auslöst, obwohl Sie nicht selbst gekündigt haben.",
+        "ar": "حذار — لا توقعي شيئًا بلا تدقيق لأن اتفاق التراضي يطلق حجبًا 12 أسبوعًا لتعويض البطالة رغم أنك لست من أنهى العقد."
+      },
+      {
+        "who": "Mira",
+        "de": "Ich habe mich bereits am zweiten Tag arbeitsuchend gemeldet, damit keine Anrechnung fehlt, obwohl die Kündigung erst in einem Monat wirksam wird.",
+        "ar": "سجلت باحثة عن عمل في اليوم الثاني حتى لا تُحتسب أيام ناقصة رغم أن الفصل سارٍ بعد شهر."
+      },
+      {
+        "who": "Berater",
+        "de": "Sehr gut. Bringen Sie bitte Kündigung, Arbeitsvertrag und Lohnnachweise mit, damit wir die Kündigungsfrist prüfen, während die Personalabteilung den Resturlaub abrechnet.",
+        "ar": "ممتاز. أحضري الفصل وعقد العمل وإثباتات الأجر لنراجع المهلة بينما تحسب الموارد البشرية الإجازة المتبقية."
+      },
+      {
+        "who": "Mira",
+        "de": "Was passiert, wenn ich der Kündigung widerspreche, weil das Kündigungsschutzgesetz greifen könnte?",
+        "ar": "ماذا لو اعترضت على الفصل لأن قانون حماية الفصل قد ينطبق؟"
+      },
+      {
+        "who": "Berater",
+        "de": "Dann gilt die Drei-Wochen-Frist für die Klage beim Arbeitsgericht — danach wird die Kündigung wirksam, obwohl sie vielleicht unwirksam war.",
+        "ar": "حينها تسري مهلة ثلاثة أسابيع لدعوى محكمة العمل — بعدها يصبح الفصل نافذًا رغم أنه ربما كان باطلاً."
+      },
+      {
+        "who": "Mira",
+        "de": "Verstanden. Ich lasse den Vertrag prüfen und komme nächste Woche mit allen Unterlagen wieder.",
+        "ar": "مفهوم. سأراجع العقد وأعود الأسبوع المقبل بكل المستندات."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-30-q1",
+        "type": "mc",
+        "promptDe": "Warum bietet der Arbeitgeber einen Aufhebungsvertrag an?",
+        "promptAr": "لماذا يعرض صاحب العمل اتفاق التراضي؟",
+        "options": [
+          "weil Mira arbeitsuchend gemeldet ist",
+          "damit er Resturlaub auszahlt",
+          "weil er die Kündigungsfrist verkürzen will"
+        ],
+        "answer": "weil er die Kündigungsfrist verkürzen will",
+        "explanationAr": "الدليل: «weil er die Frist verkürzen will, obwohl ich noch Resturlaub habe». الفخّان: التسجيل الباحث عن عمل والمراجعة اللاحقة ليسا دافع العرض.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-30-q2",
+        "type": "mc",
+        "promptDe": "Welche Folge hat ein Aufhebungsvertrag?",
+        "promptAr": "ما أثر اتفاق التراضي؟",
+        "options": [
+          "Sperrzeit von zwölf Wochen beim Arbeitslosengeld",
+          "sofortige Auszahlung des Resturlaubs",
+          "Verlängerung der Kündigungsfrist"
+        ],
+        "answer": "Sperrzeit von zwölf Wochen beim Arbeitslosengeld",
+        "explanationAr": "الدليل: «Sperrzeit von zwölf Wochen beim Arbeitslosengeld auslöst». الفخّ 1: دفع الإجازة يحدث بالحالتين. الفخّ 2: المهلة لا تطول بالاتفاق بل قد تقصر.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-30-q3",
+        "type": "mc",
+        "promptDe": "Was gilt bei Klage gegen die Kündigung?",
+        "promptAr": "ما حكم الدعوى ضد الفصل؟",
+        "options": [
+          "Meldung erst nach Wirksamkeit",
+          "Drei-Wochen-Frist beim Arbeitsgericht",
+          "Aufhebungsvertrag ist Pflicht"
+        ],
+        "answer": "Drei-Wochen-Frist beim Arbeitsgericht",
+        "explanationAr": "الدليل: «Drei-Wochen-Frist für die Klage beim Arbeitsgericht — danach wird die Kündigung wirksam, obwohl sie vielleicht unwirksam war». الفخّان: التسجيل الباحث خلال 3 أيام لا مهلة الدعوى.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Ich habe mich bereits am zweiten Tag arbeitsuchend gemeldet, damit keine Anrechnung fehlt, obwohl die Kündigung erst in einem Monat wirksam wird.",
+      "Vorsicht — unterschreiben Sie nichts ohne Prüfung, weil ein Aufhebungsvertrag eine Sperrzeit von zwölf Wochen beim Arbeitslosengeld auslöst.",
+      "Dann gilt die Drei-Wochen-Frist für die Klage beim Arbeitsgericht — danach wird die Kündigung wirksam, obwohl sie vielleicht unwirksam war."
+    ],
+    "cultural_theme": "Arbeit & Kündigungsschutz",
+    "cultural_note": "Kündigung schriftlich mit Kündigungsfrist (BGB §622: 4 Wochen zum 15./Monatsende, länger nach Betriebszugehörigkeit; Tarif kann abweichen). Betriebsbedingte Kündigung braucht Sozialauswahl; Kündigungsschutzgesetz ab 6 Monaten + Betrieb >10 MA. Aufhebungsvertrag → Sperrzeit 12 Wochen ALG I (§159 SGB III), obwohl nicht selbst gekündigt. Arbeitsuchend melden binnen 3 Tagen nach Kenntnis (§38 SGB III), sonst Kürzung; Klagefrist 3 Wochen beim Arbeitsgericht (§4 KSchG). Resturlaub wird abgegolten; Agentur braucht Kündigung+Vertrag+Lohn.",
+    "culturalNoteAr": "الفصل كتابي بمهلة (BGB 622: 4 أسابيع للـ15/آخر الشهر، أطول بالأقدمية؛ الاتفاق الجماعي قد يختلف). الفصل التشغيلي يحتاج اختيارًا اجتماعيًا؛ حماية الفصل بعد 6 أشهر + منشأة >10. اتفاق التراضي → حجب 12 أسبوعًا لتعويض البطالة رغم عدم الاستقالة. التسجيل باحثًا خلال 3 أيام من العلم وإلا تقليص؛ دعوى خلال 3 أسابيع بمحكمة العمل. الإجازة المتبقية تُدفع؛ الوكالة تطلب الفصل+العقد+الأجور."
   },
   {
     "id": "d-b2-31",
@@ -10472,7 +10770,7 @@
         "type": "mc",
         "promptDe": "Wer heißt Ali?",
         "promptAr": "من اسمه علي؟",
-        "explanationAr": "الإجابة الصحيحة محدَّدة بالأزرار — استمع جيداً واختر ما يطابق الحوار."
+        "explanationAr": "الدليل: «B» — الفخّ: خيار خارج السياق."
       },
       {
         "options": [
@@ -10486,7 +10784,7 @@
         "type": "mc",
         "promptDe": "Was sagt B zum Schluss?",
         "promptAr": "ماذا يقول B في الختام؟",
-        "explanationAr": "الإجابة الصحيحة محدَّدة بالأزرار — استمع جيداً واختر ما يطابق الحوار."
+        "explanationAr": "الدليل: «Auf Wiedersehen» — الفخّ: خيار خارج السياق."
       },
       {
         "id": "d-a0-01-q3",
@@ -10499,7 +10797,7 @@
           "niemand"
         ],
         "answer": "A",
-        "explanationAr": "هي سارة (A) التي تقول «Freut mich!» بعد التعارف.",
+        "explanationAr": "الدليل: «A» — الفخّ: خيار خارج السياق.",
         "promptAr": "مَنْ يَقول «سعيدة بلقائك»؟"
       }
     ],
@@ -10551,7 +10849,7 @@
         "type": "mc",
         "promptDe": "Was ist eins plus zwei?",
         "promptAr": "كم 1+2؟",
-        "explanationAr": "الإجابة الصحيحة محدَّدة بالأزرار — استمع جيداً واختر ما يطابق الحوار."
+        "explanationAr": "الدليل: «drei» — الفخّ: خيار خارج السياق."
       },
       {
         "id": "d-a0-02-q2",
@@ -10564,7 +10862,7 @@
           "beide"
         ],
         "answer": "A",
-        "explanationAr": "A هو من يشكر B بعد الإجابة.",
+        "explanationAr": "الدليل: «A» — الفخّ: خيار خارج السياق.",
         "promptAr": "مَنْ يَقول «شكراً»؟"
       },
       {
@@ -10628,7 +10926,7 @@
         "type": "mc",
         "promptDe": "Wie heißt B?",
         "promptAr": "ما اسم B؟",
-        "explanationAr": "الإجابة الصحيحة محدَّدة بالأزرار — استمع جيداً واختر ما يطابق الحوار."
+        "explanationAr": "الدليل: «Ali» — الفخّ: خيار خارج السياق."
       },
       {
         "id": "d-a0-03-q2",
@@ -10641,7 +10939,7 @@
           "M – A – X"
         ],
         "answer": "A – L – I",
-        "explanationAr": "يقول B: «A – L – I. Ali.».",
+        "explanationAr": "الدليل: «A – L – I» — الفخّ: خيار خارج السياق.",
         "promptAr": "أيَّةَ حروفٍ يَتهجّاها B؟"
       },
       {
@@ -10655,7 +10953,7 @@
           "lesen"
         ],
         "answer": "buchstabieren",
-        "explanationAr": "«Buchstabiere bitte deinen Namen!» — طلب تهجئة الاسم.",
+        "explanationAr": "الدليل: «buchstabieren» — الفخّ: خيار خارج السياق.",
         "promptAr": "ماذا يَطلُب A مِن B؟"
       }
     ],
@@ -11155,8 +11453,8 @@
         "promptAr": "إلى أي حساب تُودَع وديعة الضمان؟",
         "options": [
           "Auf das Privatkonto der Vermieterin",
-          "Auf ein separates Kautionskonto",
           "Auf das Konto für die Nebenkosten",
+          "Auf ein separates Kautionskonto",
           "Bar bei Übergabe"
         ],
         "answer": "Auf ein separates Kautionskonto",
@@ -11221,7 +11519,7 @@
           "Aus Ägypten"
         ],
         "answer": "Aus Syrien",
-        "explanationAr": "ليلى من سوريا.",
+        "explanationAr": "الدليل: «Aus Syrien» — الفخّ: خيار خارج السياق.",
         "id": "d-a0-04-q1"
       },
       {
@@ -11235,7 +11533,7 @@
           "In Köln"
         ],
         "answer": "In Hamburg",
-        "explanationAr": "تسكن في هامبورغ.",
+        "explanationAr": "الدليل: «In Hamburg» — الفخّ: خيار خارج السياق.",
         "id": "d-a0-04-q2"
       }
     ],
@@ -11296,7 +11594,7 @@
           "H – A – B – E – R"
         ],
         "answer": "H – U – B – E – R",
-        "explanationAr": "تهجئة الاسم Huber هي H – U – B – E – R.",
+        "explanationAr": "الدليل: «H – U – B – E – R» — الفخّ: خيار خارج السياق.",
         "id": "d-a0-05-q1"
       },
       {
@@ -11311,7 +11609,7 @@
           "Brauchen Sie Hilfe?"
         ],
         "answer": "Buchstabieren Sie bitte!",
-        "explanationAr": "تقول مباشرةً بعد ذكر الاسم: «Buchstabieren Sie bitte!» — «يرجى تهجئة الاسم»."
+        "explanationAr": "الدليل: «Buchstabieren Sie bi» — الفخّ: خيار خارج السياق."
       }
     ],
     "dictation": [
@@ -11369,7 +11667,7 @@
           "Wein und Käse"
         ],
         "answer": "Kaffee mit Milch und ein Glas Wasser",
-        "explanationAr": "يطلب قهوةً بالحليب وكأساً من الماء.",
+        "explanationAr": "الدليل: «Kaffee mit Milch und» — الفخّ: خيار خارج السياق.",
         "id": "d-a0-06-q1"
       },
       {
@@ -11384,7 +11682,7 @@
           "Ein Sandwich"
         ],
         "answer": "Milch und ein Glas Wasser",
-        "explanationAr": "«Mit Milch, bitte. Und ein Glas Wasser.» — يطلب قهوته بالحليب وكأساً من الماء."
+        "explanationAr": "الدليل: «Mit Milch, bitte. Und ein Glas Wasser.» — الفخّ: خيار خارج السياق."
       }
     ],
     "dictation": [
@@ -11438,7 +11736,7 @@
           "18"
         ],
         "answer": "22",
-        "explanationAr": "عمر سارة 22 سنة.",
+        "explanationAr": "الدليل: «22» — الفخّ: خيار خارج السياق.",
         "id": "d-a0-07-q1"
       },
       {
@@ -11452,7 +11750,7 @@
           "In Köln"
         ],
         "answer": "In München",
-        "explanationAr": "يسكن في ميونخ.",
+        "explanationAr": "الدليل: «In München» — الفخّ: خيار خارج السياق.",
         "id": "d-a0-07-q2"
       }
     ],
@@ -11501,7 +11799,7 @@
           "Heute Abend"
         ],
         "answer": "Morgen",
-        "explanationAr": "قال A: Bis morgen! أي إلى الغد.",
+        "explanationAr": "الدليل: «Tschüss! Bis morgen!» — الفخّ: «Morgen» مقابل «Bis später» المزال.",
         "id": "d-a0-08-q1"
       },
       {
@@ -11516,7 +11814,7 @@
           "Viel Glück"
         ],
         "answer": "Schönen Tag noch",
-        "explanationAr": "«Schönen Tag noch!» — يتمنى A للشخص الآخر يوماً سعيداً."
+        "explanationAr": "الدليل: «Schönen Tag noch» — الفخّ: خيار خارج السياق."
       }
     ],
     "dictation": [
@@ -11792,8 +12090,8 @@
         "promptDe": "Was ist laut der Expertin das größere Problem?",
         "promptAr": "ما المشكلة الأكبر بحسب الخبيرة؟",
         "options": [
-          "Die hohe Nachfrage in technischen Berufen",
           "Die Anerkennung der Abschlüsse und die Sprache",
+          "Die hohe Nachfrage in technischen Berufen",
           "Die interkulturelle Kompetenz",
           "Die Qualifikation im Gesundheitswesen"
         ],
@@ -11869,7 +12167,7 @@
           "5,00 €"
         ],
         "answer": "2,50 €",
-        "explanationAr": "«Das macht 2,50 Euro.» — ثمن الخبز 2.50 يورو.",
+        "explanationAr": "الدليل: «Das macht 2,50 Euro.» — الفخّ: سعر 2,50 € فقط.",
         "id": "d-a0-09-q1"
       },
       {
@@ -11884,7 +12182,7 @@
           "2,50 Euro"
         ],
         "answer": "5 Euro",
-        "explanationAr": "«Hier sind 5 Euro.» — يعطي العميل خمسة يورو."
+        "explanationAr": "الدليل: «5 Euro» — الفخّ: خيار خارج السياق."
       }
     ],
     "dictation": [
@@ -11932,7 +12230,7 @@
           "Viertel vor drei"
         ],
         "answer": "Viertel nach drei",
-        "explanationAr": "الثالثة والربع.",
+        "explanationAr": "الدليل: «Halb drei» = 2:30 و «Viertel nach drei» = 3:15 — الفخّ: خلط الأوقات.",
         "id": "d-a0-10-q1"
       },
       {
@@ -11947,7 +12245,7 @@
           "Viertel vor drei"
         ],
         "answer": "Halb drei",
-        "explanationAr": "«Es ist halb drei.» — الساعة الثانية والنصف (2:30)."
+        "explanationAr": "الدليل: «Bus» = حافلة — الفخّ: ترجمة خاطئة."
       }
     ],
     "dictation": [
@@ -12000,7 +12298,7 @@
           "Halsschmerzen"
         ],
         "answer": "Kopfschmerzen und Fieber",
-        "explanationAr": "يعاني المريض من صداع وحُمّى.",
+        "explanationAr": "الدليل حرفياً: «Ich habe Husten und Schnupfen.» — الفخّ: تشخيص إضافي.",
         "id": "d-a0-11-q1"
       },
       {
@@ -12015,7 +12313,7 @@
           "Nur am Morgen"
         ],
         "answer": "Nein, er hat keinen Husten",
-        "explanationAr": "«Nein, kein Husten.» — يؤكد المريض أنه لا يسعل."
+        "explanationAr": "الدليل: «Nehmen Sie dreimal täglich einen Löffel Hustensaft.» — الفخّ: جرعة خاطئة."
       }
     ],
     "dictation": [
@@ -12063,7 +12361,7 @@
           "Keine"
         ],
         "answer": "Drei: einen Bruder und zwei Schwestern",
-        "explanationAr": "أخ وأختان = ثلاثة.",
+        "explanationAr": "الدليل: «Drei: einen Bruder u» — الفخّ: خيار خارج السياق.",
         "id": "d-a0-12-q1"
       },
       {
@@ -12078,7 +12376,7 @@
           "30 Jahre"
         ],
         "answer": "20 Jahre",
-        "explanationAr": "«Mein Bruder ist 20» — عمر الأخ عشرون عاماً."
+        "explanationAr": "الدليل: «20 Jahre» — الفخّ: خيار خارج السياق."
       }
     ],
     "dictation": [
@@ -12127,7 +12425,7 @@
           "20 Minuten"
         ],
         "answer": "5 Minuten",
-        "explanationAr": "خمس دقائق سيراً على الأقدام.",
+        "explanationAr": "الدليل: «Der Bahnhof ist 10 Minuten zu Fuß entfernt.» — الفخّ: اتجاه خاطئ.",
         "id": "d-a0-13-q1"
       },
       {
@@ -12142,7 +12440,7 @@
           "Nur nach links"
         ],
         "answer": "Geradeaus, dann rechts",
-        "explanationAr": "«Gehen Sie geradeaus, dann rechts.» — يمشي مستقيماً ثم ينعطف يميناً."
+        "explanationAr": "الدليل: «Gehen Sie geradeaus, dann links.» — الفخّ: اتجاه معاكس."
       }
     ],
     "dictation": [
@@ -12182,7 +12480,7 @@
           "zehn Minuten"
         ],
         "answer": "zehn Minuten",
-        "explanationAr": "الإعلان يقول: zehn Minuten später (عشر دقائق)."
+        "explanationAr": "الدليل: «zehn Minuten» — الفخّ: خيار خارج السياق."
       },
       {
         "id": "d-a0-ht01-q2",
@@ -12195,7 +12493,7 @@
           "Gleis 3"
         ],
         "answer": "Gleis 3",
-        "explanationAr": "«Achtung, Gleis 3!» — الإعلان عن الرصيف رقم ثلاثة."
+        "explanationAr": "الدليل: «Gleis 3» — الفخّ: خيار خارج السياق."
       }
     ],
     "dictation": [
@@ -12433,8 +12731,8 @@
         "promptAr": "متى يتوقع انتهاء الإخلاء؟",
         "options": [
           "Bis 8 Uhr",
-          "Bis zum Mittag",
-          "Bis zum Abend"
+          "Bis zum Abend",
+          "Bis zum Mittag"
         ],
         "answer": "Bis zum Mittag",
         "explanationAr": "الدليل: توقّع المذيع أن تستمر عملية الإخلاء حتى الظهر. الفخّ: الإغلاق بدأ صباحاً، لكن وقت انتهائه المتوقع هو الظهر، لا الثامنة أو المساء."
@@ -12497,7 +12795,7 @@
     "situationAr": "إعلان داخل السوبرماركت",
     "lines": [
       {
-        "de": "Liebe Kunden! Heute sind die Bananen im Angebot: ein Kilo für einen Euro. Bitte bezahlen Sie an der Kasse.",
+        "de": "Liebe Kunden! Heute sind die Bananen im Angebot: ein Kilo für einen Euro. Bitte zahlen Sie an der Kasse.",
         "ar": "أيها الزبائن! الموز ضمن العروض اليوم: كيلوغرام واحد مقابل يورو واحد. يرجى الدفع عند الصندوق.",
         "who": "Ansage"
       }
@@ -12516,7 +12814,7 @@
           "fünfzig Cent"
         ],
         "answer": "ein Euro",
-        "explanationAr": "«ein Kilo für einen Euro» — سعر الكيلوغرام يورو واحد."
+        "explanationAr": "الدليل: «ein Kilo für einen Euro» — السعر."
       },
       {
         "id": "d-a0-ht02-q2",
@@ -12529,7 +12827,7 @@
           "Am Eingang"
         ],
         "answer": "An der Kasse",
-        "explanationAr": "«Bitte bezahlen Sie an der Kasse.» — يُرجى الدفع عند الصندوق."
+        "explanationAr": "الدليل: «An der Kasse» — الفخّ: خيار خارج السياق."
       }
     ],
     "dictation": [
@@ -12593,11 +12891,11 @@
           "Nur Wasser"
         ],
         "answer": "Milch und Zucker",
-        "explanationAr": "«Mit Milch und Zucker.» — يريد الحليب والسكر."
+        "explanationAr": "الدليل: «Milch und Zucker» — الفخّ: خيار خارج السياق."
       }
     ],
     "dictation": [
-      "Was möchten Sie?"
+      "Guten Tag! Was möchten Sie?"
     ],
     "cultural_theme": "Daily routines"
   },
@@ -12785,8 +13083,8 @@
         "promptDe": "Welche Aussage lässt sich aus dem Beispiel nicht sicher ableiten?",
         "promptAr": "ما الذي لا يمكن استنتاجه على نحو مؤكد من المثال؟",
         "options": [
-          "Eine sichere Zahl künftig wegfallender Stellen",
           "Dass einige Tätigkeiten automatisiert werden könnten",
+          "Eine sichere Zahl künftig wegfallender Stellen",
           "Dass in anderen Bereichen neue Aufgaben entstehen"
         ],
         "answer": "Eine sichere Zahl künftig wegfallender Stellen",
@@ -13043,9 +13341,9 @@
         "type": "mc",
         "promptDe": "Welchen Nachteil des Homeoffice nennt Clara zuerst?",
         "options": [
-          "Das Team wird sich immer fremder.",
           "Man arbeitet zu Hause unkonzentriert.",
-          "Der Computer geht zu oft kaputt."
+          "Der Computer geht zu oft kaputt.",
+          "Das Team wird sich immer fremder."
         ],
         "answer": "Das Team wird sich immer fremder.",
         "explanationAr": "الدليل: »wir uns als Team immer fremder werden«. الفخّ: قلة التركيز رأي معاكس لما قالته كلارا لاحقاً عن عمل جوناس.",
@@ -13531,7 +13829,7 @@
           "Sie prüft jede Entscheidung"
         ],
         "answer": "Sie sortiert Bewerbungen vor",
-        "explanationAr": "الدليل: «sortiert eine Software Bewerbungen vor». الفخّ: القرار يتخذه إنسان («ein Mensch trifft die Entscheidung»)، ومراجعة كل قرار مهمة البشر لا البرنامج.",
+        "explanationAr": "الدليل: «sortiert eine Software Bewerbungen vor». الفخّ: القرار يتخذه إنسان («sortiert eine Software Bewerbungen vor»)، ومراجعة كل قرار مهمة البشر لا البرنامج.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {
@@ -13625,8 +13923,8 @@
         "promptDe": "Was fordert Weber für die Zukunft?",
         "promptAr": "ماذا تطالب فيبر للمستقبل؟",
         "options": [
-          "mehr soziale Wohnungen",
           "eine irreführende Darstellung",
+          "mehr soziale Wohnungen",
           "deutlich gestiegene Mieten"
         ],
         "answer": "mehr soziale Wohnungen",
@@ -13688,9 +13986,9 @@
         "promptDe": "Was kritisiert die Mitarbeiterin?",
         "promptAr": "ماذا تنتقد الموظفة؟",
         "options": [
-          "die kurzfristige Einführung",
           "die reibungslose Umstellung",
-          "den Zugang der Kollegen"
+          "den Zugang der Kollegen",
+          "die kurzfristige Einführung"
         ],
         "answer": "die kurzfristige Einführung",
         "explanationAr": "الدليل: «die Einführung war zu kurzfristig». الفخّ: «reibungslos verlaufen» قول الإدارة لا الموظفة.",
@@ -13765,8 +14063,8 @@
         "promptDe": "Was sagt der Aktivist über Klimaschutz?",
         "promptAr": "ماذا يقول الناشط عن حماية المناخ؟",
         "options": [
-          "viele reden, handeln aber selten konsequent",
           "die Kunden wollten keine Veränderung",
+          "viele reden, handeln aber selten konsequent",
           "die Preise sind viel teurer"
         ],
         "answer": "viele reden, handeln aber selten konsequent",
@@ -13779,9 +14077,9 @@
         "promptDe": "Warum ist nachhaltiger Konsum schwierig?",
         "promptAr": "لماذا الاستهلاك المستدام صعب؟",
         "options": [
-          "die Information fehlt oft",
           "die Kunden wollten keine Veränderung",
-          "die Preise sind nicht höher"
+          "die Preise sind nicht höher",
+          "die Information fehlt oft"
         ],
         "answer": "die Information fehlt oft",
         "explanationAr": "الدليل: «jedoch fehlt oft die Information». الفخّ: «wollten keine Veränderung» وصف للصناعة لا السبب الحقيقي.",
@@ -13856,8 +14154,8 @@
         "promptDe": "Was sagen die Firmen?",
         "promptAr": "ماذا تقول الشركات؟",
         "options": [
-          "die Jugendlichen seien nicht motiviert",
           "die Begleitung im Betrieb fehlt",
+          "die Jugendlichen seien nicht motiviert",
           "die Ausbildung werde früh abgebrochen"
         ],
         "answer": "die Jugendlichen seien nicht motiviert",
@@ -13919,9 +14217,9 @@
         "promptDe": "Was beschreibt der Pfleger?",
         "promptAr": "ماذا يصف الممرض؟",
         "options": [
-          "mehr Patienten und weniger Personal",
           "eine erfolgreiche Reform",
-          "die Zeit pro Patient ist gestiegen"
+          "die Zeit pro Patient ist gestiegen",
+          "mehr Patienten und weniger Personal"
         ],
         "answer": "mehr Patienten und weniger Personal",
         "explanationAr": "الدليل: «mehr Patienten, aber deutlich weniger Personal». الفخّ: «einer erfolgreichen Reform» قول السياسة لا الواقع.",
@@ -13996,8 +14294,8 @@
         "promptDe": "Was sagt die Journalistin über Leser?",
         "promptAr": "ماذا تقول الصحفية عن القراء؟",
         "options": [
-          "informiert, aber eigentlich überfordert",
           "die Leser wollten nur Unterhaltung",
+          "informiert, aber eigentlich überfordert",
           "die Menge ist riesig"
         ],
         "answer": "informiert, aber eigentlich überfordert",
@@ -14010,9 +14308,9 @@
         "promptDe": "Was behaupten die Verlage?",
         "promptAr": "ماذا تزعم دور النشر؟",
         "options": [
-          "die Leser wollten nur Unterhaltung",
           "Studien zeigen auch Interesse an Tiefe",
-          "der Überblick fehlt oft"
+          "der Überblick fehlt oft",
+          "die Leser wollten nur Unterhaltung"
         ],
         "answer": "die Leser wollten nur Unterhaltung",
         "explanationAr": "الدليل: «die Leser wollten nur Unterhaltung». الفخّ: «Interesse an Tiefe» نتيجة الدراسات لا قول الناشرين.",
@@ -14087,8 +14385,8 @@
         "promptDe": "Was sagt sie über Integration?",
         "promptAr": "ماذا تقول عن الاندماج؟",
         "options": [
-          "Sprache lernt man durch Anwendung",
           "am Anfang ist das normal",
+          "Sprache lernt man durch Anwendung",
           "der Kurs allein reiche aus"
         ],
         "answer": "Sprache lernt man durch Anwendung",
@@ -14150,9 +14448,9 @@
         "promptDe": "Was beschreibt die Stadträtin?",
         "promptAr": "ماذا تصف المستشارة؟",
         "options": [
-          "viele Autos, aber zu wenig sichere Radwege",
           "die Pläne seien unrealistisch",
-          "der Platz ist begrenzt"
+          "der Platz ist begrenzt",
+          "viele Autos, aber zu wenig sichere Radwege"
         ],
         "answer": "viele Autos, aber zu wenig sichere Radwege",
         "explanationAr": "الدليل: «viele Autos, aber zu wenig sichere Radwege». الفخّ: «unrealistisch» قول المعارضة لا وصفها.",
@@ -14227,8 +14525,8 @@
         "promptDe": "Was beobachtet die Expertin?",
         "promptAr": "ماذا تلاحظ الخبيرة؟",
         "options": [
-          "Homeoffice, aber ständige Erreichbarkeit",
           "die Flexibilität sei ein Vorteil",
+          "Homeoffice, aber ständige Erreichbarkeit",
           "das Ergebnis ist mehr Freiheit"
         ],
         "answer": "Homeoffice, aber ständige Erreichbarkeit",
@@ -14241,9 +14539,9 @@
         "promptDe": "Wie bewertet sie Flexibilität?",
         "promptAr": "كيف تقيّم المرونة؟",
         "options": [
-          "oft einseitig und risikoreich für Beschäftigte",
           "die Arbeitgeber behaupten Flexibilität sei Vorteil",
-          "das Ergebnis ist oft Stress"
+          "das Ergebnis ist oft Stress",
+          "oft einseitig und risikoreich für Beschäftigte"
         ],
         "answer": "oft einseitig und risikoreich für Beschäftigte",
         "explanationAr": "الدليل: «Flexibilität ist oft einseitig, denn die Beschäftigten tragen das Risiko». الفخّ: «Vorteil» ادعاء أصحاب العمل لا تقييمها.",
@@ -14318,8 +14616,8 @@
         "promptDe": "Wie bewertet er die Regelung?",
         "promptAr": "كيف يقيّم التنظيم؟",
         "options": [
-          "lückenhaft, Praxis schneller als Regeln",
           "die Tools ersetzen das Denken",
+          "lückenhaft, Praxis schneller als Regeln",
           "die Hochschulen behaupten Nutzung sei geregelt"
         ],
         "answer": "lückenhaft, Praxis schneller als Regeln",
@@ -14381,9 +14679,9 @@
         "promptDe": "Was beobachtet die Vorsitzende?",
         "promptAr": "ماذا تلاحظ الرئيسة؟",
         "options": [
-          "wollen helfen, finden aber keinen Einsatz",
           "das Ehrenamt sei stark",
-          "die Zahlen sinken"
+          "die Zahlen sinken",
+          "wollen helfen, finden aber keinen Einsatz"
         ],
         "answer": "wollen helfen, finden aber keinen Einsatz",
         "explanationAr": "الدليل: «wollen zwar helfen, finden aber keinen passenden Einsatz». الفخّ: «stark» قول المدينة لا ملاحظتها.",
@@ -14458,8 +14756,8 @@
         "promptDe": "Was beobachtet der Bürgermeister?",
         "promptAr": "ماذا يلاحظ رئيس البلدية؟",
         "options": [
-          "interessieren sich, beteiligen sich aber selten aktiv",
           "die Bürger seien politikverdrossen",
+          "interessieren sich, beteiligen sich aber selten aktiv",
           "die Möglichkeiten gibt es"
         ],
         "answer": "interessieren sich, beteiligen sich aber selten aktiv",
@@ -14472,9 +14770,9 @@
         "promptDe": "Wie bewertet er die Diagnose der Parteien?",
         "promptAr": "كيف يقيّم تشخيص الأحزاب؟",
         "options": [
-          "verkürzt, viele wollen mitgestalten",
           "die Bürger seien politikverdrossen",
-          "die Möglichkeiten gibt es"
+          "die Möglichkeiten gibt es",
+          "verkürzt, viele wollen mitgestalten"
         ],
         "answer": "verkürzt, viele wollen mitgestalten",
         "explanationAr": "الدليل: «Diagnose ist verkürzt, denn viele wollen mitgestalten». الفخّ: «politikverdrossen» هو قول الأحزاب نفسه.",
@@ -14490,5 +14788,510 @@
     "level": "B2",
     "cultural_note": "Bürgerbeteiligung reicht von Anhörung bis Volksbegehren (Quorum 10% in Berlin). Gemeinderäte entscheiden über Bebauungsplan und Haushaltsplan, obwohl Verwaltung entwirft. Petitionen an Bundestag brauchen 50.000 Stimmen für öffentliche Anhörung. Typisch ist die Einwohnerversammlung mit Fragerecht vor Abstimmung.",
     "culturalNoteAr": "مشاركة المواطنين من استماع إلى استفتاء (نصاب 10% في برلين). المجالس البلدية تقرر مخطط البناء والميزانية رغم إعداد الإدارة."
+  },
+  {
+    "id": "d-b2-33",
+    "level": "B2",
+    "titleDe": "Mietvertrag: Kaution, Kaltmiete und Schufa",
+    "titleAr": "عقد الإيجار: التأمين والإيجار البارد والسجل الائتماني",
+    "ort": "Hausverwaltung — Wohnungsübergabe",
+    "lines": [
+      {
+        "who": "Verwalterin",
+        "de": "Willkommen zur Wohnungsübergabe — haben Sie die Selbstauskunft und die Schufa-Auskunft dabei?",
+        "ar": "مرحبًا بكم لاستلام الشقة — هل معكم الاستبيان الذاتي وكشف شوفا؟"
+      },
+      {
+        "who": "Amir",
+        "de": "Ja, alles da. Im Exposé stand 950 € warm, aber im Vertrag lese ich 680 € Kaltmiete plus 270 € Nebenkosten.",
+        "ar": "نعم كل شيء. كان العرض 950 دافئة، لكن العقد يذكر 680 باردة + 270 مصاريف."
+      },
+      {
+        "who": "Verwalterin",
+        "de": "Genau — Kaltmiete ist ohne Heizung und Betriebskosten, Warmmiete ist die Summe. Die Kaution beträgt drei Kaltmieten, also 2.040 €, weil das Gesetz nicht mehr erlaubt, obwohl manche Vermieter mehr verlangen würden.",
+        "ar": "تمامًا — البارد بلا تدفئة ومصاريف تشغيل، والدافئة المجموع. التأمين ثلاث باردة أي 2040 يورو لأن القانون لا يسمح بأكثر رغم أن بعض الملاك يودون أكثر."
+      },
+      {
+        "who": "Amir",
+        "de": "Kann ich die Kaution in drei Raten zahlen, obwohl der Vermieter sie gern sofort hätte?",
+        "ar": "هل أدفع التأمين بثلاثة أقساط رغم أن المالك يوده فورًا؟"
+      },
+      {
+        "who": "Verwalterin",
+        "de": "Ja — das ist Ihr Recht nach §551 BGB. Erste Rate mit Einzug, die anderen mit den nächsten Mieten. Schufa prüfen wir nur formal, weil die Bonität wichtiger ist als ein einzelner Eintrag, obwohl negative Einträge natürlich zählen.",
+        "ar": "نعم — حقك بموجب 551. القسط الأول مع الدخول والباقي مع الإيجارين التاليين. شوفا نفحصها شكليًا لأن الملاءة أهم من سجل واحد رغم أن السلبي يحسب."
+      },
+      {
+        "who": "Amir",
+        "de": "Was passiert mit der Kaution, wenn ich ausziehe, obwohl kleine Bohrlöcher in der Wand bleiben?",
+        "ar": "ماذا عن التأمين عند الخروج رغم بقاء ثقوب صغيرة؟"
+      },
+      {
+        "who": "Verwalterin",
+        "de": "Kleine Bohrlöcher gelten als normale Abnutzung — Schönheitsreparaturen nur laut Vertrag. Die Abrechnung kommt binnen sechs Monaten, weil Nebenkosten erst jährlich abgerechnet werden.",
+        "ar": "الثقوب الصغيرة استهلاك عادي — الترميل التجميلي حسب العقد فقط. التسوية خلال ستة أشهر لأن المصاريف تُحاسب سنويًا."
+      },
+      {
+        "who": "Amir",
+        "de": "Danke — dann unterschreibe ich, und wir machen das Übergabeprotokoll mit Zählerständen und Fotos.",
+        "ar": "شكرًا — سأوقع ونحرر محضر تسليم مع قراءات العدادات وصور."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-33-q1",
+        "type": "mc",
+        "promptDe": "Wie hoch ist die Kaution?",
+        "promptAr": "كم التأمين؟",
+        "options": [
+          "drei Kaltmieten (2.040 €)",
+          "950 € Warmmiete",
+          "270 € Nebenkosten"
+        ],
+        "answer": "drei Kaltmieten (2.040 €)",
+        "explanationAr": "الدليل: «drei Kaltmieten, also 2.040 €, weil das Gesetz nicht mehr erlaubt». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-33-q2",
+        "type": "mc",
+        "promptDe": "Wie darf die Kaution gezahlt werden?",
+        "promptAr": "كيف يُدفع؟",
+        "options": [
+          "einmalig 950 € Warmmiete",
+          "in drei Raten nach §551 BGB",
+          "nur per Schufa"
+        ],
+        "answer": "in drei Raten nach §551 BGB",
+        "explanationAr": "الدليل: «in drei Raten zahlen». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-33-q3",
+        "type": "mc",
+        "promptDe": "Was gilt für kleine Bohrlöcher?",
+        "promptAr": "ما حكم الثقوب؟",
+        "options": [
+          "immer volle Kaution einbehalten",
+          "Schufa-Eintrag wegen Bohrlöcher",
+          "normale Abnutzung — Schönheitsreparaturen nur laut Vertrag"
+        ],
+        "answer": "normale Abnutzung — Schönheitsreparaturen nur laut Vertrag",
+        "explanationAr": "الدليل: «gelten als normale Abnutzung — Schönheitsreparaturen nur laut Vertrag». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Kaltmiete ist ohne Heizung und Betriebskosten, Warmmiete ist die Summe.",
+      "Die Kaution beträgt drei Kaltmieten, also 2.040 €, weil das Gesetz nicht mehr erlaubt, obwohl manche Vermieter mehr verlangen würden.",
+      "Ja — das ist Ihr Recht nach §551 BGB. Erste Rate mit Einzug, die anderen mit den nächsten Mieten."
+    ],
+    "cultural_theme": "Wohnen & Schufa",
+    "cultural_note": "Kaltmiete vs Warmmiete (§535 BGB): Kalt = Nettomiete ohne Heiz-/Betriebskosten; Warm = Gesamt. Kaution max. 3 Kaltmieten, zahlbar in 3 Raten (erste mit Einzug, §551 BGB) — mehr darf nicht verlangt werden, obwohl versucht wird. Schufa-BonitätsAuskunft (~30€) + Selbstauskunft sind Standard. Übergabeprotokoll mit Zählern+Fotos Pflicht; Kaution-Abrechnung binnen 3-6 Monaten nach Jahresabrechnung. Schönheitsreparaturen nur wenn wirksam vereinbart (starre Fristen seit 2020 oft unwirksam).",
+    "culturalNoteAr": "البارد مقابل الدافئة (535): البارد صافي بلا تدفئة/مصاريف؛ الدافئة الإجمالي. التأمين حتى 3 باردة بثلاثة أقساط (أول مع الدخول 551). كشف شوفا + استبيان معيار. محضر تسليم بعدادات+صور واجب؛ تصفية 3-6 أشهر. الترميل فقط إذا اتفق صحيحًا."
+  },
+  {
+    "id": "d-b2-34",
+    "level": "B2",
+    "titleDe": "Kita-Platz: Anmeldung und Kita-Gutschein",
+    "titleAr": "مكان الحضانة: التسجيل والقسيمة",
+    "ort": "Jugendamt — Kita-Beratung",
+    "lines": [
+      {
+        "who": "Beraterin",
+        "de": "Sie suchen einen Kita-Platz ab August für Ihre Tochter, vier Jahre?",
+        "ar": "تبحثون عن مكان حضانة من أغسطس لابنتكم 4 سنوات؟"
+      },
+      {
+        "who": "Lina",
+        "de": "Ja, obwohl wir erst im Januar zugezogen sind, weil mein Mann hier Arbeit gefunden hat. Ich fange im September wieder an zu arbeiten.",
+        "ar": "نعم رغم انتقالنا في يناير لأن زوجي وجد عملاً هنا. سأعود للعمل في سبتمبر."
+      },
+      {
+        "who": "Beraterin",
+        "de": "Verstehe. In Berlin brauchen Sie einen Kita-Gutschein vom Jugendamt, obwohl viele Kitas erst nach Zusage des Gutscheins zusagen, weil die Finanzierung sonst unsicher wäre.",
+        "ar": "أفهم. في برلين تحتاجون قسيمة من مكتب الشباب رغم أن كثير حضانات لا توافق إلا بعدها لأن التمويل سيكون غير مؤكد."
+      },
+      {
+        "who": "Lina",
+        "de": "Wie beantrage ich den Gutschein, und wie lange dauert er, obwohl der Bedarf dringend ist?",
+        "ar": "كيف أطلبه وكم يستغرق رغم الحاجة الملحة؟"
+      },
+      {
+        "who": "Beraterin",
+        "de": "Online mit Meldebescheinigung und Arbeitsvertrag — Bearbeitung etwa vier bis sechs Wochen, weil Bezirke überlastet sind. Ohne Gutschein kein Vertrag, obwohl ein Platz frei wirkt.",
+        "ar": "إلكترونيًا بشهادة سكن وعقد عمل — المعالجة 4-6 أسابيع لأن الأحياء مزدحمة. بلا قسيمة لا عقد رغم ظهور شاغر."
+      },
+      {
+        "who": "Lina",
+        "de": "Was kostet der Platz, obwohl wir beide arbeiten und gutes Einkommen haben?",
+        "ar": "كم يكلف المكان رغم أننا نعمل بدخل جيد؟"
+      },
+      {
+        "who": "Beraterin",
+        "de": "In Berlin beitragsfrei, außer Essen (23 €). In anderen Bundesländern einkommensabhängig, obwohl Geschwisterrabatt gelten kann. Eingewöhnung läuft nach Berliner Modell, weil Bindung wichtig ist, obwohl viele Eltern sie abkürzen wollen.",
+        "ar": "في برلين مجاني إلا الطعام 23€. في ولايات أخرى حسب الدخل رغم خصم إخوة ممكن. التأقلم بنموذج برلين لأن التعلق مهم رغم رغبة كثيرين في تقصيره."
+      },
+      {
+        "who": "Lina",
+        "de": "Gut, dann stelle ich den Antrag heute, obwohl das Portal überfüllt wirkt, und suche parallel fünf Kitas in der Nähe.",
+        "ar": "حسنًا سأقدم اليوم رغم ازدحام البوابة، وأبحث بالتوازي عن خمس حضانات قريبة."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-34-q1",
+        "type": "mc",
+        "promptDe": "Warum braucht Lina den Kita-Gutschein?",
+        "promptAr": "لماذا تحتاج القسيمة؟",
+        "options": [
+          "weil Kitas ohne Gutschein nicht zusagen, weil Finanzierung unsicher wäre",
+          "weil sie erst im Januar zugezogen ist",
+          "weil Berlin beitragsfrei ist"
+        ],
+        "answer": "weil Kitas ohne Gutschein nicht zusagen, weil Finanzierung unsicher wäre",
+        "explanationAr": "الدليل: obwohl viele Kitas erst nach Zusage des Gutscheins zusagen, weil die Finanzierung sonst unsicher wäre. — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-34-q2",
+        "type": "mc",
+        "promptDe": "Wie lange dauert der Gutschein?",
+        "promptAr": "كم يستغرق؟",
+        "options": [
+          "sofort online",
+          "vier bis sechs Wochen",
+          "ein Jahr"
+        ],
+        "answer": "vier bis sechs Wochen",
+        "explanationAr": "الدليل: Bearbeitung etwa vier bis sechs Wochen, weil Bezirke überlastet sind. — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-34-q3",
+        "type": "mc",
+        "promptDe": "Was kostet Kita in Berlin?",
+        "promptAr": "كم في برلين؟",
+        "options": [
+          "einkommensabhängig überall",
+          "einkommensabhängig mit Geschwisterrabatt",
+          "beitragsfrei, außer Essen (23 €)"
+        ],
+        "answer": "beitragsfrei, außer Essen (23 €)",
+        "explanationAr": "الدليل: In Berlin beitragsfrei, außer Essen (23 €). — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "In Berlin brauchen Sie einen Kita-Gutschein vom Jugendamt, obwohl viele Kitas erst nach Zusage des Gutscheins zusagen, weil die Finanzierung sonst unsicher wäre.",
+      "Bearbeitung etwa vier bis sechs Wochen, weil Bezirke überlastet sind.",
+      "Eingewöhnung läuft nach Berliner Modell, weil Bindung wichtig ist, obwohl viele Eltern sie abkürzen wollen."
+    ],
+    "cultural_theme": "Familie & Kita",
+    "cultural_note": "Kita-Platz knapp in Großstädten: Anmeldung bei Kitas + Kita-Gutschein (Berlin) bzw. Bedarfsanzeige beim Jugendamt, 4-6 Wochen mit Meldebescheinigung+Arbeitsnachweis. Berlin beitragsfrei seit 2018 außer Essensgeld (~23€); andere Länder einkommensabhängig (0-600€) mit Geschwisterrabatt. Eingewöhnung nach Berliner Modell (1-3 Wochen mit Eltern) Standard — Kürzen schadet, obwohl gewünscht. Schulpflicht ab 6 J.",
+    "culturalNoteAr": "أماكن الحضانة نادرة: تسجيل بالحضانات + قسيمة (برلين) أو إشعار بالمكتب، 4-6 أسابيع بشهادة سكن+عمل. برلين مجاني إلا 23€؛ ولايات حسب الدخل بخصم إخوة. التأقلم 1-3 أسابيع مع الوالدين."
+  },
+  {
+    "id": "d-b2-35",
+    "level": "B2",
+    "titleDe": "Deutschlandticket und Führerschein: Umschreibung",
+    "titleAr": "تذكرة ألمانيا وتبديل رخصة القيادة",
+    "ort": "Bürgeramt — Verkehr",
+    "lines": [
+      {
+        "who": "Sachbearbeiter",
+        "de": "Guten Tag — Sie wollen das Deutschlandticket kündigen?",
+        "ar": "مرحبًا — تريد إلغاء تذكرة ألمانيا؟"
+      },
+      {
+        "who": "Karim",
+        "de": "Nein, ich nutze es täglich, weil es alle Nah- und Regionalzüge abdeckt, obwohl IC/ICE ausgeschlossen sind. Ich frage wegen meines tunesischen Führerscheins.",
+        "ar": "لا، أستخدمها يوميًا لأنها تغطي كل المحلي والإقليمي رغم استثناء IC/ICE. أسأل عن رخصتي التونسية."
+      },
+      {
+        "who": "Sachbearbeiter",
+        "de": "Richtig — Deutschlandticket monatlich kündbar, gilt nicht in Fernzügen, obwohl viele das denken. Ihr Führerschein ist sechs Monate nach Anmeldung gültig, danach brauchen Sie die Umschreibung.",
+        "ar": "صحيح — شهرية قابلة للإلغاء، لا تشمل القطارات السريعة رغم اعتقاد الكثيرين. رخصتك سارية 6 أشهر بعد التسجيل ثم تحتاج التبديل."
+      },
+      {
+        "who": "Karim",
+        "de": "Muss ich dafür Theorie und Praxis neu machen, obwohl ich seit zehn Jahren fahre?",
+        "ar": "هل أعيد النظري والعملي رغم قيادتي منذ 10 سنوات؟"
+      },
+      {
+        "who": "Sachbearbeiter",
+        "de": "In der Regel ja — Sie melden sich in einer Fahrschule an, weil die Führerscheinstelle Übersetzung und Sehtest verlangt, obwohl Erfahrung angerechnet wird.",
+        "ar": "عادة نعم — تسجل بمدرسة قيادة لأن الإدارة تطلب ترجمة وفحص نظر رغم احتساب الخبرة."
+      },
+      {
+        "who": "Karim",
+        "de": "Verstanden. Und das Ticket kann ich weiter nutzen, während ich auf die Prüfung warte, weil Busse ohnehin fahren?",
+        "ar": "مفهوم. وأستمر باستخدام التذكرة أثناء انتظار الامتحان لأن الحافلات تسير أصلًا؟"
+      },
+      {
+        "who": "Sachbearbeiter",
+        "de": "Ja — und kündigen Sie es nicht, obwohl Sie ein Auto planen, weil die Probezeit bei neuer Lizenz streng ist und Parken teuer bleibt.",
+        "ar": "نعم — ولا تلغها رغم تخطيطك لسيارة لأن فترة الاختبار للرخصة الجديدة صارمة والركن مكلف."
+      },
+      {
+        "who": "Karim",
+        "de": "Dann behalte ich es — und buche Sehtest und Erste-Hilfe-Kurs diese Woche.",
+        "ar": "إذًا أحتفظ بها — وأحجز فحص النظر ودورة إسعافات هذا الأسبوع."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-35-q1",
+        "type": "mc",
+        "promptDe": "Wofür gilt das Deutschlandticket?",
+        "promptAr": "لما تغطي؟",
+        "options": [
+          "Nah- und Regionalzüge, nicht IC/ICE",
+          "alle Züge inklusive IC/ICE",
+          "nur Busse"
+        ],
+        "answer": "Nah- und Regionalzüge, nicht IC/ICE",
+        "explanationAr": "الدليل: «alle Nah- und Regionalzüge abdeckt, obwohl IC/ICE ausgeschlossen sind». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-35-q2",
+        "type": "mc",
+        "promptDe": "Wie lange gilt ein tunesischer Führerschein?",
+        "promptAr": "كم صلاحية الرخصة التونسية؟",
+        "options": [
+          "ein Jahr unbefristet",
+          "sechs Monate nach Anmeldung",
+          "nur mit Deutschlandticket"
+        ],
+        "answer": "sechs Monate nach Anmeldung",
+        "explanationAr": "الدليل: «sechs Monate nach Anmeldung gültig, danach brauchen Sie die Umschreibung». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-35-q3",
+        "type": "mc",
+        "promptDe": "Was braucht Karim für die Umschreibung?",
+        "promptAr": "ماذا يحتاج للتبديل؟",
+        "options": [
+          "nur Kündigung des Tickets",
+          "automatische Umschreibung ohne Prüfung",
+          "Fahrschule, Übersetzung und Sehtest"
+        ],
+        "answer": "Fahrschule, Übersetzung und Sehtest",
+        "explanationAr": "الدليل: «weil die Führerscheinstelle Übersetzung und Sehtest verlangt». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Ich nutze es täglich, weil es alle Nah- und Regionalzüge abdeckt, obwohl IC/ICE ausgeschlossen sind.",
+      "Ihr Führerschein ist sechs Monate nach Anmeldung gültig, danach brauchen Sie die Umschreibung.",
+      "Sie melden sich in einer Fahrschule an, weil die Führerscheinstelle Übersetzung und Sehtest verlangt, obwohl Erfahrung angerechnet wird."
+    ],
+    "cultural_theme": "Verkehr & Deutschlandticket",
+    "cultural_note": "Deutschlandticket monatlich kündbar, ~49-58€ (Preis ändert sich jährlich), gilt für ÖPNV + Regionalzüge, nicht IC/ICE/FLIX — obwohl oft verwechselt. Führerschein aus Drittstaat (Tunesien etc.) 6 Monate nach Anmeldung gültig, dann Umschreibung mit Theorie+Praxis (Fahrschule, Übersetzung, Sehtest, Erste Hilfe). Probezeit 2 Jahre bei Neuerteilung, strenger bei Verstößen. Ticket behalten lohnt, weil Parken+Versicherung teuer, obwohl Auto geplant.",
+    "culturalNoteAr": "تذكرة ألمانيا شهرية ~49-58€ قابلة للإلغاء، للنقل العام والإقليمي لا السريع — رغم الخلط. رخصة دولة ثالثة 6 أشهر بعد التسجيل ثم تبديل بنظري+عملي (مدرسة، ترجمة، نظر، إسعاف). فترة اختبار سنتين عند الجديد صارمة. الاحتفاظ مجدٍ لأن الركن والتأمين مكلف رغم التخطيط لسيارة."
+  },
+  {
+    "id": "d-b2-36",
+    "level": "B2",
+    "titleDe": "Notruf 112, 110 und 116117: wann was wählen?",
+    "titleAr": "طوارئ 112 و110 و116117: متى نتصل بمن؟",
+    "ort": "Rettungsleitstelle — Beratung",
+    "lines": [
+      {
+        "who": "Disponent",
+        "de": "Notruf — was ist passiert und wo sind Sie?",
+        "ar": "طوارئ — ماذا حدث وأين أنت؟"
+      },
+      {
+        "who": "Sami",
+        "de": "Mein Nachbar ist gestürzt und blutet am Kopf, weil er im Bad ausgerutscht ist, obwohl er sonst sehr sicher läuft.",
+        "ar": "جاري سقط وينزف برأسه لأنه انزلق بالحمام رغم أنه عادة ثابت المشي."
+      },
+      {
+        "who": "Disponent",
+        "de": "Bitte wählen Sie 112 für Rettung und Feuerwehr — 110 ist nur Polizei, obwohl viele beides verwechseln, weil beide dreistellig sind.",
+        "ar": "اتصل 112 للإنقاذ والإطفاء — 110 شرطة فقط رغم خلط الكثيرين لأنهما ثلاثي."
+      },
+      {
+        "who": "Sami",
+        "de": "Er ist bei Bewusstsein, aber schwindelig. Soll ich trotzdem sofort anrufen, obwohl er sagt, es gehe schon?",
+        "ar": "واعٍ لكنه دوار. أأتصل فورًا رغم قوله تحسن؟"
+      },
+      {
+        "who": "Disponent",
+        "de": "Ja — bei Kopfverletzungen immer 112, weil Blutungen gefährlich sind, obwohl die Person wach wirkt. Bleiben Sie bei ihm, bis Hilfe kommt.",
+        "ar": "نعم — إصابات الرأس دائمًا 112 لأن النزف خطر رغم اليقظة. ابق معه حتى وصول المساعدة."
+      },
+      {
+        "who": "Sami",
+        "de": "Und wann nutze ich 116117, weil mein Hausarzt keine Termine hat?",
+        "ar": "ومتى أستخدم 116117 لأن طبيبي بلا مواعيد؟"
+      },
+      {
+        "who": "Disponent",
+        "de": "Für den ärztlichen Bereitschaftsdienst außerhalb der Sprechzeiten — also abends, Wochenende, obwohl keine Lebensgefahr besteht. Notapotheken finden Sie per Aushang und online, weil jede Region eine Notdienstapotheke hat.",
+        "ar": "لخدمة المناوبة خارج ساعات العيادة — مساءً وعطلة رغم عدم خطر حياة. صيدليات مناوبة باللافتة وإلكترونيًا لأن كل منطقة لديها واحدة."
+      },
+      {
+        "who": "Sami",
+        "de": "Danke — ich rufe jetzt 112 und nenne Adresse, Etage und Rückrufnummer.",
+        "ar": "شكرًا — أتصل الآن 112 وأذكر العنوان والطابق ورقم الرجوع."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-36-q1",
+        "type": "mc",
+        "promptDe": "Welche Nummer für Rettung/Feuerwehr?",
+        "promptAr": "أي رقم للإنقاذ/إطفاء؟",
+        "options": [
+          "112",
+          "110",
+          "116117"
+        ],
+        "answer": "112",
+        "explanationAr": "الدليل: «112 für Rettung und Feuerwehr — 110 ist nur Polizei». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-36-q2",
+        "type": "mc",
+        "promptDe": "Warum sofort 112 bei Kopfverletzung?",
+        "promptAr": "لماذا فورًا رغم اليقظة؟",
+        "options": [
+          "weil Polizei zuständig ist",
+          "weil Blutungen gefährlich sind, obwohl die Person wach wirkt",
+          "weil Hausarzt keine Termine hat"
+        ],
+        "answer": "weil Blutungen gefährlich sind, obwohl die Person wach wirkt",
+        "explanationAr": "الدليل: «weil Blutungen gefährlich sind, obwohl die Person wach wirkt». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-36-q3",
+        "type": "mc",
+        "promptDe": "Wofür 116117?",
+        "promptAr": "ما 116117؟",
+        "options": [
+          "nur für Apotheken-Notdienst",
+          "Feuerwehr bei Lebensgefahr",
+          "ärztlicher Bereitschaftsdienst außerhalb der Sprechzeiten"
+        ],
+        "answer": "ärztlicher Bereitschaftsdienst außerhalb der Sprechzeiten",
+        "explanationAr": "الدليل: «Für den ärztlichen Bereitschaftsdienst außerhalb der Sprechzeiten — also abends, Wochenende, obwohl keine Lebensgefahr besteht». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Bitte wählen Sie 112 für Rettung und Feuerwehr — 110 ist nur Polizei, obwohl viele beides verwechseln, weil beide dreistellig sind.",
+      "Bei Kopfverletzungen immer 112, weil Blutungen gefährlich sind, obwohl die Person wach wirkt.",
+      "Für den ärztlichen Bereitschaftsdienst außerhalb der Sprechzeiten — also abends, Wochenende, obwohl keine Lebensgefahr besteht."
+    ],
+    "cultural_theme": "Notruf & Bereitschaftsdienst",
+    "cultural_note": "112 Rettung+Feuerwehr (EU-weit), 110 Polizei — Verwechslung häufig, weil beide dreistellig. Bei Sturz mit Kopfblutung immer 112, obwohl wach — Blutung kann zunehmen. 116117 ärztlicher Bereitschaftsdienst abends/Wochenende/Feiertag, wenn Hausarzt zu und keine Lebensgefahr; vermittelt Notpraxis/Hausbesuch. Notapotheken per Aushang+online (Notdienst-Suche), Gift-Notruf je Bundesland. Ruhezeiten: keine lauten Arbeiten 6-22h meist erlaubt, sonst Bußgeld — obwohl viele es versuchen.",
+    "culturalNoteAr": "112 إنقاذ+إطفاء (EU)، 110 شرطة — خلط شائع. سقوط بنزف رأس دائمًا 112 رغم اليقظة. 116117 مناوبة طبية مساءً/عطل بلا خطر حياة؛ يحول لعيادة مناوبة/زيارة. صيدليات مناوبة باللافتة+إلكتروني. هدوء 6-22 مسموح عمومًا وإلا غرامة رغم المحاولات."
+  },
+  {
+    "id": "d-b2-37",
+    "level": "B2",
+    "titleDe": "Feiertage, Urlaub und Krankmeldung: AU richtig",
+    "titleAr": "الأعياد والإجازة والتبليغ المرضي",
+    "ort": "Personalabteilung",
+    "lines": [
+      {
+        "who": "Personaler",
+        "de": "Ihr erster Arbeitstag ist Montag — kennen Sie die Regeln bei Krankheit?",
+        "ar": "أول يوم الاثنين — هل تعرف قواعد المرض؟"
+      },
+      {
+        "who": "Nora",
+        "de": "Ich melde mich morgens sofort telefonisch krank, weil das Arbeitsrecht Unverzüglichkeit verlangt, obwohl manche erst später schreiben.",
+        "ar": "أبلغ صباحًا هاتفيًا فورًا لأن القانون يوجب بلا تأخير رغم تأخر بعضهم كتابة."
+      },
+      {
+        "who": "Personaler",
+        "de": "Genau. Die AU-Bescheinigung kommt heute elektronisch vom Arzt, obwohl viele noch Papier kennen, weil die eAU seit 2023 Pflicht ist.",
+        "ar": "تمامًا. شهادة العجز اليوم إلكترونية من الطبيب رغم معرفة الكثيرين الورق لأن eAU واجبة منذ 2023."
+      },
+      {
+        "who": "Nora",
+        "de": "Ab wann brauche ich sie, obwohl mein Betrieb drei Tage ohne Attest erlaubt?",
+        "ar": "متى أحتاجها رغم سماح شركتي 3 أيام بلا شهادة؟"
+      },
+      {
+        "who": "Personaler",
+        "de": "Laut Gesetz ab viertem Tag, aber betriebliche Regel drei Tage geht vor — also am vierten Tag muss sie da sein, weil Betriebsvereinbarung strenger sein darf, obwohl Gesetz vier sagt.",
+        "ar": "قانونًا من الرابع، لكن قاعدة الشركة 3 أيام تقدم — أي باليوم الرابع يجب وجودها لأن اتفاق التشغيل يجوز أشد رغم قول القانون أربعة."
+      },
+      {
+        "who": "Nora",
+        "de": "Und Urlaub? Der Sonntag und die Feiertage zählen nicht, weil NRW viele Feiertage hat, obwohl Berlin weniger hat?",
+        "ar": "والإجازة؟ الأحد والأعياد لا تحتسب لأن شمال-راين به أعياد كثيرة رغم أن برلين أقل؟"
+      },
+      {
+        "who": "Personaler",
+        "de": "Richtig — Urlaub nur Werktage Mo-Sa, Sonn-/Feiertage nicht. Entgeltfortzahlung sechs Wochen, danach Krankengeld ca. 70% brutto, obwohl viele weniger erwarten, weil Netto anders wirkt.",
+        "ar": "صحيح — إجازة أيام عمل اثنين-سبت فقط، لا أحد/أعياد. استمرار راتب 6 أسابيع ثم تعويض مرضي ~70% إجمالي رغم توقع كثيرين أقل لأن الصافي يختلف."
+      },
+      {
+        "who": "Nora",
+        "de": "Danke — dann plane ich Feiertage je Bundesland und halte die AU-Frist penibel ein.",
+        "ar": "شكرًا — سأخطط الأعياد حسب الولاية وألتزم بمهلة الشهادة بدقة."
+      }
+    ],
+    "questions": [
+      {
+        "id": "d-b2-37-q1",
+        "type": "mc",
+        "promptDe": "Wann telefonisch krankmelden?",
+        "promptAr": "متى نبلغ هاتفيًا؟",
+        "options": [
+          "morgens sofort, weil Unverzüglichkeit verlangt",
+          "erst nach drei Tagen",
+          "nur per eAU"
+        ],
+        "answer": "morgens sofort, weil Unverzüglichkeit verlangt",
+        "explanationAr": "الدليل: «morgens sofort telefonisch krank, weil das Arbeitsrecht Unverzüglichkeit verlangt». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-37-q2",
+        "type": "mc",
+        "promptDe": "Wann AU-Bescheinigung nach Betriebsregel?",
+        "promptAr": "متى الشهادة بقاعدة الشركة؟",
+        "options": [
+          "ab siebtem Tag immer",
+          "am vierten Tag, weil Betriebsvereinbarung strenger darf",
+          "nur wenn Arzt Papier gibt"
+        ],
+        "answer": "am vierten Tag, weil Betriebsvereinbarung strenger darf",
+        "explanationAr": "الدليل: «am vierten Tag muss sie da sein, weil Betriebsvereinbarung strenger sein darf, obwohl Gesetz vier sagt». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      },
+      {
+        "id": "d-b2-37-q3",
+        "type": "mc",
+        "promptDe": "Was zählt nicht zum Urlaub?",
+        "promptAr": "ما لا يحتسب إجازة؟",
+        "options": [
+          "Werktage Mo-Sa",
+          "Krankengeld",
+          "Sonn- und Feiertage"
+        ],
+        "answer": "Sonn- und Feiertage",
+        "explanationAr": "الدليل: «Urlaub nur Werktage Mo-Sa, Sonn-/Feiertage nicht». — الفخّ: خيار يبدو مسموعًا لكنه خارج السياق.",
+        "falle": true
+      }
+    ],
+    "dictation": [
+      "Ich melde mich morgens sofort telefonisch krank, weil das Arbeitsrecht Unverzüglichkeit verlangt, obwohl manche erst später schreiben.",
+      "Die AU-Bescheinigung kommt heute elektronisch vom Arzt, obwohl viele noch Papier kennen, weil die eAU seit 2023 Pflicht ist.",
+      "Urlaub nur Werktage Mo-Sa, Sonn-/Feiertage nicht."
+    ],
+    "cultural_theme": "Arbeit & Soziales — Feiertage",
+    "cultural_note": "Ruhezeiten: Sonn-/Feiertage ganztägig Ruhe (keine lauten Arbeiten/umzüge) — obwohl viele es versuchen, kann Ordnungswidrigkeit kosten. Krankmeldung: morgens sofort telefonisch/personlich (§5 EFZG), AU eAU seit 2023 elektronisch an Kasse+Arbeitgeber, obwohl Papier früher üblich; Betrieb darf AU ab 1. Tag verlangen, gesetzlich ab 4. — 3-Tage-Regel als betriebliche Verschärfung ist üblich. Urlaub nur Werktage Mo-Sa, Sonn/Feiertag nicht; NRW 13 Feiertage, Berlin 9 — obwohl Bund viele gemeinsame hat. Entgeltfortzahlung 6 Wochen, dann Krankengeld 70% brutto/90% netto (§47 SGB V).",
+    "culturalNoteAr": "هدوء الأحد/الأعياد طوال اليوم (لا نقل/أعمال صاخبة) — رغم المحاولات قد تكلف مخالفة. تبليغ مرضي صباحًا فورًا هاتفيًا، eAU إلكترونية منذ 2023 للكاسة+صاحب العمل رغم ورقية سابقة؛ الشركة قد تطلب من يوم1 وقانونًا من 4 — قاعدة 3 أيام تشديد شائع. الإجازة أيام عمل اثنين-سبت فقط. استمرار راتب 6 أسابيع ثم تعويض 70% إجمالي/90% صافي."
   }
 ]

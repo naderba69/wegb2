@@ -64,6 +64,8 @@ export interface VocabCard {
   exampleDe?: string;
   exampleAr?: string;
   img?: string;
+  /** تصريف الفعل (Präsens 3. Sg., Präteritum, Perfekt) — P2 تحسينية للمفردات الفعلية */
+  formen?: string;
   level: Level;
   tags?: string[];
 }
