@@ -328,7 +328,7 @@ const vocabRepeatAudit = (() => {
   ok(p.fehler?.[k0]?.treffer === 0, "F6 نجاح يصفّر treffer");
   ok((p.fehler?.[k0]?.srs.interval ?? 0) >= (before2?.srs.interval ?? 0), "F7 النجاح يمدّد الفاصل");
   p = gradeFehlerIn(p, "key-غير-موجود", true);
-  ok(true, "F8 مفتاح مجهول بلا انفجار");
+  ok(Object.keys(p.fehler ?? {}).length === 1 && !p.fehler?.["key-غير-موجود"] && p.fehler?.[k0] !== undefined, "F8 مفتاح مجهول بلا انفجار");
   ok(dueFehler(empty()).length === 0, "F9 due الفارغ = []");
   ok(dueFehler(p).length <= 8, "F10 due بسقفه");
   ok(weakTopics(empty()).length === 0, "F11 weakTopics فارغ");
@@ -10332,7 +10332,7 @@ void 0;
   const b2Count = dialoguesArr.filter((d:any)=>d.level==="B2").length;
   const b2Klassik = dialoguesArr.filter((d:any)=>/^d-b2-\d{2}$/.test(d.id)).length;
   // R145: الـ29 المراجعة هي السلسلة الكلاسيكية (01–27 و31–32 بفجوة 28–30 كـA2)؛ البنك الحي أضاف ht/hoer/dlg فصار المجموع 34
-  ok(true, `K206j مراجعة B2 مكتملة: 41 كلاسيكياً محفوظة والبنك الحي 57 بعد R162+12 (فعلياً ${b2Count}/${b2Klassik})`);
+  ok(b2Klassik === 49 && b2Count === 57, `K206j مراجعة B2 مكتملة: 41 كلاسيكياً محفوظة والبنك الحي 57 بعد R162+12 (فعلياً ${b2Count}/${b2Klassik})`);
 /* ═══ K207 — أول دفعة A0 d-a0-01..03 (R133). ═══ */
 {
   const reviewA001 = JSON.parse(readFileSync("docs/content-review-a0-dialogues-01-2026-10-08.json", "utf8")) as any;
