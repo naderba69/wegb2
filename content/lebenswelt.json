@@ -243,26 +243,6 @@
           "ar": "هل الاثنين عطلة رسمية؟"
         }
       ]
-    },
-    {
-      "id": "lw-13",
-      "titel": "Anerkennung ausländischer Abschlüsse",
-      "ar": "الاعتراف بالمؤهلات الأجنبية",
-      "textAr": "للاعتراف بشهادتك الأجنبية (Anerkennung) تقدّم طلباً إلى الجهة المختصة حسب المهنة والولاية مع ترجمة مصدّقة وكشف درجات وسيرة ذاتية. للتمريض يمرّ الطريق عبر Anerkennungsbescheid ثم Anpassungslehrgang أو Kenntnisprüfung للوصول إلى Vollanerkennung.",
-      "saetze": [
-        {
-          "de": "Ich beantrage die Anerkennung meines Abschlusses.",
-          "ar": "أقدّم طلب الاعتراف بشهادتي."
-        },
-        {
-          "de": "Welche Dokumente benötigen Sie beglaubigt übersetzt?",
-          "ar": "ما الوثائق التي تحتاجونها مترجمة ومصدّقة؟"
-        },
-        {
-          "de": "Brauche ich einen Anpassungslehrgang oder eine Kenntnisprüfung?",
-          "ar": "هل أحتاج دورة تكيّف أم امتحان معرفة؟"
-        }
-      ]
     }
   ],
   "umgang": [

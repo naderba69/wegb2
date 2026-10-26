@@ -2929,7 +2929,7 @@
         ],
         "img": "/cards/kommentar.webp",
         "farbe": "BLAU",
-        "exampleDe": "Der Kommentar auf Seite zwei vertritt eine klare Meinung, der Bericht daneben ni…",
+        "exampleDe": "Der Kommentar auf Seite zwei vertritt eine klare Meinung, der Bericht daneben nicht.",
         "exampleAr": "—"
       },
       {
@@ -4131,7 +4131,7 @@
         "tags": [
           "beziehungen"
         ],
-        "exampleDe": "Die beiden Seiten haben sich auf eine Frist von zwei Wochen geeinigt — Infinitiv…",
+        "exampleDe": "Die beiden Seiten haben sich auf eine Frist von zwei Wochen geeinigt — Infinitiv: sich einigen auf.",
         "exampleAr": "—"
       }
     ]
@@ -18491,7 +18491,7 @@
           "bildung-politik"
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
-        "exampleDe": "Ein kompetenzorientierter Unterricht fragt, was Schüler können, nicht was sie wi…",
+        "exampleDe": "Ein kompetenzorientierter Unterricht fragt, was Schüler können, nicht was sie wissen.",
         "exampleAr": "التدريس الموجَّه نحو الكفاية يسأل ما يستطيعه التلاميذ لا ما يعرفونه.",
         "ant": [
           "defizitorientiert"
@@ -19143,7 +19143,7 @@
         "article": "die",
         "farbe": "ROT",
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Aus der Fürsorgepflicht folgt, dass der Arbeitgeber Überlastung ernst nehmen mus…",
+        "exampleDe": "Aus der Fürsorgepflicht folgt, dass der Arbeitgeber Überlastung ernst nehmen muss.",
         "exampleAr": "من واجب الرعاية يترتب أن على صاحب العمل أخذ الإرهاق بجدّية."
       },
       {
@@ -19626,7 +19626,7 @@
         ],
         "article": "die",
         "farbe": "ROT",
-        "exampleDe": "Bei der Elektrolyse wird Wasser mit Strom in Wasserstoff und Sauerstoff getrennt…",
+        "exampleDe": "Bei der Elektrolyse wird Wasser mit Strom in Wasserstoff und Sauerstoff getrennt.",
         "exampleAr": "في التحليل الكهربائي يُفصل الماء بالكهرباء إلى هيدروجين وأكسجين."
       },
       {
@@ -20176,7 +20176,7 @@
         "article": "die",
         "farbe": "ROT",
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Ein Bauernhof auf der Packung ist Irreführung, wenn das Fleisch aus der Fabrik k…",
+        "exampleDe": "Ein Bauernhof auf der Packung ist Irreführung, wenn das Fleisch aus der Fabrik kommt.",
         "exampleAr": "مزرعة على العبوة تضليل إذا كان اللحم من المصنع."
       },
       {
@@ -20726,7 +20726,7 @@
         "article": "die",
         "farbe": "ROT",
         "aussprache": "w = «ڤ» · z = «تس»",
-        "exampleDe": "Die Zweckentfremdung von Wohnungen als Ferienunterkunft ist genehmigungspflichti…",
+        "exampleDe": "Die Zweckentfremdung von Wohnungen als Ferienunterkunft ist genehmigungspflichtig.",
         "exampleAr": "تحوير الشقق إلى مساكن سياحية يخضع للترخيص."
       },
       {
@@ -37356,6 +37356,7 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "article": "der",
+        "plural": "die Nachmieter",
         "farbe": "BLAU"
       },
       {
@@ -56072,7 +56073,7 @@
         ],
         "article": "die",
         "farbe": "ROT",
-        "exampleDe": "Bei der Datenverarbeitung müssen personenbezogene Informationen geschützt werden…",
+        "exampleDe": "Bei der Datenverarbeitung müssen personenbezogene Informationen geschützt werden.",
         "exampleAr": "—"
       },
       {
@@ -56895,7 +56896,7 @@
         "ar": "تمثيل الولايات",
         "id": "b2-politik-demokratie-007",
         "level": "B2",
-        "exampleDe": "Die Ländervertretung im Bundesrat bringt Interessen der Länder in die Bundespoli…",
+        "exampleDe": "Die Ländervertretung im Bundesrat bringt Interessen der Länder in die Bundespolitik ein.",
         "exampleAr": "—",
         "tags": [
           "b2-politik-demokratie"
@@ -57109,7 +57110,7 @@
         "ar": "التأمين الاجتماعي",
         "id": "b2-politik-demokratie-024",
         "level": "B2",
-        "exampleDe": "Die Sozialversicherung umfasst unter anderem die Kranken- und Rentenversicherung…",
+        "exampleDe": "Die Sozialversicherung umfasst unter anderem die Kranken- und Rentenversicherung.",
         "exampleAr": "—",
         "tags": [
           "b2-politik-demokratie"
@@ -57147,7 +57148,7 @@
         "ar": "الاتحاد الأوروبي",
         "id": "b2-politik-demokratie-027",
         "level": "B2",
-        "exampleDe": "Die Europäische Union ermöglicht gemeinsame Entscheidungen in vielen Politikfeld…",
+        "exampleDe": "Die Europäische Union ermöglicht gemeinsame Entscheidungen in vielen Politikfeldern.",
         "exampleAr": "—",
         "tags": [
           "b2-politik-demokratie"
