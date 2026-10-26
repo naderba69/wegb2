@@ -243,6 +243,26 @@
           "ar": "هل الاثنين عطلة رسمية؟"
         }
       ]
+    },
+    {
+      "id": "lw-13",
+      "titel": "Anerkennung ausländischer Abschlüsse (Pflege/Berufe)",
+      "ar": "معادلة الشهادة الأجنبية",
+      "textAr": "للاعتراف بشهادتك (Pflege/Berufe reglementiert): قدّم طلباً لدى Anerkennungsstelle في ولايتك مع ترجمة محلفة وسيرة وتأمين. إذا وجدت فروق جوهرية تختار بين Kenntnisprüfung (اختبار معرفة) أو Anpassungslehrgang (تدريب تكييف) في مستشفى/مدرسة مهنية. أثناء الانتظار قد تعمل بـ Berufserlaubnis مؤقتة. اللغة المطلوبة غالباً B2 + Fachsprache Pflege. هذه معلومات توجيهية ليست استشارة قانونية.",
+      "saetze": [
+        {
+          "de": "Wo stelle ich den Antrag auf Anerkennung?",
+          "ar": "أين أقدّم طلب المعادلة؟"
+        },
+        {
+          "de": "Was ist der Unterschied zwischen Kenntnisprüfung und Anpassungslehrgang?",
+          "ar": "ما الفرق بين اختبار المعرفة وتدريب التكييف؟"
+        },
+        {
+          "de": "Darf ich mit Berufserlaubnis arbeiten?",
+          "ar": "هل يجوز العمل بتصريح مؤقت؟"
+        }
+      ]
     }
   ],
   "umgang": [

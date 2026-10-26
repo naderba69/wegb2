@@ -13788,7 +13788,7 @@ function collectR262(dir: string, out: string[] = []): string[] {
     "K291b المحطة لا تفتح حوارًا بلا مفتاح+موافقة، وتفصح عن حدّها، ومركّبة في /ueben");
 }
 
-// ===== K293 (R200 · Lebenswelt/Anerkennung + Umgangssprache): 12 Behörden-/
+// ===== K293 (R200 · Lebenswelt/Anerkennung + Umgangssprache): 12+ Behörden-/
 // Lebens-Karten mit Schlüsselphrasen (Anerkennung der Pflege prominent),
 // 16 Umgangs-Ausdrücke mit Situation; ehrlich als Orientierung markiert. =====
 {
@@ -13797,11 +13797,11 @@ function collectR262(dir: string, out: string[] = []): string[] {
     umgang: { de: string; situationAr: string }[];
   };
   const lwSrc = readFileSync("components/lebenswelt.tsx", "utf8");
-  ok(lw.themen.length === 12 && lw.themen.every((t) => t.textAr.length > 80 && t.saetze.length >= 3 && t.saetze.every((s) => s.de && s.ar)) &&
+  ok(lw.themen.length >= 12 && lw.themen.every((t) => t.textAr.length > 80 && t.saetze.length >= 3 && t.saetze.every((s) => s.de && s.ar)) &&
      lw.themen.some((t) => t.id === "lw-03" && t.textAr.includes("Kenntnisprüfung") && t.textAr.includes("Anpassungslehrgang")) &&
      lw.umgang.length === 16 && lw.umgang.every((e) => e.de && e.situationAr) &&
      lwSrc.includes("ليست استشارة قانونية") && readFileSync("app/ueben/page.tsx", "utf8").includes("<LebensweltStation />"),
-    "K293 الحياة في ألمانيا: 12 بطاقة مؤسسات بعبارات جاهزة وبطاقة الاعتراف التمريضي كاملة المسارات، و16 تعبير شارع بسياقه — توجيه لا استشارة قانونية");
+    "K293 الحياة في ألمانيا: 12+ بطاقة مؤسسات بعبارات جاهزة وبطاقة الاعتراف التمريضي كاملة المسارات، و16 تعبير شارع بسياقه — توجيه لا استشارة قانونية");
 }
 
 // ===== K294 (R201 · CI): .github/workflows/ci.yml fährt alle Tore bei jedem
