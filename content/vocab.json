@@ -100,7 +100,8 @@
         "img": "/cards/kommen.webp",
         "syn": [
           "ankommen"
-        ]
+        ],
+        "formen": "kommt, kam, ist gekommen"
       },
       {
         "id": "v008",
@@ -117,7 +118,8 @@
         "aussprache": "w = «ڤ»",
         "syn": [
           "leben"
-        ]
+        ],
+        "formen": "wohnt, wohnte, hat gewohnt"
       },
       {
         "id": "v009",
@@ -166,7 +168,8 @@
         "tags": [
           "vorstellen"
         ],
-        "img": "/cards/lernen.webp"
+        "img": "/cards/lernen.webp",
+        "formen": "lernt, lernte, hat gelernt"
       },
       {
         "id": "v012",
@@ -180,7 +183,8 @@
           "vorstellen"
         ],
         "img": "/cards/arbeiten.webp",
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "arbeitet, arbeitete, hat gearbeitet"
       },
       {
         "id": "v013",
@@ -448,7 +452,8 @@
         "aussprache": "z = «تس»",
         "syn": [
           "begleichen"
-        ]
+        ],
+        "formen": "bezahlt, bezahlte, hat bezahlt"
       },
       {
         "id": "v150",
@@ -1241,7 +1246,8 @@
         "level": "A1",
         "tags": [
           "familie"
-        ]
+        ],
+        "formen": "heiratet, heiratete, hat geheiratet"
       },
       {
         "id": "r311a1-012",
@@ -1497,7 +1503,8 @@
         "img": "/cards/reservieren.webp",
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Ich reserviere einen Tisch für zwei Personen.",
-        "exampleAr": "أحجز طاولة لشخصين."
+        "exampleAr": "أحجز طاولة لشخصين.",
+        "formen": "reserviert, reservierte, hat reserviert"
       },
       {
         "id": "v059",
@@ -1547,7 +1554,8 @@
         "exampleAr": "نوفّر مالاً للعطلة.",
         "syn": [
           "ansparen"
-        ]
+        ],
+        "formen": "spart, sparte, hat gespart"
       },
       {
         "id": "v062",
@@ -1674,7 +1682,8 @@
         "img": "/cards/putzen.webp",
         "aussprache": "z = «تس»",
         "exampleDe": "Am Samstag putzen wir zusammen die Küche und das Bad.",
-        "exampleAr": "يوم السب…"
+        "exampleAr": "يوم السب…",
+        "formen": "putzt, putzte, hat geputzt"
       },
       {
         "id": "v070",
@@ -2022,7 +2031,8 @@
         "img": "/cards/glauben.webp",
         "syn": [
           "meinen"
-        ]
+        ],
+        "formen": "glaubt, glaubte, hat geglaubt"
       },
       {
         "id": "v076",
