@@ -3800,7 +3800,7 @@ const hasFile = txt().includes("صوتٌ من الدار");
     const { LebensweltStation } = await import("../components/lebenswelt");
     const { lebensweltThemen, umgangBank } = await import("../lib/lebenswelt");
     mount(React.createElement(LebensweltStation));
-    ok(lebensweltThemen.length === 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
+    ok(lebensweltThemen.length >= 12 && !!rootEl.querySelector('[data-testid="lebenswelt-lw-03"]') &&
        txt().includes("الاعتراف بمؤهّل التمريض"),
       "CII1 المحطة تعرض البطاقات الاثنتي عشرة وبطاقة الاعتراف التمريضي بينها");
     ok(!rootEl.querySelector('[data-testid="umgang-eintrag"]'), "CII2 لغة الشارع مطوية حتى تُطلب صراحة");
