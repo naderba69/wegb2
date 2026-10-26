@@ -7013,7 +7013,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Man kann den Vertrag nur schriftlich kündigen, mit sechs Wochen Frist.",
-        "exampleAr": "لا يمكن…"
+        "exampleAr": "لا يمكن…",
+        "posInfo": "kündigt, kündigte, hat gekündigt"
       },
       {
         "id": "v352",
@@ -7105,7 +7106,8 @@
         ],
         "aussprache": "z = «تس»",
         "exampleDe": "Zusammenleben in einer WG funktioniert nur mit klaren Regeln.",
-        "exampleAr": "العيش مع…"
+        "exampleAr": "العيش مع…",
+        "posInfo": "lebt zusammen, lebte zusammen, hat zusammengelebt"
       },
       {
         "id": "v358",
@@ -7162,7 +7164,8 @@
           "wohnen"
         ],
         "exampleDe": "Die Firma stattet jeden Arbeitsplatz mit zwei Bildschirmen aus.",
-        "exampleAr": "الشركة ت…"
+        "exampleAr": "الشركة ت…",
+        "posInfo": "stattet aus, stattete aus, hat ausgestattet"
       },
       {
         "id": "v362",
@@ -7221,7 +7224,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Er beschwert sich über den Lärm der Nachbarn.",
         "exampleAr": "يشكو من ضجيج الجيران.",
-        "plural": "die Debatten"
+        "plural": "die Debatten",
+        "posInfo": "beschwert sich über, beschwerte sich über, hat sich beschwert über"
       },
       {
         "id": "v366",
@@ -7318,7 +7322,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Wir chatten jeden Abend eine halbe Stunde auf Deutsch.",
-        "exampleAr": "ندردش كل…"
+        "exampleAr": "ندردش كل…",
+        "posInfo": "chattet, chattete, hat gechattet"
       },
       {
         "id": "v373",
@@ -7408,7 +7413,8 @@
         ],
         "aussprache": "sp/st في البداية = «شب/شت»",
         "exampleDe": "Am Wochenende streamen wir eine deutsche Serie mit Untertiteln.",
-        "exampleAr": "في نهاية…"
+        "exampleAr": "في نهاية…",
+        "posInfo": "streamt, streamte, hat gestreamt"
       },
       {
         "id": "v379",
@@ -7452,7 +7458,8 @@
           "digital"
         ],
         "exampleDe": "Für den Kurs müssen Sie sich online anmelden.",
-        "exampleAr": "للدورة ي…"
+        "exampleAr": "للدورة ي…",
+        "posInfo": "meldet sich an, meldete sich an, hat sich angemeldet"
       },
       {
         "id": "v382",
@@ -7480,7 +7487,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Vergiss nicht, den Text zu speichern, bevor du das Programm schließt.",
-        "exampleAr": "لا تنسَ…"
+        "exampleAr": "لا تنسَ…",
+        "posInfo": "speichert, speicherte, hat gespeichert"
       },
       {
         "id": "v384",
@@ -7693,7 +7701,8 @@
           "digital"
         ],
         "exampleDe": "Das Konto wurde gehackt, weil das Passwort auch für Spiele galt.",
-        "exampleAr": "الحساب ا…"
+        "exampleAr": "الحساب ا…",
+        "posInfo": "hackt, hackte, hat gehackt"
       },
       {
         "id": "v398",
@@ -7779,7 +7788,8 @@
           "digital"
         ],
         "exampleDe": "Ich muss mein Handy aufladen, der Akku ist fast leer.",
-        "exampleAr": "يجب أن أ…"
+        "exampleAr": "يجب أن أ…",
+        "posInfo": "lädt auf, lud auf, hat aufgeladen"
       },
       {
         "id": "v404",

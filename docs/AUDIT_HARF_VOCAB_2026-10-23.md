@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1080)
+## الأفكار التحسينية (عينة 30/1070)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:g04-wohnen/v351:kündigen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v357:zusammenleben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v361:ausstatten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v365:sich beschweren über` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g05-digital/v372:chatten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g05-digital/v378:streamen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g05-digital/v381:sich anmelden` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g05-digital/v383:speichern` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g05-digital/v397:hacken` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g05-digital/v403:aufladen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g05-digital/v407:aktualisieren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g06-wissenschaft/v415:forschen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g06-wissenschaft/v417:untersuchen` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:g07-schoenheit/v494:wirken auf` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g07-schoenheit/v495:beeindrucken` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g07-schoenheit/v500:übertreiben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g08-kunst-kultur/v508:malen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g08-kunst-kultur/v520:drehen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g08-kunst-kultur/v528:aufführen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g08-kunst-kultur/v530:kritisieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g08-kunst-kultur/v531:rezensieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h01-arbeit-beruf/v569:aufsteigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h01-arbeit-beruf/v578:sich bewerben um` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h01-arbeit-beruf/v585:streiken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h01-arbeit-beruf/v588:beurteilen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h01-arbeit-beruf/v596:in den Ruhestand gehen` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1050 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1040 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)
