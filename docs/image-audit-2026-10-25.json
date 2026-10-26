@@ -700,7 +700,7 @@
     "tid": "b2-genitiv-vor",
     "type": "JPG",
     "verified": true,
-    "grammar": false,
+    "grammar": true,
     "size": 373591
   },
   {
@@ -724,7 +724,7 @@
     "tid": "b2-konditional-bild",
     "type": "JPG",
     "verified": true,
-    "grammar": false,
+    "grammar": true,
     "size": 294724
   },
   {
