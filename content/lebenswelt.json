@@ -1,362 +1,382 @@
 {
- "themen": [
-  {
-   "id": "lw-01",
-   "titel": "Anmeldung beim Bürgeramt",
-   "ar": "تسجيل السكن في مكتب المواطنين",
-   "textAr": "عند الانتقال إلى مسكن في ألمانيا يجب تسجيل عنوانك (Anmeldung) خلال 14 يومًا في Bürgeramt بجواز السفر وعقد الإيجار وتأكيد المؤجّر (Wohnungsgeberbestätigung). تحصل على Meldebescheinigung تحتاجها لكل شيء تقريبًا: الحساب البنكي، الإقامة، العمل.",
-   "saetze": [
+  "themen": [
     {
-     "de": "Ich möchte meinen Wohnsitz anmelden.",
-     "ar": "أريد تسجيل محلّ سكني."
+      "id": "lw-01",
+      "titel": "Anmeldung beim Bürgeramt",
+      "ar": "تسجيل السكن في مكتب المواطنين",
+      "textAr": "عند الانتقال إلى مسكن في ألمانيا يجب تسجيل عنوانك (Anmeldung) خلال 14 يومًا في Bürgeramt بجواز السفر وعقد الإيجار وتأكيد المؤجّر (Wohnungsgeberbestätigung). تحصل على Meldebescheinigung تحتاجها لكل شيء تقريبًا: الحساب البنكي، الإقامة، العمل.",
+      "saetze": [
+        {
+          "de": "Ich möchte meinen Wohnsitz anmelden.",
+          "ar": "أريد تسجيل محلّ سكني."
+        },
+        {
+          "de": "Hier sind mein Pass, der Mietvertrag und die Wohnungsgeberbestätigung.",
+          "ar": "إليك جوازي وعقد الإيجار وتأكيد المؤجّر."
+        },
+        {
+          "de": "Bekomme ich eine Meldebescheinigung?",
+          "ar": "هل أحصل على شهادة تسجيل؟"
+        }
+      ]
     },
     {
-     "de": "Hier sind mein Pass, der Mietvertrag und die Wohnungsgeberbestätigung.",
-     "ar": "إليك جوازي وعقد الإيجار وتأكيد المؤجّر."
+      "id": "lw-02",
+      "titel": "Ausländerbehörde und Aufenthalt",
+      "ar": "مكتب الأجانب والإقامة",
+      "textAr": "تصريح الإقامة (Aufenthaltserlaubnis) يُطلب ويُجدَّد في Ausländerbehörde بموعد مسبق غالبًا عبر الإنترنت. بطاقة الإقامة الإلكترونية (eAT) تستغرق أسابيع بعد الموافقة، وتحصل مؤقتًا على Fiktionsbescheinigung تثبت قانونية بقائك.",
+      "saetze": [
+        {
+          "de": "Ich habe einen Termin zur Verlängerung meines Aufenthaltstitels.",
+          "ar": "عندي موعد لتجديد تصريح إقامتي."
+        },
+        {
+          "de": "Welche Unterlagen fehlen noch?",
+          "ar": "ما الأوراق الناقصة بعد؟"
+        },
+        {
+          "de": "Ich brauche eine Fiktionsbescheinigung für meinen Arbeitgeber.",
+          "ar": "أحتاج شهادة وهمية (مؤقتة) لصاحب عملي."
+        }
+      ]
     },
     {
-     "de": "Bekomme ich eine Meldebescheinigung?",
-     "ar": "هل أحصل على شهادة تسجيل؟"
+      "id": "lw-03",
+      "titel": "Anerkennung des Pflegeabschlusses",
+      "ar": "الاعتراف بمؤهّل التمريض الأجنبي",
+      "textAr": "للعمل كممرّض معترف به (Pflegefachkraft) يجب معادلة شهادتك لدى جهة الاعتراف في ولايتك (Anerkennungsstelle). إن وُجدت فروق جوهرية تختار بين اختبار معرفة (Kenntnisprüfung) أو تدريب تكييف (Anpassungslehrgang) في مستشفى. أثناء ذلك قد تعمل كمساعد تمريض (Pflegehelfer) برخصة مؤقتة أحيانًا (Berufserlaubnis). اللغة المطلوبة عادة B2 عامّي وغالبًا إثبات لغة مهنية طبية.",
+      "saetze": [
+        {
+          "de": "Ich möchte meinen ausländischen Pflegeabschluss anerkennen lassen.",
+          "ar": "أريد معادلة شهادة التمريض الأجنبية خاصتي."
+        },
+        {
+          "de": "Ich habe mich für den Anpassungslehrgang entschieden.",
+          "ar": "اخترت تدريب التكييف."
+        },
+        {
+          "de": "Wann kann ich die Kenntnisprüfung ablegen?",
+          "ar": "متى أستطيع دخول اختبار المعرفة؟"
+        },
+        {
+          "de": "Darf ich bis zur Anerkennung als Pflegehelfer arbeiten?",
+          "ar": "هل أستطيع العمل كمساعد تمريض حتى الاعتراف؟"
+        }
+      ]
+    },
+    {
+      "id": "lw-04",
+      "titel": "Krankenversicherung und Arztbesuch",
+      "ar": "التأمين الصحي وزيارة الطبيب",
+      "textAr": "التأمين الصحي إلزامي؛ الموظّف يُؤمَّن تلقائيًا لدى Krankenkasse يختارها، وتُقتطع الاشتراكات من الراتب. عند الطبيب تُظهر Versichertenkarte، وللأخصائي قد تحتاج Überweisung من طبيب الأسرة (Hausarzt). الرقم 116117 لخدمة المناوبة الطبية خارج أوقات العيادات.",
+      "saetze": [
+        {
+          "de": "Ich brauche einen Termin beim Hausarzt.",
+          "ar": "أحتاج موعدًا عند طبيب الأسرة."
+        },
+        {
+          "de": "Ich brauche eine Überweisung zum Facharzt.",
+          "ar": "أحتاج تحويلًا إلى الطبيب المختص."
+        },
+        {
+          "de": "Übernimmt die Krankenkasse diese Kosten?",
+          "ar": "هل يتحمّل التأمين هذه التكاليف؟"
+        }
+      ]
+    },
+    {
+      "id": "lw-05",
+      "titel": "Arbeitsvertrag und Probezeit",
+      "ar": "عقد العمل وفترة التجربة",
+      "textAr": "عقد العمل (Arbeitsvertrag) يحدد الراتب وساعات العمل والعطل (غالبًا 20–30 يومًا) وفترة التجربة Probezeit (حتى 6 أشهر) التي يكون فيها الإنهاء أسرع. في التمريض تذكّر: Zuschläge إضافات للورديات الليلية والأحد والعطل الرسمية، وهي جزء مهم من دخلك الحقيقي.",
+      "saetze": [
+        {
+          "de": "Wie lange dauert die Probezeit?",
+          "ar": "كم مدة فترة التجربة؟"
+        },
+        {
+          "de": "Wie viele Urlaubstage habe ich pro Jahr?",
+          "ar": "كم يوم عطلة لي في السنة؟"
+        },
+        {
+          "de": "Gibt es Zuschläge für Nacht- und Sonntagsdienste?",
+          "ar": "هل توجد إضافات لورديات الليل والأحد؟"
+        }
+      ]
+    },
+    {
+      "id": "lw-06",
+      "titel": "Lohnabrechnung und Steuern",
+      "ar": "كشف الراتب والضرائب",
+      "textAr": "راتبك في العقد Brutto (إجمالي) وما يصلك Netto بعد اقتطاع ضريبة الدخل والتأمينات الاجتماعية (تقاعد، بطالة، صحي، رعاية). فئتك الضريبية Steuerklasse تعتمد على حالتك الاجتماعية. كشف الراتب Lohnabrechnung وثيقة مهمة احتفظ بها دائمًا.",
+      "saetze": [
+        {
+          "de": "Ich habe eine Frage zu meiner Lohnabrechnung.",
+          "ar": "عندي سؤال عن كشف راتبي."
+        },
+        {
+          "de": "In welcher Steuerklasse bin ich?",
+          "ar": "في أيّ فئة ضريبية أنا؟"
+        },
+        {
+          "de": "Wann wird das Gehalt überwiesen?",
+          "ar": "متى يُحوَّل الراتب؟"
+        }
+      ]
+    },
+    {
+      "id": "lw-07",
+      "titel": "Kündigung und Arbeitslosigkeit",
+      "ar": "إنهاء العمل والبطالة",
+      "textAr": "الإنهاء (Kündigung) يكون كتابيًا وبمهلة (Kündigungsfrist) من العقد أو الاتفاق الجماعي. عند فقدان العمل سجّل فورًا لدى Agentur für Arbeit (arbeitsuchend) لئلا تخسر أيامًا من Arbeitslosengeld. لا توقّع Aufhebungsvertrag (إنهاء بالتراضي) قبل استشارة، فقد يحجب الإعانة 12 أسبوعًا.",
+      "saetze": [
+        {
+          "de": "Ich möchte mich arbeitsuchend melden.",
+          "ar": "أريد تسجيل نفسي باحثًا عن عمل."
+        },
+        {
+          "de": "Wie lang ist meine Kündigungsfrist?",
+          "ar": "كم مهلة الإنهاء خاصتي؟"
+        },
+        {
+          "de": "Ich unterschreibe nichts ohne Beratung.",
+          "ar": "لن أوقّع شيئًا دون استشارة."
+        }
+      ]
+    },
+    {
+      "id": "lw-08",
+      "titel": "Mietvertrag, Kaution und Schufa",
+      "ar": "عقد الإيجار والتأمين وسجلّ Schufa",
+      "textAr": "الإيجار الشهري المعلن غالبًا Kaltmiete (دون تدفئة ومصاريف)؛ Warmmiete هي الكلي. الوديعة Kaution حتى ثلاثة أشهر باردة تُدفع أقساطًا. Schufa سجلّ ائتماني يطلبه المؤجرون تقريبًا دائمًا، وMietschuldenfreiheitsbescheinigung من مؤجرك السابق تقوّي ملفك.",
+      "saetze": [
+        {
+          "de": "Ist die Miete warm oder kalt?",
+          "ar": "هل الإيجار شامل المصاريف أم لا؟"
+        },
+        {
+          "de": "Kann ich die Kaution in drei Raten zahlen?",
+          "ar": "هل أستطيع دفع الوديعة على ثلاث دفعات؟"
+        },
+        {
+          "de": "Hier ist meine Schufa-Auskunft.",
+          "ar": "إليك كشف Schufa خاصتي."
+        }
+      ]
+    },
+    {
+      "id": "lw-09",
+      "titel": "Kita und Schule",
+      "ar": "الحضانة والمدرسة للأطفال",
+      "textAr": "التعليم المدرسي إلزامي (Schulpflicht) من سنّ السادسة تقريبًا. مكان الحضانة Kita يُحجز مبكرًا جدًا في المدن الكبيرة — سجّل طفلك فور وصولك. Kita-Gutschein من Jugendamt قد يخفّض الرسوم حسب الدخل.",
+      "saetze": [
+        {
+          "de": "Ich suche einen Kita-Platz für meine Tochter.",
+          "ar": "أبحث عن مكان حضانة لابنتي."
+        },
+        {
+          "de": "Ab wann gilt die Schulpflicht?",
+          "ar": "من متى يبدأ إلزام المدرسة؟"
+        },
+        {
+          "de": "Brauche ich einen Kita-Gutschein?",
+          "ar": "هل أحتاج قسيمة حضانة؟"
+        }
+      ]
+    },
+    {
+      "id": "lw-10",
+      "titel": "Verkehr und Deutschlandticket",
+      "ar": "المواصلات وتذكرة ألمانيا",
+      "textAr": "تذكرة Deutschlandticket شهرية بسعر موحّد (راجِع السعر الحالي لأنه يتغيّر) تتيح كل المواصلات المحلية والإقليمية (لا قطارات IC/ICE السريعة). القيادة برخصة أجنبية محدودة المدة قبل وجوب التبديل (Umschreibung) — اسأل Führerscheinstelle مبكرًا.",
+      "saetze": [
+        {
+          "de": "Gilt das Deutschlandticket auch im Regionalzug?",
+          "ar": "هل تسري تذكرة ألمانيا في القطار الإقليمي؟"
+        },
+        {
+          "de": "Muss ich meinen Führerschein umschreiben lassen?",
+          "ar": "هل يجب تبديل رخصة قيادتي؟"
+        },
+        {
+          "de": "Wo ist die nächste Haltestelle?",
+          "ar": "أين أقرب محطة؟"
+        }
+      ]
+    },
+    {
+      "id": "lw-11",
+      "titel": "Notruf und Notdienste",
+      "ar": "أرقام الطوارئ والمناوبات",
+      "textAr": "الأرقام التي تحفظها عن ظهر قلب: 112 إسعاف وإطفاء (ومنه طبيب الطوارئ)، 110 شرطة، 116117 مناوبة طبية لأمور ليست مهددة للحياة. في الصيدليات المناوبة (Notdienst) تُعرَض على الباب وفي الإنترنت. السموم: اسأل Giftnotruf ولايتك.",
+      "saetze": [
+        {
+          "de": "Rufen Sie einen Krankenwagen, Notruf 112!",
+          "ar": "اطلب سيارة إسعاف، طوارئ 112!"
+        },
+        {
+          "de": "Es ist ein Notfall, es geht um Leben und Tod.",
+          "ar": "إنها حالة طارئة، حياة أو موت."
+        },
+        {
+          "de": "Welche Apotheke hat heute Notdienst?",
+          "ar": "أيّ صيدلية مناوبة اليوم؟"
+        }
+      ]
+    },
+    {
+      "id": "lw-12",
+      "titel": "Feiertage, Urlaub und Krankmeldung",
+      "ar": "العطل والهدوء والغياب المرضي",
+      "textAr": "الأحد والعطل الرسمية أيام هدوء (Ruhezeiten) تحميها القوانين محليًا: لا أعمال صاخبة عادة. عند المرض: أخبر صاحب العمل فورًا صباحًا، وشهادة الطبيب (Arbeitsunfähigkeitsbescheinigung / AU) تُرسل إلكترونيًا غالبًا منذ اليوم الأول أو الثالث حسب عقدك — تأكد من نظام جهة عملك.",
+      "saetze": [
+        {
+          "de": "Ich muss mich heute krankmelden.",
+          "ar": "يجب أن أبلّغ بمرضي اليوم."
+        },
+        {
+          "de": "Ab welchem Tag brauche ich eine AU?",
+          "ar": "من أيّ يوم أحتاج شهادة مرضية؟"
+        },
+        {
+          "de": "Ist der Montag ein Feiertag?",
+          "ar": "هل الاثنين عطلة رسمية؟"
+        }
+      ]
+    },
+    {
+      "id": "lw-13",
+      "titel": "Anerkennung ausländischer Abschlüsse",
+      "ar": "الاعتراف بالمؤهلات الأجنبية",
+      "textAr": "للاعتراف بشهادتك الأجنبية (Anerkennung) تقدّم طلباً إلى الجهة المختصة حسب المهنة والولاية مع ترجمة مصدّقة وكشف درجات وسيرة ذاتية. للتمريض يمرّ الطريق عبر Anerkennungsbescheid ثم Anpassungslehrgang أو Kenntnisprüfung للوصول إلى Vollanerkennung.",
+      "saetze": [
+        {
+          "de": "Ich beantrage die Anerkennung meines Abschlusses.",
+          "ar": "أقدّم طلب الاعتراف بشهادتي."
+        },
+        {
+          "de": "Welche Dokumente benötigen Sie beglaubigt übersetzt?",
+          "ar": "ما الوثائق التي تحتاجونها مترجمة ومصدّقة؟"
+        },
+        {
+          "de": "Brauche ich einen Anpassungslehrgang oder eine Kenntnisprüfung?",
+          "ar": "هل أحتاج دورة تكيّف أم امتحان معرفة؟"
+        }
+      ]
     }
-   ]
-  },
-  {
-   "id": "lw-02",
-   "titel": "Ausländerbehörde und Aufenthalt",
-   "ar": "مكتب الأجانب والإقامة",
-   "textAr": "تصريح الإقامة (Aufenthaltserlaubnis) يُطلب ويُجدَّد في Ausländerbehörde بموعد مسبق غالبًا عبر الإنترنت. بطاقة الإقامة الإلكترونية (eAT) تستغرق أسابيع بعد الموافقة، وتحصل مؤقتًا على Fiktionsbescheinigung تثبت قانونية بقائك.",
-   "saetze": [
+  ],
+  "umgang": [
     {
-     "de": "Ich habe einen Termin zur Verlängerung meines Aufenthaltstitels.",
-     "ar": "عندي موعد لتجديد تصريح إقامتي."
+      "de": "Wie läuft's?",
+      "ar": "كيف الحال؟ / كيف الأمور؟",
+      "situationAr": "تحية ودّية بين الزملاء بدل Wie geht es dir الرسمية.",
+      "bsp": "Wie läuft's auf der neuen Station?",
+      "bspAr": "كيف الأمور في القسم الجديد؟"
     },
     {
-     "de": "Welche Unterlagen fehlen noch?",
-     "ar": "ما الأوراق الناقصة بعد؟"
+      "de": "Alles klar.",
+      "ar": "تمام / مفهوم.",
+      "situationAr": "تأكيد فهم ودود في أحاديث العمل القصيرة.",
+      "bsp": "Übergabe um sechs? — Alles klar.",
+      "bspAr": "التسليم في السادسة؟ — تمام."
     },
     {
-     "de": "Ich brauche eine Fiktionsbescheinigung für meinen Arbeitgeber.",
-     "ar": "أحتاج شهادة وهمية (مؤقتة) لصاحب عملي."
+      "de": "Moment mal!",
+      "ar": "لحظة من فضلك!",
+      "situationAr": "طلب توقّف قصير قبل الردّ أو الفعل.",
+      "bsp": "Moment mal, ich schaue kurz nach.",
+      "bspAr": "لحظة، أتحقق بسرعة."
+    },
+    {
+      "de": "Kein Ding.",
+      "ar": "لا مشكلة / بسيطة.",
+      "situationAr": "ردّ خفيف على شكر أو طلب صغير.",
+      "bsp": "Danke fürs Tauschen! — Kein Ding.",
+      "bspAr": "شكرًا على التبديل! — بسيطة."
+    },
+    {
+      "de": "Das passt schon.",
+      "ar": "لا بأس / هذا مناسب.",
+      "situationAr": "طمأنة أن شيئًا ما مقبول كما هو.",
+      "bsp": "Ist der Termin so okay? — Das passt schon.",
+      "bspAr": "هل الموعد هكذا مناسب؟ — لا بأس."
+    },
+    {
+      "de": "Schauen wir mal.",
+      "ar": "سنرى / دعنا ننظر.",
+      "situationAr": "تأجيل قرار بلطف دون رفض.",
+      "bsp": "Ob ich tauschen kann? Schauen wir mal.",
+      "bspAr": "هل أستطيع التبديل؟ سنرى."
+    },
+    {
+      "de": "Echt jetzt?",
+      "ar": "حقًا؟ / بجدّ؟",
+      "situationAr": "دهشة أو عدم تصديق ودود — نبرتها تصنع معناها.",
+      "bsp": "Der Dienst fällt aus? Echt jetzt?",
+      "bspAr": "الوردية أُلغيت؟ بجدّ؟"
+    },
+    {
+      "de": "Auf geht's!",
+      "ar": "هيّا بنا!",
+      "situationAr": "تشجيع للبدء — شائعة في فرق العمل.",
+      "bsp": "Die Visite beginnt, auf geht's!",
+      "bspAr": "تبدأ الجولة، هيّا بنا!"
+    },
+    {
+      "de": "Mach's gut!",
+      "ar": "اعتنِ بنفسك / بالتوفيق (وداع ودود)",
+      "situationAr": "وداع خفيف للأصدقاء والزملاء.",
+      "bsp": "Bis Montag, mach's gut!",
+      "bspAr": "إلى الاثنين، اعتنِ بنفسك!"
+    },
+    {
+      "de": "Gute Besserung!",
+      "ar": "شفاءً عاجلًا!",
+      "situationAr": "أمنية الشفاء للمرضى والزملاء المرضى.",
+      "bsp": "Ruhen Sie sich aus — gute Besserung!",
+      "bspAr": "استرح — شفاءً عاجلًا!"
+    },
+    {
+      "de": "Ich drücke dir die Daumen.",
+      "ar": "أتمنى لك الحظ (أعقد إبهاميّ لك)",
+      "situationAr": "تعبير الحظ قبل امتحان أو مقابلة — لا يُترجم حرفيًا.",
+      "bsp": "Morgen ist die Prüfung? Ich drücke dir die Daumen!",
+      "bspAr": "الامتحان غدًا؟ أتمنى لك الحظ!"
+    },
+    {
+      "de": "Nicht der Rede wert.",
+      "ar": "لا يستحق الذكر / العفو.",
+      "situationAr": "ردّ متواضع على شكر كبير.",
+      "bsp": "Du hast mir sehr geholfen! — Nicht der Rede wert.",
+      "bspAr": "ساعدتني كثيرًا! — لا يستحق الذكر."
+    },
+    {
+      "de": "Gern geschehen.",
+      "ar": "بكل سرور / العفو.",
+      "situationAr": "الردّ المؤدب الجاهز على الشكر، رسمي وودود معًا.",
+      "bsp": "Vielen Dank! — Gern geschehen.",
+      "bspAr": "شكرًا جزيلًا! — بكل سرور."
+    },
+    {
+      "de": "Warte kurz.",
+      "ar": "انتظر قليلًا.",
+      "situationAr": "طلب انتظار قصير في يوم العمل.",
+      "bsp": "Warte kurz, ich bin gleich da.",
+      "bspAr": "انتظر قليلًا، آتٍ فورًا."
+    },
+    {
+      "de": "Läuft!",
+      "ar": "الأمور تسير! / تمام!",
+      "situationAr": "تأكيد شبابي خفيف أن شيئًا يعمل أو يسير جيدًا.",
+      "bsp": "Der neue Plan steht? — Läuft!",
+      "bspAr": "الخطة الجديدة جاهزة؟ — تسير!"
+    },
+    {
+      "de": "Quatsch!",
+      "ar": "هراء! / لا تقل هذا!",
+      "situationAr": "رفض ودود لفكرة أو مزحة — انتبه للنبرة مع الرؤساء.",
+      "bsp": "Ich kann das nie lernen! — Quatsch, du schaffst das!",
+      "bspAr": "لن أتعلم هذا أبدًا! — هراء، ستستطيع!"
     }
-   ]
-  },
-  {
-   "id": "lw-03",
-   "titel": "Anerkennung des Pflegeabschlusses",
-   "ar": "الاعتراف بمؤهّل التمريض الأجنبي",
-   "textAr": "للعمل كممرّض معترف به (Pflegefachkraft) يجب معادلة شهادتك لدى جهة الاعتراف في ولايتك (Anerkennungsstelle). إن وُجدت فروق جوهرية تختار بين اختبار معرفة (Kenntnisprüfung) أو تدريب تكييف (Anpassungslehrgang) في مستشفى. أثناء ذلك قد تعمل كمساعد تمريض (Pflegehelfer) برخصة مؤقتة أحيانًا (Berufserlaubnis). اللغة المطلوبة عادة B2 عامّي وغالبًا إثبات لغة مهنية طبية.",
-   "saetze": [
-    {
-     "de": "Ich möchte meinen ausländischen Pflegeabschluss anerkennen lassen.",
-     "ar": "أريد معادلة شهادة التمريض الأجنبية خاصتي."
-    },
-    {
-     "de": "Ich habe mich für den Anpassungslehrgang entschieden.",
-     "ar": "اخترت تدريب التكييف."
-    },
-    {
-     "de": "Wann kann ich die Kenntnisprüfung ablegen?",
-     "ar": "متى أستطيع دخول اختبار المعرفة؟"
-    },
-    {
-     "de": "Darf ich bis zur Anerkennung als Pflegehelfer arbeiten?",
-     "ar": "هل أستطيع العمل كمساعد تمريض حتى الاعتراف؟"
-    }
-   ]
-  },
-  {
-   "id": "lw-04",
-   "titel": "Krankenversicherung und Arztbesuch",
-   "ar": "التأمين الصحي وزيارة الطبيب",
-   "textAr": "التأمين الصحي إلزامي؛ الموظّف يُؤمَّن تلقائيًا لدى Krankenkasse يختارها، وتُقتطع الاشتراكات من الراتب. عند الطبيب تُظهر Versichertenkarte، وللأخصائي قد تحتاج Überweisung من طبيب الأسرة (Hausarzt). الرقم 116117 لخدمة المناوبة الطبية خارج أوقات العيادات.",
-   "saetze": [
-    {
-     "de": "Ich brauche einen Termin beim Hausarzt.",
-     "ar": "أحتاج موعدًا عند طبيب الأسرة."
-    },
-    {
-     "de": "Ich brauche eine Überweisung zum Facharzt.",
-     "ar": "أحتاج تحويلًا إلى الطبيب المختص."
-    },
-    {
-     "de": "Übernimmt die Krankenkasse diese Kosten?",
-     "ar": "هل يتحمّل التأمين هذه التكاليف؟"
-    }
-   ]
-  },
-  {
-   "id": "lw-05",
-   "titel": "Arbeitsvertrag und Probezeit",
-   "ar": "عقد العمل وفترة التجربة",
-   "textAr": "عقد العمل (Arbeitsvertrag) يحدد الراتب وساعات العمل والعطل (غالبًا 20–30 يومًا) وفترة التجربة Probezeit (حتى 6 أشهر) التي يكون فيها الإنهاء أسرع. في التمريض تذكّر: Zuschläge إضافات للورديات الليلية والأحد والعطل الرسمية، وهي جزء مهم من دخلك الحقيقي.",
-   "saetze": [
-    {
-     "de": "Wie lange dauert die Probezeit?",
-     "ar": "كم مدة فترة التجربة؟"
-    },
-    {
-     "de": "Wie viele Urlaubstage habe ich pro Jahr?",
-     "ar": "كم يوم عطلة لي في السنة؟"
-    },
-    {
-     "de": "Gibt es Zuschläge für Nacht- und Sonntagsdienste?",
-     "ar": "هل توجد إضافات لورديات الليل والأحد؟"
-    }
-   ]
-  },
-  {
-   "id": "lw-06",
-   "titel": "Lohnabrechnung und Steuern",
-   "ar": "كشف الراتب والضرائب",
-   "textAr": "راتبك في العقد Brutto (إجمالي) وما يصلك Netto بعد اقتطاع ضريبة الدخل والتأمينات الاجتماعية (تقاعد، بطالة، صحي، رعاية). فئتك الضريبية Steuerklasse تعتمد على حالتك الاجتماعية. كشف الراتب Lohnabrechnung وثيقة مهمة احتفظ بها دائمًا.",
-   "saetze": [
-    {
-     "de": "Ich habe eine Frage zu meiner Lohnabrechnung.",
-     "ar": "عندي سؤال عن كشف راتبي."
-    },
-    {
-     "de": "In welcher Steuerklasse bin ich?",
-     "ar": "في أيّ فئة ضريبية أنا؟"
-    },
-    {
-     "de": "Wann wird das Gehalt überwiesen?",
-     "ar": "متى يُحوَّل الراتب؟"
-    }
-   ]
-  },
-  {
-   "id": "lw-07",
-   "titel": "Kündigung und Arbeitslosigkeit",
-   "ar": "إنهاء العمل والبطالة",
-   "textAr": "الإنهاء (Kündigung) يكون كتابيًا وبمهلة (Kündigungsfrist) من العقد أو الاتفاق الجماعي. عند فقدان العمل سجّل فورًا لدى Agentur für Arbeit (arbeitsuchend) لئلا تخسر أيامًا من Arbeitslosengeld. لا توقّع Aufhebungsvertrag (إنهاء بالتراضي) قبل استشارة، فقد يحجب الإعانة 12 أسبوعًا.",
-   "saetze": [
-    {
-     "de": "Ich möchte mich arbeitsuchend melden.",
-     "ar": "أريد تسجيل نفسي باحثًا عن عمل."
-    },
-    {
-     "de": "Wie lang ist meine Kündigungsfrist?",
-     "ar": "كم مهلة الإنهاء خاصتي؟"
-    },
-    {
-     "de": "Ich unterschreibe nichts ohne Beratung.",
-     "ar": "لن أوقّع شيئًا دون استشارة."
-    }
-   ]
-  },
-  {
-   "id": "lw-08",
-   "titel": "Mietvertrag, Kaution und Schufa",
-   "ar": "عقد الإيجار والتأمين وسجلّ Schufa",
-   "textAr": "الإيجار الشهري المعلن غالبًا Kaltmiete (دون تدفئة ومصاريف)؛ Warmmiete هي الكلي. الوديعة Kaution حتى ثلاثة أشهر باردة تُدفع أقساطًا. Schufa سجلّ ائتماني يطلبه المؤجرون تقريبًا دائمًا، وMietschuldenfreiheitsbescheinigung من مؤجرك السابق تقوّي ملفك.",
-   "saetze": [
-    {
-     "de": "Ist die Miete warm oder kalt?",
-     "ar": "هل الإيجار شامل المصاريف أم لا؟"
-    },
-    {
-     "de": "Kann ich die Kaution in drei Raten zahlen?",
-     "ar": "هل أستطيع دفع الوديعة على ثلاث دفعات؟"
-    },
-    {
-     "de": "Hier ist meine Schufa-Auskunft.",
-     "ar": "إليك كشف Schufa خاصتي."
-    }
-   ]
-  },
-  {
-   "id": "lw-09",
-   "titel": "Kita und Schule",
-   "ar": "الحضانة والمدرسة للأطفال",
-   "textAr": "التعليم المدرسي إلزامي (Schulpflicht) من سنّ السادسة تقريبًا. مكان الحضانة Kita يُحجز مبكرًا جدًا في المدن الكبيرة — سجّل طفلك فور وصولك. Kita-Gutschein من Jugendamt قد يخفّض الرسوم حسب الدخل.",
-   "saetze": [
-    {
-     "de": "Ich suche einen Kita-Platz für meine Tochter.",
-     "ar": "أبحث عن مكان حضانة لابنتي."
-    },
-    {
-     "de": "Ab wann gilt die Schulpflicht?",
-     "ar": "من متى يبدأ إلزام المدرسة؟"
-    },
-    {
-     "de": "Brauche ich einen Kita-Gutschein?",
-     "ar": "هل أحتاج قسيمة حضانة؟"
-    }
-   ]
-  },
-  {
-   "id": "lw-10",
-   "titel": "Verkehr und Deutschlandticket",
-   "ar": "المواصلات وتذكرة ألمانيا",
-   "textAr": "تذكرة Deutschlandticket شهرية بسعر موحّد (راجِع السعر الحالي لأنه يتغيّر) تتيح كل المواصلات المحلية والإقليمية (لا قطارات IC/ICE السريعة). القيادة برخصة أجنبية محدودة المدة قبل وجوب التبديل (Umschreibung) — اسأل Führerscheinstelle مبكرًا.",
-   "saetze": [
-    {
-     "de": "Gilt das Deutschlandticket auch im Regionalzug?",
-     "ar": "هل تسري تذكرة ألمانيا في القطار الإقليمي؟"
-    },
-    {
-     "de": "Muss ich meinen Führerschein umschreiben lassen?",
-     "ar": "هل يجب تبديل رخصة قيادتي؟"
-    },
-    {
-     "de": "Wo ist die nächste Haltestelle?",
-     "ar": "أين أقرب محطة؟"
-    }
-   ]
-  },
-  {
-   "id": "lw-11",
-   "titel": "Notruf und Notdienste",
-   "ar": "أرقام الطوارئ والمناوبات",
-   "textAr": "الأرقام التي تحفظها عن ظهر قلب: 112 إسعاف وإطفاء (ومنه طبيب الطوارئ)، 110 شرطة، 116117 مناوبة طبية لأمور ليست مهددة للحياة. في الصيدليات المناوبة (Notdienst) تُعرَض على الباب وفي الإنترنت. السموم: اسأل Giftnotruf ولايتك.",
-   "saetze": [
-    {
-     "de": "Rufen Sie einen Krankenwagen, Notruf 112!",
-     "ar": "اطلب سيارة إسعاف، طوارئ 112!"
-    },
-    {
-     "de": "Es ist ein Notfall, es geht um Leben und Tod.",
-     "ar": "إنها حالة طارئة، حياة أو موت."
-    },
-    {
-     "de": "Welche Apotheke hat heute Notdienst?",
-     "ar": "أيّ صيدلية مناوبة اليوم؟"
-    }
-   ]
-  },
-  {
-   "id": "lw-12",
-   "titel": "Feiertage, Urlaub und Krankmeldung",
-   "ar": "العطل والهدوء والغياب المرضي",
-   "textAr": "الأحد والعطل الرسمية أيام هدوء (Ruhezeiten) تحميها القوانين محليًا: لا أعمال صاخبة عادة. عند المرض: أخبر صاحب العمل فورًا صباحًا، وشهادة الطبيب (Arbeitsunfähigkeitsbescheinigung / AU) تُرسل إلكترونيًا غالبًا منذ اليوم الأول أو الثالث حسب عقدك — تأكد من نظام جهة عملك.",
-   "saetze": [
-    {
-     "de": "Ich muss mich heute krankmelden.",
-     "ar": "يجب أن أبلّغ بمرضي اليوم."
-    },
-    {
-     "de": "Ab welchem Tag brauche ich eine AU?",
-     "ar": "من أيّ يوم أحتاج شهادة مرضية؟"
-    },
-    {
-     "de": "Ist der Montag ein Feiertag?",
-     "ar": "هل الاثنين عطلة رسمية؟"
-    }
-   ]
-  }
- ],
- "umgang": [
-  {
-   "de": "Wie läuft's?",
-   "ar": "كيف الحال؟ / كيف الأمور؟",
-   "situationAr": "تحية ودّية بين الزملاء بدل Wie geht es dir الرسمية.",
-   "bsp": "Wie läuft's auf der neuen Station?",
-   "bspAr": "كيف الأمور في القسم الجديد؟"
-  },
-  {
-   "de": "Alles klar.",
-   "ar": "تمام / مفهوم.",
-   "situationAr": "تأكيد فهم ودود في أحاديث العمل القصيرة.",
-   "bsp": "Übergabe um sechs? — Alles klar.",
-   "bspAr": "التسليم في السادسة؟ — تمام."
-  },
-  {
-   "de": "Moment mal!",
-   "ar": "لحظة من فضلك!",
-   "situationAr": "طلب توقّف قصير قبل الردّ أو الفعل.",
-   "bsp": "Moment mal, ich schaue kurz nach.",
-   "bspAr": "لحظة، أتحقق بسرعة."
-  },
-  {
-   "de": "Kein Ding.",
-   "ar": "لا مشكلة / بسيطة.",
-   "situationAr": "ردّ خفيف على شكر أو طلب صغير.",
-   "bsp": "Danke fürs Tauschen! — Kein Ding.",
-   "bspAr": "شكرًا على التبديل! — بسيطة."
-  },
-  {
-   "de": "Das passt schon.",
-   "ar": "لا بأس / هذا مناسب.",
-   "situationAr": "طمأنة أن شيئًا ما مقبول كما هو.",
-   "bsp": "Ist der Termin so okay? — Das passt schon.",
-   "bspAr": "هل الموعد هكذا مناسب؟ — لا بأس."
-  },
-  {
-   "de": "Schauen wir mal.",
-   "ar": "سنرى / دعنا ننظر.",
-   "situationAr": "تأجيل قرار بلطف دون رفض.",
-   "bsp": "Ob ich tauschen kann? Schauen wir mal.",
-   "bspAr": "هل أستطيع التبديل؟ سنرى."
-  },
-  {
-   "de": "Echt jetzt?",
-   "ar": "حقًا؟ / بجدّ؟",
-   "situationAr": "دهشة أو عدم تصديق ودود — نبرتها تصنع معناها.",
-   "bsp": "Der Dienst fällt aus? Echt jetzt?",
-   "bspAr": "الوردية أُلغيت؟ بجدّ؟"
-  },
-  {
-   "de": "Auf geht's!",
-   "ar": "هيّا بنا!",
-   "situationAr": "تشجيع للبدء — شائعة في فرق العمل.",
-   "bsp": "Die Visite beginnt, auf geht's!",
-   "bspAr": "تبدأ الجولة، هيّا بنا!"
-  },
-  {
-   "de": "Mach's gut!",
-   "ar": "اعتنِ بنفسك / بالتوفيق (وداع ودود)",
-   "situationAr": "وداع خفيف للأصدقاء والزملاء.",
-   "bsp": "Bis Montag, mach's gut!",
-   "bspAr": "إلى الاثنين، اعتنِ بنفسك!"
-  },
-  {
-   "de": "Gute Besserung!",
-   "ar": "شفاءً عاجلًا!",
-   "situationAr": "أمنية الشفاء للمرضى والزملاء المرضى.",
-   "bsp": "Ruhen Sie sich aus — gute Besserung!",
-   "bspAr": "استرح — شفاءً عاجلًا!"
-  },
-  {
-   "de": "Ich drücke dir die Daumen.",
-   "ar": "أتمنى لك الحظ (أعقد إبهاميّ لك)",
-   "situationAr": "تعبير الحظ قبل امتحان أو مقابلة — لا يُترجم حرفيًا.",
-   "bsp": "Morgen ist die Prüfung? Ich drücke dir die Daumen!",
-   "bspAr": "الامتحان غدًا؟ أتمنى لك الحظ!"
-  },
-  {
-   "de": "Nicht der Rede wert.",
-   "ar": "لا يستحق الذكر / العفو.",
-   "situationAr": "ردّ متواضع على شكر كبير.",
-   "bsp": "Du hast mir sehr geholfen! — Nicht der Rede wert.",
-   "bspAr": "ساعدتني كثيرًا! — لا يستحق الذكر."
-  },
-  {
-   "de": "Gern geschehen.",
-   "ar": "بكل سرور / العفو.",
-   "situationAr": "الردّ المؤدب الجاهز على الشكر، رسمي وودود معًا.",
-   "bsp": "Vielen Dank! — Gern geschehen.",
-   "bspAr": "شكرًا جزيلًا! — بكل سرور."
-  },
-  {
-   "de": "Warte kurz.",
-   "ar": "انتظر قليلًا.",
-   "situationAr": "طلب انتظار قصير في يوم العمل.",
-   "bsp": "Warte kurz, ich bin gleich da.",
-   "bspAr": "انتظر قليلًا، آتٍ فورًا."
-  },
-  {
-   "de": "Läuft!",
-   "ar": "الأمور تسير! / تمام!",
-   "situationAr": "تأكيد شبابي خفيف أن شيئًا يعمل أو يسير جيدًا.",
-   "bsp": "Der neue Plan steht? — Läuft!",
-   "bspAr": "الخطة الجديدة جاهزة؟ — تسير!"
-  },
-  {
-   "de": "Quatsch!",
-   "ar": "هراء! / لا تقل هذا!",
-   "situationAr": "رفض ودود لفكرة أو مزحة — انتبه للنبرة مع الرؤساء.",
-   "bsp": "Ich kann das nie lernen! — Quatsch, du schaffst das!",
-   "bspAr": "لن أتعلم هذا أبدًا! — هراء، ستستطيع!"
-  }
- ]
+  ]
 }

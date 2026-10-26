@@ -3469,6 +3469,10 @@
       {
         "de": "Hätte ich das gewusst, wäre ich nicht mitgekommen.",
         "ar": "لو كنت أعلم ذلك لما رافقتك. — Typ 3 بالقلب (hätte في الأول)"
+      },
+      {
+        "de": "Wenn er Zeit hätte, würde er anrufen.",
+        "ar": "لو كان عنده وقت لاتصل — شرط منفٍ متخيل."
       }
     ],
     "pitfalls": [
@@ -3667,6 +3671,10 @@
       {
         "de": "Dieser Faktor spielt dabei keine Rolle.",
         "ar": "هذا العامل لا يلعب دوراً في ذلك. — تعبير رسمي شائع"
+      },
+      {
+        "de": "Wir treffen eine Entscheidung nach der Sitzung.",
+        "ar": "نتخذ قراراً بعد الجلسة — Funktionsverb treffen."
       }
     ],
     "pitfalls": [
@@ -8054,6 +8062,10 @@
       {
         "de": "Guten Tag! Ich komme aus Tunesien.",
         "ar": "نهار سعيد! أنا من تونس."
+      },
+      {
+        "de": "Hallo, ich bin Lina. Wie heißt du?",
+        "ar": "مرحباً، أنا لينا. ما اسمك؟"
       }
     ],
     "eselsbrueckeAr": "احفظ هذه الجمل كعبارات جاهزة (Chunks) — لا تفككها إلى كلمات في أول لقاء.",
@@ -8147,7 +8159,7 @@
           "dir"
         ],
         "explanationAr": "du→Sie: dir (Dativ informell) → Ihnen (رسمي). التحية تتغير: Hallo→Guten Tag.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -8364,7 +8376,7 @@
           "will"
         ],
         "explanationAr": "wollen (إرادة قوية) → möchten (Konjunktiv II مهذب) — نفس القاعدة A2 höflich.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -8564,7 +8576,7 @@
           "zu die"
         ],
         "explanationAr": "zu + Dativ دائماً: die→der. لا تخلط مع nach Berlin (بدون أداة).",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -8679,6 +8691,10 @@
       {
         "de": "Ich lege das Buch auf den Tisch.",
         "ar": "أضع الكتاب على الطاولة (وجهة/Wohin?)."
+      },
+      {
+        "de": "Das Buch liegt auf dem Tisch, ich lege es auf den Tisch.",
+        "ar": "الكتاب على الطاولة (موقع) — أضعه على الطاولة (حركة)."
       }
     ],
     "eselsbrueckeAr": "«مكان أم وجهة؟» — اسأل: أين يقع الحدث (Wo? + Dativ)، أم إلى أين يتجه/ينتهي (Wohin? + Akkusativ).",
@@ -8841,6 +8857,10 @@
       {
         "de": "Mach deine Hausaufgaben!",
         "ar": "اعمل واجبك (صيغة غير رسمية لـ du)."
+      },
+      {
+        "de": "Komm bitte hierher und mach die Tür zu!",
+        "ar": "تعال إلى هنا وأغلق الباب!"
       }
     ],
     "eselsbrueckeAr": "للصيغة الرسمية Sie: «الفعل المصرف قبل Sie مباشرة»؛ ويأتي أولاً إذا لم تسبقه كلمة مثل Bitte.",
@@ -9250,7 +9270,7 @@
         ],
         "darfNicht": [],
         "explanationAr": "Futur I: werden (مصرف) + مصدر في الآخر. المعنى تنبؤ/خطة.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -10345,7 +10365,7 @@
           "habe"
         ],
         "explanationAr": "Präsens habe → Präteritum hatte — شائع في Erzählung/Tagebuch.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -10736,7 +10756,7 @@
           "A – L – I"
         ],
         "explanationAr": "Buchstabieren A-L-I = Ali. عكس Buchstabiere deinen Namen!",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -10913,7 +10933,7 @@
           "13:00"
         ],
         "explanationAr": "13:00 → ein Uhr (12h-System) + mittags. في A0 Uhrzeit دائماً بالألفاظ.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -11096,7 +11116,7 @@
           "Kannst"
         ],
         "explanationAr": "können → könnten (Konj. II): Kannst→Könntest — أدب A2, ليس ماضي.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -11461,8 +11481,8 @@
         "darfNicht": [
           "große Haus"
         ],
-        "explanationAr": "ein + Neutrum → großes (‑es). Adjektivendung nach unbestimmtem Artikel.",
-        "points": 1,
+        "explanationAr": "حالة المحايد مع أداة نكرة: ein + Neutrum → großes (-es). تصريف الصفة بعد أداة نكرة. — ein + Neutrum → großes (‑es). Adjektivendung nach unbestimmtem Artikel.",
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ]
@@ -11806,7 +11826,7 @@
           "krank bin"
         ],
         "darfNicht": [],
-        "explanationAr": "deshalb (Hauptsatz) → weil (Nebensatz Verb am Ende): bin krank → krank bin.",
+        "explanationAr": "التحويل: deshalb (جملة رئيسية) → weil (جملة ثانوية فعلها أخيرًا): bin krank → weil ich krank bin. الفعل إلى النهاية. — deshalb (Hauptsatz) → weil (Nebensatz Verb am Ende): bin krank → krank bin.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
@@ -11961,7 +11981,7 @@
           "zu dem Bahnhof"
         ],
         "explanationAr": "zu+dem→zum, zu+der→zur, an+dem→am. في Dativ الإدغام إلزامي عملياً.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -13912,7 +13932,7 @@
         ],
         "darfNicht": [],
         "explanationAr": "Lehrer مذكر → der. كل Nomen مع أداة + جمع في A1.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -14120,7 +14140,7 @@
           "heißt du"
         ],
         "explanationAr": "du (مفرد غير رسمي) → Sie (رسمي جمعاً/احتراماً): heißt→heißen.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -14302,7 +14322,7 @@
           "schon"
         ],
         "explanationAr": "o→schon (قصير) vs ö→schön (طويل ومُمال). Umlaut يغيّر المعنى تماماً.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -14486,7 +14506,7 @@
           "Mutter"
         ],
         "explanationAr": "Mutter→Mütter: Umlaut في الجمع. ä/ö/ü ليست زخرفة بل صرف.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -14679,7 +14699,7 @@
         ],
         "darfNicht": [],
         "explanationAr": "ch بعد e/i/ä/ö/ü → ich-Laut [ç] (رقيق)، بعد a/o/u → ach-Laut [x] (خ).",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -14828,7 +14848,7 @@
         ],
         "darfNicht": [],
         "explanationAr": "r في النهاية/بعد a: fahren → [aɐ] مدغم vokalisiert، لا يُلفظ r صريح.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -15028,7 +15048,7 @@
         ],
         "darfNicht": [],
         "explanationAr": "sp→[ʃp] schp, st→[ʃt] scht في بداية المقطع: spielen, Straße.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -15224,7 +15244,7 @@
         ],
         "darfNicht": [],
         "explanationAr": "Auslautverhärtung: b→p, d→t, g→k في النهاية: Tag [tak], Geld [gelt].",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -15444,7 +15464,7 @@
           "Wegen dem"
         ],
         "explanationAr": "wegen + Genitiv رسمي: des Wetters. Dativ محكي فقط.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -15666,7 +15686,7 @@
         "darfNicht": [
           "obwohl"
         ],
-        "explanationAr": "obwohl (Nebensatz) → trotzdem (Adverb Pos1): Verb bleibt zweit: gehe ich.",
+        "explanationAr": "تحويل obwohl (ثانوية) → trotzdem (ظرف في المركز الأول): الفعل يبقى ثانيًا. مثال: obwohl ... → trotzdem gehe ich. — obwohl (Nebensatz) → trotzdem (Adverb Pos1): Verb bleibt zweit: gehe ich.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
@@ -16015,8 +16035,8 @@
           "zuerst"
         ],
         "darfNicht": [],
-        "explanationAr": "Hören: Fragen vor Hören lesen → Stichwörter markieren → beim 1. Hören antworten.",
-        "points": 1,
+        "explanationAr": "استراتيجية الاستماع: اقرأ الأسئلة قبل الاستماع → علّم الكلمات المفتاحية → أجب في الاستماع الأول. لا تؤجل. — Hören: Fragen vor Hören lesen → Stichwörter markieren → beim 1. Hören antworten.",
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -16170,7 +16190,7 @@
         ],
         "darfNicht": [],
         "explanationAr": "Lesen A2: Schlüsselwörter (Datum, Ort, Preis) → Anzeige zuordnen, لا كل كلمة.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -16325,7 +16345,7 @@
         ],
         "darfNicht": [],
         "explanationAr": "B1 Schreiben: 3 Inhaltspunkte + Anrede/Gruß = 5 فقرات. كل نقطة جملة كاملة.",
-        "points": 1,
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -16482,8 +16502,8 @@
           "Stichpunkte"
         ],
         "darfNicht": [],
-        "explanationAr": "B2 Hören: Notizen mit Abkürzungen + Konnektoren (jedoch, deshalb) = Struktur.",
-        "points": 1,
+        "explanationAr": "استراتيجية B2 للاستماع: دوّن اختصارات + روابط (jedoch, deshalb) لفهم البنية. الملخص لا النقل الحرفي. — B2 Hören: Notizen mit Abkürzungen + Konnektoren (jedoch, deshalb) = Struktur.",
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],
@@ -16633,8 +16653,8 @@
         "darfNicht": [
           "Ich heiße"
         ],
-        "explanationAr": "Satz→Frage: Verb vor Subjekt. Wer+Verb+Was? → Verb+Wer+Was?",
-        "points": 1,
+        "explanationAr": "تحويل الجملة إلى سؤال: الفعل قبل الفاعل. Wer + Verb + Was? → Verb + Wer + Was? الفعل في الصدارة. — Satz→Frage: Verb vor Subjekt. Wer+Verb+Was? → Verb+Wer+Was?",
+        "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
       }
     ],

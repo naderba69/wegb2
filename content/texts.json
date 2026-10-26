@@ -8732,7 +8732,7 @@
           "Weil sie gesetzlich vorgeschrieben ist"
         ],
         "answer": "Weil sie Akzeptanz erhöht",
-        "explanationAr": "النص: erhöht er die Akzeptanz deutlich — weil Akzeptanz.",
+        "explanationAr": "الدليل: «erhöht er die Akzeptanz deutlich» — النص يذكر أن المشاركة تزيد القبول رغم أنها تستغرق وقتاً أطول. الفخّ: «Zeit sparen» عكس ما قاله النص: «mehr Zeit in Anspruch nimmt».",
         "id": "t-b2-41-q1"
       },
       {
@@ -8746,7 +8746,7 @@
           "Abbruch des Projekts"
         ],
         "answer": "Ein Kompromiss nach mehreren Runden",
-        "explanationAr": "obwohl kontroverse Meinungen → entstand ein Kompromiss.",
+        "explanationAr": "الدليل: رغم الآراء المتباينة ظهر حل وسط بعد عدة جولات — النص: «Obwohl anfangs kontroverse Meinungen aufeinanderprallten, entstand nach mehreren Runden ein Kompromiss» — هذا نص حرفي من الفقرة الثالثة.",
         "id": "t-b2-41-q2"
       },
       {
@@ -8754,11 +8754,11 @@
         "promptDe": "Ohne Evaluation ist Lernen aus Erfahrung nicht möglich.",
         "promptAr": "بدون تقييم لا يمكن التعلم من التجربة.",
         "options": [
-          "Richtig",
-          "Falsch"
+          "richtig",
+          "falsch"
         ],
-        "answer": "Richtig",
-        "explanationAr": "weil ohne Messbarkeit kein Lernen möglich ist.",
+        "answer": "richtig",
+        "explanationAr": "الدليل: «weil ohne Messbarkeit kein Lernen aus Erfahrung möglich ist» — بدون معايير قياس لا يمكن التعلم من التجربة، لذلك الحكم صحيح.",
         "id": "t-b2-41-q3"
       }
     ]

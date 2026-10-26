@@ -90,6 +90,21 @@
       "muster": "2020",
       "wo": "pakete/b2-debatte saetze[2]",
       "grund": "سنة في جملة نقاش وهمية (Der Bericht zeigt...) — مثال على ربط زمني لا واقعة إحصائية مدعاة خارج النص"
+    },
+    {
+      "muster": "2015",
+      "wo": "t-b2-38 Vier-Tage-Modelle Abs.4",
+      "grund": "بداية المرحلة الآيسلندية Von 2015 bis 2018 — واقعة مذكورة بنطاق زمني للمشروع لا ادعاء إحصائي جديد"
+    },
+    {
+      "muster": "2018",
+      "wo": "t-b2-38 Vier-Tage-Modelle Abs.4",
+      "grund": "نهاية المرحلة الآيسلندية Von 2015 bis 2018 — نفس المبرر أعلاه"
+    },
+    {
+      "muster": "2021",
+      "wo": "dialogues[165] d-b2-39 Arbeitsschutz Homeoffice",
+      "grund": "تحديث قانوني Wegeunfall seit 2021 — سنة سريان تشريعي منشورة في النص كملحوظة ثقافية لا إحصاء"
     }
   ]
 }

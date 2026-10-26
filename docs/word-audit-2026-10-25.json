@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-25",
+  "branch": "arena/2b4c530c-wegb2",
+  "totalCards": 6202,
+  "decks": 122,
+  "levels": {
+    "A1": 732,
+    "A2": 867,
+    "B1": 2555,
+    "B2": 1940,
+    "A0": 108
+  },
+  "pos": {
+    "Interjektion": 24,
+    "Wendung": 163,
+    "Verb": 1164,
+    "Nomen": 3703,
+    "Zahl": 54,
+    "Pronomen": 34,
+    "Adverb": 214,
+    "Adjektiv": 717,
+    "Präposition": 47,
+    "Konjunktion": 25,
+    "Satz": 57
+  },
+  "completeness": {
+    "withoutExampleDe": 0,
+    "withoutPos": 0,
+    "exampleDeCoverage": "100.0%",
+    "posCoverage": "100.0%"
+  },
+  "method": "internal audit — no external model, full file read, Duden artfrei check preserved",
+  "notes": "310 Nomen ohne separates article-Feld sind erwartet: Artikel steckt in de-Form (die Berichterstattung) — audit:content als heuristic, nicht Defekt. 0 ohne exampleDe/pos."
+}

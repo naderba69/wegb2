@@ -1,15 +1,15 @@
 {
   "date": "2026-10-04",
   "batch": "A1-grammar-04",
-  "scope": "مراجعة فردية لموضوعات قواعد A1 a1-imperativ وa1-perfekt-einf وa1-futur-einf، بما يشمل حقول الموضوع والقواعد والأمثلة والفخاخ، وكل 19 تمريناً و6 عناصر تحقق. لا يشمل بقية قواعد A1 أو النصوص والحوارات أو A2–B2.",
+  "scope": "مراجعة فردية لموضوعات قواعد A1 a1-imperativ وa1-perfekt-einf وa1-futur-einf، بما يشمل حقول الموضوع والقواعد والأمثلة والفخاخ، وكل 20 تمريناً و6 عناصر تحقق. لا يشمل بقية قواعد A1 أو النصوص والحوارات أو A2–B2.",
   "coverage": {
     "grammarTopics": 3,
-    "grammarExercises": 19,
+    "grammarExercises": 20,
     "grammarVerify": 6,
-    "totalTrackedItems": 28
+    "totalTrackedItems": 29
   },
   "statusCounts": {
-    "سليم": 15,
+    "سليم": 16,
     "مُصحح": 13,
     "غير محسوم": 0
   },
@@ -485,6 +485,17 @@
       ],
       "finding": "Plane für nächstes Jahr لا يفرض Futur I؛ كما أن الألمانية قد تستعمل Präsens مع قرينة زمنية مستقبلية، بينما المفتاح يفرض werde/lernen.",
       "action": "أضيف طلب صريح للتحويل إلى Futur I والبدء بـIch؛ بقيت صيغة Ich werde nächstes Jahr Deutsch lernen."
+    },
+    {
+      "id": "a1-futur-einf-ex07-umformung",
+      "kind": "grammar-exercise",
+      "status": "سليم",
+      "sources": [
+        "S18",
+        "S19"
+      ],
+      "finding": "تحويل Morgen fahre ich nach Tunis إلى Morgen werde ich nach Tunis fahren في Futur I صحيح؛ werden مصرف ومصدر fahren في النهاية يطابق القاعدة.",
+      "action": "لا تعديل؛ أضيف التمرين لتعزيز الإنتاج في Futur I وشرحه العربي موجود."
     }
   ]
 }

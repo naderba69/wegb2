@@ -109,6 +109,13 @@ export default function Ueben() {
   useEffect(() => {
     setAbend(localStorage.getItem("weg-abend") === "1");
     setGeladen(true);
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const f = params.get("filter");
+      if (f && ["wohnen","behoerde","gesundheit","arbeit","familie","mobilitaet","alltag"].includes(f)) {
+        setOffen("leben");
+      }
+    } catch {}
   }, []);
 
   const day = progress.plan.day;

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useProgress } from "@/lib/store";
 import { buildDay, grammarAssignmentForDay, COURSE_TOPIC_ORDER } from "@/lib/plan";
 import { grammarMap } from "@/lib/content";
@@ -24,6 +24,20 @@ export default function Lernen() {
   const [ggpFilter, setGgpFilter] = useState<string>("");
   const [familieFilter, setFamilieFilter] = useState<string>("");
   const qNorm = q.trim().toLowerCase();
+  useEffect(() => {
+    try {
+      const g = localStorage.getItem("weg-lernen-ggp");
+      if (g) setGgpFilter(g);
+      const f = localStorage.getItem("weg-lernen-familie");
+      if (f) setFamilieFilter(f);
+    } catch {}
+  }, []);
+  useEffect(() => {
+    try { if (ggpFilter) localStorage.setItem("weg-lernen-ggp", ggpFilter); else localStorage.removeItem("weg-lernen-ggp"); } catch {}
+  }, [ggpFilter]);
+  useEffect(() => {
+    try { if (familieFilter) localStorage.setItem("weg-lernen-familie", familieFilter); else localStorage.removeItem("weg-lernen-familie"); } catch {}
+  }, [familieFilter]);
 
   const gramTask = plan.tasks.find((t) => t.kind === "grammatik" && t.topicId);
   const topicId =
@@ -49,13 +63,25 @@ export default function Lernen() {
       <Link href="/masar" className="curriculum-entry-link" data-testid="curriculum-map-link">
         🧭 استكشف مسار المنهج الكامل · 378 يوماً
       </Link>
-      {/* B2 Authentic Hinweis — Verlag Editorial (Sprint 5D) */}
-      <div className="card" style={{ padding: "0.6rem 0.8rem", borderInlineStart: "4px solid #a78bfa", background: "linear-gradient(180deg, #FFFCF0, #FDF8E8)" }} data-testid="b2-authentic-hinweis">
-        <div style={{ fontSize: "0.84rem", fontWeight: 900, color: "#1A2E4A" }}>📖 الجديد B2: نص أصيل 286 كلمة — <span dir="ltr">Nachhaltige Stadt: Warum Beteiligung wirkt</span></div>
-        <div style={{ fontSize: "0.78rem", color: "var(--ui-muted)", lineHeight: 1.7 }}>
-          مع تظليل <span className="b2-konnektor b2-konnektor--weil">weil</span> و <span className="b2-konnektor b2-konnektor--obwohl">obwohl</span> — اقرأ في <Link href="/" style={{ color: "#113A5F", fontWeight: 800 }}>اليوم › الخطوة 3: Hören & Lesen</Link>
-        </div>
-      </div>
+      {/* B2 Authentic Hinweis — Verlag Editorial (Sprint 5D) — ديناميكي من أول نص B2 */}
+      {(() => {
+        // اقرأ أول نص B2 الحقيقي من content/texts إن وجد
+        let b2Title = "Digitalisierung der Bildung";
+        let b2Words = 286;
+        try {
+          const texts = require("@/content/texts.json") as { level: string; titleDe: string; de: string }[];
+          const firstB2 = texts.find((x) => x.level === "B2");
+          if (firstB2) { b2Title = firstB2.titleDe; b2Words = firstB2.de.split(/\s+/).length; }
+        } catch {}
+        return (
+          <div className="card" style={{ padding: "0.6rem 0.8rem", borderInlineStart: "4px solid #a78bfa", background: "linear-gradient(180deg, #FFFCF0, #FDF8E8)" }} data-testid="b2-authentic-hinweis">
+            <div style={{ fontSize: "0.84rem", fontWeight: 900, color: "#1A2E4A" }}>📖 الجديد B2: نص أصيل <span className="rtl-num">{b2Words}</span> كلمة — <span dir="ltr">{b2Title}</span></div>
+            <div style={{ fontSize: "0.78rem", color: "var(--ui-muted)", lineHeight: 1.7 }}>
+              مع تظليل <span className="b2-konnektor b2-konnektor--weil">weil</span> و <span className="b2-konnektor b2-konnektor--obwohl">obwohl</span> — اقرأ في <span style={{ color: "#113A5F", fontWeight: 800 }}>اليوم › الخطوة 3: Hören & Lesen</span>
+            </div>
+          </div>
+        );
+      })()}
       <div className="card" style={{ padding: "0.6rem 0.8rem", marginTop: "0.7rem", display: "grid", gap: "0.45rem" }}>
         <label htmlFor="lernen-search" style={{ fontSize: "0.84rem", fontWeight: 800 }}>
           🔍 ابحث في الدروس (بالعربية أو الألمانية):

@@ -987,6 +987,7 @@ function HoerenTask({ task, onPoints, voiceName, rate, persistKey }: Omit<TaskPr
 function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln }: Omit<TaskProps, "lang" | "day" | "srs" | "onSrs">) {
   const text = getText(task.textId ?? "");
   const [showTr, setShowTr] = useState(false);
+  const [highlightKonnektor, setHighlightKonnektor] = useState(text?.level === "B2");
   if (!text) return <Empty title={meldung("text-fehlt").titel} aktion={meldung("text-fehlt").aktion} />;
   // 📜 النسخةُ الطويلةُ (طول CEFR حقيقي) إن وُجدت؛ وإلا النصُّ القصير
   const lese = leseText(text);
@@ -994,6 +995,10 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
   const woerter = lese.de.split(/\s+/).length;
   const radar = useMemo(() => grammatikImText(lese.de), [lese.de]);
   const splitSaetze = (txt: string) => txt.match(/[^.!?؟。]+[.!?؟۔]+/g)?.map((s) => s.trim()).filter(Boolean) ?? [txt];
+  const highlightKonnektoren = (s: string) => {
+    if (!highlightKonnektor || text!.level !== "B2") return s;
+    return s.replace(/\b(weil|obwohl|während|damit|deshalb|dennoch|trotzdem|Wegen|Obwohl)\b/g, (m) => `__KONN__${m}__KONN__`);
+  };
   return (
     <section className="card fadein dirb-ex" style={{ padding: "1.2rem" }}>
       <Head icon="📖" de={text.titleDe} ar={text.titleAr} />
@@ -1001,6 +1006,12 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
         <div data-testid="lesen-lang" style={{ display: "flex", gap: "0.6rem", alignItems: "center", fontSize: "0.8rem", color: "var(--color-ink2)", marginBottom: "0.5rem" }}>
           <span className="chip">{text.level} · <span className="rtl-num">{woerter}</span> كلمة</span>
           <span>اقرأ مرّتين: الأولى للفكرة، الثانية للأسئلة — الأسئلة تأويلية لا حرفية</span>
+          {text.level === "B2" && (
+            <label style={{ display: "flex", gap: "0.3rem", alignItems: "center", cursor: "pointer", fontSize: "0.72rem" }}>
+              <input type="checkbox" checked={highlightKonnektor} onChange={(e) => setHighlightKonnektor(e.target.checked)} style={{ width: "14px", height: "14px" }} />
+              تظليل Konnektoren
+            </label>
+          )}
         </div>
       )}
       <article className="de authentic-reader" style={{ display: "block", width: "100%", lineHeight: 2.05, background: "var(--color-paper2)", padding: "1rem 1.1rem", borderRadius: "0.8rem", borderInlineStart: text.level === "A0" ? "4px solid #4ade80" : text.level === "A1" ? "4px solid #22c55e" : text.level === "A2" ? "4px solid #60a5fa" : text.level === "B1" ? "4px solid #f2c866" : "4px solid #a78bfa", fontSize: text.level === "B2" ? "0.98rem" : "0.92rem", letterSpacing: "0.01em" }}>
@@ -1008,16 +1019,42 @@ function LesenTask({ task, onPoints, voiceName, rate, persistKey, bemerkenRegeln
           const saetze = splitSaetze(p);
           return (
             <p key={i} style={{ margin: i === 0 ? 0 : "0.9rem 0 0" }}>
-              {saetze.map((satz, si) => (
-                <span key={si} className="authentic-satz" style={{ display: "inline-flex", gap: "0.35rem", alignItems: "baseline", marginInlineEnd: "0.35rem", marginBottom: "0.2rem" }}>
-                  <button className="chip authentic-satz-audio" aria-label={`استمع للجملة ${si + 1}`} data-testid={`lesen-satz-audio-${i}-${si}`} style={{ cursor: "pointer", minHeight: "28px", minWidth: "32px", padding: "0 0.35rem", fontSize: "0.75rem", flexShrink: 0 }} onClick={() => speakDe(satz, { voiceName, rate: (rate ?? 0.9) * 0.9 })}>🔊</button>
-                  <span style={{ flex: 1 }}><WortLinkText text={satz} level={text.level} testid={`wortlink-${i}-${si}`} /></span>
-                </span>
-              ))}
+              {saetze.map((satz, si) => {
+                const hl = highlightKonnektoren(satz);
+                const parts = hl.split(/__KONN__/);
+                return (
+                  <span key={si} className="authentic-satz" style={{ display: "inline-flex", gap: "0.35rem", alignItems: "baseline", marginInlineEnd: "0.35rem", marginBottom: "0.2rem" }}>
+                    <button className="chip authentic-satz-audio" aria-label={`استمع للجملة ${si + 1}`} data-testid={`lesen-satz-audio-${i}-${si}`} style={{ cursor: "pointer", minHeight: "28px", minWidth: "32px", padding: "0 0.35rem", fontSize: "0.75rem", flexShrink: 0 }} onClick={() => speakDe(satz, { voiceName, rate: (rate ?? 0.9) * 0.9 })}>🔊</button>
+                    <span style={{ flex: 1 }}>
+                      {parts.length > 1 ? (
+                        <span>
+                          {parts.map((part, pi) =>
+                            pi % 2 === 1 ? (
+                              <span key={pi} className={`b2-konnektor ${part.toLowerCase() === "weil" ? "b2-konnektor--weil" : part.toLowerCase() === "obwohl" || part.toLowerCase() === "während" ? "b2-konnektor--obwohl" : ""}`}>{part}</span>
+                            ) : (
+                              <WortLinkText key={pi} text={part} level={text.level} testid={`wortlink-${i}-${si}-${pi}`} />
+                            )
+                          )}
+                        </span>
+                      ) : (
+                        <WortLinkText text={satz} level={text.level} testid={`wortlink-${i}-${si}`} />
+                      )}
+                    </span>
+                  </span>
+                );
+              })}
             </p>
           );
         })}
       </article>
+      {highlightKonnektor && text.level === "B2" && (
+        <div data-testid="konnektor-legend" style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", fontSize: "0.72rem", marginTop: "0.5rem", color: "var(--ui-muted)" }}>
+          <span className="b2-konnektor b2-konnektor--weil">weil</span> سببي ·
+          <span className="b2-konnektor b2-konnektor--obwohl">obwohl</span> تنازلي ·
+          <span className="b2-konnektor">damit/deshalb</span> غاية/نتيجة
+          <span style={{ fontWeight: 700 }}>— أطفئ التظليل من الأعلى إن أزعجك</span>
+        </div>
+      )}
       {bemerkenRegeln && bemerkenRegeln.length > 0 && <BemerkenKarte textDe={lese.de} regeln={bemerkenRegeln} />}
       {radar.length > 0 && (
         <div data-testid="grammatik-radar" style={{ margin: "0.8rem 0 0.4rem", padding: "0.6rem 0.8rem", borderRadius: "8px", background: "var(--color-paper)", borderInlineStart: "4px solid var(--color-b1)", fontSize: "0.82rem" }}>
