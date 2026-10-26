@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1100)
+## الأفكار التحسينية (عينة 30/1090)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:g02-gesundheit/v266:sich ernähren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/vpfl-64:desinfizieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/vpfl-65:beobachten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/vpfl-66:begleiten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g03-gesellschaft/v278:sich integrieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g03-gesellschaft/v281:diskriminieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g03-gesellschaft/v285:akzeptieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g03-gesellschaft/v291:demonstrieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g03-gesellschaft/v294:unterschreiben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g03-gesellschaft/v296:wählen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g03-gesellschaft/v306:wegwerfen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g03-gesellschaft/v315:bewältigen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g04-wohnen/v322:vermieten` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:g05-digital/v383:speichern` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g05-digital/v397:hacken` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g05-digital/v403:aufladen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g05-digital/v407:aktualisieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v415:forschen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v417:untersuchen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v429:auswerten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v432:befragen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v435:zitieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v437:belegen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v438:beweisen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v445:einhalten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v448:fördern` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1070 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1060 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

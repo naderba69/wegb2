@@ -4946,7 +4946,8 @@
           "gesundheit"
         ],
         "exampleDe": "Wer sich gesund ernährt, braucht weniger Tabletten.",
-        "exampleAr": "من يتغذّ…"
+        "exampleAr": "من يتغذّ…",
+        "posInfo": "ernährt sich, ernährte sich, hat sich ernährt"
       },
       {
         "id": "v267",
@@ -5449,7 +5450,8 @@
         ],
         "exampleDe": "Bitte desinfizieren Sie die Hände.",
         "exampleAr": "من فضلك…",
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "desinfiziert, desinfizierte, hat desinfiziert"
       },
       {
         "id": "vpfl-65",
@@ -5461,7 +5463,8 @@
         ],
         "exampleDe": "Wir beobachten die Wunde genau.",
         "exampleAr": "نراقب ال…",
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "beobachtet, beobachtete, hat beobachtet"
       },
       {
         "id": "vpfl-66",
@@ -5473,7 +5476,8 @@
         ],
         "exampleDe": "Ich begleite Sie zur Untersuchung.",
         "exampleAr": "سأرافقك…",
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "begleitet, begleitete, hat begleitet"
       },
       {
         "id": "vpfl-67",
@@ -5970,7 +5974,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Sich zu integrieren heißt nicht, die eigene Sprache aufzugeben.",
-        "exampleAr": "الاندماج…"
+        "exampleAr": "الاندماج…",
+        "posInfo": "integriert sich, integrierte sich, hat sich integriert"
       },
       {
         "id": "v279",
@@ -6014,7 +6019,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Wer Bewerber wegen des Namens aussortiert, diskriminiert.",
-        "exampleAr": "من يستبع…"
+        "exampleAr": "من يستبع…",
+        "posInfo": "diskriminiert, diskriminierte, hat diskriminiert"
       },
       {
         "id": "v282",
@@ -6074,7 +6080,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Ich akzeptiere deine Entscheidung, auch wenn ich anders denke.",
-        "exampleAr": "أقبل قرا…"
+        "exampleAr": "أقبل قرا…",
+        "posInfo": "akzeptiert, akzeptierte, hat akzeptiert"
       },
       {
         "id": "v286",
@@ -6164,7 +6171,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Tausende demonstrieren heute für besseren Klimaschutz.",
-        "exampleAr": "الآلاف ي…"
+        "exampleAr": "الآلاف ي…",
+        "posInfo": "demonstriert, demonstrierte, hat demonstriert"
       },
       {
         "id": "v292",
@@ -6207,7 +6215,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Lesen Sie den Vertrag, bevor Sie unterschreiben, besonders die Klausel unten.",
-        "exampleAr": "اقرأ الع…"
+        "exampleAr": "اقرأ الع…",
+        "posInfo": "unterschreibt, unterschrieb, hat unterschrieben"
       },
       {
         "id": "v295",
@@ -6236,7 +6245,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Ab achtzehn darf man in Deutschland wählen.",
-        "exampleAr": "من سن ال…"
+        "exampleAr": "من سن ال…",
+        "posInfo": "wählt, wählte, hat gewählt"
       },
       {
         "id": "v297",
