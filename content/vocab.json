@@ -438,8 +438,8 @@
         "de": "bezahlen",
         "ar": "يدفع",
         "pos": "Verb",
-        "exampleDe": "Kann ich mit Karte bezahlen?",
-        "exampleAr": "هل يمكنن…",
+        "exampleDe": "Ich bezahle die Rechnung mit Karte.",
+        "exampleAr": "أدفع الفاتورة بالبطاقة.",
         "level": "A1",
         "tags": [
           "einkaufen"
@@ -1236,8 +1236,8 @@
         "de": "heiraten",
         "ar": "يتزوّج",
         "pos": "Verb",
-        "exampleDe": "Sie heiraten im Sommer.",
-        "exampleAr": "سيتزوجان…",
+        "exampleDe": "Sie wollen nächstes Jahr heiraten.",
+        "exampleAr": "يريدان الزواج العام المقبل.",
         "level": "A1",
         "tags": [
           "familie"
@@ -1496,8 +1496,8 @@
         ],
         "img": "/cards/reservieren.webp",
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
-        "exampleDe": "Ich möchte einen Tisch für vier Personen reservieren.",
-        "exampleAr": "أريد حجز…"
+        "exampleDe": "Ich reserviere einen Tisch für zwei Personen.",
+        "exampleAr": "أحجز طاولة لشخصين."
       },
       {
         "id": "v059",
@@ -1543,8 +1543,8 @@
         ],
         "img": "/cards/sparen.webp",
         "aussprache": "sp/st في البداية = «شب/شت»",
-        "exampleDe": "Wir sparen jeden Monat hundert Euro für den Urlaub.",
-        "exampleAr": "ندّخر كل…",
+        "exampleDe": "Wir sparen Geld für den Urlaub.",
+        "exampleAr": "نوفّر مالاً للعطلة.",
         "syn": [
           "ansparen"
         ]
@@ -2513,8 +2513,8 @@
         "de": "begründen",
         "ar": "يبرّر/يؤسس",
         "pos": "Verb",
-        "exampleDe": "Kannst du deine Meinung begründen?",
-        "exampleAr": "هل يمكنك…",
+        "exampleDe": "Er begründet seine Entscheidung mit Fakten.",
+        "exampleAr": "يبرّر قراره بالحقائق.",
         "level": "B1",
         "tags": [
           "diskussion"

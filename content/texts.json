@@ -4817,7 +4817,7 @@
         "promptAr": "كان رامي ___ لطارق النجاح، لكن خيبة أمله كانت أكبر."
       },
       {
-        "id": "t-b2-21-l5",
+        "id": "t-b2-21-q5",
         "type": "fill",
         "promptDe": "Obwohl beide Haltungen gut gemeint sind, entsteht ___ , wenn Erwartungen unausgesprochen bleiben.",
         "promptAr": "أكمل الفراغ حسب النص",
@@ -4970,7 +4970,7 @@
         "promptAr": "بعد العملية أمضت السيدة لانغ ثلاثة أسابيع في ___، ثم حصلت على إجازة مرضية طويلة."
       },
       {
-        "id": "t-b2-22-l5",
+        "id": "t-b2-22-q5",
         "type": "fill",
         "promptDe": "Obwohl viele Betriebe Wiedereingliederung als Fürsorge verstehen, empfinden Beschäftigte sie manchmal als ___ .",
         "promptAr": "أكمل الفراغ",
@@ -5123,7 +5123,7 @@
         "promptAr": "بشروط محددة، يمكنه طلب الحذف بموجب المادة 17 من ___."
       },
       {
-        "id": "t-b2-23-l5",
+        "id": "t-b2-23-q5",
         "type": "fill",
         "promptDe": "Obwohl Schulen Neutralität anstreben, wirken familiäre Erzählungen stark, weil sie ___ stiften.",
         "promptAr": "أكمل الفراغ",
@@ -5278,7 +5278,7 @@
         "promptAr": "في ___ نصحتها المحاضِرة بكتابة مذكرة للتعلّم."
       },
       {
-        "id": "t-b2-24-l5",
+        "id": "t-b2-24-q5",
         "type": "fill",
         "promptDe": "Obwohl Verwaltung Effizienz anstrebt, fühlen sich Anwohnende übergangen, wenn Pläne ohne ___ beschlossen werden.",
         "promptAr": "أكمل الفراغ",
@@ -5433,7 +5433,7 @@
         "promptAr": "ثلاث ___ ورضّتان في موسم واحد، وقعت معظمها في الشوط الثاني."
       },
       {
-        "id": "t-b2-25-l5",
+        "id": "t-b2-25-q5",
         "type": "fill",
         "promptDe": "Im neuen Absatz: „Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...“ — welches Wort leitet den Grund ein?",
         "promptAr": "أكمل الفراغ",
@@ -5972,7 +5972,7 @@
         "promptAr": "وسألوا أيضاً متى يمكن للمنشأة أن ___ الكهرباء في الشبكة."
       },
       {
-        "id": "t-b2-26-l5",
+        "id": "t-b2-26-q5",
         "type": "fill",
         "promptDe": "Im neuen Absatz: „Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...“ — welches Wort leitet den Grund ein?",
         "promptAr": "أكمل الفراغ",
@@ -6128,7 +6128,7 @@
         "promptAr": "___ يجذب، والخط الصغير يردّ."
       },
       {
-        "id": "t-b2-27-l5",
+        "id": "t-b2-27-q5",
         "type": "fill",
         "promptDe": "Im neuen Absatz: „Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...“ — welches Wort leitet den Grund ein?",
         "promptAr": "أكمل الفراغ",
@@ -6284,7 +6284,7 @@
         "promptAr": "لا تستطيع المدينة ممارسة ___ إلا في الحالات التي ينص عليها القانون ولما فيه المصلحة العامة."
       },
       {
-        "id": "t-b2-28-l5",
+        "id": "t-b2-28-q5",
         "type": "fill",
         "promptDe": "Im neuen Absatz: „Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...“ — welches Wort leitet den Grund ein?",
         "promptAr": "أكمل الفراغ",
@@ -6441,14 +6441,14 @@
         "promptAr": "كان ينبغي تجديد وثيقة ___ كل ستة أشهر، مع بقاء أفق بقائها في البلاد غير واضح."
       },
       {
-        "id": "t-b2-29-l5",
+        "id": "t-b2-29-q5",
         "type": "fill",
         "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
         "promptAr": "أكمل",
         "answer": [
           "weil"
         ],
-        "explanationAr": "الدليل في الفقرة الجديدة."
+        "explanationAr": "الدليل: «Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...»"
       }
     ],
     "neu": true,
@@ -6597,14 +6597,14 @@
         "promptAr": "في القصة، يوجد أمام المنزل رقم 14 منذ الربيع حجر صغير مثبت في الرصيف من نوع ___."
       },
       {
-        "id": "t-b2-30-l5",
+        "id": "t-b2-30-q5",
         "type": "fill",
         "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
         "promptAr": "أكمل",
         "answer": [
           "weil"
         ],
-        "explanationAr": "الدليل في الفقرة الجديدة."
+        "explanationAr": "الدليل: «Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...»"
       }
     ],
     "neu": true,
@@ -7138,14 +7138,14 @@
         "promptAr": "يُخطَّط لتحول النقل في المدينة، ويُ___ في الريف."
       },
       {
-        "id": "t-b2-31-l5",
+        "id": "t-b2-31-q5",
         "type": "fill",
         "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
         "promptAr": "أكمل",
         "answer": [
           "weil"
         ],
-        "explanationAr": "الدليل في الفقرة الجديدة."
+        "explanationAr": "الدليل: «Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...»"
       }
     ],
     "neu": true,
@@ -7294,14 +7294,14 @@
         "promptAr": "ما يبدو ___ يمكن أن يظهر طبيعياً على الشاشة."
       },
       {
-        "id": "t-b2-32-l5",
+        "id": "t-b2-32-q5",
         "type": "fill",
         "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
         "promptAr": "أكمل",
         "answer": [
           "weil"
         ],
-        "explanationAr": "الدليل في الفقرة الجديدة."
+        "explanationAr": "الدليل: «Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...»"
       }
     ],
     "neu": true,
@@ -7450,14 +7450,14 @@
         "promptAr": "رفض بن وأعلن ___ من النادي."
       },
       {
-        "id": "t-b2-33-l5",
+        "id": "t-b2-33-q5",
         "type": "fill",
         "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
         "promptAr": "أكمل",
         "answer": [
           "weil"
         ],
-        "explanationAr": "الدليل في الفقرة الجديدة."
+        "explanationAr": "الدليل: «Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...»"
       }
     ],
     "neu": true,

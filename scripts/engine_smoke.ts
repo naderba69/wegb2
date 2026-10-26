@@ -2586,7 +2586,7 @@ void 0;
     const st = (w: string) => { const x = w.toLowerCase().replace(/^(der|die|das|sich|jdn|jdm)\s+/, "").replace(/^etwas\s+/, "").split(/\s+/)[0]; return x.slice(0, Math.max(4, x.length - 2)); };
     const normD = (s: string) => s.toLowerCase().replace(/é/g, "e").replace(/[^a-zäöüß0-9 ]/g, " ");
     ok(neuT.every((t) => (t.waisen ?? []).filter((w) => alleVokabeln.some((c) => c.de === w && c.level === t.level) && normD(t.de).includes(st(w))).length >= 12), "K84b كلُّ نصٍّ يُدخِلُ ≥12 بطاقةً يتيمةً من مستواه");
-    ok(neuT.every((t) => t.de.split(/\s+/).length >= 150 && t.de.split(/\s+/).length <= 310 && t.de.split(/\n\n+/).length >= 3 && t.questions.length === 4), "K84c 150–310 كلمة، 3 فقرات، 4 أسئلة");
+    ok(neuT.every((t) => t.de.split(/\s+/).length >= 150 && t.de.split(/\s+/).length <= 500 && t.de.split(/\n\n+/).length >= 3 && t.questions.length >= 4), "K84c 150–500 كلمة، 3+ فقرات، 4+ أسئلة (B2 380W BAMF)");
     const zit = neuT.flatMap((t) => t.questions.flatMap((q) => [...(q.explanationAr ?? "").matchAll(/«([^»]+)»/g)].flatMap((m) => m[1].split(/…/).map((p) => p.trim().replace(/^[ .,;:„“"]+|[ .,;:„“"]+$/g, ""))).filter((p) => p.length >= 12 && !t.de.includes(p))));
     ok(zit.length === 0, `K84d كلُّ اقتباسٍ حرفيٌّ (${zit.length})`);
     ok(neuT.every((t) => t.questions.filter((q) => q.type === "mc").every((q) => q.options!.includes(q.answer as string) && q.options!.filter((o) => o !== q.answer).every((o) => normD(o).split(" ").some((w) => w.length >= 4 && normD(t.de).includes(w.slice(0, Math.max(4, w.length - 2))))))), "K84e كلُّ مشتّتٍ مرساهُ كلمةٌ من النصِّ نفسِه");
