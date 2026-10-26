@@ -2783,8 +2783,8 @@
         ],
         "img": "/cards/ueberzeugen.webp",
         "aussprache": "eu/äu = «أوي» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
-        "exampleDe": "Mit guten Argumenten kannst du sie sicher überzeugen.",
-        "exampleAr": "بحجج جيد…"
+        "exampleDe": "Sie versucht, ihn mit Argumenten zu überzeugen.",
+        "exampleAr": "تحاول إقناعه بالحجج."
       },
       {
         "id": "v116",
@@ -2845,8 +2845,8 @@
           "arbeit"
         ],
         "img": "/cards/ausbilden.webp",
-        "exampleDe": "Die Firma bildet jedes Jahr zehn junge Leute aus.",
-        "exampleAr": "الشركة ت…"
+        "exampleDe": "Die Firma bildet junge Menschen aus.",
+        "exampleAr": "الشركة تدرّب الشباب."
       },
       {
         "id": "v120",
@@ -3106,8 +3106,8 @@
         ],
         "img": "/cards/recherchieren.webp",
         "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
-        "exampleDe": "Dina hat zwei Tage recherchiert, bevor sie den Artikel veröffentlichte.",
-        "exampleAr": "دينا بحث…"
+        "exampleDe": "Journalisten recherchieren die Hintergründe genau.",
+        "exampleAr": "يبحث الصحفيون الخلفيات بدقة."
       },
       {
         "id": "v126",
@@ -3270,8 +3270,8 @@
         ],
         "img": "/cards/bewerten.webp",
         "aussprache": "w = «ڤ»",
-        "exampleDe": "Die Jury bewertet nicht die Idee allein, sondern auch die Umsetzung.",
-        "exampleAr": "لجنة الت…"
+        "exampleDe": "Lehrer bewerten die Leistung nach klaren Kriterien.",
+        "exampleAr": "يقيّم المعلمون الأداء بمعايير واضحة."
       },
       {
         "id": "v136",
@@ -3333,8 +3333,8 @@
         ],
         "img": "/cards/voraussetzen.webp",
         "aussprache": "v = «ف» · z = «تس»",
-        "exampleDe": "Der Kurs setzt voraus, dass Sie B1 sicher beherrschen.",
-        "exampleAr": "الدورة ت…"
+        "exampleDe": "Gute Deutschkenntnisse werden vorausgesetzt.",
+        "exampleAr": "يُفترض توفر معرفة جيدة بالألمانية."
       },
       {
         "id": "v140",
