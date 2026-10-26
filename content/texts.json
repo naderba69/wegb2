@@ -4832,7 +4832,76 @@
       "das Mitgefühl",
       "betrügen",
       "enttäuschen"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-21-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-21-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-21-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-21-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-21-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-22",
@@ -4906,7 +4975,76 @@
       "die Solidarität",
       "dosieren",
       "die Anstrengung"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-22-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-22-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-22-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-22-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-22-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-23",
@@ -4982,7 +5120,76 @@
       "der Chatbot",
       "die Datenspeicherung",
       "die DSGVO"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-23-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-23-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-23-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-23-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-23-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-24",
@@ -5058,7 +5265,76 @@
       "die Ablenkung",
       "die Karteikarte",
       "die Abschlussarbeit"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-24-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-24-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-24-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-24-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-24-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-25",
@@ -5135,7 +5411,76 @@
       "der Beitritt",
       "die Bestleistung",
       "diszipliniert"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-25-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-25-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-25-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-25-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-25-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b1-21",
@@ -5595,7 +5940,76 @@
       "fossil",
       "das Kraftwerk",
       "der Ökostrom"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-26-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-26-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-26-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-26-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-26-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-27",
@@ -5672,7 +6086,76 @@
       "hochwertig",
       "die Irreführung",
       "die Verbraucherzentrale"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-27-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-27-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-27-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-27-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-27-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-28",
@@ -5750,7 +6233,76 @@
       "sanieren",
       "aufwerten",
       "die Zweckentfremdung"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-28-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-28-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-28-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-28-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-28-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-29",
@@ -5827,7 +6379,76 @@
       "zugewandert",
       "die Blaue Karte",
       "der Zweitspracherwerb"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-29-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-29-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-29-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-29-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-29-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-30",
@@ -5904,7 +6525,76 @@
       "gedenken",
       "aufarbeiten",
       "relativieren"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-30-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-30-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-30-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-30-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-30-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b1-26",
@@ -6366,7 +7056,76 @@
       "die Ladestation",
       "die Verkehrswende",
       "das Parkhaus"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-31-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-31-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-31-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-31-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-31-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-32",
@@ -6443,7 +7202,76 @@
       "künstlich",
       "attraktiv",
       "die Reichweite"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-32-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-32-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-32-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-32-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-32-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-33",
@@ -6522,7 +7350,76 @@
       "das Unentschieden",
       "die Verlängerung",
       "das Elfmeterschießen"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-33-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-33-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-33-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-33-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-33-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-34",
@@ -6601,7 +7498,76 @@
       "der Leitartikel",
       "das Framing",
       "die Untertreibung"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-34-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-34-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-34-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-34-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-34-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-35",
@@ -6680,7 +7646,76 @@
       "der Numerus clausus",
       "die Eselsbrücke",
       "der Karteikasten"
-    ]
+    ],
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-35-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-35-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-35-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-35-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-35-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-a1-021",
@@ -7882,7 +8917,76 @@
         "explanationAr": "الدليل في النص: «Dabei sollte man nicht nur Noten, sondern auch Schlaf, Wohlbefinden und Unterrichtsbeteiligung beobachten.» — تشمل المتابعة المشاركة في الدرس أيضاً."
       }
     ],
-    "wordCountDe": 182
+    "wordCountDe": 182,
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-36-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-36-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-36-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-36-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-36-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-37",
@@ -7941,7 +9045,76 @@
         "explanationAr": "الدليل في النص: «wenn ich eine Äußerung nicht richtig verstehe» — تسأل الشخصية عندما لا تفهم عبارةً كما ينبغي."
       }
     ],
-    "wordCountDe": 207
+    "wordCountDe": 207,
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-37-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-37-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-37-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-37-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-37-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-38",
@@ -8000,7 +9173,76 @@
         "explanationAr": "الدليل في النص: «der Unterschied war jedoch statistisch nicht signifikant» — لم يكن الفرق ذا دلالة إحصائية."
       }
     ],
-    "wordCountDe": 180
+    "wordCountDe": 180,
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-38-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-38-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-38-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-38-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-38-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-39",
@@ -8060,7 +9302,76 @@
         "explanationAr": "الدليل في النص: «Das setzt jedoch ausreichend schnelles Internet voraus.» — يتطلب ذلك إنترنت سريعاً بما يكفي."
       }
     ],
-    "wordCountDe": 177
+    "wordCountDe": 177,
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-39-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-39-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-39-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-39-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-39-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-b2-40",
@@ -8120,7 +9431,76 @@
         "explanationAr": "الدليل في النص: «wem eine Aussage nützt und wer dadurch Nachteile hat» — ينبغي النظر أيضاً إلى من يستفيد ومن يتضرر."
       }
     ],
-    "wordCountDe": 197
+    "wordCountDe": 197,
+    "lang": {
+      "de": "Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien,\n\num wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig\n\nentstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag in vielen Bereichen. Viele Menschen arbeiten heute im Homeoffice und kommunizieren über Videokonferenzen. Gleichzeitig entstehen neue Herausforderungen für den Datenschutz und die Work-Life-Balance. Unternehmen investieren in neue Technologien, um wettbewerbsfähig zu bleiben. Die Gesellschaft diskutiert intensiv über Chancen und Risiken dieser Entwicklung. Die Digitalisierung verändert unseren Alltag",
+      "questions": [
+        {
+          "id": "t-b2-40-lang-q1",
+          "type": "mc",
+          "promptDe": "Was ist das Hauptthema des Textes?",
+          "promptAr": "ما الموضوع الرئيسي للنص؟",
+          "options": [
+            "Digitalisierung",
+            "Urlaub",
+            "Sport",
+            "Kochen"
+          ],
+          "answer": "Digitalisierung",
+          "explanationAr": "النص يركز على Digitalisierung وتأثيرها."
+        },
+        {
+          "id": "t-b2-40-lang-q2",
+          "type": "mc",
+          "promptDe": "Wo arbeiten viele Menschen heute?",
+          "promptAr": "أين يعمل كثير من الناس اليوم؟",
+          "options": [
+            "Im Büro nur",
+            "Im Homeoffice",
+            "Im Park",
+            "Im Zug"
+          ],
+          "answer": "Im Homeoffice",
+          "explanationAr": "النص يقول: im Homeoffice."
+        },
+        {
+          "id": "t-b2-40-lang-q3",
+          "type": "mc",
+          "promptDe": "Worüber diskutiert die Gesellschaft?",
+          "promptAr": "عن ماذا يناقش المجتمع؟",
+          "options": [
+            "Chancen und Risiken",
+            "Nur Risiken",
+            "Nur Chancen",
+            "Nichts"
+          ],
+          "answer": "Chancen und Risiken",
+          "explanationAr": "النص يذكر Chancen und Risiken."
+        },
+        {
+          "id": "t-b2-40-lang-q4",
+          "type": "truefalse",
+          "promptDe": "Unternehmen investieren nicht in Technologie.",
+          "promptAr": "الشركات لا تستثمر في التكنولوجيا.",
+          "options": [
+            "richtig",
+            "falsch"
+          ],
+          "answer": "falsch",
+          "explanationAr": "النص يقول: Unternehmen investieren — العبارة خاطئة."
+        },
+        {
+          "id": "t-b2-40-lang-q5",
+          "type": "fill",
+          "promptDe": "Viele Menschen ______ im Homeoffice.",
+          "promptAr": "املأ الفراغ: Viele Menschen ______ im Homeoffice.",
+          "answer": [
+            "arbeiten"
+          ],
+          "explanationAr": "الفعل المناسب هو arbeiten."
+        }
+      ]
+    }
   },
   {
     "id": "t-a0-06",

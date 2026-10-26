@@ -353,7 +353,7 @@ function LektionWizardContent({ topicId }: { topicId: string }) {
         </div>
         <div className="lesson-hero-light">
           {topic.ziel && (
-            <div className="lesson-ziel" data-testid="wizard-ziel" style={{ background:"linear-gradient(135deg, #0F1E3A 0%, #162B55 100%)", color:"#E8EEF8", borderInlineStart:"4px solid #C8A84E" }}>
+            <div className="lesson-ziel" data-testid="wizard-ziel" style={{ background:'linear-gradient(135deg, #0F1E3A 0%, #162B55 100%)', color:'#E8EEF8', borderInlineStart:'4px solid #C8A84E' }}>
               <span aria-hidden>🎯</span>
               <span><strong style={{ color:"#E8D9A8" }}>هدف هذا الدرس:</strong> {topic.ziel}</span>
             </div>
