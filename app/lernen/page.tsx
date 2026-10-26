@@ -63,7 +63,7 @@ export default function Lernen() {
       <Link href="/masar" className="curriculum-entry-link" data-testid="curriculum-map-link">
         🧭 استكشف مسار المنهج الكامل · 378 يوماً
       </Link>
-      {/* B2 Hinweis — ثابت Verlag (لا استيراد مباشر لـ @/content/) */}
+      {/* B2 Hinweis — ثابت Verlag */}
       <div className="card" style={{ padding: '0.6rem 0.8rem', borderInlineStart: '4px solid #a78bfa', background: 'linear-gradient(180deg, #FFFCF0, #FDF8E8)' }} data-testid="b2-authentic-hinweis">
         <div style={{ fontSize: '0.84rem', fontWeight: 900, color: '#1A2E4A' }}>📖 الجديد B2: نص أصيل 286 كلمة</div>
         <div style={{ fontSize: '0.78rem', color: 'var(--ui-muted)', lineHeight: 1.7 }}>
