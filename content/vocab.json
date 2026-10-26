@@ -2139,7 +2139,8 @@
           "feier"
         ],
         "img": "/cards/gratulieren.webp",
-        "aussprache": "ie = «إي» ممدودة"
+        "aussprache": "ie = «إي» ممدودة",
+        "formen": "gratuliert, gratulierte, hat gratuliert"
       },
       {
         "id": "v083",
@@ -2218,7 +2219,8 @@
         "img": "/cards/beschreiben.webp",
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Können Sie den Mann bitte genau beschreiben?",
-        "exampleAr": "هل يمكنك…"
+        "exampleAr": "هل يمكنك…",
+        "formen": "beschreibt, beschrieb, hat beschrieben"
       },
       {
         "id": "v088",
@@ -2425,7 +2427,8 @@
         "img": "/cards/erwarten.webp",
         "aussprache": "w = «ڤ»",
         "exampleDe": "Ich erwarte morgen ein Paket, bitte nehmen Sie es an.",
-        "exampleAr": "أنتظر طر…"
+        "exampleAr": "أنتظر طر…",
+        "formen": "erwartet, erwartete, hat erwartet"
       },
       {
         "id": "v167",
@@ -2530,7 +2533,8 @@
           "diskussion"
         ],
         "img": "/cards/begruenden.webp",
-        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين"
+        "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
+        "formen": "begründet, begründete, hat begründet"
       },
       {
         "id": "v100",
@@ -2794,7 +2798,8 @@
         "img": "/cards/ueberzeugen.webp",
         "aussprache": "eu/äu = «أوي» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Sie versucht, ihn mit Argumenten zu überzeugen.",
-        "exampleAr": "تحاول إقناعه بالحجج."
+        "exampleAr": "تحاول إقناعه بالحجج.",
+        "formen": "überzeugt, überzeugte, hat überzeugt"
       },
       {
         "id": "v116",
@@ -2856,7 +2861,8 @@
         ],
         "img": "/cards/ausbilden.webp",
         "exampleDe": "Die Firma bildet junge Menschen aus.",
-        "exampleAr": "الشركة تدرّب الشباب."
+        "exampleAr": "الشركة تدرّب الشباب.",
+        "formen": "bildet aus, bildete aus, hat ausgebildet"
       },
       {
         "id": "v120",
@@ -3117,7 +3123,8 @@
         "img": "/cards/recherchieren.webp",
         "aussprache": "ie = «إي» ممدودة · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Journalisten recherchieren die Hintergründe genau.",
-        "exampleAr": "يبحث الصحفيون الخلفيات بدقة."
+        "exampleAr": "يبحث الصحفيون الخلفيات بدقة.",
+        "formen": "recherchiert, recherchierte, hat recherchiert"
       },
       {
         "id": "v126",
@@ -3281,7 +3288,8 @@
         "img": "/cards/bewerten.webp",
         "aussprache": "w = «ڤ»",
         "exampleDe": "Lehrer bewerten die Leistung nach klaren Kriterien.",
-        "exampleAr": "يقيّم المعلمون الأداء بمعايير واضحة."
+        "exampleAr": "يقيّم المعلمون الأداء بمعايير واضحة.",
+        "formen": "bewertet, bewertete, hat bewertet"
       },
       {
         "id": "v136",
@@ -3344,7 +3352,8 @@
         "img": "/cards/voraussetzen.webp",
         "aussprache": "v = «ف» · z = «تس»",
         "exampleDe": "Gute Deutschkenntnisse werden vorausgesetzt.",
-        "exampleAr": "يُفترض توفر معرفة جيدة بالألمانية."
+        "exampleAr": "يُفترض توفر معرفة جيدة بالألمانية.",
+        "formen": "setzt voraus, setzte voraus, hat vorausgesetzt"
       },
       {
         "id": "v140",
@@ -3500,7 +3509,8 @@
           "argument"
         ],
         "img": "/cards/greifen.webp",
-        "aussprache": "ei = «آي» لا «إي»"
+        "aussprache": "ei = «آي» لا «إي»",
+        "formen": "greift, griff, hat gegriffen"
       },
       {
         "id": "v180",
