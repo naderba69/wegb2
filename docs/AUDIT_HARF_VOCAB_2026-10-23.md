@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1050)
+## الأفكار التحسينية (عينة 30/1040)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:g08-kunst-kultur/v508:malen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g08-kunst-kultur/v520:drehen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g08-kunst-kultur/v528:aufführen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g08-kunst-kultur/v530:kritisieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g08-kunst-kultur/v531:rezensieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h01-arbeit-beruf/v569:aufsteigen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h01-arbeit-beruf/v578:sich bewerben um` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h01-arbeit-beruf/v585:streiken` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h01-arbeit-beruf/v588:beurteilen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h01-arbeit-beruf/v596:in den Ruhestand gehen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h01-arbeit-beruf/vpfl-89:eintragen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h01-arbeit-beruf/vpfl-90:lagern` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h01-arbeit-beruf/vpfl-91:alarmieren` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:h03-konsum-geld/v670:abheben` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h03-konsum-geld/v671:einzahlen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h03-konsum-geld/v674:ins Minus rutschen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v690:werben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v693:sich leisten können` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v699:umtauschen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v702:reklamieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v705:zurückgeben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v706:konsumieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h04-mobilitaet-verkehr/v718:sich fortbewegen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h04-mobilitaet-verkehr/v726:entwerten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h04-mobilitaet-verkehr/v728:sich verspäten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h04-mobilitaet-verkehr/v743:pendeln` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1020 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1010 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

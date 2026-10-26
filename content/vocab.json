@@ -9382,7 +9382,8 @@
           "kunst-kultur"
         ],
         "exampleDe": "Am Wochenende male ich, um den Kopf frei zu bekommen.",
-        "exampleAr": "في نهاية…"
+        "exampleAr": "في نهاية…",
+        "posInfo": "malt, malte, hat gemalt"
       },
       {
         "id": "v509",
@@ -9562,7 +9563,8 @@
         ],
         "exampleDe": "Der Regisseur hat den Film in nur drei Wochen gedreht.",
         "exampleAr": "المخرج ص…",
-        "plural": "die Bestimmungen"
+        "plural": "die Bestimmungen",
+        "posInfo": "dreht, drehte, hat gedreht"
       },
       {
         "id": "v521",
@@ -9685,7 +9687,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Die Schüler führen im Juni ein eigenes Stück auf.",
-        "exampleAr": "التلاميذ…"
+        "exampleAr": "التلاميذ…",
+        "posInfo": "führt auf, führte auf, hat aufgeführt"
       },
       {
         "id": "v529",
@@ -9714,7 +9717,8 @@
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Sie kritisiert den Plan sachlich, ohne laut zu werden.",
         "exampleAr": "هي تنتقد…",
-        "plural": "die Normen"
+        "plural": "die Normen",
+        "posInfo": "kritisiert, kritisierte, hat kritisiert"
       },
       {
         "id": "v531",
@@ -9727,7 +9731,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Wer ein Buch rezensiert, sollte es ganz gelesen haben.",
-        "exampleAr": "من يكتب…"
+        "exampleAr": "من يكتب…",
+        "posInfo": "rezensiert, rezensierte, hat rezensiert"
       },
       {
         "id": "v532",
@@ -10325,7 +10330,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Wer aufsteigen will, muss auch unbequeme Aufgaben übernehmen.",
-        "exampleAr": "من يريد الترقي علي…"
+        "exampleAr": "من يريد الترقي علي…",
+        "posInfo": "steigt auf, stieg auf, ist aufgestiegen"
       },
       {
         "id": "v570",
@@ -10461,7 +10467,8 @@
           "arbeit-beruf"
         ],
         "exampleDe": "Er will sich um eine Stelle als Lehrer bewerben.",
-        "exampleAr": "يريد أن يتقدم لشاغر معلم."
+        "exampleAr": "يريد أن يتقدم لشاغر معلم.",
+        "posInfo": "bewirbt sich um, bewarb sich um, hat sich beworben um"
       },
       {
         "id": "v579",
@@ -10568,7 +10575,8 @@
         "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
         "exampleDe": "Die Lokführer streiken seit Montag, die Züge fahren nicht.",
         "exampleAr": "سائقو القطارات مضر…",
-        "plural": "die Auswertungen"
+        "plural": "die Auswertungen",
+        "posInfo": "streikt, streikte, hat gestreikt"
       },
       {
         "id": "v586",
@@ -10613,7 +10621,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · eu/äu = «أوي»",
         "exampleDe": "Eine Bewerbung nur nach dem Foto zu beurteilen, ist unfair.",
-        "exampleAr": "تقييم طلب توظيف بح…"
+        "exampleAr": "تقييم طلب توظيف بح…",
+        "posInfo": "beurteilt, beurteilte, hat beurteilt"
       },
       {
         "id": "v589",
@@ -10736,7 +10745,8 @@
           "arbeit-beruf"
         ],
         "exampleDe": "Mein Vater geht nächstes Jahr in den Ruhestand, nach vierzig Jahren.",
-        "exampleAr": "أبي يتقاعد السنة ا…"
+        "exampleAr": "أبي يتقاعد السنة ا…",
+        "posInfo": "geht in den Ruhestand, ging in den Ruhestand, ist in den Ruhestand gegangen"
       },
       {
         "id": "vpfl-20",
