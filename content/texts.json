@@ -4819,7 +4819,7 @@
       {
         "id": "t-b2-21-q5",
         "type": "fill",
-        "promptDe": "Obwohl beide Haltungen gut gemeint sind, entsteht ___ , wenn Erwartungen unausgesprochen bleiben.",
+        "promptDe": "Obwohl beide Haltungen gut gemeint sind, entsteht ___, wenn Erwartungen unausgesprochen bleiben.",
         "promptAr": "أكمل الفراغ حسب النص",
         "answer": [
           "Missverständnis"
@@ -4972,7 +4972,7 @@
       {
         "id": "t-b2-22-q5",
         "type": "fill",
-        "promptDe": "Obwohl viele Betriebe Wiedereingliederung als Fürsorge verstehen, empfinden Beschäftigte sie manchmal als ___ .",
+        "promptDe": "Obwohl viele Betriebe Wiedereingliederung als Fürsorge verstehen, empfinden Beschäftigte sie manchmal als ___.",
         "promptAr": "أكمل الفراغ",
         "answer": [
           "Kontrolle"
@@ -5435,8 +5435,8 @@
       {
         "id": "t-b2-25-q5",
         "type": "fill",
-        "promptDe": "Im neuen Absatz: „Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...“ — welches Wort leitet den Grund ein?",
-        "promptAr": "أكمل الفراغ",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -5974,8 +5974,8 @@
       {
         "id": "t-b2-26-q5",
         "type": "fill",
-        "promptDe": "Im neuen Absatz: „Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...“ — welches Wort leitet den Grund ein?",
-        "promptAr": "أكمل الفراغ",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -6130,8 +6130,8 @@
       {
         "id": "t-b2-27-q5",
         "type": "fill",
-        "promptDe": "Im neuen Absatz: „Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...“ — welches Wort leitet den Grund ein?",
-        "promptAr": "أكمل الفراغ",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -6286,8 +6286,8 @@
       {
         "id": "t-b2-28-q5",
         "type": "fill",
-        "promptDe": "Im neuen Absatz: „Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet ...“ — welches Wort leitet den Grund ein?",
-        "promptAr": "أكمل الفراغ",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -6443,8 +6443,8 @@
       {
         "id": "t-b2-29-q5",
         "type": "fill",
-        "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
-        "promptAr": "أكمل",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -6599,8 +6599,8 @@
       {
         "id": "t-b2-30-q5",
         "type": "fill",
-        "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
-        "promptAr": "أكمل",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -7140,8 +7140,8 @@
       {
         "id": "t-b2-31-q5",
         "type": "fill",
-        "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
-        "promptAr": "أكمل",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -7296,8 +7296,8 @@
       {
         "id": "t-b2-32-q5",
         "type": "fill",
-        "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
-        "promptAr": "أكمل",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -7452,8 +7452,8 @@
       {
         "id": "t-b2-33-q5",
         "type": "fill",
-        "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet dieses The ... welches Wort?",
-        "promptAr": "أكمل",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -7610,8 +7610,8 @@
       {
         "id": "t-b2-34-q5",
         "type": "fill",
-        "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet  ...",
-        "promptAr": "أكمل",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
@@ -7768,8 +7768,8 @@
       {
         "id": "t-b2-35-q5",
         "type": "fill",
-        "promptDe": "Im Integrationskurs nach dem BAMF-Rahmencurriculum begegnet  ...",
-        "promptAr": "أكمل",
+        "promptDe": "Welches Wort leitet den Grund im neuen Absatz ein?",
+        "promptAr": "أي كلمة تستهل السبب في الفقرة الجديدة؟",
         "answer": [
           "weil"
         ],
