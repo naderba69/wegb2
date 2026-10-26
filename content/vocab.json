@@ -3483,8 +3483,8 @@
         "de": "greifen",
         "ar": "يُفيد/ينفع (عن الإجراء)",
         "pos": "Verb",
-        "exampleDe": "Die Maßnahmen greifen endlich.",
-        "exampleAr": "الإجراءا…",
+        "exampleDe": "Er greift nach dem Buch auf dem Tisch.",
+        "exampleAr": "يمد يده نحو الكتاب على الطاولة.",
         "level": "B2",
         "tags": [
           "argument"
@@ -3812,8 +3812,8 @@
           "beziehungen"
         ],
         "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
-        "exampleDe": "Die Nachbarn streiten sich oft wegen der Musik.",
-        "exampleAr": "الجيران…"
+        "exampleDe": "Wir streiten uns oft über kleine Dinge.",
+        "exampleAr": "نتشاجر كثيراً على أمور صغيرة."
       },
       {
         "id": "v189",
@@ -3825,8 +3825,8 @@
           "beziehungen"
         ],
         "aussprache": "v = «ف» · ö = بينَ الضمّةِ والكسرة",
-        "exampleDe": "Nach dem Gespräch am runden Tisch haben sich die beiden versöhnt.",
-        "exampleAr": "بعد حديث…"
+        "exampleDe": "Nach dem Streit haben sie sich versöhnt.",
+        "exampleAr": "تصالحا بعد الشجار."
       },
       {
         "id": "v190",
@@ -3884,8 +3884,8 @@
         "tags": [
           "beziehungen"
         ],
-        "exampleDe": "Nach fünf Jahren haben sie sich getrennt.",
-        "exampleAr": "بعد خمس…"
+        "exampleDe": "Sie haben sich nach zwei Jahren getrennt.",
+        "exampleAr": "انفصلا بعد سنتين."
       },
       {
         "id": "v194",
@@ -3959,8 +3959,8 @@
           "beziehungen"
         ],
         "aussprache": "v = «ف»",
-        "exampleDe": "Wir haben uns für Samstag um zehn verabredet.",
-        "exampleAr": "حدّدنا م…"
+        "exampleDe": "Er hat sich in seine Kollegin verliebt.",
+        "exampleAr": "وقع في حب زميلته."
       },
       {
         "id": "v199",
