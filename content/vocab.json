@@ -8481,7 +8481,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Nach dem Master will sie promovieren, am liebsten im Ausland.",
-        "exampleAr": "بعد الما…"
+        "exampleAr": "بعد الما…",
+        "posInfo": "promoviert, promovierte, hat promoviert"
       },
       {
         "id": "v452",
@@ -8509,7 +8510,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Das Team publiziert die Ergebnisse frei zugänglich.",
-        "exampleAr": "الفريق ي…"
+        "exampleAr": "الفريق ي…",
+        "posInfo": "publiziert, publizierte, hat publiziert"
       },
       {
         "id": "v454",
@@ -8704,7 +8706,8 @@
           "schoenheit"
         ],
         "exampleDe": "Im Winter muss man die Haut besonders pflegen.",
-        "exampleAr": "في الشتا…"
+        "exampleAr": "في الشتا…",
+        "posInfo": "pflegt, pflegte, hat gepflegt"
       },
       {
         "id": "v465",
@@ -8747,7 +8750,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Sie schminkt sich nur für besondere Anlässe.",
-        "exampleAr": "هي تتزيّ…"
+        "exampleAr": "هي تتزيّ…",
+        "posInfo": "schminkt sich, schminkte sich, hat sich geschminkt"
       },
       {
         "id": "v468",
@@ -8820,7 +8824,8 @@
           "schoenheit"
         ],
         "exampleDe": "Wir altern alle, die Frage ist nur, wie gesund.",
-        "exampleAr": "كلنا نشي…"
+        "exampleAr": "كلنا نشي…",
+        "posInfo": "altert, alterte, ist gealtert"
       },
       {
         "id": "v473",
@@ -8911,7 +8916,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Zieh dich warm an, es sind nur acht Grad!",
-        "exampleAr": "ارتدِ مل…"
+        "exampleAr": "ارتدِ مل…",
+        "posInfo": "zieht sich an, zog sich an, hat sich angezogen"
       },
       {
         "id": "v479",
@@ -9096,7 +9102,8 @@
         "aussprache": "ie = «إي» ممدودة · sch = «ش»",
         "exampleDe": "Viele Magazine retuschieren Haut und Figur, ohne es zu kennzeichnen.",
         "exampleAr": "مجلات كث…",
-        "plural": "die Ermittlungen"
+        "plural": "die Ermittlungen",
+        "posInfo": "retuschiert, retuschierte, hat retuschiert"
       },
       {
         "id": "v491",
@@ -9154,7 +9161,8 @@
           "schoenheit"
         ],
         "exampleDe": "Ruhige Stimmen wirken auf Kunden überzeugender als laute.",
-        "exampleAr": "الأصوات…"
+        "exampleAr": "الأصوات…",
+        "posInfo": "wirkt auf, wirkte auf, hat gewirkt auf"
       },
       {
         "id": "v495",
@@ -9168,7 +9176,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Ihr ruhiges Auftreten hat die Personalchefin beeindruckt.",
         "exampleAr": "حضورها ا…",
-        "plural": "die Sanktionen"
+        "plural": "die Sanktionen",
+        "posInfo": "beeindruckt, beeindruckte, hat beeindruckt"
       },
       {
         "id": "v496",
@@ -9244,7 +9253,8 @@
         "aussprache": "ei = «آي» لا «إي» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Die Überschrift übertreibt, der Text selbst ist vorsichtig.",
         "exampleAr": "العنوان…",
-        "plural": "die Geldstrafen"
+        "plural": "die Geldstrafen",
+        "posInfo": "übertreibt, übertrieb, hat übertrieben"
       },
       {
         "id": "v501",

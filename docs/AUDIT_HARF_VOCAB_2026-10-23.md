@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1060)
+## الأفكار التحسينية (عينة 30/1050)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:g06-wissenschaft/v451:promovieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v453:publizieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g07-schoenheit/v464:pflegen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g07-schoenheit/v467:sich schminken` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g07-schoenheit/v472:altern` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g07-schoenheit/v478:sich anziehen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g07-schoenheit/v490:retuschieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g07-schoenheit/v494:wirken auf` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g07-schoenheit/v495:beeindrucken` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g07-schoenheit/v500:übertreiben` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g08-kunst-kultur/v508:malen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g08-kunst-kultur/v520:drehen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g08-kunst-kultur/v528:aufführen` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:h02-umwelt-klima/v622:ausstoßen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h02-umwelt-klima/v628:schädigen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h02-umwelt-klima/v629:gefährden` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v632:schützen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v633:aussterben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v646:abholzen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v657:protestieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v659:überweisen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v665:versteuern` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v668:eröffnen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v670:abheben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v671:einzahlen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h03-konsum-geld/v674:ins Minus rutschen` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1030 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1020 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)
