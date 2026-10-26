@@ -4698,7 +4698,7 @@ void 0;
     item.sources.every((id) => sourceIds.has(id)) && item.finding.trim().length > 0 && item.action.trim().length > 0
   );
   ok(completeEvidence && audit.items.every((item) => item.kind.trim().length > 0) &&
-    statusCounts["سليم"] + statusCounts["مُصحح"] + (statusCounts["غير محسوم"] ?? 0) === 38,
+    statusCounts["سليم"] + statusCounts["مُصحح"] + (statusCounts["غير محسوم"] ?? 0) === 40,
     "K163b لكل عنصر دليل وحكم ومصدر معروف وإجراء؛ لا تُسجل خانة مراجعة فارغة");
 
   const referencedSources = new Set(audit.items.flatMap((item) => item.sources));
