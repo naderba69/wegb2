@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1030)
+## الأفكار التحسينية (عينة 30/1020)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:h02-umwelt-klima/v632:schützen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v633:aussterben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v646:abholzen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v657:protestieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v659:überweisen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v665:versteuern` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v668:eröffnen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v670:abheben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v671:einzahlen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h03-konsum-geld/v674:ins Minus rutschen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h03-konsum-geld/v690:werben` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h03-konsum-geld/v693:sich leisten können` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h03-konsum-geld/v699:umtauschen` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:h05-staat-recht/v792:ablehnen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h05-staat-recht/v796:widersprechen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h05-staat-recht/v798:klagen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v817:einbürgern` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v819:abschieben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v831:bestechen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v834:fälschen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v836:bescheinigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v838:nachweisen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v839:beglaubigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v845:zulassen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v854:benoten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h06-studium-lernen/v856:durchfallen` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1000 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 990 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

@@ -11679,7 +11679,8 @@
         ],
         "aussprache": "sch = «ش» · z = «تس» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Grüne Dächer schützen die Stadt ein wenig vor der Hitze.",
-        "exampleAr": "الأسطح الخضراء تحم…"
+        "exampleAr": "الأسطح الخضراء تحم…",
+        "posInfo": "schützt, schützte, hat geschützt"
       },
       {
         "id": "v633",
@@ -11691,7 +11692,8 @@
           "umwelt-klima"
         ],
         "exampleDe": "Ohne Schutz würde diese Vogelart in der Region aussterben.",
-        "exampleAr": "بلا حماية سينقرض ه…"
+        "exampleAr": "بلا حماية سينقرض ه…",
+        "posInfo": "stirbt aus, starb aus, ist ausgestorben"
       },
       {
         "id": "v634",
@@ -11890,7 +11892,8 @@
         ],
         "aussprache": "z = «تس»",
         "exampleDe": "Man darf den Wald nicht abholzen.",
-        "exampleAr": "لا يجوز قطع الغابة."
+        "exampleAr": "لا يجوز قطع الغابة.",
+        "posInfo": "holzt ab, holzte ab, hat abgeholzt"
       },
       {
         "id": "v647",
@@ -12058,7 +12061,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Die Anwohner protestieren gegen die neue Straße.",
-        "exampleAr": "السكان يحتجّون على…"
+        "exampleAr": "السكان يحتجّون على…",
+        "posInfo": "protestiert, protestierte, hat protestiert"
       }
     ]
   },
@@ -12095,7 +12099,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · w = «ڤ» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Bitte überweisen Sie die Kaution auf das Sonderkonto.",
-        "exampleAr": "من فضلك حوّل الضما…"
+        "exampleAr": "من فضلك حوّل الضما…",
+        "posInfo": "überweist, überwies, hat überwiesen"
       },
       {
         "id": "v660",
@@ -12187,7 +12192,8 @@
         "aussprache": "eu/äu = «أوي» · v = «ف»",
         "exampleDe": "Auch Einnahmen aus Nebenjobs muss man versteuern.",
         "exampleAr": "حتى دخل الأعمال ال…",
-        "plural": "die Portale"
+        "plural": "die Portale",
+        "posInfo": "versteuert, versteuerte, hat versteuert"
       },
       {
         "id": "v666",
@@ -12230,7 +12236,8 @@
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Ich möchte ein Konto bei Ihrer Bank eröffnen.",
-        "exampleAr": "أريد فتح حساب في ب…"
+        "exampleAr": "أريد فتح حساب في ب…",
+        "posInfo": "eröffnet, eröffnete, hat eröffnet"
       },
       {
         "id": "v669",
@@ -12259,7 +12266,8 @@
         ],
         "exampleDe": "Ich hebe am Automaten hundert Euro ab.",
         "exampleAr": "أسحب من الصرّاف ما…",
-        "plural": "die Anwendungen"
+        "plural": "die Anwendungen",
+        "posInfo": "hebt ab, hob ab, hat abgehoben"
       },
       {
         "id": "v671",
@@ -12272,7 +12280,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · z = «تس»",
         "exampleDe": "Jeden Monat zahle ich fünfzig Euro auf das Sparkonto ein.",
-        "exampleAr": "كل شهر أودع خمسين…"
+        "exampleAr": "كل شهر أودع خمسين…",
+        "posInfo": "zahlt ein, zahlte ein, hat eingezahlt"
       },
       {
         "id": "v672",
@@ -12313,7 +12322,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Am Monatsende rutscht das Konto oft ins Minus.",
-        "exampleAr": "في نهاية الشهر يُس…"
+        "exampleAr": "في نهاية الشهر يُس…",
+        "posInfo": "rutscht ins Minus, rutschte ins Minus, ist ins Minus gerutscht"
       },
       {
         "id": "v675",
