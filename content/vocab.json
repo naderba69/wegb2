@@ -11100,7 +11100,8 @@
         ],
         "exampleDe": "Ich trage die Werte sofort ein.",
         "exampleAr": "أدوّن القيم فورًا.",
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "trägt ein, trug ein, hat eingetragen"
       },
       {
         "id": "vpfl-90",
@@ -11112,7 +11113,8 @@
         ],
         "exampleDe": "Der Patient wird alle zwei Stunden gelagert.",
         "exampleAr": "يُقلَّب المريض كل…",
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "lagert, lagerte, hat gelagert"
       },
       {
         "id": "vpfl-91",
@@ -11124,7 +11126,8 @@
         ],
         "exampleDe": "Alarmieren Sie den Notarzt!",
         "exampleAr": "استدعِ طبيب الطوار…",
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "alarmiert, alarmierte, hat alarmiert"
       }
     ]
   },
@@ -11173,7 +11176,8 @@
         ],
         "aussprache": "sch = «ش» · v = «ف» · z = «تس»",
         "exampleDe": "Die Fabrik hat den Fluss jahrzehntelang verschmutzt.",
-        "exampleAr": "المصنع لوّث النهر…"
+        "exampleAr": "المصنع لوّث النهر…",
+        "posInfo": "verschmutzt, verschmutzte, hat verschmutzt"
       },
       {
         "id": "v600",
@@ -11217,7 +11221,8 @@
           "umwelt-klima"
         ],
         "exampleDe": "In Deutschland recyceln wir Papier, Glas und Plastik getrennt.",
-        "exampleAr": "في ألمانيا نعيد تد…"
+        "exampleAr": "في ألمانيا نعيد تد…",
+        "posInfo": "recycelt, recycelte, hat recycelt"
       },
       {
         "id": "v603",
@@ -11293,7 +11298,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Können Sie das Geschenk bitte schön verpacken?",
-        "exampleAr": "هل يمكنك تغليف اله…"
+        "exampleAr": "هل يمكنك تغليف اله…",
+        "posInfo": "verpackt, verpackte, hat verpackt"
       },
       {
         "id": "v608",
@@ -11322,7 +11328,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
         "exampleDe": "Alte Geräte verbrauchen viel mehr Strom als neue.",
-        "exampleAr": "الأجهزة القديمة تس…"
+        "exampleAr": "الأجهزة القديمة تس…",
+        "posInfo": "verbraucht, verbrauchte, hat verbraucht"
       },
       {
         "id": "v610",
@@ -11521,7 +11528,8 @@
         ],
         "aussprache": "ß = «س» مشدَّدة",
         "exampleDe": "Ältere Busse stoßen deutlich mehr Feinstaub aus.",
-        "exampleAr": "الحافلات القديمة ت…"
+        "exampleAr": "الحافلات القديمة ت…",
+        "posInfo": "stößt aus, stieß aus, hat ausgestoßen"
       },
       {
         "id": "v623",
@@ -11612,7 +11620,8 @@
         ],
         "aussprache": "sch = «ش»",
         "exampleDe": "Zu viel Salz auf den Straßen schädigt die Bäume am Rand.",
-        "exampleAr": "الملح الزائد على ا…"
+        "exampleAr": "الملح الزائد على ا…",
+        "posInfo": "schädigt, schädigte, hat geschädigt"
       },
       {
         "id": "v629",
@@ -11624,7 +11633,8 @@
           "umwelt-klima"
         ],
         "exampleDe": "Der Bau der Straße würde das Biotop am See gefährden.",
-        "exampleAr": "بناء الشارع سيُعرّ…"
+        "exampleAr": "بناء الشارع سيُعرّ…",
+        "posInfo": "gefährdet, gefährdete, hat gefährdet"
       },
       {
         "id": "v630",

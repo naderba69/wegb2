@@ -3080,7 +3080,7 @@ void 0;
   ok(posVon("heißen") === "Verb" && posVon("die Schule") === "Nomen" && posVon("heute") === "Adverb" && posVon("groß") === "Adjektiv" && posVon("und") === "Konjunktion" && posVon("mit") === "Präposition" && posVon("eins") === "Zahl" && posVon("hallo") === "Interjektion" && posVon("Guten Tag") === "Wendung" && posVon("Ich weiß nicht") === "Satz",
     "K126b عشرُ عيّناتٍ يدويةٍ في مواضعِها عبرَ عشرةِ أنواع");
   const mitInfo = karten.filter((c) => c.posInfo);
-  ok(mitInfo.length === 124 && karten.find((c) => c.de === "heißen")?.posInfo === "unregelmäßig", `K126c تفاصيلُ الوسمِ القديمِ محفوظةٌ لا مرميّة (${mitInfo.length})`);
+  ok(mitInfo.length === 134 && karten.find((c) => c.de === "heißen")?.posInfo === "unregelmäßig", `K126c تفاصيلُ الوسمِ القديمِ محفوظةٌ لا مرميّة (${mitInfo.length})`);
   const aus = (JSON.parse(readFileSync("content/ant-ausnahmen.json", "utf8")).ausnahmen as { de: string; grund: string }[]);
   const ausDe = new Set(aus.map((a) => a.de));
   const adj = karten.filter((c) => c.pos === "Adjektiv");

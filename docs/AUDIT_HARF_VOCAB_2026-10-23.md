@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1040)
+## الأفكار التحسينية (عينة 30/1030)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:h01-arbeit-beruf/vpfl-89:eintragen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h01-arbeit-beruf/vpfl-90:lagern` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h01-arbeit-beruf/vpfl-91:alarmieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v599:verschmutzen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v602:recyceln` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v607:verpacken` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v609:verbrauchen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v622:ausstoßen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v628:schädigen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h02-umwelt-klima/v629:gefährden` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h02-umwelt-klima/v632:schützen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h02-umwelt-klima/v633:aussterben` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h02-umwelt-klima/v646:abholzen` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:h04-mobilitaet-verkehr/v726:entwerten` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h04-mobilitaet-verkehr/v728:sich verspäten` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h04-mobilitaet-verkehr/v743:pendeln` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h04-mobilitaet-verkehr/v753:sich an die Verkehrsregeln halten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h04-mobilitaet-verkehr/v766:einchecken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v779:vorschreiben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v784:beantragen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v785:bewilligen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v788:genehmigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v789:verbieten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v792:ablehnen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v796:widersprechen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h05-staat-recht/v798:klagen` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1010 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1000 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)
