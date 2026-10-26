@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1090)
+## الأفكار التحسينية (عينة 30/1080)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:g03-gesellschaft/v306:wegwerfen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g03-gesellschaft/v315:bewältigen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v322:vermieten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v330:umziehen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v331:ausziehen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v332:einziehen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v341:finanzieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v343:renovieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v344:modernisieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g04-wohnen/v347:besichtigen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g04-wohnen/v351:kündigen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g04-wohnen/v357:zusammenleben` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g04-wohnen/v361:ausstatten` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:g06-wissenschaft/v438:beweisen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g06-wissenschaft/v445:einhalten` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g06-wissenschaft/v448:fördern` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v451:promovieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g06-wissenschaft/v453:publizieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g07-schoenheit/v464:pflegen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g07-schoenheit/v467:sich schminken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g07-schoenheit/v472:altern` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g07-schoenheit/v478:sich anziehen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g07-schoenheit/v490:retuschieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g07-schoenheit/v494:wirken auf` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g07-schoenheit/v495:beeindrucken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g07-schoenheit/v500:übertreiben` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1060 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1050 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

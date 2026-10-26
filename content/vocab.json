@@ -6383,7 +6383,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Alte Batterien darf man nicht einfach wegwerfen.",
-        "exampleAr": "البطاريا…"
+        "exampleAr": "البطاريا…",
+        "posInfo": "wirft weg, warf weg, hat weggeworfen"
       },
       {
         "id": "v307",
@@ -6489,7 +6490,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Die Doppelbelastung lässt sich nur mit einem klaren Plan bewältigen.",
-        "exampleAr": "العبء ال…"
+        "exampleAr": "العبء ال…",
+        "posInfo": "bewältigt, bewältigte, hat bewältigt"
       },
       {
         "id": "v316",
@@ -6571,7 +6573,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Sie vermietet das kleine Zimmer an eine Studentin.",
-        "exampleAr": "هي تؤجّر…"
+        "exampleAr": "هي تؤجّر…",
+        "posInfo": "vermietet, vermietete, hat vermietet"
       },
       {
         "id": "v323",
@@ -6695,7 +6698,8 @@
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Wir ziehen im März um, zwei Straßen weiter.",
         "exampleAr": "ننتقل في…",
-        "plural": "die Kooperationen"
+        "plural": "die Kooperationen",
+        "posInfo": "zieht um, zog um, ist umgezogen"
       },
       {
         "id": "v331",
@@ -6708,7 +6712,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Ende März ziehe ich aus der alten Wohnung aus.",
-        "exampleAr": "في نهاية…"
+        "exampleAr": "في نهاية…",
+        "posInfo": "zieht aus, zog aus, ist ausgezogen"
       },
       {
         "id": "v332",
@@ -6721,7 +6726,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Am Ersten ziehen wir in die neue Wohnung ein.",
-        "exampleAr": "في الأول…"
+        "exampleAr": "في الأول…",
+        "posInfo": "zieht ein, zog ein, ist eingezogen"
       },
       {
         "id": "v333",
@@ -6857,7 +6863,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Wie wollen Sie den Umbau finanzieren, mit Eigenkapital oder Kredit?",
-        "exampleAr": "كيف ستمو…"
+        "exampleAr": "كيف ستمو…",
+        "posInfo": "finanziert, finanzierte, hat finanziert"
       },
       {
         "id": "v342",
@@ -6885,7 +6892,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Der Vermieter will das Bad renovieren, während wir im Urlaub sind.",
-        "exampleAr": "المؤجّر…"
+        "exampleAr": "المؤجّر…",
+        "posInfo": "renoviert, renovierte, hat renoviert"
       },
       {
         "id": "v344",
@@ -6898,7 +6906,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Nach dem Modernisieren darf die Miete nur begrenzt steigen.",
-        "exampleAr": "بعد التح…"
+        "exampleAr": "بعد التح…",
+        "posInfo": "modernisiert, modernisierte, hat modernisiert"
       },
       {
         "id": "v345",
@@ -6943,7 +6952,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Wir haben die Wohnung zweimal besichtigt, einmal bei Tageslicht.",
-        "exampleAr": "عايّنا ا…"
+        "exampleAr": "عايّنا ا…",
+        "posInfo": "besichtigt, besichtigte, hat besichtigt"
       },
       {
         "id": "v348",
