@@ -7848,7 +7848,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Bitte aktualisieren Sie die App, sonst funktioniert die Anmeldung nicht.",
-        "exampleAr": "من فضلك…"
+        "exampleAr": "من فضلك…",
+        "posInfo": "aktualisiert, aktualisierte, hat aktualisiert"
       },
       {
         "id": "v408",
@@ -7960,7 +7961,8 @@
         "aussprache": "sch = «ش»",
         "exampleDe": "Sie forscht seit Jahren zu Schlaf und Gedächtnis.",
         "exampleAr": "هي تبحث…",
-        "plural": "die Maßnahmen"
+        "plural": "die Maßnahmen",
+        "posInfo": "forscht, forschte, hat geforscht"
       },
       {
         "id": "v416",
@@ -7989,7 +7991,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Der Arzt untersucht zuerst den Hals und dann die Ohren.",
-        "exampleAr": "الطبيب ي…"
+        "exampleAr": "الطبيب ي…",
+        "posInfo": "untersucht, untersuchte, hat untersucht"
       },
       {
         "id": "v418",
@@ -8172,7 +8175,8 @@
         ],
         "aussprache": "w = «ڤ»",
         "exampleDe": "Wir werten die Fragebögen erst nach der letzten Befragung aus.",
-        "exampleAr": "نحلّل ال…"
+        "exampleAr": "نحلّل ال…",
+        "posInfo": "wertet aus, wertete aus, hat ausgewertet"
       },
       {
         "id": "v430",
@@ -8200,7 +8204,8 @@
           "wissenschaft"
         ],
         "exampleDe": "Die Studie hat tausend Haushalte telefonisch befragt.",
-        "exampleAr": "الدراسة…"
+        "exampleAr": "الدراسة…",
+        "posInfo": "befragt, befragte, hat befragt"
       },
       {
         "id": "v433",
@@ -8246,7 +8251,8 @@
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Wer zitiert, muss die Quelle mit Seitenzahl angeben.",
         "exampleAr": "من يقتبس…",
-        "plural": "die Demonstrationen"
+        "plural": "die Demonstrationen",
+        "posInfo": "zitiert, zitierte, hat zitiert"
       },
       {
         "id": "v437",
@@ -8258,7 +8264,8 @@
           "wissenschaft"
         ],
         "exampleDe": "Die Behauptung ist nicht belegt, es fehlt jede Quelle.",
-        "exampleAr": "الادّعاء…"
+        "exampleAr": "الادّعاء…",
+        "posInfo": "belegt, belegte, hat belegt"
       },
       {
         "id": "v438",
@@ -8271,7 +8278,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · w = «ڤ»",
         "exampleDe": "Ohne Daten kann man diese Behauptung nicht beweisen.",
-        "exampleAr": "بلا بيانات لا يمكن البرهنة على هذا الادّعاء."
+        "exampleAr": "بلا بيانات لا يمكن البرهنة على هذا الادّعاء.",
+        "posInfo": "beweist, bewies, hat bewiesen"
       },
       {
         "id": "v439",
@@ -8382,7 +8390,8 @@
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Wer die Frist nicht einhalten kann, zahlt eine neue Gebühr.",
         "exampleAr": "من لا يس…",
-        "plural": "die Streiks"
+        "plural": "die Streiks",
+        "posInfo": "hält ein, hielt ein, hat eingehalten"
       },
       {
         "id": "v446",
@@ -8426,7 +8435,8 @@
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Die Stadt fördert Sprachkurse für Neuankömmlinge.",
-        "exampleAr": "المدينة…"
+        "exampleAr": "المدينة…",
+        "posInfo": "fördert, förderte, hat gefördert"
       },
       {
         "id": "v449",

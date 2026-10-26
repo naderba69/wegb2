@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1070)
+## الأفكار التحسينية (عينة 30/1060)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:g05-digital/v407:aktualisieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v415:forschen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v417:untersuchen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v429:auswerten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v432:befragen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v435:zitieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v437:belegen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v438:beweisen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v445:einhalten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g06-wissenschaft/v448:fördern` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g06-wissenschaft/v451:promovieren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g06-wissenschaft/v453:publizieren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g07-schoenheit/v464:pflegen` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:h01-arbeit-beruf/v585:streiken` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h01-arbeit-beruf/v588:beurteilen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h01-arbeit-beruf/v596:in den Ruhestand gehen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h01-arbeit-beruf/vpfl-89:eintragen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h01-arbeit-beruf/vpfl-90:lagern` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h01-arbeit-beruf/vpfl-91:alarmieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v599:verschmutzen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v602:recyceln` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v607:verpacken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v609:verbrauchen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v622:ausstoßen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v628:schädigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h02-umwelt-klima/v629:gefährden` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1040 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1030 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)
