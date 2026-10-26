@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1110)
+## الأفكار التحسينية (عينة 30/1100)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:g01-beziehungen/v198:sich verabreden` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v216:gönnen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v220:nachgeben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v221:sich einigen auf` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/v239:behandeln` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/v241:operieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/v243:gesunden` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/v246:sich krankmelden` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/v257:mobben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/v265:fit halten` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g02-gesundheit/v266:sich ernähren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g02-gesundheit/vpfl-64:desinfizieren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g02-gesundheit/vpfl-65:beobachten` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:g04-wohnen/v343:renovieren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g04-wohnen/v344:modernisieren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g04-wohnen/v347:besichtigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v351:kündigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v357:zusammenleben` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v361:ausstatten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v365:sich beschweren über` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g05-digital/v372:chatten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g05-digital/v378:streamen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g05-digital/v381:sich anmelden` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g05-digital/v383:speichern` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g05-digital/v397:hacken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g05-digital/v403:aufladen` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1080 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1070 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

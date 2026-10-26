@@ -3983,7 +3983,8 @@
         ],
         "aussprache": "v = «ف»",
         "exampleDe": "Sie verabreden sich für morgen Abend im Café.",
-        "exampleAr": "يتفقون على موعد غداً مساءً في المقهى."
+        "exampleAr": "يتفقون على موعد غداً مساءً في المقهى.",
+        "posInfo": "verabredet sich, verabredete sich, hat sich verabredet"
       },
       {
         "id": "v199",
@@ -4249,7 +4250,8 @@
         ],
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Ich gönne ihr die Beförderung, sie hat jahrelang dafür gearbeitet.",
-        "exampleAr": "أتمنّى ل…"
+        "exampleAr": "أتمنّى ل…",
+        "posInfo": "gönnt, gönnte, hat gegönnt"
       },
       {
         "id": "v217",
@@ -4309,7 +4311,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Der Vermieter wollte nicht nachgeben, akzeptierte aber die Ratenzahlung.",
-        "exampleAr": "المؤجّر…"
+        "exampleAr": "المؤجّر…",
+        "posInfo": "gibt nach, gab nach, hat nachgegeben"
       },
       {
         "id": "v221",
@@ -4321,7 +4324,8 @@
           "beziehungen"
         ],
         "exampleDe": "Die beiden Seiten haben sich auf eine Frist von zwei Wochen geeinigt — Infinitiv: sich einigen auf.",
-        "exampleAr": "اتّفق ال…"
+        "exampleAr": "اتّفق ال…",
+        "posInfo": "einigt sich auf, einigte sich auf, hat sich geeinigt auf"
       }
     ]
   },
@@ -4569,7 +4573,8 @@
           "gesundheit"
         ],
         "exampleDe": "Diese Ärztin behandelt vor allem Kinder.",
-        "exampleAr": "هذه الطب…"
+        "exampleAr": "هذه الطب…",
+        "posInfo": "behandelt, behandelte, hat behandelt"
       },
       {
         "id": "v241",
@@ -4582,7 +4587,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة",
         "exampleDe": "Das Knie muss operiert werden, sonst bleibt der Schmerz.",
-        "exampleAr": "الركبة ي…"
+        "exampleAr": "الركبة ي…",
+        "posInfo": "operiert, operierte, hat operiert"
       },
       {
         "id": "v242",
@@ -4609,7 +4615,8 @@
           "gesundheit"
         ],
         "exampleDe": "Der Patient ist langsamer gesundet, als die Ärzte erwartet hatten.",
-        "exampleAr": "المريض ت…"
+        "exampleAr": "المريض ت…",
+        "posInfo": "gesundet, gesundete, ist gesundet"
       },
       {
         "id": "v244",
@@ -4652,7 +4659,8 @@
           "gesundheit"
         ],
         "exampleDe": "Ich muss mich heute krankmelden, ich habe starke Kopfschmerzen.",
-        "exampleAr": "يجب أن أ…"
+        "exampleAr": "يجب أن أ…",
+        "posInfo": "meldet sich krank, meldete sich krank, hat sich krankgemeldet"
       },
       {
         "id": "v248",
@@ -4802,7 +4810,8 @@
           "gesundheit"
         ],
         "exampleDe": "Wer Kollegen mobbt, riskiert eine Abmahnung.",
-        "exampleAr": "من ينمّر…"
+        "exampleAr": "من ينمّر…",
+        "posInfo": "mobbt, mobbte, hat gemobbt"
       },
       {
         "id": "v258",
@@ -4924,7 +4933,8 @@
           "gesundheit"
         ],
         "exampleDe": "Ich halte mich mit Schwimmen und Radfahren fit.",
-        "exampleAr": "أحافظ عل…"
+        "exampleAr": "أحافظ عل…",
+        "posInfo": "hält fit, hielt fit, hat fit gehalten"
       },
       {
         "id": "v266",
