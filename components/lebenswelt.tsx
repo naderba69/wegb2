@@ -27,10 +27,10 @@ const FILTERS: { id: string; label: string; emoji: string; match: (id: string) =
 
 export function LebensweltStation() {
   const searchParams = useSearchParams();
-  const initialFilter = searchParams.get("filter") ?? "alle";
+  const initialFilter = searchParams?.get("filter") ?? "alle";
   const [filterId, setFilterId] = useState(initialFilter);
   useEffect(() => {
-    const f = searchParams.get("filter");
+    const f = searchParams?.get("filter");
     if (f && FILTERS.some((x) => x.id === f)) setFilterId(f);
   }, [searchParams]);
   const gefiltert = useMemo(() => lebensweltThemen.filter((t) => FILTERS.find((f) => f.id === filterId)?.match(t.id) ?? true), [filterId]);
