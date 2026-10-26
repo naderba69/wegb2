@@ -39,23 +39,13 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1120)
+## الأفكار التحسينية (عينة 30/1110)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:g01-beziehungen/v188:sich streiten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v189:sich versöhnen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v193:sich trennen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g01-beziehungen/v198:sich verabreden` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v201:kommunizieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v204:sich kümmern um` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v208:sich unterhalten über` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v209:betrügen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v212:enttäuschen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g01-beziehungen/v214:sich freuen auf` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g01-beziehungen/v216:gönnen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g01-beziehungen/v220:nachgeben` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g01-beziehungen/v221:sich einigen auf` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:g02-gesundheit/v235:sich fühlen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g02-gesundheit/v239:behandeln` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g02-gesundheit/v241:operieren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g02-gesundheit/v243:gesunden` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:g03-gesellschaft/v291:demonstrieren` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g03-gesellschaft/v294:unterschreiben` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:g03-gesellschaft/v296:wählen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g03-gesellschaft/v306:wegwerfen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g03-gesellschaft/v315:bewältigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v322:vermieten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v330:umziehen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v331:ausziehen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v332:einziehen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v341:finanzieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v343:renovieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v344:modernisieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:g04-wohnen/v347:besichtigen` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 1090 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 1080 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

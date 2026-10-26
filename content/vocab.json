@@ -3833,7 +3833,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sp/st في البداية = «شب/شت»",
         "exampleDe": "Wir streiten uns oft über kleine Dinge.",
-        "exampleAr": "نتشاجر كثيراً على أمور صغيرة."
+        "exampleAr": "نتشاجر كثيراً على أمور صغيرة.",
+        "posInfo": "streitet sich, stritt sich, hat sich gestritten"
       },
       {
         "id": "v189",
@@ -3846,7 +3847,8 @@
         ],
         "aussprache": "v = «ف» · ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Nach dem Streit haben sie sich versöhnt.",
-        "exampleAr": "تصالحا بعد الشجار."
+        "exampleAr": "تصالحا بعد الشجار.",
+        "posInfo": "versöhnt sich, versöhnte sich, hat sich versöhnt"
       },
       {
         "id": "v190",
@@ -3905,7 +3907,8 @@
           "beziehungen"
         ],
         "exampleDe": "Sie haben sich nach zwei Jahren getrennt.",
-        "exampleAr": "انفصلا بعد سنتين."
+        "exampleAr": "انفصلا بعد سنتين.",
+        "posInfo": "trennt sich, trennte sich, hat sich getrennt"
       },
       {
         "id": "v194",
@@ -4025,7 +4028,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · z = «تس»",
         "exampleDe": "Im Team kommunizieren wir hauptsächlich per E-Mail.",
-        "exampleAr": "في الفري…"
+        "exampleAr": "في الفري…",
+        "posInfo": "kommuniziert, kommunizierte, hat kommuniziert"
       },
       {
         "id": "v202",
@@ -4067,7 +4071,8 @@
           "beziehungen"
         ],
         "exampleDe": "Hedi kümmert sich um seinen Vater nach dem Schlaganfall.",
-        "exampleAr": "هادي يرع…"
+        "exampleAr": "هادي يرع…",
+        "posInfo": "kümmert sich um, kümmerte sich um, hat sich gekümmert um"
       },
       {
         "id": "v205",
@@ -4127,7 +4132,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Wir haben uns lange über den Film unterhalten.",
-        "exampleAr": "تحدثنا ط…"
+        "exampleAr": "تحدثنا ط…",
+        "posInfo": "unterhält sich über, unterhielt sich über, hat sich unterhalten über"
       },
       {
         "id": "v209",
@@ -4140,7 +4146,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Wer beim Zählerstand betrügt, riskiert die Kündigung des Vertrags.",
-        "exampleAr": "من يخدع…"
+        "exampleAr": "من يخدع…",
+        "posInfo": "betrügt, betrog, hat betrogen"
       },
       {
         "id": "v210",
@@ -4184,7 +4191,8 @@
         ],
         "aussprache": "eu/äu = «أوي» · sch = «ش»",
         "exampleDe": "Ich will dich nicht enttäuschen, aber der Termin ist unrealistisch.",
-        "exampleAr": "لا أريد…"
+        "exampleAr": "لا أريد…",
+        "posInfo": "enttäuscht, enttäuschte, hat enttäuscht"
       },
       {
         "id": "v213",
@@ -4212,7 +4220,8 @@
           "beziehungen"
         ],
         "exampleDe": "Ich freue mich schon auf den Urlaub an der Ostsee.",
-        "exampleAr": "أترقّب ب…"
+        "exampleAr": "أترقّب ب…",
+        "posInfo": "freut sich auf, freute sich auf, hat sich gefreut auf"
       },
       {
         "id": "v215",
@@ -4502,7 +4511,8 @@
         ],
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Er fühlt sich heute viel besser nach dem Schlaf.",
-        "exampleAr": "يشعر بتحسن كبير اليوم بعد النوم."
+        "exampleAr": "يشعر بتحسن كبير اليوم بعد النوم.",
+        "posInfo": "fühlt sich, fühlte sich, hat sich gefühlt"
       },
       {
         "id": "v236",
