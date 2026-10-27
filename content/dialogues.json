@@ -151,7 +151,8 @@
       "Ein bisschen Milch, keinen Zucker.",
       "Zusammen fünf Euro fünfzig."
     ],
-    "cultural_theme": "Family"
+    "cultural_theme": "Family",
+    "cultural_note": "In Deutschland grüßt man im Geschäft mit „Guten Tag“ und verabschiedet sich mit „Auf Wiedersehen“ — Höflichkeit wird erwartet."
   },
   {
     "id": "d-a1-03",
@@ -220,7 +221,8 @@
       "Am Dienstag um zehn Uhr?",
       "Bis Dienstag!"
     ],
-    "cultural_theme": "Work"
+    "cultural_theme": "Work",
+    "cultural_note": "Pünktlichkeit ist Kernwert: 5 Minuten Verspätung gilt schon als unhöflich, Termin absagen immer rechtzeitig."
   },
   {
     "id": "d-a1-04",
@@ -290,7 +292,8 @@
       "Geben Sie mir bitte ein Kilo.",
       "Das macht zusammen sechs Euro."
     ],
-    "cultural_theme": "Shopping"
+    "cultural_theme": "Shopping",
+    "cultural_note": "Mülltrennung ist Pflicht: Gelber Sack, Papier, Restmüll, Bio — falsch sortieren führt zu Verwarnung."
   },
   {
     "id": "d-a1-05",
@@ -575,7 +578,8 @@
       "Nehmen Sie die Medizin dreimal am Tag.",
       "Trinken Sie viel Tee!"
     ],
-    "cultural_theme": "Hobbies"
+    "cultural_theme": "Hobbies",
+    "cultural_note": "Hausordnung beachten: Ruhezeiten 22-6 Uhr, Sonntag kein Rasenmähen — Nachbarn achten streng darauf."
   },
   {
     "id": "d-a2-04",
@@ -639,7 +643,8 @@
       "In Frankfurt müssen Sie umsteigen.",
       "Ungefähr vier Stunden."
     ],
-    "cultural_theme": "Travel"
+    "cultural_theme": "Travel",
+    "cultural_note": "Beim Arzt immer Versichertenkarte mitnehmen, ohne Überweisung kein Facharzt — 116117 für Bereitschaft."
   },
   {
     "id": "d-a2-05",
@@ -839,7 +844,8 @@
       "Ich möchte neue Erfahrungen sammeln.",
       "Wir melden uns nächste Woche bei Ihnen."
     ],
-    "cultural_theme": "Education"
+    "cultural_theme": "Education",
+    "cultural_note": "Bürgeramt Anmeldung in 14 Tagen — Wohnungsgeberbestätigung Pflicht seit 2015. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-03",
@@ -903,7 +909,8 @@
       "Die Verhandlungen hätten gestern begonnen.",
       "Hoffentlich finden sie bald eine Lösung."
     ],
-    "cultural_theme": "Travel experiences"
+    "cultural_theme": "Travel experiences",
+    "cultural_note": "Arbeitszeugnis lesen: „stets zu unserer vollsten Zufriedenheit“ = Note 1, „zu unserer Zufriedenheit“ = Note 3."
   },
   {
     "id": "d-b1-04",
@@ -1502,7 +1509,8 @@
       "Nicht zu kurz!",
       "Was kostet das zusammen?"
     ],
-    "cultural_theme": "Family"
+    "cultural_theme": "Family",
+    "cultural_note": "Ausländerbehörde nur mit Termin — Fiktionsbescheinigung als Brücke bis eAT. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a2-06",
@@ -1566,7 +1574,8 @@
       "Haben Sie den Kassenzettel dabei?",
       "Kann ich eine größere Größe haben?"
     ],
-    "cultural_theme": "Travel"
+    "cultural_theme": "Travel",
+    "cultural_note": "Fahrrad: Lichtpflicht, Rechtsfahrgebot, Helm empfohlen nicht Pflicht — Polizei kontrolliert."
   },
   {
     "id": "d-a2-07",
@@ -1631,7 +1640,8 @@
       "Wann ist der Bote gekommen?",
       "Sie sind sehr freundlich."
     ],
-    "cultural_theme": "Hobbies"
+    "cultural_theme": "Hobbies",
+    "cultural_note": "Krankenversicherung Pflicht — Hausarzt als erste Anlaufstelle, Überweisung für Facharzt. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-06",
@@ -1765,7 +1775,8 @@
       "Sie sollten Pausen machen.",
       "Dann kommen Sie bitte sofort wieder."
     ],
-    "cultural_theme": "Profession"
+    "cultural_theme": "Profession",
+    "cultural_note": "Deutschlandticket 49€ monatlich (Preis prüfen) gilt nur Nahverkehr, nicht ICE — Tarifzone beachten."
   },
   {
     "id": "d-b2-06",
@@ -1977,7 +1988,8 @@
       "Einen Kaffee mit Milch, bitte.",
       "Das macht drei Euro fünfzig."
     ],
-    "cultural_theme": "Shopping"
+    "cultural_theme": "Shopping",
+    "cultural_note": "Arbeitsvertrag: Probezeit 6 Monate, danach Kündigungsschutz — pünktlich krankmelden! (BAMF Lebenswelt)"
   },
   {
     "id": "d-a1-09",
@@ -2124,7 +2136,8 @@
       "Seit wann haben Sie die Schmerzen?",
       "Trinken Sie viel Wasser!"
     ],
-    "cultural_theme": "Food"
+    "cultural_theme": "Food",
+    "cultural_note": "Miete: Warm/Kalt unterscheiden, Kaution 3 Raten, Schufa immer mitbringen. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a2-09",
@@ -2197,7 +2210,8 @@
       "Wann fährt der nächste Zug nach Köln?",
       "Gute Reise!"
     ],
-    "cultural_theme": "Food"
+    "cultural_theme": "Food",
+    "cultural_note": "Bürgeramt Anmeldung in 14 Tagen — Wohnungsgeberbestätigung Pflicht seit 2015. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-08",
@@ -2270,7 +2284,8 @@
       "Ich schlage einen Putzplan vor.",
       "Jeder macht einmal pro Woche sauber."
     ],
-    "cultural_theme": "Profession"
+    "cultural_theme": "Profession",
+    "cultural_note": "Feiertagsarbeit Zuschlag steuerfrei bis 150% — im Pflegevertrag genau prüfen."
   },
   {
     "id": "d-b1-09",
@@ -2343,7 +2358,8 @@
       "Die Heizung funktioniert nicht.",
       "Ich schicke sofort einen Techniker."
     ],
-    "cultural_theme": "Profession"
+    "cultural_theme": "Profession",
+    "cultural_note": "Agentur für Arbeit: arbeitsuchend 3 Monate vor Ende melden, sonst Sperre Arbeitslosengeld."
   },
   {
     "id": "d-b2-08",
@@ -2590,7 +2606,8 @@
       "Ja, sonst passt die Gruppe nicht. Der Test ist Donnerstag um neun.",
       "Nur Pass und Meldebescheinigung. Bis Donnerstag!"
     ],
-    "cultural_theme": "Travel experiences"
+    "cultural_theme": "Travel experiences",
+    "cultural_note": "Ausländerbehörde nur mit Termin — Fiktionsbescheinigung als Brücke bis eAT. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-11",
@@ -2684,7 +2701,8 @@
       "Nein — Kaltmiete vierhundertfünfzig, Nebenkosten kommen dazu.",
       "Zwei Monatsmieten, wie immer. Herzlich willkommen, wenn alles passt."
     ],
-    "cultural_theme": "Profession"
+    "cultural_theme": "Profession",
+    "cultural_note": "Krankenversicherung Pflicht — Hausarzt als erste Anlaufstelle, Überweisung für Facharzt. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-12",
@@ -2783,7 +2801,8 @@
       "Ja — bis zwei Tage nach dem letzten Fieber darf er nicht hin.",
       "Nein, bei Viren wirkt es nicht. Fieber senken, viel trinken, beobachten."
     ],
-    "cultural_theme": "Technology"
+    "cultural_theme": "Technology",
+    "cultural_note": "Arbeitsvertrag: Probezeit 6 Monate, danach Kündigungsschutz — pünktlich krankmelden! (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-13",
@@ -2972,7 +2991,8 @@
       "Dann ruhen Sie aus — die Gesundheit geht vor der Frist.",
       "Längst im gemeinsamen Ordner, seit gestern Abend."
     ],
-    "cultural_theme": "Education"
+    "cultural_theme": "Education",
+    "cultural_note": "Miete: Warm/Kalt unterscheiden, Kaution 3 Raten, Schufa immer mitbringen. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-15",
@@ -3161,7 +3181,8 @@
       "Dann gilt der nächste Zug ohne Aufpreis — wir haben es vermerkt.",
       "Bei sechzig Minuten stehen Ihnen fünfundzwanzig Prozent des Preises zu."
     ],
-    "cultural_theme": "Technology"
+    "cultural_theme": "Technology",
+    "cultural_note": "Bürgeramt Anmeldung in 14 Tagen — Wohnungsgeberbestätigung Pflicht seit 2015. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-17",
@@ -3255,7 +3276,8 @@
       "Die Leseecke ist fertig; für die Bibliothek fehlt ein Sponsor.",
       "Die Einladung geht raus; sie meldet ihre Auftrittskinder an."
     ],
-    "cultural_theme": "Education"
+    "cultural_theme": "Education",
+    "cultural_note": "Ausländerbehörde nur mit Termin — Fiktionsbescheinigung als Brücke bis eAT. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-18",
@@ -3439,7 +3461,8 @@
       "Verschiebungen nur schriftlich; den Grund bitte nachweisen.",
       "Bei zweitem Versäumnis: Ablehnung, neue Gebühr."
     ],
-    "cultural_theme": "Profession"
+    "cultural_theme": "Profession",
+    "cultural_note": "Krankenversicherung Pflicht — Hausarzt als erste Anlaufstelle, Überweisung für Facharzt. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-20",
@@ -3533,7 +3556,8 @@
       "Nicht kombinieren bei Kindern: nur ein Mittel zur Zeit.",
       "Acht Euro fünfzig — die Beilage genau durchlesen, bitte."
     ],
-    "cultural_theme": "Travel experiences"
+    "cultural_theme": "Travel experiences",
+    "cultural_note": "Arbeitsvertrag: Probezeit 6 Monate, danach Kündigungsschutz — pünktlich krankmelden! (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-21",
@@ -3627,7 +3651,8 @@
       "Wir stoppen mit Fristablauf — zu viel Gezahltes wird erstattet.",
       "Telefon allein genügt nicht — schriftlich muss es vorliegen, dann zählt es."
     ],
-    "cultural_theme": "Travel experiences"
+    "cultural_theme": "Travel experiences",
+    "cultural_note": "Miete: Warm/Kalt unterscheiden, Kaution 3 Raten, Schufa immer mitbringen. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-22",
@@ -3911,7 +3936,8 @@
       "Ein Fund, gemeldet um zwanzig zwanzig — Beschreibung passt.",
       "Sechs Monate Aufbewahrung nach Anzeige, dann Versteigerung — kommen Sie pünktlich."
     ],
-    "cultural_theme": "Travel experiences"
+    "cultural_theme": "Travel experiences",
+    "cultural_note": "Bürgeramt Anmeldung in 14 Tagen — Wohnungsgeberbestätigung Pflicht seit 2015. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-25",
@@ -4005,7 +4031,8 @@
       "Genau zwei Wochen Frist — rechtzeitig. Formular, Ausweis, Vermieterbestätigung.",
       "Ohne sie keine Anmeldung — ich gebe Ihnen vorläufig eine Bescheinigung."
     ],
-    "cultural_theme": "Education"
+    "cultural_theme": "Education",
+    "cultural_note": "Ausländerbehörde nur mit Termin — Fiktionsbescheinigung als Brücke bis eAT. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-26",
@@ -4099,7 +4126,8 @@
       "Nie — die Grundversorgung springt ohne eine Sekunde Pause ein.",
       "Bonus nur bei zwölf Monaten Bindung; Preisgarantie braucht Preisbindung."
     ],
-    "cultural_theme": "Technology"
+    "cultural_theme": "Technology",
+    "cultural_note": "Krankenversicherung Pflicht — Hausarzt als erste Anlaufstelle, Überweisung für Facharzt. (BAMF Lebenswelt)"
   },
   {
     "id": "d-b1-27",
@@ -4193,7 +4221,8 @@
       "Einmal im Leben: sie läuft nie ab.",
       "Vierzehn Tage Sperre bis zum nächsten Versuch; die Prüfgebühr wird für jeden Versuch erneut fällig, eine neue Antragstellung beim Amt ist nicht nötig."
     ],
-    "cultural_theme": "Profession"
+    "cultural_theme": "Profession",
+    "cultural_note": "Arbeitsvertrag: Probezeit 6 Monate, danach Kündigungsschutz — pünktlich krankmelden! (BAMF Lebenswelt)"
   },
   {
     "id": "d-b2-10",
@@ -6043,7 +6072,8 @@
       "Ja, um neun Uhr bei Frau Bauer.",
       "Wie ist Ihr Name, bitte?"
     ],
-    "cultural_theme": "Work"
+    "cultural_theme": "Work",
+    "cultural_note": "Einbürgerung: 5 Jahre Aufenthalt, B1, Einbürgerungstest 17/33 — Antrag Bürgeramt. (BAMF)"
   },
   {
     "id": "d-a1-32",
@@ -6112,7 +6142,8 @@
       "Gehen Sie geradeaus bis zur Ampel.",
       "Dann rechts. Die Post ist neben der Bank."
     ],
-    "cultural_theme": "Personal info"
+    "cultural_theme": "Personal info",
+    "cultural_note": "Wohngeld/Kinderzuschlag: Antrag Jobcenter/Familienkasse — Einkommen offenlegen. (BAMF)"
   },
   {
     "id": "d-a2-31",
@@ -6258,7 +6289,8 @@
       "Das tut mir leid. Was fehlt Ihnen denn?",
       "Ich habe Fieber. Der Arzt hat mich für drei Tage krankgeschrieben."
     ],
-    "cultural_theme": "Weather"
+    "cultural_theme": "Weather",
+    "cultural_note": "Kirchensteuer 8-9% nur bei Kirchenmitglied — Austritt Standesamt 25€. (BAMF)"
   },
   {
     "id": "d-b1-31",
@@ -6399,7 +6431,8 @@
       "Zu Hause erzählt er viel. In der Klasse ist er wohl schüchtern.",
       "Das legt sich meistens. Wichtig wäre, dass er öfter laut liest."
     ],
-    "cultural_theme": "Technology"
+    "cultural_theme": "Technology",
+    "cultural_note": "Kindergeld 250€ pro Kind — Antrag Familienkasse, Steuer-ID Pflicht."
   },
   {
     "id": "d-b2-31",
@@ -6667,7 +6700,8 @@
       "sich beschweren",
       "die Hausverwaltung"
     ],
-    "cultural_theme": "Health"
+    "cultural_theme": "Health",
+    "cultural_note": "Feierabend 17 Uhr ist heilig — nach Dienst keine Mails erwartet (Betriebsvereinbarung)."
   },
   {
     "id": "d-a2-11",
@@ -6771,7 +6805,8 @@
       "erreichen",
       "die Bestätigung"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Accommodation",
+    "cultural_note": "Elternabend Pflicht: Lehrer informieren über Noten, Anwesenheit wird notiert."
   },
   {
     "id": "d-a2-12",
@@ -6878,7 +6913,8 @@
       "bewölkt",
       "neblig"
     ],
-    "cultural_theme": "Weather"
+    "cultural_theme": "Weather",
+    "cultural_note": "Flohmarkt Sonntag nur mit Genehmigung — private Verkäufe ohne Gewerbeanmeldung begrenzt."
   },
   {
     "id": "d-a2-13",
@@ -7199,7 +7235,8 @@
       "einfrieren",
       "auftauen"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Accommodation",
+    "cultural_note": "Fahrradstraße Vorrang Rad — Auto nur Anlieger, 30 km/h max."
   },
   {
     "id": "d-a2-16",
@@ -7306,7 +7343,8 @@
       "der Erste-Hilfe-Kasten",
       "die Arbeitssicherheit"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Accommodation",
+    "cultural_note": "Wochenmarkt 7-13 Uhr — bar zahlen, Tasche mitbringen."
   },
   {
     "id": "d-a2-17",
@@ -7412,7 +7450,8 @@
       "die Grammatikregel",
       "die Sprachschule"
     ],
-    "cultural_theme": "Travel"
+    "cultural_theme": "Travel",
+    "cultural_note": "Einbürgerung: 5 Jahre Aufenthalt, B1, Einbürgerungstest 17/33 — Antrag Bürgeramt. (BAMF)"
   },
   {
     "id": "d-a2-18",
@@ -7519,7 +7558,8 @@
       "die Hausverwaltung",
       "der Nachmieter"
     ],
-    "cultural_theme": "Health"
+    "cultural_theme": "Health",
+    "cultural_note": "Wohngeld/Kinderzuschlag: Antrag Jobcenter/Familienkasse — Einkommen offenlegen. (BAMF)"
   },
   {
     "id": "d-a2-19",
@@ -7841,7 +7881,8 @@
       "trösten",
       "hilfsbereit"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Accommodation",
+    "cultural_note": "Kirchensteuer 8-9% nur bei Kirchenmitglied — Austritt Standesamt 25€. (BAMF)"
   },
   {
     "id": "d-a2-22",
@@ -7948,7 +7989,8 @@
       "der Preisvergleich",
       "die Ausgaben"
     ],
-    "cultural_theme": "Health"
+    "cultural_theme": "Health",
+    "cultural_note": "Einbürgerung: 5 Jahre Aufenthalt, B1, Einbürgerungstest 17/33 — Antrag Bürgeramt. (BAMF)"
   },
   {
     "id": "d-a2-23",
@@ -8055,7 +8097,8 @@
       "die Gastfreundschaft",
       "das Ramadanfest"
     ],
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Accommodation",
+    "cultural_note": "Wohngeld/Kinderzuschlag: Antrag Jobcenter/Familienkasse — Einkommen offenlegen. (BAMF)"
   },
   {
     "id": "d-a2-24",
@@ -8269,7 +8312,8 @@
       "die Auskunft",
       "höflich"
     ],
-    "cultural_theme": "Health"
+    "cultural_theme": "Health",
+    "cultural_note": "Kirchensteuer 8-9% nur bei Kirchenmitglied — Austritt Standesamt 25€. (BAMF)"
   },
   {
     "id": "d-a2-26",
@@ -8377,7 +8421,8 @@
       "der Schmuck",
       "altmodisch"
     ],
-    "cultural_theme": "Entertainment"
+    "cultural_theme": "Entertainment",
+    "cultural_note": "Einbürgerung: 5 Jahre Aufenthalt, B1, Einbürgerungstest 17/33 — Antrag Bürgeramt. (BAMF)"
   },
   {
     "id": "d-a2-27",
@@ -8592,7 +8637,8 @@
       "hungrig",
       "süß"
     ],
-    "cultural_theme": "Shopping"
+    "cultural_theme": "Shopping",
+    "cultural_note": "Wohngeld/Kinderzuschlag: Antrag Jobcenter/Familienkasse — Einkommen offenlegen. (BAMF)"
   },
   {
     "id": "d-a1-11",
@@ -8807,7 +8853,8 @@
       "anziehen",
       "das Geld"
     ],
-    "cultural_theme": "Personal info"
+    "cultural_theme": "Personal info",
+    "cultural_note": "Kirchensteuer 8-9% nur bei Kirchenmitglied — Austritt Standesamt 25€. (BAMF)"
   },
   {
     "id": "d-a1-13",
@@ -8914,7 +8961,8 @@
       "Viertel nach",
       "pünktlich sein"
     ],
-    "cultural_theme": "Work"
+    "cultural_theme": "Work",
+    "cultural_note": "Bäckerei: „Schrippen“ in Berlin = Brötchen — Dialekt beachten."
   },
   {
     "id": "d-a1-14",
@@ -9021,7 +9069,8 @@
       "schließen",
       "geöffnet"
     ],
-    "cultural_theme": "Personal info"
+    "cultural_theme": "Personal info",
+    "cultural_note": "Apotheke Notdienst 20-8 Uhr — Notdienstfinder online, Gebühr 2,50€."
   },
   {
     "id": "d-a1-15",
@@ -9127,7 +9176,8 @@
       "sauber",
       "schmutzig"
     ],
-    "cultural_theme": "Shopping"
+    "cultural_theme": "Shopping",
+    "cultural_note": "Fahrschein entwerten vor Fahrt — Kontrolle 60€ erhöhtes Beförderungsentgelt."
   },
   {
     "id": "d-a1-16",
@@ -9344,7 +9394,8 @@
       "leer",
       "der Schmutz"
     ],
-    "cultural_theme": "Family"
+    "cultural_theme": "Family",
+    "cultural_note": "Einbürgerung: 5 Jahre Aufenthalt, B1, Einbürgerungstest 17/33 — Antrag Bürgeramt. (BAMF)"
   },
   {
     "id": "d-a1-18",
@@ -9452,7 +9503,8 @@
       "ledig",
       "verheiratet"
     ],
-    "cultural_theme": "Family"
+    "cultural_theme": "Family",
+    "cultural_note": "Wohngeld/Kinderzuschlag: Antrag Jobcenter/Familienkasse — Einkommen offenlegen. (BAMF)"
   },
   {
     "id": "d-a1-19",
@@ -9560,7 +9612,8 @@
       "die Katze",
       "backen"
     ],
-    "cultural_theme": "Work"
+    "cultural_theme": "Work",
+    "cultural_note": "Kirchensteuer 8-9% nur bei Kirchenmitglied — Austritt Standesamt 25€. (BAMF)"
   },
   {
     "id": "d-a1-20",
@@ -9666,7 +9719,8 @@
       "zuletzt",
       "Punkt zwölf"
     ],
-    "cultural_theme": "Directions"
+    "cultural_theme": "Directions",
+    "cultural_note": "Einbürgerung: 5 Jahre Aufenthalt, B1, Einbürgerungstest 17/33 — Antrag Bürgeramt. (BAMF)"
   },
   {
     "id": "d-a1-21",
@@ -9880,7 +9934,8 @@
       "fliegen",
       "ankommen"
     ],
-    "cultural_theme": "Work"
+    "cultural_theme": "Work",
+    "cultural_note": "Wohngeld/Kinderzuschlag: Antrag Jobcenter/Familienkasse — Einkommen offenlegen. (BAMF)"
   },
   {
     "id": "d-a1-23",
@@ -10097,7 +10152,8 @@
       "mögen",
       "täglich"
     ],
-    "cultural_theme": "Shopping"
+    "cultural_theme": "Shopping",
+    "cultural_note": "Kirchensteuer 8-9% nur bei Kirchenmitglied — Austritt Standesamt 25€. (BAMF)"
   },
   {
     "id": "d-a1-25",
@@ -10203,7 +10259,8 @@
       "unmöglich",
       "leider"
     ],
-    "cultural_theme": "Hobbies"
+    "cultural_theme": "Hobbies",
+    "cultural_note": "Einbürgerung: 5 Jahre Aufenthalt, B1, Einbürgerungstest 17/33 — Antrag Bürgeramt. (BAMF)"
   },
   {
     "id": "d-a1-26",
@@ -10420,7 +10477,8 @@
       "leicht",
       "letzte"
     ],
-    "cultural_theme": "Family"
+    "cultural_theme": "Family",
+    "cultural_note": "Wohngeld/Kinderzuschlag: Antrag Jobcenter/Familienkasse — Einkommen offenlegen. (BAMF)"
   },
   {
     "id": "d-a0-01",
@@ -10586,7 +10644,8 @@
       "Danke!",
       "Bitte schön!"
     ],
-    "cultural_theme": "Greeting"
+    "cultural_theme": "Greeting",
+    "cultural_note": "Du/Sie-Unterscheidung: Kollegen bis 30 oft du, Vorgesetzte und Ältere Sie — im Zweifel Sie anbieten."
   },
   {
     "id": "d-a0-03",
@@ -10840,7 +10899,8 @@
     "dictation": [
       "Ich habe ein Problem mit meinem Zimmer."
     ],
-    "cultural_theme": "Travel"
+    "cultural_theme": "Travel",
+    "cultural_note": "Kirchensteuer 8-9% nur bei Kirchenmitglied — Austritt Standesamt 25€. (BAMF)"
   },
   {
     "id": "dlg-a2-terminabsage",
@@ -10915,7 +10975,8 @@
     "dictation": [
       "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?"
     ],
-    "cultural_theme": "Entertainment"
+    "cultural_theme": "Entertainment",
+    "cultural_note": "Terminabsage 24h vorher per Telefon/Mail — sonst Ausfallhonorar möglich (Arztpraxis). (BAMF Lebenswelt)"
   },
   {
     "id": "dlg-a2-krankenversicherung",
@@ -10995,7 +11056,8 @@
     "dictation": [
       "Guten Tag, ich möchte mich krankenversichern."
     ],
-    "cultural_theme": "Weather"
+    "cultural_theme": "Weather",
+    "cultural_note": "Krankenversicherung Wahlrecht: GKV vs PKV — Wechsel nur bei bestimmten Voraussetzungen. (BAMF Lebenswelt)"
   },
   {
     "id": "dlg-b1-kontoeroeffnung",
@@ -11084,7 +11146,8 @@
       "Ich möchte gerne ein Girokonto eröffnen.",
       "Sie bekommen die Karte und die PIN in etwa einer Woche per Post."
     ],
-    "cultural_theme": "Society"
+    "cultural_theme": "Society",
+    "cultural_note": "Kontoeröffnung mit Meldebescheinigung + Pass + Steuer-ID — Online-Bank oft ohne Schufa. (BAMF Lebenswelt)"
   },
   {
     "id": "dlg-b2-mietvertrag",
@@ -11317,7 +11380,8 @@
     "dictation": [
       "Buchstabieren Sie bitte!"
     ],
-    "cultural_theme": "Greeting"
+    "cultural_theme": "Greeting",
+    "cultural_note": "Brot kaufen: „Ich hätte gern 5 Brötchen“ — Konjunktiv II höflich schon A0. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-06",
@@ -11391,7 +11455,8 @@
       "Einen Kaffee, bitte!",
       "Mit Milch, bitte."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Introduction",
+    "cultural_note": "Nachbarschaft: Mülltrennung erklärt — Nachbar hilft gern beim ersten Mal. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-07",
@@ -11459,7 +11524,8 @@
     "dictation": [
       "Ich bin 22 Jahre alt."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Introduction",
+    "cultural_note": "U-Bahn Fahrplan: Richtung beachten (Endstation) — Umstieg 2 Min einplanen. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-08",
@@ -11573,7 +11639,8 @@
       "Achtung, Achtung! Der Zug RE 10 nach Köln fährt heute um 14 Uhr 25 von Gleis 3."
     ],
     "hoertext": true,
-    "cultural_theme": "Directions"
+    "cultural_theme": "Directions",
+    "cultural_note": "Ansage Bahnhof: „Zug fällt aus“ = Zug fährt nicht — Ersatzbus beachten. (BAMF Lebenswelt)"
   },
   {
     "id": "hoer-a1-02",
@@ -11622,7 +11689,8 @@
       "Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent."
     ],
     "hoertext": true,
-    "cultural_theme": "Work"
+    "cultural_theme": "Work",
+    "cultural_note": "Durchsage Supermarkt: „Kasse 2 öffnet“ — schnell wechseln, Schlange meiden. (BAMF Lebenswelt)"
   },
   {
     "id": "hoer-a2-01",
@@ -11721,7 +11789,8 @@
       "Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad."
     ],
     "hoertext": true,
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Accommodation",
+    "cultural_note": "Telefonansage: „Bitte hinterlassen Sie eine Nachricht nach dem Ton“ — kurz + Nummer. (BAMF Lebenswelt)"
   },
   {
     "id": "hoer-b1-01",
@@ -11890,7 +11959,8 @@
     "dictation": [
       "Das macht 2,50 Euro."
     ],
-    "cultural_theme": "Social contacts"
+    "cultural_theme": "Social contacts",
+    "cultural_note": "Einwohnermeldeamt Termin online — ohne Termin Wartezeit 2-3 Stunden. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-10",
@@ -11953,7 +12023,8 @@
     "dictation": [
       "Es ist halb drei."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Introduction",
+    "cultural_note": "Deutsche Direktheit: „Das ist so nicht richtig“ gilt als sachlich, nicht unhöflich. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-11",
