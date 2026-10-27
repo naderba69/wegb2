@@ -3582,6 +3582,20 @@
         "hintAr": "die lachen",
         "points": 2,
         "level": "B2"
+      },
+      {
+        "id": "b2-part-um3",
+        "type": "umformung",
+        "promptDe": "Partizip: Der ___ Zug ist pünktlich. (ankommen)",
+        "promptAr": "اختصر.",
+        "quelleDe": "Der Zug, der ankommt, ist pünktlich.",
+        "answer": "ankommende",
+        "alternatives": [],
+        "explanationAr": "der ankommt → ankommende (Partizip I) — شرح عربي.",
+        "explanationDe": "der ankommt → ankommende (Partizip I) — شرح عربي.",
+        "hintAr": "ankommende",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
@@ -10129,6 +10143,20 @@
         "hintAr": "war → bin",
         "points": 2,
         "level": "A2"
+      },
+      {
+        "id": "a2-pg-um3",
+        "type": "umformung",
+        "promptDe": "Frage: War er gestern hier? — Ja, er war hier",
+        "promptAr": "سؤال الماضي البسيط.",
+        "quelleDe": "Er war gestern hier.",
+        "answer": "War er gestern hier?",
+        "alternatives": [],
+        "explanationAr": "Präteritum war = كان — شرح عربي.",
+        "explanationDe": "Präteritum war = كان — شرح عربي.",
+        "hintAr": "War er?",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -10785,6 +10813,24 @@
         "explanationAr": "in Kauf nehmen: الفعل nehmen يتبع القاعدة، والجار والمجرور in Kauf في المنتصف — ترتيب ثابت لا يُترجم.",
         "points": 2,
         "promptAr": "رتّب الكلمات لتكوّن جملة صحيحة."
+      },
+      {
+        "id": "b2-red-um3",
+        "type": "umformung",
+        "promptDe": "Indirekt: Er sagt, er ___ müde. (sei)",
+        "promptAr": "نقل غير مباشر B2.",
+        "quelleDe": "Er sagt: „Ich bin müde.“",
+        "answer": "sei müde",
+        "alternatives": [],
+        "explanationAr": "Konjunktiv I للخبر غير المباشر: sei — شرح عربي.",
+        "explanationDe": "Konjunktiv I للخبر غير المباشر: sei — شرح عربي.",
+        "hintAr": "Konj I sei",
+        "points": 2,
+        "level": "B2",
+        "darfNicht": [
+          "Ich bin müde",
+          "ich bin müde"
+        ]
       }
     ],
     "pitfalls": [
@@ -11150,6 +11196,20 @@
         "hintAr": "entscheiden",
         "points": 2,
         "level": "B1"
+      },
+      {
+        "id": "b1-fv2-um3",
+        "type": "umformung",
+        "promptDe": "Vollverb: Er ___. (fragen)",
+        "promptAr": "بسط Funktionsverb.",
+        "quelleDe": "Er stellt eine Frage.",
+        "answer": "Er fragt",
+        "alternatives": [],
+        "explanationAr": "Frage stellen → fragen — شرح عربي.",
+        "explanationDe": "Frage stellen → fragen — شرح عربي.",
+        "hintAr": "fragen",
+        "points": 2,
+        "level": "B1"
       }
     ],
     "pitfalls": [
@@ -11368,6 +11428,20 @@
         "answer": "M wie Martha, A wie Anton, I wie Ida, E wie Emil, R wie Richard",
         "points": 2,
         "explanationAr": "تهجئة B1: M wie Martha — ليس M-A-I-E-R فقط. مهارة BAMF للتسجيل والهاتف."
+      },
+      {
+        "id": "a0-buch-um3",
+        "type": "umformung",
+        "promptDe": "Buchstabiere: Wie schreibt man „Buch“? — B-U-C-H",
+        "promptAr": "تهجئة.",
+        "quelleDe": "Wie schreibt man “Buch”? B-U-C-H",
+        "answer": "B-U-C-H",
+        "alternatives": [],
+        "explanationAr": "تهجئة A0: حرف حرف — شرح عربي.",
+        "explanationDe": "تهجئة A0: حرف حرف — شرح عربي.",
+        "hintAr": "B-U-C-H",
+        "points": 2,
+        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -11555,6 +11629,20 @@
         "answer": "einundzwanzig Jahre",
         "points": 2,
         "explanationAr": "الأرقام الألمانية معكوسة: ein+und+zwanzig. 21 ليس عشرون واحد بل واحد وعشرون."
+      },
+      {
+        "id": "a0-zahl-um3",
+        "type": "umformung",
+        "promptDe": "Zahl: Wie viele Brüder? — zwei",
+        "promptAr": "كم أخ؟",
+        "quelleDe": "Ich habe zwei Brüder.",
+        "answer": "zwei Brüder",
+        "alternatives": [],
+        "explanationAr": "Zahlen A0: zwei = 2 — شرح عربي.",
+        "explanationDe": "Zahlen A0: zwei = 2 — شرح عربي.",
+        "hintAr": "zwei",
+        "points": 2,
+        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -11748,6 +11836,20 @@
         "answer": "Könnten Sie mir bitte das Salz geben?",
         "points": 2,
         "explanationAr": "مهذب B1: Imperativ → Konjunktiv II: könnten/würden. فرق ثقافة: المباشر وقح في ألمانيا."
+      },
+      {
+        "id": "a2-kh-um3",
+        "type": "umformung",
+        "promptDe": "Direkt: ___ Sie mir bitte? (Können)",
+        "promptAr": "حول المهذب إلى مباشر.",
+        "quelleDe": "Könnten Sie mir helfen?",
+        "answer": "Können Sie mir helfen?",
+        "alternatives": [],
+        "explanationAr": "Könnten (Konj II) أكثر تهذيبا من können — شرح عربي.",
+        "explanationDe": "Könnten (Konj II) أكثر تهذيبا من können — شرح عربي.",
+        "hintAr": "Könnten höflich",
+        "points": 2,
+        "level": "A2"
       }
     ],
     "pitfalls": [
@@ -12160,6 +12262,20 @@
         "explanationAr": "alt → der Alte (اسم من صفة) — شرح عربي.",
         "explanationDe": "alt → der Alte (اسم من صفة) — شرح عربي.",
         "hintAr": "der Alte",
+        "points": 2,
+        "level": "A2"
+      },
+      {
+        "id": "a2-ae2-um3",
+        "type": "umformung",
+        "promptDe": "Plural: ___ klugen Männer helfen. (Die)",
+        "promptAr": "جمع مع صفة.",
+        "quelleDe": "Ein kluger Mann hilft.",
+        "answer": "Die klugen Männer",
+        "alternatives": [],
+        "explanationAr": "Nomen→Adjektiv كـاسم: der Kluge — شرح عربي.",
+        "explanationDe": "Nomen→Adjektiv كـاسم: der Kluge — شرح عربي.",
+        "hintAr": "klugen",
         "points": 2,
         "level": "A2"
       }
@@ -14250,6 +14366,20 @@
         "answer": "Hätte ich gelernt, wäre ich nicht durchgefallen.",
         "points": 2,
         "explanationAr": "Konjunktiv II ماضٍ: hätte/wäre + Partizip. hätte gelernt, wäre ... — ندم B1."
+      },
+      {
+        "id": "b1-kv2-um3",
+        "type": "umformung",
+        "promptDe": "Wirklichkeit: Ich ___ keine Zeit, deshalb bin ich nicht gekommen. (hatte)",
+        "promptAr": "ما الحقيقة؟",
+        "quelleDe": "Wenn ich Zeit gehabt hätte, wäre ich gekommen.",
+        "answer": "Ich hatte keine Zeit",
+        "alternatives": [],
+        "explanationAr": "Konj II Vergangenheit = hätte/wäre + Partizip — شرح عربي.",
+        "explanationDe": "Konj II Vergangenheit = hätte/wäre + Partizip — شرح عربي.",
+        "hintAr": "hätte gehabt",
+        "points": 2,
+        "level": "B1"
       }
     ],
     "verify": [
@@ -16926,6 +17056,20 @@
         "answer": "Die Frau, deren Auto teuer ist, ...",
         "points": 2,
         "explanationAr": "صلة المضاف B2: dessen للمذكر/المحايد و deren للمؤنث/الجمع — Die Frau → deren Auto (سيارة المرأة)."
+      },
+      {
+        "id": "b2-rg-um3",
+        "type": "umformung",
+        "promptDe": "Frage: Wessen Auto ist kaputt? — des Mannes",
+        "promptAr": "Genitiv النسبي.",
+        "quelleDe": "Der Mann, dessen Auto kaputt ist, wartet.",
+        "answer": "dessen Auto",
+        "alternatives": [],
+        "explanationAr": "dessen = الذي له (Genitiv) — شرح عربي.",
+        "explanationDe": "dessen = الذي له (Genitiv) — شرح عربي.",
+        "hintAr": "dessen Genitiv",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "pitfalls": [
