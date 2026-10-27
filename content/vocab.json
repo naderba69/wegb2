@@ -59392,7 +59392,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "img": "/cards/wahlrecht.png"
+        "img": "/cards/wahlbeteiligung.png"
       },
       {
         "de": "die politische Teilhabe",
@@ -59574,7 +59574,8 @@
         ],
         "pos": "Nomen",
         "article": "der",
-        "farbe": "BLAU"
+        "farbe": "BLAU",
+        "img": "/cards/welthandel.png"
       },
       {
         "de": "die EU (Europäische Union)",
@@ -59586,7 +59587,8 @@
         "tags": [
           "b2-politik-demokratie"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/eu.png"
       },
       {
         "de": "die Zukunftsfähigkeit",
@@ -59600,7 +59602,8 @@
         ],
         "pos": "Nomen",
         "article": "die",
-        "farbe": "ROT"
+        "farbe": "ROT",
+        "img": "/cards/zukunftsfaehigkeit.png"
       },
       {
         "de": "der Protest, -e",
@@ -59613,7 +59616,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Proteste"
+        "plural": "die Proteste",
+        "img": "/cards/protest.png"
       },
       {
         "de": "die Demonstration, -en",
