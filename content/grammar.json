@@ -4646,6 +4646,20 @@
           "kein Geld."
         ],
         "explanationAr": "نفي الأسماء النكرة أو غير المسبوقة بأداة يكون بـ kein: kein Geld."
+      },
+      {
+        "id": "a2-neg-um3",
+        "type": "umformung",
+        "promptDe": "Statt nicht: Ich habe ___ Geld. (kein)",
+        "promptAr": "استخدم kein بدل nicht.",
+        "quelleDe": "Ich habe kein Geld.",
+        "answer": "kein Geld",
+        "alternatives": [],
+        "explanationAr": "kein ينفي الاسم، nicht ينفي الفعل — شرح عربي.",
+        "explanationDe": "kein ينفي الاسم، nicht ينفي الفعل — شرح عربي.",
+        "hintAr": "kein + Nomen",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -10458,6 +10472,20 @@
           "wann"
         ],
         "explanationAr": "سؤال الزمن ← wann: …, wann das Konzert beginnt."
+      },
+      {
+        "id": "b1-ind-um3",
+        "type": "umformung",
+        "promptDe": "Indirekt: Weißt du, ___ er wohnt? (wo)",
+        "promptAr": "حوّل إلى سؤال غير مباشر.",
+        "quelleDe": "Wo wohnst du? → Er fragt, wo ich wohne.",
+        "answer": "wo er wohnt",
+        "alternatives": [],
+        "explanationAr": "Frage غير مباشرة: أداة + فعل في النهاية — شرح عربي.",
+        "explanationDe": "Frage غير مباشرة: أداة + فعل في النهاية — شرح عربي.",
+        "hintAr": "wo ... wohnt",
+        "points": 2,
+        "level": "B1"
       }
     ],
     "pitfalls": [
@@ -12320,6 +12348,20 @@
         "answer": "Die lachende Frau ist glücklich.",
         "points": 2,
         "explanationAr": "Relativsatz → Partizip I كصفة: die lacht → lachende. اختصار B2 — كثافة معلومات أعلى."
+      },
+      {
+        "id": "b2-ap-um3",
+        "type": "umformung",
+        "promptDe": "Partizip: Der ___ Mann ist fröhlich. (lachen)",
+        "promptAr": "اختصر الجملة النسبية.",
+        "quelleDe": "Der Mann, der lacht, ist fröhlich.",
+        "answer": "lachende",
+        "alternatives": [],
+        "explanationAr": "der lacht → lachende (Partizip I صفة) — شرح عربي.",
+        "explanationDe": "der lacht → lachende (Partizip I صفة) — شرح عربي.",
+        "hintAr": "lachende",
+        "points": 2,
+        "level": "B2"
       }
     ]
   },
@@ -12653,6 +12695,20 @@
         "answer": "Ich gehe zum Arzt.",
         "points": 2,
         "explanationAr": "zu + dem = zum, bei + dem = beim. الدمج إلزامي B1 — لا zu dem."
+      },
+      {
+        "id": "a2-ver-um3",
+        "type": "umformung",
+        "promptDe": "Vollform: Ich gehe ___ das Kino. (in)",
+        "promptAr": "فك الإدغام.",
+        "quelleDe": "Ich gehe ins Kino.",
+        "answer": "in das Kino",
+        "alternatives": [],
+        "explanationAr": "ins = in+das (إدغام) — شرح عربي.",
+        "explanationDe": "ins = in+das (إدغام) — شرح عربي.",
+        "hintAr": "in das",
+        "points": 2,
+        "level": "A2"
       }
     ],
     "pitfalls": [
@@ -13474,6 +13530,20 @@
         "answer": "Jener Mann dort",
         "points": 2,
         "explanationAr": "dieser (قريب) vs jener (بعيد). فرق مسافة ذهنية — Mayer Bild-Anker."
+      },
+      {
+        "id": "a2-dem-um3",
+        "type": "umformung",
+        "promptDe": "Welches Wort zeigt Nähe? — diesen",
+        "promptAr": "أي ضمير إشارة للقريب؟",
+        "quelleDe": "Ich sehe diesen Mann und jene Frau.",
+        "answer": "diesen Mann",
+        "alternatives": [],
+        "explanationAr": "dieser = قريب، jener = بعيد — شرح عربي.",
+        "explanationDe": "dieser = قريب، jener = بعيد — شرح عربي.",
+        "hintAr": "dieser Nähe",
+        "points": 2,
+        "level": "A2"
       }
     ],
     "verify": [
@@ -13948,6 +14018,20 @@
         "answer": "Ich lerne Deutsch, um zu arbeiten.",
         "points": 2,
         "explanationAr": "um...zu = نفس الفاعل، damit = فاعل مختلف. Absicht B1."
+      },
+      {
+        "id": "b1-abs-um3",
+        "type": "umformung",
+        "promptDe": "Frage: Wozu lernst du Deutsch? — Um in Deutschland zu arbeiten",
+        "promptAr": "ما الهدف؟",
+        "quelleDe": "Ich lerne Deutsch, um in Deutschland zu arbeiten.",
+        "answer": "Um in Deutschland zu arbeiten",
+        "alternatives": [],
+        "explanationAr": "um ... zu يعبر عن القصد — شرح عربي.",
+        "explanationDe": "um ... zu يعبر عن القصد — شرح عربي.",
+        "hintAr": "um zu = لكي",
+        "points": 2,
+        "level": "B1"
       }
     ],
     "verify": [
@@ -14674,6 +14758,20 @@
         "answer": "Das Kind spielt im Garten.",
         "points": 2,
         "explanationAr": "Kind Neutrum → das. Artikel يحفظ مع الاسم — لا قاعدة منطقية، بل حفظ مع الصورة Mayer."
+      },
+      {
+        "id": "a0-art-um3",
+        "type": "umformung",
+        "promptDe": "Bestimmt: Das ist ___ Buch. (ein → das)",
+        "promptAr": "حوّل النكرة إلى معرفة.",
+        "quelleDe": "Das ist ein Buch.",
+        "answer": "das Buch",
+        "alternatives": [],
+        "explanationAr": "ein Buch (نكرة) → das Buch (معرفة) — شرح عربي.",
+        "explanationDe": "ein Buch (نكرة) → das Buch (معرفة) — شرح عربي.",
+        "hintAr": "das = المعرفة",
+        "points": 2,
+        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -15292,6 +15390,20 @@
         "answer": "die Stühle",
         "points": 2,
         "explanationAr": "جمع umlaut: u → ü. Stuhl → Stühle. ظاهرة صوتية ألمانية — لا تقابلها العربية، لذا ندرّبها إنتاجياً."
+      },
+      {
+        "id": "a0-uml-um3",
+        "type": "umformung",
+        "promptDe": "Umlaut: Mutter → Mütter — Plural",
+        "promptAr": "جمع Mutter.",
+        "quelleDe": "Die Mutter kocht.",
+        "answer": "Mütter",
+        "alternatives": [],
+        "explanationAr": "Mutter→Mütter مع Umlaut ü — شرح عربي.",
+        "explanationDe": "Mutter→Mütter مع Umlaut ü — شرح عربي.",
+        "hintAr": "ü الجمع",
+        "points": 2,
+        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -18465,6 +18577,20 @@
         "answer": "Er sagt, er sei krank.",
         "explanationAr": "الكلام غير المباشر B2: المباشر „Ich bin krank“ → Konjunktiv I: sei (ليس ist). يدل على نقل كلام الغير.",
         "points": 2
+      },
+      {
+        "id": "b2-k2v-um3",
+        "type": "umformung",
+        "promptDe": "Wirklich: Ich habe kein Geld, ___ ich nicht reise. (deshalb)",
+        "promptAr": "اربط السبب والنتيجة.",
+        "quelleDe": "Wenn ich Geld hätte, würde ich reisen.",
+        "answer": "deshalb reise ich nicht",
+        "alternatives": [],
+        "explanationAr": "Konjunktiv II يعبر عن غير واقعي — شرح عربي.",
+        "explanationDe": "Konjunktiv II يعبر عن غير واقعي — شرح عربي.",
+        "hintAr": "irreal",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
@@ -18858,6 +18984,20 @@
         "darfNicht": [
           "das Kind, das weint"
         ]
+      },
+      {
+        "id": "b2-parti-um3",
+        "type": "umformung",
+        "promptDe": "Partizipial: ___ gegessen, ging er spazieren. (Nach dem Essen)",
+        "promptAr": "حوّل إلى عبارة اسمية.",
+        "quelleDe": "Nachdem er gegessen hatte, ging er spazieren.",
+        "answer": "Nach dem Essen ging er spazieren",
+        "alternatives": [],
+        "explanationAr": "Nebensatz → Nominalphrase: nachdem ... → nach ... — شرح عربي.",
+        "explanationDe": "Nebensatz → Nominalphrase: nachdem ... → nach ... — شرح عربي.",
+        "hintAr": "nach + Dativ",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
