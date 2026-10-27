@@ -1,5 +1,5 @@
 {
-  "count": 176,
+  "count": 186,
   "einsaetze": [
     {
       "id": "d-a0-01",
@@ -1406,6 +1406,86 @@
       "file": "/audio/dialog/d-b2-49.mp3",
       "bytes": 190979,
       "voice": "ki-m1",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-50",
+      "file": "/audio/dialog/d-b2-50.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-51",
+      "file": "/audio/dialog/d-b2-51.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-52",
+      "file": "/audio/dialog/d-b2-52.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-53",
+      "file": "/audio/dialog/d-b2-53.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-54",
+      "file": "/audio/dialog/d-b2-54.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-55",
+      "file": "/audio/dialog/d-b2-55.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-56",
+      "file": "/audio/dialog/d-b2-56.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-57",
+      "file": "/audio/dialog/d-b2-57.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-58",
+      "file": "/audio/dialog/d-b2-58.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
+      "level": "B2",
+      "stimmen": 1
+    },
+    {
+      "id": "d-b2-59",
+      "file": "/audio/dialog/d-b2-59.mp3",
+      "bytes": 189650,
+      "voice": "ki-voice-01 (de)",
       "level": "B2",
       "stimmen": 1
     }

@@ -10332,5 +10332,604 @@
         "id": "t-b2-41-q3"
       }
     ]
+  },
+  {
+    "id": "t-b2-42",
+    "level": "B2",
+    "titleDe": "Die Digitalisierung der Bildung (Neu 42)",
+    "titleAr": "رقمنة التعليم (جديد 42)",
+    "de": "Die Digitalisierung spielt in der Bildung eine zentrale Rolle. Einerseits ermöglichen neue Medien individuelles Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage. Eine kürzlich veröffentlichte Untersuchung zeigt, dass die von Lehrern begleitete Nutzung die besten Ergebnisse liefert. Ohne pädagogisches Konzept, so die Forscher, bliebe der Effekt gering. Es geht also nicht um Technik um ihrer selbst willen, sondern um nachhaltige Didaktik.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "الرقمنة تلعب دوراً محورياً في التعليم. من جهة تتيح الوسائط الجديدة تعلّماً فردياً، ومن جهة أخرى تشكّك الدراسات في فعالية كثير من الأدوات. دراسة منشورة حديثاً تبيّن أن الاستخدام المصحوب بإشراف المعلّمين يعطي أفضل النتائج. وبحسب الباحثين فبدون مفهوم تربوي يبقى الأثر ضئيلاً. المسألة إذن ليست التقنية لذاتها بل منهجية مستدامة. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-42-q1",
+        "type": "mc",
+        "promptDe": "Was liefert die besten Ergebnisse?",
+        "options": [
+          "Tools ohne Lehrer",
+          "die von Lehrern begleitete Nutzung",
+          "reine Selbststudien"
+        ],
+        "answer": "die von Lehrern begleitete Nutzung",
+        "explanationAr": "في النصِّ حرفياً: «die von Lehrern begleitete Nutzung …» (Partizipialattribut).",
+        "promptAr": "ما الذي يحقق أفضل النتائج؟"
+      },
+      {
+        "id": "t-b2-42-q2",
+        "type": "fill",
+        "promptDe": "Es geht nicht um Technik um ihrer selbst ___, sondern um Didaktik.",
+        "answer": [
+          "willen"
+        ],
+        "explanationAr": "الدليل حرفياً: «Es geht also nicht um Technik um ihrer selbst willen, sondern um nachhaltige Didaktik.» — um … willen = من أجل.",
+        "promptAr": "ليست التقنية غاية في ___، بل البيداغوجيا."
+      },
+      {
+        "id": "t-b2-42-q3",
+        "type": "mc",
+        "promptDe": "„stellt … in Frage“ heißt:",
+        "options": [
+          "يشكّك في",
+          "يؤكد",
+          "ينفي"
+        ],
+        "answer": "يشكّك في",
+        "explanationAr": "الدليل حرفياً: «Einerseits ermöglichen neue Medien individuelles Lernen; andererseits stellen Studien die Wirkung vieler Tools in Frage.» — Funktionsverbgefüge.",
+        "promptAr": "«يشكّك في» تعني:"
+      },
+      {
+        "id": "t-b2-42-q4",
+        "type": "truefalse",
+        "promptDe": "Laut Text wirken digitale Medien auch ohne pädagogisches Konzept stark.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "النصُّ يقول: «Ohne pädagogisches Konzept … bliebe der Effekt gering».",
+        "promptAr": "هل تؤثر الوسائط الرقمية بقوة بدون مفهوم تربوي حسب النص؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-43",
+    "level": "B2",
+    "titleDe": "Aus der Tageszeitung (Neu 43)",
+    "titleAr": "من اليومية (جديد 43)",
+    "de": "Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig. Die Bürgermeisterin der Region sagte jedoch, die Anwohner hätten andere Erfahrungen gemacht. Viele Pendler berichteten, der Zug sei regelmäßig verspätet. Ein Sprecher der Bahn teilte mit, man arbeite an einer Lösung. Die Opposition stellte die Zahlen in Frage und forderte, die Anforderungen an den Betreiber zu erhöhen.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "أوضح وزير المواصلات أمس أن خط القطار الجديد دقيق ويمكن الاعتماد عليه. لكن عميدة المنطقة قالت إن السكان عاشوا تجارب مختلفة. كثير من المتنقلين أفادوا بأن القطار يتأخر بانتظام. ناطق باسم السكة الحديدية أفاد بأن العمل جارٍ على حلّ. أما المعارضة فشكّكت في الأرقام وطالبت بتشديد متطلبات المشغّل. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-43-q1",
+        "type": "fill",
+        "promptDe": "Der Minister erklärte, die Verbindung ___ pünktlich.",
+        "answer": [
+          "sei"
+        ],
+        "explanationAr": "الدليل حرفياً: «Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.» — منقول: sei (Konjunktiv I).",
+        "promptAr": "أعلن الوزير أن الخط ___ في موعده."
+      },
+      {
+        "id": "t-b2-43-q2",
+        "type": "fill",
+        "promptDe": "Die Pendler berichteten, der Zug ___ verspätet.",
+        "answer": [
+          "sei",
+          "wäre"
+        ],
+        "explanationAr": "الدليل حرفياً: «Viele Pendler berichteten, der Zug sei regelmäßig verspätet.» — sei أو wäre عند الالتباس.",
+        "promptAr": "أفاد المسافرون أن القطار ___ متأخراً."
+      },
+      {
+        "id": "t-b2-43-q3",
+        "type": "mc",
+        "promptDe": "Was forderte die Opposition?",
+        "options": [
+          "mehr Züge",
+          "höhere Anforderungen an den Betreiber",
+          "billigere Tickets"
+        ],
+        "answer": "höhere Anforderungen an den Betreiber",
+        "explanationAr": "في النصِّ حرفياً: «die Anforderungen … zu erhöhen».",
+        "promptAr": "ماذا طالبت المعارضة؟"
+      },
+      {
+        "id": "t-b2-43-q4",
+        "type": "truefalse",
+        "promptDe": "Der Verkehrsminister und die Bürgermeisterin bewerten die Lage unterschiedlich.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل حرفياً: «Der Verkehrsminister hat gestern erklärt, die neue Bahnverbindung sei pünktlich und zuverlässig.» — الوزيرُ يقولُ منتظمةٌ وموثوقة، والعمدةُ تنقلُ تجربةً مغايرة — وهذا كلامٌ منقولٌ بصيغةِ Konjunktiv I.",
+        "promptAr": "هل يقيم الوزير والعميدة الوضع بشكل مختلف؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-44",
+    "level": "B2",
+    "titleDe": "Klimawandel: Zahlen und Zweifel (Neu 44)",
+    "titleAr": "التغيّر المناخي: أرقام وشكوك (جديد 44)",
+    "de": "Die Auswirkungen des Klimawandels sind kaum noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle. Dennoch gibt es Stimmen, die angeblich fehlende Daten beklagen. Wissenschaftlerinnen entgegnen, der Konsens sei breit genug für entschlossenes Handeln. Eine in Nature veröffentlichte Studie belegt den Zusammenhang zwischen CO₂-Ausstoß und Temperaturanstieg. Wer hier noch Abwarten propagiert, handelt verantwortungslos.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "انعكاسات التغيّر المناخي يصعب إنكارها: موجات حر، فيضانات، خسائر محاصيل. ومع ذلك توجد أصوات تشكو من «بيانات ناقصة» على نحو مزعوم. تردّ الباحثات بأن الإجماع واسع بما يكفي للحزم في العمل. دراسة منشورة في Nature تثبت الصلة بين انبعاثات ثاني أكسيد الكربون وارتفاع الحرارة. من يدعو هنا للانتظار يتصرّف بغير مسؤولية. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-44-q1",
+        "type": "fill",
+        "promptDe": "Die Auswirkungen sind kaum noch zu ___.",
+        "answer": [
+          "leugnen"
+        ],
+        "explanationAr": "الدليل حرفياً: «Die Auswirkungen des Klimawandels sind kaum noch zu leugnen: Hitzewellen, Überschwemmungen, Ernteausfälle.» — zu + مصدر: يصعب إنكارها.",
+        "promptAr": "الآثار بالكاد يمكن ___ بعد الآن."
+      },
+      {
+        "id": "t-b2-44-q2",
+        "type": "mc",
+        "promptDe": "Was belegt die Studie?",
+        "options": [
+          "fehlende Daten",
+          "Zusammenhang zwischen CO₂ und Temperatur",
+          "Ernteausfälle in Afrika"
+        ],
+        "answer": "Zusammenhang zwischen CO₂ und Temperatur",
+        "explanationAr": "في النصِّ حرفياً: «belegt den Zusammenhang …».",
+        "promptAr": "ماذا تثبت الدراسة؟"
+      },
+      {
+        "id": "t-b2-44-q3",
+        "type": "mc",
+        "promptDe": "Wie bewertet der Text das Abwarten?",
+        "options": [
+          "vernünftig",
+          "verantwortungslos",
+          "neutral"
+        ],
+        "answer": "verantwortungslos",
+        "explanationAr": "في النصِّ حرفياً: «handelt verantwortungslos».",
+        "promptAr": "كيف يقيّم النص الانتظار؟"
+      },
+      {
+        "id": "t-b2-44-q4",
+        "type": "truefalse",
+        "promptDe": "Der Text hält Abwarten in der Klimafrage für verantwortungsvoll.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "في النصِّ حرفياً: «Wer hier noch Abwarten propagiert, handelt verantwortungslos».",
+        "promptAr": "هل يرى النص الانتظار مسؤولاً في مسألة المناخ؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-45",
+    "level": "B2",
+    "titleDe": "Rezension: ein bemerkenswerter Roman (Neu 45)",
+    "titleAr": "مراجعة: رواية تستحق (جديد 45)",
+    "de": "Wer einen Roman sucht, der nicht nur unterhält, sondern auch zum Denken anregt, liegt mit diesem Buch genau richtig. Die Autorin zeichnet ein Bild der Gesellschaft, das trotz mancher Übertreibung überzeugend wirkt. Zwar ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt der Plot eine enorme Spannung. Einzig die Figuren bleiben etwas blass. Insgesamt: eine klare Empfehlung für alle, die anspruchsvolle Literatur schätzen.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "من يبحث عن رواية لا تسلّي فقط بل تحفّز التفكير فهذا الكتاب خياره الصحيح. ترسم الكاتبة صورة للمجتمع مقنعة رغم بعض المبالغة. صحيح أن البداية بطيئة لكن منذ الفصل الثاني تكتسب الحبكة تشويقاً هائلاً. الوحيد: الشخصيات تبقى باهتة قليلاً. الإجمالي: توصية واضحة لكل من يقدّر الأدب الرفيع. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-45-q1",
+        "type": "mc",
+        "promptDe": "Was kritisiert die Rezension?",
+        "options": [
+          "den Anfang und die Figuren",
+          "die Sprache",
+          "den Preis"
+        ],
+        "answer": "den Anfang und die Figuren",
+        "explanationAr": "الدليل حرفياً: «Zwar ist der Anfang langsam» و«Einzig die Figuren bleiben etwas blass». الفخّ: اللغة والسعر لم يُذكرا.",
+        "promptAr": "بماذا تنتقد المراجعة؟"
+      },
+      {
+        "id": "t-b2-45-q2",
+        "type": "fill",
+        "promptDe": "Zwar ist der Anfang langsam, ___ entwickelt der Plot Spannung.",
+        "answer": [
+          "doch",
+          "aber"
+        ],
+        "explanationAr": "الدليل حرفياً: «Zwar ist der Anfang langsam, doch ab dem zweiten Kapitel entwickelt der Plot eine enorme Spannung.» — zwar … doch = صحيح أن … لكن.",
+        "promptAr": "رغم بطء البداية، ___ تتطور الحبكة بتشويق."
+      },
+      {
+        "id": "t-b2-45-q3",
+        "type": "mc",
+        "promptDe": "Das Fazit der Rezension ist:",
+        "options": [
+          "negativ",
+          "eine klare Empfehlung",
+          "neutral"
+        ],
+        "answer": "eine klare Empfehlung",
+        "explanationAr": "في النصِّ حرفياً: «eine klare Empfehlung».",
+        "promptAr": "الخلاصة:"
+      },
+      {
+        "id": "t-b2-45-q4",
+        "type": "truefalse",
+        "promptDe": "Die Figuren des Romans werden als besonders stark gezeichnet gelobt.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "«Einzig die Figuren bleiben etwas blass» — العيبُ الوحيدُ المذكور.",
+        "promptAr": "هل أُشيد بالشخصيات كأنها مرسومة بقوة خاصة؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-46",
+    "level": "B2",
+    "titleDe": "Bewerbung und Arbeitsmarkt (Neu 46)",
+    "titleAr": "التقديم وسوق العمل (جديد 46)",
+    "de": "Die Anforderungen an moderne Berufe sind in den letzten Jahren deutlich gestiegen. Fachwissen allein genügt längst nicht mehr; gefragt sind Fähigkeiten wie Kommunikation, Kreativität und die Bereitschaft, Verantwortung zu übernehmen. Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte. Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "ارتفعت متطلبات المهن الحديثة بوضوح في السنوات الأخيرة. المعرفة التخصصية وحدها لم تعد كافية؛ المطلوب مهارات كال التواصل والإبداع والاستعداد لتحمّل المسؤولية. على المتقدّمات في الخطاب أن لا يعرضن ما فعلنّه فقط بل أيضاً ما نتج عن أفعالهنّ من نتائج. من يجعل هذه الترابطات مقنعة يُقنع — بغضّ النظر عن الشروط الشكلية. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-46-q1",
+        "type": "fill",
+        "promptDe": "Bewerber sollten zeigen, welche ___ ihr Handeln hatte.",
+        "answer": [
+          "Konsequenzen"
+        ],
+        "explanationAr": "الدليل حرفياً: «Bewerberinnen sollten im Anschreiben nicht nur darstellen, was sie getan haben, sondern auch, welche Konsequenzen ihr Handeln hatte.» — النتائج المترتبة.",
+        "promptAr": "يجب على المتقدمين إظهار ما ___ تصرفهم."
+      },
+      {
+        "id": "t-b2-46-q2",
+        "type": "mc",
+        "promptDe": "Was ist neben Fachwissen gefragt?",
+        "options": [
+          "nur Erfahrung",
+          "Kommunikation, Kreativität, Verantwortung",
+          "gute Noten"
+        ],
+        "answer": "Kommunikation, Kreativität, Verantwortung",
+        "explanationAr": "في النصِّ حرفياً: «gefragt sind Fähigkeiten wie …».",
+        "promptAr": "ماذا يُطلب إلى جانب المعرفة المتخصصة؟"
+      },
+      {
+        "id": "t-b2-46-q3",
+        "type": "fill",
+        "promptDe": "…, ___ der formalen Voraussetzungen. (= بغض النظر عن)",
+        "answer": [
+          "ungeachtet"
+        ],
+        "explanationAr": "الدليل حرفياً: «Wer diese Zusammenhänge plausibel macht, überzeugt — ungeachtet der formalen Voraussetzungen.» — ungeachtet + Genitiv = بغضّ النظر عن.",
+        "promptAr": "___ المتطلبات الشكلية."
+      },
+      {
+        "id": "t-b2-46-q4",
+        "type": "truefalse",
+        "promptDe": "Fachwissen allein reicht laut Text für moderne Berufe aus.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "في النصِّ حرفياً: «Fachwissen allein genügt längst nicht mehr».",
+        "promptAr": "هل تكفي المعرفة المتخصصة وحدها للمهن الحديثة حسب النص؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-47",
+    "level": "B2",
+    "titleDe": "Schlaf und Lernen (Neu 47)",
+    "titleAr": "النوم والتعلّم (جديد 47)",
+    "de": "Die im Schlaf stattfindende Festigung von Erlerntem ist gut erforscht. Mehrere Studien belegen den Zusammenhang zwischen ausreichendem Schlaf und besseren Prüfungsergebnissen. Besonders wirksam scheint das früh am Morgen Gelernte zu sein, das über Nacht stabilisiert wird. Wer dagegen bis spät in die Nacht büffelt, erzielt oft das Gegenteil: Die von Übermüdung geprägte Konzentration lässt nach. Die Schlussfolgerung liegt auf der Hand: Lernen und Schlafen sind kein Widerspruch, sondern Verbündete.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "ترسيخ المكتسبات أثناء النوم مبحوث فيه جيداً. عدة دراسات تثبت الصلة بين النوم الكافي ونتائج امتحانية أفضل. يبدو أن الأثر الأقوى لما يُتعلَّم في الصباح الباكر، فيستقرّ خلال الليل. أما من يذاكر حتى وقت متأخر من الليل في غالباً ما ينال العكس: التركيز المطبوع بالإرهاق يخفّ. الاستنتاج بديهي: التعلّم والنوم ليسا تضاداً بل حليفان. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-47-q1",
+        "type": "mc",
+        "promptDe": "Was ist besonders wirksam?",
+        "options": [
+          "das bis spät Gelernte",
+          "das früh am Morgen Gelernte",
+          "das am Nachmittag Gelernte"
+        ],
+        "answer": "das früh am Morgen Gelernte",
+        "explanationAr": "في النصِّ حرفياً: «Besonders wirksam scheint das früh am Morgen Gelernte zu sein» (Partizipialattribut).",
+        "promptAr": "ما الأكثر فعالية؟"
+      },
+      {
+        "id": "t-b2-47-q2",
+        "type": "fill",
+        "promptDe": "Die von Übermüdung geprägte ___ lässt nach.",
+        "answer": [
+          "Konzentration"
+        ],
+        "explanationAr": "الدليل حرفياً: «Wer dagegen bis spät in die Nacht büffelt, erzielt oft das Gegenteil: Die von Übermüdung geprägte Konzentration lässt nach.» — التركيز.",
+        "promptAr": "___ التي يطبعها الإرهاق تضعف."
+      },
+      {
+        "id": "t-b2-47-q3",
+        "type": "mc",
+        "promptDe": "Das Fazit lautet:",
+        "options": [
+          "Lernen und Schlafen sind Verbündete.",
+          "Man soll weniger schlafen.",
+          "Büffeln bis spaat ist optimal."
+        ],
+        "answer": "Lernen und Schlafen sind Verbündete.",
+        "explanationAr": "في النصِّ حرفياً: «sondern Verbündete».",
+        "promptAr": "الخلاصة:"
+      },
+      {
+        "id": "t-b2-47-q4",
+        "type": "truefalse",
+        "promptDe": "Wer bis spät in die Nacht lernt, erzielt laut Text oft das Gegenteil.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "في النصِّ حرفياً: «Wer dagegen bis spät in die Nacht büffelt, erzielt oft das Gegenteil».",
+        "promptAr": "هل يحقق من يسهر ليلاً في التعلم عكس ما يريد حسب النص؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-48",
+    "level": "B2",
+    "titleDe": "Kommentar: Tempo der Digitalisierung (Neu 48)",
+    "titleAr": "تعليق: وتيرة الرقمنة (جديد 48)",
+    "de": "Alle reden von Tempo, kaum jemand von Richtung. Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck. Dabei zeigt die Praxis: Wo technische Lösungen ohne pädagogische Konzepte eingeführt werden, bleibt die Wirkung gering. Es geht nicht darum, Bremsen zu legen, sondern darum, Ziele zu definieren. Wer nur beschleunigt, ohne zu wissen wohin, fährt gegen die Wand.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "الجميع يتحدث عن السرعة، ونادراً من يتحدث عن الاتجاه. يُحتفى بالرقمنة المُعجَّلة كأنها غاية بذاتها. بينما تبيّن الممارسة: أينما أُدخلت حلول تقنية بلا مفاهيم تربوية يبقى الأثر ضئيلاً. الأمر ليس كبح جماح بل تحديد أهداف. من يسرّع فقط دون أن يعرف إلى أين، يرتطم بالحائط. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-48-q1",
+        "type": "fill",
+        "promptDe": "Als sei sie ___. (= غاية بذاتها)",
+        "answer": [
+          "Selbstzweck"
+        ],
+        "explanationAr": "الدليل حرفياً: «Die forcierte Digitalisierung wird gefeiert, als sei sie Selbstzweck.» — غاية بذاتها.",
+        "promptAr": "كأنها ___ في ذاتها."
+      },
+      {
+        "id": "t-b2-48-q2",
+        "type": "mc",
+        "promptDe": "Was fordert der Kommentar?",
+        "options": [
+          "mehr Tempo",
+          "Ziele definieren",
+          "Technik verbieten"
+        ],
+        "answer": "Ziele definieren",
+        "explanationAr": "في النصِّ حرفياً: «sondern …, Ziele zu definieren».",
+        "promptAr": "ماذا يطالب التعليق؟"
+      },
+      {
+        "id": "t-b2-48-q3",
+        "type": "mc",
+        "promptDe": "„gegen die Wand fahren“ bedeutet hier:",
+        "options": [
+          "einen Unfall bauen",
+          "scheitern",
+          "schnell fahren"
+        ],
+        "answer": "scheitern",
+        "explanationAr": "الدليل حرفياً: «Wer nur beschleunigt, ohne zu wissen wohin, fährt gegen die Wand.» — استعارة: الفشل.",
+        "promptAr": "«يصطدم بالحائط» تعني هنا:"
+      },
+      {
+        "id": "t-b2-48-q4",
+        "type": "truefalse",
+        "promptDe": "Der Text fordert, die Digitalisierung zu bremsen.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "في النصِّ حرفياً: «Es geht nicht darum, Bremsen zu legen, sondern darum, Ziele zu definieren».",
+        "promptAr": "هل يطالب النص بإبطاء الرقمنة؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-49",
+    "level": "B2",
+    "titleDe": "Medien und Wahrheit (Neu 49)",
+    "titleAr": "الإعلام والحقيقة (جديد 49)",
+    "de": "Heute erreichen uns Nachrichten in Sekunden – aber nicht jede Information ist wahr. Experten empfehlen, drei Fragen zu stellen: Wer schreibt das? Welche Quellen werden genannt? Stehen die Fakten auch woanders? Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "تصلنا الأخبار اليوم في ثوانٍ — لكن ليس كل معلومة صادقة. ينصح الخبراء بطرح ثلاثة أسئلة: من يكتب هذا؟ ما المصادر المذكورة؟ هل توجد الحقائق في مكان آخر أيضاً؟ من يتمرّن على هذه العادة يتعرّف أسرع على الجادّ من صاخب اللامبالاة. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-49-q1",
+        "type": "mc",
+        "promptDe": "Wie viele Fragen empfehlen die Experten?",
+        "options": [
+          "Drei",
+          "Eine",
+          "Zwei",
+          "Fünf"
+        ],
+        "answer": "Drei",
+        "explanationAr": "الدليل حرفياً: «Experten empfehlen, drei Fragen zu stellen: Wer schreibt das?» — ينصح الخبراء بثلاثة أسئلة قبل التصديق.",
+        "promptAr": "كم سؤالاً يوصي الخبراء؟"
+      },
+      {
+        "id": "t-b2-49-q2",
+        "type": "mc",
+        "promptDe": "Was ist das Ziel dieser Fragen?",
+        "options": [
+          "Zu erkennen, was seriös ist",
+          "Mehr Nachrichten zu lesen",
+          "Quellen zu zitieren",
+          "Schneller zu tippen"
+        ],
+        "answer": "Zu erkennen, was seriös ist",
+        "explanationAr": "الدليل حرفياً: «Wer diese Gewohnheit übt, erkennt schneller, was seriös ist und was nur laut ist.» — الهدف: تمييز الموثوق من صاخب اللامبالاة.",
+        "promptAr": "ما هدف هذه الأسئلة؟"
+      },
+      {
+        "id": "t-b2-49-q3",
+        "type": "mc",
+        "promptDe": "Wonach fragt die dritte Frage der Experten?",
+        "options": [
+          "Ob die Fakten auch woanders stehen",
+          "Wer das schreibt",
+          "Welche Quellen genannt werden"
+        ],
+        "answer": "Ob die Fakten auch woanders stehen",
+        "explanationAr": "«Stehen die Fakten auch woanders?» هي الثالثة؛ ومن يكتبُ والمصادرُ هما الأولى والثانية بالترتيب.",
+        "promptAr": "عمّا يسأل السؤال الثالث؟"
+      },
+      {
+        "id": "t-b2-49-q4",
+        "type": "truefalse",
+        "promptDe": "Der Text nennt drei Prüffragen für Nachrichten.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل حرفياً: «Experten empfehlen, drei Fragen zu stellen: Wer schreibt das? Welche Quellen werden genannt? Stehen die Fakten auch woanders?» — مَن يكتب؟ أيُّ مصادرَ تُذكَر؟ أترِدُ الوقائعُ في مكانٍ آخر؟",
+        "promptAr": "هل يذكر النص ثلاثة أسئلة لفحص الأخبار؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-50",
+    "level": "B2",
+    "titleDe": "Lebenslanges Lernen (Neu 50)",
+    "titleAr": "التعلّم مدى الحياة (جديد 50)",
+    "de": "Früher endete die Ausbildung mit der Schule, heute nicht mehr. Wer beruflich erfolgreich bleiben will, muss sich regelmäßig weiterbilden: Kurse, Seminare, Online-Lernen. Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter. Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "كان التعلّم ينتهي مع المدرسة سابقاً، أما اليوم فلا. من يريد النجاح مهنياً عليه التطوير المستمر: دورات وندوات وتعلّم إلكتروني. وفي الوقت نفسه يحسّن تعلّم اللغة الأجنبية الذاكرة في الشيخوخة. التعليم بذلك ليس مرحلة، بل رفيق طوال الحياة. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-50-q1",
+        "type": "mc",
+        "promptDe": "Was verbessert das Gedächtnis im Alter?",
+        "options": [
+          "Das Lernen einer Fremdsprache",
+          "Sport",
+          "Schlaf",
+          "Musik"
+        ],
+        "answer": "Das Lernen einer Fremdsprache",
+        "explanationAr": "الدليل حرفياً: «Gleichzeitig verbessert das Lernen einer Fremdsprache das Gedächtnis im Alter.» — تعلّم اللغة الأجنبية يحسّن الذاكرة في الشيخوخة.",
+        "promptAr": "ما يحسّن الذاكرة في الكبر؟"
+      },
+      {
+        "id": "t-b2-50-q2",
+        "type": "mc",
+        "promptDe": "Wie wird Bildung im Text beschrieben?",
+        "options": [
+          "Als Begleiterin fürs ganze Leben",
+          "Als Phase",
+          "Als Pflicht",
+          "Als Hobby"
+        ],
+        "answer": "Als Begleiterin fürs ganze Leben",
+        "explanationAr": "الدليل حرفياً: «Bildung ist damit keine Phase, sondern eine Begleiterin fürs ganze Leben.» — التعليم رفيق طوال الحياة، لا مرحلة تنتهي.",
+        "promptAr": "كيف توصف التربية في النص؟"
+      },
+      {
+        "id": "t-b2-50-q3",
+        "type": "mc",
+        "promptDe": "Was war früher anders als heute?",
+        "options": [
+          "Die Ausbildung endete mit der Schule",
+          "Man lernte keine Sprachen",
+          "Es gab keine Universitäten"
+        ],
+        "answer": "Die Ausbildung endete mit der Schule",
+        "explanationAr": "«Früher endete die Ausbildung mit der Schule, heute nicht mehr.» — البدايةُ نصٌّ لا استنتاج.",
+        "promptAr": "ما الذي كان مختلفاً في الماضي؟"
+      },
+      {
+        "id": "t-b2-50-q4",
+        "type": "truefalse",
+        "promptDe": "Laut Text endet Bildung heute mit der Schule.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "falsch",
+        "explanationAr": "في النصِّ حرفياً: «Früher endete die Ausbildung mit der Schule, heute nicht mehr».",
+        "promptAr": "هل تنتهي التربية اليوم بانتهاء المدرسة حسب النص؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
+  },
+  {
+    "id": "t-b2-51",
+    "level": "B2",
+    "titleDe": "Vier-Tage-Woche: Chance oder Risiko? (Neu 51)",
+    "titleAr": "أسبوعٌ بأربعة أيام: فرصةٌ أم مخاطرة؟ (جديد 51)",
+    "de": "Die Debatte um die Vier-Tage-Woche wird hitziger, seit ein britischer Versuch positive Ergebnisse meldete: gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen. Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen. Beides stimmt, und genau darin liegt die Schwierigkeit: Wer über Arbeitszeit spricht, muss immer auch über Branchen, Einkommen und Macht sprechen – sonst bleibt die Studie ein Experiment unter vielen.\n\nIm weiteren Verlauf des Textes wird die Diskussion vertieft. Die Autorin analysiert zunächst die unterschiedlichen Positionen, die in der öffentlichen Debatte vertreten werden. Während einige Akteure die Vorteile neuer Entwicklungen hervorheben und auf die Potenziale für die Gesellschaft verweisen, betonen andere die Notwendigkeit einer kritischen Prüfung. Dabei wird deutlich, dass nicht jede Innovation automatisch zu einer Verbesserung führt. Vielmehr hängt der Erfolg davon ab, unter welchen Bedingungen und mit welchen Zielen Veränderungen eingeführt werden. Besonders problematisch erscheint es, wenn Entscheidungen unter Zeitdruck getroffen werden und langfristige Folgen kaum berücksichtigt werden. In diesem Zusammenhang wird auch die Rolle der Medien diskutiert, die durch ihre Berichterstattung Einfluss auf die Meinungsbildung nehmen. Zudem wird die Frage aufgeworfen, inwieweit bisherige Evaluationen methodisch überzeugend sind und welche Kriterien für eine Bewertung herangezogen werden sollten.\n\nUm die abstrakten Überlegungen zu konkretisieren, führt der Text ein Fallbeispiel an. In einer mittelgroßen Stadt wurde ein Pilotprojekt gestartet, das verschiedene Interessengruppen an einen Tisch brachte. Vertreter aus Verwaltung, Bildung, Wirtschaft und Zivilgesellschaft entwickelten gemeinsam ein Konzept, das auf Transparenz und Beteiligung setzte. Ein zentrales Element war die regelmäßige Evaluation, bei der nicht nur Ergebnisse, sondern auch Prozesse bewertet wurden. Dabei zeigte sich, dass die Einbeziehung unterschiedlicher Perspektiven zwar den Planungsprozess verlangsamte, gleichzeitig aber die Akzeptanz in der Bevölkerung deutlich erhöhte. Kritiker hatten zunächst eingewandt, dass solche Verfahren zu aufwendig seien und nur in wohlhabenden Kommunen funktionieren könnten. Die Erfahrungen im Projekt widerlegten diese Annahme und belegen, dass gerade durch frühzeitige Beteiligung Konflikte reduziert und tragfähige Kompromisse gefunden werden können. Besonders aufschlussreich war die Beobachtung, dass die von Lehrern begleitete Umsetzung deutlich bessere Resultate erzielte als rein technische Lösungen.\n\nAbschließend zieht die Autorin ein Fazit, das über den konkreten Fall hinausweist. Sie argumentiert, dass nachhaltige Lösungen nur dann möglich sind, wenn fachliche Expertise mit demokratischer Partizipation verbunden wird. Dazu gehört, zwischen Tatsachenbehauptungen, Vermutungen und Bewertungen klar zu unterscheiden und die Funktion sprachlicher Mittel wie Konnektoren und Partizipialattribute zu erkennen. Für die Leserinnen und Leser bedeutet das, Texte nicht nur auf der Ebene des Inhalts, sondern auch hinsichtlich ihrer Argumentationsstruktur zu analysieren. Wer selektiv liest, kann schnell erfassen, welche Akteure welche Interessen vertreten und an welchen Stellen Konsens erreichbar ist. Die abschließende Empfehlung lautet daher, Investitionen nicht nur in technische Ausstattung, sondern vor allem in Qualifizierung und Konzepte zu lenken. Nur wenn Pädagogik, Technologie und gesellschaftliche Teilhabe zusammen gedacht werden, kann das Potenzial neuer Entwicklungen verantwortungsvoll genutzt werden. Der Text schließt mit dem Hinweis, dass es nicht um Technik um ihrer selbst willen gehe, sondern um nachhaltige Didaktik und die Frage, wie Lernen in Zukunft gestaltet werden soll.",
+    "ar": "اشتدّ النقاش حول الأسبوع ذي الأيام الأربعة بعدما أبلغت تجربة ميدانية بريطانية عن نتائج إيجابية: إنتاجية ثابتة مع احتراقٍ نفسي أقل بوضوح. وتردّ ناقِدات بأن تلك التجارب تخصّ عمل المعرفة وحده ولا تُنسحب إلى المصانع. الاثنان صادقان، وهنا تكمن الصعوبة بعينها: من يتكلم عن وقت العمل فعليه دائمًا أن يتكلم عن الفروع والدخول والسلطة — وإلا بقيت الدراسة تجربةً بين تجارب. يتناول النص بعد ذلك وجهات نظر متباينة ويعرض دراسة حالة من مدينة نموذجية، ثم يخلص إلى أن الاستدامة تتطلب ربط الخبرة بالمشاركة، مع التمييز بين الوقائع والتقييمات.",
+    "questions": [
+      {
+        "id": "t-b2-51-q1",
+        "type": "mc",
+        "promptDe": "Was ergab der britische Feldversuch laut Text?",
+        "options": [
+          "höhere Produktivität",
+          "gleichbleibende Produktivität bei weniger Burnout",
+          "weniger Krankheitstage bei mehr Output"
+        ],
+        "answer": "gleichbleibende Produktivität bei weniger Burnout",
+        "explanationAr": "في النصِّ حرفياً: «gleichbleibende Produktivität bei spürbar weniger Burnout-Symptomen».",
+        "promptAr": "ماذا أظهرت التجربة البريطانية الميدانية حسب النص؟"
+      },
+      {
+        "id": "t-b2-51-q2",
+        "type": "mc",
+        "promptDe": "Was wenden Kritikerinnen ein?",
+        "options": [
+          "dass die Versuche zu teuer waren",
+          "dass sie nur für Wissensarbeit galten",
+          "dass die Regierung sie stoppte"
+        ],
+        "answer": "dass sie nur für Wissensarbeit galten",
+        "explanationAr": "في النصِّ حرفياً: «dass solche Versuche nur für Wissensarbeit galten».",
+        "promptAr": "علام يردّ النقاد؟"
+      },
+      {
+        "id": "t-b2-51-q3",
+        "type": "mc",
+        "promptDe": "Warum bleibt die Studie laut Autor «ein Experiment unter vielen»?",
+        "options": [
+          "weil sie unveröffentlicht blieb",
+          "wenn Branchen und Macht ausgeklammert werden",
+          "weil sie Wiederholungen fehlten"
+        ],
+        "answer": "wenn Branchen und Macht ausgeklammert werden",
+        "explanationAr": "في النصِّ حرفياً: «Wer … muss immer auch über Branchen, Einkommen und Macht sprechen – sonst …».",
+        "promptAr": "لماذا تظل الدراسة «تجربة بين تجارب كثيرة» حسب الكاتب؟"
+      },
+      {
+        "id": "t-b2-51-q4",
+        "type": "truefalse",
+        "promptDe": "Kritikerinnen bezweifeln die Übertragbarkeit des Versuchs auf Fabriken.",
+        "options": [
+          "richtig",
+          "falsch"
+        ],
+        "answer": "richtig",
+        "explanationAr": "الدليل حرفياً: «Kritikerinnen wenden ein, dass solche Versuche nur für Wissensarbeit galten und sich nicht auf Fabriken übertragen ließen» — Konjunktiv I في نقل الاعتراض.",
+        "promptAr": "هل يشكك النقاد في قابلية نقل التجربة إلى المصانع؟"
+      }
+    ],
+    "arHinweis": "ملخص عربي — الترجمة الكاملة في النص الألماني؛ الفهم يُختبر بالأسئلة الألمانية."
   }
 ]

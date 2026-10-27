@@ -2282,7 +2282,7 @@ void 0;
     const ABSURD = /^(nie|nichts|niemand|keine|gar nicht|sofort|ja|nein|presse|status|bargeld|ein foto|kündigung|schimpfen|abstimmen|ersparnis|prämie|kurzer|annullierung)$/i;
     const b2 = dialogues.filter((d) => d.level === LV);
     const mc = b2.flatMap((d) => d.questions.filter((q) => q.type === "mc").map((q) => ({ d, q })));
-    const SOLL_MC: Record<string, number> = { B2: 102, B1: 78, A2: 64, A1: 61 }; // R146: +2 mc من الحوارين الطويلين في B1/B2؛ R162: +2 لكل مستوى من حوار عميق (2 mc)
+    const SOLL_MC: Record<string, number> = { B2: 116, B1: 78, A2: 64, A1: 61 }; // R146: +2 mc من الحوارين الطويلين في B1/B2؛ R162: +2 لكل مستوى من حوار عميق (2 mc)؛ +14 من 10 حوارات B2 جديدة (d-b2-50..59)
     ok(mc.length === SOLL_MC[LV], `K71a·${LV} حواراتُ ${LV} الـ${b2.length} فيها ${SOLL_MC[LV]} سؤالَ mc (${mc.length})`);
     ok(mc.every(({ q }) => (q.options ?? []).includes(q.answer as string) && new Set(q.options).size === (q.options ?? []).length), "K71b·${LV} الإجابةُ ضمنَ الخياراتِ ولا خيارَ مكرَّراً");
     const absurd = mc.flatMap(({ q }) => (q.options ?? []).filter((o) => ABSURD.test(o.trim())));
@@ -3040,11 +3040,11 @@ void 0;
   const lies = readFileSync("README.md", "utf8");
   const J = (f: string): number => { const x = JSON.parse(readFileSync(f, "utf8")); return Array.isArray(x) ? x.length : Object.keys(x).length; };
   const nT = J("content/texts.json"), nD = J("content/dialogues.json");
-  ok(nT === 158 && lies.includes("texts **158**"), `K125a النصوصُ 158 في القرصِ والسطرِ والفهرس (${nT})`);
-  ok(nD === 176 && lies.includes("dialogues **176**"), `K125b الحواراتُ 176 في القرصِ والسطرِ والفهرس (${nD}) — R146 أربعةً طويلة وR162 أربعةً عميقة +12 B2 جديدة (واحدٌ لكلِّ مستوى)`);
+  ok(nT === 168 && lies.includes("texts **168**"), `K125a النصوصُ 168 في القرصِ والسطرِ والفهرس (${nT})`);
+  ok(nD === 186 && lies.includes("dialogues **186**"), `K125b الحواراتُ 186 في القرصِ والسطرِ والفهرس (${nD}) — R146 أربعةً طويلة وR162 أربعةً عميقة +12 B2 جديدة +10 (d-b2-50..59) =22 B2 جديدة`);
   const mp3 = (d: string) => readdirSync(`public/audio/${d}`).filter((f) => f.endsWith(".mp3")).length;
   const nH = mp3("hoeren"), nG = mp3("dialog"), nK = mp3("diktat"), nS = mp3("sprichwort");
-  ok(nG === 176 && nH === 158 && nH + nG + nK + nS === 1084 && lies.includes("158 ملفاً صوتياً") && lies.includes("1084 ملفات صوتية"),
+  ok(nG === 186 && nH === 168 && nH + nG + nK + nS === 1104 && lies.includes("168 ملفاً صوتياً") && lies.includes("1104 ملفات صوتية"),
     `K125c الصوتُ من الملفاتِ: ${nG} حوار + ${nH} نص + ${nK} إملاء + ${nS} أمثال = 1071`);
   const abR = radarAbdeckung(dialogues);
   const nDr = dialogues.flatMap((d) => signalDrill(d)).length;
