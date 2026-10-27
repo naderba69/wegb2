@@ -6158,7 +6158,8 @@
         "farbe": "ROT",
         "exampleDe": "Die Demonstration verlief friedlich, mit rund zweitausend Teilnehmern.",
         "exampleAr": "المظاهرة…",
-        "plural": "die Demonstrationen"
+        "plural": "die Demonstrationen",
+        "img": "/cards/demonstration.png"
       },
       {
         "id": "v291",
@@ -13878,7 +13879,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Artikel eins des Grundgesetzes schützt die Würde des Menschen.",
         "exampleAr": "المادة الأولى من ا…",
-        "plural": "die Perspektiven"
+        "plural": "die Perspektiven",
+        "img": "/cards/grundgesetz.png"
       },
       {
         "id": "v776",
@@ -14426,7 +14428,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
         "exampleDe": "Das Wahlrecht ab sechzehn wird in einigen Ländern diskutiert.",
         "exampleAr": "حق الاقتراع من سن…",
-        "plural": "die Wahlrechte"
+        "plural": "die Wahlrechte",
+        "img": "/cards/wahlrecht.png"
       },
       {
         "id": "v812",
@@ -14440,7 +14443,8 @@
         "article": "der",
         "farbe": "BLAU",
         "exampleDe": "Der Bundestag hat das Gesetz in zweiter Lesung beraten.",
-        "exampleAr": "مجلس النواب ناقش ا…"
+        "exampleAr": "مجلس النواب ناقش ا…",
+        "img": "/cards/bundestag.png"
       },
       {
         "id": "v813",
@@ -14454,7 +14458,8 @@
         "article": "der",
         "farbe": "BLAU",
         "exampleDe": "Der Bundesrat muss zustimmen, wenn die Länder betroffen sind.",
-        "exampleAr": "مجلس الولايات يجب…"
+        "exampleAr": "مجلس الولايات يجب…",
+        "img": "/cards/bundesrat.png"
       },
       {
         "id": "v814",
@@ -23347,7 +23352,8 @@
         "farbe": "ROT",
         "exampleDe": "Die Montagsdemonstration wuchs von Woche zu Woche.",
         "exampleAr": "مسيرة الاثنين كبرت…",
-        "plural": "die Montagsdemonstrationen"
+        "plural": "die Montagsdemonstrationen",
+        "img": "/cards/demonstration.png"
       },
       {
         "id": "v1382",
@@ -59358,7 +59364,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Koalitionen",
-        "img": "/cards/bundestag.png"
+        "img": "/cards/koalition.png"
       },
       {
         "de": "die Opposition",
@@ -59371,7 +59377,7 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "img": "/cards/bundesrat.png"
+        "img": "/cards/opposition.png"
       },
       {
         "de": "die Wahlbeteiligung",
@@ -59386,7 +59392,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "img": "/cards/grundgesetz.png"
+        "img": "/cards/wahlrecht.png"
       },
       {
         "de": "die politische Teilhabe",
@@ -59468,7 +59474,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Mehrheiten"
+        "plural": "die Mehrheiten",
+        "img": "/cards/mehrheit.png"
       },
       {
         "de": "die Minderheit, -en",
@@ -59481,7 +59488,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Minderheiten"
+        "plural": "die Minderheiten",
+        "img": "/cards/minderheit.png"
       },
       {
         "de": "das Mitglied, -er",
