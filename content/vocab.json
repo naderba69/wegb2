@@ -59287,7 +59287,8 @@
         ],
         "pos": "Nomen",
         "article": "die",
-        "farbe": "ROT"
+        "farbe": "ROT",
+        "img": "/cards/gesetzgebung.png"
       },
       {
         "de": "die Ländervertretung",
@@ -59301,7 +59302,8 @@
         ],
         "pos": "Nomen",
         "article": "die",
-        "farbe": "ROT"
+        "farbe": "ROT",
+        "img": "/cards/laendervertretung.png"
       },
       {
         "de": "der Verfassungsstaat",
@@ -59315,7 +59317,8 @@
         ],
         "pos": "Nomen",
         "article": "der",
-        "farbe": "BLAU"
+        "farbe": "BLAU",
+        "img": "/cards/verfassungsstaat.png"
       },
       {
         "de": "der Bundeskanzler / die Bundeskanzlerin",
@@ -59327,7 +59330,8 @@
         "tags": [
           "b2-politik-demokratie"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/bundeskanzler.png"
       },
       {
         "de": "der Bundespräsident / die Bundespräsidentin; Plural: die Bundespräsidenten / die Bundespräsidentinnen",
@@ -59339,7 +59343,8 @@
         "tags": [
           "b2-politik-demokratie"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/bundespraesident.png"
       },
       {
         "de": "die Koalition, -en",
