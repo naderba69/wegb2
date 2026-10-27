@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-02",
-  "count": 157,
+  "count": 158,
   "einsaetze": [
     {
       "id": "t-a1-01",
@@ -1100,7 +1100,14 @@
       "voice": "voice-03 (de-DE, Arena TTS)",
       "level": "B2",
       "bytes": 360909
+    },
+    {
+      "id": "t-b2-41",
+      "file": "/audio/hoeren/t-b2-41.mp3",
+      "voice": "voice-03 (de-DE, Arena TTS)",
+      "level": "B2",
+      "bytes": 360909
     }
   ],
-  "updated": "2026-10-14"
+  "updated": "2026-10-25"
 }

@@ -4,12 +4,12 @@
   "scope": "مراجعة فردية للموضوعات الأربعة a1-war-hatte وa1-weil-dass وa1-plural وa1-zeitpraep، تشمل حقول الموضوع والقواعد والأمثلة والفخاخ وكل التمارين وعناصر التحقق. لا يشمل هذا السجل بقية A1 أو A2–B2 أو النصوص والحوارات.",
   "coverage": {
     "grammarTopics": 4,
-    "grammarExercises": 26,
+    "grammarExercises": 28,
     "grammarVerify": 8,
-    "totalTrackedItems": 38
+    "totalTrackedItems": 40
   },
   "statusCounts": {
-    "سليم": 28,
+    "سليم": 30,
     "مُصحح": 10,
     "غير محسوم": 0
   },
@@ -597,6 +597,28 @@
       ],
       "finding": "التعبير الزمني الصحيح هو Am Wochenende؛ weekend يأخذ am لا um أو im.",
       "action": "لا تعديل؛ بقيت الإجابة Am."
+    },
+    {
+      "id": "a1-war-hatte-ex07-umformung",
+      "kind": "exercise",
+      "status": "سليم",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "finding": "التمرين a1-war-hatte-ex07-umformung يحمل مصدراً وتعليمة وتفسيراً عربياً؛ التحويل بنقطتين ولا خلل في الجملة المصدرية.",
+      "action": "لا تعديل؛ بقيت الصيغة والشرح والتفسير العربي."
+    },
+    {
+      "id": "a1-weil-dass-ex07-umformung",
+      "kind": "exercise",
+      "status": "سليم",
+      "sources": [
+        "S3",
+        "S4"
+      ],
+      "finding": "التمرين a1-weil-dass-ex07-umformung يطابق بنية التحويل؛ الجملة المصدرية سليمة والتفسير العربي يوضح التوصيل بـweil.",
+      "action": "لا تعديل؛ بقيت الصيغة والشرح."
     }
   ]
 }

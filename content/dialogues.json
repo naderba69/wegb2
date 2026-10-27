@@ -13531,7 +13531,7 @@
           "Sie prüft jede Entscheidung"
         ],
         "answer": "Sie sortiert Bewerbungen vor",
-        "explanationAr": "الدليل: «sortiert eine Software Bewerbungen vor». الفخّ: القرار يتخذه إنسان («ein Mensch trifft die Entscheidung»)، ومراجعة كل قرار مهمة البشر لا البرنامج.",
+        "explanationAr": "الدليل: «sortiert eine Software Bewerbungen vor». الفخّ: القرار والمراجعة للبشر — «die Entscheidung treffen wir» و«Deshalb prüfen wir jede Entscheidung» — لا للبرنامج.",
         "promptAr": "اختر الإجابة الصحيحة حسب الحوار."
       },
       {

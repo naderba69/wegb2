@@ -11,6 +11,7 @@ import { grammarMap } from "@/lib/content";
 import { ritualUrteil, aufgabeGesperrt } from "@/lib/ritual";
 import { KindIcon } from "@/components/dirb/icons";
 import TodayStepper from "@/components/akademie/TodayStepper";
+import { TodayB2Praxis } from "@/components/today-b2-praxis";
 import { stationOfTask, STATIONEN } from "@/components/stationen";
 import { LernPfad } from "@/components/lernpath";
 import { ProfilWahl } from "@/components/profil";
@@ -457,6 +458,7 @@ export default function Today() {
         resultOf={resultOf as any}
         localOf={localOf}
       />
+      <TodayB2Praxis />
 
       <section className="dirb-tagesziel dirb-hero-anim-2" aria-label="هدف الجلسة اليومي" data-testid="session-goal-panel">
         <div className="dirb-tagesziel-top">
