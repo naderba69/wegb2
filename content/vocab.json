@@ -59357,7 +59357,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Koalitionen"
+        "plural": "die Koalitionen",
+        "img": "/cards/bundestag.png"
       },
       {
         "de": "die Opposition",
@@ -59369,7 +59370,8 @@
         "tags": [
           "b2-politik-demokratie"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/bundesrat.png"
       },
       {
         "de": "die Wahlbeteiligung",
@@ -59383,7 +59385,8 @@
         ],
         "pos": "Nomen",
         "article": "die",
-        "farbe": "ROT"
+        "farbe": "ROT",
+        "img": "/cards/grundgesetz.png"
       },
       {
         "de": "die politische Teilhabe",
@@ -59397,7 +59400,8 @@
         ],
         "pos": "Nomen",
         "article": "die",
-        "farbe": "ROT"
+        "farbe": "ROT",
+        "img": "/cards/demonstration.png"
       },
       {
         "de": "die Medienaufsicht",
@@ -59411,7 +59415,8 @@
         ],
         "pos": "Nomen",
         "article": "die",
-        "farbe": "ROT"
+        "farbe": "ROT",
+        "img": "/cards/volksentscheid.png"
       },
       {
         "de": "das Gesetz, -e",
