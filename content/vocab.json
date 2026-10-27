@@ -6159,7 +6159,7 @@
         "exampleDe": "Die Demonstration verlief friedlich, mit rund zweitausend Teilnehmern.",
         "exampleAr": "المظاهرة…",
         "plural": "die Demonstrationen",
-        "img": "/cards/demonstration.png"
+        "img": "/cards/demonstration.webp"
       },
       {
         "id": "v291",
@@ -13880,7 +13880,7 @@
         "exampleDe": "Artikel eins des Grundgesetzes schützt die Würde des Menschen.",
         "exampleAr": "المادة الأولى من ا…",
         "plural": "die Perspektiven",
-        "img": "/cards/grundgesetz.png"
+        "img": "/cards/grundgesetz.webp"
       },
       {
         "id": "v776",
@@ -14429,7 +14429,7 @@
         "exampleDe": "Das Wahlrecht ab sechzehn wird in einigen Ländern diskutiert.",
         "exampleAr": "حق الاقتراع من سن…",
         "plural": "die Wahlrechte",
-        "img": "/cards/wahlrecht.png"
+        "img": "/cards/wahlrecht.webp"
       },
       {
         "id": "v812",
@@ -14444,7 +14444,7 @@
         "farbe": "BLAU",
         "exampleDe": "Der Bundestag hat das Gesetz in zweiter Lesung beraten.",
         "exampleAr": "مجلس النواب ناقش ا…",
-        "img": "/cards/bundestag.png"
+        "img": "/cards/bundestag.webp"
       },
       {
         "id": "v813",
@@ -14459,7 +14459,7 @@
         "farbe": "BLAU",
         "exampleDe": "Der Bundesrat muss zustimmen, wenn die Länder betroffen sind.",
         "exampleAr": "مجلس الولايات يجب…",
-        "img": "/cards/bundesrat.png"
+        "img": "/cards/bundesrat.webp"
       },
       {
         "id": "v814",
@@ -23353,7 +23353,7 @@
         "exampleDe": "Die Montagsdemonstration wuchs von Woche zu Woche.",
         "exampleAr": "مسيرة الاثنين كبرت…",
         "plural": "die Montagsdemonstrationen",
-        "img": "/cards/demonstration.png"
+        "img": "/cards/demonstration.webp"
       },
       {
         "id": "v1382",
@@ -58209,7 +58209,7 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Forschungsvorhaben untersucht den Einfluss von Schlaf auf das Lernen.",
         "exampleAr": "يدرس الم…",
-        "img": "/cards/forschungsvorhaben.png"
+        "img": "/cards/forschungsvorhaben.webp"
       },
       {
         "id": "v1432",
@@ -58226,7 +58226,7 @@
         "farbe": "ROT",
         "exampleDe": "Eine aktuelle Studie zeigt, dass Bewegung das Lernen verbessert.",
         "exampleAr": "تُظهر دراسة حديثة أن الحركة تحسّن التعلّم.",
-        "img": "/cards/studie.png"
+        "img": "/cards/studie.webp"
       },
       {
         "id": "v1433",
@@ -58243,7 +58243,7 @@
         "farbe": "ROT",
         "exampleDe": "Die Untersuchung ergab keine Hinweise auf Nebenwirkungen.",
         "exampleAr": "لم يُظهر التحقيق أي دليل على آثار جانبية.",
-        "img": "/cards/untersuchung.png"
+        "img": "/cards/untersuchung.webp"
       },
       {
         "id": "v1434",
@@ -58260,7 +58260,7 @@
         "farbe": "ROT",
         "exampleDe": "Er stellte eine gewagte These über den Klimawandel auf.",
         "exampleAr": "طرح فرضية جريئة حول تغيّر المناخ.",
-        "img": "/cards/these.png"
+        "img": "/cards/these.webp"
       },
       {
         "id": "v1435",
@@ -58276,7 +58276,7 @@
         "farbe": "ROT",
         "exampleDe": "Die Prämisse der Studie wird im Diskussionsteil kritisch hinterfragt.",
         "exampleAr": "تُراجع ا…",
-        "img": "/cards/praemisse.png"
+        "img": "/cards/praemisse.webp"
       },
       {
         "id": "v1436",
@@ -58293,7 +58293,7 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Experiment wurde unter Laborbedingungen durchgeführt.",
         "exampleAr": "أُجريت التجربة في ظروف مخبرية.",
-        "img": "/cards/experiment.png"
+        "img": "/cards/experiment.webp"
       },
       {
         "id": "v1437",
@@ -58309,7 +58309,7 @@
         "exampleDe": "Die Studie konnte die Wirkung noch nicht beweisen.",
         "exampleAr": "لم تستطع الدراسة إثبات التأثير بعد.",
         "posInfo": "beweist, beweiste, hat beweist",
-        "img": "/cards/beweisen.png"
+        "img": "/cards/beweisen.webp"
       },
       {
         "id": "v1438",
@@ -58324,7 +58324,7 @@
         "exampleDe": "Die Ergebnisse untermauern die zentrale These der Studie.",
         "exampleAr": "تدعم الن…",
         "posInfo": "mauet unter, mauete unter, hat untermauern",
-        "img": "/cards/untermauern.png"
+        "img": "/cards/untermauern.webp"
       },
       {
         "id": "v1439",
@@ -58339,7 +58339,7 @@
         "exampleDe": "Die Forschenden interpretieren die Ergebnisse vorsichtig.",
         "exampleAr": "يفسّر ال…",
         "posInfo": "interpretiert, interpretierte, hat geinterpretiert",
-        "img": "/cards/interpretieren.png"
+        "img": "/cards/interpretieren.webp"
       },
       {
         "id": "v1440",
@@ -58356,7 +58356,7 @@
         "farbe": "GRÜN",
         "exampleDe": "Das Ergebnis der Umfrage war überraschend.",
         "exampleAr": "كانت نتيجة الاستطلاع مفاجئة.",
-        "img": "/cards/ergebnis_b2.png"
+        "img": "/cards/ergebnis_b2.webp"
       },
       {
         "id": "v1441",
@@ -58372,7 +58372,7 @@
         "farbe": "ROT",
         "exampleDe": "Eine unerwartete Folgewirkung der Reform ist die höhere Nachfrage.",
         "exampleAr": "من الآثا…",
-        "img": "/cards/folgewirkung.png"
+        "img": "/cards/folgewirkung.webp"
       },
       {
         "id": "v1442",
@@ -58388,7 +58388,7 @@
         "farbe": "ROT",
         "exampleDe": "Als Folge des Regens fiel der Unterricht aus.",
         "exampleAr": "نتيجة ال…",
-        "img": "/cards/folge.png"
+        "img": "/cards/folge.webp"
       },
       {
         "id": "v1443",
@@ -58404,7 +58404,7 @@
         "farbe": "BLAU",
         "exampleDe": "Der Strukturwandel verändert die Wirtschaftsstruktur vieler Regionen.",
         "exampleAr": "يغيّر ال…",
-        "img": "/cards/strukturwandel.png"
+        "img": "/cards/strukturwandel.webp"
       },
       {
         "id": "v1444",
@@ -58421,7 +58421,7 @@
         "farbe": "ROT",
         "exampleDe": "Die Entwicklung der KI schreitet schnell voran.",
         "exampleAr": "يتقدّم تطوير الذكاء الاصطناعي بسرعة.",
-        "img": "/cards/entwicklung.png"
+        "img": "/cards/entwicklung.webp"
       },
       {
         "id": "v1445",
@@ -58438,7 +58438,7 @@
         "farbe": "ROT",
         "exampleDe": "Niemand weiß genau, was die Zukunft bringt.",
         "exampleAr": "لا أحد يعرف بدقة ماذا سيجلب المستقبل.",
-        "img": "/cards/zukunft.png"
+        "img": "/cards/zukunft.webp"
       },
       {
         "id": "v1446",
@@ -59239,7 +59239,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Demokratien",
-        "img": "/cards/demokratie.png"
+        "img": "/cards/demokratie.webp"
       },
       {
         "de": "die Wahl, -en",
@@ -59253,7 +59253,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Wahlen",
-        "img": "/cards/wahl.png"
+        "img": "/cards/wahl.webp"
       },
       {
         "de": "der Wähler / die Wählerin; Plural: die Wähler / die Wählerinnen",
@@ -59266,7 +59266,7 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "img": "/cards/waehler.png"
+        "img": "/cards/waehler.webp"
       },
       {
         "de": "die Partei, -en",
@@ -59280,7 +59280,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Parteien",
-        "img": "/cards/partei.png"
+        "img": "/cards/partei.webp"
       },
       {
         "de": "die Regierung, -en",
@@ -59294,7 +59294,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Regierungen",
-        "img": "/cards/regierung.png"
+        "img": "/cards/regierung.webp"
       },
       {
         "de": "die Gesetzgebung",
@@ -59309,7 +59309,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "img": "/cards/gesetzgebung.png"
+        "img": "/cards/gesetzgebung.webp"
       },
       {
         "de": "die Ländervertretung",
@@ -59324,7 +59324,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "img": "/cards/laendervertretung.png"
+        "img": "/cards/laendervertretung.webp"
       },
       {
         "de": "der Verfassungsstaat",
@@ -59339,7 +59339,7 @@
         "pos": "Nomen",
         "article": "der",
         "farbe": "BLAU",
-        "img": "/cards/verfassungsstaat.png"
+        "img": "/cards/verfassungsstaat.webp"
       },
       {
         "de": "der Bundeskanzler / die Bundeskanzlerin",
@@ -59352,7 +59352,7 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "img": "/cards/bundeskanzler.png"
+        "img": "/cards/bundeskanzler.webp"
       },
       {
         "de": "der Bundespräsident / die Bundespräsidentin; Plural: die Bundespräsidenten / die Bundespräsidentinnen",
@@ -59365,7 +59365,7 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "img": "/cards/bundespraesident.png"
+        "img": "/cards/bundespraesident.webp"
       },
       {
         "de": "die Koalition, -en",
@@ -59379,7 +59379,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Koalitionen",
-        "img": "/cards/koalition.png"
+        "img": "/cards/koalition.webp"
       },
       {
         "de": "die Opposition",
@@ -59392,7 +59392,7 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "img": "/cards/opposition.png"
+        "img": "/cards/opposition.webp"
       },
       {
         "de": "die Wahlbeteiligung",
@@ -59407,7 +59407,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "img": "/cards/wahlbeteiligung.png"
+        "img": "/cards/wahlbeteiligung.webp"
       },
       {
         "de": "die politische Teilhabe",
@@ -59422,7 +59422,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "img": "/cards/demonstration.png"
+        "img": "/cards/demonstration.webp"
       },
       {
         "de": "die Medienaufsicht",
@@ -59437,7 +59437,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "img": "/cards/volksentscheid.png"
+        "img": "/cards/volksentscheid.webp"
       },
       {
         "de": "das Gesetz, -e",
@@ -59451,7 +59451,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Gesetze",
-        "img": "/cards/gesetz.png"
+        "img": "/cards/gesetz.webp"
       },
       {
         "de": "der Beschluss, -schlüsse",
@@ -59465,7 +59465,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Beschlüsse",
-        "img": "/cards/beschluss.png"
+        "img": "/cards/beschluss.webp"
       },
       {
         "de": "die Abstimmung, -en",
@@ -59479,7 +59479,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Abstimmungen",
-        "img": "/cards/abstimmung.png"
+        "img": "/cards/abstimmung.webp"
       },
       {
         "de": "die Mehrheit, -en",
@@ -59493,7 +59493,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Mehrheiten",
-        "img": "/cards/mehrheit.png"
+        "img": "/cards/mehrheit.webp"
       },
       {
         "de": "die Minderheit, -en",
@@ -59507,7 +59507,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Minderheiten",
-        "img": "/cards/minderheit.png"
+        "img": "/cards/minderheit.webp"
       },
       {
         "de": "das Mitglied, -er",
@@ -59521,7 +59521,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Mitglieder",
-        "img": "/cards/mitglied.png"
+        "img": "/cards/mitglied.webp"
       },
       {
         "de": "der Abgeordnete / die Abgeordnete; Plural: die Abgeordneten",
@@ -59534,7 +59534,7 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "img": "/cards/abgeordneter.png"
+        "img": "/cards/abgeordneter.webp"
       },
       {
         "de": "die Verfassung, -en",
@@ -59548,7 +59548,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Verfassungen",
-        "img": "/cards/verfassung.png"
+        "img": "/cards/verfassung.webp"
       },
       {
         "de": "die Sozialversicherung, -en",
@@ -59562,7 +59562,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Sozialversicherungen",
-        "img": "/cards/sozialversicherung.png"
+        "img": "/cards/sozialversicherung.webp"
       },
       {
         "de": "der Sozialstaat, die Sozialstaaten",
@@ -59575,7 +59575,7 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "img": "/cards/sozialstaat.png"
+        "img": "/cards/sozialstaat.webp"
       },
       {
         "de": "der Welthandel",
@@ -59590,7 +59590,7 @@
         "pos": "Nomen",
         "article": "der",
         "farbe": "BLAU",
-        "img": "/cards/welthandel.png"
+        "img": "/cards/welthandel.webp"
       },
       {
         "de": "die EU (Europäische Union)",
@@ -59603,7 +59603,7 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "img": "/cards/eu.png"
+        "img": "/cards/eu.webp"
       },
       {
         "de": "die Zukunftsfähigkeit",
@@ -59618,7 +59618,7 @@
         "pos": "Nomen",
         "article": "die",
         "farbe": "ROT",
-        "img": "/cards/zukunftsfaehigkeit.png"
+        "img": "/cards/zukunftsfaehigkeit.webp"
       },
       {
         "de": "der Protest, -e",
@@ -59632,7 +59632,7 @@
         ],
         "pos": "Nomen",
         "plural": "die Proteste",
-        "img": "/cards/protest.png"
+        "img": "/cards/protest.webp"
       },
       {
         "de": "die Demonstration, -en",
