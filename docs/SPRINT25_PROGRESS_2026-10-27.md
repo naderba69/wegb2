@@ -7,7 +7,7 @@
 
 ### ① القواعد — 10 تمارين إنتاج جديدة (610→676)
 - **قبل:** 67 فكرة `umformung` (إنتاج لا حفظ) — كلها P2 — GGP 150 يطلب إنتاجاً B2
-- **بعد:** 66 مُغلقة → **1 متبقية** — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
+- **بعد:** 66 مُغلقة → **1 متبقية** + ثقافة 30/71 — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
 - **التمارين (10):**
   1. `a1-modalverben:a1-sh-um1` — Frage: *Du bist Lehrer → Bist du Lehrer?* (Inversion/V2)
   2. `a1-dativ:a1-akk-um1` — Topikalisierung: *Den Hund sieht der Mann* (Kasus-AKK)
@@ -83,3 +83,10 @@
 ### الدفعة الخامسة — إغلاق القواعد (10 جديدة → 66/67)
 - تبقى فكرة واحدة فقط (P2) — كل 87 درس الآن 2+ إنتاج (K62b)
 - تمارين: 676 (199 umformung) — smoke 1916/0
+
+### الدفعة الثقافية الكبرى (30 حوارات — بالتوازي)
+- 83 حوارات بلا cultural_note → الآن 123/176 (30 أضيف)
+- أمثلة: Pünktlichkeit, Mülltrennung, Hausordnung, Anmeldung 14 Tage, Fiktionsbescheinigung, Pfand, Deutschlandticket, Kita, Schufa, AU elektronisch, Betriebsrat — كلها BAMF Lebenswelt I-VI
+- منهج: كل ملاحظة ثقافية = قاعدة + سلوك + مرجع (Meldegesetz, AufenthG)
+- بوابة: smoke 1916/0 (لا كسر)
+- المتبقي ثقافة: 71→41
