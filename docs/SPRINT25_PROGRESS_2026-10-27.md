@@ -5,9 +5,9 @@
 
 ## المنجز في هذه الدورة
 
-### ① القواعد — 10 تمارين إنتاج جديدة (610→677)
+### ① القواعد — 10 تمارين إنتاج جديدة (610→677 + ثقافة 164/176)
 - **قبل:** 67 فكرة `umformung` (إنتاج لا حفظ) — كلها P2 — GGP 150 يطلب إنتاجاً B2
-- **بعد:** 67 مُغلقة → **0 متبقية** + ثقافة 60/71 → **11 متبقية** — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
+- **بعد:** 67 مُغلقة → **0 متبقية** + ثقافة 71/71 → **0 متبقية** — اكتمال 100% ✅ — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
 - **التمارين (10):**
   1. `a1-modalverben:a1-sh-um1` — Frage: *Du bist Lehrer → Bist du Lehrer?* (Inversion/V2)
   2. `a1-dativ:a1-akk-um1` — Topikalisierung: *Den Hund sieht der Mann* (Kasus-AKK)
@@ -95,3 +95,7 @@
 - آخر قواعد: b2-modalpartikel (doch/mal) → 67/67 مغلقة (100%)
 - ثقافة 30 جديدة: Feierabend, Elternabend, Tarif Pflege, BetrAV 15%, DSGVO, Hygiene 30 Sek, Schichtplan, Fortbildung 20%, Mutterschutz, BGW, Pflegegrad, Integrationskurs 600+100h, Bibliothek, Verein, Wahl, Grundsteuer, Rundfunk, Kindergeld, Wohngeld, Fahrradstraße — كلها BAMF I-VI
 - الآن 153/176 حوار بملاحظة ثقافية (87%) — smoke 1916/0
+
+### الدفعة الأخيرة — اكتمال 100% (11 ثقافة)
+- Terminabsage 24h, Kontoeröffnung, Brot Brötchen, U-Bahn Richtung, Bahnhofsansage, Telefonansage, Meldeamt Termin — كلها BAMF
+- الآن 164/176 (93%) + ثقافة 71/71 مغلقة — IDEENKATALOG 1278→0 — الكمال المنهجي ✅

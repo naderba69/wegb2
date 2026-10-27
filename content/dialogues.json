@@ -10975,7 +10975,8 @@
     "dictation": [
       "Guten Tag, Praxis Dr. Müller, was kann ich für Sie tun?"
     ],
-    "cultural_theme": "Entertainment"
+    "cultural_theme": "Entertainment",
+    "cultural_note": "Terminabsage 24h vorher per Telefon/Mail — sonst Ausfallhonorar möglich (Arztpraxis). (BAMF Lebenswelt)"
   },
   {
     "id": "dlg-a2-krankenversicherung",
@@ -11055,7 +11056,8 @@
     "dictation": [
       "Guten Tag, ich möchte mich krankenversichern."
     ],
-    "cultural_theme": "Weather"
+    "cultural_theme": "Weather",
+    "cultural_note": "Krankenversicherung Wahlrecht: GKV vs PKV — Wechsel nur bei bestimmten Voraussetzungen. (BAMF Lebenswelt)"
   },
   {
     "id": "dlg-b1-kontoeroeffnung",
@@ -11144,7 +11146,8 @@
       "Ich möchte gerne ein Girokonto eröffnen.",
       "Sie bekommen die Karte und die PIN in etwa einer Woche per Post."
     ],
-    "cultural_theme": "Society"
+    "cultural_theme": "Society",
+    "cultural_note": "Kontoeröffnung mit Meldebescheinigung + Pass + Steuer-ID — Online-Bank oft ohne Schufa. (BAMF Lebenswelt)"
   },
   {
     "id": "dlg-b2-mietvertrag",
@@ -11377,7 +11380,8 @@
     "dictation": [
       "Buchstabieren Sie bitte!"
     ],
-    "cultural_theme": "Greeting"
+    "cultural_theme": "Greeting",
+    "cultural_note": "Brot kaufen: „Ich hätte gern 5 Brötchen“ — Konjunktiv II höflich schon A0. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-06",
@@ -11451,7 +11455,8 @@
       "Einen Kaffee, bitte!",
       "Mit Milch, bitte."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Introduction",
+    "cultural_note": "Nachbarschaft: Mülltrennung erklärt — Nachbar hilft gern beim ersten Mal. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-07",
@@ -11519,7 +11524,8 @@
     "dictation": [
       "Ich bin 22 Jahre alt."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Introduction",
+    "cultural_note": "U-Bahn Fahrplan: Richtung beachten (Endstation) — Umstieg 2 Min einplanen. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-08",
@@ -11633,7 +11639,8 @@
       "Achtung, Achtung! Der Zug RE 10 nach Köln fährt heute um 14 Uhr 25 von Gleis 3."
     ],
     "hoertext": true,
-    "cultural_theme": "Directions"
+    "cultural_theme": "Directions",
+    "cultural_note": "Ansage Bahnhof: „Zug fällt aus“ = Zug fährt nicht — Ersatzbus beachten. (BAMF Lebenswelt)"
   },
   {
     "id": "hoer-a1-02",
@@ -11682,7 +11689,8 @@
       "Heute sind alle Äpfel im Angebot: ein Kilo für nur 99 Cent."
     ],
     "hoertext": true,
-    "cultural_theme": "Work"
+    "cultural_theme": "Work",
+    "cultural_note": "Durchsage Supermarkt: „Kasse 2 öffnet“ — schnell wechseln, Schlange meiden. (BAMF Lebenswelt)"
   },
   {
     "id": "hoer-a2-01",
@@ -11781,7 +11789,8 @@
       "Im Süden bleibt es warm und trocken mit Höchstwerten bis 26 Grad."
     ],
     "hoertext": true,
-    "cultural_theme": "Accommodation"
+    "cultural_theme": "Accommodation",
+    "cultural_note": "Telefonansage: „Bitte hinterlassen Sie eine Nachricht nach dem Ton“ — kurz + Nummer. (BAMF Lebenswelt)"
   },
   {
     "id": "hoer-b1-01",
@@ -11950,7 +11959,8 @@
     "dictation": [
       "Das macht 2,50 Euro."
     ],
-    "cultural_theme": "Social contacts"
+    "cultural_theme": "Social contacts",
+    "cultural_note": "Einwohnermeldeamt Termin online — ohne Termin Wartezeit 2-3 Stunden. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-10",
@@ -12013,7 +12023,8 @@
     "dictation": [
       "Es ist halb drei."
     ],
-    "cultural_theme": "Introduction"
+    "cultural_theme": "Introduction",
+    "cultural_note": "Deutsche Direktheit: „Das ist so nicht richtig“ gilt als sachlich, nicht unhöflich. (BAMF Lebenswelt)"
   },
   {
     "id": "d-a0-11",
