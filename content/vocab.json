@@ -1282,7 +1282,8 @@
         ],
         "ant": [
           "gestorben"
-        ]
+        ],
+        "img": "/cards/geboren--012.webp"
       },
       {
         "id": "r311a1-013",
@@ -1297,7 +1298,8 @@
         ],
         "ant": [
           "geboren"
-        ]
+        ],
+        "img": "/cards/gestorben--013.webp"
       },
       {
         "id": "r311a1-014",
@@ -1312,7 +1314,8 @@
         ],
         "ant": [
           "lebendig"
-        ]
+        ],
+        "img": "/cards/tot--014.webp"
       },
       {
         "id": "r311a1-015",
@@ -1327,7 +1330,8 @@
         "tags": [
           "familie"
         ],
-        "plural": "die Partnerinnen"
+        "plural": "die Partnerinnen",
+        "img": "/cards/diepartnerin--015.webp"
       },
       {
         "id": "r311a1-016",
@@ -1342,7 +1346,8 @@
         "tags": [
           "familie"
         ],
-        "plural": "die Kindergärten"
+        "plural": "die Kindergärten",
+        "img": "/cards/derkindergarten--016.webp"
       },
       {
         "id": "r311a1-017",
@@ -1356,7 +1361,8 @@
         "level": "A1",
         "tags": [
           "familie"
-        ]
+        ],
+        "img": "/cards/dererwachsene--017.webp"
       }
     ]
   },
@@ -4001,7 +4007,8 @@
         "aussprache": "ei = «آي» لا «إي» · sch = «ش»",
         "exampleDe": "Nach der Scheidung teilen sie sich weiterhin die Betreuung.",
         "exampleAr": "بعد الطل…",
-        "plural": "die Scheidungen"
+        "plural": "die Scheidungen",
+        "img": "/cards/diescheidung-v195.webp"
       },
       {
         "id": "v196",
@@ -4082,7 +4089,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Das Missverständnis entstand, weil die Mail keinen Betreff hatte.",
         "exampleAr": "سوء الفه…",
-        "plural": "die Missverständnisse"
+        "plural": "die Missverständnisse",
+        "img": "/cards/dasmissverständnis-v200.webp"
       },
       {
         "id": "v201",
@@ -4111,7 +4119,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Zu viel Nähe kann in einer WG genauso stören wie zu wenig.",
-        "exampleAr": "القرب ال…"
+        "exampleAr": "القرب ال…",
+        "img": "/cards/dienähe-v202.webp"
       },
       {
         "id": "v203",
@@ -4158,7 +4167,8 @@
         "aussprache": "ei = «آي» لا «إي» · z = «تس»",
         "exampleDe": "Seine Zuneigung zeigt er nicht in Worten, sondern in Taten.",
         "exampleAr": "مودّته ل…",
-        "plural": "die Zuneigungen"
+        "plural": "die Zuneigungen",
+        "img": "/cards/diezuneigung-v205.webp"
       },
       {
         "id": "v206",
@@ -4220,7 +4230,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Wer beim Zählerstand betrügt, riskiert die Kündigung des Vertrags.",
         "exampleAr": "من يخدع…",
-        "posInfo": "betrügt, betrog, hat betrogen"
+        "posInfo": "betrügt, betrog, hat betrogen",
+        "img": "/cards/betrügen-v209.webp"
       },
       {
         "id": "v210",
@@ -4235,7 +4246,8 @@
         "farbe": "BLAU",
         "aussprache": "v = «ف»",
         "exampleDe": "Für ihn war die Weitergabe des Geheimnisses ein Verrat.",
-        "exampleAr": "بالنسبة…"
+        "exampleAr": "بالنسبة…",
+        "img": "/cards/derverrat-v210.webp"
       },
       {
         "id": "v211",
@@ -4266,7 +4278,8 @@
         "aussprache": "eu/äu = «أوي» · sch = «ش»",
         "exampleDe": "Ich will dich nicht enttäuschen, aber der Termin ist unrealistisch.",
         "exampleAr": "لا أريد…",
-        "posInfo": "enttäuscht, enttäuschte, hat enttäuscht"
+        "posInfo": "enttäuscht, enttäuschte, hat enttäuscht",
+        "img": "/cards/enttäuschen-v212.webp"
       },
       {
         "id": "v213",
@@ -4282,7 +4295,8 @@
         "aussprache": "eu/äu = «أوي» · sch = «ش»",
         "exampleDe": "Die Enttäuschung über die Absage hielt nur einen Tag.",
         "exampleAr": "خيبة الأ…",
-        "plural": "die Enttäuschungen"
+        "plural": "die Enttäuschungen",
+        "img": "/cards/dieenttäuschung-v213.webp"
       },
       {
         "id": "v214",
@@ -4311,7 +4325,8 @@
         "farbe": "BLAU",
         "aussprache": "ei = «آي» لا «إي»",
         "exampleDe": "Neid entsteht oft dort, wo man nur die Fassade des anderen sieht.",
-        "exampleAr": "الحسد ين…"
+        "exampleAr": "الحسد ين…",
+        "img": "/cards/derneid-v215.webp"
       },
       {
         "id": "v216",
@@ -4325,7 +4340,8 @@
         "aussprache": "ö = بينَ الضمّةِ والكسرة",
         "exampleDe": "Ich gönne ihr die Beförderung, sie hat jahrelang dafür gearbeitet.",
         "exampleAr": "أتمنّى ل…",
-        "posInfo": "gönnt, gönnte, hat gegönnt"
+        "posInfo": "gönnt, gönnte, hat gegönnt",
+        "img": "/cards/gönnen-v216.webp"
       },
       {
         "id": "v217",
@@ -4490,7 +4506,8 @@
         "farbe": "ROT",
         "exampleDe": "Die Praxis öffnet um acht, ich war um zehn nach acht da.",
         "exampleAr": "العيادة…",
-        "plural": "die Praxen"
+        "plural": "die Praxen",
+        "img": "/cards/diepraxis-v228.webp"
       },
       {
         "id": "v229",
@@ -4505,7 +4522,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Die Post ist gegenüber vom Krankenhaus.",
         "exampleAr": "البريد م…",
-        "plural": "die Krankenhäuser"
+        "plural": "die Krankenhäuser",
+        "img": "/cards/daskrankenhaus-v229.webp"
       },
       {
         "id": "v230",
@@ -4520,7 +4538,8 @@
         "farbe": "ROT",
         "exampleDe": "In der Apotheke neben der Praxis kaufe ich die Tabletten.",
         "exampleAr": "أشتري ال…",
-        "plural": "die Apotheken"
+        "plural": "die Apotheken",
+        "img": "/cards/dieapotheke-v230.webp"
       },
       {
         "id": "v231",
@@ -4536,7 +4555,8 @@
         "aussprache": "z = «تس»",
         "exampleDe": "Der Arzt schreibt ein Rezept für ein Fiebermittel.",
         "exampleAr": "الطبيب ي…",
-        "plural": "die Rezepte"
+        "plural": "die Rezepte",
+        "img": "/cards/dasrezept-v231.webp"
       },
       {
         "id": "v232",
@@ -4551,7 +4571,8 @@
         "farbe": "ROT",
         "exampleDe": "Nehmen Sie eine Tablette morgens und eine abends.",
         "exampleAr": "تناول قر…",
-        "plural": "die Tabletten"
+        "plural": "die Tabletten",
+        "img": "/cards/dietablette-v232.webp"
       },
       {
         "id": "v233",
@@ -4567,7 +4588,8 @@
         "aussprache": "sch = «ش» · z = «تس»",
         "exampleDe": "Der Schmerz im Knie ist nach dem Laufen schlimmer.",
         "exampleAr": "ألم الرك…",
-        "plural": "die Schmerzen"
+        "plural": "die Schmerzen",
+        "img": "/cards/derschmerz-v233.webp"
       },
       {
         "id": "v234",
@@ -4582,7 +4604,8 @@
         "farbe": "GRÜN",
         "aussprache": "ie = «إي» ممدودة · -er في الآخر = «أَ» خفيفة",
         "exampleDe": "Bei Fieber ist Sport gefährlich, warten Sie, bis Sie gesund sind.",
-        "exampleAr": "مع الحمّ…"
+        "exampleAr": "مع الحمّ…",
+        "img": "/cards/dasfieber-v234.webp"
       },
       {
         "id": "v235",
@@ -4596,7 +4619,8 @@
         "aussprache": "ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Er fühlt sich heute viel besser nach dem Schlaf.",
         "exampleAr": "يشعر بتحسن كبير اليوم بعد النوم.",
-        "posInfo": "fühlt sich, fühlte sich, hat sich gefühlt"
+        "posInfo": "fühlt sich, fühlte sich, hat sich gefühlt",
+        "img": "/cards/sichfühlen-v235.webp"
       },
       {
         "id": "v236",
@@ -4654,7 +4678,8 @@
         ],
         "exampleDe": "Diese Ärztin behandelt vor allem Kinder.",
         "exampleAr": "هذه الطب…",
-        "posInfo": "behandelt, behandelte, hat behandelt"
+        "posInfo": "behandelt, behandelte, hat behandelt",
+        "img": "/cards/behandeln-v239.webp"
       },
       {
         "id": "v241",
@@ -4683,7 +4708,8 @@
         "farbe": "ROT",
         "exampleDe": "Die Operation dauerte zwei Stunden und verlief gut.",
         "exampleAr": "العملية…",
-        "plural": "die Operationen"
+        "plural": "die Operationen",
+        "img": "/cards/dieoperation-v242.webp"
       },
       {
         "id": "v243",
@@ -4740,7 +4766,8 @@
         ],
         "exampleDe": "Ich muss mich heute krankmelden, ich habe starke Kopfschmerzen.",
         "exampleAr": "يجب أن أ…",
-        "posInfo": "meldet sich krank, meldete sich krank, hat sich krankgemeldet"
+        "posInfo": "meldet sich krank, meldete sich krank, hat sich krankgemeldet",
+        "img": "/cards/sichkrankmelden-v246.webp"
       },
       {
         "id": "v248",
@@ -4756,7 +4783,8 @@
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · v = «ف»",
         "exampleDe": "Welche Versicherung zahlt den Wasserschaden, Hausrat oder Vermieter?",
         "exampleAr": "أي تأمين…",
-        "plural": "die Versicherungen"
+        "plural": "die Versicherungen",
+        "img": "/cards/dieversicherung-v248.webp"
       },
       {
         "id": "v249",
@@ -4801,7 +4829,8 @@
         "farbe": "BLAU",
         "aussprache": "sp/st في البداية = «شب/شت»",
         "exampleDe": "Vor der Prüfung hatte ich viel Stress und wenig Schlaf.",
-        "exampleAr": "قبل الام…"
+        "exampleAr": "قبل الام…",
+        "img": "/cards/derstress-v251.webp"
       },
       {
         "id": "v252",
@@ -4816,7 +4845,8 @@
         "exampleAr": "بعد عشر…",
         "ant": [
           "entspannt"
-        ]
+        ],
+        "img": "/cards/gestresst-v252.webp"
       },
       {
         "id": "v253",
@@ -4939,7 +4969,8 @@
         "aussprache": "ei = «آي» لا «إي» · z = «تس»",
         "exampleDe": "Meine Arbeitszeit ist von acht bis siebzehn Uhr.",
         "exampleAr": "ساعات عم…",
-        "plural": "die Arbeitszeiten"
+        "plural": "die Arbeitszeiten",
+        "img": "/cards/diearbeitszeit-v260.webp"
       },
       {
         "id": "v261",
@@ -12538,7 +12569,8 @@
         "farbe": "ROT",
         "exampleDe": "Auf der Einkaufsliste stehen Brot, Milch, Eier und Käse.",
         "exampleAr": "في قائمة التسوق خب…",
-        "plural": "die Einkaufslisten"
+        "plural": "die Einkaufslisten",
+        "img": "/cards/dieeinkaufsliste-v682.webp"
       },
       {
         "id": "v683",
@@ -12553,7 +12585,8 @@
         "farbe": "BLAU",
         "exampleDe": "Der Einkauf für die Woche kostet etwa fünfzig Euro.",
         "exampleAr": "تسوّق الأسبوع يكلّ…",
-        "plural": "die Einkäufe"
+        "plural": "die Einkäufe",
+        "img": "/cards/dereinkauf-v683.webp"
       },
       {
         "id": "v684",
@@ -12584,7 +12617,8 @@
         "farbe": "ROT",
         "exampleDe": "Das Brot aus der Bäckerei hat eine bessere Qualität.",
         "exampleAr": "خبز المخبز جودته أ…",
-        "plural": "die Systeme"
+        "plural": "die Systeme",
+        "img": "/cards/diequalität-v685.webp"
       },
       {
         "id": "v686",
@@ -13196,7 +13230,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Ich habe das Ticket online gekauft, es ist auf dem Handy.",
         "exampleAr": "اشتريت التذكرة عبر…",
-        "plural": "die Entwürfe"
+        "plural": "die Entwürfe",
+        "img": "/cards/dasticket-v725.webp"
       },
       {
         "id": "v726",
@@ -13239,7 +13274,8 @@
         "aussprache": "v = «ف»",
         "exampleDe": "Entschuldigung, ich habe mich verspätet, der Bus kam nicht.",
         "exampleAr": "عذراً، تأخّرت، فال…",
-        "posInfo": "verspätet sich, verspätete sich, hat sich verspätet"
+        "posInfo": "verspätet sich, verspätete sich, hat sich verspätet",
+        "img": "/cards/sichverspäten-v728.webp"
       },
       {
         "id": "v729",
@@ -13286,7 +13322,8 @@
         "farbe": "ROT",
         "exampleDe": "Wegen der Baustelle ist die Straße bis Freitag gesperrt.",
         "exampleAr": "بسبب ورشة الطريق ا…",
-        "plural": "die Baustellen"
+        "plural": "die Baustellen",
+        "img": "/cards/diebaustelle-v731.webp"
       },
       {
         "id": "v732",
@@ -13348,7 +13385,8 @@
         "farbe": "ROT",
         "exampleDe": "Gehen Sie geradeaus bis zur Ampel, dann rechts.",
         "exampleAr": "امشِ مستقيماً حتى…",
-        "plural": "die Projekte"
+        "plural": "die Projekte",
+        "img": "/cards/dieampel-v735.webp"
       },
       {
         "id": "v736",
@@ -13730,7 +13768,8 @@
         "aussprache": "ei = «آي» لا «إي» · sch = «ش» · ü = ضمّةٌ بشفتَينِ مستديرتَين",
         "exampleDe": "Ich mache gerade den Führerschein, nächste Woche ist die Prüfung.",
         "exampleAr": "أنا أحضّر رخصة الس…",
-        "plural": "die Faktoren"
+        "plural": "die Faktoren",
+        "img": "/cards/derführerschein-v760.webp"
       },
       {
         "id": "v761",
@@ -13792,7 +13831,8 @@
         "farbe": "BLAU",
         "exampleDe": "Mein Onkel hat mich am Flughafen in Frankfurt abgeholt.",
         "exampleAr": "عمّي أخذني من مطار…",
-        "plural": "die Flughäfen"
+        "plural": "die Flughäfen",
+        "img": "/cards/derflughafen-v764.webp"
       },
       {
         "id": "v765",
@@ -14062,7 +14102,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Für die Anmeldung müssen Sie zum Amt gehen.",
         "exampleAr": "للتسجيل يجب أن تذه…",
-        "plural": "die Ämter"
+        "plural": "die Ämter",
+        "img": "/cards/dasamt-v781.webp"
       },
       {
         "id": "v782",
@@ -14684,7 +14725,8 @@
         "farbe": "GRÜN",
         "exampleDe": "Nach dem Urteil kam der Mann für zwei Jahre ins Gefängnis.",
         "exampleAr": "بعد الحكم دخل الرج…",
-        "plural": "die Gefängnisse"
+        "plural": "die Gefängnisse",
+        "img": "/cards/dasgefängnis-v822.webp"
       },
       {
         "id": "v823",
@@ -16513,7 +16555,8 @@
         ],
         "syn": [
           "glücklich"
-        ]
+        ],
+        "img": "/cards/froh-v936.webp"
       },
       {
         "id": "v937",
@@ -16529,7 +16572,8 @@
         "aussprache": "eu/äu = «أوي»",
         "exampleDe": "Die Kinder springen vor Freude, denn morgen sind Ferien.",
         "exampleAr": "الأطفال يقفزون من…",
-        "plural": "die Freuden"
+        "plural": "die Freuden",
+        "img": "/cards/diefreude-v937.webp"
       },
       {
         "id": "v938",
@@ -23733,7 +23777,8 @@
           "essen"
         ],
         "farbe": "GRÜN",
-        "plural": "die Brote"
+        "plural": "die Brote",
+        "img": "/cards/dasbrot--000.webp"
       },
       {
         "id": "vw-a1ess-006",
@@ -57908,7 +57953,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/nein--011.webp"
       },
       {
         "id": "a0-012",
@@ -57920,7 +57966,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/aua--012.webp"
       },
       {
         "id": "a0-013",
@@ -57932,7 +57979,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/igitt--013.webp"
       },
       {
         "id": "a0-014",
@@ -57944,7 +57992,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/pfui--014.webp"
       },
       {
         "id": "a0-015",
@@ -57956,7 +58005,8 @@
         "level": "A0",
         "tags": [
           "a0-start"
-        ]
+        ],
+        "img": "/cards/huch--015.webp"
       },
       {
         "id": "a0-016",
