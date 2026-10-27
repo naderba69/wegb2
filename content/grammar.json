@@ -7318,6 +7318,16 @@
           "kein Problem!"
         ],
         "explanationAr": "أداة النبرة doch للتأكيد الودي تأتي في منتصف الجملة (Mittelfeld)."
+      },
+      {
+        "id": "b2-modp-um2",
+        "type": "umformung",
+        "promptDe": "Forme Aussage mit Modalpartikel doch/mal/ja um.",
+        "promptAr": "أضف أداة نبرية لتخفيف الأمر.",
+        "quelleDe": "Komm her!",
+        "answer": "Komm doch mal her!",
+        "points": 2,
+        "explanationAr": "Modalpartikel B2: doch/mal/ja تلطف الأمر — Komm her! (حاد) → Komm doch mal her! (لطيف). فرق نبرة ثقافي."
       }
     ]
   },
