@@ -58292,7 +58292,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Experiment wurde unter Laborbedingungen durchgeführt.",
-        "exampleAr": "أُجريت التجربة في ظروف مخبرية."
+        "exampleAr": "أُجريت التجربة في ظروف مخبرية.",
+        "img": "/cards/experiment.png"
       },
       {
         "id": "v1437",
@@ -58307,7 +58308,8 @@
         ],
         "exampleDe": "Die Studie konnte die Wirkung noch nicht beweisen.",
         "exampleAr": "لم تستطع الدراسة إثبات التأثير بعد.",
-        "posInfo": "beweist, beweiste, hat beweist"
+        "posInfo": "beweist, beweiste, hat beweist",
+        "img": "/cards/beweisen.png"
       },
       {
         "id": "v1438",
@@ -58321,7 +58323,8 @@
         ],
         "exampleDe": "Die Ergebnisse untermauern die zentrale These der Studie.",
         "exampleAr": "تدعم الن…",
-        "posInfo": "mauet unter, mauete unter, hat untermauern"
+        "posInfo": "mauet unter, mauete unter, hat untermauern",
+        "img": "/cards/untermauern.png"
       },
       {
         "id": "v1439",
@@ -58335,7 +58338,8 @@
         ],
         "exampleDe": "Die Forschenden interpretieren die Ergebnisse vorsichtig.",
         "exampleAr": "يفسّر ال…",
-        "posInfo": "interpretiert, interpretierte, hat geinterpretiert"
+        "posInfo": "interpretiert, interpretierte, hat geinterpretiert",
+        "img": "/cards/interpretieren.png"
       },
       {
         "id": "v1440",
@@ -58351,7 +58355,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Ergebnis der Umfrage war überraschend.",
-        "exampleAr": "كانت نتيجة الاستطلاع مفاجئة."
+        "exampleAr": "كانت نتيجة الاستطلاع مفاجئة.",
+        "img": "/cards/ergebnis_b2.png"
       },
       {
         "id": "v1441",
