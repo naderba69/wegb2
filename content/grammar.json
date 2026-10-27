@@ -2269,6 +2269,16 @@
           "auf den Tisch."
         ],
         "explanationAr": "حركة وتغيير مكان (stellen + wohin) تستوجب حالة النصب Akkusativ: auf den Tisch."
+      },
+      {
+        "id": "a2-we2-um1",
+        "type": "umformung",
+        "promptDe": "Forme wo/wohin mit Wechselpräposition.",
+        "promptAr": "ميّز wo/wohin.",
+        "quelleDe": "Ich bin im Kino.",
+        "answer": "Ich gehe ins Kino.",
+        "points": 2,
+        "explanationAr": "im (in+dem) مكان → ins (in+das) اتجاه: wo vs wohin. تحويل حاسم B1."
       }
     ]
   },
@@ -2429,6 +2439,16 @@
         ],
         "explanationAr": "könnten أدبُ الطلب.",
         "points": 2
+      },
+      {
+        "id": "a2-mod-um1",
+        "type": "umformung",
+        "promptDe": "Forme Erlaubnis mit dürfen → können um.",
+        "promptAr": "حوّل الإذن.",
+        "quelleDe": "Darf ich hier rauchen?",
+        "answer": "Kann ich hier rauchen? (ugs. Erlaubnis)",
+        "points": 2,
+        "explanationAr": "dürfen (إذن رسمي) vs können (قدرة/إذن عامي). فرق تسجيلي B1."
       }
     ]
   },
@@ -2775,6 +2795,16 @@
         ],
         "explanationAr": "helfen + Dativ ← der (مؤنث داتيف).",
         "points": 2
+      },
+      {
+        "id": "b1-rel-um1",
+        "type": "umformung",
+        "promptDe": "Forme 2 Sätze → Relativsatz um.",
+        "promptAr": "ادمج جملتين بصلة.",
+        "quelleDe": "Das ist der Mann. Er wohnt nebenan.",
+        "answer": "Das ist der Mann, der nebenan wohnt.",
+        "points": 2,
+        "explanationAr": "Relativsatz: der/die/das حسب جنس الاسم + فعل في النهاية. فاصلة إجبارية."
       }
     ],
     "resources": [
@@ -2928,6 +2958,16 @@
         ],
         "explanationAr": "obwohl وtrotzdem لا يجتمعان.",
         "points": 2
+      },
+      {
+        "id": "b1-ko-um1",
+        "type": "umformung",
+        "promptDe": "Verbinde mit Konnektor deshalb/trotzdem.",
+        "promptAr": "اربط بسبب/رغم.",
+        "quelleDe": "Es regnet. Ich gehe spazieren.",
+        "answer": "Es regnet, trotzdem gehe ich spazieren.",
+        "points": 2,
+        "explanationAr": "trotzdem = Haupt­sat­z (فعل ثانٍ). فرق عن obwohl الجانبية — Contrast."
       }
     ],
     "resources": [
@@ -4002,6 +4042,16 @@
           "zu lernen."
         ],
         "explanationAr": "جملة المصدر الممتدة مع zu: تأتي zu مباشرة قبل الفعل المصدري في نهاية الجملة: zu lernen."
+      },
+      {
+        "id": "b2-inf-um1",
+        "type": "umformung",
+        "promptDe": "Forme dass-Satz → Infinitiv mit zu um.",
+        "promptAr": "حوّل جملة dass إلى مصدر.",
+        "quelleDe": "Ich hoffe, dass ich bald komme.",
+        "answer": "Ich hoffe, bald zu kommen.",
+        "points": 2,
+        "explanationAr": "dass + فاعل = zu+مصدر لنفس الفاعل: Ich hoffe zu kommen. اختصار مصدري B2."
       }
     ],
     "resources": [
@@ -4265,6 +4315,16 @@
           "beim Umzug."
         ],
         "explanationAr": "الفعل helfen يتطلب مجرور Dativ: dem Mann."
+      },
+      {
+        "id": "a2-da-um1",
+        "type": "umformung",
+        "promptDe": "Forme Akkusativ → Dativ mit geben um.",
+        "promptAr": "حوّل إلى حالة الجر مع الإعطاء.",
+        "quelleDe": "Ich sehe den Mann.",
+        "answer": "Ich gebe dem Mann das Buch.",
+        "points": 2,
+        "explanationAr": "geben يطلب Dativ للمستلم: dem Mann (جر) + Akk للمفعول. حالة مزدوجة B1."
       }
     ]
   },
@@ -4935,6 +4995,16 @@
           "auf das Wochenende."
         ],
         "explanationAr": "الضمير المنعكس (mich) يأتي مباشرة بعد الفعل في الجملة الرئيسية: Ich freue mich auf das Wochenende."
+      },
+      {
+        "id": "a2-re-um1",
+        "type": "umformung",
+        "promptDe": "Forme nicht-reflexiv → reflexiv (sich) um.",
+        "promptAr": "حوّل إلى فعل منعكس.",
+        "quelleDe": "Ich wasche das Kind.",
+        "answer": "Ich wasche mich.",
+        "points": 2,
+        "explanationAr": "waschen (متعد) vs sich waschen (منعكس: الفاعل هو المفعول). Akk: mich/dich/sich."
       }
     ]
   },
@@ -6252,6 +6322,16 @@
           "auf dem Schreibtisch."
         ],
         "explanationAr": "تركيب الكلمات Komposita مع موضع الفعل الثاني: Die Fahrkarte liegt auf dem Schreibtisch."
+      },
+      {
+        "id": "b1-wb-um1",
+        "type": "umformung",
+        "promptDe": "Bilde Ableitung mit -ung/-heit.",
+        "promptAr": "اشتق اسمًا من فعل.",
+        "quelleDe": "entscheiden (Verb)",
+        "answer": "die Entscheidung",
+        "points": 2,
+        "explanationAr": "اشتقاق B1: entscheiden → Entscheidung (-ung مؤنث). Wortbildung B2 أساس Nominalstil."
       }
     ],
     "resources": [
@@ -6480,6 +6560,16 @@
           "gesehen?"
         ],
         "explanationAr": "سؤال بالفعل (Ja/Nein-Frage): يبدأ الفعل في المركز الأول ويليه الضمير غير المحدد jemand."
+      },
+      {
+        "id": "b1-unb-um1",
+        "type": "umformung",
+        "promptDe": "Forme bestimmt → unbestimmt (Passiv-ähnlich) um.",
+        "promptAr": "حوّل من محدد إلى مبهم.",
+        "quelleDe": "Man sagt, dass es regnet.",
+        "answer": "Es heißt, dass es regnet.",
+        "points": 2,
+        "explanationAr": "Unpersönlich B1: man sagt → es heißt. نائب فاعل ضمني — تلميع أكاديمي."
       }
     ]
   },
@@ -7434,6 +7524,16 @@
         ],
         "explanationAr": "الحركة: Partizip II + sein.",
         "points": 2
+      },
+      {
+        "id": "b2-f2-um1",
+        "type": "umformung",
+        "promptDe": "Forme Perfekt → Futur II (Vermutung) um.",
+        "promptAr": "حوّل إلى مستقبل تام للظن.",
+        "quelleDe": "Er hat das sicher gemacht.",
+        "answer": "Er wird das sicher gemacht haben.",
+        "points": 2,
+        "explanationAr": "Futur II للظن: wird ... gemacht haben (ليس Futur زمني). B2 Vermutung vs Tatsache."
       }
     ]
   },

@@ -5,9 +5,9 @@
 
 ## المنجز في هذه الدورة
 
-### ① القواعد — 10 تمارين إنتاج جديدة (610→666)
+### ① القواعد — 10 تمارين إنتاج جديدة (610→676)
 - **قبل:** 67 فكرة `umformung` (إنتاج لا حفظ) — كلها P2 — GGP 150 يطلب إنتاجاً B2
-- **بعد:** 56 مُغلقة → **11 متبقية** — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
+- **بعد:** 66 مُغلقة → **1 متبقية** — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
 - **التمارين (10):**
   1. `a1-modalverben:a1-sh-um1` — Frage: *Du bist Lehrer → Bist du Lehrer?* (Inversion/V2)
   2. `a1-dativ:a1-akk-um1` — Topikalisierung: *Den Hund sieht der Mann* (Kasus-AKK)
@@ -43,7 +43,7 @@
 | المفردات 6202 | 0 | 0 | مغلقة 1140→0 (Sprint24) — posInfo 1164 |
 | النصوص/حوارات/كتابة | 71 | 71 | BAMF Lebenswelt |
 
-**الخلاصة:** `P0 0 P1 0` في 6727 وحدة — الإنتاج الفعّال الآن 620 تمرين (189 umformung×2pts). IDEENKATALOG 1278→1268 (10 أُغلقت).
+**الخلاصة:** `P0 0 P1 0` في 6727 وحدة — الإنتاج الفعّال الآن 620 تمرين (199 umformung×2pts). IDEENKATALOG 1278→1268 (10 أُغلقت).
 
 ## التالي (parallel_all)
 - [ ] الدفعة 2: 10 تمارين `a0-aussprache-vowels/umlaut` + `b2-futur-ii/b2-konzessiv` (Mayer صوت+صورة)
@@ -79,3 +79,7 @@
 - نقل 4 audited A1 → A2 لتجنب K162a/K163a
 - إصلاح عربي b2-rg-um1 → الآن كل exercise له تفسير عربي (K69a)
 - النتيجة: 666 تمرين (189 إنتاجي×2pts) — smoke 1916/0
+
+### الدفعة الخامسة — إغلاق القواعد (10 جديدة → 66/67)
+- تبقى فكرة واحدة فقط (P2) — كل 87 درس الآن 2+ إنتاج (K62b)
+- تمارين: 676 (199 umformung) — smoke 1916/0
