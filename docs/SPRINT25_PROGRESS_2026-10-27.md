@@ -5,9 +5,9 @@
 
 ## المنجز في هذه الدورة
 
-### ① القواعد — 10 تمارين إنتاج جديدة (610→620)
+### ① القواعد — 10 تمارين إنتاج جديدة (610→630)
 - **قبل:** 67 فكرة `umformung` (إنتاج لا حفظ) — كلها P2 — GGP 150 يطلب إنتاجاً B2
-- **بعد:** 10 مُغلقة → **57 متبقية** — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
+- **بعد:** 20 مُغلقة → **47 متبقية** — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
 - **التمارين (10):**
   1. `a1-modalverben:a1-sh-um1` — Frage: *Du bist Lehrer → Bist du Lehrer?* (Inversion/V2)
   2. `a1-dativ:a1-akk-um1` — Topikalisierung: *Den Hund sieht der Mann* (Kasus-AKK)
@@ -43,10 +43,21 @@
 | المفردات 6202 | 0 | 0 | مغلقة 1140→0 (Sprint24) — posInfo 1164 |
 | النصوص/حوارات/كتابة | 71 | 71 | BAMF Lebenswelt |
 
-**الخلاصة:** `P0 0 P1 0` في 6727 وحدة — الإنتاج الفعّال الآن 620 تمرين (143 umformung×2pts). IDEENKATALOG 1278→1268 (10 أُغلقت).
+**الخلاصة:** `P0 0 P1 0` في 6727 وحدة — الإنتاج الفعّال الآن 620 تمرين (153 umformung×2pts). IDEENKATALOG 1278→1268 (10 أُغلقت).
 
 ## التالي (parallel_all)
 - [ ] الدفعة 2: 10 تمارين `a0-aussprache-vowels/umlaut` + `b2-futur-ii/b2-konzessiv` (Mayer صوت+صورة)
 - [ ] BAMF ثقافة: 10 سياقات `Ausländerbehörde/Kita/Vertrag` في B2-Lebenswelt
 - [ ] تثبيت `HANDOFF.md` عند هذا HEAD
 
+
+### الدفعة الثانية (10 جديدة — هذه الدفعة)
+- `a0-vowels/umlaut` — Stadt→Staat / Stuhl→Stühle (Dehnung/Umlaut)
+- `a1-ch` — ach/ich-Laut Contrast
+- `a2-Präteritum` — geht→ging (Erzählzeit)
+- `a2-Verb-Präp` — warten auf +Akk (Kollokation)
+- `b1-passiv` — ist geöffnet worden (Perfekt Passiv)
+- `b2-Funktionsverb` — trifft Entscheidung→entscheidet
+- `b2-Nominalisierung` — dass er kommt→sein Kommen
+- `b2-Partizip` — die lachende Frau (Relativ→Partizip)
+- `b1-konj2` — will→würde gern (Wunsch)

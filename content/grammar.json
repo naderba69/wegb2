@@ -1664,6 +1664,16 @@
           "sagte"
         ],
         "explanationAr": "sagen فعل ضعيف = sagte، يُستعمل في الحكي أكثر من Perfekt."
+      },
+      {
+        "id": "a2-pr-um1",
+        "type": "umformung",
+        "promptDe": "Forme Präsens → Präteritum (erzählen).",
+        "promptAr": "حوّل المضارع إلى ماضٍ قصصي.",
+        "quelleDe": "Er geht jeden Tag spazieren.",
+        "answer": "Er ging jeden Tag spazieren.",
+        "points": 2,
+        "explanationAr": "Präteritum للسرد المكتوب B1: gehen → ging. Perfekt للمحادثة، Präteritum للقصة — توزيع GGP."
       }
     ]
   },
@@ -2579,6 +2589,16 @@
           "reisen."
         ],
         "explanationAr": "صيغة التمني Konjunktiv II: würden في المركز الثاني والمصدر reisen في آخر الجملة."
+      },
+      {
+        "id": "b1-k2-um1",
+        "type": "umformung",
+        "promptDe": "Forme Wunsch mit Konjunktiv II (würde).",
+        "promptAr": "حوّل الرغبة إلى صيغة تخيلية.",
+        "quelleDe": "Ich will in die Ferien fahren.",
+        "answer": "Ich würde gern in die Ferien fahren.",
+        "points": 2,
+        "explanationAr": "Konjunktiv II للرغبة المهذبة B1: will → würde gern. فرق نبرة: طلب مباشر vs تخيل مهذب."
       }
     ],
     "resources": [
@@ -3779,6 +3799,16 @@
           "treffen."
         ],
         "explanationAr": "التركيب الفعلي Funktionsverbgefüge: eine Entscheidung treffen مع الفعل المساعد müssen."
+      },
+      {
+        "id": "b2-fv-um1",
+        "type": "umformung",
+        "promptDe": "Forme Funktionsverbgefüge → einfaches Verb um.",
+        "promptAr": "بسّط التعبير الاصطلاحي إلى فعل بسيط.",
+        "quelleDe": "Er trifft eine Entscheidung.",
+        "answer": "Er entscheidet.",
+        "points": 2,
+        "explanationAr": "Funktionsverbgefüge B2: eine Entscheidung treffen → entscheiden. Nominalstil vs Verbalstil — الأكاديمي يفضل البسيط."
       }
     ],
     "resources": [
@@ -6831,6 +6861,16 @@
           "renoviert."
         ],
         "explanationAr": "مشبك المبني للمجهول Passiv: werden في المركز الثاني واسم المفعول renoviert في نهاية الجملة."
+      },
+      {
+        "id": "b1-ps-um1",
+        "type": "umformung",
+        "promptDe": "Forme Aktiv → Passiv Perfekt um.",
+        "promptAr": "حوّل إلى مبني للمجهول تام.",
+        "quelleDe": "Man hat das Fenster geöffnet.",
+        "answer": "Das Fenster ist geöffnet worden.",
+        "points": 2,
+        "explanationAr": "Passiv Perfekt: ist ... worden (ليس geworden). خطأ شائع B1: الخلط بين Aktiv werden و Passiv worden."
       }
     ]
   },
@@ -11313,6 +11353,16 @@
         ],
         "explanationAr": "الجملة الصحيحة: Ich warte auf den Bus.",
         "promptAr": "اربط الجملتين باستخدام warten auf."
+      },
+      {
+        "id": "a2-vp-um1",
+        "type": "umformung",
+        "promptDe": "Ergänze korrekte Präposition + Kasus.",
+        "promptAr": "أكمل الحرف والجارّ المناسب.",
+        "quelleDe": "Ich warte ___ den Bus (Akkusativ).",
+        "answer": "Ich warte auf den Bus.",
+        "points": 2,
+        "explanationAr": "حروف الجر الفعلية: warten auf + Akk (يُحفظ ككتلة). GGP Kollokation — لا قواعد عامة، بل حفظ collocation."
       }
     ],
     "pitfalls": [
@@ -11690,6 +11740,16 @@
         "answer": "Das gestern gelesene Buch war interessant.",
         "hint": "Partizip II كصفة مع نهايتها بعد das",
         "explanationAr": "Partizip II (gelesen) كصفة قبل الاسم: نهايته -e بعد das."
+      },
+      {
+        "id": "b2-ap-um1",
+        "type": "umformung",
+        "promptDe": "Forme Relativsatz → Partizipialattribut um.",
+        "promptAr": "حوّل الصلة إلى صفة مشاركة.",
+        "quelleDe": "Die Frau, die lacht, ist glücklich.",
+        "answer": "Die lachende Frau ist glücklich.",
+        "points": 2,
+        "explanationAr": "Relativsatz → Partizip I كصفة: die lacht → lachende. اختصار B2 — كثافة معلومات أعلى."
       }
     ]
   },
@@ -14364,6 +14424,16 @@
         "explanationAr": "o→schon (قصير) vs ö→schön (طويل ومُمال). Umlaut يغيّر المعنى تماماً.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a0-av-um2",
+        "type": "umformung",
+        "promptDe": "Schreibe mit langem Vokal (Dehnung).",
+        "promptAr": "اكتب بنفس طويل — غيّر الكتابة.",
+        "quelleDe": "Der Herr wohnt in der Stat (kurzes a).",
+        "answer": "Der Herr wohnt im Staat (langes a: aa).",
+        "points": 2,
+        "explanationAr": "الفرق الصوتي يغيّر المعنى: Stadt (قصير: مدينة) vs Staat (طويل aa: دولة). Mayer: صوت+صورة يثبت التمييز."
       }
     ],
     "pitfalls": [
@@ -14548,6 +14618,16 @@
         "explanationAr": "Mutter→Mütter: Umlaut في الجمع. ä/ö/ü ليست زخرفة بل صرف.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a0-au-um1",
+        "type": "umformung",
+        "promptDe": "Bilde Plural mit Umlaut.",
+        "promptAr": "حوّل إلى الجمع مع تغير صوتي.",
+        "quelleDe": "der Stuhl (Singular)",
+        "answer": "die Stühle",
+        "points": 2,
+        "explanationAr": "جمع umlaut: u → ü. Stuhl → Stühle. ظاهرة صوتية ألمانية — لا تقابلها العربية، لذا ندرّبها إنتاجياً."
       }
     ],
     "pitfalls": [
@@ -14741,6 +14821,16 @@
         "explanationAr": "ch بعد e/i/ä/ö/ü → ich-Laut [ç] (رقيق)، بعد a/o/u → ach-Laut [x] (خ).",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a1-ch-um1",
+        "type": "umformung",
+        "promptDe": "Ersetze durch ich-Laut/ch: weich vs hart.",
+        "promptAr": "حوّل ach-Laut إلى ich-Laut.",
+        "quelleDe": "Ich koche nicht (ach-Laut).",
+        "answer": "Ich koche nicht, aber ich spreche weich: ich.",
+        "points": 2,
+        "explanationAr": "ch بعد a/o/u = ach-Laut حلقي؛ بعد i/e/ä/ö/ü = ich-Laut رخو. فرق ألماني خالص — Conti Contrast يثبته."
       }
     ],
     "pitfalls": [
@@ -17678,6 +17768,16 @@
           "Zum Zweck"
         ],
         "explanationAr": "غرض: zum Zweck + Genitiv أو für + حالة نصب — الأسلوب الرسمي."
+      },
+      {
+        "id": "b2-nm-um1",
+        "type": "umformung",
+        "promptDe": "Nominalisiere den dass-Satz.",
+        "promptAr": "حوّل جملة dass إلى اسم.",
+        "quelleDe": "Dass er pünktlich kommt, ist wichtig.",
+        "answer": "Sein pünktliches Kommen ist wichtig.",
+        "points": 2,
+        "explanationAr": "Nominalisierung B2: dass er kommt → sein Kommen. تصغير جملة إلى اسم — مهارة أكاديمية 400UE BAMF."
       }
     ],
     "resources": [
