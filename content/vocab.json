@@ -59435,7 +59435,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Gesetze"
+        "plural": "die Gesetze",
+        "img": "/cards/gesetz.png"
       },
       {
         "de": "der Beschluss, -schlüsse",
@@ -59448,7 +59449,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Beschlüsse"
+        "plural": "die Beschlüsse",
+        "img": "/cards/beschluss.png"
       },
       {
         "de": "die Abstimmung, -en",
@@ -59461,7 +59463,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Abstimmungen"
+        "plural": "die Abstimmungen",
+        "img": "/cards/abstimmung.png"
       },
       {
         "de": "die Mehrheit, -en",
@@ -59502,7 +59505,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Mitglieder"
+        "plural": "die Mitglieder",
+        "img": "/cards/mitglied.png"
       },
       {
         "de": "der Abgeordnete / die Abgeordnete; Plural: die Abgeordneten",
@@ -59514,7 +59518,8 @@
         "tags": [
           "b2-politik-demokratie"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/abgeordneter.png"
       },
       {
         "de": "die Verfassung, -en",
