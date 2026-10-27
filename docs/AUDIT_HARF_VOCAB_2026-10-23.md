@@ -39,41 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/500)
+## الأفكار التحسينية (عينة 0/0)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:a0-klassenzimmer/a0-klassenzimmer-019:lesen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:a0-klassenzimmer/a0-klassenzimmer-020:hören` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-003:einsetzen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-004:aushandeln` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-005:befördern` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-006:verzichten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-007:erledigen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-008:sich eignen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-033:sich einarbeiten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-034:vertreten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-035:einplanen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-036:protokollieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-037:delegieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-038:priorisieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-039:ausfallen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j01-arbeit-vertieft/j01-arbeit-vertieft-040:verkürzen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j02-gesellschaft-recht/j02-gesellschaft-recht-011:einreichen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j02-gesellschaft-recht/j02-gesellschaft-recht-012:bestrafen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j02-gesellschaft-recht/j02-gesellschaft-recht-013:ermitteln` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j02-gesellschaft-recht/j02-gesellschaft-recht-014:bezeugen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j02-gesellschaft-recht/j02-gesellschaft-recht-015:sich beteiligen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j02-gesellschaft-recht/j02-gesellschaft-recht-016:fordern` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j02-gesellschaft-recht/j02-gesellschaft-recht-017:unterstützen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j02-gesellschaft-recht/j02-gesellschaft-recht-018:benachteiligen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j03-umwelt-energie/j03-umwelt-energie-038:verursachen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j03-umwelt-energie/j03-umwelt-energie-039:reduzieren` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j03-umwelt-energie/j03-umwelt-energie-040:einsparen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j03-umwelt-energie/j03-umwelt-energie-041:schonen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j03-umwelt-energie/j03-umwelt-energie-042:wiederverwerten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:j03-umwelt-energie/j03-umwelt-energie-043:entsorgen` | أضف تصريف (spricht/gekommen) للفعل |
-
-_… و 470 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

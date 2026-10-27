@@ -59906,7 +59906,8 @@
           "a0-klassenzimmer",
           "Wiederholung"
         ],
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "lest, leste, hat gelest"
       },
       {
         "de": "hören",
@@ -59919,7 +59920,8 @@
           "a0-klassenzimmer",
           "Wiederholung"
         ],
-        "pos": "Verb"
+        "pos": "Verb",
+        "posInfo": "hört, hörte, hat gehört"
       }
     ],
     "titleDe": "Im Klassenzimmer",
@@ -59970,7 +59972,8 @@
           "arbeit"
         ],
         "exampleDe": "Die Klinik setzt neue Technik ein.",
-        "exampleAr": "توظّف ال…"
+        "exampleAr": "توظّف ال…",
+        "posInfo": "setzt ein, setzte ein, hat eingesetzt"
       },
       {
         "id": "j01-arbeit-vertieft-004",
@@ -59982,7 +59985,8 @@
           "arbeit"
         ],
         "exampleDe": "Wir handeln die Bedingungen gemeinsam aus.",
-        "exampleAr": "نتفاوض ع…"
+        "exampleAr": "نتفاوض ع…",
+        "posInfo": "handet aus, handete aus, hat ausgehandet"
       },
       {
         "id": "j01-arbeit-vertieft-005",
@@ -59994,7 +59998,8 @@
           "arbeit"
         ],
         "exampleDe": "Die Firma befördert sie zur Stationsleiterin.",
-        "exampleAr": "الشركة ت…"
+        "exampleAr": "الشركة ت…",
+        "posInfo": "befördet, befördete, hat befördern"
       },
       {
         "id": "j01-arbeit-vertieft-006",
@@ -60006,7 +60011,8 @@
           "arbeit"
         ],
         "exampleDe": "Er verzichtet auf die Pause.",
-        "exampleAr": "يستغني ع…"
+        "exampleAr": "يستغني ع…",
+        "posInfo": "verzichtet, verzichtete, hat verzichtt"
       },
       {
         "id": "j01-arbeit-vertieft-007",
@@ -60018,7 +60024,8 @@
           "arbeit"
         ],
         "exampleDe": "Ich erledige die Aufgabe heute noch.",
-        "exampleAr": "أُنهي ال…"
+        "exampleAr": "أُنهي ال…",
+        "posInfo": "erledigt, erledigte, hat erledigt"
       },
       {
         "id": "j01-arbeit-vertieft-008",
@@ -60030,7 +60037,8 @@
           "arbeit"
         ],
         "exampleDe": "Er eignet sich gut für diese Arbeit.",
-        "exampleAr": "يصلح جيد…"
+        "exampleAr": "يصلح جيد…",
+        "posInfo": "eignt, eignte, hat geeignt"
       },
       {
         "id": "j01-arbeit-vertieft-009",
@@ -60393,7 +60401,8 @@
           "arbeit"
         ],
         "exampleDe": "Sie arbeitet sich gerade in die neue Station ein.",
-        "exampleAr": "تندمج حا…"
+        "exampleAr": "تندمج حا…",
+        "posInfo": "arbeitet ein, arbeitete ein, hat eingearbeitt"
       },
       {
         "id": "j01-arbeit-vertieft-034",
@@ -60405,7 +60414,8 @@
           "arbeit"
         ],
         "exampleDe": "Wer vertritt dich im Urlaub?",
-        "exampleAr": "من ينوب…"
+        "exampleAr": "من ينوب…",
+        "posInfo": "vertretet, vertretete, hat vertrett"
       },
       {
         "id": "j01-arbeit-vertieft-035",
@@ -60417,7 +60427,8 @@
           "arbeit"
         ],
         "exampleDe": "Wir planen eine Pause ein.",
-        "exampleAr": "نُدرج اس…"
+        "exampleAr": "نُدرج اس…",
+        "posInfo": "plant ein, plante ein, hat eingeplant"
       },
       {
         "id": "j01-arbeit-vertieft-036",
@@ -60429,7 +60440,8 @@
           "arbeit"
         ],
         "exampleDe": "Die Pflegekraft protokolliert alle Werte.",
-        "exampleAr": "الممرّضة…"
+        "exampleAr": "الممرّضة…",
+        "posInfo": "protokolliert, protokollierte, hat geprotokolliert"
       },
       {
         "id": "j01-arbeit-vertieft-037",
@@ -60441,7 +60453,8 @@
           "arbeit"
         ],
         "exampleDe": "Gute Leiter delegieren Aufgaben an ihr Team.",
-        "exampleAr": "القادة ا…"
+        "exampleAr": "القادة ا…",
+        "posInfo": "delegiert, delegierte, hat gedelegiert"
       },
       {
         "id": "j01-arbeit-vertieft-038",
@@ -60453,7 +60466,8 @@
           "arbeit"
         ],
         "exampleDe": "Bei Zeitdruck musst du priorisieren.",
-        "exampleAr": "عند ضغط…"
+        "exampleAr": "عند ضغط…",
+        "posInfo": "priorisiert, priorisierte, hat gepriorisiert"
       },
       {
         "id": "j01-arbeit-vertieft-039",
@@ -60465,7 +60479,8 @@
           "arbeit"
         ],
         "exampleDe": "Der Kurs muss heute ausfallen.",
-        "exampleAr": "يجب أن ت…"
+        "exampleAr": "يجب أن ت…",
+        "posInfo": "fallt aus, fallte aus, ist ausgefallt"
       },
       {
         "id": "j01-arbeit-vertieft-040",
@@ -60477,7 +60492,8 @@
           "arbeit"
         ],
         "exampleDe": "Die Frist wird auf zwei Tage verkürzt.",
-        "exampleAr": "تُختصر ا…"
+        "exampleAr": "تُختصر ا…",
+        "posInfo": "verkürzt, verkürzte, hat verkürzt"
       },
       {
         "id": "j01-arbeit-vertieft-041",
@@ -60753,7 +60769,8 @@
           "gesellschaft"
         ],
         "exampleDe": "Reichen Sie die Unterlagen bis Freitag ein.",
-        "exampleAr": "قدّموا ا…"
+        "exampleAr": "قدّموا ا…",
+        "posInfo": "reicht ein, reichte ein, hat eingereicht"
       },
       {
         "id": "j02-gesellschaft-recht-012",
@@ -60765,7 +60782,8 @@
           "gesellschaft"
         ],
         "exampleDe": "Wer zu schnell fährt, wird bestraft.",
-        "exampleAr": "من يقود…"
+        "exampleAr": "من يقود…",
+        "posInfo": "bestraft, bestrafte, hat bestraft"
       },
       {
         "id": "j02-gesellschaft-recht-013",
@@ -60777,7 +60795,8 @@
           "gesellschaft"
         ],
         "exampleDe": "Die Polizei ermittelt in diesem Fall.",
-        "exampleAr": "تحقّق ال…"
+        "exampleAr": "تحقّق ال…",
+        "posInfo": "ermittet, ermittete, hat ermitteln"
       },
       {
         "id": "j02-gesellschaft-recht-014",
@@ -60789,7 +60808,8 @@
           "gesellschaft"
         ],
         "exampleDe": "Er bezeugt, was er gesehen hat.",
-        "exampleAr": "يشهد بما…"
+        "exampleAr": "يشهد بما…",
+        "posInfo": "bezeugt, bezeugte, hat bezeugt"
       },
       {
         "id": "j02-gesellschaft-recht-015",
@@ -60801,7 +60821,8 @@
           "gesellschaft"
         ],
         "exampleDe": "Viele Bürger beteiligen sich an der Aktion.",
-        "exampleAr": "يشارك مو…"
+        "exampleAr": "يشارك مو…",
+        "posInfo": "beteiligt, beteiligte, hat beteiligt"
       },
       {
         "id": "j02-gesellschaft-recht-016",
@@ -60813,7 +60834,8 @@
           "gesellschaft"
         ],
         "exampleDe": "Die Gewerkschaft fordert mehr Personal.",
-        "exampleAr": "تطالب ال…"
+        "exampleAr": "تطالب ال…",
+        "posInfo": "fordet, fordete, hat gefordet"
       },
       {
         "id": "j02-gesellschaft-recht-017",
@@ -60825,7 +60847,8 @@
           "gesellschaft"
         ],
         "exampleDe": "Der Staat unterstützt Familien mit wenig Geld.",
-        "exampleAr": "تدعم الد…"
+        "exampleAr": "تدعم الد…",
+        "posInfo": "stützt unter, stützte unter, hat unterstützt"
       },
       {
         "id": "j02-gesellschaft-recht-018",
@@ -60837,7 +60860,8 @@
           "gesellschaft"
         ],
         "exampleDe": "Niemand darf wegen seiner Herkunft benachteiligt werden.",
-        "exampleAr": "لا يجوز…"
+        "exampleAr": "لا يجوز…",
+        "posInfo": "benachteiligt, benachteiligte, hat benachteiligt"
       },
       {
         "id": "j02-gesellschaft-recht-019",
@@ -61487,7 +61511,8 @@
           "umwelt"
         ],
         "exampleDe": "Der Verkehr verursacht viel Lärm.",
-        "exampleAr": "تسبّب حر…"
+        "exampleAr": "تسبّب حر…",
+        "posInfo": "verursacht, verursachte, hat verursacht"
       },
       {
         "id": "j03-umwelt-energie-039",
@@ -61499,7 +61524,8 @@
           "umwelt"
         ],
         "exampleDe": "Wir reduzieren den Verbrauch Schritt für Schritt.",
-        "exampleAr": "نخفّض ال…"
+        "exampleAr": "نخفّض ال…",
+        "posInfo": "reduziert, reduzierte, hat gereduziert"
       },
       {
         "id": "j03-umwelt-energie-040",
@@ -61511,7 +61537,8 @@
           "umwelt"
         ],
         "exampleDe": "Die neue Heizung spart viel Energie ein.",
-        "exampleAr": "التدفئة…"
+        "exampleAr": "التدفئة…",
+        "posInfo": "spart ein, sparte ein, hat eingespart"
       },
       {
         "id": "j03-umwelt-energie-041",
@@ -61523,7 +61550,8 @@
           "umwelt"
         ],
         "exampleDe": "Wer Rad fährt, schont die Umwelt.",
-        "exampleAr": "من يركب…"
+        "exampleAr": "من يركب…",
+        "posInfo": "schont, schonte, hat geschont"
       },
       {
         "id": "j03-umwelt-energie-042",
@@ -61535,7 +61563,8 @@
           "umwelt"
         ],
         "exampleDe": "Alte Flaschen werden wiederverwertet.",
-        "exampleAr": "تُعاد إع…"
+        "exampleAr": "تُعاد إع…",
+        "posInfo": "verwertet wieder, verwertete wieder, hat wiederverwertt"
       },
       {
         "id": "j03-umwelt-energie-043",
@@ -61547,7 +61576,8 @@
           "umwelt"
         ],
         "exampleDe": "Batterien muss man getrennt entsorgen.",
-        "exampleAr": "يجب التخ…"
+        "exampleAr": "يجب التخ…",
+        "posInfo": "entsorgt, entsorgte, hat entsorgt"
       },
       {
         "id": "j03-umwelt-energie-044",
@@ -61559,7 +61589,8 @@
           "umwelt"
         ],
         "exampleDe": "Sie dämmen das Dach gegen die Kälte.",
-        "exampleAr": "يعزلون ا…"
+        "exampleAr": "يعزلون ا…",
+        "posInfo": "dämmt, dämmte, hat gedämmt"
       },
       {
         "id": "j03-umwelt-energie-045",
@@ -61571,7 +61602,8 @@
           "umwelt"
         ],
         "exampleDe": "Im Winter heizen wir mit Holz.",
-        "exampleAr": "في الشتا…"
+        "exampleAr": "في الشتا…",
+        "posInfo": "heizt, heizte, hat geheizt"
       },
       {
         "id": "j03-umwelt-energie-046",
@@ -61583,7 +61615,8 @@
           "umwelt"
         ],
         "exampleDe": "Die Wäsche trocknet draußen schnell.",
-        "exampleAr": "يجفّ الغ…"
+        "exampleAr": "يجفّ الغ…",
+        "posInfo": "trocknt, trocknte, hat getrocknt"
       },
       {
         "id": "j03-umwelt-energie-047",
@@ -61595,7 +61628,8 @@
           "umwelt"
         ],
         "exampleDe": "Der Schnee beginnt im Frühling zu schmelzen.",
-        "exampleAr": "يبدأ الث…"
+        "exampleAr": "يبدأ الث…",
+        "posInfo": "schmelzt, schmelzte, hat geschmelzt"
       },
       {
         "id": "j03-umwelt-energie-048",
@@ -61607,7 +61641,8 @@
           "umwelt"
         ],
         "exampleDe": "Die Temperaturen sinken in der Nacht.",
-        "exampleAr": "تنخفض در…"
+        "exampleAr": "تنخفض در…",
+        "posInfo": "sinkt, sinkte, hat gesinkt"
       },
       {
         "id": "j03-umwelt-energie-049",
@@ -61619,7 +61654,8 @@
           "umwelt"
         ],
         "exampleDe": "Der Klimawandel bedroht viele Inseln.",
-        "exampleAr": "يهدّد تغ…"
+        "exampleAr": "يهدّد تغ…",
+        "posInfo": "bedroht, bedrohte, hat bedroht"
       },
       {
         "id": "j03-umwelt-energie-050",
@@ -61631,7 +61667,8 @@
           "umwelt"
         ],
         "exampleDe": "Wir müssen die alten Wälder erhalten.",
-        "exampleAr": "يجب أن ن…"
+        "exampleAr": "يجب أن ن…",
+        "posInfo": "erhaltet, erhaltete, hat erhaltt"
       },
       {
         "id": "j03-umwelt-energie-051",
@@ -61643,7 +61680,8 @@
           "umwelt"
         ],
         "exampleDe": "Der Sturm zerstörte viele Häuser.",
-        "exampleAr": "دمّرت ال…"
+        "exampleAr": "دمّرت ال…",
+        "posInfo": "zerstört, zerstörte, hat zerstört"
       },
       {
         "id": "j03-umwelt-energie-052",
@@ -61655,7 +61693,8 @@
           "umwelt"
         ],
         "exampleDe": "Viele steigen auf ein Elektroauto um.",
-        "exampleAr": "ينتقل كث…"
+        "exampleAr": "ينتقل كث…",
+        "posInfo": "steigt um, steigte um, ist umgesteigt"
       },
       {
         "id": "j03-umwelt-energie-053",
@@ -61667,7 +61706,8 @@
           "umwelt"
         ],
         "exampleDe": "Bäume gleichen einen Teil der Emissionen aus.",
-        "exampleAr": "توازن ال…"
+        "exampleAr": "توازن ال…",
+        "posInfo": "gleicht aus, gleichte aus, hat ausgegleicht"
       },
       {
         "id": "j03-umwelt-energie-054",
@@ -62570,7 +62610,8 @@
           "gesundheit"
         ],
         "exampleDe": "Der Arzt impft das Kind gegen Masern.",
-        "exampleAr": "يلقّح ال…"
+        "exampleAr": "يلقّح ال…",
+        "posInfo": "impft, impfte, hat geimpft"
       },
       {
         "id": "j04-gesundheit-pflege-050",
@@ -62582,7 +62623,8 @@
           "gesundheit"
         ],
         "exampleDe": "Sie wollte sich gegen Grippe impfen lassen.",
-        "exampleAr": "أرادت أن…"
+        "exampleAr": "أرادت أن…",
+        "posInfo": "impft, impfte, hat geimpft"
       },
       {
         "id": "j04-gesundheit-pflege-051",
@@ -62594,7 +62636,8 @@
           "gesundheit"
         ],
         "exampleDe": "Die Pflegekraft verabreicht das Medikament um acht Uhr.",
-        "exampleAr": "تعطي الم…"
+        "exampleAr": "تعطي الم…",
+        "posInfo": "verabreicht, verabreichte, hat verabreicht"
       },
       {
         "id": "j04-gesundheit-pflege-052",
@@ -62606,7 +62649,8 @@
           "gesundheit"
         ],
         "exampleDe": "Nehmen Sie die Tablette nach dem Essen ein.",
-        "exampleAr": "تناول ال…"
+        "exampleAr": "تناول ال…",
+        "posInfo": "nehmt ein, nehmte ein, hat eingenehmt"
       },
       {
         "id": "j04-gesundheit-pflege-053",
@@ -62618,7 +62662,8 @@
           "gesundheit"
         ],
         "exampleDe": "Der Arzt setzt das Mittel langsam ab.",
-        "exampleAr": "يوقف الط…"
+        "exampleAr": "يوقف الط…",
+        "posInfo": "setzt ab, setzte ab, hat abgesetzt"
       },
       {
         "id": "j04-gesundheit-pflege-054",
@@ -62630,7 +62675,8 @@
           "gesundheit"
         ],
         "exampleDe": "Wir messen den Blutdruck zweimal am Tag.",
-        "exampleAr": "نقيس ضغط…"
+        "exampleAr": "نقيس ضغط…",
+        "posInfo": "messt, messte, hat gemesst"
       },
       {
         "id": "j04-gesundheit-pflege-055",
@@ -62642,7 +62688,8 @@
           "gesundheit"
         ],
         "exampleDe": "Kontrollieren Sie bitte die Werte am Abend.",
-        "exampleAr": "راقب الق…"
+        "exampleAr": "راقب الق…",
+        "posInfo": "kontrolliert, kontrollierte, hat gekontrolliert"
       },
       {
         "id": "j04-gesundheit-pflege-056",
@@ -62654,7 +62701,8 @@
           "gesundheit"
         ],
         "exampleDe": "Der Arzt stellt eine Entzündung fest.",
-        "exampleAr": "يلاحظ ال…"
+        "exampleAr": "يلاحظ ال…",
+        "posInfo": "feststellt, feststellte, hat gefeststellt"
       },
       {
         "id": "j04-gesundheit-pflege-057",
@@ -62666,7 +62714,8 @@
           "gesundheit"
         ],
         "exampleDe": "Sie tastet den Bauch vorsichtig ab.",
-        "exampleAr": "تجسّ الب…"
+        "exampleAr": "تجسّ الب…",
+        "posInfo": "tastet ab, tastete ab, hat abgetastt"
       },
       {
         "id": "j04-gesundheit-pflege-058",
@@ -62678,7 +62727,8 @@
           "gesundheit"
         ],
         "exampleDe": "Der Arzt hört die Lunge mit dem Stethoskop ab.",
-        "exampleAr": "يُصغي ال…"
+        "exampleAr": "يُصغي ال…",
+        "posInfo": "hört ab, hörte ab, hat abgehört"
       },
       {
         "id": "j04-gesundheit-pflege-059",
@@ -62690,7 +62740,8 @@
           "gesundheit"
         ],
         "exampleDe": "Er verbindet die Wunde neu.",
-        "exampleAr": "يضمّد ال…"
+        "exampleAr": "يضمّد ال…",
+        "posInfo": "verbindet, verbindete, hat verbindt"
       },
       {
         "id": "j04-gesundheit-pflege-060",
@@ -62702,7 +62753,8 @@
           "gesundheit"
         ],
         "exampleDe": "Die Instrumente werden sterilisiert.",
-        "exampleAr": "تُعقّم ا…"
+        "exampleAr": "تُعقّم ا…",
+        "posInfo": "sterilisiert, sterilisierte, hat gesterilisiert"
       },
       {
         "id": "j04-gesundheit-pflege-061",
@@ -62714,7 +62766,8 @@
           "gesundheit"
         ],
         "exampleDe": "Der Zahn wird örtlich betäubt.",
-        "exampleAr": "يُخدّر ا…"
+        "exampleAr": "يُخدّر ا…",
+        "posInfo": "betäubt, betäubte, hat betäubt"
       },
       {
         "id": "j04-gesundheit-pflege-062",
@@ -62726,7 +62779,8 @@
           "gesundheit"
         ],
         "exampleDe": "Die Wunde muss genäht werden.",
-        "exampleAr": "يجب خياط…"
+        "exampleAr": "يجب خياط…",
+        "posInfo": "näht, nähte, hat genäht"
       },
       {
         "id": "j04-gesundheit-pflege-063",
@@ -62738,7 +62792,8 @@
           "gesundheit"
         ],
         "exampleDe": "Der Schnitt verheilt ohne Probleme.",
-        "exampleAr": "يلتئم ال…"
+        "exampleAr": "يلتئم ال…",
+        "posInfo": "verheilt, verheilte, hat verheilt"
       },
       {
         "id": "j04-gesundheit-pflege-064",
@@ -62750,7 +62805,8 @@
           "gesundheit"
         ],
         "exampleDe": "Die Wunde heilt langsam, aber gut.",
-        "exampleAr": "يلتئم ال…"
+        "exampleAr": "يلتئم ال…",
+        "posInfo": "heilt, heilte, hat geheilt"
       },
       {
         "id": "j04-gesundheit-pflege-065",
@@ -62762,7 +62818,8 @@
           "gesundheit"
         ],
         "exampleDe": "Die Pflegekraft mobilisiert die Patientin am Bett.",
-        "exampleAr": "تُنهض ال…"
+        "exampleAr": "تُنهض ال…",
+        "posInfo": "mobilisiert, mobilisierte, hat gemobilisiert"
       },
       {
         "id": "j04-gesundheit-pflege-066",
@@ -62774,7 +62831,8 @@
           "gesundheit"
         ],
         "exampleDe": "Reichen Sie mir bitte das Glas an.",
-        "exampleAr": "ناولني ا…"
+        "exampleAr": "ناولني ا…",
+        "posInfo": "reicht an, reichte an, hat angereicht"
       },
       {
         "id": "j04-gesundheit-pflege-067",
@@ -62786,7 +62844,8 @@
           "gesundheit"
         ],
         "exampleDe": "Im Winter stecken sich viele an.",
-        "exampleAr": "في الشتا…"
+        "exampleAr": "في الشتا…",
+        "posInfo": "steckt an, steckte an, hat angesteckt"
       },
       {
         "id": "j04-gesundheit-pflege-068",
@@ -62798,7 +62857,8 @@
           "gesundheit"
         ],
         "exampleDe": "Mücken übertragen manche Krankheiten.",
-        "exampleAr": "ينقل الب…"
+        "exampleAr": "ينقل الب…",
+        "posInfo": "tragt über, tragte über, hat übertragt"
       },
       {
         "id": "j04-gesundheit-pflege-069",
@@ -62810,7 +62870,8 @@
           "gesundheit"
         ],
         "exampleDe": "Die Grippe breitet sich schnell aus.",
-        "exampleAr": "تنتشر ال…"
+        "exampleAr": "تنتشر ال…",
+        "posInfo": "breitet aus, breitete aus, hat ausgebreitt"
       },
       {
         "id": "j04-gesundheit-pflege-070",
@@ -63445,7 +63506,8 @@
           "bildung"
         ],
         "exampleDe": "Sie studiert Medizin in Heidelberg.",
-        "exampleAr": "تدرس الط…"
+        "exampleAr": "تدرس الط…",
+        "posInfo": "studiert, studierte, hat gestudiert"
       },
       {
         "id": "j05-bildung-wissenschaft-029",
@@ -63457,7 +63519,8 @@
           "bildung"
         ],
         "exampleDe": "Die Forscher erheben die Daten anonym.",
-        "exampleAr": "يجمع الب…"
+        "exampleAr": "يجمع الب…",
+        "posInfo": "erhebt, erhebte, hat erhebt"
       },
       {
         "id": "j05-bildung-wissenschaft-030",
@@ -63469,7 +63532,8 @@
           "bildung"
         ],
         "exampleDe": "Daraus kann man schlussfolgern, dass Übung hilft.",
-        "exampleAr": "من هذا ن…"
+        "exampleAr": "من هذا ن…",
+        "posInfo": "schlussfolget, schlussfolgete, hat geschlussfolget"
       },
       {
         "id": "j05-bildung-wissenschaft-031",
@@ -63481,7 +63545,8 @@
           "bildung"
         ],
         "exampleDe": "Ich nehme an, dass der Kurs morgen beginnt.",
-        "exampleAr": "أفترض أن…"
+        "exampleAr": "أفترض أن…",
+        "posInfo": "nehmt an, nehmte an, hat angenehmt"
       },
       {
         "id": "j05-bildung-wissenschaft-032",
@@ -63493,7 +63558,8 @@
           "bildung"
         ],
         "exampleDe": "Er kann die Lage gut darstellen.",
-        "exampleAr": "يستطيع ع…"
+        "exampleAr": "يستطيع ع…",
+        "posInfo": "darstellt, darstellte, hat gedarstellt"
       },
       {
         "id": "j05-bildung-wissenschaft-033",
@@ -63505,7 +63571,8 @@
           "bildung"
         ],
         "exampleDe": "Man muss die beiden Fälle unterscheiden.",
-        "exampleAr": "يجب التم…"
+        "exampleAr": "يجب التم…",
+        "posInfo": "scheidet unter, scheidete unter, hat unterscheidt"
       },
       {
         "id": "j05-bildung-wissenschaft-034",
@@ -63517,7 +63584,8 @@
           "bildung"
         ],
         "exampleDe": "Kannst du den Artikel kurz zusammenfassen?",
-        "exampleAr": "هل تستطي…"
+        "exampleAr": "هل تستطي…",
+        "posInfo": "sammenfasst zu, sammenfasste zu, hat zugesammenfasst"
       },
       {
         "id": "j05-bildung-wissenschaft-035",
@@ -63529,7 +63597,8 @@
           "bildung"
         ],
         "exampleDe": "Sie gliedert ihren Text in drei Teile.",
-        "exampleAr": "تقسّم نص…"
+        "exampleAr": "تقسّم نص…",
+        "posInfo": "gliedet, gliedete, hat gegliedet"
       },
       {
         "id": "j05-bildung-wissenschaft-036",
@@ -63541,7 +63610,8 @@
           "bildung"
         ],
         "exampleDe": "Kannst du das Wort bitte aussprechen?",
-        "exampleAr": "هل تستطي…"
+        "exampleAr": "هل تستطي…",
+        "posInfo": "sprecht aus, sprechte aus, hat ausgesprecht"
       },
       {
         "id": "j05-bildung-wissenschaft-037",
@@ -63553,7 +63623,8 @@
           "bildung"
         ],
         "exampleDe": "Er eignet sich die Sprache schnell an.",
-        "exampleAr": "يكتسب ال…"
+        "exampleAr": "يكتسب ال…",
+        "posInfo": "eignt an, eignte an, hat angeeignt"
       },
       {
         "id": "j05-bildung-wissenschaft-038",
@@ -63565,7 +63636,8 @@
           "bildung"
         ],
         "exampleDe": "Der Kurs vertieft deine Kenntnisse.",
-        "exampleAr": "تعمّق ال…"
+        "exampleAr": "تعمّق ال…",
+        "posInfo": "vertieft, vertiefte, hat vertieft"
       },
       {
         "id": "j05-bildung-wissenschaft-039",
@@ -63577,7 +63649,8 @@
           "bildung"
         ],
         "exampleDe": "Lesen erweitert den Wortschatz.",
-        "exampleAr": "القراءة…"
+        "exampleAr": "القراءة…",
+        "posInfo": "erweitet, erweitete, hat erweitern"
       },
       {
         "id": "j05-bildung-wissenschaft-040",
@@ -64418,7 +64491,8 @@
           "medien"
         ],
         "exampleDe": "Der Sender strahlt den Film am Sonntag aus.",
-        "exampleAr": "تبثّ الق…"
+        "exampleAr": "تبثّ الق…",
+        "posInfo": "strahlt aus, strahlte aus, hat ausgestrahlt"
       },
       {
         "id": "j06-medien-digital-040",
@@ -64430,7 +64504,8 @@
           "medien"
         ],
         "exampleDe": "Werbung beeinflusst unser Kaufverhalten.",
-        "exampleAr": "تؤثّر ال…"
+        "exampleAr": "تؤثّر ال…",
+        "posInfo": "beeinflusst, beeinflusste, hat beeinflusst"
       },
       {
         "id": "j06-medien-digital-041",
@@ -64442,7 +64517,8 @@
           "medien"
         ],
         "exampleDe": "Die Bilder wurden manipuliert.",
-        "exampleAr": "تم التلا…"
+        "exampleAr": "تم التلا…",
+        "posInfo": "manipuliert, manipulierte, hat gemanipuliert"
       },
       {
         "id": "j06-medien-digital-042",
@@ -64454,7 +64530,8 @@
           "medien"
         ],
         "exampleDe": "Klicken Sie den Link bitte nicht an.",
-        "exampleAr": "لا تنقر…"
+        "exampleAr": "لا تنقر…",
+        "posInfo": "klickt an, klickte an, hat angeklickt"
       },
       {
         "id": "j06-medien-digital-043",
@@ -64466,7 +64543,8 @@
           "medien"
         ],
         "exampleDe": "Sie registriert sich auf der Plattform.",
-        "exampleAr": "تسجّل في…"
+        "exampleAr": "تسجّل في…",
+        "posInfo": "registriert, registrierte, hat geregistriert"
       },
       {
         "id": "j06-medien-digital-044",
@@ -64478,7 +64556,8 @@
           "medien"
         ],
         "exampleDe": "Er abonniert den Kanal seit Jahren.",
-        "exampleAr": "يشترك في…"
+        "exampleAr": "يشترك في…",
+        "posInfo": "onniert ab, onnierte ab, hat abgeonniert"
       },
       {
         "id": "j06-medien-digital-045",
@@ -64490,7 +64569,8 @@
           "medien"
         ],
         "exampleDe": "Die App lässt sich leicht installieren.",
-        "exampleAr": "يُثبّت ا…"
+        "exampleAr": "يُثبّت ا…",
+        "posInfo": "installiert, installierte, hat geinstalliert"
       },
       {
         "id": "j06-medien-digital-046",
@@ -64502,7 +64582,8 @@
           "medien"
         ],
         "exampleDe": "Stelle den Ton bitte lauter ein.",
-        "exampleAr": "ارفع الص…"
+        "exampleAr": "ارفع الص…",
+        "posInfo": "stellt ein, stellte ein, hat eingestellt"
       },
       {
         "id": "j06-medien-digital-047",
@@ -65221,7 +65302,8 @@
           "geld"
         ],
         "exampleDe": "Er will nicht so viel Geld ausgeben.",
-        "exampleAr": "لا يريد…"
+        "exampleAr": "لا يريد…",
+        "posInfo": "gebt aus, gebte aus, hat ausgegebt"
       },
       {
         "id": "j07-geld-wirtschaft-037",
@@ -65233,7 +65315,8 @@
           "geld"
         ],
         "exampleDe": "Das neue Auto können wir uns nicht leisten.",
-        "exampleAr": "لا نستطي…"
+        "exampleAr": "لا نستطي…",
+        "posInfo": "leistet, leistete, hat geleistt"
       },
       {
         "id": "j07-geld-wirtschaft-038",
@@ -65245,7 +65328,8 @@
           "geld"
         ],
         "exampleDe": "Sie bezahlt den Kredit in fünf Jahren ab.",
-        "exampleAr": "تسدّد ال…"
+        "exampleAr": "تسدّد ال…",
+        "posInfo": "bezahlt ab, bezahlte ab, hat abgebezahlt"
       },
       {
         "id": "j07-geld-wirtschaft-039",
@@ -65257,7 +65341,8 @@
           "geld"
         ],
         "exampleDe": "Er investiert in eine kleine Firma.",
-        "exampleAr": "يستثمر ف…"
+        "exampleAr": "يستثمر ف…",
+        "posInfo": "investiert, investierte, hat geinvestiert"
       },
       {
         "id": "j07-geld-wirtschaft-040",
@@ -65269,7 +65354,8 @@
           "geld"
         ],
         "exampleDe": "Kleine Läden konkurrieren mit dem Internet.",
-        "exampleAr": "تتنافس ا…"
+        "exampleAr": "تتنافس ا…",
+        "posInfo": "konkurriert, konkurrierte, hat gekonkurriert"
       },
       {
         "id": "j07-geld-wirtschaft-041",
@@ -65281,7 +65367,8 @@
           "geld"
         ],
         "exampleDe": "Die Firma liefert innerhalb von drei Tagen.",
-        "exampleAr": "توصّل ال…"
+        "exampleAr": "توصّل ال…",
+        "posInfo": "liefet, liefete, hat geliefet"
       },
       {
         "id": "j07-geld-wirtschaft-042",
@@ -65293,7 +65380,8 @@
           "geld"
         ],
         "exampleDe": "Der weite Weg lohnt sich für den Preis.",
-        "exampleAr": "يستحق ال…"
+        "exampleAr": "يستحق ال…",
+        "posInfo": "lohnt, lohnte, hat gelohnt"
       },
       {
         "id": "j07-geld-wirtschaft-043",
@@ -65305,7 +65393,8 @@
           "geld"
         ],
         "exampleDe": "Auf dem Markt kann man noch handeln.",
-        "exampleAr": "في السوق…"
+        "exampleAr": "في السوق…",
+        "posInfo": "handet, handete, hat gehandet"
       },
       {
         "id": "j07-geld-wirtschaft-044",
@@ -65317,7 +65406,8 @@
           "geld"
         ],
         "exampleDe": "Er feilscht um jeden Euro.",
-        "exampleAr": "يساوم عل…"
+        "exampleAr": "يساوم عل…",
+        "posInfo": "feilscht, feilschte, hat gefeilscht"
       },
       {
         "id": "j07-geld-wirtschaft-045",
@@ -65813,7 +65903,8 @@
           "gefuehle"
         ],
         "exampleDe": "Sie sehnt sich nach ihrer Heimat.",
-        "exampleAr": "تحنّ إلى…"
+        "exampleAr": "تحنّ إلى…",
+        "posInfo": "sehnt, sehnte, hat gesehnt"
       },
       {
         "id": "j08-gefuehle-beziehungen-023",
@@ -65825,7 +65916,8 @@
           "gefuehle"
         ],
         "exampleDe": "Er vermisst seine Familie sehr.",
-        "exampleAr": "يفتقد عا…"
+        "exampleAr": "يفتقد عا…",
+        "posInfo": "vermisst, vermisste, hat vermisst"
       },
       {
         "id": "j08-gefuehle-beziehungen-024",
@@ -65837,7 +65929,8 @@
           "gefuehle"
         ],
         "exampleDe": "Ich zweifle an seinem Plan.",
-        "exampleAr": "أشكّ في…"
+        "exampleAr": "أشكّ في…",
+        "posInfo": "zweifet, zweifete, hat gezweifet"
       },
       {
         "id": "j08-gefuehle-beziehungen-025",
@@ -65849,7 +65942,8 @@
           "gefuehle"
         ],
         "exampleDe": "Verzweifle nicht, es gibt eine Lösung.",
-        "exampleAr": "لا تيأس،…"
+        "exampleAr": "لا تيأس،…",
+        "posInfo": "verzweifet, verzweifete, hat verzweifeln"
       },
       {
         "id": "j08-gefuehle-beziehungen-026",
@@ -65861,7 +65955,8 @@
           "gefuehle"
         ],
         "exampleDe": "Nach dem Anruf erleichterte sie sich.",
-        "exampleAr": "بعد المك…"
+        "exampleAr": "بعد المك…",
+        "posInfo": "erleichtet, erleichtete, hat erleichtern"
       },
       {
         "id": "j08-gefuehle-beziehungen-027",
@@ -65873,7 +65968,8 @@
           "gefuehle"
         ],
         "exampleDe": "Reg dich nicht so auf!",
-        "exampleAr": "لا تنفعل…"
+        "exampleAr": "لا تنفعل…",
+        "posInfo": "regt auf, regte auf, hat aufgeregt"
       },
       {
         "id": "j08-gefuehle-beziehungen-028",
@@ -65885,7 +65981,8 @@
           "gefuehle"
         ],
         "exampleDe": "Vor der Prüfung spannt er sich an.",
-        "exampleAr": "قبل الام…"
+        "exampleAr": "قبل الام…",
+        "posInfo": "spannt an, spannte an, hat angespannt"
       },
       {
         "id": "j08-gefuehle-beziehungen-029",
@@ -65897,7 +65994,8 @@
           "gefuehle"
         ],
         "exampleDe": "Sie kann stolz auf ihre Kinder sein.",
-        "exampleAr": "يمكنها أ…"
+        "exampleAr": "يمكنها أ…",
+        "posInfo": "stolzt, stolzte, hat gestolzt"
       },
       {
         "id": "j08-gefuehle-beziehungen-030",
@@ -65909,7 +66007,8 @@
           "gefuehle"
         ],
         "exampleDe": "Er beneidet ihn um sein ruhiges Leben.",
-        "exampleAr": "يحسده عل…"
+        "exampleAr": "يحسده عل…",
+        "posInfo": "beneidet, beneidete, hat beneidt"
       },
       {
         "id": "j08-gefuehle-beziehungen-031",
@@ -65921,7 +66020,8 @@
           "gefuehle"
         ],
         "exampleDe": "Ich bewundere deine Geduld.",
-        "exampleAr": "أُعجب بص…"
+        "exampleAr": "أُعجب بص…",
+        "posInfo": "bewundet, bewundete, hat bewundern"
       },
       {
         "id": "j08-gefuehle-beziehungen-032",
@@ -65933,7 +66033,8 @@
           "gefuehle"
         ],
         "exampleDe": "Er verachtet Lüge und Verrat.",
-        "exampleAr": "يحتقر ال…"
+        "exampleAr": "يحتقر ال…",
+        "posInfo": "verachtet, verachtete, hat verachtt"
       },
       {
         "id": "j08-gefuehle-beziehungen-033",
@@ -65945,7 +66046,8 @@
           "gefuehle"
         ],
         "exampleDe": "Kinder müssen Grenzen respektieren lernen.",
-        "exampleAr": "يجب أن ي…"
+        "exampleAr": "يجب أن ي…",
+        "posInfo": "respektiert, respektierte, hat gerespektiert"
       },
       {
         "id": "j08-gefuehle-beziehungen-034",
@@ -65957,7 +66059,8 @@
           "gefuehle"
         ],
         "exampleDe": "Sie lassen sich nach zehn Jahren scheiden.",
-        "exampleAr": "يتطلّقان…"
+        "exampleAr": "يتطلّقان…",
+        "posInfo": "scheidet, scheidete, hat gescheidt"
       },
       {
         "id": "j08-gefuehle-beziehungen-035",
@@ -65969,7 +66072,8 @@
           "gefuehle"
         ],
         "exampleDe": "Er verliebte sich beim ersten Treffen.",
-        "exampleAr": "وقع في ا…"
+        "exampleAr": "وقع في ا…",
+        "posInfo": "verliebt, verliebte, hat verliebt"
       },
       {
         "id": "j08-gefuehle-beziehungen-036",
@@ -65981,7 +66085,8 @@
           "gefuehle"
         ],
         "exampleDe": "Sie kommt mit allen Kollegen gut aus.",
-        "exampleAr": "تنسجم مع…"
+        "exampleAr": "تنسجم مع…",
+        "posInfo": "kommt aus, kommte aus, ist ausgekommt"
       },
       {
         "id": "j08-gefuehle-beziehungen-037",
@@ -65993,7 +66098,8 @@
           "gefuehle"
         ],
         "exampleDe": "Sie versteht sich gut mit ihm.",
-        "exampleAr": "تتفاهم م…"
+        "exampleAr": "تتفاهم م…",
+        "posInfo": "versteht, verstehte, hat versteht"
       },
       {
         "id": "j08-gefuehle-beziehungen-038",
@@ -66496,7 +66602,8 @@
           "stadt"
         ],
         "exampleDe": "Nach dem Umzug musst du dich ummelden.",
-        "exampleAr": "بعد الان…"
+        "exampleAr": "بعد الان…",
+        "posInfo": "meldet um, meldete um, hat umgemeldt"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-016",
@@ -66508,7 +66615,8 @@
           "stadt"
         ],
         "exampleDe": "Er verpasste den Zug um zwei Minuten.",
-        "exampleAr": "فوّت الق…"
+        "exampleAr": "فوّت الق…",
+        "posInfo": "verpasst, verpasste, hat verpasst"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-017",
@@ -66520,7 +66628,8 @@
           "stadt"
         ],
         "exampleDe": "Bitte schnell einsteigen, der Zug fährt ab.",
-        "exampleAr": "اركبوا ب…"
+        "exampleAr": "اركبوا ب…",
+        "posInfo": "steigt ein, steigte ein, ist eingesteigt"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-018",
@@ -66532,7 +66641,8 @@
           "stadt"
         ],
         "exampleDe": "Die Verspätung wurde durchgesagt.",
-        "exampleAr": "أُذيع ال…"
+        "exampleAr": "أُذيع ال…",
+        "posInfo": "sagt durch, sagte durch, hat durchgesagt"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-019",
@@ -66544,7 +66654,8 @@
           "stadt"
         ],
         "exampleDe": "Hier darf man nicht parken.",
-        "exampleAr": "لا يجوز…"
+        "exampleAr": "لا يجوز…",
+        "posInfo": "parkt, parkte, hat geparkt"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-020",
@@ -66556,7 +66667,8 @@
           "stadt"
         ],
         "exampleDe": "Der Lkw überholt langsam den Bus.",
-        "exampleAr": "تتجاوز ا…"
+        "exampleAr": "تتجاوز ا…",
+        "posInfo": "holt über, holte über, hat überholt"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-021",
@@ -66568,7 +66680,8 @@
           "stadt"
         ],
         "exampleDe": "Der Fahrer musste stark bremsen.",
-        "exampleAr": "اضطر الس…"
+        "exampleAr": "اضطر الس…",
+        "posInfo": "bremst, bremste, hat gebremst"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-022",
@@ -66580,7 +66693,8 @@
           "stadt"
         ],
         "exampleDe": "Das Auto beschleunigt sehr schnell.",
-        "exampleAr": "تُسرع ال…"
+        "exampleAr": "تُسرع ال…",
+        "posInfo": "beschleunigt, beschleunigte, hat beschleunigt"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-023",
@@ -66592,7 +66706,8 @@
           "stadt"
         ],
         "exampleDe": "An der Kreuzung biegst du links ab.",
-        "exampleAr": "عند التق…"
+        "exampleAr": "عند التق…",
+        "posInfo": "biegt ab, biegte ab, hat abgebiegt"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-024",
@@ -66604,7 +66719,8 @@
           "stadt"
         ],
         "exampleDe": "Fahren Sie einfach geradeaus.",
-        "exampleAr": "سِرْ مست…"
+        "exampleAr": "سِرْ مست…",
+        "posInfo": "geradeaust, geradeauste, ist geradeaus"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-025",
@@ -66616,7 +66732,8 @@
           "stadt"
         ],
         "exampleDe": "Wir übernachten bei Freunden in Köln.",
-        "exampleAr": "نبيت عند…"
+        "exampleAr": "نبيت عند…",
+        "posInfo": "nachtet über, nachtete über, hat übernachtt"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-026",
@@ -66628,7 +66745,8 @@
           "stadt"
         ],
         "exampleDe": "Sie storniert die Buchung kostenlos.",
-        "exampleAr": "تلغي الح…"
+        "exampleAr": "تلغي الح…",
+        "posInfo": "storniert, stornierte, hat gestorniert"
       },
       {
         "id": "j09-stadt-wohnen-verkehr-027",
@@ -67343,7 +67461,8 @@
           "meinung"
         ],
         "exampleDe": "Wir sehen den Kurs als große Chance an.",
-        "exampleAr": "نرى الدو…"
+        "exampleAr": "نرى الدو…",
+        "posInfo": "seht an, sehte an, hat angeseht"
       },
       {
         "id": "j10-meinung-diskussion-032",
@@ -67355,7 +67474,8 @@
           "meinung"
         ],
         "exampleDe": "Er betrachtet das als Fehler.",
-        "exampleAr": "يعدّ ذلك…"
+        "exampleAr": "يعدّ ذلك…",
+        "posInfo": "betrachtet, betrachtete, hat betrachtt"
       },
       {
         "id": "j10-meinung-diskussion-033",
@@ -67367,7 +67487,8 @@
           "meinung"
         ],
         "exampleDe": "Ich halte ihn für ehrlich.",
-        "exampleAr": "أراه صاد…"
+        "exampleAr": "أراه صاد…",
+        "posInfo": "haltet, haltete, hat gehaltt"
       },
       {
         "id": "j10-meinung-diskussion-034",
@@ -67379,7 +67500,8 @@
           "meinung"
         ],
         "exampleDe": "Was meinst du dazu?",
-        "exampleAr": "ما رأيك…"
+        "exampleAr": "ما رأيك…",
+        "posInfo": "meint, meinte, hat gemeint"
       },
       {
         "id": "j10-meinung-diskussion-035",
@@ -67391,7 +67513,8 @@
           "meinung"
         ],
         "exampleDe": "Ich schätze die Kosten auf tausend Euro.",
-        "exampleAr": "أقدّر ال…"
+        "exampleAr": "أقدّر ال…",
+        "posInfo": "schätzt, schätzte, hat geschätzt"
       },
       {
         "id": "j10-meinung-diskussion-036",
@@ -67403,7 +67526,8 @@
           "meinung"
         ],
         "exampleDe": "Er zweifelt an der Wahrheit der Geschichte.",
-        "exampleAr": "يشكّ في…"
+        "exampleAr": "يشكّ في…",
+        "posInfo": "zweifet, zweifete, hat gezweifet"
       },
       {
         "id": "j10-meinung-diskussion-037",
@@ -67415,7 +67539,8 @@
           "meinung"
         ],
         "exampleDe": "Ich befürworte den Vorschlag voll.",
-        "exampleAr": "أؤيّد ال…"
+        "exampleAr": "أؤيّد ال…",
+        "posInfo": "befürwortet, befürwortete, hat befürwortt"
       },
       {
         "id": "j10-meinung-diskussion-038",
@@ -67427,7 +67552,8 @@
           "meinung"
         ],
         "exampleDe": "Er will die Vorteile hervorheben.",
-        "exampleAr": "يريد إبر…"
+        "exampleAr": "يريد إبر…",
+        "posInfo": "vorhebt her, vorhebte her, hat hergevorhebt"
       },
       {
         "id": "j10-meinung-diskussion-039",
@@ -67439,7 +67565,8 @@
           "meinung"
         ],
         "exampleDe": "Sie möchte das noch hinzufügen.",
-        "exampleAr": "تريد أن…"
+        "exampleAr": "تريد أن…",
+        "posInfo": "zufügt hin, zufügte hin, hat hingezufügt"
       },
       {
         "id": "j10-meinung-diskussion-040",
@@ -67451,7 +67578,8 @@
           "meinung"
         ],
         "exampleDe": "Ergänze bitte den Satz.",
-        "exampleAr": "أكمل الج…"
+        "exampleAr": "أكمل الج…",
+        "posInfo": "ergänzt, ergänzte, hat ergänzt"
       },
       {
         "id": "j10-meinung-diskussion-041",
@@ -67463,7 +67591,8 @@
           "meinung"
         ],
         "exampleDe": "Daraus folgt, dass wir warten müssen.",
-        "exampleAr": "من هذا ي…"
+        "exampleAr": "من هذا ي…",
+        "posInfo": "folget, folgete, hat gefolget"
       },
       {
         "id": "j10-meinung-diskussion-042",
@@ -67475,7 +67604,8 @@
           "meinung"
         ],
         "exampleDe": "Aus den Zahlen schließt man, dass es besser wird.",
-        "exampleAr": "من الأرق…"
+        "exampleAr": "من الأرق…",
+        "posInfo": "schließt, schließte, hat geschließt"
       },
       {
         "id": "j10-meinung-diskussion-043",
@@ -67487,7 +67617,8 @@
           "meinung"
         ],
         "exampleDe": "Sport bewirkt viel für die Gesundheit.",
-        "exampleAr": "تُحدث ال…"
+        "exampleAr": "تُحدث ال…",
+        "posInfo": "bewirkt, bewirkte, hat bewirkt"
       },
       {
         "id": "j10-meinung-diskussion-044",
@@ -67499,7 +67630,8 @@
           "meinung"
         ],
         "exampleDe": "Stress führt oft zu Schlafproblemen.",
-        "exampleAr": "يؤدي الت…"
+        "exampleAr": "يؤدي الت…",
+        "posInfo": "führt, führte, hat geführt"
       },
       {
         "id": "j10-meinung-diskussion-045",
@@ -67511,7 +67643,8 @@
           "meinung"
         ],
         "exampleDe": "Die Nachricht löste große Freude aus.",
-        "exampleAr": "أطلق الخ…"
+        "exampleAr": "أطلق الخ…",
+        "posInfo": "löst aus, löste aus, hat ausgelöst"
       },
       {
         "id": "j10-meinung-diskussion-046",
@@ -67523,7 +67656,8 @@
           "meinung"
         ],
         "exampleDe": "Übung steigert die Leistung langsam.",
-        "exampleAr": "يرفع الت…"
+        "exampleAr": "يرفع الت…",
+        "posInfo": "steiget, steigete, hat gesteiget"
       },
       {
         "id": "j10-meinung-diskussion-047",
@@ -67535,7 +67669,8 @@
           "meinung"
         ],
         "exampleDe": "Die Bank senkt die Zinsen.",
-        "exampleAr": "تخفّض ال…"
+        "exampleAr": "تخفّض ال…",
+        "posInfo": "senkt, senkte, hat gesenkt"
       },
       {
         "id": "j10-meinung-diskussion-048",
@@ -67547,7 +67682,8 @@
           "meinung"
         ],
         "exampleDe": "Der Preis wurde um zehn Prozent erhöht.",
-        "exampleAr": "رُفع الس…"
+        "exampleAr": "رُفع الس…",
+        "posInfo": "erhöht, erhöhte, hat erhöht"
       },
       {
         "id": "j10-meinung-diskussion-049",
@@ -67559,7 +67695,8 @@
           "meinung"
         ],
         "exampleDe": "Weniger Zucker verringert das Risiko.",
-        "exampleAr": "يقلّل ال…"
+        "exampleAr": "يقلّل ال…",
+        "posInfo": "verringet, verringete, hat verringern"
       },
       {
         "id": "j10-meinung-diskussion-050",
@@ -67571,7 +67708,8 @@
           "meinung"
         ],
         "exampleDe": "Das Wetter verschlechtert sich morgen.",
-        "exampleAr": "سيسوء ال…"
+        "exampleAr": "سيسوء ال…",
+        "posInfo": "verschlechtet, verschlechtete, hat verschlechtern"
       },
       {
         "id": "j10-meinung-diskussion-051",
@@ -68282,7 +68420,8 @@
           "alltag"
         ],
         "exampleDe": "Er wischt den Boden im Bad auf.",
-        "exampleAr": "يمسح أرض…"
+        "exampleAr": "يمسح أرض…",
+        "posInfo": "wischt auf, wischte auf, hat aufgewischt"
       },
       {
         "id": "j11-alltag-haus-030",
@@ -68294,7 +68433,8 @@
           "alltag"
         ],
         "exampleDe": "Samstags staubsauge ich die Wohnung.",
-        "exampleAr": "يوم السب…"
+        "exampleAr": "يوم السب…",
+        "posInfo": "staubsaugt, staubsaugte, hat gestaubsaugt"
       },
       {
         "id": "j11-alltag-haus-031",
@@ -68306,7 +68446,8 @@
           "alltag"
         ],
         "exampleDe": "Sie wischt den Tisch nach dem Essen.",
-        "exampleAr": "تمسح الط…"
+        "exampleAr": "تمسح الط…",
+        "posInfo": "wischt, wischte, hat gewischt"
       },
       {
         "id": "j11-alltag-haus-032",
@@ -68318,7 +68459,8 @@
           "alltag"
         ],
         "exampleDe": "Wer spült heute das Geschirr?",
-        "exampleAr": "من يجلي…"
+        "exampleAr": "من يجلي…",
+        "posInfo": "spült, spülte, hat gespült"
       },
       {
         "id": "j11-alltag-haus-033",
@@ -68330,7 +68472,8 @@
           "alltag"
         ],
         "exampleDe": "Er trocknet die Gläser ab.",
-        "exampleAr": "يجفّف ال…"
+        "exampleAr": "يجفّف ال…",
+        "posInfo": "trocknt ab, trocknte ab, hat abgetrocknt"
       },
       {
         "id": "j11-alltag-haus-034",
@@ -68342,7 +68485,8 @@
           "alltag"
         ],
         "exampleDe": "Sie hängt die Wäsche auf dem Balkon auf.",
-        "exampleAr": "تعلّق ال…"
+        "exampleAr": "تعلّق ال…",
+        "posInfo": "hängt auf, hängte auf, hat aufgehängt"
       },
       {
         "id": "j11-alltag-haus-035",
@@ -68354,7 +68498,8 @@
           "alltag"
         ],
         "exampleDe": "Die Hemden lege ich zusammen.",
-        "exampleAr": "أطوي الق…"
+        "exampleAr": "أطوي الق…",
+        "posInfo": "sammenlegt zu, sammenlegte zu, hat zugesammenlegt"
       },
       {
         "id": "j11-alltag-haus-036",
@@ -68366,7 +68511,8 @@
           "alltag"
         ],
         "exampleDe": "Rühre die Suppe langsam um.",
-        "exampleAr": "حرّك الح…"
+        "exampleAr": "حرّك الح…",
+        "posInfo": "rührt, rührte, hat gerührt"
       },
       {
         "id": "j11-alltag-haus-037",
@@ -68378,7 +68524,8 @@
           "alltag"
         ],
         "exampleDe": "Sie schält die Kartoffeln fürs Abendessen.",
-        "exampleAr": "تقشّر ال…"
+        "exampleAr": "تقشّر ال…",
+        "posInfo": "schält, schälte, hat geschält"
       },
       {
         "id": "j11-alltag-haus-038",
@@ -68390,7 +68537,8 @@
           "alltag"
         ],
         "exampleDe": "Schmecke die Soße bitte noch ab.",
-        "exampleAr": "تذوّقي ا…"
+        "exampleAr": "تذوّقي ا…",
+        "posInfo": "schmeckt ab, schmeckte ab, hat abgeschmeckt"
       },
       {
         "id": "j11-alltag-haus-039",
@@ -68402,7 +68550,8 @@
           "alltag"
         ],
         "exampleDe": "Das Essen wird um acht serviert.",
-        "exampleAr": "يُقدّم ا…"
+        "exampleAr": "يُقدّم ا…",
+        "posInfo": "serviert, servierte, hat geserviert"
       },
       {
         "id": "j11-alltag-haus-040",
@@ -68414,7 +68563,8 @@
           "alltag"
         ],
         "exampleDe": "Er knöpft sein Hemd zu.",
-        "exampleAr": "يزرّر قم…"
+        "exampleAr": "يزرّر قم…",
+        "posInfo": "knöpft, knöpfte, hat geknöpft"
       },
       {
         "id": "j11-alltag-haus-041",
@@ -69419,7 +69569,8 @@
           "natur"
         ],
         "exampleDe": "Die Pflanzen wachsen schnell im Sommer.",
-        "exampleAr": "تنمو الن…"
+        "exampleAr": "تنمو الن…",
+        "posInfo": "wachst, wachste, hat gewachst"
       },
       {
         "id": "j12-natur-tiere-046",
@@ -69431,7 +69582,8 @@
           "natur"
         ],
         "exampleDe": "Im Mai blühen die Apfelbäume.",
-        "exampleAr": "في أيار…"
+        "exampleAr": "في أيار…",
+        "posInfo": "blüht, blühte, hat geblüht"
       },
       {
         "id": "j12-natur-tiere-047",
@@ -69443,7 +69595,8 @@
           "natur"
         ],
         "exampleDe": "Ohne Wasser welken die Blumen.",
-        "exampleAr": "بلا ماء…"
+        "exampleAr": "بلا ماء…",
+        "posInfo": "welkt, welkte, hat gewelkt"
       },
       {
         "id": "j12-natur-tiere-048",
@@ -69455,7 +69608,8 @@
           "natur"
         ],
         "exampleDe": "Im Herbst erntet man die Äpfel.",
-        "exampleAr": "في الخري…"
+        "exampleAr": "في الخري…",
+        "posInfo": "erntet, erntete, hat erntt"
       },
       {
         "id": "j12-natur-tiere-049",
@@ -69467,7 +69621,8 @@
           "natur"
         ],
         "exampleDe": "Sie pflanzt Tomaten im Garten.",
-        "exampleAr": "تزرع الط…"
+        "exampleAr": "تزرع الط…",
+        "posInfo": "pflanzt, pflanzte, hat gepflanzt"
       },
       {
         "id": "j12-natur-tiere-050",
@@ -69479,7 +69634,8 @@
           "natur"
         ],
         "exampleDe": "Gieße die Blumen bitte jeden Morgen.",
-        "exampleAr": "اسقِ الز…"
+        "exampleAr": "اسقِ الز…",
+        "posInfo": "gießt, gießte, hat gegießt"
       },
       {
         "id": "j12-natur-tiere-051",
@@ -69491,7 +69647,8 @@
           "natur"
         ],
         "exampleDe": "Der Fluss fließt ins Meer.",
-        "exampleAr": "يتدفق ال…"
+        "exampleAr": "يتدفق ال…",
+        "posInfo": "fließt, fließte, hat gefließt"
       },
       {
         "id": "j12-natur-tiere-052",
@@ -69503,7 +69660,8 @@
           "natur"
         ],
         "exampleDe": "Der Wind weht heute stark.",
-        "exampleAr": "تهبّ الر…"
+        "exampleAr": "تهبّ الر…",
+        "posInfo": "weht, wehte, hat geweht"
       },
       {
         "id": "j12-natur-tiere-053",
@@ -69515,7 +69673,8 @@
           "natur"
         ],
         "exampleDe": "Die Sonne scheint den ganzen Tag.",
-        "exampleAr": "تشرق الش…"
+        "exampleAr": "تشرق الش…",
+        "posInfo": "scheint, scheinte, hat gescheint"
       },
       {
         "id": "j12-natur-tiere-054",
@@ -69527,7 +69686,8 @@
           "natur"
         ],
         "exampleDe": "Im Winter friert der See zu.",
-        "exampleAr": "في الشتا…"
+        "exampleAr": "في الشتا…",
+        "posInfo": "friert, frierte, hat gefriert"
       },
       {
         "id": "j12-natur-tiere-055",
@@ -69539,7 +69699,8 @@
           "natur"
         ],
         "exampleDe": "Im Frühling taut der Schnee.",
-        "exampleAr": "يذوب الث…"
+        "exampleAr": "يذوب الث…",
+        "posInfo": "taut, taute, hat getaut"
       },
       {
         "id": "j12-natur-tiere-056",
@@ -69551,7 +69712,8 @@
           "natur"
         ],
         "exampleDe": "Der Wolf jagt in der Nacht.",
-        "exampleAr": "يصطاد ال…"
+        "exampleAr": "يصطاد ال…",
+        "posInfo": "jagt, jagte, hat gejagt"
       },
       {
         "id": "j12-natur-tiere-057",
@@ -69563,7 +69725,8 @@
           "natur"
         ],
         "exampleDe": "Die Schnecke kriecht langsam.",
-        "exampleAr": "تزحف الح…"
+        "exampleAr": "تزحف الح…",
+        "posInfo": "kriecht, kriechte, hat gekriecht"
       },
       {
         "id": "j12-natur-tiere-058",
@@ -69575,7 +69738,8 @@
           "natur"
         ],
         "exampleDe": "Der Frosch springt ins Wasser.",
-        "exampleAr": "يقفز الض…"
+        "exampleAr": "يقفز الض…",
+        "posInfo": "springt, springte, hat gespringt"
       },
       {
         "id": "j12-natur-tiere-059",
@@ -69587,7 +69751,8 @@
           "natur"
         ],
         "exampleDe": "Die Kühe fressen Gras auf der Wiese.",
-        "exampleAr": "تأكل الأ…"
+        "exampleAr": "تأكل الأ…",
+        "posInfo": "fresst, fresste, hat gefresst"
       },
       {
         "id": "j12-natur-tiere-060",
@@ -70417,7 +70582,8 @@
           "koerper"
         ],
         "exampleDe": "Atme tief durch die Nase.",
-        "exampleAr": "تنفّس بع…"
+        "exampleAr": "تنفّس بع…",
+        "posInfo": "atmt, atmte, hat geatmt"
       },
       {
         "id": "j13-koerper-zeit-039",
@@ -70429,7 +70595,8 @@
           "koerper"
         ],
         "exampleDe": "Er muss laut niesen.",
-        "exampleAr": "يضطر أن…"
+        "exampleAr": "يضطر أن…",
+        "posInfo": "niest, nieste, hat geniest"
       },
       {
         "id": "j13-koerper-zeit-040",
@@ -70441,7 +70608,8 @@
           "koerper"
         ],
         "exampleDe": "Schlucken fällt ihm schwer.",
-        "exampleAr": "يجد صعوب…"
+        "exampleAr": "يجد صعوب…",
+        "posInfo": "schluckt, schluckte, hat geschluckt"
       },
       {
         "id": "j13-koerper-zeit-041",
@@ -70453,7 +70621,8 @@
           "koerper"
         ],
         "exampleDe": "Kaue langsam und gründlich.",
-        "exampleAr": "امضغ ببط…"
+        "exampleAr": "امضغ ببط…",
+        "posInfo": "kaut, kaute, hat gekaut"
       },
       {
         "id": "j13-koerper-zeit-042",
@@ -70465,7 +70634,8 @@
           "koerper"
         ],
         "exampleDe": "Sie lächelt freundlich in die Kamera.",
-        "exampleAr": "تبتسم بو…"
+        "exampleAr": "تبتسم بو…",
+        "posInfo": "lächet, lächete, hat gelächet"
       },
       {
         "id": "j13-koerper-zeit-043",
@@ -70477,7 +70647,8 @@
           "koerper"
         ],
         "exampleDe": "Das Baby schreit die ganze Nacht.",
-        "exampleAr": "يصرخ الط…"
+        "exampleAr": "يصرخ الط…",
+        "posInfo": "schreit, schreite, hat geschreit"
       },
       {
         "id": "j13-koerper-zeit-044",
@@ -70489,7 +70660,8 @@
           "koerper"
         ],
         "exampleDe": "Sie flüstert ihm etwas ins Ohr.",
-        "exampleAr": "تهمس له…"
+        "exampleAr": "تهمس له…",
+        "posInfo": "flüstet, flüstete, hat geflüstet"
       },
       {
         "id": "j13-koerper-zeit-045",
@@ -70501,7 +70673,8 @@
           "koerper"
         ],
         "exampleDe": "Die Kinder winken dem Zug.",
-        "exampleAr": "يلوّح ال…"
+        "exampleAr": "يلوّح ال…",
+        "posInfo": "winkt, winkte, hat gewinkt"
       },
       {
         "id": "j13-koerper-zeit-046",
@@ -70513,7 +70686,8 @@
           "koerper"
         ],
         "exampleDe": "Er nickt zustimmend mit dem Kopf.",
-        "exampleAr": "يهزّ رأس…"
+        "exampleAr": "يهزّ رأس…",
+        "posInfo": "nickt, nickte, hat genickt"
       },
       {
         "id": "j13-koerper-zeit-047",
@@ -70525,7 +70699,8 @@
           "koerper"
         ],
         "exampleDe": "Leg dich kurz hin und ruh dich aus.",
-        "exampleAr": "استلقِ ق…"
+        "exampleAr": "استلقِ ق…",
+        "posInfo": "legt hin, legte hin, hat hingelegt"
       },
       {
         "id": "j13-koerper-zeit-048",
@@ -70537,7 +70712,8 @@
           "koerper"
         ],
         "exampleDe": "Sie bückt sich nach dem Ball.",
-        "exampleAr": "تنحني لت…"
+        "exampleAr": "تنحني لت…",
+        "posInfo": "bückt, bückte, hat gebückt"
       },
       {
         "id": "j13-koerper-zeit-049",
@@ -70549,7 +70725,8 @@
           "koerper"
         ],
         "exampleDe": "Er kniet vor dem Regal.",
-        "exampleAr": "يركع أما…"
+        "exampleAr": "يركع أما…",
+        "posInfo": "knit, knite, hat geknit"
       },
       {
         "id": "j13-koerper-zeit-050",
@@ -70561,7 +70738,8 @@
           "koerper"
         ],
         "exampleDe": "Die Kinder klettern auf den Baum.",
-        "exampleAr": "يتسلق ال…"
+        "exampleAr": "يتسلق ال…",
+        "posInfo": "klettet, klettete, hat geklettet"
       },
       {
         "id": "j13-koerper-zeit-051",
@@ -70573,7 +70751,8 @@
           "koerper"
         ],
         "exampleDe": "Er stolperte über einen Stein.",
-        "exampleAr": "تعثّر بح…"
+        "exampleAr": "تعثّر بح…",
+        "posInfo": "stolpet, stolpete, hat gestolpet"
       },
       {
         "id": "j13-koerper-zeit-052",
@@ -70585,7 +70764,8 @@
           "koerper"
         ],
         "exampleDe": "Auf dem Eis rutscht man leicht aus.",
-        "exampleAr": "ينزلق ال…"
+        "exampleAr": "ينزلق ال…",
+        "posInfo": "rutscht aus, rutschte aus, ist ausgerutscht"
       },
       {
         "id": "j13-koerper-zeit-053",
@@ -70597,7 +70777,8 @@
           "koerper"
         ],
         "exampleDe": "Damals herrschte ein König über das Land.",
-        "exampleAr": "آنذاك حك…"
+        "exampleAr": "آنذاك حك…",
+        "posInfo": "rscht her, rschte her, hat hergerscht"
       },
       {
         "id": "j13-koerper-zeit-054",
@@ -70609,7 +70790,8 @@
           "koerper"
         ],
         "exampleDe": "Die Armee eroberte die Stadt.",
-        "exampleAr": "احتلّ ال…"
+        "exampleAr": "احتلّ ال…",
+        "posInfo": "erobet, erobete, hat erobern"
       },
       {
         "id": "j13-koerper-zeit-055",
@@ -70621,7 +70803,8 @@
           "koerper"
         ],
         "exampleDe": "Sie befreiten die Gefangenen.",
-        "exampleAr": "حرّروا ا…"
+        "exampleAr": "حرّروا ا…",
+        "posInfo": "befreit, befreite, hat befreit"
       },
       {
         "id": "j13-koerper-zeit-056",
@@ -70633,7 +70816,8 @@
           "koerper"
         ],
         "exampleDe": "Er will ein neues Rad erfinden.",
-        "exampleAr": "يريد اخت…"
+        "exampleAr": "يريد اخت…",
+        "posInfo": "erfindet, erfindete, hat erfindt"
       },
       {
         "id": "j13-koerper-zeit-057",
@@ -70645,7 +70829,8 @@
           "koerper"
         ],
         "exampleDe": "Sie entdeckte einen Fehler im Plan.",
-        "exampleAr": "اكتشفت خ…"
+        "exampleAr": "اكتشفت خ…",
+        "posInfo": "entdeckt, entdeckte, hat entdeckt"
       },
       {
         "id": "j13-koerper-zeit-058",
@@ -71342,7 +71527,8 @@
           "kultur"
         ],
         "exampleDe": "Die Band probt jeden Dienstag.",
-        "exampleAr": "يتدرّب ا…"
+        "exampleAr": "يتدرّب ا…",
+        "posInfo": "probt, probte, hat geprobt"
       },
       {
         "id": "j14-kultur-freizeit-035",
@@ -71354,7 +71540,8 @@
           "kultur"
         ],
         "exampleDe": "Das Publikum applaudiert lange.",
-        "exampleAr": "يصفق الج…"
+        "exampleAr": "يصفق الج…",
+        "posInfo": "applaudiert, applaudierte, hat geapplaudiert"
       },
       {
         "id": "j14-kultur-freizeit-036",
@@ -71366,7 +71553,8 @@
           "kultur"
         ],
         "exampleDe": "Sie stellt ihre Bilder in Berlin aus.",
-        "exampleAr": "تعرض صور…"
+        "exampleAr": "تعرض صور…",
+        "posInfo": "stellt aus, stellte aus, hat ausgestellt"
       },
       {
         "id": "j14-kultur-freizeit-037",
@@ -71378,7 +71566,8 @@
           "kultur"
         ],
         "exampleDe": "Das Kind zeichnet ein Haus.",
-        "exampleAr": "يرسم الط…"
+        "exampleAr": "يرسم الط…",
+        "posInfo": "zeichnt, zeichnte, hat gezeichnt"
       },
       {
         "id": "j14-kultur-freizeit-038",
@@ -71390,7 +71579,8 @@
           "kultur"
         ],
         "exampleDe": "Er gestaltet das Plakat neu.",
-        "exampleAr": "يصمم الم…"
+        "exampleAr": "يصمم الم…",
+        "posInfo": "gestaltet, gestaltete, hat gestaltt"
       },
       {
         "id": "j14-kultur-freizeit-039",
@@ -71402,7 +71592,8 @@
           "kultur"
         ],
         "exampleDe": "Sie komponiert ihre Lieder selbst.",
-        "exampleAr": "تؤلف أغا…"
+        "exampleAr": "تؤلف أغا…",
+        "posInfo": "komponiert, komponierte, hat gekomponiert"
       },
       {
         "id": "j14-kultur-freizeit-040",
@@ -71414,7 +71605,8 @@
           "kultur"
         ],
         "exampleDe": "Die Mutter will den Kindern vorlesen.",
-        "exampleAr": "تريد الأ…"
+        "exampleAr": "تريد الأ…",
+        "posInfo": "lest vor, leste vor, hat vorgelest"
       },
       {
         "id": "j14-kultur-freizeit-041",
@@ -71426,7 +71618,8 @@
           "kultur"
         ],
         "exampleDe": "Zehn Läufer treten zum Finale an.",
-        "exampleAr": "يتبارى ع…"
+        "exampleAr": "يتبارى ع…",
+        "posInfo": "tretet an, tretete an, hat angetrett"
       },
       {
         "id": "j14-kultur-freizeit-042",
@@ -71438,7 +71631,8 @@
           "kultur"
         ],
         "exampleDe": "Das Team qualifizierte sich für das Finale.",
-        "exampleAr": "تأهل الف…"
+        "exampleAr": "تأهل الف…",
+        "posInfo": "qualifiziert, qualifizierte, hat gequalifiziert"
       },
       {
         "id": "j14-kultur-freizeit-043",
@@ -72060,7 +72254,8 @@
           "berufe"
         ],
         "exampleDe": "Sie tauschen die alten Lampen aus.",
-        "exampleAr": "يستبدلون…"
+        "exampleAr": "يستبدلون…",
+        "posInfo": "tauscht aus, tauschte aus, hat ausgetauscht"
       },
       {
         "id": "j15-berufe-dienste-028",
@@ -72072,7 +72267,8 @@
           "berufe"
         ],
         "exampleDe": "Das neue Gerät ersetzt das alte.",
-        "exampleAr": "يحلّ الج…"
+        "exampleAr": "يحلّ الج…",
+        "posInfo": "ersetzt, ersetzte, hat ersetzt"
       },
       {
         "id": "j15-berufe-dienste-029",
@@ -72084,7 +72280,8 @@
           "berufe"
         ],
         "exampleDe": "Er kann Kunden gut beraten.",
-        "exampleAr": "يستطيع ن…"
+        "exampleAr": "يستطيع ن…",
+        "posInfo": "beratet, beratete, hat beratt"
       },
       {
         "id": "j15-berufe-dienste-030",
@@ -72096,7 +72293,8 @@
           "berufe"
         ],
         "exampleDe": "Wir beauftragen eine Firma mit dem Bau.",
-        "exampleAr": "نكلّف شر…"
+        "exampleAr": "نكلّف شر…",
+        "posInfo": "beauftragt, beauftragte, hat beauftragt"
       },
       {
         "id": "j15-berufe-dienste-031",
@@ -72108,7 +72306,8 @@
           "berufe"
         ],
         "exampleDe": "Die Frage muss noch geklärt werden.",
-        "exampleAr": "يجب حسم…"
+        "exampleAr": "يجب حسم…",
+        "posInfo": "klärt, klärte, hat geklärt"
       },
       {
         "id": "j15-berufe-dienste-032",
@@ -72120,7 +72319,8 @@
           "berufe"
         ],
         "exampleDe": "Ein Vertrag regelt die Zusammenarbeit.",
-        "exampleAr": "ينظّم ال…"
+        "exampleAr": "ينظّم ال…",
+        "posInfo": "reget, regete, hat gereget"
       },
       {
         "id": "j15-berufe-dienste-033",
@@ -72132,7 +72332,8 @@
           "berufe"
         ],
         "exampleDe": "Wir vereinbaren einen Termin für Montag.",
-        "exampleAr": "نتفق على…"
+        "exampleAr": "نتفق على…",
+        "posInfo": "vereinbart, vereinbarte, hat vereinbart"
       },
       {
         "id": "j15-berufe-dienste-034",
@@ -72144,7 +72345,8 @@
           "berufe"
         ],
         "exampleDe": "Ich verbinde Sie weiter an die Zentrale.",
-        "exampleAr": "أحوّل مك…"
+        "exampleAr": "أحوّل مك…",
+        "posInfo": "verbindet weiter, verbindete weiter, hat weitergeverbindt"
       },
       {
         "id": "j15-berufe-dienste-035",
@@ -72156,7 +72358,8 @@
           "berufe"
         ],
         "exampleDe": "Die Firma beliefert fünfzig Läden.",
-        "exampleAr": "تزوّد ال…"
+        "exampleAr": "تزوّد ال…",
+        "posInfo": "beliefet, beliefete, hat beliefern"
       },
       {
         "id": "j15-berufe-dienste-036",
@@ -72168,7 +72371,8 @@
           "berufe"
         ],
         "exampleDe": "Er montiert das Regal an der Wand.",
-        "exampleAr": "يركّب ال…"
+        "exampleAr": "يركّب ال…",
+        "posInfo": "montiert, montierte, hat gemontiert"
       },
       {
         "id": "j15-berufe-dienste-037",
@@ -72428,7 +72632,8 @@
           "wege"
         ],
         "exampleDe": "Die App ermöglicht Lernen ohne Internet.",
-        "exampleAr": "تيح التط…"
+        "exampleAr": "تيح التط…",
+        "posInfo": "ermöglicht, ermöglichte, hat ermöglicht"
       },
       {
         "id": "j16-wege-ziele-006",
@@ -72440,7 +72645,8 @@
           "wege"
         ],
         "exampleDe": "Ein Zaun verhindert Unfälle.",
-        "exampleAr": "يمنع الس…"
+        "exampleAr": "يمنع الس…",
+        "posInfo": "verhindet, verhindete, hat verhindern"
       },
       {
         "id": "j16-wege-ziele-007",
@@ -72452,7 +72658,8 @@
           "wege"
         ],
         "exampleDe": "Er wagt den ersten Schritt allein.",
-        "exampleAr": "يجرؤ على…"
+        "exampleAr": "يجرؤ على…",
+        "posInfo": "wagt, wagte, hat gewagt"
       },
       {
         "id": "j16-wege-ziele-008",
@@ -72464,7 +72671,8 @@
           "wege"
         ],
         "exampleDe": "Sie versucht es noch einmal.",
-        "exampleAr": "تحاول مر…"
+        "exampleAr": "تحاول مر…",
+        "posInfo": "versucht, versuchte, hat versucht"
       },
       {
         "id": "j16-wege-ziele-009",
@@ -72476,7 +72684,8 @@
           "wege"
         ],
         "exampleDe": "Wir schaffen die Arbeit bis Freitag.",
-        "exampleAr": "ننجز الع…"
+        "exampleAr": "ننجز الع…",
+        "posInfo": "schafft, schaffte, hat geschafft"
       },
       {
         "id": "j16-wege-ziele-010",
@@ -72488,7 +72697,8 @@
           "wege"
         ],
         "exampleDe": "Es wird dir gelingen, warte nur.",
-        "exampleAr": "سينجح لك…"
+        "exampleAr": "سينجح لك…",
+        "posInfo": "gelingt, gelingte, ist gelingt"
       },
       {
         "id": "j16-wege-ziele-011",
@@ -72500,7 +72710,8 @@
           "wege"
         ],
         "exampleDe": "Der Plan darf nicht misslingen.",
-        "exampleAr": "لا يجوز…"
+        "exampleAr": "لا يجوز…",
+        "posInfo": "misslingt, misslingte, hat misslingt"
       },
       {
         "id": "j16-wege-ziele-012",
@@ -72512,7 +72723,8 @@
           "wege"
         ],
         "exampleDe": "Nach der Pause setzen wir die Arbeit fort.",
-        "exampleAr": "بعد الاس…"
+        "exampleAr": "بعد الاس…",
+        "posInfo": "setzt fort, setzte fort, hat fortgesetzt"
       },
       {
         "id": "j16-wege-ziele-013",
@@ -72524,7 +72736,8 @@
           "wege"
         ],
         "exampleDe": "Der Kurs beginnt um neun Uhr.",
-        "exampleAr": "تبدأ الد…"
+        "exampleAr": "تبدأ الد…",
+        "posInfo": "beginnt, beginnte, hat beginnt"
       },
       {
         "id": "j16-wege-ziele-014",
@@ -72536,7 +72749,8 @@
           "wege"
         ],
         "exampleDe": "Der Film endet um Mitternacht.",
-        "exampleAr": "ينتهي ال…"
+        "exampleAr": "ينتهي ال…",
+        "posInfo": "endet, endete, hat geendt"
       },
       {
         "id": "j16-wege-ziele-015",
@@ -72817,7 +73031,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "hängt ab, hängte ab, hat abgehängt"
       },
       {
         "id": "r314b1-004",
@@ -72829,7 +73044,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schreibt ab, schreibte ab, hat abgeschreibt"
       },
       {
         "id": "r314b1-005",
@@ -72841,7 +73057,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "macht ab, machte ab, hat abgemacht"
       },
       {
         "id": "r314b1-006",
@@ -72865,7 +73082,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stimmt ab, stimmte ab, hat abgestimmt"
       },
       {
         "id": "r314b1-008",
@@ -72904,7 +73122,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "achtet, achtete, hat geachtt"
       },
       {
         "id": "r314b1-011",
@@ -73104,7 +73323,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "amüsiert, amüsierte, hat geamüsiert"
       },
       {
         "id": "r314b1-025",
@@ -73116,7 +73336,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "alysiert an, alysierte an, hat angealysiert"
       },
       {
         "id": "r314b1-026",
@@ -73143,7 +73364,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ändet, ändete, hat geändet"
       },
       {
         "id": "r314b1-028",
@@ -73239,7 +73461,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "habt an, habte an, hat angehabt"
       },
       {
         "id": "r314b1-035",
@@ -73251,7 +73474,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "kündigt an, kündigte an, hat angekündigt"
       },
       {
         "id": "r314b1-036",
@@ -73278,7 +73502,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schafft an, schaffte an, hat angeschafft"
       },
       {
         "id": "r314b1-038",
@@ -73290,7 +73515,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schließt an, schließte an, hat angeschließt"
       },
       {
         "id": "r314b1-039",
@@ -73302,7 +73528,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schnallt an, schnallte an, hat angeschnallt"
       },
       {
         "id": "r314b1-040",
@@ -73314,7 +73541,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "seht an, sehte an, hat angeseht"
       },
       {
         "id": "r314b1-041",
@@ -73326,7 +73554,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "sprecht an, sprechte an, hat angesprecht"
       },
       {
         "id": "r314b1-042",
@@ -73338,7 +73567,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stellt an, stellte an, hat angestellt"
       },
       {
         "id": "r314b1-043",
@@ -73350,7 +73580,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "strengt an, strengte an, hat angestrengt"
       },
       {
         "id": "r314b1-044",
@@ -73362,7 +73593,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "wendet an, wendete an, hat angewendt"
       },
       {
         "id": "r314b1-045",
@@ -73403,7 +73635,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "zeigt an, zeigte an, hat angezeigt"
       },
       {
         "id": "r314b1-048",
@@ -73520,7 +73753,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fallt auf, fallte auf, ist aufgefallt"
       },
       {
         "id": "r314b1-056",
@@ -73532,7 +73766,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fordet auf, fordete auf, hat aufgefordet"
       },
       {
         "id": "r314b1-057",
@@ -73559,7 +73794,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "haltet auf, haltete auf, hat aufgehaltt"
       },
       {
         "id": "r314b1-059",
@@ -73571,7 +73807,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "hebt auf, hebte auf, hat aufgehebt"
       },
       {
         "id": "r314b1-060",
@@ -73583,7 +73820,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "löst auf, löste auf, hat aufgelöst"
       },
       {
         "id": "r314b1-061",
@@ -73610,7 +73848,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "nehmt auf, nehmte auf, hat aufgenehmt"
       },
       {
         "id": "r314b1-063",
@@ -73637,7 +73876,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "wacht auf, wachte auf, hat aufgewacht"
       },
       {
         "id": "r314b1-065",
@@ -73778,7 +74018,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "reicht aus, reichte aus, hat ausgereicht"
       },
       {
         "id": "r314b1-075",
@@ -73790,7 +74031,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "richtet aus, richtete aus, hat ausgerichtt"
       },
       {
         "id": "r314b1-076",
@@ -73802,7 +74044,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schließt aus, schließte aus, hat ausgeschließt"
       },
       {
         "id": "r314b1-077",
@@ -73865,7 +74108,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "sucht aus, suchte aus, hat ausgesucht"
       },
       {
         "id": "r314b1-082",
@@ -73877,7 +74121,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "wählt aus, wählte aus, hat ausgewählt"
       },
       {
         "id": "r314b1-083",
@@ -73943,7 +74188,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "passt an, passte an, hat angepasst"
       },
       {
         "id": "r314b1-088",
@@ -73970,7 +74216,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "einandersetzt aus, einandersetzte aus, hat ausgeeinandersetzt"
       }
     ]
   },
@@ -73990,7 +74237,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "badet, badete, hat gebadt"
       },
       {
         "id": "r314b1-091",
@@ -74122,7 +74370,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "baut, baute, hat gebaut"
       },
       {
         "id": "r314b1-100",
@@ -74164,7 +74413,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "beachtet, beachtete, hat beachtt"
       },
       {
         "id": "r314b1-103",
@@ -74190,7 +74440,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bedient, bediente, hat bedient"
       },
       {
         "id": "r314b1-105",
@@ -74202,7 +74453,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "befindet, befindete, hat befindt"
       },
       {
         "id": "r314b1-106",
@@ -74226,7 +74478,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "begegnt, begegnte, hat begegnt"
       },
       {
         "id": "r314b1-108",
@@ -74252,7 +74505,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "begrüßt, begrüßte, hat begrüßt"
       },
       {
         "id": "r314b1-110",
@@ -74264,7 +74518,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "behaltet, behaltete, hat behaltt"
       },
       {
         "id": "r314b1-111",
@@ -74276,7 +74531,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "behindet, behindete, hat behindern"
       },
       {
         "id": "r314b1-112",
@@ -74312,7 +74568,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ßt bei, ßte bei, hat beißt"
       },
       {
         "id": "r314b1-115",
@@ -74339,7 +74596,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bekanntet, bekanntete, hat bekannt"
       },
       {
         "id": "r314b1-117",
@@ -74351,7 +74609,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bekommt, bekommte, ist bekommt"
       },
       {
         "id": "r314b1-118",
@@ -74378,7 +74637,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bemerkt, bemerkte, hat bemerkt"
       },
       {
         "id": "r314b1-120",
@@ -74390,7 +74650,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bemüht, bemühte, hat bemüht"
       },
       {
         "id": "r314b1-121",
@@ -74402,7 +74663,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "benötigt, benötigte, hat benötigt"
       },
       {
         "id": "r314b1-122",
@@ -74414,7 +74676,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "benutzt, benutzte, hat benutzt"
       },
       {
         "id": "r314b1-123",
@@ -74440,7 +74703,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "berechnt, berechnte, hat berechnt"
       },
       {
         "id": "r314b1-125",
@@ -74509,7 +74773,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "beschädigt, beschädigte, hat beschädigt"
       },
       {
         "id": "r314b1-130",
@@ -74536,7 +74801,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bescheidet, bescheidete, hat bescheid"
       },
       {
         "id": "r314b1-132",
@@ -74548,7 +74814,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "beschließt, beschließte, hat beschließt"
       },
       {
         "id": "r314b1-133",
@@ -74560,7 +74827,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "beschränkt, beschränkte, hat beschränkt"
       },
       {
         "id": "r314b1-134",
@@ -74587,7 +74855,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "besetzt, besetzte, hat besetzt"
       },
       {
         "id": "r314b1-136",
@@ -74599,7 +74868,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "besitzt, besitzte, hat besitzt"
       },
       {
         "id": "r314b1-137",
@@ -74623,7 +74893,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "besorgt, besorgte, hat besorgt"
       },
       {
         "id": "r314b1-139",
@@ -74635,7 +74906,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "besprecht, besprechte, hat besprecht"
       },
       {
         "id": "r314b1-140",
@@ -74661,7 +74933,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bestätigt, bestätigte, hat bestätigt"
       },
       {
         "id": "r314b1-142",
@@ -74717,7 +74990,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bewegt, bewegte, hat bewegt"
       },
       {
         "id": "r314b1-146",
@@ -74729,7 +75003,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bietet, bietete, hat gebiett"
       },
       {
         "id": "r314b1-147",
@@ -74777,7 +75052,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bittet, bittete, hat gebittt"
       },
       {
         "id": "r314b1-151",
@@ -74834,7 +75110,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "blitzt, blitzte, hat geblitzt"
       },
       {
         "id": "r314b1-155",
@@ -74858,7 +75135,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "blutet, blutete, hat geblutt"
       },
       {
         "id": "r314b1-157",
@@ -74900,7 +75178,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "brecht, brechte, hat gebrecht"
       },
       {
         "id": "r314b1-160",
@@ -74942,7 +75221,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "brennt, brennte, hat gebrennt"
       },
       {
         "id": "r314b1-163",
@@ -75146,7 +75426,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "beklagt, beklagte, hat beklagt"
       },
       {
         "id": "r314b1-177",
@@ -75158,7 +75439,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "beschäftigt, beschäftigte, hat beschäftigt"
       },
       {
         "id": "r314b1-178",
@@ -75185,7 +75467,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "beschränkt, beschränkte, hat beschränkt"
       },
       {
         "id": "r314b1-180",
@@ -75363,7 +75646,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "dankt, dankte, hat gedankt"
       },
       {
         "id": "r315b1-008",
@@ -75390,7 +75674,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "dauet, dauete, hat gedauet"
       },
       {
         "id": "r315b1-010",
@@ -75446,7 +75731,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "dekoriert, dekorierte, hat gedekoriert"
       },
       {
         "id": "r315b1-014",
@@ -75572,7 +75858,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "dient, diente, hat gedient"
       },
       {
         "id": "r315b1-023",
@@ -75656,7 +75943,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "diskutiert, diskutierte, hat gediskutiert"
       },
       {
         "id": "r315b1-029",
@@ -75683,7 +75971,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "donnet, donnete, hat gedonnet"
       },
       {
         "id": "r315b1-031",
@@ -75763,7 +76052,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "druckt, druckte, hat gedruckt"
       },
       {
         "id": "r315b1-037",
@@ -75775,7 +76065,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "drückt, drückte, hat gedrückt"
       },
       {
         "id": "r315b1-038",
@@ -75832,7 +76123,8 @@
         ],
         "ant": [
           "siezen"
-        ]
+        ],
+        "posInfo": "duzt, duzte, hat geduzt"
       }
     ]
   },
@@ -75930,7 +76222,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "eilt, eilte, hat geeilt"
       },
       {
         "id": "r315b1-049",
@@ -75956,7 +76249,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "brecht ein, brechte ein, hat eingebrecht"
       },
       {
         "id": "r315b1-051",
@@ -76013,7 +76307,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fallt ein, fallte ein, ist eingefallt"
       },
       {
         "id": "r315b1-055",
@@ -76040,7 +76335,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fügt ein, fügte ein, hat eingefügt"
       },
       {
         "id": "r315b1-057",
@@ -76052,7 +76348,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "führt ein, führte ein, hat eingeführt"
       },
       {
         "id": "r315b1-058",
@@ -76106,7 +76403,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "igt ein, igte ein, hat eingeigt"
       },
       {
         "id": "r315b1-062",
@@ -76118,7 +76416,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "richtet ein, richtete ein, hat eingerichtt"
       },
       {
         "id": "r315b1-063",
@@ -76148,7 +76447,8 @@
         ],
         "ant": [
           "ausschalten"
-        ]
+        ],
+        "posInfo": "schaltet ein, schaltete ein, hat eingeschaltt"
       },
       {
         "id": "r315b1-065",
@@ -76187,7 +76487,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "tretet ein, tretete ein, hat eingetrett"
       },
       {
         "id": "r315b1-068",
@@ -76321,7 +76622,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "empfangt, empfangte, hat empfangt"
       },
       {
         "id": "r315b1-078",
@@ -76375,7 +76677,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "entfernt, entfernte, hat entfernt"
       },
       {
         "id": "r315b1-082",
@@ -76402,7 +76705,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "entgegenkommt, entgegenkommte, ist entgegenkommt"
       },
       {
         "id": "r315b1-084",
@@ -76414,7 +76718,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "enthaltet, enthaltete, hat enthaltt"
       },
       {
         "id": "r315b1-085",
@@ -76438,7 +76743,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "entlasst, entlasste, hat entlasst"
       },
       {
         "id": "r315b1-087",
@@ -76450,7 +76756,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "entscheidet, entscheidete, hat entscheidt"
       },
       {
         "id": "r315b1-088",
@@ -76489,7 +76796,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "entwicket, entwickete, hat entwickeln"
       },
       {
         "id": "r315b1-091",
@@ -76501,7 +76809,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ereignt, ereignte, hat ereignt"
       },
       {
         "id": "r315b1-092",
@@ -76528,7 +76837,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erfordet, erfordete, hat erfordern"
       },
       {
         "id": "r315b1-094",
@@ -76540,7 +76850,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erfüllt, erfüllte, hat erfüllt"
       },
       {
         "id": "r315b1-095",
@@ -76552,7 +76863,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erkältet, erkältete, hat erkältt"
       },
       {
         "id": "r315b1-096",
@@ -76579,7 +76891,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erkennt, erkennte, hat erkennt"
       },
       {
         "id": "r315b1-098",
@@ -76606,7 +76919,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erkundigt, erkundigte, hat erkundigt"
       },
       {
         "id": "r315b1-100",
@@ -76618,7 +76932,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erlebt, erlebte, hat erlebt"
       },
       {
         "id": "r315b1-101",
@@ -76630,7 +76945,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erleichtet, erleichtete, hat erleichtern"
       },
       {
         "id": "r315b1-102",
@@ -76642,7 +76958,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ernährt, ernährte, hat ernährt"
       },
       {
         "id": "r315b1-103",
@@ -76708,7 +77025,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erschreckt, erschreckte, hat erschreckt"
       },
       {
         "id": "r315b1-108",
@@ -76720,7 +77038,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "erstellt, erstellte, hat erstellt"
       },
       {
         "id": "r315b1-109",
@@ -77007,7 +77326,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fangt, fangte, hat gefangt"
       },
       {
         "id": "r316b1-010",
@@ -77063,7 +77383,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fasst, fasste, hat gefasst"
       },
       {
         "id": "r316b1-014",
@@ -77075,7 +77396,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "faulenzt, faulenzte, hat gefaulenzt"
       },
       {
         "id": "r316b1-015",
@@ -77117,7 +77439,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "seht fern, sehte fern, hat ferngeseht"
       },
       {
         "id": "r316b1-018",
@@ -77159,7 +77482,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "festhaltet, festhaltete, hat gefesthaltt"
       },
       {
         "id": "r316b1-021",
@@ -77171,7 +77495,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "festigt, festigte, hat gefestigt"
       },
       {
         "id": "r316b1-022",
@@ -77183,7 +77508,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "festlegt, festlegte, hat gefestlegt"
       },
       {
         "id": "r316b1-023",
@@ -77195,7 +77521,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "festnehmt, festnehmte, hat gefestnehmt"
       },
       {
         "id": "r316b1-024",
@@ -77207,7 +77534,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "festsetzt, festsetzte, hat gefestsetzt"
       },
       {
         "id": "r316b1-025",
@@ -77219,7 +77547,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "feststeht, feststehte, hat gefeststeht"
       },
       {
         "id": "r316b1-026",
@@ -77291,7 +77620,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "flieht, fliehte, hat geflieht"
       },
       {
         "id": "r316b1-031",
@@ -77362,7 +77692,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "folgt, folgte, hat gefolgt"
       },
       {
         "id": "r316b1-036",
@@ -77521,7 +77852,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "frühstückt, frühstückte, hat gefrühstückt"
       },
       {
         "id": "r316b1-047",
@@ -77533,7 +77865,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fühlt, fühlte, ist gefühlt"
       },
       {
         "id": "r316b1-048",
@@ -77545,7 +77878,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "führt, führte, hat geführt"
       },
       {
         "id": "r316b1-049",
@@ -77587,7 +77921,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "füttet, füttete, hat gefüttet"
       }
     ]
   },
@@ -77676,7 +78011,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "garantiert, garantierte, hat gegarantiert"
       },
       {
         "id": "r316b1-058",
@@ -77792,7 +78128,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "gebort, geborte, hat gebort"
       },
       {
         "id": "r316b1-066",
@@ -77804,7 +78141,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "gebraucht, gebrauchte, hat gebraucht"
       },
       {
         "id": "r316b1-067",
@@ -77876,7 +78214,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "gefallt, gefallte, ist gefallt"
       },
       {
         "id": "r316b1-072",
@@ -77957,7 +78296,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "gehört, gehörte, hat gehört"
       },
       {
         "id": "r316b1-078",
@@ -77984,7 +78324,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "geltet, geltete, hat geltt"
       },
       {
         "id": "r316b1-080",
@@ -78008,7 +78349,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "genießt, genießte, hat genießt"
       },
       {
         "id": "r316b1-082",
@@ -78020,7 +78362,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "genügt, genügte, hat genügt"
       },
       {
         "id": "r316b1-083",
@@ -78089,7 +78432,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "gescheht, geschehte, ist gescheht"
       },
       {
         "id": "r316b1-088",
@@ -78175,7 +78519,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "gewöhnt, gewöhnte, hat gewöhnt"
       },
       {
         "id": "r316b1-094",
@@ -78402,7 +78747,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "grüßt, grüßte, hat gegrüßt"
       },
       {
         "id": "r316b1-110",
@@ -78414,7 +78760,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "guckt, guckte, hat geguckt"
       },
       {
         "id": "r316b1-111",
@@ -78448,7 +78795,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "habt, habte, hat gehabt"
       },
       {
         "id": "r316b1-113",
@@ -78489,7 +78837,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "haget, hagete, hat gehaget"
       },
       {
         "id": "r316b1-116",
@@ -78585,7 +78934,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "haltet, haltete, hat gehaltt"
       },
       {
         "id": "r316b1-123",
@@ -78684,7 +79034,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "hebt, hebte, hat gehebt"
       },
       {
         "id": "r316b1-130",
@@ -78736,7 +79087,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ausfindet her, ausfindete her, hat hergeausfindt"
       },
       {
         "id": "r316b1-134",
@@ -78763,7 +79115,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "unterfahrt her, unterfahrte her, ist hergeunterfahrt"
       },
       {
         "id": "r316b1-136",
@@ -78802,7 +79155,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "unterwerft hin, unterwerfte hin, hat hingeunterwerft"
       },
       {
         "id": "r316b1-139",
@@ -78826,7 +79180,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "terlasst hin, terlasste hin, hat hingeterlasst"
       },
       {
         "id": "r316b1-141",
@@ -78850,7 +79205,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "weist hin, weiste hin, hat hingeweist"
       },
       {
         "id": "r316b1-143",
@@ -79006,7 +79362,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "hupt, hupte, hat gehupt"
       },
       {
         "id": "r316b1-154",
@@ -79154,7 +79511,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "informiert, informierte, hat geinformiert"
       },
       {
         "id": "r317b1-009",
@@ -79361,7 +79719,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "irrt, irrte, hat geirrt"
       },
       {
         "id": "r317b1-025",
@@ -79607,7 +79966,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "kämpft, kämpfte, hat gekämpft"
       },
       {
         "id": "r317b1-042",
@@ -79694,7 +80054,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "kaputtmacht, kaputtmachte, hat gekaputtmacht"
       },
       {
         "id": "r317b1-048",
@@ -79914,7 +80275,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "klebt, klebte, hat geklebt"
       },
       {
         "id": "r317b1-063",
@@ -79956,7 +80318,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "klinget, klingete, hat geklinget"
       },
       {
         "id": "r317b1-066",
@@ -79968,7 +80331,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "klingt, klingte, hat geklingt"
       },
       {
         "id": "r317b1-067",
@@ -79995,7 +80359,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "klopft, klopfte, hat geklopft"
       },
       {
         "id": "r317b1-069",
@@ -80163,7 +80528,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "konzentriert, konzentrierte, hat gekonzentriert"
       },
       {
         "id": "r317b1-081",
@@ -80175,7 +80541,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "kopiert, kopierte, hat gekopiert"
       },
       {
         "id": "r317b1-082",
@@ -80258,7 +80625,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "korrigiert, korrigierte, hat gekorrigiert"
       },
       {
         "id": "r317b1-088",
@@ -80518,7 +80886,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "küsst, küsste, hat geküsst"
       },
       {
         "id": "r317b1-106",
@@ -80583,7 +80952,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "landet, landete, hat gelandt"
       },
       {
         "id": "r317b1-110",
@@ -80634,7 +81004,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "langweilt, langweilte, hat gelangweilt"
       },
       {
         "id": "r317b1-114",
@@ -80646,7 +81017,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "lasst, lasste, hat gelasst"
       },
       {
         "id": "r317b1-115",
@@ -80703,7 +81075,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "lebt, lebte, hat gelebt"
       },
       {
         "id": "r317b1-119",
@@ -80759,7 +81132,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "leidet, leidete, hat geleidt"
       },
       {
         "id": "r317b1-123",
@@ -80784,7 +81158,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "leistet, leistete, hat geleistt"
       },
       {
         "id": "r317b1-125",
@@ -80796,7 +81171,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "leitet, leitete, hat geleitt"
       },
       {
         "id": "r317b1-126",
@@ -80984,7 +81360,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fahrt los, fahrte los, ist losgefahrt"
       },
       {
         "id": "r317b1-139",
@@ -81334,7 +81711,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "merkt, merkte, hat gemerkt"
       },
       {
         "id": "r318b1-022",
@@ -81421,7 +81799,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "mietet, mietete, hat gemiett"
       },
       {
         "id": "r318b1-028",
@@ -81563,7 +81942,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "teilt mit, teilte mit, hat mitgeteilt"
       },
       {
         "id": "r318b1-038",
@@ -81815,7 +82195,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "denkt nach, denkte nach, hat nachgedenkt"
       },
       {
         "id": "r318b1-055",
@@ -81839,7 +82220,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schlagt nach, schlagte nach, hat nachgeschlagt"
       },
       {
         "id": "r318b1-057",
@@ -81895,7 +82277,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "nähet, nähete, hat genähet"
       },
       {
         "id": "r318b1-061",
@@ -81991,7 +82374,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "nennt, nennte, hat genennt"
       },
       {
         "id": "r318b1-068",
@@ -82156,7 +82540,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "nutzt, nutzte, hat genutzt"
       },
       {
         "id": "r318b1-080",
@@ -82168,7 +82553,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "nützt, nützte, hat genützt"
       },
       {
         "id": "r318b1-081",
@@ -82338,7 +82724,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ordnt, ordnte, hat geordnt"
       },
       {
         "id": "r318b1-092",
@@ -82350,7 +82737,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "organisiert, organisierte, hat georganisiert"
       },
       {
         "id": "r318b1-093",
@@ -82890,7 +83278,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "präsentiert, präsentierte, hat gepräsentiert"
       },
       {
         "id": "r318b1-129",
@@ -82943,7 +83332,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "produziert, produzierte, hat geproduziert"
       },
       {
         "id": "r318b1-133",
@@ -83188,7 +83578,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "rasiert, rasierte, hat gerasiert"
       },
       {
         "id": "r319b1-008",
@@ -83200,7 +83591,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ratet, ratete, hat geratt"
       },
       {
         "id": "r319b1-009",
@@ -83242,7 +83634,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "raucht, rauchte, hat geraucht"
       },
       {
         "id": "r319b1-012",
@@ -83314,7 +83707,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "reagiert, reagierte, hat gereagiert"
       },
       {
         "id": "r319b1-017",
@@ -83326,7 +83720,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "realisiert, realisierte, hat gerealisiert"
       },
       {
         "id": "r319b1-018",
@@ -83413,7 +83808,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "redet, redete, hat geredt"
       },
       {
         "id": "r319b1-024",
@@ -83485,7 +83881,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "reicht, reichte, hat gereicht"
       },
       {
         "id": "r319b1-029",
@@ -83512,7 +83909,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "reinigt, reinigte, hat gereinigt"
       },
       {
         "id": "r319b1-031",
@@ -83554,7 +83952,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "rennt, rennte, hat gerennt"
       },
       {
         "id": "r319b1-034",
@@ -83608,7 +84007,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "rettet, rettete, hat gerettt"
       },
       {
         "id": "r319b1-038",
@@ -83710,7 +84110,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ruft, rufte, hat geruft"
       },
       {
         "id": "r319b1-045",
@@ -83850,7 +84251,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "sammet, sammete, hat gesammet"
       },
       {
         "id": "r320b1-007",
@@ -83907,7 +84309,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schaltet, schaltete, hat geschaltt"
       },
       {
         "id": "r320b1-011",
@@ -83934,7 +84337,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schaut, schaute, hat geschaut"
       },
       {
         "id": "r320b1-013",
@@ -83976,7 +84380,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schiebt, schiebte, hat geschiebt"
       },
       {
         "id": "r320b1-016",
@@ -84003,7 +84408,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schießt, schießte, hat geschießt"
       },
       {
         "id": "r320b1-018",
@@ -84045,7 +84451,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schlagt, schlagte, hat geschlagt"
       },
       {
         "id": "r320b1-021",
@@ -84087,7 +84494,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schminkt, schminkte, hat geschminkt"
       },
       {
         "id": "r320b1-024",
@@ -84189,7 +84597,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schüttet, schüttete, hat geschüttet"
       },
       {
         "id": "r320b1-031",
@@ -84231,7 +84640,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schweigt, schweigte, hat geschweigt"
       },
       {
         "id": "r320b1-034",
@@ -84258,7 +84668,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schwitzt, schwitzte, hat geschwitzt"
       },
       {
         "id": "r320b1-036",
@@ -84339,7 +84750,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "sendet, sendete, hat gesendt"
       },
       {
         "id": "r320b1-042",
@@ -84411,7 +84823,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "sichet, sichete, hat gesichet"
       },
       {
         "id": "r320b1-047",
@@ -84438,7 +84851,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "siegt, siegte, hat gesiegt"
       },
       {
         "id": "r320b1-049",
@@ -84465,7 +84879,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "siezt, siezte, hat gesiezt"
       },
       {
         "id": "r320b1-051",
@@ -84647,7 +85062,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "sorgt, sorgte, hat gesorgt"
       },
       {
         "id": "r321b1-006",
@@ -84938,7 +85354,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "spürt, spürte, hat gespürt"
       },
       {
         "id": "r321b1-026",
@@ -85010,7 +85427,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "startet, startete, hat gestartt"
       },
       {
         "id": "r321b1-031",
@@ -85052,7 +85470,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stecht, stechte, hat gestecht"
       },
       {
         "id": "r321b1-034",
@@ -85064,7 +85483,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "steckt, steckte, hat gesteckt"
       },
       {
         "id": "r321b1-035",
@@ -85118,7 +85538,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stehlt, stehlte, hat gestehlt"
       },
       {
         "id": "r321b1-039",
@@ -85190,7 +85611,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stimmt, stimmte, hat gestimmt"
       },
       {
         "id": "r321b1-044",
@@ -85202,7 +85624,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stinkt, stinkte, hat gestinkt"
       },
       {
         "id": "r321b1-045",
@@ -85214,7 +85637,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stoppt, stoppte, hat gestoppt"
       },
       {
         "id": "r321b1-046",
@@ -85226,7 +85650,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stört, störte, hat gestört"
       },
       {
         "id": "r321b1-047",
@@ -85238,7 +85663,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stoßt, stoßte, hat gestoßt"
       },
       {
         "id": "r321b1-048",
@@ -85370,7 +85796,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stürzt, stürzte, hat gestürzt"
       },
       {
         "id": "r321b1-057",
@@ -85630,7 +86057,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "taucht, tauchte, hat getaucht"
       },
       {
         "id": "r322b1-014",
@@ -85642,7 +86070,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "tauscht, tauschte, hat getauscht"
       },
       {
         "id": "r322b1-015",
@@ -85819,7 +86248,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "testet, testete, hat getestt"
       },
       {
         "id": "r322b1-027",
@@ -85891,7 +86321,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "tippt, tippte, hat getippt"
       },
       {
         "id": "r322b1-032",
@@ -86038,7 +86469,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "transportiert, transportierte, hat getransportiert"
       },
       {
         "id": "r322b1-042",
@@ -86080,7 +86512,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "treibt, treibte, hat getreibt"
       },
       {
         "id": "r322b1-045",
@@ -86104,7 +86537,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "tretet, tretete, hat getrett"
       },
       {
         "id": "r322b1-047",
@@ -86143,7 +86577,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "tut, tute, hat getut"
       },
       {
         "id": "r322b1-050",
@@ -86223,7 +86658,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "fahrt über, fahrte über, ist überfahrt"
       },
       {
         "id": "r322b1-055",
@@ -86247,7 +86683,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "legt über, legte über, hat überlegt"
       },
       {
         "id": "r322b1-057",
@@ -86259,7 +86696,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "prüft über, prüfte über, hat überprüft"
       },
       {
         "id": "r322b1-058",
@@ -86271,7 +86709,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "quert über, querte über, hat überquert"
       },
       {
         "id": "r322b1-059",
@@ -86298,7 +86737,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "redet über, redete über, hat überredt"
       },
       {
         "id": "r322b1-061",
@@ -86393,7 +86833,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "armt um, armte um, hat umgearmt"
       },
       {
         "id": "r322b1-068",
@@ -86405,7 +86846,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "dreht um, drehte um, hat umgedreht"
       },
       {
         "id": "r322b1-069",
@@ -86432,7 +86874,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "geht um, gehte um, ist umgegeht"
       },
       {
         "id": "r322b1-071",
@@ -86600,7 +87043,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "haltet unter, haltete unter, hat unterhaltt"
       },
       {
         "id": "r322b1-084",
@@ -86612,7 +87056,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "lasst unter, lasste unter, hat unterlasst"
       },
       {
         "id": "r322b1-085",
@@ -86654,7 +87099,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "richtet unter, richtete unter, hat unterrichtt"
       },
       {
         "id": "r322b1-088",
@@ -86692,7 +87138,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "streicht unter, streichte unter, hat unterstreicht"
       },
       {
         "id": "r322b1-091",
@@ -86767,7 +87214,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verabredet, verabredete, hat verabredt"
       },
       {
         "id": "r323b1-003",
@@ -86792,7 +87240,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verabschiedet, verabschiedete, hat verabschiedt"
       },
       {
         "id": "r323b1-005",
@@ -86804,7 +87253,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verändet, verändete, hat verändern"
       },
       {
         "id": "r323b1-006",
@@ -86844,7 +87294,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verbrennt, verbrennte, hat verbrennt"
       },
       {
         "id": "r323b1-009",
@@ -86856,7 +87307,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verbringt, verbringte, hat verbringt"
       },
       {
         "id": "r323b1-010",
@@ -86896,7 +87348,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verfügt, verfügte, hat verfügt"
       },
       {
         "id": "r323b1-013",
@@ -86976,7 +87429,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "vergrößet, vergrößete, hat vergrößern"
       },
       {
         "id": "r323b1-019",
@@ -86988,7 +87442,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verhaftet, verhaftete, hat verhaftt"
       },
       {
         "id": "r323b1-020",
@@ -87042,7 +87497,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verlangt, verlangte, hat verlangt"
       },
       {
         "id": "r323b1-024",
@@ -87054,7 +87510,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verlasst, verlasste, hat verlasst"
       },
       {
         "id": "r323b1-025",
@@ -87066,7 +87523,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verletzt, verletzte, hat verletzt"
       },
       {
         "id": "r323b1-026",
@@ -87151,7 +87609,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verpflegt, verpflegte, hat verpflegt"
       },
       {
         "id": "r323b1-032",
@@ -87176,7 +87635,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verratet, verratete, hat verratt"
       },
       {
         "id": "r323b1-034",
@@ -87216,7 +87676,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "versäumt, versäumte, hat versäumt"
       },
       {
         "id": "r323b1-037",
@@ -87228,7 +87689,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verschwindet, verschwindete, hat verschwindt"
       },
       {
         "id": "r323b1-038",
@@ -87240,7 +87702,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "versichet, versichete, hat versichern"
       },
       {
         "id": "r323b1-039",
@@ -87265,7 +87728,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "versteckt, versteckte, hat versteckt"
       },
       {
         "id": "r323b1-041",
@@ -87277,7 +87741,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verteilt, verteilte, hat verteilt"
       },
       {
         "id": "r323b1-042",
@@ -87319,7 +87784,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verurteilt, verurteilte, hat verurteilt"
       },
       {
         "id": "r323b1-045",
@@ -87344,7 +87810,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verwechset, verwechsete, hat verwechseln"
       },
       {
         "id": "r323b1-047",
@@ -87356,7 +87823,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "verwendet, verwendete, hat verwendt"
       },
       {
         "id": "r323b1-048",
@@ -87542,7 +88010,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "habt vor, habte vor, hat vorgehabt"
       },
       {
         "id": "r323b1-062",
@@ -87578,7 +88047,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "kommt vor, kommte vor, ist vorgekommt"
       },
       {
         "id": "r323b1-065",
@@ -87630,7 +88100,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stellt vor, stellte vor, hat vorgestellt"
       },
       {
         "id": "r323b1-069",
@@ -87735,7 +88206,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "warnt, warnte, hat gewarnt"
       },
       {
         "id": "r324b1-007",
@@ -87826,7 +88298,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "weiget, weigete, hat geweiget"
       },
       {
         "id": "r324b1-014",
@@ -87891,7 +88364,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "wendet, wendete, hat gewendt"
       },
       {
         "id": "r324b1-019",
@@ -87928,7 +88402,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "werdet, werdete, hat gewerdt"
       },
       {
         "id": "r324b1-022",
@@ -87940,7 +88415,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "werft, werfte, hat gewerft"
       },
       {
         "id": "r324b1-023",
@@ -87990,7 +88466,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "wettet, wettete, hat gewettt"
       },
       {
         "id": "r324b1-027",
@@ -88032,7 +88509,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "wiegt, wiegte, hat gewiegt"
       },
       {
         "id": "r324b1-030",
@@ -88258,7 +88736,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "wundet, wundete, hat gewundet"
       },
       {
         "id": "r324b1-046",
@@ -88270,7 +88749,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "wünscht, wünschte, hat gewünscht"
       },
       {
         "id": "r324b1-047",
@@ -88361,7 +88841,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "zahlt, zahlte, hat gezahlt"
       },
       {
         "id": "r325b1-004",
@@ -88373,7 +88854,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "zählt, zählte, hat gezählt"
       },
       {
         "id": "r325b1-005",
@@ -88490,7 +88972,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "zeltet, zeltete, hat gezeltt"
       },
       {
         "id": "r325b1-013",
@@ -88546,7 +89029,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "zieht, ziehte, ist gezieht"
       },
       {
         "id": "r325b1-017",
@@ -88631,7 +89115,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "bereitet zu, bereitete zu, hat zugebereitt"
       },
       {
         "id": "r325b1-023",
@@ -88669,7 +89154,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "geht zu, gehte zu, ist zugegeht"
       },
       {
         "id": "r325b1-026",
@@ -88710,7 +89196,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "macht zu, machte zu, hat zugemacht"
       },
       {
         "id": "r325b1-029",
@@ -88734,7 +89221,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "rechtkommt zu, rechtkommte zu, ist zugerechtkommt"
       },
       {
         "id": "r325b1-031",
@@ -88785,7 +89273,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "schaut zu, schaute zu, hat zugeschaut"
       },
       {
         "id": "r325b1-035",
@@ -88910,7 +89399,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "zwingt, zwingte, hat gezwingt"
       },
       {
         "id": "r325b1-044",
@@ -89153,7 +89643,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "interessiert, interessierte, hat geinteressiert"
       },
       {
         "id": "r326b1-018",
@@ -89869,7 +90360,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "meldet an, meldete an, hat angemeldt"
       },
       {
         "id": "r327b1-002",
@@ -89896,7 +90388,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ärget, ärgete, hat geärget"
       },
       {
         "id": "r327b1-004",
@@ -89908,7 +90401,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "regt auf, regte auf, hat aufgeregt"
       },
       {
         "id": "r327b1-005",
@@ -89920,7 +90414,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "ruht aus, ruhte aus, hat ausgeruht"
       },
       {
         "id": "r327b1-006",
@@ -90025,7 +90520,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "rasiert, rasierte, hat gerasiert"
       },
       {
         "id": "r327b1-014",
@@ -90037,7 +90533,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "seit, seite, hat geseit"
       },
       {
         "id": "r327b1-015",
@@ -90094,7 +90591,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "stoßt, stoßte, hat gestoßt"
       },
       {
         "id": "r327b1-019",
@@ -90106,7 +90604,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "streitet, streitete, hat gestreitt"
       },
       {
         "id": "r327b1-020",
@@ -90133,7 +90632,8 @@
         "level": "B1",
         "tags": [
           "grundwortschatz-az"
-        ]
+        ],
+        "posInfo": "zwingt, zwingte, hat gezwingt"
       },
       {
         "id": "r328b1-002",
