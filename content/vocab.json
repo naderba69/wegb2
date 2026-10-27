@@ -59532,7 +59532,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Verfassungen"
+        "plural": "die Verfassungen",
+        "img": "/cards/verfassung.png"
       },
       {
         "de": "die Sozialversicherung, -en",
@@ -59545,7 +59546,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Sozialversicherungen"
+        "plural": "die Sozialversicherungen",
+        "img": "/cards/sozialversicherung.png"
       },
       {
         "de": "der Sozialstaat, die Sozialstaaten",
@@ -59557,7 +59559,8 @@
         "tags": [
           "b2-politik-demokratie"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/sozialstaat.png"
       },
       {
         "de": "der Welthandel",
