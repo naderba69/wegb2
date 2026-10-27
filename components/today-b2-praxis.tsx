@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { useProgress } from "@/lib/store";
 import { buildDay } from "@/lib/plan";
+import { texts as alleTexte, writingTasks as alleWriting } from "@/lib/content";
 
 const BAMF_MAP: Record<string, { id: string; label: string; emoji: string; filter: string }> = {
   wohnen: { id: "wohnen", label: "السكن", emoji: "🏠", filter: "wohnen" },
@@ -29,6 +30,13 @@ function bamfForTask(titleDe: string): (typeof BAMF_MAP)[string] | null {
 export function TodayB2Praxis() {
   const { progress } = useProgress();
   const plan = useMemo(() => buildDay(progress.plan.day, progress), [progress]);
+  const b2Counts = useMemo(() => {
+    const b2Texte = (alleTexte as any[]).filter((t:any)=>t.level==="B2");
+    const b2Write = (alleWriting as any[]).filter((w:any)=>w.level==="B2");
+    // B2 texts 250-500w approximation: text length proxy
+    const long = b2Texte.filter((t:any)=> (t.wortCount?? (t.text??"").split(/\s+/).length) >= 180).length;
+    return { b2Texte: b2Texte.length, b2Write: b2Write.length, long };
+  }, []);
   const themes = useMemo(() => {
     const seen = new Set<string>();
     const out: { taskId: string; titleDe: string; bamf: (typeof BAMF_MAP)[string] }[] = [];
@@ -57,7 +65,10 @@ export function TodayB2Praxis() {
         gap: "0.5rem",
       }}
     >
-      <div style={{ fontWeight: 900, color: "#0F2A44" }}>🌍 B2-Praxis heute — مواقف حياتية حقيقية</div>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
+        <div style={{ fontWeight: 900, color: "#0F2A44" }}>🌍 B2-Praxis heute — مواقف حياتية حقيقية</div>
+        <span style={{ fontSize: "0.7rem", fontWeight: 800, background: "#4A148C", color: "#fff", padding: "0.2rem 0.5rem", borderRadius: "999px" }}>B2 {b2Counts.b2Texte} نصوص · {b2Counts.b2Write} كتابة · {b2Counts.long} 250-500w</span>
+      </div>
       <div style={{ fontSize: "0.82rem", color: "var(--color-ink2)", lineHeight: 1.8 }}>
         كل مهمة مرتبطة بميدان BAMF — اضغط للانتقال إلى التدريب المصفّى حسب المجال.
       </div>
@@ -84,8 +95,13 @@ export function TodayB2Praxis() {
           </Link>
         ))}
       </div>
+      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", fontSize: "0.75rem" }}>
+        <Link href="/ueben?filter=b2" className="chip" style={{ textDecoration: "none", background: "var(--color-paper)", minHeight: "32px", display: "inline-flex", alignItems: "center", fontWeight: 800 }}>✍️ كتابة B2: 250-500 كلمة (Goethe)</Link>
+        <Link href="/pruefen?typ=lesen" className="chip" style={{ textDecoration: "none", background: "var(--color-paper)", minHeight: "32px", display: "inline-flex", alignItems: "center", fontWeight: 800 }}>📖 قراءة B2 — 30د</Link>
+        <Link href="/pruefen?typ=hoeren" className="chip" style={{ textDecoration: "none", background: "var(--color-paper)", minHeight: "32px", display: "inline-flex", alignItems: "center", fontWeight: 800 }}>🎧 استماع B2 — 30/100P</Link>
+      </div>
       <div style={{ fontSize: "0.72rem", color: "var(--ui-muted)" }}>
-        13 Lebenswelt-Karten متاحة في قسم <Link href="/ueben">تدرّب → Lebenswelt</Link> مفلترة حسب المجال نفسه.
+        13 Lebenswelt-Karten في <Link href="/ueben">تدرّب → Lebenswelt</Link> · BAMF I-VI Handlungsfelder · Verifikation D+3
       </div>
     </section>
   );
