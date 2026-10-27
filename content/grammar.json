@@ -1889,6 +1889,16 @@
           "gespielt."
         ],
         "explanationAr": "مشبك الجملة في الماضي Perfekt: الفعل المساعد (haben) في المركز الثاني والتصريف الثالث (gespielt) في النهاية."
+      },
+      {
+        "id": "a2-pf-um1",
+        "type": "umformung",
+        "promptDe": "Forme ins Perfekt um (trennbar + sein).",
+        "promptAr": "حوّل إلى الماضي التام (Perfekt).",
+        "quelleDe": "Ich stehe um 7 Uhr auf.",
+        "answer": "Ich bin um 7 Uhr aufgestanden.",
+        "explanationAr": "الفعل المنفصل aufstehen → Perfekt: auf+ge+standen + الفعل المساعد sein للحركة/المكان. Mayer: صورة ذهنية للحركة.",
+        "points": 2
       }
     ]
   },
@@ -3233,6 +3243,16 @@
           "hat"
         ],
         "explanationAr": "habe (Konj. I) والضمير يتحول.",
+        "points": 2
+      },
+      {
+        "id": "b2-ir-um1",
+        "type": "umformung",
+        "promptDe": "Bilde indirekte Frage mit ob.",
+        "promptAr": "حوّل إلى سؤال غير مباشر بـ ob.",
+        "quelleDe": "Er fragt: „Kommt sie heute?“",
+        "answer": "Er fragt, ob sie heute kommt.",
+        "explanationAr": "سؤال نعم/لا → سؤال غير مباشر بـ ob + قوس فعلي (الفعل في النهاية). علامة B2 في GGP 150.",
         "points": 2
       }
     ],
@@ -7984,6 +8004,16 @@
         ],
         "explanationAr": "damit → zur + Verbesserung (مؤنث) + Genitiv للمفعول (der Luft).",
         "points": 2
+      },
+      {
+        "id": "b2-ns-um1",
+        "type": "umformung",
+        "promptDe": "Forme verbal → nominal (Nominalstil) um.",
+        "promptAr": "حوّل من أسلوب فعلي إلى اسمي.",
+        "quelleDe": "Weil er sich schnell entscheidet, gewinnt er Zeit.",
+        "answer": "Wegen seiner schnellen Entscheidung gewinnt er Zeit.",
+        "explanationAr": "التحويل الاسمي الأكاديمي B2: جملة weil الفعلية → عبارة اسمية wegen + Genitiv + تسمية (entscheiden → Entscheidung).",
+        "points": 2
       }
     ],
     "resources": [
@@ -8366,6 +8396,16 @@
         "explanationAr": "wollen (إرادة قوية) → möchten (Konjunktiv II مهذب) — نفس القاعدة A2 höflich.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a1-sh-um1",
+        "type": "umformung",
+        "promptDe": "Bilde eine Ja/Nein-Frage im Präsens.",
+        "promptAr": "حوّل إلى سؤال نعم/لا.",
+        "quelleDe": "Du bist Lehrer.",
+        "answer": "Bist du Lehrer?",
+        "explanationAr": "Inversion للسؤال: الفعل أولاً — Bist du ...؟ SVO تصبح VSO. تمرين إنتاج B2.",
+        "points": 2
       }
     ],
     "pitfalls": [
@@ -8566,6 +8606,16 @@
         "explanationAr": "zu + Dativ دائماً: die→der. لا تخلط مع nach Berlin (بدون أداة).",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a1-akk-um1",
+        "type": "umformung",
+        "promptDe": "Topikalisiere das Objekt (O-V-S).",
+        "promptAr": "قدّم المفعول للتوكيد.",
+        "quelleDe": "Der Mann sieht den Hund.",
+        "answer": "Den Hund sieht der Mann.",
+        "explanationAr": "تقديم المفعول (Akkusativ) للتوكيد: Den Hund (مفعول) → الفعل في المرتبة الثانية (V2). الحالة الإعرابية تميز الوظيفة.",
+        "points": 2
       }
     ],
     "pitfalls": [
@@ -12563,6 +12613,16 @@
           "falsch"
         ],
         "promptAr": "هل الجملة صحيحة؟ اختر «صح» أو «خطأ»."
+      },
+      {
+        "id": "a2-neb-um1",
+        "type": "umformung",
+        "promptDe": "Verbinde mit weil (Nebensatz Verb am Ende).",
+        "promptAr": "اربط بـ weil مع الفعل في النهاية.",
+        "quelleDe": "Es regnet. Ich bleibe zu Hause.",
+        "answer": "Weil es regnet, bleibe ich zu Hause.",
+        "explanationAr": "ربط جملتين بـ weil: الجملة الجانبية فعلها في النهاية (regnet → ... regnet،) + فاصلة إجبارية. Conti Retrieval.",
+        "points": 2
       }
     ],
     "verify": [
@@ -15446,6 +15506,16 @@
         "explanationAr": "wegen + Genitiv رسمي: des Wetters. Dativ محكي فقط.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "b2-gp-um1",
+        "type": "umformung",
+        "promptDe": "Forme mit Genitivpräposition um (wegen → Genitiv).",
+        "promptAr": "أعد الصياغة بـ wegen + المضاف.",
+        "quelleDe": "Weil es stark regnete, sind wir zu Hause geblieben.",
+        "answer": "Wegen des starken Regens sind wir zu Hause geblieben.",
+        "explanationAr": "weil + جملة جانبية → wegen + مضاف (Genitiv). Duden: wegen des Regens صحيح كتابياً؛ wegen dem Regen عامي مرفوض.",
+        "points": 2
       }
     ],
     "pitfalls": [
@@ -16636,6 +16706,16 @@
         "explanationAr": "التصحيح: راجع القاعدة وانتبه للنهايات والأدوات — التمرين يدرّب التحويل بدقة.",
         "points": 2,
         "promptAr": "حوّل الجملة حسب القاعدة."
+      },
+      {
+        "id": "a0-sb-um1",
+        "type": "umformung",
+        "promptDe": "Stelle die Wörter korrekt (Satzklammer V2).",
+        "promptAr": "رتّب الكلمات بترتيب ألماني صحيح.",
+        "quelleDe": "heute Abend / Ich / ins Kino / gehe",
+        "answer": "Ich gehe heute Abend ins Kino.",
+        "explanationAr": "قاعدة V2: المرتبة 1 فاعل، 2 فعل مصرف (gehe)، ثم زمان → مكان. Mayer Segmenting: صف واحد كل مرة.",
+        "points": 2
       }
     ],
     "commonErrors": [
@@ -17194,6 +17274,16 @@
         "explanationAr": "wurde ثانياً، von + Agens، PII آخراً.",
         "points": 2,
         "promptAr": "أجب حسب القاعدة."
+      },
+      {
+        "id": "b2-ps-um1",
+        "type": "umformung",
+        "promptDe": "Forme ins Passiv Präsens um.",
+        "promptAr": "حوّل إلى المبني للمجهول.",
+        "quelleDe": "Man öffnet jeden Tag die Tür um 8 Uhr.",
+        "answer": "Die Tür wird jeden Tag um 8 Uhr geöffnet.",
+        "explanationAr": "المبني للمجهول: werden + اسم المفعول (geöffnet). نركز على الحدث لا الفاعل — مهارة B2 أساسية.",
+        "points": 2
       }
     ],
     "resources": [
@@ -17385,6 +17475,16 @@
         "explanationAr": "جملة شرطية ماضية: Hätte ich gewusst, wäre ich geblieben — الترتيب مهم.",
         "points": 2,
         "promptAr": "رتّب كلمات الشرط الماضي."
+      },
+      {
+        "id": "b2-k2-um1",
+        "type": "umformung",
+        "promptDe": "Forme in indirekte Rede mit Konjunktiv I um.",
+        "promptAr": "حوّل إلى غير مباشر بـ Konjunktiv I.",
+        "quelleDe": "Er sagt: „Ich bin krank.“",
+        "answer": "Er sagt, er sei krank.",
+        "explanationAr": "الكلام غير المباشر B2: المباشر „Ich bin krank“ → Konjunktiv I: sei (ليس ist). يدل على نقل كلام الغير.",
+        "points": 2
       }
     ],
     "resources": [
