@@ -22,6 +22,8 @@ const MODES: { id: ReviewMode; icon: string; de: string; ar: string; desc: strin
   { id: "kontext", icon: "📖", de: "Kontext-Cloze", ar: "السياق", desc: "Lücken aus exampleDe + Texten (GGP)" },
 ];
 
+// Layered-Reveal: 0=word only, 1=+hint, 2=+example gap, 3=full
+type RevealStage = 0 | 1 | 2 | 3;
 const LEVEL_COLOR: Record<string, string> = {
   A0: "#8B7355", A1: "#1E7A3A", A2: "#2B5AA0", B1: "#7A1E1E", B2: "#4A148C",
 };
@@ -37,9 +39,13 @@ export default function WortReviewErweitert() {
   const [search, setSearch] = useState("");
   const [mode, setMode] = useState<ReviewMode>("konjugation");
   const [dueOnly, setDueOnly] = useState(false);
+  const [reveal, setReveal] = useState<RevealStage>(0);
+  const [recording, setRecording] = useState(false);
+  const [hasMic, setHasMic] = useState<boolean | null>(null);
+  const [ttsSpeaking, setTtsSpeaking] = useState(false);
   const [runde, setRunde] = useState(0);
   const [answer, setAnswer] = useState("");
-  const [feedback, setFeedback] = useState<null | { ok: boolean; correct: string }>(null);
+  const [feedback, setFeedback] = useState<null | { ok: boolean; correct: string; why: string; nextHint: string }>(null);
   const [score, setScore] = useState({ ok: 0, total: 0 });
 
   // Distinct pos values
@@ -118,7 +124,16 @@ export default function WortReviewErweitert() {
       expected = deCore(challenge).toLowerCase();
       ok = user === expected || user.includes(expected.slice(0,4));
     }
-    setFeedback({ ok, correct: expected || (card.exampleDe as string) || (card.de as string) });
+    const whyMap: Record<string,string> = {
+      konjugation: "تصريف الأفعال: Stamm + Endung — احفظ Ablaut إن وجد (kommen→kam→gekommen).",
+      artikel: "الأدوات: der (مذكر) / die (مؤنث) / das (محايد) — الجمع غالباً -e/-en/-er + Umlaut.",
+      synonym: "المرادف يقرّب المعنى والضد يثبته — استخدم السياق لاختيار الأنسب.",
+      kollok: "المتلازمة = كلمتان تذهبان معاً دائماً (z. B. eine Entscheidung treffen).",
+      kontext: "املأ الفراغ من السياق — الكلمة المفتاحية هي deCore (الجذر بلا أداة)."
+    };
+    const why = whyMap[mode] ?? "";
+    const nextHint = ok ? "ممتاز — التالي أصعب قليلاً (SRS يرفع الفاصل)." : "راجع البطاقة غداً (SRS يعيدها قريباً) + استمع للنطق.";
+    setFeedback({ ok, correct: expected || (card.exampleDe as string) || (card.de as string), why, nextHint });
     setScore(s => ({ ok: s.ok + (ok ? 1 : 0), total: s.total + 1 }));
     update(p => logK(checkAbzeichen({ ...p, xp: (p.xp ?? 0) + (ok ? 5 : 2) }), "Wortschatz", ok));
     if (!ok) {
@@ -129,6 +144,7 @@ export default function WortReviewErweitert() {
   const next = () => {
     setFeedback(null);
     setAnswer("");
+    setReveal(0);
     setRunde(r => r + 1);
   };
 
@@ -147,6 +163,23 @@ export default function WortReviewErweitert() {
   }, [progress]);
 
   const c = challenge;
+  const speak = (text: string) => {
+    if (!("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "de-DE"; u.rate = 0.95;
+    u.onstart = () => setTtsSpeaking(true); u.onend = () => setTtsSpeaking(false); u.onerror = () => setTtsSpeaking(false);
+    window.speechSynthesis.speak(u);
+  };
+  const toggleRecord = async () => {
+    if (recording) { setRecording(false); return; }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      setHasMic(true); setRecording(true);
+      // 2s auto-stop demo
+      setTimeout(() => { stream.getTracks().forEach(t=>t.stop()); setRecording(false); }, 2200);
+    } catch { setHasMic(false); }
+  };
 
   return (
     <div className="wort-review" style={{ display: "grid", gap: "1rem" }}>
@@ -155,7 +188,7 @@ export default function WortReviewErweitert() {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
           <h2 style={{ margin: 0, fontSize: "1.15rem", fontWeight: 900 }}>📚 مراجعة الكلمات الموسعة</h2>
           <div style={{ fontSize: "0.8rem", opacity: 0.95, background: "rgba(255,255,255,0.15)", padding: "0.3rem 0.6rem", borderRadius: "999px" }}>
-            {filtered.length} / {alleVokabeln.length} بطاقة · {withPosInfo.length} تصريف · {srsStats.due} مستحقة اليوم
+            {filtered.length} / {alleVokabeln.length} بطاقة · {withPosInfo.length} تصريف · {srsStats.due} مستحقة اليوم · كشف {reveal}/3
           </div>
         </div>
         <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", fontSize: "0.78rem" }}>
@@ -203,6 +236,15 @@ export default function WortReviewErweitert() {
         {MODES.find(m => m.id === mode)?.desc} · بطاقات هذا النمط: {mode === "konjugation" ? withPosInfo.length : mode === "artikel" ? filtered.filter(c => c.article).length : filtered.length}
       </div>
 
+      {/* Layered-Reveal controls */}
+      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", alignItems: "center", background: "#F9F5EB", padding: "0.6rem 0.8rem", borderRadius: "10px", border: "1px solid #E8DCC6" }}>
+        <span style={{ fontWeight: 800, fontSize: "0.8rem", color: "#7A1E1E" }}>كشف متدرج:</span>
+        {([0,1,2,3] as RevealStage[]).map(st => (
+          <button key={st} onClick={()=>setReveal(st)} style={{ minHeight: "32px", padding: "0 0.7rem", borderRadius: "999px", border: st===reveal ? "2px solid #7A1E1E" : "1px solid #C9B896", background: st===reveal ? "#7A1E1E" : "#fff", color: st===reveal ? "#FFF8E7" : "#333", fontWeight: st===reveal ? 800 : 400, cursor: "pointer", fontSize: "0.75rem" }}>{st===0?"كلمة":st===1?"+تلميح":st===2?"+سياق":"كامل"}</button>
+        ))}
+        <span style={{ fontSize: "0.72rem", color: "#666" }}>Prediction → Contrast → Reveal (Mayer)</span>
+      </div>
+
       {/* Challenge card */}
       <div style={{ background: "var(--color-card)", border: "1px solid #E8DCC6", borderRadius: "14px", padding: "1rem", display: "grid", gap: "0.7rem" }}>
         {!c ? (
@@ -219,8 +261,14 @@ export default function WortReviewErweitert() {
               <div style={{ fontSize: "0.7rem", color: "#888" }}>{c.id}</div>
             </div>
 
-            <div style={{ fontSize: "1.35rem", fontWeight: 900, color: "#1A1A1A", direction: "ltr", textAlign: "left" }}>{c.de}</div>
-            <div style={{ fontSize: "0.95rem", color: "#333" }}>{c.ar}</div>
+            <div style={{ display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
+              <div style={{ fontSize: "1.35rem", fontWeight: 900, color: "#1A1A1A", direction: "ltr", textAlign: "left" }}>{c.de}</div>
+              <button onClick={()=>speak(c.de)} style={{ minHeight: "34px", padding: "0 0.6rem", borderRadius: "999px", border: "1px solid #C9B896", background: ttsSpeaking ? "#1E7A3A" : "#fff", color: ttsSpeaking ? "#fff" : "#333", cursor: "pointer", fontSize: "0.8rem" }}>{ttsSpeaking ? "🔊 ..." : "🔊 استمع"}</button>
+              <button onClick={toggleRecord} style={{ minHeight: "34px", padding: "0 0.6rem", borderRadius: "999px", border: recording ? "2px solid #C62828" : "1px solid #C9B896", background: recording ? "#FFEBEE" : "#fff", color: recording ? "#C62828" : "#333", cursor: "pointer", fontSize: "0.8rem" }}>{recording ? "● يسجّل..." : hasMic===false ? "🎤 غير متاح" : "🎤 سجّل نطقك"}</button>
+              {reveal >= 1 && <span style={{ fontSize: "0.75rem", background: "#FFF8E7", padding: "0.2rem 0.5rem", borderRadius: "999px", border: "1px solid #E8DCC6" }}>{c.pos} {c.level}</span>}
+            </div>
+            {reveal >= 1 && <div style={{ fontSize: "0.95rem", color: "#333" }}>{c.ar}</div>}
+            {reveal >= 2 && c.exampleDe && <div style={{ fontSize: "0.82rem", color: "#555", background: "#F9F5EB", padding: "0.5rem", borderRadius: "8px" }}>{c.exampleDe} — {c.exampleAr}</div>}
 
             {mode === "konjugation" && (c as unknown as { posInfo?: string }).posInfo && (
               <div style={{ background: "#FFF8E7", border: "1px solid #E8DCC6", borderRadius: "8px", padding: "0.6rem", fontSize: "0.82rem" }}>
@@ -258,9 +306,13 @@ export default function WortReviewErweitert() {
             ) : (
               <div style={{ background: feedback.ok ? "#E8F5E9" : "#FFEBEE", border: `1px solid ${feedback.ok ? "#66BB6A" : "#EF5350"}`, borderRadius: "8px", padding: "0.7rem", display: "grid", gap: "0.4rem" }}>
                 <div style={{ fontWeight: 900, color: feedback.ok ? "#2E7D32" : "#C62828" }}>{feedback.ok ? "✓ أحسنت!" : "✗ حاول مرة أخرى"}</div>
-                <div style={{ fontSize: "0.85rem" }}>الصحيح: <b dir="ltr">{feedback.correct}</b></div>
-                <div style={{ fontSize: "0.8rem", color: "#555" }}>الشرح: {c.exampleDe} — {c.exampleAr}</div>
-                <button onClick={next} style={{ minHeight: "40px", borderRadius: "8px", border: "none", background: "#7A1E1E", color: "#FFF8E7", fontWeight: 800, cursor: "pointer" }}>التالي →</button>
+                <div style={{ fontSize: "0.85rem" }}><b>what:</b> الصحيح <b dir="ltr">{feedback.correct}</b> · دقّتك {score.total ? Math.round(score.ok/score.total*100) : 0}%</div>
+                <div style={{ fontSize: "0.8rem", color: "#555", background: "var(--color-card)", padding: "0.4rem 0.6rem", borderRadius: "6px", border: "1px solid #E8DCC6" }}><b>why:</b> {feedback.why} — {c.exampleDe} — {c.exampleAr}</div>
+                <div style={{ fontSize: "0.78rem", color: "#4A148C", background: "#F3E5F5", padding: "0.4rem 0.6rem", borderRadius: "6px" }}><b>next:</b> {feedback.nextHint}</div>
+                <div style={{ display: "flex", gap: "0.4rem" }}>
+                  <button onClick={()=>speak(feedback.correct)} style={{ flex: 1, minHeight: "38px", borderRadius: "8px", border: "1px solid #C9B896", background: "var(--color-card)", cursor: "pointer", fontSize: "0.8rem" }}>🔊 اسمع الصحيح</button>
+                  <button onClick={next} style={{ flex: 2, minHeight: "38px", borderRadius: "8px", border: "none", background: "#7A1E1E", color: "#FFF8E7", fontWeight: 800, cursor: "pointer" }}>التالي →</button>
+                </div>
               </div>
             )}
 
