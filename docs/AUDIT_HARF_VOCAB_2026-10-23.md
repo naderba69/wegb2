@@ -1,4 +1,4 @@
-# 🔍 مراجعة حرف-حرف — المفردات (~6200 بطاقة) — 2026-10-26
+# 🔍 مراجعة حرف-حرف — المفردات (~6200 بطاقة) — 2026-10-27
 > **المراجع:** Goethe Wortliste A1-A2-B1 + Duden + GGP + CEFR 378 يوم  
 > **المنهج:** كل حرف فُحص — لا عينات. 122 حزمة · 6202 بطاقة
 
@@ -39,19 +39,9 @@
 - "die berichterstattung" → b2-medien-schule-032(B2:b2-medien-schule)=التغطية الإخبارية | vu-b1p-000(B1:b1-medien-reise-verben)=التغطيةُ الإخبارية
 - … و 23 أخرى
 
-## الأفكار التحسينية (عينة 30/1010)
+## الأفكار التحسينية (عينة 30/1000)
 | البطاقة | الفكرة |
 |---------|--------|
-| `vocab.json:h04-mobilitaet-verkehr/v753:sich an die Verkehrsregeln halten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h04-mobilitaet-verkehr/v766:einchecken` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h05-staat-recht/v779:vorschreiben` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h05-staat-recht/v784:beantragen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h05-staat-recht/v785:bewilligen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h05-staat-recht/v788:genehmigen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h05-staat-recht/v789:verbieten` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h05-staat-recht/v792:ablehnen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h05-staat-recht/v796:widersprechen` | أضف تصريف (spricht/gekommen) للفعل |
-| `vocab.json:h05-staat-recht/v798:klagen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h05-staat-recht/v817:einbürgern` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h05-staat-recht/v819:abschieben` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h05-staat-recht/v831:bestechen` | أضف تصريف (spricht/gekommen) للفعل |
@@ -72,8 +62,18 @@
 | `vocab.json:h06-studium-lernen/v891:sich vertippen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h06-studium-lernen/v901:betreuen` | أضف تصريف (spricht/gekommen) للفعل |
 | `vocab.json:h07-gefuehle-psyche/v908:sich ärgern über` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v914:überraschen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v925:belasten` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v928:beruhigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v929:sich beruhigen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v935:riskieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v946:ignorieren` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v948:sich schämen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v949:jdn bloßstellen` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v951:kränken` | أضف تصريف (spricht/gekommen) للفعل |
+| `vocab.json:h07-gefuehle-psyche/v956:sich sehnen nach` | أضف تصريف (spricht/gekommen) للفعل |
 
-_… و 980 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
+_… و 970 فكرة إضافية — تُصدّر بعد تثبيت P0/P1._
 
 ## خطة المتابعة (المعلم الخبير)
 1. **القواعد ✅ P0 0** (منجز)

@@ -13528,7 +13528,8 @@
           "mobilitaet-verkehr"
         ],
         "exampleDe": "Alle müssen sich an die Verkehrsregeln halten, auch Radfahrer.",
-        "exampleAr": "على الجميع الالتزا…"
+        "exampleAr": "على الجميع الالتزا…",
+        "posInfo": "hält sich an die Verkehrsregeln, hielt sich an die Verkehrsregeln, hat sich an die Verkehrsregeln gehalten"
       },
       {
         "id": "v754",
@@ -13729,7 +13730,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة",
         "exampleDe": "Sie können online einchecken und das Gepäck am Schalter abgeben.",
-        "exampleAr": "يمكنك تسجيل الوصول…"
+        "exampleAr": "يمكنك تسجيل الوصول…",
+        "posInfo": "checkt ein, checkte ein, hat eingecheckt"
       },
       {
         "id": "v767",
@@ -13936,7 +13938,8 @@
         ],
         "aussprache": "ei = «آي» لا «إي» · sch = «ش» · v = «ف»",
         "exampleDe": "Das Gesetz schreibt vor, dass die Nebenkosten jährlich abgerechnet werden.",
-        "exampleAr": "القانون يُملي أن ت…"
+        "exampleAr": "القانون يُملي أن ت…",
+        "posInfo": "schreibt vor, schrieb vor, hat vorgeschrieben"
       },
       {
         "id": "v780",
@@ -14010,7 +14013,8 @@
           "staat-recht"
         ],
         "exampleDe": "Sie müssen die Verlängerung schriftlich beantragen.",
-        "exampleAr": "يجب أن تطلب التمدي…"
+        "exampleAr": "يجب أن تطلب التمدي…",
+        "posInfo": "beantragt, beantragte, hat beantragt"
       },
       {
         "id": "v785",
@@ -14024,7 +14028,8 @@
         "aussprache": "w = «ڤ»",
         "exampleDe": "Der Antrag auf Wohngeld wurde nach sechs Wochen bewilligt.",
         "exampleAr": "طلب إعانة السكن وو…",
-        "plural": "die Theorien"
+        "plural": "die Theorien",
+        "posInfo": "bewilligt, bewilligte, hat bewilligt"
       },
       {
         "id": "v786",
@@ -14067,7 +14072,8 @@
           "staat-recht"
         ],
         "exampleDe": "Die Stadt hat den Umbau genehmigt, mit Auflagen zum Lärmschutz.",
-        "exampleAr": "المدينة رخّصت التج…"
+        "exampleAr": "المدينة رخّصت التج…",
+        "posInfo": "genehmigt, genehmigte, hat genehmigt"
       },
       {
         "id": "v789",
@@ -14080,7 +14086,8 @@
         ],
         "aussprache": "ie = «إي» ممدودة · v = «ف»",
         "exampleDe": "Die Hausordnung verbietet laute Musik nach zweiundzwanzig Uhr.",
-        "exampleAr": "نظام البناية يمنع…"
+        "exampleAr": "نظام البناية يمنع…",
+        "posInfo": "verbietet, verbot, hat verboten"
       },
       {
         "id": "v790",
@@ -14123,7 +14130,8 @@
           "staat-recht"
         ],
         "exampleDe": "Die Behörde kann den Antrag ablehnen, muss es aber begründen.",
-        "exampleAr": "يمكن للإدارة رفض ا…"
+        "exampleAr": "يمكن للإدارة رفض ا…",
+        "posInfo": "lehnt ab, lehnte ab, hat abgelehnt"
       },
       {
         "id": "v793",
@@ -14183,7 +14191,8 @@
         ],
         "aussprache": "ch بعدَ a/o/u = خاء، وبعدَ i/e = «هش» رقيقة · w = «ڤ»",
         "exampleDe": "Sie will dem Bescheid widersprechen und Belege beilegen.",
-        "exampleAr": "تريد الاعتراض على…"
+        "exampleAr": "تريد الاعتراض على…",
+        "posInfo": "widerspricht, widersprach, hat widersprochen"
       },
       {
         "id": "v797",
@@ -14210,7 +14219,8 @@
           "staat-recht"
         ],
         "exampleDe": "Wer klagen will, sollte vorher die Kosten kennen.",
-        "exampleAr": "من يريد رفع دعوى ع…"
+        "exampleAr": "من يريد رفع دعوى ع…",
+        "posInfo": "klagt, klagte, hat geklagt"
       },
       {
         "id": "v799",
