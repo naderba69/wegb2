@@ -1919,6 +1919,20 @@
         "answer": "Ich habe Fußball gespielt.",
         "points": 2,
         "explanationAr": "Perfekt: haben + ge-...-t: spielen → gespielt. المحادثة اليومية A1 تستخدم Perfekt لا Präteritum."
+      },
+      {
+        "id": "a2-pf-um2",
+        "type": "umformung",
+        "promptDe": "Perfekt: Ich ___ um 7 Uhr aufgestanden.",
+        "promptAr": "حوّل إلى الماضي التام.",
+        "quelleDe": "Ich stehe um 7 Uhr auf.",
+        "answer": "Ich bin um 7 Uhr aufgestanden.",
+        "alternatives": [],
+        "explanationAr": "aufstehen فعل منفصل يأخذ sein وge- بين المقطعين — شرح عربي.",
+        "explanationDe": "aufstehen فعل منفصل يأخذ sein وge- بين المقطعين — شرح عربي.",
+        "hintAr": "sein + aufgestanden",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -5232,6 +5246,20 @@
         "answer": "die Lehrer",
         "points": 2,
         "explanationAr": "جمع بدون تغيير لكن مع Artikel die: der Lehrer → die Lehrer. حفظ النمط مع الصورة."
+      },
+      {
+        "id": "a2-st-um2",
+        "type": "umformung",
+        "promptDe": "Komparativ: Dieses Haus ist ___ als jenes.",
+        "promptAr": "استخدم المقارنة.",
+        "quelleDe": "Dieses Haus ist groß.",
+        "answer": "Dieses Haus ist größer als jenes.",
+        "alternatives": [],
+        "explanationAr": "groß→größer مع Umlaut — شرح عربي.",
+        "explanationDe": "groß→größer مع Umlaut — شرح عربي.",
+        "hintAr": "größer",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -5994,6 +6022,20 @@
         "answer": "der kleine Tisch",
         "points": 2,
         "explanationAr": "بعد der/die/das: الصفة -e فقط (kleine). بعد ein: -er/-e/-es. نظام B1 يحتاج Contrast جدول."
+      },
+      {
+        "id": "b1-adj-um2",
+        "type": "umformung",
+        "promptDe": "Dativ: Ich helfe ___ alten Mann.",
+        "promptAr": "ضع النعت بالنهاية الصحيحة.",
+        "quelleDe": "Der alte Mann liest.",
+        "answer": "Ich helfe dem alten Mann.",
+        "alternatives": [],
+        "explanationAr": "بعد dem تأخذ الصفة -en — شرح عربي.",
+        "explanationDe": "بعد dem تأخذ الصفة -en — شرح عربي.",
+        "hintAr": "dem alten",
+        "points": 2,
+        "level": "B1"
       }
     ]
   },
@@ -7051,6 +7093,20 @@
         "answer": "Das Fenster ist geöffnet worden.",
         "points": 2,
         "explanationAr": "Passiv Perfekt: ist ... worden (ليس geworden). خطأ شائع B1: الخلط بين Aktiv werden و Passiv worden."
+      },
+      {
+        "id": "b1-pa-um2",
+        "type": "umformung",
+        "promptDe": "Passiv: Das Auto ___ repariert.",
+        "promptAr": "مبني للمجهول.",
+        "quelleDe": "Man repariert das Auto.",
+        "answer": "Das Auto wird repariert.",
+        "alternatives": [],
+        "explanationAr": "werden + Partizip II — شرح عربي.",
+        "explanationDe": "werden + Partizip II — شرح عربي.",
+        "hintAr": "wird",
+        "points": 2,
+        "level": "B1"
       }
     ]
   },
@@ -8666,6 +8722,20 @@
         "answer": "Bist du Lehrer?",
         "explanationAr": "Inversion للسؤال: الفعل أولاً — Bist du ...؟ SVO تصبح VSO. تمرين إنتاج B2.",
         "points": 2
+      },
+      {
+        "id": "a1-mod-um2",
+        "type": "umformung",
+        "promptDe": "Frage: ___ du gut schwimmen?",
+        "promptAr": "كوّن سؤالاً باستخدام الفعل الناقص.",
+        "quelleDe": "Ich kann gut schwimmen.",
+        "answer": "Kannst du gut schwimmen?",
+        "alternatives": [],
+        "explanationAr": "الفعل الناقص kann يتصرف ويأتي أول الجملة في السؤال — شرح عربي مفصل.",
+        "explanationDe": "الفعل الناقص kann يتصرف ويأتي أول الجملة في السؤال — شرح عربي مفصل.",
+        "hintAr": "Kannst du ...?",
+        "points": 2,
+        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -8876,6 +8946,20 @@
         "answer": "Den Hund sieht der Mann.",
         "explanationAr": "تقديم المفعول (Akkusativ) للتوكيد: Den Hund (مفعول) → الفعل في المرتبة الثانية (V2). الحالة الإعرابية تميز الوظيفة.",
         "points": 2
+      },
+      {
+        "id": "a1-dat-um2",
+        "type": "umformung",
+        "promptDe": "Wem hilfst du? — Ich helfe ___ Mutter.",
+        "promptAr": "أكمل بالحالة الصحيحة.",
+        "quelleDe": "Ich helfe meiner Mutter.",
+        "answer": "meiner Mutter",
+        "alternatives": [],
+        "explanationAr": "helfen يطلب Dativ: meiner Mutter — شرح عربي بالقاعدة.",
+        "explanationDe": "helfen يطلب Dativ: meiner Mutter — شرح عربي بالقاعدة.",
+        "hintAr": "Dativ feminin: meiner",
+        "points": 2,
+        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -9075,6 +9159,20 @@
         "answer": "Ich gehe in die Küche (WOHIN).",
         "points": 2,
         "explanationAr": "Wechselpräposition: in + Dativ (مكان) vs Akkusativ (اتجاه). in der Küche → in die Küche."
+      },
+      {
+        "id": "a1-wech-um2",
+        "type": "umformung",
+        "promptDe": "Bewegung: Ich lege das Buch auf ___ Tisch.",
+        "promptAr": "فرّق بين المكان (Dativ) والوجهة (Akkusativ).",
+        "quelleDe": "Das Buch liegt auf dem Tisch.",
+        "answer": "auf den Tisch",
+        "alternatives": [],
+        "explanationAr": "liegen (مكان) Dativ، legen (حركة) Akkusativ — شرح عربي.",
+        "explanationDe": "liegen (مكان) Dativ، legen (حركة) Akkusativ — شرح عربي.",
+        "hintAr": "Wohin? → Akk",
+        "points": 2,
+        "level": "A1"
       }
     ],
     "pitfalls": [
@@ -11643,6 +11741,20 @@
         "answer": "Ich warte auf den Bus.",
         "points": 2,
         "explanationAr": "حروف الجر الفعلية: warten auf + Akk (يُحفظ ككتلة). GGP Kollokation — لا قواعد عامة، بل حفظ collocation."
+      },
+      {
+        "id": "a2-vp-um2",
+        "type": "umformung",
+        "promptDe": "Frage: Auf ___ wartest du?",
+        "promptAr": "سؤال مع حرف الجر.",
+        "quelleDe": "Ich warte auf den Bus.",
+        "answer": "Auf wen wartest du?",
+        "alternatives": [],
+        "explanationAr": "auf + Akk: wen — شرح عربي.",
+        "explanationDe": "auf + Akk: wen — شرح عربي.",
+        "hintAr": "wen",
+        "points": 2,
+        "level": "A2"
       }
     ],
     "pitfalls": [
@@ -16006,6 +16118,20 @@
         "answer": "Wegen des starken Regens sind wir zu Hause geblieben.",
         "explanationAr": "weil + جملة جانبية → wegen + مضاف (Genitiv). Duden: wegen des Regens صحيح كتابياً؛ wegen dem Regen عامي مرفوض.",
         "points": 2
+      },
+      {
+        "id": "b2-gp-um2",
+        "type": "umformung",
+        "promptDe": "Mit wegen: Wegen ___ bleibe ich zu Hause.",
+        "promptAr": "استخدم wegen + Genitiv.",
+        "quelleDe": "Es regnet stark, deshalb bleibe ich zu Hause.",
+        "answer": "Wegen des starken Regens bleibe ich zu Hause.",
+        "alternatives": [],
+        "explanationAr": "weil→wegen + Genitiv: des starken Regens — شرح عربي مع Duden.",
+        "explanationDe": "weil→wegen + Genitiv: des starken Regens — شرح عربي مع Duden.",
+        "hintAr": "des Regens",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "pitfalls": [
@@ -17844,6 +17970,20 @@
         "answer": "Die Tür wird jeden Tag um 8 Uhr geöffnet.",
         "explanationAr": "المبني للمجهول: werden + اسم المفعول (geöffnet). نركز على الحدث لا الفاعل — مهارة B2 أساسية.",
         "points": 2
+      },
+      {
+        "id": "b2-ps-um2",
+        "type": "umformung",
+        "promptDe": "Perfekt Passiv: Der Bericht ___ veröffentlicht worden.",
+        "promptAr": "مبني للمجهول التام.",
+        "quelleDe": "Die Firma hat den Bericht veröffentlicht.",
+        "answer": "Der Bericht ist veröffentlicht worden.",
+        "alternatives": [],
+        "explanationAr": "ist ... worden — شرح عربي.",
+        "explanationDe": "ist ... worden — شرح عربي.",
+        "hintAr": "ist ... worden",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "resources": [
