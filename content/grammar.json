@@ -4674,6 +4674,20 @@
         "hintAr": "kein + Nomen",
         "points": 2,
         "level": "A2"
+      },
+      {
+        "id": "a2-neg2-um3",
+        "type": "umformung",
+        "promptDe": "Mit kein: Ich esse ___ Fisch.",
+        "promptAr": "استخدم kein.",
+        "quelleDe": "Ich esse nicht gern Fisch.",
+        "answer": "keinen Fisch",
+        "alternatives": [],
+        "explanationAr": "nicht gern ≠ kein: gern مع الفعل، kein مع الاسم — شرح عربي.",
+        "explanationDe": "nicht gern ≠ kein: gern مع الفعل، kein مع الاسم — شرح عربي.",
+        "hintAr": "keinen Akk",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -5131,6 +5145,20 @@
         "answer": "Ich wasche mich.",
         "points": 2,
         "explanationAr": "waschen (متعد) vs sich waschen (منعكس: الفاعل هو المفعول). Akk: mich/dich/sich."
+      },
+      {
+        "id": "a2-ref-um3",
+        "type": "umformung",
+        "promptDe": "Frage: Auf ___ freust du dich? (wen)",
+        "promptAr": "انعكاسي مع حرف جر.",
+        "quelleDe": "Ich freue mich auf dich.",
+        "answer": "Auf wen freust du dich?",
+        "alternatives": [],
+        "explanationAr": "sich freuen auf + Akk — شرح عربي.",
+        "explanationDe": "sich freuen auf + Akk — شرح عربي.",
+        "hintAr": "auf wen",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -5611,6 +5639,20 @@
         "answer": "Ich werde morgen nach Hamburg fahren.",
         "points": 2,
         "explanationAr": "werden + مصدر في النهاية: fahre → werde ... fahren. المستقبل الألماني قوس فعلي."
+      },
+      {
+        "id": "a2-fut-um3b",
+        "type": "umformung",
+        "promptDe": "Präsens: Morgen ___ es. (regnen)",
+        "promptAr": "مستقبل بمضارع.",
+        "quelleDe": "Morgen wird es regnen.",
+        "answer": "Morgen regnet es",
+        "alternatives": [],
+        "explanationAr": "Futur mit werden يمكن استبداله بمضارع + ظرف — شرح عربي.",
+        "explanationDe": "Futur mit werden يمكن استبداله بمضارع + ظرف — شرح عربي.",
+        "hintAr": "Morgen regnet es",
+        "points": 2,
+        "level": "A2"
       }
     ]
   },
@@ -6752,6 +6794,20 @@
         "answer": "Es heißt, dass es regnet.",
         "points": 2,
         "explanationAr": "Unpersönlich B1: man sagt → es heißt. نائب فاعل ضمني — تلميع أكاديمي."
+      },
+      {
+        "id": "b1-unb-um3",
+        "type": "umformung",
+        "promptDe": "Unbestimmt: Es ___ viel darüber gesprochen. (wird)",
+        "promptAr": "مبني للمجهول غير محدد.",
+        "quelleDe": "Man sagt, es regnet.",
+        "answer": "Es wird viel darüber gesprochen",
+        "alternatives": [],
+        "explanationAr": "man → Passiv unbestimmt — شرح عربي.",
+        "explanationDe": "man → Passiv unbestimmt — شرح عربي.",
+        "hintAr": "Es wird",
+        "points": 2,
+        "level": "B1"
       }
     ]
   },
@@ -6991,6 +7047,20 @@
           "auf den Bus."
         ],
         "explanationAr": "الفعل warten يتطلب حرف الجر auf مع حالة النصب Akkusativ: auf den Bus."
+      },
+      {
+        "id": "b1-vp-um3",
+        "type": "umformung",
+        "promptDe": "Frage: An ___ erinnerst du dich? (wen)",
+        "promptAr": "verb+präp.",
+        "quelleDe": "Ich erinnere mich an dich.",
+        "answer": "an wen",
+        "alternatives": [],
+        "explanationAr": "sich erinnern an + Akk — شرح عربي.",
+        "explanationDe": "sich erinnern an + Akk — شرح عربي.",
+        "hintAr": "an wen",
+        "points": 2,
+        "level": "B1"
       }
     ]
   },
@@ -7942,6 +8012,20 @@
         ],
         "explanationAr": "was يعود على الجملة كلها.",
         "points": 2
+      },
+      {
+        "id": "b2-rg2-um3",
+        "type": "umformung",
+        "promptDe": "Relativ: ___ du sagst, ist wichtig. (Was)",
+        "promptAr": "نسبي عام.",
+        "quelleDe": "Was du sagst, ist wichtig.",
+        "answer": "Was du sagst",
+        "alternatives": [],
+        "explanationAr": "Was = كل ما (generalisierend) — شرح عربي.",
+        "explanationDe": "Was = كل ما (generalisierend) — شرح عربي.",
+        "hintAr": "Was = ما",
+        "points": 2,
+        "level": "B2"
       }
     ]
   },
@@ -8156,6 +8240,20 @@
         "answer": "Er spricht nicht nur Deutsch, sondern auch Englisch.",
         "points": 2,
         "explanationAr": "Doppelkonnektor B2: nicht nur...sondern auch يركز التركيز — مهارة كتابية أكاديمية."
+      },
+      {
+        "id": "b2-dop-um3",
+        "type": "umformung",
+        "promptDe": "Teile: Er ist ___ klug ___ fleißig. (nicht nur/sondern auch)",
+        "promptAr": "روابط مزدوجة.",
+        "quelleDe": "Er ist nicht nur klug, sondern auch fleißig.",
+        "answer": "nicht nur klug, sondern auch fleißig",
+        "alternatives": [],
+        "explanationAr": "nicht nur ... sondern auch = ليس فقط بل أيضا — شرح عربي.",
+        "explanationDe": "nicht nur ... sondern auch = ليس فقط بل أيضا — شرح عربي.",
+        "hintAr": "nicht nur ... sondern auch",
+        "points": 2,
+        "level": "B2"
       }
     ]
   },
@@ -11643,6 +11741,20 @@
         "hintAr": "zwei",
         "points": 2,
         "level": "A0"
+      },
+      {
+        "id": "a0-z2-um3",
+        "type": "umformung",
+        "promptDe": "Frage: Wie alt bist du? — Ich bin ___ Jahre alt.",
+        "promptAr": "سؤال العمر.",
+        "quelleDe": "Ich bin fünf Jahre alt.",
+        "answer": "fünf Jahre alt",
+        "alternatives": [],
+        "explanationAr": "A0 Zahlen: fünf =5 — شرح عربي.",
+        "explanationDe": "A0 Zahlen: fünf =5 — شرح عربي.",
+        "hintAr": "fünf",
+        "points": 2,
+        "level": "A0"
       }
     ],
     "pitfalls": [
@@ -14594,6 +14706,20 @@
         "answer": "Einerseits ist er teuer, andererseits ist er gut.",
         "points": 2,
         "explanationAr": "Textkonnektor B2: einerseits/andererseits ينظّم الحجة — مطلوب في كتابة الامتحان B2."
+      },
+      {
+        "id": "b2-tk-um3",
+        "type": "umformung",
+        "promptDe": "Ein Satz: Er arbeitet, ___ er krank ist. (obwohl)",
+        "promptAr": "اربط بجملتين.",
+        "quelleDe": "Er ist krank. Trotzdem arbeitet er.",
+        "answer": "obwohl er krank ist",
+        "alternatives": [],
+        "explanationAr": "trotzdem (رغم) ↔ obwohl (برغم أن) — شرح عربي.",
+        "explanationDe": "trotzdem (رغم) ↔ obwohl (برغم أن) — شرح عربي.",
+        "hintAr": "obwohl + Verb Ende",
+        "points": 2,
+        "level": "B2"
       }
     ],
     "verify": [
@@ -17914,6 +18040,20 @@
         "answer": "Ich gehe heute Abend ins Kino.",
         "explanationAr": "قاعدة V2: المرتبة 1 فاعل، 2 فعل مصرف (gehe)، ثم زمان → مكان. Mayer Segmenting: صف واحد كل مرة.",
         "points": 2
+      },
+      {
+        "id": "a0-sat-um3",
+        "type": "umformung",
+        "promptDe": "Betonung: Heute ___ ich ins Kino. (gehe)",
+        "promptAr": "أعد ترتيب الجملة مع التركيز.",
+        "quelleDe": "Ich gehe heute ins Kino.",
+        "answer": "Heute gehe ich ins Kino",
+        "alternatives": [],
+        "explanationAr": "A0 Satzbau: الفعل ثانياً دائماً — شرح عربي.",
+        "explanationDe": "A0 Satzbau: الفعل ثانياً دائماً — شرح عربي.",
+        "hintAr": "Verb 2. Position",
+        "points": 2,
+        "level": "A0"
       }
     ],
     "commonErrors": [
