@@ -58208,7 +58208,8 @@
         "article": "das",
         "farbe": "GRÜN",
         "exampleDe": "Das Forschungsvorhaben untersucht den Einfluss von Schlaf auf das Lernen.",
-        "exampleAr": "يدرس الم…"
+        "exampleAr": "يدرس الم…",
+        "img": "/cards/forschungsvorhaben.png"
       },
       {
         "id": "v1432",
@@ -58224,7 +58225,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Eine aktuelle Studie zeigt, dass Bewegung das Lernen verbessert.",
-        "exampleAr": "تُظهر دراسة حديثة أن الحركة تحسّن التعلّم."
+        "exampleAr": "تُظهر دراسة حديثة أن الحركة تحسّن التعلّم.",
+        "img": "/cards/studie.png"
       },
       {
         "id": "v1433",
@@ -58240,7 +58242,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Die Untersuchung ergab keine Hinweise auf Nebenwirkungen.",
-        "exampleAr": "لم يُظهر التحقيق أي دليل على آثار جانبية."
+        "exampleAr": "لم يُظهر التحقيق أي دليل على آثار جانبية.",
+        "img": "/cards/untersuchung.png"
       },
       {
         "id": "v1434",
@@ -58256,7 +58259,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Er stellte eine gewagte These über den Klimawandel auf.",
-        "exampleAr": "طرح فرضية جريئة حول تغيّر المناخ."
+        "exampleAr": "طرح فرضية جريئة حول تغيّر المناخ.",
+        "img": "/cards/these.png"
       },
       {
         "id": "v1435",
@@ -58271,7 +58275,8 @@
         "article": "die",
         "farbe": "ROT",
         "exampleDe": "Die Prämisse der Studie wird im Diskussionsteil kritisch hinterfragt.",
-        "exampleAr": "تُراجع ا…"
+        "exampleAr": "تُراجع ا…",
+        "img": "/cards/praemisse.png"
       },
       {
         "id": "v1436",
