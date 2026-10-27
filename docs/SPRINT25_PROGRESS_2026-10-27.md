@@ -5,9 +5,9 @@
 
 ## المنجز في هذه الدورة
 
-### ① القواعد — 10 تمارين إنتاج جديدة (610→640)
+### ① القواعد — 10 تمارين إنتاج جديدة (610→666)
 - **قبل:** 67 فكرة `umformung` (إنتاج لا حفظ) — كلها P2 — GGP 150 يطلب إنتاجاً B2
-- **بعد:** 30 مُغلقة → **37 متبقية** — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
+- **بعد:** 56 مُغلقة → **11 متبقية** — كل تمرين `quelleDe + promptDe + explanationAr` + `points:2`
 - **التمارين (10):**
   1. `a1-modalverben:a1-sh-um1` — Frage: *Du bist Lehrer → Bist du Lehrer?* (Inversion/V2)
   2. `a1-dativ:a1-akk-um1` — Topikalisierung: *Den Hund sieht der Mann* (Kasus-AKK)
@@ -43,7 +43,7 @@
 | المفردات 6202 | 0 | 0 | مغلقة 1140→0 (Sprint24) — posInfo 1164 |
 | النصوص/حوارات/كتابة | 71 | 71 | BAMF Lebenswelt |
 
-**الخلاصة:** `P0 0 P1 0` في 6727 وحدة — الإنتاج الفعّال الآن 620 تمرين (163 umformung×2pts). IDEENKATALOG 1278→1268 (10 أُغلقت).
+**الخلاصة:** `P0 0 P1 0` في 6727 وحدة — الإنتاج الفعّال الآن 620 تمرين (189 umformung×2pts). IDEENKATALOG 1278→1268 (10 أُغلقت).
 
 ## التالي (parallel_all)
 - [ ] الدفعة 2: 10 تمارين `a0-aussprache-vowels/umlaut` + `b2-futur-ii/b2-konzessiv` (Mayer صوت+صورة)
@@ -73,3 +73,9 @@
 - `b1-Genitiv` — meines Vaters
 - `a2-Futur` — werde besuchen
 - `b2-Textkonnektor` — einerseits/andererseits
+
+### الدفعة الرابعة الكبرى (26 جديدة — بالتوازي)
+- 25 موضوع A0/A1/A2/B1/B2 متبقية (<2 umformung) → الآن ≥2 لكل (K62b مكتمل)
+- نقل 4 audited A1 → A2 لتجنب K162a/K163a
+- إصلاح عربي b2-rg-um1 → الآن كل exercise له تفسير عربي (K69a)
+- النتيجة: 666 تمرين (189 إنتاجي×2pts) — smoke 1916/0
