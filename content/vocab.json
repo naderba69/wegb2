@@ -59217,7 +59217,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Demokratien"
+        "plural": "die Demokratien",
+        "img": "/cards/demokratie.png"
       },
       {
         "de": "die Wahl, -en",
@@ -59230,7 +59231,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Wahlen"
+        "plural": "die Wahlen",
+        "img": "/cards/wahl.png"
       },
       {
         "de": "der Wähler / die Wählerin; Plural: die Wähler / die Wählerinnen",
@@ -59242,7 +59244,8 @@
         "tags": [
           "b2-politik-demokratie"
         ],
-        "pos": "Nomen"
+        "pos": "Nomen",
+        "img": "/cards/waehler.png"
       },
       {
         "de": "die Partei, -en",
@@ -59255,7 +59258,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Parteien"
+        "plural": "die Parteien",
+        "img": "/cards/partei.png"
       },
       {
         "de": "die Regierung, -en",
@@ -59268,7 +59272,8 @@
           "b2-politik-demokratie"
         ],
         "pos": "Nomen",
-        "plural": "die Regierungen"
+        "plural": "die Regierungen",
+        "img": "/cards/regierung.png"
       },
       {
         "de": "die Gesetzgebung",
