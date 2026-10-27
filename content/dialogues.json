@@ -13330,7 +13330,9 @@
       "Ich hätte gern vier Brötchen",
       "die Croissants sind heute ganz frisch",
       "Das macht zusammen fünf Euro sechzig"
-    ]
+    ],
+    "cultural_theme": "Bäckerei & Alltagsrituale",
+    "cultural_note": "في المخبز الألماني تطلب بالعدد وتدفع نقداً أو بالبطاقة؛ التحية Guten Morgen إلزامية — BAMF Alltag."
   },
   {
     "id": "dlg-a2-buergeramt",
@@ -13431,7 +13433,9 @@
       "Ich habe am Donnerstag einen Termin",
       "Am Montag ist um zehn Uhr leider nichts frei",
       "Bringen Sie bitte Ihren Pass"
-    ]
+    ],
+    "cultural_theme": "Bürgeramt & Termin",
+    "cultural_note": "موعد Bürgeramt يُحجز عبر الإنترنت قبل أسابيع؛ التأخر بلا اعتذار يُلغى — BAMF Behörde."
   },
   {
     "id": "dlg-b1-elterngespraech",
@@ -13532,7 +13536,9 @@
       "Ich mache mir Sorgen um Elifs Noten in Mathe",
       "Zehn Minuten Kopfrechnen am Tag helfen",
       "sie schreibt zu schnell und macht viele kleine Fehler"
-    ]
+    ],
+    "cultural_theme": "Schule & Elterngespräch",
+    "cultural_note": "لقاء أولياء الأمور في ألمانيا يركز على التعاون لا اللوم؛ حضورك جزء من Bildungspartnerschaft — BAMF Familie."
   },
   {
     "id": "dlg-b2-ki-arbeit",
